@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 235 — 2026-10-16 — TWO RECIPES THAT ONLY EXIST BECAUSE THE LATAM SHELF WAS RE-READ, PLUS THE GATE THAT SHOULD RUN BEFORE ANY OF THEM
+
+🔵 **Evidence:** [`p235-latam-verify`](../evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](../evidence/p235-registry-latam.2026-10-16-p235.tsv) · instrument: [`p235-carried-index`](code/p235-carried-index/README.md)
+
+### 🟢 `P235-A` — BNCC curriculum alignment as an agent tool surface *(LATAM, `4`–`6` weeks)*
+
+**The engagement:** a Brazilian network or EdTech needs every piece of content, lesson plan or generated question tagged to the national curriculum, and needs to prove the tagging is right.
+
+**Wire it:**
+
+1. 🟢 **Mount the curriculum as a tool, don't model it.** `npm i @bncc/mcp` *(`0.5.0`, **`MIT`**, `8` releases, modified `2026-10-15`)* gives any MCP-speaking agent the **`1 721` BNCC learning objectives** plus the Computing complement. Data path: `@bncc/dados` `0.7.0` *(`MIT`)* or **PyPI `bncc` `0.5.1`** for a Python stack; the records come from [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) *(`MIT`, `1 092` B, © 2026 Profy Tecnologias Educacionais Ltda)* **with per-record provenance**, which is what makes an audit possible.
+2. 🟢 **Put the agent on top, not underneath.** Any carried orchestrator works; the tool surface is the whole point. Tag → cite the objective code → store the provenance record alongside the tag.
+3. 🟢 **Measure it before claiming it.** [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) *(`MIT` code `1 286` B + `CC BY 4.0` data `577` B)* already publishes **`15 300` answers from `17` models** scored for hallucination against the BNCC. 🟢 **Run your configuration through the same methodology and you have a client-facing accuracy number on day one instead of a promise.**
+4. 🔴 **Honour the split scope.** The npm tarball and PyPI wheel each ship **`MIT` code and `CC BY 4.0` data in one artefact**: attribution travels with the data even though the code asks for none. 🔴 **The `bncc.dev` name and visual identity are NOT licensed** — do not ship a derivative that presents as `bncc.dev`.
+
+🟢 **Why this is the strongest LATAM recipe on these shelves:** every component is permissive, installable, versioned, maintained by a **named Brazilian company with a public contact address** *(`contato@bncc.dev`)*, and was released the day before this pass. 🟡 **It is also the most reusable: no other national curriculum on these shelves has been published as a mountable tool, and the pattern ports directly.**
+
+### 🟡 `P235-B` — dropout early warning on a `GPL-2.0` platform, without inheriting it *(LATAM, `6`–`8` weeks)*
+
+**The engagement:** a municipal network running [`portabilis/i-educar`](https://github.com/portabilis/i-educar) *(`719★`, `GPL-2.0`, `18 092` B, `@ 7903a3efc768`)* wants dropout risk from enrolment and attendance.
+
+**Wire it:**
+
+1. 🔴 **Do not build a plugin.** A plugin inherits **`GPL-2.0`**, and whether that blocks reuse in `GPL-3.0` code depends on an election nobody has read. 🟢 **Integrate BESIDE it**: read enrolment and attendance over its APIs or a replica, keep your model in its own repository under your own licence.
+2. 🟢 **Baseline from public data first.** [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) *(`MIT`, `1 090` B, `141` commits)* pulls and processes **INEP** microdata in R — the national comparison that tells a municipality whether its rate is unusual before any model is fitted.
+3. 🔴 **The two closest prior studies are UNLICENSED and cannot be used:** `michelelozada/projeto-evasao-escolar-brasil-2019-2021` and `juanfelipemalaver00-arch/predictive-model-for-primary-school-dropout-in-colombia` are both LIVE with **no licence file at `main`/`master` root**. 🟢 **Read them as literature, reimplement from the method.** 🟡 **`ACTION UJ`: ask — one `MIT` file each makes both usable, and the Colombian one is the only non-Brazilian LATAM model on these shelves.**
+4. 🟡 **Governance is the deliverable, not a footnote.** LATAM runs `87%` adoption against `26%` strategy coverage: a risk score that touches a student's path needs a human-oversight gate and a written basis, which is the same artefact North America's OK/MD rules require. 🟢 **Build it once, bill it in both regions.**
+
+### 🔴 `P235-C` — the gate that goes in front of every pattern above
+
+🔴 **Before adding a row to any recipe, ask the shelves whether they already carry it.** p234 drafted `20` rows and `9` were duplicates; p235 screened first and refused `13` of `18`.
+
+```sh
+make carried SLUG=owner/repo     # is this row already here?
+make claims  TOKEN=i-educar      # before writing "there is no X"  ← the one that matters
+make index                       # 1 913 rows, 51 carried under >1 spelling
+```
+
+🟢 **`make claims` exits non-zero when the token is already on the shelves**, and a non-empty answer means read those cells — not add a caveat. 🔴 **It is how this pass found that the KB had been publishing *"LATAM: `0` open-source education repositories"* over `73` cells naming a Brazilian education platform.** 🔴 **Its limit is `ACTION UM`: it indexes `github.com` slugs only, so a `PyPI` package, an npm scope, a Maven coordinate or an `edugit.org` project is invisible to it** — which is exactly where this pass's three new rows came from.
+
 ## Pass 234 — 2026-10-16 — FOUR RECIPES, AND FOR THE FIRST TIME ONE OF THEM IS A **FORK** RATHER THAN AN INTEGRATION
 
 ⏱️ **THIRD pass of `2026-10-16`.**

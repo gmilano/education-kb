@@ -17,7 +17,7 @@
 SHELL := /bin/bash
 PY ?= python3
 
-.PHONY: hooks gate-offline gate-online reach status exists
+.PHONY: hooks gate-offline gate-online reach status exists index carried claims
 
 hooks: gate-offline ## the standing check: every licence instrument's OFFLINE controls
 
@@ -42,6 +42,8 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	$(PY) -I compose/code/p230-prose-path-ladder/test_prose_path_ladder.py >/dev/null && echo "   PASS"; \
 	echo "── p233-maven-channel   (the response classifier: a 404 is not an absence)"; \
 	$(PY) -I compose/code/p233-maven-channel/test_classify_response.py >/dev/null && echo "   PASS"; \
+	echo "── p235-carried-index    (ACTION UG/UH: the index, fold, claims — 23 controls)"; \
+	$(PY) -I compose/code/p235-carried-index/test_carried_index.py >/dev/null && echo "   PASS"; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"
@@ -63,3 +65,12 @@ status:
 	@echo "evidence:  $$(ls evidence/*.tsv 2>/dev/null | wc -l) tables"
 	@echo "instruments: $$(ls -d compose/code/*/ 2>/dev/null | wc -l)"
 	@echo "last commit: $$(git log -1 --format='%ar — %s' 2>/dev/null | cut -c1-90)"
+
+index: ## ACTION UG (p235) — rebuild the carried-row index and report the UH collisions
+	@$(PY) -I compose/code/p235-carried-index/carried_index.py . | head -3
+
+carried: ## ACTION UG — is this row already on the shelves?  make carried SLUG=owner/repo
+	@$(PY) -I compose/code/p235-carried-index/carried_index.py check "$(SLUG)" .
+
+claims: ## ACTION UG — THE GATE: run before publishing any "there is no X".  make claims TOKEN=x
+	@$(PY) -I compose/code/p235-carried-index/carried_index.py claims "$(TOKEN)" . || true

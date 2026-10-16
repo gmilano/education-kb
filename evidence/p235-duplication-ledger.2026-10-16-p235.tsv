@@ -1,0 +1,23 @@
+# p235 — `ACTION UG` ON ITS FIRST RUN, measured on this pass's own candidate set. p234 drafted 20 rows,
+# found 9 duplicates AFTER finishing its shelves (45%). p235 screened BEFORE drafting: 13 of 18
+# candidates were already carried (72%). The index did not reduce the duplication rate — the rate is a
+# property of how saturated these shelves are. What changed is that nothing was published twice.
+candidate_slug	verdict	source_query
+THU-MAIC/OpenMAIC	CARRIED	reworded agent query (ACTION UC)
+littlecookie0722/AI-Teaching-Agent	CARRIED	reworded agent query (ACTION UC)
+Ebimsv/AITutorAgent	CARRIED	reworded agent query (ACTION UC)
+frappe/education	CARRIED	APAC/India platform query
+openeducat/openeducat_erp	CARRIED	APAC/India platform query
+francoisjacquet/rosariosis	CARRIED	APAC/India platform query
+OS4ED/openSIS-Classic	CARRIED	APAC/India platform query
+openolat/OpenOLAT	CARRIED	mandated platform query
+Crosstalk-Solutions/project-nomad	CARRIED	mandated trending query
+HKUDS/DeepTutor	CARRIED	mandated agent query
+karpathy/nanochat	CARRIED	mandated trending query
+rohitg00/ai-engineering-from-scratch	CARRIED	mandated trending query
+jplag/JPlag	CARRIED	control probe
+portabilis/i-educar	CARRIED (as portabilis/, found via serventecieducar/ fork)	LATAM pt-BR query
+serventecieducar/i-educar	NEW but a FORK of a carried row — refused	LATAM pt-BR query
+saraivadev/i-educar	NEW but a FORK of a carried row — refused	LATAM pt-BR query
+kakadanhem/origine-school	NEW — not grant-read this pass, not published	APAC platform query
+mwinamijr/django-scms	NEW — not grant-read this pass, not published	APAC platform query

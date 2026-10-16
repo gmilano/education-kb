@@ -4,6 +4,26 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — p235 — the week's only new agent signal is a **Brazilian `MIT` MCP server for the national curriculum**, and it was shipped to `npm` the day before this pass
+
+🔴 **Nothing new from web search.** The mandated agent query returned `0` education agents for the FIFTH consecutive pass; `ACTION UC`'s rewording returned `3` candidates and **all `3` were already on these shelves**.
+
+🟢 **The one new signal, from the registry channel rather than GitHub:**
+
+| signal | what | licence | released |
+|---|---|---|---|
+| 🟢 **`@bncc/mcp` `0.5.0`** | MCP server over the **`1 721` learning objectives of Brazil's `Base Nacional Comum Curricular`** + the Computing complement. Source [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | **`MIT`** *(grant body, `1 107` B, © 2026 Profy Tecnologias Educacionais Ltda)* | **`2026-10-15` 20:15**, `8` releases |
+| 🟢 **`@bncc/dados` `0.7.0`** · **PyPI `bncc` `0.5.1`** | the same curriculum as typed data, one-line install | **`MIT`** | **`2026-10-15`**, `11` and `7` releases |
+| 🟢 **`bncc-dev/bncc-benchmark`** | **`15 300` answers from `17` models** measured for hallucination against the BNCC — an open benchmark with raw data | **`MIT`** code + **`CC BY 4.0`** data | re-verified `@ 4713901ce5d7` |
+
+🔵 **Why this is a trend entry and not just a row:** the education-agent signal this week is **not a new agent** — it is an agent-facing TOOL SURFACE for a national curriculum, under a permissive licence, from a named commercial holder, iterating weekly. 🟡 **That is the shape to watch: curriculum/standards servers that any agent can mount, rather than another tutor chatbot.**
+
+🔴 **Correction to the standing-gaps line carried in this file.** The line *"LATAM `0` repositories (seventh consecutive pass)"* is **withdrawn as a supply claim** — `15` live LATAM education repositories, `9` permissive, were re-verified first-hand at p235, and `12` of them were already on these shelves when the line was written. 🟢 **What is true and reproducible is the CHANNEL result: the mandated region queries return `0` new LATAM rows, every pass.** 🟡 **`ACTION UK`: publish that as *"this channel returned `0`"*, never as *"there is no X"*.** Evidence: [`p235-latam-verify`](../evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](../evidence/p235-registry-latam.2026-10-16-p235.tsv)
+
+🟡 **Standing gaps, re-stated honestly this week:** APAC supply is **one row with an inferred region** *(`HKUDS/DeepTutor`, from an org handle)* and **no CJK-language query has ever been run** *(`ACTION UL`)* · `ACTION TQ`'s retroactive sweep NOT RUN *(fourth pass)* · `ACTION TW` NOT RUN *(fourth pass)* · 🟢 **`ACTION UG`/`UH` DISCHARGED** as [`p235-carried-index`](../compose/code/p235-carried-index/README.md), `23` controls, standing in `make gate-offline`.
+
+---
+
 ## 2026-10-16 — Pass 234 — THIS WEEK'S SIGNAL: THE EDUCATION AGENT TIER HAS A **`41.5k`-STAR `Apache-2.0`** ROW, AND THE MANDATED AGENT QUERY HAS BEEN ASKING THE WRONG QUESTION EVERY PASS
 
 ⏱️ **THIRD pass of `2026-10-16`** — p232 and p233 both published earlier the same date. All three are dated by publication.
@@ -50,7 +70,7 @@ updated: 2026-10-16
 
 🔴 **p233 inferred the lever was LICENCE CLASS *(reading `Apache-2.0` NOTICE files as the placement channel)*. That is falsified: the lever is HOLDER TYPE.** An institution writes a placeable name into the copyright notice; an individual, a pseudonym or a *"Contributors"* collective does not — and an `Apache-2.0` body has no holder field at all, so it places nothing no matter who maintains it. 🟢 **`BSD`/`MIT` are therefore the MORE placeable classes, not the less.**
 
-🟡 **Standing gaps, unchanged this week: LATAM `0` repositories *(seventh consecutive pass)*; APAC supply is one row with an inferred region; `ACTION TQ`'s retroactive sweep across existing rows STILL NOT RUN; `ACTION TW` *(execute the zod empty-subject check)* STILL NOT RUN.**
+🟡 **Standing gaps, unchanged this week: ~~LATAM `0` repositories *(seventh consecutive pass)*~~<!--corrected--> 🔴 **WITHDRAWN AS A SUPPLY CLAIM AT `p235`:** `15` live LATAM education repositories were re-verified first-hand at p235 — `9` of them permissive — and **`12` were already on these shelves when this line was written**; `3` `MIT` packages are live on `PyPI`/`npm`. 🟢 **What stands is the CHANNEL result: the mandated region queries returned `0` NEW rows, which is true and reproducible.** 🟡 **`ACTION UK`: a channel's `0` is not an absence.** (see this file's `2026-10-16` p235 entry); APAC supply is one row with an inferred region; `ACTION TQ`'s retroactive sweep across existing rows STILL NOT RUN; `ACTION TW` *(execute the zod empty-subject check)* STILL NOT RUN.**
 
 ## 2026-10-16 — Pass 233 — THIS WEEK'S SIGNAL: THE **TARBALL** IS A SOURCE CHANNEL, AND `3` OF THE `6` "SOURCELESS" PACKAGES p232 PUBLISHED LAST NIGHT HAVE LIVE REPOSITORIES ONE SUBSTITUTION AWAY
 

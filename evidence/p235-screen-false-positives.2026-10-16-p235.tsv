@@ -1,0 +1,21 @@
+# p235 — `ACTION UF`. The LATAM census was a TOKEN SCREEN over the carried index, and a token screen is
+# not a verified count (p234: a NAME is not an ARTEFACT). 52 slugs matched; the false positives below
+# matched by SUBSTRING, not by meaning. Stated so the 15 verified rows are not read as 52.
+slug	matched_token	why_it_is_a_FALSE_POSITIVE
+theopenem/oneroster.net	enem	'enem' inside 'theOPENEMd' — a US OneRoster library, not Brazil's ENEM exam
+opetushallitus/eperusteet	peru	'peru' inside 'ePERUsteet' — the FINNISH National Agency for Education
+opetushallitus/suorituspalvelu	peru	same substring, same Finnish agency
+project-sunbird/knowledge-platform	unb	'unb' inside 'sUNBird' — Sunbird is INDIAN (EkStep), not Universidade de Brasilia
+project-sunbird/sunbird-analytics	unb	same substring, India
+project-sunbird/sunbird-devops	unb	same substring, India
+project-sunbird/sunbird-lms-mw	unb	same substring, India
+project-sunbird/sunbird-lms-service	unb	same substring, India
+project-sunbird/sunbird-telemetry-sdk	unb	same substring, India
+sunbird-ed/sunbirded-consumption-ngcomponents	unb	same substring, India
+sunbird-ed/sunbirded-mobile-app	unb	same substring, India
+sunbird-ed/sunbirded-portal	unb	same substring, India
+sunbirdai/salt	unb	same substring — SunbirdAI is UGANDAN (EMEA), the opposite region
+brasilapi/brasilapi	brasil	Brazilian but NOT education — a general-purpose public-data API
+damasiormoura/mcp-dev-latam	latam	LATAM but NOT education — a developer-tooling MCP
+alcastaro/opendata-latam-mcp	latam	LATAM but NOT education-specific — general open data
+aoncevay/mt-peru	peru	Peru and real, but machine translation research, not education

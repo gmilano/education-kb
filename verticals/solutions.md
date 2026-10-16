@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 235 — 2026-10-16 — THE PLATFORM MAP RE-READ AT THE GRANT, AND `GPL-2.0`'s HOLDER FIELD TURNS OUT NOT TO EXIST
+
+🔴 **`0` new platforms. `3` platform-tier grants re-read at byte precision.** 🔵 **Evidence:** [`p235-latam-verify`](../evidence/p235-latam-verify.2026-10-16-p235.tsv)
+
+### 🟢 Re-verified this window
+
+| platform | SHA this window | grant, read first-hand | what changed |
+|---|---|---|---|
+| 🔴 [`portabilis/i-educar`](https://github.com/portabilis/i-educar) `719★` | `7903a3efc768` *(was `cd1da68` on this shelf)* | 🔴 **`GPL-2.0`**, `master/LICENSE`, **`18 092` B**, `Version 2, June 1991` | 🟢 **Licence and byte count UNCHANGED — the cell on this shelf is RIGHT.** 🟢 The SHA moved, so the project is active |
+| 🟡 [`yunger7/enem-api`](https://github.com/yunger7/enem-api) | `938c56fbd3b3` | 🔴 **`GPL-2.0`**, `18 092` B — **byte-identical to `i-educar`** *(`cmp` clean)* | 🟢 same canonical blob |
+| 🟡 [`inepdadosabertos/api`](https://github.com/inepdadosabertos/api) | `7d32b7e23bc6` | 🔴 **`GPL-2.0`**, `18 025` B — same `Version 2, June 1991`, **`67` B shorter** | 🔴 **So byte count does NOT identify a version** |
+
+### 🔴 `GPL-2.0` cannot place its own platform — the extension to p234's lever
+
+p234 established that placement comes from **holder type**, and named `Apache-2.0` as the non-placing class because *"an Apache body has no holder field at all"*. 🟢 **`GPL-2.0` belongs in that class too, and this shelf is where it matters most, because the platform tier is where the copyleft rows are.**
+
+🔴 **A `GPL-2.0` body's only real copyright line is the FSF's own** — `Copyright (C) 1989, 1991 Free Software Foundation, Inc.` at line `4`. The other two are **templates**: `Copyright (C) <year> <name of author>` (line `294`) and the *"Gnomovision version 69"* example (line `315`).
+
+🟢 **The consequence, stated plainly:** `i-educar` is self-described as the largest free-software education platform in Brazil, and **its grant body names Boston, Massachusetts.** 🔴 **Any harvester that places a platform from its licence file will place it to North America or nowhere.** 🟢 **`i-educar` places only from its DESCRIPTION** *("do Brasil")*, which is layer D — and layer D needs a national language or a named country or agency, so it works here and fails on the next row.
+
+### 🟢 The placing platform tier, by contrast
+
+| tier | row | licence | holder in the grant | places from its own grant? |
+|---|---|---|---|---|
+| 🟢 LMS | [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) | **`Apache-2.0`** | 🔴 none *(Apache has no holder field)* | 🔴 **NO** — p234 |
+| 🟢 SIS | [`svws-nrw/SVWS-Server`](https://github.com/svws-nrw/SVWS-Server) | **`BSD-3-Clause`** | 🟢 a state ministry at a street address in Düsseldorf | 🟢 **YES** — p234 |
+| 🟢 curriculum data | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | **`MIT`** `1 092` B | 🟢 **`Profy Tecnologias Educacionais Ltda`** | 🟢 **YES — and it is the LATAM entry** |
+| 🔴 school management | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | **`GPL-2.0`** `18 092` B | 🔴 FSF boilerplate | 🔴 **NO** |
+
+🟢 **So the placeable platform tier is `BSD`/`MIT`, and it is exactly the tier a studio can build on.** 🔴 **The two largest platforms on this shelf — the `Apache-2.0` LMS and the `GPL-2.0` SIS — are both unplaceable from their grants, for opposite reasons: one has no holder field, the other has only the FSF's.**
+
+### 🟡 What to customise, and the licence decision each forces
+
+- 🟢 **`OpenOLAT`** *(`Apache-2.0`)* — a full LMS, `31 854` commits, frentix GmbH Zurich. 🟢 **Permissive: build AI on top, keep your own code.**
+- 🟢 **`svws-nrw/SVWS-Server`** *(`BSD-3-Clause`)* — a state school-administration system, `9 832` commits, Java 21 + Gradle 8, MariaDB, Docker, `17` artefacts on Maven Central under `de.svws-nrw`. 🟢 **Permissive, and the reference build for a public-sector SIS.**
+- 🟢 **`bncc-dev` estate** *(`MIT` code + `CC BY 4.0` data)* — the curriculum layer, installable from `PyPI`/`npm`, with an MCP server. 🟡 **Note the split scope: code and data carry DIFFERENT licences in the SAME artefact** — the npm tarball and the PyPI wheel each ship `MIT` code and `CC BY 4.0` data, so attribution obligations travel with the data even where the code imposes none. 🔴 **The name and visual identity are explicitly NOT licensed.**
+- 🔴 **`i-educar`** *(`GPL-2.0`)* — integrate beside it over its APIs; **a plugin inherits `GPL-2.0`**, and whether that blocks reuse in `GPL-3.0` code still depends on an election nobody has read.
+
 ## Pass 234 — 2026-10-16 — THE *"NO PERMISSIVE PLATFORM"* FINDING, CONFIRMED NINE TIMES, IS **BROKEN** — AND THE `Apache-2.0` LMS THAT BREAKS IT WAS GRANT-READ BY `p209`, `25` PASSES BEFORE THIS SHELF LAST DENIED IT
 
 ⏱️ **THIRD pass of `2026-10-16`.**

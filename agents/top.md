@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 235 — 2026-10-16 — `0` NEW AGENT ROWS, AND THE REASON IS NOW MEASURED RATHER THAN GUESSED: THE MANDATED QUERY FAILS FOR THE **FIFTH** CONSECUTIVE PASS, AND THE REWORDED ONE RETURNS ONLY ROWS THIS SHELF ALREADY HOLDS
+
+🔴 **`0` agents added. `3` candidates refused as already-carried.** 🟢 **`1` LATAM agent-tier row recovered from the REGISTRY channel — the first on this shelf.**
+
+🔵 **Evidence:** [`p235-queries`](../evidence/p235-queries.2026-10-16-p235.tsv) · [`p235-duplication-ledger`](../evidence/p235-duplication-ledger.2026-10-16-p235.tsv) · [`p235-registry-latam`](../evidence/p235-registry-latam.2026-10-16-p235.tsv)
+
+### 🔴 The mandated query, run verbatim for the record
+
+`"top open source AI agents education 2026 github MIT"` → **`0` education agents.** FIFTH consecutive pass. It returns general-purpose agent frameworks — OpenHands, MetaGPT, CrewAI, LangGraph — none of which is an education agent, plus learning-material repositories that are *about* agents rather than *for* teaching. 🟡 **`ACTION UC` stands: the mandated wording is the defect, and it is kept in the rotation only so its failure stays on the record.**
+
+### 🟢 `ACTION UC`'s rewording, run beside it
+
+`"open source AI tutor agent grading teaching assistant github 2026 Apache MIT"` → `3` candidates, and **`make carried` refused all three**:
+
+| candidate | verdict | on these shelves since |
+|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🔴 **CARRIED** | earlier pass; `MIT` relicence (Jun 2026) already recorded |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🔴 **CARRIED** | earlier pass; *"automatic grading productization is frozen"* already noted |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🔴 **CARRIED** | earlier pass |
+
+🔵 **So the rewording fixes the QUERY, not the tier.** p234 read its five candidates as the agent tier reopening; p235 reads the same channel returning the same rows and concludes the opposite: **at this KB's reach the permissive education-agent tier is saturated, and new rows will come from channels other than web search.** 🟢 **This pass proves that by finding one on a different channel.**
+
+### 🟢 The one genuinely new agent-tier row, and it came from a package registry
+
+| row | licence | what it is | why it is an AGENT row |
+|---|---|---|---|
+| 🟢 **`@bncc/mcp`** `0.5.0` *(npm, `8` releases, modified **`2026-10-15` 20:15**)* | **`MIT`** | **MCP server over the `1 721` learning objectives of Brazil's `Base Nacional Comum Curricular`**, including the Computing complement | 🟢 **It is a TOOL SURFACE, not a chatbot** — any MCP-speaking agent gains verified national-curriculum lookup with no model of its own. Source: [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes), grant-read `MIT` at `1 107` B, © `2026` **Profy Tecnologias Educacionais Ltda** |
+
+🔴 **This row was invisible to every GitHub-slug query this shelf has ever run, and `carried()` cannot see it either** — the index covers `github.com` slugs only, which is `ACTION UM`. 🟢 **It was found by reading `packages/bncc/package.json` after four guessed npm names returned `404`.**
+
+🟡 **What this does to the regional picture of this shelf:** the agent tier's only placed LATAM row is a curriculum tool from a Brazilian company, and its only APAC row ([`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor), `Apache-2.0`) is still placed by **INFERENCE from an org handle**. 🔴 **Neither North America nor EMEA has an agent row placed from its own grant body on this shelf.**
+
 ## Pass 234 — 2026-10-16 — THE FINDING THIS KB IS BUILT ON — *"NO `MIT`/`Apache` LMS OR SIS IN EDUCATION"* — IS **FALSIFIED ON BOTH LIMBS**, AND ON THE LMS LIMB IT WAS FALSIFIED BY **`p209`'s OWN VERIFIED CELL, `25` PASSES AGO**
 
 ⏱️ **THIRD pass of `2026-10-16`.** p232 ran `2026-10-15` 23:4x → `2026-10-16` 00:xx UTC, p233 later the same date, this pass later still. Stated because these shelves pin SHAs and three passes sharing a date is exactly what a later pass reads as a contradiction.

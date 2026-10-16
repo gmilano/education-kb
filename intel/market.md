@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 235 — 2026-10-16 — THE LATAM DEMAND/SUPPLY ASYMMETRY SURVIVES, BUT ITS SUPPLY SIDE IS **NOT ZERO** — AND NAMING THE SUPPLIER CHANGES THE PITCH
+
+🔴 **This file carried the claim that LATAM has `0` open-source education repositories against the region's highest measured adoption, and sold the gap.** 🟢 **The demand half is confirmed again this pass. The supply half was wrong, and the corrected version is a better pitch: the supply exists, it is concentrated in one company and one individual, and it is permissively licensed.**
+
+🔵 **Evidence:** [`p235-latam-verify`](../evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](../evidence/p235-registry-latam.2026-10-16-p235.tsv) · [`p235-queries`](../evidence/p235-queries.2026-10-16-p235.tsv)
+
+### 🟢 Regional demand, re-measured this pass
+
+| region | adoption | governance | the gap a studio sells into |
+|---|---|---|---|
+| 🟢 **LATAM** | **`87%`** of `200` institutions across `19` countries use AI in at least one area; **`74%`** in teaching and learning, `57%` in research *(UNESCO IESALC, with UNU-IAS)*. Secondary teachers: **BR `56%` · CL `55%` · CO `53%` · CR `52%`** vs an **OECD average of `36%`** *(TALIS)*. Uruguay: **`75%`** of public-school teachers *(Ceibal, 2026)* | 🔴 **`26%`** hold a formal AI strategy | 🔴 **The widest adoption-minus-governance spread of any region.** Institutions are already using AI and cannot yet say how |
+| 🟡 **North America** | **`60%`** of US K-12 teachers used AI tools in the 2024-25 school year, **`32%`** at least weekly. Largest regional market share at **`36%`**, `$3.68B` in 2026 *(aggregator figure — treat as indicative)* | 🟡 **`134` bills across `31` states**; `H.R. 8747` *(K-12 AI Literacy and Readiness Act of 2026)* advanced in committee `21 Jul 2026`. Canada's *"AI for All"* strategy (Jun 2026) has no statute date | 🟢 **Per-state compliance engineering.** CA `AB 1159` would bar training on student data; OK and MD require human oversight and bar AI from high-stakes decisions about students; MD gives its `24` districts `120` days from state guidance to adopt their own |
+| 🟡 **EMEA** | `$2.64B` in 2026 → `$8.0B` by 2030 *(aggregator)*; FI, EE and NL lead K-12 integration. UK: **£`4M`** into lesson-planning and marking tools | 🔴 **`10%`** of `450+` institutions have formal AI-use guidelines. 🔴 **The EU AI Act's dates CONFLICT across sources** *(see `intel/trends.md`)* | 🟢 **High-risk conformity work.** Admissions, student evaluation and exam scoring are named high-risk uses |
+| 🔴 **APAC** | Market summaries name CN, IN and JP as dominant; vendor lists are generic big-tech *(Google, Microsoft, IBM, Pearson, Byju's)* | 🟢 **Binding law, no education rule:** KR `AI Basic Act` **in force `22 Jan 2026`**; VN national AI law **`1 Mar 2026`**, risk-based; TW `AI Basic Act` passed **Dec 2025**; CN the most comprehensive framework; JP/SG/AU voluntary | 🔴 **No education-specific AI rule found in any APAC jurisdiction**, and no APAC education-vendor list. 🟡 **Control on this absence: no CJK-language query has ever been run** *(`ACTION UL`)* — so this is thin COVERAGE, not an established absence |
+
+### 🟢 Who actually supplies LATAM, named
+
+🔴 **The region's open-source education supply is not a commons; it is two holders and a handful of unlicensed student projects.**
+
+- 🟢 **`Profy Tecnologias Educacionais Ltda`** *(`bncc.dev`)* — the only commercial holder of permissive education code placed to LATAM on these shelves. Holds `MIT` grants across [`bncc-dados`](https://github.com/bncc-dev/bncc-dados) `21★`, [`bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) and [`bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark); ships **PyPI `bncc`**, **npm `@bncc/dados`**, **npm `@bncc/mcp`**, all `MIT`, all updated **`2026-10-15`**; publishes a contact address in the open *(`contato@bncc.dev`)*. 🟢 **A partner, not a competitor: they hold the curriculum data layer and nothing above it.**
+- 🟢 **`Sidney da Silva Pereira Bissoli`** — [`educabR`](https://github.com/SidneyBissoli/educabR), `MIT`, `141` commits: the INEP microdata path for R.
+- 🔴 **`portabilis/i-educar`** `719★` — the largest, and **`GPL-2.0`**: a plugin inherits copyleft. 🟢 **The commercial model is already services** *(a municipality may audit, adapt and take the system with it when it changes supplier)*, which is the model a studio sells into rather than against.
+- 🔴 **`LatamGPT` contributes `0` placeable rows.** All three grants read carry non-LATAM holders — a GitHub username, `Tim Duffy`, and **`EleutherAI` (2020)** on a fork. 🟡 **Cite it as a regional policy signal, never as regional supply.**
+
+### Opportunities by region
+
+#### North America
+
+🟢 **Compliance-first engineering, per state.** `134` bills across `31` states and MD's `120`-day district clock create dated, auditable work: human-oversight gates on any model touching a high-stakes student decision, and data-flow proofs that student records never reach training. 🟢 **Build on `1EdTech` standards and the `Ed-Fi` data standard already on these shelves.** 🔴 **The federal picture is unsettled** — `H.R. 8747` advanced in committee only — so sell state-scoped deliverables, not a national programme.
+
+#### EMEA
+
+🟢 **High-risk conformity for admissions, evaluation and exam scoring**, which the EU AI Act names directly. With only **`10%`** of institutions holding AI-use guidelines, the first deliverable is usually the policy and its evidence trail, not a model. 🟢 **The permissive platform tier is real here** *(`OpenOLAT`, `Apache-2.0`; the `svws-nrw` `BSD-3-Clause` state SIS estate)* and both place from their own grants, so an EMEA build can be fully auditable. 🔴 **Do not quote an AI Act date to a client from these shelves** — the sources conflict.
+
+#### APAC
+
+🟡 **Jurisdiction-by-jurisdiction AI governance with no education-specific rule to design against**: KR in force `22 Jan 2026`, VN `1 Mar 2026`, TW passed Dec 2025, JP/SG/AU voluntary. 🟢 **The sellable asset is a multi-jurisdiction policy layer** — one deployment, per-country gates — which is the same pattern as the NA per-state work and reuses it. 🔴 **This KB cannot name an APAC open-source starting point with a placed region**, so an APAC engagement starts from Global rows plus a local discovery phase. 🟡 **Scoping that discovery is itself billable, and `ACTION UL` is the honest prerequisite.**
+
+#### LATAM
+
+🟢 **The strongest position on these shelves, and now with a named supply chain.** Adoption is the highest measured anywhere **`87%`**/`74%`, strategy coverage the lowest **`26%`**: institutions need governance, measurement and integration, not greenfield models. 🟢 **Three concrete entry points, all permissive and all verified this pass:** the **BNCC curriculum layer** *(`@bncc/mcp` + `bncc-dados`)* for alignment and content tagging; **`bncc-benchmark`** *(`15 300` answers, `17` models)* as the ready-made evidence instrument for *"is it accurate on OUR curriculum"*; and **`educabR`/INEP** for the analytics baseline. 🔴 **The three most engagement-shaped artefacts — an ENEM essay grader, a Brazilian dropout study and a Colombian primary-dropout model — are all UNLICENSED**, which is a `1`-file ask away from usable and is `ACTION UJ`. 🔴 **`i-educar` is `GPL-2.0`: integrate beside it, do not build plugins into it without a licence decision.**
+
 ## Pass 234 — 2026-10-16 — EMEA STOPS BEING A DEMAND-ONLY REGION: IT NOW HAS **SUPPLY THIS KB CAN SELL**, AND LATAM'S DEMAND/SUPPLY ASYMMETRY IS THE LARGEST ON THESE SHELVES
 
 ⏱️ **THIRD pass of `2026-10-16`.**

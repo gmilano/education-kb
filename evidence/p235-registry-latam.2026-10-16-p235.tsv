@@ -1,0 +1,14 @@
+# p235 — THE REGISTRY LIMB. repos/trending.md publishes "LATAM in the registry: zero" and p232 opened
+# the PACKAGE REGISTRY channel specifically to find rows the repository harvester could not see.
+# Three live LATAM education packages were on that channel the whole time, all MIT, all updated
+# 2026-10-15 — the day BEFORE this pass, and inside p232's own window. The npm names are NOT guessable:
+# four guessed names (bncc, @bncc/bncc, bncc-dados, @bncc-dev/bncc) all 404. The real names came from
+# packages/bncc/package.json in the repo. p233's rule holds: a 404 on a GUESSED name is not an absence.
+registry	package	version	licence	n_releases	last_modified	publisher_or_contact	source_of_name
+PyPI	bncc	0.5.1	MIT (license_expression)	7	2026-10-15T03:22:02	"bncc.dev (Profy)" <contato@bncc.dev>	mandated-name guess, HTTP 200
+npm	@bncc/dados	0.7.0	MIT	11	2026-10-15T20:09:39	bncc.dev / Profy Tecnologias Educacionais Ltda	packages/bncc/package.json
+npm	@bncc/mcp	0.5.0	MIT	8	2026-10-15T20:15:21	bncc.dev / Profy Tecnologias Educacionais Ltda	README: npm install @bncc/dados + @bncc/mcp
+npm	bncc	-	-	-	-	-	GUESSED — 404, NOT an absence
+npm	@bncc/bncc	-	-	-	-	-	GUESSED — 404, NOT an absence
+npm	bncc-dados	-	-	-	-	-	GUESSED — 404, NOT an absence
+npm	@bncc-dev/bncc	-	-	-	-	-	GUESSED — 404, NOT an absence

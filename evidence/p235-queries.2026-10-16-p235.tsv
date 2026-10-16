@@ -1,0 +1,14 @@
+# p235 — every query run this pass, verbatim, with what it returned. The MANDATED agent query is run
+# verbatim every pass so its failure stays on the record (ACTION UC); the reworded one is run beside it.
+query	mode	education_rows_returned	note
+top open source AI agents education 2026 github MIT	extended	0	FIFTH consecutive pass at 0. Returns general agent frameworks (OpenHands, MetaGPT, CrewAI, LangGraph). ACTION UC stands.
+open source AI tutor agent grading teaching assistant github 2026 Apache MIT	extended	3 (all 3 ALREADY CARRIED)	The reworded query works — and this pass it returned nothing new. OpenMAIC, AI-Teaching-Agent, AITutorAgent.
+github trending education AI 2026	extended	3 (all 3 ALREADY CARRIED)	project-nomad, nanochat, ai-engineering-from-scratch.
+open source platform education LMS SIS MIT Apache Moodle Open edX 2026	extended	0 new	Returned vendor-blog rankings; no result stated a licence. OpenOLAT reconfirmed Apache-2.0 off-platform.
+AI education industry trends 2026	extended	n/a (intel)	Governance-over-experimentation; 1EdTech, HolonIQ, OECD Digital Education Outlook 2026.
+AI education North America 2026 adoption regulation players	extended	n/a (intel)	134 bills / 31 states; H.R. 8747 advanced 21 Jul 2026; 60% of US K-12 teachers used AI in 2024-25.
+AI education EMEA 2026 adoption regulation players	extended	n/a (intel)	EU AI Act dates CONFLICT across sources — recorded as a conflict, not resolved.
+AI education APAC 2026 adoption regulation players	extended	n/a (intel)	KR AI Basic Act in force 22 Jan 2026; VN Mar 2026; TW Dec 2025. NO education-specific AI rule found.
+AI education LATAM 2026 adoption regulation players	extended	n/a (intel)	UNESCO IESALC: 200 institutions / 19 countries, 87% use AI, 26% hold a strategy.
+software livre educacao codigo aberto github Brasil escola SIGAA gestao escolar 2026	extended	1 (CARRIED, via 2 forks)	Found i-educar through two forks; the canonical portabilis/ row was already carried.
+open source school management system India Japan Korea github education platform 2026	extended	2 new (not grant-read)	origine-school, django-scms. NO Japanese or Korean project surfaced — gap stands.

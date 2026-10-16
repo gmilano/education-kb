@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 235 — 2026-10-16 — `ACTION UG` DISCHARGED AS A STANDING GATE, AND ITS FIRST RUN OVERTURNED `5` CELLS ON `2` SHELVES
+
+🔵 **Evidence:** [`p235-carried-index`](../evidence/p235-carried-index.2026-10-16-p235.tsv) *(`1 913` rows)* · [`p235-case-collisions`](../evidence/p235-case-collisions.2026-10-16-p235.tsv) *(`51`)* · [`p235-duplication-ledger`](../evidence/p235-duplication-ledger.2026-10-16-p235.tsv) · [`p235-screen-false-positives`](../evidence/p235-screen-false-positives.2026-10-16-p235.tsv) *(`17`)* · [`p235-latam-verify`](../evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](../evidence/p235-registry-latam.2026-10-16-p235.tsv) · [`p235-queries`](../evidence/p235-queries.2026-10-16-p235.tsv)
+
+### 🟢 Actions discharged this pass
+
+| action | registered | verdict |
+|---|---|---|
+| 🟢 **`UG`** *(index what these shelves carry; grep before publishing an absence)* | p234 | 🟢 **DISCHARGED AND STANDING** — [`p235-carried-index`](../compose/code/p235-carried-index/README.md): `carried()`, `claims()`, `23` offline controls in `make gate-offline`, exposed as `make index` / `make carried` / `make claims`. 🔴 **Its first run falsified this KB's largest standing claim** |
+| 🟢 **`UH`** *(fold slug case before comparing)* | p234 | 🟢 **DISCHARGED** — `fold()` lowercases and strips a trailing `.`/`,`/`)`. Measured: **`1 965` raw spellings → `1 913` rows, `51` carried under two or more spellings** |
+| 🟢 **`UC`** *(reword the mandated agent query)* | p234 | 🟡 **DISCHARGED, AND THE INFERENCE BEHIND IT NARROWED.** The rewording works and returned `3` candidates — **all `3` already carried**. 🔵 So the rewording fixes the QUERY; it does not reopen the TIER. p234 read five candidates as the tier reopening; that reading is withdrawn |
+| 🟡 **`TQ`** *(holder type is the placement lever)* | p233 | 🟡 **EXTENDED, not closed.** `GPL-2.0` joins `Apache-2.0` as a **holder-less** class: its only real copyright line is the FSF's own (line `4`); the other two are templates (lines `294`, `315`). `3` instances read. 🔴 **The retroactive sweep is STILL NOT RUN** *(p233 → p234 → p235 → p236)*, and `GPL-2.0` widens it |
+| 🟡 **`UF`** *(name the control that makes each declared absence establishable)* | p234 | 🟢 **HONOURED on every absence published this pass** — see the controls column below |
+
+### 🔴 The `5` cells overturned, and the `6` deliberately left standing
+
+🟢 **The flat form is a claim about SUPPLY and is false. The scoped forms are CHANNEL results and are true.** Keeping that line is the whole of `ACTION UK`.
+
+| cell | shelf | verdict |
+|---|---|---|
+| *"LATAM: `0` open-source education repositories — SEVENTH consecutive pass"* | `README.md` ×`3` | 🔴 **CORRECTED IN PLACE** |
+| *"LATAM `0` repositories (seventh consecutive pass)"* | `agents/trending.md` ×`1` | 🔴 **CORRECTED IN PLACE** |
+| *"LATAM in the registry: zero"* | `repos/trending.md` ×`1` | 🔴 **CORRECTED IN PLACE** — `3` `MIT` packages on `PyPI`/`npm`, all modified `2026-10-15` |
+| *"`0` **new** this pass"* · *"the Spanish/Portuguese probe returned `0`"* · *"pan-regional `LATAM` → `0`"* · *"`0` LATAM-origin, `0` LATAM-localised"* etc. | `README.md`, `intel/market.md`, `agents/trending.md`, `intel/open-gaps.md` | 🟢 **LEFT STANDING — true and reproducible.** These say what a channel returned, which is what `UK` requires |
+
+🔵 **A first grep suggested `11` cells; `6` of them turned out to be correctly-scoped channel results.** 🟢 **p235 held itself to `UK` when counting its own corrections, which is the only reason the number is `5`.**
+
+### 🟢 Absences published this pass, each with its control *(`ACTION UF`)*
+
+| absence | control that makes it establishable | status |
+|---|---|---|
+| 🟢 **No new permissive education agent at this KB's reach** | Mandated query run verbatim *(`0` for the FIFTH pass)* AND `ACTION UC`'s rewording run beside it *(`3` candidates, `3` carried)*. Two query shapes, same result | 🟢 **ESTABLISHABLE** |
+| 🔴 **No education-specific AI rule in any APAC jurisdiction** | 🔴 **English-language search ONLY. No `学校管理`, no `학교 관리 시스템`, no CJK query has ever been run on these shelves** | 🔴 **NOT ESTABLISHABLE — a coverage gap.** `ACTION UL` |
+| 🔴 **No APAC education vendor list; APAC supply is `1` row with an INFERRED region** | Same missing CJK channel; `jp.studyplus` still unprobed | 🔴 **NOT ESTABLISHABLE.** `ACTION UL` |
+| 🟡 **`npm` has no `bncc` package** | 🔴 **FALSE as stated — `4` GUESSED names returned `404`; the real names are `@bncc/dados` and `@bncc/mcp`, both live** | 🔴 **WITHDRAWN.** A `404` on a guessed name is not a measurement |
+| 🟢 **The LATAM token screen's `52` hits are not `52` LATAM education rows** | `17` substring false positives isolated and published: `enem` inside `theopenem`, `peru` inside `eperusteet`, `unb` inside `sunbird` *(Indian and Ugandan projects)* | 🟢 **ESTABLISHABLE** — [`p235-screen-false-positives`](../evidence/p235-screen-false-positives.2026-10-16-p235.tsv) |
+
+### 🔴 Actions carried unchanged from p234, none run this pass
+
+🔴 **`TW`** *(the zod empty-subject check is READ, not EXECUTED — fourth pass)* · 🔴 **`TQ`**'s retroactive sweep *(fourth pass, now wider)* · 🟡 **`UA`** *(namespaces unread: `com. net. io. at. se. no. dk. fi. es. it. fr. in. cn. kr. sg. eu.`)* · 🟡 **`UB`** *(remaining platform census cells)* · 🟡 **`UD`** *(`edugit.org` for AlekSIS)* · 🟡 **`UE`** *(the remaining `28` `svws-nrw` repositories)*.
+
+### 🟡 Actions registered by p235
+
+| action | what it requires |
+|---|---|
+| 🟡 **`UJ`** | Licence-ask on the `3` live UNGRANTED LATAM rows — an ENEM essay grader, a Brazilian dropout study, a **Colombian** primary-dropout model. One `MIT` file each converts all three; the Colombian row is the only non-Brazilian LATAM model on these shelves |
+| 🟡 **`UK`** | 🔴 **A channel that returns `0` may be published ONLY as *"this channel returned `0`"*, never as *"there is no X"*.** This is the rule whose violation cost `25` passes on the LMS limb and `7` on LATAM |
+| 🟡 **`UL`** | Run CJK-language queries *(`学校管理`, `학교 관리 시스템`)* before any further APAC absence is published |
+| 🔴 **`UM`** | 🔴 **THE ONE THIS PASS EARNED: `carried()` indexes `github.com` slugs only.** A `PyPI` package, an npm scope, a Maven coordinate or an `edugit.org` project is invisible to the gate — **and all `3` of this pass's new rows came from exactly there.** `UA`/`UD` cannot be closed with this instrument alone |
+| 🟡 **`UN`** | Resolve the EU AI Act application date against the Official Journal text itself. Three sources read this pass give `2 Dec 2027`/`2 Aug 2028`, `Aug 2026` and `31 Jul 2026` |
+
 ## 🔜 Registered for p234 — pre-registered with falsifiers
 
 🔵 **p233 ran as the SECOND pass of `2026-10-16` and discharged `4` of its `5` registered actions: `TO` on limb `2` at `1` of `1`, `TP` on limb `1` at `5` of a threshold of `2`, `TR` on limb `1` in a qualified form, `TS` on limb `1`. `ACTION TQ` was NOT RUN and is carried untouched. The standing `SH` fired for only the second time in its history.** 🟢 **`5` new rows *(`1` Apache-2.0, `2` MIT, `2` MPL-2.0 copyleft-flagged)*, `1` refused, `0` padded, `1` row PLACED on first-hand stated evidence. `4 798` Maven groupIds enumerated in ONE request.** 🔴 **`3` published cells overturned, all three p232's own. `2` instrument defects found before publishing, and `1` whole instrument killed unpublished because its own positive control failed.**

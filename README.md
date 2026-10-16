@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 235 — 2026-10-16 — `ACTION UG` IS BUILT, AND ON ITS FIRST RUN IT FALSIFIES **THIS KB'S LARGEST STANDING CLAIM** — *"LATAM: `0` OPEN-SOURCE EDUCATION REPOSITORIES"* — WHILE `9` OF THE `10` SHELVES CARRY `i-educar` AND THREE `MIT` BRAZILIAN PACKAGES SHIPPED TO `PyPI` AND `npm` **THE DAY BEFORE THIS PASS**
+
+⏱️ **FOURTH pass of `2026-10-16`.** p232 ran `2026-10-15` 23:4x → `2026-10-16` 00:xx UTC; p233, p234 and this pass later the same date. Stated because these shelves pin SHAs and four passes sharing a date is what a later pass reads as a contradiction.
+
+🟢 **`ACTION UG` and `ACTION UH` — the two p234 earned — are DISCHARGED as a standing instrument, not a one-off:** [`p235-carried-index`](compose/code/p235-carried-index/README.md), `23` offline controls, wired into `make gate-offline` and exposed as `make index` / `make carried` / `make claims`. 🔴 **`0` new repository rows published. `15` carried rows re-verified first-hand with fresh SHAs. `3` NEW registry rows — the first LATAM packages on these shelves. `13` of `18` candidates refused as already-carried — BEFORE drafting, not after. `5` published cells overturned on `2` shelves.**
+
+🔵 **Evidence:** [`p235-carried-index`](evidence/p235-carried-index.2026-10-16-p235.tsv) · [`p235-case-collisions`](evidence/p235-case-collisions.2026-10-16-p235.tsv) · [`p235-latam-verify`](evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-duplication-ledger`](evidence/p235-duplication-ledger.2026-10-16-p235.tsv) · [`p235-screen-false-positives`](evidence/p235-screen-false-positives.2026-10-16-p235.tsv) · [`p235-registry-latam`](evidence/p235-registry-latam.2026-10-16-p235.tsv) · [`p235-queries`](evidence/p235-queries.2026-10-16-p235.tsv)
+
+### 🔴 `T235-A` — the headline: LATAM is not zero, and it was never zero on these shelves
+
+Published in p234's own gap list, and in `3` other places on `2` shelves — the flat form, which is a claim about SUPPLY:
+
+> 🔴 **LATAM: `0` open-source education repositories — SEVENTH consecutive pass**, now corroborated on a third channel.
+
+🔴 **It is false, and `make claims TOKEN=i-educar` falsifies it in one call** — `73` mentions on **nine of the ten shelves**:
+
+| shelf | mentions of `i-educar` | and yet |
+|---|---|---|
+| `repos/trending.md` | **32** | carries *"LATAM: `0` open-source education repositories"* **twice** |
+| `agents/trending.md` | **13** | carries the `0` claim **four times** |
+| `intel/open-gaps.md` | **12** | carries it **twice** |
+| `verticals/solutions.md` | **6** | holds the full platform row: `GPL-2.0`, `719` stars |
+| `README.md` | **4** | the gap list itself |
+| `agents/top.md` · `intel/trends.md` · `intel/market.md` · `compose/patterns.md` | **2 · 2 · 1 · 1** | `intel/market.md` carries the `0` claim once |
+
+🔵 **This is p234's error class exactly, committed in the same pass that named it.** p234 wrote `ACTION UG` because a verified `Apache-2.0` LMS cell and a *"no permissive LMS"* conclusion had coexisted on one file for `25` passes. 🔴 **Its own gap list then published a *"LATAM has zero"* conclusion over `73` cells naming a Brazilian education platform.** No additional evidence would have fixed either one. The predicate that fixes both is four lines long and is now in `make`.
+
+### 🟢 What is actually on the LATAM shelf, verified first-hand this window
+
+🟢 **`15` live repositories, every one existence-checked on `git ls-remote` with a fresh HEAD SHA and licence-read from the GRANT BODY over `raw.githubusercontent.com`** — never a platform metadata field (`p209`/`p210`/`p234`'s rule). 🟢 **`9` are permissive.** Full table in [`p235-latam-verify`](evidence/p235-latam-verify.2026-10-16-p235.tsv).
+
+| cluster | rows | grant, read this pass | placement |
+|---|---|---|---|
+| 🟢 **`bncc-dev` estate** *(the one commercially-backed permissive LATAM cluster)* | [`bncc-dados`](https://github.com/bncc-dev/bncc-dados) `21★` · [`bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) `9★` · [`bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) `9★` | **`MIT`** code *(`1 092` / `1 107` / `1 286` B)* + **`CC BY 4.0`** data *(`1 108` / `577` B)* | 🟢 **by HOLDER — `Copyright (c) 2026 Profy Tecnologias Educacionais Ltda`**, a named Brazilian company |
+| 🟢 [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) `15★`, `141` commits | INEP microdata for R | **`MIT`**, `1 090` B, `main/LICENSE.md` | 🟢 **by HOLDER** — `Sidney da Silva Pereira Bissoli` |
+| 🔴 [`portabilis/i-educar`](https://github.com/portabilis/i-educar) `719★` | municipal school management | **`GPL-2.0`**, **`18 092` B** — byte-count unchanged from the shelves' own cell | 🟡 by description *("do Brasil")*; **NOT by holder** |
+| 🟡 `latam-gpt` ×3 · `unb-mds/2025-2-infoschool` · `belentani7/aprende-brasil` · `yunger7/enem-api` · `inepdadosabertos/api` | pipeline, coursework, exam data | `MIT` ×4 · `MIT-0` ×1 · `GPL-2.0` ×2 | 🔴 **none place from their own grant** — see `T235-C` |
+
+🔴 **`3` further live LATAM rows are UNGRANTED** and are therefore NOT published as licensed rows: [`jgabriel-sntx/corretor-de-redacao-enem`](https://github.com/jgabriel-sntx/corretor-de-redacao-enem) *(an ENEM essay grader — the most engagement-relevant artefact found this pass, and unusable)*, `michelelozada/projeto-evasao-escolar-brasil-2019-2021`, `juanfelipemalaver00-arch/predictive-model-for-primary-school-dropout-in-colombia`. 🟡 **`ACTION UJ`** — ask the three authors for a licence; a one-line `MIT` file converts all three.
+
+### 🟢 `T235-D` — the REGISTRY limb: `3` `MIT` Brazilian education packages, shipped `2026-10-15`
+
+🔴 **`repos/trending.md` publishes *"LATAM in the registry: zero"*, and p232 opened the PACKAGE REGISTRY channel for exactly this purpose — to find rows the repository harvester cannot see.** 🟢 **Three were on that channel the whole time, all `MIT`, all updated the day BEFORE this pass:**
+
+| registry | package | version | licence | releases | last modified |
+|---|---|---|---|---|---|
+| 🟢 **PyPI** | [`bncc`](https://pypi.org/project/bncc/) | `0.5.1` | **`MIT`** *(`license_expression`)* | `7` | **`2026-10-15` 03:22** |
+| 🟢 **npm** | `@bncc/dados` | `0.7.0` | **`MIT`** | `11` | **`2026-10-15` 20:09** |
+| 🟢 **npm** | `@bncc/mcp` | `0.5.0` | **`MIT`** | `8` | **`2026-10-15` 20:15** |
+
+🟢 **`@bncc/mcp` is an `MIT` MCP server exposing the `1 721` learning objectives of Brazil's `Base Nacional Comum Curricular`** — which is to say the agent tier that the mandated query reports as empty has a LATAM row on it, published by a named Brazilian company, released eight times. 🔵 **PyPI's contact field carries it in the open: `"bncc.dev (Profy)" <contato@bncc.dev>`.**
+
+🔴 **And the reason p232 missed it is a rule p233 had already written.** Four npm names guessed from the org and repo spellings — `bncc`, `@bncc/bncc`, `bncc-dados`, `@bncc-dev/bncc` — **all `404`**. The real names are in `packages/bncc/package.json`, and nothing about the GitHub slug predicts the npm scope. 🟢 **A `404` on a GUESSED name is not an absence; it is an unread name.**
+
+### 🟢 `T235-B` — `ACTION TQ` extended: **`GPL-2.0` is holder-less too**
+
+p234 established the lever — *placement comes from HOLDER TYPE, not licence class* — and named `Apache-2.0` as the non-placing class *("an Apache body has no holder field at all")*. 🟢 **p235 adds `GPL-2.0`, on three instances read this pass.**
+
+🔴 **A `GPL-2.0` body's only real copyright line is the FSF's own** — `Copyright (C) 1989, 1991 Free Software Foundation, Inc.` at line `4`. The only other two are **template placeholders**: `Copyright (C) <year> <name of author>` at line `294` and the *"Gnomovision version 69"* example at line `315`. 🟢 **So a `GPL-2.0` grant cannot place its own repository, however national the project is** — `i-educar` is the largest free-software education platform in Brazil and its grant body names Boston.
+
+🟢 **Controlled:** [`portabilis/i-educar`](https://github.com/portabilis/i-educar) and [`yunger7/enem-api`](https://github.com/yunger7/enem-api) carry **BYTE-IDENTICAL** `18 092` B bodies *(`cmp` clean)*. 🔴 **And `inepdadosabertos/api` is also `Version 2, June 1991` at `18 025` B — `67` B shorter.** So p235's own rule, against its own temptation to read size as identity: **a BYTE COUNT is not a LICENCE VERSION.**
+
+> p232: **a `200` is not a READ.** p233: **a `404` is not an ABSENCE.** p234: **a NAME is not an ARTEFACT.** 🔴 **p235: a BYTE COUNT is not a VERSION — and an ORG NAME is not a REGION.**
+
+### 🔴 `T235-C` — the `latam-gpt` cohort does **not** place to LATAM, and the shelves already knew
+
+🟡 **This pass drafted the `latam-gpt` holder analysis as a finding and the index refused it: `agents/trending.md` and `repos/trending.md` already carry it, with the same byte counts and the same holders.** Recorded as a refusal rather than a finding, because that is what it is.
+
+🔴 **What it means stands, and is worth restating where the gap list can see it:** all three `latam-gpt` grants read this pass have **non-LATAM holders** — `© 2025 GonzaloFuentes1` *(a GitHub username, not a jurisdiction)*, `© 2025 Tim Duffy`, and `© 2020 **EleutherAI**` *(a fork; the holder places to **North America**, and the grant is six years older than the org)*. 🟢 **`latam-gpt` places only at layer 0 — the owner/org name — which `intel/open-gaps.md`'s own layer-D table states does NOT place a repository.** The regional LLM everyone cites as LATAM's answer contributes `0` rows that place from their own evidence.
+
+### 🟢 The agent tier: the mandated query fails for the FIFTH consecutive pass
+
+🔴 **`"top open source AI agents education 2026 github MIT"` returned `0` education agents again** — general frameworks only *(OpenHands, MetaGPT, CrewAI, LangGraph)*. 🟢 **`ACTION UC`'s rewording works and was run beside it; this pass it returned `3` candidates and all `3` were already carried** *(`THU-MAIC/OpenMAIC`, `littlecookie0722/AI-Teaching-Agent`, `Ebimsv/AITutorAgent`)*. 🔵 **The rewording is not a one-pass fix for an empty tier — it is a fix for an empty QUERY. The tier is simply saturated at this KB's reach.**
+
+### 🟡 The duplication rate did not fall — and that is the honest result
+
+| | p234 | p235 |
+|---|---|---|
+| rows drafted | `20` | `18` candidates |
+| already carried | `9` *(**45%**)* | `13` *(**72%**)* |
+| caught | 🔴 **after** the shelves were written | 🟢 **before anything was drafted** |
+
+🔴 **The index did not make this pass more original; it made it honest.** A `72%` hit rate is a property of how saturated these shelves are at `1 913` rows, and the useful consequence is that `0` of the `13` reached a shelf. 🟡 **Any pass reporting a low duplication rate from here on should be read as having skipped `make carried`.**
+
+### 🔴 Gaps p235 leaves open, stated because silence looks like coverage
+
+- 🟢 **The flat LATAM-zero cells are CORRECTED IN PLACE this pass: `4` of them — `README.md` ×`3`, `agents/trending.md` ×`1` — plus the registry cell in `repos/trending.md`.** 🔵 **The count is `5`, not the `11` a first grep suggested, and the difference is the finding's own boundary:** the other cells say things like *"`0` **new** this pass"* or *"the Spanish-language probe returned `0`"*, which are CHANNEL results and are **true and reproducible**. 🟢 **Region queries really do return `0`, every pass.** 🔴 **What was wrong was spending a channel's silence as a claim about supply.** 🟡 **`ACTION UK`: a channel that returns `0` may only be published as *"this channel returned `0`"*, never as *"there is no X"* — and p235 held itself to it when counting its own corrections.**
+- 🔴 **APAC supply is still ONE row with an INFERRED region** *(`HKUDS/DeepTutor`, placed from an org handle)*. `jp.studyplus` still unprobed. 🟢 **Control on the absence** *(`ACTION UF`)*: the India/Japan/Korea platform query ran and returned two non-grant-read rows, both Anglophone; **no Japanese- or Korean-language query has ever been run on these shelves**, so APAC's thinness is a measured property of the QUERIES, not an establishable absence. 🟡 **`ACTION UL`: run `学校管理` and `학교 관리 시스템`.**
+- 🔴 **`ACTION TQ`'s retroactive sweep: STILL NOT RUN** *(p233 → p234 → p235 → p236)*, now with `GPL-2.0` added to the non-placing classes, which widens it.
+- 🔴 **`ACTION TW` NOT RUN** — the zod empty-subject check is still READ, not EXECUTED. Fourth pass.
+- 🟡 **`UA`** *(namespaces unread: `com. net. io. at. se. no. dk. fi. es. it. fr. in. cn. kr. sg. eu.`)* · **`UB`** *(remaining platform census cells)* · **`UD`** *(`edugit.org` for AlekSIS)* · **`UE`** *(the remaining `28` `svws-nrw` repositories)* — all four carried unchanged from p234, none run this pass.
+- 🟢 **`UG`/`UH` are discharged and standing.** 🟡 **New: `UJ`** *(licence-ask on the `3` ungranted LATAM rows)* · **`UK`** *(a channel's `0` is not an absence)* · **`UL`** *(CJK-language queries)* · 🔴 **`UM`** *(THE ONE THIS PASS EARNED: `carried()` indexes `github.com` only — a row on `edugit.org`, GitLab or a Maven coordinate is invisible to the gate, so `UA`/`UD` cannot be closed with this instrument alone)*.
+
 ## Pass 234 — 2026-10-16 — THE NINE-PASS FINDING THIS KB IS BUILT ON IS **FALSIFIED**: THERE IS AN `Apache-2.0` LMS — **GRANT-READ BY `p209` AND THEN ARGUED AGAINST FOR `25` PASSES** — AND A `BSD-3-Clause` STATE SIS THE LICENCE FIELD HID
 
 ⏱️ **THIRD pass of `2026-10-16`.** p232 ran `2026-10-15` 23:4x → `2026-10-16` 00:xx UTC, p233 later the same date, this pass later still. Stated because these shelves pin SHAs and three passes sharing a date is what a later pass reads as a contradiction.
@@ -52,7 +145,7 @@ p233 concluded placement comes from **licence class** *(an `Apache-2.0` NOTICE b
 
 ### 🔴 Gaps p234 leaves open, stated because silence looks like coverage
 
-- 🔴 **LATAM: `0` open-source education repositories — SEVENTH consecutive pass**, now corroborated on a third channel. 🟢 **And LATAM has the HIGHEST measured adoption of any region** *(Brazil `56%` / Chile `55%` of secondary teachers vs `36%` OECD; `9` in `10` 15-year-olds; `87%` of institutions using AI with only `26%` holding a strategy)*. **That asymmetry is the largest demand/supply gap on these shelves and `intel/market.md` sells against it rather than apologising for it.**
+- 🔴 **LATAM: `0` open-source education repositories — SEVENTH consecutive pass**<!--corrected-->, now corroborated on a third channel. 🔴 **WITHDRAWN AS A SUPPLY CLAIM AT `p235`:** `15` live LATAM education repositories were re-verified first-hand at p235 — `9` of them permissive — and **`12` were already on these shelves when this line was written**; `3` `MIT` packages are live on `PyPI`/`npm`. 🟢 **What stands is the CHANNEL result: the mandated region queries returned `0` NEW rows, which is true and reproducible.** 🟡 **`ACTION UK`: a channel's `0` is not an absence.** 🔵 [`p235-latam-verify`](evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](evidence/p235-registry-latam.2026-10-16-p235.tsv) 🟢 **And LATAM has the HIGHEST measured adoption of any region** *(Brazil `56%` / Chile `55%` of secondary teachers vs `36%` OECD; `9` in `10` 15-year-olds; `87%` of institutions using AI with only `26%` holding a strategy)*. **That asymmetry is the largest demand/supply gap on these shelves and `intel/market.md` sells against it rather than apologising for it.**
 - 🔴 **APAC supply is ONE row with an INFERRED region.** `jp.studyplus` unprobed; no APAC education vendor list or deployment rates found.
 - 🔴 **`ACTION TQ`'s retroactive sweep: STILL NOT RUN** *(p233 → p234 → p235)*, now with a sharper holder-type predicate.
 - 🔴 **`ACTION TW` NOT RUN** — the zod empty-subject check is still READ, not EXECUTED.
@@ -104,7 +197,7 @@ p232's sharpest finding was that a package can be live, granted, actively releas
 
 - 🔴 **`ACTION TQ` was NOT RUN.** The retroactive holder-placement sweep is carried to p234 untouched. What p233 learned is narrow and negative: **`0` of `4` new permissive rows are placeable** — *"Rollercoaster Development"* names no jurisdiction, and `TQ`'s own rule is that a suffix places nothing.
 - 🔴 **Region-shaped queries returned `0` repositories for a SIXTH consecutive pass**, across all four regions. 🟢 **The one EMEA-native artefact this pass found — `org.fenixedu`, Instituto Superior Técnico, Lisbon — came from MAVEN COORDINATES, not from any regional search. Non-US supply is visible in coordinates, not in regional queries.**
-- 🔴 **LATAM: `0` open-source education repositories**, now having survived a GitHub sweep, a registry sweep *(p232)* and a Maven enumeration *(p233)*. 🟢 **But the best LATAM source these shelves have had arrived: a UNESCO IESALC / UNU-IAS working paper surveying `200` higher-education institutions across `19` countries.**
+- 🔴 **LATAM: `0` open-source education repositories**<!--corrected-->, now having survived a GitHub sweep, a registry sweep *(p232)* and a Maven enumeration *(p233)*. 🔴 **WITHDRAWN AS A SUPPLY CLAIM AT `p235`:** `15` live LATAM education repositories were re-verified first-hand at p235 — `9` of them permissive — and **`12` were already on these shelves when this line was written**; `3` `MIT` packages are live on `PyPI`/`npm`. 🟢 **What stands is the CHANNEL result: the mandated region queries returned `0` NEW rows, which is true and reproducible.** 🟡 **`ACTION UK`: a channel's `0` is not an absence.** 🔴 **The registry limb is false on its own channel: `PyPI bncc` `0.5.1`, `npm @bncc/dados` `0.7.0` and `npm @bncc/mcp` `0.5.0`, all `MIT`, all modified `2026-10-15`.** 🔵 [`p235-latam-verify`](evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](evidence/p235-registry-latam.2026-10-16-p235.tsv) 🟢 **But the best LATAM source these shelves have had arrived: a UNESCO IESALC / UNU-IAS working paper surveying `200` higher-education institutions across `19` countries.**
 - 🔴 **APAC: `0` repositories and `0` education-specific adoption rates** — still the thinnest region here. The `98%`/`94%` figures in circulation are consumer AWARENESS, not education adoption, and are not recorded as such.
 - 🔴 **Canada and Mexico returned NOTHING inside the North America query.** "North America" in these sources means the United States.
 - 🔴 **Every AI Act date on these shelves is CORROBORATED-SECONDARY.** No pass has read the Official Journal, and the whole EMEA opportunity section is priced off `2027-12-02`. **`ACTION TX` is registered to fix exactly that.**
@@ -146,7 +239,7 @@ p232's sharpest finding was that a package can be live, granted, actively releas
 ### 🔴 Declared gaps, stated because silence looks like coverage
 
 - 🔴 **Region-shaped queries returned `0` repositories for North America, EMEA, APAC and LATAM — a FIFTH consecutive reproduction.** They return regulation and vendor prose, which is intel, not supply.
-- 🔴 **LATAM: `0` open-source education repositories, now surviving a REGISTRY sweep as well as a sixth GitHub probe.** The gap is no longer attributable to the channel.
+- 🔴 **LATAM: `0` open-source education repositories, now surviving a REGISTRY sweep as well as a sixth GitHub probe.**<!--corrected--> ~~The gap is no longer attributable to the channel.~~ 🔴 **WITHDRAWN AS A SUPPLY CLAIM AT `p235`:** `15` live LATAM education repositories were re-verified first-hand at p235 — `9` of them permissive — and **`12` were already on these shelves when this line was written**; `3` `MIT` packages are live on `PyPI`/`npm`. 🟢 **What stands is the CHANNEL result: the mandated region queries returned `0` NEW rows, which is true and reproducible.** 🟡 **`ACTION UK`: a channel's `0` is not an absence.** 🔴 **And the REGISTRY sweep's own limb is false: three `MIT` Brazilian education packages were live on `PyPI` and `npm` throughout.** 🔵 [`p235-latam-verify`](evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](evidence/p235-registry-latam.2026-10-16-p235.tsv)
 - 🔴 **APAC: `0` repositories and `0` APAC-specific adoption rates — the thinnest region on these shelves.**
 - 🔴 **Maven Central is UNREADABLE from this session *(both search endpoints `000`)*, so the JVM education estate is `UNMEASURED`, not absent — and the three biggest copyleft LMS estates in this industry are JVM.**
 - 🟡 **PyPI's search endpoint answers `200` with a bot-challenge page. A `200` is not a read**, and the PyPI sweep is therefore a declared `51`-name vocabulary probe whose recall is bounded and stated.

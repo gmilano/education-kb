@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 235 — 2026-10-16 — THE LATAM FOUNDATION SHELF EXISTS AND HAS `15` LIVE ROWS, `9` OF THEM PERMISSIVE — AGAINST A PUBLISHED CLAIM OF `0`
+
+🔴 **`0` new repositories. `15` carried rows re-verified first-hand this window** *(existence by `git ls-remote`, licence by GRANT BODY over `raw.githubusercontent.com`)*. 🟢 **`3` new registry rows.** 🔵 **Evidence:** [`p235-latam-verify`](../evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](../evidence/p235-registry-latam.2026-10-16-p235.tsv)
+
+### 🟢 What a LATAM engagement can actually be built on, today
+
+Ordered by what a studio would reach for first, not by stars. Every licence below was read from the grant body in this pass's window; every SHA is this window's `HEAD`.
+
+| # | row | licence *(grant body, bytes)* | holder | stars | what it gives an engagement |
+|---|---|---|---|---|---|
+| 1 | 🟢 [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) `@ 9c268978efa2` | **`MIT`** `1 092` B | © 2026 **Profy Tecnologias Educacionais Ltda** | **21** | 🟢 **The Brazilian national curriculum as verified open data** — `1 721` learning objectives in JSON, SQLite and CSV, **with per-record provenance**. The spine of any BR curriculum-alignment build |
+| 2 | 🟢 [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) `@ e9b4985adf83` | **`MIT`** code `1 107` B + **`CC BY 4.0`** data `1 108` B | © 2026 **Profy Tecnologias Educacionais Ltda** | 9 | 🟢 **The same data consumable in one line** — `PyPI bncc`, `npm @bncc/dados`, plus the `@bncc/mcp` server. TypeScript + Python |
+| 3 | 🟢 [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) `@ 4713901ce5d7` | **`MIT`** code `1 286` B + **`CC BY 4.0`** data `577` B | © 2026 `bncc.dev` | 9 | 🟢 **An open hallucination benchmark on the BNCC: `15 300` answers from `17` models**, methodology and raw data public. The evidence instrument for a *"can we trust it on our curriculum"* conversation |
+| 4 | 🔴 [`portabilis/i-educar`](https://github.com/portabilis/i-educar) `@ 7903a3efc768` | 🔴 **`GPL-2.0`** **`18 092` B** | 🔴 none — FSF boilerplate only | **719** | 🟢 **Municipal school management in production across Brazilian networks** — enrolment, attendance, grades. 🔴 **Copyleft: a plugin inherits `GPL-2.0`** |
+| 5 | 🟢 [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) `@ ab506012cb85` | **`MIT`** `1 090` B | © 2025 Sidney da Silva Pereira Bissoli | 15 | 🟢 **INEP microdata download + processing in R**, `141` commits. The census/ENEM data path for analytics work |
+| 6 | 🟡 [`yunger7/enem-api`](https://github.com/yunger7/enem-api) `@ 938c56fbd3b3` | 🔴 **`GPL-2.0`** `18 092` B — **byte-identical to `i-educar`** | 🔴 none | — | ENEM question/exam API |
+| 7 | 🟡 [`inepdadosabertos/api`](https://github.com/inepdadosabertos/api) `@ 7d32b7e23bc6` | 🔴 **`GPL-2.0`** `18 025` B — *same version, `67` B shorter* | 🔴 none | — | INEP open-data API surface |
+| 8 | 🟡 [`unb-mds/2025-2-infoschool`](https://github.com/unb-mds/2025-2-infoschool) `@ 5d5bc1451fc7` | **`MIT`** `1 060` B | 🔴 © 2025 `MDS` — a bare initialism | — | 🟡 Universidade de Brasília coursework; useful as a reference build, not a dependency |
+| 9 | 🟡 [`belentani7/aprende-brasil`](https://github.com/belentani7/aprende-brasil) `@ 470da7991773` | **`MIT`** `814` B | 🔴 © 2025 `Belentani Project` | — | 🟡 small; places by repo name only |
+| 10–12 | 🟡 [`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter) · [`lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) · [`syco-bench`](https://github.com/latam-gpt/syco-bench) | `MIT` `1 072` B · `MIT` `1 067` B · 🔴 **`MIT-0`** `903` B | 🔴 `GonzaloFuentes1` · 🔴 **EleutherAI (2020)** · 🔴 `Tim Duffy` | 1 · 1 · 1 | 🟡 **Pipeline pieces for the regional model, not education tooling.** 🔴 **A fork and an `MIT-0`; none places to LATAM from its own grant** |
+| 13–15 | 🔴 [`jgabriel-sntx/corretor-de-redacao-enem`](https://github.com/jgabriel-sntx/corretor-de-redacao-enem) · `michelelozada/projeto-evasao-escolar-brasil-2019-2021` · `juanfelipemalaver00-arch/predictive-model-for-primary-school-dropout-in-colombia` | 🔴 **UNGRANTED — no licence file at `main`/`master` root** | — | — | 🔴 **LIVE and NOT USABLE.** An ENEM essay grader, a Brazilian dropout study and a **Colombian** primary-dropout model — the three most engagement-shaped artefacts found this pass, and all three unlicensed. 🟡 **`ACTION UJ`: ask. One `MIT` file each converts all three** |
+
+### 🟢 Registry rows — the same estate, installable
+
+| registry | package | version | licence | last modified |
+|---|---|---|---|---|
+| 🟢 PyPI | [`bncc`](https://pypi.org/project/bncc/) | `0.5.1` | **`MIT`** | **`2026-10-15` 03:22** |
+| 🟢 npm | `@bncc/dados` | `0.7.0` | **`MIT`** | **`2026-10-15` 20:09** |
+| 🟢 npm | `@bncc/mcp` | `0.5.0` | **`MIT`** | **`2026-10-15` 20:15** |
+
+### 🔴 The reading this shelf should have had seven passes ago
+
+🟢 **`4` of the `15` rows place to LATAM from their OWN grant body** — the three `Profy`/`bncc.dev` rows and `educabR`. 🔴 **The rest place by description language, by repo name, by org handle, or not at all** — and the two largest by stars (`i-educar`, `719`) and by regional prestige (`latam-gpt`) are in the second group. 🔵 **So the correct statement was never *"LATAM has `0` repositories"*; it is *"LATAM's supply is real, mostly small, and concentrated in ONE company and ONE individual"*.** That is a different engagement conversation, and a better one: it names who to call.
+
 ## Pass 234 — 2026-10-16 — THE FOUNDATION TIER GAINS A **PERMISSIVE LMS AND A PERMISSIVE SIS**, AND p233's *"THERE ISN'T A JVM FOUNDATION"* IS OVERTURNED BY TWO JVM FOUNDATIONS
 
 ⏱️ **THIRD pass of `2026-10-16`.**

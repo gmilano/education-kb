@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 235 — 2026-10-16 — THE 2026 TREND IS GOVERNANCE, AND THE DATE EVERYONE QUOTES FOR IT **DOES NOT RECONCILE**
+
+🔵 **Evidence:** [`p235-queries`](../evidence/p235-queries.2026-10-16-p235.tsv)
+
+### 🟢 `T1` — from experimentation to governance
+
+🟢 **Converging across independent sources this pass:** `1EdTech` frames 2026 as AI in education shifting *from experimentation to governance*, with institutions building policy and oversight structures. `HolonIQ` reports the clearest gains came from the practical uses — **course-design support and teacher productivity** — and expects attention to move to ethics and demonstrated instructional benefit rather than broad personalisation promises. The **OECD `Digital Education Outlook 2026`** urges **purpose-built educational AI over general-purpose tools**. 🟡 **Several of these are vendor or association blogs; the direction is consistent, the numbers are not independently verified.**
+
+🔴 **The measurable version of this trend is the governance DEFICIT, and it is regional:** LATAM `87%` adoption against `26%` holding a strategy; EMEA `10%` of `450+` institutions with formal AI-use guidelines; North America `60%` of K-12 teachers using AI while `31` states legislate. 🟢 **Every one of those is a demand signal for policy-and-evidence work rather than model work.**
+
+### 🔴 `T2` — the EU AI Act date does not reconcile, and this KB will not pick one
+
+🔴 **Three sources, three timelines, read this pass:**
+
+| source shape | what it says |
+|---|---|
+| Digital Omnibus commentary | Council gave final approval **`29 Jun 2026`**; still awaiting Official Journal publication. Revised application: **`2 Dec 2027`** stand-alone high-risk, **`2 Aug 2028`** high-risk embedded in regulated products |
+| a second commentary | high-risk provisions enter into force **`Aug 2026`** |
+| European Commission page | AI Act entry into force **`31 Jul 2026`** |
+
+🔴 **Do not quote any of these to a client from these shelves.** 🟢 **What IS stable and quotable: the Act classifies AI used for admissions, student evaluation and exam scoring as HIGH-RISK** — that classification is consistent across all three readings, and it is what actually scopes an EMEA engagement. 🟡 **`ACTION UN`: resolve the date against the Official Journal text itself, not commentary.**
+
+### 🟢 `T3` — APAC legislates generally, and not for education
+
+🟢 **Binding, dated, and in force:** South Korea's **`AI Basic Act`, effective `22 Jan 2026`** *(it also carries SME and start-up adoption support)*; **Vietnam's national AI law, `1 Mar 2026`**, risk-based with a high-risk list that appears to include education *(source text truncated — not relied on)*; **Taiwan's `AI Basic Act`, passed Dec 2025**; China's framework the most comprehensive in the region, with binding generative-AI and content-labelling rules; Japan, Singapore and Australia voluntary and principles-based.
+
+🔴 **No education-specific AI rule was found in any APAC jurisdiction this pass.** 🟢 **Control on that absence** *(`ACTION UF`)*: the finding rests on English-language search only — **no `学校管理`, no `학교 관리 시스템`, no CJK query has ever been run on these shelves** *(`ACTION UL`)*. 🟡 **So this is a gap in COVERAGE, and saying otherwise would be the error `ACTION UK` was written for.**
+
+### 🟢 `T4` — North America regulates by state, and privacy leads
+
+🟢 **`134` AI-in-education bills across `31` states**, themed on student-data privacy, classroom-use limits and curriculum. Named instruments: **CA `AB 1159`** *(bar student data from training AI models)*, **ID `SB 1227`** *(privacy protections for school AI tools)*, **OK and MD** *(human oversight; no AI in high-stakes student decisions)*, with **MD giving its `24` districts `120` days** from state guidance to adopt their own policies. Federal: **`H.R. 8747`, K-12 AI Literacy and Readiness Act of 2026, advanced in committee `21 Jul 2026`** — 🔴 **committee advance is not passage.** 🟡 **A student-authored national framework *(STUDENTS FIRST Act of 2026, all `50` states)* explicitly rejects both an outright ban and unrestricted adoption** — useful as a stakeholder-consent artefact.
+
+### 🟢 `T5` — the agent-tier trend: tool surfaces for standards, not more tutors
+
+🟢 **The one new agent-tier signal this pass is not a tutor.** It is **`@bncc/mcp` `0.5.0`** — `MIT`, `8` releases, modified **`2026-10-15` 20:15** — an MCP server exposing the `1 721` learning objectives of Brazil's `Base Nacional Comum Curricular`, published by a named Brazilian company, alongside **`bncc-benchmark`**'s open measurement of **`15 300` answers from `17` models** against that same curriculum. 🔵 **The pattern: a national standard published as a mountable tool plus a public accuracy benchmark for it.** 🟡 **It is cheap to replicate for any national curriculum, and nobody has done it for the other markets on these shelves** — which makes it the most reusable thing found this pass.
+
 ## Pass 234 — 2026-10-16 — THE REGULATORY TREND CONVERGES ON **ASSESSMENT** IN THREE JURISDICTIONS AT ONCE, AND THE SUPPLY TREND IS THAT PERMISSIVE EDUCATION PLATFORMS COME FROM **MINISTRIES**, NOT STARTUPS
 
 ⏱️ **THIRD pass of `2026-10-16`.**

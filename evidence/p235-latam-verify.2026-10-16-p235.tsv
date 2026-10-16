@@ -1,0 +1,24 @@
+# p235 — THE HEADLINE. Every row below is a LATAM-placed education repository ALREADY ON THESE SHELVES,
+# re-verified first-hand in this pass's window (2026-10-16, FOURTH pass of this date): existence by
+# `git ls-remote` (fresh HEAD SHA), licence by GRANT BODY over raw.githubusercontent.com (never a
+# platform metadata field — p209/p210/p234's rule). Channel state this window: github.com HTML 403 to
+# curl, api.github.com 403, raw.githubusercontent.com 200, git ls-remote OK, WebFetch on github.com OK.
+# These 15 rows stand against the claim published 11 times across 5 shelves that LATAM has 0 of them.
+slug	head_sha	grant_path	grant_bytes	licence	holder_verbatim	places_LATAM_from_own_grant
+portabilis/i-educar	7903a3efc7689942ee700007f86ed581023aad27	master/LICENSE	18092	GPL-2.0	(none — FSF boilerplate only)	NO — GPL-2.0 is holder-less
+bncc-dev/bncc-dados	9c268978efa2aa250834c6a9edb6074432752838	main/LICENSE	1092	MIT	Copyright (c) 2026 Profy Tecnologias Educacionais Ltda	YES — named Brazilian company
+bncc-dev/bncc-pacotes	e9b4985adf838a521facf56a33b967d4c6164551	main/LICENSE-CODIGO.md	1107	MIT (code)	Copyright (c) 2026 Profy Tecnologias Educacionais Ltda	YES — named Brazilian company
+bncc-dev/bncc-pacotes	e9b4985adf838a521facf56a33b967d4c6164551	main/LICENSE-DADOS.md	1108	CC BY 4.0 (data)	(deferred to bncc-dados)	n/a — data layer
+bncc-dev/bncc-benchmark	4713901ce5d7f343eb59139a1ce35bc1da632091	main/LICENSE-CODIGO.md	1286	MIT (code)	Copyright (c) 2026 bncc.dev	PARTIAL — a domain, not a jurisdiction
+bncc-dev/bncc-benchmark	4713901ce5d7f343eb59139a1ce35bc1da632091	main/LICENSE-DADOS.md	577	CC BY 4.0 (data)	(deferred)	n/a — data layer
+SidneyBissoli/educabR	ab506012cb85889c066b12fc5d5424d2ad87f294	main/LICENSE.md	1090	MIT	Copyright (c) 2025 Sidney da Silva Pereira Bissoli	YES — Lusophone personal name
+unb-mds/2025-2-infoschool	5d5bc1451fc7	main/LICENSE	1060	MIT	Copyright (c) 2025 MDS	NO — bare initialism; layer-0 org only
+belentani7/aprende-brasil	470da7991773	main/LICENSE	814	MIT	Copyright (c) 2025 Belentani Project	NO by holder; places by repo name
+latam-gpt/anonymization-filter	f6f7ddfdbc02	main/LICENSE	1072	MIT	Copyright (c) 2025 GonzaloFuentes1	NO — a GitHub username
+latam-gpt/lm-evaluation-harness	9fa381a92534	main/LICENSE.md	1067	MIT	Copyright (c) 2020 EleutherAI	NO — a fork; holder is North America
+latam-gpt/syco-bench	5ecc005b2a8c	main/LICENSE	903	MIT-0	Copyright 2025 Tim Duffy	NO — unrelated individual
+yunger7/enem-api	938c56fbd3b3	main/LICENSE	18092	GPL-2.0	(none — FSF boilerplate only)	NO — GPL-2.0 is holder-less
+inepdadosabertos/api	7d32b7e23bc6	master/LICENSE	18025	GPL-2.0	(none — FSF boilerplate only)	NO — GPL-2.0 is holder-less
+jgabriel-sntx/corretor-de-redacao-enem	2bbc89a3823f	(no grant file at main/master root)	-	UNGRANTED	-	NOT PUBLISHABLE as a licensed row
+michelelozada/projeto-evasao-escolar-brasil-2019-2021	36bd459ec985	(no grant file at main/master root)	-	UNGRANTED	-	NOT PUBLISHABLE as a licensed row
+juanfelipemalaver00-arch/predictive-model-for-primary-school-dropout-in-colombia	6f70481e712c	(no grant file at main/master root)	-	UNGRANTED	-	NOT PUBLISHABLE as a licensed row

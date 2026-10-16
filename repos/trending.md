@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — p235 — *"LATAM in the registry: zero"* is **FALSIFIED ON ITS OWN CHANNEL**: three `MIT` Brazilian education packages, all shipped `2026-10-15`
+
+🔴 **This file carries the cell *"LATAM in the registry: zero"*, and p232 opened the PACKAGE REGISTRY channel precisely to catch rows the repository harvester cannot see.** 🟢 **Three were there the whole time.**
+
+| registry | package | version | licence | releases | last modified | publisher |
+|---|---|---|---|---|---|---|
+| 🟢 **PyPI** | [`bncc`](https://pypi.org/project/bncc/) | `0.5.1` | **`MIT`** *(`license_expression`)* | `7` | **`2026-10-15` 03:22:02** | `"bncc.dev (Profy)" <contato@bncc.dev>` |
+| 🟢 **npm** | `@bncc/dados` | `0.7.0` | **`MIT`** | `11` | **`2026-10-15` 20:09:39** | `bncc.dev` / Profy Tecnologias Educacionais Ltda |
+| 🟢 **npm** | `@bncc/mcp` | `0.5.0` | **`MIT`** | `8` | **`2026-10-15` 20:15:21** | same |
+
+🔵 **All three were last modified the day BEFORE this pass — inside the window p232 and p233 were running in.** 🟢 **`requires_python >=3.10`; the PyPI summary is in Portuguese and names the Computing complement explicitly.**
+
+### 🔴 Why the channel missed them, and the rule it breaks
+
+🔴 **Four npm names guessed from the GitHub spellings — `bncc`, `@bncc/bncc`, `bncc-dados`, `@bncc-dev/bncc` — returned `404`.** The real names are `@bncc/dados` and `@bncc/mcp`, and they are in `packages/bncc/package.json` and the repo `README`. 🟢 **Nothing about a GitHub slug predicts an npm scope.**
+
+> p233 wrote it: **a `404` is not an ABSENCE.** 🔴 **p235 adds the operative half: a `404` on a GUESSED name is not even a measurement.** Read the manifest, then query the registry. Evidence, including the four dead guesses: [`p235-registry-latam`](../evidence/p235-registry-latam.2026-10-16-p235.tsv)
+
+### 🟢 Re-verified this window, not new
+
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) `@ 7903a3efc768` — 🔴 **`GPL-2.0`, `18 092` B**, byte-identical to [`yunger7/enem-api`](https://github.com/yunger7/enem-api)'s body *(`cmp` clean)*; `inepdadosabertos/api` is the same `Version 2, June 1991` at `18 025` B. 🔴 **So a byte count does not identify a licence version** — and none of the three places its own repository, because a `GPL-2.0` body's only real copyright line is the FSF's.
+
+🔴 **The *"LATAM in the registry: zero"* cell is corrected in place below.**
+
+---
+
 ## 2026-10-16 — Pass 234 — `ACTION TU` EXTENDS THE MAVEN CENSUS PAST `org.` AND FINDS THE **ONE** EDUCATION-PRODUCT NAMESPACE IN EIGHT: `de.` — WHILE TWO OF p233's CENSUS CELLS TURN OUT TO BE FALSE POSITIVES
 
 ⏱️ **THIRD pass of `2026-10-16`.** p232 and p233 published earlier the same date.
@@ -15765,7 +15791,9 @@ with the 86 open repositories in that tier**; `io.cubite/lms` (hosted LMS with S
 says nothing about a licence; this KB's own filter — read the payload — is what separates the
 31 from the 71, and then the 2 from the 31.
 
-🔴 **LATAM in the registry: zero.** Not one of the 102 education-vocabulary servers is
+🔴 **LATAM in the registry: zero.**<!--corrected--> 🔴 **FALSIFIED ON THIS CHANNEL AT `p235`: `PyPI bncc` `0.5.1`, `npm @bncc/dados` `0.7.0` and `npm @bncc/mcp` `0.5.0` — all `MIT`, all published by `bncc.dev` / Profy Tecnologias Educacionais Ltda, all modified `2026-10-15`.** 🟢 **Four GUESSED npm names returned `404`; the real scopes are in `packages/bncc/package.json`.** 🔵 [`p235-latam-verify`](../evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](../evidence/p235-registry-latam.2026-10-16-p235.tsv)
+
+The cell as written continues: Not one of the 102 education-vocabulary servers is
 LATAM-placed. The one Brazilian entry (`br.com.lensas/optical-intelligence`) is optometry
 training, not education software. The region's two real entry points, **SIGAA** and **SUAP**,
 are university systems whose names this pass failed to measure properly — see the method
