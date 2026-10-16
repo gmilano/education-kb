@@ -166,6 +166,7 @@ rider_restriction() {
 
 osi_family_of() {
   local t n
+  local __source_available_crossref=""   # P1065 (p254) -- por invocacion, nunca global
   # -------------------------------------------------------------------------
   # P308 (pase 100).  DOS cambios, y los dos son el mismo defecto medido por un eje nuevo:
   # el REFLUJO del texto.  Un payload de licencia se re-envuelve sin cambiar una palabra
@@ -316,7 +317,51 @@ osi_family_of() {
   # Community License, 27.204 B), y los dos vuelven `UNCLASSIFIED` -> ALLOWED por una via
   # que NINGUN orden alcanza.  Esa es la mitad que `p247-keyed-grant` mide.
   # -------------------------------------------------------------------------
-  printf '%s' "$t" | grep -qi 'Business Source License' && { echo "BUSL"; return; }
+  # -------------------------------------------------------------------------
+  # P1065 (pase 254 del 2026-10-16).  `ACTION XA`'s LIMB 2 NO ESTA VACIO, y el contraejemplo
+  # se leyo de primera mano: `steveyeow/Feynman` (160 estrellas, `LICENSE` 1.217 B,
+  # sha256_16 `aa8325eadd7fea1c`, ref `849c336c378c`).  Su payload de raiz es un texto MIT
+  # CANONICO -- 1.067 B, `Copyright (c) 2026 Steve Yao` -- seguido de una nota de 150 B:
+  #
+  #     "Note: The contents of the `app/pro/` directory are licensed separately under
+  #      the Business Source License 1.1. See `app/pro/LICENSE` for details."
+  #
+  # El hoist de P1062 lo devolvia `BUSL`, y ademas `holder_of_file` devolvia
+  # `NOT-APPLICABLE (BUSL: holder not in the license text by construction)` sobre un payload
+  # QUE SI TIENE su linea de copyright.  p247 midio esta poblacion con la API de busqueda de
+  # codigo y la publico como VACIA AL ALCANCE MEDIBLE, diciendo explicitamente que era una
+  # cota superior y no una prueba de vacuidad.  Era una cota, y este pase la rompio -- no con
+  # una busqueda de codigo sino con el canal ordinario de filas.
+  #
+  # EL DISCRIMINANTE, y sale del texto de la licencia y no de la prosa que la cita: BSL 1.1
+  # tiene PARAMETROS OBLIGATORIOS (`Licensor:`, `Licensed Work:`, `Change Date:`,
+  # `Change License:`).  Un payload GOBERNADO por BSL los lleva; uno que la MENCIONA, no.
+  # Medido sobre los cuatro payloads BSL reales de esta base y el contraejemplo:
+  #     iaga-sentinel.busl-1.1   4/4      sdv.busl-1.1            4/4
+  #     feynman app/pro/LICENSE  4/4      p129 bsl11-change-mit   3/4
+  #     feynman LICENSE (raiz)   0/4  <-- el unico sin ninguno
+  #
+  # POR QUE ESTO NO PUEDE DEBILITAR UN VEREDICTO, que es la unica propiedad que importa al
+  # tocar un ancla de refuso: cuando la frase aparece SIN parametros la rama no decide `MIT`
+  # -- solo SE SALTA, y el payload sigue bajando por la cadena.  Si la cadena termina en
+  # `UNCLASSIFIED` (o sea: no se identifico POSITIVAMENTE ninguna familia), el fallback de
+  # abajo devuelve `BUSL` igual.  El ancla solo se pierde contra una familia OSI RECONOCIDA,
+  # nunca contra la nada.  `UNCLASSIFIED` -> ALLOWED por token-match es la direccion
+  # peligrosa que P1063 ya pago, y este cambio no la abre.  Radio de impacto medido sobre los
+  # 332 payloads-fixture del repo, antes y despues:
+  # `evidence/p254-hoist-blast-radius.2026-10-16-p254.tsv`.
+  # -------------------------------------------------------------------------
+  if printf '%s' "$t" | grep -qi 'Business Source License'; then
+    # 🔴 SIN ancla de linea, y esto se midio: `$t` ya paso por `tr -s '[:space:]' ' '`
+    # (linea ~210), asi que es UNA sola linea y `^` solo matchea el byte 0 del payload.
+    # La primera version de este parche usaba `^[[:space:]]*(...)` y devolvia los CUATRO
+    # BSL reales a su Change License -- exactamente la regresion que P1062 existe para
+    # impedir.  La atrapo el diff de 332 fixtures, no la lectura del parche.
+    if printf '%s' "$t" | grep -qiE '(licensor|licensed work|change date|change license)[[:space:]]*:'; then
+      echo "BUSL"; return
+    fi
+    __source_available_crossref="BUSL"
+  fi
   printf '%s' "$t" | grep -qi 'Elastic License'         && { echo "Elastic"; return; }
   printf '%s' "$t" | grep -qi 'PolyForm'                && { echo "PolyForm"; return; }
   printf '%s' "$t" | grep -qiE 'fair[ -]?code'          && { echo "FAIRCODE"; return; }
@@ -950,6 +995,12 @@ osi_family_of() {
     __decl "$d" 'apache'           && { echo "Apache-2.0 (declaracion)"; return; }
     __decl "$d" 'mit'              && { echo "MIT (declaracion)"; return; }
     __decl "$d" 'bsd'              && { echo "BSD (declaracion)"; return; }
+  fi
+  # P1065 (pase 254): el ancla source-available salteada se RECUPERA aca.  Llegar a este
+  # punto significa que ninguna familia se identifico positivamente, asi que la mencion
+  # vuelve a ser el mejor dato disponible y el veredicto conservador se mantiene.
+  if [ -n "${__source_available_crossref:-}" ]; then
+    echo "$__source_available_crossref"; return
   fi
   echo "UNCLASSIFIED"
 }

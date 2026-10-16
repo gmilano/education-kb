@@ -1,0 +1,16 @@
+channel	transport	result	note
+api.github.com/repos/{slug}	curl (proxy)	403	refused at the proxy, 17th pass
+api.github.com/repos/{slug}	WebFetch	200 then 403	LIVE until the 60/h unauthenticated budget is spent
+api.github.com/search/repositories	curl (proxy)	403	refused at the proxy
+api.github.com/search/repositories	WebFetch	200	topic queries RUNNABLE for the first time in 16 passes
+api.github.com/rate_limit	WebFetch	200	core limit=60 remaining=0 used=60 reset=2026-10-16T22:53:28Z
+github.com/trending	curl (proxy)	403	refused at the proxy
+github.com/trending	WebFetch	200	official trending feed READABLE; 11 repos, 0 education
+raw.githubusercontent.com	curl (proxy)	200	unmetered, the payload channel
+raw.githubusercontent.com	WebFetch	200	also live
+git ls-remote --symref	git	ok	existence + default branch + HEAD sha
+eur-lex.europa.eu	curl (proxy)	000	refused
+eur-lex.europa.eu	WebFetch	ENOTFOUND	DNS does not resolve — a DIFFERENT failure class from the proxy 000
+digital-strategy.ec.europa.eu	WebFetch	ENOTFOUND	DNS does not resolve
+www.unesco.org	curl (proxy)	000	refused
+make hooks	make	exit 0	34 steps, all PASS, aborts correctly on failure

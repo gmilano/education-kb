@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 254 — 2026-10-16 — **AFRICA AND THE MIDDLE EAST STOP BEING A BLANK.** THE GAP THIS SHELF DECLARED FOR TWO PASSES IS PARTIALLY CLOSED WITH NAMED INSTRUMENTS — AND `H.R. 8747` FINALLY HAS A SECOND SOURCE
+
+⏱️ **TWENTY-THIRD pass of `2026-10-16`.** 🔵 **Evidence:** [`p254-websearch`](../evidence/p254-websearch.2026-10-16-p254.tsv) *(`9` legs, incl. a targeted Africa + Middle East leg)* · [`p254-channel-map`](../evidence/p254-channel-map.2026-10-16-p254.tsv)
+
+### 🟢 The EU dates, unchanged and re-affirmed — with a SEVENTH re-service and one new corroboration
+
+🟢 **Nothing moved, and that is the point of a pinned fact.** `Reg. (EU) 2026/1744` — the Digital Omnibus on AI — OJ `2026-07-24`, in force `2026-07-27`.
+
+| obligation | binds |
+|---|---|
+| Article `5(1)(f)` — emotion recognition in educational institutions | 🟢 **`2025-02-02`**, in force |
+| Article `50` transparency | 🟢 **`2026-08-02`**, in force |
+| two new Article `5` prohibitions | 🟡 **`2026-12-02`** |
+| 🟢 **Annex III high-risk — the education entries** | 🟢 **`2027-12-02`** *(deferred from `2026-08-02`)* |
+| Annex I embedded systems | `2028-08-02` |
+
+🔴 **Leg 6 served *"from August 2026 … high-risk"* again — the SEVENTH recorded re-service.** 🟢 `p253`'s [`p253-settled-fact-regression`](../compose/code/p253-settled-fact-regression/) is what keeps that out of these shelves, and it ran green this pass.
+
+🟡 **New, and it cuts both ways:** the leg reached the European Commission's own `digital-strategy.ec.europa.eu` page and reported its milestone dates as **internally inconsistent** — a `27 July` Omnibus entry into force beside a `31 July` AI Act entry into force. 🟢 `2026-07-27` is exactly what this base has carried since `p233`, so an **official** page now corroborates the pinned date — on a sixth independent channel — while being muddled about its neighbour. 🔴 **Still not primary:** `eur-lex.europa.eu` is refused on **two transports with different failure classes** — `000` at the proxy, and `getaddrinfo ENOTFOUND` via `WebFetch`. The name does not resolve from this environment, which is stronger information than a refusal: **stop spending budget on it until egress changes.**
+
+### 🟢 `H.R. 8747` — the single-source caveat can be narrowed
+
+🟡 `p253` carried *"`H.R. 8747` is still single-sourced on this shelf. Do not price an engagement against it."* 🟢 **A second independent channel this pass** reports the same instrument with the same detail: the **K-12 AI Literacy and Readiness Act of 2026**, advanced in committee markup on **`2026-07-21`**, amending ESEA so schools may spend federal funds on AI. 🟡 **Narrowed, not lifted:** two secondary channels are not `congress.gov`, and *advanced in committee* is not *enacted*. 🔵 **The commercial reading is unchanged and is the honest one: this is a funding signal for FY27 pipeline, not a compliance deadline.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The policy layer is being built by legislatures, which makes it the one region where the buyer has a deadline that is not self-imposed.** `134` AI-in-education bills across `31` states this session. Named instruments this pass: 🟢 **California `AB 1159`** *(bars using student data to train AI models)*, 🟢 **Idaho `SB 1227`** *(privacy protections for AI tools in schools)*, and 🟡 **Oklahoma and Maryland, which require human oversight and bar AI from high-stakes decisions about students** — the clearest statutory statement yet of the human-in-the-loop requirement a studio has to design to.
+
+🔴 **And districts are diverging hard, which is a delivery fact and not a news item:** Katy ISD bans generative AI chatbots for K-6 and phases in supervised access through grade `12` from `2026-27`; New York City holds a one-year moratorium on student-facing AI through eighth grade. 🟡 **A single national K-12 product does not exist in the US right now.** What sells is an age-gated, policy-configurable deployment — per-district switches, retention rules and an audit trail — and that is engineering, which is the kind of opportunity this studio can price.
+
+🟡 Higher education is the faster surface: institutional adoption reported rising from `45`–`50%` *(2024)* to `78`–`82%` *(2026)*, and North America is put at ~`36%` of the global market *(both aggregator figures — directional only)*. 🟢 Canada: **"AI for All"**, launched `2026-06-04`, with an AI-literacy push — 🟡 **a strategy, not a statute**, so the buyer is a ministry programme rather than a compliance owner. 🔴 Mexico: bills, no enforcing regulator yet.
+
+### EMEA
+
+🟢 **The three-date AI Act roadmap is the engagement** — see [`compose/patterns.md`](../compose/patterns.md) `P253-EMEA`, unchanged and still correct. Market figures reported this pass: Europe `$2.64B` *(2026)* to `$8.0B` *(2030)* at `31.9%` CAGR, 🟡 secondary and unverified; Finland, Estonia and the Netherlands named as K-12 integration leaders; the UK's `GBP 4M` for lesson planning and marking.
+
+🟢 **AFRICA — the declared gap, now with named instruments rather than silence.** `p252` reached one UNESCO-ICHEI report; `p253` reached nothing at all and said so. This pass's targeted leg paid:
+
+| instrument | what it is |
+|---|---|
+| 🟢 **UNESCO national AI competency frameworks** | teacher **and** student frameworks, piloted in **Benin, Burundi, Côte d'Ivoire and Senegal**, built onto the existing ICT competency framework with the **KIX Africa 21 Hub** |
+| 🟢 **African Union** | **Continental AI Strategy (2024)** and **Digital Education Strategy and Implementation Plan (2024)** — continental scaffolding a national engagement can cite |
+| 🟢 **UNESCO-ICHEI**, January `2026` | *Digitalisation and the Use of AI in Higher Education in Africa: An Exploratory Study* |
+| 🟡 national strategies | **Mauritius** first in Africa *(2018)*; **Kenya** and **Rwanda** since, both emphasising AI literacy; the `2024` **Nairobi Statement** backs teacher and learner capacity-building |
+| 🔴 the constraint | UNESCO *(2022)*: **fewer than `20%` of teachers in Africa feel adequately trained to teach digital skills** |
+
+🔵 **The opportunity that follows from that last row, and it inverts the usual pitch:** in Africa the binding constraint is **teacher capability**, not model access. The sellable programme is competency-framework implementation — assessment, localisation into teaching languages, and train-the-trainer — with the AI product attached to it, not the other way round. 🟢 The AU strategies and the UNESCO frameworks mean a studio does not have to invent the curriculum standard; it has to implement one that ministries have already adopted.
+
+🟢 **MIDDLE EAST — also no longer blank.** **UAE:** the Ministry of Education's K-12 AI curriculum, announced May `2025`, runs from kindergarten to secondary, progressing from comparing humans and machines to command engineering and real-world simulation — 🟢 **the most advanced state mandate on this shelf, and it implies a sustained content, teacher-training and assessment pipeline.** **Saudi Arabia:** SDAIA with the Ministry of Education mandate an *Introduction to AI* course for third-year secondary students. **Bahrain:** a UNESCO-supported national OER policy tied to its ICT-in-Education strategy *(this shelf has carried Bahrain's instruments since `p190`)*. 🟡 A `2026` systematic review places the GCC at *"a strategic inflection point"* for open educational resources.
+
+🔴 **What is still NOT established**, said so silence is not read as coverage: no confirmed **`2026`** national AI-in-schools strategy for any specific African country, and no new UNESCO regional strategy dated `2026`. The UAE and Saudi mandates are `2025`-dated and were not re-confirmed as current this pass. `www.unesco.org` is `000` at the proxy, so none of the above is primary.
+
+### APAC
+
+🟢 **Regulation is diverging, and the divergence is now the product requirement.** **South Korea:** framework law in force since **`2026-01-22`**, with generative-AI duties including telling users when content is AI-generated — 🟢 a *marking* obligation, i.e. the same engineering as the EU's Article `50`, which makes one disclosure layer serve two regions. **Japan:** promotes rather than penalises. **India:** data-protection rules phasing in to **May `2027`**. **Singapore and Australia:** voluntary guidance over existing data-protection law.
+
+🟡 **Vietnam — a disagreement to RESOLVE, not a correction to publish.** This shelf carries an education carve-out dated **`2026-08-15`**; this pass's leg reports education-sector transition periods running **to `2027`**, with a grace period for systems already operating before a set date. 🔵 Those may be two different things — a carve-out *start* and a transition *end* — and `p253` paid for re-opening a settled fact on a secondary reading. 🔴 **Registered as a question, with the carried date left standing until a primary source settles it.**
+
+🟡 **The demand surface splits WITHIN the region** *(`Ipsos Education Monitor 2026`, carried from `p253`)*: support for banning AI in schools is lower across the Asian markets surveyed and higher in Australia and New Zealand — so consent, opt-out and parental visibility are an ANZ delivery requirement, not a marketing choice. 🟡 Named regional players: Riiid *(Korea)*, Squirrel AI *(China)*, Byju's *(India)*, with Google, Microsoft, IBM and Pearson as the incumbent layer.
+
+### LATAM
+
+🟢 **Unchanged from `p253`, and it is still the strongest regional dataset on this shelf** — `TALIS 2024` teacher use *(Brazil `56%`, Chile `55%`, Colombia `53%`, Costa Rica `52%`, against an OECD average of `36%`)*; `PISA 2025`, nine in ten `15`-year-olds across `13` countries have used an AI chatbot for schoolwork; UNESCO IESALC/UNU-IAS over `200` institutions in `19` countries — `87%` using AI, 🔴 **`26%` with a formal strategy**; Digital Education Council, `7 319` faculty — `79%` using AI, `88%` at *minimal* to *moderate* engagement.
+
+🟢 **New this pass — the institutional counterparty, which matters more than another adoption percentage.** UNESCO's **Observatory on AI in Education for Latin America and the Caribbean**, launched April `2026`, with **CAF, CENIA (Chile), ECLAC, Tecnológico de Monterrey, ProFuturo and Fundación Ceibal (Uruguay)**; a UNESCO Mexico pilot with **CONALEP and DGETI** on centres of excellence. 🟡 National policy: **Colombia** `CONPES 4144` *(Feb 2025)*, **Uruguay** signed the Council of Europe AI framework convention *(2025)*, **Mexico** has a federal AI bill in the Senate. 🔴 **No education-specific AI law in the region.**
+
+🔵 **The sales reading is `p253`'s and it still holds — adoption above the OECD average, governance far below it — with one addition:** the region now has **named multilateral conveners**. An engagement that arrives with a governance framework aligned to the UNESCO Observatory's and ProFuturo's language is talking to a buyer who already has a mandate, not one who must invent it.
+
+### Global
+
+🔴 **The market-size channel remains unusable and should stop being quoted.** Three figures for the same year from three firms this pass: `$6.4B` *(2025, to `$79.6B` by 2034)*, `$10.6B` *(2026)*, `$11.4B` *(2026, to `$57.2B` by 2033)* — CAGRs of `31.35%`, `40.9%` and `25.9%`. 🟡 **A `1.8×` spread on the current year means nobody is measuring the same thing.** 🔵 Use the regional **adoption and governance ratios** instead: they come from instruments with published methods *(TALIS, PISA, UNESCO IESALC)* and they are what a client's board actually argues about.
+
 ## Pass 253 — 2026-10-16 — **THE EU HIGH-RISK DATE IS NOT A DISJUNCTION AND HAS NOT BEEN SINCE `p233`.** THIS SHELF RE-OPENED A SETTLED FACT FOR TWO PASSES AND PRICED A QUARTER'S EMEA ADVICE ON THE RE-OPENED VERSION — CORRECTED, AND NOW GATED
 
 ⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-date-regression`](../evidence/p253-date-regression.2026-10-16-p253.tsv) *(`13` scopes, each with its enclosing pass)* · [`p253-regional-figures`](../evidence/p253-regional-figures.2026-10-16-p253.tsv) *(`29` rows, `5` regions)* · [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) · [`p253-channel-map`](../evidence/p253-channel-map.2026-10-16-p253.tsv) · **instrument:** [`p253-settled-fact-regression`](../compose/code/p253-settled-fact-regression/) *(`17`)*

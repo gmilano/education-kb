@@ -1,0 +1,25 @@
+Business Source License 1.1
+
+Licensor: Steve Yao
+Licensed Work: Feynman Pro (the contents of the app/pro/ directory)
+Change Date: Four years from the date of each release
+Change License: MIT License
+
+Terms
+
+The Licensor hereby grants you the right to copy, modify, create derivative
+works, redistribute, and make non-production use of the Licensed Work. The
+Licensor may make an Additional Use Grant, below.
+
+Additional Use Grant: You may use the Licensed Work for any purpose other
+than providing a commercial hosted service that competes with the Licensor's
+paid offerings.
+
+You may not use the Licensed Work in production, or provide it to others for
+production use, unless the Licensor grants you additional rights through a
+separate agreement.
+
+Change Date Provision: On the Change Date, the Licensed Work will be made
+available under the Change License.
+
+For full license terms, see: https://mariadb.com/bsl11/

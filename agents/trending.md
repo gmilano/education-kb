@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 254 — WHAT MOVED THIS WEEK: **THREE ROWS AND A CHANNEL.** WHAT MOVED IN THE GATE: THE ONE RECIPE THE `Makefile` ITSELF CALLS *"THE GATE"* **PRINTED `STOP` AND EXITED `0`** — FOR ITS WHOLE LIFE
+
+⏱️ **TWENTY-THIRD pass of `2026-10-16`.** 🔵 **Evidence:** [`p254-channel-map`](../evidence/p254-channel-map.2026-10-16-p254.tsv) · [`p254-websearch`](../evidence/p254-websearch.2026-10-16-p254.tsv) *(`9` legs)* · [`p254-row-supply`](../evidence/p254-row-supply.2026-10-16-p254.tsv) · [`p254-exit-status-census`](../evidence/p254-exit-status-census.2026-10-16-p254.tsv) *(`10` targets)* · [`p254-hoist-blast-radius`](../evidence/p254-hoist-blast-radius.2026-10-16-p254.tsv) *(`332` fixtures)* · **instruments:** [`p254-exit-status-reach`](../compose/code/p254-exit-status-reach/) *(`19`)* · [`p254-scoped-grant-reference`](../compose/code/p254-scoped-grant-reference/) *(`16`)*
+
+### 🔴 `ACTION XZ` DISCHARGED — and the answer is worse than the defect that registered it
+
+`p253` found `gate-offline` printing `ALL OFFLINE LICENCE CONTROLS PASS` with a failing suite, and registered `XZ` to ask the same of everything else. 🟢 **Every recipe line of all `10` targets graded.** The headline:
+
+```make
+claims: ## ACTION UG — THE GATE: run before publishing any "there is no X"
+	@$(PY) -I …/carried_index.py claims "$(TOKEN)" . || true
+```
+
+🔴 **`carried_index.py claims` returns `1` EXACTLY WHEN THE SHELVES ALREADY CLAIM THE TOKEN.** Exit `1` *is* the STOP signal; it is the entire purpose of the recipe. `|| true` discarded it. Measured, not read:
+
+| | measured this pass |
+|---|---|
+| `carried_index.py claims moodle .` | 🟢 prints `ALREADY CLAIMED … STOP`, **exits `1`** *(`809` hits in `agents/trending.md`, `805` in `repos/trending.md`)* |
+| `make claims TOKEN=moodle` | 🔴 prints the same `STOP`, **exits `0`** |
+
+🔵 **Why this is the worse one.** `p253`'s deaf gate guarded *controls*; this one guards **publication** — it is the single check that stands between this base and a false *"there is no X"*, the failure mode that produced `ACTION UF` and the declared-gap discipline in the first place. 🔴 **A human reading the terminal was always fine. Anything composing it — a hook, a CI step, `make claims TOKEN=x && publish` — read success.** 🟢 **The class, stated so it survives this instance:** `p253`'s gate could not HEAR; this gate could not SPEAK. Same shape — *a signal exists, is correct, and nothing consumes it.*
+
+🟢 **The full census, and it is not all bad news:**
+
+| grade | lines | where |
+|---|---|---|
+| 🟢 `GUARDED` / `CONSUMED` | `36` / `39` | `gate-offline`'s `34` steps, plus the asserting lines of `exists`, `carried`, `reach` |
+| 🔴 `SWALLOWED-TRUE` | **`1`** | 🔴 **`claims`** — fixed this pass |
+| 🟡 `SWALLOWED-PIPE` | `1` | `index` — `… | head -3`; **uncontracted on purpose**: it prints three counts for a human and its own `main` handles `BrokenPipeError` by design |
+| 🟡 `SWALLOWED-SUBST` | `4` | `status` — every line is `echo "… $$(cmd)"`; uncontracted, it asserts nothing |
+| 🟢 `REPORT` | `2` | `exists`, `gate-mit-tier` — a pipeline that only FORMATS a file an already-consumed step wrote |
+
+🔴 **The grader's own first measurement was wrong, and it is recorded rather than quietly fixed:** it flagged `exists` for its closing `awk … | sort | uniq -c`. 🟢 Silencing a **formatter** costs nothing; silencing an **instrument** costs the verdict. That distinction is now the `REPORT` grade, with both controls pinned.
+
+### 🟢 The row channel, and the thing that opened it
+
+| leg | scope | education rows | what it paid |
+|---|---|---|---|
+| `1`–`4` | Global | 🔴 `0` | listicles and course repositories; every name already carried |
+| `5` | North America | 🔴 `0` | 🟢 **`H.R. 8747` on a SECOND independent channel** — see [`intel/market.md`](../intel/market.md) |
+| `6` | EMEA | 🔴 `0` | 🔴 **the SEVENTH re-service of the superseded `2026-08-02` high-risk date** |
+| `7` | APAC | 🔴 `0` | 🟡 Vietnam's education transition now reported as running **to `2027`**, not the `2026-08-15` this shelf carries |
+| `8` | LATAM | 🔴 `0` | the `p253` OECD/UNESCO figures, unchanged |
+| `9` | Africa + Middle East *(targeted)* | 🔴 `0` | 🟢 **the declared gap PARTIALLY CLOSED** — first named instruments in two passes |
+| 🟢 **`topic:` queries** | Global | 🟢 **`5`** | 🟢 **`3` published.** `1 663` results on one query alone |
+
+🟢 **`WebSearch` paid `0` rows for the twenty-third pass running and `api.github.com` paid `5` in three queries.** 🔵 That is not a criticism of the legs — they pay this base in **regulation**, reliably, and did again — it is a statement about which channel supplies *rows*: the one this base had recorded as dead since `p238`.
+
+### 🟢 New this week
+
+| Nombre | Repo | Licencia | Señal | Por qué importa |
+|---|---|---|---|---|
+| ELI5 | [`DreambigOu/ELI5`](https://github.com/DreambigOu/ELI5) | 🟢 **MIT** *(`1 056` B, `1126322e2cc8d165`)* | 🟢 **`1 760`★**, medido | Capa de reexpresión por audiencia sobre contenido existente. El valor de estudio no es el tutor: es que la MISMA fuente sirva a un alumno, a un docente y a un auditor sin tres redacciones |
+| learn-anything-with-AI | [`read2017/learn-anything-with-AI`](https://github.com/read2017/learn-anything-with-AI) | 🟢 **MIT** *(`1 065` B, `f551749a612d2e59`)* | 🟢 **`197`★** | Convierte un objetivo en entregables verificables en vez de un temario. Es la pieza que falta entre *"el alumno usó la IA"* y *"el alumno puede demostrar que aprendió"* |
+| Feynman | [`steveyeow/Feynman`](https://github.com/steveyeow/Feynman) | 🟡 **MIT raíz / `BUSL-1.1` en `app/pro/`** | 🟡 **`160`★** | Lectura con pensadores simulados en debate. 🔴 **Se publica con su frontera de licencia dibujada**, porque es un repositorio de doble ámbito y la concesión MIT **no** cubre `app/pro/` |
+
+### 🔴 The seventh re-service, and a new wrinkle in the same place
+
+🔴 Leg 6 served *"high-risk … apply from August 2026"* again — the **seventh** recorded re-service of a date superseded at `p233`. 🟡 **New this pass:** the leg reached the European Commission's own `digital-strategy.ec.europa.eu` page and reported **its milestone dates as internally inconsistent** — a `27 July` Omnibus entry into force beside a `31 July` AI Act entry into force. 🟢 `2026-07-27` is what this base has carried for the Omnibus since `p233`, so the official page **corroborates the pinned date** while being muddled about its neighbour.
+
+🔴 **And the primary text is still unread, now refused on TWO transports with DIFFERENT failure classes:** `curl` → `000` at the proxy; `WebFetch` → **`getaddrinfo ENOTFOUND`**. 🔵 The second is stronger information than the first: `eur-lex.europa.eu` and `digital-strategy.ec.europa.eu` **do not resolve from this environment at all**. That is not a refusal to be retried — it is an absent name, and a later pass should stop spending budget on it until egress changes.
+
 ## 2026-10-16 — Pass 253 — WHAT MOVED THIS WEEK: **ONE ROW, AFTER FIFTEEN DRY PASSES.** WHAT MOVED IN THE GATE: `make hooks` RAN FOR THE FIRST TIME IN THREE PASSES AND PRINTED **`ALL OFFLINE LICENCE CONTROLS PASS` WITH A FAILING SUITE** — THE GATE WAS DISCARDING EVERY SIGNAL IT WAS GIVEN
 
 ⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) *(`9` legs)* · [`p253-channel-map`](../evidence/p253-channel-map.2026-10-16-p253.tsv) · [`p253-slug-canonicality`](../evidence/p253-slug-canonicality.2026-10-16-p253.tsv) · [`p253-date-regression`](../evidence/p253-date-regression.2026-10-16-p253.tsv) *(`13` scopes)* · [`p253-p326-reread`](../evidence/p253-p326-reread.2026-10-16-p253.tsv) · [`p253-captured-body-census`](../evidence/p253-captured-body-census.2026-10-16-p253.tsv) · [`p253-regional-figures`](../evidence/p253-regional-figures.2026-10-16-p253.tsv) *(`29` rows)* · **instruments:** [`p253-captured-body-census`](../compose/code/p253-captured-body-census/) *(`29`)* · [`p253-settled-fact-regression`](../compose/code/p253-settled-fact-regression/) *(`17`)* · [`p253-gate-propagation`](../compose/code/p253-gate-propagation/) *(`7`)*

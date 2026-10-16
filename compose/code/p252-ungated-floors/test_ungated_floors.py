@@ -39,8 +39,14 @@ FLOORS = uf.read_floors()
 # `make hooks`, so the census and the gated count both move by three.  🔵 An absolute count
 # pinned as a literal is a maintenance cost p252 chose knowingly; it is also what caught
 # this pass's own additions, which is the behaviour wanted.
-chk("python test files on disk", len(ROWS), 204)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 23)
+# p254: 204 -> 205 and 23 -> 24.  TWO instruments landed (`p254-exit-status-reach`,
+# `p254-scoped-grant-reference`) and THREE gate steps, but only ONE is a python test file:
+# `p254-scoped-grant-reference`'s suite is bash, and the third step runs `exit_reach.py
+# --verify`, which is a verifier and not a suite.  🔵 Said explicitly because the two counts
+# moved by DIFFERENT amounts for the first time; a later pass reading "+2 instruments, +1
+# file" as an arithmetic error would be re-deriving this note.
+chk("python test files on disk", len(ROWS), 205)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 24)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",

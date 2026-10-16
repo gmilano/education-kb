@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 254 — 2026-10-16 — **A REPOSITORY CAN CARRY TWO LICENCES AT ONCE, AND THIS SHELF HAD NO WAY TO SAY SO.** THE FIRST DUAL-SCOPE SUBJECT IN EDUCATION, AND WHAT IT CHANGES FOR A STUDIO READING A `LICENSE` FILE
+
+⏱️ **TWENTY-THIRD pass of `2026-10-16`.** 🔵 **Evidence:** [`p254-grant-payload`](../evidence/p254-grant-payload.2026-10-16-p254.tsv) · [`p254-hoist-blast-radius`](../evidence/p254-hoist-blast-radius.2026-10-16-p254.tsv) *(`332`)* · **instrument:** [`p254-scoped-grant-reference`](../compose/code/p254-scoped-grant-reference/)
+
+### 🔴 `T254-V1` — the open-core boundary, measured inside one repository
+
+Every platform on this shelf is licensed **as a whole**: Moodle is `GPL-3.0`, Open edX `AGPL-3.0`, OpenOLAT `Apache-2.0`, Sakai `ECL-2.0`. 🟢 [`steveyeow/Feynman`](https://github.com/steveyeow/Feynman) is the first subject here that is **not**:
+
+| path | grant | measured |
+|---|---|---|
+| repository root | 🟢 **`MIT`** | `LICENSE`, `1 217` B, `aa8325eadd7fea1c`, ref `849c336c378c` — `1 067` B of canonical MIT plus a `150` B pointer |
+| `app/pro/` | 🔴 **`BUSL-1.1`** | `app/pro/LICENSE`, `917` B, `9cf07d243fa7da6e` — `Licensor: Steve Yao`, `Change License: MIT`, `Change Date:` four years from each release |
+
+🔵 **This is the open-core model written into the filesystem instead of into a pricing page**, and it is becoming the common shape for small AI tools: give the engine away, reserve the paid surface. 🟡 **For a studio the consequence is concrete and easy to get wrong:** the repository is *"MIT"* in every listing, in the README badge and in the API's `license` field — and the directory you would most want to copy is the one that is not. 🟢 **The thing to inspect is not the root `LICENSE`, it is `find . -name 'LICENSE*'`**, and that is now this shelf's reading rule for any open-core subject.
+
+🔴 **The base itself failed this test before fixing it:** the shared classifier returned `BUSL` for the **root** file and suppressed a holder that is present. See [`repos/foundations.md`](../repos/foundations.md) `T254-F2`.
+
+### 🟢 `T254-V2` — `ACTION XU`, and the licence-claim census gains a channel that is far better than the one it was measuring
+
+`XU` has been measuring the **direction** of secondary licence errors. The window stood at `5` claims, `3` refuted, all three overstating permissiveness. 🟢 **This pass adds `5` claims from a channel the census had never been able to use — `api.github.com`'s `license.spdx_id` — each checked against the payload:**
+
+| slug | API claim | first-hand | agrees? |
+|---|---|---|---|
+| `DreambigOu/ELI5` | `MIT` | 🟢 `MIT` *(`1 056` B)* | 🟢 yes |
+| `read2017/learn-anything-with-AI` | `MIT` | 🟢 `MIT` *(`1 065` B)* | 🟢 yes |
+| `sitor-ai/frametell` | `AGPL-3.0` | 🟢 `AGPL-3.0` *(`34 523` B)* | 🟢 yes |
+| `ECNU-ICALK/EduChat` | `null` | 🟢 **no grant on `6` Tier-A paths** | 🟢 yes — and informatively |
+| `steveyeow/Feynman` | `NOASSERTION` | 🟡 `MIT` root + `BUSL` subtree | 🟢 **yes, and it is the most honest cell of the five** — `NOASSERTION` is what a classifier should say about a repository whose grant is not uniform |
+
+🟢 **`10` / `10` on the API channel, against `2` / `5` on the prose channel.** 🔵 **So `ACTION XU`'s prior needs re-scoping rather than re-measuring: the error rate is a property of the CHANNEL, not of *secondary* as a category.** A roundup article paraphrases; `licensee` reads the file. 🟡 **The operative rule, updated:** treat a **prose** licence claim as an upper bound on permissiveness to be verified, and an **API** licence field as a strong prior that still requires the payload before publication — because `NOASSERTION` and `null` carry real information that prose never reports at all.
+
+🔴 **What is still NOT done:** `XU` asked for the direction across the whole shelf history. Two channels and ten claims is still a window.
+
 ## Pass 253 — 2026-10-16 — TWO PLATFORM GRANTS RE-READ FIRST-HAND, AND **BOTH SECONDARY CLAIMS WERE RIGHT** — WHICH IS THE RESULT THAT STOPS `p252`'s PRIOR FROM BECOMING A SUPERSTITION
 
 ⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-platform-grants`](../evidence/p253-platform-grants.2026-10-16-p253.tsv) *(`3`)* · [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) *(leg 3)*

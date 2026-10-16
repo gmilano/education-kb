@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 254 — 2026-10-16 — TWO RECIPES THAT COME OUT OF THIS PASS'S OWN MEASUREMENTS: **A DUAL-SCOPE LICENCE AUDIT A STUDIO CAN RUN IN AN AFTERNOON**, AND **THE AFRICA ENGAGEMENT INVERTED** — THE PRODUCT IS THE TEACHER, NOT THE MODEL
+
+⏱️ **TWENTY-THIRD pass of `2026-10-16`.** 🔵 **Evidence:** [`p254-grant-payload`](../evidence/p254-grant-payload.2026-10-16-p254.tsv) · [`p254-row-supply`](../evidence/p254-row-supply.2026-10-16-p254.tsv) · [`p254-websearch`](../evidence/p254-websearch.2026-10-16-p254.tsv) *(leg `9`)* · **instrument:** [`p254-scoped-grant-reference`](../compose/code/p254-scoped-grant-reference/)
+
+### 🟢 `P254-1` — the dual-scope licence audit, and it is billable because the failure is invisible
+
+🔴 **The problem, measured this pass rather than imagined:** [`steveyeow/Feynman`](https://github.com/steveyeow/Feynman) is `MIT` in its badge, `MIT` in its root `LICENSE` and `NOASSERTION` in the API — and `app/pro/` is `BUSL-1.1`. 🔴 **This base's own shared classifier got it wrong**, returning `BUSL` for the whole repository and suppressing the real MIT holder. A client's procurement team, reading the root file, will get it wrong in the **opposite** direction: they will copy the paid subtree.
+
+**The wiring, and every step is something this base already owns:**
+
+1. 🟢 **Enumerate every grant in the tree, not the root one.** `find . -name 'LICENSE*' -o -name 'LICENCE*' -o -name 'COPYING*'` over the client's vendored dependencies. 🔵 The root file answers *"what is this project"*; the tree answers *"what may we ship"*, and open-core projects put the difference in a subdirectory.
+2. 🟢 **Classify each payload with one shared classifier, never a fresh one** — `compose/code/lib/measure --family` *(`P237`)*. 🔴 Run it **FILED**: fetch to a file, then size and hash the file. A captured body loses a trailing newline run and the `sha256` is then wrong unpredictably *(`P834`, and `p253` found a published hash off by one byte because of exactly this)*.
+3. 🟢 **Resolve the default branch before probing any ref** — `git ls-remote --symref` *(`ACTION YA`)*. Guessing `main` returns `404` on `openeducat/openeducat_erp` *(default `19.0`)* and `francoisjacquet/rosariosis` *(default `mobile`)*, and a `404` reads as *"ungranted"* when it means *"wrong branch"*.
+4. 🟢 **Apply `P1065`: a pointer is not a grant.** A `LICENSE` naming a second licence for a *different path* is a cross-reference. The discriminant is the named licence's own mandatory text — for BSL 1.1, the `Licensor:` / `Licensed Work:` / `Change Date:` / `Change License:` parameters. 🔵 Present ⇒ governed; absent ⇒ a pointer, and the file's real grant is whatever its body says.
+5. 🟢 **Deliver the boundary, not the verdict.** The artefact is a path-to-grant table — *"everything outside `app/pro/` is MIT; `app/pro/` is BSL until four years after each release, then MIT"* — because that is the sentence an engineer needs before copying a directory and the sentence counsel needs before signing.
+
+🟡 **Scope honestly:** this is a `1`–`2` week audit attached to a larger engagement, not a programme on its own. 🟢 **It sells because the error is silent in both directions and because the deliverable is checkable** — every row carries bytes, a `sha256` and a resolved ref, so the client can re-run it next quarter.
+
+### 🟢 `P254-2` — the Africa engagement, inverted: competency framework FIRST, product second
+
+🟡 **Why this recipe exists:** the targeted leg closed a two-pass gap, and what it found changes the order of the work. 🔴 **UNESCO: fewer than `20%` of teachers in Africa feel adequately trained to teach digital skills.** 🟢 Meanwhile the standards already exist — UNESCO's **national AI competency frameworks** for teachers and students *(piloted in Benin, Burundi, Côte d'Ivoire and Senegal with the KIX Africa 21 Hub)*, the **AU Continental AI Strategy (2024)** and the **AU Digital Education Strategy (2024)**.
+
+🔵 **So the binding constraint is capability, not model access — and a tutor deployed into a system that cannot supervise it produces a procurement failure, not a learning gain.**
+
+**The wiring:**
+
+1. 🟢 **Anchor on the adopted framework, never a bespoke one.** Map the client ministry's existing ICT competency framework to the UNESCO AI competency levels. 🔵 This is the step that makes the engagement fundable: the ministry is implementing a standard it already signed, which is a different budget line from buying a vendor's method.
+2. 🟢 **Instrument the baseline before anything is deployed.** Teacher self-efficacy and task-level capability, measured per competency level. 🔴 Without it the programme cannot show a gain, and the `<20%` figure is a continental average that will not match any one client.
+3. 🟢 **Build the teacher-facing layer first, and build it on permissive code.** [`DreambigOu/ELI5`](https://github.com/DreambigOu/ELI5) *(`MIT`, `1 056` B, `1126322e2cc8d165`)* is the right shape here: one source of truth, re-expressed per audience — the same lesson material rendered for a teacher's preparation, a learner's level and an inspector's review, without three authoring passes. 🟡 Attach it at the LMS boundary, not inside the model.
+4. 🟢 **Make the learner path demonstrable.** [`read2017/learn-anything-with-AI`](https://github.com/read2017/learn-anything-with-AI) *(`MIT`, `1 065` B, `f551749a612d2e59`)* turns an objective into verifiable deliverables rather than a syllabus. 🔵 In a system whose teachers are still building confidence, *"the learner can show the artefact"* is a far more defensible assessment story than *"the learner interacted with a tutor"*.
+5. 🟢 **Keep the platform where it is.** Moodle *(`GPL-3.0`)* or Open edX *(`AGPL-3.0`)* stays; everything shipped attaches at a plugin or `XBlock` *(`Apache-2.0`)* boundary. 🔴 **There is still no MIT LMS** — confirmed this pass from the repository index rather than from a roundup — so the permissive layer is what you attach, never the platform itself.
+6. 🟡 **Localisation is a deliverable, not a line item.** The frameworks are being piloted in francophone countries and UNESCO's own work pairs them with **local-language learning**. Budget the teaching languages explicitly.
+
+🟢 **Why this sequence and not the usual one:** a product-first engagement in this region sells a tutor to a system with no one trained to supervise it, and the renewal fails. 🔵 **Framework-first puts the client's own adopted standard at the centre, makes the gain measurable against a published baseline, and leaves the AI as the part that is easy to replace — which is exactly how a ministry wants to buy it.**
+
+### 🟡 Carried, unchanged, and still the EMEA default
+
+🟢 [`P253-EMEA`](#) — the three-date AI Act roadmap *(`2025-02-02` prohibition as the cold open, Article `50` in force now, `2026-12-02` prohibitions, `2027-12-02` Annex III)* — is **unchanged and re-affirmed** this pass. 🔵 One addition from `T254-T1`: the Article `50` disclosure layer built for the EU **also satisfies South Korea's generative-AI marking duty**, in force since `2026-01-22`. The same artefact, two regions — say so in the proposal, because it changes the cost per region without changing the build.
+
 ## Pass 253 — 2026-10-16 — **`p251`'s "DO NOT SELL AN ANNEX III READINESS PROGRAMME THIS QUARTER" IS WITHDRAWN.** THE DATE IT WAS WAITING FOR WAS SETTLED ON THESE SHELVES AT `p233`, AND THE EMEA RECIPE IS NOW A THREE-DATE ROADMAP
 
 ⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-date-regression`](../evidence/p253-date-regression.2026-10-16-p253.tsv) *(`13` scopes)* · [`p253-grant-payload`](../evidence/p253-grant-payload.2026-10-16-p253.tsv) · [`p253-platform-grants`](../evidence/p253-platform-grants.2026-10-16-p253.tsv) · [`p253-regional-figures`](../evidence/p253-regional-figures.2026-10-16-p253.tsv)

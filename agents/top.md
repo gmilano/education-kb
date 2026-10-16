@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 254 — 2026-10-16 — **`3` NEW ROWS, AND THE `403` WALL WAS NEVER A WALL.** `api.github.com` IS REACHABLE ON A TRANSPORT THIS BASE HAD NOT TRIED — AND THE FIRST THING IT MEASURED REFUTED **BOTH** SECONDARY STAR FIGURES `p253` REFUSED TO PUBLISH
+
+⏱️ **TWENTY-THIRD pass of `2026-10-16`.** `p232`–`p253` all carry this date. 🔵 **Evidence:** [`p254-channel-map`](../evidence/p254-channel-map.2026-10-16-p254.tsv) *(`16` rows, `2` transports)* · [`p254-row-supply`](../evidence/p254-row-supply.2026-10-16-p254.tsv) *(`5` candidates)* · [`p254-grant-payload`](../evidence/p254-grant-payload.2026-10-16-p254.tsv) *(`30` paths)* · [`p254-websearch`](../evidence/p254-websearch.2026-10-16-p254.tsv) *(`9` legs)*
+
+### 🟢 `T254-A` — the finding that reframes sixteen passes: a WALL and a BUDGET are not the same thing
+
+🔴 Sixteen passes recorded `api.github.com` as **`403`**, re-probed every time, and built around its absence: no star count measurable, no `topic:` query runnable, no official trending feed. 🟢 **All three were measured this pass.** The probe that had never been run is the trivial one — **the same URL on a different transport.**
+
+| URL | `curl` *(through the proxy)* | `WebFetch` |
+|---|---|---|
+| `api.github.com/repos/{slug}` | 🔴 **`403`** *(17th pass)* | 🟢 **`200`** — until the budget is spent |
+| `api.github.com/search/repositories?q=topic:…` | 🔴 **`403`** | 🟢 **`200`** — `1 663` results on one query |
+| `github.com/trending` | 🔴 **`403`** | 🟢 **`200`** — `11` repositories, `0` education |
+| `api.github.com/rate_limit` | 🔴 **`403`** | 🟢 **`core: limit 60, remaining 0, used 60`**, reset `22:53:28Z` |
+
+🟢 **So the honest statement is not *"the API is open"* — it is this:** the API is reachable on an **unauthenticated `60`-requests-per-hour budget shared at the egress IP**, and `curl` cannot reach it at all. 🔴 **This pass spent the budget to zero and the last four probes came back `403`** — which is how the budget was discovered, and why the `403`s of sixteen passes were indistinguishable from a wall. 🔵 **The operating rule for `p255`, stated so it is not re-derived:** spend the core budget ONLY on what no other channel answers — star counts and `topic:` queries — and keep reading grants on `raw.githubusercontent.com`, which is unmetered.
+
+🔵 **And the shape, because it is the same one this base keeps paying for.** `p253` found a gate that could not hear its controls and wrote that its failures are *"unwired knowledge, never missing knowledge"*. 🔴 **This one is thinner still: the knowledge was not even unwired, it was untested on a second transport.** A channel declared dead stays dead in the ledger, and the ledger is what the next pass reads.
+
+### 🟢 `T254-B` — `p253`'s `UNMEASURABLE` cell, settled — and the refusal was RIGHT
+
+`p253` published its new row's stars as 🔴 **`UNMEASURABLE`**, against a secondary channel offering **`71.7k`** and **`15 219`** for the same repository, and argued *"a cell with no number is worth more than a cell with the wrong one."*
+
+| source | figure | verdict |
+|---|---|---|
+| a July `2026` article | `71.7k` | 🔴 **wrong by `−15k`** |
+| a listing | `15 219` | 🔴 **wrong by `5.7×`** |
+| 🟢 **`api.github.com/repos/Egonex-AI/Understand-Anything`** | 🟢 **`86 639`** | 🟢 **measured**, `license.spdx_id` `MIT`, default branch `main`, `pushed_at` `2026-10-12T10:24:59Z` |
+
+🟢 **Both secondary figures were wrong, and the refusal to average them was the correct call.** 🔵 Worth keeping because the cheap move — *"take the bigger one, it's probably a rounding"* — would have published a number `15k` low and attributed it to a measurement.
+
+### 🟢 `T254-C` — the new rows, every grant read FILED at a resolved ref
+
+🟢 **`ACTION YA` applied, not just registered:** the default branch was resolved with `git ls-remote --symref` **before** any payload probe, so no row here rests on a guessed ref. 🟢 Every grant below was fetched to a file and then sized and hashed *(`ACTION XY`'s rule)*, never through a captured body.
+
+| Nombre | Repo | Licencia | Descripción | Stars |
+|---|---|---|---|---|
+| ELI5 | [`DreambigOu/ELI5`](https://github.com/DreambigOu/ELI5) | 🟢 **MIT** *(`LICENSE`, `1 056` B, `1126322e2cc8d165`, ref `a766623b0623`)* | Skill de explicación graduada: toma un tema o un fragmento de código y lo reexpresa para una audiencia declarada — de *"explícamelo como si tuviera cinco años"* hasta par experto — manteniendo una sola fuente y variando sólo el registro. Útil como capa de salida sobre un tutor, no como tutor | 🟢 **`1 760`** |
+| learn-anything-with-AI | [`read2017/learn-anything-with-AI`](https://github.com/read2017/learn-anything-with-AI) | 🟢 **MIT** *(`LICENSE`, `1 065` B, `f551749a612d2e59`, ref `0b06235ed738`)* | Skill de aprendizaje dirigido por proyecto: convierte un objetivo *("aprender X")* en una secuencia de entregables con criterios de verificación, en vez de un temario. Reutilizable entre materias porque la estructura es el plan, no el contenido | 🟢 **`197`** |
+| Feynman | [`steveyeow/Feynman`](https://github.com/steveyeow/Feynman) | 🟡 **MIT en la raíz** *(`LICENSE`, `1 217` B, `aa8325eadd7fea1c`, ref `849c336c378c`)* — 🔴 **`BUSL-1.1` en `app/pro/`** *(`917` B, `9cf07d243fa7da6e`)* | Herramienta de lectura con *"pensadores"* simulados: el lector plantea una duda y varios agentes con perspectivas distintas la discuten frente a él. 🔴 **Repositorio de DOBLE ÁMBITO** — la concesión MIT no cubre `app/pro/`, y esa frontera es lo que hay que leer antes de componer nada | 🟡 **`160`** |
+
+🔴 **`2` candidates were measured and NOT published, which is the half of a supply report that usually goes missing:**
+
+| candidato | por qué no | medido |
+|---|---|---|
+| [`ECNU-ICALK/EduChat`](https://github.com/ECNU-ICALK/EduChat) *(`973`★)* | 🔴 **SIN CONCESIÓN** — `6` rutas Tier-A devuelven `404` en el ref resuelto `fa30b6d5632c`, y el campo `license` de la API es `null`. Un LLM educativo conocido y **no utilizable**: sin licencia no hay permiso, y el silencio no es permisivo | `LICENSE`·`LICENSE.md`·`LICENSE.txt`·`LICENCE`·`COPYING`·`LICENSE-MIT` → `404` |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) *(`163`★)* | 🟡 copyleft fuerte — `AGPL-3.0` leído de primera mano *(`34 523` B, `0d96a4ff68ad6d4b`)*. Se registra, no se compone | coincide con la API |
+
+### 🔴 `T254-D` — the row that broke the classifier, and it is the better finding
+
+🟢 `steveyeow/Feynman`'s root `LICENSE` is **canonical MIT** — `1 067` B of MIT text plus `Copyright (c) 2026 Steve Yao` — followed by a `150` B note: *"The contents of the `app/pro/` directory are licensed separately under the Business Source License 1.1."*
+
+🔴 **`lib/measure --family` returned `BUSL`, and `holder_of_file` returned `NOT-APPLICABLE (BUSL: holder not in the license text by construction)` over a payload that HAS its copyright line.** One misread family took the attribution with it.
+
+🟢 **This falsifies `ACTION XA`'s limb 2 with a payload.** `p247` postulated exactly this population — a real OSI grant that merely *mentions* the BSL — measured it with GitHub's code-search API, found it empty at measurable reach, and published it as **a measured upper bound and not a proof of vacuity**. 🔵 It was a bound, and the thing that broke it was not a better code search: it was the ordinary row channel, on a `160`★ repository. Fixed, gated and measured in [`compose/code/p254-scoped-grant-reference/`](../compose/code/p254-scoped-grant-reference/) — see [`repos/foundations.md`](../repos/foundations.md) `T254-F2` for the discriminant and the blast radius.
+
+### 🟢 `T254-E` — the supply test, run as a GATE for the first time (`ACTION YB`)
+
+`20` candidate slugs from `9` search legs and `3` `topic:` queries, each through `make carried`:
+
+| verdict | count | what it means |
+|---|---|---|
+| 🔴 `CARRIED` | `15` | already a row — and spot-checked: each appears on `2`–`9` shelves, so these are published rows, not stale mentions |
+| 🟢 `NEW` | `5` | the five in the tables above |
+
+🔴 **But the gate could not fail.** `make carried` printed `CARRIED` and exited `0`; so did `NEW`. 🟢 Given a contract this pass — `CARRIED` → `1`, `NEW` → `0` — so `make carried SLUG=x && <publish>` is finally a correct sentence. 🔵 That is `ACTION YB`'s real obstruction, and it was never the recipe: **the recipe had no status to give.** See [`agents/trending.md`](trending.md) for the larger version of the same defect.
+
 ## Pass 253 — 2026-10-16 — **`1` NEW AGENT ROW, THE FIRST IN SIXTEEN PASSES** — AND IT ARRIVED WITH THREE CANDIDATE OWNERS, ONE OF WHICH DOES NOT EXIST. THE CANONICAL ONE WAS DECIDED WITHOUT `api.github.com`, BY A FIRST-PARTY MANIFEST AND AN **IDENTICAL `HEAD` SHA**
 
 ⏱️ **TWENTY-SECOND pass of `2026-10-16`.** `p232`–`p252` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

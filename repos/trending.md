@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 254 — **THE OFFICIAL TRENDING FEED IS READABLE**, SEVENTEEN PASSES AFTER THIS SHELF DECLARED IT A GAP — AND ITS FIRST READING CONTAINS **`0` EDUCATION REPOSITORIES**, WHICH IS A RESULT AND NOT A MISS
+
+⏱️ **TWENTY-THIRD pass of `2026-10-16`.** 🔵 **Evidence:** [`p254-channel-map`](../evidence/p254-channel-map.2026-10-16-p254.tsv) · [`p254-row-supply`](../evidence/p254-row-supply.2026-10-16-p254.tsv) · [`p254-grant-payload`](../evidence/p254-grant-payload.2026-10-16-p254.tsv) *(`30` paths)*
+
+### 🟢 The declared gap is CLOSED — `github.com/trending` read first-hand
+
+🔴 Sixteen passes published *"no official trending feed; every trending list reaching this base is a third-party roundup"* as a declared gap. 🟢 **`GET github.com/trending?since=weekly` → `200` via `WebFetch`**, while `curl` through the proxy still answers `403`. The gap was a **transport**, not an absence.
+
+| # | repository | language | stars | this week |
+|---|---|---|---|---|
+| 1 | `morluto/rea` | TypeScript | `289 781` | `239 477` |
+| 2 | `mattpocock/skills` | Shell | `293 992` | `12 147` |
+| 3 | `boykopovar/AnyPS5` | C++ | `39 812` | `25 174` |
+| 4 | `storytold/artcraft` | Rust | `30 504` | `22 319` |
+| 5 | `cathrynlavery/diagram-design` | HTML | `56 391` | `10 237` |
+| 6–11 | `heygen-com/hyperframes` · `NationalSecurityAgency/ghidra` · `mksglu/context-mode` · `ranxianglei/billion-context` · `anthropics/claude-plugins-official` · `earthtojake/text-to-cad` | — | — | — |
+
+🔴 **`0` of `11` are education repositories**, and that is worth publishing precisely because it is now a *measurement* rather than an inference from somebody's listicle. 🔵 **The structural reading this shelf has carried since `p202` survives contact with the real feed:** education does not trend. It is supplied by **`topic:` queries and small repositories**, not by the front page — which is why the three rows this pass published came from the search index and none from here.
+
+### 🟢 New this week — `3` rows, every grant FILED at a RESOLVED ref
+
+| Nombre | Repo | Licencia | Señal | Por qué importa |
+|---|---|---|---|---|
+| ELI5 | [`DreambigOu/ELI5`](https://github.com/DreambigOu/ELI5) | 🟢 **MIT** *(`LICENSE`, `1 056` B, `1126322e2cc8d165`, ref `a766623b0623`)* | 🟢 **`1 760`★** — medido en `api.github.com`, no estimado | Reexpresión por audiencia declarada sobre una sola fuente |
+| learn-anything-with-AI | [`read2017/learn-anything-with-AI`](https://github.com/read2017/learn-anything-with-AI) | 🟢 **MIT** *(`LICENSE`, `1 065` B, `f551749a612d2e59`, ref `0b06235ed738`)* | 🟢 **`197`★** | Objetivo → entregables verificables, reutilizable entre materias |
+| Feynman | [`steveyeow/Feynman`](https://github.com/steveyeow/Feynman) | 🟡 **MIT raíz** *(`1 217` B, `aa8325eadd7fea1c`, ref `849c336c378c`)* · 🔴 **`BUSL-1.1` en `app/pro/`** *(`917` B, `9cf07d243fa7da6e`)* | 🟡 **`160`★** | Lectura con pensadores simulados — y el primer repositorio de **doble ámbito** que estos estantes miden |
+
+🔴 **`2` measured and refused, published because a supply report without its refusals is advertising:** [`ECNU-ICALK/EduChat`](https://github.com/ECNU-ICALK/EduChat) *(`973`★)* has **no grant on any of `6` Tier-A paths** at ref `fa30b6d5632c` and `license: null` in the API — a known educational LLM that **cannot be used**; [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) *(`163`★)* is `AGPL-3.0`, read first-hand at `34 523` B.
+
+### 🟢 Stars are measurable again — and the first measurement refuted `p253`'s two secondary figures
+
+| | figure | verdict |
+|---|---|---|
+| secondary — a July `2026` article | `71.7k` | 🔴 wrong |
+| secondary — a listing | `15 219` | 🔴 wrong by `5.7×` |
+| 🟢 **measured** — `Egonex-AI/Understand-Anything` | 🟢 **`86 639`** | 🟢 `p253`'s `UNMEASURABLE` was the right call |
+
+🔴 **But the budget is `60` requests per hour, unauthenticated and shared at the egress IP, and this pass spent it to `0`:** `api.github.com/rate_limit` → `limit 60, remaining 0, used 60`, reset `22:53:28Z`. 🟡 **So the carried shelves were NOT re-starred this pass.** Four flagship rows — `ai-shifu/ai-shifu`, `moodle/moodle`, `openedx/edx-platform`, `pykt-team/pykt-toolkit` — were requested and all four returned `403` on an exhausted budget. 🔵 Stated plainly so a later pass reads the absence correctly: **those cells are stale, not verified**, and re-starring the shelf is a budgeted job to be planned, not a side effect of a pass.
+
+### 🟡 `ACTION YA` applied: resolve the ref BEFORE probing
+
+Every slug this pass went through `git ls-remote --symref` first. 🟢 All five resolved to `main` — so no repeat of `openeducat/openeducat_erp` → `19.0` or `francoisjacquet/rosariosis` → `mobile`. 🔵 The practice is cheap and it is now what this shelf does; `ACTION YA` stays live only for the `60` of `881` MIT slugs already read on guessed refs.
+
 ## 2026-10-16 — Pass 253 — ONE REPO MOVED ONTO THIS SHELF, AND IT TOOK **THREE CANDIDATE OWNERS AND AN `ls-remote`** TO ESTABLISH WHICH REPOSITORY IT IS
 
 ⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-slug-canonicality`](../evidence/p253-slug-canonicality.2026-10-16-p253.tsv) · [`p253-grant-payload`](../evidence/p253-grant-payload.2026-10-16-p253.tsv) · [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) *(`9` legs)* · [`p253-channel-map`](../evidence/p253-channel-map.2026-10-16-p253.tsv)

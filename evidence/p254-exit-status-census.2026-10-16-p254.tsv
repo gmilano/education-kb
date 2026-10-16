@@ -1,0 +1,12 @@
+target	contract	lines	grades
+carried	CONTRACTED	1	CONSUMED
+claims	CONTRACTED	1	CONSUMED
+exists	CONTRACTED	3	CONSUMED,REPORT
+gate-mit-tier	uncontracted	8	CONSUMED,INERT,REPORT
+gate-offline	CONTRACTED	100	CONSUMED,GUARDED,INERT
+gate-online	uncontracted	2	CONSUMED,INERT
+hooks	CONTRACTED	0	
+index	uncontracted	1	SWALLOWED-PIPE
+reach	uncontracted	1	CONSUMED
+status	uncontracted	4	SWALLOWED-SUBST
+# census	CONSUMED=39	GUARDED=36	INERT=39	REPORT=2	SWALLOWED-PIPE=1	SWALLOWED-SUBST=4

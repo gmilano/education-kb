@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 254 — 2026-10-16 — `0` NEW FOUNDATIONAL REPOS, AND FOR THE FIRST TIME THE `topic:` CHANNEL WAS **RUNNABLE** TO SAY SO. THE PASS'S REAL WORK IS ON THE SHARED CLASSIFIER: **A POINTER TO A LICENCE IS NOT A GRANT**, AND IT TOOK A `332`-FIXTURE DIFF TO GET THE FIX RIGHT
+
+⏱️ **TWENTY-THIRD pass of `2026-10-16`.** 🔵 **Evidence:** [`p254-hoist-blast-radius`](../evidence/p254-hoist-blast-radius.2026-10-16-p254.tsv) *(`332` fixtures, before and after)* · [`p254-grant-payload`](../evidence/p254-grant-payload.2026-10-16-p254.tsv) · [`p254-channel-map`](../evidence/p254-channel-map.2026-10-16-p254.tsv) · **instrument:** [`p254-scoped-grant-reference`](../compose/code/p254-scoped-grant-reference/) *(`16` controls)*
+
+### 🔴 `T254-F1` — `0` new platforms, and this time the claim rests on a QUERY rather than on a leg's impression
+
+🟢 **`api.github.com/search/repositories` ran for the first time in sixteen passes** *(see [`agents/top.md`](../agents/top.md) `T254-A` — it was a transport problem, not a wall)*. Three `topic:` queries, `1 663` results on one of them, sorted by stars.
+
+| what the channel returned | state on this shelf |
+|---|---|
+| every LMS / SIS / ERP named | 🔴 **carried** — OpenOLAT, OpenEduCat, Sakai, Forma LMS, Open edX, Moodle, RosarioSIS, Gibbon, Fedena, dotLRN |
+| the `5` repositories NOT carried | 🟡 **all agents or skills, none a platform** — `3` published to [`agents/top.md`](../agents/top.md), `2` refused |
+| 🔴 an MIT-licensed LMS | 🔴 **still none** — fifth pass of the same answer, now from the index rather than from a roundup |
+
+🟢 **The permissive floor is unchanged and is now better-sourced:** the platform layer in education is `GPL`/`AGPL`/`LGPL`/`ECL`; the permissive layer is what you **attach** to it. 🔵 `p253` reached that conclusion from leg 3's own summary; this pass reaches it from the repository index, which is the difference between *"the article didn't mention one"* and *"the index doesn't contain one at measurable reach."*
+
+### 🔴 `T254-F2` — `P1065`: the shared classifier read a CROSS-REFERENCE as a GRANT
+
+🟢 **The subject**, read FILED at a resolved ref: [`steveyeow/Feynman`](https://github.com/steveyeow/Feynman), root `LICENSE`, `1 217` B, `aa8325eadd7fea1c`, ref `849c336c378c`.
+
+| what the payload is | measured |
+|---|---|
+| bytes `1`–`1 067` | 🟢 **canonical MIT text**, `Copyright (c) 2026 Steve Yao` |
+| the last `150` B | a note: *"The contents of the `app/pro/` directory are licensed separately under the Business Source License 1.1. See `app/pro/LICENSE` for details."* |
+| `app/pro/LICENSE` *(fetched)* | 🟢 **a real BSL 1.1**, `917` B, `9cf07d243fa7da6e`, `Licensor: Steve Yao`, `Change License: MIT`, `Change Date: four years from each release` |
+| 🔴 `lib/measure --family` on the ROOT file | 🔴 **`BUSL`** |
+| 🔴 `holder_of_file` on the ROOT file | 🔴 **`NOT-APPLICABLE (BUSL: holder not in the license text by construction)`** — over a payload that HAS its copyright line |
+
+🟢 **`ACTION XA`'s limb 2 is falsified, by a payload rather than by an argument.** `P1062` *(p247)* hoisted the five source-available anchors above every OSI anchor, because a BSL payload's mandatory `Change License:` names an OSI licence and the OSI anchors matched first — the `BUSL` branch was dead code by construction. 🔵 **`p247` pre-registered the inverse risk as its limb 2** — a real OSI payload that merely *mentions* the BSL — measured that population with GitHub's code-search API, found it empty, and published it honestly as **a measured upper bound and not a proof of vacuity.** 🟢 It was a bound, and it held for seven passes.
+
+🟢 **The discriminant, and it comes from the licence's own text rather than from the prose that cites it.** BSL 1.1 has **mandatory parameters** — `Licensor:`, `Licensed Work:`, `Change Date:`, `Change License:`. A payload *governed* by BSL carries them; one that *mentions* it does not:
+
+| payload | parameters present |
+|---|---|
+| `iaga-sentinel.busl-1.1` · `sdv.busl-1.1` · `feynman app/pro/LICENSE` | 🟢 `4` / `4` |
+| `p129 licence-bsl11-change-license-mit` | 🟢 `3` / `4` |
+| 🔴 **`feynman LICENSE` (root)** | 🔴 **`0` / `4`** — the only one |
+
+🟢 **Why the fix cannot WEAKEN a verdict, which is the only property that matters when touching a refusal anchor.** When the phrase appears without parameters the branch does not decide `MIT` — it **skips**, and the payload keeps descending the chain. If the chain ends in `UNCLASSIFIED` — i.e. nothing was positively identified — the fall-through returns `BUSL` anyway. 🔵 **The anchor can only ever be lost to a POSITIVELY IDENTIFIED family, never to the absence of one**, and `UNCLASSIFIED` → `ALLOWED` by token match is the direction `P1063` already paid for. A control pins it: a bare mention with no grant body comes back `NAMED-PROPRIETARY (BUSL)` and is **refused**.
+
+🔴 **And the part worth more than the fix: the FIRST version of it was wrong, and only the diff caught it.** The first discriminant was anchored — `^[[:space:]]*(Licensor|…)`. 🔴 **`$t` has already been through `tr -s '[:space:]' ' '` by line `210`, so it is ONE line and `^` matches only byte `0`** — the regex matched nothing and returned **all four real BSL payloads to their Change License**, which is precisely the regression `P1062` exists to prevent.
+
+| | result |
+|---|---|
+| the patch, read | looked correct |
+| the patch, run over `332` fixture payloads | 🔴 **`5` changed, `4` of them catastrophically** *(`BUSL` → `Apache-2.0` / `MIT`)* |
+| the corrected patch over the same `332` | 🟢 **`0` changed** — [`p254-hoist-blast-radius`](../evidence/p254-hoist-blast-radius.2026-10-16-p254.tsv) |
+
+🔵 **That is `p253`'s lesson arriving from the other side.** `p253` wrote that two passes audited the gate *by reading the recipe* and missed a defect one run exposed. 🟢 This pass wrote a patch, read it, believed it, and was wrong within the minute — **and the only reason it is not now in the shelves is that the blast radius was measured before the claim was published.** Both halves are pinned as controls, including one asserting that the anchored form still finds nothing in squeezed text.
+
+🟢 **Gate:** `make hooks` → **`34` steps, all `PASS`, exit `0`.** The two new instruments are wired in, and both were proven able to fail individually.
+
 ## Pass 253 — 2026-10-16 — `0` NEW FOUNDATIONAL REPOS, AND THIS PASS CAN SAY WHY IN A FORM THAT IS CHECKABLE: **EVERY PLATFORM THE PLATFORM LEG NAMED IS ALREADY HERE, AND TWO OF THEM WERE RE-READ AT A PINNED SHA TO PROVE IT**
 
 ⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-platform-grants`](../evidence/p253-platform-grants.2026-10-16-p253.tsv) · [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) *(leg 3)*

@@ -91,11 +91,17 @@ def main(argv):
         return 1
 
     if len(argv) >= 2 and argv[1] == "check":
+        # p254 (`ACTION YB` + `ACTION XZ`): this returned 0 for CARRIED and for NEW alike, so
+        # the base's SUPPLY TEST — the thing that found the one new row in sixteen passes —
+        # could not be wired into anything.  `ACTION YB` asked for "a GATE, not a grep"; the
+        # obstruction was never the recipe, it was that the recipe had no status to give.
+        # Polarity matches `claims`: non-zero means STOP, the shelves already carry this.
         root = argv[3] if len(argv) > 3 else "."
         index = harvest(root)
         slug = argv[2]
-        print(f"{'CARRIED' if carried(slug, index) else 'NEW'}\t{slug}")
-        return 0
+        hit = carried(slug, index)
+        print(f"{'CARRIED' if hit else 'NEW'}\t{slug}")
+        return 1 if hit else 0
 
     if len(argv) >= 2:
         root = argv[1]

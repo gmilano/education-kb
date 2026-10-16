@@ -120,6 +120,14 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── p253-gate-propagation (p253: a failing step may not reach the banner)"; \
 	cd compose/code/p253-gate-propagation && $(PY) -I test_gate_propagation.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
+	echo "── p254-scoped-grant-reference (P1065: a POINTER to a licence is not a GRANT)"; \
+	cd compose/code/p254-scoped-grant-reference && bash test_scoped_reference.sh >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
+	echo "── p254-exit-status-reach (ACTION XZ: a contracted recipe line must be able to fail)"; \
+	cd compose/code/p254-exit-status-reach && $(PY) -I test_exit_reach.py >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
+	echo "── p254-exit-status-reach (ACTION XZ: the live Makefile's own contract, verified)"; \
+	$(PY) -I compose/code/p254-exit-status-reach/exit_reach.py --verify Makefile >/dev/null && echo "   PASS" || exit 1; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code || exit 1; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"
@@ -154,8 +162,17 @@ status:
 index: ## ACTION UG (p235) — rebuild the carried-row index and report the UH collisions
 	@$(PY) -I compose/code/p235-carried-index/carried_index.py . | head -3
 
+# p254 (`ACTION YB`): the SUPPLY TEST, now with a status.  `CARRIED` exits 1, `NEW` exits 0,
+# so `make carried SLUG=x && <publish the row>` is finally a correct sentence.  p252 ran this
+# by hand and found 0 new; p253 ran it by hand and found the one new row in sixteen passes.
 carried: ## ACTION UG — is this row already on the shelves?  make carried SLUG=owner/repo
 	@$(PY) -I compose/code/p235-carried-index/carried_index.py check "$(SLUG)" .
 
+# 🔴 p254 (`ACTION XZ`): this recipe ended in `|| true` for its whole life.  `carried_index.py
+# claims` returns **1 exactly when the shelves ALREADY claim the token** — exit 1 IS the STOP
+# signal and the entire purpose of the recipe — and `|| true` discarded it.  The verdict still
+# printed, so a human reading the terminal was fine and `make claims TOKEN=x && publish` was
+# not.  🔵 Same class as p253's deaf gate, one layer out: there the gate could not HEAR its
+# controls; here the gate could not SPEAK.  Pinned by `compose/code/p254-exit-status-reach/`.
 claims: ## ACTION UG — THE GATE: run before publishing any "there is no X".  make claims TOKEN=x
-	@$(PY) -I compose/code/p235-carried-index/carried_index.py claims "$(TOKEN)" . || true
+	@$(PY) -I compose/code/p235-carried-index/carried_index.py claims "$(TOKEN)" .
