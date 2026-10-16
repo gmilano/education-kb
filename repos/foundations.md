@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 253 — 2026-10-16 — `0` NEW FOUNDATIONAL REPOS, AND THIS PASS CAN SAY WHY IN A FORM THAT IS CHECKABLE: **EVERY PLATFORM THE PLATFORM LEG NAMED IS ALREADY HERE, AND TWO OF THEM WERE RE-READ AT A PINNED SHA TO PROVE IT**
+
+⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-platform-grants`](../evidence/p253-platform-grants.2026-10-16-p253.tsv) · [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) *(leg 3)*
+
+### 🔴 `T253-F1` — the foundations channel, and the leg's own verdict is the useful part
+
+Leg 3 ran the mandated platform query. Its summary, verbatim: 🔴 ***"found no clear MIT-licensed education platform"*** — the results centred on Apache-2.0 and GPL/AGPL options, *"and the license claims conflict across sources."*
+
+| platform the leg named | occurrences on these shelves | state |
+|---|---|---|
+| OpenOLAT | `736` | 🔴 carried — 🟢 **grant re-read this pass: `Apache-2.0`, `10 982` B, `6dbc5b605ed0be6e`, ref `aea1cc582e22`** |
+| OpenEduCat | `718` | 🔴 carried — 🟢 **grant re-read this pass: `LGPL-3.0`, `8 241` B, `528f84036800168d`, ref `46a5d7d40082`** |
+| Sakai | carried *(`ECL-2.0`, re-read `p252`)* | 🔴 carried |
+| Forma LMS | `152` *(`GPL-2.0`, re-read `p252`)* | 🔴 carried |
+| Open edX | `258` *(`AGPL-3.0`, re-read `p252`)* | 🔴 carried |
+| RosarioSIS · Gibbon · Fedena · dotLRN | `179` · carried · `152` · `13` | 🔴 carried |
+| Moodle | carried | 🔴 carried |
+
+🟢 **`0` new rows, and the claim is now the stronger kind:** not *"the leg returned nothing useful"* but *"every name it returned is already on this shelf, and the two most permissive of them have a grant pinned to a SHA read first-hand this pass."* 🔵 `p252` introduced the carried-index check; this pass applied it to the platform leg as well as the agent leg, and the result is the same on both — with the difference that on the agent leg it found [one row](../agents/top.md).
+
+### 🔴 `T253-F2` — the permissive-licence floor for this industry, restated because it keeps being wished away
+
+| family | platforms on this shelf |
+|---|---|
+| 🟢 `Apache-2.0` | **OpenOLAT** · Open edX's `XBlock` |
+| 🟡 `LGPL-3.0` | OpenEduCat |
+| 🟡 `ECL-2.0` | Sakai |
+| 🔴 `GPL-2.0` / `GPL-3.0` | Forma LMS · Moodle · Gibbon · RosarioSIS |
+| 🔴 `AGPL-3.0` | **Open edX** |
+
+🔴 **There is still no MIT LMS, and leg 3 said so itself.** 🟢 **The consequence for a studio is the one this shelf has carried since `p202` and it has not changed: the permissive layer in education is NOT the platform, it is what you attach to it.** The platform is AGPL or GPL and stays where it is; the agent, the knowledge-tracing model and the integration are MIT or Apache and are what gets shipped. 🔵 [`compose/patterns.md`](../compose/patterns.md) is where that line is drawn concretely, and `P253-1` adds one more.
+
+🔵 **And a reading rule earned this pass:** `OpenOLAT`'s `Apache-2.0` and `OpenEduCat`'s `LGPL-3.0` were both claimed correctly by the secondary channel, after `p252` saw three claims in a row refuted. A secondary licence cell is an **upper bound to verify**, not a falsehood to assume — see [`verticals/solutions.md`](../verticals/solutions.md) `T253-V2`.
+
 ## Pass 252 — 2026-10-16 — `0` NEW FOUNDATION ROWS AND THE `403` IS UNCHANGED — BUT THE **THREE BEST-KNOWN PLATFORMS IN THIS INDUSTRY** WERE RE-READ FIRST-HAND, ALL THREE HOLD, AND THE SECONDARY CHANNEL WAS WRONG ABOUT ALL THREE **IN THE SAME DIRECTION**
 
 ⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-platform-grants`](../evidence/p252-platform-grants.2026-10-16-p252.tsv) *(`3`, read this pass)* · [`p252-slug-existence`](../evidence/p252-slug-existence.2026-10-16-p252.tsv) *(`11` slugs by `ls-remote`)* · [`p252-channel-map`](../evidence/p252-channel-map.2026-10-16-p252.tsv) · [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv)

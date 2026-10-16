@@ -20,8 +20,17 @@ tail -n +2 "$IN" | while IFS=$'\t' read -r curso repo coll n tasa; do
   else
     lic="NO-ALCANZABLE"; url="-"
   fi
-  raw_lic=$(curl -sS --max-time 30 "$RAW/$repo/main/LICENSE" 2>/dev/null)
-  bytes=$(printf '%s' "$raw_lic" | wc -c | tr -d ' ')
+  # `ACTION XY` (p253): `bytes` came from `$(printf '%s' "$raw_lic" | wc -c)`, which is
+  # `P834` — a command substitution strips the payload's whole trailing-newline run, so
+  # this column published a figure one byte short for every payload that ends in one.
+  # Measured: osbooks-calculus-bundle read 21443 where the payload is 21444 B, and the
+  # sha256 in `controls.2026-10-05.txt` is the hash of a payload that does not exist.
+  # The size now comes from the FILE; the capture is the CLASSIFIER's copy, and
+  # `head1`/`family` are newline-insensitive, so those verdicts never moved.
+  __lic=$(mktemp); curl -sS --max-time 30 -o "$__lic" "$RAW/$repo/main/LICENSE" 2>/dev/null
+  raw_lic=$(cat "$__lic")
+  bytes=$(wc -c < "$__lic" | tr -d ' ')
+  rm -f "$__lic"
   head1=$(printf '%s' "$raw_lic" | head -1 | tr -d '\r')
   case "$head1" in
     *NonCommercial-ShareAlike*) fam="CC BY-NC-SA 4.0" ;;

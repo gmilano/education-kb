@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 253 — 2026-10-16 — **THE EU HIGH-RISK DATE IS NOT A DISJUNCTION AND HAS NOT BEEN SINCE `p233`.** THIS SHELF RE-OPENED A SETTLED FACT FOR TWO PASSES AND PRICED A QUARTER'S EMEA ADVICE ON THE RE-OPENED VERSION — CORRECTED, AND NOW GATED
+
+⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-date-regression`](../evidence/p253-date-regression.2026-10-16-p253.tsv) *(`13` scopes, each with its enclosing pass)* · [`p253-regional-figures`](../evidence/p253-regional-figures.2026-10-16-p253.tsv) *(`29` rows, `5` regions)* · [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) · [`p253-channel-map`](../evidence/p253-channel-map.2026-10-16-p253.tsv) · **instrument:** [`p253-settled-fact-regression`](../compose/code/p253-settled-fact-regression/) *(`17`)*
+
+### 🟢 The EU dates, settled — and the correction is of THIS BASE, not of the channel
+
+| obligation | binds | status |
+|---|---|---|
+| Article `5(1)(f)` — emotion recognition in educational institutions | 🟢 **`2025-02-02`** | in force, needs no date resolution |
+| Article `50` transparency | 🟢 **`2026-08-02`** | 🟢 **in force since** — unmoved by the Omnibus |
+| two new Article `5` prohibitions | 🟡 **`2026-12-02`** | phase in |
+| 🟢 **Annex III high-risk — the education entries** | 🟢 **`2027-12-02`** | deferred from `2026-08-02` by `Reg. (EU) 2026/1744` |
+| Annex I embedded systems | `2028-08-02` | deferred |
+
+🟢 **`Reg. (EU) 2026/1744`** — the Digital Omnibus on AI — **OJ `2026-07-24`, in force `2026-07-27`.** Annex III covers AI used to evaluate learning outcomes, screen applicants and monitor candidates during examinations. The Commission's stated cause for the deferral is 🟡 **delay in Member States designating national competent authorities and conformity assessment bodies, with harmonised standards running late** — which is new on this shelf and matters commercially, because it is a *capacity* constraint and capacity constraints slip again.
+
+🔴 **What this shelf had instead, for two passes.** `p251` published the date as a live disjunction *"pending formal adoption"* and wrote **NOT ESTABLISHABLE** into [`intel/open-gaps.md`](open-gaps.md); `p252` re-published *"the EU high-risk date is STILL a disjunction"* here, in [`trends.md`](trends.md) and in [`agents/trending.md`](../agents/trending.md). 🟢 **The answer was on these shelves the whole time:** `p233` recorded the regulation with its OJ dates and its Parliament and Council dates; `p241` reclassified `2026-08-02` as the Article `50` date and was COUNTING re-services of it, reaching *"at least the FIFTH"*.
+
+🔵 **The mechanism, because blaming a pass explains nothing.** These shelves are append-at-top and run to ~`160 000` lines. The settled reading sits `500`–`6 900` lines down; the **carried ACTION ledger is what a new pass actually reads**, and once the re-opened form entered the ledger it propagated under its own momentum. 🔵 `p252` met the mirror image of this from the supply side — it checked candidate slugs against the carried index instead of treating them as new — and recorded that `make carried` could not be run. 🔴 **A base that cannot query what it already knows pays for the same knowledge twice, and the second payment is in the wrong direction.**
+
+🟢 **Gated, not just corrected.** [`p253-settled-fact-regression`](../compose/code/p253-settled-fact-regression/) fails `make hooks` when a shelf's current section hedges about a pinned settled fact without citing what settled it. 🔵 Its falsifier is the one that matters: correcting a re-service REQUIRES quoting the wrong date, so `p241`'s row is pinned verbatim as a control and must grade `CLEAR`.
+
+🔴 **Still not closable first-hand.** `eur-lex.europa.eu` is `000` at the proxy on **two** URL shapes this pass. The resolution rests on five independent secondary channels agreeing on a **regulation number** and two **OJ dates** — categorically stronger than *"both dates served"*, and falsifiable the moment there is egress: the number is `2026/1744`.
+
+### 🟢 The LATAM figures are the strongest this shelf has carried, and they come from OECD instruments
+
+| measure | figure |
+|---|---|
+| teachers using AI *(`TALIS 2024`)* | Brazil `56%` · Chile `55%` · Colombia `53%` · Costa Rica `52%` — against an OECD average of `36%` |
+| students *(`PISA 2025`, `13` countries)* | 🟢 **nine in ten `15`-year-olds have used an AI chatbot for schoolwork** |
+| higher education *(UNESCO IESALC/UNU-IAS, `200` institutions, `19` countries)* | `87%` use AI in at least one area; `74%` in teaching and learning; 🔴 **only `26%` have a formal AI strategy** |
+| faculty *(Digital Education Council, `7 319` faculty, `29` institutions)* | `79%` use AI in teaching; `88%` report *minimal* to *moderate* engagement |
+| Brazil, the governance gap in one pair | `53%` of school administrators use AI; 🔴 **`22%` say their school has guidelines** |
+| Argentina, the access gap | `75%` use in high socio-economic classes against `42%` in low |
+
+🔵 **Read together these are one finding, and it is a sales finding:** adoption in LATAM is **above** the OECD average while governance is **far below** it. The region is not waiting to be convinced that AI belongs in a classroom. It is running without a policy layer.
+
+## Opportunities by region
+
+### North America
+🟢 **The buyer is the district, and the obligation is written per-district.** `134` bills across `31` states, with the operative pattern unchanged from `p252`: individual districts compelled to adopt a written AI policy, human-oversight requirements, and bans on AI in high-stakes decisions about students. 🟢 **The deliverable is a policy-to-control mapping with an audit trail** — a district can buy it, and a state's guidance cannot be satisfied by a model choice. 🟡 `H.R. 8747` *(K-12 AI Literacy and Readiness Act of `2026`, advanced in markup `2026-07-21`)* is still single-sourced on this shelf: do not price against it. 🔴 **Canada is a strategy without a statute** *("AI for All", `2026-06`, no legislative date)* and Mexico has bills with no regulator — in both, scope to the institution's own policy, not to law.
+
+### EMEA
+🟢 **There are now THREE dates to sell against, and this is the quarter's correction.** 🔴 `p251` and `p252` told the studio not to sell an Annex III readiness programme because the date was unknown. 🟢 **It is known: `2027-12-02`**, with Article `50` **already in force** since `2026-08-02` and two new Article `5` prohibitions landing `2026-12-02`. 🟢 **That is a roadmap, not a disjunction:** an Article `50` transparency audit billable now, an Article `5` review due this quarter, and an Annex III conformity programme with `14` months of runway — and the Commission's stated cause for the deferral *(authority and conformity-assessment-body capacity)* is a reason to expect the runway to hold rather than shrink. 🟢 **The proctoring audit remains the best cold opening** — `Article 5(1)(f)` has banned emotion recognition in educational institutions since `2025-02-02`, and webcam affect inference is the exposed surface. 🟡 UK: GBP `4M` for lesson-planning and marking tools, light-touch regulation through existing regulators — a product market, not a compliance one. 🟡 Finland, Estonia and the Netherlands are named as K-12 integration leaders by a secondary aggregator only; treat as a lead list, not a ranking. 🔴 **DECLARED GAP: Africa and the Middle East returned NOTHING education-specific this pass.** The EMEA leg paid in EU and UK material and nothing else. 🔵 `p252` reached Africa through a UNESCO-ICHEI/IICBA report and a Rwanda MoU; this pass could not, and `www.unesco.org` is `000` at the proxy. **Stated so silence is not read as coverage.**
+
+### APAC
+🟢 **The region's regulatory map is dated and education-specific, which no other region's is.** Korea's framework act in force `2026-01-22`; Vietnam's Law `134/2025/QH15` in force `2026-03-01` with extraterritorial reach and an education carve-out giving systems already running before `2026-08-15` six extra months; Japan promotional; Singapore and Australia voluntary; India's data law phased to May `2027`. 🟢 **The sellable asymmetry is Vietnam's grace period:** an obligation applies to everyone equally, but a grace period splits the market into incumbents with a clock and new deployments with none. 🟡 **New and commercially legible: `Ipsos Education Monitor 2026` finds support for banning AI in schools LOWER across the Asian markets surveyed and HIGHER in Australia and New Zealand.** Same region, opposite public mandate — so an ANZ engagement needs a consent and opt-out story that a Singapore or Korea engagement does not. 🟡 Named vendors to displace or partner with: Riiid *(KR)*, Squirrel AI *(CN)*, Alef Education *(UAE)*.
+
+### LATAM
+🟢 **Sell the policy layer, because the adoption is already there.** `87%` of `200` institutions across `19` countries use AI; `26%` have a strategy. Brazil's `53%`-use / `22%`-guidelines pair is the same gap at school level. 🟢 **The first deliverable is an AI-use policy with an evidence trail and an equity clause**, and the equity clause is not decoration: Argentina's `75%`/`42%` socio-economic split is the number a ministry will ask about. 🟡 Regulatory anchors to cite: Uruguay as the first in the region to sign the Council of Europe Framework Convention on AI; Colombia's CONPES 4144. 🟢 The UNESCO Observatory on AI in Education for Latin America and the Caribbean *(launched `2026-04-14`; partners include CAF, CENIA, CETIC.br, ECLAC, Tecnológico de Monterrey, ProFuturo and Fundación Ceibal)* is the convening body to be visible in. 🔵 And `TALIS`/`PISA` give a LATAM engagement something an EMEA one does not have: **teacher- and student-level baselines from an OECD instrument**, which survives a procurement committee.
+
+### Global
+🔴 **No official trending feed is reachable for a sixteenth pass** *(`github.com/trending` `403`)*, and `api.github.com` is `403`, so **no star count on this shelf is measurable** — the one new row's stars are published as `UNMEASURABLE` against a secondary channel offering `71.7k` and `15 219` for the same repository. 🟢 The cross-region trend both the global legs agree on is the move *from experimentation to governed adoption* — which is the same thing every regional leg paid in, and it is why the compliance-shaped deliverables above outrank the model-shaped ones.
+
 ## Pass 252 — 2026-10-16 — **APAC IS THE RICHEST LEG THIS PASS AND IT IS A FIRST FOR THIS SHELF: THREE JURISDICTIONS WITH AI LAW THAT IS BOTH IN FORCE AND DATED, INCLUDING AN EDUCATION-SPECIFIC CARVE-OUT WITH A DEADLINE.** NORTH AMERICA'S DISTRICT MANDATE LAYER IS NOW COUNTED AT `134` BILLS ACROSS `31` STATES; LATAM GETS A NUMBER FOR ITS GOVERNANCE GAP; EMEA'S DATE CONFLICT IS UNCHANGED AND STILL UNCLOSABLE
 
 ⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv) *(legs `5`–`8`)* · [`p252-channel-map`](../evidence/p252-channel-map.2026-10-16-p252.tsv). 🔴 **Every instrument below is a SECONDARY source.** `www.unesco.org` and `eur-lex.europa.eu` are refused at the proxy *(`000`)*, re-probed this pass; `curl` cannot reach **any** external source from this session, so nothing here was read first-hand and nothing here should be quoted to a client without a primary check. 🔵 `ACTION UX` was retired at `p250` precisely because `WebSearch` is not this base's lazy regulatory channel but its **only** one.

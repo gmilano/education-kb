@@ -1,0 +1,4 @@
+candidate	source	ls_remote	default_branch	head_sha	verdict
+Lum1104/Understand-Anything	secondary (install instructions in a third-party guide)	ok	main	f2d0164f72fe678805c34245a6df36acededfebd	RESOLVES — serves the payload
+Egonex-AI/Understand-Anything	FIRST-PARTY — .claude-plugin/plugin.json homepage + repository at the slug above	ok	main	f2d0164f72fe678805c34245a6df36acededfebd	CANONICAL — identical HEAD sha, and the only candidate the repo itself names
+Lumina-Labs/Understand-Anything	secondary (a third-party guide's link)	credential prompt	-	-	DOES NOT EXIST (or is private) — REFUTED first-hand

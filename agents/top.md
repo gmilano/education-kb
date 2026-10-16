@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 253 — 2026-10-16 — **`1` NEW AGENT ROW, THE FIRST IN SIXTEEN PASSES** — AND IT ARRIVED WITH THREE CANDIDATE OWNERS, ONE OF WHICH DOES NOT EXIST. THE CANONICAL ONE WAS DECIDED WITHOUT `api.github.com`, BY A FIRST-PARTY MANIFEST AND AN **IDENTICAL `HEAD` SHA**
+
+⏱️ **TWENTY-SECOND pass of `2026-10-16`.** `p232`–`p252` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`1` new row** — `Understand-Anything`, `MIT`, grant read first-hand at a pinned SHA. 🟢 **The dry channel broke after fifteen passes**, and the thing that broke it was not a better query: it was checking the legs' names against the carried index, which `p252` started doing and which this pass turned into the row test. 🔴 **`8` of `9` legs still returned `0`.** 🔵 **Evidence:** [`p253-slug-canonicality`](../evidence/p253-slug-canonicality.2026-10-16-p253.tsv) *(`3` candidates)* · [`p253-grant-payload`](../evidence/p253-grant-payload.2026-10-16-p253.tsv) *(`9` paths)* · [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) *(`9` legs)* · [`p253-channel-map`](../evidence/p253-channel-map.2026-10-16-p253.tsv)
+
+### 🟢 `T253-A` — the row, and the identity question it arrived with
+
+The leg named a project and **two different owners**; the install instructions in one guide and the repository link in another disagreed. `api.github.com` is `403` for a sixteenth pass, so the usual redirect check on `/repos/{slug}` was unavailable. Resolved on the two channels that are live:
+
+| candidate | where it came from | `ls-remote --symref` | verdict |
+|---|---|---|---|
+| [`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything) | 🟢 **FIRST PARTY** — `homepage` **and** `repository` in the repo's own `.claude-plugin/plugin.json` | `main`, `f2d0164f72fe` | 🟢 **CANONICAL** |
+| [`Lum1104/Understand-Anything`](https://github.com/Lum1104/Understand-Anything) | secondary — a guide's install line | `main`, **`f2d0164f72fe`** | 🟡 resolves, **identical `HEAD` sha** — an alias or a redirect, not a second repository |
+| `Lumina-Labs/Understand-Anything` | secondary — another guide's link | 🔴 **credential prompt** | 🔴 **DOES NOT EXIST** (or is private) — refuted first-hand |
+
+🟢 **The method, and it is this base's own rule rather than a new one.** `P188` *(pass 67)* holds that a **declared** `repository` URL is an assertion and not a channel, with the `¿declara? / ¿resuelve?` test; [`p253-registry-first-identity`](../compose/code/p253-registry-first-identity/) *(rule `P253`)* adds that identity is not a fact at one depth. Here the declaration and the resolution **converge on the same parent**, which is the condition this base requires before promoting a claim. 🔵 **And the convergence is not soft: the same `HEAD` sha on both slugs means the same object graph, not two similar projects.**
+
+🔴 **What is NOT claimed:** which slug is the *rename* and which the *redirect*. That needs `api.github.com`, which is `403`. The first-party manifest is why `Egonex-AI` is the row and `Lum1104` the note — not a measurement of the redirect direction.
+
+### 🟢 `T253-B` — the grant, read FILED and graded by this base's own instruments
+
+| field | measured |
+|---|---|
+| `LICENSE` | 🟢 **`1 111` B**, `sha256`₁₆ `24c4b35344840f1a`, at ref `f2d0164f72fe` |
+| family | 🟢 `MIT` — `lib/measure --family` |
+| holder | `Copyright (c) 2026 Yuxiang Lin` — 🟡 **and a SECOND line, `Infinite Universe, Inc.`, which `holder_of_file` does not return** |
+| `length_state` | 🟢 `IN-BAND` — `p1054-mit-plus-clause`, `riders: []`, `excess: 0` |
+| `is_usable_permissive` | 🟢 **`True`** |
+| manifests | `package.json` *(`1 898` B)* and `.claude-plugin/plugin.json` *(`477` B)* both declare `"license": "MIT"`; `NOT-MIT-BODY` decides them before length is consulted |
+| `6` other Tier-A paths | `404` — `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `LICENSE-MIT`, `pyproject.toml` |
+
+🟢 **This payload is useful beyond its own row, and it is `ACTION XW`'s first live data point.** `p252` raised `MIT_CANONICAL_LOW` to a **refusing** floor and swept the shelves for false refusals at the LOW end, finding one figure, a manifest. It could say nothing about the HIGH end. `1 111` B is a genuine MIT grant **`39` B below `MIT_CANONICAL_HIGH`**, well above the `1 056`–`1 085` B mass — and the reason is measured rather than guessed: **a second copyright line**. 🔵 So the band's upper half is now exercised by a real payload, and the thing that pushes a legitimate MIT text up is holder count, not rider text.
+
+### 🟡 `T253-C` — the row, with its scope stated rather than stretched
+
+| Nombre | Repo | Licencia | Descripción | Stars |
+|---|---|---|---|---|
+| Understand-Anything | [`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything) | 🟢 **MIT** *(`LICENSE`, `1 111` B, `24c4b35344840f1a`, ref `f2d0164f72fe`)* | Agente de comprensión de código: escaneo estructural con Tree-sitter más `5` agentes LLM en paralelo que producen un grafo de conocimiento consultable, diagramas de arquitectura, *guided tours*, búsqueda semántica y análisis de impacto de un diff. Plugin de Claude Code; también Cursor, Codex, OpenClaw, OpenCode | 🔴 **UNMEASURABLE** |
+
+🔴 **The stars cell is `UNMEASURABLE`, and the honest reason is better than an estimate.** `api.github.com` is `403`; the secondary channel served **`71.7k`** *(a July `2026` article)* and **`15 219`** *(a listing)* for the same repository. Those differ by `4.7×`. 🔵 This shelf has a prior for exactly this, and `p252` built it: a secondary figure is an upper bound, not an estimate. **A cell with no number is worth more than a cell with the wrong one**, and `p252`'s three refuted licence claims are what earned that rule.
+
+🟡 **And the scope, because an education shelf should not quietly widen:** this is **not a student-facing tutor**, and it is not an education agent. It is an **onboarding and comprehension** agent, and its education value is in the direction a studio actually uses first — turning a client's LMS or curriculum repository into a guided path for the engineers who have to extend it. 🔵 Filed here with that stated, rather than in `verticals/`, because it is composable; see [`compose/patterns.md`](../compose/patterns.md) `P253-1`.
+
+### 🔴 `T253-D` — the other eight legs, and the one name that was NOT already here
+
+`p252` established that `WebSearch` and these shelves had converged: eight legs, `0` rows, every name already carried. 🟢 **This pass ran the same test and it is the test that found the row:** of every name the `9` legs produced, **exactly one had `0` occurrences across all ten shelves.**
+
+| candidate the legs returned | occurrences already on these shelves | verdict |
+|---|---|---|
+| `Crosstalk-Solutions/project-nomad` | `42` *(plus `8` as `Project-NOMAD`)* | 🔴 already carried |
+| `ashishpatel26/500-AI-Agents-Projects` · `microsoft/ai-agents-for-beginners` · `huggingface/agents-course` | `63` · carried since `p244` · `12` | 🔴 already carried — catalogues and courses, which grant nothing to compose |
+| `karpathy/nanochat` · `rohitg00/AI-Engineering-From-Scratch` · `developer-roadmap` | `46` · `214` · carried | 🔴 already carried — learning repositories |
+| OpenOLAT · Forma LMS · Sakai · OpenEduCat · RosarioSIS · Fedena · dotLRN | `736` · `152` · carried · `718` · `179` · `152` · `13` | 🔴 already carried — platforms, see [`verticals/solutions.md`](../verticals/solutions.md) |
+| 🟢 **`Understand-Anything`** | 🟢 **`0`** | 🟢 **NEW — and the only one** |
+
+🔵 **The useful form of the finding:** the carried-index check is not bookkeeping, it is the **supply test**. Fifteen passes called the channel dry by impression; two passes have now measured it, and the second one found something. 🟢 `ACTION YD` asks for the check to stop being a `grep` and become `make carried`, which `p252` could not run and this pass can.
+
 ## Pass 252 — 2026-10-16 — `0` NEW AGENT ROWS FOR A FIFTEENTH PASS, AND THE REASON IS NOW A **MEASURED PROPERTY OF THE SHELVES** RATHER THAN OF THE WORLD: EVERY CANDIDATE ALL EIGHT LEGS RETURNED IS ALREADY CARRIED HERE — AND `ACTION XQ` IS DISCHARGED, SO THIS SHELF'S `MIT` TIER NO LONGER BLESSES A **COMMONS CLAUSE** RIDER
 
 ⏱️ **TWENTY-FIRST pass of `2026-10-16`.** `p232`–`p251` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

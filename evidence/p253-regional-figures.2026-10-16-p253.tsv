@@ -1,0 +1,30 @@
+region	country_or_body	figure_or_rule	date	source_kind	confidence
+North America	United States (state legislatures)	134 AI-in-education bills across 31 states	2026 session	secondary tracker	carried since p252, re-served this pass
+North America	United States (House)	K-12 AI Literacy and Readiness Act of 2026, H.R. 8747, advanced in markup	2026-07-21	secondary, single source	carried, still single-sourced
+North America	United States (districts)	Katy ISD bans generative chatbots for K-6; New York City one-year student-facing moratorium through grade 8	2026	secondary	carried
+North America	Canada	"AI for All" strategy incl. national AI literacy push; NO statute, no legislative date	2026-06	secondary	carried
+North America	Mexico	bills filed, no regulator empowered to enforce	2026	secondary	carried
+North America	United States (teachers)	60% of K-12 teachers used AI tools in 2024-25; 32% at least weekly	2024-2025	secondary roundup	vendor-style, treat as indicative
+EMEA	European Union	Annex III high-risk duties bind 2027-12-02 under Reg. (EU) 2026/1744; Art. 50 transparency since 2026-08-02; two new Art. 5 prohibitions 2026-12-02; Annex I embedded 2028-08-02	2026-07-27 in force	secondary, FIVE independent channels	SETTLED on these shelves since p233/p241; eur-lex still 000
+EMEA	European Union	Art. 5(1)(f) emotion recognition in educational institutions banned	since 2025-02-02	carried	in force, needs no date resolution
+EMEA	United Kingdom	GBP 4M for AI lesson-planning and marking tools; light-touch regulation via existing regulators	2026	secondary	NEW this pass
+EMEA	Finland / Estonia / Netherlands	named as K-12 AI integration leaders	2026	secondary aggregator	NEW this pass, low confidence
+EMEA	Africa	NOTHING education-specific returned by the EMEA leg	2026	-	DECLARED GAP
+EMEA	Middle East	NOTHING education-specific returned by the EMEA leg; only Alef Education (UAE) named as a vendor by the APAC leg	2026	-	DECLARED GAP
+APAC	South Korea	AI Framework Act in force	2026-01-22	secondary	carried from p252
+APAC	Vietnam	Law No. 134/2025/QH15 in force, extraterritorial reach; education systems running before 2026-08-15 get six extra months	2026-03-01	secondary	carried from p252
+APAC	Japan	promotional rather than penalising approach	2026	secondary	carried
+APAC	Singapore / Australia	voluntary frameworks and existing law	2026	secondary	carried
+APAC	India	personal data law obligations phased to May 2027	2026-2027	secondary	carried
+APAC	Asia vs ANZ	Ipsos Education Monitor 2026: lower support for banning AI in schools across Asian markets, HIGHER in Australia and New Zealand	2026	primary-ish survey	NEW this pass
+APAC	vendors	Riiid (KR), Squirrel AI (CN), Alef Education (UAE)	2026	secondary market report	NEW this pass
+LATAM	Brazil / Chile / Colombia / Costa Rica	TALIS 2024 teacher AI use: 56% / 55% / 53% / 52% against an OECD average of 36%	2024	OECD survey via secondary	NEW this pass — the strongest LATAM number on these shelves
+LATAM	region (13 countries)	PISA 2025: nine in ten 15-year-olds have used AI chatbots for schoolwork	2025	PISA via secondary	NEW this pass
+LATAM	region (19 countries)	UNESCO IESALC/UNU-IAS: 87% of 200 institutions use AI in at least one area, 74% in teaching and learning, only 26% have a formal AI strategy	2025-2026	UNESCO via secondary	NEW this pass
+LATAM	Argentina	AI use 75% in high socio-economic classes against 42% in low	2026	secondary	NEW this pass
+LATAM	Brazil	53% of school administrators use AI, 22% report school guidelines on its use	2026	secondary	NEW this pass
+LATAM	region	Digital Education Council: 79% of LATAM faculty use AI in teaching, 88% report minimal-to-moderate engagement (7,319 faculty, 29 institutions)	2026	survey via secondary	NEW this pass
+LATAM	Uruguay	first in the region to sign the Council of Europe Framework Convention on AI	2025	secondary	NEW this pass
+LATAM	Colombia	national AI policy adopted via CONPES 4144	2025-02	secondary	carried
+LATAM	region	UNESCO Observatory on AI in Education for Latin America and the Caribbean launched; partners incl. CAF, CENIA, CETIC.br, ECLAC, Tecnologico de Monterrey, ProFuturo, Fundacion Ceibal	2026-04-14	secondary	carried from p252
+Global	-	no official GitHub trending feed reachable; every "trending" list this pass is a third-party roundup	2026-10-16	-	DECLARED GAP, 16th pass

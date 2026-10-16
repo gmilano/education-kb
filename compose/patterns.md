@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 253 — 2026-10-16 — **`p251`'s "DO NOT SELL AN ANNEX III READINESS PROGRAMME THIS QUARTER" IS WITHDRAWN.** THE DATE IT WAS WAITING FOR WAS SETTLED ON THESE SHELVES AT `p233`, AND THE EMEA RECIPE IS NOW A THREE-DATE ROADMAP
+
+⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-date-regression`](../evidence/p253-date-regression.2026-10-16-p253.tsv) *(`13` scopes)* · [`p253-grant-payload`](../evidence/p253-grant-payload.2026-10-16-p253.tsv) · [`p253-platform-grants`](../evidence/p253-platform-grants.2026-10-16-p253.tsv) · [`p253-regional-figures`](../evidence/p253-regional-figures.2026-10-16-p253.tsv)
+
+### 🔴 `WITHDRAWN` — the advice this shelf gave two passes running, and why it was wrong
+
+> 🔴 *"Do not sell an Annex III readiness programme this quarter. The high-risk date is a live disjunction — `2026-08-02` or `2027-12-02` (Omnibus, pending formal adoption)."* — `p251`, carried by `p252`
+>
+> 🟢 **Withdrawn at `p253`.** The Omnibus is `Reg. (EU) 2026/1744`, in force `2026-07-27`; `p233` recorded it and `p241` had already reclassified `2026-08-02` as the Article `50` date.
+
+🟢 **The Omnibus is `Reg. (EU) 2026/1744`: OJ `2026-07-24`, in force `2026-07-27`.** `p233` recorded exactly that, with the Parliament and Council dates; `p241` reclassified `2026-08-02` as the Article `50` date and was counting re-services of it as *superseded*. 🔴 **The advice was priced on a question this base had already answered, ten passes earlier and `500` lines further down the same file.** 🟢 Gated now by [`p253-settled-fact-regression`](../compose/code/p253-settled-fact-regression/), which fails `make hooks` on a current section that hedges about a pinned settled fact without citing what settled it.
+
+### 🟢 `P253-EMEA` — the three-date AI Act roadmap, as a sequenced engagement
+
+**Dates, each sellable on its own:**
+
+| phase | date | what it is | billable now? |
+|---|---|---|---|
+| 1 | 🟢 **`2026-08-02`** | Article `50` transparency — **already in force** | 🟢 **yes, overdue** |
+| 2 | 🟡 **`2026-12-02`** | two new Article `5` prohibitions phase in | 🟢 yes, this quarter |
+| 3 | 🟢 **`2027-12-02`** | Annex III high-risk for the education entries — evaluating learning outcomes, screening applicants, monitoring candidates during examinations | 🟢 yes, with `14` months of runway |
+| 0 | 🟢 **`2025-02-02`** | Article `5(1)(f)` — emotion recognition in educational institutions, **banned** | 🟢 **the cold opening** |
+
+**Wiring, concretely:**
+
+1. 🟢 **Start at phase `0`, because it needs no date argument.** Inventory every webcam-facing surface in the client's assessment stack — proctoring, attention or engagement analytics, anything deriving affect. In [`openedx/edx-platform`](https://github.com/openedx/edx-platform) *(`AGPL-3.0`)* that is the proctoring integration points; in [`moodle/moodle`](https://github.com/moodle/moodle) *(`GPL-3.0`)* the quiz access rules and any proctoring plugin. 🔴 Webcam-based stress or affect inference may be **prohibited outright**, not merely high-risk — so this is a remove-or-replace finding, which is a decision the client must make and therefore a deliverable they must buy.
+2. 🟢 **Phase `1` is a disclosure map, and it is the cheapest real deliverable on this shelf.** Every learner-facing generated artefact needs its Article `50` marking. Attach it at the LMS boundary, not in the model: an [`openedx/XBlock`](https://github.com/openedx/XBlock) *(`Apache-2.0`)* wrapper, or a Moodle AI-subsystem provider shim — both are permissive or plugin-boundary code, so no copyleft crosses into the client's own codebase.
+3. 🟢 **Phase `3` scopes to CONTROLS, which do not move when a date does.** Risk management, data governance, logging, human oversight and post-market monitoring over the components that touch assessment: [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) *(`MIT`)* for the knowledge-tracing model whose predictions feed progression, and whatever tutor sits in front of it. 🔵 **The Commission's stated cause for the deferral — Member States not designating national competent authorities and conformity assessment bodies, with harmonised standards late — is itself the argument for starting now:** a capacity constraint means the conformity-assessment queue will be the bottleneck, not the engineering.
+
+🔵 **Why the sequence matters more than the content:** an EMEA buyer who was told last quarter that the date was unknowable will not buy a `2027` programme cold. Phases `0` and `1` are in force today, small, and auditable — and they are the evidence base phase `3` is scoped from.
+
+### 🟢 `P253-1` — codebase-to-curriculum: the onboarding recipe, and it is the one the new row earns
+
+🟡 **Scope first, because this shelf should not widen quietly:** [`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything) *(`MIT`, `LICENSE` `1 111` B, `24c4b35344840f1a`, ref `f2d0164f72fe`)* is **not a student-facing tutor**. It is a code-comprehension agent. This recipe is for the engagement phase where a studio inherits a client's LMS and has three weeks before it must extend it.
+
+**The wiring:**
+
+1. 🟢 **Graph the inheritance.** Run `Understand-Anything` *(`MIT`)* over the client's fork of [`moodle/moodle`](https://github.com/moodle/moodle) or [`openedx/edx-platform`](https://github.com/openedx/edx-platform). Tree-sitter gives files, functions, classes, dependencies and call relationships; the agent layer gives business domains and data flows. 🔵 On a `400M`-user LMS fork the question is never *"what does this function do"* — it is *"which of the `2 000` plugins actually touch grading"*, and that is a graph query.
+2. 🟢 **Turn the graph into a guided path.** Its `guided tours` and onboarding-guide commands produce the artefact a new engineer reads on day one; its diff-impact analysis is what a reviewer reads on day thirty. Both outputs are text, so they live in the client's repository rather than in a vendor tool.
+3. 🟢 **Then compose the education layer on top of the SAME graph, and this is where the pattern pays twice.** The dependency graph that tells an engineer which modules touch grading is the same graph that tells [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) *(`Apache-2.0`)* which modules a *course* about this codebase must cover. 🟢 Point the ADDIE pipeline at the graph's module list as its syllabus skeleton: the client gets an internal course on their own platform, generated from their own code.
+4. 🟢 **Keep the copyleft boundary where the grant puts it.** The LMS is `GPL-3.0` or `AGPL-3.0` and stays where it is. Everything this recipe adds — `Understand-Anything` *(`MIT`)*, `instructional_agents` *(`Apache-2.0`)*, `pykt-toolkit` *(`MIT`)* — is permissive and sits outside the platform tree, talking to it over its REST/plugin boundary. 🔵 That is the line [`repos/foundations.md`](../repos/foundations.md) draws: **the permissive layer in education is not the platform, it is what you attach to it.**
+
+🔴 **The honest cost:** `Understand-Anything`'s adoption is **unmeasurable from this base** — `api.github.com` is `403` and the secondary channel offers `71.7k` against `15 219`. 🟢 Its *grant* is measured, FILED, at a pinned SHA, and that is what a studio actually needs before it builds. 🔵 **Pilot it on one repository before it goes into a statement of work.**
+
+### 🟢 `P253-LATAM` — sell the policy layer, because the adoption is already bought
+
+🔵 The numbers are in [`intel/market.md`](../intel/market.md); the recipe they imply is short. `87%` of `200` higher-education institutions across `19` countries use AI and 🔴 **`26%` have a strategy.** Brazil: `53%` of administrators use it, `22%` have guidelines.
+
+1. 🟢 **The deliverable is an AI-use policy with an evidence trail**, not a model. Instrument the LMS first — Moodle's AI subsystem and Open edX's event pipeline both already log provider calls — so the policy ships with a report that proves it is being followed.
+2. 🟢 **The equity clause is not decoration.** Argentina's `75%` / `42%` socio-economic split is the number a ministry asks about. Attach the usage report to the institution's own cohort data so the gap is measured locally rather than quoted from a survey.
+3. 🟢 **Be visible where the region convenes:** the UNESCO Observatory on AI in Education for LAC *(launched `2026-04-14`)*, whose partners include CAF, CENIA, CETIC.br, ECLAC, Tecnológico de Monterrey, ProFuturo and Fundación Ceibal.
+4. 🔵 **And cite `TALIS 2024` and `PISA 2025`, not a vendor roundup.** A LATAM engagement is the only one on this shelf with teacher- and student-level baselines from an OECD instrument, and that is what survives a procurement committee.
+
 ## Pass 252 — 2026-10-16 — THE RECIPE THIS PASS EARNED IS AN **APAC MULTI-JURISDICTION TUTOR GATE**, BECAUSE THREE COUNTRIES NOW HAVE DATED AI LAW AND ONE OF THEM REGULATES THE TUTOR'S **PERSONA**; PLUS A SECOND RECIPE THIS PASS BUILT AND RAN ON ITSELF: A LICENCE GATE THAT REFUSES A RIDER IT CANNOT READ
 
 ⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv) *(leg `7`)* · [`p252-platform-grants`](../evidence/p252-platform-grants.2026-10-16-p252.tsv) · [`p252-xq-measurement`](../evidence/p252-xq-measurement.2026-10-16-p252.tsv) · [`p252-slug-existence`](../evidence/p252-slug-existence.2026-10-16-p252.tsv) · **instruments:** [`p252-ungated-floors`](../compose/code/p252-ungated-floors/) · [`p1054-mit-plus-clause`](../compose/code/p1054-mit-plus-clause/)

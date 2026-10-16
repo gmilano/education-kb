@@ -1,0 +1,4 @@
+slug	default_branch	head_sha	path	bytes	sha256_16	measured_family	secondary_claim_this_pass	direction
+OpenOLAT/OpenOLAT	master	aea1cc582e22848b1643a7c57ffdd54c60c6b042	LICENSE	10982	6dbc5b605ed0be6e	Apache-2.0	"Apache License 2.0"	CONFIRMED
+openeducat/openeducat_erp	19.0	46a5d7d400820d471b67b8c019997bfa5d3c873e	LICENSE	8241	528f84036800168d	LGPL-3.0	"LGPLv3"	CONFIRMED
+francoisjacquet/rosariosis	mobile	232819b4c07e65a89d93559575250e53755887d7	-	-	-	not re-read this pass	"GPL-licensed K-12"	slug the SHELVES carry RESOLVES; p253's own guess RosarioSIS/RosarioSIS does NOT exist

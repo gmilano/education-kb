@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 253 — 2026-10-16 — TWO PLATFORM GRANTS RE-READ FIRST-HAND, AND **BOTH SECONDARY CLAIMS WERE RIGHT** — WHICH IS THE RESULT THAT STOPS `p252`'s PRIOR FROM BECOMING A SUPERSTITION
+
+⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-platform-grants`](../evidence/p253-platform-grants.2026-10-16-p253.tsv) *(`3`)* · [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) *(leg 3)*
+
+### 🟢 `T253-V1` — the grants, at pinned SHAs
+
+| platform | slug | default branch · `HEAD` | grant payload | family |
+|---|---|---|---|---|
+| **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` · `aea1cc582e22` | `LICENSE`, `10 982` B, `sha256`₁₆ `6dbc5b605ed0be6e` | 🟢 **`Apache-2.0`** |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **`19.0`** · `46a5d7d40082` | `LICENSE`, `8 241` B, `sha256`₁₆ `528f84036800168d` | 🟢 **`LGPL-3.0`** |
+
+🟢 Both classified with this base's shared `lib/measure --family`, not a fresh classifier — `P237`'s rule, and the reason the `GPL-3.0`/`AGPL-3.0` section-13 defect cannot reappear here. 🟢 Both read **FILED** *(`curl -o`, then `wc -c` and `sha256sum` on the file)*, never through a captured body — which is `ACTION XY`'s rule, discharged this pass and applied in the same pass that discharged it.
+
+### 🟢 `T253-V2` — leg 3 was RIGHT twice, and that corrects the shape of `p252`'s prior
+
+🔴 `p252` measured three licence claims from this channel and refuted all three in the same direction — Sakai *"Apache 2.0"* → `ECL-2.0`, Forma LMS *"Apache 2.0"* → `GPL-2.0`, Open edX *"Apache License 2.0"* → `AGPL-3.0` — and registered `ACTION XU` to turn *"three in one direction"* into a rate.
+
+🟢 **This pass adds two claims and both are confirmed.** The combined window is now `5` claims, `3` refuted, `2` correct:
+
+| | `p252` | `p253` | window |
+|---|---|---|---|
+| licence claims received | `3` | `2` | `5` |
+| refuted first-hand | 🔴 `3` | 🟢 `0` | `3` |
+| direction of the refuted ones | all overstate permissiveness | — | 🔴 **`3`/`3`, still uniform** |
+| error **rate** | `100%` | `0%` | 🟡 **`60%`** |
+
+🔵 **So `ACTION XU`'s prior survives in a narrower and more useful form.** The refuted set is still directionally uniform — when this channel is wrong about a licence, it is wrong **towards permissiveness** — but the claim set is not uniformly wrong, and a pass that treats every secondary licence cell as inflated will discard correct information. 🟢 **The operative rule: a secondary licence claim is an UPPER BOUND on permissiveness and must be read first-hand before it is published, but it is not presumed false.** 🔴 **What is still NOT done:** `XU` asked for the direction across the whole shelf history. Five claims in a two-pass window is a window, not a history. `XU` stays live, re-scoped in [`intel/open-gaps.md`](../intel/open-gaps.md).
+
+### 🟡 `T253-V3` — two of three platform slugs this pass have a default branch that is NEITHER `main` NOR `master`
+
+| slug | default branch |
+|---|---|
+| `openeducat/openeducat_erp` | 🟡 **`19.0`** — a version number |
+| `francoisjacquet/rosariosis` | 🟡 **`mobile`** |
+| `OpenOLAT/OpenOLAT` | `master` |
+
+🔴 **This matters because this base reads payloads on GUESSED refs.** `ACTION XW` records that `821` of `881` MIT slugs are readable *on guessed refs*; a version-numbered or feature-named default branch is exactly the shape that lands in the other `60`. 🟢 `git ls-remote --symref` resolves it for one slug at a time and is live; the fix is to resolve before probing rather than to widen the guess list. 🟡 Registered as `ACTION YA`.
+
+🟢 **And one small vindication of the shelves over this pass:** `p253` guessed `RosarioSIS/RosarioSIS` and got a credential prompt — the slug does not exist. **The shelves carry `francoisjacquet/rosariosis`, in `97` places, and it resolves.** 🔵 Recorded because a pass that only publishes the base's errors gives a false picture of it.
+
 ## Pass 252 — 2026-10-16 — `0` NEW PLATFORMS, AND THE VERTICAL LEG PAID IN **THREE LICENCE CELLS, ALL THREE WRONG, ALL THREE WRONG IN THE SAME DIRECTION** — EACH REFUTED BY A PAYLOAD READ FIRST-HAND THIS PASS. THE SAKAI CASE IS THE INSTRUCTIVE ONE: THE SECONDARY SOURCE IS WRONG IN EXACTLY THE CLAUSE A STUDIO WOULD CARE ABOUT
 
 ⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-platform-grants`](../evidence/p252-platform-grants.2026-10-16-p252.tsv) · [`p252-slug-existence`](../evidence/p252-slug-existence.2026-10-16-p252.tsv) · [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv) *(leg `3`)*

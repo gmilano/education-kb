@@ -4,6 +4,31 @@ region: North America
 updated: 2026-10-05
 ---
 
+## 🔴 CORRECCIÓN `p253` (`ACTION XY`) — una cifra publicada por este instrumento está MAL
+
+🔴 `bytes_LICENSE` en [`result.2026-10-05.tsv`](result.2026-10-05.tsv) y las cifras de `C5`
+en [`controls.2026-10-05.txt`](controls.2026-10-05.txt) se tomaron **desde una captura**
+(`bytes=$(printf '%s' "$raw_lic" | wc -c)`), que es `P834`: una sustitución de comandos se
+come **toda** la corrida final de saltos de línea.
+
+| payload | publicado `2026-10-05` | medido `p253`, FILED |
+|---|---|---|
+| `openstax/osbooks-calculus-bundle/main/LICENSE` | 🔴 `21 443` B · `sha256`₁₆ `ced5bed6eec9c127` | 🟢 **`21 444` B · `61288b08584b5130`** |
+| `osbooks-college-algebra-bundle` | `21 013` B · `8e63d319b3d085a7` | 🟢 idéntico |
+| `osbooks-prealgebra-bundle` | `21 442` B · `ab1a44bbba582526` | 🟢 idéntico |
+
+🟢 **El control que lo decide:** aplicar el canal CAPTURADO al payload de hoy reproduce
+`21 443` / `ced5bed6eec9c127` exactamente — el payload no cambió, la medición mintió.
+🔴 **La corrida final es `1` en el primero y `0` en los otros dos**, que es por qué dos de
+tres coincidían: una captura es correcta siempre que el payload no termine en salto de línea.
+
+🔵 **Los archivos fechados NO se reescriben** — son el registro de lo que ese pase midió.
+Esta nota existe para que la celda no se cite sin la corrección. Evidencia:
+[`p253-p326-reread`](../../../evidence/p253-p326-reread.2026-10-16-p253.tsv).
+🟢 `sweep_titleholder.sh` y `controls.sh` ya están arreglados: el tamaño sale del ARCHIVO, y
+`C5` imprime **ambos** canales etiquetados más el delta de la corrida final.
+
+
 # `p326-titleholder-book-license` — el campo de licencia de un item es una AFIRMACION DEL REDISTRIBUIDOR, y se puede contrastar con el titular
 
 > Nuevo en el **pase 105 del 2026-10-05**. Corre la **accion pre-registrada del pase 105** sobre

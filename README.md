@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 253 — 2026-10-16 — **THE GATE WAS DEAF.** `make hooks` RAN FOR THE FIRST TIME IN THREE PASSES AND PRINTED `ALL OFFLINE LICENCE CONTROLS PASS` WITH A FAILING SUITE — ON ALL `31` STEPS. PLUS `ACTION XY` DISCHARGED WITH A PUBLISHED `sha256` CORRECTED, A SETTLED FACT RECOVERED AFTER TWO PASSES OF RE-LITIGATION, AND **`1` NEW ROW, THE FIRST IN SIXTEEN PASSES**
+
+⏱️ **TWENTY-SECOND pass of `2026-10-16`.** `p232`–`p252` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction. 🔵 **Note for a reader of this file: the pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**
+
+### 🔴 The gate was not checking anything
+
+🟢 **`make` is runnable from this session.** `p251` and `p252` both recorded it as refused by the session's classifier, and both therefore audited `gate-offline` **by reading it**. 🔴 **The first actual run printed `ALL OFFLINE LICENCE CONTROLS PASS` and exited `0` while `p252-ungated-floors/test_ungated_floors.py` exited `1`.** Every step has the shape `cd <dir> && suite >/dev/null && echo "   PASS"`, and bash exempts a command that is not the last in an `&&` list from `errexit` — so a failing suite shows up as **one missing `PASS` line among `31`** and the recipe runs on to its banner. Reproduced in isolation.
+
+🔴 **And the reason it had not been found is the part worth carrying.** `ACTION XM` enumerated all `26` gate commands and found the five `unittest.main()` suites that exit `0` on zero collected tests. `ACTION XR` named the `71` ungated ones. **Two passes of careful work on whether the instruments can speak, while the thing listening to them was deaf.**
+
+🟢 **Fixed and pinned:** `|| exit 1` on all `31` steps, the banner unreachable while any step is unguarded, and [`p253-gate-propagation`](compose/code/p253-gate-propagation/) asserts both that the hardened shape aborts and that the old shape still swallows a failure. The gate now aborts: `make: *** [Makefile:34: gate-offline] Error 1`. 🟡 The suite that was failing was **working** — `p252-ungated-floors` pins its census as literals and this pass's three instruments moved it `201`→`204` / `20`→`23`. Re-pinned, `31/31`.
+
+### 🟢 `ACTION XY` discharged, and limb 2 corrected a published hash
+
+`311` shell instruments graded — `180` `CLEAN`, `51` `STATUS`, `4` `PIPED`, `66` `BODY-ONLY`, `4` `CAPTURED-SUBJECT`, `1` `CAPTURED-CONTROL`, 🔴 **`5` `CAPTURED-LIVE` as found — 🟢 `0` after this pass fixed all five** — with `XY`'s own falsifier holding *(`p176/probe_spellings.sh` grades `PIPED`)* and **four further discriminations** the ACTION had not named, each found by the instrument's own output: a comment quoting the defect, `2>/dev/null` read as an output file, a file-hash co-occurring with a body capture on one line, and a quoted substitution assignment. 🔵 Two of those four were **false negatives**, which is the worse direction.
+
+🔴 **Limb 2 found a live one.** `p326-titleholder-book-license` published `21 443` B / `sha256`₁₆ `ced5bed6eec9c127` for `openstax/osbooks-calculus-bundle`'s `LICENSE`. Re-read FILED: 🟢 **`21 444` B / `61288b08584b5130`.** The discriminating control is what makes it a measurement — **applying the captured channel to today's payload reproduces the published figure exactly**, so the payload did not move, the measurement lied. 🔴 **Incidence `1` of `3`** *(trailing newline runs `1`, `0`, `0`)*: a captured body is right whenever the payload has no trailing newline, which is why a class documented five times survived `253` passes.
+
+### 🔴 A settled fact was re-litigated for two passes, and a quarter's EMEA advice was priced on it
+
+🟢 **`p233` recorded `Reg. (EU) 2026/1744`** — OJ `2026-07-24`, in force `2026-07-27` — and **`p241` reclassified `2026-08-02` as the Article `50` date**, counting re-services of it as *superseded*. 🔴 **`p251` then published the question as a live disjunction *"pending formal adoption"* and wrote `NOT ESTABLISHABLE` into the ledger; `p252` re-published *"STILL a disjunction"* on three shelves.** 🔴 **The cost:** [`compose/patterns.md`](compose/patterns.md) told the studio *"do not sell an Annex III readiness programme this quarter"* because the date was unknown.
+
+🟢 **Corrected on every shelf, and the EMEA recipe is now a three-date roadmap:** Article `5(1)(f)` in force since `2025-02-02`, Article `50` in force since `2026-08-02`, two new Article `5` prohibitions `2026-12-02`, Annex III `2027-12-02`, Annex I `2028-08-02`. 🟢 **Gated** by [`p253-settled-fact-regression`](compose/code/p253-settled-fact-regression/), whose falsifier is the one that matters: correcting a re-service requires quoting the wrong date, so `p241`'s row is pinned verbatim as a control and must grade `CLEAR`.
+
+🔵 **Why prose could not prevent it:** these shelves are append-at-top at ~`160 000` lines. The settled reading sits `500`–`6 900` lines down, and **the carried ACTION ledger is what a new pass reads.** Once the re-opened form entered the ledger it propagated under its own momentum.
+
+### 🟢 `1` new row — and the thing that found it was a test, not a query
+
+🟢 **[`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything)** — `MIT`, `LICENSE` `1 111` B, `sha256`₁₆ `24c4b35344840f1a`, ref `f2d0164f72fe`, `IN-BAND` and `is_usable_permissive: True` through `p1054-mit-plus-clause`. 🟡 **Not a student-facing tutor** — a code-comprehension agent, filed with that scope stated and wired into [`compose/patterns.md`](compose/patterns.md) `P253-1` for the engagement phase where a studio inherits a client's LMS.
+
+🟢 **It arrived with three candidate owners, one of which does not exist.** `Lumina-Labs/Understand-Anything` → credential prompt, refuted first-hand. `Lum1104/…` and `Egonex-AI/…` resolve to the **identical `HEAD` sha**, and the repo's own `.claude-plugin/plugin.json` names `Egonex-AI` — a first-party declaration plus a resolution converging on one parent, which is `P188` + `P253` and this base's stated condition for promoting a claim. 🔴 Stars are **`UNMEASURABLE`**: `api.github.com` is `403` and the secondary channel offers `71.7k` against `15 219`.
+
+🟢 **And the mechanism beats the row.** Of every name the `9` legs produced, exactly **one** had `0` occurrences across all ten shelves. Fifteen passes called this channel dry by impression; `p252` was the first to check against the carried index, `p253` made it the row test, and it returned a hit. **A supply channel that looks dry may be a channel nobody was testing.** `ACTION YB` asks for it to become `make carried` rather than a `grep`.
+
+### 🟡 `ACTION XU` partially discharged — and its prior narrows
+
+Two more licence claims measured first-hand: **OpenOLAT *"Apache 2.0"* → `Apache-2.0`** *(`10 982` B, `6dbc5b605ed0be6e`)* and **OpenEduCat *"LGPLv3"* → `LGPL-3.0`** *(`8 241` B, `528f84036800168d`)*. 🟢 **Both correct.** Window: `5` claims, `3` refuted, `2` right. 🟡 The refuted set is still `3`/`3` towards permissiveness, so `XU`'s falsifier does not fire — but the **rate is `60%`, not `100%`**. 🟢 **The prior's correct form: a secondary licence cell is an upper bound to verify, not a falsehood to assume.**
+
+### 🟢 The regions, and the gaps named as gaps
+
+🟢 **LATAM is the strongest leg and the figures are from OECD instruments for the first time:** `TALIS 2024` teacher use *(Brazil `56%`, Chile `55%`, Colombia `53%`, Costa Rica `52%` against an OECD average of `36%`)* and `PISA 2025` *(nine in ten `15`-year-olds across `13` countries have used an AI chatbot for schoolwork)*, against UNESCO IESALC's `87%` institutional use and 🔴 **`26%` with a formal strategy**. 🔵 **Read together: adoption above the OECD average, governance far below it — so the deliverable is the policy layer, not the model.**
+
+🟢 **North America** is the one region where the policy side is being forced by **law** rather than bought — `134` bills across `31` states, several compelling individual districts to adopt a written AI policy. 🟢 **APAC** has the only dated, education-specific rules *(Korea `2026-01-22`, Vietnam `2026-03-01` with an education carve-out at `2026-08-15`)* and is 🟡 **now split internally on public mandate**: `Ipsos Education Monitor 2026` finds support for banning AI in schools lower across the Asian markets surveyed and **higher** in Australia and New Zealand.
+
+🔴 **DECLARED GAPS, so silence is not read as coverage:** the EMEA leg returned **nothing education-specific for Africa or the Middle East**; `www.unesco.org` is `000` at the proxy; `eur-lex.europa.eu` is `000` on two URL shapes, so the EU resolution rests on five independent secondary channels and no primary text; and there is **no official GitHub trending feed** for a sixteenth pass.
+
+🔵 **The lesson for the ledger, three passes running and sharpening.** `p251`: *unwired or unfailable knowledge, never missing knowledge.* `p252`: the error surface moved to the measurement itself. 🟢 **`p253`: every finding this pass is an UNREAD signal.** The base knew the Omnibus number, owned `P834` in two instruments, had `31` controls wired, and had the candidate names in hand. **Nothing was missing and nothing was unwired — nothing consumed the wire.**
+
 ## Pass 252 — 2026-10-16 — `ACTION XQ` AND `XR` BOTH DISCHARGED: THE `MIT` TIER NO LONGER BLESSES A **COMMONS CLAUSE** RIDER IT HAD BLESSED FOR FOUR PASSES, AND THE GATE'S UNFLOORED POPULATION IS CUT FROM `321` TO THE **`71` SUITES THAT CAN ACTUALLY LIE** — ALL `71` NAMED
 
 ⏱️ **TWENTY-FIRST pass of `2026-10-16`.** `p232`–`p251` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction. 🔵 **Note for a reader of this file: the pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**

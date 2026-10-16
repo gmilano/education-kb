@@ -1,0 +1,5 @@
+slug	ref	path	http	bytes	sha256_16	family	length_state	is_usable_permissive	instrument
+Egonex-AI/Understand-Anything	f2d0164f72fe678805c34245a6df36acededfebd	LICENSE	200	1111	24c4b35344840f1a	MIT	IN-BAND	True	lib/measure + p1054-mit-plus-clause
+Egonex-AI/Understand-Anything	f2d0164f72fe678805c34245a6df36acededfebd	package.json	200	1898	5bab7c02882423ae	MANIFEST declares "license": "MIT"	n/a	n/a	NOT-MIT-BODY (manifest, no grant)
+Egonex-AI/Understand-Anything	f2d0164f72fe678805c34245a6df36acededfebd	.claude-plugin/plugin.json	200	477	360ed2c79124ee61	MANIFEST declares "license": "MIT" + repository Egonex-AI	n/a	n/a	first-party identity channel (P188 resolve limb)
+Egonex-AI/Understand-Anything	f2d0164f72fe678805c34245a6df36acededfebd	LICENSE.md / LICENSE.txt / LICENCE / COPYING / LICENSE-MIT / pyproject.toml / plugin.json	404	-	-	-	-	-	absent — 6 Tier-A paths probed

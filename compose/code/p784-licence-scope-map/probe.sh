@@ -86,9 +86,14 @@ echo "== $repo @ ${sha:0:7}"
 found=0
 fams=""
 for n in $NAMES; do
-  body=$(curl -sf --max-time 25 "https://raw.githubusercontent.com/$repo/$sha/$n" 2>/dev/null) || continue
-  [ -n "$body" ] || continue
-  bytes=$(printf '%s' "$body" | wc -c | tr -d ' ')
+  # `ACTION XY` (p253): `bytes` was `$(printf '%s' "$body" | wc -c)` — `P834`, short by the
+  # payload's trailing-newline run.  Measured on this shelf at an incidence of 1 in 3.
+  __p=$(mktemp)
+  curl -sf --max-time 25 -o "$__p" "https://raw.githubusercontent.com/$repo/$sha/$n" 2>/dev/null || { rm -f "$__p"; continue; }
+  body=$(cat "$__p")
+  [ -n "$body" ] || { rm -f "$__p"; continue; }
+  bytes=$(wc -c < "$__p" | tr -d ' ')
+  rm -f "$__p"
   # A file NAMED licence can DECLARE THERE IS NONE -- a real specimen is on this shelf
   # (murderszn/open-tutor).  Size alone is not a grant.
   fam=$(family "$body")

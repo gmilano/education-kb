@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 253 — ONE REPO MOVED ONTO THIS SHELF, AND IT TOOK **THREE CANDIDATE OWNERS AND AN `ls-remote`** TO ESTABLISH WHICH REPOSITORY IT IS
+
+⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-slug-canonicality`](../evidence/p253-slug-canonicality.2026-10-16-p253.tsv) · [`p253-grant-payload`](../evidence/p253-grant-payload.2026-10-16-p253.tsv) · [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) *(`9` legs)* · [`p253-channel-map`](../evidence/p253-channel-map.2026-10-16-p253.tsv)
+
+### 🟢 New this week
+
+| Nombre | Repo | Licencia | Señal | Por qué importa |
+|---|---|---|---|---|
+| Understand-Anything | [`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything) | 🟢 **MIT** *(`LICENSE`, `1 111` B, `24c4b35344840f1a`, ref `f2d0164f72fe`)* | 🔴 **stars `UNMEASURABLE`** — `api.github.com` `403`; the secondary channel offers `71.7k` and `15 219` for the same repo, a `4.7×` spread | Grafo de conocimiento consultable a partir de un repositorio: Tree-sitter para la estructura, `5` agentes LLM en paralelo para el significado, más *guided tours*, búsqueda semántica y análisis de impacto de un diff. 🟡 **No es un tutor de estudiantes** — es onboarding y comprensión, y su valor educativo está en la dirección que un estudio usa primero: convertir el repositorio de un cliente en un camino guiado para quien tiene que extenderlo |
+
+🟢 **It is the first new repository on this shelf in sixteen passes**, and the thing that found it was the carried-index check rather than a better query: of every name the `9` legs produced, it was the **only** one with `0` occurrences across all ten shelves.
+
+### 🟢 Identity, because the channel gave three owners for one project
+
+| candidate | source | `ls-remote --symref` | verdict |
+|---|---|---|---|
+| [`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything) | 🟢 **first party** — `homepage` and `repository` in the repo's own `.claude-plugin/plugin.json` | `main`, `f2d0164f72fe` | 🟢 **CANONICAL** |
+| [`Lum1104/Understand-Anything`](https://github.com/Lum1104/Understand-Anything) | secondary install line | `main`, **`f2d0164f72fe`** | 🟡 alias or redirect — **identical `HEAD` sha, so the same object graph** |
+| `Lumina-Labs/Understand-Anything` | secondary link | 🔴 credential prompt | 🔴 **DOES NOT EXIST** — refuted first-hand |
+
+🔵 **The method is `P188` plus `P253`, not a new rule:** a declared `repository` URL is an assertion and must be RESOLVED, and identity is not a fact at a single depth. Here the declaration and the resolution converge on the same parent, which is this base's stated condition for promoting a claim — and the convergence is an identical SHA rather than a similar description. 🔴 **Not claimed:** which slug is the rename and which the redirect. That needs `api.github.com`, `403` for a sixteenth pass.
+
+### 🔴 Still nothing from the official channel, sixteenth pass
+
+| channel | status | consequence for this shelf |
+|---|---|---|
+| `github.com/trending` | `403` | 🔴 every *"trending"* list this pass is a third-party roundup |
+| `api.github.com/search/repositories?q=topic:…` | `403` | 🔴 no topic query runnable |
+| `api.github.com/repos/{slug}` | `403` | 🔴 **no star count on this shelf is measurable** |
+| `raw.githubusercontent.com` | 🟢 `200` | 🟢 grants readable — and `6` of the new row's `9` probed paths were `404`, which is information |
+| `git ls-remote --symref` | 🟢 ok | 🟢 existence, default branch and `HEAD` sha — stronger than a `HEAD` on an HTML page |
+
+🟡 **Two default branches measured this pass are neither `main` nor `master`:** `openeducat/openeducat_erp` → **`19.0`**, `francoisjacquet/rosariosis` → **`mobile`**. 🔴 This shelf reads payloads on guessed refs, and that is the shape that lands in the `60` of `881` which do not resolve. Registered as `ACTION YA`.
+
 ## 2026-10-16 — Pass 252 — THE TRENDING CHANNEL IS `403` FOR THE **FIFTEENTH PASS**, SO THIS PASS MEASURED THE GATE AGAIN — AND `p251`'s OWN HEADLINE NUMBER WAS WRONG BY A FACTOR OF FOUR: THE POPULATION THAT CAN PASS WHILE ASSERTING NOTHING IS **`71`**, NOT `321`
 
 ⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-xr-census`](../evidence/p252-xr-census.2026-10-16-p252.tsv) · [`p252-ungated-floors`](../evidence/p252-ungated-floors.2026-10-16-p252.tsv) *(all `71`, NAMED — `ACTION XR`'s falsifier)* · [`p252-channel-map`](../evidence/p252-channel-map.2026-10-16-p252.tsv) · **instrument:** [`p252-ungated-floors`](../compose/code/p252-ungated-floors/) *(`31` controls)*

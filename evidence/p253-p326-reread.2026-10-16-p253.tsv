@@ -1,0 +1,4 @@
+payload	published_bytes	published_sha256_16	true_bytes	true_sha256_16	trailing_run	captured_channel_reproduces_published	verdict
+openstax/osbooks-calculus-bundle/main/LICENSE	21443	ced5bed6eec9c127	21444	61288b08584b5130	1	YES (21443 / ced5bed6eec9c127)	CORRECTED — the payload did not move, the measurement lied
+openstax/osbooks-college-algebra-bundle/main/LICENSE	21013	8e63d319b3d085a7	21013	8e63d319b3d085a7	0	n/a	UNAFFECTED — no trailing newline to lose
+openstax/osbooks-prealgebra-bundle/main/LICENSE	21442	ab1a44bbba582526	21442	ab1a44bbba582526	0	n/a	UNAFFECTED — no trailing newline to lose

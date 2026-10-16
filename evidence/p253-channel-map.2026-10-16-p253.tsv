@@ -1,0 +1,11 @@
+channel	probe	status	reading	delta_vs_p252
+github.com/trending	GET https://github.com/trending	403	no trending supply	unchanged (16th pass)
+api.github.com search	GET /search/repositories?q=topic:education+ai	403	no topic: queries runnable	unchanged
+api.github.com repo	GET /repos/moodle/moodle	403	no metadata channel; star counts UNMEASURABLE	unchanged
+raw.githubusercontent.com	GET /frappe/lms/develop/license.txt	200	payload channel LIVE	unchanged
+git ls-remote	ls-remote --symref https://github.com/moodle/moodle HEAD	ok	default-branch + HEAD sha resolution LIVE (main)	unchanged
+www.unesco.org	GET /en/digital-education	000	refused at proxy	unchanged
+eur-lex.europa.eu (eli)	GET /eli/reg/2026/1744/oj	000	refused at proxy	unchanged
+eur-lex.europa.eu (legal-content)	GET /legal-content/EN/TXT/?uri=OJ:L_202601744	000	refused at proxy on a SECOND url shape	NEW probe, same wall
+WebSearch	9 legs, 4 global + 4 regional + 1 targeted	ok	pays REGULATION, never ROWS	property holds 16th pass
+make	make hooks	RUNS	the standing gate is runnable from this session	CHANGED — p251 and p252 both recorded `denied`

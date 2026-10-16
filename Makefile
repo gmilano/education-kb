@@ -21,83 +21,107 @@ PY ?= python3
 
 hooks: gate-offline ## the standing check: every licence instrument's OFFLINE controls
 
+# 🔴 p253: `set -e` DOES NOT abort these steps, measured rather than read.  bash exempts a
+# command that is not the LAST in an `&&` list from errexit, so `cd d && test.py && echo PASS`
+# swallows a failing `test.py`: the step prints no `PASS`, the recipe continues, and
+# `ALL OFFLINE LICENCE CONTROLS PASS` prints anyway with `exit 0`.  Reproduced in isolation.
+# 🔵 This is why `ACTION XM` and `XR` could audit 26 suites for failure-capability and still
+# miss it: they asked whether each SUITE can signal, never whether the GATE propagates — and
+# p251/p252 both recorded `make` as not runnable from their session, so neither ran it.
+# 🟢 Every step therefore carries an explicit `|| exit 1`, and the banner is unreachable
+# unless all of them pass.  `compose/code/p253-gate-propagation/` pins this.
 gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without egress
 	@set -e; \
 	echo "── lib/license_family.sh  (the shared classifier, P237)"; \
-	cd compose/code/lib && bash test_license_family.sh >/dev/null && echo "   PASS"; \
+	cd compose/code/lib && bash test_license_family.sh >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── lib/licence_path.sh    (the shared path predicate, P441)"; \
-	cd compose/code/lib && bash test_licence_path.sh >/dev/null && echo "   PASS"; \
+	cd compose/code/lib && bash test_licence_path.sh >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p222-ecosystem-bound-grammar  (five grammars, the bound)"; \
-	cd compose/code/p222-ecosystem-bound-grammar && $(PY) test_bound_grammar.py >/dev/null 2>&1 && echo "   PASS"; \
+	cd compose/code/p222-ecosystem-bound-grammar && $(PY) test_bound_grammar.py >/dev/null 2>&1 && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p228-shelf-gate        (the five non-grant subjects, 30 tests)"; \
-	cd compose/code/p228-shelf-gate && $(PY) test_shelf_gate.py >/dev/null 2>&1 && echo "   PASS"; \
+	cd compose/code/p228-shelf-gate && $(PY) test_shelf_gate.py >/dev/null 2>&1 && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p229-grant-ladder-reach (reach, foreign manifest, withdrawn cells, query key)"; \
-	cd compose/code/p229-grant-ladder-reach && $(PY) test_grant_ladder_reach.py >/dev/null && echo "   PASS"; \
+	cd compose/code/p229-grant-ladder-reach && $(PY) test_grant_ladder_reach.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p230-prose-path-ladder (greedy slug, prose paths, the lazy-quantifier lint)"; \
-	$(PY) -I compose/code/p230-prose-path-ladder/test_prose_path_ladder.py >/dev/null && echo "   PASS"; \
+	$(PY) -I compose/code/p230-prose-path-ladder/test_prose_path_ladder.py >/dev/null && echo "   PASS" || exit 1; \
 	echo "── p233-maven-channel   (the response classifier: a 404 is not an absence)"; \
-	$(PY) -I compose/code/p233-maven-channel/test_classify_response.py >/dev/null && echo "   PASS"; \
+	$(PY) -I compose/code/p233-maven-channel/test_classify_response.py >/dev/null && echo "   PASS" || exit 1; \
 	echo "── p237-grant-payload-shapes (BOM + holderless + year-less grants, 9 controls)"; \
-	cd compose/code/p237-grant-payload-shapes && bash test_payload_shapes.sh >/dev/null && echo "   PASS"; \
+	cd compose/code/p237-grant-payload-shapes && bash test_payload_shapes.sh >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p235-carried-index    (ACTION UG/UH: the index, fold, claims — 23 controls)"; \
-	$(PY) -I compose/code/p235-carried-index/test_carried_index.py >/dev/null && echo "   PASS"; \
+	$(PY) -I compose/code/p235-carried-index/test_carried_index.py >/dev/null && echo "   PASS" || exit 1; \
 	echo "── p238-lure-signature   (the provenance gate: 66 controls, ACTION VE + p240 loopback)"; \
-	cd compose/code/p238-lure-signature && $(PY) test_lure_signature.py >/dev/null && echo "   PASS"; \
+	cd compose/code/p238-lure-signature && $(PY) test_lure_signature.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p239-query-shape      (the sort key: 70 controls, ACTION VH)"; \
-	cd compose/code/p239-query-shape && $(PY) test_query_shape.py >/dev/null && echo "   PASS"; \
+	cd compose/code/p239-query-shape && $(PY) test_query_shape.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p240-grant-language   (the language axis: 29 controls, ACTION VO)"; \
-	cd compose/code/p240-grant-language && $(PY) test_grant_language.py >/dev/null && echo "   PASS"; \
+	cd compose/code/p240-grant-language && $(PY) test_grant_language.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p1054-mit-plus-clause (the added-restriction classifier, ACTION VO/p241)"; \
-	$(PY) -I compose/code/p1054-mit-plus-clause/test_mit_plus.py >/dev/null 2>&1 && echo "   PASS"; \
+	$(PY) -I compose/code/p1054-mit-plus-clause/test_mit_plus.py >/dev/null 2>&1 && echo "   PASS" || exit 1; \
 	echo "── p241-blanket-denial  (the grant axis: 104 controls, ACTION VO)"; \
-	cd compose/code/p241-blanket-denial && $(PY) test_blanket_denial.py >/dev/null && echo "   PASS"; \
+	cd compose/code/p241-blanket-denial && $(PY) test_blanket_denial.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p242-grant-delta    (disclosure vs narrowing vs transition: 23 controls, ACTION VU)"; \
-	$(PY) -I compose/code/p242-grant-delta/test_grant_delta.py >/dev/null 2>&1 && echo "   PASS"; \
+	$(PY) -I compose/code/p242-grant-delta/test_grant_delta.py >/dev/null 2>&1 && echo "   PASS" || exit 1; \
 	echo "── p1058-empty-payload-gate (0-byte grant, self-reference, prefix narrowing: 29)"; \
-	cd compose/code/p1058-empty-payload-gate && $(PY) -I test_empty_payload_gate.py >/dev/null 2>&1 && echo "   PASS"; \
+	cd compose/code/p1058-empty-payload-gate && $(PY) -I test_empty_payload_gate.py >/dev/null 2>&1 && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p244-absence-states  (payload/address/query absence + truncation: 61)"; \
-	$(PY) -I compose/code/p244-absence-states/test_absence_states.py >/dev/null && echo "   PASS"; \
+	$(PY) -I compose/code/p244-absence-states/test_absence_states.py >/dev/null && echo "   PASS" || exit 1; \
 	echo "── p245-apache-canonical (the TEXT axis: 25 controls, the 4(c)/4(d) twin phrase)"; \
-	cd compose/code/p245-apache-canonical && $(PY) -I test_apache_canonical.py >/dev/null && echo "   PASS"; \
+	cd compose/code/p245-apache-canonical && $(PY) -I test_apache_canonical.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p246-payload-integrity (ROLE + STATE: 60 controls, the BUSL-unreachable branch)"; \
-	$(PY) -I compose/code/p246-payload-integrity/test_payload_integrity.py >/dev/null && echo "   PASS"; \
+	$(PY) -I compose/code/p246-payload-integrity/test_payload_integrity.py >/dev/null && echo "   PASS" || exit 1; \
 	echo "── p247-keyed-grant     (ENFORCEMENT + the windowless name channel: 74, ACTION XA)"; \
-	$(PY) -I compose/code/p247-keyed-grant/test_keyed_grant.py >/dev/null && echo "   PASS"; \
+	$(PY) -I compose/code/p247-keyed-grant/test_keyed_grant.py >/dev/null && echo "   PASS" || exit 1; \
 	echo "── p247-path-class      (ACTION XC: licence path vs NOTICE vs manifest vs code)"; \
-	cd compose/code/p247-path-class && bash test_path_class.sh >/dev/null && echo "   PASS"; \
+	cd compose/code/p247-path-class && bash test_path_class.sh >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p248-named-proprietary (ACTION XE: the windowless name tier + arm closure: 38)"; \
-	cd compose/code/p248-named-proprietary && bash test_named_proprietary.sh >/dev/null && echo "   PASS"; \
+	cd compose/code/p248-named-proprietary && bash test_named_proprietary.sh >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p207-permissive-half-audit (D14, the RIDER: it owns the only correct one — 12)"; \
-	cd compose/code/p207-permissive-half-audit && bash test_classify.sh >/dev/null && echo "   PASS"; \
+	cd compose/code/p207-permissive-half-audit && bash test_classify.sh >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p251-gate-exit-reach  (ACTION XM: exit-code reachability + 5 unittest floors)"; \
-	cd compose/code/p251-gate-exit-reach && $(PY) test_gate_exit_reach.py >/dev/null && echo "   PASS"; \
+	cd compose/code/p251-gate-exit-reach && $(PY) test_gate_exit_reach.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p251-prefix-collision (ACTION XN: the maia class, a truncation onto a real repo)"; \
-	cd compose/code/p251-prefix-collision && $(PY) test_prefix_collision.py >/dev/null && echo "   PASS"; \
+	cd compose/code/p251-prefix-collision && $(PY) test_prefix_collision.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p252-ungated-floors   (ACTION XR: the 71 ungated silent-zero suites, pinned)"; \
-	cd compose/code/p252-ungated-floors && $(PY) -I test_ungated_floors.py >/dev/null && echo "   PASS"; \
+	cd compose/code/p252-ungated-floors && $(PY) -I test_ungated_floors.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── p252-ungated-floors   (ACTION XR: verify every pinned floor still holds)"; \
-	cd compose/code/p252-ungated-floors && $(PY) -I ungated_floors.py --verify >/dev/null && echo "   PASS"; \
+	cd compose/code/p252-ungated-floors && $(PY) -I ungated_floors.py --verify >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
+	echo "── p253-captured-body-census (ACTION XY: the P834 capture sites, graded)"; \
+	cd compose/code/p253-captured-body-census && $(PY) -I test_captured_body.py >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
+	echo "── p253-captured-body-census (ACTION XY: verify every pinned site still holds)"; \
+	cd compose/code/p253-captured-body-census && $(PY) -I captured_body.py --verify >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
+	echo "── p253-settled-fact-regression (p253: a pass may not re-open a settled fact)"; \
+	cd compose/code/p253-settled-fact-regression && $(PY) -I test_settled_fact.py >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
+	echo "── p253-settled-fact-regression (p253: the shelves' CURRENT sections, verified)"; \
+	cd compose/code/p253-settled-fact-regression && $(PY) -I settled_fact.py --verify >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
+	echo "── p253-gate-propagation (p253: a failing step may not reach the banner)"; \
+	cd compose/code/p253-gate-propagation && $(PY) -I test_gate_propagation.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
-	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
+	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code || exit 1; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"
 
 exists: ## ACTION TC — one `git ls-remote` per slug: existence, default branch, HEAD

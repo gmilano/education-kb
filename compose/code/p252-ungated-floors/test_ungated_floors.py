@@ -34,8 +34,13 @@ POP = uf.ungated_floors = uf.ungated_silent_zero(ROWS)
 FLOORS = uf.read_floors()
 
 # ── the census: the population ACTION XR asked to be NAMED, not just counted ──
-chk("python test files on disk", len(ROWS), 201)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 20)
+# p253: 201 -> 204 and 20 -> 23.  Three instruments landed (`p253-captured-body-census`,
+# `p253-settled-fact-regression`, `p253-gate-propagation`), each with an explicit-exit suite and each wired into
+# `make hooks`, so the census and the gated count both move by three.  🔵 An absolute count
+# pinned as a literal is a maintenance cost p252 chose knowingly; it is also what caught
+# this pass's own additions, which is the behaviour wanted.
+chk("python test files on disk", len(ROWS), 204)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 23)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",

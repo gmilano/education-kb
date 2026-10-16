@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 253 — WHAT MOVED THIS WEEK: **ONE ROW, AFTER FIFTEEN DRY PASSES.** WHAT MOVED IN THE GATE: `make hooks` RAN FOR THE FIRST TIME IN THREE PASSES AND PRINTED **`ALL OFFLINE LICENCE CONTROLS PASS` WITH A FAILING SUITE** — THE GATE WAS DISCARDING EVERY SIGNAL IT WAS GIVEN
+
+⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) *(`9` legs)* · [`p253-channel-map`](../evidence/p253-channel-map.2026-10-16-p253.tsv) · [`p253-slug-canonicality`](../evidence/p253-slug-canonicality.2026-10-16-p253.tsv) · [`p253-date-regression`](../evidence/p253-date-regression.2026-10-16-p253.tsv) *(`13` scopes)* · [`p253-p326-reread`](../evidence/p253-p326-reread.2026-10-16-p253.tsv) · [`p253-captured-body-census`](../evidence/p253-captured-body-census.2026-10-16-p253.tsv) · [`p253-regional-figures`](../evidence/p253-regional-figures.2026-10-16-p253.tsv) *(`29` rows)* · **instruments:** [`p253-captured-body-census`](../compose/code/p253-captured-body-census/) *(`29`)* · [`p253-settled-fact-regression`](../compose/code/p253-settled-fact-regression/) *(`17`)* · [`p253-gate-propagation`](../compose/code/p253-gate-propagation/) *(`7`)*
+
+### 🟢 The row channel BROKE — and what broke it was a test, not a query
+
+| leg | scope | education agents returned | what it paid instead |
+|---|---|---|---|
+| 1 | Global | 🔴 **`0`** | general frameworks and course repositories; every name already carried |
+| 2 | Global | 🟢 **`1`** | 🟢 **`Understand-Anything`** — the ONLY name across `9` legs with `0` occurrences on these shelves. Also `Project NOMAD`, carried since the shelves first met it |
+| 3 | Global | 🔴 **`0`** | the leg's own summary is the useful part: *"found no clear MIT-licensed education platform"* — every platform it named is carried |
+| 4 | Global | 🔴 **`0`** | *"experimentation to governed adoption"* as the `2026` consensus, with the leg itself flagging its market figures as unverified |
+| 5 | North America | 🔴 **`0`** | `134` bills / `31` states; `H.R. 8747` advanced `2026-07-21`; Canada's strategy-without-statute |
+| 6 | EMEA | 🔴 **`0`** | 🔴 **the EU high-risk date served as *"August 2026"* — the SIXTH recorded re-service of a date superseded at `p233`/`p241`.** Plus the UK's GBP `4M`, and 🔴 **nothing at all for Africa or the Middle East** |
+| 7 | APAC | 🔴 **`0`** | Korea, Vietnam, Japan, India — carried from `p252` — plus `Ipsos Education Monitor 2026` on ban support, which is new |
+| 8 | LATAM | 🔴 **`0`** | 🟢 **the richest leg, and the first with teacher- and student-level numbers from OECD instruments:** `TALIS 2024` and `PISA 2025`. See [`intel/market.md`](../intel/market.md) |
+| 9 | Global *(targeted)* | 🔴 **`0`** | 🟢 the Omnibus, on a fifth independent channel: `Reg. (EU) 2026/1744`, OJ `2026-07-24`, in force `2026-07-27` |
+
+🟢 **The property `p252` stated still holds — `WebSearch` pays this base in REGULATION and almost never in rows — but "almost" is now the right word.** 🔵 **And the mechanism of the one row is worth more than the row:** fifteen passes called this channel dry by impression. `p252` was the first to check the legs' names against the carried index. `p253` made that check the row test, and it returned a hit. **A supply channel that looks dry may be a channel nobody was testing.**
+
+### 🔴 What moved in the gate, and it is the worst finding of the pass
+
+🟢 **`make hooks` is RUNNABLE from this session.** `p251` and `p252` both recorded it as refused by the session's classifier, and both therefore audited the recipe **by reading it**. 🔴 **The first run printed `ALL OFFLINE LICENCE CONTROLS PASS` and exited `0` while `p252-ungated-floors/test_ungated_floors.py` exited `1`.**
+
+| | measured |
+|---|---|
+| mechanism | every step is `cd <dir> && $(PY) -I <suite> >/dev/null && echo "   PASS"; \` — and bash exempts a command that is **not the last** in an `&&` list from `errexit` |
+| symptom | a failing suite produces **one missing `PASS` line** among `31`, and the recipe runs on to its banner |
+| reproduced in isolation | `set -e; cd /tmp && false >/dev/null && echo PASS; echo banner` → banner prints, `exit 0` |
+| scope | 🔴 **all `31` steps**, i.e. every licence control this base has built |
+
+🔴 **Why `ACTION XM` and `ACTION XR` could not find it, and this is the part that generalises.** `XM` enumerated all `26` gate commands and asked whether each **suite** can signal failure; it found the five `unittest.main()` suites that exit `0` on zero collected tests. `XR` named the `71` ungated ones. 🔴 **Neither asked whether the GATE propagates a signal it is given** — and the two passes that would have noticed had recorded `make` as unrunnable. 🔵 **Two passes of careful work on whether the instruments can speak, while the thing listening to them was deaf.**
+
+🟢 **Fixed:** all `31` steps carry an explicit `|| exit 1`, the banner is unreachable while any step is unguarded, and [`p253-gate-propagation`](../compose/code/p253-gate-propagation/) pins the shape — including a control that asserts the OLD shape still swallows a failure, so the defect is recorded as a measurement rather than a memory. 🟢 **The gate now aborts: `make: *** [Makefile:34: gate-offline] Error 1`.**
+
+🟡 **And the failing suite itself was not broken — it was working.** `p252-ungated-floors` pins its census as literals *(`201` python test files, `20` gated)*; this pass's three instruments moved it to `204` / `23`, and the suite said so. 🔵 An absolute count pinned as a literal is a maintenance cost `p252` chose knowingly, and it is exactly what caught this pass's own additions. Re-pinned; `31/31`, `71` floors, `0` failing.
+
+### 🔴 `P834` — the class finally has a number, and one published hash was wrong
+
+🟢 **`ACTION XY` DISCHARGED.** `311` shell instruments graded: `180` `CLEAN`, `51` `STATUS`, `4` `PIPED`, `66` `BODY-ONLY`, `4` `CAPTURED-SUBJECT`, `1` `CAPTURED-CONTROL`, 🔴 **`5` `CAPTURED-LIVE`** — 🟢 **and all five were FIXED in this same pass** *(fetch to a file, size the file, keep the capture for the newline-insensitive classifier only)*, so the live population is now **`0`** and a control pins it there.
+
+🔴 **Limb 2 found a real one.** `p326-titleholder-book-license` published a byte count and a `sha256` for three OpenStax `LICENSE` payloads on `2026-10-05`. Re-read FILED this pass:
+
+| payload | published | true |
+|---|---|---|
+| `openstax/osbooks-calculus-bundle` | 🔴 `21 443` B, `ced5bed6eec9c127` | 🟢 **`21 444` B, `61288b08584b5130`** |
+| `osbooks-college-algebra-bundle` | `21 013` B, `8e63d319b3d085a7` | 🟢 identical |
+| `osbooks-prealgebra-bundle` | `21 442` B, `ab1a44bbba582526` | 🟢 identical |
+
+🟢 **And the control that makes it a measurement:** running the CAPTURED channel over today's payload reproduces `21 443` / `ced5bed6eec9c127` exactly — so the payload did not move, the measurement lied. 🔴 **Incidence `1` of `3`**, because a captured body only loses bytes when the payload ends in a newline run *(`1`, `0`, `0` measured)*. **Right most of the time and wrong unpredictably** is why a documented class survived `253` passes.
+
+### 🔴 The sixth re-service, and the shelves were arguing with themselves about it
+🔴 Leg 6 served *"from 2 August 2026 … high-risk"* again. 🟢 `p233` established `Reg. (EU) 2026/1744` with its OJ dates; `p241` reclassified `2026-08-02` as the Article `50` date and began COUNTING re-services. 🔴 **`p251` then re-opened the question as *"pending formal adoption"* and wrote **NOT ESTABLISHABLE** into the ledger; `p252` re-published *"STILL a disjunction"* on three shelves.** 🟢 **Corrected on every shelf this pass, and gated**: see [`intel/market.md`](../intel/market.md) and [`p253-settled-fact-regression`](../compose/code/p253-settled-fact-regression/).
+
 ## 2026-10-16 — Pass 252 — WHAT MOVED THIS WEEK: **NOTHING IN SUPPLY, AND THE LEG THAT PAID MOST PAID IN THREE WRONG LICENCE CELLS.** WHAT MOVED IN THE GATE: THE `MIT` TIER STOPPED BLESSING A **COMMONS CLAUSE** RIDER IT HAD BLESSED FOR FOUR PASSES
 
 ⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv) *(`8` legs)* · [`p252-platform-grants`](../evidence/p252-platform-grants.2026-10-16-p252.tsv) *(`3`)* · [`p252-carried-candidates`](../evidence/p252-carried-candidates.2026-10-16-p252.tsv) · [`p252-channel-map`](../evidence/p252-channel-map.2026-10-16-p252.tsv) · [`p252-xq-measurement`](../evidence/p252-xq-measurement.2026-10-16-p252.tsv)

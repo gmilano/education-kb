@@ -13,19 +13,26 @@ BRANCHES="${BRANCHES:-main master}"
 PATHS="${PATHS:-LICENSE LICENSE.md LICENSE.txt LICENCE LICENCE.md COPYING COPYING.txt LICENSE.rst LICENSE-MIT license.txt}"
 
 probe_one() {
-  local addr="$1" b p url code body token bytes
+  local addr="$1" b p url code body token bytes __p
   for b in $BRANCHES; do
     for p in $PATHS; do
       url="https://raw.githubusercontent.com/${addr}/${b}/${p}"
-      body="$(curl -sL --max-time 25 -w '\nHTTPCODE:%{http_code}' "$url" 2>/dev/null)"
-      code="${body##*HTTPCODE:}"
-      body="${body%$'\n'HTTPCODE:*}"
+      # `ACTION XY` (p253): `bytes` was taken from the capture, which is `P834` — and here
+      # the capture was doubly lossy, since the appended `HTTPCODE:` sentinel was stripped
+      # back off with `${body%...}` after the substitution had already eaten the trailing
+      # newline run.  The status now comes from `-w` into its own file and the size from
+      # the payload file; the capture stays for the classifier, which is newline-insensitive.
+      __p=$(mktemp)
+      code=$(curl -sL --max-time 25 -o "$__p" -w '%{http_code}' "$url" 2>/dev/null)
+      body="$(cat "$__p")"
       if [ "$code" = "200" ]; then
-        bytes=$(printf '%s' "$body" | wc -c | tr -d ' ')
+        bytes=$(wc -c < "$__p" | tr -d ' ')
         token=$(printf '%s' "$body" | python3 -I "${HERE}/classify_licence.py")
+        rm -f "$__p"
         printf '%s\t%s\t%s\t%s\t%s\n' "$addr" "$b" "$p" "$bytes" "$token"
         return 0
       fi
+      rm -f "$__p"
     done
   done
   printf '%s\t-\t-\t0\tNO-FILE\n' "$addr"

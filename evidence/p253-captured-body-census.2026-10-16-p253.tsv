@@ -1,0 +1,13 @@
+verdict	n_as_found	n_after_p253_fixes	meaning
+CLEAN	180	180	no content producer inside a command substitution
+STATUS	51	51	the capture holds a status code or header, never a body
+PIPED	4	4	the body was measured INSIDE the substitution — sound
+BODY-ONLY	66	70	a body capture exists, no byte/hash measurement consumes it; family_of/holder_of are newline-insensitive
+CAPTURED-SUBJECT	4	5	the instrument measures the SAME payload by both channels because P834 is its subject
+CAPTURED-CONTROL	1	1	lib/payload_measure.sh size_of_capture_BROKEN, preserved so a suite can assert the failing case
+CAPTURED-LIVE	5	0	a byte count or hash taken from a shell variable holding the payload, and PRINTED
+p117-second-channel/title.sh	CAPTURED-LIVE	BODY-ONLY	fixed: fetch -o file, wc -c < file; capture kept for title/ver only
+p122-prose-licence-census/scan_licences.sh	CAPTURED-LIVE	BODY-ONLY	fixed: status via -w, size via wc -c < file; the HTTPCODE sentinel shape removed
+p326-titleholder-book-license/sweep_titleholder.sh	CAPTURED-LIVE	BODY-ONLY	fixed: size from the file; this is the instrument whose published sha256 was wrong
+p784-licence-scope-map/probe.sh	CAPTURED-LIVE	BODY-ONLY	fixed: size from the file
+p326-titleholder-book-license/controls.sh	CAPTURED-LIVE	CAPTURED-SUBJECT	fixed: prints BOTH channels labelled plus the trailing-run delta, which is the question the control asks

@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 253 — 2026-10-16 — THE SECTOR TREND IS **GOVERNED ADOPTION**, AND THIS PASS CAN SAY SOMETHING SHARPER THAN THE CONSENSUS: THE GOVERNANCE GAP IS NOW **MEASURABLE AS A RATIO**, AND IT IS WIDEST WHERE ADOPTION IS HIGHEST
+
+⏱️ **TWENTY-SECOND pass of `2026-10-16`.** 🔵 **Evidence:** [`p253-regional-figures`](../evidence/p253-regional-figures.2026-10-16-p253.tsv) *(`29` rows)* · [`p253-websearch`](../evidence/p253-websearch.2026-10-16-p253.tsv) *(`9` legs)* · [`p253-date-regression`](../evidence/p253-date-regression.2026-10-16-p253.tsv)
+
+### 🟢 `T253-T1` — "experimentation to governance" is the consensus; the ratio is the finding
+
+Both global trend legs returned the same sentence in different words: the sector is moving from pilots to routine, governed use. 🔵 **That is true and nearly useless on its own** — it has been the stated trend on this shelf since `p240`. What `p253`'s regional legs add is the **denominator**:
+
+| population | using AI | has a written policy or strategy | ratio |
+|---|---|---|---|
+| higher education, LATAM *(UNESCO IESALC/UNU-IAS, `200` institutions, `19` countries)* | `87%` | 🔴 **`26%`** | 🔴 **`3.3 : 1`** |
+| schools, Brazil *(administrators)* | `53%` | 🔴 **`22%`** | 🔴 **`2.4 : 1`** |
+| US K-12 teachers | `60%` *(`32%` weekly)* | — *(district policy mandated by statute in several states)* | 🟡 the only region where the policy side is being forced by LAW rather than bought |
+
+🟢 **The trend, stated so it can be acted on:** governance is not lagging adoption uniformly — it lags **where adoption was fastest and voluntary**, and it leads **where a legislature compelled it**. 🔵 That reverses the usual reading. North America's `134` bills across `31` states are not evidence that North America is behind; they are the reason its policy ratio will close first.
+
+### 🟢 `T253-T2` — a legal date STOPPED moving, and this shelf had not noticed
+
+🔴 This shelf published the EU Annex III date as a *disjunction* at `p251` and `p252`. 🟢 **It was settled at `p233`:** `Reg. (EU) 2026/1744`, OJ `2026-07-24`, in force `2026-07-27` — Annex III education duties bind **`2027-12-02`**, Article `50` transparency **already in force since `2026-08-02`**, two new Article `5` prohibitions **`2026-12-02`**, Annex I embedded systems `2028-08-02`.
+
+🟢 **The trend reading, which is the part a trends shelf owes:** the `2026` pattern is not *more* AI-in-education law, it is **law acquiring a calendar**. Vietnam's education carve-out has a date *(`2026-08-15`)*. Korea's act has a commencement *(`2026-01-22`)*. The EU's Annex III has a deferral with a **named cause** — Member States' failure to designate national competent authorities and conformity assessment bodies, with harmonised standards late. 🔵 **A deferral caused by regulator capacity is a different asset from a deferral caused by politics:** capacity constraints are visible, slow and tend to slip again, which makes `2027-12-02` a floor to plan against rather than a cliff.
+
+🔴 **And the counter-trend this pass measured on its own channel:** leg 6 served the superseded `2026-08-02` date as current. That is the **sixth** recorded re-service. 🔵 Six re-services of one superseded date is itself a trend — **secondary coverage of AI law does not retract, it accumulates** — and it is why the dated, numbered instrument belongs in every client document and the article never does.
+
+### 🟡 `T253-T3` — public mandate is now divergent WITHIN a region, not just between regions
+
+`Ipsos Education Monitor 2026`: support for **banning** AI in schools is lower across the Asian markets surveyed and higher in Australia and New Zealand. 🔵 Every prior pass on this shelf treated APAC as one demand surface because its regulation is fragmented. 🟡 **This splits the demand surface too** — the same product needs a consent, opt-out and parental-visibility story in ANZ that it does not need in Korea or Singapore, and that is a delivery difference rather than a marketing one.
+
+### 🔴 `T253-T4` — the trend in this base's OWN reliability, which is the one it can measure best
+
+| finding | what it says about the knowledge, not the market |
+|---|---|
+| 🔴 the gate printed `ALL OFFLINE LICENCE CONTROLS PASS` with a failing suite, for every one of its `31` steps | a control is worth nothing until something *acts* on its exit status. `ACTION XM` and `XR` audited whether the suites can speak; nothing audited whether the gate listens |
+| 🔴 one published `sha256` was the hash of a payload-minus-its-trailing-newline, and `2` of `3` were fine | the `P834` class is **right most of the time**, which is why five documents about it did not kill it. Incidence is a property of the payload *(trailing run `1`, `0`, `0`)*, not of the instrument |
+| 🔴 a settled fact re-opened for two passes and priced a quarter's EMEA advice | the ledger a pass reads is `~40` lines; the shelf it contradicts is `~160 000`. **Momentum lives in the ledger** |
+| 🟢 the one new row in sixteen passes came from checking names against the carried index | a channel called dry by impression for fifteen passes was not being tested |
+
+🔵 **The common shape, and it is the trend worth carrying into `p254`:** every one of these is an **unread signal**, not a missing one. The base knew the Omnibus number, owned the `P834` class in two instruments, had `31` controls, and had the candidate names in hand. 🟢 **`p251` framed this base's failures as *unwired or unfailable knowledge, never missing knowledge*. Three passes later that framing is holding, and `p253` can add the sharper version: the failure is not in acquiring knowledge or even in wiring it — it is that nothing CONSUMES the wire.**
+
 ## Pass 252 — 2026-10-16 — THE SECTOR TREND IS THAT **AI-IN-EDUCATION LAW HAS ACQUIRED DATES**, AND THE FIRST EDUCATION-SPECIFIC DEADLINE ON THIS SHELF IS A **GRACE PERIOD** RATHER THAN AN OBLIGATION; THE KB-INTERNAL TREND IS THAT THIS BASE'S DEFECTS ARE NOW BEING FOUND IN ITS OWN **MEASUREMENTS** RATHER THAN IN ITS KNOWLEDGE
 
 ⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv) · [`p252-platform-grants`](../evidence/p252-platform-grants.2026-10-16-p252.tsv) · [`p252-xr-census`](../evidence/p252-xr-census.2026-10-16-p252.tsv) · [`p252-xq-measurement`](../evidence/p252-xq-measurement.2026-10-16-p252.tsv)

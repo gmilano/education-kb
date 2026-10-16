@@ -1,0 +1,14 @@
+shelf	line	enclosing_pass	what_it_says	state
+agents/top.md	6938	p181	ACTION LI asks whether Reg. (EU) 2026/1744 kept the "conditional on harmonised standards" framing; answered — conditional trigger DROPPED for fixed calendar dates, 3 independent secondary channels	SETTLING
+agents/top.md	4306	p202	names Reg. (EU) 2026/1744 as the governing instrument	SETTLED
+agents/trending.md	793	p233	"The Digital Omnibus on AI is Regulation (EU) 2026/1744 - OJ 2026-07-24, in force 2026-07-27, Parliament 2026-06-16, Council 2026-06-29"	SETTLED
+agents/top.md	1220	p241	"At least the FIFTH recorded re-service of the superseded date." Annex III education high-risk applies 2027-12-02; 2026-08-02 is Article 50 transparency	SETTLED + COUNTING
+agents/trending.md	500	p241	same finding on the trending shelf	SETTLED + COUNTING
+intel/market.md	121	p251	"both candidates, in the same response set"	RE-OPENED
+intel/market.md	127	p251	"Still NOT closable from here ... the honest state is a disjunction with a named cause, not a date"	RE-OPENED
+intel/trends.md	59	p251	"The high-risk date is a disjunction - 2026-08-02 or 2027-12-02 ... not closable from this session"	RE-OPENED
+compose/patterns.md	64	p251	"Do not sell an Annex III readiness programme this quarter. The high-risk date is a live disjunction ... (Omnibus, pending formal adoption)"	RE-OPENED + COMMERCIAL COST
+intel/open-gaps.md	96	p251	"No resolution of the EU Annex III date ... NOT ESTABLISHABLE"	RE-OPENED + ENTERED THE LEDGER
+intel/market.md	41	p252	"The EU high-risk date is still a disjunction"	RE-PUBLISHED
+intel/trends.md	21	p252	"The high-risk date is a disjunction ... not closable from this session"	RE-PUBLISHED
+agents/trending.md	20	p252	"the EU high-risk date STILL a disjunction"	RE-PUBLISHED
