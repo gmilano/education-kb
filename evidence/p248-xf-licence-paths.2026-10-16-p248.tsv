@@ -1,0 +1,22 @@
+slug	licence_paths_read_first_hand	class	verdict_on_XF_limb_1
+microsoft/autogen	LICENSE (CC-BY-4.0, 18 650 B, the docs) + LICENSE-CODE (MIT, 1 141 B, the code)	SPLIT-SCOPE	counts — measured first-hand by p247
+bncc-dev/bncc-benchmark	LICENSE-CODIGO.md (MIT, 1 286 B) + LICENSE-DADOS.md (CC-BY-4.0, 577 B)	SPLIT-SCOPE	counts — both payloads on disk from p119/p120
+bncc-dev/bncc-pacotes	LICENSE-CODIGO.md (MIT, 1 080 B) + LICENSE-DADOS.md (CC-BY-4.0, 1 108 B)	SPLIT-SCOPE	counts — both payloads on disk from p119
+rstudio/ggcheck	—	WITHDRAWN	🔴 artefact of THIS pass’s own parse, not a measurement
+rstudio/tblcheck	—	WITHDRAWN	🔴 same
+sonsoleslp/tna	—	WITHDRAWN	🔴 same
+ucbds-infra/ottr	—	WITHDRAWN	🔴 same
+SidneyBissoli/educabR	—	WITHDRAWN	🔴 same
+# PROBE SET, NAMED (`ACTION XF`’s falsifier: "falsified if the pass reports a count without naming the probe set"):
+#   `compose/code/p119-carried-column-audit/evidence-f/` + `compose/code/p120-unread-grant-resolution/evidence/`
+#   + `compose/code/grant-ladder-v4/fixtures/` — i.e. every licence payload ALREADY READ FIRST-HAND and kept on disk
+#   — plus p247’s first-hand `microsoft/autogen` measurement. This probe set is OFFLINE and spends no egress.
+# 🟢 LIMB 1 FIRES, at exactly its threshold: 3 carried slugs carry two or more licence paths with DIFFERENT grants.
+#   So the sibling SET is the right return type and `autogen` is not a singleton.
+# 🔴 THE FIVE WITHDRAWN ROWS ARE THIS PASS’S OWN ERROR, recorded rather than quietly dropped: the two evidence
+#   directories use DIFFERENT naming conventions (`slugLICENSE.md` in p119 vs `slug__LICENSE.md` in p120), and a single
+#   `sed` over both produced phantom `LICENSE` + `LICENSE.md` pairs. READING the payloads is what withdrew them.
+#   It is p247’s lesson in a new place: a filename is a CLAIM, a payload is the evidence.
+# 🟡 AND THE LIMB UNDERSTATES WHAT IS NEEDED. Both bncc CC-BY payloads NAME THE DIRECTORIES THEY GOVERN
+#   (`itens/`, `resultados/`, `METODOLOGIA.md`; `packages/bncc/dados/`, `python/bncc/dados/`). A set of PATHS cannot
+#   carry that. The return type needs (path, family, scope-prose) — registered as `ACTION XJ`.

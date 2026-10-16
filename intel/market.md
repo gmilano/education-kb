@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 248 — 2026-10-16 — THE REGIONAL CHANNEL PRODUCED EXACTLY **ONE** PRIMARY SOURCE, AND IT IS THE REGION THIS KB IS MOST OFTEN ACCUSED OF OVER-SERVING: A **`200`-INSTITUTION, `19`-COUNTRY UNESCO SURVEY** FOR LATAM — WHILE EMEA RETURNED **NO REGULATOR AT ALL FOR THE ELEVENTH PASS**
+
+⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 All `8` mandated legs were run verbatim with the year **computed** (`2026`), four global and one per region: [`p248-websearch`](../evidence/p248-websearch.2026-10-16-p248.tsv).
+
+### 🟢 `T248-M1` — the one new primary source, and why it outranks every market number below it
+
+🟢 **UNESCO IESALC + UNU-IAS, working paper, September 2026** — *AI implementation in higher education in Latin America and the Caribbean*. A survey of **`200` higher-education institutions across `19` countries**, fielded **August–October 2025**, covering teaching, research, administration **and governance**.
+
+🔵 **Why it is worth more than the market estimates:** it is an **institutional census with a stated instrument, population and field window**. Every market figure this channel served is a vendor or research-firm estimate whose method is not published, and they disagree with each other by an order of magnitude *(below)*. 🟡 **Its own limit, stated:** the field window closed in **October 2025**, so it describes the year before this pass, not this quarter.
+
+🔵 Beside it, **ILIA 2025 (CEPAL)** carries a governance dimension with a regulation sub-dimension and remains the most current official regional benchmark this channel has surfaced.
+
+### 🔵 `T248-M2` — the market numbers, with their spread stated instead of averaged (`T247-M1`'s rule, re-applied)
+
+| figure | source class | what it says |
+|---|---|---|
+| USD `6.4`B (2025) → `79.6`B (2034) | research firm | 🔴 a `12.4`× multiple |
+| USD `8.3`B (2025) → `57.2`B (2033) | research firm | 🔴 a `6.9`× multiple |
+| USD `10.6`B (2026) | research firm | 🔴 a 2026 base `28`% above the first source's |
+| North America ~USD `951`M (2024) → `2.3`B (2029), ~`36`% of global | research firm | regional split |
+| "Rest of LATAM" USD `18.2`M (2024) → `36`M (2029) | research firm | 🔵 three orders of magnitude below the global figures — the regional line items and the global totals are **not** the same market definition |
+
+🔴 **The spread is the finding, not the midpoint.** Three firms disagree on the 2026 base by `28`%+ and on the trajectory by a factor of two, and one analyst in the same result set puts sector maturity at **`35`/`100` — most institutions still piloting**, which contradicts the "mainstream deployment" framing elsewhere in that very channel. 🔵 **Averaging these would manufacture a precision none of them has.**
+
+## Opportunities by region
+
+### North America
+
+🔵 **What the channel served:** ~USD `951`M (2024) → `2.3`B (2029), ~`36`% of the global market, and a description of education AI operating in a **relative regulatory vacuum** — adoption decided school-by-school and district-by-district, with state-level rules accumulating piecemeal.
+
+🟢 **The opportunity, and it follows from the vacuum rather than from the market size:** where no regulator sets the bar, **the buyer's own policy is the specification**, and the artefact an engagement can sell is the *evidence* that the policy was followed. 🔵 This is `p246`'s `P246-2` pattern unchanged and re-affirmed, and `T248-F3`'s three-question diligence order is now the first step of it: a district that cannot say which licence governs the tool it deployed cannot defend the deployment.
+
+🔴 **Two unverified items from this leg, recorded as unverified:** a Q1-2026 OpenAI country-level education programme with eight national partners, and a USD `55`M Carnegie Mellon / Gates Foundation courseware investment. Both come from a secondary newsletter, and neither was confirmed against a primary source this pass.
+
+🔴 **The standing supply gap is unchanged and was NOT re-measured:** `p247` recorded **`0` permissive North American rows** as a *saturation* measure with its control named. This pass ran no supply channel at all, so that number stands as `p247`'s, not as this pass's.
+
+### EMEA
+
+🔴 **`ACTION UX` IS UNRUN FOR THE ELEVENTH PASS, and this leg is why.** The mandated EMEA query returned enterprise-AI adoption material — a Workday CEO study, a CompTIA trends post, a Bandwidth/Cavell report — and **not one** education-specific regulator, ministry, vendor or national programme. 🔵 `eur-lex.europa.eu` remains unreachable from here (`ACTION UN`), so the primary channel this ACTION requires has never once been open.
+
+🟢 **One thing did improve, and it is worth recording precisely because it is the first clean leg in several: the superseded `2026-08-02` enforcement date was NOT re-served this pass.** `p247` logged the seventh occurrence of that error; this leg served it zero times. 🔴 **But the correct instrument was not served either** — the Digital Omnibus deferral *(Regulation (EU) `2026/1744`; `2027-12-02` / `2028-08-02`)* appears nowhere in the response set. 🔵 **So the channel is SILENT, not corrected**, and a silent channel is the one state that looks identical to coverage.
+
+🟢 **The opportunity is unchanged and does not depend on this leg:** the AI Act classifies education systems as high-risk, and the conformity artefacts are the deliverable. 🔵 `p246`'s `P246-1` conformity pack stands, and `p245`/`p246` already measured that the conformity layer is the one vertical slice of this estate that is **permissive all the way down**.
+
+🔵 **Africa, within EMEA, as `ACTION XD` settled it:** `Africa` is **not** a value in the closed region vocabulary, so African rows are published **`EMEA`** with the country in prose. `p247`'s measurements there (Ghana, Rwanda's `Chidi` with ALX, Kenya's CEMASTEA, Benin; `topic:waec` at a population of `12`) were **not** re-run this pass.
+
+### APAC
+
+🔴 **`0` education-specific AI rules served, and the response says so in its own words:** *"nothing in the results addressed education-specific AI rules."* What came instead was corporate learning — a **TCS + Pearson** multi-year AI learning alliance, **LearnUpon**'s new Sydney HQ with AI course-authoring, **NIIT MTS** on a 2026 custom-content list — plus data-sovereignty as the regional infrastructure theme *(one analyst: roughly half of APAC firms)* and an OpenAI policy hire for Australia/New Zealand.
+
+🔵 **Read this against what `p247` proved about the channel, because it is the same defect one level up:** `topic:教育` returns **`0` on all of GitHub**, and the only CJK axis that worked was a **proper noun** (`智慧教育`, `8` of `8`). 🔴 **An English-language `WebSearch` leg is to APAC regulation what an English `topic:` query is to APAC supply** — it measures the channel, not the region. Korea's AI Basic Act (in force since January 2026, naming education as high-impact, `p247`'s `T247` finding) was served by **none** of this pass's legs, and it certainly did not stop existing.
+
+🟡 **The opportunity, narrowed by what is actually established:** sovereignty-constrained deployment. 🔵 `p246`'s `P246-3` *(the Grade-3 AI literacy curriculum, built because it does not exist)* and `p247`'s state-platform integration shape are the two carried entry points, neither re-measured here.
+
+### LATAM
+
+🟢 **The only region whose leg produced a primary source this pass** — the UNESCO IESALC/UNU-IAS survey in `T248-M1` *(`200` institutions, `19` countries, governance included)*, plus ILIA 2025 (CEPAL) with its regulation sub-dimension.
+
+🔵 **What the channel adds about the shape of the market:** policy across the region is described as a **patchwork of pilots that can be dropped with each administration**, with Chile singled out as having a roadmap that survived a change of government. One commentary puts it as leaders hesitating over risk while the public experiments anyway.
+
+🟢 **The opportunity, and the UNESCO instrument is what makes it specific:** a survey of `200` institutions covering **governance** is a map of which institutions have an AI programme but no governance for it — and *that* is a procurable engagement. 🔵 `p246`'s `P246-4` already stated the regional rule in one line — **integrate, do not rebuild** — and `p247` placed `3` live **UNGRANTED** LATAM rows whose licence ask is still open (`ACTION UJ`).
+
+🟡 **And this pass's own code finding lands hardest here**, where `T246`'s measurement was that this region **buys before it regulates**: a buyer with no statute to lean on has nothing but the licence file, and the licence file is exactly what `T248-A` shows can read `MIT` while forbidding the sale. 🔵 The `bncc-dev` pair in [`repos/foundations.md`](../repos/foundations.md) `T248-F1` is a Brazilian instance — `MIT` code beside `CC-BY-4.0` **data**, with the governed directories named in Portuguese prose.
+
+### Global
+
+🟢 **`make hooks` is the global deliverable this pass actually adds**, and it is region-neutral by construction: `38` new controls plus `12` wired in for the first time, answering all three licence-misreading mechanisms. 🔵 Any engagement in any region can run it offline before committing to a dependency — `p247`'s `P247-3` recipe, now with the rider gate included.
+
+🔴 **The global negative, unchanged for eleven passes:** `WebSearch` produces regulation and institutional evidence, never rows. 🔵 Stated as a property of the channel rather than rediscovered each pass.
+
 ## Pass 247 — 2026-10-16 — THE REGULATORY MAP MOVES IN THREE REGIONS AT ONCE: **KOREA'S AI BASIC ACT NAMES EDUCATION AS HIGH-IMPACT AND IS IN FORCE SINCE JANUARY 2026**, `134` US STATE BILLS ACROSS `31` STATES, AND GHANA PUTS AI INTO **BASIC** SCHOOL BY YEAR-END
 
 ⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p247-websearch`](../evidence/p247-websearch.2026-10-16-p247.tsv) *(10 legs, including the Africa leg `p245` registered and never ran)* · [`p247-queries`](../evidence/p247-queries.2026-10-16-p247.tsv)

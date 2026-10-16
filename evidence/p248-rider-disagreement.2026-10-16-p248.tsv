@@ -1,0 +1,18 @@
+instrument	in_make_hooks_before_p248	verdict_on_p207/fixtures/commons-clause-mit.txt	correct
+p207-permissive-half-audit::classify_grant	🔴 NO	NON-OSI-CommonsClause+MIT	🟢 YES — and it is the ONLY one
+lib/license_family.sh (the shared classifier)	🟢 yes	MIT -> ALLOWED	🔴 no
+p1054-mit-plus-clause::classify	🟢 yes	{verdict: MIT, hits: [], excess: 0, usable_permissive: True}	🔴 no
+# THE PAYLOAD: its FIRST LINE is `"Commons Clause" License Condition v1.0` and it states that the licence
+#   "will not include, and the License does not grant to you, the right to Sell the Software."
+# p207 MEASURED AND DOCUMENTED THIS AS `D14` and wrote the sentence this pass is acting on: a Commons Clause body
+#   returns "a confident, clean MIT — no suffix, no flag, nothing to notice", which is WORSE than `UNRECOGNISED`,
+#   because UNRECOGNISED at least asks to be looked at.
+# 🔴 THE DEFECT IS NOT THE READING, IT IS THE WIRING: the one correct classifier was never in the standing gate,
+#   and the two that were both answered a clean MIT. This is p241’s finding again — "this KB already owned a correct
+#   classifier that `make hooks` has never run" — on a payload all three can read.
+# 🟢 p248: the predicate is ported to the shared classifier (narrow, 2 anchors, parity-controlled against p207),
+#   and p207 itself is wired into `make hooks` (12/12).
+# 🟡 p1054 IS STILL WRONG AFTER THIS PASS and is `ACTION XI`. Its own numbers say why: `MIT_CANONICAL_LOW = 1020`
+#   and the payload is 621 B, so it is BELOW canonical MIT and `excess = max(0, 621-1150) = 0`. A rider that makes a
+#   licence file SHORTER than canonical MIT is invisible to a byte-EXCESS test, and no term in `RESTRICTION_TERMS`
+#   ("compete", "saas", "non-commercial", "field of use", ...) matches "commons clause" or "right to Sell".

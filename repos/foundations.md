@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 248 — 2026-10-16 — `0` NEW FOUNDATION ROWS, AND THE FOUNDATION FINDING IS A **DILIGENCE ORDER**: `p247` PROVED A FOUNDATION ROW CAN SHIP TWO GRANTS, AND THIS PASS PROVES ONE CAN SHIP A GRANT PLUS A **RIDER THAT LEAVES THE FAMILY COLUMN UNTOUCHED**
+
+⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 **`0` rows added, `0` rows corrected** — and the second number is a sweep result, not a decision to leave things alone: `183` first-hand repository payloads re-graded against both classifiers, `0` flips ([`p248-repo-payload-regrade`](../evidence/p248-repo-payload-regrade.2026-10-16-p248.tsv)).
+
+### 🟢 `T248-F1` — `ACTION XF`'s limb, settled OFFLINE, with the probe set named
+
+`p247` left XF with a question that would decide its return type: *is `microsoft/autogen` a singleton, or do `3`+ carried slugs really carry two licence paths?* Its falsifier was explicit — *"falsified if the pass reports a count without naming the probe set it used."*
+
+🔵 **Probe set, named, and it spends no egress:** every licence payload this KB has **already read first-hand and kept on disk** — `p119-carried-column-audit/evidence-f/`, `p120-unread-grant-resolution/evidence/`, `grant-ladder-v4/fixtures/` — plus `p247`'s own first-hand `autogen` measurement.
+
+| slug | the two paths, both payloads read | what each one governs |
+|---|---|---|
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | `LICENSE` *(`CC-BY-4.0`, `18 650` B)* + `LICENSE-CODE` *(`MIT`, `1 141` B)* | the docs / the code — `p247`, first-hand |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | `LICENSE-CODIGO.md` *(`MIT`, `1 286` B)* + `LICENSE-DADOS.md` *(`CC-BY-4.0`, `577` B)* | the code / **`itens/`, `resultados/`, `METODOLOGIA.md`** |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | `LICENSE-CODIGO.md` *(`MIT`, `1 080` B)* + `LICENSE-DADOS.md` *(`CC-BY-4.0`, `1 108` B)* | the code / **`packages/bncc/dados/`, `python/bncc/dados/`** |
+
+🟢 **LIMB `1` FIRES, at exactly its threshold of `3`.** `autogen` is not a singleton, so the sibling **set** is the right return type and the Tier A reorder alone is not the whole fix.
+
+🟡 **AND THE LIMB UNDERSTATES WHAT IS NEEDED, which is the more useful half of the result.** Both `bncc` data payloads **name the directories they govern, in prose**. A set of *paths* cannot carry that: knowing `LICENSE-DADOS.md` exists and says `CC-BY-4.0` does not tell a consumer that `itens/` is the part it binds. 🔵 The return type needs **`(path, family, scope-prose)`** — registered as `ACTION XJ`.
+
+### 🔴 `T248-F2` — `5` rows this pass published and then withdrew, on its own evidence
+
+The first run of the count above returned **`8`** multi-path slugs. Five of them — `rstudio/ggcheck`, `rstudio/tblcheck`, `sonsoleslp/tna`, `ucbds-infra/ottr`, `SidneyBissoli/educabR` — were **artefacts of this pass's own parse**: the two evidence directories use different naming conventions (`slugLICENSE.md` in `p119` vs `slug__LICENSE.md` in `p120`), and one `sed` over both manufactured phantom `LICENSE` + `LICENSE.md` pairs.
+
+🔵 **Reading the payloads is what withdrew them**, and it is `p247`'s lesson arriving in a new place: **a filename is a claim; a payload is the evidence.** 🟡 Recorded here rather than quietly dropped, because a count that was wrong once and is now right is only trustworthy if the correction is visible — `ACTION XD`'s rule, that a register which lives nowhere does not exist.
+
+### 🟡 `T248-F3` — the diligence order a foundation row now needs, in three questions
+
+🔵 A foundation row carries more weight than an agent row: it is the layer an engagement builds *on*, so a wrong grant there is the most expensive cell on these shelves. Three passes have each added one question, and they must be asked **in this order**:
+
+1. **Is the payload at this path the licence at all?** — `p247`'s `ACTION XC`/`path_class`: a `NOTICE` and a manifest `license` field are not grants. *(`foradian/fedena`, `openedx/XBlock`.)*
+2. **Is it the ONLY payload?** — `T248-F1` above: `3` carried slugs ship two grants with different scopes.
+3. 🔴 **Is there a rider ON TOP of the grant it does carry?** — new this pass, and the one with no outward sign: the family column reads `MIT` and the right to sell is gone.
+
 ## Pass 247 — 2026-10-16 — `ACTION XB` DISCHARGED OVER THE `MIT` TIER *(`881` SLUGS, `821` PAYLOADS READ)*, AND THE SWEEP'S HEADLINE IS THAT **`16` OF `821` CELLS DISAGREE WITH THEIR OWN PAYLOAD** — ONE OF THEM A `BUSL` FOUNDATION ROW PUBLISHED HERE AS `MIT`
 
 ⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p247-mit-tier-sweep`](../evidence/p247-mit-tier-sweep.2026-10-16-p247.tsv) *(821 rows)* · [`p247-mit-tier-corrections`](../evidence/p247-mit-tier-corrections.2026-10-16-p247.tsv) *(16)* · [`p247-mit-tier-unread`](../evidence/p247-mit-tier-unread.2026-10-16-p247.tsv) *(60)* · [`p247-hoist-blast-radius`](../evidence/p247-hoist-blast-radius.2026-10-16-p247.tsv) · [`p247-source-available-reach`](../evidence/p247-source-available-reach.2026-10-16-p247.tsv) · **instrument:** [`p247-mit-tier-sweep`](../compose/code/p247-mit-tier-sweep/)

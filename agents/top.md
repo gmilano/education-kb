@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 248 — 2026-10-16 — `ACTION XE` DISCHARGED, AND ITS DISCHARGE FOUND A **FOURTH** CAUSE OF THE SAME WRONG ANSWER THAT THIS KB HAD **ALREADY MEASURED AND NEVER WIRED**: THE ONLY CLASSIFIER HERE THAT READS A COMMONS CLAUSE CORRECTLY WAS NOT IN `make hooks`, AND THE TWO THAT WERE BOTH RETURNED A CLEAN `MIT`
+
+⏱️ **SEVENTEENTH pass of `2026-10-16`.** `p232`–`p247` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🔴 **`0` new agent rows this pass, and that is a BUDGET statement, not a supply one.** No `topic:` harvest and no code search were run at all — the pass went to the three code ACTIONs `p247` registered. 🔵 **So no absence of supply is claimed anywhere in this pass** (`ACTION UK`): see [`p248-queries`](../evidence/p248-queries.2026-10-16-p248.tsv), where every unrun channel is published as unrun.
+
+🟢 **`ACTION XE` DISCHARGED, both its limbs measured.** 🟢 **`3` commercial verdicts corrected, every one from invented permission towards denial.** 🟢 **`0` of `183` first-hand repository payloads move — so NO published row on these shelves is implicated, and none is corrected here.** 🟢 **`ACTION XF`'s limb settled at its threshold, offline, with its probe set named.** 🔴 **`5` of my own rows WITHDRAWN on reading the payloads behind them.** 🔴 **The `WebSearch` row channel is dry for the TENTH pass in eleven.** 🔴 **`ACTION XH` NOT RUN** *(it needs egress)* **and `ACTION UX` unrun for the ELEVENTH pass.**
+
+🔵 **Evidence:** [`p248-blast-radius`](../evidence/p248-blast-radius.2026-10-16-p248.tsv) *(4 of 354 fixtures)* · [`p248-repo-payload-regrade`](../evidence/p248-repo-payload-regrade.2026-10-16-p248.tsv) *(183 real payloads, 0 flips)* · [`p248-default-arm`](../evidence/p248-default-arm.2026-10-16-p248.tsv) · [`p248-position-delta`](../evidence/p248-position-delta.2026-10-16-p248.tsv) · [`p248-rider-disagreement`](../evidence/p248-rider-disagreement.2026-10-16-p248.tsv) · [`p248-xf-licence-paths`](../evidence/p248-xf-licence-paths.2026-10-16-p248.tsv) · [`p248-websearch`](../evidence/p248-websearch.2026-10-16-p248.tsv) *(8 legs)* · [`p248-queries`](../evidence/p248-queries.2026-10-16-p248.tsv) · **instruments:** [`p248-named-proprietary`](../compose/code/p248-named-proprietary/) *(38 controls)* and [`p207-permissive-half-audit`](../compose/code/p207-permissive-half-audit/) *(12, wired in for the first time)*, both now in `make hooks`
+
+### 🔴 `T248-A` — what changes for a reader of the tables below, in one sentence
+
+**A `MIT` cell on these shelves has never been a statement that the repository can be sold into a deliverable, and this pass is the first one that can say exactly how it fails.** Three payloads read today prove three separate mechanisms, and the third is the dangerous one because it leaves **no mark at all**:
+
+| mechanism | what the shelf cell says | what the payload says | what gives it away |
+|---|---|---|---|
+| **`VOCABULARY`** | `UNCLASSIFIED` → ALLOWED | `CockroachDB Software License`, at offset `0` | 🟡 nothing — *the family is simply unknown to the reader* |
+| **`WINDOW`** | `UNCLASSIFIED` → ALLOWED | a real `Business Source License v.1.1` reference at offset `4 969` | 🟡 nothing — *it sits past where every anchor stops reading* |
+| **`RIDER`** | 🔴 **`MIT`** → ALLOWED | `"Commons Clause" License Condition v1.0` — *"does not grant to you, the right to Sell the Software"* | 🔴 **NOTHING WHATSOEVER. It is a confident, clean `MIT`: no suffix, no flag, nothing to notice** |
+
+🔵 The third row is not this pass's insight — **it is `p207`'s, written down at pass `207` as defect `D14`**, together with the judgement that it is *worse* than `UNRECOGNISED`, because `UNRECOGNISED` at least asks to be looked at. What this pass adds is that `p207`'s correct classifier **was never in the standing gate**, and the two instruments that were in it both answered a clean `MIT` on `p207`'s own fixture.
+
+### 🟢 `T248-B` — the agent rows are unchanged, and that is now a MEASUREMENT rather than an assumption
+
+Every carried agent row stands exactly as `p247` published it. The reason to trust that this pass is not the usual one — "nothing was edited" — but a sweep: the pre-change classifier was recovered with `git show HEAD:`, and both versions were run over **`183` first-hand repository licence payloads** cached on these shelves. **`0` families and `0` verdicts move.**
+
+🔴 **And the limit of that reassurance is published with it** ([`p248-repo-payload-regrade`](../evidence/p248-repo-payload-regrade.2026-10-16-p248.tsv)): `183` is the **cache**, not the shelves. A published row whose payload is not cached here was **not** re-graded, and `ACTION XH` still holds the `60` `UNREAD` slugs where the next `BUSL` would hide.
+
+### 🟡 `T248-C` — the one diligence line that every agent row now needs
+
+🔵 For any row a studio engagement is about to build on, the family column is the **first** question and no longer the last one. `make hooks` now answers all three mechanisms above, and the rider predicate is narrow by construction — two anchors, parity-controlled against `p207`'s own.
+
+🔴 **`p1054-mit-plus-clause` still gets the rider wrong** and is `ACTION XI`. Its own numbers say why: `MIT_CANONICAL_LOW = 1020`, the payload is `621 B`, so `excess = max(0, 621 - 1150) = 0`. **A rider that makes a licence file *shorter* than canonical MIT is invisible to a byte-excess test** — and `RESTRICTION_TERMS` (`compete`, `saas`, `non-commercial`, `field of use`, …) contains neither `commons clause` nor `right to Sell`.
+
 ## Pass 247 — 2026-10-16 — THE FIRST **CJK** HARVEST IN `246` PASSES, AND IT FOUND A WHOLE CATEGORY THE ENGLISH CHANNEL CANNOT SEE: `8` OF `8` ON-TOPIC ROWS CLUSTERED ON **ONE NATIONAL PLATFORM** — WHILE `topic:教育` RETURNS **ZERO ON ALL OF GITHUB**, SO THE AXIS THAT CARRIED EVERY NON-ENGLISH FIND HERE **HAS NO CJK FORM AT ALL**
 
 ⏱️ **SIXTEENTH pass of `2026-10-16`.** `p232`–`p246` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

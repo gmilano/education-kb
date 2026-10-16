@@ -60,6 +60,110 @@ __emit_lgpl() {
   if [ -n "$v" ]; then echo "LGPL-$v"; else echo "LGPL"; fi
 }
 
+# __source_available_names -> una linea `NOMBRE<TAB>REGEX` por nombre de la lista CERRADA.
+# Se imprime desde una funcion, y no se escribe inline en el escaner, por UNA razon medida:
+# `p247-keyed-grant` ya lleva ESTA MISMA lista en Python y `P637` obliga a medir dos
+# implementaciones de un predicado una contra la otra en vez de confiar en que coincidan.
+# El control de paridad (`p248-named-proprietary/test_named_proprietary.sh`) lee ESTA salida
+# y la compara con `SOURCE_AVAILABLE_NAMES` del otro archivo; si alguien agrega un nombre a
+# uno solo de los dos, falla.
+#
+# CADA ancla es el nombre MULTIPALABRA completo, nunca el acronimo suelto: es el criterio de
+# P312 que esta base ya paga («BSL» solo matchea un estatuto brasileno, un banco y un
+# bootloader), y los controles negativos de `bare 'BSL'` / `bare 'SSPL'` lo afirman.
+__source_available_names() {
+  cat <<'__SAN__'
+BUSL	business source licen[cs]e
+Elastic	elastic licen[cs]e
+PolyForm	polyform (noncommercial|shield|strict|small business|perimeter)
+SSPL	server side public licen[cs]e
+CAL	cryptographic autonomy licen[cs]e
+FSL	functional source licen[cs]e
+SUL	sustainable use licen[cs]e
+FAIRCODE	fair[ -]?code
+CommonsClause	commons clause
+ConfluentCommunity	confluent community licen[cs]e
+RedpandaCommunity	redpanda community licen[cs]e
+CockroachDB-CSL	cockroachdb (software )?licen[cs]e
+TimescaleLicense	timescale licen[cs]e
+MariaDB-BSL	mariadb business source
+__SAN__
+}
+
+# named_proprietary_of <payload> -> el NOMBRE de la licencia source-available/propietaria
+# que aparece MAS TEMPRANO en el payload, o vacio.  SIN VENTANA, y la ausencia de ventana es
+# todo el punto (`ACTION XE`, registrada por p247).
+#
+# P1063 (pase 248).  DOS payloads REALES volvian `UNCLASSIFIED` -> `ALLOWED`, y el hoist de
+# `ACTION XA` no podia ayudar a ninguno de los dos porque sus causas no son el ORDEN:
+#
+#   cockroachdb/cockroach      8 782 B  «CockroachDB Software License» en el offset 0
+#       VOCABULARIO: el nombre esta DENTRO de la ventana de 4 000 y ningun ancla de esta
+#       base conoce la cadena.  La posicion no puede importar para un nombre que nadie busca.
+#   redpanda-data/common-go   27 204 B  nombre propio en el offset 2, y su referencia REAL
+#       al `Business Source License v.1.1` en el offset 4 969 de 24 661
+#       VENTANA: esa referencia cae FUERA del truncamiento a 4 000, asi que ni con el hoist
+#       hay ancla que pueda verla.
+#
+# Por eso el escaneo corre sobre el payload COMPLETO --normalizado, no truncado-- y devuelve
+# el match de MENOR offset.  El menor y no el primero de la lista: `redpanda-data/common-go`
+# lleva su propio nombre en el 2 y el BSL en el 4 969, y reportar el de la lista en vez del
+# mas temprano haria depender el veredicto del orden en que se escribio la lista.
+named_proprietary_of() {
+  local nn nm rx off best bestnm
+  nn=$(printf '%s' "$1" | tr -s '[:space:]' ' ')
+  best=""; bestnm=""
+  while IFS="$(printf '\t')" read -r nm rx; do
+    [ -z "$nm" ] && continue
+    # `-o` es obligatorio junto con `-b`: el texto normalizado es UNA linea, y `-b` sin `-o`
+    # reporta el offset del comienzo de la linea, que es 0 para todo match.
+    off=$(printf '%s' "$nn" | grep -boiE "$rx" 2>/dev/null | head -1 | cut -d: -f1)
+    [ -z "$off" ] && continue
+    if [ -z "$best" ] || [ "$off" -lt "$best" ]; then best="$off"; bestnm="$nm"; fi
+  done <<__NP__
+$(__source_available_names)
+__NP__
+  [ -n "$bestnm" ] && printf '%s' "$bestnm"
+  return 0
+}
+
+# rider_restriction <payload> -> el token del RIDER, o vacio.
+#
+# P1064 (pase 248).  UN RIDER NO REEMPLAZA UNA LICENCIA: LA ENMIENDA, y por eso no se puede
+# encontrar anclando en la linea de titulo -- la linea de titulo que tiene ARRIBA pertenece a
+# la licencia que esta restringiendo.  Es el defecto `D14` que `p207-permissive-half-audit`
+# MIDIO Y DOCUMENTO, con su propio fixture, y que esta base nunca porteo al clasificador
+# compartido:
+#
+#   `p207/fixtures/commons-clause-mit.txt`  (el rider «Commons Clause» sobre un cuerpo MIT)
+#       p207/classify.sh::classify_grant -> `NON-OSI-CommonsClause+MIT`   CORRECTO
+#       lib/license_family.sh            -> `MIT` -> ALLOWED              FALSO
+#       p1054-mit-plus-clause            -> `MIT`, usable_permissive=True FALSO
+#   y de los tres, el UNICO que acierta es el que NO esta en `make hooks`.
+#
+# p207 ya lo escribio y vale releerlo: un cuerpo con Commons Clause devuelve un `MIT`
+# «confiado y limpio -- sin sufijo, sin bandera, nada que llame la atencion», y eso es PEOR
+# que `UNRECOGNISED`, porque UNRECOGNISED al menos pide que lo miren.
+#
+# LA FAMILIA NO SE TOCA: el otorgamiento interno ES MIT y sigue gobernando todo lo que el
+# rider no toca.  Lo que cambia es el VEREDICTO COMERCIAL, porque el rider quita exactamente
+# el derecho que un entregable de studio ejerce -- el de VENDER.  Reportar las dos mitades es
+# la decision de p207 y se respeta aca.
+#
+# Los dos anclajes son los de `p207::rider_token`, palabra por palabra, y son ANGOSTOS a
+# proposito: el nombre completo o la oracion completa.  El control de paridad vive en
+# `p248-named-proprietary/test_named_proprietary.sh` (P637: dos implementaciones de un
+# predicado se miden una contra la otra).
+rider_restriction() {
+  local rn; rn=$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]' | tr -s '[:space:]' ' ')
+  case "$rn" in
+    *"commons clause"*) printf 'CommonsClause'; return 0 ;;
+    *"will not include, and the license does not grant to you, the right to sell"*)
+      printf 'CommonsClause'; return 0 ;;
+  esac
+  return 0
+}
+
 osi_family_of() {
   local t n
   # -------------------------------------------------------------------------
@@ -807,6 +911,30 @@ osi_family_of() {
       echo "NO-CESSION (negativa explicita)"; return ;;
   esac
 
+  # -------------------------------------------------------------------------
+  # P1063 (pase 248).  EL NIVEL NAMED-PROPRIETARY, y su POSICION esta elegida por lo que
+  # cuesta cada alternativa, no por preferencia.  `ACTION XE` pedia «un nivel de nombres mas
+  # un pre-escaneo sin ventana»; las dos posiciones posibles se midieron antes de publicar:
+  #
+  #   ARRIBA DE TODO (el nombre gana sobre toda ancla).  Radio de explosion sobre los 354
+  #       payloads de fixture de esta base: medido, y publicado en
+  #       `evidence/p248-position-delta.*.tsv`.  El riesgo es el caso INVERSO que la limb 2
+  #       de `ACTION XA` ya nombro: un payload OSI REAL que solo MENCIONA uno de estos
+  #       nombres se reclasificaria como propietario, y eso pierde un estante que es correcto.
+  #   ACA (despues de agotar las anclas de texto completo, ANTES del nivel de declaracion).
+  #       Radio de explosion sobre payloads ya identificados: CERO por construccion -- este
+  #       punto se alcanza solo cuando ninguna ancla reclamo el payload.  Es la direccion que
+  #       esta base eligio en `ACTION XG`: un gate que «corrige» una celda CORRECTA es peor
+  #       que uno que deja una celda sin nombrar.
+  #
+  # Y VA ANTES DEL NIVEL DE DECLARACION (<= 400 B), no despues, por un especimen construido
+  # que invierte el veredicto: «Licensed under the Elastic License, not Apache 2.0» pesa
+  # menos de 400 B, y el `__decl 'apache'` de abajo lo volvia `Apache-2.0 (declaracion)` ->
+  # ALLOWED.  Un nombre propietario completo es evidencia MAS FUERTE que un token suelto,
+  # asi que se mide primero.  Control positivo en `p248-named-proprietary`.
+  local __np; __np=$(named_proprietary_of "$1")
+  if [ -n "$__np" ]; then echo "NAMED-PROPRIETARY ($__np)"; return; fi
+
   local bytes; bytes=$(printf '%s' "$1" | wc -c | tr -d ' ')
   if [ "$bytes" -le 400 ]; then
     # P308: minuscula sobre `$n` (ya normalizado) y no sobre `$1`, para que los patrones de
@@ -885,6 +1013,13 @@ commercial_use_ok() {
   # arreglo, en el eje contrario y sobre el unico caso donde la respuesta importa.
   [ "$(osi_family_of "$1")" = "NO-CESSION (negativa explicita)" ] && return 1
   # -------------------------------------------------------------------------
+  # P1064 (pase 248).  EL RIDER SE MIDE ANTES DE LA COMPUERTA DE FAMILIA, y tiene que ser
+  # antes: la compuerta razona «familia OSI identificada -> permite uso comercial POR
+  # DEFINICION», y sobre un cuerpo con rider esa premisa es FALSA -- la familia interna esta
+  # bien identificada Y el derecho a vender no esta concedido.  Medido sobre el fixture de
+  # p207: radio de explosion `1` de `354` payloads, en la direccion de la correccion.
+  [ -n "$(rider_restriction "$1")" ] && return 1
+  # -------------------------------------------------------------------------
   # P312 (pase 101).  LA COMPUERTA SE ABRIA SOBRE LAS FAMILIAS QUE EXISTE PARA ATRAPAR.
   # Su premisa esta escrita arriba y es correcta: «una familia OSI identificada permite
   # uso comercial POR DEFINICION».  Pero el pase 82 --el mismo que escribio la compuerta--
@@ -911,8 +1046,45 @@ commercial_use_ok() {
     # P965: un marco por-dataset no concede uso comercial del conjunto.  «Gated content
     # isn't yours to redistribute by default» -> se niega y se lee el catalogo a mano.
     MULTI-GRANT-FRAMEWORK) return 1 ;;
+    # P1063 (pase 248).  El nivel NAMED-PROPRIETARY cae en ESTE brazo, y se escribe con
+    # prefijo-glob a proposito: cualquier nombre que se agregue a la lista CERRADA de
+    # `__source_available_names` entra por aca sin tocar esta linea.  Listar 14 cadenas de
+    # proveedor en vez del prefijo habria dejado que la nro. 15 se escape al brazo default.
+    NAMED-PROPRIETARY*)    return 1 ;;
     CC-*|UNCLASSIFIED)     : ;;
-    *)                     return 0 ;;
+    # -----------------------------------------------------------------------
+    # P1063 (pase 248).  EL BRAZO POR DEFECTO PERMITIA, Y ESO ES LO QUE HACIA INSEGURO
+    # NOMBRAR UNA FAMILIA NUEVA.  Es la limb 2 de `ACTION XE`, y esta MEDIDA, no supuesta:
+    # con `osi_family_of` sombreada para devolver una cadena que ningun brazo nombra,
+    # `commercial_use_ok` volvia ALLOWED para las SEIS candidatas de XE
+    # (`NAMED-PROPRIETARY`, `CockroachDB-CSL`, `RedpandaCommunity`, `SSPL`, `CommonsClause`,
+    # `FSL`).  O sea: emitir el nombre y no listarlo aca habria convertido un UNCLASSIFIED
+    # que al menos pasaba por la rama de denegacion en blanco de P241 en una familia
+    # NOMBRADA que la SALTEA --`$__f` deja de ser `UNCLASSIFIED` y ese `if` no corre--.
+    # Nombrar la familia sin cerrar este brazo EMPEORA el veredicto.
+    #
+    # EL ARREGLO NO ES INVERTIR EL DEFAULT: es CERRAR LA ENUMERACION y dejar el default
+    # como red de seguridad inalcanzable.  Invertirlo a secas habria denegado toda familia
+    # OSI que esta base emite y no lista (se midio: `CC0-1.0` NO matchea el glob `CC-*`,
+    # asi que llegaba al default y volvia ALLOWED por ahi -- correcto para una dedicacion al
+    # dominio publico, y por accidente).  Por eso las familias permisivas y copyleft se
+    # enumeran EXPLICITAMENTE abajo, y el control `family-arm closure` de
+    # `p248-named-proprietary` falla si `osi_family_of` gana una familia que no esta en
+    # ninguna de las dos listas.
+    #
+    # La direccion de la falla queda elegida: una familia FUTURA sin clasificar se deniega
+    # (sobre-restringe, cuesta una oportunidad y SE VE) en vez de permitirse (inventa
+    # permiso, cuesta el entregable y NO se ve).  Es el criterio de P299/P312.
+    0BSD|ISC|MIT|"MIT (declaracion)"|Unlicense|CC0-1.0|PSF-2.0) return 0 ;;
+    BSD|"BSD (declaracion)") return 0 ;;
+    Apache-1.0|Apache-1.1|Apache-1.x-UNVERSIONED|Apache-2.0|"Apache-2.0 (declaracion)") return 0 ;;
+    GPL-2.0|GPL-3.0|GPL-UNVERSIONED|"GPL-2.0 (declaracion)"|"GPL-3.0 (declaracion)") return 0 ;;
+    AGPL-3.0|"AGPL-3.0 (declaracion)") return 0 ;;
+    LGPL|LGPL-2.0|LGPL-2.1|LGPL-3.0|"LGPL (declaracion)") return 0 ;;
+    MPL-1.0|MPL-1.1|MPL-2.0|MPL-UNVERSIONED) return 0 ;;
+    EPL|EPL-1.0|EPL-2.0|EPL-UNVERSIONED|ECL-2.0) return 0 ;;
+    EUPL|EUPL-1.1|EUPL-1.2) return 0 ;;
+    *)                     return 1 ;;
   esac
   local d; d=$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]' | tr -s '[:space:]' ' ')
   case "$d" in

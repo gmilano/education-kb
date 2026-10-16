@@ -78,6 +78,12 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── p247-path-class      (ACTION XC: licence path vs NOTICE vs manifest vs code)"; \
 	cd compose/code/p247-path-class && bash test_path_class.sh >/dev/null && echo "   PASS"; \
 	cd - >/dev/null; \
+	echo "── p248-named-proprietary (ACTION XE: the windowless name tier + arm closure: 38)"; \
+	cd compose/code/p248-named-proprietary && bash test_named_proprietary.sh >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
+	echo "── p207-permissive-half-audit (D14, the RIDER: it owns the only correct one — 12)"; \
+	cd compose/code/p207-permissive-half-audit && bash test_classify.sh >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

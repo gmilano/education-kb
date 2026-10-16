@@ -1,0 +1,10 @@
+file	family_before	family_after	commercial_before	commercial_after	class	cause
+compose/code/p1058-empty-payload-gate/fixtures/hogwarts.LICENSE.sspl	UNCLASSIFIED	NAMED-PROPRIETARY (SSPL)	DENIED	DENIED	PRECISION	VOCABULARY — name known to no anchor; the verdict was ALREADY `DENIED` via P241’s blanket-denial branch, so this row is a PRECISION gain and NOT a correction
+compose/code/p207-permissive-half-audit/fixtures/commons-clause-mit.txt	MIT	MIT	ALLOWED	DENIED	CORRECTION	RIDER (D14) — ported from p207::rider_token; the FAMILY is unchanged because the inner grant really is MIT, and what the rider removes is the right to Sell
+compose/code/p247-keyed-grant/fixtures/cockroachdb.csl-2024.txt	UNCLASSIFIED	NAMED-PROPRIETARY (CockroachDB-CSL)	ALLOWED	DENIED	CORRECTION	VOCABULARY — the name sits at offset 0, fully INSIDE the 4 000 window, and no anchor in this base knew the string. Position cannot matter for a name nobody looks for
+compose/code/p247-keyed-grant/fixtures/redpanda.community-license.txt	UNCLASSIFIED	NAMED-PROPRIETARY (RedpandaCommunity)	ALLOWED	DENIED	CORRECTION	VOCABULARY (its own name @2) + WINDOW (its real `Business Source License v.1.1` reference @4 969 of 24 661, beyond the truncation every anchor works inside)
+# POPULATION: 354 fixture payloads under `compose/code/**/fixtures*`, EXCLUDING .py .sh .json .tsv .expected .toml .xml.
+# The exclusion rule is recorded because it is THIS pass’s: p247 swept "368" under a rule it did not write down, so the two
+# counts are not comparable and neither is quoted as the other. The sweep script is `p248-named-proprietary/sweep.sh`.
+# 4 of 354 move. 3 are commercial-verdict CORRECTIONS, every one of them from invented permission towards denial.
+# 0 correct cells were broken — which is the direction `ACTION XG` named as the hazard of a payload-only gate.

@@ -1,0 +1,27 @@
+measurement	value	what it settles
+payloads re-graded	183	every FIRST-HAND repository licence payload cached on these shelves (`p118-licence-column-sweep/evidence/`, sha256-named)
+verdict flips old->new	0	the change corrects the FIXTURES where the defect is demonstrable and moves NO real cached payload
+family flips old->new	0	so no PUBLISHED cell is implicated by this pass’s code change, and none is corrected here
+family MIT	91	distribution of the re-graded population
+family Apache-2.0	21	distribution of the re-graded population
+family AGPL-3.0	14	distribution of the re-graded population
+family BSD	13	distribution of the re-graded population
+family GPL-3.0	8	distribution of the re-graded population
+family UNCLASSIFIED	7	distribution of the re-graded population
+family ECL-2.0	5	distribution of the re-graded population
+family GPL-2.0	5	distribution of the re-graded population
+family CC-BY-4.0	3	distribution of the re-graded population
+family CC-BY-NC-SA-4.0	3	distribution of the re-graded population
+family CC0-1.0	3	distribution of the re-graded population
+family LGPL-3.0	3	distribution of the re-graded population
+family CC-BY-SA-4.0	1	distribution of the re-graded population
+family Elastic	1	distribution of the re-graded population
+family FAIRCODE	1	distribution of the re-graded population
+family GPL-3.0 (declaracion)	1	distribution of the re-graded population
+family MPL-2.0	1	distribution of the re-graded population
+family MULTI-GRANT-FRAMEWORK	1	distribution of the re-graded population
+family Unlicense	1	distribution of the re-graded population
+# METHOD: the PRE-change `lib/license_family.sh` was recovered with `git show HEAD:` and both versions were run over the
+# same 183 payloads in the same window. This is p247’s method for the hoist, re-used so the two passes are comparable.
+# 🔴 LIMIT, stated rather than left to be assumed: 183 is the CACHE, not the shelves. It is not a census of published
+# rows, and a published row whose payload is not cached here was NOT re-graded this pass. `ACTION XH` still holds the 60 UNREAD.

@@ -1,0 +1,31 @@
+file	family_now	name_found	position_A_would_say	commercial_now	is_a_no_op
+compose/code/grant-ladder-v4/fixtures/leemonade-leemons.b1ca5d8.LICENSE.md	FAIRCODE	FAIRCODE	NAMED-PROPRIETARY (FAIRCODE)	DENIED	yes
+compose/code/p1058-empty-payload-gate/fixtures/aula.LICENCE.polyform-nc	PolyForm	PolyForm	NAMED-PROPRIETARY (PolyForm)	DENIED	yes
+compose/code/p122-prose-licence-census/fixtures/elastic-control.txt	Elastic	Elastic	NAMED-PROPRIETARY (Elastic)	DENIED	yes
+compose/code/p122-prose-licence-census/fixtures/faircode-sustainable-use.txt	FAIRCODE	FAIRCODE	NAMED-PROPRIETARY (FAIRCODE)	DENIED	yes
+compose/code/p123-grant-set-calibration/fixtures/elastic-control.txt	Elastic	Elastic	NAMED-PROPRIETARY (Elastic)	DENIED	yes
+compose/code/p123-grant-set-calibration/fixtures/faircode-sustainable-use.txt	FAIRCODE	FAIRCODE	NAMED-PROPRIETARY (FAIRCODE)	DENIED	yes
+compose/code/p124-correction-form-marker/fixtures/elastic-control.txt	Elastic	Elastic	NAMED-PROPRIETARY (Elastic)	DENIED	yes
+compose/code/p124-correction-form-marker/fixtures/faircode-sustainable-use.txt	FAIRCODE	FAIRCODE	NAMED-PROPRIETARY (FAIRCODE)	DENIED	yes
+compose/code/p129-transcription-audit/fixtures/licence-bsl11-change-license-mit.txt	BUSL	BUSL	NAMED-PROPRIETARY (BUSL)	DENIED	yes
+compose/code/p202-grant-scope-reader/fixtures/leemons.LICENSE.md	FAIRCODE	FAIRCODE	NAMED-PROPRIETARY (FAIRCODE)	DENIED	yes
+compose/code/p205-grant-classifier-fix/fixtures/bsl-1.1.txt	BUSL	BUSL	NAMED-PROPRIETARY (BUSL)	DENIED	yes
+compose/code/p206-classifier-language-shape/fixtures/elastic-2.0.LICENSE	Elastic	Elastic	NAMED-PROPRIETARY (Elastic)	DENIED	yes
+compose/code/p207-permissive-half-audit/fixtures/commons-clause-mit.txt	MIT	CommonsClause	NAMED-PROPRIETARY (CommonsClause)	ALLOWED	NO — a real verdict difference
+compose/code/p207-permissive-half-audit/fixtures/elastic2.txt	Elastic	Elastic	NAMED-PROPRIETARY (Elastic)	DENIED	yes
+compose/code/p242-grant-delta/fixtures/polyform.txt	PolyForm	PolyForm	NAMED-PROPRIETARY (PolyForm)	DENIED	yes
+compose/code/p246-payload-integrity/fixtures/iaga-sentinel.busl-1.1.txt	BUSL	BUSL	NAMED-PROPRIETARY (BUSL)	DENIED	yes
+compose/code/p247-keyed-grant/fixtures/iaga-sentinel.busl-1.1.txt	BUSL	BUSL	NAMED-PROPRIETARY (BUSL)	DENIED	yes
+compose/code/p247-keyed-grant/fixtures/leemons.faircode.txt	FAIRCODE	FAIRCODE	NAMED-PROPRIETARY (FAIRCODE)	DENIED	yes
+compose/code/p247-keyed-grant/fixtures/polyform-noncommercial.txt	PolyForm	PolyForm	NAMED-PROPRIETARY (PolyForm)	DENIED	yes
+compose/code/p247-keyed-grant/fixtures/sdv.busl-1.1.txt	BUSL	BUSL	NAMED-PROPRIETARY (BUSL)	DENIED	yes
+# WHY THIS TABLE EXISTS: `ACTION XE` asked for a windowless pre-scan and did not say WHERE. The two positions were
+# measured before publishing, instead of one being argued for.
+#   POSITION A — the name above every anchor: 20 of 354 fixtures carry a name, and 19 are NO-OPS (the name IS the family
+#     the anchors already return, and the verdict is already DENIED). Exactly 1 is a real difference.
+#   POSITION B — after the full-text anchors, before the <=400 B declaration tier: blast radius on already-identified
+#     payloads is ZERO BY CONSTRUCTION, because the tier is only reached when no anchor claimed the payload.
+# 🟢 PUBLISHED: position B. 🟡 And the one non-no-op row is the finding, not a tie-breaker:
+#   `p207/fixtures/commons-clause-mit.txt` is MIT -> ALLOWED, and position A would have called it
+#   `NAMED-PROPRIETARY (CommonsClause)` — the right VERDICT by the wrong ROUTE, because it would have thrown away the
+#   inner MIT grant that really does govern everything the rider does not touch. It is handled as a RIDER instead.

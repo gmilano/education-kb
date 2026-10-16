@@ -1,0 +1,21 @@
+family_string	default_arm_before	default_arm_after	in_XE_scope	note
+NAMED-PROPRIETARY	ALLOWED	DENIED	yes	a candidate name from `ACTION XE`: emitting it BEFORE closing the arm would have returned ALLOWED
+CockroachDB-CSL	ALLOWED	DENIED	yes	a candidate name from `ACTION XE`: emitting it BEFORE closing the arm would have returned ALLOWED
+RedpandaCommunity	ALLOWED	DENIED	yes	a candidate name from `ACTION XE`: emitting it BEFORE closing the arm would have returned ALLOWED
+SSPL	ALLOWED	DENIED	yes	a candidate name from `ACTION XE`: emitting it BEFORE closing the arm would have returned ALLOWED
+CommonsClause	ALLOWED	DENIED	yes	a candidate name from `ACTION XE`: emitting it BEFORE closing the arm would have returned ALLOWED
+FSL	ALLOWED	DENIED	yes	a candidate name from `ACTION XE`: emitting it BEFORE closing the arm would have returned ALLOWED
+BUSL	DENIED	DENIED	no	already named in the deny arm (P964/P1062) — negative control
+FAIRCODE	DENIED	DENIED	no	already named in the deny arm — negative control
+CC-BY-NC-4.0	DENIED	DENIED	no	P312’s arm — negative control
+MIT	ALLOWED	ALLOWED	no	permissive: must NOT move, and does not
+UNCLASSIFIED	ALLOWED	ALLOWED	no	falls through to the token match and P241’s branch, unchanged
+# METHOD: `osi_family_of` is SHADOWED with a stub returning the candidate string, and the payload carries no restriction
+# vocabulary in any language, so the arm taken is the only thing the verdict can depend on.
+# 🟢 `ACTION XE`’s limb 2 FIRES, measured and not assumed: the default arm PERMITTED, 6 of 6 candidates.
+# 🔴 AND IT IS WORSE THAN XE STATED. P241’s blanket-denial branch is gated on `[ "$__f" = "UNCLASSIFIED" ]`.
+#    Naming a family REMOVES that protection — `$__f` stops being UNCLASSIFIED and the branch does not run — so emitting
+#    the name without closing the arm would have made the verdict WORSE than leaving the payload unclassified.
+# 🟢 THE FIX IS NOT AN INVERTED DEFAULT, it is a CLOSED ENUMERATION with the default left as an unreachable net:
+#    inverting it alone would have denied every OSI family this base emits and does not list. Measured instance: `CC0-1.0`
+#    does NOT match the `CC-*` glob, so it reached the default and returned ALLOWED by accident, correct answer, wrong road.

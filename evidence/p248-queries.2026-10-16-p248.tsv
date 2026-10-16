@@ -1,0 +1,10 @@
+channel	queries_run	result	why
+GitHub `topic:` harvest	0	🔴 NOT RUN THIS PASS	the pass budget went to the three registered code ACTIONs (`XE` discharged, `XF` limb settled) and to the 183-payload re-grade. Recorded as UNRUN so no reader can mistake it for coverage.
+GitHub code search	0	🔴 NOT RUN THIS PASS	p247 spent this channel on the BSL inverse-population question. Nothing this pass needed it.
+WebSearch	8	8 legs, 1 primary source, 0 rows	see `p248-websearch`
+first-hand payload reads (offline cache)	183 + 354	0 flips on real payloads, 4 on fixtures	see `p248-repo-payload-regrade` and `p248-blast-radius`
+first-hand payload reads (network)	0	🔴 NONE THIS PASS	no new row is published this pass, so no new grant needed fetching. `ACTION XH`’s 60 UNREAD slugs still need egress and are CARRIED, not claimed.
+# 🔴 WHAT THIS PASS THEREFORE DOES NOT CLAIM: no new supply measurement, no new region placement from supply, no new
+#    permissive row, and NO ABSENCE of any of them. `ACTION UK`’s rule is that a scoped channel result is true and a flat
+#    claim about supply is false; this pass makes no flat claim because it ran no supply channel.
+# 🟢 WHAT IT DOES CLAIM is bounded and offline: a classifier defect measured, fixed, controlled and swept.

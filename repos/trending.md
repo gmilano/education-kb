@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 248 — TRENDING: **NOT MEASURED THIS PASS, AND PUBLISHED AS NOT MEASURED** — `0` `topic:` AXES RUN, SO THERE IS NO TRENDING RESULT HERE TO MISTAKE FOR A QUIET WEEK
+
+⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: added ABOVE the history, nothing below rewritten.
+
+### 🔴 The negative result, stated first and plainly
+
+| channel | queries run this pass | what that means |
+|---|---|---|
+| GitHub `topic:` harvest | **`0`** | 🔴 **NOT RUN.** No trending claim is made for this window, in either direction |
+| GitHub code search | **`0`** | 🔴 **NOT RUN** |
+| network payload reads | **`0`** | 🔴 **NONE** — no new row is published, so no new grant needed fetching |
+| `WebSearch` | `8` | 🔴 `0` rows; `1` primary institutional source *(LATAM)* |
+| offline first-hand payload reads | **`537`** *(`183` cached repository + `354` fixture)* | 🟢 where the pass actually went |
+
+🔵 **Why this matters more on this shelf than on any other:** an append-only trending file is read as a time series, and a pass that writes nothing is indistinguishable from a pass that measured nothing — which is exactly the failure the append-only rule exists to prevent. `p247` recorded `topic:schule` at `total_count: 129` and `topic:智慧教育` at `8` of `8`; **this pass re-measured neither, and neither number should be read as current.**
+
+### 🟡 The one aggregator claim the `WebSearch` legs returned, recorded AS a claim
+
+- 🟡 *"Nine of the top ten projects on GitHub's February 2026 monthly trending list were AI-related"* — from a Japanese blog aggregating GitHub Trending. 🔴 **Not verified here, and not verifiable from the channel that served it:** no live trending data, and the star counts in the same result set are self-reported from LinkedIn and blog posts. 🔵 Published so a later pass can test it against the `topic:` channel rather than re-encounter it as news.
+- 🔴 **`0` of `8` legs produced a repository row that could be verified to a grant** ([`p248-websearch`](../evidence/p248-websearch.2026-10-16-p248.tsv)) — the tenth dry pass in eleven. One leg's own text warned that some projects marketed as "open source" are source-available with restrictive terms: 🔵 **the channel is describing this KB's `T247-T1` trend back at it, which is corroboration of the trend and still not a row.**
+
+### 🔵 What the pass did produce that a trending reader should know
+
+🟢 **Two instruments entered the standing gate**, one of them `41` passes after it was written: [`p248-named-proprietary`](../compose/code/p248-named-proprietary/) *(38 controls)* and [`p207-permissive-half-audit`](../compose/code/p207-permissive-half-audit/) *(12)*. 🔵 The second is the trend-relevant one — it owns the only correct reading of a **Commons Clause rider** in this base, and until this pass it had never run in `make hooks`. Any trending row this shelf adds in future passes is now read through all three mechanisms (`VOCABULARY`, `WINDOW`, `RIDER`), not just the family anchors.
+
 ## 2026-10-16 — Pass 247 — TRENDING: THE GERMAN SCHOOL ESTATE SURFACES ALL AT ONCE, AND IT IS **COPYLEFT BY DEFAULT** — `7` ON-TOPIC ROWS, `0` PERMISSIVE
 
 ⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: added ABOVE the history, nothing below rewritten.

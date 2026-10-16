@@ -1,0 +1,13 @@
+slug	url	html_HEAD_probe	ls_remote_symref	pinned_HEAD	verdict
+microsoft/autogen	https://github.com/microsoft/autogen	403	refs/heads/main	004749e6b7102c8fd317b9b1499ce5807223c278	EXISTS
+bncc-dev/bncc-benchmark	https://github.com/bncc-dev/bncc-benchmark	403	refs/heads/main	4713901ce5d7f343eb59139a1ce35bc1da632091	EXISTS
+bncc-dev/bncc-pacotes	https://github.com/bncc-dev/bncc-pacotes	403	refs/heads/main	e9b4985adf838a521facf56a33b967d4c6164551	EXISTS
+happycola233/tchMaterial-parser	https://github.com/happycola233/tchMaterial-parser	403	refs/heads/main	244170e17bf8bc97401f65e04d261533d252572a	EXISTS
+GarethManning/education-agent-skills	https://github.com/GarethManning/education-agent-skills	403	refs/heads/main	6bbbce418f82e11044009c9f3b7373a354de5bd0	EXISTS
+# Every URL this pass newly LINKS is probed here. 0 new rows were published, so this is the link set of the prose, not of a shelf table.
+# CHANNEL FINDING, worth more than the five rows: `curl -sI` against github.com HTML returned 403 for ALL FIVE, INCLUDING `microsoft/autogen`.
+#   A uniform 403 across a set that contains a certainly-existing repository is a PROXY REFUSAL, not an existence answer -- the channel
+#   cannot discriminate, so it must not be read as a 404 would be. This is `ACTION UK` applied to the verification channel itself, and
+#   `ACTION TC` already named the oracle that does work: one `git ls-remote --symref` per slug, which also pins the HEAD.
+# The mandate says to verify every URL before writing it. It is verified -- just not by the tool the mandate names, because that tool is
+#   blind from here. The substitution is recorded rather than left for a later pass to rediscover (`p798-proxy-refusal-ledger`).

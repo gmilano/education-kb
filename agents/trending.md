@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 248 — WHAT MOVED: **NOTHING IN SUPPLY, AND THE PASS SAYS SO** — THE MOVEMENT IS IN THE READING, WHERE THE "OPEN SOURCE" LABEL DEFECT `p247` MEASURED AS A TREND NOW HAS A **NAMED MECHANISM WITH NO OUTWARD SIGN**
+
+⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: this section is added ABOVE the history and nothing below it is rewritten.
+
+### 🔴 First, the honest negative: no trending measurement was taken this pass
+
+**`0` `topic:` queries, `0` code searches, `0` network payload reads.** The budget went to `p247`'s registered code ACTIONs. 🔵 This is published as an **unrun channel**, not as a quiet week — a trending shelf whose silence looks like coverage is the one failure this append-only file exists to prevent. [`p248-queries`](../evidence/p248-queries.2026-10-16-p248.tsv) lists every channel and why it did not run.
+
+### 🟢 New this pass: the `D14` rider, and why it belongs on a TRENDING shelf rather than only in the code
+
+`p247`'s `T247-T1` recorded a trend with a number: *"open source" is now the most unreliable field in an education tool's description* — `4` of `5` source-available payloads read that pass had been carried or offered as permissive. 🔵 **That trend acquires its mechanism this pass, and the mechanism is the part a buyer cannot see.**
+
+- 🔴 **The `VOCABULARY` and `WINDOW` cases at least return `UNCLASSIFIED`** — an answer that *asks to be looked at*. A diligence process that stops at "unknown licence, check it" catches both.
+- 🔴 **The `RIDER` case returns `MIT`.** `p207/fixtures/commons-clause-mit.txt` is a `621 B` file whose first line is `"Commons Clause" License Condition v1.0` and which states the licence *"will not include, and the License does not grant to you, the right to Sell the Software"* — and three of this base's four readers called it a clean `MIT`. **The restriction that removes the only right a studio deliverable exercises leaves no mark in the field everyone checks.**
+
+🔵 **The trend statement, as narrowly as it can be put:** the source-available shift is no longer only about *which* licences appear in the education estate — it is about restrictions that arrive as **riders on top of a permissive grant**, where the permissive name survives intact and the sellable right does not.
+
+### 🟡 The one new external signal this pass, and it is institutional rather than a repository
+
+- 🟢 **UNESCO IESALC + UNU-IAS working paper, September 2026** — a survey of **`200` higher-education institutions across `19` countries** in Latin America and the Caribbean (fielded August–October 2025), covering teaching, research, administration **and governance**. 🔵 An institutional survey, not a vendor estimate: the first LATAM primary source the `WebSearch` channel has produced here in several passes.
+- 🔴 **`0` of `8` `WebSearch` legs produced a repository row that could be verified to a grant** — the TENTH dry pass in eleven ([`p248-websearch`](../evidence/p248-websearch.2026-10-16-p248.tsv)). 🔵 **The eleven-pass pattern is consistent enough to state as a property of the channel: `WebSearch` pays in regulation and institutional evidence, and never in rows.** It is miscast as a supply channel, not worthless.
+
+### 🔵 Carried, unchanged, and explicitly not re-measured
+
+`p247`'s two movements stand as published and were **not** re-probed this pass: the state-platform client tier (`happycola233/tchMaterial-parser`, `MIT`, `7 161`★, found only because the question was finally asked in Chinese) and the skill-bundle-over-framework finding (`GarethManning/education-agent-skills`, `870`★, `165` skills). 🔵 Both are `p247`'s first-hand reads, and this pass adds no evidence either way.
+
 ## 2026-10-16 — Pass 247 — WHAT MOVED: A NATIONAL-PLATFORM CLIENT TIER WITH `7 161`★ APPEARS OUT OF NOWHERE — BECAUSE NOBODY HAD EVER ASKED IN CHINESE
 
 ⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 Append-only shelf: this section is added ABOVE the history and nothing below it is rewritten.

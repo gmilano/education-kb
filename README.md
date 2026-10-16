@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 248 — 2026-10-16 — `ACTION XE` DISCHARGED WITH BOTH LIMBS MEASURED, AND IT UNCOVERED A FOURTH WAY TO GET THE SAME ANSWER WRONG THAT THIS KB **HAD ALREADY DOCUMENTED AND NEVER WIRED**: THE ONLY CLASSIFIER HERE THAT READS A **COMMONS CLAUSE** CORRECTLY WAS OUTSIDE `make hooks`, AND THE TWO INSIDE IT BOTH RETURNED A CLEAN `MIT`
+
+⏱️ **SEVENTEENTH pass of `2026-10-16`.** `p232`–`p247` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction. 🔵 **Note for a reader of this file: the pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**
+
+🟢 **`ACTION XE` DISCHARGED, both limbs MEASURED rather than argued.** Its hazard — *"the default arm must be proven to DENY before a name is added"* — was tested with `osi_family_of` shadowed, and **it fired: the default arm PERMITTED, `6` of `6` candidate names.** 🔴 **And the two defects compose in a way XE did not see:** `P241`'s blanket-denial branch is gated on `UNCLASSIFIED`, so *naming* a family **removes** that protection — the "improvement" would have made the verdict **worse**.
+
+🟢 **`3` commercial verdicts corrected, every one from invented permission towards denial.** 🟢 **Blast radius swept on two populations: `4` of `354` fixtures *(0 correct cells broken)* and `0` of `183` first-hand repository payloads** — so **no published row on these shelves is implicated by the change, and none is corrected here.** 🟢 **`ACTION XF`'s limb settled offline at exactly its threshold, probe set named.** 🟢 **Two instruments entered the standing gate, one of them `41` passes after it was written.**
+
+🔴 **`0` new rows, and that is a BUDGET statement, not a supply one** — `0` `topic:` queries, `0` code searches, `0` network payload reads, every one published as unrun. 🔴 **`5` of my own rows withdrawn on reading the payloads behind them.** 🔴 **The `WebSearch` row channel is dry for the TENTH pass in eleven.** 🔴 **`ACTION XH` not run; `ACTION UX` unrun for the ELEVENTH pass.**
+
+### The three mechanisms, and why the third is the dangerous one
+
+| mechanism | the shelf cell reads | the payload says | what gives it away |
+|---|---|---|---|
+| **`VOCABULARY`** | `UNCLASSIFIED` → ALLOWED | `CockroachDB Software License`, offset `0` | 🟡 an answer that **asks to be looked at** |
+| **`WINDOW`** | `UNCLASSIFIED` → ALLOWED | a real `BSL v.1.1` reference at offset `4 969` of `24 661` | 🟡 the same |
+| 🔴 **`RIDER`** | 🔴 **`MIT`** → ALLOWED | `"Commons Clause" License Condition v1.0` — *"does not grant to you, the right to Sell the Software"* | 🔴 **NOTHING. A confident, clean `MIT`: no suffix, no flag** |
+
+🔵 The third row is **`p207`'s** finding, written down at pass `207` as defect `D14` along with the judgement this pass acted on: that outcome is *worse* than `UNRECOGNISED`, because `UNRECOGNISED` at least asks to be looked at. What `p248` adds is that `p207`'s correct classifier **had never run in the standing gate**, while `lib/license_family.sh` and `p1054-mit-plus-clause` — both in it — answered a clean `MIT` on `p207`'s own fixture. 🔴 **This KB's failure mode, for the third pass running, is unwired knowledge rather than missing knowledge.**
+
+### What a reader should take from this pass
+
+🟢 **`make hooks` now answers all three mechanisms offline**, with `38` new controls plus `12` wired in for the first time, and the `family-arm closure` control reads the arm patterns **out of the source** so it cannot drift from the code it checks. 🟡 **`p1054` is still wrong and is `ACTION XI`** — its own numbers say why: a rider that makes a licence file **shorter** than canonical MIT is invisible to a byte-excess test.
+
+🟢 **The one new external source this pass is institutional, not a repository:** the **UNESCO IESALC + UNU-IAS** working paper *(September 2026)* — `200` higher-education institutions across `19` countries, fielded August–October 2025, **governance included**. 🔵 Over eleven passes the pattern is consistent enough to state as a property: **`WebSearch` pays in regulation and institutional evidence, and never in rows.** It is miscast as a supply channel, not worthless.
+
 ## Pass 247 — 2026-10-16 — `ACTION XA` DISCHARGED AND THE **BUSL BRANCH IS ALIVE** — BUT THE DISCHARGE PROVED THE FIX INSUFFICIENT: OF THREE REAL SOURCE-AVAILABLE PAYLOADS READ, THE ANCHOR ORDER EXPLAINS **ONE**. PLUS THE FIRST **CJK** HARVEST IN `246` PASSES, AND THE FIRST **AFRICA** SUPPLY AXIS EVER RUN HERE
 
 ⏱️ **SIXTEENTH pass of `2026-10-16`.** `p232`–`p246` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction. 🔵 **Note for a reader of this file: the pass log moved onto the shelves at `p242` and the entry below is the first README entry since `p241`.** The per-shelf sections and [`intel/open-gaps.md`](intel/open-gaps.md) are the ledger; this is the front door.

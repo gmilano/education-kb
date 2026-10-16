@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 248 — 2026-10-16 — TWO RECIPES, AND BOTH ARE BUILT FROM WHAT THIS PASS MEASURED RATHER THAN FROM ROWS IT DID NOT READ
+
+⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 **Attribution rule, stated because this pass ran no supply channel:** every repository named below was read **first-hand by an earlier pass** and is cited to that pass, not to this one. The *instruments* are this pass's own.
+
+### 🟢 `P248-1` — The pre-commitment licence gate, with the rider mechanism closed
+
+🔵 **The engagement problem it solves, in one sentence:** a studio commits to a dependency on the strength of a `MIT` badge, and discovers at delivery that the licence forbids selling the thing that was built. 🔴 This pass measured that the badge can be *correct about the family* and still wrong about the right that matters.
+
+**What to wire, all of it in this KB and all of it offline:**
+
+| step | what runs | what it answers |
+|---|---|---|
+| `1` | [`p229-grant-ladder-reach/ladder.sh`](code/p229-grant-ladder-reach/) + [`p247-path-class`](code/p247-path-class/) | **where** the grant is, and whether that path is a licence at all rather than a `NOTICE`, a manifest or a source file |
+| `2` | [`lib/licence_path.sh`](code/lib/licence_path.sh) over the repo tree | whether there is **more than one** grant — `3` carried slugs ship two *(`T248-F1`)* |
+| `3` | `osi_family_of` in [`lib/license_family.sh`](code/lib/license_family.sh) | the family, now including the **windowless** `NAMED-PROPRIETARY` tier — `14` vendor names, no truncation |
+| `4` | 🔴 **`rider_restriction` + [`p207-permissive-half-audit`](code/p207-permissive-half-audit/)** | **whether a rider sits on top of a correct permissive family.** The step that did not exist before this pass |
+| `5` | `commercial_use_ok` | the only question an engagement needs: **can this be sold into a deliverable** |
+| `6` | [`p248-named-proprietary/regrade.sh`](code/p248-named-proprietary/regrade.sh) | re-grade the whole dependency set when the classifier changes — it takes the classifier **path**, so an old version can be run against a new one |
+
+```sh
+make hooks          # 38 + 12 new controls; no network, safe in CI or a sandbox
+# then, per dependency set:
+compose/code/p248-named-proprietary/regrade.sh compose/code/lib/license_family.sh out.tsv
+```
+
+🟢 **Why step `4` is not optional:** on `p207`'s own `621 B` fixture, **`2` of the `3` readers in this base that can read it returned a confident, clean `MIT`** — and the only one that got it right was the one outside the gate. 🔵 Timeline: `1` day to wire, and it runs in every later pass for free.
+
+🟡 **Known hole, named rather than hidden:** `p1054-mit-plus-clause` is still wrong on the same payload (`ACTION XI`) — so do not substitute it for step `4`.
+
+### 🟢 `P248-2` — LATAM · the governance-gap engagement, scoped by the UNESCO instrument
+
+🔵 **Why this recipe exists now:** `T248-M1` placed a **primary** instrument for the region — UNESCO IESALC + UNU-IAS, `200` higher-education institutions across `19` countries, fielded August–October 2025, **covering governance**. 🟢 A survey that asks `200` institutions about governance is a map of institutions that have an AI programme and **no governance for it**, which is a procurable engagement rather than a market-size slide.
+
+**The stack, every row carried from an earlier first-hand read:**
+
+| layer | what to use | provenance |
+|---|---|---|
+| the system of record | the institution's existing **Moodle / Open edX** estate — *integrate, do not rebuild* | `p246`'s `P246-4` regional rule |
+| curriculum alignment | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) and [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🔴 **`MIT` for the code, `CC-BY-4.0` for the data, and the data payload names the directories it binds** *(`itens/`, `resultados/`, `METODOLOGIA.md`)* — `p119`/`p120` first-hand, re-read this pass for `T248-F1` |
+| the governance artefact | `p246`'s `P246-5` provenance/pass-bar pattern | `p246` |
+| the gate before any of it ships | 🟢 **`P248-1` above** | this pass |
+
+🔴 **The one thing this recipe must not get wrong, and it is a Brazilian instance of this pass's whole finding:** the `bncc` repositories are **split-scope**. Treating `MIT` as governing the item bank is wrong — the item bank is `CC-BY-4.0`, attribution-bound, and a deliverable that silently relicenses it is the failure `ACTION XJ` was registered to prevent. 🔵 Until the ladder returns `(path, family, scope-prose)`, **read both payloads by hand** for any repository with two licence paths.
+
+🟡 **And the open ask that would widen this recipe:** `p247` left `3` live LATAM rows **UNGRANTED** (`ACTION UJ`). They are not in this stack because they cannot be, and one licence ask each is what changes that.
+
 ## Pass 247 — 2026-10-16 — FOUR RECIPES, EACH WIRED FROM ROWS THIS PASS READ FIRST-HAND
 
 ⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 Every repo named below was fetched at a pinned `HEAD` and its grant read from `raw.githubusercontent.com` this pass; the licences are in [`p247-verified-rows`](../evidence/p247-verified-rows.2026-10-16-p247.tsv).

@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 248 — 2026-10-16 — THE TREND THIS PASS CAN PROVE IS A **SHAPE CHANGE IN HOW RESTRICTION ARRIVES**: NOT A DIFFERENT LICENCE, BUT A **RIDER ON TOP OF A PERMISSIVE ONE** — WHICH LEAVES THE FIELD EVERY BUYER CHECKS READING `MIT`
+
+⏱️ **SEVENTEENTH pass of `2026-10-16`.**
+
+### 🔴 `T248-T1` — the licence-drift trend acquires its mechanism, and the mechanism is invisible
+
+`p247`'s `T247-T1` established the trend with a number: *"open source" is now the most unreliable field in an education tool's description*, `4` of `5` source-available payloads read that pass having been carried or offered as permissive. **This pass can say how the failure happens, and the three ways are not equally detectable:**
+
+| mechanism | the shelf cell reads | the payload says | detectable by a reader who checks the licence field? |
+|---|---|---|---|
+| `VOCABULARY` | `UNCLASSIFIED` | `CockroachDB Software License` @ offset `0` | 🟡 **yes** — "unknown licence" asks to be looked at |
+| `WINDOW` | `UNCLASSIFIED` | a real `BSL v.1.1` reference @ offset `4 969` | 🟡 **yes**, for the same reason |
+| 🔴 **`RIDER`** | 🔴 **`MIT`** | `"Commons Clause" License Condition v1.0` — *"does not grant to you, the right to Sell the Software"* | 🔴 **NO. Clean, confident, unflagged `MIT`** |
+
+🔵 **The trend statement:** restriction in this estate is increasingly arriving as an **amendment to a permissive grant** rather than as a different licence — and an amendment does not change the name of the thing it amends. 🟡 **Direction of the cost:** `VOCABULARY` and `WINDOW` produce a question; `RIDER` produces a wrong answer that nobody asks about.
+
+### 🟢 `T248-T2` — a trend about this KB rather than the market, and it has now recurred three times
+
+🔴 **Three passes in a row have found that the correct reading already existed somewhere in this base and was not in the path that decides:**
+
+| pass | what was found | where the correct answer already was |
+|---|---|---|
+| `p241` | the blanket-denial defect | 🔴 a correct classifier `make hooks` had never run |
+| `p247` | `foradian/fedena`, `openedx/XBlock` graded on a `NOTICE` and on a manifest | 🔴 Tier A/C already distinguished them; no consumer used the distinction |
+| 🔴 **`p248`** | the Commons Clause rider | 🔴 **`p207` measured it, documented it as `D14`, built the only correct classifier for it — and `p207` has never been in `make hooks`** |
+
+🔵 **The trend, put as a property of this KB rather than a one-off:** its failure mode is **not** missing knowledge, it is **unwired** knowledge. 🟢 The structural response is the one `p247` started and this pass continued — *an instrument that is not in `make hooks` does not exist* — and `ACTION VW` (the audit of instruments outside the gate) is therefore not housekeeping but the highest-yield unrun ACTION on these shelves. 🟡 **It is still not fully run:** `p207` went in this pass; `p1056-split-scope-licence` and `p627-multi-grant-repo` remain outside.
+
+### 🔵 `T248-T3` — the channel trend, now stable enough to state as a property
+
+🔴 **`WebSearch` has produced `0` verifiable repository rows in `10` of the last `11` passes.** 🟢 **And in that same window it has produced regulation and institutional evidence repeatedly** — this pass's UNESCO IESALC/UNU-IAS survey (`200` institutions, `19` countries) being the clearest instance.
+
+🔵 **So the trend is not "the channel is dry", it is "the channel is miscast".** `WebSearch` is a **regulation and institutional-evidence instrument**; the `topic:` channel is the supply instrument. 🟡 A pass that judges `WebSearch` by rows will keep recording a failure that is really a category error — and `p247`'s `ACTION VX` already measured the supply side of the same lesson: **harvest the proper nouns, not the concepts** (`topic:ai-literacy` = `62.5`% rediscovery vs `topic:waec` = `0`%).
+
+### 🔴 `T248-T4` — what this pass explicitly did NOT re-measure
+
+🔵 Published so none of it is read as current:
+
+- `p247`'s state-platform client tier and skill-bundle findings — **not re-probed**.
+- `topic:schule` (`total_count: 129`) and `topic:智慧教育` (`8` of `8`) — **not re-run**; those numbers remain `p247`'s.
+- Korea's AI Basic Act, Ghana/Rwanda/Kenya programmes, the `134` US state bills — **carried from `p246`/`p247`**, and served by **none** of this pass's legs.
+- 🔴 **No supply measurement of any kind was taken** ([`p248-queries`](../evidence/p248-queries.2026-10-16-p248.tsv)), so this pass claims no absence of supply anywhere (`ACTION UK`).
+
 ## Pass 247 — 2026-10-16 — THE TREND THIS PASS CAN PROVE: **"OPEN SOURCE" IS NOW THE MOST UNRELIABLE FIELD IN AN EDUCATION TOOL'S DESCRIPTION** — `4` OF `5` SOURCE-AVAILABLE PAYLOADS READ TODAY WERE CARRIED OR OFFERED AS PERMISSIVE
 
 ⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p247-source-available-reach`](../evidence/p247-source-available-reach.2026-10-16-p247.tsv) · [`p247-mit-tier-corrections`](../evidence/p247-mit-tier-corrections.2026-10-16-p247.tsv) · [`p247-websearch`](../evidence/p247-websearch.2026-10-16-p247.tsv)

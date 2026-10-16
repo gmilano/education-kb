@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 248 — 2026-10-16 — THE PLATFORM CENSUS IS UNCHANGED FOR AN **EIGHTH** PASS, AND THE VERTICAL FINDING IS A LICENCE **ASK**, NOT A ROW: THE ONE EDUCATION-SPECIFIC ERP THE MANDATED QUERY SERVED CAME WITH ITS GRANT **UNSTATED BY ITS OWN CHANNEL**
+
+⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 **`0` platform rows added, `0` corrected.** The carried estate stands exactly as `p247` published it, and no vertical row's payload was re-fetched this pass.
+
+### 🟡 `T248-V1` — the mandated ERP/CRM leg, and what it actually returned
+
+The mandate's vertical query *(`open source platform education ERP CRM MIT Apache`)* was run verbatim. 🔵 **Result: `1` education-specific platform named, `0` with a confirmed permissive grant.**
+
+| what the leg served | licence per the channel | verdict here |
+|---|---|---|
+| **OpenEduCat** — an education ERP built on the **Odoo** framework, using its ORM, web framework, reporting engine and security model | 🔴 **not stated by the source** | 🟡 **a licence ASK, not a row.** It is not published on these shelves until a payload is read first-hand |
+| **ERPNext** — general ERP with CRM | `GPL-3.0` per the channel | 🔵 copyleft, and not education-specific; the carried estate already records this class |
+| **Twenty** — CRM | 🔴 **`BUSL-1.1`** — source-available, *not* OSI | 🔴 **the trend in one row:** a CRM marketed in an open-source roundup under the exact licence family `ACTION XA`/`XE` exist to catch |
+| Apache-licensed education platform | 🔴 **`0` in the result set** | 🔴 recorded as a channel result, not as an absence of supply |
+
+🔵 **The `Twenty` row is why this leg belongs on this shelf even though it added nothing.** A general-purpose roundup placed a `BUSL-1.1` product beside MIT and Apache ones with no distinction drawn — which is `T248-T1`'s drift measured *in the discovery channel itself*, one level above the payload.
+
+### 🟢 `T248-V2` — the vertical consequence of this pass's code change, stated concretely
+
+🔵 The platform layer is where a rider costs the most, because a platform is **customised and resold** — which is precisely the right a Commons Clause removes while leaving the family column reading `MIT`.
+
+🟢 **So the vertical diligence step is now three questions deep** *(`T248-F3`)*, and `make hooks` answers all three offline. 🔵 For the carried estate — Moodle, Open edX, Chamilo, Canvas LMS, Odoo/OpenEduCat-class ERPs, the state platforms `p247` added — the family column was **not** re-derived this pass; `183` cached payloads were re-graded with `0` flips, and that is the whole of what this pass can say about them.
+
+🔴 **What it cannot say, and does not:** whether any carried platform whose payload is *not* in that cache ships a rider. 🔵 That is `ACTION XH`'s population, and `ACTION XH` was not run.
+
 ## Pass 247 — 2026-10-16 — THE VERTICAL FINDING IS A **PLATFORM WITH NO API AND A CLIENT TIER AROUND IT**: CHINA'S `smartedu` AND HESSEN'S `Schulportal` ARE THE SAME SHAPE IN TWO LICENCE CULTURES
 
 ⏱️ **SIXTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p247-verified-rows`](../evidence/p247-verified-rows.2026-10-16-p247.tsv) · [`p247-queries`](../evidence/p247-queries.2026-10-16-p247.tsv)
