@@ -1,0 +1,14 @@
+Copyright (c) 2026 Sami El Akkad. All rights reserved.
+
+This repository is made publicly visible for review, evaluation, and reference
+only (for example, by recruiters, collaborators, and other developers).
+
+NO PERMISSION is granted to use, copy, modify, merge, publish, distribute,
+sublicense, sell, train machine-learning models on, or create derivative works
+from any part of this repository -- for personal, academic, or commercial
+purposes -- WITHOUT the author's explicit prior WRITTEN permission.
+
+If you would like to use anything here, you must ask first:
+    Sami El Akkad -- sam25@mails.tsinghua.edu.cn
+
+Until written permission is granted in writing, all rights are reserved.

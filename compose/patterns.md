@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 241 — 2026-10-16 — `4` RECIPES, EACH WIRED FROM ROWS WHOSE GRANT THIS KB HAS READ FIRST-HAND — AND THE FOURTH IS THE DUE-DILIGENCE GATE THE OTHER THREE DEPEND ON
+
+🔵 **Evidence:** [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv) · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv) · [`p241-cross-instrument-agreement`](../evidence/p241-cross-instrument-agreement.2026-10-16-p241.tsv) · **instrument:** [`p241-blanket-denial`](code/p241-blanket-denial/)
+
+---
+
+### 🟢 `P241-1` — **US district AI-governance pack** · North America · `6`–`8` weeks
+
+🔵 **The buyer, measured:** Idaho, Maryland, Oklahoma and Virginia now require **district-level** AI policies, `33`–`35` states plus Puerto Rico have issued guidance, and `~100`+ bills are live in the 2026 session. Every district writing its own policy needs the same three artefacts, and all three exist permissively.
+
+| layer | repo | grant *(read first-hand)* |
+|---|---|---|
+| record source | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) *(carried)* | `Apache-2.0` |
+| ingest + de-dup | [`Krishita17/record-bridge`](https://github.com/Krishita17/record-bridge) | `MIT` *(`1 079` B · `a0d9ec2f46f8`)* |
+| 🔴 **audit of every AI read** | [`mizcausevic-dev/student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) | `MIT` *(`1 069` B · `c793daec7825`)* |
+| retrieval guard | [`ashutoshrana/ferpa-haystack`](https://github.com/ashutoshrana/ferpa-haystack) | `Apache-2.0` *(`742` B · `914154573fc5`)* |
+| per-state disclosure record | [`mizcausevic-dev/state-ai-disclosure-state-tracker`](https://github.com/mizcausevic-dev/state-ai-disclosure-state-tracker) | `MIT` *(`1 069` B · `0ad0bd3d7773`)* |
+| district Q&A surface | [`ZachRouan/district-brain`](https://github.com/ZachRouan/district-brain) *(carried)* | local-first RAG, chunk-level citations |
+
+**The wiring, in order:**
+
+1. **Ed-Fi ODS is the system of record.** `record-bridge` sits in front of intake: bulk-ingest, validate, exact + fuzzy de-duplicate, then write to the ODS. 🟢 **Develop against `record-bridge`'s synthetic-data mode so no PII touches the build environment.**
+2. **`ferpa-haystack` goes BEFORE the LLM, not after.** It pre-filters the retrieval set by the requesting identity, so a teacher's query cannot retrieve another teacher's roster. 🔵 **Pre-filtering, not post-filtering: a model that has seen the context has already seen it.**
+3. **`student-data-access-audit-stream` wraps every tool call that reads a student record**, emitting a hash-chained event. It enforces FERPA §99.32 logging consistency and a COPPA school-as-agent invariant, and the hash chain is what makes the log evidence rather than a claim.
+4. **`state-ai-disclosure-state-tracker` is the deliverable the district signs.** It holds the per-state lifecycle record across IL SOPPA, CA AB 1584 + AB 2876, TX HB 18, NY ED Law 2-d, VA ChAIPA, CO SB 196.
+5. **`district-brain` is the demo** — policies and handbooks with chunk-level citations, running locally.
+
+🔴 **Say this to the client, and say it in their words:** every one of these repos calls itself *readiness scaffolding, not certification*. 🟡 **The deliverable is an auditable posture, not a compliance guarantee**, and `Oklahoma`-style rules barring AI as the primary basis for grading or discipline mean **the human decision point must stay in the workflow diagram.**
+
+---
+
+### 🟢 `P241-2` — **APAC assessment assistant built for Decision `33/2026/QĐ-TTg`** · APAC · `8`–`10` weeks
+
+🔵 **Why this one is unusually well-posed: the regulation and the starting point are both on this shelf.** Vietnam's Decision `33/2026/QĐ-TTg` puts **automated assessment** on its education high-risk list *(carried since `p138`; `2027-03-01`, and `2027-09-01` for education systems already in operation)*. Bloom-taxonomy quiz generation IS automated assessment.
+
+| layer | repo | grant |
+|---|---|---|
+| base | [`HoangNam2464/ai-teacher-copilot`](https://github.com/HoangNam2464/ai-teacher-copilot) | `MIT` *(`1 076` B · `ead83d2f94ca`)* |
+| skills pattern | [`ichangting/taotao-skills`](https://github.com/ichangting/taotao-skills) | `MIT` + `Apache-2.0` subtree *(`1 371` B · `4d6f67f4d88b`)* |
+| policy enforcement | [`ashutoshrana/regulated-ai-governance`](https://github.com/ashutoshrana/regulated-ai-governance) | `MIT` *(`1 070` B · `664a753aa460`)* |
+| offline delivery | [`EnglandTong/educore`](https://github.com/EnglandTong/educore) · [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `MIT` · `MIT` |
+
+**The wiring:**
+
+1. **Start from `ai-teacher-copilot` and keep its citation traceability as a hard requirement, not a feature.** Every generated quiz item traces to the source document. 🟢 **That traceability is the mitigation the high-risk classification asks for, and building it in before `2027-03-01` is cheaper than retrofitting it.**
+2. **Borrow `taotao-skills`' decomposition**: one skill per teaching task *(lesson prep, tiered instruction, exam prep)* rather than one monolithic prompt. 🟡 **Copy the structure, and note its licence seam — `skills/k12-lesson-planning-zh` is `Apache-2.0` with its own `NOTICE`, so that `NOTICE` ships with anything derived from that subtree.**
+3. **`regulated-ai-governance` supplies the deny-by-default policy layer as an ADAPTER** over whichever orchestrator you use *(CrewAI, AutoGen, LangChain, Semantic Kernel)*. 🔵 **Adapter, not framework — it does not force the orchestration choice.**
+4. **Keep the assessment path human-confirmed.** A high-risk classification plus a teacher who signs the quiz is a very different filing from an autonomous grader.
+5. **`educore` or `Kolibri` for connectivity-tolerant delivery** where the deployment is rural.
+
+🔴 **Licence note before anyone starts: for APAC rows the licence is a READING TASK.** `p240` found a Chinese source-available licence banning commercial use that passed this KB's own gate; `p241` found the same in English. **Run `P241-4` on every candidate.**
+
+---
+
+### 🟢 `P241-3` — **Accredited AI-security curriculum for a US community college** · North America · `4`–`5` weeks
+
+| layer | repo | grant |
+|---|---|---|
+| curriculum lab | [`daTechGuy/GrizzDog-AI`](https://github.com/daTechGuy/GrizzDog-AI) | `MIT` *(`1 075` B · `2f39c4f87cca`)* |
+| LMS host | Canvas LMS | `AGPL-3.0` — 🔴 **service/integration only, never a proprietary plugin** |
+| policy engine | [`Principled-Evolution/gopal`](https://github.com/Principled-Evolution/gopal) *(carried)* | executable **Rego** per named article/control |
+
+**The wiring:** `GrizzDog-AI` already exports **Canvas** reports and maps its `27` benchmark attack vectors to **OWASP LLM01–LLM07** and **MITRE ATLAS AML.T0051–T0057**, aligned to **NSA/DHS CAE-CD Knowledge Units**. 🟢 **So the integration work is the accreditation mapping, which is the part the college cannot do itself**: bind each lab exercise to a CAE-CD Knowledge Unit, emit the Canvas gradebook artefact, and add `gopal`'s Rego policies as the guardrail the students are attacking.
+
+🔵 **Why this sells:** CAE-CD designation is a renewable federal credential with curriculum evidence requirements. 🟡 **And the honest scope limit: `GrizzDog-AI`'s own README states it is an independent faculty project and NOT an institutional endorsement** — so a studio engagement needs the institution at the table from day one, not the repo.
+
+---
+
+### 🔴 `P241-4` — **THE GATE: vet an education OSS dependency before it enters a deliverable** · Global · `1` day per candidate
+
+🔵 **This pass is the argument for this recipe. Three instruments in this KB gave three different answers about whether code could be shipped, and the one in the standing gate was the one that was wrong.** Run all four steps. In order.
+
+```bash
+# 0.  Is it already known?  Never harvest what you carry.
+make carried SLUG=owner/repo
+make claims  TOKEN=<the-vocabulary-you-are-about-to-call-absent>
+
+# 1.  REF + SHA in one request.  Never guess `main`.
+git ls-remote --symref https://github.com/owner/repo HEAD
+
+# 2.  Read the grant FIRST-HAND, down the whole ladder (40 paths x refs).
+#     A 404 at LICENSE is ABSENT-AT-THE-PATH-PROBED, not grantless.
+compose/code/p229-grant-ladder-reach/ladder.sh slugs.txt out/
+
+# 3.  FOUR readers, because one is not enough:
+cd compose/code/lib && . ./license_family.sh
+family_of         "$(cat out/repo.A.body)"  # the family
+commercial_use_ok "$(cat out/repo.A.body)"  # EXIT CODE: 0 = ALLOWED, 1 = RESTRICTED
+holder_of         "$(cat out/repo.A.body)"  # P241: Apache BOILERPLATE does carry one
+
+cd -   # the two newer axes are python, and each prints its own verdict
+python3 -I compose/code/p240-grant-language/grant_language.py out/repo.A.body
+python3 -I compose/code/p241-blanket-denial/blanket_denial.py out/repo.A.body
+
+# is the ROOT grant narrowed by an addition?  p1054 has no CLI -- call classify():
+python3 -I -c "import sys; sys.path.insert(0,'compose/code/p1054-mit-plus-clause'); \
+import mit_plus; print(mit_plus.classify(open('out/repo.A.body').read()))"
+
+# and the whole offline battery at once:
+make hooks
+```
+
+| the question | the reader | 🔴 the failure it prevents |
+|---|---|---|
+| which family? | `family_of` | — |
+| may we sell it? | `commercial_use_ok` | 🔴 returned **ALLOWED** on two English payloads granting nothing, until `p241` |
+| is it in a script we can read? | [`p240-grant-language`](code/p240-grant-language/) | a non-English restriction read as permission |
+| **did it grant ANYTHING?** | [`p241-blanket-denial`](code/p241-blanket-denial/) | 🔴 *"NO PERMISSION is granted"* / *"Proprietary Software License"* read as permission |
+| is the root grant **narrowed**? | [`p1054-mit-plus-clause`](code/p1054-mit-plus-clause/) | 🔴 a bare `MIT` published over a **non-commercial `data/` carve-out** |
+| who holds it? | `holder_of` | an INHERITED licence mistaken for a granted one *(`P184`)* |
+| is it a lure? | [`p238-lure-signature`](code/p238-lure-signature/) | a deliberately mislabelled repo that passes a first-hand grant read |
+
+**Three stop conditions, from this pass's own measurements:**
+
+- 🔴 **`UNCLASSIFIED` is a FINDING, never a default-to-MIT** *(`T104`)*. Both headline payloads were `UNCLASSIFIED` **and** denied everything.
+- 🔴 **`"private": true` with no `license` field in a manifest is NOT a grant.** `5` of `5` tierC hits this pass. npm's non-publication marker.
+- 🔴 **A root `MIT` says nothing about `data/`, `assets/` or a vendored subtree.** `5` of `25` payloads carried additions the bare family drops; `3` were real *(non-commercial data, a trademark, an `Apache-2.0` subtree)*.
+
+🟡 **And the meta-rule the pass earned: a correct instrument that is not in `make hooks` is not a control, it is a document.** `p1054` classified this correctly from pass `188` and never ran in the gate, because its suite died under the invocation its own docstring prescribed. **Check that your gate RUNS, from the directory a hook runs in.**
+
 ## Pass 240 — 2026-10-16 — THREE RECIPES ON THE REGIONS `p239` LEFT UNMEASURED, PLUS A **THIRD GATE BUILT, TESTED AND WIRED** IN THE SAME PASS — `29`/`29` CONTROLS, AND IT REFUSES A PAYLOAD THIS KB'S OWN CLASSIFIER CLEARED
 
 🟢 Every repository named below has its grant **read first-hand** and its head **pinned** in [`p240-verified-rows`](../evidence/p240-verified-rows.2026-10-16-p240.tsv). 🔴 **Repositories a studio would reach for first are named as withheld, with the reason, rather than omitted.**

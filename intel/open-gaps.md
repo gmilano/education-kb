@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 241 — 2026-10-16 — `ACTION VO` DISCHARGED AS A CENSUS, AND THE CENSUS FOUND THAT THIS KB ALREADY OWNED A CORRECT CLASSIFIER THAT `make hooks` HAS NEVER RUN
+
+🔵 **Evidence:** [`p241-matcher-census`](../evidence/p241-matcher-census.2026-10-16-p241.tsv) · [`p241-cross-instrument-agreement`](../evidence/p241-cross-instrument-agreement.2026-10-16-p241.tsv) *(25 payloads)* · [`p241-classifier-defect`](../evidence/p241-classifier-defect.2026-10-16-p241.tsv) · [`p241-holder-form`](../evidence/p241-holder-form.2026-10-16-p241.tsv) · [`p241-queries`](../evidence/p241-queries.2026-10-16-p241.tsv) · [`p241-websearch`](../evidence/p241-websearch.2026-10-16-p241.tsv)
+
+### 🟢 Actions discharged this pass
+
+| action | registered | verdict |
+|---|---|---|
+| 🟢 **`VO`** *(when a defect is found in a matcher, census every matcher — don't fix the one that fired)* | p240 | 🟢 **DISCHARGED.** `122` matchers decide a permission question; `67` carry a restriction vocabulary; `10` have a default-permit exit; 🔴 **`7` have both — the defect shape — and exactly `1` is in `make hooks`: the shared classifier that fired.** 🔵 **And the census's real finding is not in its own table — see `T241-C2`** |
+| 🟢 **`VR`** *(record distinct owners beside `total_count`)* | p240 | 🟢 **DISCHARGED AND HONOURED on all `3` harvests.** It immediately earned its keep: `topic:ferpa` is `23` owners with `5` rows from each of two of them, while `topic:k12 topic:ai` is `12` owners for `12` rows. 🟢 **The concentration is BENIGN — `p238`'s lure gate returns `CLEAR` on all `12` candidates tested — which is the twin `p240` predicted** |
+| 🟡 **`VI`** *(the claims gate binds DISCOVERY actions too)* | p240 | 🟢 **HONOURED, and it paid.** `11` of `31` statute-axis candidates were already carried *(`35`%)*. The gate refused them instead of the shelves — including the harvest's biggest hit, `62`★ `SirhanMacx/Claw-ED` |
+| 🟡 **`UK`** *(a channel returning `0` may be published only as "this channel returned `0`")* | p235 | 🟢 **HONOURED.** EMEA and LATAM are published as **NOT MEASURED — `0` harvests run**, never as an absence of supply |
+| 🟡 **`UF`** *(name the control that makes each declared absence establishable)* | p234 | 🟢 **HONOURED** — see the absences table below |
+
+### 🔴 The `3` defects found, fixed and controlled inside the pass
+
+| # | defect | status |
+|---|---|---|
+| 1 | 🔴 **`commercial_use_ok` returned `ALLOWED` on two ENGLISH payloads that grant nothing** *(`688` B "NO PERMISSION is granted"; `2 833` B "Proprietary Software License")*. 🔴 **`p240-grant-language` returns `LATIN-SCRIPT` on both — it CERTIFIES the token match over the payloads that defeat it** | 🟢 **FIXED.** [`p241-blanket-denial`](../compose/code/p241-blanket-denial/), `104` controls, wired into `make hooks`; shared classifier `217` → `238` |
+| 2 | 🔴 **`holder_of` answered *"holder not in the license text by construction"* on an `Apache-2.0` payload whose line `5` is `Copyright 2026 Ashutosh Rana`.** `P255` gated on the FAMILY; the ASF **boilerplate** form inverts its premise | 🟢 **FIXED**, gated on the FORM, with the unfilled template `[yyyy] [name of copyright owner]` explicitly excluded |
+| 3 | 🔴 **`p1054-mit-plus-clause` has classified the carve-out case correctly since pass `188`, and `make hooks` never ran it** — its suite died under `python3 -I`, the exact invocation its own docstring prescribes (`p355-cwd-portability`). `53` passes later the shared classifier published bare `MIT` over a non-commercial `data/` carve-out | 🟢 **FIXED and WIRED.** `14`/`14` under `-I` from any directory |
+
+🟢 **Blast radius measured rather than assumed: `0` published rows flip.** The new branch is gated on `UNCLASSIFIED`, and no shelf cell pairs `UNCLASSIFIED` with a permissive verdict — `T104` already forbade it. 🔵 **The defect never corrupted a published permissive row; it corrupted the `commercial` field on rows being withheld anyway — and it was still `p240`'s headline column.**
+
+### 🟢 Absences published this pass, each with its control *(`ACTION UF`)*
+
+| absence | control that makes it establishable | status |
+|---|---|---|
+| 🟢 **No EMEA or LATAM supply measurement this pass** | 🟢 **`0` harvests scoped to either region — stated as unrun, not as absent.** `ACTION UK` satisfied by construction | 🟢 **ESTABLISHABLE** *(as an unrun leg)* |
+| 🟢 **No new finding from the mandated WebSearch leg** | All `9` offered findings put through `make claims` individually, with the carrying file counts recorded in [`p241-websearch`](../evidence/p241-websearch.2026-10-16-p241.tsv) | 🟢 **ESTABLISHABLE** |
+| 🟢 **No education agent publishing measured LEARNING outcomes under a usable grant** | `GrizzDog-AI`'s `27` vectors measure LLM security, not learning; `ai-teacher-copilot` ships traceability, not scores; `p240`'s best-measured candidate ships no grant | 🟢 **ESTABLISHABLE** — `ACTION VA` narrows, does not discharge |
+| 🔴 **No APAC education absence of any kind** | 🔴 **English `topic:` scope ONLY. No CJK query has ever been run from these shelves** — this pass's `4` APAC rows arrived through English topics, which is reach, not coverage | 🔴 **NOT ESTABLISHABLE.** `ACTION UL`, unchanged |
+| 🔴 **No claim that the `7` defect-shape matchers are the only ones** | 🔴 **The census is a STATIC signature match over `.py`/`.sh`. It cannot see a matcher whose default-permit path is expressed differently** | 🔴 **NOT ESTABLISHABLE as exhaustive** — stated as a lower bound |
+
+### 🟡 Actions registered by p241
+
+| action | what it requires |
+|---|---|
+| 🔴 **`VW`** | 🔴 **THE ONE THIS PASS EARNED: a correct instrument that is not in `make hooks` is not a control, it is a document.** Audit every instrument in `compose/code/` for whether its suite runs **under `-I` from outside its own directory**, and wire in the ones that classify. `p1054` cost `53` passes; `p1056-split-scope-licence` and `p627-multi-grant-repo` are also outside the gate and unaudited |
+| 🟡 **`VS`** | **Refines standing `ACTION TQ`: the holder sweep must key on the licence FORM, not the family.** Every `Apache-2.0` row on these shelves whose payload is under ~`2` kB may have a recoverable holder `holder_of` has been declining to read |
+| 🟡 **`VT`** | The grant ladder must emit **`MANIFEST-NO-LICENCE-FIELD`** for a tierC hit whose manifest carries no `license`. `5` of `5` tierC hits this pass were `"private": true` with no licence, all recorded as `FOUND` — a state a later pass can misread as a permission |
+| 🟡 **`VU`** | **Sweep the K-12 tutor rows for relicensing**, keying on a `LICENSE` payload that names **two licences and a date**. `snflwr-ai/snflwr.ai` went `AGPL-3.0` → proprietary on `2026-09-18`; no instrument here looks for that shape |
+| 🟡 **`VV`** | **Record the CHANNEL beside the sort key in every query-evidence table.** The GitHub search API is `403` via `curl` and `200` via the MCP server from the same environment. 🔴 **Eight passes of "GitHub Trending went unqueried" may have been measuring the TRANSPORT, not the channel** |
+| 🟡 **`VX`** | **Rank the discovery axes instead of guessing them.** Measured this pass: statute vocabulary `35`% already-carried; product vocabulary (`topic:k12 topic:ai`) `12`/`12` on-topic, `11`/`12` new. Harvest by product vocabulary first and record each axis's rediscovery rate |
+
+### 🔴 Actions carried unchanged, none run this pass
+
+🔴 **`UX`** *(EMEA regulation from a primary regulator source — **NINTH** pass; this pass's EMEA search returned the correct Omnibus deferral AND the superseded `2026-08-02` date in the SAME response)* · 🔴 **`UL`** *(no CJK query ever run)* · 🔴 **`TQ`**'s retroactive holder sweep *(**seventh** pass unrun, now widened by `VS`)* · 🔴 **`TW`** *(the zod empty-subject check is READ, not EXECUTED)* · 🟡 **`UM`** *(`carried()` indexes `github.com` slugs only — a PyPI/npm/Maven coordinate is invisible to the gate)* · 🟡 **`UN`** *(resolve the AI Act date against the Official Journal text itself; `eur-lex.europa.eu` is still `000` from here)* · 🟡 **`UA`** *(namespaces unread)* · 🟡 **`UD`** *(`edugit.org` for AlekSIS)* · 🟡 **`UE`** *(the remaining `svws-nrw` repositories)* · 🟡 **`UJ`** *(licence-ask on the `3` live UNGRANTED LATAM rows)*
+
+### 🔜 Registered for p242, with falsifiers
+
+| # | what to do | falsifier |
+|---|---|---|
+| 1 | 🔴 **Run `ACTION VW`** — the `-I`-portability audit across all `333` instruments | 🔴 **Falsified if fewer than `3` classifying instruments are found outside the gate.** `p1054`, `p1056` and `p627` are already three candidates, so a result of `0`–`2` means the audit was run wrong |
+| 2 | 🟢 **Measure EMEA and LATAM supply, which `p241` did not** | 🔴 **Falsified if either harvest is published as an absence rather than as a measurement.** `p240` got `86.7`% on-topic for LATAM with `topic:` scope — an unscoped repeat is a regression, not a measurement |
+| 3 | 🟡 **Run `ACTION VX`**: harvest by product vocabulary and record the rediscovery rate per axis | 🔴 **Falsified if the pass publishes a new axis without a rediscovery rate beside it** |
+| 4 | 🟡 **Run `ACTION VU`**: the relicensing sweep over K-12 tutor rows | 🔴 **Falsified if it reports `0` without naming the payload shape it searched for** |
+| 5 | 🔴 **Run ONE CJK query** *(`学校管理`, `学習管理システム`, `학교 관리 시스템`)* and close `ACTION UL` or state why not | 🔴 **Falsified by a ninth APAC absence published off English-only evidence** |
+
 ## Pass 235 — 2026-10-16 — `ACTION UG` DISCHARGED AS A STANDING GATE, AND ITS FIRST RUN OVERTURNED `5` CELLS ON `2` SHELVES
 
 🔵 **Evidence:** [`p235-carried-index`](../evidence/p235-carried-index.2026-10-16-p235.tsv) *(`1 913` rows)* · [`p235-case-collisions`](../evidence/p235-case-collisions.2026-10-16-p235.tsv) *(`51`)* · [`p235-duplication-ledger`](../evidence/p235-duplication-ledger.2026-10-16-p235.tsv) · [`p235-screen-false-positives`](../evidence/p235-screen-false-positives.2026-10-16-p235.tsv) *(`17`)* · [`p235-latam-verify`](../evidence/p235-latam-verify.2026-10-16-p235.tsv) · [`p235-registry-latam`](../evidence/p235-registry-latam.2026-10-16-p235.tsv) · [`p235-queries`](../evidence/p235-queries.2026-10-16-p235.tsv)

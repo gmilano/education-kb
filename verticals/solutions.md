@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 241 — 2026-10-16 — THE PLATFORM CENSUS IS UNCHANGED, AND THE PASS'S VERTICAL FINDING IS ABOUT **WHAT YOU MAY SELL AROUND ONE**: A ROOT `MIT` CAN CARVE OUT A SINGLE FILE, AND ONLY ONE INSTRUMENT IN THIS KB WAS READING FOR IT
+
+🔵 **Evidence:** [`p241-cross-instrument-agreement`](../evidence/p241-cross-instrument-agreement.2026-10-16-p241.tsv) *(25 payloads)* · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv) · [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv)
+
+### 🔵 The platform layer, carried forward unchanged
+
+🟢 **No new platform row this pass and no correction to the existing census.** The customisable hosts a studio builds AI on top of stand as recorded:
+
+| Platform | Licence | Layer | Note carried |
+|---|---|---|---|
+| **Moodle** | `GPL-3.0` | LMS | 🔴 `p240`: the plugin estate is `16`/`16` `GPL-3.0`, read first-hand. **Do not sell a Moodle plugin as a proprietary deliverable** |
+| **Open edX** | `AGPL-3.0` | LMS / MOOC | Network copyleft; `Tutor` remains the deployment path |
+| **Canvas LMS** | `AGPL-3.0` | LMS | Community edition carries the core |
+| **OpenEduCat** | `LGPL-3.0` | Education **ERP** *(admissions, attendance, gradebook, fees)* | The closest thing to "Odoo for education" |
+| **Sakai** | `ECL-2.0` *(Apache-derived)* | LMS | 🔵 `ECL` is not `Apache-2.0`; these shelves classify it separately |
+| **OpenOLAT** | `Apache-2.0` | LMS | 🟢 One of the few genuinely permissive hosts |
+| **Chamilo** · **ILIAS** | `GPL-3.0` | LMS | |
+| **Kolibri** | `MIT` | Offline-first learning | 🟢 Permissive AND offline — still the best base for a connectivity-constrained engagement |
+| **BigBlueButton** · **H5P** | `LGPL-3.0` / `MIT` | Conferencing / interactive content | |
+
+🔴 **The WebSearch leg re-offered this whole list this pass and added nothing**, confirming only that the copyleft-dominance finding is stable: **no MIT-licensed full LMS exists at this KB's reach**, and `OpenOLAT` plus `Kolibri` remain the permissive exceptions.
+
+### 🔴 `T241-I` — a root `MIT` is not a repository-wide `MIT`, and the gate was not reading for it
+
+🔵 **[`savvides/edtechfounderstack`](https://github.com/savvides/edtechfounderstack) — an AI-friendly knowledge base for edtech founders, built by **ASU ScaleU** — serves a `1 408` B `LICENSE` whose MIT body is verbatim and unnarrowed, followed by:**
+
+> *"Exception: `data/operator-lessons.md` is **NOT** covered by the MIT license above. Those lessons are paraphrased from the free public archive of Lenny's Podcast and Lenny's Newsletter and may be used for **personal, non-commercial purposes only**… Do not reuse that file commercially."*
+
+| reader | verdict |
+|---|---|
+| `family_of` *(the SHARED classifier, in `make hooks`)* | 🔴 **`MIT`** — publishable |
+| `p1054-mit-plus-clause` *(pass `188`, **not** in `make hooks` until this pass)* | 🟢 **`NOT-OPEN-SOURCE:added-restriction`**, hit `non-commercial`, excess `258` B |
+
+🟢 **The commercial answer is precise and useful: the repository IS usable in a commercial engagement with `data/operator-lessons.md` excluded.** 🔵 **That sentence is only sayable because `p1054` was wired into the gate this pass** — before it, these shelves would have published a bare `MIT` and a studio would have shipped a non-commercial file.
+
+🟡 **The general rule for the vertical layer, and it is the one that matters when you build ON a platform:** 🔴 **a permissive ROOT licence says nothing about `data/`, `assets/`, `content/` or a vendored subtree.** Measured on this pass's `25` payloads: `5` carry additions the bare family drops, and `3` of the `5` are real — a non-commercial data carve-out, a **trademark** carve-out (`inquiredu/a-mn-hackathon`, `assets/mngaia-mark.png`), and an `Apache-2.0` subtree with its own `NOTICE` (`ichangting/taotao-skills`).
+
+🔵 **Which is the same lesson the LMS layer teaches from the other end**: `p240` found the Moodle plugin estate uniformly `GPL-3.0` because *content and code travel together*. Here the licence splits along the same seam — and the seam is where a deliverable gets built.
+
+### 🟢 What a studio may sell around a platform, restated with this pass's evidence
+
+- 🟢 **Sell the service.** Configuration, hosting, migration and integration of a `GPL`/`AGPL` estate are unaffected by copyleft, and `p240` measured the maintenance market as thin *(`23` of `30` plugin rows from two accounts)*.
+- 🟢 **Sell the layer BESIDE the host.** Every permissive row this pass placed sits outside the LMS boundary: compliance records, identity-scoped retrieval, records de-duplication, offline delivery.
+- 🔴 **Read the carve-out before you quote.** `data/` and `assets/` are where the root grant stops, and `make hooks` now checks for it.
+
 ## Pass 240 — 2026-10-16 — THE MOODLE PLUGIN ESTATE IS THE LARGEST CUSTOMISATION SURFACE ON THIS SHELF AND IT IS `GPL-3.0` END TO END: `16` OF `16` GRANTS READ FIRST-HAND, `0` PERMISSIVE — SO THE SEAM A STUDIO SELLS AT IS **BESIDE** THE PLUGIN BOUNDARY, NOT INSIDE IT
 
 🟢 **The customisation layer of this shelf's most-recommended platform is measured rather than assumed.** 🔴 **`0` of `16` grants permissive.** 🟡 **One new permissive platform row placed — an offline school-operations system, which is where LATAM's permissive supply actually sits.**

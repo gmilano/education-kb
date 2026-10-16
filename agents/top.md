@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 241 — 2026-10-16 — `p240` READ ITS OWN DEFECT AS **LANGUAGE**; IT IS WIDER. THE SAME FUNCTION RETURNS **ALLOWED** ON TWO PAYLOADS WRITTEN IN **ENGLISH** THAT GRANT NOTHING — AND `p240`'s NEW GATE CERTIFIES THAT THE ENGLISH TOKEN MATCH **APPLIES** TO BOTH
+
+⏱️ **TENTH pass of `2026-10-16`.** p232–p240 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`16` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported. 🟢 **`6` of the `16` are North America — the gap `p240` declared as its own.** 🟢 **`ACTION VO` DISCHARGED as a census, not as a fix.** 🟢 **Three instrument defects found, fixed and controlled inside the pass** — `238`/`238` on the shared classifier *(was `217`)*, a new `104`-control instrument, and `p1054` wired into `make hooks` for the first time since pass `188`. 🔴 **`15` rows withheld, every payload read.** 🔴 **The WebSearch leg produced `0` new rows and `0` corrections for a THIRD pass.**
+
+🔵 **Evidence:** [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv) *(16 slugs, grant + bytes + pinned head + per-row region basis)* · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv) *(15 rows)* · [`p241-classifier-defect`](../evidence/p241-classifier-defect.2026-10-16-p241.tsv) · [`p241-matcher-census`](../evidence/p241-matcher-census.2026-10-16-p241.tsv) · [`p241-cross-instrument-agreement`](../evidence/p241-cross-instrument-agreement.2026-10-16-p241.tsv) *(25 payloads)* · [`p241-holder-form`](../evidence/p241-holder-form.2026-10-16-p241.tsv) · [`p241-queries`](../evidence/p241-queries.2026-10-16-p241.tsv) · [`p241-websearch`](../evidence/p241-websearch.2026-10-16-p241.tsv) · **instrument:** [`compose/code/p241-blanket-denial/`](../compose/code/p241-blanket-denial/)
+
+### 🔴 `T241-A` — the headline: `commercial_use_ok` returned **ALLOWED** on two English payloads that grant nothing
+
+Both read first-hand from this pass's `topic:ferpa` harvest:
+
+| slug | 🔴 grant *(bytes)* | the operative clause |
+|---|---|---|
+| [`Samielakkad/AI-EdTech-Sovereign-School-OS`](https://github.com/Samielakkad/AI-EdTech-Sovereign-School-OS) | `688` B · `main` · `520bbd2e806f` | *"**NO PERMISSION is granted** to use, copy, modify, merge, publish, distribute, sublicense, sell, train machine-learning models on, or create derivative works from any part of this repository — for personal, academic, or **commercial** purposes — WITHOUT the author's explicit prior WRITTEN permission."* |
+| [`snflwr-ai/snflwr.ai`](https://github.com/snflwr-ai/snflwr.ai) | `2 833` B · `main` · `7feea47e4759` | *"snflwr.ai — **Proprietary Software License** / All rights reserved."* |
+
+| | before `p241` | after `p241` |
+|---|---|---|
+| `osi_family_of` | 🟢 `UNCLASSIFIED` *(correct — both are bespoke)* | 🟢 `UNCLASSIFIED` |
+| `commercial_use_ok` | 🔴 **`ALLOWED`** on both | 🟢 **`RESTRICTED`** on both |
+| `family_of` | 🔴 `UNCLASSIFIED` | 🟢 **`NONCOMMERCIAL-NOT-OSI`** |
+
+🔵 **Neither payload contains `non-commercial`, `noncommercial`, `not-for-profit` or `obtain a commercial license`.** The first uses the word *commercial* **inside a denial**; `p240`'s token list only knows it inside the compound. The second never uses it.
+
+### 🔴 `T241-A2` — and `p240`'s new gate affirmatively clears both
+
+🔴 **[`p240-grant-language`](../compose/code/p240-grant-language/) returns `LATIN-SCRIPT` on both payloads** — a verdict whose own documented meaning is *"🟢 the English/Latin token match applies"*. It certifies the matcher over the two payloads that defeat it.
+
+🔵 **`p240`'s language axis was real and its fix stands.** What `p240` got wrong was the CLASS. It wrote *"a token list is a closed vocabulary over an open world"* and then built an instrument along the **script** axis — which answers *can this be read?* and not *was anything granted?*
+
+> 🔴 **The class is: every one of these matchers enumerates ways of saying "restricted" and treats the absence of its own vocabulary as permission.** A denial it has not seen before reads as a grant.
+
+### 🟢 `T241-A3` — the fix asks what a licence exists to answer
+
+[`p241-blanket-denial`](../compose/code/p241-blanket-denial/) does not enumerate restrictions. It asks **does this payload grant anything at all?** — `MIT` says *permission is hereby granted*, `BSD` says *permitted provided that*, `Apache-2.0` says *hereby grants*, `GPL` says *this program is free software*.
+
+| verdict | meaning |
+|---|---|
+| `GRANT-PRESENT` | 🟢 a grant verb is present — the token matchers may be trusted here |
+| `BLANKET-DENIAL` | 🔴 an explicit denial fired, **or** rights are reserved with no grant anywhere |
+| `NO-GRANT-LANGUAGE` | 🔴 neither — **a refusal to clear**, never a permission |
+
+🟡 **The one false-positive mode, and the discriminator.** `All rights reserved.` is a line in `BSD-2`, `BSD-3` and many `MIT` headers — *followed by a grant*. So it **never convicts alone**: only in the absence of any grant verb. Positive control read first-hand: `scipy/scipy` `LICENSE.txt` *(`1 531` B · `5363aec376a7`)* carries the line **and** grants, and stays `ALLOWED`.
+
+🟢 **`104`/`104` controls**, including cross-instrument agreement against the shell branch (`p637`). 🟢 **The shared classifier went `217` → `238`.** 🔵 **And the complementarity is controlled by `p240`'s own payload: `OpenGaokao` is `NO-GRANT-LANGUAGE` here — refused correctly by an instrument that cannot read a word of Chinese.**
+
+🟢 **Blast radius, measured rather than assumed: ZERO published rows flip.** The branch is gated on `UNCLASSIFIED`, and no shelf cell pairs `UNCLASSIFIED` with a permissive verdict — `T104` *("treat `UNCLASSIFIED` as the finding, never as a default-to-MIT")* already forbade it. 🔵 **The defect never corrupted a published row; it corrupted the `commercial` field on rows that were being withheld anyway. It was still `p240`'s headline column.**
+
+### 🟢 `T241-C` — `ACTION VO` discharged, and the census's finding is not in its own table
+
+`p240` registered: *"when a defect is found in a **matcher**, the discharge is a census of every matcher in `compose/code/`, not a fix of the one that fired."*
+
+| measurement | value |
+|---|---|
+| matchers deciding a **permission** question | `122` |
+| of those, carrying a restriction **vocabulary** | `67` |
+| of those, with a **default-permit** exit | `10` |
+| 🔴 **BOTH — the defect shape** | **`7`** |
+| of the `7`, wired into `make hooks` | 🔴 **`1`** — `lib/license_family.sh`, the shared classifier, the one that fired |
+
+🔵 **The other `6` are pass-local and archival** *(`p120` ×3, `p121`, `p207`, `p217`)*. 🟢 **So the shared classifier was the right thing to fix — but the census found something the fix could not have.**
+
+### 🔴 `T241-C2` — this KB ALREADY OWNED the correct classifier, and it was not in the gate
+
+🔴 **[`p1054-mit-plus-clause`](../compose/code/p1054-mit-plus-clause/), written at pass `188`, classifies the carve-out case correctly — and `make hooks` never ran it.** Measured over this pass's `25` first-hand payloads:
+
+| payload | `family_of` *(SHARED, in hooks)* | `p1054` *(was NOT in hooks)* | excess |
+|---|---|---|---|
+| 🔴 [`savvides/edtechfounderstack`](https://github.com/savvides/edtechfounderstack) | 🔴 **`MIT`** | 🟢 **`NOT-OPEN-SOURCE:added-restriction`** *(hit: `non-commercial`)* | `258` B |
+| [`ichangting/taotao-skills`](https://github.com/ichangting/taotao-skills) | `MIT` | `MIT-BODY-PLUS:unclassified-addition` | `221` B |
+| [`inquiredu/a-mn-hackathon`](https://github.com/inquiredu/a-mn-hackathon) | `MIT` | `MIT-BODY-PLUS:unclassified-addition` | `118` B |
+| `manzanillo/ai-unplugged` · `deeding2030-boop/bestteach` | `MIT` | `MIT-BODY-PLUS:unclassified-addition` | `100` B · `6` B *(trailing whitespace — not real additions)* |
+
+🟢 **`1` verdict-changing disagreement and `5` of `25` where the shared classifier's bare family silently drops what `p1054` recovers.** 🔴 **And the mechanical reason it was never wired in is the one the `Makefile`'s own header names**: its suite died under `python3 -I` — the exact invocation its own docstring prescribes — because `-I` strips the script's directory from `sys.path` (`p355-cwd-portability`). It passed `14`/`14` from its own folder and `ModuleNotFoundError` from anywhere else. 🟢 **Fixed and wired; `make hooks` now runs it.**
+
+🟡 **`ACTION VW` — the census generalises: a correct instrument that is not in `make hooks` is not a control, it is a document.** Audit every instrument in `compose/code/` for whether its suite runs under `-I` from outside its own directory, and wire the ones that classify.
+
+### 🟢 `T241-D` — the pass's agent rows
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | Region | One line |
+|---|---|---|---|---|---|
+| **GrizzDog-AI** | [`daTechGuy/GrizzDog-AI`](https://github.com/daTechGuy/GrizzDog-AI) | 🟢 **`MIT`** *(`1 075` B · `main` · `2f39c4f87cca`)* | 0 | 🟢 **North America** *(README: Butler Community College, Andover Campus, Andover **Kansas**; NSA/DHS **CAE-CD** designated programme named 14×)* | A cybersecurity-curriculum lab for an accredited US community-college programme: LLM prompt-injection and indirect-injection defence, guardrail architectures, FERPA data privacy, taught through Red/Blue exercises. 🟢 **`27` benchmark attack vectors mapped to OWASP LLM01–LLM07 and MITRE ATLAS AML.T0051–T0057, exported as Canvas reports** |
+| **taotao-skills** | [`ichangting/taotao-skills`](https://github.com/ichangting/taotao-skills) | 🟢 **`MIT`** *(`1 371` B · `main` · `4d6f67f4d88b`)* · 🟡 **plus an `Apache-2.0` subtree** | 18 | 🟢 **APAC** *(LICENSE and README in Chinese; 中考 ×27, 初中语文 — PRC middle-school curriculum)* | `12` teacher skills for PRC middle-school Chinese: lesson prep, tiered instruction, 中考 exam prep, 文言文/古诗词, pedagogical writing. 🟡 **`skills/k12-lesson-planning-zh` derives from Anthropic's `k12-teacher-skills` (`Apache-2.0`) and carries its own `LICENSE` + `NOTICE` in-directory — both halves permissive, and the `NOTICE` obligation rides the subtree** |
+| **ai-teacher-copilot** | [`HoangNam2464/ai-teacher-copilot`](https://github.com/HoangNam2464/ai-teacher-copilot) | 🟢 **`MIT`** *(`1 076` B · `main` · `ead83d2f94ca`)* | 0 | 🟢 **APAC** *(Vietnamese-language README, `584` diacritic hits, "giáo viên" ×8)* | K-12 lesson plans and **Bloom-taxonomy** quizzes generated from a teacher's own documents, with **citation traceability** back to the source. 🔵 **Directly in scope of Vietnam's Decision `33/2026/QĐ-TTg`, which these shelves have carried since `p138` and whose education high-risk list covers automated assessment** |
+| **regulated-ai-governance** | [`ashutoshrana/regulated-ai-governance`](https://github.com/ashutoshrana/regulated-ai-governance) | 🟢 **`MIT`** *(`1 070` B · `main` · `664a753aa460`)* | 1 | 🟢 **Global** *(README names GDPR, FERPA, Singapore, Korea, EU AI Act, Brazil, Japan, India)* | Policy enforcement for agents in regulated environments, as **framework adapters for CrewAI, AutoGen, LangChain, Semantic Kernel and Haystack** rather than a framework of its own |
+| **voice-ai-governance** | [`ashutoshrana/voice-ai-governance`](https://github.com/ashutoshrana/voice-ai-governance) | 🟢 **`MIT`** *(`1 070` B · `main` · `a24efbc61bb7`)* | 2 | 🟢 Global *(FERPA + EU AI Act)* | Compliance middleware for voice pipelines: warm-transfer state, PII scrubbing, **confidence-gated escalation** for Pipecat / LiveKit / Twilio |
+
+🟡 **`ACTION VA` — *"still no education-agent eval harness"* — narrows a second time and still does not discharge.** `GrizzDog-AI` ships `27` benchmark attack vectors with published taxonomy mappings, but it measures **LLM security**, not learning; `ai-teacher-copilot` ships citation traceability, which is an auditability property, not a score. 🔴 **No education agent on these shelves yet publishes measured learning outcomes under a grant a studio may use** — `p240`'s best-measured candidate (`Elia43/DataPilot`, RAGAS `0.97`) still ships no grant at all.
+
+### 🔴 `T241-E` — the `topic:ferpa` axis is `35`% rediscovery, and the product axis is not
+
+| harvest | `total_count` | distinct owners *(page 1)* | max rows from one owner | NEW after the carried gate |
+|---|---|---|---|---|
+| `topic:ed-fi` | `4` | `4` | `1` | `2` of `4` |
+| `topic:ferpa` | `38` | `23` | 🔴 **`5`** *(`mizcausevic-dev`; `ashutoshrana` also `5`)* | `18` of `31` |
+| 🟢 `topic:k12 topic:ai` | `12` | 🟢 **`12`** | 🟢 **`1`** | `11` of `12` |
+
+🔵 **`11` of `31` candidates on the statute axis were already carried — including `chaz-clark/canvas-toolbox`, `virtualryder/edu-ai-agents`, `Polycentric-Labs/regrails`, `ZachRouan/district-brain` and `Principled-Evolution/gopal`.** 🟢 **That is `ACTION VI` working**: `p238` warned the statute words were contaminated, `p239` harvested them anyway, and the gate caught the repeats instead of the shelves. 🟢 **The `topic:k12 topic:ai` axis returned `12` of `12` on-topic at `12` distinct owners and produced the pass's best rows, including the `62`★ `SirhanMacx/Claw-ED` — which the gate correctly refused as already carried.**
+
+🟡 **`ACTION VR` honoured** *(`p240`)*: distinct owners and max-rows-per-owner recorded beside `total_count` in [`p241-queries`](../evidence/p241-queries.2026-10-16-p241.tsv) for every harvest. 🔵 **And the owner concentration here is the BENIGN twin `p240` predicted — `p238`'s lure gate returns `CLEAR` on all `12` candidates tested. `mizcausevic-dev` and `ashutoshrana` are prolific authors, not a lure farm.**
+
+### 🔴 `T241-F` — the WebSearch leg produced `0` new rows for a third pass, and reproduced two defects verbatim
+
+🔵 Four global searches and one per region, run as mandated. 🔴 **Every finding they offered is already carried**, and the carried gate was run on each rather than assumed: `AB 1159` *(20 files)*, `SB 1227` *(17)*, `H.R. 8747` *(16)*, `STUDENTS FIRST` *(12)*, the NYC K-8 moratorium *(11)*, `134 bills` *(13)*, Ipsos *(12)*, the UNESCO Observatory *(13)*, `TALIS` *(16)*.
+
+| the channel offered | what these shelves already record |
+|---|---|
+| 🔴 *"From 2 August 2026, the AI Office and national authorities started to enforce the AI Act"*, with education access/assessment as high-risk | 🔴 **At least the FIFTH recorded re-service of the superseded date.** Annex III education high-risk applies **`2027-12-02`** under `Reg. (EU) 2026/1744`; `2026-08-02` is Article `50` transparency, a different obligation. 🟡 **The same search ALSO returned the correct Omnibus deferral — the channel served both the right answer and the trap in one response** |
+| 🔴 UNESCO IESALC's `87`%/`26`% as *2026* data | 🔴 **The same working paper, fielded August–October `2025`. Identical misdating to `p239` AND `p240` — a third consecutive verbatim recurrence** |
+
+🟢 **`T10` holds for a further pass, and the reading is unchanged: this KB's regulatory shelf is ahead of the English WebSearch channel, and the channel's cost is re-verification, not discovery.**
+
 ## Pass 240 — 2026-10-16 — THE SHARED LICENCE CLASSIFIER'S COMMERCIAL BRANCH IS **MONOLINGUAL**, AND `p217` NAMED THAT DEFECT CLASS `23` PASSES AGO ON A DIFFERENT INSTRUMENT — THE CORRECTION NEVER TRAVELLED, AND THE FIRST NON-ENGLISH GRANT THESE SHELVES EVER READ WALKED STRAIGHT THROUGH IT
 
 ⏱️ **NINTH pass of `2026-10-16`.** p232–p239 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

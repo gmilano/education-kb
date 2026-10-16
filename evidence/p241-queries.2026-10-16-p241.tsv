@@ -1,0 +1,4 @@
+query	channel	sort	order	total_count	page_size	distinct_owners_page1	max_rows_one_owner	on_topic_page1	new_after_carried_gate	published
+topic:ed-fi pushed:>2026-01-01	GitHub search via MCP	updated	desc	4	30	4	1	4/4	2	0
+topic:ferpa pushed:>2026-01-01	GitHub search via MCP	updated	desc	38	30	23	5 (mizcausevic-dev; ashutoshrana also 5)	30/30	18	10
+topic:k12 topic:ai pushed:>2026-06-01	GitHub search via MCP	updated	desc	12	30	12	1	12/12	11	6

@@ -1,0 +1,3 @@
+slug	path	bytes	head_sha	apache_form	holder_before	holder_after
+ashutoshrana/ferpa-haystack	LICENSE	742	914154573fc5	BOILERPLATE (no "TERMS AND CONDITIONS FOR USE" header)	NOT-APPLICABLE (Apache-2.0: holder not in the license text by construction) - FALSE	Copyright 2026 Ashutosh Rana
+ashutoshrana/haystack-ferpa-filter	LICENSE	12101	5f87c548960b	FULL TEXT	NOT-APPLICABLE (holder not in the license text by construction)	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)

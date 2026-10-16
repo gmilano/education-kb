@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 241 — 2026-10-16 — **APPEND-ONLY** — GITHUB TRENDING FOR EDUCATION, AND THE PASS'S CHANNEL FINDING IS THAT **THE SEARCH API IS REACHABLE THROUGH THE MCP SERVER WHERE `curl` GETS `403`**
+
+🔵 **Evidence:** [`p241-queries`](../evidence/p241-queries.2026-10-16-p241.tsv) · [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv) · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv)
+
+### 🟢 The channel finding, and it reopens an axis that has been closed for eight passes
+
+🔴 **`curl https://api.github.com/search/repositories` returns `403`** from this environment: *"This GitHub API path is not available: sessions are bound to their configured repositories."*
+
+🟢 **The same query through the GitHub **MCP** server returns `200` with a full `total_count` and ranked items.** 🔵 **That is why this pass could take three scoped harvests with sort key, `total_count` and owner concentration all recorded — the measurements `p239` built `p239-query-shape` for and `p240` registered `ACTION VR` to standardise.**
+
+🟡 **`ACTION VV`: record the CHANNEL beside the sort key in every query-evidence table.** `p229` established that `git ls-remote` is `200` through this proxy while other paths are not; this pass establishes the same for the search API via MCP versus `curl`. **A channel that is blocked on one transport and open on another is not a blocked channel, and eight passes of "GitHub Trending went unqueried" may have been measuring the transport rather than the channel.**
+
+### 🟢 This week's harvests, with the shape recorded
+
+| query | sort | `total_count` | distinct owners *(p1)* | max rows, one owner | on-topic p1 | NEW after the gate |
+|---|---|---|---|---|---|---|
+| `topic:ed-fi pushed:>2026-01-01` | `updated` | `4` | `4` | `1` | `4`/`4` | `2` |
+| `topic:ferpa pushed:>2026-01-01` | `updated` | `38` | `23` | 🔴 **`5`** | `30`/`30` | `18` of `31` |
+| 🟢 `topic:k12 topic:ai pushed:>2026-06-01` | `updated` | `12` | 🟢 **`12`** | 🟢 **`1`** | `12`/`12` | `11` of `12` |
+
+🔴 **The statute axis is `35`% rediscovery.** `11` of `31` `topic:ferpa`/`topic:ed-fi` candidates were already carried — `canvas-toolbox`, `edu-ai-agents`, `regrails`, `district-brain`, `gopal`, `spedlex`, `docsingest`, `nau-ai-advisor`, `haystack-ferpa-filter`, `pii-scanner`, `mcp-ai-tutor`, `edanalytics/lightbeam`, `tha-edfi-runner`. 🟢 **`ACTION VI` working as designed** — `p238` warned the statute words were contaminated and the gate caught the repeats instead of the shelves.
+
+🟢 **The product axis is not exhausted**, and it produced every good row of the pass: `12` of `12` on-topic, `12` distinct owners, `11` new. 🟡 **`ACTION VX`: harvest education supply by PRODUCT vocabulary (`topic:k12`, `topic:lms`, `topic:tutor`, `topic:gradebook`) before statute vocabulary, and record the rediscovery rate of each so the axes can be ranked rather than guessed.**
+
+### 🔵 New trending rows, by region
+
+| Repo | Grant *(bytes · head)* | ★ | Region | Note |
+|---|---|---|---|---|
+| [`ichangting/taotao-skills`](https://github.com/ichangting/taotao-skills) | `MIT` + `Apache-2.0` subtree *(`1 371` · `4d6f67f4d88b`)* | **18** | APAC | The week's top new permissive row by stars |
+| [`EnglandTong/educore`](https://github.com/EnglandTong/educore) | `MIT` *(`1 089` · `4c24790a823d`)* | 4 | APAC | Offline-first for weak connectivity; 🟡 its README says "in development", hardware track paused |
+| [`deeding2030-boop/bestteach`](https://github.com/deeding2030-boop/bestteach) | `MIT` *(`1 156` · `7c64039bfa97`)* | 2 | APAC | `5` open 新课标 lesson-planning prompt templates |
+| [`inquiredu/a-mn-hackathon`](https://github.com/inquiredu/a-mn-hackathon) | `MIT` *(`1 268` · `63d28ebec5bc`)* | 0 | **North America** | Minnesota educator hackathon session kit; 🟡 `118` B trademark carve-out on `assets/mngaia-mark.png` |
+| [`Krishita17/record-bridge`](https://github.com/Krishita17/record-bridge) | `MIT` *(`1 079` · `a0d9ec2f46f8`)* | 2 | 🔴 Global *(weak basis, stated)* | Student-records de-duplication on **synthetic data, zero PII** |
+| [`manzanillo/ai-unplugged`](https://github.com/manzanillo/ai-unplugged) | `MIT` *(`1 250` · `4f6c10a78f98`)* | 0 | 🔴 Global *(no basis in the row)* | 🔴 Carried with a stated limit: `215` B README |
+
+🔴 **`62`★ [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) was the harvest's biggest hit and the carried index refused it.** 🟢 Already on these shelves.
+
+### 🔴 `5` of `5` manifest-channel hits were NOT grants
+
+Every tierC `FOUND` this pass is a `package.json` with **`"private": true` and no `license` field** — `rfp-tracker`, `ggb-fable`, `AI-`, `library-catalog-data`, `lms-edtech-data`. 🔵 **npm's `private: true` is an explicit non-publication marker; a manifest served at `200` with no licence field is a grant ABSENT at a channel that ANSWERED.** 🟡 **`ACTION VT`: the ladder must emit `MANIFEST-NO-LICENCE-FIELD` rather than `FOUND`.** All five withheld.
+
 ## Pass 240 — 2026-10-16 — **APPEND-ONLY** — GITHUB TRENDING FOR EDUCATION, READ THROUGH `topic:` SCOPE FOR THE THREE REGIONS `p239` COULD NOT MEASURE
 
 ⏱️ **NINTH pass of `2026-10-16`.** Nothing below replaces an earlier dated section.

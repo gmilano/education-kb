@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 241 — 2026-10-16 — `16` PERMISSIVE ROWS WITH `6` IN THE **NORTH AMERICA** GAP `p240` DECLARED, `ACTION VO` DISCHARGED AS A CENSUS — AND THE PASS'S FINDING IS THAT `p240` READ ITS OWN DEFECT AS **LANGUAGE** WHEN THE CLASS IS WIDER: THE SAME FUNCTION RETURNED **ALLOWED** ON TWO **ENGLISH** PAYLOADS THAT GRANT NOTHING
+
+⏱️ **TENTH pass of `2026-10-16`.** p232–p240 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`16` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported. 🟢 **`6` are North America — `p240` closed at `0` of `10`.** 🟢 **`ACTION VO` discharged as a census of `122` permission-deciding matchers, not as a fix of the one that fired.** 🟢 **`ACTION VR` honoured on every harvest.** 🟢 **Three instrument defects found, fixed and controlled inside the pass** — shared classifier `217` → `238`, a new `104`-control instrument, and `p1054` in `make hooks` for the first time since pass `188`. 🔴 **`15` rows withheld, every payload read.** 🔴 **EMEA and LATAM were NOT measured — an unrun harvest, not an absence.** 🔴 **The WebSearch leg produced `0` new rows and `0` corrections for a THIRD pass.**
+
+🔵 **Evidence:** [`p241-verified-rows`](evidence/p241-verified-rows.2026-10-16-p241.tsv) *(16 slugs)* · [`p241-withheld`](evidence/p241-withheld.2026-10-16-p241.tsv) *(15)* · [`p241-classifier-defect`](evidence/p241-classifier-defect.2026-10-16-p241.tsv) · [`p241-matcher-census`](evidence/p241-matcher-census.2026-10-16-p241.tsv) · [`p241-cross-instrument-agreement`](evidence/p241-cross-instrument-agreement.2026-10-16-p241.tsv) *(25 payloads)* · [`p241-holder-form`](evidence/p241-holder-form.2026-10-16-p241.tsv) · [`p241-queries`](evidence/p241-queries.2026-10-16-p241.tsv) · [`p241-websearch`](evidence/p241-websearch.2026-10-16-p241.tsv) · **instrument:** [`compose/code/p241-blanket-denial/`](compose/code/p241-blanket-denial/)
+
+### 🔴 The three defects, in one line each
+
+1. 🔴 **`commercial_use_ok` returned `ALLOWED` on `Samielakkad/AI-EdTech-Sovereign-School-OS` (`688` B) — *"NO PERMISSION is granted … for personal, academic, or commercial purposes"* — and on `snflwr-ai/snflwr.ai` (`2 833` B) — *"Proprietary Software License / All rights reserved"*.** Both English. 🔴 **And `p240-grant-language` returns `LATIN-SCRIPT` on both, certifying that the English token match APPLIES.** → [`p241-blanket-denial`](compose/code/p241-blanket-denial/), `104` controls, wired into `make hooks`.
+2. 🔴 **`holder_of` answered *"holder not in the license text by construction"* on an `Apache-2.0` payload whose line `5` reads `Copyright 2026 Ashutosh Rana`.** `P255` gated on the FAMILY; the ASF **boilerplate** form inverts its premise. → fixed, gated on the FORM, template brackets excluded.
+3. 🔴 **`p1054-mit-plus-clause` has classified the carve-out case correctly since pass `188` and `make hooks` never ran it** — its suite died under `python3 -I`, the invocation its own docstring prescribes. `53` passes later the shared classifier published a bare `MIT` over a non-commercial `data/` carve-out. → fixed and wired.
+
+🟢 **Blast radius measured rather than assumed: ZERO published rows flip.** The branch is gated on `UNCLASSIFIED`, and no shelf cell pairs `UNCLASSIFIED` with a permissive verdict — `T104` already forbade it.
+
+### 🟢 The class, stated once
+
+> **Every one of these matchers enumerates ways of saying "restricted" and treats the absence of its own vocabulary as permission.** A denial it has not seen before reads as a grant.
+
+`p240` fixed the **language** instance. `p241` names the class and asks instead the question a licence exists to answer — **does this payload grant anything at all?** — which needs no restriction vocabulary in any language. 🔵 **Controlled against `p240`'s own Chinese payload: `OpenGaokao` is refused here by an instrument that cannot read a word of Chinese.**
+
+### 🟢 Rows placed
+
+| region | rows | names |
+|---|---|---|
+| 🟢 **North America** | **`6`** | `GrizzDog-AI` *(Butler CC, Kansas; NSA/DHS CAE-CD)* · `state-ai-disclosure-state-tracker` · `student-data-access-audit-stream` · `ferpa-haystack` · `slack-behavioral-segmentation` *(Northeastern)* · `a-mn-hackathon` *(Minnesota)* |
+| 🟢 **APAC** | **`4`** | `taotao-skills` *(`18`★, 中考)* · `ai-teacher-copilot` *(Vietnamese)* · `educore` *(偏远地区)* · `bestteach` *(新课标)* |
+| 🟢 **Global** | **`6`** | `enterprise-rag-patterns` · `regulated-ai-governance` · `voice-ai-governance` · `kinetic-gain-protocol-suite` · 🔴 `record-bridge` and `ai-unplugged`, placed `Global` because **neither row carries any regional evidence** — stated, not promoted |
+| 🔴 **EMEA** · **LATAM** | **`0`** | 🔴 **Not measured this pass.** `p240`'s findings for both stand one pass old |
+
+### 🔵 The channel findings
+
+- 🟢 **The GitHub search API is reachable through the **MCP** server where `curl` returns `403`** *("sessions are bound to their configured repositories")*. 🟡 **`ACTION VV`: record the CHANNEL beside the sort key — eight passes of "GitHub Trending went unqueried" may have been measuring the transport, not the channel.**
+- 🔴 **The statute axis is exhausted: `topic:ferpa` + `topic:ed-fi` returned `35`% already-carried rows.** 🟢 **The product axis is not: `topic:k12 topic:ai` returned `12` of `12` on-topic at `12` distinct owners, `11` new** — and the harvest's biggest hit, `62`★ `SirhanMacx/Claw-ED`, was correctly refused by the carried index.
+- 🔴 **`5` of `5` manifest hits were `"private": true` with no `license` field.** 🟡 **`ACTION VT`: the ladder must emit `MANIFEST-NO-LICENCE-FIELD`, not `FOUND`.**
+- 🔴 **The EMEA WebSearch returned the correct Omnibus deferral AND the superseded `2026-08-02` enforcement date in the SAME response** *(≥5th recorded re-service)*; the LATAM leg misdated UNESCO IESALC's `2025` paper as `2026` for the third consecutive pass.
+
+### 🔵 The market reading
+
+🟢 **Not one of the `7` North American permissive rows is a tutor or an LMS** — they are compliance records, audit streams, retrieval guards and de-duplication pipelines. 🔴 **And an open K-12 tutor went the other way: [`snflwr-ai/snflwr.ai`](https://github.com/snflwr-ai/snflwr.ai) relicensed `AGPL-3.0` → proprietary on `2026-09-18`**, stating in its own `LICENSE` that the AGPL grant stays perpetual for copies taken before that date.
+
+🔵 **Read beside `p240` — which measured the European and Latin American supply as `16`/`16` `GPL-3.0` — the two passes agree from opposite directions: the integration and compliance layer is the engagement, and it is service work.**
+
 ## Pass 240 — 2026-10-16 — `10` PERMISSIVE ROWS ACROSS THE THREE REGIONS `p239` LEFT UNMEASURED, `ACTION VJ` AND `ACTION VK` BOTH DISCHARGED — AND THE PASS'S FINDING IS THAT THIS KB'S **SHARED LICENCE CLASSIFIER IS MONOLINGUAL**, A DEFECT CLASS `p217` NAMED `23` PASSES AGO ON A DIFFERENT INSTRUMENT
 
 ⏱️ **NINTH pass of `2026-10-16`.** p232–p239 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

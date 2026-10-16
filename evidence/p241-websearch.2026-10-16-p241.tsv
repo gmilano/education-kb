@@ -1,0 +1,9 @@
+leg	query	finding_offered	already_carried	files_carrying	verdict
+global	top open source AI agents education 2026 github MIT	no education-specific agent ranking; general agent lists only	n/a	-	0 new rows
+global	github trending education AI 2026	Project NOMAD, nanochat, developer-roadmap - none education-vertical	n/a	-	0 new rows
+global	open source platform education LMS ERP MIT Apache 2026	Moodle GPL3, OpenEdX AGPL3, Canvas AGPL3, OpenEduCat LGPL3, OpenOLAT Apache-2.0, Sakai ECL-2.0	YES	verticals/solutions.md	0 new rows
+global	AI education industry trends 2026	agents, governance shift, teacher-first adoption, digital credentials	YES	intel/trends.md	0 new rows
+North America	AI education North America 2026 adoption regulation players	134 bills / 31 states; CA AB 1159; ID SB 1227; HR 8747; NYC K-8 moratorium; STUDENTS FIRST Act; Day of AI/AASA	YES - all of them	20, 17, 16, 12, 11 files resp.	0 new rows
+EMEA	AI education EMEA Europe 2026 adoption regulation players	BOTH the Digital Omnibus deferral to 2027-12-02 AND the superseded "from 2 August 2026 enforcement" line	YES	carried since p223; the superseded line is the trap this KB records	0 new rows, 1 REPRODUCED DEFECT (>=4th recorded re-service)
+APAC	AI education APAC Asia Pacific 2026 adoption regulation players	Korea AI Basic Act 2026-01-22; Vietnam education high-risk list; India DPDP; Ipsos Education Monitor 2026	YES	Vietnam carried since p138 with the compliance split	0 new rows
+LATAM	AI education LATAM Latin America 2026 adoption regulation players	UNESCO IESALC 87%/26%; TALIS Brazil 56%/Chile 55%; PISA 2025; UNESCO Observatory 2026-04-14; ILIA	YES - and IESALC misdated as 2026 again	12-16 files	0 new rows, 1 REPRODUCED MISDATING (identical to p239 and p240)

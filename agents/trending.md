@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 241 — 2026-10-16 — **APPEND-ONLY** — THIS WEEK'S AGENT NEWS IS A **RELICENSING**: A K-12 TUTOR WENT `AGPL-3.0` → PROPRIETARY ON `2026-09-18`, AND IT SAID SO IN A `LICENSE` FILE THAT THIS KB'S OWN CLASSIFIER READ AS **PERMITTING COMMERCIAL USE**
+
+🔵 **Evidence:** [`p241-classifier-defect`](../evidence/p241-classifier-defect.2026-10-16-p241.tsv) · [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv) · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv) · [`p241-websearch`](../evidence/p241-websearch.2026-10-16-p241.tsv)
+
+### 🔴 The week's event
+
+[`snflwr-ai/snflwr.ai`](https://github.com/snflwr-ai/snflwr.ai) — K-12 safe AI tutoring, fully offline, backend-enforced content filtering, parental oversight — **relicensed from `AGPL-3.0` to proprietary on `2026-09-18`**, seven months after first publishing. Read first-hand: `LICENSE`, `2 833` B, `main` · `7feea47e4759`.
+
+🟢 **The notice states the limit of its own effect, which is rarer than it should be:** *"Any copy obtained while the AGPL-3.0 license was in effect remains governed by AGPL-3.0 for that copy, and the rights it conferred on its recipients are perpetual."*
+
+🔴 **And this KB's `commercial_use_ok` returned `ALLOWED` on it** — because the payload never says `non-commercial`, only *"Proprietary Software License"* and *"All rights reserved"*. See `T241-A`: `p240` read that defect class as a LANGUAGE problem nine hours earlier, and it is wider than language.
+
+### 🟢 New agent rows this week
+
+| Agent | Repo | 🟢 Grant | ★ | Region | Why it is new |
+|---|---|---|---|---|---|
+| **GrizzDog-AI** | [`daTechGuy/GrizzDog-AI`](https://github.com/daTechGuy/GrizzDog-AI) | `MIT` *(`1 075` B · `2f39c4f87cca`)* | 0 | **North America** | 🟢 The first row on these shelves from an **accredited US community-college programme** — Butler CC, Andover Kansas, NSA/DHS **CAE-CD** designated. `27` attack vectors mapped to OWASP LLM01–LLM07 + MITRE ATLAS, exported as **Canvas** reports |
+| **taotao-skills** | [`ichangting/taotao-skills`](https://github.com/ichangting/taotao-skills) | `MIT` + an `Apache-2.0` subtree *(`1 371` B · `4d6f67f4d88b`)* | **18** | **APAC** | 🟡 The pass's only **multi-grant** row: `skills/k12-lesson-planning-zh` derives from Anthropic's `k12-teacher-skills` (`Apache-2.0`) and carries its own `LICENSE` + `NOTICE` in-directory |
+| **ai-teacher-copilot** | [`HoangNam2464/ai-teacher-copilot`](https://github.com/HoangNam2464/ai-teacher-copilot) | `MIT` *(`1 076` B · `ead83d2f94ca`)* | 0 | **APAC** *(Vietnamese)* | 🔵 Bloom-taxonomy quiz generation with **citation traceability** — automated assessment, i.e. squarely inside Vietnam's Decision `33/2026/QĐ-TTg` high-risk list |
+| **regulated-ai-governance** | [`ashutoshrana/regulated-ai-governance`](https://github.com/ashutoshrana/regulated-ai-governance) | `MIT` *(`1 070` B · `664a753aa460`)* | 1 | Global | Policy enforcement as **adapters for CrewAI, AutoGen, LangChain, Semantic Kernel, Haystack** — not another framework |
+| **voice-ai-governance** | [`ashutoshrana/voice-ai-governance`](https://github.com/ashutoshrana/voice-ai-governance) | `MIT` *(`1 070` B · `a24efbc61bb7`)* | 2 | Global | Confidence-gated escalation and PII scrubbing for Pipecat / LiveKit / Twilio voice pipelines |
+
+🟢 **The week's highest-star education agent, [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) at `62`★ *(local-first teaching assistant, lesson drafts and slides from your own curriculum)*, was correctly REFUSED by `ACTION UG`'s carried index.** 🔵 **That is the gate working: the most eye-catching result of the harvest was already on these shelves.**
+
+### 🟡 `ACTION VA` narrows a second time and still does not discharge
+
+🔴 **Still no education agent on these shelves that publishes measured LEARNING outcomes under a usable grant.** `GrizzDog-AI` publishes `27` benchmark vectors — but they measure **LLM security**, not learning. `ai-teacher-copilot` publishes citation traceability — an auditability property, not a score. `p240`'s best-measured candidate (`Elia43/DataPilot`, RAGAS `0.97` answer relevancy over `32` students at Université Saint-Joseph) **still ships no grant at all**.
+
+### 🔴 The mandated WebSearch leg: `0` new rows, `0` corrections, for a THIRD pass
+
+Four global searches and one per region, run as mandated, every finding checked through `make claims` rather than eyeballed. 🔴 **All nine findings already carried.** Two recurrences measured verbatim:
+
+| the channel offered | these shelves |
+|---|---|
+| 🔴 *"From 2 August 2026 … enforce the AI Act"* with education access/assessment high-risk | 🔴 **≥FIFTH recorded re-service of the superseded date.** Annex III education high-risk is **`2027-12-02`** (`Reg. (EU) 2026/1744`); `2026-08-02` is Art. `50` transparency. 🟡 **The same response ALSO carried the correct Omnibus deferral — the channel served the answer and the trap together** |
+| 🔴 UNESCO IESALC `87`%/`26`% as *2026* data | 🔴 **Fielded Aug–Oct `2025`. Third consecutive verbatim recurrence** *(`p239`, `p240`, `p241`)* |
+
+🟢 **`T10` holds.** 🔵 **The honest reading is unchanged: this KB's regulatory shelf is ahead of the English WebSearch channel, and that channel's remaining value is re-verification, not discovery.**
+
 ## Pass 240 — 2026-10-16 — **APPEND-ONLY** — WHAT IS NEW THIS WEEK IN EDUCATION AGENTS, AND THE WEEK'S STRONGEST AGENT IS ONE A STUDIO MAY NOT USE
 
 ⏱️ **NINTH pass of `2026-10-16`.** Nothing below replaces an earlier dated section.

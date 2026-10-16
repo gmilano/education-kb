@@ -1164,5 +1164,171 @@ for _fx in MIT APACHE BSD; do
   fi
 done
 
+# =========================================================================================
+# P241 -- LA RAMA DE NEGATIVA EN BLOQUE.  P240 arreglo el eje del idioma; estos controles
+# cubren la clase mas ancha: un payload EN INGLES que NIEGA sin usar el compuesto
+# `non-commercial`.  Los dos primeros son payloads REALES del harvest `topic:ferpa` de
+# p241, y los dos volvian ALLOWED antes de esta rama.
+# Doble direccion: cada negativa condena, y `BSD`/`MIT` con «All rights reserved» NO.
+P241_NOPERM='Copyright (c) 2026 Sami El Akkad. All rights reserved.
+
+This repository is made publicly visible for review, evaluation, and reference
+only (for example, by recruiters, collaborators, and other developers).
+
+NO PERMISSION is granted to use, copy, modify, merge, publish, distribute,
+sublicense, sell, train machine-learning models on, or create derivative works
+from any part of this repository -- for personal, academic, or commercial
+purposes -- WITHOUT the author'"'"'s explicit prior WRITTEN permission.'
+if commercial_use_ok "$P241_NOPERM"; then
+  check "P241: «NO PERMISSION is granted» niega"       restringido permitido
+else
+  check "P241: «NO PERMISSION is granted» niega"       restringido restringido
+fi
+if [ "$(family_of "$P241_NOPERM")" = "NONCOMMERCIAL-NOT-OSI" ]; then
+  check "P241: family_of lo marca NONCOMMERCIAL-NOT-OSI" ok ok
+else
+  check "P241: family_of lo marca NONCOMMERCIAL-NOT-OSI" ok "$(family_of "$P241_NOPERM")"
+fi
+
+P241_PROP='snflwr.ai - Proprietary Software License
+Copyright (C) 2026 snflwr.ai. All rights reserved.'
+if commercial_use_ok "$P241_PROP"; then
+  check "P241: «Proprietary Software License» niega"    restringido permitido
+else
+  check "P241: «Proprietary Software License» niega"    restringido restringido
+fi
+
+# Cada frase de negativa explicita condena por si sola.
+for _ph in 'No license is granted to any party.' \
+           'No licence is granted.' \
+           'No rights are granted hereunder.' \
+           'Permission is not granted.' \
+           'This is not open source software.' \
+           'Unauthorized copying of this file is forbidden.' \
+           'Redistribution is strictly prohibited.'; do
+  if commercial_use_ok "$_ph"; then
+    check "P241 negativa: ${_ph:0:34}"                 restringido permitido
+  else
+    check "P241 negativa: ${_ph:0:34}"                 restringido restringido
+  fi
+done
+
+# «All rights reserved» SOLA condena...
+if commercial_use_ok 'Copyright (c) 2026 X. All rights reserved.'; then
+  check "P241: reserva sola condena"                   restringido permitido
+else
+  check "P241: reserva sola condena"                   restringido restringido
+fi
+# ...y CON un verbo de concesion NO condena.  ESTE ES EL CONTROL QUE IMPORTA: la linea
+# «All rights reserved.» esta en BSD-2, BSD-3 y en muchas cabeceras MIT.
+if commercial_use_ok 'Copyright (c) 2026 X. All rights reserved.
+Permission is hereby granted, free of charge, to any person obtaining a copy.'; then
+  check "P241: reserva + concesion NO condena"         permitido permitido
+else
+  check "P241: reserva + concesion NO condena"         permitido restringido
+fi
+# El payload BSD real de la suite lleva la linea y concede: guarda contra el falso positivo.
+if commercial_use_ok "$BSD"; then
+  check "P241 guarda: BSD con reserva sigue permitido" permitido permitido
+else
+  check "P241 guarda: BSD con reserva sigue permitido" permitido restringido
+fi
+# Y la rama P240 no se toca: el payload CJK sigue restringido por su propia rama.
+if commercial_use_ok "$ZH_NC"; then
+  check "P241 guarda: la rama P240 (zh) sigue viva"    restringido permitido
+else
+  check "P241 guarda: la rama P240 (zh) sigue viva"    restringido restringido
+fi
+
+# =========================================================================================
+# P241 -- `holder_of` SOBRE LAS DOS FORMAS DE `Apache-2.0`.  P255 gateo por FAMILIA; la
+# recuperabilidad del titular depende de la FORMA.  Los dos payloads son reales y del
+# mismo dueno, con la misma descripcion de GitHub y distinto grant.
+AP_BOILER='                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   Copyright 2026 Ashutosh Rana
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0'
+_h=$(holder_of "$AP_BOILER")
+if [ "$_h" = "Copyright 2026 Ashutosh Rana" ]; then
+  check "P241 holder: boilerplate Apache SI trae titular" ok ok
+else
+  check "P241 holder: boilerplate Apache SI trae titular" "Copyright 2026 Ashutosh Rana" "$_h"
+fi
+# la familia no cambia por la forma
+if [ "$(osi_family_of "$AP_BOILER")" = "Apache-2.0" ]; then
+  check "P241 holder: boilerplate sigue siendo Apache-2.0" ok ok
+else
+  check "P241 holder: boilerplate sigue siendo Apache-2.0" Apache-2.0 "$(osi_family_of "$AP_BOILER")"
+fi
+
+# El TEXTO COMPLETO sigue respondiendo NOT-APPLICABLE: la premisa de P255 vale ahi.
+AP_FULL='                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.'
+case "$(holder_of "$AP_FULL")" in
+  "NOT-APPLICABLE (Apache-2.0: full text"*)
+    check "P241 holder: texto completo sigue NOT-APPLICABLE" ok ok ;;
+  *)
+    check "P241 holder: texto completo sigue NOT-APPLICABLE" NOT-APPLICABLE "$(holder_of "$AP_FULL")" ;;
+esac
+
+# LA GUARDA QUE IMPORTA: la plantilla SIN RELLENAR no es un titular.  El apendice del
+# texto completo de Apache la trae literal, y un corchete reportado como titular seria
+# peor que NOT-APPLICABLE.
+AP_TPL='                                 Apache License
+                           Version 2.0, January 2004
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");'
+_h=$(holder_of "$AP_TPL")
+if [ "$_h" = "NO-HOLDER-LINE" ]; then
+  check "P241 holder: plantilla sin rellenar NO es titular" ok ok
+else
+  check "P241 holder: plantilla sin rellenar NO es titular" NO-HOLDER-LINE "$_h"
+fi
+# y la plantilla MIT equivalente tampoco
+_h=$(holder_of 'MIT License
+
+Copyright (c) <year> <name of author>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy')
+if [ "$_h" = "NO-HOLDER-LINE" ]; then
+  check "P241 holder: plantilla MIT sin rellenar tampoco"  ok ok
+else
+  check "P241 holder: plantilla MIT sin rellenar tampoco"  NO-HOLDER-LINE "$_h"
+fi
+
+# Y las familias que P255 gateo por construccion no se tocan.
+for _fx in GPL3; do
+  eval "_v=\${$_fx:-}"
+  [ -n "${_v:-}" ] || continue
+  case "$(holder_of "$_v")" in
+    NOT-APPLICABLE*) check "P241 guarda: $_fx sigue NOT-APPLICABLE" ok ok ;;
+    *)               check "P241 guarda: $_fx sigue NOT-APPLICABLE" NOT-APPLICABLE "$(holder_of "$_v")" ;;
+  esac
+done
+# MIT sigue trayendo su titular.
+_h=$(holder_of "$MIT")
+if printf '%s' "$_h" | grep -qiE '^copyright'; then
+  check "P241 guarda: MIT sigue trayendo titular"      ok ok
+else
+  check "P241 guarda: MIT sigue trayendo titular"      copyright "$_h"
+fi
+
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1

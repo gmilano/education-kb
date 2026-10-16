@@ -1,0 +1,8 @@
+payload	family_of (SHARED, in hooks)	p1054 (was NOT in hooks)	excess_bytes	restriction_hits	verdict_changing
+savvides/edtechfounderstack	MIT	NOT-OPEN-SOURCE:added-restriction	258	non-commercial	YES
+ichangting/taotao-skills	MIT	MIT-BODY-PLUS:unclassified-addition	221	-	no (Apache-2.0 subtree, both permissive)
+inquiredu/a-mn-hackathon	MIT	MIT-BODY-PLUS:unclassified-addition	118	-	no (trademark carve-out on one asset)
+manzanillo/ai-unplugged	MIT	MIT-BODY-PLUS:unclassified-addition	100	-	no (trailing whitespace only)
+deeding2030-boop/bestteach	MIT	MIT-BODY-PLUS:unclassified-addition	6	-	no (trailing whitespace only)
+--- 20 further payloads	agree	agree	0	-	no
+TOTAL payloads measured	25	-	-	-	1 verdict-changing, 5 information-losing

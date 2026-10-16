@@ -3,7 +3,26 @@
 Run:  python3 -I -m unittest discover -s compose/code/p1054-mit-plus-clause -v
 """
 
+import os
+import sys
 import unittest
+
+# P241 (pase 241).  `p355-cwd-portability`, y es la razon MECANICA por la que este
+# instrumento -- que CLASIFICA BIEN -- nunca entro en `make hooks`.
+#
+# El docstring de arriba manda correr la suite con `python3 -I -m unittest discover`, y esa
+# invocacion es exactamente la que NO PUEDE funcionar: `-I` quita del `sys.path` el
+# directorio del script, asi que `from mit_plus import ...` muere con ModuleNotFoundError.
+# La suite pasa 16/16 desde su propia carpeta y falla desde cualquier otra, que es la
+# condicion que el encabezado del `Makefile` nombra como «the whole reason a working gate
+# stayed a one-off: it could not be invoked from the place a hook runs».
+#
+# Medido en p241: `family_of` (el classifier compartido, EN hooks) devuelve `MIT` pelado
+# sobre `savvides/edtechfounderstack` (1 408 B, `800fcaf5fcc1`), y ESTE instrumento lo
+# llama `NOT-OPEN-SOURCE:added-restriction` -- correctamente, porque el payload excluye
+# `data/operator-lessons.md` del MIT y lo deja en non-commercial.  El veredicto correcto
+# existia en este repo desde el pase 188 y no llegaba a la compuerta.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from mit_plus import (
     VERDICT_MIT,

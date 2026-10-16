@@ -56,6 +56,11 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── p240-grant-language   (the language axis: 29 controls, ACTION VO)"; \
 	cd compose/code/p240-grant-language && $(PY) test_grant_language.py >/dev/null && echo "   PASS"; \
 	cd - >/dev/null; \
+	echo "── p1054-mit-plus-clause (the added-restriction classifier, ACTION VO/p241)"; \
+	$(PY) -I compose/code/p1054-mit-plus-clause/test_mit_plus.py >/dev/null 2>&1 && echo "   PASS"; \
+	echo "── p241-blanket-denial  (the grant axis: 104 controls, ACTION VO)"; \
+	cd compose/code/p241-blanket-denial && $(PY) test_blanket_denial.py >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

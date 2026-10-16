@@ -1,0 +1,9 @@
+measurement	value	note
+instruments in compose/code/	333	
+files matching a matcher signature	106	sh-case-glob / py-in-text / py-phrase-tuple / sh-grep-payload
+matchers touching a PERMISSION question	122	commercial / permissive / proprietary / restricted / rights-reserved / may_publish / publishable
+of those: carry a restriction VOCABULARY	67	non-commercial, not-for-profit, obtain-a-commercial-licence, rights-reserved, proprietary
+of those: have a default-permit exit	10	a path returning the clear answer when no vocabulary fired
+of those: BOTH (the p240/p241 defect shape)	7	absence of its own vocabulary read as permission
+of the 7: wired into make hooks	1	compose/code/lib/license_family.sh - THE SHARED CLASSIFIER, and the one that fired
+of the 7: pass-local and archival	6	p120 repair.py, p120 score.py, p120 score_after.py, p121 crosspage.py, p207 classify.sh, p217 grant_state.py

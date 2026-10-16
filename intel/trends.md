@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 241 — 2026-10-16 — THE TREND THIS PASS MEASURED IS **ENCLOSURE**: AN OPEN K-12 TUTOR RELICENSED TO PROPRIETARY, AND THE PERMISSIVE SUPPLY THAT REMAINS HAS MOVED **UNDER** THE LEARNING PRODUCT INTO COMPLIANCE AND RECORDS
+
+🔵 **Evidence:** [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv) · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv) · [`p241-websearch`](../evidence/p241-websearch.2026-10-16-p241.tsv) · [`p241-cross-instrument-agreement`](../evidence/p241-cross-instrument-agreement.2026-10-16-p241.tsv)
+
+### 🔴 `1` — Enclosure, with a date on it
+
+🔴 **[`snflwr-ai/snflwr.ai`](https://github.com/snflwr-ai/snflwr.ai) relicensed `AGPL-3.0` → proprietary on `2026-09-18`**, read first-hand from its own `LICENSE` *(`2 833` B · `7feea47e4759`)*. An offline, parental-oversight K-12 tutor — the exact shape the US district market procures — and its author concluded the open grant was not how to capture that.
+
+🟡 **One event is not a trend, and this is logged as a watch rather than a claim.** 🟡 **`ACTION VU`: sweep the K-12 tutor rows for further relicensing, keying on a `LICENSE` payload that names TWO licences and a DATE** — a shape this pass can now detect and which no instrument here looks for.
+
+### 🟢 `2` — The permissive supply has moved a layer down
+
+🔵 **Not one of this pass's `6` North American permissive rows is a tutor or an LMS.** They are: a 50-state privacy-regime tracker, a student-records audit stream, an identity-scoped RAG pre-filter, a records de-duplication pipeline, a learning-analytics methods release, a hackathon session kit.
+
+🟡 **Read beside `p240`'s GPL finding, the two halves agree from opposite directions.** `p240` measured that the richest European and Latin American education supply is **structurally unavailable** to a commercial engagement (`16`/`16` `GPL-3.0` Moodle plugins). `p241` measures that the available North American supply **is not the learning product at all**. 🔵 **Both point a studio at the same place: the integration and compliance layer, sold as service work.**
+
+### 🟢 `3` — The cross-jurisdiction compliance ADAPTER as an emerging category
+
+🔵 **Four of this pass's rows are one-person MIT projects at `0`–`2`★ that map several regulatory regimes onto one enforcement surface** — `enterprise-rag-patterns`, `regulated-ai-governance`, `voice-ai-governance`, `kinetic-gain-protocol-suite`. 🟢 **Two do it as ADAPTERS for existing agent frameworks** *(CrewAI, AutoGen, LangChain, Semantic Kernel, Haystack)* **rather than as frameworks of their own**, which is the architecturally interesting choice: it concedes the orchestration layer and competes on the policy layer.
+
+🟡 **At `0`–`2`★ none of these has won the category, which is precisely when a studio can still shape it.** 🔴 **Logged as a shape observed across four rows in one harvest, not as a market forecast.**
+
+### 🟢 `4` — Automated assessment is where education AI meets its regulator, in two jurisdictions at once
+
+🔵 **[`HoangNam2464/ai-teacher-copilot`](https://github.com/HoangNam2464/ai-teacher-copilot) generates Bloom-taxonomy quizzes from teacher documents.** That is automated assessment, which is:
+
+- 🔴 named in **Vietnam's Decision `33/2026/QĐ-TTg`** education high-risk list *(carried since `p138`; `2027-03-01`, and `2027-09-01` for education systems already in operation)*, and
+- 🔴 named in the **EU AI Act Annex III point `3`** *(applies `2027-12-02` under `Reg. (EU) 2026/1744`)*.
+
+🟡 **The same product feature triggers high-risk obligations in two unrelated jurisdictions on timelines six months apart.** 🟢 **And its citation traceability is the mitigation both regimes ask for, built in before either applies** — which is the shape of the sale.
+
+### 🟢 `5` — "Privacy-first" is becoming an architecture, not a claim
+
+🔵 Measured across this pass's rows rather than asserted: `record-bridge` runs **entirely on synthetic data with zero PII**; `slack-behavioral-segmentation` ships **no data by design**, naming human-subjects consent and FERPA as the reason; `educore` and `snflwr.ai` are **offline-first**; `district-brain` *(carried)* is local-first. 🟡 **For a demo, "runs on synthetic data" is worth more than a compliance page — it is demonstrable in a pitch without a DPA.**
+
+### 🔴 `6` — The English WebSearch channel is now a re-verification channel, measured three passes running
+
+🔴 **`0` new rows and `0` corrections for a third pass**, with every offered finding checked through `make claims`. 🔴 **Two defects reproduced verbatim**: the superseded `2026-08-02` Annex III date *(≥5th re-service)* and the UNESCO IESALC `2025` working paper offered as `2026` data *(3rd consecutive)*.
+
+🟢 **The EMEA search is the instructive one: it returned the CORRECT Omnibus deferral and the SUPERSEDED enforcement date in the same response.** 🟡 **So the channel's failure is not ignorance, it is non-determinism — which is why a claims gate in front of it is the only thing that makes it safe to read.**
+
+### 🔵 `7` — And the trend inside this KB: a correct instrument that is not in the gate is not a control
+
+🔴 **`p1054-mit-plus-clause` classified the carve-out case correctly from pass `188` and `make hooks` never ran it** — because its suite died under the invocation its own docstring prescribed. `53` passes later the shared classifier in the gate published a bare `MIT` on a payload `p1054` refuses. 🟢 **Fixed and wired this pass.** 🟡 **`ACTION VW` generalises it to every instrument in `compose/code/`.**
+
 ## Pass 240 — 2026-10-16 — `ACTION VK` IS DISCHARGED AND THE THRESHOLDS IT WAS REGISTERED TO CALIBRATE ARE **FALSIFIED**: A QUOTED PHRASE RESTRICTED TO `name,description` RETURNS `≥96.7`% AT EVERY COUNT FROM `264` TO `1 368`, AND THE `48`-POINT COLLAPSE IS **FIELD SCOPE**, NOT BREADTH
 
 🔵 **Evidence:** [`p240-query-shape`](../evidence/p240-query-shape.2026-10-16-p240.tsv) · [`p240-queries`](../evidence/p240-queries.2026-10-16-p240.tsv)

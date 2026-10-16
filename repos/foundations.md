@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 241 — 2026-10-16 — `11` FOUNDATION ROWS, `6` OF THEM **NORTH AMERICA** AFTER `p240` CLOSED AT `0` OF `10` — AND THE US SUPPLY THAT IS ACTUALLY REUSABLE IS NOT A TUTOR AND NOT AN LMS, IT IS **THE COMPLIANCE AND RECORDS LAYER UNDER ONE**
+
+🟢 **Every grant below read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported, with the payload byte count and the head SHA pinned. 🔵 **Region is read from the ROW, never from the query** — each row carries its own basis.
+
+🔵 **Evidence:** [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv) · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv) · [`p241-queries`](../evidence/p241-queries.2026-10-16-p241.tsv)
+
+### 🟢 North America — `5` foundation rows, plus the agent row `GrizzDog-AI` = `6` NA rows this pass — the gap `p240` declared
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis *(from the row)* | What it is |
+|---|---|---|---|---|---|
+| [`mizcausevic-dev/state-ai-disclosure-state-tracker`](https://github.com/mizcausevic-dev/state-ai-disclosure-state-tracker) | 🟢 **`MIT`** *(`1 069` B)* | 0 | `main` · `0ad0bd3d7773` | 🟢 Names **IL SOPPA, CA AB 1584 + AB 2876, TX HB 18, NY ED Law 2-d, VA ChAIPA, CO SB 196** — US state regimes only | A hash-chained per-state lifecycle record for EdTech products crossing **50 state** student-data-privacy and state-AI-policy regimes. 🔵 **The single most direct answer on these shelves to the US picture being *districted and procurement-shaped* rather than one statute** |
+| [`mizcausevic-dev/student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) | 🟢 **`MIT`** *(`1 069` B)* | 0 | `main` · `c793daec7825` | 🟢 Cites **FERPA 34 CFR Part 99** and **COPPA 16 CFR §312.4** — US federal regs only | Hash-chained event schema + reference verifier for **AI tool reads of student records**; bridges **CEDS + Ed-Fi** semantics; enforces tokenisation, FERPA §99.32 logging consistency and a COPPA school-as-agent invariant. 🟡 **Its own README calls it readiness scaffolding, not certification** |
+| [`ashutoshrana/ferpa-haystack`](https://github.com/ashutoshrana/ferpa-haystack) | 🟢 **`Apache-2.0`** *(`742` B — **the boilerplate form**, see `T241-B`)* | 0 | `main` · `914154573fc5` | 🟢 Cites FERPA and 34 CFR only; no other jurisdiction named | Identity-scoped **pre-filtering before LLM context** for Haystack RAG pipelines |
+| [`rosalinatorres888/slack-behavioral-segmentation`](https://github.com/rosalinatorres888/slack-behavioral-segmentation) | 🟢 **`MIT`** *(`1 072` B)* | 0 | `main` · `cba663bca24b` | 🟢 README names **Northeastern University** | Methods-and-code release of an unsupervised behavioural-segmentation study on program analytics. 🟢 **No data by design** — human-subjects consent and FERPA given as the reason, which is the publishable shape for learning-analytics research |
+| [`inquiredu/a-mn-hackathon`](https://github.com/inquiredu/a-mn-hackathon) | 🟢 **`MIT`** *(`1 268` B)* | 0 | `main` · `63d28ebec5bc` | 🟢 README names **MNGAIA · AI4MN** — a Minnesota (US) educator event | A reusable **session kit** for a K-12 educator AI hackathon, GitHub Pages + Google Apps Script. 🟡 **`118` B of carve-out: the MNGAIA mark in `assets/` is NOT under the MIT grant and its README says to replace it on reuse** |
+
+### 🟢 APAC — `2` foundation rows, both with first-hand language evidence
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis | What it is |
+|---|---|---|---|---|---|
+| [`EnglandTong/educore`](https://github.com/EnglandTong/educore) | 🟢 **`MIT`** *(`1 089` B)* | 4 | `main` · `4c24790a823d` | 🟢 README `1 016` CJK chars; 偏远地区 *(remote areas)*; topics `chinese-education`, `rural-education` | **Offline-first** learning for students on poor or slow connections, with AI help *when possible* — PWA, Ollama, on-device. 🟡 **Its own README says "in development" and the Pi/edge hardware track is paused** |
+| [`deeding2030-boop/bestteach`](https://github.com/deeding2030-boop/bestteach) | 🟢 **`MIT`** *(`1 156` B)* | 2 | `master` · `7c64039bfa97` | 🟢 README `1 191` CJK chars; 新课标 ×3 *(the PRC curriculum standard)* | AI lesson planning for PRC K-12 teachers; `5` open 新课标 prompt templates |
+
+### 🟢 Global — `4` rows: `2` cross-jurisdiction by their own claim, `2` with NO regional evidence at all
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | What it is |
+|---|---|---|---|---|
+| [`ashutoshrana/enterprise-rag-patterns`](https://github.com/ashutoshrana/enterprise-rag-patterns) | 🟢 **`MIT`** *(`1 070` B)* | 1 | `main` · `0d926d01627c` | FERPA/HIPAA/GDPR RAG patterns: identity-scoped retrieval, audit logging, framework adapters. 🔵 README names US, Korea, UK, Brazil — multi-jurisdiction by design, so `Global` is the row's own claim and not a default |
+| [`mizcausevic-dev/kinetic-gain-protocol-suite`](https://github.com/mizcausevic-dev/kinetic-gain-protocol-suite) | 🟢 **`MIT`** *(`1 088` B)* | 0 | `main` · `a31361e83b28` | Twelve open JSON specs for answer engines and agents, three of them EdTech *(incl. an AI Tutor Card disclosure)*. 🟡 One mention each of FERPA/COPPA/GDPR — no single-region basis |
+| [`Krishita17/record-bridge`](https://github.com/Krishita17/record-bridge) | 🟢 **`MIT`** *(`1 079` B)* | 2 | `main` · `a0d9ec2f46f8` | Config-driven **student-records data-integrity pipeline**: bulk ingest, validate, exact + fuzzy de-duplication, audit, report. 🟢 **Runs entirely on synthetic data with zero PII**, which makes it demonstrable in a pitch. 🔴 **Region basis is WEAK — FERPA named twice, no institution or jurisdiction — so it is placed `Global`, not North America**, even though FERPA is a US statute and the US is plainly the intended market |
+| [`manzanillo/ai-unplugged`](https://github.com/manzanillo/ai-unplugged) | 🟢 **`MIT`** *(`1 250` B)* | 0 | `master` · `4f6c10a78f98` | Teaching AI **without computers** (the "unplugged" tradition). 🔴 **No regional evidence in the row, and carried with a second stated limit: its README is `215` B, so nothing can be said about its depth from the row itself.** The `100` B licence excess is trailing whitespace, not a clause |
+
+### 🔴 `T241-B` — `holder_of` says `Apache-2.0` has no holder "by construction". That is true of one of its two FORMS.
+
+🔵 **The pair that measured it is one owner's, with the SAME GitHub description and DIFFERENT grant payloads:**
+
+| slug | bytes | form | `holder_of` **before** | `holder_of` **after** |
+|---|---|---|---|---|
+| [`ashutoshrana/ferpa-haystack`](https://github.com/ashutoshrana/ferpa-haystack) | `742` | 🟢 **ASF boilerplate** *(no `TERMS AND CONDITIONS FOR USE` header)* | 🔴 *"holder not in the license text by construction"* — **false; line 5 reads `Copyright 2026 Ashutosh Rana`** | 🟢 **`Copyright 2026 Ashutosh Rana`** |
+| [`ashutoshrana/haystack-ferpa-filter`](https://github.com/ashutoshrana/haystack-ferpa-filter) *(already carried)* | `12 101` | full text | 🟢 `NOT-APPLICABLE` | 🟢 `NOT-APPLICABLE (Apache-2.0: full text, …)` |
+
+🔵 **`P255` (pass 85) gated the holder question on the FAMILY and was right to: in `GPL`, `MPL`, `ECL`, `CC0` and the full `Apache-2.0` text the only copyright line belongs to the licence's own author.** 🔴 **But the ASF's recommended boilerplate form exists precisely so you insert your own line, and `P255`'s premise inverts there.** 🟢 **Fixed, gated on the FORM rather than the family, with the unfilled template `Copyright [yyyy] [name of copyright owner]` explicitly excluded so a bracket is never reported as a holder.** 🟢 **`4` new controls both directions; shared classifier `217` → `238`.**
+
+🟡 **`ACTION VS` — this REFINES standing `ACTION TQ`** *(holder type is the placement lever; its retroactive sweep is now six passes unrun)*: **the sweep must key on the licence FORM, not the family.** Every `Apache-2.0` row on these shelves whose payload is under ~`2` kB may have a recoverable holder that `holder_of` has been declining to read.
+
+### 🔴 `T241-G` — `FOUND` at a manifest channel is not a grant found, and `5` of `5` tierC hits this pass prove it
+
+🔴 **Every tierC hit the ladder recorded as `FOUND` this pass is a `package.json` with `"private": true` and NO `license` field:** [`adensvaz/rfp-tracker`](https://github.com/adensvaz/rfp-tracker) *(`845` B)*, [`wuxiwuhen/ggb-fable`](https://github.com/wuxiwuhen/ggb-fable) *(`968` B)*, [`xiao55752-create/AI-`](https://github.com/xiao55752-create/AI-) *(`1 492` B)*, `library-catalog-data/library-catalog-data` *(`715` B)*, `lms-edtech-data/lms-edtech-data` *(`910` B)*.
+
+🔵 **`"private": true` is npm's explicit NON-PUBLICATION marker.** A manifest served at `200` with no licence field is not a grant found — it is a grant **absent at a channel that answered**, which is a different state from both `NO-GRANT` and `FOUND`. 🟡 **`ACTION VT`: the ladder must emit `MANIFEST-NO-LICENCE-FIELD` for tierC hits whose manifest carries no `license`, so a later pass cannot read `FOUND` as a permission.** All five are withheld.
+
+🔵 **One of the five is worth naming anyway, as market intelligence rather than as a dependency:** `adensvaz/rfp-tracker` reads **E-Rate FCC Form 470** filings from **USAC Open Data**, extracts equipment and deadlines from attached RFPs and scores them. 🟢 **E-Rate is a US federal programme and Form 470 is public procurement data — the pipeline is ungranted, but the DATA SOURCE is open and nothing stops a studio building the same thing.**
+
 ## Pass 240 — 2026-10-16 — `8` NEW FOUNDATION ROWS ACROSS **APAC, EMEA AND LATAM** — AND THE LADDER'S `FOUND` TURNS OUT NOT TO MEAN *A GRANT WAS FOUND*: `5` OF `35` ARE TIER-C MANIFESTS CARRYING NO LICENCE FIELD AT ALL
 
 🟢 **`8` new foundation rows, every grant read first-hand** at the branch `git ls-remote --symref` reported. 🟢 **The regions `p239` left unmeasured are measured.** 🔴 **`30` rows withheld after their payloads were read — `16` `GPL-3.0`, `1` `AGPL-3.0`, `1` `PolyForm`, `1` bespoke Chinese noncommercial, `1` dual-grant pointer, `5` no-declaration manifests, `5` no grant at any probed path.**

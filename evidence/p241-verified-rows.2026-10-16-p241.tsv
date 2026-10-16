@@ -1,0 +1,17 @@
+slug	grant	bytes	path	default_ref	head_sha	payload_sha	stars	region	region_basis	shelf
+daTechGuy/GrizzDog-AI	MIT	1075	LICENSE	main	2f39c4f87cca	782d8d55cbeb	0	North America	README: "Butler Community College (Andover Campus)" in Andover, Kansas; NSA/DHS CAE-CD designated programme named 14x	agents/top
+mizcausevic-dev/state-ai-disclosure-state-tracker	MIT	1069	LICENSE	main	0ad0bd3d7773	a5ed17e0b90a	0	North America	README+description name IL SOPPA, CA AB 1584/AB 2876, TX HB 18, NY ED Law 2-d, VA ChAIPA, CO SB 196 - US state regimes only	repos/foundations
+mizcausevic-dev/student-data-access-audit-stream	MIT	1069	LICENSE	main	c793daec7825	a5ed17e0b90a	0	North America	README cites FERPA 34 CFR Part 99 and COPPA 16 CFR 312.4 - US federal regs only	repos/foundations
+rosalinatorres888/slack-behavioral-segmentation	MIT	1072	LICENSE	main	cba663bca24b	d041c04b7dfa	0	North America	README names Northeastern University	repos/foundations
+ashutoshrana/ferpa-haystack	Apache-2.0	742	LICENSE	main	914154573fc5	6cd4d7a87672	0	North America	README cites FERPA and 34 CFR only; no other jurisdiction named	repos/foundations
+inquiredu/a-mn-hackathon	MIT	1268	LICENSE	main	63d28ebec5bc	c19960362f06	0	North America	README: MNGAIA / AI4MN, Minnesota; trademark carve-out on assets/mngaia-mark.png	repos/foundations
+ichangting/taotao-skills	MIT	1371	LICENSE	main	4d6f67f4d88b	f5a36428311d	18	APAC	LICENSE+README in Chinese; 初中语文 (PRC middle-school Chinese curriculum), 中考 exam prep	agents/top
+EnglandTong/educore	MIT	1089	LICENSE	main	4c24790a823d	82eab3c311fb	4	APAC	README: 偏远地区弱网离线学习; topics chinese-education, rural-education	repos/foundations
+HoangNam2464/ai-teacher-copilot	MIT	1076	LICENSE	main	ead83d2f94ca	0e5b3a8207c1	0	APAC	Vietnamese-language README sections; K-12 teacher copilot	agents/top
+deeding2030-boop/bestteach	MIT	1156	LICENSE	master	7c64039bfa97	414c02e8f99e	2	APAC	description: "AI lesson planning SaaS for Chinese K-12 teachers", 新课标 (PRC curriculum standard)	repos/foundations
+manzanillo/ai-unplugged	MIT	1250	LICENSE	master	4f6c10a78f98	c1d3bf23edb3	0	Global	no regional evidence in the row	repos/foundations
+ashutoshrana/enterprise-rag-patterns	MIT	1070	LICENSE	main	0d926d01627c	2fa9e93f196b	1	Global	README names US, Korea, UK, Brazil, GDPR - multi-jurisdiction by design	repos/foundations
+ashutoshrana/regulated-ai-governance	MIT	1070	LICENSE	main	664a753aa460	2fa9e93f196b	1	Global	README names GDPR, FERPA, Singapore, Korea, EU AI Act, Brazil, Japan, India	agents/top
+ashutoshrana/voice-ai-governance	MIT	1070	LICENSE	main	a24efbc61bb7	2fa9e93f196b	2	Global	README names FERPA and EU AI Act	agents/top
+mizcausevic-dev/kinetic-gain-protocol-suite	MIT	1088	LICENSE	main	a31361e83b28	14b91834c441	0	Global	one mention each of FERPA/COPPA/GDPR; no single-region basis	repos/foundations
+Krishita17/record-bridge	MIT	1079	LICENSE	main	a0d9ec2f46f8	5cd30b784eb7	2	Global	WEAK: FERPA named twice, no institution or jurisdiction; synthetic data only	repos/foundations

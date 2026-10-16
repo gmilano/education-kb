@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 241 — 2026-10-16 — THE NORTH AMERICAN GAP `p240` DECLARED IS CLOSED AT `6` OF `16` ROWS, AND THE COMMERCIAL SHAPE OF US EDUCATION SUPPLY IS NOW MEASURED: THE REUSABLE HALF IS **THE COMPLIANCE AND RECORDS LAYER**, NOT THE TUTOR AND NOT THE LMS
+
+🟢 **`16` permissive rows across North America, APAC and Global, every grant read first-hand.** 🔴 **EMEA and LATAM were NOT measured this pass** — stated as an unrun harvest, not as an absence *(`ACTION UK`)*. 🔵 **No market figure is restated here: `ACTION UP`'s `$6.4`–`11.4` B spread *(`78`%, three firms)* stands exactly as `p238` recorded it, and quoting a point estimate from these shelves is still forbidden.**
+
+🔵 **Evidence:** [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv) · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv) · [`p241-queries`](../evidence/p241-queries.2026-10-16-p241.tsv) · [`p241-websearch`](../evidence/p241-websearch.2026-10-16-p241.tsv)
+
+### 🔴 `T241-H` — a relicensing event, and it is the most commercially consequential row of the pass
+
+🔴 **[`snflwr-ai/snflwr.ai`](https://github.com/snflwr-ai/snflwr.ai) — a K-12 safe AI tutoring platform *(offline, backend-enforced content filtering, parental oversight)* — went `AGPL-3.0` → PROPRIETARY on `2026-09-18`.** Read first-hand from its own `LICENSE`, `2 833` B, `main` · `7feea47e4759`:
+
+> *"This software was published under the GNU Affero General Public License, version 3, from `2026-02-27` until `2026-09-18`. This license does not and cannot revoke that grant. Any copy obtained while the AGPL-3.0 license was in effect remains governed by AGPL-3.0 for that copy, and the rights it conferred on its recipients are perpetual."*
+
+🟢 **The notice is unusually honest** — it states the limit of its own effect rather than pretending to revoke. 🔵 **The commercial reading, stated plainly:**
+
+- 🔴 **A studio starting today cannot use it.** The grant after `2026-09-18` is proprietary, and `commercial_use_ok` now correctly returns `RESTRICTED`.
+- 🟡 **A fork taken between `2026-02-27` and `2026-09-18` is `AGPL-3.0` forever**, by the licensor's own written acknowledgement. If a client already has one, that is a live `AGPL-3.0` asset with network-copyleft obligations — a due-diligence question, not a dead end.
+- 🔵 **It is a datapoint about the category, not one repo.** An offline K-12 tutor with parental controls is the exact shape the US district market is procuring, and its author concluded the open grant was not how to capture that. 🟡 **`ACTION VU`: sweep these shelves' K-12 tutor rows for further relicensing, keying on a `LICENSE` payload that names two licences and a date.**
+
+### 🔵 What this pass says about the US supply, commercially
+
+- 🟢 **The reusable NA rows are all in the layer UNDER the learning product**: a 50-state privacy-regime tracker, a student-records audit stream, an identity-scoped RAG pre-filter, a records de-duplication pipeline, a hackathon session kit. 🔵 **Not one is a tutor or an LMS.**
+- 🔴 **The statute vocabulary is exhausted as a discovery axis**: `topic:ferpa` returned `35`% already-carried rows. 🟢 **The product vocabulary is not**: `topic:k12 topic:ai` returned `12` of `12` on-topic at `12` distinct owners.
+- 🟡 **And the sellable thing is the same as `p240` found for the GPL estate, arriving by a different route**: the US permissive supply clusters in **compliance, records and procurement plumbing**, which is service work and integration work, not a product a studio resells.
+
+## Opportunities by region
+
+### North America
+
+🟢 **`5` foundation rows placed, each with a per-row basis** — `state-ai-disclosure-state-tracker`, `student-data-access-audit-stream`, `ferpa-haystack`, `slack-behavioral-segmentation`, `a-mn-hackathon` — **plus `1` agent row, for `6` North American rows in all:** the agent row being [`daTechGuy/GrizzDog-AI`](https://github.com/daTechGuy/GrizzDog-AI) *(Butler Community College, Andover **Kansas**; NSA/DHS **CAE-CD** programme)*.
+
+🟢 **`p239`'s Ed-Fi / PowerSchool / Infinite Campus / Clever district-data map is two passes old and stands unchanged.** 🔵 **What this pass adds to it is the COMPLIANCE tier above it**, and a measured reason to build there: the US picture is `~100`+ live bills, `33`–`35` states plus Puerto Rico with guidance, and **district-level** AI policy mandates in Idaho, Maryland, Oklahoma and Virginia. 🟡 **Every district writing its own policy is a buyer of the same artefact — a defensible per-state disclosure record — and exactly one permissive repo on these shelves is that artefact.**
+
+🔵 **One procurement channel named this pass and worth a studio's attention on its own:** **E-Rate FCC Form 470** filings via **USAC Open Data** are public, machine-readable K-12 and library procurement intent. 🔴 **The one repo reading them (`adensvaz/rfp-tracker`) is ungranted (`"private": true`, no `license`)** — but the data source is open and the pipeline is reproducible.
+
+🔴 **Sourced from trackers and trade press, not bill texts; carried as a market signal, not as a compliance claim.** 🔴 **And the US regulatory leg of the WebSearch channel returned `0` new rows for a third pass** — `AB 1159`, `SB 1227`, `H.R. 8747`, the NYC K-8 moratorium and the STUDENTS FIRST Act are all already carried, each checked through the claims gate rather than assumed.
+
+### EMEA
+
+🔴 **NOT MEASURED this pass. `0` harvests scoped to the region, `0` rows placed, and that is an unrun leg rather than an absence** *(`ACTION UK`)*. 🟢 **`p240`'s EMEA findings are one pass old and stand unchanged**: `3` permissive rows *(`GRAPHIT`, `GRAPHIT-Frontend`, `alanlivio/autograder-gen`)*, and the quantified `GPL-3.0` bound on the Moodle plugin estate — `16` of `16` grants, `23` of `30` page-one rows from two accounts.
+
+🔴 **`ACTION UX` stands for a NINTH pass on EMEA regulation**, and this pass sharpened why it matters rather than closing it. The English WebSearch leg returned, **in one response**, both the correct instrument *(the Digital Omnibus deferring Annex III stand-alone high-risk to `2027-12-02`)* and 🔴 **the superseded claim these shelves have now recorded being re-served at least FIVE times** *("from 2 August 2026 … enforce … education access/assessment as high-risk")*.
+
+🟡 **The opportunity is unchanged and it is the sovereignty one**: a permissive, self-hostable layer *beside* a GPL LMS, sold on data residency. 🔵 **What this pass adds is a date to sell against — `2027-12-02` is `14` months out, and the Art. `4` AI-literacy obligation has been binding since `2025-02-02` and was NOT deferred.**
+
+### APAC
+
+🟢 **`3` foundation rows and `2` agent rows placed, every one with first-hand language evidence from the row itself** — `educore` *(偏远地区, offline-first rural)*, `bestteach` *(新课标)*, `taotao-skills` *(中考 ×27, `18`★, and the pass's only multi-grant row)*, `ai-teacher-copilot` *(Vietnamese, `584` diacritic hits)*.
+
+🔵 **The Vietnamese row is the regulatorily interesting one.** [`HoangNam2464/ai-teacher-copilot`](https://github.com/HoangNam2464/ai-teacher-copilot) generates **Bloom-taxonomy quizzes** from teacher documents — automated assessment — which sits squarely inside the education high-risk list of **Vietnam's Decision `33/2026/QĐ-TTg`**, carried on these shelves since `p138` with its compliance split *(`2027-03-01`, and `2027-09-01` for education systems already in operation)*. 🟢 **An APAC engagement now has both a permissive starting point and the instrument it must satisfy, on the same shelf.**
+
+🔴 **And `p240`'s APAC licence warning is reinforced, not relaxed:** the region's supply carries bespoke, non-English, source-available grants. 🔵 **For APAC rows the licence is a READING TASK, not a lookup** — and `p241` adds that this is now true for **English** payloads too *(`T241-A`)*, so the rule generalises: a `NOASSERTION` or an unrecognised family anywhere is more likely a real restriction than an omission.
+
+🟢 Regulation carried and unchanged: Vietnam's Decision `33/2026/QĐ-TTg`, Korea's **AI Framework/Basic Act (in force `2026-01-22`)**, Taiwan's AI Basic Act. 🔴 **`ACTION UL` stands: no CJK-language query has ever been run from these shelves**, so no APAC absence is establishable — this pass's APAC rows arrived through English `topic:` scope, which is reach, not coverage.
+
+### LATAM
+
+🔴 **NOT MEASURED this pass. `0` harvests scoped to the region, `0` rows placed** *(`ACTION UK`)*. 🟢 **`p240`'s LATAM findings are one pass old and stand unchanged**, including the planning fact that matters: the regional permissive supply clusters in **connectivity-tolerant school operations over public data** *(`peru-ugel-geojson`, `LUMMER`, `synco`)* rather than in tutors or LMS layers, and the Spanish-language topic channel mixes LATAM with Spain so region must be read per row.
+
+🔴 **The LATAM WebSearch leg returned `0` new rows and reproduced a misdating for the THIRD consecutive pass**: UNESCO IESALC's `87`% / `26`% offered as *2026* data when the working paper was fielded **August–October `2025`**. 🟢 **Carried correctly here since before `p239`; the recurrence is the channel's, not these shelves'.**
+
+🔵 **The adoption picture the channel did supply is all already carried and remains the strongest argument for the region**: TALIS teacher use at `56`% Brazil / `55`% Chile against an OECD average of `36`%, nine in ten 15-year-olds across `13` PISA-assessed countries using AI chatbots for schoolwork, and 🔴 **only `26`% of `200` surveyed institutions in `19` countries holding a formal AI strategy**. 🟡 **The gap between `87`% using and `26`% governing is the LATAM engagement, and it is a governance-and-integration sale, not a model sale.**
+
+### Global
+
+🟢 **`6` rows placed `Global`. `4` because that is what their own READMEs claim** — `enterprise-rag-patterns` *(US, Korea, UK, Brazil)*, `regulated-ai-governance` *(GDPR, FERPA, Singapore, Korea, EU AI Act, Brazil, Japan, India)*, `voice-ai-governance` *(FERPA + EU AI Act)*, `kinetic-gain-protocol-suite`. 🔴 **And `2` because they carry NO regional evidence at all** — `Krishita17/record-bridge` *(FERPA named twice, no institution; the US is plainly the intended market and that is still not evidence)* and `manzanillo/ai-unplugged` *(a `215` B README)*. 🔵 **Both are stated as unplaced rather than promoted into North America, which is the rule `p240` set when it wrote `Global (no regional evidence)`.**
+
+🔵 **There is a pattern in those four and it is a market signal: the cross-jurisdiction compliance ADAPTER is emerging as its own product category in education AI.** All four are one-person MIT projects at `0`–`2`★ that map several regimes onto one enforcement surface, and two of them do it as **adapters for existing agent frameworks** *(CrewAI, AutoGen, LangChain, Semantic Kernel, Haystack)* rather than as frameworks. 🟡 **For a studio serving clients in more than one region, that adapter shape is the reusable asset — and at `0`–`2`★ none of these is yet the one that wins, which is exactly when a studio can still shape it.**
+
+🔴 **Withheld globally this pass: `15` rows**, including the two `NONCOMMERCIAL-NOT-OSI` payloads that produced the pass's headline, the `AGPL-3.0` reference implementation, `5` manifests carrying `"private": true` with no licence field, and [`savvides/edtechfounderstack`](https://github.com/savvides/edtechfounderstack) — **ASU ScaleU**, MIT at the root but with `data/operator-lessons.md` carved out to non-commercial. 🟡 **That last one is usable commercially with one file deleted, and the only reason these shelves can say so is that `p1054` was wired into the gate this pass.**
+
 ## Pass 240 — 2026-10-16 — THE EMEA AND LATAM SUPPLY `p239` COULD NOT MEASURE IS MEASURED, AND IT IS NOT ABSENT AND NOT SMALL — **IT IS BOUND**: `16` OF `16` GRANTS IN THE LARGEST SINGLE-QUERY EDUCATION HARVEST THESE SHELVES HAVE TAKEN ARE `GPL-3.0`
 
 🟢 **`ACTION VJ` discharged** — the LATAM harvest `p239` refused at `0`% on-topic returns **`86.7`%** when scoped by `topic:`. 🟢 **`10` permissive rows across APAC, EMEA, LATAM and Global.** 🔴 **North America is this pass's gap: `0` of `10`**, stated as such. 🔵 **No market figure is restated here: `ACTION UP`'s `$6.4`–`11.4` B spread *(`78`%, three firms)* stands exactly as `p238` recorded it, and quoting a point estimate from these shelves is still forbidden.**

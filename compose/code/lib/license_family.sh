@@ -904,6 +904,77 @@ commercial_use_ok() {
     *"nicht-kommerziell"*|*"nicht kommerzielle nutzung"*|*"keine kommerzielle nutzung"*) return 1 ;;
     *"uso non commerciale"*) return 1 ;;
   esac
+  # -------------------------------------------------------------------------
+  # P241 (pase 241 del 2026-10-16).  P240 LEYO EL DEFECTO COMO IDIOMA; ES MAS ANCHO.
+  #
+  # p241 midio esta misma funcion sobre dos payloads EN INGLES y volvio ALLOWED en los
+  # dos.  Leidos de primera mano en el harvest `topic:ferpa` de este pase:
+  #
+  #   Samielakkad/AI-EdTech-Sovereign-School-OS   688 B   main  520bbd2e806f
+  #       «NO PERMISSION is granted to use, copy, modify, merge, publish, distribute,
+  #        sublicense, sell, train machine-learning models on, or create derivative
+  #        works from any part of this repository -- for personal, academic, or
+  #        commercial purposes -- WITHOUT the author's explicit prior WRITTEN permission.»
+  #
+  #   snflwr-ai/snflwr.ai                       2 833 B   main  7feea47e4759
+  #       «snflwr.ai - Proprietary Software License / All rights reserved.»
+  #
+  # Ninguno dice `non-commercial`, `noncommercial`, `not-for-profit` ni `obtain a
+  # commercial license`.  El primero usa la palabra *commercial* DENTRO DE UNA NEGATIVA,
+  # y la lista de tokens solo la conoce dentro del compuesto.  El segundo no la usa.
+  #
+  # 🔴 Y `p240-grant-language` devuelve `LATIN-SCRIPT` en los dos: certifica que el
+  # token-match ingles APLICA, sobre los dos payloads que lo derrotan.  El eje del idioma
+  # era real y su arreglo sigue en pie; no era la clase del defecto.
+  #
+  # La clase es: TODA ESTA RAMA ENUMERA MANERAS DE DECIR «RESTRINGIDO» Y LEE LA AUSENCIA
+  # DE SU PROPIO VOCABULARIO COMO PERMISO.  Una negativa que no vio antes le parece una
+  # concesion.  El censo de `ACTION VO` midio 122 matchers que deciden una pregunta de
+  # permiso en `compose/code/`; 7 tienen vocabulario de restriccion Y una salida por
+  # defecto que permite; de esos 7 este es EL UNICO en `make hooks`.
+  #
+  # El predicado no enumera restricciones: pregunta lo que una licencia existe para
+  # responder -- ¿CONCEDE ALGO?  `compose/code/p241-blanket-denial/` lo implementa con
+  # 95 controles y esta rama lo refleja frase por frase (`p637`: dos implementaciones de
+  # un predicado se miden una contra la otra, no se confia en que coincidan).
+  #
+  # 🟡 El modo de falso positivo, y el discriminador: «All rights reserved.» es una LINEA
+  # de `BSD-2`, `BSD-3` y de muchas cabeceras `MIT` -- seguida de una concesion.  Por eso
+  # NUNCA condena sola: condena solo en AUSENCIA de todo verbo de concesion.  Control
+  # positivo leido de primera mano: `scipy/scipy` `LICENSE.txt` (1 531 B, `5363aec376a7`)
+  # lleva la linea Y concede, y sigue siendo ALLOWED.
+  if [ "$__f" = "UNCLASSIFIED" ]; then
+    # (a) negativa explicita: condena sola.
+    case "$d" in
+      *"no permission is granted"*|*"no permission whatsoever"*) return 1 ;;
+      *"no permission has been granted"*|*"permission is not granted"*) return 1 ;;
+      *"no license is granted"*|*"no licence is granted"*) return 1 ;;
+      *"no rights are granted"*|*"not granted any rights"*) return 1 ;;
+      *"proprietary software license"*|*"proprietary software licence"*) return 1 ;;
+      *"proprietary license"*|*"proprietary licence"*) return 1 ;;
+      *"is not open source"*|*"is not an open-source"*) return 1 ;;
+      *"unauthorized copying"*|*"unauthorised copying"*) return 1 ;;
+      *"strictly prohibited"*) return 1 ;;
+    esac
+    # (b) derechos reservados SIN verbo de concesion.  El orden importa: primero se
+    # busca la concesion, y solo si no hay ninguna condena la reserva.
+    case "$d" in
+      *"all rights reserved"*|*"all rights are reserved"*)
+        case "$d" in
+          *"permission is hereby granted"*|*"permission to use, copy, modify"*) : ;;
+          *"redistribution and use"*|*"redistribution, with or without modification"*) : ;;
+          *"hereby grants"*|*"grants you a"*|*"grants to you"*|*"is hereby granted"*) : ;;
+          *"licensed under the apache license"*|*"you may obtain a copy of the license"*) : ;;
+          *"you may not use this file except in compliance"*) : ;;
+          *"this program is free software"*|*"this library is free software"*) : ;;
+          *"free software: you can redistribute"*|*"permitted provided that"*) : ;;
+          *"subject to the terms and conditions of this license"*) : ;;
+          *"you are free to"*|*"we hereby grant"*|*"granted a perpetual"*) : ;;
+          *"do what the fuck you want"*) : ;;
+          *) return 1 ;;
+        esac ;;
+    esac
+  fi
   return 0
 }
 
@@ -979,6 +1050,33 @@ holder_of() {
       # No family to gate on, so the question is still open -- but it is asked ONLY of the
       # title block, never of a body this function cannot vouch for.
       ;;
+    # P241 (pase 241).  P255 ACERTO LA FAMILIA Y ERRO UNA DE SUS DOS FORMAS.
+    #
+    # La premisa de P255, escrita arriba, es que en `Apache-2.0` «la unica linea de
+    # copyright pertenece al autor de la licencia (la ASF), nunca al proyecto».  Eso es
+    # cierto del TEXTO COMPLETO (11 357 B) y FALSO del formulario de boilerplate que la
+    # ASF misma recomienda, donde sus instrucciones dicen de insertar la linea propia.
+    #
+    # Especimen real, leido de primera mano en el harvest `topic:ferpa` de p241:
+    #   ashutoshrana/ferpa-haystack  LICENSE  742 B  main  914154573fc5
+    # Su linea 5 es «Copyright 2026 Ashutosh Rana» -- el titular DEL PROYECTO -- y
+    # `holder_of` respondia «holder not in the license text by construction», que aqui es
+    # simplemente falso.  El titular ESTABA y la funcion se negaba a leerlo.
+    #
+    # 🔵 Lo mide el par de este pase: `ashutoshrana/haystack-ferpa-filter` (12 101 B, texto
+    # completo, SIN titular) y `ashutoshrana/ferpa-haystack` (742 B, boilerplate, CON
+    # titular) traen la MISMA descripcion de GitHub y distinto payload.  La recuperabilidad
+    # del titular no depende de la familia: depende de QUE FORMA se sirvio.
+    #
+    # Es la clase de p241 otra vez: una asuncion de nivel-clase devuelta como respuesta
+    # firme sin leer el payload.  El discriminador es el encabezado de seccion del texto
+    # completo, y la plantilla sin rellenar (`[yyyy] [name of copyright owner]`) se excluye
+    # abajo para que un corchete no se reporte como titular.
+    Apache-2.0)
+      if printf '%s' "$payload" | grep -qiE 'TERMS AND CONDITIONS FOR USE, REPRODUCTION'; then
+        echo "NOT-APPLICABLE ($fam: full text, holder not in the license text by construction)"; return
+      fi
+      ;;
     *)
       echo "NOT-APPLICABLE ($fam: holder not in the license text by construction)"; return ;;
   esac
@@ -995,6 +1093,7 @@ holder_of() {
     | grep -iE '^[[:space:]]*(Copyright|\(c\)|©)' \
     | grep -viE 'Free Software Foundation|Apache Software Foundation|Open Source Initiative' \
     | grep -viE 'copyright notice (and|shall)|COPYRIGHT HOLDERS? BE LIABLE|copyright holder, and you' \
+    | grep -viE '\[yyyy\]|\[name of copyright owner\]|\[fullname\]|<year>|<name of author>' \
     | head -1 | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]\+/ /g')
 
   # A YEAR IS NOT A HOLDER, AND NEITHER IS A YEAR A REQUIREMENT.

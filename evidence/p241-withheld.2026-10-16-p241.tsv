@@ -1,0 +1,16 @@
+slug	state	bytes	path	head_sha	reason
+Samielakkad/AI-EdTech-Sovereign-School-OS	NONCOMMERCIAL-NOT-OSI	688	LICENSE	520bbd2e806f	"NO PERMISSION is granted ... for personal, academic, or commercial purposes" - the p241 headline payload; holder email sam25@mails.tsinghua.edu.cn
+snflwr-ai/snflwr.ai	NONCOMMERCIAL-NOT-OSI	2833	LICENSE	7feea47e4759	Proprietary since 2026-09-18; AGPL-3.0 from 2026-02-27 to 2026-09-18 and that grant is perpetual for copies taken in the window
+savvides/edtechfounderstack	NOT-OPEN-SOURCE:added-restriction	1408	LICENSE	800fcaf5fcc1	MIT root EXCEPT data/operator-lessons.md which is non-commercial only (paraphrased from Lenny's Newsletter). Usable commercially only with that file excluded
+mizcausevic-dev/student-data-access-audit-stream-reference	AGPL-3.0	34524	LICENSE	a54d85effa6f	Network copyleft - flagged, not permissive
+adensvaz/rfp-tracker	MANIFEST-NO-LICENCE-FIELD	845	package.json	1a3f92f7ee24	package.json has "private": true and NO license field - an explicit non-publication marker, not a grant
+wuxiwuhen/ggb-fable	MANIFEST-NO-LICENCE-FIELD	968	package.json	1ebfd515c8e8	same: "private": true, no license field
+xiao55752-create/AI-	MANIFEST-NO-LICENCE-FIELD	1492	package.json	22e1456a8b48	same: "private": true, no license field
+library-catalog-data/library-catalog-data	MANIFEST-NO-LICENCE-FIELD	715	package.json	af046e04f4a0	same: "private": true, no license field
+lms-edtech-data/lms-edtech-data	MANIFEST-NO-LICENCE-FIELD	910	package.json	3c509b3622051	same: "private": true, no license field
+Tools4ever-NIM/NIM-System-REST-Ed-Fi	NO-GRANT	-	-	675f2472afb8	40 paths x 2 refs, nothing served
+api-evangelist/parallel-learning	NO-GRANT	-	-	afecfeb8382a	40 paths x 2 refs, nothing served
+edgentx/mtss-data-model-sample	NO-GRANT	-	-	48ee1ab5f5f7	40 paths x 2 refs, nothing served
+erezende11/llm-ticket-triage-agent	NO-GRANT	-	-	bc2c8ac31487	40 paths x 2 refs, nothing served
+BrianSantiago-GRC/grc-portfolio	NO-GRANT	-	-	0dc33de6ab66	40 paths x 2 refs, nothing served
+robinshen84/reading-quest-agent	NO-GRANT	-	-	0391c231e030	40 paths x 2 refs, nothing served
