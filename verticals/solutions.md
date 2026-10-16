@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 238 — 2026-10-16 — THE MANDATED PLATFORM QUERY RETURNED `OpenEduCat` AGAIN AND STILL COULD NOT STATE A LICENCE; MEANWHILE A REPOSITORY NAMED **`Moodle-Full-Version-Unlocked`** PASSES EVERY AUTOMATED LICENCE CHECK ON THIS SHELF
+
+🟢 **`3` new LATAM public-data platform rows.** 🔴 **`1` impersonation of a platform this shelf recommends on nine files.** 🟡 **The mandated platform query reproduced p237's result exactly.**
+
+🔵 **Evidence:** [`p238-licence-filter-lure-farm`](../evidence/p238-licence-filter-lure-farm.2026-10-16-p238.tsv) · [`p238-queries`](../evidence/p238-queries.2026-10-16-p238.tsv)
+
+### 🔴 `T238-E` — the recommendation shelf is now an attack surface, and that is new here
+
+This shelf recommends `Moodle` across nine files. 🔴 **A repository called [`rockstar49summer/Moodle-Full-Version-Unlocked`](https://github.com/rockstar49summer/Moodle-Full-Version-Unlocked) exists, carries `license: MIT`, serves a `LICENSE` at `HTTP 200`, was pushed `2026-10-16`, and funnels every link to one download host.** Its `README` was read first-hand at `11 604` B: *"Reviewed by the senior review board · Senior Software Analyst · Verified against the official source"*, with **licence badges served as remote images from the funnel host** rather than from the repository.
+
+🔵 **Why that matters on a VERTICALS shelf specifically: this file's output is a shortlist a client procures from.** A shortlist naming `Moodle`, handed to someone who then searches GitHub for it with a licence filter, now has a decoy sitting next to the real thing. 🟡 **The real project is [`moodle/moodle`](https://github.com/moodle/moodle) — `GPL-3.0`, and `P973` on this shelf already records that its `5.0` tree moved the licence out of the root.**
+
+🟢 **The same cohort impersonates `PRONOTE`** *(the French school platform)*, **`CmapTools`, `Stellarium`, `Childsplay`, `Complete Anatomy`, `Packet Tracer`, `Adobe Presenter`, `GeoEnZo`, `WordFox`, `CubeTest`, `DiagramPainter`** — and **`Google Classroom`**, seven weeks after `p236` dated Classroom's shutdown to `2026-08-28`. 🔵 **Eleven of the thirteen were recorded from the listing page, not read; stated as a limit — `ACTION UZ`.**
+
+🟢 **The gate is four predicates and no model, and it is `P238-1` in [`compose/patterns.md`](../compose/patterns.md).**
+
+### 🟡 The mandated platform query, reproduced
+
+`open source platform education ERP CRM MIT Apache student information system` returned, for the second pass running: **`OpenEduCat`** *(whose own site states `LGPL-3.0` — the weak-copyleft third answer p237 added a column for)*, **Kuali**, and **openSIS** *(a SourceForge page with no licence statement)*. 🔴 **The query names `MIT` and `Apache` and the channel returned neither.** 🔵 Consistent with p237's first-hand `LGPL-3.0` read of `OpenEduCat`, so this is a reproduction, not a new finding.
+
+### 🟢 New tier: LATAM national-data platforms, `3` rows
+
+🔵 **Why they belong here rather than on `repos/foundations.md` alone: a customisable platform is only half a vertical solution — the other half is the national data it has to be loaded with, and for LATAM engagements that data has not been on this shelf at all.**
+
+| platform | grant *(read first-hand)* | ★ | head | scope |
+|---|---|---|---|---|
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | 🟢 **`MIT`** — `1 070` B, © 2026 Carlos Ortega | **129** | `main` · `605482f` | Chilean public data **curated, normalised and validated** — geography, demography, economy. 🟢 The validation step is what distinguishes it from a dump |
+| [`manusabbath-arch/mcp-uruguay`](https://github.com/manusabbath-arch/mcp-uruguay) | 🟢 **`MIT`** — `1 070` B, © 2026 Manu Martinez | 0 | `main` · `d4c4d0f` | Uruguayan and regional public data over **MCP** — `BCU`, `INDEC`, `IBGE`, `ANCAP`, `INIA`. 🔵 `INDEC` and `IBGE` make it Argentina- and Brazil-reaching too |
+| [`Angelthebestone/Normativa-colombiana-MCP`](https://github.com/Angelthebestone/Normativa-colombiana-MCP) | 🟢 **`MIT`** — `1 068` B, © 2026 Angel Peña | 3 | `main` · `cdab134` | Colombian norms and jurisprudence over MCP — the regulatory limb of a LATAM governance engagement |
+
+🔴 **All three are NATIONAL, not education-specific.** Stated so a later pass does not read them as education platforms. 🟡 **`ACTION VD`: no equivalent exists on these shelves for Mexico, Peru or Argentina as a single curated hub.**
+
+### 🔴 What this shelf still cannot answer
+
+- 🔴 **Not one platform row on this shelf has been checked against the lure signature.** 🟡 **`ACTION VE`: run `P238-1`'s four predicates over every slug this shelf recommends, and record the result — including the zero, if it is zero.**
+- 🟡 **`OpenEduCat`'s `LGPL-3.0` is still a site claim plus p237's read; the Odoo dependency underneath it carries its own licensing** and that chain is unmeasured here.
+
 ## Pass 237 — 2026-10-16 — THE MANDATED PLATFORM QUERY NAMED `OpenEduCat` AND COULD NOT STATE ITS LICENCE; THIS PASS READ IT, AND IT IS **`LGPL-3.0`** — WEAK COPYLEFT, WHICH IS A THIRD ANSWER THIS SHELF HAD NO COLUMN FOR
 
 🟢 **`5` new platform rows, `1` published licence correction, and the largest of the new rows is `6` years dormant and said so before it was shelved.**

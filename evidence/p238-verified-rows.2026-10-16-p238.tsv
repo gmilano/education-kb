@@ -1,0 +1,44 @@
+slug	grant	payload_path	bytes	branch	head	stars	region	region_basis	shelf
+airblackbox/airblackbox	Apache-2.0	LICENSE	11357	main	e730135	24	EMEA	binds EU AI Act Arts 9-15 by construction	repos/foundations
+mohdibrahimaiml/epi-recorder	MIT	LICENSE	1069	main	0289e66	29	Global	no regional evidence	repos/foundations
+sattyamjjain/agent-audit-kit	Apache-2.0	LICENSE	11343	main	1126c18	12	Global	no regional evidence	repos/foundations
+preloop/preloop	Apache-2.0	LICENSE	11351	main	7f62619	77	Global	no regional evidence	repos/foundations
+ai-sdlc-framework/ai-sdlc	Apache-2.0	LICENSE	11357	main	388de20	413	Global	no regional evidence	repos/foundations
+aisecnomad/Nexus-ShadowScan	Apache-2.0	LICENSE	11358	main	9466cbf	14	Global	no regional evidence	repos/foundations
+sebuzdugan/frai	MIT	LICENSE	1074	main	f563075	54	EMEA	Art-50-shaped AI-disclosure check	repos/foundations
+systima-ai/aiact-audit-log	MIT	LICENSE	1064	main	94b60e4	9	EMEA	names Article 12 EU AI Act	repos/foundations
+ark-forge/mcp-eu-ai-act	MIT	LICENSE	1065	main	933e56d	11	EMEA	EU AI Act scanner over MCP	repos/foundations
+Peaky8linders/eu-ai-act-scanner	Apache-2.0	LICENSE	11283	main	52f9060	5	EMEA	cites Regulation 2024/1689	repos/foundations
+AlexandruGirlea/precommiteu	Apache-2.0	LICENSE	11346	main	8304dd2	13	EMEA	GDPR/AI-Act/NIS2/DORA/CRA/DSA/DMA	repos/foundations
+snath-ai/lar	Apache-2.0	LICENSE	11368	main	b1b4f26	14	Global	no regional evidence	repos/foundations
+rajfirke/provena	Apache-2.0	LICENSE	11340	main	f0f19bc	18	Global	no regional evidence	repos/foundations
+VibeTensor/attestix	Apache-2.0	LICENSE	10766	main	a89903c	874	Global	no regional evidence	repos/foundations
+saasvista/aibom-scanner	Apache-2.0	LICENSE	10760	main	9f5a506	22	North America	maps NIST AI RMF + ISO 42001	repos/foundations
+miles2005-web/eu-ai-act-legal-rag-prototype	MIT	LICENSE	1068	main	a236fd7	33	EMEA	EU AI Act + GDPR screening	repos/foundations
+sphragis-oss/sphragis	Apache-2.0	LICENSE	11358	main	84d658b	6	EMEA	EU AI Act compliance gateway	repos/foundations
+jagmarques/asqav-compliance	FLAG Elastic-License-2.0	LICENSE	4102	main	4e3d76e	9	EMEA	NOT OSI - withheld from build shelf	FLAGGED
+SdSarthak/AegisAI	FLAG AGPL-3.0-only+added-condition	LICENSE	1015	main	4150df8	95	Global	AGPL plus link-back/commercial clause	FLAGGED
+chaoyuhao/mini-homework-agent	MIT	LICENSE	1089	main	2783cfe	0	APAC	names Fudan eLearning	agents/top
+mcxiaoxiao/kaoyan-navigator-skill	MIT	LICENSE	1093	main	c3ee142	37	APAC	Chinese postgraduate entrance exam	agents/top
+cabbage2000-lab/textbook-writer-skills	MIT	LICENSE	1064	main	8bf4e82	36	APAC	Chinese-language UbD course design	agents/top
+ZZombie04/hwpx_new	MIT	LICENSE	1066	main	7c8b720	3	APAC	HWPX is the ROK national document format	agents/top
+localis-ai/student-discovery-agent	MIT	LICENSE	1079	main	25d0c6c	0	APAC	Vietnamese high-school students named	agents/top
+L01nki1/extend-slides	MIT	LICENSE	1064	main	f134745	14	APAC	Chinese-language courseware	agents/top
+LINJIANG12/video2book	MIT	LICENSE	1100	main	fe351c0	14	APAC	grant holder names Bilibili	agents/top
+waychan23/ilearnassist	MIT	LICENSE	1082	main	137a617	3	APAC	Chinese-language, LAN-first	agents/top
+Anlexis/agentic-star-student-performance-integrity-anomaly-detection-agent	MIT	LICENSE	1064	main	73ca387	0	Global	NO region evidence - not inferred	agents/top
+raymondstudio/Lerna	MIT	LICENSE	1072	main	35914eb	2	Global	NO region evidence - holder name NOT used	agents/top
+afrizagilleon/runut	MIT	LICENSE	1079	main	3e0f504	0	APAC	Indonesian-language; MARGINAL relevance	agents/top
+Cleison-Morais/koba	MIT	LICENSE	1071	main	97a7d1f	0	LATAM	names SEDUC-SP state education dept	agents/top
+startin-lab/brujula-educativa	MIT	LICENSE	1068	main	f0fc98b	0	LATAM	Colombia open education data	agents/top
+Trf0/llm-edu-classifier	MIT	LICENSE	1083	main	b1a987b	0	LATAM	pt-BR educational classification	agents/top
+muller-pereira/edudatalab	MIT	LICENSE	1072	main	0c324c0	0	LATAM	pt-BR learning analytics	repos/foundations
+ChrisMeniw/mentelibre	MIT	LICENSE	1079	main	01b05b4	0	LATAM	grant holder is a named foundation	agents/top
+LuKeTempestt/simulados-sedu	MIT	LICENSE	1068	main	0c3a478	0	LATAM	UNIT residency with SEDU partnership	agents/top
+Davi-1903/EduIA	MIT	LICENSE	1071	main	a28c14d	1	LATAM	pt-BR education support system	agents/top
+svfaca/AtenaAi	MIT	LICENSE	1064	main	36d151a	1	LATAM	pt-BR education platform	agents/top
+maiatechdev/avit	MIT	LICENSE	1069	main	8c5cb78	0	LATAM	pt-BR pedagogical-window learning	agents/top
+cortega26/chile-hub	MIT	LICENSE	1070	main	605482f	129	LATAM	curated Chilean public data	repos/foundations
+manusabbath-arch/mcp-uruguay	MIT	LICENSE	1070	main	d4c4d0f	0	LATAM	Uruguay public data over MCP	repos/foundations
+innova-space-edu/eduai-platform	MIT	LICENSE	1083	main	a05af7e	1	LATAM	grant holder carries Chilean SpA form	repos/foundations
+Angelthebestone/Normativa-colombiana-MCP	MIT	LICENSE	1068	main	cdab134	3	LATAM	Colombian norms over MCP	repos/foundations

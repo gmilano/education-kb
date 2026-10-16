@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 238 — 2026-10-16 — `ACTION UQ` IS DISCHARGED AS **ALREADY ANSWERED** — THE RECONCILIATION `p236` ASKED FOR WAS PUBLISHED BY `p223` **THE DAY BEFORE** — AND THE MARKET SPREAD `ACTION UP` ORDERED IS NOW MEASURED AT `6.4`–`11.4` `$B`
+
+🔵 **Evidence:** [`p238-queries`](../evidence/p238-queries.2026-10-16-p238.tsv) · [`p238-verified-rows`](../evidence/p238-verified-rows.2026-10-16-p238.tsv)
+
+### 🟢 `T238-F` — `ACTION UQ`, and the finding is about the ACTION REGISTER rather than the law
+
+`p236` closed with: *"The EU AI Act high-risk conformity deadline **does not reconcile** — Dec 2027 vs Aug 2028, and sources disagree on whether the Digital Omnibus is in force or merely approved. `ACTION UQ`: resolve against EUR-Lex. **No EMEA proposal should quote a date from these shelves until it is.**"*
+
+🔴 **That action should never have been registered.** `p223` and `p224` — **dated `2026-10-15`, one day earlier** — had already settled every limb of it, and the cells are still on [`agents/trending.md`](../agents/trending.md) in their fifth reproduction:
+
+| limb `p236` reported unresolved | 🟢 what `p223`/`p224` had already published |
+|---|---|
+| *"Dec 2027 **vs** Aug 2028"* | 🟢 **Not rival dates for one deadline. Two different annexes.** Annex III *(stand-alone, **education is point `3`**)* → **`2027-12-02`**. Annex I *(embedded in regulated products)* → **`2028-08-02`** |
+| *"in force or merely approved"* | 🟢 **In force.** `Reg. (EU) 2026/1744`, `OJ` `2026-07-24`, in force `2026-07-27`. Parliament endorsed `2026-06-16`, Council final approval `2026-06-29` |
+| *"no EMEA proposal should quote a date"* | 🔴 **An embargo on this KB's own correct answer.** The shelves were right; the register told readers not to trust them |
+
+🔵 **This is `p226`/`p227`'s defect class, inverted: there the gate could not see what the KB had refuted; here the ACTION REGISTER could not see what the KB had ESTABLISHED, so a settled question was re-opened as a gap one pass later.** 🟡 **`ACTION VF`: before registering any action of the form *"resolve X"*, run `make claims TOKEN=X`. The claims gate already answers it and it was not consulted.**
+
+🟢 **This pass re-derived the dates on an independent channel and changed nothing** — `Cuatrecasas`, `White & Case`, `ERTICO`, `NHI Governance`, `nicfab`, the Cloud Security Alliance and `skillsintelligence` all converge on `Reg. (EU) 2026/1744` / `OJ 2026-07-24` / in force `2026-07-27`. 🔴 **`eur-lex.europa.eu` remains unreadable from this session, so the status stays `CONVERGENT-SECONDARY` and `ACTION RO` stands** — see `T238-H` for a refinement of *why* it is unreadable.
+
+🟢 **Two clauses ARE new, and both matter commercially** *(`0` prior occurrences on these shelves)*:
+
+1. 🟢 **The Omnibus moved four application dates and did nothing else.** No obligation added, none removed, **and no sector or company-size exemption.** 🔵 **So the deferral bought time, not relief, and there is no education carve-out and no SME carve-out to hope for.** A client told *"the deadline moved"* who hears *"the rule got softer"* has been misinformed by the summary, not by the law.
+2. 🟢 **National regulatory sandboxes must be operational by `2027-08-02`**, four months before education's own date. 🟡 A sandbox place is a deliverable with an earlier clock than the obligation it de-risks.
+
+🔵 **And the nearest genuinely binding EU date is unchanged from `p224`: `2026-12-02`** — the two Article `5` prohibitions the Omnibus added, plus the end of the Article `50(2)` machine-readable marking grace for systems placed before `2026-08-02`. **Seven weeks out.**
+
+### 🟡 `T238-G` — `ACTION UP` discharged: the spread, never a point estimate
+
+`ACTION UP` ordered the market base year quoted as a range. 🟢 **Measured on this pass's own channel, naming each source:**
+
+| figure | base | source as given by the channel | note |
+|---|---|---|---|
+| **`$6.4` B** | 2025 | IMARC *(reported with a `$79.6` B / 2034 horizon)* | 🔴 **the floor** |
+| **`$10.6` B** | 2026 | second research firm, unnamed in the result | the figure `p230`-era cells carried as *the* number |
+| **`$11.4` B** | 2026 | third research firm, unnamed in the result | 🔴 **the ceiling — `78`% above the floor** |
+
+🔴 **The spread is `78`% on the base year, wider than the `50`% `p236` recorded.** 🟢 **The rule stands and is now evidenced twice: quote the range and name the firm, or quote nothing.** 🔵 **A deck that says "a `$10.6` B market" has picked the middle of three vendor estimates and presented it as a measurement.**
+
+🟡 **Regional figures from the same pass, recorded with the same caution:** North America **`$951` M (2024) → `$2 303.2` M (2029)** and a **`36`%** regional share; *"Rest of Latin America"* **`$18.2` M (2024) → `$36` M (2029)`, `12.1`% CAGR** — 🔴 **whose country scope the publisher does not define, so it is unusable in a country proposal.**
+
+### 🟡 `T238-H` — `ACTION UR` narrowed, not discharged; and a channel boundary measured
+
+🟢 **`ACTION UR` asked whether Estado de México's art. `61` reform rests on anything better than a specialist blog. It does.** The **Congreso del Estado de México** states the united committees approved the reform to art. `61` of the *Ley de Educación* **unanimously**, proposed by **Dip. Lilia Urbina Salazar (PRI)**, to implement *"el uso responsable, ético y gradual de la inteligencia artificial con fines educativos"* at **upper-secondary and higher** level; the initiative was filed **November 2025**. *El Universal Edomex* reports the content: progressive access to information technology including free internet in school spaces, and promotion of responsible AI use among teachers and students.
+
+🔴 **The decree is still not found in the `Gaceta del Gobierno`, and no entry-into-force date was established.** 🟡 **So `ACTION UR` moves from *"sourced to a blog"* to *"legislature-confirmed at committee stage, publication unverified"* and stays open.** 🔵 **The distinction is quotable and the difference matters: a committee approval is not a law in force, and a client proposal must not present it as one.**
+
+🟢 **Channel boundaries measured this pass, because `ACTION UK` requires a block to be described by the path it blocks:**
+
+| channel | result | correct reading |
+|---|---|---|
+| REST **search** via the session's MCP tools | 🟢 **global** — `6` queries, `total_count` up to `10 817` | open |
+| REST **contents** via the same tools | 🔴 **repo-scoped**: *"not configured for this session"* | 🔵 **So p236's *"the GitHub REST metadata channel is reachable"* is true of SEARCH and false of CONTENTS.** `raw.githubusercontent.com` over `curl` covers the gap and did all `43` grant reads |
+| `curl https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng` | 🔴 **`curl 56` — CONNECT tunnel failed, response `403`** | 🟢 **A PROXY ALLOWLIST refusal, not a DNS or server failure.** Earlier cells record EUR-Lex as `000` |
+| `WebFetch` on `eur-lex.europa.eu` and `www.orrick.com` | 🔴 `getaddrinfo ENOTFOUND` | 🔵 **`WebFetch` and `curl` have DIFFERENT allowlists** — a host unreachable on one is not unreachable on the other, and p236's `github.blog` note generalised across both |
+
+## Opportunities by region
+
+### North America
+
+🔴 **This pass has almost nothing new to sell here, and the reason is worth more than a padded row: `1` of `43` new rows is North American, and it is a standards scanner.** [`saasvista/aibom-scanner`](https://github.com/saasvista/aibom-scanner) *(`Apache-2.0`, `22`★)* scans a codebase for AI SDKs, MCP servers and agent tools and maps them to **NIST AI RMF** and **ISO 42001** — placed here because it binds a US standard, not because it is education software.
+
+🟡 **The carried NA position is unchanged and still the right one**: sell conformance as an auditable claim on the `OneRoster`/`Ed-Fi` estate, and compliance-as-a-server on [`CSOAI-ORG/coppa-ferpa-mcp`](https://github.com/CSOAI-ORG/coppa-ferpa-mcp). 🔵 **What changed is the discovery method: the statute words `FERPA` and `COPPA` are now contaminated** — that query returned a download-lure farm and zero NA education agents. 🟡 **`ACTION UY`: discover NA supply by district-system name — `Ed-Fi`, `OneRoster`, `Clever`, `PowerSchool`, `Infinite Campus`.**
+
+🟢 **The one genuinely new NA sell is defensive and immediate**: against `10`% of institutions having formal AI guidance, `aibom-scanner` plus [`aisecnomad/Nexus-ShadowScan`](https://github.com/aisecnomad/Nexus-ShadowScan) *(`Apache-2.0`)* produce a **shadow-AI inventory of a district or campus** — a two-week engagement whose output is the precondition for every governance artefact that follows.
+
+### EMEA
+
+🟢 **Sell the `2026-12-02` work NOW and the `2027-12-02` work on a dated plan — and this pass finally has the CODE for both.** The eleven permissive instruments on [`repos/foundations.md`](../repos/foundations.md) `T238-C` are the first time this KB can answer *"what do we build?"* rather than *"what is the deadline?"*
+
+🟢 **Seven weeks out (`2026-12-02`)**: the two added Article `5` prohibitions, and the end of the Article `50(2)` marking grace. [`sebuzdugan/frai`](https://github.com/sebuzdugan/frai) *(`MIT`, `54`★)* checks whether a product discloses that it uses AI — against code, the live site **and** the spec — which is an Article `50` gap report a studio can deliver in days.
+
+🟢 **On the `2027-12-02` clock**: [`airblackbox/airblackbox`](https://github.com/airblackbox/airblackbox) *(`Apache-2.0`, `v1.17.0`, production)* scans **Articles `9`–`15`** and produces an **Article `12`** signed, externally countersigned, independently verifiable evidence chain; [`systima-ai/aiact-audit-log`](https://github.com/systima-ai/aiact-audit-log) *(`MIT`)* is the narrower Article `12` logger; [`AlexandruGirlea/precommiteu`](https://github.com/AlexandruGirlea/precommiteu) *(`Apache-2.0`)* moves the whole EU stack — AI Act, GDPR, NIS2, DORA, CRA, DSA, DMA — **to PR time**; [`sphragis-oss/sphragis`](https://github.com/sphragis-oss/sphragis) *(`Apache-2.0`)* is the in-line gateway. Recipe: `P238-2`.
+
+🔵 **And the clincher for a procurement conversation: the Omnibus moved four dates and created no sector and no company-size exemption.** 🟡 **The literacy sell (Article `4`, [`telekom/ki-in-schulen`](https://github.com/telekom/ki-in-schulen)) and the statutory-output sell (NRW `Zeugnisse`, the `svws-nrw` estate) are unchanged and still the fastest entry.** 🔴 **French, Italian and Dutch supply remains UNMEASURED — `ACTION UV`.**
+
+### APAC
+
+🟢 **Sell NATIONAL-API INTEGRATION plus SOVEREIGN DEPLOYMENT — the position is unchanged and this pass strengthens both limbs.** The Korean statutory-document loop now closes in both directions: [`chrisryugj/kordoc`](https://github.com/chrisryugj/kordoc) *(`MIT`)* reads `hwp`, and new this pass [`ZZombie04/hwpx_new`](https://github.com/ZZombie04/hwpx_new) *(`MIT`)* **writes** `HWPX` — including research-school result reports with generated contents, statistics and charts. 🔵 **A statutory report a teacher commits is the deliverable; the agent drafts it.**
+
+🟢 **Sovereignty, in deployable form**: [`waychan23/ilearnassist`](https://github.com/waychan23/ilearnassist) *(`MIT`)* runs its server on the institution's own machine and is reached over the LAN by QR code. Paired with the carried self-hosted-model stack, that is the region's stated theme as working code.
+
+🟢 **New and sellable beyond the region**: [`cabbage2000-lab/textbook-writer-skills`](https://github.com/cabbage2000-lab/textbook-writer-skills) *(`MIT`, `36`★)* drives authoring from **`UbD` backward design** with explicit gates — an instructional-design method, which is what a ministry procurement asks for and a prompt chain cannot evidence. 🔴 **Still no education-specific APAC regulation or adoption figure on this channel — `ACTION UX` stands; the region word returns enterprise IT press.**
+
+### LATAM
+
+🟢 **Sell the GOVERNANCE ARTEFACT — and this pass is the first where the supply side can carry it.** The measurement is unchanged and still the sharpest in this KB: **`92`% of students and `79`% of faculty already using AI against `30`% of universities having any published AI policy**, with non-binding `SEP`/`ANUIES` recommendations in Mexico and no education-sector rule in Brazil or Colombia.
+
+🟢 **`13` new LATAM rows, `0`% of them previously carried**, and two name a **state education authority in their own text**: [`Cleison-Morais/koba`](https://github.com/Cleison-Morais/koba) *(`MIT`, **`SEDUC-SP`**, marks statutory Educação Profissional register entries) and [`LuKeTempestt/simulados-sedu`](https://github.com/LuKeTempestt/simulados-sedu) *(`MIT`, UNIT residency with Espírito Santo's **`SEDU`**)*. 🔵 **A named state secretariat is a reference a Brazilian proposal can cite; a GitHub star count is not.**
+
+🟢 **The governance stack now has all three limbs in `MIT`**: the norms ([`Angelthebestone/Normativa-colombiana-MCP`](https://github.com/Angelthebestone/Normativa-colombiana-MCP)), the national data ([`cortega26/chile-hub`](https://github.com/cortega26/chile-hub), `129`★, validated — and [`manusabbath-arch/mcp-uruguay`](https://github.com/manusabbath-arch/mcp-uruguay) reaching `INDEC` and `IBGE`), and the analytics ([`muller-pereira/edudatalab`](https://github.com/muller-pereira/edudatalab)). Recipe: `P238-4`.
+
+🟡 **Regulatory state, stated precisely:** Estado de México's art. `61` reform is **legislature-confirmed at committee stage, publication in the `Gaceta del Gobierno` unverified** — quotable as a trend, 🔴 **not as a law in force.** 🔴 **And the only regional market figure this channel offers — *"Rest of Latin America"* `$18.2` M → `$36` M — has an undefined country scope, so it cannot be used in a country proposal.**
+
 ## Pass 237 — 2026-10-16 — THE SUPPLY/DEMAND MAP THIS SHELF PUBLISHED LAST PASS IS **WRONG ON APAC**, AND IT WAS WRONG BECAUSE EVERY SUPPLY FIGURE ON IT WAS MEASURED IN ENGLISH
 
 🔴 **The line this shelf carried — *"APAC has the sharpest new regulation and almost no supply"* — is withdrawn.** 🟢 **APAC supply, measured this pass on a licence-filtered REST channel in Japanese, Korean and Chinese: `19` live, granted, first-hand-verified repositories, `9` of them education AI agents.** 🔵 **The regional supply column was never a measurement of the field. It was a measurement of this KB's query language.**

@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 238 — 2026-10-16 — THIS KB HAS CARRIED THE EDUCATION HIGH-RISK **CLOCK** SINCE `p223` AND THE **DELIVERABLES** SINCE `p224`, AND IT CARRIES ALMOST NONE OF THE **CODE THAT IMPLEMENTS THEM**: `Article 12` APPEARS TWICE ON THESE SHELVES WHILE `C2PA` APPEARS `171` TIMES
+
+🟢 **`22` new foundation rows, every grant read first-hand.** 🔴 **`2` of them WITHHELD from the build shelf after their payloads were read — both report `NOASSERTION` on the GitHub API, and neither is permissive.** 🟢 **A third-party claim corrected: one of the four tools that [`airblackbox`](https://github.com/airblackbox/airblackbox)'s own `README` calls an "open-source EU AI Act scanner" is under the `Elastic License 2.0`.**
+
+🔵 **Evidence:** [`p238-verified-rows`](../evidence/p238-verified-rows.2026-10-16-p238.tsv) · [`p238-queries`](../evidence/p238-queries.2026-10-16-p238.tsv)
+
+### 🔴 `T238-C` — the gap is measurable on this KB's own text, which is why it is worth a pass
+
+`p223` settled the clock: **Annex III point `3` — education and vocational training — binds `2027-12-02`** under `Reg. (EU) 2026/1744`, and `2026-08-02` is Article `50` transparency, a different obligation that IS live. `p224` added the deliverables: the Article `27` fundamental-rights impact assessment, the Annex IV technical file. 🟢 **All of that is correct and this pass re-confirmed it on a fresh channel without changing a date.**
+
+🔴 **What was never shelved is the code.** Counted across every `.md` on these shelves, excluding `archive/`:
+
+| token | occurrences | what it is |
+|---|---|---|
+| `C2PA` | 🟢 **`171`** | content marking — Article `50(2)` |
+| `FRIA` / *fundamental rights impact* | 🟢 `18` / `10` | Article `27`, as a deliverable |
+| **`Annex IV`** | 🔴 **`2`** | the technical file a high-risk provider must hold |
+| **`Article 12`** | 🔴 **`2`** | **record-keeping — automatic logging over the system's lifetime** |
+| **`tamper-evident`** | 🔴 **`0`** | — |
+
+🔵 **The asymmetry is the finding: this KB taught itself to talk about the obligation whose artefact is a *document*, and never shelved the obligation whose artefact is a *running system*.** 🟡 Article `12` is the one an education deployer cannot produce retroactively — a log that starts when the auditor asks is not a log.
+
+### 🟢 The instrument shelf, `11` permissive rows
+
+🟡 **Three members of this category were already carried** — [`compl-ai/compl-ai`](https://github.com/compl-ai/compl-ai) *(`Apache-2.0`)*, [`Principled-Evolution/gopal`](https://github.com/Principled-Evolution/gopal) *(`Apache-2.0`)* and [`GenAI-Gurus/awesome-eu-ai-act`](https://github.com/GenAI-Gurus/awesome-eu-ai-act) *(`CC0-1.0`)*. 🔵 **So the claim is not "this category is absent" — the claims gate refused that, correctly. It is that this KB carried the EVALUATION anchor and the POLICY library and none of the SCANNERS, LOGGERS or GATEWAYS.**
+
+| instrument | grant *(read first-hand)* | ★ | head | article coverage | region basis |
+|---|---|---|---|---|---|
+| [`VibeTensor/attestix`](https://github.com/VibeTensor/attestix) | 🟢 **`Apache-2.0`** — `LICENSE`, `10 766` B | **874** | `main` · `a89903c` | agent identity, signed credentials, delegated authority, portable governance evidence | 🟡 Global |
+| [`sebuzdugan/frai`](https://github.com/sebuzdugan/frai) | 🟢 **`MIT`** — `1 074` B, © 2025 FRAI Contributors | **54** | `main` · `f563075` | 🟢 **Article `50`** — *"does your product tell people it uses AI?"* checked against code, the live site and the spec | 🟢 EMEA by obligation |
+| [`saasvista/aibom-scanner`](https://github.com/saasvista/aibom-scanner) | 🟢 **`Apache-2.0`** — `10 760` B | **22** | `main` · `9f5a506` | scans a codebase for AI SDKs, MCP servers and agent tools; maps to **NIST AI RMF** and **ISO 42001** | 🟢 **North America** — binds a US standard |
+| [`airblackbox/airblackbox`](https://github.com/airblackbox/airblackbox) | 🟢 **`Apache-2.0`** — `11 357` B | 24 | `main` · `e730135` | 🟢 **Articles `9`–`15`**, GDPR and US state AI law; **Article `12`** record-keeping as an `Ed25519`-signed, externally countersigned, browser-verifiable evidence chain | 🟢 EMEA by obligation |
+| [`rajfirke/provena`](https://github.com/rajfirke/provena) | 🟢 **`Apache-2.0`** — `11 340` B | 18 | `main` · `f0f19bc` | tamper-evident audit trails + provenance validation for agent context | 🟡 Global |
+| [`snath-ai/lar`](https://github.com/snath-ai/lar) | 🟢 **`Apache-2.0`** — `11 368` B | 14 | `main` · `b1b4f26` | glass-box execution engine — deterministic, forensic audit trails | 🟡 Global |
+| [`AlexandruGirlea/precommiteu`](https://github.com/AlexandruGirlea/precommiteu) | 🟢 **`Apache-2.0`** — `11 346` B | 13 | `main` · `8304dd2` | 🟢 **catches EU regulatory violations at PR time** — GDPR, AI Act, NIS2, DORA, CRA, DSA, DMA | 🟢 EMEA by obligation |
+| [`ark-forge/mcp-eu-ai-act`](https://github.com/ark-forge/mcp-eu-ai-act) | 🟢 **`MIT`** — `1 065` B, © 2026 ArkForge | 11 | `main` · `933e56d` | EU AI Act violation detection exposed over **MCP** | 🟢 EMEA by obligation |
+| [`systima-ai/aiact-audit-log`](https://github.com/systima-ai/aiact-audit-log) | 🟢 **`MIT`** — `1 064` B, © 2026 Systima | 9 | `main` · `94b60e4` | 🟢 **Article `12` specifically** — structured, tamper-evident audit logging, and the only row that names the article in its own description | 🟢 EMEA by obligation |
+| [`sphragis-oss/sphragis`](https://github.com/sphragis-oss/sphragis) | 🟢 **`Apache-2.0`** — `11 358` B | 6 | `main` · `84d658b` | EU AI Act compliance **gateway** in front of Anthropic/OpenAI-compatible models; redacts PII | 🟢 EMEA by obligation |
+| [`Peaky8linders/eu-ai-act-scanner`](https://github.com/Peaky8linders/eu-ai-act-scanner) | 🟢 **`Apache-2.0`** — `11 283` B | 5 | `main` · `52f9060` | 🟢 **cites `Regulation 2024/1689` by number**; `14` analyzers over evidence and gaps | 🟢 EMEA by obligation |
+| [`miles2005-web/eu-ai-act-legal-rag-prototype`](https://github.com/miles2005-web/eu-ai-act-legal-rag-prototype) | 🟢 **`MIT`** — `1 068` B, © 2026 Chen Junyan | **33** | `main` · `a236fd7` | deterministic, evidence-grounded screening under the AI Act and GDPR | 🟢 EMEA by obligation |
+
+🟢 **`airblackbox` is the one at production maturity**: release `1.17.0`, on PyPI and npm, trust layers for seven Python frameworks plus Vercel AI SDK / OpenAI Agents SDK / LangChain.js / MCP, scanning Python, notebooks, TypeScript, JavaScript, Java and Kotlin, keys generated locally and never transmitted, and a **published four-tool benchmark over `144` hand-labelled programs** with every verdict in-tree. 🔵 **A published comparative eval is the thing `ACTION VA` records as missing from the education-agent tier — this adjacent category already has one.**
+
+### 🔴 `T238-D` — two rows withheld, and one third-party "open source" claim corrected
+
+🔴 **Both report `NOASSERTION` on the GitHub API, so neither is resolvable from the field this KB already distrusts. Both payloads were read.**
+
+| repository | API field | 🔴 **what the payload actually says** | consequence for a studio |
+|---|---|---|---|
+| [`jagmarques/asqav-compliance`](https://github.com/jagmarques/asqav-compliance) *(9★, `main` · `4e3d76e`)* | `NOASSERTION` | 🔴 **`Elastic License 2.0`**, `4 102` B — *"You may not provide the software to third parties as a hosted or managed service"*, plus no circumventing licence-key functionality | 🔴 **Not OSI, not open source.** A managed service is precisely what a studio engagement is, so this one is excluded by its own limitation clause, not by preference |
+| [`SdSarthak/AegisAI`](https://github.com/SdSarthak/AegisAI) *(**95★**, `main` · `4150df8`)* | `NOASSERTION` | 🟡 `SPDX-License-Identifier: AGPL-3.0-only` on line 1 — but a **`1 015` B short-form notice** pointing at `gnu.org` for the text, **plus two conditions AGPL-3.0 does not contain**: *"Commercial use/resell: contact the author"* and a fork obligation to *"link back"* | 🔴 **So the declared identifier is not the licence.** A reviewer who trusts the `SPDX` line gets AGPL §13's network copyleft *and* an added attribution condition. 🟡 The short form is also **why the API cannot match it** |
+
+🔵 **`airblackbox`'s own `README` names `ArkForge`, `Systima Comply` and `Asqav` as the three other "open-source EU AI Act scanners" it benchmarked against.** 🟢 **Two of those check out — `ark-forge/mcp-eu-ai-act` and `systima-ai/aiact-audit-log` are both `MIT`, read first-hand above.** 🔴 **The third does not: `Asqav` is `Elastic License 2.0`.** 🔵 **A vendor's own benchmark table is a licence claim about its competitors, and it was wrong about one in three. That is the same class of error as trusting the API field, arriving through prose instead.**
+
+### 🟢 Agent-governance infrastructure, `6` rows — adjacent, and the Article `12` substrate
+
+| repository | grant | ★ | head | why it is here |
+|---|---|---|---|---|
+| [`ai-sdlc-framework/ai-sdlc`](https://github.com/ai-sdlc-framework/ai-sdlc) | 🟢 **`Apache-2.0`** — `11 357` B | **413** | `main` · `388de20` | Declarative governance for an AI-augmented SDLC — the largest row in this group |
+| [`preloop/preloop`](https://github.com/preloop/preloop) | 🟢 **`Apache-2.0`** — `11 351` B | **77** | `main` · `7f62619` | Agent control plane: MCP firewall, model gateway with budgets, **human approvals**, runtime observability. 🔵 Human approval is Article `14` human oversight in deployable form |
+| [`mohdibrahimaiml/epi-recorder`](https://github.com/mohdibrahimaiml/epi-recorder) | 🟢 **`MIT`** — `1 069` B, © 2024–2026 EPI Labs | **29** | `main` · `0289e66` | Portable, signed, **offline-verifiable** evidence files with declared capture scope. 🟡 The declared-scope field matters: it records what the log does NOT cover |
+| [`aisecnomad/Nexus-ShadowScan`](https://github.com/aisecnomad/Nexus-ShadowScan) | 🟢 **`Apache-2.0`** — `11 358` B | 14 | `main` · `9466cbf` | Discovers agents across code, identity, gateways, low-code, SaaS and cloud. 🔵 **An Article `26` deployer cannot oversee a system it has not inventoried**, and a university's shadow-AI estate is the unmeasured part |
+| [`sattyamjjain/agent-audit-kit`](https://github.com/sattyamjjain/agent-audit-kit) | 🟢 **`Apache-2.0`** — `11 343` B | 12 | `main` · `1126c18` | Static scanner for MCP-connected agent pipelines: `388` rules, `14` compliance frameworks |
+| [`muller-pereira/edudatalab`](https://github.com/muller-pereira/edudatalab) | 🟢 **`MIT`** — `1 072` B, © 2026 Müller Pereira | 0 | `main` · `0c324c0` | 🟢 **LATAM** — `pt-BR` learning-analytics / education data-science lab. The analytics substrate under `P238-4` |
+
+### 🟢 LATAM public-data foundations, `3` rows — new tier on this shelf
+
+| repository | grant | ★ | head | what it is |
+|---|---|---|---|---|
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | 🟢 **`MIT`** — `1 070` B, © 2026 Carlos Ortega | **129** | `main` · `605482f` | 🟢 **The highest-starred LATAM row these shelves carry.** Chilean public data curated, normalised and **validated** — geography, demography, economy |
+| [`manusabbath-arch/mcp-uruguay`](https://github.com/manusabbath-arch/mcp-uruguay) | 🟢 **`MIT`** — `1 070` B, © 2026 Manu Martinez | 0 | `main` · `d4c4d0f` | MCP server over Uruguayan and regional public data — `BCU`, `INDEC`, `IBGE`, `ANCAP`, `INIA` |
+| [`Angelthebestone/Normativa-colombiana-MCP`](https://github.com/Angelthebestone/Normativa-colombiana-MCP) | 🟢 **`MIT`** — `1 068` B, © 2026 Angel Peña | 3 | `main` · `cdab134` | Colombian norms and jurisprudence over MCP |
+
+🔵 **Why a data hub belongs on an education foundation shelf: every LATAM engagement in this KB's market section is a governance-artefact engagement, and a governance artefact that cites no national statistics is a template.** 🟡 **These three are national, not education-specific — stated so the next pass does not over-read them.**
+
+### 🔴 Gaps this shelf still has
+
+- 🔴 **No instrument here has been RUN.** Every row is a grant + a head SHA + a self-description. 🟡 **`ACTION VB`: run `airblackbox comply` and `Peaky8linders/eu-ai-act-scanner` over one carried education repository and record what they actually report.** Until then these are catalogue rows, not tested tools.
+- 🔴 **Not one of these instruments mentions education.** They cover Articles `9`–`15` generically; the mapping to Annex III point `3`'s four uses is this KB's to write, and `P238-2` is the first draft of it.
+- 🟡 **`ACTION VC`: `attestix` at `874`★ is `35`× the stars of the nearest EU-AI-Act-specific row.** Worth establishing whether the category's centre of gravity is agent *identity* rather than regulatory *scanning*.
+
 ## Pass 237 — 2026-10-16 — THE FOUNDATION TIER GAINS A **NATIONAL-API CLIENT ESTATE** IN THREE COUNTRIES, AND THE US `OneRoster` LIMB TURNS OUT TO BE `3` ROWS THIS SHELF ALREADY HELD PLUS `3` IT DID NOT
 
 🟢 **`11` new foundation rows across `4` regions, every one grant-read first-hand at a pinned head.** 🔵 **The shape of the result is the finding: the permissive foundation layer in education is overwhelmingly *bindings to national government APIs and national data standards*, not frameworks.**

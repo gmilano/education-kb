@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — p238 — GitHub Trending returned nothing education-specific for a **sixth** pass, and the channel that replaced it turned out to have an **adversarial failure mode** nobody had measured
+
+🟢 **`22` new foundation rows** — a whole category this KB had only three members of: **EU AI Act compliance instruments**. 🔴 **`2` withheld as non-permissive after their payloads were read.** 🔴 **`13` lure repositories identified in the supply channel itself.**
+
+### 🟢 The week's new category: `11` permissive instruments that implement the articles this KB only ever cited
+
+🔵 **The measurement that justifies the category:** across these shelves, `C2PA` appears **`171`** times, `FRIA` `18`, and **`Article 12` exactly `2`**, `tamper-evident` **`0`**. This KB learned to discuss the obligation whose artefact is a document and never shelved the one whose artefact is a running system.
+
+| row | grant | ★ | what it covers |
+|---|---|---|---|
+| [`VibeTensor/attestix`](https://github.com/VibeTensor/attestix) | `Apache-2.0` | **874** | agent identity, signed credentials, portable governance evidence |
+| [`ai-sdlc-framework/ai-sdlc`](https://github.com/ai-sdlc-framework/ai-sdlc) | `Apache-2.0` | **413** | declarative governance for an AI-augmented SDLC |
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | `MIT` | **129** | 🟢 **highest-starred LATAM row on these shelves** — validated Chilean public data |
+| [`preloop/preloop`](https://github.com/preloop/preloop) | `Apache-2.0` | 77 | MCP firewall, model gateway, **human approvals** — Article `14` in deployable form |
+| [`sebuzdugan/frai`](https://github.com/sebuzdugan/frai) | `MIT` | 54 | 🟢 **Article `50`** — does your product tell people it uses AI |
+| [`miles2005-web/eu-ai-act-legal-rag-prototype`](https://github.com/miles2005-web/eu-ai-act-legal-rag-prototype) | `MIT` | 33 | evidence-grounded AI Act / GDPR screening |
+| [`airblackbox/airblackbox`](https://github.com/airblackbox/airblackbox) | `Apache-2.0` | 24 | 🟢 **Articles `9`–`15`** + **Article `12`** signed evidence chain; `v1.17.0`, production, **published 4-tool / 144-program benchmark** |
+| [`systima-ai/aiact-audit-log`](https://github.com/systima-ai/aiact-audit-log) | `MIT` | 9 | 🟢 **Article `12`** by name |
+| [`ark-forge/mcp-eu-ai-act`](https://github.com/ark-forge/mcp-eu-ai-act) | `MIT` | 11 | AI Act scanning over MCP |
+| [`AlexandruGirlea/precommiteu`](https://github.com/AlexandruGirlea/precommiteu) | `Apache-2.0` | 13 | EU regulatory violations caught **at PR time** |
+| [`Peaky8linders/eu-ai-act-scanner`](https://github.com/Peaky8linders/eu-ai-act-scanner) | `Apache-2.0` | 5 | 🟢 cites `Regulation 2024/1689` by number |
+
+*(Full rows with payload bytes and pinned heads: [`repos/foundations.md`](foundations.md) `T238-C`. `compl-ai`, `gopal` and `awesome-eu-ai-act` were already carried — the absent members were the scanners, loggers and gateways, not the category.)*
+
+### 🔴 Two withheld, and a vendor benchmark corrected
+
+- 🔴 [`jagmarques/asqav-compliance`](https://github.com/jagmarques/asqav-compliance) — API `NOASSERTION`; payload is **`Elastic License 2.0`** *(`4 102` B)*, forbidding hosted/managed service. **Excluded.**
+- 🔴 [`SdSarthak/AegisAI`](https://github.com/SdSarthak/AegisAI) *(`95`★)* — API `NOASSERTION`; payload declares `AGPL-3.0-only` **plus a link-back obligation and a commercial-licence clause AGPL does not contain**. **Flagged.**
+- 🔵 **`airblackbox`'s `README` lists `ArkForge`, `Systima Comply` and `Asqav` as three fellow "open-source" scanners. Two check out; `Asqav` does not.** A vendor benchmark is a licence claim about competitors, and it was wrong about one in three.
+
+### 🔴 Trending itself, sixth consecutive miss
+
+🔴 **No live GitHub Trending page for education reached this session.** The mandated `github trending {industry} AI {year}` query returned AI-engineering learning repos and secondary trend blogs. 🔵 Recorded as a channel result, per `ACTION UK` — not as a claim that nothing is trending.
+
 ## 2026-10-16 — p237 — GitHub Trending returned **nothing education-specific for a fifth pass**, and this week's repo movement came from a channel Trending cannot express: a **server-side licence filter in five languages**
 
 🔵 **Evidence:** [`p237-rest-licence-channel`](../evidence/p237-rest-licence-channel.2026-10-16-p237.tsv) · [`p237-verified-rows`](../evidence/p237-verified-rows.2026-10-16-p237.tsv)

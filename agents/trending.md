@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — p238 — the week's agent news is that **a licence filter can be gamed**, and the cohort doing it impersonates `Google Classroom` seven weeks after Classroom was switched off
+
+🟢 **`21` new agent rows** *(10 LATAM, 9 APAC, 2 region-not-established)*. 🔴 **`13` repositories found masquerading as education products with a valid `MIT` grant.** 🔴 **The mandated query fails for the EIGHTH consecutive pass.**
+
+### 🔴 The movement, and it is adversarial rather than technical
+
+p237's reading was that the server-side licence filter *"inverts the sample"* in this KB's favour. 🟢 **It does.** 🔴 **It also admits anyone willing to commit a `LICENSE` file.** One query returned `13` repositories named for real education software with `Full-Version`/`Unlocked` appended — `Moodle`, `Google Classroom`, `PRONOTE`, `CmapTools`, `Packet Tracer`, `Stellarium`, `Childsplay`, `Complete Anatomy`, `Adobe Presenter`, `GeoEnZo`, `WordFox`, `CubeTest`, `DiagramPainter` — all `license: MIT`, all `0`★, all pushed the same day, all funnelling to `softyne.com`. Two were read first-hand. Full table: [`agents/top.md`](top.md) `T238-A`.
+
+🔵 **The week's lesson in one line: a grant is a permission, never a provenance claim.** This KB spent eleven passes learning to read the licence payload instead of the API field; both of them say `MIT` here.
+
+🟡 **And it is education-specific, not generic supply-chain noise.** `p236` dated GitHub Classroom's shutdown to `2026-08-28`. The `Google Classroom` lure was pushed `2026-10-16` — into the replacement-search window that shutdown created.
+
+### 🟢 The real agent movement this week is LATAM, and it is institutional
+
+🟢 **`10` LATAM rows, `0` of `13` candidates already carried.** Two name a **state education authority** in their own text — [`Cleison-Morais/koba`](https://github.com/Cleison-Morais/koba) *(`MIT`, `SEDUC-SP`, marks statutory Educação Profissional register entries)* and [`LuKeTempestt/simulados-sedu`](https://github.com/LuKeTempestt/simulados-sedu) *(`MIT`, UNIT residency with Espírito Santo's `SEDU`)*. 🔵 **p235 falsified *"LATAM: 0 repositories"*; this week measures the reach behind that falsification, and it is `0`% overlap — i.e. the shelves had barely begun.**
+
+🟢 **One row is placed by a CORPORATE FORM in its grant payload** — [`innova-space-edu/eduai-platform`](https://github.com/innova-space-edu/eduai-platform), © *Innova Space Education **SpA***, the Chilean *Sociedad por Acciones*. 🔵 **First time on these shelves that jurisdiction came out of the licence file itself.**
+
+### 🟡 APAC keeps producing, and two rows are shapes this shelf did not have
+
+- [`cabbage2000-lab/textbook-writer-skills`](https://github.com/cabbage2000-lab/textbook-writer-skills) *(`MIT`, `36`★)* — textbook authoring driven by **`UbD` backward design** with explicit gates. 🔵 An instructional-design method, not a prompt chain.
+- [`chaoyuhao/mini-homework-agent`](https://github.com/chaoyuhao/mini-homework-agent) *(`MIT`)* — grading for **`Canvas LMS`** and Fudan eLearning, with a reviewed-score step. 🔵 `Canvas` is the LMS left standing after Classroom.
+- [`ZZombie04/hwpx_new`](https://github.com/ZZombie04/hwpx_new) *(`MIT`)* — **writes** Korean `HWPX` statutory reports, completing the Korean limb `ACTION UM` opened: `kordoc` reads `hwp`, this writes `hwpx`.
+
+### 🔴 What did NOT move, said plainly
+
+- 🔴 **North America: `1` of `43` rows, and it is a standards scanner.** The `FERPA`/`COPPA` query that worked at p237 returned the lure farm. 🟡 **`ACTION UY`: query the district systems by name, not the statutes.**
+- 🔴 **`ACTION UC`, eighth failure.** The mandated agent query returned a *course about agents* and general frameworks. Recorded, not reworded.
+- 🔴 **No new agent eval harness.** `9` of this week's `21` agents have `0`★ and none ships a benchmark. 🟡 **`ACTION VA`.**
+
 ## 2026-10-16 — p237 — the week's agent news is that **seven passes of the mandated query returned `0` education agents and one Chinese REST query returned `8`**
 
 🟢 **`ACTION US` discharged** *(p236: "move supply discovery to REST")*. 🟢 **`ACTION UN` discharged, and it overturns the pass that registered it.** 🟢 **`12` new agent rows promoted to [`agents/top.md`](top.md), across `4` regions, every grant read first-hand at a pinned head.**

@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 238 — 2026-10-16 — THE TREND IS THAT **COMPLIANCE HAS BECOME A SOFTWARE CATEGORY**, AND THE COUNTER-TREND IS THAT THE OPEN-SOURCE SUPPLY CHAIN HAS LEARNED TO **FORGE THE ONE SIGNAL THIS KB TRUSTS**
+
+🔵 **Evidence:** [`p238-verified-rows`](../evidence/p238-verified-rows.2026-10-16-p238.tsv) · [`p238-licence-filter-lure-farm`](../evidence/p238-licence-filter-lure-farm.2026-10-16-p238.tsv) · [`p238-queries`](../evidence/p238-queries.2026-10-16-p238.tsv)
+
+### 🟢 Trend `1` — EU AI Act compliance is now a populated open-source category, not a consultancy service
+
+🟢 **`13` permissive instruments located in one pass, `11` of them clean, `0` of those previously carried.** The category has a production member *(`airblackbox`, `v1.17.0`, on PyPI and npm)*, **a published four-tool comparative benchmark over `144` hand-labelled programs**, four distinct architectural shapes — **scanner** *(`eu-ai-act-scanner`, `mcp-eu-ai-act`)*, **logger** *(`aiact-audit-log`, `epi-recorder`, `provena`, `lar`)*, **gateway** *(`sphragis`, `preloop`)*, **CI gate** *(`precommiteu`)* — and a dated obligation to sell against.
+
+🔵 **The structural read: a regulation with a `2027-12-02` date produced a software category inside `~15` months of entering into force, and the category organised itself around ARTICLE NUMBERS.** `frai` targets Article `50`. `aiact-audit-log` names Article `12`. `eu-ai-act-scanner` cites `Regulation 2024/1689` in its own description. 🟡 **That is a procurement-ready vocabulary, and it is the vocabulary a studio should be quoting.**
+
+🔴 **The counter-measurement, on this KB's own text:** `C2PA` appears **`171`** times across these shelves; **`Article 12` appears `2`** and `tamper-evident` **`0`**. 🔵 **This KB tracked the obligation whose artefact is a document and missed the one whose artefact is a running system — and Article `12` is the one that cannot be produced retroactively.**
+
+### 🔴 Trend `2` — the counter-trend, and it is the more important of the two
+
+🔴 **A licence is now a forgeable discovery signal.** `p237` moved supply discovery to the REST channel precisely because the licence filter is server-side and *"inverts the sample"*. One pass later, a single query returned **`13` repositories named for real education products** — `Moodle`, `Google Classroom`, `PRONOTE`, `CmapTools`, `Packet Tracer`, `Stellarium`, `Childsplay`, `Complete Anatomy`, `Adobe Presenter`, `GeoEnZo`, `WordFox`, `CubeTest`, `DiagramPainter` — each with `license: MIT`, a `LICENSE` at `HTTP 200`, `0`★, `0` forks, a distinct throwaway owner, pushed the same day, and every link funnelling to one host.
+
+🔵 **The trend statement: open-source discovery signals are being *constructed*, not merely mislabelled, and the construction targets exactly the checks a careful pipeline runs.** The licence badge in those READMEs is a remote `.svg` served from the funnel host — a *picture* of a licence badge. The authority line is *"Reviewed by the senior review board · Senior Software Analyst · Verified against the official source"*, naming no reviewer, no board and no source.
+
+🟡 **This reframes `p228`–`p237`'s whole grant-ladder programme.** Reading the payload first-hand defeats a repository that is *carelessly* labelled. 🔴 **It does nothing against one that is *deliberately* labelled.** 🟢 **The missing predicate is not about licences at all — it is provenance: stars, age, fork graph, owner history, and whether the README's links concentrate on a single external host.** `P238-1`.
+
+🟡 **And the timing is a trend in itself**: the `Google Classroom` lure was pushed `2026-10-16`, seven weeks after `p236` dated Classroom's shutdown to `2026-08-28`. 🔵 **Platform withdrawal creates a search-demand window, and the window is being farmed.** `p236` called withdrawal *"the year's largest event in education tooling"*; this is its second-order effect.
+
+### 🟢 Trend `3` — supply localisation continues, and its centre moved from APAC to LATAM
+
+`p237` measured localisation at `19` of `35` new rows in non-English languages. 🟢 **This pass: `22` of `43` rows are non-English-language, and for the first time the largest regional intake is LATAM (`13`) rather than APAC (`9`).**
+
+🔵 **And the LATAM rows are institutionally anchored in a way the APAC rows are not yet**: two name a Brazilian **state education secretariat** (`SEDUC-SP`, `SEDU`-ES), two are published by named **foundations**, and one is placed by a **Chilean corporate form in its copyright holder string** (`SpA`) — the first time on these shelves that jurisdiction came out of the licence payload itself. 🟡 **Institutional anchoring beats star count as a procurement signal, and LATAM supply has it while APAC supply has scale.**
+
+🔴 **The measurement that bounds the optimism: `0` of `13` LATAM candidates were already carried.** 🔵 **A `0`% duplication rate is not a compliment to the channel, it is a verdict on the prior reach — these shelves had barely started on Spanish and Portuguese.**
+
+### 🟡 Trend `4` — the duplication rate splits by AXIS, which is a usable planning number
+
+`p236` measured `~45`% duplication on two channels and concluded it was *"a property of this KB's reach rather than of any one query"*. 🟢 **This pass refines that: the rate is a property of the AXIS, not the KB.**
+
+| axis queried | candidates drafted | already carried | rate |
+|---|---|---|---|
+| education agents *(the usual axis)* | `16` | `5` | 🟡 **`31`%** |
+| EU AI Act compliance instruments | `16` | `3` | 🟡 `19`% |
+| LATAM Spanish + Portuguese | `13` | **`0`** | 🟢 **`0`%** |
+| agent-governance infrastructure | `6` | **`0`** | 🟢 **`0`%** |
+
+🔵 **So "where should the next pass look?" has a numeric answer: the axes this KB has never queried return `0`% duplication, and the axis it queries every pass returns `31`%.** 🟡 **`ACTION VG`: record the axis with every future intake so this table extends instead of being re-derived.**
+
+### 🔴 Trends this pass could NOT establish
+
+- 🔴 **No education-specific APAC regulation or adoption figure.** Eighth-ish consecutive miss; the region word returns enterprise IT press. 🟡 **`ACTION UX`** — query ministries by name (`MEXT`, `MOE` Singapore, `ACARA`, India's `NEP`).
+- 🔴 **North America produced `1` of `43` rows.** 🟡 **`ACTION UY`** — the statute words are contaminated; query district systems by name.
+- 🔴 **Market sizing still does not converge** — `$6.4` B / `$10.6` B / `$11.4` B on the base year, a `78`% spread, wider than `p236`'s `50`%. 🟢 `ACTION UP`'s rule holds: quote the range and the firm, or quote nothing.
+- 🔴 **Not one instrument in trend `1` has been RUN.** 🟡 **`ACTION VB`.** Until then the category is catalogued, not tested — and a trend built on self-descriptions is a reading of marketing copy.
+
 ## Pass 237 — 2026-10-16 — THE TREND IS THAT EDUCATION AI SUPPLY HAS **LOCALISED**, AND THE MEASUREMENT IS THAT `19` OF THIS PASS'S `35` NEW GRANTED ROWS ARE IN LANGUAGES ENGLISH DOES NOT SHARE
 
 🔵 **Evidence:** [`p237-rest-licence-channel`](../evidence/p237-rest-licence-channel.2026-10-16-p237.tsv) · [`p237-verified-rows`](../evidence/p237-verified-rows.2026-10-16-p237.tsv)

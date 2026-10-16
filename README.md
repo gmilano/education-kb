@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 238 — 2026-10-16 — THE LICENCE FILTER `p237` ADOPTED AS THIS KB'S SUPPLY CHANNEL **ADMITS A DOWNLOAD-LURE FARM**, AND THE GATE AGAINST IT IS BUILT, TESTED AND RUN IN THE SAME PASS
+
+⏱️ **SEVENTH pass of `2026-10-16`.** p232–p237 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`43` new rows across `4` regions, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` actually reported. 🟢 **`13` LATAM rows — the largest LATAM intake these shelves have taken, at `0`% duplication.** 🟢 **A new tested instrument, `45`/`45` controls, wired into `make hooks`.** 🔴 **`2` rows withheld as non-permissive after reading payloads the GitHub API reports as `NOASSERTION`.** 🔴 **North America is this pass's gap: `1` row of `43`.** 🔴 **`ACTION UC` fails for the EIGHTH consecutive pass.**
+
+🔵 **Evidence:** [`p238-verified-rows`](evidence/p238-verified-rows.2026-10-16-p238.tsv) *(43 slugs, grant + bytes + pinned head + region basis)* · [`p238-licence-filter-lure-farm`](evidence/p238-licence-filter-lure-farm.2026-10-16-p238.tsv) · [`p238-selfgate`](evidence/p238-selfgate.2026-10-16-p238.tsv) · [`p238-queries`](evidence/p238-queries.2026-10-16-p238.tsv) · **instrument:** [`compose/code/p238-lure-signature/`](compose/code/p238-lure-signature/)
+
+### 🔴 `T238-A` — the headline, and it is a defect in the channel this KB adopted ONE PASS AGO
+
+`p237` moved supply discovery to the REST channel on the ground that *"a licence filter that cannot be expressed is not a weak filter — it inverts the sample"*. 🟢 **That reasoning holds.** 🔴 **What `p237` did not measure is what the filter ADMITS.**
+
+The North America query — `FERPA OR COPPA student education in:name,description,readme license:mit pushed:>2026-06-01`, the statute-binding trick that placed `p237`'s four NA rows — returned `total_count` `10 817` and, on page one, **`13` repositories whose names are real education products with `Full-Version` or `Unlocked` appended**: `Moodle`, `Google Classroom`, `PRONOTE`, `CmapTools`, `Packet Tracer`, `Stellarium`, `Childsplay`, `Complete Anatomy`, `Adobe Presenter`, `GeoEnZo`, `WordFox`, `CubeTest`, `DiagramPainter`. 🔴 **Distinct throwaway owners, `0`★, `0` forks, all pushed `2026-10-16`, all `license: MIT`.**
+
+🟢 **Two were read first-hand rather than inferred from the listing** — `11 604` B and `10 722` B — and they are the same document with the brand swapped, funnelling every link to one host, `softyne.com`.
+
+🔴 **The licence signal is constructed on BOTH of this KB's channels at once:**
+
+| signal | what a harvester sees | what is actually there |
+|---|---|---|
+| GitHub `license` field | 🟢 `MIT` | 🔴 set by the uploader; an *assertion*, not provenance |
+| `LICENSE` at the default branch | 🟢 **`HTTP 200`** | 🔴 present — so a first-hand grant read, **this KB's own standard**, PASSES |
+| licence badge in the `README` | 🟢 a licence badge | 🔴 **a remote `.svg` on the funnel host** — a *picture* of a badge |
+| authorship | 🟢 *"Reviewed by the senior review board · Senior Software Analyst"* | 🔴 no named reviewer, board or source |
+
+🔵 **`p228`–`p237` spent eleven passes establishing that a licence must be read first-hand instead of taken from the API field. That instrument returns `MIT · LICENSE · 200` for all thirteen of these. A grant is a permission; it was never a provenance claim.**
+
+🔴 **And the cohort is TIMED, which makes it an education finding rather than a security one.** `p236` established off the `archived` boolean that **GitHub Classroom was switched off on `2026-08-28`**. `mallyrix943/Google-Classroom-Full-Version` was pushed `2026-10-16` — **seven weeks into the replacement-search window that shutdown created.** 🟡 And the brand set includes **`Moodle`**, which these shelves recommend on nine files.
+
+### 🟢 `T238-B` — the gate, built and run in the same pass
+
+🟢 **[`compose/code/p238-lure-signature/`](compose/code/p238-lure-signature/) — four predicates, no model, no network beyond the `README` this KB already fetches.** `NAME` *(release-channel word)*, `FUNNEL` *(≥60% of non-infrastructure links on one non-self host)*, `BADGE` *(licence badge as a remote off-platform image)*, and `COLDNESS` 🔴 **which is corroborating only and can never convict — this pass published `9` genuine rows at `0`★.**
+
+| run | result |
+|---|---|
+| controls | 🟢 **`45`/`45`**, from its own directory **and** under `-I` from the repo root *(`p355-cwd-portability`)* |
+| the two lures | 🔴 **`LURE`, all four predicates, `100`% of `18` and `24` links on `softyne.com`** |
+| this pass's own `43` rows | 🟢 **`43`/`43` `CLEAR` — zero false positives** |
+| every slug on every shelf *(`2 188`, `NAME`, offline)* | 🟢 **`2` hits, both the lures this pass documents — the shelves are clean on this predicate, and the zero is recorded** |
+
+🟡 **One false-positive mode found and fixed inside the pass:** six real projects scored `60`–`93`% concentration on **their own docs domains** *(`docs.snath.ai`, `ai-sdlc.io`, `attestix.io`, `arkforge.tech`, two `*.github.io`)*. 🟢 **The self-host exemption cleared all six without weakening either conviction, because a lure's funnel host bears no relation to its owner.** Wired into `make hooks`; the whole offline suite still passes.
+
+### 🟢 `T238-C` — a whole category this KB cited for `15` passes and never shelved
+
+🔵 **Measured on this KB's own text, excluding `archive/`: `C2PA` appears `171` times, `FRIA` `18`, **`Annex IV` `2`**, **`Article 12` `2`**, `tamper-evident` **`0`**.** 🟡 **This KB learned to discuss the obligation whose artefact is a *document* and never shelved the one whose artefact is a *running system* — and Article `12` record-keeping is the one that cannot be produced retroactively.**
+
+🟢 **`11` permissive EU-AI-Act instruments added**, in four shapes: **scanner** *(`airblackbox` `Apache-2.0` `v1.17.0` production, Articles `9`–`15`, with a **published four-tool benchmark over `144` hand-labelled programs**; `Peaky8linders/eu-ai-act-scanner`; `ark-forge/mcp-eu-ai-act`)*, **logger** *(`systima-ai/aiact-audit-log` names Article `12`; `epi-recorder`; `provena`; `lar`)*, **gateway** *(`sphragis`, `preloop`)* and **CI gate** *(`precommiteu`)*, plus `frai` on Article `50`. 🟡 **`compl-ai`, `gopal` and `awesome-eu-ai-act` were already carried — so the gap was the scanners, loggers and gateways, not the category. The claims gate refused the stronger wording, correctly.**
+
+### 🔴 `T238-D` — two withheld, and a vendor's own benchmark corrected
+
+| repository | API | 🔴 what the payload says | consequence |
+|---|---|---|---|
+| [`jagmarques/asqav-compliance`](https://github.com/jagmarques/asqav-compliance) | `NOASSERTION` | 🔴 **`Elastic License 2.0`**, `4 102` B — *"may not provide the software to third parties as a hosted or managed service"* | 🔴 **Not OSI.** A managed service is what a studio engagement IS |
+| [`SdSarthak/AegisAI`](https://github.com/SdSarthak/AegisAI) *(`95`★)* | `NOASSERTION` | 🟡 `SPDX: AGPL-3.0-only` on line `1`, but a `1 015` B short form **plus a link-back obligation and a commercial-licence clause AGPL-3.0 does not contain** | 🔴 **The declared identifier is not the licence** |
+
+🔵 **`airblackbox`'s `README` names `ArkForge`, `Systima Comply` and `Asqav` as three fellow "open-source EU AI Act scanners". Two check out as `MIT`. `Asqav` does not.** 🟡 **A vendor benchmark is a licence claim about competitors, and it was wrong about one in three — the same class of error as trusting the API field, arriving through prose.**
+
+### 🟢 `T238-E` — `ACTION UQ` discharged as **already answered**, and the finding is about the register
+
+`p236` registered: *"the EU AI Act high-risk conformity deadline **does not reconcile** — Dec 2027 vs Aug 2028 … **no EMEA proposal should quote a date from these shelves until it is**"*. 🔴 **`p223`/`p224` — dated `2026-10-15`, ONE DAY EARLIER — had already settled every limb.** Annex III *(education is point `3`)* → `2027-12-02`; Annex I → `2028-08-02`; **not rival dates, two different annexes**; `Reg. (EU) 2026/1744` in force `2026-07-27`. 🔵 **`ACTION UQ` placed an embargo on this KB's own correct answer. `p226`/`p227`'s defect class, inverted: there the gate could not see what had been refuted; here the register could not see what had been ESTABLISHED.** 🟡 **`ACTION VF`: run `make claims TOKEN=X` before registering any *"resolve X"*.**
+
+🟢 **Two clauses ARE new** *(`0` prior occurrences)*: **the Omnibus moved four application dates and did nothing else — no obligation added or removed, and no sector and no company-size exemption** *(so the deferral bought time, not relief, and there is no education or SME carve-out)*; and **national sandboxes must be operational by `2027-08-02`**. 🔵 **The nearest binding EU date is unchanged: `2026-12-02`, seven weeks out.**
+
+### 🔴 Gaps `p238` leaves open, stated because silence looks like coverage
+
+- 🔴 **North America: `1` row of `43`, and it is a standards scanner.** 🟡 **`ACTION UY`: discover NA supply by district-system name — `Ed-Fi`, `OneRoster`, `Clever`, `PowerSchool`, `Infinite Campus`. **The statute words `FERPA` and `COPPA` are now contaminated.**
+- 🔴 **`ACTION UC` is eight-for-eight.** The mandated query returned a *course about agents* and general frameworks. Kept unreworded so its failure stays on the record.
+- 🔴 **Not one instrument in `T238-C` has been RUN.** 🟡 **`ACTION VB`: run `airblackbox comply` over a carried education repository.** Until then the category is catalogued, not tested.
+- 🟡 **`ACTION VE`: the gate's ONLINE limb is unrun** — `FUNNEL`/`BADGE` over `2 188` shelf slugs needs `2 188` `README` fetches. The offline `NAME` limb is done and returned `2`.
+- 🟡 **`ACTION UZ`: `11` of the `13` lure repositories are recorded from the listing page, not read.** Per `ACTION UK` that is a stated limit, not a claim about them.
+- 🔴 **`ACTION UR` narrows but does not discharge.** Estado de México's art. `61` reform is **legislature-confirmed at committee stage** *(united committees unanimous; Dip. Lilia Urbina Salazar, PRI)*; 🔴 **the `Gaceta del Gobierno` decree and entry-into-force date are still not found.** Quotable as a trend, not as a law in force.
+- 🟡 **`ACTION UP` discharged, and the spread WIDENED**: base-year estimates `$6.4` B *(IMARC, 2025)*, `$10.6` B and `$11.4` B *(2026)* — **`78`%**, against `p236`'s `50`%. Quote the range and the firm, or quote nothing.
+- 🔴 **`eur-lex.europa.eu` is a `403` CONNECT refusal at the proxy — not DNS, not the server.** 🔵 **And `WebFetch` and `curl` have DIFFERENT allowlists**, so `p236`'s `github.blog` note over-generalised. `ACTION RO` stands; the EU dates remain `CONVERGENT-SECONDARY`.
+- 🟡 **`ACTION VG`: record the query AXIS with every intake.** Duplication is a property of the axis, not the KB: education agents `31`%, compliance instruments `19`%, **LATAM Spanish/Portuguese `0`%**, agent governance `0`%.
+- 🟡 **`ACTION VA`: still no education-agent eval harness.** `9` of this pass's `21` agents have `0`★ and none ships a benchmark — while the adjacent compliance category already has a published four-tool comparative eval.
 
 ## Pass 236 — 2026-10-16 — THIS KB HAS CARRIED THE REPLACEMENT FOR GITHUB CLASSROOM ON **FIVE SHELVES** AND NEVER RECORDED THAT CLASSROOM WAS **SWITCHED OFF ON `2026-08-28`** — FOUND BY A FIELD, `archived`, THAT NO CHANNEL HERE COULD READ UNTIL TODAY
 

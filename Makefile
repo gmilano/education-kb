@@ -47,6 +47,9 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	cd - >/dev/null; \
 	echo "── p235-carried-index    (ACTION UG/UH: the index, fold, claims — 23 controls)"; \
 	$(PY) -I compose/code/p235-carried-index/test_carried_index.py >/dev/null && echo "   PASS"; \
+	echo "── p238-lure-signature   (the provenance gate: 45 controls, ACTION VE)"; \
+	cd compose/code/p238-lure-signature && $(PY) test_lure_signature.py >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

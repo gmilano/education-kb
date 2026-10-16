@@ -1,0 +1,20 @@
+channel	query	result	verdict
+WebSearch	top open source AI agents education 2026 github MIT	0 education agents; returned microsoft/ai-agents-for-beginners (a COURSE) and general frameworks	ACTION UC fails for the EIGHTH consecutive pass
+WebSearch	github trending education AI 2026	0 education-specific; returned AI-engineering learning repos and secondary trend blogs	no education row
+WebSearch	open source platform education ERP CRM MIT Apache student information system	OpenEduCat (LGPL-3.0 per its own site), Kuali, openSIS; no MIT/Apache confirmed by the channel	consistent with p237's LGPL-3.0 read
+WebSearch	AI education industry trends 2026	market base ranges 6.4B-11.4B USD across three firms	ACTION UP: quote the spread
+WebSearch	AI education North America 2026 adoption regulation players	NA 951M USD 2024 -> 2303.2M 2029; 36pct share; 10pct of institutions have formal AI guidance	no NA supply row
+WebSearch	AI education EMEA 2026 adoption regulation players EU AI Act	a vendor page asserting "full effect August 2026" - already REFUTED on these shelves at p223	refutation held
+WebSearch	AI education APAC 2026 adoption regulation players	enterprise IT press only; no education-specific regulation	ACTION UX stands
+WebSearch	AI education LATAM 2026 adoption regulation players	UNESCO IESALC/UNU-IAS 200 institutions 19 countries; ILIA 3rd edition; Rest-of-LATAM 18.2M 2024 -> 36M 2029	sourcing holds
+WebSearch	Digital Omnibus AI Act delay high-risk December 2027 August 2028 status October 2026	Reg (EU) 2026/1744; OJ 2026-07-24; in force 2026-07-27; Annex III 2027-12-02; Annex I 2028-08-02	ACTION UQ: already answered at p223 - see T238-E
+WebSearch	Estado de Mexico articulo 61 reforma inteligencia artificial educacion Gaceta del Gobierno 2026	Congreso del Estado de Mexico confirms unanimous committee approval, Dip. Lilia Urbina Salazar (PRI); Gaceta decree NOT found	ACTION UR narrowed, not discharged
+REST search	"AI Act" compliance license:mit license:apache-2.0 pushed:>2026-06-01 stars:>5	total_count 375; 6 drafted, 0 of 6 already carried	the compliance-instrument axis had 0pct duplication
+REST search	topic:education topic:ai-agent license:mit pushed:>2026-08-01	total_count 154; 16 drafted, 5 already carried (31pct)	education-agent axis duplication 31pct
+REST search	"EU AI Act" scanner/compliance/conformity license:apache-2.0 license:mit stars:>3	total_count 44; 16 drafted, 3 already carried (compl-ai, gopal, awesome-eu-ai-act)	the scanner category is real and partly uncarried
+REST search	educacion agente IA license:mit pushed:>2026-07-01	total_count 62; 8 drafted, 0 carried	LATAM Spanish channel: 0pct duplication
+REST search	educacao professor aluno IA license:mit pushed:>2026-06-01	total_count 42; 5 drafted, 0 carried	LATAM Portuguese channel: 0pct duplication
+REST search	FERPA OR COPPA student education license:mit pushed:>2026-06-01	total_count 10817; returned a DOWNLOAD-LURE FARM, 0 North America education agents	T238-A: the statute-binding trick that worked at p237 did NOT work here
+REST contents	get_file_contents airblackbox/airblackbox README.md	Access denied - session scoped to gmilano/globant-kb	REST search is GLOBAL, REST contents is REPO-SCOPED
+curl	https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng	curl 56 CONNECT tunnel failed, response 403 (proxy refusal, NOT DNS)	ACTION RO refined: the primary-source block is a PROXY ALLOWLIST refusal
+WebFetch	eur-lex.europa.eu and www.orrick.com	getaddrinfo ENOTFOUND	WebFetch egress is allowlisted separately from curl

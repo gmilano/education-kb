@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 238 — 2026-10-16 — THE SERVER-SIDE LICENCE FILTER THAT `p237` ADOPTED AS THIS KB'S SUPPLY CHANNEL **ADMITS A DOWNLOAD-LURE FARM**, AND ONE OF ITS `13` REPOSITORIES IMPERSONATES `Google Classroom` IN THE EXACT WINDOW `p236` DATED CLASSROOM'S SHUTDOWN
+
+⏱️ **SEVENTH pass of `2026-10-16`** *(p232–p237 all carry this date)*.
+
+🟢 **`43` new rows, every grant read first-hand** at the branch `git ls-remote --symref` reported. 🟢 **`13` LATAM rows — the largest LATAM intake these shelves have ever taken, at `0`% duplication.** 🔴 **`2` rows WITHHELD from the build shelf as non-permissive after reading their payloads, both of which the GitHub API reports as `NOASSERTION`.** 🔴 **`ACTION UC` fails for the EIGHTH consecutive pass.** 🔴 **North America is this pass's gap: `1` row of `43`.**
+
+🔵 **Evidence:** [`p238-verified-rows`](../evidence/p238-verified-rows.2026-10-16-p238.tsv) *(43 slugs, grant + bytes + pinned head + region basis)* · [`p238-licence-filter-lure-farm`](../evidence/p238-licence-filter-lure-farm.2026-10-16-p238.tsv) · [`p238-queries`](../evidence/p238-queries.2026-10-16-p238.tsv)
+
+### 🔴 `T238-A` — the headline, and it is a defect in the channel this KB adopted ONE PASS AGO
+
+p237 closed by moving supply discovery to the REST channel, on the ground that *"a licence filter that cannot be expressed is not a weak filter — it inverts the sample"*. 🟢 **That reasoning holds.** 🔴 **What p237 did not measure is what the filter admits.**
+
+The mandated-style North America query — `FERPA OR COPPA student education in:name,description,readme license:mit pushed:>2026-06-01`, the statute-binding trick that placed p237's four NA rows — returned `total_count` `10 817` and, on its first page, **`13` repositories whose names are real education products with `Full-Version` or `Unlocked` appended**: `Moodle`, `Google Classroom`, `PRONOTE`, `CmapTools`, `Packet Tracer`, `Stellarium`, `Childsplay`, `Complete Anatomy`, `Adobe Presenter`, `GeoEnZo`, `WordFox`, `CubeTest`, `DiagramPainter`. 🔴 **Distinct throwaway owners, `0`★, `0` forks, every one pushed `2026-10-16`, every one carrying `license: MIT`.**
+
+🟢 **Two were read first-hand rather than inferred from the listing.** [`rockstar49summer/Moodle-Full-Version-Unlocked`](https://github.com/rockstar49summer/Moodle-Full-Version-Unlocked) *(`README` `11 604` B)* and [`mallyrix943/Google-Classroom-Full-Version`](https://github.com/mallyrix943/Google-Classroom-Full-Version) *(`10 722` B)* are the same document with the brand swapped, and both funnel every link to a single host, `softyne.com`.
+
+🔴 **The licence signal is deliberately constructed, on BOTH channels at once:**
+
+| signal | what a harvester sees | what is actually there |
+|---|---|---|
+| GitHub `license` field | 🟢 `MIT` | 🔴 set by the uploader; the field is an *assertion*, not provenance |
+| `LICENSE` at the default branch | 🟢 **`HTTP 200`** | 🔴 present, so a first-hand grant read — **this KB's own standard** — PASSES |
+| licence badge in the `README` | 🟢 a licence badge | 🔴 **a remote `.svg` image served from the funnel host**, not a shields.io query of the repository |
+| authorship framing | 🟢 *"Reviewed by the senior review board · Senior Software Analyst · Verified against the official source"* | 🔴 no named reviewer, no board, no source |
+
+🔵 **This is the sharpest thing this pass found, and it is about method, not supply: a grant is a permission, never a provenance claim.** `p228`–`p237` built an eleven-pass instrument to establish that a licence must be read first-hand and not taken from the API field. 🔴 **That instrument returns `MIT · LICENSE · 200` for all thirteen of these.** Reading the payload defeats a *mislabelled* repository; it does not defeat a *deliberately* labelled one.
+
+### 🔴 And the cohort is timed, which is what makes it an education finding rather than a security one
+
+`p236` established first-hand, off the `archived` boolean, that **GitHub Classroom was switched off on `2026-08-28`**, and that this KB had carried its replacement on five shelves without recording the cause. 🔴 **`mallyrix943/Google-Classroom-Full-Version` was pushed `2026-10-16` — seven weeks into the window in which every district that used Classroom is searching for a replacement.** 🔵 **A district searching the obvious words is being funnelled to one download host by a repository that passes every automated licence check this KB knows how to run.**
+
+🟡 **And the brand set includes `Moodle`, which these shelves recommend on nine files.** A harvester matching recommended-platform names against fresh `license:mit` pushes ingests `Moodle-Full-Version-Unlocked` as a Moodle row. 🟢 **The cheap gate is in [`compose/patterns.md`](../compose/patterns.md) `P238-1`** — four predicates, none of which needs a model.
+
+### 🟢 `T238-B` — the `21` new agent rows, placed
+
+**LATAM (`10`)** — 🟢 **the first time this shelf's largest regional intake is LATAM.** `p235` falsified the old *"LATAM: `0` repositories"* claim; this pass measures how far that reach actually goes: **`0` of `13` Spanish/Portuguese candidates were already carried.**
+
+| agent | grant *(read first-hand)* | ★ | head | region basis | what it is |
+|---|---|---|---|---|---|
+| [`Cleison-Morais/koba`](https://github.com/Cleison-Morais/koba) | 🟢 **`MIT`** — `LICENSE`, `1 071` B, © 2026 Cleison Morais | 0 | `main` · `97a7d1f` | 🟢 **names `SEDUC-SP`** | 🟢 **The most institutionally grounded LATAM row on these shelves.** An agent for teachers of **São Paulo state's** Educação Profissional that marks the statutory activity-register entries. 🔵 A named state education authority, `44` million inhabitants, and the function is assessment — the one three jurisdictions regulated in 2026 |
+| [`startin-lab/brujula-educativa`](https://github.com/startin-lab/brujula-educativa) | 🟢 **`MIT`** — `1 068` B, © 2026 startin-lab | 0 | `main` · `f0fc98b` | 🟢 Colombia, named foundation | A **public** consultation agent over Colombia's open education data, published by Fundación Startin |
+| [`LuKeTempestt/simulados-sedu`](https://github.com/LuKeTempestt/simulados-sedu) | 🟢 **`MIT`** — `1 068` B, © 2026 João Lopes | 0 | `main` · `0c3a478` | 🟢 UNIT residency + **SEDU** partnership | Mock-examination platform built in a software residency in partnership with **Espírito Santo's** state education secretariat. 🔵 The second named Brazilian state authority in this table |
+| [`Trf0/llm-edu-classifier`](https://github.com/Trf0/llm-edu-classifier) | 🟢 **`MIT`** — `1 083` B, © 2026 Thiago Rodrigues Fernandes | 0 | `main` · `b1a987b` | 🟢 `pt-BR` | LLM classification of educational material — the labelling step every adaptive-learning pipeline needs and few publish |
+| [`ChrisMeniw/mentelibre`](https://github.com/ChrisMeniw/mentelibre) | 🟢 **`MIT`** — `1 079` B, © 2026 **Fundación** Chris Meniw | 0 | `main` · `01b05b4` | 🟢 holder is a named foundation | *MenteLibre / MenteLivre* — a critical-thinking game with AI, published free for schools in both regional languages |
+| [`Davi-1903/EduIA`](https://github.com/Davi-1903/EduIA) | 🟢 **`MIT`** — `1 071` B, © 2025 Davi Francisco | 1 | `main` · `a28c14d` | 🟢 `pt-BR` | *Sistema Inteligente de Apoio à Educação* |
+| [`svfaca/AtenaAi`](https://github.com/svfaca/AtenaAi) | 🟢 **`MIT`** — `1 064` B, © 2026 AtenaAI | 1 | `main` · `36d151a` | 🟢 `pt-BR` | Education platform on FastAPI with JWT auth — one of the few LATAM rows with an auth story already in it |
+| [`maiatechdev/avit`](https://github.com/maiatechdev/avit) | 🟢 **`MIT`** — `1 069` B, © 2026 Gabriel Maia | 0 | `main` · `8c5cb78` | 🟢 `pt-BR` | 🔵 **Turns the phone into a learning tool *inside the pedagogical window*** — i.e. it treats the device as the constraint rather than the platform. The only row here designed for the phone-first reality of the region |
+| [`innova-space-edu/eduai-platform`](https://github.com/innova-space-edu/eduai-platform) | 🟢 **`MIT`** — `1 083` B, © 2026 Innova Space Education **SpA** | 1 | `main` · `a05af7e` | 🟢 **Chile, EVIDENCED FROM THE GRANT PAYLOAD** — `SpA` is the Chilean *Sociedad por Acciones* form | Education AI platform. 🔵 **First row on these shelves placed by a CORPORATE FORM in the copyright holder string.** A company type is jurisdictional evidence in a way a personal name never is |
+| [`Angelthebestone/Normativa-colombiana-MCP`](https://github.com/Angelthebestone/Normativa-colombiana-MCP) | 🟢 **`MIT`** — `1 068` B, © 2026 Angel Peña | 3 | `main` · `cdab134` | 🟢 Colombia | Colombian norms and jurisprudence over **MCP**. 🟡 Not education supply — it is the *regulatory* limb a LATAM governance recipe needs, and it is listed here because `P238-4` wires it in |
+
+**APAC (`9`)** — the channel p237 opened keeps paying; all nine placed from the payload, never from an org handle:
+
+| agent | grant | ★ | head | region basis | what it is |
+|---|---|---|---|---|---|
+| [`mcxiaoxiao/kaoyan-navigator-skill`](https://github.com/mcxiaoxiao/kaoyan-navigator-skill) | 🟢 **`MIT`** — `1 093` B | **37** | `main` · `c3ee142` | 🟢 考研 | Postgraduate school-selection skill for Codex/Claude Code: researches cut-off lines, quotas and admissions data, then produces risk-tiered recommendations |
+| [`cabbage2000-lab/textbook-writer-skills`](https://github.com/cabbage2000-lab/textbook-writer-skills) | 🟢 **`MIT`** — `1 064` B, © 2026 wjl2025 | **36** | `main` · `8bf4e82` | 🟢 Chinese-language | 🟢 **Textbook authoring driven by `UbD` backward design**, gated: positioning → five-part gate → chapter tree → four-stage per-chapter writing → review. 🔵 **The only row on this shelf whose pipeline is an established instructional-design method rather than a prompt chain** |
+| [`L01nki1/extend-slides`](https://github.com/L01nki1/extend-slides) | 🟢 **`MIT`** — `1 064` B, © 2026 loinkii | **14** | `main` · `f134745` | 🟢 Chinese-language | Expands courseware, handouts and lecture recordings into standalone revision documents |
+| [`LINJIANG12/video2book`](https://github.com/LINJIANG12/video2book) | 🟢 **`MIT`** — `1 100` B, © 2026 *Bilibili Audio Knowledge Skill Contributors* | **14** | `main` · `fe351c0` | 🟢 **holder string names Bilibili** | Long-form video and course series → a readable textbook and revision notes |
+| [`ZZombie04/hwpx_new`](https://github.com/ZZombie04/hwpx_new) | 🟢 **`MIT`** — `1 066` B, © 2026 ZZombie04 | 3 | `main` · `7c8b720` | 🟢 **`HWPX` is the ROK national document format** | Generates Korean `HWPX` — plans, official notices, **research-school result reports** with automatic contents, statistics and charts. CLI + MCP. 🔵 Completes p236/`ACTION UM`'s Korean limb: `kordoc` *reads* `hwp`, this one *writes* `hwpx`, and the statutory report is the deliverable |
+| [`waychan23/ilearnassist`](https://github.com/waychan23/ilearnassist) | 🟢 **`MIT`** — `1 082` B | 3 | `main` · `137a617` | 🟢 Chinese-language | Study assistant whose **server runs on the user's own machine**, reached over the LAN by QR code. 🔵 The sovereignty shape APAC states, built by an individual |
+| [`chaoyuhao/mini-homework-agent`](https://github.com/chaoyuhao/mini-homework-agent) | 🟢 **`MIT`** — `1 089` B | 0 | `main` · `2783cfe` | 🟢 **names Fudan eLearning** | 🟢 **Homework-grading agent for `Canvas LMS` *and* Fudan's eLearning**, with Markdown requirements and **reviewed scores**. 🔵 The reviewed-score step is the human-commit gate, and `Canvas` is the LMS left standing after Classroom's shutdown |
+| [`localis-ai/student-discovery-agent`](https://github.com/localis-ai/student-discovery-agent) | 🟢 **`MIT`** — `1 079` B, © 2026 Nguyễn Võ Thanh Duy | 0 | `main` · `25d0c6c` | 🟢 Vietnamese high-school students named | Career-guidance agent for Vietnamese high schools. 🔴 **Self-declared as under design — recorded as a row because its grant and tree were read, flagged pre-alpha** |
+| [`afrizagilleon/runut`](https://github.com/afrizagilleon/runut) | 🟢 **`MIT`** — `1 079` B, © 2026 Afriza Gilleon Ginting | 0 | `main` · `3e0f504` | 🟢 Indonesian-language | Five-minute drill checking claims about shares against the official filings. 🔴 **MARGINAL for this industry — it is financial-literacy *practice*, not education infrastructure. Recorded with the flag rather than dropped, so the next pass does not re-draft it** |
+
+**Region NOT established (`2`)** — 🟢 **recorded as `Global` on purpose:**
+
+| agent | grant | ★ | head | why NOT placed |
+|---|---|---|---|---|
+| [`Anlexis/agentic-star-student-performance-integrity-anomaly-detection-agent`](https://github.com/Anlexis/agentic-star-student-performance-integrity-anomaly-detection-agent) | 🟢 **`MIT`** — `1 064` B, © 2026 Anlexis | 0 | `main` · `73ca387` | 🔴 No region evidence anywhere in the payload. 🔵 Listed because its *function* — academic-integrity anomaly detection — is **Annex III point `3(d)`**, *monitoring and detecting prohibited behaviour during tests*, the highest-risk education function the EU names |
+| [`raymondstudio/Lerna`](https://github.com/raymondstudio/Lerna) | 🟢 **`MIT`** — `1 072` B, © 2026 Raymond Iorliam | 2 | `main` · `35914eb` | 🔴 **The holder's personal name is NOT used as regional evidence.** Upload your material and learn. 🔵 Stated explicitly because inferring a region from a person's name is the error `p236`'s `topic:korea` row was written to end |
+
+### 🔴 Gaps `p238` leaves open, stated because silence looks like coverage
+
+- 🔴 **North America is `1` row of `43`, and it is a standards-mapping tool, not an education agent.** The `FERPA`/`COPPA` statute-binding query that produced four NA rows at p237 returned the lure farm instead. 🟡 **`ACTION UY`: run NA supply against named district and state systems — `Ed-Fi`, `OneRoster`, `Clever`, `PowerSchool`, `Infinite Campus` — not against the statutes. The statute words are now contaminated.**
+- 🔴 **`ACTION UC` is eight-for-eight.** `"top open source AI agents education 2026 github MIT"` returned a *course* about agents (`microsoft/ai-agents-for-beginners`) and general frameworks. The wording is the defect; it is kept only so its failure stays on the record.
+- 🟡 **`ACTION UZ`: the `13`-member lure cohort was read first-hand on `2` members only.** The other `11` are recorded from the listing page, which is weaker evidence than this shelf's standard. 🔵 Per `ACTION UK` that is a stated limit, not a claim about them.
+- 🟡 **`ACTION VA`: no row here has a published evaluation.** `9` of these `21` agents have `0`★ and none ships a benchmark; `p232`–`p237` recorded the missing education-agent eval harness and it is still missing.
+
 ## Pass 237 — 2026-10-16 — `ACTION US` IS DISCHARGED AND IT PAYS FOR ITSELF IMMEDIATELY: THE **LICENCE-FILTERED REST CHANNEL** RETURNS `12` EDUCATION AI AGENTS IN ONE PASS, AND `0` OF THE `25` NON-ENGLISH ROWS IT DREW WERE ALREADY CARRIED
 
 ⏱️ **SIXTH pass of `2026-10-16`** *(p232–p236 all carry this date)*.

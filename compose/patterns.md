@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 238 — 2026-10-16 — FIVE RECIPES, ONE PER REGION PLUS A GATE THAT IS **BUILT, TESTED AND RUN** RATHER THAN DESCRIBED — `45`/`45` CONTROLS, `43`/`43` OF THIS PASS'S OWN ROWS CLEARED, BOTH LURES CONVICTED
+
+🔵 **Evidence:** [`p238-verified-rows`](../evidence/p238-verified-rows.2026-10-16-p238.tsv) · [`p238-licence-filter-lure-farm`](../evidence/p238-licence-filter-lure-farm.2026-10-16-p238.tsv) · **instrument:** [`compose/code/p238-lure-signature/`](code/p238-lure-signature/)
+
+---
+
+### 🟢 `P238-1` — THE PROVENANCE GATE *(built this pass; run `make gate-offline`)*
+
+🔴 **The problem it exists for:** `p228`–`p237` established that a licence must be read first-hand from the payload, never taken from the GitHub `license` field. `p238` found the limit of that: **a deliberately labelled repository passes a first-hand grant read.** All `13` lure repositories carry `license: MIT` *and* serve a `LICENSE` at `HTTP 200`. 🔵 **A grant is a permission; it was never a provenance claim.**
+
+**Wiring — four predicates, no model, no extra network beyond the `README` this KB already fetches:**
+
+| # | predicate | fires when | why it discriminates |
+|---|---|---|---|
+| 1 | **NAME** | a release-channel word *(`full-version`, `unlocked`, `crack`, `keygen`, `activator`, `pre-activated`, `repack`, …)* is in the repository name | 🔵 Those words describe a *distribution* of software. In the name of something that is supposed to **be** source, that is a category error |
+| 2 | **FUNNEL** | ≥`60`% of the `README`'s non-infrastructure external links point at one host *(≥`5` links)*, **and that host is not the project's own** | 🟢 Registries, CI and badge hosts are excluded as infrastructure; a project's own domain is exempted by skeleton-matching the host labels against owner and repo |
+| 3 | **BADGE** | a **licence** badge is a remote image on a host that is neither a badge service nor the project's own | 🔵 A real badge is a `shields.io` *query of the repository*. A forged one is a **picture** of a badge the operator uploaded |
+| 4 | **COLDNESS** | `0`★ **and** `0` forks **and** pushed ≤`7` days ago | 🔴 **Corroborating only — never counted toward the verdict.** This pass published `9` genuine rows at `0`★; a gate that downgrades them is worse than no gate |
+
+**Verdict:** `LURE` at ≥`2` substantive predicates, `SUSPECT` at exactly `1`, `CLEAR` at `0`.
+
+```bash
+# one repository
+python3 -I compose/code/p238-lure-signature/lure_signature.py \
+        <owner/repo> <readme-path> [stars] [forks] [days_since_push]
+# the controls, from anywhere (p355-cwd-portability)
+python3 -I compose/code/p238-lure-signature/test_lure_signature.py
+```
+
+🟢 **Measured, not asserted:**
+
+| run | result |
+|---|---|
+| controls | 🟢 **`45`/`45` PASS**, from its own directory **and** under `-I` from the repository root |
+| the two lures whose `README`s were read first-hand *(`11 604` B, `10 722` B)* | 🔴 **`LURE`, all four predicates, `100`% of `18` and `24` links on `softyne.com`** |
+| this pass's own `43` published rows | 🟢 **`43`/`43` `CLEAR` — zero false positives** |
+| every slug on every shelf *(`2 188`, `NAME` predicate, offline)* | 🟢 **`2` hits, and both are the lures this pass documents.** 🔵 **The recommendation shelves are clean on this predicate, and the zero is now on the record** |
+
+🟡 **One false-positive mode was found and fixed inside the pass:** six real projects *(`snath-ai/lar`, `ai-sdlc-framework/ai-sdlc`, `VibeTensor/attestix`, `ark-forge/mcp-eu-ai-act`, `sattyamjjain/agent-audit-kit`, `AlexandruGirlea/precommiteu`)* scored `60`–`93`% concentration on **their own documentation domains** — `docs.snath.ai`, `ai-sdlc.io`, `attestix.io`, `arkforge.tech`, two `*.github.io`. 🟢 **The self-host exemption removed all six without weakening either conviction: a lure's funnel host bears no relation to its owner (`rockstar49summer` → `softyne.com`), and that asymmetry is the whole discriminator.** `11` controls cover it.
+
+🔴 **What it does NOT do:** it cannot see a lure with a plausible name, spread links and a `shields.io` badge. 🟡 **`ACTION VE`** keeps the online limb open — `FUNNEL` and `BADGE` over all `2 188` shelf slugs needs `2 188` `README` fetches and was not run.
+
+---
+
+### 🟢 `P238-2` — EMEA: ARTICLE-`12` EVIDENCE FOR AN EDUCATION DEPLOYER, ON THE `2027-12-02` CLOCK
+
+🔵 **Why now:** education is **Annex III point `3`** and binds **`2027-12-02`** *(`Reg. (EU) 2026/1744`; the Omnibus moved four application dates and created **no sector and no company-size exemption**)*. 🔴 **Article `12` record-keeping is the one obligation that cannot be produced retroactively — a log that starts when the auditor asks is not a log.** This KB mentioned `Article 12` twice before this pass and `C2PA` `171` times.
+
+**Wiring, all permissive, all grant-read this pass:**
+
+1. **Inventory first** — [`aisecnomad/Nexus-ShadowScan`](https://github.com/aisecnomad/Nexus-ShadowScan) *(`Apache-2.0`, `main` · `9466cbf`)* over the estate: code, identity, gateways, low-code, SaaS, cloud. 🔵 **An Article `26` deployer cannot oversee a system it has not found.** Add [`saasvista/aibom-scanner`](https://github.com/saasvista/aibom-scanner) *(`Apache-2.0`, `9f5a506`)* for the AI-BOM.
+2. **Gap-scan the code** — [`airblackbox/airblackbox`](https://github.com/airblackbox/airblackbox) *(`Apache-2.0`, `e730135`, `v1.17.0`)*: `air-blackbox comply` reports against **Articles `9`–`15`** plus GDPR across Python, notebooks, TypeScript, JavaScript, Java and Kotlin. Cross-check with [`Peaky8linders/eu-ai-act-scanner`](https://github.com/Peaky8linders/eu-ai-act-scanner) *(`Apache-2.0`, `52f9060`, `14` analyzers, cites `Regulation 2024/1689`)* — 🔵 two independent scanners because `p238` caught a vendor's own benchmark misstating a competitor's licence.
+3. **Record** — `airblackbox`'s trust layer on the tutor/assessment agent gives an `Ed25519`-signed, externally countersigned, browser-verifiable `.air-evidence` chain. Narrower alternative: [`systima-ai/aiact-audit-log`](https://github.com/systima-ai/aiact-audit-log) *(`MIT`, `94b60e4`)*. Portable offline-verifiable variant: [`mohdibrahimaiml/epi-recorder`](https://github.com/mohdibrahimaiml/epi-recorder) *(`MIT`, `0289e66`)* — 🟡 its **declared capture scope** field is the honest part: it records what the log does *not* cover.
+4. **Human oversight (Article `14`)** — [`preloop/preloop`](https://github.com/preloop/preloop) *(`Apache-2.0`, `7f62619`)*: approvals, budgets and MCP firewall, so every high-stakes action is a recorded human decision.
+5. **Hold the line in CI** — [`AlexandruGirlea/precommiteu`](https://github.com/AlexandruGirlea/precommiteu) *(`Apache-2.0`, `8304dd2`)* at PR time; [`sphragis-oss/sphragis`](https://github.com/sphragis-oss/sphragis) *(`Apache-2.0`, `84d658b`)* as the in-line gateway.
+6. **Do the `2026-12-02` work FIRST** — 🔴 **seven weeks out**: the two added Article `5` prohibitions, and the end of the Article `50(2)` marking grace for systems placed before `2026-08-02`. [`sebuzdugan/frai`](https://github.com/sebuzdugan/frai) *(`MIT`, `f563075`, `54`★)* checks whether the product discloses that it uses AI — code, live site **and** spec. 🟢 **Deliverable in days, and it is due before the big clock.**
+
+🔴 **Excluded by licence, after reading the payloads:** [`jagmarques/asqav-compliance`](https://github.com/jagmarques/asqav-compliance) is **`Elastic License 2.0`** *(no hosted/managed service — i.e. no studio engagement)*; [`SdSarthak/AegisAI`](https://github.com/SdSarthak/AegisAI) is `AGPL-3.0-only` **plus a link-back obligation and a commercial-licence clause AGPL does not contain**. 🔵 Both report `NOASSERTION` on the API.
+
+🟡 **Honest limit: `ACTION VB` — not one of these has been RUN against a carried education repository.** The recipe is wired from grants and self-descriptions; step `2` is where it must be proven first.
+
+---
+
+### 🟢 `P238-3` — APAC: THE STATUTORY DOCUMENT LOOP, CLOSED IN BOTH DIRECTIONS
+
+🔵 **The region's permissive supply is national-API clients and statutory paperwork, and this pass completed the Korean loop.**
+
+1. **Read** — [`chrisryugj/kordoc`](https://github.com/chrisryugj/kordoc) *(`MIT`, grant confirmed at `p237`/`ACTION UM`)* parses `hwp` → Markdown.
+2. **Source the facts** — [`chrisryugj/schoolinfo-mcp`](https://github.com/chrisryugj/schoolinfo-mcp) *(`MIT`)* over 학교알리미 *(35 datasets, every ROK school)* and NEIS, with [`SaidBySolo/neispy`](https://github.com/SaidBySolo/neispy) *(`MIT`, `65`★)* underneath.
+3. 🟢 **Write — new this pass:** [`ZZombie04/hwpx_new`](https://github.com/ZZombie04/hwpx_new) *(`MIT`, `main` · `7c8b720`)* generates `HWPX` — plans, official notices and **research-school result reports with generated contents, statistics and charts**, over CLI **and** MCP.
+4. **Keep the teacher in the loop** — draft only. The teacher commits. 🔵 That is the same human-commit gate [`chaoyuhao/mini-homework-agent`](https://github.com/chaoyuhao/mini-homework-agent) *(`MIT`, `2783cfe`)* builds in as *reviewed scores*, over **`Canvas LMS`** — the LMS left standing after Classroom's `2026-08-28` shutdown.
+5. **Deploy sovereign** — [`waychan23/ilearnassist`](https://github.com/waychan23/ilearnassist) *(`MIT`, `137a617`)* is the shape: server on the institution's own machine, reached over the LAN by QR code. 🔵 Sovereignty is APAC's stated theme; this is it as working code.
+6. **Author the material properly** — [`cabbage2000-lab/textbook-writer-skills`](https://github.com/cabbage2000-lab/textbook-writer-skills) *(`MIT`, `8bf4e82`, `36`★)* drives authoring from **`UbD` backward design** with explicit gates. 🟡 A ministry procurement asks for an instructional-design method; a prompt chain cannot evidence one.
+
+🟢 **Sell line:** *"the statutory report is the deliverable; the agent drafts it and the teacher signs it."* 🔴 **Gap: `ACTION UX` — no education-specific APAC regulation reached this channel, so this recipe is sold on administrative burden, not compliance.**
+
+---
+
+### 🟢 `P238-4` — LATAM: THE GOVERNANCE ARTEFACT, NOW WITH ALL THREE LIMBS IN `MIT`
+
+🔵 **The measurement that makes this the region's engagement:** `92`% of students and `79`% of faculty already using AI against **`30`% of universities having any published AI policy**. Non-binding `SEP`/`ANUIES` guidance in Mexico; no education-sector rule in Brazil or Colombia. 🟢 **A governance-artefact gap, not a technology gap — and artefacts are cheap to produce and expensive to retrofit.**
+
+1. **The norms limb** — [`Angelthebestone/Normativa-colombiana-MCP`](https://github.com/Angelthebestone/Normativa-colombiana-MCP) *(`MIT`, `cdab134`)* puts Colombian norms and jurisprudence behind MCP, so the policy cites instruments instead of paraphrasing them.
+2. **The data limb** — [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) *(`MIT`, `605482f`, **`129`★**, curated/normalised/**validated**) and [`manusabbath-arch/mcp-uruguay`](https://github.com/manusabbath-arch/mcp-uruguay) *(`MIT`, `d4c4d0f`, reaching `BCU`, `INDEC`, `IBGE`, `ANCAP`, `INIA`)*. 🔵 **A governance artefact citing no national statistics is a template.**
+3. **The analytics limb** — [`muller-pereira/edudatalab`](https://github.com/muller-pereira/edudatalab) *(`MIT`, `0c324c0`)* for learning analytics, with [`Trf0/llm-edu-classifier`](https://github.com/Trf0/llm-edu-classifier) *(`MIT`, `b1a987b`)* labelling the material.
+4. 🟢 **The institutional anchor — the part that makes a proposal credible:** [`Cleison-Morais/koba`](https://github.com/Cleison-Morais/koba) *(`MIT`, `97a7d1f`)* marks statutory Educação Profissional register entries for **`SEDUC-SP`**, and [`LuKeTempestt/simulados-sedu`](https://github.com/LuKeTempestt/simulados-sedu) *(`MIT`, `0c3a478`)* came out of a UNIT software residency with Espírito Santo's **`SEDU`**. 🔵 **A named state secretariat is a reference a Brazilian proposal can cite; a star count is not.**
+5. **Reach the device people actually have** — [`maiatechdev/avit`](https://github.com/maiatechdev/avit) *(`MIT`, `8c5cb78`)* treats the phone as the constraint, inside the pedagogical window.
+6. **Deliverables:** an institutional AI policy, a per-course disclosure, an appeal route, and an Article-`12`-shaped audit trail *(reuse `P238-2` step `3` — `epi-recorder` is `MIT` and runs offline)*. 🔵 **Assessment is the function three jurisdictions regulated in 2026, so a LATAM assessment engine with a human-commit gate is sellable in EMEA too.**
+
+🟡 **Quote the regulation precisely:** Estado de México's art. `61` reform is **legislature-confirmed at committee stage** *(united committees, unanimous; Dip. Lilia Urbina Salazar, PRI)* with **publication in the `Gaceta del Gobierno` unverified** — 🔴 **a trend, not a law in force.**
+
+---
+
+### 🟡 `P238-5` — NORTH AMERICA: THE SHADOW-AI INVENTORY, BECAUSE IT IS THE PRECONDITION FOR EVERYTHING ELSE
+
+🔴 **Stated honestly: this pass found `1` North American row of `43`, and the `FERPA`/`COPPA` discovery query that worked at `p237` returned a download-lure farm instead.** So this recipe is built from what the region's *demand* side says, not from new supply.
+
+🔵 **The demand number is the whole pitch: `10`% of institutions have formal AI guidance.** You cannot write guidance for an estate you have not enumerated.
+
+1. **Enumerate** — [`aisecnomad/Nexus-ShadowScan`](https://github.com/aisecnomad/Nexus-ShadowScan) *(`Apache-2.0`)* across code, identity, gateways, low-code, SaaS and cloud; [`saasvista/aibom-scanner`](https://github.com/saasvista/aibom-scanner) *(`Apache-2.0`, `9f5a506`)* maps what it finds to **NIST AI RMF** and **ISO 42001** — 🟢 US standards, which is why this row is placed in North America at all.
+2. **Classify** — [`sattyamjjain/agent-audit-kit`](https://github.com/sattyamjjain/agent-audit-kit) *(`Apache-2.0`, `1126c18`, `388` rules / `14` frameworks) over the MCP-connected pipelines the scan surfaces.
+3. **Bind to statute** — the carried [`CSOAI-ORG/coppa-ferpa-mcp`](https://github.com/CSOAI-ORG/coppa-ferpa-mcp) *(`MIT`)* exposes COPPA/FERPA/UK-AADC checks over MCP; configuration per jurisdiction is the product, across `31` states and a `12`-grade scaffold.
+4. **Govern the SDLC** — [`ai-sdlc-framework/ai-sdlc`](https://github.com/ai-sdlc-framework/ai-sdlc) *(`Apache-2.0`, `388de20`, **`413`★**, the largest row in this group)*.
+5. **Keep conformance auditable** — the carried `OneRoster`/`Ed-Fi` estate: [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) and [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) *(both `Apache-2.0`)* as an executable gate.
+
+🟢 **Shape of sale: a two-week inventory whose output is the precondition for every governance artefact that follows** — and it bills before anyone has agreed a policy. 🟡 **`ACTION UY`: discover NA supply by district-system name — `Ed-Fi`, `OneRoster`, `Clever`, `PowerSchool`, `Infinite Campus`. The statute words are contaminated now.**
+
 ## Pass 237 — 2026-10-16 — FIVE RECIPES, ONE PER REGION, AND EVERY COMPONENT IN THEM WAS GRANT-READ AT A PINNED HEAD THIS PASS
 
 🟢 **Each recipe below names the exact repositories, their grants, the wiring, and the thing that breaks.** 🔵 **For the first time these shelves can field one recipe per region without a LATAM-only section and without padding — see `P237-E` for the reason that became possible.**
