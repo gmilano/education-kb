@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 251 — 2026-10-16 — `ACTION XM`, `XN` AND `XS` DISCHARGED — AND `XM`'s DISCHARGE FOUND `p250`'s DEFECT IN **FIVE MORE CONTROLS BY A DIFFERENT ROAD**: A `unittest.main()` SUITE EXITS `0` ON ZERO COLLECTED TESTS, AND THE GATE DISCARDS `stderr` ON EXACTLY THOSE FIVE LINES
+
+⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-gate-exit-audit`](../evidence/p251-gate-exit-audit.2026-10-16-p251.tsv) *(`26` commands)* · [`p251-gate-measured`](../evidence/p251-gate-measured.2026-10-16-p251.tsv) *(`26` suites, `0` non-zero, `1 152` controls)* · [`p251-prefix-collisions`](../evidence/p251-prefix-collisions.2026-10-16-p251.tsv) *(`235` pairs)* · [`p251-withheld`](../evidence/p251-withheld.2026-10-16-p251.tsv) *(`2`)* · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv) · [`p251-websearch`](../evidence/p251-websearch.2026-10-16-p251.tsv) *(`7` legs)* · [`p251-queries`](../evidence/p251-queries.2026-10-16-p251.tsv) · **instruments:** [`p251-gate-exit-reach`](../compose/code/p251-gate-exit-reach/) *(`34`)* · [`p251-prefix-collision`](../compose/code/p251-prefix-collision/) *(`20`)*
+
+### 🟢 Discharged this pass
+
+| ACTION | registered | how it was discharged | outcome |
+|---|---|---|---|
+| 🟢 **`ACTION XM`** | `p250` — *"audit every recipe line in the `Makefile` for exit-code reachability and report how many of the `20` offline controls can actually fail"* | 🟢 **Audited in two layers, both published.** Layer `1` *(the recipe)*: swallowing patterns enumerated — `\|\| true`, `\|\| :`, trailing `; exit 0`, leading `-`, pipeline-to-reader with no `pipefail`. Layer `2` *(the suite)*: how each signals failure, read out of its source. The count is `26` commands, not `20` | 🟢 **`26` of `26` failure-capable at layer 1.** 🔴 **`5` of `26` run `unittest.main()`, which EXITS `0` ON ZERO COLLECTED TESTS and on all-skipped — measured as subprocesses.** 🔴 **And the `5` are exactly the `5` lines whose `stderr` the gate throws away** *(`both=5, stderr-only=0, silent-zero-only=0, neither=21`)*, which is the only channel carrying `Ran 0 tests`. 🟢 **Fixed with a FLOOR each: `32`/`36`/`14`/`23`/`29`**, the static `def test_*` count reproducing the run-time count exactly on all five |
+| 🟢 **`ACTION XN`** | `p250` — *"refuse a harvested slug that is a strict prefix of another slug **on the same line**; falsified if the rule does not trip `TouchRefletz/maia` vs `maia.edu`"* | 🔴 **The two halves of that ACTION CONTRADICT each other, and the shelf text proves it: the real row is `agents/top.md:44` and the stump is line `45`** — one address per table row, so the LINE scope returns nothing on its own canonical instance | 🟢 **Scope inverted and the rule built at FILE scope, with the LINE as the EXEMPTION.** `235` pairs over eight shelves: `145` `WARN` *(separator continuations)*, `47` `DOCUMENTED`, `37` `IGNORED-PATH-FRAGMENT` *(a branch in the owner slot)*, `6` `REFUSE-ANNOTATED`, 🟢 **`0` `REFUSE` — no live unannotated truncation on these shelves.** 🔴 **One false positive taught out and kept as a control:** `"github.com/JushBJJ/Mr" in text` is `True` because the long URL contains the stump |
+| 🟢 **`ACTION XS`** *(registered and discharged in the same pass)* | `p251` — *"make the gate runnable where `make` is not"* | 🟢 **[`run_controls.sh`](../compose/code/p251-gate-exit-reach/run_controls.sh)**, reading the control list out of the `Makefile` through `audit.py` so it cannot drift from the gate it replaces | 🟢 **Proven to FAIL rather than assumed to: a throwaway root with one deliberately failing suite returns `1`**, as a control in the suite. 🔵 Leaving it as an ACTION would have repeated `p248`/`p250`'s failure mode exactly |
+
+### 🔴 The box this pass earned: `ACTION XI` was carried SILENTLY for three passes, and the defect is still inside a standing control
+
+`p248` registered `XI` as its **highest priority**. `p249` and `p250` neither ran it nor recorded it as unrun. Re-measured this pass on `p207`'s own fixture:
+
+```
+p1054.classify(commons-clause-mit.txt) -> {'verdict': 'MIT', 'bytes': 621, 'mit_body': True, 'hits': [], 'excess': 0}
+p1054.is_usable_permissive(...)        -> True
+```
+
+🔴 **`p1054-mit-plus-clause` is in `make hooks`, exists specifically for added restrictions on a permissive grant, and answers `usable_permissive: True` on the canonical Commons Clause body** — *"the License does not grant to you, the right to Sell the Software"*. 🔵 Its own numbers say why: `MIT_CANONICAL_LOW = 1020`, the payload is `621` B, so a byte-**excess** test cannot see a rider that makes the file **shorter** than canonical MIT. 🔵 **The lesson for the ledger, not just for `p1054`: an ACTION that is neither run nor republished as unrun disappears.** `p251` re-publishes it as `ACTION XQ`, with the measurement attached so a later pass cannot mistake it for closed.
+
+### 🔴 Registered here, for the next pass
+
+| ACTION | what it asks | why, and the limb that settles it |
+|---|---|---|
+| 🔴 **`ACTION XQ`** *(highest priority; `ACTION XI` re-registered with its measurement)* | **Teach `p1054` the rider shape, or demote it from the gate.** Add the two anchors *(`"commons clause"`, `"right to sell"`)* **and** a third length state `SHORTER-THAN-CANONICAL`, with `is_usable_permissive` proven to **REFUSE** on that state before the state is emitted | 🔴 **Hazard, identical to `XE`/`XG`/`XI`: emitting a new state without closing the consuming arm makes the verdict worse, not better** *(`p248` measured exactly that for `p241`'s blanket-denial branch)*. 🔵 **Limb `1`:** the miss is vocabulary only → anchors plus controls. 🔴 **Limb `2`:** a payload shorter than `MIT_CANONICAL_LOW` with a `mit_body` match is ungradeable → the refusal must come from the length state |
+| 🔴 **`ACTION XR`** | **Floor the `unittest` suites OUTSIDE the gate.** `p251` floored the five inside it. The population is now counted: **`344` instruments on disk, `23` referenced by the `Makefile`, so `321` are ungated and unfloored** | 🔵 This is `ACTION VW`'s real size, measured for the first time. *Falsified if a pass reports the count without naming which of the `321` carry a `unittest.main()` suite* — the silent-zero mode is the only part that matters, and it is statically detectable with `p251`'s own `suite_signal` |
+| 🟡 **`ACTION XT`** | **Give `XN`'s exemption a TABLE-BLOCK scope.** `p250`'s warning row trips as `REFUSE-ANNOTATED` only because the row says *"the stump"* in words; a two-row table that documents a truncation without that vocabulary would read as a live defect | 🔵 **Limb:** a contiguous run of `\|`-prefixed lines is one scope → the exemption becomes structural rather than lexical. *Falsified if the change makes the live `maia` pair stop being RETURNED at all* — `ACTION XN`'s falsifier must keep holding |
+
+### 🔵 Carried, unchanged, and explicitly NOT claimed closed
+
+- 🔴 **`ACTION XL`** *(carried from `p249`, second pass)* — a per-file grant selected by a **code comment**: **NOT RUN.** This pass's online budget went to the channel map and `20` payload probes.
+- 🔴 **`ACTION XO`** *(`p250`)* — publish the `DECLARED-NO-PAYLOAD` state for the `6` connectors that declare `"license": "MIT"` in a manifest and ship no licence text: **NOT RUN.** 🟡 **But `p251` produced two subjects for the neighbouring state and handled them correctly:** both `towardsai` repositories have **no manifest at all** and no licence payload, so they are `NO-GRANT-AT-TIER-A+MANIFEST`, which is distinguishable from `DECLARED-NO-PAYLOAD` only if `XO` lands.
+- 🔴 **`ACTION XP`** *(`p250`)* — `eclipse/paho.mqtt.java`'s `519`-B **pointer** licence *(a Tier-A file whose body is a reference)*: **NOT RUN.**
+- 🟡 **`ACTION VW`** — the `-I`-portability and gating audit over all instruments: 🟢 **the population is now counted at `321` outside the gate** *(see `XR`)*, and `p1056-split-scope-licence` and `p627-multi-grant-repo` are still two named candidates.
+- 🔴 **`ACTION TQ`/`VS`** — the retroactive holder sweep keyed on licence FORM: **TWELFTH pass unrun.**
+- 🔴 **`ACTION TW`** — the zod empty-subject check is READ, not EXECUTED.
+- 🟡 **`ACTION UM`** — `carried()` indexes `github.com` slugs only; a PyPI/npm/Maven coordinate is invisible to the gate.
+- 🟡 **`ACTION UA` · `UD` · `UE` · `UJ`** — namespaces unread; `edugit.org` for AlekSIS; the remaining `svws-nrw` repositories; and the licence ask on the three live UNGRANTED LATAM rows, where `Seunope/aloc-endpoints` *(`20 000` exam questions, no payload)* is still the highest-value ask on these shelves. 🔵 **`p251` adds two more names to that ask list:** both `towardsai` course repositories.
+
+### 🔴 Absences published this pass, each with its control (`ACTION UF`)
+
+| absence | its control | establishable? |
+|---|---|---|
+| 🟢 **No new permissive education row** | 🟢 **`7` `WebSearch` legs RAN and returned `0` repositories; `2` new slugs went to the payload channel and both answered `404` at `10` paths.** `0` `topic:` queries and `0` code searches ran because they **cannot** — `api.github.com` is `403`, re-probed | 🟢 **ESTABLISHABLE as a channel result.** `ACTION UK` satisfied: no flat claim about supply |
+| 🟢 **No shelf cell corrected by this pass** | 🟢 `frappe/lms` *(`AGPL-3.0`, `33 893` B, `db1a87ba81e885b6`, branch `develop`)* and `openeducat/openeducat_erp` *(`LGPL-3.0`, `8 241` B, `528f84036800168d`, branch `19.0`)* re-read first-hand; both agree with the carried cells | 🟢 **ESTABLISHABLE and BOUNDED: `2` payloads, not the shelves** |
+| 🔴 **No live truncation found by `ACTION XN`'s rule** | 🟡 **`0` of `235` pairs are unannotated refusals** — but the rule can only see a stump whose LONGER form is also on these shelves | 🟡 **ESTABLISHABLE ONLY FOR THAT CLASS.** A truncation whose real name was never written down is invisible to text analysis; that is `ACTION XH`'s class, discharged at `p249` by reading payloads |
+| 🔴 **No APAC instrument for Japan or India** | 🔴 the APAC leg returned Korea and China and named Japan and India without an instrument; ministry hosts *(MEXT, UGC/AICTE)* are not reachable from this session | 🔴 **NOT ESTABLISHABLE** — an informed gap, published as one |
+| 🔴 **No resolution of the EU Annex III date** | 🔴 the channel served **both** `2026-08-02` and the Omnibus deferral to `2027-12-02` *"pending formal adoption"*; `eur-lex.europa.eu` is refused at the proxy | 🔴 **NOT ESTABLISHABLE** — published as a disjunction with its cause, as `p250` did |
+| 🔴 **No gate RUN** | 🔴 **NEW: `make hooks` is refused by this session's sandbox.** `26` controls were invoked individually instead *(`0` non-zero, `1 152` controls reported)* | 🟢 **ESTABLISHABLE as per-suite measurement, NOT as a gate run** — and `ACTION XS`'s script now makes the substitute reproducible |
+
+### 🔵 Next pass, in priority order, each with what would falsify it
+
+| # | what to run | falsified if |
+|---|---|---|
+| 1 | 🔴 **`ACTION XQ`** — `p1054`'s rider blindness, four passes old, with the refusal proven before the state is emitted | 🔴 **Falsified if `usable_permissive` is still `True` on `p207/fixtures/commons-clause-mit.txt`, or if the change ships without the `354`-fixture sweep AND the `183`-payload re-grade** |
+| 2 | 🔴 **`ACTION XR`** — which of the `321` ungated instruments carry a silent-zero suite | 🔴 **Falsified if it reports a count without naming the `unittest.main()` ones**; `p251`'s `suite_signal` makes it a static sweep, so a budget excuse does not apply |
+| 3 | 🟡 **`ACTION XO`** — the `DECLARED-NO-PAYLOAD` state, with `p251`'s two no-manifest subjects as the contrast class | 🔴 **Falsified if any of the `6` connectors is published as `MIT` or as `NO-GRANT` without the new state** |
+| 4 | 🟡 **`ACTION XT`** — the table-block exemption for `XN` | 🔴 **Falsified if the `maia` pair stops being returned** |
+| 5 | 🔴 **Run a supply channel that can actually pay.** `WebSearch` has now returned `0` rows in `13` of `14` passes while the only live channel is the payload one. The next pass should spend its budget on **named-namespace enumeration** *(`ACTION UA`/`UD`/`UE`)* rather than on a query channel measured dry | 🔴 **Falsified by a pass that publishes another `7` dry legs and no namespace read** |
+
 ## Pass 248 — 2026-10-16 — `ACTION XE` DISCHARGED WITH **BOTH** LIMBS MEASURED, AND THE DISCHARGE FOUND A FOURTH CAUSE OF THE SAME WRONG ANSWER THAT THIS KB HAD **ALREADY DOCUMENTED AND NEVER WIRED**: THE ONE CORRECT RIDER CLASSIFIER HERE WAS OUTSIDE `make hooks`
 
 ⏱️ **SEVENTEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p248-blast-radius`](../evidence/p248-blast-radius.2026-10-16-p248.tsv) *(354 fixtures)* · [`p248-repo-payload-regrade`](../evidence/p248-repo-payload-regrade.2026-10-16-p248.tsv) *(183 real payloads)* · [`p248-default-arm`](../evidence/p248-default-arm.2026-10-16-p248.tsv) · [`p248-position-delta`](../evidence/p248-position-delta.2026-10-16-p248.tsv) · [`p248-rider-disagreement`](../evidence/p248-rider-disagreement.2026-10-16-p248.tsv) · [`p248-xf-licence-paths`](../evidence/p248-xf-licence-paths.2026-10-16-p248.tsv) · [`p248-websearch`](../evidence/p248-websearch.2026-10-16-p248.tsv) *(8 legs)* · [`p248-queries`](../evidence/p248-queries.2026-10-16-p248.tsv) · **instruments:** [`p248-named-proprietary`](../compose/code/p248-named-proprietary/) *(38)* · [`p207-permissive-half-audit`](../compose/code/p207-permissive-half-audit/) *(12, wired for the first time)*

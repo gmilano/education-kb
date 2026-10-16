@@ -1,0 +1,27 @@
+makefile_line	instrument	suite	command	stdout_suppressed	stderr_suppressed	layer1_failure_capable	layer2_signal	silent_zero	collected_tests	pinned_floor	verdict
+27	lib	test_license_family.sh	cd compose/code/lib && bash test_license_family.sh >/dev/null && echo 	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+30	lib	test_licence_path.sh	cd compose/code/lib && bash test_licence_path.sh >/dev/null && echo " 	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+33	p222-ecosystem-bound-grammar	test_bound_grammar.py	cd compose/code/p222-ecosystem-bound-grammar && $(PY) test_bound_gramm	yes	yes	yes	UNITTEST-MAIN	yes	32	32	PINNED
+36	p228-shelf-gate	test_shelf_gate.py	cd compose/code/p228-shelf-gate && $(PY) test_shelf_gate.py >/dev/null	yes	yes	yes	UNITTEST-MAIN	yes	36	36	PINNED
+39	p229-grant-ladder-reach	test_grant_ladder_reach.py	cd compose/code/p229-grant-ladder-reach && $(PY) test_grant_ladder_rea	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+42	p230-prose-path-ladder	test_prose_path_ladder.py	$(PY) -I compose/code/p230-prose-path-ladder/test_prose_path_ladder.py	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+44	p233-maven-channel	test_classify_response.py	$(PY) -I compose/code/p233-maven-channel/test_classify_response.py >/d	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+46	p237-grant-payload-shapes	test_payload_shapes.sh	cd compose/code/p237-grant-payload-shapes && bash test_payload_shapes.	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+49	p235-carried-index	test_carried_index.py	$(PY) -I compose/code/p235-carried-index/test_carried_index.py >/dev/n	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+51	p238-lure-signature	test_lure_signature.py	cd compose/code/p238-lure-signature && $(PY) test_lure_signature.py >/	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+54	p239-query-shape	test_query_shape.py	cd compose/code/p239-query-shape && $(PY) test_query_shape.py >/dev/nu	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+57	p240-grant-language	test_grant_language.py	cd compose/code/p240-grant-language && $(PY) test_grant_language.py >/	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+60	p1054-mit-plus-clause	test_mit_plus.py	$(PY) -I compose/code/p1054-mit-plus-clause/test_mit_plus.py >/dev/nul	yes	yes	yes	UNITTEST-MAIN	yes	14	14	PINNED
+62	p241-blanket-denial	test_blanket_denial.py	cd compose/code/p241-blanket-denial && $(PY) test_blanket_denial.py >/	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+65	p242-grant-delta	test_grant_delta.py	$(PY) -I compose/code/p242-grant-delta/test_grant_delta.py >/dev/null 	yes	yes	yes	UNITTEST-MAIN	yes	23	23	PINNED
+67	p1058-empty-payload-gate	test_empty_payload_gate.py	cd compose/code/p1058-empty-payload-gate && $(PY) -I test_empty_payloa	yes	yes	yes	UNITTEST-MAIN	yes	29	29	PINNED
+70	p244-absence-states	test_absence_states.py	$(PY) -I compose/code/p244-absence-states/test_absence_states.py >/dev	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+72	p245-apache-canonical	test_apache_canonical.py	cd compose/code/p245-apache-canonical && $(PY) -I test_apache_canonica	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+75	p246-payload-integrity	test_payload_integrity.py	$(PY) -I compose/code/p246-payload-integrity/test_payload_integrity.py	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+77	p247-keyed-grant	test_keyed_grant.py	$(PY) -I compose/code/p247-keyed-grant/test_keyed_grant.py >/dev/null 	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+79	p247-path-class	test_path_class.sh	cd compose/code/p247-path-class && bash test_path_class.sh >/dev/null 	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+82	p248-named-proprietary	test_named_proprietary.sh	cd compose/code/p248-named-proprietary && bash test_named_proprietary.	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+85	p207-permissive-half-audit	test_classify.sh	cd compose/code/p207-permissive-half-audit && bash test_classify.sh >/	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+88	p251-gate-exit-reach	test_gate_exit_reach.py	cd compose/code/p251-gate-exit-reach && $(PY) test_gate_exit_reach.py 	yes	no	yes	EXPLICIT-EXIT	no	2		FAILURE-CAPABLE
+91	p251-prefix-collision	test_prefix_collision.py	cd compose/code/p251-prefix-collision && $(PY) test_prefix_collision.p	yes	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE
+94	p230-prose-path-ladder	lazy_lint.py	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code	no	no	yes	EXPLICIT-EXIT	no	0		FAILURE-CAPABLE

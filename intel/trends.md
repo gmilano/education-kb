@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 251 — 2026-10-16 — THE SECTOR TREND IS **COMPLIANCE MOVING FROM THE STATE TO THE DISTRICT**, WHERE THE BUYER IS; AND THE KB-INTERNAL TREND IS NOW FOUR PASSES OLD AND HAS A NAME: THIS BASE'S FAILURES ARE **UNWIRED OR UNFAILABLE** KNOWLEDGE, NEVER MISSING KNOWLEDGE
+
+⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-websearch`](../evidence/p251-websearch.2026-10-16-p251.tsv) · [`p251-gate-exit-audit`](../evidence/p251-gate-exit-audit.2026-10-16-p251.tsv) · [`p251-gate-measured`](../evidence/p251-gate-measured.2026-10-16-p251.tsv) · [`p251-prefix-collisions`](../evidence/p251-prefix-collisions.2026-10-16-p251.tsv)
+
+### 🟢 `T251-T1` — the market trend: the mandate layer dropped to the district, and that is where procurement lives
+
+`p250` caught the **federal, vendor-facing** layer arriving *(the amended `COPPA` rule, compliance date `2026-04-22`)*. `p251`'s North America leg catches the layer below it: **three states now compel an individual district to adopt a written AI policy** — Ohio *(with a state model policy)*, Oklahoma *(before `2027`–`28`)*, Illinois *(state guidance due `2026-07-01`)* — while **Nevada prohibits a named capability outright** and South Carolina would require **parental opt-in**.
+
+🔵 **Why this is a trend and not a list:** a state *guideline* is advice to thousands of districts; a state *mandate to adopt a policy* is thousands of procurement events with a deadline. 🔴 **And the demand is for ASSURANCE, not deployment** — the two largest districts in the country moved to restriction and moratorium in the same window. 🟢 The product shape that follows is auditable control: a policy, the data-flow inventory under it, and hooks that can express a ban *(Nevada's counsellor/psychologist clause)* as a block rather than a sentence.
+
+### 🟢 `T251-T2` — EMEA's trend is the opposite shape: the one thing in force is a PROHIBITION, and the rest is deferred
+
+🟡 The high-risk date is a **disjunction** — `2026-08-02` or `2027-12-02`, both served by this pass's channel, Omnibus agreement named, 🔴 not closable from this session. 🟢 **What is in force is `Article 5(1)(f)`: emotion recognition in educational institutions, banned since `2025-02-02`** — and the operational reading the leg supplies is that **webcam-based stress or affect inference in proctoring may be prohibited outright**. 🔵 **So EMEA's deliverable this quarter is a proctoring audit, which needs no date resolution**, while the high-risk programme waits on a text nobody here can read.
+
+### 🟢 `T251-T3` — APAC's trend is supply-side: the state is buying CURRICULUM at national scale
+
+Korea's `18` AI-centred universities *(AI basics mandatory for all students, up to `24` bn won over eight years)* plus `20` more funded for **non-engineering** AI literacy is the first instrument on this shelf where the state is the **buyer of teaching capacity** rather than the regulator of it. 🔵 Set against `p249`'s Vietnam statute *(education named high-risk, institutional deadline `2027`)*, APAC now shows both halves: **one jurisdiction regulating the use, another funding the teaching.**
+
+### 🔴 `T251-T4` — the KB-internal trend, four passes deep, and it is the most reliable finding on these shelves
+
+| pass | what failed | what it was NOT |
+|---|---|---|
+| `p248` | the only classifier here that reads a **Commons Clause** correctly was **outside** `make hooks` | not missing knowledge — it was written at `p207` |
+| `p249` | `6` live `MIT` repositories were filed as **non-existent** because a harvester mutilated their names | not absent supply — they were on the shelves |
+| `p250` | a lint built **for that exact defect**, wired into the gate, reported both offending lines on every run and `return 0`'d | not an unknown defect — the lint's own docstring was the worked example |
+| 🔴 **`p251`** | 🔴 **`5` of `26` gate controls can pass while collecting ZERO tests, and the gate discards `stderr` on exactly those `5`** | 🔴 **not an untested subject — `1 152` controls exist and run; `5` of them could have stopped asserting silently** |
+
+🔵 **Stated as a property, because four passes is enough to state one:** *when something is wrong here, the knowledge already exists in this repository and is either unwired, unrunnable, or incapable of failing.* 🟢 **The counter-measure that worked this pass is cheap and should generalise: a FLOOR.** Five numbers — `32`, `36`, `14`, `23`, `29` — turn five silent controls into loud ones. 🔴 **And the population still outside the gate is now counted: `344` instruments exist here, the `Makefile` references `23`.** That is `ACTION VW`'s real size and it is `321`.
+
+### 🔴 `T251-T5` — a trend this pass is careful NOT to claim
+
+🔴 **No supply trend.** `0` of `7` legs returned an education-agent repository, the `topic:` harvest **cannot run** *(`403`)* and `github.com/trending` is `403` for the fourteenth pass. 🔵 **A shut channel is not an empty world** *(`ACTION UK`)*, so nothing here says the sector's open-source supply has slowed — only that this session cannot see it. 🟡 **The one supply-shaped observation that IS safe:** of the `2` new slugs the channel produced, both are **course notebooks with no grant at `10` probed paths**, which is the tenth consecutive pass where the agent query returned curricula.
+
 ## Pass 250 — 2026-10-16 — THE SECTOR TREND IS **GOVERNANCE BECOMING A PRODUCT SURFACE**, AND THIS PASS CAUGHT SUPPLY FOLLOWING REGULATION INSIDE ONE WINDOW: AN `MIT` **STUDENT-PII DETECTOR BUILT TO THE FERPA DEFINITION** LANDING IN THE SAME QUARTER THE AMENDED **COPPA** RULE STARTED BINDING EDTECH VENDORS
 
 🔵 **Evidence:** [`p250-websearch`](../evidence/p250-websearch.2026-10-16-p250.tsv) *(legs 4–8)* · [`p250-channel-refutations`](../evidence/p250-channel-refutations.2026-10-16-p250.tsv).

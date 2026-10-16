@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 251 — 2026-10-16 — `0` NEW FOUNDATION ROWS, AND THE REASON IS A `403` RATHER THAN AN EMPTY WORLD — BUT THE **STANDARDS LAYER** THIS SHELF GAINED AT `p249`/`p250` NOW HAS ITS NAMING CONVENTION MEASURED, AND IT IS THE CONVENTION THAT BROKE THE HARVESTER
+
+⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-prefix-collisions`](../evidence/p251-prefix-collisions.2026-10-16-p251.tsv) · [`p251-queries`](../evidence/p251-queries.2026-10-16-p251.tsv) · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv)
+
+### 🔴 `0` new rows, published as a BUDGET and CHANNEL statement, not a supply one
+
+🔴 **`0` `topic:` queries and `0` code searches were RUN, because they cannot be:** `api.github.com/search/repositories` answers **`403`** from this session, re-probed this pass. 🔴 `github.com/trending` likewise. 🟢 **`7` `WebSearch` legs ran and returned `0` repositories** — the one candidate pair they produced went to the payload channel and was **withheld** *(`NO-GRANT-AT-TIER-A+MANIFEST`, `10` paths each)*. 🔵 **`ACTION UK` is satisfied by construction: this pass makes no flat claim about what exists.**
+
+### 🟢 The measured property of this shelf's newest layer
+
+`p249` added the **interop standards plumbing** — `LTI 1.3`, `OneRoster`, SIS connectors — and `p250` recovered `11` more of them from truncated names. This pass measured *why* that layer was the one that broke:
+
+| the pattern | instances on these shelves |
+|---|---|
+| the standard's **version number is part of the repository name** | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) · [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) · [`UOC/java-lti-1.3`](https://github.com/UOC/java-lti-1.3) *(plus `-platform`, `-provider`, `-provider-example`)* · [`paurushrai/lti-1.3-node-nextjs-starter`](https://github.com/paurushrai/lti-1.3-node-nextjs-starter) |
+| the **platform suffix** carries a dot | [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) · [`theopenem/oneroster.net`](https://github.com/theopenem/oneroster.net) |
+| the **version** is in the name AND dotted | [`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`](https://github.com/Lawrence-Public-Schools/OneRoster-1.1-PowerQueries) |
+
+🔴 **A slug harvester whose terminator class contains `.` cuts every one of these at its version number** — `pylti1.3` → `pylti1`, `java-lti-1.3` → `java-lti-1`, `OneRoster.NET` → `OneRoster`. 🟢 **Four distinct `UOC/java-lti-1.3*` repositories collapsed to ONE address**, which is how a four-row layer can look like a one-row layer. 🔵 **This is a property of the industry, not of one owner's taste:** education interop is *versioned specifications*, so its reference implementations are named after versions.
+
+🟢 **The sweep over this shelf: `27` pairs** *(`18` `WARN`, `5` `DOCUMENTED`, `4` branch-slot path fragments)*, 🟢 **`0` refusals** — so no row on this shelf is currently carried under a truncated address.
+
+### 🔵 Standing: the permissive interop layer a studio can build on, unchanged this pass
+
+No cell on this shelf is corrected by `p251`, and none is re-verified either — the `183`-payload cache and the `60` `ACTION XH` reads belong to `p248`/`p249`. 🔵 **What a reader should take from this pass is the naming rule above:** when an engagement needs `LTI 1.3` or `OneRoster` plumbing, search for the **version-suffixed** name, because the unsuffixed one is either a different project or nothing at all.
+
 ## Pass 250 — 2026-10-16 — THE **STANDARDS PLUMBING** OF THIS INDUSTRY WAS ON THESE SHELVES ALL ALONG AND UNREACHABLE: `11` LTI 1.3 / ONEROSTER / SIS REPOSITORIES RECOVERED FROM TRUNCATED NAMES, `8` OF THEM **`MIT`**, BECAUSE THE DOT-SUFFIX CONVENTION BELONGS TO **VERSION-NUMBERED STANDARDS LIBRARIES** AND THOSE ARE OVERWHELMINGLY PERMISSIVE
 
 🔵 **Evidence:** [`p250-slug-repair-sweep`](../evidence/p250-slug-repair-sweep.2026-10-16-p250.tsv) · [`p250-component-map`](../evidence/p250-component-map.2026-10-16-p250.tsv) · [`p250-channel-refutations`](../evidence/p250-channel-refutations.2026-10-16-p250.tsv).

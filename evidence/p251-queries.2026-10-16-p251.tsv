@@ -1,0 +1,9 @@
+channel	ran	legs	rows_returned	note
+WebSearch (global, 3 legs)	yes	3	0	the row channel is dry for the THIRTEENTH pass in fourteen
+WebSearch (regional, 4 legs)	yes	4	0	0 repositories; 3 of 4 regions paid REGULATION or CENSUS material
+github topic: harvest	no	0	0	cannot run: api.github.com answers 403 (measured this pass, p251-channel-map)
+github code search	no	0	0	same 403 channel
+github.com/trending	no	0	0	403, fourteenth pass
+payload channel (raw.githubusercontent.com)	yes	20 requests over 2 slugs	0 published, 2 withheld	the only live supply channel; both new slugs grant nothing at the 10 paths probed
+git ls-remote	yes	2	-	existence and default branch for both candidates
+make hooks (standing gate)	no	-	-	refused by this session's sandbox; 26 controls invoked individually instead, 0 non-zero

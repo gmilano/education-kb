@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 251 — 2026-10-16 — `0` NEW PLATFORMS, `2` CARRIED GRANTS RE-READ FIRST-HAND AND BOTH HOLD — AND THE VERTICAL LEG'S ONE AI HEADLINE IS A **VENDOR PRODUCT PAGE**, WHOSE CLAIM THIS SHELF CAN NEITHER CONFIRM NOR REFUTE FROM THE OPEN REPOSITORY
+
+⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-websearch`](../evidence/p251-websearch.2026-10-16-p251.tsv) *(leg `2`)* · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv)
+
+### 🟢 `T251-V1` — two carried platform grants, re-read first-hand this pass
+
+| platform | default branch *(`ls-remote --symref`)* | grant path · bytes · `sha256/16` | family |
+|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | 🟡 **`develop`** — not `main`, not `master` | `license.txt` · `33 893` B · `db1a87ba81e885b6` | 🟡 **`AGPL-3.0`** *(first line: `GNU AFFERO GENERAL PUBLIC LICENSE`)* |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **`19.0`** — a VERSION, not a branch name | `LICENSE` · `8 241` B · `528f84036800168d` | 🟡 **`LGPL-3.0`** *(payload: "OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3")* |
+
+🟢 **Both agree with the cells this shelf already carried** *(`p209` for `frappe`, `p206` for `OpenEduCat`)* — `0` corrections. 🔴 **And both are a reminder of why a licence probe must resolve the default branch first:** neither repository serves its grant from `main` or `master`, so a ladder that guesses the branch returns `404` on two of this industry's best-known platforms and would record them as ungranted.
+
+### 🔴 `T251-V2` — the AI headline this pass refuses to publish as a finding
+
+Leg `2` returned an **OpenEduCat "AI LMS" product page** claiming an AI module with tutoring, **auto-grading** and plagiarism checking, and claiming *"every grade is returned to a human-in-the-loop teacher view before posting"* plus *"early customer feedback in pilot schools"*.
+
+| what the channel said | what this shelf can establish |
+|---|---|
+| an AI LMS module exists with tutoring + autograding + plagiarism detection | 🔴 **NOT ESTABLISHED.** The claim is on a **vendor marketing page**, which is the weakest source class on these shelves *(`p250` refuted two such claims on their payloads in one pass)* |
+| it is part of OpenEduCat | 🟢 **the repository's grant is `LGPL-3.0`, read first-hand above** — but the presence of the AI module **in the open repository** was not probed, and `api.github.com`'s tree endpoint is `403` from here |
+| pilot-school results | 🔴 **unverifiable by construction** — no primary source, no named institution |
+
+🔵 **Published as an unverified vendor claim with the probe that would settle it named:** a `raw.githubusercontent.com` read of the module path on branch `19.0`. 🔴 **The direction of the error, if it is one, is the dangerous direction** — a product page describes capability a client would then expect from the open code, which is `p250`'s `Huly` and `education-crm` lesson in a different dress.
+
+### 🔵 `T251-V3` — the licence shape of this industry, restated because this pass measured both halves of it again
+
+🟡 **The platforms are copyleft** — `AGPL-3.0` *(Frappe LMS, Moodle's ecosystem, `twenty`)*, `LGPL-3.0` *(OpenEduCat on Odoo)*, `EPL-2.0` *(Huly, as `p250` corrected)*. 🟢 **The interop plumbing is permissive** — `MIT` `LTI 1.3` and `OneRoster` libraries, as [`repos/foundations.md`](../repos/foundations.md) now records with its naming rule. 🔵 **So a studio's deliverable lives in the plumbing and the agents, and the platform stays where its licence requires it to stay.** Nothing in `p251` changes that shape; two first-hand reads reinforce it.
+
 ## Pass 250 — 2026-10-16 — THE PLATFORM CENSUS GAINS **SEVEN DEPLOYED NATIONAL AND REGIONAL SYSTEMS** THAT WERE ALREADY ON THESE SHELVES AND UNREACHABLE — AND THE VERTICAL LEG'S ONE PERMISSIVE HEADLINE IS **REFUTED ON ITS PAYLOAD**: HULY IS `EPL-2.0`, NOT THE `Apache-2.0` THE CHANNEL REPORTED
 
 ⏱️ **NINETEENTH pass of `2026-10-16`.** 🔵 **Evidence:** [`p250-channel-refutations`](../evidence/p250-channel-refutations.2026-10-16-p250.tsv) · [`p250-slug-repair-sweep`](../evidence/p250-slug-repair-sweep.2026-10-16-p250.tsv) · [`p250-xk-tier-bc`](../evidence/p250-xk-tier-bc.2026-10-16-p250.tsv).

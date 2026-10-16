@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 251 — 2026-10-16 — `ACTION XM`, `XN` AND `XS` DISCHARGED, AND `XM` FOUND `p250`'s DEFECT BY A SECOND ROAD IN **FIVE MORE CONTROLS**: A `unittest.main()` SUITE EXITS `0` WHEN IT COLLECTS **ZERO** TESTS, AND THIS GATE DISCARDS `stderr` ON EXACTLY THOSE FIVE LINES AND NOWHERE ELSE
+
+⏱️ **TWENTIETH pass of `2026-10-16`.** `p232`–`p250` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction. 🔵 **Note for a reader of this file: the pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**
+
+🟢 **`ACTION XM` DISCHARGED with the whole audit published.** `26` commands in `gate-offline` — not the `20` the ACTION assumed — **`26` failure-capable at the recipe layer**, `21` signalling failure explicitly, and 🔴 **`5` running through `unittest.main()`, which exits `0` on zero collected tests and on all-skipped.** 🔴 **Those `5` are the only `5` whose `stderr` the gate throws away**, and `stderr` is where `Ran 0 tests` appears. 🟢 **Floors now pin all five.**
+
+🟢 **`ACTION XN` DISCHARGED, and its own prescription is refuted by the shelf text:** the LINE scope it asked for cannot trip its own falsifier, because the real row and the stump are two rows of one table. 🟢 **Built at FILE scope with the LINE as the exemption: `235` pairs, `0` live unannotated truncations.** 🟢 **`ACTION XS` registered and discharged in the same pass** — the gate's stand-in runner, proven to fail.
+
+🔴 **`0` new rows, and that is a CHANNEL statement, not a supply one.** `7` `WebSearch` legs ran and returned `0` repositories; the `topic:` harvest and `github.com/trending` are **`403`** and cannot run. 🔴 **`2` new candidates WITHHELD on their payloads** — `404` at `10` probed paths each, and both are course notebooks rather than agents. 🔴 **`ACTION XI` re-measured and still live after three passes of silent carry.** 🔴 **New channel fact: `make hooks` itself is refused by this session's sandbox**, so `26` controls were invoked one by one *(`0` non-zero, `1 152` controls)*.
+
+### The two roads to one defect, and why the second is this base's own signature
+
+| pass | the check | what it did | what gave it away |
+|---|---|---|---|
+| `p250` | `lazy_lint.py` | reported both offending lines on **every** run and `return 0`'d | 🟡 it printed its findings — above `ALL OFFLINE LICENCE CONTROLS PASS` |
+| 🔴 **`p251`** | `5` `unittest.main()` suites | 🔴 **would pass while collecting ZERO tests** | 🔴 **NOTHING. `unittest` says `Ran 0 tests` on `stderr`, and the gate discards `stderr` on exactly these five lines** |
+
+🔵 **Four passes now say the same thing, so it is stated as a property: when something is wrong here, the knowledge already exists in this repository and is either unwired (`p248`), unreadable (`p249`), incapable of failing (`p250`), or silently unasserted (`p251`).** 🟢 **The counter-measure that worked is cheap: a floor.** Five numbers turn five silent controls loud.
+
+### What a reader should take from this pass
+
+🟢 **The market finding is that compliance dropped a layer, to where the buyer is:** Ohio, Oklahoma and Illinois now compel an individual **district** to adopt a written AI policy, Nevada **prohibits** AI performing counsellor and psychologist duties, and South Carolina would require parental opt-in — while New York City and Los Angeles answered the ambiguity with a K–8 restriction and a one-year moratorium. 🟢 **APAC's first funded national programme reaches this shelf:** Korea's `18` AI-centred universities *(AI basics mandatory for all students)* plus `20` more funded for non-engineering AI literacy. 🟡 **EMEA's high-risk date is still a disjunction** — `2026-08-02` or `2027-12-02` — and `eur-lex` is refused at the proxy, so the one actionable EMEA instrument is the **`Article 5(1)(f)` emotion-recognition ban, in force since `2025-02-02`** and pointed straight at proctoring.
+
+🔵 **And the one supply-shaped fact that is safe to state:** of this pass's `2` new slugs, both grant nothing at `10` probed paths, which is the tenth consecutive pass where the mandated agent query returned **curricula** instead of agents.
+
 ## Pass 248 — 2026-10-16 — `ACTION XE` DISCHARGED WITH BOTH LIMBS MEASURED, AND IT UNCOVERED A FOURTH WAY TO GET THE SAME ANSWER WRONG THAT THIS KB **HAD ALREADY DOCUMENTED AND NEVER WIRED**: THE ONLY CLASSIFIER HERE THAT READS A **COMMONS CLAUSE** CORRECTLY WAS OUTSIDE `make hooks`, AND THE TWO INSIDE IT BOTH RETURNED A CLEAN `MIT`
 
 ⏱️ **SEVENTEENTH pass of `2026-10-16`.** `p232`–`p247` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction. 🔵 **Note for a reader of this file: the pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**

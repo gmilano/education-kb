@@ -84,6 +84,12 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── p207-permissive-half-audit (D14, the RIDER: it owns the only correct one — 12)"; \
 	cd compose/code/p207-permissive-half-audit && bash test_classify.sh >/dev/null && echo "   PASS"; \
 	cd - >/dev/null; \
+	echo "── p251-gate-exit-reach  (ACTION XM: exit-code reachability + 5 unittest floors)"; \
+	cd compose/code/p251-gate-exit-reach && $(PY) test_gate_exit_reach.py >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
+	echo "── p251-prefix-collision (ACTION XN: the maia class, a truncation onto a real repo)"; \
+	cd compose/code/p251-prefix-collision && $(PY) test_prefix_collision.py >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 251 — THE TRENDING CHANNEL IS `403` FOR THE **FOURTEENTH PASS**, SO THIS PASS MEASURED THE SHELVES AGAIN — AND THE TRUNCATION POPULATION IS NOW **BOUNDED**: `235` PREFIX PAIRS, `0` OF THEM A LIVE UNANNOTATED STUMP
+
+⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-prefix-collisions`](../evidence/p251-prefix-collisions.2026-10-16-p251.tsv) *(`235` pairs across `8` shelves)* · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv) · **instrument:** [`p251-prefix-collision`](../compose/code/p251-prefix-collision/) *(`20` controls)*
+
+### 🔴 No trending result is published, and the reason is measured rather than assumed
+
+`GET github.com/trending` → **`403`**. `GET api.github.com/search/repositories?q=topic:education+ai` → **`403`**. `GET api.github.com/repos/{owner}/{repo}` → **`403`**. 🟢 `raw.githubusercontent.com` → **`200`**; `git ls-remote` → resolves. 🔵 **So the only live supply channel here is still the payload one** *(`p250`'s conclusion, replicated)*, and it paid `2` probes and `0` rows this pass.
+
+### 🟢 What is published instead: the bound on `p250`'s truncation defect
+
+`p250` fixed two lazy regexes and a lint that could not fail, and recovered `30` slugs. The open question it left was **how many truncations are still on these shelves.** `ACTION XN`'s instrument answers it at file scope:
+
+| verdict | pairs | reading |
+|---|---|---|
+`WARN` | `145` | a `-`/`_`/alnum continuation — ordinarily two real repositories *(`moodle/moodle` vs `moodle/moodle-docker`)* |
+`DOCUMENTED` | `47` | the stump always shares a line with a longer form |
+`IGNORED-PATH-FRAGMENT` | `37` | a **branch** in the owner slot — `main/LICENSE` vs `main/LICENSE.md` is a raw-URL path, not a slug |
+🟡 `REFUSE-ANNOTATED` | `6` | a bare stump on a line that says so in words |
+🟢 `REFUSE` | **`0`** | an unannotated live stump |
+
+🟢 **`0` live truncations.** 🔵 **And this shelf carries the heaviest share of the population by far — `111` of the `235` pairs** *(`67` `WARN`, `28` `DOCUMENTED`, `15` path fragments, `1` annotated refusal)* — which is what a shelf that records one address per probe row should look like.
+
+### 🔵 The dotted-name population is a PROPERTY OF THIS INDUSTRY, not noise
+
+The `DOT-SUFFIX` pairs are concentrated in exactly one layer: **version-numbered interop standards libraries.** `dmitry-viskov/pylti1.3` *(+ its `-django-example` and `-flask-example`)*, `ucfopen/pylti1.3`, `UOC/java-lti-1.3` *(four repositories collapsing to one stump)*, `jdolny/OneRoster.NET`, `theopenem/oneroster.net`, `Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`, `paurushrai/lti-1.3-node-nextjs-starter`.
+
+🔴 **That is why the lazy-quantifier defect hit this KB's `LTI 1.3` / `OneRoster` layer hardest:** the standard's **version number is part of the repository name**, and a terminator class containing `.` cuts the name at the version. 🟢 The layer `p249` and `p250` recovered — `MIT` interop plumbing under copyleft platforms — is precisely the layer whose naming convention the harvester could not read.
+
+### 🔴 What this pass does not claim
+
+🔴 **No star count, no last-push date, no archived flag** *(`403`)*. 🔴 **No statement about what is trending** — the channel is shut, and a shut channel is not an empty world *(`ACTION UK`)*. 🔴 **No claim that `0` live truncations means `0` wrong addresses:** the rule finds a stump only when a LONGER form of it is also on these shelves. A truncation whose real name was never written down anywhere is invisible to it, and that is `ACTION XH`'s class, discharged at `p249` by reading payloads rather than by text analysis.
+
 ## 2026-10-16 — Pass 250 — THE TRENDING CHANNEL RETURNED NO EDUCATION REPOSITORY FOR THE **THIRTEENTH PASS**, SO THIS PASS MEASURED THE SHELVES INSTEAD AND FOUND `30` REPOSITORIES THAT WERE **ALREADY HERE AND UNREACHABLE** — CARRIED UNDER NAMES THAT `404`
 
 🔵 **Evidence:** [`p250-slug-repair-sweep`](../evidence/p250-slug-repair-sweep.2026-10-16-p250.tsv) · [`p250-websearch`](../evidence/p250-websearch.2026-10-16-p250.tsv) *(leg 2)*.

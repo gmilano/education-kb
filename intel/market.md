@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 251 — 2026-10-16 — NORTH AMERICA'S AI-IN-EDUCATION RULE-MAKING HAS MOVED FROM **GUIDANCE TO MANDATE AT THE DISTRICT LEVEL**, WITH THREE STATES REQUIRING A WRITTEN DISTRICT AI POLICY — AND APAC RETURNS A **FUNDED NATIONAL UNIVERSITY PROGRAMME** FOR THE FIRST TIME ON THIS SHELF, WHILE EMEA'S `2026` / `2027` DATE CONFLICT IS SERVED IN BOTH FORMS AND STILL CANNOT BE CLOSED FROM HERE
+
+⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-websearch`](../evidence/p251-websearch.2026-10-16-p251.tsv) *(legs `4`–`7`)* · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv). 🔴 **Every instrument below is a SECONDARY source.** `www.unesco.org` and `eur-lex.europa.eu` are refused at the proxy, re-probed this pass; `ACTION UX` was **retired** at `p250` precisely because `WebSearch` is not this base's lazy regulatory channel but its **only** one.
+
+### 🟢 `T251-M1` — North America: the richest leg for a fourth pass, and the layer that moved is the DISTRICT
+
+| instrument | what it requires | why it reaches an engagement |
+|---|---|---|
+| **Ohio `H.B. 96`** | the state education department writes a **model AI policy**, and **districts and community colleges must adopt an AI policy** | 🟢 a template plus a mandate is the strongest procurement trigger on this shelf |
+| **Oklahoma `S.B. 1734`** | every district to adopt a **written AI policy** before the `2027`–`28` school year | 🟢 a dated deadline a studio can plan against |
+| **Illinois `S.B. 1920`** | state board to publish AI guidance for districts and educators **by `2026-07-01`** | 🟡 the date has passed; the guidance's content was not served by this leg |
+| **Illinois `H.B. 4411`** · **Iowa bills** | a **full year** of computer science and AI for students entering ninth grade in `2028`–`29` *(IL)*; a semester for graduates from `2030`–`31` *(IA)* | 🟡 curriculum demand, long-dated |
+| **Nevada `A.B. 406`** | 🔴 **prohibits** a public school from using AI for the duties of a **school counsellor, psychologist or social worker** related to student mental health | 🔴 a named **capability ban** — the first on this shelf — and it kills a whole product category in one state |
+| **South Carolina `H.B. 5253`** | written **parental opt-in** before any AI instructional use | 🔴 consent plumbing, not a feature flag |
+
+🔴 **And the two largest districts moved the other way:** New York City restricted most student-facing AI across all K–8 classes, and Los Angeles announced a **one-year moratorium** on generative AI for roughly `378 000` students. 🟡 **~`100` state bills** touching students' use of AI were tracked this year, and a `2025` survey found **`60%`** of educators calling their district's policy unclear.
+
+🔵 **The reading: the binding layer in North America is neither federal nor state-curricular — it is the district AI policy**, and three states now compel one. That is a *document* obligation, and documents are where this KB's `FERPA`-shaped tooling lands *(see [`intel/trends.md`](trends.md))*.
+
+### 🟢 `T251-M2` — APAC: a funded national programme, which this shelf has never held before
+
+| instrument | detail |
+|---|---|
+| 🟢 **Korea — `18` AI-centred universities + `15` AX graduate schools**, launched **`2026-09-29`** | participating AI-centred universities must make **AI basics mandatory for all students**; `7` of `10` shortlisted schools took the AI-centred track, with up to **`24` bn won over eight years** each |
+| 🟢 **Korea — a separate `20`-university AI-literacy programme** *(Education Ministry)* | AI literacy courses for **non-engineering majors**, up to **`300` m won per institution per year for two years**, funding curriculum design and instructor capability |
+| 🟡 **China — State Council `AI+` opinions** *(August `2025`)* | integration of AI into *"all elements and the entire process of teaching and learning"*; the `101` Plan targets world-class AI courses |
+| 🔴 **Japan** | ethical AI literacy and human-centred design in a literature review — 🔴 **no ministry instrument served** |
+| 🔴 **India** | 🔴 **named in a regional white paper and nowhere else.** No UGC/AICTE instrument served |
+
+🔵 **Why Korea outranks the adoption numbers:** a mandate attached to **money and a date** is a procurement signal, and *"AI basics mandatory for all students"* at `18` universities is a curriculum-delivery contract, not a sentiment survey. 🔴 **Sources are secondary** — a ministry release would settle the `18`/`15` split and the `7`-of-`10` figure, and ministry hosts are unreachable from here.
+
+### 🟡 `T251-M3` — EMEA: the date conflict is served in BOTH forms, and that is progress of a kind
+
+| the question | what this pass's leg returned |
+|---|---|
+| when do Annex III high-risk duties bind education? | 🟡 **both candidates, in the same response set:** *"the provisions taking effect on `2 August 2026`"* **and** *"following the Omnibus political agreement of `7 May 2026`, Annex III high-risk obligations — including the education-sector list — are deferred to `2 December 2027`, pending formal adoption"* |
+| what is already in force? | 🟢 **`Article 5(1)(f)`: emotion-recognition systems are banned in educational institutions, since `2025-02-02`**, with narrow medical/safety exceptions. The leg adds the operational reading: proctoring software inferring stress from webcam data *"may be prohibited outright"* |
+| which education uses are high-risk? | 🟢 **Annex III point `3`: admission/assignment, evaluating learning outcomes, assessing the appropriate education level, and monitoring prohibited behaviour during tests** |
+| what does a public university owe? | 🟢 a **Fundamental Rights Impact Assessment** is mandatory for deployers governed by public law — which covers most public EU universities deploying an Annex III system |
+| readiness | 🔴 `80%` of institutions across six European countries lacked AI policies or did not know whether they had one *(a `2023` survey, and its age is the point)* |
+
+🔴 **Still NOT closable from here.** `p248` recorded the superseded `2026-08-02` date being re-served; `p250` narrowed it to two candidates; `p251` has the channel serving **both** with the Omnibus agreement named — and **`eur-lex.europa.eu` is still refused at the proxy**, so the adopted text cannot be read. 🟡 **The honest state is a disjunction with a named cause, not a date.** 🟢 **What does NOT depend on the date: the `Article 5(1)(f)` ban is in force now**, and it is the one EMEA instrument a studio can act on this quarter.
+
+### 🔴 `T251-M4` — LATAM: the same instrument for a THIRD pass, which is a saturation measure
+
+🔴 **Identical to `p249` and `p250`:** UNESCO IESALC — **`200`** institutions, **`19`** countries, **`87%`** using AI somewhere, **`74%`** in teaching and learning, 🔴 **`26%`** with a formal strategy. 🟡 Plus the regulatory overview: **Chile** leads with a national AI policy since `2021` and a bill under discussion; **Brazil** and **Colombia** have national strategies with **no education-sector rules**; **Mexico** has growing university use and **no binding national law**, with SEP/ANUIES recommendations that *"lack binding force"*.
+
+🔴 **The regional negative holds for a FOURTH pass: `0` binding country-level AI-in-education statutes surfaced for LATAM.** 🔵 **Three passes returning one census is information about the CHANNEL, not about the region** — and the census's field window closed in **October `2025`**, so the `87%`/`26%` gap is a year old and has been published as such since `p249`.
+
+### 🔵 `T251-M5` — the market numbers, published as a range because the sources disagree by an order of magnitude
+
+| source class | AI-in-education | total edtech |
+|---|---|---|
+| one forecaster | `USD 6.4 B` *(`2025`)* → **`USD 79.6 B` by `2034`** | — |
+| another | `USD 8.3 B` *(`2025`)* → **`USD 32.3 B` by `2030`** | — |
+| market reports | — | ~`USD 189 B` *(`2025`)* → ~`USD 215 B` *(`2026`)*; elsewhere ~`USD 200 B` at `18.7%` CAGR |
+| 🔴 the counter-signal | — | 🔴 **EdTech venture capital ~`USD 2.4 B` in `2024`, ≈`89%` below the `2021` peak** |
+
+🔴 **A `2034` figure `2.5×` another firm's `2030` figure is not a forecast, it is a methodology difference**, and this shelf publishes both with their sources rather than picking one. 🟡 **The number that matters for a studio is the third row's shape:** the money is in **consolidation and integration**, not in new platform spend — which is consistent with every engagement-shaped signal above being a *policy* or *interop* obligation.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The district AI policy is the engagement.** Ohio, Oklahoma and Illinois now compel districts to adopt one, and `60%` of educators say their current policy is unclear. A studio can deliver the **policy-to-control pipeline**: the written policy, the data-flow inventory behind it, and the enforcement hooks that make it auditable — `FERPA`-defined PII detection *(`MIT`, see [`agents/top.md`](../agents/top.md))*, consent capture for South Carolina's opt-in shape, and a capability register that can express Nevada's **counsellor/psychologist ban** as a hard block rather than a guideline. 🔴 **The two largest districts are restricting, so the sellable thing this year is ASSURANCE, not deployment.** The amended **COPPA** rule *(compliance date `2026-04-22`, `p250`)* binds the vendor side, which means a studio's own deliverable is in scope.
+
+### EMEA
+
+🟢 **Act on the ban that is already in force, not on the date that is not.** `Article 5(1)(f)` has prohibited emotion recognition in educational institutions since `2025-02-02`, and the operational consequence named by this pass's leg is **proctoring**: any affect or stress inference from a webcam is a prohibited practice, not a high-risk one. An audit of a client's existing proctoring stack against that line is deliverable **today** and does not depend on whether Annex III binds in `2026` or `2027`. 🟢 Behind it: the **FRIA** for public universities, which is a documentation-and-evidence product. 🔴 **`80%` of institutions in a six-country survey had no AI policy**, so the capacity to produce the FRIA is the gap.
+
+### APAC
+
+🟢 **Korea is the first APAC opportunity on this shelf with money, a date and a mandate attached:** `18` AI-centred universities must make AI basics **mandatory for all students**, and a separate programme funds AI literacy for **non-engineering majors** at `20` institutions. That is curriculum engineering plus delivery platform plus assessment at national scale, and the `2026-09-29` launch means the build year is **now**. 🟡 China's `AI+` opinions point the same way through a state channel. 🔴 **Japan and India returned no instrument this pass** — an informed gap, not coverage: the legs that would close it are MEXT guidance and UGC/AICTE circulars, and neither host is reachable from this session.
+
+### LATAM
+
+🟢 **The `61`-point governance gap is still the engagement** — `87%` of institutions use AI, `26%` have a strategy — and it is the only census-backed number on this shelf. 🟡 Chile is the one jurisdiction with a national policy since `2021` and a bill in progress, so a Chilean engagement can be framed against a real instrument; Brazil, Colombia and Mexico need the **institutional** frame instead, because their national strategies say nothing sector-specific and Mexico's SEP/ANUIES guidance is explicitly non-binding. 🔴 **Fourth pass with `0` binding country-level statutes** — which makes the deliverable an institutional AI policy and its evidence trail, the same product North America buys under legal compulsion.
+
+### Global
+
+🟡 **The platform layer is copyleft and the plumbing is permissive** *(`p251` re-read `frappe/lms` as `AGPL-3.0` and `OpenEduCat` as `LGPL-3.0`, first-hand)*, so the sellable artefact is the **integration and the agent**, not the platform fork. 🔴 **And the market's own money signal is consolidation** — edtech VC ~`89%` below peak — so the engagement that closes is the one that makes an existing stack compliant and interoperable, not the one that proposes a new platform.
+
 ## Pass 250 — 2026-10-16 — THE FIRST **FEDERAL, VENDOR-FACING** INSTRUMENT EVER TO REACH THIS SHELF, AND IT IS ALREADY IN FORCE: THE AMENDED **COPPA** RULE, COMPLIANCE DATE **`22 APR 2026`**, WHICH BINDS **EDTECH VENDORS** RATHER THAN SCHOOLS — WHILE APAC'S VIETNAM DATE CONFLICT **CLOSES** AND TURNS OUT NEVER TO HAVE BEEN ONE
 
 ⏱️ **NINETEENTH pass of `2026-10-16`.** 🔵 All `8` mandated legs run verbatim with the year **computed** (`2026`): [`p250-websearch`](../evidence/p250-websearch.2026-10-16-p250.tsv).

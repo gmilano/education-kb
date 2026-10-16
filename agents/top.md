@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 251 — 2026-10-16 — `ACTION XM` AND `XN` BOTH DISCHARGED, AND `XM` FOUND THE SAME DEFECT CLASS AS `p250` IN **FIVE MORE CONTROLS**: A `unittest.main()` SUITE EXITS `0` WHEN IT COLLECTS **ZERO** TESTS — AND THE GATE DISCARDS `stderr` ON EXACTLY THOSE FIVE LINES AND NOWHERE ELSE
+
+⏱️ **TWENTIETH pass of `2026-10-16`.** `p232`–`p250` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`ACTION XM` DISCHARGED with the full audit published: `26` commands in `gate-offline`, `26` failure-capable at the recipe layer, `21` signalling failure explicitly, `5` running through `unittest.main()` — now floor-pinned.** 🟢 **`ACTION XN` DISCHARGED, and its own prescription is REFUTED by measurement: the LINE scope it asked for does not trip its own falsifier.** 🟢 **Two instruments, `54` controls between them, both wired into `make hooks`.** 🔴 **`0` new agent rows, `2` candidates WITHHELD on their payloads.** 🔴 **The `WebSearch` row channel is dry for the THIRTEENTH pass in fourteen.** 🔴 **`ACTION XI` re-measured and still live after THREE passes of silent carry.** 🔴 **NEW channel fact: `make hooks` itself is not runnable from this session.**
+
+🔵 **Evidence:** [`p251-gate-exit-audit`](../evidence/p251-gate-exit-audit.2026-10-16-p251.tsv) *(`26` commands)* · [`p251-gate-measured`](../evidence/p251-gate-measured.2026-10-16-p251.tsv) *(`26` suites invoked individually)* · [`p251-prefix-collisions`](../evidence/p251-prefix-collisions.2026-10-16-p251.tsv) *(`235` pairs)* · [`p251-withheld`](../evidence/p251-withheld.2026-10-16-p251.tsv) *(`2`)* · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv) · [`p251-websearch`](../evidence/p251-websearch.2026-10-16-p251.tsv) *(`7` legs)* · [`p251-queries`](../evidence/p251-queries.2026-10-16-p251.tsv) · **instruments:** [`p251-gate-exit-reach`](../compose/code/p251-gate-exit-reach/) *(`34`)* · [`p251-prefix-collision`](../compose/code/p251-prefix-collision/) *(`20`)*
+
+### 🔴 `T251-A` — `ACTION XM`: the gate's controls, and the five that can pass while asserting nothing
+
+`p250` found `lazy_lint.py` printing two real findings on every run and returning `0` unconditionally. `XM` asked how many of the gate's controls can **actually** fail. Two layers have to agree, and they were audited separately.
+
+| layer | what breaks it | measured |
+|---|---|---|
+| **1 — the recipe line** | `\|\| true`, `\|\| :`, a trailing `; exit 0`, a leading `-`, or a pipeline whose last stage is a reader — this gate sets no `pipefail` | 🟢 **`26` of `26` failure-capable.** `@set -e` plus `&&` is the whole reason, and it is load-bearing |
+| **2 — the suite** | a suite that prints `FAIL` and exits `0` | 🟡 **`21` of `26` exit explicitly. `5` run `unittest.main()`** |
+
+🔴 **And `unittest.main()` has a silent-zero mode, measured here as subprocesses rather than read off the documentation:**
+
+| suite shape | exit code |
+|---|---|
+| `unittest.main()`, **zero** tests collected | 🔴 **`0`** |
+| `unittest.main()`, every test `@skip`ped | 🔴 **`0`** |
+| `unittest.main()`, one real failure | 🟢 `1` |
+
+> 🔴 **The correlation is exact and it is the finding: the `5` suites with a silent-zero mode are the `5` recipe lines — the only `5` of `26` — whose `stderr` the gate throws away with `2>&1`.** `unittest` writes `Ran 0 tests` to `stderr`. The gate suppresses the one channel on which the mode is visible, on precisely the controls where it can happen. `both=5, stderr-only=0, silent-zero-only=0, neither=21`.
+
+🟢 **Fixed by a FLOOR per suite** — `32` (`p222`), `36` (`p228`), `14` (`p1054`), `23` (`p242`), `29` (`p1058`) — pinned from the run-time counts, which the static `def test_*` count reproduces exactly on all five. A rename, a dropped class or a mass skip now fails `make hooks` instead of printing nothing.
+
+🔵 **And the instrument caught the same class of defect in ITSELF, twice, before it was published:** its classifier read the words *"deliberately NOT a `unittest.main()` suite"* in its own docstring as a call, then read a `unittest.main()` source passed as a **string literal** as a call. Stripping prose fixed the first; stripping literals fixed the second and **broke the shell suites**, because `[ "$fail" -eq 0 ]` — the exit expression of five suites here — is mostly quoted. Hence a `lang` parameter, with the regression kept as a control.
+
+### 🔴 `T251-B` — `ACTION XN`: the rule works, but not at the scope `XN` prescribed
+
+`XN` asked for *"a harvested slug that is a strict prefix of another slug **on the same line**"*, with the falsifier *"falsified if the rule does not trip on `TouchRefletz/maia` vs `TouchRefletz/maia.edu`"*.
+
+🔴 **Those two requirements contradict each other, and the shelf text is the proof: the real row is [`agents/top.md:44`](top.md) and the stump is line `45`.** One address per table row, so **no line holds both**, and the line-scope rule returns nothing on its own canonical instance.
+
+🟢 **So the scopes invert.** The **file** detects; the **line** *exempts*, because a pass that documents a truncation writes both forms on one line — as `p250` did. Measured over the eight shelves:
+
+| verdict | pairs | what it is |
+|---|---|---|
+| `WARN` | `145` | `-`/`_`/alnum continuation — `moodle/moodle` vs `moodle/moodle-docker` are ordinarily two real repositories |
+| `DOCUMENTED` | `47` | every occurrence of the stump shares a line with a longer form |
+| `IGNORED-PATH-FRAGMENT` | `37` | a **branch** in the owner slot: `main/LICENSE` vs `main/LICENSE.md` is a raw-URL path, not a slug |
+| 🟡 `REFUSE-ANNOTATED` | `6` | a bare stump on a line that says so in words (*"the stump"*, *"harvests to"*) |
+| 🟢 `REFUSE` | **`0`** | an unannotated bare stump — the only state the gate fails on |
+
+🟢 **`0` hard refusals: these shelves carry no LIVE dot-truncation of the `maia` class today.** 🔵 The `6` annotated ones are `p250`'s warning row *(twice)* and `p247`'s many-to-one collapse note *(four `UOC/java-lti-1.3*` repositories against one stump)* — the documentation of the defect, not the defect.
+
+🔴 **One false positive had to be taught out, and it is a measurement worth keeping:** `"github.com/JushBJJ/Mr" in text` is **`True`** on these shelves — because the long address `github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor` *contains* the stump. A naive URL-publication test calls every stump "published". The terminator lookahead is the fix and the naive form stays in the suite as a control.
+
+### 🔴 `T251-C` — the supply channel: `0` agent rows, and both new candidates WITHHELD on their payloads
+
+`7` `WebSearch` legs ran *(3 global, 4 regional)* and returned **`0`** education-agent repositories. `2` slugs were new to this base, and both went to the payload channel:
+
+| slug | branch · HEAD | probed | result | what it is |
+|---|---|---|---|---|
+| [`towardsai/ai-tutor-rag-system`](https://github.com/towardsai/ai-tutor-rag-system) | `main` · `89776d8511f6` | `6` Tier-A licence paths + `4` manifests | 🔴 **`404` on all `10`** | Jupyter notebooks for a RAG course — retrieval, fine-tuning, Colab links. 🟡 **a CURRICULUM, not an agent** |
+| [`towardsai/agent-course-notebooks`](https://github.com/towardsai/agent-course-notebooks) | `main` · `895fd7375b42` | same `10` | 🔴 **`404` on all `10`** | notebooks for an agentic-AI course — web search setup, `ReAct` loops. 🟡 **a CURRICULUM, not an agent** |
+
+🔴 **Both WITHHELD as `NO-GRANT-AT-TIER-A+MANIFEST (10 paths)`, never as "unlicensed"** (`p222`: an absence is always absence-at-the-paths-probed). Neither README contains the word *licence* in any form. 🔵 **`ACTION UC` holds for the tenth consecutive pass:** the mandated global query *"top open source AI agents education 2026 github MIT"* returns general-purpose frameworks and **course material**, and the course material does not grant anything.
+
+### 🔴 `T251-D` — `ACTION XI`, re-measured: a highest-priority ACTION carried silently for three passes, and the defect is still in the gate
+
+`p248` registered `XI` as its **highest priority**. `p249` and `p250` did not run it and did not say so. Measured again this pass, on `p207`'s own fixture:
+
+```
+p1054.classify(commons-clause-mit.txt) -> {'verdict': 'MIT', 'bytes': 621, 'mit_body': True, 'hits': [], 'excess': 0}
+p1054.is_usable_permissive(...)        -> True
+```
+
+🔴 **`p1054-mit-plus-clause` is in `make hooks`, it exists specifically to catch an added restriction on a permissive grant, and it still answers `usable_permissive: True` on the canonical Commons Clause body** — *"the License does not grant to you, the right to Sell the Software"*. 🔵 Its own numbers say why: `MIT_CANONICAL_LOW = 1020`, the payload is `621` B, so a byte-**excess** test is structurally blind to a rider that makes the file **shorter** than canonical MIT.
+
+### 🔵 `T251-E` — what this pass does NOT claim
+
+🔴 **No star count, no last-push date, no archived flag.** `api.github.com` answers `403` for every slug not attached to this session — re-probed this pass and identical to `p250`. 🔴 **No absence of supply** (`ACTION UK`): the `topic:` harvest did not run because it **cannot** *(`403`)*, and `github.com/trending` is `403` for the fourteenth pass. 🔴 **And a new one: `make hooks` as a whole did not run.** This session's sandbox refuses to execute the repository's `make` recipe, so every one of the `26` controls was invoked **individually** and its exit code recorded — `0` non-zero, and `1 152` controls reported across the `24` suites that print a count (`p229` prints `ALL CONTROLS PASS` without one, and the lint prints findings). 🟡 **The audit is therefore static plus per-suite measurement, not a gate run**, and that is the honest shape of the claim.
+
+### 🔴 `T251-F` — ACTIONs registered by this pass
+
+| id | what it asks | falsifier |
+|---|---|---|
+| **`XQ`** *(highest priority)* | **Run `ACTION XI`.** It has now been registered for four passes, the defect is reproduced above, and it sits inside a standing control. Teach `p1054` the two rider anchors AND give its length test a `SHORTER-THAN-CANONICAL` state, with `is_usable_permissive` proven to REFUSE on that state before it is emitted. | *falsified if a pass publishes the change without re-running the `354`-fixture sweep and the `183`-payload re-grade, or if `usable_permissive` is still `True` on `p207/fixtures/commons-clause-mit.txt`* |
+| **`XR`** | **Floor the `unittest` suites OUTSIDE the gate.** `p251` pinned the five inside it; `344` instruments exist here and `23` are referenced by the `Makefile`, so **`321` are unfloored and ungated** — the `ACTION VW` population, now counted. | *falsified if a pass reports the count without naming which of the `321` carry a `unittest.main()` suite* |
+| ~~**`XS`**~~ | 🟢 **DISCHARGED IN THE SAME PASS, because registering it would have repeated the defect it describes.** `p251` could not run `make hooks`, so the per-suite loop that replaced it is now [`run_controls.sh`](../compose/code/p251-gate-exit-reach/run_controls.sh) — it reads the control list out of the `Makefile` through `audit.py`, so it cannot drift from the gate it stands in for, and it exits non-zero if any control fails. 🟢 **Proven to FAIL, not assumed to: a throwaway root with one deliberately failing suite returns `1`** *(a control in `test_gate_exit_reach.py`, `34`/`34`)*. 🔵 Leaving this as an ACTION would have been `p248`'s and `p250`'s failure mode exactly — knowledge this base owns and does not wire | — |
+
 ## Pass 250 — 2026-10-16 — `ACTION XJ` DISCHARGED, AND THE COMPONENT IT ASKED FOR IS **NOT A REGEX**: THIS KB WROTE A LINT FOR THIS EXACT DEFECT, WIRED IT INTO `make hooks`, AND HARDCODED `return 0` — SO IT REPORTED BOTH OFFENDING LINES ON EVERY PASS AND PRINTED **`ALL OFFLINE LICENCE CONTROLS PASS`** UNDERNEATH ITSELF. THE SWEEP RECOVERS **`30`** SLUGS, NOT `6`
 
 ⏱️ **NINETEENTH pass of `2026-10-16`.** `p232`–`p249` all carry this date.

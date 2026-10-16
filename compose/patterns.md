@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 251 — 2026-10-16 — THE RECIPE THIS PASS EARNED IS A **DISTRICT AI POLICY TURNED INTO ENFORCEABLE CONTROLS**, BECAUSE THREE STATES NOW COMPEL THE DOCUMENT AND NOTHING COMPELS IT TO BE TRUE — PLUS A SECOND RECIPE THIS PASS BUILT AND RAN ON ITSELF: A GATE WHOSE CONTROLS ARE **PROVEN ABLE TO FAIL**
+
+⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-gate-exit-audit`](../evidence/p251-gate-exit-audit.2026-10-16-p251.tsv) · [`p251-gate-measured`](../evidence/p251-gate-measured.2026-10-16-p251.tsv) · [`p251-websearch`](../evidence/p251-websearch.2026-10-16-p251.tsv) *(leg `4`)* · **instruments:** [`p251-gate-exit-reach`](../compose/code/p251-gate-exit-reach/) · [`p251-prefix-collision`](../compose/code/p251-prefix-collision/)
+
+### 🟢 `P251-1` — "policy to control": the district AI policy as an auditable system *(North America, `6`–`8` weeks)*
+
+**The trigger is statutory, not aspirational.** Ohio `H.B. 96` requires districts to adopt an AI policy *(with a state model to adopt against)*; Oklahoma `S.B. 1734` sets a `2027`–`28` deadline; Illinois `S.B. 1920` puts state guidance behind it; Nevada `A.B. 406` **prohibits** AI performing school counsellor, psychologist or social-worker duties; South Carolina `H.B. 5253` would require **parental opt-in**. 🔴 **A policy document satisfies the statute and protects nobody.** The deliverable is the document *plus* the three controls that make it checkable.
+
+| layer | what to use | licence *(first-hand on these shelves)* | wiring |
+|---|---|---|---|
+| PII boundary | [`gener8v/gener8v.tools.pii-scanner`](https://github.com/gener8v/gener8v.tools.pii-scanner) | 🟢 **`MIT`** *(`1 064` B, read at `p250`)* | its README states detection *"follows the **FERPA** definition of personally identifiable information rather than counting regex hits"* and is *"stateless by construction"*: run it as an **inference-time hook** in front of any model call, so the policy's "no student PII leaves the district" clause becomes a measurable reject rate. 🟡 Its upstream hook API is self-marked **beta** |
+| capability register | a policy-as-data table in the client's own store | — | one row per AI use the policy names, each with `ALLOWED` / `PROHIBITED` / `CONSENT-REQUIRED`. 🔴 **Nevada's clause is the test of the design: counselling-adjacent inference must be expressible as a hard block**, not a warning, and South Carolina's opt-in must be a precondition the call site cannot skip |
+| roster + identity | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) *(`MIT`)* · [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) *(`MIT`, `1 066` B)* | 🟢 **`MIT`** | `LTI 1.3` launch gives you the authenticated role *(student / teacher / admin)*, and the capability register keys on it. 🔵 **The naming rule from [`repos/foundations.md`](../repos/foundations.md) applies: search the VERSION-suffixed name** |
+| platform | Moodle · Open edX · [`frappe/lms`](https://github.com/frappe/lms) | 🟡 **copyleft** — `frappe/lms` re-read this pass as **`AGPL-3.0`** *(`license.txt`, `33 893` B, branch `develop`)* | the platform stays the platform. 🔴 **Do not fork it into the deliverable**; integrate over `LTI 1.3` and keep the studio's code in the `MIT` layer |
+| evidence | the audit log the two controls above emit | — | this is what a district hands a parent or a board. The COPPA amendment *(compliance date `2026-04-22`)* binds the **vendor**, so the studio's own deliverable is in scope and needs the same trail |
+
+🔵 **Why it closes:** `60%` of educators in a `2025` survey called their district's policy unclear, and the two largest US districts answered the ambiguity with restriction and a moratorium. 🟢 **The sellable thing in that climate is assurance**, and assurance is the audit log.
+
+### 🟢 `P251-2` — "proctoring under a prohibition": an EMEA audit that needs no date resolution *(`3`–`4` weeks)*
+
+🔴 **Do not sell an Annex III readiness programme this quarter.** The high-risk date is a live disjunction — `2026-08-02` or `2027-12-02` *(Omnibus, pending formal adoption)* — and [`intel/market.md`](../intel/market.md) records that it **cannot be closed from this session**. 🟢 **Sell the thing already in force:** `Article 5(1)(f)` has banned **emotion recognition in educational institutions since `2025-02-02`**, and this pass's leg supplies the operational reading — webcam-derived stress or affect inference in proctoring *"may be prohibited outright"*.
+
+| step | how |
+|---|---|
+| 1 — inventory | enumerate every signal the client's proctoring stack derives from camera, microphone or keystroke timing |
+| 2 — classify | split **identity/integrity** signals *(face match, window focus, second-device detection)* from **affect** signals *(stress, confusion, attention, gaze-as-emotion)*. 🔴 The second class is the prohibited one, and it is usually a vendor feature flag nobody turned off |
+| 3 — the FRIA | public universities are deployers *"governed by public law"* and owe a **Fundamental Rights Impact Assessment**; the inventory from step `1` is most of its evidence base |
+| 4 — the replacement | integrity signals that are not affect inference, delivered over `LTI 1.3` so the exam platform stays untouched |
+
+🔵 **`80%` of institutions in a six-country survey had no AI policy or did not know whether they had one** — so step `3`'s real blocker is capacity, which is the billable part.
+
+### 🟢 `P251-3` — "a gate that can fail": the recipe this pass ran on itself
+
+🔴 **Every KB, client-facing or internal, eventually grows a check that cannot fail.** `p250` found one *(a lint with `return 0` hardcoded, reporting two real findings on every run)*; `p251` found `5` more of a different shape. The recipe is four moves, and all four are in this repository now:
+
+| move | instrument | what it catches |
+|---|---|---|
+| 1 — audit the **recipe layer** | [`p251-gate-exit-reach/audit.py`](../compose/code/p251-gate-exit-reach/audit.py) | `\|\| true`, `\|\| :`, a trailing `; exit 0`, a leading `-`, and a pipeline whose last stage is a reader *(no `pipefail`)*. 🟢 `26` of `26` clean here — `set -e` plus `&&` is doing real work |
+| 2 — audit the **suite layer** | the same instrument's `suite_signal` | a suite that prints `FAIL` and exits `0`. 🔴 **`unittest.main()` exits `0` on ZERO collected tests and on all-skipped — measured, not assumed** |
+| 3 — **floor** every count | `FLOORS` in [`gate_reach.py`](../compose/code/p251-gate-exit-reach/gate_reach.py) | a rename off `test_`, a dropped class, a mass `@skip`. Five numbers *(`32`/`36`/`14`/`23`/`29`)* make five silent controls loud |
+| 4 — make the gate **runnable where `make` is not** | [`run_controls.sh`](../compose/code/p251-gate-exit-reach/run_controls.sh) | it reads the control list out of the `Makefile` through `audit.py`, so it cannot drift, and 🟢 **it is proven to return `1` on a throwaway root with one deliberately failing suite** |
+
+🔵 **Transferable as-is to a client engagement:** the four moves assume nothing about education, only that a repository has a standing check somebody trusts. 🔴 **And the honest caveat belongs in the recipe:** `p251` could not run `make hooks` at all — this session's sandbox refuses the repository's `make` recipe — which is exactly why move `4` exists and why its absence cost three passes of unnoticed silence.
+
+### 🔴 Withheld from every recipe above, deliberately
+
+🔴 [`towardsai/ai-tutor-rag-system`](https://github.com/towardsai/ai-tutor-rag-system) and [`towardsai/agent-course-notebooks`](https://github.com/towardsai/agent-course-notebooks) — this pass's only two new candidates. **No grant at `10` probed paths each** *(`6` Tier-A licence paths + `4` manifests)*, and no licence word in either README. 🔵 They are good *reading*; they cannot be vendored, forked commercially or shipped inside a client deliverable. 🔴 Also withheld: the **OpenEduCat "AI LMS"** module, whose tutoring/autograding/plagiarism capability is a **vendor product-page claim** this pass could not establish from the open repository *(`LGPL-3.0`, read first-hand)*.
+
 ## Pass 250 — 2026-10-16 — THE PATTERN THIS PASS EARNED IS A **LICENCE PRE-FLIGHT THAT RUNS BEFORE THE ARCHITECTURE DIAGRAM**, BECAUSE `3` OF THIS PASS'S `4` HEADLINE REPOSITORIES WOULD HAVE FAILED IT: AN UNLICENSED TUTOR, A MIS-REPORTED `EPL-2.0`, AND `6` CONNECTORS THAT DECLARE `MIT` AND SHIP NO LICENCE FILE
 
 🔵 **Every repo named below had its grant read first-hand this pass**, at a pinned path with a byte count: [`p250-slug-repair-sweep`](../evidence/p250-slug-repair-sweep.2026-10-16-p250.tsv) · [`p250-xk-tier-bc`](../evidence/p250-xk-tier-bc.2026-10-16-p250.tsv) · [`p250-channel-refutations`](../evidence/p250-channel-refutations.2026-10-16-p250.tsv).

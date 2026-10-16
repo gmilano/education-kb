@@ -1,0 +1,27 @@
+instrument	suite	runner	exit_code	reported_total
+lib	test_license_family.sh	bash	0	238/238
+lib	test_licence_path.sh	bash	0	33/33
+p222-ecosystem-bound-grammar	test_bound_grammar.py	python3	0	Ran 32 tests
+p228-shelf-gate	test_shelf_gate.py	python3	0	Ran 36 tests
+p229-grant-ladder-reach	test_grant_ladder_reach.py	python3	0	ALL CONTROLS PASS
+p230-prose-path-ladder	test_prose_path_ladder.py	python3	0	33/33
+p233-maven-channel	test_classify_response.py	python3	0	19/19
+p237-grant-payload-shapes	test_payload_shapes.sh	bash	0	9/9
+p235-carried-index	test_carried_index.py	python3	0	23 controls
+p238-lure-signature	test_lure_signature.py	python3	0	66/66
+p239-query-shape	test_query_shape.py	python3	0	70/70
+p240-grant-language	test_grant_language.py	python3	0	29/29
+p1054-mit-plus-clause	test_mit_plus.py	python3	0	Ran 14 tests
+p241-blanket-denial	test_blanket_denial.py	python3	0	104/104
+p242-grant-delta	test_grant_delta.py	python3	0	Ran 23 tests
+p1058-empty-payload-gate	test_empty_payload_gate.py	python3	0	Ran 29 tests
+p244-absence-states	test_absence_states.py	python3	0	61/61
+p245-apache-canonical	test_apache_canonical.py	python3	0	25 controls
+p246-payload-integrity	test_payload_integrity.py	python3	0	60/60
+p247-keyed-grant	test_keyed_grant.py	python3	0	86/86
+p247-path-class	test_path_class.sh	bash	0	59/59
+p248-named-proprietary	test_named_proprietary.sh	bash	0	38/38
+p207-permissive-half-audit	test_classify.sh	bash	0	12/12
+p251-gate-exit-reach	test_gate_exit_reach.py	python3	0	34/34
+p251-prefix-collision	test_prefix_collision.py	python3	0	20/20
+p230-prose-path-ladder	lazy_lint.py	python3	0	NA

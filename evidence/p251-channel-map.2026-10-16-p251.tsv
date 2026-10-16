@@ -1,0 +1,10 @@
+channel	probe	result	what it means for this pass
+api.github.com (repo metadata)	GET /repos/towardsai/ai-tutor-rag-system	403	stars, last-push and archived flags remain UNMEASURABLE from this session; p250's measurement replicates exactly
+api.github.com (search)	GET /search/repositories?q=topic:education+ai	403	the topic: harvest cannot run; any absence-of-supply claim stays unestablishable (ACTION UK)
+github.com/trending	GET /trending	403	the trending channel is shut for the fourteenth pass; repos/trending.md publishes no trending result
+raw.githubusercontent.com	GET /towardsai/ai-tutor-rag-system/main/README.md	200	the payload channel is the ONLY live supply channel, as p250 concluded
+pypi.org	GET /simple/	200	the allowlist carries code-supply hosts
+www.unesco.org	GET /	connection rejected	regulator and institutional hosts stay refused; WebSearch is the only regulatory instrument (ACTION UX, retired)
+eur-lex.europa.eu	GET /	connection rejected	the EU AI Act deferral cannot be read first-hand from here
+git ls-remote (github.com)	--symref HEAD on 2 slugs	200, both resolved	existence and default branch ARE measurable; both candidates resolve to `main`
+make hooks (the standing gate)	make hooks	REFUSED by this session's sandbox	NEW channel fact: the gate as a whole did not run this pass. Every suite was invoked individually instead and its exit code recorded

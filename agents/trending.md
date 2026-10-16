@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 251 — WHAT MOVED THIS WEEK: **NOTHING IN SUPPLY, AND TWO MORE COURSE REPOSITORIES THAT GRANT NOTHING.** WHAT MOVED IN THE GATE: `5` CONTROLS THAT COULD HAVE PASSED WHILE ASSERTING **ZERO** TESTS NOW CANNOT
+
+⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-websearch`](../evidence/p251-websearch.2026-10-16-p251.tsv) *(`7` legs)* · [`p251-withheld`](../evidence/p251-withheld.2026-10-16-p251.tsv) *(`2`)* · [`p251-queries`](../evidence/p251-queries.2026-10-16-p251.tsv) · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv)
+
+### 🔴 The row channel, thirteenth dry pass in fourteen — and this pass can say what each leg DID pay
+
+| leg | scope | education agents returned | what it paid instead |
+|---|---|---|---|
+| 1 | Global | 🔴 **`0`** | `LangGraph`, `CrewAI`, `smolagents`, `Dify`, `Langflow` — general-purpose frameworks — plus [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners), carried since `p244`. One roundup's own caveat is the useful part: *"some are true MIT or Apache-2.0; others are source-available with commercial conditions"* |
+| 2 | Global | 🔴 **`0`** | `HKUDS/DeepTutor` *(carried since `p158`; the leg could not state its licence)* and **two new `towardsai` course repositories** |
+| 3 | Global | 🔴 **`0`** | market numbers that disagree by an order of magnitude — see [`intel/market.md`](../intel/market.md) |
+| 4–7 | NA · EMEA · APAC · LATAM | 🔴 **`0` each** | regulation and census material in three of four regions. 🔵 **The property holds for a fourteenth pass: `WebSearch` pays in regulation and never in rows** |
+
+### 🔴 The two new slugs, and both are WITHHELD on their own payloads
+
+| slug | branch · HEAD | probe | verdict |
+|---|---|---|---|
+| [`towardsai/ai-tutor-rag-system`](https://github.com/towardsai/ai-tutor-rag-system) | `main` · `89776d8511f6` | `6` Tier-A licence paths + `4` manifests | 🔴 **`404` on all `10`** → `NO-GRANT-AT-TIER-A+MANIFEST` |
+| [`towardsai/agent-course-notebooks`](https://github.com/towardsai/agent-course-notebooks) | `main` · `895fd7375b42` | same `10` | 🔴 **`404` on all `10`** → `NO-GRANT-AT-TIER-A+MANIFEST` |
+
+🟡 **And both are course material, not agents** — notebooks for a RAG course and for an agentic-AI course. 🔵 `ACTION UC`, tenth consecutive pass: **the mandated agent query returns curricula.** A curriculum with no grant is the weakest possible result from a supply leg, and it is what the channel returned.
+
+### 🟢 What actually moved: the gate
+
+🟢 **Two instruments landed, `54` controls between them, both inside `make hooks`:** [`p251-gate-exit-reach`](../compose/code/p251-gate-exit-reach/) *(`34`, `ACTION XM`)* and [`p251-prefix-collision`](../compose/code/p251-prefix-collision/) *(`20`, `ACTION XN`)*.
+
+🔴 **The finding a trending shelf should carry, because it is about this base's own supply of truth rather than the market's:** `5` of the gate's `26` controls run through `unittest.main()`, which **exits `0` when it collects zero tests** — measured, not read — and those same `5` are the only `5` recipe lines whose `stderr` the gate discards. A rename off the `test_` prefix would have left five controls green and silent. 🟢 **Floors now pin all five** at `32`/`36`/`14`/`23`/`29`.
+
+### 🔴 Channels, re-probed this pass and unchanged
+
+`api.github.com` **`403`** *(repo metadata and search alike)* · `github.com/trending` **`403`**, fourteenth pass · `raw.githubusercontent.com` **`200`** · `pypi.org` **`200`** · `www.unesco.org` and `eur-lex.europa.eu` **connection refused at the proxy** · 🔴 **and new this pass: `make hooks` itself is refused by this session's sandbox**, so the `26` controls were invoked one by one *(`0` non-zero, `1 152` controls reported)*.
+
 ## 2026-10-16 — Pass 250 — THE ROW CHANNEL IS DRY FOR THE **TWELFTH PASS IN THIRTEEN**, AND THIS PASS CAN FINALLY SAY WHY IT WILL STAY DRY: THE `topic:` HARVEST IS `403` AND THE REGULATOR HOSTS ARE **REFUSED AT THE PROXY** — SO THE ONLY LIVE SUPPLY CHANNEL HERE IS THE **PAYLOAD** ONE, AND IT PAID `30` SLUGS THIS PASS
 
 🔵 **`8` mandated legs run verbatim, year computed (`2026`):** [`p250-websearch`](../evidence/p250-websearch.2026-10-16-p250.tsv).
