@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 237 — 2026-10-16 — THE SUPPLY/DEMAND MAP THIS SHELF PUBLISHED LAST PASS IS **WRONG ON APAC**, AND IT WAS WRONG BECAUSE EVERY SUPPLY FIGURE ON IT WAS MEASURED IN ENGLISH
+
+🔴 **The line this shelf carried — *"APAC has the sharpest new regulation and almost no supply"* — is withdrawn.** 🟢 **APAC supply, measured this pass on a licence-filtered REST channel in Japanese, Korean and Chinese: `19` live, granted, first-hand-verified repositories, `9` of them education AI agents.** 🔵 **The regional supply column was never a measurement of the field. It was a measurement of this KB's query language.**
+
+🔵 **Evidence:** [`p237-verified-rows`](../evidence/p237-verified-rows.2026-10-16-p237.tsv) · [`p237-rest-licence-channel`](../evidence/p237-rest-licence-channel.2026-10-16-p237.tsv)
+
+### 🔴 `M237-1` — the correction, stated as a table so the size of the error is visible
+
+| region | supply as this shelf published it | supply measured at p237 | what changed |
+|---|---|---|---|
+| **North America** | 🟢 *"most mature standards estate"* — Ed-Fi, LTI, QTI | 🟢 **`8` granted rows**, `3` of them already carried | 🟢 **confirmed, and the method is new**: `FERPA`/`COPPA`/`OneRoster` bindings place a repository in US jurisdiction without a region word |
+| **EMEA** | 🟢 *"strictest regulation and the best permissive supply"* | 🟢 **`4` granted rows**, incl. a Deutsche Telekom repo and the NRW `Zeugnisse` engine | 🟢 **confirmed and deepened** |
+| **APAC** | 🔴 *"sharpest new regulation and almost no supply"* | 🔴 **`19` granted rows** — the largest regional block in this pass | 🔴 **FALSIFIED** |
+| **LATAM** | 🟡 *"highest adoption and the lowest supply"* *(partly corrected at p235)* | 🟡 **`4` granted rows**, incl. the first LATAM **assessment** agent | 🟡 **the asymmetry survives; its supply side is smaller than APAC's, not absent** |
+
+🔵 **The demand side of that map is unaffected** — it came from survey and policy sources, which web search reads well. 🟡 **`ACTION US`'s division of labour is now evidenced on this shelf: web search for regulation, market figures and adoption; REST for supply. Never the reverse.**
+
+### 🟡 `M237-2` — demand and regulation this pass, with the sourcing quality on each row
+
+| region | adoption | regulation | source quality |
+|---|---|---|---|
+| **North America** | 🟡 NA reported at **`36`% share** of a global market whose 2026 base ranges `$10.6B`–`$11.4B` across this pass's sources; **only `10`% of institutions have formal AI guidelines** and **`71`% of US teachers report no AI training** | 🟡 **No education-specific federal instrument.** Adoption decisions sit with districts and institutions; **Colorado** and **Texas** named as adding piecemeal state requirements | 🔴 **aggregator blogs and vendor roundups.** 🟡 Consistent with the `134`-bills/`31`-states figure this shelf already carries from a better source, so it is corroboration, not new evidence |
+| **EMEA** | 🟡 **`94`% of organisations at least somewhat likely to invest in AI-specific training in 2026** *(CompTIA, enterprise-wide, **not** education)* | 🟢 **EU AI Act** remains the binding instrument; education systems sit in the high-risk tier | 🔴 **Thin, and this pass says so: the mandated EMEA query returned almost nothing education-specific.** Barriers named — compliance complexity, data governance — come from a Feb 2026 enterprise study, not from schools |
+| **APAC** | 🟡 Enterprise signals only: `87`% of organisations encourage agent use, **`47`% have governance for them** | 🟡 **Sovereignty, not education, is the organising theme** — Forrester expects data sovereignty to shape infrastructure for ~half of APAC firms; Australia tightening AI governance and copyright; Singapore's consultation is **financial-sector**, not education | 🔴 **No education-specific regulation or adoption figure reached this pass.** 🟡 **`ACTION UX`: query national education ministries by name — MEXT, MOE Singapore, ACARA, India's NEP — not the region word. The region word returns enterprise IT press** |
+| **LATAM** | 🟢 **The best-evidenced demand figure in this pass:** Digital Education Council survey, Feb 2026 — **`92`% of students and `79`% of faculty actively engaging with AI**, `30 000`+ responses across `29` institutions, Tecnológico de Monterrey partnering. UNESCO IESALC: `200` institutions in `19` countries, teaching and learning `73.5`%, research `57.0`%, administration `34.1`% | 🟡 **No unified regional framework.** Chile leads *(National AI Policy since 2021, a law under discussion)*; Brazil and Colombia have national strategies **without education-sector rules**; in Mexico **SEP** and **ANUIES** recommendations are **non-binding** | 🟢 **The strongest sourcing of the four** — named surveys with sample sizes, UNESCO IESALC, IDB, and the ILIA index with CEPAL |
+
+🔴 **The asymmetry that matters commercially, and it is LATAM's:** 🟢 **`92`% student adoption** against 🔴 **`30`% of LATAM universities having any published AI policy.** 🔵 **That gap is the engagement. It is not a technology gap — it is a governance-artefact gap, and governance artefacts are cheap to produce and expensive to retrofit.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Sell CONFORMANCE, and sell it as an auditable claim.** The three `OneRoster` rows this pass verified are the evidence base: [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) *(`Apache-2.0`, pushed `2026-10-15`)* serves a OneRoster 1.2 API from an Ed-Fi ODS; [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) *(`Apache-2.0`)* is an executable conformance gate; [`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`](https://github.com/Lawrence-Public-Schools/OneRoster-1.1-PowerQueries) *(`Apache-2.0`)* is a **Massachusetts district publishing its own integration**.
+
+🟢 **The new lever is compliance-as-a-server.** [`CSOAI-ORG/coppa-ferpa-mcp`](https://github.com/CSOAI-ORG/coppa-ferpa-mcp) *(`MIT`)* exposes COPPA/FERPA/UK-AADC checks over **MCP**, and [`ljchang/marimo-grader`](https://github.com/ljchang/marimo-grader) *(`MIT`)* shows the shape with a real institution's SSO. 🔵 **Against `10`% of institutions having formal AI guidelines, the deliverable is the guideline plus the gate that enforces it, not a model.** 🟡 **`31` states and a `12`-grade scaffold still means configuration per jurisdiction is the product.**
+
+### EMEA
+
+🟢 **Sell AI LITERACY as a delivered obligation, which is the part of the EU AI Act that bites first.** Article 4's literacy duty applies to deployers now, ahead of the Annex III high-risk machinery, and [`telekom/ki-in-schulen`](https://github.com/telekom/ki-in-schulen) *(`MIT`)* is a corporate-published German curriculum to start from rather than write.
+
+🟢 **And sell STATUTORY OUTPUT, which is where the carried German estate pays.** [`schild-report/schild.report`](https://github.com/schild-report/schild.report) *(`MIT`)* generates NRW **Zeugnisse** — statutory report cards for a 2.5-million-pupil state — and the carried `svws-nrw` estate *(`10` `BSD-3-Clause` + `1` `MIT`, p234)* is where that data now lives. 🔵 **A draft-only AI layer that produces a statutory artefact a teacher commits is directly quotable against Annex III point 3.** 🔴 **Honest gap: French, Italian and Dutch supply is UNMEASURED, not absent — see `ACTION UV`; `éducation license:mit` folded into the English corpus and returned `ossu/computer-science`.**
+
+### APAC
+
+🟢 **Sell NATIONAL-API INTEGRATION, because that is what the region's permissive supply actually is.** Korea has a client estate for two government systems — [`SaidBySolo/neispy`](https://github.com/SaidBySolo/neispy) *(`MIT`, `65`★)*, [`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info) *(`MIT`)*, [`chrisryugj/kordoc`](https://github.com/chrisryugj/kordoc) *(`MIT`, `hwp`→Markdown)* under p236's [`chrisryugj/schoolinfo-mcp`](https://github.com/chrisryugj/schoolinfo-mcp) *(`MIT`)*. Japan has [`hisahonakata/roster_hub_for_gigaschool`](https://github.com/hisahonakata/roster_hub_for_gigaschool) *(`Apache-2.0`)* bridging **OneRoster into MEXT's GIGA School programme**.
+
+🟢 **The agent tier is real here and it is early**: `9` granted agents including a dual-end K-12 agent on LangGraph, an NL→SIS write agent at `54`★, and a POMDP-based planner. 🔴 **All of them are small — `0`–`54`★ — so the sell is "fork and harden", not "integrate and support".** 🔵 **Sovereignty is the region's stated theme, and a stack of `MIT` national-API clients running against a self-hosted model is the sovereignty answer in deployable form.**
+
+### LATAM
+
+🟢 **Sell the GOVERNANCE ARTEFACT, because the measurement says that is the gap.** `92`% of students and `79`% of faculty are already using AI; **`30`% of universities have a published policy**. The deliverable is an institutional AI policy, a per-course disclosure, an appeal route, and an audit trail — against non-binding SEP/ANUIES recommendations in Mexico and no education-sector rule in Brazil or Colombia.
+
+🟢 **And the supply side now has an assessment row to build it on:** [`glacy/evolutIA`](https://github.com/glacy/evolutIA) *(`Apache-2.0`, Spanish, LLM + RAG automated assessment for higher-ed science and engineering)* plus [`Dramoscuello/simic`](https://github.com/Dramoscuello/simic) *(`Apache-2.0`, bound to Colombia's **ICFES Saber 11**)*, with [`Antonio-Neves/Gestao-Escolar`](https://github.com/Antonio-Neves/Gestao-Escolar) *(`MIT`, pushed `2026-10-12`)* and [`marcosroriz/sete`](https://github.com/marcosroriz/sete) *(`MIT`, Brazilian federal school transport)* underneath. 🔵 **Assessment is the function three jurisdictions regulated in 2026, so a LATAM assessment engine with a human-commit gate is sellable in EMEA too.** 🔴 **Declared gap: no ENEM (Brazil) or EXANI (Mexico) equivalent of `simic` surfaced on this channel this pass — that is a channel result, not an absence.**
 
 ## Pass 236 — 2026-10-16 — THE REGULATORY MAP IS NOW THE MARKET MAP: EVERY REGION HAS A **DATED, BINDING** INSTRUMENT TOUCHING EDUCATION, AND THREE OF THE FOUR LANDED IN THE LAST NINE MONTHS
 

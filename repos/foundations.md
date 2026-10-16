@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 237 — 2026-10-16 — THE FOUNDATION TIER GAINS A **NATIONAL-API CLIENT ESTATE** IN THREE COUNTRIES, AND THE US `OneRoster` LIMB TURNS OUT TO BE `3` ROWS THIS SHELF ALREADY HELD PLUS `3` IT DID NOT
+
+🟢 **`11` new foundation rows across `4` regions, every one grant-read first-hand at a pinned head.** 🔵 **The shape of the result is the finding: the permissive foundation layer in education is overwhelmingly *bindings to national government APIs and national data standards*, not frameworks.**
+
+🔵 **Evidence:** [`p237-verified-rows`](../evidence/p237-verified-rows.2026-10-16-p237.tsv) · [`p237-rest-licence-channel`](../evidence/p237-rest-licence-channel.2026-10-16-p237.tsv)
+
+### 🟢 `F237-1` — the national-API tier, which is what a vertical foundation actually looks like
+
+p236 shelved one Korean MCP server over Korea's school-disclosure API. This pass found that it sits on top of a **whole client estate** for the same two national systems, and that the equivalent estate exists in Japan and Brazil:
+
+| repo | grant | ★ | forks | head | region | what it binds |
+|---|---|---|---|---|---|---|
+| [`SaidBySolo/neispy`](https://github.com/SaidBySolo/neispy) | 🟢 **`MIT`** — `LICENSE` at `master`, holder *SaidBySolo*, © 2020 | **65** | 12 | `master` · `ef50b19` | 🟢 **APAC** *(evidenced: `topic:korean`, binds a ROK national system)* | 🟢 **The largest of them.** Typed, `asyncio`/`aiohttp` Python client for **NEIS** — every ROK school's information, meals and timetables. Topics declare `neis-api`, `typed`, `python3`. Pushed `2025-11-19` |
+| [`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info) | 🟢 **`MIT`** — `LICENSE` at `main`, holder *Hyunbin Seo*, © 2026 | **3** | 0 | `main` · `5c9eced` | 🟢 **APAC** *(evidenced: Korean payload, NEIS Open API)* | TypeScript lookup over ROK school basic information. Created `2026-07-16`, pushed `2026-09-27` — 🟢 **the live one of the pair** |
+| [`chrisryugj/kordoc`](https://github.com/chrisryugj/kordoc) | 🟢 **`MIT`** — `LICENSE` at `main`, holder *chrisryugj*, © 2026 | — | — | `main` · `b964335` | 🟢 **APAC** *(evidenced: `.hwp` is the ROK government document format)* | 🟢 **`ACTION UM` DISCHARGED.** `hwp`→Markdown. This is the limb that turns assessment plans buried in Korean word-processor attachments into tables, and p236 shelved its consumer without reading its grant |
+| [`hisahonakata/roster_hub_for_gigaschool`](https://github.com/hisahonakata/roster_hub_for_gigaschool) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | **0** | 0 | `main` · `53c76ba` | 🟢 **APAC** *(evidenced: **GIGA School** is Japan MEXT's national programme)* | 🟡 Ingests **OneRoster CSV** and serves the **OneRoster API**. 🔵 **A `1EdTech` standard implementation written for a Japanese national programme — the first row on these shelves that bridges the US standards estate into APAC.** 🔴 Dormant since `2023-08-04` |
+| [`marcosroriz/sete`](https://github.com/marcosroriz/sete) | 🟢 **`MIT`** — `LICENSE` at `master`, holder *Marcos Roriz*, © 2019 | **22** | 8 | `master` · `9f1f9c8` | 🟢 **LATAM** *(evidenced: Portuguese payload, Brazilian federal programme)* | **Sistema Eletrônico de Gestão do Transporte Escolar** — school-transport routing for Brazilian rural municipalities. Topics declare `e-government`, `rural-communities`, `school-education`, `transportation`. Electron. 🔴 Dormant since `2023-03-20` |
+| [`Antonio-Neves/Gestao-Escolar`](https://github.com/Antonio-Neves/Gestao-Escolar) | 🟢 **`MIT`** — `LICENSE` at `master`, holder *António Manuel Neves*, © 2021 | **50** | 20 | `master` · `06c7771` | 🟢 **LATAM** *(evidenced: Portuguese payload)* | Django + PostgreSQL school-management system. 🟢 **Pushed `2026-10-12` — four days old, and the most active permissive Portuguese-language school system this shelf has seen** |
+
+### 🟡 `F237-2` — the `OneRoster` limb, and the honest half of it
+
+`OneRoster license:apache-2.0` returned **`12` repositories, the entire result set.** 🔴 **`3` of the `12` were already on these shelves** — [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) *(`Apache-2.0`, `6`★, `main` `c913623`, pushed **`2026-10-15`** — one day old)*, [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) *(`Apache-2.0`, `7`★, `main` `3550c21`)* and [`chaz-clark/canvas-toolbox`](https://github.com/chaz-clark/canvas-toolbox) from the `FERPA` channel. 🟢 **All three refused by `ACTION UG`'s index before a row was drafted.** The three that are new:
+
+| repo | grant | ★ | head | region | why it is a foundation and not a lead |
+|---|---|---|---|---|---|
+| [`cevelez/DataAPI`](https://github.com/cevelez/DataAPI) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | **0** | `main` · `d94455a` | 🟡 **Global** *(no national binding in the payload)* | 🟢 **A read-only `1EdTech OneRoster 1.1` REST API as a module for [`GibbonEdu/core`](https://github.com/GibbonEdu/core) — a row this KB has carried since `p44`.** Exposes orgs, academic sessions, users, courses, classes and demographics. 🔵 **It makes a carried SIS speak a standard the carried NA estate already consumes, which is the cheapest interoperability edge on these shelves.** Created `2026-09-30` |
+| [`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`](https://github.com/Lawrence-Public-Schools/OneRoster-1.1-PowerQueries) | 🟢 **`Apache-2.0`** — `LICENSE` at `LPS` | **3** | 🟡 `LPS` · `14ecf3d` | 🟢 **North America** *(evidenced: a **Massachusetts school district** is the org)* | PowerQueries implementing OneRoster 1.1 over PowerSchool. Pushed `2026-09-16`. 🟡 **Its default branch is `LPS`** — recorded because a harvester hard-coding `main` reads this repository as absent. 🔵 **A district publishing its own integration code is a different kind of evidence from a vendor doing it** |
+| [`GuanZhuiGuo/open-character-memory`](https://github.com/GuanZhuiGuo/open-character-memory) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | **0** | `main` · `b30b580` | 🟡 **APAC** *(evidenced: Chinese-language primary README)* | 🟢 **A bitemporal agent-memory runtime for role-play and TUTORING agents**, on Neo4j, exposed over **MCP**. Topics: `agent-memory`, `bitemporal`, `knowledge-graph`, `mcp`. 🔵 **Bitemporal matters here specifically: "what the student knew in March" and "what we recorded in March about what the student knew" are different questions, and a tutoring record that cannot separate them cannot survive a records request** |
+
+### 🟢 `F237-3` — EMEA: a Telekom row, an active OER row, and the other half of the carried NRW estate
+
+p234 shelved the `svws-nrw` estate — `10` `BSD-3-Clause` repositories and `1` `MIT`, the school-information system of North Rhine-Westphalia. 🟢 **This pass found what SVWS replaced, still `MIT` and still forkable:**
+
+| repo | grant | ★ | head | what it is |
+|---|---|---|---|---|
+| [`schild-report/schild.report`](https://github.com/schild-report/schild.report) | 🟢 **`MIT`** — `LICENSE` at `master`, holder 🟡 ***hmt*, no year** | **9** | `master` · `bae5a22` | 🟢 **The reporting engine for SchILD, the NRW school-information system the carried `svws-nrw` estate succeeded.** Svelte + Electron, generates **Zeugnisse** (statutory German report cards) as PDF. `topic:nrw`, `topic:zeugnisse`. 🔴 Dormant since `2023-02-03` — 🔵 **but a statutory report-card template for a 2.5-million-pupil state is not a thing that goes stale, and the carried SVWS estate is where its data now lives** |
+| [`telekom/ki-in-schulen`](https://github.com/telekom/ki-in-schulen) | 🟢 **`MIT`** — `LICENSE` at `master`, 🟡 **no copyright line at all** | **15** | `master` · `a258b91` | **AI@School** — Deutsche Telekom's AI-literacy teaching material for German schools. 🟢 **The only corporate-published education row in this pass**, and relevant to the EU AI Act's Article 4 AI-literacy obligation rather than to Annex III |
+| [`wort-schule/wort.schule`](https://github.com/wort-schule/wort.schule) | 🟢 **`MIT`** — `LICENSE` at `main`, holder *Stefan Wintermeyer*, © 2022 | **9** | `main` · `420ac8d` | 🟢 **Inclusive OER web application for German written-language acquisition.** Rails. 🟢 **Pushed `2026-10-12`** — live. 🔵 The `inklusiv` framing is a procurement keyword in German-speaking public education, not a description |
+| [`RF1705/beste-schule`](https://github.com/RF1705/beste-schule) | 🟢 **`MIT`** — `LICENSE` at `main`, holder *RF1705*, © 2026 | **5** | `main` · `f5d0892` | 🟡 **A Home Assistant integration for `beste.schule`** — timetables, absences, grades. Pushed `2026-10-06`. 🔵 **Shelved for one reason: it is a worked example of reading a German school platform's API from outside it**, and the API surface is the reusable part, not the Home Assistant packaging |
+
+### 🔵 What this tier now looks like, stated against the previous reading
+
+`11` new rows: 🟢 `6` `MIT`, `5` `Apache-2.0`, **`0` copyleft, `0` ungranted, `0` padded.** By region: APAC `4`, EMEA `4`, LATAM `2`, North America `1`, Global `1`.
+
+🔴 **The claim this displaces is p233's**, carried on this shelf at the `V233-2` census: *"the education estate is exactly the historic Java tier … and all of it is copyleft or institution-governed, none of it `MIT`/`Apache` library code you can build a product on."* 🟡 **That was a reading of ONE CHANNEL — Maven Central's `org/` namespace — and it is true of that channel.** 🔵 **The permissive education foundation layer is not in Maven. It is in `pip`, `npm` and `gem`, it binds national government APIs rather than offering frameworks, and it is mostly not written in English.** 🔴 **And `ACTION UB` could not re-open the Maven half this pass; see `T237-E` on `agents/top.md` for the measured reason.**
 
 ## Pass 236 — 2026-10-16 — THESE SHELVES HAVE CARRIED THE **REPLACEMENT** FOR GITHUB CLASSROOM ON FIVE FILES WITHOUT EVER RECORDING THAT **CLASSROOM ITSELF WAS SWITCHED OFF** — AND ITS AUTOGRADING CHAIN IS NOW HALF-ARCHIVED, `MIT`, AND FORKABLE
 

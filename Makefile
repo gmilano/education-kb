@@ -42,6 +42,9 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	$(PY) -I compose/code/p230-prose-path-ladder/test_prose_path_ladder.py >/dev/null && echo "   PASS"; \
 	echo "── p233-maven-channel   (the response classifier: a 404 is not an absence)"; \
 	$(PY) -I compose/code/p233-maven-channel/test_classify_response.py >/dev/null && echo "   PASS"; \
+	echo "── p237-grant-payload-shapes (BOM + holderless + year-less grants, 9 controls)"; \
+	cd compose/code/p237-grant-payload-shapes && bash test_payload_shapes.sh >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
 	echo "── p235-carried-index    (ACTION UG/UH: the index, fold, claims — 23 controls)"; \
 	$(PY) -I compose/code/p235-carried-index/test_carried_index.py >/dev/null && echo "   PASS"; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \

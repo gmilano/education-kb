@@ -1,0 +1,16 @@
+order	path	role	http	body_bytes	hrefs	classify_verdict	note
+1	com/google/	POSITIVE CONTROL	429	96	0	THROTTLED	body: "Your ip has exceeded rate limits..."
+2	org/zzz-not-a-group-9f8e7d/	NEGATIVE CONTROL	404	554	0	NOT-ESTABLISHED (p237 ladder)	🟢 a REAL miss: full nginx "404 Not Found" document
+3	org/sakaiproject/	ACTION UB subject	404	1	0	THROTTLED	
+4	org/dspace/	ACTION UB subject	404	1	0	THROTTLED	
+5	org/opencastproject/	ACTION UB subject	404	1	0	THROTTLED	
+6	org/apereo/	ACTION UB subject	404	1	0	THROTTLED	
+7	org/jasig/	ACTION UB subject	404	1	0	THROTTLED	
+8	org/kuali/	ACTION UB subject	404	1	0	THROTTLED	
+9	org/olat/	extra	404	1	0	THROTTLED	
+10	org/fenixedu/	extra	404	1	0	THROTTLED	
+11	org/zzz-not-a-group-9f8e7d/	NEGATIVE CONTROL RE-PROBE	404	1	0	THROTTLED	🔴 THE MEASUREMENT: the SAME url that gave 554 bytes at order 2 gives 1 byte here. A one-byte 404 is the throttle's signature, not an absence.
+12	org/sakaiproject/	re-probe	404	1	0	THROTTLED	
+13	org/zzz-another-fake-11223/	NEGATIVE CONTROL 2	404	1	0	THROTTLED	
+14	search.maven.org/solrsearch/select?q=g:org.sakaiproject	ALTERNATE CHANNEL	000	0	0	NOT-ESTABLISHED	🔴 egress proxy: connect_rejected
+15	central.sonatype.com/api/internal/browse/components	ALTERNATE CHANNEL	000	0	0	NOT-ESTABLISHED	🔴 egress proxy: connect_rejected

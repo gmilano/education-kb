@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 237 — 2026-10-16 — THE TREND IS THAT EDUCATION AI SUPPLY HAS **LOCALISED**, AND THE MEASUREMENT IS THAT `19` OF THIS PASS'S `35` NEW GRANTED ROWS ARE IN LANGUAGES ENGLISH DOES NOT SHARE
+
+🔵 **Evidence:** [`p237-rest-licence-channel`](../evidence/p237-rest-licence-channel.2026-10-16-p237.tsv) · [`p237-verified-rows`](../evidence/p237-verified-rows.2026-10-16-p237.tsv)
+
+### 🟢 `T237-1` — the supply trend: education agents are being built against NATIONAL systems, not against a market
+
+Every one of this pass's `35` new granted rows binds something **jurisdictional**. Not one is a general-purpose education agent aimed at a global market:
+
+| binding | rows | region |
+|---|---|---|
+| a **national statute** *(FERPA, COPPA)* | `4` | North America |
+| a **national data standard** *(1EdTech OneRoster, Ed-Fi)* | `4` | North America, APAC |
+| a **national government API** *(NEIS, 학교알리미, GIGA School)* | `4` | APAC |
+| a **national examination** *(Gaokao, ICFES Saber 11)* | `2` | APAC, LATAM |
+| a **statutory artefact** *(NRW Zeugnisse)* | `1` | EMEA |
+| a **national curriculum or ministry programme** | `6` | APAC, EMEA |
+
+🔵 **This is the opposite of the trend the market reports describe.** The sizing sources in this pass's web channel describe one global market growing from ~`$11B` to `$57–80B`, led by AI tutors and adaptive learning. 🔴 **The code says something different: the buildable layer is integration with a specific country's plumbing, and the "global AI tutor" is a product category, not a repository category.** 🟡 **For a studio that is good news — the thing being built is exactly the thing a services firm sells.**
+
+### 🔴 `T237-2` — the measurement trend, and it is a correction to this file
+
+These shelves have reported regional supply for `236` passes. 🔴 **Every one of those figures was produced by an English-language query, so every regional supply claim this KB has published was a measurement of its own vocabulary.** The size of the distortion, measured this pass:
+
+| channel | education AI agents returned |
+|---|---|
+| `"top open source AI agents education 2026 github MIT"` *(mandated, English, web, **7 passes**)* | 🔴 **`0`** |
+| `教育 agent license:apache-2.0` *(Chinese, REST, licence-filtered, **1 query**)* | 🟢 **`8`** |
+
+🔵 **The trend worth recording is not "APAC is rising". It is that a vertical's open-source supply localises into its own language early, and a KB that reads one language sees a field that is years behind the real one.**
+
+### 🟡 `T237-3` — the maturity trend, stated against this pass's own rows
+
+🔴 **The new APAC and LATAM agent rows are tiny: `0`–`54`★, and `6` of the `12` were created in the last `5` months.** Three were created in the last `14` days; one is **two days old**.
+
+🔵 **That is a real trend and it cuts both ways.** 🟢 It means the field is being written right now and a studio can be early with a fork. 🔴 It also means **none of these is a dependency** — they are fork bases and reference architectures, and a cell that calls any of them production-ready would be wrong. 🟡 **The one structural asset among them is [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning)'s four-level tenancy** *(platform → institution → campus → teacher/student, with the operator holding model choice and billing)* — the architecture outlives the `44`★ repository that carries it.
+
+### 🟢 `T237-4` — the governance trend reaches the CODE, which it had not before
+
+🔵 **Three of this pass's rows implement a control these shelves have been recommending as prose, and two of them were not aiming at regulation at all:**
+
+- 🟢 [`hanqiaoculture-sudo/HanQiao-GOAI`](https://github.com/hanqiaoculture-sudo/HanQiao-GOAI) *(`Apache-2.0`, Chinese)* ships an explicit **human-confirmation step** in a multi-agent document pipeline — the Annex-III-shaped control, built by a study-abroad team.
+- 🟢 [`xsx11223/zhibuzhi`](https://github.com/xsx11223/zhibuzhi) *(`Apache-2.0`)* opens by telling the student **how much it does not know about them**, and formalises that as a POMDP where setting a question is an observation action. 🔵 **Calibrated uncertainty as the product's first screen, not as a disclaimer.**
+- 🟢 [`CSOAI-ORG/coppa-ferpa-mcp`](https://github.com/CSOAI-ORG/coppa-ferpa-mcp) *(`MIT`)* makes **children's-privacy compliance callable over MCP**, which is the first row on these shelves where the compliance limb is a server rather than a paragraph.
+
+🟡 **The trend: 2026's regulation is starting to appear as agent-level architecture — approval gates, calibrated abstention, compliance tool-servers — rather than as documentation bolted on afterwards.**
+
+### 🔴 `T237-5` — the counter-trend: the channels themselves are degrading, and that is now two measurements
+
+| channel | p237 state |
+|---|---|
+| `repo1.maven.org` | 🔴 **rate-limited below useful resolution.** Positive control `429`; the same url returned a `554`-byte real `404` and then a **one-byte `404`** minutes apart |
+| `search.maven.org`, `central.sonatype.com` | 🔴 **refused by this session's egress proxy** *(`connect_rejected`)* |
+| `api.github.com` direct | 🔴 **`403`** — *"sessions are bound to their configured repositories"* |
+| GitHub REST via the MCP server | 🟢 **reachable, and the only path to a server-side licence filter from here** |
+| web search | 🟢 reachable; 🔴 **cannot express a licence filter, which inverts its supply sample** |
+| `raw.githubusercontent.com` | 🟢 reachable — every grant this pass was read here, first-hand |
+
+🔵 **p232 found a `200` is not a read. p233 found a `404` is not an absence. p237 adds: a channel's REACHABILITY is itself a moving variable, so a supply claim needs the channel named beside it or it will be read later as a claim about the world.** 🟡 **`ACTION UK`'s phrasing rule — publish *"this channel returned `0`"*, never *"there is no X"* — is the only thing that keeps these shelves honest as the channels close one by one.**
 
 ## Pass 236 — 2026-10-16 — THE TREND IS **WITHDRAWAL**: THE YEAR'S LARGEST EVENT IN EDUCATION TOOLING WAS A PLATFORM BEING TURNED OFF, NOT ONE BEING LAUNCHED
 

@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — p237 — GitHub Trending returned **nothing education-specific for a fifth pass**, and this week's repo movement came from a channel Trending cannot express: a **server-side licence filter in five languages**
+
+🔵 **Evidence:** [`p237-rest-licence-channel`](../evidence/p237-rest-licence-channel.2026-10-16-p237.tsv) · [`p237-verified-rows`](../evidence/p237-verified-rows.2026-10-16-p237.tsv)
+
+### 🔴 The mandated trending query, for the record — FIFTH consecutive pass with nothing education-specific
+
+`"github trending education AI 2026"` → 🔴 **no live Trending list reachable and nothing education-specific in the secondary coverage.** It returned `rohitg00/ai-engineering-from-scratch` *(reported #1 on Trending `2026-05-24`)*, curated lists *(`aneelv75/github-trending`)*, Karpathy's *Zero to Hero*, `d2l`, and a Japanese report that **nine of the top ten** projects on GitHub's February 2026 monthly Trending list were AI-related. 🟡 **Not one is an education repository; they are AI-learning repositories, which is the same confusion `ACTION UC` names on the agent shelf.**
+
+### 🟢 What moved, measured on the channel that can express a licence
+
+| query | language | `total_count` | note |
+|---|---|---|---|
+| `escolar license:mit` | pt/es | 🟢 **`2 139`** | largest of the pass |
+| `学校管理 license:mit` | ja/zh | **`302`** | |
+| `Schule license:mit` | de | **`195`** | |
+| `학교 license:mit` | ko | **`134`** | |
+| `교육 license:mit` | ko | **`118`** | |
+| `学校管理 license:apache-2.0` | ja/zh | **`74`** | |
+| `FERPA license:mit` | en *(US statute)* | **`61`** | 🟢 evidenced North America without a region word |
+| `educación license:apache-2.0` | es | **`50`** | |
+| `教育 agent license:apache-2.0` | zh | **`14`** | 🟢 **the only channel that has returned education AI AGENTS to these shelves** |
+| `OneRoster license:apache-2.0` | en *(1EdTech)* | **`12`** | the entire result set |
+| `éducation license:mit` | fr *(ATTEMPTED)* | 🔴 **`15 970`** | 🔴 **DEFECT — GitHub folds diacritics; this read the ENGLISH corpus, topped by `ossu/computer-science` at `210k`★. French was never isolated.** `ACTION UV` |
+
+### 🟢 `11` new repository rows promoted to [`repos/foundations.md`](foundations.md)
+
+🔵 **The shape, which is this week's finding:** the permissive education foundation layer is **bindings to national government APIs and national data standards**, not frameworks.
+
+**National-API tier** — [`SaidBySolo/neispy`](https://github.com/SaidBySolo/neispy) *(🟢 `MIT`, `65`★, `master` `ef50b19`, typed async client for Korea's **NEIS**)* · [`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info) *(🟢 `MIT`, `main` `5c9eced`, pushed `2026-09-27` — the live one)* · [`chrisryugj/kordoc`](https://github.com/chrisryugj/kordoc) *(🟢 `MIT`, `main` `b964335` — `ACTION UM` discharged, `hwp`→Markdown)* · [`hisahonakata/roster_hub_for_gigaschool`](https://github.com/hisahonakata/roster_hub_for_gigaschool) *(🟢 `Apache-2.0`, `main` `53c76ba` — **OneRoster bridged into Japan MEXT's GIGA School programme**, the first row here spanning the US standards estate into APAC)*.
+
+**LATAM** — [`Antonio-Neves/Gestao-Escolar`](https://github.com/Antonio-Neves/Gestao-Escolar) *(🟢 `MIT`, `50`★, `master` `06c7771`, 🟢 **pushed `2026-10-12`** — the most active permissive Portuguese-language school system on this shelf)* · [`marcosroriz/sete`](https://github.com/marcosroriz/sete) *(🟢 `MIT`, `22`★, `master` `9f1f9c8` — Brazilian federal **school-transport** routing for rural municipalities, `topic:e-government`)*.
+
+**EMEA** — [`schild-report/schild.report`](https://github.com/schild-report/schild.report) *(🟢 `MIT`, `master` `bae5a22` — the **Zeugnisse** reporting engine for SchILD, the NRW system the carried `svws-nrw` estate succeeded)* · [`telekom/ki-in-schulen`](https://github.com/telekom/ki-in-schulen) *(🟢 `MIT`, `15`★, `master` `a258b91` — Deutsche Telekom's AI-literacy curriculum, relevant to **EU AI Act Article 4**)* · [`wort-schule/wort.schule`](https://github.com/wort-schule/wort.schule) *(🟢 `MIT`, `main` `420ac8d`, 🟢 pushed `2026-10-12` — inclusive OER for German language acquisition)* · [`RF1705/beste-schule`](https://github.com/RF1705/beste-schule) *(🟢 `MIT`, `main` `f5d0892` — a worked example of reading a German school platform's API from outside it)*.
+
+**Standards tier** — [`cevelez/DataAPI`](https://github.com/cevelez/DataAPI) *(🟢 `Apache-2.0`, `main` `d94455a` — a read-only `1EdTech OneRoster 1.1` REST API **as a module for [`GibbonEdu/core`](https://github.com/GibbonEdu/core), carried since `p44`**; the cheapest interoperability edge on these shelves)* · [`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`](https://github.com/Lawrence-Public-Schools/OneRoster-1.1-PowerQueries) *(🟢 `Apache-2.0`, 🟡 default branch **`LPS`** · `14ecf3d` — **a Massachusetts district publishing its own integration code**)* · [`GuanZhuiGuo/open-character-memory`](https://github.com/GuanZhuiGuo/open-character-memory) *(🟢 `Apache-2.0`, `main` `b30b580` — **bitemporal** agent-memory runtime for tutoring agents, on Neo4j over MCP)*.
+
+### 🔴 `3` of the `12` English-channel rows were ALREADY CARRIED, and the index caught all three
+
+[`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) *(🟢 `Apache-2.0`, `main` `c913623`, 🟢 **pushed `2026-10-15` — one day old**)*, [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) *(🟢 `Apache-2.0`, `main` `3550c21`)* and [`chaz-clark/canvas-toolbox`](https://github.com/chaz-clark/canvas-toolbox) *(🟢 `MIT`, `main` `8504031`)* were all refused by `ACTION UG`'s index **before a row was drafted**. 🟢 **Their heads are re-verified above, which is the useful residue of a refusal.**
+
+### 🟡 Default branches found this pass that are NOT `main` or `master`
+
+🔴 **`company_server`** *(`dromara/skyeye`)* · 🔴 **`public-release`** *(`chiv-heng/ferpa-guard`)* · 🔴 **`LPS`** *(`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`)* · 🔴 **`19.0`** *(`openeducat/openeducat_erp`)* · 🔴 **`sistema`** *(`evandrogouveia/SISTEMA-ESCOLAR`, not shelved)* · 🔴 **`mian`** — a typo of `main` — *(`qianliwanli/cregs`, not shelved)*. 🔵 **Six in `38` slugs.** 🔴 **And a seventh, outside the `38`, matters more than any of them: [`GibbonEdu/core`](https://github.com/GibbonEdu/core) — carried since `p44` and the base of this pass's `P237-C` recipe — has a default branch of `v31.0.00`** *(head `6ac53b1`, grant `GPL`)*. 🔵 **A harvester, or a client's clone script, that hard-codes `main` reads all seven as absent. That is `p230`'s class of defect, and it is why every grant on these shelves this pass was read at the branch `git ls-remote --symref` actually reported.**
+
+### 🔴 The channel-health line, because it is now two passes of degradation
+
+🟢 `raw.githubusercontent.com` reachable *(every grant this pass read here)* · 🟢 GitHub REST **via the MCP server** reachable — the only path to a server-side licence filter from this session · 🔴 `api.github.com` **direct: `403`** *("sessions are bound to their configured repositories")* · 🔴 `repo1.maven.org` **rate-limited below useful resolution**: positive control `429`, and the same url returned a `554`-byte real `404` then a **one-byte `404`** minutes apart · 🔴 `search.maven.org` and `central.sonatype.com` **refused by the egress proxy** *(`connect_rejected`)*. 🟡 **`ACTION UB` stays open for that reason and says so.**
 
 ## 2026-10-16 — p236 — a channel these shelves recorded as CLOSED is open, and the first field it returned overturned the week's reading of the grading layer
 

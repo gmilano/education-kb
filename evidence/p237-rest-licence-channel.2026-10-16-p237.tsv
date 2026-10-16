@@ -1,0 +1,16 @@
+query	language	licence_filter	channel	total_count	returned	carried_screen_NEW	carried_screen_CARRIED	note
+学校管理 license:mit	ja/zh (shared kanji)	server-side	REST (github MCP)	302	10	9	0	p236 ran the same words on WEB SEARCH with no licence filter and got 6 repositories, 4 of them ungranted
+学校管理 license:apache-2.0	ja/zh (shared kanji)	server-side	REST (github MCP)	74	15	-	-	top row gongfuxiang/schoolcms 292 stars, last push 2020-04-22
+학교 license:mit	ko	server-side	REST (github MCP)	134	15	-	-	p236's Korean WEB query returned 5 repositories, 1 granted
+교육 license:mit	ko	server-side	REST (github MCP)	118	15	-	-	
+教育 agent license:apache-2.0	zh	server-side	REST (github MCP)	14	14	-	-	the ONLY channel that has ever returned education-specific AI AGENTS to these shelves
+escolar license:mit	pt/es	server-side	REST (github MCP)	2139	15	-	-	largest count of any query this pass
+educación license:apache-2.0	es	server-side	REST (github MCP)	50	15	-	-	
+Schule license:mit	de	server-side	REST (github MCP)	195	12	-	-	
+éducation license:mit	fr (ATTEMPTED)	server-side	REST (github MCP)	15970	12	-	-	🔴 DEFECT: GitHub folds diacritics, so this matched the ENGLISH corpus (top row ossu/computer-science, 210k stars). French was NOT isolated on this channel.
+FERPA license:mit	en (US statute)	server-side	REST (github MCP)	61	12	4	1	US-statute binding gives EVIDENCED North America placement without a region word
+OneRoster license:apache-2.0	en (1EdTech standard)	server-side	REST (github MCP)	12	12	4	2	
+top open source AI agents education 2026 github MIT	en (MANDATED)	none	web search	-	~9	0	0	🔴 SEVENTH consecutive failure: 0 education agents. Returned microsoft/ai-agents-for-beginners, pguso/agents-from-scratch, Hermes Agent, Aider, Cline, CrewAI, LangGraph.
+github trending education AI 2026	en (MANDATED)	none	web search	-	~9	0	0	🔴 nothing education-specific on GitHub Trending; returned rohitg00/ai-engineering-from-scratch and curated lists
+open source platform education ERP CRM MIT Apache	en (MANDATED)	none	web search	-	~9	0	0	🟡 named OpenEduCat and Apache OFBiz; could not state OpenEduCat's licence. p237 read it: LGPL-3.0.
+https://api.github.com/search/repositories?q=...&license:mit	-	server-side	REST (direct curl)	-	0	-	-	🔴 HTTP 403 from the session's egress proxy: "sessions are bound to their configured repositories". The REST channel is reachable ONLY through the github MCP server.

@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 237 — 2026-10-16 — FIVE RECIPES, ONE PER REGION, AND EVERY COMPONENT IN THEM WAS GRANT-READ AT A PINNED HEAD THIS PASS
+
+🟢 **Each recipe below names the exact repositories, their grants, the wiring, and the thing that breaks.** 🔵 **For the first time these shelves can field one recipe per region without a LATAM-only section and without padding — see `P237-E` for the reason that became possible.**
+
+🔵 **Evidence for every grant and head SHA cited:** [`p237-verified-rows`](../evidence/p237-verified-rows.2026-10-16-p237.tsv)
+
+### 🟢 `P237-A` — APAC: a sovereign Korean school-data assistant *(6–8 weeks)*
+
+**The ask it answers:** a ROK school or district wants a teacher-facing assistant over its own statutory data, running on infrastructure it controls.
+
+| layer | component | grant | head |
+|---|---|---|---|
+| tool surface | [`chrisryugj/schoolinfo-mcp`](https://github.com/chrisryugj/schoolinfo-mcp) *(carried, p236)* | 🟢 `MIT` | `main` · `9f636c1` |
+| document limb | [`chrisryugj/kordoc`](https://github.com/chrisryugj/kordoc) | 🟢 `MIT` | `main` · `b964335` |
+| typed API client | [`SaidBySolo/neispy`](https://github.com/SaidBySolo/neispy) | 🟢 `MIT` | `master` · `ef50b19` |
+| second-source lookup | [`hyunbinseo/neis-school-info`](https://github.com/hyunbinseo/neis-school-info) | 🟢 `MIT` | `main` · `5c9eced` |
+| student memory | [`GuanZhuiGuo/open-character-memory`](https://github.com/GuanZhuiGuo/open-character-memory) | 🟢 `Apache-2.0` | `main` · `b30b580` |
+
+**Wiring.** `schoolinfo-mcp` is the MCP server the agent talks to; point its 학교알리미 and NEIS calls at `neispy`'s typed async client rather than at raw HTTP, so rate-limit and schema handling live in one maintained place. Register `kordoc` as a second MCP tool — `hwp_to_markdown(attachment) → table` — because ROK assessment plans arrive as `.hwp` attachments and that is where the answerable content is. Put `open-character-memory` behind a third tool for per-student state, and use its **bitemporal** keys: *valid time* for when the student knew something, *transaction time* for when you recorded it. 🔵 **Those are different questions and a tutoring log that collapses them cannot answer a parent's records request.**
+
+🔴 **What breaks.** `neispy`'s last push is `2025-11-19`, so pin it and expect to own schema drift when NEIS changes a field; `hyunbinseo/neis-school-info` is the live second source and the reason both are in the recipe. `open-character-memory` is `0`★ — read its Neo4j schema before committing, or substitute the carried `mem0` row and lose the bitemporal property.
+
+🟢 **Why it is sellable:** every component is `MIT`/`Apache-2.0` and nothing calls a foreign API, so the whole stack runs against a self-hosted model. 🔵 **That is the deployable form of the sovereignty requirement APAC's 2026 policy discourse keeps naming.**
+
+### 🟢 `P237-B` — North America: a FERPA-gated grading pipeline whose gate is a SERVER *(4–6 weeks)*
+
+**The ask it answers:** a US institution wants AI-assisted grading that survives counsel.
+
+| layer | component | grant | head |
+|---|---|---|---|
+| LMS surface | [`chaz-clark/canvas-toolbox`](https://github.com/chaz-clark/canvas-toolbox) *(carried)* | 🟢 `MIT` | `main` · `8504031` |
+| grading service | [`ljchang/marimo-grader`](https://github.com/ljchang/marimo-grader) | 🟢 `MIT` | `main` · `0c40fb8` |
+| compliance gate | [`CSOAI-ORG/coppa-ferpa-mcp`](https://github.com/CSOAI-ORG/coppa-ferpa-mcp) | 🟢 `MIT` | `main` · `f9278e7` |
+| redaction | [`chiv-heng/ferpa-guard`](https://github.com/chiv-heng/ferpa-guard) | 🟢 `MIT` | 🟡 `public-release` · `4002924` |
+| human commit | `compose/code/grading-draft-gate` *(this KB's own, carried)* | — | — |
+
+**Wiring.** `canvas-toolbox` pulls submissions out of Canvas; `marimo-grader` does the grading and already carries the multi-tenant + institutional-SSO shape *(it uses Dartmouth SSO — read that as the reference integration, not as a dependency)*. 🟢 **The new move is to put `coppa-ferpa-mcp` in the agent's tool list rather than in a policy document**: the agent calls a COPPA/FERPA check before any student-scoped operation, and the call is logged. Then `grading-draft-gate` makes every grade a **draft** until an instructor commits it.
+
+🔴 **What breaks.** `ferpa-guard`'s default branch is **`public-release`**, not `main` — a clone script hard-coding `main` silently gets nothing, which is `p230`'s class of defect. `coppa-ferpa-mcp` is `1`★: read its rule set and treat it as a **checklist implementation**, not as legal advice; it is the audit trail that has value, not the verdict. All four are `MIT`, so the gate's output can be vendored into a client's own repo.
+
+🟢 **The sellable artefact is the log**, not the grading: an append-only record of *which statute check ran, on which student-scoped call, and which human committed the result* answers the thing `10`%-of-institutions-have-guidelines actually means.
+
+### 🟢 `P237-C` — Global/NA: make a carried SIS speak `OneRoster`, and prove it *(3–4 weeks)*
+
+**The ask it answers:** a school running an open-source SIS needs an auditable *"OneRoster-conformant"* claim in a SOW.
+
+| layer | component | grant | head |
+|---|---|---|---|
+| the SIS | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) *(carried since `p44`)* | 🔴 **`GPL-3.0`** | 🔴 **`v31.0.00`** · `6ac53b1` |
+| the standard surface | [`cevelez/DataAPI`](https://github.com/cevelez/DataAPI) | 🟢 `Apache-2.0` | `main` · `d94455a` |
+| the 1.2 reference | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 `Apache-2.0` | `main` · `c913623` |
+| 🟢 **the executable gate** | [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) | 🟢 `Apache-2.0` | `main` · `3550c21` |
+| a district's worked example | [`Lawrence-Public-Schools/OneRoster-1.1-PowerQueries`](https://github.com/Lawrence-Public-Schools/OneRoster-1.1-PowerQueries) | 🟢 `Apache-2.0` | 🟡 `LPS` · `14ecf3d` |
+
+**Wiring.** `DataAPI` drops into Gibbon and exposes orgs, academic sessions, users, courses, classes and demographics as a read-only `OneRoster 1.1` REST API — 🔵 **this is the cheapest interoperability edge on these shelves, because it adds a standard to a row the KB already carries rather than adopting a new platform.** Run `googleworkspace/oneroster-integration-conformance-tests` against that endpoint in CI: **it is the deliverable, because a conformance claim with a failing gate is worth nothing and one with a passing gate in the client's own pipeline is the SOW line.** Read `edfi-oneroster` *(pushed `2026-10-15`)* for the 1.2 shapes before committing to 1.1, and `Lawrence-Public-Schools`' PowerQueries for how a district actually maps PowerSchool fields.
+
+🔴 **The licence fact that decides whether this recipe is sellable, read first-hand this pass.** [`GibbonEdu/core`](https://github.com/GibbonEdu/core) is **`GPL-3.0`** *(`LICENSE` at `v31.0.00`, confirmed by `osi_family_of`)* and `cevelez/DataAPI` is **`Apache-2.0`**. 🟢 **That pairing is legal — `Apache-2.0` is one-way compatible with `GPL-3.0`** — 🔴 **but the direction matters: the combined work ships as `GPL-3.0`, so anything the studio adds inside that module is copyleft on distribution and a client cannot keep it closed.** 🔵 **It would NOT be legal against `GPL-2.0`, which `Apache-2.0` is incompatible with, so this conclusion does not transfer to any other `GPL` SIS without re-reading its version.** 🟡 **Where a client needs to keep its additions proprietary, the module must stay a thin standards shim and the proprietary logic must sit behind the OneRoster API as a separate service — which the read-only boundary already encourages.**
+
+🔴 **What else breaks.** `DataAPI` is `0`★ and three weeks old — audit the module before shipping; it is read-only, so write-back is yours to build. `Lawrence-Public-Schools`' default branch is **`LPS`**, and 🔴 **`GibbonEdu/core`'s is `v31.0.00`, not `main`** — a clone script that assumes `main` gets nothing from either. 🔴 **And `p230` already measured that five reference implementations of the two `1EdTech` standards this KB recommends are DEAD addresses — so verify every standards URL before quoting one, which is why every head above is pinned.**
+
+### 🟢 `P237-D` — LATAM: an assessment engine shipped WITH its governance artefact *(6–8 weeks)*
+
+**The ask it answers:** a LATAM university has `92`% student AI use and no published policy.
+
+| layer | component | grant | head |
+|---|---|---|---|
+| assessment engine | [`glacy/evolutIA`](https://github.com/glacy/evolutIA) | 🟢 `Apache-2.0` | `main` · `b291b9a` |
+| national-exam practice | [`Dramoscuello/simic`](https://github.com/Dramoscuello/simic) | 🟢 `Apache-2.0` | `main` · `9fc667a` |
+| school/SIS layer | [`Antonio-Neves/Gestao-Escolar`](https://github.com/Antonio-Neves/Gestao-Escolar) | 🟢 `MIT` | `master` · `06c7771` |
+| abstention pattern | [`xsx11223/zhibuzhi`](https://github.com/xsx11223/zhibuzhi) *(read, don't deploy)* | 🟢 `Apache-2.0` | `master` · `a4d66c1` |
+| human commit | `compose/code/grading-draft-gate` *(carried)* | — | — |
+
+**Wiring.** `evolutIA` is the LLM + RAG scoring engine for science and engineering, **written in Spanish**, which removes the prompt-localisation tax on a Spanish-language engagement. `simic` supplies the item-bank and analysis shape against a named national examination *(Colombia's ICFES Saber 11)* — reuse its generation/administration/analysis split even where the exam differs. `Gestao-Escolar` *(pushed `2026-10-12`)* is the Portuguese-language enrolment and records layer for a Brazilian deployment. 🟢 **Borrow one idea from `zhibuzhi` without deploying it: open with a calibrated statement of what the system does not yet know about the learner.** That converts the hardest objection — *"it will grade my students wrongly"* — into a visible, measurable property.
+
+🔴 **What breaks.** `evolutIA` is `1`★ and `simic` is `2`★ and dormant since `2026-07-23`; both are fork bases. 🔴 **No ENEM (Brazil) or EXANI (Mexico) counterpart to `simic` surfaced on this pass's channel** — that is a channel result, not an absence, so budget item-bank work for those jurisdictions.
+
+🟢 **Ship the policy artefact as a deliverable, not a by-product:** an institutional AI-use policy, per-course disclosure text, a student appeal route, and the draft-gate's audit log. 🔵 **Against SEP/ANUIES recommendations that are explicitly non-binding, the institution's own published policy IS the compliance object — and the same artefact is reusable in EMEA, where assessment sits in the EU AI Act's high-risk tier.**
+
+### 🟢 `P237-E` — EMEA: statutory report-card drafting for North Rhine-Westphalia *(8–10 weeks)*
+
+**The ask it answers:** a German state education authority wants AI-assisted **Zeugnisse** drafting that a teacher signs.
+
+| layer | component | grant | head |
+|---|---|---|---|
+| system of record | the `svws-nrw` estate *(carried, p234)* | 🟢 `10` × `BSD-3-Clause` + `1` × `MIT` | *(carried cells)* |
+| statutory output | [`schild-report/schild.report`](https://github.com/schild-report/schild.report) | 🟢 `MIT` | `master` · `bae5a22` |
+| literacy obligation | [`telekom/ki-in-schulen`](https://github.com/telekom/ki-in-schulen) | 🟢 `MIT` | `master` · `a258b91` |
+| OER language layer | [`wort-schule/wort.schule`](https://github.com/wort-schule/wort.schule) | 🟢 `MIT` | `main` · `420ac8d` |
+| human commit | `compose/code/grading-draft-gate` *(carried)* | — | — |
+
+**Wiring.** The carried `svws-nrw` estate holds the pupil data; `schild.report` already knows how to render a **statutory NRW report card** to PDF — 🟢 **that template is the expensive part and it is `MIT`.** Put the model behind the draft gate so every generated comment is a draft a teacher commits, and keep the generated text and the committed text both in the audit log. Use `telekom/ki-in-schulen` to discharge the **EU AI Act Article 4 AI-literacy duty** for staff — 🔵 **that obligation applies to deployers now, ahead of the Annex III machinery, and it is the cheapest part of the Act to satisfy with something that already exists.** `wort.schule` supplies the inclusive-OER German language layer where differentiated feedback is needed.
+
+🔴 **What breaks.** `schild.report` has been dormant since `2023-02-03` and `schild` is the system `svws-nrw` **succeeded** — so the rendering templates are the asset and the data plumbing must come from the carried estate, not from `schild.report`'s own. 🟡 **Its `LICENSE` reads `Copyright (c) hmt` with no year** *(see [`p237-grant-payload-shapes`](code/p237-grant-payload-shapes/README.md))*: the grant is `MIT` and sound, but a client's legal review will ask, so have the answer ready. 🔴 **`BSD-3-Clause` in the `svws-nrw` estate carries an attribution obligation** — it must appear in the deliverable's notices, which `MIT`-only recipes do not need.
+
+### 🟡 `P237-F` — the gate that should run BEFORE any of the above, and before any supply claim
+
+🔴 **p237's whole result came from one change of instrument, and the lesson generalises into a pre-flight check.** Before telling a client what open source exists in their vertical and region:
+
+1. 🟢 **Run the supply query on the REST channel with a server-side licence filter, in the client's OWN language.** `license:mit` / `license:apache-2.0` are expressible there and are not expressible in web search. Measured this pass: `0` education agents from seven passes of English web search; `8` from one Chinese REST query.
+2. 🟢 **Use a script or a word English does not share.** Kanji, hangul, `escolar`, `Schule` all isolated their corpus. 🔴 **`éducation` did NOT** — GitHub folds diacritics, so it returned the English corpus topped by `ossu/computer-science` at `210k`★ *(`ACTION UV`)*. For French, Italian or Dutch, use a `topic:`, a national standard's name, or a statute instead.
+3. 🟢 **For a region whose language IS English, bind to a statute or a standard rather than a region word.** `FERPA license:mit` and `OneRoster license:apache-2.0` both place a repository in US jurisdiction by construction. The region word returns enterprise IT press.
+4. 🟢 **Screen every candidate against what you already hold** — `make carried SLUG=owner/repo` — **before** drafting the row. Measured: `0`% rediscovery on the non-English channel, `30`% on the English one, `45`% on web search.
+5. 🟢 **Read every grant first-hand from `raw.githubusercontent.com` at the DEFAULT branch**, which is not always `main`: this pass alone found `company_server`, `public-release`, `LPS`, `19.0` and `sistema`. Then classify with `osi_family_of`, never with a probe written for the occasion — 🔴 **an ad-hoc probe in this very pass reported `GPL` for an `LGPL-3.0` platform** *(`ACTION UW`)*.
+6. 🟢 **Run `make claims TOKEN=x` before publishing any *"there is no X"*.** This pass ran it on `FERPA`, `OneRoster`, `Ed-Fi`, `North America`, `marimo`, `evolutIA`, `neispy` and `POMDP`; the first five came back **`ALREADY CLAIMED`** and changed how three sections were written.
 
 ## Pass 236 — 2026-10-16 — THREE RECIPES, AND THE FIRST ONE ONLY EXISTS BECAUSE A FROZEN REPOSITORY TURNED OUT TO BE `MIT`
 

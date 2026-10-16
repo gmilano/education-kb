@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 237 — 2026-10-16 — `ACTION US` IS DISCHARGED AND IT PAYS FOR ITSELF IMMEDIATELY: THE **LICENCE-FILTERED REST CHANNEL** RETURNS `12` EDUCATION AI AGENTS IN ONE PASS, AND `0` OF THE `25` NON-ENGLISH ROWS IT DREW WERE ALREADY CARRIED
+
+⏱️ **SIXTH pass of `2026-10-16`** *(p232–p236 all carry this date)*.
+
+🟢 **`12` new agent rows, every one grant-read first-hand, across `4` regions.** 🟢 **`ACTION US` — p236's *"move supply discovery to REST"* — discharged.** 🟢 **`ACTION UN` discharged, and it OVERTURNS p236's own conclusion.** 🟢 **`ACTION UM` discharged.** 🔴 **The mandated query fails for the SEVENTH consecutive pass.** 🔴 **`ACTION UB` attempted and NOT dischargeable from this session — the reason is measured, not guessed.**
+
+🔵 **Evidence:** [`p237-verified-rows`](../evidence/p237-verified-rows.2026-10-16-p237.tsv) *(38 slugs, grant + head SHA + region basis)* · [`p237-rest-licence-channel`](../evidence/p237-rest-licence-channel.2026-10-16-p237.tsv) · [`p237-maven-ub-probe`](../evidence/p237-maven-ub-probe.2026-10-16-p237.tsv)
+
+### 🔴 `T237-A` — p236's conclusion about APAC was a CHANNEL ARTEFACT, and this pass has the counter-measurement
+
+p236 closed with this, in bold: *"The constraint on APAC education supply is not that the repositories are absent — they are there, and the English queries were simply never going to find them — it is that they are **overwhelmingly ungranted**. `7` of the `9` carry no licence at all."*
+
+🔴 **That is now withdrawn as a supply claim.** It was true of the **channel** p236 used — web search, where a licence filter is not expressible — and false of the field. `ACTION UN` asked for the same two languages on the REST channel, where the filter is server-side. The result:
+
+| channel | licence filter | CJK queries | repositories offered | granted | p237 verified granted first-hand |
+|---|---|---|---|---|---|
+| web search *(p236)* | 🔴 not expressible | `2` | `11` | 🔴 **`2`** | — |
+| REST *(p237, `ACTION UN`)* | 🟢 server-side | `5` | 🟢 **`642` by `total_count`** | 🟢 **all of them, by construction** | 🟢 **`19`/`19`** |
+
+🔵 **A licence filter that cannot be expressed is not a weak filter — it inverts the sample.** Web search ranks on prose, so it surfaces the ungranted long tail of coursework repositories; the REST filter ranks granted repositories only. p236 measured its instrument and reported the field.
+
+### 🟢 `T237-B` — the `12` new agent rows
+
+**APAC (`9`)** — every placement **evidenced** from the payload, never from an org handle:
+
+| agent | grant | ★ | forks | created | head | what it is |
+|---|---|---|---|---|---|---|
+| [`HanJun27/-LLM-AI-agent-Management-System-`](https://github.com/HanJun27/-LLM-AI-agent-Management-System-) | 🟢 **`MIT`** — `LICENSE` at `main`, holder *Zijin College System Contributors*, © 2026 | **54** | 8 | `2026-05-08` | `main` · `ab5e8ed` | 🟢 **The largest of them.** Natural-language → school database: student/staff/class query, statistics and **write** operations over Spring Boot + MyBatis + MySQL, with intent recognition and parameter extraction, bound to Zhipu and DeepSeek. Vue 3 + TypeScript + Vite front end |
+| [`Lu-Yu-Zhen/KongMeng-Agent`](https://github.com/Lu-Yu-Zhen/KongMeng-Agent) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` *(🔴 **UTF-8 BOM before the title**; see `T237-F`)* | **2** | 0 | `2026-08-04` | `main` · `579864c` | **Dual-end desktop agent for K-12 on Electron + LangGraph**: a student end and a separate teacher **lesson-preparation** agent. 🔵 The two-sided split is the shape a district actually buys, and no other row on this shelf has it |
+| [`AI123-cmd/education-agent`](https://github.com/AI123-cmd/education-agent) | 🟢 **`Apache-2.0`** — `LICENSE` at `master` | **1** | 0 | `2026-10-14` | `master` · `758e0a0` | Multi-agent personalised learning for higher education on LangChain + LangGraph, organised around **cognitive apprenticeship**. 🔴 **Two days old** — taken as a row because its grant and tree were read, flagged as pre-alpha |
+| [`503496348-ops/herpeakgem`](https://github.com/503496348-ops/herpeakgem) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | **3** | 1 | `2026-06-18` | `main` · `5d63827` | Agent-driven personalised-learning system; topics declare `ai-agent`, `education`, `personalized-learning` on the repository itself |
+| [`xsx11223/zhibuzhi`](https://github.com/xsx11223/zhibuzhi) | 🟢 **`Apache-2.0`** — `LICENSE` at `master` | **0** | 0 | `2026-08-09` | `master` · `a4d66c1` | 🔵 **The most interesting idea on this shelf and the smallest repository on it.** Formalises end-of-term exam planning as a **POMDP** where *setting a question is an observation action* — i.e. it models what it does not know about the student and says so first. Topics: `ai-agent`, `education`, `learning-analytics`, `pomdp` |
+| [`karsh482/Gaokao`](https://github.com/karsh482/Gaokao) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | **1** | 0 | `2026-06-08` | `main` · `b4f0847` | RAG + agent + **NL2SQL** + query routing over one province's Gaokao data, and it includes **education-agent evaluation**. 🟢 Relevant beyond its size: an eval harness is the thing p232–p236 recorded as missing from this field |
+| [`hanqiaoculture-sudo/HanQiao-GOAI`](https://github.com/hanqiaoculture-sudo/HanQiao-GOAI) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | **1** | 0 | `2026-08-16` | `main` · `e2c9276` | Multi-agent workbench for study-in-China applications: document pre-screening, essay collaboration, **and an explicit human-confirmation step**. 🔵 That step is the EU-AI-Act-shaped control this KB keeps recommending, built in by a team that was not aiming at it |
+| [`sumo1/AI-GAME-COOL`](https://github.com/sumo1/AI-GAME-COOL) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | **6** | 0 | `2025-09-03` | `main` · `fc98ed6` | Natural language → a playable children's educational game in one shot; pluggable agent architecture, Java + React, bound to Alibaba Bailian |
+| [`Liu-Bot24/course-navigator`](https://github.com/Liu-Bot24/course-navigator) | 🟢 **`MIT`** — `LICENSE` at `main`, holder *Liu-Bot24*, © 2026 | **32** | 4 | `2026-05-04` | `main` · `a31708a` | Video-course workspace: subtitle extraction, **ASR correction**, AI study-note generation. Tauri desktop. 🟡 The ASR-correction limb is the reusable part |
+
+**North America (`4`)** — 🟢 **placed by STATUTE binding, not by a region word.** A repository that binds **FERPA** or **COPPA** is in US jurisdiction by construction:
+
+| agent | grant | ★ | created | head | what it is |
+|---|---|---|---|---|---|
+| [`CSOAI-ORG/coppa-ferpa-mcp`](https://github.com/CSOAI-ORG/coppa-ferpa-mcp) | 🟢 **`MIT`** — `LICENSE` at `main`, holder *MEOK AI Labs*, © 2026 | **1** | `2026-05-14` | `main` · `f9278e7` | 🟢 **An `MCP` server that exposes children's-privacy compliance as tools** — COPPA, FERPA, UK AADC. Pushed `2026-10-08`. 🔵 **This is the compliance limb of every recipe on `compose/patterns.md` as a server rather than as prose** |
+| [`ljchang/marimo-grader`](https://github.com/ljchang/marimo-grader) | 🟢 **`MIT`** — `LICENSE` at `main`, holder *Luke Chang*, © 2026 | **1** | `2026-09-11` | `main` · `0c40fb8` | Multi-tenant, FERPA-appropriate grading service for `marimo` notebooks, with **Dartmouth SSO** — i.e. a real institution's identity provider, which is what places it |
+| [`chiv-heng/ferpa-guard`](https://github.com/chiv-heng/ferpa-guard) | 🟢 **`MIT`** — `LICENSE` at `public-release`, holder *Chiv Heng*, © 2026 | **1** | `public-release` · `4002924` | A FERPA guard. 🟡 **Its default branch is `public-release`, not `main`** — recorded because `p230`'s harvester keys on the default branch and a hard-coded `main` would have read it as absent |
+| [`lEWFkRAD/onyx-chalkline`](https://github.com/lEWFkRAD/onyx-chalkline) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | **0** | `2026-09-03` | `main` · `028062a` | Teacher-led learning workspace binding **Canvas LMS + OneRoster**; topics `canvas-lms`, `oneroster`, `classroom-assessment`, `edtech` |
+
+**LATAM (`1`)** — and it is the row the LATAM asymmetry has been missing:
+
+| agent | grant | ★ | created | head | what it is |
+|---|---|---|---|---|---|
+| [`glacy/evolutIA`](https://github.com/glacy/evolutIA) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | **1** | `2025-12-13` | `main` · `b291b9a` | 🟢 **An LLM + RAG automated-assessment engine for higher education in science and engineering, written in Spanish, with `automated-assessment` and `edtech` declared as repository topics.** Pushed `2026-07-08`. 🔵 **p235 established LATAM supply is not zero; this is the first LATAM row that is an ASSESSMENT agent, which is the exact function three jurisdictions regulated in 2026** |
+
+### 🔴 The mandated query, run verbatim — SEVENTH consecutive failure
+
+`"top open source AI agents education 2026 github MIT"` → **`0` education agents.** It returned `microsoft/ai-agents-for-beginners` *(a course **about** agents)*, `pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`, and the general-purpose tier — Hermes Agent, Aider, Cline, CrewAI, AutoGen, LangGraph. 🟡 **`ACTION UC` stands and is seven-for-seven.**
+
+🟢 **What replaced it this pass is not a rewording, it is a different channel**, and the contrast is the measurement: `教育 agent license:apache-2.0` returned `14` repositories of which **`8` are education-specific AI agents**. 🔵 **Seven passes of an English web query returned `0`; one Chinese REST query with a licence filter returned `8`.**
+
+### 🟡 `T237-C` — the duplication rate is a property of the CHANNEL's LANGUAGE, not of this KB's reach
+
+p235 and p236 each measured a `45`% self-duplication rate and p236 called it *"this KB's steady-state rediscovery rate at its current reach"*. 🔴 **That interpretation is wrong, and this pass separates the variable:**
+
+| channel | slugs drafted | already carried | rate |
+|---|---|---|---|
+| non-English, licence-filtered REST *(ja/zh/ko/pt/es/de)* | **25** | 🟢 **`0`** | 🟢 **`0`%** |
+| English, licence-filtered REST *(`FERPA`, `OneRoster`)* | **10** | 🔴 **`3`** | 🔴 **`30`%** |
+| English web search *(p235, p236)* | `20` + `20` | `9` + `9` | 🔴 **`45`%** |
+
+🔵 **It is not reach. It is that every previous pass searched in English, so the English corpus is the part of the field this KB has already eaten.** The three English rediscoveries were [`chaz-clark/canvas-toolbox`](https://github.com/chaz-clark/canvas-toolbox), [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) and [`googleworkspace/oneroster-integration-conformance-tests`](https://github.com/googleworkspace/oneroster-integration-conformance-tests) — all three correctly refused by `ACTION UG`'s index, which is the instrument working.
+
+🟢 **`3` deliberate positive controls** — `chrisryugj/kordoc`, `openeducat/openeducat_erp`, `learningequality/kolibri` — **were all three refused as `CARRIED`**, so the `0`% above is a measured zero and not a broken screen.
+
+### 🟢 `T237-D` — `ACTION UM` discharged: the `hwp` limb is clear
+
+p236 shelved [`chrisryugj/schoolinfo-mcp`](https://github.com/chrisryugj/schoolinfo-mcp) and flagged that *"the useful half — the `hwp` parser — is a **second repository** (`kordoc`) whose grant this pass did **not** read."*
+
+🟢 [`chrisryugj/kordoc`](https://github.com/chrisryugj/kordoc) is **`MIT`** — `LICENSE` at `main`, holder *chrisryugj*, © 2026, head `b964335`. 🔵 **So a recipe may depend on the `hwp`→Markdown limb.** 🟡 Its star count was not read: it did not surface in any REST query this pass and `git ls-remote` does not carry one.
+
+### 🔴 `T237-E` — `ACTION UB` attempted, NOT dischargeable, and the instrument is why
+
+`ACTION UB` has stood since p234: open each remaining platform cell of p233's `V233-2` census — `org.sakaiproject`, `org.dspace`, `org.opencastproject`, `org.apereo`, `org.jasig`, `org.kuali`. This pass probed all six, with controls, and **published nothing about them**, because `p233-maven-channel`'s classifier refuses the reading. It is right to.
+
+| order | path | http | body | verdict |
+|---|---|---|---|---|
+| 1 | `com/google/` *(POSITIVE CONTROL)* | `429` | 96 B *("Your ip has exceeded rate limits")* | 🔴 `THROTTLED` |
+| 2 | `org/zzz-not-a-group-9f8e7d/` *(NEGATIVE CONTROL)* | `404` | 🟢 **554 B of nginx `404 Not Found`** | a **real miss**, documented |
+| 3–8 | the six `ACTION UB` subjects | `404` | 🔴 **1 byte each** | 🔴 `THROTTLED` |
+| 11 | `org/zzz-not-a-group-9f8e7d/` **re-probed** | `404` | 🔴 **1 byte** | 🔴 `THROTTLED` |
+
+🔴 **Row 11 is the measurement.** The **same url** that returned a 554-byte nginx document at order 2 returned **one byte** minutes later. 🔵 **So a one-byte `404` on this channel is not "a 404 that happens to be empty" — it is the throttle's own signature, and a real miss here is a 554-byte document.** `search.maven.org` and `central.sonatype.com`, the two alternative channels, are both refused by this session's egress proxy *(`connect_rejected`)*. 🟡 **`ACTION UB` therefore remains open with a stated reason: one Maven channel is reachable from here and it is rate-limited below the resolution the claim needs.**
+
+🟢 **`ACTION UT` — and the instrument is already fixed.** `classify()` used to promote a one-byte `404` to `ABSENT` whenever a control had passed. 🔴 **That is exactly how six education groupIds become six published absences.** The ladder is now three-state, strictly more conservative in both directions, and the control still decides — it just decides on the band where it legitimately can:
+
+- `404` + body ≤ `8` B → **`THROTTLED`**, whatever the control says *(new)*
+- `404` + a real error document, **no** control → **`NOT-ESTABLISHED`** *(was `ABSENT`)*
+- `404` + a real error document + a control that passed in the window → `ABSENT`
+
+🟢 `19`/`19` controls pass; the property test that asserted the old behaviour was **corrected rather than deleted**, with p237's measurement written beside it.
+
+### 🟡 `T237-F` — three grants whose FRAME is the defect, and one of them could have cost a verdict
+
+Every row above was grant-read first-hand. Three payloads are correctly licensed and wrong-shaped:
+
+| payload | defect | consequence |
+|---|---|---|
+| [`Lu-Yu-Zhen/KongMeng-Agent`](https://github.com/Lu-Yu-Zhen/KongMeng-Agent) | 🔴 **UTF-8 BOM (`ef bb bf`) before `Apache License`** | a classifier anchored on a **prefix** reads three invisible bytes and falls through. 🟢 `osi_family_of` anchors on a **substring**, so it returns `Apache-2.0` — **verified, not assumed, before the row was published** |
+| [`telekom/ki-in-schulen`](https://github.com/telekom/ki-in-schulen) | 🟡 **no copyright line at all** | a correct `MIT` with **no holder to print** |
+| [`schild-report/schild.report`](https://github.com/schild-report/schild.report) | 🟡 **`Copyright (c) hmt`** — holder, no year | the field exists, is readable, and is undated |
+
+🔵 **p235 found `GPL-2.0` has no holder field to read. These two show the field can be absent, or present and undated, inside a licence that does have one — so "no holder printed" is three different facts and these shelves had one word for it.** 🟢 **`ACTION UU` discharged as [`p237-grant-payload-shapes`](../compose/code/p237-grant-payload-shapes/README.md)** — the three real payloads kept as fixtures, `9` controls, standing in `make gate-offline`. The BOM fixture's test fails if it ever stops demonstrating the prefix hazard, so it cannot quietly go stale.
+
+### 🔴 Carried actions, and the one this pass could not run
+
+- 🟢 **`ACTION US` DISCHARGED** *(p236)* — supply discovery moved to REST. It produced `12` agent rows and `0` rediscoveries where web search produced `1` row and `9` rediscoveries.
+- 🟢 **`ACTION UN` DISCHARGED** *(p236)* — and it overturned the pass that registered it.
+- 🟢 **`ACTION UM` DISCHARGED** *(p236)* — `kordoc` is `MIT`.
+- 🔴 **`ACTION UB` OPEN, with a measured reason** *(p234, fourth pass)* — not dischargeable from this session; see `T237-E`.
+- 🟡 **`ACTION UC` stands, seven-for-seven** — the mandated wording is the defect. 🔵 **p237 adds the stronger finding: it is not only the wording, it is the CHANNEL and the LANGUAGE.**
+- 🔴 **`ACTION TQ` NOT RUN** *(fifth pass, and it says so)*. 🔴 **`ACTION TW` NOT RUN** *(fifth pass)*.
+- 🟡 **`ACTION UV`** *(new)*: 🔴 **`éducation license:mit` returned `15 970` results topped by `ossu/computer-science` (`210k`★).** GitHub folds diacritics, so that query read the **English** corpus and **French was never isolated**. Every non-English result this pass came from a script or a word English does not share — kanji, hangul, `escolar`, `Schule`. 🔵 **A language whose education vocabulary is ASCII-foldable into English needs a different handle: a `topic:`, a TLD, or a national standard's name.** French, Italian and Dutch supply are therefore **unmeasured**, not absent.
 
 ## Pass 236 — 2026-10-16 — `ACTION UL` IS DISCHARGED ON ITS FIRST RUN AND IT ENDS APAC'S INFERRED-REGION PROBLEM: A `MIT` KOREAN **MCP SERVER** WITH `topic:korea` ON THE REPOSITORY ITSELF
 

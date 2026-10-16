@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — p237 — the week's agent news is that **seven passes of the mandated query returned `0` education agents and one Chinese REST query returned `8`**
+
+🟢 **`ACTION US` discharged** *(p236: "move supply discovery to REST")*. 🟢 **`ACTION UN` discharged, and it overturns the pass that registered it.** 🟢 **`12` new agent rows promoted to [`agents/top.md`](top.md), across `4` regions, every grant read first-hand at a pinned head.**
+
+🔵 **Evidence:** [`p237-rest-licence-channel`](../evidence/p237-rest-licence-channel.2026-10-16-p237.tsv) · [`p237-verified-rows`](../evidence/p237-verified-rows.2026-10-16-p237.tsv) · [`p237-maven-ub-probe`](../evidence/p237-maven-ub-probe.2026-10-16-p237.tsv)
+
+### 🔴 The correction to last week, stated first because it is this week's most useful output
+
+p236 concluded that APAC education repositories are *"overwhelmingly ungranted — `7` of the `9` carry no licence at all."* 🔴 **Withdrawn as a supply claim.** p236 measured **web search**, where `license:mit` is not expressible, so it ranked the ungranted long tail of coursework repositories. On the REST channel, where the filter is server-side: `学校管理 license:mit` → **`302`**, `학교 license:mit` → **`134`**, `교육 license:mit` → **`118`**, `学校管理 license:apache-2.0` → **`74`**, `教育 agent license:apache-2.0` → **`14`**. 🟢 **`19` APAC rows verified granted and live, `19`/`19`.** 🔵 **What is true and reproducible is the channel result, per `ACTION UK`: web search returned `2` granted of `11`; the licence-filtered REST channel returns granted repositories only.**
+
+### 🟢 Promoted to `agents/top.md` — APAC (`9`)
+
+- [`HanJun27/-LLM-AI-agent-Management-System-`](https://github.com/HanJun27/-LLM-AI-agent-Management-System-) — 🟢 **`MIT`**, `54`★, `8` forks, `main` `ab5e8ed`, created `2026-05-08`, pushed `2026-10-13`. Natural language → school database: query, statistics **and writes** over Spring Boot + MyBatis + MySQL, intent recognition and parameter extraction, bound to Zhipu and DeepSeek. 🟢 **The largest new agent row this pass.**
+- [`Lu-Yu-Zhen/KongMeng-Agent`](https://github.com/Lu-Yu-Zhen/KongMeng-Agent) — 🟢 **`Apache-2.0`**, `2`★, `main` `579864c`, pushed `2026-10-13`. Electron + LangGraph, **a student end and a separate teacher lesson-prep end**. 🔵 The two-sided split is the shape a district buys.
+- [`xsx11223/zhibuzhi`](https://github.com/xsx11223/zhibuzhi) — 🟢 **`Apache-2.0`**, `0`★, `master` `a4d66c1`. 🔵 **Formalises end-of-term planning as a POMDP in which setting a question is an observation action, and opens by telling the student how much it does not know about them.** Smallest repository, best idea.
+- [`karsh482/Gaokao`](https://github.com/karsh482/Gaokao) — 🟢 **`Apache-2.0`**, `1`★, `main` `b4f0847`. RAG + agent + **NL2SQL** + query routing over provincial Gaokao data, **including education-agent evaluation** — the eval harness p232–p236 recorded as missing.
+- [`hanqiaoculture-sudo/HanQiao-GOAI`](https://github.com/hanqiaoculture-sudo/HanQiao-GOAI) — 🟢 **`Apache-2.0`**, `1`★, `main` `e2c9276`. Multi-agent study-in-China application workbench with an explicit **human-confirmation step**.
+- [`AI123-cmd/education-agent`](https://github.com/AI123-cmd/education-agent) — 🟢 **`Apache-2.0`**, `1`★, `master` `758e0a0`, 🔴 **created `2026-10-14`, two days old.** LangChain + LangGraph multi-agent higher-ed personalised learning on cognitive apprenticeship.
+- [`503496348-ops/herpeakgem`](https://github.com/503496348-ops/herpeakgem) — 🟢 **`Apache-2.0`**, `3`★, `main` `5d63827`. `ai-agent` + `education` + `personalized-learning` declared on the repository.
+- [`sumo1/AI-GAME-COOL`](https://github.com/sumo1/AI-GAME-COOL) — 🟢 **`Apache-2.0`**, `6`★, `main` `fc98ed6`. Natural language → a playable children's educational game; pluggable agent architecture.
+- [`Liu-Bot24/course-navigator`](https://github.com/Liu-Bot24/course-navigator) — 🟢 **`MIT`**, `32`★, `main` `a31708a`. Subtitle extraction, **ASR correction**, AI study notes; Tauri.
+
+### 🟢 Promoted — North America (`4`), placed by STATUTE rather than by a region word
+
+🔵 **The method is this week's second finding: a repository that binds `FERPA` or `COPPA` is in US jurisdiction by construction, so `FERPA license:mit` gives evidenced NA placement with no region keyword at all.**
+
+- [`CSOAI-ORG/coppa-ferpa-mcp`](https://github.com/CSOAI-ORG/coppa-ferpa-mcp) — 🟢 **`MIT`**, `main` `f9278e7`, pushed `2026-10-08`. 🟢 **An MCP server exposing COPPA/FERPA/UK-AADC checks as tools** — the first row here where the compliance limb is a server, not a paragraph.
+- [`ljchang/marimo-grader`](https://github.com/ljchang/marimo-grader) — 🟢 **`MIT`**, `main` `0c40fb8`. Multi-tenant FERPA-appropriate grading for `marimo` notebooks, **Dartmouth SSO**.
+- [`chiv-heng/ferpa-guard`](https://github.com/chiv-heng/ferpa-guard) — 🟢 **`MIT`**, 🟡 default branch **`public-release`** · `4002924`.
+- [`lEWFkRAD/onyx-chalkline`](https://github.com/lEWFkRAD/onyx-chalkline) — 🟢 **`Apache-2.0`**, `main` `028062a`. Canvas LMS + OneRoster teacher workspace.
+
+### 🟢 Promoted — LATAM (`1`), and it is the row the region's asymmetry needed
+
+- [`glacy/evolutIA`](https://github.com/glacy/evolutIA) — 🟢 **`Apache-2.0`**, `main` `b291b9a`, pushed `2026-07-08`. LLM + RAG **automated assessment** for higher education in science and engineering, in Spanish, with `automated-assessment` and `edtech` as repository topics. 🔵 **Assessment is the function three jurisdictions regulated in 2026.**
+
+### 🟡 The duplication rate, and the interpretation p236 got wrong
+
+p236 called `45`% *"this KB's steady-state rediscovery rate at its current reach."* 🔴 **It is not reach — it is the query language**, and this pass separates the variable: non-English licence-filtered REST **`0`/`25` = `0`%** · English licence-filtered REST **`3`/`10` = `30`%** · English web search **`9`/`20` = `45`%**. 🟢 **`3` deliberate positive controls** *(`chrisryugj/kordoc`, `openeducat/openeducat_erp`, `learningequality/kolibri`)* **were all refused as `CARRIED`**, so the zero is measured, not a broken screen.
+
+### 🔴 And the mandated query, for the record — SEVENTH consecutive failure
+
+`"top open source AI agents education 2026 github MIT"` → **`0` education agents.** Returned `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources` and the general-purpose tier *(Hermes Agent, Aider, Cline, CrewAI, AutoGen, LangGraph)*. 🟡 **`ACTION UC` is seven-for-seven and the diagnosis is upgraded: it is not only the wording, it is the channel and the language.**
+
+### 🟡 Standing gaps, re-stated honestly this week
+
+🟢 **`ACTION UM` DISCHARGED** — [`chrisryugj/kordoc`](https://github.com/chrisryugj/kordoc) is **`MIT`**, `main` `b964335`, so p236's `hwp` limb is clear for recipes · 🟢 **`ACTION UN`, `ACTION US` DISCHARGED** · 🟢 **`ACTION UU` DISCHARGED** as [`p237-grant-payload-shapes`](../compose/code/p237-grant-payload-shapes/README.md) *(a UTF-8 BOM before `Apache License`, a holderless `MIT`, a year-less `MIT` — `9` controls, standing in `make gate-offline`)* · 🟢 **`ACTION UT` DISCHARGED**: `p233-maven-channel`'s classifier no longer promotes a one-byte `404` to `ABSENT` when a control passes, because the same url returned `554` bytes and then `1` byte minutes apart · 🔴 **`ACTION UB` OPEN with a measured reason, fourth pass** — `repo1.maven.org` is rate-limited below the needed resolution and `search.maven.org`/`central.sonatype.com` are refused by this session's proxy · 🔴 **`ACTION TQ` NOT RUN** *(fifth pass)* · 🔴 **`ACTION TW` NOT RUN** *(fifth pass)* · 🟡 **`ACTION UV`** *(new)*: French, Italian and Dutch supply is **UNMEASURED, not absent** — GitHub folds diacritics, so `éducation license:mit` read the English corpus and returned `ossu/computer-science` at `210k`★ · 🟡 **`ACTION UW`** *(new)*: no grant cell may come from a probe written for one pass — one did this pass and reported `GPL` for an `LGPL-3.0` platform · 🟡 **`ACTION UX`** *(new)*: query APAC education policy by ministry name *(MEXT, MOE Singapore, ACARA, India's NEP)*, because the region word returns enterprise IT press.
 
 ## 2026-10-16 — p236 — the week's new agent signal is **Korean**, and it only appeared because a query was finally run in Korean
 

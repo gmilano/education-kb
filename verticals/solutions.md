@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 237 — 2026-10-16 — THE MANDATED PLATFORM QUERY NAMED `OpenEduCat` AND COULD NOT STATE ITS LICENCE; THIS PASS READ IT, AND IT IS **`LGPL-3.0`** — WEAK COPYLEFT, WHICH IS A THIRD ANSWER THIS SHELF HAD NO COLUMN FOR
+
+🟢 **`5` new platform rows, `1` published licence correction, and the largest of the new rows is `6` years dormant and said so before it was shelved.**
+
+🔵 **Evidence:** [`p237-verified-rows`](../evidence/p237-verified-rows.2026-10-16-p237.tsv) · [`p237-rest-licence-channel`](../evidence/p237-rest-licence-channel.2026-10-16-p237.tsv)
+
+### 🟢 `V237-1` — `OpenEduCat`, read at the grant rather than described
+
+The mandated query `"open source platform education ERP CRM MIT Apache"` named **OpenEduCat** *(the education module set on Odoo)* and **Apache OFBiz**, and its own summary said it **could not confirm OpenEduCat's licence**. 🟢 **So this pass read it:**
+
+| platform | grant, read first-hand | head | what it means for a studio |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **`LGPL-3.0`** — `LICENSE` at branch `19.0`; the file's own first line is *"For copyright information, please see the COPYRIGHT file"*, and the text is the **GNU LESSER** General Public License v3 | `19.0` · `46a5d7d` | 🟡 **Weak copyleft, which is neither of the two answers this shelf has been giving.** You may build and ship **separate modules** against it without relicensing your own code; you may **not** fork `openeducat_erp` itself into a closed product. 🔵 **For an Odoo-shaped engagement that is usually the right side of the line — Odoo's own module model is exactly "separate addon" — and it is a materially different answer from `AGPL`, where the network-use clause reaches a hosted deployment** |
+
+🔴 **A correction to this pass's own working note.** An ad-hoc probe written for this run ordered its `GNU GENERAL PUBLIC` test before its `GNU LESSER` test and therefore reported **`GPL`**. 🟢 **The KB's own classifier, `lib/license_family.sh`, returns `LGPL-3.0`, and the published cell is the classifier's.** 🔵 **Recorded because the direction of the error is the dangerous one: it over-reports the restriction, and an over-restrictive cell gets a usable platform struck off a shortlist just as surely as an under-restrictive one gets a studio sued.** 🟡 **`ACTION UW`: no grant cell on these shelves may come from a probe written for one pass. `osi_family_of` is the authority, and it is already in `make gate-offline`.**
+
+### 🟡 `V237-2` — the APAC platform tier, with its dormancy on the row rather than in a footnote
+
+`学校管理 license:apache-2.0` returned **`74`**. Its top rows are the Chinese-language platform estate, and the largest is also the stalest:
+
+| platform | grant | ★ | forks | last push | head | what it is |
+|---|---|---|---|---|---|---|
+| [`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) | 🟢 **`Apache-2.0`** — `LICENSE` at `master` | **292** | 110 | 🔴 **`2020-04-22`** | `master` · `21d6a41` | 🟢 **The largest permissive school academic-affairs platform on this shelf by stars**, self-described as the first open-source one in China: students, grades, teachers, grade lookup, site layout. PHP. 🔴 **Six years and five months without a push.** 🔵 **Shelved anyway, and this is why: `292`★/`110` forks of `Apache-2.0` PHP is a *fork base*, not a dependency. The honest cell reads "adopt the code, do not expect the project"** |
+| [`373675032/academic-report`](https://github.com/373675032/academic-report) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | **99** | 10 | 🔴 `2023-12-22` | `main` · `4297548` | Spring Boot academic-report/seminar management for Chinese universities. 🔴 Dormant. 🟡 A narrow module, which is what makes it liftable |
+| [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | **44** | 0 | 🟢 `2026-10-09` | `main` · `ce32cf8` | 🟢 **The one live row of the four, and the only one with a tenancy model worth copying:** platform → institution → **campus** → teacher/student, with the platform operator holding model selection and **billing policy**. Python. 🔴 **Seven days old and `0` forks** — the architecture is the asset, not the code. 🟡 **Name collision warning: it is NOT `HKUDS/DeepTutor`**, the carried `Apache-2.0` row this shelf has held since `p44` |
+| [`dromara/skyeye`](https://github.com/dromara/skyeye) | 🟢 **`MIT`** — `LICENSE` at `company_server`, holder *智能制造云办公*, © 2024 | **1230** | 300 | 🟢 `2026-10-15` | 🟡 `company_server` · `dc72fc6` | 🟡 **Not an education platform — an `MIT` OA/ERP/CRM suite from the `dromara` OSS foundation that names schools as a target deployment** alongside hospitals and SMEs, with Activiti 5.22 dynamic forms, attendance, approvals, timetabling. 🟢 **Shelved as the *administrative* half a school ERP needs and the education-specific rows do not have.** 🔴 **Default branch is `company_server`, not `main`** |
+
+### 🟢 `V237-3` — LATAM: a national-examination vertical, which is a platform category this shelf did not have
+
+| platform | grant | head | region | what it is |
+|---|---|---|---|---|
+| [`Dramoscuello/simic`](https://github.com/Dramoscuello/simic) | 🟢 **`Apache-2.0`** — `LICENSE` at `main` | `main` · `9fc667a` | 🟢 **LATAM** *(evidenced: Spanish payload, binds **ICFES Saber 11**, the Colombian state examination)* | 🟢 **Generation, administration and analysis of Saber 11 mock examinations.** Vue. Created `2026-06-27`. 🔴 `2`★ and dormant since `2026-07-23`. 🔵 **Shelved because of the category, not the traction: a platform bound to a named national high-stakes examination is a procurement object in that country, and this shelf's LATAM entries were general-purpose school systems until now.** 🟡 The same shape exists for Brazil's ENEM and Mexico's EXANI and 🔴 **neither surfaced on this channel this pass** |
+
+### 🔵 The platform map, re-stated at the licence
+
+| posture | what it means for a studio | rows |
+|---|---|---|
+| 🟢 **permissive, live** | adopt and ship | `3yangyang9/DeepTutor-AILearning` *(7 days old)* · `dromara/skyeye` *(not education-specific)* |
+| 🟡 **permissive, dormant — a FORK BASE** | adopt the code, own the maintenance | `gongfuxiang/schoolcms` *(292★)* · `373675032/academic-report` · `Dramoscuello/simic` |
+| 🟡 **weak copyleft — module-safe** | build addons freely, do not fork the core closed | 🆕 `openeducat/openeducat_erp` **`LGPL-3.0`** |
+| 🔴 **strong copyleft** | the carried Moodle/Sakai/DSpace tier, unchanged this pass | — |
+
+🔴 **Declared gap, stated rather than left silent:** the mandated platform query returned **no** education-specific platform under `MIT` or `Apache-2.0` and said so; this pass's `5` permissive platform rows came from the **REST channel in Chinese and Spanish**, not from it. 🟡 **`ACTION US`'s division of labour holds on this shelf too: web search for market and regulation, REST for supply.**
 
 ## Pass 236 — 2026-10-16 — A PLATFORM THIS SHELF NEVER LISTED HAS BEEN **SWITCHED OFF**, AND THE REPLACEMENT MAP IS A COPYLEFT INCUMBENT PLUS TWO PERMISSIVE PROJECTS WITH `1` STAR BETWEEN THEM
 
