@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 245 — 2026-10-16 — A NEW FOUNDATION CLASS: THE **SKILLS LAB**, WHERE THE LEARNER'S WORK IS *RUNNING THE REAL TOOL* AND THE CONTENT IS A SIMULATOR — AND THE PASS'S WARNING IS THAT A `40 351`-STAR FOUNDATION'S `Apache-2.0` PAYLOAD IS **NOT THE CANONICAL TEXT**
+
+⏱️ **FOURTEENTH pass of `2026-10-16`.**
+
+🟢 **`6` new foundational rows, every grant read first-hand.** 🟢 **`15` `Apache-2.0` payloads diffed against `apache.org` and graded by a new instrument.** 🔴 **`3` of the `15` are NOT the canonical text, and two of those three are BYTE-IDENTICAL TO EACH OTHER under different copyright holders.** 🔵 Evidence: [`p245-verified-rows`](../evidence/p245-verified-rows.2026-10-16-p245.tsv) · [`p245-apache-variant`](../evidence/p245-apache-variant.2026-10-16-p245.tsv) · [`p245-queries`](../evidence/p245-queries.2026-10-16-p245.tsv) · **instrument:** [`compose/code/p245-apache-canonical/`](../compose/code/p245-apache-canonical/) *(25 controls, in `make hooks`)*
+
+### 🟢 `F245-A` — the skills-lab class: four foundations where the content is a **simulator**, not a course
+
+🔵 `topic:education license:apache-2.0 stars:>100 pushed:>2026-01-01` returned `total_count: 37`; `20` read. 🟢 **The four new rows are all simulator-or-game, and all `Apache-2.0`** — which is the licence Globant can build on, and is *not* the licence the finished education platforms carry *(see [`verticals/solutions.md`](../verticals/solutions.md): Moodle `GPL-3.0`, Open edX `AGPL`, OpenEduCat `LGPL-3.0`)*.
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | What it is |
+|---|---|---|---|---|
+| [`rohitg00/k8sgames`](https://github.com/rohitg00/k8sgames) | 🟡 `Apache-2.0` *(`10 764` B, **NON-CANONICAL** — see `F245-B`)* | **1 407** | `main` · `af5dbc19b3a4` | Learn Kubernetes by **playing**: deploy pods, fix `CrashLoopBackOff`, type real `kubectl` in a 3D browser game. No install |
+| [`google/codeworld`](https://github.com/google/codeworld) | 🟢 `Apache-2.0` *(`11 358` B, canonical)* | **1 270** | `master` · `bd2bbf122332` | Educational programming environment teaching **K-12 mathematics through functional programming** (Haskell/GHCJS), entirely in the browser |
+| [`robocode-dev/tank-royale`](https://github.com/robocode-dev/tank-royale) | 🟢 `Apache-2.0` *(`10 771` B, canonical — appendix replaced by a copyright line)* | **269** | `main` · `8bb5ba1f0bbc` | Robocode Tank Royale: learners write bots that battle, in Java/C#/Python. **The long-lived form of this class** |
+| [`zeborg/kubekosh`](https://github.com/zeborg/kubekosh) | 🟢 `Apache-2.0` *(`11 350` B, canonical)* | **241** | `main` · `b3f2a8229dc3` | Interactive Kubernetes playground with **CKA/CKAD/CKS/KCNA/KCSA exam labs** — cert-prep against a live cluster |
+
+🟢 **Why this is a foundation class and not a curiosity.** Everything else on this shelf delivers *content to a learner*: an LMS serves modules, a tutor agent explains, a course repository holds lessons. 🔵 **A skills lab does the opposite — it hands the learner the real tool in a disposable environment and grades the outcome.** That is the only form on these shelves that produces **demonstrated capability** rather than completion, and it maps directly onto the gap the `2026` trends leg names: *digital credentials moving from an emerging trend to workforce currency*, while [the credentials code axis holds no permissive implementation at all](../agents/top.md). 🔵 **A lab that can be observed is the evidence a credential is supposed to stand for.**
+
+🔴 **The boundary, stated:** all four teach *technology* skills. **None teaches a school subject.** `codeworld` is the nearest — K-12 maths, but through Haskell. This class is available to Globant for **corporate upskilling and certification practice today**, and an academic-subject lab would have to be built, not adopted.
+
+### 🟢 `F245-B` — `dbeley/cairn`: the offline campus server, made **declarative**
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | What it is |
+|---|---|---|---|---|
+| [`dbeley/cairn`](https://github.com/dbeley/cairn) | 🟢 `Apache-2.0` *(`11 358` B — **byte-identical to `apache.org`**)* | 1 | `master` · `55781a90b581` | **NixOS-native offline knowledge, AI and education server** — a declarative alternative to Project NOMAD |
+
+🔵 **The lineage.** [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) *(`40 351`★, `main` · `54ee30a44902`, **CARRIED**)* is an offline-first knowledge and education server: Wikipedia, thousands of books, courses, maps and **optional local AI**, on hardware you own, with no internet. 🟢 It is the most-starred row on these shelves by an order of magnitude and it answers the constraint that `p244` identified independently in two regions — **edge inference in the classroom**.
+
+🟢 **What `cairn` adds is reproducibility.** NOMAD is an application you install and then maintain by hand; `cairn` expresses the same server as a **NixOS configuration**, so a hundred school deployments are one declarative file and a rebuild, and a broken one rolls back. 🔵 **For a ministry-scale engagement that is the difference between a pilot and a fleet** — and it is the LATAM and APAC deployment constraint exactly: [`intel/market.md`](../intel/market.md) records Argentina at `75`% AI use in high-SES versus `42`% in low-SES households, which is a *connectivity and device* gap before it is a pedagogy gap.
+
+🔴 **`1` star.** It is an architecture worth copying, not a dependency worth pinning. 🟡 Two further NOMAD derivatives were read and are not carried: `Srinivasan-78/cairn` *(a TypeScript re-derivation, `0`★, `34` open issues)* and `Maisie-the-cat/nomad` *(`1`★, a description-only copy)*.
+
+### 🟢 `F245-C` — `CENIA-DEV/mvps-cenia`: the first **CENIA** code row, and the only LATAM observatory partner with any
+
+| Repo | 🟡 Grant *(bytes)* | ★ | ref · head | Region basis | What it is |
+|---|---|---|---|---|---|
+| [`CENIA-DEV/mvps-cenia`](https://github.com/CENIA-DEV/mvps-cenia) | 🟡 `Apache-2.0` *(`11 361` B, **NON-CANONICAL**: `the-Licensor`)* | 1 | `main` · `fccd7b382061` | `CENIA` = **Centro Nacional de Inteligencia Artificial**, Chile — a named UNESCO LAC Observatory partner | MVP monorepo of Chile's national AI centre |
+
+🔴 **And the census that found it is mostly a gap — written down because an unrun query and an empty one look identical.** UNESCO launched its **Observatory on AI in Education for Latin America and the Caribbean** in April `2026` with ECLAC, naming CAF, **CENIA** (Chile), **CETIC.br** (Brazil), **Tecnológico de Monterrey**, **ProFuturo** and **Fundación Ceibal** (Uruguay) as partners. This pass asked GitHub for each one's code:
+
+| Partner | Query | Result |
+|---|---|---|
+| **Fundación Ceibal** | `org:ceibal` | 🔴 **Validation Failed** — *"users and repositories cannot be searched"*. The org **does not resolve**. Not an absence of work: an absence of an **address** |
+| **ProFuturo** | `profuturo education in:name,description,readme` | 🔴 `total_count: 10`, all `10` read, **all unrelated** (profile READMEs, a hackathon entry, a Spanish CV course). **No discoverable code presence** |
+| **Tecnológico de Monterrey** | `org:TecdeMonterrey` | 🔴 `total_count: 3` — **a census, not a sample**: `lambda-practice`, `pagespeed-practice`, `SimpleAgenda`, all `2018`–`2019` teaching samples. **None AI, none education-product** |
+| **CENIA** | `cenia chile inteligencia artificial in:name,…` | 🟢 `total_count: 24`, `20` read → **the one row above**, plus two ungranted *(below)* |
+
+🟢 **So the finding is placeable:** the institutions driving LATAM AI-in-education policy **publish policy, not code**. 🔵 That is a structural opportunity rather than a dead end — an engagement in the region is not competing with an incumbent open-source stack, because there is none; it is supplying the implementation layer under a policy layer that already exists and already has convening power.
+
+🔴 **Two LATAM rows withheld, both ungranted, both worth an upstream-ask** *(all seven root licence paths `404` on each)*:
+
+| Repo | ★ | Why it matters | Remedy |
+|---|---|---|---|
+| [`Sysadmins-CENIA/Cluster-IALab-Docs`](https://github.com/Sysadmins-CENIA/Cluster-IALab-Docs) | 2 | 🔵 Operating documentation for Chile's **IALab cluster** — the region's compute-capacity record, in the open | **upstream-ask** |
+| [`ClaudioRojasMon/ia-educacion-recursos`](https://github.com/ClaudioRojasMon/ia-educacion-recursos) | 0 | 🔵 Topic `mineduc` — **the only Chilean-Ministry-of-Education-facing generative-AI framework found this pass**, and it is ungranted | **upstream-ask** |
+
+### 🔴 `F245-D` — the headline warning: `Apache-2.0` is the right FAMILY and `3` of `15` payloads are not the right TEXT
+
+🟢 `lib/license_family.sh::family_of` answers `Apache-2.0` for **all `15`** payloads read this pass. That is correct. 🔴 **And three of them are not the text at `https://www.apache.org/licenses/LICENSE-2.0.txt`** *(fetched this pass: `200`, `11 358` B)*.
+
+| Payload | Bytes | Verdict |
+|---|---|---|
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) *(`40 351`★)* | `10 779` | 🔴 `NON-CANONICAL:the-Licensor,received-by-the-Licensor,any-notices` |
+| [`rohitg00/k8sgames`](https://github.com/rohitg00/k8sgames) *(`1 407`★)* | `10 764` | 🔴 **the same three** |
+| [`CENIA-DEV/mvps-cenia`](https://github.com/CENIA-DEV/mvps-cenia) | `11 361` | 🟡 `NON-CANONICAL:the-Licensor` |
+| the other `12` *(incl. `oppia`, `CTFd`, `Numbas`, `Autolab`, `uPortal`, `codeworld`, `kubekosh`, `tank-royale`, `cairn`)* | — | 🟢 `CANONICAL` |
+
+🔴 **The two `NON-CANONICAL` triples are byte-identical to each other.** `diff` reports exactly one differing line:
+
+```
+178c178
+<    Copyright 2024-2026 Crosstalk Solutions LLC
+---
+>    Copyright 2026 Rohit Ghumare
+```
+
+🟢 **Two unrelated holders** — a US company and an individual — **ship the same reworded Apache text.** The three deviations:
+
+| Where | Canonical | These payloads |
+|---|---|---|
+| §1, the `Contribution` definition | `submitted to Licensor` | `submitted to **the** Licensor` |
+| §1, the `Contributor` definition | `received by Licensor` | `received by **the** Licensor` |
+| 🔴 **§4(d), the NOTICE condition** | `excluding **those** notices` | `excluding **any** notices` |
+
+🔴 **Why it is worth a studio's attention.** The §4(d) deviation sits **inside an operative redistribution condition** — the sentence stating what a Derivative Work must carry. The grant, conditions and limitations are otherwise intact, so this is **not** a licence trap and the repositories **are** usable. 🔵 **The cost lands at the OSS-review gate**: a scanner matching by exact text or payload hash — which is most SPDX tooling — returns `Apache-2.0 AND-modified` or `UNKNOWN` instead of a clean pass, and due-diligence stalls on a `40`k-star dependency at the worst possible moment. 🟢 **The remedy is cheap and it is to know in advance**: record the deviation, attach the canonical diff to the review, do not re-litigate it per engagement.
+
+🔵 **And the deviations are *paraphrase-shaped*** — an inserted article, `those`→`any`. That is what reproduction **from recall** looks like, not what copying a file looks like. 🟢 **So this will recur**, which is why it is now a control in `make hooks` rather than a note in prose.
+
+> 🔵 **`ACTION WY`** *(registered here)* — run `p245-apache-canonical` over every `Apache-2.0` row already carried on these shelves. This pass graded the `15` payloads it read; the shelves carry many more, and the measured base rate is `3`/`15`.
+
+🟡 **A control kept deliberately:** `robocode-dev/tank-royale` and `mlcommons/ck` **drop the instructional `APPENDIX`** and replace it with a real copyright line — which is what Apache's appendix *instructs the reader to do*. Both grade `CANONICAL`, and `tank-royale`'s payload is an in-tree fixture so that a later pass cannot "harden" this instrument into flagging ordinary practice.
+
 ## Pass 244 — 2026-10-16 — THE **PowerSchool** CLIENT LAYER IS THIS KB'S FIRST FOUNDATION FOR THE **US K-12 SYSTEM OF RECORD**, AND THE PASS'S WARNING IS THAT A VENDOR ESTATE'S APPS CAN BE `MIT` WHILE THE **SDK UNDERNEATH THEM IS UNGRANTED**
 
 ⏱️ **THIRTEENTH pass of `2026-10-16`.**

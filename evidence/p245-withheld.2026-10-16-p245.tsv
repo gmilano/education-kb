@@ -1,0 +1,10 @@
+# p245 - 6 rows WITHHELD, every payload read first-hand on 2026-10-16.  A row is withheld when
+# the grant is not one Globant can build product on: content licences, non-commercial terms,
+# share-alike, or no grant at all.  `reason` says which, measured not inferred.
+repo	stars	grant	bytes	branch	head	region	reason	remedy
+GarethManning/education-agent-skills	870	CC-BY-SA-4.0	1230	main	6bbbce418f82	Global	A CONTENT licence with SHARE-ALIKE on 165 teacher/school-leader agent skills. Derivatives of the skill text must carry the same terms - it is not a code grant	upstream-ask for a dual code licence; usable as REFERENCE only
+mzyphur/responsible-ai-in-research-training	5	CC-BY-NC-ND-4.0	1470	main	a93f46a4430f	Global	NON-COMMERCIAL *and* NO-DERIVATIVES. The hardest no on these shelves: a consultancy cannot use it at all	cite as evidence only (38 doctoral universities, 14 national funders); never vendor it
+coderefinery/coding-with-ai	5	CC-BY-4.0	18656	main	34dd45e19a24	EMEA	A CONTENT licence on a training repository that also ships Python. CC itself advises against CC on software	usable as curriculum; the code needs an upstream code grant. CodeRefinery is Nordic-funded - EMEA basis
+Sysadmins-CENIA/Cluster-IALab-Docs	2	NO-GRANT-AT-ROOT	0	main	4cd8426b1fb3	LATAM	Probed LICENSE, LICENSE.md, LICENSE.txt, COPYING, LICENCE, license, LICENSE-MIT - all 404. UNGRANTED, not permissive	upstream-ask. Chile's IALab cluster documentation is the LATAM compute-capacity record
+randi-c-dubs/K12-AI-ed	5	NO-GRANT-AT-ROOT	0	master	3e3a648c36be	Global	All seven root licence paths 404	upstream-ask; K-12 AI-education literature review
+ClaudioRojasMon/ia-educacion-recursos	0	NO-GRANT-AT-ROOT	0	main	81888c1b7928	LATAM	All seven root licence paths 404. topic `mineduc` = Chile's Ministry of Education	upstream-ask - the only MINEDUC-facing genAI-in-education framework found this pass, and it is ungranted

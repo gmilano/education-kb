@@ -1,0 +1,16 @@
+# p245 - the GitHub query channel, run 2026-10-16 through the search API.  `total_count` is as
+# the API reported it.  `shape` records whether the query was WELL-FORMED (p244's lesson: a
+# malformed query reports an axis empty).  An axis reported empty by a VOID query is not an
+# exhausted axis.
+channel	query	total_count	rows_read	new_rows	shape	verdict
+repositories	org:ceibal	ERROR	0	0	VOID	Validation Failed - "users and repositories cannot be searched" = the org does not resolve. Fundacion Ceibal, a named UNESCO LAC Observatory partner, HAS NO GITHUB ORG under this handle. Not an absence of work - an absence of an ADDRESS
+repositories	profuturo education in:name,description,readme	10	10	0	WELL-FORMED	All 10 unrelated (profile READMEs, a hackathon project, a Spanish CV course). ProFuturo has NO code presence discoverable by name. AXIS EXHAUSTED
+repositories	org:TecdeMonterrey	3	3	0	WELL-FORMED	A census, not a sample: 3 repos, all 2018-2019 teaching samples (lambda-practice, pagespeed-practice, SimpleAgenda), none AI, none education-product. AXIS EXHAUSTED
+repositories	cenia chile inteligencia artificial in:name,description,readme	24	20	2	WELL-FORMED	The ONLY LATAM observatory partner with code: CENIA-DEV/mvps-cenia (Apache-2.0, NEW) and Sysadmins-CENIA/Cluster-IALab-Docs (ungranted). Also surfaced ClaudioRojasMon/ia-educacion-recursos (topic `mineduc`, ungranted)
+repositories	NOMAD offline education server knowledge in:name,description	4	4	1	WELL-FORMED	project-nomad (40351 stars, CARRIED) + three derivatives. dbeley/cairn is NEW and Apache-2.0; Srinivasan-78/cairn and Maisie-the-cat/nomad are 0-1 star forks-by-copy
+repositories	topic:ai-literacy	257	30	6	WELL-FORMED	The pass's most productive axis. 257 repos on the topic; 30 read by stars desc. Produced see-ai, aiexplorers, UnVibe, knowledge-base-modrn-mind, TamingTechnology, ai-literacy-guardian, QuizWeaver
+repositories	open badges 3.0 verifiable credentials education in:name,description,readme stars:>5	37	25	0	WELL-FORMED	The digital-credentials trend named by the trends leg has NO on-topic permissive row here: 25 read, all awesome-lists, public-API aggregators and privacy lists. Only opensalt/opensalt (CASE standards alignment) is education infrastructure - CARRIED. DECLARED GAP
+repositories	topic:grading automated assessment AI stars:>10	0	0	0	WELL-FORMED	total_count 0. The topic `grading` carries no AI-assessment repository above 10 stars. A REAL exhaustion, from a well-formed query
+repositories	lesson plan grading rubric teacher agent LLM in:name,description stars:>20 pushed:>2026-08-01	0	0	0	WELL-FORMED	total_count 0. No teacher-tooling agent above 20 stars pushed since Aug 2026 names these words. A REAL exhaustion
+repositories	AI tutor agent education created:>2026-06-01 stars:>30	1	1	0	WELL-FORMED	Exactly one repo: zhangl1001/civil-ai (41 stars, local-first adaptive tutoring, iOS+Web) - CARRIED. The "new high-star education agent" axis is NEARLY STERILE this window
+repositories	topic:education license:apache-2.0 stars:>100 pushed:>2026-01-01	37	20	4	WELL-FORMED	Opened the SKILLS-LAB axis: kubekosh, k8sgames, codeworld, tank-royale - all Apache-2.0, all NEW, all simulator-or-game rather than course-or-tutor

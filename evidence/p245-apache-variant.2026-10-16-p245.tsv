@@ -1,0 +1,23 @@
+# p245 - THE APACHE CANONICALITY MEASUREMENT.  15 Apache-2.0 payloads read first-hand on
+# 2026-10-16 and graded by compose/code/p245-apache-canonical/ against
+# https://www.apache.org/licenses/LICENSE-2.0.txt (200, 11358 B, fetched this pass).
+# family_of() answers Apache-2.0 for ALL 15: the FAMILY is right and the TEXT is not always
+# canonical.  `verdict` is the instrument's; `appendix_kept`=0 means the instructional APPENDIX
+# was replaced by a real copyright line, which Apache's own appendix INSTRUCTS and which is
+# NOT a deviation (robocode-dev/tank-royale is the in-tree control for exactly that).
+slug	grant_file	bytes	family	verdict	appendix_kept
+122-syf-wcy/PhysicsOS	LICENSE	11356	Apache-2.0	CANONICAL	1
+CENIA-DEV/mvps-cenia	LICENSE	11361	Apache-2.0	NON-CANONICAL:the-Licensor	1
+CTFd/CTFd	LICENSE	11314	Apache-2.0	CANONICAL	1
+Crosstalk-Solutions/project-nomad	LICENSE	10779	Apache-2.0	NON-CANONICAL:the-Licensor,received-by-the-Licensor,any-notices	0
+ai-shifu/ai-shifu	LICENSE.txt	11342	Apache-2.0	CANONICAL	1
+autolab/Autolab	LICENSE	11324	Apache-2.0	CANONICAL	1
+dbeley/cairn	LICENSE	11358	Apache-2.0	CANONICAL	1
+google/codeworld	LICENSE	11358	Apache-2.0	CANONICAL	1
+mlcommons/ck	LICENSE.md	10174	Apache-2.0	CANONICAL	0
+numbas/Numbas	LICENSE	11357	Apache-2.0	CANONICAL	1
+oppia/oppia	LICENSE	11358	Apache-2.0	CANONICAL	1
+robocode-dev/tank-royale	LICENSE	10771	Apache-2.0	CANONICAL	0
+rohitg00/k8sgames	LICENSE	10764	Apache-2.0	NON-CANONICAL:the-Licensor,received-by-the-Licensor,any-notices	0
+uPortal-Project/uPortal	LICENSE	11359	Apache-2.0	CANONICAL	1
+zeborg/kubekosh	LICENSE	11350	Apache-2.0	CANONICAL	1

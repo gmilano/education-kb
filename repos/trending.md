@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 245 — 2026-10-16 — `topic:education license:apache-2.0` OPENED A CLASS THESE SHELVES HAD NO NAME FOR — THE **SKILLS LAB** — AND `project-nomad` AT `40 351`★ IS NOW THE MOST-STARRED ROW IN THIS KB BY AN ORDER OF MAGNITUDE
+
+⏱️ **APPEND-ONLY SHELF.** This section is added above pass `244`'s; nothing below it is rewritten.
+
+🔵 Every query with its channel, `total_count`, rows **read** and **shape verdict**: [`p245-queries`](../evidence/p245-queries.2026-10-16-p245.tsv). Grants: [`p245-verified-rows`](../evidence/p245-verified-rows.2026-10-16-p245.tsv) · [`p245-apache-variant`](../evidence/p245-apache-variant.2026-10-16-p245.tsv).
+
+### 🟢 The week's new class: four `Apache-2.0` simulators, `241`–`1 407`★
+
+🔵 `topic:education license:apache-2.0 stars:>100 pushed:>2026-01-01` → `total_count: 37`, `20` read, **`4` new**. 🟢 **All four are simulator-or-game, not course-or-tutor** — the learner runs the real tool in a disposable environment and the system observes the outcome.
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | What it is |
+|---|---|---|---|---|
+| [`rohitg00/k8sgames`](https://github.com/rohitg00/k8sgames) | 🟡 `Apache-2.0` *(`10 764` — **NON-CANONICAL**)* | **1 407** | `main` · `af5dbc19b3a4` | Learn Kubernetes by playing: real `kubectl`, `CrashLoopBackOff` to fix, 3D browser, no install |
+| [`google/codeworld`](https://github.com/google/codeworld) | 🟢 `Apache-2.0` *(`11 358`, canonical)* | **1 270** | `master` · `bd2bbf122332` | K-12 maths through functional programming (Haskell/GHCJS), in-browser |
+| [`robocode-dev/tank-royale`](https://github.com/robocode-dev/tank-royale) | 🟢 `Apache-2.0` *(`10 771`, canonical)* | **269** | `main` · `8bb5ba1f0bbc` | Robocode Tank Royale — bots that battle, in Java/C#/Python |
+| [`zeborg/kubekosh`](https://github.com/zeborg/kubekosh) | 🟢 `Apache-2.0` *(`11 350`, canonical)* | **241** | `main` · `b3f2a8229dc3` | Kubernetes playground with CKA/CKAD/CKS/KCNA/KCSA lab sets |
+
+🔵 **Why it is the week's story and not a footnote:** this is **the first category on these shelves with no copyleft component anywhere in the stack**, and it lands in the same window in which the trends leg calls digital credentials *"workforce currency"* while the credentials code axis returns **`0` permissive rows**. 🟢 **A lab emits the evidence a credential is supposed to attest.**
+
+### 🟢 The offline-server lineage, measured
+
+| Repo | 🟢 Grant | ★ | ref · head | Status |
+|---|---|---|---|---|
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 🟡 `Apache-2.0` *(`10 779` — 🔴 **NON-CANONICAL**, 3 deviations)* | **40 351** | `main` · `54ee30a44902` | **CARRIED** — re-read this pass. Offline-first knowledge and education server: Wikipedia, books, courses, maps, **optional local AI**, owned hardware, no internet |
+| [`dbeley/cairn`](https://github.com/dbeley/cairn) | 🟢 `Apache-2.0` *(`11 358` — **byte-identical to `apache.org`**)* | 1 | `master` · `55781a90b581` | 🟢 **NEW.** The same server as a **declarative NixOS configuration** — one file, `n` schools, atomic rollback |
+| `Srinivasan-78/cairn` | *(not read)* | 0 | — | 🟡 A TypeScript re-derivation, `34` open issues. **Not carried** |
+| `Maisie-the-cat/nomad` | *(not read)* | 1 | — | 🟡 A description-only copy. **Not carried** |
+
+### 🔴 The licence-text finding of the week: `3` of `15` Apache payloads are not the canonical text
+
+🔵 Every `Apache-2.0` payload read this pass was diffed against `https://www.apache.org/licenses/LICENSE-2.0.txt` *(fetched this pass: `200`, `11 358` B)* and graded by the new instrument [`p245-apache-canonical`](../compose/code/p245-apache-canonical/) *(25 controls, wired into `make hooks`)*.
+
+🔴 **`Crosstalk-Solutions/project-nomad` and `rohitg00/k8sgames` ship BYTE-IDENTICAL payloads** — `diff` reports one differing line, the copyright holder:
+
+```
+178c178
+<    Copyright 2024-2026 Crosstalk Solutions LLC
+---
+>    Copyright 2026 Rohit Ghumare
+```
+
+🟢 **Two unrelated holders, one reworded Apache text.** Three deviations: `submitted to **the** Licensor` *(§1)*, `received by **the** Licensor` *(§1)*, and — inside **§4(d)'s operative NOTICE condition** — `excluding **any** notices` where canonical reads `excluding **those** notices`. 🟡 [`CENIA-DEV/mvps-cenia`](https://github.com/CENIA-DEV/mvps-cenia) carries the first deviation only. 🟢 **The other `12` are canonical**, including `oppia`, `CTFd`, `Numbas`, `Autolab`, `uPortal`, `codeworld`, `kubekosh`, `tank-royale` and `cairn`.
+
+🟢 **The family is right and the repositories are usable.** 🔴 **The cost is at the OSS-review gate**, where an exact-text or hash matcher answers `AND-modified` instead of passing. 🔵 **The deviations are paraphrase-shaped** — an inserted article, `those`→`any` — which is what reproduction from recall looks like, so this will recur. **`ACTION WY`** registered: grade every carried `Apache-2.0` row.
+
+### 🟢 The LATAM org census: one partner ships code, three do not
+
+🔵 The UNESCO LAC Observatory *(April 2026, with ECLAC)* names CAF, CENIA, CETIC.br, Tecnológico de Monterrey, ProFuturo and Fundación Ceibal. Asked for their repositories:
+
+| Query | `total_count` | Shape | Verdict |
+|---|---|---|---|
+| `org:ceibal` | 🔴 **ERROR** | 🔴 **VOID** | *"Validation Failed — users and repositories cannot be searched"*. **The org does not resolve.** Not an absence of work: an absence of an **address** |
+| `profuturo education in:name,description,readme` | `10` | WELL-FORMED | 🔴 All `10` read, **all unrelated**. No discoverable code presence |
+| `org:TecdeMonterrey` | `3` | WELL-FORMED | 🔴 **A census, not a sample**: `lambda-practice`, `pagespeed-practice`, `SimpleAgenda` — all `2018`–`2019` teaching samples, none AI, none education |
+| `cenia chile inteligencia artificial in:name,…` | `24` | WELL-FORMED | 🟢 **`2` rows**: [`CENIA-DEV/mvps-cenia`](https://github.com/CENIA-DEV/mvps-cenia) *(`Apache-2.0`, **NEW** — the first CENIA code row on these shelves)* and [`Sysadmins-CENIA/Cluster-IALab-Docs`](https://github.com/Sysadmins-CENIA/Cluster-IALab-Docs) *(🔴 ungranted)*. Also surfaced [`ClaudioRojasMon/ia-educacion-recursos`](https://github.com/ClaudioRojasMon/ia-educacion-recursos) *(topic `mineduc`, 🔴 ungranted)* |
+
+🟢 **Written down because an unrun query and an empty one look identical**: the institutions driving LATAM AI-in-education policy **publish policy, not code**.
+
+### 🟡 Axes exhausted this week, all from well-formed queries
+
+- 🔴 `topic:grading automated assessment AI stars:>10` → **`total_count: 0`**.
+- 🔴 `lesson plan grading rubric teacher agent LLM … stars:>20 pushed:>2026-08-01` → **`total_count: 0`**.
+- 🔴 `open badges 3.0 verifiable credentials education … stars:>5` → `37` / `25` read / **`0` on-topic permissive**. Only [`opensalt/opensalt`](https://github.com/opensalt/opensalt) is real education infrastructure — **CARRIED**. **DECLARED GAP.**
+- 🟡 `AI tutor agent education created:>2026-06-01 stars:>30` → **`1`**, carried. The high-star new-tutor axis is **near-sterile this window**.
+
 ## Pass 244 — 2026-10-16 — `topic:school-fees` IS **ONE REPOSITORY ON ALL OF GITHUB**, AND `topic:report-card` IS `31` OF WHICH `19` ARE **GO AND PYTHON CODE-QUALITY TOOLS** — TWO AXES EXHAUSTED, AND THE EXHAUSTION IS THE FINDING
 
 ⏱️ **APPEND-ONLY SHELF.** This section is added above pass `243`'s; nothing below it is rewritten.

@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 245 — 2026-10-16 — THE WEEK'S MOVEMENT IS THAT **AI-LITERACY OVERTOOK TUTORING** AS THE PRODUCTIVE AGENT AXIS — `257` REPOS, `7` NEW ROWS — WHILE THE TUTOR AXIS PAID **ONE CARRIED REPOSITORY**
+
+⏱️ **APPEND-ONLY SHELF.** This section is added above pass `244`'s; nothing below it is rewritten.
+
+🔵 **`11` queries run, `13` permissive rows published, `6` withheld with the payload read.** Full tables: [`p245-verified-rows`](../evidence/p245-verified-rows.2026-10-16-p245.tsv) · [`p245-withheld`](../evidence/p245-withheld.2026-10-16-p245.tsv) · [`p245-queries`](../evidence/p245-queries.2026-10-16-p245.tsv).
+
+### 🟢 What moved
+
+🔵 **`topic:ai-literacy` is now the axis that pays.** `total_count: 257`, `30` read by stars descending, **`7` new permissive rows** — more than every other axis this pass combined. 🔴 **And the tutor axis is near-sterile in this window**: `AI tutor agent education created:>2026-06-01 stars:>30` returned **exactly one** repository, [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) *(`41`★)*, already **CARRIED**.
+
+🟢 **The new rows, in star order** *(every grant read first-hand at the branch `git ls-remote --symref` reported)*:
+
+| Repo | 🟢 Grant | ★ | ref · head | Region |
+|---|---|---|---|---|
+| [`Robyn-Collie/QuizWeaver`](https://github.com/Robyn-Collie/QuizWeaver) | `MIT` *(`1 069` B)* | **8** | `main` · `21bb759b9b37` | Global |
+| [`Notcokeaddictedanymore/aiexplorers`](https://github.com/Notcokeaddictedanymore/aiexplorers) | `MIT` *(`1 078` B)* | **8** | `main` · `1335aa717950` | **APAC** |
+| [`Magnussmari/TamingTechnology`](https://github.com/Magnussmari/TamingTechnology) | `MIT` *(`1 078` B)* | **5** | `main` · `d7b9d79f6b58` | **EMEA** |
+| [`AidanandMe/ai-literacy-guardian`](https://github.com/AidanandMe/ai-literacy-guardian) | `MIT` *(`1 061` B)* | **4** | `main` · `65c6b115bbb3` | Global |
+| [`jarmolkowicz/knowledge-base-modrn-mind`](https://github.com/jarmolkowicz/knowledge-base-modrn-mind) | `MIT` *(`1 077` B)* | **4** | `main` · `5e2f8f0fa782` | Global |
+| [`Omnikon-Org/UnVibe`](https://github.com/Omnikon-Org/UnVibe) | `MIT` *(`1 093` B)* | **4** | `main` · `d748dfea171a` | Global |
+| [`dreamnight16/see-ai`](https://github.com/dreamnight16/see-ai) | `MIT` *(`1 069` B)* | **3** | `main` · `ac46b5445366` | **APAC** |
+
+🔵 **The shape they share, and it is the week's real signal: six of the seven teach a human to AUDIT a model rather than to learn from one.** `UnVibe` has the model write the hardest solution so the learner must decode and defend it; `ai-literacy-guardian` ships an LLM-as-a-Judge harness *inside* a literacy curriculum; `TamingTechnology` and `knowledge-base-modrn-mind` are explicitly about not outsourcing judgement.
+
+### 🔴 What is withheld, and it is the highest-star row on the axis
+
+| Repo | ★ | 🔴 Grant | Why |
+|---|---|---|---|
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **870** | `CC-BY-SA-4.0` *(`1 230` B)* | `165` evidence-grounded teacher/school-leader agent skills behind a **share-alike content** licence. **Not a code grant.** Reference only; upstream-ask for a dual licence |
+| [`mzyphur/responsible-ai-in-research-training`](https://github.com/mzyphur/responsible-ai-in-research-training) | 5 | `CC-BY-NC-ND-4.0` | 🔴 **Non-commercial AND no-derivatives** — unusable by a consultancy. Cite as evidence *(38 doctoral universities, 14 national funders)* |
+| [`randi-c-dubs/K12-AI-ed`](https://github.com/randi-c-dubs/K12-AI-ed) | 5 | `NO-GRANT-AT-ROOT` | All seven root licence paths `404` |
+
+🔴 **This pass's withheld budget went mostly to DELIBERATELY licensed rows, not ungranted ones** — a reversal from `p243`/`p244`, and it predicts a pattern: as educators rather than engineers publish the best pedagogical agent work, `CC` licences arrive with it.
+
+### 🔴 The duplicate-row trap found this week
+
+```
+GarethManning/education-agent-skills    main  6bbbce418f82   CARRIED
+garethmanning/claude-education-skills   main  6bbbce418f82   NEW      <-- same HEAD
+```
+
+🔴 **One repository, two spellings, identical `HEAD` and byte-identical grant.** GitHub serves the old name by **redirect**, so `git ls-remote` and `raw.githubusercontent.com` both answer and every first-hand check passes on both. 🟢 **The discriminator is the `HEAD` SHA the shelves already pin** — registered as `ACTION WX`.
+
+### 🟡 Axes that paid nothing, from well-formed queries
+
+🔵 `p244` established that a malformed query reports an axis empty; shape is checked first now.
+
+- 🔴 `lesson plan grading rubric teacher agent LLM in:name,description stars:>20 pushed:>2026-08-01` → **`total_count: 0`**. No teacher-tooling agent above `20` stars pushed since August. **The row that fills this gap has `8` stars and was found on a literacy axis.**
+- 🔴 `topic:grading automated assessment AI stars:>10` → **`total_count: 0`**.
+- 🔴 `open badges 3.0 verifiable credentials education … stars:>5` → `37` results, `25` read, **`0` on-topic permissive rows**. **DECLARED GAP** against a trend the same pass recorded as *"workforce currency"*.
+- 🔴 **`WebSearch`, global agent leg** → `0` rows, `0` corrections, **`0` intelligence** — the seventh zero-row pass in eight. Every education-relevant slug it named was already carried; it reported **no `MIT` agent built specifically for education**. 🟢 The four **regional** legs are a different story and paid the richest regulatory intelligence this shelf carries *(see [`intel/market.md`](../intel/market.md))*.
+
 ## Pass 244 — 2026-10-16 — THE AXIS THAT PRODUCED BOTH **APAC** ROWS WAS REPORTED **EMPTY** BY A MALFORMED QUERY, AND THE WEEK'S MOVEMENT IS THAT **OFFLINE-FIRST** IS NOW THE DEFAULT ARCHITECTURE IN TWO REGIONS FOR OPPOSITE REASONS
 
 ⏱️ **APPEND-ONLY SHELF.** This section is added above pass `243`'s; nothing below it is rewritten.

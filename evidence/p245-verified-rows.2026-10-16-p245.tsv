@@ -1,0 +1,19 @@
+# p245 - 13 permissive rows, every grant read FIRST-HAND from raw.githubusercontent.com at the
+# branch `git ls-remote --symref` reported, on 2026-10-16.  `index` is the p235 carried-row gate
+# (ACTION UG) run per row BEFORE publishing; every row below returned NEW.
+# `region` is the closed vocabulary; `region_basis` is quoted FROM THE ROW or says it is absent.
+# `stars` as read from the GitHub search API this pass.
+repo	region	grant	bytes	branch	head	stars	index	region_basis	what_it_is
+Robyn-Collie/QuizWeaver	Global	MIT	1069	main	21bb759b9b37	8	NEW	ABSENT - no language, topic or description marker names a region	Privacy-first teacher platform: curriculum-aligned quizzes, study material, rubrics and lesson plans generated under DETERMINISTIC RULE CONSTRAINT and reviewed by the teacher. Flask/Python
+AidanandMe/ai-literacy-guardian	Global	MIT	1061	main	65c6b115bbb3	4	NEW	ABSENT - Kaggle `agents-for-good` track, no regional marker	5 specialist agents + 4 custom tools teaching AI literacy ethics-first, with LLM-as-a-Judge evaluation and a structured-learning Passport. Gemini + Gradio
+dreamnight16/see-ai	APAC	MIT	1069	main	ac46b5445366	3	NEW	topic `chinese`; description is Chinese - a 76-lesson course for Chinese non-CS undergraduates	76 lessons on 10 tracks with an OFFLINE prompt playground, a 68-term glossary and a weekly new-term crawler
+Notcokeaddictedanymore/aiexplorers	APAC	MIT	1078	main	1335aa717950	8	NEW	topics `chinese-education`,`ai4k12`,`k12`; description names Chinese K-9 pupils	Bilingual NO-CODE AI-literacy course for Chinese K-9: 7 chapters, 28 scenario-based missions, Teachable Machine
+Omnikon-Org/UnVibe	Global	MIT	1093	main	d748dfea171a	4	NEW	ABSENT	INVERTS the coding-agent default: the AI writes the hardest solution, the learner decodes it, rebuilds it simpler and defends it. Tracks an "Irreplaceability Score". Next.js/FastAPI/Postgres
+jarmolkowicz/knowledge-base-modrn-mind	Global	MIT	1077	main	5e2f8f0fa782	4	NEW	ABSENT	Research-backed AI-literacy concepts for educators, as an Obsidian knowledge base: preserving human judgement and agency while using AI
+Magnussmari/TamingTechnology	EMEA	MIT	1078	main	d7b9d79f6b58	5	NEW	topic `icelandic`	AI-augmented learning guide - using AI without outsourcing judgement
+dbeley/cairn	Global	Apache-2.0	11358	master	55781a90b581	1	NEW	ABSENT	NixOS-native DECLARATIVE offline knowledge/AI/education server; a reproducible alternative to Project NOMAD. Grant is BYTE-IDENTICAL to apache.org canonical
+CENIA-DEV/mvps-cenia	LATAM	Apache-2.0	11361	main	fccd7b382061	1	NEW	`CENIA` = Centro Nacional de Inteligencia Artificial, Chile - a named UNESCO LAC Observatory partner	MVP monorepo of Chile's national AI centre. FIRST CENIA code row on these shelves. Carries the `the Licensor` non-canonical Apache deviation
+zeborg/kubekosh	Global	Apache-2.0	11350	main	b3f2a8229dc3	241	NEW	ABSENT	Interactive Kubernetes playground with CKA/CKAD/CKS/KCNA/KCSA exam labs - a cert-prep skills lab, not a course
+rohitg00/k8sgames	Global	Apache-2.0	10764	main	af5dbc19b3a4	1407	NEW	ABSENT	Learn Kubernetes by playing: deploy pods, fix CrashLoopBackOff, type real kubectl in a 3D browser game, no install. Grant is BYTE-IDENTICAL to project-nomad's non-canonical Apache text
+google/codeworld	Global	Apache-2.0	11358	master	bd2bbf122332	1270	NEW	ABSENT - Google is US-domiciled but the repo names no region	Educational programming environment teaching K-12 maths through functional programming (Haskell/GHCJS), browser-based
+robocode-dev/tank-royale	Global	Apache-2.0	10771	main	8bb5ba1f0bbc	269	NEW	ABSENT	Robocode Tank Royale: learners write bots that battle, in Java/C#/Python - the long-lived programming-game form of the skills lab

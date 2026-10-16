@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 245 — 2026-10-16 — THE PRODUCTIVE AXIS WAS `topic:ai-literacy` AND WHAT IT PAYS IS **NOT TUTORS**: SIX OF THE SEVEN NEW AGENT ROWS TEACH A HUMAN TO **AUDIT** A MODEL, AND THE HIGHEST-STAR ROW ON THE AXIS IS **WITHHELD ON A SHARE-ALIKE CONTENT LICENCE**
+
+⏱️ **FOURTEENTH pass of `2026-10-16`.** `p232`–`p244` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`13` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported — **`7` `MIT`, `6` `Apache-2.0`.** 🟢 **All `13` returned `NEW` from the `p235` carried-index gate BEFORE publishing**, out of `2 247` rows already carried. 🟢 **All five regions addressed, and the two that produced NO row say so with the query that failed.** 🔴 **`6` rows withheld, every payload read** — and the withheld set is this pass's finding, because it is **licensed content, not ungranted code**. 🔴 **The `WebSearch` leg produced `0` rows for the seventh pass in eight** — and its four REGIONAL legs paid the richest regulatory intelligence this shelf has carried; that is a different fact and is recorded as one.
+
+🔵 **Evidence:** [`p245-verified-rows`](../evidence/p245-verified-rows.2026-10-16-p245.tsv) *(13 rows, grant + bytes + pinned head + per-row region basis + index verdict)* · [`p245-withheld`](../evidence/p245-withheld.2026-10-16-p245.tsv) *(6)* · [`p245-apache-variant`](../evidence/p245-apache-variant.2026-10-16-p245.tsv) *(15 Apache payloads graded)* · [`p245-queries`](../evidence/p245-queries.2026-10-16-p245.tsv) *(11 queries, channel + total_count + shape)* · [`p245-websearch`](../evidence/p245-websearch.2026-10-16-p245.tsv) *(8 legs)* · **instrument:** [`compose/code/p245-apache-canonical/`](../compose/code/p245-apache-canonical/) *(25 controls, wired into `make hooks`)*
+
+### 🟢 `T245-A` — the seven new agent rows, and the shape they share
+
+`topic:ai-literacy` reported `total_count: 257`; `30` read by stars descending. 🔵 It is the most productive axis of the pass — and what it pays is not the tutor-shaped agent these shelves have been collecting for four cycles. **Six of seven teach a human to check a model's work.**
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region | What it is |
+|---|---|---|---|---|---|
+| [`Robyn-Collie/QuizWeaver`](https://github.com/Robyn-Collie/QuizWeaver) | 🟢 `MIT` *(`1 069` B)* | **8** | `main` · `21bb759b9b37` | Global | 🔵 **The teacher-tooling row the dedicated queries could not find.** Curriculum-aligned quizzes, study material, rubrics and lesson plans — generated **under deterministic rule constraint** and reviewed by the teacher. Flask/Python, privacy-first |
+| [`Notcokeaddictedanymore/aiexplorers`](https://github.com/Notcokeaddictedanymore/aiexplorers) | 🟢 `MIT` *(`1 078` B)* | **8** | `main` · `1335aa717950` | **APAC** | Bilingual **no-code** AI-literacy course for Chinese K-9: `7` chapters, `28` scenario-based missions, Teachable Machine. Topics `chinese-education`, `ai4k12`, `k12` |
+| [`Magnussmari/TamingTechnology`](https://github.com/Magnussmari/TamingTechnology) | 🟢 `MIT` *(`1 078` B)* | **5** | `main` · `d7b9d79f6b58` | **EMEA** | *"Using AI without outsourcing judgment."* Topic `icelandic` — the region basis is in the row, not inferred |
+| [`AidanandMe/ai-literacy-guardian`](https://github.com/AidanandMe/ai-literacy-guardian) | 🟢 `MIT` *(`1 061` B)* | **4** | `main` · `65c6b115bbb3` | Global | **`5` specialist agents + `4` custom tools**, ethics-first, with **LLM-as-a-Judge evaluation** and a structured-learning Passport. Gemini + Gradio |
+| [`jarmolkowicz/knowledge-base-modrn-mind`](https://github.com/jarmolkowicz/knowledge-base-modrn-mind) | 🟢 `MIT` *(`1 077` B)* | **4** | `main` · `5e2f8f0fa782` | Global | Research-backed AI-literacy concepts for educators, as an **Obsidian knowledge base** — preserving human judgement and agency |
+| [`Omnikon-Org/UnVibe`](https://github.com/Omnikon-Org/UnVibe) | 🟢 `MIT` *(`1 093` B)* | **4** | `main` · `d748dfea171a` | Global | 🔵 **Inverts the coding-agent default**: the model writes the *hardest* solution, the learner decodes it, rebuilds it simpler and defends it. Tracks an *"Irreplaceability Score"*. Next.js/FastAPI/Postgres |
+| [`dreamnight16/see-ai`](https://github.com/dreamnight16/see-ai) | 🟢 `MIT` *(`1 069` B)* | **3** | `main` · `ac46b5445366` | **APAC** | `76` lessons on `10` tracks for Chinese non-CS undergraduates, with an **offline prompt playground**, a `68`-term glossary and a weekly new-term crawler |
+
+🟢 **Why the shape matters for a studio engagement.** The `2026` trends leg reports institutions building *governance, compliance and evaluation* processes around AI (`1EdTech`), and the LATAM leg measures the gap exactly: **`87`% of `200`+ institutions use AI somewhere and `26`% have a formal strategy** (UNESCO IESALC/UNU-IAS). An AI-literacy-and-audit curriculum is the artefact that closes that gap, and it is now available permissively in two regions and two languages. 🔴 **These are small repositories** — `3`–`8` stars. They are starting points and reference implementations, not platforms, and this shelf does not pretend otherwise.
+
+### 🔴 `T245-B` — the withheld set is the finding: the best teacher-agent repository on the axis is **licensed as content**
+
+| Repo | ★ | 🔴 Grant *(bytes)* | Why it cannot be built on | Remedy |
+|---|---|---|---|---|
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **870** | 🔴 `CC-BY-SA-4.0` *(`1 230` B)* | **`165` evidence-grounded agent skills** for teachers and school leaders — pedagogy, learning science, curriculum, assessment. A **content** licence with **share-alike**: a derivative skill library must carry the same terms. It is not a code grant | **upstream-ask for a dual code licence**; usable as **reference only** |
+| [`mzyphur/responsible-ai-in-research-training`](https://github.com/mzyphur/responsible-ai-in-research-training) | 5 | 🔴 `CC-BY-NC-ND-4.0` *(`1 470` B)* | 🔴 **NON-COMMERCIAL *and* NO-DERIVATIVES** — the hardest no these shelves carry. A consultancy cannot use it at all | cite as **evidence** only: a capability framework across `38` top-tier doctoral universities and `14` national research funders |
+| [`coderefinery/coding-with-ai`](https://github.com/coderefinery/coding-with-ai) | 5 | 🔴 `CC-BY-4.0` *(`18 656` B)* | A **content** licence on a training repository **that also ships Python**. Creative Commons itself advises against CC on software | usable as curriculum; the code needs an upstream code grant. CodeRefinery is Nordic-funded — **EMEA** |
+| [`randi-c-dubs/K12-AI-ed`](https://github.com/randi-c-dubs/K12-AI-ed) | 5 | 🔴 `NO-GRANT-AT-ROOT` | All seven root licence paths `404` | upstream-ask; a K-12 AI-education literature review |
+
+🔵 **The class, stated plainly:** `p243` and `p244` spent their withheld budgets on **ungranted** rows — repositories whose authors never shipped a licence. 🔴 **This pass's withheld budget went almost entirely to rows that are DELIBERATELY licensed, just not as software.** `870` stars of teacher-facing agent skills sit behind `CC-BY-SA`, and that is a *choice*, not an oversight — which means the remedy is a conversation, not a commit. 🟢 **An upstream-ask has a named counterparty and a plausible yes; a missing LICENSE usually has neither.**
+
+### 🔴 `T245-C` — a rename redirect minted a duplicate row, and the carried index did not catch it
+
+🔵 The `ai-literacy` axis surfaced `GarethManning/education-agent-skills`. The KB already holds a manifest for `garethmanning/claude-education-skills` (in [`compose/code/p121-stale-token-crosspage/manifests/`](../compose/code/p121-stale-token-crosspage/manifests/)). The `p235` gate answers **`CARRIED`** for the first and **`NEW`** for the second.
+
+```
+GarethManning/education-agent-skills    main  6bbbce418f82   CARRIED
+garethmanning/claude-education-skills   main  6bbbce418f82   NEW      <-- same HEAD
+```
+
+🔴 **One repository, two spellings, identical `HEAD` and byte-identical `1 230`-byte grant.** GitHub serves the old name by **redirect**, so `git ls-remote` and `raw.githubusercontent.com` both answer on it, and every first-hand check passes. **A probe cannot tell a renamed repository from a second repository** — the evidence is identical by construction.
+
+🟢 **This is `ACTION UH`'s class** *(the `53` rows carried under more than one spelling)* **arriving through a new door**: not a case-fold or a punctuation variant, but an upstream **rename** the shelves recorded before it happened. 🔵 **The discriminator is the `HEAD` SHA**, which the shelves already pin on every row — so the check is available and simply was not being run across spellings.
+
+> 🔵 **`ACTION WX`** *(registered here)* — fold `HEAD`-SHA collision into `p235`'s `ACTION UH` report: two carried rows with different slugs and the same pinned `HEAD` are one row until proven otherwise. The index has both columns already.
+
+### 🟡 `T245-D` — what the agent axes did NOT hold, from well-formed queries
+
+🔵 `p244` established that *a malformed query reports an axis empty*. All four below were **well-formed** and their emptiness is therefore real. 🔵 Full shapes in [`p245-queries`](../evidence/p245-queries.2026-10-16-p245.tsv).
+
+| Query | `total_count` | Verdict |
+|---|---|---|
+| `lesson plan grading rubric teacher agent LLM … stars:>20 pushed:>2026-08-01` | 🔴 **`0`** | No teacher-tooling agent above `20` stars pushed since August names these words. **The row that fills this gap — `QuizWeaver` — has `8` stars and was found on a literacy axis, not a teaching one** |
+| `topic:grading automated assessment AI stars:>10` | 🔴 **`0`** | The `grading` topic carries no AI-assessment repository above `10` stars |
+| `AI tutor agent education created:>2026-06-01 stars:>30` | 🟡 **`1`** | Exactly one: [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) *(`41`★, local-first adaptive tutoring, iOS + Web)* — **`CARRIED`**. The *"new high-star education agent"* axis is **near-sterile this window** |
+| `open badges 3.0 verifiable credentials education … stars:>5` | 🟡 `37` / `25` read | 🔴 **`0` on-topic permissive rows.** The trends leg named digital credentials *"workforce currency"*; the code axis holds awesome-lists and API aggregators. Only [`opensalt/opensalt`](https://github.com/opensalt/opensalt) *(CASE standards alignment)* is real infrastructure — **`CARRIED`**. **DECLARED GAP** |
+
 ## Pass 244 — 2026-10-16 — `ACTION WC` ASKED FOR A SWEEP AND THE SWEEP **REFUTED THE ACTION**: NO CARRIED ROW IS A `0`-BYTE GRANT, BECAUSE THE SHARED PROBE NEVER RECORDS ONE AS **FOUND** — IT RECORDS IT AS AN **ABSENCE**, AND THE SAME COLLAPSE IS THEN FOUND IN THE **ADDRESS** AND **QUERY** CHANNELS
 
 ⏱️ **THIRTEENTH pass of `2026-10-16`.** `p232`–`p243` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

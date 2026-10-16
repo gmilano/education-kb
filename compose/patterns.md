@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 245 — 2026-10-16 — FOUR RECIPES BUILT ON THIS PASS'S ROWS, EACH PINNED AT A HEAD READ FIRST-HAND — AND EVERY ONE OF THEM EXISTS BECAUSE A **REGULATOR NAMED A CAPABILITY THAT HAS NO PERMISSIVE IMPLEMENTATION**
+
+⏱️ **FOURTEENTH pass of `2026-10-16`.**
+
+🔵 Every component below was **read first-hand this pass** and is pinned at the head recorded in [`p245-verified-rows`](../evidence/p245-verified-rows.2026-10-16-p245.tsv). 🔴 **No pattern here composes a withheld row into shippable code**; where a copyleft, `CC`-licensed or ungranted component is the best fit, it is named **deploy-only** or **upstream-ask** and the boundary is drawn explicitly. 🟡 **Where a component's `Apache-2.0` payload is non-canonical, the recipe says so** — because the OSS-review gate is part of the delivery path.
+
+### 🟢 `P245-1` — The EU conformity-evidence wrapper *(EMEA · 10–12 weeks)*
+
+🔴 **Why now:** the EU AI Act has been **enforced since `2 Aug 2026`**; education is **high-risk** for admissions, learner evaluation, programme assignment, exam-behaviour detection and access to qualifications; **a conformity assessment is required BEFORE deployment**. 🔴 **And no open-source conformity-evidence tooling exists** — the credentials and assessment axes both returned empty this pass. **This is the largest build opportunity on the shelf and it is already late.**
+
+**Wiring:**
+
+| Layer | Component | Grant | Pin | Role |
+|---|---|---|---|---|
+| system of record | **Moodle** / **Open edX** | 🔴 `GPL-3.0` / `AGPL` | — | 🔴 **DEPLOY-ONLY.** Never forked, never linked into the wrapper. Reached over REST/LTI only |
+| evidence store | [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | `Apache-2.0` *(carried)* | — | **CASE** standards alignment — binds every assessment decision to a published competency |
+| human-oversight gate | [`Robyn-Collie/QuizWeaver`](https://github.com/Robyn-Collie/QuizWeaver) | 🟢 `MIT` | `main` · `21bb759b9b37` | 🔵 **The pattern's core.** Generation under **deterministic rule constraint** with **teacher review in the loop** — the Act's human-oversight requirement as working code, not policy prose |
+| evaluation record | [`AidanandMe/ai-literacy-guardian`](https://github.com/AidanandMe/ai-literacy-guardian) | 🟢 `MIT` | `main` · `65c6b115bbb3` | Its **LLM-as-a-Judge** harness, repurposed: scores retained **per decision** as the evaluation evidence the assessment demands |
+| staff AI literacy | [`coderefinery/coding-with-ai`](https://github.com/coderefinery/coding-with-ai) | 🔴 `CC-BY-4.0` | `main` · `34dd45e19a24` | 🔴 **CURRICULUM ONLY** — teach from it, do not vendor its Python. Nordic-funded, EMEA-appropriate |
+
+🟢 **The deliverable is the dossier, not the model**: for every automated decision, which competency it mapped to, which human approved it, what the judge scored, and which dataset version produced it. 🔵 The EC's **updated ethical guidelines on AI and data in teaching** are the acceptance criteria for the literacy component.
+
+### 🟢 `P245-2` — The Vietnam high-risk assessment pipeline *(APAC · 12–14 weeks, deadline `1 Sep 2027`)*
+
+🔴 **Why now:** **Law on AI No. `134/2025/QH15`** in force `1 Mar 2026`, **education transition `1 Sep 2027`**; **Decision No. `33/2026/QD-TTg`** names **education** among six high-risk sectors, explicitly **automated assessment** and **behavioural monitoring**. 🟢 **Roughly a year of runway, a named scope, and `topic:grading … stars:>10` returns `total_count: 0`** — there is nothing to adopt.
+
+**Wiring:**
+
+| Layer | Component | Grant | Pin | Role |
+|---|---|---|---|---|
+| assessment core | [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 `Apache-2.0` *(canonical, `11 357` B)* | `master` | Browser-based e-assessment with **SCORM** — the one carried permissive assessment engine. **Build the AI layer above it, do not replace it** |
+| autograding | [`autolab/Autolab`](https://github.com/autolab/Autolab) | 🟢 `Apache-2.0` *(canonical)* | `master` | Auto-graded assignments with a feedback loop; the decision-logging surface |
+| oversight gate | [`Robyn-Collie/QuizWeaver`](https://github.com/Robyn-Collie/QuizWeaver) | 🟢 `MIT` | `main` · `21bb759b9b37` | Rule-constrained generation + teacher review — **the "human in the loop" the high-risk designation requires** |
+| 🔴 behavioural monitoring | — | — | — | 🔴 **DELIBERATELY ABSENT.** Decision 33 names it as high-risk; this recipe **does not build proctoring**. Scope it out in writing at kickoff or inherit the designation's full compliance burden |
+| edge runtime | [`dreamnight16/see-ai`](https://github.com/dreamnight16/see-ai) | 🟢 `MIT` | `main` · `ac46b5445366` | Its **offline prompt playground** is the pattern for classrooms without reliable links |
+
+🔵 **Sequence matters:** the audit log and the oversight gate ship **first**, before any model touches a grade. A pipeline that cannot show who approved what is not retrofittable after `1 Sep 2027`.
+
+### 🟢 `P245-3` — The declarative offline school fleet *(LATAM-first, APAC-portable · 6–8 weeks)*
+
+🔴 **Why now:** Argentina runs **`75`%** AI use among 9-17s in high-SES households against **`42`%** in low-SES ones; `9` in `10` `15`-year-olds across `13` PISA 2025 countries already use AI chatbots for schoolwork. 🟢 **The constraint is the device and the link.**
+
+**Wiring:**
+
+| Layer | Component | Grant | Pin | Role |
+|---|---|---|---|---|
+| the box | [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 🟡 `Apache-2.0` — 🔴 **NON-CANONICAL** *(3 deviations)* | `main` · `54ee30a44902` | Wikipedia, books, courses, maps, **optional local AI**, no internet. `40 351`★ |
+| the fleet | [`dbeley/cairn`](https://github.com/dbeley/cairn) | 🟢 `Apache-2.0` *(byte-identical to `apache.org`)* | `master` · `55781a90b581` | 🔵 **Same server, declarative NixOS.** One config → `n` schools, atomic rollback. **This is what makes it a fleet instead of `n` installations** |
+| offline inference | **Ollama** *(carried)* | `MIT` | — | Local models on owned hardware; NOMAD's *"optional local AI"* slot |
+| literacy curriculum | [`Magnussmari/TamingTechnology`](https://github.com/Magnussmari/TamingTechnology) · [`jarmolkowicz/knowledge-base-modrn-mind`](https://github.com/jarmolkowicz/knowledge-base-modrn-mind) | 🟢 `MIT` · `MIT` | `d7b9d79f6b58` · `5e2f8f0fa782` | Judgement-preserving AI literacy, permissive, translatable |
+| 🔴 compute/ops reference | [`Sysadmins-CENIA/Cluster-IALab-Docs`](https://github.com/Sysadmins-CENIA/Cluster-IALab-Docs) | 🔴 **UNGRANTED** | `main` · `4cd8426b1fb3` | 🔴 **UPSTREAM-ASK.** Read it for how Chile runs its cluster; **do not copy it into a deliverable** |
+
+🔴 **Do the licence work up front:** NOMAD's `LICENSE` is `Apache-2.0` in family and **not** canonical text. Attach the diff from [`p245-apache-variant`](../evidence/p245-apache-variant.2026-10-16-p245.tsv) to the client's OSS review at submission — an exact-text scanner will answer `AND-modified` and stall the gate otherwise. 🟢 `cairn`'s payload is canonical, so **the fleet layer passes cleanly**.
+
+### 🟢 `P245-4` — The observable skills lab: a credential backed by evidence *(Global · 8–10 weeks)*
+
+🔴 **Why now:** the `2026` trends leg calls digital credentials **"workforce currency"**, and the credentials code axis returned **`0` on-topic permissive rows** across `37` results. 🟢 **Meanwhile the lab half is permissive all the way down** — four `Apache-2.0` rows, no copyleft anywhere in the stack.
+
+**Wiring:**
+
+| Layer | Component | Grant | Pin | Role |
+|---|---|---|---|---|
+| the lab | [`zeborg/kubekosh`](https://github.com/zeborg/kubekosh) | 🟢 `Apache-2.0` *(canonical)* | `main` · `b3f2a8229dc3` | Live-cluster playground with **CKA/CKAD/CKS/KCNA/KCSA** lab sets mapped to published exam objectives |
+| the game loop | [`rohitg00/k8sgames`](https://github.com/rohitg00/k8sgames) | 🟡 `Apache-2.0` — 🔴 **NON-CANONICAL** *(byte-identical to NOMAD's payload)* | `main` · `af5dbc19b3a4` | Failure-mode scenarios *(`CrashLoopBackOff`, bad manifests)* — **swap in the client's real incident history as the curriculum** |
+| multi-language cohorts | [`robocode-dev/tank-royale`](https://github.com/robocode-dev/tank-royale) | 🟢 `Apache-2.0` *(canonical)* | `main` · `8bb5ba1f0bbc` | Java/C#/Python bot APIs — one lab, three cohorts |
+| judgement component | [`Omnikon-Org/UnVibe`](https://github.com/Omnikon-Org/UnVibe) | 🟢 `MIT` | `main` · `d748dfea171a` | 🔵 **The differentiator.** The model writes the hardest solution; the learner decodes, simplifies and **defends** it. Produces an auditable record of *understanding*, not completion |
+| competency binding | [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | `Apache-2.0` *(carried)* | — | **CASE** alignment: every lab outcome binds to a published competency statement |
+| 🔴 credential issuance | — | — | — | 🔴 **NO PERMISSIVE COMPONENT EXISTS.** Must be built, or an existing issuer integrated commercially. **Named as a gap, not hidden in a diagram** |
+
+🟢 **The pattern's claim:** a credential whose evidence is a recorded lab run against a named competency is worth more than a completion certificate, and **every layer but the issuer is already permissive and pinned**. 🔵 **For corporate upskilling this ships now**; for academic subjects the lab content must be built, because all four labs teach technology skills and none teaches a school subject.
+
+### 🔵 `P245-5` — The due-diligence recipe this pass's licence findings require *(any engagement · 1 day)*
+
+🔴 **Why:** `3` of `15` `Apache-2.0` payloads read this pass are **not the canonical text**, including a `40 351`-star dependency. The highest-star teacher-agent repository on the literacy axis is **`CC-BY-SA-4.0`** and cannot be built on at all. **Family classification is no longer sufficient diligence.**
+
+**Run, in order, before a dependency reaches a client's OSS review:**
+
+1. 🟢 **`git ls-remote --symref`** — existence, default branch, pinned `HEAD`. *(`p244`: a live empty repository and a non-existent one are indistinguishable without this.)*
+2. 🟢 **Read the grant first-hand** from `raw.githubusercontent.com` at that branch. Probe `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`, `license`, `LICENSE-MIT`. 🔴 **A `0`-byte `200` is not an absence** *(`p244`)*; a `404` on all seven is **ungranted**, not permissive.
+3. 🟢 **Classify the family** — [`lib/license_family.sh`](code/lib/license_family.sh) *(never a fresh regex: `P171`'s GPL-3.0 §13 trap)*.
+4. 🟢 **Grade the TEXT** — [`p245-apache-canonical`](code/p245-apache-canonical/) for Apache, [`p1054-mit-plus-clause`](code/p1054-mit-plus-clause/) for MIT bodies carrying added field-of-use terms.
+5. 🟢 **Check `CC`** — `CC-BY-SA` is share-alike, `CC-BY-NC-ND` is unusable commercially, and `CC-BY` **on software** is a content licence CC itself advises against. **None is a code grant.**
+6. 🟢 **Collide the `HEAD` SHAs** — 🔴 two slugs with one `HEAD` are **one repository behind a rename redirect**, and every first-hand check passes on both *(`T245-C`)*.
+7. 🟢 **Attach the canonical diff** to the review for any non-canonical payload, at submission, **before** the gate answers `AND-modified`.
+
 ## Pass 244 — 2026-10-16 — FOUR RECIPES, EACH NAMING ITS REPOS, ITS GRANTS AND ITS PINNED HEADS — PLUS THE **DUE-DILIGENCE RECIPE** THIS PASS'S FOUR LICENCE DEFECTS MADE NECESSARY
 
 ⏱️ **THIRTEENTH pass of `2026-10-16`.**

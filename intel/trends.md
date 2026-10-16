@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 245 — 2026-10-16 — THE TREND IS THAT **THE REGULATOR NOW ARRIVES BEFORE THE PLATFORM**, AND THE COUNTER-TREND IS THAT THE TWO CAPABILITIES BEING REGULATED — **AUTOMATED ASSESSMENT** AND **CREDENTIALS** — HAVE **NO PERMISSIVE IMPLEMENTATION AT ALL**
+
+⏱️ **FOURTEENTH pass of `2026-10-16`.**
+
+🔵 Evidence: [`p245-websearch`](../evidence/p245-websearch.2026-10-16-p245.tsv) *(8 legs)* · [`p245-queries`](../evidence/p245-queries.2026-10-16-p245.tsv) *(11 queries, with the two that returned `total_count: 0` from well-formed shapes)* · [`p245-verified-rows`](../evidence/p245-verified-rows.2026-10-16-p245.tsv) · [`p245-apache-variant`](../evidence/p245-apache-variant.2026-10-16-p245.tsv)
+
+### 🔴 `T1` — the inversion: regulation precedes deployment, for the first time in this KB's record
+
+🔵 Through cycle 3 these shelves recorded adoption racing ahead of every rule. **This pass that ordering reverses, and it reverses with dates:** the EU has been **enforcing** since `2 Aug 2026` with education as a **high-risk** category; Korea's Framework Act has been in force since `22 Jan 2026`; **Vietnam's Law on AI `134/2025/QH15`** carries an education transition to **`1 Sep 2027`** and **Decision `33/2026/QD-TTg`** names education among six high-risk sectors.
+
+🟢 **The consequence for a studio is a change in what the first deliverable is.** A pilot that cannot produce a conformity assessment is not deployable in the EU at all, and the assessment is **pre-deployment** — it is not a phase-two concern. 🔵 **Governance moves from the end of the engagement to the front of it.**
+
+### 🔴 `T2` — the counter-trend, and it is the sharpest finding of the pass: the regulated capabilities are the unbuilt ones
+
+| What regulators name | What the permissive code axis holds |
+|---|---|
+| **Automated assessment** *(EU high-risk; Vietnam Decision 33)* | 🔴 `topic:grading automated assessment AI stars:>10` → **`total_count: 0`** |
+| **Learner evaluation, access to qualifications** *(EU high-risk)* | 🔴 `lesson plan grading rubric teacher agent LLM … stars:>20 pushed:>2026-08-01` → **`total_count: 0`** |
+| **Digital credentials** *("workforce currency", per the 2026 trends leg)* | 🔴 `37` results, `25` read, **`0` on-topic permissive rows** |
+
+🟢 **All three queries were well-formed** — `p244` established that a malformed query reports an axis empty, so shape is now checked before emptiness is claimed. 🔴 **These emptinesses are real.**
+
+🔵 **So the sector's most-regulated functions are the ones a studio cannot start from an existing open-source base.** That is simultaneously the largest build opportunity on this shelf and the reason an engagement in those functions will be quoted as construction, not integration.
+
+### 🟢 `T3` — AI literacy outgrew the tutor: the axis now pays **audit skills**, not explanation
+
+🔵 `topic:ai-literacy` carries **`257`** repositories and was this pass's most productive axis — `7` of `13` new rows. 🔴 **And six of the seven teach a human to check a model's work rather than to learn from one**: [`UnVibe`](https://github.com/Omnikon-Org/UnVibe) has the model write the hardest solution so the learner must decode and defend it; [`ai-literacy-guardian`](https://github.com/AidanandMe/ai-literacy-guardian) ships **LLM-as-a-Judge evaluation** inside a literacy curriculum; [`knowledge-base-modrn-mind`](https://github.com/jarmolkowicz/knowledge-base-modrn-mind) and [`TamingTechnology`](https://github.com/Magnussmari/TamingTechnology) are both explicitly about **not outsourcing judgement**.
+
+🟢 **This lines up with what the institutions are measuring.** `87`% of LATAM institutions use AI somewhere and `26`% have a strategy; `53`% of Brazilian administrators use AI and `22`% have guidelines; `10`% of European institutions have formal guidelines. 🔵 **The missing artefact in every one of those gaps is a workforce that can evaluate model output** — which is what this axis builds, and it is now permissively licensed in Chinese, Icelandic and English.
+
+### 🟢 `T4` — the skills lab: the first form on these shelves where completion is not the outcome
+
+🔵 A new foundation class, four `Apache-2.0` rows, `241`–`1 407` stars: [`k8sgames`](https://github.com/rohitg00/k8sgames), [`codeworld`](https://github.com/google/codeworld), [`tank-royale`](https://github.com/robocode-dev/tank-royale), [`kubekosh`](https://github.com/zeborg/kubekosh). 🟢 **The learner's work is running the real tool in a disposable environment, and the system observes the outcome.**
+
+🔵 **Why it is a trend and not a toy:** it is the only form here that produces **demonstrated capability** instead of a completion record — and it appears in the same window in which credentials are being described as *workforce currency* while the credentials code axis is empty. 🟢 **A lab that can be observed is the evidence a credential is supposed to stand for.** 🔴 **The limit is honest:** all four teach technology skills; none teaches a school subject.
+
+### 🟢 `T5` — edge inference held, and this pass placed the architecture rather than the wish
+
+🔵 `p244` identified edge inference in the classroom from two regions and opposite constraints. 🟢 **It holds, and the evidence moved from intent to deployment shape:** [`project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) is at **`40 351` stars** — Wikipedia, books, courses, maps and **optional local AI** on owned hardware with no internet — and [`dbeley/cairn`](https://github.com/dbeley/cairn) now expresses that same server as a **declarative NixOS configuration**, which turns one installation into a fleet with rollback.
+
+🔵 **Two independent demand signals this pass:** [`see-ai`](https://github.com/dreamnight16/see-ai) ships an **offline** prompt playground for Chinese undergraduates, and [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) *(carried)* is **local-first** adaptive tutoring on iOS. 🟢 **And the market numbers say why**: Argentina runs `75`% AI use in high-SES households against `42`% in low-SES ones. **The constraint is the device and the link, not the model.**
+
+### 🟡 `T6` — a mandate is not adoption, and consent is regional
+
+🔵 `p244` recorded this from Korea; this pass adds the sentiment measurement underneath it. **Ipsos Education Monitor 2026:** support for *banning* AI in schools is **lower** across the Asian markets examined and **higher in Australia and New Zealand** — two jurisdictions inside one region taking opposite public positions. 🔴 **And in North America the restrictions are already concrete:** New York City holds a one-year moratorium on student-facing AI **through grade 8**; **Katy ISD** bars generative-AI chatbots for **K-6** from `2026-27`.
+
+🟢 **So "APAC permissive, West restrictive" is not a usable generalisation** — Australia and New Zealand sit on the restrictive side of their own region, and the binding constraint in NA is **district-level and age-gated**. 🔵 **Age-gating and opt-out are product features, not deployment settings.**
+
+### 🔴 `T7` — the licence text is drifting away from the licence, and it looks like paraphrase
+
+🔵 Measured, not inferred: **`3` of `15`** `Apache-2.0` payloads read first-hand this pass are **not** the canonical `apache.org` text, and **two of the three are byte-identical to each other** under different copyright holders *(`project-nomad`, `40 351`★, and `k8sgames`, `1 407`★)*. The deviations — an inserted article, `those`→`any` inside **§4(d)'s operative NOTICE condition** — are **paraphrase-shaped**, which is what reproduction **from recall** looks like.
+
+🟢 **The family is still `Apache-2.0` and the repositories are still usable.** 🔴 **The cost lands at the OSS-review gate**, where exact-text and hash matchers answer `AND-modified` or `UNKNOWN` rather than passing. 🔵 **If licence texts are increasingly generated rather than copied, family classification stops being sufficient diligence** — so this pass shipped [`p245-apache-canonical`](../compose/code/p245-apache-canonical/) *(25 controls, in `make hooks`)* instead of a note.
+
+### 🟡 `T8` — the consolidation nobody is announcing: the best teacher-agent work is licensed as **content**
+
+🔵 The highest-star row the literacy axis produced — **`870` stars**, `165` evidence-grounded skills for teachers and school leaders — is [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) under **`CC-BY-SA-4.0`**. A second substantial row is **`CC-BY-NC-ND-4.0`** *(non-commercial **and** no-derivatives)*; a third, a Nordic training repository that ships Python, is **`CC-BY-4.0`**.
+
+🔴 **This pass's withheld budget went mostly to rows that are deliberately licensed, just not as software** — where `p243` and `p244` spent theirs on repositories with no licence at all. 🟢 **That is a better problem**: a missing `LICENSE` usually has no counterparty, while a share-alike content licence has a named author and a plausible yes. 🔵 **But it predicts the pattern**: as educators rather than engineers publish the best pedagogical agent work, `CC` licences arrive with it, and **a studio's default assumption that "open" means "buildable" will be wrong more often.**
+
 ## Pass 244 — 2026-10-16 — THE TREND IS **EDGE INFERENCE IN THE CLASSROOM**, ARRIVED AT INDEPENDENTLY IN TWO REGIONS FROM OPPOSITE CONSTRAINTS — AND THE COUNTER-TREND IS THAT A **MANDATE IS NOT ADOPTION**, WHICH KOREA JUST PROVED
 
 ⏱️ **THIRTEENTH pass of `2026-10-16`.**

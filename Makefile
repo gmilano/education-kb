@@ -68,6 +68,9 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	cd - >/dev/null; \
 	echo "── p244-absence-states  (payload/address/query absence + truncation: 61)"; \
 	$(PY) -I compose/code/p244-absence-states/test_absence_states.py >/dev/null && echo "   PASS"; \
+	echo "── p245-apache-canonical (the TEXT axis: 25 controls, the 4(c)/4(d) twin phrase)"; \
+	cd compose/code/p245-apache-canonical && $(PY) -I test_apache_canonical.py >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 245 — 2026-10-16 — THE PERMISSIVE/COPYLEFT SPLIT RECONFIRMS, AND THIS PASS ADDS THE ONE VERTICAL THAT IS **PERMISSIVE ALL THE WAY DOWN**: THE **SKILLS LAB**, WHERE NOTHING COPYLEFT SITS IN THE STACK
+
+⏱️ **FOURTEENTH pass of `2026-10-16`.**
+
+🔵 Evidence: [`p245-verified-rows`](../evidence/p245-verified-rows.2026-10-16-p245.tsv) · [`p245-withheld`](../evidence/p245-withheld.2026-10-16-p245.tsv) · [`p245-apache-variant`](../evidence/p245-apache-variant.2026-10-16-p245.tsv) · [`p245-websearch`](../evidence/p245-websearch.2026-10-16-p245.tsv) *(the `global-verticals` leg)*
+
+### 🔴 `V245-A` — the structural fact, asked again and answered the same way
+
+🔵 The `global-verticals` leg asked for an education platform that is **both** `MIT`/`Apache` **and** covers LMS + SIS. 🔴 **There is none.** The answer has not changed across four cycles, and it is the single most load-bearing fact on this shelf:
+
+| Platform | Grant | Role |
+|---|---|---|
+| **Moodle** | 🔴 `GPL-3.0` | the default LMS worldwide |
+| **Open edX** | 🔴 `AGPL` | university/government scale *(began as an MIT research project — the **institution**, not the licence)* |
+| **OpenEduCat** | 🔴 `LGPL-3.0` | education ERP on Odoo |
+| **RosarioSIS**, **OpenSIS** | 🔴 `GPL` | student information systems |
+| **OpenOlat** | 🟢 **`Apache-2.0`** | 🟢 **the strongest permissive LMS** — universities and corporate training, Java. **CARRIED** |
+| **Forma LMS** | 🟡 **UNRESOLVED** | one source says `Apache-2.0`, another `GPL-2.0`. 🔴 **Not carried either way until a payload is read** |
+| **Sakai** | `Apache-2.0` *(carried)* · **Canvas**, **Kolibri**, **BigBlueButton**, **H5P** | see cycle-3 rows |
+
+🟢 **The permissive grants sit on the layers around the platform** — client libraries, agents, simulators, curricula — which is why every pattern in [`compose/patterns.md`](../compose/patterns.md) composes *around* a copyleft core rather than forking it, and marks the copyleft component **deploy-only**.
+
+### 🟢 `V245-B` — the new vertical: the **skills lab**, permissive from top to bottom
+
+🔵 Four `Apache-2.0` rows, read first-hand this pass, `241`–`1 407` stars. 🟢 **This is the first category on this shelf with no copyleft component anywhere in the stack** — which means a studio can fork, rebrand, extend and ship it to a client without a deploy-only boundary anywhere.
+
+| Platform | 🟢 Grant | ★ | ref · head | Customisation surface |
+|---|---|---|---|---|
+| [`rohitg00/k8sgames`](https://github.com/rohitg00/k8sgames) | 🟡 `Apache-2.0` *(**NON-CANONICAL** text — `V245-C`)* | **1 407** | `main` · `af5dbc19b3a4` | Scenario packs. The failure modes *(`CrashLoopBackOff`, bad manifests)* are the curriculum; swap them for a client's real incident history |
+| [`google/codeworld`](https://github.com/google/codeworld) | 🟢 `Apache-2.0` *(canonical)* | **1 270** | `master` · `bd2bbf122332` | K-12 maths through functional programming, in-browser. Exercise sets and the maths syllabus are the content layer |
+| [`robocode-dev/tank-royale`](https://github.com/robocode-dev/tank-royale) | 🟢 `Apache-2.0` *(canonical)* | **269** | `main` · `8bb5ba1f0bbc` | Bot APIs in Java/C#/Python. **Multi-language by design** — the same lab serves three cohorts |
+| [`zeborg/kubekosh`](https://github.com/zeborg/kubekosh) | 🟢 `Apache-2.0` *(canonical)* | **241** | `main` · `b3f2a8229dc3` | **CKA/CKAD/CKS/KCNA/KCSA** lab sets — cert-prep mapped to published exam objectives |
+
+🟢 **What makes it a vertical rather than four repositories:** they share one shape — *disposable environment + real tool + observed outcome* — and that shape is **the missing half of the credentials story**. 🔵 The `2026` trends leg calls digital credentials *"workforce currency"* while the credentials **code** axis returned **`0` on-topic permissive rows** *(`37` results, `25` read)*. **A lab emits exactly the evidence a credential is meant to attest.** Wire the two together and the credential stops being self-asserted.
+
+🔴 **The boundary, said plainly:** all four teach **technology** skills. **None teaches a school subject.** 🟢 For corporate upskilling, onboarding and certification practice this vertical is adoptable **today**; for academic subjects it is an architecture to copy, not a product to deploy.
+
+### 🟢 `V245-C` — the offline campus server, now deployable as a **fleet**
+
+🔵 Two rows, one carried and one new, forming the *"school in a box"* vertical that the LATAM and APAC access numbers demand:
+
+| Platform | 🟢 Grant | ★ | ref · head | What it gives an institution |
+|---|---|---|---|---|
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 🟡 `Apache-2.0` *(`10 779` B — 🔴 **NON-CANONICAL**, three deviations)* | **40 351** | `main` · `54ee30a44902` | 🔵 **The whole offline library**: Wikipedia, thousands of books, courses, maps, **optional local AI** — on owned hardware, no internet. **CARRIED** |
+| [`dbeley/cairn`](https://github.com/dbeley/cairn) | 🟢 `Apache-2.0` *(`11 358` B — **byte-identical to `apache.org`**)* | 1 | `master` · `55781a90b581` | 🟢 **The same server as a declarative NixOS configuration** — one file, `n` schools, atomic rollback. **NEW** |
+
+🔵 **Why both belong here.** NOMAD is the proven artefact *(`40`k stars)* and is hand-maintained per box; `cairn` is unproven *(`1` star)* and is **reproducible**. 🟢 **For one school, deploy NOMAD. For a district or a ministry, the `cairn` approach is the one that survives year two** — and the access figures say which case is real in LATAM: `75`% household AI use in high-SES versus `42`% in low-SES *(Argentina, ages 9-17)*. **A school server with local inference does not need the household's connectivity.**
+
+🔴 **The licence-text warning attaches to the `40`k-star row, not to the small one.** `project-nomad`'s `LICENSE` is `Apache-2.0` in family and **not** the canonical text: `the-Licensor`, `received-by-the-Licensor`, and — inside **§4(d)'s operative NOTICE condition** — `excluding any notices` where canonical reads `excluding those notices`. It is **byte-identical to [`rohitg00/k8sgames`](https://github.com/rohitg00/k8sgames)'s** payload but for the copyright holder. 🟢 **Both are usable; both will make an exact-text licence scanner answer `AND-modified` instead of passing.** 🔵 Measured in [`p245-apache-variant`](../evidence/p245-apache-variant.2026-10-16-p245.tsv), graded by [`p245-apache-canonical`](../compose/code/p245-apache-canonical/), and the remedy is to carry the canonical diff into the client's OSS review **before** it stalls there.
+
+### 🔴 `V245-D` — the LATAM vertical layer is policy, not software, and that is measured
+
+🔵 The UNESCO LAC Observatory *(April 2026, with ECLAC)* names **CAF, CENIA, CETIC.br, Tecnológico de Monterrey, ProFuturo and Fundación Ceibal** as partners. 🔴 Asked for their code, GitHub answers: `org:ceibal` **does not resolve**; ProFuturo has **no discoverable code presence** *(`10` results, all unrelated)*; `org:TecdeMonterrey` is **`3` repositories**, all `2018`–`2019` teaching samples. 🟢 **Only CENIA ships code** — [`CENIA-DEV/mvps-cenia`](https://github.com/CENIA-DEV/mvps-cenia) *(`Apache-2.0`, `main` · `fccd7b382061`)*.
+
+🟡 **And the two most vertical-relevant Chilean rows are ungranted** *(all seven root licence paths `404`)*: [`Sysadmins-CENIA/Cluster-IALab-Docs`](https://github.com/Sysadmins-CENIA/Cluster-IALab-Docs) *(the IALab cluster's operating documentation — the region's compute record)* and [`ClaudioRojasMon/ia-educacion-recursos`](https://github.com/ClaudioRojasMon/ia-educacion-recursos) *(topic `mineduc`; the only Chilean-ministry-facing generative-AI-in-education framework found this pass)*. 🔵 **Both are upstream-asks with a named counterparty**, and neither can be composed into client work as it stands.
+
+🟢 **Read as a market statement:** in LATAM the convening and policy layer exists and the **implementation layer does not**. There is no incumbent open-source vertical to displace — which is the clearest greenfield on this shelf, and the reason the regional opportunity in [`intel/market.md`](../intel/market.md) is *strategy-plus-system together* rather than either alone.
+
 ## Pass 244 — 2026-10-16 — THE **SYSTEM OF RECORD** AXIS SPLITS CLEANLY BY ARTEFACT TYPE: THE **CLIENT LIBRARIES** ARE `MIT` AND THE **FINISHED PLATFORMS** ARE COPYLEFT, WITH THE EXCEPTION NAMED
 
 ⏱️ **THIRTEENTH pass of `2026-10-16`.**
