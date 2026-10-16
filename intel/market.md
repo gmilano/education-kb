@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 252 — 2026-10-16 — **APAC IS THE RICHEST LEG THIS PASS AND IT IS A FIRST FOR THIS SHELF: THREE JURISDICTIONS WITH AI LAW THAT IS BOTH IN FORCE AND DATED, INCLUDING AN EDUCATION-SPECIFIC CARVE-OUT WITH A DEADLINE.** NORTH AMERICA'S DISTRICT MANDATE LAYER IS NOW COUNTED AT `134` BILLS ACROSS `31` STATES; LATAM GETS A NUMBER FOR ITS GOVERNANCE GAP; EMEA'S DATE CONFLICT IS UNCHANGED AND STILL UNCLOSABLE
+
+⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv) *(legs `5`–`8`)* · [`p252-channel-map`](../evidence/p252-channel-map.2026-10-16-p252.tsv). 🔴 **Every instrument below is a SECONDARY source.** `www.unesco.org` and `eur-lex.europa.eu` are refused at the proxy *(`000`)*, re-probed this pass; `curl` cannot reach **any** external source from this session, so nothing here was read first-hand and nothing here should be quoted to a client without a primary check. 🔵 `ACTION UX` was retired at `p250` precisely because `WebSearch` is not this base's lazy regulatory channel but its **only** one.
+
+### 🟢 `T252-M1` — APAC: the first leg on this shelf where the rules are in force, dated, AND education-specific
+
+| jurisdiction | instrument | the date | why it reaches an engagement |
+|---|---|---|---|
+| 🟢 **South Korea** | a **general AI law**, in force | **`2026-01-22`** | duties on *high-impact* systems and on generative AI. 🟢 The most developed regime in the region and **already live** — not a programme to plan for |
+| 🔴 **Vietnam** | a binding AI law, with an **education carve-out** | 🟢 **systems already running in education before `2026-08-15` get an additional SIX-MONTH grace period** | 🔴 **the most actionable single fact in this pass.** A dated grace window is a procurement calendar: an incumbent deployment has until roughly `2027-02` and a NEW deployment has none |
+| 🟡 **China** | regulation by service type, not one general law | labelling measures in force **`2025-09-01`**; **anthropomorphic AI service rules `2026-07-15`** | 🔴 *Anthropomorphic* is the AI-tutor and AI-companion product category by another name. A "study buddy" persona is the regulated surface |
+| 🟡 **Japan** | promotion rather than penalty | — | 🟢 the permissive end of the region |
+| 🟡 **India** | data-protection rules notified **Nov `2025`**, obligations phased to **May `2027`** | phased | 🟡 student data lands here, not in an AI statute |
+| 🟡 **Singapore · Australia** | voluntary guidance plus sector and data rules | — | 🟡 no AI-specific education duty surfaced by this leg |
+
+🔵 **The demand-side signal, and it cuts against the supply-side one:** the **Ipsos Education Monitor `2026`** finds *lower* support for banning AI in schools across the Asian markets examined, while **Australia and New Zealand record higher support for banning it**. 🔴 So within one region the regulatory gradient and the public-opinion gradient point opposite ways, and a single APAC go-to-market will be wrong at one end.
+
+### 🟢 `T252-M2` — North America: the district layer, now with a count
+
+🟢 **`134` AI-in-education bills across `31` states in `2026`**, on the tracker this leg returned — the first *count* this shelf has carried for the layer `p251` identified as the procurement layer. Concentrated on student data privacy, classroom-use limits and curriculum.
+
+| instrument | what it requires | reading |
+|---|---|---|
+| 🟢 **`H.R. 8747`** — K-12 AI Literacy and Readiness Act of `2026` | advanced in a **House committee markup in July `2026`** | 🟡 **advanced, not enacted** — a federal curriculum signal, not yet a duty |
+| 🟢 **Georgia · Mississippi** | AI content added to **computer-science credit requirements** | 🟢 curriculum demand with a state mandate behind it |
+| 🔴 several states | **human oversight required**; AI barred from **high-stakes decisions** about students | 🔴 a capability boundary, not a feature flag |
+| 🔴 **New York City** | a **one-year moratorium** on student-facing AI through eighth grade | 🔴 the largest district in the country, closed to the product category |
+| 🔴 **Katy ISD** *(TX)* | chatbots restricted for **K-6** | 🔴 the same shape, locally |
+| 🟡 **Canada** | *"AI for All"* strategy, **June `2026`**, including national AI-literacy work | 🟡 **no legislation date set**; no comprehensive national AI law in force in any of the three NA economies |
+
+🔵 **`p251`'s state-mandate instruments** *(Ohio `H.B. 96`, Oklahoma `S.B. 1734`, Illinois `S.B. 1920`, Nevada `A.B. 406`'s counsellor ban, South Carolina `H.B. 5253`'s parental opt-in)* are **carried unchanged** — this leg did not re-serve them and does not contradict them.
+
+### 🟡 `T252-M3` — EMEA: unchanged, and that is the finding
+
+🟡 **The EU high-risk date is still a disjunction** — `2026-08-02` or a deferral under the *"AI Omnibus"* — served in both forms by this pass's channel, 🔴 **and still not closable from this session** *(`eur-lex.europa.eu` → `000`)*. 🟢 **What is in force is unchanged and needs no date resolution: `Article 5(1)(f)`, emotion recognition in educational institutions, banned since `2025-02-02`.** 🔴 The operational reading this shelf has carried since `p251` holds: **webcam-based stress or affect inference in proctoring may be prohibited outright.**
+
+🟢 **What is NEW on this leg is Africa, and it is the first time this shelf has carried it:**
+
+| instrument | what it is |
+|---|---|
+| 🟢 **Rwanda–Anthropic MoU**, **Feb `2026`**, three-year | covers health, **education** and the public sector — a named, dated, education-inclusive national partnership |
+| 🟢 **UNESCO-ICHEI / IICBA report**, **Jan `2026`** | AI use in **African higher education**, emphasising policy, infrastructure and institutional capacity |
+| 🟡 Egypt | a youth-tech academy cited as a mass-scale education initiative |
+| 🔴 MEA generally | **strategies, not laws** — the governance posture is partnership-driven |
+
+🔴 **Market figures from this leg are vendor-sourced and disagree:** MEA ≈ `$0.56` B and Europe ≈ `$2.64` B for `2026`, against a global ≈ `$9.58` B from a different page and ≈ `$12.3` B from a third. 🔵 **Published as a spread, not a number.**
+
+### 🟢 `T252-M4` — LATAM: the governance gap finally has a measurement
+
+| finding | figure | source shape |
+|---|---|---|
+| 🟢 institutions using AI in at least one area | **`87`%** | UNESCO **IESALC** / **UNU-IAS**, `200` institutions across **`19` countries** |
+| 🟢 using it in teaching and learning | **`74`%** | same |
+| 🔴 **institutions with a formal AI strategy** | 🔴 **`26`%** | same |
+| 🟢 a second, independent survey | `29` institutions, **`30 000`+ responses** | Digital Education Council LATAM `2026` |
+
+🔴 **That `87` / `26` split is the whole LATAM thesis in two numbers, and it is now sourced rather than asserted:** adoption is **faculty- and student-driven**, not institutional. 🔵 The demand is therefore for **governance retrofitted onto deployments that already exist** — the opposite of a greenfield build.
+
+🟢 **Regional instruments this leg served:** a **UNESCO Observatory on AI in Education for LAC**, launched **`2026-04-14`** in Santiago, Chile, with a **Mexico pilot** through **CONALEP** and **DGETI**; **Uruguay** the first in the region to sign the **Council of Europe Framework Convention** *(`2025`)*; **Mexico**'s federal AI bill in the Senate, converging on an *unacceptable / high / lower* risk taxonomy; **Colombia**'s **CONPES 4144** national AI policy *(Feb `2025`)*; the **ILIA 2025** index noting school-level AI education is *increasing but still exceptional*.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The buy is ASSURANCE, and it now has a count behind it: `134` bills in `31` states.** The deliverable is not a tutor; it is the evidence a district needs to keep one. 🟢 **Highest-value engagement:** the district AI policy turned into enforceable controls — `p251`'s `P251-1` recipe, unchanged and still the right shape. 🔴 **Hard constraint:** a *capability ban* must be expressible as a block, not a warning *(Nevada's counsellor/psychologist clause)*, and parental opt-in as a precondition the call site cannot skip *(South Carolina)*. 🟡 **Curriculum is the second line** — Georgia and Mississippi put AI into CS credit requirements, which is content and assessment work, not platform work. 🔴 **Where not to sell:** student-facing K-8 assistants into NYC or Katy ISD. The category is closed there this year.
+
+### EMEA
+
+🟢 **The one deliverable that needs no date resolution is a PROCTORING AUDIT**, and it is still the best EMEA opening on this shelf: `Article 5(1)(f)` has been in force since `2025-02-02`, and webcam affect inference is the exposed surface. 🔴 **Do not scope a high-risk conformity programme to a date** — the `2026-08-02` / Omnibus disjunction is unresolved and unresolvable from here; scope it to the *controls*, which do not move when the date does. 🟢 **New this pass: Africa is addressable through partnership, not procurement.** A three-year national MoU naming education *(Rwanda)* and a UNESCO-ICHEI capacity report *(Jan `2026`)* describe an institutional-capacity engagement — policy, infrastructure, training — not a licence sale. 🟡 **Sovereignty remains the EMEA technical constraint:** self-hostable stacks over hosted APIs.
+
+### APAC
+
+🟢 **This is the region where a DATE is the product, and `p252` is the first pass able to say so.** 🔴 **Vietnam is the sharpest opportunity on this shelf right now:** education systems live before **`2026-08-15`** hold a six-month grace window; everything new does not. That is a named deadline a studio can plan a remediation engagement against, and it expires. 🟢 **South Korea is live today** *(`2026-01-22`)*: high-impact and generative duties are assessable now, so the engagement is a conformity assessment, not a readiness review. 🔴 **China reframes the product, not the compliance:** the **anthropomorphic AI service rules (`2026-07-15`)** regulate exactly the "study buddy" persona, so a tutor's *character* becomes a regulated design decision. 🟡 **And the go-to-market must split inside the region:** public opinion in ANZ favours banning AI in schools more than in the Asian markets examined, so the same product needs a restriction-first posture at one end and an adoption-first posture at the other. 🟡 India is a data-protection engagement *(phased to May `2027`)*, not an AI-statute one.
+
+### LATAM
+
+🟢 **The engagement is RETROFIT, and the two numbers that define it are `87`% adoption against `26`% with a strategy.** The institution has already got AI; what it lacks is the inventory, the policy and the controls over what its faculty and students are already doing. 🟢 **The first deliverable is therefore a discovery and inventory exercise, not a build** — and it is the cheapest sale on this shelf because the usage is already there to point at. 🟡 **Procurement runs through regional programmes:** the UNESCO LAC Observatory *(launched `2026-04-14`, Santiago)* and its Mexico pilot with **CONALEP** and **DGETI** are centre-of-excellence structures a studio can partner into. 🟡 **Regulatory posture is uneven and mostly policy rather than statute** *(Colombia `CONPES 4144`; Mexico's bill still in the Senate; Uruguay via the CoE Convention)*, so a LATAM compliance story should anchor on **institutional governance**, which exists, rather than on national law, which largely does not yet. 🔵 **Language is a deliverable, not a detail** — Spanish and Portuguese, and `formalms/formalms` remains this shelf's example of a platform shipping its own grant in the procurement language.
+
+
 ## Pass 251 — 2026-10-16 — NORTH AMERICA'S AI-IN-EDUCATION RULE-MAKING HAS MOVED FROM **GUIDANCE TO MANDATE AT THE DISTRICT LEVEL**, WITH THREE STATES REQUIRING A WRITTEN DISTRICT AI POLICY — AND APAC RETURNS A **FUNDED NATIONAL UNIVERSITY PROGRAMME** FOR THE FIRST TIME ON THIS SHELF, WHILE EMEA'S `2026` / `2027` DATE CONFLICT IS SERVED IN BOTH FORMS AND STILL CANNOT BE CLOSED FROM HERE
 
 ⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-websearch`](../evidence/p251-websearch.2026-10-16-p251.tsv) *(legs `4`–`7`)* · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv). 🔴 **Every instrument below is a SECONDARY source.** `www.unesco.org` and `eur-lex.europa.eu` are refused at the proxy, re-probed this pass; `ACTION UX` was **retired** at `p250` precisely because `WebSearch` is not this base's lazy regulatory channel but its **only** one.

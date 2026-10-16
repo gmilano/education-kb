@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 252 — 2026-10-16 — THE SECTOR TREND IS THAT **AI-IN-EDUCATION LAW HAS ACQUIRED DATES**, AND THE FIRST EDUCATION-SPECIFIC DEADLINE ON THIS SHELF IS A **GRACE PERIOD** RATHER THAN AN OBLIGATION; THE KB-INTERNAL TREND IS THAT THIS BASE'S DEFECTS ARE NOW BEING FOUND IN ITS OWN **MEASUREMENTS** RATHER THAN IN ITS KNOWLEDGE
+
+⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv) · [`p252-platform-grants`](../evidence/p252-platform-grants.2026-10-16-p252.tsv) · [`p252-xr-census`](../evidence/p252-xr-census.2026-10-16-p252.tsv) · [`p252-xq-measurement`](../evidence/p252-xq-measurement.2026-10-16-p252.tsv)
+
+### 🟢 `T252-T1` — the market trend: from *"governance"* as a posture to governance with a CALENDAR
+
+🔵 The consensus framing on leg `4` is the same one the sector has repeated all year — *"AI in education is shifting from experimentation to governance"*. 🔴 **That framing has been true and useless for three quarters, because a posture cannot be planned against.** 🟢 **What changed this pass is that the APAC leg returned dates:**
+
+| trend | `p250`–`p251` saw | `p252` sees |
+|---|---|---|
+| **where the duty sits** | federal/vendor-facing *(amended `COPPA`, `2026-04-22`)*, then the **district** *(OH, OK, IL, NV, SC)* | 🟢 **the national statute, in force and dated** — Korea `2026-01-22`, Vietnam, China `2026-07-15` |
+| **what the duty says** | *adopt a policy* | 🔴 **comply, or hold a grace period that expires** |
+| **what a studio sells** | assurance | 🟢 **a remediation deadline** |
+
+🟢 **Vietnam is the instance that makes the trend concrete, and it is the first of its kind on this shelf: an education-SPECIFIC carve-out with a date** — systems already running in education before **`2026-08-15`** get an extra six months. 🔵 **Why a grace period is a stronger commercial signal than an obligation:** an obligation applies to everyone equally and gets deferred; a grace period divides the market into incumbents with a clock and new deployments with none, and clocks do not get lobbied away as easily as start dates do. 🟡 Set against EMEA, where the high-risk date is still a **disjunction** this session cannot close, the gradient is visible: **APAC now has dates and EMEA still has a date argument.**
+
+### 🟢 `T252-T2` — the product trend: the regulated surface is moving from the MODEL to the PERSONA
+
+🔵 China's **anthropomorphic AI service rules (`2026-07-15`)** and Nevada's ban on AI performing counsellor, psychologist or social-worker duties *(carried from `p251`)* are different legal instruments in different systems pointing at the same thing: 🔴 **it is the human-likeness of an education product that attracts the rule, not its accuracy.** 🟢 **The design consequence is concrete and cheap to act on:** a tutor's persona — name, voice, memory of the student, expressions of care — becomes a **compliance-relevant configuration surface** that has to be switchable per jurisdiction, not a brand decision baked into prompts. 🔵 Set beside EMEA's `Article 5(1)(f)` *(emotion recognition in educational institutions, banned since `2025-02-02`)*, the pattern reads clearly: **three jurisdictions now regulate the affective layer of an education product and none of them regulates its pedagogy.**
+
+### 🔴 `T252-T3` — the supply trend: the open-source channel and these shelves have CONVERGED, and that is a different fact from "dry"
+
+Fifteenth dry pass in sixteen. 🟢 **But `p252` is the first to check the candidates against the carried index instead of reporting an impression**: `8` legs, `6` named candidates, 🔴 **`6` already carried, `0` new**. 🔵 **The right reading is not that the world has stopped producing education agents — it is that `WebSearch` can no longer tell this base anything it does not have.** 🟢 Which makes the channel question a budget question: the payload channel *(`raw.githubusercontent.com`, `git ls-remote`)* pays in verified grants, and it is the only one that paid this pass.
+
+### 🔴 `T252-T4` — the licence trend, and it is now directional rather than anecdotal
+
+Three licence claims on one leg, three refutations from first-hand payloads, 🔴 **and all three errors point the same way: toward permissiveness** *(Sakai `ECL-2.0` claimed Apache-2.0; Forma LMS `GPL-2.0` claimed Apache-2.0; Open edX `AGPL-3.0` claimed Apache-2.0)*. 🔵 **A random error scatters.** 🟢 **So the trend worth carrying is a PRIOR: a licence cell arriving on the secondary channel should be read as an upper bound on permissiveness, not an estimate of it** — the opposite of how a comparison table reads. 🟡 `ACTION XU` asks for the rate over the whole shelf history, which would turn the prior into a number; `p252` publishes only the direction, from `3` of `3`.
+
+### 🟢 `T252-T5` — the KB-internal trend has turned over, and the new shape is better news than the old
+
+`p251` named this base's failure mode as **unwired or unfailable knowledge, never missing knowledge** — four passes of it. 🟢 **`p252` closes both of the ACTIONs that framing produced** *(`XQ`, the unfailable classifier; `XR`, the unfloored suites)* and the trend changes shape:
+
+| pass window | where the defects were | how they were found |
+|---|---|---|
+| `p248`–`p251` | 🔴 in the **wiring** — a correct verdict that never reached the gate; a control that could not fail | by auditing the gate |
+| **`p252`** | 🟢 in the **measurements themselves** — a byte count one short, an exit code read from the wrong process | 🔴 **by the author walking into the defect while testing for it** |
+
+🔴 **Both of this pass's self-inflicted errors were in the instrument's own measurement, not in its logic:** a `sha256` taken through command substitution *(one byte short, hash unmatchable — `p178`'s own documented class)*, and an `exit=0` read from `head` at the end of a pipe *(`p251`'s own enumerated layer-1 swallower)*. 🔵 **The trend statement: this base has reached the point where its knowledge is sound, its wiring is largely closed, and the remaining error surface is the ACT OF MEASURING.** 🟢 That is a better place to be and a harder one to audit, because a wrong measurement arrives looking exactly like a right one — which is the argument for `ACTION XY`, bounding the population of instruments that still measure a payload through a captured body rather than a file.
+
+
 ## Pass 251 — 2026-10-16 — THE SECTOR TREND IS **COMPLIANCE MOVING FROM THE STATE TO THE DISTRICT**, WHERE THE BUYER IS; AND THE KB-INTERNAL TREND IS NOW FOUR PASSES OLD AND HAS A NAME: THIS BASE'S FAILURES ARE **UNWIRED OR UNFAILABLE** KNOWLEDGE, NEVER MISSING KNOWLEDGE
 
 ⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-websearch`](../evidence/p251-websearch.2026-10-16-p251.tsv) · [`p251-gate-exit-audit`](../evidence/p251-gate-exit-audit.2026-10-16-p251.tsv) · [`p251-gate-measured`](../evidence/p251-gate-measured.2026-10-16-p251.tsv) · [`p251-prefix-collisions`](../evidence/p251-prefix-collisions.2026-10-16-p251.tsv)

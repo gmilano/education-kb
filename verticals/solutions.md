@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 252 — 2026-10-16 — `0` NEW PLATFORMS, AND THE VERTICAL LEG PAID IN **THREE LICENCE CELLS, ALL THREE WRONG, ALL THREE WRONG IN THE SAME DIRECTION** — EACH REFUTED BY A PAYLOAD READ FIRST-HAND THIS PASS. THE SAKAI CASE IS THE INSTRUCTIVE ONE: THE SECONDARY SOURCE IS WRONG IN EXACTLY THE CLAUSE A STUDIO WOULD CARE ABOUT
+
+⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-platform-grants`](../evidence/p252-platform-grants.2026-10-16-p252.tsv) · [`p252-slug-existence`](../evidence/p252-slug-existence.2026-10-16-p252.tsv) · [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv) *(leg `3`)*
+
+### 🟢 `T252-V1` — three carried platform grants, re-read first-hand, `0` corrections
+
+| platform | default branch *(`ls-remote --symref`)* | grant path · bytes · `sha256/16` | family |
+|---|---|---|---|
+| **Sakai** · [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` *(`cbc192f88279`)* | `LICENSE` · `11 120` B · `0688f62d04f14e4b` | 🟢 **`ECL-2.0`** *(first line: `Educational Community License, Version 2.0 (ECL-2.0)`)* |
+| **Forma LMS** · [`formalms/formalms`](https://github.com/formalms/formalms) | `master` *(`446a77a9b9cb`)* | `html/license.txt` · `18 346` B · `4e63feff285d9215` | 🟡 **`GPL-2.0`** *(`Version 2, June 1991`)* |
+| **Open edX** · [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` *(`aced8af9654f`)* | `LICENSE` · `35 136` B · `e12d785697426f9d` | 🔴 **`AGPL-3.0`** *(`Version 3, 19 November 2007`)* |
+
+### 🔴 `T252-V2` — what leg `3` claimed, and why the direction of the error is the finding
+
+| the claim, verbatim from the leg | measured | gap |
+|---|---|---|
+| Sakai: *"one comparison lists its license as **Apache 2.0 license**"* | 🟢 `ECL-2.0` | 🟡 **close, and wrong where it counts** — see below |
+| Forma LMS: *"a fit if you need **Apache 2.0** for corporate training"* | 🟡 `GPL-2.0` | 🔴 **permissive claimed, COPYLEFT measured** |
+| Open edX: *"another says it uses **Apache License 2.0**"* · *"`AGPL v3` (platform), `Apache 2.0` (some components)"* | 🔴 `AGPL-3.0` | 🔴 **network copyleft claimed as permissive** |
+
+🔴 **Three claims, three errors, one direction: every one overstates permissiveness.** 🔵 A transcription error scatters; a systematic error does not. **The operational consequence is a prior, not a correction:** a licence claim arriving on the secondary channel should be assumed **too permissive** until a payload says otherwise, which is the opposite of how a roundup reads. 🟢 `ACTION XU` registers the measurement that would turn that prior into a rate, over the whole shelf history.
+
+### 🟡 `T252-V3` — the Sakai case, because "nearly Apache" is the trap
+
+`ECL-2.0` is not a different licence family from Apache — **the payload says so itself.** Read first-hand this pass, it contains the string `Apache` three times, and the operative sentence is:
+
+> *"…`2.0` license, modified to change the scope of the patent grant in section `3`…"*
+
+🟢 **So the secondary source's instinct is right and its cell is still wrong, in exactly the clause a studio integrating a platform would care about: the PATENT GRANT.** 🔵 Apache-2.0's patent grant runs to the work as a whole; `ECL-2.0` narrows it to the contributor's own contributions. 🔴 **A studio that reads "Apache 2.0" and plans on Apache's patent position has mispriced the only term that differs.** 🟢 **The usable reading for an engagement:** Sakai remains the most permissive full LMS on this shelf and is safe to build *on*; what cannot be copied over from an Apache-2.0 habit is the patent assumption.
+
+### 🟢 `T252-V4` — the platform shelf as it now stands, by what a studio may do with it
+
+| family | platforms | what the studio may keep proprietary |
+|---|---|---|
+| 🟢 **permissive-adjacent** | **Sakai** *(`ECL-2.0`, patent scope narrowed)* | 🟢 integrate over the platform's APIs and keep the studio layer closed |
+| 🟡 **weak / library copyleft** | **OpenEduCat** *(`LGPL-3.0`, branch `19.0`)* | 🟡 link, do not embed; a modified OpenEduCat module is itself `LGPL` |
+| 🔴 **strong copyleft** | **Forma LMS** *(`GPL-2.0`)* · **frappe/lms** *(`AGPL-3.0`, branch `develop`)* · **Open edX** *(`AGPL-3.0`)* · **Moodle** *(`GPL`)* | 🔴 **nothing, if the deliverable is a fork.** `AGPL` reaches a *hosted service*, which is how a studio would normally ship it |
+
+🔵 **The standing recipe follows from the table and has not changed:** the platform stays the platform. 🔴 **Do not fork an `AGPL` LMS into a client deliverable** — integrate over `LTI 1.3` *([`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3), `MIT`, `master`, `d8fa43e1ace2`)* and keep the studio's own code in the permissive layer.
+
+
 ## Pass 251 — 2026-10-16 — `0` NEW PLATFORMS, `2` CARRIED GRANTS RE-READ FIRST-HAND AND BOTH HOLD — AND THE VERTICAL LEG'S ONE AI HEADLINE IS A **VENDOR PRODUCT PAGE**, WHOSE CLAIM THIS SHELF CAN NEITHER CONFIRM NOR REFUTE FROM THE OPEN REPOSITORY
 
 ⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-websearch`](../evidence/p251-websearch.2026-10-16-p251.tsv) *(leg `2`)* · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv)

@@ -90,6 +90,12 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── p251-prefix-collision (ACTION XN: the maia class, a truncation onto a real repo)"; \
 	cd compose/code/p251-prefix-collision && $(PY) test_prefix_collision.py >/dev/null && echo "   PASS"; \
 	cd - >/dev/null; \
+	echo "── p252-ungated-floors   (ACTION XR: the 71 ungated silent-zero suites, pinned)"; \
+	cd compose/code/p252-ungated-floors && $(PY) -I test_ungated_floors.py >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
+	echo "── p252-ungated-floors   (ACTION XR: verify every pinned floor still holds)"; \
+	cd compose/code/p252-ungated-floors && $(PY) -I ungated_floors.py --verify >/dev/null && echo "   PASS"; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

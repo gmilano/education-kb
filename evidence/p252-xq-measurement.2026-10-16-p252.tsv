@@ -1,0 +1,6 @@
+pass	payload	bytes	verdict	hits	riders	excess	length_state	is_usable_permissive
+p248-p251	p207/fixtures/commons-clause-mit.txt	621	MIT	(none)	n/a (field did not exist)	0	n/a (state did not exist)	TRUE  <- the defect
+p252	p207/fixtures/commons-clause-mit.txt	621	NOT-OPEN-SOURCE:added-restriction	(none)	commons clause; the license does not grant to you	0	SHORTER-THAN-CANONICAL	FALSE <- discharged
+p252 road 2	same payload, rider block CUT OUT	n/a	MIT-BODY-SHORT:ungradeable	(none)	(none)	0	SHORTER-THAN-CANONICAL	FALSE <- length state alone refuses
+p252 road 1	Commons Clause PREPENDED to full MIT	>1150	NOT-OPEN-SOURCE:added-restriction	(none)	commons clause; right to sell the software; the license does not grant to you	>0	LONGER-THAN-CANONICAL	FALSE <- anchors alone refuse
+p252 falsifier	both halves reverted in a throwaway copy	621	MIT	(none)	(none)	0	n/a	TRUE  -> suite exits 1, 7 failures

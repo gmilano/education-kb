@@ -25,13 +25,36 @@ import unittest
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from mit_plus import (
+    ALL_VERDICTS,
+    LENGTH_IN_BAND,
+    LENGTH_LONG,
+    LENGTH_SHORT,
+    MIT_CANONICAL_HIGH,
+    MIT_CANONICAL_LOW,
+    USABLE_VERDICTS,
     VERDICT_MIT,
     VERDICT_MIT_PLUS,
     VERDICT_NOT_MIT,
     VERDICT_RESTRICTED,
+    VERDICT_SHORT,
     classify,
     is_usable_permissive,
+    length_state,
 )
+
+# `p252` / `ACTION XQ` — the canonical Commons Clause payload, read from `p207`'s own
+# fixture rather than retyped here, so this suite cannot drift from the file the ACTION
+# was measured against.  Path is derived from `__file__`: `p355-cwd-portability`.
+_FIXTURE = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "..", "p207-permissive-half-audit", "fixtures", "commons-clause-mit.txt",
+)
+with open(_FIXTURE, encoding="utf-8") as _fh:
+    COMMONS_CLAUSE = _fh.read()
+
+# The same payload with the rider block CUT OUT, leaving only the abridged MIT body.
+# This is road 2: no rider vocabulary left to hit, so only the length state can refuse.
+COMMONS_CLAUSE_NO_RIDER = COMMONS_CLAUSE[COMMONS_CLAUSE.index("MIT License\n\nCopyright"):]
 
 # Canonical MIT, padded with a copyright line to land in the measured 1062-1093 B band.
 MIT = """MIT License
@@ -158,6 +181,128 @@ class TestAdjacentShapes(unittest.TestCase):
 
     def test_bytes_is_utf8_length_not_character_count(self):
         self.assertEqual(classify("é")["bytes"], 2)
+
+
+class TestP252CommonsClauseRider(unittest.TestCase):
+    """`ACTION XQ`: the payload this instrument blessed for three passes."""
+
+    def test_fixture_is_the_measured_621_byte_payload(self):
+        self.assertEqual(classify(COMMONS_CLAUSE)["bytes"], 621)
+
+    def test_fixture_is_shorter_than_canonical_mit(self):
+        self.assertEqual(classify(COMMONS_CLAUSE)["length_state"], LENGTH_SHORT)
+
+    def test_fixture_still_matches_the_mit_body(self):
+        # The naive signal fires, exactly as it did at p248. That is the trap.
+        self.assertTrue(classify(COMMONS_CLAUSE)["mit_body"])
+
+    def test_fixture_is_refused(self):
+        self.assertEqual(classify(COMMONS_CLAUSE)["verdict"], VERDICT_RESTRICTED)
+
+    def test_fixture_is_not_usable_permissive(self):
+        # 🔴 `ACTION XQ`'s falsifier. This assertion is the whole discharge: it
+        # returned True at p248, p249, p250 and p251.
+        self.assertFalse(is_usable_permissive(COMMONS_CLAUSE))
+
+    def test_fixture_names_the_rider_that_condemns_it(self):
+        self.assertIn("commons clause", classify(COMMONS_CLAUSE)["riders"])
+
+    def test_the_old_excess_signal_was_blind_to_it(self):
+        # Published as a control because it is the STRUCTURAL half of the miss: a
+        # byte-excess test cannot see a rider that makes the file shorter.
+        self.assertEqual(classify(COMMONS_CLAUSE)["excess"], 0)
+
+    def test_the_old_restriction_vocabulary_was_blind_to_it(self):
+        # And the lexical half: none of RESTRICTION_TERMS appears in this payload.
+        self.assertEqual(classify(COMMONS_CLAUSE)["hits"], [])
+
+
+class TestP252TwoRoadsAreIndependent(unittest.TestCase):
+    """Each signal must refuse on its own, or the fix is one signal wearing two hats."""
+
+    def test_short_mit_body_with_no_rider_vocabulary_is_still_refused(self):
+        v = classify(COMMONS_CLAUSE_NO_RIDER)
+        self.assertEqual(v["riders"], [])
+        self.assertEqual(v["hits"], [])
+        self.assertEqual(v["verdict"], VERDICT_SHORT)
+        self.assertFalse(is_usable_permissive(COMMONS_CLAUSE_NO_RIDER))
+
+    def test_a_rider_on_a_full_length_grant_is_caught_by_the_anchor(self):
+        # The Commons Clause as it is normally shipped: PREPENDED to a complete MIT
+        # text, so the file is LONGER than the band and the length state cannot decide.
+        wrapped = (
+            '"Commons Clause" License Condition v1.0\n\n'
+            "Without limiting other conditions in the License, the grant of rights\n"
+            "under the License will not include, and the License does not grant to\n"
+            "you, the right to Sell the Software.\n\n" + MIT
+        )
+        v = classify(wrapped)
+        self.assertEqual(v["length_state"], LENGTH_LONG)
+        self.assertEqual(v["verdict"], VERDICT_RESTRICTED)
+        self.assertFalse(is_usable_permissive(wrapped))
+
+    def test_length_state_boundaries_are_inclusive_at_both_ends(self):
+        self.assertEqual(length_state(MIT_CANONICAL_LOW - 1), LENGTH_SHORT)
+        self.assertEqual(length_state(MIT_CANONICAL_LOW), LENGTH_IN_BAND)
+        self.assertEqual(length_state(MIT_CANONICAL_HIGH), LENGTH_IN_BAND)
+        self.assertEqual(length_state(MIT_CANONICAL_HIGH + 1), LENGTH_LONG)
+
+    def test_a_short_file_with_no_mit_body_is_still_NOT_MIT_BODY(self):
+        # Precedence control: the absence of an MIT body outranks the length state,
+        # so P971's shape does not get relabelled by this pass's new verdict.
+        self.assertEqual(classify(APACHE_NOTICE)["verdict"], VERDICT_NOT_MIT)
+        self.assertEqual(classify("")["verdict"], VERDICT_NOT_MIT)
+
+
+class TestP252ConsumingArmIsClosed(unittest.TestCase):
+    """`p248`'s hazard: a new state that falls through into the permissive branch."""
+
+    def test_every_verdict_is_graded(self):
+        # Adding a verdict without deciding its usability fails HERE, not in a row.
+        for v in ALL_VERDICTS:
+            self.assertEqual(v in USABLE_VERDICTS, v == VERDICT_MIT, v)
+
+    def test_exactly_one_verdict_is_usable(self):
+        self.assertEqual(set(USABLE_VERDICTS), {VERDICT_MIT})
+
+    def test_the_new_state_was_refused_before_it_was_emitted(self):
+        self.assertNotIn(VERDICT_SHORT, USABLE_VERDICTS)
+
+    def test_all_verdicts_are_distinct(self):
+        self.assertEqual(len(set(ALL_VERDICTS)), len(ALL_VERDICTS))
+
+
+class TestP252NoRegression(unittest.TestCase):
+    def test_genuine_mit_is_in_band_and_still_usable(self):
+        v = classify(MIT)
+        self.assertEqual(v["length_state"], LENGTH_IN_BAND)
+        self.assertEqual(v["verdict"], VERDICT_MIT)
+        self.assertTrue(is_usable_permissive(MIT))
+
+    def test_osaasy_is_unchanged_by_the_new_state(self):
+        v = classify(OSAASY)
+        self.assertEqual(v["verdict"], VERDICT_RESTRICTED)
+        self.assertEqual(v["length_state"], LENGTH_LONG)
+
+    def test_the_shelves_shortest_mit_cell_is_a_MANIFEST_not_a_payload(self):
+        # 🔴 The honest risk of the new length state: it REFUSES a short MIT body, so a
+        # genuine minimal MIT payload would be downgraded to ungradeable. Swept at p252
+        # over every `MIT` cell carrying a byte figure on all eight shelves: the only
+        # figure below MIT_CANONICAL_LOW is `1 005` B, and it occurs five times as a
+        # `package.json` — a MANIFEST. A manifest declares `"license": "MIT"` and does
+        # NOT contain the grant body, so `NOT-MIT-BODY` decides it before the length
+        # state is ever consulted. The false-refusal rate on current shelf data is 0.
+        manifest = '{\n  "name": "scorm-again",\n  "version": "1.1.0",\n  "license": "MIT"\n}\n'
+        v = classify(manifest)
+        self.assertEqual(v["verdict"], VERDICT_NOT_MIT)
+        self.assertFalse(v["mit_body"])
+        self.assertLess(v["bytes"], MIT_CANONICAL_LOW)
+        # The precedence is what makes it safe, so pin it:
+        self.assertEqual(v["length_state"], LENGTH_SHORT)
+
+    def test_mit_plus_unclassified_addition_survives(self):
+        padded = MIT + "\n" + ("Additional bespoke term. " * 60)
+        self.assertEqual(classify(padded)["verdict"], VERDICT_MIT_PLUS)
 
 
 if __name__ == "__main__":

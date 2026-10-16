@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 252 — 2026-10-16 — `0` NEW FOUNDATION ROWS AND THE `403` IS UNCHANGED — BUT THE **THREE BEST-KNOWN PLATFORMS IN THIS INDUSTRY** WERE RE-READ FIRST-HAND, ALL THREE HOLD, AND THE SECONDARY CHANNEL WAS WRONG ABOUT ALL THREE **IN THE SAME DIRECTION**
+
+⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-platform-grants`](../evidence/p252-platform-grants.2026-10-16-p252.tsv) *(`3`, read this pass)* · [`p252-slug-existence`](../evidence/p252-slug-existence.2026-10-16-p252.tsv) *(`11` slugs by `ls-remote`)* · [`p252-channel-map`](../evidence/p252-channel-map.2026-10-16-p252.tsv) · [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv)
+
+### 🔴 `0` new rows, published as a BUDGET and CHANNEL statement
+
+🔴 **`0` `topic:` queries and `0` code searches were RUN, because they cannot be:** `api.github.com/search/repositories` answers **`403`**, re-probed this pass; `api.github.com/repos/{owner}/{repo}` likewise; `github.com/trending` likewise. 🟢 **`8` `WebSearch` legs ran and returned `0` repositories not already carried here.** 🟢 `raw.githubusercontent.com` → `200`; `git ls-remote` → resolves. 🔵 **`ACTION UK` is satisfied by construction: this pass makes no flat claim about what exists.**
+
+### 🔴 `T252-F1` — the verification note a later pass needs, because the instruction and the channel disagree
+
+The standing instruction for a new row is *verify the URL with `curl -sI` before writing it*. 🔴 **That is not satisfiable from this session, and the measurement should be on the record rather than quietly skipped:** `curl` against `https://github.com/{owner}/{repo}` returns **`403`** for all `11` slugs cited this pass, and `000` for every external source. 🟢 **So existence was established on the two channels that are live, which are strictly stronger than a `HEAD` on an HTML page:**
+
+| channel | what it proves | result this pass |
+|---|---|---|
+| `git ls-remote --symref … HEAD` | the repository exists, its **default branch**, and its **HEAD sha** | 🟢 `11` / `11` resolved |
+| `raw.githubusercontent.com/{slug}/{branch}/{path}` | the **payload** at a named path exists and what it says | 🟢 `3` / `3` grants read |
+
+🔵 **And the default branches are the reason this matters, replicating `p251`'s lesson on new subjects:** `frappe/lms` → `develop`, `openeducat/openeducat_erp` → **`19.0`** *(a version, not a branch name)*, `moodle/moodle` → `main`, `sakaiproject/sakai` → `master`. 🔴 A ladder that guesses `main` or `master` returns `404` on two of this industry's best-known platforms and records them as **ungranted**.
+
+### 🟢 `T252-F2` — the three grants, re-read this pass
+
+| slug | default branch | grant path · bytes · `sha256/16` | measured grant | agrees with the shelf? |
+|---|---|---|---|---|
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` *(`cbc192f88279`)* | `LICENSE` · `11 120` B · `0688f62d04f14e4b` | 🟢 **`ECL-2.0`** | 🟢 yes — carried since `p206`-era rows |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | `master` *(`446a77a9b9cb`)* | `html/license.txt` · `18 346` B · `4e63feff285d9215` | 🟡 **`GPL-2.0`** *(`Version 2, June 1991`)* | 🟢 yes |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` *(`aced8af9654f`)* | `LICENSE` · `35 136` B · `e12d785697426f9d` | 🔴 **`AGPL-3.0`** *(`Version 3, 19 November 2007`)* | 🟢 yes — the shelf's recorded `sha256`₁₂ `e12d78569742` reproduces **exactly** |
+
+🟢 **`0` corrections.** 🔵 The Open edX hash matching a figure recorded passes ago, to the digit, is the strongest statement this base can make about a carried cell: it was read correctly then and the payload has not moved.
+
+### 🔴 `T252-F3` — a one-byte measurement trap, caught on this pass's own first probe
+
+The first probe of all three grants read them **one byte short** and produced a **different `sha256` on all three** — `11 119` / `18 345` / `35 135` against the shelves' `11 120` / `18 346` / `35 136`:
+
+| capture shape | what it measures | result |
+|---|---|---|
+| `body=$(curl …)` then `printf '%s' "$body" \| wc -c` | 🔴 command substitution **strips the trailing newline** | `11 119` B, `efbb3e5a1b9a153d` — 🔴 a hash that can never match |
+| `curl -o file` then `wc -c file` | 🟢 the payload as served | `11 120` B, `0688f62d04f14e4b` — 🟢 matches the shelf |
+
+🔵 **This base already knows the class** — [`p178-byte-channel-census`](../compose/code/p178-byte-channel-census/) names it *"Channel B (STRIPPING)"* and [`p179-capture-shape`](../compose/code/p179-capture-shape/) classifies the capture shapes. 🔴 **What `p252` adds is that it is still easy to walk into while deliberately testing for it**, and that on a shelf which **pins SHAs** the consequence is not a rounding error but an identity that never matches again. 🟢 `ACTION XV`'s sibling registered as `ACTION XY`: bound the population of instruments that still measure bytes or `sha256` through a captured body rather than a file.
+
+
 ## Pass 251 — 2026-10-16 — `0` NEW FOUNDATION ROWS, AND THE REASON IS A `403` RATHER THAN AN EMPTY WORLD — BUT THE **STANDARDS LAYER** THIS SHELF GAINED AT `p249`/`p250` NOW HAS ITS NAMING CONVENTION MEASURED, AND IT IS THE CONVENTION THAT BROKE THE HARVESTER
 
 ⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-prefix-collisions`](../evidence/p251-prefix-collisions.2026-10-16-p251.tsv) · [`p251-queries`](../evidence/p251-queries.2026-10-16-p251.tsv) · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv)

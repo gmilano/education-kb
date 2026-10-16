@@ -1,0 +1,7 @@
+candidate_slug	leg	shelf_occurrences	already_carried	verdict
+sakaiproject/sakai	3	255	yes (all 8 shelves + open-gaps)	NOT NEW — grant re-read first-hand this pass, holds
+formalms/formalms	3	80	yes (all 8 shelves)	NOT NEW — grant re-read first-hand this pass, holds
+openedx/edx-platform	3	258	yes (all 8 shelves + open-gaps)	NOT NEW — grant re-read first-hand this pass, holds
+ashishpatel26/500-AI-Agents-Projects	1	63	yes (agents/top, agents/trending, repos/trending)	NOT NEW — a CATALOGUE, not an agent
+huggingface/agents-course	1	12	yes (agents/trending, repos/trending)	NOT NEW — a COURSE, grants nothing to compose
+microsoft/ai-agents-for-beginners	1	carried since p244	yes	NOT NEW — a course, no licence stated by the leg

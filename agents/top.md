@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 252 — 2026-10-16 — `0` NEW AGENT ROWS FOR A FIFTEENTH PASS, AND THE REASON IS NOW A **MEASURED PROPERTY OF THE SHELVES** RATHER THAN OF THE WORLD: EVERY CANDIDATE ALL EIGHT LEGS RETURNED IS ALREADY CARRIED HERE — AND `ACTION XQ` IS DISCHARGED, SO THIS SHELF'S `MIT` TIER NO LONGER BLESSES A **COMMONS CLAUSE** RIDER
+
+⏱️ **TWENTY-FIRST pass of `2026-10-16`.** `p232`–`p251` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`ACTION XQ` DISCHARGED — the highest-priority carried ACTION, live for four passes.** `p1054-mit-plus-clause` answered `MIT` / `is_usable_permissive: True` on the canonical Commons Clause body at `p248`, `p249`, `p250` and `p251`. It now answers `NOT-OPEN-SOURCE:added-restriction` / `False`, by **two independent roads**, each proven to refuse on its own. 🟢 **`ACTION XR` DISCHARGED, and it CORRECTS `p251`'s own sizing.** 🔴 **`0` new agent rows.** 🔴 **`0` candidates withheld this pass — because `0` candidates were new.**
+
+🔵 **Evidence:** [`p252-xq-measurement`](../evidence/p252-xq-measurement.2026-10-16-p252.tsv) *(before/after/falsifier)* · [`p252-carried-candidates`](../evidence/p252-carried-candidates.2026-10-16-p252.tsv) *(`6`)* · [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv) *(`8` legs)* · [`p252-slug-existence`](../evidence/p252-slug-existence.2026-10-16-p252.tsv) *(`11` slugs, `ls-remote`)* · [`p252-channel-map`](../evidence/p252-channel-map.2026-10-16-p252.tsv) · **instrument:** [`p252-ungated-floors`](../compose/code/p252-ungated-floors/) *(`31`)*
+
+### 🟢 `T252-A` — `ACTION XQ`: the rider this shelf's own gate was blessing
+
+The payload is `p207`'s fixture, `621` B. Its operative sentence is *"Without limiting other conditions in the License, the grant of rights under the License will not include, and the License does not grant to you, the right to Sell the Software."* Underneath it: `License: MIT License`, and an MIT body **abridged to its first sentence**.
+
+| pass | verdict | `hits` | `riders` | `excess` | `length_state` | `is_usable_permissive` |
+|---|---|---|---|---|---|---|
+| `p248`–`p251` | 🔴 **`MIT`** | *(none)* | *field did not exist* | `0` | *state did not exist* | 🔴 **`True`** |
+| **`p252`** | 🟢 **`NOT-OPEN-SOURCE:added-restriction`** | *(none)* | 🟢 `commons clause`, `the license does not grant to you` | `0` | 🟢 **`SHORTER-THAN-CANONICAL`** | 🟢 **`False`** |
+
+🔴 **Why it missed, and the structural half is the one worth carrying:** `excess` is `max(0, nbytes - MIT_CANONICAL_HIGH)`. A byte-**excess** test is blind *by construction* to a rider that leaves the file **shorter** than canonical MIT — and this one does, because the MIT body itself is abridged. 🔵 `p251` named this limb and could not close it; `p252` closed it with a third length state, where an MIT body below `MIT_CANONICAL_LOW` is **ungradeable** rather than permissive: the text that would carry the rest of the grant is not there to read.
+
+### 🟢 `T252-B` — the two roads are independent, and each was made to refuse alone
+
+| road | payload | what refuses it | measured |
+|---|---|---|---|
+| **vocabulary** | the Commons Clause **prepended to a full MIT text** *(`> 1 150` B, `LONGER-THAN-CANONICAL`)* | the anchors — the length state cannot decide | 🟢 `NOT-OPEN-SOURCE:added-restriction` |
+| **length** | the same fixture with the **rider block cut out** *(`riders: []`, `hits: []`)* | the length state — no vocabulary left to hit | 🟢 `MIT-BODY-SHORT:ungradeable` |
+
+🟢 **And the arm that CONSUMES the new state was closed before the state was emitted.** `p248` measured the hazard shared by `ACTION XE`, `XG` and `XI` — a new verdict falling through into the permissive branch — so usability here is now a **closed allow-list** (`USABLE_VERDICTS`), not a comparison against one constant, with `ALL_VERDICTS` beside it so a control can prove every other state is refused. 🔵 A later pass that adds a sixth verdict and forgets to grade it fails `test_every_verdict_is_graded` rather than silently blessing it.
+
+🟢 **Proven able to fail, not assumed to:** both halves reverted in a throwaway copy → the suite exits `1` with `7` failures. 🔵 `34` controls now, floor raised `14` → `34`.
+
+### 🔴 `T252-C` — the honest cost of the fix, swept rather than asserted
+
+A length state that REFUSES can refuse something genuine. Every `MIT` cell carrying a byte figure was swept across all eight shelves:
+
+| band | figures found | reading |
+|---|---|---|
+| `1 056`–`1 085` B | 🟢 the mass of them *(`1 069` B alone appears `82` times)* | comfortably inside the band, unaffected |
+| 🔴 **below `1 020` B** | 🟡 **exactly one figure: `1 005` B, five occurrences** | 🟢 **and all five are a `package.json`** — a MANIFEST, which declares `"license": "MIT"` and does **not** contain the grant body |
+
+🟢 **So `NOT-MIT-BODY` decides the manifest before the length state is ever consulted, and the false-refusal rate on current shelf data is `0`.** 🔵 Pinned as a control (`test_the_shelves_shortest_mit_cell_is_a_MANIFEST_not_a_payload`) so the precedence cannot be reordered by a later pass without the suite saying so. 🔴 **What is NOT claimed: that no genuine short MIT payload exists anywhere** — only that none is on these shelves. `ACTION XW` re-measures the band against the `881` MIT slugs when there is egress.
+
+### 🔴 `T252-D` — the row channel, and this pass can say something sharper than "dry"
+
+All `8` legs returned `0` education-specific agents. 🔵 **But `p252` checked the candidates against the carried index instead of treating them as supply**, and that converts a complaint into a measurement:
+
+| candidate the legs returned | leg | occurrences already on these shelves | verdict |
+|---|---|---|---|
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) *(`main`, `9beeb721c2af`)* | 1 | `63` | 🔴 **already carried** — and a CATALOGUE, not an agent |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) *(`main`, `05dd8892a7a2`)* | 1 | carried since `p244` | 🔴 **already carried** — a course; the leg still could not state its licence |
+| `huggingface/agents-course` | 1 | `12` | 🔴 **already carried** — a course, grants nothing to compose |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) · [`formalms/formalms`](https://github.com/formalms/formalms) · [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 3 | `255` · `80` · `258` | 🔴 **already carried** — platforms, and all three re-read first-hand this pass *(see [`verticals/solutions.md`](../verticals/solutions.md))* |
+
+🟢 **The useful form of the finding:** the dry channel is not evidence that nothing exists; it is evidence that **`WebSearch` and these shelves have converged**. Eight legs, `0` rows, and every name they produced was already here with a first-hand grant beside it. 🔵 That is the first pass able to say so with the index rather than by impression.
+
+
 ## Pass 251 — 2026-10-16 — `ACTION XM` AND `XN` BOTH DISCHARGED, AND `XM` FOUND THE SAME DEFECT CLASS AS `p250` IN **FIVE MORE CONTROLS**: A `unittest.main()` SUITE EXITS `0` WHEN IT COLLECTS **ZERO** TESTS — AND THE GATE DISCARDS `stderr` ON EXACTLY THOSE FIVE LINES AND NOWHERE ELSE
 
 ⏱️ **TWENTIETH pass of `2026-10-16`.** `p232`–`p250` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

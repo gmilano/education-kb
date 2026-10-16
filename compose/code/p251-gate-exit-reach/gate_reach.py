@@ -117,7 +117,7 @@ def collected_tests(src):
 FLOORS = {
     "p222-ecosystem-bound-grammar/test_bound_grammar.py": 32,
     "p228-shelf-gate/test_shelf_gate.py": 36,
-    "p1054-mit-plus-clause/test_mit_plus.py": 14,
+    "p1054-mit-plus-clause/test_mit_plus.py": 34,   # p252: raised from 14 by ACTION XQ
     "p242-grant-delta/test_grant_delta.py": 23,
     "p1058-empty-payload-gate/test_empty_payload_gate.py": 29,
 }

@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 252 — WHAT MOVED THIS WEEK: **NOTHING IN SUPPLY, AND THE LEG THAT PAID MOST PAID IN THREE WRONG LICENCE CELLS.** WHAT MOVED IN THE GATE: THE `MIT` TIER STOPPED BLESSING A **COMMONS CLAUSE** RIDER IT HAD BLESSED FOR FOUR PASSES
+
+⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-websearch`](../evidence/p252-websearch.2026-10-16-p252.tsv) *(`8` legs)* · [`p252-platform-grants`](../evidence/p252-platform-grants.2026-10-16-p252.tsv) *(`3`)* · [`p252-carried-candidates`](../evidence/p252-carried-candidates.2026-10-16-p252.tsv) · [`p252-channel-map`](../evidence/p252-channel-map.2026-10-16-p252.tsv) · [`p252-xq-measurement`](../evidence/p252-xq-measurement.2026-10-16-p252.tsv)
+
+### 🔴 The row channel, fifteenth dry pass in sixteen — and what each of the eight legs DID pay
+
+| leg | scope | education agents returned | what it paid instead |
+|---|---|---|---|
+| 1 | Global | 🔴 **`0`** | general frameworks — `LangGraph`, `CrewAI`, `MetaGPT`, `OpenHands`, `opencode`, `OpenClaw` — plus course repositories. 🔵 One roundup's own caveat is still the useful part: *"some are true MIT or Apache-2.0; others are source-available with commercial conditions"* |
+| 2 | Global | 🔴 **`0`** | third-party roundups only; the education picks are **learning** repositories *(`developer-roadmap`, `nanochat`, "AI Engineering From Scratch")*. 🔴 No official trending list is reachable — `github.com/trending` is `403` for a fifteenth pass |
+| 3 | Global | 🔴 **`0`** | 🔴 **three licence claims, and all three are REFUTED first-hand this pass** — see below |
+| 4 | Global | 🔴 **`0`** | *"experimentation to governance"* as the consensus `2026` trend; market figures disagreeing by an order of magnitude |
+| 5 | North America | 🔴 **`0`** | `134` AI-in-education bills across `31` states; `H.R. 8747` advanced in a July markup; Canada's *"AI for All"*, June `2026` |
+| 6 | EMEA | 🔴 **`0`** | the EU high-risk date STILL a disjunction; a Rwanda–Anthropic MoU *(Feb `2026`)* naming education; a UNESCO-ICHEI/IICBA report on African higher education *(Jan `2026`)* |
+| 7 | APAC | 🔴 **`0`** | 🟢 **the richest regulatory leg this pass, and the first with DATED, education-SPECIFIC rules** — Korea, China and Vietnam. See [`intel/market.md`](../intel/market.md) |
+| 8 | LATAM | 🔴 **`0`** | UNESCO IESALC/UNU-IAS across `19` countries, and a regional Observatory with a launch date |
+
+🟢 **The property now holds for a fifteenth pass, and `p252` can state it in its strong form:** `WebSearch` pays this base in **regulation** and never in **rows**. 🔵 **What is new is the second half:** every *name* the eight legs produced was **already on these shelves** — checked against the carried index, not by impression *(`6` candidates, `0` new)*.
+
+### 🔴 The three licence cells leg 3 got wrong, and they all lean the SAME WAY
+
+| the claim | measured first-hand this pass | direction |
+|---|---|---|
+| Sakai *"Apache 2.0 license"* | 🟢 **`ECL-2.0`** — `LICENSE`, `11 120` B, `sha256`₁₆ `0688f62d04f14e4b`, branch `master` | 🔴 **overstates permissiveness** |
+| Forma LMS *"needing Apache 2.0 licence"* | 🟢 **`GPL-2.0`** — `html/license.txt`, `18 346` B, `sha256`₁₆ `4e63feff285d9215` | 🔴 **permissive claimed, COPYLEFT measured** |
+| Open edX *"Apache License 2.0"* | 🟢 **`AGPL-3.0`** — `LICENSE`, `35 136` B, `sha256`₁₆ `e12d785697426f9d` | 🔴 **network copyleft claimed as permissive** |
+
+🔴 **Three for three, in one direction.** A random transcription error would scatter; these do not. 🔵 **Why that matters more than the three cells:** it assigns a **prior** to any licence claim arriving on this channel — assume it is too permissive until a payload says otherwise. 🟢 `ACTION XU` registers the measurement that would turn that prior into a number, over the whole shelf history rather than one pass.
+
+### 🟢 What moved in the gate instead
+
+🟢 **`ACTION XQ` discharged:** the Commons Clause body now reads `NOT-OPEN-SOURCE:added-restriction` / `is_usable_permissive: False`, where it read `MIT` / `True` at `p248`–`p251`. Two independent roads, each proven to refuse alone; the consuming arm closed as an allow-list *before* the new state was emitted; both halves reverted in a throwaway copy to prove the controls can fail *(`exit 1`, `7` failures)*. 🟢 **`ACTION XR` discharged**, and it cuts `p251`'s `321` down to the `71` suites that can actually lie — all `71` now pinned by name.
+
+
 ## 2026-10-16 — Pass 251 — WHAT MOVED THIS WEEK: **NOTHING IN SUPPLY, AND TWO MORE COURSE REPOSITORIES THAT GRANT NOTHING.** WHAT MOVED IN THE GATE: `5` CONTROLS THAT COULD HAVE PASSED WHILE ASSERTING **ZERO** TESTS NOW CANNOT
 
 ⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-websearch`](../evidence/p251-websearch.2026-10-16-p251.tsv) *(`7` legs)* · [`p251-withheld`](../evidence/p251-withheld.2026-10-16-p251.tsv) *(`2`)* · [`p251-queries`](../evidence/p251-queries.2026-10-16-p251.tsv) · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv)

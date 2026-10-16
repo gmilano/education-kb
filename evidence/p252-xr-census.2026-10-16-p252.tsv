@@ -1,0 +1,9 @@
+measure	p251_claim	p252_measured	reading
+instrument directories on disk	344	347	p251 + this pass's two instruments
+referenced by the Makefile	23	27	p251 undercounted; 2 more wired this pass
+python test files	not measured	201	THE artefact that can lie — a directory is not a suite
+gated (reached by a recipe)	not measured	20	19 before this instrument, 20 with it
+ungated	321 (as DIRECTORIES)	181 (as SUITES)	p251's 321 conflated directories with suites
+ungated AND silent-zero (unittest.main)	not measured	71	the ACTION XR population, named in p252-ungated-floors
+ungated AND explicit-exit	not measured	110	immune by construction — raises or sys.exit on failure
+of the 71, collecting ZERO tests today	not measured	0	THE DEFECT IS LATENT, NOT ACTIVE — nothing rests on a suite asserting nothing

@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 252 — THE TRENDING CHANNEL IS `403` FOR THE **FIFTEENTH PASS**, SO THIS PASS MEASURED THE GATE AGAIN — AND `p251`'s OWN HEADLINE NUMBER WAS WRONG BY A FACTOR OF FOUR: THE POPULATION THAT CAN PASS WHILE ASSERTING NOTHING IS **`71`**, NOT `321`
+
+⏱️ **TWENTY-FIRST pass of `2026-10-16`.** 🔵 **Evidence:** [`p252-xr-census`](../evidence/p252-xr-census.2026-10-16-p252.tsv) · [`p252-ungated-floors`](../evidence/p252-ungated-floors.2026-10-16-p252.tsv) *(all `71`, NAMED — `ACTION XR`'s falsifier)* · [`p252-channel-map`](../evidence/p252-channel-map.2026-10-16-p252.tsv) · **instrument:** [`p252-ungated-floors`](../compose/code/p252-ungated-floors/) *(`31` controls)*
+
+### 🔴 No trending result is published, and the reason is measured rather than assumed
+
+`GET github.com/trending` → **`403`**. `GET api.github.com/search/repositories?q=topic:education+ai` → **`403`**. `GET api.github.com/repos/moodle/moodle` → **`403`**. 🟢 `raw.githubusercontent.com` → **`200`**; `git ls-remote --symref` → resolves, `11` / `11` slugs this pass. 🔵 **The only live supply channel is still the payload one**, and it paid `3` first-hand grant re-reads and `0` new rows.
+
+### 🟢 What is published instead: `ACTION XR`, and the correction is the finding
+
+`p251` sized the ungated population as *"`344` instruments on disk, `23` referenced by the `Makefile`, so `321` are ungated and unfloored"*, with an explicit falsifier: *"falsified if a pass reports the count without naming which of the `321` carry a `unittest.main()` suite"*.
+
+🔴 **The `321` conflated DIRECTORIES with SUITES.** A directory cannot pass while asserting nothing; a test file can. Counting the artefact that can actually lie:
+
+| measure | `p251` | `p252` | reading |
+|---|---|---|---|
+| instrument directories | `344` | `347` | `p251` + this pass's instrument |
+| referenced by the `Makefile` | `23` | `27` | 🔴 `p251` undercounted its own gate |
+| **python test files** | *not measured* | 🟢 **`201`** | the artefact that can lie |
+| gated by a recipe | *not measured* | `20` | `19` before this instrument, `20` with it |
+| ungated | 🔴 `321` *(dirs)* | 🟢 **`181`** *(suites)* | |
+| 🔴 **ungated AND `unittest.main()`** | *not measured* | 🔴 **`71`** | **the real `ACTION XR` population** |
+| 🟢 ungated AND explicit-exit | *not measured* | 🟢 `110` | raise or `sys.exit` on failure — **immune by construction** |
+| 🟢 of the `71`, collecting **zero** tests today | *not measured* | 🟢 **`0`** | |
+
+🟢 **So the exposure is `71`, and it is LATENT rather than active.** Nothing on these shelves currently rests on a suite that asserts nothing. 🔴 What the `71` are exposed to is a **future** edit — a method rename, a dropped class, a mass `@skip` — landing with no signal at all, which is precisely how `p250`'s `lazy_lint.py` and `p251`'s five controls got there in the first place. 🔵 **All `71` are now pinned by name** in [`floors.tsv`](../compose/code/p252-ungated-floors/floors.tsv), regenerable with `--pin` and checked by `--verify` in `make hooks`, because a floor nobody can regenerate is a floor that gets edited to match a broken suite.
+
+### 🟢 The instrument was proven able to fail, and one failure was the author's own
+
+| falsifier | result |
+|---|---|
+| raise one pinned floor beyond reach | 🟢 `exit=1`, `BELOW-FLOOR git-recency-channel/test_git_recency.py` — **and it names the suite** |
+| delete `floors.tsv` entirely | 🟢 `exit=1`, `71 UNPINNED` — a missing pin file does **not** read as clean |
+
+🔴 **The second falsifier first reported `exit=0`, and the reason is worth more than the control:** it was run as `python3 … \| head -3; echo $?`, so the status read was `head`'s. 🔵 **That is exactly the *pipeline-to-reader with no `pipefail`* pattern `p251`'s own `audit.py` enumerates as a layer-1 swallower** — reproduced by accident while testing for it, on the same pass that published the enumeration. Re-run without the pipe: `exit=1`.
+
+
 ## 2026-10-16 — Pass 251 — THE TRENDING CHANNEL IS `403` FOR THE **FOURTEENTH PASS**, SO THIS PASS MEASURED THE SHELVES AGAIN — AND THE TRUNCATION POPULATION IS NOW **BOUNDED**: `235` PREFIX PAIRS, `0` OF THEM A LIVE UNANNOTATED STUMP
 
 ⏱️ **TWENTIETH pass of `2026-10-16`.** 🔵 **Evidence:** [`p251-prefix-collisions`](../evidence/p251-prefix-collisions.2026-10-16-p251.tsv) *(`235` pairs across `8` shelves)* · [`p251-channel-map`](../evidence/p251-channel-map.2026-10-16-p251.tsv) · **instrument:** [`p251-prefix-collision`](../compose/code/p251-prefix-collision/) *(`20` controls)*

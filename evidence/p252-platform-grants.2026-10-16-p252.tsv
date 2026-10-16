@@ -1,0 +1,4 @@
+slug	secondary_channel_claim	default_branch	grant_path	bytes	sha256_16	first_nonblank_line	measured_grant	direction_of_error
+sakaiproject/sakai	"Apache 2.0 license" (leg 3)	master	LICENSE	11120	0688f62d04f14e4b	Educational Community License, Version 2.0 (ECL-2.0)	ECL-2.0	OVERSTATES PERMISSIVENESS — ECL-2.0 is Apache-2.0 "modified to change the scope of the patent grant in section 3"
+formalms/formalms	"needing Apache 2.0 licence" (leg 3)	master	html/license.txt	18346	4e63feff285d9215	GNU GENERAL PUBLIC LICENSE (Version 2, June 1991)	GPL-2.0	OVERSTATES PERMISSIVENESS — permissive claimed, copyleft measured
+openedx/edx-platform	"Apache License 2.0" / "AGPL v3 (platform), Apache 2.0 (some components)" (leg 3)	master	LICENSE	35136	e12d785697426f9d	GNU AFFERO GENERAL PUBLIC LICENSE (Version 3, 19 November 2007)	AGPL-3.0	OVERSTATES PERMISSIVENESS — network copyleft claimed as permissive

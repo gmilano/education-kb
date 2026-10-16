@@ -1,0 +1,10 @@
+channel	probe	status	reading	delta_vs_p251
+github.com/trending	GET https://github.com/trending	403	no trending supply	unchanged (15th pass)
+api.github.com search	GET /search/repositories?q=topic:education+ai	403	no topic: queries runnable	unchanged
+api.github.com repo	GET /repos/moodle/moodle	403	no metadata channel	unchanged
+raw.githubusercontent.com	GET /frappe/lms/develop/license.txt	200	payload channel LIVE	unchanged
+git ls-remote	ls-remote --symref https://github.com/moodle/moodle HEAD	ok	default-branch resolution LIVE (main)	unchanged
+www.unesco.org	GET /en/digital-education	000	refused at proxy	unchanged
+eur-lex.europa.eu	GET /eli/reg/2024/1689/oj	000	refused at proxy	unchanged
+WebSearch	8 legs, 4 global + 4 regional	ok	pays REGULATION, never ROWS	unchanged (property holds 15th pass)
+make	make carried / make hooks	denied	session classifier blocks repo-authored recipes	unchanged (p251 recorded the same)

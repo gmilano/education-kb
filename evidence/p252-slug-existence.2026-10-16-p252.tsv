@@ -1,0 +1,12 @@
+slug	ls_remote	default_branch	head_sha_12	verdict
+sakaiproject/sakai	ok	master	cbc192f88279	EXISTS
+formalms/formalms	ok	master	446a77a9b9cb	EXISTS
+openedx/edx-platform	ok	master	aced8af9654f	EXISTS
+frappe/lms	ok	develop	1783c832ef4c	EXISTS
+openeducat/openeducat_erp	ok	19.0	46a5d7d40082	EXISTS
+moodle/moodle	ok	main	b7260e59a831	EXISTS
+dmitry-viskov/pylti1.3	ok	master	d8fa43e1ace2	EXISTS
+jdolny/OneRoster.NET	ok	master	4f96365d3108	EXISTS
+ashishpatel26/500-AI-Agents-Projects	ok	main	9beeb721c2af	EXISTS
+microsoft/ai-agents-for-beginners	ok	main	05dd8892a7a2	EXISTS
+gener8v/gener8v.tools.pii-scanner	ok	main	1fe58a42e447	EXISTS
