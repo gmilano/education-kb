@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 234 — 2026-10-16 — THE FOUNDATION TIER GAINS A **PERMISSIVE LMS AND A PERMISSIVE SIS**, AND p233's *"THERE ISN'T A JVM FOUNDATION"* IS OVERTURNED BY TWO JVM FOUNDATIONS
+
+⏱️ **THIRD pass of `2026-10-16`.**
+
+🔴 **`11` NEW permissive rows — the whole `svws-nrw` estate, the only genuinely new rows this pass — plus `4` already-carried rows re-verified at byte precision *(`openolat/OpenOLAT` since `p44`, grant-read at `p209`; `jplag/JPlag` since `p84`; `GibbonEdu/core` and `frappe/education` since `p44`)*. p233's `F233-2` — *"the JVM foundation, measured: there isn't one"* — is FALSIFIED. Both counter-examples are JVM, both are EMEA, and one of them *(OpenOLAT)* was not merely on these shelves but had been GRANT-READ at `p209`.**
+
+🔵 **Evidence:** [`p234-new-rows`](../evidence/p234-new-rows.2026-10-16-p234.tsv) · [`p234-licence-field-defect`](../evidence/p234-licence-field-defect.2026-10-16-p234.tsv) · [`p234-census-false-positives`](../evidence/p234-census-false-positives.2026-10-16-p234.tsv) · [`p234-tu-namespace-census`](../evidence/p234-tu-namespace-census.2026-10-16-p234.tsv)
+
+### 🔴 `F234-1` — the two new foundations, and what each one actually gives you
+
+| repository | licence, read first-hand | what it gives a foundation | the caveat |
+|---|---|---|---|
+| [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) 🔵 *(CARRIED since `p209`, re-verified)* | 🟢 **`Apache-2.0`**, canonical body, **`10 982` B**, APPENDIX stripped, `master` @ `40c3af60221b`. 🔵 `p209` read the same blob as *"`197` lines / `10.7` KB"* | 🟢 **A complete, permissively licensed LMS on the JVM — teaching, learning, assessment and communication — that a client can fork, extend and ship commercially with no copyleft obligation.** `31 854` commits, `447` stars, `167` forks, `21.2-SNAPSHOT`. Maintained by frentix GmbH, Zurich | 🔴 **NOT resolvable from Maven Central** — neither `org.olat` *(which is JAMWiki)* nor `org.openolat` *(a true `404`)*. Its `pom.xml` points `<distributionManagement>` at `nexus.openolat.org`, so a build must add that repository. 🔴 The README cites a `NOTICE.TXT` that **`404`s**. 🟡 Oracle support is *"experimental"*, MySQL *"not recommended"* — Postgres is the real target |
+| [`svws-nrw/SVWS-Server`](https://github.com/svws-nrw/SVWS-Server) | 🟢 **`BSD-3-Clause`**, **`1 611` B**, `dev` @ `c2f1a7f1f902` | 🟢 **The first permissive SIS on these shelves, and a working one: a state school-administration system in production use across North Rhine-Westphalia.** `9 832` commits. Java 21 + Gradle 8, MariaDB 10.6+, Docker *(`svwsnrw/svws-server`)*, and **`17` artefacts on Maven Central under `de.svws-nrw`** — `svws-core`, `svws-db`, `svws-db-dto`, `svws-db-utils`, `svws-openapi`, `svws-module-reporting`, `svws-module-dav-api`, `svws-laufbahnplanung`, `svws-enmserver`, `svws-schulen`, `svws-server-app`, `svws-transpile`, `svws-asd`, `svws-admin-client`, `svws-client`, `svws-module-pdf`, `ext` | 🔴 **Default branch is `dev`, not `main`** — a clone script assuming `main` checks out nothing. 🔴 **GitHub reports its licence as `"Other"`** though the body is canonical `BSD-3-Clause` *(`F234-3`)*. 🟡 The domain model is **NRW school law** — `Laufbahnplanung`, `Blockungen`, `Abschlussberechnungen`, `Zeugnisse` encode one state's regulations, not a portable schema |
+
+🟢 **Why `SVWS-Server` is the more valuable of the two for a foundation, despite `37` stars against OpenOLAT's `447`:** it is the only row in this industry that is **permissive, platform-scale, coordinate-resolvable AND placeable from its own grant** — the copyright line names the Ministerium für Schule und Bildung des Landes NRW at a street address in Düsseldorf. 🔵 **Ed-Fi gives the same shape for North America; this is its EMEA counterpart, and until this pass the shelves said no such thing existed.**
+
+### 🟢 `F234-2` — the rest of the estate: `9` more permissive rows, and a test-fixture corpus worth more than its size
+
+🟢 **Every row below `ls-remote`-verified and grant-read first-hand in this pass's window.** 🔴 **Note the default branches: `4` × `master`, `3` × `main`, `3` × `dev` inside ONE organisation. Seven of ten would break a script that assumes `main`.**
+
+| repository | licence | bytes | branch @ sha | what it is |
+|---|---|---|---|---|
+| [`SVWS-TestSqlites`](https://github.com/svws-nrw/SVWS-TestSqlites) | 🟢 `BSD-3-Clause` | `1 506` | `master` @ `a934d91af317` | 🟢 **Anonymised standard test databases for an SIS.** The cheapest high-value row here: a ready student-data fixture corpus, which this industry essentially never publishes because the data is regulated |
+| [`SVWS-BK-Abschlussberechnungen`](https://github.com/svws-nrw/SVWS-BK-Abschlussberechnungen) | 🟢 `BSD-3-Clause` | `1 527` | `dev` @ `95500eb6164c` | Final-grade calculation **algorithms plus documentation** for vocational colleges — executable regulatory logic, the part a client cannot guess |
+| [`SVWS-Prognos`](https://github.com/svws-nrw/SVWS-Prognos) | 🟢 `BSD-3-Clause` | `1 506` | `master` @ `bba82094715d` | Graduation forecasting, Vue — the natural place an AI layer attaches |
+| [`SVWS-GradeHub`](https://github.com/svws-nrw/SVWS-GradeHub) | 🟢 `BSD-3-Clause` | `1 504` | `main` @ `15309d13dd37` | Browser grade module, online **and** offline |
+| [`SVWS-Conference`](https://github.com/svws-nrw/SVWS-Conference) | 🟢 `BSD-3-Clause` | `1 504` | `main` @ `d2e4f11faed6` | Conference module, TypeScript, online and offline |
+| [`SVWS-Import`](https://github.com/svws-nrw/SVWS-Import) | 🟢 `BSD-3-Clause` | `1 506` | `master` @ `fdaf031c4821` | Data-import web client, Vue |
+| [`SVWS-KOOP`](https://github.com/svws-nrw/SVWS-KOOP) | 🟢 `BSD-3-Clause` | `1 506` | `master` @ `6bf57c1cd06e` | Synchronises data for KOOp scheduling *(`Blockungen`)* |
+| [`SVWS-Tools`](https://github.com/svws-nrw/SVWS-Tools) | 🟢 `BSD-3-Clause` | `1 506` | `master` @ `462ae51ab899` | Deployment repo for web add-on tools |
+| [`Schild-NRW-3-Zeugnisse-Sek-I`](https://github.com/svws-nrw/Schild-NRW-3-Zeugnisse-Sek-I) | 🟢 **`MIT`** | `1 076` | `dev` @ `ee323b2682d6` | Certificate report pack, secondary level I. 🔵 `1 076` B is the canonical `MIT` body — the same size as `lti-tool`'s |
+
+🟡 **The estate is larger than the `10` rows read: the organisation carries `38` repositories**, the remainder being further `Schild-NRW` certificate and report packs *(a mix of `MIT`, `BSD-3-Clause` and `Other`)*, `CC0-1.0` training and statistics documentation, and `SVWS-Dokumentation`. 🔴 **Those were read from the organisation's rendered listing, NOT grant-read, and are therefore NOT rows.** `ACTION UE`.
+
+### 🔴 `F234-3` — why the SIS was invisible, and the discriminator `p209`/`p210` never isolated
+
+🟢 **Measured: `SVWS-Server` and `SVWS-GradeHub` carry BSD-3-Clause bodies whose `28` lines of conditions and disclaimer are BYTE-IDENTICAL. GitHub labels the first `"Other"` and the second `"BSD 3-Clause"`.** The entire difference is a 3-line institutional copyright block *(ministry, street, e-mail, no year)* and a missing trailing newline.
+
+🔴 **Consequence for a harvester: the `9 832`-commit Java core is dropped and the small Vue tools are kept.** The estate looks like a toolbox when it is actually a platform.
+
+🟢 **The rule is `p209`'s and `p210`'s, unchanged: establish a licence from the GRANT BODY, never from a platform metadata field** *(`p209` found it on OpenOLAT; `p210` measured a `15`% rate)*. 🟢 **What this pass adds is WHICH rows the defect selects for: an institution is precisely the holder type whose copyright block breaks the matcher.** 🔴 **So the `15`% is not random — it is biased against exactly the permissive, placeable, publicly funded rows this KB most wants to find.**
+
+### 🔴 `F234-4` — the JVM standards layer, corrected: the census never established resolvability
+
+p233 published *"the JVM foundation, measured: there isn't one"* on a `4 798`-groupId prefix enumeration. 🔴 **Two cells opened one level deeper this pass; both were false positives** *(`org.olat` = JAMWiki's core; `org.fenixedu` = a Scala client SDK, not the platform)*. 🟢 **And `de.svws-nrw` — a namespace p233 never read — holds `17` real artefacts of a real permissive platform.**
+
+🔵 **So the corrected statement, narrower and actually supported:**
+
+> 🟢 **There IS a permissive JVM platform layer in education. It is `de.svws-nrw` on Maven Central and `openolat/OpenOLAT` from its own Nexus.**
+> 🔴 **What remains true is the narrow claim about the STANDARDS BODY: `org.imsglobal` holds one LTI-1.1-era artefact, `basiclti-util/`. There is still no permissive LTI 1.3, QTI, OneRoster or Caliper on the JVM.**
+> 🟡 **A JVM Ed-Fi/LTI/QTI scope is still a BUILD. A JVM *SIS or LMS* scope is now a FORK — price them differently.**
+
+🔴 **The remaining platform cells of p233's census — `org.sakaiproject`, `org.dspace`, `org.opencastproject`, `org.apereo`, `org.jasig`, `org.kuali` — are namespace-presence facts, NOT resolvability claims, until a pass opens each.** `ACTION UB`.
+
+### 🟡 `F234-5` — copyleft rows, ALL already carried, re-verified here at byte precision
+
+| repository | licence, read first-hand | why it is here anyway |
+|---|---|---|
+| [`jplag/JPlag`](https://github.com/jplag/JPlag) | 🔴 **`GPL-3.0`**, `main` @ `3ee7de912b90` | 🟢 **The academic-integrity reference engine: source-code plagiarism and collusion detection across 17+ languages** *(Java, C/C++, C#, Python, JS/TS, Go, Kotlin, R, Rust, Swift, Scala, LLVM IR, Scheme, SCXML, text)*, `2.0k` stars, `5 708` commits, published on Maven as `de.jplag`. 🟢 **Runs entirely locally — nothing uploaded**, which is the property that makes it deployable under GDPR and the EU AI Act. 🔴 **`GPL-3.0`: an engine you RUN beside a deliverable, never one you SHIP inside it** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 `GPL-3.0`, `35 121` B | A PHP school-management platform. 🔴 **Its default branch is a RELEASE branch, `v31.0.00`** — not `main`, not `master`. A clone script assuming either checks out nothing. Carried as the trap, and as a scoping reference |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **`GPL-3.0` by a `19`-BYTE CLAIM**, `develop` @ `73ce33ef2719` | Education management on Frappe/ERPNext. 🔴 **Its `license.txt` is the single line `"License: GNU GPL V3"` — `19` bytes.** p217's distinction exactly: that is a claim, not a grant body, and counsel will ask for the text before anyone forks it |
+
+🔵 **All three are copyleft, so none changes the permissive picture — but `JPlag` is the row to remember, because academic integrity is the one education AI concern that is a *detection* problem rather than a *generation* problem, and it has a mature engine.**
+
 ## Pass 233 — 2026-10-16 — THE FOUNDATION TIER GAINS AN **EXECUTABLE ACCEPTANCE GATE**, AND THE JVM HALF OF THIS INDUSTRY TURNS OUT TO BE ONE LEGACY JAR AT THE STANDARDS BODY
 
 ⏱️ **SECOND pass of `2026-10-16`.**

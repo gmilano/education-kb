@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 234 — 2026-10-16 — FOUR RECIPES, AND FOR THE FIRST TIME ONE OF THEM IS A **FORK** RATHER THAN AN INTEGRATION
+
+⏱️ **THIRD pass of `2026-10-16`.**
+
+🔵 **Evidence:** [`p234-new-rows`](../evidence/p234-new-rows.2026-10-16-p234.tsv) · [`p234-queries`](../evidence/p234-queries.2026-10-16-p234.tsv) · [`p234-licence-field-defect`](../evidence/p234-licence-field-defect.2026-10-16-p234.tsv)
+
+🔴 **Every repository named below was `ls-remote`-verified and grant-read first-hand this pass, at the SHA given. Nothing here is a lead.** 🟡 **None of these recipes was EXECUTED — no stack was stood up in this session. They are wiring diagrams over verified components, and the effort figures are estimates, labelled as such.**
+
+### 🟢 `P234-R1` — EMEA: fork a permissive SIS and ship the AI Act high-risk evidence pack with it *(10–14 weeks, est.)*
+
+🔵 **The recipe this KB could not write until this pass, because until this pass it believed no permissive SIS existed.** For an EMEA client — a state education agency, a school network, a ministry supplier — that wants to **own** its student information system rather than rent one.
+
+**Components, all verified:**
+
+| role | component | licence | pin |
+|---|---|---|---|
+| the base | [`svws-nrw/SVWS-Server`](https://github.com/svws-nrw/SVWS-Server) | 🟢 `BSD-3-Clause` *(`1 611` B)* | `dev` @ `c2f1a7f1f902` |
+| the integration seam | `svws-openapi` *(module of the above)* + `de.svws-nrw:svws-core`, `:svws-db-dto` on Maven Central | 🟢 `BSD-3-Clause` | `17` artefacts published |
+| dev data | [`svws-nrw/SVWS-TestSqlites`](https://github.com/svws-nrw/SVWS-TestSqlites) | 🟢 `BSD-3-Clause` | `master` @ `a934d91af317` |
+| regulatory logic reference | [`SVWS-BK-Abschlussberechnungen`](https://github.com/svws-nrw/SVWS-BK-Abschlussberechnungen) | 🟢 `BSD-3-Clause` | `dev` @ `95500eb6164c` |
+| the AI layer | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) *(RAG + tutoring)* | 🟢 `Apache-2.0` | `main` @ `6cf793bd868b` |
+| integrity, local-only | [`jplag/JPlag`](https://github.com/jplag/JPlag) | 🔴 `GPL-3.0` — **run as a service, never linked in** | `main` @ `3ee7de912b90` |
+
+**Wiring:**
+
+1. 🔴 **Clone `-b dev`.** The default branch is `dev`; `main` does not exist. This is the single most common way this recipe fails on day one.
+2. Stand up the stack as the repo specifies — **Java 21 + Gradle 8, MariaDB 10.6+**, or the published `svwsnrw/svws-server` Docker image — and load `SVWS-TestSqlites` so no real student record is touched during development.
+3. 🟢 **Put the AI layer BESIDE the SIS, speaking `svws-openapi`, never inside it.** DeepTutor runs as its own service against a read-scoped OpenAPI client generated from `svws-openapi`. 🔵 **This keeps the `Apache-2.0` agent and the `BSD-3-Clause` platform in separate processes, which is also what makes the high-risk boundary auditable.**
+4. 🔴 **Draw the Article-6 boundary explicitly.** Under the EU AI Act, **admissions, student evaluation and exam scoring are high-risk**. Anything the AI layer touches in those three functions gets: provenance on every generated item, a **human sign-off step before any score becomes a grade**, immutable score logging, and an appeal trail. 🟢 **Everything else — timetabling help, drafting, parent communication, search — stays outside the high-risk envelope and ships without that overhead.** The boundary is the deliverable's single most valuable line.
+5. 🟢 **Point DeepTutor's model config at a locally hosted backend** *(it supports Ollama, LM Studio, llama.cpp and vLLM alongside hosted APIs)*. For a public-sector EMEA client this is usually a hard requirement, and it is a config change, not a port.
+6. 🟡 **Run `JPlag` as a separate local service for academic integrity.** It is `GPL-3.0` and must not be linked into a distributed derivative — but it **runs entirely locally and uploads nothing**, which is exactly why it survives GDPR and the Act.
+
+🔴 **Two diligence items to raise in week one, not at contract: SVWS's domain model encodes NRW school law** *(`Laufbahnplanung`, `Blockungen`, `Abschlussberechnungen`, `Zeugnisse`)* — outside NRW, `svws-openapi`/`svws-core`/the reporting module and the test corpus are the portable parts, and the regulatory calculations are a rewrite. 🔴 **And GitHub reports the core's licence as `"Other"`** — legal will flag it; the answer is the grant body itself *(canonical `BSD-3-Clause`, `1 611` B, identical in its conditions to its correctly-labelled siblings)*.
+
+### 🟢 `P234-R2` — LATAM: sell governance first, because adoption already happened *(6–8 weeks, est.)*
+
+🔵 **The recipe that follows from the sharpest asymmetry on these shelves: `87%` of institutions using AI, `26%` with a strategy; Brazil `56%` / Chile `55%` of teachers against `36%` OECD; `9` in `10` 15-year-olds. There is no platform to sell into this — the platform question is already answered by whatever people are quietly using.**
+
+**The deliverable is four artefacts, and only one of them is software:**
+
+1. 🟢 **An institutional AI policy** anchored to external frameworks the client can cite rather than defend: **UNESCO's regional Observatory on AI in Education** *(launched `Apr 2026`)*, **Colombia's CONPES 4144**, and **Uruguay's** Council-of-Europe convention signature. 🔵 Anchoring beats authoring: a `26%`-strategy institution lacks authority, not opinions.
+2. 🟢 **An academic-integrity capability that is a detection problem, not a policy slogan** — [`jplag/JPlag`](https://github.com/jplag/JPlag) *(`GPL-3.0`, `main` @ `3ee7de912b90`, 17+ languages, fully local)* stood up as an institutional service. 🔵 **Run-not-ship, so the licence is a non-issue, and "nothing leaves our servers" is the line that closes it.**
+3. 🟢 **A teacher-facing workload tool, deliberately not student-facing** — [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) *(`MIT`, `1 078` B, `main` @ `18f2e223cdd1`)* for lesson drafts, student materials and slides, or [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) *(`MIT`, `main` @ `a890519f3632`)* where a tutor surface is wanted. 🟡 **Both are small and early — scope them as a pilot, not a platform.**
+4. 🔴 **An equity-aware delivery mode.** Argentina's `75%` / `42%` usage split by socio-economic group means a connectivity-assuming rollout **encodes** the gap. Where that matters, `P234-R3` is the delivery mode.
+
+🔴 **What NOT to do: do not quote a fork.** There is no LATAM open-source education supply to fork — established across seven passes and three independent channels *(GitHub, package registries, and `mx.` as an exact zero on Maven this pass)*. 🟡 **Chamilo and ILIAS are the realistic integration targets for Spanish/Portuguese-language work, and both are copyleft: INTEGRATE, never fork.**
+
+### 🟢 `P234-R3` — offline-first education delivery, with the auth boundary the base does not have *(4–6 weeks, est.)*
+
+🔵 **For low-connectivity deployments anywhere, and the equity requirement in LATAM specifically.**
+
+| role | component | licence | pin |
+|---|---|---|---|
+| the base | [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 🟢 `Apache-2.0` *(`10 779` B)* | `main` @ `54ee30a44902` |
+| bundled content | Kiwix *(offline Wikipedia)* + Kolibri *(Khan Academy courses, progress tracking, multi-user)* + ProtoMaps | *(as bundled)* | — |
+| retrieval | Qdrant *(bundled)* | — | — |
+| local inference | Ollama / LM Studio / llama.cpp *(bundled support)* | — | — |
+
+**Wiring:**
+
+1. Deploy NOMAD on local hardware. 🔵 **Budget ~`5` GB disk without the assistant and ~`25` GB with it, and a GPU where the assistant is used interactively.**
+2. 🔴 **THE CRITICAL STEP, and the reason this is a recipe rather than a download: NOMAD has NO AUTHENTICATION BY DESIGN, and its own README says it is not meant to be exposed to the internet.** Put a reverse proxy with the institution's identity in front of it and terminate every route there. 🟢 **Use the Kolibri layer for per-learner progress and keep NOMAD's own surfaces unauthenticated-but-unreachable.**
+3. 🔴 **Do not place student records inside NOMAD.** Progress and identity belong in the authenticated layer — Kolibri's own multi-user model, or the SIS in `P234-R1`. 🟢 **NOMAD is a content and retrieval appliance; treat it as read-mostly infrastructure.**
+4. 🟢 **Zero telemetry is a selling point, not a footnote** — in a region where `26%` of institutions have an AI strategy, "nothing phones home" is the sentence that gets a pilot approved.
+5. 🟡 Sync model: ship content updates on physical media or during scheduled connectivity windows. NOMAD needs the network only for installation and optional later downloads.
+
+### 🟢 `P234-R4` — APAC + EMEA: one assessment-governance layer, sold in two jurisdictions *(8–10 weeks, est.)*
+
+🔵 **The convergence `TR234-1` found: Vietnam's AI law names AUTOMATED ASSESSMENT as high-risk education *(in force `1 Mar 2026`)*, and the EU AI Act names EXAM SCORING as high-risk. Two unrelated regimes, one engineering requirement. Build it once.**
+
+**Components, from the permissive rows this KB already carries plus this pass's:**
+
+| role | component | licence |
+|---|---|---|
+| assessment interchange | `feyst/qti3-validator`, `go-qti`, `text2qti`, `qti-scoring-system` *(carried)* | 🟢 permissive |
+| launch / identity | [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool) *(carried, `MIT`)* | 🟢 `MIT` |
+| item generation | [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 `MIT`, `main` @ `b90bd88a2899` |
+| integrity | [`jplag/JPlag`](https://github.com/jplag/JPlag) | 🔴 `GPL-3.0`, run-not-ship |
+| scoping reference only | TAO *(`oat-sa`)* | 🔴 `GPL-2.0-only` — read, do not ship |
+
+**The four controls that satisfy both regimes:**
+
+1. 🟢 **Provenance per item.** Every generated or AI-modified assessment item carries which model, which prompt, which version, which human approved it. 🔵 Store it beside the QTI, not in a separate audit system that drifts.
+2. 🔴 **Human sign-off before a score becomes a grade.** Non-negotiable in both regimes, and it is also what Oklahoma and Maryland require *(no AI in high-stakes student decisions)*. 🟢 **One control, three jurisdictions.**
+3. 🟢 **Immutable score logging + an appeal trail.** A student must be able to contest a score and an institution must be able to reconstruct how it was produced.
+4. 🔴 **A non-empty subject guard on every LTI launch.** 🟡 **Carried forward from `T233-B` unchanged, and still unexecuted: all three LTI libraries read in source accept `sub: ""`, and they differ only on an ABSENT subject. The guard an adapter must own is NON-EMPTY, not PRESENT** — `lti-tool`'s `z.string()` has no `.min(1)`. 🔴 **`ACTION TW` *(execute this against zod)* is STILL NOT RUN — no zod in this session either. Treat the guard as a design requirement, not a verified behaviour.**
+
+🔴 **Two caveats a proposal must carry.** `AI-Teaching-Agent`'s README states **grading productisation is FROZEN**, so it is an item-generation and workflow component here, not a grader. 🟡 **And the EU dates are unsettled** *(`2 Aug 2026` vs `2 Dec 2027`, with the *"AI omnibus"* in play)* — 🟢 **quote the obligations, put the dates in change control.**
+
 ## Pass 233 — 2026-10-16 — `P232-R1`'s IDENTITY GUARD IS **MOVED, NOT REMOVED**: THERE IS A LIBRARY THAT VALIDATES THE SUBJECT, AND THE GUARD THAT MATTERS TURNS OUT TO BE A DIFFERENT ONE
 
 ⏱️ **SECOND pass of `2026-10-16`.**

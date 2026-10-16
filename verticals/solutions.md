@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 234 — 2026-10-16 — THE *"NO PERMISSIVE PLATFORM"* FINDING, CONFIRMED NINE TIMES, IS **BROKEN** — AND THE `Apache-2.0` LMS THAT BREAKS IT WAS GRANT-READ BY `p209`, `25` PASSES BEFORE THIS SHELF LAST DENIED IT
+
+⏱️ **THIRD pass of `2026-10-16`.**
+
+🔴 **`1` NEW permissive platform row *(SVWS)* plus `1` already-carried one promoted to the permissive tier *(OpenOLAT, grant-read at `p209`)*. The nine-pass streak ends here — and on the LMS limb it ends on a counter-example this KB had already VERIFIED and then argued against for `25` passes.**
+
+🔵 **Evidence:** [`p234-new-rows`](../evidence/p234-new-rows.2026-10-16-p234.tsv) · [`p234-census-false-positives`](../evidence/p234-census-false-positives.2026-10-16-p234.tsv) · [`p234-licence-field-defect`](../evidence/p234-licence-field-defect.2026-10-16-p234.tsv)
+
+### 🔴 `V234-1` — the correction, stated against this shelf's own words
+
+`V233-1` published: *"the mandated vertical query returned `0` MIT- or Apache-licensed education platforms, and the search's own summary says so in as many words."* 🟡 **The summary did say so. It also said, in the same result, that OLAT *"is a free e-learning open source software that operates under Apache license 2.0."*** 🔴 **And `p209` had ALREADY opened the `LICENSE` file by hand — `197` lines, verbatim `Apache License, Version 2.0` — and published that the cell was right.** 🔵 **So the nine-pass denial was never short of evidence. It contradicted evidence this KB had already produced.**
+
+| platform | licence — **read first-hand this pass** | what it is | status here |
+|---|---|---|---|
+| **OpenOLAT** 🔵 *(carried since `p209`, promoted)* | 🟢 **`Apache-2.0`** — canonical body, **`10 982` B**, APPENDIX stripped, `master` @ `40c3af60221b`; `p209` read it as `197` lines / `10.7` KB | 🟢 **A full LMS**: teaching, learning, assessment, communication. `31 854` commits, `447` stars, `167` forks, `21.2-SNAPSHOT`. frentix GmbH, Zurich | 🟢 **THE COUNTER-EXAMPLE. A permissive LMS a client can fork, extend and ship commercially.** 🔴 Not on Maven Central — ships from `nexus.openolat.org`. 🔴 README cites a `NOTICE.TXT` that `404`s. 🔴 `pom.xml` licence string is the typo'd `"Apache 2.0 Open Source L6icense"` |
+| 🆕 **SVWS** *(the `svws-nrw` estate)* | 🟢 **`BSD-3-Clause`** — **`1 611` B** core, `dev` @ `c2f1a7f1f902`; `9` further rows `BSD-3-Clause`/`MIT` | 🟢 **A state school-administration system / SIS** in production across North Rhine-Westphalia. `9 832` commits, Java 21, MariaDB, Docker, **`17` Maven artefacts under `de.svws-nrw`**, plus Vue/TS modules for grades, conferences, import and forecasting | 🟢 **The EMEA counterpart to Ed-Fi, and the ONLY row in this industry that is permissive, platform-scale, coordinate-resolvable AND placeable from its own grant** *(a ministry at a street address)*. 🔴 Default branch `dev`. 🔴 GitHub says `"Other"`. 🟡 Domain model encodes NRW school law |
+| **OpenEduCat** | 🔴 `LGPL-3.0` *(on Odoo)* | education ERP: enrolment CRM, student information, admissions | already carried — unchanged |
+| **TAO** *(`oat-sa`)* | 🔴 `GPL-2.0-only` / `LGPL-2.1` | the most complete open assessment platform | already carried — read to scope, build on the permissive QTI rows |
+| **Kuali** | institution-governed consortium | ERP, SIS, research administration | already carried. 🟢 `org.kualigan` confirmed PRESENT this pass: `kc/ kfs/ kuali/ liquibase/ maven/ pom/` |
+
+### 🔴 `V234-2` — the customisable-platform map, corrected where p233's census was read too hard
+
+🔴 **p233's `V233-2` table read platform resolvability off groupId PREFIXES. Two cells opened this pass; both were false positives.** The map below marks what is **established** against what was **assumed**.
+
+| platform | ecosystem | licence | Maven-resolvable? | AI-on-top posture |
+|---|---|---|---|---|
+| 🆕 **SVWS** | 🟢 **JVM** | 🟢 **`BSD-3-Clause`** | 🟢 **YES — `de.svws-nrw`, `17` artefacts, VERIFIED by opening the listing** | 🟢 **The best AI-on-top target in this industry: permissive, an `svws-openapi` module as the seam, and a published `BSD-3-Clause` anonymised test-database corpus to develop against** |
+| **OpenOLAT** 🔵 *(carried since `p44`, grant-read `p209`)* | 🟢 **JVM** | 🟢 **`Apache-2.0`** | 🔴 **NO — and this CORRECTS p233.** `org.olat` is **JAMWiki**; `org.openolat` is a true `404` *(control passed in-window)*. Ships from `nexus.openolat.org` | 🟢 Fork-and-extend is licence-clean. 🔵 Add the project's Nexus to the build, or vendor the war |
+| **Moodle** | PHP | copyleft | 🔴 no — expected | the LMS to attach to; plugin + `version.php` conventions already mapped |
+| **Open edX** | Python | copyleft | 🔴 no — expected | XBlock remains the integration seam |
+| **Sakai** | JVM | `ECL-2.0` | 🟡 **`org.sakaiproject` is a namespace-presence fact, NOT a verified resolvability claim** *(`ACTION UB`)* | a real integration surface, but confirm coordinates before quoting |
+| **DSpace** | JVM | copyleft | 🟡 `org.dspace` — presence only, unopened | institutional repository — the research-output seam |
+| **Opencast** | JVM | copyleft | 🟡 `org.opencastproject` — presence only, unopened | lecture capture — transcription and search seam |
+| **CAS / uPortal** | JVM | `Apache-2.0` *(Apereo)* | 🟡 `org.apereo` + `org.jasig` — presence only, unopened | the identity seam |
+| **FenixEdu** | JVM | — | 🔴 **NO — CORRECTED.** `org.fenixedu` holds two artefacts, both `fenixedu-scala-sdk` *(Scala 2.13 and 3)*: **a client SDK, not the platform** | 🔴 **`intel/market.md`'s claim that the census surfaced *"the one natively EMEA platform on this map"* is not supported by the cell.** 🟢 The genuinely EMEA platform rows are now SVWS *(Germany)* and OpenOLAT *(Switzerland)* |
+| **TAO** | PHP | 🔴 `GPL-2.0-only` | 🔴 no — expected | assessment; build the conformant pieces on the permissive QTI rows |
+| **Gibbon** | PHP | 🔴 `GPL-3.0` | no | 🔴 **default branch is the release branch `v31.0.00`** — the trap row |
+| **Frappe Education** | Python | 🔴 `GPL-3.0` by a `19`-byte claim | no | on ERPNext; 🔴 get the grant text before anyone forks it |
+| **AlekSIS** | Python | 🔵 unread | n/a | 🔴 **DEAD on github.com — hosted on `edugit.org`.** A channel gap, not an absence. `ACTION UD` |
+
+### 🟢 `V234-3` — what the correction changes about how a vertical engagement is priced
+
+🔵 **For nine passes the sales line was: *the platform tier is copyleft, so the permissive layer is standards and integration, and integration is where the revenue is.* That line is still mostly true, and it is still the right default. What changed is that there is now a second shape available.**
+
+| shape | when it applies | licence posture | what it is worth |
+|---|---|---|---|
+| **INTEGRATE** *(the nine-pass default)* | Moodle, Open edX, TAO, OpenEduCat, Sakai — the copyleft estate | 🟢 **Safe: a `GPL`/`LGPL` platform you integrate WITH is a client asset. The obligation starts when you DISTRIBUTE a derivative** | the existing recipe book — plugin/XBlock seams, standards adapters |
+| 🆕 **FORK** *(new this pass)* | 🟢 **OpenOLAT** *(`Apache-2.0`)* and 🟢 **SVWS** *(`BSD-3-Clause`)* | 🟢 **Clean: fork, extend, re-licence the additions, ship commercially. No copyleft obligation, no consortium governance** | 🟢 **A productisable base.** For an EMEA client that wants *their* LMS or *their* SIS rather than a Moodle instance, this is now quotable — and it was not last pass |
+
+🔴 **Two honest limits on the FORK shape.** **(1)** SVWS's domain model is **NRW school law** — `Laufbahnplanung`, `Blockungen`, `Abschlussberechnungen`, `Zeugnisse` — so outside NRW it is an architecture and a schema to learn from, not a drop-in; the reusable parts are `svws-openapi`, `svws-core`, the reporting module and the test-database corpus. **(2)** OpenOLAT's missing `NOTICE.TXT` and typo'd pom licence string are exactly the kind of diligence snag that stalls a fork at legal review — 🟢 **raise both in week one, when they cost nothing, rather than at contract.**
+
 ## Pass 233 — 2026-10-16 — THE VERTICAL PLATFORM TIER IS CONFIRMED COPYLEFT FOR A **NINTH** TIME, NOW FROM MAVEN COORDINATES RATHER THAN FROM GITHUB
 
 ⏱️ **SECOND pass of `2026-10-16`.**

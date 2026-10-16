@@ -4,6 +4,136 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 234 — 2026-10-16 — THE FINDING THIS KB IS BUILT ON — *"NO `MIT`/`Apache` LMS OR SIS IN EDUCATION"* — IS **FALSIFIED ON BOTH LIMBS**, AND ON THE LMS LIMB IT WAS FALSIFIED BY **`p209`'s OWN VERIFIED CELL, `25` PASSES AGO**
+
+⏱️ **THIRD pass of `2026-10-16`.** p232 ran `2026-10-15` 23:4x → `2026-10-16` 00:xx UTC, p233 later the same date, this pass later still. Stated because these shelves pin SHAs and three passes sharing a date is exactly what a later pass reads as a contradiction.
+
+🔴 **`11` NEW rows — the entire `svws-nrw` estate *(`10` `BSD-3-Clause`, `1` `MIT`)*, never before on these shelves. `9` already-carried rows re-verified at byte precision with fresh SHAs *(carried since `p44`; `jplag/JPlag` since `p84`)*. `1` refused, `0` padded.** 🔴 **This pass DRAFTED `20` rows and `9` of them — `45`% — turned out to be duplicates; see `ACTION UG`. `2` of `3` carried actions discharged — `TU` fired and produced the non-US supply six passes of region queries could not; `TQ` fired on this pass's rows and FALSIFIED p233's inference about its own lever. `TW` NOT RUN and says so.** 🔴 **`4` published cells overturned — `3` of them this KB's own central finding, `2` of them p233's census.**
+
+🔵 **Evidence:** [`p234-new-rows`](../evidence/p234-new-rows.2026-10-16-p234.tsv) · [`p234-tu-namespace-census`](../evidence/p234-tu-namespace-census.2026-10-16-p234.tsv) · [`p234-licence-field-defect`](../evidence/p234-licence-field-defect.2026-10-16-p234.tsv) · [`p234-census-false-positives`](../evidence/p234-census-false-positives.2026-10-16-p234.tsv) · [`p234-queries`](../evidence/p234-queries.2026-10-16-p234.tsv)
+
+### 🔴 `T234-A` — the headline: there IS a permissive LMS, and this KB has been carrying it while denying it exists
+
+Nine consecutive passes published a version of this sentence: *"there is no `MIT`/`Apache` LMS or SIS in this industry; the permissive layer is standards and integration, not platforms."* 🔴 **It is wrong, and the counter-example was already in `verticals/solutions.md`'s own platform map.**
+
+| | what the shelves said | what p234 READ, first-hand |
+|---|---|---|
+| **LMS limb** | *"no `MIT`/`Apache` LMS"*, nine passes | [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) — 🟢 **`Apache-2.0`**, canonical body, **`10 982` B**, APPENDIX stripped, `master` @ `40c3af60221b`. A **full LMS** — *"a web-based e-learning platform for teaching, learning, assessment and communication"*. `31 854` commits, `447` stars, `167` forks, `21.2-SNAPSHOT`. 🔴 **NOT a new row: `p209` already read this exact blob *("`197` lines / `10.7` KB")* and recorded `Apache-2.0`. Re-verified here at byte precision** |
+| **SIS limb** | *"no `MIT`/`Apache` SIS"*, nine passes | [`svws-nrw/SVWS-Server`](https://github.com/svws-nrw/SVWS-Server) — 🟢 **`BSD-3-Clause`**, **`1 611` B**, `dev` @ `c2f1a7f1f902`. A **state school-administration system**, `9 832` commits, Java 21 + Gradle 8, MariaDB, Docker, publishing **`17` artefacts** to Maven Central under `de.svws-nrw` |
+
+🔴 **The honest half, and it is worse than an unread file — because the file WAS read.** 🔴 **`p209` *(2026-10-14)* opened OpenOLAT's `LICENSE` blob by hand, recorded a verbatim `Apache License, Version 2.0` at `197` lines / `10.7` KB, and published that *"the cell on these shelves is RIGHT"*. `p210` then generalised the surrounding defect to a `15`% rate.** 🟡 **And `25` passes later `p233` still published that the platform tier is copyleft or consortium-governed and that there is no `MIT`/`Apache` LMS.**
+
+🔵 **So this is NOT a reading failure. It is a SYNTHESIS failure: a verified `Apache-2.0` LMS cell and a *"no permissive LMS"* conclusion coexisted on `agents/top.md` — the SAME FILE — for twenty-five passes and never met.** 🔴 **Which is the more dangerous defect of the two, because no additional evidence would have fixed it. The evidence was already here.** 🟢 **`ACTION UG` registers the only control that catches this class: before publishing a *"there is no X"* claim, grep these shelves for X.**
+
+🟢 **Corroborated three ways before publishing a correction this size:** the grant body itself *(`Apache License` / `Version 2.0, January 2004`, `10 982` B)*; the `pom.xml` `<licenses>` block; and the README. 🟡 **Two defects found while corroborating, both of which a proposal must carry:** the README says *"refer to the file LICENSE and NOTICE.TXT"* and 🔴 **`NOTICE` and `NOTICE.txt` BOTH `404` at the repository root** — counsel will ask for the notice the project's own README cites; and the `pom.xml` licence name is the typo'd string 🔴 **`"Apache 2.0 Open Source L6icense"`**, which no SPDX matcher will ever match.
+
+### 🔴 `T234-B` — `ACTION TU` fires, and the mechanism that hid the SIS is the defect `p209`/`p210` already named — now with its discriminator measured
+
+`TU` asked p233's question: extend the Maven census past `org.` to `edu.` and the country codes, *"which is where European university output would sit if it exists."* 🟢 **It exists, and it is a `BSD-3-Clause` state ministry estate.**
+
+🔴 **But the reason six passes of region-shaped queries never found it is not geography — it is the licence-field defect this KB has carried since `p209`, where it was found on OpenOLAT, and `p210`, which put it at a `15`% rate.** 🟢 **What `p234` adds is the DISCRIMINATOR, which no prior pass isolated: a two-repository controlled comparison inside ONE organisation.**
+
+| repo | grant body | condition text | copyright block | GitHub's licence field |
+|---|---|---|---|---|
+| `svws-nrw/SVWS-Server` | `BSD 3-Clause License`, `1 611` B | 🟢 **baseline** | 🔴 **`3` lines, no year**: ministry + street address + e-mail | 🔴 **`"Other"`** |
+| `svws-nrw/SVWS-GradeHub` | `BSD 3-Clause License`, `1 504` B | 🟢 **byte-identical to the above** | 🟢 `1` line: `Copyright (c) 2026, Frank Pfotenhauer` | 🟢 **`"BSD 3-Clause"`** |
+
+🟢 **The complete `diff` between the two bodies is the copyright block and a missing trailing newline. All `28` remaining lines of conditions and disclaimer are identical.** 🔴 **One is labelled `BSD 3-Clause`; the other, whose grant is the same grant, is labelled `Other`.**
+
+🔴 **So the estate presents to any harvester filtering on the licence field as a scatter of small Vue/TypeScript tools, while its `9 832`-commit Java core — the actual SIS, and the ONE row in the estate with a placeable institutional holder — is invisible.** 🟡 **The repository that matters most is the one most likely to be dropped, because an institution is exactly the kind of holder that writes a three-line address into its copyright notice.**
+
+🔵 **Measured vs inferred, kept apart: the identical condition text, the divergent blocks and the divergent labels are MEASURED. That GitHub's matcher normalises a one-line notice but reads a 3-line address as licence text is INFERRED — this pass did not read the matcher's source and does not claim its threshold.**
+
+🟢 **The rule, which `p209` and `p210` already established and this pass sharpens: never establish a licence from a PLATFORM METADATA FIELD.** p217 established that a manifest *claim* is not a grant; `p209` established that a platform's *silence* is not an absence of grant. 🟢 **`p234` adds WHICH rows the defect selects for: those whose copyright block is institutional.** 🔴 **So the defect is biased against exactly the permissive, placeable, publicly funded rows this KB most wants — which is why `15`% is not a random `15`%.**
+
+### 🔴 `T234-C` — `ACTION TQ`: it fires, and it falsifies p233's inference about what places a row
+
+p233 concluded: *"`0` of `4` new permissive rows are placeable … the one placement came from an `Apache-2.0` NOTICE, which is the licence class `TL` called structurally blind."* It read the lever as **licence class**. 🔴 **This pass's `16` rows falsify that.**
+
+| row | licence | holder named IN THE GRANT BODY | placed? |
+|---|---|---|---|
+| `svws-nrw/SVWS-Server` | 🟢 `BSD-3-Clause` | 🟢 **Ministerium für Schule und Bildung des Landes NRW, Referat 135, Völklingerstraße 49, 40221 Düsseldorf** | 🟢 **YES — EMEA/Germany, from the grant alone** |
+| `openolat/OpenOLAT` | `Apache-2.0` | 🔴 none — an Apache body names no holder, ever | 🔴 no *(EMEA/Switzerland from README + pom, NOT from the grant)* |
+| `HKUDS/DeepTutor` | `Apache-2.0` | 🔴 none | 🔴 no *(APAC **inferred** from the org handle — flagged)* |
+| `Crosstalk-Solutions/project-nomad` | `Apache-2.0` | 🔴 none | 🔴 no |
+| `zijinz456/OpenTutor` | `MIT` | 🟡 `Zijin Zhang` — an individual, no jurisdiction | 🔴 no |
+| `littlecookie0722/AI-Teaching-Agent` | `MIT` | 🟡 `littlecookie` — a pseudonym | 🔴 no |
+| `SirhanMacx/Claw-ED` | `MIT` | 🟡 `EDUagent Contributors` — a collective | 🔴 no |
+| `svws-nrw/*` modules ×`9` | `BSD`/`MIT` | 🟡 one-line individual holders | 🔴 no |
+
+🟢 **`TQ`'s real lever is HOLDER TYPE, not licence class.** A `BSD-3-Clause` body placed instantly — with a street address — because an **institution** held it. 🔴 **`Apache-2.0` placed nothing even where the maintainer is a named Swiss company, because the Apache body has no holder field at all.** 🔵 **Two repositories in the SAME organisation under the SAME licence differ on placement purely by who signed the copyright line.**
+
+🔴 **So: `BSD`/`MIT` are the *more* placeable classes, not the less — the opposite of what p233 inferred — and a pass that wants placeable supply should read copyright lines for INSTITUTIONS, not sort by licence.** 🟡 **`ACTION TQ`'s retroactive sweep across every existing `MIT`/`BSD`/`ISC` row is STILL NOT RUN** — carried p233 → p234 → p235, now with a sharper predicate to run it with.
+
+### 🔴 `T234-D` — the agent tier was never empty: all five "new" agents were ALREADY CARRIED, and the mandated query is only half the reason this KB thought otherwise
+
+🔴 **The mandated query `"top open source AI agents education 2026 github MIT"` returned `0` education agents again** — its own summary said *"almost nothing specific to education"*. 🟢 **Re-asked as `"open source AI tutor agent github 2026 MIT Apache grading teaching assistant LLM"`, it returned five candidates and all five verified live and grant-read.** 🔵 **The mandated phrasing returns agent FRAMEWORKS; the vertical needs vertical words — `ACTION UC` rewords it permanently.**
+
+🔴 **But the sharper half, found after these rows were drafted: ALL FIVE were already on these shelves — `DeepTutor`, `OpenTutor`, `AI-Teaching-Agent` and `Claw-ED` since `p44`, `project-nomad` since `p44` and re-read at `p220`.** 🟡 **`DeepTutor` has been used by `p230` and `p231` as the POSITIVE CONTROL for existence probes — this KB has been pinging the largest permissive education agent in the field to prove its instruments work, without ever promoting it to the agent tier.** 🟢 **So the agent shelf's emptiness was never a supply fact. It was a synthesis failure, the same one as the LMS limb.**
+
+| agent | licence | what it is | the caveat a proposal must carry |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`Apache-2.0`** *(`11 408` B, APPENDIX present)*, `main` @ `6cf793bd868b` | 🟢 **The largest permissive education agent this KB has ever carried: `41.5k` stars, `5.2k` forks, `2 664` commits, `v1.6.14` (`2026-10-08`).** An *"agent-native learning workspace"* — tutoring, problem solving, quiz generation, research, visualisation. Python 3.11 + Next.js 16. RAG is pluggable *(LlamaIndex default, LightRAG, GraphRAG, PageIndex, WeKnora)*, FAISS, Manim, MCP servers, and model-agnostic across OpenAI-compatible, Anthropic, Ollama, LM Studio, llama.cpp and vLLM | 🟡 `125` open PRs and `129` open issues against `2 664` commits — a fast-moving surface, not a stable dependency. 🔴 **Its APAC placement is an INFERENCE from the `HKUDS` org handle: the repository page states no university and no country, and the `Apache-2.0` body names no holder** |
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 🟢 **`Apache-2.0`** *(`10 779` B, APPENDIX stripped)*, `main` @ `54ee30a44902` | 🟢 **The offline-first education server, `40.3k` stars, `4.1k` forks.** Bundles **Kiwix** *(offline Wikipedia)* + **Kolibri** *(Khan Academy courses, progress tracking, multi-user)* + ProtoMaps + **Qdrant RAG** + local inference via Ollama/LM Studio/llama.cpp. ~`5` GB disk alone, ~`25` GB with the assistant. Zero telemetry | 🔴 **`NO AUTHENTICATION BY DESIGN`, and its own README says it is not meant to be exposed to the internet.** For a school deployment holding student data that is not a configuration note, it is an architectural blocker — see `P234-R3`, which puts the auth boundary outside it |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 `MIT` *(`1 068` B)*, `main` @ `a890519f3632` | self-hosted tutor, 10+ LLM providers, notes, quizzes, adaptive tutoring | 🟡 small; holder is an individual, unplaced |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 `MIT` *(`1 069` B)*, `main` @ `b90bd88a2899` | labs, exams, grading workflows and presentations via structured DSLs, with human review, sandboxed evaluation and CLI/MCP tools | 🔴 **its README states grading productisation is FROZEN** — read grading here as an internal artefact, not a feature |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 `MIT` *(`1 078` B)*, `main` @ `18f2e223cdd1` | local-first teaching assistant: editable lesson drafts, student materials, slides | 🟡 *"teacher-reviewed beta"*. 🔴 Its grant holder reads `EDUagent Contributors` — a name that does not match the repository. Unresolved rename |
+
+### 🔴 `T234-E` — p233's census contained two false positives, and the lesson completes a three-pass series
+
+p233 enumerated `4 798` `org.` groupIds and read the platform estate off the **names**. Two cells opened one level deeper this pass. 🔴 **Both collapse.**
+
+- 🔴 **`org.olat` is NOT OpenOLAT.** It holds exactly one child, `jamwiki/` → `jamwiki-core/`. **JAMWiki — a Java wiki engine OLAT once bundled.**
+- 🔴 **`org.openolat` is a true `404`** — and classifiable as a real absence, because `org/olat/` returned a full listing in the same window, which is the positive control `T233-C` itself requires. 🟢 **OpenOLAT's `pom.xml` declares `org.openolat` with `<distributionManagement>` pointing at `nexus.openolat.org`: the artefacts ship from the project's OWN Nexus. OpenOLAT is not resolvable from Maven Central under either spelling.**
+- 🔴 **`org.fenixedu` is not the FenixEdu platform** — it holds two children, `fenixedu-scala-sdk_2.13/` and `fenixedu-scala-sdk_3/`: one **client SDK**, cross-built. 🟡 **`intel/market.md` built an EMEA claim on that cell *("the one natively EMEA platform on this map")*; the cell does not support it.**
+
+🟢 **The series, and p234's one-line contribution to it:**
+
+> p232: **a `200` is not a READ.** *(PyPI answers `200` with a bot challenge.)*
+> p233: **a `404` is not an ABSENCE.** *(repo1.maven.org answers `404` when throttling.)*
+> p234: **a NAME is not an ARTEFACT.** *(A groupId prefix is not the project it resembles.)*
+
+🔵 **p233's census was correct about what it MEASURED — namespace presence — and said so. The defect is in what the shelves then SPENT it on: platform *resolvability*, which a prefix listing never established.** 🔴 **Two of two cells checked were wrong, so the remaining platform cells in `V233-2` — `org.sakaiproject`, `org.dspace`, `org.opencastproject`, `org.apereo`, `org.jasig`, `org.kuali` — are NOT resolvability claims until a pass opens each. `ACTION UB`.**
+
+### 🟢 `T234-F` — what `ACTION TU` actually measured across eight namespaces
+
+🟢 **~`2 300` groupIds read across `edu.`, `de.`, `ch.`, `nl.`, `uk.ac.`, `au.edu.`, `br.`, `br.edu.`, `mx.`, `jp.`** — full table in [`p234-tu-namespace-census`](../evidence/p234-tu-namespace-census.2026-10-16-p234.tsv).
+
+🔴 **The finding: the country-code and `edu.` namespaces carry university PUBLISHERS, not education PRODUCTS.** The education-product count across all of it is **two**, and both are German — `de.svws-nrw` and `de.jplag`. Everything else is research code wearing an academic coordinate.
+
+- 🔵 **`edu.` = `82` exact, and it PLACES as North America** — US universities almost without exception. Non-US strays: `upc` *(Barcelona)*, `kit`/`teco` *(Karlsruhe)*, `hm` *(Munich)*.
+- 🟢 **`uk.ac.` = `22` exact, and the instructive row is `uk.ac.open`** — **The Open University**, the world's largest distance-education institution, publishes exactly ONE groupId *(`kmi`, its Knowledge Media Institute)* and no platform artefact.
+- 🔴 **`mx.` = `16` exact, read in full and NOT truncated: ZERO education publishers and ZERO education products.** All fintech and commerce. 🟢 **A clean, exact, non-inferred zero — the first establishable regional zero on this channel.**
+- 🔴 **`br.edu.` = `1` *(`ufcg`)*; `au.edu.` = `1` *(`uq`)*.** Brazilian universities *do* publish to Central — which is more than six passes of region-shaped GitHub queries ever established — but **none of it is education software**.
+- 🟡 **`jp.` = one education-adjacent publisher, `studyplus`, NOT probed for contents.** Carried as a lead, not published as a row.
+
+### 🟢 Rows PLACED this pass
+
+| row | licence | region | basis |
+|---|---|---|---|
+| `svws-nrw/SVWS-Server` | 🟢 `BSD-3-Clause` | 🟢 **EMEA / Germany** | 🟢 **the grant body itself** — a named state ministry with a street address in Düsseldorf |
+| `openolat/OpenOLAT` | 🟢 `Apache-2.0` | 🟢 **EMEA / Switzerland** | README + `pom.xml` `<organization>`: frentix GmbH, Zurich. 🔴 NOT from the grant |
+| `svws-nrw/*` ×`9` modules | `BSD-3-Clause`/`MIT` | 🟡 **EMEA / Germany** | by estate membership — the ministry owns the organisation. 🔴 Individual holders in their own grants |
+| `HKUDS/DeepTutor` | `Apache-2.0` | 🔴 **APAC — INFERRED, FLAGGED** | the `HKUDS` org handle only. No country on the page, no holder in the grant |
+| `Crosstalk-Solutions/project-nomad` | `Apache-2.0` | 🟡 Global | no country stated anywhere |
+
+🔴 **Refused: [`AlekSIS/AlekSIS-Core`](https://github.com/AlekSIS/AlekSIS-Core)** — `git ls-remote` DEAD on github.com. The project lives on its own GitLab *(`edugit.org`)*, which this pass did not probe. 🟡 **Recorded as a CHANNEL gap, not as an absence: a German SIS that is not on GitHub is not a German SIS that does not exist.**
+
+### 🔴 Gaps p234 leaves open, stated because silence looks like coverage
+
+- 🔴 **LATAM: `0` open-source education repositories — SEVENTH consecutive pass**, now corroborated on a third independent channel *(`mx.` = exact zero, `br.edu.` = one publisher with no product)*. 🟡 **And LATAM has the HIGHEST measured adoption of any region** *(Brazil 56% / Chile 55% of secondary teachers vs 36% OECD; 9 in 10 15-year-olds)*. **That asymmetry is the single largest demand/supply gap on these shelves** — `intel/market.md` states it as the regional opportunity rather than as a disappointment.
+- 🔴 **APAC supply is ONE row and its region is an INFERENCE.** `HKUDS/DeepTutor` is placed from an org handle. `jp.studyplus` unprobed. No education-specific APAC vendor list and no deployment rates found.
+- 🔴 **`ACTION TQ`'s retroactive sweep: STILL NOT RUN.** Carried p233 → p234 → p235, now with the sharper holder-type predicate `T234-C` established.
+- 🔴 **`ACTION TW` NOT RUN.** Whether `z.string()` accepts `""` in `lti-tool` is still READ, not EXECUTED — no zod installed in this session either.
+- 🟡 **`ACTION UB`** *(new)*: open each remaining platform cell of p233's `V233-2` census. Two of two checked were false positives.
+- 🟡 **`ACTION UA`** *(new)*: namespaces still unread — `com.` `net.` `io.` `at.` `se.` `no.` `dk.` `fi.` `es.` `it.` `fr.` `in.` `cn.` `kr.` `sg.` `eu.`
+- 🟡 **`ACTION UC`** *(new)*: reword the mandated agent query permanently; the current phrasing has returned `0` education agents every pass it has run.
+- 🔴 **`ACTION UG`** *(new, and the one this pass earned, because it fired ON THIS PASS)*: **before publishing any *"there is no X"* claim, grep these shelves for X — and before publishing a row as NEW, grep for the slug.** 🔴 **Measured on this pass's own work: `20` rows drafted, `9` already carried — a `45`% self-duplication rate, and all nine had been cited since `p44`.** 🟡 **`HKUDS/DeepTutor` is the sharpest case: `p230` and `p231` used it as the POSITIVE CONTROL for their existence probes, so this KB was pinging the largest permissive education agent in the field to prove its instruments worked while reporting an empty agent tier.** 🔵 **Every other absence this KB has overturned was a channel lying *(p232, p233, p234)*; this class is the KB not reading itself, it is far cheaper to prevent, and it has never had a control.**
+- 🔴 **`ACTION UH`** *(new)*: **fold slug case before comparing.** 🟡 **`2` of this pass's own headline rows were already carried — `openolat/OpenOLAT` *(p209)* and `Crosstalk-Solutions/Project-NOMAD` *(p220)* — and were caught only by running the repo's harvester over the finished shelves. Both differ from the carried spelling by capitalisation alone.**
+- 🟡 **`ACTION UD`** *(new)*: probe `edugit.org` for the AlekSIS estate — the one refused row this pass, and a likely second EMEA SIS.
+- 🔵 **`de.` and `nl.`/`ch.` counts are the fetch tool's counts over listings it reported TRUNCATED.** Published as orders of magnitude and labelled so, not as censuses. `edu.`, `uk.ac.`, `mx.`, `br.edu.`, `au.edu.` are exact.
+- 🔴 **Every star and commit count in this pass is a PAGE READ.** `api.github.com` returns `403` for any repository not attached to this session, so no count here is API-verified.
+
 ## Pass 233 — 2026-10-16 — `3` OF THE `6` PACKAGES p232 PUBLISHED AS **SOURCELESS** HAVE LIVE REPOSITORIES, AND THE DEFECT WAS THIS KB'S OWN PROBE DROPPING THE `-v4` AND `-v2` FROM NAMES THAT CONTAIN THEM
 
 ⏱️ **SECOND pass of `2026-10-16`.** p232 ran `2026-10-15` 23:4x → `2026-10-16` 00:xx UTC and is dated by its publication; this pass ran later on `2026-10-16`. Stated because these shelves pin SHAs and two passes sharing a date is exactly what a later pass reads as a contradiction.

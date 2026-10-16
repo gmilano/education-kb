@@ -1,0 +1,37 @@
+# p234 — the mechanism that hid the largest permissive education estate in EMEA for six passes.
+#
+# MEASURED, not inferred: two repositories in the SAME organisation, both carrying a BSD-3-Clause
+# body whose 28 lines of conditions and disclaimer are BYTE-IDENTICAL, are labelled DIFFERENTLY by
+# GitHub's own licence field. The whole difference is the copyright block and a trailing newline.
+repo	grant_first_line	grant_bytes	condition_text_identical	copyright_block	trailing_newline	github_licence_field	harvester_outcome
+svws-nrw/SVWS-Server	BSD 3-Clause License	1611	yes (baseline)	3 LINES, NO YEAR: organisation + street address + e-mail	MISSING	"Other"	DROPPED by any filter keying on the licence field
+svws-nrw/SVWS-GradeHub	BSD 3-Clause License	1504	yes — identical to the above	1 line, canonical: "Copyright (c) 2026, Frank Pfotenhauer"	present	"BSD 3-Clause"	KEPT
+#
+# `diff` output, verbatim and complete — there is nothing else between the two bodies:
+#   3,5c3
+#   < Copyright (c) Ministerium fuer Schule und Bildung des Landes NRW
+#   < Referat 135, Voelklingerstrasse 49, 40221 Duesseldorf
+#   < E-Mail: svws@schule.nrw.de
+#   ---
+#   > Copyright (c) 2026, Frank Pfotenhauer
+#   30c28
+#   < OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#   \ No newline at end of file
+#   ---
+#   > OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# WHAT IS MEASURED: identical condition text, divergent copyright block, divergent GitHub label.
+# WHAT IS INFERRED (flagged as such): that GitHub's matcher normalises a one-line copyright notice
+# but treats a 3-line address block as licence text, pushing the body past its similarity
+# threshold. This pass did NOT read the matcher's source and does NOT claim its threshold.
+#
+# THE CONSEQUENCE, which is the point:
+# The estate presents to a licence-field harvester as a scatter of small Vue/TypeScript tools while
+# its 9832-commit Java core — the actual student information system, and the only row in it with a
+# PLACEABLE institutional holder — is invisible. The repository that matters most is the repository
+# most likely to be dropped, because an institution is exactly the kind of holder that writes a
+# three-line address into its copyright block.
+#
+# THE RULE: never establish a licence from a PLATFORM METADATA FIELD. Read the grant body.
+# This KB already knew the converse (p217: a manifest CLAIM is not a grant). This is the same
+# lesson from the other side: a platform's DENIAL is not an absence of grant either.

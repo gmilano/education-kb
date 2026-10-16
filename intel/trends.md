@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 234 — 2026-10-16 — THE REGULATORY TREND CONVERGES ON **ASSESSMENT** IN THREE JURISDICTIONS AT ONCE, AND THE SUPPLY TREND IS THAT PERMISSIVE EDUCATION PLATFORMS COME FROM **MINISTRIES**, NOT STARTUPS
+
+⏱️ **THIRD pass of `2026-10-16`.**
+
+🔵 **Evidence:** [`p234-queries`](../evidence/p234-queries.2026-10-16-p234.tsv) · [`p234-tu-namespace-census`](../evidence/p234-tu-namespace-census.2026-10-16-p234.tsv) · [`p234-new-rows`](../evidence/p234-new-rows.2026-10-16-p234.tsv)
+
+### 🔴 `TR234-1` — the trend that matters most: **automated assessment is becoming a regulated artefact, in parallel, in unrelated jurisdictions**
+
+🟢 **Three independent legal regimes converged on the same narrow target within about seven months, and none of them cites the others:**
+
+| jurisdiction | instrument | status | what it names |
+|---|---|---|---|
+| 🟢 **EU** | AI Act | 🟡 AI Office + national authorities enforcing from `2 Aug 2026`; standalone high-risk obligations dated `2 Dec 2027` by a second source; *"AI omnibus"* amendments proposed | 🔴 **admissions, student evaluation, EXAM SCORING = high-risk** — and it reaches **non-EU systems whose outputs affect EU students** |
+| 🔴 **Vietnam** | national AI law | 🔴 **in force `1 Mar 2026`** | 🔴 **education a high-risk sector, AUTOMATED ASSESSMENT named explicitly** *(compliance 2027; sources split between `1 Mar` and `1 Sep`)* |
+| 🟡 **US states** | `134` bills / `31` states | in session | 🔴 **Oklahoma + Maryland bar AI from HIGH-STAKES DECISIONS ABOUT STUDENTS and require human oversight**; California `AB 1159` restricts training on student data |
+
+🟢 **The engineering consequence, and it is one build, not three: provenance on every generated item, human-in-the-loop sign-off before a score becomes a grade, immutable score logging, and an appeal trail.** 🔵 **That is a single assessment-governance layer sold three times. It is also the first time on these shelves that a compliance requirement has been *convergent* rather than *divergent* — previous passes treated regional regulation as fragmentation to be priced; this one is leverage.**
+
+🔴 **The date conflict is published as a conflict.** The `2 Aug 2026` and `2 Dec 2027` dates come from different sources covering the same obligations, and the Commission's proposed omnibus may move both. 🟡 **Quote obligations, not dates; put dates in change control.**
+
+### 🟢 `TR234-2` — the supply trend, newly visible: the permissive platforms in this industry are **public-sector**, not commercial
+
+🔵 **p234 promoted the first two permissive education platforms into this KB's platform tier *(one new, one carried from `p209` and never reconciled)*. Neither is a startup, and the pattern is worth naming because it tells a later pass where to look.**
+
+| row | who holds the copyright | what that predicts |
+|---|---|---|
+| `svws-nrw/SVWS-Server` *(`BSD-3-Clause`)* | 🟢 **a state ministry** — Ministerium für Schule und Bildung des Landes NRW | 🟢 permissive BY POLICY: a public body publishing publicly funded software has no incentive to copyleft it and a legal reason not to encumber it |
+| `openolat/OpenOLAT` *(`Apache-2.0`)* | 🟢 a company serving institutions *(frentix GmbH)* funded by an institutional membership model | 🟢 permissive BY BUSINESS MODEL: revenue is services and membership, so the licence is not the moat |
+| Ed-Fi *(`Apache-2.0`)* | 🟢 a US standards alliance | 🟢 the same shape, already on these shelves |
+| 🔴 the copyleft tier — Moodle, TAO, Gibbon, Frappe, OpenEduCat | 🔴 vendors and foundations with commercial editions | 🔴 copyleft IS the moat: the licence protects a paid edition |
+
+🟢 **The predictive rule: in education, permissive supply correlates with PUBLIC OR INSTITUTIONAL funding, and copyleft correlates with a commercial edition.** 🔵 **So a pass hunting permissive platforms should search ministries, state education agencies, standards bodies and public universities — not GitHub trending.** 🔴 **And `T234-B` explains why that search is hard: an institutional copyright block is exactly what breaks GitHub's licence detector, so the public-sector rows are the ones a licence-field filter drops.**
+
+### 🟡 `TR234-3` — the industry-level trends, carried with their sourcing flagged
+
+🔵 **From the mandated trends query. Sourcing is mostly vendor blogs and market-research pages; this shelf keeps them because the DIRECTION is consistent across independent sources even where the NUMBERS are not.**
+
+- 🟢 **Experimentation → operations.** AI moving into repeatable workflows *(lesson prep, formative feedback)* with institutional review for accuracy, privacy and integrity. 🔵 Consistent with the governance figures: adoption is ahead of policy everywhere measured.
+- 🟢 **Education-specific platforms over generic chatbots.** Described by one outlook as *"the defining trend"*. 🟢 **Corroborated independently by this pass's own supply finding: `HKUDS/DeepTutor` at `41.5k` stars is an education-specific agent workspace, not a chat wrapper, and it is the largest permissive row in the vertical.**
+- 🟢 **Agents that plan teaching sequences and draft assessments**, plus adaptive difficulty. 🔴 **Flagged against reality: `AI-Teaching-Agent`'s own README says grading productisation is FROZEN.** The market narrative is ahead of the open-source implementations.
+- 🟢 **Governance and institutional AI strategy** as a first-class programme *(1EdTech)*. 🟢 **This is the LATAM arbitrage in `intel/market.md`, independently stated.**
+- 🟡 **Digital credentials and skills-based ecosystems** accelerating. 🔵 Ties to the Open Badges rows p233 recovered — 🔴 which are `MPL-2.0` *(weak copyleft, per-file source obligation)*, so credential issuance is NOT in the permissive tier.
+- 🔴 **Market size: `$7.52B` (2025) → `$10.6B` (2026) → `$42.48B` (2030) claimed.** One press release, quadrupling in four years. 🟡 **Carried as an order of magnitude and a direction only. Do not put this number in a client deck without a primary source.**
+- 🔴 **Refused: *"83% of institutions plan AI teaching assistants."*** A vendor blog with no primary source. Not carried.
+
+### 🟢 `TR234-4` — a measurement trend inside this KB, worth recording as a trend in its own right
+
+🔵 **Three consecutive passes have each found that a CHANNEL, not the field, produced a published absence:**
+
+> p232: **a `200` is not a READ** — PyPI answers `200` with a bot challenge.
+> p233: **a `404` is not an ABSENCE** — repo1.maven.org answers `404` when throttling.
+> p234: **a NAME is not an ARTEFACT** — a groupId prefix is not the project it resembles; and a platform's LICENCE FIELD is not its grant.
+
+🔴 **The cumulative lesson: this KB's published absences have a worse track record than its published presences.** Every one of the three passes above overturned prior cells, and in each case the error was in the direction of **claiming something was not there**. 🔴 **The nine-pass *"no permissive LMS or SIS"* finding is the largest instance, and the worst, because it is the one case where no new evidence was needed: `p209` had grant-read the counter-example and `p210` had measured the defect that hid its sibling class.** 🟡 **An absence can be wrong because a channel lied *(p232, p233, p234)* — or because the KB did not read itself. The second kind is cheaper to fix and this KB has never had a control for it until `ACTION UG`.**
+
+🟡 **So the standing correction to method, and it costs nothing: a negative finding needs a channel control before it is published, and a licence finding needs the grant BODY. `ACTION UF` registers the forward version of this — every pass must name the control that makes each of its declared absences establishable.**
+
 ## Pass 233 — 2026-10-16 — THE TREND IS A **CHANNEL** TREND: EVERY ROW THIS PASS CAME FROM A REGISTRY TARBALL, A MAVEN LISTING OR A TASK-SHAPED QUERY, AND **NONE** FROM A TRENDING LIST
 
 ⏱️ **SECOND pass of `2026-10-16`.**

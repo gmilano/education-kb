@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 234 — THIS WEEK'S SIGNAL: THE EDUCATION AGENT TIER HAS A **`41.5k`-STAR `Apache-2.0`** ROW, AND THE MANDATED AGENT QUERY HAS BEEN ASKING THE WRONG QUESTION EVERY PASS
+
+⏱️ **THIRD pass of `2026-10-16`** — p232 and p233 both published earlier the same date. All three are dated by publication.
+
+🔴 **`11` NEW rows — the `svws-nrw` estate *(`10` `BSD-3-Clause` + `1` `MIT`)*, the only genuinely new rows this week. `9` already-carried rows re-verified at byte precision with fresh SHAs, ALL of them on these shelves since `p44` *(`jplag/JPlag` since `p84`)*. `1` refused, `0` padded.** 🔴 **`20` rows drafted, `9` duplicates — a `45`% self-duplication rate, measured and published rather than quietly dropped. `4` published cells overturned, `3` of them this KB's nine-pass central finding.**
+
+🔵 **Evidence:** [`p234-new-rows`](../evidence/p234-new-rows.2026-10-16-p234.tsv) · [`p234-queries`](../evidence/p234-queries.2026-10-16-p234.tsv) · [`p234-licence-field-defect`](../evidence/p234-licence-field-defect.2026-10-16-p234.tsv) · [`p234-census-false-positives`](../evidence/p234-census-false-positives.2026-10-16-p234.tsv) · [`p234-tu-namespace-census`](../evidence/p234-tu-namespace-census.2026-10-16-p234.tsv)
+
+### 🔴 `A234-0` — the signal behind the signal: the mandated query was the bottleneck, not the field
+
+🔴 **`"top open source AI agents education 2026 github MIT"` returned `0` education agents again — its own summary said *"almost nothing specific to education."* That query has now failed every pass it has run.** 🟢 **Re-asked once as `"open source AI tutor agent github 2026 MIT Apache grading teaching assistant LLM"`, it returned five candidates — and all five verified live, grant-read and permissive.**
+
+🔵 **The mandated phrasing returns agent FRAMEWORKS *(OpenHands, CrewAI, LangChain)*; the vertical needs vertical words *(tutor, grading, teaching assistant)*.** 🟡 **`ACTION UC` registered to reword it permanently. This KB has been reporting an empty agent tier that was not empty.**
+
+### 🟢 `A234-1` — this week's rows, with a last-seen date and a `HEAD` sha on every one *(`ACTION TH`, honoured)*
+
+🔵 **CARRIED, re-verified — NOT new.** Every row in this table except the `svws-nrw` estate has been on these shelves since `p44` *(`jplag/JPlag` since `p84`)*. 🔴 **This pass drafted `20` rows and `9` of them — `45`% — were already carried. The duplication was caught only by running the repo's own harvester over the finished shelves, which is why `ACTION UG` is this pass's most useful output.**
+
+| agent / platform | licence, read first-hand | category | last seen alive *(this pass)* | one-line read |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** *(`11 408` B, APPENDIX present)* | agent-native learning workspace | `2026-10-16`, `main` @ `6cf793bd868b` | 🟢 **The largest permissive education agent this KB has ever carried: `41.5k` stars, `5.2k` forks, `2 664` commits, `v1.6.14` (`2026-10-08`).** Tutoring, problem solving, quiz generation, research, visualisation. Pluggable RAG *(LlamaIndex default, LightRAG, GraphRAG, PageIndex, WeKnora)*, FAISS, Manim, MCP servers; model-agnostic across OpenAI-compatible, Anthropic, Ollama, LM Studio, llama.cpp, vLLM. 🔴 **APAC placement is an INFERENCE from the org handle — no country on the page, no holder in the grant.** 🟡 `125` open PRs / `129` open issues: fast-moving, not a stable dependency |
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) 🔵 **NOT NEW — added at `p220`, re-verified here** | 🟢 **Apache-2.0** *(`10 779` B, APPENDIX stripped — byte-identical to `p220`'s read)* | offline-first education server | `2026-10-16`, `main` @ `54ee30a44902` | 🟢 **`40.3k` stars, `4.1k` forks.** 🔵 `p220` carried it at version `1.35.1` under the `Project-NOMAD` spelling; the canonical slug is lower-case. Kiwix *(offline Wikipedia)* + Kolibri *(Khan Academy courses, progress, multi-user)* + ProtoMaps + Qdrant RAG + local inference. ~`5` GB disk, ~`25` GB with the assistant. Zero telemetry. 🔴 **NO AUTHENTICATION BY DESIGN and its README says not to expose it — `P234-R3` puts the auth boundary outside it** |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** *(`1 068` B)* | self-hosted tutor | `2026-10-16`, `main` @ `a890519f3632` | 10+ LLM providers, notes, quizzes, adaptive tutoring. 🟡 small; holder `Zijin Zhang`, an individual — unplaced |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 **MIT** *(`1 069` B)* | teaching workflow / item generation | `2026-10-16`, `main` @ `b90bd88a2899` | Labs, exams, grading workflows, presentations via structured DSLs, with human review, sandboxed evaluation, CLI/MCP tools. 🔴 **README states grading productisation is FROZEN — an item-generation component, not a grader.** Holder `littlecookie`, a pseudonym — unplaced |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** *(`1 078` B)* | teacher-facing assistant | `2026-10-16`, `main` @ `18f2e223cdd1` | Local-first: editable lesson drafts, student materials, slides. 🟡 *"teacher-reviewed beta"*. 🔴 Grant holder reads `EDUagent Contributors` — does not match the repository name; unresolved rename |
+| [`openolat/OpenOLAT`](https://github.com/openolat/OpenOLAT) 🔵 **NOT NEW — grant-read at `p209`, re-verified here** | 🟢 **Apache-2.0** *(`10 982` B, APPENDIX stripped; `p209` read `197` lines / `10.7` KB)* | 🔴 **platform — full LMS** | `2026-10-16`, `master` @ `40c3af60221b` | 🔴 **THE WEEK'S CORRECTION, and it is internal. Nine passes said no `MIT`/`Apache` LMS exists; `p209` had already VERIFIED one and said so on this same shelf.** `31 854` commits, `447` stars, frentix GmbH Zurich. 🔴 README cites a `NOTICE.TXT` that `404`s; pom licence string is the typo'd `"Apache 2.0 Open Source L6icense"`; not on Maven Central under either spelling |
+| [`svws-nrw/SVWS-Server`](https://github.com/svws-nrw/SVWS-Server) | 🟢 **BSD-3-Clause** *(`1 611` B)* | 🔴 **platform — state SIS** | `2026-10-16`, `dev` @ `c2f1a7f1f902` | 🟢 **The other half of the correction, and the only row in this industry that is permissive, platform-scale, coordinate-resolvable AND placeable from its own grant** — the copyright line names a state ministry at a street address in Düsseldorf. `9 832` commits, `17` Maven artefacts under `de.svws-nrw`. 🔴 Default branch `dev`; GitHub says `"Other"` |
+| `svws-nrw/*` — [`GradeHub`](https://github.com/svws-nrw/SVWS-GradeHub) `15309d13dd37`, [`Prognos`](https://github.com/svws-nrw/SVWS-Prognos) `bba82094715d`, [`Conference`](https://github.com/svws-nrw/SVWS-Conference) `d2e4f11faed6`, [`Import`](https://github.com/svws-nrw/SVWS-Import) `fdaf031c4821`, [`KOOP`](https://github.com/svws-nrw/SVWS-KOOP) `6bf57c1cd06e`, [`Tools`](https://github.com/svws-nrw/SVWS-Tools) `462ae51ab899`, [`TestSqlites`](https://github.com/svws-nrw/SVWS-TestSqlites) `a934d91af317`, [`BK-Abschlussberechnungen`](https://github.com/svws-nrw/SVWS-BK-Abschlussberechnungen) `95500eb6164c` | 🟢 **BSD-3-Clause** ×`8` *(`1 504`–`1 527` B)* | SIS modules + fixtures | `2026-10-16` | grades, forecasting, conferences, import, scheduling sync, tooling, 🟢 **an anonymised SIS test-database corpus**, and vocational final-grade algorithms. 🔴 **`4` × `master`, `3` × `main`, `3` × `dev` in ONE org — `7` of `10` break a script assuming `main`** |
+| [`svws-nrw/Schild-NRW-3-Zeugnisse-Sek-I`](https://github.com/svws-nrw/Schild-NRW-3-Zeugnisse-Sek-I) | 🟢 **MIT** *(`1 076` B — the canonical body size)* | certificate report pack | `2026-10-16`, `dev` @ `ee323b2682d6` | secondary-level-I certificate reports |
+
+### 🟡 `A234-2` — copyleft rows added this week, flagged and carried for reference
+
+| row | licence | why it is here |
+|---|---|---|
+| [`jplag/JPlag`](https://github.com/jplag/JPlag) | 🔴 **GPL-3.0**, `main` @ `3ee7de912b90` | 🟢 **The academic-integrity reference engine** — plagiarism/collusion across 17+ languages, `2.0k` stars, `5 708` commits, `de.jplag` on Maven. 🟢 Runs entirely locally, uploads nothing — the property that makes it GDPR- and AI-Act-deployable. 🔴 Run it, never ship it |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 GPL-3.0 *(`35 121` B)* | PHP school management. 🔴 **Default branch is the RELEASE branch `v31.0.00`** — not `main`, not `master` |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0 by a `19`-byte CLAIM**, `develop` @ `73ce33ef2719` | Education management on ERPNext. 🔴 Its `license.txt` is the single line `"License: GNU GPL V3"` — p217's distinction: a claim, not a grant body |
+
+🔴 **Refused this week: [`AlekSIS/AlekSIS-Core`](https://github.com/AlekSIS/AlekSIS-Core)** — `git ls-remote` DEAD on github.com; the project lives on its own GitLab *(`edugit.org`)*, unprobed. 🟡 **Recorded as a CHANNEL gap, not an absence. `ACTION UD`.**
+
+### 🔴 `A234-3` — what this week says about placement, against what last week said
+
+🟢 **`ACTION TQ` fired on all `16` rows. `0` of the `5` agent rows are placeable from their grant body; `1` platform row placed instantly, from a `BSD-3-Clause` copyright line naming a ministry and a street.**
+
+🔴 **p233 inferred the lever was LICENCE CLASS *(reading `Apache-2.0` NOTICE files as the placement channel)*. That is falsified: the lever is HOLDER TYPE.** An institution writes a placeable name into the copyright notice; an individual, a pseudonym or a *"Contributors"* collective does not — and an `Apache-2.0` body has no holder field at all, so it places nothing no matter who maintains it. 🟢 **`BSD`/`MIT` are therefore the MORE placeable classes, not the less.**
+
+🟡 **Standing gaps, unchanged this week: LATAM `0` repositories *(seventh consecutive pass)*; APAC supply is one row with an inferred region; `ACTION TQ`'s retroactive sweep across existing rows STILL NOT RUN; `ACTION TW` *(execute the zod empty-subject check)* STILL NOT RUN.**
+
 ## 2026-10-16 — Pass 233 — THIS WEEK'S SIGNAL: THE **TARBALL** IS A SOURCE CHANNEL, AND `3` OF THE `6` "SOURCELESS" PACKAGES p232 PUBLISHED LAST NIGHT HAVE LIVE REPOSITORIES ONE SUBSTITUTION AWAY
 
 ⏱️ **SECOND pass of `2026-10-16`** — p232 published earlier the same date. Both are dated by publication.

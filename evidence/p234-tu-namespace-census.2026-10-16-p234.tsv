@@ -1,0 +1,37 @@
+# p234 — `ACTION TU`, registered by p233 and discharged here: extend the Maven Central namespace
+# census BEYOND `org.` to the `edu.` and country-code namespaces, because that is where non-US
+# university and ministry output would sit if it exists.
+#
+# WHY THIS CHANNEL: p233's intel/market.md stated the thesis — "a package coordinate carries a
+# publisher; a regional search carries vendor prose. If this KB wants non-US supply, it must read
+# registries and repositories, not ask about regions." This pass TESTS that thesis. It holds, but
+# with a correction the thesis did not anticipate (see p234-census-false-positives).
+#
+# READ CONSTRAINT (`T233-C`): repo1.maven.org answers `404` with a 1-byte body when throttling, so
+# a 404 alone is NOT-ESTABLISHED. A bare curl from this session was additionally refused by the
+# environment's egress classifier, so every row below was read through the sanctioned fetch tool.
+# Counts marked ~ are the tool's count over a listing it reported as truncated — they are ORDERS
+# OF MAGNITUDE, not exact censuses, and are labelled so rather than published as precise.
+namespace	entries	education_PRODUCTS_found	education_PUBLISHERS_found	verdict	detail
+edu/	82 (exact)	0	82	NORTH AMERICA, overwhelmingly	amherst arizona asu berkeley brown buffalo byu clemson cmu columbia cornell duke emory gatech harvard illinois internet2 iu jhu mit nyu princeton psu purdue rice rpi stanford uchicago ucla uci ucr ucsf uiuc umd umich umn upenn usc utah utexas uw vanderbilt vt washington wisc wpi ... — US universities almost without exception. Non-US strays: `upc` (Univ. Politecnica de Catalunya), `kit`/`teco` (Karlsruhe), `hm` (Hochschule Muenchen). NO education PRODUCT: these are research-group artefacts published under a university coordinate.
+de/	~1700 (truncated)	2	many	EMEA — THE ONLY NAMESPACE WITH REAL EDUCATION PRODUCTS	PRODUCTS: `svws-nrw` (state school-administration system, 17 artefacts, BSD-3-Clause — the headline row of this pass) and `jplag` (plagiarism/collusion detection, GPL-3.0). PUBLISHERS: fau fu-berlin hhu hu-berlin lmu ovgu rub rwth hs-heilbronn hshannover hpi l3s cit-ec ids-mannheim sfb876 dfki fhg fraunhofer mpg dlr. Also `svws-nrw` school admin + `pirckheimer-gymnasium` (a single Gymnasium publishing to Central).
+ch/	~212	0	8	EMEA — publishers only	ethz epfl uzh unibas usi bfh heia-fr hevs. NOTE: OpenOLAT, the Swiss LMS this pass licence-reads, is NOT here and NOT on Central at all (see p234-census-false-positives).
+nl/	~220	0	7	EMEA — publishers only	utwente uva rug tudelft ru knaw cwts. No `surf`, no `onderwijs`, no education product.
+uk/ac/	22 (exact)	0	22	EMEA — publishers only	abdn bolton cam ceh diamond ebi ed gate gla horizon liv mmu nactem ncl open ox rdg shef starlink sussex uea wellcome. `open` is The Open University — the world's largest distance-education institution — and it publishes exactly ONE groupId, `uk.ac.open.kmi` (Knowledge Media Institute). A distance-education giant with one research coordinate and no platform artefact.
+au/edu/	1 (exact)	0	1	APAC — effectively empty	`uq` (Univ. of Queensland) only.
+br/edu/	1 (exact)	0	1	LATAM — effectively empty	`ufcg` (Univ. Federal de Campina Grande) only.
+br/	~21	0	10	LATAM — publishers only	puc-rio pucrs ufc ufes uff ufmg ufrn ufsc unb usp, plus `br/edu/`. Brazilian universities DO publish to Central — which is more than six passes of region-shaped GitHub queries ever established — but none of it is education software.
+mx/	16 (exact)	0	0	LATAM — ZERO, and this one IS establishable	bax bigdata com dapp dev1 emite empos grupocorasa latanda m-k nic openpay platacard valdora whiteweb wire4. Read in full, not truncated: the Mexican namespace on Central is fintech and commerce. NO education publisher and NO education product. A clean, exact, non-inferred zero.
+jp/	~59	0	1	APAC — one education-ADJACENT publisher	`studyplus` only (a Japanese study-log/learning service). NOT PROBED for artefact contents — carried as a lead, not published as a row. No gakuen/daigaku/manabi/university coordinate.
+#
+# THE FINDING, stated plainly because it is the reusable half:
+# THE COUNTRY-CODE AND `edu.` NAMESPACES CARRY UNIVERSITY **PUBLISHERS**, NOT EDUCATION **PRODUCTS**.
+# Across 8 namespaces and roughly 2300 groupIds read, the education-product count is TWO, and both
+# are German: `de.svws-nrw` and `de.jplag`. Everything else is research code that happens to carry
+# an academic coordinate.
+#
+# So p233's thesis is HALF right. Reading coordinates DID produce the non-US supply that six passes
+# of region-shaped queries could not — but it produced it from ONE namespace, and the thing that
+# made the row real was the REPOSITORY and the GRANT BODY, not the coordinate.
+#
+# NAMESPACES STILL UNREAD (`ACTION UA`, carried): com. net. io. at. se. no. dk. fi. es. it. fr. in. cn. kr. sg. eu.

@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-16
 ---
 
+## 2026-10-16 — Pass 234 — `ACTION TU` EXTENDS THE MAVEN CENSUS PAST `org.` AND FINDS THE **ONE** EDUCATION-PRODUCT NAMESPACE IN EIGHT: `de.` — WHILE TWO OF p233's CENSUS CELLS TURN OUT TO BE FALSE POSITIVES
+
+⏱️ **THIRD pass of `2026-10-16`.** p232 and p233 published earlier the same date.
+
+🔴 **`11` NEW repository rows — the `svws-nrw` estate *(a `BSD-3-Clause` SIS core, `9` BSD/MIT estate rows, `1` MIT report pack)*, the only genuinely new rows this week. `9` already-carried rows re-verified at byte precision, ALL on these shelves since `p44` *(`jplag/JPlag` since `p84`)*. `1` refused, `0` padded.** 🔴 **`20` drafted, `9` duplicates — a `45`% self-duplication rate, published rather than dropped.** 🟢 **~`2 300` groupIds read across `8` namespaces. `4` published cells overturned.**
+
+🔵 **Evidence:** [`p234-tu-namespace-census`](../evidence/p234-tu-namespace-census.2026-10-16-p234.tsv) · [`p234-census-false-positives`](../evidence/p234-census-false-positives.2026-10-16-p234.tsv) · [`p234-licence-field-defect`](../evidence/p234-licence-field-defect.2026-10-16-p234.tsv) · [`p234-new-rows`](../evidence/p234-new-rows.2026-10-16-p234.tsv)
+
+### 🟢 `R234-1` — the namespace census, extended. p233 registered this as `ACTION TU` and it fires
+
+🟢 **Eight namespaces read this week, where p233 had read only `org.`:**
+
+| namespace | entries | education PRODUCTS | education PUBLISHERS | reads as |
+|---|---|---|---|---|
+| `edu/` | 🟢 **`82` exact** | 🔴 **`0`** | `82` | 🟢 **NORTH AMERICA** — US universities almost without exception. Strays: `upc` *(Barcelona)*, `kit`/`teco` *(Karlsruhe)*, `hm` *(Munich)* |
+| `de/` | ~`1 700` *(truncated)* | 🟢 **`2` — THE ONLY ONES IN EIGHT NAMESPACES** | many | 🟢 **EMEA.** `svws-nrw` *(`17` artefacts, a `BSD-3-Clause` state SIS)* and `jplag` *(`GPL-3.0`)*. Publishers: `rwth` `lmu` `fu-berlin` `hu-berlin` `hhu` `rub` `fau` `ovgu` `dfki` `fraunhofer` `mpg` `dlr` `hpi` `l3s` + `pirckheimer-gymnasium`, a single Gymnasium publishing to Central |
+| `ch/` | ~`212` | 🔴 `0` | `8` | 🟡 EMEA — `ethz` `epfl` `uzh` `unibas` `usi` `bfh` `heia-fr` `hevs`. 🔴 **OpenOLAT, the Swiss LMS, is NOT here and not on Central at all** |
+| `nl/` | ~`220` | 🔴 `0` | `7` | 🟡 EMEA — `tudelft` `uva` `utwente` `rug` `ru` `knaw` `cwts`. No `surf`, no `onderwijs` |
+| `uk/ac/` | 🟢 **`22` exact** | 🔴 `0` | `22` | 🟡 EMEA — and the instructive row: 🔴 **`uk.ac.open` is The Open University, the world's largest distance-education institution, and it publishes ONE groupId *(`kmi`)* and no platform artefact** |
+| `au/edu/` | 🟢 **`1` exact** | 🔴 `0` | `1` | 🔴 APAC — `uq` only |
+| `br/` + `br/edu/` | ~`21` + 🟢 **`1` exact** | 🔴 `0` | `10` + `1` | 🔴 **LATAM — Brazilian universities DO publish *(`usp` `ufmg` `puc-rio` `pucrs` `unb` `ufsc` `ufc` `uff` `ufes` `ufrn`, and `br.edu.ufcg`)*, which six passes of region-shaped GitHub queries never established — but NONE of it is education software** |
+| `mx/` | 🟢 **`16` exact, read in FULL** | 🔴 **`0`** | 🔴 **`0`** | 🔴 **LATAM — a clean, exact, non-inferred ZERO.** All fintech and commerce *(`openpay` `platacard` `wire4` `latanda` `nic` …)*. The first establishable regional zero on this channel |
+| `jp/` | ~`59` | 🔴 `0` | `1` | 🟡 APAC — `studyplus` only, education-adjacent, 🔴 **NOT probed for contents; carried as a lead, not published as a row** |
+
+🔴 **The finding: the country-code and `edu.` namespaces carry university PUBLISHERS, not education PRODUCTS. Across ~`2 300` groupIds the education-product count is TWO, and both are German.** 🟢 **So p233's thesis — *"a coordinate carries a publisher, a regional search carries vendor prose"* — holds, but the coordinate only ever produced the LEAD. The repository and the grant body made it a row.**
+
+### 🔴 `R234-2` — two of p233's census cells are false positives, and the lesson completes a three-pass series
+
+| groupId | p233 published | p234 opened it |
+|---|---|---|
+| `org.olat` | *"OpenOLAT — `org.olat`, NOT `org.openolat`; the rename never reached the coordinates"* | 🔴 **One child: `jamwiki/` → `jamwiki-core/`. It is JAMWiki — a Java wiki engine OLAT once bundled. NOT the LMS** |
+| `org.openolat` | implied absent | 🔴 **A true `404`**, and classifiable as a REAL absence because `org/olat/` returned a full listing in the same window — the positive control `T233-C` itself requires. 🟢 **OpenOLAT's `pom.xml` declares `org.openolat` with `<distributionManagement>` → `nexus.openolat.org`: it ships from its OWN Nexus and is not on Central under either spelling** |
+| `org.fenixedu` | *"the academic-management stack built at Instituto Superior Técnico, Lisbon"* | 🔴 **Two children, both `fenixedu-scala-sdk` *(Scala 2.13 and 3)* — a CLIENT SDK, not the platform.** The EMEA claim `intel/market.md` built on this cell is not supported by it |
+
+🟢 **The series:**
+
+> p232: **a `200` is not a READ.** p233: **a `404` is not an ABSENCE.** 🔴 **p234: a NAME is not an ARTEFACT.**
+
+🔵 **p233's census was correct about what it measured — namespace presence — and said so. The defect is what the shelves spent it on: platform RESOLVABILITY.** 🔴 **Two of two cells checked were wrong, so `org.sakaiproject`, `org.dspace`, `org.opencastproject`, `org.apereo`, `org.jasig` and `org.kuali` are presence facts only until a pass opens each — `ACTION UB`.**
+
+🟢 **Leads p233 carried, cleared this week:** `org.kualigan` → **PRESENT**, `6` children *(`kc/ kfs/ kuali/ liquibase/ maven/ pom/`)*. `org.teachingkidsprogramming` → **PRESENT**, `1` child.
+
+### 🔴 `R234-3` — the licence-field defect `p209` found and `p210` rated, now with its discriminator measured
+
+🟢 **Measured, not inferred: `svws-nrw/SVWS-Server` and `svws-nrw/SVWS-GradeHub` carry `BSD-3-Clause` bodies whose `28` lines of conditions and disclaimer are BYTE-IDENTICAL. GitHub labels the first `"Other"` and the second `"BSD 3-Clause"`.** The whole difference is a 3-line institutional copyright block *(ministry, street, e-mail, no year)* and a missing trailing newline.
+
+🔴 **So a harvester filtering on the licence field keeps the small Vue tools and drops the `9 832`-commit Java core — the actual SIS, and the only row in the estate placeable from its own grant.** 🟡 **An institution is precisely the holder type whose copyright block breaks the matcher, so the defect is biased against exactly the rows worth finding.**
+
+🔵 **The rule is not new — `p209` found this defect on OpenOLAT and `p210` put it at a `15`% rate: establish a licence from the GRANT BODY, never from a platform metadata field.** 🟢 **What is new is the DISCRIMINATOR: the copyright block, isolated by a controlled comparison inside one organisation.** 🔴 **Which means the `15`% is not random — it selects for institutional holders, i.e. for the permissive publicly funded platforms this KB most wants.**
+
+### 🟡 `R234-4` — channel constraints met this week, recorded so a later pass does not re-learn them
+
+- 🔴 **A bare `curl` to `repo1.maven.org` was REFUSED by this environment's egress classifier.** The sanctioned fetch tool reads it fine; every Maven listing above came through that path. `raw.githubusercontent.com` via `curl` is permitted and was used for every byte-exact grant read.
+- 🔴 **`api.github.com` returns `403` for any repository not attached to this session.** 🟡 **Every star and commit count in this pass is therefore a PAGE READ, not an API read, and none is API-verified.**
+- 🟡 **`de.`, `ch.`, `nl.` and `jp.` counts are the fetch tool's counts over listings it reported TRUNCATED** — published as orders of magnitude and labelled so. 🟢 **`edu.`, `uk.ac.`, `mx.`, `br.edu.` and `au.edu.` are exact.**
+- 🟡 **Namespaces still unread *(`ACTION UA`)*: `com.` `net.` `io.` `at.` `se.` `no.` `dk.` `fi.` `es.` `it.` `fr.` `in.` `cn.` `kr.` `sg.` `eu.`**
+
 ## 2026-10-16 — Pass 233 — THE **REGISTRY TARBALL** AND THE **MAVEN DIRECTORY LISTING** ARE BOTH SOURCE CHANNELS THIS KB HAD NEVER HARVESTED, AND ONE REQUEST ON THE SECOND ENUMERATES `4 798` groupIds
 
 ⏱️ **SECOND pass of `2026-10-16`.** p232 published earlier the same date.

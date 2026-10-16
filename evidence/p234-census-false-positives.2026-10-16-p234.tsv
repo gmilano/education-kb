@@ -1,0 +1,26 @@
+# p234 — p233 enumerated 4798 `org.` groupIds and read the education platform estate off the
+# NAMES. Two cells checked one level deeper this pass. BOTH COLLAPSE.
+#
+# This is an internal correction, and it is published as the headline of a correction rather than
+# buried, because p233's census is cited in THREE shelves (repos/foundations.md F233-2,
+# verticals/solutions.md V233-2, intel/market.md) as evidence about platform resolvability.
+groupId	p233 published	p234 reads one level deeper	verdict
+org.olat	"OpenOLAT — JVM — org.olat, NOT org.openolat; the rename never reached the coordinates"	`org/olat/` contains exactly ONE child: `jamwiki/`, whose only artefact is `jamwiki-core/`	FALSE POSITIVE. `org.olat` on Central is JAMWiki — a Java wiki engine OLAT once bundled — NOT the OpenOLAT platform. The coordinate matched a NAME, not a product.
+org.openolat	implied absent ("NOT org.openolat")	`org/openolat/` -> HTTP 404, WITH A POSITIVE CONTROL PASSING IN THE SAME WINDOW (`org/olat/` returned a real listing). By `T233-C`'s own rule that makes this a classifiable ABSENCE, not NOT-ESTABLISHED.	CONFIRMED ABSENT. And OpenOLAT's own `pom.xml` declares `<groupId>org.openolat</groupId>`, version `21.2-SNAPSHOT`, with `<distributionManagement>` pointing at `nexus.openolat.org`. So the artefacts ship from the project's OWN Nexus. OPENOLAT IS NOT RESOLVABLE FROM MAVEN CENTRAL AT ALL — under either spelling.
+org.fenixedu	"the Maven namespace enumeration surfaced org.fenixedu — the academic-management stack built at Instituto Superior Tecnico, Lisbon — which six passes of region-shaped queries never produced" (intel/market.md)	`org/fenixedu/` contains exactly TWO children: `fenixedu-scala-sdk_2.13/` and `fenixedu-scala-sdk_3/` — one Scala client SDK, cross-built for two Scala versions	FALSE POSITIVE. What is on Central is a CLIENT SDK, not the FenixEdu platform. The EMEA platform claim this KB built on the cell is not supported by the cell.
+#
+# THE GENERALISED MECHANISM — this pass's one-line lesson, in the series the last two passes started:
+#   p232: a `200` is not a READ.        (PyPI answers 200 with a bot challenge)
+#   p233: a `404` is not an ABSENCE.    (repo1.maven.org answers 404 when throttling)
+#   p234: a NAME is not an ARTEFACT.    (a groupId prefix is not the project it resembles)
+#
+# p233's census was CORRECT about what it measured — namespace presence — and it said so. The
+# defect is in what the shelves then SPENT it on: platform RESOLVABILITY, which a prefix listing
+# never established. Two of two cells checked were wrong, so the remaining platform cells in
+# p233's V233-2 table (org.sakaiproject, org.dspace, org.opencastproject, org.apereo, org.jasig,
+# org.kuali) are NOT to be read as resolvability claims until a pass opens each one. Registered
+# as `ACTION UB`.
+#
+# LEADS CLEARED THIS PASS (p233 carried both as "no repository probed"):
+org.kualigan	lead, unprobed	6 children: kc/ kfs/ kuali/ liquibase/ maven/ pom/	PRESENT — a real Kuali-community coordinate set.
+org.teachingkidsprogramming	lead, unprobed	1 child: TeachingKidsProgramming/	PRESENT — single artefact.

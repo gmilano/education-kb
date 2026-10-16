@@ -1,0 +1,53 @@
+# p234 — the rows added, every one existence-checked on `git ls-remote` and grant-read first-hand
+# in this pass's window (2026-10-16, THIRD pass of this date; p232 and p233 both also carry it).
+# `ACTION TH` honoured: every row carries a HEAD sha and the exact grant byte count.
+#
+# ONLY THE 11 `svws-nrw` ROWS ARE NEW. The other 9 are ALREADY CARRIED and are marked
+# CARRIED-pNN-reverified in the `tier` column. This was found only AFTER the sections were drafted,
+# by running the repo's own harvester (`compose/code/p230-prose-path-ladder/harvest.py`) over the
+# FINISHED shelves. 20 rows drafted, 9 duplicates = a 45% self-duplication rate, published rather
+# than quietly dropped, because the rate is the argument for `ACTION UG`.
+#
+#   openolat/OpenOLAT                  cited since p44; GRANT-READ at p209 ('197 lines / 10.7 KB')
+#   HKUDS/DeepTutor                    cited since p44; used by p230/p231 as the ls-remote POSITIVE CONTROL
+#   Crosstalk-Solutions/project-nomad  cited since p44; grant-read at p220 as `Project-NOMAD`, v1.35.1
+#   zijinz456/OpenTutor                cited since p44; GRANT-READ at p227 (1068 B, sha256-12 5352b4967982)
+#   littlecookie0722/AI-Teaching-Agent cited since p44
+#   SirhanMacx/Claw-ED                 cited since p44 (also p207, p209)
+#   jplag/JPlag                        cited since p84 (also p85, p213)
+#   GibbonEdu/core                     cited since p44
+#   frappe/education                   cited since p44
+#
+# Case variance in the slug (`OpenOLAT/OpenOLAT` vs `openolat/OpenOLAT`) defeated the cheap check.
+# `ACTION UH`: fold case before comparing. `ACTION UG`: this KB has no index of what it carries.
+#
+# PLACEMENT COLUMN RULE (ACTION TQ, refined this pass): `placed_from_grant` is YES only when the
+# LICENCE BODY ITSELF names a holder with a jurisdiction. An Apache-2.0 body never names a holder
+# (structurally blind, `TL`), so an Apache row is NO regardless of who maintains it. A name with
+# no jurisdiction (individual, pseudonym, "Contributors") is NO. This pass's finding is that the
+# lever is HOLDER TYPE, not licence class.
+slug	tier	licence	grant_bytes	appendix	default_branch	head_sha	copyright_holder_in_body	placed_from_grant	region	note
+openolat/OpenOLAT	CARRIED-p209-reverified	Apache-2.0	10982	stripped	master	40c3af60221b	none (Apache body names no holder)	NO	EMEA	full LMS; frentix GmbH, Zurich per README+pom <organization>; region from README, NOT from grant. 31854 commits, 447 stars. README cites NOTICE.TXT which 404s. pom licence string is the typo'd "Apache 2.0 Open Source L6icense". NOT resolvable on Maven Central.
+svws-nrw/SVWS-Server	platform-SIS	BSD-3-Clause	1611	n/a	dev	c2f1a7f1f902	Ministerium fuer Schule und Bildung des Landes NRW, Referat 135, Voelklingerstrasse 49, 40221 Duesseldorf	YES	EMEA	state school-administration system (SIS). 9832 commits, 37 stars. Java 21 + Gradle 8, MariaDB 10.6+, Docker. 17 artefacts published under de.svws-nrw on Maven Central. GitHub reports licence "Other" (see p234-licence-field-defect).
+svws-nrw/SVWS-GradeHub	module	BSD-3-Clause	1504	n/a	main	15309d13dd37	Frank Pfotenhauer	NO	EMEA	browser-based grade module, online+offline. Vue. Individual holder, no jurisdiction -> not placeable from grant.
+svws-nrw/SVWS-Prognos	module	BSD-3-Clause	1506	n/a	master	bba82094715d	(one-line individual holder)	NO	EMEA	graduation forecasting for comprehensive/secondary schools NRW. Vue.
+svws-nrw/SVWS-Conference	module	BSD-3-Clause	1504	n/a	main	d2e4f11faed6	(one-line individual holder)	NO	EMEA	lightweight browser conference module, online+offline. TypeScript.
+svws-nrw/SVWS-Import	module	BSD-3-Clause	1506	n/a	master	fdaf031c4821	(one-line individual holder)	NO	EMEA	web client for importing data into the SVWS server. Vue.
+svws-nrw/SVWS-KOOP	module	BSD-3-Clause	1506	n/a	master	6bf57c1cd06e	(one-line individual holder)	NO	EMEA	synchronises data for KOOp scheduling (Blockungen).
+svws-nrw/SVWS-Tools	module	BSD-3-Clause	1506	n/a	master	462ae51ab899	(one-line individual holder)	NO	EMEA	installation repo for web add-on tools.
+svws-nrw/SVWS-TestSqlites	fixture	BSD-3-Clause	1506	n/a	master	a934d91af317	(one-line individual holder)	NO	EMEA	anonymised standard test databases for an SIS — a ready test-fixture corpus, rare in this industry.
+svws-nrw/SVWS-BK-Abschlussberechnungen	algorithm	BSD-3-Clause	1527	n/a	dev	95500eb6164c	(one-line individual holder)	NO	EMEA	final-grade calculation algorithms + documentation for vocational colleges (Berufskollegs).
+svws-nrw/Schild-NRW-3-Zeugnisse-Sek-I	report-pack	MIT	1076	n/a	dev	ee323b2682d6	(one-line individual holder)	NO	EMEA	certificate report pack, secondary level I. 1076 B is the canonical MIT body size.
+HKUDS/DeepTutor	CARRIED-p44-reverified	Apache-2.0	11408	present	main	6cf793bd868b	none (Apache body names no holder)	NO	APAC (INFERRED, FLAGGED)	agent-native learning workspace: tutoring, problem solving, quiz generation, research, visualisation. 41.5k stars, 5.2k forks, 2664 commits, v1.6.14 (2026-10-08). Python 3.11 + Next.js 16. RAG: LlamaIndex (default), LightRAG, GraphRAG, PageIndex, WeKnora; FAISS; Manim; MCP servers. Model-agnostic (OpenAI-compatible, Anthropic, Ollama, LM Studio, llama.cpp, vLLM). arXiv 2604.26962. REGION IS AN INFERENCE from the HKUDS org handle; the repository page states no university or country and the grant names no holder.
+Crosstalk-Solutions/project-nomad	CARRIED-p220-reverified	Apache-2.0	10779	stripped	main	54ee30a44902	none (Apache body names no holder)	NO	Global	offline-first knowledge+education server. 40.3k stars, 4.1k forks, 850 commits. Bundles Kiwix (offline Wikipedia), Kolibri (Khan Academy courses, progress tracking, multi-user), ProtoMaps, Qdrant RAG, Ollama/LM Studio/llama.cpp. ~5 GB disk alone, ~25 GB with AI. ZERO telemetry. NO AUTHENTICATION BY DESIGN — see caveat in agents/top.md.
+littlecookie0722/AI-Teaching-Agent	CARRIED-p44-reverified	MIT	1069	n/a	main	b90bd88a2899	littlecookie	NO	UNPLACED	generates labs, exams, grading workflows, presentations; structured DSLs, human review, sandboxed evaluation, CLI/MCP tools, local-first web UI. README states grading productisation is FROZEN — treat grading as an internal artefact, not a feature. Holder is a pseudonym.
+zijinz456/OpenTutor	CARRIED-p44-grantread-p227	MIT	1068	n/a	main	a890519f3632	Zijin Zhang	NO	UNPLACED	self-hosted tutor, 10+ LLM providers, notes/quizzes/adaptive tutor. Individual holder, no jurisdiction.
+SirhanMacx/Claw-ED	CARRIED-p44-reverified	MIT	1078	n/a	main	18f2e223cdd1	EDUagent Contributors	NO	UNPLACED	local-first AI teaching assistant: editable lesson drafts, student materials, slides. Teacher-reviewed beta. Holder string "EDUagent" does not match the repo name — rename signal, unresolved.
+#
+# COPYLEFT ROWS — carried for reference, NOT recommended for a distributed client derivative.
+jplag/JPlag	CARRIED-p84-reverified	GPL-3.0	(FSF body)	n/a	main	3ee7de912b90	Free Software Foundation (the licence steward, not the project)	NO	UNPLACED	source-code plagiarism / collusion detection, 17+ languages, 2.0k stars, 5708 commits. Topics include cs-education, programming-education, academic-dishonesty. Published on Maven under de.jplag. Runs fully locally, nothing uploaded. GPL-3.0 -> academic-integrity engine you RUN, not one you SHIP inside a product.
+GibbonEdu/core	CARRIED-p44-reverified	GPL-3.0	35121	n/a	v31.0.00	6ac53b1736f2	(FSF body)	NO	UNPLACED	school management platform, PHP. DEFAULT BRANCH IS A RELEASE BRANCH `v31.0.00`, not main/master — a clone script assuming main checks out nothing.
+frappe/education	CARRIED-p44-reverified	GPL-3.0 BY 19-BYTE CLAIM	19	n/a	develop	73ce33ef2719	none — the file is the single line "License: GNU GPL V3"	NO	UNPLACED	education/school management on Frappe/ERPNext. The licence file is a 19-byte CLAIM, not a grant body. p217's distinction: counsel will ask for the text.
+#
+# REFUSED
+AlekSIS/AlekSIS-Core	-	-	-	-	-	-	-	-	-	REFUSED: `git ls-remote` DEAD on github.com. The project is hosted on its own GitLab (edugit.org) which this pass did NOT probe. Absence on GitHub is NOT absence of the project — recorded as a channel gap, not a finding.

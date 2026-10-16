@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 234 — 2026-10-16 — EMEA STOPS BEING A DEMAND-ONLY REGION: IT NOW HAS **SUPPLY THIS KB CAN SELL**, AND LATAM'S DEMAND/SUPPLY ASYMMETRY IS THE LARGEST ON THESE SHELVES
+
+⏱️ **THIRD pass of `2026-10-16`.**
+
+🔵 **Evidence:** [`p234-queries`](../evidence/p234-queries.2026-10-16-p234.tsv) · [`p234-tu-namespace-census`](../evidence/p234-tu-namespace-census.2026-10-16-p234.tsv) · [`p234-new-rows`](../evidence/p234-new-rows.2026-10-16-p234.tsv) · [`p234-census-false-positives`](../evidence/p234-census-false-positives.2026-10-16-p234.tsv)
+
+### 🔴 `M234-0` — a correction to this shelf's own EMEA claim
+
+p233 published here: *"the Maven namespace enumeration surfaced `org.fenixedu` — the academic-management stack built at Instituto Superior Técnico, Lisbon — which six passes of region-shaped queries never produced."* 🔴 **`org/fenixedu/` holds exactly two artefacts, `fenixedu-scala-sdk_2.13` and `fenixedu-scala-sdk_3` — one client SDK, cross-built. Not the platform.** 🟡 **The EMEA-supply claim was right; the cell it rested on was not.**
+
+🟢 **p233's underlying thesis survives and is now actually earned: *"a package coordinate carries a publisher; a regional search carries vendor prose."* `ACTION TU` read eight namespaces and produced two real EMEA platforms — `de.svws-nrw` and, via its repository, OpenOLAT.** 🔴 **With one refinement the thesis did not anticipate: the coordinate found the lead, but only the REPOSITORY and the GRANT BODY made it a row. A prefix is not an artefact.**
+
+### 🟢 `M234-1` — the market map, with supply and demand scored separately per region
+
+🔵 **Scored separately on purpose. This KB has repeatedly let strong demand evidence stand in for supply, and the two are not interchangeable in a proposal: demand sets the price, supply sets the margin.**
+
+| region | DEMAND evidence | SUPPLY on these shelves | the engagement shape that follows |
+|---|---|---|---|
+| **North America** | 🟢 strongest market: ~`36%` share; `60%` of US K-12 teachers used AI in 2024-25, `32%` weekly | 🟢 **Ed-Fi** *(`Apache-2.0`, `9` repos + an executable acceptance gate)*, `edu.` = `82` US university publishers, `lti-tool`, the permissive QTI/LTI rows | 🟢 **CONFORMANCE.** Ed-Fi + LTI 1.3 + the DMS pilot gate — an auditable "conformant" claim in a SOW |
+| **EMEA** | 🟢 ~`$2.64B`; Finland/Estonia/Netherlands K-12 leaders; Denmark `€200M` strategy; 🔴 **EU AI Act makes admissions, student evaluation and exam scoring HIGH-RISK** | 🟢 **NEW AND DECISIVE: `svws-nrw` *(`BSD-3-Clause` SIS, `17` Maven artefacts, `10` grant-read repos)* and `OpenOLAT` *(`Apache-2.0` LMS, `31 854` commits)*.** Plus `de.jplag`, and `ch.`/`nl.`/`uk.ac.`/`de.` university publishers | 🟢 **FORK + COMPLY.** The only region where this KB can now offer a permissive platform base AND the regulatory work the same client needs. See `P234-R1` |
+| **APAC** | 🟡 fragmented: 🔴 **South Korea `AI Basic Act` in force `22 Jan 2026`**; 🔴 **Vietnam's AI law in force `1 Mar 2026` names EDUCATION high-risk and AUTOMATED ASSESSMENT explicitly**; Japan promotes; Australia's mandatory guardrails PAUSED; Ipsos: `39%` globally would ban AI in schools, ANZ higher | 🟡 **ONE row, and its region is an INFERENCE: `HKUDS/DeepTutor` *(`Apache-2.0`, `41.5k` stars)*, placed from an org handle only.** `au.edu.` = `1` publisher. `jp.` = `1` education-adjacent publisher, unprobed | 🟡 **MULTI-JURISDICTION ASSESSMENT.** The regulatory hook is sharp and the supply is thin — lead with compliance engineering, not with a platform. See `P234-R4` |
+| **LATAM** | 🟢 **THE HIGHEST MEASURED ADOPTION OF ANY REGION.** TALIS 2024: `56%` of secondary teachers in Brazil, `55%` in Chile, vs `36%` OECD. PISA 2025: **`9` in `10` 15-year-olds** across 13 countries used AI chatbots for schoolwork. UNESCO IESALC: `87%` of 200 institutions in 19 countries use AI — 🔴 **but only `26%` have a formal AI strategy** | 🔴 **ZERO. Seventh consecutive pass.** Corroborated on a third channel this pass: `mx.` = `16` groupIds, an exact non-inferred zero for education; `br.edu.` = `1` publisher *(`ufcg`)*, no product; `br.` = `10` university publishers, no education software | 🟢 **GOVERNANCE AND ENABLEMENT — the clearest arbitrage on these shelves.** `87%` using / `26%` governed is a gap that is bought with policy, training and guardrails, not with a platform licence. See `P234-R2` |
+
+### 🟢 `M234-2` — the asymmetry worth stating in one line, because it is the regional strategy
+
+🔴 **LATAM has the highest adoption and the lowest supply. EMEA has the strictest regulation and, as of this pass, the best permissive supply. North America has the most mature standards estate. APAC has the sharpest new regulation and almost no supply.**
+
+🟢 **So the four regions want four different first conversations, and only one of them is about a platform:**
+
+- **EMEA →** *"here is a permissive base you can own, and here is your Article-6 high-risk evidence pack."*
+- **LATAM →** *"your teachers and students already adopted this; you have no strategy. Start there."*
+- **North America →** *"make 'conformant' auditable."*
+- **APAC →** *"your assessment pipeline is now a regulated artefact in at least two jurisdictions."*
+
+## Opportunities by region
+
+### North America
+
+🟢 **The conformance play, unchanged and still the strongest-evidenced.** Ed-Fi is the only `Apache-2.0` platform-scale estate in the region *(`9` repositories, grants read, plus `Ed-Fi-Exchange-OSS/DMS-pilot-testing-kit` — an executable `PASS`/`FAIL` acceptance gate)*. 🔵 **Scope to the target version first: `v7.x` is ODS/API *(admin via `ODS-Admin-API`)*, `v8+` is the Data Management Service.**
+
+🔴 **The regulatory surface is now the differentiator, and it is state-level, not federal.** `134` bills across `31` states this session. **California `AB 1159`** restricts using student data to train AI models. **Oklahoma and Maryland** require human oversight and bar AI from high-stakes decisions about students. **New York City** has a one-year moratorium on student-facing AI through eighth grade. Federally, `H.R. 8747` *(K-12 AI Literacy and Readiness Act of 2026)* passed committee largely along party lines. **Canada's "AI for All"** *(`4 Jun 2026`)* adds a national AI-literacy push, watermarking of AI-generated content and a Canada Trusted AI Certification — 🟡 **not binding law.** **Mexico** has bills but no enforcing regulator.
+
+🟢 **The sellable artefact: a per-state deployment matrix.** *"Human oversight required"* and *"no AI in high-stakes student decisions"* are **engineering requirements**, and a district buying an AI layer cannot answer them from a vendor datasheet. 🔵 **Build it once on the `lti-tool` + Ed-Fi rows and it re-sells `31` times.**
+
+### EMEA
+
+🟢 **This region changed this pass. It now has supply.** Two permissive platform bases, both grant-read:
+
+- 🟢 **`svws-nrw/SVWS-Server`** — `BSD-3-Clause`, a working state SIS, `17` Maven artefacts, an `svws-openapi` seam, and — rarest of all — a `BSD-3-Clause` **anonymised test-database corpus** *(`SVWS-TestSqlites`)* to develop against.
+- 🟢 **`openolat/OpenOLAT`** — `Apache-2.0`, a full LMS, `31 854` commits, Swiss-maintained.
+
+🔴 **The regulation is the sharpest in the world and it lands exactly on education's core functions.** The EU AI Act classifies **admissions, student evaluation and exam scoring as high-risk**, and it reaches **non-EU systems whose outputs affect EU students** — so a North American vendor's scoring model is in scope. 🟡 **The dates are UNSETTLED and this KB publishes the conflict rather than resolving it: one source has the AI Office and national authorities enforcing from `2 Aug 2026`; another dates standalone high-risk obligations, education among them, to `2 Dec 2027`; and the Commission's proposed *"AI omnibus"* amendments may move both.** 🔵 **Quote the obligation, not the date — and put the date in a change-control clause.**
+
+🟢 **The combined offer only EMEA supports: FORK + COMPLY.** Fork a permissive base the client owns, and deliver the high-risk evidence pack — human-oversight design, logging, accuracy and bias documentation — against the same codebase. 🔵 **`de.jplag` *(`GPL-3.0`, runs entirely locally, nothing uploaded)* is the academic-integrity engine that survives both GDPR and the Act, precisely because it never leaves the premises.**
+
+### APAC
+
+🔴 **The regulatory hook is the strongest thing in this region, and it is brand new.** **Vietnam's AI law, in force `1 Mar 2026`, names education as a high-risk sector and names automated assessment explicitly** *(compliance for existing systems in 2027 — sources disagree between `1 Mar` and `1 Sep`, and this KB records the disagreement)*. **South Korea's `AI Basic Act` has been in force since `22 Jan 2026`**, risk-based. **Japan** promotes rather than penalises. **China** regulates by service type *(generative AI, content labelling)*. **Australia** relies on technology-neutral law with mandatory guardrails **paused**. **India** has no AI-specific law; its data-protection obligations phase in to May 2027.
+
+🟢 **The pattern worth selling: Vietnam's "automated assessment" and the EU's "exam scoring" are the SAME engineering requirement in two jurisdictions.** 🔵 **One assessment-governance build — provenance, human-in-the-loop sign-off, score logging, appeal trail — satisfies both, and this KB already carries the permissive QTI and LTI rows to wire it to.**
+
+🔴 **Supply is one inferred row.** `HKUDS/DeepTutor` *(`Apache-2.0`, `41.5k` stars, `v1.6.14`)* is the largest permissive education agent on these shelves and its APAC placement rests on an org handle — not on the repository page and not on the grant. 🟡 **`jp.studyplus` is an unprobed lead; `au.edu.` holds one publisher.** 🔴 **Do not represent APAC supply as established. Lead with compliance engineering.**
+
+🟡 **And a demand caveat that should shape the pitch: Ipsos finds `39%` globally think AI should be banned in schools, with Australia and New Zealand HIGHER.** In ANZ, a student-facing AI pitch starts underwater — **lead with teacher-facing workload tools and assessment integrity, not with student chatbots.**
+
+### LATAM
+
+🔴 **Seven passes, three channels, zero supply — and the highest demand of any region.** That is not a gap to apologise for; it is the one place where the shelves' own weakness names the offer.
+
+🟢 **The demand evidence is the best-sourced in this KB** *(TALIS, PISA, UNESCO IESALC — survey instruments, not vendor blogs)*: Brazil `56%` and Chile `55%` of secondary teachers against an OECD average of `36%`; `9` in `10` 15-year-olds across 13 countries using AI chatbots for schoolwork; `87%` of 200 institutions across 19 countries using AI with 🔴 **only `26%` holding a formal AI strategy**; in Brazil, only `22%` of school administrators report their school has AI guidelines.
+
+🔴 **And the equity split is the detail that makes it a design constraint rather than a statistic: in Argentina, usage runs `75%` in higher socio-economic groups against `42%` in lower ones.** 🟢 **So any LATAM deliverable that assumes reliable connectivity encodes that gap into the product.**
+
+🟢 **Three things to sell, in this order:**
+
+1. 🟢 **AI governance as the lead product, not an add-on.** `87%` using against `26%` governed is the arbitrage. UNESCO's regional **Observatory on AI in Education** *(launched `Apr 2026`)*, **Uruguay** *(first LATAM signatory of the Council of Europe AI convention, 2025)* and **Colombia's CONPES 4144** *(Feb 2025)* give an institution external frameworks to anchor a policy to — which is exactly what a `26%` figure says they lack.
+2. 🟢 **Offline-first delivery as an equity requirement.** `Crosstalk-Solutions/project-nomad` *(`Apache-2.0`, Kiwix + Kolibri + Qdrant + local inference, ~`25` GB with the assistant)* is the concrete base. 🔴 **It has NO AUTHENTICATION BY DESIGN — see `P234-R3`, which puts the auth and audit boundary outside it. Never deploy it as-is against student records.**
+3. 🟡 **Spanish/Portuguese-language capability as a moat.** The JIME regional assessment found only `7` platforms *(`3.33%`)* offering structured resources under open learning models across Spanish-speaking LATAM. 🔵 **Chamilo and ILIAS are repeatedly described as suited to Spanish-speaking markets and are the realistic integration targets — both copyleft, so INTEGRATE, do not fork.**
+
+🔵 **Stated plainly for a later pass: the absence of LATAM open-source supply is now established on GitHub *(7 passes)*, on package registries *(p232)* and on Maven coordinates *(p234: `mx.` an exact zero)*. It is unlikely to be a measurement artefact. Stop re-measuring it and start selling against it.**
+
 ## Pass 233 — 2026-10-16 — THE REGION-SHAPED QUERY RETURNS **ZERO REPOSITORIES FOR A SIXTH CONSECUTIVE PASS**, AND THE ONE EMEA-NATIVE ARTEFACT THIS PASS FOUND CAME FROM **MAVEN COORDINATES**, NOT FROM ANY SEARCH
 
 ⏱️ **SECOND pass of `2026-10-16`.**
