@@ -1,0 +1,5 @@
+query	axis_type	channel	sort	order	total_count	page_size	returned	on_topic_page1	gated	carried	new	rediscovery_pct
+topic:lms topic:ai pushed:>2026-06-01	PRODUCT	GitHub search via MCP	updated	desc	52	30	30	24/30	11	6	5	55
+topic:tutor topic:ai pushed:>2026-06-01	PRODUCT	GitHub search via MCP	updated	desc	27	30	27	25/27	15	0	15	0
+topic:gradebook pushed:>2026-01-01	PRODUCT	GitHub search via MCP	updated	desc	57	30	30	30/30	27	4	23	15
+educacion OR educativa OR educacao in:readme topic:ai pushed:>2026-04-01	LANGUAGE	GitHub search via MCP	updated	desc	89	30	30	10/30	8	0	8	0

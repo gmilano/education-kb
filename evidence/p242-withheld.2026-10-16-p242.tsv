@@ -1,0 +1,20 @@
+slug	grant	bytes	path	default_ref	head_sha	payload_sha	delta_kind	stars	region_if_known	why_withheld
+purysho/EduBoard	AGPL-3.0	34523	LICENSE	main	d0774f2c9074	8486a10c4393	STANDARD	1	unplaced	Network copyleft. A local-first offline teacher OS (gradebook, rubrics, attendance, lesson plans) - commercially the most attractive withheld row of the pass
+fentas/lani	AGPL-3.0	34524	LICENSE	main	80a2a6fe8260	8d56b405468a	STANDARD	0	EMEA (Slovene language learning)	Network copyleft
+TouchRefletz/maia.edu	AGPL-3.0	34523	LICENSE	master	278ba25d3129	8486a10c4393	STANDARD	0	LATAM (Portuguese)	Network copyleft. Identical payload_sha to purysho/EduBoard
+rosshd/openlearn	AGPL-3.0	29618	LICENSE	main	da17dafd08f7	8799c151530d	STANDARD	1	unplaced	Network copyleft. GitHub API reported NOASSERTION; first-hand read says AGPL-3.0
+learnhouse/learnhouse	AGPL-3.0	-	-	-	-	-	-	2396	unplaced	CARRIED + network copyleft. The highest-star education row in the whole harvest
+BreraDMR/calculating_student_grades	PolyForm	4984	LICENSE	main	3fe1e9ad064e	f89e1e4e5ec7	STANDARD	0	unplaced	PolyForm Noncommercial - NOT OSI, commercial use prohibited
+itmir913/score-reporter	PolyForm	4563	LICENSE.md	master	38f82a901856	c0ea4a896d2c	STANDARD	0	APAC (Korean mock-exam analysis)	PolyForm Noncommercial - NOT OSI. GitHub API reported NOASSERTION
+Sternfast/moodle-report_gradelookup	GPL-3.0	35149	LICENSE	main	32a75bff0035	3972dc9744f6	STANDARD	0	unplaced	GPL-3.0 - cannot ship as a proprietary deliverable (p240's Moodle estate finding)
+marnbs/moodle-mod_classjournal	GPL-3.0	35149	LICENSE	main	a9f3442ed965	3972dc9744f6	STANDARD	0	unplaced	GPL-3.0. Identical payload_sha to the other two Moodle plugins
+danielcregg/moodle-local_aitutor	GPL-3.0	35149	LICENSE	main	af9fe8ee1bff	3972dc9744f6	STANDARD	0	EMEA (Ireland, ATU)	GPL-3.0. A Socratic STACK tutor with escalating hints that never gives the answer - pedagogically the most interesting withheld row
+matteoangeloni-jpeg/-NO-AI-ACT	GPL-3.0	5616	LICENSE	main	d7cdc9ad1ad6	28e436e7e959	STANDARD	1	EMEA (Italian)	GPL-3.0. A browser serious-game on the EU AI Act "aggiornato al Digital Omnibus" - independently corroborates this pass's EMEA regulatory finding
+SebaWag/onboarding-hub	Apache-2.0	10750	LICENSE	main	c484439d4a13	e41a85d7a477	STANDARD	0	NOT PLACED	Grant is fine. Withheld on SCOPE+REGION: corporate onboarding/L&D, not education sector; and Spanish language ALONE does not place a row (Spain is EMEA, not LATAM)
+abujalancej/edutrack	NO LICENCE BODY	2353	package.json	main	fbd11f8f11c7	e5f554c1d8d4	CLEAN (manifest)	0	unplaced	No grant body at 40 paths x 2 refs; only a Tier-C manifest. A manifest is a declaration, not a grant (p222)
+messiasof/raff	NO LICENCE BODY	655	pyproject.toml	main	726c63a7a04e	c7a13f384398	CLEAN (manifest)	4	LATAM (Portuguese, autism study routines)	No grant body; only a Tier-C manifest
+DOMCDONALD001/opengrade	NO LICENCE BODY	607	package.json	main	9b9513b43c24	8125678ae98a	CLEAN (manifest)	0	North America (Denim Technologies LLC, K-12 SIS)	No grant body; only a Tier-C manifest
+neteye-platform/ai-tutor-plugin	NO-GRANT	-	-	main	5066f85abb19	-	-	1	unplaced	404 at 40 paths x 2 refs. ABSENT-AT-THE-PATHS-PROBED, not proven grantless
+eledia/moodle-block_elediaai_tutor	NO-GRANT	-	-	51	0ebc900bea1f	-	-	1	EMEA (German, eLeDia)	404 at 40 paths x 2 refs. NOTE: its default branch is `51` - the ref axis earned its keep here
+udit-001/pharos	NO-GRANT	-	-	main	0b4e188cbbb9	-	-	4	unplaced	404 at 40 paths x 2 refs
+umaarmirzaa/chalk	NO-GRANT	-	-	master	dadeaa8f4428	-	-	0	unplaced	404 at 40 paths x 2 refs

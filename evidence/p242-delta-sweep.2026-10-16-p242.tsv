@@ -1,0 +1,12 @@
+slug	bytes	p1054_verdict	p1054_excess	p242_delta_kind	standard_family	resolution	usable_permissive	note
+AnonymousOnyx22/brightspace-d2l-mcp	1200	MIT-BODY-PLUS:unclassified-addition	50	DISCLOSURE	-	RESOLVED-disclosure-only	TRUE	THE HEADLINE. The 50 excess bytes are an upstream attribution to RohanMuppa/brightspace-mcp-server under MIT
+RohanMuppa/brightspace-mcp-server	1068	MIT	0	STANDARD	MIT	p1054-verdict-stands	TRUE	The upstream the row above names, read first-hand to close the chain
+sxnnyside-scholarships/promediatum	1100	MIT	0	STANDARD	MIT	p1054-verdict-stands	TRUE	CONTROL: 1100 B is a long copyright holder name, not an addition. Correctly cleared
+snflwr-ai/snflwr.ai	2833	NOT-MIT-BODY	0	TRANSITION	GPL-family	p1054-verdict-stands	FALSE	The only TRUE relicensing in the corpus. Dates 2026-02-27 and 2026-09-18 are material; detected by narrative, not by two-names-plus-a-date
+purysho/EduBoard	34523	NOT-MIT-BODY	0	STANDARD	GPL-family	p1054-verdict-stands	FALSE	ACTION VU false positive #1: names GPL-3.0 (AGPL s13) + FSF dates 19 Nov 2007 / 28 Mar 2007
+fentas/lani	34524	NOT-MIT-BODY	0	STANDARD	GPL-family	p1054-verdict-stands	FALSE	ACTION VU false positive #2
+TouchRefletz/maia.edu	34523	NOT-MIT-BODY	0	STANDARD	GPL-family	p1054-verdict-stands	FALSE	ACTION VU false positive #3
+rosshd/openlearn	29618	NOT-MIT-BODY	0	STANDARD	GPL-family	p1054-verdict-stands	FALSE	ACTION VU false positive #4
+BreraDMR/calculating_student_grades	4984	NOT-MIT-BODY	0	STANDARD	PolyForm	p1054-verdict-stands	FALSE	PolyForm: its `noncommercial` is its OWN term - family classifier's answer, not a delta
+projectfedena/fedena	680	NOT-MIT-BODY	0	DISCLOSURE	-	p1054-verdict-stands	FALSE	Root NOTICE, Apache grant STATED not BODIED (p210/P214-2). DISCLOSURE asserts no family
+foradian/fedena	679	NOT-MIT-BODY	0	DISCLOSURE	-	p1054-verdict-stands	FALSE	Same shape, 1 B apart. Re-read first-hand this pass and matches what the shelves already record

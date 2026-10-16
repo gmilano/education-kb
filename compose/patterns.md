@@ -4,6 +4,175 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 242 — 2026-10-16 — `5` RECIPES, ONE PER REGION PLUS THE LICENCE-ARCHITECTURE PATTERN THEY ALL DEPEND ON — EVERY REPO BELOW HAS A GRANT THIS KB READ FIRST-HAND
+
+🔵 **Evidence:** [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv) · [`p242-delta-sweep`](../evidence/p242-delta-sweep.2026-10-16-p242.tsv) · **instrument:** [`p242-grant-delta`](code/p242-grant-delta/)
+
+🔴 **Read `P242-0` first.** The other four assume it, and it is the pattern that makes them sellable rather than merely buildable.
+
+---
+
+### 🔴 `P242-0` — **Arm's length, not inside**: the licence architecture every LMS engagement turns on · all regions · a design decision, not a work package
+
+🔵 **The measurement behind it** *(`T242-E`, [`verticals/solutions.md`](../verticals/solutions.md))*: `8` rows in this pass's `topic:lms` harvest put an agent surface on an incumbent LMS. **`7` are permissive. Every host is `AGPL-3.0`, `GPL-3.0` or proprietary. The one copyleft surface is the one that is a plugin.**
+
+| the surface | what it is | its grant | why |
+|---|---|---|---|
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) *(`59`★)* | MCP over Brightspace **API** | 🟢 `MIT` *(`1 068` B)* | separate program, network boundary |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) *(`10`★)* | MCP over Canvas **API** | 🟢 `MIT` | Canvas is `AGPL-3.0`; the surface inherits nothing |
+| [`krzysztofbury/librus-python-api`](https://github.com/krzysztofbury/librus-python-api) *(`3`★)* | API client for Librus | 🟢 `MIT` *(`1 071` B)* | network boundary |
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | Moodle **plugin** | 🔴 **`GPL-3.0`** | runs **inside** Moodle and links its code |
+
+**The wiring, as a rule:**
+
+1. 🔴 **Decide inside-or-beside before writing a line.** A Moodle/Canvas/Open edX **plugin** is a copyleft deliverable — `p240` measured the plugin estate at `16`/`16` `GPL-3.0` and `aihub` is the `17`th. A **sidecar** reached over HTTP is not.
+2. 🟢 **Prefer the API boundary.** Build the agent as an MCP server or API client in its own repo, with its own grant, talking to the platform's REST/LTI/GraphQL surface.
+3. 🔴 **Do not vendor the host's code into the sidecar** — not its PHP classes, not its models, not a forked SDK carrying its headers. 🔵 **A "sidecar" that ships Moodle's own classes is a plugin whatever the directory is called.**
+4. 🟢 **Gate the dependency tree before delivery.** Run `make hooks` *(the offline licence gate)* and `make carried SLUG=owner/repo` on every intake.
+5. 🟡 **Record the boundary in the deliverable's own `LICENSE`/`NOTICE`** — and if you derive from an upstream, **say so**: see `P242-0b`.
+
+🔴 **This is a licence-architecture observation, not legal advice.** The inside/beside boundary is a question of fact per build and belongs in front of counsel on any engagement where it carries money.
+
+#### 🟢 `P242-0b` — the attribution step, and why it is now cheap
+
+🔵 [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) adds `50` bytes to canonical MIT:
+
+> *"Portions of this software are derived from brightspace-mcp-server, Copyright (c) 2026 Rohan Muppa, used under the MIT License."*
+
+🔴 **`p1054` read those bytes as an unclassified addition and marked the row UNUSABLE.** 🟢 **`p242-grant-delta` reads them as `DISCLOSURE` and clears it** — the upstream it names was read first-hand and is `MIT`.
+
+**So the step a studio should actually take:** when you derive from a permissive upstream, **write the attribution into your `LICENSE`**. It is the correct thing legally, it makes your provenance auditable, and as of this pass **this KB's own gate no longer penalises you for it.** 🟡 Check your own output with:
+
+```sh
+cd compose/code/p242-grant-delta && python3 -c "import grant_delta,sys; print(grant_delta.resolve_mit_plus(open(sys.argv[1]).read()))" /path/to/LICENSE
+```
+
+---
+
+### 🟢 `P242-1` — **National gradebook agent adapter** · EMEA · `5`–`7` weeks
+
+🔵 **The buyer, measured:** the EU Digital Omnibus moved Annex III *(education)* high-risk duties to **`2027-12-02`**, while the **emotion-recognition prohibition in schools** *(since `2025-02-02`)* and the **Article 4 AI-literacy duty** are already in force *(`T242-F`, [`intel/market.md`](../intel/market.md))*. 🟡 **That combination is a pilot window: the conformity file is not due yet, the prohibitions are, and the institution already owns a national system of record.**
+
+| layer | repo | grant *(read first-hand)* |
+|---|---|---|
+| national record adapter *(Poland)* | [`krzysztofbury/librus-python-api`](https://github.com/krzysztofbury/librus-python-api) | `MIT` *(`1 071` B · `83eccea12102`)* |
+| institutional LMS adapter *(Denmark)* | [`CarlSvejstrup/dtu-learn-mcp`](https://github.com/CarlSvejstrup/dtu-learn-mcp) | `MIT` *(`1 079` B · `9444a1fd5199`)* |
+| pedagogy layer, never-the-answer | [`alexxb2mg-svg/jules`](https://github.com/alexxb2mg-svg/jules) | `MIT` *(`1 083` B · `a6fdabe49f58`)* |
+| local inference | **Ollama** *(carried)* | `MIT` |
+| retrieval identity guard | [`ashutoshrana/ferpa-haystack`](https://github.com/ashutoshrana/ferpa-haystack) *(carried, `p241`)* | `Apache-2.0` *(`742` B)* |
+
+**The wiring, in order:**
+
+1. 🟢 **The adapter is the deliverable, not the LMS.** `librus-python-api` and `dtu-learn-mcp` are both `MIT` API clients over proprietary national systems — `P242-0`'s pattern, already built. Fork the one matching the market and keep the boundary.
+2. 🔴 **Copy `librus-python-api`'s weekly live-check CI, and treat it as a requirement rather than a nicety.** An unofficial API client against a national gradebook breaks when the vendor ships; it is the only row in this harvest that continuously proves its own integration still works. **Without it the adapter is a demo.**
+3. 🟢 **Put `ferpa-haystack`'s pre-filter in front of the LLM**, keyed on the institution's own identity, so a teacher's query cannot retrieve another class's roster. 🔵 **Pre-filter, never post-filter: a model that has seen the context has already seen it.**
+4. 🟢 **Take `jules`'s refusal as a product constraint.** Guides step by step, never gives the answer — the form that survives an academic-integrity review, and the opposite of a default LLM tutor.
+5. 🔴 **Run inference locally** *(Ollama; `jules` also offers Mistral for hosted)*. Sovereignty is the EMEA preference and it also keeps student data inside the institution.
+6. 🔴 **Ship NO emotion-recognition, engagement-detection or attention-scoring feature.** Already prohibited in schools. 🟡 Not a 2027 problem.
+7. 🟡 **Produce the Article 4 artefact now**: a staff AI-literacy record. It is due today and it is cheap.
+
+🔴 **Do NOT start from the richest-looking European supply.** `p240`: the Moodle plugin estate is `16`/`16` `GPL-3.0`. 🔴 **And `danielcregg/moodle-local_aitutor`** — the best Socratic tutor this pass found, Ireland — **is `GPL-3.0` and cannot be a proprietary deliverable.** Read it for design; do not ship it.
+
+---
+
+### 🟢 `P242-2` — **Offline-first teacher record + marketplace billing** · LATAM · `6`–`8` weeks
+
+🔵 **The buyer, measured:** Brazil's **Digital ECA** *(Law `15.211/2025`)* is **already in force since `2026-03-17`** — age verification and limits for minors — while `PL 2338/2023`, whose high-risk tier **names education**, is stalled in the Chamber with a vote expected after the October 2026 elections. 🟡 **One live obligation, one pending. Build for the live one.**
+
+| layer | repo | grant *(read first-hand)* |
+|---|---|---|
+| teacher record, offline by construction | [`Dillax/Di-rio-de-Classe-Avalia-es-`](https://github.com/Dillax/Di-rio-de-Classe-Avalia-es-) | `MIT` *(`1 081` B · `b01dde73df1f`)* |
+| multi-tenant LMS **+ revenue split** | [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front) | `MIT` *(`1 072` B · `925783e644a6`)* |
+| sandboxed execution for auto-grading | [`arvoreeducacao/seedling`](https://github.com/arvoreeducacao/seedling) | `Apache-2.0` *(`11 358` B · `1ebb171d9f19`)* |
+| offline-capable learning host | **Kolibri** *(carried)* | `MIT` |
+| local inference | **Ollama** *(carried)* | `MIT` |
+
+**The wiring, in order:**
+
+1. 🟢 **`Diário de Classe` is the compliance shortcut, and this is the pattern's whole point.** Its data lives **only** in the device's IndexedDB — *"não há servidor"*. 🔵 **A minor's record that never leaves the teacher's device sidesteps most of what the Digital ECA governs, by architecture rather than by policy.**
+2. 🟢 **`lms-front` is the commercial half.** It already ships **Supabase RLS** *(per-tenant isolation)* and **Stripe Connect with a platform fee and revenue split** — the two things a studio otherwise hand-builds on every LATAM course-marketplace engagement. 🟡 `40`★ and `MIT`: the most commercially shaped LATAM row these shelves carry.
+3. 🔴 **Keep the two apart on purpose.** The gradebook stays device-local; only **aggregates** go to the marketplace tenant. 🔵 Age verification sits at the `lms-front` boundary, where accounts exist — not in the offline gradebook, where they do not.
+4. 🟢 **Reuse `seedling` as the sandbox primitive, not as courseware.** 🟡 **It is Árvore's engineering HIRING tool** — but it already runs untrusted code in a disposable container, which is exactly what an auto-grader needs. Do not present it as a learning product.
+5. 🟢 **Kolibri + Ollama for the connectivity-constrained deployment** — `MIT`, offline, still the right base.
+6. 🟡 **Write the Brazilian marking scheme in explicitly**: `trimestre`, `recuperação substitutiva`. `Diário de Classe` already encodes them; a generic gradebook does not, and that gap is weeks of rework.
+
+🔴 **Withheld from this recipe, deliberately:** [`TouchRefletz/maia.edu`](https://github.com/TouchRefletz/maia.edu) *(Portuguese AI tutoring, `AGPL-3.0`)* and [`messiasof/raff`](https://github.com/messiasof/raff) *(Portuguese study routines for autistic learners, **no grant body** — `pyproject.toml` only)*. 🔵 Both are real losses; neither is usable.
+
+---
+
+### 🟢 `P242-3` — **District AI-coordinator pack** · North America · `6`–`8` weeks
+
+🔵 **The buyer, measured and now statutory:** **Maryland `SB 720`** *(Ch. 634, signed `2026-05-26`)* requires **every local school system to designate a non-instructional central-office AI coordinator**. **Ohio**'s district AI-policy deadline *(`2026-07-01`)* **has already passed**. `~100` bills live in the 2026 session; `33`–`35` states plus Puerto Rico carry guidance; **Idaho `SB 1227`** prohibits AI replacing teachers.
+
+🟡 **So there is now a named person in every Maryland district, with a statutory duty and no tooling.** That is this pattern's buyer.
+
+| layer | repo | grant *(read first-hand)* |
+|---|---|---|
+| record source | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) *(carried)* | `Apache-2.0` |
+| per-state disclosure record | [`mizcausevic-dev/state-ai-disclosure-state-tracker`](https://github.com/mizcausevic-dev/state-ai-disclosure-state-tracker) *(carried, `p241`)* | `MIT` *(`1 069` B)* |
+| audit of every AI read | [`mizcausevic-dev/student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) *(carried, `p241`)* | `MIT` *(`1 069` B)* |
+| retrieval guard | [`ashutoshrana/ferpa-haystack`](https://github.com/ashutoshrana/ferpa-haystack) *(carried)* | `Apache-2.0` *(`742` B)* |
+| 🆕 **teaching-ops + archival** | [`agiacalone/lectern`](https://github.com/agiacalone/lectern) | `MIT` *(`1 074` B · `ddac6df1174e`)* |
+| 🆕 **parent-side notification** | [`noestudios/lastbell`](https://github.com/noestudios/lastbell) | `MIT` *(`1 067` B · `544ac5d5f90f`)* |
+
+**The wiring, in order:**
+
+1. 🟢 **Ed-Fi ODS is the system of record**; the `p241` compliance trio sits on top — per-state disclosure lifecycle, hash-chained audit of every AI read of a student record, identity-scoped pre-filter before the LLM.
+2. 🟢 **`lectern` is the new piece and it closes the term loop**: exam build **and verification**, Canvas roster/grade import, GitHub Classroom binding, and **end-of-term archival**. 🔵 The audit stream proves who read a record; `lectern`'s archival proves what the record *was* at term close. **A coordinator needs both halves.**
+3. 🟢 **`lastbell` is the parent-facing half, and it is what the statutes actually ask for.** Utah and Florida both carry **parent-communication** requirements; `lastbell` watches ParentVUE **and** Canvas and notifies the family on devices they already use, from a machine the family owns. 🔵 **First parent-side row on these shelves.**
+4. 🔴 **Build the coordinator's INVENTORY as the first deliverable, not the chatbot.** The disclosure tracker already names **IL SOPPA, CA AB 1584 + AB 2876, TX HB 18, NY ED Law 2-d, VA ChAIPA, CO SB 196**. 🟡 **Add Maryland `SB 720`, Ohio and Idaho `SB 1227` — this pass's rows, not yet in that tracker.**
+5. 🔴 **Encode Idaho's constraint as a product rule**: no feature may replace a human teacher's instructional role. It is enacted law in at least one state and it kills a whole class of demo.
+6. 🔴 **Do NOT cite Colorado from these shelves either way** — one tracker reports the Colorado AI Act repealed in `May 2026`, another still lists it as covering educational AI as high-risk. 🟡 **Unresolved.**
+
+---
+
+### 🟢 `P242-4` — **Zero-procurement classroom record** · APAC · `3`–`5` weeks
+
+🔵 **The buyer, measured, and it is not an institution.** APAC faculty are the most optimistic of any region *(`57`% excited)* **and** their intent to use AI **fell `9` points to `67`%, the lowest of any region**. 🟡 **Enthusiasm without institutional commitment is a single-teacher buyer** — which is exactly the shape of the Chinese rows this pass found: no server, no procurement, no IT ticket.
+
+🔴 **And the regulatory context for China and India is a DECLARED GAP on these shelves** *(`ACTION WB`)*. 🔴 **Do not represent this pattern as compliant in either jurisdiction.** It is an architecture, and the data-residence question must be answered per engagement from primary sources this KB does not yet hold.
+
+| layer | repo | grant *(read first-hand)* |
+|---|---|---|
+| serverless classroom ledger | [`mayunqing1230/Cloud-Score`](https://github.com/mayunqing1230/Cloud-Score) | `MIT` *(`1 070` B · `bab2ffc9ea43`)* |
+| family-side grade history | [`xuhaosl/overachievers`](https://github.com/xuhaosl/overachievers) | `MIT` *(`1 064` B · `82510e995744`)* |
+| study-plan agent *(India)* | [`anirudhlohiya/eduagent`](https://github.com/anirudhlohiya/eduagent) | `MIT` *(`1 056` B · `a9b32795d951`)* |
+| local RAG tutor over own material | [`GHOSTxASR/ATLAS-AI-TUTOR`](https://github.com/GHOSTxASR/ATLAS-AI-TUTOR) | `MIT` *(`1 075` B · `15df43b8e5e5`)* |
+| offline-first learning *(China)* | [`EnglandTong/educore`](https://github.com/EnglandTong/educore) *(carried, `p241`)* | `MIT` |
+
+**The wiring, in order:**
+
+1. 🟢 **`Cloud-Score` sets the deployment contract: Cloudflare Pages + Pages Functions + private R2, zero framework.** There is **no server to procure**, which is the entire reason a single teacher can adopt it. 🔵 Keep that property; the moment you add a managed database you have created a purchasing decision and lost the buyer.
+2. 🟢 **`overachievers` is the family mirror** — multi-child, growth curves, **single-file SQLite**, one-command Docker onto a home NAS. 🔵 **Teacher-side and parent-side of the same record, and the pair is the product.**
+3. 🟢 **`ATLAS` for the learner's own material**: RAG-grounded, **prerequisite roadmap**, ChromaDB + Ollama, local-first. 🟡 **`eduagent` for the Indian volume-exam market** — it was built for AgentathonX and aims explicitly at *"250M+ students in India"*.
+4. 🔴 **Keep inference local or BYOK.** Every row in this stack is local-first already; a hosted default would import the exact data-residence question the declared gap means you cannot answer.
+5. 🟡 **Encode the national marking scheme, not a generic one** — `小学到高中` for China, JEE/GATE profiles for India. 🔵 `ATLAS` already models exam tracks as isolated vector profiles, which is the right primitive.
+6. 🔴 **`educore`'s own README says "in development" and its Pi/edge hardware track is paused** *(`p241`)*. 🟡 Use it as the offline reference, not as a dependency.
+
+---
+
+### 🟢 `P242-5` — **Permissive system of record, assembled** · all regions · `8`–`10` weeks · 🟡 **the speculative one**
+
+🔵 **Why it is offered and why it is flagged.** `topic:gradebook` produced `23` new rows at `30`/`30` on-topic, and the useful ones sit at the **SIS layer** — where every incumbent on this KB's platform shelf is `GPL-2.0` *(RosarioSIS `646`★, openSIS `345`★)*. 🔴 **But every permissive candidate is `0`–`10`★.**
+
+| layer | repo | grant *(read first-hand)* | ★ |
+|---|---|---|---|
+| single-school record | [`erkinefendiev/aula-magna-community`](https://github.com/erkinefendiev/aula-magna-community) | `MIT` *(`1 067` B · `2e5ed0c83250`)* | 0 |
+| full K-12 school management | [`igweze/fobrain`](https://github.com/igweze/fobrain) | `Apache-2.0` *(`11 357` B · `48ef59ae4ad6`)* | 10 |
+| university teaching-ops | [`agiacalone/lectern`](https://github.com/agiacalone/lectern) | `MIT` *(`1 074` B · `ddac6df1174e`)* | 1 |
+| plugin-kernel LXP | [`tachkovsa/plerni`](https://github.com/tachkovsa/plerni) | `Apache-2.0` *(`11 379` B · `7ae377904ac0`)*, branch `dev` | 1 |
+| student planner API + client | [`HeliumEdu/platform`](https://github.com/HeliumEdu/platform) + [`frontend`](https://github.com/HeliumEdu/frontend) | `Apache-2.0` *(`11 341` B)*, branch `develop` | 9 / 6 |
+
+**The wiring, in order:**
+
+1. 🟢 **Pick by institution shape, not by stars.** `aula-magna-community` for one school *(Next.js + SQLite, *"your entire school lives in `./data`"*)*; `fobrain` for a multi-school K-12 group *(100+ modules, CBT)*; `lectern` for higher-ed *(registrar, exam verification, archival)*; `plerni` when a plugin kernel is wanted.
+2. 🟢 **`HeliumEdu` is the clean split to copy**: an `Apache-2.0` Django/DRF API with a Flutter client, **identical `payload_sha` across both repos**. 🔵 The reference for a record API with a separate mobile surface.
+3. 🔴 **Run the version ladder BEFORE committing** *(`ACTION WE`)*. 🔴 **None of these four has been through `p972`/`p978`.** A `0`★ `MIT` SIS that has not shipped in six months is not a starting point — **establish release cadence first, and treat that as a go/no-go gate on this whole pattern.**
+4. 🔴 **Note the non-standard default branches**: `plerni` is `dev`, both `HeliumEdu` repos are `develop`. 🟡 Pin the ref in your tooling; a `main|master` assumption fetches nothing.
+5. 🟢 **Add the AI layer at arm's length per `P242-0`** — an MCP surface over the record API, in its own repo, under your own grant.
+
+🔴 **The honest caveat, stated as plainly as it can be: this is NOT "a permissive SIS now exists".** It is *"the permissive SIS layer is early, unconsolidated, and nobody has won it"*. 🟡 **Read beside `p241`'s conclusion that the category is service work, the right framing for a client is a BUILD on a permissive base — never a product to resell, and never a drop-in replacement for a `GPL-2.0` incumbent that has `600`× the stars and a decade of deployments.**
+
 ## Pass 241 — 2026-10-16 — `4` RECIPES, EACH WIRED FROM ROWS WHOSE GRANT THIS KB HAS READ FIRST-HAND — AND THE FOURTH IS THE DUE-DILIGENCE GATE THE OTHER THREE DEPEND ON
 
 🔵 **Evidence:** [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv) · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv) · [`p241-cross-instrument-agreement`](../evidence/p241-cross-instrument-agreement.2026-10-16-p241.tsv) · **instrument:** [`p241-blanket-denial`](code/p241-blanket-denial/)

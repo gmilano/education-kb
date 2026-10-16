@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 242 — 2026-10-16 — **APPEND-ONLY** — GITHUB TRENDING FOR EDUCATION, AND THE PASS'S CHANNEL FINDING IS THAT **THE SEARCH RESULT IS TOO LARGE TO READ DIRECTLY — IT MUST BE REDUCED BEFORE IT IS READ, AND THAT CHANGES WHAT "QUERIED" MEANS**
+
+🔵 **Evidence:** [`p242-queries`](../evidence/p242-queries.2026-10-16-p242.tsv) · [`p242-axis-rediscovery`](../evidence/p242-axis-rediscovery.2026-10-16-p242.tsv) · [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv)
+
+### 🟢 The channel finding, extending `ACTION VV`
+
+`p241` established the channel axis: `curl https://api.github.com/search/repositories` returns `403` here while the **same query through the GitHub MCP server returns `200`**. 🟢 **Re-confirmed this pass across `4` harvests.**
+
+🔴 **The new measurement: a `30`-row search response is `150`–`175` KB and exceeds the tool's own output limit.** Every one of this pass's four harvests was returned as *"result exceeds maximum allowed tokens"* and written to a file instead. 🟢 **The rows are all there — they must be reduced with `jq` before being read**, and this pass read them as a `6`-field TSV *(slug, stars, licence, description, topics, pushed)*.
+
+🟡 **`ACTION WC`: record the REDUCTION beside the channel and the sort key.** 🔵 **Why it belongs in the evidence and is not a mere mechanic:** an unreduced response is unreadable, so a pass that does not reduce it reads *nothing* and may still report the query as run. **`p241` registered the channel; `p242` registers that a reachable channel with an unreadable response is not a read channel.** The `jq` projection is now part of the query's shape, because the fields it keeps are the only fields the pass can see.
+
+### 🟢 This week's harvests, with channel, sort, reduction and rediscovery recorded
+
+| query | axis | channel | sort | `total_count` | returned | on-topic p1 | gated | carried | NEW | rediscovery |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `topic:gradebook pushed:>2026-01-01` | 🟢 PRODUCT | MCP *(reduced via `jq`)* | `updated` | `57` | `30` | 🟢 **`30`/`30`** | `27` | `4` | 🟢 **`23`** | 🟢 `15`% |
+| `topic:tutor topic:ai pushed:>2026-06-01` | 🟢 PRODUCT | MCP *(reduced)* | `updated` | `27` | `27` *(all)* | `25`/`27` | `15` | `0` | `15` | 🟢 **`0`%** |
+| `topic:lms topic:ai pushed:>2026-06-01` | 🟢 PRODUCT | MCP *(reduced)* | `updated` | `52` | `30` | `24`/`30` | `11` | 🔴 `6` | `5` | 🔴 **`55`%** |
+| `educacion OR educativa OR educação in:readme topic:ai pushed:>2026-04-01` | 🔴 LANGUAGE | MCP *(reduced)* | `updated` | `89` | `30` | 🔴 **`10`/`30`** | `8` | `0` | `8` | `0`% |
+
+### 🟢 `topic:gradebook` is the week's trending finding, and it is a **shelf-shaped** one
+
+🟢 **`23` new rows at `30`/`30` on-topic.** 🔵 **And the rows are not tutors.** They are attendance registers, weighted-grade calculators, report-card generators, transcript exports, class journals and student information systems — **the school's system of record.** 🟡 **Every regional row this pass published came from this axis or from `topic:tutor`; the statute axis `p238`–`p241` leaned on produced none.**
+
+🔵 **The axis is also where the region signal actually lives**, which is the non-obvious part: a gradebook has to encode a *national* marking scheme, so it names its jurisdiction whether it means to or not — `trimestre` and `recuperação substitutiva` *(Brazil)*, `Librus Synergia` *(Poland)*, `小学到高中` *(China)*, `모의고사` *(Korea)*, `ParentVUE`/`MCPS` *(US)*. 🟢 **A tutor can be region-free. A gradebook cannot.** That is why this axis closed `ACTION UK` and three passes of statute vocabulary did not.
+
+### 🔴 The LANGUAGE axis, measured and rejected
+
+`educacion OR educativa OR educação in:readme topic:ai` — `total_count` `89`, and **`10` of `30` on topic.** What the other `20` were: a Costa Rican official-gazette summariser, an Ecuadorian open-data MCP, a Brazilian transparency-portal multi-agent system, a kinesiology RAG *(Argentina)*, a dental-education app, an LLM arena in Spanish, a fitness app, an affiliate-marketing bot, and four developer portfolios.
+
+🔴 **A language word selects for the author's language, not the row's sector.** 🟡 **`ACTION WD`: do not re-run a bare language axis. If a region needs harvesting, combine the language token with a PRODUCT token** *(`topic:gradebook`, `topic:lms`, `topic:k12`)* **rather than with `topic:ai`.**
+
+### 🟢 Trending rows this week, by region *(every grant read first-hand)*
+
+**🟢 LATAM** — [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front) `MIT` **`40`★** *(the pass's highest-star new row)* · [`Dillax/Di-rio-de-Classe-Avalia-es-`](https://github.com/Dillax/Di-rio-de-Classe-Avalia-es-) `MIT` 1★ · [`arvoreeducacao/seedling`](https://github.com/arvoreeducacao/seedling) `Apache-2.0` 1★
+
+**🟢 EMEA** — [`krzysztofbury/librus-python-api`](https://github.com/krzysztofbury/librus-python-api) `MIT` 3★ · [`CarlSvejstrup/dtu-learn-mcp`](https://github.com/CarlSvejstrup/dtu-learn-mcp) `MIT` 0★ · [`alexxb2mg-svg/jules`](https://github.com/alexxb2mg-svg/jules) `MIT` 0★
+
+**🟢 APAC** — [`mayunqing1230/Cloud-Score`](https://github.com/mayunqing1230/Cloud-Score) `MIT` · [`xuhaosl/overachievers`](https://github.com/xuhaosl/overachievers) `MIT` · [`anirudhlohiya/eduagent`](https://github.com/anirudhlohiya/eduagent) `MIT` · [`GHOSTxASR/ATLAS-AI-TUTOR`](https://github.com/GHOSTxASR/ATLAS-AI-TUTOR) `MIT`
+
+**🟢 North America** — [`noestudios/lastbell`](https://github.com/noestudios/lastbell) `MIT` · [`agiacalone/lectern`](https://github.com/agiacalone/lectern) `MIT` · [`grahamlittle/sat-companion`](https://github.com/grahamlittle/sat-companion) `MIT`
+
+**🟢 Global** — [`igweze/fobrain`](https://github.com/igweze/fobrain) `Apache-2.0` **`10`★** · [`HeliumEdu/platform`](https://github.com/HeliumEdu/platform) `Apache-2.0` `9`★ · [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) `MIT`+attribution `7`★ · [`arshawnarbabi/Cogni`](https://github.com/arshawnarbabi/Cogni) `MIT` `6`★ · [`HeliumEdu/frontend`](https://github.com/HeliumEdu/frontend) `Apache-2.0` `6`★ · [`tachkovsa/plerni`](https://github.com/tachkovsa/plerni) `Apache-2.0` · [`erkinefendiev/aula-magna-community`](https://github.com/erkinefendiev/aula-magna-community) `MIT` · [`sxnnyside-scholarships/promediatum`](https://github.com/sxnnyside-scholarships/promediatum) `MIT`
+
+### 🔴 The highest-star rows of the harvest were all unusable or already carried
+
+| Repo | ★ | Grant | Status |
+|---|---|---|---|
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 **`2 396`** | `AGPL-3.0` | 🔴 Withheld *(network copyleft)* + carried |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `646` | `GPL-2.0` | Carried — platform shelf |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `345` | `GPL-2.0` *(at `docs/License.txt`)* | Carried — platform shelf |
+| [`edmozley/freeitsm`](https://github.com/edmozley/freeitsm) | `107` | `MIT` | 🔴 **OFF-TOPIC** — an ITSM tool tagged `lms`/`scorm` |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | `59` | `MIT` | Carried *(re-read to close `T242-A`'s chain)* |
+
+🟢 **So the gate is working as designed for a fifth pass: the most eye-catching results of the harvest were already on these shelves, off-topic, or copyleft** — and the `21` rows published are the thin, new, permissive tail.
+
 ## Pass 241 — 2026-10-16 — **APPEND-ONLY** — GITHUB TRENDING FOR EDUCATION, AND THE PASS'S CHANNEL FINDING IS THAT **THE SEARCH API IS REACHABLE THROUGH THE MCP SERVER WHERE `curl` GETS `403`**
 
 🔵 **Evidence:** [`p241-queries`](../evidence/p241-queries.2026-10-16-p241.tsv) · [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv) · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv)

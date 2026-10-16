@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 242 — 2026-10-16 — THE PLATFORM CENSUS IS UNCHANGED FOR A SECOND PASS, AND THE PASS'S VERTICAL FINDING IS THE **SHAPE THAT GETS AROUND IT**: AN `MIT` AGENT SURFACE IN FRONT OF A COPYLEFT HOST, SPEAKING TO ITS API AND NEVER LINKING ITS CODE
+
+🔵 **Evidence:** [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) · [`p242-websearch`](../evidence/p242-websearch.2026-10-16-p242.tsv) · [`p242-delta-sweep`](../evidence/p242-delta-sweep.2026-10-16-p242.tsv) · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv)
+
+### 🔵 The platform layer, carried forward unchanged
+
+🟢 **No new platform row this pass and no correction to the existing census.** The customisable hosts a studio builds AI on top of stand as recorded:
+
+| Platform | Licence | Layer | Note carried |
+|---|---|---|---|
+| **Moodle** | `GPL-3.0` | LMS | 🔴 `p240`: the plugin estate is `16`/`16` `GPL-3.0`, read first-hand. **Do not sell a Moodle plugin as a proprietary deliverable** |
+| **Open edX** | `AGPL-3.0` | LMS / MOOC | Network copyleft; `Tutor` remains the deployment path |
+| **Canvas LMS** | `AGPL-3.0` | LMS | Community edition carries the core |
+| **OpenEduCat** | `LGPL-3.0` | Education **ERP** *(admissions, attendance, gradebook, fees)* | The closest thing to "Odoo for education" |
+| **Sakai** | `ECL-2.0` *(Apache-derived)* | LMS | 🔵 `ECL` is not `Apache-2.0`; these shelves classify it separately |
+| **OpenOLAT** | `Apache-2.0` | LMS | 🟢 One of the few genuinely permissive hosts |
+| **Chamilo** · **ILIAS** | `GPL-3.0` | LMS | |
+| **Kolibri** | `MIT` | Offline-first learning | 🟢 Permissive AND offline — still the best base for a connectivity-constrained engagement |
+| **BigBlueButton** · **H5P** | `LGPL-3.0` / `MIT` | Conferencing / interactive content | |
+| **RosarioSIS** | `GPL-2.0` | **SIS** *(student information system)* | `646`★; re-surfaced by this pass's `topic:gradebook` axis and already carried |
+| **openSIS Classic** | `GPL-2.0` *(at `docs/License.txt`)* | **SIS** | `345`★; `T209`'s non-root grant path, re-proven at `p228` *(`17 286` B)* |
+| **Fedena** | `Apache-2.0` — 🔴 **`STATED`, not `BODIED`** | School ERP | Re-read first-hand this pass: root `NOTICE` only, `680` B *(`projectfedena`)* / `679` B *(`foradian`)*. 🔴 **`14`/`14` licence paths in its tree are VENDORED third-party and `0` are its own — a naive subdirectory glob publishes it as `MIT`** |
+
+🔴 **The WebSearch vertical leg re-offered this whole list and added nothing for a second pass.** It offered two names not on the shelf, and both were run down first-hand rather than quoted:
+
+- 🔵 **Fedena** — **CARRIED.** Re-read at `NOTICE` `680`/`679` B, `Apache-2.0` stated and not bodied, matching exactly what `P214-2` recorded. 🟢 **`p242-grant-delta` reads both as `DISCLOSURE`, and the control asserts that `DISCLOSURE` on a `NOTICE` must NOT be read as "usable Apache-2.0"** — a `NOTICE` is a provenance statement, not a grant body.
+- 🔴 **SchoolTool** — **`schooltool/schooltool` is `ABSENT`.** `git ls-remote` returns nothing. 🔵 **A name in a search result is not a repository, and a 404 is not a finding.**
+
+🟡 **So the standing claim holds for a fifth pass: no `MIT`-licensed full LMS exists at this KB's reach.** `OpenOLAT` *(Apache-2.0)* and `Kolibri` *(MIT)* remain the permissive exceptions, and every SIS on the shelf is `GPL-2.0`.
+
+### 🟢 `T242-E` — the shape that gets around the copyleft estate, measured across `7` rows
+
+🔵 **This pass's `topic:lms` harvest returned a cluster these shelves had been accumulating without naming: the MCP server over an incumbent LMS.**
+
+| MCP surface | host it fronts | host's licence | surface's licence |
+|---|---|---|---|
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) `59`★ | Brightspace / D2L | 🔴 proprietary | 🟢 `MIT` |
+| [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) `7`★ | Brightspace / D2L | 🔴 proprietary | 🟢 `MIT` + attribution |
+| [`CarlSvejstrup/dtu-learn-mcp`](https://github.com/CarlSvejstrup/dtu-learn-mcp) | DTU Learn *(Brightspace)* + Panopto | 🔴 proprietary | 🟢 `MIT` |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) `10`★ | Canvas | 🔴 `AGPL-3.0` | 🟢 `MIT` |
+| [`SonAIengine/ku-portal-mcp`](https://github.com/SonAIengine/ku-portal-mcp) `13`★ | Korea University KUPID + Canvas | 🔴 proprietary / `AGPL-3.0` | 🟢 `MIT` |
+| [`kemalyy/edumints-scorm-mcp`](https://github.com/kemalyy/edumints-scorm-mcp) `8`★ | SCORM | *(a standard)* | 🟢 `MIT` |
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | Moodle | 🔴 `GPL-3.0` | 🔴 **`GPL-3.0`** |
+| [`krzysztofbury/librus-python-api`](https://github.com/krzysztofbury/librus-python-api) `3`★ | Librus Synergia *(Poland)* | 🔴 proprietary | 🟢 `MIT` |
+
+🟢 **Seven of the eight surfaces are permissive, and every host is copyleft or proprietary.** 🔵 **The one exception proves the mechanism: `moodle-local_aihub` is a Moodle PLUGIN — it runs inside Moodle and links its code, so it inherits `GPL-3.0`.** Every other row **speaks to an API over the network** and inherits nothing.
+
+🟡 **Stated as the commercial reading, because it is the practical answer to `p240`'s finding:**
+
+- 🔴 **A Moodle/Canvas/Open edX PLUGIN is a copyleft deliverable.** `p240` measured the plugin estate at `16`/`16` `GPL-3.0`, and `aihub` is the `17`th.
+- 🟢 **An MCP server, an API client or a sidecar against the same platform is NOT.** It is a separate program communicating at arm's length, and it can be `MIT`, `Apache-2.0` or a client's proprietary deliverable.
+- 🔵 **So the question on an LMS engagement is not "which LMS" but "inside or beside".** Inside the host, the host's licence governs the work. Beside it, the studio's own terms do.
+- 🔴 **This is a licence-architecture observation, not legal advice**, and the boundary is a question of fact in each build — a "sidecar" that ships Moodle's own PHP classes is a plugin whatever it is called.
+
+### 🟢 The vertical gap this pass can now name: **the system of record, permissively**
+
+🔵 `topic:gradebook` produced `23` new rows *(see [`repos/trending.md`](../repos/trending.md))*, and the useful ones are all at the **SIS/record layer**, which is precisely where this shelf has only `GPL-2.0` incumbents:
+
+| Permissive record-layer row | Grant | What it covers | Against which incumbent |
+|---|---|---|---|
+| [`erkinefendiev/aula-magna-community`](https://github.com/erkinefendiev/aula-magna-community) | 🟢 `MIT` *(`1 067` B)* | attendance, gradebook, courses, calendar, Next.js + SQLite | RosarioSIS, openSIS *(both `GPL-2.0`)* |
+| [`igweze/fobrain`](https://github.com/igweze/fobrain) | 🟢 `Apache-2.0` *(`11 357` B)* | full K-12 school management, 100+ modules, CBT | Fedena *(`Apache-2.0` stated-only)*, OpenEduCat *(`LGPL-3.0`)* |
+| [`agiacalone/lectern`](https://github.com/agiacalone/lectern) | 🟢 `MIT` *(`1 074` B)* | university registrar: terms, exam build/verify, archival | Sakai *(`ECL-2.0`)* |
+| [`tachkovsa/plerni`](https://github.com/tachkovsa/plerni) | 🟢 `Apache-2.0` *(`11 379` B)* | multi-tenant LXP, plugin kernel | Moodle *(`GPL-3.0`)* |
+| [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front) | 🟢 `MIT` *(`1 072` B)* | multi-tenant LMS **with the billing split** | Moodle + a hand-built payments layer |
+
+🔴 **Every one of them is at `0`–`10`★ against incumbents at `345`–`646`★.** 🟡 **So this is not "a permissive SIS now exists" — it is "the permissive SIS layer is early, unconsolidated, and nobody has won it".** 🔵 **Which, read beside `p241`'s finding that the category is service work, is the honest shape: these are starting points for a build, not products to resell.**
+
+🟡 **`ACTION WE`: put `aula-magna-community`, `fobrain`, `lectern` and `plerni` through the platform-version ladder** *(`p972`/`p978`)* **next pass** — the census records a platform's version and release cadence, and none of these four has been measured that way. A `0`★ `MIT` SIS that has not shipped in six months is not a starting point.
+
 ## Pass 241 — 2026-10-16 — THE PLATFORM CENSUS IS UNCHANGED, AND THE PASS'S VERTICAL FINDING IS ABOUT **WHAT YOU MAY SELL AROUND ONE**: A ROOT `MIT` CAN CARVE OUT A SINGLE FILE, AND ONLY ONE INSTRUMENT IN THIS KB WAS READING FOR IT
 
 🔵 **Evidence:** [`p241-cross-instrument-agreement`](../evidence/p241-cross-instrument-agreement.2026-10-16-p241.tsv) *(25 payloads)* · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv) · [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv)

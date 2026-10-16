@@ -1,0 +1,72 @@
+snflwr.ai — Proprietary Software License
+Copyright (C) 2026 snflwr.ai. All rights reserved.
+
+Effective 2026-09-18.
+
+
+1. PRIOR RELEASES REMAIN UNDER AGPL-3.0
+
+   This software was published under the GNU Affero General Public License,
+   version 3, from 2026-02-27 until 2026-09-18. This license does not and
+   cannot revoke that grant. Any copy obtained while the AGPL-3.0 license was
+   in effect remains governed by AGPL-3.0 for that copy, and the rights it
+   conferred on its recipients are perpetual.
+
+   This license governs versions of the software distributed on or after
+   2026-09-18, and any copy obtained from snflwr.ai on or after that date.
+
+   The change is made by snflwr.ai as the copyright holder. AGPL-3.0 binds
+   licensees, not the author, and does not restrict the author's ability to
+   license later versions on different terms.
+
+
+2. GRANT
+
+   No license is granted except by a separate written agreement signed by
+   snflwr.ai. Absent such an agreement you may not use, copy, modify, merge,
+   publish, distribute, sublicense, sell, host, or create derivative works of
+   this software, in whole or in part.
+
+   Where snflwr.ai provides you with a written license, that agreement governs
+   and its terms prevail over this file.
+
+
+3. NO IMPLIED RIGHTS
+
+   Access to this software — including by repository access, receipt of a copy,
+   or use of a service that runs it — grants no license, express or implied, by
+   estoppel or otherwise, to any patent, copyright, trade secret, trademark, or
+   other intellectual property of snflwr.ai.
+
+
+4. CONFIDENTIALITY
+
+   This software and its accompanying materials are confidential information of
+   snflwr.ai. Recipients under a written agreement shall not disclose them to
+   any third party except as that agreement expressly permits.
+
+
+5. THIRD-PARTY COMPONENTS
+
+   This software incorporates and interoperates with third-party components
+   distributed under their own licenses. Those licenses govern those components
+   and are unaffected by this file. Notices are retained where the components
+   are used, including:
+
+     frontend/open-webui/LICENSE   Open WebUI Inc., BSD-3-Clause-style terms
+
+   Dependencies installed at build or run time (see requirements.lock and the
+   container images referenced by docker/compose/) remain under their own terms.
+
+
+6. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   SNFLWR.AI BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+   ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+   WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Contact: snflwr.ai

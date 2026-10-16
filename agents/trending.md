@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 242 — 2026-10-16 — **APPEND-ONLY** — THIS WEEK'S AGENT STORY IS A **CATEGORY, NOT A REPO**: THE MCP SERVER OVER AN INCUMBENT LMS. SEVEN OF THEM, SIX VENDORS, AND THE NEWEST ONE IS A **DECLARED DERIVATIVE OF ANOTHER ROW ON THESE SHELVES**
+
+🔵 **Evidence:** [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) · [`p242-delta-sweep`](../evidence/p242-delta-sweep.2026-10-16-p242.tsv) · [`p242-queries`](../evidence/p242-queries.2026-10-16-p242.tsv) · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv)
+
+### 🟢 The week's category: **LMS-MCP**
+
+`topic:lms topic:ai` returned a cluster this KB has been accumulating one row at a time without naming: **MCP servers that put an incumbent, mostly-copyleft or proprietary LMS behind an agent.** Counted in one harvest:
+
+| MCP server | LMS it fronts | grant | ★ | status |
+|---|---|---|---|---|
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | **Brightspace / D2L** | `MIT` *(`1 068` B)* | **59** | carried |
+| 🆕 [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | **Brightspace / D2L** | `MIT` + attribution *(`1 200` B)* | 7 | **NEW — and a declared derivative of the row above** |
+| 🆕 [`CarlSvejstrup/dtu-learn-mcp`](https://github.com/CarlSvejstrup/dtu-learn-mcp) | **DTU Learn** *(Brightspace)* + Panopto | `MIT` *(`1 079` B)* | 0 | **NEW — EMEA** |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **Canvas** *(AGPL-3.0)* | `MIT` | 10 | carried |
+| [`SonAIengine/ku-portal-mcp`](https://github.com/SonAIengine/ku-portal-mcp) | **Korea University KUPID** + Canvas | `MIT` | 13 | carried — APAC |
+| [`kemalyy/edumints-scorm-mcp`](https://github.com/kemalyy/edumints-scorm-mcp) | **SCORM** authoring | `MIT` | 8 | carried |
+| [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub) | **Moodle** *(BYOK broker)* | `GPL-3.0` | 0 | carried — 🔴 withheld, copyleft |
+
+🟢 **Six of the seven are `MIT`.** 🔴 **Every LMS they front is `AGPL-3.0`, `GPL-3.0` or proprietary.**
+
+🔵 **Why that pairing is the week's actual finding.** `p240` measured that the richest European and Latin American education supply is structurally unavailable (`16`/`16` `GPL-3.0` Moodle plugins). `p241` measured that the available North American supply is not the learning product at all. **This week shows the shape that resolves both: you do not fork the LMS, you put an `MIT` agent surface in front of it.** The copyleft never propagates into the deliverable because the deliverable never links the LMS — it speaks to its API.
+
+🟡 **And it is where the stars are.** `59`★ and `13`★ and `10`★ on these thin MCP wrappers, against `0`–`1`★ on most full tutors and gradebooks in the same harvest. 🔴 **One harvest, and `55`% of this axis was already carried — so this is a shape worth watching, not a trend line yet.**
+
+### 🔴 The week's defect event: a usable row was being withheld by this KB's own gate
+
+See `T242-A` in [`agents/top.md`](top.md). [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) carries `50` bytes above `p1054`'s MIT ceiling, and those bytes are an **upstream attribution** to `RohanMuppa/brightspace-mcp-server` *(read first-hand, `MIT`, `1 068` B)* — a disclosure, not a narrowing. `p1054` returned **not usable**. 🟢 **`p242-grant-delta` resolves it to usable, and the derivation it declares is invisible to `fork: false` because the row is a re-publication rather than a GitHub fork.**
+
+### 🟢 New agent rows this week
+
+| Agent | Repo | 🟢 Grant | ★ | Region | Why it is new |
+|---|---|---|---|---|---|
+| **jules** | [`alexxb2mg-svg/jules`](https://github.com/alexxb2mg-svg/jules) | `MIT` *(`1 083` B · `a6fdabe49f58`)* | 0 | **EMEA** *(French)* | 🟢 The first row on these shelves built on the **French** grade ladder *(`3e`, `CP à CE2`, `CM2`, `6e`, `lycée`)*. Guides step by step and **never gives the answer**; Ollama local or Mistral hosted |
+| **Diário de Classe** | [`Dillax/Di-rio-de-Classe-Avalia-es-`](https://github.com/Dillax/Di-rio-de-Classe-Avalia-es-) | `MIT` *(`1 081` B · `b01dde73df1f`)* | 1 | **LATAM** *(Brazil)* | 🟢 **Offline-first and serverless by construction** — *"os dados ficam somente no IndexedDB do aparelho"*. No student record leaves the teacher's device |
+| **lms-front** | [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front) | `MIT` *(`1 072` B · `925783e644a6`)* | **40** | **LATAM** *(self-declared)* | 🟢 The pass's highest-star new row. **Ships the revenue split** — Stripe Connect platform fee — not just the courseware |
+| **eduagent** | [`anirudhlohiya/eduagent`](https://github.com/anirudhlohiya/eduagent) | `MIT` *(`1 056` B · `a9b32795d951`)* | 1 | **APAC** *(India)* | Built for **AgentathonX 2026**, India's first AI-agent hackathon |
+| **Cloud-Score** | [`mayunqing1230/Cloud-Score`](https://github.com/mayunqing1230/Cloud-Score) | `MIT` *(`1 070` B · `bab2ffc9ea43`)* | 0 | **APAC** *(China)* | 🟢 Zero-framework, **fully serverless** classroom ledger on Cloudflare Pages + private R2 — nothing to procure |
+| **Last Bell** | [`noestudios/lastbell`](https://github.com/noestudios/lastbell) | `MIT` *(`1 067` B · `544ac5d5f90f`)* | 1 | **North America** | 🔵 **Parent-side, not school-side** — watches ParentVUE *and* Canvas from a computer the family owns |
+| **ATLAS** | [`GHOSTxASR/ATLAS-AI-TUTOR`](https://github.com/GHOSTxASR/ATLAS-AI-TUTOR) | `MIT` *(`1 075` B · `15df43b8e5e5`)* | 1 | **APAC** *(weak basis: JEE/GATE)* | Local-first RAG tutor that builds a **prerequisite roadmap** from your own material |
+| **Cogni** | [`arshawnarbabi/Cogni`](https://github.com/arshawnarbabi/Cogni) | `MIT` *(`1 071` B · `f800ec251529`)* | **6** | Global | **Persistent tutor memory** + per-professor profiling from past exams + a *"what do I need on the final"* calculator |
+
+### 🔴 The week's withheld agents, named rather than omitted
+
+- 🔴 [`purysho/EduBoard`](https://github.com/purysho/EduBoard) — `AGPL-3.0`. A complete **offline teacher OS** in one desktop app. The most commercially attractive thing this pass found and the least usable.
+- 🔴 [`danielcregg/moodle-local_aitutor`](https://github.com/danielcregg/moodle-local_aitutor) — `GPL-3.0`, Ireland. **Socratic** hints over Moodle STACK, never the answer. 🔵 **Second row this week converging on *never give the answer*** — the other is `jules`, `MIT`, France. 🟡 **Two independent authors, two jurisdictions, same pedagogical refusal. Logged as a shape to watch, not a trend.**
+- 🔴 [`itmir913/score-reporter`](https://github.com/itmir913/score-reporter) — **PolyForm Noncommercial**, Korea. Browser-only 모의고사 analysis, nothing sent to a server. 🔴 **Not OSI; GitHub's API reported `NOASSERTION` and the first-hand read named it.**
+- 🔴 [`fentas/lani`](https://github.com/fentas/lani) — `AGPL-3.0`, Slovene. Learn a language by living in a pixel-art village with a Claude Code tutor.
+- 🔴 [`neteye-platform/ai-tutor-plugin`](https://github.com/neteye-platform/ai-tutor-plugin), [`udit-001/pharos`](https://github.com/udit-001/pharos), [`umaarmirzaa/chalk`](https://github.com/umaarmirzaa/chalk) — **no grant body at `40` paths × `2` refs.** 🔵 `ABSENT-AT-THE-PATHS-PROBED`, not proven grantless.
+- 🔴 [`eledia/moodle-block_elediaai_tutor`](https://github.com/eledia/moodle-block_elediaai_tutor) — no grant body, **and its default branch is `51`**. 🟢 **The ref axis earned its keep: a `main|master` guess would have reported this as a 404 at every path and called it grantless.**
+
+### 🔴 The WebSearch leg produced `0` new agent rows for a FOURTH consecutive pass
+
+🔵 Queries and verdicts: [`p242-websearch`](../evidence/p242-websearch.2026-10-16-p242.tsv). 🟡 **And the reason is now diagnosable rather than mysterious: the phrase "education AI" retrieves AI *pedagogy*, not edtech.** The trending leg returned `microsoft/generative-ai-for-beginners` *(`112.6`k★)*, `mlabonne/llm-course` *(`79.9`k★)* and `rohitg00/ai-engineering-from-scratch` — **teaching material about AI, every one, and not one of them education-industry software.** 🔴 **Four passes have now spent this leg on a vocabulary collision. The GitHub search axes are where this KB's rows actually come from.**
+
 ## Pass 241 — 2026-10-16 — **APPEND-ONLY** — THIS WEEK'S AGENT NEWS IS A **RELICENSING**: A K-12 TUTOR WENT `AGPL-3.0` → PROPRIETARY ON `2026-09-18`, AND IT SAID SO IN A `LICENSE` FILE THAT THIS KB'S OWN CLASSIFIER READ AS **PERMITTING COMMERCIAL USE**
 
 🔵 **Evidence:** [`p241-classifier-defect`](../evidence/p241-classifier-defect.2026-10-16-p241.tsv) · [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv) · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv) · [`p241-websearch`](../evidence/p241-websearch.2026-10-16-p241.tsv)

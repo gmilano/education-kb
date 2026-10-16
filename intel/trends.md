@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 242 — 2026-10-16 — THE TREND THIS PASS MEASURED IS **ARM'S LENGTH**: THE PERMISSIVE SUPPLY HAS STOPPED TRYING TO BE THE LMS AND STARTED SITTING BESIDE IT, OVER AN API — AND THAT IS ALSO HOW IT ESCAPES THE COPYLEFT ESTATE
+
+🔵 **Evidence:** [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv) · [`p242-websearch`](../evidence/p242-websearch.2026-10-16-p242.tsv) · [`p242-delta-sweep`](../evidence/p242-delta-sweep.2026-10-16-p242.tsv) · [`p242-axis-rediscovery`](../evidence/p242-axis-rediscovery.2026-10-16-p242.tsv)
+
+### 🟢 `1` — Arm's length, measured across `8` rows
+
+🔵 **The `topic:lms` harvest returned a cluster: `MIT` agent surfaces over incumbent LMS platforms.** `7` of `8` are permissive; **every host is `AGPL-3.0`, `GPL-3.0` or proprietary**; and the single copyleft exception, [`jeanlucio/moodle-local_aihub`](https://github.com/jeanlucio/moodle-local_aihub), is the one that is a **plugin** — it runs inside Moodle and links its code.
+
+🟢 **So the mechanism is visible in the data, not inferred:** a plugin inherits the host's licence, an API client does not. 🔵 **Read beside `p240`** — which measured the richest European and Latin American education supply as `16`/`16` `GPL-3.0` Moodle plugins, i.e. structurally unavailable — **this is the supply side finding its way out of that trap.** Full table in [`verticals/solutions.md`](../verticals/solutions.md) *(`T242-E`)*.
+
+🟡 **And it is where the stars are:** `59`★, `13`★, `10`★, `8`★, `7`★ on thin MCP wrappers against `0`–`1`★ on most full tutors in the same harvest. 🔴 **One harvest, and `55`% of this axis was already carried, so this is a shape with momentum — not yet a trend line.**
+
+### 🟢 `2` — The reusable layer has moved DOWN again, to the system of record
+
+🔵 **Three passes, three different answers to "what is actually reusable", and they are consistent rather than contradictory:**
+
+| pass | where the permissive supply was | measured by |
+|---|---|---|
+| `p240` | 🔴 nowhere usable in EMEA/LATAM — `16`/`16` `GPL-3.0` | the Moodle plugin estate |
+| `p241` | 🟢 **compliance and records** — privacy trackers, audit streams, RAG pre-filters | `topic:ferpa`, `topic:ed-fi` |
+| 🟢 **`p242`** | 🟢 **the system of record itself** — attendance, gradebook, transcript | **`topic:gradebook`** |
+
+🟡 **The trend across the three is one direction: AWAY from the learning product and DOWN the stack.** 🔵 Nobody is shipping a permissive tutor that wins; people are shipping the plumbing underneath one.
+
+### 🟢 `3` — A gradebook cannot hide its jurisdiction, and a tutor can
+
+🟢 **This is the pass's most useful structural observation, and it fell out of the axis measurement rather than being looked for.**
+
+`topic:gradebook` returned `30`/`30` on-topic and produced **every regional row of this pass**. The reason: **a gradebook has to encode a national marking scheme**, so it names its jurisdiction whether the author intends to or not — `trimestre` and `recuperação substitutiva` *(Brazil)*, `Librus Synergia` *(Poland)*, `小学到高中` *(China)*, `모의고사` *(Korea)*, `ParentVUE`/`MCPS` *(US)*, the `3e`/`CM2`/`lycée` ladder *(France)*.
+
+🔴 **Whereas `8` of this pass's `21` rows — `38`% — carry NO regional evidence at all, and they are overwhelmingly the tutors and study apps.** 🔵 **A tutor is region-free because teaching a topic does not require a jurisdiction. Record-keeping does.**
+
+🟡 **Consequence for this KB, registered as `ACTION WA`:** the system-of-record axes *(`topic:gradebook`, `topic:sis`, `topic:attendance`, `topic:timetable`)* are where regional coverage comes from. 🔴 **Three passes of statute vocabulary produced no EMEA or LATAM row; one product axis produced six.**
+
+### 🔴 `4` — "Education AI" is a vocabulary collision, and it has cost four passes
+
+🔴 **The WebSearch legs have produced `0` new rows for FOUR consecutive passes, and the cause is now diagnosable.** The trending leg returned `microsoft/generative-ai-for-beginners` *(`112.6`k★)*, `mlabonne/llm-course` *(`79.9`k★)* and `rohitg00/ai-engineering-from-scratch` — **AI pedagogy, every one. Teaching material ABOUT AI, not software FOR education.**
+
+🔵 **The same collision appears inside GitHub's own tags:** `edmozley/freeitsm` *(`107`★, an ITSM tool)* ranks on `topic:lms` via `scorm`, and `gdmka/openai-compat-endpoint` is tagged `lms` because it means **LM Studio**.
+
+🟡 **And the language axis is the same failure in another costume:** `educacion OR educativa OR educação in:readme topic:ai` returned **`10` of `30`** on topic — the worst rate these shelves have measured — because a language word selects for the **author's language**, not the row's **sector**. 🟢 **`ACTION WD`: never run a bare language axis again; pair the language token with a PRODUCT token.**
+
+### 🔴 `5` — Three for three: every body-grepping licence classifier eventually reads the licence's own text as foreign matter
+
+🔵 **This pass makes the pattern undeniable, because the instrument built to stop it committed it.**
+
+| # | pass | the defect |
+|---|---|---|
+| `1` | `P171` | GPL-3.0's section 13 is TITLED *"Use with the GNU Affero GPL"*, so a body-grep labelled every GPL-3.0 payload `AGPL-3.0` |
+| `2` | `p241` / `ACTION VU` | The standard AGPL-3.0 text NAMES GPL-3.0 and carries the FSF's 2007 dates, so *"two licences and a date"* fires on `4`/`4` ordinary copyleft payloads and finds `0` relicensings |
+| `3` | 🔴 **`p242`, on its own first sweep** | `p1054`'s vocabulary contains `noncommercial`, and **standard GPL-3.0 section 6 uses that word** — so `delta_of` returned `NARROWING` on all `8` GPL/AGPL payloads |
+
+🟢 **The structural answer, now implemented: a payload that IS a canonical licence text has no delta to read.** It is reported `STANDARD` and handed to `lib/license_family.sh`. 🔵 **A control asserts the offending word is still present and still not read as an addition**, so removing the guard fails the suite rather than silently regressing.
+
+🟡 **The generalisable rule, written down for the next instrument author:** *a token inside a standard licence body is that licence's own term. Classify the payload's IDENTITY first, and only then read what has been ADDED to it.*
+
+### 🟢 `6` — And the opposite error is just as expensive: the gate was withholding a usable row
+
+🔵 **`p241` established that the absence of restriction vocabulary is never permission. `p242` establishes the converse limit: the presence of ADDED TEXT is not a restriction either.**
+
+[`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) carried `50` bytes above `p1054`'s MIT ceiling and was marked **not usable**. Those bytes are an **upstream attribution** naming `RohanMuppa/brightspace-mcp-server` *(read first-hand, `MIT`, `1 068` B)*. 🟢 **A disclosure. The row grants exactly MIT and tells you more than a bare MIT file does.**
+
+🟡 **Both halves now have a name:** `DISCLOSURE` *(grants the same, says more)*, `NARROWING` *(grants less)*, `TRANSITION` *(grants differently over time)*, `STANDARD` *(nothing added)*, and an addition the instrument cannot read stays **UNRESOLVED and uncleared**. 🔴 **`ACTION VY`: these shelves have not been swept for OTHER rows withheld on an `MIT-BODY-PLUS` that was only ever a disclosure. This pass found one. It did not look for the rest.**
+
+### 🟢 `7` — "Never give the answer" shows up twice, independently
+
+🔵 Two rows in one harvest, two jurisdictions, two licences, same pedagogical refusal:
+
+- [`alexxb2mg-svg/jules`](https://github.com/alexxb2mg-svg/jules) — `MIT`, **France**: *"il guide pas à pas et ne donne jamais la réponse"*.
+- 🔴 [`danielcregg/moodle-local_aitutor`](https://github.com/danielcregg/moodle-local_aitutor) — `GPL-3.0`, **Ireland**: Socratic escalating hints over Moodle STACK, *"never the answer"*. **Withheld on copyleft.**
+
+🟡 **Two instances is not a trend and this is logged as a watch.** 🔵 **But it is a design constraint worth carrying into a proposal**, because it is the opposite of what a generic LLM tutor does by default, and it is the form that survives an academic-integrity review. 🟢 **Both also run local-first** *(Ollama; server-side institutional AI)*, so the constraint travels with a privacy posture rather than against it.
+
+### 🔴 `8` — A regulatory deadline moved, and a trend built on the old one would now be wrong
+
+🔴 **The EU Digital Omnibus moves Annex III high-risk duties — the education tier — to `2027-12-02`** *(embedded-product high-risk to `2028-08-02`)*, Council sign-off reported `2026-06-29`. 🟡 **Reported with its uncertainty: sources disagree on firmness and this pass did not read the Official Journal** *(`ACTION WF`)*.
+
+🟢 **What did NOT move:** the **emotion-recognition prohibition in schools** *(in force since `2025-02-02`)* and the **Article 4 AI-literacy duty**. 🔵 **So the trend is not "Europe relaxed" — it is that the ARTEFACT deadline slipped while the PROHIBITIONS stayed.** A proctoring or engagement-detection feature is still a today problem; the conformity file is a 2027 one.
+
+🔵 **Corroborated from the supply side**: an Italian serious-game on the AI Act surfaced in this pass's own harvest describing itself as *"aggiornato al Digital Omnibus"*. 🟡 Withheld on `GPL-3.0`, but a second independent signal of what the European market is reading.
+
+### 🔴 `9` — APAC enthusiasm and APAC intent have decoupled
+
+🔴 **APAC faculty are the MOST optimistic of any region — `57`% excited — and their intent to use AI FELL `9` points, `76`% (2025) → `67`% (2026), the LOWEST future-adoption intent of any region.**
+
+🟡 **These point in opposite directions and this KB does not reconcile them.** 🔵 It is the shape pilot fatigue makes — enthusiasm intact, commitment down — but one survey is not a cause. 🔴 **Logged as a number to watch.** 🔴 **And the regulatory context for the region's two largest systems is a DECLARED GAP: no India or China source on these shelves** *(`ACTION WB`)*, which is uncomfortable given that `4` of this pass's `21` rows are Chinese or Indian.
+
 ## Pass 241 — 2026-10-16 — THE TREND THIS PASS MEASURED IS **ENCLOSURE**: AN OPEN K-12 TUTOR RELICENSED TO PROPRIETARY, AND THE PERMISSIVE SUPPLY THAT REMAINS HAS MOVED **UNDER** THE LEARNING PRODUCT INTO COMPLIANCE AND RECORDS
 
 🔵 **Evidence:** [`p241-verified-rows`](../evidence/p241-verified-rows.2026-10-16-p241.tsv) · [`p241-withheld`](../evidence/p241-withheld.2026-10-16-p241.tsv) · [`p241-websearch`](../evidence/p241-websearch.2026-10-16-p241.tsv) · [`p241-cross-instrument-agreement`](../evidence/p241-cross-instrument-agreement.2026-10-16-p241.tsv)

@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 242 — 2026-10-16 — `p241` LEFT EMEA AND LATAM UNMEASURED AND SAID SO. BOTH ARE NOW MEASURED, AND THE AXIS THAT FOUND THEM IS NOT A STATUTE WORD OR A LANGUAGE WORD — IT IS **`topic:gradebook`**
+
+⏱️ **ELEVENTH pass of `2026-10-16`.** `p232`–`p241` all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.
+
+🟢 **`21` permissive rows, every grant read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported. 🟢 **`ACTION UK` DISCHARGED: EMEA `3`, LATAM `3`, APAC `4`, North America `3` — the two regions `p241` declared unrun are measured.** 🟢 **`ACTION VX` DISCHARGED as a RANKING, not an assertion** — six axes now carry an on-topic rate and a rediscovery rate. 🔴 **`ACTION VU` DISCHARGED BY REFUTATION: the shape `p241` registered is wrong, fires on `4`/`4` ordinary copyleft payloads and finds `0` relicensings.** 🔴 **`19` rows withheld, every payload read.** 🔴 **The WebSearch leg produced `0` new rows for a FOURTH pass — but `1` material regulatory correction.**
+
+🔵 **Evidence:** [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) *(21 slugs, grant + bytes + pinned head + per-row region basis)* · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv) *(19 rows)* · [`p242-queries`](../evidence/p242-queries.2026-10-16-p242.tsv) · [`p242-axis-rediscovery`](../evidence/p242-axis-rediscovery.2026-10-16-p242.tsv) *(6 axes)* · [`p242-delta-sweep`](../evidence/p242-delta-sweep.2026-10-16-p242.tsv) *(50 payloads)* · [`p242-websearch`](../evidence/p242-websearch.2026-10-16-p242.tsv) · **instrument:** [`compose/code/p242-grant-delta/`](../compose/code/p242-grant-delta/)
+
+### 🔴 `T242-A` — the headline: `p1054` marked a **usable** row unusable, and the `50` bytes it could not read were an **upstream attribution**
+
+[`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) — `1 200` B · `main` · `4724212ab55f`. `p1054` returns `MIT-BODY-PLUS:unclassified-addition` and `is_usable_permissive() == False`, on `50` bytes of excess over its MIT size ceiling. Read first-hand, those bytes are:
+
+> *"Portions of this software are derived from brightspace-mcp-server, Copyright (c) 2026 Rohan Muppa, used under the MIT License."*
+
+🟢 **That is a DISCLOSURE, not a narrowing.** It grants no less than MIT — it says where the code came from. And the upstream it names, [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server), was read first-hand in this same pass (`1 068` B · `a6fa134d2a13`) and classifies `MIT`. **The chain closes.**
+
+| channel | answer on this one payload |
+|---|---|
+| GitHub API `license.spdx_id` | 🔴 `NOASSERTION` |
+| `lib/license_family.sh` | 🟢 `MIT` |
+| `p1054-mit-plus-clause` | 🔴 `MIT-BODY-PLUS` · **not usable** |
+| 🆕 `p242-grant-delta` | 🟢 `DISCLOSURE` → `RESOLVED-disclosure-only` · **usable** |
+
+🔵 **Three channels, three answers — `P255`'s shape again.** 🟡 **And the row is MORE informative than a bare MIT file: it declares a derivation from a slug already on these shelves, which the search API's metadata does not show, because it is a re-publication and not a GitHub fork.**
+
+### 🔴 `T242-B` — `ACTION VU` as registered cannot work, measured over `46` payloads
+
+`p241` registered `ACTION VU`: sweep for relicensing by keying on *"a `LICENSE` payload that names TWO licences and a DATE"*. Implemented exactly as written, it fires on `4` and is **wrong on all `4`**, with **`0` true positives**:
+
+| payload | bytes | why it fired | what it is |
+|---|---|---|---|
+| `purysho/EduBoard` | `34 523` | names GPL-3.0; dates `19 Nov 2007` + `28 Mar 2007` | an ordinary `AGPL-3.0` grant |
+| `fentas/lani` | `34 524` | same | an ordinary `AGPL-3.0` grant |
+| `TouchRefletz/maia.edu` | `34 523` | same | an ordinary `AGPL-3.0` grant |
+| `rosshd/openlearn` | `29 618` | same | an ordinary `AGPL-3.0` grant |
+
+🔴 **The standard AGPL-3.0 text NAMES GPL-3.0 — its section 13 is the cross-reference to it — and carries the FSF's own publication dates.** Every AGPL payload in existence matches "two licences and a date". 🔵 **That is `P171`'s defect class one level up:** `P171` is *do not read GPL's section-13 title as evidence of Affero*; this is *do not read a licence's own standard cross-reference as evidence of a second licence*.
+
+🟢 **The real relicensing is still detected** — [`snflwr-ai/snflwr.ai`](https://github.com/snflwr-ai/snflwr.ai), re-read first-hand this pass at `2 833` B · `7feea47e4759`, the same SHA `p241` pinned — but by a **transition narrative** (*"was published under … from `2026-02-27` until `2026-09-18`"*, *"Effective `2026-09-18`"*, *"PRIOR RELEASES REMAIN UNDER AGPL-3.0"*) bound to a date **the FSF did not print in the licence**. 🟡 **That is the half `ACTION VU` left out, and it is the half that decides.**
+
+### 🔴 `T242-C` — and the new instrument committed `P171`'s defect **a third time**, on its own first sweep
+
+On its first full run, `p242-grant-delta` returned `NARROWING` on **all `8`** GPL-3.0/AGPL-3.0 payloads. The cause: `p1054`'s restriction vocabulary contains `noncommercial`, and **the standard GPL-3.0 text uses that word in its section 6**. The matcher read a word belonging to the licence's *own terms* as foreign matter.
+
+🔴 **Recorded rather than quietly fixed, because the pattern is now three for three: every classifier on these shelves that greps a licence BODY for a token eventually reads the licence's own text as an addition.** 🟢 **The fix is structural, not a deleted token:** a payload that *is* a canonical licence text has no delta to read, is reported `STANDARD`, and is handed to `lib/license_family.sh`. A control asserts the offending word is **still in the payload** and still not read as an addition, so deleting the guard fails the suite.
+
+🟡 **MIT is held to a stricter test, deliberately:** MIT's canonical text carries no restriction vocabulary at all, so *any* restriction term in an MIT body is an addition whatever the byte count — `graspful`'s clause 2 is **shorter** than `p1054`'s size headroom and a size-only test would have cleared it.
+
+### 🟢 EMEA — `3` agent/foundation rows, the gap `p241` declared as unrun
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis *(from the ROW)* | What it is |
+|---|---|---|---|---|---|---|
+| **dtu-learn** | [`CarlSvejstrup/dtu-learn-mcp`](https://github.com/CarlSvejstrup/dtu-learn-mcp) | 🟢 **`MIT`** *(`1 079` B)* | 0 | `main` · `9444a1fd5199` | 🟢 README names **DTU** *(Technical University of Denmark)* `69`×; repo topic `denmark` | MCP server **and** CLI API client for **DTU Learn** (Brightspace/D2L): courses, deadlines, slides, **Panopto lecture transcripts** into Claude |
+| **librus-python-api** | [`krzysztofbury/librus-python-api`](https://github.com/krzysztofbury/librus-python-api) | 🟢 **`MIT`** *(`1 071` B)* | **3** | `main` · `83eccea12102` | 🟢 README names **Librus Synergia** — the Polish national school gradebook — `31`× | Python API client for Librus Synergia: grades, attendance. 🟢 **Carries a WEEKLY LIVE-CHECK CI badge against the real upstream** — the only row in this harvest that continuously proves its own integration still works |
+| **jules** | [`alexxb2mg-svg/jules`](https://github.com/alexxb2mg-svg/jules) | 🟢 **`MIT`** *(`1 083` B)* | 0 | `main` · `a6fdabe49f58` | 🟢 README is French and uses the **French grade ladder** *(`3e`, `CP à CE2`, `CM2`, `6e`, `lycée`)*; *"les douze matières de 3e"*; offers **Mistral (France)** | A free tutor for French pupils, primary→*lycée*, that **guides step by step and never gives the answer**. Ollama for local, Mistral for hosted. 🟡 **Its own README says only `3e` is built and the other levels await contributors** |
+
+### 🟢 LATAM — `3` rows, and one of them is the highest-star new row of the pass
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis *(from the ROW)* | What it is |
+|---|---|---|---|---|---|---|
+| **lms-front** | [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front) | 🟢 **`MIT`** *(`1 072` B)* | 🟢 **40** | `master` · `925783e644a6` | 🟢 README states verbatim: *"Full English + Spanish across the app, **built for LATAM** and English-speaking markets"* | Multi-tenant LMS for creators and schools, sell courses on your own subdomain: **Next.js 16 + React 19 + Supabase (RLS) + Stripe Connect** *(platform fee + revenue split)*, FSRS spaced repetition, MCP. 🟢 **The most commercially shaped LATAM row these shelves carry — it ships the billing split, not just the courseware** |
+| **Diário de Classe** | [`Dillax/Di-rio-de-Classe-Avalia-es-`](https://github.com/Dillax/Di-rio-de-Classe-Avalia-es-) | 🟢 **`MIT`** *(`1 081` B)* | 1 | `main` · `b01dde73df1f` | 🟢 Brazilian Portuguese: `turmas`, `alunos`, `notas`, `trimestre`, **`recuperação substitutiva`** — Brazilian school-term vocabulary | A teacher's gradebook PWA. 🟢 **Offline-first and serverless by design: *"os dados ficam somente no IndexedDB do aparelho dele. Não há servidor"*** — every teacher uses the same link and no student data leaves the device |
+| **seedling** | [`arvoreeducacao/seedling`](https://github.com/arvoreeducacao/seedling) | 🟢 **`Apache-2.0`** *(`11 358` B)* | 1 | `main` · `1ebb171d9f19` | 🟢 *"built and used by **Árvore** to hire engineers"* — Árvore Educação, Brazilian edtech; fixture folders in Portuguese *(`ENUNCIADO.md`, `testes/`, `solucao/`)* | Sandboxed coding interviews **for candidates who work with AI agents**. 🟡 **SCOPE CAVEAT, stated: this is a Brazilian edtech company's ENGINEERING HIRING tool, not an education product.** It is on these shelves as evidence of what a LATAM edtech builds and opens, not as courseware |
+
+### 🟢 APAC — `4` rows, `3` with first-hand language evidence
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis | What it is |
+|---|---|---|---|---|---|---|
+| **eduagent** | [`anirudhlohiya/eduagent`](https://github.com/anirudhlohiya/eduagent) | 🟢 **`MIT`** *(`1 056` B)* | 1 | `main` · `a9b32795d951` | 🟢 *"Built for **AgentathonX 2026** — India's First Online AI Agent Hackathon"*; *"Relevant for **250M+ students in India**"* | Study companion: personalised plans, quizzes, evaluation feedback. React + FastAPI + Groq |
+| **Cloud-Score** | [`mayunqing1230/Cloud-Score`](https://github.com/mayunqing1230/Cloud-Score) | 🟢 **`MIT`** *(`1 070` B)* | 0 | `main` · `bab2ffc9ea43` | 🟢 README `7 517` CJK chars; **班级积分管理系统** *(classroom score management)* | A **zero-framework, serverless** classroom points and student-evaluation ledger on **Cloudflare Pages + Pages Functions + private R2**. 🟢 **No server to procure — the deployment shape a single teacher can actually own** |
+| **overachievers** | [`xuhaosl/overachievers`](https://github.com/xuhaosl/overachievers) | 🟢 **`MIT`** *(`1 064` B)* | 0 | `main` · `82510e995744` | 🟢 README `1 178` CJK chars; **小学到高中** *(primary→high school)* | A FAMILY's own child-grade tracker: multi-child, multi-class, growth curves, **single-file SQLite**, one-command Docker onto a home NAS. 🔵 **The parent-side mirror of the teacher-side rows above** |
+| **ATLAS** | [`GHOSTxASR/ATLAS-AI-TUTOR`](https://github.com/GHOSTxASR/ATLAS-AI-TUTOR) | 🟢 **`MIT`** *(`1 075` B)* | 1 | `main` · `15df43b8e5e5` | 🟡 **WEAKER BASIS, stated:** learner profiles named **JEE** and **GATE** *(Indian competitive exams)*. Exam vocabulary only — no institution or jurisdiction named | Local-first tutor over **your own** material: RAG-grounded chat, a **prerequisite roadmap**, quizzes, ChromaDB + Ollama |
+
+### 🟢 North America — `3` rows
+
+| Agent | Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis | What it is |
+|---|---|---|---|---|---|---|
+| **Last Bell** | [`noestudios/lastbell`](https://github.com/noestudios/lastbell) | 🟢 **`MIT`** *(`1 067` B)* | 1 | `main` · `544ac5d5f90f` | 🟢 README names **Montgomery County** *(MCPS, Maryland)*, **ParentVUE / Edupoint Synergy** and **Instructure Canvas** — a US district stack only; *"Built and verified against Montgomery County"* | A self-hosted **parent-side** grade and assignment monitor across ParentVUE **and** Canvas, alerting the family on devices they already use. 🟢 **States its own non-affiliation with Edupoint and Instructure, and keeps the data on a computer the family owns** |
+| **SAT Companion** | [`grahamlittle/sat-companion`](https://github.com/grahamlittle/sat-companion) | 🟢 **`MIT`** *(`1 070` B)* | 0 | `main` · `8f3587ff4708` | 🟢 **SAT** *(US College Board exam)* named `15`×; no other jurisdiction | An **AI skill** — not an app — for SAT method practice: *"learn the method, the score follows"* |
+| **brightspace-d2l-mcp** | [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | 🟢 **`MIT` + upstream attribution** *(`1 200` B)* | **7** | `main` · `4724212ab55f` | 🔴 **NOT PLACED — recorded as Global.** No author-location evidence. It targets D2L Brightspace, a Canadian vendor product, which places the **product** and not the **row** | See `T242-A`. Knows what you already handed in, so it only reports what is actually left |
+
+### 🟢 Global — `8` rows, every one recorded with the reason it is NOT placed
+
+🔵 **`p240`'s rule, kept: a row with no regional evidence is Global, and the absence is written down rather than guessed.**
+
+| Agent / repo | 🟢 Grant *(bytes)* | ★ | ref · head | Why NOT placed | What it is |
+|---|---|---|---|---|---|
+| [`arshawnarbabi/Cogni`](https://github.com/arshawnarbabi/Cogni) | 🟢 `MIT` *(`1 071` B)* | **6** | `main` · `f800ec251529` | 🟡 **A signal pass read `professor` as Portuguese. It is English usage** — *"your professor's grading weights"* — **and the LATAM reading was DISCARDED** | Study app with **persistent tutor memory**, FSRS, per-professor profiling from past exams, and a *"what do I need on the final"* calculator. BYOK, self-hostable, pgvector |
+| [`igweze/fobrain`](https://github.com/igweze/fobrain) | 🟢 `Apache-2.0` *(`11 357` B)* | **10** | `main` · `48ef59ae4ad6` | Row claims global scope: *"schools and institutions around the globe"*. 🔵 Its school taxonomy *(Nursery/Primary/Secondary)* is **Commonwealth-style, not US** — noted, not enough to place | Open-source **AI school-management system** for K-12, 100+ modules, CBT |
+| [`HeliumEdu/platform`](https://github.com/HeliumEdu/platform) | 🟢 `Apache-2.0` *(`11 341` B)* | **9** | `develop` · `38b10d803dd8` | No regional evidence | Django REST backend for Helium, a student planner: calendar, homework, **gradebook** |
+| [`HeliumEdu/frontend`](https://github.com/HeliumEdu/frontend) | 🟢 `Apache-2.0` *(`11 341` B)* | 6 | `develop` · `5878c2d06e03` | No regional evidence | Flutter/Dart client for the above. 🔵 **Identical `payload_sha` `01bebce10355` to its backend** |
+| [`tachkovsa/plerni`](https://github.com/tachkovsa/plerni) | 🟢 `Apache-2.0` *(`11 379` B)* | 1 | `dev` · `7ae377904ac0` | No regional evidence | *"AI-first skills and learning platform — a stable kernel, everything else a plugin"*: multi-tenant LXP, Postgres. 🟡 Carries an adversarial-review decision register in `docs/` |
+| [`erkinefendiev/aula-magna-community`](https://github.com/erkinefendiev/aula-magna-community) | 🟢 `MIT` *(`1 067` B)* | 0 | `main` · `2e5ed0c83250` | No regional evidence; *"Aula Magna"* is a Latin term, not a jurisdiction | A self-hosted **system of record** for one school — attendance, gradebook, courses, calendar — Next.js + SQLite, *"your entire school lives in `./data`"* |
+| [`sxnnyside-scholarships/promediatum`](https://github.com/sxnnyside-scholarships/promediatum) | 🟢 `MIT` *(`1 100` B)* | 1 | `main` · `ff269640ba9f` | No regional evidence | Local-first academic desktop workspace for independent educators: attendance, weighted grading, observations. Laravel + Tauri + SQLite. 🟢 **CONTROL ROW: its `1 100` B is a long copyright holder name, not an added clause** |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) *(carried)* | 🟢 `MIT` *(`1 068` B)* | **59** | `main` · `a6fa134d2a13` | No regional evidence | Re-read first-hand this pass **only** to close `T242-A`'s derivation chain |
+
+### 🔴 `19` rows withheld, every payload read first-hand
+
+🔵 Full table: [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv). The four that cost the most:
+
+- 🔴 [`purysho/EduBoard`](https://github.com/purysho/EduBoard) — `AGPL-3.0` *(`34 523` B)*. **A local-first, offline, no-account teacher operating system**: gradebook, rubrics, attendance, lesson plans, reports, one desktop app. 🟡 **Commercially the most attractive withheld row of the pass, and network copyleft puts it out of reach for a proprietary deliverable.**
+- 🔴 [`danielcregg/moodle-local_aitutor`](https://github.com/danielcregg/moodle-local_aitutor) — `GPL-3.0` *(`35 149` B)*, **EMEA (Ireland)**. A **Socratic** tutor for Moodle STACK questions with escalating hints that never give the answer. 🟡 **Pedagogically the most interesting withheld row** — and the second row in this pass converging on *never give the answer* *(see `jules`)*.
+- 🔴 [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) — `AGPL-3.0`, **`2 396`★, the highest-star education row in the entire harvest**, and already CARRIED.
+- 🟡 [`SebaWag/onboarding-hub`](https://github.com/SebaWag/onboarding-hub) — `Apache-2.0` *(`10 750` B)*, grant is **fine**. Withheld on **scope and region**: corporate onboarding/L&D rather than education, and **Spanish language ALONE does not place a row** — Spain is EMEA, not LATAM. 🔵 **Stated because it is the discipline `ACTION UK` actually requires: an unplaceable row stays unplaced.**
+
+### 🟡 `ACTION`s registered by `p242`
+
+- 🟡 **`ACTION VY`** — `p1054` must call `p242-grant-delta.resolve_mit_plus()` rather than return `MIT-BODY-PLUS` as a terminal verdict, and the shelves must be swept for rows withheld on an `MIT-BODY-PLUS` that was only ever a disclosure. **This pass found one; it did not sweep for the rest.**
+- 🟡 **`ACTION VZ`** — `AnonymousOnyx22/brightspace-d2l-mcp` declares a derivation from a slug **already on these shelves**, and no instrument here reads derivations out of grant payloads. Wire the attribution text into the carried index so a declared derivative is visible as one *(it is NOT a GitHub fork and `fork: false` hides it)*.
+- 🟡 **`ACTION WA`** — harvest **`topic:gradebook`'s remaining `27`** of `57`, and add `topic:sis`, `topic:attendance`, `topic:timetable`. The system-of-record axis produced **every** regional row of this pass; it is the opposite of exhausted.
+- 🔴 **`ACTION WB`** — **India and China have no AI-in-education regulatory source on these shelves.** Searched this pass and not found. Record as a standing gap until a primary-source leg runs in local-language government sources.
+
 ## Pass 241 — 2026-10-16 — `p240` READ ITS OWN DEFECT AS **LANGUAGE**; IT IS WIDER. THE SAME FUNCTION RETURNS **ALLOWED** ON TWO PAYLOADS WRITTEN IN **ENGLISH** THAT GRANT NOTHING — AND `p240`'s NEW GATE CERTIFIES THAT THE ENGLISH TOKEN MATCH **APPLIES** TO BOTH
 
 ⏱️ **TENTH pass of `2026-10-16`.** p232–p240 all carry this date; stated because these shelves pin SHAs and a shared date is what a later pass reads as a contradiction.

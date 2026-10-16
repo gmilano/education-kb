@@ -61,6 +61,8 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── p241-blanket-denial  (the grant axis: 104 controls, ACTION VO)"; \
 	cd compose/code/p241-blanket-denial && $(PY) test_blanket_denial.py >/dev/null && echo "   PASS"; \
 	cd - >/dev/null; \
+	echo "── p242-grant-delta    (disclosure vs narrowing vs transition: 23 controls, ACTION VU)"; \
+	$(PY) -I compose/code/p242-grant-delta/test_grant_delta.py >/dev/null 2>&1 && echo "   PASS"; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

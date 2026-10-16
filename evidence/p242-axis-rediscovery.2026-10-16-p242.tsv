@@ -1,0 +1,7 @@
+axis	vocabulary	pass_measured	on_topic_rate	rediscovery_rate	verdict
+STATUTE	topic:ferpa, topic:ed-fi	p241	30/30, 4/4	35%	Exhausted as discovery. High on-topic, high repeat
+PRODUCT	topic:k12 topic:ai	p241	12/12	8%	Best axis measured. 12 distinct owners, 11 of 12 new
+PRODUCT	topic:gradebook	p242	30/30	15%	BEST YIELD OF p242. 23 new rows, and the axis that produced every EMEA/LATAM/APAC row
+PRODUCT	topic:tutor topic:ai	p242	25/27	0%	Zero repeat, but small (total_count 27) and star-poor
+PRODUCT	topic:lms topic:ai	p242	24/30	55%	Highest repeat of any product axis - the LMS/MCP cluster is already carried. NOTE: the `lms` tag COLLIDES with LM Studio (gdmka/openai-compat-endpoint)
+LANGUAGE	educacion/educativa/educacao in:readme	p242	10/30	0%	WORST on-topic rate measured on these shelves. Language is NOT a discovery axis: it selects for the author's language, not the row's sector

@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-16
 ---
 
+## Pass 242 — 2026-10-16 — `12` FOUNDATION ROWS, AND THE REUSABLE LAYER HAS MOVED AGAIN: `p241` FOUND IT IN **COMPLIANCE AND RECORDS**, `p242` FINDS IT IN THE **SYSTEM OF RECORD ITSELF** — ATTENDANCE, GRADEBOOK, TRANSCRIPT
+
+🟢 **Every grant below read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported, with the payload byte count and the head SHA pinned. 🔵 **Region is read from the ROW, never from the query** — each row carries its own basis, and a row without one says so.
+
+🔵 **Evidence:** [`p242-verified-rows`](../evidence/p242-verified-rows.2026-10-16-p242.tsv) · [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv) · [`p242-queries`](../evidence/p242-queries.2026-10-16-p242.tsv) · [`p242-axis-rediscovery`](../evidence/p242-axis-rediscovery.2026-10-16-p242.tsv)
+
+### 🟢 `T242-D` — the finding that organises this shelf: **`topic:gradebook` is the axis the statute words were hiding**
+
+| axis | vocabulary | on-topic | rediscovery | pass |
+|---|---|---|---|---|
+| STATUTE | `topic:ferpa`, `topic:ed-fi` | `30`/`30` | 🔴 `35`% | `p241` |
+| PRODUCT | `topic:k12 topic:ai` | `12`/`12` | 🟢 `8`% | `p241` |
+| 🟢 **PRODUCT** | **`topic:gradebook`** | 🟢 **`30`/`30`** | 🟢 **`15`%** | **`p242`** |
+| PRODUCT | `topic:tutor topic:ai` | `25`/`27` | 🟢 `0`% | `p242` |
+| PRODUCT | `topic:lms topic:ai` | `24`/`30` | 🔴 `55`% | `p242` |
+| 🔴 **LANGUAGE** | `educacion`/`educativa`/`educação` `in:readme` | 🔴 **`10`/`30`** | `0`% | `p242` |
+
+🟢 **`topic:gradebook` produced `23` new rows at `30`/`30` on-topic — and EVERY regional row of this pass came from it or from `topic:tutor`.** 🔴 **The LANGUAGE axis is the worst on-topic rate ever measured on these shelves: `10` of `30`.** 🔵 **Why, stated plainly: a language word selects for the AUTHOR'S LANGUAGE, not the row's SECTOR.** It returned a Costa Rican gazette summariser, a kinesiology RAG, a dental-education app, an LLM arena and three portfolios. 🟡 **`ACTION VX` is discharged as a ranking: product vocabulary beats statute vocabulary, and language vocabulary is not a discovery axis at all.**
+
+🔴 **`topic:lms` also carries a TAG COLLISION worth recording:** `gdmka/openai-compat-endpoint` is tagged `lms` because it means **LM Studio**. A product axis is only as clean as its tag.
+
+### 🟢 EMEA — `2` foundation rows, both with first-hand national evidence *(the `ACTION UK` gap)*
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis *(from the row)* | What it is |
+|---|---|---|---|---|---|
+| [`krzysztofbury/librus-python-api`](https://github.com/krzysztofbury/librus-python-api) | 🟢 **`MIT`** *(`1 071` B)* | **3** | `main` · `83eccea12102` | 🟢 **Librus Synergia** — the Polish national school gradebook — named `31`×; topic `librus-synergia` | A Python API client for grades and attendance in Librus. 🟢 **The only row in this harvest with a WEEKLY LIVE-CHECK CI badge against the real upstream** — it continuously proves its own integration still works, which is exactly what an unofficial API client needs and almost never has |
+| [`CarlSvejstrup/dtu-learn-mcp`](https://github.com/CarlSvejstrup/dtu-learn-mcp) | 🟢 **`MIT`** *(`1 079` B)* | 0 | `main` · `9444a1fd5199` | 🟢 **DTU** *(Technical University of Denmark)* `69`×; topic `denmark` | MCP server **and** CLI client for DTU Learn: courses, deadlines, slides, **Panopto lecture transcripts**. 🔵 **A national-institution integration, which is the EMEA shape — not a platform, an adapter to one** |
+
+🟡 **Both EMEA foundation rows are ADAPTERS TO A NATIONAL INCUMBENT** — Librus in Poland, DTU Learn in Denmark. 🔵 **Neither tries to be the system; both make an existing one addressable.** That is the EMEA pattern this pass measured, and it is the same conclusion `p240` reached from the opposite direction when it found the European supply locked behind `GPL-3.0`.
+
+### 🟢 LATAM — `2` foundation rows
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis | What it is |
+|---|---|---|---|---|---|
+| [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front) | 🟢 **`MIT`** *(`1 072` B)* | 🟢 **40** | `master` · `925783e644a6` | 🟢 README verbatim: *"built for **LATAM** and English-speaking markets"*; full `en`/`es` | Multi-tenant LMS: Next.js 16 + React 19 + **Supabase with RLS** + **Stripe Connect** *(platform fee + revenue split)* + PayPal + Lemon Squeezy, FSRS spaced repetition, MCP. 🟢 **Row-level security and the billing split are both already in it — the two things a studio otherwise builds by hand on a LATAM marketplace engagement** |
+| [`arvoreeducacao/seedling`](https://github.com/arvoreeducacao/seedling) | 🟢 **`Apache-2.0`** *(`11 358` B)* | 1 | `main` · `1ebb171d9f19` | 🟢 *"built and used by **Árvore**"* *(Árvore Educação, Brazilian edtech)*; Portuguese fixture folders `ENUNCIADO.md`, `testes/`, `testes-ocultos/`, `solucao/` | Sandboxed, containerised coding interviews for candidates who work with agents. 🟡 **SCOPE CAVEAT: an edtech's HIRING tool, not courseware.** 🔵 Useful here as a **sandbox-execution reference** — it already runs untrusted candidate code in a disposable container, which is the same primitive an auto-grader needs |
+
+### 🟢 APAC — `3` foundation rows
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis | What it is |
+|---|---|---|---|---|---|
+| [`mayunqing1230/Cloud-Score`](https://github.com/mayunqing1230/Cloud-Score) | 🟢 **`MIT`** *(`1 070` B)* | 0 | `main` · `bab2ffc9ea43` | 🟢 `7 517` CJK chars; **班级积分管理系统** | Classroom points + student-evaluation ledger, **zero framework**, on Cloudflare Pages + Pages Functions + private R2 with strong consistency. 🟢 **Serverless end to end: the shape that needs no school IT procurement at all** |
+| [`xuhaosl/overachievers`](https://github.com/xuhaosl/overachievers) | 🟢 **`MIT`** *(`1 064` B)* | 0 | `main` · `82510e995744` | 🟢 `1 178` CJK chars; **小学到高中** | Multi-child, multi-class grade history with growth curves. **Single-file SQLite**, one-command Docker onto a home NAS. 🔵 **Parent-side system of record — the mirror image of every school-side row on this shelf** |
+| [`anirudhlohiya/eduagent`](https://github.com/anirudhlohiya/eduagent) | 🟢 **`MIT`** *(`1 056` B)* | 1 | `main` · `a9b32795d951` | 🟢 *"**AgentathonX 2026** — India's First Online AI Agent Hackathon"*; *"250M+ students in India"* | Study-plan + quiz + evaluation agent, React + FastAPI + Groq |
+
+### 🟢 North America — `1` foundation row
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Region basis | What it is |
+|---|---|---|---|---|---|
+| [`agiacalone/lectern`](https://github.com/agiacalone/lectern) | 🟢 **`MIT`** *(`1 074` B)* | 1 | `main` · `ddac6df1174e` | 🟢 US higher-ed vocabulary throughout: **registrar**, term, semester, **GitHub Classroom** binding, **campus-LMS (Canvas)** roster/grade import | *"The Registrar"* — a teaching-operations toolkit: term management, gradebook, **exam build and verification**, ISA grading-artifact publishing, Canvas roster/grade import, end-of-term **archival**. 🟢 **Its stated premise is the one a studio hears from faculty: *"no vendor between you and your students' record"*** |
+
+### 🟢 Global — `4` rows, each with the absence recorded
+
+| Repo | 🟢 Grant *(bytes)* | ★ | ref · head | Why NOT placed | What it is |
+|---|---|---|---|---|---|
+| [`HeliumEdu/platform`](https://github.com/HeliumEdu/platform) | 🟢 `Apache-2.0` *(`11 341` B)* | **9** | `develop` · `38b10d803dd8` | No regional evidence | Django + DRF backend for a student planner: calendar, homework, gradebook. 🔵 **Default branch is `develop`** |
+| [`HeliumEdu/frontend`](https://github.com/HeliumEdu/frontend) | 🟢 `Apache-2.0` *(`11 341` B)* | 6 | `develop` · `5878c2d06e03` | No regional evidence | Flutter/Dart client. 🔵 **Identical `payload_sha` `01bebce10355` to the backend** — one grant, two repos |
+| [`tachkovsa/plerni`](https://github.com/tachkovsa/plerni) | 🟢 `Apache-2.0` *(`11 379` B)* | 1 | `dev` · `7ae377904ac0` | No regional evidence | *"A stable kernel, everything else a plugin"* — multi-tenant LXP on Postgres. 🔵 **Default branch is `dev`** |
+| [`erkinefendiev/aula-magna-community`](https://github.com/erkinefendiev/aula-magna-community) | 🟢 `MIT` *(`1 067` B)* | 0 | `main` · `2e5ed0c83250` | *"Aula Magna"* is Latin, not a jurisdiction | A single school's **system of record** — attendance, gradebook, courses, calendar — Next.js + SQLite, *"your entire school lives in `./data`, back it up by copying it"* |
+
+🔴 **`3` of these `12` rows have a default branch that is NOT `main` or `master`** — `develop`, `develop`, `dev`. 🟢 **`p229`'s ref axis, still paying: a two-guess probe would have reported all three as grantless.**
+
+### 🔴 Withheld from this shelf, with the reason
+
+🔵 Full table: [`p242-withheld`](../evidence/p242-withheld.2026-10-16-p242.tsv) *(`19` rows)*.
+
+- 🔴 **`3` rows answered ONLY at a Tier-C manifest** — [`abujalancej/edutrack`](https://github.com/abujalancej/edutrack) *(`package.json`, `2 353` B)*, [`messiasof/raff`](https://github.com/messiasof/raff) *(`pyproject.toml`, `655` B)*, [`DOMCDONALD001/opengrade`](https://github.com/DOMCDONALD001/opengrade) *(`package.json`, `607` B)*. 🔵 **A manifest carries a DECLARATION, not a grant body** *(`p222`)*, and `p242-grant-delta` must not be fed one — its `CLEAN` on a manifest means *"no delta found"*, never *"permissive"*. 🟡 `opengrade` is a US K-12 SIS by a named LLC and `raff` is a Portuguese study-routine tool for autistic learners; both are losses.
+- 🔴 **`4` rows withheld on `AGPL-3.0`** and **`4` on `GPL-3.0`** — including [`purysho/EduBoard`](https://github.com/purysho/EduBoard), a complete offline teacher OS, and [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) at **`2 396`★**, the highest-star education row in the harvest.
+- 🔴 **`2` rows withheld on PolyForm Noncommercial** — not OSI, commercial use prohibited. 🟢 **Both were reported `NOASSERTION` by GitHub's API and named only by the first-hand read.**
+- 🟡 **`1` row withheld on REGION DISCIPLINE**: [`SebaWag/onboarding-hub`](https://github.com/SebaWag/onboarding-hub), `Apache-2.0`, grant fine — **Spanish language alone does not place a row**, because Spain is EMEA and not LATAM. 🔵 **Recorded because `ACTION UK` is only discharged honestly if an unplaceable row stays unplaced.**
+
 ## Pass 241 — 2026-10-16 — `11` FOUNDATION ROWS, `6` OF THEM **NORTH AMERICA** AFTER `p240` CLOSED AT `0` OF `10` — AND THE US SUPPLY THAT IS ACTUALLY REUSABLE IS NOT A TUTOR AND NOT AN LMS, IT IS **THE COMPLIANCE AND RECORDS LAYER UNDER ONE**
 
 🟢 **Every grant below read first-hand** from `raw.githubusercontent.com` at the branch `git ls-remote --symref` reported, with the payload byte count and the head SHA pinned. 🔵 **Region is read from the ROW, never from the query** — each row carries its own basis.
