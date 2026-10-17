@@ -1,8 +1,39 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-16
+updated: 2026-10-17
 ---
+
+## Pass 255 — 2026-10-17 — `1` NEW FOUNDATION, AND THE PASS'S REAL WORK IS ON A CHANNEL FACT THAT CHANGES WHAT THIS SHELF CAN EVER VERIFY: **`api.github.com/repos/{slug}` IS REFUSED ON BOTH TRANSPORTS, SO THE SEARCH ENDPOINT IS NOT THE CHEAPER STAR CHANNEL — IT IS THE ONLY ONE**
+
+⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv) *(`20` rows, `2` transports)* · [`p255-stars`](../evidence/p255-stars.2026-10-16-p255.tsv) *(`13`)* · [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv) *(`10` paths)* · **instrument:** [`p255-channel-reachability`](../compose/code/p255-channel-reachability/) *(`47` controls, in `make hooks`)*
+
+### 🟢 `T255-F1` — the new row
+
+🟢 **[`PetoiCamp/OpenCatEsp32-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCatEsp32-Quadruped-Robot)** — `MIT`, `1 069` B, `sha256`₁₆ `2b8d26b3aa82e4a3`, `main` @ `84dd6eff307e`, `490`★. ESP32 firmware for the OpenCat quadruped platform. 🟡 **Hardware, not an agent** — filed here because a STEM or vocational engagement needs a permissive robotics base it can put a model on top of, and this one has a clean grant with `404` at every other licence path *(no second grant to contradict it)*.
+
+🔵 **It is the sibling of [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot)** *(`5 459`★, same `1 069` B `MIT` body)*, which this shelf already carried — and that is the interesting part, below.
+
+### 🔴 `T255-F2` — what a foundation row can and cannot be verified against, measured
+
+🔴 **The star cell on a foundation row is not verifiable by the obvious route, and now this shelf knows why.** `api.github.com/repos/{slug}` is refused on **both** transports available here:
+
+| transport | identity | `/repos/{out-of-scope}` | `/search/repositories` | `raw.githubusercontent.com` |
+|---|---|---|---|---|
+| `curl` through the session proxy | 🟢 **authenticated**, `core limit 15000`, `remaining 14996` | 🔴 **`403`** | 🔴 **`403`** | 🟢 `200` |
+| `WebFetch` | 🔴 unauthenticated, `core limit 60`, `search limit 10` | 🔴 **`403`** | 🟢 **`200`** | 🟢 `200` |
+
+🔴 **Two different gates, neither of them a budget.** The proxy transport carries a `15 000`/hour authenticated allowance and is held to a **repository-scope allow-list** — `/repos/gmilano/*` answers `200`, every other owner `403`, and so does the static `/licenses/mit`, which contains no repository at all. The `WebFetch` transport is unauthenticated and is held to an **endpoint** allow-list: `/search/*` answers, `/repos/*` does not.
+
+🟢 **Consequence for this shelf, stated as a standing rule:** a repository's `stargazers_count`, `forks_count`, `archived` flag and `pushed_at` are reachable here **only** through `search/repositories`, which returns them for up to `100` repositories per call against a `10`/hour budget. 🟢 The working recipe is pinned: `?q={name}+in:name&sort=stars`. 🔴 **Where that query cannot isolate the canonical row, the cell is `UNMEASURABLE` and must be published as such** — [`openedx/edx-platform`](https://github.com/openedx/edx-platform) is today's case, because `edx-platform in:name` returns `217` forks and extensions and not the original.
+
+🟢 **What is NOT affected, and it is the half that matters most:** `raw.githubusercontent.com` answers `200` on both transports with no scope gate. 🔵 **That is why every licence verdict on these shelves has always been checkable and every star cell has not** — the grant channel was never gated, and sixteen passes of channel anxiety were about the metadata channel only.
+
+### 🟢 `T255-F3` — and the star cells, when finally measured, were fine
+
+🔴 `ACTION YF` assumed `17` passes of star drift. 🟢 **Measured: [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `41 515` against a published `41.5k`; [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) `327` against a published `326`.** 🟢 **The published cells are accurate. The defect is that most rows have NO star cell at all** — [`moodle/moodle`](https://github.com/moodle/moodle) *(now measured: `7 490`★)* and [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) *(`5 459`★)* among them.
+
+🔵 **Absence is a cheaper defect than staleness and a more honest one**, because an empty cell does not claim anything. 🟡 But it also means this shelf cannot rank, and ranking is most of what a studio wants from a foundations list. `ACTION YK`.
 
 ## Pass 254 — 2026-10-16 — `0` NEW FOUNDATIONAL REPOS, AND FOR THE FIRST TIME THE `topic:` CHANNEL WAS **RUNNABLE** TO SAY SO. THE PASS'S REAL WORK IS ON THE SHARED CLASSIFIER: **A POINTER TO A LICENCE IS NOT A GRANT**, AND IT TOOK A `332`-FIXTURE DIFF TO GET THE FIX RIGHT
 

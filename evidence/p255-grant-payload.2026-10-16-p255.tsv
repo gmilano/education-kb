@@ -1,0 +1,11 @@
+slug	ref	path	status	bytes	sha256_16	family	is_usable_permissive	note
+PetoiCamp/OpenCatEsp32-Quadruped-Robot	main@84dd6eff307e	LICENSE	200	1069	2b8d26b3aa82e4a3	MIT	TRUE	in the 1056-1085 MIT band (ACTION XW)
+PetoiCamp/OpenCatEsp32-Quadruped-Robot	main@84dd6eff307e	LICENSE.md	404	-	-	-	-	-
+PetoiCamp/OpenCatEsp32-Quadruped-Robot	main@84dd6eff307e	LICENSE.txt	404	-	-	-	-	-
+PetoiCamp/OpenCatEsp32-Quadruped-Robot	main@84dd6eff307e	COPYING	404	-	-	-	-	-
+CaviraOSS/PageLM	main@a6646794661b	LICENSE	404	-	-	-	-	-
+CaviraOSS/PageLM	main@a6646794661b	LICENSE.md	200	8563	c834209c5f338013	NOT-OPEN-SOURCE:added-restriction	FALSE	PageLM Community License; MIT opening clause then non-commercial + redistribution prohibited + revocable
+CaviraOSS/PageLM	main@a6646794661b	LICENSE.txt	404	-	-	-	-	-
+CaviraOSS/PageLM	main@a6646794661b	COPYING	404	-	-	-	-	-
+Li-Evan/Bloom	main@b3918981bb34	LICENSE	200	1069	7d574cf3632e7f16	MIT	TRUE	already carried
+Miaotofu01/Study-Mate	main@2852e50426c6	LICENSE	200	1064	dc1997d8218985c9	MIT	TRUE	already carried

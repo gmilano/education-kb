@@ -1,8 +1,41 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-16
+updated: 2026-10-17
 ---
+
+## Pass 255 — 2026-10-17 — **THE MOODLE ECOSYSTEM GETS ITS FIRST STAR MEASUREMENT ON THESE SHELVES — AND IT IS SMALLER THAN THE SHELF'S PROSE IMPLIES.** PLUS A LICENCE CLASS A VERTICAL BUYER MEETS MORE OFTEN THAN A `BUSL`: THE **"COMMUNITY LICENSE"**
+
+⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-stars`](../evidence/p255-stars.2026-10-16-p255.tsv) *(`13`)* · [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv) · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv)
+
+### 🟢 `T255-V1` — the incumbent, measured rather than assumed
+
+🟢 **First star measurement of the Moodle ecosystem ever taken on these shelves:**
+
+| repository | stars | licence | pushed | role |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 **`7 490`** | `GPL-3.0` | `2026-10-13` | the LMS itself |
+| [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) | `1 001` | 🟢 **`Apache-2.0`** | `2026-10-16` | the official mobile client |
+| [`C0D3D3V/Moodle-DL`](https://github.com/C0D3D3V/Moodle-DL) | `653` | `GPL-3.0` | `2026-06-20` | bulk course downloader |
+| [`moodlehq/moodle-docker`](https://github.com/moodlehq/moodle-docker) | `576` | `GPL-3.0` | `2026-07-30` | the reference dev stack |
+
+🔵 **Read this correctly, because the obvious reading is wrong.** `7 490`★ is *small* beside [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)'s `41 515` — and Moodle runs a large share of the world's formal courseware while DeepTutor runs almost none of it. 🔴 **Stars measure developer attention, not installed base**, and on a verticals shelf that distinction is the whole point: a studio inheriting a client's LMS is inheriting the `7 490`★ repository, not the `41 515`★ one.
+
+🟢 **The one genuinely actionable cell is `moodlehq/moodleapp` at `Apache-2.0`.** The platform is `GPL-3.0`; its official client is permissive. 🟢 **A studio that needs to ship a modified, closed mobile front end against a Moodle backend has a licence-clean path through the app repository that it does not have through the core** — and that asymmetry is exactly the dual-scope shape `p254` found inside a single repository, here spread across two.
+
+### 🔴 `T255-V2` — the licence class this shelf should expect next
+
+`p247` built the source-available anchors around `BUSL`, `Elastic`, `PolyForm`, `FAIRCODE` and `SUL`. 🔴 **The payload a vertical buyer actually meets in education is none of those. It is a bespoke file named `<Product> Community License`.**
+
+🔴 **[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM)**, `2 030`★, `8 563` B, `sha256`₁₆ `c834209c5f338013`: opens with the **MIT grant clause verbatim**, then restricts to *personal, educational or non-commercial research*, 🔴 **prohibits redistribution outright**, excludes SaaS by name, and makes the grant **revocable**. 🟢 `p1054-mit-plus-clause` grades it `NOT-OPEN-SOURCE:added-restriction` / `is_usable_permissive: False`.
+
+🟡 **Why it belongs on the VERTICALS shelf and not only on `agents/top.md`:** the exemption is written *for* educational institutions. A university may deploy PageLM for teaching, free. 🔴 **The studio engaged to deploy and customise it for that university may not** — *"commercial training programs, paid courses, or any educational services offered for profit"* are carved out, and redistribution of a modified copy to the client is itself prohibited. 🔵 **A grant that is free for the end user and closed to the integrator is the most expensive kind of surprise in this business**, because it surfaces at delivery rather than at selection.
+
+🟢 **The cheap screen, and it costs one `curl`:** byte count. The MIT band on these shelves is `1 056`–`1 085` B. PageLM is `8 563`. 🔴 **Any licence file over ~`2` kB that opens with the MIT clause is a rider until proven otherwise.**
+
+### 🟡 `T255-V3` — the platform licences NOT re-measured this pass, said plainly
+
+🔴 **`0` new platform grants were read this pass.** The online budget went to the channel audit *(`ACTION YE`)*, the `topic:` census and the star sweep. 🟡 The carried verdicts — Moodle `GPL-3.0`, Open edX `AGPL-3.0`, Sakai `ECL-2.0`, Forma LMS `GPL-2.0`, OpenOLAT `Apache-2.0`, OpenEduCat `LGPL-3.0` — **stand on the first-hand reads of `p252` and `p253` and are NOT re-confirmed here.** 🔵 Published as carried rather than as verified-today, which is the distinction `ACTION XU` exists to protect.
 
 ## Pass 254 — 2026-10-16 — **A REPOSITORY CAN CARRY TWO LICENCES AT ONCE, AND THIS SHELF HAD NO WAY TO SAY SO.** THE FIRST DUAL-SCOPE SUBJECT IN EDUCATION, AND WHAT IT CHANGES FOR A STUDIO READING A `LICENSE` FILE
 

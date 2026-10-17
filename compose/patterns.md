@@ -1,8 +1,53 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-16
+updated: 2026-10-17
 ---
+
+## Pass 255 — 2026-10-17 — TWO RECIPES OUT OF THIS PASS'S OWN MEASUREMENTS: **THE OPEN-SOURCE CLEARANCE A STUDIO SELLS BEFORE IT WRITES ANY CODE**, AND **THE VIETNAM `2027-09-01` ENGAGEMENT**, WHOSE WINDOW IS HALF SPENT AND WHOSE FIRST FILING DEADLINE HAS ALREADY ELAPSED
+
+⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv) · [`p255-vietnam-dates`](../evidence/p255-vietnam-dates.2026-10-16-p255.tsv) · [`p255-row-supply`](../evidence/p255-row-supply.2026-10-16-p255.tsv) · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv) · **instrument:** [`p255-channel-reachability`](code/p255-channel-reachability/)
+
+### 🟢 `P255-1` — the open-source clearance, and this pass is the proof it is needed
+
+🔵 **Why it sells:** the client has already picked a stack off a GitHub search. On this pass's own first page sat a `2 030`★ study-agent whose licence forbids redistribution and excludes the integrator by name. 🔴 **Nothing in the repository's surface says so** — the index reports `Other`, the file is named `LICENSE.md`, and its first clause is MIT word for word.
+
+**The recipe, two days, runnable with `curl` and `git` alone.**
+
+1. 🟢 **Resolve before you fetch.** `git ls-remote --symref https://github.com/{slug} HEAD` → default branch + `HEAD` sha. 🔴 **Never guess `main`**: `p253` found [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) on `19.0` and [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) on `mobile`. Record the sha; a grant without a ref is not a measurement.
+2. 🟢 **Read every licence path first-hand** from `raw.githubusercontent.com/{slug}/{ref}/{path}` for `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` — 🟢 **and `200` on one does not excuse skipping the others**: PageLM is `404` at `LICENSE` and `200` at `LICENSE.md`, while [`steveyeow/Feynman`](https://github.com/steveyeow/Feynman) *(carried, `p254`)* is `MIT` at the root and `BUSL-1.1` under `app/pro/`.
+3. 🟢 **Measure, do not eyeball.** `wc -c` and `sha256sum` **on the FILE**, never on a captured body — `p253` corrected a published hash that was one byte short for exactly that reason.
+4. 🔴 **Apply the byte screen.** The MIT band is `1 056`–`1 085` B. 🔴 **Anything over ~`2` kB that opens with *"Permission is hereby granted, free of charge"* is a rider until proven otherwise.** PageLM: `8 563` B.
+5. 🟢 **Classify with [`p1054-mit-plus-clause`](code/p1054-mit-plus-clause/)** — it answers `NOT-OPEN-SOURCE:added-restriction` on riders and names the hits. Run [`lib/license_family.sh`](code/lib/) beside it; where they disagree, the payload wins and the disagreement is the finding.
+6. 🟢 **Deliver a table, not a memo:** slug · ref · path · bytes · `sha256`₁₆ · family · `usable_permissive` · **the clause that decided it, quoted**. 🔵 The quoted clause is what a client's counsel actually reads.
+
+🟢 **Three usability tiers to report against, because "open source" is not the question the client is asking:**
+
+| tier | means | this pass's examples |
+|---|---|---|
+| 🟢 **BUILD ON** | permissive, redistributable, sublicensable | `MIT` / `Apache-2.0` — [`PetoiCamp/OpenCatEsp32-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCatEsp32-Quadruped-Robot), [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) |
+| 🟡 **DEPLOY, DO NOT EMBED** | copyleft; fine as a hosted system, costly inside a product | `GPL-3.0` / `AGPL-3.0` — [`moodle/moodle`](https://github.com/moodle/moodle), [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) |
+| 🔴 **CLIENT MAY, STUDIO MAY NOT** | the end user is exempt and the paid integrator is not | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) |
+
+🔴 **That third tier is the one nobody checks and the only one that fails at delivery rather than at selection.**
+
+### 🟢 `P255-2` — the Vietnam `2027-09-01` engagement
+
+🔵 **Why now:** Vietnam is the one jurisdiction on these shelves where education is **named in a numbered high-risk list with a date already in force** *(Decision `33/2026/QD-TTg`, `46` systems, `6` sectors, effective **`2026-08-15`**)*, and where pre-existing education systems carry an **18-month** transition to **`2027-09-01`** rather than the general `12`. 🔴 **Decree `142/2026/ND-CP`'s own `60`-day filing window closed on `2026-06-30`**, so a client who has not filed is already late — which is a reason to call them, not a reason to skip them.
+
+**Scope, `10`–`12` weeks.**
+
+1. 🟢 **Inventory and date-stamp.** Every AI system touching learners, split by **in operation before `2026-03-01`** *(transition to `2027-09-01`)* versus **after** *(🔴 **no transition — in scope from day one**)*. 🔵 **This single split is the deliverable most clients get wrong**, because the intuitive assumption is that the newer system is the safer one.
+2. 🟢 **Map against Decision `33`'s education entries** and record, per system, whether it is in the listed set or merely adjacent. 🟡 The article-level text of the three listed education systems is **not** established on these shelves — have local counsel confirm the mapping; do not sell it as settled.
+3. 🟢 **Build the human-in-the-loop evidence layer**, reusing the North America pack from `P255-1`'s sibling engagement: educator-directed controls, an override log, and a record that AI was not the primary basis for a high-stakes decision. 🔵 **It satisfies Oklahoma and Vietnam with one artefact**, which is what makes a multi-region studio cheaper than a local firm.
+4. 🟢 **Wire the audit trail with carried permissive components** — [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) *(`Apache-2.0`, `41 515`★, model-agnostic across OpenAI-compatible, Anthropic, Ollama, LM Studio, llama.cpp and vLLM)* for the tutoring surface, and a local-inference path for data-residency, since the AI Law's filing regime makes a cross-border inference call a question the client must answer in writing.
+5. 🟢 **Hand over a calendar**, not a report: `2026-08-15` *(in force)* → `2026-06-30` *(elapsed filing)* → `2027-03-01` *(general)* → **`2027-09-01` *(education)***.
+
+🟡 **The commercial read:** education's transition is the *generous* one, so the urgency is real but not frantic — this is a scoped compliance programme at a known date, not a fire drill. 🔴 **Greenfield is the exception and should be priced as one.**
+
+### 🟡 `P254-*` and earlier recipes — carried, unchanged
+
+🟡 The dual-scope licence audit *(`P254-1`)*, the inverted Africa engagement *(`P254-2`)*, the EMEA three-date roadmap and the LATAM policy-layer recipe all stand as written. 🟢 **One correction propagates into the EMEA recipe and it is a withdrawal of advice:** the guidance not to sell an Annex III readiness programme this quarter was priced on a date this base had already settled. 🟢 **Sell it — `2027-12-02`, with Article `5(1)(f)` *(in force `2025-02-02`, proctoring)* and Article `50` *(in force `2026-08-02`)* as the live front end.**
 
 ## Pass 254 — 2026-10-16 — TWO RECIPES THAT COME OUT OF THIS PASS'S OWN MEASUREMENTS: **A DUAL-SCOPE LICENCE AUDIT A STUDIO CAN RUN IN AN AFTERNOON**, AND **THE AFRICA ENGAGEMENT INVERTED** — THE PRODUCT IS THE TEACHER, NOT THE MODEL
 

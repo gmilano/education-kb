@@ -1,8 +1,40 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-16
+updated: 2026-10-17
 ---
+
+## 2026-10-17 — Pass 255 — WHAT MOVED THIS WEEK: **A `2 030`★ "OPEN SOURCE" STUDY AGENT THAT FORBIDS REDISTRIBUTION**, AND A SUPPLY CENSUS THAT SAYS THE ENGLISH `topic:` INDEX IS SPENT. WHAT MOVED IN THE BASE: `p254` RETRACTED A SIXTEEN-PASS WALL AND **REPLACED IT WITH A SECOND WRONG EXPLANATION ITS OWN NUMBERS COULD HAVE REFUTED**
+
+⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-row-supply`](../evidence/p255-row-supply.2026-10-16-p255.tsv) · [`p255-stars`](../evidence/p255-stars.2026-10-16-p255.tsv) · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv) · [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv) · [`p255-websearch`](../evidence/p255-websearch.2026-10-16-p255.tsv) *(`9` legs)* · **instrument:** [`p255-channel-reachability`](../compose/code/p255-channel-reachability/) *(`47` controls)*
+
+### 🔴 Moving this week — and the direction is away from the commons
+
+🔴 **The week's most visible education agent is a licence trap.** [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) *(`2 030`★, pushed `2026-10-13`)* ships a **`PageLM Community License`**: the MIT grant clause verbatim for eleven words, then **non-commercial only**, **redistribution strictly prohibited**, and **revocable**. 🟢 This base's own `p1054-mit-plus-clause` grades it `NOT-OPEN-SOURCE:added-restriction` — 🟢 **the first time that hardening has met a real payload rather than a fixture.**
+
+🔵 **It is not an isolated row, it is this week's pattern.** Of the `8` repositories in the `topic:education`+`topic:ai` star head: `3` `MIT`, `3` `AGPL-3.0`, `1` `NOASSERTION` *(PageLM)*, `1` unlicensed. 🔴 **The permissive share at the top of the education star distribution is under half**, and the non-permissive half is not GPL idealism — `AGPL-3.0` on a hosted study tool is an open-core posture, and a *"Community License"* is a commercial one wearing the word *community*.
+
+### 🟢 Rows and stars that moved
+
+| row | what moved | measured |
+|---|---|---|
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **still the largest permissive education agent carried here** | `41 515`★, `Apache-2.0`, pushed `2026-10-16` |
+| 🟢 [`PetoiCamp/OpenCatEsp32-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCatEsp32-Quadruped-Robot) | 🟢 **NEW to these shelves** | `490`★, `MIT`, `1 069` B @ `84dd6eff307e` |
+| 🟡 [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟡 flat | `327`★ *(shelf said `326`)* |
+| 🔴 [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **first star measurement this base has ever taken of it** | `7 490`★, `GPL-3.0` |
+| 🟡 [`ai-shifu/ChatALL`](https://github.com/ai-shifu/ChatALL) | 🔵 **named here only to prevent a conflation** | `16 510`★ — same owner, **different product**; it is not the tutor |
+
+### 🔴 The negative result, stated so silence is not read as coverage
+
+🔴 **`4` `topic:` axes, `20` substantive candidates, `19` already carried.** 🔴 **`topic:intelligent-tutoring-system` — an axis never run here before, and the single most on-topic string available — returned `6` of `6` CARRIED.** 🔴 **`WebSearch` paid `0` rows for the twenty-fourth consecutive pass.**
+
+🟡 **And one axis turned out to be two populations.** `topic:ai-tutor` sorted by **recency** *(`total_count 702`)* has a head of `0`–`5`★ personal projects — `17` of `17` under `6`★, several pushed within the hour. 🔵 Sorted by **stars** the same topic is the saturated set this base already holds. **A topic is not a population; a topic plus a sort order is.** Publishing from the recency head would fill this shelf with abandoned coursework.
+
+### 🔴 The base's own week, and it is a repeat offence one pass apart
+
+🔴 **`p254` retracted this base's longest-standing channel line — the `403` wall — and in the same pass published a replacement rule that was also wrong:** *"treat a `403` as budget exhausted until `rate_limit` says otherwise."* 🟢 **`p255` read the meter. It said `remaining 51`. The four `403`s billed nothing, and a `200` on the same host and transport landed in the same minute.**
+
+🔵 **The lesson is not "p254 was careless" — p254 was the pass that broke a sixteen-pass inheritance by trying one thing. It is that an explanation adopted at the moment of a retraction gets none of the scrutiny the retraction itself got.** 🟢 Now a standing instrument rather than a sentence: [`p255-channel-reachability`](../compose/code/p255-channel-reachability/), `47` controls, in `make hooks`, with p254's own published row pinned as the adversarial case it must refuse.
 
 ## 2026-10-16 — Pass 254 — WHAT MOVED THIS WEEK: **THREE ROWS AND A CHANNEL.** WHAT MOVED IN THE GATE: THE ONE RECIPE THE `Makefile` ITSELF CALLS *"THE GATE"* **PRINTED `STOP` AND EXITED `0`** — FOR ITS WHOLE LIFE
 

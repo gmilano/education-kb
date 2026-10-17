@@ -1,0 +1,21 @@
+slug	axis	stars	license_claim	make_carried	verdict	note
+PetoiCamp/OpenCat-Quadruped-Robot	topic:education+topic:ai	5459	MIT	CARRIED	-	already on the shelves
+ai-infra-curriculum/ai-infra-engineer-learning	topic:education+topic:ai	1793	MIT	CARRIED	-	curriculum, not software
+mohi-devhub/antivibe	topic:education+topic:ai	1122	MIT	CARRIED	-	6 shelf hits
+PetoiCamp/OpenCatEsp32-Quadruped-Robot	topic:education+topic:ai	490	MIT	NEW	PUBLISHED	grant read FILED at main@84dd6eff307e
+ystemsrx/mini-nanoGPT	topic:education+topic:ai	383	MIT	CARRIED	-	-
+learnhouse/learnhouse	topic:education+topic:ai	2398	AGPL-3.0	CARRIED	-	23 shelf hits
+CaviraOSS/PageLM	topic:education+topic:ai	2030	NOASSERTION	CARRIED	REFUSED	PageLM Community License: non-commercial + redistribution prohibited
+Li-Evan/Bloom	WebSearch	-	MIT	CARRIED	-	55 shelf hits
+Miaotofu01/Study-Mate	WebSearch	-	MIT	CARRIED	-	45 shelf hits
+echo-loop/Echo-Loop	topic:education+topic:ai	4200	AGPL-3.0	CARRIED	-	-
+penecho/penecho	topic:education+topic:ai	2484	AGPL-3.0	CARRIED	-	-
+HugeCatLab/ChatTutor	topic:education+topic:ai	1315	AGPL-3.0	CARRIED	-	-
+HKUDS/DeepTutor	topic:education+topic:ai	41515	Apache-2.0	CARRIED	RE-STARRED	104 shelf hits
+rohitg00/ai-engineering-from-scratch	WebSearch	67462	-	CARRIED	-	-
+open-spaced-repetition/fsrs4anki	topic:intelligent-tutoring-system	4107	MIT	CARRIED	-	-
+GarethManning/education-agent-skills	topic:intelligent-tutoring-system	872	NOASSERTION	CARRIED	-	-
+GeminiLight/gen-mentor	topic:intelligent-tutoring-system	135	CC0-1.0	CARRIED	-	-
+ArnaudGuiovanna/tutor-mcp	topic:intelligent-tutoring-system	49	MIT	CARRIED	-	-
+thm-mni-ii/feedbacksystem	topic:intelligent-tutoring-system	24	NOASSERTION	CARRIED	-	-
+brownplt/LTLTutor	topic:intelligent-tutoring-system	12	GPL-3.0	CARRIED	-	-

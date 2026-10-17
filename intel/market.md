@@ -1,8 +1,91 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-16
+updated: 2026-10-17
 ---
+
+## Pass 255 — 2026-10-17 — **`ACTION YG` DISCHARGED: VIETNAM'S TWO DATES WERE BOTH RIGHT AND THEY ARE DIFFERENT INSTRUMENTS.** PLUS KOREA WALKED BACK ITS FLAGSHIP AI TEXTBOOK MANDATE, AND LATAM GETS ITS FIRST REGIONAL AI-IN-EDUCATION OBSERVATORY
+
+⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-websearch`](../evidence/p255-websearch.2026-10-16-p255.tsv) *(`9` legs, one per region plus `4` global)* · [`p255-vietnam-dates`](../evidence/p255-vietnam-dates.2026-10-16-p255.tsv) *(`7` instruments)* · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv)
+
+### 🟢 `ACTION YG` DISCHARGED — and the carried date was not wrong, it was incomplete
+
+🔴 `p254` met a contradiction it refused to publish as a disjunction: this base carries a Vietnamese education **carve-out at `2026-08-15`**, while `p254`'s leg reported education transition periods running **to `2027`**. 🟢 **`p255` resolved it, and `YG`'s own hypothesis — "these may be two different things, a carve-out START and a transition END" — is correct.**
+
+| instrument | date | what it fixes |
+|---|---|---|
+| **Law on AI No. `134/2025/QH15`** | 🟢 **`2026-03-01`** | the Law takes effect — Vietnam's first standalone AI statute |
+| `134/2025/QH15`, transition clause | `2027-03-01` | deadline for **pre-existing** systems, general sectors *(12 months)* |
+| 🟢 **`134/2025/QH15`, transition clause** | 🟢 **`2027-09-01`** | 🔴 **deadline for pre-existing systems in HEALTHCARE, EDUCATION and FINANCE — `18` months, not `12`** |
+| **Decree `142/2026/ND-CP`** | `2026-04-30` issued, `2026-05-01` in force | the implementing decree |
+| Decree `142/2026/ND-CP` | `2026-06-30` | notice + transition plan due on the one-stop portal *(`60` days)* — 🔴 **elapsed** |
+| 🟢 **Decision `33/2026/QD-TTg`** | 🟢 **`2026-08-15`** | 🟢 **the `46`-system HIGH-RISK list takes effect; education is `1` of `6` sectors, with `3` listed systems** |
+
+🟢 **So the carried `2026-08-15` STANDS — it is Decision `33`'s effective date — and it is now joined by `2027-09-01`, the end of the transition for systems already running.** 🔵 **The operational reading for a studio: education is the *more* generous sector here, not the stricter one.** A platform already live in a Vietnamese school on `2026-03-01` has until **September 2027**; a greenfield build has no transition at all and is in scope from day one. 🔴 **That inverts the usual assumption and it is the kind of thing that gets priced wrong.**
+
+🟡 **Caveat held:** these are secondary legal-practice channels, not the primary Vietnamese texts. The dates agree across independent sources, which is why `YG` discharges; the article-level text of the three listed education systems is **not** established and is not claimed.
+
+### 🔴 The APAC finding that should change a roadmap: a national mandate reversed
+
+🔴 **South Korea walked back its AI digital textbook programme.** The national rollout was reduced, within roughly a year, from a mandate to **optional *"educational material"* status**, after parent and teacher objection over screen time and data. 🟢 **The AI Basic Act is simultaneously in force since `2026-01-22`**, with **education named a *high-impact* domain**, penalties to **KRW `30` million**, and an announced grace period of about a year before full enforcement.
+
+🔵 **Read together these are not contradictory, they are the whole APAC lesson in one country: the regulator advanced and the classroom mandate retreated.** 🔴 **A studio that priced a Korean engagement on the textbook programme lost it; a studio that priced on the compliance layer has a market with a dated obligation and a funded buyer.** The same split shows in the carried `Ipsos Education Monitor 2026` reading — support for banning AI in schools is *lower* across the Asian markets surveyed and *higher* in Australia and New Zealand.
+
+🟡 **Elsewhere in APAC:** Japan's `AI` Promotion Act *(May `2025`)* remains non-binding and the Cabinet has adopted a new **AI Basic Plan** replacing the December `2025` plan. India has no comprehensive statute — **AI Governance Guidelines** *(late `2025`)* and an **IT Rules amendment for synthetic content** *(February `2026`)*. China still has no general AI law, only sectoral rules in force; its education market remains shaped by the tutoring crackdown, with non-academic STEM, coding and AI rebounded and the test-prep sector gone.
+
+### 🟢 LATAM gets an institution, and a Mexican state legislates the classroom
+
+🟢 **UNESCO has launched a regional Observatory on Artificial Intelligence in Education for Latin America and the Caribbean, based in Santiago de Chile.** 🔵 **This is the first standing regional instrument on this shelf for LATAM** — the carried evidence was survey data *(UNESCO IESALC `87%` institutional use against `26%` with a formal strategy)*, and a survey is a photograph while an observatory is a subscription.
+
+🟢 **Estado de México reformed its state education law in April `2026`** to promote responsible, graduated AI use in upper-secondary and higher education — reported as **the first Mexican state to legislate AI in the classroom**, against a federal level that still has no AI statute. 🟡 **Chile's Ley `21.719`** *(personal data protection, covering automated profiling)* has deferred entry into force on **`2026-12-01`** — 🔵 **so Chile's operative AI-in-education constraint this year is a data law, not an AI law.** 🟡 **Brazil's PL `2338/2023`** passed the Senate in December `2024` and remains pending in the Chamber; there is still no education-specific Brazilian regulation.
+
+🟡 **Adoption, single-source and flagged:** a Microsoft-attributed reading cited by a regional blog puts generative-AI use at **Costa Rica `28.5%`, Dominican Republic `24.8%`, Uruguay `24.6%`, Colombia `24.5%`**, with Mexico below all four. 🔴 **Not corroborated; do not price on it.** The carried OECD instruments — `TALIS 2024` teacher use *(Brazil `56%`, Chile `55%`, Colombia `53%`, Costa Rica `52%` against an OECD average of `36%`)* and `PISA 2025` — remain the defensible figures.
+
+### 🟢 North America: the 2026 session closed with statutes, not guidance
+
+🟢 **`10` AI-in-education bills enacted in the `2026` state session** *(FutureEd's tracker)*, out of roughly `100` moving. The shape is **guardrails rather than adoption mandates**:
+
+- 🟢 **Oklahoma** — every district must adopt a **written AI policy before the `2027`–`28` school year**; instructional AI must be educator-directed with human-in-the-loop review, and 🔴 **barred from being the primary basis for a high-stakes decision**
+- 🟢 **Maryland** — statewide guidance, **district AI coordinators**, and a tool-evaluation duty
+- 🟢 **Alabama** — a computer-science course **including AI instruction** required for graduation
+- 🟢 **Idaho** — the state education department directed to build a generative-AI framework
+- 🟢 **Virginia** — an AI pilot programme plus state guidance
+- 🟡 **Ohio** *(deadline `2026-07-01`)* and **Tennessee** were the first to require district policies and are now carried as in force
+- 🟡 **California** AI literacy across K-12; **North Carolina** a state model due **`2026-12-31`**; **Texas** districts must adopt the state AI ethics code; **Utah** AI in CS standards plus supervised *"AI sandbox"* courses; **Nevada** prohibits AI performing counsellor and psychologist duties
+
+🟡 **Roughly `33`–`35` states plus Puerto Rico now have official K-12 AI guidance.** 🔴 **Sources conflict on the enacted count** *(one tracker says `3` statutes, another `10` bills)*, and the difference is whether graduation-credit and pilot laws are counted. 🟢 **The count is contested; the direction is not.**
+
+### 🟡 EMEA: the EU dates corroborated on a seventh channel, and the African gap only narrows
+
+🟢 **The Digital Omnibus high-risk dates are corroborated again, independently:** stand-alone high-risk systems **`2027-12-02`**, high-risk AI embedded in regulated products **`2028-08-02`**. 🟢 **This matches the settled reading `p253` recovered and `p254` re-affirmed**, and it is now the seventh channel to say so. 🔴 **`eur-lex.europa.eu` remains unreachable** — and `p255` can finally say *why* rather than *that*: the proxy's own log records `gateway answered 403 to CONNECT (policy denial or upstream failure)`, so it is a **policy denial, not DNS and not a budget**, and no amount of retrying will change it.
+
+🔵 **The dates that are actually live for an education buyer are unchanged and earlier than the headline ones:** Article `5(1)(f)`'s **emotion-recognition prohibition, in force since `2025-02-02`** and pointed straight at proctoring; Article `50` transparency **in force since `2026-08-02`**; two further Article `5` prohibitions on **`2026-12-02`**.
+
+🟡 **Market sizing, single commercial source, flagged as directional:** Europe `$2.64B` *(2026)* → `$8.0B` *(2030)* at `31.9%` CAGR; Middle East & Africa `$0.56B` → `$1.6B` at `34.3%` CAGR. 🔴 **One report, no corroboration. Use for shape, not for a business case.**
+
+🔴 **DECLARED GAP, narrowed and still open.** Named instruments exist for the Gulf *(UAE, Saudi and Qatar national strategies; an EdTech Hub MENA landscape brief; Egypt, Morocco and Jordan building capacity through public-private partnerships)*, and Microsoft's **Elevate** commitment *(`$4B`, `20` million people over two years)* reaches African skilling. 🔴 **But there is still no confirmed `2026`-dated national AI-in-schools strategy for any specific sub-Saharan African country, and sub-Saharan regulation returned nothing.** 🔵 Stated so silence is not read as coverage: this is the fourth consecutive pass in which the African education-policy leg returns institutions and donors rather than instruments.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The buyer is now a district with a statutory deadline, and the deliverable is a policy-and-evidence layer, not a model.** Oklahoma's written-policy requirement *(before `2027`–`28`)*, Ohio's elapsed `2026-07-01` deadline, Maryland's district AI coordinators and North Carolina's `2026-12-31` model all name an artefact someone must produce. 🟢 **Highest-value offer: a district AI policy pack** — written policy, a tool-evaluation rubric that satisfies Maryland's duty, human-in-the-loop controls that satisfy Oklahoma's educator-directed clause, and an audit trail showing AI was not the primary basis for a high-stakes decision. 🔴 **The constraint to design around is Nevada's: AI may not perform counsellor or psychologist duties**, which rules out the wellbeing-triage product that vendors keep proposing. 🟡 **Sell to the state-guidance states for volume and the mandate states for urgency.**
+
+### EMEA
+
+🟢 **Sell the three-date roadmap, not a compliance scare.** Article `5(1)(f)` *(emotion recognition, in force `2025-02-02`)* is the one with teeth today and it lands on **proctoring**: any client running webcam-based exam invigilation with affect inference is already exposed. Article `50` transparency has been in force since **`2026-08-02`**. Annex III readiness is a **`2027-12-02`** programme and can be sold as such — 🟢 **this base spent a quarter telling the studio not to sell it on a date that was already settled, and that advice is withdrawn.** 🟡 **Gulf engagements are strategy-led and funded** *(UAE, Saudi, Qatar)*; 🔴 **sub-Saharan work should be scoped against donors and the AU/UNESCO competency frameworks, not against a national statute, because no `2026`-dated national instrument has been confirmed.**
+
+### APAC
+
+🟢 **Price the compliance layer, not the classroom mandate.** Korea's textbook reversal is the cautionary case: the mandate evaporated and the **AI Basic Act** *(in force `2026-01-22`, education = high-impact, grace ~1 year)* did not. 🟢 **Vietnam is the clearest dated opportunity on this shelf:** Decision `33/2026/QD-TTg` has listed education among `46` high-risk systems since **`2026-08-15`**, and pre-existing education systems must conform by **`2027-09-01`** — 🔵 **an eighteen-month window that is now half spent, with a filing deadline already elapsed**. 🔴 **Greenfield builds get no transition**, so a new Vietnamese deployment is in scope immediately. 🟡 Japan is promotion-first and India is guideline-only: both are market-entry plays, not compliance ones.
+
+### LATAM
+
+🟢 **Adoption is above the OECD average and governance is far below it, so the product is the policy layer.** `TALIS 2024` puts teacher AI use at `52`–`56%` across Brazil, Chile, Colombia and Costa Rica against an OECD average of `36%`, while UNESCO IESALC finds `87%` institutional use with 🔴 **`26%` holding a formal strategy**. 🟢 **The new UNESCO regional Observatory in Santiago is a route to market as much as a data source** — an institutional counterpart for a studio offering institutional AI strategies. 🟢 **Estado de México's April `2026` education-law reform is the first state-level classroom mandate in the region and a replicable template**; 🟡 **Chile's binding instrument this year is Ley `21.719` on data and automated profiling, in force `2026-12-01`** — so a Chilean engagement is a **data-governance** engagement. 🔴 **Brazil has no education-specific regulation and PL `2338/2023` is still pending in the Chamber**: sell on institutional policy and evidence, not on an anticipated statute.
+
+### Global
+
+🟢 **Licence due diligence is a billable first phase and this pass priced it.** A `2 030`★ repository on the first page of the most obvious search is non-redistributable, and only reading the grant body reveals it. 🟢 **Offer a two-day open-source clearance** over a client's candidate stack: resolve the default branch with `git ls-remote --symref`, read every licence path first-hand, flag any file over `2` kB that opens with the MIT clause, and produce a usable/unusable table with byte counts and hashes. 🔵 **The failure it prevents is invisible until delivery, which is exactly what makes it sellable.**
 
 ## Pass 254 — 2026-10-16 — **AFRICA AND THE MIDDLE EAST STOP BEING A BLANK.** THE GAP THIS SHELF DECLARED FOR TWO PASSES IS PARTIALLY CLOSED WITH NAMED INSTRUMENTS — AND `H.R. 8747` FINALLY HAS A SECOND SOURCE
 

@@ -1,8 +1,67 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-16
+updated: 2026-10-17
 ---
+
+## Pass 255 — 2026-10-17 — **`1` NEW ROW, `1` REFUSAL THAT MATTERS MORE THAN THE ROW, AND THE FIRST REAL-WORLD PAYLOAD EVER TO EXERCISE `ACTION XQ`'s HARDENING — IT HELD.** PLUS: `19` OF `20` CANDIDATES ALREADY CARRIED, ACROSS **FOUR** `topic:` AXES
+
+⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-row-supply`](../evidence/p255-row-supply.2026-10-16-p255.tsv) *(`20` candidates, all gated)* · [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv) *(`10` paths)* · [`p255-stars`](../evidence/p255-stars.2026-10-16-p255.tsv) *(`13`)* · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv) *(`20` rows, `2` transports)* · **instrument:** [`p255-channel-reachability`](../compose/code/p255-channel-reachability/) *(`47` controls)*
+
+### 🟢 `T255-A` — the refusal is the finding: a `2 030`★ repository that a careless pass publishes as a row
+
+🔴 **[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM)** — `2 030`★, a NotebookLM-style study tool that generates quizzes, flashcards, notes and podcasts. Exactly the shape this shelf exists to carry. 🔴 **It is not open source.**
+
+| | |
+|---|---|
+| what `api.github.com` reports | `NOASSERTION` — *"Other"* |
+| the payload at `LICENSE.md` | 🔴 **`PageLM Community License`**, `8 563` B, `sha256`₁₆ `c834209c5f338013`, `main` @ `a6646794661b` |
+| its first clause | *"Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use, copy, modify, and run the Software for **personal, educational, or non-commercial research purposes**"* |
+| what it then forbids | 🔴 **redistribution** *("in whole or in part, in source or binary form, is strictly prohibited")*, 🔴 **commercial use** *(explicitly including SaaS)*, and the grant is **revocable** |
+| 🟢 `p1054-mit-plus-clause` answers | 🟢 **`NOT-OPEN-SOURCE:added-restriction`**, `is_usable_permissive: False`, hits `commercial use` · `non-commercial` · `saas` · `software-as-a-service` |
+
+🟢 **This is the first payload met IN THE WILD, rather than as a fixture, to exercise `ACTION XQ`'s hardening — and the classifier held.** `p248` found `p1054` blessing a canonical Commons Clause as clean `MIT` for four passes; `p252` fixed it by two independent roads and swept the false-refusal population to `0`. 🔵 **Until today that fix had only ever been tested against text this base wrote for itself.**
+
+🔴 **And note the shape, because it is the one `p207` named `D14` and it is getting commoner, not rarer:** the file opens with the **MIT grant clause verbatim** and diverges at the eleventh word. A reader skimming the first line sees MIT. A `HEAD` request sees a `LICENSE.md`. GitHub sees `Other`. 🟢 **Only reading the body answers it**, and the one signal that would have caught it cheaply is the byte count: `8 563` B against the MIT band's `1 056`–`1 085`.
+
+🟡 **For a studio:** PageLM is usable in a classroom demo and unusable in a client deliverable. The exemption it grants is **to educational institutions for non-commercial teaching** — a consultancy building a paid engagement on top is squarely outside it, and so is any SaaS.
+
+### 🟢 `T255-B` — the one new row, with its scope stated
+
+🟢 **[`PetoiCamp/OpenCatEsp32-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCatEsp32-Quadruped-Robot)** — `MIT`, `LICENSE` `1 069` B, `sha256`₁₆ `2b8d26b3aa82e4a3`, ref `main` @ `84dd6eff307e` resolved by `git ls-remote --symref` **before** the payload probe *(`ACTION YA`)*, `490`★, `404` at `LICENSE.md` / `LICENSE.txt` / `COPYING`.
+
+🟡 **Scope stated so a later pass does not over-read it:** this is **ESP32 firmware for a quadruped robot**, the sibling of the already-carried [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) *(`5 459`★, `MIT`, same `1 069` B grant)*. It is a **STEM-education hardware platform**, not a tutor and not an agent. 🟢 Its value here is the one a studio actually buys: a permissive, maintained robotics stack that a K-12 or vocational engagement can put AI on top of without a licence conversation.
+
+🔵 **And how it was found is the reusable part.** It is the ONLY `NEW` verdict out of `20` candidates — and it is the **sibling of a carried row**. The carried index keys on the exact folded slug, so *every other repository belonging to an owner already on these shelves is invisible to it*. That is a supply channel nobody here has named, and it is registered as `ACTION YJ`.
+
+### 🔴 `T255-C` — the supply census, and it is the flattest this base has measured
+
+🔴 **`20` substantive candidates gated through `make carried`. `19` `CARRIED`. `1` `NEW`.** Four axes, three of them never run here before:
+
+| axis | candidates | `NEW` | what it says |
+|---|---|---|---|
+| `topic:education`+`topic:ai`, by stars | `8` | `1` | 🟡 the sibling, and nothing else |
+| 🟢 **`topic:intelligent-tutoring-system`**, by stars *(FIRST run here)* | `6` | 🔴 **`0`** | 🔴 **`6`/`6` carried** — the axis that looked freshest is fully held |
+| `topic:ai-tutor`, by **recency** *(FIRST run here)* | `total_count 702` | — | 🔴 **a different population entirely**: the recency head is `0`–`5`★ personal projects, `17` of `17` under `6`★ |
+| `topic:educacion` *(LATAM, by stars)* | `total_count 354` | — | 🔴 **course materials, not software** — `17` of `17`, confirming `p247`/`p252` |
+| `WebSearch`, `9` legs | `6` named | 🔴 **`0`** | 🔴 **the twenty-fourth consecutive pass in which `WebSearch` pays `0` rows** |
+
+🟢 **The honest reading, and it is a property rather than a complaint:** on the English-language GitHub `topic:` index, **this base is saturated**. `p247` measured `62.5%` rediscovery on its best axis; `p255` measures `95%` across four. 🔵 **A pass that keeps running these axes is buying a census, not rows** — which is worth doing occasionally and not hourly. The residual supply is in (a) owners already carried, (b) non-English proper nouns, and (c) the long recency tail, which is real but too small to publish.
+
+### 🟢 `T255-D` — `ACTION YF`, and the premise was half wrong
+
+🔴 `ACTION YF` was registered on *"no star cell on this shelf has been measured in `17` passes"*. 🟢 **Measured: the cells that EXIST are accurate.**
+
+| row | shelf cell | measured | drift |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `41.5k` | 🟢 **`41 515`** | 🟢 `0` |
+| [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | `326` | 🟢 **`327`** | 🟢 `+1` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **ABSENT** | 🟢 **`7 490`** | n/a |
+| [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | 🔴 **ABSENT** | 🟢 **`5 459`** | n/a |
+
+🟢 **So the defect is ABSENCE, not staleness**, and that is a cheaper problem than `YF` assumed. 🔵 **`YF` also guessed the mechanism wrong and the correction is operationally important:** it supposed the search endpoint was preferable because it *bills against a separate bucket*. The real reason is that **`/repos/{slug}` is refused outright on both transports** *(see [`p255-channel-reachability`](../compose/code/p255-channel-reachability/))*, so the search endpoint is not the cheaper star channel — 🔴 **it is the only one.** The working recipe, now pinned: `search/repositories?q={name}+in:name&sort=stars`.
+
+🔴 **Two flagships stay `UNMEASURABLE` and are published as such:** `openedx/edx-platform` *(the `in:name` axis returns forks and extensions, never the canonical row)* and `pykt-team/pykt-toolkit` *(the `10`/hour search budget was spent at `10`/`10` before the leg)*.
 
 ## Pass 254 — 2026-10-16 — **`3` NEW ROWS, AND THE `403` WALL WAS NEVER A WALL.** `api.github.com` IS REACHABLE ON A TRANSPORT THIS BASE HAD NOT TRIED — AND THE FIRST THING IT MEASURED REFUTED **BOTH** SECONDARY STAR FIGURES `p253` REFUSED TO PUBLISH
 

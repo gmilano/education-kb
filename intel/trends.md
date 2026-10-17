@@ -1,8 +1,61 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-16
+updated: 2026-10-17
 ---
+
+## Pass 255 — 2026-10-17 — THE `2026` TREND, NAMED: **THE MANDATE RETREATS WHILE THE OBLIGATION ADVANCES.** KOREA UNWOUND ITS FLAGSHIP AI TEXTBOOK PROGRAMME IN THE SAME YEAR ITS AI STATUTE TOOK FORCE — AND THE OPEN-SOURCE TREND IS AWAY FROM THE COMMONS
+
+⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-websearch`](../evidence/p255-websearch.2026-10-16-p255.tsv) *(`9` legs)* · [`p255-vietnam-dates`](../evidence/p255-vietnam-dates.2026-10-16-p255.tsv) · [`p255-row-supply`](../evidence/p255-row-supply.2026-10-16-p255.tsv) · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv)
+
+### 🟢 `T255-T1` — the year's shape, and it is a divergence rather than a direction
+
+🔵 `p254` named `2026` as *"disclosure converging while classroom rules diverge"*. 🟢 **`p255` sharpens it with a case that runs both ways inside one country.** South Korea's AI digital textbook rollout — the most funded national classroom AI mandate anywhere — was reduced to **optional *"educational material"*** within about a year, over screen time and data objections. In the same window the **AI Basic Act came into force** *(`2026-01-22`)* with **education as a high-impact domain**.
+
+🔴 **So the trend is not "governments are adopting AI in schools" and not "governments are backing off".** 🟢 **It is that the two moved in opposite directions at once: the state withdrew as a PURCHASER and advanced as a REGULATOR.** 🔵 **Every regional leg this pass fits that shape** — Oklahoma mandates a *policy*, not a tool; Maryland funds *coordinators*, not licences; Vietnam lists education among high-risk *systems*; the EU's live instrument is a *prohibition* on emotion recognition. 🔴 **The budget moved from the classroom to the compliance office, and a product roadmap pointed at the classroom is pointed at the wrong buyer.**
+
+### 🟢 `T255-T2` — the open-source trend in education is away from the commons, and it is measurable
+
+🟢 **Measured, not asserted.** The `topic:education`+`topic:ai` star head, `8` repositories:
+
+| licence posture | count | examples |
+|---|---|---|
+| 🟢 permissive *(`MIT`)* | `3` | [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot), [`mohi-devhub/antivibe`](https://github.com/mohi-devhub/antivibe) |
+| 🟡 copyleft-as-open-core *(`AGPL-3.0`)* | `3` | [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse), [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop), [`penecho/penecho`](https://github.com/penecho/penecho) |
+| 🔴 bespoke rider | `1` | [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) — *"Community License"* |
+| 🔴 no grant | `1` | — |
+
+🔴 **Under half the education star head is usable by a studio.** 🔵 **And the two non-permissive halves are the same commercial strategy in different clothing:** `AGPL-3.0` on a hosted study tool exists to make self-hosting by a competitor uncomfortable, and a *"Community License"* does the same thing by writing it down. 🟡 **Neither is hostility to open source; both are open-core positioning in a category that has discovered it can charge.**
+
+🟢 **The trend for the KB's own practice:** the licence field reported by the index is an **upper bound on permissiveness**, never a verdict — `NOASSERTION` carried real information this pass, and the `MIT`-looking opening clause carried a false one.
+
+### 🟢 `T255-T3` — the regulatory calendar is now dense enough that DATES are the product
+
+🔵 Eighteen months ago this shelf tracked whether jurisdictions would legislate. 🟢 **Today it tracks when.** Live and dated, education-relevant:
+
+| date | jurisdiction | instrument |
+|---|---|---|
+| `2025-02-02` | 🟢 **EU** | Art. `5(1)(f)` emotion-recognition prohibition — **in force**, lands on proctoring |
+| `2026-01-22` | 🟢 **Korea** | AI Basic Act — **in force**, education = high-impact |
+| `2026-03-01` | 🟢 **Vietnam** | Law `134/2025/QH15` — **in force** |
+| `2026-07-01` | 🟡 **Ohio** | district AI policies — **elapsed** |
+| `2026-08-02` | 🟢 **EU** | Art. `50` transparency — **in force** |
+| `2026-08-15` | 🟢 **Vietnam** | Decision `33/2026/QD-TTg`, `46` high-risk systems incl. education — **in force** |
+| `2026-12-01` | 🟡 **Chile** | Ley `21.719`, automated profiling |
+| `2026-12-02` | 🟡 **EU** | two further Art. `5` prohibitions |
+| `2026-12-31` | 🟡 **North Carolina** | state model due |
+| `2027-09-01` | 🟡 **Vietnam** | transition ends for **pre-existing** education systems *(18 months, not 12)* |
+| `2027-12-02` | 🟡 **EU** | stand-alone Annex III high-risk |
+| `2027`–`28` SY | 🟡 **Oklahoma** | every district must hold a written AI policy |
+| `2028-08-02` | 🟡 **EU** | Annex I embedded high-risk |
+
+🔵 **A calendar is a more sellable artefact than an opinion**, and it is the single thing a studio can hand a client in the first meeting that nobody else in the room has.
+
+### 🔴 `T255-T4` — the trend in this base's own reliability, and it got worse before it got better
+
+🟢 `p251`: *unwired knowledge.* `p253`: *nothing consumes the wire.* `p254`: *the base inherits its own conclusions about what is impossible and never re-tests them.* 🔴 **`p255` adds the one that completes the set: a conclusion adopted at the MOMENT of a retraction inherits the retraction's credibility without earning it.**
+
+🔴 **`p254` did the hard thing — it broke a sixteen-pass inheritance by trying one transport — and then published a replacement explanation *(`403` = budget exhausted)* that the same pass's own `rate_limit` reading could have refuted.** 🟢 **The counter-measure is not more scepticism; it is that a replacement claim must carry its own falsifier.** [`p255-channel-reachability`](../compose/code/p255-channel-reachability/) is that counter-measure made standing: `47` controls, in `make hooks`, with p254's published row pinned as the case the rule **must refuse**.
 
 ## Pass 254 — 2026-10-16 — THE `2026` REGULATORY TREND HAS A SHAPE THIS SHELF CAN NOW NAME: **DISCLOSURE IS CONVERGING WHILE CLASSROOM RULES DIVERGE** — AND THE TREND IN THIS BASE'S OWN RELIABILITY IS THAT IT KEEPS MISTAKING A CLOSED DOOR FOR A WALL
 

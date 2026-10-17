@@ -1,0 +1,21 @@
+endpoint	transport	status	budget_remaining	sibling_answered	verdict	note
+api.github.com/	curl (proxy)	200	14996	UNKNOWN	OPEN	rate_limit on this transport reports core limit 15000 — the proxy transport is AUTHENTICATED
+api.github.com/rate_limit	curl (proxy)	200	14996	UNKNOWN	OPEN	p254 recorded this one as 403; it is 200 today, on the same transport
+api.github.com/rate_limit	WebFetch	200	51	UNKNOWN	OPEN	core limit 60 — the WebFetch transport is UNAUTHENTICATED
+api.github.com/repos/gmilano/education-kb	curl (proxy)	200	14996	TRUE	OPEN	in session scope
+api.github.com/repos/gmilano/globant-kb	curl (proxy)	200	14996	TRUE	OPEN	in session scope
+api.github.com/repos/moodle/moodle	curl (proxy)	403	14996	TRUE	POLICY-DENIED	out of session scope, meter full
+api.github.com/repos/HKUDS/DeepTutor	WebFetch	403	51	TRUE	POLICY-DENIED	REFUTES p254: the meter said 51 and the four calls billed 0
+api.github.com/repos/ai-shifu/ai-shifu	WebFetch	403	51	TRUE	POLICY-DENIED	same window as the 200 on /search/repositories
+api.github.com/repos/openedx/edx-platform	WebFetch	403	51	TRUE	POLICY-DENIED	same
+api.github.com/repos/moodle/moodle	WebFetch	403	51	TRUE	POLICY-DENIED	same
+api.github.com/users/{owner}	curl (proxy)	403	14996	TRUE	POLICY-DENIED	out of scope
+api.github.com/orgs/{org}	curl (proxy)	403	14996	TRUE	POLICY-DENIED	out of scope
+api.github.com/licenses/mit	curl (proxy)	403	14996	TRUE	POLICY-DENIED	a STATIC document is refused — the gate is the path class, not the repository
+api.github.com/search/repositories	curl (proxy)	403	14996	TRUE	POLICY-DENIED	out of scope
+api.github.com/search/code	curl (proxy)	403	14996	TRUE	POLICY-DENIED	out of scope
+api.github.com/search/repositories	WebFetch	200	10	UNKNOWN	OPEN	the ONLY star channel reachable from here; 10 calls/hour, spent to 0 this pass
+github.com/{owner}/{repo}	curl (proxy)	403	14996	TRUE	POLICY-DENIED	HTML host refused on this transport
+raw.githubusercontent.com	curl (proxy)	200	UNKNOWN	TRUE	OPEN	no scope gate — this is why the grant-payload channel always worked
+raw.githubusercontent.com	WebFetch	200	UNKNOWN	UNKNOWN	OPEN	200 on both transports
+eur-lex.europa.eu	curl (proxy)	0	UNKNOWN	UNKNOWN	POLICY-DENIED	proxy log: "gateway answered 403 to CONNECT (policy denial or upstream failure)" — never reaches the origin

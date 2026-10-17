@@ -45,8 +45,10 @@ FLOORS = uf.read_floors()
 # --verify`, which is a verifier and not a suite.  🔵 Said explicitly because the two counts
 # moved by DIFFERENT amounts for the first time; a later pass reading "+2 instruments, +1
 # file" as an arithmetic error would be re-deriving this note.
-chk("python test files on disk", len(ROWS), 205)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 24)
+# p255: +1 file and +1 gated — `p255-channel-reachability` (ACTION YE) entered the gate
+# in the same pass it was written, so both literals move together this time.
+chk("python test files on disk", len(ROWS), 206)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 25)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",

@@ -128,6 +128,9 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	cd - >/dev/null; \
 	echo "── p254-exit-status-reach (ACTION XZ: the live Makefile's own contract, verified)"; \
 	$(PY) -I compose/code/p254-exit-status-reach/exit_reach.py --verify Makefile >/dev/null && echo "   PASS" || exit 1; \
+	echo "── p255-channel-reachability (ACTION YE: a refusal that does not BILL is not a budget)"; \
+	cd compose/code/p255-channel-reachability && $(PY) -I test_channel_map.py >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code || exit 1; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

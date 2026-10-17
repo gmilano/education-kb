@@ -1,0 +1,14 @@
+slug	measured_stars	channel	shelf_cell	drift	note
+HKUDS/DeepTutor	41515	search/repositories (DeepTutor in:name)	41.5k	0	the shelf cell is CURRENT, not stale
+ai-shifu/ai-shifu	327	search/repositories (ai-shifu in:name)	326	+1	accurate to one star
+moodle/moodle	7490	search/repositories (moodle in:name stars:>300)	ABSENT	n/a	no star cell on any shelf — absence, not staleness
+moodlehq/moodleapp	1001	search/repositories (moodle in:name stars:>300)	ABSENT	n/a	Apache-2.0, the mobile client
+moodlehq/moodle-docker	576	search/repositories (moodle in:name stars:>300)	ABSENT	n/a	GPL-3.0
+C0D3D3V/Moodle-DL	653	search/repositories (moodle in:name stars:>300)	ABSENT	n/a	GPL-3.0
+PetoiCamp/OpenCat-Quadruped-Robot	5459	search/repositories (topic:education topic:ai)	ABSENT	n/a	MIT
+PetoiCamp/OpenCatEsp32-Quadruped-Robot	490	search/repositories (topic:education topic:ai)	NEW ROW	n/a	MIT
+ai-shifu/ChatALL	16510	search/repositories (ai-shifu in:name)	n/a	n/a	same owner, DIFFERENT product — do not conflate with ai-shifu/ai-shifu
+open-spaced-repetition/fsrs4anki	4107	search/repositories (topic:intelligent-tutoring-system)	-	n/a	MIT
+freeCodeCamp/freeCodeCamp	457186	search/repositories (topic:education stars:>3000)	-	n/a	BSD-3-Clause
+openedx/edx-platform	UNMEASURABLE	-	-	n/a	/repos POLICY-DENIED on both transports; edx-platform in:name returns forks only, not the canonical row
+pykt-team/pykt-toolkit	UNMEASURABLE	-	-	n/a	search budget spent (10/10) before this leg

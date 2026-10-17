@@ -1,8 +1,45 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-16
+updated: 2026-10-17
 ---
+
+## 2026-10-17 — Pass 255 — **THE `topic:` INDEX IS NOW MEASURED RATHER THAN SAMPLED: `4` AXES, `20` CANDIDATES, `19` ALREADY HERE.** AND A TOPIC TURNS OUT NOT TO BE A POPULATION — `topic:ai-tutor` IS **TWO** POPULATIONS DEPENDING ON THE SORT ORDER
+
+⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-row-supply`](../evidence/p255-row-supply.2026-10-16-p255.tsv) *(`20`)* · [`p255-stars`](../evidence/p255-stars.2026-10-16-p255.tsv) · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv) · [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv)
+
+### 🔴 `topic:education` at the top of the star distribution is not education software
+
+🟢 **Measured for the first time:** `topic:education` with `stars:>3000` is a population of **`64`**. Its head:
+
+| rank | repository | stars | licence | what it actually is |
+|---|---|---|---|---|
+| `1` | [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | `457 186` | `BSD-3-Clause` | a coding curriculum |
+| `2` | [`EbookFoundation/free-programming-books`](https://github.com/EbookFoundation/free-programming-books) | `399 217` | `CC-BY-4.0` | a book list |
+| `3` | [`TheAlgorithms/Python`](https://github.com/TheAlgorithms/Python) | `225 319` | `MIT` | algorithm implementations |
+| `4` | [`DigitalPlatDev/FreeDomain`](https://github.com/DigitalPlatDev/FreeDomain) | `204 516` | `AGPL-3.0` | 🔴 **free subdomains — not education at all** |
+| `8` | [`microsoft/Web-Dev-For-Beginners`](https://github.com/microsoft/Web-Dev-For-Beginners) | `96 963` | `MIT` | a curriculum |
+
+🔴 **`0` of the top `17` is software an educational institution would deploy.** The topic means *"material for learning to code"*, not *"software for running education"*. 🔵 **This is the long-sought explanation for a result this base has recorded twenty-four times without accounting for it:** the mandated agent query returns curricula because **the index it queries is a curriculum index**. The channel is not dry — it is pointed somewhere else.
+
+### 🟢 The axes run this pass, and what each is for
+
+| axis | `total_count` | head composition | verdict |
+|---|---|---|---|
+| `topic:education`+`topic:ai`, stars | `2 924` | 🟢 real tools, `3` `MIT` / `3` `AGPL-3.0` / `1` rider / `1` unlicensed | 🟢 **the productive axis — and `7` of `8` already carried** |
+| `topic:education`, `stars:>3000` | `64` | 🔴 curricula and one unrelated repo | 🔴 **not a software axis; stop running it for rows** |
+| 🟢 `topic:intelligent-tutoring-system`, stars *(new)* | `41` | 🟢 the most on-topic population available | 🔴 **`6`/`6` carried — saturated** |
+| 🟡 `topic:ai-tutor`, **recency** *(new)* | `702` | 🔴 `17` of `17` under `6`★, some pushed within the hour | 🟡 **a real but unpublishable tail** |
+| `topic:educacion`, stars | `354` | 🔴 Spanish-language course material, `0` agents | 🔴 confirms `p247`/`p252` |
+
+🟢 **Worth carrying forward as a rule:** *a topic plus a sort order is a population; a topic alone is not.* The same string returns a saturated professional set by `stars` and an unpublishable hobby set by `updated`, and a pass that does not state which it ran has not stated what it measured.
+
+### 🟢 Trending, for a reader who wants the short version
+
+- 🟢 **[`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki)** — `4 107`★, `MIT`. The FSRS scheduler is the de-facto open spaced-repetition algorithm and it sits under the `intelligent-tutoring-system` topic. 🟡 Already carried; re-surfaced here because its star figure is now measured.
+- 🟢 **[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)** — `49`★, `MIT`, pushed `2026-10-16`. An MCP server that fronts any LLM as an intelligent tutoring system. 🔵 Small, but it is the **composition shape** this KB keeps recommending, shipped by someone else.
+- 🔴 **[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM)** — `2 030`★ and **not redistributable**. See [`agents/top.md`](../agents/top.md) `T255-A`.
+- 🔴 **`github.com/trending`:** not re-read this pass. `p254` read it first-hand and found `0` education repositories out of `11`; nothing this pass contradicts that, and the search budget went to the `topic:` axes instead. 🟡 **Recorded as unrun rather than confirmed.**
 
 ## 2026-10-16 — Pass 254 — **THE OFFICIAL TRENDING FEED IS READABLE**, SEVENTEEN PASSES AFTER THIS SHELF DECLARED IT A GAP — AND ITS FIRST READING CONTAINS **`0` EDUCATION REPOSITORIES**, WHICH IS A RESULT AND NOT A MISS
 

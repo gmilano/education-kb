@@ -1,8 +1,62 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-16
+updated: 2026-10-17
 ---
+
+## Pass 255 — 2026-10-17 — **`ACTION YE`, `YF` AND `YG` ALL DISCHARGED — AND `YE` REFUTES THE RULE `p254` PUBLISHED WHILE RETRACTING THE LAST ONE.** A `403` THAT BILLS NOTHING IS NOT A BUDGET. PLUS `1` NEW ROW, `1` REFUSAL WORTH MORE THAN THE ROW, AND A SUPPLY CENSUS SAYING THE ENGLISH `topic:` INDEX IS SPENT
+
+⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Note for a reader of this file: the pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**
+
+### 🔴 The headline: a denial that does not bill is not a budget
+
+🟢 **`p254` was the pass that broke a sixteen-pass inheritance** — it tried the other transport and found the `403` *wall* was a closed door. 🔴 **And in the same pass it published a replacement rule its own numbers could have refuted:** *"treat a `403` from this channel as budget exhausted until `rate_limit` says otherwise."*
+
+🟢 **`p255` read the meter on both sides of the refusal.**
+
+| | |
+|---|---|
+| `rate_limit` via `WebFetch`, before | `core` `limit 60`, **`remaining 51`**, `used 9` |
+| four `/repos/{slug}` calls, same minute | 🔴 **`403` × 4** |
+| `/search/repositories`, same window | 🟢 **`200`** |
+| `rate_limit`, immediately after | 🔴 **`remaining 51`, `used 9` — the four calls billed nothing** |
+
+🔵 **And the probe nobody had run is the static one:** `api.github.com/licenses/mit` is `403` through the proxy, and it contains no repository at all. 🟢 **So the two transports are two IDENTITIES, held by two different gates:**
+
+| transport | identity | the gate | what it means |
+|---|---|---|---|
+| `curl` through the session proxy | 🟢 **authenticated, `15 000`/h** | a **repository-scope allow-list** | `/repos/gmilano/*` `200`; every other owner, all `/search/*`, `/users/*`, `/orgs/*` and `/licenses/*` → `403` |
+| `WebFetch` | 🔴 unauthenticated, `60`/h core + `10`/h search | an **endpoint allow-list** | `/search/*` `200`; `/repos/*` `403` |
+
+🔴 **Neither transport can read an arbitrary repository's metadata, and the two together cannot either** — so `search/repositories` is not the *cheaper* star channel, it is **the only one**. 🟢 **`raw.githubusercontent.com` is `200` on both with no gate**, which is why every licence verdict here has always been checkable while star cells were not.
+
+🟢 **Now standing rather than written down:** [`p255-channel-reachability`](compose/code/p255-channel-reachability/) — `47` controls, in `make hooks`, **proven able to fail**, with `p254`'s published row pinned as the adversarial case the rule must refuse.
+
+### 🟢 `1` new row — and the refusal beside it is worth more
+
+🟢 **[`PetoiCamp/OpenCatEsp32-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCatEsp32-Quadruped-Robot)** — `MIT`, `1 069` B, `sha256`₁₆ `2b8d26b3aa82e4a3`, `main` @ `84dd6eff307e`, `490`★, ref resolved by `ls-remote` before the probe. 🟡 **Scope stated:** ESP32 robotics firmware for STEM teaching, **not a tutor and not an agent**.
+
+🔴 **[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) — `2 030`★, REFUSED on its payload.** A *"PageLM Community License"*, `8 563` B: the MIT grant clause **verbatim for eleven words**, then non-commercial only, **redistribution strictly prohibited**, SaaS excluded by name, grant **revocable**. 🟢 **This base's own `p1054-mit-plus-clause` graded it `NOT-OPEN-SOURCE:added-restriction` — the first time `ACTION XQ`'s hardening has met a real payload instead of a fixture, and it held.**
+
+🟡 **The studio-facing point:** PageLM is free for a school and closed to the integrator hired by that school. 🔴 **A grant that exempts the end user and excludes the paid consultant is the most expensive kind of surprise, because it surfaces at delivery rather than at selection.**
+
+### 🔴 The supply census: `19` of `20` already here, across four axes
+
+🔴 **`20` substantive candidates gated through `make carried`. `19` `CARRIED`, `1` `NEW` — and the `NEW` one is the sibling of a carried row.** 🔴 **`topic:intelligent-tutoring-system`, the most on-topic string available and never run here before, returned `6` of `6` carried.** 🔴 **`WebSearch` paid `0` rows for the twenty-fourth consecutive pass.**
+
+🟢 **Two channel facts come out of that, and both are reusable.** 🔵 **`topic:education` at the top of the star distribution is a CURRICULUM index** — `stars:>3000` is `64` repositories and `0` of the top `17` is software an institution would deploy *(one is a free-subdomain service)*. **The mandated agent query returns curricula because the index it queries is a curriculum index; the channel was never dry, it was pointed elsewhere.** 🔵 And **a topic is not a population — a topic plus a sort order is**: `topic:ai-tutor` by `stars` is the saturated set this base holds, while by `updated` it is `702` rows whose head is `17` of `17` under `6`★.
+
+### 🟢 The regions, and the gaps named as gaps
+
+🟢 **`ACTION YG` discharged, and Vietnam's two dates were both right.** `2026-08-15` is **Decision `33/2026/QD-TTg`** *(the `46`-system high-risk list; education is `1` of `6` sectors)*; `2027-09-01` is the end of Law `134/2025/QH15`'s **18-month** transition for pre-existing education, healthcare and finance systems. 🔵 **Education is the MORE generous sector — and a greenfield build gets no transition at all, which inverts the obvious assumption.**
+
+🔴 **APAC's finding should change a roadmap: Korea unwound its flagship AI digital textbook mandate to optional *"educational material"* status, in the same year its AI Basic Act took force** *(`2026-01-22`, education = high-impact, penalties to KRW `30`M)*. 🟢 **The state withdrew as a purchaser and advanced as a regulator** — and every other region this pass fits the same shape.
+
+🟢 **North America** closed its `2026` session with **`10` enacted bills** — Oklahoma requiring a **written AI policy in every district before `2027`–`28`**, Maryland funding district AI coordinators, Alabama putting AI in a graduation requirement. 🟢 **LATAM gained its first standing regional instrument: UNESCO's AI-in-Education Observatory in Santiago de Chile**, plus **Estado de México's April `2026` education-law reform**, the first Mexican state to legislate AI in the classroom. 🟢 **EMEA's Digital Omnibus dates are corroborated on a seventh channel** *(`2027-12-02`, `2028-08-02`)* — 🟢 **so the advice not to sell an Annex III readiness programme this quarter is withdrawn.**
+
+🔴 **DECLARED GAPS, so silence is not read as coverage:** no confirmed `2026`-dated national AI-in-schools strategy for any specific sub-Saharan African country, fourth pass running; `eur-lex.europa.eu` is a **CONNECT-layer policy denial** *(the proxy's own log says so)* and will not come back on its own; `github.com/trending` was **not re-read** this pass and is recorded as unrun; and two flagship star cells — `openedx/edx-platform` and `pykt-team/pykt-toolkit` — are published as **`UNMEASURABLE`** with the reason attached.
+
+🔵 **The lesson for the ledger, and it completes a set four passes long.** `p251`: *unwired knowledge.* `p253`: *nothing consumes the wire.* `p254`: *the base inherits its own conclusions about what is impossible.* 🟢 **`p255`: a conclusion adopted at the moment of a retraction inherits the retraction's credibility without earning it.** The counter-measure is not more scepticism — it is that **a replacement claim must ship with its own falsifier.**
 
 ## Pass 253 — 2026-10-16 — **THE GATE WAS DEAF.** `make hooks` RAN FOR THE FIRST TIME IN THREE PASSES AND PRINTED `ALL OFFLINE LICENCE CONTROLS PASS` WITH A FAILING SUITE — ON ALL `31` STEPS. PLUS `ACTION XY` DISCHARGED WITH A PUBLISHED `sha256` CORRECTED, A SETTLED FACT RECOVERED AFTER TWO PASSES OF RE-LITIGATION, AND **`1` NEW ROW, THE FIRST IN SIXTEEN PASSES**
 
