@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 276) — Enumerating one ordinary backlog row made the standing gate report **thirteen false refutations**, and the cause was the correction `p275` added
+
+⏱️ **Twenty-second pass of `2026-10-17`.** Append-only — everything below this section is prior
+history and is not rewritten. Evidence:
+[`tree-enumeration.2026-10-17-p276.tsv`](../evidence/tree-enumeration.2026-10-17-p276.tsv) ·
+[`manifest-channel.2026-10-17-p276.tsv`](../evidence/manifest-channel.2026-10-17-p276.tsv) ·
+[`p276-websearch.2026-10-17-p276.tsv`](../evidence/p276-websearch.2026-10-17-p276.tsv).
+
+### 🔴 The headline is an instrument defect, and `frappe/lms` is what armed it
+
+`p275` taught `attribute()` to match a **bare repository name**, because Athena's claim was carried in
+bold prose with no link. 🔴 **Enumerating `frappe/lms` — one unremarkable row of its own backlog — then
+attributed FOURTEEN lines across FIVE shelves to it, and THIRTEEN were about other projects:**
+
+| line attributed to `frappe/lms` | what it is actually about | mechanism |
+|---|---|---|
+| `agents/trending.md:22775` | `DMontgomery40/mcp-canvas-lms` | `\b` **does not stop at a hyphen** — `-` is itself a non-word character |
+| `agents/trending.md:15982` | `CreveXTech/canvas-lms-mcp` | same |
+| `agents/trending.md:2977` | `alfredang/AI-LMS-TMS` | same, plus `re.I` |
+| `repos/trending.md:6887` | `Hesham0-0Nasser/tutor-lms-mcp` | same |
+| `agents/top.md:18` | the prose *"the **LMS**-side MCP servers"* | `re.I` makes **a common noun a name** |
+| `agents/trending.md:10704` | the prose *"a proprietary **LMS**"* | same |
+
+**A `REFUTED` row FAILS the gate.** Committing this pass's ledger unpatched would have turned
+`make hooks` red on thirteen claims about six other projects — **the instrument built to stop false
+absences manufacturing false presences instead.**
+
+🔵 **The fix is this base's own `p275` sentence, carried one predicate over:** *"case is load-bearing:
+`LICENSE` is a filename, `licence` is a word."* `p275` wrote it about the predicate that **suppresses**
+rows and never applied it to the predicate that **assigns** them. A name is now matched as its author
+spelled it, a name inside a longer token is not a mention, and a basename under four characters is a
+noun rather than a name. **27 → 11 refutations, and all 16 removed were false.**
+
+### 🔴 Four more grants the ladder could not reach
+
+| repo | carried verdict | what the tree or the manifest serves | licence |
+|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | *"`LIVE-NOGRANT` — no payload at eleven filenames"* | **`license.txt`** (lowercase **and** `.txt`) | `AGPL-3.0`, `33 893` B |
+| [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | *"NO GRANT — 17 filenames probed on `master`"* | **`license.txt`**, a composite (nextSIS + CodeIgniter + Bootstrap) | `GPL-3.0`, `39 890` B |
+| [`learningequality/kolibri-server`](https://github.com/learningequality/kolibri-server) | *"no payload (20 URLs)"* | **`debian/copyright`** — DEP-5 | `GPL-2+`, `1 284` B |
+| [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟢 *already correct* — *"Apache-2.0 · no payload at all"* | `pom.xml` `<licenses>`, `distribution=repo` | `Apache-2.0`, read first-hand |
+
+🟢 **`meyerjp3/psychometrics` is a positive control, not a correction** — this base had it right, at
+manifest grade, and `p276` only read the manifest first-hand. ⚠️ **It is also the precedent
+`DMontgomery40/mcp-canvas-lms` was denied**: the same channel, graded on one row and refused on another.
+
+⚠️ **`debian/copyright` is SCOPE-LIMITED.** Its `Files:` stanzas name five packaging paths
+(`kolibri.conf`, `kolibri.ini`, two nginx configs, `debian/*`) — a packaging grant, not a blanket repo
+grant. A gate that counts any licence-like path as *the repo's grant* cannot see that distinction, which
+is why `p276` adds a scope test with controls.
+
+### 🔵 `LearnPress/learnpress` — a hypothesis this shelf wrote, now discharged
+
+`repos/trending.md:12465` reasoned: *"Almost certainly GPL — WordPress plugins declare the grant in a PHP
+header comment, invisible to filename probes."* 🟢 **Correct, and now read:** `readme.txt` declares
+**`License: GPLv3`** and `composer.json` **`"license": "GPL-3.0-or-later"`**. Copyleft, so the build-on
+refusal stands — on licence grounds rather than on absence.
+
+### 🟢 Eighteen absences are now sayable in BOTH channels, and one is an EMEA finding
+
+The rows below have **no licence file in the tree and no `license` key in any manifest** — a far stronger
+statement than a ladder's silence. 🔴 **Among them:
+[`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials)
+— the European Commission's own European Digital Credentials reference implementation — ships NO grant
+across `2 970` enumerated paths**, its only licence-like files being three `licenseInfo.mustache` codegen
+templates, and its `pom.xml` carrying no licence element. **For an EMEA credentialing engagement that is
+a procurement blocker, not a footnote.**
+
+`CreveXTech/canvas-lms-mcp` · `Nasus20202/MoodleMCP` · `vkumar04/canvas-mcp-lite` ·
+`kevinraj23/student-assistant-mcp-server` · `educredentials/ec-issuer` · `alfredang/AI-LMS-TMS` *(a
+positive control: reproduces the published "proprietary / All rights reserved" refusal in both
+channels)* · `open-spaced-repetition/srs-benchmark` · `european-commission-empl/european-digital-credentials` ·
+`mendezjerick/ReaDirect-V2` · `bigdata-ustc/Agent4Edu` · `Aryan6238/EduAgent` · `JazminVidal/gop-pykaldi` ·
+`adlnet/SCORM-to-xAPI-Wrapper` · `fwu-de/schulfach-ontologie` · `jimbozhang/speechocean762` ·
+`rachelproject/module-template` · `JushBJJ/Mr.-Ranedeer-AI-Tutor` · `eth-lre/MathTutorBench`.
+
+### 🔴 Two of them prove a licence-like path is not a grant
+
+- **`mendezjerick/ReaDirect-V2`** carries **22** licence-like paths and **all 22 licence ART** — CC0
+  sprite packs, OFL font licences, generated-asset attributions. Not one covers code.
+- **`open-spaced-repetition/srs-benchmark`**'s `dataset/LICENSE` is **`144` B** and reads *"request
+  permission on anki.tenderapp.com before using it in other contexts"* — **the inverse of a grant**.
+
+Unpatched, both would have been reported as **refuting** their rows. `p276` adds `SCOPED` and
+`TRANSLATION` exclusions, each with a control drawn from these two rows plus forma.lms's **twelve
+translations of one GPL-2.0**.
+
 ## 2026-10-17 (pass 275) — A GPL-2.0 grant sat at `docs/License.txt` through 76 probes, because no ladder on this base ever spelled it that way
 
 ⏱️ **Twenty-first pass of `2026-10-17`.** Append-only — everything below is prior history and is not
@@ -834,7 +921,7 @@ except DeepTutor. True, still, for grading *agents*.
 | Candidate | Recommended as | What the payload says |
 |-----------|----------------|------------------------|
 | [formalms/formalms](https://github.com/formalms/formalms) | **Apache-2.0** LMS, by a 2026 open-source-LMS review | **GNU GPL v2**, at `html/license.txt`. Project is alive (last commit 2026-07-17) — just not permissive. |
-| Fedena: [foradian/fedena](https://github.com/foradian/fedena), [projectfedena/fedena](https://github.com/projectfedena/fedena) | **Apache-2.0** education ERP/SIS, by vendor comparison tables | **No licence payload at all** (Apache-2.0 stated in `README.markdown` and `NOTICE` only), and **abandoned**: last commits **2012-10-12** and **2016-07-20** (message: *"emptying content"*). |
+| Fedena: [foradian/fedena](https://github.com/foradian/fedena), [projectfedena/fedena](https://github.com/projectfedena/fedena) | **Apache-2.0** education ERP/SIS, by vendor comparison tables | **No licence payload at all** (Apache-2.0 stated in `README.markdown` and `NOTICE` only), and **abandoned**: last commits **2012-10-12** and **2016-07-20** (message: *"emptying content"*). | 🔵 **REFINED `p276` — not a refutation; this row already named the `NOTICE` channel, and the correction is narrower and goes the other way.** The `NOTICE` was **read at payload for the first time**: HTTP 200, `680` B, verbatim Apache-2.0 grant text, present in **both** repos. 🔴 **The disagreement is internal:** this base's own enumeration gate counts `NOTICE` as a *candidate grant* (`LICENCEY` matches `notice`), so the **instrument reports a grant on the very row whose prose says *"no licence payload at all"*.** Shelf and gate must say the same thing about the same tree. 🟢 **Abandonment independently UPHELD** (`projectfedena` `2016-07-20`, `foradian` `2012-10-12`), and it remains the whole reason to exclude Fedena. [`p276`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
 | [os4ed/openSIS-Classic](https://github.com/os4ed/openSIS-Classic) | GPL-2.0 SIS | Resolves, but **no licence payload served** on any path tried. Not shelved; this KB does not publish a licence it has not read. — 🔴 **SUPERSEDED 2026-10-17 (p275): this cell was wrong.** The grant is at `docs/License.txt` (GPL-2.0, 200, 17 286 B); the ladder never tried that path. Original text kept per the append-only rule. |
 
 Both directions of error landed in one pass: **a permissive platform missed for months
@@ -1355,7 +1442,7 @@ Each repository's ecosystem was detected from **its own tree** — one `git ls-r
 | learn-anything-with-AI | [`read2017/learn-anything-with-AI`](https://github.com/read2017/learn-anything-with-AI) | 🟢 **MIT** *(`LICENSE`, `1 065` B, `f551749a612d2e59`, ref `0b06235ed738`)* | 🟢 **`197`★** | Objetivo → entregables verificables, reutilizable entre materias |
 | Feynman | [`steveyeow/Feynman`](https://github.com/steveyeow/Feynman) | 🟡 **MIT raíz** *(`1 217` B, `aa8325eadd7fea1c`, ref `849c336c378c`)* · 🔴 **`BUSL-1.1` en `app/pro/`** *(`917` B, `9cf07d243fa7da6e`)* | 🟡 **`160`★** | Lectura con pensadores simulados — y el primer repositorio de **doble ámbito** que estos estantes miden |
 
-🔴 **`2` measured and refused, published because a supply report without its refusals is advertising:** [`ECNU-ICALK/EduChat`](https://github.com/ECNU-ICALK/EduChat) *(`973`★)* has **no grant on any of `6` Tier-A paths** at ref `fa30b6d5632c` and `license: null` in the API — a known educational LLM that **cannot be used**; [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) *(`163`★)* is `AGPL-3.0`, read first-hand at `34 523` B.
+🔴 **`2` measured and refused, published because a supply report without its refusals is advertising:** [`ECNU-ICALK/EduChat`](https://github.com/ECNU-ICALK/EduChat) *(`973`★)* has **no grant on any of `6` Tier-A paths** at ref `fa30b6d5632c` and `license: null` in the API — a known educational LLM that **cannot be used**; [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) *(`163`★)* is `AGPL-3.0`, read first-hand at `34 523` B. 🔴 **SUPERSEDED `p276` — *"cannot be used"* IS WITHDRAWN.** At the **same ref `fa30b6d5632c`** the tree serves **`LICENSE/LICENSE.txt`** — **Apache-2.0**, `11 357` B, the pristine length this base fingerprints elsewhere. 🔵 **Why six Tier-A paths and the API both missed it: `LICENSE` is a DIRECTORY here**, so every probe of that path hit a tree, not a blob, and GitHub's detector returned `license: null` for the same reason. **Two channels agreed because they share one blind spot.** ⚠️ Tiered: model `AGPL-3.0` (`33 821` B), data `CC-BY-NC-4.0` (`19 346` B) — **the code tier is the permissive one**. [`p276`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
 
 ### 🟢 Stars are measurable again — and the first measurement refuted `p253`'s two secondary figures
 
@@ -8978,7 +9065,7 @@ as `ACTION AU` with a 3× clause, so the next pass measures this instead of beli
 | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** · `LICENSE` 34 523 B · `main` · `5a194a5` | **7** | — |
 | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** · 1 068 B · `main` · `f0142f2` | **0** | — |
 | [`supe-log/writing-engine`](https://github.com/supe-log/writing-engine) | 🟢 **MIT** · `LICENSE` 1 065 B · `main` · `baa865f` | **0** | — |
-| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **NO GRANT** (17 filenames, `master`) · `60e422c` | 0 | — |
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **NO GRANT** (17 filenames, `master`) · `60e422c` | 0 | — | 🔴 **SUPERSEDED `p276`:** `license.txt`, **GPL-3.0**, `39 890` B at the same ref. [`p276`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
 | 🟡 [`scaleapi/researchrubrics`](https://github.com/scaleapi/researchrubrics) | 🟡 **MIT, holder unfilled** (`[Authors/Institution]`) · 1 078 B · `main` · `2dc80e2` | 0 | — |
 
 🔵 **A one-byte note, recorded and NOT repaired because this page is append-only:** an earlier row
@@ -9021,7 +9108,7 @@ that works in this industry.**
 | [`awesome-fsrs`](https://github.com/open-spaced-repetition/awesome-fsrs) | 718 | 🟡 **CC0 1.0** · 7 048 B | 0 |
 | [`py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | 507 | 🟢 MIT · 1 079 B | 38 |
 | [`fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | 441 | 🟢 BSD-3 · 1 509 B | 73 |
-| 🔴 [`fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | **325** | 🔴 **NO GRANT** | 4 |
+| 🔴 [`fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | **325** | 🔴 **NO GRANT** | 4 | 🔴 **SUPERSEDED `p276`:** `License`, **MIT**, `1 079` B. Permissive. [`p276`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
 | 🔴 [`srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) | **274** | 🔴 **NO GRANT** (15 filenames) | 0 |
 | [`go-fsrs`](https://github.com/open-spaced-repetition/go-fsrs) | 146 | 🟢 MIT · 1 079 B | 16 |
 | [`fsrs-optimizer`](https://github.com/open-spaced-repetition/fsrs-optimizer) | 112 | 🟢 BSD-3 · 1 509 B | **127** |
@@ -10985,7 +11072,7 @@ than a new row: `OpenOLAT/OpenOLAT` re-reads Apache-2.0 at **10 982 B**, the exa
 file already recorded, measured through a different probe path.**
 
 🔴 **One widely-cited row REFUTED: [`frappe/education`](https://github.com/frappe/education) and
-[`frappe/lms`](https://github.com/frappe/lms) are `LIVE-NOGRANT`** — no payload at eleven filenames
+[`frappe/lms`](https://github.com/frappe/lms) are `LIVE-NOGRANT`** — no payload at eleven filenames 🔴 **SUPERSEDED `p276`:** `frappe/lms` serves **`license.txt`** — **AGPL-3.0**, `33 893` B read at payload. `LIVE-NOGRANT` is withdrawn; the row is copyleft, not ungranted. [`p276`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
 with a clean 200 control on each. 🔵 **A secondary source this pass presented the Frappe education
 stack as open source; measured, it ships no grant at its root.**
 
@@ -12462,11 +12549,11 @@ unambiguous. 🔵 **Prefer unambiguous topic phrases; discount any count drawn f
 | 🆕 [`elmsln/elmsln`](https://github.com/elmsln/elmsln) | 🔴 **GPL-3.0** · `LICENSE.md` 35 193 B · `master` · `41f22f9` | 253 | **North America** (Penn State) | copyleft |
 | 🆕 [`gocodebox/lifterlms`](https://github.com/gocodebox/lifterlms) | 🔴 **GPL-3.0** · 35 141 B · `trunk` · `6ff84cf` | 211 | unplaced | WordPress LMS, **ships a LICENSE file** |
 | 🆕 [`leemonade/leemons`](https://github.com/leemonade/leemons) | 🔴 **"Fair Code License" v1.0** · `LICENSE.md` 10 830 B · `main` · `b1ca5d8` | 292 | unplaced | 🔴 **NOT OSI, not open source** — listed on `topics/lms` among genuinely open projects. v2 showed it as `OTHER/unclassified`; **v3 names it `FAIRCODE-NOT-OSI` so it can never be reported as open.** |
-| 🆕 [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🔴 **no payload / 24** · `develop` · `061a3ac` | 275 | unplaced | 🔵 Almost certainly GPL — **WordPress plugins declare the grant in a PHP header comment**, invisible to filename probing |
+| 🆕 [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🔴 **no payload / 24** · `develop` · `061a3ac` | 275 | unplaced | 🔵 Almost certainly GPL — **WordPress plugins declare the grant in a PHP header comment**, invisible to filename probing | 🟢 **SUPERSEDED `p276` — the hypothesis on this very line was RIGHT and is now evidence:** `readme.txt` declares **`License: GPLv3`** and `composer.json` **`"license": "GPL-3.0-or-later"`**. The WordPress-header channel this line predicted is real; the grade moves from *"almost certainly GPL"* to **GPL-3.0-or-later, read in two manifests**. [`p276-manifest`](../evidence/manifest-channel.2026-10-17-p276.tsv)
 | 🆕 [`atutor/ATutor`](https://github.com/atutor/ATutor) | 🔴 **no payload / 24** · `master` · `333030f` | 180 | **North America** (Toronto) | 🔴 The accessibility-pioneer LMS, **no grant file at the resolved SHA**; no longer user-level supported |
 
 🔵 **Two structural lessons from that table.** (1) **Within one ecosystem, grant *location* varies by project
-convention** — `lifterlms` ships a `LICENSE`, `learnpress` does not, same licence family. So **"no payload"
+convention** — `lifterlms` ships a `LICENSE`, `learnpress` does not, same licence family. So **"no payload" 🟢 **SUPERSEDED `p276` — the inference on this line was CORRECT and is now read evidence:** `learnpress` indeed ships no `LICENSE` file (1 985 paths enumerated), **and** it declares **`GPL-3.0-or-later`** in `composer.json` and **`License: GPLv3`** in `readme.txt`. The *"convention, not absence"* reading is confirmed in the manifest channel. [evidence](../evidence/manifest-channel.2026-10-17-p276.tsv)
 means *unverifiable from the repo root*, which is weaker than "ungranted", and this shelf must not collapse the
 two.** (2) **Source-available licences with friendly names need naming, not dropping** — silence and a refusal
 both read as "unclassified", and only one of them is a warning.
@@ -15386,7 +15473,7 @@ included, both languages, word-boundaried — before any search ran.**
 | Repo | Licence (channel · bytes) | Why it is here |
 |---|---|---|
 | 🆕 [`ZIYINGJERRY/difair`](https://github.com/ZIYINGJERRY/difair) | 🟢 **MIT** · payload `main/LICENSE` · **1,075 B** · + `pyproject.toml` agrees (`P482`) | 🔴 **The only permissive DIF implementation in any language this pass could find.** Mantel-Haenszel, Breslow-Day, standardization, logistic DIF, iterative purification, survey weights, polytomous DIF — and ML fairness metrics in the same API. **v0.7.0**, 🔴 **not on PyPI** |
-| 🆕 [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟢 **Apache-2.0** · 🔴 **no payload at all** — per-file headers + `pom.xml` `<licenses>` + README | 🔴 **The only permissive equating implementation this pass could find.** Java, 7 Maven modules. **Mean-Mean, Mean-Sigma, Stocking-Lord** IRT linking + score equating. 🔴 Its root `pom.xml` still carries a **2011 GPL-3 header** — `P494` |
+| 🆕 [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟢 **Apache-2.0** · 🔴 **no payload at all** — per-file headers + `pom.xml` `<licenses>` + README | 🔴 **The only permissive equating implementation this pass could find.** Java, 7 Maven modules. **Mean-Mean, Mean-Sigma, Stocking-Lord** IRT linking + score equating. 🔴 Its root `pom.xml` still carries a **2011 GPL-3 header** — `P494` | 🟢 **CORROBORATED `p276`:** `pom.xml` `<licenses>` Apache-2.0 (`distribution=repo`) read first-hand; 395 paths, no licence file. *"No payload at all"* is precise, and the Apache-2.0 grade stands at manifest grade. [`p276-manifest`](../evidence/manifest-channel.2026-10-17-p276.tsv)
 | 🆕 [`dssg/aequitas`](https://github.com/dssg/aequitas) | 🟢 **MIT** · payload `master/LICENSE` · **1,083 B** | Bias-audit toolkit (DSSG). 🔵 The **ML-fairness** half that `difair` bridges to the **psychometric** half |
 
 ### 🔴 Measured and rejected — 7 rows, with the channel that decided it
@@ -15589,7 +15676,7 @@ shelf's correction rather than making one.
 ### 🔴 Ungranted or unresolved — 4
 
 [`shrutika00/StudyMate`](https://github.com/shrutika00/StudyMate) (LangGraph + Gemini + RAG adaptive
-tutor, **real, no payload**) · [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms)
+tutor, **real, no payload**) · [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) 🔴 **SUPERSEDED `p276`:** `DMontgomery40/mcp-canvas-lms` is **MIT** in `package.json` + npm (19 versions); *"real, no payload"* describes the FILE channel only. [`p276-manifest`](../evidence/manifest-channel.2026-10-17-p276.tsv)
 (**real, no payload**) · [`Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent`](https://github.com/Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent)
 and [`Aryan6238/EduAgent`](https://github.com/Aryan6238/EduAgent) (**both real, both no payload**) ·
 [`EastArctica/canvas-mcp`](https://github.com/EastArctica/canvas-mcp) (**nothing resolved — may not
@@ -18475,7 +18562,7 @@ repositories**; this KB had recorded Kolibri, `studio` and `ricecooker`.
 | [learningequality/le-utils](https://github.com/learningequality/le-utils) | **MIT** (`main/LICENSE.txt`) | not read this pass | Constants and utilities shared across Kolibri, Ricecooker and Studio — the vocabulary layer anything generating Kolibri channels needs. |
 | [learningequality/studio](https://github.com/learningequality/studio) | **MIT** (`master/LICENSE`), **full text read** | not read this pass | Content curation for Kolibri. Already on these shelves; **re-verified this pass for a reason** — see below. |
 | [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | **no payload** (20 URLs) | not read this pass | Vue design system. Repository exists (`main/README.md` resolves); **the grant does not.** Do not ship client UI from it on an assumption. |
-| [learningequality/kolibri-server](https://github.com/learningequality/kolibri-server) | **no payload** (20 URLs) | not read this pass | Performance and caching access layer for Kolibri, multi-core. **The repository exists** (`main/README.rst`; `README.md` does not resolve). **No licence payload under any of 20 URLs.** |
+| [learningequality/kolibri-server](https://github.com/learningequality/kolibri-server) | **no payload** (20 URLs) | not read this pass | Performance and caching access layer for Kolibri, multi-core. **The repository exists** (`main/README.rst`; `README.md` does not resolve). **No licence payload under any of 20 URLs.** | 🔴 **SUPERSEDED `p276`:** **`debian/copyright`**, DEP-5, **GPL-2+**, `1 284` B — scoped to five packaging paths. [`p276`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
 
 **Two of four new probes inside the MIT-friendliest organisation on these shelves
 came back ungranted.** An organisation's licence posture is not inherited by its

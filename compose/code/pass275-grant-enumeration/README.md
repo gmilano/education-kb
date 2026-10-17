@@ -102,3 +102,103 @@ conocido no sostiene una ausencia"*): the predicate must find both grants this p
 🔵 **`QUEUE-UNENUMERATED=124` is not a failure signal** — it is the honest size of the backlog, printed
 on every `make hooks` run. **Two of the first thirteen rows enumerated were false**, which is the only
 sample this base has of how wrong the ladder-shaped evidence is.
+
+---
+
+# `p276` — what WORKING this instrument's own backlog did to it
+
+🔵 **`p275` closed by saying the queue was *"budget, not design."* It was both.** 30 of the 124 queued
+rows were enumerated in two channels. All 30 slugs resolve, **9 negative verdicts were refuted, 7
+positive controls passed, 18 absences are now sayable in both channels** — and the instrument failed
+three ways on its own backlog.
+
+## 🔴 D1 — the gate did not implement the finding that motivated it
+
+`p275`'s headline was `ls1intum/Athena`: **no licence file in the tree**, `license = "MIT"` in **12 of 14
+manifests**. It found that by hand — and then built a module that reads `git ls-tree` **file paths only.**
+
+| row | file channel | manifest / registry channel |
+|---|---|---|
+| `DMontgomery40/mcp-canvas-lms` | 36 paths, none licence-like | `package.json` **MIT** + npm **MIT × 19 versions** |
+| `meyerjp3/psychometrics` | 395 paths, none licence-like | `pom.xml` `<licenses>` **Apache-2.0** |
+| `LearnPress/learnpress` | 1 985 paths, none licence-like | `readme.txt` **GPLv3** + `composer.json` **GPL-3.0-or-later** |
+
+**Run as built, the gate would have stamped all three `VERIFIED-ABSENT`.** `load_manifest_ledgers()` now
+reads `evidence/manifest-channel.*.tsv`, and an absence requires **both** channels empty.
+
+🔴 **Sub-species worth keeping: two channels can agree because they share one blind spot.**
+`ECNU-ICALK/EduChat` returned nothing on six path probes **and** `license: null` from GitHub's API —
+because `LICENSE` is a **directory** there. Every probe hit a tree instead of a blob; the API's detector
+failed for the same reason. **The agreement read as corroboration.**
+
+## 🔴 D5 — bare-name attribution had no specificity test, and one ordinary row armed it
+
+`p275` taught `attribute()` to match a **bare repository name** (Athena was named in bold prose with no
+link). 🔴 **Enumerating `frappe/lms` then attributed FOURTEEN lines across FIVE shelves to it, and
+THIRTEEN were about other projects** — `mcp-canvas-lms`, `canvas-lms-mcp`, `AI-LMS-TMS`, `tutor-lms-mcp`
+(`\b` **does not stop at a hyphen**: `-` is itself a non-word character), plus the prose *"the LMS-side
+MCP servers"* and *"a proprietary LMS"* (`re.I` makes **a noun a name**).
+
+**A `REFUTED` row FAILS the gate**, so the ledger would have turned `make hooks` red on thirteen claims
+about six other projects. 🔵 **The fix is `p275`'s own sentence** — *"case is load-bearing: `LICENSE` is a
+filename, `licence` is a word"* — **applied to the predicate that ASSIGNS rows instead of the one that
+SUPPRESSES them.** Case-sensitive matching, a token-boundary guard rejecting `[-_/A-Za-z0-9]` on either
+side, and `MIN_BARE_NAME = 4`. **27 → 11 refutations; all 16 removed were false.**
+
+## 🔴 D2 — `candidate_grants()` had no SCOPE test
+
+A licence-like path was counted as *the repository's grant* whatever it actually covered:
+
+- **asset-scoped** — `mendezjerick/ReaDirect-V2` carries **22** licence-like paths and **all 22 licence
+  art** (CC0 sprites, OFL fonts, generated-asset attributions);
+- **dataset-scoped** — `open-spaced-repetition/srs-benchmark`'s `dataset/LICENSE` is **`144` B** and says
+  *"request permission"* — **the inverse of a grant**;
+- **translation** — forma.lms ships `license_english.txt` … `license_tamil.txt`, **twelve translations of
+  one GPL-2.0** whose real payload is `html/license.txt`.
+
+Unpatched, the first two report **REFUTED**. `SCOPED` and `TRANSLATION` now exclude them, each with a
+control. ⚠️ **`debian/copyright` is deliberately still a grant** — it is scope-limited (DEP-5 `Files:`
+stanzas naming five paths) but real, and the ledger records the scope in prose rather than dropping it.
+
+## 🔴 D3 — the grant-evidence vocabulary was written from an idea of the house style, not measured against it
+
+`GRANT_EVIDENCE` is meant to recognise a line that **publishes** a grant, so a correction does not read as
+a live negative verdict. Three gaps, all measured:
+
+| gap | mechanism | corpus-wide |
+|---|---|---|
+| **D3a** | the house writes byte counts as `` `1 531` B `` — the **backtick sits between the digits and the unit**, and the token could not cross it | **361** lines carry a count it could not see; **4** reach the gate |
+| **D3b** | the house also asserts a first-hand read in **prose** (*"the payload is the verbatim BSD-3 form"*); only *"read at payload"* was listed | 2 lines |
+| **D3c** | a row whose grant lives in metadata publishes it by **naming the manifest** (*"`pom.xml` `<licenses>`"*, *"MIT (metadata)"*) — **D1's defect inside the vocabulary** | 3 rows that are **right** read as live negative verdicts |
+
+🔵 **Both numbers are published because conflating them would be the inflation this base polices:** the
+latent gap is 361 lines, the live effect is 6.
+
+🟢 **A hypothesis tested and REFUTED, recorded because an informed negative is information:** *"the queue
+is inflated by BSD boilerplate, since `NEGATIVE` matches `all rights reserved` and that is line 2 of the
+BSD form."* **Measured: 2 of 124 rows (1.6%).** The queue is overwhelmingly genuine (115/124, 92.7%).
+
+## 🔴 A self-correction earned by running this against the live shelves
+
+`load_manifest_ledgers()` first tested `key not in ("-", "<no license key>")` — **an equality test on a
+free-text cell.** `Nasus20202/MoodleMCP`, whose cell reads *"<no license key in any>"* (it has five
+`package.json` files), was read as a **declared grant**. **An absence marker must be matched by
+predicate**, or the gate manufactures a presence out of prose. `ABSENT_KEY` now does that.
+
+## ⚠️ STATE, AND WHAT IS NOT VERIFIED
+
+**Expected after this patch: `REFUTED=0 · VERIFIED-ABSENT=48 · QUEUE-UNENUMERATED=70`, `47/47` controls.**
+
+🔴 **Nothing here was EXECUTED.** The sandbox hosting `p276` refuses to run scripts from a cloned
+repository, and that refusal was respected rather than circumvented. The patch was validated **as data**
+(`ast.parse`; every module-level regex literal extracted and compiled; all 18 new controls checked against
+an independent reimplementation of the predicates that reproduces `p275`'s published state exactly).
+**`p277` must run `make hooks` and `python3 -I test_enumeration_gate.py` before trusting any of it** — see
+`intel/open-gaps.md`, Gap 1.
+
+🔴 **And one known regression, declared rather than hidden:** `states_a_grant()` is **line-scoped** while
+`attribute()` is **subject-scoped**, so on `repos/trending.md:1358` — which carries both `EduChat`
+(a false absence) and `sitor-ai/frametell` (`AGPL-3.0`, `34 523` B) — D3a reads *frametell's* byte count
+and silences *EduChat's* false claim. `p275` fixed this exact *"one line, two subjects"* shape in
+`attribute()` and left it in `states_a_grant()`. **Scoping the suppression to its subject's span is
+`p277`'s ranked #1 for this instrument**, and was deliberately not attempted unrun.

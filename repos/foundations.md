@@ -41,8 +41,8 @@ where pass 273's finding landed**; it landed on the agent shelf and on licence m
 > twice.** See the `gegok12` retraction below and `T44`.
 
 | Repo | Licence | Stars | Why it is a foundation |
-| 🆕 [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** *(`main/LICENSE`, `1 150` B, payload read + diffed, `p274`)* — ⚠️ **core only: 12 Pro modules sold separately** | 54★ / **98 forks** *(carried; no star read from GitHub this pass)* | **Self-hosted school ERP / SIS** on PHP 8.4 + Laravel. 🟢 **The permissive SIS layer this base has said for nine passes does not exist** — and the reason it was missing is that the base probed a slug that does not resolve, twice (`T44`). 🔵 **Its fork network is its adoption evidence**: 98 forks, near-zero fork stars, institution-shaped fork names across **India, Indonesia and Vietnam** (`P933` — software institutions RUN rather than developers EXTEND). ⚠️ **Deployment-placed APAC; origin not established.** ⚠️ **Price the Pro modules before the SOW** |
 |------|---------|-------|------------------------|
+| 🆕 [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** *(`main/LICENSE`, `1 150` B, payload read + diffed, `p274`)* — ⚠️ **core only: 12 Pro modules sold separately** | 54★ / **98 forks** *(carried; no star read from GitHub this pass)* | **Self-hosted school ERP / SIS** on PHP 8.4 + Laravel. 🟢 **The permissive SIS layer this base has said for nine passes does not exist** — and the reason it was missing is that the base probed a slug that does not resolve, twice (`T44`). 🔵 **Its fork network is its adoption evidence**: 98 forks, near-zero fork stars, institution-shaped fork names across **India, Indonesia and Vietnam** (`P933` — software institutions RUN rather than developers EXTEND). ⚠️ **Deployment-placed APAC; origin not established.** ⚠️ **Price the Pro modules before the SOW** |
 | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | **Interactive learning with automated feedback**, from TUM Applied Education Technologies. Programming, quiz, modelling and text exercises with automatic assessment and an integrated CI runner. The strongest MIT-licensed teaching platform found this pass — production-grade and university-maintained. **Pass 266:** it ships three *config-gated* AI subsystems — **Iris** (LLM tutor, [`ls1intum/Iris`](https://github.com/ls1intum/Iris), MIT), **Pyris** (the LLM microservice behind it, [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris), MIT) and **Athena** (feedback suggestion, [`ls1intum/Athena`](https://github.com/ls1intum/Athena), 🟢 **MIT at metadata grade since p275** — no licence *file* exists (tree enumerated, 691 paths) but **12 of 14 manifests declare `license = "MIT"`**; the earlier *"all-rights-reserved"* verdict is retracted), plus **Hyperion** (AI exercise authoring, not a separate repo). Config-gated matters: the platform runs identically with AI off, which is the posture an EU AI Act high-risk classification wants. |
 | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | MIT | 4.1k | FSRS, the modern spaced-repetition scheduler. The highest-adoption learning-science component in open source. Pair with [fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) (BSD-3-Clause) for a Rust core you can embed. |
 | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT | 450 | The reference PyTorch knowledge-tracing benchmark library: standard datasets, standard splits, comparable baselines. If a client asks "can you predict what this student knows", this is the honest starting point. |
@@ -76,6 +76,8 @@ where pass 273's finding landed**; it landed on the agent shelf and on licence m
 | [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) | **Apache-2.0** | 286 | *"Enterprise open source portal built by and for the higher education community."* 17,158 commits, 278 forks. The campus portal / single-pane-of-glass layer: where an institution aggregates its systems, and therefore where an agent surface reaches the most students per integration. **Note the licence divergence inside Apereo:** uPortal is Apache-2.0, while its siblings `sakaiproject/sakai` and `apereo/opencast` are ECL-2.0 — so the educational-use patent scoping this base flagged on those two **does not apply here**. |
 | [learningequality/studio](https://github.com/learningequality/studio) | **MIT** | 193 | *"Content curation tools for Kolibri"* — **Kolibri Studio**, the authoring and publishing half of the offline-first stack this file already shelves. 15,493 commits, 312 forks. Organises content into channels Kolibri can import, remixes existing channels against **national curricula**, and builds learning pathways and assessments. Without it, a Kolibri deployment is a reader with no pipeline. *Licence note: the MIT copyright line reads "(internal apps)", but the grant and condition clauses are unmodified standard MIT — reading that parenthetical as a restriction would be a false positive.* |
 | [DFE-Digital/apply-for-teacher-training](https://github.com/DFE-Digital/apply-for-teacher-training) | **MIT** *(under Crown Copyright)* | 38 | **A national education ministry's production service, MIT-licensed.** *"A service for applying to teacher training courses"* — **34,414 commits**, run by the **UK Department for Education** at `apply-for-teacher-training.service.gov.uk`. The payload reads *"Copyright (c) Crown Copyright (Department for Education)"*. Beside it, [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) (MIT, *"Department for Education - Digital"*). ⚠️ **38 stars against 34,414 commits** — the same instrument blindness as Sunbird. ⚠️ **And the licence file is spelled `LICENCE`**: a probe trying only `LICENSE` reads this MIT service as unlicensed. |
+| 🆕 [meyerjp3/psychometrics](https://github.com/meyerjp3/psychometrics) | 🟢 **Apache-2.0** *(`pom.xml` `<licenses>`, `distribution=repo`, read first-hand `p276`; **no payload in the tree** — 395 paths enumerated)* | 57 | **The permissive psychometrics layer this shelf had no answer for.** Java: IRT (Rasch/2PL/3PL/GPCM), CTT, factor analysis, finite mixture models, **IRT linking (Mean-Mean, Mean-Sigma, Stocking-Lord) and score equating**. 🔵 An adaptive-assessment engagement needs exactly this under the model layer, and `OATutor`'s BKT does not cover equating. ⚠️ Modules: `-core`, `-ctt`, `-factor`, `-fmm`, `-irt`. [evidence](../evidence/manifest-channel.2026-10-17-p276.tsv) |
+| 🆕 [open-spaced-repetition/fsrs4anki-helper](https://github.com/open-spaced-repetition/fsrs4anki-helper) | 🟢 **MIT** *(`License` — mixed case, no extension — `1 079` B, payload read `p276`)* | 325 | **FSRS scheduling as a foundation, not a feature.** Retention-targeted interval computation, load balancing, postpone/advance, reschedule-all. 🔴 Carried as *"NO GRANT in 6 filenames"* until `p276` enumerated the tree. [evidence](../evidence/tree-enumeration.2026-10-17-p276.tsv) |
 
 **31 permissive foundation rows** (17 from pass 264, 4 in pass 265, 6 added and payload-verified in
 pass 267, 4 Ed-Fi rows in pass 268). Pass 267's six were all found by **ranking candidates by commits
@@ -377,6 +379,33 @@ from absence.
   `crpf-mitadt/Indian-AI-for-Education` (CC0-1.0, 7,048 B). 🔵 **`p268` warned that rewriting a
   good figure on noise is as bad as publishing a bad one. Three independent agreements, including
   one to the byte, say this base's APAC licence cells are sound.**
+
+## Pass 276 — the permissive table was missing its separator, and two foundations were missing their grants
+
+🔴 **A formatting defect first, because it hid `p274`'s own prize row.** The permissive table's
+`|------|` separator sat **below** the `Gego-K12/gegok12` row rather than above it, so the row this base
+spent two passes recovering rendered **as part of the table header**. Restored this pass. 🔵 **No gate on
+this base reads table structure**, which is why a defect in the shape of the evidence outlived several
+passes of scrutiny of its content.
+
+🟢 **Two rows join the permissive tier, and neither came from a search:**
+
+- **`meyerjp3/psychometrics`** — `Apache-2.0`, declared in `pom.xml` `<licenses>`. This base already
+  graded it correctly at manifest grade; `p276` read the manifest first-hand and promoted it onto this
+  shelf, where the **IRT-linking and score-equating** layer had no permissive answer at all.
+- **`open-spaced-repetition/fsrs4anki-helper`** — `MIT`, at **`License`**: mixed case, no extension. Six
+  filename probes missed it; one `git ls-tree -r` found it.
+
+🔴 **And one absence became a procurement finding.**
+[`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials)
+— the **European Commission's own** European Digital Credentials reference implementation — serves **no
+grant across `2 970` enumerated paths** and **no `license` element in its `pom.xml`**. Its only
+licence-like files are three `licenseInfo.mustache` codegen templates. ⚠️ **An EMEA credentialing
+engagement cannot build on it as open source**, and this is the first time that is stated from an
+enumeration rather than from a ladder.
+
+**State:** `QUEUE-UNENUMERATED` **124 → 70**, `VERIFIED-ABSENT` **28 → 48**, `REFUTED` **0**.
+
 
 ## Pass 275 — a GPL-2.0 grant was sitting at `docs/License.txt`, and the ladder that missed it had been extended four times
 

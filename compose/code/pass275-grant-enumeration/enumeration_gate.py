@@ -51,7 +51,12 @@ RETRACTION = re.compile(
     # with a dated supersede marker rather than rewritten.  The original claim STAYS on
     # the line by design -- so the marker, not the absence of the claim, is what tells the
     # gate the line is narration.
-    r"SUPERSEDED|was wrong",
+    r"SUPERSEDED|was wrong|"
+    # 🔴 p276 D3d: `withdrawn` is this base's own word for retracting published ADVICE
+    # ("*Do not use* is WITHDRAWN"), and the vocabulary did not list it -- so a pass's own
+    # correction prose read as a live negative verdict.  Same species as D3a-c: the
+    # predicate was written from an idea of the house style rather than measured against it.
+    r"withdrawn|WITHDRAWN",
     re.I,
 )
 
@@ -73,9 +78,24 @@ GRANT_EVIDENCE = re.compile(
     r"[Ll]icen[cs]e\.(txt|md|rtf)"      # License.txt, LICENSE.md, LICENSE.rtf
     r"|/[Ll]icen[cs]e\b"                # a PATH ending in a licence file
     r"|\bLICEN[CS]E\b"                  # the bare filename, in caps
-    r"|\d[\d\u00a0 ]*B\b"              # a measured byte count, e.g. "17 286 B"
+    # 🔴 p276 D3a: the old token was r"\d[\d\u00a0 ]*B\b" and it could not cross a
+    # markdown backtick -- but THE HOUSE WRITES BYTE COUNTS AS `1 531` B, with the
+    # closing backtick BETWEEN the digits and the unit.  361 lines on these shelves
+    # carry a measured count this predicate was written to see and could not.
+    r"|\d[\d\u00a0 ]*[`*_]*\s*B\b"     # a measured byte count, e.g. "17 286 B", `1 531` B
     r"|(?i:manifests? declare)"         # the metadata channel, stated
-    r"|(?i:read at payload)")
+    r"|(?i:read at payload)"
+    # 🔴 p276 D3b: the house also asserts a first-hand read in PROSE, and the old
+    # vocabulary listed only one phrasing of it.  verticals/solutions.md:39 publishes
+    # a correct BSD-3-Clause grade and was queued as a live negative verdict.
+    r"|(?i:payload is|payload-read|reproduced to the byte|verbatim [A-Z])"
+    # 🔴 p276 D3c, and this is D1's defect showing up inside the VOCABULARY.  A row whose
+    # grant lives in metadata publishes it by NAMING THE MANIFEST -- "Apache-2.0, per-file
+    # headers + pom.xml <licenses> + README", "MIT (metadata)".  That is a published grant in
+    # this base's own idiom, and the predicate did not list it, so three rows that are RIGHT
+    # read as live negative verdicts.  The file channel was the only channel the vocabulary knew.
+    r"|(?i:pom\.xml|package\.json|composer\.json|pyproject\.toml|readme\.txt|<licenses>)"
+    r"|(?i:metadata grade|metadata\)|manifest grade)")
 
 
 def states_a_grant(line):
@@ -85,6 +105,15 @@ def states_a_grant(line):
 
 SLUG = re.compile(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)")
 
+# 🔴 p276 D5a: `frappe/lms` has the basename `lms`, which is an ordinary English noun on
+# every shelf in this base.  Bare-name attribution below is a FALLBACK for a project named
+# in prose without a link; it must never fire on a word.  Athena (6) and Artemis (7) -- the
+# cases the fallback exists for -- are both well clear of this floor.
+MIN_BARE_NAME = 4
+
+# p276: an absence marker in a manifest-channel ledger, matched as a PREDICATE.
+ABSENT_KEY = re.compile(r"no licen[cs]e key|^-+$|^none$", re.I)
+
 # Directories whose licence files belong to a VENDORED dependency, not to the repo.
 VENDORED = re.compile(
     r"(^|/)(vendor|node_modules|custompackages|libraries|third_party|thirdparty|"
@@ -93,6 +122,22 @@ VENDORED = re.compile(
 )
 # Extensions that make a licence-like path a SOURCE FILE, not a grant.
 SOURCEY = re.compile(r"\.(php|java|vue|py|js|ts|jsx|tsx|go|rb|cs|png|svg|jpg|gif)$", re.I)
+# 🔴 p276 D2: a licence-like path is not automatically THIS REPO'S CODE GRANT, and the
+# first version of this module had no scope test at all.  Three species, each with a
+# control from p276's enumeration:
+#   * ASSET-scoped   -- mendezjerick/ReaDirect-V2 carries 22 licence-like paths and ALL 22
+#                       licence game art, CC0 sprites and OFL fonts.  Not one covers code.
+#   * DATASET-scoped -- open-spaced-repetition/srs-benchmark's dataset/LICENSE is 144 B and
+#                       says "request permission" -- the inverse of a grant.
+#   * TRANSLATION    -- formalms ships license_english.txt ... license_tamil.txt, twelve
+#                       translations of the SAME GPL-2.0 whose real payload is html/license.txt.
+# Without this test both asset rows report REFUTED, and a REFUTED row FAILS the gate: the
+# instrument built to stop false absences would have manufactured two false presences.
+SCOPED = re.compile(
+    r"(^|/)(assets?|dataset|datasets|fonts?|icons?|images?|media|javascripts|\.corepack)(/|$)",
+    re.I,
+)
+TRANSLATION = re.compile(r"(^|/)licen[cs]e_[a-z]+\.(txt|md)$", re.I)
 LICENCEY = re.compile(
     r"(^|/)(licen[cs]e|copying|notice|unlicense|eupl|copyright)", re.I
 )
@@ -109,6 +154,8 @@ def candidate_grants(paths):
             continue
         if VENDORED.search(p) or SOURCEY.search(p):
             continue
+        if SCOPED.search(os.path.dirname(p)) or TRANSLATION.search(p):
+            continue  # p276 D2: licences art/data/translations, not this repo's code
         out.append(p)
     return out
 
@@ -142,6 +189,50 @@ def load_ledgers(root):
     return ledger, dead
 
 
+def load_manifest_ledgers(root):
+    """slug -> SPDX-ish licence key, from every committed MANIFEST-channel ledger.
+
+    🔴 p276 D1 -- THE DEFECT THIS FUNCTION EXISTS FOR.  p275's headline case was
+    `ls1intum/Athena`: no licence FILE anywhere in the tree, and `license = "MIT"` in 12 of
+    its 14 manifests.  p275 found that BY HAND, wrote it up as the pass's central finding --
+    and then built this module to read `git ls-tree` FILE paths only.  **The instrument did
+    not implement the finding that motivated it.**
+
+    p276 enumerated 30 queue rows in both channels.  Three carry a grant no file enumeration
+    can see, and all three would have been stamped VERIFIED-ABSENT by this gate as built:
+
+      * `DMontgomery40/mcp-canvas-lms`  package.json `"license": "MIT"`, and npm
+        `canvas-mcp-server` MIT across 19 published versions.  The shelf said *"no LICENSE on
+        any branch, no licence statement"* -- the FILE limb true, the STATEMENT limb false.
+      * `meyerjp3/psychometrics`        pom.xml `<licenses>` Apache-2.0.
+      * `LearnPress/learnpress`         readme.txt `License: GPLv3` + composer.json
+        `GPL-3.0-or-later`.
+
+    Column 4 is the licence key as the manifest spells it; `-` and `<no license key>` mean the
+    manifest was READ and carries none, which is what makes a two-channel absence sayable.
+    """
+    man = {}
+    pattern = os.path.join(root, "evidence", "manifest-channel.*.tsv")
+    for path in sorted(glob.glob(pattern)):
+        with open(path, encoding="utf-8") as fh:
+            for line in fh:
+                if line.startswith("#") or not line.strip():
+                    continue
+                cols = line.rstrip("\n").split("\t")
+                if len(cols) < 5 or cols[0] == "slug":
+                    continue
+                key = cols[4].strip()
+                # 🔴 p276 self-correction, earned by RUNNING this against the live shelves:
+                # the first version tested `key not in ("-", "<no license key>")` -- an exact
+                # match on a FREE-TEXT cell -- and `Nasus20202/MoodleMCP`, whose cell reads
+                # "<no license key in any>" (it has five package.json files), was read as a
+                # DECLARED GRANT.  An absence marker must be matched by predicate, not by
+                # equality, or the gate manufactures a presence out of prose.
+                if key and not ABSENT_KEY.search(key):
+                    man[cols[0].strip()] = key
+    return man
+
+
 def attribute(line, names=()):
     """Which slug does each negative phrase on this line actually refer to?
 
@@ -161,11 +252,29 @@ def attribute(line, names=()):
     marks = [(m.start(), m.group(1).rstrip(".")) for m in SLUG.finditer(line)]
     for slug in names:
         base = slug.split("/")[-1]
+        # 🔴 p276 D5a: A BASENAME SHORTER THAN FOUR CHARACTERS IS A NOUN, NOT A NAME.
+        if len(base) < MIN_BARE_NAME:
+            continue
         # 🟢 p275 correction 3b: a POSSESSIVE mention is a modifier, not the subject.
         # "Artemis's feedback-suggestion engine ... treat as all-rights-reserved" is a
         # sentence about ATHENA; `Artemis's` only says whose engine it is.  Reported
         # ls1intum/Artemis -- which has a root LICENSE -- as refuting itself, again.
-        for m in re.finditer(r"\b" + re.escape(base) + r"(?!'s|\u2019s)\b", line, re.I):
+        #
+        # 🔴 p276 D5b: THE TWO GUARDS BELOW, AND WHY THEY COST THIRTEEN FALSE REFUTATIONS.
+        # This loop used `\b...\b` with a global re.I.  Enumerating `frappe/lms` -- one
+        # ordinary row of p275's own backlog -- then attributed FOURTEEN lines across FIVE
+        # shelves to it, and THIRTEEN were about other projects entirely:
+        #   `mcp-canvas-lms`, `canvas-lms-mcp`, `AI-LMS-TMS`, `tutor-lms-mcp`  (\b does not
+        #       stop at a hyphen, because `-` is itself a non-word character), and
+        #   "the LMS-side MCP servers", "a proprietary LMS"                    (re.I makes a
+        #       common noun match a repository name).
+        # 🔵 The fix is this base's OWN p275 lesson -- *"case is load-bearing: `LICENSE` is a
+        # filename, `licence` is a word"* -- applied to ATTRIBUTION instead of suppression.
+        # p275 wrote that sentence about the predicate that SUPPRESSES rows and never carried
+        # it to the predicate that ASSIGNS them.  A name is matched as the author spelled it,
+        # and a name inside a longer token is not a mention.
+        for m in re.finditer(r"(?<![-_/A-Za-z0-9])" + re.escape(base)
+                             + r"(?![-_/A-Za-z0-9])(?!'s|\u2019s)", line):
             marks.append((m.start(), slug))
     if not marks:
         return []
@@ -179,6 +288,7 @@ def attribute(line, names=()):
 
 def scan(root):
     ledger, dead = load_ledgers(root)
+    manifests = load_manifest_ledgers(root)   # p276 D1: the second channel
     refuted, verified, unenumerated = [], [], []
     for shelf in SHELVES:
         full = os.path.join(root, shelf)
@@ -195,6 +305,9 @@ def scan(root):
                         unenumerated.append((shelf, n, slug))
                         continue
                     grants = candidate_grants(ledger[slug])
+                    # p276 D1: an absence is only sayable when BOTH channels are empty.
+                    if not grants and slug in manifests:
+                        grants = ["(manifest) " + manifests[slug]]
                     if grants:
                         refuted.append((shelf, n, slug, grants))
                     else:
@@ -210,6 +323,8 @@ def main():
 
     print("# p275 -- enumeration gate.  A negative licence verdict is only a finding if the")
     print("# tree was ENUMERATED.  Otherwise it is the state of a path ladder.")
+    print("# p276 -- and the tree is only ONE CHANNEL: a grant can live in a manifest, which is")
+    print("# what p275's own headline case (Athena) was.  Both channels must be empty.")
     for shelf, n, slug, grants in refuted:
         print(f"REFUTED\t{shelf}:{n}\t{slug}\tenumeration found a candidate grant: {','.join(grants)}")
     for shelf, n, slug in verified:

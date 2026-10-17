@@ -4,6 +4,180 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 276 — 2026-10-17 — **THE QUEUE `p275` BUILT WAS WORKED FOR THE FIRST TIME, AND THE INSTRUMENT THAT BUILT IT FAILED THREE WAYS ON ITS OWN BACKLOG**
+
+⏱️ **Twenty-second pass of `2026-10-17`.** Evidence:
+[`tree-enumeration.2026-10-17-p276.tsv`](evidence/tree-enumeration.2026-10-17-p276.tsv) — **30 queue
+rows, 30/30 resolved, every tree enumerated, every candidate read at payload** ·
+[`manifest-channel.2026-10-17-p276.tsv`](evidence/manifest-channel.2026-10-17-p276.tsv) — **19 rows the
+file channel called absent, manifests read: the channel `p275` FOUND and never BUILT** ·
+[`p276-websearch.2026-10-17-p276.tsv`](evidence/p276-websearch.2026-10-17-p276.tsv) — **9 legs**.
+
+### 🟢 Headline: the agent this base told studios *"Do not use"* is MIT in its manifest and on npm, nineteen times over
+
+`p275` ranked one item first and costed it at zero searches: *"`QUEUE-UNENUMERATED=124` negative licence
+verdicts still rest on a path ladder, and two of the first thirteen enumerated were false. Working that
+queue is budget, not design."*
+
+🟢 **Thirty rows were worked. It was budget — and it was also design.**
+
+| | |
+|---|---|
+| negative verdicts **refuted** | **9** of 30 |
+| **positive controls** passed | **7** |
+| absences now sayable in **both** channels | **18** |
+| ladder error rate, with `p275`'s 2-of-13 | 🔴 **11 of 43 — roughly one in four** |
+| `QUEUE-UNENUMERATED` | **124 → 70** |
+| `VERIFIED-ABSENT` | **28 → 48** |
+
+🔴 **The most expensive single row:** `agents/trending.md` published
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) as *"**NONE** — no
+`LICENSE` on any branch, no licence statement in README … **Do not use.** No licence = all rights
+reserved."* Three shelves carried it.
+
+| channel, at the pinned SHA `c0646ba` | result |
+|---|---|
+| **file** — `git ls-tree -r` | 36 paths, none licence-like; two tags also enumerated, **26 licence paths at `v2.0.0`, all 26 under `node_modules/`** → the *payload* limb is **TRUE** |
+| **manifest** — `package.json`, `3 461` B | 🔴 **l.66 `"license": "MIT"`** → the *statement* limb is **FALSE** |
+| **registry** — `registry.npmjs.org` | 🔴 **`canvas-mcp-server@2.2.3` MIT, across 19 published versions** |
+
+🔵 **And this base already owned the grade it withheld.** `agents/top.md` tables
+`adriasantacreu/google-classroom-mcp` as **MIT *(metadata grade — `package.json` + README)*** on
+**identical** evidence. **Two MCP servers, one evidence shape, opposite verdicts — and the row denied the
+grade is the one a studio was told to avoid.** `p274` wrote *"a correction applied to one instance is not
+a correction to the class"*; **this is its eighth consecutive instance, and this time the class was a
+grade this base had already defined.**
+
+### 🔴 The instrument failed three ways, and `frappe/lms` is what armed the worst of them
+
+**`p275`'s gate, run on `p275`'s own backlog, would have gone RED with thirteen FALSE refutations.**
+
+`p275` widened `attribute()` to match a **bare repository name** — Athena's claim was carried in bold
+prose with no link. Correct fix, real defect. 🔴 **Then `frappe/lms` — one unremarkable queue row — drew
+FOURTEEN lines across FIVE shelves, and THIRTEEN were about other projects:**
+
+| mechanism | what it swallowed |
+|---|---|
+| `\b` **does not stop at a hyphen** (`-` is itself a non-word character) | `mcp-canvas-lms`, `canvas-lms-mcp`, `AI-LMS-TMS`, `tutor-lms-mcp` |
+| a global `re.I` makes **a common noun a name** | *"the **LMS**-side MCP servers"*, *"a proprietary **LMS**"* |
+
+🔵 **The fix was already written on this base, one predicate over:** *"case is load-bearing: `LICENSE` is a
+filename, `licence` is a word."* `p275` wrote that about the predicate that **suppresses** rows and never
+carried it to the predicate that **assigns** them. **27 → 11 refutations; all 16 removed were false.**
+
+**The other two:** the gate reads **only the file channel** — while `p275`'s own headline case was a
+**manifest** (`D1`; three of this pass's nine refutations are invisible to a file enumeration) — and
+`candidate_grants()` had **no scope test**, so `ReaDirect-V2`'s **22 game-art attributions** and
+`srs-benchmark`'s **`144` B *"request permission"* dataset note** would both have been reported as
+**refuting** their rows (`D2`). Full write-up:
+[`compose/code/pass275-grant-enumeration/`](compose/code/pass275-grant-enumeration/).
+
+### 🟢 What a studio can do today that it could not yesterday
+
+- **Canvas has two MIT doorways**, not one — new pattern **`P28`**.
+- **A permissive psychometrics core exists**: `meyerjp3/psychometrics` (**Apache-2.0**, `pom.xml`
+  `<licenses>`) brings **IRT linking (Mean-Mean / Mean-Sigma / Stocking-Lord) and score equating** — the
+  layer this base kept recommending and had no licence for. New pattern **`P27`**.
+- **`ECNU-ICALK/EduChat` is usable**, and *"cannot be used"* is withdrawn: `LICENSE/LICENSE.txt` is
+  **Apache-2.0** at `11 357` B. ⚠️ **Tiered** — model `AGPL-3.0`, data `CC-BY-NC-4.0`; **only the code tier
+  is permissive.** 🔵 Six path probes **and** GitHub's API both missed it because **`LICENSE` is a
+  DIRECTORY** there, so every probe hit a tree, not a blob — **two channels agreeing because they share one
+  blind spot.**
+- **`fsrs4anki-helper` is MIT** (`License`, mixed case, no extension) — FSRS scheduling, directly usable.
+- **Three real platforms return to `verticals/solutions.md`** — Frappe LMS (`AGPL-3.0`), nextSIS
+  (`GPL-3.0`), LearnPress (`GPL-3.0-or-later`) — all copyleft, **so nothing Globant can build on changes.
+  That is the point:** an engagement must be refused for the reason that is true, and *"ungranted"* gets
+  revisited the moment someone finds a licence.
+
+### 🔴 A refuted absence is not a permission — `P-N1`
+
+`dssg/student-early-warning` was carried as `RESERVED` / `CONDITIONAL-GRANT`, **and that was right.** The
+grant exists (`2 069` B, read this pass) and permits only *"academic research or other not-for-profit
+scholarly purposes"*, expressly excluding *"any service or part of selling a service."* 🔵 **Enumeration
+can refute an absence without clearing a row for use.** The grade comes from the payload's **terms**, never
+from the existence of a file.
+
+### 🟢 Regional battery: the nine-pass EMEA nil ENDS, by querying the instrument instead of the region
+
+`p275` diagnosed its EMEA blanks as *"narrow-query blanks, not quiet regions"* and ranked one instruction:
+*"query the instrument, not the region."* 🟢 **Run once, it returned the most decision-relevant fact on
+this shelf for an EMEA engagement.**
+
+🔴 **The AI Act deadline an EMEA education engagement was planning around has MOVED.** The **Digital
+Omnibus, Regulation (EU) 2026/1744** (OJ `2026-07-24`, in force `2026-07-27`) defers **Annex III**
+high-risk duties — **education admissions, assessing learning outcomes** — from `2026-08-02` to
+🔴 **`2027-12-02`**; Annex I moves to `2028-08-02`. 🟢 **What did NOT move is what education trips over
+first:** the **ban on inferring emotions in education settings** (in force since **Feb 2025** — a
+prohibition, not a deferred duty), the **Article 4 AI-literacy** duty, and **Article 50 transparency**
+from `2026-08-02`. A studio *building* this is the **provider** — the heavier half — and a public deployer
+owes a **Fundamental Rights Impact Assessment before first use**. New pattern **`P29`**.
+
+⚠️ **GRADE: SECONDARY-CONVERGENT, PRIMARY UNREAD.** Four independent legal publishers agree; **
+`eur-lex.europa.eu` is CONNECT 403 here on all three URL forms tried**, so the Official Journal text was
+**not read first-hand**. **This base does not publish a licence it has not read; it marks a regulation it
+could not read either.**
+
+🟢 **LATAM was again the strongest leg, and it corrects the predicate under this base's own headline
+governance number.** The *"~30% of LATAM universities have published AI-use policies"* figure is a
+**PERCEPTION** measure — ~30% of students and faculty think their university integrates AI *effectively*.
+🔵 **A satisfaction question is not a policy count.** The direct instrument is UNESCO-IESALC (200
+institutions, 19 countries): **26.0%** formal strategy, 🔴 **18.5%** institution-wide policy, 🔴 **8.0%**
+dedicated budget, 🔴 **9.0%** formal evaluation. **Quote 18.5% for a governance pitch and 8/9% for a
+capacity pitch.** Newly placed: Uniandes' **716 regulatory instruments across 23 countries**, Peru's
+**Ley N.º 31814**, Chile's 2021 policy with its law still pending, and 🔴 **Mexico's SEP/ANUIES proposals
+as explicitly NON-BINDING.**
+
+🟢 **North America** gains one instrument — **66% of institutions now use AI, up from 49%** (Ellucian),
+against **~1 in 3** with a clear AI strategy — *and* a refusal: a floating **"~10% have formal AI
+guidelines"** figure appeared with **no scope attached** for the third time on this base, after EMEA and
+LATAM. **Not shelved.** `T50`.
+
+🔴 **APAC is the tenth consecutive weak leg, published with the query that produced it.** Zero
+school/university policy results; only TCS × Pearson, LearnUpon's Sydney HQ and OpenAI's ANZ policy lead.
+🔵 **Diagnosed, with proof in hand: this is a QUERY defect.** The EMEA nil ran nine passes and broke on the
+first instrument-targeted query. **`p277` must query APAC per jurisdiction — MEXT, Singapore MOE, India's
+NEP, China's MoE, Korea's AI textbooks — not by the word "APAC", which no education ministry uses.**
+
+### 🔴 The blocking gap: NO INSTRUMENT WAS EXECUTED THIS PASS
+
+**`make hooks`, `make enumerate` and `make gate-enumeration` could not be run** — the sandbox hosting this
+pass refuses to execute scripts from a cloned repository, and **that refusal was respected rather than
+worked around.**
+
+🟢 **What this does NOT weaken:** the enumeration used **plain `git` only** (`ls-remote`, then
+`clone --depth 1 --filter=blob:none --no-checkout`, then `ls-tree -r`) and `curl` at pinned SHAs. **No
+cloned code was executed**; `--no-checkout` means no working tree ever existed. **That half of the pass is
+first-hand evidence.**
+
+🔴 **What it does weaken:** every claim about the **instrument**. The gate's behaviour was established by
+an **independent reimplementation of its predicates**, written fresh this pass, which **reproduces
+`p275`'s published state exactly** (`REFUTED=0 · VERIFIED-ABSENT=28 · QUEUE=124`) — that agreement is the
+positive control. The patch was validated **as data**: `ast.parse`, every module-level regex literal
+extracted and compiled, all **18 new controls** checked against the mirror. **Nothing was run.**
+
+⚠️ **Every instrument claim this pass is `UNVERIFIED-BY-EXECUTION`.** `p277`'s first action is `make hooks`
+plus `python3 -I test_enumeration_gate.py`. **Expected: `REFUTED=0 · VERIFIED-ABSENT=48 ·
+QUEUE-UNENUMERATED=70`, `47/47` controls.** If it differs, the patch is wrong.
+
+### 🔵 Declared gaps and the backlog for `p277`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md) — five declared gaps, five discharged, eight
+ranked items. Beyond the execution gap above, the two worth naming here:
+
+- 🔴 **`states_a_grant()` is line-scoped while `attribute()` is subject-scoped**, so on
+  `repos/trending.md:1358` — two subjects, one line — this pass's own vocabulary fix reads *frametell's*
+  byte count and silences *EduChat's* false claim. **`p275` fixed that exact shape in one predicate and
+  left it in the other.** Declared, not hidden; the refactor was deliberately not attempted unrun.
+- 🔴 **An intra-file qualitative contradiction has now happened twice and is still uncaught.**
+  `verticals/solutions.md` said, **336 lines apart**, that Fedena's Apache-2.0 *"is stated in … `NOTICE`"*
+  and that the same claim is **NOT ESTABLISHED**. `p274` found the identical shape for `Bloom` and recorded
+  that `T29`/`T34`/`T37` all miss it. **Build the check before a third instance.**
+
+🔵 **And one defect found in the shape of the evidence rather than its content:** the permissive table in
+`repos/foundations.md` carried its `|---|` separator **below** its first data row, so **`p274`'s own
+recovered `gegok12` row rendered as part of the table header.** Fixed. **No gate on this base reads table
+structure.**
+
 ## Pass 275 — 2026-10-17 — **THE POSITIVE CONTROL `p274` ORDERED PASSED CLEANLY, AND RUNNING IT IS STILL HOW THE REAL DEFECT SURFACED: A PATH LADDER CANNOT PROVE ABSENCE**
 
 ⏱️ **Twenty-first pass of `2026-10-17`.** Evidence:

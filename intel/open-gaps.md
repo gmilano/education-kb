@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 276 — **THE QUEUE WAS WORKED, AND THE INSTRUMENT THAT BUILT IT FAILED THREE WAYS ON ITS OWN BACKLOG — INCLUDING THIRTEEN FALSE REFUTATIONS FROM A SINGLE ORDINARY ROW**
+
+⏱️ **Twenty-second pass of `2026-10-17`.** Append-only; nothing below is rewritten.
+🔵 **Evidence:** [`tree-enumeration.2026-10-17-p276.tsv`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
+*(30 queue rows, all resolved, all enumerated, every candidate read at payload)* ·
+[`manifest-channel.2026-10-17-p276.tsv`](../evidence/manifest-channel.2026-10-17-p276.tsv)
+*(19 rows the file channel called absent, manifests read — the channel `p275` found and never built)* ·
+[`p276-websearch.2026-10-17-p276.tsv`](../evidence/p276-websearch.2026-10-17-p276.tsv) *(9 legs)*.
+
+### 🔴 DECLARED GAP 1 — THE BLOCKING ONE: no instrument was EXECUTED this pass
+
+**`make hooks`, `make enumerate` and `make gate-enumeration` could not be run.** The sandbox hosting this
+pass refuses execution of scripts from a cloned repository (*"Code from External"*), and that refusal was
+respected rather than worked around.
+
+🔵 **What was done instead, and what it is worth:**
+- The enumeration itself used **plain `git` only** — `ls-remote`, then
+  `clone --depth 1 --filter=blob:none --no-checkout`, then `ls-tree -r` — and `curl` at pinned SHAs.
+  **No cloned code was executed**, and `--no-checkout` means no working tree ever existed. **This half of
+  the pass is first-hand evidence and is not weakened by the restriction.**
+- The gate's behaviour was established by **an independent reimplementation of its predicates**, written
+  fresh this pass from the committed source, which **reproduces `p275`'s published state exactly**
+  (`REFUTED=0 · VERIFIED-ABSENT=28 · QUEUE-UNENUMERATED=124`). That agreement is the positive control
+  that makes the rest of the simulation meaningful.
+- The patched gate was **validated as data, never run**: `ast.parse` for syntax, every module-level regex
+  literal extracted and compiled, and all **18 new controls** checked against the mirrored predicates.
+
+🔴 **Therefore every claim about the INSTRUMENT this pass is `UNVERIFIED-BY-EXECUTION`.** `p277`'s first
+action, before anything else, is `make hooks` and `python3 -I test_enumeration_gate.py` from
+`compose/code/pass275-grant-enumeration/`. **The expected post-patch state is
+`REFUTED=0 · VERIFIED-ABSENT=48 · QUEUE-UNENUMERATED=70` and `47/47` controls passing.** If it differs,
+**the patch is wrong and this gap is the reason.**
+
+### 🔴 DECLARED GAP 2 — `states_a_grant()` is line-scoped while `attribute()` is subject-scoped
+
+**Measured instance, and it cost a true positive.** `repos/trending.md:1358` carries two subjects:
+`ECNU-ICALK/EduChat` (*"no grant … cannot be used"* — **false**) and `sitor-ai/frametell`
+(`AGPL-3.0`, `34 523` B — **true**). 🔴 **`p276`'s own vocabulary fix reads the byte count belonging to
+`frametell` and silences the whole line, including the false claim about `EduChat`.**
+
+🔵 **`p275` fixed exactly this shape in `attribute()`** — *"one line can carry two subjects"*, four
+corrections' worth — **and left `states_a_grant()` operating on the whole line.** The fix is to scope the
+suppression to the text span the attributed subject owns, which is a real refactor and was **deliberately
+not attempted unrun**. 🟢 **Operationally harmless this pass** (the line is annotated, so `RETRACTION`
+skips it regardless), **and it is `p277`'s ranked #1 for the instrument.**
+
+### 🔴 DECLARED GAP 3 — an intra-file qualitative contradiction has now happened twice and is still uncaught
+
+`verticals/solutions.md` stated, **336 lines apart**, that Fedena's Apache-2.0 *"is stated in
+`README.markdown` and `NOTICE`"* (row 71) and that the same claim is **NOT ESTABLISHED** (the audit row).
+🔵 **`p274` found the identical shape for `Bloom`** (tabled in the build-on tier, declared *"unresolvable
+to a slug"* 168 lines below) **and recorded that `T29`, `T34` and `T37` all miss it.** **Second instance,
+same species, still no check.** `p277` should build it rather than find a third — the cheapest form is a
+per-slug sweep asserting that one file does not both assert and deny the same predicate about one slug.
+
+### 🔴 DECLARED GAP 4 — the primary text of the pass's biggest regional finding was not read
+
+**Regulation (EU) 2026/1744** (the Digital Omnibus, deferring Annex III to `2027-12-02`) is corroborated
+by **four independent legal publishers** and by **no primary source**. 🔴 **`eur-lex.europa.eu` is
+CONNECT 403 here on all three URL forms tried** (`/eli/reg/2026/1744/oj`, `OJ:L_202601744`,
+`CELEX:32026R1744`). ⚠️ **No engagement should quote a statutory date off this shelf until the Official
+Journal text is read.** Everything built on it (`P29`, the EMEA section) carries the grade inline.
+
+### ⚠️ DECLARED GAP 5 — two LATAM quantities are unreconciled
+
+This base records the DEC LATAM survey as *"92% students / **79%** faculty, **30 000+** responses across
+29 institutions"*. This pass's sourcing gives **29 institutions / 22 941 students** for LATAM, and the
+**global** 2026 report as **88% / 77%, 45 398 responses, 35 countries**. 🟢 **The 92% is confirmed LATAM —
+`p275`'s attribution was right.** 🔴 **The faculty percentage and the response count are not reconciled**,
+and `digitaleducationcouncil.com` is CONNECT 403. **Do not quote the 79% or the 30 000+ until resolved.**
+
+### 🟢 GAPS DISCHARGED THIS PASS
+
+| gap | how |
+|---|---|
+| **`p275`: "work the `QUEUE-UNENUMERATED=124` backlog — budget, not design"** | 🟢 **30 rows worked.** 9 refuted, 7 positive controls, 18 two-channel absences. Queue **124 → 70** |
+| **`p275`: "EMEA/APAC — query the instrument, not the region"** | 🟢 **EMEA: run once, nine-pass nil ENDED** with Reg (EU) 2026/1744. 🔴 **APAC: not retried per-jurisdiction — still nil, tenth pass** |
+| **`verticals/solutions.md`: "still open — `Open-TutorAi`, both `fedena`"** | 🟢 **Both closed.** Open-TutorAI's BSD-3-Clause **re-confirmed independently at payload**; Fedena's `NOTICE` read at `680` B in both repos, abandonment re-derived from the commit graph |
+| **`repos/trending.md:12465`: "`learnpress` almost certainly GPL via a plugin header channel"** | 🟢 **Discharged as predicted** — `readme.txt` `License: GPLv3` + `composer.json` `GPL-3.0-or-later` |
+| **`repos/foundations.md`: no permissive psychometrics/equating row** | 🟢 **Closed** — `meyerjp3/psychometrics`, Apache-2.0, promoted from this base's own correct-but-unshelved grade |
+
+### 🔵 RANKED BACKLOG FOR `p277`
+
+1. 🔴 **Run the instruments** (Gap 1). Zero searches. Everything else this pass asserts about the gate
+   depends on it. Expected: `REFUTED=0 · VERIFIED-ABSENT=48 · QUEUE=70`, `47/47`.
+2. 🔴 **Scope `states_a_grant()` to its subject** (Gap 2), with `repos/trending.md:1358` as the control.
+3. 🟢 **Work the remaining 70 queue rows in BOTH channels.** Still budget, not design — and the measured
+   refutation rate is now **11 of 43 (~26%)**, so ~18 more corrections are sitting in that queue. The
+   highest-value slice is the **MCP-server rows**, where the manifest channel is where the grant lives and
+   `p276` found two of three refutations there.
+4. 🟢 **Read the Official Journal text of Reg (EU) 2026/1744** (Gap 4) — try a non-EUR-Lex mirror, an
+   EU-institution PDF, or a national transposition page.
+5. 🟢 **APAC per-jurisdiction, by instrument** (Japan MEXT, Singapore MOE, India NEP/CBSE, China MoE,
+   Korea AI textbooks). `p276` proved the method works on the EMEA nil the same day.
+6. 🔵 **Build the intra-file contradiction check** (Gap 3) before a third instance.
+7. 🔵 **Reconcile the two LATAM quantities** (Gap 5).
+8. ⚠️ **Audit the other shelves for table-structure defects.** `p276` found the permissive table in
+   `repos/foundations.md` with its `|---|` separator **below** its first data row, which rendered
+   `p274`'s recovered `gegok12` row **as part of the header**. **No gate on this base reads table
+   structure** — a defect in the *shape* of evidence survived several passes of scrutiny of its *content*.
+
 ## Pass 275 — **THE POSITIVE CONTROL PASSED, AND THAT IS HOW THE REAL DEFECT SURFACED: A PATH LADDER CANNOT PROVE ABSENCE, AND THIS BASE PUBLISHED 76 GUESSES AS A LICENCE VERDICT**
 
 ⏱️ **Twenty-first pass of `2026-10-17`.** Append-only; nothing below is rewritten.

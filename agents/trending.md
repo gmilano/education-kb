@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 276) — The queue p275 built was worked for the first time, and the row this base told studios **not to use** is MIT in its manifest and on npm
+
+⏱️ **Twenty-second pass of `2026-10-17`.** Append-only — everything below this section is prior
+history and is not rewritten. Evidence:
+[`tree-enumeration.2026-10-17-p276.tsv`](../evidence/tree-enumeration.2026-10-17-p276.tsv) *(30 queue
+rows, every slug `ls-remote`-confirmed, every tree enumerated, every candidate read at payload)* ·
+[`manifest-channel.2026-10-17-p276.tsv`](../evidence/manifest-channel.2026-10-17-p276.tsv) *(the
+SECOND channel — 19 rows the file channel called absent, manifests read)* ·
+[`p276-websearch.2026-10-17-p276.tsv`](../evidence/p276-websearch.2026-10-17-p276.tsv) *(9 legs)*.
+
+### 🔴 `DMontgomery40/mcp-canvas-lms` — *"Do not use. No licence = all rights reserved"* is WITHDRAWN
+
+This base published, on three shelves, that this repository has **"NONE — no `LICENSE` on any branch,
+no licence statement in README"**, and advised studios not to use it.
+
+| channel | what `p276` read, at the pinned SHA `c0646ba` | verdict |
+|---|---|---|
+| **file** (`git ls-tree -r`) | **36 paths, none licence-like.** Two tags enumerated as well: 26 licence paths at `v2.0.0`, **all 26 under `node_modules/`** | 🟢 the *payload* limb is **TRUE** |
+| **manifest** (`package.json`, `3 461` B) | **l.66 `"license": "MIT"`**, and the `files` array names a `LICENSE` that is not in the tree | 🔴 the *statement* limb is **FALSE** |
+| **registry** (`registry.npmjs.org`) | `canvas-mcp-server@2.2.3` — **MIT**, across **19** published versions, `repository` pointing back to this slug | 🔴 **FALSE** |
+
+🔵 **And this base already owns the grade it withheld.** `agents/top.md` tables
+[`adriasantacreu/google-classroom-mcp`](https://github.com/adriasantacreu/google-classroom-mcp) as
+**MIT *(metadata grade — `package.json` + README)*** on **identical** evidence, and `p275`'s own ledger
+records it as *"UPHELD, DEFINITIVE. 15 files, none licence-like."* **Two MCP servers, the same evidence
+shape, opposite verdicts — and the one denied the grade is the one a studio was told to avoid.**
+🔴 *"A correction applied to one instance is not a correction to the class"* — `p274` wrote that, and
+this is its eighth consecutive instance.
+
+**Canvas now has two MIT doorways on this base**, alongside `bruchris/canvas-lms-mcp` (`p274`). Graded
+**MIT (manifest + registry); no payload in tree** — a real grade, and an honestly weaker one than a read
+LICENSE, because the `files` array promises a file the repository does not contain.
+
+### 🟢 `ECNU-ICALK/EduChat` — *"cannot be used"* is WITHDRAWN, and the reason the ladder missed it is new
+
+`repos/trending.md` carried EduChat (`973`★, a known educational LLM) — a verdict `p276` **refuted** — as **"no grant on any of 6 Tier-A
+paths at ref `fa30b6d5632c` and `license: null` in the API — cannot be used."** At **that same ref**, the
+tree serves:
+
+| path | licence | bytes | covers |
+|---|---|---|---|
+| `LICENSE/LICENSE.txt` | 🟢 **Apache-2.0** | `11 357` | **the code** |
+| `LICENSE/MODEL_LICENSE.txt` | 🔴 `AGPL-3.0` | `33 821` | the model weights |
+| `LICENSE/DATA_LICENSE.txt` | 🔴 `CC-BY-NC-4.0` | `19 346` | the training data |
+
+🔵 **Why six path probes AND the GitHub API both returned nothing: `LICENSE` is a DIRECTORY here.** Every
+probe of that path resolved to a tree rather than a blob, and GitHub's licence detector returned
+`license: null` for the same reason. **Two independent channels agreed because they share one blind
+spot** — and agreement between them read as corroboration. The `11 357` B is the pristine Apache-2.0
+length this base already fingerprints elsewhere, which is a free positive control on the read.
+
+⚠️ **One repository, three grants, and only the code tier is permissive.** A studio may build on
+EduChat's code under Apache-2.0; shipping its weights pulls in `AGPL-3.0`, and its data is
+non-commercial. **The row's licence is not one value, and a single-value shelf cannot hold it.**
+
+### 🟢 `open-spaced-repetition/fsrs4anki-helper` — MIT, and a new permissive row
+
+Carried as **"NO GRANT in 6 filenames · `main` · `29208f2`"**. At that same ref the tree serves
+**`License`** — mixed case, **no extension** — **MIT**, `1 079` B, read at payload. Spaced-repetition
+scheduling (FSRS) that a tutoring engagement can use directly.
+
+### 🔵 What the whole queue says about ladder-shaped evidence
+
+**30 of `p275`'s 124 queued rows worked. 30/30 slugs resolve. 9 negative verdicts refuted, 7 positive
+controls passed, 18 absences now sayable in BOTH channels.** Taken with `p275`'s own 2-of-13, the error
+rate of a negative licence verdict that rests on a path ladder is **11 of 43 — roughly one in four.**
+
+🔴 **And three of the nine refutations are invisible to a file enumeration**, which is what `p275`'s
+instrument reads. `p275`'s headline case was a **manifest**; the instrument it then built reads
+`git ls-tree` paths only. **The gate did not implement the finding that motivated it** — see
+[`compose/code/pass275-grant-enumeration/`](../compose/code/pass275-grant-enumeration/), where `p276`
+adds the second channel, a scope test, an attribution-specificity guard and 18 controls.
+
 ## 2026-10-17 (pass 275) — The agent this base told studios they could not use has been MIT all along, and it said so twelve times
 
 ⏱️ **Twenty-first pass of `2026-10-17`.** Append-only — everything below this section is prior history
@@ -1096,7 +1169,7 @@ BSD-3-Clause. That phrase is part of the BSD form. Retracting it would have been
 | row | region | was | is | why it matters to a studio |
 |---|---|---|---|---|
 | 🔴 [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) | North America *(DataCebo, Inc.)* | `RESERVED` | 🟢 **`STEWARD-RESERVATION`** | the reservation is **MariaDB's, in the BUSL form text**. The row is still not OSI — but the *reason* the gate held it was wrong, and the same notice sits in every BUSL payload including permissive projects that vendor one |
-| 🔴 [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | North America *(University of Chicago)* | `RESERVED` | 🟢 **`CONDITIONAL-GRANT`** | 🔴 **there IS a grant** — academic / not-for-profit, with a named Polsky Center commercial contact. A studio cannot ship it, but *"no grant"* was the wrong sentence and it closes a door that is actually ajar |
+| 🔴 [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | North America *(University of Chicago)* | `RESERVED` | 🟢 **`CONDITIONAL-GRANT`** | 🔴 **there IS a grant** — academic / not-for-profit, with a named Polsky Center commercial contact. A studio cannot ship it, but *"no grant"* was the wrong sentence and it closes a door that is actually ajar | 🟢 **CORROBORATED `p276`, independently and at payload:** `LICENSE` read at `2 069` B — permission for *"academic research or other not-for-profit scholarly purposes"*, expressly excluding *"any service or part of selling a service that uses the Program"*, commercial terms via the Polsky Center. 🔵 **This row is why `p276` states `P-N1`: a refuted absence is not a permission.** The grant exists *and* forbids the engagement. [`p276`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
 
 🔵 **Both are North American and both are infrastructure a studio would reach for** — synthetic data and student early-warning. Neither moved because a new repository appeared; they moved because a guard was re-run over what was already published.
 
@@ -4856,7 +4929,7 @@ studio can hold that position only until someone writes it down.**
 - 🆕 🟢 **[`MathTrail/canvas-api`](https://github.com/MathTrail/canvas-api) + [`mathtrail-standalone`](https://github.com/MathTrail/mathtrail-standalone)
   — `MIT` *(`1 065` B each)*, Global.** Step-by-step maths checking on a whiteboard, and Olympiad
   task generation served as **interactive `MCP` widgets**.
-- 🆕 🔴 **[`Nasus20202/MoodleMCP`](https://github.com/Nasus20202/MoodleMCP) — NO GRANT, EMEA.**
+- 🆕 🔴 **[`Nasus20202/MoodleMCP`](https://github.com/Nasus20202/MoodleMCP) — NO GRANT, EMEA.** 🟢 **UPHELD `p276`, now in BOTH channels:** 155 paths enumerated, no licence file; **five** `package.json` files read, **none** carries a `license` key. An absence this base can now say rather than infer. [`p276-manifest`](../evidence/manifest-channel.2026-10-17-p276.tsv)
   Remote `MCP` for Moodle on Cloudflare Workers. 🔴 Probed at `10` paths plus the README; nothing.
 
 ### 🆕 🔴 The second new category, and it was hiding behind a compliance acronym
@@ -8575,7 +8648,7 @@ listing over-counts this layer by 67 %, and one `curl` per address fixes it.**
 | address | grant (payload · bytes · ref · SHA) | tags | verdict |
 |---|---|---|---|
 | [`supe-log/writing-engine`](https://github.com/supe-log/writing-engine) | 🟢 **MIT** · `LICENSE` 1 065 B · `main` · `baa865f` | 🔴 **0** | 🟡 **Fork base.** Rubric essay-grading agent, TypeScript. 🔵 unplaced — holder is a username |
-| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **NO GRANT** — 17 filenames probed on `master` · `60e422c` | 0 | 🔴 **Unusable**, and the README says early development |
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🔴 **NO GRANT** — 17 filenames probed on `master` · `60e422c` | 0 | 🔴 **Unusable**, and the README says early development | 🔴 **SUPERSEDED `p276`:** enumerated at the same ref `60e422c` — the tree serves **`license.txt`** (lowercase **and** `.txt`), verbatim **GPL-3.0**, `39 890` B read at payload. The 17-filename ladder never spelled it. Copyleft, so *unusable* stands — but on licence grounds, not absence. [`p276`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
 | 🟡 [`scaleapi/researchrubrics`](https://github.com/scaleapi/researchrubrics) | 🟡 **MIT body, 🔴 holder line unfilled**: *"Copyright (c) 2025 **[Authors/Institution]**"* · 1 078 B · `main` · `2dc80e2` | 0 | 🔴 **Do not redistribute** — a grant with no identifiable licensor is worse in review than no grant at all |
 
 🔴 **And it is the benchmark layer AGAIN.** `srs-benchmark` 🔴 no grant, `MRBench` 🔴 no grant
@@ -8609,7 +8682,7 @@ this pass; SHAs and tag counts from `git ls-remote`.
 
 | row | ★ | what the payload says |
 |---|---|---|
-| 🔴 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | **325** | 🔴 **NO GRANT** in 6 filenames · `main` · `29208f2` |
+| 🔴 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | **325** | 🔴 **NO GRANT** in 6 filenames · `main` · `29208f2` | 🔴 **SUPERSEDED `p276`:** enumerated at the same ref `29208f2` — the tree serves **`License`** (mixed case, **no extension**), **MIT**, `1 079` B read at payload. **A new permissive row**, not an absence. [`p276`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
 | 🔴 [`open-spaced-repetition/srs-benchmark`](https://github.com/open-spaced-repetition/srs-benchmark) | **274** | 🔴 **NO GRANT** in 15 filenames, and no licence claim in the README · `main` · `bd9110f`. 🔵 **The benchmark, ungranted — `P127-T2`** |
 | 🔴 [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 56 | 🔴 **NO GRANT** in 7 filenames · `main` · `fcec416` |
 
@@ -15401,7 +15474,7 @@ libraries**, and they belong in `repos/foundations.md` and `verticals/solutions.
 | 🆕 Added this pass | Licence | Tier |
 |---|---|---|
 | [`ZIYINGJERRY/difair`](https://github.com/ZIYINGJERRY/difair) | 🟢 **MIT** (payload **1,075 B** + `pyproject.toml`) | Differential item functioning + ML fairness |
-| [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟢 **Apache-2.0** (🔴 no payload — source headers govern, `P494`) | IRT linking (Mean-Mean/Mean-Sigma/Stocking-Lord) + score equating |
+| [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟢 **Apache-2.0** (🔴 no payload — source headers govern, `P494`) | IRT linking (Mean-Mean/Mean-Sigma/Stocking-Lord) + score equating | 🟢 **CORROBORATED `p276`:** `pom.xml` `<licenses>` read first-hand — *The Apache Software License, Version 2.0*, `distribution=repo`, in a `3 752` B manifest; tree enumerated at `395` paths with **no** licence file, so *"no payload"* is exact. **This row's metadata grade was already right**, and it is the precedent `DMontgomery40/mcp-canvas-lms` was denied. [`p276-manifest`](../evidence/manifest-channel.2026-10-17-p276.tsv)
 | [`dssg/aequitas`](https://github.com/dssg/aequitas) | 🟢 **MIT** (payload **1,083 B**) | Bias auditing |
 
 🔴 **And the agent-shaped implication for the shelf, which is the part worth carrying into a client
@@ -15560,7 +15633,7 @@ family where the tripwire lives.
 | Repo | Verdict |
 |---|---|
 | [`shrutika00/StudyMate`](https://github.com/shrutika00/StudyMate) | **UNGRANTED** — real (`main/README.md`), no payload. LangGraph + Gemini + RAG + SQLite adaptive tutor with diagnostic assessment and replanning — 🔵 **capable and unbuildable** |
-| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **UNGRANTED** — real, no payload |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **UNGRANTED** — real, no payload | 🔴 **SUPERSEDED `p276`:** `package.json` l.66 declares **`"license": "MIT"`**, and npm `canvas-mcp-server@2.2.3` is MIT across **19** published versions. No licence FILE exists (36 paths enumerated) — the *payload* limb is true, the *grant* limb is false. [`p276-manifest`](../evidence/manifest-channel.2026-10-17-p276.tsv)
 | [`Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent`](https://github.com/Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent) · [`Aryan6238/EduAgent`](https://github.com/Aryan6238/EduAgent) | **UNGRANTED** — both real, both no payload. 🔵 **Agentic-RAG curriculum + rubric generation is a busy niche where almost nothing carries a grant** |
 | [`EastArctica/canvas-mcp`](https://github.com/EastArctica/canvas-mcp) | **NO-PAYLOAD** — nothing resolved; may not exist at this slug |
 
@@ -15980,7 +16053,7 @@ was **checked repo by repo, and it is wrong for two of eight.**
 | [`mtgibbs/canvas-lms-mcp`](https://github.com/mtgibbs/canvas-lms-mcp) | **MIT** (1063 B) | mtgibbs | grades, assignments, academic data |
 | [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | **MIT** (1062 B) | Jawadh | **Moodle**, not Canvas; student-facing |
 | [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) | 🔴 **NO LICENCE PAYLOAD** | — | repo real (`README.md` 200), no grant under 12 probed filenames |
-| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **NO LICENCE PAYLOAD** | — | repo real, no grant under 12 probed filenames |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **NO LICENCE PAYLOAD** | — | repo real, no grant under 12 probed filenames | 🔴 **SUPERSEDED `p276`:** this is `CreveXTech/canvas-lms-mcp`, whose absence is **UPHELD in both channels** (31 paths, `package.json` `535` B with no `license` key) — but the sibling row `DMontgomery40/mcp-canvas-lms` on this shelf is **MIT in its manifest**. [`p276-manifest`](../evidence/manifest-channel.2026-10-17-p276.tsv)
 
 🔵 **Why the six matter as a signal rather than as six rows.** Every one carries a **different
 copyright holder**, so these are independent re-implementations, not a fork tree. Six people
@@ -16035,7 +16108,7 @@ A secondary source stated that **Forma LMS** *"is an open-source fork of Docebo 
 license, so modified versions deploy and distribute without the copyleft obligations GPL and AGPL
 carry."* Probed first-hand:
 
-- [`formalms/formalms`](https://github.com/formalms/formalms) has **no licence payload** — `LICENSE`,
+- [`formalms/formalms`](https://github.com/formalms/formalms) has **no licence payload** — `LICENSE`, 🔴 **SUPERSEDED `p276`, and this shelf contradicted the base's own curated verdict:** `verticals/solutions.md` and `intel/trends.md` have carried **GPL-2.0 at `html/license.txt`** since `p265`. Enumeration reproduces it independently: `18 346` B, verbatim GPL-2. [`p276`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
   `LICENSE.txt`, `LICENSE.md`, `LICENSE.TXT`, `COPYING`, `COPYING.txt`, `licence.txt`,
   `license.txt`, `docs/LICENSE` and eight more names all **404** on `master` and `main`.
 - The **only** occurrence of "Apache" in its `README.md` is a server requirement:
@@ -21068,7 +21141,7 @@ pass:
 | [learningequality/morango](https://github.com/learningequality/morango) | **MIT** (`master/LICENSE`) | 15 (23 forks) | **Pure-Python peer-to-peer database replication engine for Django.** Makes chosen models syncable; certificate-based authentication protecting data privacy and integrity; change-tracking and data-partitioning built for low-bandwidth links; SQLite **and** PostgreSQL. `release-v0.9.x`. **This is the actual sync substrate under Kolibri's offline story** — the KB has recommended offline-first delivery for three passes while recording only the application above it. |
 | [learningequality/le-utils](https://github.com/learningequality/le-utils) | **MIT** (`main/LICENSE.txt`) | not read this pass | Shared constants and utilities across Kolibri, Ricecooker and Studio. The vocabulary layer; needed by anything that generates Kolibri channels. |
 | [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | **no payload** (20 URLs) | not read this pass | Vue design system. Repository exists; grant does not. **Do not ship client UI from it on a licence assumption.** |
-| [learningequality/kolibri-server](https://github.com/learningequality/kolibri-server) | **no payload** (20 URLs) | not read this pass | Performance/caching access layer for Kolibri. **The repository exists** (`main/README.rst` — note the extension; `README.md` does not resolve, which is the same wrong-file-type trap the eighth pass found). **The grant does not.** |
+| [learningequality/kolibri-server](https://github.com/learningequality/kolibri-server) | **no payload** (20 URLs) | not read this pass | Performance/caching access layer for Kolibri. **The repository exists** (`main/README.rst` — note the extension; `README.md` does not resolve, which is the same wrong-file-type trap the eighth pass found). **The grant does not.** | 🔴 **SUPERSEDED `p276`:** the tree serves **`debian/copyright`** — DEP-5, **GPL-2+**, `1 284` B read at payload. ⚠️ **Scope:** its `Files:` stanzas name five packaging paths, so this is a packaging grant, not a blanket repo grant. No ladder of 20 URLs would spell `debian/copyright`. [`p276`](../evidence/tree-enumeration.2026-10-17-p276.tsv)
 
 This is the **wrong-layer failure mode** (sixth pass) recurring at organisation
 scale: the KB probed the *product* and recorded one row where a 238-repository
@@ -22772,7 +22845,7 @@ cannot be used in a client deliverable at all.
 | Repo | ★ | Licence (read from payload) | Tools | Verdict |
 |---|---|---|---|---|
 | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 278 (95 forks) | MIT (`LICENSE@main`) | up to 103 tools, 8 agent skills, v1.13.0 (Sep 2026) | **Canonical. Use this one.** |
-| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | 103 | **NONE** — no `LICENSE` on any branch, no licence statement in README | 54 tools, v2.3.0 | **Do not use.** No licence = all rights reserved. |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | 103 | **NONE** — no `LICENSE` on any branch, no licence statement in README | 54 tools, v2.3.0 | **Do not use.** No licence = all rights reserved. | 🔴 **SUPERSEDED `p276` — AND THE ADVICE WAS WRONG.** `package.json` l.66 declares **MIT**; npm ships it MIT across **19** versions. *"No licence = all rights reserved → Do not use"* is **withdrawn**. 🔵 This base already defines a **metadata grade** and tables `adriasantacreu/google-classroom-mcp` as *MIT (metadata)* on identical evidence — it was never carried to this row. [`p276-manifest`](../evidence/manifest-channel.2026-10-17-p276.tsv)
 | [loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp) | 38 | **NONE** — no `LICENSE` on any branch, no licence statement in README | Moodle LMS tools, Python | **Do not use.** |
 | [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | ~42 | MIT (`LICENSE`) | Moodle via web services | Canonical Moodle side-car. |
 | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | 1 | **AGPL-3.0** (`LICENSE@main`) | 11 core tools + paid premium plugins | Avoid. AGPL **plus** a commercial upsell — the worst combination for reusable studio IP. |

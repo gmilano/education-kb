@@ -7,8 +7,8 @@ it — every Makefile recipe on this base `cd`s in first).
 """
 import sys
 
-from enumeration_gate import (NEGATIVE, RETRACTION, attribute, candidate_grants,
-                               states_a_grant)
+from enumeration_gate import (ABSENT_KEY, NEGATIVE, RETRACTION, attribute,
+                               candidate_grants, states_a_grant)
 
 FAILED = []
 
@@ -120,9 +120,78 @@ check("C3 positive control: the known docs/ grant is found",
 check("C3 negative arm: an enumerated empty tree yields no grant",
       candidate_grants([]), [])
 
+# ======================================================================================
+# p276 — controls for the four defects found by WORKING p275's own backlog.
+# Every one of these is a measured instance, not a hypothetical: 30 queue rows enumerated
+# in two channels, ledger `evidence/tree-enumeration.2026-10-17-p276.tsv`.
+# ======================================================================================
+
+# --- D5: bare-name attribution had no specificity test --------------------------------
+# Enumerating `frappe/lms` attributed FOURTEEN lines across FIVE shelves to it; THIRTEEN
+# were about other projects.  `\b` does not stop at a hyphen and re.I made a noun a name.
+LMS = ["frappe/lms"]
+# NB: the phrase must be one NEGATIVE actually matches -- "no licence statement" is not in
+# that vocabulary, so the real shelf line's own wording is used here.
+check("D5: a hyphen-suffixed name is NOT a mention of the short basename",
+      attribute("[DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) "
+                "| **NONE** — no licence statement in README | **Do not use.** "
+                "No licence = all rights reserved.", LMS),
+      ["DMontgomery40/mcp-canvas-lms"])
+check("D5: a common noun in prose is not a repository name",
+      attribute("the LMS-side MCP servers, and a re-probe of every 'no licence payload' row", LMS),
+      [])
+check("D5: an uppercase acronym inside another slug is not a mention",
+      attribute("[`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) "
+                "| proprietary software … All rights reserved", LMS),
+      ["alfredang/AI-LMS-TMS"])
+check("D5: the real row still attributes correctly by slug",
+      attribute("[`frappe/lms`](https://github.com/frappe/lms) are LIVE-NOGRANT — no payload", LMS),
+      ["frappe/lms"])
+# ...and p275's own Athena case, which the bare-name fallback exists for, must still work.
+check("D5 regression: p275's bare-name case in bold prose still attributes",
+      attribute("Artemis's feedback-suggestion engine **Athena** — treat as all-rights-reserved",
+                ["ls1intum/Athena", "ls1intum/Artemis"]),
+      ["ls1intum/Athena"])
+
+# --- D2: candidate_grants had no SCOPE test -------------------------------------------
+check("D2: ReaDirect-V2's asset attributions are not the repo's code grant",
+      candidate_grants(["assets/icons/source/achievements/License.txt",
+                        "apps/web/public/assets/game/licenses/ninja-adventure-cc0-license.txt",
+                        "assets/licenses/fonts/lexend-ofl.txt"]), [])
+check("D2: a dataset-scoped licence is not the repo's code grant",
+      candidate_grants(["dataset/LICENSE"]), [])
+check("D2: twelve translations of one licence are not twelve grants",
+      candidate_grants(["html/license.txt", "html/lib/System/license/license_english.txt",
+                        "html/lib/System/license/license_tamil.txt"]), ["html/license.txt"])
+check("D2 positive arm: debian/copyright IS a grant (scoped, but real)",
+      candidate_grants(["debian/copyright"]), ["debian/copyright"])
+check("D2 positive arm: a LICENSE directory's contents are still a grant",
+      candidate_grants(["LICENSE/LICENSE.txt"]), ["LICENSE/LICENSE.txt"])
+
+# --- D3: the grant-evidence vocabulary did not match this base's house style ----------
+check("D3a: a byte count written in the house style `1 531` B is grant evidence",
+      states_a_grant("🟢 **`BSD-3-Clause`** — `1 531` B, all three clauses verbatim"), True)
+check("D3b: a payload read asserted in prose is grant evidence",
+      states_a_grant("BSD-3-Clause | the payload is the verbatim BSD-3 form; "
+                     "its opening *All rights reserved* belongs to that form"), True)
+check("D3c: a grant published by NAMING THE MANIFEST is grant evidence",
+      states_a_grant("🟢 **Apache-2.0** · 🔴 no payload at all — per-file headers + "
+                     "pom.xml <licenses> + README"), True)
+check("D3 negative arm: an SPDX token alone does NOT silence a live negative verdict",
+      states_a_grant("commonly cited as MIT, but this base publishes no grant it has not read"),
+      False)
+
+# --- D1: the gate read only the FILE channel, which was p275's own headline case -------
+check("D1: an absence marker is matched by PREDICATE, not by equality",
+      bool(ABSENT_KEY.search("<no license key in any>")), True)
+check("D1: a real declared key is not read as an absence",
+      bool(ABSENT_KEY.search('"license": "MIT" (l.66)')), False)
+check("D1: a bare dash is an absence",
+      bool(ABSENT_KEY.search("-")), True)
+
 if FAILED:
     print(f"# {len(FAILED)} FAILING:")
     for f in FAILED:
         print("  FAIL", f)
     sys.exit(1)
-print("# p275 enumeration-gate suite: 30/30 PASS")
+print("# p275+p276 enumeration-gate suite: 47/47 PASS")

@@ -1,0 +1,28 @@
+# pass 276 — 2026-10-17 — THE SECOND CHANNEL.  p275 found Athena's grant in its MANIFESTS and then
+# built an instrument that reads only ls-tree FILE paths.  This is that finding, implemented.
+# Every row below had its FILE channel enumerated first and found EMPTY.  Read at the pinned SHA.
+# 🔴 3 of 19 carry a grant the file channel cannot see.  Had p275's gate been run as built on these
+# rows it would have stamped all three VERIFIED-ABSENT — a false absence certified by the
+# instrument built to stop false absences.
+slug	manifest	http	bytes	license_key	verdict
+DMontgomery40/mcp-canvas-lms	package.json	200	3461	"license": "MIT" (l.66); "files" names a LICENSE that is NOT in the tree	🔴 REFUTES "no licence statement"; npm canvas-mcp-server@2.2.3 also MIT across 19 versions
+meyerjp3/psychometrics	pom.xml	200	3752	<licenses><license>The Apache Software License, Version 2.0</license></licenses> distribution=repo	🔴 REFUTES "no grant" — Apache-2.0 psychometrics library (IRT/CTT/factor/FMM)
+LearnPress/learnpress	readme.txt + composer.json	200	42726 / 1878	readme.txt "License: GPLv3"; composer.json "license": "GPL-3.0-or-later"	🔴 REFUTES "no grant" — copyleft, so the build-on refusal stands on OTHER grounds
+CreveXTech/canvas-lms-mcp	package.json	200	535	<no license key>	🟢 two-channel absent
+Nasus20202/MoodleMCP	package.json (5 of them)	200	1471	<no license key>	🟢 two-channel absent
+vkumar04/canvas-mcp-lite	pyproject.toml	200	686	<no license key>	🟢 two-channel absent
+kevinraj23/student-assistant-mcp-server	pyproject.toml	200	371	<no license key>	🟢 two-channel absent
+educredentials/ec-issuer	pyproject.toml	200	1453	<no license key>	🟢 two-channel absent
+alfredang/AI-LMS-TMS	package.json	200	2904	<no license key>	🟢 POSITIVE CONTROL — reproduces the published "proprietary / All rights reserved" refusal
+open-spaced-repetition/srs-benchmark	pyproject.toml + setup.py	200	1401	<no license key>	🟢 two-channel absent; dataset/LICENSE is a 144 B permission-gate, NOT a code grant
+european-commission-empl/european-digital-credentials	edci-commons/pom.xml	200	25663	<no license key>	🟢 two-channel absent across 2970 paths — the EU's own EDC reference impl ships no grant
+mendezjerick/ReaDirect-V2	package.json + composer.json	200	-	<no license key>	🟢 two-channel absent; 22 licence-like paths are ALL asset attributions (CC0 game art, OFL fonts)
+bigdata-ustc/Agent4Edu	— none in tree	-	-	-	🟢 no manifest channel exists; file channel absent
+Aryan6238/EduAgent	— none in tree	-	-	-	🟢 no manifest channel exists; file channel absent
+JazminVidal/gop-pykaldi	— none in tree	-	-	-	🟢 no manifest channel exists; file channel absent
+adlnet/SCORM-to-xAPI-Wrapper	— none in tree	-	-	-	🟢 no manifest channel exists; file channel absent
+fwu-de/schulfach-ontologie	— none in tree	-	-	-	🟢 no manifest channel exists; file channel absent
+jimbozhang/speechocean762	— none in tree	-	-	-	🟢 no manifest channel exists; file channel absent (5263 paths)
+rachelproject/module-template	— none in tree	-	-	-	🟢 no manifest channel exists; 3-path repo
+JushBJJ/Mr.-Ranedeer-AI-Tutor	— none in tree	-	-	-	🟢 no manifest channel exists; file channel absent
+eth-lre/MathTutorBench	— none in tree	-	-	-	🟢 no manifest channel exists; file channel absent

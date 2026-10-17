@@ -1532,3 +1532,95 @@ note (`learningequality/kolibri` serves **MIT on `develop`** and **404 on `main`
 one axis over. 🟢 **Operational rule: record channel state as the triple you actually probed, and probe
 the path you intend to USE** — never a cheaper neighbour. **No star count was read from GitHub this
 pass**; every star figure on these shelves is carried from an earlier pass and marked so.
+
+## T49 — An instrument that reads one channel cannot establish an absence, and the channel it misses is usually the one its own motivating case used
+
+🔴 **The sharpest instance this base has produced, because the gap is between a finding and the tool
+built from it.** `p275`'s headline was `ls1intum/Athena`: **no licence file anywhere in the tree**, and
+`license = "MIT"` in **12 of its 14 manifests**. It found that by hand, wrote it up as the pass's central
+result — and then shipped an instrument that reads `git ls-tree` **file paths only**.
+
+🟢 **`p276` worked 30 rows of that instrument's own backlog in BOTH channels. Three carry a grant no file
+enumeration can see:**
+
+| row | file channel | manifest / registry channel |
+|---|---|---|
+| `DMontgomery40/mcp-canvas-lms` | 36 paths, none licence-like | `package.json` **MIT** + npm **MIT × 19 versions** |
+| `meyerjp3/psychometrics` | 395 paths, none licence-like | `pom.xml` `<licenses>` **Apache-2.0** |
+| `LearnPress/learnpress` | 1 985 paths, none licence-like | `readme.txt` **GPLv3** + `composer.json` **GPL-3.0-or-later** |
+
+**Run as built, the gate would have stamped all three `VERIFIED-ABSENT` — a false absence certified by
+the instrument built to stop false absences.** 🔵 And the sub-species is worse than a missing feature:
+**two channels can agree because they share one blind spot.** `ECNU-ICALK/EduChat` returned nothing on
+six path probes **and** `license: null` from GitHub's API — because `LICENSE` is a **directory** there, so
+every probe hit a tree rather than a blob and the API's detector failed for the same reason. **The
+agreement read as corroboration.**
+
+🟢 **Operational rule:** an absence is only sayable when **every channel a grant is known to live in** has
+been read and found empty — file tree, package manifest, package registry, and (for plugin ecosystems) the
+distribution header. Record *which* channels were read, so the next pass can tell a two-channel absence
+from a one-channel silence. `p276` adds the manifest channel to the gate and records the count on every
+row.
+
+## T50 — A figure with no region attached becomes a global figure by repetition, and the third appearance is when it stops being traceable
+
+🔴 **Measured, not predicted.** A *"~10% of institutions have formal AI guidelines"* figure has now
+appeared on this base's shelves three times with three different scopes: once for **EMEA institutions**,
+once in `p275` as *"fewer than 10%"* for **LATAM** (UNESCO's regional observatory), and once this pass in a
+**North American** result set with **no scope stated at all**.
+
+🔵 **The mechanism is not fabrication, it is attrition.** Each re-publication is individually defensible;
+what disappears is the sampling frame. By the third appearance the figure reads as a property of
+*institutions* rather than of *a survey of institutions in a region*, and at that point no reader can
+recover which. 🔴 **This base already ran the inverse of this and caught it:** `p275` published **92%** as
+a LATAM figure, and `p276` found an aggregator publishing the same 92% as **global** student AI use. **A
+figure travels in both directions.**
+
+🟢 **Operational rule:** a quantity enters a shelf with its **instrument, its frame and its date**, or it
+does not enter. A regional cell that cannot name its sampling frame is a gap, not a datum — and the
+honest form is *"not established for this region"*, which `p276` published for the North American 10%.
+
+## T51 — A primary publisher can invite the conflation, so "the source is primary" does not retire the window check
+
+🔴 **`T38` and `T42` were built against market-research houses mislabelling their own CAGR windows. This
+pass found the same species in a survey publisher**, which is the class of source this base treats as
+better. The **Digital Education Council** compares its **LATAM** 2026 figure (**92%** of students using
+AI) against its own **GLOBAL 2024** figure (**86%**) and presents the difference as a **"+6% increase."**
+
+🔵 **Two different sampling frames, one subtraction.** The genuine comparisons are LATAM-2026 **92%**
+against GLOBAL-2026 **88%** (a regional *premium*, not a rise), or LATAM against LATAM across years —
+which the published pair does not give. **Nothing is fabricated; the arithmetic is simply performed across
+bases**, and a reader who trusts the publisher inherits the error intact.
+
+🟢 **Operational rule, extending `T42`:** before quoting any delta, **name the two bases being
+subtracted** — region, year, population, n. Apply it to primary publishers too. 🔴 **And note what this
+does to a defence this base has used:** *"the figure is from the research house itself"* is not a
+window-check exemption. `T38`'s convention appeared in two market houses; `T51` puts it in a third kind of
+publisher entirely.
+
+## T52 — A correction that widens a matcher creates the inverse defect, and it detonates on the backlog the correction told you to work
+
+🔴 **`p275` widened `attribute()` to match a BARE repository name**, because Athena's claim was carried in
+bold prose with no hyperlink. Correct fix, real defect, properly motivated. 🔴 **`p276` enumerated
+`frappe/lms` — one unremarkable row of `p275`'s own 124-row backlog — and the widened matcher attributed
+FOURTEEN lines across FIVE shelves to it. THIRTEEN were about other projects.**
+
+| mechanism | instances found |
+|---|---|
+| `\b` **does not stop at a hyphen** (`-` is itself a non-word character), so `lms` matched `mcp-canvas-lms`, `canvas-lms-mcp`, `AI-LMS-TMS`, `tutor-lms-mcp` | 4 |
+| a global `re.I` made the **common noun** *"LMS"* match a repository name (*"the LMS-side MCP servers"*, *"a proprietary LMS"*) | 2+ |
+
+**A `REFUTED` row FAILS the gate**, so committing the ledger unpatched would have turned the standing
+check red on thirteen claims about six other projects — **the instrument built to stop false absences
+manufacturing false presences instead.**
+
+🔵 **The fix was already written on this base, in `p275`'s own words, about a different predicate:**
+*"case is load-bearing: `LICENSE` is a filename, `licence` is a word."* `p275` applied that to the
+predicate that **suppresses** rows and never carried it to the predicate that **assigns** them. With
+case-sensitive matching, a token-boundary guard and a four-character floor, **27 refutations fall to 11,
+and all 16 removed are false**.
+
+🟢 **Operational rule:** when a pass widens a matcher to fix a false negative, it must **immediately
+measure the false positives on the largest corpus available**, not on the case that motivated it. And a
+widened matcher is most dangerous **on the queue the same pass creates** — the backlog is, by
+construction, the set of rows nobody has looked at.

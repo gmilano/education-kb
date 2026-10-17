@@ -696,6 +696,31 @@ data gets the ranking backwards.
 
 ### North America
 
+**Pass 276 — one adoption instrument added, and a floating statistic flagged before it becomes a datum.**
+
+🟢 **Institutional adoption, higher education:** **66% of institutions now use AI, up from 49%** a year
+earlier (**Ellucian**, 2025 survey, as summarised in a Northeastern executive-education brief), while
+**only about 1 in 3 universities has a clear AI strategy**. 🔵 **That pairing is the engagement**: usage
+has outrun strategy inside the same institution, which is the governance-retrofit shape this base
+already sells into LATAM — now with a North American number on it. ⚠️ SNIPPET grade; the Ellucian
+report itself was not read.
+
+🟢 **Regulation remains fragmented and that is now sourced:** no FDA-equivalent body for education AI,
+with **state-level** requirements accumulating piecemeal (**Colorado**, **Texas** named). A
+**September 2026 EdWorkingPaper** finds AI institutionalisation across global research universities
+*"uneven and stratified"* — useful because it is a research instrument rather than a vendor survey.
+
+🔴 **A floating "~10% have formal AI guidelines" figure appeared again, with no scope attached.** This
+base already carries ~10% for **EMEA institutions** and `p275` carried *"fewer than 10%"* for **LATAM**.
+A third unscoped appearance is how a regional figure becomes a global one by repetition. **Not shelved
+as a North American datum.** 🔵 `T50` names the mechanism.
+
+⚠️ **The MarketsandMarkets NA cell (`$951M → $2.3B @ 15.9%`) is NOT re-published here.** `p274` measured
+it closing at **+0.22% over six years** — a window defect, not a forecast. Carried only as the example
+in `T38`/`T42`.
+
+
+
 
 **Pass 274 — the NA leg was retargeted at HIGHER EDUCATION, as `p272` and `p273` both asked and
 neither did, and it returned four new datums plus the procurement lane this shelf was thin on.**
@@ -951,6 +976,55 @@ headline table. Query: `AI education North America 2026 adoption regulation play
 
 
 ### EMEA
+
+**Pass 276 — THE NINE-PASS EMEA NIL ENDS, and it ended by querying the INSTRUMENT instead of the
+region, exactly as `p275` ranked it.** `p275` diagnosed its own EMEA blanks as *"narrow-query blanks,
+not quiet regions"* and ranked one instruction for this pass: *"query the instrument, not the region."*
+🟢 **Run once, it returned the single most decision-relevant fact on this shelf for an EMEA engagement.**
+
+🔴 **The AI Act deadline an EMEA education engagement was planning around has MOVED.**
+
+| obligation | was | **now** |
+|---|---|---|
+| **Annex III high-risk** — incl. **education admissions**, **assessing learning outcomes**, determining a person's level of education | `2026-08-02` | 🔴 **`2027-12-02`** |
+| **Annex I** — AI embedded in regulated products | `2027-08-02` | **`2028-08-02`** |
+| **Article 50** transparency duties | `2026-08-02` | 🟢 **UNCHANGED** *(machine-readable marking: grace to `2026-12-02` for systems already on the market)* |
+
+The instrument is the **Digital Omnibus**, **Regulation (EU) 2026/1744** — Council final approval
+`2026-06-29`, published in the Official Journal `2026-07-24`, **in force `2026-07-27`**.
+
+🟢 **And what did NOT move is what an education engagement actually trips over first:**
+- The **prohibition on inferring emotions in education settings** has applied since **February 2025**.
+  It is a ban, not a deferred high-risk duty — proctoring and engagement-detection features are
+  affected **today**.
+- The **Article 4 AI-literacy duty** likewise dates from that period.
+- **Provider vs deployer** splits the work: a studio *building* education AI is a **provider** (risk
+  management, data governance, technical documentation, conformity assessment, EU-database
+  registration); the institution *using* it is a **deployer** (follow the provider's instructions,
+  keep human oversight, log incidents). 🔵 **A Globant engagement is almost always the provider**, which
+  is the heavier half.
+- **Public institutions owe a Fundamental Rights Impact Assessment before first use.**
+
+⚠️ **GRADE: SECONDARY-CONVERGENT, PRIMARY UNREAD.** Reg (EU) 2026/1744 and the `2027-12-02` date are
+corroborated independently by **four** legal publishers (Gibson Dunn, DLA Piper, Cooley, Cloud Security
+Alliance). 🔴 **`eur-lex.europa.eu` is CONNECT 403 from this environment on all three URL forms tried**
+(`/eli/reg/2026/1744/oj`, `OJ:L_202601744`, `CELEX:32026R1744`), so **the Official Journal text was not
+read first-hand.** This base does not publish a licence it has not read; it marks a regulation it could
+not read either. **`p277` must read the OJ text before an engagement quotes a date off this shelf.**
+
+🔵 **The commercial reading:** the deferral is **16 months of runway, not a reprieve.** The duties that
+bite first (emotion-inference ban, AI literacy, Article 50 transparency) are in force now, and the
+heavy provider obligations land `2027-12-02` — which is inside the lifetime of a platform built in
+2026. **Build to Annex III now; the delay changes the audit date, not the architecture.**
+
+🔴 **One EMEA supply finding, from this pass's enumeration rather than its searches:** the European
+Commission's own **European Digital Credentials** reference implementation
+([`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials))
+serves **no licence grant across `2 970` enumerated paths** and no `license` element in its `pom.xml`.
+**An EU-credentialing engagement cannot treat it as open source**, and that is now an enumerated
+absence rather than a ladder's silence.
+
+
 
 
 **Pass 274 — the EMEA leg is a measured NIL for the ninth consecutive pass, and it produced three
@@ -1287,6 +1361,29 @@ at `p274`.
 
 ### APAC
 
+**Pass 276 — the tenth consecutive weak APAC leg, and the regional phrasing is again the cause.**
+Published with the query that produced it (`AI education APAC 2026 adoption regulation players`), because
+an informed gap is information and silence looks exactly like coverage.
+
+🔴 **Zero school- or university-level policy results.** Everything returned was general APAC enterprise
+AI: Singapore's financial-sector consultations as a *template* for guardrails, a prediction that APAC
+governments will converge on shared principles and localise them, Forrester on CEO ownership of AI
+strategy, and "AI sovereignty" as the 2026 regional theme. **None of it is education.**
+
+🟢 **Three named players did come through, and they are the commercial surface:**
+- **TCS × Pearson** — a multi-year AI learning alliance aimed at employer skills gaps.
+- **LearnUpon** — APAC expansion, Sydney HQ, AI course authoring.
+- **OpenAI** — a dedicated **Australia/New Zealand policy lead**, as Canberra tightens AI governance
+  and copyright rules.
+
+🔵 **Diagnosis, and the instruction for `p277`: this is a QUERY defect, and `p276` has the proof.** The
+EMEA nil ran nine passes and broke on the **first** instrument-targeted query. APAC must be queried the
+same way — **by instrument, per jurisdiction** (Japan's MEXT guidelines, Singapore MOE, India's NEP/CBSE
+mandate, China's MoE generative-AI rules, Korea's AI textbooks) **rather than by the word "APAC"**, which
+no education ministry uses to describe itself.
+
+
+
 
 **Pass 274 — the VIETNAM RECONCILIATION, open for five passes and flagged four times, CLOSES — and
 the instrument that closes it was on this base's own trending shelf the whole time.**
@@ -1518,6 +1615,61 @@ Japan's MEXT guidelines, India NEP/AI curriculum), not the regional abbreviation
 
 ### LATAM
 
+**Pass 276 — the strongest leg again, and it corrects the predicate under this shelf's own headline
+governance number.**
+
+🔴 **The "~30% of LATAM universities have published AI-use policies" figure is a PERCEPTION measure, not
+a policy-coverage measure.** The Digital Education Council / Tec de Monterrey LATAM survey reports that
+**only ~30% of students and faculty consider that their university integrates AI effectively or provides
+sufficient resources to use it well.** 🔵 **That is a satisfaction question. It is not a count of
+published policies**, and the two are not interchangeable: an institution can have a policy nobody rates
+as effective, and vice versa. **Retired as a policy figure.**
+
+🟢 **The policy question has a direct instrument, and it is already on this shelf — UNESCO-IESALC, 200
+institutions across 19 countries (2025):**
+
+| predicate | value |
+|---|---|
+| teaching and learning use | **73.5%** |
+| has a **formal AI strategy** | **26.0%** |
+| has **institution-wide policies** | 🔴 **18.5%** |
+| has a **dedicated budget** | 🔴 **8.0%** |
+| has **formal evaluation mechanisms** | 🔴 **9.0%** |
+
+🔴 **So this base has carried three different governance gaps, and they are three different questions:**
+92 − 30 = **62 points** (use vs *perceived effectiveness*), 92 − 18.5 = **73.5 points** (use vs
+*institution-wide policy*), and `p275`'s *"fewer than 10%"* ≈ **83–84 points** (use vs *policy **and**
+capacity*, which matches IESALC's 8.0% budget and 9.0% evaluation). 🔵 **All three are real; none is
+interchangeable with the others.** **An engagement should quote the 18.5% institution-wide-policy figure
+for a governance-retrofit pitch** — it is the direct measure of the thing being sold — and cite the
+8.0%/9.0% pair when the pitch is *capacity* rather than *policy*.
+
+🟢 **Regulatory map, newly sourced and placed:** Universidad de los Andes' observatory documents **716
+regulatory instruments — binding norms and draft bills — across 23 countries and territories** in the
+region. **Peru** has a general AI law (**Ley N.º 31814**, 2023). **Chile** has had a national AI policy
+since **2021** with a general law still in discussion. **Brazil** and **Colombia** have national
+strategies but **no education-sector AI regulation**. 🔴 **Mexico's SEP and ANUIES proposals are
+explicitly NON-BINDING.** 🔵 **The commercial consequence: in LATAM the binding constraint is almost
+never a national education-AI statute — it is institutional policy and data-protection law.** An
+engagement that waits for sector regulation waits indefinitely; one that lands institutional governance
+can start now.
+
+⚠️ **Two quantities on this shelf are UNRECONCILED and must not be quoted until they are.** This file
+records the DEC LATAM survey as **"92% of students and 79% of faculty, 30,000+ responses across 29
+institutions"**; this pass's sourcing gives the LATAM survey as **29 institutions / 22,941 students**,
+and the **GLOBAL** 2026 report as **88% of students and 77% of faculty, 45,398 responses across 35
+countries**. 🟢 **The 92% is confirmed LATAM — `p275`'s regional attribution was RIGHT** — but the
+**faculty percentage and the response count are not yet reconciled**, and `digitaleducationcouncil.com`
+is CONNECT 403 from here.
+
+🔴 **And a conflation to defend against, found in the wild this pass:** an aggregator publishes the 92%
+as **global** student AI use ("66% in 2024 → 92% in 2025"). **It is a LATAM figure**, and the global
+number is 88%. 🔵 **DEC itself invites the error** by comparing its LATAM 92% against its own
+**global-2024** 86% as a *"+6% increase"* — a cross-base comparison, `T38`/`T42`'s species appearing in
+a primary publisher rather than a reseller. `T51`.
+
+
+
 
 **Pass 274 — the load-bearing LATAM number is refreshed for the first time in several passes, and it
 is WORSE than the one this base has been selling.**
@@ -1705,6 +1857,10 @@ The region where the policy direction most favours what open source actually is.
   **92% of students and 79% of faculty actively engaging with AI**, from **30,000+ responses across
   29 institutions**, with Tecnológico de Monterrey and UNAM among its partners. Separately, a
   Tec-de-Monterrey-linked figure puts **only ~30% of LATAM universities** as having published AI-use
+  🔴 **[CORRECTED `p276`: this is a PERCEPTION figure — ~30% of students and faculty consider their
+  university integrates AI *effectively* or provides *sufficient resources*. It is not a count of
+  published policies. The direct measure is UNESCO-IESALC's **18.5% institution-wide policies**.
+  See `## Opportunities by region → LATAM`.]**
   policies. **Two independent instruments, the same shape: near-universal use, policy coverage
   around a quarter to a third.** The 61-point gap this base priced its governance-retrofit
   engagement on is not an artefact of one study.
@@ -1801,7 +1957,7 @@ exactly as `p275`'s licence work refuses to publish a grant it has not read.
 |---|---|---|
 | Student / faculty engagement | **92% of students**, **79% of faculty** actively engaging with AI | Digital Education Council, *AI in Higher Education LATAM Survey 2026* — **30 000+ responses across 29 institutions**, run with Tecnológico de Monterrey's Institute for the Future of Education |
 | Where institutions actually apply it | teaching & learning **73.5%** · research **57.0%** · administration **34.1%** · community engagement **20.0%** | UNESCO **IESALC** regional survey — **200 institutions across 19 countries** |
-| 🔴 **The governance gap** | only **~30%** of LATAM universities have **published** AI-use policies | as reported in the same leg |
+| 🔴 **The governance gap** | ~~only **~30%** of LATAM universities have **published** AI-use policies~~ 🔴 **CORRECTED `p276` — wrong predicate: the ~30% measures *perceived effectiveness*, not policy publication. Use UNESCO-IESALC **18.5% institution-wide policies** (or **8.0%** budget / **9.0%** evaluation for a capacity pitch).** | as reported in the same leg; predicate corrected in `p276` |
 
 🔴 **The gap is the engagement, and it is now quantified on both sides.** 92% of students use AI; ~30%
 of their institutions have written down how. 🔵 **This corroborates — from a second survey house — the

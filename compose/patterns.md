@@ -1320,3 +1320,147 @@ rubric model, and an instructor review UI from zero. The entire reason that advi
 licence verdict produced by probing one 632-byte file.** 🔵 **Before costing a from-scratch build
 because a component is unlicensed, enumerate the tree** (`T46`) **and read every manifest, not just the
 root one** (`T47`).
+
+## P27 — Adaptive assessment with a permissive psychometrics core: the layer this base kept recommending and had no licence for
+
+**When a client asks for it:** *"We want adaptive testing — item difficulty, ability estimation, and
+scores that stay comparable across forms and across years."* Until `p276` this base could offer a
+**learner model** (`OATutor`'s BKT) but had **no permissive answer for the psychometrics** underneath it,
+and in particular none for **equating** — the thing that makes this year's score mean what last year's
+score meant. 🔴 **The answer was on the shelves the whole time, carried as `no payload`.**
+
+### The stack — three repos, all permissive, all payload- or manifest-read
+
+| role | repo | grant | grade |
+|---|---|---|---|
+| 🟢 **Item/ability estimation, linking, equating — NEW** | [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | **Apache-2.0** | `pom.xml` `<licenses>`, read `p276` |
+| Tutoring + mastery (BKT) front end | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | payload |
+| 🟢 **Review scheduling (FSRS) — NEW** | [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | **MIT** | payload, `1 079` B, read `p276` |
+| LMS doorway (grades in, roster out) | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) *or* [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **MIT** | payload / manifest+registry |
+
+🔵 **Why these three compose rather than overlap:** they answer three different questions that teams
+routinely conflate. `psychometrics` answers *"how hard is this item and how able is this student, on a
+scale that survives a change of form"* (IRT: Rasch/2PL/3PL/GPCM, plus **Mean-Mean, Mean-Sigma and
+Stocking-Lord linking** and score equating). `OATutor` answers *"has this student mastered this skill
+yet"* (BKT, per-skill, within one course). `fsrs4anki-helper` answers *"when should this come back"*.
+**Mastery is not difficulty and neither is retention.**
+
+### Wiring it
+
+1. **Calibrate the item bank offline with `psychometrics`** (JVM; modules `-irt`, `-ctt`, `-factor`,
+   `-fmm`). Fit IRT parameters on historical response data before any agent touches a learner. Treat this
+   as a batch job with a reviewed output, not a service — calibration is a measurement decision, and it
+   wants a psychometrician's signature on it.
+2. **Expose calibrated parameters as read-only reference data** (a table keyed by item id: `a`, `b`, `c`,
+   plus the form and the calibration date). Everything downstream reads this; nothing downstream writes it.
+3. **Select the next item in the agent layer**, using ability estimate + target information, and keep the
+   selection rule **declarative and logged**. 🔵 This is the single most audited line of an adaptive test —
+   write it so it can be replayed from the log alone.
+4. **Keep `OATutor`'s BKT for mastery and hint sequencing**, driven by the same response stream. Do not try
+   to make IRT do mastery or BKT do scaling.
+5. **Hand long-term retention to `fsrs4anki-helper`**, scheduling review of items the learner has passed
+   rather than re-testing them adaptively. Its load-balancing matters once a cohort shares a calendar.
+6. **Write scores back through the MCP doorway**, never by direct DB write into the LMS.
+7. 🔴 **Re-equate when the form changes, and say so in the report.** `psychometrics`' linking methods are
+   the reason this stack can promise year-over-year comparability — a promise an engagement should only
+   make if step 7 is actually scheduled.
+
+**Licence boundary:** everything above is **MIT / Apache-2.0**, so the client's proprietary item bank,
+selection policy and reporting stay proprietary. ⚠️ **The one trap is data, not code:** calibration needs
+historical response data, which is student data — see `P24`'s pseudonymisation boundary, and note the EU
+position in `P29` if the cohort is in the EEA.
+
+**Timeline:** 6–8 weeks to a calibrated bank and a replayable selection rule on one subject; equating
+across two forms adds ~3 weeks and needs an anchor-item design agreed up front.
+
+## P28 — Two MIT doorways into Canvas, and the one this base told you not to use is the more capable
+
+**When a client asks for it:** *"Our LMS is Canvas and we want an agent inside it — not another portal."*
+
+🔴 **This pattern exists because of a correction.** This base published
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) as *"NONE — no licence
+statement … Do not use. No licence = all rights reserved."* `p276` read `package.json` l.66
+(`"license": "MIT"`) and the npm registry (`canvas-mcp-server`, **MIT across 19 published versions**).
+**Withdrawn.** Canvas now has **two** MIT doorways on this base.
+
+| doorway | grant grade | pick it when |
+|---|---|---|
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT**, payload read (`1 070` B) | 🟢 **Compliance is the gating concern** — it ships **opt-in FERPA pseudonymisation** |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **MIT**, **manifest grade** + registry (**no payload in tree**) | 🟢 **Coverage is the gating concern** — 54 tools, `v2.3.1`, student *and* account management, vitest suite |
+
+### Wiring it
+
+1. **Choose by gate, not by star count.** If the client's blocker is *"we will not give an agent access to
+   student records"* — which `p274` recorded as the market's own stated reason for not deploying agents —
+   start with `bruchris` and turn pseudonymisation **on** before the first demo.
+2. **Run the MCP server as the only component holding the Canvas API token**, scoped to the narrowest
+   Canvas role that satisfies the use case. Agents get tools, never credentials.
+3. **Compose, don't fork.** Where `bruchris` has the compliance posture and `DMontgomery40` has the tool
+   you need, run **both** servers and let the agent hold two tool namespaces. That is what MCP is for, and
+   it keeps each upstream updatable.
+4. 🔴 **Pin `DMontgomery40` by version and vendor the grant.** Its `files` array names a `LICENSE` that is
+   **not in the git tree**; the grant lives in the manifest and the registry. **Record the npm version,
+   the `package.json` licence line and the registry metadata in the engagement's licence file** — a
+   manifest grade is real but thinner than a payload, and a future maintainer must not have to re-derive it.
+5. **Write back through the LMS's own gradebook semantics** (assignment, submission, grade), so the
+   institution's existing audit trail stays the system of record.
+
+**Licence boundary:** both doorways are **MIT** — no copyleft reaches the client's agent code. The
+constraint is **data**, not licence: FERPA in the US, and Annex III in the EEA (`P29`).
+
+**Timeline:** 2–3 weeks to a working tool surface against a Canvas sandbox; add 2–3 weeks for a
+pseudonymisation review if student records leave the institution's tenancy.
+
+## P29 — The EMEA education build that is Annex III-ready before Annex III bites
+
+**When a client asks for it:** *"We are an EEA institution (or we sell to them) and we want AI in
+admissions, assessment or tutoring without betting the roadmap on the AI Act."*
+
+🟢 **The date moved and the architecture did not.** The **Digital Omnibus — Regulation (EU) 2026/1744**
+(in force `2026-07-27`) **deferred Annex III high-risk obligations from `2026-08-02` to `2027-12-02`**.
+⚠️ **Grade: secondary-convergent, four independent legal publishers; the Official Journal text is UNREAD
+from this environment (`eur-lex.europa.eu` CONNECT 403) — verify before quoting a date to a client.**
+
+🔴 **What is already in force, and catches education first:**
+
+| in force now | what it means for the build |
+|---|---|
+| **Ban on inferring emotions in education settings** (since Feb 2025) | **Not a deferred duty — a prohibition.** No engagement-detection, no affect-based proctoring. Design it out; do not plan to switch it off later |
+| **Article 4 AI-literacy duty** | The institution owes staff and student literacy — a deliverable a studio can actually supply |
+| **Article 50 transparency** (from `2026-08-02`, marking grace to `2026-12-02`) | Disclose AI interaction and mark synthetic output **now** |
+
+🔵 **And who you are in the regulation:** a studio *building* the system is the **provider** — risk
+management, data governance, technical documentation, conformity assessment, EU-database registration.
+The institution *deploying* it owes instructions-compliance, **human oversight** and incident logging, and
+a **public** institution owes a **Fundamental Rights Impact Assessment before first use**. **The heavy
+half is the studio's.**
+
+### Wiring it
+
+1. **Start from a permissive stack you can document end to end** — `P26`'s TUM four (`Artemis`, `Iris`,
+   `Pyris`, `Athena`, all MIT) is the strongest option here precisely because one institution's stack
+   leaves one coherent paper trail.
+2. **Keep the model boundary sovereign:** `Pyris` as the only credential holder, pointed at **Ollama or
+   vLLM in the client's own tenancy** where residency is a constraint.
+3. 🔴 **Classify every feature against Annex III on day one**, not at audit. **Admissions, assessing
+   learning outcomes and determining level of education are high-risk**; automated grading, adaptive
+   learning and proctoring are commonly read as high-risk; scheduling is low-risk; a tutoring chatbot
+   mainly owes **transparency**. Write the classification into the backlog as a field on each epic.
+4. **Keep the human-decision boundary where `Athena` already draws it** — *suggestions* an instructor
+   accepts, edits or rejects. This is simultaneously the pedagogy argument, the Annex III oversight
+   argument and the academic-integrity argument. 🔵 **One architectural choice answers three committees.**
+5. **Build the FRIA with the deployer, as a deliverable** — it is the institution's duty, it needs facts
+   only the builder has, and an engagement that produces it is far harder to displace.
+6. **Treat `2027-12-02` as the audit date, not the start date.** 16 months is less than the life of a
+   platform built in 2026; a system that reaches that date un-classified is re-architected under
+   deadline.
+
+⚠️ **One EMEA supply warning from `p276`'s enumeration:** the European Commission's own **European Digital
+Credentials** reference implementation
+([`european-commission-empl/european-digital-credentials`](https://github.com/european-commission-empl/european-digital-credentials))
+carries **no licence grant across `2 970` enumerated paths** and no `license` element in its `pom.xml`.
+**Do not plan a credential-issuance deliverable on it as open source** — read its terms with the client's
+counsel, or build issuance on a granted stack.
+
+**Timeline:** 10–12 weeks to a classified, documented, FRIA-supported pilot on one high-risk use case;
+the classification and documentation are roughly a third of it and are the part that cannot be compressed.

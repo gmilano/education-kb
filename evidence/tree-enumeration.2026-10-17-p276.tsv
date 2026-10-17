@@ -1,0 +1,46 @@
+# pass 276 — 2026-10-17 — p275's enumeration QUEUE worked for the first time: 30 of 124 rows.
+# Method (plain git only; the repo's own scripts could not be executed this pass — see README):
+#   git ls-remote <slug> HEAD                                   positive control: does it resolve?
+#   git clone --depth 1 --filter=blob:none --no-checkout <slug>  blobless, seconds, NO worktree
+#   git ls-tree -r --name-only HEAD                              EVERY path.  No guessing.
+#   then, for every candidate, curl the payload at the PINNED SHA and read it.
+# 🔴 AND THEN THE SECOND CHANNEL, which p275's instrument does not implement: for every row the
+# file channel called ABSENT, the MANIFEST was read (package.json / pyproject.toml / pom.xml /
+# composer.json / readme.txt) — because p275's own headline case (Athena) had its grant in a
+# manifest.  3 of 30 rows are grants ONLY the manifest channel can see.
+# 30/30 slugs resolved.  10 negative verdicts REFUTED.  5 positive controls PASSED.
+#
+# col5 = candidate grants FOR THIS REPOSITORY'S CODE.  col6 = licence-like paths EXCLUDED on
+# SCOPE (asset/dataset/translation/vendored) — recorded, not counted, because a licence-like
+# path is not automatically this repo's grant.  col7/col8 = SPDX + payload bytes, read first-hand.
+slug	resolves	head_sha	paths_in_tree	candidate_grants	scope_excluded	spdx	bytes	note
+Open-TutorAi/open-tutor-ai-CE	RESOLVES	196c547291da5df57b68165691e47ca7ffdbb137	4702	LICENSE	-	BSD-3-Clause	1531	POSITIVE-CONTROL: reproduces the published grade; "All rights reserved" is BSD line 2
+projectfedena/fedena	RESOLVES	68a84ac445bf9ad5eb7dd5925388eb788bde9894	4608	NOTICE	public/javascripts/fckeditor/license.txt,public/javascripts/tiny_mce/license.txt	Apache-2.0	680	REFUTES the "Apache-2.0 NOT ESTABLISHED" limb; abandonment limb UPHELD (2016-07-20)
+DMontgomery40/mcp-canvas-lms	RESOLVES	c0646ba10ac207d45cc2122d80b3b98e12b497d0	36	NONE_IN_TREE	-	MIT	3461	MANIFEST CHANNEL: package.json l.66 "license":"MIT" + npm canvas-mcp-server@2.2.3 MIT (19 versions). No payload in tree
+meyerjp3/psychometrics	RESOLVES	1fac2d7053ae17acb0b9bedc13c52c41874e8a77	395	NONE_IN_TREE	-	Apache-2.0	3752	MANIFEST CHANNEL: pom.xml <licenses><license> Apache Software License 2.0, distribution=repo
+LearnPress/learnpress	RESOLVES	ca52963204359d873c3bda8669140249cc4f4142	1985	NONE_IN_TREE	-	GPL-3.0-or-later	42726	MANIFEST CHANNEL: readme.txt "License: GPLv3" + composer.json "GPL-3.0-or-later"
+Kosudo/nextSIS	RESOLVES	60e422c7d93e5725e4364083a26b062831c171c6	221	license.txt	-	GPL-3.0	39890	P278 species: lowercase AND .txt. Composite file (nextSIS GPL-3 + CodeIgniter + Bootstrap)
+frappe/lms	RESOLVES	a7d39be450f123dcbe72ec813073b70544bf956b	1629	license.txt	-	AGPL-3.0	33893	P278 species: lowercase AND .txt
+formalms/formalms	RESOLVES	446a77a9b9cbb20dacf008a2d53b2658fb5f5634	5321	html/license.txt	html/lib/System/license/license_english.txt	GPL-2.0	18346	POSITIVE-CONTROL: reproduces p265's payload read at the same path
+open-spaced-repetition/fsrs4anki-helper	RESOLVES	29208f220f21ff994c199712a6aaac47636773bf	45	License	-	MIT	1079	P278 species: mixed case, no extension. NEW PERMISSIVE ROW
+ECNU-ICALK/EduChat	RESOLVES	fa30b6d5632c9364c67ba3ed726acfecc3f62eb7	42	LICENSE/LICENSE.txt	LICENSE/MODEL_LICENSE.txt,LICENSE/DATA_LICENSE.txt	Apache-2.0	11357	TIER-SCOPED: code Apache-2.0 (11357 B, pristine) / model AGPL-3.0 (33821 B) / data CC-BY-NC-4.0 (19346 B)
+dssg/student-early-warning	RESOLVES	b68f23c76d5277d96ec70768c728234660428e92	19	LICENSE	-	UChicago-academic-non-commercial	2069	A REFUTED ABSENCE IS NOT A PERMISSION: grant exists and forbids "any service or part of selling a service"
+learningequality/kolibri-server	RESOLVES	6af1f67acfde18dac81ea6baf365f01c7b149f64	48	debian/copyright	-	GPL-2+	1284	PACKAGING-SCOPED: DEP-5 Files: stanzas name 5 paths, not the repo
+mendezjerick/ReaDirect-V2	RESOLVES	902762dc534f2eae45247db08f24e90755ff1709	6306	NONE_IN_TREE	22 asset-attribution paths (CC0 game art, fonts, .corepack pnpm)	NONE	0	ASSET-SCOPED: all 22 licence-like paths licence ART, not code. Manifests carry no licence key
+open-spaced-repetition/srs-benchmark	RESOLVES	bd9110f791e5b37282c55a9aa8db35f68f0c4aa2	582	NONE_IN_TREE	dataset/LICENSE	NONE	0	ASSET-SCOPED: dataset/LICENSE is a 144 B permission-gate ("request permission"), not a code grant
+CreveXTech/canvas-lms-mcp	RESOLVES	0310536c0dcad6b4071cc55481ac7eeae1fe6444	31	NONE_IN_TREE	-	NONE	0	Two-channel absent: no grant file; package.json (535 B) has no license key
+Nasus20202/MoodleMCP	RESOLVES	99a11366b0774a3a6f5bfc511069bed150e4197b	155	NONE_IN_TREE	-	NONE	0	Two-channel absent: 5 package.json, none with a license key
+vkumar04/canvas-mcp-lite	RESOLVES	1bf1b0a55b6de9dd2322793569ab90d42580e956	51	NONE_IN_TREE	-	NONE	0	Two-channel absent: pyproject.toml has no license key
+kevinraj23/student-assistant-mcp-server	RESOLVES	45cf1eee756991a79a86a988b8f63c335aee8e9e	5	NONE_IN_TREE	-	NONE	0	Two-channel absent: pyproject.toml (371 B) has no license key
+educredentials/ec-issuer	RESOLVES	8bafc99c44256d909f379a43af3cc93497d81d76	141	NONE_IN_TREE	-	NONE	0	Two-channel absent: pyproject.toml (1453 B) has no license key
+alfredang/AI-LMS-TMS	RESOLVES	8139c4fc51f8420d23f75d4af8276e7dbcaa0fdd	1581	NONE_IN_TREE	-	NONE	0	POSITIVE-CONTROL: reproduces the published "proprietary / All rights reserved" refusal in both channels
+european-commission-empl/european-digital-credentials	RESOLVES	ec562a46f54253bf7ad63af78516b17349502c5c	2970	NONE_IN_TREE	3 licenseInfo.mustache codegen templates	NONE	0	EMEA: the European Commission's own EDC reference implementation ships NO grant across 2970 paths
+bigdata-ustc/Agent4Edu	RESOLVES	ecf065d1909c66691da7c2362a61ccd3dcf9169c	49	NONE_IN_TREE	-	NONE	0	Two-channel absent: no manifest in tree
+Aryan6238/EduAgent	RESOLVES	93d406dbaf8a77168e25620f32739f3921675762	9	NONE_IN_TREE	-	NONE	0	Two-channel absent: no manifest in tree
+JazminVidal/gop-pykaldi	RESOLVES	c34952ebbfc492226900a619c6e72e3d1a7daa67	73	NONE_IN_TREE	-	NONE	0	Two-channel absent: no manifest in tree
+adlnet/SCORM-to-xAPI-Wrapper	RESOLVES	3e532b8523859abd738a769c086ec7040e32e871	5	NONE_IN_TREE	-	NONE	0	Two-channel absent: no manifest in tree
+fwu-de/schulfach-ontologie	RESOLVES	4246083f62d27a9345e57f2c8258c9214ddd9d90	106	NONE_IN_TREE	-	NONE	0	Two-channel absent: no manifest in tree (EMEA, German Laender ontology)
+jimbozhang/speechocean762	RESOLVES	613968e3b0b789fc33936fb5eba1973176ba7d11	5263	NONE_IN_TREE	-	NONE	0	Two-channel absent: no manifest across 5263 paths
+rachelproject/module-template	RESOLVES	5bb5a38ff2982d443e09e92ab54efacce85429fa	3	NONE_IN_TREE	-	NONE	0	Two-channel absent: 3-path repo
+JushBJJ/Mr.-Ranedeer-AI-Tutor	RESOLVES	ea29bcf196d28e70eb31100d00b108ebbacceb96	12	NONE_IN_TREE	-	NONE	0	Two-channel absent: no manifest in tree
+eth-lre/MathTutorBench	RESOLVES	6faed173ec2bef55cb899b2a3e0f93982f9cb176	40	NONE_IN_TREE	-	NONE	0	Two-channel absent: no manifest in tree
