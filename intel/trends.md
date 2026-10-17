@@ -639,3 +639,81 @@ ten minutes grepping itself will out-produce one that spends them searching.
   autoGrader-frontend, openSIS-Classic, awesome-ai-llm4education) and one resolved to MIT at
   metadata grade. 🔵 Worth recording as explicitly as a correction: this base's careful calls are
   holding up, and a pass that reports only corrections misrepresents its own reliability.
+
+
+## T26 — The curriculum-mandate wave has reached Africa and the Middle East, and the permissive supply has not
+
+`T22` established the mandate wave and its failure mode. Pass 269 ran the four regional legs this
+base had specified and never executed — **Kenya, Nigeria, South Africa, Egypt as four separate
+queries** — and the wave is plainly there:
+
+- 🇰🇪 **Kenya:** **10,382** public junior secondary schools in a World-Bank-funded (**KDEAP**)
+  smart-classroom rollout; **62,000+** teachers ICT-trained as at **July 2026**.
+- 🇳🇬 **Nigeria:** AI, cybersecurity, programming and robotics in the junior and senior secondary
+  curriculum **from September 2025**.
+- 🇪🇬 **Egypt:** a **UNESCO-launched national AI competency framework for teachers (2026-06-03)**,
+  **236,000+** general-secondary students enrolled in coding and AI from **2025/26**, technical
+  schools from **2026/27**, select primary and middle grades announced.
+- 🇿🇦 **South Africa:** the counter-case — **the Draft National AI Policy 2026 was abrogated on
+  2026-04-27**, leaving **no national instrument**, while **North-West University** became the first
+  SA university with its own AI policy in **January 2026**.
+
+🔴 **And the supply side is empty at the payload, not merely at the query.** Pass 269 located the
+first two African-context education agents this base has ever carried —
+[`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) (South Africa, Grades 8–12) and
+[`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) (Nigeria) — resolved both default
+refs, probed 19 paths on each, read the package metadata as a second channel, and found **no grant in
+either**. Nigeria's **Naija Teacher AI** (UNESCO SDG4, offline-first, target **1.5M teachers by Q3
+2026**) **states no licence**; Kenya's **Kytabu SOMANASI** is **proprietary**.
+
+🔵 **Why this is the most commercially useful trend in this file.** It is the **inverse of LATAM**.
+There, adoption outran governance and the sellable work is governance retrofit (`P13`). Here, **the
+state programme arrives first** — funded, named, dated, with enrolment and teacher counts attached —
+**and there is nothing off the shelf to satisfy it.** A market that has not yet bought anything is a
+better starting position than one that has.
+
+🟡 **The region splits on where to enter.** Kenya and Egypt have **national anchors** (a funded
+rollout; a teacher-competency framework), so a ministry-level engagement has an instrument to attach
+to. **South Africa has none at national level and a live one at institutional level** — so the same
+pitch has to enter one country through a ministry and the next through a university.
+
+⚠️ **Grade:** every figure above is **secondary-source**. `p268` established the non-GitHub DNS
+failure as environmental, and pass 269 did not re-spend searches on primary retrieval. **There is
+also still no MEA market sizing of any kind in this base** — the region now has programme rows and
+no number.
+
+## T27 — A licence can be inherited from a project template, and the most on-point artefact in a category is where that bites
+
+`T20` moved licence risk from the **name** of a grant to its **shape**. Pass 269 found a third axis:
+a grant's **provenance** — who chose it, and whether anyone chose it at all.
+
+[`datawhalechina/ai-edu-for-kids`](https://github.com/datawhalechina/ai-edu-for-kids) is *"面向中小学的
+人工智能通识课开源课程"* — an open-source **AI general-education course for primary and secondary
+schools**, **128★ / 27 forks / 57 commits**, and **the most-adopted primary-band AI-curriculum
+artefact this base has located.** It serves **no `LICENSE` payload on 19 of 19 paths**. Its README
+declares **CC-BY-NC-SA-4.0** — NonCommercial *and* ShareAlike, the one shape a client deliverable
+cannot carry. **And the line immediately after the declaration reads, verbatim:**
+
+> *注：默认使用CC 4.0协议，也可根据自身项目情况选用其他协议*
+> — "note: CC 4.0 is used by default; you may choose another licence depending on your project."
+
+🔴 **The most restrictive attribute of the most relevant artefact in this category is boilerplate
+carried over from an organisation's project template.** Nobody decided that this curriculum should
+be non-commercial; the template said so, and the template's own text invites a different choice.
+
+🔵 **Two practical consequences, in opposite directions.**
+1. **Never assume it away.** A template default is legally identical to a deliberate NC-SA. Until an
+   upstream says otherwise in writing, the course is unusable in a paid deliverable, and `P17`
+   (originate the content, borrow only the specification) is the move.
+2. **It is the licence most likely to change if asked.** Contrast a grant chosen *for* a reason —
+   `PageLM`'s bespoke community licence, `AStheTECH`'s all-rights-reserved — which will not move.
+   **A provenance read tells you which conversations are worth having**, and this base has, until
+   now, recorded only the verdict and never who picked it.
+
+🟡 **The same read has a second use, demonstrated this pass.**
+[`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) carries, in its README, *"Add
+the project's chosen license here before publishing if a specific open-source license is required."*
+**That is not an unlicensed project; it is a PRE-LICENCE one** — the author has written down that the
+grant is missing. Against [`ls1intum/Athena`](https://github.com/ls1intum/Athena), silent through 76
+path/ref probes across three passes, the difference is entirely actionable: **one of these rows is
+worth an email and the other is not**, and only a provenance read separates them.

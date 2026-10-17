@@ -1,0 +1,35 @@
+# pass 269 — 2026-10-17 — education KB
+# THEME: run the TWO limbs p268 named as the cheapest way to falsify its own biggest claim
+#   (Gap 367's Hindi and Chinese legs), and run p267's unrun Middle East / Africa instruction
+#   as four separate queries. 6 repositories probed, 6 grant states established first-hand.
+#
+# METHOD (p267/p268's, unchanged):
+#   - Default ref RESOLVED per repo with `git ls-remote --symref <url> HEAD` before any fetch;
+#     no ref was guessed. All six resolved to `main`.
+#   - 19 paths x resolved ref: LICENSE/LICENCE + .md/.txt variants, lowercase `license`,
+#     LICENSE-MIT, LICENSE-APACHE, COPYING, COPYING.txt, NOTICE, docs/LICENSE, .github/LICENSE,
+#     and the package metadata (package.json, pyproject.toml, setup.py, composer.json) + README.md.
+#   - Where no payload resolved, the README and the package metadata were read for a PROSE or
+#     METADATA grant (p217-readme-prose-probe, p283-manifest-named-license). Both channels were
+#     read before any "no grant" verdict below.
+#   - p268's AMENDED cross-shelf rule applied BEFORE claiming novelty: the SLUG was grepped, not
+#     only the prose claim or the organisation. `datawhalechina` hits two shelves;
+#     `ai-edu-for-kids` hits ZERO files in this base. That is how the row was found.
+#
+# CHANNELS THIS PASS (measured, not assumed):
+#   raw.githubusercontent.com via curl -> 200  (every payload and metadata read below)
+#   git ls-remote --symref            -> OK    (every default ref below)
+#   github.com HTML via curl          -> 403   (p214's finding, re-confirmed a third pass)
+#   api.github.com via curl           -> 403   (re-confirmed; no API channel in this environment)
+#   github.com HTML via WebFetch      -> 200   (stars/forks/commits/sidebar below)
+#   Non-GitHub primary sources        -> NOT ATTEMPTED. p268 established the DNS failure is
+#     environmental, not a retry problem, and instructed future passes to stop spending searches
+#     on it. This pass obeyed that. Every regional figure below is SECONDARY-SOURCE grade.
+#
+# Columns: slug	grant_state_and_grade	path_on_resolved_ref	stars	forks	commits	region	note
+datawhalechina/ai-edu-for-kids	NO LICENCE PAYLOAD on 19/19 paths; CC-BY-NC-SA-4.0 declared in README body (PROSE grade)	main — none; claim at main/README.md l.302-306	128	27	57	APAC	NEW TO THIS BASE. "面向中小学的人工智能通识课开源课程" — an open-source AI general-education course for PRIMARY AND SECONDARY schools, and the most-adopted primary-band AI-curriculum artefact this KB has located. NON-COMMERCIAL *and* ShareAlike, so not shippable in a client deliverable. l.306 reads 注：默认使用CC 4.0协议，也可根据自身项目情况选用其他协议 — CC 4.0 is the org's DEFAULT TEMPLATE, i.e. the licence is boilerplate, not a decision. Gap 367's Chinese limb: CLOSURE UPHELD.
+Naitik-xd/CurriculumCraft-AI	MIT (payload, 1,091 B) — INDEPENDENTLY REPRODUCED	main/LICENSE	0	0	7	APAC	Already carried in agents/trending.md. Re-measured blind this pass and AGREES EXACTLY (MIT at main/LICENSE, 0 stars, 7 commits). Payload copyright line: "Copyright (c) 2026 Naitik (https://na1t1k.vercel.app)" — an INDIVIDUAL, no institution. India CBSE/NCERT, grades 9-12. Gap 367's Hindi limb: the permissive supply exists ONE BAND TOO HIGH.
+arjav0703/cbse-ai	AGPL-3.0 (payload, 34,523 B) + ARCHIVED — INDEPENDENTLY REPRODUCED	main/LICENSE	-	-	-	APAC	Already carried as withheld in evidence/p244-withheld.2026-10-16-p244.tsv at 34523 B. Re-measured blind this pass: byte length agrees to the byte. Network copyleft AND archived upstream, so the withholding stands.
+crpf-mitadt/Indian-AI-for-Education	CC0-1.0 (payload, 7,048 B) — INDEPENDENTLY REPRODUCED	main/LICENSE	1	1	3	APAC	Already carried. Re-measured blind: agrees exactly with the 7.048 B published in repos/trending.md. An INDEX of Indian education-AI assets, not code — every item on it still needs its own payload probe.
+muskvdc/EduTwin-Africa	NO GRANT — no payload on 19/19 paths, NO license field in pyproject.toml, and the README carries a LICENCE PLACEHOLDER verbatim	main — none	0	0	7	EMEA	NEW TO THIS BASE. Curriculum-aware tutor over SOUTH AFRICAN curriculum knowledge, Grades 8-12; RAG + bounded multi-agent + ReAct tools + guardrails. README states: "Add the project's chosen license here before publishing if a specific open-source license is required." PRE-LICENCE, not licence-ambiguous — a distinct state from the unlicensed rows this base already carries, and it is the author's own words.
+Valexxy/edunaija-os	NO GRANT — no payload on 19/19 paths, NO license field in package.json	main — none	0	0	6	EMEA	NEW TO THIS BASE. package.json name is "nigeria-learning-platform"; README heading "Nigeria Learning Platform — Foundation", self-described "security-conscious starter codebase for a Nigerian-first learning platform". NAMES NO exam board and NO institution. NAME-COLLISION HAZARD: it is NOT the code of the EduNaija AI Tutor paper (ACL AfricaNLP 2026) — that system is LangChain+FAISS multilingual English/Yoruba/Hausa/Igbo; this is a starter codebase. Do not cite one as the other.

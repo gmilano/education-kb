@@ -20,7 +20,12 @@ updated: 2026-10-17
 > and extended again by [`verified-repos.2026-10-17-p268.tsv`](../evidence/verified-repos.2026-10-17-p268.tsv)
 > (pass 268: the **third** MCP-addressable LMS — Google Classroom / Workspace for Education — eight
 > servers probed, seven permissive and **one a custom all-rights-reserved licence wearing the same
-> description**).
+> description**),
+> and extended again by [`verified-repos.2026-10-17-p269.tsv`](../evidence/verified-repos.2026-10-17-p269.tsv)
+> (pass 269: the first two **African-context** education agents this base has located — both of
+> which serve **no grant at all** — plus a blind re-measure of three carried APAC rows that
+> **reproduced every published figure**, and the search-leg ledger
+> [`p269-websearch.2026-10-17-p269.tsv`](../evidence/p269-websearch.2026-10-17-p269.tsv)).
 
 ## Build-on-this tier — permissive licences (MIT / Apache-2.0 / BSD)
 
@@ -86,6 +91,42 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | **RESOLVED in pass 267 — MIT at *metadata* grade** | This base carried the row as "no payload, parent `kolibri` is MIT" — which is an **inference from the parent**, the weakest grade there is. The repo's `main/package.json` declares `"license": "MIT"`. That is the **project's own declaration**, so publish it as **MIT (metadata)**: stronger than an inference, weaker than a payload, and enough to build on while a payload is requested. It still serves no licence *file*. |
 | [autograder-org/autoGrader-frontend](https://github.com/autograder-org/autoGrader-frontend) | LIVE, **no licence payload — upheld against the 19-path x 4-ref probe** | README claims LLM-based assignment grading; 22 commits. Early-stage and unlicensed. Pass 267 confirms it is not a detection artefact. |
 | [OpenEMIS/OpenEMIS-Core](https://github.com/OpenEMIS/OpenEMIS-Core) | LIVE, **no licence payload**, none in the page sidebar | *"Manage students and staff information at school, district, and national level."* OpenEMIS is the education-management system most associated with **ministry-level** deployment, which is why pass 267 probed it by hand. What this KB can actually reach is a **32-commit Docker packaging repo (7★) with no licence and no ministry or country named in it.** The application source was not located this pass. **Ministry provenance is not established — do not brief it as a public-sector reference.** |
+| [muskvdc/EduTwin-Africa](https://github.com/muskvdc/EduTwin-Africa) | LIVE, **PRE-LICENCE — the placeholder is still in the README** *(new in pass 269)* | Curriculum-aware tutor over **South African** curriculum knowledge, **Grades 8–12**: RAG, adaptive learning, bounded multi-agent collaboration, ReAct tools, guardrails. 0★ / 0 forks / 7 commits, default ref `main`. **No payload on 19 of 19 paths, no `license` field in `pyproject.toml`**, and the README says, in the author's own words: *"Add the project's chosen license here before publishing if a specific open-source license is required."* 🔵 **This is a state this shelf has not carried before.** `Athena` and `autoGrader-frontend` are *silent*; this one is **explicitly not yet licensed**. The practical difference is that it is the one row here where asking costs nothing and might work — the author has written down that they know it is missing. Until then: all rights reserved. |
+| [Valexxy/edunaija-os](https://github.com/Valexxy/edunaija-os) | LIVE, **no grant on any channel** *(new in pass 269)* | *"A security-conscious starter codebase for a Nigerian-first learning platform"*; `package.json` name is `nigeria-learning-platform`. 0★ / 0 forks / 6 commits. No payload on 19 of 19 paths and **no `license` field in `package.json`** — the two channels that could have carried a grant both empty. Names **no exam board and no institution**. 🔴 **Cite it carefully: it is NOT the EduNaija AI Tutor of the AfricaNLP 2026 paper** (that system is a five-agent LangChain + FAISS RAG tutor with English/Yoruba/Hausa/Igbo support; this is a starter codebase with a similar name). **Two different artefacts, one name** — see the trends file. |
+
+## Pass 269 — the African agent tier exists, and the question it answers is not the one that was asked
+
+Pass 267 instructed *"Kenya, Nigeria, South Africa and Egypt as four separate queries, never
+paired"*, and pass 268 restated it as the cheapest fix for **"EMEA means Europe in this base."**
+Pass 269 ran it. Four legs, four substantive returns — and on the **agent** shelf specifically, the
+result is sharper than "nothing found".
+
+🟢 **Two African-context education agents are now located and graded**, which is two more than this
+base has ever carried: [`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) (South
+Africa, Grades 8–12) and [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) (Nigeria).
+Both are in the licence-UNVERIFIED table above, because **neither serves a grant on any channel** —
+no payload on 19 paths, and no `license` field in the package metadata either.
+
+🔴 **The gap's grade therefore goes UP, not away.** This base previously recorded, in
+[`agents/trending.md`](trending.md), that an Africa-focused leg *"returned no repository-level asset
+— only a training provider, not code."* That was a **search-level** absence. Pass 269 replaces it
+with a **payload-level** one: the repositories exist, they were resolved by ref, probed on 19 paths
+and read in their metadata, **and the grant is missing in both.** 🔵 **An absence measured at the
+payload is a different and stronger claim than an absence measured at the query**, and it is the one
+to brief: *"there is African-built education-AI code, and none of it is licensed for you to ship."*
+
+🟡 **The two rows fail differently, and the difference is the actionable part.** `edunaija-os` is
+simply silent. `EduTwin-Africa` ships the **placeholder text** — *"Add the project's chosen license
+here before publishing"* — which means its author has already written down that the grant is
+missing. **That is the one row on this shelf where a request has a plausible answer**, and it costs
+an email rather than a fork. Contrast [`ls1intum/Athena`](https://github.com/ls1intum/Athena), which
+has survived 76 path/ref probes in silence across three passes.
+
+🔵 **And a naming hazard worth one line in any proposal.** `Valexxy/edunaija-os` is **not** the
+EduNaija AI Tutor published at ACL AfricaNLP 2026 (DOI `10.18653/v1/2026.africanlp-main.11`) — that
+is a five-agent LangChain + FAISS system with English/Yoruba/Hausa/Igbo support, **whose code this
+pass could not locate at all**. The repository that shares its name is a starter codebase for a
+different thing. **The paper is not the repo, and the repo is not the paper.**
 
 ## Pass 268 provenance note — Iris and Pyris are MIT at PAYLOAD grade, and serve no README
 
@@ -220,6 +261,16 @@ at integration work rather than wholesale import.
 
 ## Declared gaps
 
+- 🔴 **NEW in pass 269 — no AFRICAN-ORIGIN permissively licensed education agent, measured at the
+  payload.** Both African-context agents located this pass serve no grant (above). The only
+  Africa-engaged permissive code this base carries is
+  [`AI-for-Education`](https://github.com/AI-for-Education) — MIT, LMIC-focused, Sierra Leone MBSSE
+  lesson plans and Luganda benchmarks — and it is **research-grade at 1–12★**, not a deliverable.
+  🔵 **Two named systems remain unreachable rather than absent:** Nigeria's **Naija Teacher AI**
+  (UNESCO SDG4 case study, offline-first, target 1.5M teachers by Q3 2026) states **no licence** and
+  publishes no repository this pass could find; Kenya's **Kytabu SOMANASI** is **proprietary**.
+  **State it as "unreachable", not "nonexistent" — the distinction is what a client's own ministry
+  contacts can change.**
 - **RETRACTED in pass 266 — "no LATAM-origin education agent" is no longer the claim.**
   [`guedesindev/ai_tutor_forge`](https://github.com/guedesindev/ai_tutor_forge) (GPL-3.0,
   payload-verified, 18★) is a Portuguese-language education agent, now on the restricted

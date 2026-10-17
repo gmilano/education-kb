@@ -278,3 +278,44 @@ mandate AI instruction (`Gap 367`), and this is the shape of the only honest ans
   instructional design and localisation, not in platform build. 🔵 **Say this in the first
   meeting.** A client who has seen Code.org assumes the curriculum comes with the code; the
   licence says the opposite, and discovering that after the SOW is signed is the expensive way.
+
+
+### Pattern K — an MEA ministry mandate, where there is no regional platform to start from *(new in pass 269)*
+
+🔴 **State the absence first, because it is the whole shape of the engagement.** Pass 269 ran the
+Kenya / Nigeria / South Africa / Egypt legs this base specified in pass 267 and never executed.
+**There is no African or Middle Eastern education platform on this shelf, and pass 269 did not find
+one.** What it found instead:
+
+- **Two African-context education agents, both serving NO GRANT** —
+  [`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) (South Africa, Grades 8–12,
+  **pre-licence**: the README still carries *"Add the project's chosen license here before
+  publishing"*) and [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) (Nigeria, no
+  payload on 19 paths and no `license` field in `package.json`).
+- **Two named national systems that are unreachable rather than absent** — Nigeria's **Naija Teacher
+  AI** (UNESCO SDG4 case study, offline-first, target **1.5M teachers by Q3 2026**) **states no
+  licence**; Kenya's **Kytabu SOMANASI** is **proprietary**.
+- **One piece of Africa-engaged permissive code, already on this base's shelves** —
+  [`AI-for-Education/lesson-plan-parse-mbsse`](https://github.com/AI-for-Education/lesson-plan-parse-mbsse)
+  (**MIT**, Sierra Leone MBSSE national lesson plans → structured JSON, corpus shipped) —
+  **research-grade, a method rather than a dependency.**
+
+🟢 **So the platform layer is imported and the national layer is built.** The stack is
+`kolibri` (**MIT**, offline-first, 39,803 commits) for delivery, `instructional_agents` (**MIT**,
+EACL'26) for teacher-facing authoring, `Claw-ED` (**MIT**) for local-first drafting, `lineage-skill`
+(**Apache-2.0**) for provenance, and `Tangerine` (**GPL-3.0** ⚠️, 5M+ assessments across 65
+countries per its README) **deployed beside the deliverable, never linked into it**, where national
+assessment is in scope. The per-country work — parsing the national curriculum into structure,
+language, teacher capability — is the billable part and the part that does not port.
+
+🔵 **Entry point differs by country, and getting it wrong wastes the first meeting.** Kenya and Egypt
+have **national anchors** (the KDEAP rollout; the UNESCO teacher-competency framework of
+**2026-06-03**), so a ministry conversation has an instrument to attach to. **South Africa has no
+national instrument at all** — its Draft National AI Policy 2026 was **abrogated on 2026-04-27** —
+while **North-West University became the first SA university with an official AI policy in January
+2026**. **Enter South Africa at institution level.** Full recipe: [`compose/patterns.md`](../compose/patterns.md) `P19`.
+
+⚠️ **And two things not to say.** Egypt's delivery platform is reported three different ways
+(**QUREO** / the Japanese **Kiryo** / a **Sprix** contract approved January 2026) — **brief the
+framework, not the vendor.** And every regional figure here is **secondary-source grade**: `p268`
+established the non-GitHub DNS failure as environmental, and no ministry document was read.

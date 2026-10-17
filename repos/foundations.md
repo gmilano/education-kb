@@ -80,6 +80,7 @@ in this base's own gap register, Apache-2.0 and payload-read, while this file ha
 
 | Repo | Licence | Why you still care |
 |------|---------|--------------------|
+| [datawhalechina/ai-edu-for-kids](https://github.com/datawhalechina/ai-edu-for-kids) | **CC-BY-NC-SA-4.0 — README prose only, NO payload** *(new in pass 269)* | *"面向中小学的人工智能通识课开源课程"* — an open-source **AI general-education course for primary and secondary schools**, 128★ / 27 forks / 57 commits. 🔴 **It is the most-adopted primary-band AI-curriculum artefact this base has located, and it is the one licence form a studio cannot use: NonCommercial *and* ShareAlike.** No `LICENSE` file resolves on 19 paths; the claim lives in the README body. 🔵 **Why you still care: as a CURRICULUM SPECIFICATION it is free to read.** Pattern `P17` already exists for exactly this case — originate the content yourself on a free engine, using sources like this one to establish *what* a Class-3–8 course must cover rather than shipping its text. |
 | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | **The largest education codebase this KB has located — 78,765 commits — and it was missing from this file entirely.** *"The open LMS by Instructure, Inc."* 6.9k stars, 3.0k forks. Canvas is the dominant LMS in North American higher education **and it is open source**, which makes "North America is a proprietary-LMS market" a briefing error this file could have produced. AGPL-3.0: the network clause reaches a hosted deployment, so the integration boundary (LTI, the Canvas API, or `canvas-mcp` under MIT) is where the engagement lives — not a fork. |
 | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 *(in `COPYING.txt`, not `LICENSE`)* | The world's most deployed LMS and the largest plugin ecosystem in education. GPL is survivable because the integration point is a plugin boundary. |
 | [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** | MOOC-grade platform behind edX. **This base previously published Apache-2.0 for this repo — that was wrong, and the error mattered**: AGPL's network clause is exactly the kind of obligation a hosted-deployment engagement must price in from day one. |
@@ -298,3 +299,50 @@ from absence.
   **not** platforms — one is a data standard, the other a curriculum delivery system with an
   unlicensable content layer — so neither raises the count. **Three consecutive passes have now
   added permissive rows without adding a permissive platform.**
+
+### Added in pass 269
+
+- **🟢 Gap 367's Chinese limb — the limb pass 268 itself named as the cheapest way to falsify its
+  own biggest claim — was run, and the closure HELD.** Pass 268 closed `Gap 367` (*"primary-school
+  AI literacy has no permissive curriculum"*, carried ~175 passes) as **correctly empty**, on the
+  licences of three **Western** sources: Code.org (Apache-2.0 over a proprietary-materials
+  carve-out), MIT Day of AI (CC), `touretzkyds/ai4k12` (no payload). It then wrote down, honestly,
+  that it had **not** run the gap's own costed next step — *"probe CBSE/MoE-aligned repos in Hindi
+  and Chinese"* — and that a permissive Hindi or Chinese primary curriculum would reopen the gap.
+  **Pass 269 ran both legs. Neither reopens it, and each fails for a different reason.**
+- **🔴 The Chinese leg found the row this base had never seen, and p268's amended rule is exactly
+  why.** [`datawhalechina/ai-edu-for-kids`](https://github.com/datawhalechina/ai-edu-for-kids) is
+  now on the table above. 🔵 **The mechanism matters more than the row:** the *organisation*
+  `datawhalechina` already appears on two shelves here — so a prose or org-level check would have
+  reported this as covered — while the **slug** `ai-edu-for-kids` returns **zero hits in every file
+  of this base.** That is `p268`'s `code-dot-org` finding (*"grep the SLUG as well as the prose
+  claim"*) firing one pass later, in a second language, on a different organisation. **The rule is
+  not a one-off patch; it is load-bearing.**
+- **🔴 And the licence is a TEMPLATE DEFAULT, which is a new failure mode on this base's list.**
+  `ai-edu-for-kids` carries CC-BY-NC-SA-4.0 under a `## LICENSE` heading followed by this, verbatim:
+  *"注：默认使用CC 4.0协议，也可根据自身项目情况选用其他协议"* — **"note: CC 4.0 is used by default,
+  you may choose another licence depending on your project."** 🔵 The most restrictive attribute of
+  the most on-point curriculum artefact in this category is therefore **boilerplate carried over
+  from an organisation's project template, not a decision anyone made about this course.** `T20`
+  catalogues licence risk by the *shape* of a grant; this is risk from a grant's *provenance*.
+  Practically: it is the kind of licence that an upstream maintainer may well change if asked, and
+  the kind a studio must never assume.
+- **🟢 The Hindi leg found supply — ONE BAND TOO HIGH, which restates the gap more precisely than
+  it has ever been stated here.** India has the hardest deadline in this KB (AI and computational
+  thinking **compulsory from Class 3**, CBSE **Circular Acad-15/2026**, implementation from the
+  2026–27 session, with IIT Madras, IIT Gandhinagar and Azim Premji University named as
+  contributors and NCERT approving the framework — ⚠️ search-summary grade; the circular itself was
+  not read, per `p268`'s DNS finding). The permissive Indian supply this base carries —
+  [`Naitik-xd/CurriculumCraft-AI`](https://github.com/Naitik-xd/CurriculumCraft-AI), **MIT at
+  payload** — targets **grades 9–12**. 🔵 **So the correct form of `Gap 367` is not "no permissive
+  AI curriculum" and not "a search-language artefact": it is BAND-SPECIFIC. Permissive
+  curriculum-generation supply exists for the senior secondary band and not for the primary band,
+  in the one country where the primary band is legally mandated.** That is a sentence a studio can
+  take to a ministry.
+- **🟢 Three carried APAC rows were re-measured BLIND and reproduced exactly — recorded as
+  prominently as a correction would be.** `CurriculumCraft-AI` (MIT at `main/LICENSE`, 1,091 B,
+  0★, 7 commits), `arjav0703/cbse-ai` (AGPL-3.0, **34,523 B — agreeing to the byte** with
+  `evidence/p244-withheld.2026-10-16-p244.tsv`, and still archived), and
+  `crpf-mitadt/Indian-AI-for-Education` (CC0-1.0, 7,048 B). 🔵 **`p268` warned that rewriting a
+  good figure on noise is as bad as publishing a bad one. Three independent agreements, including
+  one to the byte, say this base's APAC licence cells are sound.**

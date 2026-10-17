@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 269) — Africa has education agents; it does not have a licence for any of them
+
+⏱️ **Fifteenth pass of `2026-10-17`.** Append-only — everything below this section is prior
+history and is not rewritten. Evidence:
+[`verified-repos.2026-10-17-p269.tsv`](../evidence/verified-repos.2026-10-17-p269.tsv) *(6 repos, 6
+grant states established first-hand)* · search legs:
+[`p269-websearch.2026-10-17-p269.tsv`](../evidence/p269-websearch.2026-10-17-p269.tsv) *(16 legs)*.
+
+### 🟢 The pass's reason to exist: two instructions this base wrote down and had not run
+
+Pass 267 wrote *"Kenya, Nigeria, South Africa and Egypt as four separate queries, never paired"* as
+the cheapest fix for **"EMEA means Europe in this base."** Pass 268 restated it and ran none of it.
+Pass 268 also wrote that it had not run `Gap 367`'s **Hindi and Chinese** limb and called it *"the
+cheapest way to falsify this pass's biggest claim."* **Pass 269 ran all six legs.** Nothing below
+came from a new idea; it came from doing what two prior passes had costed and deferred.
+
+### 🔴 The two new agent rows, and both of them are ungranted
+
+| Agent | Repo | Grant state (first-hand) | ★ / forks / commits | Region |
+|---|---|---|---|---|
+| EduTwin Africa | [`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) | 🔴 **PRE-LICENCE** — no payload on 19/19 paths, no `license` in `pyproject.toml`, and the README still carries the placeholder | 0 / 0 / 7 | 🟢 **EMEA** *(South Africa)* |
+| Nigeria Learning Platform | [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) | 🔴 **NO GRANT** — no payload on 19/19 paths, no `license` in `package.json` | 0 / 0 / 6 | 🟢 **EMEA** *(Nigeria)* |
+
+🟢 **Why this is a result and not a shrug.** This base's standing Africa claim was a **search-level**
+absence: *"Africa returned no repository-level asset — only a training provider, not code."* Pass 269
+replaces it with a **payload-level** one. The repositories exist. Their default refs were resolved
+with `ls-remote --symref`, 19 paths were probed on each, and the package metadata was read as a
+second channel. **The code is there and the grant is not.** 🔵 **An absence measured at the payload
+outranks an absence measured at the query**, and it is the version to brief: *"there is
+African-built education-AI code, and none of it is licensed for a client deliverable."*
+
+🟡 **They fail differently, and only one of them is worth an email.** `EduTwin-Africa`'s README says
+*"Add the project's chosen license here before publishing if a specific open-source license is
+required."* **The author has written down that the grant is missing** — which makes it the one
+ungranted row on this base where asking has a plausible answer, unlike
+[`ls1intum/Athena`](https://github.com/ls1intum/Athena), silent across 76 path/ref probes and three
+passes.
+
+### 🔴 A name collision that would survive into a proposal if nobody said so
+
+[`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) is **not** the **EduNaija AI Tutor**
+of ACL AfricaNLP 2026 (DOI `10.18653/v1/2026.africanlp-main.11`). That system is a five-agent
+LangChain + FAISS RAG tutor — orchestrator, explanation, quiz-generation, web-search and RAG agents —
+with **English, Yoruba, Hausa and Igbo** support, and the paper names translation dependence as its
+primary limitation. **This pass could not locate its code at all.** What shares its name is a
+starter codebase with no exam board, no institution and no grant. 🔵 **The paper is not the repo and
+the repo is not the paper** — and the search channel returns them side by side, which is precisely
+how a citation error gets made.
+
+### 🟢 Gap 367's Chinese limb — closure UPHELD, and the row was invisible to any org-level check
+
+[`datawhalechina/ai-edu-for-kids`](https://github.com/datawhalechina/ai-edu-for-kids) — *"面向中小学的
+人工智能通识课开源课程"*, an open-source **AI general-education course for primary and secondary
+schools**, **128★ / 27 forks / 57 commits**. It is the **most-adopted primary-band AI-curriculum
+artefact this base has ever located**, and:
+
+- 🔴 **No `LICENSE` payload on 19 of 19 paths.** The sidebar shows no licence either.
+- 🔴 **The README declares `CC-BY-NC-SA-4.0`** — **NonCommercial *and* ShareAlike**, i.e. the one
+  shape a studio deliverable cannot carry. **Prose grade, not payload grade.**
+- 🔵 **And the line immediately after it reads *"注：默认使用CC 4.0协议，也可根据自身项目情况选用其他
+  协议"*** — *"CC 4.0 is used by default; you may choose another licence depending on your project."*
+  **The restriction is an organisation's project-template default, not a decision about this
+  course.**
+
+🔴 **This base would have reported the row as covered.** The organisation `datawhalechina` already
+appears on two shelves here; the **slug** `ai-edu-for-kids` returned **zero hits in every file**.
+That is pass 268's `code-dot-org` lesson — *grep the slug, not the prose claim* — firing one pass
+later, in a second language, against a different organisation. 🟢 **Second independent confirmation
+that the amended rule is load-bearing rather than a patch.**
+
+### 🟢 Gap 367's Hindi limb — supply exists, one band too high
+
+India carries the hardest deadline in this KB: AI and computational thinking **compulsory from Class
+3**, **CBSE Circular Acad-15/2026**, implementation from the 2026–27 session, IIT Madras / IIT
+Gandhinagar / Azim Premji University named as contributors, NCERT approving the framework, and **no
+board exam** *(⚠️ search-summary grade — the circular was not read; `p268` established the DNS
+failure as environmental and instructed passes to stop spending searches on it)*. The permissive
+Indian supply is [`Naitik-xd/CurriculumCraft-AI`](https://github.com/Naitik-xd/CurriculumCraft-AI) —
+**MIT at payload** — and it serves **grades 9–12**.
+
+🔵 **So `Gap 367` is BAND-SPECIFIC, not language-specific and not under-searched.** Permissive
+curriculum-generation supply exists for senior secondary and not for the primary band, in the one
+country where the primary band is legally mandated. **Three passes have now each described this gap
+differently; this is the first description a studio could act on.**
+
+### 🟢 Three carried rows re-measured blind, three agreements — one to the byte
+
+| Row | Carried | Re-measured blind, pass 269 |
+|---|---|---|
+| `Naitik-xd/CurriculumCraft-AI` | MIT, `main/LICENSE`, 0★ / 7 commits | 🟢 **MIT, 1,091 B, 0★ / 7 commits — agrees** |
+| `arjav0703/cbse-ai` | AGPL-3.0, **34,523 B**, archived | 🟢 **AGPL-3.0, 34,523 B — agrees to the byte**, still archived |
+| `crpf-mitadt/Indian-AI-for-Education` | CC0-1.0, 7.048 B | 🟢 **CC0-1.0, 7,048 B — agrees** |
+
+🔵 Recorded as prominently as a correction, per `p267`'s practice and `p268`'s warning that
+**rewriting a good figure on noise is the opposite error.** This base's APAC licence cells are sound.
+
+### 🔴 Declared gaps and negative results, so silence is not read as coverage
+
+- 🔴 **No African-origin permissively licensed education agent, now measured at the payload.** The
+  only Africa-engaged permissive code here remains [`AI-for-Education`](https://github.com/AI-for-Education)
+  (MIT, LMIC, Sierra Leone MBSSE, Luganda) — already swept by an earlier pass, **research-grade at
+  1–12★**. **Two named African systems are UNREACHABLE rather than absent:** Nigeria's **Naija
+  Teacher AI** (UNESCO SDG4 case study, offline-first, target **1.5M teachers by Q3 2026**) states
+  **no licence** and publishes no locatable repository; Kenya's **Kytabu SOMANASI** is
+  **proprietary**. 🔵 *"Unreachable"* is the honest word, and it is the one a client's ministry
+  contacts can change.
+- 🟡 **No Chinese-language permissive PRIMARY curriculum.** The most on-point artefact is NC-SA
+  (above); everything else the Chinese leg returned was adult/engineer AI-learning material under
+  MIT — which is the *learning-about-AI vs. AI-for-education* confusion this file already names,
+  reproduced in a second language.
+- 🔴 **The global supply legs are saturated, measured across four passes.** Legs 1–3 of the brief
+  (*top open source AI agents*, *github trending*, *open source platform/ERP*) returned **nine
+  platforms, all nine already shelved** and **zero** education-specific agents. 🔵 Recorded as a
+  negative result on purpose: for four consecutive passes the yield has come from **probing named
+  things by hand and grepping this base**, never from a generic leg.
+- ⚠️ **Primary sources: not attempted, by instruction.** `p268` established the non-GitHub DNS
+  failure as environmental on both transports. Every regional figure in this pass is
+  **secondary-source grade** and says so.
+
+
 ## 2026-10-17 (pass 268) — Google Classroom is the third MCP-addressable LMS: eight servers, seven permissive, one impostor, and none of them adopted
 
 **Append-only shelf.** This section is added above the previous one; nothing below it is

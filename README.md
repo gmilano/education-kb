@@ -4,6 +4,165 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 269 — 2026-10-17 — **THE TWO CHEAPEST UNRUN INSTRUCTIONS ON THIS BASE WERE RUN: `Gap 367`'s CLOSURE HELD TWICE OVER, AND "EMEA MEANS EUROPE" IS NO LONGER TRUE**
+
+⏱️ **Fifteenth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p269.tsv`](evidence/verified-repos.2026-10-17-p269.tsv) — 6 repositories,
+**6 grant states established first-hand**, every default ref resolved with `ls-remote --symref`
+before any fetch — and [`p269-websearch.2026-10-17-p269.tsv`](evidence/p269-websearch.2026-10-17-p269.tsv),
+16 search legs with their yields.
+
+🔵 **Note on this log, before anything else: it jumps from 267 to 269.** Pass 268 shipped — its
+findings are in [`intel/open-gaps.md`](intel/open-gaps.md) and its commit message — but it **did not
+prepend a section here**, so the README's own pass log skipped it. Recorded rather than quietly
+renumbered.
+
+### 🟢 The headline: this pass had no new ideas, and that was the point
+
+Two instructions were sitting on this base, costed and named by earlier passes, and unrun:
+
+1. `p268` wrote that it had **not** run `Gap 367`'s **Hindi and Chinese** limb, and called it *"the
+   cheapest way to falsify this pass's biggest claim."*
+2. `p267` wrote *"Kenya, Nigeria, South Africa and Egypt as four separate queries, never paired"* as
+   the fix for **"EMEA means Europe in this base"**; `p268` restated it and ran none of it.
+
+**Pass 269 ran all six legs.** Everything below came from doing what was already written down.
+
+### 🟢 `Gap 367` held — and each limb failed for a different, unforeseen reason
+
+`p268` closed `Gap 367` (*"primary-school AI literacy has no permissive curriculum"*, carried ~175
+passes) as **correctly empty**, on three **Western** sources. Pass 269 tested the two non-Western
+limbs it named:
+
+| limb | what it found | verdict |
+|---|---|---|
+| 🇨🇳 **Chinese** | [`datawhalechina/ai-edu-for-kids`](https://github.com/datawhalechina/ai-edu-for-kids) — *"面向中小学的人工智能通识课开源课程"*, **128★ / 27 forks / 57 commits**, the **most-adopted primary-band AI-curriculum artefact this base has ever located**. **No payload on 19/19 paths**; README declares **CC-BY-NC-SA-4.0** — NonCommercial **and** ShareAlike | 🔴 **Closure upheld** |
+| 🇮🇳 **Hindi** | The permissive supply exists **one band too high**: [`CurriculumCraft-AI`](https://github.com/Naitik-xd/CurriculumCraft-AI), **MIT at payload**, serves **grades 9–12** — against CBSE's mandate for **Classes 3–8** (**Circular Acad-15/2026**, 2026–27 session, IIT Madras / IIT Gandhinagar / Azim Premji University as contributors, NCERT approving; ⚠️ search-summary grade) | 🔴 **Closure upheld** |
+
+🟢 **And the gap is now stated in a form a studio can act on: `Gap 367` is BAND-SPECIFIC.**
+Permissive curriculum-generation supply exists for senior secondary and **not** for the primary
+band — in the one country where the primary band is **legally mandated**. Three passes have each
+described this gap differently; this is the first description that names what is missing and where.
+
+### 🔴 A licence can be inherited from a project template — a third axis of licence risk
+
+`ai-edu-for-kids` declares CC-BY-NC-SA-4.0 and then says, verbatim:
+*"注：默认使用CC 4.0协议，也可根据自身项目情况选用其他协议"* — **"CC 4.0 is used by default; you may
+choose another licence depending on your project."**
+
+🔴 **The most restrictive attribute of the most relevant artefact in this category is boilerplate
+carried over from an organisation's project template — not a decision anyone made about this
+course.** `T20` grades a grant by its *shape*; this is **provenance**: who chose it, and whether
+anyone chose it at all. 🔵 Two consequences pointing opposite ways, both in new trend **`T27`**:
+**never assume it away** (a default is legally identical to a deliberate NC-SA), **and** it is the
+licence **most likely to move if asked** — unlike `PageLM`'s or `AStheTECH`'s bespoke grants, which
+were chosen *for* a reason.
+
+🔴 **The row was invisible to any organisation-level check.** `datawhalechina` already appears on
+**two shelves** here; the **slug** `ai-edu-for-kids` returned **zero hits in every file of this
+base.** That is `p268`'s `code-dot-org` lesson — *grep the slug, not the prose claim* — firing one
+pass later, in a second language, against a different organisation. **Measured twice now, not argued
+once.**
+
+### 🟢 The Middle East and Africa leg, run for the first time
+
+`intel/policy-matrix.tsv` carried **31 rows** across the EU, eight US jurisdictions, VN, PH, MX, BR,
+SG, KR, JP, CO, CL and AR — and **zero for Africa or the Middle East.** It now has its first six.
+Region field stays **EMEA** per the closed vocabulary; the country lives in the prose.
+
+| | the mandate *(secondary-source grade)* | permissive supply located |
+|---|---|---|
+| 🇰🇪 **Kenya** | **10,382** public junior secondary schools, World-Bank-funded **KDEAP**; **62,000+** teachers ICT-trained by **July 2026** | 🔴 **None** — `Kytabu SOMANASI` is **proprietary** |
+| 🇳🇬 **Nigeria** | AI + cybersecurity + programming + robotics in secondary curriculum **from Sept 2025** | 🔴 **None** — `Naija Teacher AI` (UNESCO SDG4, offline-first, **1.5M teachers by Q3 2026**) **states no licence** |
+| 🇿🇦 **South Africa** | 🔴 **Draft National AI Policy 2026 ABROGATED 2026-04-27** — no national instrument; **NWU first SA university with an AI policy, Jan 2026** | 🔴 **None** — `EduTwin-Africa` is **pre-licence** |
+| 🇪🇬 **Egypt** | 🟢 **UNESCO + Ministry national AI competency framework for TEACHERS, 2026-06-03**; **236,000+** secondary enrolments from 2025/26 | 🔴 **None located** |
+
+🟢 **The regional shape is the INVERSE of LATAM's, and it is the better one to sell into.** LATAM:
+adoption outran governance, so the work is governance retrofit (`P13`). **MEA: the funded state
+programme arrives first — ministries, frameworks, school counts, enrolment counts — and nothing off
+the shelf satisfies it.** New trend **`T26`**, new pattern **`P19`**, new vertical **Pattern K**.
+
+🟡 **Entry level differs by country, and that is itself the finding.** Kenya and Egypt have national
+anchors. **South Africa has none at national level and a live one at institutional level — enter
+there through a university, not a ministry.** This is the first regional row on this base where the
+*level* of entry, not the content of the pitch, is the result.
+
+### 🔴 The African supply gap is UPGRADED, not closed — query-level absence → payload-level absence
+
+This base recorded that an Africa leg *"returned no repository-level asset — only a training
+provider, not code."* **Pass 269 located two African-context education agents**, the first it has
+ever carried: [`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) (South Africa,
+Grades 8–12) and [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) (Nigeria). Both
+refs resolved, **19 paths probed on each**, package metadata read as a second channel — **and no
+grant in either.** 🔵 **An absence measured at the payload outranks one measured at the query**, and
+it is the briefable sentence: *"there is African-built education-AI code, and none of it is licensed
+for a client deliverable."*
+
+🟢 **`PRE-LICENCE` is a new and useful state.** `EduTwin-Africa`'s README says *"Add the project's
+chosen license here before publishing."* **The author has written down that the grant is missing** —
+which makes it the one ungranted row here where asking has a plausible answer, against
+[`ls1intum/Athena`](https://github.com/ls1intum/Athena)'s silence across 76 probes and three passes.
+
+🔴 **And a name collision that would have reached a proposal.** `Valexxy/edunaija-os` is **not** the
+**EduNaija AI Tutor** of ACL AfricaNLP 2026 (DOI `10.18653/v1/2026.africanlp-main.11`) — a five-agent
+LangChain + FAISS tutor with **English / Yoruba / Hausa / Igbo** support **whose code this pass could
+not locate at all**. Not a lure, nobody is pretending — which is exactly why only *reading* catches it.
+
+### 🔴 A fourth cross-shelf defect in four passes — and this one is a contradiction
+
+Going to *add* a register datum to the policy matrix, pass 269 read the cell already there:
+**Vietnam has two instruments on this base for the same jurisdiction and function, never
+reconciled.** The matrix: `assessment_grading` **`GATED` under Decree 142/2026/ND-CP, eff.
+2026-04-30**. The register and README: **Decision No. 33/2026/QD-TTg** — education among six
+high-risk sectors, **2027-03-01** compliance, six further months for systems operating before
+**2026-08-15**. 🔵 **Vietnam is the APAC education deadline this base is asked for most often, and it
+currently has two.** 🟢 **Marked `UNRECONCILED` with both named rather than merged** — a merge would
+have manufactured one confident wrong date. New **`ACTION ZO`**.
+
+🟡 **Plus six regional datums that live in the register and have never reached a shelf** — the US
+**DOL AI Literacy Framework** (2026-02-13), the **STUDENTS FIRST Act of 2026**, **North Carolina's
+K-12 guidance**, the **EMEA 2.64B market figure**, **Finland / Estonia / Netherlands**, and the
+**Linux Foundation LATAM workforce report**. 🟢 `p269` shelved its own MEA findings **in the same
+change that found them** and registered the rest as **`ACTION ZN`** instead of inheriting it quietly.
+
+### 🟢 Three carried APAC rows re-measured blind — three agreements, one to the byte
+
+`CurriculumCraft-AI` (MIT, 1,091 B, 0★ / 7 commits), `arjav0703/cbse-ai` (**AGPL-3.0, 34,523 B —
+agreeing to the byte** with `evidence/p244-withheld.2026-10-16-p244.tsv`, still archived), and
+`crpf-mitadt/Indian-AI-for-Education` (CC0-1.0, 7,048 B). 🔵 Recorded as prominently as a correction
+would be, per `p267`, and against `p268`'s warning that **rewriting a good figure on noise is the
+opposite error.** **This base's APAC licence cells are sound.**
+
+### 🔴 The generic search legs are saturated — stated as a deliberate negative result
+
+The brief's three global supply legs returned **nine platforms, all nine already shelved, and zero
+education-specific agents.** For **four consecutive passes**, every shelf-grade row has come from
+**probing a named thing by hand or grepping this repository.** Future passes should spend the generic
+legs **last**.
+
+### Declared gaps after this pass
+
+- **No African-origin permissively licensed education agent or platform** — now at **payload grade**.
+  Two named systems are **unreachable rather than absent** (Nigeria's Naija Teacher AI, no licence
+  stated; Kenya's Kytabu SOMANASI, proprietary).
+- 🔴 **No MEA market sizing of any kind** — four legs, four countries, **zero** spend figures, vendor
+  shares or CAGRs. This base can say what is mandated and **cannot size it.**
+- **MEA beyond four countries is as unexamined as before** — nothing for the Gulf, the Maghreb, or
+  sub-Saharan Africa outside the three named (**`ACTION ZQ`**).
+- **No Chinese-language permissive primary curriculum**; `Gap 367`'s remaining falsifiable limb is
+  now narrow — a permissive primary-band curriculum in *any* language, or an upstream re-licence.
+- **`ls1intum/Athena`'s licence** still unresolved after 76 probes; **`EduNaija AI Tutor`'s code**
+  not located; **Egypt's delivery platform disputed** three ways (QUREO / Kiryo / Sprix).
+- **Primary sources not attempted**, per `p268`'s standing instruction — the non-GitHub DNS failure
+  is environmental on both transports. **Every regional figure in this pass is secondary-source
+  grade and says so in its own cell.**
+- **`ACTION ZH` and the new `ACTION ZP` both need a human decision before a script**: asking
+  upstreams for licences is an outward-facing action on other people's projects, and no unattended
+  pass of this KB has standing authorisation for it. **`p269` did not do it.**
+
+---
+
+
 ## Pass 267 — 2026-10-17 — **RANK BY COMMITS AND THE SHELF CHANGES: EIGHT OF EIGHT WERE NEW, INCLUDING THE LARGEST EDUCATION CODEBASE IN OPEN SOURCE**
 
 ⏱️ **Thirteenth pass of `2026-10-17`.** Evidence: [`verified-repos.2026-10-17-p267.tsv`](evidence/verified-repos.2026-10-17-p267.tsv)

@@ -774,3 +774,79 @@ KB cycles), `os4ed/openSIS-Classic` (no licence payload served; unverified),
   the NA public-sector code located is a service layer, not a platform), and a LATAM engagement
   outside Brazil on open code (**Uruguay's Ceibal publishes no repositories at all**, verified this
   pass).
+
+
+## P19 — Delivering an African or Middle Eastern ministry mandate when the regional supply serves no grant *(new in pass 269)*
+
+**The engagement.** A ministry of education — or a development funder working through one — has a
+**funded, dated AI mandate** and no licensed software to execute it. Kenya (**10,382** junior
+secondary schools under **KDEAP**, **62,000+** teachers ICT-trained), Nigeria (AI + programming +
+robotics in secondary curriculum since **September 2025**), Egypt (**UNESCO** national **AI
+competency framework for teachers**, **2026-06-03**; **236,000+** general-secondary enrolments from
+2025/26), South Africa (**no national policy in force** — the 2026 draft was **abrogated 2026-04-27**
+— but **DBE Coding and Robotics for Grades R–9** in development).
+
+**Why this pattern exists and why it is not `P17` or `P16`.** `P16` delivers India's mandate **on
+India's own MIT stack** (Sunbird/DIKSHA) — there is a national permissive platform to stand on.
+`P17` handles a mandate whose **curriculum** cannot be licensed. **MEA is the harder case: neither
+exists.** Pass 269 located the first two African-context education agents in this base and **both
+serve no grant** — [`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa)
+(South Africa, Grades 8–12, **pre-licence**, placeholder still in the README) and
+[`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) (Nigeria, **no grant on either
+channel**). **Nigeria's Naija Teacher AI states no licence; Kenya's Kytabu SOMANASI is
+proprietary.** So the stack has to be assembled from permissive software built elsewhere, with the
+*local* contribution being curriculum alignment and language — which is exactly what a studio sells.
+
+| layer | component | licence | why this one |
+|-------|-----------|---------|--------------|
+| Teacher-facing authoring | [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | **MIT** | Peer-reviewed (EACL'26) ADDIE pipeline: syllabus → slides → assessments. **The deliverable Egypt's teacher framework implies.** |
+| Local-first lesson drafting | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | **MIT** | Runs without sending student or curriculum data out of the building — the posture for a ministry pilot. |
+| Provenance of generated material | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **Apache-2.0** | Generated material stays tied to its source. A ministry asks *"where did this come from"* before it asks anything else. |
+| Offline delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | Connectivity is the binding constraint in every one of the four countries. `P9` is the offline half. |
+| Offline assessment at national scale | [`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine) | GPL-3.0 ⚠️ | README claims **5M+ assessments across 65 countries** — the only regionally-proven assessment option. **Copyleft: keep it as a deployed system beside the deliverable, never linked into it.** |
+| Lesson-plan structuring precedent | [`AI-for-Education/lesson-plan-parse-mbsse`](https://github.com/AI-for-Education/lesson-plan-parse-mbsse) | **MIT** | **Sierra Leone MBSSE national lesson plans → structured JSON**, corpus shipped. The one piece of Africa-engaged permissive code in this base, and a working template for doing the same to a Kenyan or Nigerian curriculum. ⚠️ Research-grade (1–12★), so read it as a method, not a dependency. |
+| Tutor layer, if the pilot is student-facing | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** | Default tutoring row; persistent student model. |
+
+**Wiring.**
+1. **Attach to the national instrument, and pick the right one per country.** Egypt → the **teacher
+   competency framework** (teacher-facing workflow, which is where permissive supply actually
+   exists). Kenya → the **KDEAP rollout** (devices and connectivity already funded; the gap is
+   content and teacher capability). Nigeria → the **secondary curriculum lines** (Python, JS,
+   HTML/CSS are named, so the scope is bounded). **South Africa → enter at INSTITUTION level**, not
+   ministry: **NWU has a policy** and USAf keeps a register, while the national policy was withdrawn.
+2. **Parse the national curriculum into structure before generating anything**, using
+   `lesson-plan-parse-mbsse` as the worked precedent. **This is the step that makes the deliverable
+   defensible and the step that cannot be imported** — it is per-country, and it is billable.
+3. **Generate with `instructional_agents`, draft locally with `Claw-ED`, and keep lineage with
+   `lineage-skill`.** Every one permissive, so the deliverable carries no copyleft.
+4. **Ship offline through Kolibri (MIT).** Deploy `Tangerine` **as a system** if national assessment
+   is in scope, and keep its GPL-3.0 boundary at the process edge.
+5. **Originate the curriculum content; do not ship a found one.** `P17`'s rule applies with a new
+   instance: `datawhalechina/ai-edu-for-kids`, the most-adopted primary-band curriculum artefact
+   this base has found, is **CC-BY-NC-SA-4.0** (and only in README prose). Read it to establish
+   *what a primary AI course must cover*; write the text yourself.
+
+🔴 **Four prices to quote honestly.**
+- **There is no MEA market sizing in this base** — no spend figure, no vendor share, no CAGR for any
+  of the four countries. **Scope from the programme counts above (schools, teachers, enrolments),
+  not from a market number**, because this base does not have one and will say so.
+- **Every regional figure here is secondary-source grade.** `p268` established the non-GitHub DNS
+  failure as environmental; no ministry document was read. **Make confirmation against the ministry's
+  own circular an explicit first-phase task**, not an assumption.
+- ⚠️ **Do not name Egypt's delivery platform.** Reporting splits across **QUREO**, the Japanese
+  **Kiryo**, and a **Sprix** contract approved January 2026. **Brief the framework, not the vendor.**
+- 🔴 **Do not cite the `EduNaija AI Tutor` paper and `Valexxy/edunaija-os` as the same thing.** The
+  paper (ACL AfricaNLP 2026, DOI `10.18653/v1/2026.africanlp-main.11`) is a five-agent LangChain +
+  FAISS tutor with **English / Yoruba / Hausa / Igbo** support **whose code this base could not
+  locate**; the similarly-named repository is an unlicensed starter codebase.
+
+🟢 **The one cheap upstream move.** `EduTwin-Africa`'s README says *"Add the project's chosen license
+here before publishing."* **That author knows the grant is missing** — so unlike this base's other
+ungranted rows, a licence request there has a plausible answer, and a South African engagement would
+start from existing SA-curriculum-aware code rather than from zero. **Ask before you rebuild.**
+
+🟢 **Estimate shape:** **6–8 weeks** for curriculum parsing + teacher-facing generation + offline
+delivery against **one** country's instrument, assuming the device and connectivity layer is already
+funded (true in Kenya, not assumed elsewhere). **Each additional country is a new curriculum parse
+and a new language pass — price it as a new engagement, not a rollout**, because the permissive
+layer ports and the national layer does not.

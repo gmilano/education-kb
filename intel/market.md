@@ -391,6 +391,64 @@ The clearest regulatory calendar in the world, and a **14-month window** before 
   **2027-12-02** resolution) remain more precise than anything this pass's searches returned, and
   were left untouched.
 
+
+#### Pass 269 — the Middle East and Africa half of EMEA, measured for the first time
+
+🔴 **This base has said, in its own words, that *"EMEA means Europe in this base"* and that there was
+*"nothing for the Middle East or Africa."*** Pass 267 costed the fix — **Kenya, Nigeria, South Africa
+and Egypt as four separate queries, never paired** — and pass 268 restated it without running it.
+**Pass 269 ran all four. All four returned substantive, dated material.** Region field stays **EMEA**
+per the closed vocabulary; the country lives in the prose.
+
+⚠️ **Every figure in this subsection is SECONDARY-SOURCE GRADE.** `p268` established that non-GitHub
+hosts fail DNS resolution on both transports in this environment, and instructed passes to stop
+spending searches on primary retrieval. No ministry PDF was read.
+
+| Country | Programme / instrument | Scale figure | Date |
+|---|---|---|---|
+| 🇰🇪 **Kenya** | National smart-classroom rollout for public **junior secondary** schools, funded through the World-Bank-supported **Kenya Digital Economy Acceleration Project (KDEAP)**; **CBC** is the curriculum frame | **10,382 schools**; **62,000+** teachers ICT-trained | teacher figure as at **July 2026** |
+| 🇳🇬 **Nigeria** | AI, cybersecurity, programming and robotics added to the **junior and senior secondary** curriculum (Python, JavaScript, HTML/CSS named) | — | announced **July 2025**, effective **September 2025** |
+| 🇳🇬 **Nigeria** | **Naija Teacher AI** — UNESCO SDG4 case study, **offline-first** lesson planning, differentiated assessment and real-time feedback, aimed at rural reach | target **1.5M teachers** reached with localised content | by **Q3 2026** |
+| 🇿🇦 **South Africa** | 🔴 **Draft National AI Policy 2026 — ABROGATED.** No national AI policy in force; a **seven-person panel** is reviewing the framework, no completion date | — | abrogated **2026-04-27** |
+| 🇿🇦 **South Africa** | **DBE Coding and Robotics curriculum, Grades R–9** — in development | — | in development |
+| 🇿🇦 **South Africa** | **North-West University — first SA university with an official AI policy**; Universities South Africa maintains an institutional-policy register | — | **January 2026** |
+| 🇪🇬 **Egypt** | 🟢 **National AI competency framework for TEACHERS**, launched by **UNESCO with the Ministry of Education and Technical Education** — intended to steer teacher training, professional development, educational planning and curriculum reform | — | **2026-06-03** |
+| 🇪🇬 **Egypt** | Coding and AI for **first-year general secondary** | **236,000+ students enrolled** | from **2025/26** |
+| 🇪🇬 **Egypt** | Programming and AI entering **technical school** curricula; AI curricula announced for **select primary and middle grades** with ethics and social implications included, standards and indicators in preparation; presidential backing and staff training in 100 schools with a Japanese university | — | **2026/27**; presidential push **Feb 2026** |
+
+🟢 **The regional shape is the inverse of LATAM's, and that changes the pitch.** In LATAM this base
+measured **adoption outrunning governance** (92% of students, 79% of faculty, against ~30% of
+universities with published policies) — so the sellable work there is **governance retrofit**
+(`P13`). In MEA the **state programme arrives first**: ministries, national frameworks, funded
+rollouts, enrolment counts and teacher-training targets — **and the permissive supply is absent at
+the payload** (see [`repos/trending.md`](../repos/trending.md) and
+[`agents/top.md`](../agents/top.md)). 🔵 **The demand is already funded, named and dated, and nothing
+off-the-shelf satisfies it. That is a better starting position than a market that has already bought
+something.**
+
+🟢 **Egypt is the most engageable of the four, for a structural reason.** It is the only one of the
+four whose 2026 instrument is a **teacher-competency framework** rather than a device rollout or a
+curriculum line — which means the deliverable it implies is **teacher-facing workflow and training
+content**, the exact shape that permissive supply *does* exist for (`Instructional Agents`, MIT,
+EACL'26; `Claw-ED`, MIT, local-first; `lineage-skill`, Apache-2.0, provenance-tracked). ⚠️ **But do
+not name its delivery platform:** reporting splits between **QUREO**, the Japanese **Kiryo** and a
+**Sprix** contract approved in January 2026. Three names, one slot — brief the framework, not the
+vendor.
+
+🟡 **South Africa is the one to approach at institution level, not ministry level.** Its universities
+are ahead of its schools (NWU's policy, USAf's register) while the national policy has been
+**withdrawn** and the schools curriculum is still being written. **An institutional engagement has a
+policy to comply with; a schools engagement has no national instrument to anchor to.** That is the
+reverse of Kenya and Egypt, where the national programme is the anchor.
+
+🔴 **Declared holes in this subsection, so it is not read as complete.** There is **no MEA education
+market sizing of any kind in this base** — no spend figure, no vendor share, no CAGR for Africa or
+the Middle East surfaced on any of the four legs. **The region now has policy and programme rows and
+still has no number.** Nothing was found for the Gulf states, the Maghreb, or any sub-Saharan country
+other than Kenya, Nigeria and South Africa; the four-query instruction covered four countries, and
+the rest of MEA remains exactly as unexamined as before.
+
+
 ### APAC
 
 **Pass 266 addition — the APAC base is national, and it is MIT.** **Sunbird**
@@ -480,6 +538,24 @@ The largest mandated demand anywhere, and the thinnest open-source supply.
   consecutive pass to record it. Primary-source reading is **not possible from this environment**
   (no non-GitHub host resolves by DNS on either instrument), so this gap cannot be closed here —
   it needs a session with open egress, not another search.
+
+
+#### Pass 269 — Korea's statute is in force and effectively unenforced, which changes the deadline story
+
+🟢 This base carries South Korea's **AI Basic Act, in force 22 January 2026**, as the one APAC
+jurisdiction with a statute actually operating. Pass 269's APAC leg sharpens it: **MSIT has signalled
+that 2026 functions as a pilot period with limited enforcement, with a one-year grace on penalties**
+*(⚠️ secondary-source grade)*.
+
+🔵 **Why that matters commercially rather than legally.** Korea is already this base's documented
+**failure case** on the demand side — AI digital textbooks mandated from 2025, **under 30%
+adoption**, and in **August 2025 the National Assembly stripped them of official textbook status**
+(`T22`). Put the two together and the picture is a jurisdiction where **the obligation is real, the
+enforcement is deferred, and the last mandate failed on adoption rather than on compliance.** 🟢 **So
+a Korean engagement should be scoped on adoption risk, not on penalty risk** — teacher workflow,
+change management and measured uptake — and a proposal that leads with compliance is answering the
+question the client has already learned is not the binding one.
+
 
 ### LATAM
 
@@ -680,3 +756,36 @@ The region where the policy direction most favours what open source actually is.
   regulatory datum**, which is itself worth knowing — the regulatory surface of this industry has
   stopped moving weekly, and the research budget is better spent on the supply side, where three
   consecutive passes have each found shelf-grade rows that search alone never surfaces.
+
+### Pass 269 addendum to the declared gaps
+
+- 🔴 **NO MEA MARKET SIZING EXISTS IN THIS BASE.** Pass 269 added policy and programme rows for
+  Kenya, Nigeria, South Africa and Egypt (above) and **not one spend figure, vendor share or CAGR** —
+  none surfaced on any of the four legs. 🔵 **Stated as a hole rather than left as silence:** this
+  base can now describe *what is mandated* in four MEA countries and **cannot size the opportunity in
+  any of them.** The region's remaining countries — the Gulf, the Maghreb, sub-Saharan Africa beyond
+  the three named — are as unexamined as before, because the instruction that was run specified four
+  countries.
+- 🔴 **A PROPAGATION DEFECT, and it is the fourth cross-shelf failure in four passes.** Pass 266
+  found a gap note contradicting a shelf; `p267` found Canvas mis-shelved; `p268` found the Ed-Fi
+  rows in the register but not on the shelves and amended the method to *"grep `open-gaps.md` too."*
+  **Pass 269 measured the same defect on the REGIONAL INTEL, by grepping each datum its own regional
+  leg returned.** These are all carried in [`open-gaps.md`](open-gaps.md) and/or the README **and
+  absent from this file, [`trends.md`](trends.md) and [`policy-matrix.tsv`](policy-matrix.tsv)**:
+  the **US DOL AI Literacy Framework (2026-02-13)**, the **STUDENTS FIRST Act of 2026** student
+  framework, **North Carolina's K-12 implementation guidance**, the **EMEA education-AI market figure
+  of €/$2.64B (2026)**, **Finland / Estonia / Netherlands as K-12 leaders**, and the **Linux
+  Foundation LATAM AI workforce report**. 🔴 **And the Vietnam case is worse than a propagation
+  miss — it is an unreconciled contradiction.** Pass 269 went to add **Decision 33/2026/QD-TTg**
+  (carried in the register and the README: education among six high-risk sectors, **2027-03-01**
+  compliance, a further six-month grace for education systems already operating before
+  **2026-08-15**) and found the matrix **already carrying Vietnam's `assessment_grading` as `GATED`
+  under a *different instrument* — Decree 142/2026/ND-CP, effective 2026-04-30.** **Two instruments,
+  two dates, one jurisdiction and one function, and no shelf has ever reconciled them.** The row is
+  therefore marked **UNRECONCILED and both instruments named**, rather than merged or silently
+  overwritten — Vietnam is the APAC jurisdiction whose education deadline this base is most often
+  asked for, and **it currently has two.** 🔵 **The register is where this base thinks and the
+  shelves are what it ships; six regional datums were sitting on the wrong side of that line, and the
+  seventh turned out to be a conflict rather than an omission.** Pass 269 fixed the
+  category for its own MEA findings — they went to this file and to the policy matrix in the same
+  change — and registers the backlog rather than quietly inheriting it.

@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 269) — The Middle East and Africa leg ran for the first time, and the mandates are real while the supply is not
+
+⏱️ **Fifteenth pass of `2026-10-17`.** Append-only. Evidence:
+[`verified-repos.2026-10-17-p269.tsv`](../evidence/verified-repos.2026-10-17-p269.tsv) ·
+[`p269-websearch.2026-10-17-p269.tsv`](../evidence/p269-websearch.2026-10-17-p269.tsv) *(16 legs,
+4 of them the Kenya / Nigeria / South Africa / Egypt queries pass 267 specified and no pass had run)*.
+
+### 🔴 First, the honest headline about this file's own channel: it returned nothing
+
+| Leg | Yield | What it actually returned |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 net new** | General-purpose and coding agents; two awesome-lists. Fourth consecutive pass with zero education rows. |
+| `github trending education AI 2026` | 🔴 **0 net new** | `nanochat`, `developer-roadmap`, `ai-engineering-from-scratch`, `ai-job-search` (47,970★) — **repos for learning about AI, not AI for education.** |
+| `open source platform education ERP SIS ... MIT Apache 2026` | 🔴 **0 net new** | OpenOLAT, `frappe/education`, RosarioSIS, openSIS-Classic, Fedena, OpenEduCat, ERPNext, Chamilo, ILIAS — **nine platforms, nine already on this base's shelves**, checked slug by slug. |
+
+🔵 **Recorded deliberately.** The verticals leg is **saturated**: three passes, zero net new
+platforms. Every shelf-grade row of the last four passes came from **probing a named thing by hand
+or grepping this repository**, and this file should stop implying otherwise.
+
+### 🟢 What the four unrun regional legs returned — all four substantive, none previously here
+
+🔴 **`intel/policy-matrix.tsv` carried 31 rows across EU, 8 US jurisdictions, VN, PH, MX, BR, SG, KR,
+JP, CO, CL, AR — and ZERO for Africa or the Middle East.** Pass 269 adds the first. Full
+jurisdiction detail is in [`intel/market.md`](../intel/market.md) under **EMEA**; the supply-side
+summary is this:
+
+| Country | The mandate (secondary-source grade) | Open-source supply located |
+|---|---|---|
+| 🇰🇪 **Kenya** | **10,382** public junior secondary schools in a national smart-classroom rollout, World-Bank-funded via **KDEAP**; **62,000+** teachers ICT-trained by **July 2026**; CBC as the curriculum frame | 🔴 **None.** `Kytabu SOMANASI` (AI tutor) is **proprietary**; a Maseno University English→Kenyan-Sign-Language tool exists with no grant located |
+| 🇳🇬 **Nigeria** | AI + cybersecurity + programming + robotics in junior and senior secondary curriculum **from September 2025**; Python / JS / HTML-CSS named | 🔴 **None permissive.** `Naija Teacher AI` (UNESCO SDG4 case study, **offline-first**, target **1.5M teachers by Q3 2026**) states **no licence**, no repo located; `EduNaija AI Tutor` (ACL AfricaNLP 2026) is **a paper with no locatable code**; [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) is a different artefact and **serves no grant** |
+| 🇿🇦 **South Africa** | 🔴 **The Draft National AI Policy 2026 is ABROGATED as of 2026-04-27** — there is **no national AI policy in force**, and a **seven-person panel** is reviewing the framework with no completion date. DBE developing **Coding and Robotics for Grades R–9** | 🔴 **None.** [`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) targets **SA Grades 8–12** and is **PRE-LICENCE** — the README still carries the placeholder |
+| 🇪🇬 **Egypt** | **UNESCO + Ministry of Education and Technical Education launched a national AI COMPETENCY FRAMEWORK FOR TEACHERS on 2026-06-03.** Coding + AI for first-year general secondary from **2025/26** with **236,000+ students enrolled**; technical schools from **2026/27**; AI curricula announced for **select primary and middle grades**, ethics included, standards and indicators in preparation; presidential backing Feb 2026 | 🔴 **None located.** ⚠️ **And the platform name is DISPUTED across sources — QUREO vs. the Japanese Kiryo vs. a Sprix contract approved Jan 2026. Do not brief one name.** |
+
+🟢 **The shape is consistent across all four, and it is the opposite of LATAM's.** In LATAM this base
+measured *adoption outrunning governance*. In MEA the **mandate and the state programme arrive
+first** — ministries, frameworks, national rollouts, enrolment counts — and **the permissive supply
+is absent at the payload.** 🔵 **For a studio that is the better of the two shapes: the demand is
+already funded, named and dated, and nothing off-the-shelf satisfies it.**
+
+🟡 **South Africa inverts the regional pattern internally, too.** Its **universities** are ahead of
+its schools — **North-West University became the first SA university with an official AI policy in
+January 2026**, and Universities South Africa maintains an institutional-policy register — while the
+school curriculum is still in development and the national policy has been withdrawn. **An
+institution-level engagement there has a policy to comply with; a schools-level one does not yet.**
+
+### 🟢 One new repository row this pass, and it is a curriculum, not a tool
+
+| Repo | Licence (first-hand) | ★ / forks / commits | Why it is on the copyleft-and-priced shelf, not the build-on-this shelf |
+|---|---|---|---|
+| [`datawhalechina/ai-edu-for-kids`](https://github.com/datawhalechina/ai-edu-for-kids) | 🔴 **CC-BY-NC-SA-4.0, README prose only — NO payload on 19/19 paths** | **128 / 27 / 57** | *"面向中小学的人工智能通识课开源课程"* — an open-source **AI general-education course for primary and secondary schools**, and **the most-adopted primary-band curriculum artefact this base has located.** **NonCommercial *and* ShareAlike.** 🔵 And the README's own next line says CC 4.0 is the organisation's **default template** — *"注：默认使用CC 4.0协议"* — so the restriction is **boilerplate, not a decision.** |
+
+🔴 **The slug had zero hits in this entire base while the organisation had two shelves' worth** —
+pass 268's amended rule (*grep the slug, not the prose claim*) firing a second time, in a second
+language. See [`repos/foundations.md`](foundations.md) for the full treatment and
+[`compose/patterns.md`](../compose/patterns.md) `P19`.
+
+### 🔴 Negative results and declared gaps
+
+- 🔴 **No Kenyan, Nigerian or Ghanaian permissively licensed education repository exists in these
+  channels.** The Africa-wide leg returned [`AI-for-Education`](https://github.com/AI-for-Education)
+  (MIT, LMIC, **Sierra Leone MBSSE** lesson plans, Luganda benchmarks — **already swept and already
+  on this file**) and `OpenBoard` (GPL-3.0, IP acquired by **GIP ENA** for digital education in
+  Africa — already carried). 🔵 **The gap is upgraded, not closed:** it moves from *"search returned
+  no repository-level asset"* to *"two African-context repositories located, resolved by ref, probed
+  on 19 paths each, and NEITHER SERVES A GRANT."*
+- ⚠️ **No MEA education-market sizing of any kind** — no spend figure, no vendor share, no CAGR for
+  Africa or the Middle East surfaced on any of the four legs. **This base still has no number for
+  the region**, and that is now an explicit hole rather than an unexamined one.
+- ⚠️ **Egypt's delivery platform and Kenya's per-school AI content remain unnamed at a briefable
+  grade.** Both are reported through news outlets that disagree.
+- ⚠️ **Primary sources not attempted**, per `p268`'s standing instruction: the non-GitHub DNS failure
+  is environmental on both transports. **Every regional figure above is secondary-source grade.**
+
+
 ## 2026-10-17 (pass 268) — The largest education codebase in open source is Code.org at 215,796 commits, and its curriculum is the one thing its licence will not give you
 
 **Append-only shelf.** This section is added above the previous one; nothing below it is
