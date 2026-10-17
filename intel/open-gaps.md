@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 271 — 2026-10-17 — **The NORTH AMERICA CELL REFUTED ITSELF BY ARITHMETIC, the four REGIONAL figures turn out to be ONE VENDOR'S PAGE, and the SIXTH cross-shelf defect is a FALSE DECLARATION OF ABSENCE — the exact inverse of `p270`'s**
+
+⏱️ **Seventeenth pass of `2026-10-17`.** Append-only; nothing below is rewritten.
+🔵 **Evidence:** [`verified-repos.2026-10-17-p271.tsv`](../evidence/verified-repos.2026-10-17-p271.tsv)
+*(3 repositories, 3 grants established first-hand)* ·
+[`p271-websearch.2026-10-17-p271.tsv`](../evidence/p271-websearch.2026-10-17-p271.tsv) *(14 legs; legs
+1–6 taken verbatim from this register rather than invented)*.
+
+🟢 **`p271`, like `p269` and `p270`, ran only what was already written down here.** `p270` closed with a
+named recommendation — *"the NA `$3.68B` and MEA `$0.56B` figures are now the obvious next
+re-verification targets, since each rests on **one** publisher and neither has ever been tested"* — and
+a costed step it did not run — *"Dutch-language queries against the **Ministerie van OCW** and
+**SLO**."* **Both were run. All three moved.**
+
+### 🟢 Discharged this pass
+
+| gap / action | registered as | how it was discharged | outcome |
+|---|---|---|---|
+| 🔴 **The NA `$3.68B` figure, never tested** | `p270`, named recommendation | 🟢 **Leg run — and the cell was refuted before the leg returned, by multiplying it.** | 🔴 **IMPOSSIBLE AS CARRIED.** `$3.68B (2026) → $32B (2030) @ 31.1%` requires a **71.7%** CAGR; 31.1% produces **$10.87B**. Publisher identified for the first time in ~200 passes — **ResourcERA**, which publishes **$10.8B by 2030**. **Horizon corrected `$32B → $10.8B`.** Mechanism: the row kept ResourcERA's *regional* baseline and CAGR and took its **global** horizon (`$32.27B`); the two CAGRs differ by **0.1pt**, which is why it read as sound. New trend **`T32`**. |
+| 🔴 **The MEA `$0.56B` figure, never tested** | `p270`, named recommendation | 🟢 **Leg run, and it exposed a defect in the gap register itself.** | 🔴 **`market.md` declared MEA "UNSIZED" while the base carried a MEA figure in THREE other files.** Sixth cross-shelf defect in six passes. 🟢 **MEA now sized:** Grand View **$280.8M (2024) → $1,645.9M (2030) @ 32.6%**; AI-tutors sub-segment GVR **$188.5M (2025) → $1,736.8M (2033)** and Transpire **$186.4M (2025) → $1,730.02M (2033)** — ⚠️ **those two agree to ~1%, so treat them as ONE source**. Cognitive Market Research's **47.2% REFUSED**. New trend **`T34`**. |
+| 🟡 **Dutch-language queries against OCW and SLO** | `p270`, *"Costed next step, NOT run"* | 🟢 **Both legs run, in Dutch.** | 🔴 **`p270`'s RETRACTION IS OVERTURNED.** The instrument exists: **`kerndoelen digitale geletterdheid`**, **`AI-geletterdheid` explicitly included**, scope **po + onderbouw vo + (v)so**, **CONCEPT today**, **legally official 2027-08-01**, **`Inspectie` oversight 2031**. 🟢 The aggregator's *present-tense* "leader" claim stays unsupported — so **the claim was wrong and the country was not empty.** New trend **`T35`**, new verdict value, new pattern **`P21`**. |
+| 🟡 **`ACTION PW` — settle the H5P licence conflict by naming the repository** | registered, limb 1 vs limb 2 | 🟢 **Limb 1 confirmed at payload.** | 🟢 **Two repositories, two grants, BOTH prior cells right.** `h5p/h5p-php-library` **GPL-3.0, 35,146 B** (`master/LICENSE.txt`); `tunapanda/h5p-standalone` **MIT, 1,077 B**; `sr258/scorm-h5p-wrapper` **MIT, 1,073 B**; `Lumieducation/Lumi` **AGPL-3.0**. 🔴 **No permissive H5P *authoring* server exists** — the MIT rows are playback and packaging. ⚠️ Path trap: `master/LICENSE` **404**, `master/LICENSE.txt` **200**, default ref `master`. |
+| 🟡 **`OpenDidactia`'s one-byte delta** | `p270`: *"a future pass measuring 2,123 should treat THIS row as the reproduction"* | 🟢 **Re-measured blind: 2,123 B.** | 🟢 **REPRODUCED.** Two agreeing measurements, so the carried `2.122` is confirmed a thousands-separator artefact and the correction is **evidenced, not noise-driven** — `p268`'s bar met by reproduction, which is the only thing that meets it. |
+| ⚠️ **Primary-source channel, obeyed-without-testing since `p268`** | `p270`: *"NOT ATTEMPTED, by `p268`'s standing instruction, obeyed without re-testing"* | 🟢 **RE-TESTED on both transports.** | 🔴 `curl -I` → **000** and `WebFetch` → **`ENOTFOUND`** on `unesco.org`, `oecd.org`, `ec.europa.eu`, `cbse.gov.in`, `gov.br`. `raw.githubusercontent.com` **200** · `ls-remote --symref` **OK** · `api.github.com` **403** · `github.com` HTML via `curl` **403**. 🟢 **Fifth consecutive confirmation, first by re-test in three passes.** The instruction was right; it is a measurement again rather than an inheritance. |
+
+### 🔴 The box this pass earned
+
+| the finding | how it surfaced | why it had not been found |
+|---|---|---|
+| 🔴 **A MARKET CELL CAN REFUTE ITSELF, AND THIS BASE WAS NOT CHECKING** | 🟢 By **multiplying** `baseline × (1+CAGR)^years` and comparing it to the carried horizon — one line of arithmetic, no search | 🔴 `$3.68B → $32B @ 31.1%` was carried for ~200 passes. The stated CAGR produces **$10.87B**; the carried horizon needs **71.7%**. 🔵 **Every defect `p266`–`p270` found was CROSS-SHELF — a cell disagreeing with another file, caught by `grep`. This one is INTRA-CELL: the row disagrees with itself, and nothing anywhere contradicts it, so no `grep` could ever find it.** 🟢 **Arithmetic is a second oracle and this base had only ever used sourcing.** Checked against all four regional rows: EMEA, LATAM and ResourcERA's own NA reconcile to within 1%; only the carried NA row failed, by **2.9×**. New trend **`T32`**. |
+| 🔴 **THE FOUR "REGIONAL SOURCES" ARE ONE VENDOR'S DECOMPOSITION — AND A COHERENT SINGLE SOURCE READS EXACTLY LIKE CORROBORATION** | 🟢 By noticing ResourcERA's signature (**2026 baseline · 2030 horizon · 31–34% CAGR**) on all four carried regional rows, then **testing the sum** | 🔴 NA `$3.68B @ 31.1%` · EMEA `$2.64B @ 31.9%` · LATAM `$0.67B @ 33.5%` · MEA `$0.56B @ 34.3%` **= $7.55B** against ResourcERA's own **$10.4B** global baseline → **implied APAC residual $2.85B**, which lands within **2.5%** of Grand View's independent **~$2.92B (2026)**. 🟢 **The decomposition is COHERENT, which is the problem.** 🔵 `T30` warned *"one publisher per region"*; the truth is **one publisher for the whole regional picture**. 🟢 Upside: **this base can publish an APAC figure for the first time**, flagged `derived`. |
+| 🔴 **A SOURCE IS NOT RELIABLE PER-CLAUSE, AND THIS BASE QUOTED HALF A SENTENCE IT HAD THROWN AWAY** | 🟢 By running the EMEA leg and reading **the whole aggregator sentence** instead of the part already carried | 🔴 One sentence: *"the European AI in education market at **$2.64 billion in 2026** … **31.9% CAGR** to **$8.0 billion by 2030**, with **Finland, Estonia, and the Netherlands leading in K-12 AI integration**."* `p270` **retracted the second half as unsourced and re-published the first half as a market figure — in the same pass.** 🟢 **When a source is disqualified, every datum from it inherits the grade.** The `$2.64B` end of the EMEA range now carries the grade of the discarded claim; MarketDataForecast's `~$2.11B` is the end with an identifiable publisher. New trend **`T33`**. |
+| 🔴 **A DECLARED GAP IS A CLAIM, AND A FALSE CLAIM OF *ABSENCE* IS CONFIRMED BY THE SILENCE IT DESCRIBES** | 🟢 By grepping the OTHER shelves for the thing `market.md` said was missing | 🔴 `market.md`: *"MEA remains UNSIZED, unchanged from `p269`. This pass added no MEA figure."* But **MEA $0.56B (2026), 34.3% CAGR** sat in `agents/trending.md`, `intel/trends.md` and **this register**. 🔵 **This is `p270`'s Sanoma defect INVERTED.** Sanoma was a false claim of *presence* (refuted by grepping the destination — `T29`). This is a false claim of *absence*, and **`T29`'s amendment structurally cannot catch it**: the check and the defect produce the same reading. 🟢 **Amendment (`T34`): grep the OTHER shelves before RE-DECLARING a gap.** Third consecutive pass whose defect species was invisible to the check written one pass earlier. |
+| 🔴 **`NOT_ESTABLISHED` WAS TWO VERDICTS UNDER ONE LABEL, AND THE DIFFERENCE WAS THE SEARCH LANGUAGE** | 🟢 By running `p270`'s own costed step **in Dutch** | 🔴 `p270` recorded *"no national Dutch instrument or programme was located"*. The `kerndoelen digitale geletterdheid` were there the whole time — AI literacy explicit, **primary band**, binding **2027-08-01**, inspected **2031**. 🔵 **"The assertion is wrong" and "nothing exists" are different verdicts**, and this base was spelling both `NOT_ESTABLISHED`. 🟢 **Policy matrix gains a THIRTEENTH value, `MANDATED_FUTURE_COMMENCEMENT`**, declared in the header and **verified after the edit: 13 declared, 13 present, zero undeclared.** 🔵 Note `PROPOSED`'s entry says *"never plan against this"* — **wrong advice for a dated commencement**, which is exactly what you plan a runway against. New trend **`T35`**. |
+| 🔴 **TWO REAL PLATFORMS LIVED ON THE TRENDING SHELVES AND NEVER REACHED THE VERTICALS SHELF** | 🟢 By asking of one shelf *"what should be here that is held elsewhere?"* rather than looking for a contradiction | 🔴 **Koha** (GPL-3.0, **35,151 B**, 594★, the world's most deployed open-source ILS) and **H5P** (GPL-3.0 core + MIT playback) were both on `repos/trending.md` and neither on `verticals/solutions.md` — the shelf a studio reads for *"what can we stand up"*. 🟢 **Both checked against that file's own "Not on the shelf — and why" table first: neither was there**, so neither was a judgement. 🔵 **Same class as the MEA and Sanoma defects: nothing contradicted anything, so no `grep` for disagreement would have found it.** Both shelved this pass. |
+
+### 🔵 Registered, not claimed
+
+- 🟢 **Five LATAM datums reached the shelves this pass, all destination-greped first.** **PERU has an AI
+  framework** (in force after **90 business days**; **SGTD** issues complementary rules) — and **Peru had
+  ZERO mentions** in `market.md` and `trends.md`, so this is **a new country on this base**. **Colombia's
+  instrument is named: `CONPES 4144`** (Feb 2025, a policy, not a law). 🔴 **Brazil: 53% of school
+  administrators use AI, only 22% say their school has guidelines — a 31-point gap**, which is the
+  UNESCO IESALC institutional deficit (**87% / 26%**) **measured at school level in one country**, so the
+  pattern now holds at two altitudes in two datasets. **Nine in ten 15-year-olds** have used AI chatbots
+  for schoolwork across the region's **PISA 2025** countries. **Uruguay is the first LATAM signatory of
+  the Council of Europe Framework Convention on AI** (2025).
+- 🔵 **Not one LATAM instrument located is education-specific**, and this pass's leg says so explicitly.
+  The binding constraints remain **data protection, procurement and institutional policy** — which is why
+  the first LATAM deliverable is so often the governance scaffold, not the tutor.
+- 🟢 **One new NA institutional player, absent from every shelf until now:** the **AFT's *National Academy
+  for AI Instruction*** (with Microsoft, OpenAI, Anthropic). 🔵 **Union-built teacher training** — the NA
+  professional-development lane has an incumbent with labour-side legitimacy. Everything else the NA leg
+  returned was already held (Canada *AI for All* 2026-06-04, **134 bills / 31 states**, `H.R. 8747`,
+  `AB 1159`, NYC's moratorium, NC's three layers, the >200-company pledge, GA/MS CS credits).
+- 🟡 **Vietnam's `Decision No. 33/2026/QD-TTg` is now corroborated from a second channel** — education
+  among high-risk sectors, **automated assessment AND behavioural monitoring** named, compliance
+  **2027-03-01**, **+6 months** for systems operating before **2026-08-15** — **and it adds the issuance
+  month: July 2026.** 🔴 **The reconciliation is STILL OPEN.** `Decree 142/2026/ND-CP` (`GATED`, eff.
+  2026-04-30) was untouched. **A second source for one of two conflicting instruments is not a ruling on
+  which governs.** Do **not** quote either Vietnamese deadline alone.
+- 🔵 **Sixth consecutive measured nil on education-specific agent supply, and the generic legs were run
+  this pass** (`p270` skipped them; one honest sweep was owed, spent **last**). Everything returned was
+  either a general-purpose framework already shelved or **learning-ABOUT-AI** material
+  (`ai-agents-for-beginners`, `agents-from-scratch`, `ai-engineering-from-scratch`, D2L, nn-zero-to-hero).
+  🟢 **Every slug grepped: all already present.** 🔵 **The confusion has now appeared in Chinese (`p269`),
+  Spanish (`p270`) and English (`p271`) — so it is a property of the brief's LEG WORDING, not of the
+  language.** `agents/top.md` holds **42** rows and `repos/foundations.md` **clears the brief's five-row
+  minimum many times over; nothing was added to meet a quota.**
+- 🔴 **The platform/ERP leg returned TEN RESULTS FROM ONE VENDOR'S GLOSSARY** across ten localised URLs
+  (`openeducat.org/{ar,fr,pt-BR,zh,de,es,…}`). 🟢 It confirms a negative worth stating: **no education ERP
+  under MIT or Apache-2.0 was located.** 🔵 Ten results, one source — `T33`'s failure mode in a second
+  channel.
+- 🟡 **MEA is sized as a BLOC and that is not the same as sizing Africa.** Grand View names **South Africa
+  as the highest-CAGR MEA country 2026–2033**, but 🔴 **there is still no Africa-only, Gulf-only or
+  Maghreb figure.** A number that pools the Gulf with sub-Saharan Africa cannot be briefed as either.
+- 🔴 **Cognitive Market Research's MEA 47.2% is REFUSED, and the reason belongs in the record:** conflicting
+  headline dates (2023 base, 2024–2030 window, 2025–2033 CAGR label) **and a country table that is largely
+  placeholders.** 🔵 That is this brief's own *"never leave a header or example row as data"* hazard —
+  **found inside a commercial research product sold as a regional market report.**
+- 🟡 **The DOL identifier (`TEN` vs `TEGL` 07-25) is formally PARKED.** It cannot be settled without the
+  primary channel this environment lacks. **Stop spending legs on it** until the channel changes.
+- ⚠️ **Every market and policy figure in this pass is secondary-source grade and each shelf cell carrying
+  one says so.**
+
+### 🟡 Costed and NOT run — the backlog `p272` should spend its budget on
+
+🔵 **`p270`'s trade was the right one and should repeat a third time: spend the register's backlog, not a
+seventh generic sweep.** Ranked by value per leg:
+
+1. 🔴 **Falsify the ResourcERA attribution — the one claim this pass made on inference rather than
+   reading.** *"All four regional rows are one publisher's decomposition"* rests on two verbatim-matching
+   rows plus a shared signature plus a sum landing within 2.5% of an independent estimate. **It is strong
+   and nobody here has read the page** (`resourcera.com` is unopenable). **Cheapest falsification: one leg
+   per region quoting ResourcERA by name**, to see whether EMEA `$2.64B` and MEA `$0.56B` are actually its
+   numbers. If they are, the EMEA "two-publisher range" is **one publisher and an aggregator quoting it.**
+2. 🔴 **Run `T32`'s arithmetic check across EVERY remaining numeric cell on these shelves, not just the
+   market rows.** The NA defect was found by multiplication in one line. **No pass has ever run that check
+   systematically**, and it needs **zero searches** — the cheapest audit available to `p272`.
+   🔵 **Use the calibrated threshold, not a bare equality:** `p271` ran the check against its own new
+   figures and found **10–16% mismatch is the normal noise** of this literature (rounded baselines,
+   CAGRs labelled to a different window, mixed report vintages). **Flag at >25%, investigate at >50%,
+   treat a multiple as structural.** The carried NA cell was out by **2.9×**. ⚠️ **A check that fires
+   on every row is a check nobody runs.**
+3. 🟡 **Run `T34`'s amendment across the OTHER declared gaps.** This pass ran it on `market.md`'s gaps and
+   **retracted one of seven as false**. `intel/trends.md`, `verticals/solutions.md`, `compose/patterns.md`
+   and this register each declare their own gaps and **none has been swept this way.**
+4. 🟡 **Settle the Netherlands against the primary text if the channel ever opens** — `open.overheid.nl`
+   carries both the July 2025 definitive-concept and November 2025 functional `kerndoelen`. The
+   **2027-08-01** commencement is currently **secondary-source grade** (Kennisnet + Expertisepunt agree;
+   one source, go21, is outdated and expected 2026). **Do not contract on the date without it.**
+5. 🟡 **Ask the two African authors.** `muskvdc/EduTwin-Africa`'s README **says the licence is missing**
+   (`p269`), which makes it the one ungranted row where asking has a plausible answer. **Costs an email,
+   not a leg.** Same for `datawhalechina/ai-edu-for-kids`, whose NC-SA is **organisational template
+   boilerplate** (`p269`).
+6. 🔵 **Vietnam's reconciliation needs a jurisdictional reading, not another search** — two instruments,
+   two dates, same (function, jurisdiction). Three passes have flagged it; **a fourth flag adds nothing.**
+   Either establish which governs or record it as unresolvable in this environment.
+7. ⚠️ **`MANDATED_FUTURE_COMMENCEMENT` has one occupant.** Sweep the existing `PROPOSED` and `ADOPTED`
+   rows: any instrument with a **named future commencement** is mis-shelved under a value whose own
+   definition says *"never plan against this"*. 🔵 **A new vocabulary value is a liability until its
+   occupants are reconciled** — `p270` proved that by finding two undeclared values in the data.
+
 ## Pass 270 — 2026-10-17 — **`p269`'s SIX-DATUM BACKLOG DISCHARGED, FIVE OF THE SIX CHANGED SHAPE, and the FIFTH cross-shelf defect in five passes is a FALSE SHELVING CLAIM — a sentence that answered the grep**
 
 ⏱️ **Sixteenth pass of `2026-10-17`.** Append-only; nothing below is rewritten.

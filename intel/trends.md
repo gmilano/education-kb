@@ -14,6 +14,12 @@ updated: 2026-10-17
 > is found, and the measured direction in which a carried datum decays
 > ([evidence](../evidence/verified-repos.2026-10-17-p265.tsv)), which also retracts two of this
 > base's own declared gaps.
+>
+> **`T32`–`T35` are new in pass 271** — arithmetic as the second oracle a market shelf never
+> used, the discovery that a source this base judged unreliable per-clause supplies a figure it
+> quotes, the false declaration of ABSENCE (the inverse of `p270`'s false declaration of presence),
+> and the over-broad retraction that an English-only search produced
+> ([evidence](../evidence/p271-websearch.2026-10-17-p271.tsv)).
 
 ## T1 — The education agent consolidated around one project
 
@@ -841,3 +847,127 @@ overconfident**, and the overconfidence is concentrated in exactly the cells a s
 **The audit that catches it is cheap and it is not an audit of the summary: re-run the original
 query and compare.** Pass 270 ran six such queries and five came back different. **Budget one
 re-verification pass per six carried datums**, and expect roughly that hit rate.
+
+
+## T32 — Arithmetic is a second oracle, and a market shelf that never multiplies its own cells will carry an impossible one
+
+Pass 271 was sent to re-verify the North America market figure against a second publisher. It never
+needed one. The cell read **$3.68B (2026) → $32B (2030) @ 31.1% CAGR**, and:
+
+```
+3.68 × (1.311)^4 = 10.87      # what the stated CAGR produces
+$32B from $3.68B in 4 years   # requires 71.7%, not 31.1%
+```
+
+The publisher, unrecorded for roughly 200 passes, turned out to be **ResourcERA**, which publishes
+**$10.8B by 2030** — agreeing with the arithmetic and not with this base. The mechanism is exact and
+reproducible: this base kept ResourcERA's *regional* baseline and *regional* CAGR and took its
+**global** horizon (**$32.27B**). The two CAGRs — regional 31.1%, global 31.2% — differ by a tenth of a
+point, which is why the row read as consistent to anyone checking the source rather than the
+multiplication.
+
+**Why this is a new defect class here.** Every defect passes 266–270 found was *cross-shelf*: a cell
+disagreeing with another file, caught by `grep`. **This one is intra-cell — the row disagrees with
+itself** — and no grep finds it, because nothing anywhere contradicts it.
+
+**For the studio, and this generalises past education:** any client deck with a baseline, a CAGR and a
+horizon has three numbers where two are free. **Multiply before you publish.** Run against this base's
+four regional rows, EMEA, LATAM and ResourcERA's own NA all reconcile to within 1%; only the carried NA
+row failed, and it failed by **2.9×**. One line of arithmetic found what two hundred passes of sourcing
+discipline did not.
+
+**The rule needs a THRESHOLD, and pass 271 calibrated it by running the check against its own new
+figures** — which is the test a new rule should have to pass before it is handed to the next pass:
+
+| figure this pass added | implied vs published | read |
+|---|---|---|
+| MEA AI-tutors (Grand View) $188.5M @ 32% → 2033 | **0.03%** | 🟢 reconciles |
+| MEA AI-tutors (Transpire) $186.4M @ 32.13% → 2033 | **0.09%** | 🟢 reconciles |
+| LATAM (Grand View) $259.6M @ 32.4% → 2030 | ~5% | 🟢 window rounding |
+| APAC (Grand View) ~$2.28B @ 28.1% → $18.2B 2033 | **10%** | 🟡 base stated as "roughly" |
+| NA (Grand View) $3,113.8M @ 24.2% → $19.4B 2033 | **10%** | 🟡 rounding + window label |
+| NA (MarketsandMarkets) $951M @ 15.9% → $2.3B 2029 | **16%** | 🟡 rounding + window label |
+| **NA as this base carried it** | **190%** | 🔴 **structural** |
+
+**So a 10–16% mismatch is the normal noise of this literature** — publishers round their baselines,
+label a CAGR to a window that differs from the span between the two numbers they print, and revise
+base years between report vintages. ⚠️ Grand View's MEA row is the clearest case: its $280.8M (2024)
+base and $1,645.9M (2030) horizon reconcile **only** if the 32.6% CAGR is applied to its labelled
+2025–2030 window, which requires a **+43% single year** from 2024 to 2025 — almost certainly two report
+vintages, not one growth curve.
+
+**The threshold, therefore: flag at >25%, investigate at >50%, and treat a multiple as a structural
+error rather than a disagreement.** A check that fires on every row is a check nobody runs. The carried
+NA cell was out by **2.9×** — it would have cleared no threshold at all, which is the point.
+
+## T33 — A source is not reliable per-clause, and this base was quoting half of a sentence it had thrown away
+
+`p270` retracted *"Finland / Estonia / Netherlands as K-12 leaders"* on the grounds that it traced
+**only to an aggregator citing no source**. Pass 271's EMEA leg returned the aggregator, and the
+retracted claim and a figure this base quotes are **the same sentence**:
+
+> the European AI in education market at **$2.64 billion in 2026**, forecast to grow at **31.9% CAGR**
+> to **$8.0 billion by 2030**, with **Finland, Estonia, and the Netherlands leading in K-12 AI
+> integration**
+
+This base deleted the second half as unsourced and kept the first half as a market figure — and
+`p270` re-published that figure as one half of its new two-publisher EMEA range, in the same pass that
+performed the retraction.
+
+**The rule:** when a source is disqualified, every datum taken from it inherits that grade. You may
+keep the figure and downgrade it, or drop it, but you may not retract a source's policy claim and
+promote its market claim in the same breath. The `$2.64B` end of the EMEA range now carries the grade of
+the claim this base discarded; **MarketDataForecast's ~$2.11B is the end with a publisher behind it.**
+
+**Corollary, and it is the more useful half:** the regional picture is not *one publisher per region* as
+`T30` warned — it is **one publisher for the whole regional picture**. ResourcERA's signature (2026
+baseline, 2030 horizon, 31–34% CAGR) fits all four carried regional rows, and they sum to **$7.55B**
+against its own **$10.4B** global baseline, leaving an APAC residual of **$2.85B** that lands within
+**2.5%** of Grand View's independent estimate. The decomposition is coherent, which is precisely the
+problem: **a coherent single source reads exactly like corroborated multiple sources.**
+
+## T34 — A declared gap is a claim, and it decays the same way every other carried claim does
+
+`p270` found this base asserting a propagation it had never performed (`T29`: *"Recorded in
+`intel/market.md`"* — `grep` said `0`). Pass 271 found the **inverse**: `market.md` declaring
+*"MEA remains UNSIZED"* while the base carried **$0.56B (2026), 34.3% CAGR** in three other files.
+
+**These two defects are mirror images and only one of them is catchable by `T29`'s amendment.** A false
+claim of *presence* is refuted by grepping the destination. A false claim of *absence* is **confirmed by
+the very silence it describes** — the check and the defect produce the same reading. This is the
+**sixth cross-shelf defect in six passes**, and the third whose species was invisible to the check
+written one pass earlier.
+
+**The amendment:** before re-declaring a gap, `grep` the OTHER shelves for the thing said to be
+missing. A gap declared in one file is a statement about the whole base, and no file can establish it
+alone.
+
+**For the studio:** an engagement's "we have no data on X" register needs re-verification on the same
+cadence as its findings. **An institution's inventory of its own blind spots is not a different kind of
+artefact from its inventory of facts** — pass 271 budgeted one sweep against seven declared gaps and
+moved four of them.
+
+## T35 — Retract the claim, not the country: `NOT_ESTABLISHED` is two verdicts wearing one label
+
+`p270` retracted the Netherlands and recorded `NOT_ESTABLISHED`, writing that **"no national Dutch
+instrument or programme was located"** — and costed the remedy without running it: *"Dutch-language
+queries against the Ministerie van OCW and SLO."*
+
+Pass 271 ran it in Dutch, and the instrument is there: **`kerndoelen digitale geletterdheid`**, with
+**`AI-geletterdheid` explicitly included**, covering **primair onderwijs, onderbouw vo and (v)so**,
+**legally official 2027-08-01**, fully introduced with **Inspectie** oversight in **2031**.
+
+So the aggregator's *claim* — the Netherlands "leading in K-12 AI integration", present tense — is still
+unsupported, and `p270`'s *conclusion* — nothing is there — was **false**. `NOT_ESTABLISHED` was
+carrying two incompatible meanings: **"the assertion is wrong"** and **"nothing exists"**. The gap
+between them was **the search language**.
+
+**And the corrected finding is commercially better than the claim it replaces.** A present-tense
+"leader" is a market already lost. **A concept curriculum that becomes binding on a named date, in the
+primary band, inspected from 2031, is a procurement runway** — and it lands in exactly the band where
+`Gap 367` has established, in four languages now, that permissive supply does not exist. See `P21`.
+
+**For the studio:** when a regional claim fails verification, the next query is the same question in the
+**national language**, not a retraction. This base runs its legs in English and has now found
+country-level instruments in Spanish (`p270`), Chinese and Hindi (`p269`) and Dutch (`p271`) that the
+English legs did not return. **An English-only absence is a statement about the query.**

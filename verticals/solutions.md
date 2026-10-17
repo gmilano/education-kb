@@ -46,8 +46,11 @@ updated: 2026-10-17
 | **Tangerine** | [Tangerine-Community/Tangerine](https://github.com/Tangerine-Community/Tangerine) | **GPL-3.0** | Angular/PouchDB-CouchDB | **Offline-first *assessment* and data collection for low-resource settings** — **8,064 commits**, 70★. Runs on tablets and phones with no connectivity and syncs when a link appears; built originally for early-grade reading and maths. **The missing half of the offline lane:** Kolibri (MIT) delivers content offline, Tangerine measures learning offline. Logo is a registered trademark of **RTI International**. ⚠️ README claim, not independently verified: *"5 million+ assessments across 65 countries and 80+ organisations"* — **no country list is served**, so no named deployment is asserted. |
 | **Kolibri Studio** | [learningequality/studio](https://github.com/learningequality/studio) | **MIT** | Python/Django + Vue | *"Content curation tools for Kolibri"* — **15,493 commits**, 193★, 312 forks. The authoring and publishing half of the offline stack: builds content channels Kolibri imports, **remixes channels against national curricula and special-needs requirements**, and authors learning pathways and assessments. Shelved because a Kolibri deployment without Studio is a reader with no content pipeline — and the pipeline is where a ministry engagement's actual work sits. *MIT: the copyright line carries an "(internal apps)" parenthetical; the grant clauses are unmodified standard MIT.* |
 
-**22 platform rows, all licence-verified from payload** (13 from pass 264, 4 in pass 265, 5 added in
-pass 267). Pass 267's five came from **commit-ranking and hand-probing named programmes**, not from
+| **Koha** | [Koha-Community/Koha](https://github.com/Koha-Community/Koha) | GPL-3.0 *(`main/LICENSE`, 35,151 B)* | Perl + MySQL/MariaDB | **The world's most deployed open-source integrated library system (ILS)** — 594★, the adjacent system of record in virtually every academic-library engagement: catalogue, circulation, acquisitions, patrons, OPAC. **Added in pass 271, and the reason it was missing is recorded rather than quietly fixed:** it has been carried on `repos/trending.md` and `agents/trending.md` for several passes and never reached this shelf, which is the one a studio reads when it needs something to stand up. Licence re-measured blind this pass and it **agrees to the byte**. 🔵 **Where the AI layer goes:** Koha's catalogue is the cleanest authority file for a retrieval index in a university engagement — subject headings and holdings are already curated, so a RAG layer over Koha starts from librarian-maintained metadata instead of scraped text. ⚠️ GPL-3.0: keep the deliverable on the API side of the boundary. |
+| **H5P** *(content authoring)* | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) · [tunapanda/h5p-standalone](https://github.com/tunapanda/h5p-standalone) · [sr258/scorm-h5p-wrapper](https://github.com/sr258/scorm-h5p-wrapper) | 🔴 **GPL-3.0** *(`master/LICENSE.txt`, 35,146 B)* · 🟢 **MIT** *(1,077 B)* · 🟢 **MIT** *(1,073 B)* | PHP core; JS player | **Interactive content types — the authoring ecosystem embedded inside Moodle, Canvas and Drupal**, so it is already present in most incumbent estates. **Not a standalone platform; a subsystem** — shelved here because it is a running component a client already has, not an app to deploy. 🔴 **The licence is per-repository and that is the whole point** *(discharges `ACTION PW`)*: the **authoring core is GPL-3.0** and there is **no permissive H5P authoring server**; the MIT rows are **playback** (`h5p-standalone`) and **SCORM packaging** (`scorm-h5p-wrapper`). `Lumieducation/Lumi` (desktop) is **AGPL-3.0**. 🔵 **So the buildable move is to generate H5P content and play it through the MIT runtime**, never to fork the GPL authoring core. ⚠️ Path trap: `master/LICENSE` is a **404**, `master/LICENSE.txt` is a **200**, and the default ref is `master`. |
+
+**24 platform rows, all licence-verified from payload** (13 from pass 264, 4 in pass 265, 5 added in
+pass 267, **2 in pass 271**). Pass 267's five came from **commit-ranking and hand-probing named programmes**, not from
 a topic listing — four of the five have under 200 stars and over 8,000 commits each.
 
 ## Not on the shelf — and why
@@ -353,3 +356,40 @@ framework (schemas + prompts for LOMLOE programaciones), not a running platform*
 language in it, and it is 0 stars at 50 commits. **This shelf is for systems a client can stand up
 and put an agent on top of.** `OpenDidactia` is read as a specification, never deployed — see `P20`
 for the ShareAlike boundary that distinction rests on.
+
+
+## Pass 271 note — two real platforms were on the other shelves and not on this one
+
+🔴 **This shelf was missing two licence-verified, actively maintained systems that the base already
+held elsewhere**, and the omission is recorded as a defect rather than silently patched:
+
+| platform | where it already lived | why the absence counted |
+|---|---|---|
+| **Koha** (GPL-3.0, 594★, ILS) | `repos/trending.md`, `agents/trending.md` | the shelf a studio reads for *"what can we stand up"* did not list the most-deployed open-source library system |
+| **H5P** (GPL-3.0 core + MIT playback) | `repos/foundations.md`, `repos/trending.md` | present in most incumbent Moodle/Canvas estates already, so it is an integration surface on nearly every engagement |
+
+🟢 **Both were checked against this file's own "Not on the shelf — and why" table first — neither was
+there**, so neither had been excluded on judgement. 🔵 **This is `T34`'s defect class on the verticals
+shelf**: the datum existed, the file that needed it did not have it, and nothing in either file
+contradicted the other, so no `grep` for a *disagreement* would have found it. **The check that finds it
+is asking, of each shelf, "what should be here that is held somewhere else?"**
+
+🟢 **The H5P row also discharges the register's `ACTION PW`** by doing what it asked — naming the
+repository in the cell. The MIT-vs-GPL "conflict" was **two repositories with two grants**, so both
+prior cells were right and the defect was the project-level cell. **Every multi-repository project on
+this shelf now needs its repository named**, and the commercially load-bearing consequence is stated in
+the row: **there is no permissive H5P authoring server**, so a deliverable generates content and plays
+it through the MIT runtime rather than forking the GPL core.
+
+🔵 **No other platform rows changed, and the three generic platform/ERP/SIS legs returned nothing new
+for the sixth consecutive pass** — including an explicit negative worth keeping: **no education ERP
+under MIT or Apache-2.0 was located.** The permissive end of this shelf remains **OpenOLAT**
+(Apache-2.0), **Oppia** (Apache-2.0), **Kolibri** (MIT, on `develop`), **Sunbird** (MIT), **Artemis**
+(MIT), **Richie + Marsha** (MIT) and **Numbas** (Apache-2.0). ⚠️ One leg returned ten results from a
+**single vendor's glossary** across ten localised URLs — *ten results, one source*, which is `T33`'s
+single-aggregator failure in a different channel.
+
+🟢 **New in `intel/market.md` and relevant to a Dutch engagement off this shelf:** the Netherlands has a
+**dated** AI-literacy mandate — `kerndoelen digitale geletterdheid`, AI literacy explicit, **primary +
+lower-secondary**, legally official **2027-08-01**, inspected from **2031**. See new pattern **`P21`**,
+which wires it to **Moodle** and the **MIT** H5P runtime rather than to the GPL authoring core.

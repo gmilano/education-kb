@@ -927,3 +927,91 @@ European procurement will be asked about afterwards. 🔵 **Every component abov
 GPL-3.0 edge is MIT or Apache-2.0, and every one of them is EMEA-origin or EMEA-hosted** — which
 this base's EMEA section already establishes as the regional differentiator. **The permissive,
 regionally-governed stack exists; this pattern is the assembly instructions.**
+
+## P21 — Shipping against a DATED future mandate: the Netherlands `kerndoelen`, 2027-08-01 *(new in pass 271)*
+
+**Target:** Netherlands — `primair onderwijs`, `onderbouw vo` and `(voortgezet) speciaal onderwijs`.
+Transfers to any jurisdiction whose AI-literacy duty is **enacted with a named future commencement**
+rather than already binding.
+**Why now, and why this is a better engagement than the claim it replaces:** pass 270 retracted the
+Netherlands as `NOT_ESTABLISHED`; pass 271's Dutch-language leg found the instrument
+(`T35`). The **`kerndoelen digitale geletterdheid`** include **`AI-geletterdheid` explicitly**, are
+**concept today**, become **legally official on 2027-08-01**, and are **fully introduced with
+`Inspectie` oversight in 2031**.
+🔵 **A present-tense "market leader" is a market already lost. A dated commencement is a procurement
+runway with a deadline on it** — roughly 9 months of buying time before the duty attaches, and a
+further inspection horizon that makes evidence-of-coverage the renewable part of the deliverable.
+**Timeline:** 10–12 weeks to an inspectable pilot across two bands.
+
+```
+[kerndoelen digitale geletterdheid]   <- READ as the specification. A government instrument,
+  SLO / OCW, concept (Jul+Nov 2025)      NOT a repo and NOT a licence question.
+  official 2027-08-01                    3 domains; practical domain = AI exploration:
+  Inspectie oversight from 2031          recognise AI around you / how it works /
+        |                                social + ethical consequences
+        |  map each kerndoel -> one competency id, ONCE, as data
+        v
+[competency map: your own artefact]   the deliverable the client actually owns.
+  TSV/JSON, no upstream licence         po | onderbouw-vo | (v)so  x  3 domains
+        |
+        +-------------------------------+
+        |                               |
+        v                               v
+[DeepTutor  Apache-2.0]          [instructional_agents  MIT]
+  HKUDS/DeepTutor                  DaRL-GenAI/instructional_agents
+  student-facing tutoring,         teacher-facing: syllabus -> slides ->
+  bound to the competency id       assessments against the same ids
+        |                               |
+        +-------------------------------+
+        |
+        v
+[H5P content generated, played through MIT]   <- THE LICENCE BOUNDARY OF THIS PATTERN
+  generate interactive items, then play them with
+  tunapanda/h5p-standalone  MIT  (1,077 B)
+  package with sr258/scorm-h5p-wrapper  MIT  (1,073 B)
+  ** NEVER fork h5p/h5p-php-library — GPL-3.0, 35,146 B, master/LICENSE.txt **
+        |
+        v
+[Moodle  GPL-3.0]                the LMS Dutch schools run; integrate over its API and its
+  moodle/moodle                    provider-pluggable AI subsystem (4.5+), never by forking
+        |
+        v
+[Koha  GPL-3.0]  (optional, HE/vo+ only)   catalogue as the curated retrieval authority
+  Koha-Community/Koha                      librarian-maintained metadata, not scraped text
+```
+
+🟢 **Why the competency map is the first deliverable and not the tutor.** The mandate is a
+**coverage** obligation inspected from 2031, so what the client must be able to produce is *evidence
+that every kerndoel is addressed*, per band. Build that as **data you own** — one row per kerndoel,
+mapped to one competency id — and both the student-facing and teacher-facing agents become consumers
+of it. 🔵 **This also makes the 2027→2031 gap billable in the right order:** map and pilot before
+commencement, then widen coverage and produce inspection evidence after it.
+
+🔴 **The H5P arrow is where this pattern is won or lost.** H5P is already inside most Dutch Moodle
+estates, so generating interactive content is the path of least resistance — and the **authoring core
+is GPL-3.0 with no permissive alternative** (`ACTION PW`, pass 271). **Generate content, play it
+through the MIT runtime, package with the MIT wrapper.** A fork of the authoring core puts the
+client's whole content pipeline inside GPL-3.0; the MIT playback path does not.
+
+🟢 **The sovereignty argument is supplied by the ministry itself, which is rare and should be quoted.**
+OCW's **Kamerbrief on `digitale autonomie` (2026-07-02)** states that Dutch education is
+*"in grote mate afhankelijk van niet-Europese techbedrijven"* — **largely dependent on non-European
+tech companies** — while naming responsible AI use as part of public digital provision. Pair it with
+`p270`'s Estonia finding (≈half of 20,000 upper-secondary students on an **OpenAI-partnered
+proprietary** platform) and the **Sanoma** numbers (**63%** of European teachers using AI, **16%**
+believing general-purpose AI improves outcomes — `T28`). 🔵 **Every component above is open source and
+curriculum-bindable, which is precisely what the general-purpose assistant cannot be.**
+
+🟡 **What this pattern does NOT claim, stated so a proposal does not overreach:**
+- 🔴 **The Netherlands is not a current K-12 AI leader.** That aggregator claim is still unsupported
+  (`T33` — it is the same sentence as the `$2.64B` EMEA figure). **No Dutch deployment at Estonia's
+  measured scale was located.** Sell the runway, not a race already run.
+- 🔴 **The kerndoelen are CONCEPT.** Final wording can still change before 2027-08-01. Build the map
+  as data precisely so a wording change is a data migration, not a re-architecture.
+- 🟡 **`Gap 367` is not closed by this.** There is still **no permissively licensed primary-band
+  AI-literacy curriculum artefact** in any of the four languages searched (`p269`–`p271`). This
+  pattern works *because* it treats the government instrument as the specification and keeps the
+  generated artefact as the client's own — the same move as `P17` and `P20`, now with a date attached.
+- ⚠️ **All Dutch policy datums here are secondary-source grade.** The primary channel
+  (`open.overheid.nl`, `rijksoverheid.nl`) is unreachable from this environment — re-tested pass 271,
+  both transports. Verify the commencement date against the primary text before contracting on it.

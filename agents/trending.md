@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 271) — The agent shelf gains nothing for the sixth pass running, and the pass found its defect with arithmetic instead
+
+⏱️ **Seventeenth pass of `2026-10-17`.** Append-only — everything below this section is prior
+history and is not rewritten. Evidence:
+[`verified-repos.2026-10-17-p271.tsv`](../evidence/verified-repos.2026-10-17-p271.tsv) *(THREE
+repositories probed, and the stated reason it is three)* · search legs:
+[`p271-websearch.2026-10-17-p271.tsv`](../evidence/p271-websearch.2026-10-17-p271.tsv) *(14 legs; the
+first six were taken verbatim from `p270`'s own recommendation and its unrun costed step)*.
+
+### 🔵 Stated before anything else: `agents/top.md` gains no rows, for the sixth consecutive pass
+
+🟢 **The three generic supply legs were run this pass** — `p270` skipped them entirely, so one honest
+sweep was owed — **and spent LAST, as `p269` instructed.** The result is the **sixth consecutive
+measured nil** on education-specific agent supply. Everything returned fell into exactly two buckets
+this base already names:
+
+| bucket | what came back | status |
+|---|---|---|
+| General-purpose frameworks | CrewAI, AutoGen, LangGraph, Aider, Cline, `openclaw`, `dify` | 🟡 already shelved, none education-specific |
+| **Learning-ABOUT-AI, not AI-FOR-education** | `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `avinash201199/free-ai-agents-resources`, Karpathy's *nn-zero-to-hero*, *D2L*, *AI Engineering Hub*, *Awesome LLM* | 🔴 **every slug grepped: all already present on these shelves** |
+
+🔵 **One thing is new about this nil, and it is worth a line.** `p269` found the
+*learning-about-AI vs. AI-for-education* confusion reproduced in **Chinese**; `p271` finds it in
+**English**, from the brief's own leg wording. 🟢 **So the confusion is a property of the QUERY, not of
+the language** — three languages now — and the brief's leg 1 (*"top open source AI agents {industry}
+{year} github MIT"*) is the thing producing it. **`agents/top.md` already holds 42 rows and clears the
+brief's five-row minimum eight times over. Nothing was added to meet a quota.**
+
+### 🔴 The pass's real finding is in `intel/market.md`, and no search was needed to see it
+
+`p270` closed by naming the next targets: *"the NA `$3.68B` and MEA `$0.56B` figures are now the obvious
+next re-verification targets, since each rests on **one** publisher and neither has ever been tested."*
+**Both were tested. Both moved.** The NA cell turned out to be **internally impossible**:
+
+```
+carried:  $3.68B (2026) → $32B (2030) @ 31.1% CAGR
+3.68 × (1.311)^4 = 10.87          ← what the carried CAGR actually produces
+$32B from $3.68B in 4 years       → requires 71.7%, not 31.1%
+```
+
+🟢 **The publisher, unrecorded for ~200 passes, is `ResourcERA` — which publishes `$10.8B by 2030`,
+agreeing with the arithmetic and not with this base.** The mechanism is exact: the row kept ResourcERA's
+*regional* baseline and *regional* CAGR and took its **global** horizon (`$32.27B`). The two CAGRs
+differ by **one tenth of a point**, which is why the row read as sound to anyone checking the source
+rather than the multiplication. 🔵 **Every defect `p266`–`p270` found was cross-shelf and `grep`-able.
+This one is intra-cell — the row disagrees with itself — and no grep finds it.** New trend **`T32`**.
+
+### 🔴 And a source this base disqualified supplies a figure it quotes
+
+`p270` retracted *"Finland / Estonia / Netherlands as K-12 leaders"* as tracing *"ONLY to an aggregator
+citing no source."* This pass's EMEA leg returned that aggregator. The retracted claim and the quoted
+figure are **the same sentence**: *"the European AI in education market at **$2.64 billion in 2026**,
+forecast to grow at **31.9% CAGR** to **$8.0 billion by 2030**, with **Finland, Estonia, and the
+Netherlands leading in K-12 AI integration**."*
+
+🔴 **This base deleted the second half as unsourced and kept the first half as a market figure** — and
+`p270` re-published that figure as half of its new EMEA range **in the same pass that performed the
+retraction.** 🟢 **A source is not reliable per-clause.** New trend **`T33`**.
+
+### 🟢 The Netherlands retraction is OVERTURNED, in Dutch, and the correction is commercially better
+
+`p270` wrote the remedy down and did not run it: *"Costed next step, NOT run: Dutch-language queries
+against the **Ministerie van OCW** and **SLO**."* **Pass 271 ran it.**
+
+| property | value |
+|---|---|
+| Instrument | **`kerndoelen digitale geletterdheid`**, with **`AI-geletterdheid` explicitly included** |
+| Band | **primair onderwijs** + **onderbouw vo** + **(v)so** — 🟢 **the primary band, i.e. `Gap 367` territory** |
+| Status today | 🟡 **CONCEPT** (definitief concept Jul 2025; functional kerndoelen Nov 2025) |
+| Binding | 🔴 **2027-08-01**; fully introduced with **Inspectie** oversight **2031** |
+
+🔵 **`p270` was half right, and the wrong half is the instructive one.** The aggregator's *present-tense*
+"leader" claim stays **unsupported**. But `p270`'s conclusion — *"no national Dutch instrument or
+programme was located"* — is **false**, and the gap between "the assertion is wrong" and "nothing is
+there" was **the search language**. 🟢 `NOT_ESTABLISHED` was carrying two verdicts under one label; the
+policy matrix gains a **thirteenth** value, `MANDATED_FUTURE_COMMENCEMENT`, declared in its header and
+verified after the edit (**13 declared, 13 present, zero undeclared**). New trend **`T35`**, new pattern
+**`P21`**.
+
+### 🟡 Registered, not claimed
+
+- 🔴 **`market.md` declared MEA "UNSIZED" while this very file carried a MEA figure.** `agents/trending.md`
+  has held **MEA $0.56B (2026), 34.3% CAGR** since an earlier pass. 🔵 **This is `p270`'s Sanoma defect
+  INVERTED** — a false claim of *absence* rather than of *presence* — and `T29`'s amendment cannot catch
+  it, because a claim of absence is **confirmed by the silence it describes**. Sixth cross-shelf defect
+  in six passes. MEA is now sized from Grand View. New trend **`T34`**.
+- 🟢 **Two carried rows re-measured blind, two agreements — one to the byte.**
+  [`Koha-Community/Koha`](https://github.com/Koha-Community/Koha) **GPL-3.0, 35,151 B** at `main/LICENSE`
+  — **agrees to the byte** with what this file carries. `h5p/h5p-php-library` **GPL-3.0, 35,146 B** at
+  `master/LICENSE.txt` — agrees. 🔵 Recorded as prominently as a correction, per `p267`'s practice.
+- 🟢 **`nmarafo/OpenDidactia`'s `LICENSE.md` measures 2,123 B again** — `p270` measured 2,123 and
+  instructed that *"a future pass measuring 2,123 should treat THIS row as the reproduction, not a second
+  drift."* 🟢 **Done: two agreeing measurements, so the carried `2.122` is a thousands-separator artefact
+  and the correction is now EVIDENCED rather than noise-driven.** `p268`'s bar is met.
+- 🟢 **`ACTION PW` (the H5P licence conflict) is DISCHARGED on limb 1.** The MIT-vs-GPL disagreement was
+  never one wrong cell: it is **two repositories with two grants**. `h5p/h5p-php-library` is **GPL-3.0**;
+  [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone) (**MIT**, 1,077 B) and
+  [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) (**MIT**, 1,073 B) are the
+  permissive doorways; `Lumieducation/Lumi` is **AGPL-3.0**. ⚠️ **Path trap recorded:**
+  `master/LICENSE` is a **404** and `master/LICENSE.txt` is a **200** — the ref *and* the path both matter.
+- 🟢 **New institutional player, absent from every shelf until now:** the **AFT's *National Academy for
+  AI Instruction*** (with Microsoft, OpenAI and Anthropic). 🔵 A **union-built** teacher-training
+  institution — the NA professional-development lane has an incumbent with labour-side legitimacy.
+- 🔴 **Channel re-confirmation, and this pass RE-TESTED instead of obeying.** `p270` recorded
+  *"Primary sources: NOT ATTEMPTED, by `p268`'s standing instruction, obeyed without re-testing."* `p271`
+  re-tested both transports: `curl -I` → **000** and `WebFetch` → **`ENOTFOUND`** on `unesco.org`,
+  `oecd.org`, `ec.europa.eu`, `cbse.gov.in`, `gov.br`; `raw.githubusercontent.com` → **200**;
+  `ls-remote --symref` → **OK**; `api.github.com` → **403**; `github.com` HTML via `curl` → **403**.
+  🟢 **Fifth consecutive confirmation, first established by re-test in three passes.** The instruction
+  was right, and it is now a measurement again rather than an inheritance.
+
 ## 2026-10-17 (pass 270) — The supply channel returned zero new agents, and that is the second-most-interesting thing this pass measured
 
 ⏱️ **Sixteenth pass of `2026-10-17`.** Append-only — everything below this section is prior

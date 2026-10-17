@@ -1,0 +1,19 @@
+# pass 271 — 2026-10-17 — repository / payload probes, all first-hand this pass.
+# CHANNELS RE-TESTED THIS PASS (p270 obeyed p268's standing instruction WITHOUT re-testing; p271 re-tested):
+#   raw.githubusercontent.com            -> 200
+#   git ls-remote --symref               -> OK
+#   api.github.com (curl)                -> 403
+#   github.com HTML (curl)               -> 403
+#   non-GitHub hosts (curl -I)           -> 000  [unesco.org, oecd.org, ec.europa.eu, cbse.gov.in, gov.br]
+#   non-GitHub hosts (WebFetch)          -> getaddrinfo ENOTFOUND
+#   => FIFTH consecutive confirmation, and the FIRST in three passes established by RE-TEST rather than by
+#      obedience. Primary-source grade remains unreachable; every policy/market datum below is secondary.
+#
+# Only THREE repositories were probed. The reason is stated and not padded: p269/p270 measured the generic
+# supply legs saturated across five consecutive passes, and p271 spent its budget on this register's backlog
+# (p270's named recommendation) instead of on a sixth nil sweep. agents/top.md and repos/foundations.md gain
+# no rows. Fewer real rows always beat padding.
+repo	ref	path	licence_at_payload	bytes	carried_by_base	verdict
+nmarafo/OpenDidactia	main	LICENSE.md	CC-BY-SA-4.0	2123	"2.122" (p270 measured 2123)	REPRODUCED — p270's measurement confirmed a SECOND time at 2123. p270 instructed that a future pass measuring 2123 treat ITS row as the reproduction, not a second drift. Done. The carried "2.122" is a thousands-separator artefact, and with two agreeing measurements the correction is now EVIDENCED rather than noise-driven (p268's bar is met).
+Koha-Community/Koha	main	LICENSE	GPL-3.0	35151	35 151 B (repos/trending.md, agents/trending.md)	AGREES TO THE BYTE on a blind re-measure. 594*. BUT: absent from verticals/solutions.md and NOT in its "Not on the shelf" exclusions -> a VERTICALS-SHELF PROPAGATION GAP, not a deliberate exclusion. Shelved this pass.
+h5p/h5p-php-library	master	LICENSE.txt	GPL-3.0	35146	GPL-3.0 (repos/foundations.md:96, repos/trending.md:492)	AGREES. Discharges ACTION PW limb 1: the MIT/GPL "conflict" is TWO REPOSITORIES, not one wrong cell -- h5p/h5p-php-library is GPL-3.0; tunapanda/h5p-standalone (MIT, 1 077 B) and sr258/scorm-h5p-wrapper (MIT, 1 073 B) are the permissive doorways; Lumieducation/Lumi is AGPL-3.0. NOTE: master/LICENSE is 404 and master/LICENSE.txt is 200 -- the ref AND the path both matter.

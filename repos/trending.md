@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 271) — No new repositories, two blind re-measurements that agree, and a licence conflict settled by naming the repository
+
+⏱️ **Seventeenth pass of `2026-10-17`.** Append-only — everything below is prior history and is not
+rewritten. Evidence:
+[`verified-repos.2026-10-17-p271.tsv`](../evidence/verified-repos.2026-10-17-p271.tsv) ·
+[`p271-websearch.2026-10-17-p271.tsv`](../evidence/p271-websearch.2026-10-17-p271.tsv).
+
+### 🔵 `repos/foundations.md` gains no rows, and the reason is a measurement
+
+🟢 **The three generic supply legs ran this pass** (`p270` skipped them entirely; one honest sweep was
+owed) **and ran LAST, per `p269`'s instruction.** Sixth consecutive nil. The platform/ERP leg is worth
+describing precisely, because *how* it failed is the finding:
+
+🔴 **Leg 13 (`open source platform education ERP CRM MIT Apache`) returned ONE VENDOR'S GLOSSARY across
+ten near-duplicate localised URLs** — `openeducat.org/{ar,fr,pt-BR,zh,de,es,…}/glossary/…`. Ten results,
+one source. 🟢 **And it confirms a negative this base should state out loud: no education ERP under MIT
+or Apache-2.0 was located.** OpenEduCat itself is **LGPL-3.0** (already shelved); the leg's own summary
+says so. 🔵 **A result page that looks like ten corroborating sources and is one vendor is the same
+failure mode as `T33`'s single-aggregator regional picture, in a different channel.**
+
+### 🟢 Three repositories probed, three agreements — one to the byte
+
+| repo | re-measured blind this pass | carried | verdict |
+|---|---|---|---|
+| [`Koha-Community/Koha`](https://github.com/Koha-Community/Koha) | 🟢 **GPL-3.0 · 35,151 B · `main/LICENSE`** | 35 151 B | 🟢 **agrees to the byte** |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🟢 **GPL-3.0 · 35,146 B · `master/LICENSE.txt`** | GPL-3.0 | 🟢 agrees |
+| [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) | 🟢 **CC BY-SA 4.0 · 2,123 B · `main/LICENSE.md`** | "2.122" | 🟢 **reproduces `p270` exactly** |
+
+🟢 **The OpenDidactia row discharges a registered instruction.** `p270` measured 2,123 B, declined to
+rewrite the carried figure on a single reading, and wrote: *"A future pass measuring 2,123 should treat
+THIS row as the reproduction, not a second drift."* **Two independent measurements now agree**, so the
+carried `2.122` is confirmed a thousands-separator artefact and the correction is **evidenced** rather
+than noise-driven. 🔵 `p268`'s warning — *rewriting a good figure on noise is the opposite error* — is
+satisfied by reproduction, which is the only thing that satisfies it.
+
+### 🟢 `ACTION PW` discharged: the H5P licence conflict was never one wrong cell
+
+The register asked to *"settle the **H5P** licence conflict by naming the repository in the cell"*,
+noting these shelves carry H5P as `GPL-3.0` in three places and `MIT` in one. 🟢 **Limb 1 is confirmed:
+two repositories, two grants, and both cells were right.**
+
+| repo | grant | bytes | role |
+|---|---|---|---|
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 **GPL-3.0** | 35,146 B (`master/LICENSE.txt`) | the authoring core |
+| [`tunapanda/h5p-standalone`](https://github.com/tunapanda/h5p-standalone) | 🟢 **MIT** | 1,077 B | **the permissive player/doorway** |
+| [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) | 🟢 **MIT** | 1,073 B | H5P → SCORM packaging |
+| `Lumieducation/Lumi` | 🔴 **AGPL-3.0** | — | desktop authoring |
+
+🔵 **The defect is the project-level cell, not either licence** — *"H5P is GPL"* and *"H5P is MIT"* are
+both true of different repositories, so **every multi-repository project on these shelves needs the
+repository named in the cell.** 🟢 **There is still no permissive H5P *authoring* server**; the MIT
+rows are playback and packaging. That boundary is what a deliverable has to respect.
+
+⚠️ **Path trap, recorded because it costs a pass to rediscover:** `h5p/h5p-php-library` serves **404 on
+`master/LICENSE`** and **200 on `master/LICENSE.txt`**, and its default ref is `master`, not `main`.
+**The ref AND the path both matter** — the same shape as `p269`'s Kolibri finding (MIT on `develop`,
+404 on `main`).
+
+### 🔴 Koha was on these shelves for passes and never reached `verticals/solutions.md`
+
+[`Koha-Community/Koha`](https://github.com/Koha-Community/Koha) — the world's most deployed open-source
+**integrated library system**, 594★, GPL-3.0 verified at payload twice — appears in **this** file and in
+`agents/trending.md`, and **nowhere in `verticals/solutions.md`**, which is the shelf a studio actually
+reads when it needs a platform to stand up. 🟢 **Checked against that file's "Not on the shelf — and
+why" exclusions: Koha is not there either**, so this was an omission, not a judgement. **Both Koha and
+H5P are shelved into `verticals/solutions.md` this pass.** 🔵 Same species as the MEA and Sanoma defects
+(`T34`): the datum existed, the shelf that needed it did not have it.
+
 ## 2026-10-17 (pass 270) — The policy matrix declared five verdicts and carried twelve, and only counting the column found it
 
 ⏱️ **Sixteenth pass of `2026-10-17`.** Append-only. Evidence:
