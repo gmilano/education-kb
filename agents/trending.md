@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 266) — Two of this base's standing gaps fall: an MIT grading/tutoring platform and a LATAM-origin agent
+
+**Append-only shelf.** This section is added above the previous one; nothing below it is
+rewritten. Evidence: [`verified-repos.2026-10-17-p266.tsv`](../evidence/verified-repos.2026-10-17-p266.tsv)
+— 20 rows, every shelved licence read from the repository's own payload this pass, every
+non-resolving slug recorded as a miss rather than dropped.
+
+### Retraction 1: this base contradicted itself about grading, on two shelves, for two passes
+
+Be precise about what was wrong, because the error is not where it first looks.
+[`repos/foundations.md`](../repos/foundations.md) **already carried**
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) as **MIT, 819★**, describing it as
+*"interactive learning with automated feedback … the strongest MIT-licensed teaching platform
+found this pass"*. The licence was read. The stars were read.
+
+And yet [`agents/top.md`](../agents/top.md) simultaneously declared **"no education-specific
+grading agent with meaningful adoption"**, and `intel/trends.md` reasoned from that scarcity.
+**Two shelves of the same base, same day, in direct contradiction** — one holding an MIT
+platform for automated feedback, the other reporting the category empty.
+
+What pass 266 genuinely adds is **what Artemis ships**, which no prior pass recorded:
+
+| Component | Repo | Licence (payload) | Stars | What it is |
+|-----------|------|-------------------|-------|------------|
+| Artemis | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** | 819 | "Open-source platform for interactive learning with individual feedback." 12,437 commits, 395 forks. |
+| Iris | [ls1intum/Iris](https://github.com/ls1intum/Iris) | **MIT** | — | LLM-based virtual tutor inside Artemis. |
+| Pyris | [ls1intum/Pyris](https://github.com/ls1intum/Pyris) | **MIT** | 12 | "An LLM microservice for the learning platform Artemis": REST API over LLM pipelines — exercise feedback, RAG over instructor material, automated competency generation. |
+| Athena | [ls1intum/Athena](https://github.com/ls1intum/Athena) | **UNVERIFIED** | — | Feedback suggestion for text, modelling and programming exercises. **No licence payload served** on `develop`/`main`/`master` across four filenames — not shelved as permissive. |
+
+So the category one shelf declared empty is occupied by an **MIT-licensed, university-operated
+platform with an LLM tutor and an automated-feedback engine already wired in**, maintained by
+the Applied Education Technologies group at the **Technical University of Munich** and
+self-hosted by other universities. Iris and Pyris are **new rows** this pass; Athena is new and
+**fails licence verification**; Artemis itself was already shelved and merely misdescribed. Iris, Athena and Hyperion are all config-gated, so the
+platform runs with or without AI — which is exactly the posture a high-risk-classified
+deployment needs (see [`intel/market.md`](../intel/market.md) on the EU AI Act).
+
+**The honest restatement of the gap:** there is no education grading agent that is a *standalone,
+star-counted agent repo*. There is a mature permissive *platform* that contains one. This base
+was searching for the wrong shape of thing — the same instrument error pass 265 diagnosed for
+provenance, repeated one shelf over.
+
+**Standing method note, and the more useful lesson of this pass:** a declared gap must be
+re-tested **against this base's own other shelves** before it is published again. The
+falsifying evidence for the grading gap was not on the web — it was on line 21 of
+`repos/foundations.md`. A cross-shelf consistency read costs one `grep` and would have caught
+it two passes ago.
+
+**Hyperion is not a repo.** The Artemis README names it as AI-assisted exercise authoring built
+on Spring AI; `ls1intum/Hyperion` does not resolve. It is a subsystem, not a component repo.
+
+### Retraction 2: a LATAM-origin agent exists — and it is tiny
+
+[`guedesindev/ai_tutor_forge`](https://github.com/guedesindev/ai_tutor_forge) — **GPL-3.0**
+(payload, 35,149 B), 18★, 8 forks, 21 commits. A Python 3 CLI that forges a personalized tutor
+over a user-chosen LLM.
+
+Three things stated at their real evidence grade:
+
+- **Provenance is language-only.** The README, file descriptions and interface are in
+  **Portuguese**. The repository page does **not** state the author's country. This is weaker
+  than the org-handle evidence pass 265 used for EduData, and far weaker than DeepTutor's
+  payload-quoted affiliation. "LATAM-origin" is therefore **not** asserted here; "Portuguese-
+  language" is what the evidence supports.
+- **Adoption is not claimed.** 18 stars and 21 commits is a personal project.
+- **The licence is copyleft**, so it belongs on the restricted shelf, not the build-on-this tier.
+
+The blanket claim "no LATAM-origin education agent surfaced" is still withdrawn, because the
+search that produced it would not have found this either. The defensible gap is narrower:
+**no Spanish- or Portuguese-language education agent with adoption** — the platform layer
+(`portabilis/i-educar`, `i-diario`) remains where LATAM's real open-source education supply is.
+
+### Method correction: this pass broke its own licence detector, then fixed it
+
+The first detector run classed `ai_tutor_forge` as **AGPL-3.0**. It is **GPL-3.0** — the GitHub
+sidebar, the README and the payload's own title line all agree.
+
+The bug: a whole-text search for `GNU AFFERO GENERAL PUBLIC LICENSE` matches **every GPL-3.0
+payload**, because GPL-3.0 **section 13 cites the Affero licence by name**. Family detection is
+now anchored to the first 600 bytes — the title region — and every row above was re-verified
+after the fix.
+
+This is the third pass running in which a licence guard that searched the *whole document*
+instead of a *scoped region* produced a confident wrong answer (`p261`, `p262`, now `p266`).
+**Standing method note: licence family comes from the title region; obligations come from the
+body. A guard that conflates the two will keep being wrong in both directions.**
+
+### Agents added to the shelf this pass
+
+Permissive: **Iris**, **Pyris** (both MIT, TUM). Restricted: **ai_tutor_forge** (GPL-3.0).
+Not shelved: **Athena** (no payload), **autograder-org/autoGrader-frontend** (no payload, 22
+commits).
+
+### Still a gap, restated honestly
+
+- **No standalone education grading *agent* with adoption** — the function is real and served,
+  but by platforms (Artemis + Athena, `jupyter/nbgrader`, `autolab/Autolab`, Numbas).
+- **No Spanish- or Portuguese-language education agent with adoption** (see above).
+- **`mcp-server-education` as a GitHub topic is still empty** — unchanged from pass 265.
+
 ## 2026-10-17 (pass 265) — No new agent surfaced; the agent shelf's APAC gap was a reading error
 
 **Append-only shelf.** This section is added above the previous one; nothing below it is

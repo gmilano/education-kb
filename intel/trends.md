@@ -7,7 +7,8 @@ updated: 2026-10-17
 # Trends — Education, October 2026
 
 > What changed, what it means for a studio engagement, and how confident the evidence is.
-> **T1–T9 are from pass 264. T10 is revised and T11–T14 are new in pass 265**
+> **T1–T9 are from pass 264. T10 is revised and T11–T14 are new in pass 265. T15–T17 are new in
+> pass 266, which also revises T10 a second time and T14**
 > ([evidence](../evidence/verified-repos.2026-10-17-p265.tsv)), which also retracts two of this
 > base's own declared gaps.
 
@@ -124,7 +125,14 @@ would have been a false positive, and a false retraction costs a usable row.
 deliverable. A secondary source, an aggregator table, a GitHub sidebar badge and this
 knowledge base have all been wrong about an education licence in the last two weeks.
 
-## T10 — The permissive platform market is three candidates deep *(revised)*
+## T10 — The permissive platform market is three candidates deep *(revised twice — now five)*
+
+> **Pass 266 revision:** add **Sunbird** (MIT, national scale, APAC-origin) and **Artemis**
+> (MIT, assessment-first, EMEA-origin). The shelf is **five** deep, not three. Each successive
+> count in this base was published as if settled; the recurrence is the part worth noting —
+> the number has only ever moved in one direction, which suggests the current five is also a
+> floor rather than a finding. See [`verticals/solutions.md`](../verticals/solutions.md).
+
 
 **Revised 2026-10-17 (pass 265).** The earlier version of this entry said *one*. Payload
 verification of a wider candidate set makes it **three**, and they are not substitutes:
@@ -202,6 +210,14 @@ which is narrower and more actionable.
 
 ## T14 — Autograding is permissive, mature, and the answer regulators will accept
 
+> **Pass 266 revision:** stronger than stated. Beyond `nbgrader` (BSD-3-Clause) and `Autolab`
+> (Apache-2.0), **Artemis is MIT and ships an automated-feedback engine (Athena) plus an LLM
+> tutor (Iris, MIT) and AI exercise authoring (Hyperion)** — and `numbas/Numbas` (Apache-2.0,
+> Newcastle) executes assessment **entirely in the browser**, so submissions need never leave
+> the device. ⚠️ One caveat for procurement: **Athena's own repo serves no licence payload** —
+> Artemis's MIT grant does not automatically cover it. Get it in writing.
+
+
 The "no open-source grading" gap this KB has declared was about **agents**. The platforms are
 fine: `jupyter/nbgrader` (**BSD-3-Clause, 1.4k**) for notebooks, `autolab/Autolab`
 (**Apache-2.0, 808**, CMU-origin) for programming assignments with a course-management shell,
@@ -214,6 +230,96 @@ learning outcomes, Brazil's `PL 2338` naming education selection as high-risk �
 **deterministic autograder with a human sign-off step** is permitted where an LLM grader is
 not. Lead with nbgrader/Autolab and keep the model on the feedback side of the line. This is
 the rare case where the compliant architecture is also the cheaper one.
+
+## T15 — The star count is the wrong instrument for publicly-funded education software
+
+**This is the methodological finding of pass 266, and it generalises past education.**
+
+[`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) — the MIT-licensed
+stack beneath **DIKSHA**, India's national school education platform under NCERT — has **41
+stars** and **38,046 commits**.
+
+| | Sunbird | A star-findable education agent |
+|---|---|---|
+| Stars | **41** | 300 – 41,500 |
+| Commits | **38,046** | 21 – 12,437 |
+| Forks | **317** | 1 – 395 |
+
+Every search leg this base runs sorts GitHub topic listings **by stars**. Ministry-funded digital
+public infrastructure is adopted by education departments and system integrators who deploy it;
+it is not starred by developers browsing GitHub. **A project can serve a national school system
+and remain structurally invisible to the instrument** — which is how this base declared "no
+APAC-origin education platform" for 265 passes while an MIT one of national scale sat in plain
+sight.
+
+**What to do instead:** rank the *platform* layer by **commits and forks**, and probe
+national-programme names directly (DIKSHA/Sunbird, i-Educar, Kolibri, Ceibal, Me Capacito). Note
+the slug trap too: `Sunbird-Ed/sunbird-ed-portal` does not resolve, because the live slugs are
+camel-case — and a kebab-case guess returns something indistinguishable from absence.
+
+**Why this is commercially material, not just hygiene:** the stars-first instrument biases every
+recommendation this base makes toward **US and developer-popular** projects and against
+**government-built** ones. In public-sector education — most of the addressable market outside
+corporate L&D — that is backwards. An APAC ministry briefed to import a Western LMS, when its
+own national stack is MIT and already deployed, is a recommendation that would have lost on
+both cost and politics.
+
+**Confidence: high.** Directly measured; the star and commit counts are from the repository
+pages this pass.
+
+## T16 — Adoption has outrun governance in LATAM, and the deficit is the sellable work
+
+⚠️ **Secondary-source grade** — `WebFetch` to `iesalc.unesco.org` failed DNS resolution this
+pass, so the UNESCO IESALC study could not be read first-hand.
+
+UNESCO IESALC, across **200 institutions in 19 countries**: **87%** use AI in at least one area
+and **74%** in teaching and learning, while **26%** have a formal AI strategy. TALIS 2024 has
+secondary teachers using AI at **56%** in Brazil, **55%** Chile, **53%** Colombia and **52%**
+Costa Rica, against an **OECD average of 36%**.
+
+**A 61-point gap between use and governance** is the single clearest commercial opening in this
+base. The work it implies — AI-use policy, model inventories, human-review design,
+assessment-integrity controls, procurement criteria, staff training — **requires no platform
+displacement**, which is normally what kills a public-sector education deal. And it becomes
+mandatory rather than advisable the moment Brazil's `PL 2338` lands with education-related
+selection classified high-risk.
+
+The inverse reading matters too: **LATAM is not a laggard market in this category.** Four
+countries sit 16–20 points above the OECD average on teacher use. Briefing LATAM as
+"behind on AI" is both wrong and the wrong sales posture; "ahead on use, ungoverned" is
+accurate and points at a different, larger engagement.
+
+**Confidence: medium.** The numbers are consistent across several reports, but those reports
+cite the *same* UNESCO study, so they are not independent confirmations.
+
+## T17 — Regulators are converging on "meaningful human review" as the thing that declassifies a system
+
+The year's regulatory texts stop asking *whether* AI is used and start asking **whether a human
+decides**. That turns a compliance question into an architecture question, which is the form a
+studio can actually build against.
+
+| Jurisdiction | The hinge |
+|---|---|
+| **Vietnam** ⚠️ | Automated assessment and behavioural monitoring are high-risk **only where the AI output is the sole basis for a decision without meaningful human review**. Deadline 2027-03-01; +6 months if live before 2026-08-15. |
+| **Oklahoma** `SB 1734` | AI permitted **only with educator supervision and human review**; barred from high-stakes decisions. |
+| **EU AI Act** | High-risk education duties (delayed to **2027-12-02**) are built on **human oversight**, documentation and conformity assessment. |
+| **Idaho** `SB 1227` | Explicit bar on AI **replacing** human teachers. |
+| **Maryland** | Human oversight; no high-stakes AI decisions about students. |
+
+**The design consequence, and it is a build instruction rather than an observation:** a system
+where the model *proposes* and a human *disposes* — and which can be shown, by configuration, to
+have had AI off for any given decision — is a *lower regulatory class* than a system that
+decides. The same functionality, differently wired, lands in a different legal category.
+
+This is why [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) (MIT) is the most
+strategically interesting row added in pass 266. Its **Iris**, **Athena** and **Hyperion**
+subsystems are **config-gated**: the platform runs identically with AI disabled, and feedback is
+suggested to an instructor rather than applied to a student. That is not a compliance feature
+anyone retrofitted — it is how a university built it for its own use — and it is the posture
+four of the five jurisdictions above are converging on.
+
+**Confidence: medium-high** on the pattern (five jurisdictions, independent texts); ⚠️ **low-medium**
+on the Vietnam specifics, which are secondary-source and whose dates conflicted across sources.
 
 ## Confidence notes
 

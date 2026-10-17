@@ -1,0 +1,31 @@
+# pass 266 — 2026-10-17 — education KB
+# existence: git ls-remote (clone channel LIVE this session). Default ref resolved with
+#   `ls-remote --symref HEAD`, so licence paths below are on the ref the project actually serves.
+# licence grade: payload = bytes read from the repository's own licence file this pass via
+#   raw.githubusercontent.com; page = GitHub sidebar label (WebFetch); readme = README claim only.
+# stars: WebFetch of the repository page (github.com HTML via curl is 403 through the agent proxy).
+#   "-" means not fetched this pass, NOT zero.
+# METHOD CORRECTION this pass: a whole-text search for "GNU AFFERO GENERAL PUBLIC LICENSE"
+#   false-positives on EVERY GPL-3.0 payload, because GPL-3.0 section 13 cites the Affero licence
+#   by name. Family detection is now anchored to the first 600 bytes (the title region).
+#   guedesindev/ai_tutor_forge was mis-read as AGPL-3.0 before the fix; it is GPL-3.0.
+slug	existence	licence	licence_grade	licence_path	payload_bytes	stars	stars_grade	provenance	note
+ls1intum/Artemis	LIVE	MIT	payload	develop/LICENSE	1091	819	page	Applied Education Technologies (AET) group, Technical University of Munich — EMEA-origin, README-quoted	"open-source platform for interactive learning with individual feedback"; 12437 commits, 395 forks; ships Iris (LLM tutor), Athena (feedback suggestion), Hyperion (AI exercise authoring), all config-gated; NEW to this KB
+ls1intum/Iris	LIVE	MIT	payload	main/LICENSE	1089	-	-	ls1intum / TUM — EMEA	virtual AI tutor component of Artemis; NEW
+ls1intum/Pyris	LIVE	MIT	payload	main/LICENSE	1089	12	page	ls1intum / TUM — EMEA	"An LLM microservice for the learning platform Artemis"; REST API fronting LLM pipelines; exercise feedback, RAG over instructor material, automated competency generation; NEW
+ls1intum/Athena	LIVE	UNVERIFIED	no-payload	develop	-	-	-	ls1intum / TUM — EMEA	NOT SHELVED as permissive: no licence payload on develop/main/master x LICENSE,LICENSE.md,LICENSE.txt,COPYING. Artemis README presents it as an Artemis component; its own repo does not serve a licence. Treat as all-rights-reserved until a payload says otherwise.
+numbas/Numbas	LIVE	Apache-2.0	payload	master/LICENSE	11357	215	page	School of Mathematics, Statistics and Physics, Newcastle University — EMEA-origin, README-quoted	browser-based assessment/e-examination system, maths-focused; Python 3 compiler + JS runtime; 4209 commits, 130 forks; NEW
+Sunbird-Ed/SunbirdEd-portal	LIVE	MIT	payload	master/LICENSE	1072	41	page	Sunbird / EkStep Foundation lineage, India — APAC-origin	REFUTES this KB's "no APAC-origin education PLATFORM" gap. 38046 commits, 317 forks. README: "next-generation scalable open-source learning solution for teachers and tutors", mission "improve learning outcomes for 200 million children across India". NEW
+project-sunbird/knowledge-platform	LIVE	MIT	payload	master/LICENSE	1072	-	-	Sunbird, India — APAC	Sunbird backend/knowledge services; NEW
+Sunbird-Ed/SunbirdEd-mobile-app	LIVE	MIT	payload	main/LICENSE	1078	-	-	Sunbird, India — APAC	Sunbird mobile client; NEW
+project-sunbird/sunbird-portal	LIVE	MIT	payload	master/LICENSE	1072	-	-	Sunbird, India — APAC	older/parallel portal slug under the project-sunbird org; same MIT payload size as Sunbird-Ed/SunbirdEd-portal
+guedesindev/ai_tutor_forge	LIVE	GPL-3.0	payload	main/LICENSE	35149	18	page	README, file descriptions and interface in PORTUGUESE; author country NOT stated on the page	FIRST LATAM-adjacent education AGENT this KB has payload-verified. Python 3 CLI that builds a personalized tutor over a user-chosen LLM; 21 commits, 8 forks. Adoption is NOT claimed: 18 stars. Provenance grade: language-only, NOT a country statement.
+oppia/oppia-android	LIVE	Apache-2.0	payload	develop/LICENSE	11357	-	-	Oppia Foundation	Android client for Oppia; complements oppia/oppia (Apache-2.0, shelved p265); NEW
+autograder-org/autoGrader-frontend	LIVE	UNVERIFIED	no-payload	main	-	-	-	-	NOT SHELVED: no licence payload. README claims LLM-based assignment grading; 22 commits — early-stage regardless.
+learningequality/kolibri-design-system	LIVE	UNVERIFIED	no-payload	develop	-	-	-	Learning Equality	NOT SHELVED: no licence payload on develop. Parent kolibri is MIT (p265).
+Sunbird-Ed/sunbird-ed-portal	NO-REF	-	-	-	-	-	-	-	slug does not resolve; correct slug is Sunbird-Ed/SunbirdEd-portal (camel-case)
+Sunbird-Ed/sunbird-ed-mobile-app	NO-REF	-	-	-	-	-	-	-	slug does not resolve; correct slug is SunbirdEd-mobile-app
+Sunbird-Ed/sunbird-ed-teacher-app	NO-REF	-	-	-	-	-	-	-	probed, does not resolve
+Sunbird-inQuiry/question-service	NO-REF	-	-	-	-	-	-	-	probed, does not resolve under this org name
+Sunbird-Lern/user-org-service	NO-REF	-	-	-	-	-	-	-	probed, does not resolve under this org name
+ls1intum/Hyperion	NO-REF	-	-	-	-	-	-	-	Artemis README names Hyperion as AI exercise-authoring; it is not a separate public repo at this slug

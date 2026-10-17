@@ -18,14 +18,14 @@ updated: 2026-10-17
 
 | Repo | Licence | Stars | Why it is a foundation |
 |------|---------|-------|------------------------|
-| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | **Interactive learning with automated feedback**, from TUM Applied Education Technologies. Programming, quiz, modelling and text exercises with automatic assessment and an integrated CI runner. The strongest MIT-licensed teaching platform found this pass — production-grade and university-maintained. |
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | **Interactive learning with automated feedback**, from TUM Applied Education Technologies. Programming, quiz, modelling and text exercises with automatic assessment and an integrated CI runner. The strongest MIT-licensed teaching platform found this pass — production-grade and university-maintained. **Pass 266:** it ships three *config-gated* AI subsystems — **Iris** (LLM tutor, [`ls1intum/Iris`](https://github.com/ls1intum/Iris), MIT), **Pyris** (the LLM microservice behind it, [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris), MIT) and **Athena** (feedback suggestion, [`ls1intum/Athena`](https://github.com/ls1intum/Athena), **licence UNVERIFIED — no payload**), plus **Hyperion** (AI exercise authoring, not a separate repo). Config-gated matters: the platform runs identically with AI off, which is the posture an EU AI Act high-risk classification wants. |
 | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | MIT | 4.1k | FSRS, the modern spaced-repetition scheduler. The highest-adoption learning-science component in open source. Pair with [fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) (BSD-3-Clause) for a Rust core you can embed. |
 | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT | 450 | The reference PyTorch knowledge-tracing benchmark library: standard datasets, standard splits, comparable baselines. If a client asks "can you predict what this student knows", this is the honest starting point. |
 | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT | 352 | Source-code plagiarism detection (UGent). In the GenAI era this is no longer a niche: it is the integrity layer every coding course now needs. |
 | [bigdata-ustc/EduData](https://github.com/bigdata-ustc/EduData) | Apache-2.0 | 313 | Education datasets plus download/preprocess tooling. Removes the first two weeks of any learner-modelling project. |
 | [ZhijieXiong/pyedmine](https://github.com/ZhijieXiong/pyedmine) | MIT | 82 | Knowledge tracing **plus** cognitive diagnosis **plus** exercise recommendation in one library. Broader than pyKT where the deliverable is a recommender, not a predictor. |
 | [HFUT-LEC/EduStudio](https://github.com/HFUT-LEC/EduStudio) | MIT | 78 | Unified library for student cognitive modelling, with a configuration-driven pipeline. Good for sweeping many models when the client wants a comparison, not a bet. |
-| [numbas/Numbas](https://github.com/numbas/Numbas) | Apache-2.0 | — | Maths and science e-assessment: randomised questions, algebraic marking, SCORM-packaged output. Apache-2.0 makes it embeddable in a commercial deliverable. |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | Apache-2.0 | 215 | Maths and science e-assessment: randomised questions, algebraic marking, SCORM-packaged output. Apache-2.0 makes it embeddable in a commercial deliverable. **Pass 266:** 215★, 4,209 commits, 130 forks, **Newcastle University** School of Maths, Stats & Physics (README-quoted → EMEA-origin). Tests run **entirely in the browser** — a Python 3 compiler producing a JavaScript runtime — so no student submission need leave the device. That answers a data-residency objection structurally rather than contractually. |
 | [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | Apache-2.0 | — | Framework for building **LTI** tools that plug into any compliant LMS. The sanctioned way to put an AI tool inside Moodle/Canvas/Open edX without forking the LMS. |
 | [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | Apache-2.0 | — | The xAPI (Experience API) specification itself. The vocabulary for "what did this learner actually do" across systems. |
 | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | Apache-2.0 | — | SQL-backed **Learning Record Store** for xAPI. The missing piece between an agent that observes learning and a model that needs training data. |
@@ -40,6 +40,8 @@ updated: 2026-10-17
 | [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | BSD-3-Clause | 1.4k | *"A system for assigning and grading notebooks."* **Autograding that already exists.** This file previously declared that no high-adoption open-source grading option was found; nbgrader is 1.4k stars, BSD-3-Clause and the default in university data-science teaching. |
 | [learningequality/kolibri](https://github.com/learningequality/kolibri) | MIT | 1.2k | *"the offline app for universal education"* — a complete learning platform that runs with **no internet connection**, syncing when a link appears. **39,803 commits.** MIT, which makes it the second permissive complete platform in this KB and the only one designed for intermittent connectivity. The natural base for rural LATAM and low-bandwidth APAC deployments. |
 | [autolab/Autolab](https://github.com/autolab/Autolab) | Apache-2.0 | 808 | *"Course management service that enables auto-graded programming assignments."* Initially developed by students at **Carnegie Mellon University** per its README. Apache-2.0 autograding with a course-management shell around it — the permissive counterpart to Artemis. |
+| [Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) | **MIT** | 41 ⚠️ | **India's national education stack — the APAC-origin platform this KB said did not exist.** The codebase under **DIKSHA**, run by NCERT/Ministry of Education. README: *"next-generation scalable open-source learning solution for teachers and tutors"*, mission *"improve learning outcomes for 200 million children across India"*. **38,046 commits, 317 forks — against 41 stars.** ⚠️ **Do not read the star count as adoption**: ministry-funded digital public infrastructure accrues commits, forks and deployments but almost no stars, which is precisely why star-sorted search never surfaced it. Backend: [`project-sunbird/knowledge-platform`](https://github.com/project-sunbird/knowledge-platform) (MIT). Mobile: [`Sunbird-Ed/SunbirdEd-mobile-app`](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) (MIT). |
+| [oppia/oppia-android](https://github.com/oppia/oppia-android) | Apache-2.0 | — | The Android client beside `oppia/oppia`. Pairs with `learningequality/kolibri` (MIT) wherever mobile-first, low-connectivity delivery is the actual constraint rather than an afterthought. |
 
 **21 permissive foundation rows** (17 from pass 264, 4 added and payload-verified in pass 265).
 
@@ -82,7 +84,7 @@ updated: 2026-10-17
 - **"Our learners lose connectivity"** → `learningequality/kolibri` (MIT). Offline-first is an architecture, not a setting, and retrofitting it onto a server-rendered LMS is a rebuild.
 - **"Brazilian municipal or state network, sovereignty-first"** → `portabilis/i-educar` (GPL-2.0) for the SIS and `i-diario` (AGPL-3.0) for the teacher portal, both actively maintained in October 2026, both already inside the federal software-public lineage. Keep studio code on the permissive side of an LTI or API boundary.
 
-## Declared gaps — and two retractions
+## Declared gaps — and three retractions
 
 ### Retracted: "no LATAM-maintained foundational repo identified"
 
@@ -104,9 +106,35 @@ are both higher-adoption than every education *agent* in this KB except DeepTuto
 not exist is a grading **agent**; autograding **platforms** are permissive, mature and
 boring — which is the correct thing to put in front of a regulator.
 
+### Retracted in pass 266: "no APAC-origin education platform"
+
+Pass 265 narrowed its APAC conclusion to this one remaining gap and briefed integration work
+on the strength of it. **[`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal)
+is MIT, 38,046 commits, 317 forks, and is the stack beneath DIKSHA** — India's national school
+education platform under NCERT. APAC publishes the platform layer, at national scale, under the
+most permissive licence this KB tracks.
+
+**Why it hid for 265 passes, stated as a method defect rather than bad luck:** every leg this
+base runs sorts GitHub topic listings **by stars**, and `SunbirdEd-portal` has **41**.
+Ministry-funded digital public infrastructure is used by system integrators and education
+departments, not by developers who star repositories. The instrument cannot see this class of
+code at all.
+
+| | Sunbird | A star-findable agent |
+|---|---|---|
+| Stars | **41** | 300 – 41,500 |
+| Commits | **38,046** | 21 – 12,437 |
+| Forks | **317** | 1 – 395 |
+
+**Standing instruction for later passes:** rank the *platform* layer by **commits and forks**,
+and probe national-programme names by hand (DIKSHA/Sunbird, i-Educar, Kolibri, Me Capacito,
+Ceibal). Also note the slug trap: `Sunbird-Ed/sunbird-ed-portal` does **not** resolve — the
+live slugs are camel-case, and a kebab-case guess returns nothing that looks any different
+from absence.
+
 ### Still open
 
-- **Permissive complete platforms are three deep, not one.** **OpenOLAT** (Apache-2.0),
+- **Permissive complete platforms are at least three deep, not one** *(superseded in pass 266 — see the corrected count below)*. **OpenOLAT** (Apache-2.0),
   **Kolibri** (MIT) and **Oppia** (Apache-2.0) are now all payload-verified; see
   [`verticals/solutions.md`](../verticals/solutions.md) for how they differ in scope. The
   previous "exactly one candidate" framing understated the shelf and should not be repeated in
@@ -114,6 +142,19 @@ boring — which is the correct thing to put in front of a regulator.
 - **Star counts marked `—`** were not re-verified this pass; the licence was. An unverified
   number is left blank rather than carried forward from a prior pass, because carried-forward
   numbers are how this base previously published "pykt 1.2k" for a 450-star repository.
-- **No LATAM-maintained foundational repo identified.** Chamilo has the deepest LATAM
-  public-sector footprint of any platform here, but it is European-maintained (Belgium/Spain).
-  The region consumes this layer; it does not yet publish it.
+- **~~No LATAM-maintained foundational repo identified.~~ — struck in pass 266 as an
+  internal contradiction.** This bullet survived in "Still open" while the *top of this same
+  section* retracted exactly that claim on the evidence of `portabilis/i-educar` (34,948
+  commits, commit 2026-10-14). Both statements were published in the same file on the same
+  day. The accurate version: **LATAM publishes this layer and it arrives copylefted** —
+  i-Educar is GPL-2.0, i-Diário AGPL-3.0. What is still missing is a LATAM-origin
+  **permissively licensed** foundation. Chamilo, often cited for its deep LATAM public-sector
+  footprint, is European-maintained (Belgium/Spain) and GPL-3.0.
+- **Cross-shelf consistency is now a required check.** Two contradictions were found *inside
+  this base* in pass 266 — this bullet, and `agents/top.md` declaring the grading category
+  empty while line 21 of this file carried an MIT automated-feedback platform. Both were
+  falsifiable with one `grep`, not more searching. **Before republishing any declared gap,
+  grep the other shelves for its own counter-evidence.**
+- **Permissive platform count, corrected again:** with **Sunbird** (MIT) and **Artemis** (MIT)
+  the permissive complete-platform shelf is **five** deep — OpenOLAT, Kolibri, Oppia, Sunbird,
+  Artemis — not three and certainly not one. Each prior count was published as if final.

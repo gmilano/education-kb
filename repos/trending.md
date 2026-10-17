@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 266) — The APAC platform gap is closed by India's national education stack, under MIT
+
+**Append-only shelf.** This section sits above the previous one; nothing below it is rewritten.
+Evidence: [`verified-repos.2026-10-17-p266.tsv`](../evidence/verified-repos.2026-10-17-p266.tsv)
+
+### The headline: Sunbird
+
+Pass 265 narrowed its APAC finding to a single remaining gap — *"no APAC-origin education
+**platform**"* — and pointed at integration work instead of import. **That gap does not
+survive this pass.**
+
+| Repo | Licence (payload) | Bytes | Signal |
+|------|-------------------|-------|--------|
+| [Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) | **MIT** | 1,072 | **38,046 commits**, 317 forks, 41★ |
+| [project-sunbird/knowledge-platform](https://github.com/project-sunbird/knowledge-platform) | **MIT** | 1,072 | backend / knowledge services |
+| [Sunbird-Ed/SunbirdEd-mobile-app](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) | **MIT** | 1,078 | mobile client |
+| [project-sunbird/sunbird-portal](https://github.com/project-sunbird/sunbird-portal) | **MIT** | 1,072 | parallel slug under the older org |
+
+Sunbird's README calls it a *"next-generation scalable open-source learning solution for
+teachers and tutors"* with the mission to *"improve learning outcomes for **200 million
+children across India**"*. It is the stack under **DIKSHA**, India's national school education
+platform. **MIT — the most permissive tier this KB tracks, on the largest-scale education
+platform it has shelved.**
+
+### Why 265 passes missed it: stars are the wrong instrument for public infrastructure
+
+**`SunbirdEd-portal` has 41 stars and 38,046 commits.**
+
+Every agent and repo leg this KB runs sorts GitHub topic listings **by stars**. A
+government-funded digital public infrastructure project accumulates commits, forks and
+deployments, but almost no stars — its users are ministries and system integrators, not
+developers browsing GitHub. At 41★ it cannot appear on any star-sorted surface, no matter how
+many passes re-run the same query.
+
+| Instrument | Reading for Sunbird | Reading for a typical shelved agent |
+|-----------|---------------------|-------------------------------------|
+| Stars | 41 — invisible | 300–41,500 — findable |
+| Commits | **38,046** | 21–12,437 |
+| Forks | **317** | 1–395 |
+
+**Standing method note:** for the *platform* layer, rank by commits and forks, and probe
+known national-programme names directly (DIKSHA/Sunbird, i-Educar, Kolibri). Star-sorted
+search is an instrument for finding *developer-popular* code, and it systematically hides
+*publicly-funded* code. Pass 265 found 13 repos "by probing instead of searching"; this is the
+same lesson with a named mechanism behind it.
+
+**Slug caution — four misses recorded:** `Sunbird-Ed/sunbird-ed-portal`,
+`Sunbird-Ed/sunbird-ed-mobile-app`, `Sunbird-Ed/sunbird-ed-teacher-app`,
+`Sunbird-inQuiry/question-service` and `Sunbird-Lern/user-org-service` **do not resolve**. The
+live slugs are camel-case (`SunbirdEd-portal`, `SunbirdEd-mobile-app`). A kebab-case guess at
+this org returns nothing and looks exactly like absence.
+
+### EMEA assessment engines, both permissive
+
+| Repo | Licence (payload) | Stars | Institution |
+|------|-------------------|-------|-------------|
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** | 819 | Applied Education Technologies, **TU Munich** |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | **Apache-2.0** | 215 | School of Maths, Stats & Physics, **Newcastle University** |
+
+Numbas runs assessments **entirely in the browser** (Python 3 compiler, JavaScript runtime,
+4,209 commits) — which makes it the row to reach for when student work must not leave the
+device or the institution. Artemis is covered on the agent shelf; it belongs on both.
+
+### Also verified
+
+[`oppia/oppia-android`](https://github.com/oppia/oppia-android) — **Apache-2.0** (payload),
+the Android client beside `oppia/oppia` (Apache-2.0, pass 265). Relevant wherever mobile-first
+and low-connectivity delivery is the requirement, alongside `learningequality/kolibri` (MIT).
+
+**Not shelved:** [`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system)
+— no licence payload on `develop`, despite the parent `kolibri` being MIT. A permissive parent
+does not license a child repo.
+
 ## 2026-10-17 (pass 265) — Thirteen repos added by probing instead of searching; two "permissive" recommendations died
 
 **Append-only shelf.** This section sits above the previous one; nothing below it is rewritten.

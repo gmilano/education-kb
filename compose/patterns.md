@@ -314,6 +314,131 @@ policy document.
 tightening fastest, it is cheaper than an LLM grader, and it gets *more* defensible as
 regulation increases rather than less.
 
+## P11 — Agent layer over India's national stack (MIT end-to-end, no copyleft anywhere)
+
+**When:** an APAC public-sector engagement — a state education department or ministry — that
+already runs **DIKSHA** or a Sunbird-derived platform. **Do not propose a migration.**
+
+**Why it wins:** the platform, the content pipeline and the political precedent exist. The
+engagement is the agent layer on top, and every component is permissive, so there is **no
+copyleft obligation anywhere in the stack** — the only pattern in this file with that property.
+
+```
+Sunbird-Ed/SunbirdEd-portal        MIT    national platform (38,046 commits)
+project-sunbird/knowledge-platform MIT    content/knowledge backend  <-- integrate HERE
+Sunbird-Ed/SunbirdEd-mobile-app    MIT    mobile client
+  |
+  +-- ls1intum/Pyris               MIT    LLM microservice (REST, swappable pipelines)
+  |     +-- ls1intum/Iris          MIT    tutor: hints and leading questions, not answers
+  +-- numbas/Numbas                Apache-2.0  assessment, executes in-browser
+  +-- pykt-team/pykt-toolkit       MIT    learner model over Sunbird telemetry
+  +-- yetanalytics/lrsql           Apache-2.0  xAPI Learning Record Store
+```
+
+**Wiring, concretely:**
+1. Integrate at the **`knowledge-platform` API**, not in the portal UI. The portal is the piece
+   a ministry has customised and will keep customising; the backend API is stable.
+2. Stand up **Pyris** as a separate service and point it at the content store. Pyris already
+   exposes swappable LLM pipelines and RAG over instructor material, so bring-your-own-model
+   (including a locally hosted one) is configuration, not code.
+3. Emit **xAPI** statements to **lrsql** for every tutor interaction. This is what makes the
+   learner model trainable later and the deployment auditable now.
+4. Attach **Numbas** for assessment. Browser-side execution means submissions need not leave the
+   device — carry that into the data-protection annex explicitly.
+5. Fit **pykt-toolkit** on the accumulated telemetry only once there is enough of it. Do not
+   promise a learner model in phase 1; promise the instrumentation that makes one possible.
+
+**Licence posture to put in the SOW:** MIT / MIT / MIT / MIT / Apache-2.0 / MIT / Apache-2.0.
+Nothing here triggers source disclosure, including on a hosted deployment.
+
+**Slug caution:** `Sunbird-Ed/sunbird-ed-portal` **does not resolve**. The live slugs are
+camel-case (`SunbirdEd-portal`, `SunbirdEd-mobile-app`).
+
+---
+
+## P12 — Declassify-by-design assessment for Vietnam's 2027 deadline
+
+**When:** an APAC engagement touching **automated assessment** or any form of student
+**behavioural monitoring**, in Vietnam or any jurisdiction converging on the same test (see T17).
+
+**The governing fact** ⚠️ *(secondary-source grade)*: Vietnam's July 2026 decision makes these
+uses high-risk **only where the AI output is the sole basis for a decision without meaningful
+human review.** Compliance **2027-03-01**; **+6 months** if the system was live before
+**2026-08-15**.
+
+**So the deliverable is not a compliance document — it is an architecture that stays out of the
+high-risk class.**
+
+```
+ls1intum/Artemis            MIT   assessment platform, human-in-the-loop by construction
+  +-- ls1intum/Athena       (!!)  feedback SUGGESTED to instructor, never applied to student
+  +-- ls1intum/Iris         MIT   tutor: hints only, no grading authority
+  +-- ls1intum/Pyris        MIT   LLM microservice; swap to a local model for data residency
+  +-- config gate           ----  every AI subsystem independently switchable OFF
+  |
+  +-- yetanalytics/lrsql    Apache-2.0  immutable xAPI record of who decided what, and when
+```
+
+**The four build rules that do the legal work:**
+1. **Athena suggests; an instructor disposes.** No code path applies a model-generated grade to
+   a student record. This is the single requirement that keeps the system out of the high-risk
+   class under Vietnam's carve-out, Oklahoma's `SB 1734` and Maryland's rule alike.
+2. **Config-gate every AI subsystem.** Artemis already does this. It means "AI was off for this
+   cohort" is a verifiable configuration claim, not a promise.
+3. **Log the human decision, not just the model output.** `lrsql` holds an xAPI record showing a
+   named human reviewer and a timestamp per decision. "Meaningful human review" is an evidentiary
+   claim; without a log it is unprovable.
+4. **Keep the model swappable** via Pyris, so a data-residency or sovereign-hosting requirement
+   is a configuration change rather than a re-platforming.
+
+⚠️ **Two cautions, stated plainly.** (a) **`ls1intum/Athena` serves no licence payload** — marked
+`(!!)` above. Artemis's MIT grant does **not** automatically extend to it. Resolve the licence in
+writing with TUM before Athena ships in a deliverable, or implement the feedback-suggestion step
+yourself against Pyris. (b) The Vietnam dates **conflicted across sources** this pass and could
+not be confirmed against the primary decision text; confirm before contracting to a deadline.
+
+---
+
+## P13 — Governance retrofit for a LATAM university that already adopted AI
+
+**When:** the 87%-adopting / 26%-governed institution ⚠️ described in T16 — which is most of
+LATAM higher education. The client has AI in use across faculties and **no strategy, inventory
+or review process.** No platform displacement is required, which is why this sells.
+
+**This pattern is deliberately mostly not software.** Writing code first is the standard mistake
+here; the deliverable is governance *with* instrumentation, in that order.
+
+```
+Phase 1  Inventory        what models, in whose hands, on whose data
+         +-- dodona-edu/dolos        MIT   integrity baseline on existing submissions
+Phase 2  Policy           AI-use policy, human-review rules, assessment-integrity standard
+         +-- aligned to: UNESCO IESALC guidance; Brazil MEC referencial; PL 2338 (high-risk
+             education-related selection) if the client is Brazilian
+Phase 3  Instrumentation  make the policy observable instead of aspirational
+         +-- yetanalytics/lrsql     Apache-2.0  xAPI record store
+         +-- adlnet/xAPI-Spec       Apache-2.0  the vocabulary
+Phase 4  Controlled pilot one faculty, one use case, measured
+         +-- ls1intum/Artemis       MIT   if assessment; config-gated AI
+         +-- ls1intum/Iris + Pyris  MIT   if tutoring; local model where data cannot leave
+Phase 5  Learner model    only once phases 1-4 produce trustworthy data
+         +-- pykt-team/pykt-toolkit MIT
+```
+
+**Why this order and not the reverse:** a learner model built on ungoverned data inherits every
+consent and integrity defect in the institution. Phase 5 is where the client *wants* to start
+and where the engagement should finish.
+
+**Entry points that are real convening bodies, not citations:** UNESCO's **Observatory on AI in
+Education for LAC** (launched 2026-04-14, Santiago, at ECLAC), **UNESCO IESALC**, **Ceibal**
+(Uruguay), and the **ILIA** index. The public/private split ⚠️ (**68%** public vs **84%** private
+non-profit) says the public sector is the larger gap and the slower sale — staff accordingly.
+
+**Do not** brief [`guedesindev/ai_tutor_forge`](https://github.com/guedesindev/ai_tutor_forge)
+as regional capability. It is GPL-3.0, 18★, 21 commits — a personal project, and the only
+Portuguese-language education agent this base has verified.
+
+---
+
 ## Component quick reference
 
 | Need | Component | Licence |

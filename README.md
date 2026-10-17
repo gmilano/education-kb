@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 266 — 2026-10-17 — **THREE STANDING GAPS FALL, AND TWO WERE FALSIFIABLE FROM THIS BASE'S OWN SHELVES**
+
+⏱️ **Twelfth pass of `2026-10-17`.** Evidence: [`verified-repos.2026-10-17-p266.tsv`](evidence/verified-repos.2026-10-17-p266.tsv) — 20 rows, 11 payloads read first-hand, every non-resolving slug recorded.
+
+### 🟢 The headline: APAC's missing platform is India's national stack, under MIT
+
+[`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) — **MIT**, **38,046 commits**, 317 forks — is the codebase beneath **DIKSHA**, India's national school education platform under NCERT. This base declared *"no APAC-origin education platform"* for 265 passes.
+
+🔴 **It has 41 stars.** Every search leg here sorts GitHub topics **by stars**, and ministry-funded digital public infrastructure accrues commits, forks and deployments but almost none. The instrument is structurally blind to this entire class of code — no amount of re-running the query would have found it.
+
+| | Sunbird | A star-findable agent |
+|---|---|---|
+| Stars | 🔴 **41** | `300` – `41 500` |
+| Commits | 🟢 **38 046** | `21` – `12 437` |
+| Forks | 🟢 **317** | `1` – `395` |
+
+### 🟡 Two contradictions found *inside this base*, not on the web
+
+1. **Grading.** `agents/top.md` published *"no education-specific grading agent with meaningful adoption"* while **line 21 of `repos/foundations.md`** carried [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) as **MIT, 819★, "interactive learning with automated feedback"**. Same base, same day, opposite claims. New this pass is *what Artemis ships*: **Iris** (LLM tutor, MIT), **Pyris** (LLM microservice, MIT), **Athena** (feedback suggestion, 🔴 **no licence payload**), **Hyperion** (not a separate repo).
+2. **LATAM.** `repos/foundations.md` retracted *"no LATAM-maintained foundational repo"* at the top of its gaps section and **re-listed it under "Still open"** in the same file.
+
+🔵 **Standing method note added:** before republishing a declared gap, `grep` the other shelves for its own counter-evidence. Both of these cost one search of this repository, not more web research.
+
+### 🟡 A LATAM-adjacent agent exists, at its real evidence grade
+
+[`guedesindev/ai_tutor_forge`](https://github.com/guedesindev/ai_tutor_forge) — **GPL-3.0** (payload, `35 149` B), `18`★, `21` commits. 🟡 **Provenance is language-only**: README and interface in **Portuguese**, author's country **not stated**. "LATAM-origin" is therefore *not* asserted. Defensible gap restated: **no Spanish- or Portuguese-language education agent with adoption.**
+
+### 🔴 This pass broke its own licence detector, then fixed it
+
+First run classed `ai_tutor_forge` as **AGPL-3.0**. It is **GPL-3.0**. Cause: a whole-text search for `GNU AFFERO GENERAL PUBLIC LICENSE` matches **every GPL-3.0 payload**, because **GPL-3.0 §13 cites the Affero licence by name**. Detection is now anchored to the first `600` bytes — the title region — and all rows re-verified.
+
+🔵 **Third pass running** (`p261`, `p262`, `p266`) in which a licence guard searching the *whole document* instead of a *scoped region* produced a confident wrong answer. **Licence family comes from the title region; obligations come from the body.**
+
+### 🟢 Regional intel, with its grade stated
+
+🔴 **`WebFetch` failed DNS resolution** for `iesalc.unesco.org` and `digital-strategy.ec.europa.eu` through this session's proxy, so the figures below are **secondary-source grade** ⚠️, carried because they are decision-relevant and all that was available.
+
+- **LATAM** ⚠️ — UNESCO IESALC, 200 institutions / 19 countries: **87%** use AI in ≥1 area, **74%** in teaching and learning, **26%** have a formal AI strategy. TALIS 2024 teachers: Brazil **56%**, Chile **55%**, Colombia **53%**, Costa Rica **52%** vs **OECD 36%**. 🟢 **A 61-point governance deficit is the clearest commercial opening in this base**, and it needs no platform displacement.
+- **APAC** ⚠️ — Vietnam's July 2026 decision names **automated assessment** and **behavioural monitoring** high-risk **only where AI output is the sole basis without meaningful human review** (due `2027-03-01`, +6 months if live before `2026-08-15`). China bars virtual intimate-relationship services for **minors**, parental consent **under 14** — a constraint on companion-persona tutors.
+- **EMEA** — both permissive assessment engines verified this pass are EMEA-origin: **Artemis** (MIT, TU Munich) and **Numbas** (Apache-2.0, Newcastle, **executes entirely in the browser** → data residency answered structurally). 🔵 The EU AI Act rows were **left untouched**: this base's earlier resolution of the omnibus delay to **`2027-12-02`** is more precise than anything this pass's searches returned.
+- **North America** — no new regulation surfaced beyond what passes 264-265 hold; the addition is that Oklahoma `SB 1734`, Ohio `HB 96` and California `AB 1159` all describe **one** technical requirement, and Artemis's config-gated AI meets it.
+
+🟢 **New trend `T17`: regulators are converging on "meaningful human review" as the test that *declassifies* a system** — five jurisdictions, independent texts. The model proposes, a human disposes, and the same functionality lands in a lower legal class. That is a build instruction, and it drives new patterns **P11** (MIT-throughout agent layer over Sunbird), **P12** (declassify-by-design for Vietnam) and **P13** (governance retrofit for the 87%/26% LATAM institution).
+
+### Declared gaps after this pass
+
+- No standalone education grading **agent** with adoption — the function is served by **platforms**.
+- No Spanish- or Portuguese-language education agent **with adoption**.
+- 🔴 **`ls1intum/Athena` licence unresolved** — no payload on any ref tried; Artemis's MIT grant does not cover it. Get it in writing before it ships.
+- Primary sources for the ⚠️ figures above still unread; a pass with working DNS should re-read the UNESCO study, Vietnam's decision text and the EU consolidated dates.
+- `mcp-server-education` topic still empty.
+
 ## Pass 262 — 2026-10-17 — **`ACTION ZI` DISCHARGED: `nextSIS` IS A CLASS, AND THE SECOND MEMBER IS THE LICENCE FORM'S STEWARD — WHICH `p261`'s GUARD CANNOT SEE**
 
 ⏱️ **EIGHTH pass of `2026-10-17`.** 🔵 **The pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**

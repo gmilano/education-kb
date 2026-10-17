@@ -94,6 +94,8 @@ This is the part of the file with the longest shelf life, and the part most wort
 | **EU** | **AI-literacy duty** falls on organisations deploying AI, schools included | in force |
 | **South Korea** | **AI Basic Act and its Enforcement Decree in effect** — the most comprehensive AI statute in APAC — with a grace period of **at least one year** before fines | in effect 2026 |
 | **Vietnam** | National AI law **in force** | 2026 |
+| **Vietnam** | A **July 2026 decision names education explicitly as a high-risk AI domain** — *automated assessment* and *behavioural monitoring* of students. **The carve-out is the design brief:** these count as high-risk **only where the AI output is the sole basis for a decision without meaningful human review.** Compliance due **2027-03-01**, with **an extra six months** for education systems already operating before **2026-08-15**. ⚠️ Secondary-source grade — see the note below this table | 2027-03-01 |
+| **China** | Rules on **anthropomorphic AI services**: virtual intimate-relationship services **barred for minors**, and **parental consent required under 14**. Directly constrains companion-style or persona-driven tutors in the China market — a product-shape constraint, not a paperwork one. ⚠️ Secondary-source grade | 2026 |
 | **India** | AI **content-labelling** addressed within existing sector-specific frameworks rather than a single AI statute | 2026 |
 | **China** | Layered, output-specific rules (algorithmic recommendation, deepfakes, generative AI) rather than one horizontal act | 2026 |
 | **Japan / Singapore** | Voluntary, **principles-based**: no mandatory registration or pre-approval of AI systems in Singapore | 2026 |
@@ -113,6 +115,64 @@ This is the part of the file with the longest shelf life, and the part most wort
 | **Singapore** | AI training for teachers at all levels incl. those in training; teacher-supervised AI in the Student Learning Space (SLS) | by 2026 |
 | **Japan** | AI Promotion Act (framework law); Cabinet adopted a new AI Basic Plan | 2026-07 |
 | **Mexico** | **No general AI law.** Sectoral patches; SEP published a 10-action roadmap after its national survey | 2026-04 |
+
+**Evidence grade on the pass-266 additions (Vietnam, China anthropomorphic rules, and the
+LATAM figures below).** These come from **web-search result text, not from primary sources.**
+`WebFetch` against `iesalc.unesco.org` and `digital-strategy.ec.europa.eu` **failed DNS
+resolution** through this session's agent proxy, so neither the UNESCO study nor the European
+Commission's own AI Act page could be read first-hand this pass. Every figure below is
+therefore **secondary-source grade** and marked ⚠️. They are carried because they are the only
+numbers available and they are decision-relevant, **not** because they are verified. Dates in
+particular conflicted across sources for Vietnam (one source says in force 2026-03-01, another
+says compliance due 2027-03-01); the table records the compliance deadline and flags the
+conflict rather than picking a winner.
+
+**A later pass with reachable primary sources should re-read:** the UNESCO IESALC study
+methodology, Vietnam's July 2026 decision text, and the EU AI Act consolidated dates. The EU
+row above is **not** affected — this base resolved the omnibus delay to 2027-12-02 in an
+earlier pass, which is more precise than anything this pass's searches returned, and it was
+left untouched.
+
+## LATAM adoption, quantified — adoption has outrun governance, and that gap is the engagement
+
+⚠️ **All figures in this section are secondary-source grade** (see the note above).
+
+**UNESCO IESALC**, surveying **200 institutions across 19 countries** in Latin America and the
+Caribbean:
+
+| Measure | Figure |
+|---------|--------|
+| Institutions using AI in **at least one** area | **87%** |
+| Using AI in **teaching and learning** | **74%** |
+| Institutions with a **formal AI strategy** | **26%** |
+| Private non-profit universities implementing | **84%** |
+| Public institutions implementing | **68%** |
+
+**TALIS 2024** — secondary-school teachers who had used AI in the previous year:
+
+| Country | Teachers using AI | | |
+|---------|------------------|---|---|
+| **Brazil** | **56%** | Colombia | 53% |
+| **Chile** | **55%** | Costa Rica | 52% |
+| *OECD average* | *36%* | | |
+
+Four LATAM countries sit **16–20 points above the OECD average**. The region is not a
+late adopter in this category; it is an early adopter with no governance layer.
+
+**The commercial read, and it is the clearest single opportunity in this file:** **87% adopting
+against 26% with a strategy** is a **61-point governance deficit**. The work that gap implies —
+AI-use policy, model inventories, human-review design, assessment-integrity controls, staff
+training, procurement criteria — is advisory-plus-implementation work that **does not require
+displacing an incumbent platform**, which is the usual blocker in public-sector education. It
+is also the work that becomes mandatory the moment Brazil's `PL 2338` passes with
+education-related selection classified high-risk.
+
+**Institutional entry points named in the sources:** UNESCO IESALC (with UNU-IAS), UNESCO
+Santiago and Quito, **ECLAC**, FLACSO Ecuador, Uruguay's **Ceibal**, the Digital Education
+Council (2026 LATAM survey, 29 institutions) and the **Latin American AI Index (ILIA)**.
+UNESCO launched its **Observatory on AI in Education for Latin America and the Caribbean on
+2026-04-14**, in Santiago at ECLAC's 2026 forum — a convening body that did not exist for
+earlier passes and is a legitimate route into ministry-level conversations.
 
 ## APAC adoption, quantified — and what it does to the Japan gap
 
@@ -143,6 +203,19 @@ data gets the ranking backwards.
 ## Opportunities by region
 
 ### North America
+
+**Pass 266 addition — the assessment-integrity opening is now permissively tooled.** Oklahoma's
+`SB 1734` (educator supervision, human review, AI barred from high-stakes decisions, annual
+parent disclosure), Ohio's `HB 96` (board-approved AI policy in every district) and California's
+`AB 1159` (no student data for model training) all describe the *same* technical requirement:
+**an assessment system whose AI is auditable, overridable and switchable off.**
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) (MIT) is that shape by construction —
+its Iris/Athena/Hyperion subsystems are **config-gated**, so "AI off" is a deployment setting
+rather than a rebuild, and `AB 1159` compliance is a configuration claim a district can verify.
+Pair with [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) (BSD-3-Clause) for the
+notebook-based courses that dominate US data-science teaching. **The pitchable sentence:** a
+district can adopt AI assistance and demonstrate, by configuration, that no high-stakes decision
+was made by a model.
 
 The largest market (36% share) and by far the most fragmented regulatory surface:
 134 bills across 31 states means a national product does not exist — **compliance
@@ -180,6 +253,27 @@ configurability is the product**.
 
 ### EMEA
 
+**Pass 266 addition — EMEA is where the permissive supply actually comes from, which inverts the
+usual framing.** Both assessment engines verified this pass are EMEA-origin and permissive:
+**Artemis** (MIT, TU Munich, 819★, self-hosted by universities in several countries) and
+**Numbas** (Apache-2.0, Newcastle University, 215★). Beside Richie/Marsha (MIT, France
+Université Numérique) and OpenOLAT (Apache-2.0, Swiss), the EMEA engagement is **not** an import
+of US tooling — the regionally-built, regionally-governed, permissively-licensed stack exists.
+In a market where procurement asks about provenance and sovereignty, that is a differentiator
+rather than a footnote.
+
+**Numbas answers a data-residency objection structurally.** Its assessments execute **entirely
+in the browser** — a Python 3 compiler emitting a JavaScript runtime — so a student submission
+**need never reach a server**. Under GDPR that is a far stronger position than a processing
+agreement over a cloud marking service, and it is the kind of architecture-level answer that
+shortens a procurement cycle.
+
+⚠️ **Governance is the gating constraint, not appetite:** one 2026 roundup reports **only ~10%
+of 450+ surveyed institutions have formal AI-use guidelines** (secondary-source grade). The
+**OECD 2026 Digital Education Outlook** recommends moving beyond general-purpose assistants
+toward **purpose-built educational AI** — which is an argument, from a body ministries cite, for
+exactly the Artemis/Iris-style deployment over a general chatbot rollout.
+
 The clearest regulatory calendar in the world, and a **14-month window** before it closes.
 
 - **The window is the offer.** High-risk obligations for education now bite on
@@ -215,6 +309,28 @@ The clearest regulatory calendar in the world, and a **14-month window** before 
   easier sale than it was a year ago.
 
 ### APAC
+
+**Pass 266 addition — the APAC base is national, and it is MIT.** **Sunbird**
+([`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal), MIT, 38,046
+commits) is the stack beneath **DIKSHA**, India's national school platform under NCERT. For an
+Indian public-sector engagement this reverses the default approach: the platform, the content
+pipeline and the political precedent already exist, so the work is the **agent layer over a
+national deployment** (see Pattern G in [`verticals/solutions.md`](../verticals/solutions.md)),
+not a migration. It also lands directly on India's **AI-from-Class-3 mandate for AY 2026-27**,
+where the delivery vehicle is already Sunbird-based.
+
+**Vietnam is the most specific regulatory design brief in this file.** Its July 2026 decision
+names **automated assessment** and **behavioural monitoring** as high-risk education uses, but
+only *"where the AI output is the sole basis for a decision without meaningful human review."*
+⚠️ (secondary-source grade). **Build the human review in and the system is not high-risk** —
+Artemis's human-in-the-loop feedback model and config-gated AI are a direct fit. The deadline is
+**2027-03-01**, with six extra months for systems already live before **2026-08-15**, so systems
+being designed now are deciding their own classification.
+
+**China constrains product shape, not paperwork:** anthropomorphic-AI rules bar virtual
+intimate-relationship services for minors and require **parental consent under 14** ⚠️. A
+companion-persona tutor — a common 2026 product instinct — is the wrong shape for that market;
+a task-scoped tutor like Iris is not.
 
 The largest mandated demand anywhere, and the thinnest open-source supply.
 
@@ -252,6 +368,27 @@ The largest mandated demand anywhere, and the thinnest open-source supply.
   [`agents/top.md`](../agents/top.md).
 
 ### LATAM
+
+**Pass 266 addition — the governance deficit is the offer.** The quantified section above is the
+argument: **87% of surveyed LATAM higher-ed institutions use AI, 26% have a formal AI strategy**
+⚠️, and Brazilian, Chilean, Colombian and Costa Rican teachers use AI **16–20 points above the
+OECD average**. The engagement that gap implies — AI-use policy, model inventory, human-review
+design, assessment-integrity controls, procurement criteria, staff training — **requires no
+platform displacement**, which removes the usual public-sector blocker. It also pre-positions
+the client for `PL 2338`, which would classify education-related selection as high-risk.
+
+**Route in:** UNESCO's **Observatory on AI in Education for LAC** (launched 2026-04-14, Santiago,
+at ECLAC), UNESCO IESALC, **Ceibal** (Uruguay) and the **ILIA** index are convening bodies, not
+just citations — and the public/private split (**68%** public vs **84%** private non-profit ⚠️)
+says the public sector is both the larger gap and the harder sale.
+
+**On supply, stated precisely:** LATAM's open-source education output remains the **platform**
+layer and it is **copylefted** — `portabilis/i-educar` (GPL-2.0, 34,948 commits) and `i-diario`
+(AGPL-3.0). Pass 266 did verify a Portuguese-language *agent*
+([`guedesindev/ai_tutor_forge`](https://github.com/guedesindev/ai_tutor_forge), GPL-3.0), but at
+18★ and 21 commits it is a personal project — **do not brief it as regional capability.** For a
+Brazilian municipal network the honest stack is i-Educar as the installed base plus a permissive
+agent layer on top, with i-Diário's AGPL network clause priced before the SOW.
 
 The region where the policy direction most favours what open source actually is.
 
