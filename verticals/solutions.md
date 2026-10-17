@@ -28,6 +28,8 @@ updated: 2026-10-17
 | **Artemis** | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | Java/Spring + Angular | Interactive learning with **automated feedback** and an integrated exercise runner (TUM Applied Education Technologies; 819★, 12,437 commits, self-hosted by universities in several countries). The permissive choice when the deliverable is assessment rather than content delivery. **Pass 266 — the AI layer is already built and config-gated:** **Iris** (LLM tutor, MIT), **Pyris** (LLM microservice, MIT), **Athena** (feedback suggestion, **licence UNVERIFIED**), **Hyperion** (AI exercise authoring on Spring AI, no separate repo). "Config-gated" is the commercially important word — the same deployment runs with AI off, so a high-risk EU AI Act classification can be met by configuration rather than by re-architecture. |
 | **Mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT | TypeScript | **AI-native LMS**, self-hosted, positioned against Docebo/TalentLMS. Ships an AI mentor with voice role-play and auto-scoring, an AI course builder that converts policy documents into courses, open-ended answer grading, **Langfuse tracing of model calls**, an **MCP endpoint**, and bring-your-own-key. The closest thing to a 2026-native corporate L&D starting point under MIT. |
 | **OpenEduCat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | Odoo (Python) | Education **ERP**: admissions, SIS, gradebook, library, fees — the Odoo-for-education pattern. Active branches for Odoo 17.0 / 18.0 / 19.0. **The repo path this base previously published (`OpenEduCat-Inc/OpenEduCat`) is a 404; this is the canonical one.** |
+| 🆕 **GegoK12** | [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** *(`main/LICENSE`, `1 150` B — payload read, diffed against stock, zero riders, `p274`)* — ⚠️ **core only** | PHP 8.4 + Laravel | 🟢 **The permissive school ERP / SIS this file has said for nine passes does not exist** — and this base **refused it twice**, both times after probing `gegok12/gegok12`, **a slug that does not resolve** (`T44`). **Where it fits:** the Odoo-for-education pattern at **MIT** instead of LGPL-3.0, so the agentic layer and the deliverable carry no copyleft at all — the one row on this shelf where that is true of an *administrative* system rather than an LMS. ⚠️ **Open-core: 26 of 38 modules free, 12 Pro modules sold separately. Scope the modules in the SOW** (`T20`, failure mode 3). 🔵 **Adoption evidence is its fork network, not its stars:** 98 forks, near-zero fork stars, institution-shaped names across **India, Indonesia, Vietnam** (`P933`). ⚠️ **Deployment-placed APAC; origin not established** |
+| 🆕 **Lumen** | [ahmedEid1/Lumen](https://github.com/ahmedEid1/Lumen) | 🔴 **GPL-3.0** *(`main/LICENSE`, `35 149` B, `p274`)* — ⚠️ **its README badge says MIT** | Python/FastAPI + React | **Agentic e-learning platform, shipped to production (`2.0.0`).** A one-sentence goal becomes a **learning brief**, an authoring orchestrator builds a private multi-module course, a **course-scoped RAG tutor** answers with lesson citations and a **visible tool-call trace**, and courses can be published, moderated and remixed with server-written provenance. BYOK across four providers, envelope-encrypted. **Ships an MCP server in the official registry** (`io.github.ahmedEid1/lumen`). 🔵 **Where it fits:** the closest thing on this shelf to the *whole* reference architecture this KB recommends — authoring + RAG tutor + agent trace + BYOK — in one readable codebase. 🔴 **But the licence is GPL-3.0, not the MIT its badge claims**, so treat it as a **reference implementation and an integration target across an HTTP boundary**, not as a code base for a proprietary deliverable. **Ask upstream which grant is intended** (`T27`) |
 | **Chamilo** | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | PHP | Lightweight LMS with the deepest LATAM public-sector footprint of any platform here. The pragmatic base for ministry-scale work in Spanish-speaking markets. |
 | **ILIAS** | [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | PHP | The institutional LMS of German-speaking EMEA (DE/CH/AT), with a strong assessment module and the compliance posture that market expects. |
 | **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL-2.0** | Java/Spring | North American higher-ed consortium LMS. **Prior cell said Apache-2.0; the payload is the Educational Community License 2.0** — Apache-derived and OSI-approved, but with patent-grant language scoped to educational use. A real distinction for a commercial deliverable. |
@@ -323,40 +325,69 @@ while **North-West University became the first SA university with an official AI
 framework, not the vendor.** And every regional figure here is **secondary-source grade**: `p268`
 established the non-GitHub DNS failure as environmental, and no ministry document was read.
 
-## Pass 270 note — what the platform shelf does and does not cover, after the EMEA re-verification
+## Pass 274 — this shelf gains an MIT administrative platform, and the reason it was missing is a slug
 
-🟢 **No platform rows were added this pass, and none needed changing.** The only supply leg run
-(`Gap 367`'s Spanish limb) returned nine repositories, eight of them university student course
-portfolios and the ninth already held. The three generic platform/ERP/SIS legs were **deliberately
-not re-run** — `p269` measured them saturated across four consecutive passes and instructed that
-they be spent last. **This file's shelf is stable, and that is a measurement, not an omission.**
+⏱️ **Twentieth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p274.tsv`](../evidence/verified-repos.2026-10-17-p274.tsv) ·
+[`p274-websearch.2026-10-17-p274.tsv`](../evidence/p274-websearch.2026-10-17-p274.tsv).
 
-🔴 **But pass 270 found the shelf's sharpest gap by looking at what a national government actually
-bought.** Estonia — the one EMEA jurisdiction where national-scale deployment is a *measured fact*
-rather than a plan — has **~half of its 20,000 upper-secondary students** on an **OpenAI-partnered
-proprietary platform** (Education and Research Minister **Kristina Kallas** to *Politico*, **May
-2026**). 🔵 **Every platform on the shelf above is open source, and the country that moved fastest
-in Europe did not pick one of them.**
+🟢 **Two rows added, and neither came from a discovery.** One came from **re-probing a refusal** and one
+from **grepping this base's own census**.
 
-🟢 **That is not an argument that the shelf is wrong — it is the sales argument for the shelf**, and
-it has a number attached. The **Sanoma Learning 2026 European Teacher Survey** (>20,000 teachers,
-14 countries) found **63% of European teachers using AI** and **only 16% believing general-purpose
-AI improves learning outcomes** (`T28`). **A proprietary general-purpose platform is exactly what
-84% of them are unconvinced by.** The platforms here — **Moodle** (GPL-3.0, with its
-provider-pluggable AI subsystem since 4.5), **Open edX**, **Canvas** (AGPL-3.0 at source),
-**Kolibri** (MIT **on `develop`**, 404 on `main` — the ref matters, `p269`) — are the ones that can
-be bound to a client's own curriculum and assessment rules, which is the thing the general-purpose
-tool cannot do.
+| row | licence at payload | why it was not here |
+|---|---|---|
+| **GegoK12** | 🟢 **MIT**, `1 150` B | 🔴 **Refused twice on a slug that does not exist.** `gegok12/gegok12` fails `ls-remote` exactly as a nonexistent repo does; the real slug is `Gego-K12/gegok12`. The refusal recorded *"no payload on 15 path/ref combinations"* — **15 probes against a string, reported as thoroughness** |
+| **Lumen** | 🔴 **GPL-3.0**, `35 149` B | 🟡 **Held in this base's `p195` licence census and never promoted to a shelf** — the `T34`/`T25` species again. Its README's **MIT badge** is the reason it matters: a reader would mis-price it in the permissive direction |
 
-⚠️ **One category correction, so this file is not read as offering something it does not.**
-[`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) (**CC BY-SA 4.0**, verified at
-payload this pass) appears in `agents/trending.md`, `repos/trending.md` and new pattern **`P20`** —
-but it does **not** belong on this shelf and has not been added to it. **It is a prompt/knowledge
-framework (schemas + prompts for LOMLOE programaciones), not a running platform**: GitHub detects no
-language in it, and it is 0 stars at 50 commits. **This shelf is for systems a client can stand up
-and put an agent on top of.** `OpenDidactia` is read as a specification, never deployed — see `P20`
-for the ShareAlike boundary that distinction rests on.
+### 🔵 What the two rows change about this shelf's shape
 
+🔴 **Before this pass every *administrative* system here was copyleft** — OpenEduCat LGPL-3.0, i-Educar
+GPL-2.0, Gibbon/RosarioSIS GPL, Koha GPL-3.0 — while the permissive options were all **LMS or
+assessment** (OpenOLAT, Artemis, Mentingo, Kolibri). 🟢 **GegoK12 breaks that pattern: MIT, on the SIS
+/ ERP layer**, which is the layer a district or a ministry actually owns and the one where this base's
+`P22` zero-copyleft engagement previously had no answer at all.
+
+⚠️ **With two prices named rather than buried:** the Pro modules are commercial (so the *free* feature
+set is what MIT covers), and the fork evidence places **deployment** in APAC, not **origin**. 🔵 **For a
+LATAM or EMEA public-sector bid this is a reference architecture with live institutional deployments
+behind it, not a regional incumbent** — which is the honest way to cite it.
+
+🟢 **And one negative result from the same leg, worth more than it looks:** **not one** of the SIS/ERP
+platforms the leg returned describes **any AI feature**. **The administrative layer of education software
+has no AI in it.** That is this base's standing thesis — platform as installed base, agent as the
+deliverable — **confirmed from outside the base for the first time**, by a survey of the category that
+was not looking for it.
+## Pass 272 — the permissive LMS recommendation is now rider-cleared, and two vendor licence claims died at payload
+
+⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) *(5 repositories)*.
+
+🟢 **`OpenOLAT` is the single most load-bearing row on this shelf** — it is what this file tells a studio
+to use when procurement rules out copyleft, so its grant deserves more than a licence label.
+`p272` read the payload and found **10,982 B against stock Apache-2.0's 11,357 B**. 🔵 **A *short* Apache
+file is the shape of a rider**, and `p252` found a real **Commons Clause** on a row this base had blessed
+for four passes. 🟢 **Diffed: the whole terms section is byte-identical to upstream; the missing span is the
+optional APPENDIX, replaced by provenance notes with no legal effect.** Recommendation stands and is now
+**rider-cleared**, not merely licence-labelled. The generalisation is `T39`.
+
+### 🔴 Two platforms a vendor comparison recommends, both refuted at payload
+
+The brief's SIS/ERP leg surfaced two permissive claims. **Neither survived.**
+
+| platform | the claim, and who makes it | `p272` verdict |
+|---|---|---|
+| **GegoK12** | *"free core is free forever under the MIT licence; 26 of 38 modules free, 12 Pro modules $100–$250"* — a vendor listing | 🔴 **NOT ESTABLISHED.** No licence payload on **15 path/ref combinations**. ⚠️ And read the claim's shape: **MIT core plus paid modules** is the open-core pattern, so even if the grant were verified it would cover a *subset* of the product a client is shown. **Do not shelve.** |
+| **Fedena** | Apache-2.0, per a comparison page | 🔴 **NOT ESTABLISHED, and this independently reproduces `p265`'s refutation.** `p272` adds *why the false claim circulates*: the page asserting Apache-2.0 is **openeducat.org — a direct competitor's comparison**. ⚠️ **A licence claim sourced from a rival vendor is not a licence.** |
+
+🟢 **One claim did survive, and it beat its own source.** `academico-sis/academico` — already shelved
+here — is served **MIT at payload (1,094 B)** while the comparison page that surfaced it says the licence
+*"is not named"*. **The first-hand read was better than the aggregator in the one case the aggregator was
+hedging.** That is the asymmetry worth keeping: aggregators are wrong in both directions, and only the
+payload settles it.
+
+⚠️ **Unchanged by this pass:** the permissive full-platform count stays at **five**, and **no education ERP
+under MIT or Apache-2.0 has been located** — now tested from a second channel (`p271` tested it from the
+platform/ERP leg, `p272` from the SIS/school-management leg) with the same result.
 
 ## Pass 271 note — two real platforms were on the other shelves and not on this one
 
@@ -394,34 +425,38 @@ single-aggregator failure in a different channel.
 lower-secondary**, legally official **2027-08-01**, inspected from **2031**. See new pattern **`P21`**,
 which wires it to **Moodle** and the **MIT** H5P runtime rather than to the GPL authoring core.
 
-## Pass 272 — the permissive LMS recommendation is now rider-cleared, and two vendor licence claims died at payload
+## Pass 270 note — what the platform shelf does and does not cover, after the EMEA re-verification
 
-⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
-[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) *(5 repositories)*.
+🟢 **No platform rows were added this pass, and none needed changing.** The only supply leg run
+(`Gap 367`'s Spanish limb) returned nine repositories, eight of them university student course
+portfolios and the ninth already held. The three generic platform/ERP/SIS legs were **deliberately
+not re-run** — `p269` measured them saturated across four consecutive passes and instructed that
+they be spent last. **This file's shelf is stable, and that is a measurement, not an omission.**
 
-🟢 **`OpenOLAT` is the single most load-bearing row on this shelf** — it is what this file tells a studio
-to use when procurement rules out copyleft, so its grant deserves more than a licence label.
-`p272` read the payload and found **10,982 B against stock Apache-2.0's 11,357 B**. 🔵 **A *short* Apache
-file is the shape of a rider**, and `p252` found a real **Commons Clause** on a row this base had blessed
-for four passes. 🟢 **Diffed: the whole terms section is byte-identical to upstream; the missing span is the
-optional APPENDIX, replaced by provenance notes with no legal effect.** Recommendation stands and is now
-**rider-cleared**, not merely licence-labelled. The generalisation is `T39`.
+🔴 **But pass 270 found the shelf's sharpest gap by looking at what a national government actually
+bought.** Estonia — the one EMEA jurisdiction where national-scale deployment is a *measured fact*
+rather than a plan — has **~half of its 20,000 upper-secondary students** on an **OpenAI-partnered
+proprietary platform** (Education and Research Minister **Kristina Kallas** to *Politico*, **May
+2026**). 🔵 **Every platform on the shelf above is open source, and the country that moved fastest
+in Europe did not pick one of them.**
 
-### 🔴 Two platforms a vendor comparison recommends, both refuted at payload
+🟢 **That is not an argument that the shelf is wrong — it is the sales argument for the shelf**, and
+it has a number attached. The **Sanoma Learning 2026 European Teacher Survey** (>20,000 teachers,
+14 countries) found **63% of European teachers using AI** and **only 16% believing general-purpose
+AI improves learning outcomes** (`T28`). **A proprietary general-purpose platform is exactly what
+84% of them are unconvinced by.** The platforms here — **Moodle** (GPL-3.0, with its
+provider-pluggable AI subsystem since 4.5), **Open edX**, **Canvas** (AGPL-3.0 at source),
+**Kolibri** (MIT **on `develop`**, 404 on `main` — the ref matters, `p269`) — are the ones that can
+be bound to a client's own curriculum and assessment rules, which is the thing the general-purpose
+tool cannot do.
 
-The brief's SIS/ERP leg surfaced two permissive claims. **Neither survived.**
+⚠️ **One category correction, so this file is not read as offering something it does not.**
+[`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) (**CC BY-SA 4.0**, verified at
+payload this pass) appears in `agents/trending.md`, `repos/trending.md` and new pattern **`P20`** —
+but it does **not** belong on this shelf and has not been added to it. **It is a prompt/knowledge
+framework (schemas + prompts for LOMLOE programaciones), not a running platform**: GitHub detects no
+language in it, and it is 0 stars at 50 commits. **This shelf is for systems a client can stand up
+and put an agent on top of.** `OpenDidactia` is read as a specification, never deployed — see `P20`
+for the ShareAlike boundary that distinction rests on.
 
-| platform | the claim, and who makes it | `p272` verdict |
-|---|---|---|
-| **GegoK12** | *"free core is free forever under the MIT licence; 26 of 38 modules free, 12 Pro modules $100–$250"* — a vendor listing | 🔴 **NOT ESTABLISHED.** No licence payload on **15 path/ref combinations**. ⚠️ And read the claim's shape: **MIT core plus paid modules** is the open-core pattern, so even if the grant were verified it would cover a *subset* of the product a client is shown. **Do not shelve.** |
-| **Fedena** | Apache-2.0, per a comparison page | 🔴 **NOT ESTABLISHED, and this independently reproduces `p265`'s refutation.** `p272` adds *why the false claim circulates*: the page asserting Apache-2.0 is **openeducat.org — a direct competitor's comparison**. ⚠️ **A licence claim sourced from a rival vendor is not a licence.** |
 
-🟢 **One claim did survive, and it beat its own source.** `academico-sis/academico` — already shelved
-here — is served **MIT at payload (1,094 B)** while the comparison page that surfaced it says the licence
-*"is not named"*. **The first-hand read was better than the aggregator in the one case the aggregator was
-hedging.** That is the asymmetry worth keeping: aggregators are wrong in both directions, and only the
-payload settles it.
-
-⚠️ **Unchanged by this pass:** the permissive full-platform count stays at **five**, and **no education ERP
-under MIT or Apache-2.0 has been located** — now tested from a second channel (`p271` tested it from the
-platform/ERP leg, `p272` from the SIS/school-management leg) with the same result.

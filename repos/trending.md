@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 274) — The nine-pass nil on `repos/foundations.md` ends, and the row that ends it is one this base REFUSED twice on a slug that does not exist
+
+⏱️ **Twentieth pass of `2026-10-17`.** Append-only — everything below is prior history and is not
+rewritten. Evidence:
+[`verified-repos.2026-10-17-p274.tsv`](../evidence/verified-repos.2026-10-17-p274.tsv) ·
+[`p274-websearch.2026-10-17-p274.tsv`](../evidence/p274-websearch.2026-10-17-p274.tsv) *(leg 9)*.
+
+### 🔴 The leg re-served a refuted claim for the third time, and this time the claim was right
+
+🟢 **The brief's platform/SIS/ERP leg ran and returned `GegoK12` described as *"a free, MIT-licensed
+open-source school ERP built for self-hosting"*** — a claim this base recorded as having **died at
+payload** in `p265` and again in `p272`.
+
+🔴 **It did not die. It was never probed.**
+
+```
+git ls-remote https://github.com/gegok12/gegok12      → fails exactly as a nonexistent repo does
+git ls-remote https://github.com/GegoK12/gegok12      → same
+git ls-remote https://github.com/gegok12/school-erp   → same
+git ls-remote https://github.com/Gego-K12/gegok12     → ref: refs/heads/main   ← the repository
+curl .../Gego-K12/gegok12/main/LICENSE                → HTTP 200, 1 150 B, "MIT License"
+```
+
+🔵 **And this base's own refusal text names the slug it used:** *"an MIT claim with no payload on **15
+path/ref combinations**"* — against `gegok12/gegok12`. **Fifteen probes against a string, recorded as
+thoroughness.** 🔴 **A probe count is not a measurement unless the slug resolves**, and nothing in this
+base's ledger format required a positive control that it does.
+
+### 🟢 The payload, read in full and byte-accounted — because `T39` says a delta is a trigger, not a verdict
+
+```
+observed delta vs stock MIT   = +82 B
+  SPDX HTML comment line      = +39 B   <!-- SPDX-License-Identifier: MIT -->
+  four typographic quotes     =  +8 B   “Software”, “AS IS” — 3 B each in UTF-8
+  longer copyright holder     = +35 B   "GegoSoft Technologies and GegoK12 Contributors"
+  accounted                   = +82 B   ← exactly, nothing unexplained
+normalised terms diff vs stock MIT: differs ONLY in line-wrap column
+rider keyword grep (commons clause / non-commercial / may not sell / except / field of use): ZERO
+```
+
+🔵 **`T39` proved a byte count cannot discriminate a grant DOWNWARD** (six unmodified Apache files
+spanning 1,252 B around stock). 🔴 **This is the same proof UPWARD, and it is more expensive**, because
+this base operates an **MIT ceiling** and `1 150` B sits `81` B above the band its MIT rows occupy
+(`1 065`–`1 084`). **Every byte of the excess is a thing that is not a term.** See `T44`.
+
+### 🟡 What survives of the refusal, and it is the part that belongs in a SOW
+
+🟢 **The open-core observation stands:** **26 of 38 modules free, 12 Pro modules sold separately.** MIT
+covers the free core. 🔵 **So the vendor page and this base were each half right about different
+things** — the page about the grant, the base about the feature set — and the useful row states both.
+
+### 🔵 Adoption evidence: the fork network, not the stars
+
+`P933` already measured it and `p274` only re-reads it: **98 forks against 54★, near-zero stars on any
+fork, and institution-shaped fork names** — `gegok12-vietnam`, `gegok12-delhiconvent`, a named Tamil
+Nadu school, several Indonesian (`sekolah`) instances. 🟢 **That is the signature of software
+institutions RUN rather than developers EXTEND**, which `T15` argues is the better signal for a studio.
+⚠️ **Deployment-placed APAC on that evidence. Origin NOT established** — a copyright holder's name is
+not a provenance read.
+
+### 🟢 A second row, from this base's own census rather than from any leg
+
+[`ahmedEid1/Lumen`](https://github.com/ahmedEid1/Lumen) — 🔴 **GPL-3.0 at payload (`35 149` B)** while
+its **README carries a `License: MIT` badge linking to that payload.** A production agentic e-learning
+platform (`2.0.0`): authoring orchestrator, **course-scoped RAG tutor with citations and a visible
+tool-call trace**, BYOK, and an **MCP server in the official registry**. 🔵 **The badge/payload split is
+`T9`'s species at the project's front door, and it is the inverse of `T9`'s `Open-TutorAi` case** —
+there an alarming phrase was harmless boilerplate; **here a reassuring badge is the error.** Shelved on
+[`repos/foundations.md`](foundations.md) and [`verticals/solutions.md`](../verticals/solutions.md) with
+the GPL price stated.
+
+### 🔵 One negative result worth keeping
+
+🔴 **Not one** SIS/ERP platform the leg returned — Gibbon, RosarioSIS, OpenEduCat CE, openSIS, Academico,
+GegoK12 — **describes any AI feature at all.** 🟢 **This base's standing thesis is that the platform is
+the installed base and the agent is the deliverable. A category survey that was not looking for that
+just confirmed it.**
+
 ## 2026-10-17 (pass 273) — `repos/foundations.md` gains nothing for the eighth pass, and the reason is now a measured property of the battery rather than of the market
 
 ⏱️ **Nineteenth pass of `2026-10-17`.** Append-only — everything below is prior history and is not

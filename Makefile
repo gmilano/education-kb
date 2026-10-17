@@ -17,9 +17,19 @@
 SHELL := /bin/bash
 PY ?= python3
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep
 
-hooks: gate-offline ## the standing check: every licence instrument's OFFLINE controls
+hooks: gate-offline recount ## the standing check: every licence instrument's OFFLINE controls, plus T37's re-count
+
+# 🟢 p274: T37 was written as an amendment in p272 and violated by the two passes after it.
+# An amendment that is not built is not an amendment, so it is a target now.  No network.
+recount: ## ACTION p274 — T37 as code: re-derive every registered quantity from the rows
+	@$(PY) -I compose/code/p274-quantity-recount/recount.py --root . || exit 1
+	@echo "   (STALE rows above are NOT a failure signal yet — see the register's own note)"
+
+# 🟢 p274: the window sweep, T32 v3.  Zero searches, zero network, 28 market cells.
+sweep: ## ACTION p274 — classify every market cell PASS / ROUNDING / WINDOW_FIX / SPLICE
+	@$(PY) -I compose/code/p274-window-sweep/window_sweep.py || exit 1
 
 # 🔴 p253: `set -e` DOES NOT abort these steps, measured rather than read.  bash exempts a
 # command that is not the LAST in an `&&` list from errexit, so `cd d && test.py && echo PASS`

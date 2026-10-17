@@ -1,0 +1,19 @@
+# pass 274 — 2026-10-17. Every grant below read FIRST-HAND this pass from raw.githubusercontent.com.
+# method: curl -w '%{size_download}' (P929's recorded method); git ls-remote --symref for ref + existence,
+# with a discriminating negative control (a nonexistent slug fails with "could not read Username", not with refs).
+# channel re-tested this pass, NOT inherited: raw.githubusercontent.com 200 · api.github.com 403 ·
+# github.com HTML 403 · codeload.github.com 403 · www.marketdataforecast.com ENOTFOUND (WebFetch).
+# NO star count in this pass was read from GitHub. Stars are carried from earlier passes and marked so.
+slug	ref	grant_path	http	bytes	licence	rider_keywords	verdict	note
+Li-Evan/Bloom	main	main/LICENSE	200	1069	MIT	none	CONFIRMED	Reproduces this base's carried 1 069 B exactly. "Copyright (c) 2026 Li Zhengping". RESOLVES the `Bloom` slug the register called unresolvable -- it was ALREADY a row on agents/top.md:46.
+ahmedEid1/Lumen	main	main/LICENSE	200	35149	GPL-3.0	none	CONFIRMED-AND-CONTRADICTS-README	README carries a "License: MIT" BADGE pointing at this payload. Payload is GNU GPL Version 3, 29 June 2007. Reproduces p195's census value (35 149 B) exactly.
+ahmedEid1/lumen	main	-	-	-	-	-	SAME-REPO	ls-remote HEAD 07635d3c81ad4f2ddd51b13266b7317285d75e37 -- IDENTICAL to ahmedEid1/Lumen. Settles p196's recorded `Lumen` <-> `lumen` collision question: ONE repository, not two.
+Gego-K12/gegok12	main	main/LICENSE	200	1150	MIT	none	REFUTES-THIS-BASE'S-OWN-REFUTATION	Full payload read AND diffed. p265 and p272 both recorded this vendor MIT claim as having "died at payload". IT DID NOT. See the byte accounting row below.
+Gego-K12/gegok12	main	LICENSE.md,LICENCE,license.txt,LICENSE.txt,COPYING	404	14	-	-	SOLE-GRANT	Only `LICENSE` serves. The +82 B over stock MIT accounts EXACTLY: +39 SPDX HTML comment, +8 four typographic quotation marks (3 B each in UTF-8), +35 longer copyright holder ("GegoSoft Technologies and GegoK12 Contributors"). Normalised terms diff vs stock: differs ONLY in line-wrap column.
+gegok12/gegok12	-	-	-	-	-	-	NEGATIVE-CONTROL	Does not resolve. Fails IDENTICALLY to a nonexistent repo. Two further plausible forms (GegoK12/gegok12, gegok12/school-erp) also fail. The slug trap T15 documented for Sunbird, biting a LICENCE verdict.
+felipedias-ie/blackboard-mcp	main	main/LICENSE	200	1084	MIT	none	CONFIRMED	Blackboard Ultra -- courses, content, grades, deadlines. Carried on agents/trending.md:7796; re-read first-hand this pass.
+NiccoloSalvini/mcp-blackboard-ucsc	main	main/LICENSE	200	1073	MIT	none	CONFIRMED	Blackboard over the PUBLIC REST API. Carried on agents/trending.md:7797; re-read first-hand this pass.
+RohanMuppa/brightspace-mcp-server	main	main/LICENSE	200	1068	MIT	none	CONFIRMED	Brightspace / D2L. Reproduces the carried 1 068 B exactly -- a blind re-measurement agreeing across passes (T39: proves STABILITY, not correctness).
+blend-ed/tutor-contrib-openedxmcp	master	master/LICENSE	200	34524	AGPL-3.0	none	CONFIRMED	Open edX, 33 tools. Reproduces the carried 34 524 B exactly. Default ref is `master`, not `main`.
+bruchris/canvas-lms-mcp	main	main/LICENSE	200	1070	MIT	none	CONFIRMED-NEW-CAPABILITY	Canvas LMS, TypeScript. Ships an opt-in FERPA mode that PSEUDONYMISES student names and contact details before tool output reaches the model. The direct answer to the buyer-side blocker in this pass's trends leg.
+moodle/moodle	main	-	-	-	-	-	CHANNEL-CONTROL	Used only to re-test the channel (raw 200 / api 403 / HTML 403 / codeload 403) rather than inheriting p273's reading.

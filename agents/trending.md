@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 274) — Six servers reach `agents/top.md` and not one of them was discovered: five were on THIS shelf, and the sixth was a licence this base had refused twice
+
+⏱️ **Twentieth pass of `2026-10-17`.** Append-only — everything below this section is prior history and is
+not rewritten. Evidence:
+[`verified-repos.2026-10-17-p274.tsv`](../evidence/verified-repos.2026-10-17-p274.tsv) *(12 probes, every grant read at payload)* ·
+[`quantity-recount.2026-10-17-p274.tsv`](../evidence/quantity-recount.2026-10-17-p274.tsv) *(5 quantities, zero searches)* ·
+[`arithmetic-sweep.2026-10-17-p274.tsv`](../evidence/arithmetic-sweep.2026-10-17-p274.tsv) *(28 cells, zero searches)* ·
+[`p274-websearch.2026-10-17-p274.tsv`](../evidence/p274-websearch.2026-10-17-p274.tsv) *(10 legs)*.
+
+### 🟢 The eight-pass nil on the agent shelf ends — and the channel that ended it was this shelf
+
+🔴 **`p273`'s backlog said, verbatim: *"Do not run an eighth generic sweep."*** It was obeyed. The
+supply leg was **retargeted** at the category `p273` diagnosed as the one the brief's own wording
+misses — education **MCP servers** rather than repositories that *teach* AI — and every slug it
+returned (`bruchris`, `ahnopologetic`, `DMontgomery40`, `JohannsenLum`, `RohanMuppa`, `classroomio`)
+**was already on this page.**
+
+🟢 **So the finding is not a row. It is a COUNT, and it was wrong on both agent shelves by a factor of
+two:**
+
+| | published before `p274` | measured by [`recount.py`](../compose/code/p274-quantity-recount/recount.py) |
+|---|---|---|
+| MCP server slugs tabled on `agents/top.md` | **13** *(prose)* · **12** *(`T21`)* | **15** |
+| **LMS platforms reachable by MCP** | **3** on both shelves | 🔴 **6** |
+
+🔴 **The three missing platforms were on THIS shelf with payload-read grants, some of them for several
+passes.** All five rows below were **re-read first-hand in `p274`** and every byte count **reproduces**
+what this shelf already carried:
+
+| platform | server | licence (payload, `p274`) | was on this shelf |
+|---|---|---|---|
+| **Brightspace / D2L** | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 **MIT**, `1 068` B | 🟢 yes, with two declared derivatives and a Rust port |
+| **Blackboard Ultra** | [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | 🟢 **MIT**, `1 084` B | 🟢 yes |
+| **Blackboard** *(public REST API)* | [`NiccoloSalvini/mcp-blackboard-ucsc`](https://github.com/NiccoloSalvini/mcp-blackboard-ucsc) | 🟢 **MIT**, `1 073` B | 🟢 yes |
+| **Open edX** | [`blend-ed/tutor-contrib-openedxmcp`](https://github.com/blend-ed/tutor-contrib-openedxmcp) | 🔴 **AGPL-3.0**, `34 524` B *(ref `master`)* | 🟢 yes — *"the first MCP server over Open edX this KB has found"* |
+| **Canvas** *(new capability)* | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **MIT**, `1 070` B | 🟢 yes, ungraded for capability |
+
+### 🔴 The commercial consequence, which is bigger than the count
+
+🔴 **[`intel/market.md`](../intel/market.md) tells a studio that Blackboard / Anthology is a
+*"replacement engagement; the incumbent's lock-in is the pitch."*** **Blackboard has two MIT MCP
+doorways, on this page.** 🔵 **That is precisely the error `p267` corrected for Canvas** — *"the opening
+is the opposite of migration … AGPL platform, MIT doorway, no platform decision asked of the client"* —
+**and the correction was applied to the one instance and never to the class.** 🟢 **`AGPL platform, MIT
+doorway` now holds for five of six platforms**, and the sixth (Open edX) is reachable at an AGPL price
+that was already priced on the verticals shelf.
+
+### 🟢 `bruchris/canvas-lms-mcp` is the row that answers the objection the market actually makes
+
+🔵 **This pass's trends leg returned the buyer side of this base's own thesis.** **GovTech**, reporting
+**Bridges 2026**: few districts and colleges have agents in day-to-day operations, and leaders *"remain
+cautious about granting the tools access to sensitive systems and data"*. 🔴 **That is a description of
+the exact move this shelf recommends.**
+
+🟢 **`bruchris/canvas-lms-mcp` ships an opt-in FERPA mode that PSEUDONYMISES student names and contact
+details before tool output reaches the model.** 🔵 The pilot question stops being *"will you let the
+model see your students"* and becomes *"the model never sees your students — here is the boundary, in
+configuration you control."* **Shelved on `agents/top.md` for that property, not for its tool count.**
+
+⚠️ **And the counter-example arrived in the same result set, which is why this is an architecture
+finding rather than a product recommendation.** [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms)
+carries **its own security disclosure of a broken access control that exposed other students' personal
+information**. 🔵 **Same category, same search-result description, opposite risk posture** — the
+`PageLM`/`AStheTECH` pattern in its **security** dimension instead of its licence one. **NOT shelved as
+a row.** 🟢 **Read the disclosure history, not only the grant.**
+
+### 🟢 `Bloom` and `Lumen`: `p273`'s backlog item 3, and both limbs were false gaps
+
+| name | resolution | where the answer already was |
+|---|---|---|
+| **`Bloom`** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom), 🟢 **MIT**, `1 069` B *(reproduces the carried figure)* | 🔴 **A row on `agents/top.md` since `p264`** — and in four places on this page. The sentence calling it unresolvable sits **in that same file, in its own `p272` section, 168 lines below the row** |
+| **`Lumen`** | [`ahmedEid1/Lumen`](https://github.com/ahmedEid1/Lumen), 🔴 **GPL-3.0**, `35 149` B — ⚠️ **against an MIT badge in its own README** | 🔴 **This base's own `p195` licence census**, via [`compose/code/p196-population-diff/`](../compose/code/p196-population-diff/) |
+
+🟢 **And one open question on this shelf closes for free.** `p196` recorded a possible collision between
+`ahmedEid1/Lumen` and `ahmedEid1/lumen`. **`ls-remote` returns the IDENTICAL HEAD SHA
+(`07635d3c81ad4f2ddd51b13266b7317285d75e37`) for both: GitHub owner/repo is case-insensitive, so it is
+ONE repository.** ⚠️ **Consequence for every census on this base: a case-sensitive slug count
+double-counts.** `p274`'s re-count now folds case before counting, and it found the same duplication for
+`RohanMuppa`/`rohanmuppa` and `AStheTECH`/`asthetech`.
+
 ## 2026-10-17 (pass 273) — The agent shelf gains two rows, and both of them were already in this building
 
 ⏱️ **Nineteenth pass of `2026-10-17`.** Append-only — everything below this section is prior history and is

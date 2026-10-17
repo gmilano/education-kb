@@ -1,0 +1,15 @@
+# p274 -- T37 standing re-count.  Every number below is derived from the rows, not copied from the sentence that last stated it.
+claim	published	measured	verdict	where_published
+MCP server slugs tabled on agents/top.md	20	20	MATCH	agents/top.md MCP section + intel/trends.md T21, both set to 20 by p274 AFTER it added 5 rows
+LMS platforms reachable by MCP, agents/top.md	6	6	MATCH	agents/top.md MCP section (p274). Was 3 on both shelves before this pass
+LMS platforms reachable by MCP, both agent shelves	6	6	MATCH	intel/trends.md T24 (p274). Was 3
+permissive rows in the build-on tier	23	23	MATCH	agents/top.md:61 ('23 permissive rows')
+# STALE=0 of 4 registered claims
+# MCP servers by platform, across agents/top.md AND agents/trending.md:
+#   Anki	1	ankimcp/anki-mcp-server
+#   Blackboard	5	felipedias-ie/blackboard-mcp, karkarkins/blackboardassistantmcp, niccolosalvini/mcp-blackboard-ucsc, p1ckle3/blackboard-mcp, rd2100/blackboard-mcp
+#   Brightspace / D2L	4	anonymousonyx22/brightspace-d2l-mcp, carlsvejstrup/dtu-learn-mcp, exhabition/brightspace-mcp-rs, rohanmuppa/brightspace-mcp-server
+#   Canvas	31	54yyyu/school-mcp, abr-projects/canvas-mcp, admin978/canvas-mcp, ahnopologetic/canvas-lms-mcp, algorithm0r/canvas-lms-mcp, amirf194/canvas-mcp, aryankeluskar/canvas-mcp, bartmassey-upstream/canvas-mcp, bruchris/canvas-lms-mcp, caleb-media-studio/canvas-mcp, charliecardenastoledo/mcp-canvas-server, crevextech/canvas-lms-mcp, dmontgomery40/mcp-canvas-lms, eastarctica/canvas-mcp, harrywang/canvas-mcp, johannsenlum/canvas-api-mcp, jsrodr/canvas-mcp, lindsay-cheng/canvas-mcp, mdweaver/canvas-mcp, mistercommand/mcp-canvas-lms, mtgibbs/canvas-lms-mcp, psychquant/che-ntucool-mcp, r-huijts/canvas-mcp, sarthak-neupane/canvasmcpserver, skhdemo/uoft-quercus-mcp, sonaiengine/ku-portal-mcp, vishalsachdev/canvas-mcp, vkumar04/canvas-mcp-lite, xmike04/canvas-student-mcp, yeetingwaterbottle/canvas-mcp, zhenghh04/canvas-mcp
+#   Google Classroom / Workspace for Education	11	adriasantacreu/google-classroom-mcp, alanmagno1/google-classroom-mcp, asthetech/mewcp-google-classroom, davipac/classroom-mcp, faizan45640/google-classroom-mcp-server, kimmahone/edu-workspace-mcp, omarniazi/classroom-mcp, pengusto/google-classroom-mcp, praisethefacts/google-classroom-mcp, sandraschi/classroom-mcp, zainf2327/mcp-classroom
+#   Moodle	17	a2br/moodle-mcp, csmediapro/moodle-mcp-server, g36maid/moodle-mcp, ictinnovations/ictexam-mcp, idavi/usp-mcp, jawadh-salih/moodle-mcp-server, lmscloud-io/moodle-mcp-server, loyaniu/moodle-mcp, marcosnahuel/moodle-mcp, nasus20202/moodlemcp, niccolosalvini/mcp-moodle-staff, niccolosalvini/mcp-moodle-teacher, onbirdev/moodle-webservice_mcp, pablopc05/mcp-usc, peancor/moodle-mcp-server, saadrahman01/moodle-mcp, toshieji/moodle-grading-mcp
+#   Open edX	2	blend-ed/openedx-mcp, blend-ed/tutor-contrib-openedxmcp

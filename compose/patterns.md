@@ -1161,3 +1161,100 @@ you can read all of it.
 **Rough shape:** 4-6 weeks to a governed pilot on one faculty — week 1 read-only against a Moodle staging
 clone with no plugin installed, weeks 2-3 plugin plus gated writes on a single course, weeks 4-6
 content-pipeline regeneration and the Annex III human-review record.
+
+## P24 — The agent pilot that survives the district's AI committee: data minimisation at the tool boundary
+
+*(new in pass 274)*
+
+**When to reach for it.** Any engagement where the deliverable is *"an agent over the system the client
+already runs"* — which is `P14` (Canvas), `P18` (Ed-Fi), `P23` (Moodle) and, after pass 274, Brightspace,
+Blackboard and Open edX as well. 🔴 **Reach for it BEFORE the pilot is scoped, because the objection this
+pattern answers is the one that kills these pilots and it is not technical.**
+
+### The objection, in the market's own words
+
+| source | the blocker |
+|---|---|
+| **GovTech**, reporting **Bridges 2026** | Few districts and colleges have agents in day-to-day operations; leaders *"remain cautious about granting the tools access to sensitive systems and data"* |
+| **EdTech Hub** (2026-03-30), Southeast Asia | Education-AI initiatives *"remain short-term and project-based"* |
+| This base's own `T24` | *"The OAuth consent a pilot asks a school for is much wider than the feature being piloted … in EMEA that is a GDPR conversation before an engineering one; in the US, FERPA/COPPA"* |
+
+🔵 **Supply-side and demand-side evidence have converged on the same sentence.** The pilots are not
+stalling on model quality, licence cost or integration difficulty. **They stall at the consent form.**
+
+### The stack
+
+| layer | component | licence | why this one |
+|---|---|---|---|
+| Doorway, **with pseudonymisation built in** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **MIT** *(payload, `1 070` B, `p274`)* | **Opt-in FERPA mode: student names and contact details are replaced with pseudonyms before tool output reaches the model.** The boundary is in the server, not in a prompt |
+| Doorway, breadth | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | MIT | 102–126 tools when breadth matters more than minimisation. ⚠️ Cite the tool count as a range |
+| Same shape, other platforms | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) · [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) · [`NiccoloSalvini/mcp-blackboard-ucsc`](https://github.com/NiccoloSalvini/mcp-blackboard-ucsc) · [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) · [`Kimmahone/edu-workspace-mcp`](https://github.com/Kimmahone/edu-workspace-mcp) | 🟢 all **MIT** *(all payload-read `p274`)* | **Six platforms, five under MIT.** The pattern is portable; only the API differs |
+| Audit trail of what the model actually read | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | Apache-2.0 | xAPI statements per tool call: the artefact a committee asks for and nobody has |
+| Human sign-off on anything consequential | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) + Iris | MIT | Config-gated AI — *"AI off"* is a deployment setting, which is what `T17`'s five jurisdictions converge on |
+| Local inference where residency binds | Ollama / vLLM behind the platform's provider setting | permissive | No prompt leaves the member state (`T6`) |
+
+### How to wire it
+
+1. **Enable the pseudonymisation mode first, then the tools** — not the other way round. The default
+   posture of every other server on this shelf is *the model sees real names*.
+2. **Scope the OAuth consent to the tools you actually enabled**, and put the enabled list in the SOW as
+   a schedule that changes by change-order. ⚠️ `edu-workspace-mcp` reaches **Docs, Sheets, Slides,
+   Forms, Drive and Classroom** — an entire tenant — so a Classroom pilot on it is a tenant-wide consent.
+3. **Write every tool call to the LRS**, including the ones that returned nothing. A committee's real
+   question is *"what did it look at"*, and an empty answer is only credible if the log is complete.
+4. **Put a human in front of every write.** Reads can be pseudonymised; a write cannot be anonymous.
+5. **Demonstrate the boundary in the pilot review** by showing the model's transcript with pseudonyms in
+   it. 🟢 **This is the deliverable that converts a pilot into an operation** — which, per EdTech Hub, is
+   the transition the whole category is failing to make.
+
+### What this is worth, said plainly
+
+🟢 **It reframes the sale.** *"Will you let an AI see your student records?"* is a question a district
+AI committee answers **no** to by default. *"The model never receives a student's name — here is the
+pseudonymisation boundary, here is the log of every field it read, and here is the switch you hold"* is a
+different question, and it is answerable in a single meeting.
+
+⚠️ **The counter-example is in the same category and must be read first.**
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) carries its own
+security disclosure of a **broken access control that exposed other students' personal information** —
+same category, same description in a search result, opposite risk posture. 🔵 **Read the disclosure
+history, not only the grant** (`T45`).
+
+## P25 — The incumbent you were told to replace already has an MIT doorway
+
+*(new in pass 274)*
+
+**When to reach for it.** A North American higher-education engagement where the client runs
+**Blackboard / Anthology** or **Brightspace / D2L**, and the brief — including, until this pass, **this
+KB's own market shelf** — says the pitch is to replace it.
+
+🔴 **Do not pitch the replacement.** [`intel/market.md`](../intel/market.md) carried
+*"Blackboard / Anthology … replacement engagements; the incumbent's lock-in is the pitch"* while this
+base's own trending shelf held **two MIT MCP servers for Blackboard Ultra**. 🔵 **`p267` found exactly
+this shape for Canvas and named it — *"the opening is the opposite of migration"* — and the correction
+was applied to Canvas alone.** `P25` is that correction generalised to the class.
+
+### The platform ladder, after pass 274's re-count
+
+| platform | doorway | licence *(payload, `p274`)* | platform's own licence | engagement shape |
+|---|---|---|---|---|
+| **Canvas** | `vishalsachdev/canvas-mcp` · `bruchris/canvas-lms-mcp` | 🟢 **MIT** | AGPL-3.0 | `P14` — extend, never migrate |
+| **Moodle** | `MarcosNahuel/moodle-mcp` · `Jawadh-Salih/moodle-mcp-server` | 🟢 **MIT** | GPL-3.0 | `P23` — writes via a `local_` plugin; combination is GPL-3.0, **no network clause** |
+| **Google Classroom / Workspace** | `Kimmahone/edu-workspace-mcp` | 🟢 **MIT** | proprietary | ⚠️ Tenant-wide consent — scope it (`P24`) |
+| 🆕 **Brightspace / D2L** | `RohanMuppa/brightspace-mcp-server` | 🟢 **MIT** | proprietary | **Extend. No platform decision asked of the client** |
+| 🆕 **Blackboard Ultra** | `felipedias-ie/blackboard-mcp` · `NiccoloSalvini/mcp-blackboard-ucsc` | 🟢 **MIT** | proprietary | **Extend** — and the UCSC server works over the **public REST API**, so the cheapest pilot on this ladder needs **no institutional plugin approval** |
+| 🆕 **Open edX** | `blend-ed/tutor-contrib-openedxmcp` | 🔴 **AGPL-3.0** | AGPL-3.0 | Already priced on the verticals shelf. ⚠️ `/health` is unauthenticated — fix before any pilot |
+
+### Why this is the stronger pitch, in one paragraph
+
+🟢 **A replacement engagement asks the client to make a platform decision, re-train every user and
+migrate years of course content before any AI value appears.** An MIT doorway asks for an API token.
+🔵 **And the deliverable stays the studio's and the client's**: the platform's copyleft — where there is
+any — never reaches code that talks to it over HTTP. 🔴 **For a proprietary incumbent like Blackboard or
+Brightspace there is not even a licence question to answer** — the only question was whether a doorway
+existed, and the answer has been yes, on this base's own shelves, for several passes.
+
+⚠️ **Two honest caveats.** The Blackboard and Brightspace servers are **small** (0–59★): they are
+**reference implementations, not dependencies** — read them, fork them, own them, and budget for
+maintaining what you fork. And every one of these reaches **real student data**, so `P24` is not an
+optional companion to this pattern; it is the half that gets it approved.

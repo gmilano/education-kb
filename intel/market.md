@@ -14,7 +14,7 @@ updated: 2026-10-17
 
 | Figure | Value | Source grade |
 |--------|-------|--------------|
-| **AI in education, GLOBAL — the publisher's current vintage** | **$8.3B (2025) / $11.4B (2026) → $57.2B (2033), 25.9% CAGR** (Grand View) | 🟢 **NEW pass 272, and it was missing from every studio-facing shelf.** The `$32.27B by 2030 @ 31.2%` line this file carries is **Grand View's SUPERSEDED release**; the house now publishes a **2033 horizon at a materially lower CAGR**. Closes to **−0.0%** under `T32`. **Quote this row, not the $32.27B one** |
+| **AI in education, GLOBAL — the publisher's current vintage** | **$11.4B (2026) → $57.2B (2033), 25.9% CAGR** (Grand View) | 🟢 **NEW pass 272** — the `$32.27B by 2030 @ 31.2%` line this file carries is **Grand View's SUPERSEDED release**; the house now publishes a **2033 horizon at a materially lower CAGR**. Closes to **−0.07%** under `T32`. **Quote this row, not the $32.27B one.** 🔴 **CORRECTED pass 274: `$8.3B (2025)` is REMOVED from this cell, because it belongs to the OTHER vintage.** `$8.3B → $32.27B @ 31.2%` closes to **−0.01%** (the superseded release); on the current release's own 25.9% it reaches only **$52.4B (−8.4%)**, and `$8.3B → $11.4B` in one year is **+37.3%** against a labelled 25.9%. **The cell `p272` told studios to quote was itself a two-vintage splice** — `p271`'s North America defect, in the row that replaced it. See the pass-274 section |
 | North America share of global AI-in-education market | **36%** (ResourcERA) | aggregator — 36% of its $10.4B 2026 base is **$3.744B**, within **1.7%** of Technotrenz's $3.68B, which is how a *share* became a *dollar forecast*; see `T36` |
 | AI in education, North America | **$3.68B (2026) → $10.8B (2030), 31.1% CAGR** — publisher is **Technotrenz**, 🔴 **NOT ResourcERA as pass 271 recorded** | **aggregator** — the horizon was corrected by `p271` and the **attribution was corrected by `p272`**, which asked the search leg to name ResourcERA and was told the figure *"is not a ResourcERA figure"*. ResourcERA gives NA as a **36% share**, not a dollar forecast. See `T36` |
 | AI in education, North America *(the publisher's own current vintage)* | **$4.25B (2026) → $19,388.3M (2033), 24.2% CAGR** (Grand View, 2033 databook) | **NEW pass 272** — closes to **−0.0%** under `T32`. Prefer this row: it is the research house's own number on its current vintage, not an aggregator's |
@@ -23,7 +23,7 @@ updated: 2026-10-17
 | Mexican university students/faculty using GenAI daily | **>60%** | SEP national survey, Apr 2026 |
 | AI in education, EMEA *(Europe)* | **$2.64B – $2.11B (2026)**, published as a **range** | 🔴 **the "two publishers" collapse to ~one, pass 272.** ResourcERA's $2.64B **reproduces Grand View's own 2024 base ($1,520.1M) compounded two years at Grand View's own 31.9% — to within 0.17%**. The genuinely independent end of the range is MarketDataForecast's **~$2.11B**. See `T36` |
 | AI in education, **MEA** | **$280.8M (2024) → $1,645.9M (2030), 32.6% CAGR** (Grand View) | **NEW pass 271** — this file previously declared MEA **UNSIZED** while the base carried a figure elsewhere |
-| AI in education, LATAM | **$0.67B (2026) → $2.1B (2030), 33.5% CAGR** (ResourcERA) | ⚠️ **the widest spread on this shelf and the one region that does NOT reconcile to Grand View (pass 272).** GVR: **$259.6M (2024) → $1,505.6M (2030) @ 32.4%**, whose 2026 point is **$455M** — ResourcERA is **47% above it**. M&M: **$105.6M (2024) → $204.7M (2029) @ 11.7%**. **Three publishers span ~6×.** Never quote a single LATAM figure |
+| AI in education, LATAM | **$0.67B (2026) → $2.1B (2030), 33.5% CAGR** (ResourcERA) | ⚠️ **the widest spread on this shelf and the one region that does NOT reconcile to Grand View (pass 272).** GVR: **$259.6M (2024) → $1,505.6M (2030) @ 32.4%**, whose 2026 point is **$455M** — ResourcERA is **47% above it**. M&M: **$105.6M (2024) → $204.7M (2029) @ 11.7%** — 🔴 **and `p274` finds that row one-year-mislabelled: it closes to +0.20% across SIX years, not the labelled five**, so either its base is 2023 or its horizon is 2030. **Three publishers span 5.1× at a COMMON year**; the published ~6× compared a 2024 endpoint with two 2026 endpoints. Never quote a single LATAM figure |
 | AI in education, APAC | **$2,282.9M (2025) → $18,214.1M (2033), 28.1% CAGR** (Grand View); **$3.22B (2026)** back-cast from the horizon | 🔴 **CORRECTED pass 272.** This cell read *"~$2.85B (2026), derived, not published"* — but a **published** Grand View figure was already sitting in this same file at line ~147, used as *corroboration* of the residual. **An intra-file contradiction: headline derived, body published.** And the corroboration was **circular** — ResourcERA re-publishes Grand View. See `T36`, `T38` |
 
 ### The forecast spread, since the spread is the finding
@@ -223,7 +223,7 @@ base alone**, but do not present them as one series. 🟢 **The AI-tutors rows, 
 |---|---|---|---|---|
 | **ResourcERA** | **$3.68B (2026)** | $10.8B (2030) | 31.1% | the figure this base carries |
 | Grand View Research | $3,113.8M (2025) | ~$19.4B (2033) | 24.2% | the conservative read |
-| MarketsandMarkets | $951M (2024) | $2.3B (2029) | 15.9% | **3.9× below GVR for the same region** |
+| MarketsandMarkets | $951M (2024) | $2.3B (2029) | 15.9% | **3.9× below GVR for the same region.** 🔴 **`p274`: this row is ALSO one-year-mislabelled — it closes to +0.22% across SIX years, not the labelled five, and it was never in `p272`'s 19-cell sweep.** So the window defect `T38` attributes to Grand View is **not a Grand View quirk** |
 
 🔵 **The spread is definitional, not factual** — US-only vs. all of North America, software-only vs.
 software-plus-services. **Quote the baseline, name the publisher, and state the scope**, or the number
@@ -320,7 +320,7 @@ window before writing it off.**
 | **North America** | **$4.25B (2026) → $19.39B (2033), 24.2%** — Grand View | Publisher's own; replaces an aggregator's conversion of a share |
 | **APAC** | **$3.22B (2026) → $18.21B (2033), 28.1%** — Grand View | Published, not derived; window-corrected |
 | **EMEA** | **~$2.11B (2026)** — MarketDataForecast | The one EMEA figure that is **not** Grand View's curve re-based |
-| **LATAM** | 🔴 **a range, never a point: $105.6M–$670M for 2026 across three publishers** | ~6× spread; the only region where ResourcERA does not reconcile to Grand View |
+| **LATAM** | 🔴 **a range, never a point — and `p274` corrects its ENDS: $132M–$670M for 2026**, not `$105.6M–$670M` | 🔴 **`$105.6M` is MarketsandMarkets' *2024* print.** Carried to 2026 on M&M's own 11.7% it is **$132M**, so the published range compared a 2024 endpoint against two 2026 endpoints. **The 2026-consistent spread is 5.1×, not ~6×** — and here the spread *is* the finding, so its size matters. Grand View's own 2026 LATAM point is itself **two numbers** (**$455M** forward from its 2024 base, **$490M** back from its 2030 horizon, 7.1% apart) because that row is a splice. Still the only region where ResourcERA does not reconcile to Grand View |
 | **MEA** | **$280.8M (2024) → $1,645.9M (2030), 32.6%** — Grand View | Unchanged from `p271`; window caveat above |
 
 ⚠️ **And the honest framing for a client deck:** the regional AI-in-education picture rests, as far as this
@@ -376,6 +376,123 @@ figure above is secondary-source grade, read through the search tool only.**
 Evidence: [`arithmetic-sweep.2026-10-17-p273.tsv`](../evidence/arithmetic-sweep.2026-10-17-p273.tsv) ·
 [`p273-websearch.2026-10-17-p273.tsv`](../evidence/p273-websearch.2026-10-17-p273.tsv). Trend: **`T40`**.
 
+### Pass 274 — the row this shelf told studios to quote was itself a two-vintage splice, and the window defect is NOT a Grand View quirk
+
+⏱️ **Twentieth pass of `2026-10-17`.** Evidence:
+[`arithmetic-sweep.2026-10-17-p274.tsv`](../evidence/arithmetic-sweep.2026-10-17-p274.tsv) *(28 cells,
+zero searches)* · [`p274-websearch.2026-10-17-p274.tsv`](../evidence/p274-websearch.2026-10-17-p274.tsv)
+*(10 legs; legs 1–3 taken verbatim from `p273`'s ranked backlog)* · the sweep is reproducible from
+[`compose/code/p274-window-sweep/`](../compose/code/p274-window-sweep/).
+
+`p273` closed by naming its highest-value step: *"Read `market.md` top-to-bottom as a reader, and diff
+its headline table against its own body … Zero searches. Highest expected yield on this base."*
+**It was read, end to end, and the yield is in the headline table.**
+
+#### 🔴 1. `p272`'s replacement cell inherited the defect of the cell it replaced
+
+`p271` found the North America row impossible because it **kept one vintage's baseline and took another
+vintage's horizon**. `p272` then wrote the global row this file has told every reader to quote since:
+
+> **$8.3B (2025) / $11.4B (2026) → $57.2B (2033), 25.9% CAGR** — *"Closes to −0.0% under `T32`"*
+
+🔴 **Only the second half closes.** Three lines of arithmetic, no search:
+
+```
+11.4 × 1.259^7  =  57.16   vs  57.2   →  −0.07 %   ← the current vintage, sound
+ 8.3 × 1.259^8  =  52.39   vs  57.2   →  −8.40 %   ← the printed 2025 figure cannot reach it
+ 8.3 → 11.4 in one year    =  +37.3 %  against a labelled 25.9 %
+ 8.3 × 1.312^5  =  32.27   vs  32.27  →  −0.01 %   ← what $8.3B actually belongs to
+```
+
+🔵 **The `$8.3B` is the SUPERSEDED release's baseline**, and this file carries the proof two tables
+down: `$8.3B (2025) → $32.27B (2030) @ 31.2%` closes to a hundredth of a percent. 🟢 **So the cell was
+a two-vintage splice, and `T32`'s own verdict was quoted over it** — the check ran on one leg of a
+two-leg cell and the pass reported the result as if it covered both. **The `$8.3B` is removed from the
+headline row.**
+
+#### 🔴 2. The ~−9 % Grand View signature is a THIRD instance, and it is in the global cell
+
+`T38` (`p272`) established that on Grand View's 2033-vintage databooks the printed baseline year
+disagrees with the labelled CAGR window, and tabled **four** regional cells. 🔴 **The global cell has
+the same signature and was not in the table:**
+
+| Grand View, 2033 vintage | printed base vs its own curve |
+|---|---|
+| **Global** `$8.3B → $57.2B @ 25.9%` | 🔴 **−8.40 %** — *new in `p274`, and it is the headline* |
+| **North America** `$3,113.8M → $19,388.3M @ 24.2%` | 🔴 **−9.07 %** |
+| **APAC** `$2,282.9M → $18,214.1M @ 28.1%` | 🔴 **−9.12 %** |
+
+🟢 **Three databooks from one house, clustering inside a 0.7-point band. That is a signature, not
+noise** — and it converts `T38`'s standing rule from a regional caution into a house-wide one:
+**derive the baseline from the horizon and the CAGR on every Grand View 2033-vintage figure, the
+global one included.**
+
+#### 🔴 3. And the defect is not Grand View's. MarketsandMarkets does it too — in two cells this shelf quotes
+
+🔵 **`p272`'s 19-cell ledger marked four mismatches `ok` without running the window test its own covering
+note had just mandated** (*"a 10% mismatch is not automatically noise — test the window before writing it
+off"*). `p274` ran that test on every cell, **including the two M&M rows the sweep never contained:**
+
+| cell | as LABELLED | read one year LONGER | verdict |
+|---|---|---|---|
+| **NA, M&M** `$951M (2024) → $2.3B (2029) @ 15.9%` | **−13.53 %** | **+0.22 %** 🟢 | 🔴 **WINDOW_FIX — never swept** |
+| **LATAM, M&M** `$105.6M (2024) → $204.7M (2029) @ 11.7%` | **−10.30 %** | **+0.20 %** 🟢 | 🔴 **WINDOW_FIX — swept, and marked `ok`** |
+
+🟢 **Two houses, five cells, one convention.** `T38` is titled *"a publisher can mislabel its own CAGR
+window"* and reads, in practice, as a caution about Grand View. **It is a property of this literature**:
+a printed "current year" figure and a labelled forecast window are produced by different parts of a
+report and are routinely a year apart. ⚠️ **The operational consequence is a rule change, not a new
+caveat:** a window test costs one multiplication, so **run it on every cell and retire the threshold.**
+`p271`'s *">25 % flag, >50 % investigate"* would not have fired on **any** of the five.
+
+#### 🔴 4. Nine of the 28 cells are SPLICES — they close at no window — and three of them are on this shelf as series
+
+A cell that closes at neither the labelled span nor ±1 year is **two report vintages, not one growth
+curve**. This file already says so for Grand View's MEA row. 🔴 **It does not say so for the LATAM row,
+which is where the `$455M` 2026 point a studio would quote comes from:**
+
+| cell | mismatch as labelled | closes at ±1 y? | what this shelf says |
+|---|---|---|---|
+| **MEA GVR** `$280.8M → $1,645.9M @ 32.6%` | −7.26 % | 🔴 no | 🟢 *"almost certainly two report vintages"* — correct |
+| **LATAM GVR** `$259.6M → $1,505.6M @ 32.4%` | −7.12 % | 🔴 no | 🔴 **`T32` filed it as *"window rounding"* 🟢. It is not.** Its 2026 point is **$455M** forward or **$490M** back — **7.1 % apart, and only one of them is published anywhere** |
+| **MEA ResourcERA** `$0.56B → $1.6B @ 34.3%` | +13.86 % | 🔴 no | 🔴 marked `ok` by `p272` at −12.2 % under the opposite sign convention |
+
+⚠️ **Sign conventions differ between the two ledgers and that is itself part of the problem.** `p272`
+states mismatch as `published / projected − 1`; `p274` states it as `projected / published − 1`. **The
+same cell reads `+11.5 %` there and `−10.3 %` here.** A single "10 % threshold" was never comparable
+across the two.
+
+#### 🟢 5. `p273`'s backlog item 2 is DISCHARGED: this shelf now has one regional figure that is provably not Grand View re-based
+
+`p273` asked for *"ONE regional figure from a publisher that is provably not Grand View"*, and named the
+test `p272` used: **try to reproduce the candidate's baseline from Grand View's curve.**
+**MarketDataForecast's Europe figure passes it.**
+
+| test | result |
+|---|---|
+| Does MDF re-base Grand View? | 🟢 **No.** GVR's Europe curve puts 2025 at `1,520.1 × 1.319 = $2,005M`. **MDF prints $1,590M — 21 % below it.** No compounding relation at any plausible window produces one from the other |
+| Is MDF internally sound? | 🟢 **Yes, and it is the ONLY regional cell on this shelf that closes AS LABELLED.** `$1.59B (2025) → ~$20B (2034) @ 32.47%` → **−0.13 %**; its own 2026 point `$2.11B` → **−0.18 %**. No window fix needed |
+| Independent *model*, or independent *name*? | 🟡 **The honest answer, stated rather than implied.** The reproduction test clears it. A second test does not settle it: MDF's `$1,590M (2025)` sits only **4.6 % above** GVR's `$1,520.1M (2024)` — a near-identical magnitude a year apart — and their CAGRs differ by **0.57 pt**. What separates them is the **horizon** (2034 vs 2030) and the failed re-basing. 🔵 **Claim exactly this much: MDF is not a re-publication of Grand View's curve. Whether it is an independent model is not established** |
+
+🟢 **So the EMEA number to quote is MarketDataForecast's `~$2.11B (2026)`** — unchanged as a
+recommendation from `p272`, but for the first time on an *established* basis rather than an asserted
+one. ⚠️ **And `resourcera.com`, `technotrenz.com`, `grandviewresearch.com` and now
+`www.marketdataforecast.com` are all `ENOTFOUND` from this environment, re-tested this pass.** Every
+figure above is secondary-source grade; **the attributions rest on arithmetic precisely because no page
+can be opened.**
+
+#### 🔵 What changed on the studio-quote table
+
+| For | `p272`/`p273` said | `p274` says |
+|---|---|---|
+| **Global** | `$8.3B (2025) / $11.4B (2026) → $57.2B (2033)` | 🔴 **`$11.4B (2026) → $57.2B (2033) @ 25.9%`.** Drop the 2025 figure; it is the other vintage |
+| **2026 band** | `$8.7–11.4B`, 31 % wide | 🟢 unchanged, and `trends.md` `T30` still carries the **superseded** `$8.7–10.6B` *"narrow band"* — corrected there this pass |
+| **North America** | `$4.25B (2026) → $19.39B (2033)` | 🟢 unchanged. 🔴 But M&M's `$951M` third-publisher row is one-year-mislabelled |
+| **EMEA** | `~$2.11B` — MarketDataForecast | 🟢 unchanged, now **established** by a failed re-basing rather than asserted |
+| **LATAM** | `$105.6M–$670M` for 2026, ~6× | 🔴 **`$132M–$670M`, 5.1×.** The floor was a 2024 print |
+| **APAC** | `$3.22B (2026) → $18.21B (2033)` | 🟢 unchanged |
+| **MEA** | `$280.8M (2024) → $1,645.9M (2030)` | 🟢 unchanged, splice caveat now matched by the LATAM row's |
+
 ## Global players
 
 | Player | Type | AI position | Opening for Globant |
@@ -392,6 +509,11 @@ Evidence: [`arithmetic-sweep.2026-10-17-p273.tsv`](../evidence/arithmetic-sweep.
 | **Ginia** (MX) | Commercial, LATAM | AI-driven employability | Adjacent: the skills-to-jobs end of the funnel a tutoring engagement stops short of. |
 | **Vetto** (BR) | Commercial, LATAM | Listed in HolonIQ's 2026 LATAM EdTech 100 | Regional landscape awareness. |
 | **Portabilis / Comunidade i-Educar** (BR) | Open source steward | `i-educar` (GPL-2.0) + `i-diario` (AGPL-3.0), both committed to in October 2026 | **The LATAM open-source partner this KB had not found.** Federal software-public provenance; an agentic layer over the installed base is the engagement. |
+| **OpenAI × California State University** | Commercial deployment, NA | Reported as the **largest organization-wide ChatGPT deployment to date**, across the CSU system | 🟢 **`p274`.** The higher-ed counterpart to Utah/Gemini in K-12. **The engagement sits BESIDE it** — integration surface, governance artefact, curriculum-bound work the general assistant cannot do. Not a platform contest |
+| **Anthropic × Northeastern** | Commercial deployment, NA | **Claude for Higher Education** | 🟢 **`p274`.** Second named higher-ed single-vendor procurement. Same posture as above: be the layer the assistant cannot be |
+| **Platzi** (CO) | Commercial, LATAM | Named with Teachy among the region's mature AI-positioned platforms | 🟢 **`p274`, new to this base.** Regional landscape awareness; consumer/professional skilling rather than institutional |
+| **UPlanner** (CL) | Commercial, LATAM | Institutional data for **dropout prevention** | 🟢 **`p274`, new to this base — and it occupies the exact lane this file calls the open one.** Dropout prediction is institutional plumbing, which is what Teachy does *not* sell. **Benchmark or partner; do not pitch it as greenfield** |
+| **SEA+** (UY) | Platform, LATAM | **Adaptive assessment** | 🟢 **`p274`, new to this base.** ⚠️ A platform **name**, not a repository; Ceibal is established here as publishing no public code. **Integration, not adoption** |
 | **UNESCO / IDB** (LAC) | Multilateral | UNESCO's regional **AI-in-education Observatory for LAC**; IDB's review of **193 regional AI initiatives** | Funders and standard-setters. Being referenced in their frameworks is worth more than any single pilot. |
 
 **What HolonIQ's 2026 LATAM EdTech 100 says about positioning:** AI positioning has moved to
@@ -423,12 +545,13 @@ This is the part of the file with the longest shelf life, and the part most wort
 | **EU** | **Emotion inference in schools is in principle a prohibited practice** under the AI Act, outside the statutory exceptions — this is a prohibition, not a high-risk duty, so the 2027 delay does not touch it | in force |
 | **EU** | **AI-literacy duty** falls on organisations deploying AI, schools included | in force |
 | **South Korea** | **AI Basic Act and its Enforcement Decree in effect** — the most comprehensive AI statute in APAC — with a grace period of **at least one year** before fines | in effect 2026 |
-| **Vietnam** | National AI law **in force** | 2026 |
+| **Vietnam** | **`Law on AI` in force** — the enabling statute. Names **education among six high-risk sectors**; National AI Database pre-registration, conformity assessment, human oversight, **72-hour** incident reporting. 🟢 **`p274`: this is the instrument that RECONCILES the two dates this file called `UNRECONCILED` for five passes** — Law → `Decree 142/2026/ND-CP` (2026-04-30) → `Decision 33/2026/QD-TTg` (education compliance 2027-03-01). Three altitudes, not three contradictions | **2026-03-01** |
 | **Vietnam** | A **July 2026 decision names education explicitly as a high-risk AI domain** — *automated assessment* and *behavioural monitoring* of students. **The carve-out is the design brief:** these count as high-risk **only where the AI output is the sole basis for a decision without meaningful human review.** Compliance due **2027-03-01**, with **an extra six months** for education systems already operating before **2026-08-15**. ⚠️ Secondary-source grade — see the note below this table | 2027-03-01 |
 | **China** | Rules on **anthropomorphic AI services**: virtual intimate-relationship services **barred for minors**, and **parental consent required under 14**. Directly constrains companion-style or persona-driven tutors in the China market — a product-shape constraint, not a paperwork one. ⚠️ Secondary-source grade | 2026 |
 | **India** | AI **content-labelling** addressed within existing sector-specific frameworks rather than a single AI statute | 2026 |
 | **China** | Layered, output-specific rules (algorithmic recommendation, deepfakes, generative AI) rather than one horizontal act | 2026 |
 | **Japan / Singapore** | Voluntary, **principles-based**: no mandatory registration or pre-approval of AI systems in Singapore | 2026 |
+| **Japan** *(school level)* | 🟢 **`p274`, and it is a posture rather than an instrument:** reporting characterises Japan as **"AI last, not first"**, explicitly against its neighbours, while moving toward **official digital textbooks**. ⚠️ **Not a mandate and not an adoption figure — the declared Japan gap STANDS** — but it reframes four passes of silence as a possible policy choice rather than a measurement failure | reported **2026-05-31** |
 | **Brazil** | **AI and tech-regulation agreement signed with the EU** — expect convergence toward AI-Act-shaped classification | 2026-06 |
 | **Brazil** | `PL 2338` detail: would classify **education-related selection** as **high-risk**, i.e. admissions and placement — the same surface Annex III names in the EU | in process |
 | **Mexico** | Draft general AI regulation **seeks to replicate the EU risk model** | in process |
@@ -534,6 +657,50 @@ data gets the ranking backwards.
 
 
 ### North America
+
+
+**Pass 274 — the NA leg was retargeted at HIGHER EDUCATION, as `p272` and `p273` both asked and
+neither did, and it returned four new datums plus the procurement lane this shelf was thin on.**
+
+- 🟢 **`SUNY`'s policy contents are located at last.** This base has carried SUNY as *"existence only
+  — its contents were not located"* for two passes. The policy was adopted at a **Board of Trustees**
+  meeting, covers all **64 campuses**, and — the part that is a deliverable rather than a posture —
+  puts **AI literacy into general education from Fall 2026**. 🔵 **A general-education requirement is
+  a curriculum-delivery contract with a start date**, not a governance document, and it lands in the
+  one lane where this base's permissive supply is deep.
+- 🟢 **Higher-ed AI governance has named institutional bodies, and two of them align to a standard
+  this base already tracks.** **UC Berkeley** runs an *AI Governance Working Group*; **MIT** an *AI
+  Policy Committee*; **Columbia** and **Stanford** align to the **NIST AI Risk Management
+  Framework**. 🔵 **That is the same instrument `p267` identified as the one actionable item in
+  Texas's `TRAIGA` — an affirmative defence for substantial compliance.** So a single NIST-AI-RMF-
+  shaped artefact serves a Texas statutory defence *and* an Ivy-League procurement conversation.
+  **One deliverable, two buyers.**
+- 🟢 **`Columbia Law School`'s 2026-27 policy is the sharpest classroom rule located in NA:** AI
+  permitted **as a learning aid**, barred from **producing submitted coursework**. 🔵 The
+  process/product line, written as institutional rule — and `p274`'s trends leg finds the same line
+  being drawn pedagogically (*assess the process, not the product*).
+- 🔴 **THE PROCUREMENT LANE, which is what `p272` said this region was actually thin on.** Two
+  named higher-ed deployments, both single-vendor and both commercial: **OpenAI with the California
+  State University system**, reported as the **largest organization-wide ChatGPT deployment to
+  date**, and **Northeastern** joining **Anthropic's *Claude for Higher Education***. 🔵 **Read
+  against `p272`'s Utah/Gemini finding, the pattern is now two-sided: K-12 buys by state, higher ed
+  buys by system, and both buy a commercial assistant.** ⚠️ **The engagement is what sits beside it**
+  — the integration surface, the governance artefact and the curriculum-bound work the general
+  assistant cannot do — **not a competing platform.** This is `T28`'s EMEA finding arriving in NA as
+  a procurement fact.
+- 🔴 **One datum REFUSED, and the reason matters.** The leg returned *"only 26% of educators say
+  their university has a formal policy governing AI use"* for North America. **26% is numerically
+  identical to UNESCO IESALC's LATAM figure** that this file's whole governance-deficit thesis rests
+  on. 🔵 **A number that arrives for a second region at the same value is a re-publication candidate
+  before it is a corroboration** (`T36`). **Not shelved as an NA figure.**
+- 🔴 **And an attribution collision this base has been carrying unnoticed.** This file publishes
+  **92%** as *"LATAM university students using AI (Digital Education Council)"* in its headline table
+  **and** as *"reported student use is 92% of university students and 54% of K-12 students"* in this
+  section's own NA prose, with no region marker. `p274`'s NA leg returned the 92%/54% pair in a
+  **North-American** frame. ⚠️ **One of the two placements is wrong, or the figure is global and
+  neither is regional. Flagged, not resolved** — and **do not put 92% on a regional slide** until it
+  is.
+
 
 
 **Pass 272 — the NA leg mostly REPRODUCED this base's holdings, and saying so is the finding.
@@ -727,6 +894,36 @@ measured nil on the NA regulatory channel**, not as an absence of searching.
 ### EMEA
 
 
+**Pass 274 — the EMEA leg is a measured NIL for the ninth consecutive pass, and it produced three
+REFUSALS worth more than the figures they discard.**
+
+- 🔴 **Ninth re-service of the base's own position, which is now simply the state of the open web:**
+  Annex III point 3 (*education and vocational training*) high-risk duties apply **2027-12-02**;
+  Article 50 **transparency** is live; **emotion inference in education is a PROHIBITION**, not a
+  deferred high-risk duty. 🟢 Nothing re-litigated, nothing changed.
+- 🔴 **REFUSED — a claim that would have put a false deadline in a client deck.** One
+  Spanish-language source states the Commission approved **binding AI-in-education guidelines on
+  2026-04-15**, with **university audit deadlines in December 2026**. **No other source in the leg
+  corroborates it**, and it contradicts the omnibus timeline four sources agree on. **Recorded as
+  UNCORROBORATED and NOT carried** — the same ruling `p270` made on the Chilean education-framework
+  claim.
+- 🔴 **REFUSED — and this one is a trap a studio could walk into.** A vendor blog gives *"the
+  European market at over €111 billion (2025)"*. **That is an edtech-wide figure, roughly 50× this
+  shelf's AI-in-education Europe number.** 🔵 **A market-size figure is only a figure once its SCOPE
+  is named**, and a €111B line on a slide beside a €2.1B line is not a disagreement between
+  publishers — it is two different markets. **Never shelve it as AI-in-education.**
+- 🔴 **REFUSED — two adoption figures (`68%` of European universities using at least one AI tool,
+  `>55%` prioritising EEA data hosting) came only from low-authority blogs** and could not be traced.
+  🔵 The second would have been genuinely useful if sourced: it is the sovereignty argument this base
+  recommends, quantified. **Recorded as a named, costed gap rather than carried.**
+- 🟡 **One datum carried at its own low grade because it is decision-shaped:** EMEA edtech vendors
+  report **extended procurement cycles caused by compliance review**. 🔵 **That is the AI Act's first
+  measurable commercial effect on this shelf, and it cuts toward the studio** — a client whose
+  procurement is already slowed by compliance review is a client for whom compliance-by-design is a
+  *speed* argument, not a cost.
+
+
+
 **Pass 272 — the EMEA leg reproduced this base's AI Act rows exactly, added one institutional
 player, and returned an informative NIL on MEA.**
 
@@ -814,7 +1011,17 @@ agreement over a cloud marking service, and it is the kind of architecture-level
 shortens a procurement cycle.
 
 ⚠️ **Governance is the gating constraint, not appetite:** one 2026 roundup reports **only ~10%
-of 450+ surveyed institutions have formal AI-use guidelines** (secondary-source grade). The
+of 450+ surveyed institutions have formal AI-use guidelines** (secondary-source grade).
+🟢 **`p274` reconciles this against the "nearly two-thirds of European education systems" figure
+further down this section, which a reader coming down the page reads as a contradiction. It is not
+one.** The two-thirds counts **national education systems** holding a strategy, guidance or
+framework; the ~10% counts **institutions** holding formal AI-use guidelines of their own.
+**Different populations, different predicates** — and read together they *are* the EMEA pitch: the
+ministry has a policy and the institution has nothing with which to comply with it. 🔵 **And the
+predicate travels: `p274`'s LATAM leg returns UNESCO's regional Observatory at FEWER THAN 10% of
+institutions** with formal guidelines *and* sufficient capacity. **Two regions, two instruments, the
+same ~10% against the same predicate** — the first cross-regional corroboration on this shelf that
+is not a re-publication. The
 **OECD 2026 Digital Education Outlook** recommends moving beyond general-purpose assistants
 toward **purpose-built educational AI** — which is an argument, from a body ministries cite, for
 exactly the Artemis/Iris-style deployment over a general chatbot rollout.
@@ -1004,6 +1211,60 @@ cite it as an education figure); EU enterprise AI adoption **19.95%** against an
 ### APAC
 
 
+**Pass 274 — the VIETNAM RECONCILIATION, open for five passes and flagged four times, CLOSES — and
+the instrument that closes it was on this base's own trending shelf the whole time.**
+
+🔴 **This file has carried Vietnam as `UNRECONCILED` since `p269`: `Decision No. 33/2026/QD-TTg`
+(compliance **2027-03-01**) against `Decree 142/2026/ND-CP` (effective **2026-04-30**), *"two
+instruments, two dates, one jurisdiction and one function"*. `p273`'s backlog gave it an ultimatum:
+establish which governs or record it unresolvable and stop spending legs on it.**
+
+🟢 **`p274`'s APAC leg returns a THIRD instrument — and three instruments at three altitudes is not a
+contradiction. It is a legislative scheme.**
+
+| altitude | instrument | date | what it does |
+|---|---|---|---|
+| **Law** | **Law on AI** | **in force 2026-03-01** | The enabling statute. **Names education among six high-risk sectors**; National AI Database pre-registration, conformity assessment, human oversight, **72-hour** incident reporting |
+| **Decree** | `Decree 142/2026/ND-CP` | effective **2026-04-30** | Implementing instrument under the Law |
+| **Decision** | `Decision No. 33/2026/QD-TTg` | issued **July 2026**; compliance **2027-03-01** | The high-risk sector list for education: *automated assessment* and *behavioural monitoring*, **+6 months** for systems live before **2026-08-15** |
+
+🔴 **And the finding behind the finding: this base already held the Law.** `agents/trending.md` has
+carried *"Vietnam's Law on AI, in force 2026-03-01, naming education among six high-risk sectors"* —
+with the pre-registration, conformity-assessment and 72-hour reporting detail — **in three separate
+places**, while this file and `intel/open-gaps.md` declared the reconciliation impossible. 🔵 **The
+eighth cross-shelf defect in nine passes, and the species is `T34`'s: a shelf declared something
+unestablished that another shelf had established.** The register asked for a search; **a `grep` was
+the answer.**
+
+🟢 **The ruling, stated so it is falsifiable:** the **education compliance deadline is `2027-03-01`**
+(+6 months for systems operating before `2026-08-15`); the **2026 dates are the framework commencing**,
+not the education obligation biting. ⚠️ **Secondary-source grade, and the falsification is named: if
+`Decree 142/2026/ND-CP` is shown to impose education obligations of its own from `2026-04-30`, the
+hierarchy read fails and the conflict returns.** 🟢 **Until then this base has one Vietnamese
+deadline, not two, and may quote it.**
+
+- 🟢 **Japan: the four-pass gap NARROWS, and the reason it was empty may be that Japan is empty by
+  choice.** **ABC News (2026-05-31)** characterises Japan's posture as **"AI last, not first"** —
+  explicitly contrasted with its neighbours — and **Edmentum** reports Japan moving toward **official
+  digital textbooks**. ⚠️ **This is still not an adoption figure and still not a mandate**, so the
+  declared gap (*no school-level Japan adoption or policy data*) **stands**. 🔵 **But its
+  INTERPRETATION changes.** Four passes read the silence as a measurement failure. **Read beside
+  `T22` — Korea mandated AI textbooks, hit under 30% adoption, and the legislature stripped their
+  official status — "AI last" looks like a policy choice with a worked example behind it.** For a
+  Japanese engagement that is the opposite brief: not *"catch up"*, but *"be the implementation that
+  does not get withdrawn."*
+- 🟢 **`EdTech Hub` (2026-03-30), on Southeast Asia: education-AI initiatives there "remain
+  short-term and project-based."** 🔵 **A named research organisation saying the market is stuck in
+  pilots is the clearest productionisation opening on this shelf** — and it is corroborated from the
+  other side of the world by `p274`'s trends leg (GovTech/Bridges 2026: few districts and colleges
+  have agents in day-to-day operations). **Two independent sources, two regions, one finding: the
+  pilots are not becoming operations.**
+- 🟡 **Ipsos ban-support reproduced and still not shelved as adoption data** (India **26%**,
+  Indonesia **23%** — **down from 30%**, Singapore **28%**, Japan/Malaysia **29%**, Korea **31%**).
+  🔵 Indonesia's **7-point fall** is the only movement, and it is in the permissive direction.
+
+
+
 **Pass 270 — the APAC regional leg returned thin education material and solid regulatory shape,
 and the thinness is recorded rather than dressed up.**
 
@@ -1162,6 +1423,42 @@ Pearson and Byju's; that is a vendor list behind a paywall, not a market map, an
 Korea's **AI Framework Act (eff. 2026-01-22)** and Taiwan's **AI Basic Act (Dec 2025)** were already held.
 
 ### LATAM
+
+
+**Pass 274 — the load-bearing LATAM number is refreshed for the first time in several passes, and it
+is WORSE than the one this base has been selling.**
+
+- 🔴 **UNESCO's regional Observatory: FEWER THAN 10% of institutions in the region have formal
+  guidelines AND sufficient capacity to integrate AI against clear criteria.** This file sells the
+  **87% / 26%** IESALC pair as a **61-point** governance deficit. 🔵 **The two are not in conflict —
+  they measure different predicates** (*has a strategy* vs *has guidelines and the capacity to apply
+  them*) — **and the second is the one a client actually fails.** 🟢 **So the deficit a studio should
+  price is ~90 points, not 61**, and the work it implies is capability transfer, not a policy
+  document. ⚠️ `p273` recorded that the channel itself declared no refreshed adoption figures for
+  this region; **this closes that declaration with a 2026 figure from the body this base already
+  names as its route in.**
+- 🟢 **And it is the first cross-regional corroboration on this shelf that is not a
+  re-publication.** The EMEA section carries *"~10% of 450+ surveyed institutions have formal AI-use
+  guidelines"* from an unrelated 2026 roundup. **Two regions, two instruments, the same ~10% on the
+  same predicate.** 🔵 **The lesson is methodological and it is reusable: regional governance figures
+  diverge wildly (26% vs 87% vs two-thirds) until you hold the PREDICATE fixed, at which point they
+  converge.** Ask what a survey counted before comparing it to another survey's number.
+- 🟢 **Three new named regional players, zero prior mentions anywhere on this base:**
+  **`Platzi`** (Colombia) — described alongside Teachy as one of the region's mature AI-positioned
+  platforms; **`UPlanner`** (Chile) — handles institutional data to **prevent dropout**; and
+  **`SEA+`** (Uruguay) — **adaptive assessment**. 🔵 **`UPlanner` is the one to note:** dropout
+  prediction is the *institutional plumbing* lane this file already identifies as the open one (the
+  lane Teachy does not sell), and it now has a named regional incumbent. **Benchmark, partner or
+  displace — but do not pitch it as a greenfield idea.**
+  ⚠️ **`SEA+` is a platform NAME, not a repository**, and Uruguay's Ceibal is established on this
+  base as publishing **no public code**. **Treat as integration, not adoption.**
+- 🟢 **A new named regional study:** **OEI + ProFuturo, *"The arrival of AI in education in Latin
+  America: under construction"***. Its read: the mapped initiatives are **mostly private-sector**,
+  with **uncoordinated actors**, **unsustained efforts**, and development **far from rural classrooms
+  and vulnerable contexts**. 🔵 **ProFuturo is already on this base as a partner of the UNESCO LAC
+  Observatory**, so this is a known institution's own assessment of the market — and *"uncoordinated
+  and unsustained"* is a description of a market that needs a systems integrator.
+
 
 
 **Pass 272 — the LATAM leg also mostly reproduced the shelves. Two new datums, and both are
@@ -1600,6 +1897,33 @@ like any other — re-count it from the rows, on every shelf that states it.**
 the pass-272 section above). The new standing gap this pass opens is named in
 [`intel/open-gaps.md`](open-gaps.md): **no independent corroboration of any regional AI-in-education
 market figure has been located, and the appearance of corroboration was re-publication.**
+
+### Pass 274 addendum to the declared gaps
+
+🟢 **Two standing gaps CLOSE this pass and both closed by reading this base rather than searching.**
+
+| gap as declared | status after pass 274 |
+|---|---|
+| 🔴 **Vietnam's two instruments `UNRECONCILED`** *(open five passes, flagged four times, given an ultimatum by `p273`)* | 🟢 **RECONCILED BY HIERARCHY.** A third instrument — the **`Law on AI`, in force `2026-03-01`** — sits above both, and **`agents/trending.md` had been carrying it in three places** while this file declared the conflict impossible. Education compliance: **`2027-03-01`**, +6 months if live before `2026-08-15`. ⚠️ Secondary-source; the falsification is named in the APAC section |
+| 🔴 **LATAM adoption figures *"carried, not refreshed"*** *(`p273`, declared by the channel itself)* | 🟢 **REFRESHED, and downward.** UNESCO's regional Observatory: **fewer than 10%** of institutions have formal guidelines **and** sufficient capacity. The `87%/26%` pair stands; **the predicate that matters is the harsher one** |
+| ⚠️ **NA higher-education governance under-measured** *(declared by `p272` AND `p273`, closed by neither)* | 🟢 **CLOSED.** SUNY's contents (**AI literacy in general education, Fall 2026**), named governance bodies at Berkeley/MIT, NIST-AI-RMF alignment at Columbia/Stanford, Columbia Law's 2026-27 classroom rule, **and the procurement lane** (CSU/OpenAI, Northeastern/Anthropic) |
+| 🟡 **`Bloom` and `Lumen` unresolvable to slugs** *(`p272`, carried by `p273`, backlog item 3)* | 🔴 **THE GAP WAS FALSE, BOTH LIMBS.** `Li-Evan/Bloom` was **already a row on `agents/top.md`**, 168 lines above the sentence in that same file declaring it unresolvable; `ahmedEid1/Lumen` was in this base's own `p195` licence census. See [`agents/top.md`](../agents/top.md) and [`repos/foundations.md`](../repos/foundations.md) |
+| 🔴 **No independently corroborated regional market figure** *(`p272`'s standing gap)* | 🟡 **NARROWED, not closed.** MarketDataForecast's EMEA figure **provably does not re-base Grand View** and is the only regional cell that closes as labelled. 🔵 **But "not a re-publication" is not the same as "an independent model"**, and this base claims only the first |
+
+🟡 **Gaps this pass OPENED, stated so a later pass can close them:**
+- 🔴 **The `92%` university-student figure is placed as BOTH a LATAM and a North American datum on
+  this page**, with no region marker on the second. **One placement is wrong or the figure is
+  global.** Do not put it on a regional slide until it is settled; the cheapest settlement is one leg
+  naming the Digital Education Council and the region together.
+- 🔴 **A `26%` "formal AI policy" figure arrived for North America at the identical value to
+  UNESCO IESALC's LATAM figure, and was REFUSED rather than shelved.** If it is real, NA and LATAM
+  have the same institutional governance rate and that is a finding; if it is a re-publication, it is
+  `T36` again. **Neither is established.**
+- 🟡 **EMEA still has no sourced vendor-market-share or adoption figure.** The leg returned two
+  (`68%` universities using a tool, `>55%` requiring EEA hosting) and both died on authority.
+  **Ninth consecutive EMEA supply-side nil.**
+- 🟡 **Nine of 28 market cells are SPLICES** (they close at no window). Three are published on this
+  shelf as series. **The remaining six have not been traced to their vintages.**
 
 ### Pass 273 addendum to the declared gaps
 

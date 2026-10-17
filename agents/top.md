@@ -96,6 +96,45 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | [muskvdc/EduTwin-Africa](https://github.com/muskvdc/EduTwin-Africa) | LIVE, **PRE-LICENCE — the placeholder is still in the README** *(new in pass 269)* | Curriculum-aware tutor over **South African** curriculum knowledge, **Grades 8–12**: RAG, adaptive learning, bounded multi-agent collaboration, ReAct tools, guardrails. 0★ / 0 forks / 7 commits, default ref `main`. **No payload on 19 of 19 paths, no `license` field in `pyproject.toml`**, and the README says, in the author's own words: *"Add the project's chosen license here before publishing if a specific open-source license is required."* 🔵 **This is a state this shelf has not carried before.** `Athena` and `autoGrader-frontend` are *silent*; this one is **explicitly not yet licensed**. The practical difference is that it is the one row here where asking costs nothing and might work — the author has written down that they know it is missing. Until then: all rights reserved. |
 | [Valexxy/edunaija-os](https://github.com/Valexxy/edunaija-os) | LIVE, **no grant on any channel** *(new in pass 269)* | *"A security-conscious starter codebase for a Nigerian-first learning platform"*; `package.json` name is `nigeria-learning-platform`. 0★ / 0 forks / 6 commits. No payload on 19 of 19 paths and **no `license` field in `package.json`** — the two channels that could have carried a grant both empty. Names **no exam board and no institution**. 🔴 **Cite it carefully: it is NOT the EduNaija AI Tutor of the AfricaNLP 2026 paper** (that system is a five-agent LangChain + FAISS RAG tutor with English/Yoruba/Hausa/Igbo support; this is a starter codebase with a similar name). **Two different artefacts, one name** — see the trends file. |
 
+## Pass 274 — the gap this file declared was contradicted by a row in this file, and the MCP count was two platforms short of its own evidence
+
+⏱️ **Twentieth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p274.tsv`](../evidence/verified-repos.2026-10-17-p274.tsv) *(12 probes, every
+grant read at payload, channel re-tested not inherited)* ·
+[`quantity-recount.2026-10-17-p274.tsv`](../evidence/quantity-recount.2026-10-17-p274.tsv) *(5 registered
+quantities, zero searches)* ·
+[`p274-websearch.2026-10-17-p274.tsv`](../evidence/p274-websearch.2026-10-17-p274.tsv) *(10 legs)*.
+
+### 🟢 The eight-pass nil on agent supply ENDS — and not through the supply channel
+
+| what | result |
+|---|---|
+| 🟢 **Six rows added to the MCP table** | `bruchris/canvas-lms-mcp` (MIT, FERPA pseudonymisation), `RohanMuppa/brightspace-mcp-server` (MIT), `felipedias-ie/blackboard-mcp` (MIT), `NiccoloSalvini/mcp-blackboard-ucsc` (MIT), `blend-ed/tutor-contrib-openedxmcp` (AGPL-3.0) — **and every one was already on [`trending.md`](trending.md) with a payload-read grant.** Nothing was discovered; something was **shelved** |
+| 🔴 **The `Bloom`/`Lumen` gap was FALSE** | `Li-Evan/Bloom` is a row in this file's own build-on tier. `ahmedEid1/Lumen` was in this base's `p195` census. **Two passes called them unresolvable and a third ranked searching again** |
+| 🔴 **A twice-carried licence REFUTATION is itself refuted** | `Gego-K12/gegok12` serves **MIT**, `1 150` B, diffed and byte-accounted. See `T44` and [`verticals/solutions.md`](../verticals/solutions.md) |
+| 🔴 **The count was wrong on both shelves** | **15** slugs tabled here (prose said 13; `T21` said 12) and **6** platforms reachable (both shelves said 3) |
+
+### 🔴 The box this pass earned
+
+| the finding | how it surfaced | why it had not been found |
+|---|---|---|
+| 🔴 **A FILE CAN DECLARE A GAP THAT ONE OF ITS OWN ROWS REFUTES, AND EVERY CROSS-SHELF CHECK ON THIS BASE PASSES IT** | 🟢 By doing what `p273` costed — **reading a shelf top to bottom as a reader** — rather than grepping between shelves | 🔴 `T29` greps the **destination** file; `T34` greps the **other** shelves; `T37` re-counts a **quantity**. **The Bloom contradiction is INTRA-FILE and QUALITATIVE**: a row at line `46` and a sentence at line `456` of the same file. 🔵 **Fifth consecutive pass whose defect species was invisible to the check written one pass before** — and this time the check that would have caught it (`T34`) existed and ran |
+| 🔴 **AN AMENDMENT THAT IS NOT BUILT GETS VIOLATED BY THE NEXT PASS** | 🟢 By **building** `T37` instead of citing it (90 lines, no network) and running it | 🔴 `T37` was written in `p272` and ranked seventh by `p273`. In the two passes between the amendment and its implementation, **three more stale quantities were published.** 🟢 `make recount` now derives them. See `T43` |
+| 🔴 **THIS SHELF HELD AN MIT DOORWAY INTO AN INCUMBENT THE STRATEGY SHELF SAYS TO REPLACE** | 🟢 By grouping the MCP rows **by platform** instead of counting them | 🔴 `p267` found this exact shape for Canvas (*"the opening is the opposite of migration"*) and the correction **never generalised**. Blackboard carries **two MIT servers** on `trending.md` while `market.md` sells a replacement engagement against it. **A correction applied to one instance is not a correction to the class** |
+
+### 🔵 Registered, not claimed
+
+- 🟢 **Every grant in this pass's ledger reproduces its carried byte count exactly** where one existed
+  (`RohanMuppa` `1 068`, `blend-ed` `34 524`, `Bloom` `1 069`, `Lumen` `35 149`). Per `T39` that proves
+  **stability, not correctness** — but it does confirm `P929`'s measurement method is being applied
+  consistently across passes, which is the first thing that was ever in doubt.
+- 🔴 **`DMontgomery40/mcp-canvas-lms` is NOT shelved as a row, and the reason belongs here:** it carries
+  **its own security disclosure of a broken access control that exposed other students' personal
+  information.** 🔵 Same category and same search-result description as the MIT rows above —
+  the `PageLM` pattern in its **security** dimension rather than its licence one (`T45`).
+- ⚠️ **No star count in this pass was read from GitHub.** `api.github.com` **403**, `github.com` HTML
+  **403**, `codeload` **403**, `raw.githubusercontent.com` **200** — re-tested this pass, not inherited.
+  Star figures in the new rows are **carried from `trending.md`** and marked `—` where none exists.
 ## Pass 273 — the Moodle door was permissive all along, and this base had measured it four times without shelving it
 
 🔴 **Stated first, because it is a finding about this KB and not about the market.** Both MIT rows added
@@ -164,58 +203,36 @@ Evidence: [`verified-repos.2026-10-17-p273.tsv`](../evidence/verified-repos.2026
 [`p273-moodle-plugin-governance.2026-10-17-p273.tsv`](../evidence/p273-moodle-plugin-governance.2026-10-17-p273.tsv).
 Wiring recipe: **`P23`** in [`compose/patterns.md`](../compose/patterns.md). Trend: **`T41`**.
 
-## Pass 269 — the African agent tier exists, and the question it answers is not the one that was asked
+## Pass 272 — this file gains no rows for the seventh consecutive pass, and the count it publishes was wrong
 
-Pass 267 instructed *"Kenya, Nigeria, South Africa and Egypt as four separate queries, never
-paired"*, and pass 268 restated it as the cheapest fix for **"EMEA means Europe in this base."**
-Pass 269 ran it. Four legs, four substantive returns — and on the **agent** shelf specifically, the
-result is sharper than "nothing found".
+⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) ·
+[`p272-websearch.2026-10-17-p272.tsv`](../evidence/p272-websearch.2026-10-17-p272.tsv).
 
-🟢 **Two African-context education agents are now located and graded**, which is two more than this
-base has ever carried: [`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) (South
-Africa, Grades 8–12) and [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) (Nigeria).
-Both are in the licence-UNVERIFIED table above, because **neither serves a grant on any channel** —
-no payload on 19 paths, and no `license` field in the package metadata either.
+🔵 **Seventh consecutive measured nil on education-specific agent supply.** The generic legs ran last, per
+`p269`. Everything returned was already shelved (`HKUDS/DeepTutor`, whose **Apache-2.0** grant `p272`
+re-read at payload: `main/LICENSE`, **11,408 B**) or unresolvable to a slug (`Bloom`, `Lumen` — named in a
+topic listing with no owner, recorded as an informed gap on `repos/foundations.md`, **not** written in as
+rows).
+🔴 **RETRACTED IN PASS 274 — BOTH LIMBS, AND THE COUNTER-EVIDENCE FOR ONE OF THEM IS 410 LINES ABOVE
+THIS SENTENCE.** `Bloom` is [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom), **MIT, `1 069` B**,
+and it has been **a row in this file's own build-on tier** since `p264` — the sentence above declares
+unresolvable a slug this file tables. `Lumen` is [`ahmedEid1/Lumen`](https://github.com/ahmedEid1/Lumen),
+resolved from this base's **own `p195` licence census** via
+[`compose/code/p196-population-diff/`](../compose/code/p196-population-diff/), and it is **GPL-3.0 at
+payload (`35 149` B) against an MIT badge in its own README** — see
+[`repos/foundations.md`](../repos/foundations.md). 🔵 **Neither needed a search. `p272` spent a leg, and
+`p273` ranked spending another, on two slugs this base already held** — `T25`'s finding (*"the most
+productive research channel was this knowledge base"*) re-earned, and `T34`'s amendment (*grep the other
+shelves before re-declaring an absence*) **failed on a gap whose counter-evidence was in the same
+file.** 🟢 **Nothing was added to meet the brief's five-row minimum; this file holds 42 rows and clears it
+many times over.**
 
-🔴 **The gap's grade therefore goes UP, not away.** This base previously recorded, in
-[`agents/trending.md`](trending.md), that an Africa-focused leg *"returned no repository-level asset
-— only a training provider, not code."* That was a **search-level** absence. Pass 269 replaces it
-with a **payload-level** one: the repositories exist, they were resolved by ref, probed on 19 paths
-and read in their metadata, **and the grant is missing in both.** 🔵 **An absence measured at the
-payload is a different and stronger claim than an absence measured at the query**, and it is the one
-to brief: *"there is African-built education-AI code, and none of it is licensed for you to ship."*
-
-🟡 **The two rows fail differently, and the difference is the actionable part.** `edunaija-os` is
-simply silent. `EduTwin-Africa` ships the **placeholder text** — *"Add the project's chosen license
-here before publishing"* — which means its author has already written down that the grant is
-missing. **That is the one row on this shelf where a request has a plausible answer**, and it costs
-an email rather than a fork. Contrast [`ls1intum/Athena`](https://github.com/ls1intum/Athena), which
-has survived 76 path/ref probes in silence across three passes.
-
-🔵 **And a naming hazard worth one line in any proposal.** `Valexxy/edunaija-os` is **not** the
-EduNaija AI Tutor published at ACL AfricaNLP 2026 (DOI `10.18653/v1/2026.africanlp-main.11`) — that
-is a five-agent LangChain + FAISS system with English/Yoruba/Hausa/Igbo support, **whose code this
-pass could not locate at all**. The repository that shares its name is a starter codebase for a
-different thing. **The paper is not the repo, and the repo is not the paper.**
-
-## Pass 268 provenance note — Iris and Pyris are MIT at PAYLOAD grade, and serve no README
-
-Both rows were re-probed this pass because `P17` in [`compose/patterns.md`](../compose/patterns.md)
-now depends on them.
-
-🟢 **The grant is stronger than this file previously recorded.** Both
-[`ls1intum/Iris`](https://github.com/ls1intum/Iris) and [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris)
-serve **MIT at `main/LICENSE`**, and the copyright line reads **"Copyright (c) 2023 TUM Applied
-Software Engineering"** — so TU Munich provenance for these two is **payload-quoted**, not
-README-quoted, which is a grade *above* the evidence this file carries for Artemis itself.
-
-🔴 **And a defect worth recording: neither repository serves a README.** `README.md`, `readme.md`,
-`README.rst` and `README` were all probed across `main`/`master`/`develop` — **404 on every
-combination**, while `LICENSE` returns 200 on `main`. The descriptions in the rows above therefore
-have **no source inside these repositories**; they derive from the Artemis documentation. 🔵 **Record
-it rather than quietly relying on it:** a row whose capability claims cannot be traced to its own
-repository is fine to build on and wrong to quote verbatim to a client. Confirm Iris's pedagogical
-constraints against the Artemis docs, or against a deployment, before they reach a proposal.
+🔴 **The defect this file earned: it was the better source and the other shelf never caught up.** This
+file's MCP-server count said **eleven** in prose while **12 distinct slugs** are actually tabled, and
+`intel/trends.md` said **five**. Passes 267 and 268 added servers and updated **one shelf**. Both numbers
+are corrected and the generalisation is `T37`: **a quantity inside a gap statement is a carried datum —
+re-count it from the rows, on every shelf that states it.**
 
 ## Licence corrections this pass
 
@@ -249,6 +266,14 @@ generated material is a procurement requirement (it is, increasingly, in EMEA).
 
 ### Agents over the systems the client already runs (MCP)
 Pass 268 takes this from four servers to **eleven**, and from two LMSs to **three**. 🟢 **Pass 273 takes it to thirteen, and ends Moodle's status as the one LMS reachable only through copyleft.**
+🔴 **PASS 274, by re-count rather than by search: this file tabled `15` MCP server slugs when the prose
+said thirteen and `T21` said twelve — and with this pass's five additions it tables `20`. `SIX`
+platforms are reachable, not three** — Canvas, Moodle, Google Classroom / Workspace,
+**Brightspace / D2L**, **Blackboard Ultra** and **Open edX**. The last three were on
+[`agents/trending.md`](trending.md) with payload-read grants and never reached this table. The number
+is now **derived** by [`compose/code/p274-quantity-recount/recount.py`](../compose/code/p274-quantity-recount/recount.py)
+rather than incremented by hand (`T43`); the three platform rows below were **payload-read first-hand in
+`p274`** ([ledger](../evidence/verified-repos.2026-10-17-p274.tsv)).
 
 | Server | Licence | Stars | What it reaches |
 |--------|---------|-------|-----------------|
@@ -260,6 +285,11 @@ Pass 268 takes this from four servers to **eleven**, and from two LMSs to **thre
 | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | 49 | No external system — it **is** the tutoring loop |
 | [adriasantacreu/google-classroom-mcp](https://github.com/adriasantacreu/google-classroom-mcp) | MIT *(metadata)* | 2 | **Google Classroom** — 46 tools: courses, assignments, grading, rosters, Drive |
 | [Kimmahone/edu-workspace-mcp](https://github.com/Kimmahone/edu-workspace-mcp) | **MIT** | 1 | **Google Workspace for Education** — Classroom *plus* Docs, Sheets, Slides, Forms, Drive (29 tools) |
+| 🆕 [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | **MIT** *(`1 070` B, `p274`)* | — | **Canvas, with the consent problem solved at the tool boundary** — courses, assignments, submissions, rubrics, quizzes; grade and comment. 🟢 **Ships an opt-in FERPA mode that PSEUDONYMISES student names and contact details before tool output reaches the model.** The one row on this shelf that answers the blocker the market actually states (`T45`) |
+| 🆕 [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | **MIT** *(`1 068` B, `p274`)* | 59 | **Brightspace / D2L** — grades, assignments, rosters. **A fourth LMS this table never listed**; two declared derivatives and a Rust implementation sit beside it on [`trending.md`](trending.md) |
+| 🆕 [felipedias-ie/blackboard-mcp](https://github.com/felipedias-ie/blackboard-mcp) | **MIT** *(`1 084` B, `p274`)* | 1 | **Blackboard Ultra** — courses, content, grades, deadlines. 🔴 **`intel/market.md` tells a studio to pitch REPLACING Blackboard. It has an MIT doorway** — the error `p267` corrected for Canvas, left standing for the other NA higher-ed incumbent |
+| 🆕 [NiccoloSalvini/mcp-blackboard-ucsc](https://github.com/NiccoloSalvini/mcp-blackboard-ucsc) | **MIT** *(`1 073` B, `p274`)* | 0 | **Blackboard over the PUBLIC REST API** — no institutional plugin to get approved, which is the cheapest pilot shape on this table |
+| 🆕 [blend-ed/tutor-contrib-openedxmcp](https://github.com/blend-ed/tutor-contrib-openedxmcp) | 🔴 **AGPL-3.0** *(`34 524` B, `p274`; default ref `master`)* | 1 | **Open edX** — 33 tools, Tutor plugin + a Django facade at `/api/mcp/`. **A sixth platform.** ⚠️ AGPL **and** `/health` unauthenticated: price the network clause and fix the endpoint before any pilot |
 | [pengusto/google-classroom-mcp](https://github.com/pengusto/google-classroom-mcp) | **MIT** | — | **Google Classroom** — a correctly-attributed fork of `adriasantacreu` (dual copyright in the payload) |
 | [alanmagno1/google-classroom-mcp](https://github.com/alanmagno1/google-classroom-mcp) | **MIT** | 0 | **Google Classroom** — multi-account; Spanish About line, English README |
 | [OmarNiazi/classroom-mcp](https://github.com/OmarNiazi/classroom-mcp) | **MIT** | 0 | **Google Classroom** — student-side, read-only by construction |
@@ -445,21 +475,56 @@ does not.
 CC-BY-NC-SA-4.0 as **organisational template boilerplate**, not as a decision (`p269`, `T27`) — so
 it is the licence on this base **most likely to move if asked.**
 
-## Pass 272 — this file gains no rows for the seventh consecutive pass, and the count it publishes was wrong
+## Pass 269 — the African agent tier exists, and the question it answers is not the one that was asked
 
-⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
-[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) ·
-[`p272-websearch.2026-10-17-p272.tsv`](../evidence/p272-websearch.2026-10-17-p272.tsv).
+Pass 267 instructed *"Kenya, Nigeria, South Africa and Egypt as four separate queries, never
+paired"*, and pass 268 restated it as the cheapest fix for **"EMEA means Europe in this base."**
+Pass 269 ran it. Four legs, four substantive returns — and on the **agent** shelf specifically, the
+result is sharper than "nothing found".
 
-🔵 **Seventh consecutive measured nil on education-specific agent supply.** The generic legs ran last, per
-`p269`. Everything returned was already shelved (`HKUDS/DeepTutor`, whose **Apache-2.0** grant `p272`
-re-read at payload: `main/LICENSE`, **11,408 B**) or unresolvable to a slug (`Bloom`, `Lumen` — named in a
-topic listing with no owner, recorded as an informed gap on `repos/foundations.md`, **not** written in as
-rows). 🟢 **Nothing was added to meet the brief's five-row minimum; this file holds 42 rows and clears it
-many times over.**
+🟢 **Two African-context education agents are now located and graded**, which is two more than this
+base has ever carried: [`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) (South
+Africa, Grades 8–12) and [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) (Nigeria).
+Both are in the licence-UNVERIFIED table above, because **neither serves a grant on any channel** —
+no payload on 19 paths, and no `license` field in the package metadata either.
 
-🔴 **The defect this file earned: it was the better source and the other shelf never caught up.** This
-file's MCP-server count said **eleven** in prose while **12 distinct slugs** are actually tabled, and
-`intel/trends.md` said **five**. Passes 267 and 268 added servers and updated **one shelf**. Both numbers
-are corrected and the generalisation is `T37`: **a quantity inside a gap statement is a carried datum —
-re-count it from the rows, on every shelf that states it.**
+🔴 **The gap's grade therefore goes UP, not away.** This base previously recorded, in
+[`agents/trending.md`](trending.md), that an Africa-focused leg *"returned no repository-level asset
+— only a training provider, not code."* That was a **search-level** absence. Pass 269 replaces it
+with a **payload-level** one: the repositories exist, they were resolved by ref, probed on 19 paths
+and read in their metadata, **and the grant is missing in both.** 🔵 **An absence measured at the
+payload is a different and stronger claim than an absence measured at the query**, and it is the one
+to brief: *"there is African-built education-AI code, and none of it is licensed for you to ship."*
+
+🟡 **The two rows fail differently, and the difference is the actionable part.** `edunaija-os` is
+simply silent. `EduTwin-Africa` ships the **placeholder text** — *"Add the project's chosen license
+here before publishing"* — which means its author has already written down that the grant is
+missing. **That is the one row on this shelf where a request has a plausible answer**, and it costs
+an email rather than a fork. Contrast [`ls1intum/Athena`](https://github.com/ls1intum/Athena), which
+has survived 76 path/ref probes in silence across three passes.
+
+🔵 **And a naming hazard worth one line in any proposal.** `Valexxy/edunaija-os` is **not** the
+EduNaija AI Tutor published at ACL AfricaNLP 2026 (DOI `10.18653/v1/2026.africanlp-main.11`) — that
+is a five-agent LangChain + FAISS system with English/Yoruba/Hausa/Igbo support, **whose code this
+pass could not locate at all**. The repository that shares its name is a starter codebase for a
+different thing. **The paper is not the repo, and the repo is not the paper.**
+
+## Pass 268 provenance note — Iris and Pyris are MIT at PAYLOAD grade, and serve no README
+
+Both rows were re-probed this pass because `P17` in [`compose/patterns.md`](../compose/patterns.md)
+now depends on them.
+
+🟢 **The grant is stronger than this file previously recorded.** Both
+[`ls1intum/Iris`](https://github.com/ls1intum/Iris) and [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris)
+serve **MIT at `main/LICENSE`**, and the copyright line reads **"Copyright (c) 2023 TUM Applied
+Software Engineering"** — so TU Munich provenance for these two is **payload-quoted**, not
+README-quoted, which is a grade *above* the evidence this file carries for Artemis itself.
+
+🔴 **And a defect worth recording: neither repository serves a README.** `README.md`, `readme.md`,
+`README.rst` and `README` were all probed across `main`/`master`/`develop` — **404 on every
+combination**, while `LICENSE` returns 200 on `main`. The descriptions in the rows above therefore
+have **no source inside these repositories**; they derive from the Artemis documentation. 🔵 **Record
+it rather than quietly relying on it:** a row whose capability claims cannot be traced to its own
+repository is fine to build on and wrong to quote verbatim to a client. Confirm Iris's pedagogical
+constraints against the Artemis docs, or against a deployment, before they reach a proposal.
+

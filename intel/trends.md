@@ -21,7 +21,16 @@ updated: 2026-10-17
 > and the over-broad retraction that an English-only search produced
 > ([evidence](../evidence/p271-websearch.2026-10-17-p271.tsv)).
 >
-> **`T36`–`T39` are new in pass 272** — the regional market picture resolving to a single upstream
+> **`T42`–`T45` are new in pass 274** — the threshold that was tuned to exclude its own defect's
+> signature, the three amendments that were written and never built (one of which is now code), the
+> licence this base refuted twice and which was MIT all along, and the market's stated blocker turning
+> out to be this base's own recommended architecture
+> ([window sweep](../evidence/arithmetic-sweep.2026-10-17-p274.tsv),
+> [re-count](../evidence/quantity-recount.2026-10-17-p274.tsv),
+> [repos](../evidence/verified-repos.2026-10-17-p274.tsv),
+> [legs](../evidence/p274-websearch.2026-10-17-p274.tsv)).
+>
+> **`T40`–`T41` are new in pass 273.** **`T36`–`T39` are new in pass 272** — the regional market picture resolving to a single upstream
 > publisher (so that this base's "independent corroboration" was circular), a gap that is true but
 > carried at a stale *magnitude*, a publisher mislabelling its own CAGR window in four regional
 > databooks, and the measurement that this base's own byte-count practice cannot discriminate
@@ -456,10 +465,15 @@ Where the client runs Moodle, the honest answer is the AGPL open-core server or 
 against Moodle Web Services — i.e. actual engineering, not an install.
 
 ⚠️ **And the category is invisible to indexes:** the `mcp-server-education` GitHub topic is
-**still empty** while **12 distinct education MCP server slugs are shelved on `agents/top.md`**
-(11 permissive, 1 all-rights-reserved). None was found through a topic listing.
-🔴 **This sentence read "five" until pass 272** — a true gap carried at a stale magnitude, because
-passes 267 and 268 added servers and updated the count on `agents/top.md` only. See `T37`.
+**still empty** while **20 distinct education MCP server slugs are shelved on `agents/top.md`**
+(**15** when `p274` measured it, plus the five that pass shelved from `trending.md`).
+None was found through a topic listing.
+🔴 **This sentence read "five" until pass 272 and "12" until pass 274** — a true gap carried at a
+stale magnitude, because passes 267, 268 and 273 added servers and updated the count on one shelf at
+a time. 🟢 **`p274` stopped counting by hand:** the number is now derived by
+[`compose/code/p274-quantity-recount/recount.py`](../compose/code/p274-quantity-recount/recount.py),
+which re-derives every registered quantity from the rows and printed **3 STALE of 5** on its first
+run. See `T37` and `T43`.
 
 **Confidence: high** on every licence and metric (payload + page, first-hand). ⚠️ `canvas-mcp`'s
 tool count is published inconsistently **on its own page** — About says 102, the README says 126 —
@@ -533,6 +547,29 @@ instructional design as the paid work. See [`compose/patterns.md`](../compose/pa
 ships with the code. Discovering otherwise after signature is how this becomes a loss.
 
 ## T24 — Three LMSs are now MCP-addressable, and the most open one is the least adopted
+
+> 🔴 **CORRECTED IN PASS 274: it is SIX, and five of the six are reachable under MIT.** `p273`'s
+> backlog item 7 asked for `T37` to be applied as a standing re-count; it was built
+> ([`compose/code/p274-quantity-recount/`](../compose/code/p274-quantity-recount/)) and this is what
+> it found. **Every row below was payload-read first-hand in `p274`**
+> ([ledger](../evidence/verified-repos.2026-10-17-p274.tsv)):
+>
+> | platform | server | licence (payload, `p274`) |
+> |---|---|---|
+> | **Canvas** | `vishalsachdev/canvas-mcp` · 🆕 `bruchris/canvas-lms-mcp` *(`1 070` B, **opt-in FERPA pseudonymisation**)* | 🟢 **MIT** |
+> | **Moodle** | `MarcosNahuel/moodle-mcp` *(teacher, writes)* · `Jawadh-Salih/moodle-mcp-server` *(student, Go)* | 🟢 **MIT** *(`p273`)* |
+> | **Google Classroom / Workspace** | `Kimmahone/edu-workspace-mcp` *(29 tools, whole tenant)* | 🟢 **MIT** |
+> | **Brightspace / D2L** | `RohanMuppa/brightspace-mcp-server` *(`1 068` B, reproduced to the byte)* | 🟢 **MIT** |
+> | **Blackboard Ultra** | `felipedias-ie/blackboard-mcp` *(`1 084` B)* · `NiccoloSalvini/mcp-blackboard-ucsc` *(`1 073` B, public REST API)* | 🟢 **MIT** |
+> | **Open edX** | `blend-ed/tutor-contrib-openedxmcp` *(`34 524` B, 33 tools)* | 🔴 **AGPL-3.0** |
+>
+> 🔴 **And the correction has a commercial consequence that reaches past the count.**
+> [`intel/market.md`](market.md)'s players table tells a studio that **Blackboard / Anthology** is a
+> *"replacement engagement; the incumbent's lock-in is the pitch."* **Blackboard has two MIT MCP
+> doorways on this base's own trending shelf.** 🔵 **That is exactly the error `p267` corrected for
+> Canvas** — *"the opening is the opposite of migration"* — **left standing for the other North
+> American higher-ed incumbent.** The `AGPL platform, MIT doorway` pattern now holds for **five**
+> platforms, and nobody has to be migrated off any of them.
 
 Pass 267 established that the LMS is becoming MCP-addressable and that *"the two big LMSs are not
 equally open about it."* Pass 268 found the third, and it breaks the implied correlation between
@@ -805,6 +842,16 @@ This base's global market-size table is a **narrow band ($8.7–10.6B for 2026)*
 publishers. Its **regional** figures are nothing like that well supported, and pass 270 measured
 how badly:
 
+> 🔴 **CORRECTED IN PASS 274 — the sentence above is superseded and the word "narrow" is wrong.**
+> `p273` added Grand View's current vintage (`$11.4B`) to that table and corrected the band **on
+> `intel/market.md` only**; this entry kept the number it was written with. **The 2026 band is
+> `$8.7–11.4B`, 31.0% wide**, across **four independent models** (`T40`), not five publishers.
+> 🔵 **This is `T37`'s species — a quantified claim decaying in its quantity on the shelf that was
+> not updated — and it is the SECOND instance between these same two files.** The first was the MCP
+> count. ⚠️ **It also undercuts this entry's own argument in the base's favour:** `T30` contrasts a
+> tight global band against loose regional figures. **The global band is not tight.** The
+> regional-vs-global point survives; the adjective does not.
+
 | Europe, AI in education | 2026 | Horizon | CAGR |
 |---|---|---|---|
 | carried by this base ~200 passes | **$2.64B** | $8.0B by 2030 | 31.9% |
@@ -908,6 +955,20 @@ vintages, not one growth curve.
 **The threshold, therefore: flag at >25%, investigate at >50%, and treat a multiple as a structural
 error rather than a disagreement.** A check that fires on every row is a check nobody runs. The carried
 NA cell was out by **2.9×** — it would have cleared no threshold at all, which is the point.
+
+> 🔴 **RETIRED IN PASS 274, and the calibration table above is wrong in two rows.** `p272` already
+> refuted *"10–16% is the normal noise of this literature"* for the APAC and NA cells (`T38`).
+> `p274` ran the window test on **every** cell and refuted it for the M&M rows too: **NA M&M's 16%
+> closes to `+0.22%` at a six-year span and LATAM M&M's to `+0.20%`.** So the row annotated
+> *"rounding + window label"* was **window label, no rounding** — and the row annotated *"window
+> rounding 🟢"* (LATAM, Grand View, ~5–7%) **closes at no window at all and is a SPLICE.**
+> 🟢 **The replacement rule is simpler and cheaper than a threshold:** a window test is **one
+> multiplication**, so **run it on every cell and classify, rather than filtering by size** —
+> `PASS` (closes as labelled) · `WINDOW_FIX` (closes at ±1 year: a year label is wrong) · `SPLICE`
+> (closes at neither: two report vintages, never publish as a series).
+> 🔵 **A threshold is a filter on which cells get checked; the defects on this shelf were in cells
+> under the filter.** `p271`'s *">25%"* would not have fired on **any** of the five window defects
+> now established. See `T42`.
 
 ## T33 — A source is not reliable per-clause, and this base was quoting half of a sentence it had thrown away
 
@@ -1060,7 +1121,8 @@ zero searches, the cheapest audit available"* — was run over **19 cells**
 | Grand View databook | as the page LABELS the window | read one year earlier |
 |---|---|---|
 | **Europe** `$1,520.1M → $8,003.4M @ 31.9%` | labelled **2025–2030** → **+31.9%** 🔴 | **2024–2030** → **−0.0%** 🟢 |
-| **MEA** `$280.8M → $1,645.9M @ 32.6%` | labelled **2025–2030** → **+43.0%** 🔴 | **2024–2030** → **+7.8%** 🟢 |
+| **MEA** `$280.8M → $1,645.9M @ 32.6%` | labelled **2025–2030** → **+43.0%** 🔴 | **2024–2030** → **+7.8%** 🔴 **NOT GREEN — `p274`.** `+7.8%` is not a resolution; this cell closes at **no** window and is a **SPLICE**, which `market.md` already said in prose (*"two report vintages, not one growth curve"*) while this table ticked it |
+| 🆕 **GLOBAL** `$8.3B → $57.2B @ 25.9%` | printed baseline **2025** → **−8.40%** 🔴 | window **2026–2033** → **−0.07%** 🟢 — **added in `p274`: the house's signature is in its GLOBAL cell too, and that cell is this base's headline** |
 | **APAC** `$2,282.9M → $18,214.1M @ 28.1%` | printed baseline **2025** → **+10.0%** 🟡 | window **2026–2033** → **+0.0%** 🟢 |
 | **North America** `$3,113.8M → $19,388.3M @ 24.2%` | printed baseline **2025** → **+10.0%** 🟡 | window **2026–2033** → **−0.0%** 🟢 |
 
@@ -1197,3 +1259,197 @@ extension — the root grant describes the source, and the host's licence descri
 actually deploys.** Ask of every permissive row: *is there a sub-directory here that only runs inside
 somebody else's GPL?* This base's instrumentation does not currently ask it, which is why four correct
 measurements of this repository never surfaced the question.
+
+## T42 — A threshold is a filter on which cells get checked, and the defects were under the filter
+
+*(new in pass 274)*
+
+`T32` gave this base its arithmetic oracle and then gave it a **threshold**: *"flag at >25%,
+investigate at >50%."* `T38` refuted that threshold for two cells. 🔴 **`p274` ran the window test on
+all 28 market cells on these shelves and the threshold fails systematically: not one of the five
+established window defects would have fired it.**
+
+| cell | mismatch as labelled | would `>25%` fire? | what it actually is |
+|---|---|---|---|
+| Europe, Grand View | −24.17 % | 🔴 **no** *(and it is the one `p272` DID catch)* | `WINDOW_FIX` |
+| APAC, Grand View | −9.12 % | 🔴 no | `WINDOW_FIX` |
+| North America, Grand View | −9.07 % | 🔴 no | `WINDOW_FIX` |
+| **Global, Grand View** | **−8.40 %** | 🔴 no | `WINDOW_FIX` — **the headline cell** |
+| North America, M&M | −13.53 % | 🔴 no | `WINDOW_FIX` — **never swept at all** |
+| LATAM, M&M | −10.30 % | 🔴 no | `WINDOW_FIX` — **swept and marked `ok`** |
+
+🟢 **The replacement is not a better threshold. It is the removal of the threshold**, because the test
+it was rationing costs one multiplication:
+
+```
+PASS        |projected/published − 1| ≤ 1 %  at the labelled span
+WINDOW_FIX  closes at span ± 1 year       → a YEAR LABEL on the row is wrong
+SPLICE      closes at neither             → TWO REPORT VINTAGES; never publish as a series
+```
+
+🔵 **Why a threshold was the wrong instrument in the first place.** It was calibrated on the *size* of
+the error, and the errors on this shelf are not large — they are **structural and small**. A one-year
+window offset on a 25–32 % CAGR produces a mismatch of roughly the CAGR divided by the span: **8–14 %**,
+which sits precisely in the band `p271` defined as noise. 🔴 **The threshold was tuned to exclude the
+defect's own signature.**
+
+⚠️ **And a second-order finding worth more than the first: the two ledgers use OPPOSITE sign
+conventions.** `p272` reports `published/projected − 1`; `p274` reports `projected/published − 1`. **The
+same LATAM cell reads `+11.5 %` in one ledger and `−10.3 %` in the other.** A threshold compared across
+two conventions was never comparing anything. **Every ledger on this base now states its convention in
+its header.**
+
+**For the studio, and this generalises past education:** a client's data-quality rule that fires on
+*magnitude* will miss every defect whose mechanism bounds its own size — unit errors, off-by-one
+periods, vintage splices. **Classify by mechanism, not by size, whenever the test is cheap enough to
+run on everything.** Here it is one multiplication per row.
+
+**Confidence: high.** 28 cells, pure arithmetic over published endpoints, reproducible from
+[`compose/code/p274-window-sweep/window_sweep.py`](../compose/code/p274-window-sweep/window_sweep.py)
+and [its ledger](../evidence/arithmetic-sweep.2026-10-17-p274.tsv).
+
+## T43 — An amendment that is not built is not an amendment, and this base had three of them
+
+*(new in pass 274)*
+
+🔴 **`T37` (`p272`) wrote the rule: *"a quantity inside a gap statement is a carried datum — re-count
+it from the rows, on every shelf that states it."* `p273` ranked building it seventh. Nobody ran it,
+and in the two passes between the amendment and its implementation the base published three more
+stale quantities.**
+
+`p274` built it — 90 lines, no network
+([`recount.py`](../compose/code/p274-quantity-recount/recount.py)) — and the first run printed
+**3 STALE of 5 registered claims**:
+
+| claim | published | measured | where |
+|---|---|---|---|
+| MCP server slugs on `agents/top.md` | **13** | **15** | `agents/top.md` prose (`p273`) |
+| MCP server slugs on `agents/top.md` | **12** | **15** | `T21`, this file (`p272`) |
+| LMS platforms reachable by MCP | **3** | **6** *(every one payload-verified)* | `T24`, this file + `agents/top.md` |
+| permissive rows in the build-on tier | 23 | 23 🟢 | `agents/top.md:61` |
+
+🔵 **And then the instrument caught `p274` itself, which is the part worth keeping.** This pass shelved
+five of the missing servers; the next run read **20** against the **15** the pass had just written down,
+and flagged its own prose `STALE` before it was committed. 🟢 **Both shelves now say 20 and the register
+is green** — but the useful fact is that **a pass cannot hand-maintain a count it is simultaneously
+changing**, which is the whole argument for deriving it.
+
+⚠️ **Three defects in the instrument's own first draft, recorded because each is the thing it exists to
+catch.** (a) It classified a slug by the **row text**, which filed `felipedias-ie/blackboard-mcp` under
+**Canvas** because the row mentions Canvas in prose — fixed to read the **slug first**. (b) It accepted a
+slug whose *line* mentioned MCP, which let `chamilo/chamilo-lms` and `huggingface/transformers` into a
+per-platform tally — fixed to require the marker **in the slug**, which makes the count a **floor**.
+(c) A word-boundary pattern silently dropped **`AStheTECH/mewcp-google-classroom`** and
+**`blend-ed/tutor-contrib-openedxmcp`**, whose slugs carry `mcp` without a delimiter. 🔵 **A counting
+instrument's own false negatives are invisible in its output** — the only way these surfaced was reading
+the per-platform lists it printed, which is why it prints them.
+
+🔵 **The pattern across the three stale rows is the same one `T31` named and it is not carelessness:**
+each count was correct when written and each was written in a *different file* from the rows it counts.
+**A number in prose and the rows it describes are two artefacts, and only one of them gets edited when
+supply arrives.**
+
+🟢 **The general rule, and it is the one `p274` would hand a client:** **a quantity in prose is a
+cache.** Caches need invalidation, and the only reliable invalidation is **deriving the number at read
+time from the thing it describes.** Three amendments on this base were written as instructions to
+future passes (`T29`'s destination grep, `T34`'s cross-shelf grep, `T37`'s re-count) — 🔴 **and the two
+that stayed instructions were both violated by the pass that came next.** `T37` is now **code**, and
+`make recount` is the cheapest check on this base.
+
+⚠️ **What this does NOT fix:** the register (`recount.py`) is hand-maintained, so a quantity nobody
+registers is still uncounted. **The instrument moves the failure from "the number is stale" to "the
+number is unregistered", which is a strictly better failure** — an unregistered number can be found by
+grepping for digits, and a stale one cannot be found at all.
+
+**Confidence: high** — the instrument is runnable and its output is committed.
+
+## T44 — A licence can be refuted by a byte ceiling and a slug guess, and both read exactly like "no grant"
+
+*(new in pass 274)*
+
+🔴 **This base recorded, in two separate passes, that `gegok12`'s MIT claim *"died at payload"*. It did
+not. `Gego-K12/gegok12` serves MIT at `main/LICENSE`, HTTP 200, `1 150` B, and `p274` read the whole
+payload and diffed it.**
+
+```
+observed delta vs stock MIT  = +82 B
+  SPDX HTML comment line     = +39 B   <!-- SPDX-License-Identifier: MIT -->
+  four typographic quotes    =  +8 B   “Software” and “AS IS”, 3 B each in UTF-8
+  longer copyright holder    = +35 B   "GegoSoft Technologies and GegoK12 Contributors"
+  accounted                  = +82 B   ← exactly
+normalised terms diff vs stock: differs ONLY in line-wrap column.  Rider keywords: zero.
+```
+
+🔵 **`T39` proved a byte count cannot discriminate a grant DOWNWARD** — six unmodified Apache files
+spanning 1,252 B, straddling stock in both directions. 🔴 **This is the same proof UPWARD, and it
+costs more**, because this base operates an **MIT ceiling** (`p1054`) and `1 150` B is `81` B above the
+cluster its MIT rows sit in (`1 065`–`1 084` B). **Every byte of that excess is a thing that is not a
+term**: a machine-readable identifier, four curly quotation marks, and the name of the copyright holder.
+
+🔴 **And a second mechanism was in play, which is why the refutation looked solid.** The slug.
+`gegok12/gegok12`, `GegoK12/gegok12` and `gegok12/school-erp` **all fail to resolve, and they fail
+IDENTICALLY to a repository that does not exist.** Only `Gego-K12/gegok12` resolves. 🔵 **`T15`
+documented this trap for Sunbird** (*"a kebab-case guess returns something indistinguishable from
+absence"*) — **here it took down a licence verdict, twice, and the shelf recorded the absence as a
+measurement.**
+
+🟢 **Two rules follow, and both are cheap.**
+1. **A byte delta is a trigger for a diff in both directions.** `T39` said it for short payloads;
+   **a long payload is no more suspicious than a short one.** An SPDX comment, a UTF-8 quotation mark
+   and a corporate copyright line will all push an unmodified grant above any ceiling.
+2. 🔴 **A negative licence result must record the SLUG and REF it probed, or it is not a measurement.**
+   *"Died at payload"* is a claim about a repository; **a 404 on a slug that does not exist is a claim
+   about a string.** This base's own ledger format already has the columns — the two refutations did
+   not use them.
+
+**The commercial cost of this one false negative:** `Gego-K12/gegok12` is a **self-hosted school ERP
+under MIT** whose fork network this base has already measured as **98 forks, near-zero fork stars, and
+institution-shaped fork names across India, Indonesia and Vietnam** (`P933`: the signature of software
+institutions RUN rather than developers EXTEND). 🔵 **This base's standing APAC gap is platform supply.
+It refused an MIT platform row, twice, in the region where it says it has none.** ⚠️ **Corporate origin
+is not established** — the copyright names GegoSoft Technologies, and a holder name is not a provenance
+read — so it is shelved as **deployment-placed APAC on the base's own fork evidence**, not as
+APAC-origin.
+
+**Confidence: high.** Payload read, diffed, byte-accounted and rider-greped first-hand this pass
+([ledger](../evidence/verified-repos.2026-10-17-p274.tsv)).
+
+## T45 — The market's stated blocker is exactly this base's recommended architecture, and one row already answers it
+
+*(new in pass 274)*
+
+Two independent sources, two regions, one finding:
+
+| source | what it says |
+|---|---|
+| **GovTech**, reporting **Bridges 2026** | **Few districts and colleges have deployed AI agents in day-to-day operations**, and leaders *"remain cautious about granting the tools access to sensitive systems and data"* |
+| **EdTech Hub** (2026-03-30), Southeast Asia | Education-AI initiatives there *"remain **short-term and project-based**"* |
+
+🔴 **Read those against `T21`/`T24`.** This base's strongest supply finding is **agents over the
+systems the client already runs** — six platforms, five of them reachable under MIT. **The buyer-side
+blocker named above is that exact move:** granting an agent access to the system of record. 🔵 **So the
+pilots are not stalling on model quality or on licence cost. They are stalling on consent scope** —
+which is what `T24` predicted from the supply side (*"the OAuth consent a pilot asks a school for is
+much wider than the feature being piloted … in EMEA that is a GDPR conversation before an engineering
+one"*).
+
+🟢 **And the answer is already a row.** `bruchris/canvas-lms-mcp` (**MIT**, `1 070` B, payload-read
+`p274`) ships an **opt-in FERPA mode that pseudonymises student names and contact details before tool
+output reaches the model**. 🔵 **That inverts the pilot conversation**: the question stops being *"will
+you let the model see your students"* and becomes *"the model never sees your students — here is the
+boundary, in configuration you control."*
+
+⚠️ **And the counter-example is in the same result set, which is why this is an architecture finding
+and not a product recommendation.** `DMontgomery40/mcp-canvas-lms` carries **its own security
+disclosure of a broken access control that exposed other students' personal information**. 🔵 **Same
+category, same description in a search result, opposite risk posture** — the `PageLM`/`AStheTECH`
+pattern (`T24`) in its **security** rather than its **licence** dimension. **Read the disclosure
+history, not just the grant.**
+
+**For the studio, as a scoping instruction:** price **data minimisation at the tool boundary** as a
+first-class deliverable in every MCP engagement — pseudonymisation, per-tool scoping, an audit trail of
+what the model actually read. 🟢 **It is the difference between a pilot that renews and one that is the
+reason the district's AI committee says no.** See [`compose/patterns.md`](../compose/patterns.md) `P24`.
+
+**Confidence: medium-high.** The two market sources are secondary (trade press and a research
+organisation's brief); the repository rows are payload-verified first-hand.

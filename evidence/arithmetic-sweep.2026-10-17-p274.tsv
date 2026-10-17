@@ -1,0 +1,33 @@
+# p274 — T32 v3 window sweep. PASS <=1.0% as labelled · ROUNDING <=2.0% · WINDOW_FIX closes at span+/-1y · SPLICE closes at neither.
+# SIGN CONVENTION: mismatch = projected/published_horizon - 1.  p272's ledger used published/projected - 1, so the SAME cell reads -10.3 here and +11.5 there. Two conventions is one reason a '10% threshold' was never comparable across cells.
+# p2026_* : the 2026 point read forward from the printed base vs backward from the horizon.  A non-zero split means a published '2026 market size' is not one number.
+cell	base	horizon	labelled_span_y	labelled_cagr_pct	implied_cagr_pct	mismatch_as_labelled_pct	closing_span_y	mismatch_after_fix_pct	p2026_from_base	p2026_from_horizon	p2026_split_pct	verdict	p272_or_p273_verdict	where
+global ResourcERA 2026->2030	10.4	32.27	4	31.2	32.72	-4.51	4		10.4	10.8909	-4.51	SPLICE	ok	market.md:spread
+global GVR superseded 2025->2030	8.3	32.27	5	31.2	31.2	-0.01	5		10.8896	10.8909	-0.01	PASS	ok	market.md:spread
+global GVR CURRENT 2026->2033	11.4	57.2	7	25.9	25.91	-0.07	7		11.4	11.4082	-0.07	PASS	ok	market.md:headline
+global GVR CURRENT 2025->2033	8.3	57.2	8	25.9	27.29	-8.4	8		10.4497	11.4082	-8.4	SPLICE	ok	market.md:headline
+global GVR CURRENT 2025->2026 (both printed figures)	8.3	11.4	1	25.9	37.35	-8.34	1		10.4497	11.4	-8.34	SPLICE	NOT SWEPT	market.md:headline
+global TBRC 2026->2030	10.6	42.48	4	41.5	41.49	0.03	4		10.6	10.5964	0.03	PASS	PASS p273	market.md:spread
+global TBRC 2025->2026 (own 40.9%)	7.52	10.6	1	40.9	40.96	-0.04	1		10.5957	10.6	-0.04	PASS	derived p273	market.md:spread
+global Precedence 2026->2035	9.58	136.79	9	34.52	34.37	1.02	9		9.58	9.4836	1.02	ROUNDING	PASS p273	market.md:spread
+global MarkWide 2026->2035	8.7	100.21	9	31.2	31.2	0.0	9		8.7	8.6997	0.0	PASS	PASS p273	market.md:spread
+NA Technotrenz 2026->2030	3.68	10.8	4	31.1	30.89	0.65	4		3.68	3.6561	0.65	PASS	ok	market.md:headline
+NA GVR CURRENT 2026->2033	4.254	19.3883	7	24.2	24.2	0.03	7		4.254	4.2529	0.03	PASS	ok	market.md:headline
+NA GVR as printed 2025->2033	3.1138	19.3883	8	24.2	25.68	-9.07	8		3.8673	4.2529	-9.07	SPLICE	NOT SWEPT	market.md:p271-table
+NA M&M 2024->2029	0.951	2.3	5	15.9	19.32	-13.53	6	0.22	1.2775	1.4773	-13.53	WINDOW_FIX	NOT SWEPT	market.md:p271-table
+EMEA ResourcERA 2026->2030	2.64	8.0	4	31.9	31.94	-0.12	4		2.64	2.6431	-0.12	PASS	ok	market.md:headline
+EMEA GVR 2024->2030	1.5201	8.0034	6	31.9	31.9	0.02	6		2.6446	2.6442	0.02	PASS	ok	market.md:p272
+EMEA GVR as LABELLED 2025->2030	1.5201	8.0034	5	31.9	39.41	-24.17	6	0.02	2.005	2.6442	-24.17	WINDOW_FIX	FLAG	market.md:p272
+EMEA MarketDataForecast 2025->2034	1.59	20.0	9	32.47	32.49	-0.13	9		2.1063	2.1091	-0.13	PASS	NOT SWEPT	market.md:p270-table
+EMEA MarketDataForecast 2025->2026	1.59	2.11	1	32.47	32.7	-0.18	1		2.1063	2.11	-0.18	PASS	NOT SWEPT	market.md:p270-table
+MEA GVR 2024->2030	0.2808	1.6459	6	32.6	34.28	-7.26	6		0.4937	0.5324	-7.26	SPLICE	ok	market.md:headline
+MEA GVR as LABELLED 2025->2030	0.2808	1.6459	5	32.6	42.43	-30.06	5		0.3723	0.5324	-30.06	SPLICE	FLAG	market.md:headline
+MEA ResourcERA 2026->2030	0.56	1.6	4	34.3	30.01	13.86	4		0.56	0.4918	13.86	SPLICE	ok	trends.md
+MEA GVR AI-tutors 2025->2033	0.1885	1.7368	8	32.0	31.99	0.04	8		0.2488	0.2487	0.04	PASS	NOT SWEPT	market.md:p271-table
+MEA Transpire AI-tutors 2025->2033	0.1864	1.73002	8	32.13	32.11	0.09	8		0.2463	0.2461	0.09	PASS	NOT SWEPT	market.md:p271-table
+LATAM ResourcERA 2026->2030	0.67	2.1	4	33.5	33.06	1.34	4		0.67	0.6611	1.34	ROUNDING	ok	market.md:headline
+LATAM GVR 2024->2030	0.2596	1.5056	6	32.4	34.04	-7.12	6		0.4551	0.49	-7.12	SPLICE	ok	market.md:headline
+LATAM M&M 2024->2029	0.1056	0.2047	5	11.7	14.15	-10.3	6	0.2	0.1318	0.1469	-10.3	WINDOW_FIX	ok	market.md:headline
+APAC GVR as carried 2025->2033	2.2829	18.2141	8	28.1	29.64	-9.12	8		2.9244	3.2178	-9.12	SPLICE	ok	market.md:p272
+APAC GVR window fix 2026->2033	3.2175	18.2141	7	28.1	28.1	-0.01	7		3.2175	3.2178	-0.01	PASS	ok	market.md:headline
+# tally: PASS=14 · ROUNDING=2 · SPLICE=9 · WINDOW_FIX=3

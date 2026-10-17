@@ -4,6 +4,152 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 274 — **THE GAP REGISTER ITSELF WAS THE DEFECT TWICE OVER: a slug that does not resolve became a LICENCE REFUTATION, and a row in `agents/top.md` was declared unresolvable by a later section of the same file**
+
+⏱️ **Twentieth pass of `2026-10-17`.** Append-only; nothing below is rewritten.
+🔵 **Evidence:** [`verified-repos.2026-10-17-p274.tsv`](../evidence/verified-repos.2026-10-17-p274.tsv)
+*(12 probes, every grant read at payload, channel re-tested not inherited)* ·
+[`arithmetic-sweep.2026-10-17-p274.tsv`](../evidence/arithmetic-sweep.2026-10-17-p274.tsv) *(28 cells,
+zero searches)* ·
+[`quantity-recount.2026-10-17-p274.tsv`](../evidence/quantity-recount.2026-10-17-p274.tsv) *(5
+quantities, zero searches)* ·
+[`p274-websearch.2026-10-17-p274.tsv`](../evidence/p274-websearch.2026-10-17-p274.tsv) *(10 legs; legs
+1–3 verbatim from this register)*.
+
+🟢 **Fifth pass running of spending this register rather than inventing a brief — and the first in which
+THREE backlog items were discharged by reading this base instead of searching it.**
+
+### 🟢 Discharged this pass
+
+| gap / action | registered as | how it was discharged | outcome |
+|---|---|---|---|
+| 🔴 **Read `market.md` top-to-bottom as a reader and diff its headline against its own body** | `p273` backlog **1** (*"zero searches, highest expected yield"*) | 🟢 **Read end to end, both files, and the arithmetic re-run over all 28 cells.** | 🔴 **THE HEADLINE CELL `p272` TOLD STUDIOS TO QUOTE WAS A TWO-VINTAGE SPLICE.** `$8.3B (2025) / $11.4B (2026) → $57.2B (2033) @ 25.9%` — only the second half closes. `$8.3B` belongs to the **superseded** release (`→ $32.27B @ 31.2%`, **−0.01 %**); on the current CAGR it reaches **$52.4B (−8.40 %)**, and `$8.3B → $11.4B` in one year is **+37.3 %**. 🔵 **`p271`'s North America defect, in the row that replaced it** — and `T32`'s verdict was quoted over a cell on which it had been run only once. `T42` |
+| 🔴 **Find ONE regional figure provably not Grand View** | `p273` backlog **2** | 🟢 **Run as `p272` ran ResourcERA: try to reproduce the candidate from GVR's curve.** `www.marketdataforecast.com` is **ENOTFOUND** (re-tested), so this was settled by arithmetic. | 🟢 **MarketDataForecast PASSES.** GVR's own Europe curve gives 2025 = `1 520.1 × 1.319 = $2 005M`; **MDF prints `$1 590M`, 21 % below** — no compounding relation produces one from the other. 🟢 **And MDF is the ONLY regional cell on this shelf that closes AS LABELLED** (−0.13 %). 🟡 **Claimed exactly this far: not a re-publication of GVR's curve. NOT established as an independent model** — its 2025 base sits 4.6 % from GVR's 2024 base and their CAGRs differ by 0.57 pt |
+| 🟡 **Resolve `Bloom` and `Lumen` to slugs and probe them** | `p273` backlog **3** | 🟢 **One search leg, then a `grep` of this base — and the `grep` did the work.** | 🔴 **THE GAP WAS FALSE IN BOTH LIMBS.** `Bloom` = [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom), **MIT `1 069` B** — **already a row on `agents/top.md`, 168 lines above the sentence in that same file declaring it unresolvable**. `Lumen` = [`ahmedEid1/Lumen`](https://github.com/ahmedEid1/Lumen), from this base's **own `p195` census**, **GPL-3.0 `35 149` B — against an MIT badge in its own README**. 🟢 Bonus: both case forms return the **identical HEAD SHA**, settling `p196`'s collision — **one repository** |
+| 🟡 **Retarget the NA leg at HIGHER EDUCATION** | `p273` backlog **4**; declared by `p272` AND `p273`, closed by neither | 🟢 **Run.** | 🟢 **CLOSED, four new datums.** **SUNY's contents at last — AI literacy in general education from `Fall 2026`** across 64 campuses; **UC Berkeley AI Governance Working Group**, **MIT AI Policy Committee**, **Columbia/Stanford on NIST AI RMF** *(the same instrument `p267` found actionable in Texas `TRAIGA`)*; **Columbia Law 2026-27**: AI as learning aid, barred from producing submitted coursework; 🔴 **and the procurement lane — `OpenAI × California State University`** (reported as the largest organisation-wide ChatGPT deployment) **and `Anthropic × Northeastern`** |
+| 🔵 **Apply `T37` as a standing re-count** | `p273` backlog **7** | 🟢 **BUILT, not cited** — [`p274-quantity-recount/`](../compose/code/p274-quantity-recount/), 90 lines, no network. | 🔴 **`3 STALE of 5` on the first run.** MCP slugs on `agents/top.md`: prose **13**, `T21` **12**, actual **15**. **LMS platforms reachable by MCP: both shelves said 3; it is SIX**, every one payload-verified. 🟢 **Then it caught this pass**, reading 20 after `p274` shelved five more. `T43` |
+| ⚠️ **The Vietnam reconciliation — establish which governs or declare it unresolvable** | `p273` backlog **6** (open five passes, flagged four times) | 🟢 **The APAC leg returned a THIRD instrument.** | 🟢 **RECONCILED BY HIERARCHY.** **`Law on AI`, in force `2026-03-01`**, names education among six high-risk sectors → `Decree 142/2026/ND-CP` (`2026-04-30`) → `Decision 33/2026/QD-TTg` (education compliance **`2027-03-01`**, +6 mo if live before `2026-08-15`). **Three altitudes, not three contradictions.** 🔴 **And `agents/trending.md` had been carrying the Law in three places** while this register called the conflict impossible. ⚠️ Secondary-source; falsification named on `market.md` |
+| 🟡 **The brief's generic supply legs** | `p269` standing instruction; `p273` backlog **3** (*"do not run an eighth generic sweep"*) | 🟢 **NOT run as written. RETARGETED**, per the same backlog item. | 🟢 **The eight-pass nil ENDS.** `Gego-K12/gegok12` is **MIT at payload** — refuting **this base's own twice-carried refutation** — and six MCP rows reached `agents/top.md`, **all of them already on `agents/trending.md`.** 🔵 **Nothing was discovered. Things were shelved.** `T44` |
+
+### 🔴 The box this pass earned
+
+| the finding | how it surfaced | why it had not been found |
+|---|---|---|
+| 🔴 **A LICENCE REFUTATION CAN BE A PROBE OF A STRING, AND THE PROBE COUNT READS AS THOROUGHNESS** | 🟢 By **re-probing a refusal instead of inheriting it**, after a search leg re-served the refuted claim for a third time | 🔴 This base recorded `gegok12`'s MIT claim as having *"died at payload"* in `p265` and `p272`, with the detail *"no payload on **15 path/ref combinations**"*. **The slug was `gegok12/gegok12`, which does not exist** — it fails `ls-remote` identically to any nonexistent repository. The real slug is **`Gego-K12/gegok12`**, which serves **MIT, HTTP 200, `1 150` B**, diffed against stock with the `+82` B accounted exactly (SPDX comment `+39`, four UTF-8 curly quotes `+8`, longer copyright holder `+35`) and **zero rider keywords**. 🔵 **Two instruments produced the same false negative and both read like measurements:** `T15`'s slug trap, and a byte **ceiling** — `T39` proved a byte count cannot discriminate a grant downward; **this is the same proof upward, and it cost a usable row in the region where this base declares a platform gap** |
+| 🔴 **A FILE CAN DECLARE A GAP THAT ONE OF ITS OWN ROWS REFUTES, AND EVERY CROSS-SHELF CHECK PASSES IT** | 🟢 By reading a shelf **as a reader** rather than grepping between shelves | 🔴 `agents/top.md` tables `Li-Evan/Bloom` in its build-on tier and declares `Bloom` unresolvable 168 lines further down, in its own `p272` section. ⚠️ **Line numbers are deliberately not quoted: `p274` permuted this file's pass sections to satisfy the standing ordering invariant, which moved them** — a position is a fact about a file at a moment, and the contradiction is between a ROW and a SENTENCE, not between two line numbers. **`T29` greps the destination file; `T34` greps the OTHER shelves; `T37` re-counts a quantity. The defect is intra-file and QUALITATIVE, and none of the three reaches it.** 🔵 **Sixth consecutive pass whose defect species was invisible to the check written one pass earlier** — and the first where the applicable check (`T34`) existed, was cheap, and simply was not run on this gap |
+| 🔴 **AN AMENDMENT THAT IS NOT BUILT GETS VIOLATED BY THE NEXT PASS** | 🟢 By **building** `T37` instead of citing it, and running it before publishing | 🔴 Three amendments on this base were written as instructions to future passes — `T29`'s destination grep, `T34`'s cross-shelf grep, `T37`'s re-count — **and the two that stayed instructions were each violated by the pass that followed.** 🟢 `T37` is now code and `make recount` is the cheapest check here. 🔵 **A quantity in prose is a CACHE; the only reliable invalidation is deriving it at read time.** `T43` |
+| 🔴 **A CORRECTION APPLIED TO ONE INSTANCE IS NOT A CORRECTION TO THE CLASS** | 🟢 By grouping the MCP rows **by platform** instead of counting them | 🔴 `p267` corrected this base's framing of Canvas — *"the opening is the opposite of migration … AGPL platform, MIT doorway"* — and `market.md` still tells a studio that **Blackboard / Anthology** is a *"replacement engagement; the incumbent's lock-in is the pitch"* **while two MIT Blackboard MCP servers sit on `agents/trending.md`.** 🟢 **`AGPL platform, MIT doorway` holds for five of six platforms now.** New pattern `P25` |
+| 🔴 **THE MARKET'S STATED BLOCKER IS THIS BASE'S RECOMMENDED ARCHITECTURE, AND ONE ROW ALREADY ANSWERS IT** | 🟢 By reading the trends leg against the supply shelf instead of filing it as context | 🔴 **GovTech/Bridges 2026**: few districts and colleges run agents in day-to-day operations, and leaders *"remain cautious about granting the tools access to sensitive systems and data"*; **EdTech Hub**: SE Asian initiatives *"remain short-term and project-based"*. **Two regions, two sources, one blocker — consent scope, which is exactly what `T24` predicted from the supply side.** 🟢 **`bruchris/canvas-lms-mcp` (MIT, `1 070` B) pseudonymises students at the tool boundary.** New pattern `P24`. `T45` |
+
+### 🔵 Registered, not claimed
+
+- 🟢 **The predicate, not the region, is what regional governance figures disagree about.** UNESCO's LAC
+  Observatory reports **fewer than 10 %** of institutions with formal guidelines *and* sufficient
+  capacity; `market.md`'s EMEA section already carried **~10 % of 450+ institutions** with formal AI-use
+  guidelines from an unrelated roundup. **Two regions, two instruments, the same ~10 % on the same
+  predicate** — the first cross-regional corroboration on this shelf that is not a re-publication. 🔵
+  **And it resolves what reads as an intra-file contradiction** (*two-thirds of European education
+  **systems** have a strategy* vs *~10 % of **institutions** have guidelines*): different populations,
+  different predicates, **and read together they are the EMEA pitch.**
+- 🔴 **The LATAM governance deficit this base sells is UNDERSTATED.** It prices a **61-point** gap from
+  IESALC's `87 % / 26 %`. **The capability gap is ~90 points**, and capability is what a client fails.
+- 🔴 **The `92 %` university-student figure is placed as BOTH a LATAM and a North American datum on
+  `market.md`**, the second with no region marker. **One placement is wrong or the figure is global.**
+- 🔴 **A `26 %` "formal AI policy" figure arrived for NA at the IDENTICAL value to IESALC's LATAM
+  figure and was REFUSED rather than shelved** (`T36`: a number arriving for a second region at the same
+  value is a re-publication candidate before it is a corroboration).
+- 🟢 **Japan's four-pass gap NARROWS and is REFRAMED.** **ABC News (2026-05-31)**: Japan is **"AI last,
+  not first"**, explicitly against its neighbours; **Edmentum**: a move toward official digital
+  textbooks. ⚠️ **Still not an adoption figure and still not a mandate, so the declared gap STANDS** —
+  but read beside `T22`'s Korean withdrawal, **four passes may have been reading a policy choice as a
+  measurement failure.**
+- 🟢 **Three new named LATAM players, zero prior mentions:** **Platzi** (CO), **UPlanner** (CL — dropout
+  prevention, which is the institutional-plumbing lane this base calls the open one), **SEA+** (UY —
+  adaptive assessment; ⚠️ a platform name, not a repository). New named study: **OEI + ProFuturo**,
+  *"The arrival of AI in education in Latin America: under construction"* — private-sector dominated,
+  **uncoordinated and unsustained**, far from rural and vulnerable contexts.
+- 🔴 **Three EMEA refusals, each of which would have damaged a deck:** a claim of **binding** Commission
+  AI-in-education guidelines on `2026-04-15` with December-2026 university audits (uncorroborated);
+  `68 %` university tool use and `>55 %` EEA-hosting preference (low-authority blogs); and a vendor
+  blog's **€111B European market**, which is **edtech-wide, ~50× this shelf's AI-in-education figure**.
+- ⚠️ **Channel, re-tested not inherited:** `raw.githubusercontent.com` **200** · `api.github.com` **403**
+  · `github.com` HTML **403** · `codeload.github.com` **403** · `www.marketdataforecast.com`
+  **ENOTFOUND**. **No star count in this pass was read from GitHub.** Every grant was read at payload and
+  every slug confirmed by `ls-remote` against a discriminating negative control.
+
+### 🔴 And the standing gate was RED at `HEAD`, which no pass-273 artefact mentions
+
+🟢 **`p274` ran `make hooks` — and it failed, on the committed tree, before this pass had changed
+anything.** Proven rather than asserted: `git stash` → the identical **6 of 166** controls fail → `git
+stash pop`.
+
+```
+6/166 FAILED
+  - ordering on agents/top.md is AGREE or UNDECIDABLE (reference doc)
+  - agents/top.md: if it carries dated sections they are ordered
+  - ordering on repos/foundations.md …            (and the same pair)
+  - ordering on verticals/solutions.md …          (and the same pair)
+```
+
+🔵 **The mechanism, and it is a slow-growing defect rather than a mistake.** `p261`'s invariant is that a
+shelf carrying two or more pass-numbered `##` headings must carry them **non-increasing in file order** —
+the shape a shelf has when each pass **prepends**. 🔴 **These three reference docs were built by passes
+that APPENDED**, so their pass numbers ran `273, 269, 268, 270, 272` (`agents/top.md`), `270, 272`
+(`repos/foundations.md`) and `270, 271, 272` (`verticals/solutions.md`). **Each append was individually
+harmless; the second one in ascending order tripped the invariant, and it has been red since.**
+
+🟢 **Fixed by permuting the pass sections into descending order within their existing positions** —
+content untouched, non-pass sections untouched — and `make hooks` now exits **0** with **45 PASS**.
+⚠️ **One consequence recorded because it bit this pass's own prose:** the permutation **moves line
+numbers**, so a finding must cite a **row and a section**, never a line number. Three of this pass's own
+sentences had to be rewritten for exactly that reason.
+
+🔴 **The deeper point is why nobody noticed.** `p261`'s own section records that the gate *"ran for the
+first time in ten passes"* and was red then too; `p251` and `p252` both recorded `make` as **not runnable
+from their session**. 🔵 **A gate that is only run when someone remembers is a gate whose verdict is
+unknown**, and the invariant it enforces is precisely the kind no reader notices. 🟢 **`make hooks` now
+also runs `make recount`** (`T43`), so the two cheapest checks on this base share one entry point.
+
+### 🟡 Costed and NOT run — the backlog `p275` should spend its budget on
+
+🔵 **Fifth pass running, the trade has paid: spend this register, not a fresh brief.** Ranked by value
+per leg:
+
+1. 🔴 **Read `agents/top.md` and `repos/foundations.md` top-to-bottom as a reader, the way `p273` asked
+   for `market.md`.** 🟢 **It is the highest-yield step available and `p274` proves it twice over:**
+   reading `market.md` found a two-vintage splice in the headline, and the `Bloom` contradiction was
+   found by reading `agents/top.md` — **a row in its build-on tier against a sentence in a later section of itself.** 🔴 **Those two
+   files have never been read against themselves**, they carry 465 and 413 lines of appended
+   pass-sections, and **no check on this base reaches an intra-file qualitative contradiction.** Zero
+   searches.
+2. 🔴 **Re-probe EVERY negative licence verdict this base holds, with `ls-remote` as a positive control
+   first.** `p274` overturned one (`gegok12`) and the mechanism — a probe against a non-resolving slug,
+   recorded with its probe count — **is not specific to that row.** 🟢 **Cheap and mechanical:** for each
+   `REFUSED` / `no payload` / `NOT ESTABLISHED` row, confirm the slug resolves **before** reading
+   anything into a 404. ⚠️ **Expect a non-trivial hit rate:** the same `T15` slug trap has now bitten
+   Sunbird (kebab-case) and `gegok12` (owner hyphenation).
+3. 🟡 **Trace the remaining six SPLICE cells to their vintages.** Nine of 28 cells close at no window;
+   three are now annotated. **The other six are published on these shelves as series and are not.**
+   Zero searches — it is arithmetic plus the publisher's own labels.
+4. 🟡 **Settle the `92 %` attribution with ONE leg** naming the Digital Education Council and the region
+   together. **It is the most-quoted adoption figure on this base and it currently has two homes.**
+5. 🟡 **Register the remaining quantified claims in `recount.py`.** `p274` registered five. **Every
+   other numeral in prose on these shelves is an unchecked cache** — `42 rows`, `five permissive
+   platforms`, `78,765 commits`, `13 declared verdict values`, `200 institutions in 19 countries`.
+   🔵 **Grep for digits, register what you find, and the next stale count fails loudly instead of
+   quietly.**
+6. 🟡 **Add the `instrument_status` column to `intel/policy-matrix.tsv`** (draft/concept · adopted · in
+   force). **Fourth pass on this backlog, still unrun, still right** — `p274`'s Vietnam reconciliation is
+   precisely a three-altitude instrument hierarchy, which is the thing the column would record. Costs a
+   re-decision of 57 rows.
+7. 🔵 **Ask upstream which grant `ahmedEid1/Lumen` intends.** Its README badge says MIT and its payload
+   is GPL-3.0. 🟢 **`T27` says a grant nobody chose deliberately is the one most likely to move, and this
+   one costs an email** — for a production-grade agentic platform with an MCP server in the official
+   registry.
+8. ⚠️ **Do NOT re-run the EMEA supply leg.** `p274` makes it **nine** consecutive nils on EMEA
+   vendor/market-share/adoption data. **Retarget or retire it**; the same ruling `p272` made for the
+   saturated NA K-12 statute lane.
+
 ## Pass 272 — 2026-10-17 — **`p271`'s ATTRIBUTION FELL TO ITS OWN FALSIFICATION LEG: the upstream is GRAND VIEW, the NA publisher is TECHNOTRENZ, and the "independent corroboration" was CIRCULAR. All three zero-search audits run.**
 
 ⏱️ **Eighteenth pass of `2026-10-17`.** Append-only; nothing below is rewritten.

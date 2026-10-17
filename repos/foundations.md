@@ -37,7 +37,11 @@ where pass 273's finding landed**; it landed on the agent shelf and on licence m
 
 ## Permissive foundations (MIT / Apache-2.0 / BSD)
 
+> 🆕 **Pass 274 adds the first row to this table in nine passes, and it is a row this base REFUSED
+> twice.** See the `gegok12` retraction below and `T44`.
+
 | Repo | Licence | Stars | Why it is a foundation |
+| 🆕 [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** *(`main/LICENSE`, `1 150` B, payload read + diffed, `p274`)* — ⚠️ **core only: 12 Pro modules sold separately** | 54★ / **98 forks** *(carried; no star read from GitHub this pass)* | **Self-hosted school ERP / SIS** on PHP 8.4 + Laravel. 🟢 **The permissive SIS layer this base has said for nine passes does not exist** — and the reason it was missing is that the base probed a slug that does not resolve, twice (`T44`). 🔵 **Its fork network is its adoption evidence**: 98 forks, near-zero fork stars, institution-shaped fork names across **India, Indonesia and Vietnam** (`P933` — software institutions RUN rather than developers EXTEND). ⚠️ **Deployment-placed APAC; origin not established.** ⚠️ **Price the Pro modules before the SOW** |
 |------|---------|-------|------------------------|
 | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | **Interactive learning with automated feedback**, from TUM Applied Education Technologies. Programming, quiz, modelling and text exercises with automatic assessment and an integrated CI runner. The strongest MIT-licensed teaching platform found this pass — production-grade and university-maintained. **Pass 266:** it ships three *config-gated* AI subsystems — **Iris** (LLM tutor, [`ls1intum/Iris`](https://github.com/ls1intum/Iris), MIT), **Pyris** (the LLM microservice behind it, [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris), MIT) and **Athena** (feedback suggestion, [`ls1intum/Athena`](https://github.com/ls1intum/Athena), **licence UNVERIFIED — no payload**), plus **Hyperion** (AI exercise authoring, not a separate repo). Config-gated matters: the platform runs identically with AI off, which is the posture an EU AI Act high-risk classification wants. |
 | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | MIT | 4.1k | FSRS, the modern spaced-repetition scheduler. The highest-adoption learning-science component in open source. Pair with [fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) (BSD-3-Clause) for a Rust core you can embed. |
@@ -87,6 +91,23 @@ in this base's own gap register, Apache-2.0 and payload-read, while this file ha
 > as such rather than quietly promoted.
 
 ## Copyleft foundations — real, but priced
+
+> 🆕 **Pass 274 adds [`ahmedEid1/Lumen`](https://github.com/ahmedEid1/Lumen) — `GPL-3.0` at payload
+> (`35 149` B, reproduced from this base's own `p195` census) — AND FLAGS ITS OWN README.** The README
+> carries a **`License: MIT` badge that links to that GPL-3.0 payload**. 🔴 **A studio reading the badge
+> would carry GPL-3.0 code into a deliverable believing it was MIT**, and this is a *platform-grade*
+> artefact, not a snippet: a **learner-owned two-role e-learning platform**, shipped to production as
+> `2.0.0`, with an authoring orchestrator that builds a private course from a one-sentence goal, a
+> **course-scoped RAG tutor with lesson citations and a visible tool-call trace**, BYOK across four
+> providers with envelope-encrypted keys, and **an MCP server registered in the official MCP registry**
+> as `io.github.ahmedEid1/lumen`. 🔵 **The badge/payload split is `T9`'s species at its most expensive
+> location — the project's front door** — and it is the inverse of `T9`'s `Open-TutorAi` case, where an
+> alarming phrase turned out to be harmless boilerplate. **Here a reassuring badge is the error.**
+> 🟢 **Usable across an HTTP boundary like any GPL-3.0 platform on this shelf** (GPL-3.0 has **no**
+> network clause, unlike the AGPL rows); **not usable as a code base for a proprietary deliverable.**
+> ⚠️ **Ask upstream which one is intended before anything else** — one of the two is a mistake, and
+> `T27` says a grant nobody chose deliberately is the one most likely to move.
+
 
 | Repo | Licence | Why you still care |
 |------|---------|--------------------|
@@ -357,6 +378,86 @@ from absence.
   good figure on noise is as bad as publishing a bad one. Three independent agreements, including
   one to the byte, say this base's APAC licence cells are sound.**
 
+## Pass 274 — the nine-pass nil on this file ENDS, with a row this base had refused twice
+
+⏱️ **Twentieth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p274.tsv`](../evidence/verified-repos.2026-10-17-p274.tsv) ·
+[`p274-websearch.2026-10-17-p274.tsv`](../evidence/p274-websearch.2026-10-17-p274.tsv) *(leg 9)*.
+
+🔵 **The brief's platform/SIS/ERP leg ran and did what `p273` predicted: it re-served a claim this base
+had already refuted.** 🟢 **And this time the re-service was RIGHT and the refutation was wrong.**
+
+| what the leg returned | what `p274` established first-hand |
+|---|---|
+| *"GegoK12 … free, MIT-licensed open-source school ERP, built for self-hosting, PHP 8.4 + Laravel, core free forever under MIT with optional paid add-on modules"* | 🟢 **MIT CONFIRMED** at `Gego-K12/gegok12` `main/LICENSE`, `1 150` B, diffed and byte-accounted. 🟢 **The "optional paid add-on modules" half CONFIRMS this base's own open-core caveat** — so the vendor page and this base were each half right, about different things |
+| Gibbon (GPL-3.0), RosarioSIS (GPL), OpenEduCat CE, openSIS, Academico, OpenOLAT (Apache-2.0) | 🔵 **All already shelved here or on [`verticals/solutions.md`](../verticals/solutions.md).** `Academico` reproduces `p272`'s MIT-at-payload finding |
+| 🔴 **NOT ONE platform returned describes any AI feature** | 🟢 **Corroborates this base's standing structural read from the OUTSIDE:** the SIS/ERP layer has no AI, so the agent layer is the opening and the platform is the installed base. **An absence that confirms a thesis is worth recording as a result** |
+
+🔴 **The method finding, and it is the one to carry forward.** Both of this file's standing refusals were
+produced by probing a slug. **One slug was wrong** (`gegok12/gegok12` → `Gego-K12/gegok12`) and the
+refusal recorded the probe count — *"15 path/ref combinations"* — **which reads as thoroughness and was
+15 probes against a string.** ⚠️ **A negative licence result must record the slug and ref it probed AND
+a positive control that the slug resolves at all** (`git ls-remote` returning refs), or it is not a
+measurement. 🟢 **This base's ledger format already has the columns.** See `T44`.
+## Pass 272 — no new rows, one measurement supplied, and two candidate rows refused
+
+⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) ·
+[`p272-websearch.2026-10-17-p272.tsv`](../evidence/p272-websearch.2026-10-17-p272.tsv).
+
+🔵 **This file gains no rows: the SEVENTH consecutive measured nil on education-specific supply.**
+The brief's generic legs ran **last**, per `p269`'s standing instruction. Stated precisely, because *how*
+it failed is the information:
+
+- 🟢 **`academico-sis/academico`'s byte column is filled in** — `1,094 B`, `main/LICENSE`, MIT,
+  *"Copyright (c) 2020 Thomas Debay and project contributors"*. The row carried `MIT | —` since it was
+  shelved. 🔵 Worth noting the direction: the vendor page that surfaced it this pass says the licence
+  **"is not named"**; the payload names it. **An aggregator's hedge is not evidence of absence.**
+- 🔴 **`gegok12/gegok12` REFUSED** — an MIT claim with no payload on 15 path/ref combinations, and an
+  **open-core shape** (26 of 38 modules free, 12 Pro modules sold) that would not deliver what the claim
+  implies even if verified.
+  🔴 **OVERTURNED IN PASS 274, AND THE SENTENCE ABOVE CONTAINS ITS OWN DIAGNOSIS: THE SLUG IS WRONG.**
+  `gegok12/gegok12` **does not exist** — it fails `git ls-remote` identically to any nonexistent
+  repository, so *"no payload on 15 path/ref combinations"* was 15 probes against a **string**. The
+  repository is [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12), and it serves **MIT** at
+  `main/LICENSE`: **HTTP 200, `1 150` B, full payload read, normalised terms diff against stock differing
+  only in line-wrap column, zero rider keywords.** The `+82` B over stock accounts **exactly**: `+39`
+  SPDX HTML comment, `+8` four typographic quotation marks, `+35` a longer copyright holder
+  (*"GegoSoft Technologies and GegoK12 Contributors"*). 🔵 **Two instruments produced the same false
+  negative and both read like a measurement:** a kebab-case slug guess (`T15`'s trap, here taking down a
+  licence verdict) and a byte **ceiling** (`T39`'s proof, upward). See `T44`.
+  🟢 **The open-core half of the refusal STANDS and is the only live caveat**: MIT covers the core, **12
+  Pro modules are sold separately** (`T20`, failure mode 3). **Quote the grant, scope the modules.**
+  🟢 **Row added below** — and note where it lands: this base's standing APAC gap is *platform supply*,
+  and `P933` has already measured this repository's **98 forks with near-zero fork stars and
+  institution-shaped fork names across India, Indonesia and Vietnam** — the signature of software that
+  institutions **run**. ⚠️ **Deployment-placed APAC on that fork evidence; origin NOT established** (a
+  copyright holder's name is not a provenance read).
+- 🔴 **`projectfedena/fedena` REFUSED, reproducing `p265`** — and `p272` adds the provenance of the false
+  claim: it comes from **a direct competitor's comparison page**.
+- 🟡 **Two repositories were LOCATED BUT NOT RESOLVABLE, and they are recorded as an informed gap rather
+  than as rows: `Bloom`** (Socratic-method tutoring) **and `Lumen`** (self-hosted, course-scoped RAG with
+  citations). A GitHub topic listing named them **without an owner/repo**, so there is no slug to probe.
+  ⚠️ **A project name is not a row.** Resolving these two is a cheap, named step for `p273`.
+  🔴 **RETRACTED IN PASS 274 — BOTH LIMBS WERE ALREADY IN THIS BASE.**
+  **`Bloom` = [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom), MIT, `1 069` B** — and it has been a
+  **row on [`agents/top.md`](../agents/top.md)** since `p264`, which is where the contradiction is
+  sharpest: *that* file declares the same slug unresolvable in a later section of itself, 168 lines below
+  the row that tables it.
+  **`Lumen` = [`ahmedEid1/Lumen`](https://github.com/ahmedEid1/Lumen)**, resolved from this base's **own
+  `p195` licence census** via [`compose/code/p196-population-diff/`](../compose/code/p196-population-diff/),
+  which recorded it at **GPL-3.0, `35 149` B** — reproduced to the byte in `p274`.
+  🔵 **Neither resolution needed a search; one needed a `grep` of this repository and the other needed a
+  `grep` of this file's sibling.** `p272` spent a search leg on them and `p273` ranked spending another.
+  **`T25` re-earned, and `T34`'s amendment — grep the other shelves before re-declaring an absence —
+  failed because nobody ran it on this gap.**
+
+🔵 **The supply conclusion is now stable across seven passes and three languages:** education-specific
+permissive *agents* are scarce, the generic legs return either general-purpose frameworks this base already
+holds or **learning-ABOUT-AI** teaching material, and the growth on these shelves comes from
+**platforms, standards and assessment engines** — this file's actual subject — rather than from agents.
+**Nothing was added to meet a quota.**
+
 ## Pass 270 note — no rows added, and the three legs that would have added them were not run on purpose
 
 🟢 **This file gains no repositories this pass.** `p269` measured the generic supply legs
@@ -382,32 +483,3 @@ named thing by hand or grepping this repository** — not from a generic search 
   serves **MIT on `develop`** and **404 on `main`**. Probe the **resolved** default ref
   (`git ls-remote --symref`), never a guessed one.
 
-## Pass 272 — no new rows, one measurement supplied, and two candidate rows refused
-
-⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
-[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) ·
-[`p272-websearch.2026-10-17-p272.tsv`](../evidence/p272-websearch.2026-10-17-p272.tsv).
-
-🔵 **This file gains no rows: the SEVENTH consecutive measured nil on education-specific supply.**
-The brief's generic legs ran **last**, per `p269`'s standing instruction. Stated precisely, because *how*
-it failed is the information:
-
-- 🟢 **`academico-sis/academico`'s byte column is filled in** — `1,094 B`, `main/LICENSE`, MIT,
-  *"Copyright (c) 2020 Thomas Debay and project contributors"*. The row carried `MIT | —` since it was
-  shelved. 🔵 Worth noting the direction: the vendor page that surfaced it this pass says the licence
-  **"is not named"**; the payload names it. **An aggregator's hedge is not evidence of absence.**
-- 🔴 **`gegok12/gegok12` REFUSED** — an MIT claim with no payload on 15 path/ref combinations, and an
-  **open-core shape** (26 of 38 modules free, 12 Pro modules sold) that would not deliver what the claim
-  implies even if verified.
-- 🔴 **`projectfedena/fedena` REFUSED, reproducing `p265`** — and `p272` adds the provenance of the false
-  claim: it comes from **a direct competitor's comparison page**.
-- 🟡 **Two repositories were LOCATED BUT NOT RESOLVABLE, and they are recorded as an informed gap rather
-  than as rows: `Bloom`** (Socratic-method tutoring) **and `Lumen`** (self-hosted, course-scoped RAG with
-  citations). A GitHub topic listing named them **without an owner/repo**, so there is no slug to probe.
-  ⚠️ **A project name is not a row.** Resolving these two is a cheap, named step for `p273`.
-
-🔵 **The supply conclusion is now stable across seven passes and three languages:** education-specific
-permissive *agents* are scarce, the generic legs return either general-purpose frameworks this base already
-holds or **learning-ABOUT-AI** teaching material, and the growth on these shelves comes from
-**platforms, standards and assessment engines** — this file's actual subject — rather than from agents.
-**Nothing was added to meet a quota.**

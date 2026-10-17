@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 274 — 2026-10-17 — **THE GAP REGISTER WAS THE DEFECT: A LICENCE WAS REFUTED TWICE BY PROBING A SLUG THAT DOES NOT EXIST, AND A ROW WAS DECLARED UNRESOLVABLE 410 LINES BELOW ITSELF**
+
+⏱️ **Twentieth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p274.tsv`](evidence/verified-repos.2026-10-17-p274.tsv) — **12 probes, every
+grant read at payload, channel re-tested rather than inherited** ·
+[`arithmetic-sweep.2026-10-17-p274.tsv`](evidence/arithmetic-sweep.2026-10-17-p274.tsv) — **28 cells,
+zero searches** ·
+[`quantity-recount.2026-10-17-p274.tsv`](evidence/quantity-recount.2026-10-17-p274.tsv) — **5 quantities,
+zero searches** ·
+[`p274-websearch.2026-10-17-p274.tsv`](evidence/p274-websearch.2026-10-17-p274.tsv) — **10 legs, legs 1–3
+taken verbatim from `p273`'s ranked backlog**.
+
+### 🟢 Headline: `p273` ranked eight things. Six were discharged, and the three highest-value ones needed no search at all
+
+| `p273`'s backlog | discharged how |
+|---|---|
+| **1. Read `market.md` as a reader** | 🔴 **The headline cell `p272` told studios to quote was a two-vintage splice** |
+| **2. Find ONE regional figure provably not Grand View** | 🟢 **MarketDataForecast passes the re-basing test** — and is the only regional cell that closes as labelled |
+| **3. Resolve `Bloom` and `Lumen`** | 🔴 **Both were already in this base. The gap was false in both limbs** |
+| **4. Retarget NA at higher education** | 🟢 **Closed after two passes of declaring it** — SUNY's contents, four governance bodies, and the procurement lane |
+| **6. Vietnam: reconcile or declare unresolvable** | 🟢 **RECONCILED after five passes** — and the instrument that reconciles it was on this base's own trending shelf |
+| **7. `T37` as a standing re-count** | 🟢 **Built, not cited.** `3 STALE of 5` on the first run; `make recount` now runs in the hook |
+
+### 🔴 The two defects in the register itself
+
+**1. A licence refutation that was a probe of a string.** This base recorded, in `p265` and again in
+`p272`, that `gegok12`'s MIT claim *"died at payload"* — *"no payload on **15 path/ref combinations**"*.
+🔴 **The slug it probed, `gegok12/gegok12`, does not exist**; it fails `ls-remote` identically to any
+nonexistent repository. The repository is **[`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12)**,
+and it serves **MIT** at `main/LICENSE`: HTTP 200, `1 150` B, **full payload read and diffed**, the `+82`
+B over stock accounted exactly (SPDX comment `+39`, four UTF-8 curly quotes `+8`, longer copyright holder
+`+35`), **zero rider keywords**. 🟢 **`repos/foundations.md` and `verticals/solutions.md` gain a
+permissive school ERP / SIS — the layer where `P22`'s zero-copyleft engagement previously had no
+answer** — with the open-core caveat (12 Pro modules sold) kept, because that half of the refusal was
+right. **New trend `T44`.**
+
+**2. A gap contradicted by a row in the same file.** `agents/top.md` tables
+[`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) in its build-on tier and declares `Bloom`
+*"unresolvable to a slug"* 168 lines further down, in its own `p272` section. `Lumen` is [`ahmedEid1/Lumen`](https://github.com/ahmedEid1/Lumen), which this
+base's **own `p195` licence census** already graded. 🔴 **`T29` greps the destination file, `T34` greps
+the other shelves, `T37` re-counts a quantity — and none of the three reaches an intra-file qualitative
+contradiction.** 🟢 **Bonus, free:** both case forms of the Lumen slug return the **identical HEAD SHA**,
+settling `p196`'s collision — **one repository**, and **a case-sensitive census double-counts**.
+
+### 🔴 And `Lumen`'s README says MIT while its payload says GPL-3.0
+
+`ahmedEid1/Lumen` — a **production agentic e-learning platform** (`2.0.0`: authoring orchestrator,
+course-scoped RAG tutor with citations and a visible tool-call trace, BYOK, **an MCP server in the
+official registry**) — carries a **`License: MIT` badge that links to a GPL-3.0 payload** (`35 149` B,
+reproduced to the byte). 🔵 **`T9`'s species at the project's front door, and the inverse of `T9`'s
+`Open-TutorAi` case**: there an alarming phrase was harmless boilerplate; **here a reassuring badge is
+the error.**
+
+### 🔴 Market: the window defect is not a Grand View quirk, and it is in the global headline
+
+| finding | detail |
+|---|---|
+| 🔴 **The global cell spliced two vintages** | `$8.3B (2025)` belongs to the **superseded** release (`→ $32.27B @ 31.2%`, −0.01 %). On the current 25.9 % it reaches **$52.4B (−8.40 %)**, and `$8.3B → $11.4B` in one year is **+37.3 %**. **Removed from the cell** |
+| 🔴 **The ~−9 % house signature has a third instance** | global **−8.40 %**, NA **−9.07 %**, APAC **−9.12 %** — three Grand View 2033-vintage databooks inside a 0.7-point band. **A signature, not noise** |
+| 🔴 **MarketsandMarkets does it too** | NA `$951M → $2.3B @ 15.9%` closes at **+0.22 %** over **six** years, LATAM `$105.6M → $204.7M @ 11.7%` at **+0.20 %**. **Two houses, five cells, one convention.** `T38` was too narrow |
+| 🔴 **The LATAM range a studio was told to quote mixed year labels** | `$105.6M` is a **2024** print. The 2026-consistent range is **$132M–$670M, 5.1×**, not ~6× |
+| 🔴 **The threshold was tuned to exclude its own defect** | A one-year offset on a 25–32 % CAGR yields **8–14 %** — exactly the band `p271` defined as noise. **Not one of the five window defects would have fired `>25 %`.** `T42` retires it: one multiplication per cell, classify by **mechanism** |
+
+### 🟢 Supply: the eight-pass nil ends, and nothing was discovered
+
+🔴 **The count was wrong on both agent shelves by a factor of two: SIX LMS platforms are MCP-addressable,
+not three** — Canvas, Moodle, Google Classroom/Workspace, **Brightspace/D2L**, **Blackboard Ultra** and
+**Open edX**, **five of them under MIT**, every grant payload-read this pass. **The three missing
+platforms were on `agents/trending.md` all along.**
+
+🔴 **And the correction has a commercial edge:** `intel/market.md` tells a studio that **Blackboard /
+Anthology** is a *"replacement engagement; the incumbent's lock-in is the pitch"* — **while Blackboard
+has two MIT doorways on this base's own shelf.** 🔵 **`p267` found exactly that shape for Canvas and the
+correction never generalised.** New pattern **`P25`**.
+
+🟢 **`bruchris/canvas-lms-mcp` (MIT, `1 070` B) ships opt-in FERPA pseudonymisation** — and this pass's
+trends leg returned the reason it matters: **GovTech/Bridges 2026** reports few districts and colleges
+run agents in day-to-day operations because leaders *"remain cautious about granting the tools access to
+sensitive systems and data."* 🔵 **The market's stated blocker is this base's recommended architecture,
+and one row already answers it.** New pattern **`P24`**, new trend **`T45`**.
+
+### 🟢 Regions: all four legs ran, and the LATAM number moved against us
+
+- 🟢 **LATAM:** UNESCO's regional Observatory — **fewer than 10 %** of institutions have formal guidelines
+  **and** sufficient capacity. **The deficit this base sells at 61 points is ~90.** 🟢 **And it matches
+  the ~10 % EMEA institutional figure** — **two regions, two instruments, the same predicate**, which is
+  the first cross-regional corroboration here that is not a re-publication. New players: **Platzi** (CO),
+  **UPlanner** (CL, dropout), **SEA+** (UY, adaptive assessment).
+- 🟢 **North America:** **SUNY puts AI literacy in general education from Fall 2026** across 64 campuses;
+  Berkeley, MIT, Columbia and Stanford all have named instruments, two of them on **NIST AI RMF**; and
+  **`OpenAI × California State University`** plus **`Anthropic × Northeastern`** give the region its
+  higher-ed procurement lane. 🔴 **Two figures REFUSED**, one of them because a `26 %` NA figure is
+  numerically identical to IESALC's LATAM `26 %`.
+- 🟢 **APAC:** Vietnam reconciled (Law → Decree → Decision; **education compliance `2027-03-01`**). Japan
+  is **"AI last, not first"** — the gap narrows and is reframed as a possible policy choice rather than a
+  measurement failure. **EdTech Hub:** SE Asian initiatives *"remain short-term and project-based."*
+- 🔴 **EMEA: ninth consecutive nil**, with three refusals — an uncorroborated claim of binding Commission
+  guidelines, two blog-grade adoption figures, and a **€111B** edtech-wide number that is **~50×** this
+  shelf's AI-in-education figure and must never be shelved as one.
+
+### 🔴 And the standing gate was RED at `HEAD`, which no pass-273 artefact mentions
+
+🟢 **`p274` ran `make hooks` — and it failed, on the committed tree, before this pass had changed
+anything.** Proven rather than asserted: `git stash` → the identical **6 of 166** controls fail → `git
+stash pop`.
+
+```
+6/166 FAILED
+  - ordering on agents/top.md is AGREE or UNDECIDABLE (reference doc)
+  - agents/top.md: if it carries dated sections they are ordered
+  - ordering on repos/foundations.md …            (and the same pair)
+  - ordering on verticals/solutions.md …          (and the same pair)
+```
+
+🔵 **The mechanism, and it is a slow-growing defect rather than a mistake.** `p261`'s invariant is that a
+shelf carrying two or more pass-numbered `##` headings must carry them **non-increasing in file order** —
+the shape a shelf has when each pass **prepends**. 🔴 **These three reference docs were built by passes
+that APPENDED**, so their pass numbers ran `273, 269, 268, 270, 272` (`agents/top.md`), `270, 272`
+(`repos/foundations.md`) and `270, 271, 272` (`verticals/solutions.md`). **Each append was individually
+harmless; the second one in ascending order tripped the invariant, and it has been red since.**
+
+🟢 **Fixed by permuting the pass sections into descending order within their existing positions** —
+content untouched, non-pass sections untouched — and `make hooks` now exits **0** with **45 PASS**.
+⚠️ **One consequence recorded because it bit this pass's own prose:** the permutation **moves line
+numbers**, so a finding must cite a **row and a section**, never a line number. Three of this pass's own
+sentences had to be rewritten for exactly that reason.
+
+🔴 **The deeper point is why nobody noticed.** `p261`'s own section records that the gate *"ran for the
+first time in ten passes"* and was red then too; `p251` and `p252` both recorded `make` as **not runnable
+from their session**. 🔵 **A gate that is only run when someone remembers is a gate whose verdict is
+unknown**, and the invariant it enforces is precisely the kind no reader notices. 🟢 **`make hooks` now
+also runs `make recount`** (`T43`), so the two cheapest checks on this base share one entry point.
+
+### 🔵 Declared gaps and the backlog for `p275`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). The two highest-value items both need
+**zero searches**: **read `agents/top.md` and `repos/foundations.md` top-to-bottom as a reader** (it is
+how both of this pass's best findings surfaced), and **re-probe every negative licence verdict with
+`ls-remote` as a positive control first** — because the mechanism that produced the `gegok12` false
+negative is not specific to that row.
+
 ## Pass 272 — 2026-10-17 — **THE REGIONAL MARKET PICTURE HAS ONE UPSTREAM PUBLISHER, SO THIS BASE HAD BEEN CHECKING GRAND VIEW AGAINST GRAND VIEW — AND THE THREE ZERO-SEARCH AUDITS `p271` COSTED WERE ALL RUN**
 
 ⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
