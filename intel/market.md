@@ -678,6 +678,34 @@ measured nil on the NA regulatory channel**, not as an absence of searching.
 ### EMEA
 
 
+**Pass 272 — the EMEA leg reproduced this base's AI Act rows exactly, added one institutional
+player, and returned an informative NIL on MEA.**
+
+🟢 **Every AI Act datum the leg returned was already shelved and already correct**: Annex III
+education high-risk obligations postponed to **2027-12-02** (four `GATED` rows on
+[`policy-matrix.tsv`](policy-matrix.tsv)), the **Art. 4** AI-literacy duty from **2025-02-02**, and
+the **Art. 5** emotion-inference prohibition in education institutions from the same date. 🔵 **The
+EMEA regulatory shelf is saturated; re-running this leg will not pay again.**
+
+- 🟢 **New: Utrecht University has adopted an AI policy that classifies AI systems by risk level,
+  aligned to the AI Act.** 🔵 **That is an institution which has already done the Annex III triage a
+  studio engagement would otherwise have to perform with the client** — roughly two years before the
+  high-risk obligations bite. This is the **third** `institutional_policy` row on this base and it
+  completes a pattern across three regions: **North-West University (ZA)**, **SUNY (US, 64
+  campuses)** and **Utrecht (NL)**. ⚠️ **Universities are ahead of enforcement everywhere this base
+  has looked** — and an institution-level instrument is the one a studio can actually comply with,
+  unlike guidance aimed at districts. **Existence and approach are briefable; the policy text was not
+  located, so its contents are not.**
+- 🔴 **Informative nil, and it is a lesson about the query rather than about the region: the leg
+  named the Gulf and Africa explicitly and returned nothing on either.** Since the frame was
+  *"EMEA"*, **the frame itself collapses to Europe.** 🔵 Same class as `p271`'s finding that the
+  learning-ABOUT-AI confusion is a property of **leg wording**, not of language. ⚠️ **Standing
+  instruction: query MEA as its own region. An EMEA-framed leg will return Europe and the silence
+  will look like coverage.** MEA's figures on this shelf come from Grand View directly, not from any
+  EMEA leg.
+
+
+
 **Pass 270 — the "Finland / Estonia / Netherlands are the K-12 leaders" claim does not survive
 re-verification as a group, and the three split three ways.**
 
