@@ -14,27 +14,32 @@ updated: 2026-10-17
 
 | Figure | Value | Source grade |
 |--------|-------|--------------|
-| North America share of global AI-in-education market | **36%** | aggregator |
-| AI in education, North America | **$3.68B (2026) → $10.8B (2030), 31.1% CAGR** — publisher now named: **ResourcERA** | **vendor/aggregator** — 🔴 **the horizon in this cell was WRONG until pass 271: it read `$32B (2030)`, which its own CAGR refutes.** See the pass-271 section below |
+| **AI in education, GLOBAL — the publisher's current vintage** | **$8.3B (2025) / $11.4B (2026) → $57.2B (2033), 25.9% CAGR** (Grand View) | 🟢 **NEW pass 272, and it was missing from every studio-facing shelf.** The `$32.27B by 2030 @ 31.2%` line this file carries is **Grand View's SUPERSEDED release**; the house now publishes a **2033 horizon at a materially lower CAGR**. Closes to **−0.0%** under `T32`. **Quote this row, not the $32.27B one** |
+| North America share of global AI-in-education market | **36%** (ResourcERA) | aggregator — 36% of its $10.4B 2026 base is **$3.744B**, within **1.7%** of Technotrenz's $3.68B, which is how a *share* became a *dollar forecast*; see `T36` |
+| AI in education, North America | **$3.68B (2026) → $10.8B (2030), 31.1% CAGR** — publisher is **Technotrenz**, 🔴 **NOT ResourcERA as pass 271 recorded** | **aggregator** — the horizon was corrected by `p271` and the **attribution was corrected by `p272`**, which asked the search leg to name ResourcERA and was told the figure *"is not a ResourcERA figure"*. ResourcERA gives NA as a **36% share**, not a dollar forecast. See `T36` |
+| AI in education, North America *(the publisher's own current vintage)* | **$4.25B (2026) → $19,388.3M (2033), 24.2% CAGR** (Grand View, 2033 databook) | **NEW pass 272** — closes to **−0.0%** under `T32`. Prefer this row: it is the research house's own number on its current vintage, not an aggregator's |
 | US K-12 teachers who used AI tools in SY 2024-25 | **60%** (32% at least weekly) | survey, reported secondhand |
 | LATAM university students using AI | **92%** | Digital Education Council |
 | Mexican university students/faculty using GenAI daily | **>60%** | SEP national survey, Apr 2026 |
-| AI in education, EMEA *(Europe)* | **$2.64B – $2.11B (2026)**, published as a **range** | two publishers, **~25% apart**; see pass 270 |
+| AI in education, EMEA *(Europe)* | **$2.64B – $2.11B (2026)**, published as a **range** | 🔴 **the "two publishers" collapse to ~one, pass 272.** ResourcERA's $2.64B **reproduces Grand View's own 2024 base ($1,520.1M) compounded two years at Grand View's own 31.9% — to within 0.17%**. The genuinely independent end of the range is MarketDataForecast's **~$2.11B**. See `T36` |
 | AI in education, **MEA** | **$280.8M (2024) → $1,645.9M (2030), 32.6% CAGR** (Grand View) | **NEW pass 271** — this file previously declared MEA **UNSIZED** while the base carried a figure elsewhere |
-| AI in education, LATAM | **$0.67B (2026) → $2.1B (2030), 33.5% CAGR** (ResourcERA) | vendor/aggregator; Grand View gives $259.6M (2024) @ 32.4% |
-| AI in education, APAC | **~$2.85B (2026)** — **derived**, not published | **NEW pass 271** — residual of the ResourcERA decomposition, corroborated to 2.5% by Grand View; see below |
+| AI in education, LATAM | **$0.67B (2026) → $2.1B (2030), 33.5% CAGR** (ResourcERA) | ⚠️ **the widest spread on this shelf and the one region that does NOT reconcile to Grand View (pass 272).** GVR: **$259.6M (2024) → $1,505.6M (2030) @ 32.4%**, whose 2026 point is **$455M** — ResourcERA is **47% above it**. M&M: **$105.6M (2024) → $204.7M (2029) @ 11.7%**. **Three publishers span ~6×.** Never quote a single LATAM figure |
+| AI in education, APAC | **$2,282.9M (2025) → $18,214.1M (2033), 28.1% CAGR** (Grand View); **$3.22B (2026)** back-cast from the horizon | 🔴 **CORRECTED pass 272.** This cell read *"~$2.85B (2026), derived, not published"* — but a **published** Grand View figure was already sitting in this same file at line ~147, used as *corroboration* of the residual. **An intra-file contradiction: headline derived, body published.** And the corroboration was **circular** — ResourcERA re-publishes Grand View. See `T36`, `T38` |
 
 ### The forecast spread, since the spread is the finding
 
-Four publishers located on 2026-10-17, all vendor or aggregator grade:
+Publishers located on 2026-10-17. 🔴 **Pass 272 warning: this table counts re-publishers as publishers.**
+ResourcERA's row is Grand View's number; Technotrenz and Azumo re-publish ResourcERA. The real count of
+independent models behind the regional picture is **far smaller than the row count suggests** — see `T36`.
 
-| Publisher | 2026 baseline | Horizon | CAGR |
-|-----------|---------------|---------|------|
-| Research and Markets | $10.6B | $42.48B by 2030 | 41.5% |
-| Resourcera | $10.4B | $32.27B by 2030 | 31.2% |
-| Precedence Research | $9.58B | $136.79B by 2035 | 34.52% |
-| MarkWide Research | $8.7B | $100.21B by 2035 | 31.20% |
-| Technavio (incremental) | — | **+$3.37B of growth 2026→2030** | 45% |
+| Publisher | 2026 baseline | Horizon | CAGR | note |
+|-----------|---------------|---------|------|------|
+| Research and Markets | $10.6B | $42.48B by 2030 | 41.5% | — |
+| Resourcera | $10.4B | $32.27B by 2030 | 31.2% | ← 🔴 **not a publisher: `$32.27B @ 31.2%` is GRAND VIEW's, verbatim (p272)** |
+| **Grand View (current vintage)** | **$11.4B** | **$57.2B by 2033** | **25.9%** | ← 🟢 **the same house's own supersession of the row above** |
+| Precedence Research | $9.58B | $136.79B by 2035 | 34.52% | — |
+| MarkWide Research | $8.7B | $100.21B by 2035 | 31.20% | — |
+| Technavio (incremental) | — | **+$3.37B of growth 2026→2030** | 45% | 🟢 the only one that explains its number **structurally** |
 
 The 2026 baseline is a **narrow band ($8.7–10.6B)** and the long-range forecasts differ by
 roughly **4×**. Nobody disagrees about the size of the market today; they disagree about
@@ -225,6 +230,103 @@ means nothing. Precedence Research separately puts NA at **38% of the global mar
 the **36%** this file carries from an aggregator.
 
 
+### Pass 272 — the regional picture has ONE upstream publisher, and this base was checking Grand View against Grand View
+
+⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
+[`p272-websearch.2026-10-17-p272.tsv`](../evidence/p272-websearch.2026-10-17-p272.tsv) *(9 legs; legs
+1–5 taken verbatim from `p271`'s ranked backlog)* ·
+[`arithmetic-sweep.2026-10-17-p272.tsv`](../evidence/arithmetic-sweep.2026-10-17-p272.tsv) *(19 cells,
+zero searches)* ·
+[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) *(5 repositories)*.
+
+`p271` closed by naming its own weakest claim and asking for it to be attacked: *"Falsify the ResourcERA
+attribution — the one claim this pass made on inference rather than reading … Cheapest falsification: one
+leg per region quoting ResourcERA by name."* **Those legs were run. The attribution was half wrong, and
+what replaced it is worse than what `p271` feared.**
+
+#### 🔴 1. The North America publisher is Technotrenz, not ResourcERA
+
+`p271` recorded *"Publisher identified for the first time in ~200 passes — **ResourcERA**"*. Asked
+directly, the leg says the `$3.68B → $10.80B @ 31.1%` row **"is not a ResourcERA figure"**; it is
+**Technotrenz**. ResourcERA publishes NA as a **36% share** of its 2026 base, and `0.36 × $10.4B = $3.744B`
+— **within 1.7% of Technotrenz's $3.68B**.
+
+🔵 **So the mechanism is not "one vendor's decomposition". It is a *percentage* that a second aggregator
+turned into *dollars*.** A share is a claim about proportion; a dollar figure is a claim about magnitude.
+The conversion manufactures the second one and it arrives looking like independent regional research.
+**Technotrenz had never been named anywhere on this base** — not on a shelf, not in the register.
+
+#### 🔴 2. ResourcERA is not the upstream. Grand View Research is — and the proof is arithmetic, not a citation
+
+Three independent fingerprints, none of which needed the page to be openable:
+
+| fingerprint | test | result |
+|---|---|---|
+| **Global** | ResourcERA's `$32.27B by 2030 @ 31.2%` | 🔴 **Verbatim Grand View.** GVR's own press release: *"expected to reach USD 32.27 billion by 2030, registering a CAGR of 31.2% from 2025 to 2030"* |
+| **Europe** | GVR's data-tree base `$1,520.1M` (**year not stated on the page**) compounded at GVR's own 31.9% | 🔴 Arithmetic fixes the base year at **2024** (`1520.1 × 1.319⁶ = 8004.6` vs GVR's published `8003.4`, **+0.02%**). Compound it **two** years instead: `1520.1 × 1.319² = $2,644.6M` — **ResourcERA's EMEA figure is $2.64B, a 0.17% match** |
+| **MEA** | the CAGR *implied* by GVR's MEA endpoints (`$280.8M → $1,645.9M`, 6y) | 🔴 **34.3% — exactly ResourcERA's labelled MEA CAGR** |
+
+🔴 **Consequence for `p271`'s headline result.** `p271` derived APAC as the residual of the regional sum
+and wrote: *"the implied APAC residual lands within **2.5%** of Grand View's independent **~$2.92B**"*,
+calling it *"corroborated … by a different method"*. **Grand View is not independent of ResourcERA; it is
+ResourcERA's source.** The residual was checked against the very model it was extracted from. 🟢 **A 2.5%
+agreement produced that way is guaranteed, not evidential** — and the tighter it is, the more convincing
+the circularity looks. `T36`.
+
+#### 🔴 3. The APAC cell was derived while a published figure sat in this same file
+
+This file's headline table published `~$2.85B (2026) — derived, not published`. **Line ~147 of the same
+file already carried Grand View's directly published `$2,282.9M (2025) @ 28.1% → ~$18.2B (2033)`** — used
+as *corroboration* of the derived number rather than as a **replacement** for it.
+
+🔵 **A new defect species: INTRA-FILE, headline-versus-body.** `p266`–`p270` found cross-shelf defects
+(`grep` for disagreement between files); `p271` found the first intra-cell one (a row refuting itself).
+**This one is a file disagreeing with itself across 120 lines, where the better datum is the one further
+down.** No cross-shelf grep reaches it — both readings live in the same file — and no arithmetic check
+reaches it either, because **both cells are internally sound.**
+
+#### 🔴 4. Grand View mislabels its own CAGR window — in three regional databooks — and this base had filed the symptom as rounding noise
+
+`p271`'s costed item 2 (*"run `T32`'s arithmetic check across EVERY remaining numeric cell … it needs zero
+searches"*) was run: **19 cells, full ledger in
+[`arithmetic-sweep.2026-10-17-p272.tsv`](../evidence/arithmetic-sweep.2026-10-17-p272.tsv).** 🟢 **No cell
+on these shelves is impossible any more** — `p271`'s NA defect was the only `STRUCTURAL` one and it is
+fixed. **Two cells `FLAG`, and they are the same defect:**
+
+| cell | as the publisher LABELS the window | one year earlier |
+|---|---|---|
+| **EMEA** GVR `$1,520.1M → $8,003.4M @ 31.9%` | labelled **2025–2030** → **+31.9%** 🔴 `FLAG` | **2024–2030** → **−0.0%** 🟢 |
+| **MEA** GVR `$280.8M → $1,645.9M @ 32.6%` | labelled **2025–2030** → **+43.0%** 🔴 `FLAG` | **2024–2030** → **+7.8%** 🟢 |
+| **APAC** GVR `$2,282.9M → $18,214.1M @ 28.1%` | baseline **2025** → **+10.0%** | window **2026–2033** → **+0.0%** 🟢 |
+
+🔵 **The APAC row is the one that matters, because this base had already measured the symptom and
+dismissed it.** `intel/trends.md` carries that row with a `10%` mismatch annotated **"base stated as
+'roughly'"** — i.e. filed as rounding. 🟢 **It is not rounding. It is a one-year window offset, and it
+resolves to +0.0%.** Reading the baseline year off the stated CAGR window — rather than off the number
+beside it — moves APAC's 2026 point from **$2.92B to $3.22B**, a 10% revision to a regional figure a
+studio would size an engagement from.
+
+⚠️ **Standing instruction, cheap and repeatable: a Grand View horizon page's CAGR window and its printed
+baseline year can disagree by a year. Derive the baseline from the horizon and the CAGR; do not trust the
+label.** And `T32` now has a second duty: **a 10% mismatch is not automatically noise — test the
+window before writing it off.**
+
+#### 🟢 What a studio should actually quote after this pass
+
+| For | Quote | Why |
+|---|---|---|
+| **Global** | **$11.4B (2026) → $57.2B (2033), 25.9%** — Grand View, current vintage | The research house's own number, current release, closes to −0.0% |
+| **North America** | **$4.25B (2026) → $19.39B (2033), 24.2%** — Grand View | Publisher's own; replaces an aggregator's conversion of a share |
+| **APAC** | **$3.22B (2026) → $18.21B (2033), 28.1%** — Grand View | Published, not derived; window-corrected |
+| **EMEA** | **~$2.11B (2026)** — MarketDataForecast | The one EMEA figure that is **not** Grand View's curve re-based |
+| **LATAM** | 🔴 **a range, never a point: $105.6M–$670M for 2026 across three publishers** | ~6× spread; the only region where ResourcERA does not reconcile to Grand View |
+| **MEA** | **$280.8M (2024) → $1,645.9M (2030), 32.6%** — Grand View | Unchanged from `p271`; window caveat above |
+
+⚠️ **And the honest framing for a client deck:** the regional AI-in-education picture rests, as far as this
+base can establish, on **one research house's model**, re-based and re-published by at least three
+aggregators. **Independent corroboration of these regional numbers has not been found. It has only ever
+been simulated by re-publication.**
+
 ## Global players
 
 | Player | Type | AI position | Opening for Globant |
@@ -383,6 +485,35 @@ data gets the ranking backwards.
 
 
 ### North America
+
+
+**Pass 272 — the NA leg mostly REPRODUCED this base's holdings, and saying so is the finding.
+Four datums were genuinely new, and all four are PROCUREMENT signals rather than policy.**
+
+🔵 **Stated plainly: the 134-bills/31-states count, Maryland, Oklahoma `SB 1734`, Ohio and North
+Carolina's three layers all came back and were all already shelved.** `p272` grepped each against
+the destination files before writing (`T29`/`T34` discipline). **The NA policy shelf is in good
+shape; what it was thin on is who is actually BUYING.**
+
+- 🟢 **Utah has a statewide deployment deal for Google's Gemini for Education**, across public
+  schools, **from the 2026-27 school year**. 🔴 **This is the first statewide single-vendor
+  classroom-AI procurement on this base.** It matters more than another guidance document: it sets
+  the integration surface a studio engagement in Utah must sit beside, and it is a **commercial,
+  non-permissive** surface.
+- 🟢 **SUNY has a systemwide AI policy across its 64 campuses** — the first **higher-education
+  system-level** instrument on this base, which has until now carried NA almost entirely at K-12
+  and state-statute altitude.
+- 🟢 **Alabama requires a computer-science course that includes AI instruction for graduation**, and
+  **Virginia's law pairs AI guidance with teacher training.** Both land in the teacher-formation and
+  curriculum-delivery lane where this base's permissive supply actually exists.
+- 🟡 **North Carolina's $10M earmark for Khanmigo is contested but being defended by legislators.**
+  A named line item is a procurement precedent; note that Khanmigo is **not open source**, so the
+  earmark buys a proprietary tutor rather than a platform a studio can extend.
+- ⚠️ **Higher education is thin in the source material and this pass is not papering over it.**
+  Beyond the SUNY headline, the leg returned no detail. **An informed gap: NA higher-ed AI
+  governance is under-measured on this base, and the next NA leg should target it specifically
+  rather than re-running the K-12 statute sweep, which is now saturated.**
+
 
 
 **Pass 270 — three North America datums discharged from the backlog `p269` registered, and two of
@@ -956,6 +1087,31 @@ Korea's **AI Framework Act (eff. 2026-01-22)** and Taiwan's **AI Basic Act (Dec 
 ### LATAM
 
 
+**Pass 272 — the LATAM leg also mostly reproduced the shelves. Two new datums, and both are
+delivery-channel findings rather than market findings.**
+
+🔵 **Teachy, Ginia, Vetto, Ceibal, TALIS, CENIA, the ANPD sandbox and `PL 2.338/2023` all returned
+and were all already shelved.** 🟢 **The leg did confirm this base's standing structural read in the
+source's own words: LATAM AI products are aimed at "instructional support for teachers rather than
+consumer tutoring"** — which is exactly where the permissive supply on `agents/top.md` sits, so the
+region's demand shape and this base's supply shape agree.
+
+- 🟢 **Raspberry Pi Foundation's `Experience AI` is scaling across NINE Latin American countries**,
+  backed by **$4.6M from Google.org**, targeting **24,000 educators trained and 1.25M students
+  reached by 2028**. 🔵 **This is the largest named teacher-training pipeline in the region on this
+  base**, and it is curriculum-and-training, not platform — so it is a **partner or a channel**,
+  not a competitor to a platform engagement.
+- 🟢 **Chile's `Elige Educar` is using AI for teacher recruitment and retention** — an HR/workforce
+  application, a lane this base had not recorded for the region at all.
+- 🔴 **And the market warning for this region specifically, from `p272`'s sizing work: LATAM is the
+  one region whose carried figure does not reconcile to Grand View**, and three publishers span
+  roughly **6×** for the same year. ⚠️ **Do not put a single LATAM AI-in-education dollar figure in
+  a client deck.** Size a LATAM engagement from the *adoption* datums on this shelf — which are
+  survey-grade and plural (TALIS 56% Brazil / 55% Chile, Ceibal 75% Uruguay, 92% of university
+  students) — **not from the market forecasts.**
+
+
+
 **Pass 270 — the Linux Foundation LATAM datum is discharged, and the register's NAME for it does
 not exist.**
 
@@ -1331,3 +1487,39 @@ four regional rows are one publisher's decomposition"* rests on two verbatim-mat
 signature plus a sum that lands within 2.5% of an independent APAC estimate. 🟢 **That is strong, and it
 is still not a page anyone on this base has read.** The cheapest falsification is a single leg per
 region quoting ResourcERA by name.
+
+### Pass 272 addendum to the declared gaps
+
+🟢 **`T34`'s amendment — "grep the OTHER shelves before RE-DECLARING a gap" — was run across the
+remaining shelves this pass**, which was `p271`'s costed item 3. `intel/trends.md`,
+`verticals/solutions.md`, `compose/patterns.md`, `agents/top.md` and `repos/foundations.md` each
+declare their own gaps; **none had ever been swept this way.**
+
+🟢 **Result: every declared gap on those five shelves is REASONED and CHECKABLE** — each states why
+it is empty, and the reason survived a destination grep. **No false declaration of absence was found
+outside `market.md`** (where `p271` found one). 🔵 **That is a real negative result and it should be
+recorded as one**: the species `p271` discovered is not endemic.
+
+🔴 **But the sweep found a SEVENTH cross-shelf defect of a new kind — a gap that is TRUE but carried
+at the WRONG MAGNITUDE.** `intel/trends.md` states the `mcp-server-education` topic is *"**still
+empty** while **five** payload-verified education MCP servers exist"*. `agents/top.md` says
+**eleven** verified, and **12 distinct MCP server slugs are actually shelved there.**
+
+| shelf | magnitude carried |
+|---|---|
+| `intel/trends.md` | **five** |
+| `agents/top.md` prose | **eleven** |
+| `agents/top.md` rows, counted | **12 distinct slugs** |
+
+🔵 **Why no existing check caught it.** The *gap itself* is true — the topic is empty — so a check
+that tests whether a declared gap still holds returns **PASS**. `p270`'s `T29` greps the destination
+for *presence*; `p271`'s `T34` greps other shelves before re-declaring *absence*. **Neither reads the
+NUMBER in the sentence.** Passes 267 and 268 added the servers and updated the count on one shelf
+only. 🟢 **Amendment (`T37`): when a gap is quantified, the quantity is a carried datum and decays
+like any other — re-count it from the rows, on every shelf that states it.**
+
+⚠️ **Declared-gap status after this pass:** `market.md`'s gaps stand as `p271` left them, with
+**MEA sized** and the **APAC gap now CLOSED by a published figure rather than a derived one** (see
+the pass-272 section above). The new standing gap this pass opens is named in
+[`intel/open-gaps.md`](open-gaps.md): **no independent corroboration of any regional AI-in-education
+market figure has been located, and the appearance of corroboration was re-publication.**

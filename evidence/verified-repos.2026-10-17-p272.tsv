@@ -1,0 +1,26 @@
+# p272 — 2026-10-17. FIVE repositories probed, and the stated reason it is five.
+# Channel re-tested this pass, not inherited: raw.githubusercontent.com 200; api.github.com 403;
+# github.com HTML 403; resourcera.com / technotrenz.com / grandviewresearch.com all ENOTFOUND
+# (so every market figure below is secondary-source grade, read through the search tool only).
+# Probe = 15 path/ref combinations per slug: {LICENSE,LICENSE.txt,LICENSE.md,COPYING,LICENCE}
+# x {main,master,develop}. Byte counts are of the payload actually served.
+slug	ref	path	http	bytes	grant	basis	note
+OpenOLAT/OpenOLAT	master	LICENSE	200	10982	Apache-2.0	payload + terms-section diff vs upstream	ALREADY SHELVED on verticals/solutions.md at licence grade; p272 raises it to RIDER-CLEARED. 10982 B is 375 B SHORT of apache/.github's 11357 B stock file. Diff shows lines 1-175 (all TERMS AND CONDITIONS) byte-identical; the optional APPENDIX ("How to apply the Apache License to your work") is replaced by two attribution statements naming the OLAT Zentrum / University of Zurich and frentix GmbH. NO additional restriction, NO Commons Clause, NO field-of-use limit. Rider grep hits are stock Apache text only (ss3 patent, ss5 contributions, ss6 trademarks).
+HKUDS/DeepTutor	main	LICENSE	200	11408	Apache-2.0	payload	Corroborates the carried cell (agents/top.md, trends.md T1). 11408 B vs OpenOLAT's 10982 B -- BOTH are unmodified Apache-2.0. See T39: the byte delta is the appendix, not a rider.
+academico-sis/academico	main	LICENSE	200	1094	MIT	payload	ALREADY SHELVED MIT on repos/foundations.md:46 with byte column "--". p272 supplies the missing measurement: 1094 B, "Copyright (c) 2020 Thomas Debay and project contributors". NOTE: the vendor comparison that surfaced it this pass says the licence "is not named" on its homepage -- the payload names it. A first-hand read beat the aggregator.
+gegok12/gegok12	-	-	404	-	NOT ESTABLISHED	15 path/ref combos, all 404	A vendor listing claims "free core is free forever under the MIT licence, 26 of 38 modules", 12 Pro modules at $100-$250. NO licence payload at this slug. The claim is UNVERIFIED and the shape of it -- MIT core plus paid modules -- is the licence trap this base already names. Do NOT shelve. Appears on this base only in compose/code analysis TSVs, never on a studio-facing shelf.
+projectfedena/fedena	-	-	404	-	NOT ESTABLISHED	15 path/ref combos, all 404	INDEPENDENTLY REPRODUCES p265's refutation of Fedena's published Apache-2.0 claim. p272 adds WHY the false claim circulates: the Apache-2.0 attribution this pass found traces to openeducat.org -- a DIRECT COMPETITOR's comparison page. A licence claim sourced from a rival vendor is not a licence.
+# --- p272 second probe set: the zero-copyleft stack for P22. Every component read at payload
+# --- this pass. ALSO the Apache-2.0 byte-size census that grounds T39 (n=6 Apache files).
+tsugiproject/tsugi	master	LICENSE	200	10273	Apache-2.0	payload	LTI framework. SMALLEST Apache file in this census -- 1084 B under stock -- and unmodified. No rider keywords.
+numbas/Numbas	master	LICENSE	200	11357	Apache-2.0	payload	E-assessment. EXACTLY stock size (11357 B).
+yetanalytics/lrsql	main	LICENSE	200	11357	Apache-2.0	payload	Learning Record Store. EXACTLY stock size.
+adlnet/xAPI-Spec	master	LICENSE	200	11525	Apache-2.0	payload	xAPI spec. LARGEST in census, 168 B OVER stock. Unmodified terms.
+autolab/Autolab	master	LICENSE	200	11324	Apache-2.0	payload	Autograding (CMU). 33 B under stock.
+haxtheweb/haxcms-php	master	LICENSE	200	11362	Apache-2.0	payload	Component CMS. 5 B over stock.
+pykt-team/pykt-toolkit	main	LICENSE	200	1066	MIT	payload	Knowledge tracing. MIT.
+jcputney/scorm-again	master	LICENSE	200	1072	MIT	payload	SCORM runtime. MIT.
+# T39 CENSUS RESULT: six unmodified Apache-2.0 payloads span 10273-11525 B, a 1252 B range,
+# straddling the stock 11357 B in BOTH directions. Byte size therefore carries NO information
+# about what a grant says. It detects CHANGE between passes and nothing more.
+# Zero rider keywords (commons clause / non-commercial / may not sell) across all 8 payloads.

@@ -1015,3 +1015,83 @@ curriculum-bindable, which is precisely what the general-purpose assistant canno
 - ⚠️ **All Dutch policy datums here are secondary-source grade.** The primary channel
   (`open.overheid.nl`, `rijksoverheid.nl`) is unreachable from this environment — re-tested pass 271,
   both transports. Verify the commencement date against the primary text before contracting on it.
+
+## P22 — The zero-copyleft engagement: a full education stack where procurement excludes GPL/AGPL *(new in pass 272)*
+
+**Target:** US state university systems and public agencies whose procurement or redistribution rules
+exclude copyleft — the lane **SUNY's systemwide AI policy across 64 campuses** (new on `market.md` this
+pass) and **Utah's statewide vendor deal** both sit in; also EMEA public bodies that must redistribute
+derivative work without a network-copyleft obligation.
+**Timeline:** 10–14 weeks to a production pilot.
+
+**Why this pattern exists.** Every default answer in education is copyleft: **Moodle GPL-3.0**,
+**Open edX AGPL-3.0**, **Canvas AGPL-3.0**, **OpenEduCat LGPL-3.0**, **Koha GPL-3.0**, **H5P GPL-3.0**.
+When a client's procurement excludes copyleft, the usual advice is "use the API and don't fork" — which is
+a constraint, not a stack. 🟢 **Pass 272 established there is a complete, genuinely permissive path**, every
+component read at payload this pass and **rider-cleared**, not merely licence-labelled.
+
+```
+                     ALL COMPONENTS Apache-2.0 / MIT — NO copyleft anywhere in the tree
+                     every grant read at payload on 2026-10-17 (see evidence TSV)
+
+  [OpenOLAT          Apache-2.0  10,982 B]   LMS of record: courses, enrolment, assessment, groups
+         |                                    rider-cleared: terms section byte-identical to upstream
+         |  LTI 1.3
+  [tsugi             Apache-2.0  10,273 B]   the sanctioned tool-integration boundary — your agent
+         |                                    ships as an LTI tool, so core is NEVER forked
+         +---> [Numbas        Apache-2.0  11,357 B]  randomised maths/science assessment, SCORM out
+         +---> [Autolab       Apache-2.0  11,324 B]  autograding with per-submission containers
+         +---> [scorm-again   MIT          1,072 B]  runtime for the client's existing SCORM estate
+         |
+  [xAPI-Spec         Apache-2.0  11,525 B]   the telemetry vocabulary
+         |
+  [lrsql             Apache-2.0  11,357 B]   Learning Record Store — SQL-backed, self-hosted
+         |                                    every learner event lands here, on the client's infra
+         +---> [pykt-toolkit  MIT          1,066 B]  learner model / knowledge tracing over the LRS
+         |
+  [academico         MIT          1,094 B]   SIS: enrolment, attendance, results
+         |                                    (byte column filled in by p272; vendor page said
+         |                                     "licence not named" — the payload says MIT)
+         |
+  [DeepTutor         Apache-2.0  11,408 B]   the tutor agent, pointed at a self-hosted model
+```
+
+### Wiring
+
+1. **Stand up `OpenOLAT`** as the LMS of record. Java/Spring; it behaves like an institutional LMS
+   (that is the reason to pick it over Oppia or Kolibri, which are not institutional).
+2. **Put every agent behind `tsugi` as an LTI 1.3 tool.** This is the architectural commitment that makes
+   the pattern hold: the agent is a *tool*, never a patch. A client can swap `OpenOLAT` for Moodle later
+   without touching your code — and if they do, **the copyleft stays on their side of the LTI boundary.**
+3. **Emit `xAPI` statements for every learner interaction into `lrsql`.** Do this from day one. The LRS
+   is what makes the engagement extensible rather than a one-off tutor, and it is the client's data on
+   the client's infrastructure.
+4. **Train the learner model with `pykt-toolkit` against the LRS**, not against the LMS database. The
+   model then survives a platform migration.
+5. **`DeepTutor` as the tutor surface**, pointed at a self-hosted model. ⚠️ Apache-2.0 covers the
+   *code*; it says nothing about the *weights* you point it at — that is a separate licence question and
+   the one most likely to be missed in a procurement review.
+6. **`academico` for SIS data** feeding dropout-risk work; `Numbas`/`Autolab` for assessment;
+   `scorm-again` to keep the client's existing SCORM content playable.
+
+### The licence boundary — the point of the pattern
+
+🟢 **There isn't one inside the stack.** Apache-2.0 and MIT both permit proprietary derivative work with
+attribution, so **the client's own code can sit anywhere in this tree**, including inside a fork of any
+component. Apache-2.0 additionally carries an **express patent grant**, which is usually what a
+public-sector legal review is actually asking about.
+
+⚠️ **Three things still to get in writing:**
+- **Model weights are not covered** by any grant above (step 5).
+- **`xAPI-Spec` is a specification**, Apache-2.0 — implementing it is unencumbered, but conformance
+  claims and the ADL trademark are not the same thing.
+- **If the client insists on Moodle or Canvas** after all, the pattern degrades gracefully *only* through
+  the LTI boundary in step 2. Keep it even if you think you won't need it.
+
+### What this pattern is NOT
+
+🔴 **It is not an ERP.** **No education ERP under MIT or Apache-2.0 has been located**, tested from two
+independent channels (`p271`, `p272`). If the engagement needs admissions/fees/library as one system,
+`OpenEduCat` is **LGPL-3.0** and that is a different conversation. 🔴 **And it is not a reason to quote a
+market size** — see `T36`: the regional AI-in-education figures all trace to one publisher, and LATAM's
+span roughly 6×. Size this engagement from the **adoption** datums on `intel/market.md`, not the forecasts.

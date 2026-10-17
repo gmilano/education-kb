@@ -70,7 +70,36 @@
 #                          Sole occupant: NL ai_literacy_instruction, kerndoelen digitale
 #                          geletterdheid, official 2027-08-01, Inspectie oversight from 2031.
 #
-# 🔴 ANY FILTER OR COMPILER READING THIS FILE MUST HANDLE THIRTEEN VALUES, NOT FIVE.  The count
+#   -- p272 NARROWS this definition, because p271 predicted the liability and it is real. --
+#   p271 closed by asking: "MANDATED_FUTURE_COMMENCEMENT has one occupant. Sweep the existing
+#   PROPOSED and ADOPTED rows: any instrument with a named future commencement is mis-shelved."
+#   THE SWEEP WAS RUN (p272).  RESULT: MEASURED NIL.  Every PROPOSED row carries `effective` = "-"
+#   and every ADOPTED row carries a PAST date, so NOT ONE row is mis-shelved.  Recorded as a
+#   negative result rather than left as an open worry.
+#
+#   BUT the sweep found the real defect, which was not where p271 was looking.  Filtering ALL
+#   rows by future `effective` date returns SEVEN, and SIX of them are NOT this value:
+#       EMEA EU   assessment_grading / admissions_access / learning_path_steering /
+#                 proctoring_behaviour       GATED     eff 2027-12-02
+#       EMEA EU-public-sector fundamental_rights_assessment  MANDATED  eff 2027-12-02
+#       APAC VN   assessment_grading         HIGH_RISK eff 2027-03-01
+#       EMEA NL   ai_literacy_instruction    MANDATED_FUTURE_COMMENCEMENT  eff 2027-08-01
+#   🔴 So "binding on a named future date" already had FIVE spellings in this column before p271
+#   added a sixth.  `MANDATED` + eff=2027-12-02 (the EU public-sector row) says exactly what
+#   `MANDATED_FUTURE_COMMENCEMENT` + eff=2027-08-01 says -- and the `effective` column already
+#   carries the date in BOTH.  Encoding commencement in the VERDICT duplicates a column.
+#   🟢 NARROWED DEFINITION, which is what makes the value non-redundant: use it ONLY where the
+#   INSTRUMENT ITSELF IS NOT YET ADOPTED (draft / "concept") and a commencement date has
+#   nonetheless been officially named.  That is precisely the Dutch case -- the kerndoelen are a
+#   "definitief concept", not enacted law, with 2027-08-01 named -- and it is precisely NOT the EU
+#   AI Act, which is ADOPTED LAW with a deferred application date.
+#   🔵 The dimension this column was missing is INSTRUMENT STATUS (draft vs adopted), which is
+#   independent of commencement timing.  Two independent dimensions were being crammed into one
+#   categorical.  Until a status column exists, the narrowed definition above is the discriminator,
+#   and the EU/VN rows are CORRECT as they stand -- adopted instruments, deferred application.
+#
+# 🔴 ANY FILTER OR COMPILER READING THIS FILE MUST HANDLE THIRTEEN VALUES, NOT FIVE.
+# (p272 re-verified: 13 declared, 13 present, zero undeclared, re-counted AFTER its edits.)  The count
 # was reached by `cut -f4 | sort -u` on the data, NOT by reading this header -- which is the only
 # method that found HIGH_RISK and FRAMEWORK_LAUNCHED at all.  A consumer
 # that switches on the original five will silently drop every ZA, KR, JP, NC, EE, FI, NL, SG,
@@ -135,3 +164,7 @@ LATAM	CO	national_ai_policy	ADOPTED	2025-02	Politica Nacional de IA	NEW p270. Si
 LATAM	CL	national_ai_policy	ADOPTED	2021	Politica Nacional de IA	NEW p270. Chile's national AI policy dates to 2021; its AI BILL remains in tramite before the futures/science committees of both chambers (already carried above as assessment_grading PROPOSED). REFUSED THIS PASS: a study blog claims Chile approved a dedicated AI EDUCATION framework in 2025. That claim appears in NO academic or policy source located and is NOT carried.
 LATAM	BR	national_ai_policy	ADOPTED	-	national AI strategy	NEW p270. The ILIA regional index rates Brazil the region's GOVERNANCE LEADER on the strength of a robust national strategy - which sits alongside PL 2.338/2023 still being PENDING in the Camara dos Deputados after Senate approval in Dec 2024 (row above). Strategy adopted, statute not passed: both true, and a client slide must not merge them.
 LATAM	regional	institutional_policy	NOT_ESTABLISHED	-	none	NEW p270. A Universidad Autonoma de Madrid analysis finds NO unified regulatory framework for AI in Latin American HIGHER education, with most universities operating without clear internal rules and deciding in isolation. This is the INSTITUTION-level inverse of the school-level pattern this base documents for LATAM, and it is directly monetisable: the first deliverable for a LATAM university client is frequently the policy and governance scaffold, not the tutor.
+North America	US-UT	district_ai_policy	UNREGULATED	2026-09	statewide Gemini for Education deployment agreement	p272 NEW, and it is a PROCUREMENT row rather than a policy row -- the first statewide single-vendor classroom-AI deployment on this base. Utah has announced a statewide deal to deploy Google's Gemini for Education across public schools from the 2026-27 school year. VERDICT IS UNREGULATED DELIBERATELY: a procurement is not a rule, and nothing located imposes a duty on districts. The engagement consequence is architectural, not legal -- a studio working in Utah must sit BESIDE a commercial, non-permissive assistant already in the classroom, which is an integration constraint (see P22 step 2: keep the LTI boundary even when you think you will not need it). Secondary-source grade; the agreement text was not reachable from this environment.
+North America	US-NY-SUNY	institutional_policy	ADOPTED	2026	SUNY systemwide AI policy (64 campuses)	p272 NEW and the FIRST HIGHER-EDUCATION SYSTEM-LEVEL row in this matrix, which until now carried North America almost entirely at K-12 and state-statute altitude. Reported as a systemwide policy across all 64 SUNY campuses. Institution-level instruments are the ones a studio can actually comply with, versus guidance aimed at districts -- the same pattern this matrix records for ZA universities being ahead of ZA schools. GRADE: candidate - reported by one aggregator with no detail beyond the headline; the policy text was NOT located. DO NOT brief its contents, only its existence.
+North America	US-AL	curriculum_mandate	MANDATED	-	computer-science graduation requirement including AI instruction	p272 NEW. Alabama requires a computer science course that includes AI instruction for graduation. Lands in the curriculum-delivery lane where this base's permissive supply actually exists (see P16/P17). Effective date NOT established -- recorded as '-' rather than guessed. Secondary-source grade.
+North America	US-VA	teacher_competency	ADVISORY_NONBINDING	-	state AI guidance paired with teacher training	p272 NEW. Virginia's law calls for AI guidance AND teacher training together. The pairing is the useful part: guidance alone creates no engagement, guidance plus a funded training duty creates the teacher-formation workstream this base repeatedly finds is the fundable one. Verdict ADVISORY_NONBINDING because what was located is guidance, not a duty on schools. Effective date not established. Secondary-source grade.

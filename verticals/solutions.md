@@ -23,7 +23,7 @@ updated: 2026-10-17
 | Platform | Repo | Licence | Stack | Where it fits |
 |----------|------|---------|-------|---------------|
 | **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 *(`COPYING.txt`)* | PHP + MySQL/PostgreSQL | The default LMS of public education worldwide. Has a **first-party AI subsystem since 4.5** — provider-pluggable, so a client can point it at OpenAI, Azure, or a local Ollama/vLLM endpoint. Start here for K-12 and public universities. |
-| **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | Java | **The only Apache-2.0 full LMS found this pass.** Swiss-maintained, used across German-speaking higher education. If procurement rules out copyleft, this is the shelf — and it is the single most under-used finding in this file. |
+| **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** — 🟢 **RIDER-CLEARED at payload, pass 272** *(`master/LICENSE`, 10,982 B; `TERMS AND CONDITIONS` byte-identical to upstream; the 375 B shortfall vs stock is the optional APPENDIX replaced by two attribution notes — University of Zurich / frentix GmbH — carrying no restriction. See `T39`)* | Java | **The only Apache-2.0 full LMS found this pass.** Swiss-maintained, used across German-speaking higher education. If procurement rules out copyleft, this is the shelf — and it is the single most under-used finding in this file. |
 | **Open edX** | [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** | Python/Django + React | MOOC-scale, the platform behind edX. Extend through [XBlock](https://github.com/openedx/XBlock) (Apache-2.0), never by forking core. **The AGPL network clause applies to hosted deployments** — price it before the SOW, not after. |
 | **Artemis** | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | Java/Spring + Angular | Interactive learning with **automated feedback** and an integrated exercise runner (TUM Applied Education Technologies; 819★, 12,437 commits, self-hosted by universities in several countries). The permissive choice when the deliverable is assessment rather than content delivery. **Pass 266 — the AI layer is already built and config-gated:** **Iris** (LLM tutor, MIT), **Pyris** (LLM microservice, MIT), **Athena** (feedback suggestion, **licence UNVERIFIED**), **Hyperion** (AI exercise authoring on Spring AI, no separate repo). "Config-gated" is the commercially important word — the same deployment runs with AI off, so a high-risk EU AI Act classification can be met by configuration rather than by re-architecture. |
 | **Mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT | TypeScript | **AI-native LMS**, self-hosted, positioned against Docebo/TalentLMS. Ships an AI mentor with voice role-play and auto-scoring, an AI course builder that converts policy documents into courses, open-ended answer grading, **Langfuse tracing of model calls**, an **MCP endpoint**, and bring-your-own-key. The closest thing to a 2026-native corporate L&D starting point under MIT. |
@@ -393,3 +393,35 @@ single-aggregator failure in a different channel.
 **dated** AI-literacy mandate — `kerndoelen digitale geletterdheid`, AI literacy explicit, **primary +
 lower-secondary**, legally official **2027-08-01**, inspected from **2031**. See new pattern **`P21`**,
 which wires it to **Moodle** and the **MIT** H5P runtime rather than to the GPL authoring core.
+
+## Pass 272 — the permissive LMS recommendation is now rider-cleared, and two vendor licence claims died at payload
+
+⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) *(5 repositories)*.
+
+🟢 **`OpenOLAT` is the single most load-bearing row on this shelf** — it is what this file tells a studio
+to use when procurement rules out copyleft, so its grant deserves more than a licence label.
+`p272` read the payload and found **10,982 B against stock Apache-2.0's 11,357 B**. 🔵 **A *short* Apache
+file is the shape of a rider**, and `p252` found a real **Commons Clause** on a row this base had blessed
+for four passes. 🟢 **Diffed: the whole terms section is byte-identical to upstream; the missing span is the
+optional APPENDIX, replaced by provenance notes with no legal effect.** Recommendation stands and is now
+**rider-cleared**, not merely licence-labelled. The generalisation is `T39`.
+
+### 🔴 Two platforms a vendor comparison recommends, both refuted at payload
+
+The brief's SIS/ERP leg surfaced two permissive claims. **Neither survived.**
+
+| platform | the claim, and who makes it | `p272` verdict |
+|---|---|---|
+| **GegoK12** | *"free core is free forever under the MIT licence; 26 of 38 modules free, 12 Pro modules $100–$250"* — a vendor listing | 🔴 **NOT ESTABLISHED.** No licence payload on **15 path/ref combinations**. ⚠️ And read the claim's shape: **MIT core plus paid modules** is the open-core pattern, so even if the grant were verified it would cover a *subset* of the product a client is shown. **Do not shelve.** |
+| **Fedena** | Apache-2.0, per a comparison page | 🔴 **NOT ESTABLISHED, and this independently reproduces `p265`'s refutation.** `p272` adds *why the false claim circulates*: the page asserting Apache-2.0 is **openeducat.org — a direct competitor's comparison**. ⚠️ **A licence claim sourced from a rival vendor is not a licence.** |
+
+🟢 **One claim did survive, and it beat its own source.** `academico-sis/academico` — already shelved
+here — is served **MIT at payload (1,094 B)** while the comparison page that surfaced it says the licence
+*"is not named"*. **The first-hand read was better than the aggregator in the one case the aggregator was
+hedging.** That is the asymmetry worth keeping: aggregators are wrong in both directions, and only the
+payload settles it.
+
+⚠️ **Unchanged by this pass:** the permissive full-platform count stays at **five**, and **no education ERP
+under MIT or Apache-2.0 has been located** — now tested from a second channel (`p271` tested it from the
+platform/ERP leg, `p272` from the SIS/school-management leg) with the same result.

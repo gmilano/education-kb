@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 272 — 2026-10-17 — **THE REGIONAL MARKET PICTURE HAS ONE UPSTREAM PUBLISHER, SO THIS BASE HAD BEEN CHECKING GRAND VIEW AGAINST GRAND VIEW — AND THE THREE ZERO-SEARCH AUDITS `p271` COSTED WERE ALL RUN**
+
+⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p272.tsv`](evidence/verified-repos.2026-10-17-p272.tsv) — **13 repositories,
+every grant read at payload** — ·
+[`p272-websearch.2026-10-17-p272.tsv`](evidence/p272-websearch.2026-10-17-p272.tsv), **9 legs, legs 1–5
+taken verbatim from `p271`'s ranked backlog** · and
+[`arithmetic-sweep.2026-10-17-p272.tsv`](evidence/arithmetic-sweep.2026-10-17-p272.tsv), **19 cells and
+zero searches**.
+
+### 🟢 The headline: `p271` named its own weakest claim and asked for it to be attacked. It fell — and what was under it is worse
+
+`p271` wrote: *"Falsify the ResourcERA attribution — the one claim this pass made on inference rather than
+reading … It is strong and nobody here has read the page."* 🔴 **It was half wrong, and the real structure
+is one level deeper than ResourcERA.**
+
+| `p271` believed | `p272` established, by arithmetic rather than by citation |
+|---|---|
+| All four regional rows are **ResourcERA's** decomposition | 🔴 **ResourcERA re-publishes GRAND VIEW RESEARCH.** Global `$32.27B @ 31.2%` is GVR's **verbatim**; ResourcERA's EMEA `$2.64B` = GVR's 2024 base `$1,520.1M` compounded two years at GVR's own 31.9% (**0.17%** match); ResourcERA's MEA CAGR `34.3%` is **exactly** the CAGR implied by GVR's own MEA endpoints |
+| North America's publisher is **ResourcERA** | 🔴 **TECHNOTRENZ** — never named anywhere on this base before. ResourcERA publishes NA as a **36% share**; an aggregator multiplied it into dollars, and `0.36 × $10.4B = $3.744B` lands **1.7%** from it |
+| The APAC residual is *"corroborated to 2.5% by Grand View, by a different method"* | 🔴 **CIRCULAR.** Grand View is the source of the decomposition the residual came out of. **The 2.5% was arithmetically guaranteed, not evidential** — and its tightness is what made it convincing |
+| *"First APAC figure this base can publish, flagged derived"* | 🔴 **A published GVR APAC figure was already in `market.md`, 120 lines below the headline table**, used as corroboration instead of as the cell |
+
+🟢 **And the global figure these shelves publish is a superseded vintage.** Grand View's current release is
+**$8.3B (2025) / $11.4B (2026) → $57.2B (2033) @ 25.9%** — a materially lower CAGR on a longer horizon.
+The `$32.27B by 2030` line every aggregator copies is **the same house's earlier release**, and the current
+one was **missing from every studio-facing shelf**.
+
+### 🔴 The defect species this pass earned: INTRA-FILE, headline versus body
+
+| pass | species | caught by |
+|---|---|---|
+| `p266`–`p270` | **cross-shelf** — one file disagrees with another | `grep` |
+| `p271` | **intra-cell** — a row refutes itself | multiplication |
+| **`p272`** | 🔴 **intra-file — the headline table and the body of the same file carry different values, and the BETTER datum is the one further down** | neither: both cells are internally sound and nothing contradicts anything |
+
+🔵 **This is the fourth consecutive pass whose defect species was invisible to the check written one pass
+earlier** — and the reason is structural, not careless. Each check is built from the shape of the last
+defect.
+
+### 🟢 All three zero-search audits `p271` costed were run
+
+1. **`T32` across every numeric cell (19).** 🟢 **No cell on these shelves is impossible any more.** Two
+   `FLAG`s, **both the same publisher-side defect**: Grand View labels a CAGR window a year later than its
+   own endpoints close over, in **four** regional databooks. 🔴 **This base had measured the symptom twice
+   — APAC and NA, both "10%" — and filed both as rounding.** It is a one-year offset: correcting it moves
+   APAC's 2026 point **$2.92B → $3.22B** and NA's **$3.87B → $4.25B**. New trend **`T38`**.
+2. **`T34` across the other shelves' declared gaps.** 🟢 **Clean** — all five non-`market.md` shelves hold
+   reasoned gaps that survived a destination grep. **A real negative result: the false-absence species is
+   not endemic.** 🔴 **But it exposed a seventh cross-shelf defect of a new kind — a gap that is TRUE but
+   carried at a STALE MAGNITUDE.** `intel/trends.md` said **five** education MCP servers; `agents/top.md`
+   tables **12**. No existing check reads the numeral. New trend **`T37`**.
+3. **The `PROPOSED`/`ADOPTED` future-commencement sweep.** 🟢 **Measured nil — not one row mis-shelved.**
+   🔴 **But the real defect was elsewhere: "binding on a named future date" already had five spellings in
+   that column before `p271` added a sixth**, and `MANDATED` + `eff=2027-12-02` says what
+   `MANDATED_FUTURE_COMMENCEMENT` + `eff=2027-08-01` says. 🟢 **Narrowed, not retracted**: the value is for
+   instruments **not yet adopted** that nonetheless have an officially named commencement — exactly the
+   Dutch `kerndoelen`, exactly not the EU AI Act. The missing dimension is **instrument status**, which is
+   independent of commencement timing. **13 declared, 13 present, re-counted after the edit.**
+
+### 🟢 `T39` — this base measures licence bytes, and bytes discriminate nothing
+
+`OpenOLAT` is the row this KB tells a studio to use when procurement excludes copyleft, so its grant
+deserved more than a label. Measured **10,982 B** against stock Apache-2.0's **11,357 B** — 🔵 **a *short*
+Apache file is the shape of a rider, and `p252` found a real Commons Clause that way.** 🟢 **Diffed: the
+entire `TERMS AND CONDITIONS` is byte-identical to upstream**; the missing span is the **optional
+APPENDIX**, replaced by two attribution notes with no legal effect. **Rider-cleared.**
+
+🔴 **Then the measurement itself was tested, on eight payloads.** Six Apache-2.0 files span
+**10,273 B → 11,525 B** — a **1,252 B range straddling stock in both directions** — and **all six are
+unmodified**. ⚠️ **No byte count, high or low, carries information about what a grant says.** It detects
+that a payload *changed* between passes; it cannot say *what it says*. **Agreement "to the byte" proves
+stability, not correctness.**
+
+### 🔵 Registered, not claimed
+
+- 🟢 **`agents/top.md` gains no rows: seventh consecutive measured nil.** Generic legs ran **last**, per
+  `p269`. `Bloom` and `Lumen` were named in a topic listing **with no owner/repo** — recorded as an
+  informed gap, **not written in as rows**. **Nothing was added to meet a quota.**
+- 🟢 **New pattern `P22` — the zero-copyleft engagement.** Every education default is copyleft (Moodle
+  GPL-3.0, Open edX / Canvas AGPL-3.0, OpenEduCat LGPL-3.0, Koha and H5P GPL-3.0). `p272` verified a
+  **complete permissive path at payload**: `OpenOLAT` + `tsugi` + `Numbas` + `Autolab` + `xAPI-Spec` +
+  `lrsql` + `pykt-toolkit` + `academico` + `scorm-again` + `DeepTutor`, **Apache-2.0/MIT throughout,
+  zero rider keywords across all eight new probes.**
+- 🔴 **Two vendor licence claims died at payload** — `gegok12` (MIT claimed, no payload on 15 path/ref
+  combos, and an **open-core shape**) and `fedena` (Apache-2.0 claimed, **reproducing `p265`**; `p272`
+  adds that the claim's source is **a direct competitor's comparison page**). 🟢 **One survived and beat
+  its own source**: `academico` is **MIT at payload, 1,094 B**, where the vendor page says the licence
+  *"is not named"*. **Aggregators err in both directions in a single leg.**
+- 🟢 **Regional legs mostly REPRODUCED these shelves, and that is recorded rather than dressed up.** New
+  to the shelves: **Utah's statewide Gemini for Education deal** (SY2026-27 — the first statewide
+  single-vendor classroom-AI procurement here), **SUNY's systemwide policy across 64 campuses** (the first
+  higher-ed system-level row), **Alabama**'s CS-with-AI graduation requirement, **Virginia**'s
+  guidance-plus-training pairing, **Raspberry Pi `Experience AI`** across **nine** LATAM countries
+  ($4.6M Google.org; 24,000 educators / 1.25M students by 2028), and Chile's **Elige Educar**.
+- ⚠️ **NA higher-education governance is under-measured on this base and this pass says so** rather than
+  implying coverage. The K-12 statute sweep is saturated; the next NA leg should target higher ed.
+- 🔴 **LATAM is the least reliable region on this shelf.** Three publishers span roughly **6×** for the
+  same year, and it is the **only** region whose carried figure does not reconcile to Grand View.
+  ⚠️ **Never put a single LATAM dollar figure in a deck** — size from the adoption datums, which are
+  survey-grade and plural.
+- 🟢 **Channel re-tested, not inherited:** `raw.githubusercontent.com` **200** · `api.github.com` **403** ·
+  `github.com` HTML **403** · `resourcera.com` / `technotrenz.com` / `grandviewresearch.com` all
+  **ENOTFOUND**. Sixth consecutive confirmation. ⚠️ **Every market figure here is secondary-source grade.**
+
 ## Pass 270 — 2026-10-17 — **THE BACKLOG WAS DISCHARGED BY RE-RUNNING ITS LEGS, NOT BY COPYING IT — AND FIVE OF SIX DATUMS CHANGED SHAPE**
 
 ⏱️ **Sixteenth pass of `2026-10-17`.** Evidence:

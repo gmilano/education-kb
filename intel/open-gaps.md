@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 272 — 2026-10-17 — **`p271`'s ATTRIBUTION FELL TO ITS OWN FALSIFICATION LEG: the upstream is GRAND VIEW, the NA publisher is TECHNOTRENZ, and the "independent corroboration" was CIRCULAR. All three zero-search audits run.**
+
+⏱️ **Eighteenth pass of `2026-10-17`.** Append-only; nothing below is rewritten.
+🔵 **Evidence:** [`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv)
+*(13 repositories, every grant read at payload)* ·
+[`p272-websearch.2026-10-17-p272.tsv`](../evidence/p272-websearch.2026-10-17-p272.tsv) *(9 legs; legs 1–5
+verbatim from this register)* ·
+[`arithmetic-sweep.2026-10-17-p272.tsv`](../evidence/arithmetic-sweep.2026-10-17-p272.tsv) *(19 cells, zero
+searches)*.
+
+🟢 **`p272`, like `p269`–`p271`, ran only what was already written down here.** Four passes in a row of
+spending the register instead of inventing a brief, and this is the one where it refuted the previous
+pass's headline.
+
+### 🟢 Discharged this pass
+
+| gap / action | registered as | how it was discharged | outcome |
+|---|---|---|---|
+| 🔴 **Falsify the ResourcERA attribution** | `p271`, backlog item **1** (*"the one claim this pass made on inference rather than reading"*) | 🟢 **One leg per region, quoting ResourcERA by name — exactly the cheapest falsification `p271` specified.** | 🔴 **HALF REFUTED, AND THE REMAINDER RE-ATTRIBUTED UPSTREAM.** NA is **Technotrenz**, not ResourcERA (*"is not a ResourcERA figure"*); ResourcERA gives NA as a **36% share**. EMEA/MEA/LATAM **are** ResourcERA's — but ResourcERA **re-publishes Grand View**: global `$32.27B @ 31.2%` verbatim; EMEA `$2.64B` = GVR's `$1,520.1M` (2024) × `1.319²` (**0.17%**); MEA `34.3%` = the CAGR **implied** by GVR's own endpoints. 🔴 **So `p271`'s APAC corroboration was Grand View checked against Grand View.** `T36`. |
+| 🔴 **Run `T32`'s arithmetic check across EVERY numeric cell** | `p271`, backlog item **2** (*"needs zero searches, the cheapest audit available"*) | 🟢 **19 cells, full ledger committed.** | 🟢 **No cell is impossible any more.** 🔴 **Two `FLAG`s, one defect: Grand View mislabels its own CAGR window by a year in FOUR regional databooks.** EMEA +31.9%→−0.0%, MEA +43.0%→+7.8% read a year earlier; APAC +10.0%→+0.0% and NA +10.0%→−0.0% with the window fix. 🔴 **This base had filed APAC's and NA's 10% as "rounding".** `T38`. |
+| 🟡 **Run `T34`'s amendment across the OTHER declared gaps** | `p271`, backlog item **3** | 🟢 **Swept `trends.md`, `verticals/solutions.md`, `compose/patterns.md`, `agents/top.md`, `repos/foundations.md`.** | 🟢 **CLEAN — a real negative result.** Every declared gap on those five shelves is reasoned and survived a destination grep; **the false-absence species is not endemic.** 🔴 **But the sweep found a SEVENTH cross-shelf defect of a new species: a gap that is TRUE at a STALE MAGNITUDE** — `trends.md` **five** vs `agents/top.md` **12** MCP servers. **No check on this base reads the numeral.** `T37`. |
+| ⚠️ **Sweep `PROPOSED`/`ADOPTED` for named future commencements** | `p271`, backlog item **7** (*"a new vocabulary value is a liability until its occupants are reconciled"*) | 🟢 **Swept, then swept again by `effective` date across ALL verdicts.** | 🟢 **MEASURED NIL on the sweep `p271` asked for** — every `PROPOSED` row has `effective` = `-`, every `ADOPTED` row a past date. 🔴 **The liability was real but elsewhere: "binding on a named future date" had FIVE spellings before `p271` added a sixth**, and `MANDATED`+`eff=2027-12-02` is the same statement. 🟢 **NARROWED, not retracted**: the value is for **not-yet-adopted** instruments with an officially named commencement — the Dutch `kerndoelen` yes, the EU AI Act no. **13 declared, 13 present, re-counted after the edit.** |
+| 🟡 **`OpenOLAT` as the permissive-LMS recommendation** | standing, never rider-tested | 🟢 **Payload read and diffed against upstream.** | 🟢 **RIDER-CLEARED.** 10,982 B vs stock 11,357 B, but lines 1–175 (all terms) **byte-identical**; the delta is the **optional APPENDIX** swapped for two attribution notes. 🔴 **And the measurement itself failed: six unmodified Apache files span 10,273–11,525 B, straddling stock both ways.** `T39`. |
+| 🟡 **The brief's generic supply legs** | `p269` standing instruction (spend them **last**) | 🟢 **Run, last.** | 🔵 **SEVENTH consecutive measured nil.** Two vendor licence claims **died at payload** (`gegok12`, `fedena` — the latter reproducing `p265`, with the claim's source now identified as **a competitor's comparison page**); one **beat its source** (`academico`, **MIT at payload, 1,094 B**, where the vendor page says the licence is *"not named"*). |
+
+### 🔴 The box this pass earned
+
+| the finding | how it surfaced | why it had not been found |
+|---|---|---|
+| 🔴 **RE-PUBLICATION IS INDISTINGUISHABLE FROM CORROBORATION, AND THE TIGHTER THE AGREEMENT THE MORE CONVINCING THE CIRCULARITY** | 🟢 By trying to **reproduce one publisher's baseline from another's curve** — `A(2026) = B(2024)×(1+B's CAGR)²` — and by noticing that one source's **implied** CAGR is another's **labelled** CAGR | 🔴 `p271` read four publisher names as four models and a 2.5% agreement as validation by *"a different method"*. **There is one model.** 🔵 **Counting names counts citations.** The four tests that discriminate are free and need no page access: a verbatim horizon; a reproducible re-basing; an implied-vs-labelled CAGR match; and the recognition that **a share and a dollar figure are not two data points** — NA's row exists because an aggregator multiplied someone else's percentage by someone else's base. |
+| 🔴 **A FILE CAN CONTRADICT ITSELF ACROSS 120 LINES, WITH THE BETTER DATUM FURTHER DOWN** | 🟢 By asking of the headline table *"is the best version of this datum already in this file?"* rather than comparing files | 🔴 `market.md` published APAC as `~$2.85B — derived, not published` while **carrying Grand View's directly published `$2,282.9M (2025) @ 28.1% → $18.2B (2033)`** 120 lines below, as *corroboration* of the derived number. 🔵 **Fourth consecutive pass whose defect species was invisible to the check written one pass before.** Cross-shelf `grep` cannot reach it (one file); `T32` arithmetic cannot (both cells sound); `T34` cannot (nothing is declared absent). **The only thing that finds it is reading the file as a reader would, top to bottom.** |
+| 🔴 **A PUBLISHER'S OWN CAGR WINDOW LABEL CAN BE WRONG, AND A 10% MISMATCH WAS THIS BASE'S WRITE-OFF THRESHOLD** | 🟢 By running `T32` over **every** cell instead of the ones a pass was already arguing about | 🔴 `p271` calibrated 10–16% as *"the normal noise of this literature"* — sound as a floor, **but it was being used as an explanation.** Two cells annotated `10%` (`"base stated as 'roughly'"`, `"rounding + window label"`) are a **one-year offset**: on GVR's 2033-vintage pages the printed baseline is **2025** while the CAGR is labelled **2026–2033**. 🟢 **Both resolve to ±0.0%, and the correction is a ~10% UPWARD revision to two regional figures a studio would size from.** ⚠️ **`T32` gains a second duty: test the window before calling 10% noise.** |
+| 🔴 **THIS BASE'S OWN VERIFICATION MEASUREMENT CARRIES NO INFORMATION** | 🟢 By measuring **eight** payloads instead of reasoning from one suspicious delta | 🔴 `p271` reported blind re-measurements agreeing *"to the byte"* as a verification result. **Six unmodified Apache-2.0 files span 1,252 B and straddle stock in both directions** (`tsugi` −1,084 B, `xAPI-Spec` +168 B). 🟢 **There is no threshold separating modified from unmodified**, so a byte count can neither confirm nor refute a grant. It proves a payload is **stable**, not that it is **right** — two passes can agree to the byte on a file neither read. **Amendment: a byte delta is a TRIGGER for a terms-section diff, never a verdict.** |
+
+### 🔵 Registered, not claimed
+
+- 🟢 **The current Grand View vintage was absent from every studio-facing shelf and is now on `market.md`:**
+  **$8.3B (2025) / $11.4B (2026) → $57.2B (2033) @ 25.9%.** The `$32.27B by 2030 @ 31.2%` line is the
+  **same house's superseded release**, and four regional rows inherit that vintage.
+- 🔴 **LATAM is the only region that does NOT reconcile to Grand View** (ResourcERA `$0.67B` vs GVR's 2026
+  point `$455M`, **+47%**), and three publishers span roughly **6×** (`M&M $105.6M` 2024 ·
+  `GVR $259.6M` 2024 · ResourcERA-implied `$455M` vs claimed `$670M`). ⚠️ **No single LATAM figure in a
+  deck.**
+- 🟢 **New pattern `P22`, the zero-copyleft engagement**, with all ten components payload-verified this
+  pass and **zero rider keywords across eight new probes**. 🔵 Its value is that **every default in
+  education is copyleft** — so "permissive" was previously a constraint, not a stack.
+- 🟡 **`Bloom` and `Lumen` were located and are NOT resolvable to a slug** (a topic listing named them
+  with no owner). **Recorded as an informed gap, not as rows.** Cheapest named step for `p273`.
+- ⚠️ **NA higher-education governance is under-measured here.** The K-12 statute sweep is **saturated** —
+  `p272`'s NA leg returned almost entirely already-shelved material. Retarget, do not re-run.
+- ⚠️ **Every market and policy figure in this pass is secondary-source grade** and each shelf cell says so.
+  `resourcera.com`, `technotrenz.com` and `grandviewresearch.com` are all `ENOTFOUND` from this
+  environment — **the upstream attribution was established by arithmetic precisely because no page could
+  be opened.**
+
+### 🟡 Costed and NOT run — the backlog `p273` should spend its budget on
+
+🔵 **The trade has now paid off four passes running: spend this register, not a fresh brief.** Ranked by
+value per leg:
+
+1. 🔴 **Read `market.md` top-to-bottom as a reader, and diff its headline table against its own body.**
+   `p272`'s best find was an **intra-file** contradiction that no `grep`, no arithmetic check and no gap
+   sweep could reach — and it was found by reading. **The same file has ~1,300 lines and five pass-sections
+   that were each appended without reconciling the headline table.** 🟢 **Zero searches. Highest expected
+   yield on this base.** Do the same for `trends.md`, whose `T1`–`T39` have never been read against each
+   other.
+2. 🔴 **Find ONE regional figure from a publisher that is provably not Grand View.** `T36` leaves this base
+   with **no independently corroborated regional number at all**. MarketDataForecast (`~$2.11B` EMEA) and
+   MarketsandMarkets (`$105.6M` LATAM 2024) are the two candidates with identifiable models. **Test them
+   the way `p272` tested ResourcERA**: try to reproduce their baselines from Grand View's curves. If they
+   reproduce, this base must say in writing that **one model underlies its entire market shelf.**
+3. 🟡 **Resolve `Bloom` and `Lumen` to slugs and probe them.** Two named education agents, no owner. The
+   agent shelf has returned **seven consecutive nils**, so two concrete named candidates are worth more
+   than an eighth generic sweep. ⚠️ **Do not run an eighth generic sweep.**
+4. 🟡 **Retarget the NA leg at HIGHER EDUCATION.** The K-12 statute lane is saturated. `SUNY`'s 64-campus
+   policy is on the shelf as **existence only — its contents were not located**; that single document is
+   probably worth more than a region-wide sweep.
+5. 🟡 **Add an `instrument_status` column to `intel/policy-matrix.tsv`** (draft/concept · adopted · in
+   force). `p272` showed the verdict column is carrying **two independent dimensions**, and narrowed a
+   definition as a stopgap. **The column is the actual fix** and it needs zero searches — but it requires
+   re-deciding 57 rows, so cost it honestly.
+6. ⚠️ **The Vietnam reconciliation remains open for a fifth pass.** `Decision No. 33/2026/QD-TTg`
+   (2027-03-01) vs `Decree 142/2026/ND-CP` (2026-04-30), same jurisdiction and function. **Four flags have
+   added nothing.** Either establish which governs or **record it as unresolvable in this environment and
+   stop spending legs on it** — the same ruling `p271` made for the DOL `TEN`/`TEGL` identifier.
+7. 🔵 **Apply `T37` as a standing re-count.** Every quantified claim on these shelves (`42 rows`,
+   `five permissive platforms`, `12 MCP servers`, `78,765 commits`) is a carried datum. **A `grep -c` over
+   the rows is cheaper than the next defect.**
+
 ## Pass 271 — 2026-10-17 — **The NORTH AMERICA CELL REFUTED ITSELF BY ARITHMETIC, the four REGIONAL figures turn out to be ONE VENDOR'S PAGE, and the SIXTH cross-shelf defect is a FALSE DECLARATION OF ABSENCE — the exact inverse of `p270`'s**
 
 ⏱️ **Seventeenth pass of `2026-10-17`.** Append-only; nothing below is rewritten.

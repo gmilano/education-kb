@@ -20,6 +20,13 @@ updated: 2026-10-17
 > quotes, the false declaration of ABSENCE (the inverse of `p270`'s false declaration of presence),
 > and the over-broad retraction that an English-only search produced
 > ([evidence](../evidence/p271-websearch.2026-10-17-p271.tsv)).
+>
+> **`T36`–`T39` are new in pass 272** — the regional market picture resolving to a single upstream
+> publisher (so that this base's "independent corroboration" was circular), a gap that is true but
+> carried at a stale *magnitude*, a publisher mislabelling its own CAGR window in four regional
+> databooks, and the measurement that this base's own byte-count practice cannot discriminate
+> ([evidence](../evidence/p272-websearch.2026-10-17-p272.tsv),
+> [arithmetic sweep](../evidence/arithmetic-sweep.2026-10-17-p272.tsv)).
 
 ## T1 — The education agent consolidated around one project
 
@@ -449,8 +456,10 @@ Where the client runs Moodle, the honest answer is the AGPL open-core server or 
 against Moodle Web Services — i.e. actual engineering, not an install.
 
 ⚠️ **And the category is invisible to indexes:** the `mcp-server-education` GitHub topic is
-**still empty** while five payload-verified education MCP servers exist. None was found through a
-topic listing.
+**still empty** while **12 distinct education MCP server slugs are shelved on `agents/top.md`**
+(11 permissive, 1 all-rights-reserved). None was found through a topic listing.
+🔴 **This sentence read "five" until pass 272** — a true gap carried at a stale magnitude, because
+passes 267 and 268 added servers and updated the count on `agents/top.md` only. See `T37`.
 
 **Confidence: high** on every licence and metric (payload + page, first-hand). ⚠️ `canvas-mcp`'s
 tool count is published inconsistently **on its own page** — About says 102, the README says 126 —
@@ -884,8 +893,8 @@ figures** — which is the test a new rule should have to pass before it is hand
 | MEA AI-tutors (Grand View) $188.5M @ 32% → 2033 | **0.03%** | 🟢 reconciles |
 | MEA AI-tutors (Transpire) $186.4M @ 32.13% → 2033 | **0.09%** | 🟢 reconciles |
 | LATAM (Grand View) $259.6M @ 32.4% → 2030 | ~5% | 🟢 window rounding |
-| APAC (Grand View) ~$2.28B @ 28.1% → $18.2B 2033 | **10%** | 🟡 base stated as "roughly" |
-| NA (Grand View) $3,113.8M @ 24.2% → $19.4B 2033 | **10%** | 🟡 rounding + window label |
+| APAC (Grand View) ~$2.28B @ 28.1% → $18.2B 2033 | **10%** | 🔴 **NOT noise — `p272` resolved it: a one-year window offset. Reads +0.0% from a 2026 base of $3,217.5M. See `T38`** |
+| NA (Grand View) $3,113.8M @ 24.2% → $19.4B 2033 | **10%** | 🔴 **SAME defect as the APAC row (`p272`): $3,113.8M is a 2025 print, the CAGR is labelled 2026–2033. Reads −0.0% from a 2026 base of $4,253.6M. See `T38`** |
 | NA (MarketsandMarkets) $951M @ 15.9% → $2.3B 2029 | **16%** | 🟡 rounding + window label |
 | **NA as this base carried it** | **190%** | 🔴 **structural** |
 
@@ -971,3 +980,158 @@ primary band, inspected from 2031, is a procurement runway** — and it lands in
 **national language**, not a retraction. This base runs its legs in English and has now found
 country-level instruments in Spanish (`p270`), Chinese and Hindi (`p269`) and Dutch (`p271`) that the
 English legs did not return. **An English-only absence is a statement about the query.**
+
+
+## T36 — Re-publication is indistinguishable from corroboration, and this base had been checking Grand View against Grand View
+
+`p271` established that this shelf's four regional market rows were **one vendor's decomposition** and
+named the vendor **ResourcERA**, flagging the attribution as its *"one claim made on inference rather than
+reading"*. `p272` ran the falsification `p271` asked for. **The attribution was half wrong and the real
+structure is one level deeper.**
+
+| row | `p271` said | `p272` established |
+|---|---|---|
+| **North America** `$3.68B → $10.80B @ 31.1%` | ResourcERA | 🔴 **Technotrenz.** The leg, asked directly, says it *"is not a ResourcERA figure"*. ResourcERA publishes NA as a **36% share**; `0.36 × $10.4B = $3.744B`, **1.7% from Technotrenz's number** |
+| **EMEA** `$2.64B` | ResourcERA | 🔴 **Grand View, re-based.** GVR's Europe data-tree base `$1,520.1M` (year unprinted; arithmetic fixes it at **2024**) compounded **two** years at GVR's own 31.9% gives **$2,644.6M** — a **0.17%** match |
+| **MEA** `$0.56B @ 34.3%` | ResourcERA | 🔴 **Grand View, re-based.** 34.3% is **exactly the CAGR implied by GVR's own MEA endpoints** `$280.8M → $1,645.9M` |
+| **Global** `$32.27B @ 31.2%` | ResourcERA | 🔴 **Grand View, verbatim**, from its own press release |
+| **LATAM** `$0.67B @ 33.5%` | ResourcERA | 🟡 **does NOT reconcile to Grand View** — GVR's 2026 point is **$455M**, so ResourcERA is **47% above it**. The one regional row with no established upstream |
+
+🔴 **The consequence falls on `p271`'s headline result.** `p271` derived APAC as the residual of the
+regional sum and reported it *"corroborated to 2.5% by Grand View … by a different method"*. **Grand View
+is ResourcERA's source.** The residual was extracted from Grand View's decomposition and then validated
+against Grand View. 🟢 **That agreement was arithmetically guaranteed** — and the tightness of it (2.5%)
+is what made it persuasive.
+
+🔵 **The general lesson, and it is the one worth taking to a client.** Four publisher names on a slide
+look like four models. **Counting names counts citations, not models.** The tests that actually
+discriminate cost nothing and need no page access:
+1. **Look for a verbatim horizon.** `$32.27B` and `31.2%` are too specific to coincide.
+2. **Try to reproduce one publisher's baseline from another's curve.** If `A(2026) = B(2024) × (1+B's CAGR)²`
+   to within a fraction of a percent, A is re-basing B.
+3. **Check whether an implied CAGR in one source is a labelled CAGR in another.** ResourcERA's MEA 34.3%
+   is Grand View's MEA endpoints, solved.
+4. **A share and a dollar figure are not two data points.** `p272`'s NA row exists because an aggregator
+   multiplied someone else's percentage by someone else's base.
+
+⚠️ **Standing consequence for this shelf: no independent corroboration of any regional
+AI-in-education figure has been located. Every appearance of it so far has been re-publication.**
+Say that to a client rather than presenting a consensus that does not exist.
+
+**Confidence: high** on all four reconciliations (each is arithmetic over numbers this base can quote).
+**Secondary-source grade** on every figure — `resourcera.com`, `technotrenz.com` and
+`grandviewresearch.com` are all `ENOTFOUND` from this environment, re-tested this pass.
+
+## T37 — A quantified gap decays in its quantity, and no check on this base reads the number
+
+`intel/trends.md` stated that the `mcp-server-education` GitHub topic is *"still empty while **five**
+payload-verified education MCP servers exist"*. `agents/top.md` prose says **eleven**; counting the rows
+gives **12 distinct slugs**.
+
+🔵 **The gap is TRUE.** The topic is empty. That is exactly why every existing check passes it:
+
+| check | what it tests | verdict here |
+|---|---|---|
+| `T29` (`p270`) | grep the **destination** for a claimed presence | 🟢 PASS — the servers really are shelved |
+| `T34` (`p271`) | grep **other shelves** before re-declaring an absence | 🟢 PASS — the absence is real |
+| `T32` (`p271`) | multiply a cell and compare | 🟢 PASS — nothing to multiply |
+
+🔴 **None of them reads the numeral in the sentence.** Passes 267 and 268 added MCP servers and
+incremented the count on `agents/top.md` while `intel/trends.md` kept the number it was written with.
+
+🟢 **Amendment: a quantity inside a gap statement is a carried datum and decays like every other one.
+Re-derive it from the rows — on every shelf that states it — not from the sentence that last stated it.**
+🔵 Note the direction of the decay, which matches `T31`: the stale count **understated** the base's own
+holdings, i.e. it made this KB look weaker than it is. `T31` found carried claims decay toward
+**overstating** their authority; a carried *count* can decay the other way, and both are errors a studio
+would be briefed on.
+
+**Confidence: high** — both numbers were counted from the files this pass.
+
+## T38 — A publisher can mislabel its own CAGR window, and a 10% mismatch is the symptom this base had been writing off as rounding
+
+`p271`'s costed item 2 — *"run `T32`'s arithmetic check across EVERY remaining numeric cell … it needs
+zero searches, the cheapest audit available"* — was run over **19 cells**
+([ledger](../evidence/arithmetic-sweep.2026-10-17-p272.tsv)).
+
+🟢 **Headline: no cell on these shelves is impossible any more.** `p271`'s NA row was the only
+`STRUCTURAL` one and it is corrected. **Two cells `FLAG`, and both are the same publisher-side defect:**
+
+| Grand View databook | as the page LABELS the window | read one year earlier |
+|---|---|---|
+| **Europe** `$1,520.1M → $8,003.4M @ 31.9%` | labelled **2025–2030** → **+31.9%** 🔴 | **2024–2030** → **−0.0%** 🟢 |
+| **MEA** `$280.8M → $1,645.9M @ 32.6%` | labelled **2025–2030** → **+43.0%** 🔴 | **2024–2030** → **+7.8%** 🟢 |
+| **APAC** `$2,282.9M → $18,214.1M @ 28.1%` | printed baseline **2025** → **+10.0%** 🟡 | window **2026–2033** → **+0.0%** 🟢 |
+| **North America** `$3,113.8M → $19,388.3M @ 24.2%` | printed baseline **2025** → **+10.0%** 🟡 | window **2026–2033** → **−0.0%** 🟢 |
+
+🔴 **The last two rows are the important ones, because this base had already measured them and filed them
+away.** `T32`'s own calibration table carries the APAC row annotated **"base stated as 'roughly'"** and the
+NA row as **"rounding + window label"**. 🟢 **Neither is rounding.** On Grand View's 2033-vintage regional
+pages the printed "current" figure is a **2025** number while the CAGR is labelled **2026–2033**; compound
+the printed baseline across the full span and you are a year out, every time, by about 10%.
+
+🟢 **Correcting it is not cosmetic.** It moves APAC's 2026 point from **$2.92B to $3.22B** and NA's from
+**$3.87B to $4.25B** — each a ~10% revision to a number a studio would size an engagement from, and in
+both cases *upward*.
+
+⚠️ **Standing rule: derive the baseline from the horizon and the CAGR; never trust the printed baseline's
+implied year.** `base = horizon / (1 + CAGR)^(years in the LABELLED window)`.
+
+🔵 **And `T32` gains a second duty.** `p271` set the threshold at *">25% flag, >50% investigate"* and
+declared 10–16% *"the normal noise of this literature"*. **That calibration is sound as a floor but it was
+being used as an explanation.** A 10% mismatch now means **test the window first**; only call it noise
+once a one-year shift fails to resolve it. Four of the four cells tested this way resolved.
+
+**Confidence: high** — pure arithmetic over published endpoints, reproducible from the ledger.
+
+## T39 — A licence file's byte count discriminates nothing on its own, and this base measures bytes
+
+This base's verification practice includes **blind re-measurement of licence payload byte counts**
+(`p271` re-measured three and reported agreement "to the byte"). `p272` probed
+`OpenOLAT/OpenOLAT` — already shelved on `verticals/solutions.md` as the one Apache-2.0 full LMS — and
+measured **10,982 B**, which is **375 B SHORT** of the stock Apache-2.0 file (`apache/.github`: 11,357 B).
+
+🔵 **A short Apache file is exactly the shape of a rider**, and this base has been burned there before:
+`p252` found a **Commons Clause** rider on a row that had been blessed as MIT for four passes.
+
+🟢 **It was not a rider.** Diffing the payload against upstream:
+- **Lines 1–175 — the entire `TERMS AND CONDITIONS` — are byte-identical to stock Apache-2.0.**
+- The deleted span is the **optional `APPENDIX: How to apply the Apache License to your work`**.
+- What replaces it is **two attribution statements** naming the OLAT Zentrum / University of Zurich and
+  frentix GmbH. **No additional restriction, no field-of-use limit, no non-commercial clause.**
+- Every hit from a rider keyword grep (`except`, `does not grant`, `additional terms`) is **stock Apache
+  text** — §3 patent, §5 contributions, §6 trademarks.
+
+🟢 **Verdict: unmodified Apache-2.0, rider-cleared.** `OpenOLAT` is safe to recommend as the permissive
+LMS, now at a stronger grade than the shelf carried.
+
+🔴 **The methodological finding is about the measurement, not the repo — and `p272` measured the
+distribution rather than arguing from one pair.** Eight payloads were read this pass; **six are
+Apache-2.0 and they span `10,273 B` to `11,525 B`, a 1,252 B range straddling the stock 11,357 B in
+BOTH directions:**
+
+| repo | bytes | vs stock 11,357 B | terms |
+|---|---|---|---|
+| `tsugiproject/tsugi` | **10,273** | −1,084 | unmodified |
+| `OpenOLAT/OpenOLAT` | **10,982** | −375 | unmodified *(diffed line-by-line)* |
+| `autolab/Autolab` | **11,324** | −33 | unmodified |
+| `numbas/Numbas` | **11,357** | **0** | unmodified |
+| `yetanalytics/lrsql` | **11,357** | **0** | unmodified |
+| `haxtheweb/haxcms-php` | **11,362** | +5 | unmodified |
+| `HKUDS/DeepTutor` | **11,408** | +51 | unmodified |
+| `adlnet/xAPI-Spec` | **11,525** | **+168** | unmodified |
+
+🔵 **Every one is an unmodified grant, and no byte count predicts that.** The range is wider than any
+plausible rider (a Commons Clause rider is ~300 B) and it is **two-sided**, so there is no threshold —
+above or below — that separates modified from unmodified.
+⚠️ **So a byte count can neither confirm nor refute a grant.** It is useful for exactly one thing — detecting
+that a payload **changed between two passes** — and useless for deciding **what** a payload says.
+
+🟢 **Amendment: a byte delta against stock is a TRIGGER for a terms-section diff, never a verdict.**
+Diff lines 1 through `END OF TERMS AND CONDITIONS`; everything after it is boilerplate a project may
+replace freely. 🔵 This also means `p271`-style agreement "to the byte" proves **stability**, not
+**correctness** — two passes can agree to the byte on a payload neither of them read.
+
+**Confidence: high** — eight payloads read first-hand this pass, one diffed against upstream line-by-line,
+and the rider-keyword grep (`commons clause` / `non-commercial` / `may not sell`) returned **zero across
+all eight** ([evidence](../evidence/verified-repos.2026-10-17-p272.tsv)).

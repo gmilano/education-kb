@@ -304,7 +304,9 @@ at integration work rather than wholesale import.
   changes procurement:** Athena's own repo serves **no licence payload** — the MIT grant covers
   Artemis, not necessarily Athena. Get it in writing before it ships in a deliverable.
 - **`mcp-server-education` as a GitHub topic is empty** — "hasn't been used on any public
-  repositories, yet" — while **eleven** education MCP servers are now verified (pass 267 added the
+  repositories, yet" — while **12 distinct education MCP server slugs are shelved in this file**
+  (11 permissive + 1 all-rights-reserved; counted from the rows by pass 272, which found
+  `intel/trends.md` still carrying **"five"** — see `T37`) (pass 267 added the
   two LMS-side ones; pass 268 added seven permissive Google Classroom servers and one proprietary
   one). **The gap got four times worse in two passes, which is the point:** the index is not
   lagging the category, it is structurally disconnected from it. The category is real and unlabelled; that is a naming gap, and a
@@ -370,3 +372,22 @@ does not.
 🟢 **One falsifiable limb remains and it costs an email:** `datawhalechina/ai-edu-for-kids` carries
 CC-BY-NC-SA-4.0 as **organisational template boilerplate**, not as a decision (`p269`, `T27`) — so
 it is the licence on this base **most likely to move if asked.**
+
+## Pass 272 — this file gains no rows for the seventh consecutive pass, and the count it publishes was wrong
+
+⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) ·
+[`p272-websearch.2026-10-17-p272.tsv`](../evidence/p272-websearch.2026-10-17-p272.tsv).
+
+🔵 **Seventh consecutive measured nil on education-specific agent supply.** The generic legs ran last, per
+`p269`. Everything returned was already shelved (`HKUDS/DeepTutor`, whose **Apache-2.0** grant `p272`
+re-read at payload: `main/LICENSE`, **11,408 B**) or unresolvable to a slug (`Bloom`, `Lumen` — named in a
+topic listing with no owner, recorded as an informed gap on `repos/foundations.md`, **not** written in as
+rows). 🟢 **Nothing was added to meet the brief's five-row minimum; this file holds 42 rows and clears it
+many times over.**
+
+🔴 **The defect this file earned: it was the better source and the other shelf never caught up.** This
+file's MCP-server count said **eleven** in prose while **12 distinct slugs** are actually tabled, and
+`intel/trends.md` said **five**. Passes 267 and 268 added servers and updated **one shelf**. Both numbers
+are corrected and the generalisation is `T37`: **a quantity inside a gap statement is a carried datum —
+re-count it from the rows, on every shelf that states it.**

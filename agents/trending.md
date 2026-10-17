@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 272) — The agent shelf gains nothing for the seventh pass running, and the market shelf it sits beside turned out to rest on ONE publisher
+
+⏱️ **Eighteenth pass of `2026-10-17`.** Append-only — everything below this section is prior history and
+is not rewritten. Evidence:
+[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) *(5 repositories)* ·
+[`p272-websearch.2026-10-17-p272.tsv`](../evidence/p272-websearch.2026-10-17-p272.tsv) *(9 legs; legs 1–5
+taken verbatim from `p271`'s ranked backlog)* ·
+[`arithmetic-sweep.2026-10-17-p272.tsv`](../evidence/arithmetic-sweep.2026-10-17-p272.tsv) *(19 cells,
+zero searches)*.
+
+### 🔵 Stated first: `agents/top.md` gains no rows, for the seventh consecutive pass
+
+🟢 The generic supply legs ran, and ran **last**, per `p269`'s standing instruction. Result: **seventh
+consecutive measured nil.** Everything returned was either already shelved — `HKUDS/DeepTutor`,
+re-read at payload this pass (**Apache-2.0, `main/LICENSE`, 11,408 B**) — or **unresolvable to a slug**:
+`Bloom` (Socratic tutoring) and `Lumen` (self-hosted course-scoped RAG) were named in a GitHub topic
+listing **with no owner/repo**. ⚠️ **A project name is not a row.** Both are recorded as an informed gap
+and neither was written in to pad a table.
+
+### 🔴 The pass's headline, and it is a market finding rather than a supply finding
+
+`p271` named its own weakest claim and asked for it to be falsified. **It was, and the structure
+underneath is worse than it feared.**
+
+| `p271` believed | `p272` established |
+|---|---|
+| The four regional market rows are **ResourcERA's** decomposition | 🔴 **ResourcERA is itself re-publishing GRAND VIEW RESEARCH.** Three arithmetic fingerprints: the global `$32.27B @ 31.2%` is GVR's verbatim; ResourcERA's EMEA `$2.64B` = GVR's 2024 base `$1,520.1M` compounded two years at GVR's own 31.9% (**0.17%** match); ResourcERA's MEA CAGR `34.3%` is **exactly** the CAGR implied by GVR's MEA endpoints |
+| North America's publisher is **ResourcERA** | 🔴 **It is TECHNOTRENZ** — a name that had never appeared anywhere on this base. ResourcERA publishes NA as a **36% share**; an aggregator multiplied it into dollars |
+| The APAC residual is *"corroborated to 2.5% by Grand View … by a different method"* | 🔴 **Circular.** Grand View is the source of the decomposition the residual was extracted from. **That 2.5% was guaranteed, not evidential** |
+| APAC is *"the first APAC figure this base can publish, flagged derived"* | 🔴 **A PUBLISHED Grand View APAC figure was already in `market.md` 120 lines below the headline table**, used as corroboration instead of as the cell. **Intra-file defect: headline derived, body published** |
+
+🟢 **And the global figure this base publishes is a superseded vintage.** Grand View's current release is
+**$8.3B (2025) / $11.4B (2026) → $57.2B (2033) @ 25.9%**; the `$32.27B by 2030 @ 31.2%` line every
+aggregator copies is **its own earlier release**. The current vintage was **absent from every
+studio-facing shelf** and is now on `intel/market.md`.
+
+### 🟢 The zero-search audits `p271` costed, all three run
+
+1. **`T32` across every numeric cell (19 of them).** No cell is impossible any more. **Two `FLAG`s, both
+   the same publisher-side defect** — Grand View labelling a CAGR window a year later than its own
+   endpoints close over, in **four** regional databooks. 🔴 **This base had measured the symptom twice
+   (APAC and NA, both "10%") and filed both as rounding.** It is not rounding; correcting it revises
+   APAC's 2026 point **$2.92B → $3.22B** and NA's **$3.87B → $4.25B**. New trend `T38`.
+2. **`T34` across the other shelves' declared gaps.** 🟢 **Clean** — every declared gap on the five
+   non-`market.md` shelves is reasoned and survived a destination grep. A real negative result: the
+   false-absence species is **not endemic**. 🔴 **But it surfaced a seventh cross-shelf defect of a new
+   kind** — a gap that is **true** but carried at a **stale magnitude**: `intel/trends.md` said **five**
+   education MCP servers where `agents/top.md` tables **12**. New trend `T37`.
+3. **The `PROPOSED`/`ADOPTED` future-commencement sweep.** 🟢 **Measured nil** — no such row is
+   mis-shelved. 🔴 **But the sweep found the new vocabulary value is redundant by the file's own
+   precedent**; see `intel/policy-matrix.tsv` and the register.
+
+### 🔵 Regional legs: mostly reproduction, and that is worth recording
+
+🟢 **The NA and LATAM legs largely returned what these shelves already hold** — every datum was
+destination-greped before writing. **New to the shelves:** Utah's statewide **Gemini for Education**
+deal (SY2026-27, the first statewide single-vendor classroom-AI procurement here), **SUNY**'s systemwide
+policy across **64 campuses**, **Alabama**'s CS-with-AI graduation requirement, **Virginia**'s
+guidance-plus-training pairing, **Raspberry Pi `Experience AI`** across **nine** LATAM countries
+(**$4.6M** Google.org; **24,000** educators / **1.25M** students by 2028), and Chile's **Elige Educar**
+using AI for teacher recruitment and retention. ⚠️ **NA higher-education governance is under-measured
+here and this pass says so rather than implying coverage.**
+
+### 🟢 Channel re-tested, not inherited
+
+`raw.githubusercontent.com` **200** · `api.github.com` **403** · `github.com` HTML **403** ·
+`resourcera.com`, `technotrenz.com`, `grandviewresearch.com` all **ENOTFOUND**. 🔵 **Sixth consecutive
+confirmation.** ⚠️ **Every market figure in this pass is therefore secondary-source grade, read through
+the search tool only, and each shelf cell carrying one says so.**
+
 ## 2026-10-17 (pass 271) — The agent shelf gains nothing for the sixth pass running, and the pass found its defect with arithmetic instead
 
 ⏱️ **Seventeenth pass of `2026-10-17`.** Append-only — everything below this section is prior

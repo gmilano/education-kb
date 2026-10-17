@@ -43,7 +43,7 @@ updated: 2026-10-17
 | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | MIT | — | Modern SCORM 1.2 / 2004 and AICC runtime. Most institutional content is still SCORM; this is how an agentic front end keeps reading it. |
 | [openfun/richie](https://github.com/openfun/richie) | MIT | — | MOOC portal CMS (Django + React) from France Université Numérique. MIT means the client's catalogue front end is genuinely theirs. |
 | [openfun/marsha](https://github.com/openfun/marsha) | MIT | — | Video management for education, same FUN-MOOC provenance. The companion to Richie when the course is video-first. |
-| [academico-sis/academico](https://github.com/academico-sis/academico) | MIT | — | Student information system (Laravel): enrolment, attendance, results. MIT SIS data is the input every dropout-prediction model needs. |
+| [academico-sis/academico](https://github.com/academico-sis/academico) | MIT *(payload-measured **1,094 B**, `main/LICENSE`, pass 272)* | — | Student information system (Laravel): enrolment, attendance, results. MIT SIS data is the input every dropout-prediction model needs. |
 | [haxtheweb/haxcms-php](https://github.com/haxtheweb/haxcms-php) | Apache-2.0 | — | HAX authoring/CMS for web-component-based course content. Content as components survives an LMS migration; content as LMS pages does not. |
 | [openedx/XBlock](https://github.com/openedx/XBlock) | Apache-2.0 *(README-stated — see note)* | — | The component API for Open edX. The entry point for putting an agent inside an Open edX course. |
 | [Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | **Apache-2.0** | 46 | **The K-12 student-data standard of North American public education, and it is permissive.** *"Serves as the foundation for enabling interoperability among secure education data systems."* 370 commits on `v6.2.0`. The vocabulary a US district or state agency already models its students in — so an AI deliverable that speaks Ed-Fi needs no bespoke integration per district. ⚠️ **Neither this README nor `Ed-Fi-ODS`'s names a single US state or education agency** — see the provenance note below before any state count reaches a deck. |
@@ -371,3 +371,33 @@ named thing by hand or grepping this repository** — not from a generic search 
 - ⚠️ **A ref-sensitivity reminder that cost a published figure once:** `learningequality/kolibri`
   serves **MIT on `develop`** and **404 on `main`**. Probe the **resolved** default ref
   (`git ls-remote --symref`), never a guessed one.
+
+## Pass 272 — no new rows, one measurement supplied, and two candidate rows refused
+
+⏱️ **Eighteenth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) ·
+[`p272-websearch.2026-10-17-p272.tsv`](../evidence/p272-websearch.2026-10-17-p272.tsv).
+
+🔵 **This file gains no rows: the SEVENTH consecutive measured nil on education-specific supply.**
+The brief's generic legs ran **last**, per `p269`'s standing instruction. Stated precisely, because *how*
+it failed is the information:
+
+- 🟢 **`academico-sis/academico`'s byte column is filled in** — `1,094 B`, `main/LICENSE`, MIT,
+  *"Copyright (c) 2020 Thomas Debay and project contributors"*. The row carried `MIT | —` since it was
+  shelved. 🔵 Worth noting the direction: the vendor page that surfaced it this pass says the licence
+  **"is not named"**; the payload names it. **An aggregator's hedge is not evidence of absence.**
+- 🔴 **`gegok12/gegok12` REFUSED** — an MIT claim with no payload on 15 path/ref combinations, and an
+  **open-core shape** (26 of 38 modules free, 12 Pro modules sold) that would not deliver what the claim
+  implies even if verified.
+- 🔴 **`projectfedena/fedena` REFUSED, reproducing `p265`** — and `p272` adds the provenance of the false
+  claim: it comes from **a direct competitor's comparison page**.
+- 🟡 **Two repositories were LOCATED BUT NOT RESOLVABLE, and they are recorded as an informed gap rather
+  than as rows: `Bloom`** (Socratic-method tutoring) **and `Lumen`** (self-hosted, course-scoped RAG with
+  citations). A GitHub topic listing named them **without an owner/repo**, so there is no slug to probe.
+  ⚠️ **A project name is not a row.** Resolving these two is a cheap, named step for `p273`.
+
+🔵 **The supply conclusion is now stable across seven passes and three languages:** education-specific
+permissive *agents* are scarce, the generic legs return either general-purpose frameworks this base already
+holds or **learning-ABOUT-AI** teaching material, and the growth on these shelves comes from
+**platforms, standards and assessment engines** — this file's actual subject — rather than from agents.
+**Nothing was added to meet a quota.**

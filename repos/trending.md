@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 272) — No new repositories, the permissive LMS recommendation rider-cleared, and two vendor licence claims dead at payload
+
+⏱️ **Eighteenth pass of `2026-10-17`.** Append-only — everything below is prior history and is not
+rewritten. Evidence:
+[`verified-repos.2026-10-17-p272.tsv`](../evidence/verified-repos.2026-10-17-p272.tsv) ·
+[`p272-websearch.2026-10-17-p272.tsv`](../evidence/p272-websearch.2026-10-17-p272.tsv).
+
+### 🔵 `repos/foundations.md` gains no rows — seventh consecutive nil — and the SIS/ERP leg is why
+
+🟢 **The brief's school-management / SIS / ERP leg produced two permissive claims. Both died at payload.**
+
+| candidate | claim | verdict |
+|---|---|---|
+| **`gegok12/gegok12`** | *"free core is free forever under the MIT licence"*, 26 of 38 modules free, 12 Pro modules $100–$250 — a **vendor listing** | 🔴 **NOT ESTABLISHED.** No payload on **15 path/ref combinations**. ⚠️ And the claim's *shape* is open-core: an MIT label over a product whose paid modules are the reason a client would buy it |
+| **`projectfedena/fedena`** | **Apache-2.0** | 🔴 **NOT ESTABLISHED — and this independently reproduces `p265`.** 🔵 `p272` adds the provenance: the page asserting Apache-2.0 is **`openeducat.org`, a direct competitor's comparison**. **A licence claim from a rival vendor is not a licence** |
+| **`academico-sis/academico`** | a comparison page says the licence **"is not named"** | 🟢 **MIT at payload, 1,094 B, `main/LICENSE`.** The first-hand read **beat the aggregator's hedge**, and it fills in a byte column this base carried as `—` since the row was shelved |
+
+🔵 **So the aggregators were wrong in both directions in a single leg** — one over-claiming a permissive
+grant (Fedena), one under-claiming a real one (Academico). **Only the payload settles it**, which is why
+this base reads payloads.
+
+### 🟢 `OpenOLAT` — the most load-bearing row on `verticals/solutions.md` — is now rider-cleared
+
+It is what this KB tells a studio to use when procurement rules out copyleft, so a licence *label* was
+never enough. Measured: **10,982 B**, which is **375 B SHORT of stock Apache-2.0 (11,357 B)**.
+🔵 **A short Apache file is exactly the shape of a rider** — `p252` found a real **Commons Clause** that
+way on a row blessed as MIT for four passes.
+
+🟢 **Diffed, and it is clean:** lines 1–175, the entire `TERMS AND CONDITIONS`, are **byte-identical to
+upstream**; the missing span is the **optional APPENDIX**, replaced by two attribution notes (OLAT Zentrum
+/ University of Zurich, frentix GmbH) with **no restriction, no field-of-use limit, no non-commercial
+clause**. Every rider-keyword grep hit is stock Apache text.
+
+🔴 **And the methodological finding, which is about this base's own practice.** This KB blind-re-measures
+licence **byte counts** (`p271` reported agreement "to the byte"). But the APPENDIX is optional, so
+**unmodified Apache-2.0 legitimately ranges ~10.9–11.4 KB**: `DeepTutor` **11,408 B** and `OpenOLAT`
+**10,982 B** are a **426 B** spread and **both unmodified**. ⚠️ **A byte count can neither confirm nor
+refute a grant.** It detects that a payload *changed*; it cannot say *what it says*. 🟢 **Amendment: a byte
+delta is a TRIGGER for a terms-section diff, never a verdict** — and agreement "to the byte" proves
+**stability, not correctness**. New trend `T39`.
+
+⚠️ **Negative result worth stating twice:** **no education ERP under MIT or Apache-2.0 has been located**,
+now tested from a **second independent channel** (`p271` via the platform/ERP leg, `p272` via the
+SIS/school-management leg). The permissive full-platform count stays at **five**.
+
 ## 2026-10-17 (pass 271) — No new repositories, two blind re-measurements that agree, and a licence conflict settled by naming the repository
 
 ⏱️ **Seventeenth pass of `2026-10-17`.** Append-only — everything below is prior history and is not
