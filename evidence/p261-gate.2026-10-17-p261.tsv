@@ -1,0 +1,7 @@
+suite	controls	verdict
+the whole gate-offline recipe	~50 steps	🟢 ALL OFFLINE LICENCE CONTROLS PASS, exit 0
+p252-ungated-floors (as found)	31	🔴 RED: 2 failures — python test files on disk got 211 want 210; gated by a Makefile recipe got 30 want 29
+p252-ungated-floors (after the pin was moved to 212/31)	31	🟢 PASS
+pass261-current-state-tier-run	166	🟢 PASS, wired into gate-offline this pass
+mutation run over pass261 (17 mutants)	166 each	🟢 17/17 caught after two controls were added; M4 and M17 SURVIVED the first battery and are recorded
+lazy-quantifier lint (ACTION TB) over compose/code	n/a	🟢 0 findings with the new instrument present

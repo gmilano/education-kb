@@ -1,0 +1,25 @@
+axis	transport	slug	stars	note
+github.com/trending?since=weekly	WebFetch	morluto/rea	294246	VERIFIED 294249 via MCP search — the extraction is accurate to 3 stars; NOT education
+github.com/trending?since=weekly	WebFetch	storytold/artcraft	30850	NOT education (crafting engine for artists)
+github.com/trending?since=weekly	WebFetch	boykopovar/AnyPS5	40085	NOT education
+github.com/trending?since=weekly	WebFetch	cathrynlavery/diagram-design	56545	NOT education
+github.com/trending?since=weekly	WebFetch	heygen-com/hyperframes	65455	NOT education
+github.com/trending?since=weekly	WebFetch	mattpocock/skills	294264	NOT education
+github.com/trending?since=weekly	WebFetch	NationalSecurityAgency/ghidra	89760	NOT education
+github.com/trending?since=weekly	WebFetch	mksglu/context-mode	30305	NOT education
+github.com/trending?since=weekly	WebFetch	ranxianglei/billion-context	1573	NOT education
+github.com/trending?since=weekly	WebFetch	anthropics/claude-plugins-official	40829	NOT education
+github.com/trending?since=weekly	WebFetch	earthtojake/text-to-cad	21058	NOT education
+topic:intelligent-tutoring-system pushed:>2026-06-01	MCP search	open-spaced-repetition/fsrs4anki	4108	CARRIED MIT @p256
+topic:intelligent-tutoring-system pushed:>2026-06-01	MCP search	GarethManning/education-agent-skills	872	CARRIED CC-BY-SA-4.0 @p245
+topic:intelligent-tutoring-system pushed:>2026-06-01	MCP search	GeminiLight/gen-mentor	135	CARRIED CC0-1.0 @p212
+topic:intelligent-tutoring-system pushed:>2026-06-01	MCP search	ArnaudGuiovanna/tutor-mcp	49	CARRIED MIT @p213
+topic:intelligent-tutoring-system pushed:>2026-06-01	MCP search	thm-mni-ii/feedbacksystem	24	CARRIED Apache-2.0 @p215
+topic:intelligent-tutoring-system pushed:>2026-06-01	MCP search	brownplt/LTLTutor	12	CARRIED GPL-3.0 @p212
+topic:learning-analytics pushed:>2026-06-01	MCP search	openfun/ralph	51	CARRIED MIT @p256
+topic:learning-analytics pushed:>2026-06-01	MCP search	tl-its-umich-edu/my-learning-analytics	37	CARRIED Apache-2.0 @p212
+topic:learning-analytics pushed:>2026-06-01	MCP search	terracotta-education/terracotta	21	CARRIED Apache-2.0 @p212
+topic:learning-analytics pushed:>2026-06-01	MCP search	Schlaflied/Plot-Ark	13	CARRIED AGPL-3.0
+topic:learning-analytics pushed:>2026-06-01	MCP search	sonsoleslp/tna	13	🟢 CARRIED AS ABSENT @p212 — RESOLVED THIS PASS to MIT
+topic:learning-analytics pushed:>2026-06-01	MCP search	kqc-real/streamlit	6	NEW to this base: MC-Test, multilingual formative multiple-choice platform; grant NOT read this pass
+topic:learning-analytics pushed:>2026-06-01	MCP search	theaiagent/SynthEd	8	CARRIED MIT @p212

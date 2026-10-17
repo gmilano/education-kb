@@ -1,0 +1,184 @@
+slug	naive_population	current_population	already_answered_history	current_state	current_token	current_pass	current_file	current_line	mentions	absent_mentions
+github.com:1EdTech/caliper-js	YES	YES	no	ABSENT	unread	UNDATED	repos/trending.md	13102	5	2
+github.com:1EdTech/lti-1-3-php-example-tool	YES	YES	no	ABSENT	NONE	195	repos/foundations.md	4401	4	2
+github.com:781991937/TOFAN-AI-2026	YES	YES	no	ABSENT	NONE	UNDATED	repos/trending.md	17850	1	1
+github.com:A-R007/Multi-Agent-Study-Assistant	YES	YES	no	ABSENT	NONE	204	agents/top.md	4776	6	4
+github.com:AI-for-Education/Luganda-linguistic-benchmarks	YES	YES	no	ABSENT	NONE	UNDATED	agents/trending.md	21400	1	1
+github.com:Apereo-Learning-Analytics-Initiative/OpenLRW	YES	YES	no	ABSENT	NOASSERTION	256	verticals/solutions.md	277	9	1
+github.com:ApexEDM/GIKT	YES	YES	no	ABSENT	NO GRANT	154	repos/foundations.md	8040	1	1
+github.com:CaviraOSS/PageLM	YES	no	YES	FAMILY	MIT	193	agents/top.md	6345	27	1
+github.com:CipherCraze/SpeakGenie-AI-Tutor	YES	no	YES	FAMILY	MIT	217	agents/top.md	3679	3	1
+github.com:Citolab/qti-components	YES	no	YES	FAMILY	LGPL-3.0	UNDATED	agents/trending.md	17092	3	1
+github.com:CreveXTech/canvas-lms-mcp	YES	YES	no	ABSENT	NONE	204	agents/top.md	4772	5	3
+github.com:CyanXLab/Phonos	YES	YES	no	ABSENT	no grant	UNDATED	repos/trending.md	10842	3	2
+github.com:DMontgomery40/mcp-canvas-lms	YES	no	YES	FAMILY	AGPL-3.0	215	agents/top.md	3887	22	2
+github.com:DanieelRC/AgenteConversacional-SAES-R	YES	YES	no	ABSENT	NONE	204	agents/top.md	4778	2	1
+github.com:Ed-Fi-Alliance-OSS/Ed-Fi-Technology-Roadmap	YES	YES	no	ABSENT	none	239	repos/foundations.md	1173	1	1
+github.com:Epesi-Team/epesi	YES	YES	no	ABSENT	UNREAD	UNDATED	repos/trending.md	9007	2	1
+github.com:GarethManning/education-agent-skills	YES	no	YES	FAMILY	CC-BY-SA-4.0	245	agents/top.md	1242	35	6
+github.com:GeminiLight/gen-mentor	YES	no	YES	FAMILY	CC0-1.0	212	agents/top.md	4167	13	1
+github.com:GradeAI/gradeai	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	13757	2	2
+github.com:HFUT-LEC/awesome-student-cognitive-modeling	YES	YES	no	ABSENT	NO GRANT	154	repos/foundations.md	8051	1	1
+github.com:Hesham0-0Nasser/tutor-lms-mcp	YES	no	YES	FAMILY	GPL-2.0-or-later	219	agents/top.md	3544	4	3
+github.com:HetviBarot21/SmartAttend	YES	YES	no	ABSENT	no grant	243	repos/trending.md	845	2	1
+github.com:IC-Redacoes-UTFPR/CorrecaoRedacao	YES	YES	no	ABSENT	NO GRANT	UNDATED	agents/trending.md	14037	1	1
+github.com:ILIAS-eLearning/ILIAS	YES	no	YES	FAMILY	GPL-3.0	256	repos/foundations.md	315	42	1
+github.com:INGInious/INGInious	YES	no	YES	FAMILY	AGPL-3.0	213	repos/foundations.md	2639	15	2
+github.com:JushBJJ/Mr.-Ranedeer-AI-Tutor	YES	YES	no	ABSENT	none	250	repos/trending.md	479	29	18
+github.com:Khan/tutoring-accuracy-dataset	YES	YES	no	ABSENT	NOASSERTION	UNDATED	agents/top.md	13120	6	1
+github.com:Kosudo/nextSIS	YES	YES	no	ABSENT	NO GRANT	128	repos/trending.md	7964	2	2
+github.com:LAION-AI/Desktop_BUD-E	YES	YES	no	ABSENT	no grant	156	agents/top.md	10132	1	1
+github.com:LMS-Laravel/LMS-Laravel	YES	YES	no	ABSENT	unread	229	compose/patterns.md	2473	2	1
+github.com:LaurentSta/Oneduc	YES	YES	no	ABSENT	unread	187	verticals/solutions.md	4024	1	1
+github.com:Li-Evan/Bloom	YES	no	YES	FAMILY	MIT	212	agents/top.md	4163	41	1
+github.com:Litarvan/pronote-api	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	16732	1	1
+github.com:MartinNuc/hass-skola-online	YES	YES	no	ABSENT	no grant	243	agents/trending.md	704	3	3
+github.com:MatheusMach/QuantoFalta	YES	YES	no	ABSENT	none	133	agents/trending.md	6897	4	1
+github.com:Mcp-Brasil/mcp-brasil	YES	no	YES	FAMILY	MIT	201	agents/trending.md	2718	5	1
+github.com:Miaotofu01/Study-Mate	YES	no	YES	FAMILY	MIT	212	agents/top.md	4158	34	1
+github.com:NCSIS/InfiniteCampus-Vendor-Integration	YES	YES	no	ABSENT	no grant	239	repos/foundations.md	1210	2	1
+github.com:Nasus20202/MoodleMCP	YES	YES	no	ABSENT	NONE	204	agents/top.md	4773	4	4
+github.com:NaumanNaeem/BEA_2025	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	10318	1	1
+github.com:OS4ED/openSIS-Classic	YES	no	YES	FAMILY	GPL-2.0	260	verticals/solutions.md	20	34	1
+github.com:OS4ED/openSIS-Responsive-Design	YES	no	YES	FAMILY	GPL-2.0	229	repos/foundations.md	1627	7	1
+github.com:Open-TutorAi/open-tutor-ai-CE	YES	no	YES	FAMILY	BSD-3-Clause	260	agents/top.md	55	28	1
+github.com:OpenOLAT/OpenOLAT	YES	no	YES	FAMILY	Apache-2.0	256	repos/foundations.md	319	101	2
+github.com:Opetushallitus/koski	YES	YES	no	ABSENT	NOASSERTION	256	verticals/solutions.md	278	6	2
+github.com:P1ckle3/blackboard-mcp	YES	YES	no	ABSENT	NONE	204	agents/top.md	4774	9	4
+github.com:Piyushtanwani/DAU-buddy	YES	YES	no	ABSENT	NONE	146	repos/foundations.md	9018	5	3
+github.com:ProjectsAndPrograms/school-management-system	YES	no	YES	FAMILY	MIT	230	agents/top.md	2708	6	1
+github.com:SIU-Toba/docker-guarani	YES	YES	no	ABSENT	NONE	145	repos/trending.md	6557	5	2
+github.com:SVWS-NRW/SVWS-Server	YES	YES	no	ABSENT	NOASSERTION	256	verticals/solutions.md	279	2	2
+github.com:SchoolUtils/WebUntis	YES	no	YES	FAMILY	MIT	UNDATED	repos/trending.md	15475	2	1
+github.com:Selleo/mentingo	YES	no	YES	FAMILY	MIT	260	verticals/solutions.md	22	119	1
+github.com:Telaxus/EPESI	YES	YES	no	ABSENT	NONE	UNDATED	repos/trending.md	9009	1	1
+github.com:TianHongZXY/pytorch-SAKT	YES	YES	no	ABSENT	NO GRANT	154	repos/foundations.md	8046	1	1
+github.com:Tushar-cy/Ai-edge-learning-hub	YES	YES	no	ABSENT	UNREAD	132	repos/trending.md	7653	3	3
+github.com:Tushar-cy/Offline-AI	YES	YES	no	ABSENT	UNREAD	132	repos/trending.md	7653	4	3
+github.com:Universidade-Livre/ciencia-da-computacao	YES	no	YES	FAMILY	MIT	202	agents/top.md	4929	4	1
+github.com:Universidade-Livre/matematica	YES	no	YES	FAMILY	MIT	202	compose/patterns.md	4921	2	1
+github.com:YuriMatsumotoSantos/CorrecaoRedacao	YES	YES	no	ABSENT	NO GRANT	UNDATED	agents/trending.md	14038	1	1
+github.com:ZQR1101/xueyoujing-companion	YES	YES	no	ABSENT	NO GRANT	185	agents/top.md	7113	2	1
+github.com:ZeKaiNie/universal-examprep-skill	YES	no	YES	FAMILY	MIT	212	agents/top.md	4161	33	1
+github.com:Zenglian990/AI_Tutor_Release	YES	no	YES	FAMILY	ISC	260	agents/top.md	53	22	3
+github.com:ZhijieXiong/dlkt	YES	YES	no	ABSENT	NO GRANT	154	repos/foundations.md	8050	1	1
+github.com:aaryansamanta/ai-ethos	YES	YES	no	ABSENT	NONE	193	agents/top.md	6370	5	3
+github.com:abdullaitcenter-hue/comet-trail-archives	YES	YES	no	ABSENT	NONE	158	agents/trending.md	5302	1	1
+github.com:activitypods/activitybadges	YES	YES	no	ABSENT	NO GRANT	188	agents/top.md	6855	2	1
+github.com:adlnet/SCORM-to-xAPI-Wrapper	YES	no	YES	FAMILY	Apache-2.0	220	agents/trending.md	1639	16	2
+github.com:alfredang/AI-LMS-TMS	YES	YES	no	ABSENT	NO GRANT	217	agents/top.md	3664	8	4
+github.com:alfredang/ai-mms	YES	YES	no	ABSENT	none	219	agents/top.md	3542	7	2
+github.com:andyfmiller/vc-dotnet-demos	YES	YES	no	ABSENT	NO GRANT	188	agents/top.md	6855	1	1
+github.com:arshadshk/Last_Query_Transformer_RNN-PyTorch	YES	YES	no	ABSENT	NO GRANT	154	repos/foundations.md	8045	1	1
+github.com:arshadshk/SAINT-pytorch	YES	YES	no	ABSENT	NO GRANT	154	repos/foundations.md	8038	1	1
+github.com:atutor/ATutor	YES	no	YES	FAMILY	GPL-2.0	121	agents/trending.md	7977	3	1
+github.com:barneslardo/sis-demo	YES	YES	no	ABSENT	none	132	agents/trending.md	7032	11	1
+github.com:bedriyan/medkit-app	YES	YES	no	ABSENT	NONE	217	agents/top.md	3665	5	5
+github.com:bigdata-ustc/Agent4Edu	YES	YES	no	ABSENT	no grant	256	agents/trending.md	189	4	4
+github.com:bigdata-ustc/EduCAT	YES	YES	no	ABSENT	no grant	256	agents/trending.md	189	2	1
+github.com:bigdata-ustc/EduCDM	YES	YES	no	ABSENT	no grant	256	agents/trending.md	189	2	1
+github.com:bigdata-ustc/EduKTM	YES	YES	no	ABSENT	no grant	256	agents/trending.md	189	3	1
+github.com:bigdata-ustc/EduNLP	YES	YES	no	ABSENT	no grant	256	agents/trending.md	189	2	1
+github.com:brettlballard/DIF	YES	YES	no	ABSENT	no grant	UNDATED	repos/trending.md	14388	1	1
+github.com:brycewang-stanford/Auto-Empirical-Research-Skills	YES	YES	no	ABSENT	NOASSERTION	198	agents/trending.md	2884	4	2
+github.com:buynao/aipath	YES	YES	no	ABSENT	NONE	193	agents/top.md	6369	3	3
+github.com:canyongbs/advisingapp	YES	no	YES	FAMILY	Elastic-2.0	260	verticals/solutions.md	24	17	3
+github.com:cezarc/EPESI	YES	no	YES	FAMILY	MIT	120	agents/trending.md	8090	2	1
+github.com:ckyeungac/deep-knowledge-tracing-plus	YES	YES	no	ABSENT	NO GRANT	154	repos/foundations.md	8036	1	1
+github.com:cs341-illinois/coursebook	YES	no	YES	FAMILY	MIT	UNDATED	repos/trending.md	15479	2	1
+github.com:david-x3d/Material-Untis	YES	YES	no	ABSENT	no grant	243	repos/trending.md	838	2	1
+github.com:digillab-lmu/smart-rag	YES	no	YES	FAMILY	PolyForm	UNDATED	agents/trending.md	9391	3	1
+github.com:douglas150206/IF_VEST_Redacao_Correcao	YES	YES	no	ABSENT	NO GRANT	UNDATED	agents/trending.md	14040	1	1
+github.com:dougpenny/PSCustomQueriesPlugin	YES	YES	no	ABSENT	unread	244	repos/foundations.md	869	1	1
+github.com:dougpenny/SwiftyPSCore	YES	YES	no	ABSENT	unread	244	repos/foundations.md	869	1	1
+github.com:edwyj/ddl-killer	YES	YES	no	ABSENT	UNREAD	132	agents/trending.md	7021	2	1
+github.com:elisaado/somtoday-api-docs	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	16734	1	1
+github.com:elmsln/elmsln	YES	no	YES	FAMILY	GPL-3.0	213	repos/foundations.md	2669	7	1
+github.com:emorynlp/LLM-Grading	YES	YES	no	ABSENT	no grant	UNDATED	repos/trending.md	13665	1	1
+github.com:eth-lre/MathTutorBench	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	14216	3	1
+github.com:eth-lre/mathtutorbench	YES	YES	no	ABSENT	none	174	compose/patterns.md	8819	13	5
+github.com:eugeborzone/Auto_Grade_Guarani	YES	YES	no	ABSENT	NONE	145	repos/trending.md	6555	8	2
+github.com:explosion/spacy-models	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	13877	3	2
+github.com:fderyckel/ifitwala_ed	YES	YES	no	ABSENT	none	244	verticals/solutions.md	763	1	1
+github.com:foradian/fedena	YES	no	YES	FAMILY	Apache-2.0	229	repos/foundations.md	1634	17	1
+github.com:frappe/education	YES	no	YES	FAMILY	GPL-3.0	260	repos/foundations.md	55	52	5
+github.com:frjunioalves/suap-mcp	YES	no	YES	FAMILY	MIT	174	compose/patterns.md	8834	8	2
+github.com:gautamyadavs/AVLTree	YES	YES	no	ABSENT	NONE	184	agents/top.md	7174	1	1
+github.com:h9-tec/graduation-project-advisor	YES	YES	no	ABSENT	none	132	agents/trending.md	7070	1	1
+github.com:haanhtuandev/vgu-mcp	YES	YES	no	ABSENT	none	131	repos/trending.md	7787	4	2
+github.com:haolpku/Omni-Edu	YES	no	YES	FAMILY	Apache-2.0	185	agents/top.md	7107	3	1
+github.com:hesham0-0nasser/tutor-lms-mcp	YES	YES	no	ABSENT	NONE	153	agents/top.md	10435	6	3
+github.com:horaciohudson/corretor-redacao	YES	YES	no	ABSENT	NO GRANT	UNDATED	agents/trending.md	14042	1	1
+github.com:idoforgod/Vibe-learning-AgenticWorkflow	YES	YES	no	ABSENT	NONE	UNDATED	agents/trending.md	21569	1	1
+github.com:inducer/relate	YES	no	YES	FAMILY	MIT	212	repos/foundations.md	2763	8	2
+github.com:ink-waffle/moodle-mcp	YES	no	YES	FAMILY	MIT	229	agents/top.md	2754	5	1
+github.com:ink-waffle/sisu-mcp	YES	no	YES	FAMILY	MIT	229	agents/top.md	2754	14	1
+github.com:invincible-summer/Next-Tutor-Agent	YES	YES	no	ABSENT	NO GRANT	185	repos/trending.md	4048	2	1
+github.com:jacksonrakena/gradekeeper	YES	YES	no	ABSENT	no grant	243	repos/trending.md	861	1	1
+github.com:jadrianlg16/learning-tutor	YES	YES	no	ABSENT	no grant	185	agents/top.md	7112	2	2
+github.com:jagmarques/asqav-compliance	YES	YES	no	ABSENT	NOASSERTION	238	repos/foundations.md	1263	1	1
+github.com:jaltekruse/Free-Math	YES	YES	no	ABSENT	NO GRANT	154	repos/foundations.md	8076	1	1
+github.com:jgabriel-sntx/Corretor-de-redacao-ENEM	YES	YES	no	ABSENT	NO GRANT	UNDATED	agents/trending.md	14039	1	1
+github.com:joshuasoup/d2l-mcp	YES	no	YES	FAMILY	MIT	260	agents/top.md	49	2	1
+github.com:jude-miller-dev/Milky-institute-online	YES	YES	no	ABSENT	NONE	193	agents/top.md	6372	4	3
+github.com:karissafuller/project-nomad-macos	YES	YES	no	ABSENT	UNREAD	174	compose/patterns.md	8808	7	6
+github.com:karkarkins/BlackboardAssistantMCP	YES	YES	no	ABSENT	NONE	145	repos/trending.md	6558	5	2
+github.com:kaushal0494/AITutor-EvalKit	YES	no	YES	FAMILY	MIT	210	compose/patterns.md	4019	6	1
+github.com:kaushal0494/UnifyingAITutorEvaluation	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	10317	5	2
+github.com:kerntau/class-log-system	YES	YES	no	ABSENT	no grant	243	repos/trending.md	850	1	1
+github.com:kesaruhasun/mcp-sliit-courseweb	YES	no	YES	FAMILY	ISC	260	agents/top.md	52	2	1
+github.com:kevinraj23/student-assistant-mcp-server	YES	YES	no	ABSENT	NO GRANT	226	agents/top.md	3040	1	1
+github.com:krahets/hello-algo	YES	YES	no	ABSENT	NOASSERTION	198	agents/trending.md	2883	3	1
+github.com:ldsalud/school-management-system	YES	YES	no	ABSENT	no grant	243	repos/trending.md	870	2	2
+github.com:learning-commons-org/knowledge-graph	YES	no	YES	FAMILY	MIT	247	repos/foundations.md	668	7	1
+github.com:linomck/moodle-mcp	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	13049	1	1
+github.com:loyaniu/moodle-mcp	YES	YES	no	ABSENT	none	131	repos/trending.md	7784	5	3
+github.com:ls1intum/Ares2	YES	YES	no	ABSENT	UNREAD	257	repos/trending.md	225	2	1
+github.com:ls1intum/phobos	YES	YES	no	ABSENT	NOASSERTION	257	repos/trending.md	224	2	1
+github.com:lucanardinocchi/canvas-mcp	YES	no	YES	FAMILY	MIT	260	agents/top.md	50	2	1
+github.com:luffycodes/Tutorbot-Spock	YES	YES	no	ABSENT	No grant	212	agents/top.md	4222	5	4
+github.com:mabdulre9/electrical-engineering	YES	YES	no	ABSENT	none	220	agents/top.md	3447	4	4
+github.com:mbzuai-oryx/ClimateGPT	YES	YES	no	ABSENT	UNREAD	132	agents/trending.md	7071	1	1
+github.com:midudev/libros-programacion-gratis	YES	YES	no	ABSENT	none	194	intel/trends.md	5027	3	1
+github.com:minicoohei/ai-agent-camp	YES	YES	no	ABSENT	NONE	196	agents/trending.md	3029	2	1
+github.com:mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK	YES	YES	no	ABSENT	no grant	UNDATED	repos/foundations.md	9844	6	1
+github.com:mohamurshid/ElimuAnalytics	YES	YES	no	ABSENT	NO GRANT	187	repos/foundations.md	5203	1	1
+github.com:mouredev/Hello-Python	YES	no	YES	FAMILY	Apache-2.0	202	compose/patterns.md	4919	2	1
+github.com:nakafaai/nakafa.com	YES	YES	no	ABSENT	NOASSERTION	197	agents/top.md	5600	5	2
+github.com:natayadev/dataengineering-roadmap	YES	no	YES	FAMILY	MIT	202	compose/patterns.md	4922	2	1
+github.com:neiltonsantana9-star/redacao	YES	YES	no	ABSENT	NO GRANT	UNDATED	agents/trending.md	14043	1	1
+github.com:nubabe/webuntis-org	YES	YES	no	ABSENT	no grant	243	repos/trending.md	838	2	1
+github.com:onbirdev/moodle-webservice_mcp	YES	no	YES	FAMILY	GPL-3.0-or-later	229	agents/top.md	2753	9	1
+github.com:open-spaced-repetition/fsrs4anki-helper	YES	no	YES	FAMILY	MIT	260	agents/top.md	92	14	2
+github.com:open-spaced-repetition/srs-benchmark	YES	YES	no	ABSENT	NO GRANT	127	repos/trending.md	8008	2	2
+github.com:openeducat/openeducat_erp	YES	no	YES	FAMILY	LGPL-3.0	260	verticals/solutions.md	25	108	2
+github.com:openfresno/edgenuity-aeries-grade-passback	YES	YES	no	ABSENT	none	UNDATED	verticals/solutions.md	7489	6	1
+github.com:photolensfocus/Llm-language-learning	YES	YES	no	ABSENT	NONE	158	repos/trending.md	5537	3	3
+github.com:plastic-labs/tutor-gpt	YES	no	YES	FAMILY	GPL-3.0	212	agents/top.md	4214	34	1
+github.com:plyght/canvas-mcp	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	16906	1	1
+github.com:pupilfirst/pupilfirst	YES	YES	no	ABSENT	NOASSERTION	256	verticals/solutions.md	264	18	2
+github.com:qed42/ai-accessibility-checker	YES	YES	no	ABSENT	NONE	120	agents/trending.md	8092	1	1
+github.com:rachelproject/contentshell	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	17579	2	2
+github.com:rachelproject/module-template	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	17580	2	2
+github.com:rajshah6/arXivisual	YES	YES	no	ABSENT	NONE	196	agents/trending.md	3030	1	1
+github.com:rhmatzeka/AppAbsensiSDN1Bintaro	YES	YES	no	ABSENT	no grant	243	repos/trending.md	850	1	1
+github.com:ruud0/aula-virtual-mcp	YES	YES	no	ABSENT	NONE	146	repos/foundations.md	9019	6	2
+github.com:seewoo5/KT	YES	YES	no	ABSENT	NO GRANT	154	repos/foundations.md	8039	1	1
+github.com:shimahikojin/google-classroom-mcp	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	16926	1	1
+github.com:slegroux/dandelion	YES	YES	no	ABSENT	NO GRANT	185	repos/trending.md	4047	1	1
+github.com:sonic-pi-net/sonic-pi	YES	no	YES	FAMILY	MIT	260	repos/trending.md	76	3	2
+github.com:sonsoleslp/tna	YES	YES	no	ABSENT	unread	212	repos/foundations.md	2713	4	1
+github.com:speedyapply/2026-AI-College-Jobs	YES	YES	no	ABSENT	No grant	UNDATED	repos/trending.md	14020	1	1
+github.com:tkawen/developer-platform	YES	no	YES	FAMILY	MIT	136	agents/trending.md	6607	4	1
+github.com:tutornew/OpenTutor	YES	YES	no	ABSENT	NONE	257	agents/top.md	410	2	1
+github.com:usenkovpro/deck	YES	YES	no	ABSENT	no grant	243	repos/trending.md	838	1	1
+github.com:victor934034/simulade	YES	YES	no	ABSENT	NO GRANT	UNDATED	agents/trending.md	14041	1	1
+github.com:vitorr2101/Projeto-Agente-IA-Educacional	YES	YES	no	ABSENT	NO GRANT	206	agents/top.md	4680	1	1
+github.com:vkumar04/canvas-mcp-lite	YES	YES	no	ABSENT	NO GRANT	227	agents/trending.md	1362	1	1
+github.com:wantaekchoi/vc-verifier	YES	YES	no	ABSENT	NO GRANT	188	agents/top.md	6855	2	1
+github.com:wenjing1170/llm_grader	YES	YES	no	ABSENT	no grant	UNDATED	repos/trending.md	13666	1	1
+github.com:xiaopengguo/ATKT	YES	YES	no	ABSENT	NO GRANT	154	repos/foundations.md	8047	1	1
+github.com:yxonic/DTransformer	YES	YES	no	ABSENT	NO GRANT	154	repos/foundations.md	8044	2	2
+github.com:zainf2327/mcp-classroom	YES	no	YES	FAMILY	MIT	260	agents/top.md	51	2	1
+github.com:zijinz456/OpenTutor	YES	no	YES	FAMILY	MIT	234	agents/top.md	2360	75	1
+gitlab.com:cderda/cargogetgraded	YES	YES	no	ABSENT	none	UNDATED	repos/trending.md	16006	1	1

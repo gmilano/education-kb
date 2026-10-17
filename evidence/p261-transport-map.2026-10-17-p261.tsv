@@ -1,0 +1,21 @@
+transport	endpoint	scope	http	meaning
+curl	https://api.github.com/rate_limit	not repo-scoped	200	🔴 THE METER IS READABLE: core limit 15000, used 1, remaining 14999; search limit 30, used 0
+curl	https://api.github.com/repos/moodle/moodle	repo-scoped	403	policy denial, not budget
+curl	https://api.github.com/meta	not repo-scoped	403	
+curl	https://api.github.com/zen	not repo-scoped	403	
+curl	https://api.github.com/search/repositories?q=moodle	not repo-scoped	403	
+curl	https://api.github.com/users/moodle	not repo-scoped	403	
+curl	https://api.github.com/orgs/moodle	not repo-scoped	403	
+curl	https://raw.githubusercontent.com/moodle/moodle/main/COPYING.txt	n/a	200	served every payload probe this pass
+curl	https://codeload.github.com/moodle/moodle/tar.gz/refs/heads/main	n/a	403	unchanged from p260
+curl	https://github.com/trending	n/a	403	unchanged from p259/p260
+curl	https://github.com/trending?since=weekly	n/a	403	
+curl	https://eur-lex.europa.eu/eli/reg/2024/1689/oj	n/a	CONNECT-403	🔴 refused at the proxy TUNNEL layer: the host is not reachable by curl AT ALL, which is a different fact from a 403 response
+curl	https://gitlab.com/oer/emacs-reveal	n/a	200	
+curl	https://pypi.org/pypi/jupyterhub-ltiauthenticator/json	n/a	200	pypi.org is in the proxy no-proxy list
+gh (credentialed, proxy-preconfigured)	api repos/moodle/moodle	repo-scoped	403	"🟢 THE REFUSAL NAMES ITS CAUSE: ""GitHub access to this repository is not enabled for this session. Use add_repo to request access."""
+gh (credentialed, proxy-preconfigured)	search repos topic:ai-tutor	not repo-scoped	403	"🟢 A DIFFERENT CAUSE, NAMED: ""sessions are bound to their configured repositories. Use repository-scoped endpoints (repos/{owner}/{repo}/...)"""
+MCP github search_repositories	search/repositories	not repo-scoped	200	every discovery axis this pass; the ONLY search channel that answers
+WebFetch	https://github.com/trending?since=weekly	n/a	200	🟢 READ FIRST-HAND, after two passes DECLARED UNREAD on the strength of curl alone
+git ls-remote --symref	github.com + gitlab.com	n/a	200	131 rows, 127 resolved a ref
+git clone --filter=blob:none --no-checkout --depth 1	github.com	n/a	200	127 trees read first-hand, 0 clone failures

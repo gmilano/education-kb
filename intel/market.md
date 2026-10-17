@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 261 — 2026-10-17 — **`8` SEARCH LEGS, `54` FACTS OFFERED, `13` NEW — THE FIRST NON-ZERO EXTERNAL HARVEST IN FOUR PASSES, AND EVERY NEW FACT IS REGIONAL REGULATION OR MEASURED ADOPTION RATHER THAN A MARKET SIZE**
+
+⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p261-websearch`](../evidence/p261-websearch.2026-10-17-p261.tsv) *(`8` legs, one global set + one leg per region)*
+
+### 🔴 `T261-M1` — the external channel, measured a fourth time
+
+| leg | axis | facts offered | 🟢 new through the gate |
+|---|---|---|---|
+| 1 | open source AI agents · education · MIT | `3` | 🔴 `0` — both named repositories are agent **courses**, not education agents |
+| 2 | github trending · education · AI | `4` | 🔴 `0` — third-party aggregators only; the first-hand read is on [`agents/trending.md`](../agents/trending.md) |
+| 3 | open source education ERP / SIS · MIT / Apache | `4` | 🔴 `0` — all four already carried, and the leg **corroborates** the standing finding: no permissive SIS exists |
+| 4 | AI education industry trends | `7` | 🟡 `2` |
+| 5 | North America · adoption · regulation · players | `9` | 🟢 `3` |
+| 6 | EMEA · adoption · regulation · AI Act · players | `8` | 🟡 `1` |
+| 7 | APAC · adoption · regulation · players | `9` | 🟢 `3` |
+| 8 | LATAM · adoption · regulation · players | `10` | 🟢 `4` |
+
+🔵 **Why this harvest paid when three before it did not: the legs that pay are REGULATORY and MEASURED-ADOPTION legs, and the legs that return nothing are market-size legs.** `p258`, `p259` and `p260` each put `46`–`50` facts through the gate and published `0`. 🔴 **Every market figure on this page is still an earlier pass's and was NOT re-verified here** — the external channel keeps re-serving the same vendor aggregates, and this pass declined all of them again.
+
+### 🟢 `T261-M2` — Opportunities by region
+
+🔵 One subsection per region, and a region returning nothing says so in words. 🔴 **All regulatory dates below are from SECONDARY channels** — `eur-lex.europa.eu`, `congress.gov` and the Korean, Vietnamese and Chinese registries were **not probed**; `eur-lex` is refused at this session's proxy tunnel layer, so it is UNREAD, not absent.
+
+#### North America
+
+🟢 **Measured this pass:** `134` AI-in-education bills introduced across `31` states in the `2026` session, oriented to data privacy, classroom-use limits and curriculum rather than mandated adoption *(multistate.us)*. Named instruments: **California AB 1159**, which bars using student data to train AI models, and **Idaho SB 1227** on AI-tool privacy in schools. At federal level the **K-12 AI Literacy and Readiness Act of 2026 (H.R. 8747)** was advanced by the House Education and Workforce Committee at a `21 July 2026` markup — 🔴 status beyond the markup NOT confirmed. Oklahoma and Maryland are reported to require human oversight and to bar AI from high-stakes decisions about students; New York City holds a one-year moratorium on student-facing AI through `8`th grade.
+
+🟢 **The opportunity, and it follows from the bills rather than from a market figure:** a district buyer in `2026` is purchasing **evidence of human oversight**, not a tutor. 🟢 This pass's own rows supply the parts: [`dougpenny/SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) + [`PSCustomQueriesPlugin`](https://github.com/dougpenny/PSCustomQueriesPlugin) *(both `MIT`)* reach **PowerSchool** — the SIS most of these districts run — and [`Apereo-…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) *(`ECL-2.0`)* is the record warehouse an oversight claim has to be provable from. 🔴 **The constraint to quote around:** [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset), the obvious accuracy benchmark, is **non-commercial** and cannot be used in paid work.
+
+#### EMEA
+
+🟡 **One new fact, and it is a disagreement rather than a date.** The sources disagree **again** about when the AI Act's high-risk obligations bite: one says `2 August 2026`; the Commission milestone page is cited for an **AI Act entry into force `31 July 2026`** and an **AI Omnibus entry into force `27 July 2026`**; a third gives revised deadlines of **December 2027** *(Annex III)* and **August 2028** *(Annex I)* after the `2026` omnibus amendments. 🔴 **This is the eighth recorded instance of the same disagreement on this base, and `eur-lex` has now gone seven passes unprobed.** Education stays squarely in Annex III — admissions, scoring, path determination, proctoring.
+
+🟢 **What this pass measured instead of reading about it:** the EMEA public-sector rows, with their grants read first-hand. [`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server) is **`BSD-3-Clause`** — a German state's own school-administration server, permissive, agreed across two channels. [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) is **`EUPL-1.1`**, the Finnish national register. [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) and [`phobos`](https://github.com/ls1intum/phobos) are **`MIT`** out of TUM. 🟢 **The opportunity is a sovereign, Annex-III-documentable assessment stack assembled entirely from permissive EU public-sector code** — see [`compose/patterns.md`](../compose/patterns.md) `P261-2`. 🔴 **The trap:** [`LaurentSta/Oneduc`](https://github.com/LaurentSta/Oneduc) declares `MIT` in `composer.json` and ships `AGPL-3.0`; an SBOM-driven procurement would get this backwards.
+
+#### APAC
+
+🟢 **Three new facts, and one of them is the most actionable regulatory datum of the pass.** **Vietnam's Law on AI No. 134/2025/QH15** names **education** as a high-risk sector: automated assessment and behavioural monitoring must comply by **`1 March 2027`**, with an additional **six-month grace period** for education systems already in operation before **`15 August 2026`**. 🟢 **South Korea's AI Basic Act has been in force since `22 January 2026`**, with risk-assessment and disclosure duties on high-impact systems and a local-representative requirement for large foreign firms. 🟢 **Ipsos Education Monitor 2026**: support for *banning* AI in schools is **lower** across the Asian markets surveyed and **higher** in Australia and New Zealand — the same product needs opposite positioning either side of the Tasman.
+
+🟢 **The opportunity:** a Vietnamese or Korean engagement has a **dated compliance deadline**, which is a procurement trigger rather than a trend. 🟢 This pass's APAC rows are the build material: [`bigdata-ustc/EduCDM`](https://github.com/bigdata-ustc/EduCDM) · [`EduKTM`](https://github.com/bigdata-ustc/EduKTM) · [`EduNLP`](https://github.com/bigdata-ustc/EduNLP) *(`Apache-2.0`)* and [`EduCAT`](https://github.com/bigdata-ustc/EduCAT) *(`MIT`)* give a **documentable** assessment model instead of a prompt, and [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) *(`MIT`, India)* is a production LMS to host it. 🔴 **Two APAC rows to route around:** [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) is `OSL-3.0, AFL-3.0` *(OpenMage's dual licence)* and [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) is a **named source-available licence that says of itself it is not open source**.
+
+#### LATAM
+
+🟢 **Four new facts, all adoption measurements from institutional sources rather than vendors.** **UNESCO IESALC**, over `200` institutions in `19` countries: **`87 %` use AI in at least one area, `74 %` in teaching and learning, and only `26 %` have a formal AI strategy.** **TALIS 2024** secondary-teacher AI use: **Brazil `56 %`, Chile `55 %`, Colombia `53 %`, Costa Rica `52 %`, against an OECD average of `36 %`.** **PISA 2025**, across the `13` regional countries assessed: **nine in ten `15`-year-olds have used AI chatbots for schoolwork.** And the region now has an institution to sell into: **UNESCO's Observatory on AI in Education for Latin America and the Caribbean launched `14 April 2026` in Santiago**, with CAF, CENIA *(Chile)*, CETIC.br *(Brazil)*, ECLAC, Tecnológico de Monterrey, ProFuturo and Fundación Ceibal *(Uruguay)* as partners.
+
+🟢 **The opportunity is the `87 %`/`26 %` gap, stated plainly: adoption has already happened and governance has not.** The sellable unit is the **policy-and-evidence layer over tools already in use**, not a tool. 🔵 Brazil's own split — `53 %` of school administrators using AI, `22 %` of schools with guidelines — is the same gap one level down, and Argentina's `75 %`-vs-`42 %` usage split by socio-economic class is the equity argument a ministry will ask about first. 🔴 **No LATAM-authored repository entered this pass's `27` resolved rows**, which is a gap in the supply side and is declared as one: `p260`'s Chilean **SENCE** Moodle plugin remains this base's only state-compliance row from the region.
+
+#### Global
+
+🟡 **Two new facts, both from standards and sector bodies rather than market research.** **1EdTech** *(Three Trends 2026)*: institutions are building **governance structures, compliance expectations and evaluation processes**, and **digital credentials** are becoming the currency of skills-based hiring. **HolonIQ** *(2026 Education Trends Snapshot)*: selective acceleration, with the clearest gains in course-design support and teacher productivity, and growing weight on **agentic use cases** and demonstrated instructional benefit over broad personalisation claims.
+
+🔴 **Declined again, explicitly:** a `$12.3B` market figure and a `42 %` outcome-improvement claim, both from vendor blogs citing sources that could not be reached; a `54 %`-of-K-12-students / `92 %`-of-university-students adoption pair from a report whose methodology was not published; and a `36 %` North-American market-share figure from a statistics compilation. 🔵 **Four passes have now declined the same family of numbers.** The pattern is stable enough to state as a rule for this shelf: **the external channel supplies regulation and institutional survey data reliably and market sizes unreliably**, so market sizes need a primary source or they do not go on the page.
+
 ## Pass 260 — 2026-10-17 — **`8` SEARCH LEGS, `50` FACTS OFFERED, `0` NEW — FOR THE THIRD PASS RUNNING.** SO THIS SECTION PLACES WHAT THE PASS ACTUALLY MEASURED: A LATAM COMPLIANCE PLUGIN, A PERMISSIVE CONNECTOR TIER, AND A BOUND THAT DECIDES AN EMEA HOSTING MODEL
 
 🔵 **Evidence:** [`p260-websearch`](../evidence/p260-websearch.2026-10-17-p260.tsv) *(`8` legs: global ×`4`, regional ×`4`)* · [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · [`p260-carried-gate`](../evidence/p260-carried-gate.2026-10-17-p260.tsv)

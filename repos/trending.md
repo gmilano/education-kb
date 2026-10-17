@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — Pass 261 — **`127` TREES READ FIRST-HAND OVER `6 681` `(path, row)` LADDER CELLS, AND THE LADDER'S RUN REACHED `100 %` OF WHAT THE TREES ACTUALLY CONTAIN — `27` ROWS RESOLVED, `0` OF THEM FROM A PATH THE LADDER DID NOT ALREADY HAVE**
+
+🔵 **Append-only shelf.** This is `p261`'s window; history below is not rewritten. 🔵 **Evidence:** [`p261-coverage-matrix`](../evidence/p261-coverage-matrix.2026-10-17-p261.tsv) *(`6 681`)* · [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv) *(`156`)* · [`p261-current-state-index`](../evidence/p261-current-state-index.2026-10-17-p261.tsv) *(`183`)*
+
+### 🟢 `ACTION ZE`, run in full and NOT refuted
+
+The ladder is the one that already exists — `26` Tier A names, `15` Tier B paths, `10` Tier C manifests, **parsed out of [`p229-grant-ladder-reach/ladder.sh`](../compose/code/p229-grant-ladder-reach/ladder.sh) at call time rather than copied**, because `p229`'s own header says *a probe list copied is a probe list forked*.
+
+| the sweep | |
+|---|---|
+| rows in the population | `131` |
+| `git ls-remote --symref` resolved a ref | `127` |
+| blobless `--no-checkout` trees read | `127`, `0` failures |
+| `(path, row)` cells in the matrix | **`6 681`** |
+| 🟢 cells **`RUN`** | `84` |
+| 🟢 cells in-tree and **`NOT-RUN`** | 🟢 **`0`** |
+| cells `NOT-IN-TREE` *(not a hole in the ladder)* | `6 597` |
+| 🟢 rows resolved | 🟢 **`27`** |
+
+🔵 **`NOT-IN-TREE` is reported separately on purpose.** `p260`'s `tier_coverage()` had three verdicts and nothing produced them at scale; `coverage_fraction()` now divides `RUN` by `RUN + NOT-RUN` only, **because counting absent path names as coverage lets a long ladder of names dilute the measurement to meaninglessness** — which is precisely how four passes came to believe the ladder needed extending.
+
+### 🔴 The cause distribution, for the fourth consecutive pass
+
+| cause | `p259` *(`11`)* | `p260` *(`36`)* | 🔴 `p261` *(`27`)* |
+|---|---|---|---|
+| `TIER-NOT-RUN` — on the ladder, never fetched for that row | `1` | `34` | 🔴 **`27` — `100 %`** |
+| `CHANNEL-ALREADY-RESOLVED` | — | `2` | `0` *(the population is current-state, so this cannot occur)* |
+| 🔴 `CHANNEL-ABSENT` — **the only cause a longer path list fixes** | `3` | `0` | 🔴 **`0`** |
+
+🟢 **`ZE`'s instruction — *"stop extending the ladder until this is at `100 %`"* — is now satisfiable and satisfied for this population.** The ladder's run is complete over every row whose current cell says it has no grant, and the remaining absences are structural rather than procedural.
+
+### 🔴 What the `104` unresolved rows are, from their own trees and not from a `404`
+
+| condition | rows | what fixes it |
+|---|---|---|
+| 🔴 a manifest exists and has **no licence key at all** | 🔴 **`41`** | 🟢 **an upstream issue** — one field |
+| 🔴 **no ladder path of any tier in the tree** | 🔴 **`68`** | a licence decision by the author; nothing a probe can do |
+| 🔴 **no ref at all** | 🔴 **`4`** | nothing; [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js) is new to this list and is a standards body's own reference client |
+
+🔵 `p259` and `p260` could not draw this line, because a `404` at a path looks the same whether the file is missing or the whole channel is. 🟢 **A tree can tell the difference, and `41` of these rows are one pull request from being usable.**
+
+### 🔴 `0` publishable NEW trending rows, and the reason is now measured rather than suspected
+
+🔴 **The discovery axes returned `28` candidates and the current-state index answered `CARRIED` for `22` of them in one lookup each.** 🔵 Full table on [`agents/trending.md`](../agents/trending.md). The index's own census says why:
+
+| the `2 249` distinct slugs this base carries | |
+|---|---|
+| 🟢 carrying a licence family on their newest cell | 🟢 **`1 813`** |
+| 🔴 whose newest cell says there is no grant | `131` *(this pass's population)* |
+| 🔴 **never graded at all** — no family cell, no absence cell, mentioned only in prose | 🔴 **`305`** |
+
+🔴 **`305` is the largest unmeasured population on this base and no ACTION has ever named it.** It is not the same as the grantless rows: those were asked and answered *"nothing"*; these were never asked. Registered as `ACTION ZG`.
+
 ## 2026-10-17 — Pass 260 — **`153` REPOSITORY TREES READ FIRST-HAND, AND `75` OF THEM — `49 %` — CARRY NO PACKAGE MANIFEST OF ANY KIND.** THE EDUCATION CORPUS IS NOT A PACKAGE ECOSYSTEM, WHICH IS WHY EVERY SCANNER-SHAPED ANSWER TO ITS LICENCES HAS BEEN "UNKNOWN"
 
 🔵 **Append-only shelf.** This is `p260`'s window; history below is not rewritten. 🔵 **Evidence:** [`p260-ecosystem-census`](../evidence/p260-ecosystem-census.2026-10-17-p260.tsv) · [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · [`p260-absence-audit`](../evidence/p260-absence-audit.2026-10-17-p260.tsv)

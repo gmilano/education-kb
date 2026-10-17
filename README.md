@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 261 — 2026-10-17 — **THE STANDING GATE RAN FOR THE FIRST TIME IN TEN PASSES. IT WAS RED. IT IS NOW GREEN — AND `ACTION ZE` CLOSED THE LADDER AT `100 %` COVERAGE WITH `27` ROWS**
+
+⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 **The pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**
+
+### 🟢 The headline: `make hooks` was runnable all along
+
+`p251`, `p252` and `p260` each declared *"the sandbox refuses to execute code resident in the cloned repository"* and recorded the standing gate's verdict as **UNKNOWN**.
+
+| 🟢 `p261` ran it | |
+|---|---|
+| on arrival | 🔴 **RED** — exit `2` at [`p252-ungated-floors`](compose/code/p252-ungated-floors/): `python test files on disk: got 211, want 210` |
+| the cause | 🔴 `p260` wired its own instrument into `make hooks` and did not move the census pin that counts suites — **so the gate has been red since that commit and nobody looked** |
+| on departure | 🟢 **GREEN** — `ALL OFFLINE LICENCE CONTROLS PASS`, exit `0`, with `pass261`'s `166` new controls inside it |
+
+🔵 `p252`'s own note calls a moving census pin *"the gate working, not the gate breaking"*, and it was right. 🔴 **A gate nobody runs reports nothing**, and three passes inherited one session's refusal as a property of the base — `p254`'s lesson, at the cost of a full pass of gate coverage.
+
+### 🟢 `ACTION ZE` and `ACTION ZD`, both discharged
+
+| | |
+|---|---|
+| rows with no grant on their **newest** cell | `131` *(against `183` by `p260`'s whole-file method — `28.4 %` of that harvest was its own answered history)* |
+| refs resolved · trees read first-hand | `127` · `127` |
+| `(path, row)` ladder cells published | **`6 681`** |
+| 🟢 in-tree cells **`RUN`** / **`NOT-RUN`** | 🟢 **`84` / `0` — coverage `100 %`** |
+| 🟢 rows resolved | 🟢 **`27`**, every one `TIER-NOT-RUN`, `CHANNEL-ABSENT` `0` |
+
+🔴 **Fourth consecutive pass in which the only cause a longer path list fixes measures zero.** 🟢 `ZE`'s instruction — *stop extending the ladder until coverage is `100 %`* — is satisfied for this population, and the remaining absences are now **structural**: `41` rows have a manifest with no `license` key *(one field from usable)*, `68` have no ladder path of any tier in their tree, `4` have no ref at all.
+
+### 🔴 Three guards this pass had to fix, two of them one pass old
+
+🔴 **A payload is not one grant.** [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS)'s `license.txt` bundles its own `GPL-3.0` with CodeIgniter's and Bootstrap's; the `All rights reserved.` on line `703` is **EllisLab's**, and `p260`'s brand-new anti-retraction guard answered `RESERVED` for the whole file. 🟢 Scoped to the subject's section, with `THIRD-PARTY-RESERVATION` as a verdict of its own.
+
+🔴 **"NOT SPDX" is not "prose".** `3` of `11` manifest declarations were values their ecosystem **specifies** — npm's `SEE LICENSE IN`, PyPI's trove classifiers, CRAN's `MIT + file LICENSE` — and all three were published as unreadable. 🟢 A reader per grammar now.
+
+🔴 **Tier A can hold a parameter sheet.** [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna)'s root `LICENSE` is `46` bytes of `YEAR:` / `COPYRIGHT HOLDER:` — the sheet CRAN requires. 🟢 The strongest rung on the ladder held no grant, and the weakest tier held the family.
+
+### 🟢 And two axes that were never unreachable
+
+🟢 **`github.com/trending` answered `200` through `WebFetch`** after two passes declared it unread on `curl`'s `403` alone — `11` repositories, `0` of them education, head star count verified against the `MCP` search endpoint to within `3` stars.
+
+🟢 **`api.github.com/rate_limit` answers `200` while every other path on that host answers `403`**, and the meter it serves reads `core: used 1, remaining 14999`. 🔵 **So a `403` here is a policy denial and has never been a budget** — and `gh`'s two refusals name the policy in their own words.
+
+### 🔴 What is registered for the next pass
+
+🔴 **`ACTION ZG` (highest priority): grade the `305` NEVER-GRADED rows.** Of `2 249` carried slugs, `1 813` have a family, `131` are this pass's grantless population, and **`305` have never been asked** — the largest unmeasured population on this base, and no ACTION has ever named it.
+
+🔴 **`ACTION ZH`: open the `41` upstream issues** — one `license` field each, in a manifest the author already maintains.
+
+🔴 **`ACTION ZI`: re-run the SCOPED reservation guard over every payload this base ever graded as proprietary**, because `nextSIS` was a false retraction and a rule fixed forward leaves everything the old rule wrote standing.
+
 ## Pass 260 — 2026-10-17 — **`ACTION ZA` BUILT, RUN OVER `153` REPOSITORIES, AND REFUTED.** AND THE SWEEP THAT REFUTED IT RESOLVED `36` SLUGS — `34` OF THEM FROM RUNGS THAT WERE ALWAYS ON THE LADDER AND HAD NEVER BEEN PUT ON THE ROW
 
 ⏱️ **SIXTH pass of `2026-10-17`.** 🔵 **The pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**

@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 261 — 2026-10-17 — **TWELVE FOUNDATION ROWS WHOSE GRANTS WERE CARRIED AS UNREADABLE ARE READ FIRST-HAND, AND THE STRONGEST RUNG ON THE LADDER TURNED OUT TO HOLD A PARAMETER SHEET**
+
+⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv) · [`p261-coverage-matrix`](../evidence/p261-coverage-matrix.2026-10-17-p261.tsv) · **instrument:** [`pass261-current-state-tier-run`](../compose/code/pass261-current-state-tier-run/) *(`166` controls)*
+
+### 🟢 `T261-R1` — the twelve library and infrastructure rows, with the path each grant was read at
+
+Every payload below was fetched from `raw.githubusercontent.com` on a ref resolved by `git ls-remote --symref`, and graded by [`lib/license_family.sh`](../compose/code/lib/license_family.sh) — the shared classifier, called and not reimplemented.
+
+| row | grant | path · bytes | region | what it is |
+|---|---|---|---|---|
+| 🟢 [`bigdata-ustc/EduCDM`](https://github.com/bigdata-ustc/EduCDM) | 🟢 **`Apache-2.0`** | `LICENSE` · `11 346` B | APAC *(USTC, China)* | cognitive diagnosis models — the measurement layer under adaptive practice |
+| 🟢 [`bigdata-ustc/EduKTM`](https://github.com/bigdata-ustc/EduKTM) | 🟢 **`Apache-2.0`** | `LICENSE` · `11 367` B | APAC | knowledge tracing toolkit |
+| 🟢 [`bigdata-ustc/EduNLP`](https://github.com/bigdata-ustc/EduNLP) | 🟢 **`Apache-2.0`** | `LICENSE` · `11 346` B | APAC | NLP for education items |
+| 🟢 [`bigdata-ustc/EduCAT`](https://github.com/bigdata-ustc/EduCAT) | 🟢 **`MIT`** | `LICENSE` · `1 062` B | APAC | computerised adaptive testing |
+| 🟢 [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 **`ECL-2.0`** | `LICENSE` · `9 878` B | North America *(Apereo)* | a Learning Record Warehouse — the xAPI/Caliper sink |
+| 🟢 [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 🟢 **`MIT`** | `LICENSE.md` · `1 075` B, **and** `DESCRIPTION` | EMEA *(Univ. of Eastern Finland)* | Transition Network Analysis, a CRAN R package — see `T261-R2` |
+| 🟢 [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) | 🟢 **`MIT`** | `LICENSE` · `1 345` B | EMEA *(TUM)* | the auto-grading sandbox behind Artemis |
+| 🟢 [`ls1intum/phobos`](https://github.com/ls1intum/phobos) | 🟢 **`MIT`** | `LICENSE` · `1 241` B | EMEA *(TUM)* | companion service in the same toolchain |
+| 🟢 [`dougpenny/SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) | 🟢 **`MIT`** | `LICENSE` · `1 088` B | North America | a Swift client for the **PowerSchool** SIS API |
+| 🟢 [`dougpenny/PSCustomQueriesPlugin`](https://github.com/dougpenny/PSCustomQueriesPlugin) | 🟢 **`MIT`** | `LICENSE` · `1 067` B | North America | the PowerSchool plugin the client above queries through |
+| 🟢 [`karissafuller/project-nomad-macos`](https://github.com/karissafuller/project-nomad-macos) | 🟢 **`MIT`** | `LICENSE` · `1 071` B | North America | the macOS/Apple-Silicon port of **Project N.O.M.A.D.** — offline local AI + Wikipedia + education tools, for a school with no connectivity |
+| 🔴 [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) | 🔴 **NON-COMMERCIAL — not OSI** | `LICENSE` · `2 690` B | North America *(Khan Academy)* | 🔴 a tutoring-accuracy evaluation set a studio **cannot** use in paid client work |
+| 🔴 [`krahets/hello-algo`](https://github.com/krahets/hello-algo) | 🔴 **`CC-BY-NC-SA-4.0`** | `LICENSE` · `20 849` B | APAC | the algorithms textbook. 🔴 `NC` **and** `SA`: not a courseware base for a commercial engagement |
+
+### 🔴 `T261-R2` — Tier A, the strongest rung on the ladder, can hold a PARAMETER SHEET
+
+🔴 **[`sonsoleslp/tna`](https://github.com/sonsoleslp/tna)'s root `LICENSE` is `46` bytes:**
+
+```
+YEAR: 2025-2026
+COPYRIGHT HOLDER: tna authors
+```
+
+🔴 **That is not a licence.** It is the fill-in sheet **CRAN requires** beside `License: MIT + file LICENSE`, and the shared classifier correctly answers `UNCLASSIFIED` for it. The row's real grant is in two other places: the `DESCRIPTION` field *(CRAN's grammar — `MIT + file LICENSE` means `MIT`)* and `LICENSE.md` *(`1 075` B of canonical MIT text)*.
+
+🔵 **This inverts `p260`'s `STRENGTH` ordering for one whole ecosystem.** `p260` ranked a filed TEXT above a manifest DECLARATION on the ground that a text carries family, bound and terms. In CRAN, **the manifest defines what the licence file is** — and what it defines it to be is a parameter sheet. 🟢 So strength is not a property of the tier alone; it is a property of `(ecosystem, tier)`, and `cran_parameter_sheet()` is the predicate that refuses to grade the sheet as a grant.
+
+### 🔴 `T261-R3` — what the `131` grantless rows actually are, measured from their own trees
+
+`p260` reported `117` of `153` repositories with no readable grant and `75` with no package manifest. Those numbers were about the paths probed. 🟢 **These are about the trees:**
+
+| the condition, confirmed from the repository's own tree | rows |
+|---|---|
+| 🟢 resolved this pass | 🟢 **`27`** |
+| 🔴 a manifest IS present and carries **no licence key at all** | 🔴 **`41`** |
+| 🔴 **no ladder path of any tier exists in the tree** — no licence file, no manifest | 🔴 **`68`** |
+| 🔴 **no ref at all** — gone, or renamed without a redirect | 🔴 **`4`** |
+
+🔵 **The difference matters for what gets asked upstream.** A row with `package.json` and no `license` key is **one field away** from usable and worth an issue; a row with no grant channel in its tree at all needs a licence decision from its author. 🔴 The `4` with no ref are [`1EdTech/caliper-js`](https://github.com/1EdTech/caliper-js), [`Epesi-Team/epesi`](https://github.com/Epesi-Team/epesi), `invincible-summer/Next-Tutor-Agent` and `openfresno/edgenuity-aeries-grade-passback` — the last two were already recorded as refless at `p260`, and **`1EdTech/caliper-js` is new: a standards body's own reference client, unreachable.**
+
+### 🟢 `T261-R4` — the archived register, carried forward from `p260`
+
+🟡 The `9`-row archived register `ACTION ZC` produced at `p260` was **not re-verified this pass** and stands as published. `ACTION YW`'s named population — the `archived` state of all `2 249` indexed slugs — **remains unswept**, and `p261` adds the reason it will stay that way on the current channels: `gh search repos` and `api.github.com/search/repositories` both answer `403`, and only the `MCP` search endpoint answers, one query at a time. See the transport map.
+
 ## Pass 260 — 2026-10-17 — **`ACTION ZC` DISCHARGED, AND ITS FALSIFIER FIRED: MARKING THE ARCHIVED ROWS NEEDS MORE THAN A CELL, SO THIS SHELF NOW CARRIES A REGISTER.** PLUS: THE MOODLE CORE BOUND IS `or-later`, WHICH IS WHAT MAKES THE WHOLE PLUGIN LAYER COMPOSE
 
 🔵 **Evidence:** [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · [`p260-absence-audit`](../evidence/p260-absence-audit.2026-10-17-p260.tsv) · **instrument:** [`pass260-ecosystem-manifest-tier`](../compose/code/pass260-ecosystem-manifest-tier/)

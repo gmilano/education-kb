@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 261 — 2026-10-17 — **FOUR TRENDS THIS PASS MEASURED RATHER THAN READ, AND THE SHARPEST ONE IS THAT THE EDUCATION OPEN-SOURCE CORPUS IS NOW MOSTLY GRANTED — `1 813` OF `2 249` ROWS — WHILE `305` HAVE NEVER BEEN ASKED AT ALL**
+
+⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p261-current-state-index`](../evidence/p261-current-state-index.2026-10-17-p261.tsv) · [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv) · [`p261-websearch`](../evidence/p261-websearch.2026-10-17-p261.tsv) · [`p261-transport-map`](../evidence/p261-transport-map.2026-10-17-p261.tsv)
+
+### 🟢 `T261-T1` — the corpus's licence state, measured end to end for the first time
+
+🔵 Every pass before this one measured a *population it had just probed*. The current-state index measures **the whole base at once**, and the shape is worth having:
+
+| the `2 249` distinct repository slugs these eight shelves carry | rows | share |
+|---|---|---|
+| 🟢 a licence family on the newest cell | 🟢 **`1 813`** | **`80.6 %`** |
+| 🔴 newest cell says there is no readable grant | `131` | `5.8 %` |
+| 🔴 **never graded at all** | 🔴 **`305`** | 🔴 **`13.6 %`** |
+
+🔴 **The trend is not the `80.6 %`. It is that the second-largest class is the one nobody has ever asked about.** A row that was probed and answered *"nothing"* is a measurement; a row mentioned once in a pattern recipe and never graded is an **absence of measurement wearing the same clothes**. 🟢 And a studio consuming this base cannot tell them apart from the shelves — which is why `ACTION ZG` now names the `305`.
+
+### 🟢 `T261-T2` — the education corpus is a MANIFEST corpus, and `41` rows are one field from usable
+
+🟢 Of the `131` rows with no grant, **`59` have a ladder path in their own tree and `41` of those carry a package manifest with no `license` key at all** — `package.json` ×`30`, `pyproject.toml` ×`15`, `setup.py`, `setup.cfg`, `composer.json`.
+
+🔵 **This is a different trend from `p260`'s.** `p260` measured that `49 %` of the education corpus has no package manifest and concluded the sector is not a package ecosystem. 🟢 **`p261` measures the other half: where a manifest DOES exist, the licence field is empty four times out of five.** The small-repo education author ships `npm init`'s defaults and never fills the field.
+
+🟢 **It is also the most tractable supply-side gap this base has found.** `41` rows need one line in a file their author already maintains. 🔵 An upstream-issue campaign is a concrete, cheap contribution, and the index can now name the exact `41`.
+
+### 🟢 `T261-T3` — the regulatory channel has become the reliable one, and the market channel has not
+
+| what the external channel supplied, four passes running | |
+|---|---|
+| market sizes, adoption percentages from vendor compilations | 🔴 `0` facts published at `p258`, `p259`, `p260`, `p261` |
+| 🟢 dated regulatory instruments and institutional survey data | 🟢 **`11` of this pass's `13` new facts** |
+
+🟢 **And the dates are now specific enough to be procurement triggers rather than trends:** Korea's AI Basic Act in force `22 January 2026`; **Vietnam's Law on AI No. 134/2025/QH15 naming education high-risk with a `1 March 2027` compliance date and a six-month grace period for education systems operating before `15 August 2026`**; `134` US state bills across `31` states in the `2026` session; **UNESCO IESALC's `87 %` adoption against `26 %` with a formal strategy** across `19` LATAM countries.
+
+🔴 **The EU remains the exception, and the exception is procedural rather than substantive.** Three sources give three different dates for the same high-risk obligation, and the primary register has been unprobed for seven passes. 🔵 **A trend this base should not publish: that EU high-risk duties start on any particular date.** It can publish that education is Annex III, which every source agrees on.
+
+### 🟢 `T261-T4` — agentic tutoring has converged on a shape, and the shape has a name in the repositories
+
+🟢 The `intelligent-tutoring-system` axis returned `15` repositories pushed since `2026-06-01`, and the small new ones describe the **same architecture in the same words**:
+
+| row | the shape, in the repository's own description |
+|---|---|
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(`MIT`, Go)* | *"turns any LLM into an Intelligent Tutoring System"* — **BKT over MCP** |
+| [`Vinger-lee/leap-framework`](https://github.com/Vinger-lee/leap-framework) *(`MIT`)* | *"state-driven agentic tutoring runtime … exposed over MCP. Server-side **State Guard**, evidence-based mastery, FSRS retention"* |
+| [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) *(`MIT`)* | *"LangGraph, Bayesian Knowledge Tracing and a prerequisite DAG: **the model proposes, a deterministic policy guard disposes**"* |
+
+🔵 **Three independent authors, no shared lineage, one architecture: a deterministic mastery model (BKT or FSRS) holding the state, an LLM generating the turn, and a policy guard between them.** 🟢 That is the opposite of a prompt-engineered tutor, and it is the architecture a regulator can be shown: the pedagogical decision is in auditable code and the language model is a renderer. 🔴 **All three are `≤49`★ and none has a release** — this is a trend in *architecture*, not in adoption, and it should be quoted as such.
+
 ## Pass 260 — 2026-10-17 — **FOUR TRENDS THIS PASS MEASURED RATHER THAN READ, AND THE FIRST IS THAT TWO-THIRDS OF THE OPEN EDUCATION CORPUS IS NOT PACKAGED SOFTWARE — WHICH IS WHY EVERY SCANNER-SHAPED ANSWER TO ITS LICENCES HAS BEEN WRONG**
 
 🔵 **Evidence:** [`p260-ecosystem-census`](../evidence/p260-ecosystem-census.2026-10-17-p260.tsv) · [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · [`p260-absence-audit`](../evidence/p260-absence-audit.2026-10-17-p260.tsv) · [`p260-websearch`](../evidence/p260-websearch.2026-10-17-p260.tsv)

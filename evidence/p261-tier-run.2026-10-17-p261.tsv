@@ -1,0 +1,157 @@
+slug	ref	head_sha	tier	path	coverage	bytes	payload_sha16	read_by	token	family	note
+github.com:1EdTech/caliper-js					NO-REF						ls-remote found no HEAD
+github.com:1EdTech/lti-1-3-php-example-tool	master	523bba29a8dba3f9793d3630318d8182ec7074ab			NO-LADDER-PATH-IN-TREE						34 paths in tree, none on the ladder
+github.com:781991937/TOFAN-AI-2026	main	b79214aed2b54c42e7375ec3199b7aef4b970af5			NO-LADDER-PATH-IN-TREE						171 paths in tree, none on the ladder
+github.com:A-R007/Multi-Agent-Study-Assistant	main	3c1c88b95a9d13408bd62b6b686737eb6a135983	TIER_C	pyproject.toml	RUN	553	887a8be7d0414b6b	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:AI-for-Education/Luganda-linguistic-benchmarks	main	d4f3a687e25c43a050f57be9b80e7476e46a277f	TIER_C	pyproject.toml	RUN	1754	48f9d930ad7330a7	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:Apereo-Learning-Analytics-Initiative/OpenLRW	master	a243920ab1209fc2f97bd64a0ead3202f446fd48	TIER_A	LICENSE	RUN	9878	f339063d2f604ce9	lib/license_family.sh		ECL-2.0	
+github.com:ApexEDM/GIKT	main	12e0a5d6cd05851a8746b62ba35ce35da2e5baf0			NO-LADDER-PATH-IN-TREE						6 paths in tree, none on the ladder
+github.com:CreveXTech/canvas-lms-mcp	main	0310536c0dcad6b4071cc55481ac7eeae1fe6444	TIER_C	package.json	RUN	535	e7070243df97a1e7	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:CyanXLab/Phonos	main	8a13a3b7611a3d65405ea152167f0d1f46df013b			NO-LADDER-PATH-IN-TREE						119 paths in tree, none on the ladder
+github.com:DanieelRC/AgenteConversacional-SAES-R	main	823f0fd96864cf3bc63469cd362eccf1dd29d3e5			NO-LADDER-PATH-IN-TREE						24 paths in tree, none on the ladder
+github.com:Ed-Fi-Alliance-OSS/Ed-Fi-Technology-Roadmap	main	a6fcf193ceb2ff7267f59bb64ecf7fe77c0677cf			NO-LADDER-PATH-IN-TREE						12 paths in tree, none on the ladder
+github.com:Epesi-Team/epesi					NO-REF						ls-remote found no HEAD
+github.com:GradeAI/gradeai	main	4de8e86145826fad59697956fbb24a5c96006fa4			NO-LADDER-PATH-IN-TREE						9 paths in tree, none on the ladder
+github.com:HFUT-LEC/awesome-student-cognitive-modeling	main	cdb6a55b6057a837b293071f10407b312ab3e92d			NO-LADDER-PATH-IN-TREE						25 paths in tree, none on the ladder
+github.com:HetviBarot21/SmartAttend	main	c3803f3d81e38da45c24558dc228ae1c7becf629			NO-LADDER-PATH-IN-TREE						163 paths in tree, none on the ladder
+github.com:IC-Redacoes-UTFPR/CorrecaoRedacao	main	792ddffb2eab50cdaf0399903e61c254967a56a4			NO-LADDER-PATH-IN-TREE						356 paths in tree, none on the ladder
+github.com:JushBJJ/Mr.-Ranedeer-AI-Tutor	main	ea29bcf196d28e70eb31100d00b108ebbacceb96			NO-LADDER-PATH-IN-TREE						12 paths in tree, none on the ladder
+github.com:Khan/tutoring-accuracy-dataset	main	fbbeff86b5c1a689161b8f6092a6be7d0532a6dd	TIER_A	LICENSE	RUN	2690	53cf7aa78a8992fd	lib/license_family.sh		NONCOMMERCIAL-NOT-OSI	
+github.com:Kosudo/nextSIS	master	60e422c7d93e5725e4364083a26b062831c171c6	TIER_A	license.txt	RUN	39130	6c9a3ed4e4e52d5a	lib/license_family.sh		GPL-3.0	RESERVED: no permissive grant follows
+github.com:LAION-AI/Desktop_BUD-E	main	13ba697121506fb741a0e00d979d8263eee73986			NO-LADDER-PATH-IN-TREE						34 paths in tree, none on the ladder
+github.com:LMS-Laravel/LMS-Laravel	master	55ad5acbc42ec8ea2d887586f0c02eef0367f0a3	TIER_C	composer.json	RUN	2614	dbc99b43f2f5c8ae	COMPOSER:json:license	MIT	MIT	SPDX-EXACT
+github.com:LMS-Laravel/LMS-Laravel	master	55ad5acbc42ec8ea2d887586f0c02eef0367f0a3	TIER_C	package.json	RUN	1551	73e4da7b9e107ec7	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:LaurentSta/Oneduc	main	16f23e4eb6d19838cb81be12b8f2257ed2e1da7b	TIER_A	LICENSE	RUN	34539	da9bc6430ff408cb	lib/license_family.sh		AGPL-3.0	
+github.com:LaurentSta/Oneduc	main	16f23e4eb6d19838cb81be12b8f2257ed2e1da7b	TIER_A	NOTICE	RUN	2263	fcdb37cf6e501c4d	lib/license_family.sh		UNCLASSIFIED	
+github.com:LaurentSta/Oneduc	main	16f23e4eb6d19838cb81be12b8f2257ed2e1da7b	TIER_C	composer.json	RUN	2850	8687121dacdda402	COMPOSER:json:license	MIT	MIT	SPDX-EXACT
+github.com:LaurentSta/Oneduc	main	16f23e4eb6d19838cb81be12b8f2257ed2e1da7b	TIER_C	package.json	RUN	1255	24ef0b7fd6c9323a	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:Litarvan/pronote-api	master	9ce475a49a81abc40967b01343077f70b361ec76			NO-LADDER-PATH-IN-TREE						1 paths in tree, none on the ladder
+github.com:MartinNuc/hass-skola-online	main	f470454123c4bf10f23171d37c666082563a0475			NO-LADDER-PATH-IN-TREE						50 paths in tree, none on the ladder
+github.com:MatheusMach/QuantoFalta	main	9e2d7202e510ef719a595fce3f79d608bebf4940			NO-LADDER-PATH-IN-TREE						19 paths in tree, none on the ladder
+github.com:NCSIS/InfiniteCampus-Vendor-Integration	main	5e3aa84b19dfea9b1e1495b714f5d686d5316e51			NO-LADDER-PATH-IN-TREE						147 paths in tree, none on the ladder
+github.com:Nasus20202/MoodleMCP	main	99a11366b0774a3a6f5bfc511069bed150e4197b	TIER_C	package.json	RUN	1471	88e485c75c4fde49	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:NaumanNaeem/BEA_2025	main	bcaa52dae63d4112edea4b0186c386f0fafd5b97			NO-LADDER-PATH-IN-TREE						31 paths in tree, none on the ladder
+github.com:Opetushallitus/koski	master	c02923b0b3057abec3a644c3c51ee9612c7ccbaf	TIER_A	LICENSE.txt	RUN	654	9f68b0df35be1bf9	lib/license_family.sh		EUPL-1.1	
+github.com:Opetushallitus/koski	master	c02923b0b3057abec3a644c3c51ee9612c7ccbaf	TIER_C	package.json	RUN	899	268f873bb60cbb00	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:P1ckle3/blackboard-mcp	main	32af42d9742d93e1be4b33b49095823a04f1604b	TIER_C	pyproject.toml	RUN	562	da32a7b8db545d05	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:Piyushtanwani/DAU-buddy	develop	341fe319126a0ffa89931658ce3f45f25530d3b9			NO-LADDER-PATH-IN-TREE						124 paths in tree, none on the ladder
+github.com:SIU-Toba/docker-guarani	master	427c551a708f22ffa5b0ea7f38656cf6267d4d26			NO-LADDER-PATH-IN-TREE						9 paths in tree, none on the ladder
+github.com:SVWS-NRW/SVWS-Server	dev	4dfc78e518cdebbd24bae680fd86a5c6829a9269	TIER_A	LICENSE	RUN	1611	966b53671a2c7861	lib/license_family.sh		BSD	
+github.com:SVWS-NRW/SVWS-Server	dev	4dfc78e518cdebbd24bae680fd86a5c6829a9269	TIER_C	package.json	RUN	3062	89105541d5a3f514	NPM:json:license	BSD-3-Clause	BSD-3-Clause	SPDX-EXACT
+github.com:Telaxus/EPESI	main	4d03dac938622a1df3195840129ff999f6e0a080			NO-LADDER-PATH-IN-TREE						1 paths in tree, none on the ladder
+github.com:TianHongZXY/pytorch-SAKT	master	80daa584ecb90e904c8bfbe3d7bb85e1eda59231			NO-LADDER-PATH-IN-TREE						11 paths in tree, none on the ladder
+github.com:Tushar-cy/Ai-edge-learning-hub	main	fc787d7d9ec0e961ddfadaf0e69c364505ef3485			NO-LADDER-PATH-IN-TREE						12424 paths in tree, none on the ladder
+github.com:Tushar-cy/Offline-AI	main	626aad22bf6e09cd35e891625174848cd097eb4f			NO-LADDER-PATH-IN-TREE						151 paths in tree, none on the ladder
+github.com:YuriMatsumotoSantos/CorrecaoRedacao	main	792ddffb2eab50cdaf0399903e61c254967a56a4			NO-LADDER-PATH-IN-TREE						356 paths in tree, none on the ladder
+github.com:ZQR1101/xueyoujing-companion	main	98c3010c8ce167990f049f82678450f1aac6af5f			NO-LADDER-PATH-IN-TREE						191 paths in tree, none on the ladder
+github.com:ZhijieXiong/dlkt	release	5f38321182c6b8bb4bdbb80661af04efec3f946f			NO-LADDER-PATH-IN-TREE						513 paths in tree, none on the ladder
+github.com:aaryansamanta/ai-ethos	main	9acaafc718f225954cf477121e983b04693b3cbd			NO-LADDER-PATH-IN-TREE						150 paths in tree, none on the ladder
+github.com:abdullaitcenter-hue/comet-trail-archives	main	09bb215d203a52d3004b4cd403164beeb5daece7			NO-LADDER-PATH-IN-TREE						6 paths in tree, none on the ladder
+github.com:activitypods/activitybadges	master	194555c436c6e61109412d64235a2b97faa6ae3d			NO-LADDER-PATH-IN-TREE						72 paths in tree, none on the ladder
+github.com:alfredang/AI-LMS-TMS	main	8139c4fc51f8420d23f75d4af8276e7dbcaa0fdd	TIER_C	package.json	RUN	2904	93052998bf2e6915	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:alfredang/ai-mms	main	d286849845b33f693137adb26fcc05fe001b03c4	TIER_C	composer.json	RUN	7348	3676c0b8ed35a372	COMPOSER:json:license	OSL-3.0,AFL-3.0	OSL-3.0,AFL-3.0	SPDX-LOOSE
+github.com:andyfmiller/vc-dotnet-demos	main	c6ecfb7820a429013be856195259a743467420b2			NO-LADDER-PATH-IN-TREE						1251 paths in tree, none on the ladder
+github.com:arshadshk/Last_Query_Transformer_RNN-PyTorch	main	dca89a95eec2177a17424417291803756911d8e3			NO-LADDER-PATH-IN-TREE						3 paths in tree, none on the ladder
+github.com:arshadshk/SAINT-pytorch	main	3b52f1d8483618554a33375acb53fc1a69f548d2			NO-LADDER-PATH-IN-TREE						4 paths in tree, none on the ladder
+github.com:barneslardo/sis-demo	main	e0ffd5b42f5825f8d779c5702840061d65e1c0c4	TIER_C	package.json	RUN	1078	8cea3bca7a5e487f	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:bedriyan/medkit-app	main	3f637a8afd76b81e520bfeae3af9fbf32b601594	TIER_C	package.json	RUN	850	d4ad8b98fe59ff76	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:bigdata-ustc/Agent4Edu	main	ecf065d1909c66691da7c2362a61ccd3dcf9169c			NO-LADDER-PATH-IN-TREE						49 paths in tree, none on the ladder
+github.com:bigdata-ustc/EduCAT	master	0f191de6c1e8ada93c6ae95c46f8a4034f9509b8	TIER_A	LICENSE	RUN	1062	f54657b486317d3b	lib/license_family.sh		MIT	
+github.com:bigdata-ustc/EduCAT	master	0f191de6c1e8ada93c6ae95c46f8a4034f9509b8	TIER_C	setup.py	RUN	640	e3fbf1fb25fa9de5	SETUPPY:KEY-ABSENT			KEY-ABSENT
+github.com:bigdata-ustc/EduCAT	master	0f191de6c1e8ada93c6ae95c46f8a4034f9509b8	TIER_C	setup.cfg	RUN	214	8e6b4722826ad98e	SETUPCFG:NO-READER			NO-READER
+github.com:bigdata-ustc/EduCDM	main	c610e6ae7f45cfe8f1106a1c342d4ef5a357472e	TIER_A	LICENSE	RUN	11346	8aaf2e630b1cbdec	lib/license_family.sh		Apache-2.0	
+github.com:bigdata-ustc/EduCDM	main	c610e6ae7f45cfe8f1106a1c342d4ef5a357472e	TIER_C	setup.py	RUN	546	884d439a656e8bee	SETUPPY:KEY-ABSENT			KEY-ABSENT
+github.com:bigdata-ustc/EduCDM	main	c610e6ae7f45cfe8f1106a1c342d4ef5a357472e	TIER_C	setup.cfg	RUN	218	ef7b0d901d275686	SETUPCFG:NO-READER			NO-READER
+github.com:bigdata-ustc/EduKTM	main	5625056855ffd18c0ad3c052feba4733a386ca01	TIER_A	LICENSE	RUN	11367	59f13c04f0e6414e	lib/license_family.sh		Apache-2.0	
+github.com:bigdata-ustc/EduKTM	main	5625056855ffd18c0ad3c052feba4733a386ca01	TIER_C	setup.py	RUN	494	cecc0ab4be1338c1	SETUPPY:KEY-ABSENT			KEY-ABSENT
+github.com:bigdata-ustc/EduKTM	main	5625056855ffd18c0ad3c052feba4733a386ca01	TIER_C	setup.cfg	RUN	257	12997c9ac2d42d2d	SETUPCFG:NO-READER			NO-READER
+github.com:bigdata-ustc/EduNLP	master	95cd9fc71a1bdd6156c42af7434aee0a8fc0a82e	TIER_A	LICENSE	RUN	11346	8aaf2e630b1cbdec	lib/license_family.sh		Apache-2.0	
+github.com:bigdata-ustc/EduNLP	master	95cd9fc71a1bdd6156c42af7434aee0a8fc0a82e	TIER_C	setup.py	RUN	1928	048d6cfa5177e734	SETUPPY:KEY-ABSENT			KEY-ABSENT
+github.com:bigdata-ustc/EduNLP	master	95cd9fc71a1bdd6156c42af7434aee0a8fc0a82e	TIER_C	setup.cfg	RUN	286	a3a0da79c30d3989	SETUPCFG:NO-READER			NO-READER
+github.com:brettlballard/DIF	main	abec188eae79ab77d1af961fe4eb60f5ed648364			NO-LADDER-PATH-IN-TREE						12 paths in tree, none on the ladder
+github.com:brycewang-stanford/Auto-Empirical-Research-Skills	main	e0b0c13ca15d1ef426f8788bc88706c994d96d9c	TIER_A	LICENSE	RUN	620	22401c14e67fc2f4	lib/license_family.sh		CC-BY-SA-4.0	
+github.com:brycewang-stanford/Auto-Empirical-Research-Skills	main	e0b0c13ca15d1ef426f8788bc88706c994d96d9c	TIER_C	pyproject.toml	RUN	2131	03ffc62bbc68c7b4	PYPROJECT:toml:project.license	CC-BY-SA-4.0		CONTENT-LICENCE-ON-CODE
+github.com:buynao/aipath	main	ed966d8bf7772830aa4b1bbf61142436e712fb46	TIER_C	package.json	RUN	547	ab2187999e97807b	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:ckyeungac/deep-knowledge-tracing-plus	master	daf97bd1b178f524a4eba53d261c9f51de48eb7d			NO-LADDER-PATH-IN-TREE						166 paths in tree, none on the ladder
+github.com:david-x3d/Material-Untis	main	16581bad14c8342e6e4843990bf25390cea9c77d			NO-LADDER-PATH-IN-TREE						123 paths in tree, none on the ladder
+github.com:douglas150206/IF_VEST_Redacao_Correcao	main	a6c664f750a2758fb38c8c4e129d8004a6d25b11	TIER_C	package.json	RUN	550	4bb89524280c4510	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:dougpenny/PSCustomQueriesPlugin	master	722b6e458cbc41e9ea39e519046888c87507eeee	TIER_A	LICENSE	RUN	1067	4cf0a8295a6aedc1	lib/license_family.sh		MIT	
+github.com:dougpenny/SwiftyPSCore	master	707ef623b88b0034cf77382b2d29ce5446d62e93	TIER_A	LICENSE	RUN	1088	13ddc6aff704d63a	lib/license_family.sh		MIT	
+github.com:edwyj/ddl-killer	main	b3fbc758252ee1edb2f97c430275a0bea10791e2	TIER_A	LICENSE	RUN	34020	d8a6cc31abc16b67	lib/license_family.sh		AGPL-3.0	
+github.com:elisaado/somtoday-api-docs	master	4975ae2a40c09c64a1f681c3f260c0fbd83b8ed0			NO-LADDER-PATH-IN-TREE						4 paths in tree, none on the ladder
+github.com:emorynlp/LLM-Grading	master	b37150e0191a8b7e686f9703693503644bdcff89			NO-LADDER-PATH-IN-TREE						5 paths in tree, none on the ladder
+github.com:eth-lre/MathTutorBench	main	6faed173ec2bef55cb899b2a3e0f93982f9cb176			NO-LADDER-PATH-IN-TREE						40 paths in tree, none on the ladder
+github.com:eth-lre/mathtutorbench	main	6faed173ec2bef55cb899b2a3e0f93982f9cb176			NO-LADDER-PATH-IN-TREE						40 paths in tree, none on the ladder
+github.com:eugeborzone/Auto_Grade_Guarani	main	35b9cda15da38a156b6cdbc22429a33dc4f46a9e			NO-LADDER-PATH-IN-TREE						5 paths in tree, none on the ladder
+github.com:explosion/spacy-models	master	ca6f473afda3c4943d3919d3e39406c1b3f48b85			NO-LADDER-PATH-IN-TREE						1212 paths in tree, none on the ladder
+github.com:fderyckel/ifitwala_ed	main	ee1d8c473e2a85b3a0af453576dd621392bff126	TIER_C	package.json	RUN	2512	b53a074f9aca22b6	NPM:json:license	GPL-3.0	GPL-3.0	SPDX-EXACT
+github.com:fderyckel/ifitwala_ed	main	ee1d8c473e2a85b3a0af453576dd621392bff126	TIER_C	pyproject.toml	RUN	1042	a6a64f9536640b66	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:gautamyadavs/AVLTree	master	987b77a58fdd4c0e3d0077e061af5452c00ebf87			NO-LADDER-PATH-IN-TREE						33 paths in tree, none on the ladder
+github.com:h9-tec/graduation-project-advisor	main	f38528b1b80666e268aed71f60685a9e7880b47a			NO-LADDER-PATH-IN-TREE						103 paths in tree, none on the ladder
+github.com:haanhtuandev/vgu-mcp	main	5ccdf354ae4b97f55af304145974d77b23933ac0			NO-LADDER-PATH-IN-TREE						35 paths in tree, none on the ladder
+github.com:hesham0-0nasser/tutor-lms-mcp	master	c92e5b9b4add474bc0d3fbdf622280095d7c6da0			NO-LADDER-PATH-IN-TREE						9 paths in tree, none on the ladder
+github.com:horaciohudson/corretor-redacao	main	34dac76bf46c43812cc496615ef1c42b95b0ae27			NO-LADDER-PATH-IN-TREE						74 paths in tree, none on the ladder
+github.com:idoforgod/Vibe-learning-AgenticWorkflow	main	8e3ef2e52a63123ce04eb730ad5e88e0a952f428			NO-LADDER-PATH-IN-TREE						128 paths in tree, none on the ladder
+github.com:invincible-summer/Next-Tutor-Agent					NO-REF						ls-remote found no HEAD
+github.com:jacksonrakena/gradekeeper	main	a3c9c09db1722cd0afd9a290acfb561cfb8ec9f3	TIER_C	package.json	RUN	1306	f93062098a0e72af	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:jadrianlg16/learning-tutor	main	afcd95d5b08dbc5d558cb213b668e76be2f35ad0	TIER_C	pyproject.toml	RUN	1723	91d13ca4dded8e6a	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:jagmarques/asqav-compliance	main	8b5af55236eb999831b720471e6b4816d2555325	TIER_A	LICENSE	RUN	4102	a34296bd4261c3a1	lib/license_family.sh		Elastic	
+github.com:jagmarques/asqav-compliance	main	8b5af55236eb999831b720471e6b4816d2555325	TIER_C	package.json	RUN	799	40bfd57d6dd61a36	NPM:json:license	Elastic-2.0		NOT-OSI
+github.com:jaltekruse/Free-Math	master	abaa2188a1f5e67a9672dca8bada46c07738e855	TIER_C	package.json	RUN	3437	b09575d3b41f70cc	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:jgabriel-sntx/Corretor-de-redacao-ENEM	main	2bbc89a3823f3bfdd71b71e7cf0a63a637a80821			NO-LADDER-PATH-IN-TREE						59 paths in tree, none on the ladder
+github.com:jude-miller-dev/Milky-institute-online	master	74827f56d16d0825fe43a4bea38ed55ec75f74dd			NO-LADDER-PATH-IN-TREE						786 paths in tree, none on the ladder
+github.com:karissafuller/project-nomad-macos	main	811da59452a857c292238a6060921181066e929a	TIER_A	LICENSE	RUN	1071	d9fe586be9881e27	lib/license_family.sh		MIT	
+github.com:karkarkins/BlackboardAssistantMCP	main	d5250cd577b815402fc5f749da8e3c89cff14cf8			NO-LADDER-PATH-IN-TREE						12 paths in tree, none on the ladder
+github.com:kaushal0494/UnifyingAITutorEvaluation	main	bbef521ddb875f2cc8a5ee798f4066965a7cfd8a			NO-LADDER-PATH-IN-TREE						37 paths in tree, none on the ladder
+github.com:kerntau/class-log-system	main	bb79f3815cbaaf9279fe45eca643a943fd32352b	TIER_C	package.json	RUN	379	e894ce038a7c71b7	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:kevinraj23/student-assistant-mcp-server	main	45cf1eee756991a79a86a988b8f63c335aee8e9e	TIER_C	pyproject.toml	RUN	371	b3b501c0ba5472c1	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:krahets/hello-algo	main	350f483801b2badb95180047aa82cadb825852a2	TIER_A	LICENSE	RUN	20849	1349a4b6148492b4	lib/license_family.sh		CC-BY-NC-SA-4.0	
+github.com:ldsalud/school-management-system	main	2ff8c8f5c25d8541e1e6dae7a2c05e76a85ef8b9			NO-LADDER-PATH-IN-TREE						1 paths in tree, none on the ladder
+github.com:linomck/moodle-mcp	main	acb304654ae60198783c38e11d34816a2fd85b6a	TIER_C	package.json	RUN	799	fd735282f4cc3825	NPM:json:license	MIT	MIT	SPDX-EXACT
+github.com:loyaniu/moodle-mcp	main	22cc56c7ce57789eeea08a1333145891d3a93da3	TIER_C	pyproject.toml	RUN	460	91aee2bb7d3dec19	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:ls1intum/Ares2	main	b5c2595128de52ab19f7cead115d94a567a522bb	TIER_A	LICENSE	RUN	1345	f8d43b8b441b9009	lib/license_family.sh		MIT	
+github.com:ls1intum/Ares2	main	b5c2595128de52ab19f7cead115d94a567a522bb	TIER_A	NOTICE	RUN	1079	819e9b5af29e0926	lib/license_family.sh		UNCLASSIFIED	
+github.com:ls1intum/phobos	main	94f9a774f0a872f3e183d850cf362c8d6b729723	TIER_A	LICENSE	RUN	1241	c55c1eca6785c261	lib/license_family.sh		MIT	
+github.com:ls1intum/phobos	main	94f9a774f0a872f3e183d850cf362c8d6b729723	TIER_A	NOTICE	RUN	1449	1ea927f180eb4f8d	lib/license_family.sh		UNCLASSIFIED	
+github.com:luffycodes/Tutorbot-Spock	main	fcec416443390ad4e8e88d816a68b49e23de0c7f			NO-LADDER-PATH-IN-TREE						17 paths in tree, none on the ladder
+github.com:mabdulre9/electrical-engineering	main	97377b98a203e2615fa54eeeebfbc17ca391f097			NO-LADDER-PATH-IN-TREE						1 paths in tree, none on the ladder
+github.com:mbzuai-oryx/ClimateGPT	main	041a5d8040a2863344cb32fd3d25617b88af980e	TIER_C	pyproject.toml	RUN	1020	069cf5b7de9860d5	PYPROJECT:toml:classifier	OSI Approved :: Apache Software License		NOT-SPDX-PROSE
+github.com:midudev/libros-programacion-gratis	main	5de6d9807dd24fa8c78955915b9efb3e1749f2f7	TIER_C	package.json	RUN	252	1af209bcc98ac3bf	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:minicoohei/ai-agent-camp	main	048ba4cfff8eccbffc18e39e61b6ce7b681cb1ff	TIER_C	package.json	RUN	1504	76e24e0c84a21da0	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:minicoohei/ai-agent-camp	main	048ba4cfff8eccbffc18e39e61b6ce7b681cb1ff	TIER_C	pyproject.toml	RUN	1835	298b18cf65eff035	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK	master	b99f7948785ad7c48171a7d8cfb58c6dbcb96701			NO-LADDER-PATH-IN-TREE						6801 paths in tree, none on the ladder
+github.com:mohamurshid/ElimuAnalytics	main	f7e9a3b75ad7cdb4ef891311bc0178ed4e02591c	TIER_C	pyproject.toml	RUN	927	8a91878d9cf89bac	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:nakafaai/nakafa.com	main	fd1bd609885f96e3c60c8f98f6ffe97d4360b399	TIER_A	LICENSE	RUN	7705	de3d940450615ad2	lib/license_family.sh		NONCOMMERCIAL-NOT-OSI	RESERVED: no permissive grant follows
+github.com:nakafaai/nakafa.com	main	fd1bd609885f96e3c60c8f98f6ffe97d4360b399	TIER_C	package.json	RUN	3765	10a6883a76f13b37	NPM:json:license	SEE LICENSE IN LICENSE		NOT-SPDX-PROSE
+github.com:neiltonsantana9-star/redacao	main	aeb4a5d74f39d163583168167df1f1e4cfa4d391	TIER_C	package.json	RUN	638	42956dfbbcd1f073	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:nubabe/webuntis-org	main	7c88a3a6ce0372ec4db33f930385660b85c92000	TIER_C	package.json	RUN	418	3add6aa746b2c27a	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:open-spaced-repetition/srs-benchmark	main	bd9110f791e5b37282c55a9aa8db35f68f0c4aa2	TIER_C	pyproject.toml	RUN	1401	c034ac4109e21c2b	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:open-spaced-repetition/srs-benchmark	main	bd9110f791e5b37282c55a9aa8db35f68f0c4aa2	TIER_C	setup.py	RUN	1617	6b6e1e86ab212063	SETUPPY:KEY-ABSENT			KEY-ABSENT
+github.com:openfresno/edgenuity-aeries-grade-passback					NO-REF						ls-remote found no HEAD
+github.com:photolensfocus/Llm-language-learning	main	97c2332dc4e1649acb9c760695690dc6c63ddca0			NO-LADDER-PATH-IN-TREE						1 paths in tree, none on the ladder
+github.com:plyght/canvas-mcp	master	f4d82996f6ed9ce06d42ff1c2c31b29dbb962e67	TIER_C	package.json	RUN	813	ec4fce40be30d4aa	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:pupilfirst/pupilfirst	master	001ec461da8042f94d31288931a434898fc29a2a	TIER_A	LICENSE	RUN	1684	bda0aa6d49f246d1	lib/license_family.sh		MIT	
+github.com:pupilfirst/pupilfirst	master	001ec461da8042f94d31288931a434898fc29a2a	TIER_C	package.json	RUN	2632	b2d8e05af0cbb856	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:qed42/ai-accessibility-checker	main	5716afc40307aafc86465e9d40f1c22b073f6489			NO-LADDER-PATH-IN-TREE						8 paths in tree, none on the ladder
+github.com:rachelproject/contentshell	master	1f3ca1f30d9878919549b0c62549984f5c00aa1a			NO-LADDER-PATH-IN-TREE						77 paths in tree, none on the ladder
+github.com:rachelproject/module-template	master	5bb5a38ff2982d443e09e92ab54efacce85429fa			NO-LADDER-PATH-IN-TREE						3 paths in tree, none on the ladder
+github.com:rajshah6/arXivisual	main	f827b1956b5b927b137ca181c6e3e960cd285ed7			NO-LADDER-PATH-IN-TREE						258 paths in tree, none on the ladder
+github.com:rhmatzeka/AppAbsensiSDN1Bintaro	main	8890b421104b319464a3ee1c20b209857c32b2e2	TIER_C	package.json	RUN	1073	ee2060ec008a250a	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:ruud0/aula-virtual-mcp	master	4a845521d47d8919e42ee8e4e88003de549a87b8			NO-LADDER-PATH-IN-TREE						4 paths in tree, none on the ladder
+github.com:seewoo5/KT	master	094611caa58531d20a425d7836dc29c3e68e09f2			NO-LADDER-PATH-IN-TREE						22 paths in tree, none on the ladder
+github.com:shimahikojin/google-classroom-mcp	main	2671965f7fa2795f81cd01fb3194b19487a97bd0	TIER_C	package.json	RUN	438	b63f3e558d19e6c1	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:slegroux/dandelion	main	1804eda0079685ea0a4839e3b34955ac4c8cb3f2	TIER_C	pyproject.toml	RUN	4256	567938b5235e7449	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:sonsoleslp/tna	main	a7638bfa90ddf85e752199a3a01f1598d8f62311	TIER_A	LICENSE	RUN	46	87f86bc64808fe9e	lib/license_family.sh		UNCLASSIFIED	
+github.com:sonsoleslp/tna	main	a7638bfa90ddf85e752199a3a01f1598d8f62311	TIER_A	LICENSE.md	RUN	1075	be3b36a3074f755b	lib/license_family.sh		MIT	
+github.com:sonsoleslp/tna	main	a7638bfa90ddf85e752199a3a01f1598d8f62311	TIER_C	DESCRIPTION	RUN	1471	e03469d7f2cb52ad	R-CRAN:DESCRIPTION:License	MIT + file LICENSE		NOT-SPDX-PROSE
+github.com:speedyapply/2026-AI-College-Jobs	main	a1d77eb79baa20f2c2b13bd400f613f8e57409f5			NO-LADDER-PATH-IN-TREE						22 paths in tree, none on the ladder
+github.com:tutornew/OpenTutor	main	41e769432aaff3bde2c93066cfb31e5092a4a7b3	TIER_C	package.json	RUN	1346	20e294f861069b4f	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:usenkovpro/deck	main	48728add062aa5a30fc2391eff3d1658c730ff0a	TIER_C	package.json	RUN	367	db15216684ea1ea4	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:victor934034/simulade	main	93b3570b7263fbe6600cc7e40eac383bc2e13f1c	TIER_C	package.json	RUN	760	377b129b85cc399e	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:vitorr2101/Projeto-Agente-IA-Educacional	main	977261a7142d9d752c812840a914d0c0e13b81ca			NO-LADDER-PATH-IN-TREE						22 paths in tree, none on the ladder
+github.com:vkumar04/canvas-mcp-lite	main	1bf1b0a55b6de9dd2322793569ab90d42580e956	TIER_C	pyproject.toml	RUN	686	57c54c40cd7e99ad	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+github.com:wantaekchoi/vc-verifier	main	1cf593a94ac384afc5d99d625e591839d733d8b9	TIER_C	package.json	RUN	810	9260f4e4995e07a3	NPM:KEY-ABSENT			KEY-ABSENT
+github.com:wenjing1170/llm_grader	main	d48b8210102763159a60ef70e3f32b1f27c4baa6			NO-LADDER-PATH-IN-TREE						51 paths in tree, none on the ladder
+github.com:xiaopengguo/ATKT	main	bd9bb240a0bde6d261a6091de17b68ccc8b2fc01			NO-LADDER-PATH-IN-TREE						75 paths in tree, none on the ladder
+github.com:yxonic/DTransformer	main	1dc459804911b3900ed23d9f6b1d7407d2e919a8	TIER_C	pyproject.toml	RUN	417	548581972d454b85	PYPROJECT:KEY-ABSENT			KEY-ABSENT
+gitlab.com:cderda/cargogetgraded	main	b87b8338776d01117e1c7093d36e1fc2787e9320			NO-LADDER-PATH-IN-TREE						85 paths in tree, none on the ladder

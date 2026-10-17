@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 261 — 2026-10-17 — **FIVE RECIPES FROM THIS PASS'S `27` RESOLVED ROWS, EACH NAMING ITS REPOSITORIES, ITS GRANTS AND THE ONE LICENCE FACT THAT DECIDES WHETHER IT CAN SHIP**
+
+⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 Every repository named below had its grant read first-hand this pass on an `ls-remote`-resolved ref — [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv).
+
+## 🆕 🟢 `P261-1` — the PowerSchool oversight trail a US district can be shown *(new, p261 — North America)*
+
+🔴 **The problem the `134` state bills create:** a district must show **human oversight** and must not let AI make high-stakes decisions about a student. That is an evidence requirement, and evidence lives in the SIS.
+
+| layer | repository | grant | why this one |
+|---|---|---|---|
+| SIS reach | [`dougpenny/PSCustomQueriesPlugin`](https://github.com/dougpenny/PSCustomQueriesPlugin) | 🟢 `MIT` *(`1 067` B, read first-hand)* | the plugin that exposes custom PowerSchool queries |
+| SIS client | [`dougpenny/SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) | 🟢 `MIT` *(`1 088` B)* | typed Swift client over the PowerSchool API |
+| the record | [`Apereo-…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 `ECL-2.0` *(`9 878` B)* | a Learning Record Warehouse: xAPI/Caliper in, queryable trail out |
+| the decision log | your own service | — | every AI suggestion written as an xAPI statement with the **human verdict attached** |
+
+🟢 **Wire it:** the plugin exposes the roster and grade surface; the Swift client reads it; every model suggestion and every teacher accept/reject becomes one xAPI statement in OpenLRW. The deliverable to the district is a **query**, not a dashboard: *"show me every AI-originated grade change and who approved it."*
+🔴 **The licence fact that decides it:** `ECL-2.0` is Apache-2.0 plus an educational-use patent clause — permissive, fine for a closed deliverable. 🔴 **Do not reach for [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) to validate the model: it is non-commercial and this is paid work.** `4`–`6` weeks.
+
+## 🆕 🟢 `P261-2` — the sovereign EU assessment stack, built only from public-sector permissive code *(new, p261 — EMEA)*
+
+🔴 **Annex III makes assessment and path-determination high-risk, so the stack has to be inspectable and the data has to stay in the jurisdiction.**
+
+| layer | repository | grant | provenance |
+|---|---|---|---|
+| school administration | [`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server) | 🟢 `BSD-3-Clause` *(`LICENSE` **and** `package.json`, agreeing)* | North Rhine-Westphalia's own server |
+| national register pattern | [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | 🟡 `EUPL-1.1` | Finnish National Agency for Education |
+| grading sandbox | [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) | 🟢 `MIT` | TUM |
+| supporting service | [`ls1intum/phobos`](https://github.com/ls1intum/phobos) | 🟢 `MIT` | TUM |
+
+🟢 **Wire it:** `SVWS-Server` holds the authoritative roster; `Ares2` runs student submissions in a sandbox and returns a deterministic result; the model writes feedback **on top of** that result and never replaces it; `koski`'s data model is the reference for what a national study-rights register expects on the way out.
+🔴 **The licence fact that decides it:** `EUPL-1.1` is copyleft with a compatibility list — 🟢 **keep `koski` as a reference model, not as a linked dependency, and the deliverable stays `BSD`/`MIT`.** 🔴 **And do not take [`LaurentSta/Oneduc`](https://github.com/LaurentSta/Oneduc) into this stack on the strength of its `composer.json`: the manifest says `MIT`, the shipped licence is `AGPL-3.0`, and its own README agrees with the licence.** `8`–`10` weeks.
+
+## 🆕 🟢 `P261-3` — the documentable adaptive-assessment engine for a Vietnamese or Korean deadline *(new, p261 — APAC)*
+
+🔴 **Vietnam's Law on AI names education high-risk with a `1 March 2027` compliance date; Korea's AI Basic Act has been in force since `22 January 2026`.** Both want a risk assessment and a disclosure, and neither can be satisfied by a prompt.
+
+| layer | repository | grant | what it supplies |
+|---|---|---|---|
+| ability estimation | [`bigdata-ustc/EduCAT`](https://github.com/bigdata-ustc/EduCAT) | 🟢 `MIT` *(`1 062` B)* | computerised adaptive testing — item selection with a stated criterion |
+| mastery model | [`bigdata-ustc/EduKTM`](https://github.com/bigdata-ustc/EduKTM) | 🟢 `Apache-2.0` *(`11 367` B)* | knowledge tracing |
+| diagnosis | [`bigdata-ustc/EduCDM`](https://github.com/bigdata-ustc/EduCDM) | 🟢 `Apache-2.0` | cognitive diagnosis: *which* skill failed, not just that one did |
+| item understanding | [`bigdata-ustc/EduNLP`](https://github.com/bigdata-ustc/EduNLP) | 🟢 `Apache-2.0` | representation of the items themselves |
+| delivery | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟢 `MIT` *(`1 684` B)* | a production LMS, India |
+
+🟢 **Wire it:** `EduNLP` embeds the item bank; `EduCDM` + `EduKTM` hold the learner state; `EduCAT` chooses the next item **from that state**; the LLM writes the explanation after the decision is made. 🟢 **The regulatory artefact falls out for free:** the selection criterion and the mastery estimate are code and parameters, so the disclosure is a document about a model rather than a claim about a prompt.
+🔴 **The licence fact that decides it:** all five are permissive, `Apache-2.0`/`MIT`. 🔴 **Route around [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms)** *(`OSL-3.0, AFL-3.0` — OpenMage's dual licence, a form most counsel will not have a position on)* **and [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com)**, whose own licence text says *"This is not an open-source license."* `10`–`12` weeks.
+
+## 🆕 🟢 `P261-4` — the LATAM governance layer over tools already in use *(new, p261 — LATAM)*
+
+🔴 **The measured gap is the brief: `87 %` of LATAM institutions use AI in at least one area, `26 %` have a formal AI strategy** *(UNESCO IESALC, `200` institutions, `19` countries)*. **Adoption is finished; governance has not started.** Brazil repeats it one level down — `53 %` of administrators using AI, `22 %` of schools with guidelines.
+
+| layer | repository | grant | role |
+|---|---|---|---|
+| evidence sink | [`Apereo-…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 `ECL-2.0` | every AI interaction as an xAPI statement |
+| transition analysis | [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 🟢 `MIT` *(read this pass — see `T261-R2`)* | what sequences of behaviour actually occur, as an R package a researcher can audit |
+| state compliance exemplar | `fauzcategui/moodle-sence` | 🟢 `GPL-3.0-or-later` *(read at `p260`)* | the Chilean **SENCE** reporting plugin — the shape of a state-audit obligation in the region |
+| equity cut | your own report | — | usage by socio-economic class: 🔴 **`75 %` vs `42 %` in Argentina** is the first question a ministry asks |
+
+🟢 **Wire it:** instrument the tools in use rather than replacing them; land everything in OpenLRW; use `tna` to produce the behavioural evidence a policy has to be written against; deliver the policy **plus** the equity cut. 🔵 **Sell it to the institutions UNESCO's regional Observatory names** — CAF, CENIA, CETIC.br, ECLAC, Tecnológico de Monterrey, ProFuturo, Fundación Ceibal — since the Observatory launched in Santiago on `14 April 2026` and those partners are its route to ministries. 🔴 **The supply-side gap, stated: no LATAM-authored repository entered this pass's `27` resolved rows**, so the region's own code is still underrepresented on this base. `6`–`8` weeks.
+
+## 🆕 🔴 `P261-5` — the due-diligence recipe this pass's own defects demand *(new, p261 — Global)*
+
+🔴 **Three traps were met in `27` rows, and all three would pass a conventional licence scan.** This recipe is the scan that catches them, and every step is a function on this base with controls.
+
+| step | what it catches | the row that proved it |
+|---|---|---|
+| 1. resolve the ref with `git ls-remote --symref` **before** probing any path | a repository whose default branch is not `main`/`master` answers `404` everywhere and looks grantless | [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS): `main` and `master` both `404`; `license.txt` on the resolved ref is `39 890` B |
+| 2. read the tree, then intersect it with the ladder | tells *"no licence file"* apart from *"no such path on this ref"* | `68` of `131` rows have **no** ladder path in the tree — a structural absence, not a probe failure |
+| 3. scope the reservation test to the subject's **section** *(`reservation_verdict_scoped()`)* | an aggregate licence file carrying a third party's *"All rights reserved."* | `nextSIS`: the phrase is EllisLab's, `700` lines below nextSIS's own `GPL-3.0` |
+| 4. read the manifest with its **ecosystem's** grammar *(`controlled_vocabulary()`)* | a specified value reported as unreadable prose | `OSI Approved :: Apache Software License`, `MIT + file LICENSE`, `SEE LICENSE IN LICENSE` — `3` of `11` declarations |
+| 5. refuse to grade a CRAN `LICENSE` as a licence *(`cran_parameter_sheet()`)* | the strongest tier holding a `46`-byte parameter sheet | [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna): `YEAR:` / `COPYRIGHT HOLDER:` and nothing else |
+| 6. when a filed text and a manifest disagree, **the filed text is operative** | an SBOM that reports the manifest | [`LaurentSta/Oneduc`](https://github.com/LaurentSta/Oneduc): `composer.json` `MIT`, shipped `AGPL-3.0`, README badge `AGPL` |
+
+🟢 **Wire it:** [`pass261-current-state-tier-run/current_state.py`](../compose/code/pass261-current-state-tier-run/current_state.py) + [`pass260-ecosystem-manifest-tier/manifest_tier.py`](../compose/code/pass260-ecosystem-manifest-tier/manifest_tier.py) + [`lib/license_family.sh`](../compose/code/lib/license_family.sh), driven by [`tier_run.py`](../compose/code/pass261-current-state-tier-run/tier_run.py). `166` + `118` controls, both suites inside `make hooks`.
+🔴 **The honest cost:** step 2 is one `ls-remote` plus one blobless clone per repository, which is why nobody runs it on a shortlist of `500`. 🟢 On a shortlist of `20` it is minutes, and it is the difference between quoting `MIT` and shipping `AGPL`. `1`–`2` days per shortlist.
+
 ## Pass 260 — 2026-10-17 — **FIVE RECIPES FROM WHAT THIS PASS MEASURED: A CHILEAN COMPLIANCE PLUGIN, A FULLY BOUNDED EMEA HOSTING DECISION, A PERMISSIVE LMS CONNECTOR TIER, AND A DUE-DILIGENCE RUN THAT NOW CHECKS WHETHER THE LADDER WAS EVEN EXECUTED**
 
 🔵 Every repository below had its grant read first-hand at `p260` or is marked *(carried)*. 🔵 **Evidence:** [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · [`p260-absence-audit`](../evidence/p260-absence-audit.2026-10-17-p260.tsv) · **instrument:** [`pass260-ecosystem-manifest-tier`](../compose/code/pass260-ecosystem-manifest-tier/)

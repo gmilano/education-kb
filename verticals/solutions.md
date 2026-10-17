@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 261 — 2026-10-17 — **NINE PLATFORM ROWS READ FIRST-HAND, AND ONE OF THEM DECLARES `MIT` IN ITS `composer.json` WHILE SHIPPING `AGPL-3.0` — WITH ITS OWN README AGREEING WITH THE LICENCE FILE AND NOT THE MANIFEST**
+
+⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv) · **instrument:** [`pass261-current-state-tier-run`](../compose/code/pass261-current-state-tier-run/)
+
+### 🟢 `T261-V1` — the nine platform and ERP rows
+
+| platform | grant, read first-hand | where | region | what it is, and what the grant costs |
+|---|---|---|---|---|
+| 🔴 [`LaurentSta/Oneduc`](https://github.com/LaurentSta/Oneduc) | 🔴 **`AGPL-3.0`** *(`LICENSE`, `34 539` B)* — **against `MIT` in `composer.json`** | both read; see `T261-V2` | EMEA *(France — *"inclusion numérique"*)* | a Laravel LMS with SCORM and role spaces. 🔴 **A studio that read the manifest would plan a closed deployment it is not licensed for** |
+| 🟢 [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | 🟢 **`EUPL-1.1`** | `LICENSE.txt` · `654` B | EMEA *(Finnish National Agency for Education)* | the **national** study-rights and completed-studies register. 🔵 `EUPL` is the EU's own copyleft and interoperates with `AGPL` by its compatibility list — the right licence to know before quoting a Nordic ministry |
+| 🟢 [`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server) | 🟢 **`BSD-3-Clause`** | `LICENSE` *(`1 611` B)* **and** `package.json`, agreeing | EMEA *(North Rhine-Westphalia, Germany)* | a **state school-administration server**. 🟢 Permissive, two channels, no contradiction: the cleanest public-sector row on this shelf |
+| 🟢 [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟢 **`MIT`** | `LICENSE` · `1 684` B | APAC *(India)* | a production LMS behind large skilling programmes |
+| 🟢 [`LMS-Laravel/LMS-Laravel`](https://github.com/LMS-Laravel/LMS-Laravel) | 🟢 **`MIT`** | `composer.json` *(declaration only — no filed text)* | Global *(no country named in the repository)* | a Laravel LMS skeleton |
+| 🔴 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) | 🟢 **`GPL-3.0`** — and the `All rights reserved` in its licence file is **CodeIgniter's**, not its own | `license.txt` · `39 890` B, an **aggregate of three grants** | Global | *"an open source student information system — designed for schools, by schools"*, self-described as early-stage. 🔴 See `T261-V3` |
+| 🟡 [`fderyckel/ifitwala_ed`](https://github.com/fderyckel/ifitwala_ed) | 🟡 **`GPL-3.0`** | `package.json` | Global | *"a unified Education Operational System"* on the Frappe stack — SIS, permissions and analytics in one backbone |
+| 🟡 [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) | 🟡 **`OSL-3.0, AFL-3.0`** | `composer.json` | APAC *(**Tertiary Courses**, Singapore)* | an LMS on **OpenMage LTS** *(the Magento 1 fork)* — and its grant is OpenMage's dual licence, 🔴 **not a licence most studio counsel will have an opinion on in advance** |
+| 🔴 [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) | 🔴 **`Nakafa Source Available License 1.0` — its own text says *"This is not an open-source license"*** | `LICENSE` *(`7 705` B)*, pointed at by `package.json`'s `SEE LICENSE IN LICENSE` | APAC *(PT NAKAFA TEKNO KREATIF, Indonesia)* | a public-source learning platform. 🔴 Inspect and learn, do not fork |
+
+### 🔴 `T261-V2` — three channels, two agreeing, and the one that disagrees is the one a dependency resolver reads
+
+🔴 **[`LaurentSta/Oneduc`](https://github.com/LaurentSta/Oneduc) declares `"license": "MIT"` in `composer.json` and ships a `34 539`-byte `AGPL-3.0` text in `LICENSE`.**
+
+🟢 **A third, independent channel settles it:** the repository's own README carries an `AGPL v3` badge linking to `gnu.org/licenses/agpl-3.0`. 🔵 So two channels say `AGPL-3.0` and the outlier is the manifest — which is exactly the direction `p260`'s `reconcile()` rule predicted when it ruled *the filed text is operative and the manifest is evidence about it*. **`p261` is the first corroboration of that rule from a channel outside the pair it was written on.**
+
+🔴 **The practical asymmetry is what matters on this shelf.** The `MIT` in `composer.json` is the value a dependency scanner, an SBOM generator and a licence-compliance bot will all report. **The `AGPL-3.0` is the one a court would read.**
+
+### 🔴 `T261-V3` — a licence file that is three licences, and the retraction it nearly caused
+
+🔴 **`nextSIS`'s `license.txt` bundles its own `GPL-3.0` with CodeIgniter's and Twitter Bootstrap's.** The `All rights reserved.` on line `703` is **EllisLab's**, `700` lines below nextSIS's own grant, and `p260`'s payload-wide reservation guard answered `RESERVED` for the whole file — i.e. it would have published an open-source SIS as proprietary.
+
+🟢 Fixed at the instrument, not in prose: [`reservation_verdict_scoped()`](../compose/code/pass261-current-state-tier-run/current_state.py) scopes the test to the subject's own section and answers **`THIRD-PARTY-RESERVATION`** when the phrase belongs to a bundled third party. 🔵 **The rule for this shelf, stated once:** *on an aggregate licence file, the SUBJECT's grant is the first licence section; every section below it is somebody else's and governs nothing about this row.*
+
+### 🔴 `T261-V4` — the standing finding this pass corroborated without trying
+
+🔴 **The education SIS and ERP layer still has no permissive option, and leg `3` of this pass's search went looking for one on purpose.** It returned `openSIS` *(GPL)*, `Centre SIS` *(renamed `Focus/SIS`, abandoned by its author)*, `OpenEduCat` *(LGPL-3.0)* and `ISISng` *(Apache, last touched around eight years ago)* — all four already on this shelf. 🟢 The nine rows above add `BSD-3-Clause` *(`SVWS-NRW`, a German state's own server)* and `MIT` *(`pupilfirst`, `LMS-Laravel`)* to the LMS tier, and 🔴 **not one permissive SIS**: `nextSIS` is `GPL-3.0`, `ifitwala_ed` is `GPL-3.0`, `koski` is `EUPL-1.1`.
+
 ## Pass 260 — 2026-10-17 — **THE `AGPL` ON THE TWO NEXTCLOUD PLATFORM ROWS IS `AGPL-3.0-or-later`, READ FROM THE REPOSITORY'S OWN `SPDX` DECLARATION — SO THE HOSTED-OFFER QUESTION `p259` SENT UPSTREAM IS ANSWERED HERE.** AND THE PLATFORM MATRIX NOW CARRIES A BOUND IN EVERY CELL IT CLAIMS ONE FOR
 
 🔵 **Evidence:** [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · **instrument:** [`pass260-ecosystem-manifest-tier`](../compose/code/pass260-ecosystem-manifest-tier/)

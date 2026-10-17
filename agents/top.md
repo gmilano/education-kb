@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 261 — 2026-10-17 — **`ACTION ZE` DISCHARGED AND NOT REFUTED AT `27` ROWS, `ACTION ZD` DISCHARGED AT A `28.4 %` NOISE RATE — AND `make hooks`, DECLARED UNRUNNABLE BY THREE PASSES, RAN, WAS RED, AND IS NOW GREEN**
+
+⏱️ **SEVENTH pass of `2026-10-17`** *(`p255`–`p260` before it)*. All `p261` probes ran `2026-10-17`. 🔵 **Evidence:** [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv) *(`156` rows, `131` slugs, every payload on an `ls-remote`-resolved ref)* · [`p261-coverage-matrix`](../evidence/p261-coverage-matrix.2026-10-17-p261.tsv) *(`6 681` `(path, row)` cells — the matrix `ZE` asked for)* · [`p261-current-state-index`](../evidence/p261-current-state-index.2026-10-17-p261.tsv) *(`183`)* · [`p261-transport-map`](../evidence/p261-transport-map.2026-10-17-p261.tsv) *(`20`)* · [`p261-trending`](../evidence/p261-trending.2026-10-17-p261.tsv) *(`24`)* · [`p261-websearch`](../evidence/p261-websearch.2026-10-17-p261.tsv) *(`8` legs)* · [`p261-gate`](../evidence/p261-gate.2026-10-17-p261.tsv) · **instrument:** [`pass261-current-state-tier-run`](../compose/code/pass261-current-state-tier-run/) *(`166` controls, in `make hooks`, `17` mutants)*
+
+### 🟢 `T261-A` — `ACTION ZE`, run in full: the ladder's RUN, measured per `(path, row)`
+
+`ZE` asked to *"run the ladder's EXISTING tiers over every carried row that has no grant, and record `tier_coverage()` per `(path, row)` rather than per path"*, with the falsifier *"fewer than `20` further rows resolve"*.
+
+| | |
+|---|---|
+| rows in the population *(`ZD`'s current-state harvest)* | `131` |
+| refs resolved by `git ls-remote --symref` | `127` · 🔴 `4` have **no ref at all** |
+| trees read first-hand *(blobless `--no-checkout` clone)* | `127`, `0` clone failures |
+| rows holding at least one ladder path **in their own tree** | `59` |
+| 🟢 `(path, row)` pairs **RUN** | 🟢 **`84`** |
+| 🟢 `(path, row)` pairs in-tree and **NOT RUN** | 🟢 **`0` — coverage is `100 %`** |
+| 🟢 rows that resolved a grant | 🟢 **`27`** |
+
+🟢 **`ACTION ZE` is DISCHARGED and NOT REFUTED.** `27 > 20`, and every one of the `27` came from a path that was **already on the ladder** — `TIER-NOT-RUN` ×`27`, `CHANNEL-ABSENT` ×`0`. 🔴 **Fourth independent pass in which the only cause a longer path list fixes measures zero.**
+
+### 🟢 `T261-B` — the five agent-shaped rows, read first-hand
+
+| row | grant, read first-hand | where it was read | region | what a studio buys |
+|---|---|---|---|---|
+| 🟢 [`linomck/moodle-mcp`](https://github.com/linomck/moodle-mcp) | 🟢 **`MIT`** | `package.json` *(`npm` declaration; no filed text — see `T261-F`)* | Global | another MCP connector to **Moodle**, TypeScript 5.7 |
+| 🟢 [`mbzuai-oryx/ClimateGPT`](https://github.com/mbzuai-oryx/ClimateGPT) | 🟢 **`Apache-2.0`** | `pyproject.toml` → **trove classifier** `OSI Approved :: Apache Software License` | EMEA *(MBZUAI, UAE)* | a domain-tuned LLM stack whose grant `p260`'s reader would have published as unreadable |
+| 🟡 [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 🟡 **`CC-BY-SA-4.0`** — a **content licence on code**, agreed by `LICENSE` *(`620` B)* and `pyproject.toml` | both channels | North America *(Stanford)* | research-skill agent packs; 🔴 `ShareAlike` on code is a copyleft a studio must not fold into a client deliverable without counsel |
+| 🟡 [`edwyj/ddl-killer`](https://github.com/edwyj/ddl-killer) | 🟡 **`AGPL-3.0`** *(`34 020` B)* | `LICENSE` | APAC — the README's own words are *"面向中国大学生"* | a timetable + deadline planning agent for Chinese university students; `AGPL` makes the hosted-offer question the first one to answer |
+| 🔴 [`jagmarques/asqav-compliance`](https://github.com/jagmarques/asqav-compliance) | 🔴 **`Elastic-2.0` — NOT OSI** | `LICENSE` *(`4 102` B)* **and** `package.json`, **and the README badge**, all three agreeing | Global | agent governance, audit trails, policy enforcement. 🔴 **Three channels agree and all three say source-available** — a managed-service offer is forbidden |
+
+### 🔴 `T261-C` — "NOT SPDX" is not the same as "prose", and it cost this base three readable grants
+
+`p260`'s `token_verdict()` answers `NOT-SPDX-PROSE` for any manifest token that is not an SPDX identifier and is long enough. 🔴 **Of the `11` Tier C declarations this pass read, THREE — `27 %` — are values their own ecosystem SPECIFIES, and all three were reported unreadable:**
+
+| row | field | what the field says | what it MEANS |
+|---|---|---|---|
+| [`mbzuai-oryx/ClimateGPT`](https://github.com/mbzuai-oryx/ClimateGPT) | `pyproject.toml` classifier | `OSI Approved :: Apache Software License` | 🟢 a **trove classifier** from a controlled list → `Apache-2.0` |
+| [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | `DESCRIPTION` | `MIT + file LICENSE` | 🟢 **CRAN's own licence grammar** → `MIT` |
+| [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) | `package.json` | `SEE LICENSE IN LICENSE` | 🟢 **npm's documented pointer form** → read the named file |
+
+🔵 **`p259`'s lesson was that one PATH can carry two KINDS of evidence. This is the same lesson one level further in: one FIELD can carry two GRAMMARS, and SPDX is only one of them.** The remedy is not a longer ladder — again — it is [`controlled_vocabulary()`](../compose/code/pass261-current-state-tier-run/current_state.py), a reader per grammar, with the three ecosystems' documented vocabularies pinned member by member.
+
+### 🔴 `T261-D` — `p260`'s anti-retraction guard produced a retraction, one pass after it was written
+
+🔴 **[`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS)'s `license.txt` is `39 890` B and its own table of contents says what it is:**
+
+```
+1. Overview
+2. nextSIS GNU General Public License Version 3
+3. CodeIgniter License
+4. Twitter Bootstrap License
+```
+
+The `All rights reserved.` is on **line `703`**, inside **EllisLab's CodeIgniter section** — a third party's bundled grant, `700` lines below nextSIS's own `GPL-3.0` — and CodeIgniter's bespoke text contains **neither** of the two permissive phrases `reservation_verdict()` looks for. 🔴 **So it answered `RESERVED` for a repository whose own licence is plainly `GPL-3.0`, and a gate that trusted it would publish an open-source SIS as proprietary.**
+
+🔵 **`p229`'s own `TIER_A` header already knew that an aggregate carries other projects' grants and that Tier A governs THIS repository's verdict.** The knowledge existed; the new guard did not consume it — `p251`'s *unwired knowledge*, for the second time in three passes, and this time **inside a guard written to be the wiring**.
+
+🟢 `reservation_verdict_scoped()` keys on `(payload, SECTION)` and adds the verdict that did not exist: **`THIRD-PARTY-RESERVATION`** — the phrase is in the payload, it is real, and it is not this repository's. The subject's span is pinned at lines `19`–`698`.
+
+🔴 **And the first version of that fix was right for the wrong reason.** `LICENSE CONTENTS`, sitting between two rule lines, carries the word *"LICENSE"* and no grant, so `subject_span()` took the table of contents as the subject's section and still returned the correct verdict. 🔵 `p260` named this exact failure one pass ago — *an accidentally-correct answer from an unsound method is worse than a wrong one* — so `NON_GRANT_HEADING` now excludes contents, overview, summary, index and preamble blocks by name, and the span is asserted at its exact line numbers.
+
+### 🟢 `T261-E` — `ACTION ZD`: a row's state is what the NEWEST section says, and `28.4 %` of a whole-file harvest is its own history
+
+`ZD` asked for a current-state harvester, falsified *"if fewer than `20 %` of a `NOASSERTION` harvest turns out to be already-answered history"*.
+
+| harvest over the same eight shelves | rows |
+|---|---|
+| `p260`'s method — an `ABSENT` cell **anywhere** in the file | `183` |
+| 🟢 `ZD`'s method — the row's **newest informative** cell says there is no grant | 🟢 **`131`** |
+| 🔴 already answered further up the file | 🔴 **`52` — `28.4 %`** |
+
+🟢 **`ZD` is DISCHARGED and NOT FALSIFIED**, and `ZE`'s population is honest **by construction** rather than by a gate run afterwards: `p260` needed a carried gate to drop `26` of its `36` resolutions, and `p261` needed to drop `0`.
+
+🔴 **The index also measures a population nobody has named: of `2 249` distinct slugs on these shelves, `1 813` carry a family, `131` are the grantless population above, and `305` have NEVER BEEN GRADED AT ALL** — no family cell, no absence cell, mentioned only in prose or in a pattern recipe. Registered as `ACTION ZG`.
+
+### 🔴 `T261-F` — the finding that saved the index, and it is this base's own prose
+
+🔴 **The first version of the pass-number reader was `\bP(?:ass)?\s*(\d{2,4})\b`, and it reported SEVEN of the eight shelves `NOT-MONOTONE`** — which, had it been believed, would have sunk the whole current-state index before it produced a row.
+
+🟢 **The shelves are fine.** Their headings carry **three different `P###` namespaces**: pass numbers *(`## Pass 260 — …`)*, **pattern ids** *(`## 🆕 🟢 \`P56\` — the licence gate…`)* and **finding ids** *(`## 🔴 \`P126-S\` — …`)*. A loose reader mixes all three into one ordering key and mis-orders silently. With the word `Pass` required, **all eight shelves verify `NEWEST-FIRST`** and the two independent orderings — file position and heading number — `AGREE` on every one.
+
+🔵 **`p150-identifier-collision` and `p151-identifier-spaces` were built for exactly this shape in repository identifiers.** It is here too, in this base's own section headings, and it is now a control.
+
 ## Pass 260 — 2026-10-17 — **`ACTION ZA` BUILT, RUN OVER `153` REPOSITORIES, AND REFUTED ON ITS OWN FALSIFIER: THE ECOSYSTEM TIER IT ASKED FOR RETURNED `0` ROWS `p259` DID NOT ALREADY HAVE.** AND THE SWEEP THAT REFUTED IT RESOLVED `36` SLUGS ANYWAY — `34` OF THEM FROM A TIER THAT WAS ALWAYS ON THE LADDER AND HAD NEVER BEEN **RUN**
 
 ⏱️ **SIXTH pass of `2026-10-17`** *(`p255`–`p259` before it)*. All `p260` probes ran `2026-10-17`. 🔵 **Evidence:** [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) *(`104` manifests, every one fetched on an `ls-remote`-resolved ref)* · [`p260-ecosystem-census`](../evidence/p260-ecosystem-census.2026-10-17-p260.tsv) *(`155` rows, `153` trees read first-hand)* · [`p260-carried-gate`](../evidence/p260-carried-gate.2026-10-17-p260.tsv) *(`36` resolutions gated before publication)* · [`p260-trending`](../evidence/p260-trending.2026-10-17-p260.tsv) *(`25`)* · [`p260-websearch`](../evidence/p260-websearch.2026-10-17-p260.tsv) *(`8` legs)* · **instrument:** [`pass260-ecosystem-manifest-tier`](../compose/code/pass260-ecosystem-manifest-tier/) *(`118` controls, in `make hooks`, `12` mutants run)*

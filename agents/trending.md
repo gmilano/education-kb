@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — Pass 261 — **`github.com/trending` IS READABLE, AND HAS BEEN ALL ALONG: IT ANSWERED `200` ON A TRANSPORT NOBODY HAD TRIED, AFTER TWO PASSES DECLARED THE AXIS UNREAD ON THE STRENGTH OF `curl` ALONE**
+
+🔵 **Append-only shelf.** This section is `p261`'s window; everything below it is history and is not rewritten.
+
+### 🟢 The axis that was declared unread is read
+
+🔴 `p259` and `p260` both recorded *"`github.com/trending` answered `403` over `curl`, DECLARED UNREAD, not empty"*. 🟢 **`p261` fetched the same URL through `WebFetch` and got the page.** 🔵 Evidence: [`p261-trending`](../evidence/p261-trending.2026-10-17-p261.tsv) · [`p261-transport-map`](../evidence/p261-transport-map.2026-10-17-p261.tsv)
+
+| `github.com/trending?since=weekly`, read `2026-10-17` | |
+|---|---|
+| repositories on the page | `11` |
+| 🔴 **education repositories** | 🔴 **`0`** |
+| head of the list | [`morluto/rea`](https://github.com/morluto/rea) *(`294 246`★ on the page)* |
+
+🟢 **And the numbers were checked rather than trusted.** `294 246`★ read off the page is implausible on its face, so the same slug was put through the `MCP` search endpoint, which answered **`294 249`★** — agreement to three stars on a repository gaining tens of thousands a week. 🔵 **The extraction is sound; the suspicion was the error.** The rest of the window — `artcraft`, `AnyPS5`, `diagram-design`, `hyperframes`, `mattpocock/skills`, `ghidra`, `context-mode`, `billion-context`, `claude-plugins-official`, `text-to-cad` — is agent tooling, reverse engineering and media, and **none of it is education**.
+
+🔴 **So the finding is not what trended. It is that this base spent two passes declaring an axis unreadable because one transport refused it** — `p258`'s own lesson, *a refusal from one endpoint was generalised to the whole channel*, applied this time to a whole **axis** rather than an endpoint.
+
+### 🔴 What the `403` wall actually is, measured endpoint by endpoint
+
+🔴 **`api.github.com/rate_limit` answers `200`.** Every other `api.github.com` path tried answers `403`: `/meta`, `/zen`, `/repos/{owner}/{repo}`, `/users/{owner}`, `/orgs/{owner}`, `/search/repositories`.
+
+🔴 **And the meter it serves says the budget is untouched:**
+
+```
+core   limit 15000  used 1  remaining 14999
+search limit    30  used 0  remaining    30
+```
+
+🟢 **`ACTION YT`'s rule — *infer the budget from refusals, never from a cached meter* — is now corroborated from the other direction.** The meter is readable, it says there is budget, and the data endpoints refuse anyway. 🔵 **A `403` on this base is a POLICY denial and has never been a budget**, which `p255` argued from the absence of billing and `p261` can now read off the meter itself.
+
+🟢 **Two refusals even name their own causes, in different words:**
+
+| transport · path | the refusal, verbatim |
+|---|---|
+| `gh api repos/moodle/moodle` | *"GitHub access to this repository is not enabled for this session. Use `add_repo` to request access."* |
+| `gh search repos topic:ai-tutor` | *"sessions are bound to their configured repositories. Use repository-scoped endpoints (`repos/{owner}/{repo}/…`)."* |
+
+🔵 **So the wall is keyed on `(transport, path, SCOPE)`** — `p258` keyed it on `(transport, endpoint)` — and the discriminator is whether a path is **repository-scoped** and whether that repository is attached to the session. `git ls-remote`, blobless `clone` and `raw.githubusercontent.com` answer because they are not that API; the `MCP` search endpoint answers because it carries its own authorisation.
+
+### 🟢 The discovery sweep: two axes this base had never run
+
+🔵 `topic:ai-tutor` has paid `0` rows for five consecutive passes, so `p261` ran two **new** axes through the `MCP` search endpoint instead.
+
+| axis | `total_count` | read | 🟢 publishable NEW rows |
+|---|---|---|---|
+| `topic:intelligent-tutoring-system pushed:>2026-06-01` | `24` | `15` | 🔴 **`0`** |
+| `topic:learning-analytics pushed:>2026-06-01` | `209` | `15` | 🟡 **`1`** |
+
+🔴 **`22` of the `28` candidates these axes and `github.com/trending` produced were ALREADY CARRIED**, and the gate that said so is this pass's own current-state index — one lookup per slug, no re-probing:
+
+| already carried, with the state the index returned | |
+|---|---|
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) `4 108`★ | `MIT` @ `p256` |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) `872`★ | `CC-BY-SA-4.0` @ `p245` |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) `135`★ | `CC0-1.0` @ `p212` |
+| [`openfun/ralph`](https://github.com/openfun/ralph) `51`★ | `MIT` @ `p256` |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) `49`★ | `MIT` @ `p213` |
+| [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) `37`★ | `Apache-2.0` @ `p212` |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) `24`★ | `Apache-2.0` @ `p215` |
+| [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) `21`★ | `Apache-2.0` @ `p212` |
+| [`Schlaflied/Plot-Ark`](https://github.com/Schlaflied/Plot-Ark) `13`★ | `AGPL-3.0` |
+| [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) `12`★ | `GPL-3.0` @ `p212` |
+| and `12` more, including every `≤4`★ tutoring prototype the `intelligent-tutoring-system` axis returned | |
+
+🟢 **One row changed state through the axis rather than the sweep:** [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) *(`13`★)* was carried as **grant unread since `p212`** and this pass read it as **`MIT`** — see [`repos/foundations.md`](../repos/foundations.md) `T261-R2`, because the reason it had been unreadable is worth more than the row.
+
+🟡 **The one genuinely new name:** [`kqc-real/streamlit`](https://github.com/kqc-real/streamlit) *(`6`★, `MC-Test`)* — a multilingual formative multiple-choice platform with item-quality review, Anki export and `arsnova.eu` export, developed mainly in German. 🔴 **Its grant was NOT read this pass** and it is recorded as a candidate, not as a row.
+
 ## 2026-10-17 — Pass 260 — **THE DISCOVERY AXIS RETURNED `25` REPOSITORIES AND `24` OF THEM HAVE `≤7`★.** THE WINDOW'S MOVEMENT IS AGAIN NOT A NEW AGENT — IT IS `10` CARRIED ROWS THAT STOPPED BEING UNREADABLE, AND THREE OF THEM WERE NEVER UNREADABLE AT ALL
 
 🔵 **Append-only shelf.** This section is `p260`'s window; everything below it is history and is not rewritten.

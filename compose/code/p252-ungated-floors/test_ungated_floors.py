@@ -59,8 +59,21 @@ FLOORS = uf.read_floors()
 # pass, and this pin went red again the moment the step was wired.  Third consecutive pass
 # where the census caught the new instrument before any shelf row was typed; the `ungated`
 # figure stays at 181 because the suite arrived already inside `make hooks`.
-chk("python test files on disk", len(ROWS), 210)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 29)
+# 🔴 p261: 210 -> 212 and 29 -> 31, and the TWO-step jump is the finding of the pass.
+# `pass260-ecosystem-manifest-tier` was written and wired into `make hooks` at p260 and
+# this pin was NOT moved, so `gate-offline` has been RED since that commit — exactly the
+# behaviour the note above calls "the gate working".  🔴 Nobody saw it, because p251,
+# p252 and p260 all recorded `make` as not runnable from their session and so never ran
+# the gate they were extending.  p261 ran it: `make hooks` executes fine from a cloned
+# checkout, and it exited `2` at this suite with `got 211 / want 210`.
+# 🔵 The lesson is not about the pin.  Three passes declared a gap ("`make hooks` was NOT
+# runnable") that was a property of one session and inherited it as a property of the
+# base — p254's *the base inherits its own conclusions about what is impossible*, with
+# the consequence that the standing gate was red for a full pass and read as unknown.
+# p261 itself adds `pass261-current-state-tier-run` (+1 file, +1 gated), which is why
+# both literals move by two here and `ungated` stays at 181: both suites arrived gated.
+chk("python test files on disk", len(ROWS), 212)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 31)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",
