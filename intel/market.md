@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 262 — 2026-10-17 — **THREE RESEARCH FIRMS, THREE INCOMPATIBLE `2026` MARKET FIGURES, AND NOT ONE OF THEM VERIFIABLE FROM THIS SESSION.** THE REGIONAL PICTURE IS THE PART THAT SURVIVES
+
+⏱️ **EIGHTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p262-websearch`](../evidence/p262-websearch.2026-10-17-p262.tsv) *(`8` legs, `54` facts offered)* · [`p262-transport-map`](../evidence/p262-transport-map.2026-10-17-p262.tsv) *(`18` host × transport probes)*.
+
+### 🔴 `P262-M1` — the market-size axis, and why this page still publishes no new measurement
+
+`p261` recorded that *"`0` of `13` facts through the gate was a market size"*. 🟢 **This pass's leg `4` returned three, and they do not agree:**
+
+| firm | `2026` size | terminal | CAGR | first-hand? |
+|---|---|---|---|---|
+| Precedence Research | `USD 9.58` B | `USD 136.79` B *(2035)* | `34.52 %` | 🔴 **NO** |
+| Grand View Research | `USD 11.4` B | `USD 57.2` B *(2033)* | `25.9 %` | 🔴 **NO** |
+| HolonIQ *(via a vendor blog)* | `USD 12.3` B *(by 2026)* | — | `36 %` since 2022 | 🔴 **NO** |
+
+🔴 **The spread on the SAME year is `9.58`–`12.3` B — a `28 %` disagreement — and the terminal values differ by `2.4×` on horizons seven years apart.** 🔵 **These are not three estimates of one quantity; they are three different quantities wearing one name**, and a studio quoting any single one in a client deck is quoting a market definition it has not read.
+
+🔴 **None could be verified.** `precedenceresearch.com` and `grandviewresearch.com` answer `connect_rejected — "gateway answered 403 to CONNECT"` on `curl` and `getaddrinfo ENOTFOUND` on `WebFetch`. 🟢 **So the figures are recorded as REPORTED and the disagreement is recorded as the finding** — which is more useful than any one of them, and is the honest state.
+
+🟡 **The one structural claim the legs agree on**, and it is a regional one: **North America holds the largest share at `36 %`, and APAC is the fastest-growing region at `35.3 %` CAGR.** 🔴 Also REPORTED, not confirmed.
+
+### 🟢 `P262-M2` — the adoption measurements, which are better sourced than the market sizes
+
+| region | measurement | source shape | first-hand? |
+|---|---|---|---|
+| **LATAM** | `200` institutions across `19` countries: **`87 %`** use AI in ≥1 area, **`74 %`** in teaching and learning, 🔴 **only `26 %` hold a formal AI strategy** | UNESCO IESALC institutional survey | 🔴 NO |
+| **LATAM** | private non-profit `84 %` · public `68 %` · private for-profit `52 %` | same | 🔴 NO |
+| **LATAM** | TALIS 2024 secondary teachers using AI: **BR `56 %` · CL `55 %` · CO `53 %` · CR `52 %`** vs **OECD `36 %`** | OECD TALIS, via UNESCO | 🔴 NO |
+| **LATAM** | Uruguay *(Ceibal)*: **`75 %`** of public-school teachers, 2026 | national programme | 🔴 NO |
+| **North America** | **`60 %`** of US K-12 teachers used AI in 2024-25; **`32 %`** weekly | market aggregator | 🔴 NO |
+| **APAC** | public support for banning AI in schools is **weaker** across Asia than support for restricting children's social media; **AU/NZ are the exception** | Ipsos Education Monitor 2026 | 🔴 NO |
+
+🔵 **The LATAM row is the strongest-sourced block on this page and it points the same way twice:** adoption is **high** and governance is **absent**. 🔴 **`87 %` using AI against `26 %` holding a strategy is a `61`-point governance deficit**, and it is the clearest commercial opening any region on this page presents.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The regulatory surface is now concrete enough to build against.** `134` AI-in-education bills across `31` states this session; `CA AB 1159` bars student data from training models; `ID SB 1227` mandates privacy protections; **Oklahoma and Maryland require human oversight and bar AI from high-stakes decisions about students**. `H.R. 8747` *(K-12 AI Literacy and Readiness Act of 2026)* advanced in markup on **21 Jul 2026**. 🔴 All REPORTED, not confirmed.
+
+🟡 **The opportunity is the human-oversight seam.** OK and MD have written into law the exact thing [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) touches — an automated judgement about a student. 🟢 **And that repository turns out to HAVE a grant** *(academic / not-for-profit, commercial licence via U. Chicago's Polsky Center)*, which makes an early-warning engagement a **procurement conversation rather than a rebuild**.
+
+🔴 **The counter-signal is a hard one:** NYC runs a one-year moratorium on student-facing AI through grade `8`, and Katy ISD bans generative chatbots for K-6. **A K-6 student-facing product has a shrinking addressable market in this region**; the staff-facing and oversight-facing products do not.
+
+### EMEA
+
+🔴 **THE DATE MOVED, AND IT IS THE MOST COMMERCIALLY IMPORTANT FACT THIS PASS CARRIES.** The Digital Omnibus on AI received final Council green light on **29 Jun 2026**, and the Annex III high-risk application date — which covers admissions, grading and learning-path systems — is now **2 Dec 2027**, not 2 Aug 2026. 🔴 **REPORTED, NOT CONFIRMED: `eur-lex` is unreachable on both transports** *(see `P262-M3`)*, and this base has recorded secondary channels disagreeing on EU dates **three ways** before.
+
+🟢 **Already in force and not moved:** the prohibition on **emotion recognition in education** *(since 2 Feb 2025)* and the **Article 4 AI-literacy duty** *(since 2 Feb 2025, no longer pinned to a "sufficient" level)*.
+
+🟡 **The opportunity is the eighteen-month window.** If the date is right, a high-risk education system has until **Dec 2027** — and the conformity work *(risk management, data governance, logging, human oversight, technical documentation)* is the engagement, not the model. 🟢 **`OpenOlat` is the only `Apache-2.0` LMS in the surveyed tier** and EMEA-origin *(Switzerland)*, which makes it the natural substrate for a sovereign, conformity-documented build.
+
+### APAC
+
+🟢 **This is the region where education is NAMED in statute, and that is new.** **Vietnam's Law on AI took effect March 2026 and lists EDUCATION as a high-risk sector**, explicitly covering **automated assessment and behavioural monitoring**, with a six-month grace period for systems already running before Aug 2026. **South Korea's AI Basic Act has been in force since 22 Jan 2026** with high-impact-system obligations. Japan promotes without penalties; Singapore, India and Australia rely on voluntary guidance plus sector and data rules. 🔴 All REPORTED, not confirmed.
+
+🟡 **The opportunity is that APAC is the fastest-growing region `(35.3 %)` and the most legally fragmented**, so the asset is not one product but a **policy-parameterised** one: the same assessment engine with per-jurisdiction gates. 🔴 **And the obstacle is named:** a Vietnamese or Korean deployment must answer the automated-assessment question *before* the pilot, not after.
+
+🟡 Carried, still unmoved: **India's Class-`3` AI mandate and China's *"AI Plus Education"* annual-hours figure remain REPORTED, NOT CONFIRMED**, with the `6`-vs-`8` hour disagreement standing for a **fifth** pass.
+
+### LATAM
+
+🟢 **The best-evidenced regional block on this page, and the clearest opening.** `87 %` of `200` institutions across `19` countries use AI in at least one area; `74 %` in teaching and learning; **`26 %` have a formal AI strategy**. Teacher adoption runs well above the OECD average *(BR `56 %`, CL `55 %`, CO `53 %`, CR `52 %` vs `36 %`)*, and Uruguay's Ceibal reports `75 %` of public-school teachers.
+
+🟢 **Institutional anchors exist and are named:** UNESCO **IESALC** *(the survey's author)* and the **UNESCO Observatory on Artificial Intelligence in Education for Latin America and the Caribbean**, launched **14 Apr 2026 in Santiago, Chile**. 🔴 REPORTED, not confirmed.
+
+🟡 **The opportunity is governance-as-product, not tooling.** The `61`-point gap between use and strategy is a demand for **policy frameworks, AI-use audits, academic-integrity instruments and staff literacy programmes** — delivery work a studio can start without any new platform. 🟢 The adoption split *(private non-profit `84 %` / public `68 %` / for-profit `52 %`)* says where the first buyers are.
+
+🔴 **The supply gap is unchanged and is stated again: not one of the `10` platforms in the surveyed tier originates in LATAM**, and no standards-native row on these shelves does either — a **seventh** consecutive pass.
+
+### Global
+
+🔴 **`0` new market measurements were made.** `54` facts were offered across `8` legs; **`0` repositories passed the carried gate** and **`0` market figures were verifiable first-hand**.
+
+🟡 **The one global commercial fact this pass can state from first-hand reads** is a licence fact, not a market one: **of the `10` self-hostable education platforms surveyed, `0` are MIT and exactly `1` is Apache-2.0.** 🔵 **The copyleft is in the platform layer**, so a studio's permissive freedom lives in the layer it ADDS. That is true in every region and it governs every engagement on this page.
+
+### 🔴 `P262-M3` — why no figure on this page is first-hand, stated as a measurement
+
+🔴 **This session can read GitHub payloads and nothing else.** Measured across `18` host × transport probes:
+
+| transport | GitHub | every other host probed |
+|---|---|---|
+| `curl` | 🟢 `raw` + `git` work *(`403` on HTML)* | 🔴 `000` — *"gateway answered 403 to CONNECT (policy denial or upstream failure)"* |
+| `WebFetch` | 🟢 `200`, including blob views | 🔴 *"getaddrinfo ENOTFOUND"* |
+
+🟢 **This DISCHARGES the cheap-gap `p261` registered** — `WebFetch` was the untried transport against `eur-lex`, it has now been tried, and it fails at DNS. 🔴 **The axis is closed on both transports for different reasons, and the refusal is not specific to `eur-lex`:** `precedenceresearch`, `grandviewresearch`, `iesalc.unesco.org`, `unesco.org`, `multistate.us`, `lw.com`, `ipsos.com` and `dig.watch` all answer identically. 🔵 **Eight passes of "eur-lex was not probed" were describing a general property of this session's egress, not a property of that host.**
+
 ## Pass 261 — 2026-10-17 — **`8` SEARCH LEGS, `54` FACTS OFFERED, `13` NEW — THE FIRST NON-ZERO EXTERNAL HARVEST IN FOUR PASSES, AND EVERY NEW FACT IS REGIONAL REGULATION OR MEASURED ADOPTION RATHER THAN A MARKET SIZE**
 
 ⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p261-websearch`](../evidence/p261-websearch.2026-10-17-p261.tsv) *(`8` legs, one global set + one leg per region)*

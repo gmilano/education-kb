@@ -1,0 +1,18 @@
+host	transport	result	cause_in_the_tools_own_words	meaning
+raw.githubusercontent.com	curl	200	-	🟢 payload reads work; this is how all 71 p262 payloads were read
+github.com	git ls-remote --symref	0	-	🟢 ref resolution works; 39 of 39 slugs resolved
+github.com	git clone --filter=blob:none	0	-	🟢 tree reads work; 39 of 39 trees read
+github.com	WebFetch	200	-	🟢 HTML pages readable (Project-NOMAD repo page and its LICENSE blob both read)
+github.com	curl	403	-	🔴 HTML pages refused on curl while the SAME host serves git and raw
+eur-lex.europa.eu	curl	000	gateway answered 403 to CONNECT (policy denial or upstream failure)	🔴 EIGHTH pass unprobed — and now with a cause
+eur-lex.europa.eu	WebFetch	ENOTFOUND	getaddrinfo ENOTFOUND eur-lex.europa.eu	🔴 ACTION from p261 DISCHARGED: WebFetch was the untried transport and it does NOT reach this host either. The axis is closed on both, for DIFFERENT reasons
+www.precedenceresearch.com	curl	000	gateway answered 403 to CONNECT (policy denial or upstream failure)	🔴 market figure unverifiable
+www.precedenceresearch.com	WebFetch	ENOTFOUND	getaddrinfo ENOTFOUND www.precedenceresearch.com	🔴 market figure unverifiable on both transports
+www.grandviewresearch.com	curl	000	gateway answered 403 to CONNECT (policy denial or upstream failure)	🔴 market figure unverifiable
+www.iesalc.unesco.org	curl	000	gateway answered 403 to CONNECT (policy denial or upstream failure)	🔴 LATAM primary unverifiable
+www.iesalc.unesco.org	WebFetch	ENOTFOUND	getaddrinfo ENOTFOUND www.iesalc.unesco.org	🔴 LATAM primary unverifiable on both transports
+www.unesco.org	WebFetch	ENOTFOUND	getaddrinfo ENOTFOUND www.unesco.org	🔴 LATAM primary unverifiable
+www.multistate.us	curl	000	gateway answered 403 to CONNECT (policy denial or upstream failure)	🔴 North America regulatory source unverifiable
+www.lw.com	curl	000	gateway answered 403 to CONNECT (policy denial or upstream failure)	🔴 APAC regulatory source unverifiable
+www.ipsos.com	curl	000	gateway answered 403 to CONNECT (policy denial or upstream failure)	🔴 APAC survey source unverifiable
+dig.watch	curl	000	gateway answered 403 to CONNECT (policy denial or upstream failure)	🔴 EMEA regulatory source unverifiable

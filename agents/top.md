@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 262 — 2026-10-17 — **`ACTION ZI` DISCHARGED AND NOT REFUTED: `nextSIS` IS A CLASS, AND `p261`'s SCOPED GUARD CANNOT SEE THE SECOND MEMBER.** PLUS: THE HARVESTER THIS PASS WROTE WOULD HAVE RE-ASSERTED A CLAIM THIS BASE REFUTED THIRTEEN PASSES AGO
+
+⏱️ **EIGHTH pass of `2026-10-17`** *(`p255`–`p261` before it)*. All `p262` probes ran `2026-10-17`. 🔵 **Evidence:** [`p262-reservation-audit`](../evidence/p262-reservation-audit.2026-10-17-p262.tsv) *(`71` payloads, `39` slugs, every one on an `ls-remote`-resolved ref)* · [`p262-grade-class`](../evidence/p262-grade-class.2026-10-17-p262.tsv) *(`87` cells, three classes)* · [`p262-transport-map`](../evidence/p262-transport-map.2026-10-17-p262.tsv) *(`18`)* · [`p262-websearch`](../evidence/p262-websearch.2026-10-17-p262.tsv) *(`8` legs)* · **instrument:** [`pass262-scoped-reservation-audit`](../compose/code/pass262-scoped-reservation-audit/) *(`63` controls, in `make hooks`, `20` mutants)*
+
+### 🟢 `T262-A` — `ACTION ZI`, run in full
+
+`ZI` asked to *"re-run `p260`'s `reservation_verdict()` over every payload this base has ever graded as `RESERVED` or proprietary, with the SCOPED guard"*, falsified *"if no published retraction turns out to be third-party — in which case `nextSIS` is one repository's aggregate and not a class."*
+
+| | |
+|---|---|
+| cells harvested across `9` shelves | `87` |
+| rows in the population *(`RESTRICTIVE-GRADE`)* | `73` cells · **`39` distinct slugs** |
+| payloads read first-hand on resolved refs | **`71`** |
+| 🟢 `NO-REF` · `NO-TREE` · `NO-PAYLOAD` · `FETCH-FAIL` | 🟢 `0` · `0` · `0` · `0` — **coverage `100 %`** |
+| 🟢 verdicts that CHANGED against `p261`'s guard | 🟢 **`2`** |
+
+🟢 **`ACTION ZI` is DISCHARGED and NOT REFUTED.** A second third-party reservation exists. 🔴 **But it is not an aggregate, and that is the finding** — `p261` keyed its fix on `(payload, SECTION)`, and the second member has no section to scope to.
+
+### 🔴 `T262-B` — the licence STEWARD's reservation, a class the scoped guard is structurally blind to
+
+🔴 **[`sdv-dev/SDV`](https://github.com/sdv-dev/SDV)'s `4 818` B `LICENSE` reserves on line `34`, and the reserving party is `MariaDB Corporation Ab`:**
+
+```
+License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
+"Business Source License" is a trademark of MariaDB Corporation Ab.
+```
+
+🔵 **MariaDB is the steward of the BUSL FORM.** It is reserving rights in the **licence document**, not in SDV. DataCebo, Inc. is the Licensor named at line `5` and appears nowhere in that sentence.
+
+| what the guard did | why |
+|---|---|
+| `aggregate_sections()` returned `[]` | a steward notice is a **SENTENCE**, not a rule-delimited section |
+| `subject_span()` returned the whole file | with no sections there is nothing to scope to |
+| `reservation_verdict_scoped()` answered `RESERVED` | the phrase is in the span, and BUSL contains neither permissive phrase the guard knows |
+
+🔴 **The conclusion is right — BUSL-1.1 is not OSI — and the method that produced it is unsound.** `p260` named exactly this failure (*an accidentally-correct answer from an unsound method is worse than a wrong one*), `p261` repeated it, and this is the **third occurrence in three passes**. 🔴 **The notice is in every copy of the BUSL form, including permissive projects that merely vendor a BUSL dependency's text** — so the next false retraction of this class is a question of which payload arrives first, not whether one will.
+
+🟢 `STEWARD-RESERVATION` is the verdict that did not exist, and `KNOWN_STEWARDS` is named member by member rather than inferred, so a tenth form licence fails a control until its payload is read.
+
+### 🔴 `T262-C` — a grant test made of two literal phrases called a REAL GRANT a refusal
+
+🔴 **[`dssg/student-early-warning`](https://github.com/dssg/student-early-warning)** reserves on line `3` and **grants on line `5`**:
+
+> *"Copyright © 2018. The University of Chicago ("Chicago"). **All Rights Reserved.** […] **Permission to use, copy, modify, and distribute this software** […] for academic research or other not-for-profit scholarly purposes […] **is hereby granted**"*
+
+🔴 `p261`'s permissive test is two literals — BSD's *"Redistribution and use in source and binary forms"* and MIT's *"Permission is hereby granted, **free of charge**"*. This payload is the **X11/academic variant**, which omits *"free of charge"* precisely because the consideration is a **field of use**, not a fee. The guard saw a reservation and no grant.
+
+🔵 **`p257` already found that the grant classifier cannot tell `Apache-2.0` from a non-commercial academic licence. This is the same family one layer in**, and the remedy is the same shape: `CONDITIONAL-GRANT` keeps two questions apart that a single `RESERVED` conflates — **there IS a grant** *(true)* and **a studio may ship it** *(false)*.
+
+🟡 **This also corrects the REASON this base published.** `intel/open-gaps.md` l.`8727` grades the row *"click-through terms of use"*. The click-through is the first line; the operative text is a **University of Chicago non-commercial academic grant with a named commercial-licensing contact at the Polsky Center**. The verdict *(not OSI)* survives; the reason did not.
+
+### 🔴 `T262-D` — the harvester this pass wrote would have RE-ASSERTED a claim this base refuted at `p249`
+
+🔴 **[`twentyhq/twenty`](https://github.com/twentyhq/twenty) appears at [`intel/trends.md`](../intel/trends.md) l.`575` as `BUSL-1.1, "source-available, not OSI"`** — and that cell sits in a column headed ***"what the secondary source said"***, immediately beside the payload reading that refutes it. **`p249` corrected that row to `AGPL-3.0` thirteen passes ago.**
+
+🔴 **This pass's first-cut harvester read it as a live verdict.** Publishing it would have retracted a correct correction — the single worst outcome an audit of published verdicts can produce, and it would have been produced *by the audit registered to prevent exactly this kind of error*.
+
+🔵 **`ACTION ZD` taught that a row's state is what the NEWEST section says. `p262` adds: it is also not what the row QUOTES** — and the discriminator is the **column header**, which costs one lookup. `cell_role()` reads it; `3` of `87` cells are `QUOTED-CLAIM`.
+
+🟢 **Confirmed independently, first-hand, this pass:** `twenty`'s `39 965` B `LICENSE` is **AGPLv3 plus an AGPLv3 §7 Additional Permission** *(the "Twenty Application Exception")*, with `/* @license Enterprise */` files under a commercial licence and several `MIT` subpackages. 🟢 **`0` occurrences of `"Business Source"` in the entire tree.** A second channel agrees: the project went `MIT` → `AGPL`, never BUSL.
+
+### 🟡 `T262-E` — the three classes a restrictive token in a grant cell can belong to
+
+| class | cells | what it means | the member that made the class necessary |
+|---|---|---|---|
+| 🔴 **`RESTRICTIVE-GRADE`** | `73` | the token IS this row's grade | [`jagmarques/asqav-compliance`](https://github.com/jagmarques/asqav-compliance) — `Elastic-2.0`, NOT OSI |
+| 🟡 **`SCOPE-NOTE`** | `11` | the cell LEADS with a usable family; the token is advice, a second component or a downstream warning | [`nvaccess/nvda`](https://github.com/nvaccess/nvda) — *"`GPL-2.0` … do not link into **proprietary** code"*. The word grades the **caller**, not the row |
+| 🔴 **`QUOTED-CLAIM`** | `3` | the column holds a claim under test | [`twentyhq/twenty`](https://github.com/twentyhq/twenty), above |
+
+🔴 **This pass's first-cut harvester gave all `87` cells the first class.**
+
+### 🔴 `T262-F` — three prefix collisions, and the third one is the worst this base has met
+
+| collision | the two readings | what it cost |
+|---|---|---|
+| `CC-BY` ⊂ `CC-BY-NC-SA` | attribution-only vs **non-commercial** | [`anaistack/cefr-asag-corpus`](https://github.com/anaistack/cefr-asag-corpus) filed as usable |
+| 🔴 **`Unlicense` ⊂ `unlicensed`** | 🔴 **public-domain dedication vs NO GRANT AT ALL — opposites** | [`barneslardo/sis-demo`](https://github.com/barneslardo/sis-demo) and **four others dropped out of the population entirely** |
+| `MIT` ⊂ `MITigation` | a family vs an English word | caught before it cost anything |
+
+🔵 **[`p251-prefix-collision`](../compose/code/p251-prefix-collision/) exists for this shape in repository identifiers *(the `maia` class)* and `p261` met it in heading namespaces. This is its THIRD appearance and its first in LICENCE NAMES.** 🟢 The remedy has been the same all three times: match the **whole token**, never its opening. `FAMILY_TOKEN` requires a separator before any suffix, and the CC axes are asked of [`pass258-content-licence-family`](../compose/code/pass258-content-licence-family/) rather than re-implemented.
+
+### 🔴 `T262-G` — characters are not bytes, and it was the INSTRUMENT that was wrong
+
+🔴 Two shelf cells disagreed with this pass's first sweep — [`anaistack/cefr-asag-corpus`](https://github.com/anaistack/cefr-asag-corpus) *(`20 863` B published, `20 859` measured)* and [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) *(`57 174` B published, `55 028` measured)*. 🟢 **Both published figures are correct.** The sweep reported `len(payload.decode())` — **characters** — and the deltas are exactly the multi-byte characters, `4` and `2 146`.
+
+🔴 **Across the full run, `43` of `71` payloads — `60.6 %` — carry a non-zero byte/character delta.** This was never a two-cell problem; it would have mis-stated **most sizes this pass published**.
+
+🔵 **`p261`'s lesson was *disbelieve the instrument before disbelieving the shelves*, and it applies to an instrument written in the same hour as hard as to an inherited one.** No correction was published off those two deltas.
+
+### 🟢 `T262-H` — the `l.703` coincidence is REAL, and is recorded so a later pass does not "fix" it
+
+🔴 Two unrelated rows on these shelves cite a reservation at **line `703`**: [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS)'s EllisLab notice in a `39 890` B `license.txt`, and [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS)'s *"proprietary software … All rights reserved"* in a `57 174` B `README.md`. 🟢 **Both re-read first-hand this pass; both are at line `703`.** Different repositories, different files, different grants. 🔵 It looks exactly like a copied figure and it is not one.
+
+### 🔴 `T262-I` — the agent supply channel, measured again: `0` new education agents from `8` legs
+
+🔴 **Leg `1` (`top open source AI agents education 2026 github MIT`) returned SEVEN agents and NOT ONE of them is an education agent** — OpenClaw, OpenHands, SWE-agent, CrewAI, OpenCode, Langflow, Hermes are general-purpose or coding tools. 🔵 **The leg's own summary says so in its own words:** *"The search didn't return anything specific to education."*
+
+🔴 **Leg `2`'s one education-shaped name is [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/Project-NOMAD)** *(`40.4`k★, offline-first education server, Kiwix + Ollama)* — and `make carried` answers **`CARRIED`**, with `138` mentions already on these shelves. 🟢 Its grant was re-read first-hand anyway: **`Apache-2.0`, "Copyright 2024-2026 Crosstalk Solutions LLC"**. Everything else leg `2` returned is a **course**, not an agent.
+
+🔴 **Ninth consecutive pass in which the global agent-supply legs return nothing this base does not carry.** 🔵 Said plainly rather than filled: the saturation is a measured property of the channel, and `fewer real rows always beat padding`.
+
 ## Pass 261 — 2026-10-17 — **`ACTION ZE` DISCHARGED AND NOT REFUTED AT `27` ROWS, `ACTION ZD` DISCHARGED AT A `28.4 %` NOISE RATE — AND `make hooks`, DECLARED UNRUNNABLE BY THREE PASSES, RAN, WAS RED, AND IS NOW GREEN**
 
 ⏱️ **SEVENTH pass of `2026-10-17`** *(`p255`–`p260` before it)*. All `p261` probes ran `2026-10-17`. 🔵 **Evidence:** [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv) *(`156` rows, `131` slugs, every payload on an `ls-remote`-resolved ref)* · [`p261-coverage-matrix`](../evidence/p261-coverage-matrix.2026-10-17-p261.tsv) *(`6 681` `(path, row)` cells — the matrix `ZE` asked for)* · [`p261-current-state-index`](../evidence/p261-current-state-index.2026-10-17-p261.tsv) *(`183`)* · [`p261-transport-map`](../evidence/p261-transport-map.2026-10-17-p261.tsv) *(`20`)* · [`p261-trending`](../evidence/p261-trending.2026-10-17-p261.tsv) *(`24`)* · [`p261-websearch`](../evidence/p261-websearch.2026-10-17-p261.tsv) *(`8` legs)* · [`p261-gate`](../evidence/p261-gate.2026-10-17-p261.tsv) · **instrument:** [`pass261-current-state-tier-run`](../compose/code/pass261-current-state-tier-run/) *(`166` controls, in `make hooks`, `17` mutants)*

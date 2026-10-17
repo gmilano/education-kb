@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 262 — 2026-10-17 — **THREE RECIPES, AND THE FIRST ONE IS THE GATE THE OTHER TWO RUN THROUGH**
+
+⏱️ **EIGHTH pass of `2026-10-17`.** 🔵 Every repository named below is carried on these shelves and its grant was read first-hand on an `ls-remote`-resolved ref. **Evidence:** [`p262-reservation-audit`](../evidence/p262-reservation-audit.2026-10-17-p262.tsv) · **instrument:** [`pass262-scoped-reservation-audit`](code/pass262-scoped-reservation-audit/).
+
+### 🟢 `P262-1` — the licence-provenance gate, run BEFORE a dependency list is frozen *(1–2 days)*
+
+🔴 **Why this is a recipe and not a checklist:** this pass found a published verdict where the *"all rights reserved"* belonged to **MariaDB**, not the project, and another where a **real grant** read as a refusal because the test was two literal phrases. Both were in payloads that had already been graded once.
+
+**Wiring, concretely:**
+
+1. **Resolve, never guess the ref.** `git ls-remote --symref https://github.com/<slug> HEAD`. 🔴 Two of this pass's own `39` rows answer on `development` and `develop` — [`moto-nrw/project-phoenix`](https://github.com/moto-nrw/project-phoenix) and [`piyushtanwani/dau-buddy`](https://github.com/piyushtanwani/dau-buddy). A guessed `main|master` returns `404` at every path and is **indistinguishable from a grantless repository**.
+2. **Read the TREE, not a path list.** `git clone --filter=blob:none --no-checkout --depth 1`, then `git ls-tree -r --name-only HEAD`. 🔵 A `404` cannot tell a missing file from a missing channel; a tree can.
+3. **Fetch every in-tree ladder path** on the resolved ref from `raw.githubusercontent.com` — Tier A/B from [`p229-grant-ladder-reach`](code/p229-grant-ladder-reach/), plus the `README`.
+4. **Grade with [`reservation_audit.reservation_verdict_v2()`](code/pass262-scoped-reservation-audit/reservation_audit.py)**, which answers six verdicts, not two:
+
+   | verdict | what a studio does |
+   |---|---|
+   | `BOILERPLATE` | 🟢 ship |
+   | `CONDITIONAL-GRANT` | 🟡 **there is a grant — find the commercial route.** [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) names U. Chicago's Polsky Center |
+   | `STEWARD-RESERVATION` | 🟡 the reservation is the **licence form's steward's**; grade the row on the FORM *(BUSL → not OSI)*, never on the phrase |
+   | `THIRD-PARTY-RESERVATION` | 🟡 a **bundled** grant; scope to the subject's span. [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) is `GPL-3.0` at lines `19`–`698` |
+   | `RESERVED` | 🔴 stop |
+   | `NO-RESERVATION` | → fall through to the family classifier |
+
+5. **Size everything in BYTES.** 🔴 `43` of `71` payloads this pass — **`60.6 %`** — have a non-zero byte/character delta. `len(text)` is the wrong number for most real payloads.
+6. **Gate the harvest on the column header.** [`cell_role()`](code/pass262-scoped-reservation-audit/reservation_audit.py) — 🔴 without it this pass would have re-asserted `BUSL-1.1` over [`twentyhq/twenty`](https://github.com/twentyhq/twenty), a claim this base refuted at `p249`.
+
+🟢 **Run it as a gate:** `make hooks` carries `63` offline controls; `python3 sweep.py <repo-root> <out.tsv>` is the online half. **`make carried SLUG=owner/repo` exits `1` when the row is already known**, so `make carried … && publish` is a correct sentence.
+
+### 🟢 `P262-2` — an EMEA conformity-documented LMS build, on the only Apache-2.0 platform in the tier *(10–14 weeks)*
+
+🔴 **The window is the premise:** Annex III high-risk duties — admissions, grading, learning paths — now apply from **2 Dec 2027** *(Digital Omnibus, Council green light 29 Jun 2026; REPORTED, not confirmed — `eur-lex` is unreachable on both transports)*. Emotion recognition in education is **already prohibited** and the Article 4 literacy duty is **already live**.
+
+| layer | component | grant | why this one |
+|---|---|---|---|
+| platform | 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **`Apache-2.0`** | 🔴 **the ONLY Apache-2.0 LMS in the surveyed tier of `10`** — and EMEA-origin *(Switzerland)*, which matters for a sovereignty story |
+| launch | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | `Apache-2.0` | LTI 1.3 termination. 🔴 **The `ltijs`→broker adapter is still unbuilt** — this base's standing gap, and it is bespoke code in this plan |
+| assessment | [`numbas/Numbas`](https://github.com/numbas/Numbas) + [`numbas/numbas-lti-provider`](https://github.com/numbas/numbas-lti-provider) | `Apache-2.0` | 🔴 **grading is the Annex III trigger** — keep it in a component you can document |
+| content | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `MIT` | interactive content without a copyleft obligation in the delivered layer |
+| inference | [`ollama/ollama`](https://github.com/ollama/ollama) | `MIT` | on-premise inference; no student data leaves the estate |
+
+🔴 **The deliverable is the conformity file, not the model** — risk management, data governance, logging, human oversight and technical documentation. 🟡 **And the first design decision is a refusal:** no emotion recognition anywhere in the stack, because that is prohibited today rather than regulated in 2027.
+
+🔵 **Run `P262-1` over every row above before the dependency list is frozen.** `OpenOLAT` resolves under **two owner spellings** on these shelves *(`OpenOLAT/OpenOLAT` and `openolat/OpenOLAT`)* — `p251-prefix-collision`'s neighbourhood, and the resolved `HEAD` sha is what settles identity.
+
+### 🟢 `P262-3` — LATAM governance-as-product, which needs no new platform at all *(6–8 weeks)*
+
+🔴 **The premise is a `61`-point gap:** `87 %` of `200` institutions across `19` countries use AI in at least one area; **`26 %` hold a formal AI strategy** *(UNESCO IESALC; REPORTED, not confirmed)*. Teacher adoption is already above the OECD average — BR `56 %`, CL `55 %`, CO `53 %`, CR `52 %` against `36 %` — and Uruguay's Ceibal reports `75 %`.
+
+🔵 **So the thing missing is not tooling. It is the paperwork and the audit**, and a studio can deliver it against an estate that already exists.
+
+| workstream | built from | grant |
+|---|---|---|
+| **AI-use census** across the estate | 🟢 `P262-1`'s sweep, pointed at the institution's own repositories and vendor list | the instruments are in this KB |
+| **academic-integrity + disclosure policy** | the EU Article 4 literacy duty as a *template*, not an obligation — it is the most mature text available and nothing in LATAM is binding | — |
+| **staff literacy programme** | [`satvik314/educhain`](https://github.com/satvik314/educhain) *(`MIT`)* for course generation; [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) *(`MIT`)* for the tutoring reference | 🟢 both `MIT` |
+| **offline/low-connectivity delivery** | 🟢 [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/Project-NOMAD) *(`Apache-2.0`, `40.4`k★)* — Kiwix + Ollama, no internet required | 🟢 `Apache-2.0` |
+
+🟡 **Sequence by buyer, using the survey's own split:** private non-profit `84 %` adoption → public `68 %` → private for-profit `52 %`. **The first cohort has the problem and the budget; the third has neither yet.**
+
+🔴 **Named institutional counterparts:** UNESCO **IESALC**, and the **Observatory on AI in Education for Latin America and the Caribbean** *(launched 14 Apr 2026, Santiago)*. 🔴 Both REPORTED, not confirmed — neither host is reachable from this session.
+
+🔴 **The standing caveat this page repeats rather than drops:** **no platform in the surveyed tier of `10` originates in LATAM**, so every recipe for this region composes non-LATAM software. That is a supply fact, not a preference, and it is a **seventh** consecutive pass of it.
+
 ## Pass 261 — 2026-10-17 — **FIVE RECIPES FROM THIS PASS'S `27` RESOLVED ROWS, EACH NAMING ITS REPOSITORIES, ITS GRANTS AND THE ONE LICENCE FACT THAT DECIDES WHETHER IT CAN SHIP**
 
 ⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 Every repository named below had its grant read first-hand this pass on an `ls-remote`-resolved ref — [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv).

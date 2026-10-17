@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 262 — 2026-10-17 — **THE TREND THIS PASS MEASURED IS IN WHO IS RESERVING RIGHTS: NOT THE PROJECT, BUT THE LICENCE FORM'S STEWARD.** AND A SECOND TREND IN REGULATION — EDUCATION IS NOW NAMED IN STATUTE IN APAC WHILE THE EU DATE SLIPS SIXTEEN MONTHS
+
+⏱️ **EIGHTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p262-reservation-audit`](../evidence/p262-reservation-audit.2026-10-17-p262.tsv) · [`p262-grade-class`](../evidence/p262-grade-class.2026-10-17-p262.tsv) · [`p262-websearch`](../evidence/p262-websearch.2026-10-17-p262.tsv).
+
+### 🔴 `T262-T1` — a trend in WHERE a reservation comes from, and it has now left the project entirely
+
+Four passes have tracked where restriction hides. The sequence is a trend and it moves in one direction — **away from the subject**:
+
+| pass | where the restriction was found | whose it was |
+|---|---|---|
+| `p247`/`p248` | a rider appended to MIT's body *(Commons Clause, anti-SaaS)* | 🔴 the project's |
+| `p249` | a **secondary source's** licence field, wrong in both directions | 🔴 nobody's — an artefact |
+| `p260`/`p261` | a **bundled third-party grant** inside an aggregate `license.txt` | 🔴 CodeIgniter's, not `nextSIS`'s |
+| 🔴 **`p262`** | the **LICENCE FORM'S OWN TEXT** | 🔴 **MariaDB's, in every BUSL payload ever written** |
+
+🔵 **The trend stated so it cannot be read one-way again:** *the proportion of "all rights reserved" strings on these shelves that belong to the SUBJECT is falling, and the remainder belong to parties the subject never chose.* 🔴 **At `p262` the population is `4` reservations across `71` payloads and exactly `2` are the subject's** — [`No-Suggest/NoSuggest`](https://github.com/No-Suggest/NoSuggest) and [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com).
+
+🔴 **The practical consequence is the expensive one.** A reservation that is not the subject's produces an **under-grant** error, and `p249` already established that under-grants are **never caught**, because nobody re-reads the licence of a dependency they already rejected.
+
+### 🔴 `T262-T2` — a trend in TEST SHAPE: every guard this base writes is a literal list, and every one of them has now been overrun
+
+| guard | built as | overrun by |
+|---|---|---|
+| the permissive test | **two literal phrases** *(BSD, MIT)* | 🔴 the **X11/academic** form — [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) |
+| `token_verdict()` *(`p261`)* | SPDX identifiers | 🔴 **three ecosystem grammars** — npm, PyPI trove, CRAN |
+| the family matcher *(`p262`)* | **prefixes** | 🔴 `Unlicense` ⊂ `unlicensed`, `CC-BY` ⊂ `CC-BY-NC-SA` |
+| `reservation_verdict_scoped()` *(`p261`)* | rule-delimited **sections** | 🔴 a steward notice, which is a **sentence** |
+
+🔵 **The trend is not that the lists are too short. It is that each one encodes a single THEORY of where the answer lives** — a phrase, an identifier, a prefix, a section — **and the real payloads keep putting it somewhere the theory has no name for.** 🟢 The remedy has been the same every time and it is never a longer list: **a reader per grammar**, and a verdict for the case that does not fit.
+
+### 🔴 `T262-T3` — regulation: education is now NAMED in statute in APAC, while the EU's own date slips sixteen months
+
+| jurisdiction | instrument | education's status | date |
+|---|---|---|---|
+| 🔴 **Vietnam** | Law on AI | 🔴 **EDUCATION listed as a high-risk sector**, covering **automated assessment** and **behavioural monitoring** | in effect **Mar 2026**; six-month grace for systems live before Aug 2026 |
+| 🔴 **South Korea** | AI Basic Act | high-impact-system obligations | in force **22 Jan 2026** |
+| 🔴 **EU** | AI Act + Digital Omnibus | Annex III high-risk *(admissions, grading, learning paths)* | 🔴 **moved to 2 Dec 2027** — Council final green light **29 Jun 2026** |
+| 🟢 **EU** | AI Act Art. 5 / Art. 4 | **emotion recognition in education PROHIBITED**; AI-literacy duty live | both since **2 Feb 2025** |
+| **US** | state legislation | `134` bills, `31` states; OK + MD mandate **human oversight** | 2026 session |
+| **Japan · Singapore · India · Australia** | promotion / voluntary guidance | not named as high-risk | — |
+| **LATAM** | 🔴 **no national AI-in-education law found** | capacity-building only *(UNESCO Ecuador, Chile)* | — |
+
+🔴 **Every row above is REPORTED and NOT CONFIRMED.** `eur-lex`, `lw.com`, `multistate.us`, `ipsos.com` and `dig.watch` are **all unreachable on both `curl` and `WebFetch`** from this session.
+
+🔵 **The trend across the table is a divergence, and it is the opposite of what a single global compliance product assumes:** 🔴 **APAC is naming education in primary statute while the EU postpones the obligations that would have bitten first**, and North America regulates the *decision* rather than the *sector*. 🟢 **The compliance surface is converging on one question — "does a machine make or shape a judgement about a student, and who oversees it?"** — and diverging completely on the dates and the paperwork.
+
+### 🟡 `T262-T4` — the platform tier's licence shape is a trend about what a studio can SELL
+
+🔴 **Of the `10` self-hostable education platforms surveyed this pass, `0` are MIT and exactly `1` — `OpenOlat` — is Apache-2.0.** The rest are `GPL`, `AGPL` or `LGPL`.
+
+🔵 **This has been true every time this base has measured it, and it is now stated as a trend rather than a list:** *the education platform layer is structurally copyleft.* 🟢 **The consequence for a studio is positive and specific** — the permissive freedom lives in the layer you ADD *(agents, connectors, analytics, conformity tooling)*, and the LMS underneath is a deployment dependency rather than a shipped artefact, which is a cleaner commercial posture than it first looks.
+
+### 🔴 `T262-T5` — the negative results, so silence is not read as coverage
+
+🔴 **`0` new trend measurements from the supply channel.** Nine consecutive passes with `0` new education agents; leg `1` returned **seven general-purpose agents to an education query** and said so itself.
+
+🔴 **No primary regulatory text was read, for an EIGHTH pass** — and this pass can now say the reason is **general, not specific to `eur-lex`**: every non-GitHub host probed refuses CONNECT on `curl` and fails DNS on `WebFetch`. 🟢 The gap is no longer "cheap to close"; it is **closed as unreachable**, which is a different and more useful state than "not tried".
+
+🔴 **India's Class-`3` mandate and China's *"AI Plus Education"* annual-hours figure remain REPORTED, NOT CONFIRMED** — the `6`-vs-`8` hour disagreement is unmoved for a fifth pass.
+
 ## Pass 261 — 2026-10-17 — **FOUR TRENDS THIS PASS MEASURED RATHER THAN READ, AND THE SHARPEST ONE IS THAT THE EDUCATION OPEN-SOURCE CORPUS IS NOW MOSTLY GRANTED — `1 813` OF `2 249` ROWS — WHILE `305` HAVE NEVER BEEN ASKED AT ALL**
 
 ⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p261-current-state-index`](../evidence/p261-current-state-index.2026-10-17-p261.tsv) · [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv) · [`p261-websearch`](../evidence/p261-websearch.2026-10-17-p261.tsv) · [`p261-transport-map`](../evidence/p261-transport-map.2026-10-17-p261.tsv)

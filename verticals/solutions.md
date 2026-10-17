@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 262 — 2026-10-17 — **THE PLATFORM TIER'S LICENCE SHAPE IS STRUCTURAL, NOT INCIDENTAL: `0` MIT LMS EXIST AND EXACTLY ONE IS APACHE-2.0.** PLUS: `nextSIS` RE-CONFIRMED `GPL-3.0`, AND THE GUARD THAT SAVED IT NOW HAS A SECOND MEMBER IT CANNOT SEE
+
+⏱️ **EIGHTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p262-websearch`](../evidence/p262-websearch.2026-10-17-p262.tsv) leg `3` · [`p262-reservation-audit`](../evidence/p262-reservation-audit.2026-10-17-p262.tsv) · **instrument:** [`pass262-scoped-reservation-audit`](../compose/code/pass262-scoped-reservation-audit/).
+
+### 🔴 `P262-V1` — the platform tier, re-surveyed, and the negative result is the finding
+
+Leg `3` returned `10` self-hostable education platforms. 🔴 **Every one is already carried on this page.** 🟢 **What is new is the shape of the set:**
+
+| platform | licence | layer | region of origin |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` | LMS | EMEA *(Australia-founded, EMEA-centred community)* |
+| Open edX | `AGPL-3.0` | LMS | North America *(Harvard + MIT origin)* |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) CE | `AGPL-3.0` | LMS | North America |
+| Chamilo | `GPL-3.0` | LMS *(lightest to self-host)* | EMEA *(Belgium/Spain)* |
+| 🟢 **OpenOlat** | 🟢 **`Apache-2.0`** | LMS — universities + corporate training | EMEA *(Switzerland)* |
+| RosarioSIS | `GPL` | SIS | LATAM-adjacent *(francophone)* |
+| openSIS-Classic | `GPL` | SIS, K-12 | North America |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `GPL-3.0` | SIS | APAC *(Hong Kong)* |
+| OpenEduCat | `LGPL-3.0` | SIS + LMS on **Odoo** | APAC *(India)* |
+| Frappe Education | `GPL-3.0` | SIS on **ERPNext** | APAC *(India)* |
+
+🔴 **`0` of `10` are MIT. Exactly `1` of `10` is Apache-2.0.** 🔵 **This is a structural property of the education platform tier, not an accident of this week's sample**, and it is the single most commercially consequential fact on this page: **the copyleft is in the platform layer, so a studio's permissive freedom lives in the LAYER IT ADDS, never in the LMS it adds it to.** 🟡 `OpenOlat` is therefore the only platform on this list a studio can fold into a closed deliverable, and `OpenEduCat`'s `LGPL` is the only other one where linking — as opposed to modifying — is straightforward.
+
+### 🟢 `P262-V2` — `Kosudo/nextSIS` re-confirmed, and the guard that saved it now has a sibling it cannot see
+
+🟢 [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) remains **`GPL-3.0`**, re-read this pass: `license.txt`, `39 890` B, `THIRD-PARTY-RESERVATION`, subject span pinned at lines `19`–`698`, the `All rights reserved.` at line `703` still **EllisLab's**.
+
+🔴 **But `p261`'s fix is keyed on aggregate SECTIONS, and the second member of the class has none.** [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV)'s reservation is **MariaDB Corporation Ab's**, in the text of the **BUSL form itself** — a sentence, not a section, so `aggregate_sections()` returns `[]` and there is nothing to scope to. 🟢 `STEWARD-RESERVATION` is the verdict that closes it.
+
+🔵 **For this page specifically:** a platform that **vendors** a BUSL dependency's licence text into its own tree inherits that sentence. 🔴 **A gate reading it as the platform's own reservation publishes an open-source LMS as proprietary** — which is exactly the `nextSIS` failure, arriving by a different door.
+
+### 🟡 `P262-V3` — `dssg/student-early-warning`: the early-warning seam has a grant after all
+
+🔴 This page's sibling cell graded it *"click-through terms of use — not open source, for a NAMED reason"*. 🟢 **Re-read first-hand: `LICENSE`, `2 069` B.** The click-through is line `1`; the **operative text is a grant** —
+
+> *"**Permission to use, copy, modify, and distribute this software** […] for academic research or other not-for-profit scholarly purposes […] **is hereby granted**"*
+
+🟡 **The verdict survives and the reason does not.** It is a **University of Chicago non-commercial academic licence** with a named commercial-licensing route *(Polsky Center for Entrepreneurship and Innovation)*. 🔵 **For a studio that distinction is actionable**: *"no grant"* is a closed door; *"academic grant, commercial licence on request from a named office"* is a procurement step. 🟢 Graded `CONDITIONAL-GRANT`.
+
+### 🔴 `P262-V4` — the negative results, so silence is not read as coverage
+
+🔴 **`0` new platforms.** 🔴 **`0` market measurements** — the market legs returned figures from three firms whose hosts **refuse CONNECT on `curl` and fail DNS on `WebFetch`**, so nothing was verifiable first-hand and nothing is published here as measured.
+
+🔴 **`Caliper` still has no supply**, unchanged and not re-probed this pass — said rather than quietly dropped.
+
+🔴 **The LATAM platform gap stands.** Of the `10` platforms above, **not one originates in LATAM**; `RosarioSIS` is the nearest and is francophone in origin. 🔵 LATAM's weight in this industry is in **adoption and policy** *(see [`intel/market.md`](../intel/market.md))*, not in platform supply, and this page has now said so for a seventh consecutive pass.
+
 ## Pass 261 — 2026-10-17 — **NINE PLATFORM ROWS READ FIRST-HAND, AND ONE OF THEM DECLARES `MIT` IN ITS `composer.json` WHILE SHIPPING `AGPL-3.0` — WITH ITS OWN README AGREEING WITH THE LICENCE FILE AND NOT THE MANIFEST**
 
 ⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv) · **instrument:** [`pass261-current-state-tier-run`](../compose/code/pass261-current-state-tier-run/)

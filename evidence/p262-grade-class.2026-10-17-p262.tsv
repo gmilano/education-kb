@@ -1,0 +1,88 @@
+slug	shelf	line	grade_class	grant_cell
+0awei0/kt	trends.md	11337	RESTRICTIVE-GRADE	The row reads unlicensed; **the code is MIT**. The grant lives with the **upstream**, not with this slug
+123xiaojun/student-management-system	patterns.md	1443	RESTRICTIVE-GRADE	🔴 the MIT sentence is **verbatim** and **prefixed** *"For non-commercial purposes"* — `T243-C`
+adlnet/scorm-to-xapi-wrapper	top.md	7191	RESTRICTIVE-GRADE	🔴 *"ships its own bridge unlicensed"*
+alfredang/ai-lms-tms	top.md	3747	QUOTED-CLAIM	*«This project is **proprietary software** developed by Tertiary Infotech Pte Ltd. **All rights reserved**.»* `l.703`
+alfredang/ai-lms-tms	trending.md	1881	QUOTED-CLAIM	🔴 *"proprietary software … All rights reserved"* `l.703`
+anaistack/cefr-asag-corpus	trending.md	10258	RESTRICTIVE-GRADE	🔴 **CC-BY-NC-SA-4.0**, `LICENSE.txt` **20 863 B**, `main` · `7f3b75afe516bf6e309cbacfc1de0263ff04bb72` — **non-commercial, read from the payload**
+andymatuschak/orbit	top.md	4189	SCOPE-NOTE	🟡 **`Apache-2.0` libraries; `AGPL-3.0-or-later` OR `BUSL-1.1` for `app` + `backend`, licensee's choice; binaries `Apache-2.0`**
+andymatuschak/orbit	trending.md	2101	SCOPE-NOTE	🟡 Apache-2.0 libs; **AGPL-3.0+ OR BUSL-1.1** for app/backend
+barneslardo/sis-demo	patterns.md	8901	RESTRICTIVE-GRADE	🔴 unlicensed — **pattern only, do not vendor the code**
+barneslardo/sis-demo	patterns.md	8915	RESTRICTIVE-GRADE	🔴 **both UNLICENSED — read, do not fork**
+barneslardo/sis-demo	patterns.md	9122	RESTRICTIVE-GRADE	🔴 unlicensed — **pattern only, do not vendor the code**
+barneslardo/sis-demo	patterns.md	9136	RESTRICTIVE-GRADE	🔴 **both UNLICENSED — read, do not fork**
+barneslardo/sis-demo	patterns.md	14147	RESTRICTIVE-GRADE	🔴 unlicensed — **pattern only, do not vendor the code**
+barneslardo/sis-demo	patterns.md	14197	RESTRICTIVE-GRADE	🔴 unlicensed — pattern only
+canyongbs/advisingapp	open-gaps.md	1651	RESTRICTIVE-GRADE	🟢 **limb `1`:** adding `Elastic-1.0`, `Confluent`, `Functional Source License`, `PolyForm` and `Commons Clause` to the table and re-running the census flags **`1`+** further row → **the list must be m
+canyongbs/advisingapp	open-gaps.md	8731	RESTRICTIVE-GRADE	Elastic-2.0 — 🔴 **a student-advising platform**
+canyongbs/advisingapp	trending.md	9454	RESTRICTIVE-GRADE	🔴 **Elastic-2.0**
+caviraoss/pagelm	open-gaps.md	404	RESTRICTIVE-GRADE	🟢 **It held** — `NOT-OPEN-SOURCE:added-restriction`, `is_usable_permissive: False`, hits `commercial use` · `non-commercial` · `saas` · `software-as-a-service`. 🔵 Until today the fix had only ever bee
+caviraoss/pagelm	top.md	7978	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	8114	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	8201	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	8306	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	8392	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	8442	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	8523	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	8617	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	8707	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	8866	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	9040	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	9140	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable**
+caviraoss/pagelm	top.md	9218	RESTRICTIVE-GRADE	🔴 **Community License — non-commercial, revocable** *(`8 563 B`)*
+caviraoss/pagelm	top.md	9336	RESTRICTIVE-GRADE	🔴 **`PageLM Community License`** *(`8 563 B`, re-confirmed — `P411`)*
+caviraoss/pagelm	trending.md	17286	RESTRICTIVE-GRADE	🔴 **"PageLM Community License"**
+cccareers/open-source-curriculum	trending.md	11324	RESTRICTIVE-GRADE	🔴 **CC-BY-NC-SA-4.0** · `LICENSE.md` 1 891 B · `main` · `dd01b98`
+databayt/hogwarts	patterns.md	1435	RESTRICTIVE-GRADE	🔴 `SSPL-1.0` — **not OSI**; offering it as a service reaches the whole service stack
+digillab-lmu/smart-rag	open-gaps.md	8733	RESTRICTIVE-GRADE	PolyForm Noncommercial
+digillab-lmu/smart-rag	trending.md	9460	RESTRICTIVE-GRADE	🔴 **PolyForm Noncommercial**
+dssg/student-early-warning	open-gaps.md	8727	RESTRICTIVE-GRADE	🔴 **click-through terms of use** — 🟢 **this is `Gap 392`'s own subject, and it is now settled: not open source, for a NAMED reason**
+earth-ol-player/ai_learn_project	open-gaps.md	8953	RESTRICTIVE-GRADE	🔴 **PolyForm Noncommercial**, 181 B
+earth-ol-player/ai_learn_project	trending.md	9479	RESTRICTIVE-GRADE	🔴 **PolyForm NC**
+enkidevs/curriculum	patterns.md	6598	RESTRICTIVE-GRADE	`CC-BY-NC-SA-4.0`
+enkidevs/curriculum	trends.md	5055	RESTRICTIVE-GRADE	`CC-BY-NC-SA-4.0` *(`189` B)*
+eugeborzone/auto_grade_guarani	patterns.md	8909	RESTRICTIVE-GRADE	🔴 **unlicensed**
+eugeborzone/auto_grade_guarani	patterns.md	9130	RESTRICTIVE-GRADE	🔴 **unlicensed**
+eugeborzone/auto_grade_guarani	patterns.md	14249	RESTRICTIVE-GRADE	🔴 **unlicensed**
+facebookresearch/seamless_communication	trending.md	16057	RESTRICTIVE-GRADE	**CC-BY-NC-4.0**
+gautamvhavle/learner-verse	solutions.md	3474	RESTRICTIVE-GRADE	**BUSL 1.1**
+gautamyadavs/avltree	top.md	7257	RESTRICTIVE-GRADE	unlicensed, NONE, `0` entities
+jagmarques/asqav-compliance	top.md	35	RESTRICTIVE-GRADE	🔴 **`Elastic-2.0` — NOT OSI**
+jona-zwetsloot/somtoday-mod	trending.md	16061	RESTRICTIVE-GRADE	**CC-BY-NC-SA-4.0**
+khan/tutoring-accuracy-dataset	foundations.md	28	RESTRICTIVE-GRADE	🔴 **NON-COMMERCIAL — not OSI**
+kosudo/nextsis	solutions.md	20	SCOPE-NOTE	🟢 **`GPL-3.0`** — and the `All rights reserved` in its licence file is **CodeIgniter's**, not its own
+krahets/hello-algo	foundations.md	29	RESTRICTIVE-GRADE	🔴 **`CC-BY-NC-SA-4.0`**
+kuali/rice	trending.md	29860	RESTRICTIVE-GRADE	🟢 **ECL-2.0** (*Educational Community License v2.0*)
+minouza/mathcrew	open-gaps.md	8734	RESTRICTIVE-GRADE	PolyForm Strict
+minouza/mathcrew	trending.md	9461	RESTRICTIVE-GRADE	🔴 **PolyForm Strict**
+minouza/mathcrew	trending.md	11582	RESTRICTIVE-GRADE	🔴 **PolyForm Strict 1.0.0** — non-commercial, no derivatives
+moto-nrw/project-phoenix	patterns.md	1439	RESTRICTIVE-GRADE	🔴 source-available: *"You may NOT use this software in production without a commercial license"*
+nakafaai/nakafa.com	solutions.md	23	RESTRICTIVE-GRADE	🔴 **`Nakafa Source Available License 1.0` — its own text says *"This is not an open-source license"***
+nakafaai/nakafa.com	trending.md	1488	RESTRICTIVE-GRADE	🔴 **Nakafa Source Available `1.0`, eff. `2026-04-24` — NOT OSI**
+nirholas/ai-tutor-mcp	trending.md	9463	RESTRICTIVE-GRADE	🔴 **proprietary, stated**
+nirholas/ai-tutor-mcp	trending.md	11581	RESTRICTIVE-GRADE	🔴 **Proprietary**, "may not be used, copied, modified, distributed" (860 B)
+no-suggest/nosuggest	solutions.md	3989	RESTRICTIVE-GRADE	🔴 `36`★, **NOT OPEN SOURCE.** The whole `417` B licence: *"Source code is made available for transparency and personal non-commercial use only … You may NOT: Redistribute … Rebrand or redeploy this ap
+no-suggest/nosuggest	trending.md	3902	RESTRICTIVE-GRADE	🔴 **NOT OPEN SOURCE** *(`417` B, non-commercial + anti-compete)*
+nvaccess/nvda	patterns.md	3562	SCOPE-NOTE	🟡 **`GPL-2.0`** *(`53 408` B)* — ship alongside, do not link into proprietary code
+open-tutorai/open-tutor-ai-ce	trending.md	3544	SCOPE-NOTE	🟢 **`BSD-3-Clause`** — `1 531` B, all three clauses verbatim. 🔵 Opens *"All rights reserved."*, which is `BSD-3`'s own template and **not** a reservation of rights — a shape a vocabulary probe could e
+openstax/osbooks-biology-bundle	trending.md	16058	RESTRICTIVE-GRADE	**CC-BY-NC-SA-4.0**
+piyushtanwani/dau-buddy	trending.md	6639	RESTRICTIVE-GRADE	🔴 **UNLICENSED**
+ruud0/aula-virtual-mcp	trending.md	6640	RESTRICTIVE-GRADE	🔴 **UNLICENSED**
+samu-kiss/aula	patterns.md	1442	RESTRICTIVE-GRADE	🔴 `PolyForm-Noncommercial-1.0.0`
+scibly-dev/scibly	top.md	10478	SCOPE-NOTE	🔴 **AGPL-3.0 + proprietary `ee/`**
+sdv-dev/sdv	open-gaps.md	8729	RESTRICTIVE-GRADE	BUSL-1.1 — 🔵 the synthetic-data tier
+sdv-dev/sdv	trending.md	9455	RESTRICTIVE-GRADE	🔴 **BUSL-1.1**
+sign/translate	trending.md	16059	RESTRICTIVE-GRADE	**CC-BY-NC-SA-4.0**
+sodadata/soda-core	open-gaps.md	8730	RESTRICTIVE-GRADE	Elastic-2.0 — the data-quality tier
+sodadata/soda-core	trending.md	9456	RESTRICTIVE-GRADE	🔴 **Elastic-2.0**
+spdx/license-list-data	open-gaps.md	226	RESTRICTIVE-GRADE	🔴 **`828` Creative Commons tokens are carried across these shelves — the single largest licence class on this base — and the classifier has no `CC` family at all.** 🟢 The `NC` half *was* already caugh
+steveyeow/feynman	top.md	674	SCOPE-NOTE	🟡 **MIT en la raíz** *(`LICENSE`, `1 217` B, `aa8325eadd7fea1c`, ref `849c336c378c`)* — 🔴 **`BUSL-1.1` en `app/pro/`** *(`917` B, `9cf07d243fa7da6e`)*
+steveyeow/feynman	trending.md	368	SCOPE-NOTE	🟡 **MIT raíz / `BUSL-1.1` en `app/pro/`**
+steveyeow/feynman	trending.md	392	SCOPE-NOTE	🟡 **MIT raíz** *(`1 217` B, `aa8325eadd7fea1c`, ref `849c336c378c`)* · 🔴 **`BUSL-1.1` en `app/pro/`** *(`917` B, `9cf07d243fa7da6e`)*
+travismoore3/aes_system	top.md	7254	RESTRICTIVE-GRADE	absent/unlicensed, COMPONENT
+twentyhq/twenty	trends.md	575	QUOTED-CLAIM	`BUSL-1.1`, *"source-available, not OSI"*
+vieanderes/understory	trending.md	11583	SCOPE-NOTE	🟡 MIT code, **CC BY-NC-SA 4.0 lesson content** — the teaching material is the non-commercial part
+willwearing/graspful	solutions.md	4067	RESTRICTIVE-GRADE	🔴 **NOT OPEN SOURCE** — `P1054`, MIT's body with an anti-SaaS non-compete appended
+x5gon/x5moodle	foundations.md	2060	SCOPE-NOTE	🟢 **`BSD-2-Clause`** — `main/LICENSE`, `1 325` B, *"Copyright (c) 2018, University of Nantes. All rights reserved."*
+xiaolai/the-craft-of-selfteaching	trends.md	5054	RESTRICTIVE-GRADE	`CC-BY-NC-ND-3.0` *(README only, **no file**)*
+yunfeng-wan/cstutorbench	trending.md	16060	RESTRICTIVE-GRADE	**CC-BY-NC-4.0**

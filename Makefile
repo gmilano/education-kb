@@ -155,6 +155,9 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── pass261-current-state-tier-run (p261: ZD's current-state index, ZE's (path,row) coverage, the scoped reservation)"; \
 	cd compose/code/pass261-current-state-tier-run && $(PY) test_current_state.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
+	echo "── pass262-scoped-reservation-audit (p262: ACTION ZI — the STEWARD reservation, the X11 grant, and a row's state is not what it QUOTES)"; \
+	cd compose/code/pass262-scoped-reservation-audit && $(PY) test_reservation_audit.py >/dev/null 2>&1 && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code || exit 1; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

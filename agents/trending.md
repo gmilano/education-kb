@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 262 — 2026-10-17 — `0` NEW AGENT ROWS FOR A NINTH PASS, AND THE GLOBAL LEG SAYS SO IN ITS OWN WORDS. PLUS: TWO PUBLISHED RESERVATION VERDICTS CHANGED, AND NEITHER WAS A NEW REPOSITORY
+
+⏱️ **EIGHTH pass of `2026-10-17`.** 🔵 **Append-only shelf — this section is added above `p261`'s and nothing below it is rewritten.** Evidence: [`p262-websearch`](../evidence/p262-websearch.2026-10-17-p262.tsv) *(`8` legs)* · [`p262-reservation-audit`](../evidence/p262-reservation-audit.2026-10-17-p262.tsv) *(`71` payloads)*.
+
+### 🔴 What the eight legs returned this week
+
+| leg | axis | offered | through the gate | what it actually returned |
+|---|---|---|---|---|
+| `1` | Global agents | `7` | 🔴 `0` | OpenClaw, OpenHands, SWE-agent, CrewAI, OpenCode, Langflow, Hermes — **general-purpose and coding agents, zero education agents.** The leg's own summary: *"The search didn't return anything specific to education"* |
+| `2` | Global trending | `5` | 🔴 `0` | [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/Project-NOMAD) — `CARRIED`, `138` mentions. The rest are **courses**: `ai-engineering-from-scratch`, `nanochat`, `developer-roadmap`, MS `GenAI-for-Beginners` |
+| `3` | Verticals | `10` | 🔴 `0` | Moodle, Open edX, Canvas CE, Chamilo, OpenOlat, RosarioSIS, openSIS-Classic, Gibbon, OpenEduCat, Frappe Education — **every one already carried** |
+| `4` | Market | `6` | 🔴 `0` | three firms, three incompatible `2026` figures |
+| `5`–`8` | NA · EMEA · APAC · LATAM | `33` | 🔴 `0` *(no repository)* | regulatory and survey facts only — carried to [`intel/trends.md`](../intel/trends.md) and [`intel/market.md`](../intel/market.md) as **REPORTED, NOT CONFIRMED** |
+
+🔴 **Ninth consecutive pass with `0` new agent rows.** 🔵 This base stopped treating that as a gap in the world at `p252` and started treating it as a measured property of the channel; leg `1` returning **seven non-education agents to an education query** is the clearest statement of that the channel has produced.
+
+### 🟢 The one trending name, re-read first-hand anyway
+
+🟢 **[`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/Project-NOMAD)** — `40.4`k★, offline-first knowledge and education server *(offline Wikipedia via **Kiwix**, local AI via **Ollama**)*. 🟢 **`Apache-2.0`**, read from the `LICENSE` blob: *"Copyright 2024-2026 Crosstalk Solutions LLC"*, grant at §2 *"Subject to the terms and conditions of this License, each…"*. 🔵 Carried since well before this pass; the grant is confirmed, not newly discovered.
+
+### 🔴 Two agent-adjacent rows whose published verdict CHANGED — from the audit, not from the supply channel
+
+| row | region | was | is | why it matters to a studio |
+|---|---|---|---|---|
+| 🔴 [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) | North America *(DataCebo, Inc.)* | `RESERVED` | 🟢 **`STEWARD-RESERVATION`** | the reservation is **MariaDB's, in the BUSL form text**. The row is still not OSI — but the *reason* the gate held it was wrong, and the same notice sits in every BUSL payload including permissive projects that vendor one |
+| 🔴 [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | North America *(University of Chicago)* | `RESERVED` | 🟢 **`CONDITIONAL-GRANT`** | 🔴 **there IS a grant** — academic / not-for-profit, with a named Polsky Center commercial contact. A studio cannot ship it, but *"no grant"* was the wrong sentence and it closes a door that is actually ajar |
+
+🔵 **Both are North American and both are infrastructure a studio would reach for** — synthetic data and student early-warning. Neither moved because a new repository appeared; they moved because a guard was re-run over what was already published.
+
 ## 2026-10-17 — Pass 261 — **`github.com/trending` IS READABLE, AND HAS BEEN ALL ALONG: IT ANSWERED `200` ON A TRANSPORT NOBODY HAD TRIED, AFTER TWO PASSES DECLARED THE AXIS UNREAD ON THE STRENGTH OF `curl` ALONE**
 
 🔵 **Append-only shelf.** This section is `p261`'s window; everything below it is history and is not rewritten.

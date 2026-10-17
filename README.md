@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 262 — 2026-10-17 — **`ACTION ZI` DISCHARGED: `nextSIS` IS A CLASS, AND THE SECOND MEMBER IS THE LICENCE FORM'S STEWARD — WHICH `p261`'s GUARD CANNOT SEE**
+
+⏱️ **EIGHTH pass of `2026-10-17`.** 🔵 **The pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**
+
+### 🟢 The headline: the reservation belonged to MariaDB
+
+`ACTION ZI` asked whether [`Kosudo/nextSIS`](https://github.com/Kosudo/nextSIS) was *"one repository's aggregate, or a class"*. 🟢 **It is a class — and the second member is not an aggregate at all.**
+
+🔴 [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV)'s `4 818` B `LICENSE` reserves at line `34`:
+
+```
+License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
+```
+
+**MariaDB is the steward of the Business Source License FORM**, reserving rights in the **document**. DataCebo, Inc. is the Licensor, named at line `5`, and appears nowhere in that sentence. 🔴 **`p261` keyed its fix on rule-delimited SECTIONS, and a steward notice is a SENTENCE** — so `aggregate_sections()` returns `[]`, there is no span to scope to, and the guard answers `RESERVED`.
+
+🔵 The verdict happened to be right *(BUSL-1.1 is not OSI)* **from an unsound method** — `p260`'s named failure for the **third pass running**. 🔴 And the notice sits in **every** BUSL payload, including permissive projects that merely vendor one.
+
+| | |
+|---|---|
+| cells harvested · classed `RESTRICTIVE-GRADE` | `87` · `73` over **`39` slugs** |
+| payloads read first-hand on resolved refs | **`71`** |
+| 🟢 `NO-REF` · `NO-TREE` · `NO-PAYLOAD` · `FETCH-FAIL` | 🟢 `0` · `0` · `0` · `0` — **coverage `100 %`** |
+| 🟢 verdicts changed against `p261`'s guard | 🟢 **`2`** |
+
+### 🟢 The second changed cell: a real grant that read as a refusal
+
+🔴 [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) reserves on line `3` and **grants on line `5`** — *"Permission to use, copy, modify, and distribute this software … is hereby granted"*, the **X11/academic** form, which omits MIT's *"free of charge"* because the consideration is a **field of use, not a fee**. 🟢 Graded `CONDITIONAL-GRANT`: **there IS a grant** *(academic / not-for-profit, commercial route via U. Chicago's Polsky Center)*, and a studio still may not ship it. 🔵 *"No grant"* is a closed door; this is a procurement step.
+
+### 🔴 Three times this pass's own instruments were the thing that was wrong
+
+🔴 **Characters are not bytes.** The first sweep disagreed with two correct shelf cells by `4` B and `2 146` B. **The shelves were right.** `43` of `71` payloads — **`60.6 %`** — carry a non-zero delta, so it would have mis-stated most sizes published. 🔵 `p261`'s *disbelieve the instrument before disbelieving the shelves*, applied to a tool written in the same hour.
+
+🔴 **`Unlicense` is a prefix of `unlicensed` — and they are OPPOSITES.** A `startswith` family matcher dropped `5` slugs out of the population. 🔵 Third appearance of `p251-prefix-collision`'s shape, first in **licence names**.
+
+🔴 **A row's state is not what the row QUOTES.** [`intel/trends.md`](intel/trends.md) l.`575` carries `BUSL-1.1` for [`twentyhq/twenty`](https://github.com/twentyhq/twenty) **inside a column headed *"what the secondary source said"*** — `p249`'s refuted claim. 🔴 **Publishing it would have retracted a correct correction.** 🟢 `cell_role()` reads the column header; `twenty` is AGPLv3 + a §7 exception, with `0` occurrences of *"Business Source"* in its entire tree.
+
+### 🔴 An eight-pass gap, CLOSED — as unreachable
+
+🔴 **`eur-lex.europa.eu` is refused on BOTH transports, for DIFFERENT reasons:** `curl` gets *"gateway answered 403 to CONNECT"*, `WebFetch` gets *"getaddrinfo ENOTFOUND"*. 🔴 **And it was never about `eur-lex`** — `precedenceresearch`, `grandviewresearch`, `iesalc.unesco.org`, `unesco.org`, `multistate.us`, `lw.com`, `ipsos.com` and `dig.watch` all answer identically across `18` probes. 🟢 **This session reads GitHub payloads first-hand and no secondary source at all**, and every figure this pass publishes from a search leg is labelled **REPORTED, NOT CONFIRMED** at the point of use.
+
+### 🟡 What the eight research legs actually found
+
+🔴 **`0` new agents for a ninth pass** — leg `1` returned seven general-purpose and coding agents to an education query and said so itself. 🔴 **`0` new platforms** — all `10` already carried. 🟢 **One structural fact worth more than the rows: of those `10` self-hostable education platforms, `0` are MIT and exactly `1` (`OpenOlat`) is Apache-2.0.** 🔵 **The education platform layer is structurally copyleft, so a studio's permissive freedom lives in the layer it ADDS.**
+
+🟢 **Regionally placed, all REPORTED:** the EU's Annex III high-risk date **moved to 2 Dec 2027** *(Digital Omnibus, Council green light 29 Jun 2026)*; **Vietnam's Law on AI names EDUCATION a high-risk sector** *(in effect Mar 2026)*; South Korea's AI Basic Act is in force *(22 Jan 2026)*; the US has `134` bills in `31` states with OK and MD mandating human oversight; and LATAM shows **`87 %` institutional AI use against `26 %` holding a formal strategy** — a `61`-point governance gap that [`compose/patterns.md`](compose/patterns.md) `P262-3` turns into an engagement.
+
+### 🔴 What is registered for the next pass
+
+🔴 **`ACTION ZG` (carried, still highest priority, untouched): grade the `305` NEVER-GRADED rows** — still the largest unmeasured population on this base.
+🔴 **`ACTION ZK`: read every other named source-available FORM for a steward reservation.** `p262` read two — BUSL has one, Elastic-2.0 has none — and generalised from two.
+🔴 **`ACTION ZL`: extend the restrictive vocabulary to this base's OWN verdict tokens.** [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) is graded `GRANT-REFUSED` and the sweep never probed it; it was verified by hand instead.
+🔴 **`ACTION ZM`: re-read in bytes every payload size this base has ever published.**
+🟡 **`ACTION ZH` is carried and explicitly NOT actionable by an unattended pass** — filing `41` issues on third-party repositories needs a human decision before it needs a script.
+
 ## Pass 261 — 2026-10-17 — **THE STANDING GATE RAN FOR THE FIRST TIME IN TEN PASSES. IT WAS RED. IT IS NOW GREEN — AND `ACTION ZE` CLOSED THE LADDER AT `100 %` COVERAGE WITH `27` ROWS**
 
 ⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 **The pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**

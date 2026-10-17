@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 262 — 2026-10-17 — THE TRENDING AXIS RETURNED ONE EDUCATION REPOSITORY AND THIS BASE ALREADY CARRIES IT. THE WEEK'S REAL MOVEMENT IS IN PUBLISHED LICENCE CELLS, NOT IN NEW REPOSITORIES
+
+⏱️ **EIGHTH pass of `2026-10-17`.** 🔵 **Append-only shelf — this section sits above `p261`'s and nothing below it is rewritten.** Evidence: [`p262-websearch`](../evidence/p262-websearch.2026-10-17-p262.tsv) · [`p262-transport-map`](../evidence/p262-transport-map.2026-10-17-p262.tsv) · [`p262-reservation-audit`](../evidence/p262-reservation-audit.2026-10-17-p262.tsv).
+
+### 🔴 The trending leg, and the one name on it
+
+| repository | ★ | grant, read first-hand | carried? | what it is |
+|---|---|---|---|---|
+| 🟢 [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/Project-NOMAD) | `40.4`k | 🟢 **`Apache-2.0`** — `LICENSE` blob, *"Copyright 2024-2026 Crosstalk Solutions LLC"* | 🔴 **`CARRIED`** *(`138` mentions)* | offline-first knowledge and education server: offline Wikipedia via **Kiwix**, local AI via **Ollama**, no internet required |
+
+🔴 Everything else the leg returned is a **course, not a repository a studio composes with** — `rohitg00/ai-engineering-from-scratch`, Karpathy's `nanochat`, `developer-roadmap`, Microsoft's `GenAI-for-Beginners`. 🔵 **The `course`-shaped false positive is now the dominant failure mode of the trending axis for this industry**, and naming it is the only way the next pass does not re-harvest the same four.
+
+### 🟡 `github.com/trending` — read again, and the transport map is now sharper
+
+| host | transport | result |
+|---|---|---|
+| `github.com` | **`WebFetch`** | 🟢 `200` — HTML pages readable, including blob views |
+| `github.com` | `curl` | 🔴 `403` |
+| `github.com` | `git ls-remote` / `git clone --filter=blob:none` | 🟢 works — `39` of `39` refs and trees |
+| `raw.githubusercontent.com` | `curl` | 🟢 `200` — all `71` payloads |
+
+🔵 **The same host refuses one transport and serves three others.** `p261` found the `WebFetch` route; this pass confirms it extends to **blob views**, which is how `project-nomad`'s `Apache-2.0` was read without a clone.
+
+### 🔴 The gap `p261` called cheap to close, CLOSED — and the answer is no
+
+🔴 **`eur-lex.europa.eu` is unreachable on BOTH transports, for DIFFERENT reasons, and that settles an eight-pass gap.**
+
+| transport | result | the tool's own words |
+|---|---|---|
+| `curl` | 🔴 `000` | `connect_rejected` — *"gateway answered 403 to CONNECT (policy denial or upstream failure)"* |
+| `WebFetch` | 🔴 — | *"getaddrinfo ENOTFOUND eur-lex.europa.eu"* |
+
+🔵 `p261` wrote: *"`WebFetch` reached `github.com/trending` after `curl` could not, so the same transport has NOT been tried against `eur-lex` and the gap is now a cheap one to close."* 🟢 **It was cheap, it is tried, and it fails.** 🔴 **And the refusal is not special to `eur-lex`** — `precedenceresearch.com`, `grandviewresearch.com`, `iesalc.unesco.org`, `unesco.org`, `multistate.us`, `lw.com`, `ipsos.com` and `dig.watch` all answer identically. **This session can read GitHub payloads first-hand and no secondary source at all, on either transport.**
+
+🔴 **The consequence is stated rather than hidden:** every market and regulatory figure this pass carries is **WebSearch-REPORTED and first-hand-UNVERIFIABLE**, and is labelled that way wherever it appears.
+
+### 🟢 The licence cells that moved this week
+
+| row | was | is | mover |
+|---|---|---|---|
+| [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) | `RESERVED` | 🟢 `STEWARD-RESERVATION` | the reservation is **MariaDB's, in the BUSL form** |
+| [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | `RESERVED` | 🟢 `CONDITIONAL-GRANT` | an **X11/academic grant** the two-phrase permissive test could not see |
+| [`twentyhq/twenty`](https://github.com/twentyhq/twenty) | *(nothing — and that is the point)* | 🟢 **stays `AGPL-3.0`** | 🔴 this pass's first harvester read `p249`'s **refuted** `BUSL-1.1` quotation as a live verdict and would have re-asserted it |
+
 ## 2026-10-17 — Pass 261 — **`127` TREES READ FIRST-HAND OVER `6 681` `(path, row)` LADDER CELLS, AND THE LADDER'S RUN REACHED `100 %` OF WHAT THE TREES ACTUALLY CONTAIN — `27` ROWS RESOLVED, `0` OF THEM FROM A PATH THE LADDER DID NOT ALREADY HAVE**
 
 🔵 **Append-only shelf.** This is `p261`'s window; history below is not rewritten. 🔵 **Evidence:** [`p261-coverage-matrix`](../evidence/p261-coverage-matrix.2026-10-17-p261.tsv) *(`6 681`)* · [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv) *(`156`)* · [`p261-current-state-index`](../evidence/p261-current-state-index.2026-10-17-p261.tsv) *(`183`)*

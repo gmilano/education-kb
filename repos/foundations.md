@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 262 — 2026-10-17 — **`32` FOUNDATION-TIER AND ADJACENT PAYLOADS RE-READ FIRST-HAND AT `100 %` COVERAGE, AND THE ONLY TWO THAT MOVED BOTH MOVED FOR A REASON INSIDE THE LICENCE TEXT RATHER THAN INSIDE THE REPOSITORY**
+
+⏱️ **EIGHTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p262-reservation-audit`](../evidence/p262-reservation-audit.2026-10-17-p262.tsv) *(`71` payloads, `39` slugs, `0` failures of any kind)* · **instrument:** [`pass262-scoped-reservation-audit`](../compose/code/pass262-scoped-reservation-audit/).
+
+### 🟢 `P262-F1` — the licence-file reads, every one on an `ls-remote`-resolved ref
+
+🟢 **`32` non-`README` payloads across `39` slugs, `0` `NO-REF`, `0` `NO-TREE`, `0` `FETCH-FAIL`.** Sizes are **bytes** *(see `P262-F4`)*.
+
+| row | payload | bytes | verdict | region |
+|---|---|---|---|---|
+| 🔴 [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) | `LICENSE` | `4 818` | 🔴 **`STEWARD-RESERVATION`** *(was `RESERVED`)* — `BUSL-1.1`, still not OSI | North America |
+| 🔴 [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | `LICENSE` | `2 069` | 🟡 **`CONDITIONAL-GRANT`** *(was `RESERVED`)* — U. Chicago academic / not-for-profit | North America |
+| 🟢 [`sodadata/soda-core`](https://github.com/sodadata/soda-core) | `LICENSE` | `3 804` | `NO-RESERVATION` — `Elastic-2.0`, not OSI, **and no reservation phrase at all** | EMEA *(Belgium)* |
+| 🟢 [`facebookresearch/seamless_communication`](https://github.com/facebookresearch/seamless_communication) | `LICENSE` | `19 333` | `NO-RESERVATION` | North America |
+| 🟢 [`kuali/rice`](https://github.com/kuali/rice) | `LICENSE.txt` · `NOTICE.txt` | `11 182` · `20 135` | `NO-RESERVATION` on both | North America |
+| 🟢 [`openstax/osbooks-biology-bundle`](https://github.com/openstax/osbooks-biology-bundle) | `LICENSE` | `21 442` | `NO-RESERVATION` | North America |
+| 🟢 [`krahets/hello-algo`](https://github.com/krahets/hello-algo) | `LICENSE` | `20 849` | `NO-RESERVATION` | APAC *(China)* |
+| 🟢 [`sign/translate`](https://github.com/sign/translate) | `LICENSE.md` | `17 404` | `NO-RESERVATION` | EMEA |
+| 🟢 [`jona-zwetsloot/somtoday-mod`](https://github.com/jona-zwetsloot/somtoday-mod) | `LICENSE.md` | `17 056` | `NO-RESERVATION` | EMEA *(Netherlands)* |
+| 🔴 [`khan/tutoring-accuracy-dataset`](https://github.com/khan/tutoring-accuracy-dataset) | `LICENSE` | `2 690` | `NO-RESERVATION` — non-commercial, **not OSI**, unchanged | North America |
+| 🔴 [`anaistack/cefr-asag-corpus`](https://github.com/anaistack/cefr-asag-corpus) | `LICENSE.txt` | `20 863` | `NO-RESERVATION` — `CC-BY-NC-SA-4.0`, unchanged | EMEA |
+| 🟢 [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | `LICENSE.md` | `1 891` | `NO-RESERVATION` | North America |
+| 🟢 [`enkidevs/curriculum`](https://github.com/enkidevs/curriculum) | `LICENSE.md` | `189` | `NO-RESERVATION` — 🟡 `189` B is **pointer-shaped**; `P971`'s class | Global |
+| 🟢 [`yunfeng-wan/cstutorbench`](https://github.com/yunfeng-wan/cstutorbench) | `LICENSE` | `313` | `NO-RESERVATION` — 🟡 also pointer-shaped | APAC |
+| 🔴 [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) | `LICENSE` | `7 705` | `RESERVED` — Nakafa Source Available `1.0`, **unchanged and correct** | APAC *(Indonesia)* |
+| 🔴 [`No-Suggest/NoSuggest`](https://github.com/No-Suggest/NoSuggest) | `LICENSE` | `417` | `RESERVED` — **unchanged and correct**: a bare refusal with no grant anywhere in `417` B | Global |
+
+### 🔴 `P262-F2` — the finding that outranks the rows: the reservation was MARIADB's, not DataCebo's
+
+🔴 **[`sdv-dev/SDV`](https://github.com/sdv-dev/SDV)'s reservation is at line `34` and reads *"License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved."*** — the **steward of the Business Source License form**, reserving rights in the **document**. DataCebo, Inc. is the Licensor at line `5`.
+
+🔴 **`p261`'s scoped guard cannot reach it.** The fix at `p261` keys on `(payload, SECTION)` and a steward notice is a **sentence**, so `aggregate_sections()` returns `[]`, `subject_span()` returns the whole file, and there is no span to scope to. 🔵 **The verdict was right and the method was unsound — `p260`'s named failure, third pass running.**
+
+🟡 **Why a foundation shelf cares:** the identical notice sits in **every** BUSL payload ever written, including permissively-licensed projects that vendor a BUSL dependency's text into their own tree. 🔴 **A gate that reads it as the subject's reservation retracts a permissive row.**
+
+### 🟢 `P262-F3` — `Elastic-2.0` carries NO steward reservation, and that was measured rather than assumed
+
+🟢 [`sodadata/soda-core`](https://github.com/sodadata/soda-core)'s `3 804` B `Elastic-2.0` contains **zero** occurrences of *"all rights reserved"*. 🔵 **So "source-available forms reserve in their text" is FALSE as a generalisation** — it is true of BUSL and not of Elastic, and the difference is a property of each form that has to be read. `KNOWN_STEWARDS` is therefore named member by member, and a control fails when a tenth form arrives unread.
+
+### 🔴 `P262-F4` — every size on this page is BYTES, and the instrument that said otherwise was this pass's own
+
+🔴 The first sweep reported **characters** and disagreed with two correct published cells by `4` B and `2 146` B. 🟢 **The shelves were right.** 🔴 **`43` of `71` payloads — `60.6 %` — carry a non-zero byte/character delta**, so the defect would have mis-stated most sizes on this page, not two of them. 🔵 `p261`'s *disbelieve the instrument before disbelieving the shelves*, applied to a tool written the same hour.
+
+### 🔴 `P262-F5` — the negative results, so silence is not read as coverage
+
+🔴 **`0` new foundational repositories this pass.** Leg `3` *(`open source platform education LMS SIS ERP MIT Apache self-hosted 2026`)* returned `10` platforms and **every one is already carried**.
+
+🔴 **The leg's own negative result is worth more than its positives:** it reports that **no MIT-licensed LMS exists** in the compared set and that **`OpenOlat` is the only Apache-2.0 one** — the rest are `GPL`, `AGPL` or `LGPL`. 🔵 This is a **structural** property of the education platform tier and it bears directly on what a studio can fold into a client deliverable.
+
+🔴 **`5` of the `39` slugs in this pass's population were NOT in its first, hand-built list** — `cccareers/open-source-curriculum`, `enkidevs/curriculum`, `krahets/hello-algo`, `xiaolai/the-craft-of-selfteaching`, `yunfeng-wan/cstutorbench` and others arrived only once the `Unlicense`/`unlicensed` prefix collision was fixed. 🔵 **The instrument was more complete than the hand list, which is the only reason to have built it.**
+
 ## Pass 261 — 2026-10-17 — **TWELVE FOUNDATION ROWS WHOSE GRANTS WERE CARRIED AS UNREADABLE ARE READ FIRST-HAND, AND THE STRONGEST RUNG ON THE LADDER TURNED OUT TO HOLD A PARAMETER SHEET**
 
 ⏱️ **SEVENTH pass of `2026-10-17`.** 🔵 **Evidence:** [`p261-tier-run`](../evidence/p261-tier-run.2026-10-17-p261.tsv) · [`p261-coverage-matrix`](../evidence/p261-coverage-matrix.2026-10-17-p261.tsv) · **instrument:** [`pass261-current-state-tier-run`](../compose/code/pass261-current-state-tier-run/) *(`166` controls)*
