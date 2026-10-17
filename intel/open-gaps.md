@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 278 — **A DECLARED GAP THAT WAS A REDISCOVERY, AND THE GATE THAT WOULD HAVE CAUGHT IT EXISTS AND WAS NOT RUN**
+
+⏱️ **Twenty-fourth pass of `2026-10-17`.** Append-only; nothing below is rewritten.
+🔵 **Evidence:** [`channel-conflict.2026-10-17-p278.tsv`](../evidence/channel-conflict.2026-10-17-p278.tsv)
+*(14 slugs, both channels, pinned refs)* ·
+[`tree-enumeration.2026-10-17-p278.tsv`](../evidence/tree-enumeration.2026-10-17-p278.tsv) *(6 trees)* ·
+[`p278-websearch.2026-10-17-p278.tsv`](../evidence/p278-websearch.2026-10-17-p278.tsv) *(12 legs)* ·
+[`egress-map.2026-10-17-p278.tsv`](../evidence/egress-map.2026-10-17-p278.tsv) *(13 channels)*.
+
+### 🔴 `p277`'s DECLARED GAP 1 — withdrawn, because it was not a gap
+
+`p277` ranked, first and at zero searches: *"**Build the payload-vs-metadata CONFLICT class**, then
+sweep the metadata-grade rows."* Its justification: *"this base has a grade for payload and a grade for
+metadata and **no class at all for CONFLICT**."*
+
+🔴 **The class is `p121`'s, from 2026-10-11** — 249 addresses, 161 manifests, 104 declaring, **10
+contradictions (9.6 %)**, a four-value direction axis, and the operational rule *"a manifest licence
+field is a HINT; the committed licence file is the GRANT."* 🔴 **And the instance `p277` reported as a
+new defect class is ROW 8 of it**, with the identical verdict.
+
+🔵 **`make claims TOKEN=conflict` → `ALREADY CLAIMED … STOP`, 26 cells in `repos/trending.md`, exit
+1.** Negative arm verified too (`NOT CLAIMED`, exit 0). The Makefile calls it *"THE GATE: run before
+publishing any 'there is no X'"*. **It was not run.**
+
+🟢 **The one defensible half is kept and discharged:** the row vocabulary could not distinguish
+*"metadata grade because the payload was read and agrees"* from *"metadata grade because nobody
+looked"*. `p278` swept the four build-on rows on `agents/top.md` — **all four are metadata because
+there is nothing else**, proven by full tree enumeration.
+
+### 🟢 DISCHARGED — `p277`'s items 2 and 3, both in `recount.py`
+
+- 🟢 **Item 2, the MCP predicates (20 vs 21): the GATE WAS RIGHT.** `p277`'s enumeration matched the
+  literal substring `mcp`, which drops `AStheTECH/mewcp-google-classroom` — **and `MCP_HINT`'s own
+  code comment already named that failure mode.** 🔴 The dropped row is the **proprietary** one, so the
+  count that drops it under-reports the only row carrying commercial risk. **Corrected to 21**, and
+  both scopes (whole file **21**, MCP section **19**) are registered with boundaries in code, because
+  a bare count with three defensible scopes cannot be checked at all.
+- 🟢 **Item 3, the tier boundary: STRUCTURAL now** — heading to next `## ` heading. A heading cannot be
+  deleted by fixing a numeral, which is exactly the edit that broke the last boundary.
+- 🟢 **And `p277`'s text-drift defect, declared in passing, is fixed:** `published` is **read from the
+  shelf**, so a sentence edited without the rows is `STALE` and a sentence **deleted** is `NO-ANCHOR`,
+  which **fails** the gate. **`STALE=0 NO-ANCHOR=0 of 5`.**
+- 🔵 **`p278`'s own first anchor missed** because the pinned phrase **wrapped across two lines**. All
+  anchors are whitespace-tolerant now — an anchor that breaks on a reflow is the same brittleness class
+  as one copied from the number it checks.
+
+### 🟢 DISCHARGED — item 6, the regional battery, and LATAM's first binding statute
+
+Queried **per jurisdiction** rather than per region (`T53`): **Colombia's Ley 2626 de 2026** is a
+**statute** whose implementing *lineamientos* do not exist yet; **Brazil**, **Mexico**, **Chile**,
+**Argentina** and **Peru** all return named, dated instruments. 🔴 **North America inverts the
+assumption this base was scoped against:** the US federal instrument (Federal Register **2026-07087**,
+13 Apr 2026) governs **grant money**, and the binding duties are **state statutes** — Maryland
+**SB 720**, Idaho **SB 1227**, **Ohio**'s passed deadline of 1 Jul 2026. ⚠️ **Chile was nearly
+published as a blank** until a jurisdiction-targeted retry; **the first query's silence was the
+query's, not the country's.**
+
+### 🔴 NOT DISCHARGEABLE HERE — item 7, and the reason is now measured rather than assumed
+
+`p277` ranked *"read, with egress: CBSE Circular Acad-15/2026 first"*. 🟢 Code channels all answer
+(`raw.githubusercontent.com` 200, `ls-remote` OK, npm 200). 🔴 Policy hosts do not:
+`cbseacademic.nic.in`, `federalregister.gov`, `community.canvaslms.com` **DNS-unresolvable**;
+`gov.br`, `ed.gov`, `oregon.gov`, `govinfo.gov` **proxy-403**; `api.github.com` **403**.
+🔵 **Eleven hosts, four passes, one failure mode** → **this is the shape of the environment, not a
+per-host accident.** Primary **policy** reads should be ranked as *requires an egress-enabled run*;
+primary **licence** reads remain fully available (`T61`).
+
+### 🔴 NEW — three defects in `p278`'s own instrument, and one left standing
+
+1. 🟢 **Fixed — a green run over an empty input.** `sweep.sh` documented a file argument and read
+   stdin; under `nohup` it read **zero** slugs and **exited 0**. `p252`'s silent-zero class in a
+   harvester. An empty read exits **1** now.
+2. 🟢 **Fixed — the most expensive row went `UNPLACEABLE`.** The shared classifier emits `FAIRCODE`;
+   the tier table spelled it `FAIR-CODE`, so **`leemons`, the €100,000 grant, fell through.** `TIERS`
+   is bound to **every token `lib/license_family.sh` can emit**, with a control asserting it.
+3. 🟢 **Fixed — `MITIGATED` placed as permissive.** Prefix normalisation also put
+   **`Apache-2.0-with-Commons-Clause`** at tier 0, when the **Commons Clause removes the right to
+   sell**. The fix already existed one library over as `P299`: *"a licence token is a word or it is
+   noise."*
+4. 🔴 **STANDING — `sweep.sh` reads ROOT manifests only**, so `ls1intum/Athena` returned `NO-CHANNEL`
+   while `p275` established **12 of its 14 manifests declare MIT**, all in subdirectories. *"A monorepo
+   declares its grant per package"* is `p275`'s sentence, and the instrument built to enforce the
+   two-channel rule re-committed it. **Ranked second for `p279`.**
+
+### 🔴 NEW — a correction to `p121`, on the row a studio would actually reuse
+
+`cccareers/open-source-curriculum`'s payload is **`CC-BY-NC-SA-4.0`** (`LICENSE.md`, **1,891 B**, read
+first-hand) — **non-commercial**. `p121` recorded *"CC-BY family"* and typed *"permissive over
+attribution-share"*. 🔵 **Attribution-share reads as "ship it with credit"; NC forbids the deliverable
+outright**, and this is a **curriculum** repository — exactly what a training engagement picks up.
+**Corrected in place with the byte count published.** 🟢 **The remaining nine rows reproduced to the
+byte** six days on.
+
+### 🔵 The backlog for `p279`, ranked
+
+1. 🔴 **Make `make claims` a STEP, not an instruction in prose.** This pass's headline is a gate that
+   exists and was not run. **The register and the prose cannot fix this; only a recipe can.**
+2. 🔴 **Walk manifests PER PACKAGE in `sweep.sh`** — defect 4 above.
+3. 🟡 **Scope the absence queue to the latest statement per subject** (`T56`, carried). `p277`'s
+   measurement stands: **`QUEUE-UNENUMERATED=69` is an upper bound** and is published as one.
+4. 🟡 **Sweep the remaining metadata-graded rows** — the census this pass found **107**
+   metadata/manifest-graded table rows across the shelves; `p278` worked the **4** that a studio is
+   told to build on.
+5. 🟡 **Re-run the six upgraded absences on the resolved default ref**, not `HEAD` alone — `p269`'s
+   `kolibri` lesson (MIT on `develop`, 404 on `main`) is **not** discharged by clean trees.
+6. 🔵 **On an egress-enabled run:** `Ley 2626`'s scope first — *"binding on public, optional for
+   private"* decides whether a private-school client has an obligation at all — then CBSE
+   Acad-15/2026, MEXT Ver. 2.0, and the Canvas Free-for-Teacher question.
+7. 🔵 **Settle the Ontario conflict**, which is published **unresolved** because `ontario.ca` was not
+   reachable to decide it.
+
 ## Pass 277 — **THE EXECUTION GAP IS DISCHARGED: `make hooks` RAN, REFUTED `p276`'s EXPECTED RESULT, NAMED THE BROKEN CONTROL AND NOW EXITS `0`**
 
 ⏱️ **Twenty-third pass of `2026-10-17`.** Append-only; nothing below is rewritten.

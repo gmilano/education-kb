@@ -1,0 +1,15 @@
+slug	default_ref	head_sha	payload_path	payload_bytes	payload_family	manifest_path	manifest_declares	verdict	severity	note
+leemonade/leemons	main	b1ca5d84d8b2	LICENSE.md	10830	FAIRCODE	package.json	MIT	UNPLACEABLE	GREY	payload family not placeable by this instrument — read the payload by hand
+classroomio/classroomio	main	6e40438cd00b	LICENSE	34523	AGPL-3.0	package.json	MIT	MANIFEST-OVERSTATES	RED	manifest declares MIT (permissive) over a committed AGPL-3.0 (network copyleft) — a manifest-reading gate returns PASS and the obligation ships undetected
+codelitdev/courselit	main	62b5abb55e4e	LICENSE.md	34143	AGPL-3.0	package.json	MIT	MANIFEST-OVERSTATES	RED	manifest declares MIT (permissive) over a committed AGPL-3.0 (network copyleft) — a manifest-reading gate returns PASS and the obligation ships undetected
+tadreeb-lms/tadreeblms	main	67550ca0aec8	LICENSE	34523	AGPL-3.0	composer.json	MIT	MANIFEST-OVERSTATES	RED	manifest declares MIT (permissive) over a committed AGPL-3.0 (network copyleft) — a manifest-reading gate returns PASS and the obligation ships undetected
+LearnPress/learnpress	develop	ca5296320435	-	0	-	package.json	ISC	SINGLE-CHANNEL-MANIFEST	GREY	manifest read, payload NOT read — this is the grade p121 calls a HINT
+cccareers/open-source-curriculum	main	dd01b983835d	LICENSE.md	1891	CC-BY-NC-SA-4.0	package.json	MIT	MANIFEST-OVERSTATES	RED	manifest declares MIT (permissive) over a committed CC-BY-NC-SA-4.0 (non-commercial / proprietary / absent) — a manifest-reading gate returns PASS and the obligation ships undetected
+Gnanakamalesh-M/student-dropout-early-warning	main	6685be37a168	-	0	-	pyproject.toml	MIT	SINGLE-CHANNEL-MANIFEST	GREY	manifest read, payload NOT read — this is the grade p121 calls a HINT
+Open-TutorAi/open-tutor-ai-CE	main	196c547291da	LICENSE	1531	BSD	pyproject.toml	MIT	SAME-TIER-WRONG-NAME	YELLOW	MIT vs BSD — same tier (permissive), so nothing a studio may do changes; the ATTRIBUTION obligation does
+codeXsidd/Studivexa	main	6ac279946ca9	LICENSE	1068	MIT	package.json	ISC	SAME-TIER-WRONG-NAME	YELLOW	ISC vs MIT — same tier (permissive), so nothing a studio may do changes; the ATTRIBUTION obligation does
+nextcloud/llm2	main	4b8fcb7ea309	LICENSE	1069	MIT	pyproject.toml	AGPL-3.0	MANIFEST-UNDERSTATES	YELLOW	manifest declares AGPL-3.0 (network copyleft) over a committed MIT (permissive) — p121's harmless direction: over-blocks, does not under-report
+adriasantacreu/google-classroom-mcp	master	29c2c2a07670	-	0	-	package.json	MIT	SINGLE-CHANNEL-MANIFEST	GREY	manifest read, payload NOT read — this is the grade p121 calls a HINT
+ls1intum/Athena	develop	6316d302c929	-	0	-	pyproject.toml(no-licence-field)	-	NO-CHANNEL	GREY	neither channel read — this row carries no grade
+learningequality/kolibri-design-system	develop	adefe26118c6	-	0	-	package.json	MIT	SINGLE-CHANNEL-MANIFEST	GREY	manifest read, payload NOT read — this is the grade p121 calls a HINT
+DMontgomery40/mcp-canvas-lms	main	c0646ba10ac2	-	0	-	package.json	MIT	SINGLE-CHANNEL-MANIFEST	GREY	manifest read, payload NOT read — this is the grade p121 calls a HINT

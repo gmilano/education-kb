@@ -327,6 +327,55 @@ while **North-West University became the first SA university with an official AI
 framework, not the vendor.** And every regional figure here is **secondary-source grade**: `p268`
 established the non-GitHub DNS failure as environmental, and no ministry document was read.
 
+## Pass 278 — four platforms on this shelf declare MIT in a manifest while committing AGPL-3.0, and a client's own CI will wave all four through
+
+🔵 **Evidence:** [`channel-conflict.2026-10-17-p278.tsv`](../evidence/channel-conflict.2026-10-17-p278.tsv)
+*(14 slugs, both channels, pinned refs)*. Instrument:
+[`compose/code/p278-channel-conflict/`](../compose/code/p278-channel-conflict/), wired into
+`make hooks` as `make gate-conflict`.
+
+🟢 **`p121` measured this in October 2026 and the measurement REPRODUCES six days on, to the byte.**
+Every one of these is a platform or platform-shaped product a studio could be asked to build on:
+
+| platform | manifest declares | committed payload, **re-read this pass** | direction |
+|---|---|---|---|
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🟢 **MIT** (`package.json`) | 🔴 **AGPL-3.0**, `LICENSE` **34,523 B** | 🔴 **permissive over network copyleft** |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | 🟢 **MIT** (`package.json`) | 🔴 **AGPL-3.0**, `LICENSE.md` **34,143 B** | 🔴 **permissive over network copyleft** |
+| [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | 🟢 **MIT** (`composer.json`) | 🔴 **AGPL-3.0**, `LICENSE` **34,523 B** | 🔴 **permissive over network copyleft** |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | 🟢 **MIT** (`package.json`) | 🔴 **"Fair Code License" v1.0**, `LICENSE.md` **10,830 B** — **€100,000 past 1,000 users + 5%** | 🔴 **permissive over billed** |
+| [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | 🟢 **MIT** (`package.json`) | 🔴 **`CC-BY-NC-SA-4.0`**, `LICENSE.md` **1,891 B** | 🔴 **permissive over NON-COMMERCIAL** |
+
+🔴 **One of those rows is a CORRECTION to `p121`, not a reproduction.** `p121` recorded
+`cccareers/open-source-curriculum`'s payload as *"🟡 **CC-BY** family"* and typed the direction
+*"permissive over attribution-share"*. **The payload read first-hand this pass is `CC-BY-NC-SA-4.0` —
+non-commercial.** 🔵 **"Attribution-share" reads as "ship it with credit"; NC forbids the client
+deliverable outright.** On a **curriculum** repository — precisely the kind of asset a studio reuses in
+a training engagement — that gloss is the expensive kind of wrong. **Corrected on this shelf and in
+`repos/trending.md`.**
+
+🔵 **What a studio must take from this, stated as a rule rather than a list.** `p121` named the
+mechanism and it has not changed: **every licence gate in a client's CI reads the MANIFEST.**
+`npm ls --json`, `pip-licenses`, most SBOM generators and most SCA scanners report the declared field.
+On these five addresses that gate returns *"permissive, pass"* and the copyleft, the €100,000 or the
+non-commercial bar **ships undetected into the deployment**. 🟢 **The intake rule: a manifest licence
+field is a HINT; the committed licence file, on the default branch, at a pinned SHA, is the GRANT.**
+
+🟢 **And it is a standing check now, not a census.** `p121`'s table was built by hand at one moment
+with each verdict typed per row; `make gate-conflict` re-derives **all ten** published directions from
+their own family cells on every run, so a typed verdict can no longer drift from the evidence beside
+it. 🔵 `make conflict-sweep SLUGS=f` is the online half and stays out of `hooks`.
+
+⚠️ **Scope, stated plainly: this changes nothing about what Globant may build on.** Four of the five
+were already excluded as copyleft or billed, and they remain excluded — **for the reason that is
+actually true**, which is the point `p276` made about refusing an engagement correctly. The permissive
+full-platform count is **unchanged at five** (OpenOLAT, Oppia, Kolibri, Sunbird, GegoK12).
+
+🟡 **Fourth consecutive pass with no new permissive platform.** The global platform query returned this
+base's own answer: **GegoK12**, MIT, already shelved since `p274`. `make carried SLUG=Gego-K12/gegok12`
+returns `CARRIED` and was run **before** the leg was written up — the check `p277`'s conflict claim
+skipped. See [`p278-websearch.2026-10-17-p278.tsv`](../evidence/p278-websearch.2026-10-17-p278.tsv),
+leg 11.
+
 ## Pass 277 — no new permissive platform exists to find, and the free Canvas door this shelf's sequencing assumes may have closed
 
 🟡 **An informative nil, stated with the query that produced it.** Leg 11 ran

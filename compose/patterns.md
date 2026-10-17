@@ -1544,3 +1544,91 @@ or the rollout number is the number that falls.
 
 **Timeline:** 3–4 weeks to the signed pilot gate and the synthetic-data corpus; one term for the pilot
 itself, which **cannot be compressed** — compressing it is the finding the auditor made.
+
+## P32 — The licence intake gate, sold as a deliverable, because the client's own CI structurally cannot do it *(new in pass 278)*
+
+**When a client asks for it:** *"Our security team already scans dependencies — we're covered on open
+source licensing."* 🔴 **They are covered on what the manifest SAYS.** Every licence gate in a normal
+CI pipeline reads the **declared field**: `npm ls --json`, `pip-licenses`, most SBOM generators and most
+SCA scanners. 🔴 **On this base's own education shelf, five addresses declare a permissive licence in a
+manifest while committing something else entirely** — and the client's gate returns *"permissive,
+pass"* on all five:
+
+| address | its manifest declares | what it actually commits | what ships undetected |
+|---|---|---|---|
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | **MIT** | **AGPL-3.0** (`LICENSE`, 34,523 B) | a **network-copyleft** obligation on a hosted deliverable |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | **MIT** | **AGPL-3.0** (`LICENSE.md`, 34,143 B) | same |
+| [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | **MIT** | **AGPL-3.0** (`LICENSE`, 34,523 B) | same |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | **MIT** | **"Fair Code License" v1.0** (10,830 B) | 🔴 **€100,000 past 1,000 users, plus 5%** |
+| [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | **MIT** | 🔴 **`CC-BY-NC-SA-4.0`** (1,891 B) | a **non-commercial** bar on a client deliverable |
+
+🟢 **The rule the gate enforces, in one sentence:** *a manifest licence field is a **HINT**; the
+committed licence file, on the **default branch**, at a **pinned SHA**, is the **GRANT**.*
+
+### Wiring it
+
+| step | what you build | why that exact shape |
+|---|---|---|
+| **1. Resolve the ref** | `git ls-remote --symref <repo> HEAD` → the **default branch**, then pin the **SHA** | 🔴 Guessing `main` is a measured failure on this base: `kolibri` is **MIT on `develop` and 404 on `main`** (`p269`). A grant read on the wrong ref is not this repository's grant |
+| **2. Read the payload** | Fetch the licence file from `raw.githubusercontent.com` at the pinned SHA; classify on the **title block**, never the body | 🔴 GPL-3.0 **section 13 is titled** *"Use with the GNU Affero General Public License"*, so a body grep labels every GPL-3.0 payload AGPL-3.0 (`P171`). Reuse one hardened classifier — this base has `compose/code/lib/license_family.sh` and rewrote it from scratch once, reintroducing the defect |
+| **3. Read the manifest** | `package.json` · `pyproject.toml` · `composer.json` · `Cargo.toml` · `pom.xml` — **per package, not only at the root** | 🔴 `ls1intum/Athena` declares **MIT in 12 of 14 manifests**, all in subdirectories, while its **root** `pyproject.toml` is a 632-byte workspace stub with the string `license` **absent**. A root-only reader calls a permissive monorepo unlicensed |
+| **4. Read a registry** | npm / PyPI / Packagist for the published artefact | 🟢 This is the channel that settled `mcp-canvas-lms`: **MIT across 19 published versions** when the tree carried no licence **FILE**. 🔵 Note the wording — `make gate-enumeration` rejected an earlier draft of this cell that said *"no grant at all"*, because the manifest declares one. **A gate catching the pattern that teaches the two-channel rule for forgetting it is the strongest argument for the gate** |
+| **5. Compare on a TIER, not for equality** | `direction(manifest, payload)` → the manifest **overstates** (🔴 bills), **understates** (🟡 over-blocks) or is **same-tier, wrong name** (🟡 attribution changes) | 🔵 The two directions do not cost the same. Measured: **7 of 10** contradictions overstate. Equality cannot express *which way* the error leans |
+| **6. Prove an absence, never ladder it** | `git clone --depth 1 --filter=blob:none --no-checkout` + `git ls-tree -r`, and **publish the path count** | 🔴 A path ladder was measured at a **~1-in-4 error rate** over 43 rows (`p275`/`p276`). *"No licence in 15 paths"* and *"no licence in 15,448 paths"* are the same sentence and different claims |
+| **7. Ask WHOSE grant a path carries** | Exclude vendored, asset, icon, translation and source paths before treating a licence-like path as the grant | 🔴 `LearnPress/learnpress`: **1,985 paths**, and **both** licence-like paths belong to a **vendored dependency** and a **`.php` source file**. An SCA scanner reports *"GPL-3.0 found"* and attributes a dependency's grant to the parent |
+
+🔵 **Make it a STEP, not a document.** This base's own experience is the argument: it published a
+*"manifest is a hint"* rule in `p121` and then spent a later pass rebuilding the class, because the
+rule lived in prose. The runnable version — `make gate-conflict` plus
+[`compose/code/p278-channel-conflict/`](code/p278-channel-conflict/) — re-derives every verdict on
+every run. **A rule that has to be remembered is not a control.**
+
+⚠️ **Price it honestly.** Steps 1–5 are a few days of work on a repository list the client already has;
+step 6 needs egress and time proportional to tree size. **The deliverable that sells it is step 5's
+report**, because it names, per dependency, what the client's existing gate waved through.
+
+## P33 — The compliance-deadline engagement, scoped to a JURISDICTION rather than a region *(new in pass 278)*
+
+**When a client asks for it:** *"What do we need to do about AI in education policy?"* 🔴 **There is no
+regional answer to that question, and three passes of this base's own blanks are the evidence** — EMEA
+looked quiet until `p275` queried the **instrument**, APAC looked quiet for ten passes until `p277`
+queried the **ministries**, and LATAM looked like *"intention rather than policy"* until `p278` queried
+the **five countries separately** and found a statute. **Ask which jurisdiction, then build against the
+instrument that binds there.**
+
+### The three engagement shapes, and how to tell which one you are in
+
+| shape | where it is live now | the deliverable |
+|---|---|---|
+| 🔴 **A statute ahead of its guidance** | **Colombia — Ley 2626 de 2026** (sanctioned **Aug 2026**): computational thinking, programming, **AI**, data science and digital citizenship phased into basic and secondary education; **binding on official public schools**, an optional model for private ones; **MEN must act jointly with MinTIC and MinCiencias, so the implementing *lineamientos* do not exist yet** | 🟢 **Curriculum mapping against the statute, before the guidance lands.** The client's question is *"how do we comply before MEN publishes"*, which is an implementation engagement **with a deadline and no spec** — so the deliverable is a defensible mapping plus the evidence trail that justifies it |
+| 🔴 **A deadline already in the past** | **Ohio** — every district had to **adopt an AI-use policy by 1 Jul 2026**. **Maryland SB 720 (Ch. 634)** and **Idaho SB 1227** oblige **AI literacy and teacher training** | 🟢 **Policy remediation, then the training programme.** Teacher PD is staffable work with a statutory hook. 🔵 Build the teacher-facing half first: Japan funded **100 municipalities on teacher administration against 10 in class** — follow the money, not the demo |
+| 🟡 **No rule at all, and the buyer is lower down** | **Canada** — no binding provincial rule in **Ontario, Alberta or BC**; education is **provincial jurisdiction**; the Alberta Teachers' Association's own summary is that there is *"not a lot of policy at the jurisdictional level"* | 🟢 **Sell the policy itself to the board or district.** BC's 2023 ministry framework (**seven areas of consideration**) and the **ASBA**'s Sept 2024 guidance are the scaffolding to adapt, not competitors |
+
+### What you build on, in every one of the three
+
+🟢 **The permissive stack does not change with the jurisdiction** — only the obligation does:
+[`moodle/moodle`](https://github.com/moodle/moodle) or [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)
+(**Apache-2.0**) as the platform; [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) (**MIT**
+core — ⚠️ **26 of 38 modules free, 12 sold separately: scope the modules in the SOW**) where the need is
+administrative rather than instructional; [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (**MIT**)
+as the reference ITS; [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents)
+(**MIT**) for the syllabus → slides → assessment pipeline a curriculum mandate actually asks for; and
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) + [`ls1intum/Iris`](https://github.com/ls1intum/Iris)
+(**MIT**) where automated feedback is in scope.
+
+🔵 **Two framings that travel across all three shapes.** **(1)** Teach *about* AI before teaching
+*with* it: Brazil's MEC document sets **7 diretrizes and 12 aprendizagens** for teaching about AI with
+the **BNCC** as the starting point, and China, India and Colombia all legislate the curriculum side
+first — so an *AI-literacy* curriculum is the lowest-risk opening deliverable almost everywhere.
+**(2)** The data-protection floor is usually statutory even where the pedagogy is only guidance:
+Brazil's **LGPD (Lei 13.709/2018)** and **ECA Digital (Lei 15.211/2025)** are transversal and
+**mandatory** inside an otherwise non-binding orientation. **Build to the floor, not to the guidance.**
+
+⚠️ **Evidence grade, stated because it changes what you may put in a proposal.** Every policy
+instrument above is **SECONDARY-CONVERGENT, PRIMARY UNREAD**: the primary addresses were located and
+**none is reachable from this environment**
+([map](../evidence/egress-map.2026-10-17-p278.tsv)). 🔴 **Before a statute goes into a client-facing
+document, read the official text** — above all **Ley 2626**'s scope, where *"binding on public,
+optional for private"* decides whether a private-school client has an obligation at all. 🔴 And two
+figures that circulate widely are **not** usable: **"27 states"** counts **active bills**, not enacted
+laws, and the **"$2.5B K-12 AI grant program"** traces to a single weakly-sourced blog.

@@ -22,9 +22,9 @@ PY ?= python3
 GATE_LOG ?= /tmp/education-kb-gate-enumeration.log
 TABLE_LOG ?= /tmp/education-kb-gate-tables.log
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables enumerate
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict enumerate conflict-sweep
 
-hooks: gate-offline recount gate-enumeration gate-tables ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, plus p277's table-structure gate
+hooks: gate-offline recount gate-enumeration gate-tables gate-conflict ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, plus p278's channel-conflict gate
 
 # 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
 # p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
@@ -48,6 +48,30 @@ gate-enumeration: ## ACTION p275 — no shelf may assert an absent grant that an
 gate-tables: ## ACTION p277 — no shelf may publish a data row that renders as a table header
 	@cd compose/code/p277-table-structure && { $(PY) test_table_structure.py > $(TABLE_LOG) 2>&1 || { echo "🔴 p277-table-structure FAILED — the suite's own report follows:" ; sed "s/^/   /" $(TABLE_LOG) ; false ; } ; } && echo "── p277-table-structure (15 controls: the empty-header, cross-table-blank and pipe-art shapes)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p277-table-structure/table_structure.py . || exit 1
+
+# 🟢 p278 (`p277`'s declared item 1): the CONFLICT class — which TURNED OUT TO ALREADY EXIST.
+# `p277` ranked "build the payload-vs-metadata CONFLICT class" FIRST at zero searches. `p121`
+# had built it on 2026-10-11: 249 addresses, 161 manifests, 104 declaring, 10 contradictions
+# = 9.6 %, published in repos/trending.md with a four-value DIRECTION axis. And the instance
+# `p277` reported as NEW -- open-tutor-ai-CE, BSD payload vs MIT pyproject -- is ROW 8 of that
+# table, with the identical verdict.
+# 🔵 `make claims TOKEN=conflict` returns `ALREADY CLAIMED … STOP` over 26 cells in
+# repos/trending.md and exits 1. The gate for this error existed and was not run.
+# 🟢 So what p278 owes is the half p121 never built: p121's census was a ONE-OFF, by hand, at
+# one moment, with its verdicts TYPED per row. This gate re-derives every one of them from
+# its own family cells through the shared classifier, so a typed verdict cannot drift from
+# the evidence beside it. No network.
+GATE_CONFLICT_LOG ?= /tmp/education-kb-gate-conflict.log
+
+gate-conflict: ## ACTION p278 — no typed CONFLICT verdict may disagree with its own family cells
+	@cd compose/code/p278-channel-conflict && { $(PY) -I test_direction.py > $(GATE_CONFLICT_LOG) 2>&1 || { echo "🔴 p278-channel-conflict/direction FAILED — the suite's own report follows:" ; sed "s/^/   /" $(GATE_CONFLICT_LOG) ; false ; } ; } && echo "── p278-channel-conflict/direction (p121's ten reproduced + the Commons-Clause arm)" && echo "   PASS" || exit 1
+	@cd compose/code/p278-channel-conflict && { $(PY) -I test_conflict_gate.py >> $(GATE_CONFLICT_LOG) 2>&1 || { echo "🔴 p278-channel-conflict/gate-parsing FAILED — report follows:" ; sed "s/^/   /" $(GATE_CONFLICT_LOG) ; false ; } ; } && echo "── p278-channel-conflict/gate-parsing (the hyphen regression, NC-before-CC-BY ordering)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p278-channel-conflict/conflict_gate.py --root . || exit 1
+
+# 🔴 ONLINE half — needs raw.githubusercontent.com + git ls-remote.  OUT of `hooks`.
+conflict-sweep: ## ACTION p278 — re-read BOTH channels for a slug list: make conflict-sweep SLUGS=f
+	@test -n "$(SLUGS)" || { echo "usage: make conflict-sweep SLUGS=path/to/slugs.txt"; exit 2; }
+	@compose/code/p278-channel-conflict/sweep.sh "$(CURDIR)/$(SLUGS)"
 
 # 🔴 ONLINE half — stays OUT of `hooks` so the standing check runs without egress.
 enumerate: ## ACTION p275 — enumerate trees for a slug list: make enumerate SLUGS=slugs.txt

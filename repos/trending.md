@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 278) — `p121`'s contradiction census REPRODUCES to the byte six days on, and **one of its ten rows was under-graded**
+
+⏱️ **Twenty-fourth pass of `2026-10-17`.** Append-only — everything below this section is prior
+history and is not rewritten. Evidence:
+[`channel-conflict.2026-10-17-p278.tsv`](../evidence/channel-conflict.2026-10-17-p278.tsv) *(14 slugs,
+both channels, pinned refs)* ·
+[`tree-enumeration.2026-10-17-p278.tsv`](../evidence/tree-enumeration.2026-10-17-p278.tsv) *(6 trees
+enumerated in full)* ·
+[`egress-map.2026-10-17-p278.tsv`](../evidence/egress-map.2026-10-17-p278.tsv) *(which channels
+answer here, and which do not)*.
+
+### 🟢 Headline: this shelf already held the class `p277` ranked first, and the gate that says so exists
+
+`p277` declared *"this base has a grade for payload and a grade for metadata and **no class at all for
+CONFLICT**"* and ranked building it **first**, at zero searches. 🔴 **It is on this shelf, built by
+`p121` on 2026-10-11** — 249 addresses, 161 manifests, 104 declaring, **10 contradictions = 9.6%**, a
+four-value direction axis, and an operational rule. 🔴 **And the row `p277` reported as a new defect
+class — `Open-TutorAi/open-tutor-ai-CE`, BSD payload vs MIT `pyproject.toml` — is ROW 8 of it**, with
+the identical verdict (*"both permissive, wrong name"*).
+
+🔵 `make claims TOKEN=conflict` → `ALREADY CLAIMED … STOP`, **26 cells on this shelf**, exit **1**.
+Both arms verified. The Makefile calls that recipe *"THE GATE: run before publishing any 'there is no
+X'"*. **It was not run.** Full write-up:
+[`compose/code/p278-channel-conflict/`](../compose/code/p278-channel-conflict/).
+
+### 🟢 Re-measured first-hand, and the byte counts are identical
+
+| address | manifest | payload re-read at the pinned ref | `p121` | `p278` |
+|---|---|---|---|---|
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | MIT | **AGPL-3.0**, `LICENSE` **34,523 B** | 34,523 B | 🟢 **identical** |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | MIT | **AGPL-3.0**, `LICENSE.md` **34,143 B** | 34,143 B | 🟢 **identical** |
+| [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | MIT | **AGPL-3.0**, `LICENSE` **34,523 B** | 34,523 B | 🟢 **identical** |
+| [`leemonade/leemons`](https://github.com/leemonade/leemons) | MIT | **Fair Code v1.0**, `LICENSE.md` **10,830 B** | 10,830 B | 🟢 **identical** |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | MIT | **BSD**, `LICENSE` **1,531 B** | 1,531 B | 🟢 **identical** |
+| [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | MIT | 🔴 **`CC-BY-NC-SA-4.0`**, `LICENSE.md` **1,891 B** | *"CC-BY family"* | 🔴 **CORRECTED** |
+| [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | ISC | **MIT** | same | 🟢 reproduced |
+| [`nextcloud/llm2`](https://github.com/nextcloud/llm2) | AGPL-3.0 | **MIT**, 1,069 B | same | 🟢 reproduced |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | ISC | 🔵 **no own grant in 1,985 paths** — see below | GPL-3.0 via `readme.txt` | 🟢 upheld, **now enumerated** |
+| [`Gnanakamalesh-M/student-dropout-early-warning`](https://github.com/Gnanakamalesh-M/student-dropout-early-warning) | MIT | 🔵 **no grant in 211 paths** | *"author claim only"* | 🟢 upheld, **now enumerated** |
+
+### 🔴 The correction: an under-graded row, and it is the one a studio would actually reuse
+
+`p121` glossed `cccareers/open-source-curriculum`'s committed file as *"🟡 **CC-BY** family"* and typed
+the direction *"permissive over attribution-share"*. **The payload is `CC-BY-NC-SA-4.0`** —
+**non-commercial**. 🔵 *Attribution-share* reads as *"ship it with credit"*; **NC forbids the client
+deliverable outright.** On a **curriculum** repository that is the expensive kind of wrong, because a
+training engagement is exactly where this asset gets picked up. **The row below is corrected in place
+in `p121`'s own table** — the single exception to this shelf's append-only rule, and it is made the way
+this base allows: the payload was **re-read first-hand**, the byte count published, and the change
+recorded here.
+
+### 🟢 And the absences stopped resting on ladders
+
+`LearnPress/learnpress` enumerates to **1,985 paths** and its only two licence-like paths are
+`inc/libraries/wp-background-process/license.txt` (a **vendored dependency's** grant) and
+`inc/TemplateHooks/.../AdminNotesTemplate.php` (a **PHP source file**). 🟢 **Both correctly rejected**
+by `pass275-grant-enumeration`'s scope test. 🔵 **A licence file inside a repository is not the
+repository's licence** — the mirror image of the manifest problem, and an SCA scanner gets it wrong in
+the same automatic way.
+
+### 🔴 Three defects in `p278`'s own instrument, found by sweeping it before trusting it
+
+1. **A green run over an empty input.** `sweep.sh` documented a file argument and read **stdin**; under
+   `nohup` it printed its header, read **zero** slugs and **exited 0**. `p252`'s silent-zero class in a
+   harvester. Fixed, and an empty read now exits **1**.
+2. **The most expensive row went `UNPLACEABLE`.** The shared classifier emits `FAIRCODE`; the tier
+   table spelled it `FAIR-CODE`, so **`leemons` — the €100,000 grant — was the row that fell through.**
+   `TIERS` is now bound to **every token `lib/license_family.sh` can emit**, with a control asserting it.
+3. **`MITIGATED` placed as permissive.** Prefix normalisation put `MITIGATED`, `MIT-plus-clause` and —
+   worst — **`Apache-2.0-with-Commons-Clause`** at tier 0, when the **Commons Clause removes the right
+   to sell**. 🔵 The fix was already written one library over as `P299`: *"a licence token is a word or
+   it is noise."* **Same class, one layer up.**
+
+🔵 **One defect left standing, named rather than hidden:** `sweep.sh` reads **root** manifests only, so
+`ls1intum/Athena` returned `NO-CHANNEL` while `p275` established **12 of its 14 manifests declare
+MIT**, all in subdirectories. *"A monorepo declares its grant per package"* is `p275`'s own sentence,
+and this instrument re-committed the error it corrects. Registered for `p279`.
+
 ## 2026-10-17 (pass 277) — `make hooks` RAN for the first time in three passes, and it **refuted `p276`'s own expected result**
 
 ⏱️ **Twenty-third pass of `2026-10-17`.** Append-only — everything below this section is prior history
@@ -9697,7 +9775,7 @@ other way.**
 | [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | `package.json` | 🟢 **MIT** | 🔴 **AGPL-3.0**, `LICENSE.md` 34 143 B | 🔴 **permissive over network copyleft** |
 | [`tadreeb-lms/tadreeblms`](https://github.com/tadreeb-lms/tadreeblms) | `composer.json` | 🟢 **MIT** | 🔴 **AGPL-3.0**, `LICENSE` 34 523 B | 🔴 **permissive over network copyleft** |
 | [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | `package.json` | 🟢 **ISC** | 🔴 **GPL-3.0** (resolved by p120 via the WordPress `readme.txt`) | 🔴 **permissive over copyleft** |
-| [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | `package.json` | 🟢 **MIT** | 🟡 **CC-BY** family | 🔴 permissive over attribution-share |
+| [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | `package.json` | 🟢 **MIT** | 🔴 **CC-BY-NC-SA-4.0** *(`LICENSE.md`, **1,891 B**, payload re-read first-hand at `p278`; `p121` recorded this as "CC-BY family")* | 🔴 permissive over non-commercial |
 | [`Gnanakamalesh-M/student-dropout-early-warning`](https://github.com/Gnanakamalesh-M/student-dropout-early-warning) | `pyproject.toml` | 🟢 **MIT** | 🔴 **no licence file — author claim only** | 🔴 permissive over nothing |
 | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `pyproject.toml` | 🟢 MIT | 🟢 BSD family | 🟡 both permissive, wrong name |
 | [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | `package.json` | 🟢 ISC | 🟢 MIT | 🟡 both permissive, wrong name |

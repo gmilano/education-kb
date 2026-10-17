@@ -696,6 +696,45 @@ data gets the ranking backwards.
 
 ### North America
 
+**Pass 278 — the per-jurisdiction query returns NAMED STATUTES where the federal query returns a
+GRANTS instrument, and the two were being read as one thing.** Asked at federal level, the US
+answer looks like policy; asked per jurisdiction, **the binding duties are all at state level** and
+the federal instrument turns out to govern **money, not classrooms**.
+
+| level | instrument | what it actually binds |
+|---|---|---|
+| 🟡 **US federal** | **"Final Priority and Definitions — Secretary's Supplemental Priority on Advancing Artificial Intelligence in Education"**, Federal Register doc **2026-07087**, published **13 Apr 2026** | 🔵 **A GRANTS instrument.** It *weights* AI initiatives in the Department's **discretionary grant competitions**. It does not require anything of a school. **Reading it as a schools mandate is the error this leg corrects** |
+| 🟡 US federal | **Dear Colleague Letter, 22 Jul 2025** | Existing **formula and discretionary** funds **may** support AI tools and educator training. Follows the **Mar 2025 Executive Order** on Advancing AI Education for American Youth |
+| 🟡 US federal | **Dear Colleague Letter, 20 Aug 2026** | Responsible edtech: clear instructional purpose, evidence-based, transparent to parents, **drop tools that do not improve learning**. ⚠️ **One news summary only — the letter itself was not read** |
+| 🔴 **Maryland** | **SB 720 (Chapter 634)**, signed **~26 May 2026** | 🔴 **ENACTED** — state guidance, **local AI policies**, **AI literacy**, and **teacher professional development** |
+| 🔴 **Idaho** | **SB 1227** | 🔴 **ENACTED** — **AI literacy standards** and **educator training** |
+| 🔴 **Ohio** | district duty | 🔴 **Districts had to ADOPT an AI-use policy by 1 Jul 2026** — a policy duty, not a training mandate. **The deadline has passed**, so every Ohio district is already answerable on this |
+| 🔴 **Utah** | enacted bills | **AI literacy for middle-school students** |
+| 🟡 **Virginia** | **SB 394** | Directs the state education agency to issue guidance **including teacher training** |
+| 🟡 **Oregon** | **ODE, "Generative AI in K-12 Classrooms Guidance" v3**, **Jun 2026** | Published state guidance, non-binding |
+| 🔵 **US Congress** | **HR 8747**, *K-12 AI Literacy and Readiness Act of 2026* | **INTRODUCED Apr 2026, NOT enacted.** Would let schools use existing grant funds for AI instruction and teacher training |
+| 🟡 **Canada** | 🔴 **no binding provincial rule in ON / AB / BC** | **Education is provincial jurisdiction** and the guidance that exists is from ministries, school boards and teacher federations. **BC:** Ministry framework *"Considerations for using AI tools in schools"* (2023), **seven areas**; districts set their own policies; an advisory committee is planned. **Alberta:** **ASBA** *"Artificial Intelligence Policy Guidance"* (**Sept 2024**) + a three-year provincial partnership with **Amii**. **Ontario:** 🔴 **sources CONFLICT** — one states no Ministry memorandum on AI exists, another reports 2026-27 guidance expecting educators to understand responsible AI use, privacy, cyber safety and ethics; the non-government instruments are an **OASBO/ECNO** guideline (2025) and an **OTF discussion paper** (Jan–Mar 2026) |
+
+🟢 **What this changes for an engagement.** A North American proposal has been scoped against a
+federal posture. **It should be scoped against a state.** Maryland and Idaho oblige **teacher
+training** — a deliverable a studio can actually staff — and **Ohio's district-policy deadline has
+already passed**, which makes policy-and-implementation remediation a live, dated need rather than a
+forecast. 🔵 **In Canada the absence is the opportunity and should be sold as such:** with no
+provincial rule and the Alberta Teachers' Association itself observing there is *"not a lot of
+policy at the jurisdictional level"*, the buyer is the **board or district**, and the first
+deliverable is the policy, not the tool.
+
+🔴 **GRADE: SECONDARY, PRIMARY UNREAD.** `federalregister.gov`, `ed.gov`, `govinfo.gov` and
+`oregon.gov` were all tried and are DNS-unresolvable or proxy-403 here
+([map](../evidence/egress-map.2026-10-17-p278.tsv)); no legislature or state-agency page was
+fetched, and the state items rest on vendor trackers and law-firm briefings.
+🔴 **Two circulating figures are deliberately NOT shelved as facts:** a **"$2.5B K-12 AI grant
+program"**, which traces to a single weakly-sourced blog; and **"27 states"**, which is a count of
+**active bills** in one vendor tracker, **not** enacted laws — it is quoted here only with that
+scope attached. ⚠️ The **Ontario** conflict is published **unresolved** rather than picked, because
+the Ministry's own site was not reachable to settle it.
+
+
 **Pass 277 — a second institutional-strategy number arrives, it is 92%, and the scope is the whole
 finding.** EDUCAUSE's **"The Impact of AI on Work in Higher Education"** (fielded **29 Sep – 13 Oct
 2025**, **n = 1,960** responses meeting inclusion criteria) reports that **92% of respondents'
@@ -1746,6 +1785,46 @@ Japan's MEXT guidelines, India NEP/AI curriculum), not the regional abbreviation
 
 
 ### LATAM
+
+**Pass 278 — the region was carried on ONE regional query for 277 passes, and five jurisdictions
+answer with NAMED, DATED instruments the moment they are asked separately.** `p275` diagnosed the
+EMEA blanks as *"narrow-query blanks, not quiet regions"*; `p277` ended a ten-pass APAC nil by
+querying **MEXT, CBSE, China's MoE, Singapore's MOE and Korea's MoE** instead of the word *"APAC"*.
+`p277` then ranked the same move for LATAM and North America (`T53`). 🟢 **Run once, it returned the
+first BINDING LATAM education-AI statute on this shelf.**
+
+| jurisdiction | instrument | binding? | what it forces |
+|---|---|---|---|
+| 🔴 **Colombia** | **Ley 2626 de 2026** (*Ley de Educación Digital*), sanctioned **Aug 2026** | 🔴 **YES — a statute** | Phases **computational thinking, programming, AI, data science and digital citizenship** into basic and secondary education. **Binding on official PUBLIC schools; private establishments MAY adopt the curricular model.** MEN must act jointly with **MinTIC** and **MinCiencias**, so implementing *lineamientos* are **still owed** — the law exists, its guidance does not |
+| **Brazil** | MEC orientador ***"Inteligência Artificial na Educação Básica"***, launched **8–9 Apr 2026** | 🟡 orientation | **7 diretrizes and 12 aprendizagens** for teaching *about* AI, with the **BNCC as the stated starting point**. 🔴 **LGPD (Lei 13.709/2018) and the ECA Digital (Lei 15.211/2025) are transversal and MANDATORY** — the data-protection floor is statutory even though the pedagogy is guidance. Teacher course *"IA na prática docente"* on **Plataforma Mais Professores**, under the **Enec** strategy |
+| **Mexico** | **SEP's 10 recommendations** for ethical and critical generative-AI use, **15 Apr 2026** | 🟡 recommendations, **HE-scoped** | Derived from the **Encuesta Nacional sobre IAG en educación superior** — applied to **1.5M students and 166k+ teachers**, with **>60% of both** reporting daily use. Asks institutions for their own *lineamientos*, teacher training, curriculum updates and **rethought assessment**. A national HE AI policy is **being designed, not issued**. Basic education: a **consultation opened Jul 2026** on phones, technology and AI; **>1M teachers** named as the constraint |
+| **Chile** | MINEDUC guide ***"PotencIA el Aprendizaje"*** (**Mar 2025**), after the **2023 ChatGPT guide** | 🟡 guide | Generative AI for teachers with a critical/ethical/creative framing, **distributed to every establishment in the country**. A **Plan de Formación en IA en Educación** runs with **Fundación Chile** and **CENIA**. 🔴 **UNESCO's country profile states there is NO law or policy specific to AI in the education SYSTEM** — both halves are shelved, because a studio needs to know the guide exists *and* that nothing binds |
+| **Argentina** | **Paideia** (via **educ.ar**) + a **Permanent Observatory of AI in Education** approved by the **Consejo Federal de Educación** | 🟡 programme | An official AI-in-education programme with computational-thinking and age-staged AI objectives; the Observatory's remit is **monitoring impact and developing ethical/regulatory frameworks**. **CABA** published a critical-AI-use guide for schools in **2025** |
+| **Peru** | **Minedu** rural AI deployment for **2026** | 🟡 programme | AI for learning planning across **205 rural schools / 27,000 students** |
+
+🟢 **What this changes for an engagement.** The regional story this shelf has told — *"adoption has
+outrun governance"*, 87% using AI against 26% with a strategy — **is still true at the university
+layer, and is now wrong at the school layer in Colombia**, where a statute arrived ahead of the
+guidance. 🔵 **That inverts the sales motion in exactly one jurisdiction:** in Colombia the question
+a client asks is *"how do we comply with Ley 2626 before MEN publishes the lineamientos"*, which is
+an implementation engagement with a deadline attached. Everywhere else in the region the question is
+still *"we have adopted, help us govern it"*.
+
+🔴 **GRADE: SECONDARY-CONVERGENT, PRIMARY UNREAD — and the reason is now MEASURED rather than
+assumed.** Primary addresses were located for Brazil (`gov.br` MEC PDF), Mexico
+(`educacionsuperior.sep.gob.mx`) and Colombia (`mineducacion.gov.co`, `mintic.gov.co`) and **none is
+reachable from this sandbox**: the policy hosts are DNS-unresolvable or proxy-403 while
+`raw.githubusercontent.com`, `git ls-remote` and `registry.npmjs.org` all answer.
+**Full map:** [`egress-map.2026-10-17-p278.tsv`](../evidence/egress-map.2026-10-17-p278.tsv).
+⚠️ **One structural caveat, published rather than smoothed:** Brazilian sources **disagree on the
+MEC document's own structure** (one says four pillars, another five chapters), so the structure is
+**not** shelved — only the two statutes and the curriculum counts are.
+⚠️ **And Chile was nearly published as a blank:** the combined `Chile … Argentina` query returned
+Argentina and Peru and nothing on Chile. A **jurisdiction-targeted retry** found two ministerial
+instruments. **That is `T53` demonstrated twice in one pass: the first query's silence was the
+query's, not the country's.** Evidence:
+[`p278-websearch.2026-10-17-p278.tsv`](../evidence/p278-websearch.2026-10-17-p278.tsv), legs 1–5.
+
 
 **Pass 277 — the direct instrument gains its denominator, and the teacher layer is where LATAM leads
 the OECD.** `p275` and `p276` established that UNESCO-IESALC (200 institutions, 19 countries) is the

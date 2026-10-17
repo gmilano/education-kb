@@ -1,0 +1,13 @@
+host	channel	method	result	what_it_licenses_this_base_to_do
+raw.githubusercontent.com	licence payload	curl -sI HEAD/<ref>/LICENSE	HTTP 200	🟢 READ GRANTS FIRST-HAND. Every payload claim on these shelves is establishable here
+github.com	ref resolution	git ls-remote --symref HEAD	OK — ref + SHA returned	🟢 Resolve the DEFAULT ref and pin a SHA. p269's kolibri lesson (MIT on develop, 404 on main) is checkable
+github.com	tree enumeration	git clone --depth 1 --filter=blob:none --no-checkout + ls-tree -r	OK	🟢 PROVE an absence instead of laddering it. This is what makes VERIFIED-ABSENT sayable
+registry.npmjs.org	registry	curl	HTTP 200	🟢 Third channel for a declared licence (p276's mcp-canvas-lms finding came from here)
+api.github.com	GitHub API	curl /repos/<slug>	🔴 HTTP 403	❌ No API channel. Stars, topics, licence-detection and fork networks are NOT readable this pass
+www.federalregister.gov	policy primary	WebFetch	🔴 getaddrinfo ENOTFOUND	❌ The US final priority (doc 2026-07087) stays SECONDARY
+cbseacademic.nic.in	policy primary	WebFetch	🔴 getaddrinfo ENOTFOUND	❌ p277's TOP-RANKED egress read — CBSE Circular Acad-15/2026 — is NOT dischargeable here
+community.canvaslms.com	vendor primary	WebFetch	🔴 getaddrinfo ENOTFOUND	❌ The Canvas Free-for-Teacher question stays OPEN; p277's proposal caution STANDS
+www.gov.br	policy primary	curl -sI	🔴 HTTP 403 (proxy)	❌ Brazil's MEC orientador PDF address is known and unreadable
+www.ed.gov	policy primary	curl -sI	🔴 HTTP 403 (proxy)	❌ The 22 Jul 2025 Dear Colleague Letter stays SECONDARY
+www.oregon.gov	policy primary	curl -sI	🔴 HTTP 403 (proxy)	❌ Oregon ODE's Jun 2026 K-12 guidance stays SECONDARY
+www.govinfo.gov	legislative primary	curl -sI	🔴 HTTP 403 (proxy)	❌ HR 8747's bill summary stays SECONDARY

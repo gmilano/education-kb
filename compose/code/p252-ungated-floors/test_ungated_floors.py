@@ -87,8 +87,15 @@ FLOORS = uf.read_floors()
 # 🔵 And it went red exactly as designed: `gate-offline` failed at THIS suite the moment
 # `gate-tables` was wired, before a single table-structure finding had been written up.
 # Fifth consecutive pass where this census catches the new instrument first.
-chk("python test files on disk", len(ROWS), 215)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 34)
+# 🟢 p278: 215 -> 217 and 34 -> 36.  `p278-channel-conflict` ships TWO suites
+# (`test_direction.py`, `test_conflict_gate.py`), both wired into `make hooks` via
+# `make gate-conflict` IN THE SAME CHANGE as this pin -- p262's shape, p261's remedy, so the
+# census never spends a pass red.  `ungated` stays at 181 and the `71`/`110` partition is
+# untouched: both suites arrive gated and exit explicitly (`sys.exit(1)`), so neither joins
+# the silent-zero population.
+# 🔵 Sixth consecutive pass where this census catches the new instrument first.
+chk("python test files on disk", len(ROWS), 217)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 36)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",

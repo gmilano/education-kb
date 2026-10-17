@@ -111,6 +111,32 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | [muskvdc/EduTwin-Africa](https://github.com/muskvdc/EduTwin-Africa) | LIVE, **PRE-LICENCE — the placeholder is still in the README** *(new in pass 269)* | Curriculum-aware tutor over **South African** curriculum knowledge, **Grades 8–12**: RAG, adaptive learning, bounded multi-agent collaboration, ReAct tools, guardrails. 0★ / 0 forks / 7 commits, default ref `main`. **No payload on 19 of 19 paths, no `license` field in `pyproject.toml`**, and the README says, in the author's own words: *"Add the project's chosen license here before publishing if a specific open-source license is required."* 🔵 **This is a state this shelf has not carried before.** `Athena` and `autoGrader-frontend` are *silent*; this one is **explicitly not yet licensed**. The practical difference is that it is the one row here where asking costs nothing and might work — the author has written down that they know it is missing. Until then: all rights reserved. |
 | [Valexxy/edunaija-os](https://github.com/Valexxy/edunaija-os) | LIVE, **no grant on any channel** *(new in pass 269)* | *"A security-conscious starter codebase for a Nigerian-first learning platform"*; `package.json` name is `nigeria-learning-platform`. 0★ / 0 forks / 6 commits. No payload on 19 of 19 paths and **no `license` field in `package.json`** — the two channels that could have carried a grant both empty. Names **no exam board and no institution**. 🔴 **Cite it carefully: it is NOT the EduNaija AI Tutor of the AfricaNLP 2026 paper** (that system is a five-agent LangChain + FAISS RAG tutor with English/Yoruba/Hausa/Igbo support; this is a starter codebase with a similar name). **Two different artefacts, one name** — see the trends file. |
 
+## Pass 278 — the metadata grade, measured on the other channel: four build-on rows have NO committed grant, and the tree proves it
+
+🔵 **Evidence:** [`channel-conflict.2026-10-17-p278.tsv`](../evidence/channel-conflict.2026-10-17-p278.tsv)
+*(14 slugs, both channels, pinned refs)* ·
+[`tree-enumeration.2026-10-17-p278.tsv`](../evidence/tree-enumeration.2026-10-17-p278.tsv)
+*(6 trees enumerated in full)*. Instrument:
+[`compose/code/p278-channel-conflict/`](../compose/code/p278-channel-conflict/).
+
+`p277` asked for the metadata-graded rows to be swept on the payload channel. 🟢 **Done, for the
+four rows on this file a studio is told to build on — and the answer is the same for all four:
+the manifest is the only grant there is, and that is now proven by a full tree enumeration
+rather than inferred from a path ladder.**
+
+| row | manifest channel | payload channel, **tree enumerated** | what it means for a deliverable |
+|---|---|---|---|
+| [`adriasantacreu/google-classroom-mcp`](https://github.com/adriasantacreu/google-classroom-mcp) | 🟢 **MIT** (`package.json`) | 🔴 **15 paths at `29c2c2a07670`, ZERO licence-like** | **MIT (metadata) is the ceiling.** Usable, and the attribution text must come from the manifest because there is no payload to quote |
+| [`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system) | 🟢 **MIT** (`package.json`) | 🔴 **15 448 paths at `adefe26118c6`**; the only 7 licence-like paths are **Material Design icon components** (`precompiled-icons/.../copyright/*.vue`, `mdi/license.vue`) | **MIT (metadata).** 🟢 `p277` declared the `.vue` false-candidate class for `p278` — **it was already fixed in `p277` itself**: `candidate_grants()` returns `[]` on all seven, verified this pass |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🟢 **MIT** (`package.json` + npm, 19 versions) | 🔴 **36 paths at `c0646ba10ac2`, ZERO licence-like** | **MIT (metadata + registry).** 🟢 Reproduces `p276` exactly — same SHA, same 36 paths — by an independently written instrument |
+| [`ls1intum/Athena`](https://github.com/ls1intum/Athena) | 🟢 **MIT**, 12 of 14 manifests (`p275`) | 🔴 **691 paths at `6316d302c929`, ZERO licence-like** | **MIT (metadata).** 🟢 Reproduces `p275`'s 691-path count independently. 🔴 **And `p278`'s own sweep returned `NO-CHANNEL` here**, because it reads **root** manifests only — *"a monorepo declares its grant per package"* is `p275`'s sentence, and `p278`'s instrument re-committed the error it corrects. Named in the instrument README, not hidden |
+
+🟢 **No conflict was found on any of the four.** That is the useful half: a row graded *metadata*
+on this file is now known to be *metadata because there is nothing else*, not *metadata because
+nobody looked*. 🔵 **The grade vocabulary needed that distinction and did not have it** — which
+is the one defensible reading of `p277`'s claim that this base *"has no class for CONFLICT"*.
+The class itself was `p121`'s and has existed for 157 passes; see the instrument README.
+
 ## Pass 276 — the queue was worked, and this shelf gains three rows: two from a channel the gate does not read, one from a path no ladder spells
 
 **30 of `p275`'s 124 queued negative verdicts enumerated** in two channels — tree *and* manifest.
@@ -371,6 +397,37 @@ platforms are reachable, not three** — Canvas, Moodle, Google Classroom / Work
 is now **derived** by [`compose/code/p274-quantity-recount/recount.py`](../compose/code/p274-quantity-recount/recount.py)
 rather than incremented by hand (`T43`); the three platform rows below were **payload-read first-hand in
 `p274`** ([ledger](../evidence/verified-repos.2026-10-17-p274.tsv)).
+
+🔴 **PASS 278 — the count was STALE after all, and `p277` protected it on a predicate this very
+file warns against.** `p277` read `T37`'s `published 20 · measured 21 · STALE`, wrote a fresh
+enumeration that returned **20**, concluded *"a 1-row disagreement between two predicates is a
+defect in a predicate, not a stale shelf"*, and changed nothing. 🟢 **`p278` reproduced BOTH
+numbers and the disagreement is fully explained.** `p277` described its enumeration as *"every
+`github.com/<owner>/<repo>` whose slug contains `mcp`"*; run exactly that way it returns **20**,
+because it drops [`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom),
+whose slug does **not** contain the substring `mcp`. 🔵 **`MCP_HINT`'s own code comment, five
+lines above the predicate, already said so:** *"a count that greps for `mcp` silently drops
+it."* 🔴 **And the dropped row is the PROPRIETARY one** — the single row on this file a studio
+may **not** use. **The count that drops it under-reports the only row carrying commercial risk,
+so "leave it at 20" was the costly way to be wrong.**
+
+🟢 **The durable fix is not picking a winner between predicates — it is making the SCOPE part of
+the claim**, because three defensible scopes give three answers and a bare count cannot be
+checked at all. Both are registered in `recount.py` with their boundaries in code:
+
+| scope | count | boundary |
+|---|---|---|
+| **distinct MCP server slugs tabled anywhere on this file** (`MCP_HINT`, incl. `mewcp`) | **21** | whole file |
+| **the MCP section's own table** | **19** | the `###` heading to the next heading of equal or shallower depth |
+| `p277`'s enumeration (literal `mcp`, table rows) | *20* | **not registered** — it drops a real row, and is recorded here only to explain the 20 |
+
+**21 distinct MCP server slugs are tabled on this file**, of which **19 rows in the table
+below**; the other two are tabled in the tiers above (`admin978/canvas-mcp` and
+`DMontgomery40/mcp-canvas-lms`). **6 platforms** are reachable. 🔵 Every figure in this
+paragraph is re-derived by `make recount`, and since `p278` the figure it compares against is
+**read from this sentence** rather than carried as a constant — so editing the prose without
+editing the rows is now a `STALE` verdict too, and deleting the sentence is `NO-ANCHOR`, which
+fails the gate.
 
 | Server | Licence | Stars | What it reaches |
 |--------|---------|-------|-----------------|

@@ -380,6 +380,41 @@ from absence.
   good figure on noise is as bad as publishing a bad one. Three independent agreements, including
   one to the byte, say this base's APAC licence cells are sound.**
 
+## Pass 278 — a licence file inside a repository is not the repository's licence, and the biggest LMS plugin on this base proves it twice
+
+🔵 **Evidence:** [`tree-enumeration.2026-10-17-p278.tsv`](../evidence/tree-enumeration.2026-10-17-p278.tsv)
+*(6 trees, every path enumerated)* ·
+[`channel-conflict.2026-10-17-p278.tsv`](../evidence/channel-conflict.2026-10-17-p278.tsv).
+
+🔴 **[`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) enumerates to 1,985 paths at
+`ca5296320435`, and BOTH of its licence-like paths belong to something else:**
+
+| path | what it is | verdict |
+|---|---|---|
+| `inc/libraries/wp-background-process/license.txt` | a **vendored third-party library's** grant | 🔴 not the project's |
+| `inc/TemplateHooks/Admin/Notices/AdminNotesTemplate.php` | a **PHP source file** matching the licence-name pattern | 🔴 not a grant |
+
+🟢 **`pass275-grant-enumeration`'s scope test rejects both** — `VENDORED` catches the first, `SOURCEY`
+the second — confirmed by running `candidate_grants()` on the enumerated paths this pass, which
+returns `[]`. **So the repository commits no grant of its own, and `p120`'s resolution stands: the
+licence is GPL-3.0, declared in the WordPress `readme.txt`.**
+
+🔵 **Why this belongs on a FOUNDATIONS shelf rather than only in a licence ledger.** A client's SCA
+scanner that reports *"GPL-3.0 found"* from `inc/libraries/.../license.txt` has found a **dependency's**
+grant and attributed it to the parent. **An intake gate must ask whose grant a path carries, not only
+which grant it is** — the mirror image of the manifest problem, where the declared field is read as the
+grant. Both errors are automatic, and both default to the wrong answer.
+
+🟢 **`p277`'s declared sub-rule `T57` is discharged on this shelf too: every absence now carries its
+path count**, and the counts span three orders of magnitude (15 → 15,448). *"No licence file in 15
+paths"* and *"no licence file in 15,448 paths"* are the same sentence and different claims.
+
+🟢 **And one declared item was already closed before it was ranked.** `p277` registered the `.vue`
+false-candidate class for `p278` — `learningequality/kolibri-design-system`'s **15,448** paths carry
+**7** licence-like paths, every one a **Material Design icon component**
+(`precompiled-icons/.../copyright/*.vue`, `mdi/license.vue`). **`p277` had already fixed it in `p277`**
+(`precompiled-icons` in `VENDORED`, `.vue` in `SOURCEY`); verified here rather than assumed.
+
 ## Pass 277 — six absences on this base stopped resting on path ladders, and one of them changed meaning when enumerated
 
 🟢 **No row on this shelf changed licence this pass.** What changed is the **grade** under six absence

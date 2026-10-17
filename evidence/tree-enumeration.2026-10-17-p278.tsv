@@ -1,0 +1,7 @@
+slug	ls_remote	head_sha	files_in_tree	licence_like_paths_in_tree
+LearnPress/learnpress	OK	ca5296320435	1985	inc/TemplateHooks/Admin/Notices/AdminNotesTemplate.php,inc/libraries/wp-background-process/license.txt
+Gnanakamalesh-M/student-dropout-early-warning	OK	6685be37a168	211	NONE_IN_TREE
+adriasantacreu/google-classroom-mcp	OK	29c2c2a07670	15	NONE_IN_TREE
+ls1intum/Athena	OK	6316d302c929	691	NONE_IN_TREE
+learningequality/kolibri-design-system	OK	adefe26118c6	15448	lib/KIcon/precompiled-icons/material-icons/copyright/baseline.vue,lib/KIcon/precompiled-icons/material-icons/copyright/outline.vue,lib/KIcon/precompiled-icons/material-icons/copyright/round.vue,lib/KIcon/precompiled-icons/material-icons/copyright/sharp.vue,lib/KIcon/precompiled-icons/material-icons/copyright/twotone.vue,lib/KIcon/precompiled-icons/mdi/copyright.vue,lib/KIcon/precompiled-icons/mdi/license.vue
+DMontgomery40/mcp-canvas-lms	OK	c0646ba10ac2	36	NONE_IN_TREE

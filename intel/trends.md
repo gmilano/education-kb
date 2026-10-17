@@ -465,9 +465,18 @@ Where the client runs Moodle, the honest answer is the AGPL open-core server or 
 against Moodle Web Services — i.e. actual engineering, not an install.
 
 ⚠️ **And the category is invisible to indexes:** the `mcp-server-education` GitHub topic is
-**still empty** while **20 distinct education MCP server slugs are shelved on `agents/top.md`**
+**still empty** while **21 distinct education MCP server slugs are shelved on `agents/top.md`**
 (**15** when `p274` measured it, plus the five that pass shelved from `trending.md`).
 None was found through a topic listing.
+
+🟢 **CORRECTED AT `p278`: 20 → 21.** `p277` left this at 20 because its own fresh enumeration
+returned 20 and `T37` returned 21. **`p278` reproduced both and the gate was right.** `p277`'s
+enumeration matched the literal substring `mcp`, which drops
+[`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom) — and
+`MCP_HINT`'s own code comment had already named that exact failure mode. 🔴 **The dropped row is
+the proprietary one.** See [`agents/top.md`](../agents/top.md) for the scope table; the figure is
+now anchored to this sentence rather than to a constant, so editing the prose alone is also
+`STALE`.
 
 🔴 **`p277`: this is the one registered quantity where the TWO INSTRUMENTS DISAGREE, and the number is
 therefore left standing at 20.** `make hooks` ran this pass and `T37`'s re-count reported
@@ -561,7 +570,9 @@ ships with the code. Discovering otherwise after signature is how this becomes a
 
 ## T24 — Three LMSs are now MCP-addressable, and the most open one is the least adopted
 
-> 🔴 **CORRECTED IN PASS 274: it is SIX, and five of the six are reachable under MIT.** `p273`'s
+> 🔴 **CORRECTED IN PASS 274: it is SIX, and five of the six are reachable under MIT.** Stated
+> for the re-count in the form it checks: **MCP reaches **6 distinct LMS platforms** across both
+> agent shelves.** `p273`'s
 > backlog item 7 asked for `T37` to be applied as a standing re-count; it was built
 > ([`compose/code/p274-quantity-recount/`](../compose/code/p274-quantity-recount/)) and this is what
 > it found. **Every row below was payload-read first-hand in `p274`**
@@ -1743,3 +1754,126 @@ as one** — `p277` estimates the live fraction is small, on a 12-of-12 sample.
 on a **path ladder** (`edunaija-os` at *"19 of 19 paths"*) now rest on a **full tree enumeration** (310
 paths), which is the grade `P275`/`P278` require for an absence to be sayable at all. **A positive
 control that upgrades the grade of what it confirms is worth running even when it finds nothing wrong.**
+
+## T57 — An absence is only as strong as the tree it was measured against, so the path count belongs in the sentence
+
+`p277` declared this sub-rule for `p278` after one row changed its meaning under enumeration:
+`OpenEMIS/OpenEMIS-Core` enumerates to **eleven paths** — not a codebase, so *"no licence payload"* is
+true of the repository and says almost nothing about the product. 🟢 **Discharged.** Every absence
+`p278` publishes carries its path count, and the counts turn out to span **three orders of magnitude**:
+
+| row | paths at the pinned SHA | what the absence is worth |
+|---|---|---|
+| [`adriasantacreu/google-classroom-mcp`](https://github.com/adriasantacreu/google-classroom-mcp) | **15** | 🟡 a small repo; the absence is certain but unremarkable |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **36** | 🟡 reproduces `p276` at the same SHA, independently |
+| [`Gnanakamalesh-M/student-dropout-early-warning`](https://github.com/Gnanakamalesh-M/student-dropout-early-warning) | **211** | 🟢 a real codebase with **no grant anywhere** — `p121`'s *"permissive over nothing"* upgraded from a ladder to a proof |
+| [`ls1intum/Athena`](https://github.com/ls1intum/Athena) | **691** | 🟢 reproduces `p275` exactly |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | **1,985** | 🔴 see `T58` — the two licence-like paths are **not the project's** |
+| [`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system) | **15,448** | 🟢 7 licence-like paths, **all Material Design icon components**, all correctly excluded |
+
+🔵 **Why the count is load-bearing and not decoration:** *"no licence file in 15 paths"* and *"no
+licence file in 15,448 paths"* are the same sentence and completely different claims. The first is
+nearly a tautology; the second is a measurement about a large, active project. **A studio deciding
+whether to ask the maintainer for a grant needs to know which one it is reading.**
+
+## T58 — A licence-like path can belong to a vendored dependency, and on the largest LMS plugin on this shelf both of them do
+
+🔴 **`LearnPress/learnpress` enumerates to 1,985 paths and the only two licence-like paths are not its
+own grant:**
+
+| path | what it actually is |
+|---|---|
+| `inc/libraries/wp-background-process/license.txt` | 🔴 a **VENDORED third-party library's** licence |
+| `inc/TemplateHooks/Admin/Notices/AdminNotesTemplate.php` | 🔴 a **PHP source file** that merely matches the licence-name pattern |
+
+🟢 **Both are correctly rejected** by `pass275-grant-enumeration`'s scope test — `VENDORED` catches the
+first, `SOURCEY` the second — verified first-hand this pass, so the repository commits **no licence of
+its own** and `p120`'s resolution stands: the grant is **GPL-3.0, declared in the WordPress
+`readme.txt`**, not in a licence file.
+
+🔵 **The general rule, and it is the one a client's tooling gets wrong:** a licence file *inside* a
+repository is not necessarily *the repository's* licence. An SCA scanner that reports "GPL-3.0 found"
+from `inc/libraries/…/license.txt` has found a **dependency's** grant and attributed it to the parent —
+the mirror image of `T59`'s manifest problem, and the reason an intake gate must ask **whose** grant a
+path carries, not only **which** grant.
+
+## T59 — The CONFLICT class was built 157 passes ago, and the gate that proves it exists was never run
+
+🔴 **`p277` declared that this base *"has a grade for payload and a grade for metadata and no class at
+all for CONFLICT"*, and ranked building it FIRST at zero searches.** `p121` had built it on
+**2026-10-11**: **249 addresses probed, 161 manifests fetched, 104 declaring, 10 contradictions —
+9.6%** — published with a four-value direction axis and an operational rule. 🔴 **And the instance
+`p277` reported as a NEW defect class, `open-tutor-ai-CE`'s BSD payload against its MIT `pyproject`,
+is ROW 8 of that table, with the identical verdict.**
+
+🔵 **The gate for exactly this error exists: `make claims TOKEN=conflict` returns `ALREADY CLAIMED …
+STOP` over 26 cells in `repos/trending.md` and exits 1.** Both arms were verified this pass. The
+Makefile documents it as *"THE GATE: run before publishing any 'there is no X'"*. **It was not run.**
+
+🟢 **The durable lesson is not "read more carefully".** `p121`'s class lives in `repos/trending.md`;
+`p277` was working in `agents/top.md` and `intel/open-gaps.md`. **On a base of 10 shelves and 28,000+
+lines, no amount of care substitutes for running the index** — which is why the remedy registered for
+`p279` is to make `make claims` a *step*, not an instruction in prose.
+
+🔴 **And the one defensible half of `p277`'s claim is worth keeping:** the ROW VOCABULARY had no way to
+distinguish *"metadata grade because the payload was read and agrees"* from *"metadata grade because
+nobody looked"*. `p278`'s sweep closes that for the four build-on rows on `agents/top.md` — all four
+are **metadata because there is nothing else**, now proven by full tree enumeration.
+
+## T60 — In the United States the binding AI-in-education duties are at STATE level, and the federal instrument governs money rather than classrooms
+
+Asked at federal level, the US looks like it has an AI-in-education policy. 🔴 **Asked per
+jurisdiction, the federal instrument turns out to be a GRANTS instrument and the binding duties are all
+state statutes.**
+
+**Federal Register doc 2026-07087 (13 Apr 2026)** finalises a *Secretary's Supplemental Priority* that
+**weights AI initiatives in discretionary grant competitions**. It requires nothing of any school. The
+**22 Jul 2025 Dear Colleague Letter** likewise *permits* existing funds to be used for AI. 🔴 **Reading
+either as a mandate is the error.** What binds is state law: **Maryland SB 720 (Ch. 634)** — guidance,
+local policies, AI literacy **and teacher professional development**; **Idaho SB 1227** — AI literacy
+standards and **educator training**; **Ohio** — every district had to **adopt an AI-use policy by
+1 Jul 2026**, a deadline that has **already passed**; **Utah** — middle-school AI literacy;
+**Virginia SB 394** — state guidance including teacher training. **HR 8747** (*K-12 AI Literacy and
+Readiness Act of 2026*) is **introduced, not enacted**.
+
+🟢 **Why this matters to a proposal.** A federal-posture pitch sells a trend; a state-statute pitch
+sells a **dated obligation**. Maryland and Idaho oblige **teacher training**, which is staffable work,
+and **Ohio's deadline is in the past**, which converts policy remediation from a forecast into a live
+need. 🔵 **Canada is the mirror case:** no binding provincial rule in Ontario, Alberta or BC, education
+is provincial jurisdiction, and the Alberta Teachers' Association's own summary is that there is *"not
+a lot of policy at the jurisdictional level"* — so **the buyer is the board or district and the first
+deliverable is the policy itself**.
+
+⚠️ **GRADE: SECONDARY, PRIMARY UNREAD** — `federalregister.gov`, `ed.gov`, `govinfo.gov` and
+`oregon.gov` are all unreachable from this sandbox
+([map](../evidence/egress-map.2026-10-17-p278.tsv)). 🔴 **"27 states" is a count of ACTIVE BILLS from
+one vendor tracker, not of enacted laws**, and the circulating **"$2.5B K-12 AI grant program"** traces
+to a single weakly-sourced blog and is **not shelved**.
+
+## T61 — Primary policy text is not reachable from this environment, and four passes of host failures make that a property rather than an accident
+
+`p277` ranked *"read, with egress: CBSE Circular Acad-15/2026 first, then MEXT Ver. 2.0, the Korean
+MoE's own account, and the DfE standards"* as actionable backlog. 🔴 **It is not actionable here, and
+`p278` measured why instead of reporting another nil.**
+
+| channel | result |
+|---|---|
+| `raw.githubusercontent.com` (licence payloads) | 🟢 **HTTP 200** |
+| `git ls-remote` / shallow clone (refs, trees) | 🟢 **OK** |
+| `registry.npmjs.org` | 🟢 **HTTP 200** |
+| `api.github.com` | 🔴 **403** |
+| `cbseacademic.nic.in`, `federalregister.gov`, `community.canvaslms.com` | 🔴 **DNS unresolvable** |
+| `gov.br`, `ed.gov`, `oregon.gov`, `govinfo.gov` | 🔴 **proxy 403** |
+
+🔵 **Across `p275`–`p278` the unreachable set now includes `eur-lex.europa.eu`, `gov.uk`, `mext.go.jp`,
+`instructure.com`, `cbseacademic.nic.in`, `federalregister.gov`, `ed.gov`, `gov.br`, `oregon.gov`,
+`govinfo.gov` and `community.canvaslms.com` — eleven hosts, four passes, one failure mode — while every
+code-hosting channel answers.** 🟢 **So the honest classification changes: this is not a per-host
+accident to retry, it is the shape of the environment.** Primary *policy* reads should be ranked as
+**requiring an egress-enabled run**, not as backlog a sandboxed pass can discharge; primary *licence*
+reads remain fully available and are where a pass's egress budget should go.
+
+⚠️ **One live consequence, unchanged from `p277` and now explicitly un-dischargeable here:** the claim
+that **Canvas Free-for-Teacher was permanently discontinued in May 2026** is still unverified
+(`instructure.com` and `community.canvaslms.com` both unreachable). **Do not promise a zero-cost Canvas
+environment in a proposal.**

@@ -4,6 +4,194 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 278 — 2026-10-17 — **THE CLASS RANKED FIRST FOR THIS PASS WAS BUILT 157 PASSES AGO, THE GATE THAT SAYS SO EXISTS AND WAS NOT RUN, AND THE COUNT `p277` PROTECTED WAS STALE AFTER ALL**
+
+⏱️ **Twenty-fourth pass of `2026-10-17`.** Evidence:
+[`channel-conflict.2026-10-17-p278.tsv`](evidence/channel-conflict.2026-10-17-p278.tsv) — **14 slugs,
+both channels, pinned refs** ·
+[`tree-enumeration.2026-10-17-p278.tsv`](evidence/tree-enumeration.2026-10-17-p278.tsv) — **6 trees
+enumerated in full, 15 → 15,448 paths** ·
+[`p278-websearch.2026-10-17-p278.tsv`](evidence/p278-websearch.2026-10-17-p278.tsv) — **12 legs, 8
+jurisdictions, 4 informative nils** ·
+[`egress-map.2026-10-17-p278.tsv`](evidence/egress-map.2026-10-17-p278.tsv) — **13 channels, measured**.
+
+### 🔴 Headline: `p277` ranked "build the CONFLICT class" first, at zero searches. `p121` built it on 2026-10-11.
+
+`p277`'s top-ranked item read: *"**Build the payload-vs-metadata CONFLICT class** … this base has a
+grade for *payload* and a grade for *metadata* and **no class at all for CONFLICT**."*
+
+🔴 **It is on this base's own shelf.** `p121` (`ACTION Q`) probed **249 addresses**, fetched **161
+manifests**, found **104 declaring a licence**, measured **10 contradictions = 9.6 %**, published them
+in `repos/trending.md` with a **four-value direction axis**, and wrote the operational rule: *"a
+manifest licence field is a **HINT**. The committed licence file is the **grant**."*
+
+🔴 **And the instance `p277` reported as a NEW defect class is ROW 8 of that table** —
+`Open-TutorAi/open-tutor-ai-CE`, BSD-3-Clause payload against a MIT `pyproject.toml`, carrying the
+identical verdict (*"both permissive, wrong name"*).
+
+🔵 **The gate for this exact error exists, and both of its arms work:**
+
+```
+$ make claims TOKEN=conflict
+ALREADY CLAIMED   conflict   STOP — read these cells before publishing an absence:
+      repos/trending.md   26        intel/open-gaps.md   82       README.md   60
+$ echo $?   # 1  ← the STOP signal
+$ … claims zzqqxx-not-a-real-token .   →  NOT CLAIMED   (exit 0)
+```
+
+The Makefile documents that recipe as *"**THE GATE**: run before publishing any 'there is no X'"*.
+**It was not run.** 🔵 **And "read more carefully" is not the lesson:** `p121`'s class lives in
+`repos/trending.md` while `p277` was working in `agents/top.md` and `intel/open-gaps.md`. **On ten
+shelves and 28,000+ lines, care does not substitute for running the index** — so the remedy registered
+for `p279` is to make `make claims` a **step**, not a sentence in prose.
+
+### 🟢 What `p278` built instead: the half `p121` never did
+
+`p121`'s census was a **one-off, by hand, at one moment**, with each verdict **typed per row**. A typed
+verdict rots two ways a row-count gate cannot see. 🔴 **Both are live** — so
+[`compose/code/p278-channel-conflict/`](compose/code/p278-channel-conflict/) re-derives every published
+direction from its own family cells, through the **shared** classifier, on every run
+(`make gate-conflict`, now in `make hooks`; `make conflict-sweep` is the online half).
+
+🟢 **`p121`'s census REPRODUCES six days on, to the byte** — 34,523 · 34,143 · 34,523 · 10,830 · 1,891
+· 1,531, all identical. 🔴 **With one correction, and it is the row a studio would actually reuse:**
+`cccareers/open-source-curriculum`'s payload is **`CC-BY-NC-SA-4.0`** — **non-commercial** — where
+`p121` recorded *"CC-BY family"* and typed *"permissive over attribution-share"*. **Attribution-share
+reads as "ship it with credit"; NC forbids the deliverable outright.** On a **curriculum** repository
+that is the expensive kind of wrong. Corrected in place, with the byte count published.
+
+### 🔴 The MCP count: the gate was right, and `p277` protected the shelf on a predicate this base warns against
+
+`p277` saw `T37` report `published 20 · measured 21 · STALE`, wrote a fresh enumeration that returned
+**20**, concluded *"a 1-row disagreement between two predicates is a defect in a predicate, not a stale
+shelf"*, and **changed nothing**.
+
+🟢 **`p278` reproduced both numbers and the disagreement is fully explained.** `p277` described its
+enumeration as *"every `github.com/<owner>/<repo>` whose slug contains `mcp`"* — run exactly that way
+it returns **20**, because it drops `AStheTECH/mewcp-google-classroom`, whose slug does not contain the
+substring `mcp`. 🔵 **`MCP_HINT`'s own code comment, five lines above the predicate, already said so:**
+*"a count that greps for `mcp` silently drops it."* **`p277` read that file, wrote the predicate it
+warns against, and trusted it over the gate.**
+
+🔴 **The dropped row is the PROPRIETARY one** — the single row on that shelf a studio may **not** use.
+**The count that drops it under-reports the only row carrying commercial risk, so "leave it at 20" was
+the costly way to be wrong.** 🟢 **Corrected to 21** — and the durable fix is not picking a winner:
+three defensible scopes give **19 / 20 / 21**, so a bare count cannot be checked at all. **Both scopes
+are now registered with their boundaries in code.**
+
+### 🟢 `T37` detects TEXT drift now, and a vanished pin is a failure
+
+`p277` declared two defects in `recount.py` and both are discharged:
+
+- 🟢 **The tier boundary is STRUCTURAL** — the heading to the next `## ` heading — and no longer a
+  literal copy of the number under test. `p277`'s boundary was the string `"**24 permissive rows"`, so
+  correcting the shelf to `27` **deleted** it and the measurement silently became *"every row in the
+  rest of the file"* (63). **A `## ` heading cannot be deleted by fixing a numeral.**
+- 🟢 **`published` is READ FROM THE SHELF**, not carried as a Python constant. `T37` detected **row**
+  drift and was **blind to text** drift; now a sentence edited without the rows is `STALE` too, and a
+  sentence **deleted** is `NO-ANCHOR`, which **fails** the gate rather than reading as *"nothing to
+  check"*.
+- 🔵 **And `p278`'s own first anchor missed**, because the phrase it pinned **wrapped across two
+  lines**. Every anchor is whitespace-tolerant now: an anchor that breaks when a paragraph is reflowed
+  is the same brittleness class as one copied from the number it checks. **`STALE=0 NO-ANCHOR=0 of 5`.**
+
+### 🟢 The regional battery: LATAM and North America queried per jurisdiction, and LATAM yields its first binding statute
+
+`p277` ranked this sixth (`T53`). 🟢 **Run once, the LATAM blank ends the way EMEA's and APAC's did.**
+
+| jurisdiction | instrument | binding? |
+|---|---|---|
+| 🔴 **Colombia** | **Ley 2626 de 2026** (*Educación Digital*), sanctioned **Aug 2026** — computational thinking, programming, **AI**, data science, digital citizenship into basic + secondary | 🔴 **a STATUTE.** Public schools bound, private optional; **MEN + MinTIC + MinCiencias owe the *lineamientos*, which do not exist yet** |
+| **Brazil** | MEC *"IA na Educação Básica"*, **8–9 Apr 2026** — **7 diretrizes, 12 aprendizagens**, BNCC as base | 🟡 orientation — but **LGPD + ECA Digital are statutory and transversal** |
+| **Mexico** | **SEP's 10 recommendations**, **15 Apr 2026**, from a survey of **1.5M students / 166k+ teachers** (**>60 % daily use**) | 🟡 recommendations, **HE-scoped** |
+| **Chile** | **"PotencIA el Aprendizaje"** (Mar 2025), to every establishment | 🟡 guide — 🔴 **UNESCO: no law specific to AI in the education system** |
+| **Argentina** | **Paideia** + a **Permanent Observatory** approved by the Consejo Federal | 🟡 programme |
+| **Peru** | Minedu, **205 rural schools / 27,000 students** in 2026 | 🟡 programme |
+
+🔴 **North America inverts the assumption this shelf was scoped against.** Federal Register doc
+**2026-07087** (**13 Apr 2026**) is a **GRANTS** instrument — it weights AI in discretionary
+competitions and requires nothing of any school. **What binds is state law:** **Maryland SB 720
+(Ch. 634)** and **Idaho SB 1227** oblige **AI literacy and teacher training**; **Ohio**'s
+district-policy deadline was **1 Jul 2026 and has passed**; **Utah** and **Virginia SB 394** follow.
+**HR 8747** is **introduced, not enacted**. 🟡 **Canada: no binding provincial rule in ON/AB/BC** —
+education is provincial, so **the buyer is the board and the first deliverable is the policy**.
+
+⚠️ **`T53` demonstrated TWICE in one pass:** a combined `Chile … Argentina` query returned Argentina
+and Peru and **nothing on Chile**; a jurisdiction-targeted retry found **two** ministerial instruments.
+**The first query's silence was the query's, not the country's.** New patterns **`P32`** and **`P33`**;
+new trends **`T57`–`T61`**.
+
+### 🔴 Three defects in `p278`'s own instrument, found by sweeping it before trusting it
+
+1. **A green run over an empty input.** `sweep.sh` documented a file argument and read **stdin**; under
+   `nohup`, stdin is `/dev/null`, so it printed its header, read **zero** slugs and **exited 0**.
+   `p252`'s silent-zero class arriving in a harvester. **An empty read exits 1 now.**
+2. **The most expensive row went `UNPLACEABLE`.** The shared classifier emits `FAIRCODE`; the tier
+   table spelled it `FAIR-CODE` — so **`leemons`, the €100,000 grant, was the row that fell through.**
+   `TIERS` is now **bound to every token `lib/license_family.sh` can emit**, with a control asserting it.
+3. **`MITIGATED` placed as permissive.** Prefix normalisation put `MITIGATED`, `MIT-plus-clause` and —
+   worst — **`Apache-2.0-with-Commons-Clause`** at tier 0, when the **Commons Clause removes the right
+   to sell**. 🔵 The fix was already written one library over as `P299`: *"a licence token is a word or
+   it is noise."* **Same class, one layer up.**
+
+🔵 **One defect left standing and named:** `sweep.sh` reads **root** manifests only, so `ls1intum/Athena`
+returned `NO-CHANNEL` while `p275` established **12 of its 14 manifests declare MIT**, all in
+subdirectories. *"A monorepo declares its grant per package"* is `p275`'s own sentence, and this
+instrument re-committed the error it corrects.
+
+### 🟢 Six absences now rest on enumerated trees, and they carry their path counts (`T57`)
+
+**15** (`google-classroom-mcp`) · **36** (`mcp-canvas-lms`, reproducing `p276` at the same SHA) ·
+**211** (`student-dropout-early-warning` — `p121`'s *"permissive over nothing"* upgraded from a ladder
+to a proof) · **691** (`Athena`, reproducing `p275`) · **1,985** (`learnpress`) · **15,448**
+(`kolibri-design-system`). 🔴 **`LearnPress`'s only two licence-like paths are a vendored dependency's
+`license.txt` and a `.php` source file** — both correctly rejected, so the repository commits **no
+grant of its own** and `p120`'s `readme.txt` resolution stands. 🔵 **A licence file inside a repository
+is not the repository's licence** (`T58`). 🟢 **And `p277`'s declared `.vue` item was already fixed in
+`p277` itself** — verified, not assumed.
+
+### 🔴 `p277`'s egress backlog is NOT dischargeable here, and that is now measured
+
+`p277` ranked *"read, with egress: CBSE Circular Acad-15/2026 first, then MEXT, the Korean MoE, the DfE
+standards"*. 🟢 **Every code channel answers** — `raw.githubusercontent.com` **200**, `git ls-remote`
+**OK**, `registry.npmjs.org` **200**. 🔴 **Every policy host does not** — `cbseacademic.nic.in`,
+`federalregister.gov` and `community.canvaslms.com` are **DNS-unresolvable**; `gov.br`, `ed.gov`,
+`oregon.gov`, `govinfo.gov` are **proxy-403**; `api.github.com` is **403**.
+
+🔵 **Across `p275`–`p278` that is eleven hosts, four passes, one failure mode, while every
+code-hosting channel answers.** 🟢 **So the classification changes: primary *policy* reads require an
+egress-enabled run and should stop being ranked as sandbox backlog; primary *licence* reads are fully
+available and are where a pass's egress budget belongs** (`T61`). ⚠️ **Consequence, unchanged:** the
+**Canvas Free-for-Teacher** discontinuation is still unverified — **do not promise a zero-cost Canvas
+environment in a proposal.**
+
+### 🟡 Fourth consecutive pass with no new agent and no new permissive platform
+
+Every candidate returned was **already carried** (DeepTutor **41.3–41.5k★**, Open TutorAi CE,
+OpenTutor, tutor-gpt, Study-Mate), and the platform query returned **this base's own answer** —
+**GegoK12**, MIT, shelved since `p274`. 🟢 **`make carried SLUG=Gego-K12/gegok12` → `CARRIED` was run
+BEFORE the nil was written up**, which is precisely the check `p277`'s conflict claim skipped.
+
+### 🔵 Declared gaps and the backlog for `p279`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked, the first two at zero searches:
+
+1. 🔴 **Make `make claims` a STEP, not an instruction.** This pass's headline is a gate that exists and
+   was not run; the next pass should not be able to publish an absence without it having run.
+2. 🔴 **Walk manifests PER PACKAGE in `sweep.sh`** — the `Athena` defect above, which is `p275`'s
+   lesson re-committed by the instrument built to enforce it.
+3. 🟡 **Scope the absence queue to the latest statement per subject** (`T56`, carried from `p277`):
+   `QUEUE-UNENUMERATED=69` is still an upper bound and is still published as one.
+4. 🟡 **Sweep the remaining metadata-graded rows.** `p278` did the four build-on rows on
+   `agents/top.md`; the census found **107** metadata/manifest-graded table rows across the shelves.
+5. 🟡 **Re-run the six upgraded absences on the resolved default ref**, not `HEAD` alone — `p269`'s
+   `kolibri` lesson is not discharged by clean trees.
+6. 🔵 **Read the primary policy texts on an egress-enabled run**, `Ley 2626`'s scope first (it decides
+   whether a private-school client is bound at all), then CBSE Acad-15/2026 and MEXT Ver. 2.0.
+7. 🔵 **Settle the Ontario conflict** — two sources disagree on whether the Ministry has issued
+   anything, and `ontario.ca` was not reachable to decide it.
+
+
 ## Pass 277 — 2026-10-17 — **THE TEN-PASS APAC NIL ENDS ON THE FIRST JURISDICTION-TARGETED QUERY, AND THE GATE `p276` COULD ONLY VALIDATE AS DATA FAILS WHEN RUN**
 
 ⏱️ **Twenty-third pass of `2026-10-17`.** Evidence:

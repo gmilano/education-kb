@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 278) — the four metadata-graded agent rows were swept on the payload channel, and all four are *metadata because there is nothing else*
+
+⏱️ **Twenty-fourth pass of `2026-10-17`.** Append-only — everything below this section is prior
+history and is not rewritten. Evidence:
+[`channel-conflict.2026-10-17-p278.tsv`](../evidence/channel-conflict.2026-10-17-p278.tsv) ·
+[`tree-enumeration.2026-10-17-p278.tsv`](../evidence/tree-enumeration.2026-10-17-p278.tsv) ·
+[`p278-websearch.2026-10-17-p278.tsv`](../evidence/p278-websearch.2026-10-17-p278.tsv) *(12 legs; 8
+jurisdictions; 4 informative nils)*.
+
+### 🟢 `p277`'s sweep request, answered — and the answer is clean
+
+`p277` asked for the metadata-graded rows to be read on the payload channel, because *"a conflict is
+only visible when both channels are read, and most rows have only ever had one."* 🟢 **Done for the
+four rows `agents/top.md` tells a studio to build on. No conflict on any of them**, and the absences
+are now proven by **full tree enumeration** rather than inferred from a path ladder:
+
+| row | manifest | payload channel, tree enumerated | grade |
+|---|---|---|---|
+| [`adriasantacreu/google-classroom-mcp`](https://github.com/adriasantacreu/google-classroom-mcp) | 🟢 **MIT** | **15 paths** at `29c2c2a07670`, zero licence-like | **MIT (metadata)** — the ceiling |
+| [`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system) | 🟢 **MIT** | **15,448 paths** at `adefe26118c6`; the 7 licence-like paths are all **Material Design icon components** | **MIT (metadata)** |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🟢 **MIT** + npm (19 versions) | **36 paths** at `c0646ba10ac2`, zero licence-like | **MIT (metadata + registry)** — 🟢 reproduces `p276` at the same SHA |
+| [`ls1intum/Athena`](https://github.com/ls1intum/Athena) | 🟢 **MIT**, 12 of 14 manifests (`p275`) | **691 paths** at `6316d302c929`, zero licence-like | **MIT (metadata)** — 🟢 reproduces `p275`'s count independently |
+
+🔵 **Why a clean result is still worth publishing.** A row graded *metadata* on this base is now known
+to be **metadata because there is nothing else**, not **metadata because nobody looked**. The grade
+vocabulary could not previously tell those apart, and that ambiguity is the one defensible half of
+`p277`'s claim that this base had *"no class for CONFLICT"* — the CLASS is `p121`'s and has existed for
+157 passes (see [`repos/trending.md`](../repos/trending.md) and
+[`compose/code/p278-channel-conflict/`](../compose/code/p278-channel-conflict/)).
+
+🔴 **And `p278`'s own sweep failed on the hardest of the four.** It returned `NO-CHANNEL` for
+`ls1intum/Athena` because it reads **root** manifests only — while Athena's twelve declaring manifests
+all sit in subdirectories. *"A monorepo declares its grant per package"* is `p275`'s own sentence, and
+this instrument re-committed the error it corrects. **The row survived only because `p275`'s
+measurement was already on the shelf.** Registered for `p279`, not quietly fixed.
+
+### 🟡 FOURTH consecutive pass with zero new education agents, and the nil is recorded with its queries
+
+| leg | query run verbatim | what came back |
+|---|---|---|
+| 9 | `top open source AI agents education 2026 github MIT` | **Every candidate already carried**: DeepTutor (**41.3–41.5k★**), Open TutorAi CE (~108★, BSD-3-Clause), OpenTutor (~140★), tutor-gpt (931★), Study-Mate (929★–1.0k★). The rest were general-purpose frameworks (OpenHands, CrewAI, Hermes) and curated lists |
+| 10 | `github trending education AI 2026 open source tutor repository` | **DeepTutor reconfirmed** as the most-starred education agent (topic-page timestamp **12 Oct 2026**, trending after release **1.5.11**). Everything else was a **course repo, not an agent** |
+
+🔵 **DeepTutor's star count moved from ~24k (`p265`) to 41.3–41.5k, and the consolidation `T1`
+describes is now wider, not narrower.** 🔴 **The course-repo class is still deliberately NOT shelved as
+agents** — `generative-ai-for-beginners`-shaped repositories are teaching materials, and admitting them
+would inflate this shelf with rows no engagement can compose. ⚠️ Sources were **topic pages and one
+news analysis, not `github.com/trending`**, which is the standing limitation on this leg.
+
+🟢 **The checks were run before the nil was written, which is the part `p277` skipped on its conflict
+claim:** `make carried` was used on the returned candidates rather than memory, and
+`make claims TOKEN=…` is what establishes that an absence is sayable at all.
+
 ## 2026-10-17 (pass 277) — Twelve negative verdicts re-checked at payload, **zero were wrong**, and the queue that ranked them is measuring the archive
 
 ⏱️ **Twenty-third pass of `2026-10-17`.** Append-only — everything below this section is prior history
