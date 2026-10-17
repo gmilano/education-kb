@@ -16,10 +16,15 @@
 # runnable where there is no egress.
 SHELL := /bin/bash
 PY ?= python3
+# p277: the enumeration suite reports WHICH control failed on stdout and exits 1.
+# That report used to be redirected to /dev/null, so the gate could prove a failure
+# and could not name it.  It is captured here and printed on failure instead.
+GATE_LOG ?= /tmp/education-kb-gate-enumeration.log
+TABLE_LOG ?= /tmp/education-kb-gate-tables.log
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration enumerate
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables enumerate
 
-hooks: gate-offline recount gate-enumeration ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, plus p275's enumeration gate
+hooks: gate-offline recount gate-enumeration gate-tables ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, plus p277's table-structure gate
 
 # 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
 # p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
@@ -28,8 +33,21 @@ hooks: gate-offline recount gate-enumeration ## the standing check: every licenc
 # ls1intum/Athena declares MIT in 12 of 14 manifests, while the ladder probed the one
 # manifest that is silent.  Both false negatives were structurally guaranteed.  No network.
 gate-enumeration: ## ACTION p275 — no shelf may assert an absent grant that an enumeration refutes
-	@cd compose/code/pass275-grant-enumeration && $(PY) test_enumeration_gate.py >/dev/null && echo "── pass275-grant-enumeration (30 controls incl. the C3 positive control; vendored/icon/source paths, two-subject lines)" && echo "   PASS" || exit 1
+	@cd compose/code/pass275-grant-enumeration && { $(PY) test_enumeration_gate.py > $(GATE_LOG) 2>&1 || { echo "🔴 pass275-grant-enumeration FAILED — the suite's own report follows (p277: this went to /dev/null for three passes, so no pass could name the failing control):" ; sed "s/^/   /" $(GATE_LOG) ; false ; } ; } && echo "── pass275-grant-enumeration (30 controls incl. the C3 positive control; vendored/icon/source paths, two-subject lines)" && echo "   PASS" || exit 1
 	@cd compose/code/pass275-grant-enumeration && $(PY) -I enumeration_gate.py --root ../../.. || exit 1
+
+# 🟢 p277 (`ACTION AB`): p276 found a `|---|` separator sitting BELOW its table's first data
+# row, so p274's own recovered `gegok12` row rendered as part of the HEADER -- a real row,
+# published, invisible -- and recorded: "No gate on this base reads table structure."
+# 🔴 p277 then found a LIVE second instance in another file and another shape: a stray BLANK
+# LINE at verticals/solutions.md:50 promoted `Koha` (a real GPL-3.0 row) into a header and
+# orphaned every row below it.  Two shapes, one failure mode: a row that is published and
+# does not render as a row.  No network.
+# 🔵 The suite's output is CAPTURED and printed on failure -- p277's own finding about
+# gate-enumeration was that `>/dev/null` discards the only thing a failing gate has to say.
+gate-tables: ## ACTION p277 — no shelf may publish a data row that renders as a table header
+	@cd compose/code/p277-table-structure && { $(PY) test_table_structure.py > $(TABLE_LOG) 2>&1 || { echo "🔴 p277-table-structure FAILED — the suite's own report follows:" ; sed "s/^/   /" $(TABLE_LOG) ; false ; } ; } && echo "── p277-table-structure (15 controls: the empty-header, cross-table-blank and pipe-art shapes)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p277-table-structure/table_structure.py . || exit 1
 
 # 🔴 ONLINE half — stays OUT of `hooks` so the standing check runs without egress.
 enumerate: ## ACTION p275 — enumerate trees for a slug list: make enumerate SLUGS=slugs.txt

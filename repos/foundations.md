@@ -380,6 +380,45 @@ from absence.
   good figure on noise is as bad as publishing a bad one. Three independent agreements, including
   one to the byte, say this base's APAC licence cells are sound.**
 
+## Pass 277 — six absences on this base stopped resting on path ladders, and one of them changed meaning when enumerated
+
+🟢 **No row on this shelf changed licence this pass.** What changed is the **grade** under six absence
+verdicts, which `P275`/`P278` hold is the difference between a sayable absence and an unmeasured one:
+*to sustain an absence in a tree you must ENUMERATE it; a count of zero over a path that does not exist
+in that ref measures the **path**, not the content.*
+
+Each row below was re-run first-hand this pass — `git ls-remote` for existence, then a blobless
+`--depth 1 --filter=blob:none --no-checkout` clone, then `git ls-tree -r HEAD`, then every candidate
+path read at payload, plus eight manifest paths. Evidence:
+[`tree-enumeration.2026-10-17-p277.tsv`](../evidence/tree-enumeration.2026-10-17-p277.tsv).
+
+| row | was carried as | now rests on | licence-like paths | manifest grant |
+|---|---|---|---|---|
+| [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) | *"no payload on 19 of 19 paths"* | 🟢 **310 paths enumerated** | **0** | none |
+| [`touretzkyds/ai4k12`](https://github.com/touretzkyds/ai4k12) | *"(no payload)"*, `repos/foundations.md` | 🟢 **190 paths enumerated** | **0** | none |
+| [`CyanXLab/Phonos`](https://github.com/CyanXLab/Phonos) | absence asserted, 3 lines | 🟢 **119 paths enumerated** | **0** | none |
+| [`autograder-org/autoGrader-frontend`](https://github.com/autograder-org/autoGrader-frontend) | absence asserted | 🟢 **36 paths enumerated** | **0** | none |
+| [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) | absence asserted, 2 lines | 🟢 **31 paths enumerated** | **0** | none |
+| [`OpenEMIS/OpenEMIS-Core`](https://github.com/OpenEMIS/OpenEMIS-Core) | absence asserted | 🟡 **11 paths enumerated** | **0** | none |
+
+🔴 **`OpenEMIS/OpenEMIS-Core` is the row where enumeration did not confirm the verdict so much as
+reframe it.** **Eleven paths in total is not a codebase.** The absence is true of *this repository* and
+tells a studio **almost nothing about OpenEMIS the product** — an education-management system used by
+ministries. A reader told *"OpenEMIS serves no grant"* will conclude the platform is unlicensed; what
+was actually measured is an eleven-file shell, which is consistent with the code living elsewhere (a
+release artefact, a different org, or submodules a blobless clone does not expand).
+
+🟢 **New sub-rule, and it is cheap to apply: publish the path count beside every absence.** An absence
+over **310** paths and an absence over **11** are not the same claim, and this shelf has been writing
+them in the same words. 🔵 **The counts are already being collected** — every enumeration this base runs
+produces one — so this costs a column, not a probe. Registered for `p278` as `T57`.
+
+⚠️ **One limit of the method, stated because it bounds all six rows above.** A blobless
+`--no-checkout` clone enumerates the tree **at one ref** — `HEAD` — and `p269` already paid for ref
+sensitivity here (`learningequality/kolibri` serves **MIT on `develop`** and **404 on `main`**). **These
+six are enumerated at `HEAD` only.** A grant sitting on a non-default branch would still be missed, and
+six clean trees do not discharge that. **The absences are upgraded, not closed.**
+
 ## Pass 276 — the permissive table was missing its separator, and two foundations were missing their grants
 
 🔴 **A formatting defect first, because it hid `p274`'s own prize row.** The permissive table's

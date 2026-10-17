@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 277) — `make hooks` RAN for the first time in three passes, and it **refuted `p276`'s own expected result**
+
+⏱️ **Twenty-third pass of `2026-10-17`.** Append-only — everything below this section is prior history
+and is not rewritten. Evidence:
+[`tree-enumeration.2026-10-17-p277.tsv`](../evidence/tree-enumeration.2026-10-17-p277.tsv) ·
+[`positive-controls.2026-10-17-p277.tsv`](../evidence/positive-controls.2026-10-17-p277.tsv) ·
+[`p277-websearch.2026-10-17-p277.tsv`](../evidence/p277-websearch.2026-10-17-p277.tsv) *(12 legs, 3
+informative nils declared)*.
+
+### 🔴 Headline: the gate `p276` validated as DATA fails when EXECUTED, exactly as `p276` said it might
+
+`p276` could not run anything — *"the sandbox hosting this pass refuses to execute scripts from a cloned
+repository"* — so it validated its patch by `ast.parse` and regex extraction, and wrote the honest
+instruction: **"`p277`'s first action is `make hooks` plus `python3 -I test_enumeration_gate.py`.
+Expected: `REFUTED=0 · VERIFIED-ABSENT=48 · QUEUE-UNENUMERATED=70`, `47/47` controls. If it differs, the
+patch is wrong."**
+
+🟢 **`make hooks` was executed this pass. It differs.**
+
+| step | result |
+|---|---|
+| `gate-offline` — every licence instrument's offline controls | 🟢 **`ALL OFFLINE LICENCE CONTROLS PASS`** (~40 suites, incl. the lazy-quantifier lint at **0 findings**) |
+| `recount` — `T37`'s standing re-derivation | 🟢 **ran**, and reported **2 of 4 registered claims STALE** |
+| `gate-enumeration` — `p275`+`p276`'s enumeration gate | 🔴 **FAILED.** `make: *** [Makefile:31: gate-enumeration] Error 1` |
+
+🔴 **So `p276`'s `47/47` is refuted by execution, and its patch is wrong by its own stated test.** The
+two halves of `p276` must now be read differently: its **evidence** half used plain `git` and `curl` at
+pinned SHAs and stands; its **instrument** half was `UNVERIFIED-BY-EXECUTION` and has now been tested
+and failed. 🔵 **`p276` labelled that risk itself and named the test that would expose it. The label
+worked.**
+
+### 🔴 And the gate could not say WHAT failed, because the recipe discards it
+
+**`Makefile:31` runs the suite as `test_enumeration_gate.py >/dev/null`.** The suite reports failures by
+printing `# N FAILING:` and each control's label **to stdout**, then exiting 1. 🔴 **So the redirection
+throws away the entire diagnostic and keeps only the exit code:** the gate can prove something is
+broken and **cannot say which control broke**. `__pycache__/` is dated to the run, so the suite
+certainly executed; its output went to `/dev/null`.
+
+🔵 **This is the third member of a family this Makefile already documents in its own comments**, and the
+first two are named there:
+
+| pass | the gate could not… | mechanism |
+|---|---|---|
+| `p253` | **HEAR** its controls | `cd d && test.py && echo PASS` exempts a non-final `&&` member from `errexit`, so a failing suite never reached the banner |
+| `p254` | **SPEAK** its verdict | `make claims` ended in `\|\| true`, discarding the exit 1 that *was* the stop signal |
+| 🔴 **`p277`** | **SEE** what failed | `>/dev/null` discards the failing-control list the suite exists to print |
+
+🟢 **Fixed in this pass, and the fix paid for itself in the same run.** The recipe now captures the
+suite's output and **prints it on failure**. The exit-status contract is unchanged — `p254`'s
+`exit_reach.py --verify Makefile` still reports `OK 5 contracted targets, every line can fail`, and
+`p253`'s propagation audit reports `47 PASS steps, 0 unguarded, banner guarded True`. 🔵 **Getting that
+second one green took a rewrite:** the first draft put the diagnostic in a trailing `|| { … exit 1; }`,
+which aborts correctly but does **not** contain the literal `|| exit 1` that `p253`'s predicate looks
+for. **The predicate was right and the new recipe was wrong**, so the recipe was restructured to put the
+report *inside* the `&&` chain and end, as every other step does, in `|| exit 1`. **A safety gate was
+not weakened to accommodate a formatting preference.**
+
+🟢 **One line of output, and the three-pass mystery was over:**
+
+```
+# 1 FAILING:
+  FAIL a DEAD slug does not own a claim about the real repo of the same basename:
+       got [], want ['Gego-K12/gegok12']
+```
+
+### 🟢 `D6` — `p276`'s fix was correct and slightly over-narrow, and its own control said so
+
+`p275` widened `attribute()` to match a **bare repository name**. `p276` narrowed it to be
+**case-sensitive**, which correctly killed **thirteen false refutations** caused by `lms` matching
+*"the **LMS**-side MCP servers"* and *"a proprietary **LMS**"*. 🔴 **The same narrowing stopped a real
+name matching the way prose actually spells it:** this base writes **`GegoK12`** and the slug is
+`gegok12`. **Same name, different camel-casing.**
+
+🔵 **The discriminator is not case. It is whether the token could be an English word — and no common
+noun contains a DIGIT.**
+
+| base | shape | matching | why |
+|---|---|---|---|
+| `gegok12`, `ai4k12` | contains a digit | 🟢 case-**insensitive** | cannot collide with a noun, so case costs nothing and camel-casing is free |
+| `tutor`, `bloom` | purely alphabetic | 🔴 case-**sensitive**, as `p276` left it | *Tutor* and *Bloom* are words before they are repositories |
+| `lms` | purely alphabetic **and** < 4 chars | 🔴 rejected twice over | `p276`'s `D5a` length guard **and** the case rule — the noun class is now held by **two independent guards** |
+
+🟢 **Eight new controls pin it, and every negative arm `p276`'s fix was protecting is asserted
+alongside the positive one**, so a later pass cannot widen the digit rule and silently reopen the noun
+class. 🔵 **The suite also stopped lying about its own size:** it printed a hard-coded `"47/47"` while
+running an unknown number of controls, so adding one made the banner false. **The count is derived
+now.**
+
+🟢 **`gate-enumeration` passes: `REFUTED=0 · VERIFIED-ABSENT=53 · QUEUE-UNENUMERATED=69`** — and
+**both of `p276`'s predicted counts were wrong** (it expected `48` and `70`). 🟢 **`make hooks` exits
+`0` end to end, the first fully green standing check in at least three passes.**
+
+### 🟡 The repository research leg returned nothing new, and that is published rather than padded
+
+Three legs were run for new repositories and **all three are informative nils**. Queries verbatim:
+
+| query | outcome |
+|---|---|
+| `github trending education AI 2026 open source repository` | 🟡 **No new education agent.** `HKUDS/DeepTutor` reconfirmed as the most-starred (~41.1–41.5k★). Everything else returned was a **course or teaching repo, not an agent** — `microsoft/generative-ai-for-beginners` (~108k★), `rasbt/LLMs-from-scratch` (~87.7k★), `rohitg00/ai-engineering-from-scratch` (~67.5k★), `karpathy/nanochat`, `developer-roadmap`. **Deliberately not shelved as agents** |
+| `top open source AI agents education 2026 github MIT tutoring` | 🟡 **Every candidate was already carried** — DeepTutor, OpenTutor, freelingo, ChatTutor, FutureAGI — plus general-purpose frameworks (CrewAI, MetaGPT) that are not education rows. **Zero new slugs** |
+| `open source student information system LMS 2026 Apache MIT license self-hosted` | 🟡 **No MIT platform exists to find.** The only clear Apache-2.0 LMS returned was **OpenOLAT**, which this base payload-verified at `p272`. RosarioSIS / Gibbon / Moodle / Chamilo **GPL**, Open edX **AGPL**, Canvas **AGPL**; **Forma LMS's licence conflicts across sources** and is not shelved on one |
+
+🔵 **The sources were third-party blogs and an automated-report issue, not `github.com/trending`
+itself** — worth recording, because a nil derived from secondary indexes is weaker than one derived from
+the index itself. 🟢 **But the nil is corroborated from a direction the blogs cannot reach:** every
+candidate was checked against this base's own carried index, and **all of them were already on the
+shelves.** After 277 passes the marginal return of a generic trending query on this industry is near
+zero; **the yield this pass came from jurisdictions and from re-reading payloads, not from discovery.**
+
+🔴 **One secondary claim that would matter if true, and could NOT be verified here:** that **Canvas
+Free-for-Teacher was permanently discontinued in May 2026.** `instructure.com` is **DNS-unresolvable
+from this sandbox** (`getaddrinfo ENOTFOUND`, two tools). It is recorded on
+[`verticals/solutions.md`](../verticals/solutions.md) as **unverified**, because if it holds it removes
+the zero-cost Canvas sandbox that this base's own `P28`/`Pattern H` sequencing assumes.
+
 ## 2026-10-17 (pass 276) — Enumerating one ordinary backlog row made the standing gate report **thirteen false refutations**, and the cause was the correction `p275` added
 
 ⏱️ **Twenty-second pass of `2026-10-17`.** Append-only — everything below this section is prior

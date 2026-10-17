@@ -468,6 +468,19 @@ against Moodle Web Services — i.e. actual engineering, not an install.
 **still empty** while **20 distinct education MCP server slugs are shelved on `agents/top.md`**
 (**15** when `p274` measured it, plus the five that pass shelved from `trending.md`).
 None was found through a topic listing.
+
+🔴 **`p277`: this is the one registered quantity where the TWO INSTRUMENTS DISAGREE, and the number is
+therefore left standing at 20.** `make hooks` ran this pass and `T37`'s re-count reported
+`MCP server slugs tabled on agents/top.md · published 20 · measured 21 · STALE`. **An independent
+enumeration written fresh this pass — every table row on `agents/top.md`, every `github.com/<owner>/<repo>`
+whose slug contains `mcp` — returned 20, agreeing with the SHELF and not with the gate.** 🔵 **So the
+STALE verdict is NOT confirmed, and the correct action is to change nothing.** `p277` fixed the *other*
+STALE row (`24 → 27` permissive rows) because there both instruments agreed; here they do not, and
+**a 1-row disagreement between two predicates is a defect in a predicate, not a stale shelf.**
+🔴 **Declared for `p278`:** reconcile `recount.py`'s MCP predicate against the row enumeration and
+establish which one is counting the 21st slug — until then this sentence must not be "corrected" in
+either direction. **The failure mode to avoid is a pass that edits a true number to match a wrong
+instrument, which is harder to detect than a stale one.**
 🔴 **This sentence read "five" until pass 272 and "12" until pass 274** — a true gap carried at a
 stale magnitude, because passes 267, 268 and 273 added servers and updated the count on one shelf at
 a time. 🟢 **`p274` stopped counting by hand:** the number is now derived by
@@ -1624,3 +1637,109 @@ and all 16 removed are false**.
 measure the false positives on the largest corpus available**, not on the case that motivated it. And a
 widened matcher is most dangerous **on the queue the same pass creates** — the backlog is, by
 construction, the set of rows nobody has looked at.
+
+## T53 — APAC does not regulate "APAC", and a regional abbreviation is why this base saw nothing for ten passes
+
+**Measured, not argued.** This shelf published an **APAC nil for ten consecutive passes** while five of
+the region's largest school systems were each running a named, dated, numbered instrument. `p276`
+diagnosed the cause without being able to test it — *"this is a QUERY defect"* — and ranked one
+instruction: **query the jurisdiction, never the region.** 🟢 **`p277` ran it once and the nil ended on
+the first attempt**: China's *AI Plus Education* plan (Apr 2026, to 2030), India's **AI & CT from Grade
+3** (CBSE Circular Acad-15/2026), Japan's **MEXT Ver. 2.0**, Singapore's **Teacher AI Literacy
+Roadmap** (Aug 2026), and South Korea's **unwound AI digital textbooks**. Full cells in
+[`intel/market.md`](market.md#apac).
+
+🔵 **The generalisable rule, and it is not about APAC.** *No ministry of education calls itself APAC.*
+A regional abbreviation is a **market-research category**, so querying it returns market research —
+which is precisely what the ten nil legs returned: Forrester, sovereignty think-pieces, enterprise
+data-infrastructure percentages. **The instrument a jurisdiction actually publishes is indexed under
+the jurisdiction's own name for its own institution** (MEXT, MOE, CBSE, MoE), and that is the only
+spelling that reaches it.
+
+🔴 **Second instance, so this is now a pattern rather than an anecdote.** EMEA ran a **nine-pass nil**
+and broke on `p276`'s first instrument-targeted query. APAC ran a **ten-pass nil** and broke on
+`p277`'s first jurisdiction-targeted query. **Two regions, nineteen wasted legs, one cause.** 🟢 **The
+standing instruction, for every region including the ones that look healthy:** a regional leg that
+returns no instrument has **not** measured the region — it has measured the query, and must be re-run
+against named jurisdictions before any gap is declared. **`LATAM` and `North America` have never been
+run this way on this shelf**, and both are currently carried on *regional* queries.
+
+## T54 — The reference case for education AI is now a failure, and it failed on governance rather than on models
+
+**South Korea built, deployed and then unwound a national AI digital-textbook programme** — the only
+instance of its kind in this KB. Status revoked by the National Assembly **four months into the
+rollout** (Aug 2025); adoption **37% → 19%** of classes; **two data-protection violations** found by
+the privacy regulator; the **state auditor found the textbooks were brought into schools without a
+pilot**; publisher suits **dismissed** (Seoul Administrative Court, Jul and Aug 2026); the review
+process for 2026-year products **halted**.
+
+🔴 **Not one of the cited causes was model capability.** They were **factual errors in generated
+content, privacy risk, screen time, and teacher workload** — four implementation and governance
+failures, all four inside a delivery partner's scope of responsibility.
+
+🔵 **Why this belongs in a trends file and not only a market cell.** Every adoption curve on this shelf
+is an *aggregate*, and aggregates cannot show a programme reversing. Korea is the counter-example that
+makes three otherwise-unfalsifiable claims testable: **a mandate is not adoption** (the decline
+happened while the mandate stood), **a privacy finding outranks an accuracy benchmark** in deciding
+whether a programme survives, and **the pilot is not a procurement formality** — the auditor named its
+absence as the finding. 🟢 **Read it beside Japan's funded split** — **100** of 161 pilot
+municipalities on *teacher administration* versus **10** in class — and two jurisdictions that agree on
+nothing else both start away from the student.
+
+## T55 — England regulates learner-facing education AI through procurement, and the 2026 revision added four standards that cannot be retrofitted
+
+The DfE's **"Generative AI: product safety standards"** (retitled from *"expectations"*) was first
+published **Jan 2025** and **revised 19 January 2026**, adding four standards: **cognitive development,
+emotional and social development, mental health, and protection against manipulation** — driven by
+**Online Safety Act** changes and emerging generative-AI risk.
+
+🔵 **The mechanism is the finding.** The standards are **not law**; they address **suppliers of
+learner-facing products**. So England's control point on education AI is **the purchase order, not the
+statute book** — failing the standards costs the deal rather than attracting a penalty, which makes
+them *more* binding on a vendor than a deferred statutory duty and *less* visible to anyone scanning
+for regulations. 🔴 **Contrast `T4`/`P29`:** the EU route is statutory, dated and deferrable (Annex III
+now **2027-12-02**); the England route is non-statutory, already in force, and not deferrable at all.
+**An EMEA engagement that prepares only for the AI Act is unprepared for the English buyer.**
+
+🔴 **And the four new standards are the most retrofit-hostile requirement in this KB.** "Cognitive
+development" and "protection against manipulation" are claims about **pedagogical design and
+interaction patterns** — what the agent does turn by turn — not features that bolt on at the end. A
+tutor built to maximise task completion is *architecturally* adverse to them. 🟢 **The implication for
+sequencing is concrete:** these constraints must sit in the **first** design review, and the
+pedagogically-constrained tutors this base already shelves (**Iris** — *"hints and leading questions
+rather than answers"*) are the right reference shape, not the engagement-maximising kind.
+
+⚠️ One supplier reads the standards as applying **only to learner-facing** platforms, exempting
+teacher-facing tools. **If that holds, the compliance-cheapest first deliverable in England is
+teacher-facing** — the same place Japan put its funded majority. ⚠️ **Binding status conflicts across
+secondary sources and `www.gov.uk` was not readable from this sandbox**; published as non-binding,
+marked unread.
+
+## T56 — An append-only shelf inflates a line-scoped absence queue, and the backlog grows even when the work is done
+
+🔴 **`p277` harvested its own queue of negative licence verdicts, ranked it, worked the top twelve
+first-hand — and all twelve were already correctly resolved on the shelves.** Twelve rows, **zero
+corrections, twelve positive controls**. Evidence:
+[`positive-controls.2026-10-17-p277.tsv`](../evidence/positive-controls.2026-10-17-p277.tsv).
+
+🔵 **That result is good news about the shelves and bad news about the queue, and the cause is
+structural.** A queue predicate that asks *"does this line assert an absence, and does this line also
+carry enumeration evidence?"* is **line-scoped**. But `agents/trending.md` and `repos/trending.md` are
+**append-only by design** — a correction is published as a *new dated section*, and the original
+absence prose **stays on the shelf as history, correctly**. 🔴 **So every correction leaves its own
+refuted claim behind as a permanent queue entry, and the backlog grows monotonically with the number of
+corrections made.** The queue is measuring **the archive**, not the live state.
+
+🔴 **This is `p276`'s own declared gap, reproduced from scratch by an instrument that had never seen
+it:** *"`states_a_grant()` is line-scoped while `attribute()` is subject-scoped."* **`p277` wrote a
+fresh harvester, in a different language idiom, with no knowledge of that predicate, and inherited the
+identical defect** — which is the strongest available evidence that the defect is in the *shape of the
+problem*, not in one implementation. 🟢 **The fix is a scope, not a pattern:** an absence claim must be
+resolved against **the most recent statement about that subject across the whole file**, not against
+the line it sits on. Until that exists, **`QUEUE-UNENUMERATED` is an upper bound and must be published
+as one** — `p277` estimates the live fraction is small, on a 12-of-12 sample.
+
+🔵 **One corollary worth keeping.** The twelve controls were not wasted: six rows whose absence rested
+on a **path ladder** (`edunaija-os` at *"19 of 19 paths"*) now rest on a **full tree enumeration** (310
+paths), which is the grade `P275`/`P278` require for an absence to be sayable at all. **A positive
+control that upgrades the grade of what it confirms is worth running even when it finds nothing wrong.**

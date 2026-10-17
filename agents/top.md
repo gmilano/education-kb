@@ -62,12 +62,21 @@ non-commercial friction.
 | fsrs4anki-helper | [open-spaced-repetition/fsrs4anki-helper](https://github.com/open-spaced-repetition/fsrs4anki-helper) | MIT | 325 | **FSRS spaced-repetition scheduling** — the retention-optimising scheduler a tutoring agent can call instead of inventing review intervals: reschedule, postpone, advance, load-balance. 🔴 **`p276` refuted *"NO GRANT in 6 filenames"*:** the grant is at **`License`** — mixed case, **no extension** — `1 079` B, read at payload. [evidence](../evidence/tree-enumeration.2026-10-17-p276.tsv) |
 | EduChat *(code tier only)* | [ECNU-ICALK/EduChat](https://github.com/ECNU-ICALK/EduChat) | Apache-2.0 **for the code** · 🔴 `AGPL-3.0` model · 🔴 `CC-BY-NC-4.0` data | 973 | **Educational LLM from ECNU** (retrieval-augmented tutoring, emotional support, essay assessment). 🔴 **`p276` withdrew *"cannot be used"*:** at the same ref `fa30b6d5632c` the tree serves `LICENSE/LICENSE.txt` — **Apache-2.0, `11 357` B**, the pristine length. 🔵 **Six path probes and GitHub's API both missed it because `LICENSE` is a DIRECTORY**, so each probe hit a tree, not a blob. ⚠️ **Build on the CODE only:** shipping the weights pulls in `AGPL-3.0`, and the data is non-commercial. [evidence](../evidence/tree-enumeration.2026-10-17-p276.tsv) |
 
-**24 permissive rows.** (14 from passes 264-265, plus Artemis, Iris and Pyris in pass 266, plus
+**27 permissive rows.** (14 from passes 264-265, plus Artemis, Iris and Pyris in pass 266, plus
 `canvas-mcp` in pass 267, plus three Google Classroom servers in pass 268, plus **two MIT Moodle
 servers in pass 273**, plus **`ls1intum/Athena` in pass 275** — moved here from the licence-UNVERIFIED
-table below, not newly discovered.) **22 are payload-verified; `adriasantacreu/google-classroom-mcp`
-and `ls1intum/Athena` are metadata grade and are marked as such in their own cells** — the count is
-not allowed to launder the weaker rows.
+table below, not newly discovered — plus the **three rows `p276` added: `DMontgomery40/mcp-canvas-lms`,
+`fsrs4anki-helper` and `ECNU-ICALK/EduChat` (code tier)**.) **24 are payload-verified;
+`adriasantacreu/google-classroom-mcp` and `ls1intum/Athena` are metadata grade and are marked as such
+in their own cells** — the count is not allowed to launder the weaker rows.
+
+🔴 **`p277`: this number read `24` until this pass, and the standing re-count is what caught it.**
+`make hooks` was **executed** this pass (`p276` could not run it) and `T37`'s re-count reported
+`permissive rows in the build-on tier · published 24 · measured 27 · STALE`. **`p276` added three rows
+and did not move the count** — which is the exact failure mode `T37` was written for, committed by the
+pass that was reading `T37`'s output. 🔵 **The counted value was then re-derived independently**, by a
+row-by-row enumeration of this table written fresh this pass, which returned **27** and named all three
+missing rows. **Two instruments, one number, agreement.**
 
 ⚠️ **Cite `canvas-mcp`'s tool count as a range, not a number.** Its About blurb says *"up to 102
 tools"*; its README body says *"up to 126"*, and adds that the default profile registers fewer than

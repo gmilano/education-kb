@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 277) — Twelve negative verdicts re-checked at payload, **zero were wrong**, and the queue that ranked them is measuring the archive
+
+⏱️ **Twenty-third pass of `2026-10-17`.** Append-only — everything below this section is prior history
+and is not rewritten. Evidence:
+[`positive-controls.2026-10-17-p277.tsv`](../evidence/positive-controls.2026-10-17-p277.tsv) *(12 rows:
+what the shelf publishes vs what was measured first-hand this pass)* ·
+[`tree-enumeration.2026-10-17-p277.tsv`](../evidence/tree-enumeration.2026-10-17-p277.tsv) *(the raw
+two-channel run: `ls-remote` → blobless `--no-checkout` clone → `ls-tree -r`, then every candidate read
+at payload, plus eight manifest paths per slug)* ·
+[`p277-websearch.2026-10-17-p277.tsv`](../evidence/p277-websearch.2026-10-17-p277.tsv) *(12 legs)*.
+
+### 🟢 Headline: the shelves were right twelve times out of twelve, and that is the first clean licence result in several passes
+
+`p276` left **`QUEUE-UNENUMERATED=70`** with a measured ladder error rate of *"roughly one in four"*.
+`p277` harvested its own queue from the shelves — **110 slugs on absence-asserting lines** — ranked it,
+and worked the **top twelve** with both channels.
+
+| | |
+|---|---|
+| rows worked, both channels | **12** |
+| negative verdicts **refuted** | 🟢 **0** |
+| **positive controls passed** | 🟢 **12 of 12** |
+| byte counts **reproduced exactly** | **4** (1,068 · 1,068 · 1,531 · 4,818) |
+| absences upgraded **ladder → full enumeration** | **6** |
+
+🔵 **Four consecutive passes found a false negative; this one found none.** After `p275` (2 refuted),
+`p276` (9 refuted) and the correction run between them, **the licence state of this base's hard cases is
+now reproducing under independent re-measurement.** That is the result the positive controls exist to
+produce, and it is worth stating plainly rather than burying under the one thing that did go wrong.
+
+### 🟢 Six absences stopped resting on a path ladder
+
+`P275`/`P278` hold that *to sustain an absence in a tree you must ENUMERATE it* — a zero over a path
+that does not exist measures the **path**, not the content. Six rows were carried on ladders and now
+rest on full trees at `HEAD`:
+
+| row | the ladder it rested on | enumerated this pass | licence-like paths |
+|---|---|---|---|
+| [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) | *"no payload on 19 of 19 paths"* | 🟢 **310 paths** | **0** |
+| [`touretzkyds/ai4k12`](https://github.com/touretzkyds/ai4k12) | *"serves no licence payload"* | 🟢 **190 paths** | **0** |
+| [`CyanXLab/Phonos`](https://github.com/CyanXLab/Phonos) | absence asserted on 3 lines | 🟢 **119 paths** | **0** |
+| [`autograder-org/autoGrader-frontend`](https://github.com/autograder-org/autoGrader-frontend) | absence asserted | 🟢 **36 paths** | **0** |
+| [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) | absence asserted on 2 lines | 🟢 **31 paths** | **0** |
+| [`OpenEMIS/OpenEMIS-Core`](https://github.com/OpenEMIS/OpenEMIS-Core) | absence asserted | 🟡 **11 paths** | **0** |
+
+🔴 **`OpenEMIS/OpenEMIS-Core` is the one whose enumeration CHANGED WHAT THE ABSENCE MEANS.** Eleven
+paths is not a codebase. The absence is **true of this repository** and says **almost nothing about
+OpenEMIS the product** — a studio told *"OpenEMIS serves no grant"* would reasonably conclude the
+platform is unlicensed, when what has been measured is an eleven-file shell. 🔵 **A new sub-rule:
+report the path count beside every absence, because an absence over a near-empty tree is not evidence
+about the project.** Registered as `T57` material for `p278`.
+
+### 🟢 Three payloads now carry their TERMS, not just their family
+
+All three were already graded correctly. What `p277` adds is the operative sentence, read first-hand,
+so a studio does not have to re-open the file:
+
+- 🔴 [`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom) —
+  `LICENSE.md`, **6,489 B**, *"AStheTECH Community License (ACL)"*. The grant is **"limited,
+  non-exclusive, non-transferable, non-sublicensable, and revocable"** for *"personal, educational, or
+  internal business purposes"*; redistribution **"only on a non-commercial basis"**; selling,
+  sublicensing or commercially exploiting it requires **"prior express written authorization"**.
+  🔵 **Second instance of `P-N1`** (*a refuted absence is not a permission*): the grant exists, is
+  readable, and still **forbids the deliverable a studio would ship**. ⚠️ **Revocable** is the word that
+  matters most and the one an engagement will skim past.
+- 🔴 [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) — `LICENSE`, **4,818 B**, **Business Source License
+  1.1**, Licensor **DataCebo, Inc.** 🟢 **The Additional Use Grant is more permissive than "not OSI"
+  suggests, and it is now quoted:** use of the Licensed Work **and derivatives** is permitted
+  **except** for a *"Synthetic Data Service"* — defined as a commercial offering letting third parties
+  (other than your employees and contractors) access the functionality. 🔵 **So a studio MAY generate
+  synthetic student data inside a client deliverable and MAY NOT resell that generation as a service.**
+  Wired into new pattern **`P31`**, where it is the privacy counter-measure.
+- 🟡 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) — `LICENSE`,
+  **1,531 B**, **verbatim BSD-3-Clause** (three numbered conditions including the no-endorsement
+  clause), © 2023-2025 Mohamed El hajji on behalf of R2D-dev. **Reproduced exactly**, byte count
+  included, and this base's reading that the opening *"All rights reserved"* belongs to the BSD form
+  rather than reserving on top of it **holds**.
+
+🔴 **And one NEW discrepancy on that last row, which no pass has recorded: the two channels disagree.**
+The **payload** is BSD-3-Clause; **`pyproject.toml` declares `License :: OSI Approved :: MIT
+License`**. Both are permissive, so **nothing a studio may do changes** — but the **attribution
+obligation does**: BSD-3 adds the no-endorsement condition that MIT has no equivalent of. 🔵 **This base
+has a grade for *payload* and a grade for *metadata*, and no class at all for payload-and-metadata
+CONFLICT.** The correct publication is **the payload, with the conflict disclosed** — a manifest is the
+project's declaration, but the licence file is the licence. **Declared for `p278`:** build the conflict
+class, then sweep the metadata-grade rows for it, because a conflict is only visible when **both**
+channels are read and most rows have only ever had one.
+
+### 🔴 The instrument defect, and it is in the queue rather than in the shelves
+
+**Twelve rows ranked highest by the harvest were all already resolved.** The harvest was not unlucky —
+it was **line-scoped**, and these shelves are **append-only by design**. A correction is published as a
+new dated section while the original absence prose stays below as history, **correctly**. 🔴 **So every
+correction leaves behind a permanent queue entry, and the backlog grows monotonically with the number of
+corrections made.** Written up as **`T56`**.
+
+🔵 **The part worth the most:** `p276` declared this exact shape — *"`states_a_grant()` is line-scoped
+while `attribute()` is subject-scoped"* — and `p277`'s harvester was written **fresh, without reference
+to that predicate, and inherited the identical defect.** Two independent implementations, one failure:
+the defect is in the **shape of the problem**, not in an implementation. **`QUEUE-UNENUMERATED` is an
+upper bound and must be published as one.**
+
+🔴 **One defect in `p277`'s own instrument, measured rather than confessed after the fact.** The fresh
+scope test excluded vendored and asset paths — `node_modules/`, `assets/`, `icons/` — and still
+**reported two false candidates** on
+[`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system):
+`lib/KIcon/precompiled-icons/mdi/copyright.vue` (1,088 B) and `.../mdi/license.vue` (747 B) — **Material
+Design icon components whose names are `copyright` and `license`**. The exclusion required `icons` as a
+**whole path segment**, and `precompiled-icons` is not one. 🟢 **The row survived anyway because the
+manifest channel carried it** (`package.json` → `"license": "MIT"`, the metadata grade `p267` already
+published) — **which is precisely the argument for running two channels.** 🔵 **And the cheap general
+fix: a grant is not a source module.** A candidate ending in `.vue` / `.ts` / `.py` / `.jsx` is an
+**extension test away** from being excluded, and that test is simpler than any path-segment list.
 ## 2026-10-17 (pass 276) — The queue p275 built was worked for the first time, and the row this base told studios **not to use** is MIT in its manifest and on npm
 
 ⏱️ **Twenty-second pass of `2026-10-17`.** Append-only — everything below this section is prior

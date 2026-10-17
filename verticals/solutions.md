@@ -47,7 +47,6 @@ updated: 2026-10-17
 | **Schul-Cloud** | [hpi-schul-cloud/schulcloud-server](https://github.com/hpi-schul-cloud/schulcloud-server) · [hpi-schul-cloud/nuxt-client](https://github.com/hpi-schul-cloud/nuxt-client) | **AGPL-3.0** · AGPL-3.0 | Node/NestJS + Nuxt | **The European public-sector school platform this shelf was missing.** *"Schulcloud-Verbund-Software-Server"* — **16,192 commits**, 81★ — a German school-cloud stack built around data-protection-first school IT, which is the posture EMEA procurement actually tests for. The counterpart to Sunbird (APAC) and i-Educar (LATAM) in the public-sector lane. ⚠️ **Provenance is org-handle grade only** — the handle is `hpi-schul-cloud` and the README links `dbildungscloud.dev`, but **it names no ministry, funder or Land**; do not brief it as a federal programme. ⚠️ The GitHub sidebar shows a License link **with no label**; the payload is the only licence evidence. AGPL network clause applies to hosting. |
 | **Tangerine** | [Tangerine-Community/Tangerine](https://github.com/Tangerine-Community/Tangerine) | **GPL-3.0** | Angular/PouchDB-CouchDB | **Offline-first *assessment* and data collection for low-resource settings** — **8,064 commits**, 70★. Runs on tablets and phones with no connectivity and syncs when a link appears; built originally for early-grade reading and maths. **The missing half of the offline lane:** Kolibri (MIT) delivers content offline, Tangerine measures learning offline. Logo is a registered trademark of **RTI International**. ⚠️ README claim, not independently verified: *"5 million+ assessments across 65 countries and 80+ organisations"* — **no country list is served**, so no named deployment is asserted. |
 | **Kolibri Studio** | [learningequality/studio](https://github.com/learningequality/studio) | **MIT** | Python/Django + Vue | *"Content curation tools for Kolibri"* — **15,493 commits**, 193★, 312 forks. The authoring and publishing half of the offline stack: builds content channels Kolibri imports, **remixes channels against national curricula and special-needs requirements**, and authors learning pathways and assessments. Shelved because a Kolibri deployment without Studio is a reader with no content pipeline — and the pipeline is where a ministry engagement's actual work sits. *MIT: the copyright line carries an "(internal apps)" parenthetical; the grant clauses are unmodified standard MIT.* |
-
 | **Koha** | [Koha-Community/Koha](https://github.com/Koha-Community/Koha) | GPL-3.0 *(`main/LICENSE`, 35,151 B)* | Perl + MySQL/MariaDB | **The world's most deployed open-source integrated library system (ILS)** — 594★, the adjacent system of record in virtually every academic-library engagement: catalogue, circulation, acquisitions, patrons, OPAC. **Added in pass 271, and the reason it was missing is recorded rather than quietly fixed:** it has been carried on `repos/trending.md` and `agents/trending.md` for several passes and never reached this shelf, which is the one a studio reads when it needs something to stand up. Licence re-measured blind this pass and it **agrees to the byte**. 🔵 **Where the AI layer goes:** Koha's catalogue is the cleanest authority file for a retrieval index in a university engagement — subject headings and holdings are already curated, so a RAG layer over Koha starts from librarian-maintained metadata instead of scraped text. ⚠️ GPL-3.0: keep the deliverable on the API side of the boundary. |
 | **H5P** *(content authoring)* | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) · [tunapanda/h5p-standalone](https://github.com/tunapanda/h5p-standalone) · [sr258/scorm-h5p-wrapper](https://github.com/sr258/scorm-h5p-wrapper) | 🔴 **GPL-3.0** *(`master/LICENSE.txt`, 35,146 B)* · 🟢 **MIT** *(1,077 B)* · 🟢 **MIT** *(1,073 B)* | PHP core; JS player | **Interactive content types — the authoring ecosystem embedded inside Moodle, Canvas and Drupal**, so it is already present in most incumbent estates. **Not a standalone platform; a subsystem** — shelved here because it is a running component a client already has, not an app to deploy. 🔴 **The licence is per-repository and that is the whole point** *(discharges `ACTION PW`)*: the **authoring core is GPL-3.0** and there is **no permissive H5P authoring server**; the MIT rows are **playback** (`h5p-standalone`) and **SCORM packaging** (`scorm-h5p-wrapper`). `Lumieducation/Lumi` (desktop) is **AGPL-3.0**. 🔵 **So the buildable move is to generate H5P content and play it through the MIT runtime**, never to fork the GPL authoring core. ⚠️ Path trap: `master/LICENSE` is a **404**, `master/LICENSE.txt` is a **200**, and the default ref is `master`. |
 | **Frappe LMS** | [frappe/lms](https://github.com/frappe/lms) | `AGPL-3.0` *(`license.txt` — lowercase **and** `.txt` — `33 893` B, payload read `p276`)* | Frappe/Python + Vue | **A modern course platform on the Frappe stack** (courses, batches, live classes, quizzes, certificates, programmable via the Frappe API). 🔴 **Carried as `LIVE-NOGRANT` — *"no payload at eleven filenames"* — until `p276` enumerated the tree.** ⚠️ **Licence boundary:** `AGPL-3.0` reaches users over a network, so client-proprietary code must sit **outside** the deployment — call it as a separate service over the REST API, never as a Frappe app in the same bench. [evidence](../evidence/tree-enumeration.2026-10-17-p276.tsv) |
@@ -327,6 +326,52 @@ while **North-West University became the first SA university with an official AI
 (**QUREO** / the Japanese **Kiryo** / a **Sprix** contract approved January 2026) — **brief the
 framework, not the vendor.** And every regional figure here is **secondary-source grade**: `p268`
 established the non-GitHub DNS failure as environmental, and no ministry document was read.
+
+## Pass 277 — no new permissive platform exists to find, and the free Canvas door this shelf's sequencing assumes may have closed
+
+🟡 **An informative nil, stated with the query that produced it.** Leg 11 ran
+`open source student information system LMS 2026 Apache MIT license self-hosted`. 🔴 **No MIT platform
+was located, and the only clear Apache-2.0 LMS returned was `OpenOLAT` — which this shelf already
+payload-verified at `p272`** (`master/LICENSE`, 10,982 B). Everything else returned was copyleft and
+already here: **RosarioSIS, Gibbon, Moodle, Chamilo** (GPL), **Open edX** and **Canvas** (AGPL).
+
+🔵 **So the headline of this shelf is unchanged, and now it is unchanged *after* a deliberate attempt to
+change it:** `OpenOLAT/OpenOLAT` remains **the only permissive full LMS on this base**, and the
+permissive full-platform count stays at **five** (OpenOLAT, Oppia, Kolibri, Sunbird, GegoK12). **Three
+consecutive passes have searched for a sixth and not found one.** That is now a property of the
+ecosystem rather than a gap in this shelf's coverage.
+
+⚠️ **One licence claim deliberately NOT shelved:** **Forma LMS** was returned as **Apache-2.0 by one
+source and GPL by another**. This shelf does not carry a licence it has not read, and neither source is
+a payload. **Left off entirely rather than tabled with a question mark** — a row with a disputed licence
+is worse than no row, because only the row gets copied into a proposal.
+
+### 🔴 The claim that would cost something if true: Canvas Free-for-Teacher
+
+**A secondary source states that Canvas *Free-for-Teacher* — Instructure's hosted free tier — was
+permanently discontinued in May 2026.**
+
+⚠️ **GRADE: SECONDARY, UNVERIFIED, AND UNVERIFIABLE FROM HERE.** `instructure.com` is
+**DNS-unresolvable in this sandbox** (`getaddrinfo ENOTFOUND`, reproduced via two different tools);
+only `github.com` and `raw.githubusercontent.com` resolve. **It is recorded, not asserted.**
+
+🔵 **Why it is recorded at all, rather than dropped as unverifiable.** It does not touch a licence — the
+AGPL-3.0 payload of [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) is read and
+unaffected — but it touches **this base's own recommended sequencing**. `compose/patterns.md` tells a
+studio to *"stand up `canvas-mcp` read-only against a sandbox"*, and `P28`/`Pattern H` make Canvas the
+shortest path to a live client system precisely because the doorway is cheap. 🔴 **If the free hosted
+tier is gone, the cheap sandbox is gone with it**, and the first week of that engagement becomes either
+a self-hosted AGPL deployment (**78,765 commits** — not a week) or a commercial trial the client has to
+sponsor.
+
+🟢 **What does NOT change either way, and should be said so the uncertainty is bounded:** the **two MIT
+doorways** stand on their own payloads —
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) and
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) — and **a client that
+already runs Canvas needs no free tier at all.** 🔵 **The exposure is narrow and specific: it is the
+*unsponsored pilot*, the demo built before a client has committed an environment.** `p278` with egress
+should settle it in one fetch, and until then **do not promise a zero-cost Canvas environment in a
+proposal.**
 
 ## Pass 276 — three platforms were excluded by a licence verdict that was never a reading, and Fedena's exclusion now rests on the right reason
 

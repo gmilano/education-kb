@@ -696,6 +696,38 @@ data gets the ranking backwards.
 
 ### North America
 
+**Pass 277 — a second institutional-strategy number arrives, it is 92%, and the scope is the whole
+finding.** EDUCAUSE's **"The Impact of AI on Work in Higher Education"** (fielded **29 Sep – 13 Oct
+2025**, **n = 1,960** responses meeting inclusion criteria) reports that **92% of respondents'
+institutions have a work-related AI strategy**, that **69%** of those with workforce-skills goals are
+pursuing them primarily by **upskilling and reskilling existing faculty and staff**, and that **81%**
+report enthusiasm or mixed caution-and-enthusiasm.
+
+🔴 **This shelf already carries "only about 1 in 3 universities has a clear AI strategy" (Ellucian).
+92% and ~33% are not a contradiction, and treating them as one would be the error.** The instruments
+measure different objects: EDUCAUSE asked about a **work-related** AI strategy — AI in the *employment
+and operations* of the institution — while the Ellucian figure is an **institution-wide** AI strategy
+covering teaching and learning. 🔵 **This is the third consecutive pass in which a North American
+figure turned out to be scoped rather than wrong** (`p276` refused a floating *"~10% have formal AI
+guidelines"* for having no scope attached; `p275`'s LATAM correction separated a *perception* measure
+from a *policy count*). **The rule this shelf keeps re-deriving: an adoption percentage without its
+object is not a number, and the object is usually the pitch.**
+
+🟢 **How to use both, without splicing them.** Quote **92%** when the engagement is **operational** —
+staff workflow, administration, workforce enablement; the buyer already believes they have a strategy
+there, so the sale is execution. Quote **~1 in 3** when the engagement is **academic** — teaching,
+learning, assessment; that is where the strategy is genuinely missing. **Never add them, average them,
+or present either as "institutions with an AI strategy" unqualified.**
+
+🟢 **One forward-looking instrument:** **AI tops the 2027 EDUCAUSE Top 10 IT Issues list for the first
+time in the survey's history, displacing cybersecurity.** For a North American higher-ed engagement
+that is the budget signal — the member-surveyed priority list is what IT leadership plans against.
+
+⚠️ **GRADE: SECONDARY.** `educause.edu` was not read first-hand (DNS-unresolvable here). The **92%**
+figure is also from a survey **fielded in autumn 2025**, so it is a year old against this pass's date —
+quote it with its field window, not as "current".
+
+
 **Pass 276 — one adoption instrument added, and a floating statistic flagged before it becomes a datum.**
 
 🟢 **Institutional adoption, higher education:** **66% of institutions now use AI, up from 49%** a year
@@ -976,6 +1008,51 @@ headline table. Query: `AI education North America 2026 adoption regulation play
 
 
 ### EMEA
+
+**Pass 277 — the UK's supplier-facing instrument was revised THIS YEAR, and it adds four standards
+that bite on exactly what an education agent does.** `p276` ended the nine-pass EMEA nil on the EU AI
+Act; this leg adds the **other** EMEA jurisdiction a studio sells into, and the finding is that England
+regulates education AI **through procurement rather than statute**.
+
+**DfE "Generative AI: product safety standards"** — retitled from *"product safety expectations"* —
+first published **January 2025**, **revised 19 January 2026**. 🔴 **The revision added four standards:
+cognitive development, emotional and social development, mental health, and protection against
+manipulation.** The stated drivers were **changes to the Online Safety Act** and emerging generative-AI
+risk.
+
+🔵 **Why this matters more than its non-binding status suggests.** The standards are aimed at
+**suppliers of learner-facing products** — which is what Globant *builds* on this shelf. They are
+**not law**, but they function as the **procurement checklist** an English school or college applies,
+so failing them does not attract a penalty: it loses the deal. 🔴 **And the four new standards are the
+hardest to retrofit of any requirement in this KB** — "cognitive development" and "protection against
+manipulation" are claims about *pedagogical design and interaction patterns*, not features that can be
+added at the end. A sector commentator's read, logged as opinion rather than finding, is that **many
+tools currently deployed in schools would not yet meet them**.
+
+**Three more dated instruments from the same jurisdiction:**
+
+- **DfE staff AI training modules updated 19 May 2026** — four modules, with Module 3 (safe use) named
+  as essential for all users regardless of experience. 🔵 **A client-side training asset that already
+  exists**, so an engagement should map onto it rather than author one.
+- **KCSIE 2026** — statutory safeguarding guidance — now treats **AI-generated imagery including
+  deepfakes** as a safeguarding matter, and filtering/monitoring reviews are expected to cover AI.
+- **DfE × i.AI AI-tutoring trials from the autumn term 2026**, with tools intended to be **available in
+  schools by end-2027**. 🟢 **That is a dated public-sector pipeline** — the nearest thing to a
+  published buying window on this shelf.
+
+⚠️ **One scope limit worth writing down before it is misquoted:** one supplier reads the standards as
+applying **only to learner-facing platforms**, excluding teacher-facing tools. 🔵 **If that reading
+holds, the compliance-cheapest first deliverable in England is teacher-facing** — which is also where
+Japan put 100 of its 161 funded pilot municipalities. **Two jurisdictions, unrelated instruments, same
+conclusion about where to start.**
+
+⚠️ **GRADE: SECONDARY-CONVERGENT, PRIMARY UNREAD.** 🔴 **`www.gov.uk` is DNS-unresolvable from this
+sandbox** (`getaddrinfo ENOTFOUND`, reproduced twice, via two different tools), so neither the standards
+nor KCSIE was read first-hand. **Binding status conflicts across secondary sources** — some describe the
+standards as mandatory; DfE's own pages are reported as non-binding, and that is the reading published
+here. **Same posture as `p276` took on `eur-lex`: the regulation is marked as unread, not dressed as
+read.**
+
 
 **Pass 276 — THE NINE-PASS EMEA NIL ENDS, and it ended by querying the INSTRUMENT instead of the
 region, exactly as `p275` ranked it.** `p275` diagnosed its own EMEA blanks as *"narrow-query blanks,
@@ -1361,6 +1438,61 @@ at `p274`.
 
 ### APAC
 
+**Pass 277 — THE TEN-PASS APAC NIL ENDS, and it ended on the first query that named a
+jurisdiction.** `p276` ranked exactly one instruction for this cell: *"`p277` must query APAC per
+jurisdiction — MEXT, Singapore MOE, India's NEP, China's MoE, Korea's AI textbooks — not by the word
+'APAC', which no education ministry uses."* 🟢 **Run once, five jurisdictions returned named, dated,
+numbered instruments.** The region was never quiet; the query was. Evidence:
+[`p277-websearch.2026-10-17-p277.tsv`](../evidence/p277-websearch.2026-10-17-p277.tsv), legs 1–5.
+
+| jurisdiction | the instrument | status and date | what an engagement must price |
+|---|---|---|---|
+| **China** | **"AI Plus Education" action plan** + the May 2025 *General AI Education Guide* and *Generative AI Use Guide* | Plan **April 2026**, running **to 2030** | **The largest mandated surface in the region.** Dedicated AI courses, integration into local curricula nationwide, national platforms carrying AI courses to rural and remote schools, a **national teacher AI-literacy standard**, and **AI content added to teacher qualification exams**. Hour floors from the 2025 guides: **Grades 1–4 ≥6 h/yr, 5–9 ≥10 h/yr, 10–11 ≥1 h/fortnight** (Beijing sets its own ≥8 h/yr). ⚠️ Hour figures **differ across sources** |
+| **India** | **AI & Computational Thinking from Grade 3** — MoE announcement, then **CBSE Circular Acad-15/2026** | Announced **30 Oct 2025**; circular **1 Apr 2026**; in force **session 2026-27** | **Compulsory Classes III–VIII, with NO board exam** — continuous, project-based assessment. Curriculum by an expert committee chaired by **Prof. Karthik Raman (IIT Madras)**. Built on an existing base of **18,839 CBSE schools** already offering AI as a skill subject from Class 6. 🔴 **The binding scope is CBSE, not every board or state** — do not brief a national mandate. 🔴 **The constraint is teachers, not curriculum:** MoE itself names orienting **over one crore (10 million) teachers** as the challenge |
+| **Japan** | **MEXT Guideline for the Use of Generative AI in Elementary and Secondary Education, Ver. 2.0** | Ver. 1.0 **Jul 2023** (provisional) → **Ver. 2.0 Dec 2024**; FY2026 pilot live; curriculum reform **draft Jun 2026** | Built on **"human-centred use"**: a person makes the final judgment and carries responsibility for the final deliverable — i.e. **human-in-the-loop is the written policy, not a design preference**. FY2026 pilot is **149 municipalities / 478 schools**, split **10** in-class, **100** teacher-administrative, **51** teaching-material. 🔵 **The split is the signal: the funded majority is teacher workload, not student-facing tutoring.** Draft reform targets practical AI skills for **every high-school graduate by 2030** |
+| **Singapore** | **MOE Teacher AI Literacy Professional Learning Roadmap**, plus Authoring Copilot and Learning Assistant | Roadmap **Aug 2026**; tools rolled out **Jan 2026**; Module 1 due **end-2026** | **The only jurisdiction here that has made teacher AI training time-bound and compulsory.** Module 1 (basics, ethics, safety, responsible use) **must be completed by end-2026**; Modules 2–3 (age-appropriate use, effects on student thinking, AI for deeper learning) encouraged by **end-2027**. "**Four Learns**" at COS 2026: learn *about*, *to use*, *with*, and *beyond* AI — the last is the stated emphasis. 🔴 **AI tools deliberately withheld from lower primary** to protect foundational skills, and MOE is formally studying over-reliance. Teacher workload measured flat at **~53 h/week**. ⚠️ Whether Modules 2–3 are mandatory **conflicts across sources** |
+| **South Korea** | **AI digital textbooks** — and this is the cell a studio must read before any other | Rollout **Mar 2025** → status **revoked Aug 2025** → voluntary; court rulings **Jul and Aug 2026** | 🔴 **The only national AI-in-education programme in this KB that was built, deployed and then UNWOUND.** See below |
+
+### 🔴 The most decision-relevant APAC fact is a failure, not an adoption curve
+
+**South Korea stripped its AI digital textbooks of official textbook status four months into the
+rollout.** The National Assembly revoked the status in **August 2025**, leaving adoption to each
+school. The measured consequences:
+
+| | |
+|---|---|
+| adoption, before → after | 🔴 **37% → 19%** of classes |
+| data-protection violations found by the privacy regulator | **2** (May 2025) |
+| the state auditor's finding | the textbooks were **brought into schools without a pilot** |
+| publisher suits against the reversal | **dismissed**, Seoul Administrative Court, **Jul and Aug 2026** |
+| MoE's 2026 posture | voluntary school-by-school adoption; **review process for 2026-year products halted** |
+
+**The cited causes were not model quality.** They were **factual errors in generated content, privacy
+risk, increased screen time, and heavier teacher workload** — every one of them an *implementation and
+governance* failure, and every one of them inside a delivery partner's scope.
+
+🟢 **What a studio does with this.** This is the strongest available argument for the **pilot-gated,
+teacher-workload-first** sequencing this KB already recommends, and it is now evidence rather than
+opinion. Korea is the reference case for three propositions: that **a procurement mandate is not
+adoption** (37% → 19% happened *with* the mandate in place), that **a privacy finding can end a
+programme faster than any accuracy benchmark**, and that **skipping the pilot is the single
+highest-severity programme risk** — the state auditor named exactly that. 🔵 **Pair it with Japan's
+funded split** (100 municipalities on teacher administration vs 10 in class): the two jurisdictions
+disagree about almost everything except *where to start*, and both start away from the student.
+
+⚠️ **GRADE: SECONDARY-CONVERGENT, PRIMARY UNREAD — all five jurisdictions.** No ministry source was
+read first-hand. **`mext.go.jp`, `moe.gov.sg`, `moe.go.kr`, `cbse.gov.in`, `pib.gov.in` and
+`www.gov.uk` are all DNS-unresolvable from this sandbox** (`getaddrinfo ENOTFOUND`, reproduced); only
+`github.com` and `raw.githubusercontent.com` resolve. **This base does not publish a licence it has not
+read, and it marks a regulation it could not read either.** `p278` with egress should read, in priority
+order: **CBSE Circular Acad-15/2026** (the one binding instrument here), **MEXT Ver. 2.0**, and the
+**Korean MoE's own account of the reversal**.
+
+🔴 **One claim was offered and is NOT shelved:** a single wire report of an *expansion to 300 secondary
+schools* in Korea, which the ministry has not confirmed and which contradicts the halted review
+process. **Left out deliberately.**
+
+
 **Pass 276 — the tenth consecutive weak APAC leg, and the regional phrasing is again the cause.**
 Published with the query that produced it (`AI education APAC 2026 adoption regulation players`), because
 an informed gap is information and silence looks exactly like coverage.
@@ -1614,6 +1746,56 @@ Japan's MEXT guidelines, India NEP/AI curriculum), not the regional abbreviation
 
 
 ### LATAM
+
+**Pass 277 — the direct instrument gains its denominator, and the teacher layer is where LATAM leads
+the OECD.** `p275` and `p276` established that UNESCO-IESALC (200 institutions, 19 countries) is the
+instrument to quote for regional university governance, and corrected a *perception* figure that had
+been standing in for a policy count. This leg adds the number that makes the governance gap legible:
+
+| UNESCO-IESALC (2026), regional universities | |
+|---|---|
+| **already use AI** | 🟢 **87%** |
+| have a **formal strategy** | 🔴 **26%** |
+| **evaluate** implementation | 🔴 **9%** |
+
+🔵 **Stated as one sentence: 87% are doing it, 26% have decided how, and 9% check whether it worked.**
+That is the engagement, and the 9% is the part a studio is uniquely able to sell — evaluation is
+billable, unclaimed, and the precondition for every renewal. Student-side: the **Digital Education
+Council** reports **92% of students across 29 regional institutions** using AI.
+
+🟢 **And the schools layer, where LATAM is ahead of the OECD rather than behind it.** Secondary teachers
+reporting AI use in the prior year: **Brazil 56%**, **Colombia 53%**, against an **OECD average of
+36%**. 🔴 **But only 22% of Brazilian teachers report that their school has guidelines on its use.**
+**The same shape as higher education, one level down: adoption without governance** — and the gap is
+wider in schools than in universities.
+
+**Named instruments and money, placed:**
+
+- **Colombia — CONPES 4144 (February 2025)**, a national AI policy adopted *before* a national AI law.
+  🔵 **The inverse of Brazil's order** and the reason Colombia is the easier public-sector entry: there
+  is a document to comply with.
+- **Brazil — PL 2.338/2023** passed the **Senate on 10 December 2024**, carrying transparency and
+  supervisory provisions. ⚠️ **Whether it has since become law was NOT established this pass** — do not
+  brief it as enacted.
+- **Mexico — UNESCO × CONALEP × DGETI** pilot to co-build a model of centres of excellence, **18 August
+  2026**. 🔵 **Technical and vocational education**, which is the under-served segment in this KB's
+  LATAM coverage and the one closest to employability outcomes.
+- **Google.org — $4.6M** to scale Raspberry Pi's **Experience AI** across **Argentina, Brazil, Chile,
+  Colombia, the Dominican Republic, El Salvador, Mexico, Peru and Uruguay**, targeting **1.25M students
+  by 2028**. 🔵 **Nine countries, one curriculum, external funding already committed** — the clearest
+  partner-adjacent surface on this shelf.
+
+🔴 **The regional verdict this shelf should carry verbatim, because it is the counter-argument an
+engagement will meet.** The ProFuturo/OEI study concludes the landscape *"reveals more an intention than
+a policy"* — uncoordinated actors, unsustained efforts, and developments **still far from rural
+classrooms or vulnerable contexts**. 🔵 **Read with Korea's reversal above, that is the same warning
+from the opposite hemisphere:** the programmes that fail are not the ones with weak models, they are the
+ones with no delivery capacity underneath.
+
+⚠️ **GRADE: SECONDARY-CONVERGENT.** UNESCO, IADB and ProFuturo/OEI agree and are independent of each
+other; none was read at primary source here. The **56% / 53% / 36%** teacher figures are a **2024
+vintage** — quote them with the year attached.
+
 
 **Pass 276 — the strongest leg again, and it corrects the predicate under this shelf's own headline
 governance number.**

@@ -273,8 +273,21 @@ def attribute(line, names=()):
         # p275 wrote that sentence about the predicate that SUPPRESSES rows and never carried
         # it to the predicate that ASSIGNS them.  A name is matched as the author spelled it,
         # and a name inside a longer token is not a mention.
+        # 🔴 p277 D6: p276's case-sensitivity fix was CORRECT and slightly over-narrow, and
+        # the gate's own control said so -- `a DEAD slug does not own a claim about the real
+        # repo of the same basename` FAILED, `got [] want ['Gego-K12/gegok12']`, because the
+        # shelf spells the project **GegoK12** and the slug spells it `gegok12`.  Same name,
+        # different camel-casing, which is how prose always writes a repository name.
+        # 🔵 The discriminator is NOT case, it is whether the token can be an English word:
+        # no common noun contains a DIGIT.  So a base carrying a digit (`gegok12`, `ai4k12`,
+        # `kokoro-82m`) is matched case-INSENSITIVELY -- it cannot collide with a noun -- and
+        # a purely alphabetic base (`tutor`, `bloom`, and the `lms` that cost p276 thirteen
+        # false refutations) stays case-SENSITIVE exactly as p276 left it.
+        # 🟢 Note this reopens nothing: `lms` is also stopped by D5a's length guard, so the
+        # noun class is now held by TWO independent guards rather than one.
+        flags = re.I if any(ch.isdigit() for ch in base) else 0
         for m in re.finditer(r"(?<![-_/A-Za-z0-9])" + re.escape(base)
-                             + r"(?![-_/A-Za-z0-9])(?!'s|\u2019s)", line):
+                             + r"(?![-_/A-Za-z0-9])(?!'s|\u2019s)", line, flags):
             marks.append((m.start(), slug))
     if not marks:
         return []

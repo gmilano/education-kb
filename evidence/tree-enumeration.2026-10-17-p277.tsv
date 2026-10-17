@@ -1,0 +1,13 @@
+slug	exists	head_sha	paths	licence_paths	licence_paths_payload	manifest_license	verdict
+touretzkyds/ai4k12	YES	727b8bbe9b5e	190	0	-	-	VERIFIED-ABSENT-BOTH-CHANNELS
+AStheTECH/mewcp-google-classroom	YES	dfb0366ba3ea	14	1	LICENSE.md=200/6489B/UNCLASSIFIED;	-	REFUTED-FILE-CHANNEL
+Open-TutorAi/open-tutor-ai-CE	YES	196c547291da	4702	1	LICENSE=200/1531B/UNCLASSIFIED;	-|pyproject.toml:License :: OSI Approved :: MIT License	REFUTED-FILE-CHANNEL
+CyanXLab/Phonos	YES	8a13a3b7611a	119	0	-	-	VERIFIED-ABSENT-BOTH-CHANNELS
+biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent	YES	179da64cb459	142	1	LICENSE=200/1068B/MIT License;	-	REFUTED-FILE-CHANNEL
+learningequality/kolibri-design-system	YES	adefe26118c6	15448	2	lib/KIcon/precompiled-icons/mdi/copyright.vue=200/1088B/UNCLASSIFIED;lib/KIcon/precompiled-icons/mdi/license.vue=200/747B/UNCLASSIFIED;	-|package.json:"license": "MIT"	REFUTED-FILE-CHANNEL
+Valexxy/edunaija-os	YES	28914fbce122	310	0	-	-	VERIFIED-ABSENT-BOTH-CHANNELS
+sdv-dev/SDV	YES	a6757f8dc5af	262	1	LICENSE=200/4818B/MIT License;	-	REFUTED-FILE-CHANNEL
+CreveXTech/canvas-lms-mcp	YES	0310536c0dca	31	0	-	-	VERIFIED-ABSENT-BOTH-CHANNELS
+zijinz456/OpenTutor	YES	a890519f3632	892	1	LICENSE=200/1068B/MIT License;	-	REFUTED-FILE-CHANNEL
+autograder-org/autoGrader-frontend	YES	4f1a5516ad45	36	0	-	-	VERIFIED-ABSENT-BOTH-CHANNELS
+OpenEMIS/OpenEMIS-Core	YES	5040afa6bae2	11	0	-	-	VERIFIED-ABSENT-BOTH-CHANNELS

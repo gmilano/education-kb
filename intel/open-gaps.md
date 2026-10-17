@@ -4,6 +4,193 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 277 — **THE EXECUTION GAP IS DISCHARGED: `make hooks` RAN, REFUTED `p276`'s EXPECTED RESULT, NAMED THE BROKEN CONTROL AND NOW EXITS `0`**
+
+⏱️ **Twenty-third pass of `2026-10-17`.** Append-only; nothing below is rewritten.
+🔵 **Evidence:** [`p277-websearch.2026-10-17-p277.tsv`](../evidence/p277-websearch.2026-10-17-p277.tsv)
+*(12 legs; 5 APAC jurisdictions; 3 informative nils)* ·
+[`positive-controls.2026-10-17-p277.tsv`](../evidence/positive-controls.2026-10-17-p277.tsv)
+*(12 rows: published verdict vs first-hand measurement)* ·
+[`tree-enumeration.2026-10-17-p277.tsv`](../evidence/tree-enumeration.2026-10-17-p277.tsv)
+*(the raw two-channel run)*.
+
+### 🟢 DISCHARGED — `p276`'s DECLARED GAP 1, partly, and the result is a refutation
+
+**`make hooks` executed.** `gate-offline` passes (~40 suites, lint 0 findings); `recount` ran and found
+**2 of 4 registered claims STALE**; 🔴 **`gate-enumeration` FAILED** (`Makefile:31 … Error 1`).
+**`p276`'s expected `REFUTED=0 · VERIFIED-ABSENT=48 · QUEUE-UNENUMERATED=70` with `47/47` controls is
+therefore refuted by execution, by `p276`'s own stated test.**
+
+🟢 **The honest half of `p276` held exactly as it claimed:** its evidence used plain `git` and `curl` at
+pinned SHAs and is untouched; only the **instrument** claims — which it labelled
+`UNVERIFIED-BY-EXECUTION` — fell. **A pass that labels its own unverified half makes the next pass's
+first action one command long.**
+
+### 🟢 DISCHARGED — DECLARED GAP 1 in full: the gate was made to speak, then read, then fixed
+
+**`Makefile:31` ran the suite as `test_enumeration_gate.py >/dev/null`**, so the `# N FAILING:` report
+the suite exists to print was discarded; only the exit code survived. **Third member of a family this
+Makefile documents in its own comments** — `p253`'s gate could not **hear** its controls, `p254`'s could
+not **speak** its verdict, **`p277`'s could not SEE what failed.**
+
+🟢 **Fixed, and it returned the answer on the next run, in one line:**
+
+```
+# 1 FAILING:
+  FAIL a DEAD slug does not own a claim about the real repo of the same basename:
+       got [], want ['Gego-K12/gegok12']
+```
+
+🔵 **Getting the fix past this base's own audits took a second attempt, and the audit was right.** The
+first draft carried the diagnostic in a trailing `|| { … ; exit 1; }` — functionally correct, but
+`p253`'s predicate looks for the **literal** `|| exit 1` on any line announcing `PASS`, so it reported
+the step as unguarded. **The recipe was restructured rather than the predicate relaxed:** the report now
+sits *inside* the `&&` chain and the line ends in `|| exit 1` like every other step.
+`exit_reach.py --verify Makefile` → `OK, 5 contracted targets`; `gate_propagation.py` → `47 PASS steps,
+0 unguarded, banner guarded True`.
+
+🟢 **Then `D6` was patched, with the failure READ first.** `p275` widened `attribute()` to a bare
+repository name; `p276` narrowed it to **case-sensitive**, correctly killing thirteen false refutations
+from `lms` matching *"a proprietary **LMS**"*. 🔴 **The narrowing also stopped a real name matching the
+spelling prose uses** — the shelves write **`GegoK12`**, the slug is `gegok12`. 🔵 **The discriminator
+is not case but whether the token could be an English word, and no common noun contains a DIGIT:** a
+digit-bearing base is matched case-insensitively, a purely alphabetic one stays case-sensitive, and
+`lms` is now rejected by **two** independent guards (`D5a`'s length rule and the case rule). **Eight
+controls, every negative arm asserted beside the positive one.**
+
+🟢 **Result: `gate-enumeration` PASSES at `REFUTED=0 · VERIFIED-ABSENT=53 · QUEUE-UNENUMERATED=69`, and
+`make hooks` exits `0` end to end** — the first fully green standing check in at least three passes.
+🔴 **Both of `p276`'s predicted counts were wrong** (`48` and `70`), which only an executed gate could
+have established.
+
+### 🔴 DECLARED GAP 1b (NEW) — a checker anchored on the number it checks cannot survive the correction
+
+`recount.py` bounded the permissive-tier table with the **literal string `"**24 permissive rows"`** — a
+copy of the very figure under test. 🔴 **Correcting the shelf to `27` deleted the boundary**, so the
+measurement became *"every table row in the rest of the file"* and reported **63**, leaving the verdict
+`STALE` **for a completely different reason than before.** 🔵 **That is the dangerous shape: a red gate
+that looks like the same red gate.**
+
+🔴 **And a second property surfaced with it: `published` is a PYTHON CONSTANT, not a value read from the
+shelf.** So `T37` detects **row** drift and is **blind to text** drift — a pass that edits the sentence
+and not the literal leaves the gate green and the shelf wrong, which is the exact inverse of the failure
+hit here. 🟢 **Both pins were moved in the same change and the claim now reads `27 / 27 / MATCH`;
+`STALE` fell from 2 of 4 to 1 of 4.** ⚠️ **The anchor is still a number.** **`p278` should bound the tier
+on the table's own structure** — the row of dashes, or the next heading — **so the boundary cannot be
+deleted by a correction.** Registered.
+
+### 🟢 DISCHARGED (NEW) — `p276`'s "build the table-structure check before a third instance"
+
+`p276` found a `|---|` separator **below** its table's first data row, so `p274`'s recovered `gegok12`
+row **rendered as part of the header**, and recorded: *"No gate on this base reads table structure."*
+🔴 **`p277` found a LIVE second instance, in another file and another shape:** a stray blank line at
+`verticals/solutions.md:50` promoted **`Koha`** — a real GPL-3.0 platform row — into a table **header**
+and orphaned every row below it.
+
+🟢 **Built and wired into `make hooks`:**
+[`compose/code/p277-table-structure/`](../compose/code/p277-table-structure/) — **15 controls**, now
+green over **10 shelves**. 🔵 **Its three false-positive classes are controls, not comments**, because
+each one broke a draft: the house-style **empty `| | |` header row** (which an earlier separator pattern
+matched, producing **34 spurious findings**), a **blank line between two different tables** (7 of the 8
+on this base are this shape and legitimate), and **indented ASCII pipe-art** in `compose/patterns.md`.
+⚠️ **And one thing it deliberately does not check: the trailing pipe.** GFM makes it optional,
+`repos/trending.md:1008` omits it on a 1,179-byte row that renders correctly, and requiring it produced
+a false positive. **The check was wrong, not the shelf.**
+
+### 🔴 DECLARED GAP 2 — a payload-vs-metadata CONFLICT has no class on this base
+
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) serves **verbatim
+BSD-3-Clause** at `LICENSE` (**1,531 B**, read first-hand) while **`pyproject.toml` declares
+`License :: OSI Approved :: MIT License`**. Both permissive, so **no studio action changes** — but the
+**attribution obligation differs** (BSD-3's no-endorsement clause has no MIT equivalent).
+
+🔴 **This base grades a grant by WHERE it was read — payload, metadata, inference — and has no verdict
+for two channels that disagree.** The correct publication is **the payload, with the conflict
+disclosed**: a manifest is the project's declaration, but the licence file is the licence.
+🔵 **And the reason this has never surfaced before is structural: a conflict is only visible when BOTH
+channels are read, and most rows have only ever had one.** **`p278` must build the class and then sweep
+the metadata-grade rows for it** — the sweep is the part that will find more.
+
+### 🔴 DECLARED GAP 3 — the absence queue measures the archive, not the live state
+
+`p277` harvested **110 absence-asserting slugs**, worked the **top twelve**, and **all twelve were
+already correctly resolved** (0 refutations, 12/12 positive controls). The harvester's predicate was
+**line-scoped**; the trending shelves are **append-only by design**, so a correction publishes a new
+dated section while the original absence prose correctly remains as history. 🔴 **Every correction
+therefore leaves a permanent queue entry, and the backlog grows monotonically with corrections made.**
+
+🔵 **`p276` declared this exact shape** (*"`states_a_grant()` is line-scoped while `attribute()` is
+subject-scoped"*) **and `p277`'s harvester — written fresh, with no reference to that predicate —
+inherited the identical defect.** Two independent implementations, one failure: the defect is in the
+**shape of the problem**. 🟢 **Until it is scoped per subject, `QUEUE-UNENUMERATED` is an UPPER BOUND and
+must be published as one**; the 12-of-12 sample says the live fraction is small.
+
+### 🔴 DECLARED GAP 4 — `p277`'s own scope test leaked, and the fix is simpler than the list it extends
+
+The fresh licence-path predicate excluded `node_modules/`, `assets/`, `icons/` and similar, and still
+reported two false candidates on `learningequality/kolibri-design-system`:
+`lib/KIcon/precompiled-icons/mdi/copyright.vue` (1,088 B) and `.../mdi/license.vue` (747 B) — **Material
+Design icon components**. The exclusion required `icons` as a **whole path segment**; `precompiled-icons`
+is not one. 🟢 **The row survived because the manifest channel carried it** — the two-channel argument,
+earning its keep. 🔵 **The general fix is an extension test, not a longer segment list: a grant is not a
+`.vue`/`.ts`/`.py`/`.jsx` file.** **Every path ladder on this base extends a LIST; the cheaper predicate
+is a TYPE.**
+
+### 🟡 DECLARED GAP 5 — six absences are enumerated at `HEAD` only
+
+The six rows upgraded from path ladders to full tree enumerations (`edunaija-os` 310 paths, `ai4k12` 190,
+`Phonos` 119, `autoGrader-frontend` 36, `CreveXTech/canvas-lms-mcp` 31, `OpenEMIS-Core` 11) were each
+enumerated **at one ref — `HEAD`**. 🔴 **`p269` already paid for ref sensitivity here:**
+`learningequality/kolibri` serves **MIT on `develop`** and **404 on `main`**. **A grant on a non-default
+branch would still be missed.** The absences are **upgraded, not closed**, and `p278` should re-run them
+against the **resolved** default ref (`git ls-remote --symref`).
+
+### 🔴 DECLARED GAP 6 — an absence over 11 paths and an absence over 310 are written in the same words
+
+[`OpenEMIS/OpenEMIS-Core`](https://github.com/OpenEMIS/OpenEMIS-Core) enumerates to **eleven paths
+total**. The absence is true of *that repository* and says **almost nothing about OpenEMIS the product**
+— a reader told *"serves no grant"* concludes the platform is unlicensed, when what was measured is an
+eleven-file shell. 🟢 **Sub-rule for `p278` (`T57`): publish the path count beside every absence.** The
+counts are already collected by every enumeration this base runs, **so it costs a column, not a probe.**
+
+### 🔴 DECLARED GAP 7 — two predicates disagree on a registered quantity, and the number was LEFT ALONE
+
+`T37` reported `MCP server slugs tabled on agents/top.md · published 20 · measured 21 · STALE`. An
+independent row-by-row enumeration written this pass returned **20**, **agreeing with the shelf and not
+with the gate**. 🔵 **A one-row disagreement between two predicates is a defect in a predicate, not a
+stale shelf**, so nothing was edited. **`p278`: reconcile `recount.py`'s MCP predicate against the row
+enumeration and establish which one counts the 21st slug.**
+🔴 **The failure mode being avoided here is specific: a pass that edits a TRUE number to match a WRONG
+instrument leaves no trace, and is far harder to detect than the stale value it replaced.**
+🟢 **The other STALE row was corrected** — `agents/top.md` read **24** permissive rows and the table
+holds **27**; `p276` added three and did not move the count; both instruments agreed on 27.
+
+### 🟡 DECLARED GAP 8 — LATAM and North America have never been queried per jurisdiction
+
+`T53` establishes the defect by two instances: **EMEA ran a nine-pass nil** and broke on `p276`'s first
+instrument-targeted query; **APAC ran a ten-pass nil** and broke on `p277`'s first jurisdiction-targeted
+query. 🔴 **Nineteen wasted legs, one cause — and the two remaining regions are still carried on
+*regional* queries.** **A regional leg that returns no instrument has measured the query, not the
+region.** `p278` should run `LATAM` by country (Brazil MEC, Mexico SEP, Colombia MinEducación, Chile
+MINEDUC) and `North America` by instrument (state AI guidance, ED, provincial ministries).
+
+### ⚠️ DECLARED GAP 9 — every regulation this pass published is UNREAD at primary source
+
+🔴 **`mext.go.jp`, `moe.gov.sg`, `moe.go.kr`, `cbse.gov.in`, `pib.gov.in`, `www.gov.uk`,
+`instructure.com` and `educause.edu` are all DNS-unresolvable from this sandbox** (`getaddrinfo
+ENOTFOUND`, reproduced across two tools); **only `github.com` and `raw.githubusercontent.com` resolve.**
+🟢 **That is why the licence half of this pass is first-hand and the regulation half is not**, and both
+are labelled accordingly. **Same posture `p276` took on `eur-lex`: a regulation that could not be read is
+marked unread, never dressed as read.** Priority for `p278` with egress: **CBSE Circular Acad-15/2026**
+(the single binding instrument in the APAC set), then **MEXT Ver. 2.0**, the **Korean MoE's** own
+account, and the **DfE standards**.
+
+⚠️ **One secondary claim recorded but NOT asserted:** **Canvas Free-for-Teacher permanently discontinued
+May 2026.** It touches no licence, but it touches this base's own sequencing (`P28`/`Pattern H` tell a
+studio to stand up `canvas-mcp` against a sandbox). 🔵 **Exposure is narrow and specific — the
+unsponsored pilot** — and one fetch settles it.
+
+
 ## Pass 276 — **THE QUEUE WAS WORKED, AND THE INSTRUMENT THAT BUILT IT FAILED THREE WAYS ON ITS OWN BACKLOG — INCLUDING THIRTEEN FALSE REFUTATIONS FROM A SINGLE ORDINARY ROW**
 
 ⏱️ **Twenty-second pass of `2026-10-17`.** Append-only; nothing below is rewritten.

@@ -79,8 +79,16 @@ FLOORS = uf.read_floors()
 # wired into `make hooks` IN THE SAME CHANGE as this pin, which is the whole remedy
 # p261 asked for: the pin moves with the step, not a pass later.  `ungated` stays at
 # 181 because the suite arrived gated.
-chk("python test files on disk", len(ROWS), 214)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 33)
+# 🟢 p277: 214 -> 215 and 33 -> 34.  `p277-table-structure` is written AND wired into
+# `make hooks` (`make gate-tables`) in the SAME change as this pin -- the p262 shape and
+# p261's remedy, so the census never spends a pass red.  `ungated` stays at 181 and the
+# `71`/`110` partition is untouched because the suite arrived gated and exits explicitly
+# (`sys.exit(1)`), so it never joins the silent-zero population.
+# 🔵 And it went red exactly as designed: `gate-offline` failed at THIS suite the moment
+# `gate-tables` was wired, before a single table-structure finding had been written up.
+# Fifth consecutive pass where this census catches the new instrument first.
+chk("python test files on disk", len(ROWS), 215)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 34)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",

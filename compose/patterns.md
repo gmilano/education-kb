@@ -1464,3 +1464,83 @@ counsel, or build issuance on a granted stack.
 
 **Timeline:** 10–12 weeks to a classified, documented, FRIA-supported pilot on one high-risk use case;
 the classification and documentation are roughly a third of it and are the part that cannot be compressed.
+
+## P30 — The APAC engagement briefed per jurisdiction, because there is no APAC requirement to build against *(new in pass 277)*
+
+**When a client asks for it:** *"We operate schools (or sell edtech) across Asia-Pacific and we want one
+AI roadmap for the region."*
+
+🔴 **Refuse the premise in the first meeting, politely and with the table.** There is no APAC education
+AI requirement. There are five large, incompatible national ones, and they disagree on the two things
+that drive architecture: **who the AI may face, and who must be trained.** `p277` established the cells
+first-hand-by-query; see [`intel/market.md`](../intel/market.md#apac).
+
+| jurisdiction | the binding thing | what it forces into the build |
+|---|---|---|
+| **China** | *AI Plus Education* plan (Apr 2026 → 2030) + May 2025 guides | **Curriculum delivery at hour floors** (Gr 1–4 ≥6 h/yr, 5–9 ≥10 h/yr, 10–11 ≥1 h/fortnight) and a **teacher AI-literacy standard tied to qualification exams** → the deliverable is *courseware plus teacher certification tracking*, not a tutor |
+| **India** | CBSE Circular Acad-15/2026, session 2026-27 | **Classes III–VIII, no board exam, project-based** → assessment must be **formative and portfolio-shaped**; a summative scoring engine is the wrong product. Scope is **CBSE only** |
+| **Japan** | MEXT Ver. 2.0 ("human-centred use") | **A person must make the final judgment and own the deliverable** → human-in-the-loop is a *written requirement*; and the funded majority is **teacher-administrative**, not in-class |
+| **Singapore** | Teacher AI Literacy Roadmap (Module 1 due end-2026) | **Time-bound compulsory teacher training** → the near-term buy is *training and workload relief*; and **lower primary is deliberately excluded** from AI tools |
+| **South Korea** | AI digital textbooks, status revoked | **Adoption is voluntary and the regulator is active** → nothing ships without a pilot and a DPIA. See `P31` |
+
+### Wiring it
+
+1. **Pick the jurisdiction first, then the stack** — in that order, because the jurisdiction decides
+   whether you are building courseware, a teacher tool, or a tutor.
+2. **For China and India (curriculum delivery, scale, often offline/low-connectivity):** start from
+   [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (**MIT**, offline-first) with
+   [`learningequality/kolibri-design-system`](https://github.com/learningequality/kolibri-design-system)
+   (**MIT**, metadata grade) for the UI; generate and version the curriculum artefacts with
+   [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) (**MIT**,
+   ADDIE pipeline: syllabus → slides → assessments). **India's "no board exam" rule means you wire the
+   assessment output to a portfolio, not a gradebook.**
+3. **For Japan and Singapore (teacher-facing, workload-first):** put the agent behind the LMS the client
+   already runs — [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (**MIT**) or
+   [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) (**MIT**, ⚠️ its write half
+   needs a GPL-3.0 companion plugin — see `P23`) — and keep **every** write behind an explicit teacher
+   confirmation. **That confirmation is not UX polish in Japan; it is the policy.**
+4. **Where tutoring is in scope, use a pedagogically-constrained tutor, not a general assistant:**
+   [`ls1intum/Iris`](https://github.com/ls1intum/Iris) + [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris)
+   (**MIT**) give hints and leading questions rather than answers, and `Pyris` is the reusable half —
+   a REST API over swappable pipelines that will serve a stack that is not Artemis.
+5. **If procurement excludes copyleft**, the platform is
+   [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (**Apache-2.0**, payload-verified `p272`,
+   `master/LICENSE` 10,982 B) — still the only permissive full LMS on this base's shelf.
+6. **Never present one APAC compliance slide.** Produce one per jurisdiction in scope; the cost of the
+   extra slides is hours, and the cost of the single slide is the Korea outcome.
+
+**Timeline:** 2–3 weeks per jurisdiction for the compliance brief and the stack decision, run in
+parallel; 8–10 weeks to a first deliverable in the **one** jurisdiction you start with. **Do not start
+in all of them.**
+
+## P31 — The pilot-gated rollout that survives a privacy regulator, built backwards from Korea's reversal *(new in pass 277)*
+
+**When a client asks for it:** *"We have ministry or district backing and we want to roll out to every
+school next term."* 🔴 **That sentence is the Korea precondition.** South Korea had the mandate, the
+budget and national coverage, and the programme was **unwound in four months**: status revoked, adoption
+**37% → 19%**, **two data-protection violations** found, and a **state auditor finding that it was
+brought into schools without a pilot**. The causes were factual errors, privacy, screen time and teacher
+workload — **all four a delivery failure, none a model failure**.
+
+### Wiring it — the four failures, each with a concrete counter-measure
+
+| the Korean failure | what you build instead |
+|---|---|
+| **No pilot** | A gate, not a phase: **one district, one subject, one term**, with the success criteria written and signed *before* the build. The auditor's finding is that this step was skipped — so it is the deliverable that protects the programme |
+| **Privacy violations** | 🟢 **No real pupil data in the pilot at all.** Generate the test corpus with [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) — ⚠️ **Business Source License 1.1, NOT open source** (`LICENSE`, 4,818 B, read first-hand `p277`; Licensor DataCebo, Inc.). **Its Additional Use Grant permits use and derivatives EXCEPT to offer a "Synthetic Data Service"** — a commercial offering letting third parties access the functionality. 🔵 **So: generating synthetic student records inside a client deliverable is permitted; reselling that generation as a service is not.** Record that distinction in the SOW. Then enforce minimisation at the tool boundary per `P24` |
+| **Factual errors in generated content** | Ground every learner-facing claim in the institution's own material and cite it: [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) (**Apache-2.0**) keeps generated artefacts tied to their sources, and [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) (**MIT**) teaches from the institution's slides with **page-level citations**. 🔵 **A wrong answer with a citation is a correctable content bug; a wrong answer without one is a programme risk** |
+| **Teacher workload went UP** | Measure it as a success metric, not a side effect. Ship the teacher-facing half first — grading suggestions via [`ls1intum/Athena`](https://github.com/ls1intum/Athena) (**MIT**, metadata grade, 12 of 14 manifests) whose `module_text_llm` / `module_programming_llm` / `module_modeling_llm` are independently installable Poetry packages, so you can deploy **one** module and show the hours back. **Japan funded 100 municipalities on teacher administration and 10 in class — follow the money, not the demo** |
+
+🔵 **Where adaptive assessment is in scope**, keep the psychometrics honest with
+[`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) (**Apache-2.0**, `pom.xml`
+`<licenses>`) for IRT linking and score equating, and
+[`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (**MIT**) as the reference ITS with Bayesian
+Knowledge Tracing. **An adaptive claim you cannot equate across forms is the next factual-errors
+finding, one layer down.**
+
+🔴 **The one thing to put in writing before anything is built:** *a mandate is not adoption.* Korea's
+decline from 37% to 19% happened **while the mandate was still in force**. Price the change management,
+or the rollout number is the number that falls.
+
+**Timeline:** 3–4 weeks to the signed pilot gate and the synthetic-data corpus; one term for the pilot
+itself, which **cannot be compressed** — compressing it is the finding the auditor made.

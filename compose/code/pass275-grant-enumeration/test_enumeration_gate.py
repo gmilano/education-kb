@@ -13,7 +13,14 @@ from enumeration_gate import (ABSENT_KEY, NEGATIVE, RETRACTION, attribute,
 FAILED = []
 
 
+# 🔵 p277: the suite announced a HARD-CODED "47/47" while running an unknown number of
+# controls, so adding one made the banner a lie rather than a count.  RAN is derived.
+RAN = 0
+
+
 def check(name, got, want):
+    global RAN
+    RAN += 1
     if got != want:
         FAILED.append(f"{name}: got {got!r}, want {want!r}")
 
@@ -189,9 +196,33 @@ check("D1: a real declared key is not read as an absence",
 check("D1: a bare dash is an absence",
       bool(ABSENT_KEY.search("-")), True)
 
+# --- D6: p276's case fix was over-narrow, and THIS suite's own control caught it --------
+# 🔵 Every control below is a regression p276's fix was protecting; they are asserted
+# TOGETHER so a later pass cannot widen one and silently reopen the other.
+check("D6: a digit-bearing base matches the camel-case the prose uses",
+      attribute("| **GegoK12** | 🔴 no licence payload |", ["Gego-K12/gegok12"]),
+      ["Gego-K12/gegok12"])
+check("D6: and the exact spelling still matches",
+      attribute("| gegok12 | 🔴 no licence payload |", ["Gego-K12/gegok12"]),
+      ["Gego-K12/gegok12"])
+check("D6: another digit-bearing base, differently cased",
+      attribute("| **AI4K12** | 🔴 serves no licence payload |", ["touretzkyds/ai4k12"]),
+      ["touretzkyds/ai4k12"])
+check("D6 NEGATIVE ARM: `lms` as a common NOUN is still not a mention (p276's 13 false "
+      "refutations stay fixed)",
+      attribute("🔴 a proprietary LMS serves no grant at all", ["frappe/lms"]), [])
+check("D6 NEGATIVE ARM: `lms` inside a longer hyphenated token is still not a mention",
+      attribute("| mcp-canvas-lms | 🔴 NONE — no LICENSE on any branch |", ["frappe/lms"]), [])
+check("D6 NEGATIVE ARM: a purely ALPHABETIC base stays case-sensitive",
+      attribute("🔴 the Tutor framework serves no grant", ["overhangio/tutor"]), [])
+check("D6 NEGATIVE ARM: and that base still matches its own spelling",
+      attribute("🔴 tutor serves no grant", ["overhangio/tutor"]), ["overhangio/tutor"])
+check("D6: a possessive mention of a digit-bearing name is still not the subject",
+      attribute("GegoK12's sibling has no licence payload", ["Gego-K12/gegok12"]), [])
+
 if FAILED:
     print(f"# {len(FAILED)} FAILING:")
     for f in FAILED:
         print("  FAIL", f)
     sys.exit(1)
-print("# p275+p276 enumeration-gate suite: 47/47 PASS")
+print(f"# p275+p276+p277 enumeration-gate suite: {RAN}/{RAN} PASS")

@@ -4,6 +4,217 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 277 — 2026-10-17 — **THE TEN-PASS APAC NIL ENDS ON THE FIRST JURISDICTION-TARGETED QUERY, AND THE GATE `p276` COULD ONLY VALIDATE AS DATA FAILS WHEN RUN**
+
+⏱️ **Twenty-third pass of `2026-10-17`.** Evidence:
+[`p277-websearch.2026-10-17-p277.tsv`](evidence/p277-websearch.2026-10-17-p277.tsv) — **12 legs, 5
+jurisdictions, 3 informative nils declared** ·
+[`positive-controls.2026-10-17-p277.tsv`](evidence/positive-controls.2026-10-17-p277.tsv) — **12 rows:
+what the shelves publish vs what was measured first-hand** ·
+[`tree-enumeration.2026-10-17-p277.tsv`](evidence/tree-enumeration.2026-10-17-p277.tsv) — **12 slugs,
+every tree enumerated, every candidate read at payload, two channels**.
+
+### 🟢 Headline: the region was never quiet — the query was, and `p276` had already diagnosed it
+
+`p276` ranked one instruction it could not test: *"`p277` must query APAC per jurisdiction — MEXT,
+Singapore MOE, India's NEP, China's MoE, Korea's AI textbooks — not by the word 'APAC', which no
+education ministry uses."* 🟢 **Run once, the ten-pass nil ended and five jurisdictions returned named,
+dated, numbered instruments.**
+
+| jurisdiction | instrument | what it forces |
+|---|---|---|
+| **China** | *AI Plus Education* plan (**Apr 2026 → 2030**) | dedicated AI courses nationwide, **teacher AI-literacy standard in qualification exams**, hour floors (Gr 1–4 **≥6 h/yr**, 5–9 **≥10 h/yr**, 10–11 **≥1 h/fortnight**) |
+| **India** | **CBSE Circular Acad-15/2026**, session 2026-27 | **AI & CT compulsory Classes III–VIII, NO board exam** → assessment must be portfolio-shaped. **CBSE-scoped, not national.** MoE names **>1 crore teachers** as the constraint |
+| **Japan** | **MEXT Ver. 2.0** | *"human-centred use"* — **a person owns the final deliverable, as written policy.** FY2026 pilot **149 municipalities / 478 schools**, split **100 teacher-administrative / 10 in-class** |
+| **Singapore** | **Teacher AI Literacy Roadmap** (Aug 2026) | **Module 1 compulsory by end-2026.** "Four Learns"; **lower primary deliberately excluded** from AI tools |
+| **South Korea** | **AI digital textbooks — status REVOKED** | see below |
+
+### 🔴 The most decision-relevant APAC fact is a failure, and it is the best argument this base has
+
+**South Korea built, deployed and then unwound a national AI digital-textbook programme** — status
+revoked by the National Assembly **four months into rollout** (Aug 2025); adoption 🔴 **37% → 19%**;
+**two data-protection violations** found by the privacy regulator; the **state auditor found the
+textbooks were brought into schools without a pilot**; publisher suits **dismissed** (Jul and Aug 2026);
+the review process for 2026-year products **halted**.
+
+🔴 **Not one cited cause was model capability** — factual errors, privacy, screen time and teacher
+workload are all **implementation and governance failures, inside a delivery partner's scope.** 🟢 **It
+makes three claims testable: a mandate is not adoption** (the decline happened *while* the mandate
+stood), **a privacy finding outranks an accuracy benchmark**, and **the pilot is not a formality.**
+New patterns **`P30`** (brief APAC per jurisdiction — there is no APAC requirement) and **`P31`** (the
+pilot-gated rollout, built backwards from this reversal, with synthetic pilot data and the teacher half
+shipped first). Trends **`T53`**, **`T54`**.
+
+⚠️ **GRADE: SECONDARY-CONVERGENT, PRIMARY UNREAD — all five.** 🔴 **`mext.go.jp`, `moe.gov.sg`,
+`moe.go.kr`, `cbse.gov.in`, `pib.gov.in` and `www.gov.uk` are DNS-unresolvable from this sandbox**
+(`getaddrinfo ENOTFOUND`); only `github.com` and `raw.githubusercontent.com` resolve. **This base does
+not publish a licence it has not read, and it marks a regulation it could not read either.**
+
+### 🔴 `make hooks` RAN — and refuted `p276`'s own expected result
+
+`p276` could execute nothing and said so, validating its patch by `ast.parse` instead and naming the
+test that would expose it: *"Expected `REFUTED=0 · VERIFIED-ABSENT=48 · QUEUE-UNENUMERATED=70`, `47/47`
+controls. **If it differs, the patch is wrong.**"*
+
+| step | first run, as inherited | end of pass |
+|---|---|---|
+| `gate-offline` (~40 suites + lazy-quantifier lint) | 🟢 **`ALL OFFLINE LICENCE CONTROLS PASS`** | 🟢 PASS |
+| `recount` (`T37`) | 🔴 **2 of 4 claims STALE** | 🟢 **1 of 4** (the remaining one left STALE on purpose) |
+| `gate-enumeration` | 🔴 **FAILED** — `Error 1`, and the recipe discarded the reason | 🟢 **PASS** — `REFUTED=0 · VERIFIED-ABSENT=53 · QUEUE-UNENUMERATED=69` |
+| `gate-tables` *(new this pass)* | — | 🟢 **PASS**, 15 controls |
+
+🔴 **`p276`'s `47/47` is refuted by execution, and so are both of its expected counts** — it predicted
+`VERIFIED-ABSENT=48 · QUEUE-UNENUMERATED=70`; the gate, once fixed, reports **53** and **69**. Its
+*evidence* half (plain `git` + `curl` at pinned SHAs) stands; its *instrument* half was labelled
+`UNVERIFIED-BY-EXECUTION`, has now been tested, and failed. 🟢 **The label is what made this measurable
+in one command.**
+
+🔴 **The gate could not say WHAT failed, because `Makefile:31` ran the suite as `>/dev/null`**,
+discarding the `# N FAILING:` report the suite exists to print. **Third member of a family this Makefile
+documents in its own comments:** `p253`'s gate could not **hear** its controls, `p254`'s could not
+**speak** its verdict, 🔴 **`p277`'s could not SEE what failed.**
+
+🟢 **Fixed, and the fix paid for itself in the same run — the suite named its own defect in one line:**
+
+```
+# 1 FAILING:
+  FAIL a DEAD slug does not own a claim about the real repo of the same basename:
+       got [], want ['Gego-K12/gegok12']
+```
+
+🟢 **So the defect was READ before it was patched, and then patched (`D6`).** `p275` widened
+`attribute()` to match a bare repository name; `p276` narrowed it to be **case-sensitive**, correctly
+killing thirteen false refutations caused by `lms` matching *"a proprietary **LMS**"*. 🔴 **That
+narrowing also stopped a real name matching the way prose spells it:** the shelf writes **`GegoK12`**
+and the slug is `gegok12`. 🔵 **The discriminator is not case — it is whether the token could be an
+English word, and no common noun contains a DIGIT.** A digit-bearing base (`gegok12`, `ai4k12`) is now
+matched case-insensitively; a purely alphabetic one (`tutor`, `bloom`, and the `lms` that cost `p276`
+thirteen refutations) stays case-sensitive. **Eight new controls pin it, including every negative arm
+`p276`'s fix was protecting**, so a later pass cannot widen one and silently reopen the other.
+
+🟢 **`make hooks` exits `0` end to end — the first fully green standing check in at least three
+passes.** 🔵 **And the banner no longer lies about its own size:** the suite announced a hard-coded
+`"47/47"` while running an unknown number of controls, so adding one made the count false. **It is
+derived now.**
+
+### 🟢 Twelve negative verdicts re-checked at payload, and the shelves were right twelve times
+
+`p276` left **`QUEUE-UNENUMERATED=70`** at a measured *"roughly one in four"* error rate. `p277`
+harvested **110 absence-asserting slugs**, worked the **top twelve** on both channels, and found
+🟢 **0 refutations, 12 of 12 positive controls**, with **four byte counts reproduced exactly**
+(1,068 · 1,068 · 1,531 · 4,818). **After three passes of false negatives, the hard cases now reproduce
+under independent re-measurement.**
+
+🟢 **Six absences were upgraded from a path ladder to a full tree enumeration** — `edunaija-os` from
+*"19 of 19 paths"* to **310 paths**, plus `ai4k12` (190), `Phonos` (119), `autoGrader-frontend` (36),
+`CreveXTech/canvas-lms-mcp` (31). 🔴 **And one changed meaning: `OpenEMIS/OpenEMIS-Core` enumerates to
+ELEVEN paths** — not a codebase, so the absence is true of the repository and says almost nothing about
+the product. **New sub-rule: publish the path count beside every absence** (`T57` for `p278`).
+
+🟢 **Three payloads now carry their TERMS, not just their family** — read first-hand so an engagement
+need not re-open them: `sdv-dev/SDV` is **BUSL-1.1** whose Additional Use Grant **permits derivatives
+except a "Synthetic Data Service"** (so: generate synthetic student data inside a deliverable, never
+resell the generation — wired into `P31`); `AStheTECH/mewcp-google-classroom`'s bespoke ACL is
+**revocable and non-commercial** (second instance of `P-N1`: *a refuted absence is not a permission*);
+`Open-TutorAi/open-tutor-ai-CE` is **verbatim BSD-3-Clause at 1,531 B**.
+
+🔴 **One NEW defect class, on that last row: the two channels DISAGREE.** The payload is
+**BSD-3-Clause**; `pyproject.toml` declares **MIT**. Both permissive, so nothing a studio may do
+changes — **but the attribution obligation does**, and **this base has a grade for *payload* and a grade
+for *metadata* and no class at all for CONFLICT.** Declared for `p278`.
+
+### 🔴 The queue is measuring the archive, and `p276` had declared this shape
+
+**All twelve top-ranked rows were already resolved.** The harvester was **line-scoped**, and the
+trending shelves are **append-only by design** — a correction is published as a new dated section while
+the original absence prose correctly stays below as history. 🔴 **So every correction leaves a permanent
+queue entry, and the backlog grows monotonically with the number of corrections made.** `T56`.
+
+🔵 **The strongest part: `p276` declared exactly this** — *"`states_a_grant()` is line-scoped while
+`attribute()` is subject-scoped"* — **and `p277`'s harvester, written fresh with no reference to that
+predicate, inherited the identical defect.** Two independent implementations, one failure: **the defect
+is in the shape of the problem.** **`QUEUE-UNENUMERATED` is an upper bound and must be published as
+one.**
+
+🔴 **And one defect in `p277`'s own instrument, measured not confessed.** Its fresh scope test still
+reported two false candidates on `kolibri-design-system`:
+`lib/KIcon/precompiled-icons/mdi/copyright.vue` and `.../license.vue` — **Material Design icon
+components**. The exclusion required `icons` as a **whole path segment** and `precompiled-icons` is not
+one. 🟢 **The row survived because the manifest channel carried it — the argument for two channels** —
+and **the cheap general fix is an extension test: a grant is not a `.vue` file.**
+
+### 🟢 Two registered quantities re-counted, one corrected, one deliberately left alone
+
+- 🟢 **`agents/top.md` read "24 permissive rows" and the table holds 27.** `p276` added three rows
+  (`mcp-canvas-lms`, `fsrs4anki-helper`, `EduChat`) and did not move the count — **the exact failure
+  `T37` exists for, committed by the pass reading `T37`'s output.** Re-derived independently row by row:
+  **27**. **Corrected.**
+- 🔴 **The MCP-slug count was NOT corrected, on purpose.** `T37` reported `published 20 · measured 21 ·
+  STALE`; an independent enumeration written this pass returned **20**, agreeing with the **shelf** and
+  not the gate. 🔵 **Two predicates disagree by one row, so the defect is in a predicate, not the
+  shelf** — and **editing a true number to match a wrong instrument is harder to detect than leaving a
+  stale one.** Declared for `p278`.
+
+### 🟡 Three informative nils, published with their queries
+
+**No new education agent, no new trending repo, and no new permissive platform was located** — and each
+nil is recorded with the query that produced it rather than left as silence. Every candidate returned
+(DeepTutor, OpenTutor, freelingo, ChatTutor, FutureAGI) **was already carried**; the trending lists
+returned **course repos, not agents**, and were deliberately not shelved as such; and the only
+Apache-2.0 LMS returned was **OpenOLAT**, payload-verified here since `p272`. 🔵 **Three passes have now
+searched for a sixth permissive platform and failed, which makes it a property of the ecosystem rather
+than a coverage gap.** ⚠️ **Forma LMS was left off entirely** — Apache-2.0 per one source, GPL per
+another, payload read by neither.
+
+⚠️ **One claim recorded but NOT asserted:** that **Canvas Free-for-Teacher was permanently discontinued
+in May 2026**. `instructure.com` is unreachable here. It touches no licence — but it touches **this
+base's own sequencing**, which tells a studio to stand up `canvas-mcp` *"read-only against a sandbox"*.
+🔵 **The exposure is narrow and specific: the unsponsored pilot.** Until `p278` settles it in one fetch,
+**do not promise a zero-cost Canvas environment in a proposal.**
+
+### 🔴 Three defects that only an EXECUTED gate could have found, and two were self-inflicted
+
+🔴 **1. A checker anchored on the stale number cannot survive the correction it asks for.**
+`recount.py` bounded the permissive-tier table with the **literal string `"**24 permissive rows"`** —
+a copy of the very number under test. Correcting the shelf to `27` **deleted that boundary**, so the
+measurement silently became *"every table row in the rest of the file"* and reported 🔴 **63**. The
+verdict stayed `STALE` **for an entirely new reason**, which is the shape that would have survived a
+careless pass: a red gate that looks like the same red gate. 🔵 **And `published` turns out to be a
+Python CONSTANT, not a value read from the shelf** — so `T37` detects **row** drift and is **blind to
+text** drift. Both pins moved; the claim now reads `27 / 27 / MATCH`.
+
+🔴 **2. Adding a gate turned `gate-offline` red, exactly as designed.** `p252`'s census pins the count
+of every suite on disk and every suite the Makefile reaches. Wiring `gate-tables` in moved them
+`214 → 215` and `33 → 34`, and **`make hooks` went red at `p252` before a single finding had been
+written up.** 🟢 **The pin was moved in the SAME change as the step** — `p261`'s remedy, `p262`'s shape
+— so the census never spent a pass red. **Fifth consecutive pass where this census catches the new
+instrument first.**
+
+🔴 **3. `p261`'s ordering invariant caught a mistake of `p277`'s own, in a shelf edit rather than an
+instrument.** This pass appended its `repos/foundations.md` section at the **bottom** of a file whose
+pass sections run **newest-first**, and `pass261-current-state-tier-run` failed on it. **Moved above
+`Pass 276`; all eight shelves now verify `AGREE` or `UNDECIDABLE`.** 🔵 **A convention that is only
+written in the files is a convention a pass will break; this one is executable, and it held.**
+
+### 🔵 Declared gaps and the backlog for `p278`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked, with the first two costing zero
+searches:
+
+1. 🔴 **Build the payload-vs-metadata CONFLICT class**, then sweep the metadata-grade rows — a conflict
+   is only visible when **both** channels are read, and most rows have only ever had one.
+2. 🔴 **Reconcile the two MCP-slug predicates** (20 vs 21) and establish which counts the 21st.
+3. 🔴 **Widen `recount.py`'s tier boundary off the number it is checking** — see the trap below.
+4. 🟡 **Scope the absence queue to the latest statement per subject**, so the backlog stops measuring
+   append-only history; publish `QUEUE-UNENUMERATED` as an upper bound until then.
+5. 🟡 **Re-run the six upgraded absences on the resolved default ref**, not `HEAD` alone — `p269`'s
+   `kolibri` lesson (MIT on `develop`, 404 on `main`) is not discharged by six clean trees.
+6. 🟡 **Query LATAM and North America per jurisdiction**, as APAC and EMEA now have been — both are
+   still carried on *regional* queries, which is the defect `T53` names.
+7. 🟡 **Read, with egress: CBSE Circular Acad-15/2026 first** (the one binding instrument in the APAC
+   set), then MEXT Ver. 2.0, the Korean MoE's own account, and the DfE standards.
+
+
 ## Pass 276 — 2026-10-17 — **THE QUEUE `p275` BUILT WAS WORKED FOR THE FIRST TIME, AND THE INSTRUMENT THAT BUILT IT FAILED THREE WAYS ON ITS OWN BACKLOG**
 
 ⏱️ **Twenty-second pass of `2026-10-17`.** Evidence:

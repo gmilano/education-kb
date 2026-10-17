@@ -146,7 +146,14 @@ def measure(root):
 
     # permissive rows in agents/top.md's build-on tier: count the table between the
     # tier heading and the sentence that states the count.
-    tier = top.split("## Build-on-this tier")[-1].split("**24 permissive rows")[0] if "## Build-on-this tier" in top else ""
+    # 🔴 p277: this sentinel is a LITERAL COPY OF THE NUMBER BEING CHECKED, so correcting
+    # the shelf DELETES the boundary and the measurement silently becomes "every table row
+    # in the rest of the file" -- 27 became 63 the moment `24` was fixed to `27`, and the
+    # verdict stayed STALE for a new reason.  A checker anchored on the stale text cannot
+    # survive the correction it asks for.  Anchored on the row of dashes instead would be
+    # better still; the sentinel is moved here because the pin must move WITH the change
+    # (p261's remedy), and widening the anchor is left as a declared item.
+    tier = top.split("## Build-on-this tier")[-1].split("**27 permissive rows")[0] if "## Build-on-this tier" in top else ""
     rows = [l for l in tier.splitlines() if l.startswith("|") and "github.com/" in l]
     m["permissive_rows_in_build_on_tier"] = len(rows)
     return m
@@ -162,8 +169,15 @@ CLAIMS = [
      "intel/trends.md T24 (p274). Was 3"),
     # 🟢 p275: 23 -> 24.  ls1intum/Athena moved UP from the licence-UNVERIFIED table after
     # 12 of its 14 manifests were found to declare MIT.  Not a new repo -- a re-graded one.
-    ("permissive rows in the build-on tier", "permissive_rows_in_build_on_tier", 24,
-     "agents/top.md ('24 permissive rows')"),
+    # 🟢 p277: 24 -> 27.  p276 added three rows (DMontgomery40/mcp-canvas-lms,
+    # fsrs4anki-helper, ECNU-ICALK/EduChat) and did not move the count; this re-count
+    # reported it STALE, an independent row-by-row enumeration agreed at 27, and the shelf
+    # is corrected.  🔵 Note what `published` IS here: a Python CONSTANT, not a value read
+    # from the shelf -- so this claim detects ROW drift and is blind to TEXT drift.  A pass
+    # that edits the sentence and not this literal leaves the gate green and the shelf
+    # wrong, which is the inverse of the failure p277 hit.
+    ("permissive rows in the build-on tier", "permissive_rows_in_build_on_tier", 27,
+     "agents/top.md ('27 permissive rows', corrected from 24 at p277)"),
 ]
 
 
