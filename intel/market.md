@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 259 — 2026-10-17 — **`8` SEARCH LEGS, `46` FACTS OFFERED, `0` THROUGH THE CLAIMS GATE — FOR THE SECOND PASS RUNNING.** SO THIS SECTION DOES NOT RESTATE THE MARKET; IT PLACES THE `11` ROWS WHOSE GRANTS BECAME READABLE, BECAUSE A LICENCE IS WHAT TURNS A MARKET INTO A DELIVERABLE
+
+🔵 **Evidence:** [`p259-websearch`](../evidence/p259-websearch.2026-10-17-p259.tsv) *(`8` legs: global ×`4`, regional ×`4`)* · [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv)
+
+### 🔴 `T259-M1` — the external channel, measured again
+
+| leg | facts offered | 🔴 new after `make claims` |
+|---|---|---|
+| global — agents / trending / verticals / trends | `16` | `0` |
+| North America | `9` | `0` |
+| EMEA | `6` | `0` |
+| APAC | `7` | `0` |
+| LATAM | `8` | `0` |
+| **total** | **`46`** | 🔴 **`0`** |
+
+🔵 **`p258` recorded `31` of `32` refused and concluded that the education-AI regulatory picture has stopped moving faster than this base reads it. `p259` returns `0` of `46`, which corroborates it and sharpens it:** the *secondary* channel is exhausted. 🔴 **Every leg also re-served at least one superseded fact** — the EMEA leg offered *"August 2026 for high-risk obligations"* beside the correct `2027-12-02` deferral, the sixth recorded instance.
+
+🟢 **What this base should spend a pass on instead is now measurable rather than felt:** `0` facts from `46` offered, against `11` rows resolved by reading payloads it already had addresses for.
+
+### 🟢 `T259-M2` — Opportunities by region
+
+🔵 Each opportunity below names the repositories it is built from and the grant duty that comes with them. Rows marked 🟢 had their grant read **first-hand this pass**.
+
+#### North America
+
+🔴 **The constraint, and it is new information:** [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) — the open-source SIS a US district engagement reaches for — is 🟢 **`GPL-2.0`**, read first-hand at `docs/License.txt`. Under the conventional `-only` reading it **cannot be linked with `GPL-3.0` code**, so a SIS+LMS build integrates over **OneRoster / Ed-Fi / LTI**, in separate processes.
+
+🟢 **The opportunity that follows:** the integration layer itself. [`edanalytics`](https://github.com/edanalytics)' seven `Apache-2.0` tools *(carried, `p258`)* — `earthmover`, `lightbeam`, `edfi_api_client`, `dbt_synth_data`, `ea_airflow_util`, `earthmover_edfi_bundles`, `edfi-etc-sedm-extension` — are **the only permissive layer in the whole school stack**, and `dbt_synth_data` lets a studio build and demo the pipeline **before** it is trusted with `FERPA`-covered records.
+
+🔴 **The risk to price in:** the GitHub Classroom **autograding trio is archived** *(all three, verified this pass)*. A US higher-ed autograding engagement forks on day one.
+
+#### EMEA
+
+🟢 **The deployable AI layer for a school authority is now fully readable:** seven `bycs-lp` Moodle plugins, all 🟢 **`GPL-3.0-or-later`** — broker, chat, TinyMCE surface, authoring elements, quiz-access gate, and the **deferred/immediate free-text marking pair**. A Bavarian state project, which means it is built against European school governance rather than retrofitted to it.
+
+🔴 **The duty:** every derivative plugin ships under the same terms. That is compatible with a services engagement and incompatible with a closed white-label.
+
+🔴 **The second constraint:** [`nextcloud/live_transcription`](https://github.com/nextcloud/live_transcription) and [`nextcloud/talk_bot_ai`](https://github.com/nextcloud/talk_bot_ai) are 🟢 **`AGPL`** — read this pass from `appinfo/info.xml`. For a **hosted** lecture-transcription service that is network copyleft: source owed to users. Self-hosted on the institution's own tenancy, it is the cheapest compliant route to live transcription in a sovereignty-sensitive market.
+
+🔵 **The regulatory frame is unchanged and was not re-litigated:** Annex III point `3` binds **`2027-12-02`** *(Regulation (EU) `2026/1744`)*; Article `4` AI-literacy duties and the Article `5(1)(f)` prohibition on **emotion inference** in education are live now.
+
+#### APAC
+
+🟡 [`frappe/education`](https://github.com/frappe/education) *(`669`★)* — the school ERP on the Frappe framework — resolved this pass to a 🟡 **`GPL-3` bare token**: a `19`-byte `license.txt` reading `License: GNU GPL V3`. 🔵 **Family readable, bound and terms not stated.** For an Indian school-ERP engagement that is enough to plan around and **not** enough to answer a procurement questionnaire; the gap is in the upstream's grant, not in this base's reading, and it is worth an upstream issue.
+
+🔴 **And `p258`'s org-level finding holds here:** in the same owner, `frappe` *(framework)* is `MIT`, `erpnext` and `hrms` are `GPL-3.0`, and **`lms` is `AGPL-3.0`**. A studio evaluating "Frappe" by one repository reads the wrong one roughly two times in three.
+
+🔵 India's Class-`3` AI mandate and China's annual-hours requirement remain **REPORTED, not confirmed** *(see declared gaps)*.
+
+#### LATAM
+
+🟢 **The region is on this shelf as a producer, not only a market.** Three of the seven Moodle rows resolved this pass are **Brazilian**, authored independently of the Bavarian set: [`jeanlucio/moodle-mod_quickpoll`](https://github.com/jeanlucio/moodle-mod_quickpoll), [`moodle-mod_playerraid`](https://github.com/jeanlucio/moodle-mod_playerraid) and [`moodle-dev-tools`](https://github.com/jeanlucio/moodle-dev-tools) — the last being a plugin-development toolkit with audit scripts, capability and language checkers, and the GPL header injector itself.
+
+🟢 **The opportunity, and it is specific:** a LATAM Moodle practice can adopt the Bavarian AI layer wholesale — same licence, same plugin ABI — and bring its own **development tooling** rather than importing it. 🔵 That is a rare position: the region supplies the build infrastructure for a stack the EMEA public sector supplies the product for.
+
+🔴 **The declared gap stands:** [`AmericasNLP`](https://github.com/AmericasNLP)'s shared-task repositories remain **unlicensed** on two independent sweeps now. The region's Indigenous-language NLP corpus cannot be used in a paid deliverable. That is a supply gap, not a search gap.
+
+### 🔴 `T259-M3` — the market fact this pass can actually add
+
+🔴 **`9` carried rows across `13` owners are archived upstreams, and they cluster into whole toolchains** rather than scattering. For a market map, that converts a line item from *"use the open-source reference implementation"* into *"fork and own the reference implementation"*:
+
+| cluster | consequence for a bid |
+|---|---|
+| 🔴 `adlnet` xAPI/SCORM reference tooling *(`5` rows)* | SCORM→xAPI migration carries a maintenance line, not a dependency line |
+| 🔴 GitHub Classroom autograding *(`3` rows)* | an autograding engagement starts from a fork |
+| 🔴 `frappe/schools` | superseded by `erpnext`; the row says so in its own description |
+| 🟢 `yetanalytics` *(`13` carried rows, `0` archived among them)* | **the live route through the same ecosystem** |
+
 ## Pass 258 — 2026-10-17 — **THE MARKET MAP, RE-CUT ALONG THE LINE THAT ACTUALLY DECIDES AN ENGAGEMENT: NOT WHAT EXISTS IN A REGION, BUT WHAT CAN BE SHIPPED THERE UNDER A LICENCE A CLIENT WILL PAY FOR.** `12` PERMISSIVE AND `18` COPYLEFT ROWS PLACED, AND `191` OF THIS BASE'S OWN CONTENT CELLS RULED OUT OF A PAID DELIVERABLE
 
 🔵 **Evidence:** [`p258-org-grant-split`](../evidence/p258-org-grant-split.2026-10-17-p258.tsv) · [`p258-cc-census`](../evidence/p258-cc-census.2026-10-17-p258.tsv) *(`828` tokens)* · [`p258-websearch`](../evidence/p258-websearch.2026-10-17-p258.tsv) *(`8` legs, `4` regional)* · [`p258-owner-coverage`](../evidence/p258-owner-coverage.2026-10-17-p258.tsv)

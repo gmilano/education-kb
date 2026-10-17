@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 259 — 2026-10-17 — **THE K-12 FOUNDATION SHELF HAS A LICENCE-COMPATIBILITY PROBLEM, AND IT WAS INVISIBLE WHILE FOUR OF ITS ROWS READ "GRANT UNKNOWN".** `openSIS-Classic` IS `GPL-2.0`; THE MOODLE PLUGIN LAYER IS `GPL-3.0-or-later`; THE NEXTCLOUD LAYER IS `AGPL`. THOSE THREE DO NOT COMPOSE THE WAY A PROPOSAL ASSUMES
+
+🔵 **Evidence:** [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv) · **instrument:** [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/)
+
+### 🔴 `T259-R1` — the stack a school engagement actually proposes, with the grants now read
+
+A studio pitching *"open-source SIS + LMS + AI tutoring, self-hosted"* reaches for exactly these layers. Until this pass, four of them carried **no readable grant** on these shelves.
+
+| layer | repository | grant, read first-hand | what it permits | what it forbids |
+|---|---|---|---|---|
+| **SIS** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **`GPL-2.0`** *(`docs/License.txt`, `17 286` B, `224ac3d403e3603c`)* | self-hosting, modification, resale of services | 🔴 **in-process combination with `GPL-3.0` code** — see `T259-R2` |
+| **LMS core** | [`moodle/moodle`](https://github.com/moodle/moodle) *(carried)* | `GPL-3.0` *(filed `COPYING.txt`)* | the plugin economy below it | proprietary forks |
+| **LMS AI layer** | [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) + the `6` plugins resolved this pass | 🟡 **`GPL-3.0-or-later`** *(code headers)* | the broker + chat + editor + quiz-behaviour set as one deployable | closed derivative plugins |
+| **school ERP** | [`frappe/education`](https://github.com/frappe/education) *(`669`★)* | 🟡 **`GPL-3` bare token** *(`19` B)* | family is readable | 🔴 bound and terms are **not stated** — a `19`-byte grant is a family and nothing else |
+| **collaboration / transcription** | [`nextcloud/live_transcription`](https://github.com/nextcloud/live_transcription), [`nextcloud/talk_bot_ai`](https://github.com/nextcloud/talk_bot_ai) | 🔴 **`AGPL`** *(`appinfo/info.xml`)* | self-hosted deployment | 🔴 **network copyleft** — a hosted service owes source to its users |
+| **K-12 data spine** | [`edanalytics/earthmover`](https://github.com/edanalytics/earthmover) + `6` siblings *(carried, `p258`)* | 🟢 `Apache-2.0` | everything a paid engagement needs | — |
+
+🟢 **The one permissive layer in the whole stack is the data spine.** Everything a school actually *sees* is copyleft, and two layers of it are the strong kind.
+
+### 🔴 `T259-R2` — `GPL-2.0` under the SIS is a design constraint, not a footnote
+
+🔴 `openSIS-Classic`'s own header elects *"the GNU General Public License as published by the Free Software Foundation, **version 2 of the License**."* — **with no "or later"**.
+
+🔵 **The measured bound is `unspecified` and this base does not upgrade a measurement into a conclusion.** But the conventional reading of a notice that names a version without "or later" is **`GPL-2.0-only`**, and under that reading:
+
+- 🔴 `GPL-2.0-only` and `GPL-3.0-or-later` **cannot be combined into one work**. "or later" lets the Moodle side move forward to v3+; it never lets it move back to v2.
+- 🟢 **The architecture that survives this:** SIS and LMS stay separate processes and talk over **HTTP/LTI/OneRoster**, never a shared library. 🔵 Which, conveniently, is how a school integration should be built anyway — but a team that discovers the constraint during integration has already written the wrong code.
+- 🔴 **A proposal that says "we will extend openSIS with the Moodle AI plugin layer" is proposing something the licences do not permit.**
+
+🔴 **And the trap that made it worse than unknown:** the filed `GPL-2.0` text itself contains *"or (at your option) any later version"* — at **line `63`, inside the licence's own "How to Apply These Terms" appendix**. A reader that takes the bound from the licence FILE instead of from the program's NOTICE gets `or-later` from a template sentence and concludes the stack composes. It does not.
+
+### 🟢 `T259-R3` — what the `7` Moodle rows are, as a foundation rather than as licences
+
+🟢 The `bycs-lp` set is not seven unrelated plugins; it is **one deployable AI layer for a school authority**, and `p258` established the broker at its centre. `p259` adds the pieces that were unreadable:
+
+| piece | repository | the job it does in the layer |
+|---|---|---|
+| the broker *(carried)* | [`moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | one place to configure model, role, quota |
+| the chat surface *(carried)* | [`moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) | what pupils see |
+| the editor surface *(carried)* | [`moodle-tiny_ai`](https://github.com/bycs-lp/moodle-tiny_ai) | generation and rewriting in TinyMCE |
+| 🟢 authoring components | [`moodle-tiny_elements`](https://github.com/bycs-lp/moodle-tiny_elements) | reusable elements teachers drop into content |
+| 🟢 the assessment gate | [`moodle-quizaccess_ai`](https://github.com/bycs-lp/moodle-quizaccess_ai) | AI rules on a quiz attempt |
+| 🟢 deferred marking | [`moodle-qbehaviour_deferred_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_deferred_for_aitext) | summative free-text marking |
+| 🟢 immediate marking | [`moodle-qbehaviour_immediate_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_immediate_for_aitext) | formative free-text feedback |
+
+🔵 **The pair matters more than either half.** `deferred` and `immediate` are the same marking engine under two assessment regimes; an engagement that ships one and not the other has built half a feedback loop.
+
+🟢 **And the Brazilian set is the proof that this is a sector and not a vendor:** [`jeanlucio/moodle-mod_quickpoll`](https://github.com/jeanlucio/moodle-mod_quickpoll), [`moodle-mod_playerraid`](https://github.com/jeanlucio/moodle-mod_playerraid) and [`moodle-dev-tools`](https://github.com/jeanlucio/moodle-dev-tools) carry a byte-different but legally identical header, authored independently in **LATAM**.
+
+### 🔴 `T259-R4` — `9` carried foundation rows are read-only upstreams
+
+🔴 Measured across `13` owners, `141` archived repositories read first-hand. The ones a studio would actually reach for:
+
+| archived row | last update | what it means for a build |
+|---|---|---|
+| 🔴 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | `2026-03-04` | **the** SCORM→xAPI bridge in every migration deck. Frozen |
+| 🔴 [`adlnet/tla`](https://github.com/adlnet/tla) | `2026-03-12` | the Total Learning Architecture reference implementation. Frozen |
+| 🔴 [`adlnet/xapi-lab`](https://github.com/adlnet/xapi-lab) | `2026-06-06` | the LRS statement workbench. Frozen |
+| 🔴 [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | `2026-03-12` | the profile document. Frozen |
+| 🔴 [`adlnet/SCORM-to-TLA-Roadmap`](https://github.com/adlnet/SCORM-to-TLA-Roadmap) | `2026-03-12` | the transition guidance. Frozen |
+| 🔴 [`classroom-resources/autograding`](https://github.com/classroom-resources/autograding) + [`-command-grader`](https://github.com/classroom-resources/autograding-command-grader) + [`-grading-reporter`](https://github.com/classroom-resources/autograding-grading-reporter) | `2025-04` / `2026-10` | 🔴 **the entire GitHub Classroom autograding trio** |
+| 🔴 [`frappe/schools`](https://github.com/frappe/schools) | `2026-02-05` | its own description: *"Merged with frappe/erpnext - this repo is deprecated"* |
+
+🔵 **A read-only upstream is not a foundation; it is a starting point you now maintain.** That is a costing input, not a disqualification — but it belongs in the estimate, and for `adlnet` it means **the xAPI reference tooling a studio reaches for by reflex is a fork decision**, not a dependency.
+
+🟢 **The live alternative on these shelves, carried:** [`yetanalytics`](https://github.com/yetanalytics)' xAPI stack — `13` carried rows, and its ONLY archived repository (`testomic`, a Datomic test util) is not one of them, verified this pass.
+
 ## Pass 258 — 2026-10-17 — **A LICENCE-CLEAN `Apache-2.0` K-12 DATA STACK, AND THE INFERENCE IT REFUTES: THE ORGANISATION IS NOT THE UNIT OF LICENSING.** TWO ORGS MEASURED, BOTH SPLIT ALONG THE PRODUCT LINE, AND IN BOTH THE PERMISSIVE SIBLING IS THE TOOL WHILE THE RESTRICTED ONE IS THE PRODUCT YOU WOULD ACTUALLY DEPLOY
 
 🔵 **Evidence:** [`p258-org-grant-split`](../evidence/p258-org-grant-split.2026-10-17-p258.tsv) *(`19` rows, `2` organisations, every `p258` cell read first-hand)* · [`p258-grant-payload`](../evidence/p258-grant-payload.2026-10-17-p258.tsv) · [`p258-ladder-reprobe`](../evidence/p258-ladder-reprobe.2026-10-17-p258.tsv)

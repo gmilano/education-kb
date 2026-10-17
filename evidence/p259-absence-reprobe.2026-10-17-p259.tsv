@@ -1,0 +1,15 @@
+slug	ref	p258_verdict	p259_tierA_http	p259_tierA_path	absence_verdict
+AmericasNLP/americasnlp2025	main	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+AmericasNLP/americasnlp2026	main	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+alfredang/ai-cms	main	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+api-evangelist/wited-portal-educativo	main	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+api-evangelist/zotgpt	main	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+autolab/autograders-examples	main	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+bycs-lp/moodle-ci-workflows	main	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+bycs-lp/moodle-report_ai_analysis	master	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+frappe/education	develop	NO-PAYLOAD-ON-LADDER	200	license.txt	ABSENCE-REFUTED
+huggingface/context-course	main	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+huggingface/robotics-course	main	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+imsglobal/imsglobal.github.io	main	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+nextcloud/live_transcription	master	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED
+nextcloud/talk_bot_ai	main	NO-PAYLOAD-ON-LADDER	404	-	ABSENCE-CONFIRMED

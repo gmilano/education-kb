@@ -1,0 +1,15 @@
+slug	archived	last_updated	carried	what a studio should know
+adlnet/SCORM-to-xAPI-Wrapper	true	2026-03-04	YES	the SCORM-to-xAPI bridge every migration reaches for: read-only upstream
+adlnet/xAPI-SCORM-Profile	true	2026-03-12	YES	the profile document itself, frozen
+adlnet/SCORM-to-TLA-Roadmap	true	2026-03-12	YES	the transition guidance, frozen
+adlnet/xapi-lab	true	2026-06-06	YES	the LRS statement workbench, frozen
+adlnet/tla	true	2026-03-12	YES	the Total Learning Architecture reference implementation, frozen
+classroom-resources/autograding	true	2025-04-26	YES	GitHub Classroom autograding core action
+classroom-resources/autograding-command-grader	true	2026-10-06	YES	the command grader
+classroom-resources/autograding-grading-reporter	true	2026-10-06	YES	the results reporter
+frappe/schools	true	2026-02-05	YES	"Merged with frappe/erpnext - this repo is deprecated" (its own description)
+yetanalytics/testomic	true	2024-01-24	NO	the only archived repo in an owner carrying 13 rows — so the live xAPI alternative stays live
+open-spaced-repetition/fsrs4remnote	true	2026-01-22	NO	a retired FSRS scheduler plugin, not a carried row
+open-spaced-repetition/fsrs-vs-sm15	true	2026-02-07	NO	an algorithm comparison, not a carried row
+open-spaced-repetition/fsrs-optimizer-tiny	true	2025-02-09	NO	not a carried row
+# census arm: 13 owners (ed-fi-alliance-oss read separately: 31 repos, 0 archived); 141 archived repositories read first-hand; 9 are carried rows

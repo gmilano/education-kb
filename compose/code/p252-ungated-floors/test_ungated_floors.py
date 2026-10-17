@@ -55,8 +55,12 @@ FLOORS = uf.read_floors()
 # 🟢 Worth recording that THIS suite is what caught the new instrument: `make hooks` went
 # red on `p252` the moment the step was wired, before the pass had typed a single shelf
 # row.  A census pin that moves is the gate working, not the gate breaking.
-chk("python test files on disk", len(ROWS), 209)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 28)
+# p259: +1 file and +1 gated — `pass259-grant-location-class`, written and gated in one
+# pass, and this pin went red again the moment the step was wired.  Third consecutive pass
+# where the census caught the new instrument before any shelf row was typed; the `ungated`
+# figure stays at 181 because the suite arrived already inside `make hooks`.
+chk("python test files on disk", len(ROWS), 210)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 29)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",

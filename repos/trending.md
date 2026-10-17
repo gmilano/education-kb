@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — Pass 259 — **`141` ARCHIVED REPOSITORIES READ FIRST-HAND ACROSS `13` OWNERS: `9` OF THEM ARE CARRIED ROWS, AND THEY CLUSTER.** THE xAPI/SCORM REFERENCE TOOLING AND THE WHOLE GITHUB CLASSROOM AUTOGRADING TRIO ARE READ-ONLY
+
+🔵 **Append-only shelf.** This is `p259`'s window; history below is not rewritten. 🔵 **Evidence:** [`p259-archived-census`](../evidence/p259-archived-census.2026-10-17-p259.tsv) · [`p259-trending`](../evidence/p259-trending.2026-10-17-p259.tsv)
+
+### 🔴 `ACTION YW`, run as a partial arm and reported as one
+
+| | |
+|---|---|
+| owners swept | `13` of roughly `700` carrying rows here |
+| archived repositories read | 🟢 **`141`**, every one through the authenticated `MCP` search endpoint |
+| 🔴 carried rows that are archived | **`9`** |
+| 🔴 the limb `YW` actually named | *"batch the `2 374` carried slugs"* — **not done.** `YW` is re-registered, not discharged |
+
+🔵 **The falsifier `YW` carried was *"fewer than `10` carried rows are archived → archived state is noise"*, and `9` is below `10` — but the population measured is not the population named**, so the falsifier is **not evaluable** on this arm. `9` hits from under `2 %` of the owners is not a refutation; it is a reason to finish the sweep.
+
+### 🔴 The clustering is the finding, not the count
+
+🔴 **Archived rows are not spread thin. They arrive in whole toolchains:**
+
+| cluster | archived carried rows | what a studio loses |
+|---|---|---|
+| 🔴 **xAPI / SCORM reference tooling** *(`adlnet`)* | `5` — [`SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper), [`tla`](https://github.com/adlnet/tla), [`xapi-lab`](https://github.com/adlnet/xapi-lab), [`xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile), [`SCORM-to-TLA-Roadmap`](https://github.com/adlnet/SCORM-to-TLA-Roadmap) | the canonical migration path from SCORM to xAPI is **documentation and code that no longer moves** |
+| 🔴 **GitHub Classroom autograding** | `3` — [`autograding`](https://github.com/classroom-resources/autograding), [`autograding-command-grader`](https://github.com/classroom-resources/autograding-command-grader), [`autograding-grading-reporter`](https://github.com/classroom-resources/autograding-grading-reporter) | **the whole trio.** An autograding engagement built on these starts as a fork on day one |
+| 🔴 **Frappe's school product line** | `1` — [`frappe/schools`](https://github.com/frappe/schools), whose own description reads *"Merged with frappe/erpnext - this repo is deprecated"* | the row says *deprecated* in the field a reader never looks at |
+
+🟢 **And the negative that makes the finding usable:** [`yetanalytics`](https://github.com/yetanalytics) carries `13` rows here and its only archived repository — `testomic`, a Datomic test utility — **is not one of them**. 🔵 So the xAPI ecosystem has not frozen; **its reference implementations have, while a vendor stack beside them has not.** That is a routing instruction, not a eulogy.
+
+### 🔴 The discovery channel, for the record
+
+| axis | returned | carried | publishable NEW |
+|---|---|---|---|
+| `topic:ai-tutor pushed:>2026-09-01 sort:stars` | `12` | 🔴 `12` | `0` |
+| `education AI agent in:name,description created:>2026-07-01 stars:>3` | `6` | `4` | 🔴 `0` *(both `NEW` withheld — a lending product and a link list)* |
+| `github trending` via WebSearch | third-party aggregators only | — | 🔴 `0` — **the official trending page was not read first-hand this pass**, so this axis is declared UNREAD rather than empty |
+
+🔵 **Four passes running, this channel has paid in zero rows.** `p259`'s rows all came from **re-reading what was already carried**. A trending shelf should say that plainly rather than pad itself.
+
 ## 2026-10-17 — Pass 258 — **`github.com/trending` READ FIRST-HAND FOR THE FOURTH TIME: `13` REPOSITORIES, `0` EDUCATION. AND THE OWNER CHANNEL — NOW RUNNING ON AN AUTHENTICATED TRANSPORT THAT DOES NOT RATION — RETURNED `72.2 %` NEW ADDRESSES**
 
 🔵 **Append-only; the window below is kept.** Evidence: [`p258-trending`](../evidence/p258-trending.2026-10-17-p258.tsv) *(`13` rows)* · [`p258-row-supply`](../evidence/p258-row-supply.2026-10-17-p258.tsv) *(`79`)* · [`p258-channel-map`](../evidence/p258-channel-map.2026-10-17-p258.tsv) · [`p258-owner-coverage`](../evidence/p258-owner-coverage.2026-10-17-p258.tsv) *(`20` owners)*

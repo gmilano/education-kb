@@ -146,6 +146,9 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── pass258-content-licence-family (p258: the LIVE shelves' CC census, verified)"; \
 	cd compose/code/pass258-content-licence-family && $(PY) -I content_licence.py --census ../../.. >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
+	echo "── pass259-grant-location-class (p259: WHERE a grant was read, and what that licenses you to conclude)"; \
+	cd compose/code/pass259-grant-location-class && $(PY) test_grant_location.py >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code || exit 1; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

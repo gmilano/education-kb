@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — Pass 259 — **THE `ai-tutor` AXIS RETURNED `12` REPOSITORIES FROM `41 527`★ DOWN TO `96`★ AND THIS BASE ALREADY CARRIES ALL TWELVE.** THE WINDOW'S REAL MOVEMENT IS NOT A NEW AGENT — IT IS `11` CARRIED ROWS THAT STOPPED BEING UNREADABLE
+
+🔵 **Append-only shelf.** This section is `p259`'s window; everything below it is history and is not rewritten.
+
+### 🔴 The discovery sweep, gated row by row
+
+`topic:ai-tutor pushed:>2026-09-01`, sorted by stars, through the authenticated `MCP` search endpoint — `total_count=337`, top `12` read:
+
+| ★ | repo | created | gate |
+|---|---|---|---|
+| `41 527` | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 2025-12-28 | 🔴 CARRIED |
+| `1 001` | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **2026-09-17** | 🔴 CARRIED |
+| `516` | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 2025-09-29 | 🔴 CARRIED |
+| `308` | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 2026-06-24 | 🔴 CARRIED |
+| `291` | [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 2025-10-21 | 🔴 CARRIED |
+| `287` | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 2026-03-10 | 🔴 CARRIED |
+| `246` | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 2026-06-26 | 🔴 CARRIED |
+| `180` | [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 2026-04-06 | 🔴 CARRIED |
+| `179` | [`artcc/freelingo`](https://github.com/artcc/freelingo) | 2026-04-30 | 🔴 CARRIED |
+| `142` | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 2026-02-26 | 🔴 CARRIED |
+| `112` | [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) | 2026-03-17 | 🔴 CARRIED |
+| `96` | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 2024-08-01 | 🔴 CARRIED |
+
+🔴 **`12` of `12`.** The second axis — `education AI agent in:name,description created:>2026-07-01 stars:>3` — returned `6`, of which `2` were `NEW` and **both were withheld**: an `8`★ voice agent that qualifies *education loans* (a lending product, not education delivery) and a `4`★ curated link list. 🔵 Withholding a link list matters: `api-evangelist`'s `774` API profiles taught this base at `p258` that a catalogue of other people's products is not a repository to build on.
+
+### 🟢 What actually moved: `11` rows changed state without anyone finding a new one
+
+🟢 **`ACTION YU` was discharged this window and it moved `11` of the `22` grantless rows to a grant read first-hand** — `7` Moodle plugins at `GPL-3.0-or-later`, [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) at **`GPL-2.0`**, [`frappe/education`](https://github.com/frappe/education) at a `19`-byte `GPL-3` bare token, and two Nextcloud Talk apps at **`AGPL`**. Full table in [`agents/top.md`](top.md) `T259-C`.
+
+🔵 **Why that belongs on a TRENDING shelf and not only on the row shelf:** a trending section exists to record what changed in the window. In this window nothing new arrived that was worth carrying, and eleven things already carried became usable. **That is the movement.**
+
+### 🔴 The window's one archived-upstream signal
+
+🔴 **`9` carried rows are read-only upstreams**, measured this window across `13` owners *(`141` archived repositories read)*. Five of them are [`adlnet`](https://github.com/adlnet)'s xAPI/SCORM tooling and three are the whole GitHub Classroom **autograding** trio. Detail in [`repos/trending.md`](../repos/trending.md).
+
+### 🔴 The EU date trap, served again — sixth recorded instance
+
+🔴 This window's EMEA search leg returned *"older guides still give August 2026 for high-risk obligations"* alongside the correct deferral. 🟢 **This base's position is unchanged and was not re-litigated:** Annex III point `3` *(education and vocational training)* applies **`2027-12-02`** under Regulation (EU) `2026/1744`; `2026-08-02` is Article `50` **transparency**, a different obligation, and it is live. 🔵 The channel keeps serving the answer and the trap in one response — recorded, not re-derived.
+
 ## 2026-10-17 — Pass 258 — **WHAT MOVED THIS WINDOW: AN `MIT` AGENTIC-TA REFERENCE BUILD FROM A VENDOR ORG, A GERMAN STATE'S WHOLE AI-IN-LMS SUITE, AND `DeepTutor` MEASURED AT `41 522`★ AGAINST A CARRIED CELL OF `~24k`**
 
 🔵 **Append-only; the window below is kept.** Evidence: [`p258-row-supply`](../evidence/p258-row-supply.2026-10-17-p258.tsv) · [`p258-grant-payload`](../evidence/p258-grant-payload.2026-10-17-p258.tsv) · [`p258-trending`](../evidence/p258-trending.2026-10-17-p258.tsv)

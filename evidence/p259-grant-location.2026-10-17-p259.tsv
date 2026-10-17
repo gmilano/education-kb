@@ -1,0 +1,13 @@
+slug	ref	path	location_class	http	bytes	sha256_16	family	version	bound	miss_cause	region
+bycs-lp/moodle-quizaccess_ai	main	version.php	CODE-HEADER	200	1158	70457b7a8b2dfe94	GPL	3.0	or-later	BODY-NOT-GRADED	EMEA
+bycs-lp/moodle-qbehaviour_deferred_for_aitext	main	version.php	CODE-HEADER	200	1368	46be23cccffe63f2	GPL	3.0	or-later	BODY-NOT-GRADED	EMEA
+bycs-lp/moodle-qbehaviour_immediate_for_aitext	main	version.php	CODE-HEADER	200	1167	1b807c528a893553	GPL	3.0	or-later	BODY-NOT-GRADED	EMEA
+bycs-lp/moodle-tiny_elements	main	version.php	CODE-HEADER	200	1176	294ab4179f562f4f	GPL	3.0	or-later	BODY-NOT-GRADED	EMEA
+jeanlucio/moodle-mod_playerraid	main	version.php	CODE-HEADER	200	1104	8ed80ddbe02de2d1	GPL	3.0	or-later	BODY-NOT-GRADED	LATAM
+jeanlucio/moodle-mod_quickpoll	main	version.php	CODE-HEADER	200	1100	7806982b9b31fe3a	GPL	3.0	or-later	BODY-NOT-GRADED	LATAM
+jeanlucio/moodle-dev-tools	main	addheader.php	CODE-HEADER	200	6120	ea43d8d9275b5026	GPL	3.0	or-later	CHANNEL-ABSENT	LATAM
+OS4ED/openSIS-Classic	master	docs/License.txt	LICENCE-FILE	200	17286	224ac3d403e3603c	GPL	2.0	unspecified	TIER-NOT-RUN	North America
+OS4ED/openSIS-Classic	master	index.php	CODE-HEADER	200	45523	1e0f0d886fc1df69	GPL	2.0	unspecified	BODY-NOT-GRADED	North America
+frappe/education	develop	license.txt	BARE-TOKEN	200	19	1fcecf395312d876	GPL	3	unspecified	ABSENCE-UNCONFIRMED	APAC
+nextcloud/live_transcription	master	appinfo/info.xml	APP-MANIFEST	200	3837	5be78dac5eaa3e4c	AGPL	-	unspecified	CHANNEL-ABSENT	EMEA
+nextcloud/talk_bot_ai	main	appinfo/info.xml	APP-MANIFEST	200	2017	574bc668c640961a	AGPL	-	unspecified	CHANNEL-ABSENT	EMEA

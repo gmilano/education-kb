@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 259 — 2026-10-17 — **THE OPEN-SOURCE SIS THIS SHELF HAS CARRIED AS "GRANT UNREADABLE" IS `GPL-2.0`, AND THAT DECIDES THE INTEGRATION ARCHITECTURE OF EVERY SIS+LMS ENGAGEMENT.** PLUS: A PLATFORM'S GRANT CAN SIT IN ITS APP MANIFEST, WHICH THIS SHELF'S LADDER DOES NOT READ
+
+🔵 **Evidence:** [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv) · **instrument:** [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/)
+
+### 🔴 `T259-V1` — the platform licence matrix, with every cell read first-hand or marked
+
+| platform | role | grant | location it was read at | what a paid engagement may do |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) *(carried)* | LMS | `GPL-3.0` | filed *(`COPYING.txt`)* | 🟡 deploy, extend, resell services. Plugins are derivatives |
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | **SIS** | 🔴 **`GPL-2.0`** | `docs/License.txt` *(`17 286` B)* + header | 🔴 deploy and modify — **but not combine in-process with `GPL-3.0` code** |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) *(carried)* | LMS/MOOC | `AGPL-3.0` | filed | 🔴 network copyleft |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(carried)* | AI-native LMS | 🟢 **`MIT`** | filed | 🟢 **everything, including a closed derivative** — the permissive AI-native LMS this shelf spent nine passes saying did not exist |
+| 🟡 [`frappe/education`](https://github.com/frappe/education) | school ERP, `669`★ | 🟡 **`GPL-3` bare token** | `license.txt`, **`19` B** | 🟡 family only — **bound and terms unstated** |
+| 🔴 [`nextcloud/live_transcription`](https://github.com/nextcloud/live_transcription) | lecture transcription | 🔴 **`AGPL`** | `appinfo/info.xml` | 🔴 network copyleft, version unstated |
+| 🔴 [`nextcloud/talk_bot_ai`](https://github.com/nextcloud/talk_bot_ai) | classroom AI assistant | 🔴 **`AGPL`** | `appinfo/info.xml` | 🔴 same |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) *(carried)* | ERP on Odoo | `LGPL-3.0` | filed, earlier pass | 🟡 the **linking** question is the one a client asks, and `LGPL-3.0` is where it is decided |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) *(carried)* | offline-first LMS | `MIT` | filed | 🟢 the one permissive platform on this shelf |
+
+🟢 **If a client's constraint is "we must ship a closed derivative", this shelf has exactly two answers: [`mentingo`](https://github.com/Selleo/mentingo) (`MIT`, AI-native, `95`★) and [`kolibri`](https://github.com/learningequality/kolibri) (`MIT`, offline-first).** Everything else is a services engagement around a copyleft core — a fine business, and a different proposal.
+
+### 🔴 `T259-V2` — the app-manifest channel: a platform grant this shelf's ladder cannot see
+
+🔴 **Nextcloud declares its app licence in `appinfo/info.xml`, in an element spelled `<licence>`** — and that path is on **no tier** of this base's `51`-path ladder. Both Nextcloud rows therefore read as grantless for as long as they have been carried.
+
+🔵 **Two things follow, and the second is the bigger one:**
+
+1. 🟢 Both rows are now `AGPL`, read first-hand from the manifest element.
+2. 🔴 **A platform ecosystem's own manifest is a grant channel, and this shelf knows at least four ecosystems with one** — Nextcloud (`appinfo/info.xml`), Odoo (`__manifest__.py`, already Tier C), WordPress (plugin header comment), Drupal (`*.info.yml`). **Only Odoo's is on the ladder.** `pass259-grant-location-class` reads Nextcloud's; the other two are **unassessed, not absent**, and are registered as `ACTION ZA`.
+
+🔵 **And a reading detail that would have cost a row silently:** the element is `<licence>`, the British spelling. A reader that knows only `<license>` returns nothing and the pass publishes a gap that is really a spelling. Both spellings are controls in the instrument.
+
+### 🔴 `T259-V3` — what `GPL-2.0` under the SIS actually changes in a proposal
+
+| the sentence a proposal usually contains | 🔴 what the licences permit |
+|---|---|
+| *"we will extend openSIS with the Moodle AI plugin layer"* | 🔴 **not available** — `GPL-2.0-only` and `GPL-3.0-or-later` do not combine into one work |
+| *"we will embed the tutor inside the SIS UI"* | 🟡 only across a process boundary; not as linked code |
+| 🟢 *"SIS and LMS integrate over OneRoster / LTI 1.3 / Ed-Fi, each deployed separately"* | 🟢 **available, and it is the architecture to quote** |
+| *"we will deliver a closed, white-labelled SIS"* | 🔴 not from this codebase |
+
+🔵 **The honest qualifier, because this base does not upgrade a measurement into a conclusion:** the *measured* bound on `openSIS-Classic` is `unspecified` — the header names version `2` and is silent about "or later". The `-only` reading is the conventional one and is how the risk should be costed; it is **interpretation**, flagged as such, and the measurement is in [the evidence table](../evidence/p259-grant-location.2026-10-17-p259.tsv).
+
+🔴 **The trap that makes this easy to get wrong:** the filed `GPL-2.0` text at `docs/License.txt` contains *"or (at your option) any later version"* at line `63` — inside the licence's **"How to Apply These Terms"** appendix. It is boilerplate instructing an author how to write a notice, not this program's election. A due-diligence pass that greps the LICENCE file concludes the stack composes. **The program's notice is the operative text; the licence file is the terms it points at.**
+
 ## Pass 258 — 2026-10-17 — **THE `3 322`★ LMS THAT CALLS ITSELF "100% OPEN SOURCE" IS `AGPL-3.0`, AND THE `669`★ SCHOOL ERP BESIDE IT HAS NO READABLE GRANT AT ALL.** THE STANDING CLAIM — NO PERMISSIVE EDUCATION SIS OR ERP EXISTS — RE-PROBED FIRST-HAND AND STILL TRUE, PLUS A STATE-OPERATED `Moodle` ESTATE THIS BASE DID NOT CARRY
 
 🔵 **Evidence:** [`p258-ladder-reprobe`](../evidence/p258-ladder-reprobe.2026-10-17-p258.tsv) · [`p258-org-grant-split`](../evidence/p258-org-grant-split.2026-10-17-p258.tsv) · [`p258-grant-payload`](../evidence/p258-grant-payload.2026-10-17-p258.tsv)

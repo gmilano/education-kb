@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 259 — 2026-10-17 — **FIVE RECIPES BUILT FROM THE `11` ROWS WHOSE GRANTS BECAME READABLE THIS PASS.** EACH NAMES ITS REPOSITORIES, THE GRANT DUTY IT INHERITS, AND THE THING IT CANNOT DO
+
+🔵 Every repository below had its grant read first-hand at `p259` or is marked *(carried)*. 🔵 **Evidence:** [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv) · **instrument:** [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/)
+
+### 🟢 `P259-1` — the school-authority AI layer on Moodle, deployed as one unit *(EMEA, `6`–`8` weeks)*
+
+**Wire:** [`moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) *(the broker — model, role and quota per authority)* ← every other plugin calls it. Surfaces: [`moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) *(pupil chat)* + [`moodle-tiny_ai`](https://github.com/bycs-lp/moodle-tiny_ai) *(teacher authoring)* + 🟢 [`moodle-tiny_elements`](https://github.com/bycs-lp/moodle-tiny_elements) *(reusable content elements)*. Assessment: 🟢 [`moodle-quizaccess_ai`](https://github.com/bycs-lp/moodle-quizaccess_ai) gates the attempt, and 🟢 [`moodle-qbehaviour_deferred_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_deferred_for_aitext) + 🟢 [`moodle-qbehaviour_immediate_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_immediate_for_aitext) mark free text under the summative and formative regimes respectively. Model serving: [`ollama`](https://github.com/ollama/ollama) or [`vllm`](https://github.com/vllm-project/vllm) *(carried)* behind the broker, so the authority's data never leaves its tenancy.
+
+🔵 **Ship the marking pair together.** They are one engine under two assessment regimes; shipping `immediate` alone gives teachers feedback they cannot use summatively, and `deferred` alone gives pupils no formative loop.
+
+🟡 **Grant duty:** all seven plugins are **`GPL-3.0-or-later`** *(read first-hand, two owners)*. Any derivative plugin ships under the same terms. 🔴 **Cannot do:** a closed white-label of the plugin layer.
+
+🔵 **Article `26` hook:** the broker is the one place to implement human oversight, and [`ashutoshrana/confidence-escalation`](https://github.com/ashutoshrana/confidence-escalation) *(carried, `MIT`)* is the shape that belongs there — low-confidence answers escalate to a teacher instead of being served.
+
+### 🔴 `P259-2` — SIS + LMS for a US district, integrated the only way the licences allow *(North America, `10`–`12` weeks)*
+
+**Wire:** [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) 🔴 **`GPL-2.0`** as the SIS, in **its own process**, talking to Moodle over **OneRoster 1.2 / LTI 1.3**. Rostering and analytics ride the `Apache-2.0` Ed-Fi spine *(carried)*: [`edanalytics/earthmover`](https://github.com/edanalytics/earthmover) transforms source extracts, [`edfi_api_client`](https://github.com/edanalytics/edfi_api_client) talks to the ODS, [`earthmover_edfi_bundles`](https://github.com/edanalytics/earthmover_edfi_bundles) supplies the mappings, [`ea_airflow_util`](https://github.com/edanalytics/ea_airflow_util) orchestrates, and [`edfi-etc-sedm-extension`](https://github.com/edanalytics/edfi-etc-sedm-extension) covers the Special Education model the district is audited on. Demo and test on [`dbt_synth_data`](https://github.com/edanalytics/dbt_synth_data) **before** touching `FERPA`-covered records.
+
+🔴 **The hard constraint, and it is the reason this recipe exists:** `openSIS-Classic` elects *"version 2 of the License"* with no "or later". Under the conventional `-only` reading it **cannot be combined in one work with the `GPL-3.0-or-later` Moodle layer** of `P259-1`. 🟢 Separate processes + a standards API is therefore not an architectural preference here — it is the licensing-compatible option, and it is also the one a district's procurement already expects.
+
+🔵 **Due-diligence step to run first, in one command:** `location_class()` + `read_bound()` over the SIS's **notice**, not its licence file — the filed `GPL-2.0` text contains *"or (at your option) any later version"* in its "How to Apply" appendix and will tell you the opposite.
+
+### 🔴 `P259-3` — compliant live lecture transcription in a sovereignty-sensitive market *(EMEA, `4`–`6` weeks)*
+
+**Wire:** [`nextcloud/live_transcription`](https://github.com/nextcloud/live_transcription) 🔴 **`AGPL`** inside Nextcloud Talk for real-time captioning, with [`nextcloud/talk_bot_ai`](https://github.com/nextcloud/talk_bot_ai) 🔴 **`AGPL`** as the in-room assistant, both served by a local [`vllm`](https://github.com/vllm-project/vllm) or [`ollama`](https://github.com/ollama/ollama) *(carried)* endpoint. Transcript events out to an LRS via [`yetanalytics`](https://github.com/yetanalytics)' xAPI stack *(carried, and **not** archived — unlike the `adlnet` reference tooling).*
+
+🔴 **Grant duty, and it is the one that catches studios:** `AGPL` is **network** copyleft. Deployed **on the institution's own tenancy**, there is no distribution to third parties and the duty is contained. Offered as **your** hosted service to many institutions, you owe source — including your modifications — **to every user of that service**. 🔵 The version is **unstated** in the manifest, so plan against `AGPL-3.0` and get it confirmed upstream before a hosted offer is priced.
+
+### 🟢 `P259-4` — a LATAM Moodle practice that supplies its own build tooling *(LATAM, `3`–`4` weeks to productionise)*
+
+**Wire:** adopt `P259-1`'s Bavarian AI layer unchanged *(same licence, same plugin ABI)*, and run the development loop on 🟢 [`jeanlucio/moodle-dev-tools`](https://github.com/jeanlucio/moodle-dev-tools) **`GPL-3.0-or-later`** — capability and language-string checkers, backup-support checks, static-analysis wrappers, a URL prober, and `addheader.php`, which injects the mandated GPL header into PHP, JS, CSS, SCSS and Mustache files. Add 🟢 [`moodle-mod_quickpoll`](https://github.com/jeanlucio/moodle-mod_quickpoll) and 🟢 [`moodle-mod_playerraid`](https://github.com/jeanlucio/moodle-mod_playerraid) as the region's own activity modules.
+
+🟢 **Why this is a pattern and not a list:** `addheader.php` makes every plugin the practice produces **machine-readable to its own licence tooling from the first commit**. The pass that needed `11` rows resolved by hand is the argument for it.
+
+### 🟢 `P259-5` — licence due diligence as a deliverable, not a checkbox *(any region, `1` week)*
+
+**Wire:** [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/) for `(path, payload) → location class → what you may conclude`; [`p222-ecosystem-bound-grammar`](../compose/code/p222-ecosystem-bound-grammar/) for the `-only` / `-or-later` bound; [`lib/license_family.sh`](../compose/code/lib/license_family.sh) for full licence texts; [`pass257-restriction-scan`](../compose/code/pass257-restriction-scan/) for added restrictions; [`pass258-content-licence-family`](../compose/code/pass258-content-licence-family/) for the Creative Commons half of any OER corpus.
+
+**The run order that this pass's measurements justify:**
+
+1. Resolve the ref with `git ls-remote` — never guess a default branch.
+2. Tier A **and Tier B** *(`openSIS`'s grant was in Tier B and the previous sweep ran Tier A only)*.
+3. **Grade the body of every path you fetch**, including the ones filed as manifests *(seven rows' grants sat in a `version.php` the ladder fetched and never read)*.
+4. The ecosystem's **own** manifest — `appinfo/info.xml`, `__manifest__.py` *(two rows were invisible without it)*.
+5. **Re-probe before publishing an absence.** One `404` is an attempt; `frappe/education`'s grant has been at a Tier-A path since `2022-04-27` and was published as absent.
+6. Take the **bound from the program's notice**, never from the appendix of the licence text it points at.
+7. Check `archived` — `9` of this base's carried rows are read-only upstreams, and they cluster into whole toolchains.
+
+🔵 **Why a client pays for this:** step `3` alone moved seven repositories from *"licence unknown — exclude from the bid"* to *"`GPL-3.0-or-later` — include, with this duty"*. A generic SCA tool reports every one of them as unknown, because it looks for licence **files** in a sector that keeps its grants in plugin **headers**.
+
 ## Pass 258 — 2026-10-17 — **SIX RECIPES FROM THIS PASS'S ROWS, EACH NAMING ITS REPOSITORIES, ITS GRANT DUTY AND THE THING IT MUST NOT COMPOSE.** PLUS THE PATTERN THIS BASE WAS MISSING: A CONTENT-LICENCE GATE IN FRONT OF EVERY OER REUSE
 
 🔵 **Every repository below had its grant read first-hand at `p258` unless marked otherwise.** Evidence: [`p258-grant-payload`](../evidence/p258-grant-payload.2026-10-17-p258.tsv) · [`p258-org-grant-split`](../evidence/p258-org-grant-split.2026-10-17-p258.tsv) · [`p258-cc-census`](../evidence/p258-cc-census.2026-10-17-p258.tsv)

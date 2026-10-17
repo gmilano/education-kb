@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 259 — 2026-10-17 — **`ACTION YU` DISCHARGED AT `7` OF `9` MOODLE ROWS — AND THE TIER IT ASKED FOR WAS ALREADY ON THE LADDER.** `version.php` IS TIER C, POSITION `1`, FILED AS A MANIFEST, AND THE MANIFEST CONTRACT FORBIDS READING THE BODY WHERE THE GRANT LIVES. `11` OF `22` GRANTLESS ROWS RESOLVED, FROM **FOUR** DIFFERENT CAUSES, ONLY ONE OF WHICH IS A MISSING PATH
+
+⏱️ **FIFTH pass of `2026-10-17`** *(`p255`–`p258` before it)*. All `p259` probes ran `2026-10-17`. 🔵 **Evidence:** [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv) *(`12` payloads, every grant read first-hand)* · [`p259-absence-reprobe`](../evidence/p259-absence-reprobe.2026-10-17-p259.tsv) *(`14` rows × `26` Tier-A paths, a reproducibility control)* · [`p259-archived-census`](../evidence/p259-archived-census.2026-10-17-p259.tsv) *(`141` archived repos read, `9` carried)* · [`p259-trending`](../evidence/p259-trending.2026-10-17-p259.tsv) *(`14`)* · [`p259-websearch`](../evidence/p259-websearch.2026-10-17-p259.tsv) *(`8` legs)* · **instrument:** [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/) *(`60` controls, in `make hooks`, `5` mutants run)*
+
+### 🟢 `T259-A` — `ACTION YU`, discharged, and then overtaken by its own result
+
+| | `ACTION YU` asked | 🟢 `p259` measured |
+|---|---|---|
+| Moodle rows resolving a family from a code header | ≥ `5` of `9` *(the falsifier)* | 🟢 **`7` of `9`** |
+| owners the convention holds across | — | 🟢 **`2`** *(`bycs-lp`, `jeanlucio`)* — so it is the **sector's**, not one owner's habit |
+| family and bound | "a family" | 🟢 **`GPL-3.0-or-later`**, all seven, read through [`p222`](../compose/code/p222-ecosystem-bound-grammar/)'s hardened grammar |
+| grantless rows resolved in total | the `22` | 🟢 **`11` of `22`** |
+
+🟢 **Corroboration no pass could have designed:** the seventh row is [`jeanlucio/moodle-dev-tools`](https://github.com/jeanlucio/moodle-dev-tools), which has **no `version.php`** because it is not a plugin — and its [`addheader.php`](https://github.com/jeanlucio/moodle-dev-tools/blob/main/addheader.php) carries the same `GPL-3.0-or-later` notice **while being the tool that injects that notice into other files**: *"Injects the Moodle GPL license header into PHP, JS, CSS, SCSS and Mustache"*. 🔵 The sector does not merely carry the header; it **tools** it.
+
+### 🔴 `T259-B` — the finding that outranks the rows: the tier was already there
+
+🔴 **`version.php` is Tier C, position `1`, of this base's own grant ladder.** It was fetched on every sweep. It was never graded, and the reason is correct:
+
+| the instrument | what it says about `version.php` | and it is right |
+|---|---|---|
+| [`p247-path-class`](../compose/code/p247-path-class/) | `MANIFEST` | ✅ — a `version.php` declares `$plugin->version` |
+| the `MANIFEST` contract | *"una DECLARACION, no un payload: la lee la gramatica de ecosistema, **nunca el clasificador de cuerpo**"* | ✅ — `p246` paid for that rule |
+| 🔴 the consequence | the manifest grammar finds no licence field, and the **complete `GPL-3.0-or-later` notice three lines above it is never read** | 🔴 |
+
+🔴 **And this base had already written the answer down.** [`p222-ecosystem-bound-grammar`](../compose/code/p222-ecosystem-bound-grammar/bound_grammar.py) carries, in its channel table:
+
+```python
+'version.php':     'prose',       # Moodle's mandated GPL header
+```
+
+🔵 **That comment predates `ACTION YU` by four passes.** The knowledge was present, in an instrument inside `make hooks`, with the sector named in the comment — and nothing consumed it. `p251`'s *unwired knowledge* and `p253`'s *nothing consumes the wire*, now on a PATH rather than a predicate.
+
+🟢 **The correction is not a longer ladder. It is a different key:** a grant location is a `(path, payload)` pair, because one path can carry two kinds of evidence. [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/) makes that unrepresentable — `location_class("version.php")` with no body still answers `ECO-MANIFEST`, because without the body that is genuinely all you know.
+
+### 🟢 `T259-C` — the `11` resolved rows, every grant read first-hand on an `ls-remote`-resolved ref
+
+| row | grant | where it was read | location class | ★/role | region | what a studio buys — and owes |
+|---|---|---|---|---|---|---|
+| 🟢 [`bycs-lp/moodle-quizaccess_ai`](https://github.com/bycs-lp/moodle-quizaccess_ai) | 🟡 `GPL-3.0-or-later` | `version.php` · `1 158` B · `70457b7a8b2dfe94` | `CODE-HEADER` | quiz access rule | **EMEA** *(Bavaria)* | the AI gate on a quiz attempt. Share-alike on any derivative plugin |
+| 🟢 [`bycs-lp/moodle-qbehaviour_deferred_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_deferred_for_aitext) | 🟡 `GPL-3.0-or-later` | `version.php` · `1 368` B · `46be23cccffe63f2` | `CODE-HEADER` | question behaviour | **EMEA** | deferred AI marking of free-text answers |
+| 🟢 [`bycs-lp/moodle-qbehaviour_immediate_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_immediate_for_aitext) | 🟡 `GPL-3.0-or-later` | `version.php` · `1 167` B · `1b807c528a893553` | `CODE-HEADER` | question behaviour | **EMEA** | the immediate-feedback twin — the pair a formative-assessment engagement needs together |
+| 🟢 [`bycs-lp/moodle-tiny_elements`](https://github.com/bycs-lp/moodle-tiny_elements) | 🟡 `GPL-3.0-or-later` | `version.php` · `1 176` B · `294ab4179f562f4f` | `CODE-HEADER` | TinyMCE editor | **EMEA** | authoring components where teachers already work |
+| 🟢 [`jeanlucio/moodle-mod_quickpoll`](https://github.com/jeanlucio/moodle-mod_quickpoll) | 🟡 `GPL-3.0-or-later` | `version.php` · `1 100` B · `7806982b9b31fe3a` | `CODE-HEADER` | activity module | **LATAM** *(Brazil)* | in-class polling as a first-class activity |
+| 🟢 [`jeanlucio/moodle-mod_playerraid`](https://github.com/jeanlucio/moodle-mod_playerraid) | 🟡 `GPL-3.0-or-later` | `version.php` · `1 104` B · `8ed80ddbe02de2d1` | `CODE-HEADER` | activity module | **LATAM** | gamified activity module |
+| 🟢 [`jeanlucio/moodle-dev-tools`](https://github.com/jeanlucio/moodle-dev-tools) | 🟡 `GPL-3.0-or-later` | `addheader.php` · `6 120` B · `ea43d8d9275b5026` | `CODE-HEADER` | plugin dev toolkit | **LATAM** | 🟢 **the row that proves the convention** — audit scripts, capability/string checkers, and the header injector itself |
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **`GPL-2.0`** | `docs/License.txt` · `17 286` B · `224ac3d403e3603c` **and** `index.php` · `45 523` B · `1e0f0d886fc1df69` | `LICENCE-FILE` + `CODE-HEADER` | the open-source **SIS** | **North America** | 🔴 **`p258` carried this as "no readable root grant, risk unquantified". It is quantified now, and it is the strictest result on this shelf** — see `T259-D` |
+| 🟡 [`frappe/education`](https://github.com/frappe/education) | 🟡 `GPL-3` *(bare token)* | `license.txt` · **`19` B** · `1fcecf395312d876` | `BARE-TOKEN` | `669`★ school ERP | **APAC** *(India)* | the whole grant is the string `License: GNU GPL V3`. Family only — **no version bound, no terms** |
+| 🔴 [`nextcloud/live_transcription`](https://github.com/nextcloud/live_transcription) | 🔴 `AGPL` | `appinfo/info.xml` · `3 837` B · `5be78dac5eaa3e4c` | `APP-MANIFEST` | Talk live transcription | **EMEA** | real-time lecture transcription — 🔴 **network copyleft: a hosted deployment owes source to its users** |
+| 🔴 [`nextcloud/talk_bot_ai`](https://github.com/nextcloud/talk_bot_ai) | 🔴 `AGPL` | `appinfo/info.xml` · `2 017` B · `574bc668c640961a` | `APP-MANIFEST` | Assistant Talk bot | **EMEA** | the AI assistant bot in Talk, same duty |
+
+🔵 **`bound` is published as `unspecified` for the last three deliberately.** `<licence>agpl</licence>` names no version and `License: GNU GPL V3` names no bound; answering `AGPL-3.0` or `GPL-3.0-only` there would be an inference dressed as a reading.
+
+### 🔴 `T259-D` — `openSIS-Classic`: four separate traps in one repository
+
+🔴 **It is `GPL-2.0`, and a studio planning a Moodle-plus-SIS stack needs that before design, not after.**
+
+| trap | what was found |
+|---|---|
+| 🔴 the pointer points nowhere | the header says *"This program is released under the terms of the GNU General Public License … version 2 of the License. **See license.txt.**"* — and there is **no `license.txt`**: `404` on six spellings at root, and absent from the whole repository in a full checkout. The only licence-named files are **vendored** third-party grants under `assets/` and `libraries/` |
+| 🔴 the grant was on a tier the probe did not run | the real payload is at **`docs/License.txt` — Tier B of this base's OWN ladder**. `p258`'s reprobe ran Tier A only, `26` paths, and recorded `NO-PAYLOAD-ON-LADDER` |
+| 🔴 the filed text and the header disagree about the bound, **and the filed text is the one that is wrong** | `read_bound()` on the filed `17 286` B payload returns `or-later` — from line `63`, which is the licence's own **"How to Apply These Terms"** appendix, a template sentence and not this program's election. The program's notice says *"version 2 of the License."* with no "or later" → the measured bound is `unspecified`, and the conventional reading of a notice without "or later" is **`-only`** |
+| 🔴 and the prose grammar answers **`LGPL`** on that payload | because line `11` of the canonical `GPL-2.0` preamble reads *"…is covered by the GNU **Lesser** General Public License instead."* 🔵 `read_bound` is contracted for a **declaration**, not a `17 286` B text — [`lib/license_family.sh`](../compose/code/lib/license_family.sh), which *is* contracted for texts, answers `GPL-2.0` correctly. **Two classifiers, one payload, two answers, each right inside its own contract — and nothing stops a caller crossing them.** Registered as `ACTION ZB` |
+
+🔴 **The commercial consequence, stated plainly:** under the `-only` reading, `openSIS-Classic` **cannot be combined in one work** with the `GPL-3.0-or-later` Moodle plugin set above. An engagement that needs both must integrate **across a process boundary over an API**, never by linking. That is an architecture decision, and it is decided by a sentence in a comment.
+
+### 🔴 `T259-E` — one `404` is an attempt, not an absence
+
+🔴 **[`frappe/education`](https://github.com/frappe/education) has carried `license.txt` at its repository root since `2022-04-27`** *(`git log -1 -- license.txt` on a treeless clone: `8267632 chore: Rename erpnext to education`)*. It answers `200` on `develop`, `master` and `version-15`. `license.txt` is **Tier A, position `13`**.
+
+🔴 **`p258` probed `26` Tier-A paths on `develop` and published `NO-PAYLOAD-ON-LADDER`.**
+
+🟢 **And the control that keeps this honest:** `p259` re-ran the full `26`-path Tier A on all `14` still-grantless rows. 🟢 **`13` of `14` reproduced exactly.** The ladder is sound; one observation in fifteen was not. 🔵 **So the defect is not the ladder — it is that a single `404` was recorded as a property of the repository.** `absence_verdict()` now refuses to emit an absence from one observation.
+
+🔵 **This is `p258`'s lesson mirrored.** `p258`: *a `403` from one **endpoint** was generalised to a whole channel.* `p259`: **a `404` from one **attempt** was generalised to a repository.**
+
+### 🔴 `T259-F` — the supply channel is saturated, and that is this pass's thesis
+
+| leg | returned | already carried | 🟢 publishable NEW |
+|---|---|---|---|
+| `topic:ai-tutor pushed:>2026-09-01 sort:stars` | `12` *(`41 527`★ down to `96`★)* | 🔴 **`12` of `12`** | `0` |
+| `education AI agent in:name,description created:>2026-07-01 stars:>3` | `6` | `4` | 🔴 **`0` publishable** — the two `NEW` are an `8`★ education-loan voice agent and a `4`★ link list, both **WITHHELD** |
+| `8` WebSearch legs *(global + four regions)* | `46` facts offered | — | `0` repositories, `0` facts past the claims gate |
+
+🔵 **The reading, and it reframes what a pass of this base is for: growth here is no longer limited by DISCOVERY. It is limited by RESOLUTION.** Every discovery leg returned rows already on the shelves, while `11` rows moved from *"grant unknown"* to *"grant read first-hand"* — and `1` of them, `openSIS-Classic`, changed what a studio may architect.
+
+### 🔴 `T259-G` — the negative results, so silence is not read as coverage
+
+🔴 **[`bycs-lp/moodle-report_ai_analysis`](https://github.com/bycs-lp/moodle-report_ai_analysis) contains exactly one file** — a one-line `Readme.md` — in a full checkout. **No code, no `version.php`, no grant.** It is a carried row with nothing in it.
+
+🔴 **[`imsglobal/imsglobal.github.io`](https://github.com/imsglobal/imsglobal.github.io) is an `85`-byte placeholder**: *"Temporary space for 1EdTech projects."* Same class.
+
+🔴 **`13` rows remain grantless after this pass** and their absence is now `ABSENCE-CONFIRMED` on two independent sweeps: both `AmericasNLP` shared-task repos, `alfredang/ai-cms`, both `api-evangelist` profiles, `autolab/autograders-examples`, `bycs-lp/moodle-ci-workflows`, `bycs-lp/moodle-report_ai_analysis`, both `huggingface` course repos, `imsglobal/imsglobal.github.io`, and `jeanlucio/moodle-dev-tools`'s **root** *(its grant was read in a code header, not at a licence path)*.
+
+🔴 **`api.github.com` over `curl` answered `403` this pass** — the authenticated `MCP` `search` endpoint carried every repository query instead, which is `p258`'s `(transport, endpoint)` map holding on new data.
+
+🔴 **`ACTION YV` was NOT run.** The `828` content-licence cells are untouched by this pass.
+
+🔴 **`ACTION YW` was run on `13` owners of roughly `700`**, not on the `2 436` carried rows it named — see [`intel/open-gaps.md`](../intel/open-gaps.md).
+
 ## Pass 258 — 2026-10-17 — **`ACTION YR` DISCHARGED AND NOT REFUTED AT `12` PERMISSIVE ROWS ON A TRANSPORT THIS BASE DID NOT HAVE: THE AUTHENTICATED `MCP` SEARCH CHANNEL IS NOT SCOPE-GATED WHILE THE SAME CREDENTIAL'S CONTENTS ENDPOINT IS.** PLUS: THE LICENCE CLASS THESE SHELVES CARRY MOST — `828` CREATIVE COMMONS CELLS — WAS INVISIBLE TO THE STANDING GATE, AND `CC0` GRADED IDENTICALLY TO `CC-BY-ND`
 
 ⏱️ **FOURTH pass of `2026-10-17`** *(`p255`, `p256`, `p257` before it)*. All `p258` probes ran `2026-10-17`, so evidence filenames and commit date agree for the third pass running. 🔵 **Evidence:** [`p258-row-supply`](../evidence/p258-row-supply.2026-10-17-p258.tsv) *(`79` candidates, all gated)* · [`p258-owner-coverage`](../evidence/p258-owner-coverage.2026-10-17-p258.tsv) *(`20` owners, status each)* · [`p258-grant-payload`](../evidence/p258-grant-payload.2026-10-17-p258.tsv) *(`57` first-hand reads)* · [`p258-cc-collapse`](../evidence/p258-cc-collapse.2026-10-17-p258.tsv) *(`10` payloads, two classifiers)* · [`p258-cc-census`](../evidence/p258-cc-census.2026-10-17-p258.tsv) *(`828` tokens)* · [`p258-org-grant-split`](../evidence/p258-org-grant-split.2026-10-17-p258.tsv) *(`19` rows, `2` orgs)* · [`p258-ladder-reprobe`](../evidence/p258-ladder-reprobe.2026-10-17-p258.tsv) *(`23`×`26` paths)* · [`p258-channel-map`](../evidence/p258-channel-map.2026-10-17-p258.tsv) · [`p258-websearch`](../evidence/p258-websearch.2026-10-17-p258.tsv) *(`8` legs)* · [`p258-trending`](../evidence/p258-trending.2026-10-17-p258.tsv) *(`13`)* · **instrument:** [`pass258-content-licence-family`](../compose/code/pass258-content-licence-family/) *(`76` controls, in `make hooks`, `4` mutants run)*

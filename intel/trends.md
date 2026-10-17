@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 259 — 2026-10-17 — **FOUR TRENDS THIS PASS CAN SUPPORT WITH ITS OWN MEASUREMENTS, AND THE FIRST ONE IS ABOUT THIS BASE RATHER THAN THE MARKET: DISCOVERY HAS STOPPED PAYING AND RESOLUTION HAS STARTED**
+
+🔵 **Evidence:** [`p259-websearch`](../evidence/p259-websearch.2026-10-17-p259.tsv) · [`p259-trending`](../evidence/p259-trending.2026-10-17-p259.tsv) · [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv) · [`p259-archived-census`](../evidence/p259-archived-census.2026-10-17-p259.tsv)
+
+### 🟢 `T259-T1` — the open education-AI supply has saturated on the axes this base searches
+
+| measure | `p257` | `p258` | 🔴 `p259` |
+|---|---|---|---|
+| candidates from discovery legs | `99` | `79` | `18` |
+| already carried | `39.4 %` | `27.8 %` | 🔴 **`88.9 %`** |
+| publishable NEW rows from discovery | `16` | `12` | 🔴 **`0`** |
+| rows whose GRANT became readable *(the ladder reprobe arm)* | `0` *(`70` probes)* | `0` *(`520` probes)* | 🟢 **`11`** |
+
+🔵 **The trend, stated as something a studio can act on:** the open-source education-AI corpus is no longer growing faster than a curated index can follow it. What is still unknown about it is not *which repositories exist* — it is **what their licences actually permit**, which is a reading problem, not a search problem. 🔴 Eleven rows on this base had addresses, stars and descriptions for weeks and could not have been put in a proposal, because nobody knew what they licensed.
+
+### 🔴 `T259-T2` — the grant is migrating out of the licence file, and tooling has not followed
+
+🔴 **Of `11` rows resolved this pass, only ONE had its grant in a filed licence text at a conventional path.** The other ten:
+
+| where the grant actually was | rows | what reads it |
+|---|---|---|
+| a **code header** in a source file | `7` *(incl. `openSIS`, which has BOTH)* | the sector's own convention — Moodle *mandates* it; `jeanlucio/moodle-dev-tools` ships a tool that **injects** it |
+| an **application manifest** element | `2` | Nextcloud's `appinfo/info.xml`, spelled `<licence>` |
+| a **bare token** — a licence file whose whole body is a name | `1` | `frappe/education`, `19` bytes |
+
+🔵 **The trend: licence metadata is moving into ecosystem-native locations** — plugin headers, app manifests, package metadata — because that is where each ecosystem's own tooling looks. 🔴 **Generic SCA and licence-scanning tools look at root licence files.** For an education stack, which is unusually plugin-dense, **the default scanner's answer is routinely "unknown"** on code whose licence is perfectly well stated. That is a due-diligence failure mode worth quoting in a bid, and it is why this pass built [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/) rather than a longer path list.
+
+### 🔴 `T259-T3` — reference implementations are freezing while vendor stacks stay live
+
+🔴 Measured, not impressionistic: `141` archived repositories read across `13` owners; `9` are carried rows; **they cluster into complete toolchains** — `5` of `adlnet`'s xAPI/SCORM reference set, and all `3` GitHub Classroom autograding actions.
+
+🟢 **The counter-example in the same ecosystem is what makes this a trend and not an obituary:** [`yetanalytics`](https://github.com/yetanalytics) carries `13` rows here and none of them is archived. 🔵 **The standards bodies' reference code is going read-only while commercial implementers of the same standards keep shipping.** For an engagement this changes the question from *"is there an open implementation?"* to *"is the open implementation still maintained, and by whom?"* — and the answer is increasingly **a vendor**, not the standards body.
+
+### 🔴 `T259-T4` — the secondary regulatory channel is exhausted, and it re-serves superseded dates
+
+🔴 `46` facts offered across `8` legs, `0` past the claims gate, **second pass running** *(`p258`: `31` of `32` refused)*. 🔴 And every regional leg returned at least one fact this base has already recorded as superseded — the EMEA leg served *"August 2026"* for high-risk obligations beside the correct `2027-12-02` deferral, now the **sixth recorded instance**.
+
+🔵 **What follows for this base's method, and it is `p258`'s recommendation now carrying a second data point:** stop spending passes on secondary search. The two channels still paying are **primary text** *(`eur-lex`, national instruments — still unread here)* and **first-hand payload reads** *(which paid `11` rows this pass)*.
+
+### 🔵 What this section does NOT claim
+
+🔵 **Nothing here is a claim about the education MARKET's size or growth.** `p259` ran no market measurement; the market figures on this shelf are earlier passes' and were not re-verified. These four trends are about **the open-source supply, its licensing, and the channels this base reads it through** — which is what a pass that measured those things is entitled to say.
+
 ## Pass 258 — 2026-10-17 — **THIS PASS'S REGULATORY HARVEST WAS `32` FACTS AND `31` OF THEM WERE ALREADY CARRIED. THE GATE REFUSED THEM, WHICH IS THE TREND WORTH RECORDING: THE EXTERNAL PICTURE HAS STOPPED MOVING FASTER THAN THIS BASE READS IT**
 
 🔵 **Evidence:** [`p258-websearch`](../evidence/p258-websearch.2026-10-17-p258.tsv) *(`8` legs, `4` regional)* · [`p258-trending`](../evidence/p258-trending.2026-10-17-p258.tsv) *(`13` repos)* · [`p258-cc-census`](../evidence/p258-cc-census.2026-10-17-p258.tsv) · [`p258-channel-map`](../evidence/p258-channel-map.2026-10-17-p258.tsv)

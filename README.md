@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 259 — 2026-10-17 — **`ACTION YU` DISCHARGED: `11` OF `22` GRANTLESS ROWS RESOLVED, EVERY GRANT READ FIRST-HAND.** AND THE TIER IT ASKED FOR WAS ALREADY ON THE LADDER, FILED IN A SLOT WHOSE CONTRACT SAYS NEVER TO READ IT
+
+⏱️ **FIFTH pass of `2026-10-17`.** 🔵 **The pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**
+
+### 🟢 The headline: the grant was being fetched every pass and never read
+
+🔴 **`ACTION YU` asked for a code-header tier "starting with `version.php`". `version.php` is Tier C, position `1`, and has been for the life of the ladder.** [`p247-path-class`](compose/code/p247-path-class/) grades it `MANIFEST`, and the `MANIFEST` contract says — correctly — *"a DECLARATION, not a payload: read it with the ecosystem grammar, **never with the body classifier**"*. A Moodle `version.php` declares `$plugin->version` and no licence at all. The grant is the comment three lines above it.
+
+🔴 **And this base had written that down four passes earlier.** [`p222-ecosystem-bound-grammar`](compose/code/p222-ecosystem-bound-grammar/bound_grammar.py) carries `'version.php': 'prose',  # Moodle's mandated GPL header`. Nothing consumed it.
+
+🟢 **The correction is not a longer ladder. It is a different key: a grant location is `(path, payload)`, because one path carries two KINDS of evidence.**
+
+### 🟢 `11` rows resolved, from four different causes
+
+| cause | rows | the fix it actually needs |
+|---|---|---|
+| 🔴 `BODY-NOT-GRADED` | `6` | grade the body of paths you already fetch |
+| 🔴 `CHANNEL-ABSENT` | `3` | 🟢 **the only one a longer path list fixes** |
+| 🔴 `TIER-NOT-RUN` | `1` | run Tier B, not only Tier A |
+| 🔴 `ABSENCE-UNCONFIRMED` | `1` | re-probe before publishing an absence |
+
+🔵 **`p257` and `p258` spent `590` probes widening the list of path NAMES — the remedy for the cause that accounts for the fewest rows.**
+
+### 🔴 What a studio gets out of it
+
+| row | grant, read first-hand | why it matters |
+|---|---|---|
+| `7` Moodle plugins *(`bycs-lp` **EMEA**, `jeanlucio` **LATAM**)* | 🟡 **`GPL-3.0-or-later`** | a complete school-authority AI layer — broker, chat, authoring, quiz gate, and the **deferred/immediate free-text marking pair** — is now quotable |
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **`GPL-2.0`** | 🔴 **it cannot be linked with the `GPL-3.0` Moodle layer.** A SIS+LMS build integrates over OneRoster/LTI, in separate processes. That is an architecture decision, and it was decided by a sentence in a comment |
+| 🟡 [`frappe/education`](https://github.com/frappe/education) *(`669`★)* | 🟡 `GPL-3` **bare token**, `19` bytes | family readable; **bound and terms not stated** |
+| 🔴 `2` Nextcloud Talk apps | 🔴 **`AGPL`** *(from `appinfo/info.xml`)* | network copyleft: fine on the institution's tenancy, expensive as your hosted service |
+
+### 🔴 Three findings that outrank the rows
+
+🔴 **One `404` is an attempt, not an absence.** [`frappe/education`](https://github.com/frappe/education) has carried `license.txt` at **Tier A position `13`** since `2022-04-27`; `p258` published it as grantless. `13` of `14` of `p258`'s absences reproduced exactly, so the ladder is sound — the **single-observation rule** was the hole. 🔵 `p258`: *a `403` from one ENDPOINT.* `p259`: **a `404` from one ATTEMPT.**
+
+🔴 **A pointer can point nowhere.** `openSIS-Classic`'s header says *"See license.txt."* and there is no `license.txt` anywhere in the repository. The only grant it has is the one in that same comment.
+
+🔴 **The filed licence text and the program's notice can disagree about the bound — and the filed text can be the wrong one.** `openSIS`'s filed `GPL-2.0` says *"or any later version"* at line `63`, inside the licence's own **"How to Apply These Terms"** appendix. The notice says *"version 2."* **The notice is operative.**
+
+### 🔴 And the discovery channel paid nothing, for the record
+
+🔴 `8` WebSearch legs *(global + North America, EMEA, APAC, LATAM)*: `46` facts offered, 🔴 **`0`** past the claims gate. `topic:ai-tutor` sorted by stars: `12` repositories from `41 527`★ down to `96`★, 🔴 **`12` already carried**. 🔵 **This base's growth is no longer limited by discovery. It is limited by resolution.**
+
+🟢 **Closed by [`pass259-grant-location-class`](compose/code/pass259-grant-location-class/)** — `60` controls, in `make hooks`, every fixture a payload read first-hand, **`5` mutants run with the control count holding at `60` for each**.
+
 ## Pass 258 — 2026-10-17 — **`ACTION YR` DISCHARGED WITH EVERY CANDIDATE'S GRANT READ FIRST-HAND, BECAUSE THE CHANNEL THIS BASE THOUGHT WAS CLOSED IS OPEN.** AND THE LICENCE CLASS THESE SHELVES CARRY MOST — `828` CREATIVE COMMONS CELLS, `191` OF THEM UNSHIPPABLE — WAS INVISIBLE TO THE STANDING GATE
 
 ⏱️ **FOURTH pass of `2026-10-17`.** 🔵 **The pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**
