@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 275) — The agent this base told studios they could not use has been MIT all along, and it said so twelve times
+
+⏱️ **Twenty-first pass of `2026-10-17`.** Append-only — everything below this section is prior history
+and is not rewritten. Evidence:
+[`tree-enumeration.2026-10-17-p275.tsv`](../evidence/tree-enumeration.2026-10-17-p275.tsv) *(13 slugs, `ls-remote` positive control + full tree enumeration, zero searches)* ·
+[`athena-manifest-census.2026-10-17-p275.tsv`](../evidence/athena-manifest-census.2026-10-17-p275.tsv) *(14 manifests read at payload)* ·
+[`verified-repos.2026-10-17-p275.tsv`](../evidence/verified-repos.2026-10-17-p275.tsv) ·
+[`p275-websearch.2026-10-17-p275.tsv`](../evidence/p275-websearch.2026-10-17-p275.tsv) *(8 legs)*.
+
+### 🟢 `ls1intum/Athena` moves to the build-on tier — the 24th permissive row, and the only one that arrived by RE-READING rather than by searching
+
+`p274` ranked one item first, and costed it at zero searches: *"re-probe every negative licence verdict
+with `ls-remote` as a positive control first — because the mechanism that produced the `gegok12` false
+negative is not specific to that row."* 🟢 **It was run over 13 slugs, and the specific mechanism is NOT
+endemic:** `gegok12/gegok12` fails `ls-remote` with `rc=128` exactly as a nonexistent repository does,
+and **all twelve other negative-verdict slugs resolve**. A real negative result.
+
+🔴 **But the slug was never the weak link. The LADDER is.**
+
+| row | what this base published | what enumerating the tree found |
+|---|---|---|
+| **`ls1intum/Athena`** | *"no grant across **76 path/ref probes** over three passes; treat as **all-rights-reserved**; ask TUM for the licence in writing"* | 🔴 **12 of 14 manifests declare `license = "MIT"`** — unanimous, none declaring anything else |
+| **`os4ed/openSIS-Classic`** | *"no licence payload served on any path tried"*, carried for multiple passes | 🔴 **`docs/License.txt` — verbatim GPL-2.0, HTTP 200, 17 286 B** |
+
+🔴 **Why 76 probes missed it, and why that was guaranteed rather than unlucky.** `p267`'s probe list —
+quoted on `agents/top.md` until this pass — included *"the package metadata (`package.json`,
+`pyproject.toml`, `setup.py`, `build.gradle`, `composer.json`)"*, **at the root**. Athena's root
+`pyproject.toml` is a **632-byte Poetry workspace stub** holding name, version, description, authors,
+scripts and build-system — and **zero occurrences of the string `license`**. It is the one manifest in
+the repository that is silent, and the ladder probed precisely it, four refs over. 🔵 **A monorepo
+declares its grant per package**: `athena/`, `llm_core/`, `assessment_module_manager/`, `log_viewer/`
+and all eight `modules/*/` packages each carry `license = "MIT"`. The reusable units — `module_text_llm`,
+`module_programming_llm`, `module_modeling_llm` — are exactly the ones that declare it.
+
+**What a studio can now do that it could not yesterday:** Artemis (MIT), Iris (MIT), Pyris (MIT) **and
+Athena** are one permissively-graded stack from TU Munich — tutor, LLM microservice, and the feedback /
+grading engine. 🔴 This base spent three passes telling engagements the grading half was off-limits.
+
+### 🔵 Grade, stated honestly
+
+Athena serves **no licence FILE** — and that is now **definitive rather than probabilistic**, because the
+tree was *enumerated* (`git ls-tree -r` over a blobless clone: **691 paths, zero licence-like**) instead
+of sampled. So it is **MIT at *metadata* grade**, the same grade as `adriasantacreu/google-classroom-mcp`
+and `kolibri-design-system`, and it is marked so in its own cell. **Twelve unanimous declarations is a
+stronger metadata channel than this base has ever graded** — `kolibri-design-system` rests on one — but
+it is still not a payload. A payload is worth requesting; an email asking *whether* there is a licence is
+not, and that question is withdrawn.
+
+### 🔴 The instrument — a SIBLING of one this base already had, not a discovery
+
+🔴 **Before the credit goes to this pass:** [`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/)
+(**pase 93, `2026-10-04`**) already states **`P275`** — *to sustain an absence in a tree you must
+ENUMERATE it* — and **`P278`** — *a ZERO over a path that does not exist in that ref measures the PATH,
+not the content* — **and already ships the blobless-clone enumerator.** It was applied to **directory**
+trees and never to **licence paths**. 🔵 The new instrument enumerates *files* and classifies the grants,
+which a directory sweep cannot do; everything else here is `P275` finally reaching the domain where this
+base kept publishing ladder-shaped absences.
+
+`make gate-enumeration` (offline, in `hooks`) now fails any shelf that asserts an absent grant an
+enumeration refutes, and **queues** every negative verdict that was never enumerated. Running it on the
+live shelves corrected it three times — each time for the same underlying reason, that **one line can
+carry two subjects**:
+
+1. It reported **`ls1intum/Artemis` — an MIT row with a root `LICENSE` — as refuting itself.** The phrase
+   on that line is about Athena, named four slugs later in the same cell.
+2. Nearest-preceding-**slug** was still wrong where the subject is the bare word **Athena** in bold
+   prose and the only hyperlink is Artemis. **A project need not be hyperlinked to be the subject** —
+   and teaching it bare names found **2 further live occurrences** of the openSIS claim.
+3. It then flagged **this pass's own new Athena row**, because that row opens *"**Artemis's**
+   feedback-suggestion engine"*. **A possessive is a modifier, not a subject.**
+
+**30 controls.** `REFUTED=0 · VERIFIED-ABSENT=28 · QUEUE-UNENUMERATED=124` — and that last number is the
+first honest measurement of how much of this base's licence evidence is still ladder-shaped.
+
 ## 2026-10-17 (pass 274) — Six servers reach `agents/top.md` and not one of them was discovered: five were on THIS shelf, and the sixth was a licence this base had refused twice
 
 ⏱️ **Twentieth pass of `2026-10-17`.** Append-only — everything below this section is prior history and is

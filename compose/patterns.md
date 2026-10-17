@@ -730,7 +730,7 @@ that is not part of this pattern and it is not small.
 Apache-2.0), Fedena (`foradian/fedena`, `projectfedena/fedena` — **abandoned since 2012/2016,
 no licence payload**, still recommended by vendor comparisons as *the* Apache-2.0 education
 ERP), `h5p/h5p-php-library` (**GPL-3.0**, widely miscited as MIT — including in earlier Globant
-KB cycles), `os4ed/openSIS-Classic` (no licence payload served; unverified),
+KB cycles), `os4ed/openSIS-Classic` (🟢 **GPL-2.0 at payload since p275** — `docs/License.txt`, 17 286 B; copyleft on distribution, so scope it on the licence's REACH, not on a missing grant),
 `CaviraOSS/PageLM` (non-commercial, redistribution prohibited),
 `GarethManning/education-agent-skills` (CC-BY-SA-4.0 ShareAlike),
 `GeminiLight/awesome-ai-llm4education` (no licence served),
@@ -1258,3 +1258,65 @@ existed, and the answer has been yes, on this base's own shelves, for several pa
 **reference implementations, not dependencies** — read them, fork them, own them, and budget for
 maintaining what you fork. And every one of these reaches **real student data**, so `P24` is not an
 optional companion to this pattern; it is the half that gets it approved.
+
+## P26 — The open automated-grading engagement: the whole TUM stack is permissively graded, and this base said otherwise for three passes *(new in pass 275)*
+
+**When a client asks for it:** *"We want automated feedback on programming and written assignments —
+and we want to own it."* Until `p275` this base answered that the tutor was available (Iris, MIT) but the
+**feedback/grading engine was all-rights-reserved**, and steered engagements to build that half from
+scratch. 🔴 **That advice was wrong.** `ls1intum/Athena` declares `license = "MIT"` in **12 of its 14
+manifests**, and the reusable modules are precisely the ones that declare it.
+
+### The stack — four repos, one institution, one licence family
+
+| role | repo | grant | grade |
+|---|---|---|---|
+| Platform, exercises, CI runner | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | **MIT** | payload (root `LICENSE`) |
+| Tutor — hints, leading questions | [`ls1intum/Iris`](https://github.com/ls1intum/Iris) | **MIT** | payload |
+| LLM microservice behind Iris (REST, swappable pipelines, RAG) | [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | **MIT** | payload |
+| 🟢 **Feedback / grading suggestions — NEW to this pattern** | [`ls1intum/Athena`](https://github.com/ls1intum/Athena) | **MIT** | ⚠️ **metadata** — 12 of 14 manifests; **no licence FILE** (tree enumerated, 691 paths) |
+
+🔵 **Why TU Munich specifically:** this is one institution's stack, so the four pieces are *designed* to
+compose — Artemis config-gates Iris, Athena and Hyperion as subsystems rather than bolting them on. You
+are not integrating four strangers.
+
+### Wiring it
+
+1. **Deploy Artemis** (Java/Spring + Angular) as the platform of record; it owns exercises, submissions,
+   the gradebook and the build/test runner. Keep its AI subsystems **config-gated off** at first — that
+   is Artemis's own deployment model, and it is what lets you stage the rollout.
+2. **Stand up Pyris** as the only component holding model credentials. Point it at whatever the client's
+   data-residency rules allow — a hosted API, or **Ollama/vLLM on their own tenancy** for an EMEA
+   sovereignty constraint (`P4`-shaped; see `intel/market.md`'s EMEA section).
+3. **Enable Iris** against Pyris for the tutor surface. Iris is *pedagogically constrained by design* —
+   hints and leading questions, not answers — which is the single easiest thing to defend to an academic
+   integrity committee.
+4. 🟢 **Enable Athena for feedback suggestions, installing only the modules the client needs**, because
+   each is an independently installable Poetry package: `module_text_llm` (written work),
+   `module_programming_llm` (code), `module_modeling_llm` (diagrams/models). `module_programming_apted`
+   and `module_programming_winnowing` are **non-LLM** structural/similarity engines — cheaper, offline,
+   and worth enabling first as a baseline you can measure the LLM against.
+5. **Keep the human in the loop at the boundary Athena already draws:** it emits *feedback suggestions*
+   for an instructor to accept, edit or reject. **Do not re-plumb it into autonomous grading** — the
+   suggestion boundary is the compliance story, and `intel/market.md`'s LATAM and NA sections both show
+   governance, not capability, is what stalls these deployments.
+
+### The two prices, written down
+
+- ⚠️ **Athena's grant is metadata grade.** There is no licence file, and that absence is now
+  *definitive* (enumerated, not sampled). Twelve unanimous manifest declarations is the strongest
+  metadata channel on this base — `kolibri-design-system` rests on one — but a client's legal team may
+  still want a payload. 🟢 **Ask TUM for a `LICENSE` file in the repository root, not for permission:**
+  they have already granted MIT twelve times, so this is a request to *document* a grant, which is a far
+  easier conversation than requesting one. The earlier *"ask TUM whether there is a licence"* is withdrawn.
+- ⚠️ **Artemis is a platform, not a library.** Java/Spring + Angular, 12 437 commits, self-hosted by
+  universities. If the client only wants a feedback *service*, **take Pyris + Athena and leave Artemis
+  out** — Pyris is explicitly *"the reusable piece: it will serve a stack that is not Artemis."*
+
+### Why this beats the alternative this base used to recommend
+
+🔴 The prior advice — build the grading half yourself — meant writing an LLM feedback pipeline, a
+rubric model, and an instructor review UI from zero. The entire reason that advice existed was **a
+licence verdict produced by probing one 632-byte file.** 🔵 **Before costing a from-scratch build
+because a component is unlicensed, enumerate the tree** (`T46`) **and read every manifest, not just the
+root one** (`T47`).

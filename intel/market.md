@@ -493,6 +493,44 @@ can be opened.**
 | **APAC** | `$3.22B (2026) → $18.21B (2033)` | 🟢 unchanged |
 | **MEA** | `$280.8M (2024) → $1,645.9M (2030)` | 🟢 unchanged, splice caveat now matched by the LATAM row's |
 
+### Pass 275 — an independent search path re-derived Grand View's current vintage, and the arithmetic says which PAIR a studio may quote
+
+🟢 **`p272` established that the `$32.27B by 2030` line every aggregator copies is a *superseded*
+Grand View release, and that the current one is `$8.3B (2025) / $11.4B (2026) → $57.2B (2033) @ 25.9%`.
+`p275`'s trends leg reached the same current vintage by a different route** — an aggregator with no
+visible relation to the path `p272` used reports *"USD 8.3 billion in 2025, rising to USD 57.2 billion
+by 2033."* 🔵 This is **corroboration of a vintage, not of a value**: the same house still stands behind
+it, so it does not make the number independent. What it does establish is that the current release is
+the one in circulation, and this base is no longer quoting a release the publisher has moved off.
+
+🔴 **And the triple does not close as stated — `T38`, measured again on a cell this base publishes.**
+
+| window | endpoints | implied CAGR | stated |
+|---|---|---|---|
+| 2025 → 2033 (8 y) | `$8.3B → $57.2B` | 🔴 **27.29%** | 25.9% |
+| **2026 → 2033 (7 y)** | **`$11.4B → $57.2B`** | 🟢 **25.91%** | **25.9%** ✓ |
+
+🟢 **So the `25.9%` belongs to the 2026 base, not the 2025 one** — it closes to within `0.01` point on
+the 2026→2033 window and misses by `1.4` points on 2025→2033. This is the **same one-year labelling
+offset** `p274` found in four Grand View regional databooks (`T38`), now confirmed on the **global**
+headline from an independently-reached copy. **It is a publisher-side habit, not a transcription slip.**
+
+⚠️ **Operational rule for a studio deck:** quote **`$11.4B (2026) → $57.2B (2033) @ 25.9%`** as one
+coherent triple. Quoting *"$8.3B in 2025, growing 25.9%"* splices two windows and overstates the 2025
+base's growth — and it is the splice `p274` caught this base making once already.
+
+#### Two further publishers, which widen the spread rather than settle it
+
+| publisher | base | horizon | implied CAGR | note |
+|---|---|---|---|---|
+| **IMARC** | `$6.4B` (2025) | `$79.6B` (2034) | **32.3%** *(derived; none stated)* | The **most aggressive** forecast on this shelf: a higher 2034 endpoint than Grand View's 2033 off a **lower** base |
+| **The Business Research Company** | `$7.52B` (2025) | `$10.6B` (**2026**) | **41.0% in one year** | 🔴 **Read the horizon.** This is a *one-year* pair, not a forecast to 2030+ |
+
+🔴 **`$10.6B` is the number this base's own cycle-2 notes once published as the education-AI market
+size, and it is TBRC's 2026 point** — a 2026 *endpoint* from the house with the highest near-term growth
+rate, carried as though it were the consensus size. 🔵 **Three houses now put 2025 between `$6.4B` and
+`$8.3B` — a 1.30x spread at the same year, on the same definition.** The spread is still the finding.
+
 ## Global players
 
 | Player | Type | AI position | Opening for Globant |
@@ -891,6 +929,27 @@ it needs correcting. See the pass-271 section above.
 layers, the >200-company federal pledge, Georgia and Mississippi's CS credits. 🟢 **Recorded as a
 measured nil on the NA regulatory channel**, not as an absence of searching.
 
+#### Pass 275 addendum — the US governance picture moved, and it moved toward the states
+
+🟡 **Thin leg, one usable datum.** A **December executive order** directs challenges to *conflicting
+state* AI laws, and the same reporting holds that **states remain the primary driver of US AI
+governance**. 🔵 For an education engagement this **sharpens** the higher-education procurement lane
+`p274` closed rather than contradicting it: the instrument a US institution must satisfy is still
+**FERPA plus its own state's AI statute**, and the federal move is an attempt to narrow state
+divergence, not to replace it with a federal rule. **Plan for state-by-state variation and do not wait
+for a federal standard to arrive.**
+
+⚠️ **One concrete institutional datum, single-sourced and flagged:** **Boston Public Schools** is
+reported as the first major US district to make **AI fluency a graduation requirement**, from
+**September 2026**. Not corroborated; do not put it in a client deck without a second source.
+
+🔴 **Two market figures were returned and NEITHER is published.** One source gives North America
+`$951M (2024) → $2.3B (2029)`; another gives a `41.7%` North America growth rate. Those are
+**inconsistent by roughly an order of magnitude** on the same region, and `p272` established that this
+region's dollar figures trace back to a single upstream decomposition anyway. Nothing was added to the
+headline table. Query: `AI education North America 2026 adoption regulation players`.
+
+
 ### EMEA
 
 
@@ -1208,6 +1267,24 @@ cite it as an education figure); EU enterprise AI adoption **19.95%** against an
 🔴 **The open web still carries stale EU AI Act dates** — one source in this pass's leg still gives
 **February 2025** as the enforcement start. This base's correction, made nineteen passes ago, holds.
 
+#### Pass 275 addendum — 🔴 DECLARED BLANK, published with its query (`ACTION RE`)
+
+Query run verbatim: **`AI education EMEA 2026 adoption regulation players`**.
+
+🔴 **Returned ZERO education-specific EMEA results.** What came back: a CompTIA IT-strategy trends
+piece, a Workday **enterprise** AI-adoption study, a Bandwidth/Cavell **enterprise-communications**
+study, and a Middle East *national competitiveness* framing naming the UAE and Saudi Arabia with no
+education detail. **Not one education ministry, edtech vendor, university, or school-level AI rule.**
+
+🔵 **This is a NARROW-QUERY blank, not a quiet region, and the distinction is the whole point of
+`ACTION RE`.** The EU AI Act's education provisions are known to exist and are **already carried on
+this shelf** under *Regulatory ground truth* — so a reader must not read this blank as EMEA having
+nothing. The regional phrasing simply does not reach the instrument. 🟢 **Diagnosis for the next pass:
+query the INSTRUMENT, not the region** (`EU AI Act Annex III education high-risk 2026`, national
+curriculum AI guidance by member state), which is the same retargeting that worked for North America
+at `p274`.
+
+
 ### APAC
 
 
@@ -1421,6 +1498,23 @@ gives **31.33%** and Mordor **44.20%** for the region — a 16-point CAGR spread
 🔵 **No new APAC players were shelved.** A paid-report marketing page named Google, Microsoft, IBM,
 Pearson and Byju's; that is a vendor list behind a paywall, not a market map, and it was refused.
 Korea's **AI Framework Act (eff. 2026-01-22)** and Taiwan's **AI Basic Act (Dec 2025)** were already held.
+
+#### Pass 275 addendum — 🔴 DECLARED BLANK, published with its query (`ACTION RE`)
+
+Query run verbatim: **`AI education APAC 2026 adoption regulation players`**.
+
+🔴 **Returned ZERO education-specific APAC results.** What came back was enterprise-tech priorities
+(Boomi, TechRepublic, Forrester on sovereignty), a OneTrust governance webinar, and an ITnews
+sovereignty piece. The nearest-to-topic hits are **vendor-side and closed**: a **TCS + Pearson**
+multi-year AI learning alliance, and **LearnUpon** opening a Sydney HQ with AI course authoring —
+neither open source, so neither shelvable here. One adjacent adoption figure: **49% of APAC businesses
+cite insufficient real-time data infrastructure** as an AI barrier (enterprise, not classroom).
+
+🔵 **Same diagnosis as EMEA: narrow query, not a quiet region.** This shelf already carries a
+quantified APAC adoption section above, which this leg did not reach. 🟢 **Next pass should query
+named jurisdictions and instruments** (Korea's AI Basic Act in education, Singapore MOE AI guidance,
+Japan's MEXT guidelines, India NEP/AI curriculum), not the regional abbreviation.
+
 
 ### LATAM
 
@@ -1693,6 +1787,40 @@ why the first deliverable is so often the governance scaffold rather than the tu
 
 🟡 **ILIA's own read, carried as a caution:** increases in school-level AI education and postgraduate
 programmes **remain exceptions** in the region. Adoption by *users* is not capacity in *institutions*.
+
+#### Pass 275 addendum — the strongest leg of the eight, and the only one returning 2026 education-specific primary research
+
+🟢 **`AI education LATAM 2026 adoption regulation players` was the one regional query that worked** —
+and it returned survey research, not vendor marketing. ⚠️ **Grade first, because it governs every
+figure below: all of this is SEARCH-SNIPPET grade.** `digitaleducationcouncil.com` is **CONNECT 403**
+via curl and **ENOTFOUND** via WebFetch; `unu.edu` and `ess.iesalc.unesco.org` are both **CONNECT
+403**. **Not one of these pages could be read first-hand this pass.** They are published here marked,
+exactly as `p275`'s licence work refuses to publish a grant it has not read.
+
+| finding | figure | source, as reported |
+|---|---|---|
+| Student / faculty engagement | **92% of students**, **79% of faculty** actively engaging with AI | Digital Education Council, *AI in Higher Education LATAM Survey 2026* — **30 000+ responses across 29 institutions**, run with Tecnológico de Monterrey's Institute for the Future of Education |
+| Where institutions actually apply it | teaching & learning **73.5%** · research **57.0%** · administration **34.1%** · community engagement **20.0%** | UNESCO **IESALC** regional survey — **200 institutions across 19 countries** |
+| 🔴 **The governance gap** | only **~30%** of LATAM universities have **published** AI-use policies | as reported in the same leg |
+
+🔴 **The gap is the engagement, and it is now quantified on both sides.** 92% of students use AI; ~30%
+of their institutions have written down how. 🔵 **This corroborates — from a second survey house — the
+"adoption has outrun governance" finding this shelf already carries above**, and it is the cleanest
+regional story on this base: the deliverable a LATAM institution needs is **not** a tutor, it is
+**policy-as-code around the tutor it already has** (see `compose/patterns.md`).
+
+**Regulatory state, by country, as reported:**
+
+- **Chile** — most advanced: **National AI Policy since 2021**, with a law under discussion.
+- **Brazil** and **Colombia** — national AI strategies, but **no education-sector rules**.
+- **Mexico** — **SEP / ANUIES / Observatorio IA** guidance is **non-binding**.
+- 🔵 **No 2026 regulatory change surfaced in this leg** — the picture is the current state, not a new
+  instrument. An informed *absence*, recorded as one.
+
+**Other actors named:** **IDB** (an AI-regulation framework weighing rights, innovation and
+sovereignty), **CEPAL / ILIA 2025** (the Latin American AI Index, 19 countries, with a governance
+dimension), and institutionally **UNAM** and **UPC** alongside Tec de Monterrey.
+
 
 ## Declared gaps
 

@@ -25,7 +25,7 @@ updated: 2026-10-17
 | **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 *(`COPYING.txt`)* | PHP + MySQL/PostgreSQL | The default LMS of public education worldwide. Has a **first-party AI subsystem since 4.5** — provider-pluggable, so a client can point it at OpenAI, Azure, or a local Ollama/vLLM endpoint. Start here for K-12 and public universities. 🟢 **Pass 273 — the agent doorway into Moodle is permissive, which this file did not say.** Beyond the first-party AI subsystem, Moodle is now **MCP-addressable under MIT**: [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) (**MIT**, 40 tools + `ws_raw`, teacher-side **writes**, upsert-by-`idnumber`, any Moodle 4.x/5.x) and [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) (**MIT**, Go, student-side). ⚠️ **The licence boundary is the write path, not the wrapper:** the writes go through a companion Moodle `local_` plugin, so the **deployed combination is GPL-3.0** — no network clause, so hosting is unaffected, but a *distributed* Moodle image carrying it ships as GPL-3.0. 🔵 **So the GPL-3.0 in this cell is the licence of the whole engagement, and that was already true before the agent arrived** — the MCP layer adds no new copyleft reach. See `P23`. |
 | **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** — 🟢 **RIDER-CLEARED at payload, pass 272** *(`master/LICENSE`, 10,982 B; `TERMS AND CONDITIONS` byte-identical to upstream; the 375 B shortfall vs stock is the optional APPENDIX replaced by two attribution notes — University of Zurich / frentix GmbH — carrying no restriction. See `T39`)* | Java | **The only Apache-2.0 full LMS found this pass.** Swiss-maintained, used across German-speaking higher education. If procurement rules out copyleft, this is the shelf — and it is the single most under-used finding in this file. |
 | **Open edX** | [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** | Python/Django + React | MOOC-scale, the platform behind edX. Extend through [XBlock](https://github.com/openedx/XBlock) (Apache-2.0), never by forking core. **The AGPL network clause applies to hosted deployments** — price it before the SOW, not after. |
-| **Artemis** | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | Java/Spring + Angular | Interactive learning with **automated feedback** and an integrated exercise runner (TUM Applied Education Technologies; 819★, 12,437 commits, self-hosted by universities in several countries). The permissive choice when the deliverable is assessment rather than content delivery. **Pass 266 — the AI layer is already built and config-gated:** **Iris** (LLM tutor, MIT), **Pyris** (LLM microservice, MIT), **Athena** (feedback suggestion, **licence UNVERIFIED**), **Hyperion** (AI exercise authoring on Spring AI, no separate repo). "Config-gated" is the commercially important word — the same deployment runs with AI off, so a high-risk EU AI Act classification can be met by configuration rather than by re-architecture. |
+| **Artemis** | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | Java/Spring + Angular | Interactive learning with **automated feedback** and an integrated exercise runner (TUM Applied Education Technologies; 819★, 12,437 commits, self-hosted by universities in several countries). The permissive choice when the deliverable is assessment rather than content delivery. **Pass 266 — the AI layer is already built and config-gated:** **Iris** (LLM tutor, MIT), **Pyris** (LLM microservice, MIT), **Athena** (feedback suggestion, 🟢 **MIT at metadata grade since p275** — 12 of 14 manifests), **Hyperion** (AI exercise authoring on Spring AI, no separate repo). "Config-gated" is the commercially important word — the same deployment runs with AI off, so a high-risk EU AI Act classification can be met by configuration rather than by re-architecture. |
 | **Mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT | TypeScript | **AI-native LMS**, self-hosted, positioned against Docebo/TalentLMS. Ships an AI mentor with voice role-play and auto-scoring, an AI course builder that converts policy documents into courses, open-ended answer grading, **Langfuse tracing of model calls**, an **MCP endpoint**, and bring-your-own-key. The closest thing to a 2026-native corporate L&D starting point under MIT. |
 | **OpenEduCat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | Odoo (Python) | Education **ERP**: admissions, SIS, gradebook, library, fees — the Odoo-for-education pattern. Active branches for Odoo 17.0 / 18.0 / 19.0. **The repo path this base previously published (`OpenEduCat-Inc/OpenEduCat`) is a 404; this is the canonical one.** |
 | 🆕 **GegoK12** | [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** *(`main/LICENSE`, `1 150` B — payload read, diffed against stock, zero riders, `p274`)* — ⚠️ **core only** | PHP 8.4 + Laravel | 🟢 **The permissive school ERP / SIS this file has said for nine passes does not exist** — and this base **refused it twice**, both times after probing `gegok12/gegok12`, **a slug that does not resolve** (`T44`). **Where it fits:** the Odoo-for-education pattern at **MIT** instead of LGPL-3.0, so the agentic layer and the deliverable carry no copyleft at all — the one row on this shelf where that is true of an *administrative* system rather than an LMS. ⚠️ **Open-core: 26 of 38 modules free, 12 Pro modules sold separately. Scope the modules in the SOW** (`T20`, failure mode 3). 🔵 **Adoption evidence is its fork network, not its stars:** 98 forks, near-zero fork stars, institution-shaped names across **India, Indonesia, Vietnam** (`P933`). ⚠️ **Deployment-placed APAC; origin not established** |
@@ -69,7 +69,7 @@ a topic listing — four of the five have under 200 stars and over 8,000 commits
 | **Plan Ceibal (Uruguay)** | **Nothing to shelve, verified.** LATAM's most-cited national edtech programme: its `ceibal` GitHub organisation exists and states *"This organization has no public repositories"*, with no public members. Its platforms are **not open code**. A Ceibal-adjacent engagement is **integration, not adoption** — and briefing it as an open-source national stack (the way Sunbird genuinely is) would be wrong. |
 | [formalms/formalms](https://github.com/formalms/formalms) (forma.lms) | **Excluded on licence, after being recommended to us.** A 2026 open-source-LMS review lists forma.lms as **Apache-2.0**. Its licence payload — `html/license.txt` — is the **GNU GPL, Version 2**. The project is alive (last commit 2026-07-17) and perfectly usable; it is simply *not* the permissive LMS that comparison implied, and it does not change the permissive count. |
 | Fedena ([foradian/fedena](https://github.com/foradian/fedena), [projectfedena/fedena](https://github.com/projectfedena/fedena)) | **Excluded on abandonment.** Vendor comparisons still name Fedena as *the* Apache-2.0 education ERP/SIS. Both repositories are live pages over dead code: `foradian/fedena`'s last commit is **2012-10-12**, the community fork's is **2016-07-20** (message: *"emptying content"*). There is also no licence payload — Apache-2.0 is stated in `README.markdown` and `NOTICE` only. A Rails 2 application last touched in 2016 is not a starting point. |
-| [os4ed/openSIS-Classic](https://github.com/os4ed/openSIS-Classic) | **Not shelved — licence unverified.** Repository resolves, but no licence payload was served on any path tried this pass. Commonly cited as GPL-2.0; this KB does not publish a licence it has not read. |
+| [os4ed/openSIS-Classic](https://github.com/os4ed/openSIS-Classic) | 🟢 **RESOLVED in pass 275 — GPL-2.0, read at payload.** Carried as *"licence unverified"* for multiple passes on the strength of a 19-path x 4-ref probe. **The grant is at `docs/License.txt`** — HTTP 200, **17 286 B**, verbatim *GNU General Public License, Version 2, June 1991*, all 12 numbered terms plus the *"How to Apply These Terms"* appendix present, so the instrument is complete and **rider-cleared** per `T39`. A second copy of the same instrument sits at `docs/LICENSE.rtf` (200, 61 575 B). 🔴 **The ladder never tried `docs/License.txt`** — mixed case plus `.txt`, under `docs/` — so all 76 of its probes were structurally guaranteed to miss. Found by **enumerating the tree** (`git ls-tree -r` over a blobless clone: 5 656 files, 22 licence-like paths, 20 of them vendored ckeditor/PhpSpreadsheet/htmlpurifier). The commonly-cited GPL-2.0 claim was right; this base can now say so because it has **read** it. ⚠️ GPL-2.0 is **copyleft on distribution** — the shelving reason is now the licence's reach, not the licence's absence. |
 
 ## How to add AI on top
 
@@ -228,7 +228,7 @@ its MCP surface is roughly 1/300th as adopted as the Canvas one.
   200 passes. The honest correction is narrower than the retraction, though: North America
   publishes an **interoperability and system-of-record layer**, not a platform. The sentence
   should never have said "none"; it should have said **"a different layer."**
-- **Still open:** `os4ed/openSIS-Classic` remains licence-unverified after a 19-path x 4-ref probe;
+- 🟢 **CLOSED in pass 275:** `os4ed/openSIS-Classic` is **GPL-2.0, read at payload** (`docs/License.txt`, 17 286 B). It was never unverifiable — the 19-path x 4-ref ladder simply never tried that path. Tree enumeration found it in one pass;
   `OpenEMIS`'s application source was not located; and no LATAM-origin *permissively licensed*
   platform exists — Uruguay's Ceibal, probed by hand this pass, **publishes no code at all**.
 
@@ -325,6 +325,33 @@ while **North-West University became the first SA university with an official AI
 framework, not the vendor.** And every regional figure here is **secondary-source grade**: `p268`
 established the non-GitHub DNS failure as environmental, and no ministry document was read.
 
+## Pass 275 — `openSIS-Classic`'s grant was read, after being declared unreadable for multiple passes
+
+⏱️ **Twenty-first pass of `2026-10-17`.** Evidence:
+[`tree-enumeration.2026-10-17-p275.tsv`](../evidence/tree-enumeration.2026-10-17-p275.tsv) ·
+[`verified-repos.2026-10-17-p275.tsv`](../evidence/verified-repos.2026-10-17-p275.tsv).
+
+🟢 **`os4ed/openSIS-Classic` = GPL-2.0, read first-hand at `docs/License.txt`** (HTTP 200, **17 286 B**,
+verbatim *GNU GPL Version 2, June 1991*; all 12 numbered terms plus the *"How to Apply These Terms"*
+appendix, so the instrument is complete and **rider-cleared** per `T39`; a second copy of the same
+instrument at `docs/LICENSE.rtf`, 200, 61 575 B).
+
+🔴 **This base said, five times across three shelves, that the payload did not exist.** It did. The
+`19-path × 4-ref` ladder tried `docs/LICENSE`; the file is **`docs/License.txt`** — mixed case *and*
+`.txt` *and* under `docs/`. An earlier cell recorded *"no payload in **17 filenames**"*; the 17 did not
+include it. All five occurrences are corrected, and the two on the **append-only** `repos/trending.md`
+are annotated in place with a dated supersede marker rather than rewritten.
+
+⚠️ **The shelving reason changes rather than disappears.** openSIS is **copyleft on distribution**, so
+scope an engagement on the licence's **reach** — not, as this base had it, on a missing grant. 🔵 It
+remains **excluded from the zero-copyleft stack (`P22`)**, and is now a *known* GPL-2.0 option rather
+than an unknown.
+
+🔵 **Still open on this shelf, and now measured:** `Open-TutorAi/open-tutor-ai-CE`, both `fedena`
+slugs, and **124 negative licence verdicts across this base** rest on a path ladder rather than an
+enumeration (`make gate-enumeration` prints the queue). `GegoK12`'s MIT core stands as `p274` corrected
+it — and the stale *"NOT ESTABLISHED"* restatement that sat further down this file is reconciled with it.
+
 ## Pass 274 — this shelf gains an MIT administrative platform, and the reason it was missing is a slug
 
 ⏱️ **Twentieth pass of `2026-10-17`.** Evidence:
@@ -376,7 +403,7 @@ The brief's SIS/ERP leg surfaced two permissive claims. **Neither survived.**
 
 | platform | the claim, and who makes it | `p272` verdict |
 |---|---|---|
-| **GegoK12** | *"free core is free forever under the MIT licence; 26 of 38 modules free, 12 Pro modules $100–$250"* — a vendor listing | 🔴 **NOT ESTABLISHED.** No licence payload on **15 path/ref combinations**. ⚠️ And read the claim's shape: **MIT core plus paid modules** is the open-core pattern, so even if the grant were verified it would cover a *subset* of the product a client is shown. **Do not shelve.** |
+| **GegoK12** | *"free core is free forever under the MIT licence; 26 of 38 modules free, 12 Pro modules $100–$250"* — a vendor listing | 🟢 **ESTABLISHED — corrected in `p274`, and this cell was still carrying the refutation 40 lines below that correction (fixed in `p275`).** The grant is **MIT**, read at payload: [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) `main/LICENSE`, HTTP 200, **`1 150` B**, zero rider keywords. 🔴 The earlier *"NOT ESTABLISHED — no licence payload on 15 path/ref combinations"* was **15 probes against a string**: the slug `gegok12/gegok12` does not exist and fails `ls-remote` identically to any nonexistent repository (re-confirmed in `p275`'s positive-control sweep, `rc=128`). ⚠️ **The open-core caveat still stands and is the reason to scope carefully:** **MIT core plus paid modules** (26 of 38 free, 12 Pro at \$100–\$250) means the grant covers a *subset* of the product a client is shown. Shelvable on the licence; scope on the module split. |
 | **Fedena** | Apache-2.0, per a comparison page | 🔴 **NOT ESTABLISHED, and this independently reproduces `p265`'s refutation.** `p272` adds *why the false claim circulates*: the page asserting Apache-2.0 is **openeducat.org — a direct competitor's comparison**. ⚠️ **A licence claim sourced from a rival vendor is not a licence.** |
 
 🟢 **One claim did survive, and it beat its own source.** `academico-sis/academico` — already shelved
@@ -458,5 +485,3 @@ framework (schemas + prompts for LOMLOE programaciones), not a running platform*
 language in it, and it is 0 stars at 50 commits. **This shelf is for systems a client can stand up
 and put an agent on top of.** `OpenDidactia` is read as a specification, never deployed — see `P20`
 for the ShareAlike boundary that distinction rests on.
-
-

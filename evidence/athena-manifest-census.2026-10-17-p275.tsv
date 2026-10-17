@@ -1,0 +1,20 @@
+# pass 275 — 2026-10-17 — ls1intum/Athena, EVERY manifest in the tree, read at payload.
+# The root pyproject.toml is the path the 19-path ladder probed 76 times across three passes.
+# It contains ZERO occurrences of the string "license".  The per-package manifests do not.
+# 14 manifests · 12 declare license = "MIT" · 2 silent (root pyproject.toml, playground/package.json)
+# · 0 declare anything else.  Unanimous where stated.
+path	http	license_field
+assessment_module_manager/pyproject.toml	200	license = "MIT"
+athena/pyproject.toml	200	license = "MIT"
+llm_core/pyproject.toml	200	license = "MIT"
+log_viewer/pyproject.toml	200	license = "MIT"
+modules/modeling/module_modeling_llm/pyproject.toml	200	license = "MIT"
+modules/programming/module_example/pyproject.toml	200	license = "MIT"
+modules/programming/module_programming_apted/pyproject.toml	200	license = "MIT"
+modules/programming/module_programming_llm/pyproject.toml	200	license = "MIT"
+modules/programming/module_programming_themisml/pyproject.toml	200	license = "MIT"
+modules/programming/module_programming_winnowing/pyproject.toml	200	license = "MIT"
+modules/text/module_text_cofee/pyproject.toml	200	license = "MIT"
+modules/text/module_text_llm/pyproject.toml	200	license = "MIT"
+playground/package.json	200	NONE
+pyproject.toml	200	NONE

@@ -57,11 +57,14 @@ non-commercial friction.
 | classroom-mcp | [OmarNiazi/classroom-mcp](https://github.com/OmarNiazi/classroom-mcp) | MIT | 0 | Google Classroom for **students**, *"read-only: it can't submit work, post, or change anything."* 7 commits. Read-only by construction is the right shape for a student-side pilot and the wrong shape for an institutional deliverable. |
 | moodle-mcp *(teacher side, **write**)* | [MarcosNahuel/moodle-mcp](https://github.com/MarcosNahuel/moodle-mcp) | MIT | 1 | **The permissive Moodle doorway this shelf implied did not exist.** stdio MCP server exposing **40 high-level facades plus a `ws_raw` escape hatch** over Moodle Web Services: courses, sections, content, quizzes (GIFT import), enrolment CSV, groups, roles, gradebook, messaging, calendar, badges. Every write is **upsert-by-`idnumber`**, so republishing never duplicates. Works against **any Moodle 4.x/5.x** with Web Services on. ⚠️ **Three prices, all recorded below:** the write half needs a companion Moodle `local_` plugin (→ the deployed combination is GPL-3.0, see pass 273 note); this base's own `T4` finding is that its writes are **ungated**; and at 1★/59 commits it is a **reference implementation, not a dependency**. Tool surface is in **Spanish**. |
 | moodle-mcp-server *(student side, read + submit)* | [Jawadh-Salih/moodle-mcp-server](https://github.com/Jawadh-Salih/moodle-mcp-server) | MIT | 0 | MCP server **and REST API** in **Go** connecting any model to any Moodle instance: courses, contents, grades, assignments, deadlines, calendar, notifications — **13–14 tools**, student-facing. The only Go implementation this base has located. ⚠️ `submit_assignment` means it is **not read-only**, which its own framing underplays. ⚠️ Its documented install is `irm …/install.ps1 \| iex` / `curl …/install.sh \| bash` — **pipe-to-shell from a 0★ repo is not an institutional install path**; build from source. Unproven, but clean at payload. |
+| Athena | [ls1intum/Athena](https://github.com/ls1intum/Athena) | MIT *(metadata — 12 of 14 manifests; see grade note)* | 6 | **Artemis's feedback-suggestion engine — the open grading agent, and new to this tier in pass 275 after three passes shelved as all-rights-reserved.** Generates feedback suggestions for text, modelling and programming exercises; each module (`module_text_llm`, `module_programming_llm`, `module_modeling_llm`) is an independently installable Poetry package, which is the reusable unit. ⚠️ Licence is **metadata grade and serves no licence FILE** — the tree was *enumerated* (691 files, zero licence-like paths), but **12 of its 14 manifests declare `license = "MIT"`**, unanimous, none declaring anything else. That is TUM's own written declaration, repeated twelve times, and it retracts this base's *"treat as all-rights-reserved, ask TUM in writing"*. Build on it with the grade written down; a payload is still worth requesting. |
 
-**23 permissive rows.** (14 from passes 264-265, plus Artemis, Iris and Pyris in pass 266, plus
+**24 permissive rows.** (14 from passes 264-265, plus Artemis, Iris and Pyris in pass 266, plus
 `canvas-mcp` in pass 267, plus three Google Classroom servers in pass 268, plus **two MIT Moodle
-servers in pass 273**.) **22 are payload-verified; `adriasantacreu/google-classroom-mcp` is metadata
-grade and is marked as such in its own cell** — the count is not allowed to launder the weaker row.
+servers in pass 273**, plus **`ls1intum/Athena` in pass 275** — moved here from the licence-UNVERIFIED
+table below, not newly discovered.) **22 are payload-verified; `adriasantacreu/google-classroom-mcp`
+and `ls1intum/Athena` are metadata grade and are marked as such in their own cells** — the count is
+not allowed to launder the weaker rows.
 
 ⚠️ **Cite `canvas-mcp`'s tool count as a range, not a number.** Its About blurb says *"up to 102
 tools"*; its README body says *"up to 126"*, and adds that the default profile registers fewer than
@@ -89,12 +92,66 @@ Real projects, real code, but the licence changes the engagement. None of these 
 
 | Repo | Status | Why it is not shelved |
 |------|--------|----------------------|
-| [ls1intum/Athena](https://github.com/ls1intum/Athena) | LIVE, **no licence payload — upheld against a 19-path x 4-ref probe** | Artemis's feedback-suggestion engine. **Pass 267 re-probed this row properly rather than repeating it:** `LICENSE`/`LICENCE` and their `.md`/`.txt` variants, lowercase spellings, `COPYING`, `LICENSE-MIT`, `docs/LICENSE`, `.github/LICENSE`, `NOTICE`, and the package metadata (`package.json`, `pyproject.toml`, `setup.py`, `build.gradle`, `composer.json`) across `main`/`master`/`develop`/`HEAD` — **nothing on any of them**, and the GitHub page sidebar shows no licence either (6★, 675 commits, default ref `develop`). Artemis itself is MIT; **that still does not license Athena.** Treat as all-rights-reserved. If Athena matters to an engagement, ask TUM for the licence in writing. |
+| [ls1intum/Athena](https://github.com/ls1intum/Athena) | 🔴 **RETRACTED in pass 275 — MIT at *metadata* grade. Now a row in the build-on tier above.** | **This base carried Athena as all-rights-reserved across three passes and 76 path/ref probes, and the verdict was false.** It is true that no licence FILE exists — pass 275 settled that by *enumerating* the tree rather than guessing at it (`git ls-tree -r`: **691 files, zero licence-like paths**, so the absence is now definitive rather than probabilistic). But **12 of Athena's 14 manifests declare `license = "MIT"`** — `athena/`, `llm_core/`, `assessment_module_manager/`, `log_viewer/` and all eight `modules/*/` packages — unanimous, with none declaring anything else. 🔴 **Why 76 probes missed it:** pass 267's list (quoted in this file until this pass) probed *"the package metadata (`package.json`, `pyproject.toml`, …)"* — **at the ROOT**. Athena's root `pyproject.toml` is a 632-byte Poetry *workspace stub* containing **zero occurrences of the string `license`**; it is the one manifest in the repository that is silent. The ladder probed precisely it, four times over, and the miss was structurally guaranteed. **A monorepo declares its grant per package.** *"Ask TUM for the licence in writing"* is withdrawn: TUM has written it down, twelve times, in the repository. Evidence: [`athena-manifest-census.2026-10-17-p275.tsv`](../evidence/athena-manifest-census.2026-10-17-p275.tsv). |
 | [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | **RESOLVED in pass 267 — MIT at *metadata* grade** | This base carried the row as "no payload, parent `kolibri` is MIT" — which is an **inference from the parent**, the weakest grade there is. The repo's `main/package.json` declares `"license": "MIT"`. That is the **project's own declaration**, so publish it as **MIT (metadata)**: stronger than an inference, weaker than a payload, and enough to build on while a payload is requested. It still serves no licence *file*. |
 | [autograder-org/autoGrader-frontend](https://github.com/autograder-org/autoGrader-frontend) | LIVE, **no licence payload — upheld against the 19-path x 4-ref probe** | README claims LLM-based assignment grading; 22 commits. Early-stage and unlicensed. Pass 267 confirms it is not a detection artefact. |
 | [OpenEMIS/OpenEMIS-Core](https://github.com/OpenEMIS/OpenEMIS-Core) | LIVE, **no licence payload**, none in the page sidebar | *"Manage students and staff information at school, district, and national level."* OpenEMIS is the education-management system most associated with **ministry-level** deployment, which is why pass 267 probed it by hand. What this KB can actually reach is a **32-commit Docker packaging repo (7★) with no licence and no ministry or country named in it.** The application source was not located this pass. **Ministry provenance is not established — do not brief it as a public-sector reference.** |
 | [muskvdc/EduTwin-Africa](https://github.com/muskvdc/EduTwin-Africa) | LIVE, **PRE-LICENCE — the placeholder is still in the README** *(new in pass 269)* | Curriculum-aware tutor over **South African** curriculum knowledge, **Grades 8–12**: RAG, adaptive learning, bounded multi-agent collaboration, ReAct tools, guardrails. 0★ / 0 forks / 7 commits, default ref `main`. **No payload on 19 of 19 paths, no `license` field in `pyproject.toml`**, and the README says, in the author's own words: *"Add the project's chosen license here before publishing if a specific open-source license is required."* 🔵 **This is a state this shelf has not carried before.** `Athena` and `autoGrader-frontend` are *silent*; this one is **explicitly not yet licensed**. The practical difference is that it is the one row here where asking costs nothing and might work — the author has written down that they know it is missing. Until then: all rights reserved. |
 | [Valexxy/edunaija-os](https://github.com/Valexxy/edunaija-os) | LIVE, **no grant on any channel** *(new in pass 269)* | *"A security-conscious starter codebase for a Nigerian-first learning platform"*; `package.json` name is `nigeria-learning-platform`. 0★ / 0 forks / 6 commits. No payload on 19 of 19 paths and **no `license` field in `package.json`** — the two channels that could have carried a grant both empty. Names **no exam board and no institution**. 🔴 **Cite it carefully: it is NOT the EduNaija AI Tutor of the AfricaNLP 2026 paper** (that system is a five-agent LangChain + FAISS RAG tutor with English/Yoruba/Hausa/Igbo support; this is a starter codebase with a similar name). **Two different artefacts, one name** — see the trends file. |
+
+## Pass 275 — the row this shelf told studios not to use has declared MIT twelve times, and the refusal came from probing one 632-byte file
+
+⏱️ **Twenty-first pass of `2026-10-17`.** Evidence:
+[`tree-enumeration.2026-10-17-p275.tsv`](../evidence/tree-enumeration.2026-10-17-p275.tsv) *(13 slugs: `ls-remote` positive control + full tree enumeration, zero searches)* ·
+[`athena-manifest-census.2026-10-17-p275.tsv`](../evidence/athena-manifest-census.2026-10-17-p275.tsv) *(14 manifests, every one read at payload)* ·
+[`verified-repos.2026-10-17-p275.tsv`](../evidence/verified-repos.2026-10-17-p275.tsv) ·
+[`p275-websearch.2026-10-17-p275.tsv`](../evidence/p275-websearch.2026-10-17-p275.tsv) *(8 legs)*.
+
+### 🟢 `p274`'s top-ranked item was run, and it returned a real negative — then the thing it was testing turned out not to be the problem
+
+`p274` ranked, at zero searches: *"re-probe every negative licence verdict with `ls-remote` as a
+positive control first — because the mechanism that produced the `gegok12` false negative is not
+specific to that row."*
+
+🟢 **Run over 13 slugs. The mechanism is NOT endemic:** `gegok12/gegok12` fails `ls-remote` with
+`rc=128` exactly as a nonexistent repository does, and **all twelve other negative-verdict slugs
+resolve**. The backlog item is **discharged with a measured answer**, not deferred.
+
+🔴 **And then the same sweep refuted two of this base's own published verdicts** — not because a slug
+was wrong, but because **a path ladder cannot prove absence** (`T46`):
+
+| row | this shelf published | enumeration found |
+|---|---|---|
+| **`ls1intum/Athena`** | *"no grant across 76 path/ref probes over three passes; treat as all-rights-reserved; ask TUM for the licence in writing"* | 🔴 **12 of 14 manifests declare `license = "MIT"`.** Now the **24th permissive row** |
+| **`os4ed/openSIS-Classic`** *(`verticals/`)* | *"no licence payload served on any path tried"* | 🔴 **`docs/License.txt` — verbatim GPL-2.0, 200, 17 286 B** |
+
+### 🔴 The box this pass earned
+
+| the finding | how it surfaced | why it had not been found |
+|---|---|---|
+| 🔴 **A 76-PROBE REFUSAL WAS AIMED AT THE ONE MANIFEST IN THE REPOSITORY THAT IS SILENT** | 🟢 By **enumerating** the tree (`git ls-tree -r` over a blobless clone) instead of extending the ladder a fifth time | 🔴 `p267`'s list is sound *as written* — `pyproject.toml` is on it. It is aimed at the **root**, and Athena's root `pyproject.toml` is a **632 B Poetry workspace stub with zero occurrences of `license`**. **A monorepo declares its grant per package** (`T47`). Every added path made the refusal feel better-evidenced while leaving the unexamined space the same size |
+| 🔴 **THIS BASE HELD THE PRINCIPLE *AND* THE CODE FOR ~180 PASSES AND NEVER APPLIED EITHER TO LICENCES** | 🟢 By finding [`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/) — **pase 93, `2026-10-04`** — which states **`P275`** (*to sustain an absence in a tree you must ENUMERATE it*) and **`P278`** (*a ZERO over a path that does not exist in that ref measures the PATH, not the content*) and ships a working blobless-clone enumerator | 🔴 **`P278` describes both of this pass's false negatives exactly.** The principle was applied to **directory** trees (ILIAS, `frappe`, `openeducat`) and **never to licence paths**, where `p267` built a `19 × 4` ladder instead. 🔵 **`p274` wrote the diagnosis — *"a correction applied to one instance is not a correction to the class"* — and this is that sentence about `p274` itself.** Sixth consecutive pass whose defect species was invisible to the prior check, **and the first where the lesson existed in general form, in code** |
+| 🔴 **A CHANNEL PROBED AT ONE PATH NEARLY PUBLISHED A FALSE CHANNEL STATE** | 🟢 By probing the path to be **used** rather than a cheaper neighbour | 🔴 `api.github.com/rate_limit` → **200** with a plausible body; `api.github.com/repos/<slug>` → **403** *(session-scope message, not a rate limit)*. Reading the 200 as access would have invited the next pass to refresh **star counts** from an API this session does not have (`T48`) |
+
+### 🔵 Registered, not claimed
+
+- 🟢 **The instrument is BUILT, not described** — `make gate-enumeration` is in `make hooks`, with **30
+  controls** (`compose/code/pass275-grant-enumeration/`). `p274`'s own lesson was that *"an amendment that is
+  not built gets violated by the next pass"*; this pass did not repeat it.
+- 🔴 **Running the gate on the live shelves corrected the gate three times**, each for the same reason —
+  **one line can carry two subjects**. It first reported `ls1intum/Artemis`, an MIT row with a root
+  `LICENSE`, as **refuting itself** (the phrase on that line is about Athena, four slugs later); then
+  missed a subject named in bold **prose** rather than as a link; then flagged **this pass's own new
+  Athena row**, because that row opens *"**Artemis's** feedback-suggestion engine"* — **a possessive is a
+  modifier, not a subject.** Teaching it prose names found **2 further live occurrences** of the openSIS
+  claim the slug-only rule had missed.
+- 🔵 **`QUEUE-UNENUMERATED=124`.** 124 negative licence verdicts on these shelves still rest on a path
+  ladder. **That is not a failure signal — it is the first honest measurement of the exposure**, and it
+  prints on every `make hooks` run.
+- ⚠️ **No star count in this pass was read from GitHub.** `api.github.com` 403 on `/repos` and `/search`,
+  `github.com` HTML 403. Athena's `6★` and every other figure on this shelf is **carried** and marked so.
+- 🟢 **The permissive count moved 23 → 24 and `make recount` was updated with it**, so `T37` still
+  re-derives it from the rows: `STALE=0 of 4`.
 
 ## Pass 274 — the gap this file declared was contradicted by a row in this file, and the MCP count was two platforms short of its own evidence
 
@@ -527,4 +584,3 @@ have **no source inside these repositories**; they derive from the Artemis docum
 it rather than quietly relying on it:** a row whose capability claims cannot be traced to its own
 repository is fine to build on and wrong to quote verbatim to a client. Confirm Iris's pedagogical
 constraints against the Artemis docs, or against a deployment, before they reach a proposal.
-

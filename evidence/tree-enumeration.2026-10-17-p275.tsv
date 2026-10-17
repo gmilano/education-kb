@@ -1,0 +1,36 @@
+# pass 275 — 2026-10-17 — TREE ENUMERATION applied to LICENCE paths for the first time.
+# 🔴 NOT a new method on this base: compose/code/p275-tree-enumeration/ (pase 93, 2026-10-04)
+# already states P275 ("para sostener una ausencia en un arbol hay que ENUMERARLO") and P278
+# ("un conteo de CERO sobre una ruta que no existe en esa ref mide la RUTA, no el contenido")
+# and already ships a blobless-clone enumerator.  It was applied to DIRECTORY trees and never
+# to licence paths.  P278 describes both false negatives below exactly.
+# WHY: p274 found gegok12 refuted twice by probing a slug that does not exist, and ranked
+# "re-probe every negative licence verdict with ls-remote as a positive control" as p275's
+# highest-value item. That control passed (see verdict_on_slug below) — but running it
+# exposed that the LADDER ITSELF is the defect, not the slug.
+#
+# method, in two stages, no searches:
+#   1. git ls-remote https://github.com/<slug> HEAD    -> does the slug resolve AT ALL?
+#   2. git clone --depth 1 --filter=blob:none --no-checkout, then git ls-tree -r --name-only HEAD
+#      -> ENUMERATE every path in the tree, then grep the enumeration for licence-like names.
+# A 19-path probe can only refute the 19 paths it tried.  An enumeration cannot miss a path
+# that exists, because it never guesses one.
+# channel re-tested this pass, NOT inherited: raw.githubusercontent.com 200 · git smart-HTTP (ls-remote
+# + blobless clone) OK · api.github.com/rate_limit 200 BUT api.github.com/repos/<slug> 403 and
+# api.github.com/search 403 (session-scope message, NOT a rate limit) · github.com HTML 403.
+# => api.github.com is NOT open.  p274's "403" was correct; a 200 on /rate_limit is a proxy-level
+#    reply and must not be read as repo access.  NO star count was read from GitHub this pass either.
+slug	ls_remote	head_sha	files_in_tree	licence_like_paths_in_tree	prior_verdict_on_this_base	p275_verdict
+Gego-K12/gegok12	OK	99da145f55a1	7623	LICENSE (root) + 1 vendored (custompackages/brozot/laravel-fcm/LICENSE)	MIT 1150 B (p274, after two false refusals)	UPHELD. Root LICENSE present in enumeration. p274's correction stands.
+gegok12/gegok12	FAIL rc=128	-	-	-	"no payload on 15 path/ref combinations" (p273, twice)	POSITIVE CONTROL FIRES. Slug does not resolve. This is what a nonexistent repo looks like, and it is distinguishable.
+ls1intum/Athena	OK	6316d302c929	691	NONE_IN_TREE	"no grant across 76 path/ref probes over three passes; treat as all-rights-reserved; ask TUM in writing"	🔴 RETRACTED. No licence FILE exists (enumerated, not guessed) — but 12 of 14 manifests declare license = "MIT". See athena-manifest-census below. MIT at METADATA grade.
+ls1intum/Artemis	OK	dc78a2bcba53	14106	LICENSE (root) + packages/tum-aet-ui/LICENSE	MIT	UPHELD. Root LICENSE present.
+os4ed/openSIS-Classic	OK	5d546f20117e	5656	docs/License.txt, docs/LICENSE.rtf + 20 vendored (ckeditor/PhpSpreadsheet/htmlpurifier)	"no licence payload served on any path tried; 19-path x 4-ref probe; commonly cited as GPL-2.0; this KB does not publish a licence it has not read"	🔴 RESOLVED AFTER MULTIPLE PASSES. docs/License.txt HTTP 200, 17286 B, verbatim GPL-2.0. The ladder never tried docs/License.txt (mixed case + .txt). NOW READ.
+autograder-org/autoGrader-frontend	OK	4f1a5516ad45	36	NONE_IN_TREE	"no licence payload — upheld against 19-path x 4-ref probe"	UPHELD, and now DEFINITIVE rather than probabilistic: 36 files enumerated, none licence-like.
+OpenEMIS/OpenEMIS-Core	OK	5040afa6bae2	11	NONE_IN_TREE	"no licence payload, none in page sidebar"	UPHELD, DEFINITIVE. 11 files total — confirms this is a thin Docker packaging repo, not the application source.
+muskvdc/EduTwin-Africa	OK	5e389e034981	384	NONE_IN_TREE	"PRE-LICENCE — placeholder still in README"	UPHELD, DEFINITIVE. 384 files, no licence-like path. The README placeholder remains the only statement.
+Valexxy/edunaija-os	OK	28914fbce122	310	NONE_IN_TREE	"no grant on any channel"	UPHELD, DEFINITIVE.
+datawhalechina/ai-edu-for-kids	OK	92b9af361f58	2	NONE_IN_TREE	"CC-BY-NC-SA-4.0 — README prose only, NO payload"	UPHELD, and the enumeration explains it: the tree holds TWO files. There is no payload because there is almost no repo.
+touretzkyds/ai4k12	OK	727b8bbe9b5e	190	NONE_IN_TREE	"no payload"	UPHELD, DEFINITIVE.
+learningequality/kolibri-design-system	OK	adefe26118c6	15448	NONE (7 hits are icon assets: KIcon/precompiled-icons/.../copyright.vue, license.vue)	"MIT at metadata grade (main/package.json); serves no licence FILE"	UPHELD, DEFINITIVE — and the enumeration shows WHY a naive grep would have been fooled: 7 licence-like paths exist and all 7 are Vue icon components.
+adriasantacreu/google-classroom-mcp	OK	29c2c2a07670	15	NONE_IN_TREE	"MIT metadata grade (package.json + README); sidebar shows no licence, no payload"	UPHELD, DEFINITIVE. 15 files, none licence-like.

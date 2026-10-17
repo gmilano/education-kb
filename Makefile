@@ -17,9 +17,24 @@
 SHELL := /bin/bash
 PY ?= python3
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration enumerate
 
-hooks: gate-offline recount ## the standing check: every licence instrument's OFFLINE controls, plus T37's re-count
+hooks: gate-offline recount gate-enumeration ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, plus p275's enumeration gate
+
+# 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
+# p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
+# The control passed on all 13 slugs -- and exposed that the LADDER, not the slug, is the
+# defect: os4ed/openSIS-Classic's grant sits at docs/License.txt (GPL-2.0, 17 286 B) and
+# ls1intum/Athena declares MIT in 12 of 14 manifests, while the ladder probed the one
+# manifest that is silent.  Both false negatives were structurally guaranteed.  No network.
+gate-enumeration: ## ACTION p275 — no shelf may assert an absent grant that an enumeration refutes
+	@cd compose/code/pass275-grant-enumeration && $(PY) test_enumeration_gate.py >/dev/null && echo "── pass275-grant-enumeration (30 controls incl. the C3 positive control; vendored/icon/source paths, two-subject lines)" && echo "   PASS" || exit 1
+	@cd compose/code/pass275-grant-enumeration && $(PY) -I enumeration_gate.py --root ../../.. || exit 1
+
+# 🔴 ONLINE half — stays OUT of `hooks` so the standing check runs without egress.
+enumerate: ## ACTION p275 — enumerate trees for a slug list: make enumerate SLUGS=slugs.txt
+	@test -n "$(SLUGS)" || { echo "usage: make enumerate SLUGS=path/to/slugs.txt"; exit 2; }
+	@cd compose/code/pass275-grant-enumeration && ./enumerate.sh < "$(CURDIR)/$(SLUGS)"
 
 # 🟢 p274: T37 was written as an amendment in p272 and violated by the two passes after it.
 # An amendment that is not built is not an amendment, so it is a target now.  No network.

@@ -1453,3 +1453,82 @@ reason the district's AI committee says no.** See [`compose/patterns.md`](../com
 
 **Confidence: medium-high.** The two market sources are secondary (trade press and a research
 organisation's brief); the repository rows are payload-verified first-hand.
+
+## T46 — A path ladder cannot prove absence, and this base published its guesses as findings for three passes
+
+🔴 **The defect species:** a `19-path × 4-ref` probe that comes back empty is **evidence about 76
+paths**, not evidence about the repository. This base published it as *"no grant"*, *"licence
+unverified"*, *"treat as all-rights-reserved"* — statements the probe never tested. Two rows fell to
+this in a single pass, and **both failures were structurally guaranteed rather than unlucky**:
+
+| row | carried verdict | where the grant actually was | why the ladder could not reach it |
+|---|---|---|---|
+| `os4ed/openSIS-Classic` | *"no licence payload served on any path tried"* | **`docs/License.txt`** — GPL-2.0, 200, **17 286 B** | the ladder tried `docs/LICENSE`. The file is **mixed case *and* `.txt` *and* under `docs/`**. An earlier cell recorded *"no payload in 17 filenames"* — **the 17 did not include it** |
+| `ls1intum/Athena` | *"no grant across 76 path/ref probes over three passes"* | **12 of 14 manifests**, `license = "MIT"` | the ladder probed the **root** `pyproject.toml` — a 632-byte Poetry workspace stub with **zero occurrences of `license`** |
+
+🔴 **And this base already knew.** [`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/)
+(**pase 93, `2026-10-04`**) states **`P275`** — *para sostener una ausencia en un árbol hay que
+ENUMERARLO* — and **`P278`** — *un conteo de CERO sobre una ruta que no existe en esa ref mide la RUTA,
+no el contenido* — **and ships a working blobless-clone enumerator.** 🔵 **`P278` is this trend, stated
+~180 passes earlier**, and `P270` (*a negative over a path that encodes a NAME measures the name*) is
+its sibling. All three were applied to **directory** trees and **never to licence paths**. 🔴 **So `T46`
+is not a new method; it is the record of a principle that failed to cross domains** — `p273` extended a
+ladder along the wrong axis for two passes (`ACTION YU`) while the instrument that refutes ladders sat
+in `compose/code/`. **The fix was to stop guessing, with the tooling already present:**
+
+```
+git ls-remote <slug> HEAD                                    # positive control: does it resolve?
+git clone --depth 1 --filter=blob:none --no-checkout <slug>   # blobless, seconds
+git ls-tree -r --name-only HEAD                               # EVERY path. No guessing.
+```
+
+🔵 **Why this is a trend and not a one-off fix.** The ladder's failure mode is *silent and
+self-confirming*: every added path makes the refusal feel better evidenced while leaving the
+unexamined space exactly as large. **`QUEUE-UNENUMERATED=124`** — 124 negative licence verdicts on
+these shelves still rest on a ladder. That number is the first honest measure of the exposure, and
+`make gate-enumeration` now publishes it on every run. ⚠️ **A licence-like path is still not a grant:**
+the gate excludes vendored dependencies (openSIS alone carries **20**), source files that merely carry
+the word (`LicenseService.java`), and **icon assets** — `kolibri-design-system` holds **7** licence-like
+paths and **all 7 are Vue icon components**.
+
+## T47 — A monorepo declares its grant per package, so a root-only metadata probe is aimed at the one file that is silent
+
+🔴 **Generalised from `T46`'s second limb, because it is a different mechanism wearing the same
+result.** `p267`'s probe list is methodologically sound as written — it includes *"the package metadata
+(`package.json`, `pyproject.toml`, `setup.py`, `build.gradle`, `composer.json`)"*. It is **aimed at the
+repository root**, and that is where a workspace stub lives.
+
+In a Poetry / npm-workspaces / Cargo-workspace layout the root manifest **declares the workspace** and
+the **per-package** manifests declare the licence. Athena's twelve packages — `athena/`, `llm_core/`,
+`assessment_module_manager/`, `log_viewer/` and all eight `modules/*/` — each carry `license = "MIT"`,
+unanimous, **none declaring anything else**. 🔵 **The reusable units are precisely the ones that declare
+it** (`module_text_llm`, `module_programming_llm`, `module_modeling_llm`), which is what makes this
+commercially material rather than pedantic: the package a studio would actually depend on is the package
+carrying the grant.
+
+🟢 **Rule for this base:** before recording a metadata-channel absence on a multi-package repository,
+**enumerate the manifests**, then read every one. One silent root manifest is not a silent project.
+⚠️ And grade it honestly: twelve unanimous declarations is the **strongest metadata channel this base
+has graded** (`kolibri-design-system` rests on one) — but it is **still metadata, not a payload**.
+
+## T48 — A channel probed at one path licenses a false conclusion about the channel
+
+🔴 **Nearly published this pass, and caught by re-testing instead of inheriting.**
+`api.github.com/rate_limit` answers **200** — with a plausible body (`limit 15000, remaining 14998`).
+`api.github.com/repos/<slug>` answers **403**, and so does `/search`. The 403 body is a **session-scope
+message, not a rate limit**:
+
+> *"GitHub access to this repository is not enabled for this session."*
+
+🟢 **So `api.github.com` is NOT open, and `p274`'s recorded `403` was right.** The `200` on
+`/rate_limit` is a **proxy-level reply** that never touches repository data. Reading it as access would
+have published an open GitHub API this base does not have — and, worse, would have invited the next pass
+to refresh **star counts** from it, re-introducing exactly the inflated-star defect that a sibling KB
+cycle had to correct wholesale.
+
+🔵 **The general shape:** `reachable` is not a property of a *host*, it is a property of a
+**(host, path, method)** triple. This base already knows the narrower version — `p267`'s ref-sensitivity
+note (`learningequality/kolibri` serves **MIT on `develop`** and **404 on `main`**) is the same lesson
+one axis over. 🟢 **Operational rule: record channel state as the triple you actually probed, and probe
+the path you intend to USE** — never a cheaper neighbour. **No star count was read from GitHub this
+pass**; every star figure on these shelves is carried from an earlier pass and marked so.

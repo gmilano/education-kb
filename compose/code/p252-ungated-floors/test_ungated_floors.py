@@ -72,12 +72,15 @@ FLOORS = uf.read_floors()
 # the consequence that the standing gate was red for a full pass and read as unknown.
 # p261 itself adds `pass261-current-state-tier-run` (+1 file, +1 gated), which is why
 # both literals move by two here and `ungated` stays at 181: both suites arrived gated.
+# 🟢 p275: 213 -> 214 and 32 -> 33.  `p275-tree-enumeration`'s suite is written AND gated
+# (`make gate-enumeration`, in `hooks`), so both counts move together -- which is the shape
+# this census is for: a suite that lands ungated moves only the first number.
 # 🟢 p262: 212 -> 213 and 31 -> 32.  `pass262-scoped-reservation-audit` is written and
 # wired into `make hooks` IN THE SAME CHANGE as this pin, which is the whole remedy
 # p261 asked for: the pin moves with the step, not a pass later.  `ungated` stays at
 # 181 because the suite arrived gated.
-chk("python test files on disk", len(ROWS), 213)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 32)
+chk("python test files on disk", len(ROWS), 214)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 33)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",

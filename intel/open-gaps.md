@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 275 — **THE POSITIVE CONTROL PASSED, AND THAT IS HOW THE REAL DEFECT SURFACED: A PATH LADDER CANNOT PROVE ABSENCE, AND THIS BASE PUBLISHED 76 GUESSES AS A LICENCE VERDICT**
+
+⏱️ **Twenty-first pass of `2026-10-17`.** Append-only; nothing below is rewritten.
+🔵 **Evidence:** [`tree-enumeration.2026-10-17-p275.tsv`](../evidence/tree-enumeration.2026-10-17-p275.tsv)
+*(13 slugs: `ls-remote` positive control + full tree enumeration, zero searches)* ·
+[`athena-manifest-census.2026-10-17-p275.tsv`](../evidence/athena-manifest-census.2026-10-17-p275.tsv)
+*(14 manifests, every one read at payload, zero searches)* ·
+[`verified-repos.2026-10-17-p275.tsv`](../evidence/verified-repos.2026-10-17-p275.tsv) ·
+[`p275-websearch.2026-10-17-p275.tsv`](../evidence/p275-websearch.2026-10-17-p275.tsv) *(8 legs)*.
+
+🟢 **Sixth pass running of spending this register rather than inventing a brief — and this register's
+top-ranked item was costed at zero searches and returned BOTH a clean negative result AND the pass's
+headline, from the same sweep.**
+
+### 🟢 Discharged this pass
+
+| gap / action | registered as | how it was discharged | outcome |
+|---|---|---|---|
+| 🔴 **Re-probe every negative licence verdict with `ls-remote` as a positive control first** | `p274` backlog **2**, *"zero searches"* — *"the mechanism that produced the `gegok12` false negative is not specific to that row"* | 🟢 **Run over all 13 negative-verdict slugs.** | 🟢 **A REAL NEGATIVE RESULT: the specific mechanism is NOT endemic.** `gegok12/gegok12` fails `ls-remote` with `rc=128` exactly as a nonexistent repository does; **all twelve other slugs resolve.** 🔴 **And the sweep then refuted two of this base's own verdicts for a DIFFERENT reason** — see the box. The hypothesis was wrong and the item was still the right one to buy first |
+| 🔴 **Read `agents/top.md` and `repos/foundations.md` top-to-bottom as a reader** | `p274` backlog **1**, *"zero searches; it is how both of this pass's best findings surfaced"* | 🟢 **Both read end to end.** | 🟢 **It is how `Athena`'s monorepo shape was noticed at all** — the row quotes `p267`'s probe list, and reading that list *as a list* is what showed it was aimed at the repository **root**. 🔵 **Third consecutive pass in which reading a shelf beat searching for new rows** |
+| 🔴 **`ls1intum/Athena` — resolve or keep as all-rights-reserved** | carried **three passes**; `p274` ranked it *"worth an email"*-negative | 🟢 **Tree enumerated, then every manifest read.** | 🔴 **RETRACTED — MIT at *metadata* grade. 12 of 14 manifests declare `license = "MIT"`, unanimous.** Now the **24th permissive row** and the grading half of a four-repo MIT stack (`P26`). **The 76 probes were aimed at the one manifest in the repository that is silent** — a 632 B Poetry workspace stub with **zero occurrences of `license`**. `T46`, `T47` |
+| 🔴 **`os4ed/openSIS-Classic` — licence-unverified after a 19-path × 4-ref probe** | carried **multiple passes** on `verticals/solutions.md` | 🟢 **Tree enumerated.** | 🔴 **RESOLVED — GPL-2.0, read at payload.** `docs/License.txt`, HTTP 200, **17 286 B**, all 12 terms plus the appendix ⇒ complete, **rider-cleared** (`T39`). The ladder tried `docs/LICENSE`; the file is **mixed case *and* `.txt` *and* under `docs/`**. 🔵 **The vendor comparison articles this base dismissed were right.** The claim was published as false in **five places across three shelves**; all five corrected |
+| 🔵 **`T46`/`T47` as a STANDING check, not an amendment** | `p274`'s own lesson — *"an amendment that is not built gets violated by the next pass"* | 🟢 **BUILT, not cited** — [`pass275-grant-enumeration/`](../compose/code/pass275-grant-enumeration/), **30 controls** incl. the **C3 positive control** borrowed from `P275`'s own doctrine, offline half wired into `make hooks`, online half deliberately out of it. 🔴 **And named as a SIBLING, not a discovery:** `P275`'s enumerator already existed (pase 93) for *directory* trees; this one enumerates *files* and classifies the grants. | 🟢 **`REFUTED=0 · VERIFIED-ABSENT=28 · QUEUE-UNENUMERATED=124`.** 🔴 **And running it found THREE live restatements of the `gegok12` claim `p274` had already refuted** — invisible until a dead slug stopped absorbing them. All three corrected |
+| 🟡 **The brief's four generic legs** | `p269` standing instruction; `p273`/`p274` both said do not re-buy them | 🟢 **Run as the brief requires, and recorded as spent.** | 🔴 **NIL on supply for the ninth consecutive pass** — the agent leg returned a *course* (`microsoft/ai-agents-for-beginners`), the trending leg returned no education ranking at all. 🟢 **The verticals leg corroborated three carried grants** (OpenEduCat/Odoo, ERPNext GPL-3.0, Twenty **BSL-1.1 not OSI**) and the trends leg **independently re-reached Grand View's current vintage** |
+| 🟡 **The scheduled regional battery** | brief's standing requirement | 🟢 **All four run; two returned blanks and both are published WITH their queries** (`ACTION RE`). | 🟢 **LATAM was the strongest leg of the eight** — the only one returning 2026 education-specific primary research (**92% of students / 79% of faculty**, 30 000+ responses, 29 institutions; UNESCO IESALC **200 institutions / 19 countries**; **~30%** of universities have published AI policies). ⚠️ **All of it SNIPPET grade — three hosts CONNECT 403, not one page read first-hand.** 🔴 **EMEA and APAC returned ZERO education-specific results**, diagnosed as narrow-query blanks, not quiet regions |
+
+### 🔴 The box this pass earned
+
+| the finding | how it surfaced | why it had not been found |
+|---|---|---|
+| 🔴 **A PATH LADDER CANNOT PROVE ABSENCE, AND EVERY RUNG MAKES THE REFUSAL FEEL BETTER EVIDENCED WHILE THE UNEXAMINED SPACE STAYS THE SAME SIZE** | 🟢 By running `p274`'s positive control, watching it **pass**, and then asking what else could produce the same false negative — then **enumerating the tree** (`git ls-tree -r` over a blobless clone) instead of extending the ladder a fifth time | 🔴 A `19-path × 4-ref` probe that comes back empty is evidence about **76 paths**, not about the repository — but this base published it as *"no grant"*, *"licence unverified"*, *"treat as all-rights-reserved"*. 🔵 **`p273` had already learned the narrow version of this** (`ACTION YU`: *"the ladder was being extended along the wrong axis for two passes"*) **for `version.php` headers, and the correction never generalised to the ladder as an instrument.** `p275` was about to extend it a third time. **Seventh consecutive pass whose defect species was invisible to the check written one pass earlier — and the lesson needed was already written on this base** |
+| 🔴 **A MONOREPO DECLARES ITS GRANT PER PACKAGE, SO A ROOT-ONLY METADATA PROBE IS AIMED AT THE ONE FILE THAT IS SILENT** | 🟢 By enumerating the **manifests** rather than probing the manifest | 🔴 `p267`'s list is methodologically sound *as written* — `pyproject.toml` is on it. It is aimed at the **root**, and in a Poetry/npm-workspace/Cargo layout the root manifest declares the **workspace** while the per-package manifests declare the **licence**. 🔵 **The commercially material part: the packages a studio would actually depend on** (`module_text_llm`, `module_programming_llm`, `module_modeling_llm`) **are precisely the ones carrying the grant.** `T47` |
+| 🔴 **A DEAD SLUG IN THE EVIDENCE CAN LAUNDER A FALSE CLAIM ABOUT THE REAL REPOSITORY OF THE SAME BASENAME** | 🟢 By the new gate reporting `VERIFIED-ABSENT` on a row this base **knew** was corrected, and that disagreement being checked rather than accepted | 🔴 `gegok12/gegok12` (dead) and `Gego-K12/gegok12` (real, **MIT** at root `LICENSE`) share the basename `gegok12`. Attributing the claim to the dead slug made three stale *"NOT ESTABLISHED"* restatements read as **correctly** verified absences. 🔵 **`p251-prefix-collision`'s class — a truncation onto a real repo — one axis over: a COLLISION onto a dead one.** Excluding non-resolving slugs from name attribution surfaced all three at once |
+| 🔴 **A PREDICATE THAT SUPPRESSES ROWS MUST BE NARROWER THAN THE ROWS IT SUPPRESSES, AND ONE `re.I` BROKE THAT** | 🟢 By checking **which** rows a newly-added silencer had silenced, instead of trusting the count that dropped | 🔴 A `states_a_grant()` predicate — *a line cannot coherently assert "no grant" and publish the grant* — was added to stop correction prose self-flagging. With a global `re.I`, its `\bLICEN[CS]E\b` alternative, **meant to match a FILENAME in caps**, matched a **vendor's marketing prose** (*"free core is free forever under the MIT licence"*) and silenced **two live stale claims**. 🔵 **Case was load-bearing: `LICENSE` is a filename, `licence` is a word.** A gate's own false-negative is the most expensive kind, because it reports PASS |
+| 🔴 **A CHANNEL PROBED AT ONE PATH LICENSES A FALSE CONCLUSION ABOUT THE CHANNEL** | 🟢 By probing the path to be **used** rather than a cheaper neighbour | 🔴 `api.github.com/rate_limit` → **200**, with a plausible body (`limit 15000, remaining 14998`). `api.github.com/repos/<slug>` → **403**, and `/search` → **403**; the body is a **session-scope message, not a rate limit**. `p274`'s recorded 403 was right. 🔵 **Reading the 200 as access would have invited the next pass to refresh STAR COUNTS from an API this session does not have** — re-introducing wholesale the inflated-star defect a sibling KB cycle had to correct. **`reachable` is a property of a (host, path, method) triple, not of a host.** `T48` |
+
+### 🔵 Declared gaps and the backlog for `p276`
+
+**The highest-value item needs zero searches and is already measured: `QUEUE-UNENUMERATED=124`.**
+
+1. 🔴 **Work the enumeration queue, highest-consequence rows first.** `make gate-enumeration` prints all
+   124 negative licence verdicts that still rest on a path ladder. **Two of the first thirteen
+   enumerated were false** — a 15% false-negative rate on the only sample this base has. Start with the
+   rows a studio would actually build on: `Open-TutorAi/open-tutor-ai-CE` and both `fedena` slugs are
+   named on `verticals/solutions.md`, and the `bigdata-ustc/*` cluster (`EduNLP`, `EduCAT`, `EduCDM`,
+   `EduKTM`, `Agent4Edu`) is five rows at once. **`make enumerate SLUGS=…` is built; this is budget,
+   not design.**
+2. 🔴 **Ask TUM for a `LICENSE` file in `ls1intum/Athena`'s root** — and note the ask has changed shape:
+   not *"is there a licence"* (answered, twelve times) but *"please document the grant you have already
+   made"*. 🔵 **Also check whether `Artemis`'s own 14 106-path tree hides a per-package divergence**: this
+   pass enumerated it and found a root `LICENSE`, but **did not read its sub-package manifests**, which is
+   exactly the gap `T47` describes.
+3. 🟡 **Retarget EMEA and APAC at INSTRUMENTS, not regions.** Both regional legs returned zero
+   education-specific results from the brief's phrasing, and the diagnosis is the query, not the region
+   — the same retargeting that worked for North America at `p274`. Concretely: `EU AI Act Annex III
+   education high-risk 2026`, and named APAC jurisdictions (Korea's AI Basic Act in education, Singapore
+   MOE guidance, Japan MEXT, India NEP) rather than `APAC`.
+4. 🟡 **Try to read ONE LATAM source first-hand.** Every figure in this pass's best leg is snippet grade
+   because `digitaleducationcouncil.com`, `unu.edu` and `ess.iesalc.unesco.org` are all **CONNECT 403**.
+   🔵 **Record the channel result either way** — a re-tested refusal is a budget (`ACTION YE`), and three
+   403s is a reason to ask for the policy to be widened rather than to re-buy the same leg.
+5. 🔵 **Re-run `T32` over the four cells this pass added to `market.md`** (IMARC `$6.4B → $79.6B`, TBRC
+   `$7.52B → $10.6B`, and the two GVR windows). The derived CAGRs are stated as derived, but **`T42`'s
+   lesson is that a cell can be internally sound and still splice two vintages** — and `make sweep`
+   already exists.
+6. 🔴 **THE HIGHEST-LEVERAGE ITEM, and it is new: audit every numbered `P###` principle on this base
+   for a domain it never crossed.** `P275` and `P278` were written at pase 93 **with working code**, and
+   for ~180 passes they were applied to **directory** trees while the licence work extended ladders. The
+   defect was not a missing principle — it was a principle **confined to the domain it was born in**.
+   🔵 `grep -o 'P[0-9]\{3\}' compose/code/*/README.md` enumerates the candidates; for each, ask *which
+   other shelf does this predicate apply to, and has anyone run it there?* **Zero searches, and this
+   pass is the evidence that the yield is high.**
+7. ⚠️ **Do NOT re-buy the brief's four generic legs as written.** Ninth consecutive nil on supply.
+   `p273` and `p274` both said so and both were right; this pass ran them only because the brief
+   mandates them, and recorded the result so the instruction can be costed rather than obeyed blindly.
+
 ## Pass 274 — **THE GAP REGISTER ITSELF WAS THE DEFECT TWICE OVER: a slug that does not resolve became a LICENCE REFUTATION, and a row in `agents/top.md` was declared unresolvable by a later section of the same file**
 
 ⏱️ **Twentieth pass of `2026-10-17`.** Append-only; nothing below is rewritten.

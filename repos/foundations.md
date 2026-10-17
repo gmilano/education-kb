@@ -43,7 +43,7 @@ where pass 273's finding landed**; it landed on the agent shelf and on licence m
 | Repo | Licence | Stars | Why it is a foundation |
 | 🆕 [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** *(`main/LICENSE`, `1 150` B, payload read + diffed, `p274`)* — ⚠️ **core only: 12 Pro modules sold separately** | 54★ / **98 forks** *(carried; no star read from GitHub this pass)* | **Self-hosted school ERP / SIS** on PHP 8.4 + Laravel. 🟢 **The permissive SIS layer this base has said for nine passes does not exist** — and the reason it was missing is that the base probed a slug that does not resolve, twice (`T44`). 🔵 **Its fork network is its adoption evidence**: 98 forks, near-zero fork stars, institution-shaped fork names across **India, Indonesia and Vietnam** (`P933` — software institutions RUN rather than developers EXTEND). ⚠️ **Deployment-placed APAC; origin not established.** ⚠️ **Price the Pro modules before the SOW** |
 |------|---------|-------|------------------------|
-| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | **Interactive learning with automated feedback**, from TUM Applied Education Technologies. Programming, quiz, modelling and text exercises with automatic assessment and an integrated CI runner. The strongest MIT-licensed teaching platform found this pass — production-grade and university-maintained. **Pass 266:** it ships three *config-gated* AI subsystems — **Iris** (LLM tutor, [`ls1intum/Iris`](https://github.com/ls1intum/Iris), MIT), **Pyris** (the LLM microservice behind it, [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris), MIT) and **Athena** (feedback suggestion, [`ls1intum/Athena`](https://github.com/ls1intum/Athena), **licence UNVERIFIED — no payload**), plus **Hyperion** (AI exercise authoring, not a separate repo). Config-gated matters: the platform runs identically with AI off, which is the posture an EU AI Act high-risk classification wants. |
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | **Interactive learning with automated feedback**, from TUM Applied Education Technologies. Programming, quiz, modelling and text exercises with automatic assessment and an integrated CI runner. The strongest MIT-licensed teaching platform found this pass — production-grade and university-maintained. **Pass 266:** it ships three *config-gated* AI subsystems — **Iris** (LLM tutor, [`ls1intum/Iris`](https://github.com/ls1intum/Iris), MIT), **Pyris** (the LLM microservice behind it, [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris), MIT) and **Athena** (feedback suggestion, [`ls1intum/Athena`](https://github.com/ls1intum/Athena), 🟢 **MIT at metadata grade since p275** — no licence *file* exists (tree enumerated, 691 paths) but **12 of 14 manifests declare `license = "MIT"`**; the earlier *"all-rights-reserved"* verdict is retracted), plus **Hyperion** (AI exercise authoring, not a separate repo). Config-gated matters: the platform runs identically with AI off, which is the posture an EU AI Act high-risk classification wants. |
 | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | MIT | 4.1k | FSRS, the modern spaced-repetition scheduler. The highest-adoption learning-science component in open source. Pair with [fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) (BSD-3-Clause) for a Rust core you can embed. |
 | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT | 450 | The reference PyTorch knowledge-tracing benchmark library: standard datasets, standard splits, comparable baselines. If a client asks "can you predict what this student knows", this is the honest starting point. |
 | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT | 352 | Source-code plagiarism detection (UGent). In the GenAI era this is no longer a niche: it is the integrity layer every coding course now needs. |
@@ -378,6 +378,35 @@ from absence.
   good figure on noise is as bad as publishing a bad one. Three independent agreements, including
   one to the byte, say this base's APAC licence cells are sound.**
 
+## Pass 275 — a GPL-2.0 grant was sitting at `docs/License.txt`, and the ladder that missed it had been extended four times
+
+⏱️ **Twenty-first pass of `2026-10-17`.** Evidence:
+[`tree-enumeration.2026-10-17-p275.tsv`](../evidence/tree-enumeration.2026-10-17-p275.tsv) ·
+[`athena-manifest-census.2026-10-17-p275.tsv`](../evidence/athena-manifest-census.2026-10-17-p275.tsv) ·
+[`verified-repos.2026-10-17-p275.tsv`](../evidence/verified-repos.2026-10-17-p275.tsv).
+
+- 🟢 **`ls1intum/Athena` is CLOSED, and it closed upward.** Carried on this shelf as *"still silent — no
+  grant across 76 path/ref probes over three passes."* **12 of its 14 manifests declare
+  `license = "MIT"`**, unanimous. The 76 probes were aimed at the **root** `pyproject.toml` — a 632-byte
+  Poetry workspace stub with **zero occurrences of `license`**. See `T47`: **a monorepo declares its
+  grant per package**, and Athena's reusable modules are exactly the packages that declare it.
+- 🔴 **`os4ed/openSIS-Classic` was never unverifiable** (`verticals/solutions.md`): **`docs/License.txt`**
+  serves verbatim **GPL-2.0**, HTTP 200, **17 286 B**, complete instrument, rider-cleared. The ladder
+  tried `docs/LICENSE`; it never tried **mixed case + `.txt`**. The vendor comparison articles this base
+  dismissed were right.
+- 🟢 **Eleven carried absences are now DEFINITIVE rather than probabilistic**, because the trees were
+  *enumerated* rather than sampled — and two are explained rather than merely confirmed:
+  `datawhalechina/ai-edu-for-kids` has no payload because **its tree holds two files**, and
+  `OpenEMIS/OpenEMIS-Core` holds **11**, confirming `p267`'s read that what this base can reach is a thin
+  Docker packaging repo and **not** the ministry application source.
+- ⚠️ **A licence-like path is not a grant.** `kolibri-design-system` enumerates **7** licence-like paths
+  and **all 7 are Vue icon components** (`KIcon/precompiled-icons/mdi/license.vue`); openSIS carries **20**
+  vendored dependency licences (ckeditor, PhpSpreadsheet, htmlpurifier); Artemis carries a
+  `LicenseService.java`. The gate in `compose/code/pass275-grant-enumeration/` has a control for each.
+- 🟢 **`make gate-enumeration` is now in `make hooks`** and will fail any shelf that asserts an absent
+  grant an enumeration refutes. **`QUEUE-UNENUMERATED=124`** negative verdicts across this base still
+  rest on a ladder — the honest size of the backlog, printed on every run.
+
 ## Pass 274 — the nine-pass nil on this file ENDS, with a row this base had refused twice
 
 ⏱️ **Twentieth pass of `2026-10-17`.** Evidence:
@@ -413,7 +442,7 @@ it failed is the information:
   *"Copyright (c) 2020 Thomas Debay and project contributors"*. The row carried `MIT | —` since it was
   shelved. 🔵 Worth noting the direction: the vendor page that surfaced it this pass says the licence
   **"is not named"**; the payload names it. **An aggregator's hedge is not evidence of absence.**
-- 🔴 **`gegok12/gegok12` REFUSED** — an MIT claim with no payload on 15 path/ref combinations, and an
+- 🔴 **`gegok12/gegok12` REFUSED** *(**SUPERSEDED** — overturned immediately below; the slug does not exist)* — an MIT claim with no payload on 15 path/ref combinations, and an
   **open-core shape** (26 of 38 modules free, 12 Pro modules sold) that would not deliver what the claim
   implies even if verified.
   🔴 **OVERTURNED IN PASS 274, AND THE SENTENCE ABOVE CONTAINS ITS OWN DIAGNOSIS: THE SLUG IS WRONG.**
@@ -476,10 +505,14 @@ named thing by hand or grepping this repository** — not from a generic search 
 🟡 **Where this file is still weak, restated rather than quietly inherited:**
 - 🔴 **No permissive North American system of record.** The **Ed-Fi** stack remains shelved
   (`p268`), and nothing has replaced it.
-- 🔴 **`ls1intum/Athena` is still silent** — no grant across **76 path/ref probes over three
-  passes**. 🔵 Contrast `muskvdc/EduTwin-Africa`, whose README *says* the licence is missing
-  (`PRE-LICENCE`, `p269`): that one is worth an email and Athena is not.
+- 🟢 **CLOSED in `p275` — `ls1intum/Athena` was never silent, and the 76 probes were aimed at the
+  one manifest that is.** No licence *file* exists (tree **enumerated**: 691 paths, zero
+  licence-like), but **12 of 14 manifests declare `license = "MIT"`**, unanimous. The ladder
+  probed the ROOT `pyproject.toml` — a 632-byte Poetry workspace stub with **zero occurrences of
+  `license`**. 🔵 **A monorepo declares its grant per package**, so a root-only metadata probe
+  cannot see it. The *"worth an email"* judgement is inverted too: Athena needed no email, and
+  `muskvdc/EduTwin-Africa` (`PRE-LICENCE`, `p269`) remains the row where asking is the only path —
+  its tree was enumerated this pass as well (384 paths, nothing licence-like).
 - ⚠️ **A ref-sensitivity reminder that cost a published figure once:** `learningequality/kolibri`
   serves **MIT on `develop`** and **404 on `main`**. Probe the **resolved** default ref
   (`git ls-remote --symref`), never a guessed one.
-

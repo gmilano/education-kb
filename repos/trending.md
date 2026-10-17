@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 275) — A GPL-2.0 grant sat at `docs/License.txt` through 76 probes, because no ladder on this base ever spelled it that way
+
+⏱️ **Twenty-first pass of `2026-10-17`.** Append-only — everything below is prior history and is not
+rewritten. Evidence:
+[`tree-enumeration.2026-10-17-p275.tsv`](../evidence/tree-enumeration.2026-10-17-p275.tsv) *(13 slugs, zero searches)* ·
+[`verified-repos.2026-10-17-p275.tsv`](../evidence/verified-repos.2026-10-17-p275.tsv) ·
+[`p275-websearch.2026-10-17-p275.tsv`](../evidence/p275-websearch.2026-10-17-p275.tsv) *(8 legs)*.
+
+### 🔴 `os4ed/openSIS-Classic` — RESOLVED, and the published refusal was wrong in five places on three shelves
+
+This base carried openSIS as *"Resolves, but **no licence payload served** on any path tried. Not
+shelved; this KB does not publish a licence it has not read."* The sentiment was right. The measurement
+was not.
+
+| | |
+|---|---|
+| **grant** | `docs/License.txt` — **HTTP 200, 17 286 B**, verbatim *GNU General Public License, Version 2, June 1991* |
+| **completeness** | all **12** numbered terms **plus** the *"How to Apply These Terms"* appendix ⇒ complete instrument, **rider-cleared** per `T39`. The lone `noncommercial` hit is GPL-2.0's own §3 text |
+| **second copy** | `docs/LICENSE.rtf` (200, 61 575 B) — same instrument, RTF |
+| **why it was missed** | the ladder tried `docs/LICENSE`. The file is `docs/License.txt` — **mixed case *and* `.txt` *and* under `docs/`**. A prior cell recorded *"no payload in **17 filenames**"*; 🔴 **the 17 did not include this one** |
+
+🔵 **The vendor comparison articles this base dismissed were right, and this base was wrong** — openSIS
+really is the GPL-2.0 SIS they call it. What changed is that it has now been **read**. ⚠️ And the shelving
+reason changes rather than disappears: **GPL-2.0 is copyleft on distribution**, so scope it on the
+licence's *reach*, not on a missing grant.
+
+### 🔴 The method was already on this base, and that is the actual finding
+
+A **19-path × 4-ref ladder can only ever refute the 19 paths it tried.** Publishing that as *"no grant"*
+states something the probe never tested. 🔴 **And this base had said so in writing since `2026-10-04`:**
+[`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/) (pase 93) states
+**`P275`** — *para sostener una ausencia en un árbol hay que ENUMERARLO* — plus **`P278`** — *un conteo
+de CERO sobre una ruta que no existe en esa ref mide la RUTA, no el contenido* — **and ships a working
+blobless-clone enumerator.** 🔵 **`P278` is openSIS's defect, named ~180 passes early.** The principle
+was used on **directory** trees and **never on licence paths**. Enumeration cannot miss a path, because
+it never guesses one:
+
+```
+git ls-remote <slug> HEAD                                   # does the slug resolve at all?
+git clone --depth 1 --filter=blob:none --no-checkout <slug>  # blobless, seconds
+git ls-tree -r --name-only HEAD                              # EVERY path in the tree
+```
+
+`make enumerate SLUGS=f.txt` (online) · `make gate-enumeration` (offline, in `hooks`).
+
+🔵 **And a licence-like path is not automatically a grant.** The gate carries a control for each way that
+goes wrong, all three drawn from this base's own rows: **vendored** dependencies (openSIS alone holds
+**20** — ckeditor, PhpSpreadsheet, htmlpurifier), **source files** that merely carry the word
+(`LicenseService.java` in Artemis), and **icon assets** — `kolibri-design-system` holds **7**
+licence-like paths and **all 7 are Vue icon components** (`KIcon/precompiled-icons/mdi/license.vue`).
+A naive grep calls that a grant.
+
+### 🟢 Eleven negative verdicts are now DEFINITIVE rather than probabilistic
+
+Enumeration upheld every other carried absence, and in two cases explained it: `datawhalechina/ai-edu-for-kids`
+has **no payload because its tree holds two files**, and `OpenEMIS/OpenEMIS-Core` holds **11** — confirming
+`p267`'s read that what this base can reach is a thin Docker packaging repo, not the ministry application
+source. `autoGrader-frontend` (36), `touretzkyds/ai4k12` (190), `edunaija-os` (310), `EduTwin-Africa` (384),
+`adriasantacreu/google-classroom-mcp` (15) and `kolibri-design-system` (15 448) all enumerate clean.
+
+### ⚠️ Channel state, re-tested not inherited — and one trap recorded
+
+`raw.githubusercontent.com` **200** · git smart-HTTP (`ls-remote`, blobless clone) **OK** ·
+`registry.npmjs.org` **200** · `github.com` HTML **403**.
+🔴 **`api.github.com/rate_limit` answers 200 while `api.github.com/repos/<slug>` answers 403** (a
+session-scope message, *not* a rate limit), and `/search` 403. **`api.github.com` is NOT open**;
+`p274`'s 403 was correct. 🔵 **A channel probed at one path can license a false conclusion about the
+channel** — reading that 200 as access would have published an open API this base does not have. **No
+star count was read from GitHub this pass either**; every star figure on these shelves is carried from an
+earlier pass and marked so. `digitaleducationcouncil.com`, `unu.edu` and `ess.iesalc.unesco.org` are all
+**CONNECT 403** — which is why pass 275's LATAM figures are published at snippet grade.
+
 ## 2026-10-17 (pass 274) — The nine-pass nil on `repos/foundations.md` ends, and the row that ends it is one this base REFUSED twice on a slug that does not exist
 
 ⏱️ **Twentieth pass of `2026-10-17`.** Append-only — everything below is prior history and is not
@@ -153,7 +225,7 @@ rewritten. Evidence:
 
 | candidate | claim | verdict |
 |---|---|---|
-| **`gegok12/gegok12`** | *"free core is free forever under the MIT licence"*, 26 of 38 modules free, 12 Pro modules $100–$250 — a **vendor listing** | 🔴 **NOT ESTABLISHED.** No payload on **15 path/ref combinations**. ⚠️ And the claim's *shape* is open-core: an MIT label over a product whose paid modules are the reason a client would buy it |
+| **`gegok12/gegok12`** | *"free core is free forever under the MIT licence"*, 26 of 38 modules free, 12 Pro modules $100–$250 — a **vendor listing** | 🔴 **SUPERSEDED 2026-10-17 (p274/p275): the slug on this row does not exist.** The real repository is `Gego-K12/gegok12` and it serves **MIT** at `main/LICENSE` (200, `1 150` B). Original text kept per the append-only rule. — 🔴 **NOT ESTABLISHED.** No payload on **15 path/ref combinations**. ⚠️ And the claim's *shape* is open-core: an MIT label over a product whose paid modules are the reason a client would buy it |
 | **`projectfedena/fedena`** | **Apache-2.0** | 🔴 **NOT ESTABLISHED — and this independently reproduces `p265`.** 🔵 `p272` adds the provenance: the page asserting Apache-2.0 is **`openeducat.org`, a direct competitor's comparison**. **A licence claim from a rival vendor is not a licence** |
 | **`academico-sis/academico`** | a comparison page says the licence **"is not named"** | 🟢 **MIT at payload, 1,094 B, `main/LICENSE`.** The first-hand read **beat the aggregator's hedge**, and it fills in a byte column this base carried as `—` since the row was shelved |
 
@@ -763,7 +835,7 @@ except DeepTutor. True, still, for grading *agents*.
 |-----------|----------------|------------------------|
 | [formalms/formalms](https://github.com/formalms/formalms) | **Apache-2.0** LMS, by a 2026 open-source-LMS review | **GNU GPL v2**, at `html/license.txt`. Project is alive (last commit 2026-07-17) — just not permissive. |
 | Fedena: [foradian/fedena](https://github.com/foradian/fedena), [projectfedena/fedena](https://github.com/projectfedena/fedena) | **Apache-2.0** education ERP/SIS, by vendor comparison tables | **No licence payload at all** (Apache-2.0 stated in `README.markdown` and `NOTICE` only), and **abandoned**: last commits **2012-10-12** and **2016-07-20** (message: *"emptying content"*). |
-| [os4ed/openSIS-Classic](https://github.com/os4ed/openSIS-Classic) | GPL-2.0 SIS | Resolves, but **no licence payload served** on any path tried. Not shelved; this KB does not publish a licence it has not read. |
+| [os4ed/openSIS-Classic](https://github.com/os4ed/openSIS-Classic) | GPL-2.0 SIS | Resolves, but **no licence payload served** on any path tried. Not shelved; this KB does not publish a licence it has not read. — 🔴 **SUPERSEDED 2026-10-17 (p275): this cell was wrong.** The grant is at `docs/License.txt` (GPL-2.0, 200, 17 286 B); the ladder never tried that path. Original text kept per the append-only rule. |
 
 Both directions of error landed in one pass: **a permissive platform missed for months
 (Kolibri, Oppia), and two permissive platforms imagined (forma.lms, Fedena)**. The published
@@ -12501,7 +12573,7 @@ are `topics/lms` (2 432) and `topics/ai-tutor` (664). **Do not re-buy `topics/ed
 `oat-sa/tao-core` **LGPL-3.0** · `celtic-project/LTI-PHP` **LGPL-3.0** ·
 `1EdTech/openbadges-specification` **no payload** (the spec repo has no grant; the validator is Apache-2.0) ·
 `eecs-autograder/autograder.io` **no payload** (docs repo, consistent with its README) ·
-`OS4ED/openSIS-Classic` **no payload in 17 filenames** despite being listed as GPL in comparison articles.
+`OS4ED/openSIS-Classic` **no payload in 17 filenames** despite being listed as GPL in comparison articles. — 🔴 **SUPERSEDED 2026-10-17 (p275):** the comparison articles were right and this base's probe was wrong. `docs/License.txt` serves verbatim GPL-2.0 (200, 17 286 B); **the 17 filenames did not include it.** Original text kept per the append-only rule.
 
 ## 🟢 2026-10-09 — pass 89: `topics/scorm` bought (220 repos), the "Load more" wall falls to `?page=2`, and a topic channel's TAIL degrades by publisher
 

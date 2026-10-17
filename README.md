@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 275 — 2026-10-17 — **THE POSITIVE CONTROL `p274` ORDERED PASSED CLEANLY, AND RUNNING IT IS STILL HOW THE REAL DEFECT SURFACED: A PATH LADDER CANNOT PROVE ABSENCE**
+
+⏱️ **Twenty-first pass of `2026-10-17`.** Evidence:
+[`tree-enumeration.2026-10-17-p275.tsv`](evidence/tree-enumeration.2026-10-17-p275.tsv) — **13 slugs,
+`ls-remote` positive control plus full tree enumeration, zero searches** ·
+[`athena-manifest-census.2026-10-17-p275.tsv`](evidence/athena-manifest-census.2026-10-17-p275.tsv) —
+**14 manifests, every one read at payload, zero searches** ·
+[`verified-repos.2026-10-17-p275.tsv`](evidence/verified-repos.2026-10-17-p275.tsv) ·
+[`p275-websearch.2026-10-17-p275.tsv`](evidence/p275-websearch.2026-10-17-p275.tsv) — **8 legs**.
+
+### 🟢 Headline: the agent this base told studios they could not use has been MIT all along, and it says so twelve times
+
+`p274` ranked one item first, at zero searches: *"re-probe every negative licence verdict with
+`ls-remote` as a positive control — the mechanism that produced the `gegok12` false negative is not
+specific to that row."*
+
+🟢 **It was run over all 13 negative-verdict slugs, and it returned a clean negative result: the
+mechanism is NOT endemic.** `gegok12/gegok12` fails `ls-remote` with `rc=128` exactly as a nonexistent
+repository does, and **all twelve other slugs resolve.** 🔴 **Then the same sweep refuted two of this
+base's own published verdicts — for a different reason entirely.**
+
+| row | what this base published | what enumerating the tree found |
+|---|---|---|
+| **`ls1intum/Athena`** | *"no grant across **76 path/ref probes** over three passes; treat as **all-rights-reserved**; ask TUM for the licence in writing"* | 🔴 **12 of 14 manifests declare `license = "MIT"`**, unanimous. Now the **24th permissive row** |
+| **`os4ed/openSIS-Classic`** | *"no licence payload served on any path tried"*, carried multiple passes | 🔴 **`docs/License.txt` — verbatim GPL-2.0, HTTP 200, 17 286 B.** Published as false in **five places across three shelves** |
+
+🔴 **Both failures were structurally guaranteed, not unlucky.** Athena's root `pyproject.toml` — the
+exact path the ladder probed, four refs over — is a **632-byte Poetry workspace stub containing zero
+occurrences of the string `license`**. It is the one manifest in the repository that is silent. openSIS's
+grant is at **mixed case *and* `.txt` *and* under `docs/`**; an earlier cell recorded *"no payload in 17
+filenames"* and **the 17 did not include it**.
+
+### 🔴 The defect species — and the worst part: THIS BASE ALREADY HELD THE PRINCIPLE, AND THE CODE
+
+🔴 **The method below is not new to this base, and that is the finding.**
+[`compose/code/p275-tree-enumeration/`](compose/code/p275-tree-enumeration/) — **pase 93,
+`2026-10-04`** — states it outright, and ships a working blobless-clone enumerator (`sweep_tree.sh`):
+
+> **`P275`**: *para sostener una ausencia en un árbol hay que ENUMERARLO.*
+> **`P278`**: *un conteo de CERO sobre una ruta que no existe en esa ref mide la RUTA, no el contenido.*
+
+🔴 **`P278` describes this pass's two false negatives exactly** — openSIS's grant is at a path the ladder
+never spelled, Athena's at a manifest the ladder never reached — **and the principle, the corollary and
+the instrument had all been sitting in `compose/code/` for ~180 passes.** They were applied to
+**directory** trees (ILIAS components, `frappe`, `openeducat`) and **never to licence paths**, where the
+work went on extending ladders instead: `p267`'s `19 × 4`, `p273`'s `ACTION YU`.
+
+🔵 **`p274` wrote this pass's diagnosis and did not apply it to itself:** *"a correction applied to one
+instance is not a correction to the class."* **`P275` was the correction; licences were the instance it
+never reached.** **Seventh consecutive pass whose defect species was invisible to the check written one
+pass earlier — and the first in which the lesson was already written on this base in GENERAL form, with
+code, and was simply never carried across domains.**
+
+🟢 **So the fix was not to invent a method. It was to apply `P275` where it had never been applied:**
+
+```
+git ls-remote <slug> HEAD                                    # positive control: does it resolve?
+git clone --depth 1 --filter=blob:none --no-checkout <slug>   # blobless, seconds
+git ls-tree -r --name-only HEAD                               # EVERY path.  No guessing.
+```
+
+### 🟢 What a studio can do today that it could not yesterday
+
+**Artemis (MIT) + Iris (MIT) + Pyris (MIT) + Athena (MIT, metadata)** is one permissively-graded
+automated-feedback stack from TU Munich — platform, tutor, LLM microservice **and the grading engine**.
+🔴 This base spent three passes advising engagements to build the grading half from scratch, and the
+entire reason was a verdict produced by probing one 632-byte file. **New pattern `P26`** in
+[`compose/patterns.md`](compose/patterns.md).
+
+### 🟢 The instrument is BUILT, and running it corrected it five times
+
+[`compose/code/pass275-grant-enumeration/`](compose/code/pass275-grant-enumeration/) — **30 controls**, offline
+half in `make hooks`, online half deliberately out of it so the standing check runs without egress.
+`p274`'s own lesson was that *"an amendment that is not built gets violated by the next pass"*.
+
+🔴 **Every one of the gate's five self-corrections came from running it on the live shelves**, and four
+share one root cause — **one line can carry two subjects**: it reported `ls1intum/Artemis`, an MIT row
+with a root `LICENSE`, as **refuting itself**; then missed a subject named in bold **prose** rather than
+as a link (which found **2 further** live openSIS occurrences); then flagged **this pass's own new row**,
+because it opens *"**Artemis's** feedback-suggestion engine"* — **a possessive is a modifier, not a
+subject.** 🔴 **Then the two expensive ones:** a **dead slug laundered a false claim** about the real
+repository of the same basename (`gegok12/gegok12` vs `Gego-K12/gegok12`), hiding **three** stale
+restatements; and a **single `re.I`** let a suppressing predicate match a vendor's marketing prose
+(*"the MIT licence"*) and **silence two live claims** — a gate's own false negative, which reports PASS.
+
+**`REFUTED=0 · VERIFIED-ABSENT=28 · QUEUE-UNENUMERATED=124`** · `ALL OFFLINE LICENCE CONTROLS PASS` ·
+`STALE=0 of 4`.
+
+### 🔵 Regional battery: one strong leg, two honest blanks
+
+🟢 **LATAM was the strongest of the eight legs** and the only one returning 2026 education-specific
+primary research: **92% of students and 79% of faculty** actively using AI (Digital Education Council,
+30 000+ responses / 29 institutions, with Tec de Monterrey), UNESCO **IESALC** across **200 institutions
+in 19 countries** (teaching 73.5% · research 57.0% · administration 34.1%), and **only ~30% of LATAM
+universities have published AI-use policies**. 🔴 **The gap is the engagement, now quantified on both
+sides.** ⚠️ **All of it is SNIPPET grade** — `digitaleducationcouncil.com`, `unu.edu` and
+`ess.iesalc.unesco.org` are all **CONNECT 403**, and not one page was read first-hand. This base does
+not publish a licence it has not read; it marks a figure it could not read either.
+
+🔴 **EMEA and APAC returned ZERO education-specific results**, and both are published **with the query
+that produced them** (`ACTION RE`) — because an informed gap is information and silence looks exactly
+like coverage. 🔵 **Diagnosed as narrow-query blanks, not quiet regions:** the EU AI Act's education
+provisions are already carried on these shelves; the regional phrasing simply does not reach them.
+**`p276` should query the instrument, not the region.**
+
+### 🔵 Declared gaps and the backlog for `p276`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). The highest-value item needs zero
+searches and is already measured: **`QUEUE-UNENUMERATED=124`** negative licence verdicts still rest on a
+path ladder, and **two of the first thirteen enumerated were false.** `make enumerate` is built; working
+that queue is budget, not design.
+
 ## Pass 274 — 2026-10-17 — **THE GAP REGISTER WAS THE DEFECT: A LICENCE WAS REFUTED TWICE BY PROBING A SLUG THAT DOES NOT EXIST, AND A ROW WAS DECLARED UNRESOLVABLE 410 LINES BELOW ITSELF**
 
 ⏱️ **Twentieth pass of `2026-10-17`.** Evidence:

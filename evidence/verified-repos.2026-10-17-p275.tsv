@@ -1,0 +1,21 @@
+# pass 275 — 2026-10-17. Every grant below read FIRST-HAND this pass from raw.githubusercontent.com.
+# method: curl -w '%{size_download}' (P929's recorded method) for bytes; git ls-remote for existence
+# (POSITIVE CONTROL, per p274's ranked backlog); git ls-tree over a blobless clone for path discovery.
+# channel re-tested this pass, NOT inherited: raw.githubusercontent.com 200 · git smart-HTTP OK ·
+# api.github.com/rate_limit 200 but /repos/<slug> 403 + /search 403 => api.github.com NOT open ·
+# github.com HTML 403 · registry.npmjs.org 200 · www.digitaleducationcouncil.com CONNECT 403 (curl)
+# and ENOTFOUND (WebFetch) · unu.edu CONNECT 403 · ess.iesalc.unesco.org CONNECT 403 ·
+# www.grandviewresearch.com CONNECT refused.
+# NO star count in this pass was read from GitHub. Stars are carried from earlier passes and marked so.
+slug	ref	grant_path	http	bytes	licence	rider_keywords	verdict	note
+os4ed/openSIS-Classic	HEAD	docs/License.txt	200	17286	GPL-2.0	none (the single "noncommercial" hit is GPL-2.0's own section 3 text)	🔴 RESOLVED — carried as licence-UNVERIFIED for multiple passes	Verbatim GNU GPL Version 2, June 1991. 12 numbered terms + the "How to Apply These Terms" appendix both present => complete instrument, rider-cleared per T39. BOM-prefixed, paragraphs reflowed (so a byte-diff against stock GPL-2.0 is not meaningful; completeness was established structurally instead). Second payload at docs/LICENSE.rtf (200, 61575 B) is the same instrument in RTF. THE LADDER NEVER TRIED docs/License.txt.
+ls1intum/Athena	HEAD	pyproject.toml (ROOT)	200	632	NONE — zero occurrences of "license"	n/a	🔴 THIS IS THE FALSE-NEGATIVE MECHANISM	This is the exact path the 19-path x 4-ref ladder probed, 76 times, across three passes. It is a Poetry workspace stub: name/version/description/authors/scripts/build-system, and no licence field. Probing it and concluding "silent" was structurally guaranteed to fail.
+ls1intum/Athena	HEAD	athena/pyproject.toml	200	-	MIT (metadata)	none	🔴 RETRACTS the all-rights-reserved verdict	license = "MIT". One of 12 per-package manifests that declare it.
+ls1intum/Athena	HEAD	assessment_module_manager/pyproject.toml	200	-	MIT (metadata)	none	CONFIRMS	license = "MIT".
+ls1intum/Athena	HEAD	llm_core/pyproject.toml	200	-	MIT (metadata)	none	CONFIRMS	license = "MIT".
+ls1intum/Athena	HEAD	log_viewer/pyproject.toml	200	-	MIT (metadata)	none	CONFIRMS	license = "MIT".
+ls1intum/Athena	HEAD	modules/text/module_text_llm/pyproject.toml	200	-	MIT (metadata)	none	CONFIRMS	license = "MIT". The LLM text-feedback module — the piece an engagement would actually reuse.
+ls1intum/Athena	HEAD	modules/programming/module_programming_llm/pyproject.toml	200	-	MIT (metadata)	none	CONFIRMS	license = "MIT".
+ls1intum/Athena	HEAD	modules/modeling/module_modeling_llm/pyproject.toml	200	-	MIT (metadata)	none	CONFIRMS	license = "MIT".
+ls1intum/Athena	HEAD	(+4 more pyproject.toml)	200	-	MIT (metadata)	none	CONFIRMS	module_example, module_programming_apted, module_programming_themisml, module_programming_winnowing, module_text_cofee — full census in athena-manifest-census.2026-10-17-p275.tsv.
+ls1intum/Athena	HEAD	playground/package.json	200	-	NONE	n/a	SILENT	The second of the two silent manifests. Does not contradict; simply states nothing.

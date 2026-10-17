@@ -146,7 +146,7 @@ def measure(root):
 
     # permissive rows in agents/top.md's build-on tier: count the table between the
     # tier heading and the sentence that states the count.
-    tier = top.split("## Build-on-this tier")[-1].split("**23 permissive rows")[0] if "## Build-on-this tier" in top else ""
+    tier = top.split("## Build-on-this tier")[-1].split("**24 permissive rows")[0] if "## Build-on-this tier" in top else ""
     rows = [l for l in tier.splitlines() if l.startswith("|") and "github.com/" in l]
     m["permissive_rows_in_build_on_tier"] = len(rows)
     return m
@@ -160,8 +160,10 @@ CLAIMS = [
      "agents/top.md MCP section (p274). Was 3 on both shelves before this pass"),
     ("LMS platforms reachable by MCP, both agent shelves", "lms_platforms_on_agent_shelves", 6,
      "intel/trends.md T24 (p274). Was 3"),
-    ("permissive rows in the build-on tier", "permissive_rows_in_build_on_tier", 23,
-     "agents/top.md:61 ('23 permissive rows')"),
+    # 🟢 p275: 23 -> 24.  ls1intum/Athena moved UP from the licence-UNVERIFIED table after
+    # 12 of its 14 manifests were found to declare MIT.  Not a new repo -- a re-graded one.
+    ("permissive rows in the build-on tier", "permissive_rows_in_build_on_tier", 24,
+     "agents/top.md ('24 permissive rows')"),
 ]
 
 
