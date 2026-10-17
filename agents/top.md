@@ -13,7 +13,10 @@ updated: 2026-10-17
 > Evidence: [`verified-repos.2026-10-17-p264.tsv`](../evidence/verified-repos.2026-10-17-p264.tsv)
 > and [`verified-repos.2026-10-17-p265.tsv`](../evidence/verified-repos.2026-10-17-p265.tsv),
 > extended by [`verified-repos.2026-10-17-p266.tsv`](../evidence/verified-repos.2026-10-17-p266.tsv)
-> (pass 266: the Artemis/Iris/Pyris rows and the first payload-verified Portuguese-language agent).
+> (pass 266: the Artemis/Iris/Pyris rows and the first payload-verified Portuguese-language agent),
+> extended again by [`verified-repos.2026-10-17-p267.tsv`](../evidence/verified-repos.2026-10-17-p267.tsv)
+> (pass 267: the LMS-side MCP servers, and a re-probe of every "no licence payload" row against a
+> 19-path x 4-ref set that includes the **British spelling `LICENCE`**).
 
 ## Build-on-this tier — permissive licences (MIT / Apache-2.0 / BSD)
 
@@ -39,9 +42,15 @@ non-commercial friction.
 | Claw-ED | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | MIT | 62 | Local-first assistant that drafts editable lessons, student materials and slides from a curriculum. Teacher-reviewed beta — human-in-the-loop by design. |
 | AI_Tutor_Release (EduAgent) | [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | MIT | 65 | RAG tutor targeted at grades 1–9. |
 | tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | 49 | MCP server that turns any LLM into an intelligent tutoring system. Small, readable, and the right shape for embedding in a client's existing assistant. |
+| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 295 | **Canvas LMS MCP server — the agent row with the shortest path to a live client system.** 102–126 tools plus 8 agent skills over the Canvas API, works with Claude, Cursor, Codex and other MCP clients. v1.14.0 released October 2026, 1,026 commits, University of Illinois Urbana-Champaign named in the README. It makes the LMS a client **already runs** addressable by an agent **without forking the LMS** — see the tool-count caveat below. |
 
-**17 permissive rows, all licence-verified from payload.** (14 from passes 264-265, plus
-Artemis, Iris and Pyris verified in pass 266.)
+**18 permissive rows, all licence-verified from payload.** (14 from passes 264-265, plus
+Artemis, Iris and Pyris in pass 266, plus `canvas-mcp` in pass 267.)
+
+⚠️ **Cite `canvas-mcp`'s tool count as a range, not a number.** Its About blurb says *"up to 102
+tools"*; its README body says *"up to 126"*, and adds that the default profile registers fewer than
+either. Two numbers on one page is not a finding to resolve by picking one — quote the range and
+count the tools you actually enable.
 
 ## Verified but licence-restricted — read before you build
 
@@ -56,14 +65,17 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | freelingo | [artcc/freelingo](https://github.com/artcc/freelingo) | AGPL-3.0 | 179 | Self-hosted language learning with AI tutor and spaced repetition. Same AGPL network clause. |
 | lumen | [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | GPL-3.0 | 89 | Builds private courses and tutors learners with course-scoped RAG. GPL-3.0 copyleft on distribution. |
 | ai_tutor_forge | [guedesindev/ai_tutor_forge](https://github.com/guedesindev/ai_tutor_forge) | GPL-3.0 | 18 | Python 3 CLI that forges a personalized tutor over a user-chosen LLM. Notable as the **first Portuguese-language education agent this KB has payload-verified** — see the provenance caveat in the gaps below. GPL-3.0 copyleft on distribution, and at 21 commits it is a personal project, not a dependency. |
+| moodle-mcp-server | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | AGPL-3.0 | 1 | The Moodle-side counterpart to `canvas-mcp`: an MCP server over Moodle Web Services, 10 tools in the README table, 57 commits. **Two separate prices, not one.** AGPL-3.0's network clause reaches a hosted deployment, *and* the project is **open-core — the README sells premium plugin tools separately**. Scope any estimate to the free tool set, and note that the Moodle side of this category is roughly 1,000x less adopted than the Canvas side. |
+| canvas-mcp (minimal) | [admin978/canvas-mcp](https://github.com/admin978/canvas-mcp) | MIT | 4 | *"Local-first Canvas LMS MCP server. Stdio transport, ~125 lines of Python."* Permissive and worth **reading** — it is the smallest complete example of the pattern — but at 33 commits it is a reference, not a dependency. Listed here rather than on the build-on-this shelf for that reason, not for its licence. |
 
 ## Verified but licence-UNVERIFIED — do not assume the parent's licence
 
 | Repo | Status | Why it is not shelved |
 |------|--------|----------------------|
-| [ls1intum/Athena](https://github.com/ls1intum/Athena) | LIVE, **no licence payload** | Artemis's feedback-suggestion engine. No licence file served on `develop`, `main` or `master` across `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`. Artemis itself is MIT; **that does not license Athena.** Treat as all-rights-reserved until a payload says otherwise. If Athena matters to an engagement, ask TUM for the licence in writing. |
-| [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | LIVE, **no licence payload** | Parent `kolibri` is MIT (pass 265). The design-system repo serves no licence of its own. |
-| [autograder-org/autoGrader-frontend](https://github.com/autograder-org/autoGrader-frontend) | LIVE, **no licence payload** | README claims LLM-based assignment grading; 22 commits. Early-stage and unlicensed. |
+| [ls1intum/Athena](https://github.com/ls1intum/Athena) | LIVE, **no licence payload — upheld against a 19-path x 4-ref probe** | Artemis's feedback-suggestion engine. **Pass 267 re-probed this row properly rather than repeating it:** `LICENSE`/`LICENCE` and their `.md`/`.txt` variants, lowercase spellings, `COPYING`, `LICENSE-MIT`, `docs/LICENSE`, `.github/LICENSE`, `NOTICE`, and the package metadata (`package.json`, `pyproject.toml`, `setup.py`, `build.gradle`, `composer.json`) across `main`/`master`/`develop`/`HEAD` — **nothing on any of them**, and the GitHub page sidebar shows no licence either (6★, 675 commits, default ref `develop`). Artemis itself is MIT; **that still does not license Athena.** Treat as all-rights-reserved. If Athena matters to an engagement, ask TUM for the licence in writing. |
+| [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | **RESOLVED in pass 267 — MIT at *metadata* grade** | This base carried the row as "no payload, parent `kolibri` is MIT" — which is an **inference from the parent**, the weakest grade there is. The repo's `main/package.json` declares `"license": "MIT"`. That is the **project's own declaration**, so publish it as **MIT (metadata)**: stronger than an inference, weaker than a payload, and enough to build on while a payload is requested. It still serves no licence *file*. |
+| [autograder-org/autoGrader-frontend](https://github.com/autograder-org/autoGrader-frontend) | LIVE, **no licence payload — upheld against the 19-path x 4-ref probe** | README claims LLM-based assignment grading; 22 commits. Early-stage and unlicensed. Pass 267 confirms it is not a detection artefact. |
+| [OpenEMIS/OpenEMIS-Core](https://github.com/OpenEMIS/OpenEMIS-Core) | LIVE, **no licence payload**, none in the page sidebar | *"Manage students and staff information at school, district, and national level."* OpenEMIS is the education-management system most associated with **ministry-level** deployment, which is why pass 267 probed it by hand. What this KB can actually reach is a **32-commit Docker packaging repo (7★) with no licence and no ministry or country named in it.** The application source was not located this pass. **Ministry provenance is not established — do not brief it as a public-sector reference.** |
 
 ## Licence corrections this pass
 
@@ -95,9 +107,24 @@ permissively licensed — syllabus through assessments. **Claw-ED** for local-fi
 drafting where student data cannot leave the building. **lineage-skill** when provenance of
 generated material is a procurement requirement (it is, increasingly, in EMEA).
 
-### Agents over existing study tooling
-**anki-mcp-server** and **tutor-mcp** are the two MCP servers worth knowing: they let an
-agent drive spaced repetition and tutoring loops without rebuilding either.
+### Agents over the systems the client already runs (MCP)
+Four education MCP servers are now payload-verified, and pass 267 split them into two jobs
+that are easy to confuse:
+
+| Server | Licence | Stars | What it reaches |
+|--------|---------|-------|-----------------|
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | **MIT** | 295 | **Canvas LMS itself** — courses, assignments, grades, 102–126 tools, 8 agent skills |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | AGPL-3.0, open-core | 1 | **Moodle** via Moodle Web Services — 10 free tools, premium tools sold separately |
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | 516 | The learner's **Anki** collection — spaced repetition |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | 49 | No external system — it **is** the tutoring loop |
+
+**The distinction that matters commercially:** `anki-mcp-server` and `tutor-mcp` reach *study
+tooling*, which the learner owns. `canvas-mcp` and `moodle-mcp-server` reach the **institution's
+system of record**, which is where the client's data, roster and grades actually live. That is the
+difference between a demo and an engagement — and `canvas-mcp` reaches it under **MIT**, at 295
+stars and 1,026 commits, with no fork of the LMS required. Where the institution runs Moodle
+rather than Canvas, the equivalent is AGPL, open-core and a thousand times less adopted; price
+that asymmetry in before promising LMS parity.
 
 ### Assessment, grading and feedback
 **Artemis** (MIT, TU Munich) is the starting point when assessment is the deliverable: automated
@@ -170,5 +197,17 @@ at integration work rather than wholesale import.
   changes procurement:** Athena's own repo serves **no licence payload** — the MIT grant covers
   Artemis, not necessarily Athena. Get it in writing before it ships in a deliverable.
 - **`mcp-server-education` as a GitHub topic is empty** — "hasn't been used on any public
-  repositories, yet" — while two real education MCP servers exist. The category is real and
-  unlabelled; that is a naming gap, and a small opening for whoever labels it first.
+  repositories, yet" — while **four** payload-verified education MCP servers now exist (pass 267
+  added the two LMS-side ones). The category is real and unlabelled; that is a naming gap, and a
+  small opening for whoever labels it first. **Note what it cost to find them:** the topic index is
+  empty, so they were located through a web search for *"MCP server Moodle Canvas LMS"* and then
+  payload-verified by hand. A topic-listing leg will keep reporting this category as non-existent.
+- **The Spanish-language gap was re-tested in Spanish this pass, and it holds.** A search leg run
+  in Spanish — *"github tutor IA educación código abierto español 2026 repositorio"* — returned **no
+  Spanish-language education agent repository at all**: the results were GitHub Education marketing
+  pages, a 2019 Universidad Politécnica de Madrid paper on teaching with Git, and unrelated blog
+  guides. So the gap is not an artefact of searching in English. The nearest thing located is
+  [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) (MIT, 4★), *"Built by AGENTE 404
+  S.L."* — a **Spanish company form**, but its README is in English and **no country is stated**,
+  which is weaker evidence than the Portuguese-language `ai_tutor_forge` row above. **Standing
+  claim, unchanged: no Spanish- or Portuguese-language education agent with adoption.**

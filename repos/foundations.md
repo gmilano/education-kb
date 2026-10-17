@@ -12,7 +12,12 @@ updated: 2026-10-17
 > Evidence: [`verified-repos.2026-10-17-p264.tsv`](../evidence/verified-repos.2026-10-17-p264.tsv)
 > and [`verified-repos.2026-10-17-p265.tsv`](../evidence/verified-repos.2026-10-17-p265.tsv) —
 > the later pass adds 13 payload-verified repositories, refutes two published permissive claims
-> (forma.lms, Fedena) and **retracts this file's own LATAM gap**.
+> (forma.lms, Fedena) and **retracts this file's own LATAM gap**. Extended by
+> [`verified-repos.2026-10-17-p267.tsv`](../evidence/verified-repos.2026-10-17-p267.tsv) — pass 267
+> ranks this layer by **commits** instead of stars and by that measure finds the largest education
+> codebase in open source (`instructure/canvas-lms`, **78,765 commits**) was missing from this file
+> altogether, along with three permissive autograding/infrastructure rows and a **national education
+> ministry publishing production services under MIT**.
 
 ## Permissive foundations (MIT / Apache-2.0 / BSD)
 
@@ -42,8 +47,16 @@ updated: 2026-10-17
 | [autolab/Autolab](https://github.com/autolab/Autolab) | Apache-2.0 | 808 | *"Course management service that enables auto-graded programming assignments."* Initially developed by students at **Carnegie Mellon University** per its README. Apache-2.0 autograding with a course-management shell around it — the permissive counterpart to Artemis. |
 | [Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) | **MIT** | 41 ⚠️ | **India's national education stack — the APAC-origin platform this KB said did not exist.** The codebase under **DIKSHA**, run by NCERT/Ministry of Education. README: *"next-generation scalable open-source learning solution for teachers and tutors"*, mission *"improve learning outcomes for 200 million children across India"*. **38,046 commits, 317 forks — against 41 stars.** ⚠️ **Do not read the star count as adoption**: ministry-funded digital public infrastructure accrues commits, forks and deployments but almost no stars, which is precisely why star-sorted search never surfaced it. Backend: [`project-sunbird/knowledge-platform`](https://github.com/project-sunbird/knowledge-platform) (MIT). Mobile: [`Sunbird-Ed/SunbirdEd-mobile-app`](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) (MIT). |
 | [oppia/oppia-android](https://github.com/oppia/oppia-android) | Apache-2.0 | — | The Android client beside `oppia/oppia`. Pairs with `learningequality/kolibri` (MIT) wherever mobile-first, low-connectivity delivery is the actual constraint rather than an afterthought. |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | **BSD-3-Clause** | 802 | *"Homework Submission, Automated Grading, and TA grading system."* From the **Rensselaer Center for Open Source Software** in RPI's CS department (README-quoted → NA-origin). **9,316 commits, and 1.1k forks against 802 stars** — forks exceeding stars is the signature of software that gets *deployed*, not bookmarked. The most permissive licence in this base's assessment layer, and it covers submission, autograding *and* the TA grading workflow in one system. |
+| [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | **BSD-3-Clause** | 161 | *"A Python and R autograding solution"* from the **UC Berkeley Data Science Education Program**. 3,825 commits. Grades scripts and notebooks, and ships **adapters for the Canvas and Gradescope autograders plus a student-side check client** — so it attaches to the LMS the client already runs instead of replacing it. R support matters: it is the one autograder here that covers statistics teaching. |
+| [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | **BSD-3-Clause** | **8.4k** | *"Multi-user server for Jupyter notebooks."* 8,913 commits, 2.1k forks. The substrate under notebook-based teaching and under both permissive notebook autograders (`nbgrader`, `otter-grader`). At 8.4k stars it is the **highest-adoption permissive row in this file** — this base had catalogued the graders without the thing they run on. |
+| [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) | **Apache-2.0** | 286 | *"Enterprise open source portal built by and for the higher education community."* 17,158 commits, 278 forks. The campus portal / single-pane-of-glass layer: where an institution aggregates its systems, and therefore where an agent surface reaches the most students per integration. **Note the licence divergence inside Apereo:** uPortal is Apache-2.0, while its siblings `sakaiproject/sakai` and `apereo/opencast` are ECL-2.0 — so the educational-use patent scoping this base flagged on those two **does not apply here**. |
+| [learningequality/studio](https://github.com/learningequality/studio) | **MIT** | 193 | *"Content curation tools for Kolibri"* — **Kolibri Studio**, the authoring and publishing half of the offline-first stack this file already shelves. 15,493 commits, 312 forks. Organises content into channels Kolibri can import, remixes existing channels against **national curricula**, and builds learning pathways and assessments. Without it, a Kolibri deployment is a reader with no pipeline. *Licence note: the MIT copyright line reads "(internal apps)", but the grant and condition clauses are unmodified standard MIT — reading that parenthetical as a restriction would be a false positive.* |
+| [DFE-Digital/apply-for-teacher-training](https://github.com/DFE-Digital/apply-for-teacher-training) | **MIT** *(under Crown Copyright)* | 38 | **A national education ministry's production service, MIT-licensed.** *"A service for applying to teacher training courses"* — **34,414 commits**, run by the **UK Department for Education** at `apply-for-teacher-training.service.gov.uk`. The payload reads *"Copyright (c) Crown Copyright (Department for Education)"*. Beside it, [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) (MIT, *"Department for Education - Digital"*). ⚠️ **38 stars against 34,414 commits** — the same instrument blindness as Sunbird. ⚠️ **And the licence file is spelled `LICENCE`**: a probe trying only `LICENSE` reads this MIT service as unlicensed. |
 
-**21 permissive foundation rows** (17 from pass 264, 4 added and payload-verified in pass 265).
+**27 permissive foundation rows** (17 from pass 264, 4 in pass 265, 6 added and payload-verified in
+pass 267). Pass 267's six were all found by **ranking candidates by commits and probing named
+institutions and ministries by hand** — not one of them would surface in a star-sorted topic listing.
 
 > **Note on XBlock:** the repository's `README.rst` states *"The code in this repository is
 > licensed the Apache 2.0 license unless otherwise"* and points at `LICENSE.txt`, but that
@@ -55,6 +68,7 @@ updated: 2026-10-17
 
 | Repo | Licence | Why you still care |
 |------|---------|--------------------|
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | **The largest education codebase this KB has located — 78,765 commits — and it was missing from this file entirely.** *"The open LMS by Instructure, Inc."* 6.9k stars, 3.0k forks. Canvas is the dominant LMS in North American higher education **and it is open source**, which makes "North America is a proprietary-LMS market" a briefing error this file could have produced. AGPL-3.0: the network clause reaches a hosted deployment, so the integration boundary (LTI, the Canvas API, or `canvas-mcp` under MIT) is where the engagement lives — not a fork. |
 | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 *(in `COPYING.txt`, not `LICENSE`)* | The world's most deployed LMS and the largest plugin ecosystem in education. GPL is survivable because the integration point is a plugin boundary. |
 | [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** | MOOC-grade platform behind edX. **This base previously published Apache-2.0 for this repo — that was wrong, and the error mattered**: AGPL's network clause is exactly the kind of obligation a hosted-deployment engagement must price in from day one. |
 | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-3.0 *(prior cell said GPL-2.0)* | Lightweight LMS with deep LATAM public-sector deployment. |
@@ -71,6 +85,12 @@ updated: 2026-10-17
 | [frappe/education](https://github.com/frappe/education) | GPL-3.0 | School ERP on the Frappe stack: admissions, fees, assessment. The Frappe/ERPNext alternative to OpenEduCat's Odoo lineage. |
 | [frappe/lms](https://github.com/frappe/lms) | AGPL-3.0 | Frappe Learning. AGPL network clause; pairs with `frappe/education` when the client is already on ERPNext. |
 | [OpenBoard-org/OpenBoard](https://github.com/OpenBoard-org/OpenBoard) | GPL-3.0 | Interactive-whiteboard software (Geneva-origin) with pt-BR localisation. Classroom-front-end, not server-side; GPL is rarely a problem for a desktop deployment. |
+| [oat-sa/package-tao](https://github.com/oat-sa/package-tao) | **GPL-2.0** | **TAO** — an open-source e-testing platform for authoring and delivering assessments, *"created by the University of Luxembourg"* and maintained by **Open Assessment Technologies** (README-quoted → EMEA-origin). Core framework: [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core), same GPL-2.0 payload. The permissive-assessment shelf (Artemis, Numbas, Submitty, otter-grader) does **not** include it — TAO is copyleft, and at GPL-2.0 it is not even AGPL-compatible. ⚠️ **Secondary sources routinely tie TAO to large-scale international assessment programmes; its README makes no such claim and this KB asserts none.** Verify any programme reference with OAT before it reaches a client deck. |
+| [hpi-schul-cloud/schulcloud-server](https://github.com/hpi-schul-cloud/schulcloud-server) | **AGPL-3.0** | The server half of the **German school-cloud** stack — *"Schulcloud-Verbund-Software-Server"*, **16,192 commits**, 81 stars. Front end: [`hpi-schul-cloud/nuxt-client`](https://github.com/hpi-schul-cloud/nuxt-client) (AGPL-3.0). The nearest thing this base has to a *European public-sector school platform*, and a working reference for data-protection-first school IT. ⚠️ **Provenance is org-handle grade only:** the handle is `hpi-schul-cloud` and the README links `dbildungscloud.dev` docs, but **the README names no ministry, no funder and no Land.** Do not brief it as a federally-funded programme on this evidence. ⚠️ The GitHub sidebar shows a License link **with no label** — the payload is the only licence evidence that exists here. |
+| [Tangerine-Community/Tangerine](https://github.com/Tangerine-Community/Tangerine) | **GPL-3.0** | *"Open-source software platform designed to support data collection in low-resource settings, especially in education."* **8,064 commits.** Offline-first assessment on tablets and phones that syncs when connectivity appears, built originally for early-grade reading and maths. The **assessment** counterpart to Kolibri's offline *delivery* — together they cover the low-connectivity lane end to end, at a GPL-3.0 price on this half. The logo is a registered trademark of **RTI International** (the only institutional statement the README serves). ⚠️ README claim, not independently verified: *"more than 5 million assessments and surveys across 65 countries and more than 80 organisations"* — **no country list is served**, so no specific national deployment is asserted. |
+| [PrairieLearn/PrairieLearn](https://github.com/PrairieLearn/PrairieLearn) | **SPLIT LICENCE — read the payload, not the label** | *"Online problem-driven learning system"*, 12,061 commits, 519 stars, 404 forks, UIUC in the copyright line. **This row exists as a warning as much as a recommendation.** The GitHub sidebar shows a License link *with no label*, and the payload partitions the tree four ways: the **Community Edition** (everything outside `apps/prairielearn/src/ee/`) is **AGPL-3.0**; `apps/prairielearn/src/ee/` is the **Enterprise Edition under its own separate licence**; **all client-side JavaScript**, served or compiled, is **AGPL-3.0**; and portions copyright UIUC and outside contributors are **MIT**. Any single-label cell — "AGPL-3.0" included — is wrong in two directions at once. |
+| [RunestoneInteractive/rs](https://github.com/RunestoneInteractive/rs) | **MIT, with exceptions — one of them commercial** | The Runestone interactive-textbook platform. The grant is MIT, but the payload's **first paragraph** excepts, among others, the **Handsontable component, which is commercial software**: *"if you make a copy of this software, you must contact https://handsontable.com/ to verify your compliance with their license."* Two textbook texts also carry their own terms (GNU Documentation License; a publisher's copyright). **An MIT headline over a paid dependency** — exactly the shape that passes a licence audit and fails a procurement review. |
+| [pressbooks/pressbooks](https://github.com/pressbooks/pressbooks) | **GPL-3.0** | Open-textbook authoring and publishing (WordPress-based). Shelved with a companion measurement: [`openstax/os-webview`](https://github.com/openstax/os-webview), the front end of the **OpenStax** open-textbook programme, declares **AGPL-3.0** in `package.json` (metadata grade — it serves no licence file). **The open-textbook layer is copyleft on both rows measured this pass**, which is worth knowing before an OER engagement is scoped as permissive. |
 
 ## What to reach for, by job
 
@@ -80,7 +100,10 @@ updated: 2026-10-17
 - **"Make retention stick"** → `fsrs4anki` / `fsrs-rs`. Spaced repetition is the one intervention with a scheduler worth reusing instead of inventing.
 - **"We must prove academic integrity"** → `dolos`.
 - **"Our content is all SCORM"** → `scorm-again`, and keep the content where it is.
-- **"Grade programming work automatically"** → `autolab/Autolab` (Apache-2.0) for a course-management shell with autograding, `jupyter/nbgrader` (BSD-3) where the work is notebooks, `Artemis` (MIT) where feedback matters more than marks. All three permissive; none of them an agent.
+- **"Grade programming work automatically"** → `Submitty/Submitty` (BSD-3) where submission, autograding *and* TA grading must all be covered, `autolab/Autolab` (Apache-2.0) for a course-management shell with autograding, `jupyter/nbgrader` (BSD-3) or `ucbds-infra/otter-grader` (BSD-3, also R) where the work is notebooks, `Artemis` (MIT) where feedback matters more than marks. **Five permissive options, none of them an agent** — this is a solved, copyleft-free problem.
+- **"The client runs Canvas"** → do **not** start from `instructure/canvas-lms` (AGPL-3.0, 78,765 commits). Reach it through its API — `vishalsachdev/canvas-mcp` (MIT) for an agent surface, LTI via `tsugi` for a tool — and keep your deliverable outside the AGPL boundary.
+- **"Notebook-based data-science teaching"** → `jupyterhub/jupyterhub` (BSD-3) for the substrate, then `nbgrader` or `otter-grader` on top. All BSD-3: the whole lane is permissive end to end.
+- **"We are a ministry or a public agency"** → the precedent is real and MIT: `Sunbird-Ed/SunbirdEd-portal` (India, 38,046 commits) and `DFE-Digital/apply-for-teacher-training` (UK, 34,414 commits). Public-sector education code is **shelf-grade**, and star counts hide all of it.
 - **"Our learners lose connectivity"** → `learningequality/kolibri` (MIT). Offline-first is an architecture, not a setting, and retrofitting it onto a server-rendered LMS is a rebuild.
 - **"Brazilian municipal or state network, sovereignty-first"** → `portabilis/i-educar` (GPL-2.0) for the SIS and `i-diario` (AGPL-3.0) for the teacher portal, both actively maintained in October 2026, both already inside the federal software-public lineage. Keep studio code on the permissive side of an LTI or API boundary.
 
@@ -158,3 +181,42 @@ from absence.
 - **Permissive platform count, corrected again:** with **Sunbird** (MIT) and **Artemis** (MIT)
   the permissive complete-platform shelf is **five** deep — OpenOLAT, Kolibri, Oppia, Sunbird,
   Artemis — not three and certainly not one. Each prior count was published as if final.
+
+### Added in pass 267
+
+- **The commit-ranked view is not a refinement of the star-ranked one — it returns different
+  software.** Ranking candidates by commits and probing named institutions by hand produced
+  `instructure/canvas-lms` (**78,765 commits**, 6.9k★), `DFE-Digital/apply-for-teacher-training`
+  (**34,414 commits**, 38★), `uPortal` (17,158, 286★), `hpi-schul-cloud/schulcloud-server`
+  (16,192, 81★), `learningequality/studio` (15,493, 193★), `Submitty` (9,316, 802★),
+  `jupyterhub` (8,913, **8.4k★**) and `Tangerine` (8,064, 70★). **Stars and commits agree on one
+  of those eight.** This is the same instrument defect pass 266 found with Sunbird, now measured
+  across a batch instead of a single row.
+- **A licence LABEL cannot carry the SHAPE of a grant, and two rows this pass prove it.**
+  `PrairieLearn` is AGPL-3.0 *plus* an Enterprise-Edition directory under separate terms *plus*
+  MIT-licensed portions *plus* AGPL client-side JS; `RunestoneInteractive/rs` is MIT *over a
+  commercial Handsontable dependency*. Both would be mis-shelved by any single-label field —
+  including this file's own `Licence` column, which is why both carry their shape in prose
+  instead of a name. **Add to the method note: when the GitHub sidebar shows a License link with
+  no label, that is a signal to read the payload in full, not a missing datum.**
+- **`LICENCE` — the British spelling — must be in every probe's path set.** `DFE-Digital/apply-for-teacher-training`
+  serves MIT at `main/LICENCE` and **nothing** at `main/LICENSE`. Any prior pass that probed this
+  class of repository would have published "unlicensed" for a live, MIT-licensed government
+  service. Pass 267's path set is 19 paths x 4 refs, including `.md`/`.txt` variants, lowercase,
+  `COPYING`, `docs/`, `.github/`, `NOTICE` and package metadata.
+- **Four of this base's five "no licence payload" rows survived that wider probe** — `ls1intum/Athena`,
+  `autograder-org/autoGrader-frontend`, `os4ed/openSIS-Classic` and
+  `GeminiLight/awesome-ai-llm4education` serve nothing on any of the 76 combinations. **The earlier
+  calls were right, and that is worth recording as plainly as a correction would be.** The fifth,
+  `learningequality/kolibri-design-system`, resolves to **MIT at metadata grade** (`package.json`).
+- **Still open, and now with the instrument named:** no LATAM-origin *permissively licensed*
+  foundation. Pass 267 probed the most-cited LATAM national programme directly — **Uruguay's Plan
+  Ceibal — and its GitHub organisation exists with ZERO public repositories** and no public
+  members. Ceibal's platforms are not open code; a Ceibal-adjacent engagement is **integration,
+  not adoption**. Brazil remains the only LATAM country in this file with published education
+  source, and it arrives copylefted.
+- **`OpenEMIS` is not shelved, and the reason is specific:** the EMIS most associated with
+  ministry deployment serves, on the repo this KB can reach, a **32-commit Docker packaging
+  project with no licence on any of 76 path/ref combinations and no ministry or country named in
+  it.** The application source was not located. An unshelved row with a stated reason is worth
+  more than a plausible one.

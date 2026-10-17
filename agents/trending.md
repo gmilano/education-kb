@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 267) — The LMS became MCP-addressable, and that is the shortest path from an agent to a client's real data
+
+**Append-only shelf.** This section is added above the previous one; nothing below it is
+rewritten. Evidence: [`verified-repos.2026-10-17-p267.tsv`](../evidence/verified-repos.2026-10-17-p267.tsv)
+
+### The finding: an MIT MCP server for Canvas, at real adoption
+
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — **MIT**, **295★**,
+96 forks, **1,026 commits**, v1.14.0 released **October 2026**, University of Illinois
+Urbana-Champaign named in the README. Description: *"Canvas LMS MCP server — up to 102 tools and
+8 agent skills for students & educators. Works with Claude, Cursor, Codex, and 40+ agents."*
+
+🟢 **Why this outranks every tutoring agent on this shelf for engagement purposes.** Every agent
+this base has shelved needs to be *given* a learner, a roster, a course and an assignment before
+it can do anything. `canvas-mcp` reaches all four **inside the system the institution already
+runs**, under MIT, **without forking the LMS** — and the LMS in question is the one whose source
+(`instructure/canvas-lms`, AGPL-3.0, 78,765 commits) a studio must otherwise stay outside of
+anyway. The licence asymmetry is the whole point: **AGPL platform, MIT doorway.**
+
+⚠️ **Cite the tool count as a range.** The About blurb says *"up to 102 tools"*; the README body
+says *"up to 126"*; the README also notes the default profile registers fewer than either. Two
+numbers on one page is not a datum to pick from — quote the range and count what you enable.
+
+### The same pattern on Moodle costs more, and the asymmetry should be priced
+
+| | Canvas side | Moodle side |
+|---|---|---|
+| Repo | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) |
+| Licence (payload) | 🟢 **MIT** | 🔴 **AGPL-3.0** |
+| Stars / commits | **295** / 1,026 | **1** / 57 |
+| Tools | 102–126 (+8 agent skills) | **10** in the README table |
+| Business model | permissive, whole | 🔴 **open-core — premium plugin tools sold separately** |
+
+🔴 **Moodle is the world's most-deployed LMS and its MCP surface is ~1/300th as adopted as
+Canvas's, copylefted, and partly commercial.** Any proposal that promises "an agent over your
+LMS" without naming *which* LMS is understating the work by a wide margin on the Moodle side.
+Where the client runs Moodle, the honest options are the AGPL open-core server above, or building
+against Moodle Web Services directly and keeping the deliverable outside the AGPL boundary.
+
+### The category is now four servers deep — and the GitHub topic for it is still empty
+
+| Server | Licence (payload) | Stars | Reaches |
+|--------|-------------------|-------|---------|
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | **MIT** | 295 | Canvas LMS — the institution's system of record |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | AGPL-3.0, open-core | 1 | Moodle via Web Services |
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | **MIT** | 516 | Anki — the learner's own study tooling |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | 49 | nothing external — it *is* the tutoring loop |
+| [admin978/canvas-mcp](https://github.com/admin978/canvas-mcp) | **MIT** | 4 | Canvas, in ~125 lines of Python — a reference, not a dependency |
+
+🔵 **The distinction to brief:** two of these reach *study tooling the learner owns*; two reach
+*the institution's system of record*, where the roster, the submissions and the grades are. Only
+the second kind turns a demo into an engagement.
+
+🔴 **`mcp-server-education` as a GitHub topic is still empty**, while five payload-verified
+education MCP servers exist. None of these was found through a topic listing — they came from a
+plain web search for *"MCP server Moodle Canvas LMS"* and were then verified by hand. **A
+topic-index leg will keep reporting this category as non-existent.**
+
+### The Spanish-language gap, re-tested in Spanish
+
+🔴 A search leg run **in Spanish** — *"github tutor IA educación código abierto español 2026
+repositorio"* — returned **no Spanish-language education agent repository at all**: GitHub
+Education marketing pages, a 2019 Universidad Politécnica de Madrid paper on teaching with Git,
+and unrelated blog guides. **The gap is not an artefact of searching in English.**
+
+The nearest row is [`admin978/canvas-mcp`](https://github.com/admin978/canvas-mcp) (MIT, 4★),
+*"Built by AGENTE 404 S.L."* — a **Spanish company form**, but the README is in **English** and
+**no country is stated**. That is weaker evidence than pass 266's Portuguese-language
+`ai_tutor_forge`, so nothing is claimed from it. 🔵 **Standing claim unchanged: no Spanish- or
+Portuguese-language education agent with adoption.**
+
+### Agent-adjacent licence trap found this pass
+
+🔴 [`ls1intum/Athena`](https://github.com/ls1intum/Athena) is **still unlicensed**, now at a much
+higher evidence grade: nothing on **19 paths x 4 refs** (including the British `LICENCE`, lowercase
+spellings, `docs/`, `.github/`, `NOTICE` and five package-metadata files) and no label in the page
+sidebar. 6★, 675 commits, default ref `develop`. Artemis's MIT grant does not extend to it, and
+pass 267 can now say that with 76 failed probes behind it rather than 12.
+
 ## 2026-10-17 (pass 266) — Two of this base's standing gaps fall: an MIT grading/tutoring platform and a LATAM-origin agent
 
 **Append-only shelf.** This section is added above the previous one; nothing below it is

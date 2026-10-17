@@ -439,6 +439,160 @@ Portuguese-language education agent this base has verified.
 
 ---
 
+## P14 — An agent inside the Canvas the client already runs, with an MIT-only deliverable *(new in pass 267)*
+
+**When:** the client runs **Canvas** — the dominant LMS in North American higher education — and
+wants an AI layer over *their* courses, rosters, assignments and grades. The most common NA
+situation in this KB, and until pass 267 it had no pattern, because this base believed Canvas was
+closed SaaS. It is **AGPL-3.0 with 78,765 commits**.
+
+```
+Client's existing system  instructure/canvas-lms         AGPL-3.0   DO NOT FORK. Do not link.
+         |                                                          78,765 commits; the network
+         |                                                          clause is the only reason you
+         |                                                          stay out -- not access.
+         | Canvas REST API  (process boundary = licence boundary)
+         v
+Doorway   vishalsachdev/canvas-mcp      MIT   295*, 1,026 commits, v1.14.0 (Oct 2026)
+          +-- 102-126 tools + 8 agent skills; courses, assignments, grades, roster
+          +-- speaks MCP to Claude / Cursor / Codex / 40+ clients
+         |
+         v
+Pedagogy  ls1intum/Pyris                MIT   LLM microservice: exercise feedback, RAG over
+          |                                   instructor-supplied course material
+          +-- ArnaudGuiovanna/tutor-mcp  MIT   when a constrained tutoring loop is enough
+          +-- ls1intum/Iris              MIT   hints and leading questions, not answers
+         |
+         v
+Grading   Submitty/Submitty             BSD-3  submission + autograde + TA workflow
+          +-- ucbds-infra/otter-grader  BSD-3  Python AND R; ships a CANVAS AUTOGRADER ADAPTER
+          +-- jupyter/nbgrader          BSD-3  notebook courses
+         |
+         v
+Audit     yetanalytics/lrsql            Apache-2.0  xAPI record of every AI interaction
+          adlnet/xAPI-Spec              Apache-2.0  the vocabulary
+```
+
+**The licence argument, which is the point of the pattern:** every component you deliver is **MIT,
+BSD-3 or Apache-2.0**. The only copyleft artefact in the system is **Canvas itself, which the
+client already owns and operates**. You call its REST API across a process boundary and never link
+its code, so nothing in the deliverable derives from an AGPL work — a sentence the client's legal
+team can verify in an afternoon. **AGPL platform, MIT doorway.**
+
+**Sequence that avoids the usual failure:** stand up `canvas-mcp` read-only against a sandbox
+course first and prove the tool surface, *then* enable writes. Count the tools you actually
+register — the project publishes **102 in its About blurb and 126 in its README**, and the default
+profile registers fewer than either. Quote the range to the client, never a single number.
+
+**Where the client runs Moodle instead:** the doorway is
+[`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) — **AGPL-3.0,
+open-core (premium tools sold separately), 10 free tools, 1★, 57 commits** — or a direct build
+against Moodle Web Services. **Price the Moodle variant as engineering, not integration:** its MCP
+surface is roughly 1/300th as adopted as Canvas's, and the AGPL network clause now sits in *your*
+deliverable rather than only in the client's platform.
+
+---
+
+## P15 — Defensible autograding with zero copyleft, end to end *(new in pass 267)*
+
+**When:** state or institutional rules bar AI from *determining* a grade (Oklahoma `SB 1734`,
+Ohio `HB 96`, California `AB 1159`, Idaho `SB 1227`, and the "meaningful human review" test in
+T17), but the client still needs assessment at scale. The grade must be **deterministic,
+reproducible and explainable on appeal**; the AI may explain, suggest and tutor around it.
+
+```
+Substrate   jupyterhub/jupyterhub        BSD-3   8.4k*, 8,913 commits; per-student environments
+           |
+Grading    Submitty/Submitty            BSD-3   802*, 9,316 commits, 1.1k forks (RPI/RCOS)
+           |                                    submission + autograding + TA grading workflow
+           +-- ucbds-infra/otter-grader  BSD-3   UC Berkeley; Python AND R; Canvas/Gradescope
+           |                                    adapters + student-side public checks
+           +-- jupyter/nbgrader          BSD-3   notebook assign/release/collect/grade
+           +-- autolab/Autolab           Apache-2.0  CMU; course-management shell
+           +-- numbas/Numbas             Apache-2.0  maths; executes ENTIRELY IN THE BROWSER
+           |                                        -> submission never leaves the device
+           v
+AI layer   ls1intum/Pyris               MIT     feedback SUGGESTIONS to the instructor
+           (never writes a grade)               + RAG over the course's own material
+           v
+Record     yetanalytics/lrsql           Apache-2.0  who saw what, who approved, when
+```
+
+**Six permissive grading options, three licences (BSD-3 / Apache-2.0 / MIT), zero copyleft.**
+This is the pattern's whole commercial content: **autograding is a solved, free problem.** Proposing
+to build one is proposing to rebuild five mature university systems. The billable work is
+(a) wiring a grader into the client's LMS — `otter-grader`'s Canvas adapter does half of it,
+(b) the pedagogy of the feedback, and (c) **defensibility**: the appeal path, the human sign-off
+record, the disclosure artefact.
+
+**The regulatory test this satisfies by construction:** the deterministic grader produces the mark;
+the model never touches it; `lrsql` holds the evidence that a human disposed of every AI
+suggestion. That is **declassification by architecture** (T17), not by policy document — and it
+reuses P10's posture with five permissive components instead of three.
+
+**Do not** substitute `PrairieLearn` into this stack without legal review: it is strong software,
+but the grant is **partitioned four ways** (AGPL-3.0 Community Edition, a separate-terms Enterprise
+Edition directory, AGPL client-side JavaScript, MIT contributor portions) and the GitHub sidebar
+shows no label at all. Likewise `RunestoneInteractive/rs`, whose MIT headline excepts a
+**commercial** Handsontable dependency.
+
+---
+
+## P16 — Delivering India's Class 3-8 AI curriculum on India's own MIT stack *(new in pass 267)*
+
+**When:** an APAC public-sector or education-group engagement in India. **The mandate is dated and
+the platform is permissive** — the only region in this KB where both are verified (T22, and the
+APAC section of [`intel/market.md`](../intel/market.md)).
+
+- **Demand:** AI and computational thinking compulsory from **Class 3**; CT&AI curriculum for
+  Classes 3-8 **launched 2026-04-01**; implementation from the **2026-27 session**; Classes 9-10 in
+  **2027-28**; teacher training through **NISHTHA**; **₹500 crore** Centre of Excellence announced
+  in the 2025-26 budget. ⚠️ Secondary-source — dates decision-usable, figures directional.
+- **Supply:** the national stack is **MIT, end to end.**
+
+```
+Platform   Sunbird-Ed/SunbirdEd-portal            MIT   38,046 commits, 317 forks (41*)
+           project-sunbird/knowledge-platform     MIT   content/knowledge services
+           Sunbird-Ed/SunbirdEd-mobile-app        MIT   mobile client -- the real access path
+           ^ the codebase under DIKSHA (NCERT / Ministry of Education)
+           |
+Curriculum DaRL-GenAI/instructional_agents        MIT   488*, EACL'26: ADDIE pipeline
+           |                                            syllabus -> slides -> assessments,
+           |                                            with Instructional Designer / TA roles
+           +-- JuneYaooo/lineage-skill        Apache-2.0  turns NCERT material into agent skills
+           |                                              that stay TIED TO THEIR SOURCES
+           v
+Teacher    SirhanMacx/Claw-ED                     MIT   local-first, teacher-reviewed lesson drafts
+enablement ls1intum/Iris + Pyris                  MIT   tutor + LLM microservice, RAG over the
+           |                                            ministry's own curriculum documents
+           v
+Offline    learningequality/kolibri                MIT  offline delivery where bandwidth fails
+           learningequality/studio                 MIT  authoring + REMIX AGAINST NATIONAL CURRICULA
+           Tangerine-Community/Tangerine        GPL-3.0  offline ASSESSMENT -- keep behind an API
+           v
+Measure    bigdata-ustc/EduData              Apache-2.0  datasets/preprocessing
+           pykt-team/pykt-toolkit                  MIT   knowledge tracing, once data is trustworthy
+```
+
+**Why this is an unusually clean pattern:** no platform displacement is proposed, no copyleft
+enters the deliverable (Tangerine is the one exception and sits behind an API boundary), and the
+client's own ministry already maintains the base. **The scarce thing is not the platform — it is
+Classes 3-8 content and teacher capability at national scale**, which is exactly what
+`instructional_agents` (peer-reviewed, MIT) and `lineage-skill` (provenance-preserving) address.
+
+**The failure mode to design against, from the region's own recent history:** South Korea mandated
+AI digital textbooks, saw **under 30% adoption**, and in **August 2025 its National Assembly
+stripped them of official textbook status** after teachers' unions said the pace had outrun
+preparation. **Lead with NISHTHA-aligned teacher enablement and measurable classroom readiness,
+not content volume.** A mandate engagement is cancelled by unprepared teachers, not by missing
+content.
+
+⚠️ **Sunbird slug trap:** the live slugs are camel-case (`Sunbird-Ed/SunbirdEd-portal`);
+`Sunbird-Ed/sunbird-ed-portal` does not resolve. And do not read Sunbird's **41 stars** as
+adoption — 38,046 commits and 317 forks are the signal, re-measured and reproduced in pass 267.
+
+---
+
 ## Component quick reference
 
 | Need | Component | Licence |
@@ -496,3 +650,22 @@ KB cycles), `os4ed/openSIS-Classic` (no licence payload served; unverified),
 - **P9's model layer is deliberately unspecified.** Device class drives quantisation, and this
   KB has not benchmarked tutoring quality for small local models on classroom hardware. Naming
   a model here would be a guess dressed as a recommendation.
+
+### Added in pass 267
+
+- **P14 is the pattern this file most needed and did not have.** The single most common North
+  American situation — *"the client runs Canvas"* — had no recipe for 266 passes, because
+  [`verticals/solutions.md`](../verticals/solutions.md) carried Canvas as closed SaaS. Its source
+  is **AGPL-3.0, 78,765 commits**, and the engagement shape is an **MIT doorway**
+  (`vishalsachdev/canvas-mcp`) over a platform the client already operates. 🔵 **The general rule
+  this suggests:** before writing a pattern that routes *around* an incumbent, read the
+  incumbent's licence payload. "Commercial" and "closed" are different claims.
+- **P15 supersedes nothing but strengthens P10 materially** — five permissive graders plus a
+  permissive substrate (`jupyterhub`, BSD-3, 8.4k★) instead of three graders and no substrate.
+- **P16 is the only pattern in this file where mandate, platform and licence all line up**, and it
+  is deliberately weighted toward teacher enablement because the region supplies a **documented
+  failure case** (Korea's withdrawn textbook mandate) rather than only a success story.
+- **Still no pattern for:** a North American *public-sector platform* engagement (none exists —
+  the NA public-sector code located is a service layer, not a platform), and a LATAM engagement
+  outside Brazil on open code (**Uruguay's Ceibal publishes no repositories at all**, verified this
+  pass).

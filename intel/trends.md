@@ -321,6 +321,159 @@ four of the five jurisdictions above are converging on.
 **Confidence: medium-high** on the pattern (five jurisdictions, independent texts); ⚠️ **low-medium**
 on the Vietnam specifics, which are secondary-source and whose dates conflicted across sources.
 
+## T18 — Education ministries are now upstream maintainers, and one of them publishes under MIT
+
+The public-sector layer this KB discovered with Sunbird in pass 266 is not one project. Ranked by
+commits and probed by hand, pass 267 found a class:
+
+| Programme | Repo | Licence (payload) | Commits | Stars |
+|-----------|------|-------------------|---------|-------|
+| UK Department for Education | [DFE-Digital/apply-for-teacher-training](https://github.com/DFE-Digital/apply-for-teacher-training) | **MIT** *(Crown Copyright)* | **34,414** | 38 |
+| UK Department for Education | [DFE-Digital/teaching-vacancies](https://github.com/DFE-Digital/teaching-vacancies) | **MIT** | — | — |
+| India / NCERT (DIKSHA) | [Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) | **MIT** | 38,046 | 41 |
+| German school-cloud stack | [hpi-schul-cloud/schulcloud-server](https://github.com/hpi-schul-cloud/schulcloud-server) | AGPL-3.0 | 16,192 | 81 |
+| Brazil (municipal lineage) | [portabilis/i-educar](https://github.com/portabilis/i-educar) | GPL-2.0 | 34,948 | 719 |
+
+The UK row is the one that changes a pitch. `apply-for-teacher-training` is a **live production
+government service** at `apply-for-teacher-training.service.gov.uk`, and its licence payload reads
+*"Copyright (c) Crown Copyright (Department for Education)"* — **MIT**. A studio can read, reuse
+and adapt a national education ministry's production code with no copyleft obligation at all.
+
+**What this means commercially:** "we will build you a service like a ministry runs" stops being an
+analogy. For a public-sector education engagement in EMEA there is now **working, MIT-licensed
+reference code for the hardest parts** — application workflows, GOV.UK-pattern service design,
+daily production automation — maintained by a department that has to keep it running.
+
+🔴 **And the negative half of the trend is equally firm.** Two of the most-cited public programmes
+publish **nothing usable**: Uruguay's **Plan Ceibal** has a GitHub organisation with *"no public
+repositories"*, and **OpenEMIS**, the EMIS most associated with ministry deployment, resolves to a
+**32-commit Docker packaging repo with no licence on any of 76 path/ref combinations**. Public-sector
+provenance has to be **probed per programme**; it does not generalise from the region or the brand.
+
+**Confidence: high** on every repository row (payloads and page metrics read first-hand this pass).
+⚠️ **Org-handle grade only** on Schul-Cloud's German/ministry provenance — its README names no
+funder, ministry or Land.
+
+## T19 — Permissive autograding is not a gap, a workaround or an exception. It is a mature field with five options
+
+Pass 266 reframed this base's grading gap from "no agent" to "the function lives in platforms".
+Pass 267 closes it entirely by measurement:
+
+| Repo | Licence (payload) | Stars | Commits | Covers |
+|------|-------------------|-------|---------|--------|
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | **BSD-3-Clause** | 802 | 9,316 | Submission + autograding + **TA grading workflow** (RPI/RCOS) |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | **BSD-3-Clause** | 1.4k | — | Notebook assignment and grading |
+| [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | **BSD-3-Clause** | 161 | 3,825 | Python **and R**; adapters for **Canvas and Gradescope** (UC Berkeley) |
+| [autolab/Autolab](https://github.com/autolab/Autolab) | **Apache-2.0** | 808 | — | Autograding with a course-management shell (CMU) |
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** | 819 | 12,437 | Build-test-analyse + feedback, config-gated AI (TUM) |
+
+**Five options, three licences, zero copyleft, four continents of provenance between them.** Add
+[`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) (BSD-3, **8.4k★**) as the
+substrate and **the entire notebook-teaching lane is permissive end to end** — which this base had
+never stated, because it had catalogued the graders without the thing they run on.
+
+🔵 **The strategic read is a warning, not an opportunity.** Autograding is **solved and free**.
+Proposing to *build* one is proposing to rebuild five mature systems; the billable work is
+**integration, pedagogy and defensibility** — wiring a grader into the client's LMS, and making the
+grade explainable to a regulator (T17) and to a student who appeals it. Note `otter-grader` ships a
+**Canvas adapter**, so the integration half is partly solved too.
+
+**Confidence: high.** All five licences payload-read; Submitty, otter-grader and jupyterhub measured
+first-hand in pass 267.
+
+## T20 — The licence risk has moved from the *name* of the grant to its *shape*
+
+T9 established that the licence surface under education AI is unreliable, with mislabelled
+families — Apache-stated-but-GPL, MIT-claimed-but-proprietary. Pass 267 found a harder class of
+error: **repositories whose licence family is correctly reported and still tells you the wrong
+thing**, because the grant is partitioned.
+
+| Repo | What a label says | What the payload says |
+|------|-------------------|----------------------|
+| [PrairieLearn/PrairieLearn](https://github.com/PrairieLearn/PrairieLearn) | AGPL-3.0 | **Four partitions:** Community Edition AGPL-3.0; `apps/prairielearn/src/ee/` = **Enterprise Edition, separate terms**; **all client-side JS** AGPL-3.0; UIUC + outside-contributor portions **MIT** |
+| [RunestoneInteractive/rs](https://github.com/RunestoneInteractive/rs) | MIT | MIT **except** the **Handsontable component — commercial software** requiring a compliance contact — plus two textbook texts under their own terms |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | AGPL-3.0 | AGPL-3.0 **and open-core**: premium plugin tools **sold separately** |
+| [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | *(none — "unlicensed")* | **MIT**, declared in `package.json` only |
+| [DFE-Digital/apply-for-teacher-training](https://github.com/DFE-Digital/apply-for-teacher-training) | *(none — "unlicensed")* | **MIT**, at `main/LICENCE` — **the British spelling** |
+
+**Four distinct failure modes, each of which produces a confident wrong answer:**
+
+1. 🔴 **Directory-partitioned grants.** "AGPL-3.0" is wrong in two directions at once for
+   PrairieLearn: too restrictive for the MIT portions, too permissive for the EE directory.
+2. 🔴 **Exception lists with a commercial member.** An MIT headline over a **paid dependency**
+   passes a licence audit and fails procurement.
+3. 🔴 **Open-core.** The licence covers what ships free; the feature set in the demo may not be it.
+4. 🔴 **Spelling and location.** `LICENCE` vs `LICENSE`, or a grant that exists only in package
+   metadata, reads as *unlicensed* to any probe with a narrow path set — and "unlicensed" is the
+   most expensive wrong answer available, because it discards usable code.
+
+🔵 **Two operational rules follow, and both are cheap.** (a) **A GitHub sidebar "License" link with
+no label is a signal, not a missing datum** — both partitioned-grant rows above show one. (b)
+**Read the first paragraph of every payload, not just its title region.** Pass 266's rule (family
+from the first 600 bytes) answers *which licence*; it can never answer *over which files*.
+
+**Confidence: high.** Every row payload-read this pass.
+
+## T21 — The LMS is becoming MCP-addressable, and the two big LMSs are not equally open about it
+
+The integration layer T3 identified as "MCP is becoming the integration layer for education
+tooling" now reaches the **institution's system of record**, not just the learner's study tools:
+
+| | Canvas | Moodle |
+|---|---|---|
+| MCP server | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) |
+| Licence (payload) | 🟢 **MIT** | 🔴 AGPL-3.0, **open-core** |
+| Stars / commits | **295** / 1,026 | **1** / 57 |
+| Tools | **102–126** + 8 agent skills | **10** free |
+| Platform source | AGPL-3.0, 78,765 commits | GPL-3.0 |
+
+🟢 **The pattern worth naming: AGPL platform, MIT doorway.** Canvas's own source is AGPL-3.0, so a
+studio stays outside it regardless — and `canvas-mcp` (MIT) makes staying outside it *more*
+capable than forking would be, reaching roster, courses, assignments and grades through the API
+with a permissive deliverable on top. This is the **shortest path in this entire KB from an agent
+to a client's real institutional data**, and it requires no migration and no platform decision.
+
+🔴 **The asymmetry is the finding, though.** Moodle is the world's most-deployed LMS and its MCP
+surface is ~**1/300th** as adopted as Canvas's, copylefted, and partly commercial. **A proposal
+promising "an agent over your LMS" without naming the LMS understates the Moodle case badly.**
+Where the client runs Moodle, the honest answer is the AGPL open-core server or a direct build
+against Moodle Web Services — i.e. actual engineering, not an install.
+
+⚠️ **And the category is invisible to indexes:** the `mcp-server-education` GitHub topic is
+**still empty** while five payload-verified education MCP servers exist. None was found through a
+topic listing.
+
+**Confidence: high** on every licence and metric (payload + page, first-hand). ⚠️ `canvas-mcp`'s
+tool count is published inconsistently **on its own page** — About says 102, the README says 126 —
+so cite the range.
+
+## T22 — The curriculum-mandate wave is real, and it has a documented failure mode
+
+Two APAC data points, pulling in opposite directions, should be briefed together:
+
+🟢 **India is executing.** AI and computational thinking become compulsory from **Class 3**, with
+the CT&AI curriculum for Classes 3–8 **launched on 2026-04-01** by the Education Minister;
+implementation starts in the **2026–27 session**, Classes 9–10 follow in **2027–28**. Teacher
+training runs through **NISHTHA**, and a **₹500 crore Centre of Excellence in AI for Education**
+was announced in the 2025–26 budget.
+
+🔴 **South Korea reversed.** Seoul mandated AI digital textbooks from 2025; adoption sat **below
+30%** by March, and in **August 2025 the National Assembly stripped them of official textbook
+status** after teachers' unions argued the pace had outrun preparation.
+
+🔵 **The lesson for a studio is not "mandates create demand" — it is which half of the mandate is
+unserved.** India's mandate lands on a country that already runs an **MIT-licensed national
+platform** (Sunbird/DIKSHA, 38,046 commits) and a named teacher-training programme: the demand has
+somewhere to execute. Korea's landed on content distribution without teacher readiness, and the
+legislature withdrew it. **Teacher enablement, not content generation, is where a mandate
+engagement either works or gets cancelled** — which is the same conclusion T5 reached from policy
+text, now with a failed rollout behind it.
+
+⚠️ **Confidence: medium.** Every figure here is **secondary-source**: news and education-sector
+coverage reached through the search index. This session could not resolve a single non-GitHub host
+by DNS on **either** instrument, so no primary ministry text was read. Treat dates as
+decision-usable and figures as directional.
+
 ## Confidence notes
 
 - **Payload-verified (strongest):** every licence in this KB's tables, read from
@@ -345,3 +498,25 @@ on the Vietnam specifics, which are secondary-source and whose dates conflicted 
   informed gap is still information, but a gap is a claim, and claims need re-testing against a
   channel that could falsify them. Pass 265 found both by probing candidate repositories
   directly (`git ls-remote` plus a licence-payload read) rather than by searching harder.
+
+### Pass 267 addendum to the confidence notes
+
+- **The primary-source gap this base has carried since pass 266 is now diagnosed, and it is
+  environmental.** Every non-GitHub host tried this pass failed DNS resolution on **both**
+  instruments — `curl` and `WebFetch` alike: `ess.iesalc.unesco.org`, `iesalc.unesco.org`,
+  `unu.edu`, `digital-strategy.ec.europa.eu`, `www.digitaleducationcouncil.com`, `ve.scielo.org`,
+  `repositorio.cepal.org`, `www.marketsandmarkets.com`, plus the news hosts behind the APAC
+  figures. GitHub-family hosts and package registries resolve normally. 🔵 **So "re-read the
+  primary sources" is not an action a pass in this environment can discharge, and future passes
+  should stop spending searches on it.** Non-GitHub material can be reached **only** as search-index
+  text, which is secondary-source grade by construction — including every regional percentage in
+  [`market.md`](market.md).
+- **Repository evidence, by contrast, is at its strongest grade yet:** 31 rows this pass, 29
+  licences read from payload or declared metadata, every star/fork/commit cell fetched from the
+  repository page, and Sunbird's anomalous cells (41★ / 38,046 commits) **independently
+  re-measured and reproduced exactly**.
+- **A standing claim tested with a stronger instrument mostly survived.** Five "no licence
+  payload" rows were re-probed against 19 paths x 4 refs; **four held** (Athena,
+  autoGrader-frontend, openSIS-Classic, awesome-ai-llm4education) and one resolved to MIT at
+  metadata grade. 🔵 Worth recording as explicitly as a correction: this base's careful calls are
+  holding up, and a pass that reports only corrections misrepresents its own reliability.

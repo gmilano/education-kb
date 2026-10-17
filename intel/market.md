@@ -251,6 +251,37 @@ configurability is the product**.
   permissive university-grade bases, and `nbgrader` (BSD-3) is already inside the data-science
   departments that will ask first.
 
+**Pass 267 — the North America section had the market structurally wrong, and the fix enlarges it.**
+
+- 🔴 **Canvas is open source, and this KB said otherwise.** [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms)
+  is **AGPL-3.0 with 78,765 commits** — the largest education codebase this KB has located. The
+  previous framing (Canvas as closed SaaS, *"the incumbent to migrate off"*) would have produced a
+  needlessly adversarial pitch into the dominant platform of North American higher education. **The
+  opening is the opposite of migration:** deploy or extend Canvas, reach it through
+  [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (**MIT**, 295★, 102–126
+  tools), and keep the deliverable outside the AGPL boundary. **AGPL platform, MIT doorway** — no
+  platform decision asked of the client, which is the fastest engagement shape in this file.
+- 🟢 **The permissive assessment stack here is deeper than the regulatory requirement.** NA-origin
+  and all permissive: [`Submitty`](https://github.com/Submitty/Submitty) (BSD-3, RPI, 9,316
+  commits, **1.1k forks over 802 stars**), [`otter-grader`](https://github.com/ucbds-infra/otter-grader)
+  (BSD-3, UC Berkeley, **Python and R**, ships a **Canvas adapter**),
+  [`Autolab`](https://github.com/autolab/Autolab) (Apache-2.0, CMU), `nbgrader` (BSD-3), on
+  [`jupyterhub`](https://github.com/jupyterhub/jupyterhub) (BSD-3, **8.4k★**). Where state law bars
+  AI from determining a grade, **this stack grades deterministically and the AI explains, suggests
+  and tutors around it** — the P10 posture, now with five permissive components instead of three.
+- 🟡 **Do not brief TRAIGA or the RAISE Act as education regulation.** Texas **TRAIGA (HB 149)** was
+  signed 2025-06-22 and took effect **2026-01-01** — AG-exclusive enforcement, a **60-day cure
+  period**, no private right of action, and an **affirmative defence for substantial compliance with
+  the NIST AI Risk Management Framework** (the one genuinely actionable item: align the deliverable
+  to NIST AI RMF and document it). New York's **RAISE Act** targets **frontier-model developers
+  spending >$100M on compute** — it does **not** reach an education deployment, and its effective
+  date is **disputed** across sources (2026-03-19 vs. an amended January 2027). ⚠️ Secondary-source;
+  the education-specific obligations in this section's state laws above remain the ones that bite.
+- 🔵 **Remaining hole, stated:** no North American *public-sector education platform* was located.
+  The public-sector code found this pass is a **service** layer (the UK's `DFE-Digital`, MIT), not a
+  platform. For US K-12 public work the installed base is still Canvas, Moodle and PowerSchool-class
+  commercial SIS — integration, not adoption.
+
 ### EMEA
 
 **Pass 266 addition — EMEA is where the permissive supply actually comes from, which inverts the
@@ -307,6 +338,44 @@ The clearest regulatory calendar in the world, and a **14-month window** before 
   models while the mainstream uses hosted APIs. That is the exact architecture this KB
   recommends (Moodle AI subsystem or OpenOLAT against local Ollama/vLLM), which makes it an
   easier sale than it was a year ago.
+
+**Pass 267 — a ministry's production code is now MIT, and the public-sector platform gap closes.**
+
+- 🟢 **The UK Department for Education is an upstream maintainer under MIT.**
+  [`DFE-Digital/apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training)
+  — **MIT under Crown Copyright, 34,414 commits**, a live service at
+  `apply-for-teacher-training.service.gov.uk`; beside it
+  [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) (MIT).
+  **A studio can reuse a national ministry's production service code with zero copyleft
+  obligation.** For EMEA public-sector bids this converts "we will build you something like a
+  government service" into "we will extend the pattern a government already runs and publishes" —
+  and MIT means the client's deliverable stays theirs.
+- 🟢 **A European public-sector school platform exists:** [`hpi-schul-cloud/schulcloud-server`](https://github.com/hpi-schul-cloud/schulcloud-server)
+  (**AGPL-3.0**, 16,192 commits) with its Nuxt front end — the EMEA counterpart to Sunbird (APAC)
+  and i-Educar (LATAM), built around data-protection-first school IT, which is the posture EMEA
+  procurement actually tests. ⚠️ **Provenance is org-handle grade only** — the README names no
+  ministry, funder or Land, so do **not** brief it as a federal German programme. AGPL's network
+  clause prices any hosted deployment.
+- 🟡 **High-stakes testing has an EMEA-origin platform, at a GPL-2.0 price.**
+  [`oat-sa/package-tao`](https://github.com/oat-sa/package-tao) — TAO, *"created by the University
+  of Luxembourg"*, maintained by Open Assessment Technologies. This is the layer above coursework
+  assessment where Artemis and Numbas stop. **GPL-2.0 is the most restrictive licence on this
+  shelf** and is not AGPL-compatible: the integration boundary is the delivery API, never the
+  engine. ⚠️ Secondary sources tie TAO to famous international assessment programmes; **its README
+  claims none and this KB asserts none** — verify with OAT before it reaches a deck.
+- 🟡 **Permissive assessment remains the EMEA strength:** `Artemis` (MIT, TUM) and `Numbas`
+  (Apache-2.0, Newcastle, browser-only execution). Pass 267 adds the **offline assessment** half —
+  [`Tangerine`](https://github.com/Tangerine-Community/Tangerine) (GPL-3.0, 8,064 commits), whose
+  README claims 5M+ assessments across 65 countries — relevant to EMEA development-funded work in
+  Africa and the Middle East, where connectivity is the binding constraint.
+- ⚠️ **An informed gap, recorded rather than hidden:** the required regional search leg for EMEA
+  (*"AI education EMEA 2026 adoption regulation players"*) returned **nothing education-specific** —
+  only enterprise-AI adoption and compliance material (EU AI Act as a general driver, compliance
+  complexity as the stated barrier, the UK/DE/FR/NL/Nordics as leading adopters, UAE and Saudi
+  Arabia treating AI as national priority). **No education-sector player list, adoption rate or
+  ministry programme surfaced.** This base's existing EU AI Act dates (including the
+  **2027-12-02** resolution) remain more precise than anything this pass's searches returned, and
+  were left untouched.
 
 ### APAC
 
@@ -366,6 +435,37 @@ The largest mandated demand anywhere, and the thinnest open-source supply.
 - **Gap, stated plainly:** no APAC-origin open-source education **platform** surfaced. The
   earlier blanket claim ("no platform *or agent*") was wrong and is retracted in
   [`agents/top.md`](../agents/top.md).
+
+**Pass 267 — demand and supply are now both verified in India, and Korea shows the failure mode.**
+
+- 🟢 **India's mandate has a date, a scope and a budget line.** AI and computational thinking become
+  compulsory from **Class 3**; the CT&AI curriculum for Classes 3–8 was **launched 2026-04-01** by
+  the Education Minister, implementation begins in the **2026–27 session**, Classes 9–10 follow in
+  **2027–28**, teacher training runs through **NISHTHA**, and a **₹500 crore Centre of Excellence
+  in AI for Education** was announced in the 2025–26 budget. ⚠️ Secondary-source (news and
+  education-sector coverage); dates are decision-usable, figures directional.
+- 🟢 **And the delivery platform for that mandate is MIT.** Sunbird/DIKSHA
+  ([`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal), **38,046
+  commits**, re-measured and reproduced exactly this pass) is the national stack under NCERT.
+  **This is the only region in this file where a verified mandate, a named teacher-training
+  programme and a permissively-licensed national platform all line up** — see pattern **P16**. The
+  engagement is curriculum-to-classroom delivery *on the client's own stack*, with no platform
+  displacement and no copyleft.
+- 🔴 **Korea is the cautionary case, and it is recent.** Seoul mandated AI digital textbooks from
+  2025; adoption sat **below 30%** by March and in **August 2025 the National Assembly stripped
+  them of official textbook status** after unions argued the pace had outrun teacher preparation.
+  **A mandate that lands on content distribution without teacher readiness can be withdrawn by the
+  legislature.** Lead APAC mandate conversations with enablement, not content volume.
+- 🟡 **China:** one secondary source reports AI as a compulsory subject from age six as of September
+  2025, and names China and the UAE as the only countries running compulsory national AI curricula
+  since 2025-26. ⚠️ **Unconfirmed against any primary source** — carried as a lead, not a fact. The
+  minors' constraints this base already records (no virtual intimate-relationship services for
+  minors; parental consent under 14) remain the binding design limit on companion-persona tutors.
+- ⚠️ **Japan: the gap persists and the instrument is now named.** No MEXT generative-AI guidance for
+  schools surfaced in either the regional leg or a targeted ministry-level search. This is the third
+  consecutive pass to record it. Primary-source reading is **not possible from this environment**
+  (no non-GitHub host resolves by DNS on either instrument), so this gap cannot be closed here —
+  it needs a session with open egress, not another search.
 
 ### LATAM
 
@@ -449,6 +549,39 @@ The region where the policy direction most favours what open source actually is.
   incumbent in the one category the market has already picked; the open lane is the
   institutional plumbing — SIS-grade data, dropout prediction, compliance artefacts — that
   Teachy does not sell.
+
+**Pass 267 — a second independent survey, a sharper governance breakdown, and a verified negative.**
+
+- 🟢 **A second, larger survey corroborates the governance deficit this base built its LATAM thesis
+  on.** The **Digital Education Council's AI in Higher Education LATAM Survey 2026** reports
+  **92% of students and 79% of faculty actively engaging with AI**, from **30,000+ responses across
+  29 institutions**, with Tecnológico de Monterrey and UNAM among its partners. Separately, a
+  Tec-de-Monterrey-linked figure puts **only ~30% of LATAM universities** as having published AI-use
+  policies. **Two independent instruments, the same shape: near-universal use, policy coverage
+  around a quarter to a third.** The 61-point gap this base priced its governance-retrofit
+  engagement on is not an artefact of one study.
+- 🟢 **The UNESCO IESALC breakdown is now four numbers, not one.** Of 200 institutions across 19
+  countries: **teaching and learning 73.5%**, **research 57.0%**, **administration 34.1%**,
+  **community engagement 20.0%**. This base had carried "74% in teaching and learning"; the figure
+  is **73.5%**, and the three additional areas matter commercially — **administration at 34.1% is
+  less than half of teaching**, so the back-office is the under-served half of a LATAM university
+  engagement, not the classroom.
+- 🔴 **Uruguay's Plan Ceibal publishes no code — verified, not assumed.** The `ceibal` GitHub
+  organisation exists and states *"This organization has no public repositories"*, with no public
+  members. For LATAM's most-cited national edtech programme the posture is **integration, not
+  adoption**, and briefing it as an open-source national stack (as Sunbird genuinely is) would be
+  wrong. **Brazil remains the only LATAM country in this KB with published education source code**
+  — `i-educar` (GPL-2.0, 34,948 commits) and `i-diario` (AGPL-3.0) — and it arrives copylefted.
+- 🟡 **Regulatory picture, unchanged in shape and now sourced twice:** no unified regional
+  framework. Chile leads with a National AI Policy (2021) and a bill under discussion; Brazil and
+  Colombia have national strategies **without education-specific rules**; in Mexico the SEP/ANUIES
+  and AI-Observatory recommendations are **non-binding**. **That absence is the commercial opening**
+  — governance work that needs no regulator to force it, sold against institutional risk.
+- ⚠️ **Every percentage in this section is secondary-source and will stay that way from this
+  environment.** `ess.iesalc.unesco.org`, `unu.edu` and `www.digitaleducationcouncil.com` all
+  **failed DNS resolution on both instruments** this pass (curl and WebFetch alike), as did
+  `ve.scielo.org` and `repositorio.cepal.org`. The figures are carried because they are
+  decision-relevant and mutually corroborating, **not** because a primary text was read.
 
 ## Declared gaps
 

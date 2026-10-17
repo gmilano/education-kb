@@ -4,6 +4,164 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 267 — 2026-10-17 — **RANK BY COMMITS AND THE SHELF CHANGES: EIGHT OF EIGHT WERE NEW, INCLUDING THE LARGEST EDUCATION CODEBASE IN OPEN SOURCE**
+
+⏱️ **Thirteenth pass of `2026-10-17`.** Evidence: [`verified-repos.2026-10-17-p267.tsv`](evidence/verified-repos.2026-10-17-p267.tsv)
+— 31 rows, 29 licences read first-hand, every star/fork/commit cell fetched from the repository page.
+
+### 🟢 The headline: pass 266 left an action on the ladder, and running it returned different software
+
+Pass 266 found one repository star-sorted search could not see (Sunbird, 41★/38,046 commits) and
+wrote the action: **rank by commits, probe named programmes by hand.** Pass 267 ran it as a batch.
+
+| Repo | Commits | Stars | Licence (payload) | Was it in this KB? |
+|------|---------|-------|-------------------|--------------------|
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **78,765** | 6.9k | AGPL-3.0 | ❌ |
+| [DFE-Digital/apply-for-teacher-training](https://github.com/DFE-Digital/apply-for-teacher-training) | **34,414** | 38 | **MIT** (Crown Copyright) | ❌ |
+| [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) | 17,158 | 286 | **Apache-2.0** | ❌ |
+| [hpi-schul-cloud/schulcloud-server](https://github.com/hpi-schul-cloud/schulcloud-server) | 16,192 | 81 | AGPL-3.0 | ❌ |
+| [learningequality/studio](https://github.com/learningequality/studio) | 15,493 | 193 | **MIT** | ❌ |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | 9,316 | 802 | **BSD-3-Clause** | ❌ |
+| [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | 8,913 | **8.4k** | **BSD-3-Clause** | ❌ |
+| [Tangerine-Community/Tangerine](https://github.com/Tangerine-Community/Tangerine) | 8,064 | 70 | GPL-3.0 | ❌ |
+
+🔴 **Eight of eight new. Stars and commits agree on one of them.** Four have under 300 stars and
+over 8,000 commits. The Sunbird anomaly was not an anomaly — it is a measured property of the
+instrument.
+
+### 🔴 This base published a wrong verdict about the biggest open-source LMS in its own market
+
+[`verticals/solutions.md`](verticals/solutions.md) carried Canvas under *"not on the shelf"* as
+**"Commercial SaaS, not a base to build on … the incumbent to migrate off."**
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) serves an **AGPL-3.0 payload**
+and has **78,765 commits** — 2.1x Kolibri, 6.3x Artemis. **Instructure's hosted service is
+commercial; its code is not closed, and this base merged the two claims.** The cost would have been
+a needlessly adversarial North America pitch into the dominant platform of US higher education,
+when the available move is to extend it. Canvas is now on the platform shelf, and the new
+**P14** is the pattern: **AGPL platform, MIT doorway.**
+
+### 🟢 A national education ministry is an upstream maintainer, under MIT
+
+[`DFE-Digital/apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training)
+— **34,414 commits**, a live service at `apply-for-teacher-training.service.gov.uk`, licence payload
+*"Copyright (c) Crown Copyright (Department for Education)"*, **MIT**. A studio can reuse a UK
+ministry's production code with **no copyleft obligation at all**. 🔴 **And it nearly didn't
+resolve:** the file is `main/LICENCE` — **the British spelling** — with nothing at `main/LICENSE`.
+Every probe this base has ever run would have reported it **unlicensed**.
+
+### 🟢 The LMS is now MCP-addressable, and the two big LMSs are not equally open about it
+
+| | Canvas | Moodle |
+|---|---|---|
+| MCP server | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) |
+| Licence | 🟢 **MIT** | 🔴 AGPL-3.0, **open-core** |
+| Stars / commits | **295** / 1,026 | **1** / 57 |
+| Tools | **102–126** + 8 skills | **10** free |
+
+This is the **shortest path in this KB from an agent to a client's real institutional data** — the
+roster, the submissions, the grades — with no fork and no migration. 🔴 The Moodle side is ~1/300th
+as adopted, copylefted and partly commercial: **a proposal promising "an agent over your LMS"
+without naming the LMS understates the Moodle case badly.** New trend **T21**.
+
+### 🟡 Licence risk has moved from the *name* of a grant to its *shape*
+
+Four failure modes found this pass, each producing a confident wrong answer: **directory-partitioned
+grants** (`PrairieLearn` — AGPL-3.0 CE *plus* a separate-terms Enterprise directory *plus* MIT
+portions *plus* AGPL client-side JS), **exception lists with a commercial member**
+(`RunestoneInteractive/rs` — MIT over the **commercial** Handsontable component), **open-core**
+(the Moodle MCP server), and **spelling/location** (`LICENCE`, or a grant living only in
+`package.json`). 🔵 **Two cheap rules:** a sidebar License link with **no label** is a *signal*, not
+a missing datum; and read the payload's **first paragraph**, since pass 266's title-region rule
+answers *which licence* but never *over which files*. New trend **T20**.
+
+### 🟢 Autograding is a solved, free problem — five permissive options
+
+`Submitty` (BSD-3, RPI, 9,316 commits, **1.1k forks over 802 stars**), `otter-grader` (BSD-3, UC
+Berkeley, **Python and R**, ships a **Canvas adapter**), `nbgrader` (BSD-3), `Autolab`
+(Apache-2.0, CMU), `Artemis` (MIT, TUM) — on `jupyterhub` (BSD-3, 8.4k★). **Zero copyleft, end to
+end.** The billable work is integration, pedagogy and defensibility, not building a grader. New
+trend **T19**, new pattern **P15**.
+
+### 🟢 Four standing gaps tested with a stronger instrument — and four held
+
+Five "no licence payload" rows were re-probed against **19 paths × 4 refs** (British spellings,
+lowercase, `COPYING`, `docs/`, `.github/`, `NOTICE`, five package-metadata files).
+[`ls1intum/Athena`](https://github.com/ls1intum/Athena), `autoGrader-frontend`, `openSIS-Classic`
+and `awesome-ai-llm4education` serve **nothing on any of 76 combinations**; only
+`kolibri-design-system` resolved, to **MIT at metadata grade**. 🔵 **Recorded as prominently as a
+correction would be:** this base's careful calls are holding, and a pass that reports only its own
+errors misrepresents its reliability.
+
+### 🟢 Regional intel — demand and supply line up in India, and Korea shows the failure mode
+
+- **APAC** ⚠️ — India: AI and computational thinking **compulsory from Class 3**, CT&AI curriculum
+  for Classes 3–8 **launched 2026-04-01**, implementation from the **2026–27 session**, Classes
+  9–10 in **2027–28**, teacher training via **NISHTHA**, **₹500 crore** Centre of Excellence in the
+  2025–26 budget — landing on a country that already runs an **MIT-licensed national platform**
+  (Sunbird/DIKSHA, re-measured and reproduced exactly this pass). 🔴 **South Korea is the
+  counter-case:** AI digital textbooks mandated from 2025, **under 30% adoption**, and in **August
+  2025 the National Assembly stripped them of official textbook status**. New trend **T22**, new
+  pattern **P16**. Japan/MEXT: still nothing, third consecutive pass.
+- **LATAM** ⚠️ — a **second, larger survey corroborates** the governance thesis: Digital Education
+  Council LATAM 2026, **92% of students / 79% of faculty** engaging with AI, **30,000+ responses
+  across 29 institutions**, against **~30%** of universities having published AI policies. UNESCO
+  IESALC's breakdown is now four numbers, not one: **teaching 73.5%** (this base carried "74%"),
+  **research 57.0%**, **administration 34.1%**, **community 20.0%** — so the **back office is the
+  under-served half**. 🔴 **Uruguay's Plan Ceibal publishes no code**: its GitHub organisation
+  exists with *"no public repositories"* and no public members — **integration, not adoption**.
+- **EMEA** — the public-sector platform gap closes with **Schul-Cloud** (AGPL-3.0, 16,192 commits,
+  ⚠️ provenance org-handle grade only — its README names no ministry or Land) and high-stakes
+  testing gets **TAO** (GPL-2.0, University of Luxembourg origin, ⚠️ **no programme claim in its
+  README despite what secondary sources say**). ⚠️ The required EMEA regional search leg returned
+  **nothing education-specific** — recorded as an informed gap, and the EU AI Act rows were left
+  untouched because this base's **2027-12-02** resolution is more precise.
+- **North America** — Canvas (above) plus a correction to brief: **TRAIGA and the RAISE Act are not
+  education regulation.** TRAIGA (TX, effective **2026-01-01**) is AG-enforced with a **60-day cure
+  period** and an **affirmative defence for NIST AI RMF compliance** — that defence is the
+  actionable item. New York's RAISE Act targets **frontier developers spending >$100M on compute**
+  and its date is **disputed** (2026-03-19 vs. an amended Jan 2027).
+
+### 🔴 The primary-source gap is now diagnosed: it is environmental, not a retry problem
+
+Every non-GitHub host failed DNS resolution **on both instruments** — `curl` and `WebFetch` alike:
+`ess.iesalc.unesco.org`, `iesalc.unesco.org`, `unu.edu`, `digital-strategy.ec.europa.eu`,
+`www.digitaleducationcouncil.com`, `ve.scielo.org`, `repositorio.cepal.org`,
+`www.marketsandmarkets.com` and the news hosts behind the APAC figures. GitHub-family hosts and
+package registries resolve normally. 🔵 **"Re-read the primary sources" is therefore not an action a
+pass in this environment can discharge** — future passes should stop spending searches on it and
+mark it for a session with open egress. Every regional percentage in this KB is, and will remain,
+**secondary-source grade** from here.
+
+### Declared gaps after this pass
+
+- No standalone education grading **agent** — the function is served by **platforms**, and
+  permissively, five ways over.
+- **No Spanish- or Portuguese-language education agent with adoption** — re-tested **in Spanish**
+  this pass (*"github tutor IA educación código abierto español 2026 repositorio"*) and the leg
+  returned no such repository at all, so the gap is not a search-language artefact.
+- 🔴 **`ls1intum/Athena` licence still unresolved** after 76 path/ref probes. Get it in writing.
+- No **LATAM-origin permissively licensed** foundation or platform; Brazil remains the only LATAM
+  country here with published education source, and it is copylefted.
+- No **North American public-sector education platform** — the NA public-sector code located is a
+  service layer, not a platform.
+- `OpenEMIS`'s application source not located (what resolves is a 32-commit, unlicensed Docker
+  packaging repo naming no ministry); `os4ed/openSIS-Classic` still licence-unverified.
+- Japan/MEXT school-level guidance; primary texts for every ⚠️ figure — **both blocked by DNS, not
+  by effort.**
+- `mcp-server-education` GitHub topic still empty while **five** education MCP servers exist.
+- 🟡 **Ingest hazard found while validating this pass, and left in place deliberately.** A
+  line-anchored `^region:` parser finds **two** matches in
+  `archive/2026-10-11-pre-rewrite/intel-market.md`: the real frontmatter field (`Global`, line 3)
+  and **line 7024, `region:**`** — a wrapped prose sentence (*"…it was not subject matter,
+  seniority or region:"*) whose bold marker landed at a line start. It is correct prose in a
+  historical snapshot, so it was **not** rewritten. 🔵 **The fix belongs in the reader, not the
+  archive: `region` must be read only from the frontmatter block delimited by the file's first two
+  `---` lines**, never by scanning for the token. Every live shelf's frontmatter conforms to the
+  five-value vocabulary; this is the only non-conforming match in the repository.
+- 🟢 **Checked and clean:** no header or example row is left as data on any of the eight shelves.
+  The `| Nombre | Repo | Licencia |` rows in the trending history are **real table headers** with
+  separator rows and verified data beneath them (Spanish-language passes), not placeholders.
+
 ## Pass 266 — 2026-10-17 — **THREE STANDING GAPS FALL, AND TWO WERE FALSIFIABLE FROM THIS BASE'S OWN SHELVES**
 
 ⏱️ **Twelfth pass of `2026-10-17`.** Evidence: [`verified-repos.2026-10-17-p266.tsv`](evidence/verified-repos.2026-10-17-p266.tsv) — 20 rows, 11 payloads read first-hand, every non-resolving slug recorded.

@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 267) — Rank by commits and the shelf changes: the biggest education codebase in open source was never on it
+
+**Append-only shelf.** This section sits above the previous one; nothing below it is rewritten.
+Evidence: [`verified-repos.2026-10-17-p267.tsv`](../evidence/verified-repos.2026-10-17-p267.tsv)
+— 31 rows, 29 licences read first-hand.
+
+### The instrument test pass 266 asked for, run as a batch
+
+Pass 266 found one repository (Sunbird, 41★/38,046 commits) that star-sorted search could not
+see, and left an action: **rank the platform layer by commits and probe national programmes by
+hand.** Pass 267 ran it. Eight repositories were ranked by commits and measured:
+
+| Repo | Commits | Stars | Licence (payload) | Previously in this KB? |
+|------|---------|-------|-------------------|------------------------|
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **78,765** | 6.9k | AGPL-3.0 | ❌ **no** |
+| [DFE-Digital/apply-for-teacher-training](https://github.com/DFE-Digital/apply-for-teacher-training) | **34,414** | 38 | **MIT** (Crown Copyright) | ❌ no |
+| [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) | 17,158 | 286 | **Apache-2.0** | ❌ no |
+| [hpi-schul-cloud/schulcloud-server](https://github.com/hpi-schul-cloud/schulcloud-server) | 16,192 | 81 | AGPL-3.0 | ❌ no |
+| [learningequality/studio](https://github.com/learningequality/studio) | 15,493 | 193 | **MIT** | ❌ no |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | 9,316 | 802 | **BSD-3-Clause** | ❌ no |
+| [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | 8,913 | **8.4k** | **BSD-3-Clause** | ❌ no |
+| [Tangerine-Community/Tangerine](https://github.com/Tangerine-Community/Tangerine) | 8,064 | 70 | GPL-3.0 | ❌ no |
+
+🔴 **Eight of eight were new to this base. Stars and commits agree on exactly one of them**
+(`jupyterhub`, which is high on both). Four have **fewer than 300 stars against more than 8,000
+commits**. This is no longer an anecdote about one Indian platform — it is a measured property of
+the instrument: **a star-sorted topic listing systematically omits the software that institutions
+actually run.**
+
+### The headline: the largest education codebase in open source
+
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) — **AGPL-3.0**, **78,765
+commits**, 6.9k★, 3.0k forks, *"The open LMS by Instructure, Inc."* That is **2.1x Kolibri's**
+39,803 commits, **2.1x Sunbird's** 38,046 and **6.3x Artemis's** 12,437 — and it had never
+appeared in this KB, on any shelf, in 266 passes.
+
+🟡 **Why it was missed is instructive, and it is not only the star sort.** Canvas is neither an
+"AI agent" nor an "AI education" repository, so it answers none of this base's search legs; it is
+a *market-leading commercial product that happens to be open source*. The briefing error it would
+have produced is specific and expensive: **"North American higher education is a proprietary-LMS
+market, so plan to integrate from outside"** — when in fact the market leader's source is
+published, and the real constraint is **AGPL-3.0's network clause**, not access.
+
+### A national education ministry is an upstream maintainer, under MIT
+
+[`DFE-Digital/apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training)
+— **MIT**, **34,414 commits**, **38 stars** — is a live UK government service
+(`apply-for-teacher-training.service.gov.uk`), and its licence payload reads *"Copyright (c) Crown
+Copyright (Department for Education)"*. Beside it,
+[`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) (MIT, 1,092-byte
+payload) confirms it is departmental practice rather than one team's choice.
+
+🔴 **And this row nearly didn't resolve.** The licence is at `main/LICENCE` — **the British
+spelling** — with **nothing** at `main/LICENSE`. Every probe this base has run would have reported
+a 34,414-commit MIT government service as **unlicensed**. The path set is now 19 paths x 4 refs.
+
+### Two licences whose *shape* no label can carry
+
+| Repo | Label you would write | What the payload actually says |
+|------|----------------------|-------------------------------|
+| [PrairieLearn/PrairieLearn](https://github.com/PrairieLearn/PrairieLearn) | "AGPL-3.0" | **Four partitions:** Community Edition (outside `apps/prairielearn/src/ee/`) AGPL-3.0; `ee/` = **Enterprise Edition under separate terms**; **all client-side JS** AGPL-3.0; UIUC + outside-contributor portions **MIT**. GitHub sidebar: License link, **no label**. |
+| [RunestoneInteractive/rs](https://github.com/RunestoneInteractive/rs) | "MIT" | MIT **except** the **Handsontable component, which is commercial software** — *"you must contact handsontable.com to verify your compliance"* — plus two textbook texts under their own terms. |
+
+🔵 **Method addition: a sidebar License link with no label is a signal, not a missing datum.** Both
+rows above show one, and both turn out to be partitioned grants. The family-name convention from
+pass 266 (title region, first 600 bytes) is necessary but **not sufficient** — it answers *which
+licence*, never *over which files*.
+
+### Re-probing this base's own "no payload" rows: four held, one resolved
+
+| Row | Pass 267 verdict |
+|-----|------------------|
+| [ls1intum/Athena](https://github.com/ls1intum/Athena) | 🔴 **Upheld.** Nothing on 19 paths x 4 refs, nothing in the sidebar. 6★, 675 commits. |
+| [autograder-org/autoGrader-frontend](https://github.com/autograder-org/autoGrader-frontend) | 🔴 Upheld. |
+| [os4ed/openSIS-Classic](https://github.com/os4ed/openSIS-Classic) | 🔴 Upheld. |
+| [GeminiLight/awesome-ai-llm4education](https://github.com/GeminiLight/awesome-ai-llm4education) | 🔴 Upheld — the MIT claim stays unsubstantiated. |
+| [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | 🟢 **Resolved: MIT at *metadata* grade** (`package.json`). Replaces an inference-from-parent with the project's own declaration. |
+
+🟢 **Four of five calls were right, and saying so is part of the record.** A pass that only ever
+reports corrections teaches a reader that the base is unreliable; this one tested five standing
+claims with a stronger instrument and four survived.
+
+### Negative findings, stated so they cannot be mistaken for silence
+
+- 🔴 **Uruguay's Plan Ceibal publishes no code.** The `ceibal` GitHub organisation exists and
+  states *"This organization has no public repositories"*, with no public members. For LATAM's
+  most-cited national edtech programme the posture is **integration, not adoption**.
+- 🔴 **`OpenEMIS` is not shelf-grade from here.** The ministry-associated EMIS resolves to a
+  **32-commit Docker packaging repo, 7★, no licence on any of 76 path/ref combinations, and no
+  ministry or country named in its README.** Application source not located.
+- 🔴 **`oat-sa/package-tao` (GPL-2.0) carries no programme claim.** TAO is widely tied in
+  secondary sources to large-scale international assessment; **its README says nothing of the
+  kind**, so nothing is asserted here.
+
 ## 2026-10-17 (pass 266) — The APAC platform gap is closed by India's national education stack, under MIT
 
 **Append-only shelf.** This section sits above the previous one; nothing below it is rewritten.
