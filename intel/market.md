@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 260 — 2026-10-17 — **`8` SEARCH LEGS, `50` FACTS OFFERED, `0` NEW — FOR THE THIRD PASS RUNNING.** SO THIS SECTION PLACES WHAT THE PASS ACTUALLY MEASURED: A LATAM COMPLIANCE PLUGIN, A PERMISSIVE CONNECTOR TIER, AND A BOUND THAT DECIDES AN EMEA HOSTING MODEL
+
+🔵 **Evidence:** [`p260-websearch`](../evidence/p260-websearch.2026-10-17-p260.tsv) *(`8` legs: global ×`4`, regional ×`4`)* · [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · [`p260-carried-gate`](../evidence/p260-carried-gate.2026-10-17-p260.tsv)
+
+### 🔴 `T260-M1` — the external channel, measured a third time
+
+| leg | facts offered | 🔴 new after the carried check |
+|---|---|---|
+| global — agents / trending / verticals / trends | `20` | `0` |
+| North America | `9` | `0` |
+| EMEA | `6` | `0` |
+| APAC | `7` | `0` |
+| LATAM | `8` | `0` |
+| **total** | **`50`** | 🔴 **`0`** |
+
+🔵 **`p258` refused `31` of `32`. `p259` returned `0` of `46`. `p260` returns `0` of `50`.** Three consecutive passes, `128` facts offered, `0` carried forward. 🔴 **The secondary regulatory and market channel is exhausted on the axes this base searches**, and that is now a measurement rather than an impression.
+
+🔴 **The EMEA leg re-served the superseded date again — seventh recorded instance.** It offered *"EU AI Act high-risk provisions enter into force Aug 2026"* beside the correct deferral. 🟢 **This base's position is unchanged and was not re-litigated:** Annex III point `3` *(education and vocational training)* applies **`2027-12-02`** under Regulation (EU) `2026/1744`; `2026-08-02` is Article `50` **transparency**, a different obligation, and it is live.
+
+🔴 **Declared, so silence is not read as coverage:** `eur-lex.europa.eu` was **not probed for a sixth pass**. Every EU date on this page still rests on secondary channels plus this base's own earlier reading.
+
+### 🟢 `T260-M2` — Opportunities by region
+
+🔵 Every repository named below had its grant read first-hand at `p260` or is marked *(carried)*. Rows marked 🟢 are new or newly bounded this pass.
+
+#### North America
+
+🔴 **The constraint is unchanged and now fully bounded.** [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) is `GPL-2.0` with no *"or later"*; 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) core is now read as **`GPL-3.0-or-later`** *(`composer.json`, first-hand)*. The two still cannot be combined in one work, so a district SIS+LMS build integrates over **OneRoster 1.2 / LTI 1.3 / Ed-Fi**, in separate processes. 🟢 What changed is that the architecture now rests on a measured bound at **both** ends rather than one.
+
+🟢 **The opportunity, sharpened:** the `Apache-2.0` Ed-Fi spine from [`edanalytics`](https://github.com/edanalytics) *(carried, `p258`)* remains the only permissive layer in the school stack, and [`dbt_synth_data`](https://github.com/edanalytics/dbt_synth_data) still lets a studio demo the pipeline before touching `FERPA`-covered records.
+
+🔴 **The risk to price in, now with numbers:** the GitHub Classroom autograding trio is archived — re-verified this pass, `archived: true` on all three. 🔴 [`classroom-resources/autograding`](https://github.com/classroom-resources/autograding) has **`0` forks**: nobody has picked it up. A US higher-ed autograding engagement forks on day one and owns the fork.
+
+🟢 **New and cheap:** [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) is **`BSD-3-Clause`** *(pointer followed to a `1 528` B payload)* — the LTI bridge for a JupyterHub-based CS course, permissive and confirmed.
+
+#### EMEA
+
+🟢 **The sovereignty question for lecture transcription is settled.** [`nextcloud/live_transcription`](https://github.com/nextcloud/live_transcription) and [`nextcloud/talk_bot_ai`](https://github.com/nextcloud/talk_bot_ai) are **`AGPL-3.0-or-later`**, read from the repositories' own `REUSE.toml` and `LICENSES/` declarations. 🔵 `p259` sent this question upstream; it did not have to go.
+
+🟢 **What `or-later` buys a proposal:** the network-copyleft duty is forward-compatible. Self-hosted on the institution's tenancy it is contained; offered as your hosted service it is owed to every user — and that answer does not change when a later Affero version appears.
+
+🟢 **The school-authority AI layer composes, end to end.** Core at `GPL-3.0-or-later`, the `bycs-lp` Bavarian plugin set at `GPL-3.0-or-later` *(carried, `p259`)*. Every bound measured; no inference left in the stack.
+
+🔴 **The EMEA gap this base keeps declaring:** no primary EU text has been read here for six passes, and the secondary channel served the wrong high-risk date again.
+
+#### APAC
+
+🟢 [`kesaruhasun/mcp-sliit-courseweb`](https://github.com/kesaruhasun/mcp-sliit-courseweb) — **`ISC`**, a Sri Lankan university course-web MCP connector. 🟢 [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) — **`MIT`**, filed, previously carried as *"no grant"*.
+
+🟡 **Both are small**, and the honest framing is about the tier rather than the two rows: the APAC contribution to this corpus arrives as **institution-specific connectors**, not as platforms. That is a partner-sourcing signal — the integration work is already being done locally and is permissively licensed where it is licensed at all.
+
+🔴 **Unchanged and still unconfirmed:** India's Class-`3` mandate and China's *"AI Plus Education"* annual-hours figure remain **REPORTED, NOT CONFIRMED**. The `6`-vs-`8` hour disagreement between secondary sources stands, and nothing primary was read this pass either.
+
+#### LATAM
+
+🟢 **The find of the pass for this region:** [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) — **`GPL-3.0-or-later`**, a Moodle block that lets Chilean **OTECs** *(Organismos Técnicos de Capacitación)* register attendance for courses run under **SENCE**, the national training service, with per-course attendance reports, a session-close minute counter, and a **SENCE test environment toggle** so an implementation can be rehearsed without filing real attendance.
+
+🟢 **Why that is an opportunity and not a curiosity:** it is **regulatory plumbing**. A Chilean corporate-training engagement does not get to choose whether it reports to SENCE. An open, GPL-licensed block that already speaks the protocol — with a test mode — removes the single most tedious item from the delivery plan. 🔴 **And these shelves carried it as *"no licence file"*** while the repository shipped a `35 126` B canonical `GPL-3.0` at `license.txt`.
+
+🟢 **It also pairs cleanly with `p259`'s LATAM practice recipe:** same licence family as the `jeanlucio` Moodle tooling, same plugin ABI, so a regional Moodle practice can carry compliance and AI in one deployable.
+
+🔴 **The region's gap, stated:** no LATAM-origin *platform* was found this pass, only plugins and connectors. The `87 %` adoption / `26 %` strategy picture from UNESCO IESALC is carried from earlier passes and was **not re-verified here**.
+
+#### Global
+
+🟢 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) — **`MIT`**, `325`★, the FSRS scheduling helper for Anki, recovered from a *"NO GRANT"* cell. 🔵 Retention scheduling is the one piece of learning science with a large, evidence-backed open implementation, and this shelf had it marked unusable.
+
+🟢 **The LMS connector tier**, measured in `T260-V4`: permissive where it declares, silent in two-thirds of cases, and cheap to fix.
+
 ## Pass 259 — 2026-10-17 — **`8` SEARCH LEGS, `46` FACTS OFFERED, `0` THROUGH THE CLAIMS GATE — FOR THE SECOND PASS RUNNING.** SO THIS SECTION DOES NOT RESTATE THE MARKET; IT PLACES THE `11` ROWS WHOSE GRANTS BECAME READABLE, BECAUSE A LICENCE IS WHAT TURNS A MARKET INTO A DELIVERABLE
 
 🔵 **Evidence:** [`p259-websearch`](../evidence/p259-websearch.2026-10-17-p259.tsv) *(`8` legs: global ×`4`, regional ×`4`)* · [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv)

@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 260 — 2026-10-17 — **`ACTION ZC` DISCHARGED, AND ITS FALSIFIER FIRED: MARKING THE ARCHIVED ROWS NEEDS MORE THAN A CELL, SO THIS SHELF NOW CARRIES A REGISTER.** PLUS: THE MOODLE CORE BOUND IS `or-later`, WHICH IS WHAT MAKES THE WHOLE PLUGIN LAYER COMPOSE
+
+🔵 **Evidence:** [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · [`p260-absence-audit`](../evidence/p260-absence-audit.2026-10-17-p260.tsv) · **instrument:** [`pass260-ecosystem-manifest-tier`](../compose/code/pass260-ecosystem-manifest-tier/)
+
+### 🟡 `T260-R1` — `ACTION ZC`: the archived-upstream register
+
+`ZC` asked to *"mark the `9` archived rows ON the shelves"*, falsified *"if marking proves to need more than a cell — in which case say what it needs"*.
+
+🔴 **It needs more than a cell, and here is why:** these shelves are append-only. [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) alone appears on **three** shelves across passes `p220`, `p222` and `p259`. Marking "the cell" means marking dozens of historical cells, which would rewrite history — the one thing an append-only shelf must not do.
+
+🟢 **So the answer is a REGISTER: one addressable table, re-verified every pass, that a reader consults before quoting any row.** All `9` re-read first-hand this pass through the authenticated `MCP` search endpoint; `archived: true` on all `9`.
+
+| row | ★ | forks | last push | 🔴 what to do instead |
+|---|---|---|---|---|
+| 🔴 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | `99` | `45` | `2026-03-04` | **fork.** `45` forks already exist; pick the liveliest before starting your own |
+| 🔴 [`adlnet/xAPI-SCORM-Profile`](https://github.com/adlnet/xAPI-SCORM-Profile) | `42` | `28` | `2026-03-12` | **cite, do not depend.** It is a profile document, not code |
+| 🔴 [`adlnet/xapi-lab`](https://github.com/adlnet/xapi-lab) | `38` | `24` | `2026-06-06` | **route around** — use [`yetanalytics`](https://github.com/yetanalytics)' live stack for statement authoring |
+| 🔴 [`adlnet/tla`](https://github.com/adlnet/tla) | `19` | `14` | `2026-03-12` | **reference only.** The TLA reference implementation is frozen |
+| 🔴 [`adlnet/SCORM-to-TLA-Roadmap`](https://github.com/adlnet/SCORM-to-TLA-Roadmap) | `7` | `7` | `2026-03-12` | **cite, do not depend** |
+| 🔴 [`classroom-resources/autograding-grading-reporter`](https://github.com/classroom-resources/autograding-grading-reporter) | `11` | `24` | `2026-10-06` | 🔴 **fork — it is the FINAL step of every Classroom workflow** |
+| 🔴 [`classroom-resources/autograding-command-grader`](https://github.com/classroom-resources/autograding-command-grader) | `6` | `11` | `2026-10-06` | **fork** |
+| 🔴 [`classroom-resources/autograding`](https://github.com/classroom-resources/autograding) | `1` | `0` | `2025-04-26` | 🔴 **fork, and note the `0` forks**: nobody has picked this up |
+| 🔴 [`frappe/schools`](https://github.com/frappe/schools) | `49` | `65` | `2026-02-05` | **route around** — upstream says *"Merged with frappe/erpnext"* |
+
+🔵 **The house rule this register sets:** an archived upstream is quotable as **provenance** and never as a **dependency**. A proposal may say *"built on the ADL reference wrapper"*; it may not say *"maintained upstream"*.
+
+🔴 **The register covers `13` owners of roughly `700`.** `ACTION YW`'s full sweep is still unrun, so the other ~`690` owners are **unread, not clean**.
+
+### 🟢 `T260-R2` — the Moodle core bound, and why it is the load-bearing fact of the school stack
+
+🟢 [`moodle/moodle`](https://github.com/moodle/moodle)'s `composer.json` declares **`GPL-3.0-or-later`** *(read first-hand, `3 735` B, `3585d5dad9a3add8`)*. These shelves have carried core as a bare **`GPL-3.0`** with no bound.
+
+🔵 **It matters because `p259` left the question half-open.** `p259` established that the `bycs-lp` and `jeanlucio` plugin layer is `GPL-3.0-**or-later**` and that [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) is `GPL-2.0` with no *"or later"*. What it could not say was what **core** elects.
+
+| layer | bound, now read | consequence |
+|---|---|---|
+| 🟢 `moodle/moodle` core | 🟢 **`GPL-3.0-or-later`** | — |
+| 🟢 the `bycs-lp` + `jeanlucio` plugin layer *(`9` rows)* | 🟢 `GPL-3.0-or-later` | 🟢 **composes with core, both directions** |
+| 🔴 `OS4ED/openSIS-Classic` | 🔴 `GPL-2.0`, no *"or later"* | 🔴 **still cannot be linked with either.** `p259`'s architecture holds unchanged |
+
+🟢 **So the school stack is now fully bounded, not merely family-named**, and the one incompatibility in it is the SIS — which is exactly where `p259` put it, now on a complete measurement rather than a partial one.
+
+### 🔴 `T260-R3` — `3` live cells on these shelves assert an absence over a licence file that is there
+
+Out of `72` rows whose cell asserts an absence, `62` reproduce against a full tree — 🟢 **the ladder is sound, `86.1 %`**. 🔴 Three do not, and they are live cells rather than corrected history:
+
+| row | the cell | 🟢 what the tree holds |
+|---|---|---|
+| 🔴 [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) | *"no licence file"* | 🟢 `license.txt`, **`35 126` B**, canonical `GPL-3.0`. **Tier A position `13`** — the same path that caught [`frappe/education`](https://github.com/frappe/education) one pass ago |
+| 🔴 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) *(`325`★)* | *"NO GRANT"* | 🟢 **`MIT`**, `1 079` B, at a file named **`License`** |
+| 🔴 [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | *"no grant"* | 🟢 **`MIT`** filed, `1 068` B |
+
+🟢 **[`fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) is the one a foundation shelf actually wants:** `MIT`, `325`★, and it is the scheduling layer — FSRS, the spaced-repetition algorithm — under an enormous installed base of Anki users. A studio building retention into a learning product has been looking at a cell that said it could not.
+
+### 🔴 `T260-R4` — the foundation shelf's real gap is not discovery, and not paths either
+
+🔴 **`75` of the `153` repositories swept this pass carry no package manifest of any kind** — no `package.json`, no `pyproject.toml`, no `composer.json`, nothing. They are applications, notebooks, datasets and scripts. 🔴 **A further `57` manifest probes returned a manifest with no `license` key at all.**
+
+🔵 **Stated as a supply fact rather than a method note: the education corpus is unusually light on packaged software.** Generic SCA tooling assumes a package; two-thirds of this corpus is not one. For a bid, that means licence due diligence here is a **reading** job, not a scanning job, and should be priced as one.
+
 ## Pass 259 — 2026-10-17 — **THE K-12 FOUNDATION SHELF HAS A LICENCE-COMPATIBILITY PROBLEM, AND IT WAS INVISIBLE WHILE FOUR OF ITS ROWS READ "GRANT UNKNOWN".** `openSIS-Classic` IS `GPL-2.0`; THE MOODLE PLUGIN LAYER IS `GPL-3.0-or-later`; THE NEXTCLOUD LAYER IS `AGPL`. THOSE THREE DO NOT COMPOSE THE WAY A PROPOSAL ASSUMES
 
 🔵 **Evidence:** [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv) · **instrument:** [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/)

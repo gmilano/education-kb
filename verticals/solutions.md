@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 260 — 2026-10-17 — **THE `AGPL` ON THE TWO NEXTCLOUD PLATFORM ROWS IS `AGPL-3.0-or-later`, READ FROM THE REPOSITORY'S OWN `SPDX` DECLARATION — SO THE HOSTED-OFFER QUESTION `p259` SENT UPSTREAM IS ANSWERED HERE.** AND THE PLATFORM MATRIX NOW CARRIES A BOUND IN EVERY CELL IT CLAIMS ONE FOR
+
+🔵 **Evidence:** [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · **instrument:** [`pass260-ecosystem-manifest-tier`](../compose/code/pass260-ecosystem-manifest-tier/)
+
+### 🟢 `T260-V1` — the platform licence matrix, with the bounds filled in
+
+| platform | role | grant | bound | read at |
+|---|---|---|---|---|
+| 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) | LMS core | `GPL-3.0` | 🟢 **`or-later`** | `composer.json` *(`3 735` B)* — **new this pass** |
+| 🟢 [`nextcloud/live_transcription`](https://github.com/nextcloud/live_transcription) | lecture transcription | `AGPL-3.0` | 🟢 **`or-later`** | `REUSE.toml` + `LICENSES/AGPL-3.0-or-later.txt` — **new this pass** |
+| 🟢 [`nextcloud/talk_bot_ai`](https://github.com/nextcloud/talk_bot_ai) | classroom assistant | `AGPL-3.0` | 🟢 **`or-later`** | same |
+| 🟢 [`frappe/lms`](https://github.com/frappe/lms) | LMS | `AGPL-3.0` | 🟢 **`or-later`** | `package.json` — **new this pass** |
+| 🟢 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | multimodal tutoring platform | 🟢 **`BSD-3-Clause`** | n/a | `LICENSE` *(`1 531` B)* — 🟢 **confirmed, see `T260-V3`** |
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) *(carried, `p259`)* | SIS | `GPL-2.0` | 🔴 **no *"or later"*** | header + `docs/License.txt` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) *(carried)* | LMS/MOOC | `AGPL-3.0` | filed | — |
+| 🟢 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(carried)* | AI-native LMS | 🟢 `MIT` | n/a | filed |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) *(carried)* | offline-first LMS | 🟢 `MIT` | n/a | filed, and corroborated this pass in **both** `package.json` and `pyproject.toml` |
+| 🔴 [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) *(carried)* | higher-ed CRM | 🔴 `Elastic-2.0` | n/a | `composer.json` — corroborated this pass |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) *(carried)* | ERP on Odoo | `LGPL-3.0` | filed | — |
+
+🟢 **Four bounds added, no cell retracted.**
+
+### 🟢 `T260-V2` — what the Nextcloud bound actually changes in a quote
+
+🔴 `p259` wrote: *"the version is **unstated** in the manifest, so plan against `AGPL-3.0` and get it confirmed upstream before a hosted offer is priced."*
+
+🟢 **It did not need to go upstream. Both repositories are `REUSE`-compliant**, and `REUSE.toml` carries `SPDX-License-Identifier: AGPL-3.0-or-later` at the repository root, with a matching `LICENSES/AGPL-3.0-or-later.txt`:
+
+| | 🔴 `p259`'s channel | 🟢 `p260`'s channel |
+|---|---|---|
+| path | `appinfo/info.xml` | `REUSE.toml` + `LICENSES/` |
+| what it says | `<licence>agpl</licence>` | `SPDX-License-Identifier: AGPL-3.0-or-later` |
+| family | 🟢 yes | 🟢 yes |
+| bound | 🔴 **no** | 🟢 **yes** |
+| machine-readable | by convention | 🟢 **by specification** |
+
+🔵 **Both channels are in the same repository, and `p259` added the weaker one** — because it was the one that answered first. 🟢 The practical consequence for a proposal: `or-later` means a hosted service may be offered under `AGPL-3.0` **or any later Affero version**, so the duty is forward-compatible and does not have to be renegotiated when the FSF publishes v4.
+
+🔴 **The duty itself is unchanged and is still the one that catches studios.** Self-hosted on the institution's tenancy: contained. Offered as *your* hosted service to many institutions: you owe source, including your modifications, to every user of that service.
+
+🟡 **And a second licence appears in the same declaration:** both repositories annotate their config and ignore files **`CC0-1.0`**. That is not a dual licence on the product; it is the REUSE convention for files too trivial to copyright. 🔵 Worth recording so a later reader does not quote `CC0` as the platform's grant.
+
+### 🟢 `T260-V3` — the platform cell this pass nearly retracted, and did not
+
+🔴 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)'s `pyproject.toml` points at `LICENSE` rather than naming a licence, and that `LICENSE` opens:
+
+> `Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-dev`
+> **`All rights reserved.`**
+
+🟢 **The cell is right: it is `BSD-3-Clause`.** The three conditions and the warranty disclaimer follow verbatim. *"All rights reserved"* is the conventional opening of a BSD notice, not a reservation.
+
+🔴 **A reader that stops at line `2` tells a client that the only multimodal tutoring platform on this shelf — voice, video, 3D avatars, Docker-first, local models via Ollama — is proprietary.** 🔵 That is the opposite of the failure a grant reader is built to avoid, and nothing on this base tested for it until now. `reservation_verdict()` does.
+
+### 🔴 `T260-V4` — the connector tier under the platforms
+
+🟡 `20` MCP connectors to the platforms on this shelf were probed as a cohort — Canvas, Moodle, Blackboard, D2L, Google Classroom, WebUntis, SUAP, Aula Virtual.
+
+- 🟢 **`7` resolved: `5` `MIT`, `1` `ISC`, `1` `GPL-3.0-or-later`.** Where this tier declares, it is permissive.
+- 🔴 **`13` declare nothing** — `4` have no manifest at all, `9` have one with no `license` key.
+- 🔴 **`5` of the `7` that resolved have no filed licence text**, only a manifest field. `MIT`, `ISC` and `BSD` each require a distributor to reproduce the licence text, so adopting one of these into a deliverable leaves you owing a document upstream never published. 🔵 One PR fixes it; discovering it at delivery does not.
+
+🔵 **For a platform-integration engagement that is the shape to plan for:** the connector exists, it is cheap, and the licence work is a day of PRs rather than a procurement problem.
+
 ## Pass 259 — 2026-10-17 — **THE OPEN-SOURCE SIS THIS SHELF HAS CARRIED AS "GRANT UNREADABLE" IS `GPL-2.0`, AND THAT DECIDES THE INTEGRATION ARCHITECTURE OF EVERY SIS+LMS ENGAGEMENT.** PLUS: A PLATFORM'S GRANT CAN SIT IN ITS APP MANIFEST, WHICH THIS SHELF'S LADDER DOES NOT READ
 
 🔵 **Evidence:** [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv) · **instrument:** [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/)

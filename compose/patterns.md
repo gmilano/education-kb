@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 260 — 2026-10-17 — **FIVE RECIPES FROM WHAT THIS PASS MEASURED: A CHILEAN COMPLIANCE PLUGIN, A FULLY BOUNDED EMEA HOSTING DECISION, A PERMISSIVE LMS CONNECTOR TIER, AND A DUE-DILIGENCE RUN THAT NOW CHECKS WHETHER THE LADDER WAS EVEN EXECUTED**
+
+🔵 Every repository below had its grant read first-hand at `p260` or is marked *(carried)*. 🔵 **Evidence:** [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · [`p260-absence-audit`](../evidence/p260-absence-audit.2026-10-17-p260.tsv) · **instrument:** [`pass260-ecosystem-manifest-tier`](../compose/code/pass260-ecosystem-manifest-tier/)
+
+### 🟢 `P260-1` — SENCE-compliant corporate training for a Chilean OTEC *(LATAM, `4`–`6` weeks)*
+
+**Wire:** [`moodle/moodle`](https://github.com/moodle/moodle) 🟢 **`GPL-3.0-or-later`** *(bound read first-hand this pass)* as the LMS. Compliance: 🟢 [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) **`GPL-3.0-or-later`** — the block that registers course attendance with **SENCE**, Chile's national training service, for courses run under the subsidy. Run the implementation against **its SENCE test-environment toggle first**, so attendance is rehearsed without being filed. Development loop on [`jeanlucio/moodle-dev-tools`](https://github.com/jeanlucio/moodle-dev-tools) *(carried, `p259`, `GPL-3.0-or-later`)*, whose `addheader.php` keeps every plugin the practice writes machine-readable to its own licence tooling. AI layer: adopt `P259-1`'s `bycs-lp` set unchanged — same licence family, same plugin ABI.
+
+🟢 **Why the licences make this one deployable rather than three:** core, the compliance block, the dev tooling and the AI layer are **all `GPL-3.0-or-later`**, measured. Nothing in this recipe needs a compatibility argument.
+
+🟡 **Grant duty:** every derivative plugin ships under the same terms. Fine for a services engagement; 🔴 **not available** as a closed white-label.
+
+🔵 **The sales point:** SENCE reporting is not optional for an OTEC. A studio that arrives with the protocol already working, plus a rehearsal mode, removes the most tedious line item in the plan.
+
+### 🟢 `P260-2` — lecture transcription for a sovereignty-sensitive institution, now priceable *(EMEA, `4`–`6` weeks)*
+
+**Wire:** [`nextcloud/live_transcription`](https://github.com/nextcloud/live_transcription) + [`nextcloud/talk_bot_ai`](https://github.com/nextcloud/talk_bot_ai), both 🟢 **`AGPL-3.0-or-later`** *(read this pass from each repository's own `REUSE.toml` and `LICENSES/AGPL-3.0-or-later.txt`)*, served by a local [`vllm`](https://github.com/vllm-project/vllm) or [`ollama`](https://github.com/ollama/ollama) endpoint *(carried)*. Transcript events to an LRS via [`yetanalytics`](https://github.com/yetanalytics)' xAPI stack *(carried, and **not** archived — unlike the `adlnet` reference tooling in the register on [`repos/foundations.md`](../repos/foundations.md))*.
+
+🟢 **What `p260` changes against `P259-3`:** the bound is no longer an assumption. `p259` said *"plan against `AGPL-3.0` and get it confirmed upstream before a hosted offer is priced"*. 🟢 **It is confirmed, from the repository, and it is `or-later`** — so the network-copyleft duty is forward-compatible and a multi-year hosting contract does not have to be re-papered when a later Affero version appears.
+
+🔴 **The duty, unchanged:** on the institution's own tenancy, contained. As **your** hosted service to many institutions, source — including your modifications — is owed to every user of that service.
+
+🟡 **Read the annotations, not just the identifier:** both repositories also annotate trivial config files **`CC0-1.0`**. That is REUSE convention, not a dual licence, and quoting `CC0` as the platform's grant would be wrong.
+
+### 🟢 `P260-3` — an agent that acts inside the client's existing LMS *(any region, `3`–`5` weeks)*
+
+**Wire:** pick the connector for the platform the client already runs — 🟢 [`lucanardinocchi/canvas-mcp`](https://github.com/lucanardinocchi/canvas-mcp) **`MIT`** *(Canvas)*, 🟢 [`joshuasoup/d2l-mcp`](https://github.com/joshuasoup/d2l-mcp) **`MIT`** *(D2L Brightspace)*, 🟢 [`zainf2327/mcp-classroom`](https://github.com/zainf2327/mcp-classroom) **`MIT`** *(Google Classroom)*, 🟢 [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) **`GPL-3.0-or-later`** *(Moodle, as a plugin)*. Put [`ashutoshrana/confidence-escalation`](https://github.com/ashutoshrana/confidence-escalation) *(carried, `MIT`)* in front of anything that writes, so low-confidence actions reach a human.
+
+🔴 **Run this check before the first commit, because it is invisible afterwards:** `5` of the `7` connectors resolved this pass have **no filed licence text** — the grant exists only as a `package.json` field. `MIT`, `ISC`, `BSD` and `Apache-2.0` each require a distributor to **reproduce the licence text**. 🟢 **Open a PR upstream adding a `LICENSE` file before you ship.** One afternoon; otherwise it surfaces in the client's legal review.
+
+🔴 **And read the README before the licence.** [`zainf2327/mcp-classroom`](https://github.com/zainf2327/mcp-classroom) advertises *"auto-solve and submit student work"*. It is `MIT` and it is an academic-integrity liability in an institutional product — **disable or remove that surface explicitly, and say so in the proposal.**
+
+### 🟢 `P260-4` — retention scheduling as a product feature *(any region, `2`–`3` weeks)*
+
+**Wire:** 🟢 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) **`MIT`**, `325`★ — the FSRS scheduler helper, recovered this pass from a cell that read *"NO GRANT"*. Pair it with [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) *(carried)* so an agent can author and schedule cards, and with [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) *(carried, `MIT`)* when the client wants knowledge tracing beside the scheduler.
+
+🟢 **Why it is worth a recipe:** spaced repetition is the one piece of learning science with a large, evidence-backed, permissively licensed open implementation and an enormous installed base. 🔴 **This shelf had it marked unusable**, which is a reminder that a `NO GRANT` cell is a claim about a probe, not about a repository.
+
+### 🟢 `P260-5` — licence due diligence that checks whether the ladder was RUN *(any region, `1` week)*
+
+**Wire:** [`pass260-ecosystem-manifest-tier`](../compose/code/pass260-ecosystem-manifest-tier/) for ecosystem detection from the tree, the foreign/generated guards, the `(name, url)` pair rule and `reconcile()`; [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/) for `(path, payload)`; [`p222-ecosystem-bound-grammar`](../compose/code/p222-ecosystem-bound-grammar/) for the `-only` / `-or-later` bound; [`lib/license_family.sh`](../compose/code/lib/license_family.sh) for full texts; [`pass257-restriction-scan`](../compose/code/pass257-restriction-scan/) for added restrictions; [`pass258-content-licence-family`](../compose/code/pass258-content-licence-family/) for the Creative Commons half of any OER corpus.
+
+**The run order this pass's measurements justify:**
+
+1. 🔴 **Clone the tree before probing paths.** One `--filter=blob:none --depth 1` clone per repository costs ~`2` seconds and tells you which ecosystems exist, which licence files exist, and whether the candidate manifest is **vendored**. `590` blind path probes across `p257`–`p258` moved `0` rows; `153` trees moved `36`.
+2. 🔴 **Ask `tier_coverage()` before you add a path.** `NOT-RUN` and `ABSENT` are different verdicts and only `ABSENT` is fixed by a longer list. Measured here: `34` of `36`.
+3. 🟢 **Prefer the strongest channel present, not the first one that answers.** `REUSE.toml` beat `appinfo/info.xml` in the same repository, by a bound.
+4. 🔴 **Never emit an absence from one observation, and re-audit the absences you already published.** `10` of `72` published absences on these shelves had a root licence path after all.
+5. 🟢 **Reconcile, do not average.** When a filed text and a manifest disagree, the filed text governs — [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) files `MIT` and declares `ISC`.
+6. 🔴 **Check for the duty gap.** A permissive grant that exists only as a manifest field leaves your client owing a licence text upstream never published.
+7. 🟢 **And check the opposite failure.** *"All rights reserved"* at the head of a BSD notice is boilerplate; retracting on it costs a correct row.
+
+🔵 **Deliverable:** a per-repository table of `(ecosystem, path, payload, location class, family, bound, grant state, duty)` with every cell traceable to a payload hash — which is what a client's counsel actually needs, and what a scanner's "unknown" never gives them.
+
 ## Pass 259 — 2026-10-17 — **FIVE RECIPES BUILT FROM THE `11` ROWS WHOSE GRANTS BECAME READABLE THIS PASS.** EACH NAMES ITS REPOSITORIES, THE GRANT DUTY IT INHERITS, AND THE THING IT CANNOT DO
 
 🔵 Every repository below had its grant read first-hand at `p259` or is marked *(carried)*. 🔵 **Evidence:** [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv) · **instrument:** [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/)

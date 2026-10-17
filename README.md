@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 260 — 2026-10-17 — **`ACTION ZA` BUILT, RUN OVER `153` REPOSITORIES, AND REFUTED.** AND THE SWEEP THAT REFUTED IT RESOLVED `36` SLUGS — `34` OF THEM FROM RUNGS THAT WERE ALWAYS ON THE LADDER AND HAD NEVER BEEN PUT ON THE ROW
+
+⏱️ **SIXTH pass of `2026-10-17`.** 🔵 **The pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**
+
+### 🔴 The headline: the ladder was never too short
+
+`ACTION ZA` asked for an ecosystem-native manifest tier and named six ecosystems. It was built and run over `153` repository trees, each one cloned blobless so the ecosystem came from the repository's own files.
+
+| `ZA`'s six ecosystems | result over `153` repositories |
+|---|---|
+| Drupal `*.info.yml` · WordPress header · Haskell `*.cabal` | 🔴 **`0` repositories** |
+| `*.gemspec` | 🔴 `3` files, **all vendored** |
+| `*.csproj` | 🔴 `5` files, **no licence element in any** |
+| Nextcloud `appinfo/info.xml` | 🟡 `2` rows — **already resolved at `p259`** |
+
+🔴 **`0` new rows. `ZA` is REFUTED on its own falsifier and the ladder stays as it is.**
+
+🟢 **And the same sweep resolved `36` slugs** — `19` from `package.json`, `9` from `pyproject.toml`, `6` from `REUSE.toml`/`LICENSES/`, and the rest from `composer.json`, `pom.xml`, `version.php` and `DESCRIPTION`.
+
+| cause of the `36` | |
+|---|---|
+| 🔴 **`TIER-NOT-RUN`** — the path was always on the ladder and was never fetched for that row | 🔴 **`34`** |
+| `CHANNEL-ALREADY-RESOLVED` | `2` |
+| 🔴 `CHANNEL-ABSENT` — **the only cause a longer path list fixes** | 🔴 **`0`** |
+
+🔵 **Four passes have asked for a wider ladder.** `p257`/`p258` widened path names across `590` probes for `0` rows; `p259` found the tier already present and mis-contracted; **`p260` finds it present, correct, and never executed.** `tier_coverage()` now keeps `NOT-RUN` and `ABSENT` apart, because only one of them is fixed by adding paths.
+
+### 🟢 What a studio gets out of it
+
+| | |
+|---|---|
+| 🟢 **A Chilean compliance plugin, `GPL-3.0-or-later`** | [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) registers course attendance with **SENCE**, Chile's national training service, with reports and a **test-environment toggle**. 🔴 Carried here as *"no licence file"* while shipping a `35 126` B canonical `GPL-3.0` |
+| 🟢 **The EMEA hosting question, answered** | Both Nextcloud rows are **`AGPL-3.0-or-later`**, read from their own `REUSE.toml`. `p259` said *"get it confirmed upstream before a hosted offer is priced"* — it did not have to go upstream |
+| 🟢 **Moodle core is `GPL-3.0-or-later`** | So core, the Bavarian `bycs-lp` AI layer and the LATAM Moodle tooling all compose. 🔴 `openSIS-Classic` at `GPL-2.0`-no-or-later still does not, exactly where `p259` put the seam |
+| 🟢 **A permissive LMS connector tier** | `7` of `20` MCP connectors to Canvas, Moodle, D2L and Google Classroom resolved — `6` of `7` permissive. 🔴 `13` declare nothing, and `5` of the `7` have **no licence text at all** |
+| 🟢 **A `325`★ `MIT` row recovered from a "NO GRANT" cell** | [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) — the FSRS scheduler, the one piece of learning science with a large permissive implementation |
+| 🟡 **An archived-upstream register** | `ACTION ZC`'s answer: all `9` archived carried rows with ★, forks and *fork-or-route-around*, on [`repos/foundations.md`](repos/foundations.md) |
+
+### 🔴 Three findings that outrank the rows
+
+🔴 **`10` of `72` absences already published on these shelves were false, and `3` are live cells.** `p259` fixed the single-observation rule **going forward**; nothing re-read what the old rule had written. 🟢 `62` of `72` absences do hold, so the ladder itself is sound — but `license.txt`, Tier A position `13`, has now produced a false absence on two unrelated rows, two passes running.
+
+🔴 **The strongest channel in a repository can sit beside the one a pass adopted.** `p259` read `<licence>agpl</licence>` from `appinfo/info.xml` and got a family. `REUSE.toml`, at the root of the same repositories, gives the **bound**. 🔵 This base had met REUSE before — at [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal), where `REUSE.toml` answered `404` — so the name entered these shelves as an absence and never as a payload.
+
+🔴 **A permissive grant that exists only in a manifest is a duty gap.** `MIT`, `ISC`, `BSD` and `Apache-2.0` each oblige a distributor to reproduce the licence text, and `5` of the `7` connectors resolved here never published one. One upstream PR fixes it; a client's legal review does not.
+
+### 🟢 And the failure mode nothing here tested for
+
+🟢 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)'s `LICENSE` opens *"All rights reserved."* and **is** `BSD-3-Clause` — the phrase is the conventional BSD header. 🔴 A reader that stops at line `2` retracts a correct cell and reports this shelf's only multimodal tutoring platform as proprietary. `reservation_verdict()` now pins it.
+
+### 🔴 The discovery channel paid nothing, for the fifth pass running
+
+🔴 `8` WebSearch legs *(global + North America, EMEA, APAC, LATAM)*: `50` facts offered, 🔴 **`0`** new — after `p259`'s `0` of `46` and `p258`'s `1` of `32`. 🔴 The `topic:ai-tutor` axis on `updated:desc` returned `25` repositories, `24` of them with `≤7`★. 🔴 `github.com/trending` answered `403` and is **declared UNREAD**, not empty.
+
+🟢 **Closed by [`pass260-ecosystem-manifest-tier`](compose/code/pass260-ecosystem-manifest-tier/)** — `118` controls, wired into `make hooks`, every fixture a payload read first-hand, **`12` mutants run with the control count holding at `118` for each**.
+
+🔴 **Declared:** `make hooks` was **not runnable from this session** — the sandbox refuses to execute code resident in the cloned repository, the same condition `p251` and `p252` recorded. The `p260` suite ran in place and passes `118`/`118`; every pre-existing suite in `gate-offline` is **unrun**, so the standing gate's verdict for this pass is **UNKNOWN, not green**.
+
 ## Pass 259 — 2026-10-17 — **`ACTION YU` DISCHARGED: `11` OF `22` GRANTLESS ROWS RESOLVED, EVERY GRANT READ FIRST-HAND.** AND THE TIER IT ASKED FOR WAS ALREADY ON THE LADDER, FILED IN A SLOT WHOSE CONTRACT SAYS NEVER TO READ IT
 
 ⏱️ **FIFTH pass of `2026-10-17`.** 🔵 **The pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**

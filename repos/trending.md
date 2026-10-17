@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — Pass 260 — **`153` REPOSITORY TREES READ FIRST-HAND, AND `75` OF THEM — `49 %` — CARRY NO PACKAGE MANIFEST OF ANY KIND.** THE EDUCATION CORPUS IS NOT A PACKAGE ECOSYSTEM, WHICH IS WHY EVERY SCANNER-SHAPED ANSWER TO ITS LICENCES HAS BEEN "UNKNOWN"
+
+🔵 **Append-only shelf.** This is `p260`'s window; history below is not rewritten. 🔵 **Evidence:** [`p260-ecosystem-census`](../evidence/p260-ecosystem-census.2026-10-17-p260.tsv) · [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · [`p260-absence-audit`](../evidence/p260-absence-audit.2026-10-17-p260.tsv)
+
+### 🔴 `ACTION ZA`, run in full and refuted
+
+Each repository's ecosystem was detected from **its own tree** — one `git ls-remote --symref` plus one `--filter=blob:none --depth 1` clone, never from its name or description. `153` trees; `2` slugs have no ref at all *(`invincible-summer/Next-Tutor-Agent`, `openfresno/edgenuity-aeries-grade-passback` — gone, or renamed without a redirect)*.
+
+| ecosystem `ACTION ZA` named | repositories | declarations |
+|---|---|---|
+| `appinfo/info.xml` *(Nextcloud)* | `2` | `2` 🟡 both already resolved at `p259` |
+| `*.info.yml` *(Drupal)* | 🔴 `0` | `0` |
+| plugin header *(WordPress)* | 🔴 `0` | `0` |
+| `*.cabal` *(Haskell)* | 🔴 `0` | `0` |
+| `*.gemspec` | `1` | 🔴 `0` valid — `3` files, **all vendored** |
+| `*.csproj` | `2` | 🔴 `0` — `5` files, no licence element |
+
+🔴 **`0` rows `p259` did not already have. `ZA`'s falsifier is met and the ladder stays as it is.**
+
+### 🔴 The ecosystem census, which is the window's real measurement
+
+| what the tree holds | repositories |
+|---|---|
+| 🔴 **no package manifest at all** | 🔴 **`75`** |
+| `package.json` at root | `48` |
+| `pyproject.toml` at root | `26` |
+| `pom.xml` | `5` |
+| `composer.json` | `3` |
+| `setup.py` | `2` |
+| `version.php` *(Moodle plugin)* | `2` |
+| `*.csproj` | `2` |
+| `REUSE.toml` + `LICENSES/` | 🟢 `2` |
+| `appinfo/info.xml` | `2` |
+| `DESCRIPTION` *(R)* | `1` |
+| `*.gemspec` | `1` *(vendored)* |
+
+🔵 **Half this corpus is applications, notebooks, course material and scripts.** Software Composition Analysis assumes a project is a package; here, half the time, there is nothing for it to read — and its "unknown" is indistinguishable from "unlicensed" in a procurement review.
+
+### 🟢 The one genuinely new channel: `REUSE` / `SPDX`
+
+🟢 [`nextcloud/live_transcription`](https://github.com/nextcloud/live_transcription) and [`nextcloud/talk_bot_ai`](https://github.com/nextcloud/talk_bot_ai) are **REUSE-compliant**: `REUSE.toml` at root carrying `SPDX-License-Identifier: AGPL-3.0-or-later`, a matching `LICENSES/AGPL-3.0-or-later.txt`, and `.license` sidecar files for assets that cannot hold a header.
+
+🔵 **This base had met the specification before and recorded it as an absence.** At [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) *(GitLab)* the `LICENSES/` directory answered `200` and `REUSE.toml` answered **`404`** — so the file name entered these shelves as a miss and never as a payload. 🟢 **`p260` reads it `200` on GitHub for the first time, and it answers the exact question `p259` declared unanswerable** — the `AGPL` bound.
+
+| | `appinfo/info.xml` | 🟢 `REUSE.toml` |
+|---|---|---|
+| says | `<licence>agpl</licence>` | `SPDX-License-Identifier: AGPL-3.0-or-later` |
+| family / bound | 🟢 / 🔴 | 🟢 / 🟢 |
+| machine-readable | by convention | 🟢 **by specification** |
+
+🔴 **Both are in the same repository, and `p259` added the weaker one** — because it answered first.
+
+### 🔴 The retroactive absence audit
+
+🔴 `p259` fixed the single-observation rule **going forward** and never asked what the old rule had already written.
+
+| | |
+|---|---|
+| rows whose shelf cell asserts an absence | `72` |
+| 🟢 absences that **hold** against a full tree | 🟢 **`62` — `86.1 %`** |
+| 🔴 carrying a root licence path after all | 🔴 **`10`** |
+| 🔴 still-live cells among them | 🔴 **`3`** |
+
+🟢 **The ladder comes out of this well.** 🔴 **`license.txt` — Tier A, position `13` — has now produced a false absence on two unrelated rows two passes running**, [`frappe/education`](https://github.com/frappe/education) at `p259` and [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) here. 🔵 **The fix has to be applied backwards over what the old rule wrote, not only forwards.**
+
+### 🔴 Three traps the sweep met, each now a guard
+
+| trap | the repository |
+|---|---|
+| 🔴 **a vendored manifest read as the row's own** | [`sonic-pi-net/sonic-pi`](https://github.com/sonic-pi-net/sonic-pi)'s only `.gemspec` files live under `app/server/ruby/vendor/concurrent-ruby-1.3.5/`. They say `MIT`; sonic-pi **is** `MIT`. 🔵 **Accidentally right, which is worse than wrong** |
+| 🔴 **a manifest that is generator output** | [`mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK`](https://github.com/mn-mde-edfi/MDE-Ed-Fi-ODS-API-SDK)'s `.csproj` still carries `<RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>` and `<Copyright>No Copyright</Copyright>` — a generator's **defaults**, not a Minnesota Department of Education assertion |
+| 🔴 **prose in a field whose schema says SPDX** | [`pipwerks/scorm-api-wrapper`](https://github.com/pipwerks/scorm-api-wrapper)'s `package.json`: `"license": "MIT-style license: http://pipwerks.mit-license.org/"`. 🔵 **"MIT-style" is not MIT** |
+
+🔵 **And one corroboration, not a discovery:** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)'s `pom.xml` line `24` reads `<name>Apache 2.0 Open Source L6icense</name>`. `p294` recorded that upstream typo with two matching `sha256` reads; `p260` is the third, at `bbe5f4848cb88a37`, and adds the rule rather than the row: 🟢 **a manifest declaration is a `(name, url)` pair, and here the `<url>` is canonical while the `<name>` is noise.**
+
 ## 2026-10-17 — Pass 259 — **`141` ARCHIVED REPOSITORIES READ FIRST-HAND ACROSS `13` OWNERS: `9` OF THEM ARE CARRIED ROWS, AND THEY CLUSTER.** THE xAPI/SCORM REFERENCE TOOLING AND THE WHOLE GITHUB CLASSROOM AUTOGRADING TRIO ARE READ-ONLY
 
 🔵 **Append-only shelf.** This is `p259`'s window; history below is not rewritten. 🔵 **Evidence:** [`p259-archived-census`](../evidence/p259-archived-census.2026-10-17-p259.tsv) · [`p259-trending`](../evidence/p259-trending.2026-10-17-p259.tsv)

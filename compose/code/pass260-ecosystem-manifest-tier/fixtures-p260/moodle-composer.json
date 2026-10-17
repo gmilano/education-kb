@@ -1,0 +1,110 @@
+{
+    "name": "moodle/moodle",
+    "license": "GPL-3.0-or-later",
+    "description": "Moodle - the world's open source learning platform",
+    "type": "moodle-core",
+    "homepage": "https://moodle.org",
+    "provide": {
+        "moodle/lms": "5.3"
+    },
+    "require-dev": {
+        "filp/whoops": "^2.15",
+        "moodle/moodle-testing": "^1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Moodle\\BehatExtension": "lib/behat/extension/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "core_testing\\": "public/lib/testing/classes/",
+            "core_phpunit\\": "public/lib/phpunit/classes/"
+        }
+    },
+    "extra": {
+        "haspublicdir": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.3.0",
+        "ext-iconv": "*",
+        "ext-mbstring": "*",
+        "ext-curl": "*",
+        "ext-openssl": "*",
+        "ext-ctype": "*",
+        "ext-zip": "*",
+        "ext-zlib": "*",
+        "ext-gd": "*",
+        "ext-simplexml": "*",
+        "ext-spl": "*",
+        "ext-pcre": "*",
+        "ext-dom": "*",
+        "ext-xml": "*",
+        "ext-xmlreader": "*",
+        "ext-intl": "*",
+        "ext-json": "*",
+        "ext-hash": "*",
+        "ext-fileinfo": "*",
+        "ext-sodium": "*",
+        "psr/container": "2.0.2",
+        "psr/http-client": "1.0.3",
+        "psr/http-factory": "1.1.0",
+        "psr/http-message": "2.0.0",
+        "psr/log": "3.0.2",
+        "psr/http-server-handler": "1.0.2",
+        "psr/http-server-middleware": "1.0.2",
+        "psr/event-dispatcher": "1.0.0",
+        "psr/simple-cache": "3.0.0",
+        "slim/slim": "4.15.2",
+        "nikic/fast-route": "1.3.0",
+        "psr/cache": "3.0.0",
+        "guzzlehttp/guzzle": "7.10.0",
+        "guzzlehttp/promises": "2.3.0",
+        "guzzlehttp/psr7": "2.8.0",
+        "symfony/deprecation-contracts": "3.6.0",
+        "kevinrob/guzzle-cache-middleware": "7.0.0",
+        "laravel/serializable-closure": "2.0.16",
+        "php-di/php-di": "7.1.1",
+        "php-di/invoker": "2.3.7",
+        "monolog/monolog": "3.9.0",
+        "composer/pcre": "3.3.2",
+        "maennchen/zipstream-php": "3.2.0",
+        "psr/clock": "1.0.0",
+        "firebase/php-jwt": "6.11.1",
+        "ezyang/htmlpurifier": "4.19.0",
+        "matthiasmullie/minify": "1.3.75",
+        "matthiasmullie/path-converter": "1.1.3",
+        "phpmailer/phpmailer": "6.9.3",
+        "simplepie/simplepie": "1.9.0",
+        "aws/aws-sdk-php": "3.356.22",
+        "mtdowling/jmespath.php": "2.8.0",
+        "spatie/php-cloneable": "1.0.2",
+        "lbuchs/webauthn": "2.2.0",
+        "html2text/html2text": "4.3.2",
+        "michelf/php-markdown": "2.0.0",
+        "mustache/mustache": "3.0.0",
+        "openspout/openspout": "4.32.0",
+        "geoip2/geoip2": "3.2.0",
+        "maxmind-db/reader": "1.12.1",
+        "redeyeventures/geopattern": "1.1.2",
+        "phpxmlrpc/phpxmlrpc": "4.11.1",
+        "ralouphie/getallheaders": "3.0.3",
+        "league/oauth2-server": "^9.4",
+        "symfony/console": "^7.3"
+    },
+    "suggest": {
+        "ext-mysqli": "Needed when Moodle uses MySQL or MariaDB database.",
+        "ext-pgsql": "Needed when Moodle uses PostgreSQL database.",
+        "ext-sqlsrv": "Needed when Moodle uses MS SQL Server database.",
+        "ext-tokenizer": "Enabling Tokenizer PHP extension is recommended, it improves Moodle Networking functionality.",
+        "ext-soap": "Enabling SOAP PHP extension is useful for web services and some plugins.",
+        "ext-exif": "Enabling Exif PHP extension is recommended, it is used by Moodle to parse image meta data."
+    },
+    "config": {
+        "audit": {
+            "block-insecure": false
+        }
+    }
+}

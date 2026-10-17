@@ -1,0 +1,28 @@
+rank	slug	stars	license	created	pushed	gate_verdict
+1	Selleo/mentingo	96	MIT	2024-08-01	2026-10-16	CARRIED
+2	Kaiji-Z/LookatStudy	7	MIT	2026-08-14	2026-10-16	NEW-WITHHELD-below-star-floor
+3	gregor-dietrich/aimathtutor	5	MIT	2025-10-03	2026-10-16	NEW-WITHHELD-below-star-floor
+4	CGSeb/lessonfolk	3	MIT	2026-10-04	2026-10-17	NEW-WITHHELD-below-star-floor
+5	demetrius-edelin/tutor	3	MIT	2026-10-02	2026-10-16	NEW-WITHHELD-below-star-floor
+6	blackhebrewisraeli/Sprachschule-app	2	MIT	2026-05-28	2026-10-17	NEW-WITHHELD-below-star-floor
+7	Mattlo0546/slidemate	1	MIT	2026-10-01	2026-10-17	NEW-WITHHELD-below-star-floor
+8	VictorNain26/tomai-monorepo	1	NONE	2025-11-05	2026-10-17	NEW-WITHHELD-no-grant
+9	stunner100/Chewnpour	1	Apache-2.0	2026-02-11	2026-10-16	NEW-WITHHELD-below-star-floor
+10	MathTrail/canvas-api	1	MIT	2026-09-27	2026-10-16	NEW-WITHHELD-below-star-floor
+11	Tojoarisoa/scire-web	1	NOASSERTION	2026-10-11	2026-10-16	NEW-WITHHELD-no-grant
+12	api-evangelist/quizlet	0	NONE	2026-05-25	2026-10-16	CARRIED-owner-withheld-p258
+13	api-evangelist/brainly	0	NONE	2026-07-24	2026-10-16	CARRIED-owner-withheld-p258
+14	api-evangelist/bloomy	0	NONE	2026-07-24	2026-10-16	CARRIED-owner-withheld-p258
+15	64922/BridGes	0	Apache-2.0	2026-08-15	2026-10-17	NEW-WITHHELD-below-star-floor
+16	elliottstorey/flowstate	0	NONE	2026-10-16	2026-10-17	NEW-WITHHELD-no-grant
+17	Fnqqew/enhome	0	NONE	2026-09-14	2026-10-17	NEW-WITHHELD-no-grant
+18	Alaa-1983/Code-Mentor-AI	0	NONE	2026-05-25	2026-10-17	NEW-WITHHELD-no-grant
+19	delightaheebwa/learning-system	0	MIT	2026-08-08	2026-10-16	NEW-WITHHELD-below-star-floor
+20	topsoilcommons/atlas	0	MIT	2026-10-15	2026-10-16	NEW-WITHHELD-below-star-floor
+21	braivo/braivo	0	AGPL-3.0	2026-09-20	2026-10-16	NEW-WITHHELD-below-star-floor
+22	tanviruchahs2580/Bangla-GPT-APP	0	MIT	2026-08-25	2026-10-17	NEW-WITHHELD-below-star-floor
+23	sajedulislam5840/AZS-The-Catalyst	0	MIT	2026-10-07	2026-10-16	NEW-WITHHELD-below-star-floor
+24	JonScott79/Pythos	0	NOASSERTION	2026-08-17	2026-10-16	NEW-WITHHELD-no-grant
+25	ayse-hatun/Python_Buddy-python-gaming-tutor	0	MIT	2026-10-15	2026-10-16	NEW-WITHHELD-below-star-floor
+# axis: topic:ai-tutor pushed:>2026-10-01 sort=updated order=desc, authenticated MCP search endpoint, total_count=201, top 25 read
+# github.com/trending read first-hand over curl: HTTP 403 — axis DECLARED UNREAD, not empty (second consecutive pass)

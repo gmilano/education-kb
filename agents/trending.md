@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — Pass 260 — **THE DISCOVERY AXIS RETURNED `25` REPOSITORIES AND `24` OF THEM HAVE `≤7`★.** THE WINDOW'S MOVEMENT IS AGAIN NOT A NEW AGENT — IT IS `10` CARRIED ROWS THAT STOPPED BEING UNREADABLE, AND THREE OF THEM WERE NEVER UNREADABLE AT ALL
+
+🔵 **Append-only shelf.** This section is `p260`'s window; everything below it is history and is not rewritten.
+
+### 🔴 The discovery sweep
+
+`topic:ai-tutor pushed:>2026-10-01`, sorted **`updated:desc`** *(the axis `ACTION YR` settled on at `p258`)*, through the authenticated `MCP` search endpoint — `total_count=201`, top `25` read. 🔵 Full table in [`p260-trending`](../evidence/p260-trending.2026-10-17-p260.tsv).
+
+| | |
+|---|---|
+| repositories read | `25` |
+| 🔴 with `≤7`★ | 🔴 **`24`** — the only exception is [`Selleo/mentingo`](https://github.com/Selleo/mentingo) at `96`★, 🔵 **already carried** |
+| created in the last twelve months | `23` |
+| 🔴 carrying **no grant at all** *(`NONE` / `NOASSERTION`)* | `6` |
+| 🟢 publishable NEW rows | 🔴 **`0`** |
+
+🔵 **`p259` ran this axis on `stars:desc` and got `12` of `12` carried. `p260` ran it on `updated:desc` and got a long tail.** 🟢 **Both answers say the same thing from opposite ends:** the head of this topic is fully indexed here and the tail is week-old personal projects. 🔴 **Five passes running, this channel has paid zero rows.**
+
+🔴 **`github.com/trending` answered `403` over `curl`.** The axis is **DECLARED UNREAD, not empty** — second consecutive pass.
+
+### 🟢 What actually moved: `10` rows changed state, from three different causes
+
+🟢 `36` slugs had a grant read first-hand this window. `26` were already carried with that family on a live shelf line and are not republished. 🟢 **`10` changed state:**
+
+| cause | rows | |
+|---|---|---|
+| 🔴 **the tier was on the ladder and had never been RUN for that row** | `5` | the four permissive LMS connectors and [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) |
+| 🟢 **a stronger channel in the same repository** | `2` | both Nextcloud rows: `appinfo/info.xml` gave the family at `p259`, `REUSE.toml` gives the **bound** now |
+| 🔴 **the absence was never real** | `3` | a `35 126` B licence file, an `MIT` at a case-variant path, and an `MIT` contradicted by its own `package.json` |
+
+🔵 **Why that belongs on a trending shelf:** a trending section records what changed in the window. In this window nothing new arrived that was worth carrying, and ten things already carried became quotable — three of them because this base re-read what it had already published about them.
+
+### 🟢 The window's genuinely regional find
+
+🟢 [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) — **`GPL-3.0-or-later`**, **LATAM**. A Moodle block for Chilean **OTECs** that registers course attendance with **SENCE**, the national training service: per-course attendance reports, a session-close minute counter, an optional-vs-mandatory SENCE login switch, and a **test-environment toggle** so an implementation can be rehearsed without filing real attendance.
+
+🔵 **It is regulatory plumbing, which is the most durable kind of row a regional practice can carry** — a Chilean corporate-training engagement does not choose whether it reports to SENCE. 🔴 **And this base carried it as *"no licence file"*** while the repository shipped the canonical `GPL-3.0` at `license.txt`.
+
+### 🔴 The window's warning label
+
+🟡 [`zainf2327/mcp-classroom`](https://github.com/zainf2327/mcp-classroom) resolved **`MIT`** and is a competent Google Classroom MCP server. 🔴 **Its own README advertises the ability to *"auto-solve and submit student work"*.** 🔵 Recorded in the row rather than a footnote: it is adoptable, and it is an academic-integrity liability in anything sold to an institution.
+
+### 🔴 The EU date trap, served again — seventh recorded instance
+
+🔴 This window's EMEA leg again returned *"high-risk provisions enter into force Aug 2026"*. 🟢 **Unchanged and not re-litigated:** Annex III point `3` *(education and vocational training)* applies **`2027-12-02`**; `2026-08-02` is Article `50` **transparency**, a different obligation, and it is live.
+
 ## 2026-10-17 — Pass 259 — **THE `ai-tutor` AXIS RETURNED `12` REPOSITORIES FROM `41 527`★ DOWN TO `96`★ AND THIS BASE ALREADY CARRIES ALL TWELVE.** THE WINDOW'S REAL MOVEMENT IS NOT A NEW AGENT — IT IS `11` CARRIED ROWS THAT STOPPED BEING UNREADABLE
 
 🔵 **Append-only shelf.** This section is `p259`'s window; everything below it is history and is not rewritten.

@@ -149,6 +149,9 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── pass259-grant-location-class (p259: WHERE a grant was read, and what that licenses you to conclude)"; \
 	cd compose/code/pass259-grant-location-class && $(PY) test_grant_location.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
+	echo "── pass260-ecosystem-manifest-tier (p260: REACH is not RUN; foreign/generated/pair guards)"; \
+	cd compose/code/pass260-ecosystem-manifest-tier && $(PY) test_manifest_tier.py >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code || exit 1; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

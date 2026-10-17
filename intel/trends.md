@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 260 — 2026-10-17 — **FOUR TRENDS THIS PASS MEASURED RATHER THAN READ, AND THE FIRST IS THAT TWO-THIRDS OF THE OPEN EDUCATION CORPUS IS NOT PACKAGED SOFTWARE — WHICH IS WHY EVERY SCANNER-SHAPED ANSWER TO ITS LICENCES HAS BEEN WRONG**
+
+🔵 **Evidence:** [`p260-ecosystem-census`](../evidence/p260-ecosystem-census.2026-10-17-p260.tsv) · [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) · [`p260-absence-audit`](../evidence/p260-absence-audit.2026-10-17-p260.tsv) · [`p260-websearch`](../evidence/p260-websearch.2026-10-17-p260.tsv)
+
+### 🔴 `T260-T1` — the education corpus is not a package ecosystem, and tooling assumes it is
+
+`153` repositories, each one's tree read first-hand:
+
+| | |
+|---|---|
+| carry **no package manifest of any kind** | 🔴 **`75` — `49.0 %`** |
+| carry a manifest with **no `license` key** | 🔴 `57` probes |
+| carry a manifest that declares a licence | 🟢 `45` declarations over `36` slugs |
+
+🔵 **The trend, stated for a bid rather than for a method note:** the open education corpus is applications, notebooks, course material, plugins and scripts — not libraries. 🔴 **Software Composition Analysis is built on the premise that a project is a package**, and for half of this corpus there is nothing for it to read. The default answer is *"unknown"*, and *"unknown"* is indistinguishable from *"unlicensed"* in a procurement review.
+
+🟢 **What follows commercially:** licence due diligence on an education stack is a **reading** job, not a **scanning** job, and should be scoped and priced as one. `p259` said generic SCA routinely answers "unknown" on plugin-dense code; `p260` measures *why*, and the reason is bigger than plugins.
+
+### 🔴 `T260-T2` — the bottleneck moved again, and this time it was never the ladder
+
+| measure | `p257` | `p258` | `p259` | 🔴 `p260` |
+|---|---|---|---|---|
+| publishable NEW rows from discovery | `16` | `12` | `0` | 🔴 **`0`** |
+| rows whose GRANT became readable | `0` | `0` | 🟢 `11` | 🟢 **`10`** *(after the carried gate; `36` resolved, `26` already held)* |
+| 🔴 of those, resolved by a path the ladder **did not have** | — | — | `3` | 🔴 **`0`** |
+| 🔴 resolved by a path the ladder **had and never ran** | — | — | `1` | 🔴 **`34`** |
+
+🔵 **Four passes have asked for a wider ladder.** `p257`/`p258`: `590` probes widening path **names**, `0` rows. `p259`: the tier was already there, mis-contracted. 🔴 **`p260`: the tier is there, correctly contracted, and was never executed on the rows that needed it.**
+
+🟢 **The generalisation, which is this base's recurring shape at a new altitude:** *reach* and *run* are different quantities, and every pass so far has measured reach and reported it as coverage. 🔵 `p258` keyed a channel map on `(transport, endpoint)`. `p259` keyed a grant on `(path, payload)`. **`p260`: a ladder's coverage is `(path, row)` — knowing a path says nothing about whether it was fetched for the row in front of you.**
+
+### 🟡 `T260-T3` — the LMS connector tier is real, permissive, and mostly undeclared
+
+🟡 `20` MCP connectors to Canvas, Moodle, Blackboard, D2L, Google Classroom, WebUntis, SUAP and Aula Virtual, probed as a cohort:
+
+| | |
+|---|---|
+| 🟢 declare a licence | `7` — `5` `MIT`, `1` `ISC`, `1` `GPL-3.0-or-later` |
+| 🔴 declare nothing | `13` — `4` with no manifest, `9` with a manifest and no `license` key |
+| 🔴 of the `7`, grant exists **only** as a manifest field | 🔴 **`5`** |
+
+🔵 **Three things a studio can act on.** First, **the integration layer between agents and the major LMS platforms already exists** and did not when this base started; it is being written by students and small teams, not vendors. Second, **where it declares, it is permissive** — `6` of `7`. Third, 🔴 **two-thirds declares nothing**, which for a paid deliverable is unusable until the author is asked.
+
+🔴 **And a duty that is invisible until delivery:** an `MIT` that exists only in `package.json`, with no `LICENSE` file in the repository, obliges a distributor to reproduce a licence text the upstream never published. One PR upstream fixes it. Discovering it in a client's legal review does not.
+
+🟡 **One row carries its own warning.** [`zainf2327/mcp-classroom`](https://github.com/zainf2327/mcp-classroom) advertises, in its own README, the ability to *"auto-solve and submit student work"*. 🔵 It is `MIT` and technically adoptable; it is also an academic-integrity liability in a product aimed at institutions, and that belongs in the row rather than in a footnote.
+
+### 🔴 `T260-T4` — the secondary channel is exhausted, measured three passes running
+
+🔴 `50` facts offered across `8` legs, 🔴 **`0`** new — after `p259`'s `0` of `46` and `p258`'s `1` of `32`. **`128` facts across three passes, nothing carried forward.**
+
+🔴 **And it keeps serving the same wrong date.** The EMEA leg offered *"high-risk provisions enter into force Aug 2026"* for the seventh recorded time, beside the correct deferral to **`2027-12-02`** for Annex III point `3`.
+
+🔴 **`github.com/trending` answered `403` over `curl` and is DECLARED UNREAD for the second consecutive pass**, not empty. The authenticated `topic:ai-tutor` axis on `updated:desc` returned `25` repositories of which `23` were created in the last twelve months and `24` have `≤7`★ — the single exception being [`Selleo/mentingo`](https://github.com/Selleo/mentingo) at `96`★, already carried — a long tail, not a supply of rows.
+
+🔵 **The recommendation `p258` made and `p259` repeated now has a third data point and should stop being a recommendation:** the two channels still paying are **primary text** *(`eur-lex`, national instruments — still unread here after six passes)* and **first-hand payload reads** *(which paid every row this pass and the last)*.
+
 ## Pass 259 — 2026-10-17 — **FOUR TRENDS THIS PASS CAN SUPPORT WITH ITS OWN MEASUREMENTS, AND THE FIRST ONE IS ABOUT THIS BASE RATHER THAN THE MARKET: DISCOVERY HAS STOPPED PAYING AND RESOLUTION HAS STARTED**
 
 🔵 **Evidence:** [`p259-websearch`](../evidence/p259-websearch.2026-10-17-p259.tsv) · [`p259-trending`](../evidence/p259-trending.2026-10-17-p259.tsv) · [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv) · [`p259-archived-census`](../evidence/p259-archived-census.2026-10-17-p259.tsv)

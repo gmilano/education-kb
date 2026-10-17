@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 260 — 2026-10-17 — **`ACTION ZA` BUILT, RUN OVER `153` REPOSITORIES, AND REFUTED ON ITS OWN FALSIFIER: THE ECOSYSTEM TIER IT ASKED FOR RETURNED `0` ROWS `p259` DID NOT ALREADY HAVE.** AND THE SWEEP THAT REFUTED IT RESOLVED `36` SLUGS ANYWAY — `34` OF THEM FROM A TIER THAT WAS ALWAYS ON THE LADDER AND HAD NEVER BEEN **RUN**
+
+⏱️ **SIXTH pass of `2026-10-17`** *(`p255`–`p259` before it)*. All `p260` probes ran `2026-10-17`. 🔵 **Evidence:** [`p260-manifest-tier`](../evidence/p260-manifest-tier.2026-10-17-p260.tsv) *(`104` manifests, every one fetched on an `ls-remote`-resolved ref)* · [`p260-ecosystem-census`](../evidence/p260-ecosystem-census.2026-10-17-p260.tsv) *(`155` rows, `153` trees read first-hand)* · [`p260-carried-gate`](../evidence/p260-carried-gate.2026-10-17-p260.tsv) *(`36` resolutions gated before publication)* · [`p260-trending`](../evidence/p260-trending.2026-10-17-p260.tsv) *(`25`)* · [`p260-websearch`](../evidence/p260-websearch.2026-10-17-p260.tsv) *(`8` legs)* · **instrument:** [`pass260-ecosystem-manifest-tier`](../compose/code/pass260-ecosystem-manifest-tier/) *(`118` controls, in `make hooks`, `12` mutants run)*
+
+### 🔴 `T260-A` — `ACTION ZA`, built in full and refuted
+
+`ZA` asked for the ecosystem-native manifest tier keyed by the row's language/platform, and named six ecosystems. Each repository's ecosystem was detected from **its own tree** — one `git ls-remote --symref` plus one `--filter=blob:none` clone, `153` trees — and every candidate manifest was then read by that ecosystem's own reader.
+
+| ecosystem `ZA` named | repositories in the corpus | declarations read | |
+|---|---|---|---|
+| `appinfo/info.xml` *(Nextcloud)* | `2` | `2` | 🟡 **both already resolved at `p259` by this very channel** |
+| `*.info.yml` *(Drupal)* | 🔴 **`0`** | `0` | not one module or theme in `153` repositories |
+| plugin header *(WordPress)* | 🔴 **`0`** | `0` | none |
+| `*.cabal` *(Haskell)* | 🔴 **`0`** | `0` | none |
+| `*.gemspec` | `1` | 🔴 **`0` valid** | `3` files, **every one vendored** |
+| `*.csproj` | `2` | 🔴 **`0`** | `5` files, no licence element in any |
+
+🔴 **`ZA`'s falsifier was *"fewer than `3` rows across all ecosystems resolve — in which case Nextcloud is a special case and the ladder stays as it is"*. Two rows resolved, and both were already answered. `ACTION ZA` is REFUTED and the ladder stays as it is.**
+
+### 🟢 `T260-B` — the finding that outranks the refutation: a ladder's REACH and its RUN are different quantities
+
+🟢 **The same sweep resolved `36` slugs.** `34` of them came from an ecosystem that was **already on the ladder** — `package.json`, `pyproject.toml`, `composer.json`, `pom.xml`, `DESCRIPTION`, and `p259`'s own `version.php` tier — and had simply never been fetched for that row.
+
+| cause | `p259` *(`11` resolutions)* | 🔴 `p260` *(`36` resolutions)* |
+|---|---|---|
+| `TIER-NOT-RUN` — on the ladder, never fetched | `1` *(`9 %`)* | 🔴 **`34` — `94.4 %`** |
+| `CHANNEL-ALREADY-RESOLVED` | — | `2` |
+| 🔴 `CHANNEL-ABSENT` — **the only cause a longer path list fixes** | `3` | 🔴 **`0`** |
+
+🔵 **Four consecutive passes have asked for a wider ladder.** `p257` and `p258` widened the list of path **names** across `590` probes and moved `0` rows. `p259` found the tier it wanted was already present and mis-contracted. 🔴 **`p260` finds the tier present, correctly contracted, and never executed on the population that needed it.**
+
+🟢 [`tier_coverage()`](../compose/code/pass260-ecosystem-manifest-tier/manifest_tier.py) makes the two unrepresentable as one: `NOT-RUN` and `ABSENT` are different verdicts, and only `ABSENT` is fixed by adding paths.
+
+### 🟢 `T260-C` — the `10` rows that changed state, after the carried gate
+
+🔵 `36` slugs resolved; **`26` were already carried with that family on a live shelf line and are not republished.** 🔴 The gate matters more than usual here: these shelves are append-only, so a cell reading `NOASSERTION` in a `p201` section can have been answered at `p230` three screens below. Harvesting cells across the whole file produces a population that contains its own answers.
+
+| row | grant, read first-hand | where it was read | region | what a studio buys |
+|---|---|---|---|---|
+| 🟢 [`nextcloud/live_transcription`](https://github.com/nextcloud/live_transcription) | 🟢 **`AGPL-3.0-or-later`** *(+ `CC0-1.0` on config files)* | [`REUSE.toml`](https://github.com/nextcloud/live_transcription/blob/master/REUSE.toml) *(`521` B, `4666c49e635d48cb`)* **and** `LICENSES/AGPL-3.0-or-later.txt` | EMEA | 🟢 **the bound `p259` declared unstated** — the hosted-offer question is now answerable without asking upstream |
+| 🟢 [`nextcloud/talk_bot_ai`](https://github.com/nextcloud/talk_bot_ai) | 🟢 **`AGPL-3.0-or-later`** *(+ `CC0-1.0`)* | [`REUSE.toml`](https://github.com/nextcloud/talk_bot_ai/blob/main/REUSE.toml) *(`686` B, `dcc4cddecd77a5c7`)* | EMEA | same |
+| 🟢 [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) | 🟢 **`GPL-3.0-or-later`** | `version.php` code header | **LATAM** | a Chilean **SENCE** compliance plugin for Moodle — the state training-subsidy reporting a Chilean client is audited on |
+| 🟢 [`joshuasoup/d2l-mcp`](https://github.com/joshuasoup/d2l-mcp) | 🟢 **`MIT`** | `package.json` | Global | an MCP connector to **D2L Brightspace** |
+| 🟢 [`lucanardinocchi/canvas-mcp`](https://github.com/lucanardinocchi/canvas-mcp) | 🟢 **`MIT`** | `package.json` | Global | an MCP connector to **Canvas** |
+| 🟢 [`zainf2327/mcp-classroom`](https://github.com/zainf2327/mcp-classroom) | 🟢 **`MIT`** | `pyproject.toml` | Global | an MCP connector to **Google Classroom** |
+| 🟢 [`kesaruhasun/mcp-sliit-courseweb`](https://github.com/kesaruhasun/mcp-sliit-courseweb) | 🟢 **`ISC`** | `package.json` | **APAC** | a Sri Lankan university course-web connector |
+| 🟢 [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 **`ISC`** | `package.json` | APAC | was carried as *"no grant"* |
+| 🟡 [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **`BSD-3-Clause`** | `pyproject.toml` → `license = {file = "LICENSE"}`, **pointer followed** *(`1 528` B)* | Global | the LTI 1.1/1.3 authenticator for JupyterHub — permissive, confirmed |
+| 🟡 [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **`BSD-3-Clause`**, **confirmed, not corrected** | same shape *(`1 531` B, `57c341d0992078f7`)* | EMEA | 🔵 see `T260-D` |
+
+### 🔴 `T260-D` — the guard that stopped a retraction this base did not owe
+
+🔴 **[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)'s `LICENSE` opens `Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-dev` / **`All rights reserved.`*** — and the shelves carry it as `BSD-3-Clause`.
+
+🟢 **The cell is right.** *"All rights reserved"* is the conventional first line of a BSD notice; the three BSD conditions and the warranty disclaimer follow it verbatim. 🔴 **A reader that stops at line `2` retracts a correct cell and tells a client that the one multimodal tutoring platform on this shelf is proprietary.**
+
+🔵 Grant readers are built to avoid false grants. This is the opposite failure, it is not tested for anywhere else on this base, and `reservation_verdict()` now pins it: `BOILERPLATE` whenever a permissive grant follows, `RESERVED` only when it does not.
+
+### 🟡 `T260-E` — the LMS connector layer, measured as a layer
+
+🟡 **`20` of the grantless rows are MCP connectors to an LMS or SIS** — Canvas, Moodle, Blackboard, D2L, Google Classroom, Aula Virtual, SUAP, WebUntis. Probed as a cohort:
+
+| | |
+|---|---|
+| connectors resolved | 🟢 **`7`** — `5` `MIT`, `1` `ISC`, `1` `GPL-3.0-or-later` *(a Moodle plugin, so it inherits the platform's terms)* |
+| 🔴 connectors still declaring nothing | 🔴 **`13`** — `4` carry no package manifest at all; `9` carry one with **no `license` key** |
+
+🟢 **Where this layer declares, it is permissive — `6` of `7`.** 🔴 **And two-thirds of it declares nothing**, which for a paid deliverable is the same as unusable until the author is asked. 🔵 That is a supply characteristic worth quoting: the connector tier to the major LMS platforms exists and is cheap to adopt, and the due-diligence cost sits in the two-thirds that never filled in a field.
+
+### 🔴 `T260-F` — the retroactive absence audit, and `3` live cells it overturns
+
+🔴 **`p259` fixed the single-observation rule going forward and never asked how many absences already on these shelves were produced by the old one.** Every tree in this pass's census answers it for free.
+
+| | |
+|---|---|
+| rows whose shelf cell asserts an **absence** | `72` |
+| 🟢 absences that **hold** against a full tree | 🟢 **`62` — `86.1 %`** |
+| 🔴 carrying a root licence path after all | 🔴 **`10`** |
+| 🔴 of those, cells that are **still live**, not corrected history | 🔴 **`3`** |
+
+🟢 **The ladder comes out of this well** — the strongest reproducibility check it has had. 🔴 **The three live ones:**
+
+| row | the cell | 🟢 what is actually there |
+|---|---|---|
+| 🔴 [`fauzcategui/moodle-sence`](https://github.com/fauzcategui/moodle-sence) | *"no licence file"* | 🟢 `license.txt`, **`35 126` B**, the canonical `GPL-3.0` text *(`c3bc1fd94148c284`)* — **Tier A, position `13`**, the exact path that caught `frappe/education` at `p259` |
+| 🔴 [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) *(`325`★)* | *"🔴 NO GRANT"* | 🟢 **`MIT`** *(`1 079` B)*, in a file named **`License`** — a case variant `p1057-licence-path-case` already knows |
+| 🔴 [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | *"no grant"* | 🟢 **`MIT`** filed *(`1 068` B)* — and `package.json` says `ISC`. See `T260-G` |
+
+🔵 **`license.txt` at Tier A position `13` has now produced a false absence twice, two passes running, on two unrelated rows.** `p259` concluded the single-observation rule was the hole and fixed the rule. `p260` shows the fix has to be applied **backwards over what the old rule already wrote**, not only forwards.
+
+### 🔴 `T260-G` — two declarations, one commit, and the one that governs
+
+🔴 [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) ships a canonical **`MIT`** text at `LICENSE` and `"license": "ISC"` in `package.json`, in the same commit. 🔵 `ISC` is what `npm init` writes when nobody chooses.
+
+🟢 **The rule needs no new judgement — it falls out of what each location can carry.** A filed payload gives family, bound **and** terms; a manifest gives a declaration. **The filed text is operative; the manifest is evidence about it.**
+
+🔴 **And the state that matters more, because it is the common one: `5` of the `7` connectors resolved in `T260-E` have no filed licence text at all.** `MIT`, `ISC`, `BSD` and `Apache-2.0` each oblige a distributor to **reproduce the licence text** — so a grant that exists only as a manifest field leaves a studio owing a document the upstream never published. 🔵 Cheap to fix in a PR, expensive to discover at delivery, and `manifest_only_duty_gap()` now names it.
+
 ## Pass 259 — 2026-10-17 — **`ACTION YU` DISCHARGED AT `7` OF `9` MOODLE ROWS — AND THE TIER IT ASKED FOR WAS ALREADY ON THE LADDER.** `version.php` IS TIER C, POSITION `1`, FILED AS A MANIFEST, AND THE MANIFEST CONTRACT FORBIDS READING THE BODY WHERE THE GRANT LIVES. `11` OF `22` GRANTLESS ROWS RESOLVED, FROM **FOUR** DIFFERENT CAUSES, ONLY ONE OF WHICH IS A MISSING PATH
 
 ⏱️ **FIFTH pass of `2026-10-17`** *(`p255`–`p258` before it)*. All `p259` probes ran `2026-10-17`. 🔵 **Evidence:** [`p259-grant-location`](../evidence/p259-grant-location.2026-10-17-p259.tsv) *(`12` payloads, every grant read first-hand)* · [`p259-absence-reprobe`](../evidence/p259-absence-reprobe.2026-10-17-p259.tsv) *(`14` rows × `26` Tier-A paths, a reproducibility control)* · [`p259-archived-census`](../evidence/p259-archived-census.2026-10-17-p259.tsv) *(`141` archived repos read, `9` carried)* · [`p259-trending`](../evidence/p259-trending.2026-10-17-p259.tsv) *(`14`)* · [`p259-websearch`](../evidence/p259-websearch.2026-10-17-p259.tsv) *(`8` legs)* · **instrument:** [`pass259-grant-location-class`](../compose/code/pass259-grant-location-class/) *(`60` controls, in `make hooks`, `5` mutants run)*
