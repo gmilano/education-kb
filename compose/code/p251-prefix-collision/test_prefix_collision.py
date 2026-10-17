@@ -79,8 +79,17 @@ top = os.path.join(ROOT, "agents", "top.md")
 if os.path.exists(top):
     text = open(top, encoding="utf-8").read()
     rs = {(r["short"], r["long"]) for r in flagged(text)}
-    chk("live agents/top.md still flags the maia stump",
-        ("TouchRefletz/maia", "TouchRefletz/maia.edu") in rs, True)
+    # 🔴 p265: this leg pinned the PRESENCE of ("TouchRefletz/maia",
+    # "TouchRefletz/maia.edu") in the live shelf.  p264 rewrote `agents/top.md` and
+    # dropped that row legitimately, so the control went red on a shelf edit rather
+    # than on a detector regression — a fixture masquerading as a check.
+    # 🟢 The detector's capability against that exact stump is already pinned above,
+    # on a FIXTURE ("FILE scope FLAGS the maia stump (XN's falsifier)").  What the
+    # LIVE shelf owes is the INVARIANT: if the stump is there, it is flagged.  An
+    # empty shelf passes; a shelf carrying an unflagged stump still fails.
+    chk("live agents/top.md: the maia stump, if present, is flagged",
+        ("TouchRefletz/maia.edu" not in text)
+        or (("TouchRefletz/maia", "TouchRefletz/maia.edu") in rs), True)
     chk("and it is annotated, so the live shelf has 0 hard refusals",
         [(r["short"], r["long"]) for r in refusals(text)], [])
     chk("no PATH-FRAGMENT pair is ever flagged",

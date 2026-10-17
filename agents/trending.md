@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 265) — No new agent surfaced; the agent shelf's APAC gap was a reading error
+
+**Append-only shelf.** This section is added above the previous one; nothing below it is
+rewritten. Evidence: [`verified-repos.2026-10-17-p265.tsv`](../evidence/verified-repos.2026-10-17-p265.tsv)
+— 24 rows, every licence read from the repository's own payload this pass.
+
+### New agent rows this window: none, and that is the finding
+
+The global leg (`top open source AI agents education 2026 github MIT`), the trending leg and
+all four regional legs were re-run on 2026-10-17. **No education agent appeared that was not
+already shelved by pass 264 earlier the same day.** The global leg returned general-purpose
+agents (OpenHands, opencode, CrewAI, LangGraph, MetaGPT, OpenClaw) with no education-specific
+rows; the trending leg confirmed `HKUDS/DeepTutor` (~41k★) as the only education repository on
+any trending surface, with `Study-Mate` (~929★ as served today, 1.0k at pass 264) and
+`universal-diagnostic-tutor-skill` (~245★) behind it.
+
+One candidate seen but **not shelved**: `Multi-Agent-Study-Assistant` (~64★, six specialised
+agents over Phidata/Streamlit/LangChain), surfaced only through a third-party trend tracker
+with no canonical slug resolved and therefore no licence payload read. A row this KB cannot
+probe is not a row.
+
+**Fourteen permissive agent rows is the size of this category today**, not a sampling limit.
+
+### Retraction: the top row on this shelf is APAC-origin
+
+Pass 264 declared *"no APAC-origin or LATAM-origin education agent surfaced"* while listing
+`HKUDS/DeepTutor` as row one. DeepTutor's README states the project is **"led by Bingxi Zhao
+within the HKUDS Group"** and credits the **"director of the Data Intelligence Lab @ HKU"** —
+the University of Hong Kong.
+
+| Component | Provenance | Evidence grade |
+|-----------|-----------|----------------|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) (41.5k★, Apache-2.0) | Data Intelligence Lab, **University of Hong Kong** | **payload-quoted** (README) |
+| [bigdata-ustc/EduData](https://github.com/bigdata-ustc/EduData) (313★, Apache-2.0) | **Univ. of Science and Technology of China** | org-handle |
+| [HFUT-LEC/EduStudio](https://github.com/HFUT-LEC/EduStudio) (78★, MIT) | **Hefei University of Technology** | org-handle |
+| [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) (450★, MIT) | no affiliation statement located | **none — not claimed** |
+| [ZhijieXiong/pyedmine](https://github.com/ZhijieXiong/pyedmine) (82★, MIT) | no affiliation statement located | **none — not claimed** |
+
+The remaining, narrower gap: **no APAC-origin education *platform*** (see
+[`verticals/solutions.md`](../verticals/solutions.md)) and **no LATAM-origin education
+*agent*** — though LATAM does publish the platform layer, which pass 264 also denied; see
+`repos/trending.md` for i-Educar.
+
+### Why the gap statement held for several passes
+
+The agent search runs in English against GitHub's star-sorted topic listings. Those listings
+do not carry an author's institution, so provenance was never in the channel being searched —
+the gap was an artefact of the instrument, not a finding about the world. Pass 265 found it by
+reading the README of the row already at the top of the table.
+
+**Method note for later passes:** a declared gap is a claim. Re-test it against a channel that
+could falsify it (a README read, a direct repository probe), not by running the same search
+with more patience.
+
+
 ## 2026-10-17 — Education agents are shipping as skills, and one licence cell in this base was dangerous
 
 **Append-only shelf.** This section is added above the previous one; nothing below it is

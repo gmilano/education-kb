@@ -201,8 +201,18 @@ for rel in cs.SHELVES:
     ok(f"shelf exists: {rel}", os.path.exists(p))
 _, orderings = cs.harvest_shelves()
 for rel, (verdict, heads, withpass) in orderings.items():
-    chk(f"ordering AGREE on {rel}", verdict, "AGREE")
-    ok(f"{rel} carries dated sections", withpass >= 2)
+    # 🟢 p265: the ordering invariant binds any shelf that CARRIES dated sections; a
+    # shelf with none is UNDECIDABLE, which is the correct verdict for the six
+    # reference documents p264 rewrote as undated.  Carrying them is required only of
+    # the two APPEND-ONLY shelves.
+    if rel in cs.APPEND_ONLY:
+        chk(f"ordering AGREE on {rel} (append-only)", verdict, "AGREE")
+        ok(f"{rel} carries dated sections", withpass >= 2)
+    else:
+        ok(f"ordering on {rel} is AGREE or UNDECIDABLE (reference doc)",
+           verdict in ("AGREE", "UNDECIDABLE"))
+        ok(f"{rel}: if it carries dated sections they are ordered",
+           withpass < 2 or verdict == "AGREE")
 
 # ── `ACTION ZE` — the ladder is READ, never copied. ──────────────────────────────
 T = cs.ladder_tiers()

@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 265) — Thirteen repos added by probing instead of searching; two "permissive" recommendations died
+
+**Append-only shelf.** This section sits above the previous one; nothing below it is rewritten.
+Evidence: [`verified-repos.2026-10-17-p265.tsv`](../evidence/verified-repos.2026-10-17-p265.tsv)
+
+### The trending leg, again: still no education row
+
+**Ninth consecutive window.** `github trending education AI 2026` returned topic listings and
+third-party trend trackers, not GitHub's trending surface, and the only education repository
+named on any trending surface was `HKUDS/DeepTutor` (~41k★, listed as a Trending Repository of
+the Day, release v1.6.14 adding visual practice, a learning journal and managed plugins). One
+tracker's summary of the day: attention is on agentic tooling, not model releases, and
+education tutoring is a small part of it.
+
+**So this pass changed instrument.** Instead of searching harder, it took candidate slugs from
+the vertical-platform and regional legs and probed each one directly — `git ls-remote` for
+existence, then a licence-payload read. The clone channel is LIVE this session (unlike pass
+263, where it was refused); `curl` to `github.com` returns **403** through the agent proxy, so
+star counts came from page fetches and are graded accordingly. **That change of instrument is
+what produced the thirteen rows below and the two retractions.**
+
+### Permissive rows new to this shelf
+
+| Repo | Licence | Stars | Signal |
+|------|---------|-------|--------|
+| [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** | **6.9k** | Complete online learning platform, **17,004 commits**. The highest-adoption *permissively licensed* education platform this KB has found — bigger than Artemis, bigger than every education agent but DeepTutor, and absent from this shelf until now. |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | **BSD-3-Clause** | **1.4k** | *"A system for assigning and grading notebooks."* The grading option this KB kept declaring did not exist. BSD-3 confirmed from the clause text, not the sidebar. |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** | 1.2k | *"the offline app for universal education."* **39,803 commits.** A full platform architected for **no network**. First MIT complete platform on this shelf. |
+| [autolab/Autolab](https://github.com/autolab/Autolab) | **Apache-2.0** | 808 | Auto-graded programming assignments with course management; *"initially developed by a team of students at Carnegie Mellon University"* per its README. |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | Apache-2.0 | — | General ERP, **not education-specific**. Shelved only because the education-ERP leg asked for a permissive ERP and the education-specific answers all failed (below). |
+| [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) | MIT | — | General ERP (Laravel). Same caveat: not education-specific. A 2026 blog's MIT claim is confirmed from payload. |
+
+### Copyleft rows new to this shelf — real, and priced
+
+| Repo | Licence | Stars | Signal |
+|------|---------|-------|--------|
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | GPL-2.0 | 719 | **The LATAM-origin base this shelf said did not exist.** Brazilian school management, origin *prefeitura de Itajaí (SC)*, published on the federal **Portal do Software Público in 2008**. **34,948 commits**, last commit **2026-10-14**. Laravel/PHP. |
+| [portabilis/i-diario](https://github.com/portabilis/i-diario) | **AGPL-3.0** | — | i-Educar's *portal do professor*, last commit **2026-10-09**. Its licence payload is a **Portuguese translation** of AGPL-3.0 — FSF translations are unofficial, so cite the English text in a SOW. |
+| [opencast/opencast](https://github.com/opencast/opencast) | ECL-2.0 | — | Lecture capture and academic video. Same Apache-derived, education-scoped patent grant this KB flagged on Sakai. |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | AGPL-3.0 | — | Autograding from UCLouvain — the EMEA counterpart to Autolab, at an AGPL price. |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | **GPL-3.0** | — | **Correction.** H5P is routinely cited as MIT — including in earlier Globant KB cycles. The PHP library's payload is GPL-3.0. |
+| [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | — | Web conferencing built for teaching. LGPL: linking survivable, modification not free. |
+| [frappe/education](https://github.com/frappe/education) | GPL-3.0 | — | School ERP on Frappe — the ERPNext-native alternative to OpenEduCat's Odoo lineage. |
+| [frappe/lms](https://github.com/frappe/lms) | AGPL-3.0 | — | Frappe Learning. Pairs with the above where the client already runs ERPNext. |
+| [OpenBoard-org/OpenBoard](https://github.com/OpenBoard-org/OpenBoard) | GPL-3.0 | — | Interactive whiteboard, Geneva-origin, ships pt-BR localisation. Desktop deployment, so GPL rarely bites. |
+
+### Two retractions, both of this shelf's own declared gaps
+
+**1. "No LATAM-maintained foundational repo identified. The region consumes this layer; it does
+not yet publish it."** False. `i-educar` has 34,948 commits and a commit from three days ago,
+government provenance, and a licence payload in Portuguese. It was invisible because the
+search ran in English against star-sorted listings, where a 719-star municipal SIS does not
+rank. The narrowed, accurate claim: **no LATAM-origin *permissive* base and no LATAM-origin
+*agent*.**
+
+**2. "No high-adoption open-source grading option."** False for *platforms*: `nbgrader`
+(BSD-3, 1.4k) and `Autolab` (Apache-2.0, 808) both out-adopt every education agent in this KB
+except DeepTutor. True, still, for grading *agents*.
+
+### Two recommendations that did not survive the payload read
+
+| Candidate | Recommended as | What the payload says |
+|-----------|----------------|------------------------|
+| [formalms/formalms](https://github.com/formalms/formalms) | **Apache-2.0** LMS, by a 2026 open-source-LMS review | **GNU GPL v2**, at `html/license.txt`. Project is alive (last commit 2026-07-17) — just not permissive. |
+| Fedena: [foradian/fedena](https://github.com/foradian/fedena), [projectfedena/fedena](https://github.com/projectfedena/fedena) | **Apache-2.0** education ERP/SIS, by vendor comparison tables | **No licence payload at all** (Apache-2.0 stated in `README.markdown` and `NOTICE` only), and **abandoned**: last commits **2012-10-12** and **2016-07-20** (message: *"emptying content"*). |
+| [os4ed/openSIS-Classic](https://github.com/os4ed/openSIS-Classic) | GPL-2.0 SIS | Resolves, but **no licence payload served** on any path tried. Not shelved; this KB does not publish a licence it has not read. |
+
+Both directions of error landed in one pass: **a permissive platform missed for months
+(Kolibri, Oppia), and two permissive platforms imagined (forma.lms, Fedena)**. The published
+permissive-platform count went from one to three, and the education-ERP leg ended with no
+permissive education-specific answer at all — because the one everybody names has been dead
+since 2016.
+
+
 ## 2026-10-17 — The trending axis has no education row; the real movement is in the foundation layer
 
 **Append-only shelf.** This section sits above the previous one; nothing below it is

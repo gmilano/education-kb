@@ -1,0 +1,30 @@
+# pass 265 — 2026-10-17 — education KB
+# existence: git ls-remote (clone channel LIVE this session); github.com HTML via curl is 403 through the
+#   agent proxy, so star counts come from WebFetch of the repository page, graded "page".
+# licence grade: payload = bytes read from the repository's own licence file this pass;
+#   readme = licence stated in README only, no payload served; page = GitHub sidebar label only.
+slug	existence	licence	licence_grade	licence_path	stars	stars_grade	last_commit	note
+learningequality/kolibri	LIVE	MIT	payload	master/LICENSE	1.2k	page		offline-first learning platform; 39803 commits on develop; NEW to this KB
+oppia/oppia	LIVE	Apache-2.0	payload	master/LICENSE	6.9k	page		online learning platform; 17004 commits on develop; NEW to this KB
+jupyter/nbgrader	LIVE	BSD-3-Clause	payload	main/LICENSE	1.4k	page		"A system for assigning and grading notebooks"; BSD-3 confirmed from clause text; NEW
+autolab/Autolab	LIVE	Apache-2.0	payload	master/LICENSE	808	page		auto-graded programming assignments; CMU-origin per README; NEW
+portabilis/i-educar	LIVE	GPL-2.0	payload	master/LICENSE	719	page	2026-10-14	Brazilian school management; Itajai-SC origin, Portal do Software Publico 2008; 34948 commits; NEW
+portabilis/i-diario	LIVE	AGPL-3.0	payload	main/LICENSE	-	-	2026-10-09	teacher portal for i-Educar; payload is a PORTUGUESE TRANSLATION of AGPL-3.0, not the FSF English text; NEW
+opencast/opencast	LIVE	ECL-2.0	payload	master/LICENSE	-	-		lecture capture / video for universities; NEW
+h5p/h5p-php-library	LIVE	GPL-3.0	payload	master/LICENSE.txt	-	-		CORRECTION: H5P is commonly cited as MIT; the PHP library payload is GPL-3.0
+bigbluebutton/bigbluebutton	LIVE	LGPL-3.0	payload	main/LICENSE	-	-		web conferencing for education
+frappe/education	LIVE	GPL-3.0	payload	develop/license.txt	-	-		school ERP on the Frappe stack
+frappe/lms	LIVE	AGPL-3.0	payload	develop/license.txt	-	-		Frappe Learning
+INGInious/INGInious	LIVE	AGPL-3.0	payload	main/LICENSE	-	-		autograding platform, UCLouvain
+OpenBoard-org/OpenBoard	LIVE	GPL-3.0	payload	master/LICENSE	-	-		interactive whiteboard, Geneva-origin
+apache/ofbiz-framework	LIVE	Apache-2.0	payload	master/LICENSE	-	-		general ERP, NOT education-specific
+aureuserp/aureuserp	LIVE	MIT	payload	master/LICENSE	-	-		general ERP (Laravel), NOT education-specific
+formalms/formalms	LIVE	GPL-2.0	payload	html/license.txt	-	-	2026-07-17	REFUTED: a 2026 vendor LMS review lists forma.lms as Apache-2.0. Payload is GNU GPL v2.
+foradian/fedena	LIVE	Apache-2.0 (claimed)	readme	README.markdown	-	-	2012-10-12	REFUTED as a live option: no licence payload, Apache-2.0 stated in README/NOTICE only; abandoned since 2012
+projectfedena/fedena	LIVE	Apache-2.0 (claimed)	readme	README.markdown	-	-	2016-07-20	same; community fork, last commit "emptying content" 2016. The "Apache-2.0 education ERP" of vendor comparisons is dead.
+os4ed/openSIS-Classic	LIVE	UNVERIFIED	none	-	-	-		no licence payload on any path tried (main/master x LICENSE,LICENSE.md,LICENSE.txt,COPYING); not shelved
+HKUDS/DeepTutor	LIVE	Apache-2.0	payload (p264)	main/LICENSE	41.5k	page (p264)	2026-10-12	PROVENANCE: README states "led by Bingxi Zhao within the HKUDS Group" and thanks the "director of the Data Intelligence Lab @ HKU" -> APAC-origin (Hong Kong)
+bigdata-ustc/EduData	LIVE	Apache-2.0 (p264)	payload (p264)	-	313	p264		PROVENANCE: org handle names USTC (Univ. of Science and Technology of China) -> APAC-origin; org-handle grade, not payload
+HFUT-LEC/EduStudio	LIVE	MIT (p264)	payload (p264)	-	78	p264		PROVENANCE: org handle names HFUT (Hefei University of Technology) -> APAC-origin; org-handle grade, not payload
+pykt-team/pykt-toolkit	LIVE	MIT (p264)	payload (p264)	-	450	p264		no affiliation statement located in README this pass; APAC provenance NOT claimed
+ZhijieXiong/pyedmine	LIVE	MIT (p264)	payload (p264)	-	82	p264		no affiliation statement located in README this pass; APAC provenance NOT claimed

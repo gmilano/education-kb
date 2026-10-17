@@ -7,6 +7,9 @@ updated: 2026-10-17
 # Trends — Education, October 2026
 
 > What changed, what it means for a studio engagement, and how confident the evidence is.
+> **T1–T9 are from pass 264. T10 is revised and T11–T14 are new in pass 265**
+> ([evidence](../evidence/verified-repos.2026-10-17-p265.tsv)), which also retracts two of this
+> base's own declared gaps.
 
 ## T1 — The education agent consolidated around one project
 
@@ -121,16 +124,96 @@ would have been a false positive, and a false retraction costs a usable row.
 deliverable. A secondary source, an aggregator table, a GitHub sidebar badge and this
 knowledge base have all been wrong about an education licence in the last two weeks.
 
-## T10 — The permissive LMS market is one candidate deep
+## T10 — The permissive platform market is three candidates deep *(revised)*
 
-Across every platform verified this pass, **OpenOLAT (Apache-2.0)** is the only complete LMS
-without a copyleft licence. Moodle is GPL-3.0, Open edX AGPL-3.0, Chamilo/ILIAS/Gibbon GPL,
-Sakai ECL-2.0, Vacademy AGPL-3.0, OpenEduCat LGPL-3.0.
+**Revised 2026-10-17 (pass 265).** The earlier version of this entry said *one*. Payload
+verification of a wider candidate set makes it **three**, and they are not substitutes:
 
-**For the studio:** when procurement rules out copyleft, there is exactly one LMS answer and
-two architectural ones — build the agent as an **LTI tool** (`tsugi`, Apache-2.0) or an
-**XBlock** (Apache-2.0), keeping the permissive boundary around the part you deliver. Say
-this early; it reframes a licence objection as a design decision.
+| Platform | Licence | Stars | The job it is actually good at |
+|----------|---------|-------|--------------------------------|
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 | — | Behaves like an institutional LMS (courses, cohorts, assessment, administration) |
+| [oppia/oppia](https://github.com/oppia/oppia) | Apache-2.0 | **6.9k** | Structured lesson delivery with formative feedback in the lesson model; 17,004 commits |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** | 1.2k | Offline-first distribution — runs with no network, syncs opportunistically; 39,803 commits |
+
+Everything else at full-LMS scale remains copylefted (Moodle GPL-3.0, Open edX AGPL-3.0,
+Chamilo/ILIAS/Gibbon GPL, Sakai and Opencast ECL-2.0, Vacademy and frappe/lms AGPL-3.0,
+OpenEduCat LGPL-3.0, frappe/education GPL-3.0).
+
+**For the studio:** the licence objection now has three answers instead of one, and the right
+one depends on the job — which is a much better conversation than "there is exactly one". The
+two architectural answers still hold where the client keeps a copyleft platform: an **LTI
+tool** (`tsugi`, Apache-2.0) or an **XBlock** (Apache-2.0).
+
+**And a warning about where the earlier claim came from.** Two platforms that 2026-dated
+sources recommended to this KB as permissive do not survive payload verification:
+**forma.lms** is **GPL-2.0** (published by a review as Apache-2.0), and **Fedena** — still
+cited as *the* Apache-2.0 education ERP — has **no licence payload at all** and has been
+abandoned since **2012** (community fork: 2016). Both directions of error appear in the same
+pass: a permissive platform missed, and two permissive platforms imagined.
+
+## T11 — Offline-first is a licence-free lane nobody is contesting
+
+`learningequality/kolibri` (MIT, 39,803 commits) is a complete learning platform built on the
+assumption that **there is no network** — content channels sync when a link appears and the
+application is fully functional when it does not. No other platform in this KB is designed
+that way; offline support elsewhere is a feature, not an architecture.
+
+**For the studio:** this is the only credible base for rural LATAM, low-bandwidth APAC and
+anywhere power is intermittent, and the AI layer has to follow the same assumption — a
+quantised local model (Ollama), scheduling via FSRS, telemetry that syncs on contact. It is
+also the cheapest possible answer to a data-sovereignty question, because nothing leaves the
+device. Retrofitting offline onto a server-rendered LMS is a rebuild; starting from Kolibri is
+a configuration.
+
+## T12 — LATAM publishes the platform layer, in Portuguese, and this base had missed it
+
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) — GPL-2.0, 719★, **34,948
+commits**, last commit **2026-10-14** — is a Brazilian school-management system that started
+in the *prefeitura de Itajaí (SC)* and was published on the Brazilian federal **Portal do
+Software Público in 2008**. Its teacher portal `i-diario` (AGPL-3.0) committed on
+**2026-10-09**. Its licence payload is in **Portuguese**.
+
+This KB declared for several passes that *"the region consumes this layer; it does not yet
+publish it."* That was an artefact of searching in English.
+
+**For the studio:** in Brazil the question is not *which platform* but *how to put an agentic
+layer on the one the client already runs*, with the copyleft held on the platform side of an
+HTTP/LTI boundary. The sovereignty story that MEC's *Referencial* asks for is already
+satisfied by the base — Brazilian maintainers, federal software-public provenance, local
+inference — which turns a compliance conversation into a delivery conversation.
+**Legal note:** i-Diário's payload is a *Portuguese translation* of AGPL-3.0; FSF translations
+are unofficial, so cite the English text in a SOW.
+
+## T13 — The most-adopted education agent in open source is APAC-origin
+
+`HKUDS/DeepTutor`'s README states it is *"led by Bingxi Zhao within the **HKUDS Group**"* and
+credits the *"director of the **Data Intelligence Lab @ HKU**"* — the University of Hong Kong.
+At **41.5k stars** it is the most-adopted education agent anywhere, and the learner-modelling
+layer beneath it is substantially Chinese-academic: `bigdata-ustc/EduData` (USTC),
+`HFUT-LEC/EduStudio` (Hefei University of Technology).
+
+Earlier passes of this KB declared "no APAC-origin education agent surfaced" **while listing
+DeepTutor as its top row**. The gap was in the reading, not the supply.
+
+**For the studio:** APAC is the research supply centre for education AI. An APAC engagement is
+*integration* work on locally-authored components, not import — and saying so in a Hong Kong,
+Singapore or mainland pitch changes who you sound like. The genuine APAC gap is a **platform**,
+which is narrower and more actionable.
+
+## T14 — Autograding is permissive, mature, and the answer regulators will accept
+
+The "no open-source grading" gap this KB has declared was about **agents**. The platforms are
+fine: `jupyter/nbgrader` (**BSD-3-Clause, 1.4k**) for notebooks, `autolab/Autolab`
+(**Apache-2.0, 808**, CMU-origin) for programming assignments with a course-management shell,
+`Artemis` (MIT, 819) for feedback with an auditable runner, `Numbas` (Apache-2.0) for
+randomised maths, `INGInious` (AGPL-3.0, UCLouvain) where AGPL is acceptable.
+
+**For the studio:** in every jurisdiction tightening up — Idaho and Oklahoma barring AI from
+high-stakes decisions, Ohio mandating district policy, the EU's Annex III naming evaluation of
+learning outcomes, Brazil's `PL 2338` naming education selection as high-risk — a
+**deterministic autograder with a human sign-off step** is permitted where an LLM grader is
+not. Lead with nbgrader/Autolab and keep the model on the feedback side of the line. This is
+the rare case where the compliant architecture is also the cheaper one.
 
 ## Confidence notes
 
@@ -142,6 +225,17 @@ this early; it reframes a licence objection as a design decision.
   through secondary coverage, not official gazettes.
 - **Vendor-sourced, treat as direction only:** all market-size figures; Moodle 5.2/5.3
   version and LTS-date claims.
-- **Declared gaps:** no school-level Japan data; no APAC- or LATAM-origin open-source
-  education project with meaningful adoption; no high-adoption open-source grading agent;
-  Estado de México's April 2026 reform truncated in all located sources.
+- **Declared gaps, as revised by pass 265:** no school-level Japan data (population AI use,
+  24.7%, is a different measure and not a substitute); **no APAC-origin *platform*** — the
+  agent-and-research claim is retracted, see T13; **no LATAM-origin *agent* and no LATAM-origin
+  *permissive* base** — the blanket LATAM claim is retracted, see T12; **no grading *agent***,
+  while permissive grading *platforms* are mature, see T14; Mexico's draft AI statute status
+  unestablished; Maryland `SB 720` disputed across trackers; Estado de México's April 2026
+  reform truncated in all located sources.
+- **A note on how three of those gaps were wrong.** Each was a *declared* gap — stated
+  honestly, with the search named. Two were still false, and both failed the same way: the
+  search ran in English against GitHub's star-sorted topic listings, which under-serve
+  Portuguese-language government software and say nothing about an author's institution. An
+  informed gap is still information, but a gap is a claim, and claims need re-testing against a
+  channel that could falsify them. Pass 265 found both by probing candidate repositories
+  directly (`git ls-remote` plus a licence-payload read) rather than by searching harder.

@@ -8,7 +8,8 @@ updated: 2026-10-17
 
 > Concrete recipes: named repos, named licences, named wiring. Every component below was
 > licence-verified from payload on 2026-10-17
-> ([evidence](../evidence/verified-repos.2026-10-17-p264.tsv)).
+> ([evidence: pass 264](../evidence/verified-repos.2026-10-17-p264.tsv),
+> [pass 265](../evidence/verified-repos.2026-10-17-p265.tsv)). **P8–P10 are new in pass 265.**
 > Each pattern states the licence boundary — the line the client's proprietary code must stay
 > on to keep a copyleft platform from colouring the deliverable.
 
@@ -200,6 +201,119 @@ layer is the differentiator where face-to-face interaction is culturally expecte
 **Why it sells:** Brazil's MEC *Referencial* asks for national solutions reducing dependence
 on global platforms. This is that, literally.
 
+## P8 — Sovereign agentic layer over Brazil's municipal school stack
+**Target:** Brazilian municipal and state education networks (SME/SEDUC)
+**Timeline:** 8–10 weeks to a pilot in one network
+**Why it exists:** this is the pattern pass 264 could not write, because it had not found a
+LATAM-origin base.
+
+```
+[i-educar  GPL-2.0]        enrolment, attendance, grades, the municipal system of record
+   (portabilis, BR)        origin: prefeitura de Itajai-SC -> Portal do Software Publico, 2008
+        |  \                last commit 2026-10-14, 34,948 commits
+        |   \__ teachers __> [i-diario  AGPL-3.0]   portal do professor (payload is pt-BR AGPL)
+        |
+        |  === LICENCE BOUNDARY: HTTP / LTI 1.3. Nothing below links against the above. ===
+        v
+[tsugi  Apache-2.0]        LTI 1.3 tool; the studio's deliverable starts here
+        |
+        v
+[DeepTutor  Apache-2.0]    tutoring, persistent student model
+[instructional_agents MIT] teacher materials, ADDIE pipeline
+        |
+        +-- served by --> [Ollama / vLLM, on-premise]   no student prompt leaves the municipality
+        |
+        v
+[pyedmine  MIT]            dropout / at-risk modelling on i-Educar's attendance + grade history
+        |
+        v
+[lrsql  Apache-2.0] + [xAPI-Spec  Apache-2.0]   audit trail for PL 2338 high-risk classification
+```
+
+**Wiring:** read i-Educar through its API/database views, never by patching it — GPL-2.0 is a
+distribution licence and an unmodified upstream keeps the municipality's upgrade path intact.
+Teacher-facing output surfaces in i-Diário, which teachers already open daily; student-facing
+output goes through an LTI launch. Attendance plus grade history in i-Educar is exactly the
+feature set `pyedmine` needs, so the dropout model has training data on day one instead of
+after a year of instrumentation.
+**Licence boundary:** the HTTP/LTI line. i-Educar stays GPL-2.0 and unmodified, i-Diário stays
+AGPL-3.0 and unmodified, everything studio-built is MIT/Apache-2.0.
+**Legal note:** i-Diário's licence payload is a **Portuguese translation** of AGPL-3.0; FSF
+translations are unofficial. Cite the English AGPL-3.0 in the SOW.
+**Why it sells:** MEC's *Referencial* (March 2026) asks for national solutions that reduce
+dependence on global platforms. A Brazilian-maintained base with federal software-public
+provenance, local inference and an auditable record is not an interpretation of that policy —
+it is the policy, implemented. And `PL 2338` would classify education-related **selection** as
+high-risk, so the xAPI trail is built before the law needs it, not after.
+
+## P9 — Offline-first tutoring where there is no network
+**Target:** rural LATAM, low-bandwidth APAC, anywhere power and connectivity are intermittent
+**Timeline:** 6–8 weeks to a device-level pilot
+
+```
+[Kolibri  MIT]                     complete learning platform that runs with NO network
+  (learningequality)               content channels sync opportunistically when a link appears
+        |                          39,803 commits; MIT - no copyleft anywhere in this stack
+        v
+[local quantised model via Ollama]  tutoring and explanation on-device
+        |                           (DeepTutor's prompting patterns, Apache-2.0, as the design
+        |                            reference - its orchestration assumes a server; do not
+        |                            port it wholesale onto a classroom device)
+        v
+[fsrs-rs  BSD-3]  /  [fsrs4anki  MIT]   retention scheduling that needs no server at all
+        |
+        v
+[xAPI statements buffered locally] --sync-on-contact--> [lrsql  Apache-2.0]  central reporting
+```
+
+**Wiring:** every component assumes absence of network as the default state, not as an error.
+Kolibri handles content distribution and sync; FSRS schedules review entirely locally (it is
+an algorithm, not a service); xAPI statements queue on device and drain when a link appears.
+The model is the only part that needs sizing care — budget the device class first and choose
+the quantisation to fit it, because this is the one pattern where the hardware is the
+constraint rather than the licence.
+**Licence boundary:** none. MIT, BSD-3 and Apache-2.0 end to end.
+**Why it sells:** it is simultaneously the answer to *"our schools lose connectivity"* and to
+*"no student data may leave the premises"* — and nothing leaves the device, so the
+data-protection conversation (LGPD, GDPR, state privacy statutes) is short. Note what it is
+**not**: a frontier-model experience. Say that up front.
+
+## P10 — Permissive autograding where AI is barred from the grade
+**Target:** US states barring AI from high-stakes decisions (Idaho, Oklahoma, NYC K-8), EU
+institutions under Annex III, Brazilian institutions ahead of `PL 2338`
+**Timeline:** 4–6 weeks
+
+```
+[Autolab  Apache-2.0]        auto-graded programming assignments + course management (CMU)
+   or
+[nbgrader  BSD-3-Clause]     assign and grade notebooks (the data-science department's default)
+   or
+[Artemis  MIT]               automated FEEDBACK with an auditable exercise runner (TUM)
+        |
+        |   the grade is produced DETERMINISTICALLY, by a test suite, not by a model
+        v
+[teacher sign-off step]      explicit, logged, reversible
+        |
+        +--- optional, on the feedback side only ---> [LLM explains WHY a test failed]
+        |                                              never proposes or alters the mark
+        v
+[dolos  MIT]                 integrity check on submissions
+        |
+        v
+[lrsql  Apache-2.0]          who decided what, when - the record a regulator asks for
+```
+
+**Wiring:** the architectural claim is the separation. Marks come from a deterministic runner;
+the model only ever produces explanation text attached to an already-computed result, and the
+human sign-off is a logged state transition rather than a UI affordance. That makes "AI did not
+make a decision about a student" demonstrable from the audit log instead of asserted in a
+policy document.
+**Licence boundary:** none to manage — Apache-2.0, BSD-3 and MIT throughout. `INGInious`
+(AGPL-3.0) is the substitute where UCLouvain's feature set is wanted and AGPL is acceptable.
+**Why it sells:** it is the one AI story that is unambiguously permitted in the jurisdictions
+tightening fastest, it is cheaper than an LLM grader, and it gets *more* defensible as
+regulation increases rather than less.
+
 ## Component quick reference
 
 | Need | Component | Licence |
@@ -218,21 +332,42 @@ on global platforms. This is that, literally.
 | LTI tool framework | `tsugiproject/tsugi` · `pylti1.3` | Apache-2.0 · MIT |
 | Learning record store | `yetanalytics/lrsql` + `adlnet/xAPI-Spec` | Apache-2.0 |
 | SCORM runtime | `jcputney/scorm-again` | MIT |
-| Permissive LMS | `OpenOLAT/OpenOLAT` | Apache-2.0 |
+| Permissive LMS — institutional | `OpenOLAT/OpenOLAT` | Apache-2.0 |
+| Permissive platform — lesson delivery | `oppia/oppia` | Apache-2.0 |
+| Permissive platform — offline-first | `learningequality/kolibri` | MIT |
+| Autograding — programming + course mgmt | `autolab/Autolab` | Apache-2.0 |
+| Autograding — notebooks | `jupyter/nbgrader` | BSD-3-Clause |
+| Brazilian municipal SIS + teacher portal | `portabilis/i-educar` · `portabilis/i-diario` | GPL-2.0 · AGPL-3.0 |
 | AI-native LMS | `Selleo/mentingo` | MIT |
 | Multimodal tutoring platform | `Open-TutorAi/open-tutor-ai-CE` | BSD-3-Clause |
 | MCP: spaced repetition · tutoring | `ankimcp/anki-mcp-server` · `tutor-mcp` | MIT |
 
-**Do not compose:** `CaviraOSS/PageLM` (non-commercial, redistribution prohibited),
+**Do not compose:** `formalms/formalms` (**GPL-2.0**, despite a 2026 review publishing it as
+Apache-2.0), Fedena (`foradian/fedena`, `projectfedena/fedena` — **abandoned since 2012/2016,
+no licence payload**, still recommended by vendor comparisons as *the* Apache-2.0 education
+ERP), `h5p/h5p-php-library` (**GPL-3.0**, widely miscited as MIT — including in earlier Globant
+KB cycles), `os4ed/openSIS-Classic` (no licence payload served; unverified),
+`CaviraOSS/PageLM` (non-commercial, redistribution prohibited),
 `GarethManning/education-agent-skills` (CC-BY-SA-4.0 ShareAlike),
 `GeminiLight/awesome-ai-llm4education` (no licence served),
 `human-skill-tree` / `freelingo` / `lumen` (AGPL/GPL — network copyleft on hosted delivery).
 
 ## Declared gaps
 
-- **No pattern for autonomous grading.** No open-source grading agent with meaningful
-  adoption was found, and the three largest regulated markets (US states, EU, Brazil) are all
-  moving to require human decision-makers. The absence is deliberate.
-- **No APAC-origin component** appears in any pattern above, because none surfaced this pass.
-  P1 serves APAC's largest mandate with non-APAC components; that is the honest state of the
-  shelf, not a preference.
+- **Still no pattern for autonomous grading, and now it is a design choice rather than a
+  shortage.** P10 exists precisely because the regulated markets (US states, EU Annex III,
+  Brazil's `PL 2338`) are converging on human decision-makers. Deterministic autograding plus a
+  logged human sign-off is the architecture; an LLM that assigns marks is not a pattern this KB
+  will publish.
+- **Retracted: "no APAC-origin component appears in any pattern above."** `HKUDS/DeepTutor`
+  (P2, P8) is from the **Data Intelligence Lab at the University of Hong Kong**, and
+  `bigdata-ustc/EduData` (USTC) and `HFUT-LEC/EduStudio` (Hefei University of Technology) are
+  in the quick reference. The APAC-origin components were in the patterns the whole time; the
+  gap statement was not re-tested against them. What remains true: **no APAC-origin
+  *platform*** anchors any pattern.
+- **No LATAM-origin agent in any pattern.** P8 is anchored on LATAM-origin *platforms*
+  (`i-educar`, `i-diario`) with non-LATAM agents on top. That is the honest state of the shelf:
+  the region publishes systems of record, not agents.
+- **P9's model layer is deliberately unspecified.** Device class drives quantisation, and this
+  KB has not benchmarked tutoring quality for small local models on classroom hardware. Naming
+  a model here would be a guess dressed as a recommendation.

@@ -11,6 +11,7 @@ updated: 2026-10-17
 > own `LICENSE` payload (`raw.githubusercontent.com`), not from a secondary source.
 > Star counts are as served by the repository page or the GitHub topic listing on 2026-10-17.
 > Evidence: [`verified-repos.2026-10-17-p264.tsv`](../evidence/verified-repos.2026-10-17-p264.tsv)
+> and [`verified-repos.2026-10-17-p265.tsv`](../evidence/verified-repos.2026-10-17-p265.tsv).
 
 ## Build-on-this tier — permissive licences (MIT / Apache-2.0 / BSD)
 
@@ -87,17 +88,49 @@ agent drive spaced repetition and tutoring loops without rebuilding either.
 Not agents but the models underneath them — see [`repos/foundations.md`](../repos/foundations.md):
 `pykt-toolkit`, `pyedmine`, `EduStudio`, `EduData`.
 
+## Provenance correction — the top row on this shelf is APAC-origin
+
+This file previously declared that **no APAC-origin education agent had surfaced**. That claim
+was false against this file's own first row.
+
+`HKUDS/DeepTutor`'s README states the project is *"led by Bingxi Zhao within the **HKUDS
+Group**"* and thanks the *"director of the **Data Intelligence Lab @ HKU**"*. HKUDS is the
+Data Intelligence Lab at the **University of Hong Kong**. The single most-adopted education
+agent in open source — **41.5k stars, Apache-2.0** — is APAC-origin, and so is much of the
+learner-modelling layer beneath it: `bigdata-ustc/EduData` (University of Science and
+Technology of China) and `HFUT-LEC/EduStudio` (Hefei University of Technology), both named in
+their own GitHub org handles.
+
+**Evidence grades, stated honestly:** DeepTutor's affiliation is **payload-quoted** from the
+repository README. EduData's and EduStudio's are **org-handle** evidence — the institution is
+named in the handle, not in a payload. For `pykt-team/pykt-toolkit` and `ZhijieXiong/pyedmine`
+no affiliation statement was located this pass, so no provenance is claimed for them.
+
+**Why this matters commercially:** "APAC is supply-poor in education AI" would have been
+briefed into APAC engagements as a reason to import a stack. The opposite is closer to true —
+APAC is where the research supply lives. What APAC has not produced is a **platform** (see
+[`verticals/solutions.md`](../verticals/solutions.md)), which is a far narrower gap and points
+at integration work rather than wholesale import.
+
 ## Declared gaps
 
-- **No APAC-origin or LATAM-origin education agent surfaced** in the `ai-tutor`,
-  `education-ai` or `intelligent-tutoring-system` topic listings this pass, beyond
-  Chinese-language K-12 tutoring resources with 2–5 stars (`SimonsTang/*`,
-  `tanghua-git/skill-instructional-design`). The region-weighted agent shelf is thin by
-  evidence, not by choice.
-- **No education-specific grading agent with meaningful adoption.** The grading repos that
-  surfaced (`MUJINN/question-marking`, `MUJINN/intelligent-correction`) are single-digit-star
-  and were not licence-verified this pass. Automated assessment is being served by
-  platforms (Artemis, Numbas) rather than by agents.
+- **No LATAM-origin education agent surfaced** in the `ai-tutor`, `education-ai` or
+  `intelligent-tutoring-system` topic listings this pass. LATAM *does* publish the platform
+  layer — `portabilis/i-educar` and `i-diario` are actively maintained Brazilian systems, both
+  committed to in October 2026 — but no agent. That is the real, narrowed gap, and this KB's
+  earlier blanket statement about LATAM supply has been retracted in
+  [`repos/foundations.md`](../repos/foundations.md).
+- **No *new* education agent surfaced this pass.** The searches re-run on 2026-10-17
+  (`ai-tutor` and `education-ai` topic listings sorted by stars, plus the global and
+  per-region legs) returned the same cohort pass 264 shelved; everything new that verified
+  this pass is a platform or a foundation, not an agent. Fourteen permissive agent rows is
+  what exists, not a sampling limit.
+- **No education-specific grading agent with meaningful adoption** — confirmed again, and now
+  with the alternative named. The grading *agents* that surfaced (`MUJINN/question-marking`,
+  `MUJINN/intelligent-correction`) are single-digit-star. Automated assessment is served by
+  **platforms**, and two of them are permissive and mature: `jupyter/nbgrader` (BSD-3-Clause,
+  1.4k) and `autolab/Autolab` (Apache-2.0, 808, CMU-origin), alongside Artemis and Numbas.
+  Where a regulator is in the room, that is the better answer anyway.
 - **`mcp-server-education` as a GitHub topic is empty** — "hasn't been used on any public
   repositories, yet" — while two real education MCP servers exist. The category is real and
   unlabelled; that is a naming gap, and a small opening for whoever labels it first.

@@ -49,6 +49,15 @@ REPO_ROOT = os.path.dirname(os.path.dirname(CODE_ROOT))
 LADDER_SH = os.path.join(CODE_ROOT, "p229-grant-ladder-reach", "ladder.sh")
 FAMILY_SH = os.path.join(CODE_ROOT, "lib", "license_family.sh")
 
+# 🔴 p265: only these two files are APPEND-ONLY shelves — dated sections stacked
+# newest-first, history preserved beneath.  p264 deliberately rewrote the other six
+# as undated reference documents, which made the "carries dated sections" leg of the
+# p261 control red on a DESIGN CHANGE rather than on a regression (12/166, measured
+# on a clean HEAD tree before any p265 edit).  The ordering invariant still applies
+# to any file that DOES carry dated sections; the requirement that it carry them
+# applies only to these two.
+APPEND_ONLY = ("agents/trending.md", "repos/trending.md")
+
 SHELVES = ("agents/top.md", "agents/trending.md", "repos/foundations.md",
            "repos/trending.md", "verticals/solutions.md", "intel/market.md",
            "intel/trends.md", "compose/patterns.md")

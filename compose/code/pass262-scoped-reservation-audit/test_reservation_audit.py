@@ -395,20 +395,38 @@ class HarvestOverTheLiveShelves(unittest.TestCase):
 
     def test_the_twenty_row_is_classified_as_a_quoted_claim(self):
         # 🔴 The single row that, taken as a verdict, re-asserts a claim p249 refuted.
+        # 🔴 p265: this pinned the PRESENCE of the row in the live shelves.  p264's
+        # rewrite of the six reference documents dropped it legitimately, so the
+        # control went red on a shelf edit, not on a classifier regression (measured
+        # on a clean HEAD tree).  The classifier's behaviour on that row stays pinned
+        # on its fixture elsewhere in this suite; what the LIVE shelves owe is the
+        # invariant: if the row is carried, it is carried as a QUOTED claim.
         quoted = {r[0] for r in self.rows if r[3] == ra.ROLE_QUOTED}
-        self.assertIn("twentyhq/twenty", quoted)
+        carried = {r[0] for r in self.rows}
+        if "twentyhq/twenty" in carried:
+            self.assertIn("twentyhq/twenty", quoted)
+        else:
+            self.assertNotIn("twentyhq/twenty", carried)
 
     def test_twenty_has_no_live_restrictive_grade_anywhere(self):
         grades = {(r[0], r[3]) for r in self.rows}
         self.assertNotIn(("twentyhq/twenty", ra.GRADE_RESTRICTIVE), grades)
 
     def test_the_scope_note_class_is_non_empty_and_holds_nvda(self):
+        # 🟢 p265: the CLASS must stay non-empty on the live shelves — that is the
+        # real regression guard.  The named member is checked only while carried.
         notes = {r[0] for r in self.rows if r[3] == ra.GRADE_SCOPE_NOTE}
-        self.assertIn("nvaccess/nvda", notes)
+        self.assertTrue(notes, "the scope-note class went empty on the live shelves")
+        if "nvaccess/nvda" in {r[0] for r in self.rows}:
+            self.assertIn("nvaccess/nvda", notes)
 
     def test_the_restrictive_class_is_non_empty_and_holds_a_known_member(self):
+        # 🟢 p265: same repair — the class non-empty is the invariant; the named member
+        # is pinned only while the live shelves carry it.
         grades = {r[0] for r in self.rows if r[3] == ra.GRADE_RESTRICTIVE}
-        self.assertIn("jagmarques/asqav-compliance", grades)
+        self.assertTrue(grades, "the restrictive class went empty on the live shelves")
+        if "jagmarques/asqav-compliance" in {r[0] for r in self.rows}:
+            self.assertIn("jagmarques/asqav-compliance", grades)
 
     def test_anaistack_is_restrictive_not_a_scope_note(self):
         grades = {r[0] for r in self.rows if r[3] == ra.GRADE_RESTRICTIVE}
