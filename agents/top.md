@@ -55,11 +55,13 @@ non-commercial friction.
 | google-classroom-mcp | [adriasantacreu/google-classroom-mcp](https://github.com/adriasantacreu/google-classroom-mcp) | MIT *(metadata — see grade note)* | 2 | **Google Classroom MCP server, and the most capable of its family: "46 fully implemented tools"** over courses, assignments, grading, rosters and Drive file management. 11 commits. ⚠️ Licence is **metadata grade** (`package.json` plus a README statement); the sidebar shows no licence and no payload is served. Build on it only with that written down. |
 | edu-workspace-mcp | [Kimmahone/edu-workspace-mcp](https://github.com/Kimmahone/edu-workspace-mcp) | MIT | 1 | **Google *Workspace for Education* MCP server** — Docs, Sheets, Slides, Forms, Drive **and** Classroom, 29 tools in the README table. 42 commits. **The first Korean-language education agent this KB has payload-verified** (README in Korean, references Korean curriculum standards, and ships `docs_import_hwp` / `docs_export_hwpx` for Korea's national document formats). Widest reach in this family — and therefore the widest blast radius: see the scope warning below. |
 | classroom-mcp | [OmarNiazi/classroom-mcp](https://github.com/OmarNiazi/classroom-mcp) | MIT | 0 | Google Classroom for **students**, *"read-only: it can't submit work, post, or change anything."* 7 commits. Read-only by construction is the right shape for a student-side pilot and the wrong shape for an institutional deliverable. |
+| moodle-mcp *(teacher side, **write**)* | [MarcosNahuel/moodle-mcp](https://github.com/MarcosNahuel/moodle-mcp) | MIT | 1 | **The permissive Moodle doorway this shelf implied did not exist.** stdio MCP server exposing **40 high-level facades plus a `ws_raw` escape hatch** over Moodle Web Services: courses, sections, content, quizzes (GIFT import), enrolment CSV, groups, roles, gradebook, messaging, calendar, badges. Every write is **upsert-by-`idnumber`**, so republishing never duplicates. Works against **any Moodle 4.x/5.x** with Web Services on. ⚠️ **Three prices, all recorded below:** the write half needs a companion Moodle `local_` plugin (→ the deployed combination is GPL-3.0, see pass 273 note); this base's own `T4` finding is that its writes are **ungated**; and at 1★/59 commits it is a **reference implementation, not a dependency**. Tool surface is in **Spanish**. |
+| moodle-mcp-server *(student side, read + submit)* | [Jawadh-Salih/moodle-mcp-server](https://github.com/Jawadh-Salih/moodle-mcp-server) | MIT | 0 | MCP server **and REST API** in **Go** connecting any model to any Moodle instance: courses, contents, grades, assignments, deadlines, calendar, notifications — **13–14 tools**, student-facing. The only Go implementation this base has located. ⚠️ `submit_assignment` means it is **not read-only**, which its own framing underplays. ⚠️ Its documented install is `irm …/install.ps1 \| iex` / `curl …/install.sh \| bash` — **pipe-to-shell from a 0★ repo is not an institutional install path**; build from source. Unproven, but clean at payload. |
 
-**21 permissive rows.** (14 from passes 264-265, plus Artemis, Iris and Pyris in pass 266, plus
-`canvas-mcp` in pass 267, plus three Google Classroom servers in pass 268.) **20 are
-payload-verified; `adriasantacreu/google-classroom-mcp` is metadata grade and is marked as such in
-its own cell** — the count is not allowed to launder the weaker row.
+**23 permissive rows.** (14 from passes 264-265, plus Artemis, Iris and Pyris in pass 266, plus
+`canvas-mcp` in pass 267, plus three Google Classroom servers in pass 268, plus **two MIT Moodle
+servers in pass 273**.) **22 are payload-verified; `adriasantacreu/google-classroom-mcp` is metadata
+grade and is marked as such in its own cell** — the count is not allowed to launder the weaker row.
 
 ⚠️ **Cite `canvas-mcp`'s tool count as a range, not a number.** Its About blurb says *"up to 102
 tools"*; its README body says *"up to 126"*, and adds that the default profile registers fewer than
@@ -79,7 +81,7 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | freelingo | [artcc/freelingo](https://github.com/artcc/freelingo) | AGPL-3.0 | 179 | Self-hosted language learning with AI tutor and spaced repetition. Same AGPL network clause. |
 | lumen | [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | GPL-3.0 | 89 | Builds private courses and tutors learners with course-scoped RAG. GPL-3.0 copyleft on distribution. |
 | ai_tutor_forge | [guedesindev/ai_tutor_forge](https://github.com/guedesindev/ai_tutor_forge) | GPL-3.0 | 18 | Python 3 CLI that forges a personalized tutor over a user-chosen LLM. Notable as the **first Portuguese-language education agent this KB has payload-verified** — see the provenance caveat in the gaps below. GPL-3.0 copyleft on distribution, and at 21 commits it is a personal project, not a dependency. |
-| moodle-mcp-server | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | AGPL-3.0 | 1 | The Moodle-side counterpart to `canvas-mcp`: an MCP server over Moodle Web Services, 10 tools in the README table, 57 commits. **Two separate prices, not one.** AGPL-3.0's network clause reaches a hosted deployment, *and* the project is **open-core — the README sells premium plugin tools separately**. Scope any estimate to the free tool set, and note that the Moodle side of this category is roughly 1,000x less adopted than the Canvas side. |
+| moodle-mcp-server | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | AGPL-3.0 | 1 | The Moodle-side counterpart to `canvas-mcp`: an MCP server over Moodle Web Services, 10 tools in the README table, 57 commits. **Two separate prices, not one.** AGPL-3.0's network clause reaches a hosted deployment, *and* the project is **open-core — the README sells premium plugin tools separately**. Scope any estimate to the free tool set, and note that the Moodle side of this category is roughly 1,000x less adopted than the Canvas side. 🟢 **Pass 273: this is no longer the only Moodle door.** Two **MIT** Moodle servers are now on the permissive shelf above — [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) (teacher side, 40 tools) and [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) (student side). **Neither is more adopted than this row; both are more permissive.** Choose on the licence and the tool surface, not on the star count — none of the three has one. |
 | canvas-mcp (minimal) | [admin978/canvas-mcp](https://github.com/admin978/canvas-mcp) | MIT | 4 | *"Local-first Canvas LMS MCP server. Stdio transport, ~125 lines of Python."* Permissive and worth **reading** — it is the smallest complete example of the pattern — but at 33 commits it is a reference, not a dependency. Listed here rather than on the build-on-this shelf for that reason, not for its licence. |
 | mewcp-google-classroom | [AStheTECH/mewcp-google-classroom](https://github.com/AStheTECH/mewcp-google-classroom) | **"AStheTECH Community License (ACL)" — proprietary** | — | ⚠️ **Not open source, and it arrived describing itself exactly like the seven MIT rows above.** Its payload sits at `LICENSE.md` and opens *"Copyright (c) 2026 AStheTech. **All rights reserved**"* with an acceptance-of-terms clause. **Second instance of the PageLM pattern** — a permissive-looking education repo whose grant is a bespoke licence. Not usable in a client deliverable. It is **not** a lure (it passes all three substantive predicates of the `p238` gate); it is simply **not permissive**, which is why the gate can never replace reading the grant. |
 
@@ -93,6 +95,74 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | [OpenEMIS/OpenEMIS-Core](https://github.com/OpenEMIS/OpenEMIS-Core) | LIVE, **no licence payload**, none in the page sidebar | *"Manage students and staff information at school, district, and national level."* OpenEMIS is the education-management system most associated with **ministry-level** deployment, which is why pass 267 probed it by hand. What this KB can actually reach is a **32-commit Docker packaging repo (7★) with no licence and no ministry or country named in it.** The application source was not located this pass. **Ministry provenance is not established — do not brief it as a public-sector reference.** |
 | [muskvdc/EduTwin-Africa](https://github.com/muskvdc/EduTwin-Africa) | LIVE, **PRE-LICENCE — the placeholder is still in the README** *(new in pass 269)* | Curriculum-aware tutor over **South African** curriculum knowledge, **Grades 8–12**: RAG, adaptive learning, bounded multi-agent collaboration, ReAct tools, guardrails. 0★ / 0 forks / 7 commits, default ref `main`. **No payload on 19 of 19 paths, no `license` field in `pyproject.toml`**, and the README says, in the author's own words: *"Add the project's chosen license here before publishing if a specific open-source license is required."* 🔵 **This is a state this shelf has not carried before.** `Athena` and `autoGrader-frontend` are *silent*; this one is **explicitly not yet licensed**. The practical difference is that it is the one row here where asking costs nothing and might work — the author has written down that they know it is missing. Until then: all rights reserved. |
 | [Valexxy/edunaija-os](https://github.com/Valexxy/edunaija-os) | LIVE, **no grant on any channel** *(new in pass 269)* | *"A security-conscious starter codebase for a Nigerian-first learning platform"*; `package.json` name is `nigeria-learning-platform`. 0★ / 0 forks / 6 commits. No payload on 19 of 19 paths and **no `license` field in `package.json`** — the two channels that could have carried a grant both empty. Names **no exam board and no institution**. 🔴 **Cite it carefully: it is NOT the EduNaija AI Tutor of the AfricaNLP 2026 paper** (that system is a five-agent LangChain + FAISS RAG tutor with English/Yoruba/Hausa/Igbo support; this is a starter codebase with a similar name). **Two different artefacts, one name** — see the trends file. |
+
+## Pass 273 — the Moodle door was permissive all along, and this base had measured it four times without shelving it
+
+🔴 **Stated first, because it is a finding about this KB and not about the market.** Both MIT rows added
+to the permissive table this pass —
+[`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) and
+[`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) — are **not new to
+this base.** Its own instrumentation has graded `MarcosNahuel/moodle-mcp` **MIT at payload on at least
+four separate occasions** (`p114` 2026-10-02, `p170` 2026-10-03, `p191` 2026-10-14, `p725` 2026-10-08),
+measured its 40-tool surface, its auth posture and its release cadence — and **it has never appeared on a
+single live shelf.** Before this pass, `agents/top.md`, `repos/foundations.md`,
+`verticals/solutions.md`, `intel/market.md`, `intel/trends.md` and `compose/patterns.md` contained
+**zero** occurrences of the string `MarcosNahuel`.
+
+🔵 **This is the Koha species of defect, and it is now the second confirmed instance** — a row carried for
+passes in the instrumentation and never promoted to the shelf a studio actually reads. The practical
+consequence here was worse than with Koha, because the shelf did not merely omit the row: the only Moodle
+cell it *did* carry, [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server),
+is **AGPL-3.0 and open-core**, so a studio reading this file came away believing **the Moodle side of the
+MCP category has a copyleft-plus-paywall price**. It does not. 🟢 **Both corrected cells now cross-reference
+each other.**
+
+🟡 **And the reasons the rows were *correctly* withheld as dependencies are preserved rather than
+deleted**, because they are the honest half of the finding: `1★ / 1 fork / 59 commits`, a *burst-and-silence*
+release pattern, and this base's own **`T4`** finding that the writes execute **with no confirmation and no
+disclosure**. 🔵 **The fix is not to promote them to dependencies. It is to stop letting the shelf imply an
+absence that the instrumentation had already refuted** — they belong on the shelf as the **permissive
+reference implementations of the Moodle agent doorway**, with their prices in the cell. That is what they
+now are.
+
+### 🔴 The genuinely new finding: this repo contains a second artefact, under a second licence regime, and the base's grading model cannot see it
+
+`MarcosNahuel/moodle-mcp` is graded `SOLE` / `OWN-GRANT-AT-ROOT` by this base's own
+`p283`/`p257` instrumentation — one grant, at the root, covering the repository. **That grading is
+correct about the file and wrong about the artefact.** The repository ships **two** deliverables:
+
+| artefact | what it is | grant served |
+|---|---|---|
+| `@nahuelalbornoz/moodle-mcp` | the TypeScript MCP wrapper — the thing you run | **MIT**, `main/LICENSE`, **1,065 B**, read in full this pass, **byte-identical to stock MIT, zero rider keywords** |
+| `local_italiciamcp` | a **Moodle `local_` PHP plugin** in `plugin-companion/` — the thing that performs **every write** | 🔴 **no grant of its own.** No `LICENSE` and no `README` in the plugin directory (both **404**); **zero GPL notices across the six plugin files that serve** |
+
+🔵 **The detail that makes it a finding rather than a nit.** The plugin's `version.php` opens with
+Moodle's own file header — `// This file is part of Moodle - http://moodle.org/` — and **the GPL
+paragraph that follows that exact line in every Moodle core file has been replaced** by a description of
+the project. The plugin declares `MOODLE_INTERNAL`, requires **Moodle 4.0+**, supports `[400, 501]`, and
+its `classes/external/upsert_page.php` calls **`core_external\external_api`** — it links Moodle's
+internal API by construction. Moodle's own documentation puts the platform at **GPLv3-or-later** and tells
+new projects to use GPLv3+.
+
+🟢 **This is NOT a "do not use" finding, and must not be briefed as one.** MIT is **GPL-compatible**, so
+there is no conflict in the grant itself. The consequence is about the **combination**, and it is a
+narrow, cheap one:
+
+- **The wrapper stays MIT.** It talks to Moodle over REST Web Services and links nothing. Build on it freely.
+- **The deployed combination — Moodle + the `local_` plugin — is a GPL-3.0 work.** If a client *distributes*
+  that combination (a packaged distro, an appliance, an image handed to a third party), it goes out under
+  **GPL-3.0**, not MIT.
+- 🟢 **For a hosted deployment that is a non-event**, because GPL-3.0 — unlike the **AGPL-3.0** on
+  `csmediapro/moodle-mcp-server` — **has no network clause.** So on the price that actually decides most
+  education engagements, the MIT row is still strictly cheaper than the row this shelf used to carry alone.
+
+⚠️ **One correction to this base's own record while we are here:** the dormancy note (*"8 releases in 4 days
+and nothing in 5 months"*, pinned to npm `2026-04-23`) is **stale**. The repository's `CHANGELOG.md`
+documents plugin `v0.5.0` dated **`2026-05-03`**, after that pin.
+
+Evidence: [`verified-repos.2026-10-17-p273.tsv`](../evidence/verified-repos.2026-10-17-p273.tsv) ·
+[`p273-moodle-plugin-governance.2026-10-17-p273.tsv`](../evidence/p273-moodle-plugin-governance.2026-10-17-p273.tsv).
+Wiring recipe: **`P23`** in [`compose/patterns.md`](../compose/patterns.md). Trend: **`T41`**.
 
 ## Pass 269 — the African agent tier exists, and the question it answers is not the one that was asked
 
@@ -178,12 +248,14 @@ drafting where student data cannot leave the building. **lineage-skill** when pr
 generated material is a procurement requirement (it is, increasingly, in EMEA).
 
 ### Agents over the systems the client already runs (MCP)
-Pass 268 takes this from four servers to **eleven**, and from two LMSs to **three**:
+Pass 268 takes this from four servers to **eleven**, and from two LMSs to **three**. 🟢 **Pass 273 takes it to thirteen, and ends Moodle's status as the one LMS reachable only through copyleft.**
 
 | Server | Licence | Stars | What it reaches |
 |--------|---------|-------|-----------------|
 | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | **MIT** | 295 | **Canvas LMS itself** — courses, assignments, grades, 102–126 tools, 8 agent skills |
 | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | AGPL-3.0, open-core | 1 | **Moodle** via Moodle Web Services — 10 free tools, premium tools sold separately |
+| [MarcosNahuel/moodle-mcp](https://github.com/MarcosNahuel/moodle-mcp) | **MIT** | 1 | **Moodle, teacher side and it WRITES** — 40 facades + `ws_raw`: courses, sections, content, quizzes/GIFT, enrolment, gradebook, messaging, badges. Needs a `local_` plugin for writes → **combination is GPL-3.0, no network clause** |
+| [Jawadh-Salih/moodle-mcp-server](https://github.com/Jawadh-Salih/moodle-mcp-server) | **MIT** | 0 | **Moodle, student side** — grades, deadlines, notifications, `submit_assignment`. Go; also exposes a REST API for non-MCP models |
 | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | 516 | The learner's **Anki** collection — spaced repetition |
 | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | 49 | No external system — it **is** the tutoring loop |
 | [adriasantacreu/google-classroom-mcp](https://github.com/adriasantacreu/google-classroom-mcp) | MIT *(metadata)* | 2 | **Google Classroom** — 46 tools: courses, assignments, grading, rosters, Drive |

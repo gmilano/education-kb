@@ -1095,3 +1095,69 @@ independent channels (`p271`, `p272`). If the engagement needs admissions/fees/l
 `OpenEduCat` is **LGPL-3.0** and that is a different conversation. 🔴 **And it is not a reason to quote a
 market size** — see `T36`: the regional AI-in-education figures all trace to one publisher, and LATAM's
 span roughly 6×. Size this engagement from the **adoption** datums on `intel/market.md`, not the forecasts.
+
+## P23 — An agent inside the Moodle the client already runs, without the AGPL and without forking
+
+*(new in pass 273)*
+
+**When to reach for it.** The client runs **Moodle** — the default LMS of public education worldwide —
+and wants an agent that does real work in it: publishing lesson content, building quizzes, enrolling
+cohorts, reading the gradebook. `P14` is the same shape for Canvas. **This is its Moodle counterpart, and
+until pass 273 this KB could not offer one without an AGPL-3.0 open-core dependency.**
+
+### The stack
+
+| layer | component | licence | why this one |
+|---|---|---|---|
+| LMS (incumbent) | [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 | Already installed. **You are not forking it** |
+| Agent doorway — **writes** | [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | **MIT** *(payload, 1,065 B)* | 40 facades + `ws_raw`, upsert-by-`idnumber`, any Moodle 4.x/5.x with Web Services on |
+| WS surface for writes | `local_italiciamcp` *(ships in `plugin-companion/`)* | covered by the root MIT; **no grant of its own** | Supplies the `type=write` WS functions Moodle core does not expose |
+| Agent doorway — **student side** | [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | **MIT** *(payload, 1,063 B)* | Go; grades, deadlines, notifications, `submit_assignment` |
+| Tutor behaviour | [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | MIT | Swappable LLM pipelines, RAG over instructor material. Pedagogically constrained by design |
+| Assessment that never leaves the device | [`numbas/Numbas`](https://github.com/numbas/Numbas) | Apache-2.0 | Browser-executed marking — answers a residency objection structurally |
+| Integrity | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | MIT | Source-code plagiarism detection |
+
+### How to wire it
+
+1. **Enable Moodle Web Services** and mint a token scoped to a dedicated service account — *not* a
+   teacher's account. The capability the write functions demand is `moodle/course:manageactivities`; grant
+   that and nothing wider.
+2. **Install `local_italiciamcp`** as a *Complemento local* and expose only the WS functions you intend to
+   use. 🔵 **Enumerate them explicitly** — `db/services.php` declares write functions including
+   `upsert_page`, `upsert_quiz`, `update_course_summary` and **`delete_module_by_idnumber`**. A deletion
+   endpoint does not belong in a pilot's token.
+3. **Run the wrapper over stdio** against your MCP client. Start with the **read-only facades**
+   (`listar_alumnos`, `obtener_calificaciones`, `obtener_info_sitio`) and `ws_raw`, which work **without**
+   the plugin at all — so phase 1 of the engagement needs no Moodle code installed and no licence
+   conversation.
+4. **Put a confirmation gate in front of every write.** 🔴 **Non-optional, and it is this base's own
+   finding, not a precaution:** `T4` records that this wrapper's writes execute **with no confirmation and
+   no disclosure**. Wrap `calificar_manualmente`, `matricular_csv`, `reset_password` and
+   `delete_module_by_idnumber` in a human-approval step before a pilot touches a live course. **A grade
+   written by an unattended agent is an EU AI Act Annex III problem, not a UX problem.**
+5. **Lean on `upsert`-by-`idnumber`.** Every write is idempotent on a stable key, so the content pipeline
+   can be re-run from source. **That is what makes the agent output reviewable** — regenerate, diff,
+   re-publish.
+6. **Keep the tutor out of the LMS.** Pyris behind the agent, Numbas for marking. Moodle stays the system
+   of record; nothing pedagogical is forked into it.
+
+### The licence boundary, stated once and precisely
+
+🟢 **The wrapper is MIT and stays MIT** — it links nothing, it speaks REST.
+🔵 **The deployed combination (Moodle + the `local_` plugin) is a GPL-3.0 work.** Hosting it for the
+client triggers **nothing**, because GPL-3.0 has **no network clause**. Handing the client a *distributed*
+image containing the plugin ships that image under **GPL-3.0**.
+🟢 **Against the alternative this KB used to offer** —
+[`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server), **AGPL-3.0 *and*
+open-core — this is strictly cheaper on both axes**: no network clause, and no tools held behind a paid
+tier. See `T41`.
+
+⚠️ **What you are buying, honestly.** `1★ / 1 fork / 59 commits`, and a *burst-and-silence* release
+pattern (`CHANGELOG` last moves `2026-05-03`). **Treat it as a reference implementation you adopt and
+maintain, not as an upstream that will maintain itself.** The 40-facade surface and the `idnumber` upsert
+discipline are the valuable parts, and they are worth more than the maintenance risk precisely because
+you can read all of it.
+
+**Rough shape:** 4-6 weeks to a governed pilot on one faculty — week 1 read-only against a Moodle staging
+clone with no plugin installed, weeks 2-3 plugin plus gated writes on a single course, weeks 4-6
+content-pipeline regeneration and the Annex III human-review record.

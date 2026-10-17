@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 273) — `repos/foundations.md` gains nothing for the eighth pass, and the reason is now a measured property of the battery rather than of the market
+
+⏱️ **Nineteenth pass of `2026-10-17`.** Append-only — everything below is prior history and is not
+rewritten. Evidence:
+[`verified-repos.2026-10-17-p273.tsv`](../evidence/verified-repos.2026-10-17-p273.tsv) ·
+[`p273-moodle-plugin-governance.2026-10-17-p273.tsv`](../evidence/p273-moodle-plugin-governance.2026-10-17-p273.tsv) ·
+[`p273-websearch.2026-10-17-p273.tsv`](../evidence/p273-websearch.2026-10-17-p273.tsv).
+
+### 🔴 Eighth consecutive nil on the foundations shelf — and this pass can say *why* rather than just *that*
+
+🟢 **The platform/SIS/ERP leg ran and returned a complete reproduction.** Every system named —
+Moodle, Canvas, Open edX, Chamilo, OpenOLAT, OpenEduCat, RosarioSIS, Odoo — is **already shelved** on
+[`verticals/solutions.md`](../verticals/solutions.md). Nothing new, and nothing invented to fill the gap.
+
+🔵 **Two things in that nil are worth recording as findings in their own right.**
+
+1. 🔴 **The listicles contradicted each other on `forma.lms` again** — one asserting **Apache-2.0**, another
+   **GPL** — a disagreement **this base already settled at payload in `p265`**. The channel has not
+   improved; this base simply stopped needing it for that question.
+2. 🔴 **Leg 2 of the scheduled battery is mis-specified for this industry.** *"github trending education
+   AI 2026"* returns `generative-ai-for-beginners`, `nanochat`, `developer-roadmap` — repositories that
+   **teach AI**, not repositories that **serve the education sector**. 🔵 **Eight passes of nil on this leg
+   are a property of the query, not of the supply**, and that distinction should survive into the next
+   pass instead of being re-measured a ninth time.
+
+### 🟢 What the pass did add: a licence boundary nobody on this shelf had looked for
+
+The finding sits on [`agents/top.md`](../agents/top.md) and `T41`, but it is a *repository* finding and
+belongs in this file's record too.
+
+[`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) is **MIT at payload** — 1,065 B,
+byte-identical to stock MIT, **zero rider keywords**, re-measured blind this pass and **agreeing with four
+prior measurements by this base's own instrumentation**. 🔴 **And the repository nonetheless ships a second
+artefact into a different licence ecosystem**: `local_italiciamcp`, a Moodle `local_` PHP plugin serving
+**no grant of its own** and **no GPL notice on any of its six served files**, while opening with Moodle's
+own file header minus the GPL paragraph.
+
+🔵 **The method note, which is the transferable part.** This base's `SOLE` / `OWN-GRANT-AT-ROOT` grading
+asks *"is there one grant, and is it at the root?"* — and answers correctly here. **It never asks whether a
+sub-directory only runs inside somebody else's copyleft host.** Wherever a permissive repo ships a plugin
+for a GPL host (Moodle `local_`/`mod_`, WordPress, GIMP, Blender), **the root grant describes the source and
+the host's licence describes what the client deploys.** 🟢 **Consequence here is narrow and favourable:**
+GPL-3.0 on the *combination*, **no network clause**, so hosted delivery is untouched — strictly cheaper than
+the **AGPL-3.0 open-core** row this KB previously carried as the only Moodle option.
+
+⚠️ **A path trap worth one line.** The README states the plugin ships in `plugin-companion/`.
+`plugin-companion/version.php` is a **404**; the real path is
+`plugin-companion/local_italiciamcp/version.php`. With `api.github.com`, `github.com` HTML **and**
+`codeload.github.com` all **403**, there is no tree listing available on this channel — **the directory had
+to be found by guessing paths**, and a probe that had stopped at the README's stated path would have
+concluded the plugin did not exist.
+
+### 🟢 Channel
+
+`raw.githubusercontent.com` **200** · `api.github.com` **403** · `github.com` HTML **403** ·
+`codeload.github.com` **403** *(first probe of this route recorded here)* · `precedenceresearch.com`,
+`finance.yahoo.com` **ENOTFOUND**. ⚠️ **No star or commit count in this pass was read from GitHub.**
+
 ## 2026-10-17 (pass 272) — No new repositories, the permissive LMS recommendation rider-cleared, and two vendor licence claims dead at payload
 
 ⏱️ **Eighteenth pass of `2026-10-17`.** Append-only — everything below is prior history and is not

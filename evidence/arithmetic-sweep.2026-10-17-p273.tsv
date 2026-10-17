@@ -1,0 +1,13 @@
+# pass 273 — zero-search arithmetic audit (T32) of the forecast-spread table on intel/market.md
+# test: does each publisher's own CAGR carry its own baseline to its own published horizon?
+publisher	baseline_2026_usd_bn	horizon_usd_bn	horizon_year	cagr	years	implied	delta_pct	verdict
+The Business Research Company	10.6	42.48	2030	0.415	4	42.49	+0.03	PASS
+Grand View (current vintage)	11.4	57.2	2033	0.259	7	57.16	-0.07	PASS
+Precedence Research	9.58	136.79	2035	0.3452	9	138.18	+1.02	PASS (within tolerance; largest residual on the shelf)
+MarkWide Research	8.7	100.21	2035	0.3120	9	100.21	+0.00	PASS
+# DERIVED, published nowhere — flagged as derived wherever quoted:
+# TBRC implied 2025 baseline from its own 40.9% = 10.6/1.409 = 7.52
+# Grand View's own curve at 2030 = 11.4 * 1.259^4 = 28.64
+# TBRC vs Grand View AT THE SAME YEAR (2030) = 42.48 / 28.64 = 1.48x
+# 2026 baseline band across four independent models = 8.7 to 11.4 = 31.0% wide
+# RESULT: no cell is impossible. Zero FLAGs this pass — the first clean T32 sweep recorded on this shelf.

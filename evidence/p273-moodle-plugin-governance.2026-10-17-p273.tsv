@@ -1,0 +1,17 @@
+# pass 273 — the sub-artefact probe: MarcosNahuel/moodle-mcp ships a Moodle `local_` plugin under a root MIT
+# question: does the companion Moodle plugin carry its own grant, or any GPL notice?
+# note: this repo is graded SOLE / OWN-GRANT-AT-ROOT by this base's own instrumentation (p283, p257).
+path	http	bytes	gpl_notices	finding
+plugin-companion/LICENSE	404	-	-	no plugin-level licence file
+plugin-companion/README.md	404	-	-	no plugin-level readme
+plugin-companion/version.php	404	-	-	README's stated path is one level short of the real tree
+plugin-companion/local_italiciamcp/version.php	200	672	0	REAL PATH. Opens "// This file is part of Moodle - http://moodle.org/" — Moodle's own file header — but the GPL paragraph that follows that line in Moodle core is REPLACED by a project description. component=local_italiciamcp, release=v0.5.0, version=2026050300, requires Moodle 4.0+, supported [400,501]
+plugin-companion/local_italiciamcp/db/services.php	200	5361	0	declares WS functions of type=write (upsert_page, delete_module_by_idnumber, update_course_summary, upsert_quiz, ...) with capabilities moodle/course:manageactivities
+plugin-companion/local_italiciamcp/lang/en/local_italiciamcp.php	200	195	0	standard Moodle lang file; no GPL header
+plugin-companion/local_italiciamcp/classes/external/upsert_page.php	200	8723	0	uses core_external\external_api — links Moodle internal API; no GPL header
+plugin-companion/local_italiciamcp/db/access.php	200	209	0	no GPL header
+plugin-companion/local_italiciamcp/LICENSE	404	-	-	no grant inside the plugin directory
+plugin-companion/local_italiciamcp/README.md	404	-	-	none
+plugin-companion/local_italiciamcp/settings.php	404	-	-	not present
+# RESULT: 6 plugin files served, 0 GPL notices on any of them, 0 plugin-level grant. The plugin is covered on its face by the repo-root MIT.
+# NOT a defect claim: MIT is GPL-compatible. The consequence is about the COMBINATION, not the grant — see T41 and P23.

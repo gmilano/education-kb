@@ -1135,3 +1135,65 @@ replace freely. 🔵 This also means `p271`-style agreement "to the byte" proves
 **Confidence: high** — eight payloads read first-hand this pass, one diffed against upstream line-by-line,
 and the rider-keyword grep (`commons clause` / `non-commercial` / `may not sell`) returned **zero across
 all eight** ([evidence](../evidence/verified-repos.2026-10-17-p272.tsv)).
+
+## T40 — The market-size shelf cannot tell a research house from a shop that sells reports
+
+*(new in pass 273)*
+
+`T36` established that this base's regional market figures were aggregators re-publishing **one**
+research house. The fix applied then was to trace each figure upstream until it stopped moving.
+🔴 **Pass 273 shows that test has a blind spot: it checks whether a name is re-publishing someone
+else's model, and never checks whether the name is a research house at all.**
+
+The largest-CAGR row in the forecast-spread table on [`intel/market.md`](market.md) was credited to
+**"Research and Markets."** ResearchAndMarkets.com does not produce forecasts — it is a **storefront that
+resells them**. The model belongs to **The Business Research Company**: *AI in Education Market Report
+2026*, February 2026, 250pp, with the numbers carried in a ResearchAndMarkets press release on
+GlobeNewswire dated `2026-04-07`.
+
+🟢 **Unusually, the correction is good news.** TBRC is genuinely independent of Grand View, so the count
+of independent models behind this shelf goes **up** — to at least three — where `T36` had driven it down
+to roughly one.
+
+🔵 **And the comparison it unlocks is the most useful market sentence this base has produced.** Carried to
+a common year on each house's own CAGR, **TBRC says $42.48B at 2030 and Grand View's own curve says
+$28.64B — 1.48x apart** — while their 2026 baselines sit only 7% apart, in the *opposite* order. **The
+two most independent houses available agree about today and diverge by half again about 2030.** A `T32`
+sweep over all four independent rows came back **clean**, so this is a disagreement about the world, not
+an arithmetic defect in anybody's model — and therefore not resolvable by picking the most careful-looking
+publisher.
+
+**What to do with it.** Quote the 2026 baseline as a **band ($8.7–11.4B, 31% wide)**, name the house —
+not the storefront — beside any horizon figure, and never put a single 2030 TAM on a slide without saying
+whose curve it is. **The spread is the finding; it always was, and `T40` is the reason the spread was
+being under-counted.**
+
+## T41 — A repository is not an artefact, and root-grant grading cannot see the difference
+
+*(new in pass 273)*
+
+This base grades licences at the repository root: `SOLE`, `OWN-GRANT-AT-ROOT`, one payload, one verdict.
+🔴 **Pass 273 found a repository where that model is correct about the file and wrong about the
+deliverable.**
+
+[`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) serves **MIT** at
+`main/LICENSE` — 1,065 B, byte-identical to stock, zero rider keywords, measured four separate times by
+this base's own instrumentation. 🟢 **That grade is right.** But the repository ships **two** artefacts
+into **two different licence ecosystems**: the TypeScript MCP wrapper, which links nothing and talks REST,
+and `local_italiciamcp`, a **Moodle `local_` PHP plugin** that performs every write, declares
+`MOODLE_INTERNAL`, requires Moodle 4.0+, and calls `core_external\external_api`. The plugin serves **no
+grant of its own** (no `LICENSE`, no `README` in its directory — both 404) and **no GPL notice on any of
+the six files that serve** — while opening with Moodle's own file header, *the GPL paragraph removed*.
+
+🟢 **The consequence is narrow, and must not be inflated into a warning.** MIT is **GPL-compatible**;
+there is no conflict in the grant. What changes is the licence of the **combination**: Moodle plus the
+plugin is a **GPL-3.0** work, so a *distributed* image carrying it ships as GPL-3.0 — while a **hosted**
+deployment is unaffected, because GPL-3.0 has **no network clause**. 🔵 **Which means the MIT row remains
+strictly cheaper than the AGPL-3.0 row this shelf used to carry as the only Moodle option.**
+
+**The generalisable rule, and it reaches well past this repo.** 🔵 **Wherever a permissive repository
+ships a plugin for a copyleft host — a Moodle `local_`/`mod_`, a WordPress plugin, a GIMP or Blender
+extension — the root grant describes the source, and the host's licence describes the thing the client
+actually deploys.** Ask of every permissive row: *is there a sub-directory here that only runs inside
+somebody else's GPL?* This base's instrumentation does not currently ask it, which is why four correct
+measurements of this repository never surfaced the question.

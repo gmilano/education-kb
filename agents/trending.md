@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 273) — The agent shelf gains two rows, and both of them were already in this building
+
+⏱️ **Nineteenth pass of `2026-10-17`.** Append-only — everything below this section is prior history and is
+not rewritten. Evidence:
+[`verified-repos.2026-10-17-p273.tsv`](../evidence/verified-repos.2026-10-17-p273.tsv) *(2 repositories, 8 probes)* ·
+[`p273-moodle-plugin-governance.2026-10-17-p273.tsv`](../evidence/p273-moodle-plugin-governance.2026-10-17-p273.tsv) *(11 paths)* ·
+[`p273-websearch.2026-10-17-p273.tsv`](../evidence/p273-websearch.2026-10-17-p273.tsv) *(10 legs)* ·
+[`arithmetic-sweep.2026-10-17-p273.tsv`](../evidence/arithmetic-sweep.2026-10-17-p273.tsv) *(4 rows, zero searches)*.
+
+### 🟢 The seven-pass nil streak on `agents/top.md` ends — but NOT because the supply channel delivered
+
+🔴 **The generic supply legs produced an EIGHTH consecutive measured nil.** Leg 1 returned general-purpose
+agents (Hermes, OpenClaw, OpenHands) plus two things that are not agents at all (FutureAGI is an eval
+tool; Phi-4-reasoning is a model). Leg 2 — *"github trending education AI 2026"*, verbatim from the
+scheduling prompt — returned **learning-resources repositories** (`generative-ai-for-beginners`,
+`nanochat`, `developer-roadmap`): education *content*, not education-sector *software*. 🔵 **That is a
+category mismatch in the battery itself, and it is recorded as one rather than as an absence of supply.**
+Leg 3 returned only platforms already shelved. **Nothing was written in to pad a table.**
+
+🟢 **The two new rows came from a targeted leg, and they came from inside this base.**
+[`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) (**MIT**, 40 tools + `ws_raw`,
+teacher-side writes) and [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server)
+(**MIT**, Go, student-side) are now on `agents/top.md`.
+
+### 🔴 The headline is a defect in this KB, and it is the Koha species confirmed a second time
+
+| | |
+|---|---|
+| What the shelf implied | The Moodle side of the MCP category costs **AGPL-3.0 + open-core** — its only Moodle row is [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) |
+| What the instrumentation already knew | 🔴 **`MarcosNahuel/moodle-mcp` was graded MIT at payload on at least FOUR separate occasions** — `p114` (10-02), `p170` (10-03), `p725` (10-08), `p191` (10-14) — with its 40-tool surface, auth posture and release cadence all measured |
+| What the shelves contained before this pass | 🔴 **Zero occurrences of `MarcosNahuel`** across `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `intel/market.md`, `intel/trends.md` and `compose/patterns.md` |
+
+🔵 **Worse than Koha, and in a specific way.** Koha was an omission. This was an omission that left a
+**false price** standing on the shelf: a studio reading `agents/top.md` would have told a Moodle client
+that the agent doorway carries a network-copyleft-plus-paywall cost. **It does not, and this base had the
+evidence to say so for fifteen days.**
+
+🟡 **The reasons the rows were correctly withheld as *dependencies* are preserved, not deleted** —
+`1★ / 1 fork / 59 commits`, burst-and-silence releases, and this base's own **`T4`**: the writes fire with
+**no confirmation and no disclosure**. 🟢 **The fix was never to promote them to dependencies. It was to
+stop the shelf implying an absence the instrumentation had already refuted.**
+
+### 🔴 The genuinely new finding: one repository, two artefacts, two licence ecosystems
+
+This base grades `MarcosNahuel/moodle-mcp` as `SOLE` / `OWN-GRANT-AT-ROOT`. **Correct about the file,
+wrong about the deliverable.** The repo ships the MIT TypeScript wrapper *and* `local_italiciamcp`, a
+**Moodle `local_` PHP plugin** that performs **every write**.
+
+🔵 **Probed on 11 paths.** The plugin directory serves **no `LICENSE` and no `README`** (both 404) and
+**zero GPL notices across the six files that do serve** — while `version.php` opens with Moodle's own
+header, `// This file is part of Moodle - http://moodle.org/`, **with the GPL paragraph that follows that
+exact line in Moodle core replaced by a project description.** It declares `MOODLE_INTERNAL`, requires
+Moodle 4.0+, and calls `core_external\external_api`.
+
+🟢 **Not a "do not use", and it must not be briefed as one.** MIT is GPL-compatible. The consequence is
+about the **combination**: Moodle + plugin is a **GPL-3.0** work, so a *distributed* image ships GPL-3.0,
+while **hosting is unaffected — GPL-3.0 has no network clause.** 🔵 **Which leaves the MIT row strictly
+cheaper than the AGPL-3.0 row this shelf carried alone.** New trend **`T41`**; recipe **`P23`**.
+
+⚠️ **Correction to this base's own record:** the dormancy note *"8 releases in 4 days and nothing in 5
+months"*, pinned to npm `2026-04-23`, is **stale** — `CHANGELOG.md` documents plugin `v0.5.0` dated
+**`2026-05-03`**.
+
+### 🟢 Market: the single-publisher finding partly REVERSES, and the reversal is the better news
+
+`p272` concluded the regional picture rested on **one** upstream publisher. 🔴 **Pass 273 found the same
+species of defect one row down — the forecast table credited a row to "Research and Markets", which is a
+report STOREFRONT, not a research house.** 🟢 **The model is THE BUSINESS RESEARCH COMPANY's** (*AI in
+Education Market Report 2026*, Feb 2026, 250pp; GlobeNewswire release `2026-04-07`), **and TBRC is
+genuinely independent of Grand View** — so the count of independent models goes **up**, to at least three.
+
+🔵 **Carried to a common year, the two most independent houses disagree by 1.48x: TBRC `$42.48B` at 2030
+against Grand View's own curve at `$28.64B`** — while their 2026 baselines sit 7% apart in the opposite
+order. **`T32` swept all four independent rows and came back CLEAN** (first zero-`FLAG` sweep on this
+shelf), so it is a disagreement about the world, not anyone's arithmetic. New trend **`T40`**.
+
+### 🔵 Regional legs: four reproductions, four gaps stated rather than implied
+
+🔴 **All four returned zero new shelf-grade findings.** **NA**: guidance counts and state mandates all
+held; Tennessee's binding status unresolvable here. **EMEA**: the **EIGHTH** recorded re-service of the
+superseded `2026-08-02` high-risk date — served, as ever, alongside the correct `2027-12-02` deferral —
+and **no vendor, share or adoption figure for the region**. **APAC**: Ipsos ban-support figures are new
+numbers but measure *opinion*, not adoption, and were **not** written to a shelf as if they did; the Japan
+education-mandate gap is now **channel-confirmed**. **LATAM**: regulatory only, and the channel declared
+the gap itself — **no current classroom-adoption figures**, so this base's `92%` / `>60%` LATAM numbers
+are **carried, not refreshed**. Full table in [`intel/market.md`](../intel/market.md).
+
+### 🟢 Channel re-tested, not inherited
+
+`raw.githubusercontent.com` **200** · `api.github.com` **403** · `github.com` HTML **403** ·
+`codeload.github.com` **403** *(newly probed this pass — the tarball route is closed too, so the plugin
+tree had to be resolved by path guessing: the README's own stated path `plugin-companion/version.php` is a
+**404**, one level short of the real `plugin-companion/local_italiciamcp/version.php`)* ·
+`precedenceresearch.com`, `finance.yahoo.com` **ENOTFOUND**. 🔵 **Seventh consecutive confirmation.**
+⚠️ **No star count in this pass was read from GitHub** — the two new rows' `1★`/`0★` are carried from this
+base's own prior measurements, and are labelled as such.
+
 ## 2026-10-17 (pass 272) — The agent shelf gains nothing for the seventh pass running, and the market shelf it sits beside turned out to rest on ONE publisher
 
 ⏱️ **Eighteenth pass of `2026-10-17`.** Append-only — everything below this section is prior history and

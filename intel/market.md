@@ -34,15 +34,16 @@ independent models behind the regional picture is **far smaller than the row cou
 
 | Publisher | 2026 baseline | Horizon | CAGR | note |
 |-----------|---------------|---------|------|------|
-| Research and Markets | $10.6B | $42.48B by 2030 | 41.5% | — |
+| **The Business Research Company** | **$10.6B** | **$42.48B by 2030** | **41.5%** | 🔴 **ATTRIBUTION CORRECTED, pass 273.** This row read *"Research and Markets"* — which is a **distributor/storefront, not a research house**. The model is TBRC's: *AI in Education Market Report 2026*, published **Feb 2026**, 250pp, sold through ResearchAndMarkets.com; press release GlobeNewswire **2026-04-07**. CAGR **40.9% from 2025**, **41.5%** thereafter. 🟢 **And this is the good news `p272` needed: TBRC is genuinely INDEPENDENT of Grand View** |
 | Resourcera | $10.4B | $32.27B by 2030 | 31.2% | ← 🔴 **not a publisher: `$32.27B @ 31.2%` is GRAND VIEW's, verbatim (p272)** |
 | **Grand View (current vintage)** | **$11.4B** | **$57.2B by 2033** | **25.9%** | ← 🟢 **the same house's own supersession of the row above** |
 | Precedence Research | $9.58B | $136.79B by 2035 | 34.52% | — |
 | MarkWide Research | $8.7B | $100.21B by 2035 | 31.20% | — |
 | Technavio (incremental) | — | **+$3.37B of growth 2026→2030** | 45% | 🟢 the only one that explains its number **structurally** |
 
-The 2026 baseline is a **narrow band ($8.7–10.6B)** and the long-range forecasts differ by
-roughly **4×**. Nobody disagrees about the size of the market today; they disagree about
+The 2026 baseline is a **band of $8.7–11.4B — 31.0% wide, not the "narrow" one this sentence
+claimed until pass 273** (the sentence was written before Grand View's $11.4B row was added to the table above it, and was
+never re-read against it) — and the long-range forecasts differ by roughly **4×**. Nobody disagrees about the size of the market today; they disagree about
 whether it is a $32B market in 2030 or a $137B market in 2035. **Quote the baseline, never the
 horizon** — the horizon tells a client which vendor's blog you read. Technavio is the only one
 of the five that explains its number structurally: a shift *"from experimental applications of
@@ -326,6 +327,54 @@ window before writing it off.**
 base can establish, on **one research house's model**, re-based and re-published by at least three
 aggregators. **Independent corroboration of these regional numbers has not been found. It has only ever
 been simulated by re-publication.**
+
+### Pass 273 — the independent-publisher count goes UP, and the two most independent houses disagree 1.48x at the SAME year
+
+`p272` ended on a bleak structural finding: the regional picture had **one upstream publisher**, and this
+base had been checking Grand View against Grand View. 🟢 **Pass 273 improves that, which is worth stating
+plainly because this register usually moves the other way.**
+
+🔴 **First, the defect, and it is `p272`'s species one row down.** The forecast-spread table credited its
+largest-CAGR row to **"Research and Markets."** ResearchAndMarkets.com is a **report storefront** — a
+distributor. 🟢 **The research house is THE BUSINESS RESEARCH COMPANY**: *AI in Education Market Report
+2026*, published **February 2026**, 250 pages, with the forecast carried in a ResearchAndMarkets press
+release on GlobeNewswire dated **2026-04-07**. 🔵 **`p272` caught an aggregator wearing a publisher's name
+(ResourcERA → Grand View). This is the same error in a different costume — a *distributor* wearing one —
+and it had been sitting in the table the whole time.**
+
+🟢 **The correction is good news, and that is the unusual part.** TBRC is **not** a Grand View
+re-publisher: it runs its own model, on its own vintage, to its own horizon. So the honest count of
+**independent models** behind this shelf is **at least three** — TBRC, Grand View, and the
+Precedence/MarkWide pair — not the one `p272` feared.
+
+🔵 **And now that two independent houses can be compared at a COMMON year, the finding is sharper than
+any spread this file has published.** The horizons differ (2030 vs 2033), so neither number can be quoted
+against the other as published. Carried to the same year on each publisher's own CAGR:
+
+| | TBRC | Grand View (current vintage) |
+|---|---|---|
+| 2026 baseline | $10.6B | $11.4B — **TBRC is 7% LOWER today** |
+| 2030 | **$42.48B** (published) | **$28.64B** (derived from its own 25.9%) |
+| ratio at 2030 | — | 🔴 **1.48x apart** |
+
+🔴 **The two houses that agree most closely about today's market disagree by half again about the one
+four years out, and they diverge in the opposite direction from their baselines.** 🔵 **That is the
+sentence to put in a deck** — not a market size. A TAM slide sourced to TBRC and the same slide sourced to
+Grand View differ by **$13.8B at 2030**, and both are defensible.
+
+🟢 **The `T32` arithmetic sweep ran over all four independent rows and came back CLEAN** — the first
+zero-`FLAG` sweep recorded on this shelf. Each publisher's own CAGR carries its own baseline to its own
+published horizon: TBRC `+0.03%`, Grand View `−0.07%`, MarkWide `+0.00%`, Precedence `+1.02%` (the
+largest residual here, and still a pass). 🔵 **So the disagreement between these houses is a disagreement
+about the world, not an arithmetic error in anybody's spreadsheet** — which is precisely why it cannot be
+resolved by picking the one that looks most careful.
+
+⚠️ **Channel, restated rather than inherited:** `precedenceresearch.com` and `finance.yahoo.com` are both
+**ENOTFOUND** on the fetch channel this pass, as `grandviewresearch.com` has been for six passes. **Every
+figure above is secondary-source grade, read through the search tool only.**
+
+Evidence: [`arithmetic-sweep.2026-10-17-p273.tsv`](../evidence/arithmetic-sweep.2026-10-17-p273.tsv) ·
+[`p273-websearch.2026-10-17-p273.tsv`](../evidence/p273-websearch.2026-10-17-p273.tsv). Trend: **`T40`**.
 
 ## Global players
 
@@ -1551,3 +1600,22 @@ like any other — re-count it from the rows, on every shelf that states it.**
 the pass-272 section above). The new standing gap this pass opens is named in
 [`intel/open-gaps.md`](open-gaps.md): **no independent corroboration of any regional AI-in-education
 market figure has been located, and the appearance of corroboration was re-publication.**
+
+### Pass 273 addendum to the declared gaps
+
+All four regional legs of the scheduled battery ran. 🔴 **All four returned reproduction, not news** —
+every regulatory and adoption datum they served was already on a live page of this KB. Recorded as an
+informed nil per region rather than republished with a 🆕 against it:
+
+| region | leg verdict | the gap this leaves, stated rather than implied |
+|---|---|---|
+| **North America** | 🔴 **0 new.** 35+ states with DoE guidance, Ohio's `2026-07-01` mandate, Oklahoma pre-`2027-28`, Maryland's 24 districts / 120 days, Alabama's CS-with-AI graduation requirement — all held | ⚠️ **Trackers disagree on whether Tennessee's requirement is binding**, and this base cannot settle it on the open channel. 🔴 **NA higher-education governance remains under-measured here**, as `p272` also said — two consecutive passes have now declared it without closing it |
+| **EMEA** | 🔴 **0 new**, and the **EIGHTH** recorded re-service of the superseded `2026-08-02` high-risk date, served in the same response as the correct deferral | 🟢 Base position unchanged and not re-litigated: Annex III point `3` *(education and vocational training)* applies **`2027-12-02`**; `2026-08-02` is Article `50` **transparency** and is live. 🔴 **The leg named no vendor, no market share and no adoption figure for the region** — EMEA supply-side intelligence is a standing gap, not a covered area |
+| **APAC** | 🔴 **0 new** of shelf grade. China's compulsory AI from age six, India's Class 3 rollout from AY `2026-27`, Japan's penalty-free AI Promotion Act — all held | 🟡 Ipsos *Education Monitor 2026* ban-support figures (India `26%`, Thailand `25%`, Singapore `28%`, Japan `29%`, Malaysia `29%`) are **new numbers but not shelf-grade** — they measure *opinion*, not adoption, and are not written to a shelf as if they did. 🔴 **The Japan education-mandate gap is now channel-confirmed**: the leg reported finding no education-specific mandate at all |
+| **LATAM** | 🔴 **0 new**, and **regulatory only**. Brazil's PL `2338/2023` still pending in the Câmara; Chile's Ley `21.719` in force `2026-12-01` with the AI bill still *en trámite*; Mexico's *"Ley Nahui"* still in discussion | 🔴 **The channel declared this gap itself, which is the strongest grade an absence gets here:** it reported **no current classroom-adoption figures for the region**. This base's LATAM adoption numbers (`92%` students, `>60%` Mexico daily) are therefore **carried, not refreshed** — they are the most load-bearing regional figures on this shelf and nothing this pass re-measured them |
+
+🔵 **One gap is closed and one is newly opened by the same finding.** Closed: `p272`'s *"the regional
+picture has ONE upstream publisher"* — it has at least three independent models, see the pass-273 section
+above. Opened: **this shelf has no test that distinguishes a research house from a distributor**, which is
+how *"Research and Markets"* sat in the forecast table as a publisher. 🔴 **Every remaining attribution on
+this page is therefore unaudited against that specific failure mode** — `T40` carries it.

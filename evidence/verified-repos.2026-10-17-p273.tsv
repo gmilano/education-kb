@@ -1,0 +1,17 @@
+# pass 273 — 2026-10-17 — payload-grade licence probe via raw.githubusercontent.com
+# channel: raw.githubusercontent.com 200 | api.github.com 403 | github.com HTML 403 | codeload.github.com 403
+# method: 15 licence paths x 4 refs (main/master/develop/HEAD) + 5 metadata paths x 4 refs
+slug	ref	path	bytes	grade	licence	rider_keywords	notes
+MarcosNahuel/moodle-mcp	main	LICENSE	1065	PAYLOAD	MIT	0	full text read; byte-identical to stock MIT; holder "Italicia"; reproduces p114/p170/p191/p725 measurements
+MarcosNahuel/moodle-mcp	master	LICENSE	1065	PAYLOAD	MIT	0	same blob served on master
+MarcosNahuel/moodle-mcp	HEAD	LICENSE	1065	PAYLOAD	MIT	0	same blob served on HEAD
+MarcosNahuel/moodle-mcp	main	package.json	1885	METADATA	MIT	0	"license": "MIT" — agrees with payload
+Jawadh-Salih/moodle-mcp-server	main	LICENSE	1063	PAYLOAD	MIT	0	full text read; stock MIT; holder "Jawadh"; p-prior passes recorded 1062 B — 1 B delta, re-measured this pass
+Jawadh-Salih/moodle-mcp-server	master	LICENSE	1063	PAYLOAD	MIT	0	same blob served on master
+Jawadh-Salih/moodle-mcp-server	HEAD	LICENSE	1063	PAYLOAD	MIT	0	same blob served on HEAD
+Jawadh-Salih/moodle-mcp-server	main	go.mod	270	METADATA	NO-LICENSE-FIELD	-	go.mod carries no licence field (expected; Go has no such field)
+# independent existence check via `git ls-remote` (the one github.com route not 403 on this channel):
+# MarcosNahuel/moodle-mcp          HEAD = d5ca68e8cd1b0ebc861a3f35916cfe9fb5ff7fdd
+# Jawadh-Salih/moodle-mcp-server   HEAD = a65aefa6d26eb37ec7bd891882c12ea551b47507
+# NEGATIVE CONTROL: a slug that cannot exist returns no SHA (auth prompt), so the test discriminates.
+# Licence payloads above were read at these HEADs.

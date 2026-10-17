@@ -25,6 +25,16 @@ updated: 2026-10-17
 > carried as the only permissive North American system of record for roughly 200 passes while
 > *this* file carried no Ed-Fi row at all.
 
+**Pass 273 — no rows added, eighth consecutive nil, and the reason is now specific.** The scheduled
+platform/SIS/ERP leg returned only systems already shelved here or on
+[`verticals/solutions.md`](../verticals/solutions.md), and two listicles contradicted each other on
+`forma.lms` (Apache-2.0 vs GPL) — a question this base settled at payload in `p265`. 🔵 **One nil is now
+explained rather than repeated:** the battery's *"github trending education AI"* leg returns repositories
+that **teach AI** (`generative-ai-for-beginners`, `nanochat`, `developer-roadmap`), not repositories that
+**serve the education sector** — a query defect, not an absence of supply. ⚠️ **This file's layer was not
+where pass 273's finding landed**; it landed on the agent shelf and on licence method — see `T41` and
+[`repos/trending.md`](trending.md).
+
 ## Permissive foundations (MIT / Apache-2.0 / BSD)
 
 | Repo | Licence | Stars | Why it is a foundation |
