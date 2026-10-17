@@ -281,6 +281,20 @@ configurability is the product**.
   The public-sector code found this pass is a **service** layer (the UK's `DFE-Digital`, MIT), not a
   platform. For US K-12 public work the installed base is still Canvas, Moodle and PowerSchool-class
   commercial SIS — integration, not adoption.
+- 🔴 **CORRECTED IN PASS 268 — the hole above is wrong, and the correct statement is a better
+  commercial position than the one it replaces.** North America publishes a permissive
+  public-sector education layer: the **Ed-Fi** stack —
+  [`Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard),
+  [`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS),
+  [`Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service),
+  [`Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) —
+  **all Apache-2.0, all payload-verified 2026-10-17.** It is not a platform; it is the **data
+  standard and system of record** that US districts and state agencies already model students in.
+  🟢 **Why that is the stronger pitch:** in a market where the LMS is already bought, owning the
+  *interoperability* layer reaches every vendor and every district at once, and the Apache grant
+  means the deliverable carries no copyleft boundary — unlike Canvas (AGPL-3.0) or Open edX
+  (AGPL-3.0). The engagement shape is *conformance and agent surface*, not platform replacement.
+  ⚠️ **Do not brief a state adoption count** — see the pass-268 gap note below.
 
 ### EMEA
 
@@ -582,6 +596,32 @@ The region where the policy direction most favours what open source actually is.
   **failed DNS resolution on both instruments** this pass (curl and WebFetch alike), as did
   `ve.scielo.org` and `repositorio.cepal.org`. The figures are carried because they are
   decision-relevant and mutually corroborating, **not** because a primary text was read.
+- 🔴 **Pass 268 — four LATAM national programmes have now been probed by hand, and the supply
+  picture is settled enough to brief: outside Brazil, the region's national education platforms do
+  not publish code.** Pass 266 left a standing instruction to probe national-programme names
+  directly rather than by star-sorted search; passes 267-268 have done it:
+
+  | country | programme | what was found |
+  |---------|-----------|----------------|
+  | 🇺🇾 Uruguay | **Plan Ceibal** | GitHub organisation exists with **zero public repositories**, no public members *(pass 267)* |
+  | 🇦🇷 Argentina | **Juana Manso** (Educ.ar S.E., Plan Federal, 2020) | **Claimed open, unlocated.** An official is quoted *"todo lo que llevamos adelante es de código abierto y de patrimonio del Estado Nacional"* and a third-party resource page classes it as open source — but **no forge, no organisation and no source tree was found**, and every source located dates to 2020-21 with nothing on 2026 operational status |
+  | 🇲🇽 Mexico | **SEP / "Educación Superior 2026"** | **Not software.** A catalogue that redirects applicants to each institution's own registration site. No ministry repository located |
+  | 🇨🇱 Chile | **educarchile** (MINEDUC + Fundación Chile) | Portal, **no public code located** |
+  | 🇨🇴 Colombia | — | **Nothing located** |
+
+  🟢 **Brazil remains the only LATAM country in this KB publishing education source** —
+  [`portabilis/i-educar`](https://github.com/portabilis/i-educar) (GPL-2.0, 34,948 commits) and
+  `i-diario` (AGPL-3.0) — **and it arrives copylefted.** 🔵 **What this means for a LATAM
+  engagement, stated commercially:** outside Brazil there is **no national base to adopt**, so the
+  work is *integration against a closed or hosted national platform*, and in Brazil it is
+  *integration across a copyleft boundary*. Neither is the "fork the national stack" story that
+  India's Sunbird (MIT) supports in APAC. **The probe list is recorded so later passes do not spend
+  the budget re-establishing it.**
+- ⚠️ **An official's "it's all open source" is not a licence, and this pass is the clearest case
+  yet.** Argentina's Juana Manso is publicly described as open source by a government official and
+  by a third-party directory, and **no code was locatable on any channel tried.** Treat
+  programme-level open-source claims as **CLAIMED-OPEN, UNLOCATED** until a repository is read —
+  the same grade this base gives a README licence claim with no payload.
 
 ## Declared gaps
 
@@ -606,3 +646,37 @@ The region where the policy direction most favours what open source actually is.
 - **Estado de México's April 2026 education reform** appeared in search results but the
   substantive provision was truncated in every source located. Recorded as unverified rather
   than guessed.
+
+### Pass 268 addendum to the declared gaps
+
+- **Ed-Fi's North American adoption is search-summary grade and must not be briefed as a count.**
+  The licence is payload-verified Apache-2.0 on four repositories. The *adoption* is not: **neither
+  Ed-Fi README names a single US state or education agency**, and the Alliance's own pages give no
+  number. A third-party directory lists 14 statewide adoptions (AZ, NM, TX, TN, GA, SC, KS, NE, IN,
+  MI, WI, MN, VT, DE); search additionally reports **South Carolina's own education-department page
+  naming ODS/API 7.3 for SY2025-26** and a **Texas Education Exchange** deployment. ⚠️ **Both
+  `ed.sc.gov` and `www.ed.sc.gov` returned `getaddrinfo ENOTFOUND` from this environment**, so the
+  one primary government source that would settle it was **not read**. Per `P950` it was not
+  retried per host. **Quote the licence; let the client's procurement confirm their own state.**
+- **The EU AI Act's education timeline is DISPUTED across four sources and this base should stop
+  resolving it.** Located this pass: amendments *adopted June 2026*; entry into force *27 July
+  2026*; a separate claim of *31 July 2026*; *"high-risk provisions enter into force Aug 2026"*;
+  and one source asserting *"enforcement began Feb 2025"*. These cannot all be true. The
+  **substance** is stable and is what belongs in a client conversation — education AI affecting
+  **access or assessment** (admissions, student evaluation, exam scoring) is **high-risk**, requires
+  a **conformity assessment before being placed on the market**, and requires **human oversight with
+  the ability to intervene or shut the system down**. 🔵 **Brief the obligation, date the obligation
+  from the Official Journal, and never from a vendor guide.**
+- **EMEA sub-regional gap, stated rather than left silent: nothing was located for the Middle East
+  or Africa this pass.** The EMEA leg returned EU, UK and Germany material only. An "EMEA" number in
+  this file is, in practice, a **European** number — and this pass found no EdTech vendor market-share
+  data for EMEA at all. 🔵 Pass 267's standing note to run **Kenya, Nigeria, South Africa and Egypt
+  as four separate queries, never paired**, remains unrun and is the cheapest way to close this.
+- **Figures located this pass that are already shelved, re-confirmed and not re-published as new:**
+  the 2026 US state-legislation count and the named state bills, H.R. 8747's committee advance,
+  Canada's "AI for All", the NYC moratorium, South Korea's AI Basic Act, Vietnam's high-risk
+  education designation, UNESCO's LAC Observatory, and the TALIS/PISA/IESALC adoption percentages.
+  🔵 **Recorded as a negative result on purpose:** a full regional sweep this pass produced **no new
+  regulatory datum**, which is itself worth knowing — the regulatory surface of this industry has
+  stopped moving weekly, and the research budget is better spent on the supply side, where three
+  consecutive passes have each found shelf-grade rows that search alone never surfaces.

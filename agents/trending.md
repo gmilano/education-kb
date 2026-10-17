@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 268) — Google Classroom is the third MCP-addressable LMS: eight servers, seven permissive, one impostor, and none of them adopted
+
+**Append-only shelf.** This section is added above the previous one; nothing below it is
+rewritten. Evidence: [`verified-repos.2026-10-17-p268.tsv`](../evidence/verified-repos.2026-10-17-p268.tsv)
+
+### The finding: the most open LMS doorway is the least maintained one
+
+Pass 267 shelved `canvas-mcp` (MIT, 295★) and `moodle-mcp-server` (AGPL-3.0, 1★) and concluded that
+*"the two big LMSs are not equally open about it."* **There is a third, and it inverts the
+expectation.** The `mcp-server-education` topic is still empty, so this family was found the same way
+the last two were — a web search for the platform name plus "MCP server", then payload verification
+by hand.
+
+| server | licence | ★ | commits | reaches |
+|--------|---------|---|---------|---------|
+| [adriasantacreu/google-classroom-mcp](https://github.com/adriasantacreu/google-classroom-mcp) | MIT ⚠️ *metadata grade* | 2 | 11 | Classroom — **46 fully implemented tools**: courses, assignments, grading, rosters, Drive |
+| [Kimmahone/edu-workspace-mcp](https://github.com/Kimmahone/edu-workspace-mcp) | **MIT** (payload) | 1 | 42 | **All of Workspace for Education** — Docs, Sheets, Slides, Forms, Drive *and* Classroom, 29 tools |
+| [pengusto/google-classroom-mcp](https://github.com/pengusto/google-classroom-mcp) | **MIT** (payload) | — | — | Classroom — a fork of `adriasantacreu`, **dual copyright in the payload** |
+| [alanmagno1/google-classroom-mcp](https://github.com/alanmagno1/google-classroom-mcp) | **MIT** (payload) | 0 | 17 | Classroom, multi-account |
+| [OmarNiazi/classroom-mcp](https://github.com/OmarNiazi/classroom-mcp) | **MIT** (payload) | 0 | 7 | Classroom — student-side, **read-only by construction** |
+| [praisethefacts/google-classroom-mcp](https://github.com/praisethefacts/google-classroom-mcp) | **MIT** (payload) | — | — | Classroom — read-only courses, coursework, rosters, submissions |
+| [faizan45640/google-classroom-mcp-server](https://github.com/faizan45640/google-classroom-mcp-server) | **MIT** (payload, 2025) | — | — | Classroom — readonly scopes |
+| [AStheTECH/mewcp-google-classroom](https://github.com/AStheTECH/mewcp-google-classroom) | 🔴 **NOT OPEN SOURCE** | — | — | Classroom — bespoke *"AStheTECH Community License ... All rights reserved"* |
+
+🔵 **Read the adoption column, not the licence column.** `canvas-mcp` is **295★ / 1,026 commits**
+with a university named in its README. The *best* row here is **2★ / 11 commits**. Eight competing
+MIT implementations of the same idea with no adopted one is not a solved problem — it is an
+**unconsolidated** one. **For Canvas you adopt; for Google Classroom you fork the closest server and
+own it**, and you price the maintenance, because nobody upstream is carrying it. Do not promise
+"Google Classroom support" on the strength of a repository count.
+
+### 🔴 One in eight was not open source, and the lure gate did not catch it
+
+[`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom) describes
+itself exactly like the seven rows above it and serves, at `LICENSE.md`, a custom *"AStheTECH
+Community License (ACL)"* opening **"All rights reserved"** with an acceptance-of-terms clause. **Not
+usable in a client deliverable.** Second instance of the PageLM pattern.
+
+🟢 **And the instructive part: it is not a lure.** `p238`'s four-predicate gate was built for
+*deliberately mislabelled* repositories, and this row **passes** all three substantive predicates —
+no release-channel word in the name, no README link funnel, no forged badge. It is simply **not
+permissive**. 🔵 **A provenance gate and a grant read are different instruments, and neither
+substitutes for the other.** Only reading the payload found this one.
+
+### ⚠️ The scope asymmetry, which is bigger than the licence story
+
+`canvas-mcp` reaches a course API. `Kimmahone/edu-workspace-mcp` reaches **Docs, Sheets, Slides,
+Forms, Drive and Classroom** — an entire Google Workspace for Education tenant. The OAuth consent a
+pilot asks a school for is therefore far wider than the feature being piloted, and
+`OmarNiazi/classroom-mcp`'s own README states *"Google hasn't verified this app."* EMEA: a GDPR
+conversation before an engineering one. US: FERPA/COPPA. **Scope consent to the tools you enable and
+put it in the SOW.**
+
+### 🟢 New regional datum: the first Korean-language education agent at payload grade
+
+`Kimmahone/edu-workspace-mcp` has a **Korean README**, references **Korean curriculum standards**,
+and implements `docs_import_hwp` / `docs_export_hwpx` — HWP/HWPX being Korea's national document
+formats, which is *implementation* evidence rather than prose. **Graded as LANGUAGE evidence**, the
+same grade this base gave the Portuguese `ai_tutor_forge` and declined to upgrade: no country and no
+institution is stated, so **Korea-origin is not asserted**. It arrives in the one APAC jurisdiction
+with a comprehensive statute in force — South Korea's **AI Basic Act, 22 January 2026**.
+
+### 🔴 The Spanish gap was tested a third way — against a family, not a query — and it held, on weaker evidence than before
+
+`alanmagno1/google-classroom-mcp`'s **About line is in Spanish** (*"Servidor MCP para Google
+Classroom: cursos, tareas pendientes, entregas y materiales desde Claude"*) and its **README is in
+English**. The most capable server in the family is by an author with a Catalan name and **its README
+is in English too**, with no country stated. 🔵 **The nearest-miss evidence has got *weaker*:**
+`ai_tutor_forge` had a Portuguese README; this is a Spanish *metadata field*. **Standing claim
+unchanged: no Spanish- or Portuguese-language education agent with adoption** — and a Spanish
+sentence in a sidebar must not become an Iberian or LATAM provenance claim in a deck.
+
+### Measurement noise, recorded so a later pass does not "correct" it
+
+The `ai-tutor` topic listing showed `HKUDS/DeepTutor` at **~41.2k★** and last updated 2026-10-12 this
+pass; [`agents/top.md`](top.md) publishes **41.5k** as of 2026-10-17. That is **sub-1% variance
+between two listing reads in the same week — noise, not a decline**, and the shelved figure is not
+changed on it. 🔵 This base has published carried-forward numbers as fact before (`pykt` 1.2k for a
+450-star repo); **rewriting a good figure on noise is the opposite error and is now equally out of
+bounds.**
+
+### The `mcp-server-education` topic gap got four times worse, which is the point
+
+The topic is still *"hasn't been used on any public repositories, yet"* while **eleven** education
+MCP servers are now verified — four after pass 267, eleven after pass 268. 🔵 **The index is not
+lagging the category; it is structurally disconnected from it.** Every one of the eleven was found by
+naming a platform in a web search and verifying by hand. A topic-listing leg will keep reporting this
+category as non-existent.
+
+---
+
 ## 2026-10-17 (pass 267) — The LMS became MCP-addressable, and that is the shortest path from an agent to a client's real data
 
 **Append-only shelf.** This section is added above the previous one; nothing below it is

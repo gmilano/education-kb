@@ -17,7 +17,13 @@ updated: 2026-10-17
 > ranks this layer by **commits** instead of stars and by that measure finds the largest education
 > codebase in open source (`instructure/canvas-lms`, **78,765 commits**) was missing from this file
 > altogether, along with three permissive autograding/infrastructure rows and a **national education
-> ministry publishing production services under MIT**.
+> ministry publishing production services under MIT**. Extended again by
+> [`verified-repos.2026-10-17-p268.tsv`](../evidence/verified-repos.2026-10-17-p268.tsv) — pass 268
+> probes the rows this base **named but never read**, and that corrects the sentence above: the
+> largest education codebase in open source is **`code-dot-org/code-dot-org`, 215,796 commits**,
+> 2.7x Canvas. Pass 268 also shelves the **Ed-Fi** stack, which this base's own gap register has
+> carried as the only permissive North American system of record for roughly 200 passes while
+> *this* file carried no Ed-Fi row at all.
 
 ## Permissive foundations (MIT / Apache-2.0 / BSD)
 
@@ -40,7 +46,10 @@ updated: 2026-10-17
 | [academico-sis/academico](https://github.com/academico-sis/academico) | MIT | — | Student information system (Laravel): enrolment, attendance, results. MIT SIS data is the input every dropout-prediction model needs. |
 | [haxtheweb/haxcms-php](https://github.com/haxtheweb/haxcms-php) | Apache-2.0 | — | HAX authoring/CMS for web-component-based course content. Content as components survives an LMS migration; content as LMS pages does not. |
 | [openedx/XBlock](https://github.com/openedx/XBlock) | Apache-2.0 *(README-stated — see note)* | — | The component API for Open edX. The entry point for putting an agent inside an Open edX course. |
-
+| [Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | **Apache-2.0** | 46 | **The K-12 student-data standard of North American public education, and it is permissive.** *"Serves as the foundation for enabling interoperability among secure education data systems."* 370 commits on `v6.2.0`. The vocabulary a US district or state agency already models its students in — so an AI deliverable that speaks Ed-Fi needs no bespoke integration per district. ⚠️ **Neither this README nor `Ed-Fi-ODS`'s names a single US state or education agency** — see the provenance note below before any state count reaches a deck. |
+| [Ed-Fi-Alliance-OSS/Ed-Fi-ODS](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | **Apache-2.0** *(payload at `LICENSE.txt`, not `LICENSE`)* | 28 | The Operational Data Store and ODS API — the running system behind the standard. 1,054 commits, and **48 forks against 28 stars**: forks exceeding stars is the deployment signature this file named on Submitty. The permissive **system of record** that the "North America publishes no education platform" framing said did not exist. |
+| [Ed-Fi-Alliance-OSS/Data-Management-Service](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | **Apache-2.0** | — | The ODS/API's declared successor. ⚠️ **Price this one from the register, not the README:** `intel/open-gaps.md` (`Gap 303`) establishes from `docs/PRD-v8.0.md` that it is *"a ground-up rewrite"* and that adoption is a **re-platforming with a data migration, not an in-place cutover**. `Gap 314` adds that provisioning is **create-only**, so any AI deliverable writing back to the system of record — a predicted risk flag, an AI-assisted grade — is a **data-model extension and a re-provision**, not an insert. |
+| [Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | **Apache-2.0** *(payload at `LICENSE.txt`)* | — | End-user applications and extensions over the ODS/API. The deployment surface of the row above. |
 | [oppia/oppia](https://github.com/oppia/oppia) | Apache-2.0 | 6.9k | Full online learning platform built for low-resource contexts: structured lessons, built-in formative feedback, learner-progress model. **17,004 commits** on `develop`. The highest-adoption *permissively licensed* complete learning platform located by this KB — larger than Artemis and larger than every education agent except DeepTutor. |
 | [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | BSD-3-Clause | 1.4k | *"A system for assigning and grading notebooks."* **Autograding that already exists.** This file previously declared that no high-adoption open-source grading option was found; nbgrader is 1.4k stars, BSD-3-Clause and the default in university data-science teaching. |
 | [learningequality/kolibri](https://github.com/learningequality/kolibri) | MIT | 1.2k | *"the offline app for universal education"* — a complete learning platform that runs with **no internet connection**, syncing when a link appears. **39,803 commits.** MIT, which makes it the second permissive complete platform in this KB and the only one designed for intermittent connectivity. The natural base for rural LATAM and low-bandwidth APAC deployments. |
@@ -54,9 +63,12 @@ updated: 2026-10-17
 | [learningequality/studio](https://github.com/learningequality/studio) | **MIT** | 193 | *"Content curation tools for Kolibri"* — **Kolibri Studio**, the authoring and publishing half of the offline-first stack this file already shelves. 15,493 commits, 312 forks. Organises content into channels Kolibri can import, remixes existing channels against **national curricula**, and builds learning pathways and assessments. Without it, a Kolibri deployment is a reader with no pipeline. *Licence note: the MIT copyright line reads "(internal apps)", but the grant and condition clauses are unmodified standard MIT — reading that parenthetical as a restriction would be a false positive.* |
 | [DFE-Digital/apply-for-teacher-training](https://github.com/DFE-Digital/apply-for-teacher-training) | **MIT** *(under Crown Copyright)* | 38 | **A national education ministry's production service, MIT-licensed.** *"A service for applying to teacher training courses"* — **34,414 commits**, run by the **UK Department for Education** at `apply-for-teacher-training.service.gov.uk`. The payload reads *"Copyright (c) Crown Copyright (Department for Education)"*. Beside it, [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) (MIT, *"Department for Education - Digital"*). ⚠️ **38 stars against 34,414 commits** — the same instrument blindness as Sunbird. ⚠️ **And the licence file is spelled `LICENCE`**: a probe trying only `LICENSE` reads this MIT service as unlicensed. |
 
-**27 permissive foundation rows** (17 from pass 264, 4 in pass 265, 6 added and payload-verified in
-pass 267). Pass 267's six were all found by **ranking candidates by commits and probing named
-institutions and ministries by hand** — not one of them would surface in a star-sorted topic listing.
+**31 permissive foundation rows** (17 from pass 264, 4 in pass 265, 6 added and payload-verified in
+pass 267, 4 Ed-Fi rows in pass 268). Pass 267's six were all found by **ranking candidates by commits
+and probing named institutions and ministries by hand** — not one of them would surface in a
+star-sorted topic listing. **Pass 268's four were not found by searching at all**: they were sitting
+in this base's own gap register, Apache-2.0 and payload-read, while this file had no row for them.
+🔵 **The cheapest source of new shelf rows this pass was the base itself.**
 
 > **Note on XBlock:** the repository's `README.rst` states *"The code in this repository is
 > licensed the Apache 2.0 license unless otherwise"* and points at `LICENSE.txt`, but that
@@ -90,6 +102,7 @@ institutions and ministries by hand** — not one of them would surface in a sta
 | [Tangerine-Community/Tangerine](https://github.com/Tangerine-Community/Tangerine) | **GPL-3.0** | *"Open-source software platform designed to support data collection in low-resource settings, especially in education."* **8,064 commits.** Offline-first assessment on tablets and phones that syncs when connectivity appears, built originally for early-grade reading and maths. The **assessment** counterpart to Kolibri's offline *delivery* — together they cover the low-connectivity lane end to end, at a GPL-3.0 price on this half. The logo is a registered trademark of **RTI International** (the only institutional statement the README serves). ⚠️ README claim, not independently verified: *"more than 5 million assessments and surveys across 65 countries and more than 80 organisations"* — **no country list is served**, so no specific national deployment is asserted. |
 | [PrairieLearn/PrairieLearn](https://github.com/PrairieLearn/PrairieLearn) | **SPLIT LICENCE — read the payload, not the label** | *"Online problem-driven learning system"*, 12,061 commits, 519 stars, 404 forks, UIUC in the copyright line. **This row exists as a warning as much as a recommendation.** The GitHub sidebar shows a License link *with no label*, and the payload partitions the tree four ways: the **Community Edition** (everything outside `apps/prairielearn/src/ee/`) is **AGPL-3.0**; `apps/prairielearn/src/ee/` is the **Enterprise Edition under its own separate licence**; **all client-side JavaScript**, served or compiled, is **AGPL-3.0**; and portions copyright UIUC and outside contributors are **MIT**. Any single-label cell — "AGPL-3.0" included — is wrong in two directions at once. |
 | [RunestoneInteractive/rs](https://github.com/RunestoneInteractive/rs) | **MIT, with exceptions — one of them commercial** | The Runestone interactive-textbook platform. The grant is MIT, but the payload's **first paragraph** excepts, among others, the **Handsontable component, which is commercial software**: *"if you make a copy of this software, you must contact https://handsontable.com/ to verify your compliance with their license."* Two textbook texts also carry their own terms (GNU Documentation License; a publisher's copyright). **An MIT headline over a paid dependency** — exactly the shape that passes a licence audit and fails a procurement review. |
+| [code-dot-org/code-dot-org](https://github.com/code-dot-org/code-dot-org) | **Apache-2.0 OVER A PROPRIETARY CURRICULUM — read the payload, not the label** | **The largest education codebase in open source, and pass 267's "largest" cell was wrong.** *"The code powering code.org and studio.code.org"* — **215,796 commits** (read twice, independently), 901★, 538 forks, last commit **2026-10-17** (merge 7995a55, PR #76166). That is **2.7x `instructure/canvas-lms`'s 78,765**. The GitHub sidebar shows a License link **with no label** — `p267`'s signal, and it fired correctly. The payload grants **Apache-2.0** over *"all source codes and assets"* **with one exception that swallows the deliverable**: Code.org's *"proprietary or licensed artwork, graphics, sounds, lectures, videos, logos, characters, fonts"* *"may not be used or distributed or accessed in any manner other than directly via Code.org's own web site, mobile applications, or social media channels ... **without modification or embedding in another format**."* And the `NOTICE` says why Code.org could not grant them even if it wanted to: the curriculum is built on **licensed entertainment IP** — Minecraft (Microsoft), Star Wars (Disney/Lucasfilm), Frozen (Disney), Ice Age (20th Century Fox), Angry Birds (Rovio), Plants vs. Zombies (PopCap), The Amazing World of Gumball (Cartoon Network), The Bad Guys (DreamWorks) — plus **Font Awesome Pro** and the Geist font (SIL OFL). 🔵 **So the engine is permissive and the lessons are not.** See `Gap 367` below: this row is the answer to it, and the answer is not the one that was being searched for. |
 | [pressbooks/pressbooks](https://github.com/pressbooks/pressbooks) | **GPL-3.0** | Open-textbook authoring and publishing (WordPress-based). Shelved with a companion measurement: [`openstax/os-webview`](https://github.com/openstax/os-webview), the front end of the **OpenStax** open-textbook programme, declares **AGPL-3.0** in `package.json` (metadata grade — it serves no licence file). **The open-textbook layer is copyleft on both rows measured this pass**, which is worth knowing before an OER engagement is scoped as permissive. |
 
 ## What to reach for, by job
@@ -105,6 +118,18 @@ institutions and ministries by hand** — not one of them would surface in a sta
 - **"Notebook-based data-science teaching"** → `jupyterhub/jupyterhub` (BSD-3) for the substrate, then `nbgrader` or `otter-grader` on top. All BSD-3: the whole lane is permissive end to end.
 - **"We are a ministry or a public agency"** → the precedent is real and MIT: `Sunbird-Ed/SunbirdEd-portal` (India, 38,046 commits) and `DFE-Digital/apply-for-teacher-training` (UK, 34,414 commits). Public-sector education code is **shelf-grade**, and star counts hide all of it.
 - **"Our learners lose connectivity"** → `learningequality/kolibri` (MIT). Offline-first is an architecture, not a setting, and retrofitting it onto a server-rendered LMS is a rebuild.
+- **"We are a US district or state education agency"** → the **Ed-Fi** stack (Apache-2.0):
+  `Ed-Fi-Data-Standard` for the model, `Ed-Fi-ODS` for the running system of record,
+  `Data-Management-Service` for new builds. This is the permissive North American public-sector
+  layer, and it is a **data standard and API** rather than a platform — which is the correct shape
+  for this market, where the LMS is already bought. ⚠️ Price DMS adoption as a **re-platforming
+  with a data migration** (`Gap 303`) and any write-back as a **model extension and re-provision**
+  (`Gap 314`).
+- **"Deliver a K-5 or K-12 AI/CS literacy mandate"** → reach for `code-dot-org/code-dot-org`'s
+  **platform** under Apache-2.0, and **plan to originate or commission the lessons**. Do **not**
+  plan to reuse Code.org's videos, characters, artwork or Minecraft/Star Wars activities: the
+  payload forbids it and the `NOTICE` explains that Code.org cannot grant them either. The content
+  is the deliverable; the engine is the freebie. See `Gap 367`.
 - **"Brazilian municipal or state network, sovereignty-first"** → `portabilis/i-educar` (GPL-2.0) for the SIS and `i-diario` (AGPL-3.0) for the teacher portal, both actively maintained in October 2026, both already inside the federal software-public lineage. Keep studio code on the permissive side of an LTI or API boundary.
 
 ## Declared gaps — and three retractions
@@ -220,3 +245,56 @@ from absence.
   project with no licence on any of 76 path/ref combinations and no ministry or country named in
   it.** The application source was not located. An unshelved row with a stated reason is worth
   more than a plausible one.
+
+### Added in pass 268
+
+- **🔴 Correction to pass 267's headline: the largest education codebase in open source is
+  `code-dot-org/code-dot-org`, at 215,796 commits — not `instructure/canvas-lms` at 78,765.**
+  Pass 267 published "the largest education codebase this KB has located" on a commit-ranked
+  sweep; Code.org is **2.7x** larger and was not in the candidate set, because the sweep ranked
+  *repositories this base had already named* and Code.org had only ever been named as a
+  **curriculum vendor** in a gap note, never as a repository. 🔵 **The generalisable defect is the
+  same one pass 267 found on Canvas and did not finish fixing:** this base reliably mistakes
+  *"organisation known for a product"* for *"organisation with no source."* Canvas was in "not on
+  the shelf" as commercial SaaS; Code.org was in a gap note as a curriculum provider. **Both
+  publish at enormous scale.** The commit figure was read twice independently (repository page and
+  `tree/staging`), both times 215,796, precisely because this base has a history of publishing
+  numbers it read once.
+- **🟢 The Ed-Fi stack is shelved, and the reason it was missing is the most uncomfortable finding
+  of the pass: it was never missing from the *base*, only from the *shelves*.**
+  `intel/open-gaps.md` carries Ed-Fi across at least six numbered gaps (`286`, `303`, `309`,
+  `311`, `314`, and `ACTION TM`/`TR`), records all five repositories as **Apache-2.0,
+  payload-read, placed North America**, and states plainly that **Ed-Fi DMS is the only permissive
+  system of record this base has found.** Meanwhile *this* file had no Ed-Fi row, and
+  [`verticals/solutions.md`](../verticals/solutions.md) published, in pass 267, that public-sector
+  platforms exist for three regions *"and still none for North America."*
+  🔵 **This is the third cross-shelf contradiction in three passes** (pass 266 found two: the LATAM
+  gap bullet and the grading-category claim). The pass-266 standing instruction — *"before
+  republishing any declared gap, grep the other shelves for its own counter-evidence"* — was
+  followed against the four `.md` shelves and **still missed this**, because the counter-evidence
+  lives in the **gap register**, which is not a shelf. **Amended standing instruction: grep
+  `intel/open-gaps.md` too, and grep for the SLUG as well as the prose claim.** Pass 268 found
+  Code.org by grepping for `code-dot-org` and getting **zero hits across every `.md` in this
+  repository** while `Code.org` the phrase hit four files.
+- **🟡 Ed-Fi's agency provenance is NOT established, and the state count must not be briefed.**
+  Neither Ed-Fi README names a US state or an education agency; the Alliance's own pages give no
+  number. A third-party directory lists 14 statewide adoptions (AZ, NM, TX, TN, GA, SC, KS, NE, IN,
+  MI, WI, MN, VT, DE) and search reports South Carolina's own department page naming ODS/API 7.3
+  for SY2025-26 plus a Texas Education Exchange deployment — but **`ed.sc.gov` and
+  `www.ed.sc.gov` both returned `getaddrinfo ENOTFOUND` from this environment, so none of it was
+  read first-hand.** Shelved on the **licence**, which is payload-grade; the **adoption** is
+  search-summary grade and labelled as such. This is the `OpenEMIS` discipline applied to a row
+  that *passes*: the licence earns the shelf, the provenance does not earn a claim.
+- **🟢 2026 roadmap detail worth a sentence in a proposal** (search-summary grade, Ed-Fi's own
+  docs blog): native **OneRoster 1.2** support shipped in **ODS/API 7.3.2**, the platform moved to
+  **.NET 10** ahead of .NET 8 end-of-support in **November 2026**, and Ed-Fi API v8 and Admin API
+  v2.4 are on the 2026 release line. 🔵 The OneRoster item matters because `Gap 309` records
+  OneRoster as *absent* from DMS v8.0 — so the rostering story differs between the ODS/API line
+  and its successor, and a proposal must say which line it is quoting.
+- **🔵 The permissive complete-platform count is still five.** `classroomio/classroomio` was
+  recommended to this pass by a 2026-dated source as the open alternative to Moodle and edX; its
+  payload is **AGPL-3.0**, consistent with what the register already carried (AGPL core, MIT `mcp`
+  package, plus a `LICENSE_KEY` gate on self-hosted enterprise features). Ed-Fi and Code.org are
+  **not** platforms — one is a data standard, the other a curriculum delivery system with an
+  unlicensable content layer — so neither raises the count. **Three consecutive passes have now
+  added permissive rows without adding a permissive platform.**

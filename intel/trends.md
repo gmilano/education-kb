@@ -474,6 +474,125 @@ coverage reached through the search index. This session could not resolve a sing
 by DNS on **either** instrument, so no primary ministry text was read. Treat dates as
 decision-usable and figures as directional.
 
+## T23 — The biggest permissive education codebase in the world is a curriculum platform whose curriculum you cannot have
+
+**`code-dot-org/code-dot-org` is Apache-2.0 and has 215,796 commits** — 2.7x
+`instructure/canvas-lms` (78,765), which pass 267 published as the largest education codebase this
+KB had located. 901★, 538 forks, last commit **2026-10-17**, PR #76166. The GitHub sidebar shows a
+License link **with no label**, which is exactly the signal pass 267 said to treat as "read the
+payload in full" — and doing so is the whole trend.
+
+The grant covers *"all source codes and assets"* **with one exception**: Code.org's *"proprietary
+or licensed artwork, graphics, sounds, lectures, videos, logos, characters, fonts"*, which *"may
+not be used or distributed or accessed in any manner other than directly via Code.org's own web
+site, mobile applications, or social media channels ... **without modification or embedding in
+another format**."* The `NOTICE` explains why that carve-out could not have been narrower: the
+activities children actually remember are **licensed entertainment IP** — Minecraft (Microsoft),
+Star Wars (Disney/Lucasfilm), Frozen (Disney), Ice Age (20th Century Fox), Angry Birds (Rovio),
+Plants vs. Zombies (PopCap), The Amazing World of Gumball (Cartoon Network), The Bad Guys
+(DreamWorks) — plus **Font Awesome Pro** and the Geist font (SIL OFL). **Code.org cannot
+sublicense them, so neither can a studio.**
+
+🟢 **Why this is a trend and not a licence anecdote: it structurally closes `Gap 367`, this base's
+highest-priority demand-side gap.** `Gap 367` records that four jurisdictions now mandate AI
+instruction — **China** (≥8 h/year from age six, since Sep 2025), **Singapore MoE** (Mar 2026),
+**India CBSE** (Classes 3-8, session 2026-27) and the **EU AI Act Art. 4** staff-literacy duty —
+and that *"every permissive AI curriculum on this shelf is written for adult developers"*, calling
+it *"the largest named, dated, deadline-bearing demand on this shelf with no supply."* The gap
+named **Code.org** and **MIT Day of AI** as the alternatives and never read either one's licence.
+
+Now read: the gap is not under-searched, it is **correctly empty**. The world's largest K-12 CS
+platform is permissive **in its engine and unlicensable in its content**; MIT Day of AI is
+**CC-licensed**; and the reference framework both are organised on,
+[`touretzkyds/ai4k12`](https://github.com/touretzkyds/ai4k12) (AAAI/CSTA), **serves no licence
+payload at all**. Three independent sources of primary-school AI curriculum, three different
+reasons you cannot ship it.
+
+🔵 **So stop searching and change the deliverable.** For a K-5 or K-12 AI-literacy mandate the
+honest proposal is **content origination on a free engine**: Apache-2.0 platform reuse, and
+instructional design as the paid work. See [`compose/patterns.md`](../compose/patterns.md) `P17`.
+🔴 **The failure mode to name explicitly:** a client who has seen Code.org assumes the curriculum
+ships with the code. Discovering otherwise after signature is how this becomes a loss.
+
+## T24 — Three LMSs are now MCP-addressable, and the most open one is the least adopted
+
+Pass 267 established that the LMS is becoming MCP-addressable and that *"the two big LMSs are not
+equally open about it."* Pass 268 found the third, and it breaks the implied correlation between
+openness and usefulness.
+
+| LMS | servers | best licence | best adoption | engagement posture |
+|-----|---------|--------------|---------------|--------------------|
+| **Canvas** | 2 | **MIT** (payload) | **295★ / 1,026 commits**, v1.14.0 Oct 2026, UIUC named | **Adopt.** One maintained choice. |
+| **Moodle** | 1 | AGPL-3.0, **open-core** | 1★ / 57 commits | **Price twice.** Network clause *and* premium tools sold separately. |
+| **Google Classroom** | **8** | **MIT** (payload on 6 of 8) | **2★ / 11 commits** at best | **Fork and own it.** Nobody upstream is carrying this. |
+
+**The Google Classroom family in full:** `adriasantacreu` (46 tools, MIT at *metadata* grade — no
+payload, no sidebar licence), `Kimmahone/edu-workspace-mcp` (MIT, 29 tools, reaches all of
+Workspace for Education), `pengusto` (MIT, a correctly-attributed fork of `adriasantacreu` with
+dual copyright in the payload), `alanmagno1` (MIT), `OmarNiazi` (MIT, read-only by construction),
+`praisethefacts` (MIT), `faizan45640` (MIT), and
+[`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom) — which
+is **not open source at all**: a bespoke *"AStheTECH Community License (ACL) ... All rights
+reserved"* at `LICENSE.md`, sitting in the same result set, describing itself the same way.
+
+🔴 **Second instance of the PageLM pattern, and the lesson has sharpened.** `p238` built a
+four-predicate lure gate for *deliberately mislabelled* repositories. This row **passes** that gate
+on all three substantive predicates — it is not a fraud, it is simply **not permissive**. 🔵 **A
+provenance gate and a grant read are different instruments and neither substitutes for the other.**
+One in eight repositories in a category described identically by search was unusable, and only
+reading the payload found it.
+
+⚠️ **The scope asymmetry is the real commercial finding.** `canvas-mcp` reaches a course API;
+`edu-workspace-mcp` reaches **Docs, Sheets, Slides, Forms, Drive and Classroom** — an entire
+Workspace for Education tenant. The OAuth consent a pilot asks a school for is therefore much wider
+than the feature being piloted, and `OmarNiazi`'s README states outright *"Google hasn't verified
+this app."* In EMEA that is a GDPR conversation before an engineering one; in the US, FERPA/COPPA.
+**Scope consent to the tools you enable and put it in the SOW.**
+
+🟢 **And one new regional datum falls out of it.** `Kimmahone/edu-workspace-mcp` is the **first
+Korean-language education agent this KB has payload-verified** — Korean README, Korean curriculum
+standards referenced, and `docs_import_hwp` / `docs_export_hwpx` for Korea's national document
+formats, which is *implementation* evidence rather than prose. Graded as **language** evidence, the
+same grade as the Portuguese `ai_tutor_forge`, so Korea-origin is **not** asserted. It lands in the
+one APAC jurisdiction with a comprehensive statute in force — South Korea's **AI Basic Act, 22
+January 2026**.
+
+## T25 — The most productive research channel this pass was not the web. It was this knowledge base
+
+Three passes running have found shelf-grade rows that star-sorted search cannot see: pass 266 by
+probing national-programme names, pass 267 by ranking on commits, and pass 268 — by **grepping this
+repository**.
+
+Both headline findings were already inside the base:
+
+- **Ed-Fi.** `intel/open-gaps.md` carries it across at least six numbered gaps (`286`, `303`,
+  `309`, `311`, `314`, plus `ACTION TM`/`TR`), records all five repositories as **Apache-2.0,
+  payload-read, placed North America**, and states that **Ed-Fi DMS is the only permissive system of
+  record this base has found.** Meanwhile `repos/foundations.md` had **no Ed-Fi row**, and
+  `verticals/solutions.md` published in pass 267 that public-sector platforms exist for three
+  regions *"and still none for North America."*
+- **Code.org.** Named in `Gap 367` as the alternative to a missing permissive curriculum, and never
+  probed. Grepping the slug `code-dot-org` returned **zero hits across every `.md` in this
+  repository**, while the phrase `Code.org` hit four files.
+
+🔴 **This is the third cross-shelf contradiction in three passes**, and it defeated the guard built
+for exactly this. Pass 266's standing instruction — *"before republishing any declared gap, grep
+the other shelves for its own counter-evidence"* — was followed, and still missed Ed-Fi, because
+**the counter-evidence lives in the gap register, which is not a shelf.**
+
+🟢 **Amended standing instruction, and it is cheap:**
+1. **Grep `intel/open-gaps.md`**, not only the four `.md` shelves.
+2. **Grep for the SLUG as well as the prose claim** — `code-dot-org` and `Code.org` are different
+   searches and only one of them was ever run.
+3. **Treat a gap note's "named alternative" as an unprobed lead with a deadline**, not as a
+   discharge. `Gap 367` named two alternatives and read neither's licence for ~175 passes.
+
+🔵 **Why this belongs in a trends file rather than a method note.** The research instrument defect
+this base has been correcting since pass 265 was *external* — star-ranked search is blind to
+ministry code. Pass 268's defect is *internal*: **the base knows more than its shelves say**, and
+the gap between the two is now the single richest vein available to it. A pass that spends its first
+ten minutes grepping itself will out-produce one that spends them searching.
+
 ## Confidence notes
 
 - **Payload-verified (strongest):** every licence in this KB's tables, read from

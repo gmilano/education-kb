@@ -4,6 +4,123 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 268) — The largest education codebase in open source is Code.org at 215,796 commits, and its curriculum is the one thing its licence will not give you
+
+**Append-only shelf.** This section is added above the previous one; nothing below it is
+rewritten. Evidence: [`verified-repos.2026-10-17-p268.tsv`](../evidence/verified-repos.2026-10-17-p268.tsv)
+
+### 🔴 Correction to pass 267's headline
+
+Pass 267 ranked this layer by commits instead of stars and published
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) — **78,765 commits** — as *"the
+largest education codebase this KB has located."*
+
+[`code-dot-org/code-dot-org`](https://github.com/code-dot-org/code-dot-org) has **215,796 commits.**
+**2.7x Canvas.** 901★, 538 forks, last commit **2026-10-17**, merge `7995a55`, **PR #76166**. The
+commit figure was read **twice independently** (repository page and `tree/staging`), both times
+215,796 — precisely because this base has a history of publishing figures it read once.
+
+🔵 **Why a commit-ranked sweep missed it, stated as a method defect rather than bad luck.** Pass
+267's sweep ranked *repositories this base had already named.* Code.org had only ever been named as a
+**curriculum vendor**, in a gap note, never as a repository. 🔴 **This is the same defect pass 267
+found on Canvas and did not finish fixing:** this base reliably mistakes *"organisation known for a
+product"* for *"organisation with no source."* Canvas sat in "not on the shelf" as commercial SaaS;
+Code.org sat in a gap note as a curriculum provider. **Both publish at enormous scale.**
+
+### The licence is Apache-2.0 and the curriculum is carved out of it
+
+The GitHub sidebar shows a License link **with no label** — exactly the signal pass 267 said to treat
+as *"read the payload in full."* It fired correctly. The grant covers *"all source codes and assets"*
+**with one exception**:
+
+> *"...with the exception of Code.org's proprietary or licensed artwork, graphics, sounds, lectures,
+> videos, logos, characters, fonts, etc. ('Proprietary Materials'). The Proprietary Materials ... may
+> not be used or distributed or accessed in any manner other than directly via Code.org's own web
+> site, mobile applications, or social media channels, or via local development environments as-is,
+> **without modification or embedding in another format**."*
+
+And the `NOTICE` shows why that carve-out could not have been narrower — the activities children
+actually remember are **licensed entertainment IP**: Minecraft (Microsoft), Star Wars (Disney and
+Lucasfilm), Frozen (Disney), Ice Age (20th Century Fox), Angry Birds (Rovio), Plants vs. Zombies
+(PopCap), The Amazing World of Gumball (Cartoon Network), The Bad Guys (DreamWorks). Plus **Font
+Awesome icons under the Font Awesome *Pro* License** and the Geist font (SIL OFL).
+
+🟢 **Code.org cannot sublicense those, so neither can a studio — and no contract with Code.org would
+change it.** The engine is permissive; the lessons are not.
+
+### 🟢 This structurally closes `Gap 367`, and the answer is not the one being searched for
+
+`Gap 367` has carried *"no permissive AI curriculum for primary"* for ~175 passes as **"the largest
+named, dated, deadline-bearing demand on this shelf with no supply"** — four jurisdictions mandating
+AI instruction (China ≥8 h/year from age six since Sep 2025; Singapore MoE Mar 2026; India CBSE
+Classes 3-8 session 2026-27; EU AI Act Art. 4). It named **Code.org** and **MIT Day of AI** as the
+alternatives **and never read either one's licence.**
+
+Now read, the gap is **correctly empty**, three different ways:
+
+| source | status |
+|--------|--------|
+| **Code.org** | Apache-2.0 engine, **curriculum carved out and built on third-party entertainment IP** |
+| **MIT Day of AI** | **CC-licensed** |
+| [`touretzkyds/ai4k12`](https://github.com/touretzkyds/ai4k12) (AAAI/CSTA) — the framework both organise on | **no licence payload at all** (`Gap 354`) |
+
+🔵 **So stop searching and change the deliverable:** content origination on a free engine. See
+[`compose/patterns.md`](../compose/patterns.md) **`P17`**.
+
+### 🟢 Ed-Fi is shelved, and it was never missing from the base — only from the shelves
+
+Four repositories, **all Apache-2.0, all payload-verified this pass**:
+[`Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) (46★, 14 forks, 370
+commits), [`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) (28★, **48 forks**, 1,054
+commits — forks exceeding stars, the deployment signature),
+[`Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service),
+[`Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation). Note
+two of the four serve the payload at **`LICENSE.txt`**, not `LICENSE`.
+
+🔴 **The uncomfortable half.** `intel/open-gaps.md` carries Ed-Fi across at least six numbered gaps
+(`286`, `303`, `309`, `311`, `314`, plus `ACTION TM`/`TR`), records the stack as **Apache-2.0,
+payload-read, placed North America**, and states that **Ed-Fi DMS is the only permissive system of
+record this base has found.** Meanwhile [`repos/foundations.md`](foundations.md) had **no Ed-Fi row**,
+and [`verticals/solutions.md`](../verticals/solutions.md) published in pass 267 that public-sector
+platforms exist for three regions *"and still none for North America."*
+
+**Third cross-shelf contradiction in three passes** — and it defeated the guard built for it. Pass
+266's instruction *"before republishing any declared gap, grep the other shelves for its own
+counter-evidence"* was followed and still missed this, because **the counter-evidence lives in the
+gap register, which is not a shelf.**
+
+🟢 **Amended standing instruction, cheap to run:** (1) grep **`intel/open-gaps.md`**, not only the
+four `.md` shelves; (2) grep for the **SLUG** as well as the prose claim — `code-dot-org` returned
+**zero hits across every `.md` here** while `Code.org` hit four files; (3) treat a gap note's *"named
+alternative"* as an **unprobed lead with a deadline**, not a discharge.
+
+⚠️ **Shelved on the licence, not on adoption.** Neither Ed-Fi README names a US state or an education
+agency, and the Alliance's own pages give no number. A third-party directory lists 14 statewide
+adoptions; search reports South Carolina's own department page naming ODS/API 7.3 for SY2025-26 and a
+Texas Education Exchange deployment — but **`ed.sc.gov` and `www.ed.sc.gov` both returned
+`getaddrinfo ENOTFOUND`**, so none of that was read first-hand. **Do not brief a state count.**
+
+### A permissive-platform candidate that is not one
+
+[`classroomio/classroomio`](https://github.com/classroomio/classroomio) was recommended to this pass
+by a 2026-dated source as *the* open alternative to Moodle and edX. Payload: **AGPL-3.0** —
+consistent with what the register already carried (AGPL core, MIT `mcp` package, plus a
+`LICENSE_KEY` gate on self-hosted enterprise features). 🔵 **The permissive complete-platform count
+is unchanged at five.** Ed-Fi is a data standard and Code.org is a delivery system with an
+unlicensable content layer, so **neither raises it. Three consecutive passes have added permissive
+rows without adding a permissive platform.**
+
+### Channel measurements this pass
+
+| channel | result |
+|---------|--------|
+| `raw.githubusercontent.com` | **200** — every licence payload here came from it |
+| `github.com` HTML via `curl` | **FETCH_FAIL on all 13 attempts** (`p214`'s finding, re-confirmed) |
+| `github.com` HTML via `WebFetch` | **200** — stars, forks, commits and sidebar state |
+| `ed.sc.gov` / `www.ed.sc.gov` | **ENOTFOUND on both forms**; not retried per host (`P950`) |
+
+---
+
 ## 2026-10-17 (pass 267) — Rank by commits and the shelf changes: the biggest education codebase in open source was never on it
 
 **Append-only shelf.** This section sits above the previous one; nothing below it is rewritten.

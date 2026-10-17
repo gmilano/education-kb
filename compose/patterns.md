@@ -593,6 +593,111 @@ adoption — 38,046 commits and 317 forks are the signal, re-measured and reprod
 
 ---
 
+## P17 — Delivering a primary-school AI-literacy mandate when the curriculum cannot be licensed *(new in pass 268)*
+
+**The engagement.** A ministry or large district must deliver AI instruction to primary pupils
+against a dated mandate — China (≥8 h/year from age six, since Sep 2025), Singapore MoE (Mar 2026),
+India CBSE Classes 3-8 (session 2026-27), or the EU AI Act Art. 4 staff-literacy duty.
+
+**Why this pattern exists and `P91-G`/`P16` do not cover it.** `Gap 367` has carried *"no permissive
+AI curriculum for primary"* for ~175 passes as *"the largest named, dated, deadline-bearing demand on
+this shelf with no supply"*, naming **Code.org** and **MIT Day of AI** as alternatives. Pass 268 read
+the licences. **The gap is not under-searched — it is correctly empty**, and that changes the
+proposal rather than delaying it.
+
+| what | component | licence | role |
+|-------|-----------|---------|------|
+| Delivery engine | [`code-dot-org/code-dot-org`](https://github.com/code-dot-org/code-dot-org) | **Apache-2.0** *(source and assets only — see the carve-out)* | Lesson delivery, progress tracking, classroom management, block-based programming environment. **215,796 commits** of it. |
+| Offline delivery, where connectivity is the constraint | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | Ships the originated content to schools with no network |
+| Content authoring + national-curriculum remix | [`learningequality/studio`](https://github.com/learningequality/studio) | **MIT** | The pipeline that organises originated lessons into channels and aligns them to the national curriculum |
+| Teacher-facing generation, human-in-the-loop | [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | **MIT** (EACL'26) | ADDIE multi-agent: syllabus → slides → assessments, for *teacher review* |
+| Local-first lesson drafting | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | **MIT** | Draft editable lessons where pupil data cannot leave the building |
+| Pupil-facing tutoring, if in scope at all | [`ls1intum/Iris`](https://github.com/ls1intum/Iris) + [`Pyris`](https://github.com/ls1intum/Pyris) | **MIT** | Pedagogically constrained by design (hints, not answers) — the posture a high-risk classification wants |
+
+**Wiring.**
+1. **Fork the Code.org platform, strip the content.** Deploy the Apache-2.0 engine. Delete, do not
+   adapt, every Proprietary Material: artwork, graphics, sounds, lectures, videos, logos, characters
+   and fonts. The payload confines them to *"Code.org's own web site, mobile applications, or social
+   media channels ... without modification or embedding in another format."*
+2. **Originate the lessons against AI4K12's Five Big Ideas** — the framework Code.org and MIT Day of
+   AI both organise on — but **write your own text**, because
+   [`touretzkyds/ai4k12`](https://github.com/touretzkyds/ai4k12) **serves no licence payload**
+   (`Gap 354`). An unlicensed framework can be *conformed to*; it cannot be *redistributed*.
+3. **Author and package in Kolibri Studio**, align to the national curriculum there, publish as
+   channels, and deliver through Kolibri where bandwidth is the real constraint.
+4. **Put `instructional_agents` behind the teachers, not the pupils.** Generation for teacher review
+   keeps the system out of the EU AI Act's high-risk band via the `P2`/`T17` meaningful-human-review
+   route, and keeps a staff-literacy duty satisfiable by the same deployment.
+5. **Add `Iris`/`Pyris` only if pupil-facing tutoring is genuinely in scope.** For primary pupils in
+   a mandate engagement it usually is not, and the config-gated design means the platform runs
+   identically with AI off — which is the demonstration a regulator wants.
+
+🔴 **The three things that must be said in the first meeting.**
+- **The curriculum is the deliverable; the engine is the freebie.** Budget belongs in instructional
+  design and localisation, not platform build.
+- **You cannot reuse Code.org's Minecraft, Star Wars, Frozen, Angry Birds or Plants vs. Zombies
+  activities.** The `NOTICE` lists them as third-party licensed IP — Code.org cannot sublicense
+  them, so no contract with Code.org would help either. Also excluded: **Font Awesome Pro**.
+- **A client who has seen Code.org assumes the lessons come with the code.** Correcting that
+  assumption before signature is the single highest-value sentence in this pattern.
+
+🟢 **Estimate shape:** 10-14 weeks. Platform deployment and content stripping is ~2 weeks of it;
+the rest is curriculum origination, translation and teacher enablement. **Do not quote this as a
+platform project.**
+
+## P18 — An agent over the system of record a US district already runs *(new in pass 268)*
+
+**The engagement.** A US district, state education agency, or a vendor selling into them, wants
+AI-assisted early warning, reporting or an agent surface — with no copyleft boundary in the
+deliverable.
+
+**Why this pattern exists.** `verticals/solutions.md` published, in pass 267, that no North American
+public-sector base existed. It does: **Ed-Fi**, Apache-2.0, and this base's own gap register has
+carried it as *the only permissive system of record* for roughly 200 passes. Every layer below is
+permissive, which is what Canvas (AGPL-3.0) and Open edX (AGPL-3.0) deny.
+
+| layer | component | licence |
+|-------|-----------|---------|
+| Student data model | [`Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | **Apache-2.0** |
+| System of record (existing deployments) | [`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) + [`Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | **Apache-2.0** |
+| System of record (new builds) | [`Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | **Apache-2.0** |
+| Learner event stream | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) + [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | **Apache-2.0** |
+| Risk model | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) or [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) | **MIT** |
+| Agent surface over the LMS beside it | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** |
+| Human review surface | [`uPortal-Project/uPortal`](https://github.com/uPortal-Project/uPortal) | **Apache-2.0** |
+
+**Wiring.**
+1. **Read from Ed-Fi, do not re-model.** The agency's students are already in the Ed-Fi model, so
+   the integration is *conformance*, not mapping — and it ports to the next district unchanged.
+2. **Write AI output to the LRS, never to the system of record.** This is the load-bearing decision.
+   `Gap 314` establishes that **DMS provisioning is create-only**: an AI-generated risk flag, an
+   AI-assisted grade or generated evidence is a **data-model extension and a re-provision of the
+   database**, not an insert. Writing to `lrsql` as xAPI statements keeps the system of record
+   untouched and keeps the AI output auditable and separable — which is also what a
+   meaningful-human-review posture (`T17`) requires.
+3. **Train the risk model on Ed-Fi reads plus xAPI events**, with `pykt-toolkit` for prediction or
+   `pyedmine` where the deliverable is a recommender.
+4. **Surface it to staff through uPortal** (Apache-2.0, campus single-pane) and reach the LMS via
+   `canvas-mcp` (MIT) — never by forking `instructure/canvas-lms` (AGPL-3.0).
+
+🔴 **Three prices to quote from the register, not the README.**
+- **DMS adoption is a re-platforming with a data migration**, stated normatively in
+  `docs/PRD-v8.0.md` (`Gap 303`). **Never price it as an in-place cutover.**
+- **DMS provisioning is create-only** (`Gap 314`) — hence step 2.
+- **OneRoster is absent from DMS v8.0** (`Gap 309`), while native **OneRoster 1.2** shipped in the
+  **ODS/API 7.3.2** line (search-summary grade). **Say which line you are quoting**, because the
+  rostering story differs between them. Also note the platform moved to **.NET 10** ahead of .NET 8
+  end-of-support in **November 2026** — a client on an older ODS has a dated upgrade of its own.
+
+⚠️ **Do not brief a state adoption count.** Neither Ed-Fi README names a state or an agency; the
+14-state list is third-party, and **`ed.sc.gov` did not resolve from this environment**, so the one
+primary government page that would settle it was not read. Quote the **licence** — payload-verified
+2026-10-17 — and let the client's procurement confirm their own state's status.
+
+🟢 **Estimate shape:** 8-10 weeks for the Ed-Fi read + LRS write + risk model + staff surface, on an
+existing ODS deployment. **Add a separate migration line item if the client is moving ODS → DMS**;
+that is not part of this pattern and it is not small.
+
 ## Component quick reference
 
 | Need | Component | Licence |

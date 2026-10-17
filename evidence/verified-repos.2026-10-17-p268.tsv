@@ -1,0 +1,81 @@
+# pass 268 — 2026-10-17 — education KB
+# THEME: probe the rows this base NAMED but never READ. Two of them are the answer to its own
+#   highest-priority demand-side gap (Gap 367) and its remaining regional hole (North America).
+#   14 repositories probed, 13 licence payloads/metadata read first-hand this pass.
+#
+# METHOD (unchanged from p267, and it earned its keep twice):
+#   - 19 paths x 4 refs per repo: LICENSE/LICENCE + .md/.txt variants, lowercase, COPYING,
+#     COPYING.txt, LICENSE-MIT, LICENSE-APACHE, docs/LICENSE, .github/LICENSE, NOTICE, and
+#     package metadata (package.json, pyproject.toml, setup.py, composer.json) across
+#     main/master/develop/HEAD.
+#   - p267's rule applied again and CONFIRMED again: where the GitHub sidebar shows a License
+#     link with NO LABEL, read the payload IN FULL. Both rows where that fired this pass
+#     (code-dot-org, adriasantacreu) turned out to be mis-shelvable by any single label.
+#   - p238's lure gate applied to the whole Google Classroom MCP family before any row was
+#     shelved. NAME predicate: 0 of 8 carry a release-channel word. FUNNEL: 0 of 8.
+#     BADGE: 0 of 8. COLDNESS fires on most of them and is corroborating ONLY, never a verdict.
+#     => the family is cold, not fraudulent. That distinction is the point of the gate.
+#
+# CHANNELS THIS PASS (measured, not assumed):
+#   raw.githubusercontent.com  -> 200  (every licence payload below came from here)
+#   github.com HTML via curl   -> FETCH_FAIL for all 13 attempts (p214's finding, re-confirmed)
+#   github.com HTML via WebFetch -> 200 (stars/forks/commits/sidebar came from here)
+#   ed.sc.gov / www.ed.sc.gov  -> getaddrinfo ENOTFOUND, BOTH forms. The South Carolina
+#     Department of Education page that search reports as naming the state's Ed-Fi ODS/API
+#     version was NOT READ. Its claim stays at search-summary grade (P950: not retried per host).
+#
+# COLUMNS: repo | licence verdict + grade | path read | stars | forks | commits | region | note
+#
+## ---- THE K-12 CURRICULUM ROW THIS BASE NAMED IN Gap 367 AND NEVER PROBED ----
+code-dot-org/code-dot-org	Apache-2.0 WITH A PROPRIETARY-MATERIALS CARVE-OUT (payload, read in full)	master/LICENSE	901	538	215796	North America	THE LARGEST EDUCATION CODEBASE THIS KB HAS LOCATED — 2.7x instructure/canvas-lms (78765), which p267 published as the largest. Commit figure read TWICE independently (repo page + tree/staging), both 215,796. Last commit 2026-10-17, merge 7995a55, PR #76166. SIDEBAR LICENSE LINK IS UNLABELLED — p267's signal, fired correctly. Payload: Apache-2.0 applies to "all source codes and assets, with the exception of Code.org's proprietary or licensed artwork, graphics, sounds, lectures, videos, logos, characters, fonts, etc. ('Proprietary Materials')", which "may not be used or distributed or accessed in any manner other than directly via Code.org's own web site, mobile applications, or social media channels ... without modification or embedding in another format."
+code-dot-org/code-dot-org#NOTICE	third-party licensed IP enumerated (payload)	staging/NOTICE	-	-	-	North America	NOTICE names the entertainment IP inside the curriculum: Minecraft (Microsoft), Star Wars (Disney/Lucasfilm), Frozen (Disney), Ice Age (20th Century Fox), Angry Birds (Rovio), Plants vs. Zombies (PopCap), The Amazing World of Gumball (Cartoon Network), The Bad Guys (DreamWorks). Also Font Awesome icons under the Font Awesome PRO licence, and the Geist font under SIL OFL. Code.org cannot sublicense these and neither can a studio.
+#
+## ---- NORTH AMERICA PUBLIC SECTOR: carried in open-gaps for ~200 passes, ABSENT from the shelves ----
+Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	Apache-2.0 (payload)	main/LICENSE	46	14	370	North America	"The Ed-Fi Data Standard serves as the foundation for enabling interoperability among secure education data systems." Commit count read on ref v6.2.0. Sidebar: Apache-2.0. NO US STATE AND NO EDUCATION AGENCY IS NAMED IN THE README — see the provenance note below.
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	Apache-2.0 (payload)	main/LICENSE.txt	28	48	1054	North America	Core code for the Ed-Fi Operational Data Store and ODS API. FORKS (48) EXCEED STARS (28) — the deployment signature p267 named on Submitty. Note the path: LICENSE.txt, not LICENSE.
+Ed-Fi-Alliance-OSS/Data-Management-Service	Apache-2.0 (payload)	main/LICENSE	-	-	-	North America	Successor to the ODS/API. open-gaps.md already carries this row's expensive finding (Gap 303): adoption is a RE-PLATFORMING WITH A DATA MIGRATION, not an in-place cutover, and docs/PRD-v8.0.md says so normatively. Never price it as an upgrade.
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation	Apache-2.0 (payload)	main/LICENSE.txt	-	-	-	North America	End-user applications and extensions for the ODS/API.
+#
+## ---- THE THIRD MCP-ADDRESSABLE LMS: Google Classroom / Workspace for Education ----
+adriasantacreu/google-classroom-mcp	MIT (METADATA grade — package.json; sidebar shows NO licence; README states MIT)	master/package.json	2	1	11	unplaced	The most capable of the family: "46 fully implemented tools" over courses, assignments, grading, rosters and Drive. README IS IN ENGLISH — the author's Catalan name is NOT provenance and no country is stated. Metadata grade, so it is weaker evidence than every payload row here.
+Kimmahone/edu-workspace-mcp	MIT (payload)	main/LICENSE	1	0	42	APAC (LANGUAGE grade only)	"Google Workspace for Education MCP server for Docs, Sheets, Slides, Forms, Drive, and Classroom" — 29 tools in the README table, 31 tool names counting docs_import_hwp / docs_export_hwpx. README IS IN KOREAN and references Korean curriculum standards; HWP/HWPX are Korean national document formats. THE FIRST KOREAN-LANGUAGE EDUCATION AGENT THIS KB HAS PAYLOAD-VERIFIED. Grade it exactly as ai_tutor_forge was graded: LANGUAGE evidence, no country or institution stated.
+pengusto/google-classroom-mcp	MIT (payload, DUAL COPYRIGHT)	master/LICENSE	-	-	-	unplaced	Payload carries TWO copyright lines: "Copyright (c) 2026 Adria Santacreu i Gimenez and contributors" AND "Copyright (c) 2026 Pengusto (modifications)". A correctly-attributed downstream fork of the row above — worth recording as the one piece of good licence hygiene in this family.
+alanmagno1/google-classroom-mcp	MIT (payload)	main/LICENSE	0	0	17	unplaced	ABOUT TEXT IS IN SPANISH ("Servidor MCP para Google Classroom: cursos, tareas pendientes, entregas y materiales desde Claude, con varias cuentas") BUT THE README IS IN ENGLISH. README uses a "unam" alias in examples; UNAM is not claimed as provenance because the page does not state it. This is METADATA-language evidence — weaker than the Portuguese ai_tutor_forge README. The Spanish gap is NOT retracted on it.
+OmarNiazi/classroom-mcp	MIT (payload)	main/LICENSE	0	0	7	unplaced	Read-only by construction: "it can't submit work, post, or change anything." README notes "Google hasn't verified this app." The right shape for a student-side pilot and the wrong shape for an institutional deliverable.
+praisethefacts/google-classroom-mcp	MIT (payload)	main/LICENSE	-	-	-	unplaced	Read-only access to courses, coursework, rosters, submissions for any MCP-capable agent.
+faizan45640/google-classroom-mcp-server	MIT (payload, 2025)	main/LICENSE	-	-	-	unplaced	Requests Classroom readonly scopes. Oldest copyright line in the family.
+AStheTECH/mewcp-google-classroom	*** NOT OPEN SOURCE — "AStheTECH Community License (ACL) ... All rights reserved" (payload) ***	main/LICENSE.md	-	-	-	unplaced	SECOND INSTANCE OF THE PageLM PATTERN. Sat in the same search result set as the seven MIT rows above, described identically as a "Google Classroom MCP Server". A custom licence at LICENSE.md with an acceptance-of-terms clause and an all-rights-reserved header. NOT usable in a client deliverable. It passes p238's lure gate — it is not a fraud, it is simply NOT PERMISSIVE — which is exactly why the grant must be read and the gate is not a substitute for reading it.
+#
+## ---- A PERMISSIVE-PLATFORM CANDIDATE THAT IS NOT ONE ----
+classroomio/classroomio	AGPL-3.0 (payload)	main/LICENSE	-	-	-	unplaced	A 2026-dated search result framed this as the open alternative to Moodle and edX. The payload is AGPL-3.0. CONSISTENT with open-gaps.md, which already carries this row as "AGPL core + MIT mcp package" and as the verified member of the OSI-GRANT-PLUS-KEY-GATE state (README: "Optional for self-hosted Enterprise-only features (SSO, token-auth, no-tracking): set LICENSE_KEY"). The permissive COMPLETE-PLATFORM count is UNCHANGED AT FIVE.
+#
+## ---- PROVENANCE GRADES, STATED AT THEIR REAL STRENGTH ----
+# PAYLOAD-QUOTED : code-dot-org (carve-out + NOTICE), all four Ed-Fi repos, 6 of 8 MCP rows, classroomio
+# METADATA       : adriasantacreu (package.json), alanmagno1 (Spanish About line only)
+# LANGUAGE       : Kimmahone -> APAC. No country, no institution. Same grade as ai_tutor_forge -> LATAM, which this base declined to assert.
+# SEARCH-SUMMARY : Ed-Fi statewide adoption. A third-party directory lists 14 states (AZ NM TX TN GA SC KS NE IN MI WI MN VT DE); search reports South Carolina's own department page naming ODS/API 7.3 for SY2025-26 and a Texas Education Exchange deployment. ed.sc.gov DID NOT RESOLVE from this environment, so NONE of that was read first-hand. DO NOT BRIEF A STATE COUNT.
+# NOT ESTABLISHED: Ed-Fi README agency provenance. Neither Ed-Fi README names a state or an agency. The Alliance's own pages give no number either.
+#
+## ---- LATAM NATIONAL PROGRAMMES PROBED BY HAND THIS PASS (the p266 standing instruction) ----
+# Argentina / Juana Manso (Educ.ar Sociedad del Estado, Plan Federal, launched 2020):
+#   NO REPOSITORY LOCATED. An official is quoted "todo lo que llevamos adelante es de codigo abierto
+#   y de patrimonio del Estado Nacional", and a third-party resource page classes the platform as
+#   open source — but no forge, no org and no source tree was found, and every source located is
+#   2020-2021 with nothing on 2026 operational status. Provinces named as signatories: Entre Rios,
+#   Chubut, Formosa, Catamarca, Neuquen, San Juan, La Rioja. CLAIMED-OPEN, UNLOCATED.
+# Mexico:  no ministry repository located. SEP's "Educacion Superior 2026" is a CATALOGUE that
+#   redirects to each institution's own registration site — an offer aggregator, not software.
+# Chile:   educarchile is a MINEDUC / Fundacion Chile portal. No public code located.
+# Colombia: nothing located.
+# Uruguay: unchanged from p267 — the Ceibal GitHub organisation exists with ZERO public repositories.
+# => FOUR LATAM national programmes have now been probed by hand across p267-p268 and BRAZIL REMAINS
+#    THE ONLY LATAM COUNTRY IN THIS KB PUBLISHING EDUCATION SOURCE (i-educar GPL-2.0, i-diario AGPL-3.0).
+#    The standing gap — no LATAM-origin PERMISSIVELY LICENSED foundation — HOLDS, and the probe list is
+#    recorded here so pass 269 does not spend the budget again.
+#
+## ---- MEASUREMENT NOISE, RECORDED SO IT IS NOT "CORRECTED" ----
+# HKUDS/DeepTutor: the ai-tutor topic listing showed ~41.2k stars and a 2026-10-12 update this pass;
+#   agents/top.md publishes 41.5k as of 2026-10-17. That is sub-1% variance between two listing reads
+#   in the same week. It is NOISE, NOT A DECLINE. The shelved figure is NOT changed on it.
+#   This base has previously published carried-forward numbers as fact (pykt 1.2k for a 450-star repo);
+#   the opposite error — rewriting a good figure on noise — is now explicitly out of bounds too.

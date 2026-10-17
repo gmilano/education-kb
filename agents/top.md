@@ -16,7 +16,11 @@ updated: 2026-10-17
 > (pass 266: the Artemis/Iris/Pyris rows and the first payload-verified Portuguese-language agent),
 > extended again by [`verified-repos.2026-10-17-p267.tsv`](../evidence/verified-repos.2026-10-17-p267.tsv)
 > (pass 267: the LMS-side MCP servers, and a re-probe of every "no licence payload" row against a
-> 19-path x 4-ref set that includes the **British spelling `LICENCE`**).
+> 19-path x 4-ref set that includes the **British spelling `LICENCE`**),
+> and extended again by [`verified-repos.2026-10-17-p268.tsv`](../evidence/verified-repos.2026-10-17-p268.tsv)
+> (pass 268: the **third** MCP-addressable LMS — Google Classroom / Workspace for Education — eight
+> servers probed, seven permissive and **one a custom all-rights-reserved licence wearing the same
+> description**).
 
 ## Build-on-this tier — permissive licences (MIT / Apache-2.0 / BSD)
 
@@ -43,9 +47,14 @@ non-commercial friction.
 | AI_Tutor_Release (EduAgent) | [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | MIT | 65 | RAG tutor targeted at grades 1–9. |
 | tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | 49 | MCP server that turns any LLM into an intelligent tutoring system. Small, readable, and the right shape for embedding in a client's existing assistant. |
 | canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 295 | **Canvas LMS MCP server — the agent row with the shortest path to a live client system.** 102–126 tools plus 8 agent skills over the Canvas API, works with Claude, Cursor, Codex and other MCP clients. v1.14.0 released October 2026, 1,026 commits, University of Illinois Urbana-Champaign named in the README. It makes the LMS a client **already runs** addressable by an agent **without forking the LMS** — see the tool-count caveat below. |
+| google-classroom-mcp | [adriasantacreu/google-classroom-mcp](https://github.com/adriasantacreu/google-classroom-mcp) | MIT *(metadata — see grade note)* | 2 | **Google Classroom MCP server, and the most capable of its family: "46 fully implemented tools"** over courses, assignments, grading, rosters and Drive file management. 11 commits. ⚠️ Licence is **metadata grade** (`package.json` plus a README statement); the sidebar shows no licence and no payload is served. Build on it only with that written down. |
+| edu-workspace-mcp | [Kimmahone/edu-workspace-mcp](https://github.com/Kimmahone/edu-workspace-mcp) | MIT | 1 | **Google *Workspace for Education* MCP server** — Docs, Sheets, Slides, Forms, Drive **and** Classroom, 29 tools in the README table. 42 commits. **The first Korean-language education agent this KB has payload-verified** (README in Korean, references Korean curriculum standards, and ships `docs_import_hwp` / `docs_export_hwpx` for Korea's national document formats). Widest reach in this family — and therefore the widest blast radius: see the scope warning below. |
+| classroom-mcp | [OmarNiazi/classroom-mcp](https://github.com/OmarNiazi/classroom-mcp) | MIT | 0 | Google Classroom for **students**, *"read-only: it can't submit work, post, or change anything."* 7 commits. Read-only by construction is the right shape for a student-side pilot and the wrong shape for an institutional deliverable. |
 
-**18 permissive rows, all licence-verified from payload.** (14 from passes 264-265, plus
-Artemis, Iris and Pyris in pass 266, plus `canvas-mcp` in pass 267.)
+**21 permissive rows.** (14 from passes 264-265, plus Artemis, Iris and Pyris in pass 266, plus
+`canvas-mcp` in pass 267, plus three Google Classroom servers in pass 268.) **20 are
+payload-verified; `adriasantacreu/google-classroom-mcp` is metadata grade and is marked as such in
+its own cell** — the count is not allowed to launder the weaker row.
 
 ⚠️ **Cite `canvas-mcp`'s tool count as a range, not a number.** Its About blurb says *"up to 102
 tools"*; its README body says *"up to 126"*, and adds that the default profile registers fewer than
@@ -67,6 +76,7 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | ai_tutor_forge | [guedesindev/ai_tutor_forge](https://github.com/guedesindev/ai_tutor_forge) | GPL-3.0 | 18 | Python 3 CLI that forges a personalized tutor over a user-chosen LLM. Notable as the **first Portuguese-language education agent this KB has payload-verified** — see the provenance caveat in the gaps below. GPL-3.0 copyleft on distribution, and at 21 commits it is a personal project, not a dependency. |
 | moodle-mcp-server | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | AGPL-3.0 | 1 | The Moodle-side counterpart to `canvas-mcp`: an MCP server over Moodle Web Services, 10 tools in the README table, 57 commits. **Two separate prices, not one.** AGPL-3.0's network clause reaches a hosted deployment, *and* the project is **open-core — the README sells premium plugin tools separately**. Scope any estimate to the free tool set, and note that the Moodle side of this category is roughly 1,000x less adopted than the Canvas side. |
 | canvas-mcp (minimal) | [admin978/canvas-mcp](https://github.com/admin978/canvas-mcp) | MIT | 4 | *"Local-first Canvas LMS MCP server. Stdio transport, ~125 lines of Python."* Permissive and worth **reading** — it is the smallest complete example of the pattern — but at 33 commits it is a reference, not a dependency. Listed here rather than on the build-on-this shelf for that reason, not for its licence. |
+| mewcp-google-classroom | [AStheTECH/mewcp-google-classroom](https://github.com/AStheTECH/mewcp-google-classroom) | **"AStheTECH Community License (ACL)" — proprietary** | — | ⚠️ **Not open source, and it arrived describing itself exactly like the seven MIT rows above.** Its payload sits at `LICENSE.md` and opens *"Copyright (c) 2026 AStheTech. **All rights reserved**"* with an acceptance-of-terms clause. **Second instance of the PageLM pattern** — a permissive-looking education repo whose grant is a bespoke licence. Not usable in a client deliverable. It is **not** a lure (it passes all three substantive predicates of the `p238` gate); it is simply **not permissive**, which is why the gate can never replace reading the grant. |
 
 ## Verified but licence-UNVERIFIED — do not assume the parent's licence
 
@@ -76,6 +86,25 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | [learningequality/kolibri-design-system](https://github.com/learningequality/kolibri-design-system) | **RESOLVED in pass 267 — MIT at *metadata* grade** | This base carried the row as "no payload, parent `kolibri` is MIT" — which is an **inference from the parent**, the weakest grade there is. The repo's `main/package.json` declares `"license": "MIT"`. That is the **project's own declaration**, so publish it as **MIT (metadata)**: stronger than an inference, weaker than a payload, and enough to build on while a payload is requested. It still serves no licence *file*. |
 | [autograder-org/autoGrader-frontend](https://github.com/autograder-org/autoGrader-frontend) | LIVE, **no licence payload — upheld against the 19-path x 4-ref probe** | README claims LLM-based assignment grading; 22 commits. Early-stage and unlicensed. Pass 267 confirms it is not a detection artefact. |
 | [OpenEMIS/OpenEMIS-Core](https://github.com/OpenEMIS/OpenEMIS-Core) | LIVE, **no licence payload**, none in the page sidebar | *"Manage students and staff information at school, district, and national level."* OpenEMIS is the education-management system most associated with **ministry-level** deployment, which is why pass 267 probed it by hand. What this KB can actually reach is a **32-commit Docker packaging repo (7★) with no licence and no ministry or country named in it.** The application source was not located this pass. **Ministry provenance is not established — do not brief it as a public-sector reference.** |
+
+## Pass 268 provenance note — Iris and Pyris are MIT at PAYLOAD grade, and serve no README
+
+Both rows were re-probed this pass because `P17` in [`compose/patterns.md`](../compose/patterns.md)
+now depends on them.
+
+🟢 **The grant is stronger than this file previously recorded.** Both
+[`ls1intum/Iris`](https://github.com/ls1intum/Iris) and [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris)
+serve **MIT at `main/LICENSE`**, and the copyright line reads **"Copyright (c) 2023 TUM Applied
+Software Engineering"** — so TU Munich provenance for these two is **payload-quoted**, not
+README-quoted, which is a grade *above* the evidence this file carries for Artemis itself.
+
+🔴 **And a defect worth recording: neither repository serves a README.** `README.md`, `readme.md`,
+`README.rst` and `README` were all probed across `main`/`master`/`develop` — **404 on every
+combination**, while `LICENSE` returns 200 on `main`. The descriptions in the rows above therefore
+have **no source inside these repositories**; they derive from the Artemis documentation. 🔵 **Record
+it rather than quietly relying on it:** a row whose capability claims cannot be traced to its own
+repository is fine to build on and wrong to quote verbatim to a client. Confirm Iris's pedagogical
+constraints against the Artemis docs, or against a deployment, before they reach a proposal.
 
 ## Licence corrections this pass
 
@@ -108,8 +137,7 @@ drafting where student data cannot leave the building. **lineage-skill** when pr
 generated material is a procurement requirement (it is, increasingly, in EMEA).
 
 ### Agents over the systems the client already runs (MCP)
-Four education MCP servers are now payload-verified, and pass 267 split them into two jobs
-that are easy to confuse:
+Pass 268 takes this from four servers to **eleven**, and from two LMSs to **three**:
 
 | Server | Licence | Stars | What it reaches |
 |--------|---------|-------|-----------------|
@@ -117,14 +145,42 @@ that are easy to confuse:
 | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | AGPL-3.0, open-core | 1 | **Moodle** via Moodle Web Services — 10 free tools, premium tools sold separately |
 | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | 516 | The learner's **Anki** collection — spaced repetition |
 | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | 49 | No external system — it **is** the tutoring loop |
+| [adriasantacreu/google-classroom-mcp](https://github.com/adriasantacreu/google-classroom-mcp) | MIT *(metadata)* | 2 | **Google Classroom** — 46 tools: courses, assignments, grading, rosters, Drive |
+| [Kimmahone/edu-workspace-mcp](https://github.com/Kimmahone/edu-workspace-mcp) | **MIT** | 1 | **Google Workspace for Education** — Classroom *plus* Docs, Sheets, Slides, Forms, Drive (29 tools) |
+| [pengusto/google-classroom-mcp](https://github.com/pengusto/google-classroom-mcp) | **MIT** | — | **Google Classroom** — a correctly-attributed fork of `adriasantacreu` (dual copyright in the payload) |
+| [alanmagno1/google-classroom-mcp](https://github.com/alanmagno1/google-classroom-mcp) | **MIT** | 0 | **Google Classroom** — multi-account; Spanish About line, English README |
+| [OmarNiazi/classroom-mcp](https://github.com/OmarNiazi/classroom-mcp) | **MIT** | 0 | **Google Classroom** — student-side, read-only by construction |
+| [praisethefacts/google-classroom-mcp](https://github.com/praisethefacts/google-classroom-mcp) | **MIT** | — | **Google Classroom** — read-only courses, coursework, rosters, submissions |
+| [faizan45640/google-classroom-mcp-server](https://github.com/faizan45640/google-classroom-mcp-server) | **MIT** | — | **Google Classroom** — readonly scopes; oldest copyright line in the family (2025) |
+| [AStheTECH/mewcp-google-classroom](https://github.com/AStheTECH/mewcp-google-classroom) | ⚠️ **proprietary** | — | **Google Classroom** — same description, bespoke all-rights-reserved licence |
 
 **The distinction that matters commercially:** `anki-mcp-server` and `tutor-mcp` reach *study
-tooling*, which the learner owns. `canvas-mcp` and `moodle-mcp-server` reach the **institution's
-system of record**, which is where the client's data, roster and grades actually live. That is the
-difference between a demo and an engagement — and `canvas-mcp` reaches it under **MIT**, at 295
-stars and 1,026 commits, with no fork of the LMS required. Where the institution runs Moodle
-rather than Canvas, the equivalent is AGPL, open-core and a thousand times less adopted; price
-that asymmetry in before promising LMS parity.
+tooling*, which the learner owns. The Canvas, Moodle and Google Classroom servers reach the
+**institution's system of record**, which is where the client's data, roster and grades actually
+live. That is the difference between a demo and an engagement.
+
+**And the three systems of record are not equally served — openness and adoption point in
+opposite directions.** Pass 268 measured the third one:
+
+| LMS | servers found | best licence | best adoption | what that means for a quote |
+|-----|---------------|--------------|---------------|------------------------------|
+| **Canvas** | 2 | **MIT** (payload) | **295★ / 1,026 commits** | One obvious choice, maintained, university-named. Quote it. |
+| **Moodle** | 1 | AGPL-3.0, **open-core** | 1★ / 57 commits | One choice, and you pay twice (network clause + premium tools sold separately). |
+| **Google Classroom** | **8** | **MIT** (payload, on 6 of 8) | **2★ / 11 commits** at best | **The most servers and the least adoption anywhere on this shelf.** Seven permissive implementations of the same idea, none of them maintained by anyone but its author, and one proprietary impostor among them. |
+
+🔵 **Read that table as a supply signal, not a scoreboard.** A category with eight competing
+MIT implementations and no adopted one is not a solved problem — it is an **unconsolidated** one.
+For Canvas you adopt; for Google Classroom you **fork the closest server and own it**, and you
+price the maintenance, because nobody upstream is carrying it. Do not promise "Google Classroom
+support" on the strength of a repository count.
+
+⚠️ **Scope warning specific to the Google Classroom family, and it is the biggest in this file.**
+`canvas-mcp` reaches a course API. `Kimmahone/edu-workspace-mcp` reaches **Docs, Sheets, Slides,
+Forms, Drive and Classroom** — a whole Google Workspace for Education tenant. The OAuth consent a
+pilot asks a school for is therefore far wider than the feature being piloted, and
+`OmarNiazi/classroom-mcp`'s own README states *"Google hasn't verified this app."* In EMEA that is
+a GDPR conversation before it is an engineering one; in the US it is a FERPA/COPPA one. **Scope the
+consent to the tools you enable, and say so in the SOW.**
 
 ### Assessment, grading and feedback
 **Artemis** (MIT, TU Munich) is the starting point when assessment is the deliverable: automated
@@ -197,8 +253,10 @@ at integration work rather than wholesale import.
   changes procurement:** Athena's own repo serves **no licence payload** — the MIT grant covers
   Artemis, not necessarily Athena. Get it in writing before it ships in a deliverable.
 - **`mcp-server-education` as a GitHub topic is empty** — "hasn't been used on any public
-  repositories, yet" — while **four** payload-verified education MCP servers now exist (pass 267
-  added the two LMS-side ones). The category is real and unlabelled; that is a naming gap, and a
+  repositories, yet" — while **eleven** education MCP servers are now verified (pass 267 added the
+  two LMS-side ones; pass 268 added seven permissive Google Classroom servers and one proprietary
+  one). **The gap got four times worse in two passes, which is the point:** the index is not
+  lagging the category, it is structurally disconnected from it. The category is real and unlabelled; that is a naming gap, and a
   small opening for whoever labels it first. **Note what it cost to find them:** the topic index is
   empty, so they were located through a web search for *"MCP server Moodle Canvas LMS"* and then
   payload-verified by hand. A topic-listing leg will keep reporting this category as non-existent.
@@ -211,3 +269,22 @@ at integration work rather than wholesale import.
   S.L."* — a **Spanish company form**, but its README is in English and **no country is stated**,
   which is weaker evidence than the Portuguese-language `ai_tutor_forge` row above. **Standing
   claim, unchanged: no Spanish- or Portuguese-language education agent with adoption.**
+- **Pass 268 tested the Spanish gap a third way — against a family of eight, not a query — and it
+  still holds.** The Google Classroom MCP family contains
+  [`alanmagno1/google-classroom-mcp`](https://github.com/alanmagno1/google-classroom-mcp), whose
+  **About line is in Spanish** (*"Servidor MCP para Google Classroom: cursos, tareas pendientes,
+  entregas y materiales desde Claude"*) — and whose **README is in English**. The most capable
+  server in the family is by an author with a Catalan name, and **its README is in English too,
+  with no country stated.** 🔵 **The nearest-miss evidence has therefore got *weaker*, not
+  stronger:** `ai_tutor_forge` had a Portuguese README; this has a Spanish *metadata field*.
+  Record the grade and do not let a Spanish sentence in a sidebar become a LATAM or Iberian
+  provenance claim in a deck.
+- **🆕 A Korean-language education agent now exists at payload grade, and that is a new APAC
+  datum.** [`Kimmahone/edu-workspace-mcp`](https://github.com/Kimmahone/edu-workspace-mcp) (MIT,
+  payload) has a **Korean README**, references **Korean curriculum standards**, and implements
+  `docs_import_hwp` / `docs_export_hwpx` — HWP/HWPX being Korea's national document formats, which
+  is implementation evidence rather than prose. **Graded exactly as `ai_tutor_forge` was: LANGUAGE
+  evidence.** No country and no institution is stated, so "Korea-origin" is **not** asserted;
+  "Korean-language, Korean-format-aware" is. It pairs with South Korea's **AI Basic Act, in force
+  22 January 2026** — the one APAC jurisdiction with a comprehensive statute — so the language
+  supply and the regulatory demand have appeared in the same country in the same year.

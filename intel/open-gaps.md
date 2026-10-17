@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 268 — 2026-10-17 — **`Gap 367` STRUCTURALLY CLOSED (the answer was a licence, not a repository), `Gap 309`'s Ed-Fi rows REACHED THE SHELVES after ~200 passes, and the register beat the web as a research channel**
+
+⏱️ **Ninth pass of `2026-10-17`.** Append-only; nothing below is rewritten.
+🔵 **Evidence:** [`verified-repos.2026-10-17-p268.tsv`](../evidence/verified-repos.2026-10-17-p268.tsv)
+— 14 repositories probed, 13 licence payloads/metadata read first-hand.
+
+### 🟢 Discharged this pass
+
+| gap / action | registered as | how it was discharged | outcome |
+|---|---|---|---|
+| 🟢 **`Gap 367`** — *"primary-school AI literacy has no permissive curriculum"*, carried ~175 passes as **"the largest named, dated, deadline-bearing demand on this shelf with no supply"** | p91 → hardened p92 | 🟢 **By reading the licences of the two alternatives the gap itself named and never probed.** | 🔴 **CLOSED AS CORRECTLY EMPTY — it was never under-searched.** `code-dot-org/code-dot-org` is **Apache-2.0 over a proprietary-materials carve-out** that excludes *"artwork, graphics, sounds, lectures, videos, logos, characters, fonts"*, and its `NOTICE` shows why: the curriculum runs on **licensed entertainment IP** (Minecraft/Microsoft, Star Wars/Disney+Lucasfilm, Frozen, Ice Age, Angry Birds, Plants vs. Zombies, Gumball, The Bad Guys) **plus Font Awesome *Pro***. **MIT Day of AI is CC-licensed.** `touretzkyds/ai4k12`, the framework both organise on, **serves no payload** (`Gap 354`). 🟢 **Three sources, three different reasons you cannot ship it.** 🔵 **Discharge changes the DELIVERABLE, not the search: content origination on a free engine — `compose/patterns.md` `P17`.** |
+| 🟢 **`Gap 309`'s shelf limb** — *"Ed-Fi DMS is the only permissive system of record"* | p72 onward, carried ~200 passes | 🟢 **By grepping this repository instead of the web.** | 🔴 **The gap was never the problem; the SHELVES were.** This register has carried the Ed-Fi stack as Apache-2.0, payload-read and placed **North America** across `286`/`303`/`309`/`311`/`314` and `ACTION TM`/`TR` — while [`repos/foundations.md`](../repos/foundations.md) had **no Ed-Fi row** and [`verticals/solutions.md`](../verticals/solutions.md) published in p267 that public-sector platforms exist for three regions *"and still none for North America."* 🟢 **p268 re-verified all four payloads (two at `LICENSE.txt`, not `LICENSE`) and shelved them**, plus `market.md` region placement and `P18`. |
+
+### 🔴 The box this pass earned
+
+| the finding | how it surfaced | why it had not been found |
+|---|---|---|
+| 🔴 **The largest education codebase in open source is `code-dot-org/code-dot-org` at 215,796 commits — 2.7x the `canvas-lms` figure p267 published as "the largest"** | 🟢 By probing a row this base had NAMED but never READ. Figure read **twice independently** (repo page + `tree/staging`); 901★, 538 forks, last commit **2026-10-17**, PR **#76166** | 🔴 **p267's commit-ranked sweep ranked repositories this base had ALREADY NAMED.** Code.org was named only as a *curriculum vendor*, in a gap note. 🔵 **Same defect as the Canvas error p267 found and did not finish fixing: this base mistakes *"organisation known for a product"* for *"organisation with no source."*** |
+| 🔴 **THIRD CROSS-SHELF CONTRADICTION IN THREE PASSES, and p266's guard was followed and still missed it** | 🟢 By grepping `intel/open-gaps.md`, which p266's instruction did not cover | 🔴 p266 said *"before republishing any declared gap, grep the other shelves for its own counter-evidence."* **The counter-evidence was in the REGISTER, and the register is not a shelf.** 🟢 **AMENDED: (1) grep `open-gaps.md` too; (2) grep the SLUG as well as the prose claim — `code-dot-org` → ZERO hits in every `.md` here, while `Code.org` hit four files; (3) a gap note's "named alternative" is an UNPROBED LEAD WITH A DEADLINE, not a discharge.** |
+| 🔴 **Google Classroom is the THIRD MCP-addressable LMS — 8 servers, and 1 in 8 is not open source** | 🟢 Web search on the platform name + "MCP server", then payload verification by hand (the `mcp-server-education` topic is still **empty** while **eleven** servers now exist) | 🔴 **`AStheTECH/mewcp-google-classroom` serves a bespoke *"AStheTECH Community License ... All rights reserved"* at `LICENSE.md`** and describes itself identically to the seven MIT rows. **Second PageLM instance.** 🟢 **And it PASSES all three substantive predicates of `p238`'s lure gate** — it is not a fraud, it is simply **not permissive**. 🔵 **A provenance gate and a grant read are different instruments; neither substitutes for the other.** |
+| 🟡 **Openness and adoption point in OPPOSITE directions across the three LMS doorways** | 🟢 By reading the adoption column, not the licence column | 🟢 Canvas **295★ / 1,026 commits** under MIT; Moodle **1★** under AGPL open-core; Google Classroom **8 servers, best is 2★ / 11 commits**. 🔵 **Eight MIT implementations with no adopted one is an UNCONSOLIDATED category, not a solved one: for Canvas you adopt, for Classroom you fork and own it.** |
+| 🟡 **A new APAC language datum, graded honestly** | 🟢 `Kimmahone/edu-workspace-mcp` (**MIT**, payload) | 🟢 **First Korean-language education agent payload-verified here** — Korean README, Korean curriculum standards, and `docs_import_hwp`/`docs_export_hwpx` (Korea's national formats) as *implementation* evidence. 🔴 **LANGUAGE grade only** — no country, no institution — exactly the grade `ai_tutor_forge` got and kept. Lands in the one APAC jurisdiction with a statute in force (**AI Basic Act, 22 Jan 2026**). |
+| 🔴 **The Spanish gap held on WEAKER near-miss evidence than before** | 🟢 Tested against a family of 8 rather than a query | 🔴 `alanmagno1`'s **About line is Spanish, README English**; the family's most capable server is by an author with a Catalan name and **its README is English too, no country stated**. 🔵 **`ai_tutor_forge` had a Portuguese README; this is a Spanish METADATA FIELD. Standing claim unchanged.** |
+| 🟡 **FOUR LATAM national programmes are now probed by hand, and the supply picture is briefable** | 🟢 p266's standing instruction, run to completion across p267-p268 | 🔴 Uruguay **Ceibal: org exists, ZERO public repos** (p267). 🔴 Argentina **Juana Manso: CLAIMED-OPEN, UNLOCATED** — an official is quoted *"todo lo que llevamos adelante es de código abierto"*, every source is 2020-21, **no forge, no org, no tree found**. 🔴 Mexico **SEP "Educación Superior 2026" is a CATALOGUE, not software**. 🔴 Chile **educarchile: no public code**. 🔴 Colombia: **nothing**. 🟢 **Brazil remains the only LATAM country here publishing education source, and it arrives copylefted. Probe list recorded so p269 does not re-spend it.** |
+
+### 🔵 Registered, not claimed
+
+- 🟡 **`Gap 367`'s discharge has an untested limb.** The gap's own costed next step was *"probe
+  CBSE/MoE-aligned repos in **Hindi and Chinese** per `P870`."* **p268 did not run it.** The
+  discharge above rests on the licences of the three **named Western** sources; a Hindi- or
+  Chinese-language permissive primary curriculum would reopen it. 🔵 **Register it as the cheapest
+  way to falsify this pass's biggest claim.**
+- 🔴 **Ed-Fi's agency provenance is NOT established and must not be briefed.** Neither README names
+  a US state or agency; the Alliance's own pages give no number. A third-party directory lists 14
+  statewide adoptions (AZ NM TX TN GA SC KS NE IN MI WI MN VT DE), and search reports **South
+  Carolina's own department page** naming ODS/API 7.3 for SY2025-26 plus a **Texas Education
+  Exchange** deployment — ⚠️ but **`ed.sc.gov` AND `www.ed.sc.gov` both returned `getaddrinfo
+  ENOTFOUND`**, so the one primary government source was **not read**. Not retried per host
+  (`P950`). **Shelved on the licence (payload); adoption stays search-summary grade.**
+- 🟢 **`Gap 309` roadmap detail, search-summary grade:** native **OneRoster 1.2** shipped in
+  **ODS/API 7.3.2**, the platform moved to **.NET 10** ahead of .NET 8 EOL in **November 2026**, and
+  API v8 / Admin API v2.4 are on the 2026 line. 🔴 **This does NOT discharge `Gap 309`:** OneRoster
+  is absent from **DMS v8.0** while present in the **ODS/API** line, so the rostering story differs
+  between them. **A proposal must say which line it quotes** (`P18`).
+- 🔵 **`classroomio/classroomio` re-confirmed AGPL-3.0 from payload**, consistent with this
+  register's `OSI-GRANT-PLUS-KEY-GATE` row. A 2026-dated source recommended it as *the* open
+  Moodle/edX alternative. **Permissive complete-platform count unchanged at FIVE** — three
+  consecutive passes have added permissive rows without adding a permissive platform.
+- 🟡 **Measurement noise, recorded so it is not "corrected".** The `ai-tutor` topic listing showed
+  `HKUDS/DeepTutor` at **~41.2k★** against the **41.5k** published in `agents/top.md` the same week.
+  **Sub-1% variance between two listing reads = noise, not a decline.** The shelved figure stands.
+  🔵 This base has published carried-forward numbers as fact (`pykt` 1.2k for 450★); **rewriting a
+  good figure on noise is the opposite error and is now equally out of bounds.**
+- 🔴 **A full regional regulatory sweep this pass produced NO NEW DATUM.** Every item it returned —
+  the 2026 state-bill count and named bills, H.R. 8747's committee advance, Canada's "AI for All",
+  the NYC moratorium, South Korea's AI Basic Act, Vietnam's high-risk education designation,
+  UNESCO's LAC Observatory, the TALIS/PISA/IESALC percentages — **is already shelved.** 🔵
+  **Recorded as a negative result on purpose: the regulatory surface has stopped moving weekly, and
+  the budget is better spent on the supply side, where three consecutive passes each found
+  shelf-grade rows that search alone never surfaces.**
+- ⚠️ **The EU AI Act education timeline is DISPUTED across four sources; stop resolving it.** Found
+  this pass: amendments adopted **June 2026**; entry into force **27 July 2026**; also **31 July
+  2026**; *"high-risk provisions enter into force Aug 2026"*; and *"enforcement began Feb 2025"*.
+  These cannot all be true. **Brief the substance** (education AI affecting access or assessment is
+  high-risk; conformity assessment before market; human oversight able to intervene or shut down)
+  **and date it from the Official Journal, never a vendor guide.**
+- 🔴 **EMEA means Europe in this base, and that is now stated.** The EMEA leg returned EU, UK and
+  Germany only. **Nothing for the Middle East or Africa**, and no EMEA EdTech vendor market-share
+  data at all. 🟢 p267's unrun instruction stands as the cheapest fix: **Kenya, Nigeria, South
+  Africa and Egypt as four separate queries, never paired.**
+
+---
+
 ## Pass 262 — 2026-10-17 — `ACTION ZI` **DISCHARGED AND NOT REFUTED: THE SECOND THIRD-PARTY RESERVATION EXISTS, IT IS THE LICENCE FORM'S STEWARD, AND `p261`'s GUARD IS STRUCTURALLY BLIND TO IT.** PLUS: AN EIGHT-PASS GAP CLOSED AS **UNREACHABLE**, AND THE HARVESTER THIS PASS WROTE NEARLY RETRACTED A CORRECT CORRECTION
 
 ⏱️ **EIGHTH pass of `2026-10-17`.** All `p262` probes ran `2026-10-17`; evidence filenames and commit date agree for the seventh pass running. 🔵 **Evidence:** [`p262-reservation-audit`](../evidence/p262-reservation-audit.2026-10-17-p262.tsv) *(`71`)* · [`p262-grade-class`](../evidence/p262-grade-class.2026-10-17-p262.tsv) *(`87`)* · [`p262-transport-map`](../evidence/p262-transport-map.2026-10-17-p262.tsv) *(`18`)* · [`p262-websearch`](../evidence/p262-websearch.2026-10-17-p262.tsv) *(`8`)* · **instrument:** [`pass262-scoped-reservation-audit`](../compose/code/pass262-scoped-reservation-audit/) *(`63` controls, in `make hooks`, `20` mutants)*

@@ -217,6 +217,64 @@ its MCP surface is roughly 1/300th as adopted as the Canvas one.
   i-Educar/i-Diário (LATAM, GPL-2.0/AGPL-3.0), Schul-Cloud (EMEA, AGPL-3.0) — **and still none for
   North America**, where the public-sector code found this pass is a UK-style *service* layer
   (`DFE-Digital`, MIT) rather than a platform. That is the remaining regional hole in this file.
+  **🔴 RETRACTED IN PASS 268 — and it was never a hole, it was a shelving failure.** See
+  *Added in pass 268* below: the **Ed-Fi** stack is Apache-2.0, North American, and has been
+  carried as *the only permissive system of record* in this base's own gap register for roughly
+  200 passes. The honest correction is narrower than the retraction, though: North America
+  publishes an **interoperability and system-of-record layer**, not a platform. The sentence
+  should never have said "none"; it should have said **"a different layer."**
 - **Still open:** `os4ed/openSIS-Classic` remains licence-unverified after a 19-path x 4-ref probe;
   `OpenEMIS`'s application source was not located; and no LATAM-origin *permissively licensed*
   platform exists — Uruguay's Ceibal, probed by hand this pass, **publishes no code at all**.
+
+### Pattern I — Ed-Fi as the system of record for a North American engagement *(new in pass 268)*
+
+**When the client is a US district, a state education agency, or a vendor selling into them.**
+This is the pattern that was missing while this file said North America had no public-sector base.
+
+| layer | component | licence |
+|-------|-----------|---------|
+| Data model | [`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | **Apache-2.0** |
+| System of record | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) + [`Ed-Fi-ODS-Implementation`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS-Implementation) | **Apache-2.0** |
+| New builds | [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | **Apache-2.0** |
+| Agent surface over the LMS beside it | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** |
+| Learner event stream | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) + [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | **Apache-2.0** |
+
+🟢 **Why this composes cleanly:** every layer is permissive, so the deliverable has no copyleft
+boundary anywhere — which is the thing an AGPL-first market (Canvas, Open edX) otherwise denies.
+The agency's students are already modelled in Ed-Fi, so the integration is *conformance*, not
+mapping.
+
+🔴 **Three prices to quote from the register, not the README:**
+1. **DMS adoption is a re-platforming with a data migration**, stated normatively in
+   `docs/PRD-v8.0.md` (`Gap 303`). Never price it as an in-place cutover.
+2. **DMS provisioning is create-only** (`Gap 314`). An AI deliverable that writes anything back —
+   a predicted risk flag, an AI-assisted grade, generated evidence — is a **data-model extension
+   and a re-provision**. The cheap route is to write AI-generated evidence into the **LRS**
+   instead and leave the system of record alone.
+3. **OneRoster is absent from DMS v8.0** (`Gap 309`) while native OneRoster 1.2 shipped in the
+   **ODS/API 7.3.2** line. Say which line you are quoting.
+
+⚠️ **Do not brief a state count.** Neither Ed-Fi README names a state or an agency; the 14-state
+list is third-party, and the South Carolina department page that would settle it **did not resolve
+from this environment**. Quote the licence (payload-read) and let the client's own procurement
+confirm their state's status.
+
+### Pattern J — Code.org's engine without Code.org's curriculum *(new in pass 268)*
+
+**When the client must deliver a K-5 or K-12 AI/CS literacy mandate.** Four jurisdictions now
+mandate AI instruction (`Gap 367`), and this is the shape of the only honest answer.
+
+- ✅ **Reuse under Apache-2.0:** [`code-dot-org/code-dot-org`](https://github.com/code-dot-org/code-dot-org)'s
+  **platform** — 215,796 commits of lesson delivery, progress tracking, classroom management and
+  block-based programming environment. This is a genuinely enormous permissive engine.
+- 🔴 **Do NOT plan to reuse:** the lessons, videos, artwork, characters, sounds, logos or fonts.
+  The payload confines them to *"Code.org's own web site, mobile applications, or social media
+  channels ... without modification or embedding in another format"*, and the `NOTICE` shows why
+  Code.org could not grant them anyway — the engaging activities are **licensed entertainment IP**
+  (Minecraft, Star Wars, Frozen, Ice Age, Angry Birds, Plants vs. Zombies, Gumball, The Bad Guys),
+  plus **Font Awesome Pro**.
+- 🟢 **So the engagement is content origination on a free engine**, and the budget belongs in
+  instructional design and localisation, not in platform build. 🔵 **Say this in the first
+  meeting.** A client who has seen Code.org assumes the curriculum comes with the code; the
+  licence says the opposite, and discovering that after the SOW is signed is the expensive way.
