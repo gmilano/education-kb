@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — The trending axis has no education row; the real movement is in the foundation layer
+
+**Append-only shelf.** This section sits above the previous one; nothing below it is
+rewritten. Evidence: [`verified-repos.2026-10-17-p264.tsv`](../evidence/verified-repos.2026-10-17-p264.tsv)
+
+### What the global GitHub-trending leg actually returned
+
+Nothing education-specific. The `github trending {industry} AI 2026` leg returned
+general-purpose repositories — agent frameworks, self-hosted AI platforms, LLM training
+stacks — and the education-adjacent names in those roundups (`ai-engineering-from-scratch`,
+`nanochat`, `developer-roadmap`) are **repos that teach engineering**, not repos that build
+education systems. They are not this industry's shelf and are not added here.
+
+**Stated plainly: for the eighth consecutive window, GitHub's general trending surface
+carries no education-industry repository.** The education signal lives in topic listings, and
+that is where this pass went: `ai-tutor`, `education-ai`, `intelligent-tutoring-system` and
+`knowledge-tracing`, each sorted by stars.
+
+### Foundation-layer rows new to this shelf
+
+| Repo | Licence | Stars | Why it is a foundation |
+|------|---------|-------|------------------------|
+| [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | MIT | **4.1k** | FSRS, the modern spaced-repetition scheduler — the highest-adoption learning-science component in open source, and absent from this shelf until now. |
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | **819** | TUM's interactive learning platform with automated feedback and an integrated exercise runner. The strongest MIT teaching platform found to date. |
+| [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT | 352 | Source-code plagiarism detection (UGent). Integrity is now an architecture requirement, not a feature. |
+| [bigdata-ustc/EduData](https://github.com/bigdata-ustc/EduData) | Apache-2.0 | 313 | Education datasets plus preprocessing. Removes the first two weeks of a learner-modelling build. |
+| [ZhijieXiong/pyedmine](https://github.com/ZhijieXiong/pyedmine) | MIT | 82 | Knowledge tracing **plus** cognitive diagnosis **plus** recommendation in one library. |
+| [HFUT-LEC/EduStudio](https://github.com/HFUT-LEC/EduStudio) | MIT | 78 | Unified student cognitive modelling, config-driven pipeline. |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | Apache-2.0 | — | Randomised maths e-assessment with algebraic marking, SCORM output. |
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | Apache-2.0 | — | LTI tool framework — the licence-clean way into any compliant LMS. |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | Apache-2.0 | — | SQL-backed xAPI Learning Record Store. |
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | Apache-2.0 | — | The xAPI specification itself. |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | MIT | — | SCORM 1.2/2004 + AICC runtime. Legacy content keeps working. |
+| [openfun/marsha](https://github.com/openfun/marsha) | MIT | — | Education video platform, FUN-MOOC. |
+| [academico-sis/academico](https://github.com/academico-sis/academico) | MIT | — | MIT student information system. |
+| [haxtheweb/haxcms-php](https://github.com/haxtheweb/haxcms-php) | Apache-2.0 | — | Web-component course authoring/CMS. |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | — | **The only Apache-2.0 complete LMS verified this pass.** The most consequential single row on this shelf. |
+
+**15 foundation rows, all licence-verified from payload.** Star counts shown as `—` were not
+re-verified this pass and are left blank rather than carried forward — carrying numbers
+forward is how this base came to publish `pykt 1.2k` for a 450-star repository.
+
+### 🔴 Repository corrections
+
+| Row | Published here before | Read 2026-10-17 |
+|-----|----------------------|-----------------|
+| `openedx/edx-platform` | Apache-2.0 | **AGPL-3.0** — network copyleft on the most likely MOOC base in this KB |
+| `sakaiproject/sakai` | Apache-2.0 | **ECL-2.0** (Educational Community License) |
+| `chamilo/chamilo-lms` | GPL-2.0 | **GPL-3.0** |
+| `OpenEduCat-Inc/OpenEduCat` | live vertical platform | **404.** Canonical: [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp), LGPL-3.0, active branches for Odoo 17.0/18.0/19.0 |
+| `GeminiLight/awesome-ai-llm4education` | MIT | **No LICENSE served** on `main`/`master`/`develop` |
+| `moodle/moodle` | GPL-3.0 | **GPL-3.0 — confirmed**, but the payload is in `COPYING.txt`; there is no `LICENSE` at root |
+| `openedx/XBlock` | Apache-2.0 | **Apache-2.0, README-stated only.** `LICENSE.txt` did not serve on the raw paths tried; graded as the weakest evidence tier rather than promoted |
+
+### The licence shape of this industry, counted
+
+Of the complete LMS platforms verified: **one Apache-2.0** (OpenOLAT), one ECL-2.0 (Sakai),
+one LGPL-3.0 (OpenEduCat), four GPL (Moodle, Chamilo, ILIAS, Gibbon), two AGPL (Open edX,
+Vacademy), plus MIT outliers that are platforms-in-the-small rather than full LMSs (Artemis,
+mentingo). **The permissive LMS market is one candidate deep** — a fact worth stating in any
+pitch where procurement rules out copyleft, because it converts a licence objection into an
+architecture decision: LTI tool (`tsugi`, Apache-2.0) or XBlock (Apache-2.0), with the
+permissive boundary drawn around what the studio delivers.
+
+### Declared gaps
+
+- **No APAC- or LATAM-maintained foundational repository identified.** Chamilo has the
+  deepest LATAM public-sector footprint of anything on this shelf and is
+  European-maintained. The regions consume this layer; they do not yet publish it.
+- **`CaviraOSS/PageLM` removed from consideration** — bespoke non-commercial licence
+  prohibiting redistribution, against an `MIT` grade in this base's own prior evidence file.
+  See [`agents/trending.md`](../agents/trending.md) for the full reading.
+- **Searched and empty:** `github trending education AI 2026` (global), and the per-region
+  legs for North America, EMEA, APAC and LATAM returned **policy and adoption material only,
+  no repositories**. Four regional legs, zero regional repositories — recorded so the absence
+  is not mistaken for coverage.
+
+---
+
+
 ## Pass 262 — 2026-10-17 — THE TRENDING AXIS RETURNED ONE EDUCATION REPOSITORY AND THIS BASE ALREADY CARRIES IT. THE WEEK'S REAL MOVEMENT IS IN PUBLISHED LICENCE CELLS, NOT IN NEW REPOSITORIES
 
 ⏱️ **EIGHTH pass of `2026-10-17`.** 🔵 **Append-only shelf — this section sits above `p261`'s and nothing below it is rewritten.** Evidence: [`p262-websearch`](../evidence/p262-websearch.2026-10-17-p262.tsv) · [`p262-transport-map`](../evidence/p262-transport-map.2026-10-17-p262.tsv) · [`p262-reservation-audit`](../evidence/p262-reservation-audit.2026-10-17-p262.tsv).

@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — Education agents are shipping as skills, and one licence cell in this base was dangerous
+
+**Append-only shelf.** This section is added above the previous one; nothing below it is
+rewritten. Evidence: [`verified-repos.2026-10-17-p264.tsv`](../evidence/verified-repos.2026-10-17-p264.tsv)
+— 53 rows, every licence read from the repository's own `LICENSE` payload.
+
+### New this week — rows that were not on this shelf before
+
+| Agent | Repo | Licence | Stars | Signal |
+|-------|------|---------|-------|--------|
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT | 1.0k | The second-largest education-specific agent found. Plans learning paths, explains concepts, guides projects. Copyright 2026 — new this year. |
+| education-agent-skills | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | **CC-BY-SA-4.0** | 873 | 165 evidence-grounded skills for teachers and school leaders. Highest-adoption *skill pack* in education. ShareAlike — reference it, do not vendor it. |
+| human-skill-tree | [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | AGPL-3.0 | 571 | AI skill tree for lifelong learning, 30+ skills. |
+| anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | 516 | **MCP server for Anki.** Spaced repetition becomes an agent tool. Copyright 2026. |
+| lineage-skill | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | Apache-2.0 | 458 | Top of the `education-ai` topic by stars. Sources → teacher-style skills with provenance retained. |
+| universal-examprep-skill | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | MIT | 308 | Teaches from the institution's slides with page citations. Copyright 2026. |
+| Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT | 288 | Private adaptive tutor, skill + web app. Copyright 2026. |
+| universal-diagnostic-tutor-skill | [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | MIT | 246 | Diagnosis-first STEM/CS tutor. Copyright 2026. |
+| freelingo | [artcc/freelingo](https://github.com/artcc/freelingo) | AGPL-3.0 | 179 | Self-hosted language learning, AI tutor + spaced repetition. |
+| gen-mentor | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | CC0-1.0 | 135 | Official code for an LLM multi-agent goal-oriented tutoring framework. |
+| education-skills | [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | MIT | 114 | Education skill collection. Copyright 2026. |
+| mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT | 96 | AI-native LMS with AI mentor, Langfuse tracing and an MCP endpoint. |
+| lumen | [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | GPL-3.0 | 89 | Course-scoped RAG tutoring. |
+| AI_Tutor_Release | [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | MIT | 65 | EduAgent, RAG tutor for grades 1–9. Copyright 2026. |
+| Claw-ED | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | MIT | 62 | Local-first lesson drafting, teacher-reviewed beta. Copyright 2026. |
+| tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | 49 | **MCP server that turns an LLM into an ITS.** Copyright 2026. |
+
+**16 new rows.** Thirteen carry a 2026 copyright — this is a cohort, not a backfill.
+
+### The week's structural signal: skills over applications
+
+Of the 16 rows above, **seven are agent skill packages** and **two are MCP servers**. The
+pattern repeats across the `ai-tutor` and `education-ai` topic listings
+(`skill-instructional-design`, `bloom-taxonomy-quiz-builder-skill`, `book-to-skill`), and
+even `instructional_agents` — an EACL'26 peer-reviewed system — published a Claude Code
+Skills release (2026.4.15) beside its v1.1.0.
+
+The GitHub topic `mcp-server-education` meanwhile **has never been used by any public
+repository**. A live category with no label.
+
+### Movement on rows already here
+
+- **`HKUDS/DeepTutor`: 41.5k stars**, release v1.6.14 dated **2026.10.8**, Apache-2.0
+  confirmed from payload. This shelf previously carried **22k**. The project roughly doubled
+  and the old cell understated it.
+- **`DaRL-GenAI/instructional_agents`: 488 stars**, and the licence is **MIT**, not the
+  Apache-2.0 this base published.
+- **`CAHLR/OATutor`: 267 stars**, MIT confirmed, 1,045 commits.
+- **`pykt-team/pykt-toolkit`: 450 stars** — not the 1.2k published. Worth knowing before
+  citing it as an industry standard in a client deck.
+
+### 🔴 The finding that matters most this week
+
+`CaviraOSS/PageLM` is graded **`MIT`** in this base's own
+`evidence/verified-repos.2026-10-15-p213.tsv`. Its `LICENSE.md` payload, read in full today,
+is a bespoke **PageLM Community License**: non-commercial use only, and
+
+> *"Redistribution of the Software, in whole or in part, in source or binary form, is
+> strictly prohibited"* without written permission.
+
+A studio acting on that `MIT` cell would have shipped non-redistributable, non-commercial
+code into a client deliverable. The grading method that produced it — a licence `family`
+column inferred without reading the grant — is the defect; the single cell is only its first
+casualty.
+
+The symmetric error is also worth recording, because over-flagging destroys usable rows:
+`Open-TutorAi/open-tutor-ai-CE` opens *"All rights reserved"* and **is** plain
+BSD-3-Clause. That phrase is part of the BSD form. Retracting it would have been wrong.
+
+### Declared gaps
+
+- **No APAC-origin or LATAM-origin education agent** on this week's shelf. The
+  Chinese-language K-12 tutoring repositories in the `education-ai` topic
+  (`SimonsTang/xiaofei-liberal-arts`, `SimonsTang/haoyun-stem-tutor`,
+  `tanghua-git/skill-instructional-design`) are all 2–5 stars. Searched: `ai-tutor`,
+  `education-ai`, `intelligent-tutoring-system`, `knowledge-tracing` topic listings sorted
+  by stars, plus global and per-region web legs for all four regions.
+- **No education grading agent with adoption.** `MUJINN/question-marking` and
+  `MUJINN/intelligent-correction` surfaced but are single-digit-star and were not
+  licence-verified. Automated assessment is being served by platforms (Artemis, Numbas), not
+  by agents.
+- **`luffycodes/Tutorbot-Spock`** (56 stars, learning-science tutoring) serves **no LICENSE
+  file** on `main`/`master`/`develop`. Not addable until a payload says otherwise.
+
+---
+
+
 ## Pass 262 — 2026-10-17 — `0` NEW AGENT ROWS FOR A NINTH PASS, AND THE GLOBAL LEG SAYS SO IN ITS OWN WORDS. PLUS: TWO PUBLISHED RESERVATION VERDICTS CHANGED, AND NEITHER WAS A NEW REPOSITORY
 
 ⏱️ **EIGHTH pass of `2026-10-17`.** 🔵 **Append-only shelf — this section is added above `p261`'s and nothing below it is rewritten.** Evidence: [`p262-websearch`](../evidence/p262-websearch.2026-10-17-p262.tsv) *(`8` legs)* · [`p262-reservation-audit`](../evidence/p262-reservation-audit.2026-10-17-p262.tsv) *(`71` payloads)*.

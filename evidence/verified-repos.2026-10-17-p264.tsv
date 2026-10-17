@@ -1,0 +1,54 @@
+repo	license_verified	method	stars	stars_date	note
+HKUDS/DeepTutor	Apache-2.0	raw LICENSE payload + repo page	41500	2026-10-17	release v1.6.14 dated 2026.10.8; prior KB cell said 22k
+DaRL-GenAI/instructional_agents	MIT	raw LICENSE payload + repo page	488	2026-10-17	CORRECTION: prior KB cell said Apache-2.0
+CAHLR/OATutor	MIT	raw LICENSE payload + repo page	267	2026-10-17	BKT ITS, UC Berkeley CAHL
+pykt-team/pykt-toolkit	MIT	raw LICENSE payload + topic listing	450	2026-10-17	CORRECTION: prior KB cell said 1.2k
+Open-TutorAi/open-tutor-ai-CE	BSD-3-Clause	raw LICENSE payload, full text read	NOT-VERIFIED	-	payload is verbatim BSD-3 form; "All rights reserved" is part of that form, not a reservation
+ls1intum/Artemis	MIT	raw LICENSE payload + repo page	819	2026-10-17	TUM Applied Education Technologies
+open-spaced-repetition/fsrs4anki	MIT	raw LICENSE payload + topic listing	4100	2026-10-17	FSRS scheduler
+open-spaced-repetition/fsrs-rs	BSD-3-Clause	raw LICENSE payload	NOT-VERIFIED	-	Rust core
+dodona-edu/dolos	MIT	raw LICENSE payload + repo page	352	2026-10-17	source-code plagiarism detection, UGent
+numbas/Numbas	Apache-2.0	raw LICENSE payload	NOT-VERIFIED	-	maths e-assessment
+tsugiproject/tsugi	Apache-2.0	raw LICENSE payload	NOT-VERIFIED	-	LTI tool framework
+yetanalytics/lrsql	Apache-2.0	raw LICENSE payload	NOT-VERIFIED	-	xAPI Learning Record Store
+adlnet/xAPI-Spec	Apache-2.0	raw LICENSE payload	NOT-VERIFIED	-	xAPI specification
+jcputney/scorm-again	MIT	raw LICENSE payload	NOT-VERIFIED	-	SCORM/AICC runtime
+openfun/marsha	MIT	raw LICENSE payload	NOT-VERIFIED	-	GIP FUN-MOOC video
+openfun/richie	MIT	raw LICENSE payload	NOT-VERIFIED	-	GIP FUN-MOOC portal CMS
+academico-sis/academico	MIT	raw LICENSE payload	NOT-VERIFIED	-	SIS
+haxtheweb/haxcms-php	Apache-2.0	raw LICENSE.md payload	NOT-VERIFIED	-	HAX authoring CMS
+bigdata-ustc/EduData	Apache-2.0	raw LICENSE payload + topic listing	313	2026-10-17	education datasets
+HFUT-LEC/EduStudio	MIT	raw LICENSE payload + topic listing	78	2026-10-17	student cognitive modeling
+ZhijieXiong/pyedmine	MIT	raw LICENSE payload + topic listing	82	2026-10-17	KT + cognitive diagnosis + recommendation
+ankimcp/anki-mcp-server	MIT	raw LICENSE payload + topic listing	516	2026-10-17	MCP server for Anki
+ArnaudGuiovanna/tutor-mcp	MIT	raw LICENSE payload + topic listing	49	2026-10-17	MCP server turning an LLM into an ITS
+JuneYaooo/lineage-skill	Apache-2.0	raw LICENSE payload + topic listing	458	2026-10-17	sources -> teacher-style agent skills
+ZeKaiNie/universal-examprep-skill	MIT	raw LICENSE payload + topic listing	308	2026-10-17	exam prep with page citations
+Li-Evan/Bloom	MIT	raw LICENSE payload + topic listing	288	2026-10-17	private AI tutor, skill + web app
+SenmuuuuW/universal-diagnostic-tutor-skill	MIT	raw LICENSE payload + topic listing	246	2026-10-17	diagnosis-first tutor
+zijinz456/OpenTutor	MIT	raw LICENSE payload + topic listing	142	2026-10-17	local block-based adaptive workspace
+flysheep-ai/education-skills	MIT	raw LICENSE payload + topic listing	114	2026-10-17	education skills collection
+Miaotofu01/Study-Mate	MIT	raw LICENSE payload + topic listing	1000	2026-10-17	AI study partner
+Selleo/mentingo	MIT	raw LICENSE payload + repo page	96	2026-10-17	AI-native LMS, Langfuse tracing, MCP endpoint
+SirhanMacx/Claw-ED	MIT	raw LICENSE payload + topic listing	62	2026-10-17	local-first lesson drafting
+Zenglian990/AI_Tutor_Release	MIT	raw LICENSE payload + topic listing	65	2026-10-17	EduAgent RAG tutor grades 1-9
+GeminiLight/gen-mentor	CC0-1.0	raw LICENSE payload + topic listing	135	2026-10-17	LLM multi-agent ITS framework
+moodle/moodle	GPL-3.0	raw COPYING.txt payload	NOT-VERIFIED	-	no LICENSE at root; licence lives in COPYING.txt
+openedx/edx-platform	AGPL-3.0	raw LICENSE payload	NOT-VERIFIED	-	CORRECTION: prior KB cell said Apache-2.0
+openedx/XBlock	Apache-2.0 (README-stated)	README.rst text; LICENSE.txt not served on raw paths tried	NOT-VERIFIED	-	licence NOT read first-hand this pass
+chamilo/chamilo-lms	GPL-3.0	raw LICENSE payload	NOT-VERIFIED	-	CORRECTION: prior KB cell said GPL-2.0
+sakaiproject/sakai	ECL-2.0	raw LICENSE payload	NOT-VERIFIED	-	CORRECTION: prior KB cell said Apache-2.0
+ILIAS-eLearning/ILIAS	GPL-3.0	raw LICENSE payload	NOT-VERIFIED	-	
+GibbonEdu/core	GPL-3.0	raw LICENSE payload	NOT-VERIFIED	-	
+francoisjacquet/rosariosis	GPL-2.0	raw LICENSE payload	NOT-VERIFIED	-	
+OpenOLAT/OpenOLAT	Apache-2.0	raw LICENSE payload	NOT-VERIFIED	-	only Apache-2.0 full LMS found this pass
+openeducat/openeducat_erp	LGPL-3.0	raw LICENSE payload	NOT-VERIFIED	-	canonical path; branches 17.0/18.0/19.0 serve a README
+Vacademy-io/vacademy_platform	AGPL-3.0	raw LICENSE payload	NOT-VERIFIED	-	
+24kchengYe/human-skill-tree	AGPL-3.0	raw LICENSE payload + topic listing	571	2026-10-17	copyleft - flag for studio use
+artcc/freelingo	AGPL-3.0	raw LICENSE payload + topic listing	179	2026-10-17	copyleft - flag for studio use
+ahmedEid1/lumen	GPL-3.0	raw LICENSE payload + topic listing	89	2026-10-17	copyleft - flag for studio use
+GarethManning/education-agent-skills	CC-BY-SA-4.0	raw LICENSE payload + topic listing	873	2026-10-17	CONTENT licence with share-alike, not a software licence
+CaviraOSS/PageLM	PageLM Community License	raw LICENSE.md payload, full text read	NOT-VERIFIED	-	REFUTES this base's own evidence/verified-repos.2026-10-15-p213.tsv which grades it MIT; non-commercial, redistribution prohibited
+OpenEduCat-Inc/OpenEduCat	DEAD-404	repo page 404 + raw paths empty	-	2026-10-17	prior KB listed this as a live vertical platform; canonical repo is openeducat/openeducat_erp
+GeminiLight/awesome-ai-llm4education	NO-LICENCE-FOUND	raw LICENSE/LICENSE.md 404 on main/master/develop	NOT-VERIFIED	-	prior KB cell claimed MIT; not substantiated this pass
+luffycodes/Tutorbot-Spock	NO-LICENCE-FOUND	raw LICENSE 404 on main/master/develop	56	2026-10-17	stars from topic listing
