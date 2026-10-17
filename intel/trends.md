@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 258 — 2026-10-17 — **THIS PASS'S REGULATORY HARVEST WAS `32` FACTS AND `31` OF THEM WERE ALREADY CARRIED. THE GATE REFUSED THEM, WHICH IS THE TREND WORTH RECORDING: THE EXTERNAL PICTURE HAS STOPPED MOVING FASTER THAN THIS BASE READS IT**
+
+🔵 **Evidence:** [`p258-websearch`](../evidence/p258-websearch.2026-10-17-p258.tsv) *(`8` legs, `4` regional)* · [`p258-trending`](../evidence/p258-trending.2026-10-17-p258.tsv) *(`13` repos)* · [`p258-cc-census`](../evidence/p258-cc-census.2026-10-17-p258.tsv) · [`p258-channel-map`](../evidence/p258-channel-map.2026-10-17-p258.tsv)
+
+### 🔴 `T258-T1` — the measurement: `31` of `32` regulatory facts refused as already claimed
+
+🔴 **Eight `WebSearch` legs, four of them per-region, produced `32` distinct regulatory facts. `make claims` refused `31` of them.** Each was run through the gate *before* it could be written down:
+
+| fact offered by this pass's search | `make claims` |
+|---|---|
+| Annex III education obligations now `2027-12-02`; Regulation (EU) `2026/1744`; embedded high-risk `2028-08-02`; Article `27` `FRIA`; Article `4` AI literacy live; Article `5(1)(f)` emotion-inference ban | 🔴 **ALREADY CLAIMED** *(all seven tokens)* |
+| Ohio `2026-07-01`; Oklahoma S.B. `1734`; Florida `2027-07-01` + **parental opt-in**; Maryland S.B. `720` coordinators; Idaho S.B. `1227`; North Carolina `2027-06-30`; Alabama H.B. `329` graduation credit; Texas HB `2400`; New York City grades 2-K–8 pause | 🔴 **ALREADY CLAIMED** *(all nine)* |
+| India Class-`3` mandate, IIT Madras curriculum; Singapore Primary `4` via Student Learning Space; UNESCO LAC Observatory at ECLAC; `13`/`19` LAC countries; Brazil PL `2.338/2023`; Chile's risk-based bill + Latam-GPT | 🔴 **ALREADY CLAIMED** |
+| 🟡 China MoE **"AI Plus Education"** action plan through `2030` | 🟢 **NOT CLAIMED** |
+
+🟢 **This is the gate working against the pass that owns it, and it is the right outcome.** 🔵 `p254`'s lesson was *the base inherits its own conclusions*; the counter-measure has been a claims gate, and this is the first pass where that gate refused **almost the entire** external harvest. **A base that cannot refuse its own findings re-publishes them and calls the volume progress.**
+
+🔴 **The trend that follows, stated as a trend and not as a boast: the education-AI regulatory picture has stopped moving faster than this base reads it.** Four regions, eight legs, two `extended`-mode searches per region, and the net new regulatory content was **one** plan — which is itself unconfirmed. 🔵 The implication for sourcing is to **stop spending passes on regulatory search** and spend them on primary-text corroboration of what is already carried: `eur-lex` remains unprobed, and India's mandate remains *reported*.
+
+🟡 **The one new fact, and its provenance stated honestly.** China's Ministry of Education **"AI Plus Education"** action plan, reported `2026-04`, targeting full implementation across primary-to-university by **`2030`**. 🔴 **REPORTED, NOT CONFIRMED:** `english.www.gov.cn` failed `getaddrinfo ENOTFOUND` through `WebFetch` — the same failure mode `p257` recorded for `eur-lex.europa.eu` — so it rests on **one secondary tracker**. 🔴 **And the sources disagree on the operative number:** required annual AI-instruction hours for lower grades are reported as **`6`** in one source and **`8`** in another, with a third claiming AI became compulsory from age six. 🔵 **A plan whose own hour count varies by `33 %` across its secondary sources is a lead, not a planning input.**
+
+### 🔴 `T258-T2` — the real trend this pass found is in the licences, not the legislation
+
+🔴 **Instructional material is licensed as content, and `23.1 %` of what this base carries forbids commercial use.** `828` Creative Commons tokens across the ten shelves: `191` `NonCommercial`, `216` `ShareAlike`, `421` plain `CC-BY`/`CC0`.
+
+🔵 **Why this is a trend and not a static fact: the open education corpus and the open *software* corpus are drifting apart.** The software side of this sector consolidated on `MIT`/`Apache-2.0` — every permissive row this pass published is one of the two, and `8` of `12` are the byte-identical `11 357` B Apache payload. 🔴 **The content side did not consolidate.** It fragmented across six `CC` variants whose practical consequences differ completely, and 🔴 **a quarter of it landed on terms no paid engagement can use.**
+
+🔴 **The measured consequence for tooling: `CC0-1.0` and `CC-BY-ND-4.0` were indistinguishable to this base's standing gate until this pass** — the most permissive grant that exists and a prohibition on adaptation, both reported as `UNCLASSIFIED:no-family-no-restriction` with zero hits. 🟢 Closed by [`pass258-content-licence-family`](../compose/code/pass258-content-licence-family/).
+
+### 🟢 `T258-T3` — education still does not trend, now on four windows
+
+🔴 **`github.com/trending`, read first-hand: `13` repositories, `0` education.** With `p254`'s `11`/`0`, `p256`'s `13`/`0` and `p257`'s `13`/`0`, **four independent reads agree.**
+
+🔵 **What the page is full of instead, this window: agent harnesses and skills.** [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official), [`K-Dense-AI/scientific-agent-skills`](https://github.com/K-Dense-AI/scientific-agent-skills), [`obra/superpowers`](https://github.com/obra/superpowers), [`cursor/plugins`](https://github.com/cursor/plugins), [`android/skills`](https://github.com/android/skills), [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything).
+
+🟢 **And that last one is the trend, read correctly.** [`HKUDS`](https://github.com/HKUDS) is the lab behind [`DeepTutor`](https://github.com/HKUDS/DeepTutor) — now 🟢 **`41 522`★**, the largest open AI-tutor project in existence — and what trends from that lab is its **agent tooling**, not its tutor. 🔵 **The sector's attention flows to the substrate and never to the application.** For a studio that is good news: the substrate is `MIT` *(`nanobot`, `49 102`★)*, maintained, and free to build the application on.
+
+🔴 **`WebSearch` paid `0` publishable repositories for the TWENTY-SEVENTH consecutive pass.** 🔵 The one structural observation from the legs, worth more than their yield: a search for *"open source school management platform SIS ERP Apache MIT licensed"* returned **no platform that is Apache- or MIT-licensed** and offered `RosarioSIS`, `openSIS` and `OpenEduCat` — of which this pass read `RosarioSIS` as `GPL` first-hand and found `openSIS-Classic` with **no root payload at `26` paths**. 🟢 **An independent channel reaching this base's own standing conclusion** — see [`verticals/solutions.md`](solutions.md) `T258-V2`.
+
+### 🔵 `T258-T4` — the lesson for the ledger
+
+🔵 **Extending a six-pass set.** `p251`: *unwired knowledge.* `p253`: *nothing consumes the wire.* `p254`: *the base inherits its own conclusions about what is impossible.* `p255`: *a claim adopted at a retraction inherits the retraction's credibility.* `p256`: *a gate's existence was read as its coverage.* `p257`: *a classifier's scope, not its vocabulary, was the hole.*
+
+🟢 **`p258`: a refusal from ONE endpoint was generalised to the whole channel.** The authenticated API was recorded as scope-gated at `p257` on the evidence of two endpoints, and every pass since rationed itself to `10` unauthenticated calls an hour. 🔴 **The same credential, on the same transport, answered `200` on all `14` calls this pass through a different endpoint — while a *third* endpoint on that same transport really is gated.** 🔵 **The counter-measure is not optimism about channels: it is that a channel map must be keyed on `(transport, endpoint)` and never on `(transport)` alone.** A single `403` describes one door, not the building.
+
 ## Pass 257 — 2026-10-17 — **A CARRIED DISJUNCTION CLOSED: THE EU ANNEX III DATE IS `2027-12-02` UNDER REGULATION (EU) `2026/1744`.** AND THE TREND WITH THE MOST CONSEQUENCE IS THE ONE NOBODY IS STARRING — INSTITUTIONS, NOT STARTUPS, NOW SHIP THE OPEN AI-EDUCATION STACK
 
 🔵 **Evidence:** [`p257-websearch`](../evidence/p257-websearch.2026-10-17-p257.tsv) *(`11` legs)* · [`p257-row-supply`](../evidence/p257-row-supply.2026-10-17-p257.tsv) *(`99` candidates)* · [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv) *(`23` payloads)* · [`p257-trending`](../evidence/p257-trending.2026-10-17-p257.tsv)

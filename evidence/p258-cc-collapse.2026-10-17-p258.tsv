@@ -1,0 +1,11 @@
+payload	source	bytes	p257_family	p257_verdict	p257_hits	p258_family	p258_verdict	p258_usable_in_deliverable
+CC0-1.0	spdx/license-list-data	7048	NONE	UNCLASSIFIED:no-family-no-restriction	-	CC0-1.0	CONTENT-PERMISSIVE	TRUE
+CC-BY-4.0	spdx/license-list-data	17023	NONE	UNCLASSIFIED:no-family-no-restriction	-	CC-BY-4.0	CONTENT-PERMISSIVE	TRUE
+CC-BY-SA-4.0	spdx/license-list-data	18375	NONE	UNCLASSIFIED:no-family-no-restriction	-	CC-BY-SA-4.0	CONTENT-COPYLEFT:share-alike	TRUE
+CC-BY-ND-4.0	spdx/license-list-data	16830	NONE	UNCLASSIFIED:no-family-no-restriction	-	CC-BY-ND-4.0	CONTENT-RESTRICTED:no-derivatives	FALSE
+CC-BY-NC-4.0	spdx/license-list-data	17649	NONE	RESTRICTED:added-restriction	noncommercial	CC-BY-NC-4.0	CONTENT-RESTRICTED:non-commercial	FALSE
+CC-BY-NC-SA-4.0	spdx/license-list-data	19018	NONE	RESTRICTED:added-restriction	noncommercial	CC-BY-NC-SA-4.0	CONTENT-RESTRICTED:non-commercial	FALSE
+CC-BY-NC-ND-4.0	spdx/license-list-data	17452	NONE	RESTRICTED:added-restriction	noncommercial	CC-BY-NC-ND-4.0	CONTENT-RESTRICTED:non-commercial	FALSE
+microsoft/AI-System LICENSE	raw.githubusercontent.com	18653	NONE	UNCLASSIFIED:no-family-no-restriction	-	CC-BY-4.0	CONTENT-PERMISSIVE	TRUE
+datacarpentry/r-socialsci LICENSE.md	raw.githubusercontent.com	3357	NONE	UNCLASSIFIED:no-family-no-restriction	-	NONE	CONTENT-POINTER:not-a-grant	FALSE
+datacarpentry/semester-biology LICENSE.md	raw.githubusercontent.com	3275	NONE	UNCLASSIFIED:no-family-no-restriction	-	NONE	CONTENT-POINTER:not-a-grant	FALSE

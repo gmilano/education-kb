@@ -4,6 +4,143 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 258 — 2026-10-17 — **`ACTION YR` DISCHARGED AND NOT REFUTED AT `12` PERMISSIVE ROWS ON A TRANSPORT THIS BASE DID NOT HAVE: THE AUTHENTICATED `MCP` SEARCH CHANNEL IS NOT SCOPE-GATED WHILE THE SAME CREDENTIAL'S CONTENTS ENDPOINT IS.** PLUS: THE LICENCE CLASS THESE SHELVES CARRY MOST — `828` CREATIVE COMMONS CELLS — WAS INVISIBLE TO THE STANDING GATE, AND `CC0` GRADED IDENTICALLY TO `CC-BY-ND`
+
+⏱️ **FOURTH pass of `2026-10-17`** *(`p255`, `p256`, `p257` before it)*. All `p258` probes ran `2026-10-17`, so evidence filenames and commit date agree for the third pass running. 🔵 **Evidence:** [`p258-row-supply`](../evidence/p258-row-supply.2026-10-17-p258.tsv) *(`79` candidates, all gated)* · [`p258-owner-coverage`](../evidence/p258-owner-coverage.2026-10-17-p258.tsv) *(`20` owners, status each)* · [`p258-grant-payload`](../evidence/p258-grant-payload.2026-10-17-p258.tsv) *(`57` first-hand reads)* · [`p258-cc-collapse`](../evidence/p258-cc-collapse.2026-10-17-p258.tsv) *(`10` payloads, two classifiers)* · [`p258-cc-census`](../evidence/p258-cc-census.2026-10-17-p258.tsv) *(`828` tokens)* · [`p258-org-grant-split`](../evidence/p258-org-grant-split.2026-10-17-p258.tsv) *(`19` rows, `2` orgs)* · [`p258-ladder-reprobe`](../evidence/p258-ladder-reprobe.2026-10-17-p258.tsv) *(`23`×`26` paths)* · [`p258-channel-map`](../evidence/p258-channel-map.2026-10-17-p258.tsv) · [`p258-websearch`](../evidence/p258-websearch.2026-10-17-p258.tsv) *(`8` legs)* · [`p258-trending`](../evidence/p258-trending.2026-10-17-p258.tsv) *(`13`)* · **instrument:** [`pass258-content-licence-family`](../compose/code/pass258-content-licence-family/) *(`76` controls, in `make hooks`, `4` mutants run)*
+
+### 🟢 `T258-A` — `ACTION YR`, discharged on a transport `p257` recorded as closed
+
+🔴 **`p257` mapped `api.github.com/search/repositories` through the session's authenticated proxy as a `403` `REPOSITORY-SCOPE GATE` and fell back to an unauthenticated `WebFetch` channel it measured at `10` calls/hour and `100 000` characters per read.** 🟢 **The same credential reaches the same API uncapped through a different transport:** `mcp__github__search_repositories` answered `200` on **every one of `14` calls** this pass, with no refusal reached, and returns `license.spdx_id`, `default_branch`, `archived`, `pushed_at` and `topics` in one response.
+
+| | `p256` *(owners 1–20)* | `p257` *(owners 19–36)* | 🟢 `p258` *(owners 37–56)* |
+|---|---|---|---|
+| transport | `WebFetch`, unauthenticated | `WebFetch` + core `orgs/` | 🟢 **`MCP`, authenticated** |
+| sort | `stars:desc` | `updated:desc` | `updated:desc` |
+| owners attempted | `20` | `18` | `20` |
+| owners READ | `18` | `18` | 🟡 **`18`** *(`2` declared UNREAD)* |
+| candidates gated | `100` | `99` | `79` |
+| `NEW` to these shelves | `44` *(`44.0 %`)* | `60` *(`60.6 %`)* | 🟢 **`57` (`72.2 %`)** |
+| grants read first-hand | `8` | `23` | 🟢 **`57`** |
+| 🟢 **permissive publishable rows** | `5` | `16` | 🟢 **`12`** |
+| copyleft rows read first-hand | — | `1` | 🟢 **`18`** |
+
+🟢 **`ACTION YR` is DISCHARGED and NOT refuted.** Its falsifier — *"falsified if owners `37`–`56` on `updated:desc` yield fewer publishable rows than `p256`'s `stars:desc` arm did"* — does not fire at `12` against `5`. 🔵 **And the honest qualifier, because `12` is below `p257`'s `16`:** the margin this pass is **not** the sort. It is that **every** candidate's grant was read first-hand rather than `23` of `99`, which is affordable only because the transport stopped rationing. The sort question `p257` opened stays answered in `updated:desc`'s favour and is not re-litigated here.
+
+🔴 **The asymmetry, measured rather than assumed — and it is the part to carry:**
+
+| endpoint, same credential, same transport | result |
+|---|---|
+| 🟢 `mcp__github__search_repositories` | `200` × `14`, no refusal reached — **NOT scope-gated** |
+| 🔴 `mcp__github__get_file_contents` | 🔴 *"Access denied: repository `ls1intum/edutelligence` is not configured for this session"* — **scope-gated** |
+
+🔵 **So "the API is gated" was never a property of the API, the credential or the transport. It was a property of the ENDPOINT**, and sixteen passes of this base's channel anxiety had generalised from one refusal to all of them. 🟢 Grants therefore still come from `raw.githubusercontent.com`, which has no scope gate — `80` payload probes this pass.
+
+### 🟢 `T258-B` — the `12` permissive rows, every grant read first-hand on an `ls-remote`-resolved ref
+
+🔵 **All four regions are placed, and the copyleft block below carries two of them**, which matters because this pass's regional weight sits there rather than here.
+
+| row | grant | payload | ref | ★ | region | what a studio buys |
+|---|---|---|---|---|---|---|
+| 🟢 [`microsoft/Agentic-Shiksha`](https://github.com/microsoft/Agentic-Shiksha) | 🟢 `MIT` | `1 146` B · `2b452eff3b3ff290` | `main` | `1` | **APAC** *(India)* | 🟢 **THE ROW OF THE PASS.** Course-specific **Teaching Assistant agents** implementing the *Ekalaiva* framework — agent memory, guardrails, multi-agent orchestration, personalised learning, on Azure AI Foundry. `1`★ and `69` open issues: 🔵 a live build, not a demo. **An `MIT` reference architecture for an agentic TA, from a vendor org, aimed at the exact market India's Class-`3` mandate creates** |
+| 🟢 [`edanalytics/earthmover`](https://github.com/edanalytics/earthmover) | 🟢 `Apache-2.0` | `11 349` B · `428201d4f1cd7fa7` | `main` | `31` | **North America** | the **tabular-to-anything transform CLI** — YAML + Jinja into any text format. The ingest spine of a K-12 data engagement, and 🔵 note the byte count: `11 349`, not the `11 357` this base sees everywhere |
+| 🟢 [`edanalytics/edfi_api_client`](https://github.com/edanalytics/edfi_api_client) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` | `15` | **North America** | the **Ed-Fi API client** in Python — the half of an Ed-Fi engagement every team writes badly from scratch |
+| 🟢 [`edanalytics/earthmover_edfi_bundles`](https://github.com/edanalytics/earthmover_edfi_bundles) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` | `14` | **North America** | ready-made `earthmover` bundles for Ed-Fi assessment sources — the mapping work, already done |
+| 🟢 [`edanalytics/dbt_synth_data`](https://github.com/edanalytics/dbt_synth_data) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` | `10` | **North America** | **synthetic student data as a `dbt` package.** 🔵 The piece that lets a studio build and demo a student-data pipeline *before* it is trusted with real `FERPA`-covered records |
+| 🟢 [`edanalytics/ea_airflow_util`](https://github.com/edanalytics/ea_airflow_util) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` | `4` | **North America** | the Airflow utilities the rest of the stack orchestrates on |
+| 🟢 [`edanalytics/edfi-etc-sedm-extension`](https://github.com/edanalytics/edfi-etc-sedm-extension) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` | `0` | **North America** | the **Special Education Data Model** extension — the compliance surface a US district is audited on |
+| 🟢 [`HKUDS/nanobot`](https://github.com/HKUDS/nanobot) | 🟢 `MIT` | `1 102` B · `f69260cd9a0a4e07` | `main` | 🟢 **`49 102`** | **APAC** *(HKU)* | self-hosted personal agent framework — WebUI, tools, memory, `MCP`, multi-agent workflows. **Same lab as `DeepTutor`**, and the substrate a tutor can be built on rather than beside |
+| 🟢 [`frappe/school_automations`](https://github.com/frappe/school_automations) | 🟢 `MIT` | `1 069` B · `002c2696d92b5c8c` | `main` | `6` | **APAC** *(India)* | school-automation app on the Frappe framework. 🔴 **And the only `MIT` thing in its own product family — see [`verticals/solutions.md`](../verticals/solutions.md) `T258-V1`** |
+| 🟢 [`ashutoshrana/confidence-escalation`](https://github.com/ashutoshrana/confidence-escalation) | 🟢 `MIT` | `1 070` B · `2fa9e93f196bc2b6` | `main` | `0` | **North America** | **confidence-gated escalation middleware** — multi-signal scoring *(logprob, verbalized, tool risk)* with threshold policies and handlers for LangChain, CrewAI, AutoGen, Google ADK. 🔵 `0`★ and it is the shape an education deployer's **Article `26` human-oversight** duty actually needs: a tutor that escalates to a teacher on low confidence |
+| 🟢 [`huggingface/datasets-course`](https://github.com/huggingface/datasets-course) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` | `13` | Global | course on building and sharing datasets — curriculum material under a **software** licence, which is rarer than it sounds *(see `T258-D`)* |
+| 🟢 [`huggingface/101-course`](https://github.com/huggingface/101-course) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` | `38` | Global | the entry-level course, same grant |
+
+### 🟢 `T258-C` — `18` copyleft rows, and they are where the EMEA and LATAM weight sits
+
+🟡 **`GPL-3.0` is usable in a client deliverable with a disclosure duty, so these are rows with a stated price, not refusals.** Both blocks are **state- or institution-adjacent AI-in-LMS work**, which is the thing this base has least of.
+
+🟢 **EMEA — [`bycs-lp`](https://github.com/bycs-lp), the Bavarian state school-cloud (`ByCS`) Moodle estate.** `40` repositories; `8` new rows here, grants read first-hand at `35 122`–`35 178` B:
+
+| row | ★ | grant | what it is |
+|---|---|---|---|
+| 🟢 [`moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) *(carried)* | `30` | `GPL-3.0` | 🟢 **the broker.** One place where a school authority configures which model, for which role, with which quota — the piece every other plugin calls |
+| 🟢 [`moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) *(carried)* | `16` | `GPL-3.0` | the chat surface pupils actually see |
+| 🟢 [`moodle-tiny_ai`](https://github.com/bycs-lp/moodle-tiny_ai) | `9` | `GPL-3.0` · `35 178` B · `ccb349b4132ed773` | AI inside the **TinyMCE editor** — generation and rewriting where teachers already work |
+| 🟢 [`moodle-block_ai_control`](https://github.com/bycs-lp/moodle-block_ai_control) | `3` | `GPL-3.0` · `35 149` B · `3972dc9744f6499f` | 🟢 **the teacher's kill switch and quota view.** The control surface a deployer duty is discharged *through* |
+| 🟢 [`moodle-mod_aichat`](https://github.com/bycs-lp/moodle-mod_aichat) | `2` | `GPL-3.0` · `35 149` B · `3972dc9744f6499f` | chat as a graded course **activity**, not a sidebar |
+| 🟢 [`moodle-local_ai_content`](https://github.com/bycs-lp/moodle-local_ai_content) | `2` | `GPL-3.0` · `35 149` B · `3972dc9744f6499f` | AI-assisted course-content generation |
+| 🟡 [`moodle-quizaccess_ai`](https://github.com/bycs-lp/moodle-quizaccess_ai) | `1` | 🟡 `GPL-3.0` **in `version.php`, not at any root path** | an AI gate on quiz access — see `T258-E` |
+| 🟡 [`moodle-qbehaviour_deferred_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_deferred_for_aitext) · [`_immediate_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_immediate_for_aitext) | `0` | 🟡 `GPL-3.0` **in `version.php`** | the question behaviours that make **AI-graded free text** a real Moodle question type |
+
+🔵 **Why this is the strongest EMEA row-set on these shelves:** it is a **government-operated** AI-in-LMS stack, in production for a German state's schools, permissively enough licensed to fork, and it already separates *policy* (`ai_manager`), *control* (`ai_control`) and *surface* (`block_ai_chat`, `tiny_ai`) — the separation an EU **deployer** has to be able to demonstrate.
+
+🟢 **LATAM — [`jeanlucio`](https://github.com/jeanlucio), a Brazilian Moodle plugin estate.** `39` repositories; `8` new rows, every grant at **`COPYING.txt`** *(`35 149` B, `3972dc9744f6499f`)*:
+
+[`moodle-block_playerhud`](https://github.com/jeanlucio/moodle-block_playerhud) *(`3`★, XP/levels/inventory/ranking)* · [`moodle-filter_playerhud`](https://github.com/jeanlucio/moodle-filter_playerhud) *(`2`★, collectible drops via shortcodes)* · [`moodle-availability_playerhud`](https://github.com/jeanlucio/moodle-availability_playerhud) *(gating activities on gamified progress)* · [`moodle-mod_syllabus`](https://github.com/jeanlucio/moodle-mod_syllabus) *(one structured course plan with per-field autosave, replacing three diverging documents)* · [`moodle-mod_reflect`](https://github.com/jeanlucio/moodle-mod_reflect) *(self-assessment)* · [`moodle-mod_playergroup`](https://github.com/jeanlucio/moodle-mod_playergroup) *(self-service group formation)* · [`moodle-mod_playercross`](https://github.com/jeanlucio/moodle-mod_playercross) · [`moodle-mod_playerwords`](https://github.com/jeanlucio/moodle-mod_playerwords) · [`moodle-theme_lore`](https://github.com/jeanlucio/moodle-theme_lore)
+
+🟢 **The carried [`moodle-mod_playervideo`](https://github.com/jeanlucio/moodle-mod_playervideo) is the keystone**: interactive video with **free AI-assisted question generation and grading**, captions, easy-read AI summaries and a screen-reader-only mode. 🔵 **Accessibility and gamification from one LATAM maintainer, under one grant** — and `0`★, which is exactly the kind of row `stars:desc` buries.
+
+### 🔴 `T258-D` — the finding that outranks the rows: the licence class these shelves carry MOST was invisible to the gate
+
+🔴 **`828` Creative Commons licence tokens are carried across the ten shelves. The standing classifier knows no Creative Commons family at all** — `PERMISSIVE_FAMILIES` is `{Apache-2.0, BSD, ISC, MIT}` and `COPYLEFT_FAMILIES` is `{AGPL, GPL, LGPL, EPL, MPL}`. Measured against the seven canonical texts, fetched first-hand from [`spdx/license-list-data`](https://github.com/spdx/license-list-data) and run through [`pass257-restriction-scan`](../compose/code/pass257-restriction-scan/) in the same hour:
+
+| payload | bytes | `p257` verdict | `p257` hits |
+|---|---|---|---|
+| 🔴 `CC0-1.0` *(public-domain dedication)* | `7 048` | 🔴 `UNCLASSIFIED:no-family-no-restriction` | `[]` |
+| 🔴 `CC-BY-ND-4.0` *(**no derivatives at all**)* | `16 830` | 🔴 `UNCLASSIFIED:no-family-no-restriction` | `[]` |
+| `CC-BY-4.0` | `17 023` | `UNCLASSIFIED` | `[]` |
+| `CC-BY-SA-4.0` | `18 375` | `UNCLASSIFIED` | `[]` |
+| 🟢 `CC-BY-NC-4.0` | `17 649` | 🟢 `RESTRICTED:added-restriction` | `noncommercial` |
+| 🟢 `CC-BY-NC-SA-4.0` | `19 018` | 🟢 `RESTRICTED:added-restriction` | `noncommercial` |
+| 🟢 `CC-BY-NC-ND-4.0` | `17 452` | 🟢 `RESTRICTED:added-restriction` | `noncommercial` |
+
+🟢 **Credit first, because it is the larger half: the `NC` block is already caught.** `p257` built that vocabulary for commercial source-available licences and it fires correctly on Creative Commons `NonCommercial` without having been designed for it. **Nothing non-commercial was ever published from these shelves as permissive.**
+
+🔴 **The hole is the first two rows. `CC0-1.0` — the most permissive grant that exists — and `CC-BY-ND-4.0`, which forbids distributing an adaptation, grade IDENTICALLY.** And the cause is measurable rather than arguable: `[t for t in RESTRICTION_TERMS if "deriv" in t]` is **`[]`**. `ND` is not a near-miss; there is no term for a derivative restriction in the vocabulary, so `ND` is out of scope.
+
+🔴 **Why it lands harder here than it would in another industry: instructional material is licensed as CONTENT, not as software.** The census, published by the new instrument rather than asserted:
+
+| class | tokens | share | a studio can ship it? |
+|---|---|---|---|
+| `CONTENT-PERMISSIVE` *(`CC-BY`, `CC0`)* | `421` | `50.8 %` | 🟢 yes, with attribution |
+| `CONTENT-COPYLEFT:share-alike` | `216` | `26.1 %` | 🟡 yes, with a share-alike duty |
+| 🔴 `CONTENT-RESTRICTED:non-commercial` | **`191`** | **`23.1 %`** | 🔴 **no** |
+
+🟢 **`is_usable_permissive` was never wrong** — `USABLE_VERDICTS` is closed on `{MIT}`, so no `CC` payload was ever published as a usable permissive grant. 🔵 **The defect is in the EVIDENCE, which is `p257`'s own lesson repeating one layer out — on a population two orders of magnitude larger than the one `p257` found it on.** `p257` met it on `4` USC repositories; here it is `828` cells, `191` of them unshippable.
+
+🟢 **Built, not merely named:** [`pass258-content-licence-family`](../compose/code/pass258-content-licence-family/) — `76` controls, in `make hooks`, every fixture a payload read first-hand, **`4` mutants run with the control count holding at `76` for each**. 🔴 **And its own mutation run found a hole in itself:** deleting `CONTENT-RESTRICTED:non-commercial` from `UNUSABLE_VERDICTS` produced `72` controls and `0` failures, because a redundant positive list downstream masked it. 🔵 *Two guards, one load-bearing and the other assumed to be* — this base's recurring shape, met inside the instrument written to close another instance of it. Three controls now pin the set itself; that mutant fails all three.
+
+### 🔴 `T258-E` — the Moodle sector keeps its grant in a code header, and that is why `9` rows looked grantless
+
+🔴 **`22` of this pass's `57` candidates returned no payload at any of the `26` root ladder paths. `9` of them are Moodle plugins — and their grant is in `version.php`.** Read first-hand:
+
+```
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+```
+
+🟢 Confirmed in [`bycs-lp/moodle-quizaccess_ai`](https://github.com/bycs-lp/moodle-quizaccess_ai), [`bycs-lp/moodle-tiny_elements`](https://github.com/bycs-lp/moodle-tiny_elements) and [`jeanlucio/moodle-mod_quickpoll`](https://github.com/jeanlucio/moodle-mod_quickpoll); 🔵 **absent** from [`jeanlucio/moodle-dev-tools`](https://github.com/jeanlucio/moodle-dev-tools), which is tooling rather than a plugin — so the finding is about the **plugin convention**, not the owner.
+
+🔵 **This is the ladder extension that would actually pay, and it is a different KIND from the one `p256` and `p257` kept widening.** Adding root licence *names* has now returned `0` on two independent populations *(`T258-F`)*; reading the **`version.php` header** would move `9` rows in a single pass. Registered as `ACTION YU` rather than built, because it needs its own controls.
+
+### 🔴 `T258-F` — `ACTION YP`'s shape, answered again on a fresh population: `0` moved
+
+🔴 **The `20` candidates with no payload on the `15`-name ladder, re-probed against the full `26`-name `TIER_A` on `ls-remote`-resolved refs: `0` moved.** Combined with `p257`'s `14`×`5` = `70` probes and `0` moved, 🔵 **two independent passes now say the root-name widening is ceremony for this sector**, and `T258-E` says where the grants actually are instead. 🟡 `ACTION XH`'s `60` guessed-ref `MIT` slugs — the population `YP` actually named — remain **UNPROBED**, so `YP` stays re-registered and is not claimed as discharged.
+
+🟢 **One row did move, and it is a correction worth the whole re-probe:** [`frappe/lms`](https://github.com/frappe/lms) *(`3 322`★, described by its own repository as **"100% Open Source Learning Management System"**)* serves **`AGPL-3.0`** at `license.txt`, `33 893` B, read first-hand on `develop`. See [`verticals/solutions.md`](../verticals/solutions.md) `T258-V1`.
+
+### 🔴 `T258-G` — the negative results, so silence is not read as coverage
+
+🔴 **`WebSearch` paid `0` publishable repositories for the TWENTY-SEVENTH consecutive pass.** `8` legs, `4` of them per-region. 🔴 **And this pass it paid almost nothing in regulation either** — `32` regulatory facts gathered, and `31` of them were **already carried**, each refused by `make claims` before it could be published as new. The one exception is China's **"AI Plus Education"** action plan, and it is 🟡 **REPORTED, NOT CONFIRMED**: `english.www.gov.cn` failed `getaddrinfo ENOTFOUND` through `WebFetch` — the same failure mode `p257` recorded for `eur-lex` — so it rests on one secondary tracker. 🔵 **The gate working against its own pass is the point:** a base that cannot refuse its own findings re-publishes them.
+
+🔴 **`github.com/trending`, read first-hand: `13` repositories, `0` education.** With `p254`'s `11`/`0`, `p256`'s `13`/`0` and `p257`'s `13`/`0`, **education does not trend** is now a measured verdict on **four** independent windows. 🔵 [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) is on that page — the same lab as `DeepTutor`, trending for agent tooling and not for the tutor.
+
+🟢 **A star cell this base has carried stale for `193` passes:** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) is 🟢 **`41 522`★** *(`5 238` forks)*, measured on the `MCP` channel. These shelves carry `~24k` from `p65`. 🔵 It remains the single largest open-source AI-tutor project in existence.
+
+🔴 **[`imsglobal`](https://github.com/imsglobal) has EMPTIED: `user:imsglobal` returns `total_count=1`**, a GitHub Pages stub. The organisation renamed to `1EdTech`, and the `4` `imsglobal/*` slugs these shelves carry *(`caliper-python`, `caliper-spec`, `lti-tool-provider-library-php`)* now resolve **only by redirect**. 🔵 **A renamed owner is indistinguishable from an empty owner in an owner sweep** — a shape worth carrying, since the owner channel is now this base's primary.
+
+🔴 **DECLARED GAPS:** [`universaldependencies`](https://github.com/universaldependencies) and [`anthropics`](https://github.com/anthropics) were **not swept** this pass and are declared unread, not counted; `user:google education learning students` returned `total_count=0`, which is a negative of the **query shape** *(three `AND`ed keywords)* and **not** of the owner; `api-evangelist`'s `774` repositories are third-party **API profiles**, not education software, and a pass that publishes one as an education agent has published a description of someone else's product; `openeducat/openeducat` was **guessed and did not resolve** under `ls-remote`, so it is not published; and `eur-lex.europa.eu` was **not re-probed**, so this base's EU reading still rests on secondary channels.
+
 ## Pass 257 — 2026-10-17 — **`ACTION YN` DISCHARGED AND NOT REFUTED: THE NEXT `18` OWNERS PAID `16` PUBLISHABLE ROWS AGAINST `p256`'s `5`, AND ALL FOUR REGIONS ARE PLACED FROM ONE SWEEP.** PLUS: THE GRANT CLASSIFIER CANNOT TELL APACHE-2.0 FROM A NON-COMMERCIAL ACADEMIC LICENCE — MEASURED, AND FIXED
 
 ⏱️ **THIRD pass of `2026-10-17`** *(`p255` first, `p256` second)*. All `p257` probes ran `2026-10-17`, so evidence filenames and commit date agree for the second pass running. 🔵 **Evidence:** [`p257-row-supply`](../evidence/p257-row-supply.2026-10-17-p257.tsv) *(`99` candidates, all gated)* · [`p257-owner-coverage`](../evidence/p257-owner-coverage.2026-10-17-p257.tsv) *(`18` owners, read/starved status each)* · [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv) *(`23` payloads read first-hand)* · [`p257-none-ladder`](../evidence/p257-none-ladder.2026-10-17-p257.tsv) *(`14`×`5` paths)* · [`p257-classifier-collapse`](../evidence/p257-classifier-collapse.2026-10-17-p257.tsv) · [`p257-opentutor-collision`](../evidence/p257-opentutor-collision.2026-10-17-p257.tsv) · [`p257-channel-map`](../evidence/p257-channel-map.2026-10-17-p257.tsv) *(`12` rows, `3` transports)* · [`p257-websearch`](../evidence/p257-websearch.2026-10-17-p257.tsv) *(`11` legs)* · [`p257-trending`](../evidence/p257-trending.2026-10-17-p257.tsv) *(`13`)* · **instrument:** [`pass257-restriction-scan`](../compose/code/pass257-restriction-scan/) *(`57` controls, in `make hooks`)*

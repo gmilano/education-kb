@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 258 — 2026-10-17 — **THE `3 322`★ LMS THAT CALLS ITSELF "100% OPEN SOURCE" IS `AGPL-3.0`, AND THE `669`★ SCHOOL ERP BESIDE IT HAS NO READABLE GRANT AT ALL.** THE STANDING CLAIM — NO PERMISSIVE EDUCATION SIS OR ERP EXISTS — RE-PROBED FIRST-HAND AND STILL TRUE, PLUS A STATE-OPERATED `Moodle` ESTATE THIS BASE DID NOT CARRY
+
+🔵 **Evidence:** [`p258-ladder-reprobe`](../evidence/p258-ladder-reprobe.2026-10-17-p258.tsv) · [`p258-org-grant-split`](../evidence/p258-org-grant-split.2026-10-17-p258.tsv) · [`p258-grant-payload`](../evidence/p258-grant-payload.2026-10-17-p258.tsv)
+
+### 🔴 `T258-V1` — `frappe/lms`: "100% Open Source" is true and `AGPL-3.0` is also true, and only one of them is a plan
+
+🔴 **[`frappe/lms`](https://github.com/frappe/lms) — `3 322`★, `1 551` forks, described by its own repository as *"Easy to Use, 100% Open Source Learning Management System"* — serves `AGPL-3.0` at `license.txt`, `33 893` B, read first-hand on `develop`.**
+
+🔵 **Why this is a planning fact and not pedantry.** `AGPL-3.0` is a **network** copyleft: §13 reaches users who interact with the software *over a network*. A studio that hosts a forked LMS as a service for a client triggers a source-availability obligation on the **whole hosted work** — the exact deployment shape an LMS engagement takes. 🟡 `GPL-3.0` on [`erpnext`](https://github.com/frappe/erpnext) does not do that; you ship modified source only when you distribute binaries.
+
+| what you are doing | `MIT`/`Apache-2.0` | `GPL-3.0` | 🔴 `AGPL-3.0` |
+|---|---|---|---|
+| run it internally, unmodified | free | free | free |
+| fork it, host it for one client | free | 🟢 free | 🔴 **source of the hosted work must be offered to its users** |
+| fork it, sell it as a SaaS to many | free | 🟢 free | 🔴 **same, and this is the usual LMS business model** |
+
+🟢 **It is still a legitimate starting point** — the obligation is disclosure, not a fee, and a studio that intends to contribute back may find it costless. 🔴 **What it is not is a drop-in base for a proprietary managed LMS**, and the repository's own one-line description will not tell a reader that.
+
+🔴 **And its sibling is worse for planning: [`frappe/education`](https://github.com/frappe/education) *(`669`★, "Open source education / school management system")* returns `404` at all `26` root ladder paths on `develop`.** No `LICENSE`, no `license.txt`, no `COPYING`, under any case spelling this base knows. 🔵 A `669`★ school-management system whose grant a buyer cannot read at its root is an **unquantified** risk, not a low one.
+
+### 🟢 `T258-V2` — the standing claim, re-probed first-hand rather than inherited
+
+🟡 **This base has carried *"no permissive education ERP or SIS exists"* for several passes, most recently re-probed at `p256`.** 🟢 **`p258` re-probed it on payloads rather than on memory, and it survives — now with the numbers attached:**
+
+| platform | ★ | grant, read first-hand at `p258` | payload | permissive? |
+|---|---|---|---|---|
+| 🔴 [`frappe/lms`](https://github.com/frappe/lms) | `3 322` | `AGPL-3.0` | `33 893` B, `license.txt` | 🔴 no |
+| 🔴 [`frappe/education`](https://github.com/frappe/education) | `669` | 🔴 **no payload, `26` paths** | — | 🔴 unknown |
+| 🟡 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) *(carried)* | — | `GPL` | `15 214` B, `d954e14e5c752eb0` | 🔴 no |
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) *(carried)* | — | 🔴 **no payload, `26` paths** on `master` | — | 🔴 unknown |
+| 🟡 **OpenEduCat** *(carried)* | — | `LGPL-3.0` | *(carried cell, not re-read this pass)* | 🔴 no |
+| 🟢 [`frappe/school_automations`](https://github.com/frappe/school_automations) | `6` | 🟢 `MIT` | `1 069` B, `002c2696d92b5c8c` | 🟢 **yes — and it is an app, not a platform** |
+
+🔵 **A detail worth carrying from the `rosariosis` probe: its default ref is `mobile`.** Not `main`, not `master` — `ls-remote --symref` resolved `refs/heads/mobile`. 🟢 A pass that guesses `main` reads nothing and would publish `NO_LICENCE_FILE` over a `15 214` B `GPL` payload that is right there. Same class as `p256`'s `openedx/paragon` at `release-23.x`.
+
+🟡 **`openeducat/openeducat` was GUESSED and does not resolve.** `ls-remote` returned nothing; the slug does not exist. 🔵 **Said plainly so no later pass inherits it as a row** — OpenEduCat's carried cell stands on the earlier pass that established it, and this pass did not re-verify the slug.
+
+### 🟢 `T258-V3` — the vertical this base did not carry: a state-operated `Moodle` estate
+
+🟢 **[`bycs-lp`](https://github.com/bycs-lp) is the Bavarian state school-cloud (`ByCS`) `Moodle` estate — `40` repositories, `GPL-3.0`, maintained through `2026-10-16`.** It is not a vendor product and not a research prototype: it is **a government education authority's own LMS customisation, in production for a German state's schools, in the open.**
+
+🟢 **What makes it a VERTICAL row rather than a plugin list:** it is layered the way a regulated deployment has to be.
+
+| layer | repository | what it owns |
+|---|---|---|
+| 🟢 **policy / brokerage** | [`moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) *(`30`★)* | which model, for which role, with which quota — configured by the authority, not the teacher |
+| 🟢 **control / oversight** | [`moodle-block_ai_control`](https://github.com/bycs-lp/moodle-block_ai_control) *(`3`★)* | the teacher-facing switch and quota view |
+| 🟢 **surfaces** | [`moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) *(`16`★)* · [`moodle-tiny_ai`](https://github.com/bycs-lp/moodle-tiny_ai) *(`9`★)* · [`moodle-mod_aichat`](https://github.com/bycs-lp/moodle-mod_aichat) | where pupils and teachers meet it |
+| 🟢 **assessment** | [`moodle-qbehaviour_deferred_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_deferred_for_aitext) · [`_immediate_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_immediate_for_aitext) · [`moodle-quizaccess_ai`](https://github.com/bycs-lp/moodle-quizaccess_ai) | AI-graded free text as a real question type, and an AI gate on quiz access |
+| 🟢 **authoring / pedagogy** | [`mod_learningmap`](https://github.com/bycs-lp/mod_learningmap) *(`15`★)* · [`moodle-mod_mootimeter`](https://github.com/bycs-lp/moodle-mod_mootimeter) *(`10`★)* · [`moodle-mod_kanban`](https://github.com/bycs-lp/moodle-mod_kanban) *(`15`★)* · [`moodle-tiny_elements`](https://github.com/bycs-lp/moodle-tiny_elements) | learning maps, live polling, boards, custom components |
+
+🔵 **The separation of `ai_manager` from `ai_control` from the surfaces is the architecture an EU **deployer** has to be able to demonstrate** — a configured policy, a named human able to intervene, and a log — and it exists here as shipped code rather than as a diagram. 🟡 **The price is `GPL-3.0`**, read first-hand at `35 122`–`35 178` B across the suite.
+
+🟢 **LATAM counterpart, same pattern at individual scale:** [`jeanlucio`](https://github.com/jeanlucio) carries `39` `Moodle` repositories, grants at **`COPYING.txt`** *(`GPL-3.0`, `35 149` B, `3972dc9744f6499f`)* — a gamification layer *(`PlayerHUD`: XP, levels, inventory, ranking, with an availability condition that gates content on gamified progress)* plus [`moodle-mod_playervideo`](https://github.com/jeanlucio/moodle-mod_playervideo), which pairs **AI question generation and grading** with **captions, easy-read AI summaries and a screen-reader-only mode**. 🔵 Accessibility and gamification under one grant, from one Brazilian maintainer, at `0`–`3`★.
+
+🟢 **APAC counterpart, and the gap in it stated:** [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) *(`19`★, carried)* is a self-hosted LMS **and** training-management system built for **Singapore's SkillsFuture ecosystem** — `SSG`/`TPGateway` API integration, `WSQ` funding workflows, multi-role access, OTP login, QuickBooks finance. 🔵 The funding-workflow integration is the part a generic LMS never has and an APAC training provider cannot operate without. 🔴 **Its grant was NOT readable: `alfredang/ai-cms` returned no payload at `26` root paths, and `AI-LMS-TMS` itself was not re-probed this pass.** Recorded as unread rather than assumed.
+
+### 🔴 `T258-V4` — the content-licence consequence for every vertical row on this shelf
+
+🔴 **`20` Creative Commons licence tokens sit on this shelf alone, and `828` across the base — `191` of them `NonCommercial`.** A vertical platform is shipped with **content**: course templates, question banks, lesson material, curriculum maps. 🔵 **The platform's grant and its content's grant are different grants**, and until this pass the standing gate could name only the first.
+
+🟢 **[`pass258-content-licence-family`](../compose/code/pass258-content-licence-family/) now grades the second**, and the distinction it adds is the one that bites a vertical engagement: `CC-BY-SA-4.0` *(`164` cells)* obliges a studio to release its **adaptations** of the material under the same terms, and `CC-BY-NC-*` *(`191` cells)* forbids the deliverable outright. 🔴 **Neither was distinguishable from `CC0` before this pass.**
+
 ## Pass 257 — 2026-10-17 — **THE PLATFORM LAYER IS COPYLEFT AND THE AI LAYER IS PERMISSIVE: THAT SPLIT IS NOW MEASURED ACROSS EVERY MAJOR LMS, AND IT IS THE WHOLE ARCHITECTURE ARGUMENT.** PLUS: CANVAS DISCONTINUED ITS FREE HOSTED TIER IN MAY `2026`
 
 🔵 **Evidence:** [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv) · [`p257-websearch`](../evidence/p257-websearch.2026-10-17-p257.tsv) *(leg `4`, the LMS leg)*

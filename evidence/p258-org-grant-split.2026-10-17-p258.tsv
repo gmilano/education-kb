@@ -1,0 +1,20 @@
+owner	repo	role_in_the_org	grant_read_first_hand	bytes	sha256_16	verdict	usable_in_paid_deliverable
+edanalytics	earthmover	standalone CLI transform tool	Apache-2.0	11349	428201d4f1cd7fa7	PERMISSIVE	TRUE
+edanalytics	lightbeam	standalone CLI Ed-Fi loader	Apache-2.0	11357	c71d239df91726fc	PERMISSIVE	TRUE
+edanalytics	edfi_api_client	standalone Ed-Fi API client	Apache-2.0	11357	c71d239df91726fc	PERMISSIVE	TRUE
+edanalytics	dbt_synth_data	standalone dbt package	Apache-2.0	11357	c71d239df91726fc	PERMISSIVE	TRUE
+edanalytics	earthmover_edfi_bundles	standalone bundle set	Apache-2.0	11357	c71d239df91726fc	PERMISSIVE	TRUE
+edanalytics	ea_airflow_util	standalone Airflow utils	Apache-2.0	11357	c71d239df91726fc	PERMISSIVE	TRUE
+edanalytics	edfi-etc-sedm-extension	standalone data-model extension	Apache-2.0	11357	c71d239df91726fc	PERMISSIVE	TRUE
+edanalytics	runway	EDU framework webapp	PolyForm Noncommercial 1.0.0	4563	ffcca38841adb694	RESTRICTED:added-restriction	FALSE
+edanalytics	edu_edfi_airflow	EDU framework component	PolyForm Noncommercial 1.0.0	4769	418cc6b6f5dac774	RESTRICTED:added-restriction	FALSE
+edanalytics	edu_project_template	EDU framework component	PolyForm Noncommercial 1.0.0	4769	418cc6b6f5dac774	RESTRICTED:added-restriction	FALSE
+edanalytics	edu_ext_oneroster	EDU framework component	PolyForm Noncommercial 1.0.0	4771	74af9f3dd10bcf53	RESTRICTED:added-restriction	FALSE
+edanalytics	edu_wh	EDU framework component (CARRIED, p-earlier)	PolyForm Noncommercial 1.0.0	4769	-	RESTRICTED:added-restriction	FALSE
+edanalytics	edu_edfi_source	EDU framework component (CARRIED, p-earlier)	PolyForm Noncommercial 1.0.0	4771	-	RESTRICTED:added-restriction	FALSE
+frappe	frappe	the low-code FRAMEWORK	MIT (api-detected)	-	-	PERMISSIVE	TRUE
+frappe	school_automations	school automation app	MIT	1069	002c2696d92b5c8c	PERMISSIVE	TRUE
+frappe	erpnext	the ERP product	GPL-3.0 (api-detected)	-	-	COPYLEFT	TRUE-with-copyleft-duty
+frappe	hrms	the HR product	GPL-3.0 (api-detected)	-	-	COPYLEFT	TRUE-with-copyleft-duty
+frappe	lms	the LMS product	AGPL-3.0	33893	-	COPYLEFT-NETWORK	TRUE-with-NETWORK-copyleft-duty
+frappe	education	the school-ERP product	NO PAYLOAD at 26 root paths on develop	0	-	UNREADABLE	UNKNOWN

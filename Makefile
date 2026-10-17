@@ -140,6 +140,12 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── pass257-restriction-scan (p257: the vocabulary runs on EVERY payload, not only MIT-shaped ones)"; \
 	cd compose/code/pass257-restriction-scan && $(PY) -I test_restriction_scan.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
+	echo "── pass258-content-licence-family (p258: the CC class the gate could not name)"; \
+	cd compose/code/pass258-content-licence-family && $(PY) test_content_licence.py >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
+	echo "── pass258-content-licence-family (p258: the LIVE shelves' CC census, verified)"; \
+	cd compose/code/pass258-content-licence-family && $(PY) -I content_licence.py --census ../../.. >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code || exit 1; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

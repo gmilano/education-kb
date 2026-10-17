@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 258 — 2026-10-17 — **SIX RECIPES FROM THIS PASS'S ROWS, EACH NAMING ITS REPOSITORIES, ITS GRANT DUTY AND THE THING IT MUST NOT COMPOSE.** PLUS THE PATTERN THIS BASE WAS MISSING: A CONTENT-LICENCE GATE IN FRONT OF EVERY OER REUSE
+
+🔵 **Every repository below had its grant read first-hand at `p258` unless marked otherwise.** Evidence: [`p258-grant-payload`](../evidence/p258-grant-payload.2026-10-17-p258.tsv) · [`p258-org-grant-split`](../evidence/p258-org-grant-split.2026-10-17-p258.tsv) · [`p258-cc-census`](../evidence/p258-cc-census.2026-10-17-p258.tsv)
+
+### 🟢 `P258-1` — Licence-clean Ed-Fi data platform *(North America, `6`–`8` weeks)*
+
+**The ask:** a district or state agency wants student data from many assessment vendors in one warehouse, with AI analytics on top, and the studio must be able to sell the result.
+
+| step | repository | grant |
+|---|---|---|
+| 1. ingest + map vendor files | [`edanalytics/earthmover`](https://github.com/edanalytics/earthmover) *(`31`★)* | 🟢 `Apache-2.0` · `11 349` B |
+| 2. start from existing mappings | [`edanalytics/earthmover_edfi_bundles`](https://github.com/edanalytics/earthmover_edfi_bundles) *(`14`★)* | 🟢 `Apache-2.0` |
+| 3. validate + transmit to the Ed-Fi API | [`edanalytics/lightbeam`](https://github.com/edanalytics/lightbeam) *(`12`★)* | 🟢 `Apache-2.0` |
+| 4. read it back programmatically | [`edanalytics/edfi_api_client`](https://github.com/edanalytics/edfi_api_client) *(`15`★)* | 🟢 `Apache-2.0` |
+| 5. orchestrate | [`edanalytics/ea_airflow_util`](https://github.com/edanalytics/ea_airflow_util) + Apache Airflow | 🟢 `Apache-2.0` |
+| 6. special-education compliance surface | [`edanalytics/edfi-etc-sedm-extension`](https://github.com/edanalytics/edfi-etc-sedm-extension) | 🟢 `Apache-2.0` |
+| 7. **build and demo before touching real records** | [`edanalytics/dbt_synth_data`](https://github.com/edanalytics/dbt_synth_data) *(`10`★)* | 🟢 `Apache-2.0` |
+
+🔴 **What this pattern must NOT compose, and the reason it is written at the top of the recipe rather than the bottom:** `edanalytics`' own **`edu_*` framework** — [`edu_wh`](https://github.com/edanalytics/edu_wh), [`edu_edfi_source`](https://github.com/edanalytics/edu_edfi_source), [`edu_edfi_airflow`](https://github.com/edanalytics/edu_edfi_airflow), [`edu_project_template`](https://github.com/edanalytics/edu_project_template), [`edu_ext_oneroster`](https://github.com/edanalytics/edu_ext_oneroster), [`runway`](https://github.com/edanalytics/runway) — is **`PolyForm Noncommercial License 1.0.0`**, read first-hand at `4 563`–`4 771` B. 🔵 **Same organisation, same brand, same documentation, opposite answer.** Write the warehouse models yourself; `dbt_synth_data` gives you data to develop them against.
+
+🟢 **Step 8, the sellable part:** wire [`ashutoshrana/confidence-escalation`](https://github.com/ashutoshrana/confidence-escalation) *(`MIT`)* in front of any analytics the district acts on, so a low-confidence inference escalates to a named human instead of becoming a placement decision.
+
+### 🟢 `P258-2` — The Bavarian model, localised *(EMEA, `8`–`10` weeks)*
+
+**The ask:** a European school authority must put AI in front of pupils and must be able to show a regulator *which* policy, *which* human, and *which* log.
+
+🟢 **Fork the layering, not just the plugins** — this is the whole point of the pattern:
+
+1. **Moodle** as the LMS *(carried; `GPL-3.0`)*.
+2. 🟢 [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) *(`30`★)* — **the policy broker.** One place where the authority binds model, role and quota. Everything else calls it; nothing else talks to a provider.
+3. 🟢 [`bycs-lp/moodle-block_ai_control`](https://github.com/bycs-lp/moodle-block_ai_control) *(`3`★)* — **the oversight surface.** The teacher's switch and quota view. This is how an Article `26` human-oversight duty is *discharged* rather than asserted.
+4. 🟢 Surfaces, chosen per deployment: [`moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) *(`16`★)* for pupil chat, [`moodle-tiny_ai`](https://github.com/bycs-lp/moodle-tiny_ai) *(`9`★)* for teachers inside the editor, [`moodle-mod_aichat`](https://github.com/bycs-lp/moodle-mod_aichat) for chat as a graded activity.
+5. 🟢 Assessment: [`moodle-qbehaviour_deferred_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_deferred_for_aitext) + [`_immediate_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_immediate_for_aitext) make AI-graded free text a real question type; [`moodle-quizaccess_ai`](https://github.com/bycs-lp/moodle-quizaccess_ai) gates quiz access.
+6. 🟢 Pedagogy: [`mod_learningmap`](https://github.com/bycs-lp/mod_learningmap) *(`15`★)*, [`moodle-mod_mootimeter`](https://github.com/bycs-lp/moodle-mod_mootimeter) *(`10`★)*, [`moodle-mod_kanban`](https://github.com/bycs-lp/moodle-mod_kanban) *(`15`★)*.
+
+🟡 **The duty, priced:** `GPL-3.0` throughout *(read first-hand, `35 122`–`35 178` B)*. Modifications shipped to the authority must come with source. 🔵 For a public-sector client that is usually acceptable and sometimes required, so **say it in the proposal rather than discovering it at delivery.**
+
+🔴 **The deadline to design against, not to panic about:** Annex III education obligations apply from **`2027-12-02`**; Article `4` AI-literacy duties and the Article `5(1)(f)` **emotion-inference prohibition** are live now. 🔴 **Nothing in this stack may infer pupil emotion** — that is a prohibition, not a risk tier.
+
+### 🟢 `P258-3` — Curriculum-grounded tutor with a hallucination budget *(LATAM, `6`–`8` weeks)*
+
+**The ask:** a Brazilian school network wants an AI tutor that will not invent curriculum, and wants evidence of that before signing.
+
+1. 🟢 **Ground it:** [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) *(`21`★, **`MIT`**, read first-hand)* — the `BNCC` national curriculum as verified open data: `1 721` learning objectives in JSON/SQLite/CSV, **per-record provenance**, reproducible extraction pipeline. Retrieval target, not training data.
+2. 🟢 **Measure it:** [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) *(`9`★)* — an open **hallucination benchmark over the BNCC**: `15 300` responses from `17` models, public methodology and raw data, **private held-out set against contamination**. 🔵 **Run the client's candidate models through it and put the number in the proposal.** 🔴 Reports `NOASSERTION` on the API — read its payload before redistributing anything from it *(`ACTION YS`)*.
+3. 🟢 **Deliver it inside the LMS they already run:** [`jeanlucio/moodle-mod_playervideo`](https://github.com/jeanlucio/moodle-mod_playervideo) *(carried, `GPL-3.0` at `COPYING.txt`)* — interactive video with AI question generation and grading, **plus captions, easy-read AI summaries and a screen-reader-only mode**.
+4. 🟢 **Keep them coming back:** [`jeanlucio/moodle-block_playerhud`](https://github.com/jeanlucio/moodle-block_playerhud) + [`moodle-filter_playerhud`](https://github.com/jeanlucio/moodle-filter_playerhud) + [`moodle-availability_playerhud`](https://github.com/jeanlucio/moodle-availability_playerhud) — XP, levels, inventory, ranking, and content gated on gamified progress.
+5. 🟢 **Teacher-side:** [`jeanlucio/moodle-mod_syllabus`](https://github.com/jeanlucio/moodle-mod_syllabus) replaces three diverging course-plan documents with one autosaving structured plan — the unglamorous win that gets a pilot renewed.
+
+🔵 **Why this is the strongest LATAM recipe this base can write:** every component is Brazilian or Brazil-targeted, the curriculum grounding is `MIT`, and **the honesty mechanism is an artefact the client can run themselves.**
+
+### 🟢 `P258-4` — Agentic teaching assistant, multilingual-gated *(APAC, `8`–`12` weeks)*
+
+**The ask:** an Indian institution or state wants course-specific teaching assistants, in more than one language, under the Class-`3`-onward mandate.
+
+1. 🟢 **Start from the reference build:** [`microsoft/Agentic-Shiksha`](https://github.com/microsoft/Agentic-Shiksha) *(**`MIT`**, `1 146` B, read first-hand)* — course-specific TA agents on the *Ekalaiva* framework: agent memory, guardrails, multi-agent orchestration, personalised learning.
+2. 🟢 **Put it on a permissive substrate:** [`HKUDS/nanobot`](https://github.com/HKUDS/nanobot) *(`49 102`★, **`MIT`**)* for the agent runtime — tools, memory, `MCP`, multi-agent workflows, self-hosted.
+3. 🔴 **Gate it on language BEFORE delivery:** [`AI4Bharat/IndicIFEval`](https://github.com/AI4Bharat/IndicIFEval) *(carried, `MIT`)* for instruction-following evaluation in Indic languages. 🔵 **A tutor that works in English and not in Tamil is a failed deliverable**, and this is the only way to know before the client does.
+4. 🟢 **Feed it:** [`AI4Bharat/Shoonya-Backend`](https://github.com/AI4Bharat/Shoonya-Backend) *(`28`★, `MIT`)* for annotation and workforce, [`Anudesh-Backend`](https://github.com/AI4Bharat/Anudesh-Backend) *(`14`★, `MIT`)* for instruction collection in Indian languages.
+5. 🟢 **Escalate honestly:** [`ashutoshrana/confidence-escalation`](https://github.com/ashutoshrana/confidence-escalation) *(`MIT`)* — low-confidence answers go to a human, which is also what a supervised-use regime like Singapore's Student Learning Space routing requires.
+
+🔵 **For a Singapore training provider the same spine applies with one addition:** funding workflow. [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) *(`19`★)* carries `SSG`/`TPGateway` and `WSQ` integration — 🔴 **grant NOT read; read it before composing.**
+
+### 🟢 `P258-5` — The content-licence gate in front of every OER reuse *(all regions, `1`–`2` weeks, do it once)*
+
+🔴 **The pattern this base was missing, and the one with the widest blast radius.** Every engagement above reuses *material* — question banks, lesson plans, curriculum maps, course text. **`828` Creative Commons cells on these shelves; `191` of them forbid commercial use; `216` oblige share-alike on adaptations.** Until this pass the standing gate graded `CC0-1.0` and `CC-BY-ND-4.0` identically.
+
+🟢 **The recipe:**
+
+1. 🟢 Put [`pass258-content-licence-family`](../compose/code/pass258-content-licence-family/) in the ingest path. `content_verdict(payload)` returns one of six verdicts; `is_usable_in_deliverable(payload)` answers the commercial question in one call and **fails closed** on anything it does not recognise.
+2. 🟢 Keep [`pass257-restriction-scan`](../compose/code/pass257-restriction-scan/) for **software** grants — the two are complementary and their boundary is asserted by a control, so they cannot silently overlap.
+3. 🔴 Treat `CONTENT-POINTER:not-a-grant` as a **stop**, not a pass. [`datacarpentry/r-socialsci`](https://github.com/datacarpentry/r-socialsci) and [`semester-biology`](https://github.com/datacarpentry/semester-biology) both ship a `LICENSE.md` that **names** `CC-BY` and links to the legal text. 🔵 A pointer tells you what someone intended; it does not grant anything, and the linked text can change.
+4. 🟡 Run `content_licence.py --census <repo>` at the start of every engagement and put the three numbers in the statement of work: what is free, what carries share-alike, what is excluded.
+
+🔵 **The commercial framing for a client conversation:** *"roughly half the open education corpus is yours to sell, a quarter is yours if your adaptations go back out on the same terms, and a quarter is not available to this project at all."* 🟢 Said at kickoff that is diligence; said at delivery it is a renegotiation.
+
+### 🟢 `P258-6` — Owner-channel sourcing for a new engagement *(all regions, `2`–`3` days)*
+
+🟢 **The sourcing recipe this pass validated, now that the channel is known to be open.** When a studio opens an education engagement in an unfamiliar country or sub-sector:
+
+1. 🟢 Seed from the **institutions**, not from topics: ministries, state school clouds, universities, national AI centres, standards bodies.
+2. 🟢 Enumerate each owner un-batched — `user:{owner}`, `sort=updated`, `order=desc` — on the **authenticated `MCP` search endpoint**, which returns `license.spdx_id`, `default_branch`, `archived` and `pushed_at` in one response. 🔴 **Un-batched matters:** `p257` measured `5` starvation events where one prolific owner consumed a batch's whole result window and made its batch-mates invisible.
+3. 🟢 Gate every candidate through `make carried` before reading anything. `72.2 %` were new this pass; the gate is what makes that number trustworthy.
+4. 🔴 Resolve the ref with `git ls-remote --symref` before fetching a grant. Defaults encountered on these shelves: `main`, `master`, `develop`, `release-23.x`, 🔴 **`mobile`** *([`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis))* and `master-forked`. **A guessed `main` reads nothing and looks like an absence.**
+5. 🟢 Read the grant from `raw.githubusercontent.com` — no scope gate — and classify with both instruments.
+6. 🔴 **Check two things the API tells you and a star count does not:** `archived` *(three of `classroom-resources`' autograding actions are archived; [`frappe/schools`](https://github.com/frappe/schools) is archived and says *"this repo is deprecated"* in its own description)*, and whether the owner still exists under that name *([`imsglobal`](https://github.com/imsglobal) returns `total_count=1`; it is now `1EdTech`)*.
+7. 🔴 **Never infer a sibling's grant from the one you read.** Two organisations measured this pass split their grants along the **product** line: `edanalytics` *(`Apache-2.0` tools / `PolyForm-NC` framework)* and `frappe` *(`MIT` framework / `GPL-3.0` ERP / **`AGPL-3.0`** LMS / unreadable school ERP)*. 🔵 **In both, the permissive sibling is the tool and the restricted one is the product the client wants to run.**
+
 ## Pass 257 — 2026-10-17 — **FOUR RECIPES, AND `P257-1` IS THE ONE THIS PASS'S ROWS MAKE POSSIBLE FOR THE FIRST TIME: AN LMS-AGNOSTIC AI TUTOR THAT LINKS AGAINST NOTHING COPYLEFT AND IS WOKEN BY THE LEARNER INSTEAD OF POLLING**
 
 ⏱️ **THIRD pass of `2026-10-17`.** 🔵 **Evidence:** [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv) *(every grant below read first-hand on an `ls-remote`-resolved ref)* · [`p257-row-supply`](../evidence/p257-row-supply.2026-10-17-p257.tsv) · **instrument:** [`pass257-restriction-scan`](../compose/code/pass257-restriction-scan/)

@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — Pass 258 — **WHAT MOVED THIS WINDOW: AN `MIT` AGENTIC-TA REFERENCE BUILD FROM A VENDOR ORG, A GERMAN STATE'S WHOLE AI-IN-LMS SUITE, AND `DeepTutor` MEASURED AT `41 522`★ AGAINST A CARRIED CELL OF `~24k`**
+
+🔵 **Append-only; the window below is kept.** Evidence: [`p258-row-supply`](../evidence/p258-row-supply.2026-10-17-p258.tsv) · [`p258-grant-payload`](../evidence/p258-grant-payload.2026-10-17-p258.tsv) · [`p258-trending`](../evidence/p258-trending.2026-10-17-p258.tsv)
+
+### 🟢 New agents this window
+
+| row | grant | ★ | region | why it is new and why it matters |
+|---|---|---|---|---|
+| 🟢 [`microsoft/Agentic-Shiksha`](https://github.com/microsoft/Agentic-Shiksha) | 🟢 `MIT` · `1 146` B · `2b452eff3b3ff290` | `1` | **APAC** *(India)* | 🟢 **The agentic-TA reference build this base did not have.** Course-specific Teaching Assistant agents on the *Ekalaiva* framework — agent memory, guardrails, multi-agent orchestration, personalised learning, Azure AI Foundry. Created `2026-06-29`; `69` open issues against `1`★, which reads as **active construction, not abandonment** |
+| 🟢 [`HKUDS/nanobot`](https://github.com/HKUDS/nanobot) | 🟢 `MIT` · `1 102` B · `f69260cd9a0a4e07` | 🟢 `49 102` | **APAC** *(HKU)* | the self-hosted agent framework **from `DeepTutor`'s own lab** — WebUI, tools, memory, `MCP`, multi-agent workflows. The substrate a tutor can be built *on* |
+| 🟢 [`ashutoshrana/confidence-escalation`](https://github.com/ashutoshrana/confidence-escalation) | 🟢 `MIT` · `1 070` B · `2fa9e93f196bc2b6` | `0` | North America | **confidence-gated escalation** — multi-signal scoring *(logprob, verbalized, tool risk)*, threshold policies, handlers for LangChain, CrewAI, AutoGen, Google ADK. 🔵 `0`★ and it is the shape a deployer's **human-oversight** duty actually needs |
+
+### 🟢 New AI-in-LMS agents — a German state's production suite, `GPL-3.0`
+
+🟢 **[`bycs-lp`](https://github.com/bycs-lp) is the Bavarian state school cloud (`ByCS`).** `8` new rows this window, grants read first-hand at `35 122`–`35 178` B:
+
+[`moodle-tiny_ai`](https://github.com/bycs-lp/moodle-tiny_ai) *(`9`★, AI in the TinyMCE editor)* · [`moodle-block_ai_control`](https://github.com/bycs-lp/moodle-block_ai_control) *(`3`★, 🟢 **the teacher's kill switch and quota view**)* · [`moodle-mod_aichat`](https://github.com/bycs-lp/moodle-mod_aichat) *(`2`★, chat as a graded activity)* · [`moodle-local_ai_content`](https://github.com/bycs-lp/moodle-local_ai_content) *(`2`★)* · [`moodle-quizaccess_ai`](https://github.com/bycs-lp/moodle-quizaccess_ai) *(`1`★)* · [`moodle-qbehaviour_deferred_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_deferred_for_aitext) + [`_immediate_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_immediate_for_aitext) *(🟢 **AI-graded free text as a real question type**)* · [`moodle-report_ai_analysis`](https://github.com/bycs-lp/moodle-report_ai_analysis)
+
+🔵 **Beside the carried [`moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) *(`30`★)* and [`moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat) *(`16`★)*, this is a complete, layered, government-operated AI estate** — policy, oversight, surfaces, assessment, each separable.
+
+### 🟢 New AI-in-LMS agents — a Brazilian estate, `GPL-3.0` at `COPYING.txt`
+
+🟢 **[`jeanlucio`](https://github.com/jeanlucio)**, `8` new rows *(`35 149` B, `3972dc9744f6499f`)*: [`moodle-block_playerhud`](https://github.com/jeanlucio/moodle-block_playerhud) *(`3`★)* · [`moodle-filter_playerhud`](https://github.com/jeanlucio/moodle-filter_playerhud) *(`2`★)* · [`moodle-availability_playerhud`](https://github.com/jeanlucio/moodle-availability_playerhud) · [`moodle-mod_syllabus`](https://github.com/jeanlucio/moodle-mod_syllabus) · [`moodle-mod_reflect`](https://github.com/jeanlucio/moodle-mod_reflect) · [`moodle-mod_playergroup`](https://github.com/jeanlucio/moodle-mod_playergroup) · [`moodle-mod_playercross`](https://github.com/jeanlucio/moodle-mod_playercross) · [`moodle-mod_playerwords`](https://github.com/jeanlucio/moodle-mod_playerwords)
+
+🔵 The carried [`moodle-mod_playervideo`](https://github.com/jeanlucio/moodle-mod_playervideo) remains the keystone: **AI question generation and grading** with captions, easy-read AI summaries and a screen-reader-only mode.
+
+### 🟢 Star cells measured this window
+
+| row | carried | 🟢 measured `2026-10-17` | note |
+|---|---|---|---|
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `~24 000` | 🟢 **`41 522`** *(`5 238` forks)* | 🔴 the carried cell dates to `p65`. **Still the largest open AI-tutor project in existence** |
+| 🟢 [`HKUDS/nanobot`](https://github.com/HKUDS/nanobot) | — | 🟢 **`49 102`** *(`8 638` forks)* | new |
+| 🟢 [`frappe/lms`](https://github.com/frappe/lms) | — | 🟢 **`3 322`** *(`1 551` forks)* | 🔴 and it is `AGPL-3.0` — see [`verticals/solutions.md`](../verticals/solutions.md) |
+| 🟢 [`autolab/Autolab`](https://github.com/autolab/Autolab) *(carried)* | — | 🟢 **`808`** *(`234` forks)* | CMU autograding; `master` |
+| 🟢 [`microsoft/AI-System`](https://github.com/microsoft/AI-System) | — | 🟢 **`4 359`** | 🔵 `CC-BY-4.0`, a **content** licence on a `4 359`★ "AI education resource" |
+
+### 🔴 Negative results this window
+
+🔴 **`github.com/trending`: `13` repositories, `0` education.** Fourth independent read agreeing *(`p254` `11`/`0`, `p256` `13`/`0`, `p257` `13`/`0`)*. 🔵 The page is full of **agent harnesses and skills** — and [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) is on it, so `DeepTutor`'s lab trends for its tooling and not for its tutor.
+
+🔴 **`WebSearch`: `0` publishable repositories, twenty-seventh consecutive pass.** `8` legs. 🔵 Its one useful offer was [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners), already carried — re-read first-hand this window as `MIT`, `1 141` B, `c2cfccb812fe4821`.
+
+🔴 **`22` of `57` new candidates had no grant at any of `26` root paths — and `9` of those are `Moodle` plugins whose `GPL-3.0` lives in the `version.php` header**, confirmed first-hand. 🔵 Registered as `ACTION YU`; a ladder that reads code headers would move `9` rows, where two passes of widening root *names* moved `0`.
+
+🔴 **[`huggingface/context-course`](https://github.com/huggingface/context-course) *(`109`★)* and [`robotics-course`](https://github.com/huggingface/robotics-course) *(`168`★)* carry no root grant**, while `datasets-course` and `101-course` are `Apache-2.0` — four repositories, one organisation, two grants and two absences.
+
 ## Pass 257 — 2026-10-17 — **THREE INDEPENDENT TRENDING READS, THREE TIMES ZERO: EDUCATION DOES NOT TREND.** THE MOVEMENT THIS WEEK IS A UNIVERSITY AI-TUTOR STACK NOBODY IS STARRING
 
 🔵 **Evidence:** [`p257-trending`](../evidence/p257-trending.2026-10-17-p257.tsv) *(`13` rows)* · [`p257-websearch`](../evidence/p257-websearch.2026-10-17-p257.tsv) *(`11` legs)* · [`p257-opentutor-collision`](../evidence/p257-opentutor-collision.2026-10-17-p257.tsv)

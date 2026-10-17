@@ -1,0 +1,21 @@
+owner	rank	channel	endpoint	query_shape	sort	status	note
+microsoft	37	mcp-authenticated	search/repositories	user:microsoft education AI	updated:desc	READ-PARTIAL	keyword-qualified leg, NOT a bare user: enumeration; owner holds thousands of repos
+classroom-resources	38	mcp-authenticated	search/repositories	user:classroom-resources	updated:desc	READ	total_count=14, 14 legible: FULL coverage
+universaldependencies	39	mcp-authenticated	search/repositories	user:universaldependencies	updated:desc	DECLARED-UNREAD	treebank data org, not education software; deliberately not swept this pass
+nextcloud	40	mcp-authenticated	search/repositories	user:nextcloud education OR learning OR assistant	updated:desc	READ-PARTIAL	keyword-qualified leg; total_count=3 on this leg
+api-evangelist	41	mcp-authenticated	search/repositories	user:api-evangelist education	updated:desc	READ-PARTIAL	total_count=774; read 30. Rows are third-party API PROFILES, not software
+ashutoshrana	42	mcp-authenticated	search/repositories	user:ashutoshrana	updated:desc	READ	total_count=10, 10 legible: FULL coverage
+datacarpentry	43	mcp-authenticated	search/repositories	user:datacarpentry	updated:desc	READ-PARTIAL	total_count=110; read 8
+edanalytics	44	mcp-authenticated	search/repositories	user:edanalytics	updated:desc	READ	total_count=18; 15 legible
+frappe	45	mcp-authenticated	search/repositories	user:frappe education OR learning OR school	updated:desc	READ-PARTIAL	keyword leg total_count=4; second leg user:frappe lms OR education OR erpnext stars:desc total_count=53
+google	46	mcp-authenticated	search/repositories	user:google education learning students	updated:desc	READ-ZERO	total_count=0 - three ANDed keywords. A NEGATIVE of the QUERY SHAPE, not of the owner
+hkuds	47	mcp-authenticated	search/repositories	user:hkuds	updated:desc	READ-PARTIAL	total_count=93; read 12
+huggingface	48	mcp-authenticated	search/repositories	user:huggingface course OR education OR tutor	updated:desc	READ-PARTIAL	keyword leg total_count=22; read 8
+imsglobal	49	mcp-authenticated	search/repositories	user:imsglobal	updated:desc	READ	total_count=1 - THE ORG HAS EMPTIED. Renamed to 1EdTech; 4 carried imsglobal slugs now resolve only by redirect
+jeanlucio	50	mcp-authenticated	search/repositories	user:jeanlucio	updated:desc	READ-PARTIAL	total_count=39; read 15
+alfredang	51	mcp-authenticated	search/repositories	user:alfredang	updated:desc	READ-PARTIAL	total_count=316; read 15
+americasnlp	52	mcp-authenticated	search/repositories	user:americasnlp	updated:desc	READ	total_count=6, 6 legible: FULL coverage
+anthropics	53	mcp-authenticated	search/repositories	-	-	DECLARED-UNREAD	not swept this pass; declared so silence is not read as coverage
+autolab	54	mcp-authenticated	search/repositories	user:autolab	updated:desc	READ	total_count=7, 7 legible: FULL coverage
+bncc-dev	55	mcp-authenticated	search/repositories	user:bncc-dev	updated:desc	READ	total_count=4, 4 legible: FULL coverage
+bycs-lp	56	mcp-authenticated	search/repositories	user:bycs-lp	updated:desc	READ-PARTIAL	total_count=40; read 30

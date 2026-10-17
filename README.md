@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 258 — 2026-10-17 — **`ACTION YR` DISCHARGED WITH EVERY CANDIDATE'S GRANT READ FIRST-HAND, BECAUSE THE CHANNEL THIS BASE THOUGHT WAS CLOSED IS OPEN.** AND THE LICENCE CLASS THESE SHELVES CARRY MOST — `828` CREATIVE COMMONS CELLS, `191` OF THEM UNSHIPPABLE — WAS INVISIBLE TO THE STANDING GATE
+
+⏱️ **FOURTH pass of `2026-10-17`.** 🔵 **The pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**
+
+### 🟢 The headline: a `403` from one endpoint had been generalised to a whole channel
+
+🔴 **`p257` recorded the authenticated GitHub API as a `REPOSITORY-SCOPE GATE` on the evidence of two endpoints, and every pass since rationed itself to an unauthenticated fallback at `10` calls an hour.** 🟢 **The same credential, on the same transport, answered `200` on all `14` calls this pass through `search/repositories` — while a third endpoint on that same transport really is gated.**
+
+| endpoint, one credential, one transport | result |
+|---|---|
+| 🟢 `mcp__github__search_repositories` | `200` × `14`, **no refusal reached** |
+| 🔴 `mcp__github__get_file_contents` | 🔴 `Access denied: … not configured for this session` |
+
+🔵 **"The API is gated" was never a property of the API, the credential or the transport. It was a property of the ENDPOINT.** A single `403` describes one door, not the building — and the cost of that generalisation was sixteen passes of self-rationing.
+
+### 🟢 `ACTION YR` discharged — and the number that matters is not the row count
+
+| | `p256` | `p257` | 🟢 `p258` |
+|---|---|---|---|
+| candidates gated | `100` | `99` | `79` |
+| `NEW` | `44.0 %` | `60.6 %` | 🟢 **`72.2 %`** |
+| **grants read first-hand** | `8`/`100` | `23`/`99` | 🟢 **`57`/`57`** |
+| permissive publishable rows | `5` | `16` | `12` |
+| copyleft rows read first-hand | — | `1` | 🟢 **`18`** |
+
+🟢 **`12` against a falsifier of `5`: discharged, not refuted.** 🔵 **And the honest qualifier, because `12` is below `p257`'s `16`: this pass's margin is not the sort — it is that a `100 %` grant read became affordable.** No sample, no inference, no cell that says *"probably `MIT`"*.
+
+### 🔴 The finding that outranks the rows
+
+🔴 **`828` Creative Commons licence tokens are carried across these ten shelves — the single largest licence class on this base — and the standing classifier knows no Creative Commons family at all.** Measured against the seven canonical texts read first-hand from [`spdx/license-list-data`](https://github.com/spdx/license-list-data):
+
+🔴 **`CC0-1.0` — a public-domain dedication, the most permissive grant that exists — and `CC-BY-ND-4.0`, which forbids distributing an adaptation, grade IDENTICALLY: `UNCLASSIFIED:no-family-no-restriction`, zero hits.** And the cause is measurable, not arguable: `[t for t in RESTRICTION_TERMS if "deriv" in t]` is `[]`.
+
+🟢 **Credit first, because it is the larger half:** `p257`'s vocabulary, built for commercial source-available licences, **already catches every `NonCommercial` variant** without having been designed for it. Nothing non-commercial was ever published here as permissive.
+
+🔴 **The census, published by the instrument rather than asserted:**
+
+| class | tokens | share | can a studio ship it? |
+|---|---|---|---|
+| `CC-BY` / `CC0` | `421` | `50.8 %` | 🟢 yes, with attribution |
+| `CC-BY-SA` | `216` | `26.1 %` | 🟡 yes — **adaptations go back out on the same terms** |
+| 🔴 `CC-BY-NC-*` | **`191`** | **`23.1 %`** | 🔴 **no** |
+
+🔵 **The commercial reading, and it is a supply finding rather than a compliance footnote:** about half the open education corpus is freely sellable, a quarter only under share-alike, and **a quarter is not available to a paid engagement at all.** A proposal promising to *"build on open educational resources"* is promising a corpus `23 %` smaller than it looks.
+
+🟢 **Closed by [`pass258-content-licence-family`](compose/code/pass258-content-licence-family/)** — `76` controls, in `make hooks`, every fixture a payload read first-hand, **`4` mutants run with the control count holding at `76` for each**. 🔴 **And its own mutation run found a hole in itself:** a closed set that was decorative in one direction because a redundant guard downstream masked it — *two guards, one load-bearing and the other assumed to be*, met inside the instrument written to close another instance of that very shape.
+
+### 🔴 The organisation is not the unit of licensing — two orgs, measured
+
+| org | the permissive piece | the piece a client would actually deploy |
+|---|---|---|
+| [`edanalytics`](https://github.com/edanalytics) | 🟢 `earthmover`, `lightbeam`, `edfi_api_client`, `dbt_synth_data`, `earthmover_edfi_bundles`, `ea_airflow_util`, `edfi-etc-sedm-extension` — **`Apache-2.0`** | 🔴 the `edu_*` framework — **`PolyForm Noncommercial 1.0.0`** |
+| [`frappe`](https://github.com/frappe) | 🟢 `frappe` *(framework)*, `school_automations` — **`MIT`** | 🔴 `erpnext` + `hrms` `GPL-3.0`; **`lms` `AGPL-3.0`**; `education` *(`669`★)* **no readable root grant** |
+
+🔴 **In both, the permissive sibling is the TOOL and the restricted one is the PRODUCT.** 🔵 `p257` observed three byte-identical `ls1intum` grants and called it organisation-wide consistency; the observation was true and the generalisation it invites is false. **A studio evaluating an org by reading one repository will consistently read the wrong one.**
+
+🔴 **The sharpest single correction:** [`frappe/lms`](https://github.com/frappe/lms) *(`3 322`★)* calls itself *"100% Open Source Learning Management System"* and is **`AGPL-3.0`**, read first-hand at `33 893` B. Both statements are true; only one of them is a plan. **Hosting a fork as a service for a client triggers source availability on the whole hosted work** — the exact shape an LMS engagement takes.
+
+### 🟢 The rows, with all four regions placed
+
+🟢 **APAC** — [`microsoft/Agentic-Shiksha`](https://github.com/microsoft/Agentic-Shiksha) *(**`MIT`**)*, course-specific **Teaching Assistant agents** on the *Ekalaiva* framework with memory, guardrails and multi-agent orchestration — an `MIT` reference build for exactly the market India's Class-`3` mandate creates; [`HKUDS/nanobot`](https://github.com/HKUDS/nanobot) *(`49 102`★, `MIT`)* as the substrate, from [`DeepTutor`](https://github.com/HKUDS/DeepTutor)'s own lab — 🟢 **`DeepTutor` measured at `41 522`★ against a carried cell of `~24k`.**
+
+🟢 **EMEA** — [`bycs-lp`](https://github.com/bycs-lp), the **Bavarian state school cloud**: a `40`-repository `GPL-3.0` `Moodle` AI estate, layered into **policy** (`ai_manager`, `30`★), **oversight** (`ai_control`), **surfaces** (`block_ai_chat`, `tiny_ai`) and **AI-graded assessment** (`qbehaviour_*_for_aitext`). 🔵 A government's own production code, separated the way an EU **deployer** must be able to demonstrate — sellable as *"the Bavarian model, localised"*.
+
+🟢 **North America** — a complete **`Apache-2.0`** Ed-Fi data platform *(`7` repositories)*, with [`dbt_synth_data`](https://github.com/edanalytics/dbt_synth_data) to build and demo before touching `FERPA`-covered records, and [`ashutoshrana/confidence-escalation`](https://github.com/ashutoshrana/confidence-escalation) *(`MIT`)* as the human-oversight escalation layer.
+
+🟢 **LATAM** — [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) *(`MIT`)*, Brazil's `BNCC` curriculum as verified open data with per-record provenance, beside [`bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) — an open **LLM-hallucination benchmark over the BNCC** *(`15 300` responses, `17` models, private held-out set)*. 🔵 **The honesty mechanism is an artefact the client can run themselves.** Plus [`jeanlucio`](https://github.com/jeanlucio)'s `39`-repository `Moodle` estate pairing gamification with **AI question generation, captions, easy-read summaries and a screen-reader-only mode** — at `0`–`3`★, which is the supply a `stars:desc` pass never sees.
+
+### 🔴 The negatives, stated so silence is not read as coverage
+
+🔴 **`WebSearch` paid `0` publishable repositories for the twenty-seventh consecutive pass** — and this pass **`31` of its `32` regulatory facts were refused by `make claims` as already carried.** 🟢 **The gate working against the pass that owns it is the point:** the education-AI regulatory picture has stopped moving faster than this base reads it. The one new item — China's MoE **"AI Plus Education"** plan — is 🟡 **REPORTED, NOT CONFIRMED** *(DNS failure on the primary source; secondary sources disagree on its hours figure by `33 %`)*.
+
+🔴 **`github.com/trending`: `13` repositories, `0` education** — a fourth independent read agreeing. 🔵 [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) *is* on that page, so `DeepTutor`'s lab trends for its **tooling** and never for its tutor. **Attention flows to the substrate; the application is left to whoever will build it.**
+
+🔴 **`520` root-path probes across `20` grantless rows moved `0`.** 🟢 But `9` of those rows are `Moodle` plugins whose `GPL-3.0` sits in the **`version.php` header**, confirmed first-hand — so the ladder was being extended along the wrong axis for two passes. Registered as **`ACTION YU`**, the next pass's highest priority.
+
+🔴 **[`imsglobal`](https://github.com/imsglobal) has emptied** *(`total_count=1`; now `1EdTech`)*, and `4` carried slugs resolve only by redirect — **a renamed owner and an empty owner are the same observation in an owner sweep.** 🔴 **At least `4` carried rows are `archived`**, including [`frappe/schools`](https://github.com/frappe/schools), which says *"this repo is deprecated"* in its own description.
+
+🔴 **DECLARED GAPS:** [`universaldependencies`](https://github.com/universaldependencies) and [`anthropics`](https://github.com/anthropics) **not swept**; `user:google education learning students` returned `0` on a three-keyword `AND`, which is a negative of the **query shape** and not of the owner; `openeducat/openeducat` **guessed and did not resolve**, so not published; `eur-lex.europa.eu` **not re-probed**; India's Class-`3` mandate still **reported, not confirmed**; [`AmericasNLP`](https://github.com/AmericasNLP)'s shared-task corpus carries **no readable grant**; [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS)'s grant **unread** and marked so where it is used; no sub-Saharan or Middle East school-level instrument advanced.
+
+🔵 **The lesson for the ledger, extending a seven-pass set.** `p256`: *a gate's existence was read as its coverage.* `p257`: *a classifier's scope, not its vocabulary, was the hole.* 🟢 **`p258`: a refusal from one endpoint was generalised to a whole channel — and, in the same pass, three byte-identical grants had been generalised to an organisation.** Both are one failure, **a sample of one or two promoted to a class**, and both counter-measures are the same sentence: **read every member you intend to rely on, and write down what you did not read.**
+
 ## Pass 256 — 2026-10-17 — **`ACTION YJ`, `YK` AND `YL` ALL DISCHARGED, AND THE OWNERS ALREADY ON THESE SHELVES PAID `4×` THE INDEX EVERY PASS HAS BEEN QUERYING.** `5` NEW ROWS, `146` STAR CELLS, A FLAGSHIP THAT WAS NEVER UNMEASURABLE, AND A GATE WHOSE EXISTENCE HAD BEEN READ AS ITS COVERAGE
 
 ⏱️ **SECOND pass of `2026-10-17`, and the dates agree for the first time in three passes.** `p232`–`p254` all carry `2026-10-16`; `p255` committed on `2026-10-17` with measurements taken the previous evening; 🟢 **every `p256` probe ran `2026-10-17`, so its evidence filenames and its commit date match.** 🔵 **Note for a reader of this file: the pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**

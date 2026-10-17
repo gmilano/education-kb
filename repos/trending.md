@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — Pass 258 — **`github.com/trending` READ FIRST-HAND FOR THE FOURTH TIME: `13` REPOSITORIES, `0` EDUCATION. AND THE OWNER CHANNEL — NOW RUNNING ON AN AUTHENTICATED TRANSPORT THAT DOES NOT RATION — RETURNED `72.2 %` NEW ADDRESSES**
+
+🔵 **Append-only; the window below is kept.** Evidence: [`p258-trending`](../evidence/p258-trending.2026-10-17-p258.tsv) *(`13` rows)* · [`p258-row-supply`](../evidence/p258-row-supply.2026-10-17-p258.tsv) *(`79`)* · [`p258-channel-map`](../evidence/p258-channel-map.2026-10-17-p258.tsv) · [`p258-owner-coverage`](../evidence/p258-owner-coverage.2026-10-17-p258.tsv) *(`20` owners)*
+
+### 🔴 `github.com/trending`, `2026-10-17`, read first-hand
+
+| # | repo | language | education? |
+|---|---|---|---|
+| `1` | [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) | Python | 🔴 no |
+| `2` | [`K-Dense-AI/scientific-agent-skills`](https://github.com/K-Dense-AI/scientific-agent-skills) | Python | 🔴 no *(research, not education)* |
+| `3` | [`affaan-m/ECC`](https://github.com/affaan-m/ECC) | JavaScript | 🔴 no |
+| `4` | 🔵 [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything) | Python | 🔴 no — **but see below** |
+| `5` | [`mksglu/context-mode`](https://github.com/mksglu/context-mode) | TypeScript | 🔴 no |
+| `6` | [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo) | TypeScript | 🔴 no |
+| `7` | [`android/skills`](https://github.com/android/skills) | Kotlin | 🔴 no |
+| `8` | [`obra/superpowers`](https://github.com/obra/superpowers) | Shell | 🔴 no |
+| `9` | [`cursor/plugins`](https://github.com/cursor/plugins) | TypeScript | 🔴 no |
+| `10` | [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio) | Python | 🔴 no |
+| `11` | [`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search) | Python | 🔴 no *(career, not education)* |
+| `12` | [`hmjz100/LinkSwift`](https://github.com/hmjz100/LinkSwift) | JavaScript | 🔴 no |
+| `13` | [`xerj-org/xerj`](https://github.com/xerj-org/xerj) | Rust | 🔴 no |
+
+🔴 **`0` of `13`.** With `p254` *(`11`/`0`)*, `p256` *(`13`/`0`)* and `p257` *(`13`/`0`)*, **education does not trend** is a measured verdict on four independent windows. 🔵 Star figures on that page were not cross-checked and are deliberately not published.
+
+🟢 **Row `4` is the one to read carefully.** [`HKUDS`](https://github.com/HKUDS) is the lab behind [`DeepTutor`](https://github.com/HKUDS/DeepTutor) — 🟢 **`41 522`★**, the largest open AI-tutor project there is — and what trends from that lab is `CLI-Anything`, its **agent tooling**. 🔵 **The sector's attention flows to the substrate, never to the application.** The substrate is `MIT` and maintained, which is the studio-friendly half of the finding.
+
+### 🟢 The owner channel this window: `79` candidates, `57` new
+
+| | `p256` | `p257` | 🟢 `p258` |
+|---|---|---|---|
+| transport | `WebFetch`, unauth | `WebFetch` + core | 🟢 **`MCP`, authenticated** |
+| rationing hit | `10`/h | `2` core calls then `403` | 🟢 **none reached in `14` calls** |
+| sort | `stars:desc` | `updated:desc` | `updated:desc` |
+| candidates | `100` | `99` | `79` |
+| `NEW` | `44.0 %` | `60.6 %` | 🟢 **`72.2 %`** |
+| grants read first-hand | `8`/`100` | `23`/`99` | 🟢 **`57`/`57`** |
+
+🟢 **The transport finding, because it changes how every later pass should source:** the authenticated `search/repositories` endpoint is **not** scope-gated through `MCP`, while `get_file_contents` on the **same credential and transport** is. 🔵 **A channel map must be keyed on `(transport, endpoint)`.** `p257` recorded a `403` from two endpoints and every pass since rationed itself to an unauthenticated fallback.
+
+### 🟢 Repositories new to these shelves this window
+
+🟢 **North America — a complete `Apache-2.0` Ed-Fi data stack** *(every grant read first-hand)*: [`edanalytics/earthmover`](https://github.com/edanalytics/earthmover) *(`31`★, `11 349` B)* · [`edfi_api_client`](https://github.com/edanalytics/edfi_api_client) *(`15`★)* · [`earthmover_edfi_bundles`](https://github.com/edanalytics/earthmover_edfi_bundles) *(`14`★)* · [`dbt_synth_data`](https://github.com/edanalytics/dbt_synth_data) *(`10`★, synthetic student data as a `dbt` package)* · [`ea_airflow_util`](https://github.com/edanalytics/ea_airflow_util) *(`4`★)* · [`edfi-etc-sedm-extension`](https://github.com/edanalytics/edfi-etc-sedm-extension) *(special-education data model)*
+
+🔴 **And the trap in the same organisation, read first-hand:** [`runway`](https://github.com/edanalytics/runway) *(`4 563` B)*, [`edu_edfi_airflow`](https://github.com/edanalytics/edu_edfi_airflow), [`edu_project_template`](https://github.com/edanalytics/edu_project_template) and [`edu_ext_oneroster`](https://github.com/edanalytics/edu_ext_oneroster) are **`PolyForm Noncommercial License 1.0.0`** — graded `RESTRICTED:added-restriction` by [`pass257-restriction-scan`](../compose/code/pass257-restriction-scan/) on its **first live population**. 🔵 Joins the carried `edu_wh` and `edu_edfi_source`; the split runs along the **product** line, not the organisation.
+
+🟢 **Global — `Apache-2.0` course repositories:** [`huggingface/datasets-course`](https://github.com/huggingface/datasets-course) *(`13`★)* and [`huggingface/101-course`](https://github.com/huggingface/101-course) *(`38`★)*, byte-identical grants at `11 357` B.
+
+🟢 **LATAM — Brazil's curriculum as data:** [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) *(`21`★, **`MIT`**)* — `1 721` `BNCC` learning objectives in JSON/SQLite/CSV with per-record provenance — and [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) *(`9`★)*, an open **LLM-hallucination benchmark over the BNCC**: `15 300` responses, `17` models, private held-out set. 🔴 Both `bncc-benchmark` and [`bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) *(`9`★)* report **`NOASSERTION`** — `ACTION YS`'s population exactly.
+
+🟡 **LATAM — [`AmericasNLP`](https://github.com/AmericasNLP) shared tasks:** [`americasnlp2026`](https://github.com/AmericasNLP/americasnlp2026) *(`7`★)*, [`americasnlp2025`](https://github.com/AmericasNLP/americasnlp2025), with `americasnlp2021` at `46`★ the most-starred of the series. 🔴 **No payload at `26` root paths on either new row** — the region's Indigenous-language NLP corpus is **unlicensed as far as this base can read**.
+
+🟡 **North America — [`autolab`](https://github.com/autolab) measured and partly archived:** [`Autolab`](https://github.com/autolab/Autolab) `808`★ and [`Tango`](https://github.com/autolab/Tango) `49`★ *(both carried)*; [`autograders-examples`](https://github.com/autolab/autograders-examples) *(`7`★)* new but **no root grant**; 🔴 [`autolab-oneclick`](https://github.com/autolab/autolab-oneclick) and [`autolab.github.io`](https://github.com/autolab/autolab.github.io) are **`archived`**.
+
+### 🔴 Archived and moved rows — the two things stars do not tell you
+
+🔴 **Archived repositories this base carries or nearly published:** three of [`classroom-resources`](https://github.com/classroom-resources)' autograding actions — [`autograding-grading-reporter`](https://github.com/classroom-resources/autograding-grading-reporter) *(`11`★)*, [`autograding-command-grader`](https://github.com/classroom-resources/autograding-command-grader) *(`6`★)*, [`autograding`](https://github.com/classroom-resources/autograding) — are `archived: true`, **and all three are carried on these shelves**. 🔴 [`frappe/schools`](https://github.com/frappe/schools) *(`49`★)* is archived and says so in its own description: *"Merged with frappe/erpnext - this repo is deprecated"*.
+
+🔵 **A read-only upstream is not a foundation a studio builds on**, and `archived` is a field the `MCP` channel returns for free. Registered as `ACTION YW`: census the `archived` state of every carried row.
+
+🔴 **[`imsglobal`](https://github.com/imsglobal) has emptied — `user:imsglobal` returns `total_count=1`**, a Pages stub. The organisation is now `1EdTech`; the `4` `imsglobal/*` slugs on these shelves resolve **only by redirect**. 🔵 **In an owner sweep a renamed owner and an empty owner are the same observation.**
+
 ## Pass 257 — 2026-10-17 — **THE WEEK'S TRENDING SIGNAL IS INSTITUTIONAL, NOT VIRAL: `11` `yetanalytics` REPOS AND A TUM AI-TUTOR STACK PUSHED IN ONE WINDOW, WHILE `github.com/trending` SHOWS `0` EDUCATION FOR THE THIRD READ RUNNING**
 
 🔵 **Evidence:** [`p257-trending`](../evidence/p257-trending.2026-10-17-p257.tsv) · [`p257-row-supply`](../evidence/p257-row-supply.2026-10-17-p257.tsv) *(`99` candidates)* · [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv) *(`23` payloads)*

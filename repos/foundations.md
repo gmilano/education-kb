@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 258 — 2026-10-17 — **A LICENCE-CLEAN `Apache-2.0` K-12 DATA STACK, AND THE INFERENCE IT REFUTES: THE ORGANISATION IS NOT THE UNIT OF LICENSING.** TWO ORGS MEASURED, BOTH SPLIT ALONG THE PRODUCT LINE, AND IN BOTH THE PERMISSIVE SIBLING IS THE TOOL WHILE THE RESTRICTED ONE IS THE PRODUCT YOU WOULD ACTUALLY DEPLOY
+
+🔵 **Evidence:** [`p258-org-grant-split`](../evidence/p258-org-grant-split.2026-10-17-p258.tsv) *(`19` rows, `2` organisations, every `p258` cell read first-hand)* · [`p258-grant-payload`](../evidence/p258-grant-payload.2026-10-17-p258.tsv) · [`p258-ladder-reprobe`](../evidence/p258-ladder-reprobe.2026-10-17-p258.tsv)
+
+### 🟢 `T258-F1` — the foundation rows: `7` `Apache-2.0` repositories that compose into an Ed-Fi data platform
+
+🟢 **[`edanalytics`](https://github.com/edanalytics) carries a complete, permissively-licensed K-12 data stack**, and this base had exactly one of its seven pieces. Every grant below read first-hand on an `ls-remote`-resolved ref:
+
+| row | ★ | grant | payload | role in the stack |
+|---|---|---|---|---|
+| 🟢 [`earthmover`](https://github.com/edanalytics/earthmover) | `31` | `Apache-2.0` | 🔵 **`11 349` B** · `428201d4f1cd7fa7` | **transform**: tabular sources → any text format, via YAML + Jinja |
+| 🟢 [`lightbeam`](https://github.com/edanalytics/lightbeam) *(carried)* | `12` | `Apache-2.0` | `11 357` B · `c71d239df91726fc` | **load**: validate and transmit JSONL into an Ed-Fi API |
+| 🟢 [`edfi_api_client`](https://github.com/edanalytics/edfi_api_client) | `15` | `Apache-2.0` | `11 357` B · `c71d239df91726fc` | **client**: Ed-Fi API in Python |
+| 🟢 [`earthmover_edfi_bundles`](https://github.com/edanalytics/earthmover_edfi_bundles) | `14` | `Apache-2.0` | `11 357` B · `c71d239df91726fc` | **mappings**: ready-made bundles for assessment sources |
+| 🟢 [`dbt_synth_data`](https://github.com/edanalytics/dbt_synth_data) | `10` | `Apache-2.0` | `11 357` B · `c71d239df91726fc` | **synthetic data** as a `dbt` package |
+| 🟢 [`ea_airflow_util`](https://github.com/edanalytics/ea_airflow_util) | `4` | `Apache-2.0` | `11 357` B · `c71d239df91726fc` | **orchestration** utilities |
+| 🟢 [`edfi-etc-sedm-extension`](https://github.com/edanalytics/edfi-etc-sedm-extension) | `0` | `Apache-2.0` | `11 357` B · `c71d239df91726fc` | **Special Education Data Model** extension |
+
+🔵 **The one byte anomaly, recorded because `p257` settled that byte counts screen rather than decide:** `earthmover`'s grant is `11 349` B against the `11 357` B this base sees on every other Apache payload, and it hashes differently. Read in full: canonical `Apache-2.0`, `0` restriction hits. The `8`-byte difference is in the appended copyright line. 🟢 **Which is `ACTION XW`'s conclusion holding on new data** — the band is a screen, not a test.
+
+### 🔴 `T258-F2` — the inference this refutes, and it was this base's own
+
+🔴 **`p257` observed that three `ls1intum` grants were byte-identical and wrote that this is *"what an organisation-wide `MIT` looks like when it is actually applied consistently"*.** That observation was true. 🔴 **The generalisation it invites is false, and `p258` measured it on two organisations.**
+
+🟡 **First, credit where it is due: this base ALREADY knew the `edanalytics` half.** It carries [`edu_wh`](https://github.com/edanalytics/edu_wh) *(`19`★)* and [`edu_edfi_source`](https://github.com/edanalytics/edu_edfi_source) *(`10`★)* as **`PolyForm Noncommercial License 1.0.0`**, read first-hand at `4 771`/`4 769` B by an earlier pass. 🔵 **What `p258` adds is the other side of the line, and the line itself.**
+
+| `edanalytics` | role | grant | shippable in a paid deliverable? |
+|---|---|---|---|
+| 🟢 `earthmover`, `lightbeam`, `edfi_api_client`, `dbt_synth_data`, `earthmover_edfi_bundles`, `ea_airflow_util`, `edfi-etc-sedm-extension` | the **standalone tools** | 🟢 `Apache-2.0` | 🟢 **yes** |
+| 🔴 `runway`, `edu_edfi_airflow`, `edu_project_template`, `edu_ext_oneroster`, `edu_wh`, `edu_edfi_source` | the **`EDU` framework** | 🔴 `PolyForm Noncommercial 1.0.0` | 🔴 **no** |
+
+🟢 **The split is along the PRODUCT line, not the organisation line.** `4` of those restricted rows are new to these shelves this pass, each graded `RESTRICTED:added-restriction` by [`pass257-restriction-scan`](../compose/code/pass257-restriction-scan/) on a payload read first-hand — 🟢 **the instrument `p257` built one pass earlier, firing on its first live population and catching something this base would otherwise have shelved as a `NONE` family.**
+
+🔵 **And `runway`'s payload is `4 563` B where the carried cells are `4 769`/`4 771` B:** the bare PolyForm text without the `EDU` header note. Same licence, three byte counts, one organisation.
+
+🔴 **Second organisation, independent, same shape — and wider:**
+
+| [`frappe`](https://github.com/frappe) | role | grant | duty |
+|---|---|---|---|
+| 🟢 [`frappe`](https://github.com/frappe/frappe) *(`10 948`★)* | the low-code **framework** | 🟢 `MIT` | none |
+| 🟢 [`school_automations`](https://github.com/frappe/school_automations) *(`6`★)* | a school app | 🟢 `MIT` *(`1 069` B, read first-hand)* | none |
+| 🟡 [`erpnext`](https://github.com/frappe/erpnext) *(`40 253`★)* | the **ERP** product | 🟡 `GPL-3.0` | disclosure on distribution |
+| 🟡 [`hrms`](https://github.com/frappe/hrms) *(`8 930`★)* | the **HR** product | 🟡 `GPL-3.0` | disclosure on distribution |
+| 🔴 [`lms`](https://github.com/frappe/lms) *(`3 322`★)* | the **LMS** product | 🔴 **`AGPL-3.0`** *(`33 893` B, read first-hand)* | 🔴 **NETWORK** disclosure — see [`verticals/solutions.md`](../verticals/solutions.md) |
+| 🔴 [`education`](https://github.com/frappe/education) *(`669`★)* | the **school-ERP** product | 🔴 **no payload at `26` root paths on `develop`** | 🔴 unknown |
+
+🔴 **In both organisations the permissive sibling is the TOOL and the restricted one is the PRODUCT a client would actually deploy.** 🔵 That is the planning consequence, and it is sharper than the licence trivia: **a studio that evaluates an organisation by reading one repository's grant will consistently read the wrong one**, because the permissive piece is the one with the inviting name and the low star count, while the thing the client wants to run carries the duty.
+
+🟢 **The rule this replaces the inference with:** read the grant of **every** repository you intend to ship, at the ref you intend to ship, and treat a sibling's grant as a hypothesis. 🔵 `make carried` gates **addresses**; it does not gate **facts** — `runway` was `NEW` as a slug while `PolyForm-at-edanalytics` was a carried fact, so "new row" and "new knowledge" are different measures and this pass needed both.
+
+### 🟢 `T258-F3` — supporting foundation rows read first-hand
+
+🟢 [`oppia/oppia`](https://github.com/oppia/oppia) *(carried)* — **`Apache-2.0`**, `11 358` B, `cfc7749b96f63bd3`, default ref `develop`. 🔵 Re-read first-hand this pass; the structured-lesson platform remains the most permissively licensed general learning platform of real size this base carries.
+
+🟢 [`huggingface/datasets-course`](https://github.com/huggingface/datasets-course) and [`huggingface/101-course`](https://github.com/huggingface/101-course) — **`Apache-2.0`**, `11 357` B, byte-identical grants. 🔴 **But [`context-course`](https://github.com/huggingface/context-course) *(`109`★)* and [`robotics-course`](https://github.com/huggingface/robotics-course) *(`168`★)* carry no payload at any of `26` root paths** — the same organisation, the same product family, four repositories, two grants and two absences. A third witness for `T258-F2`.
+
+🟢 [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) *(carried)* — **`MIT`**, `1 141` B, `c2cfccb812fe4821`, re-read first-hand. 🟢 [`microsoft/AI-System`](https://github.com/microsoft/AI-System) *(`4 359`★)* — 🔵 **`CC-BY-4.0`**, `18 653` B: a `4 359`★ *"System for AI Education Resource"* under a **content** licence, graded `UNCLASSIFIED` by the standing gate until this pass and `CONTENT-PERMISSIVE` by [`pass258-content-licence-family`](../compose/code/pass258-content-licence-family/).
+
+🔴 **`ACTION YP` re-answered and still negative:** the `20` candidates with no payload on the `15`-name ladder, re-probed against the full `26`-name `TIER_A`: **`0` moved**. With `p257`'s `70` probes and `0` moved, the root-name widening has now returned nothing on two independent populations. 🟢 **The grants are not missing — they are in `version.php`.** See [`agents/top.md`](../agents/top.md) `T258-E`; registered as `ACTION YU`.
+
 ## Pass 257 — 2026-10-17 — **A BUDGET METER THAT CANNOT SEE THE SPEND YOU JUST MADE IS NOT A METER: `/rate_limit` READ THROUGH `WebFetch` IS CACHED `15` MINUTES.** PLUS: A NEW CORE ENDPOINT THAT WORKS TWICE, AND THE BATCHING HAZARD THAT STARVES FIVE OWNERS IN SILENCE
 
 🔵 **Evidence:** [`p257-channel-map`](../evidence/p257-channel-map.2026-10-17-p257.tsv) *(`12` rows, `3` transports)* · [`p257-owner-coverage`](../evidence/p257-owner-coverage.2026-10-17-p257.tsv) *(`18` owners, read/starved each)* · [`p257-none-ladder`](../evidence/p257-none-ladder.2026-10-17-p257.tsv) *(`70` probes)*

@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 258 — 2026-10-17 — **THE MARKET MAP, RE-CUT ALONG THE LINE THAT ACTUALLY DECIDES AN ENGAGEMENT: NOT WHAT EXISTS IN A REGION, BUT WHAT CAN BE SHIPPED THERE UNDER A LICENCE A CLIENT WILL PAY FOR.** `12` PERMISSIVE AND `18` COPYLEFT ROWS PLACED, AND `191` OF THIS BASE'S OWN CONTENT CELLS RULED OUT OF A PAID DELIVERABLE
+
+🔵 **Evidence:** [`p258-org-grant-split`](../evidence/p258-org-grant-split.2026-10-17-p258.tsv) · [`p258-cc-census`](../evidence/p258-cc-census.2026-10-17-p258.tsv) *(`828` tokens)* · [`p258-websearch`](../evidence/p258-websearch.2026-10-17-p258.tsv) *(`8` legs, `4` regional)* · [`p258-owner-coverage`](../evidence/p258-owner-coverage.2026-10-17-p258.tsv)
+
+### 🔴 `T258-M1` — the market fact this pass actually established
+
+🔴 **`23.1 %` of the licence cells this base carries for instructional material cannot be shipped in a paid client deliverable**, and until this pass nothing in the pipeline could tell them from a public-domain dedication. That is a **supply** finding, not a compliance footnote: it says the open education corpus is substantially smaller than its headline size when the buyer is commercial.
+
+| the corpus, as this base carries it | tokens | share | available to a paid engagement |
+|---|---|---|---|
+| `CC-BY` / `CC0` | `421` | `50.8 %` | 🟢 yes, with attribution |
+| `CC-BY-SA` | `216` | `26.1 %` | 🟡 yes — **but adaptations must be released on the same terms** |
+| 🔴 `CC-BY-NC-*` | `191` | `23.1 %` | 🔴 **no** |
+
+🔵 **The commercial reading:** roughly **half** the open education content corpus is freely sellable, a quarter is sellable only if the client accepts that the studio's adaptations go back out under share-alike, and 🔴 **a quarter is not sellable at all.** A proposal that promises "we'll build on open educational resources" without that split priced in is promising a corpus `23 %` smaller than it looks.
+
+### 🟢 `T258-M2` — the supply channel, re-measured, and what it means for sourcing
+
+🟢 **The owner channel is now this base's primary, and it is cheaper than every pass before it assumed.** `p258` ran `20` owners on an authenticated transport that answered `200` on all `14` calls with no refusal reached, against `p257`'s `10`-calls-per-hour ceiling. 🟢 **`57` of `79` candidates `NEW` — `72.2 %`, up from `60.6 %` and `44.0 %`** — and, for the first time, **every** candidate's grant read first-hand rather than a sample.
+
+🔴 **Two sourcing hazards measured this pass, both of which would cost a real engagement:**
+
+🔴 **A renamed owner is indistinguishable from an empty one.** [`imsglobal`](https://github.com/imsglobal) now returns `total_count=1`; the organisation became `1EdTech`. The `4` `imsglobal/*` slugs on these shelves resolve **only by redirect**. 🔵 In an owner-channel sourcing pass, "that organisation has nothing" and "that organisation moved" look the same.
+
+🔴 **A `774`-repository "education" owner that ships no education software.** [`api-evangelist`](https://github.com/api-evangelist) carries third-party **API profiles** — descriptions of other companies' API surfaces, tagged `education`, `edtech`, `k-12`. 🔵 Genuinely useful as a **market map** input and useless as a build input, and a careless pass publishes `api-evangelist/zzish` as an education agent when it is a profile *of* Zzish.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The sellable work is a licence-clean Ed-Fi data platform, and this pass found all seven pieces of it.** [`earthmover`](https://github.com/edanalytics/earthmover) *(`31`★)* + [`lightbeam`](https://github.com/edanalytics/lightbeam) + [`edfi_api_client`](https://github.com/edanalytics/edfi_api_client) + [`earthmover_edfi_bundles`](https://github.com/edanalytics/earthmover_edfi_bundles) + [`ea_airflow_util`](https://github.com/edanalytics/ea_airflow_util) + [`edfi-etc-sedm-extension`](https://github.com/edanalytics/edfi-etc-sedm-extension), all **`Apache-2.0`** read first-hand, plus [`dbt_synth_data`](https://github.com/edanalytics/dbt_synth_data) to build and demo the pipeline **before** the client trusts the studio with `FERPA`-covered records.
+
+🔴 **And the trap, which is the deliverable half of this finding:** the same organisation's `edu_*` framework — `edu_wh`, `edu_edfi_source`, `edu_edfi_airflow`, `edu_project_template`, `edu_ext_oneroster`, `runway` — is **`PolyForm Noncommercial 1.0.0`**. 🔵 The `Apache` tools and the non-commercial warehouse layer sit in one GitHub organisation, under one brand, documented together. **Compose the tools; re-implement the warehouse layer.**
+
+🟡 **Demand is district-level, dated and already biting** — Ohio's mandate elapsed `2026-07-01`, Florida's districts have until `2027-07-01` with **parental opt-in** before a pupil interacts with AI and a comparable non-AI alternative required, North Carolina `2027-06-30`, Oklahoma before `2027`–`28`, with Maryland funding a named coordinator. 🔵 *(All carried facts, re-corroborated this pass and refused as new by `make claims` — see [`intel/trends.md`](trends.md).)* 🟢 **The buyable thing is the policy-to-configuration bridge**: a district has a written AI policy and no way to enforce it inside its LMS. [`ashutoshrana/confidence-escalation`](https://github.com/ashutoshrana/confidence-escalation) *(`MIT`)* is the escalation half, and the Bavarian `ai_manager`/`ai_control` pair below is the configuration half.
+
+### EMEA
+
+🟢 **The strongest regional row-set this pass, and it is a government's own code.** [`bycs-lp`](https://github.com/bycs-lp) — the Bavarian state school cloud (`ByCS`) — operates a `40`-repository `Moodle` AI estate in the open, `GPL-3.0`, layered into **policy** ([`moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager), `30`★), **oversight** ([`moodle-block_ai_control`](https://github.com/bycs-lp/moodle-block_ai_control)), **surfaces** ([`moodle-block_ai_chat`](https://github.com/bycs-lp/moodle-block_ai_chat), [`moodle-tiny_ai`](https://github.com/bycs-lp/moodle-tiny_ai)) and **AI-graded assessment** ([`moodle-qbehaviour_*_for_aitext`](https://github.com/bycs-lp/moodle-qbehaviour_deferred_for_aitext)).
+
+🔵 **Why that layering is the commercial asset:** an EU **deployer**'s duties under Article `26` are *use per the provider's instructions, assign human oversight to competent staff, keep logs*. `ByCS` has shipped each as a separable component. 🟢 **A studio can sell "the Bavarian model, localised" to any other European authority** — a reference architecture with a public implementation, rather than a slide. 🟡 The price is the `GPL-3.0` disclosure duty, which for a public-sector client is usually acceptable and occasionally mandatory.
+
+🟡 **Timing is on the studio's side and against the panic:** the Annex III education obligations now apply from **`2027-12-02`** *(carried; the Digital Omnibus moved them)*, while Article `4` AI-literacy duties and the Article `5(1)(f)` prohibition on **emotion inference** in education are live now. 🔵 **Sell deployer readiness in `2026`–`27`, not high-risk conformity.**
+
+### APAC
+
+🟢 **The row of the pass is here:** [`microsoft/Agentic-Shiksha`](https://github.com/microsoft/Agentic-Shiksha) — **`MIT`**, read first-hand — course-specific **Teaching Assistant agents** on the *Ekalaiva* framework, with agent memory, guardrails and multi-agent orchestration. 🔵 An `MIT` reference architecture for an agentic TA, aimed squarely at the market India's **Class-`3` AI mandate** *(carried; reported, not confirmed)* creates from the `2026`–`27` academic year with curriculum led by IIT Madras.
+
+🟢 **The multilingual gate is the part nobody budgets and this base can now name:** [`AI4Bharat/IndicIFEval`](https://github.com/AI4Bharat/IndicIFEval) *(carried, `MIT`)* for instruction-following evaluation in Indic languages, beside [`Shoonya-Backend`](https://github.com/AI4Bharat/Shoonya-Backend) and [`Anudesh-Backend`](https://github.com/AI4Bharat/Anudesh-Backend) for annotation and instruction collection. 🔵 **A tutor that works in English and not in Tamil is a failed deliverable, and the eval is the only way to know before the client does.**
+
+🟢 **Singapore is a funding-workflow market, not a model market:** [`alfredang/AI-LMS-TMS`](https://github.com/alfredang/AI-LMS-TMS) *(`19`★)* integrates `SSG`/`TPGateway` and `WSQ` funding into the LMS itself. 🔴 Grant **unread** — stated rather than assumed. 🟡 MOE routes Primary `4` AI use through the Student Learning Space under teacher supervision *(carried)*, so the sellable work is **supervised, in-platform** tooling, not open chat.
+
+🟡 **China is a compliance-scale market:** the MoE **"AI Plus Education"** action plan through `2030` is 🟡 **REPORTED, NOT CONFIRMED** — `english.www.gov.cn` failed DNS resolution through every channel this pass, so it rests on one secondary tracker, and the reported annual-hours figures *(`6` vs `8`)* **conflict across sources**. 🔵 Recorded as a lead, not a planning input.
+
+🟢 [`HKUDS`](https://github.com/HKUDS) remains the region's centre of gravity in open tutoring: [`DeepTutor`](https://github.com/HKUDS/DeepTutor) at 🟢 **`41 522`★** *(measured this pass; these shelves carried `~24k`)* and [`nanobot`](https://github.com/HKUDS/nanobot) at `49 102`★, **`MIT`**, as the agent substrate under it.
+
+### LATAM
+
+🟢 **The region's opening is accessibility and curriculum alignment, and both have permissive or near-permissive code this pass placed.** [`jeanlucio`](https://github.com/jeanlucio)'s `39`-repository `Moodle` estate *(`GPL-3.0` at `COPYING.txt`)* pairs gamification (`PlayerHUD`: XP, levels, inventory, ranking, progress-gated content) with [`moodle-mod_playervideo`](https://github.com/jeanlucio/moodle-mod_playervideo) — **AI question generation and grading plus captions, easy-read AI summaries and a screen-reader-only mode**. 🔵 Built by one Brazilian maintainer at `0`–`3`★, which is precisely the supply a `stars:desc` sourcing pass never sees.
+
+🟢 **Curriculum alignment has a dataset now:** [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) *(`21`★, **`MIT`**)* — Brazil's `BNCC` national curriculum as verified open data, `1 721` learning objectives in JSON/SQLite/CSV with per-record provenance and a reproducible extraction pipeline — plus [`bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) *(`9`★)*, an open **LLM-hallucination benchmark over the BNCC**: `15 300` responses from `17` models with a private held-out set against contamination. 🔴 **Both `bncc-pacotes` and `bncc-benchmark` report `NOASSERTION`** on the API — `ACTION YS`'s exact population, and a reason to read those two payloads before shipping either.
+
+🔵 **Why that benchmark is the commercially interesting one:** it measures how often a model **invents** a curriculum objective. A Brazilian ministry or school network buying an AI tutor will ask precisely that, and 🟢 **the answer already exists as open data a studio can cite rather than commission.**
+
+🟡 **Context, carried and unchanged:** `13` of `19` LAC countries do not teach AI early in schools, against `87 %` institutional use and `26 %` with a strategy; UNESCO's regional **Observatory on AI in Education for LAC** launched at ECLAC in Santiago. 🔵 The gap between institutional use and institutional strategy **is** the consulting market.
+
+🔴 **DECLARED REGIONAL GAPS:** no sub-Saharan African instrument advanced this pass *(South Africa's draft policy remains withdrawn)*; no Middle East school-level instrument; `eur-lex.europa.eu` **not re-probed**, so the EU reading still rests on secondary channels; [`AmericasNLP`](https://github.com/AmericasNLP)'s shared-task repositories *(`americasnlp2026`, `2025`)* carry **no payload at `26` root paths**, so the region's Indigenous-language NLP corpus is **unlicensed as far as this base can read** — which is a gap in the supply, not in the search.
+
 ## Pass 257 — 2026-10-17 — **THE EU DISJUNCTION IS CLOSED WITH A NAMED INSTRUMENT: REGULATION (EU) `2026/1744`, ANNEX III MOVED TO `2027-12-02`.** AND THE SUPPLY MAP NOW HAS AN APAC AND A LATAM ROW THAT ARE NOT PLACEHOLDERS
 
 🔵 **Evidence:** [`p257-websearch`](../evidence/p257-websearch.2026-10-17-p257.tsv) *(`11` legs, `4` regional + `1` EU-primary + `1` sub-Saharan)* · [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv) *(`19` permissive payloads, region-tagged)*

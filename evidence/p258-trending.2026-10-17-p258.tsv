@@ -1,0 +1,14 @@
+rank	slug	language	education_related
+1	anthropics/claude-plugins-official	Python	NO
+2	K-Dense-AI/scientific-agent-skills	Python	NO (research, not education)
+3	affaan-m/ECC	JavaScript	NO
+4	HKUDS/CLI-Anything	Python	NO (same owner as DeepTutor)
+5	mksglu/context-mode	TypeScript	NO
+6	ruvnet/ruflo	TypeScript	NO
+7	android/skills	Kotlin	NO
+8	obra/superpowers	Shell	NO
+9	cursor/plugins	TypeScript	NO
+10	debpalash/VoiceStudio	Python	NO
+11	MadsLorentzen/ai-job-search	Python	NO (career, not education)
+12	hmjz100/LinkSwift	JavaScript	NO
+13	xerj-org/xerj	Rust	NO
