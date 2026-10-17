@@ -47,8 +47,12 @@ FLOORS = uf.read_floors()
 # file" as an arithmetic error would be re-deriving this note.
 # p255: +1 file and +1 gated — `p255-channel-reachability` (ACTION YE) entered the gate
 # in the same pass it was written, so both literals move together this time.
-chk("python test files on disk", len(ROWS), 206)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 25)
+# p256: +1 file and +1 gated — `pass256-ladder-closure`, likewise written and gated in one
+# pass.  TWO gate steps landed but only ONE is a python TEST file: the second runs
+# `ladder_closure.py --verify`, which is the p254 shape (a verifier is not a suite), so the
+# `gated` literal counts the suite and not the verifier.  The `ungated` figure does NOT move.
+chk("python test files on disk", len(ROWS), 207)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 26)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",

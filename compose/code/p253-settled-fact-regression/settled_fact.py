@@ -67,6 +67,14 @@ HEDGES = (
     "unresolved",
     "two candidates",
     "cannot be closed",
+    # p256: the hedge that defeated this instrument ONE PASS after it was built.  p255 did
+    # not re-open the EU date; it published `openedx/edx-platform`'s star cell as
+    # `UNMEASURABLE` because `edx-platform in:name` returns 217 forks -- while this base had
+    # SETTLED at p225 (`ACTION SD`) that the project's canonical name is
+    # `openedx/openedx-platform`, which the same query shape resolves on the first row
+    # (8 203 stars, measured p256).  An inability is a claim like any other, and a claim this
+    # base has already settled may not be re-published without citing what settled it.
+    "unmeasurable",
 )
 
 

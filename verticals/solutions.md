@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 256 — 2026-10-17 — **THE OPEN edX LAYER IS NOW NAMED PIECE BY PIECE RATHER THAN AS ONE ROW, AND ITS FLAGSHIP HAS A STAR CELL FOR THE FIRST TIME: `8 203`★.** PLUS: THE PERMISSIVE PIECES OF THE PLATFORM STACK ARE THE PERIPHERY, AND THAT IS THE ENGAGEMENT-SHAPING FACT
+
+⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) · [`p256-grant-payload`](../evidence/p256-grant-payload.2026-10-17-p256.tsv) · [`p256-websearch`](../evidence/p256-websearch.2026-10-17-p256.tsv) *(leg `3`: the education-ERP leg)*
+
+### 🟢 `T256-V1` — Open edX, decomposed, with grants and stars measured this pass
+
+🔵 **This shelf carried Open edX as one row for a long time.** The owner sweep returned `18` of its repositories with grants and stars, and the decomposition is the thing a studio actually needs — because 🔴 **the platform is `AGPL-3.0` and the pieces you build ON are `Apache-2.0`.**
+
+| piece | grant | ★ | pushed | what it is |
+|---|---|---|---|---|
+| 🔴 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🔴 `AGPL-3.0` · `35 136` B · `e12d785697426f9d` | 🟢 **`8 203`** | `2026-10-16` | **the LMS and Studio.** The canonical name after the rename; `openedx/edx-platform` resolves to the same `HEAD` *(`d7859be168df`)* |
+| 🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 `Apache-2.0` | `471` | `2026-10-16` | the component framework — **the extension point** |
+| 🟢 [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) | 🟢 `Apache-2.0` · `11 358` B at `LICENSE.TXT` | `69` | `2026-10-14` | 🟢 **NEW** — the workbench that runs an XBlock **without** a full platform |
+| 🟢 [`openedx/paragon`](https://github.com/openedx/paragon) | 🟢 `Apache-2.0` · `10 174` B | `141` | `2026-10-16` | 🟢 **NEW** — the design system the front-ends are built from |
+| 🟢 [`openedx/codejail`](https://github.com/openedx/codejail) | 🟢 `Apache-2.0` | `478` | `2026-10-16` | sandboxed execution of learner-submitted code |
+| 🟢 [`openedx/edx-lint`](https://github.com/openedx/edx-lint) | 🟢 `Apache-2.0` · `11 358` B at `LICENSE.txt` | `52` | `2026-10-12` | 🟢 **NEW** — the org's shared lint/repo tooling |
+| 🔴 [`openedx/frontend-app-learning`](https://github.com/openedx/frontend-app-learning) | 🔴 `AGPL-3.0` | `71` | `2026-10-16` | the React course experience |
+| 🔴 [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) | 🔴 `AGPL-3.0` | `64` | `2026-10-14` | **open response assessment** — the natural seat for an AI grader |
+| 🔴 [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | 🔴 `AGPL-3.0` | `69` | `2026-10-14` | proctoring integration |
+| 🔴 [`openedx/event-tracking`](https://github.com/openedx/event-tracking) | 🔴 `AGPL-3.0` | `63` | `2026-10-13` | the event bus every analytics build starts from |
+| 🔴 [`openedx/course-discovery`](https://github.com/openedx/course-discovery) | 🔴 `AGPL-3.0` | `60` | `2026-10-16` | consolidated course/program metadata |
+| 🟡 [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 `AGPL-3.0` | `1 128` | `2026-10-15` | **the only sane way to deploy it** — carried, re-starred |
+| 🟡 [`openfun/openedx-docker`](https://github.com/openfun/openedx-docker) | 🔴 `AGPL-3.0` | `142` | 🟡 `2025-07-09` | 🟢 **NEW** — France Université Numérique's image; a second opinion to `tutor`, `15` months stale |
+
+🟢 **The engagement-shaping reading, stated plainly:** an AI feature that lives **inside** a plugin — an XBlock built with `XBlock` + `xblock-sdk` + `paragon` — sits entirely on `Apache-2.0`. 🔴 **An AI feature that requires patching `edx-ora2`, `event-tracking` or the platform itself puts the client's whole deployment under `AGPL-3.0` network disclosure.** 🔵 **That is the single most valuable sentence this shelf can give a studio about Open edX, and the decomposition above is what makes it checkable rather than remembered.**
+
+### 🟢 `T256-V2` — the other verticals, re-starred this pass
+
+| platform | grant | ★ *(`2026-10-17`)* | pushed | note |
+|---|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | `AGPL-3.0` | `3 322` | `2026-10-16` | the Frappe-stack LMS |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | `AGPL-3.0` | `2 398` | `2026-10-15` | 🟢 live |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | `AGPL-3.0` | `1 720` | `2026-10-16` | 🟢 live |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | `AGPL-3.0` | `1 277` | `2026-10-09` | |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟡 `ECL-2.0` | `1 239` | `2026-10-16` | 🔴 **the `ECL-2.0` cell is the one `p252` refuted as "Apache-2.0" on a secondary channel** — `ECL-2.0` is Apache with an added patent clause, and the distinction is the point |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | `GPL-2.0` | `1 173` | `2026-10-15` | CN-market LMS |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 `MIT` | `1 150` | `2026-10-16` | 🟢 **the permissive platform** — offline-first |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `GPL-3.0` | `1 013` | 🟢 `2026-10-17` | strong LATAM and francophone-Africa install base |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `NOASSERTION` | `978` | 🟡 `2025-12-09` | |
+| [`safytech/ulearn`](https://github.com/safytech/ulearn) | 🟢 `MIT` | `701` | `2026-03-10` | |
+| [`Automattic/sensei`](https://github.com/Automattic/sensei) | `GPL-2.0` | `596` | `2026-10-16` | 🟢 **NEW** — the WordPress LMS plugin, first-party |
+| [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | `GPL-3.0` | `631` | `2026-10-13` | SCORM/xAPI course runtime |
+| [`adaptlearning/adapt_authoring`](https://github.com/adaptlearning/adapt_authoring) | `GPL-3.0` | `562` | `2026-08-04` | 🟢 **NEW** — its authoring tool |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `GPL-3.0` | `504` | `2026-10-16` | DACH university install base |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 `Apache-2.0` *(payload-verified `p253`)* | `447` | `2026-10-16` | 🟢 **the permissive university LMS** |
+| [`openfun/richie`](https://github.com/openfun/richie) | 🟢 `MIT` | `316` | `2026-10-16` | the course **portal/catalogue** layer |
+| [`openfun/marsha`](https://github.com/openfun/marsha) | 🟢 `MIT` | `151` | `2026-10-16` | LTI video/content management |
+| [`oat-sa/package-tao`](https://github.com/oat-sa/package-tao) | `GPL-2.0` | `137` | 🟡 `2024-08-29` | 🟢 **NEW** — the TAO assessment distribution; its `qti-sdk` and `tao-core` are live |
+| [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | `GPL-3.0` | `117` | `2026-10-13` | Canvas accessibility inspection |
+| [`ucfopen/Obojobo`](https://github.com/ucfopen/Obojobo) | `AGPL-3.0` | `72` | `2026-10-14` | |
+| [`ucfopen/Materia`](https://github.com/ucfopen/Materia) | `AGPL-3.0` | `52` | `2026-10-15` | embeddable learning widgets |
+| [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `NOASSERTION` | `62` | `2025-09-12` | learning-record **warehouse** |
+| [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) | `NOASSERTION` | `23` | `2026-10-16` | 🟢 Finland's national study-rights register, live |
+| [`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server) | `NOASSERTION` | `37` | `2026-10-16` | 🟢 North Rhine-Westphalia's school-administration server, live |
+
+### 🔴 `T256-V3` — the education-ERP gap, re-probed and still open
+
+🔴 **The mandated vertical leg asked specifically for a permissively licensed education ERP or SIS and surfaced NONE.** 🟢 **[OpenEduCat](https://github.com/openeducat/openeducat_erp) remains the only complete one and it is `LGPL-3.0`** — verified first-hand at `p253` *(`8 241` B, `528f84036800168d`)*, not taken from its own prose. 🟡 Kuali and openSIS were named again with no licence or currency established; the openSIS page this pass surfaced is a SourceForge team page with neither.
+
+🔵 **So the gap is stated as a standing one, for a fourth pass: there is no `MIT`/`Apache-2.0` education ERP.** 🟢 **The composable answer this base keeps arriving at instead — a permissive SIS-shaped core assembled from `koski`-class registers, `Ed-Fi` data standards and `1EdTech` rostering, rather than bought as one product — is in [`compose/patterns.md`](../compose/patterns.md) `P256-3`.** 🔴 A studio that promises "open source ERP, permissive licence" in an education bid is promising something that does not exist.
+
 ## Pass 255 — 2026-10-17 — **THE MOODLE ECOSYSTEM GETS ITS FIRST STAR MEASUREMENT ON THESE SHELVES — AND IT IS SMALLER THAN THE SHELF'S PROSE IMPLIES.** PLUS A LICENCE CLASS A VERTICAL BUYER MEETS MORE OFTEN THAN A `BUSL`: THE **"COMMUNITY LICENSE"**
 
 ⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-stars`](../evidence/p255-stars.2026-10-16-p255.tsv) *(`13`)* · [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv) · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv)

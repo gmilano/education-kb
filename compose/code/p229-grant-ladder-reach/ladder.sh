@@ -53,8 +53,22 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 # EQUIVOCADO es una clase de error nueva, y es la familia de `ACTION XC` extendida de
 # `NOTICE`/manifiesto a los HERMANOS de alcance partido.  El sujeto de estos estantes es
 # software, asi que cuando las dos rutas existen la del CODIGO es la que gobierna.
-TIER_A="LICENSE-CODE LICENSE LICENSE.md LICENSE.txt LICENCE LICENCE.txt COPYING COPYING.txt
-COPYING.md COPYING.LESSER license.txt license.md License.txt copying.txt LICENSE.rst NOTICE"
+# p256: SIETE rutas anadidas, y seis de ellas estaban PROBADAS en esta base antes de
+# anadirse aqui -- que es el defecto, no el remedio.  `LICENSE.TXT` es exactamente la ruta
+# que `P1057` (p189) publico con `openedx/XBlock` -- `11 358` B de Apache-2.0 verbatim,
+# `raw.githubusercontent.com` es sensible a mayusculas -- y SESENTA Y SIETE pasadas despues
+# seguia ausente de esta escalera, la que `make reach` imprime para que nadie la retipee.
+# p256 volvio a tropezar con ella en `openedx/xblock-sdk`, HERMANO del repositorio de p189
+# y en la MISMA organizacion.  `MIT-LICENSE` es la convencion de las gemas Rails y es donde
+# `openstax/fine_print` guarda su concesion MIT real (`1 055` B, `0a9ed2a2ba710b61`);
+# `LICENSE-MIT`/`LICENSE-APACHE` es la doble concesion de Rust.  `licence.txt` cerraba el
+# hueco de la grafia britanica en minuscula, que estaba en TITULO pero no en minuscula.
+# El coste es 7 peticiones mas por slug; el precio de no tenerlas fue dos verdictos falsos
+# en una sola pasada.  `compose/code/pass256-ladder-closure/` lo sostiene mecanicamente.
+TIER_A="LICENSE-CODE LICENSE LICENSE.md LICENSE.txt LICENSE.TXT LICENCE LICENCE.txt
+licence.txt COPYING COPYING.txt COPYING.md COPYING.LESSER license.txt license.md
+License.txt copying.txt LICENSE.rst NOTICE NOTICE.txt License licenses MIT-LICENSE
+MIT-LICENSE.txt LICENSE-MIT LICENSE-APACHE APACHE-LICENSE-2.0.txt"
 # Tier B — non-root licence paths THIS KB HAS ALREADY RECORDED, plus the SPDX `LICENSES/` dir.
 TIER_B="docs/License.txt docs/LICENSE docs/LICENSE.txt docs/license.txt html/license.txt
 public/COPYING.txt public/LICENSE public/license.txt LICENSE/LICENSE licenses/LICENSE

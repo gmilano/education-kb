@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 256 — 2026-10-17 — **`ACTION YJ`, `YK` AND `YL` ALL DISCHARGED, AND THE OWNERS ALREADY ON THESE SHELVES PAID `4×` THE INDEX EVERY PASS HAS BEEN QUERYING.** `5` NEW ROWS, `146` STAR CELLS, A FLAGSHIP THAT WAS NEVER UNMEASURABLE, AND A GATE WHOSE EXISTENCE HAD BEEN READ AS ITS COVERAGE
+
+⏱️ **SECOND pass of `2026-10-17`, and the dates agree for the first time in three passes.** `p232`–`p254` all carry `2026-10-16`; `p255` committed on `2026-10-17` with measurements taken the previous evening; 🟢 **every `p256` probe ran `2026-10-17`, so its evidence filenames and its commit date match.** 🔵 **Note for a reader of this file: the pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**
+
+### 🟢 The headline: the supply channel was the owner list, not the topic index
+
+🔴 **`p255` called the English `topic:` index spent — `19` of `20` candidates already carried, and the one new row was the SIBLING of a carried row.** 🟢 **`ACTION YJ` asked the next question, and `p256` ran it with a control arm in the same hour, on the same transport, with the same sort.**
+
+| channel | candidates | `NEW` | new-address yield | with a permissive grant read first-hand | 🟢 publishable rows |
+|---|---|---|---|---|---|
+| 🟢 **owner** — `user:` ×`20`, `5` batched queries | `100` | `44` | 🟢 **`44.0 %`** | `8` | 🟢 **`5`** |
+| 🔴 **topic** *(control)* — `3` axes | `46` | `5` | 🔴 **`10.9 %`** | `1` | 🔴 **`0`** |
+
+🟢 **`ACTION YJ` is DISCHARGED and not refuted: `4.05×` on addresses, roughly `2.5×` on rows.** 🔴 **And the narrower number is the true one** — `20` of the `44` new addresses carry `NONE` or `NOASSERTION`, and the rest are satellites: lint configs, Ansible deployers, `2017` demos, grantless paper code. 🔵 **Run the channel every pass; report rows.**
+
+### 🟢 `5` new rows, every grant read first-hand on a resolved ref
+
+| row | grant | the detail that matters |
+|---|---|---|
+| 🟢 [`openedx/paragon`](https://github.com/openedx/paragon) | `Apache-2.0` · `10 174` B | 🔴 default branch **`release-23.x`** — `main` and `master` both `404` |
+| 🟢 [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) | `Apache-2.0` · `11 358` B | 🔴 at **`LICENSE.TXT`**, and its own `README` names `LICENSE.txt`, which `404`s |
+| 🟢 [`learningequality/ricecooker`](https://github.com/learningequality/ricecooker) | `MIT` · `1 087` B | 🟢 pushed **today** — the content pipeline into Kolibri |
+| 🟢 [`adlnet/xapi-ontology`](https://github.com/adlnet/xapi-ontology) | `Apache-2.0` · `11 525` B | xAPI as RDF — makes a learning-record store a queryable graph |
+| 🟢 [`openstax/fine_print`](https://github.com/openstax/fine_print) | `MIT` · `1 055` B | 🔴 at **`MIT-LICENSE`**, a form the shared path predicate could not match |
+
+🟢 **Plus [`openedx/edx-lint`](https://github.com/openedx/edx-lint), [`1EdTech/cert-schema`](https://github.com/1EdTech/cert-schema) and [`open-spaced-repetition/fsrs.js`](https://github.com/open-spaced-repetition/fsrs.js)** as supporting rows. 🔵 `edx-lint`'s grant is **byte-identical** to `xblock-sdk`'s *(`11 358` B, `cfc7749b96f63bd3`)* — at the other case spelling.
+
+### 🔴 The flagship was never unmeasurable, and that is this pass's sharpest finding
+
+🟢 **[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) is `8 203`★** — the first star measurement this base has ever taken of its flagship vertical. 🔴 **`p255` published that cell as `UNMEASURABLE` because `edx-platform in:name` returns `217` forks — while this base had SETTLED at `p225` *(`ACTION SD`)* that the project's canonical name is `openedx/openedx-platform`, a fact carried on these shelves `29` times.** 🟢 Both slugs resolve to the same `HEAD` *(`d7859be168df`)*, confirmed by `ls-remote`.
+
+🔴 **And [`p253-settled-fact-regression`](compose/code/p253-settled-fact-regression/) — built one pass earlier FOR exactly this class — did not fire, because its register held ONE row.** 🟢 **Fixed:** the register gains the `openedx-canonical-name` fact with `ACTION SD` as its authority, and 🟢 **`unmeasurable` joins the hedge vocabulary** — *an inability is a claim like any other.* 🟢 **Measured: the extended gate grades `p255`'s own section `REGRESSION`.**
+
+🟢 **`p255`'s other `UNMEASURABLE` cell is closed too:** [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) is **`450`★**, first row of `topic:knowledge-tracing` by stars.
+
+### 🟢 `ACTION YK` discharged, and the blocker was the READ and not the budget
+
+🟢 **`146` rows measured, `97` already carried, on `8` billed calls inside a `10`/hour budget.** 🔴 A `per_page=100` search response is `511`–`572` kB and `WebFetch` answers against the first `100 000` characters only — `17`–`18` items. 🟢 **A repeat read of the SAME url at a higher `offset` is served from the `15`-minute cache and bills nothing**, so one billed call pages the whole response. 🟢 Recipe pinned; `sort=stars&order=desc` recorded on every row, which is `ACTION YL`.
+
+### 🔴 The ladder a pass TYPES was missing a path this base proved `67` passes ago
+
+🔴 **`openedx/xblock-sdk` `404`'d on all five paths `p256` typed and serves `11 358` B of `Apache-2.0` at `LICENSE.TXT` — the exact path [`P1057`](compose/code/p1057-licence-path-case/) published at `p189`, using a SIBLING repository in the SAME organisation.** 🟢 `P1057` was never lost: it exists, passes, and is in the gate. 🔴 **`LICENSE.TXT` was simply absent from `p229`'s `TIER_A`, the ladder `make reach` prints so nobody retypes a short one.**
+
+🟢 **Fixed as a JOIN rather than as two names:** `TIER_A` `16` → `26`, the ladder `41` → `51`, the shared predicate extended as a FORM in both byte-identical copies with `6` controls that fail against the old version, and 🟢 **[`pass256-ladder-closure`](compose/code/pass256-ladder-closure/) — `38` controls, in `make hooks`, proven able to fail — now asserts that every root-form path the shared suite proves is present in the ladder a pass types.** 🔵 It found `3` further gaps on its first run and one deliberate exemption, named with its reason.
+
+### 🟢 The regions, and the gaps named as gaps
+
+🔴 **The week's most on-point external fact is not a repository.** The **Draft South Africa National AI Policy `2026`** — which would have been the first `2026`-dated, country-specific sub-Saharan instrument this base could name — was published `2026-04-10` and 🔴 **WITHDRAWN `2026-04-26` after fake, AI-hallucinated citations were found in its reference list.** 🟡 A revised text is reported as due at Cabinet in November `2026`. 🔵 **The same failure these shelves spend every pass on, at national scale — and the remedy being demanded, show the source, is the one a client will soon demand of a studio's own deliverables.**
+
+🟢 **All four regional legs find one shape, which makes it a planning frame rather than a country story: the state is advancing as a REGULATOR and retreating as a PURCHASER.** 🔴 **North America** — the obligations are district-level and dated: **Ohio's deadline was `2026-07-01` and has elapsed**, Oklahoma's falls before `2027`–`28`, Maryland funds a named coordinator in every system, and **Tennessee SB `1580` carries a private right of action** over AI mental-health screening. 🟢 **EMEA** — Annex III `2027-12-02` corroborated on an eighth channel; the sellable work is **deployer** duties, live now, and Article `5(1)(f)` prohibits emotion inference in education **outright**. 🟢 **APAC** — compulsory **hours** *(Beijing `8`/yr, Guangdong `6`/yr)*, Singapore routing Primary `4` through the Student Learning Space, and ban-support at `25`–`29 %` across the Asian markets surveyed. 🟢 **LATAM** — the region's own index finally measures the gap: **`13` of `19` countries do not teach AI early in schools**, against `87 %` institutional use and `26 %` with a strategy.
+
+🔴 **DECLARED GAPS, so silence is not read as coverage:** no **standing** `2026` national AI-in-schools strategy for any sub-Saharan country *(South Africa's was withdrawn)*; no Middle East school-level instrument this pass; `eur-lex.europa.eu` **not re-probed** and recorded as unrun, so the EU reading rests on eight secondary channels and no primary text; India's Class-`3` mandate **reported, not confirmed**; no permissive education ERP or SIS exists, re-probed and still true; `Ed-Fi-Alliance-OSS` and `utdanningsdirektoratet` returned **no legible row** in the owner sweep and are declared unread; and `github.com/trending` read first-hand — `13` repositories, 🔴 **`0` education**, which with `p254`'s independent `11` and `0` makes **education does not trend** a measured verdict on two windows.
+
+🔵 **The lesson for the ledger, extending a five-pass set.** `p251`: *unwired knowledge.* `p253`: *nothing consumes the wire.* `p254`: *the base inherits its own conclusions about what is impossible.* `p255`: *a claim adopted at a retraction inherits the retraction's credibility.* 🟢 **`p256`: a gate's EXISTENCE was read as its COVERAGE** — `p253-settled-fact-regression` was built, tested, gated and correct over **one** fact, and two passes later this base cited it as the reason that whole class was handled. 🔴 **The counter-measure is not another gate: an instrument must publish the SIZE of what it covers, beside the claim that it covers it.**
+
 ## Pass 255 — 2026-10-17 — **`ACTION YE`, `YF` AND `YG` ALL DISCHARGED — AND `YE` REFUTES THE RULE `p254` PUBLISHED WHILE RETRACTING THE LAST ONE.** A `403` THAT BILLS NOTHING IS NOT A BUDGET. PLUS `1` NEW ROW, `1` REFUSAL WORTH MORE THAN THE ROW, AND A SUPPLY CENSUS SAYING THE ENGLISH `topic:` INDEX IS SPENT
 
 ⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Note for a reader of this file: the pass log lives on the shelves and in [`intel/open-gaps.md`](intel/open-gaps.md); this is the front door.**

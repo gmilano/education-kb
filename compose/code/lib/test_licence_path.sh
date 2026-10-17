@@ -50,6 +50,23 @@ yes_lic "License.txt"
 yes_lic "licenses"
 no_lic  "doc/licensing-faq.md"
 
+# --- casos nuevos de p256: la FORMA CON TOKEN, y la prosa que no debe colarse -----------
+# `openstax/fine_print` -- la concesion MIT real vive en `MIT-LICENSE`, 1 055 B,
+# sha256-16 `0a9ed2a2ba710b61`, leida de primera mano en p256 sobre `main`@`3b75fbcbcfb0`.
+# Los cinco `yes_lic` de abajo FALLAN contra el predicado anterior a p256; eso es lo que
+# convierte esta ampliacion en una correccion medida y no en una preferencia.
+yes_lic "MIT-LICENSE"                             # openstax/fine_print -- gema Rails, REAL
+yes_lic "MIT-LICENSE.txt"
+yes_lic "LICENSE-MIT"                             # convencion de doble concesion de Rust
+yes_lic "LICENSE-APACHE"
+yes_lic "APACHE-LICENSE-2.0.txt"
+yes_lic "third-party-licenses.txt"                # agregado de avisos: NOTICE.txt ya era SI
+no_lic  "license-faq.md"                          # prosa SOBRE una concesion
+no_lic  "LICENSE-POLICY.md"
+no_lic  "third-party-license-report.json"
+no_lic  "LICENSE-HEADER-CHECK.cfg"
+no_lic  "licenses.json"                           # ya estaba arriba; se repite como ancla
+
 # --- 2. el control de identidad: la copia sigue siendo la copia -------------------------
 extract() { # fichero nombre -> cuerpo
   awk -v fn="$2" 'index($0, fn "() {")==1 {on=1} on {print} on && $0=="}" {exit}' "$1"

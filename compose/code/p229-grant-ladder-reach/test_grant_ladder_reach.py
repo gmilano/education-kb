@@ -84,7 +84,13 @@ out = subprocess.run([HERE + '/ladder.sh', '--reach'], capture_output=True, text
 # root `LICENSE` is CC-BY-4.0 (the DOCS licence, 18 650 B) and whose `LICENSE-CODE` is MIT
 # (the CODE licence).  The count is re-asserted rather than loosened on purpose: a reach that
 # grows silently is a reach nobody re-reads (T272).
-check('T272 reach is printable', out.startswith('tierA=16 tierB=15 tierC=10 total=41'), True)
+# p256 widened Tier A by TEN names and SEVEN of them were already proven elsewhere in this
+# base before being added here -- `LICENSE.TXT` is `P1057`'s own path, published at p189 with
+# `openedx/XBlock` and still absent from this ladder 67 passes later, which is how p256 came
+# within one keystroke of publishing `NO_LICENCE_FILE` on `openedx/xblock-sdk`.  The count is
+# re-asserted and not loosened, for the reason above, and the JOIN that stops the ladder
+# drifting from the proven set again is `compose/code/pass256-ladder-closure/`.
+check('T272 reach is printable', out.startswith('tierA=26 tierB=15 tierC=10 total=51'), True)
 check('T272 LICENSE-CODE is in the printed reach (p247)', 'LICENSE-CODE' in out, True)
 check('T272 the code grant is probed BEFORE the bare LICENSE (p247)',
       out.index('LICENSE-CODE') < out.index('\nLICENSE\n'), True)

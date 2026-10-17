@@ -1,0 +1,10 @@
+endpoint	transport	http	billed	note	sort_recorded
+api.github.com/rate_limit	WebFetch	200	n/a	core limit 60 remaining 0 used 60; search limit 10 remaining 10 used 0 at 2026-10-17	n/a
+api.github.com/search/repositories	WebFetch	200	1 per call against the search bucket	the ONLY metadata channel reachable here; p255's finding re-confirmed	yes: sort=stars&order=desc on every call
+api.github.com/search/repositories per_page=30	WebFetch	200	1	response 161-176 kB; WebFetch reads the FIRST 100 000 characters only, so ~17-18 of 30 items are legible per read	yes
+api.github.com/search/repositories per_page=100	WebFetch	200	1	response 511-572 kB; ~17-18 items legible per read, the rest reachable only by paging offset	yes
+api.github.com/search/repositories offset=100000	WebFetch	200	0 — served from the 15-minute per-URL cache	the pagination that makes per_page=100 affordable: one billed call, several free reads	yes
+github.com/trending	WebFetch	200	0 — not an API endpoint	13 repositories listed, 0 education; corroborates p254's independent read (11 repositories, 0 education)	n/a (page default)
+raw.githubusercontent.com	curl via session proxy	200	0	case-SENSITIVE on the path; LICENSE.txt and LICENSE.TXT are two different addresses	n/a
+github.com/{owner}/{repo} (HTML, HEAD)	curl via session proxy	403	0	BLANKET: 403 for all 10 slugs probed, including slugs proven to exist seconds earlier by ls-remote; a HEAD on the HTML page is NOT a usable existence check from this environment	n/a
+github.com/{owner}/{repo} (git)	git ls-remote --symref	200/ok	0	the working existence + default-branch + HEAD-sha channel: 10 of 10 slugs resolved, and it is what caught openedx/paragon's release-23.x default branch	n/a

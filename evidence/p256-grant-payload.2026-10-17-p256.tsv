@@ -1,0 +1,14 @@
+slug	ref	ref_resolved_by	path	http	bytes	sha256_16	family	verdict
+openedx/openedx-platform	master@d7859be168df	git ls-remote --symref	LICENSE	200	35136	e12d785697426f9d	AGPL-3.0	COPYLEFT-NETWORK
+openedx/paragon	release-23.x@5218b5b55ebd	git ls-remote --symref	LICENSE	200	10174	0d542e0c8804e39a	Apache-2.0	PERMISSIVE
+openedx/xblock-sdk	master@fb22e0ea9233	git ls-remote --symref	LICENSE.txt	404	14	d5558cd419c8d46b	-	REFUSAL-NOT-PAYLOAD
+openedx/xblock-sdk	master@fb22e0ea9233	git ls-remote --symref	LICENSE	404	14	d5558cd419c8d46b	-	REFUSAL-NOT-PAYLOAD
+openedx/xblock-sdk	master@fb22e0ea9233	git ls-remote --symref	LICENSE.TXT	200	11358	cfc7749b96f63bd3	Apache-2.0	PERMISSIVE
+openedx/edx-lint	master@ec1b6a1946e2	git ls-remote --symref	LICENSE.txt	200	11358	cfc7749b96f63bd3	Apache-2.0	PERMISSIVE
+learningequality/ricecooker	main@2ada75e50831	git ls-remote --symref	LICENSE	200	1087	8e7a35d64f5c7d51	MIT	PERMISSIVE
+adlnet/xapi-ontology	master@3846398933f7	git ls-remote --symref	LICENSE	200	11525	a1587287ff0445e1	Apache-2.0	PERMISSIVE
+open-spaced-repetition/fsrs.js	master@d04fa627bc6d	git ls-remote --symref	LICENSE	200	1089	4bef6c7c01b2250b	MIT	PERMISSIVE
+openstax/fine_print	main@3b75fbcbcfb0	git ls-remote --symref	LICENSE	404	14	d5558cd419c8d46b	-	REFUSAL-NOT-PAYLOAD
+openstax/fine_print	main@3b75fbcbcfb0	git ls-remote --symref	LICENSE.txt	404	14	d5558cd419c8d46b	-	REFUSAL-NOT-PAYLOAD
+openstax/fine_print	main@3b75fbcbcfb0	git ls-remote --symref	MIT-LICENSE	200	1055	0a9ed2a2ba710b61	MIT	PERMISSIVE
+1EdTech/cert-schema	master@6fc8bbf29ae9	git ls-remote --symref	LICENSE	200	1096	06d87bf42a0a9a63	MIT	PERMISSIVE

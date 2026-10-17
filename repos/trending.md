@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — Pass 256 — **THE OWNER SWEEP IS THE WEEK'S REPOSITORY NEWS: `100` ADDRESSES OFF `20` CARRIED OWNERS, `44` NEW TO THIS BASE, `8` WITH A PERMISSIVE GRANT READ FIRST-HAND.** PLUS `github.com/trending` RE-READ — `13` REPOSITORIES, `0` EDUCATION, SECOND INDEPENDENT READ
+
+⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) *(`100`)* · [`p256-topic-arm`](../evidence/p256-topic-arm.2026-10-17-p256.tsv) *(`46`)* · [`p256-topic-tail`](../evidence/p256-topic-tail.2026-10-17-p256.tsv) *(`18`)* · [`p256-trending`](../evidence/p256-trending.2026-10-17-p256.tsv) · [`p256-grant-payload`](../evidence/p256-grant-payload.2026-10-17-p256.tsv) · [`p256-path-case`](../evidence/p256-path-case.2026-10-17-p256.tsv)
+
+### 🟢 The owner sweep, by batch — with `total_count` so the truncation is visible
+
+| batch | owners | `total_count` | rows legible | `NEW` |
+|---|---|---|---|---|
+| `1` | `iblai` · `Ed-Fi-Alliance-OSS` · `open-spaced-repetition` · `1EdTech` | `197` | `17` | `2` |
+| `2` | `openstax` · `adlnet` · `utdanningsdirektoratet` · `svws-nrw` | `496` | `30` | `18` |
+| `3` | `bigdata-ustc` · `Opetushallitus` · `kennisnet` · `Apereo-Learning-Analytics-Initiative` | `258` | `17` | `7` |
+| `4` | `openedx` · `ai-for-education` · `ucfopen` · `DFE-Digital` | `1 090` | `18` | `9` |
+| `5` | `project-sunbird` · `openfun` · `oat-sa` · `learningequality` | `580` | `18` | `8` |
+
+🔴 **Declared unread, so the coverage is not over-claimed:** `Ed-Fi-Alliance-OSS` and `utdanningsdirektoratet` returned **no legible row** — their repositories sit below the star cut of a batch whose union is larger than the page. 🟢 **`18` of `20` owners covered; `2` named as unread.** 🔵 And every batch is truncated against its `total_count`: this is the **star head** of each owner, never the owner.
+
+### 🟢 The repositories worth a studio's attention, with grants read first-hand
+
+🟢 **[`openedx/paragon`](https://github.com/openedx/paragon)** — `Apache-2.0`, `10 174` B · `0d542e0c8804e39a`, `141`★, pushed `2026-10-16`. 🔴 **Default branch `release-23.x`** — `main` and `master` both `404`, so a guessed ref files this as grantless.
+
+🟢 **[`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk)** — `Apache-2.0`, `11 358` B · `cfc7749b96f63bd3`, `69`★, pushed `2026-10-14`. 🔴 **At `LICENSE.TXT`.** `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `LICENSE.rst`, `COPYING` all `404`, and the repository's own `README.rst` names `LICENSE.txt`.
+
+🟢 **[`learningequality/ricecooker`](https://github.com/learningequality/ricecooker)** — `MIT`, `1 087` B · `8e7a35d64f5c7d51`, `32`★, 🟢 **pushed today**. The content pipeline into Kolibri Studio.
+
+🟢 **[`adlnet/xapi-ontology`](https://github.com/adlnet/xapi-ontology)** — `Apache-2.0`, `11 525` B · `a1587287ff0445e1`, `18`★. xAPI's data model as RDF classes and properties.
+
+🟢 **[`openstax/fine_print`](https://github.com/openstax/fine_print)** — `MIT`, `1 055` B · `0a9ed2a2ba710b61`, `40`★. 🔴 **At `MIT-LICENSE`** — the Rails gem convention, and a form the shared path predicate could not match until this pass.
+
+🟡 **Named and NOT filed as rows, with the reason:** [`adlnet/tla`](https://github.com/adlnet/tla) *(`Unlicense`, `19`★, archived)* — the ADL Total Learning Architecture reference implementation, interesting and **archived**; [`openedx/frontend-app-learning`](https://github.com/openedx/frontend-app-learning), [`course-discovery`](https://github.com/openedx/course-discovery), [`event-tracking`](https://github.com/openedx/event-tracking), [`edx-enterprise`](https://github.com/openedx/edx-enterprise) *(all `AGPL-3.0`, all pushed this week)* — live and copyleft-network, which is a deployment decision rather than a library one; [`bigdata-ustc/RCD`](https://github.com/bigdata-ustc/RCD), [`TechCD`](https://github.com/bigdata-ustc/TechCD), [`Zero-1-to-3`](https://github.com/bigdata-ustc/Zero-1-to-3) — cognitive-diagnosis paper code with 🔴 **no grant at all**, so not usable whatever the quality.
+
+### 🔴 The topic arm, read to its tail for once
+
+🔴 **`topic:knowledge-tracing` is `90` repositories in total.** Its head is this base's carried set *(`pykt-toolkit` `450`★, `knowledge-tracing-collection-pytorch` `194`★, `GKT` `141`★, `ktm` `140`★)*; its tail is `18` rows of which 🔴 **`11` carry no grant** and the largest is `17`★. 🟢 **`4` permissive repositories in the tail are live in `2026`** — [`Kaiji-Z/LookatStudy`](https://github.com/Kaiji-Z/LookatStudy) `7`★, [`szhhwh/UniKT`](https://github.com/szhhwh/UniKT) `4`★, [`yjo2lee/knowsim`](https://github.com/yjo2lee/knowsim) `4`★, [`non-question-proficiency-evaluation/Interactive-Proficiency-AKT`](https://github.com/non-question-proficiency-evaluation/Interactive-Proficiency-AKT) `2`★ — 🔴 **and none is filed, because a `4`★ repository is a person's week, not a foundation.** Stated rather than silently dropped.
+
+### 🔴 `github.com/trending`, first-hand
+
+| | |
+|---|---|
+| repositories listed | `13` |
+| 🔴 **education, e-learning, tutoring, curriculum or school-related** | 🔴 **`0`** |
+| borderline | `K-Dense-AI/scientific-agent-skills` *(research skills, not teaching)* · `MadsLorentzen/ai-job-search` *(careers)* |
+
+🟢 **`p254`'s independent read: `11` repositories, `0` education.** 🔵 Two reads, two windows, same verdict. 🟡 The page's star figures were **not** cross-checked and are deliberately not published; the repository names and the `0`-education verdict are what this row claims.
+
 ## 2026-10-17 — Pass 255 — **THE `topic:` INDEX IS NOW MEASURED RATHER THAN SAMPLED: `4` AXES, `20` CANDIDATES, `19` ALREADY HERE.** AND A TOPIC TURNS OUT NOT TO BE A POPULATION — `topic:ai-tutor` IS **TWO** POPULATIONS DEPENDING ON THE SORT ORDER
 
 ⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-row-supply`](../evidence/p255-row-supply.2026-10-16-p255.tsv) *(`20`)* · [`p255-stars`](../evidence/p255-stars.2026-10-16-p255.tsv) · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv) · [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv)

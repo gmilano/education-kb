@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 256 — 2026-10-17 — **FOUR RECIPES, AND `P256-1` IS THE ONE THIS PASS'S MEASUREMENTS MAKE POSSIBLE: AN AI ACTIVITY TYPE THAT STAYS ENTIRELY ON `Apache-2.0` INSIDE AN `AGPL-3.0` PLATFORM**
+
+⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-grant-payload`](../evidence/p256-grant-payload.2026-10-17-p256.tsv) *(every grant below read first-hand on an `ls-remote`-resolved ref)* · [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) · **instrument:** [`pass256-ladder-closure`](../compose/code/pass256-ladder-closure/)
+
+### 🟢 `P256-1` — the AI activity type that does not infect the client's deployment · `5`–`7` weeks
+
+🔴 **The problem, measured this pass rather than assumed:** the obvious seat for an AI grader in Open edX is [`openedx/edx-ora2`](https://github.com/openedx/edx-ora2) *(open response assessment, `64`★)*, and it is 🔴 **`AGPL-3.0`** — as are [`frontend-app-learning`](https://github.com/openedx/frontend-app-learning), [`event-tracking`](https://github.com/openedx/event-tracking) and the platform itself *(`8 203`★, grant `35 136` B · `e12d785697426f9d`)*. 🔴 **Patch any of them and the client's whole deployment carries network-disclosure obligations.**
+
+🟢 **The recipe, and every component's grant was read first-hand this pass:**
+
+| step | component | grant | why this one |
+|---|---|---|---|
+| `1` | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 `Apache-2.0` · `471`★ | the platform's own extension point — a plugin, not a patch |
+| `2` | [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) | 🟢 `Apache-2.0` · `11 358` B · `cfc7749b96f63bd3` **at `LICENSE.TXT`** | 🟢 **the workbench: develop and test the block WITHOUT standing up a platform.** This is the row that turns a `5`-week estimate into a `2`-week one |
+| `3` | [`openedx/paragon`](https://github.com/openedx/paragon) | 🟢 `Apache-2.0` · `10 174` B · `0d542e0c8804e39a` | the design system the native front-ends use, so the block looks native instead of bolted on. 🔴 **Pin `release-23.x`** — its default branch is not `main` |
+| `4` | [`openedx/codejail`](https://github.com/openedx/codejail) | 🟢 `Apache-2.0` · `478`★ | sandboxed execution if the activity runs learner-submitted code |
+| `5` | [`openedx/event-tracking`](https://github.com/openedx/event-tracking) | 🔴 `AGPL-3.0` | 🔴 **CONSUME its event stream, do not fork it.** Emitting events through the platform's existing API is use, not modification |
+| `6` | [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 `AGPL-3.0` · `1 128`★ | deploy with it unmodified — a plugin, again, not a patch |
+
+🟢 **The licence boundary is the architectural boundary, and it is checkable:** steps `1`–`4` are the code you write and ship, all `Apache-2.0`; steps `5`–`6` you run and consume, unmodified. 🔴 **If a requirement forces a change inside `edx-ora2`, stop and re-scope — that is a different commercial conversation, not a bigger sprint.**
+
+### 🟢 `P256-2` — the offline-first LATAM/low-connectivity delivery chain, fully permissive · `6`–`8` weeks
+
+🟢 **Every component `MIT`, every one pushed within `48` hours of this pass.**
+
+```
+source corpus (OER, client material, OpenStax)
+  └─ learningequality/ricecooker        MIT · 1 087 B · 8e7a35d64f5c7d51 · pushed 2026-10-17
+       builds a Kolibri channel from an arbitrary corpus
+  └─ learningequality/studio            MIT · 193★ · pushed 2026-10-17
+       curation, review and publication of that channel
+  └─ learningequality/kolibri           MIT · 1 150★ · pushed 2026-10-16
+       the offline-first runtime on the device in the classroom
+  └─ learningequality/kolibri-design-system   (no root grant — see note)
+       the component library the front-end is built from
+```
+
+🟡 **One cell stated rather than glossed:** `kolibri-design-system` reports **no licence** on the metadata channel *(`52`★, pushed `2026-10-15`)*. 🟢 Kolibri itself is unambiguously `MIT`; 🔴 **the design system is a separate repository and its grant is NOT established here** — read it before vendoring, and if it is still grantless, build the UI on Kolibri's own components instead.
+
+🟢 **Where the AI goes:** generation and alignment run **upstream, in the `ricecooker` step, online**, and the device ships finished content. 🔵 **That is the whole point of the pattern** — the regions with the governance deficit `ILIA 2025` measures *(`13` of `19` countries)* are also the ones where inference at the edge is not available, so the AI must be in the pipeline and not in the classroom.
+
+### 🟢 `P256-3` — the composable SIS, because the permissive education ERP does not exist · `10`–`14` weeks
+
+🔴 **Re-probed this pass and still true for a fourth pass: there is no `MIT`/`Apache-2.0` education ERP or SIS.** [OpenEduCat](https://github.com/openeducat/openeducat_erp) is `LGPL-3.0` *(payload-verified `p253`: `8 241` B · `528f84036800168d`)*; Kuali and openSIS surfaced again with no licence established. 🔴 **So stop sourcing it as a product and assemble it.**
+
+| layer | component | grant | role |
+|---|---|---|---|
+| data standard | [`Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | carried | the canonical K-12 schema — do not invent one |
+| rostering + launch | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) · [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | `Apache-2.0` · `GPL-2.0` | LTI `1.3` platform/tool. 🟡 Pick by the host stack's licence posture, not by stars |
+| credentials | [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) · [`1EdTech/cert-schema`](https://github.com/1EdTech/cert-schema) | spec · 🟢 `MIT` `1 096` B · `06d87bf42a0a9a63` | 🟢 **`cert-schema` is NEW this pass** — the Blockcerts schema, a real `MIT` artefact under a spec that carries no grant |
+| learning records | [`openfun/ralph`](https://github.com/openfun/ralph) → [`adlnet/xapi-ontology`](https://github.com/adlnet/xapi-ontology) | 🟢 `MIT` `51`★ · 🟢 `Apache-2.0` `11 525` B · `a1587287ff0445e1` | 🟢 **`xapi-ontology` is NEW and it is the piece that was missing**: `ralph` stores statements, the ontology makes them a QUERYABLE GRAPH instead of a log |
+| agreements | [`openstax/fine_print`](https://github.com/openstax/fine_print) | 🟢 `MIT` `1 055` B · `0a9ed2a2ba710b61` **at `MIT-LICENSE`** | 🟢 **NEW** — versioned terms with per-user acceptance. The artefact every one of this pass's four regional regimes implicitly requires and nobody budgets for |
+| reference implementations | [`Opetushallitus/koski`](https://github.com/Opetushallitus/koski) · [`SVWS-NRW/SVWS-Server`](https://github.com/SVWS-NRW/SVWS-Server) | `NOASSERTION` ×`2` | 🟡 **read, do not vendor** — two live national/state registers whose grants are unresolved. Use them as design references and cite them in the bid |
+
+🔵 **Why the ontology row changes the shape:** with xAPI as RDF, "which learners who failed objective `X` later passed `Y`" is a graph query rather than a bespoke report — which is what makes an AI layer on top answerable and auditable, and auditable is what the NA and EMEA obligations ask for.
+
+### 🟢 `P256-4` — the compliance-artefact pack, sold four times with one jurisdiction gate · `4`–`6` weeks per region
+
+🟢 **This pass's four regional legs converge on the same five artefacts:** a written AI policy, human review of any high-stakes decision, a tool inventory, an AI-literacy programme, and a logging trail. 🟢 **Build the pack once and localise only the gate.**
+
+| region | the gate — what changes, and nothing else does |
+|---|---|
+| 🔴 **North America** | 🔴 **Ohio's deadline was `2026-07-01` and has ELAPSED**; Oklahoma's falls before `2027`–`28`; Maryland names a central-office coordinator role. 🔴 **Tennessee SB `1580` carries a private right of action over AI mental-health screening** — a wellbeing or behaviour-inference feature needs an explicit jurisdiction block, not a disclaimer |
+| 🟡 **EMEA** | 🔴 **Article `5(1)(f)` prohibits emotion inference in education OUTRIGHT** — REMOVE the feature, do not mitigate it. Then deployer duties, live now: Article `4` literacy since `2025-02-02`, Article `50` since `2026-08-02`, **Annex III `2027-12-02`** *(eight channels, no primary text)* |
+| 🟢 **APAC** | hours, not tools: Beijing `8`/yr, Guangdong `6`/yr. Singapore: everything a pupil touches arrives via the **Student Learning Space**. Korea: high-impact, KRW `30`M. 🔴 **Vietnam: Decision `33`'s list from `2026-08-15`, and the `18`-month transition to `2027-09-01` covers ONLY systems already live — a greenfield build is in scope from day one** |
+| 🟢 **LATAM** | 🔴 **no statute to comply with yet** — Brazil's PL `2.338/2023` is still in the Chamber, Chile's bill in its first constitutional stage, Mexico has none. 🟢 **So the pack is sold against UNESCO IESALC and the Santiago observatory, into the `87 %`-use / `26 %`-strategy gap**, in Spanish and Portuguese |
+
+🟢 **The engine is the same everywhere:** the inventory and logging trail on [`openfun/ralph`](https://github.com/openfun/ralph) *(`MIT`)* with [`adlnet/xapi-ontology`](https://github.com/adlnet/xapi-ontology) *(`Apache-2.0`)* for queryability, the acceptance record on [`openstax/fine_print`](https://github.com/openstax/fine_print) *(`MIT`)*, and the literacy programme delivered on whatever the client already runs. 🔴 **Do not price this on the market forecasts** — three secondary sources span USD `6.4`–`8.3` B for the same `2025` — 🟢 **price it on the dated obligations, which are instruments.**
+
+### 🔵 A standing note for whoever writes the next recipe
+
+🟢 **Every grant cited above was read from `raw.githubusercontent.com` this pass, on a ref resolved by `git ls-remote --symref` first.** 🔴 **Two of the six new components keep their grant at a path this base's own `41`-name ladder did not carry** — `xblock-sdk` at `LICENSE.TXT`, `fine_print` at `MIT-LICENSE` — 🟢 so the ladder is now `51` names and [`pass256-ladder-closure`](../compose/code/pass256-ladder-closure/) asserts that it carries every path form the shared suite proves. 🔵 **A pattern is only as good as its licence cells, and a licence cell is only as good as the path list that looked for it.**
+
 ## Pass 255 — 2026-10-17 — TWO RECIPES OUT OF THIS PASS'S OWN MEASUREMENTS: **THE OPEN-SOURCE CLEARANCE A STUDIO SELLS BEFORE IT WRITES ANY CODE**, AND **THE VIETNAM `2027-09-01` ENGAGEMENT**, WHOSE WINDOW IS HALF SPENT AND WHOSE FIRST FILING DEADLINE HAS ALREADY ELAPSED
 
 ⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv) · [`p255-vietnam-dates`](../evidence/p255-vietnam-dates.2026-10-16-p255.tsv) · [`p255-row-supply`](../evidence/p255-row-supply.2026-10-16-p255.tsv) · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv) · **instrument:** [`p255-channel-reachability`](code/p255-channel-reachability/)

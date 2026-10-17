@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 256 — 2026-10-17 — **`ACTION YJ` DISCHARGED AND NOT REFUTED: THE OWNERS ALREADY ON THESE SHELVES ARE A LIVE SUPPLY CHANNEL AT `4×` THE `topic:` INDEX'S YIELD — AND THE ROWS IT PAYS IN ARE SATELLITES, SO THE MEASURE IS ROWS, NOT ADDRESSES.** `5` NEW ROWS, EVERY GRANT READ FIRST-HAND, AND TWO OF THEM AT PATHS THIS BASE'S OWN LADDER DID NOT CARRY
+
+⏱️ **SECOND pass of `2026-10-17`.** `p255` carries this date and its measurements were taken `2026-10-16` `23:37`–`23:55Z`; `p256`'s probes all ran `2026-10-17`, so its evidence filenames and its commit date agree for the first time in three passes. 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) *(`100` candidates, `20` owners, all gated)* · [`p256-topic-arm`](../evidence/p256-topic-arm.2026-10-17-p256.tsv) *(`46`, the control arm)* · [`p256-grant-payload`](../evidence/p256-grant-payload.2026-10-17-p256.tsv) *(`13` paths)* · [`p256-path-case`](../evidence/p256-path-case.2026-10-17-p256.tsv) · **instrument:** [`pass256-ladder-closure`](../compose/code/pass256-ladder-closure/) *(`38` controls, in `make hooks`)*
+
+### 🟢 `T256-A` — `ACTION YJ`, measured against a control arm in the same pass
+
+🔴 **`p255` called the English `topic:` index spent on a sample of `20`: `19` carried, `1` new, and the one new row was the SIBLING of a carried row.** 🟢 **`ACTION YJ` asked the obvious next question — if a sibling is invisible to an index that keys on the exact folded slug, what else is? — and `p256` ran it against a control arm rather than on its own.**
+
+| channel | query shape | sort | candidates | `CARRIED` | `NEW` | new-address yield |
+|---|---|---|---|---|---|---|
+| 🟢 **owner** | `user:A+user:B+user:C+user:D` ×`5`, `20` owners | `stars:desc` | `100` | `56` | 🟢 **`44`** | 🟢 **`44.0 %`** |
+| 🔴 **topic** *(control)* | `topic:elearning` · `topic:lms` · `topic:knowledge-tracing` | `stars:desc` | `46` | `41` | 🔴 **`5`** | 🔴 **`10.9 %`** |
+
+🟢 **`ACTION YJ` is DISCHARGED and NOT refuted — the owner channel returns new addresses at `4.05×` the topic channel's rate**, both arms gated through `make carried` *(`CARRIED` → `1`, `NEW` → `0`)* in the same hour, on the same transport, with the same sort.
+
+🔴 **And now the part that matters more, because it is the part a later pass would otherwise over-read.** An address is not a row:
+
+| stage | owner channel | topic channel |
+|---|---|---|
+| addresses returned | `100` | `46` |
+| 🟢 `NEW` to these shelves | `44` | `5` |
+| 🟢 **with a PERMISSIVE grant read first-hand** | 🟢 **`8`** | 🔴 **`1`** *(`Hash-Studios/e-learning-app`, `BSD-3-Clause`, last pushed `2023-09-09`)* |
+| 🟢 **publishable: permissive + maintained + education-relevant** | 🟢 **`5`** | 🔴 **`0`** |
+
+🔵 **So the honest statement of the finding, and it is the one to carry forward: owner-deep harvesting is a real channel at `4×` on addresses and roughly `2.5×` on rows, and what it pays in is SATELLITES** — build tooling *(`openedx/edx-lint`, `openfun/arnold`, `project-sunbird/prometheus-jsonpath-exporter`)*, archived demos *(`adlnet/xapi-jqm`, pushed `2017-07-26`)*, and paper code with no grant at all *(`bigdata-ustc/RCD`, `TechCD`, `Zero-1-to-3` — `NONE` ×`3`)*. 🔴 **`20` of the `44` new addresses are `NONE` or `NOASSERTION`.** The channel is worth running every pass; the number to report from it is **rows**.
+
+### 🟢 `T256-B` — the `5` new rows, every grant read first-hand on an `ls-remote`-resolved ref
+
+| row | grant | payload | ref | ★ | pushed | what a studio buys |
+|---|---|---|---|---|---|---|
+| 🟢 [`openedx/paragon`](https://github.com/openedx/paragon) | 🟢 `Apache-2.0` | `10 174` B · `0d542e0c8804e39a` | 🔴 **`release-23.x`** @ `5218b5b55ebd` | `141` | `2026-10-16` | **the design system Open edX's own front-ends are built from** — accessible, theme-ready React components for learning applications. The one dependency that makes a client's LMS skin look native instead of bolted on |
+| 🟢 [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) | 🟢 `Apache-2.0` | `11 358` B · `cfc7749b96f63bd3` · at 🔴 **`LICENSE.TXT`** | `master` @ `fb22e0ea9233` | `69` | `2026-10-14` | the **workbench** for building a custom XBlock outside a running Open edX — the shortest path from "the client wants an AI-graded activity type" to something runnable |
+| 🟢 [`learningequality/ricecooker`](https://github.com/learningequality/ricecooker) | 🟢 `MIT` | `1 087` B · `8e7a35d64f5c7d51` | `main` @ `2ada75e50831` | `32` | 🟢 **`2026-10-17`** | the **content pipeline into Kolibri Studio**: a Python library for turning an arbitrary corpus into an offline-first Kolibri channel. The ingest half of every low-connectivity engagement |
+| 🟢 [`adlnet/xapi-ontology`](https://github.com/adlnet/xapi-ontology) | 🟢 `Apache-2.0` | `11 525` B · `a1587287ff0445e1` | `master` @ `3846398933f7` | `18` | `2025-07-03` | **the xAPI statement data model as RDF classes and properties** — the piece that makes a learning-record store queryable as a graph instead of as a statement log |
+| 🟢 [`openstax/fine_print`](https://github.com/openstax/fine_print) | 🟢 `MIT` | `1 055` B · `0a9ed2a2ba710b61` · at 🔴 **`MIT-LICENSE`** | `main` @ `3b75fbcbcfb0` | `40` | `2026-08-11` | 🟡 **small and unglamorous and it closes a real gap**: versioned terms/privacy agreements with per-user acceptance, which is the thing an AI feature in a school product needs on day one and nobody budgets for |
+
+🟢 **Two supporting rows filed with them:** [`openedx/edx-lint`](https://github.com/openedx/edx-lint) *(`Apache-2.0`, `11 358` B, `cfc7749b96f63bd3`, `52`★)* — **byte-identical grant to `xblock-sdk`'s, at the other case spelling** — and [`1EdTech/cert-schema`](https://github.com/1EdTech/cert-schema) *(`MIT`, `1 096` B, `06d87bf42a0a9a63`, `master` @ `6fc8bbf29ae9`)*, the Blockcerts schema behind the carried Open Badges work.
+
+🔴 **`openedx/paragon`'s default branch is `release-23.x`.** `main` and `master` both `404`. 🟢 `ACTION YA`'s practice — resolve the ref with `git ls-remote --symref` **before** probing a payload — is the only reason this row exists; a guessed ref would have filed it as grantless.
+
+### 🔴 `T256-C` — two of the five grants sit at paths this base's own ladder did not carry
+
+🔴 **`openedx/xblock-sdk` answers `404` at `LICENSE`, `LICENSE.txt`, `LICENSE.md`, `LICENSE.rst` and `COPYING`, and serves `11 358` B of verbatim `Apache-2.0` at `LICENSE.TXT`.** 🔴 **Its own `README.rst` names `LICENSE.txt` — the spelling that `404`s.**
+
+🔴 **This base published that exact finding at `p189`, as [`P1057`](../compose/code/p1057-licence-path-case/), on [`openedx/XBlock`](https://github.com/openedx/XBlock) — same organisation, same `11 358` B, same hash.** 🔴 **`LICENSE.TXT` was nonetheless ABSENT from `p229`'s `TIER_A`, the `41`-path ladder `make reach` prints so nobody retypes a short one — so `p256` reproduced the defect `67` passes later on a sibling repository.** 🟢 **`openstax/fine_print`'s `MIT-LICENSE` is the second, and that form is genuinely new**: the shared `is_licence_path` predicate's globs are dot-anchored, so a hyphenated token could never match.
+
+🟢 **Both fixed, both gated, and the fix is the JOIN rather than the two names:** `TIER_A` `16` → `26`, the ladder `41` → `51`, the predicate extended as a FORM in **both** byte-identical copies with `6` controls that fail against the pre-`p256` version, and [`pass256-ladder-closure`](../compose/code/pass256-ladder-closure/) now asserts mechanically that **every root-form path the shared suite proves is present in the ladder a pass types.** 🔵 It found `3` further gaps on its first run *(`NOTICE.txt`, `License`, `licenses`)* and one deliberate exemption, named with its reason.
+
+### 🔴 `T256-D` — the negative results, so silence is not read as coverage
+
+🔴 **`WebSearch` paid `0` rows for the TWENTY-FIFTH consecutive pass.** Its global agent leg returned courseware — [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners), already carried — plus star figures the sources themselves flag as unverified. 🟢 It continues to pay in regulation: this pass it bought the first `2026`-dated, country-specific sub-Saharan instrument this base has ever named.
+
+🔴 **`github.com/trending`, read first-hand: `13` repositories, `0` education.** `p254` read it independently and got `11` and `0`. 🔵 **Two independent reads, same verdict: education does not trend.** 🟡 The star figures on that HTML page were **not** cross-checked against the API and are deliberately not published here.
+
+🟡 **`openedx/openedx-platform` is no longer `UNMEASURABLE`** — see [`repos/foundations.md`](../repos/foundations.md) `T256-F3`, and the reason it ever was is the pass's sharpest lesson.
+
 ## Pass 255 — 2026-10-17 — **`1` NEW ROW, `1` REFUSAL THAT MATTERS MORE THAN THE ROW, AND THE FIRST REAL-WORLD PAYLOAD EVER TO EXERCISE `ACTION XQ`'s HARDENING — IT HELD.** PLUS: `19` OF `20` CANDIDATES ALREADY CARRIED, ACROSS **FOUR** `topic:` AXES
 
 ⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-row-supply`](../evidence/p255-row-supply.2026-10-16-p255.tsv) *(`20` candidates, all gated)* · [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv) *(`10` paths)* · [`p255-stars`](../evidence/p255-stars.2026-10-16-p255.tsv) *(`13`)* · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv) *(`20` rows, `2` transports)* · **instrument:** [`p255-channel-reachability`](../compose/code/p255-channel-reachability/) *(`47` controls)*

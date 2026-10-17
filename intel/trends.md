@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 256 — 2026-10-17 — **EIGHT TRENDS, AND THE ONE THAT CHANGED THIS PASS IS THAT OPEN SOURCE EDUCATION SUPPLY IS NOW ORGANISATIONAL RATHER THAN INDIVIDUAL** — THE ROWS WORTH HAVING COME FROM `20` INSTITUTIONS, NOT FROM A TRENDING FEED
+
+⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) · [`p256-topic-arm`](../evidence/p256-topic-arm.2026-10-17-p256.tsv) · [`p256-topic-tail`](../evidence/p256-topic-tail.2026-10-17-p256.tsv) · [`p256-trending`](../evidence/p256-trending.2026-10-17-p256.tsv) · [`p256-websearch`](../evidence/p256-websearch.2026-10-17-p256.tsv)
+
+### 🟢 `T1` — education open source is INSTITUTIONAL, and that is now measured rather than felt
+
+🔴 **`github.com/trending`: `13` repositories, `0` education — the second independent read, after `p254`'s `11` and `0`.** 🔴 **`WebSearch`: `0` rows for the twenty-fifth consecutive pass.** 🟢 **The owner sweep: `100` addresses off `20` organisations, `44` new to this base, `5` publishable.**
+
+🔵 **Read together these three results say one thing: this sector's software is published by institutions — ADL, 1EdTech, Open edX, OpenStax, Learning Equality, France Université Numérique, TAO, Apereo, Opetushallitus, SVWS-NRW — on institutional cadences, and none of that shows up in a feed built to surface individual momentum.** 🟢 **The practical consequence: discovery in this vertical is an ORGANISATION CHART problem, not a trending problem.** The channel that pays is `user:`, and the one that does not is whatever is hot this week.
+
+### 🟢 `T2` — the state is now a regulator and no longer a buyer, in all four regions
+
+🟢 `p255` found this in Korea *(AI Basic Act in force; AI digital textbook mandate unwound to optional material)* and called it the APAC lesson. 🔴 **`p256`'s four legs find the same shape in all four regions** — NA district mandates by statute, EMEA deployer duties, APAC compulsory hours with channel control, LATAM measured governance deficits. 🔵 **A trend that repeats in four independent regions is a planning frame.**
+
+### 🔴 `T3` — a national AI policy was withdrawn for citing sources that do not exist
+
+🔴 **South Africa's `2026` draft national AI policy: published `2026-04-10`, withdrawn `2026-04-26` over fake AI-hallucinated citations.** 🔵 **The trend is not South African.** `2026` is the year in which AI-generated policy text began to fail public scrutiny at national scale, and the remedy being demanded — show the source — is the same one a client will soon demand of a studio's own deliverables. 🟢 **Verifiability is becoming a procurement requirement, not a virtue.**
+
+### 🔴 `T4` — "open source" is increasingly a posture, and the band to watch is the top of the star distribution
+
+🟡 Carried from `p255` and re-measured this pass: of the `9` carried foundations above `450`★, 🔴 **`4` are `AGPL-3.0`/`GPL-3.0` and only `3` are `MIT`.** 🟢 **The permissive mass is in the `30`–`800`★ band — libraries, not platforms.** 🔴 And `p255`'s `CaviraOSS/PageLM` *(`2 030`★, a *"Community License"*: MIT clause verbatim for eleven words, then non-commercial, non-redistributable, revocable)* remains the shape to expect at the top. 🔵 **The planning rule: at the platform tier, assume copyleft-network or a rider until a payload says otherwise; at the library tier, permissive is still the norm.**
+
+### 🟢 `T5` — the AI seat inside an LMS is the assessment module, and its licence decides the engagement
+
+🟢 Measured this pass across `18` Open edX repositories: 🔴 **`edx-ora2` *(open response assessment — the natural seat for an AI grader)*, `event-tracking` and the platform itself are `AGPL-3.0`**, while 🟢 **`XBlock`, `xblock-sdk`, `paragon` and `codejail` are `Apache-2.0`.** 🔵 **So the architectural decision and the licence decision are the same decision**: an AI feature delivered as a plugin stays on `Apache-2.0`; one that patches the assessment core puts the client's deployment under network disclosure. 🟢 Full decomposition in [`verticals/solutions.md`](../verticals/solutions.md) `T256-V1`.
+
+### 🔴 `T6` — the knowledge-tracing research base this sector builds on is `2024` code
+
+🔴 **`bigdata-ustc`'s model zoos — `EduKTM` `266`★, `EduCDM` `201`★, `EduNLP` `64`★, `EduCAT` `77`★ — were last pushed between `2024-01` and `2024-10`.** 🔴 The owner's one `2026`-active repository, `Agent4Edu` *(`97`★, pushed `2026-09-29`)*, carries **no grant at all**. 🔴 **`topic:knowledge-tracing` read to its tail is `90` repositories, of which `11` of the bottom `19` have no licence.** 🟢 **The live, permissive, maintained line is narrow and nameable:** [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) *(`MIT`, `450`★, `2026-10-16`)*, [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) *(`MIT`, `82`★, `2026-09-17`)*, [`HFUT-LEC/EduStudio`](https://github.com/HFUT-LEC/EduStudio) *(`MIT`, `78`★, `2026-01-06`)*. 🔵 **A studio standardising on the model zoos is standardising on `2024`; the three above are the maintained choice.**
+
+### 🟢 `T7` — spaced repetition is the healthiest permissive family in education open source
+
+🟢 **`open-spaced-repetition`: `11` of `13` repositories pushed in `2026`, every one permissive** — `fsrs4anki` `4 107`★ `MIT`, `ts-fsrs` `823`★ `MIT`, `py-fsrs` `513`★ `MIT`, `fsrs-rs` `445`★ `BSD-3-Clause`, plus Go, Swift and JS ports and an optimiser. 🔵 **One algorithm, seven language bindings, all permissive, all current — the only family on these shelves a studio can adopt in any stack without a licence conversation.** 🟡 `fsrs.js` *(`180`★, `MIT`, pushed `2024-04-10`)* is the original and the one a dependency audit will meet in older code; `ts-fsrs` is the live line.
+
+### 🟡 `T8` — the market numbers are diverging while the obligations are converging
+
+🔴 **Three secondary `2026` forecasts spanning USD `10.6`–`11.4` B on `2025` bases spanning `6.4`–`8.3` B**, and a maturity rating of `35`/`100`. 🟢 **Meanwhile the obligations across four regions converge on the same five artefacts: a written policy, human review of high-stakes decisions, a tool inventory, an AI-literacy programme, a logging trail.** 🔵 **The forecast spread is not a reason to wait; it is a reason to sell the process layer, which is specified by instruments rather than estimated by analysts.**
+
+### 🔴 Declared gaps in this pass's trend reading, so silence is not read as coverage
+
+- 🔴 **No `2026`-dated STANDING national AI-in-schools strategy for any specific sub-Saharan African country.** South Africa's was published and withdrawn inside April `2026`; fifth pass this gap is declared, first pass it has a named instrument.
+- 🔴 **No Middle East school-level instrument surfaced this pass.** The carried UAE K-12 curriculum and Saudi SDAIA mandatory course are `2025`-dated and were not re-confirmed.
+- 🔴 **`eur-lex.europa.eu` was NOT re-probed this pass** — recorded as unrun, not as confirmed dead. `p255`'s classification *(a CONNECT-layer policy denial, from the proxy's own log)* stands unchallenged, and the EU reading rests on eight secondary channels and no primary text.
+- 🟡 **India's Class-`3` AI mandate is reported and not confirmed** against an official notice; it is the only `2026`–`27` obligation in this pass's regional legs without a corroborating instrument.
+- 🔴 **No permissive education ERP or SIS exists.** Re-probed this pass; OpenEduCat *(`LGPL-3.0`, payload-verified `p253`)* remains the only complete one. Fourth pass declared.
+
 ## Pass 255 — 2026-10-17 — THE `2026` TREND, NAMED: **THE MANDATE RETREATS WHILE THE OBLIGATION ADVANCES.** KOREA UNWOUND ITS FLAGSHIP AI TEXTBOOK PROGRAMME IN THE SAME YEAR ITS AI STATUTE TOOK FORCE — AND THE OPEN-SOURCE TREND IS AWAY FROM THE COMMONS
 
 ⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-websearch`](../evidence/p255-websearch.2026-10-16-p255.tsv) *(`9` legs)* · [`p255-vietnam-dates`](../evidence/p255-vietnam-dates.2026-10-16-p255.tsv) · [`p255-row-supply`](../evidence/p255-row-supply.2026-10-16-p255.tsv) · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv)

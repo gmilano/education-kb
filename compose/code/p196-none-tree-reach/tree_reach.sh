@@ -45,7 +45,22 @@ is_licence_path() {
     licence|license|licenses|licence.*|license.*|copying|copying.*|copyright|copyright.*) return 0 ;;
     unlicense|unlicence|unlicense.*|unlicence.*|notice|notice.*|eula|eula.*)              return 0 ;;
   esac
-  return 1
+  # p256 -- the TOKEN form, added because a real payload defeated the globs above.
+  # `openstax/fine_print` keeps its MIT grant at `MIT-LICENSE` (1 055 B, read first-hand
+  # this pass); the globs are dot-anchored, so a HYPHENATED token is invisible to them.
+  # `MIT-LICENSE` is the Rails/Ruby gem convention and `LICENSE-MIT` + `LICENSE-APACHE`
+  # the Rust dual-grant one.  P441: this is the FORM, not a list of tokens.
+  case "$b" in
+    *-licence*|*-license*|licence-*|license-*|licences-*|licenses-*|copying-*) ;;
+    *) return 1 ;;
+  esac
+  # ...and the guard that stops the form swallowing PROSE ABOUT a grant.  Without it
+  # `license-faq.md` and `third-party-license-report.json` would both grade as grants,
+  # which is `p782-policy-gate`'s class arriving through a path instead of a payload.
+  case "${b%%.*}" in
+    *faq|*policy|*report|*notes|*guide|*header|*check|*template|*list|*scan|*summary|*index|*readme) return 1 ;;
+  esac
+  return 0
 }
 
 printf 'slug\tpaths_in_tree\town_root\town_subtree\tbundled\tverdict\n' > "$OUT"

@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 256 — 2026-10-17 — **`ACTION YK` DISCHARGED: `146` ROWS MEASURED, `97` OF THEM ALREADY ON THESE SHELVES — INCLUDING BOTH CELLS `p255` PUBLISHED AS `UNMEASURABLE`.** AND THE REASON ONE OF THEM WAS UNMEASURABLE IS A FACT THIS BASE SETTLED AT `p225` AND DID NOT CONSULT
+
+⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) *(`100` rows with stars)* · [`p256-topic-arm`](../evidence/p256-topic-arm.2026-10-17-p256.tsv) *(`46`)* · [`p256-topic-tail`](../evidence/p256-topic-tail.2026-10-17-p256.tsv) *(`18`)* · [`p256-channel-map`](../evidence/p256-channel-map.2026-10-17-p256.tsv) *(`7` rows)* · [`p256-grant-payload`](../evidence/p256-grant-payload.2026-10-17-p256.tsv) · **instrument:** [`pass256-ladder-closure`](../compose/code/pass256-ladder-closure/)
+
+### 🟢 `T256-F1` — the new foundation rows
+
+| row | grant | payload | ref | ★ | pushed |
+|---|---|---|---|---|---|
+| 🟢 [`openedx/paragon`](https://github.com/openedx/paragon) | `Apache-2.0` | `10 174` B · `0d542e0c8804e39a` | `release-23.x` @ `5218b5b55ebd` | `141` | `2026-10-16` |
+| 🟢 [`openedx/xblock-sdk`](https://github.com/openedx/xblock-sdk) | `Apache-2.0` | `11 358` B · `cfc7749b96f63bd3` at `LICENSE.TXT` | `master` @ `fb22e0ea9233` | `69` | `2026-10-14` |
+| 🟢 [`openedx/edx-lint`](https://github.com/openedx/edx-lint) | `Apache-2.0` | `11 358` B · `cfc7749b96f63bd3` at `LICENSE.txt` | `master` @ `ec1b6a1946e2` | `52` | `2026-10-12` |
+| 🟢 [`learningequality/ricecooker`](https://github.com/learningequality/ricecooker) | `MIT` | `1 087` B · `8e7a35d64f5c7d51` | `main` @ `2ada75e50831` | `32` | `2026-10-17` |
+| 🟢 [`adlnet/xapi-ontology`](https://github.com/adlnet/xapi-ontology) | `Apache-2.0` | `11 525` B · `a1587287ff0445e1` | `master` @ `3846398933f7` | `18` | `2025-07-03` |
+| 🟢 [`openstax/fine_print`](https://github.com/openstax/fine_print) | `MIT` | `1 055` B · `0a9ed2a2ba710b61` at `MIT-LICENSE` | `main` @ `3b75fbcbcfb0` | `40` | `2026-08-11` |
+| 🟢 [`1EdTech/cert-schema`](https://github.com/1EdTech/cert-schema) | `MIT` | `1 096` B · `06d87bf42a0a9a63` | `master` @ `6fc8bbf29ae9` | *(truncated read)* | `2024-05-24` |
+| 🟢 [`open-spaced-repetition/fsrs.js`](https://github.com/open-spaced-repetition/fsrs.js) | `MIT` | `1 089` B · `4bef6c7c01b2250b` | `master` @ `d04fa627bc6d` | `180` | 🟡 `2024-04-10` |
+
+🟡 **`fsrs.js` is filed with its staleness stated**: the FSRS family's live JavaScript line is the carried [`ts-fsrs`](https://github.com/open-spaced-repetition/ts-fsrs) *(`823`★, pushed `2026-10-16`)*; `fsrs.js` is the original and is the row a dependency audit will actually meet in an older codebase.
+
+### 🟢 `T256-F2` — the star sweep, and the channel property that made it affordable
+
+🟢 **`ACTION YK` asked for a star cell on every carried row, or an `UNMEASURABLE` with its reason, and pinned the constraint: at `1` row per call it never happens.** 🟢 **`p256` measured `146` rows — `97` of them carried — against `8` billed calls** — `5` owner-batched, `3` `topic:`-scoped, within the `10`/hour search budget, with `remaining 10/10` at the start and the `core` bucket already at `0/60` *(shared egress IP)*.
+
+🔴 **And the obstacle was not the budget, it was the READ.** A `per_page=100` search response is `511`–`572` kB; `WebFetch` answers against **the first `100 000` characters only**, which is `17`–`18` of the `100` items. 🟢 **The lever is that a repeat read of the SAME url at a higher `offset` is served from the `15`-minute per-url cache and bills NOTHING** — so one billed call plus free offset reads pages the whole response.
+
+🟢 **Pinned as the standing recipe** *(and this is `ACTION YL`'s shape: the sort is part of the measurement, not a detail)*:
+
+```
+api.github.com/search/repositories?q={qualifiers}&sort=stars&order=desc&per_page=100
+  then re-read the SAME url at offset=100000, 200000, … — cached, unbilled
+qualifiers: user:A+user:B+user:C+user:D   (owner sweep — repeated user: is OR'd)
+            topic:X                        (topic sweep)
+```
+
+🟡 **Stated as a limit rather than left to be inferred:** a `4`-owner batch whose union exceeds `100` repositories is **truncated at the star head**, and `total_count` records by how much — `197`, `496`, `258`, `1 090` and `580` for this pass's five batches. 🔴 **`Ed-Fi-Alliance-OSS` and `utdanningsdirektoratet` returned no legible row at all** for that reason, so `18` of the `20` swept owners are covered and `2` are declared unread.
+
+### 🔴 `T256-F3` — `openedx/edx-platform` is `8 203`★, and why that took `31` passes is the pass's sharpest lesson
+
+🟢 **Measured: `8 203`★, `AGPL-3.0`, pushed `2026-10-16`, grant `35 136` B · `sha256`₁₆ `e12d785697426f9d` at `LICENSE` on `master` @ `d7859be168df`.**
+
+🔴 **`p255` published this cell as `UNMEASURABLE`, with the reason *"`edx-platform in:name` returns `217` forks and never the canonical row"*.** 🟢 **The query was pointed at the wrong name, and this base has known the right one since `p225`:** `ACTION SD` read the project's `README.rst` from **both** paths, found it byte-identical, and recorded that the project's own text names **`github.com/openedx/openedx-platform`** — the canonical name after the rename, carried on these shelves `29` times. 🟢 **`p256` confirmed the identity independently:** `git ls-remote --symref` on both slugs resolves to the **same** `HEAD` sha, `d7859be168df`.
+
+🔴 **So `p255` did not fail to measure a cell. It re-published an inability about a fact this base had settled, one pass after `p253` built [`p253-settled-fact-regression`](../compose/code/p253-settled-fact-regression/) for exactly that class.** 🔴 **And the gate did not fire, for a reason worth stating plainly: its register held ONE row.** A one-fact register cannot catch a regression on fact two.
+
+🟢 **Fixed:** the register gains the `openedx-canonical-name` row with `ACTION SD` as its authority, and 🟢 **`unmeasurable` joins the hedge vocabulary** — *an inability is a claim like any other, and a claim this base has settled may not be re-published without citing what settled it.* 🟢 **Measured, not asserted: with the new row in place the gate grades `p255`'s own `README.md` section `REGRESSION`.**
+
+🟢 **The other `UNMEASURABLE` cell is also closed:** [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) is **`450`★**, `MIT`, pushed `2026-10-16` — reachable on the first row of `topic:knowledge-tracing` sorted by stars. 🔵 `p255`'s reason for it *(the `10`/hour budget was spent)* was true and is now spent better: one `topic:` call returned `46` star cells.
+
+### 🟢 `T256-F4` — the carried foundations, re-starred
+
+| row | grant | ★ *(`2026-10-17`, `sort=stars&order=desc`)* | pushed |
+|---|---|---|---|
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `AGPL-3.0` | 🟢 **`8 203`** | `2026-10-16` |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | `MIT` | `4 107` | `2026-08-14` |
+| [`frappe/lms`](https://github.com/frappe/lms) | `AGPL-3.0` | `3 322` | `2026-10-16` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `ECL-2.0` | `1 239` | `2026-10-16` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `MIT` | `1 150` | `2026-10-16` |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | `AGPL-3.0` | `1 128` | `2026-10-15` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `GPL-3.0` | `1 013` | 🟢 `2026-10-17` |
+| [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | `Apache-2.0` | `955` | `2025-07-03` |
+| [`iblai/os`](https://github.com/iblai/os) | 🟢 `MIT` | `821` | `2026-10-16` |
+| [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 `MIT` | `682` | `2026-04-16` |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `GPL-3.0` | `504` | `2026-10-16` |
+| [`openedx/codejail`](https://github.com/openedx/codejail) | `Apache-2.0` | `478` | `2026-10-16` |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `Apache-2.0` | `471` | `2026-10-16` |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | `MIT` | 🟢 **`450`** | `2026-10-16` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `Apache-2.0` *(payload-verified `p253`)* | `447` | `2026-10-16` |
+| [`openfun/richie`](https://github.com/openfun/richie) | 🟢 `MIT` | `316` | `2026-10-16` |
+| [`learningequality/studio`](https://github.com/learningequality/studio) | 🟢 `MIT` | `193` | 🟢 `2026-10-17` |
+| [`openfun/marsha`](https://github.com/openfun/marsha) | 🟢 `MIT` | `151` | `2026-10-16` |
+| [`bigdata-ustc/EduKTM`](https://github.com/bigdata-ustc/EduKTM) | `Apache-2.0` | `266` | 🔴 `2024-01-02` |
+| [`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) | 🔴 `NONE` | `97` | `2026-09-29` |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 `MIT` | `51` | `2026-10-16` |
+
+🔴 **The licence shape at the top of this shelf has not moved and it is the planning fact:** of the `9` carried foundations above `450`★, 🔴 **`4` are `AGPL-3.0` or `GPL-3.0`** and only `3` are `MIT`. The permissive mass sits in the `30`–`800`★ band — the libraries, not the platforms.
+
+🔴 **`bigdata-ustc`'s research line is the opposite risk and it is worth naming:** `EduKTM`, `EduCDM`, `EduNLP` and `EduCAT` are the knowledge-tracing model zoos this shelf leans on, and the four were last pushed `2024-01` to `2024-10`. 🟡 The owner's **active** repository is `Agent4Edu` *(pushed `2026-09-29`)* and it carries 🔴 **no grant at all**. A studio standardising on this family is standardising on `2024`.
+
 ## Pass 255 — 2026-10-17 — `1` NEW FOUNDATION, AND THE PASS'S REAL WORK IS ON A CHANNEL FACT THAT CHANGES WHAT THIS SHELF CAN EVER VERIFY: **`api.github.com/repos/{slug}` IS REFUSED ON BOTH TRANSPORTS, SO THE SEARCH ENDPOINT IS NOT THE CHEAPER STAR CHANNEL — IT IS THE ONLY ONE**
 
 ⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv) *(`20` rows, `2` transports)* · [`p255-stars`](../evidence/p255-stars.2026-10-16-p255.tsv) *(`13`)* · [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv) *(`10` paths)* · **instrument:** [`p255-channel-reachability`](../compose/code/p255-channel-reachability/) *(`47` controls, in `make hooks`)*

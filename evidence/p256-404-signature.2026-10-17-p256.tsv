@@ -1,0 +1,2 @@
+channel	url_shape	http	bytes	sha256_16	body	why_it_matters
+raw.githubusercontent.com	/{owner}/{repo}/{ref}/{missing-path}	404	14	d5558cd419c8d46b	404: Not Found	a body-capturing probe that does not read the status writes this 14-byte string into a grant cell

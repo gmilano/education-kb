@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 — Pass 256 — WHAT MOVED THIS WEEK: **NOTHING IN THE STAR HEAD, AND THAT IS NOW A MEASUREMENT RATHER THAN AN IMPRESSION.** WHAT MOVED IN THE BASE: A SUPPLY CHANNEL NOBODY HAD TRIED PAID `4×` THE INDEX EVERYONE WAS QUERYING — AND `p255`'s TWO `UNMEASURABLE` CELLS BOTH TURNED OUT TO BE MEASURABLE
+
+⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) · [`p256-topic-arm`](../evidence/p256-topic-arm.2026-10-17-p256.tsv) · [`p256-topic-tail`](../evidence/p256-topic-tail.2026-10-17-p256.tsv) · [`p256-trending`](../evidence/p256-trending.2026-10-17-p256.tsv) *(`13` repositories)* · [`p256-channel-map`](../evidence/p256-channel-map.2026-10-17-p256.tsv) · [`p256-websearch`](../evidence/p256-websearch.2026-10-17-p256.tsv) *(`9` legs)*
+
+### 🔴 Moving this week: the head is static and the tail is noise
+
+🔴 **`146` repositories measured with stars this week across two channels, and NOT ONE new entrant above `500`★.** The education star head is the same set this base has carried for twenty passes. 🟢 **What is new is that the statement is now a measurement:** `topic:knowledge-tracing` is `90` repositories **in total**, read to its tail, and 🔴 **`18` of the bottom `19` sit under `20`★ with `11` of them carrying no grant at all**.
+
+| what moved | measured `2026-10-17` |
+|---|---|
+| 🟢 [`learningequality/ricecooker`](https://github.com/learningequality/ricecooker) · [`learningequality/studio`](https://github.com/learningequality/studio) · [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟢 **pushed TODAY** — `32`★ `MIT` · `193`★ `MIT` · `1 013`★ `GPL-3.0` |
+| 🟢 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🟢 **`8 203`★** — the first star measurement this base has ever taken of its flagship vertical, and `p255` had it as `UNMEASURABLE` |
+| 🟢 [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **`450`★**, `MIT`, pushed `2026-10-16` — `p255`'s other `UNMEASURABLE` cell |
+| 🟢 [`iblai/os`](https://github.com/iblai/os) | `821`★, `MIT`, pushed `2026-10-16` — the largest permissive **agent platform** on these shelves that is not a tutor |
+| 🔴 [`bigdata-ustc/EduKTM`](https://github.com/bigdata-ustc/EduKTM) · [`EduCDM`](https://github.com/bigdata-ustc/EduCDM) · [`EduNLP`](https://github.com/bigdata-ustc/EduNLP) · [`EduCAT`](https://github.com/bigdata-ustc/EduCAT) | 🔴 **the knowledge-tracing model zoos this base leans on were last pushed `2024-01` to `2024-10`** — and the owner's one `2026` repository, [`Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) *(`97`★, pushed `2026-09-29`)*, has **no grant** |
+| 🟡 [`open-spaced-repetition/*`](https://github.com/open-spaced-repetition) | 🟢 the healthiest permissive family here: `4 107`★ `fsrs4anki`, `823`★ `ts-fsrs`, `513`★ `py-fsrs`, `445`★ `fsrs-rs` *(`BSD-3-Clause`)*, `11` of `13` repositories pushed in `2026` |
+
+### 🔴 `github.com/trending` — read first-hand, second independent read, same answer
+
+🔴 **`13` repositories, `0` education.** `p254` read it independently and got `11` and `0`. 🔵 **Two reads, two windows, one verdict: education does not trend — it is supplied by `topic:` queries, by owners, and by small repositories.** 🟡 The page's star figures were not cross-checked against the API and are not published.
+
+### 🟢 The base's own week: a channel nobody had tried
+
+🟢 **`ACTION YJ` ran the owners already on these shelves as a supply channel, against the `topic:` index as a control, in the same hour on the same transport with the same sort.**
+
+| channel | candidates | `NEW` | yield | publishable rows |
+|---|---|---|---|---|
+| 🟢 **owner** *(`user:` ×`20`)* | `100` | `44` | 🟢 **`44.0 %`** | 🟢 **`5`** |
+| 🔴 **topic** *(`3` axes)* | `46` | `5` | 🔴 **`10.9 %`** | 🔴 **`0`** |
+
+🔵 **The lesson, stated so it does not get over-read: `4×` on addresses, roughly `2.5×` on rows.** `20` of the `44` new addresses carry `NONE` or `NOASSERTION`, and the rest are satellites — lint configs, Ansible deployers, `2017` demos. 🟢 **The channel earns its place in every pass; the number to report from it is rows.**
+
+### 🔴 And the week's most on-point external fact is not a repository
+
+🔴 **The Draft South Africa National AI Policy `2026` — published `2026-04-10`, which would have been the first `2026`-dated, country-specific sub-Saharan instrument this base could name — was WITHDRAWN on `2026-04-26` after fake, AI-hallucinated citations were found in its reference list.**
+
+🔵 **A base that spends every pass on whether a figure was measured or inherited should record this one, because it is the same failure at national scale:** a document that cites what does not exist reads exactly like a document that cites what does. 🟡 A revised version is reported as expected at Cabinet by **November `2026`** for release in **January `2027`**; secondary channels only.
+
 ## 2026-10-17 — Pass 255 — WHAT MOVED THIS WEEK: **A `2 030`★ "OPEN SOURCE" STUDY AGENT THAT FORBIDS REDISTRIBUTION**, AND A SUPPLY CENSUS THAT SAYS THE ENGLISH `topic:` INDEX IS SPENT. WHAT MOVED IN THE BASE: `p254` RETRACTED A SIXTEEN-PASS WALL AND **REPLACED IT WITH A SECOND WRONG EXPLANATION ITS OWN NUMBERS COULD HAVE REFUTED**
 
 ⏱️ 🔴 **FIRST pass of `2026-10-17`, and the date boundary fell INSIDE it.** `p232`–`p254` all carry `2026-10-16`; this pass's measurements were taken `2026-10-16` `23:37`–`23:55Z` and it commits on `2026-10-17`. 🟢 **The evidence filenames keep the `2026-10-16` stamp because that is when the probes ran** — stated here so a later pass reading a `2026-10-16` TSV beside a `2026-10-17` commit finds this note instead of inferring the measurement drift this base keeps finding. 🔵 **Evidence:** [`p255-row-supply`](../evidence/p255-row-supply.2026-10-16-p255.tsv) · [`p255-stars`](../evidence/p255-stars.2026-10-16-p255.tsv) · [`p255-channel-map`](../evidence/p255-channel-map.2026-10-16-p255.tsv) · [`p255-grant-payload`](../evidence/p255-grant-payload.2026-10-16-p255.tsv) · [`p255-websearch`](../evidence/p255-websearch.2026-10-16-p255.tsv) *(`9` legs)* · **instrument:** [`p255-channel-reachability`](../compose/code/p255-channel-reachability/) *(`47` controls)*

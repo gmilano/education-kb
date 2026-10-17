@@ -1,2 +1,3 @@
 key	subject	authority	settled_value	settled_by
 eu-annexiii-date	Annex III|high-risk date|high-risk obligations	2026/1744|superseded|p233|p241	2027-12-02	p233 (OJ dates), p241 (superseded-date count)
+openedx-canonical-name	edx-platform	ACTION SD|p225|openedx/openedx-platform|8 203|canonical	openedx/openedx-platform	p225 (ACTION SD: README.rst byte-identical from both paths, the project's own text names openedx/openedx-platform), p256 (8 203 stars measured under the canonical name)
