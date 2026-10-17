@@ -1,0 +1,24 @@
+slug	default_ref	head_sha12	grant_path	bytes	sha256_16	family	p257_verdict	region
+ls1intum/edutelligence	main	8f1f1327dcf5	LICENSE	1091	6b9b9eda00d6ebe3	MIT	PERMISSIVE	EMEA
+ls1intum/artemis-extension	main	7e66ec5b5104	LICENSE	1091	6b9b9eda00d6ebe3	MIT	PERMISSIVE	EMEA
+ls1intum/artemis-ansible-collection	main	af65ff382f29	LICENSE	1091	63a0a2b4d6d9f8e6	MIT	PERMISSIVE	EMEA
+UOC/java-lti-1.3-core	master	6db9889a45bb	LICENSE	1060	b6b29f11f74e8236	MIT	PERMISSIVE	EMEA
+AI4Bharat/Shoonya-Backend	master	99181c12931a	LICENSE	1067	e2cd4cec54f7dbfe	MIT	PERMISSIVE	APAC
+AI4Bharat/Anudesh-Backend	master	4e6460823f5b	LICENSE	1067	e2cd4cec54f7dbfe	MIT	PERMISSIVE	APAC
+AI4Bharat/IndicIFEval	main	1bb5f1bc4936	LICENSE	1074	1bff713bf26aea2b	MIT	PERMISSIVE	APAC
+yetanalytics/project-persephone	main	92a3f78afc61	LICENSE	11356	43070e2d4e532684	Apache-2.0	PERMISSIVE	North America
+yetanalytics/project-pan	main	4aaef10da441	LICENSE	11356	43070e2d4e532684	Apache-2.0	PERMISSIVE	North America
+yetanalytics/lrs-reactions	main	5c9426214a5b	LICENSE	11357	c71d239df91726fc	Apache-2.0	PERMISSIVE	North America
+yetanalytics/lrs-admin-ui	main	f93237b2e5f4	LICENSE	11357	c71d239df91726fc	Apache-2.0	PERMISSIVE	North America
+yetanalytics/federate-xapi	main	8ee2a450640d	LICENSE	11357	c71d239df91726fc	Apache-2.0	PERMISSIVE	North America
+yetanalytics/flint	main	0e78da028ffa	LICENSE	11357	c71d239df91726fc	Apache-2.0	PERMISSIVE	North America
+digitalcredentials/batch-issuer-ui	main	1753c2a4c46f	LICENSE	1087	a419f0e01e85b67e	MIT	PERMISSIVE	North America
+CAHLR/OATutor-Tooling	main	03e4928dc0b6	LICENSE	1105	5baaaf977a28e9fd	MIT	PERMISSIVE	North America
+Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp	main	5a128b622360	LICENSE	11357	c71d239df91726fc	Apache-2.0	PERMISSIVE	North America
+CENIA-DEV/MVP-AIEP	main	4a4c6f009c9b	LICENSE	1066	4a622df1e2cfb753	MIT	PERMISSIVE	LATAM
+CENIA-DEV/multilingual-translator-app	main	78dbd4e812a7	LICENSE	11357	c71d239df91726fc	Apache-2.0	PERMISSIVE	LATAM
+latam-gpt/anonymization-filter	main	f6f7ddfdbc02	LICENSE	1072	6e86a35874d68056	MIT	PERMISSIVE	LATAM
+opentutor/opentutor-classifier	main	0be2fc8c20a7	LICENSE	1812	9b3b1802a09113ab	NONE	RESTRICTED:added-restriction	North America
+opentutor/opentutor-dialog	main	4b077f766e41	LICENSE	1812	9b3b1802a09113ab	NONE	RESTRICTED:added-restriction	North America
+opentutor/opentutor-graphql	main	83169b2ae66b	LICENSE	1812	9b3b1802a09113ab	NONE	RESTRICTED:added-restriction	North America
+moodlehq/moodle-plugin-ci	main	-	LICENSE	35146	c53a65c2fd561c87	GPL	COPYLEFT	Global

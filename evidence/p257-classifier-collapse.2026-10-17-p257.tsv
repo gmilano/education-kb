@@ -1,0 +1,6 @@
+payload	bytes	sha256_16	p1054_verdict	p1054_hits	p257_verdict	p257_hits
+opentutor/opentutor-classifier (USC academic)	1812	9b3b1802a09113ab	NOT-MIT-BODY	[]	RESTRICTED:added-restriction	all rights reserved;commercial use;educational, research;non-profit;research purposes;without a written agreement
+yetanalytics/project-persephone (Apache-2.0)	11356	43070e2d4e532684	NOT-MIT-BODY	[]	PERMISSIVE	[]
+moodlehq/moodle-plugin-ci (GPL-3.0)	35146	c53a65c2fd561c87	NOT-MIT-BODY	[]	COPYLEFT	noncommercial (benign for GPL family)
+ls1intum/edutelligence (MIT)	1091	6b9b9eda00d6ebe3	MIT	[]	PERMISSIVE	[]
+404 body (the known constant)	14	d5558cd419c8d46b	NOT-MIT-BODY	[]	UNCLASSIFIED:no-family-no-restriction	[]

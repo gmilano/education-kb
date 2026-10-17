@@ -1,0 +1,19 @@
+owner	channel	endpoint	sort	status	note
+Ed-Fi-Alliance-OSS	core	orgs/{owner}/repos	updated:desc	READ	p256 declared UNREAD; 16 of 17 legible, 17th truncated
+Utdanningsdirektoratet	core	orgs/{owner}/repos	updated:desc	READ	p256 declared UNREAD; 15 legible, 16th truncated
+fwu-de	search	search/repositories	updated:desc	READ	batch of 4; 6 rows seen
+skolverket	search	search/repositories	updated:desc	READ	STARVED in batch of 4, recovered in a 3-owner call
+digitalcredentials	search	search/repositories	updated:desc	READ	batch of 4
+yetanalytics	search	search/repositories	updated:desc	READ	batch of 4; 22 rows seen
+ai4bharat	search	search/repositories	updated:desc	READ	batch of 4
+aiverify-foundation	search	search/repositories	updated:desc	READ	batch of 4; 1 row only
+uoc	search	search/repositories	updated:desc	READ	STARVED in batch of 4, recovered at offset=100000 of a 3-owner call
+cahlr	search	search/repositories	updated:desc	READ	batch of 4
+moodlehq	search	search/repositories	updated:desc	READ	batch of 4
+libretexts	search	search/repositories	updated:desc	READ	batch of 4; 1 row only
+ls1intum	search	search/repositories	updated:desc	READ	batch of 4; 11 rows seen
+librarycarpentry	search	search/repositories	updated:desc	READ	STARVED in batch of 4, recovered in a 3-owner call
+caiuc	search	search/repositories	updated:desc	READ	STARVED by mizcausevic-dev in a 4-owner batch; recovered un-batched
+cenia-dev	search	search/repositories	updated:desc	READ	STARVED by mizcausevic-dev; recovered un-batched
+latam-gpt	search	search/repositories	updated:desc	READ	STARVED by mizcausevic-dev; recovered un-batched at offset=100000
+mizcausevic-dev	search	search/repositories	updated:desc	READ	prolific bot-shaped owner; 32 rows seen, starved its 3 batch-mates

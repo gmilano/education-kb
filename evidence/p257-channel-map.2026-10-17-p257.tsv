@@ -1,0 +1,13 @@
+host	transport	result	classification
+api.github.com/search/repositories	curl (session proxy, authenticated)	403 "sessions are bound to their configured repositories"	REPOSITORY-SCOPE GATE
+api.github.com/repos/{any}	curl (session proxy, authenticated)	403 same message	REPOSITORY-SCOPE GATE
+api.github.com/rate_limit	curl (session proxy)	200 core limit=15000 remaining=14998 search=30/30	REACHABLE but scope-gated for data
+api.github.com/orgs/{owner}/repos	WebFetch (unauthenticated)	200 x2 then 403 for all later calls	CORE BUCKET: 2 calls then throttled
+api.github.com/search/repositories	WebFetch (unauthenticated)	200 x6	SEARCH BUCKET usable, 10/h
+api.github.com/rate_limit	WebFetch	200 but CACHED 15 min	CANNOT MEASURE SPEND JUST INCURRED
+raw.githubusercontent.com	curl (session proxy)	200, case-sensitive paths	REACHABLE, no scope gate - 27 payload probes this pass
+github.com/{slug} (HEAD)	curl (session proxy)	blanket 403	NOT an existence check
+github.com/trending (HTML)	WebFetch	200, 13 repos, 0 education	REACHABLE
+git ls-remote --symref	git over https	22/22 resolved	THE existence + default-ref channel
+eur-lex.europa.eu	curl (session proxy)	CONNECT tunnel failed, response 403	PROXY POLICY DENIAL at CONNECT layer
+eur-lex.europa.eu	WebFetch	getaddrinfo ENOTFOUND	DNS FAILURE - a DIFFERENT failure mode, same host

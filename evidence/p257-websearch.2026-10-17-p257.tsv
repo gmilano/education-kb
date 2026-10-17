@@ -1,0 +1,12 @@
+leg	region	query_shape	rows_paid	intel_paid
+1	Global	top open source AI agents education 2026 github MIT	0	no education-specific agent list; general agent lists only, star figures flagged unverified by the sources
+2	Global	open source AI tutor agent github education 2026 adaptive learning	0	named OpenTutor/Bloom/Open TutorAI - all already carried or restricted; surfaced the OpenTutor name collision
+3	Global	AI education industry trends 2026 edtech market adoption	0	market size disjunction 6.4-11.4 USD bn across 4 firms; edtech VC H1-2026 ~USD 1bn, -26 pct YoY
+4	Global	open source LMS platform AI 2026 Moodle Open edX Canvas Kolibri	0	Canvas Free-for-Teacher discontinued May 2026; Kolibri 0.16.0 May 2026 MIT; Moodle 4.5 AI subsystem
+5	Global	open source AI agent framework education LMS integration 2026	0	Artemis Iris/Athena/Hyperion named as config-gated optional integrations
+6	North America	AI education North America 2026 adoption regulation state policy K-12	0	Ohio + Tennessee mandate district AI policies; Ohio deadline 2026-07-01; NC staged to 2028; source counts disagree 25/27/31 states
+7	EMEA	AI education EMEA Europe 2026 AI Act schools adoption regulation	0	Annex III covers learning-outcome evaluation; emotion recognition in education BANNED; date conflict surfaced
+8	EMEA	EU AI Act digital omnibus Annex III postponed December 2027	0	DISJUNCTION RESOLVED: Reg (EU) 2026/1744, in force 2026-07-27, Annex III moves 2026-08-02 to 2027-12-02
+9	APAC	AI education APAC 2026 adoption regulation India China Japan Korea Singapore	0	Korea REVERSED its AI textbook plan; India Class-3 mandate 2026-27 led by IIT Madras; Beijing 8h/yr since 2025
+10	LATAM	AI educacion America Latina 2026 adopcion regulacion escuelas	0	UNESCO AI-in-Education Observatory for LatAm launched at CEPAL Santiago Apr 2026; Chile law 21.719 in force 2026-12-01
+11	sub-Saharan Africa	sub-Saharan Africa AI education strategy 2026 Kenya Nigeria Rwanda	0	GAP NARROWED: Kenya National AI Strategy 2025-2030 (Mar 2025) names AI literacy in education; Rwanda-Anthropic MoU Feb 2026; still NO 2026-dated national AI-in-schools strategy

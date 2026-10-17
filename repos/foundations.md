@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 257 — 2026-10-17 — **A BUDGET METER THAT CANNOT SEE THE SPEND YOU JUST MADE IS NOT A METER: `/rate_limit` READ THROUGH `WebFetch` IS CACHED `15` MINUTES.** PLUS: A NEW CORE ENDPOINT THAT WORKS TWICE, AND THE BATCHING HAZARD THAT STARVES FIVE OWNERS IN SILENCE
+
+🔵 **Evidence:** [`p257-channel-map`](../evidence/p257-channel-map.2026-10-17-p257.tsv) *(`12` rows, `3` transports)* · [`p257-owner-coverage`](../evidence/p257-owner-coverage.2026-10-17-p257.tsv) *(`18` owners, read/starved each)* · [`p257-none-ladder`](../evidence/p257-none-ladder.2026-10-17-p257.tsv) *(`70` probes)*
+
+### 🔴 `T257-F1` — the measurement instrument that lies by construction
+
+🔴 **Sequence, in order, all within one hour:**
+
+| step | what was read | what it said |
+|---|---|---|
+| 1 | `GET /rate_limit` *(`WebFetch`)* | `core: limit 60, remaining 60` |
+| 2 | `GET /orgs/Ed-Fi-Alliance-OSS/repos` | 🟢 `200`, `207 453` chars |
+| 3 | `GET /orgs/utdanningsdirektoratet/repos` | 🟢 `200`, `170 509` chars |
+| 4 | four more `orgs/{owner}/repos`, in parallel | 🔴 `403` ×`4` |
+| 5 | the same owner again, serially | 🔴 `403` |
+| 6 | a different endpoint *(`users/` not `orgs/`)*, serially | 🔴 `403` |
+| 7 | `GET /rate_limit` *(`WebFetch`)* again | 🔴 **`core: limit 60, remaining 60, used 0`** |
+
+🔴 **Step `7` is a LIE, and it is this base's own tooling that tells it.** `WebFetch` caches a response for `15` minutes per url, so step `7` returned step `1`'s body. The two successful calls at steps `2`–`3` had already been spent and the meter could not show them.
+
+🟢 **The consequence, stated so a later pass does not re-derive it:** `/rate_limit` read through `WebFetch` is **unusable for measuring a budget inside the pass that is spending it**. It can only ever report the state at the start of the current `15`-minute window. 🔴 **This explains a run of this base's channel confusion directly:** `p256` recorded `core` as *"`limit 60, remaining 0, used 60`"* and concluded `search` was the only metadata channel; `p257` opened on `60/60` and got exactly **two** core calls out of it. Both readings were cached snapshots of different moments, and neither described the channel at the moment it was used.
+
+🔵 **The honest instrument for a budget is the REFUSAL, not the meter** — which is `ACTION YE`'s finding from `p255` *(a refusal that does not bill is not a budget)* arriving from the other direction: here a **meter that does not re-read is not a budget either.**
+
+### 🟢 `T257-F2` — `orgs/{owner}/repos`: a real channel, with a real ceiling
+
+🟢 **`GET /orgs/{owner}/repos?per_page=100&sort=updated&direction=desc` is `200` on the unauthenticated transport and is the right shape for `ACTION YN`:** one dedicated un-batched call per owner, no `search` quota, and it carries `license.spdx_id`, `stargazers_count`, `pushed_at` and `archived` per row.
+
+🔴 **It bought exactly `2` owners before the channel closed**, and they are the two that mattered — `Ed-Fi-Alliance-OSS` and `utdanningsdirektoratet`, the pair `p256` declared UNREAD. 🟡 Whether the `403` at step `4` was a secondary (concurrency) limit from four parallel calls or simple core exhaustion is **NOT ESTABLISHED**: the meter was cached and the `403` body was not retrieved. 🔵 **Recorded as an open question with its reason, not resolved by guess.**
+
+🟢 **Practice for the next pass:** spend the `2`–`N` core calls on the owners that a batched `search` call cannot reach, and serialise them.
+
+### 🔴 `T257-F3` — the batching hazard: one prolific owner starves its batch-mates, and `total_count` hides it
+
+🔴 **`q=user:caiuc+user:cenia-dev+user:latam-gpt+user:mizcausevic-dev`, `sort=updated`, `per_page=100`: `total_count 800`, and the first TWO read windows returned `32` rows, every one of them `mizcausevic-dev`.** The other three owners were invisible.
+
+🔴 **`total_count` cannot show this.** It is the size of the OR'd union; it says nothing about whose rows filled the page. A pass reading one window and reporting *"`4` owners swept"* would have reported three owners it never saw.
+
+🟢 **Measured across this pass: `5` of `18` owners were starved this way** — `skolverket`, `uoc`, `librarycarpentry`, `caiuc`, `cenia-dev`, `latam-gpt` *(six names, five starvation events; `uoc` was starved twice)*. 🟢 **All were recovered**, by re-running un-batched or by an `offset` read, and each is marked `STARVED … recovered` in [`p257-owner-coverage`](../evidence/p257-owner-coverage.2026-10-17-p257.tsv) rather than silently counted as read.
+
+🔵 **This is precisely why `ACTION YN` said *"un-batched where a single owner exceeds `100` repositories"*, and it is sharper than that:** the trigger is not an owner's absolute size, it is the **ratio** between batch-mates. `mizcausevic-dev` is a bot-shaped owner — hundreds of `0`★ `NOASSERTION` *"-landing"* and *"-card-spec"* repositories, all pushed within days — and this base carries `6` of its rows. 🟡 **An owner channel pays in satellites *(`p256`)* and it can also pay in NOISE; both are worth saying out loud.**
+
+### 🔴 `T257-F4` — `ACTION YP`: `70` probes, `0` movement
+
+🔴 **`14` repositories reported `NONE` by `api.github.com`, each probed at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `MIT-LICENSE` on an `ls-remote`-resolved default ref: `70` × `404`.** Every body was the known `14` B constant, `sha256`₁₆ `d5558cd419c8d46b`.
+
+🟢 **On this population `NONE` is a FACT.** `p256`'s `LICENSE.TXT` and `MIT-LICENSE` discoveries are real and **rare**, and the widened ladder is not free: it costs `5`× the probes per slug. 🟡 **Said plainly: the widening paid nothing here.** 🔴 `ACTION XH`'s `60` guessed-ref `MIT` slugs — the population `ACTION YP` actually named — are still unprobed, so `YP` stays open.
+
+### 🟢 `T257-F5` — the `404` constant, reproduced independently
+
+🟢 **`d5558cd419c8d46b`, `14` B, `404: Not Found`** — computed this pass from a payload fetched fresh and stored as a fixture in [`pass257-restriction-scan/fixtures-p257/`](../compose/code/pass257-restriction-scan/fixtures-p257/). 🔵 Matches the constant this base recorded at `p222` exactly. Now asserted by a second instrument's controls as well as the first's.
+
+### 🔵 `T257-F6` — carried, re-measured rather than re-asserted
+
+- 🔴 **`curl` through the session proxy is REPOSITORY-SCOPE gated, re-measured this pass:** `api.github.com/search/repositories` and `api.github.com/repos/{any}` both answer `403` with *"sessions are bound to their configured repositories"*. `rate_limit` answers `200` *(`core 15000`, `search 30`)*, so **the authenticated transport has budget it cannot spend on metadata.**
+- 🟢 **`raw.githubusercontent.com` is `200` on both transports with no scope gate, and is CASE-SENSITIVE.** `27` payload probes this pass, `23` pinned.
+- 🔴 **`git ls-remote --symref` remains THE existence and default-ref channel: `22`/`22` this pass.** It is what caught `AI4Bharat`'s `master` *(three rows)* and `UOC`'s `master` — four rows a guessed `main` would have filed as grantless.
+- 🔴 **`eur-lex.europa.eu` is now RE-PROBED rather than carried as unrun, and the two transports fail DIFFERENTLY:** `curl` returns `CONNECT tunnel failed, response 403` *(a proxy policy denial at the CONNECT layer)*; `WebFetch` returns `getaddrinfo ENOTFOUND` *(a name-resolution failure)*. 🔵 **Neither is "eur-lex is down."** The EU reading on these shelves still rests on secondary channels only — now **nine** of them — and so does the regulation NUMBER itself. Flagged in [`intel/trends.md`](../intel/trends.md) `T257-T1`.
+
 ## Pass 256 — 2026-10-17 — **`ACTION YK` DISCHARGED: `146` ROWS MEASURED, `97` OF THEM ALREADY ON THESE SHELVES — INCLUDING BOTH CELLS `p255` PUBLISHED AS `UNMEASURABLE`.** AND THE REASON ONE OF THEM WAS UNMEASURABLE IS A FACT THIS BASE SETTLED AT `p225` AND DID NOT CONSULT
 
 ⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) *(`100` rows with stars)* · [`p256-topic-arm`](../evidence/p256-topic-arm.2026-10-17-p256.tsv) *(`46`)* · [`p256-topic-tail`](../evidence/p256-topic-tail.2026-10-17-p256.tsv) *(`18`)* · [`p256-channel-map`](../evidence/p256-channel-map.2026-10-17-p256.tsv) *(`7` rows)* · [`p256-grant-payload`](../evidence/p256-grant-payload.2026-10-17-p256.tsv) · **instrument:** [`pass256-ladder-closure`](../compose/code/pass256-ladder-closure/)

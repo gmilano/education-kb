@@ -137,6 +137,9 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── pass256-ladder-closure (p256: the LIVE ladder's closure, verified)"; \
 	cd compose/code/pass256-ladder-closure && $(PY) -I ladder_closure.py --verify >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
+	echo "── pass257-restriction-scan (p257: the vocabulary runs on EVERY payload, not only MIT-shaped ones)"; \
+	cd compose/code/pass257-restriction-scan && $(PY) -I test_restriction_scan.py >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code || exit 1; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

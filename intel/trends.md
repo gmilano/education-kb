@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 257 — 2026-10-17 — **A CARRIED DISJUNCTION CLOSED: THE EU ANNEX III DATE IS `2027-12-02` UNDER REGULATION (EU) `2026/1744`.** AND THE TREND WITH THE MOST CONSEQUENCE IS THE ONE NOBODY IS STARRING — INSTITUTIONS, NOT STARTUPS, NOW SHIP THE OPEN AI-EDUCATION STACK
+
+🔵 **Evidence:** [`p257-websearch`](../evidence/p257-websearch.2026-10-17-p257.tsv) *(`11` legs)* · [`p257-row-supply`](../evidence/p257-row-supply.2026-10-17-p257.tsv) *(`99` candidates)* · [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv) *(`23` payloads)* · [`p257-trending`](../evidence/p257-trending.2026-10-17-p257.tsv)
+
+### 🟢 `T257-T1` — the EU date, settled on a named instrument
+
+🟢 **Regulation (EU) `2026/1744`, the Digital Omnibus on AI.** Council final adoption `2026-06-29`, published in the Official Journal in July, **in force `2026-07-27`**. It moves the Annex III high-risk obligations from `2026-08-02` to 🟢 **`2027-12-02`**.
+
+| obligation | date |
+|---|---|
+| 🟢 Annex III high-risk *(incl. education: evaluating learning outcomes, screening applicants, monitoring candidates in examinations)* | 🟢 **`2027-12-02`** |
+| Annex I high-risk | `2028-08-02` |
+| systems operated by public authorities | `2030-08-02` |
+| 🔴 **Article `50(2)` marking for pre-existing generative systems** | 🔴 **`2026-12-02`** |
+| 🔴 **two new Article `5` prohibitions** | 🔴 **`2026-12-02`** |
+| Article `4` AI literacy *(deployers)* | already applicable since `2025-02-02` |
+| 🔴 Article `5(1)(f)` — emotion inference in education | 🔴 **prohibited, NOT postponed** |
+
+🔴 **Nine secondary channels agree and the primary text was not read.** `eur-lex.europa.eu` was re-probed on both transports this pass and refused on both — `CONNECT tunnel failed, response 403` on `curl`, `getaddrinfo ENOTFOUND` on `WebFetch`. 🟡 **So this is the best-supported EU reading this base can hold, and the regulation NUMBER itself is secondary-sourced.** 🔵 The disjunction `p255`/`p256` carried is closed on the *date*; the provenance hedge stays.
+
+🟡 **The trap in the postponement, and it is the thing to tell a client:** nothing that is already live moved. A school deploying an assessment tool owes Article `4` literacy, human oversight and logging **now**, and anyone who shipped a generative feature before the omnibus owes Article `50(2)` marking in **six weeks**, not in `2027`.
+
+### 🟢 `T257-T2` — the institutions are the vendors now
+
+🟢 **Measured, not asserted: of `16` publishable permissive rows this pass, `14` come from a university, a national agency or a public research centre.** TUM *(`edutelligence`, `artemis-extension`)*, IIT Madras *(`Shoonya`, `Anudesh`, `IndicIFEval`)*, UC Berkeley *(`OATutor-Tooling`)*, MIT DCC *(`batch-issuer-ui`)*, Universitat Oberta de Catalunya *(`java-lti-1.3-core`)*, CENIA Chile *(`MVP-AIEP`, `multilingual-translator-app`)*, the Ed-Fi Alliance, Skolverket, Utdanningsdirektoratet.
+
+🔴 **And they are invisible to every popularity channel.** `edutelligence` is a maintained, `MIT`-licensed, university-operated LLM tutor stack at **`17`★**. `lrs-reactions` — the trigger engine that makes a learning-record store wake an agent — is at **`1`★**. Meanwhile the highest-starred row in the whole sweep is `yetanalytics/colossal-squuid` at `71`★, which generates **sequential UUIDs**.
+
+🔵 **So the trend is really a channel statement: stars rank reach, and in this sector reach and relevance are close to uncorrelated.** It is why `github.com/trending` has returned `0` education rows on three independent reads *(`p254`, `p256`, `p257`: `11`/`0`, `13`/`0`, `13`/`0`)* and why `WebSearch` has paid `0` rows for twenty-six consecutive passes. 🟢 **The channel that works is owner-deep harvesting of institutions this base already knows** — `60.6 %` new-address yield this pass against the `topic:` index's `10.9 %` at `p256`.
+
+### 🟡 `T257-T3` — mandates are diverging, and one major programme reversed
+
+🔴 **South Korea cancelled its AI digital textbook programme.** Adoption stayed below `30 %` and the National Assembly stripped the textbooks of official status after unions said the pace had outrun teacher preparation. 🔵 **This is the first large-scale national AI-in-education REVERSAL on these shelves**, and it falsifies the implicit assumption behind every national rollout story: that the binding constraint is model quality. **It was teacher readiness.** Korea's AI Basic Act has been in force since `2026-01-22` regardless.
+
+🟢 **Against that, the mandates still hardening:** India from **Class 3 in `2026`–`27`** *(IIT Madras leading curriculum, `10`M+ educators to train — 🟡 reported, not confirmed against an official notice)*; Beijing at `8` hours a year since `2025` with Guangdong extending to lower grades; Singapore routing Primary-`4` AI through the Student Learning Space under teacher supervision; Japan deliberately **neutral** and monitoring pilots.
+
+🟡 **And the public is not uniformly with it:** support for banning AI in schools runs `23 %` *(Indonesia)* to `31 %` *(South Korea)* across the Asian markets surveyed, and **rose** in Japan over the survey period.
+
+### 🟢 `T257-T4` — in North America the deadline is becoming architecture, not paperwork
+
+🟢 **Oklahoma's parent opt-out from student-facing AI, with a requirement to provide alternative access to core instruction, is the first instrument on these shelves that cannot be satisfied by a document.** It requires a per-learner off switch that degrades to an equivalent non-AI path. 🔵 **That is a build requirement, and retrofitting it is expensive** — which makes it the most commercially consequential US detail this pass.
+
+🟡 Around it the familiar picture, with source counts that disagree *(`25` / `27` / `31` states; one tracker counts `134` bills across `31` states; another `34` states plus DC and Puerto Rico with guidance)*: Ohio and Tennessee **mandate** district AI policies *(Ohio's deadline `2026-07-01`, already passed)*; North Carolina staged to mid-`2028`; Utah legislating middle-school AI literacy; California and Alabama focused on keeping student data out of commercial AI training. 🔴 **No federal AI-in-education statute** — FERPA and COPPA plus a `2026` federal grant rule prioritising AI literacy.
+
+### 🟡 `T257-T5` — the money is consolidating around proof
+
+🔴 **Edtech venture funding fell to ≈ `USD 1` bn in H1 `2026`, down `26 %` year on year**, with investors backing fewer companies and favouring demonstrated outcomes — specifically AI tutoring and workforce upskilling. 🟡 Market-size estimates for AI in education in `2026` span **`USD 6.4`–`11.4` bn** across four firms, a `78 %` spread this shelf refuses to collapse into one number.
+
+🔵 **Read together with `T257-T2`: capital is contracting while the best open supply is being produced by institutions that were never seeking capital.** For a studio that is the arbitrage — the components are free, maintained and permissive, and the buyer is an institution with a statutory deadline.
+
+### 🔴 `T257-T6` — the sector's own naming is unreliable, and it has a cost
+
+🔴 **`OpenTutor` names at least four distinct projects**, and ranking them by stars puts a **LangChain tutorial** *(`1 117`★)* on top, ahead of the block-based tutor *(`142`★)*, an AI-teacher orchestrator *(`8`★)* and USC's restricted tutoring platform *(`2`–`4`★)*. 🔵 **A pass — or a client's own engineer — resolving a product name by search and taking the top hit gets the wrong project.** `p256` recorded the same class on licence PATHS *(case-sensitivity)*; this is the same defect one layer up, on NAMES. 🟡 Resolve by owner and read the repository, never by name and stars.
+
+### 🟡 `T257-T7` — carried, and explicitly NOT re-litigated
+
+- 🟡 **Moodle `4.5`'s AI subsystem (Oct `2024`)** remains a roadmap signal, not a production differentiator. Not re-probed this pass.
+- 🔴 **Canvas discontinued its Free-for-Teacher hosted tier in May `2026`.** Sources conflict — one table still lists it as free — so flagged rather than settled. The open-source codebase is unaffected.
+- 🟢 **Kolibri `0.16.0`, May `2026`, `MIT`** — still the only permissive mainstream LMS and still the right offline-first spine.
+- 🔴 **No release-notes or changelog channel exists for open-source AI education.** Declared as a gap for the first time: what the search channels return instead is paper code *(arXiv `2602.07176`, `2607.13370`)* with no maintained repository behind it.
+
 ## Pass 256 — 2026-10-17 — **EIGHT TRENDS, AND THE ONE THAT CHANGED THIS PASS IS THAT OPEN SOURCE EDUCATION SUPPLY IS NOW ORGANISATIONAL RATHER THAN INDIVIDUAL** — THE ROWS WORTH HAVING COME FROM `20` INSTITUTIONS, NOT FROM A TRENDING FEED
 
 ⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) · [`p256-topic-arm`](../evidence/p256-topic-arm.2026-10-17-p256.tsv) · [`p256-topic-tail`](../evidence/p256-topic-tail.2026-10-17-p256.tsv) · [`p256-trending`](../evidence/p256-trending.2026-10-17-p256.tsv) · [`p256-websearch`](../evidence/p256-websearch.2026-10-17-p256.tsv)

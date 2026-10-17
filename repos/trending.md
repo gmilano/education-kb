@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 257 — 2026-10-17 — **THE WEEK'S TRENDING SIGNAL IS INSTITUTIONAL, NOT VIRAL: `11` `yetanalytics` REPOS AND A TUM AI-TUTOR STACK PUSHED IN ONE WINDOW, WHILE `github.com/trending` SHOWS `0` EDUCATION FOR THE THIRD READ RUNNING**
+
+🔵 **Evidence:** [`p257-trending`](../evidence/p257-trending.2026-10-17-p257.tsv) · [`p257-row-supply`](../evidence/p257-row-supply.2026-10-17-p257.tsv) *(`99` candidates)* · [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv) *(`23` payloads)*
+
+### 🔴 `github.com/trending` — `13` repositories, `0` education
+
+| rank | slug | language |
+|---|---|---|
+| 1 | `anthropics/claude-plugins-official` | Python |
+| 2 | `K-Dense-AI/scientific-agent-skills` | Python |
+| 3 | `affaan-m/ECC` | JavaScript |
+| 4 | `HKUDS/CLI-Anything` | Python |
+| 5 | `mksglu/context-mode` | TypeScript |
+| 6 | `ruvnet/ruflo` | TypeScript |
+| 7 | `android/skills` | Kotlin |
+| 8 | `obra/superpowers` | Shell |
+| 9 | `cursor/plugins` | TypeScript |
+| 10 | `debpalash/VoiceStudio` | Python |
+| 11 | `MadsLorentzen/ai-job-search` | Python |
+| 12 | `hmjz100/LinkSwift` | JavaScript |
+| 13 | `xerj-org/xerj` | Rust |
+
+🔴 **`0` of `13`.** With `p254`'s `11`/`0` and `p256`'s `13`/`0` that is **three independent reads and `37` repositories with no education row among them.**
+
+### 🟢 The repos that actually moved — `pushed_at`, not stars
+
+🟢 **`16` publishable NEW rows off `18` owners this pass**, against `p256`'s `5` off `20`. Full table and grants in [`agents/top.md`](../agents/top.md) `T257-B`. Foundational substrate among them:
+
+| repo | grant | payload | ★ | pushed | region | role |
+|---|---|---|---|---|---|---|
+| 🟢 [`yetanalytics/flint`](https://github.com/yetanalytics/flint) | `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `70` | `2026-10-16` | North America | **SPARQL DSL in Clojure** — the query layer under a learning-record knowledge graph. 🟡 Not education software; it is the substrate the xAPI rows sit on |
+| 🟢 [`yetanalytics/colossal-squuid`](https://github.com/yetanalytics/colossal-squuid) | `Apache-2.0` | *(API)* | `71` | `2026-10-16` | North America | sequential UUIDs — 🟡 highest-starred row in the sweep and the **least** education-specific. A reminder that stars rank reach, not relevance |
+| 🟢 [`yetanalytics/pathetic`](https://github.com/yetanalytics/pathetic) | `Apache-2.0` | *(API)* | `39` | `2026-10-15` | North America | JSONPath — used by `project-persephone` to address inside xAPI statements |
+| 🟢 [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) *(carried)* | `Apache-2.0` | *(API)* | `1 001` | `2026-10-16` | Global | **the official Moodle mobile client, and the only four-figure permissive row in the sweep** |
+| 🟡 [`moodlehq/moodle-plugin-ci`](https://github.com/moodlehq/moodle-plugin-ci) | 🟡 `GPL-3.0` | `35 146` B · `c53a65c2fd561c87` | `65` | `2026-10-14` | Global | the CI harness every Moodle plugin is tested with. 🟡 **Copyleft — fine as a build-time tool, not linkable into a deliverable** |
+| 🟢 [`FWU-DE/fwu-kc-extensions`](https://github.com/FWU-DE/fwu-kc-extensions) *(carried)* | `Apache-2.0` | *(API)* | `10` | `2026-10-15` | **EMEA** *(DE)* | Keycloak extensions for German school identity federation |
+| 🟡 [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) *(carried)* | 🔴 `AGPL-3.0` | *(API)* | `26` | `2026-10-16` | **EMEA** *(DE)* | a German federal media institute's AI chat for schools. 🔴 **`AGPL` — a network-copyleft trap for a hosted client deliverable** |
+
+### 🟡 Licence flags raised this pass
+
+| repo | what the API says | 🔴 what the payload says |
+|---|---|---|
+| 🔴 [`opentutor/*`](https://github.com/opentutor) ×`4` | `NOASSERTION` | 🔴 **USC academic licence, `1 812` B — non-profit/educational/research only; commercial use by written agreement with the USC Stevens Center** |
+| 🟡 [`LibraryCarpentry/*`](https://github.com/LibraryCarpentry) ×`13` | `NOASSERTION` | 🟡 the Carpentries' **CC-BY content + MIT code** split, which GitHub cannot express. Not a missing grant — but not a single grant either, so a studio reusing a lesson must separate prose from code |
+| 🔴 [`ls1intum/phobos`](https://github.com/ls1intum/phobos) *(carried)* | `NOASSERTION` | 🔵 not re-probed this pass; carried as-is and **not** promoted |
+| 🔴 [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) *(carried)* | 🔴 **not reported at all** | 🔵 the API row was truncated mid-record in the read window; **declared UNREAD rather than inferred** |
+
+### 🔴 The LATAM row that is a negative result
+
+🔴 **[`latam-gpt`](https://github.com/latam-gpt)'s public repositories have gone quiet.** Newest push across the whole owner is **`2025-07-09`** *(`language_identifier`)*; the rest are `2024-11` to `2025-05`. 🔵 This base's carried LATAM intel records Latam-GPT launching **February `2026`** with `60`+ institutions across `15` countries — and **its public GitHub org has not been pushed to in over a year.** 🟡 Stated as a measurement of the public repositories only: it is **not** evidence the programme stopped, and the model may well be developed elsewhere. But a studio planning to build on Latam-GPT's open tooling should know the public side is cold.
+
+🟢 **CENIA, the centre behind it, is NOT cold** — [`CENIA-DEV/MVP-AIEP`](https://github.com/CENIA-DEV/MVP-AIEP) *(`MIT`, `2026-08-04`)* and [`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app) *(`Apache-2.0`, `2026-09-18`)* are both live and both NEW to these shelves.
+
 ## 2026-10-17 — Pass 256 — **THE OWNER SWEEP IS THE WEEK'S REPOSITORY NEWS: `100` ADDRESSES OFF `20` CARRIED OWNERS, `44` NEW TO THIS BASE, `8` WITH A PERMISSIVE GRANT READ FIRST-HAND.** PLUS `github.com/trending` RE-READ — `13` REPOSITORIES, `0` EDUCATION, SECOND INDEPENDENT READ
 
 ⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) *(`100`)* · [`p256-topic-arm`](../evidence/p256-topic-arm.2026-10-17-p256.tsv) *(`46`)* · [`p256-topic-tail`](../evidence/p256-topic-tail.2026-10-17-p256.tsv) *(`18`)* · [`p256-trending`](../evidence/p256-trending.2026-10-17-p256.tsv) · [`p256-grant-payload`](../evidence/p256-grant-payload.2026-10-17-p256.tsv) · [`p256-path-case`](../evidence/p256-path-case.2026-10-17-p256.tsv)

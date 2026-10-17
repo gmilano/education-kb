@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 257 — 2026-10-17 — **THE PLATFORM LAYER IS COPYLEFT AND THE AI LAYER IS PERMISSIVE: THAT SPLIT IS NOW MEASURED ACROSS EVERY MAJOR LMS, AND IT IS THE WHOLE ARCHITECTURE ARGUMENT.** PLUS: CANVAS DISCONTINUED ITS FREE HOSTED TIER IN MAY `2026`
+
+🔵 **Evidence:** [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv) · [`p257-websearch`](../evidence/p257-websearch.2026-10-17-p257.tsv) *(leg `4`, the LMS leg)*
+
+### 🟡 `T257-V1` — the platform census, with each grant's actual reach
+
+🔴 **Not one of the four mainstream self-hostable LMS platforms is permissive.** That is not a complaint, it is the architecture constraint that decides where a studio's own code lives.
+
+| platform | grant | what the grant REACHES | role in an engagement |
+|---|---|---|---|
+| 🟡 [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` | the platform and any plugin **linked into** it | the install base. 🟢 **Moodle `4.5` (Oct `2024`) shipped an AI subsystem** — 🟡 treat as a roadmap signal, not a production differentiator |
+| 🟡 [`openedx/edx-platform`](https://github.com/openedx/openedx-platform) | `AGPL-3.0` | 🔴 **the platform AND its network use** — a hosted modification must be offered as source | the enterprise/MOOC spine. 🔴 Hardest to self-host: needs Tutor, Docker and a DevOps team |
+| 🟡 `instructure/canvas-lms` | `AGPL-3.0` | 🔴 as above | 🔴 **the Free-for-Teacher hosted tier was discontinued May `2026`.** The open-source codebase is unaffected — but the zero-cost on-ramp a pilot used to start on is gone, which changes the first-month plan |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **`MIT`** | 🟢 nothing to reciprocate | 🟢 **the only permissive mainstream platform**, and the offline-first one. `0.16.0` released May `2026`. The correct spine wherever connectivity is the constraint — LATAM and sub-Saharan Africa |
+
+🟢 **`T257-V2` — the resolution, and it is the pattern this shelf exists to state: put the AI OUTSIDE the platform and talk to it over a standard.**
+
+🔵 Every row below is permissive and was read first-hand this pass, so the studio's own code never links into a copyleft platform:
+
+| layer | component | grant | what it does |
+|---|---|---|---|
+| 🟢 launch | [`UOC/java-lti-1.3-core`](https://github.com/UOC/java-lti-1.3-core) | `MIT` *(`1 060` B)* | **LTI 1.3 / LTI Advantage** — the AI tool launches as a first-class external tool in Moodle, Canvas, Open edX or Blackboard. 🟢 **One integration, every conformant LMS, and no linking** |
+| 🟢 record | [`yetanalytics/lrs`](https://github.com/yetanalytics/lrs) + [`lrs-admin-ui`](https://github.com/yetanalytics/lrs-admin-ui) | `Apache-2.0` *(`11 357` B)* | a self-hosted **xAPI learning-record store** and its console — the system of record that is *not* the LMS |
+| 🟢 validate | [`project-persephone`](https://github.com/yetanalytics/project-persephone) + [`project-pan`](https://github.com/yetanalytics/project-pan) | `Apache-2.0` | profile-driven statement validation, and validation of the profile itself. 🔵 The gate that stops an AI feature writing malformed records |
+| 🟢 trigger | [`yetanalytics/lrs-reactions`](https://github.com/yetanalytics/lrs-reactions) | `Apache-2.0` | 🟢 **declarative rules that fire on statement patterns** — the LMS-agnostic event bus an agent subscribes to |
+| 🟢 federate | [`yetanalytics/federate-xapi`](https://github.com/yetanalytics/federate-xapi) | `Apache-2.0` | statements across several LRSs — multi-campus, multi-vendor |
+| 🟢 tutor | [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) | `MIT` *(`1 091` B)* | 🟢 **Iris (LLM tutor), Athena (feedback suggestion), Hyperion** — a university-operated AI service suite, config-gated, with assessment responsibility left to the instructor |
+| 🟢 adapt | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) + [`OATutor-Tooling`](https://github.com/CAHLR/OATutor-Tooling) + [`pyBKT`](https://github.com/CAHLR/pyBKT) | `MIT` | adaptive tutoring, its authoring pipeline, and Bayesian knowledge tracing |
+| 🟢 credential | [`digitalcredentials/batch-issuer-ui`](https://github.com/digitalcredentials/batch-issuer-ui) + `verifier-core` | `MIT` | **batch issuance and verification of verifiable academic credentials** — the registrar's side, which issues in cohorts |
+| 🟢 SIS/data | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) + [`Ed-Fi-AdminApp`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp) | `Apache-2.0` | the US K-12 data standard, its operational data store and its admin surface |
+| 🟢 offline | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) + [`ricecooker`](https://github.com/learningequality/ricecooker) | `MIT` | the offline-first platform and the pipeline that packages a corpus into a channel for it |
+
+🔵 **Read as one sentence: the only copyleft component in that stack is the LMS the client already owns.**
+
+### 🔴 `T257-V3` — the vertical platforms a studio must NOT build a deliverable on
+
+| system | what it looks like | 🔴 what it is |
+|---|---|---|
+| 🔴 [`opentutor/*`](https://github.com/opentutor) ×`4` *(USC ICT)* | a maintained, education-native tutoring platform — classifier, dialog manager, GraphQL API, web client | 🔴 **USC academic licence, `1 812` B, byte-identical across all four.** Educational/research/non-profit only; **commercial use requires a written agreement with the USC Stevens Center for Innovation**. 🟡 Fine for a university research collaboration; a liability in a paid deliverable |
+| 🔴 `CaviraOSS/PageLM` *(carried from `p255`)* | a NotebookLM-style study tool | 🔴 **PageLM Community License** — redistribution prohibited, commercial use and SaaS forbidden, grant revocable |
+| 🔴 [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | a German federal media institute's AI chat for schools, `26`★ | 🔴 **`AGPL-3.0`.** Network copyleft reaches a hosted deliverable. 🟡 Excellent reference implementation and public-sector proof point; run it, do not embed it |
+| 🟡 [`LibraryCarpentry/*`](https://github.com/LibraryCarpentry) ×`13` | a complete information-literacy curriculum, re-published `2026-10-13` | 🟡 `NOASSERTION` because it is **CC-BY content plus MIT code** — two grants GitHub cannot express as one. 🔵 Reusable, but the prose and the code must be separated and attributed differently |
+
+### 🟡 `T257-V4` — the market frame, with its disagreement stated
+
+🟡 **AI-in-education market size for `2026` spans `USD 6.4`–`11.4` bn across four research firms** — Research and Markets ≈ `USD 10.6` bn *(to ≈ `USD 42.5` bn by `2030`)*, Precedence Research ≈ `USD 9.58` bn. Broader edtech estimates range `USD 236`–`380` bn. 🔴 **A `78 %` spread between firms is not a measurement, and this shelf will not pick one.** Quote the range and the sources, never a single figure.
+
+🔴 **The funding signal is tighter than the market signal and matters more to a studio:** edtech venture funding fell to ≈ `USD 1` bn in H1 `2026`, **down `26 %` year on year**, with investors backing fewer companies and favouring proven outcomes — specifically AI tutoring and workforce upskilling. 🔵 **So the buyer with budget is an institution under a compliance deadline or a provider with demonstrated learning gains, not a seed-stage platform.** 🟡 Adoption figures are high and softly sourced — `92 %` of students/leaders and `88 %` of educators reporting some AI use for school purposes *(Microsoft `2026`, via a vendor blog)*, ≈ `60 %` of US K-12 teachers in `2024`–`25` with about a third weekly. Treat as directional.
+
 ## Pass 256 — 2026-10-17 — **THE OPEN edX LAYER IS NOW NAMED PIECE BY PIECE RATHER THAN AS ONE ROW, AND ITS FLAGSHIP HAS A STAR CELL FOR THE FIRST TIME: `8 203`★.** PLUS: THE PERMISSIVE PIECES OF THE PLATFORM STACK ARE THE PERIPHERY, AND THAT IS THE ENGAGEMENT-SHAPING FACT
 
 ⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) · [`p256-grant-payload`](../evidence/p256-grant-payload.2026-10-17-p256.tsv) · [`p256-websearch`](../evidence/p256-websearch.2026-10-17-p256.tsv) *(leg `3`: the education-ERP leg)*

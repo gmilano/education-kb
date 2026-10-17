@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 257 — 2026-10-17 — **FOUR RECIPES, AND `P257-1` IS THE ONE THIS PASS'S ROWS MAKE POSSIBLE FOR THE FIRST TIME: AN LMS-AGNOSTIC AI TUTOR THAT LINKS AGAINST NOTHING COPYLEFT AND IS WOKEN BY THE LEARNER INSTEAD OF POLLING**
+
+⏱️ **THIRD pass of `2026-10-17`.** 🔵 **Evidence:** [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv) *(every grant below read first-hand on an `ls-remote`-resolved ref)* · [`p257-row-supply`](../evidence/p257-row-supply.2026-10-17-p257.tsv) · **instrument:** [`pass257-restriction-scan`](../compose/code/pass257-restriction-scan/)
+
+### 🟢 `P257-1` — the LMS-agnostic AI tutor, zero copyleft in the link graph · `8`–`10` weeks
+
+🔴 **The problem, measured rather than assumed:** all four mainstream self-hostable LMS platforms are copyleft — Moodle `GPL-3.0`, Open edX `AGPL-3.0`, Canvas `AGPL-3.0`, with only Kolibri `MIT` *(see [`verticals/solutions.md`](../verticals/solutions.md) `T257-V1`)*. 🔴 **Every pattern that puts the AI *inside* the platform puts the client's deployment under a reciprocal grant.** `P256-1` solved this for one platform via its plugin point; this recipe solves it for **all** of them at once, by never entering the platform at all.
+
+🟢 **The recipe. Every grant below was read first-hand this pass:**
+
+| step | component | grant · payload | why this one |
+|---|---|---|---|
+| `1` | [`UOC/java-lti-1.3-core`](https://github.com/UOC/java-lti-1.3-core) | 🟢 `MIT` · `1 060` B · `b6b29f11f74e8236` · 🔴 ref **`master`** | 🟢 **the keystone.** LTI 1.3 / Advantage launch means the tutor is an *external tool* in Moodle, Canvas, Open edX and Blackboard alike. **One integration, every conformant LMS, no linking** |
+| `2` | [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) | 🟢 `MIT` · `1 091` B · `6b9b9eda00d6ebe3` | **Iris** (LLM tutor: hints and leading questions), **Athena** (feedback suggestion for text/modelling/programming), **Hyperion**. 🟢 Already operated at university scale by TUM, AI config-gated, instructor keeps assessment responsibility |
+| `3` | [`yetanalytics/lrs`](https://github.com/yetanalytics/lrs) + [`lrs-admin-ui`](https://github.com/yetanalytics/lrs-admin-ui) | 🟢 `Apache-2.0` · `11 357` B · `c71d239df91726fc` | the xAPI record store **outside** the LMS, plus its console. The system of record the tutor reads and writes |
+| `4` | [`yetanalytics/project-persephone`](https://github.com/yetanalytics/project-persephone) + [`project-pan`](https://github.com/yetanalytics/project-pan) | 🟢 `Apache-2.0` · `11 356` B · `43070e2d4e532684` | 🔵 **validate every statement against a profile BEFORE it lands.** An LLM writing free-form into a client's LRS is how analytics dies six months in |
+| `5` | [`yetanalytics/lrs-reactions`](https://github.com/yetanalytics/lrs-reactions) | 🟢 `Apache-2.0` · `11 357` B · `c71d239df91726fc` | 🟢 **the architectural turn: declarative rules fire on statement patterns, so the tutor is WOKEN by a learner's behaviour.** No polling loop, no cron, no LMS webhook to reverse-engineer |
+| `6` | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 `MIT` · `288`★ | Bayesian knowledge tracing — mastery estimates that are explainable to a teacher, which an LLM's own confidence is not |
+| `7` | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) + [`OATutor-Tooling`](https://github.com/CAHLR/OATutor-Tooling) | 🟢 `MIT` · `1 105` B · `5baaaf977a28e9fd` | the adaptive problem bank and its spreadsheet-to-tutor authoring pipeline, so subject-matter staff author without engineers |
+| `8` | the client's LMS | 🔴 `GPL`/`AGPL` | 🔴 **run it unmodified. Launch into it over LTI, read its roster over LTI NRPS, write grades back over LTI AGS.** Zero source contact |
+
+🟢 **The licence boundary IS the architecture boundary, and it is mechanically checkable:** steps `1`–`7` are the code the studio writes and ships, every one permissive; step `8` is consumed over a published standard. 🔴 **If a requirement forces a patch inside Moodle or Canvas core, stop and re-scope — that is a different commercial conversation.**
+
+🔴 **One EU gate before anything is built:** Article `5(1)(f)` prohibits emotion inference in education outright and is **not** postponed by Regulation (EU) `2026/1744`. 🔴 **Any engagement-detection or affect-sensing feature comes out of the design, not onto a risk register.**
+
+### 🟢 `P257-2` — the India Class-`3` multilingual tutor, on IIT Madras's own stack · `10`–`12` weeks
+
+🟢 **India mandates AI and computational thinking from Class 3 in `2026`–`27`, with curriculum led by IIT Madras.** 🟢 **IIT Madras is AI4Bharat**, so the alignment argument and the technical stack are the same artefact.
+
+```
+content + instruction data
+  └─ AI4Bharat/Shoonya-Backend      MIT · 1 067 B · e2cd4cec54f7dbfe · ref master
+       annotation + annotator-workforce platform for Indic languages
+  └─ AI4Bharat/Anudesh-Backend      MIT · 1 067 B · e2cd4cec54f7dbfe · ref master
+       crowdsourced instruction collection (byte-identical grant)
+the gate that decides whether you may ship
+  └─ AI4Bharat/IndicIFEval          MIT · 1 074 B · 1bff713bf26aea2b
+       instruction-following eval for Indic languages
+delivery
+  └─ learningequality/kolibri       MIT  — offline-first, for low-connectivity districts
+  └─ UOC/java-lti-1.3-core          MIT  — launch into whatever the state board runs
+mastery + tutoring
+  └─ CAHLR/pyBKT + OATutor          MIT
+```
+
+🔴 **`IndicIFEval` is the step that makes this honest, and it is the step a rushed engagement drops.** A tutor measured only in English and deployed at Class-`3` scale across Hindi, Tamil, Bengali and Marathi is not a deliverable, it is a liability. 🟢 **Run the eval per language and publish the per-language number in the acceptance criteria.**
+
+🟡 **Scope caveat, stated:** the Class-`3` date is **reported, not confirmed** against an official notice — the one obligation in this pass's APAC leg without a primary instrument. 🟢 Price the work on the curriculum and the `10`M-educator training programme, which are not in doubt, rather than on the date.
+
+🔴 **And carry Korea's lesson into the plan:** South Korea's AI digital textbook programme was **reversed** because teacher readiness, not model quality, was the binding constraint. 🟢 **A training-and-supervision track is a line item here, not a nice-to-have.**
+
+### 🟢 `P257-3` — the credential-and-compliance spine for a North American district · `6`–`8` weeks
+
+🟢 **The buyer exists by statute** — Ohio's district AI-policy mandate passed `2026-07-01`, North Carolina's runs to mid-`2028`, Tennessee carries a private right of action on AI mental-health screening.
+
+| step | component | grant | role |
+|---|---|---|---|
+| `1` | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) + [`Ed-Fi-AdminApp`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp) | 🟢 `Apache-2.0` · `11 357` B · `c71d239df91726fc` | the US K-12 data standard, its operational store and the admin surface. 🟢 **`Ed-Fi-AdminApp` is from the owner `p256` could not read at all** |
+| `2` | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 `Apache-2.0` | OneRoster over Ed-Fi — roster exchange with whatever the district already bought |
+| `3` | [`yetanalytics/lrs`](https://github.com/yetanalytics/lrs) + [`project-persephone`](https://github.com/yetanalytics/project-persephone) | 🟢 `Apache-2.0` | 🟢 **the audit trail the statutes actually want.** Every AI interaction a validated xAPI statement, queryable, retained on the district's own infrastructure |
+| `4` | [`yetanalytics/lrs-reactions`](https://github.com/yetanalytics/lrs-reactions) | 🟢 `Apache-2.0` | the human-review workflow: a rule routes anything touching a high-stakes decision to a person before it takes effect |
+| `5` | [`digitalcredentials/batch-issuer-ui`](https://github.com/digitalcredentials/batch-issuer-ui) + `verifier-core` | 🟢 `MIT` · `1 087` B · `a419f0e01e85b67e` | verifiable credentials issued **in cohorts**, which is how a registrar works, and verified by anyone |
+| `6` | [`openstax/fine_print`](https://github.com/openstax/fine_print) *(carried `p256`)* | 🟢 `MIT` · `1 055` B | versioned terms with per-user acceptance — 🔴 **the Oklahoma parent opt-out needs exactly this, plus a per-learner off switch** |
+
+🔴 **The Oklahoma requirement is the one that cannot be satisfied by a document:** a parent opt-out with alternative access to core instruction means every student-facing AI feature needs an off switch that degrades to an equivalent non-AI path. 🟢 **Design it in at step `0`. Retrofitting it is the expensive version of this project.**
+
+### 🟢 `P257-4` — the LATAM institutional pilot, built on what is actually maintained · `6`–`8` weeks
+
+🔴 **Start from a negative result, because it changes the plan:** [`latam-gpt`](https://github.com/latam-gpt)'s public GitHub org is **cold** — newest push `2025-07-09` across the whole owner, against a programme that launched February `2026`. 🟡 Not evidence the programme stopped; 🔴 **but do not plan a delivery on its open tooling.**
+
+🟢 **What IS maintained, permissive and institution-backed:**
+
+```
+Chilean institutional anchor
+  └─ CENIA-DEV/MVP-AIEP                   MIT · 1 066 B · 4a622df1e2cfb753 · pushed 2026-08-04
+       CENIA's build for AIEP, a large professional-technical institute
+  └─ CENIA-DEV/multilingual-translator-app Apache-2.0 · 11 357 B · c71d239df91726fc
+       accessibility for Spanish + Indigenous-language classrooms
+offline-first spine (connectivity is the real constraint)
+  └─ learningequality/kolibri + ricecooker  MIT
+standards + records
+  └─ UOC/java-lti-1.3-core                 MIT  — Spanish-language LTI provenance helps here
+  └─ yetanalytics/lrs + project-persephone  Apache-2.0
+pattern references, NOT dependencies
+  └─ caiuc/equipo-*-haCAIthon-2026         MIT · mostly 0★ — student work from UC Chile's AI hackathon
+```
+
+🟢 **The commercial frame is the inverse of North America's.** There is **no** education-specific AI regulation to comply with — academic review finds universities across the region in a normative vacuum, deciding institution by institution. 🟢 **So the sellable first artefact is the institutional AI policy itself**, the thing US districts are buying under statute and LATAM institutions need without one.
+
+🔴 **One hard date to anchor the proposal: Chile's law `21.719` on personal data enters force `2026-12-01`.** Any platform touching student data in Chile has a real deadline, and it is the most useful fact in this region's leg. 🟢 **UNESCO's AI in Education Observatory for Latin America, launched at CEPAL in Santiago in April `2026`, is the convening reference to cite.**
+
+🟡 **Scope the `caiuc` rows correctly:** `MIT`, mostly `0`★, authored at a university hackathon. 🔵 **Read them for patterns and local framing; do not take a dependency on one.**
+
 ## Pass 256 — 2026-10-17 — **FOUR RECIPES, AND `P256-1` IS THE ONE THIS PASS'S MEASUREMENTS MAKE POSSIBLE: AN AI ACTIVITY TYPE THAT STAYS ENTIRELY ON `Apache-2.0` INSIDE AN `AGPL-3.0` PLATFORM**
 
 ⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-grant-payload`](../evidence/p256-grant-payload.2026-10-17-p256.tsv) *(every grant below read first-hand on an `ls-remote`-resolved ref)* · [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) · **instrument:** [`pass256-ladder-closure`](../compose/code/pass256-ladder-closure/)

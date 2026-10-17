@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 257 — 2026-10-17 — **`ACTION YN` DISCHARGED AND NOT REFUTED: THE NEXT `18` OWNERS PAID `16` PUBLISHABLE ROWS AGAINST `p256`'s `5`, AND ALL FOUR REGIONS ARE PLACED FROM ONE SWEEP.** PLUS: THE GRANT CLASSIFIER CANNOT TELL APACHE-2.0 FROM A NON-COMMERCIAL ACADEMIC LICENCE — MEASURED, AND FIXED
+
+⏱️ **THIRD pass of `2026-10-17`** *(`p255` first, `p256` second)*. All `p257` probes ran `2026-10-17`, so evidence filenames and commit date agree for the second pass running. 🔵 **Evidence:** [`p257-row-supply`](../evidence/p257-row-supply.2026-10-17-p257.tsv) *(`99` candidates, all gated)* · [`p257-owner-coverage`](../evidence/p257-owner-coverage.2026-10-17-p257.tsv) *(`18` owners, read/starved status each)* · [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv) *(`23` payloads read first-hand)* · [`p257-none-ladder`](../evidence/p257-none-ladder.2026-10-17-p257.tsv) *(`14`×`5` paths)* · [`p257-classifier-collapse`](../evidence/p257-classifier-collapse.2026-10-17-p257.tsv) · [`p257-opentutor-collision`](../evidence/p257-opentutor-collision.2026-10-17-p257.tsv) · [`p257-channel-map`](../evidence/p257-channel-map.2026-10-17-p257.tsv) *(`12` rows, `3` transports)* · [`p257-websearch`](../evidence/p257-websearch.2026-10-17-p257.tsv) *(`11` legs)* · [`p257-trending`](../evidence/p257-trending.2026-10-17-p257.tsv) *(`13`)* · **instrument:** [`pass257-restriction-scan`](../compose/code/pass257-restriction-scan/) *(`57` controls, in `make hooks`)*
+
+### 🟢 `T257-A` — `ACTION YN`, and the number it asked for is ROWS
+
+🟢 **`p256` proved the owner channel at `4.05×` the `topic:` index on addresses and asked the honest follow-up: does it hold past the first `20` owners, and does it pay in rows?** It does, and by a wider margin than `p256` measured.
+
+| | `p256` *(owners 1–20)* | 🟢 `p257` *(owners 19–36)* |
+|---|---|---|
+| owners attempted | `20` | `18` |
+| owners actually READ | 🔴 `18` *(two declared UNREAD)* | 🟢 **`18`** *(all; `5` recovered after starving)* |
+| candidates gated | `100` | `99` |
+| `NEW` to these shelves | `44` *(`44.0 %`)* | 🟢 **`60` (`60.6 %`)** |
+| grant read first-hand | `8` | 🟢 **`19` permissive + `3` restricted + `1` copyleft** |
+| 🟢 **publishable rows** | `5` | 🟢 **`16`** |
+
+🟢 **`ACTION YN` is DISCHARGED and NOT refuted.** Its falsifier — *"falsified if the next `20` owners yield `0` publishable rows"* — does not fire at `16`. 🔵 **And `p256`'s own caution is the thing that got better, not worse:** `p256` found the channel paying in satellites *(lint configs, Ansible deployers, `2017` demos)*. This pass the satellites are still there, but the **institutional owners carry their own product code**, and that is what a studio buys.
+
+🟢 **Both owners `p256` declared UNREAD are now READ** — `Ed-Fi-Alliance-OSS` and `utdanningsdirektoratet` — on a channel `p256` did not have.
+
+### 🟢 `T257-B` — the `16` publishable rows, every grant read first-hand on an `ls-remote`-resolved ref
+
+🔵 **All four regions are placed from a single sweep**, which is the thing this base has been short of: `9` North America, `4` EMEA, `3` APAC, `3` LATAM permissive payloads.
+
+| row | grant | payload | ref | ★ | pushed | region | what a studio buys |
+|---|---|---|---|---|---|---|---|
+| 🟢 [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) | 🟢 `MIT` | `1 091` B · `6b9b9eda00d6ebe3` | `main` @ `8f1f1327dcf5` | `17` | `2026-10-16` | **EMEA** *(TUM, DE)* | 🟢 **THE ROW OF THE PASS.** The AI-services suite behind [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) *(`819`★, `MIT`, carried)* — **Iris** the LLM tutor that answers with hints and leading questions, **Athena** which suggests feedback on text/modelling/programming exercises, **Hyperion**. A permissively-licensed, university-operated AI tutor stack that is already wired into a real LMS, with the AI config-gated and the human left responsible for assessment |
+| 🟢 [`yetanalytics/lrs-reactions`](https://github.com/yetanalytics/lrs-reactions) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` @ `5c9426214a5b` | `1` | `2026-10-16` | North America | **the trigger engine over learning records** — declarative rules that fire on xAPI statement patterns. 🔵 `1`★ and it is the most architecturally useful row here: it is the hook an agent needs to be *woken by* a learner's behaviour instead of polling an LRS |
+| 🟢 [`yetanalytics/project-persephone`](https://github.com/yetanalytics/project-persephone) | 🟢 `Apache-2.0` | `11 356` B · `43070e2d4e532684` | `main` @ `92a3f78afc61` | `8` | `2026-10-16` | North America | **xAPI Profile-driven statement validation** — the gate that stops an AI feature writing malformed learning records into a client's LRS |
+| 🟢 [`yetanalytics/project-pan`](https://github.com/yetanalytics/project-pan) | 🟢 `Apache-2.0` | `11 356` B · `43070e2d4e532684` | `main` @ `4aaef10da441` | `5` | `2026-10-16` | North America | the **xAPI Profile validator** itself — byte-identical grant to `project-persephone`'s. Validates the profile before the profile validates the statements |
+| 🟢 [`yetanalytics/lrs-admin-ui`](https://github.com/yetanalytics/lrs-admin-ui) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` @ `f93237b2e5f4` | `4` | `2026-10-16` | North America | the admin console for the carried [`yetanalytics/lrs`](https://github.com/yetanalytics/lrs) — credentials, accounts, statement browsing. The half of a self-hosted LRS engagement nobody budgets for |
+| 🟢 [`yetanalytics/federate-xapi`](https://github.com/yetanalytics/federate-xapi) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` @ `8ee2a450640d` | `2` | `2026-10-16` | North America | **federating statements across several LRSs** — the piece a multi-campus or multi-vendor client needs before any cross-cohort analytics is honest |
+| 🟢 [`CAHLR/OATutor-Tooling`](https://github.com/CAHLR/OATutor-Tooling) | 🟢 `MIT` | 🔴 **`1 105` B** · `5baaaf977a28e9fd` | `main` @ `03e4928dc0b6` | `0` | `2026-09-10` | North America *(UC Berkeley)* | the **content pipeline for [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor)** *(`267`★, `MIT`, carried)* — spreadsheet-to-tutor authoring. The ingest half of an adaptive-tutoring engagement, beside the carried [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) *(`288`★)* for the knowledge tracing. 🔴 **Its `1 105` B grant breaks `p256`'s MIT band — see `T257-D`** |
+| 🟢 [`digitalcredentials/batch-issuer-ui`](https://github.com/digitalcredentials/batch-issuer-ui) | 🟢 `MIT` | `1 087` B · `a419f0e01e85b67e` | `main` @ `1753c2a4c46f` | `0` | `2026-10-16` | North America *(MIT DCC)* | **batch issuance of verifiable academic credentials** — the operational piece beside the carried `verifier-plus`/`verifier-core`. A registrar issues in cohorts, not one at a time |
+| 🟢 [`Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` @ `5a128b622360` | `0` | `2026-10-16` | North America | the admin surface over the Ed-Fi ODS — **from the owner `p256` could not read at all** |
+| 🟢 [`ls1intum/artemis-extension`](https://github.com/ls1intum/artemis-extension) | 🟢 `MIT` | `1 091` B · `6b9b9eda00d6ebe3` | `main` @ `7e66ec5b5104` | `3` | `2026-10-16` | **EMEA** | the IDE-side extension for Artemis — **byte-identical grant to `edutelligence`'s**, which is what an organisation-wide `MIT` looks like when it is actually applied consistently |
+| 🟢 [`ls1intum/artemis-ansible-collection`](https://github.com/ls1intum/artemis-ansible-collection) | 🟢 `MIT` | `1 091` B · 🔴 **`63a0a2b4d6d9f8e6`** | `main` @ `af65ff382f29` | `8` | `2026-10-16` | **EMEA** | the deployment collection. 🔵 **Same `1 091` bytes as the two rows above and a DIFFERENT hash** — see `T257-D`: equal length is not equal text |
+| 🟢 [`UOC/java-lti-1.3-core`](https://github.com/UOC/java-lti-1.3-core) | 🟢 `MIT` | `1 060` B · `b6b29f11f74e8236` | 🔴 **`master`** @ `6db9889a45bb` | `4` | `2026-06-30` | **EMEA** *(Universitat Oberta de Catalunya, ES)* | **LTI 1.3 / LTI Advantage in Java** — the standards plumbing that lets an AI tool launch inside any conformant LMS as a first-class tool rather than an iframe |
+| 🟢 [`AI4Bharat/Shoonya-Backend`](https://github.com/AI4Bharat/Shoonya-Backend) | 🟢 `MIT` | `1 067` B · `e2cd4cec54f7dbfe` | 🔴 **`master`** @ `99181c12931a` | `28` | `2026-09-24` | **APAC** *(IIT Madras, IN)* | the **annotation + workforce platform** behind India's Indic-language data programmes. 🔵 Directly relevant now that India's Class-`3` AI mandate is led by IIT Madras: this is the same lab's tooling |
+| 🟢 [`AI4Bharat/Anudesh-Backend`](https://github.com/AI4Bharat/Anudesh-Backend) | 🟢 `MIT` | `1 067` B · `e2cd4cec54f7dbfe` | 🔴 **`master`** @ `4e6460823f5b` | `14` | `2026-09-18` | **APAC** | crowdsourced **instruction collection** in Indian languages — byte-identical grant to `Shoonya-Backend`'s. The data-collection half of a multilingual tutor |
+| 🟢 [`AI4Bharat/IndicIFEval`](https://github.com/AI4Bharat/IndicIFEval) | 🟢 `MIT` | `1 074` B · `1bff713bf26aea2b` | `main` @ `1bb5f1bc4936` | `3` | `2026-09-15` | **APAC** | **instruction-following evaluation for Indic languages** — the eval a studio needs before it claims a tutor works in Hindi or Tamil, not only in English |
+| 🟢 [`CENIA-DEV/MVP-AIEP`](https://github.com/CENIA-DEV/MVP-AIEP) | 🟢 `MIT` | `1 066` B · `4a622df1e2cfb753` | `main` @ `4a4c6f009c9b` | `1` | `2026-08-04` | **LATAM** *(CENIA, CL)* | a Chilean National AI Centre build for **AIEP**, a large Chilean professional-technical institute. 🔵 One of very few permissive, institution-backed LATAM education rows this base can name at all |
+| 🟢 [`CENIA-DEV/multilingual-translator-app`](https://github.com/CENIA-DEV/multilingual-translator-app) | 🟢 `Apache-2.0` | `11 357` B · `c71d239df91726fc` | `main` @ `78dbd4e812a7` | `1` | `2026-09-18` | **LATAM** | CENIA's translation front-end — the accessibility layer for Spanish/Indigenous-language classrooms |
+
+🟡 **One satellite filed with them, scope stated so a later pass does not over-read it:** [`yetanalytics/flint`](https://github.com/yetanalytics/flint) *(`Apache-2.0`, `11 357` B, `70`★)* and `flint-jena` *(`10`★)* are a **SPARQL DSL in Clojure**. Genuinely useful under a learning-record knowledge graph and **not education software**; they are here because they are the permissive, maintained substrate the xAPI rows above sit on.
+
+### 🔴 `T257-C` — the refusal that matters more than the rows: a THIRD `OpenTutor`, and it is not open source
+
+🔴 **[`opentutor/opentutor-classifier`](https://github.com/opentutor/opentutor-classifier), [`-dialog`](https://github.com/opentutor/opentutor-dialog), [`-graphql`](https://github.com/opentutor/opentutor-graphql) and `-web-client`** — the **University of Southern California ICT** OpenTutor. Actively maintained *(`2026-10-15`)*, `2`–`4`★, and 🔴 **NEW to these shelves**, which is itself the finding: this base already carries *two* different `OpenTutor` projects and did not have the third.
+
+| | |
+|---|---|
+| what `api.github.com` reports | `NOASSERTION` — *"Other"* |
+| the payload at `LICENSE` | 🔴 **a bespoke USC academic licence**, `1 812` B, `sha256`₁₆ `9b3b1802a09113ab`, **byte-identical across all three repositories** |
+| what it grants | *"Permission to use, copy, modify, and distribute this software and its documentation for **educational, research and non-profit purposes**, without fee, and without a written agreement is hereby granted"* |
+| what it withholds | 🔴 **commercial use**, explicitly: *"Permission to make commercial use of this software may be obtained by contacting: USC Stevens Center for Innovation"* |
+| 🔴 **what `p1054` answered** | 🔴 **`NOT-MIT-BODY`, `hits: []`** — no evidence at all |
+| 🟢 what [`pass257-restriction-scan`](../compose/code/pass257-restriction-scan/) answers | 🟢 **`RESTRICTED:added-restriction`**, hits `all rights reserved` · `commercial use` · `educational, research` · `non-profit` · `research purposes` · `without a written agreement` |
+
+🟡 **For a studio:** usable in a university research collaboration, unusable in a paid client deliverable without a USC contract. 🔵 **And note the shape, because it is NOT `p255`'s PageLM shape:** PageLM recites the MIT grant verbatim and diverges at the eleventh word, so `p1054` caught it. This licence never recites MIT at all — **so it never reached the vocabulary.** The classifier's scope, not its vocabulary, was the hole.
+
+🔴 **The name collision, measured, because a careless pass publishes the wrong row:** `OpenTutor` names at least **four** distinct projects, and the top hit by stars is none of them.
+
+| by stars | slug | what it actually is |
+|---|---|---|
+| 🔴 **`1 117`★** | [`LangChain-OpenTutorial/LangChain-OpenTutorial`](https://github.com/LangChain-OpenTutorial/LangChain-OpenTutorial) | 🔴 **a LangChain tutorial. Not education software at all** |
+| `142`★ | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | the block-based adaptive learning workspace — **carried** |
+| `8`★ | [`tutornew/OpenTutor`](https://github.com/tutornew/OpenTutor) | orchestrating AI teachers, `NONE` — **carried** |
+| `2`–`4`★ | `opentutor/*` *(USC ICT)* | 🔴 **restricted, and the one this base was missing** |
+
+🔵 **A pass that resolves a product name by `in:name` + `stars:desc` and takes the top row publishes a LangChain tutorial as an education agent.** `WebSearch` also presented three forks of `zijinz456/OpenTutor` *(`lkh081231`, `adity982`)* as if they were separate projects; they are ordinary forks and are **not** an astroturf cluster — said explicitly so a later pass does not inherit a suspicion this pass checked and dropped.
+
+### 🔴 `T257-D` — `ACTION XW`: the MIT band has no principled ceiling, and that is the finding
+
+🔴 **[`CAHLR/OATutor-Tooling`](https://github.com/CAHLR/OATutor-Tooling)'s grant is `1 105` B — above `p256`'s `1 055`–`1 096` ceiling.** Read in full rather than screened: it is **verbatim MIT**, `0` restriction hits. The excess is one long holder line — *"Copyright (c) 2023 Zachary A. Pardos (@zpardos) - CAHL research lab"*.
+
+🟢 **So the band is not merely widened to `1 055`–`1 105` on `16` first-hand payloads; it is the wrong KIND of test.** The MIT holder line is free text of unbounded length, so **no byte ceiling can be principled** — a band is a screen that tells you to read the body, and `p256`'s `8 563` B PageLM was caught by *distance* from the band, not by the band's edge.
+
+🔵 **A second, sharper measurement in the same direction:** `edutelligence`, `artemis-extension` and `artemis-ansible-collection` are **all exactly `1 091` B**, and the third hashes differently *(`63a0a2b4d6d9f8e6` vs `6b9b9eda00d6ebe3`)*. Equal length, different text. **The byte count cannot distinguish two grants from the same organisation**, let alone two licences.
+
+### 🔴 `T257-E` — `ACTION YP`: the ladder widening paid NOTHING on this population, and that is said plainly
+
+🔴 **`14` repositories that `api.github.com` reports as `NONE`, probed against `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `MIT-LICENSE` on `ls-remote`-resolved refs: `0` moved.** `70` probes, `70` × `404`, every body the known `14` B constant.
+
+🟡 **`ACTION YP` is therefore PARTLY ANSWERED and its falsifier partly fired.** On this population `NONE` **is a fact, not a path artefact**, and `p256`'s two discoveries *(`LICENSE.TXT`, `MIT-LICENSE`)* are real but **rare**. 🔴 **`ACTION XH`'s `60` `MIT` slugs read on guessed refs — the population `YP` actually named — remain UNPROBED**, so `YP` is re-registered rather than discharged.
+
+### 🔴 `T257-F` — the negative results, so silence is not read as coverage
+
+🔴 **`WebSearch` paid `0` rows for the TWENTY-SIXTH consecutive pass.** `11` legs, `0` publishable repositories. 🟢 It again paid in regulation, and this pass it **resolved a carried disjunction** — see [`intel/trends.md`](../intel/trends.md) `T257-T1`.
+
+🔴 **`github.com/trending`, read first-hand: `13` repositories, `0` education.** `p254` got `11`/`0`; `p256` got `13`/`0`. 🔵 **Three independent reads, same verdict: education does not trend.** Star figures on that page were not cross-checked and are deliberately not published.
+
+🔴 **`api.github.com` core bucket: `2` calls, then `403` on every later call** — and 🔴 **`/rate_limit` read through `WebFetch` is CACHED for `15` minutes, so it reported `60/60 used:0` while the channel was already refusing.** See [`repos/foundations.md`](../repos/foundations.md) `T257-F1`: **a budget meter that cannot see the spend you just made is not a meter.**
+
 ## Pass 256 — 2026-10-17 — **`ACTION YJ` DISCHARGED AND NOT REFUTED: THE OWNERS ALREADY ON THESE SHELVES ARE A LIVE SUPPLY CHANNEL AT `4×` THE `topic:` INDEX'S YIELD — AND THE ROWS IT PAYS IN ARE SATELLITES, SO THE MEASURE IS ROWS, NOT ADDRESSES.** `5` NEW ROWS, EVERY GRANT READ FIRST-HAND, AND TWO OF THEM AT PATHS THIS BASE'S OWN LADDER DID NOT CARRY
 
 ⏱️ **SECOND pass of `2026-10-17`.** `p255` carries this date and its measurements were taken `2026-10-16` `23:37`–`23:55Z`; `p256`'s probes all ran `2026-10-17`, so its evidence filenames and its commit date agree for the first time in three passes. 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) *(`100` candidates, `20` owners, all gated)* · [`p256-topic-arm`](../evidence/p256-topic-arm.2026-10-17-p256.tsv) *(`46`, the control arm)* · [`p256-grant-payload`](../evidence/p256-grant-payload.2026-10-17-p256.tsv) *(`13` paths)* · [`p256-path-case`](../evidence/p256-path-case.2026-10-17-p256.tsv) · **instrument:** [`pass256-ladder-closure`](../compose/code/pass256-ladder-closure/) *(`38` controls, in `make hooks`)*

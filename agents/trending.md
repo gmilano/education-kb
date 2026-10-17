@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 257 — 2026-10-17 — **THREE INDEPENDENT TRENDING READS, THREE TIMES ZERO: EDUCATION DOES NOT TREND.** THE MOVEMENT THIS WEEK IS A UNIVERSITY AI-TUTOR STACK NOBODY IS STARRING
+
+🔵 **Evidence:** [`p257-trending`](../evidence/p257-trending.2026-10-17-p257.tsv) *(`13` rows)* · [`p257-websearch`](../evidence/p257-websearch.2026-10-17-p257.tsv) *(`11` legs)* · [`p257-opentutor-collision`](../evidence/p257-opentutor-collision.2026-10-17-p257.tsv)
+
+### 🔴 The feed, read first-hand
+
+🔴 **`github.com/trending`: `13` repositories, `0` education.** The page is agent-harness and coding-tool traffic — `anthropics/claude-plugins-official`, `HKUDS/CLI-Anything`, `cursor/plugins`, `android/skills`, `obra/superpowers`, `ruvnet/ruflo`.
+
+| pass | repositories on the page | education |
+|---|---|---|
+| `p254` | `11` | 🔴 `0` |
+| `p256` | `13` | 🔴 `0` |
+| 🔴 **`p257`** | `13` | 🔴 **`0`** |
+
+🔵 **Three independent reads on three different passes. This is now a settled fact about the channel, not a run of bad luck** — the trending feed is not an education-intelligence channel and a pass should stop expecting rows from it. 🟡 Star figures on that HTML page were **not** cross-checked against the API and are deliberately not published.
+
+### 🟢 What actually moved this week — by push date, which is the honest signal
+
+🟢 **Since the feed pays nothing, the movement is measured by `pushed_at` on owners this base already knows.** Every row below was read first-hand this pass; grants in [`p257-grant-payload`](../evidence/p257-grant-payload.2026-10-17-p257.tsv).
+
+| what moved | grant | ★ | pushed | why it is the week's signal |
+|---|---|---|---|---|
+| 🟢 [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) | `MIT` | `17` | `2026-10-16` | 🟢 **a university-operated AI tutor stack — Iris, Athena, Hyperion — under `MIT`, maintained daily, at `17`★.** The gap between its usefulness and its star count is the whole story of this shelf |
+| 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) *(carried)* | `MIT` | `819` | 🟢 **`2026-10-17`** | pushed the day of this pass. The LMS `edutelligence` plugs into |
+| 🟢 [`yetanalytics/*`](https://github.com/yetanalytics) — `11` repos | `Apache-2.0` | `1`–`71` | `2026-10-15/16` | 🟢 **an entire xAPI/learning-record stack pushed in one window.** `lrs-reactions`, `federate-xapi`, `project-persephone`, `project-pan`, `lrs-admin-ui` all NEW to these shelves |
+| 🟢 [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) *(carried)* | `Apache-2.0` | `12` | 🟢 **`2026-10-17`** | the Ed-Fi Alliance's next-generation data service, pushed today |
+| 🟢 [`LibraryCarpentry/*`](https://github.com/LibraryCarpentry) — `13` lessons | 🟡 `NOASSERTION` | `1`–`60` | `2026-10-13` | a whole curriculum re-published in one day. 🟡 **`NOASSERTION` here is the Carpentries' dual arrangement** *(CC-BY content + MIT code)*, which GitHub cannot express — not a missing grant |
+| 🔴 [`opentutor/opentutor-classifier`](https://github.com/opentutor/opentutor-classifier) | 🔴 **USC academic** | `4` | `2026-10-15` | 🔴 **maintained, education-native, and NOT open source.** See `agents/top.md` `T257-C` |
+
+### 🔴 The negative results
+
+🔴 **`WebSearch` paid `0` publishable rows for the TWENTY-SIXTH consecutive pass**, across `11` legs this time *(`5` global, `4` regional, `1` EU-primary, `1` sub-Saharan)*. 🔵 Its failure mode is consistent and now well characterised: it returns **vendor blogs, affiliate comparison pages and aggregators**, and the sources themselves flag their own star and market figures as unverified. 🟢 It continues to pay in **regulation**, and this pass it resolved a carried disjunction outright.
+
+🔴 **`WebSearch` also mis-presented ordinary forks as distinct projects** — three forks of `zijinz456/OpenTutor` *(`lkh081231`, `adity982`)* described as separate repositories with *"the same README"*. 🟢 Checked against the API and dropped: they are forks, the default search excludes them, and there is **no astroturf cluster**. 🔵 Recorded so a later pass does not inherit a suspicion this pass already settled.
+
+🟡 **No `2026` release-notes channel for education AI was found.** Searched `github trending`, agent-framework and LMS-integration legs; what exists is paper code *(arXiv `2602.07176` Open TutorAI, `2607.13370` LEA)* with no maintained repository attached. 🔵 **Declared as a gap rather than left silent: this base still has no release-feed channel for the sector.**
+
 ## 2026-10-17 — Pass 256 — WHAT MOVED THIS WEEK: **NOTHING IN THE STAR HEAD, AND THAT IS NOW A MEASUREMENT RATHER THAN AN IMPRESSION.** WHAT MOVED IN THE BASE: A SUPPLY CHANNEL NOBODY HAD TRIED PAID `4×` THE INDEX EVERYONE WAS QUERYING — AND `p255`'s TWO `UNMEASURABLE` CELLS BOTH TURNED OUT TO BE MEASURABLE
 
 ⏱️ **SECOND pass of `2026-10-17`.** 🔵 **Evidence:** [`p256-row-supply`](../evidence/p256-row-supply.2026-10-17-p256.tsv) · [`p256-topic-arm`](../evidence/p256-topic-arm.2026-10-17-p256.tsv) · [`p256-topic-tail`](../evidence/p256-topic-tail.2026-10-17-p256.tsv) · [`p256-trending`](../evidence/p256-trending.2026-10-17-p256.tsv) *(`13` repositories)* · [`p256-channel-map`](../evidence/p256-channel-map.2026-10-17-p256.tsv) · [`p256-websearch`](../evidence/p256-websearch.2026-10-17-p256.tsv) *(`9` legs)*
