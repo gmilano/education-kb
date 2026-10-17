@@ -1,0 +1,59 @@
+# Pass 263 -- repo rows read on the PAGE channel, 2026-10-17 ~07:40-07:46Z.
+#
+# BAND -- READ BEFORE PROMOTING ANY ROW.  Every row here was read by WebFetch against
+# the repo's github.com HTML page.  That yields GitHub's own licence LABEL, which this
+# KB has distinguished from a grant-body read since p155 (licence-name-channel vs
+# licence-body-probe).  NO LICENSE FILE BYTES WERE READ THIS PASS -- `git clone` is
+# refused and api.github.com is out of scope for third-party repos (see the pass 263
+# channel map).  So:
+#   band = page-label  -> existence CONFIRMED on a live 200 page; licence is GitHub's
+#                         computed label and is NOT a grant read.
+# These rows may CORROBORATE an existing shelf cell or FLAG a divergence. They must not
+# be promoted to a grant-verified band without a byte read in a later pass.
+#
+# Star figures are GitHub's rounded display ("41.5k", "1.2k"). Where the page showed an
+# exact integer it is given exactly. Rounded values are not precision claims.
+#
+# Columns: slug	stars_displayed	licence_label	band	note
+slug	stars_displayed	licence_label	band	note
+HKUDS/DeepTutor	41.5k	Apache-2.0	page-label	Release v1.6.14 dated 2026.10.8 shown on page. Agent-native learning workspace. Largest education-specific agent measured.
+microsoft/autogen	61.4k	CC-BY-4.0 + MIT	page-label	ARCHIVED: page states "Project archived and no longer maintained". Dual grant = CC-BY-4.0 docs, MIT code. See divergence note below.
+microsoft/agent-framework	14.2k	MIT	page-label	Page carries a "Migration from AutoGen" guide but does NOT call itself AutoGen's successor. Do not write "successor" as fact.
+langchain-ai/langgraph	43.4k	MIT	page-label	Low-level orchestration for stateful agents. General framework, not education-specific.
+huggingface/smolagents	29.9k	Apache-2.0	page-label	General agent framework; carried on this shelf historically as an education composition primitive.
+DaRL-GenAI/instructional_agents	488	MIT	page-label	Page shows it as a FORK of Hyan-Yao/instructional_agents. EACL'26 main. Multi-agent ADDIE instructional design.
+openedx/XBlock	471	Apache-2.0	page-label	Component framework for Open edX. Permissive island inside an AGPL platform estate.
+pykt-team/pykt-toolkit	450	MIT	page-label	Deep knowledge-tracing benchmark library.
+satvik314/educhain	387	MIT	page-label	Python package generating educational content with GenAI.
+openfun/richie	316	MIT	page-label	Django/React CMS for education portals.
+CAHLR/OATutor	267	MIT	page-label	ITS with Bayesian Knowledge Tracing, ReactJS + Firebase. Page showed 1,045 commits, 160 forks, no date.
+GeminiLight/awesome-ai-llm4education	220	NOT-SHOWN	page-label	Awesome-list of AI/LLM-for-education papers. Licence not visible in the fetched portion; NOT an absence claim.
+zijinz456/OpenTutor	142	MIT	page-label	Block-based local-first adaptive workspace. NOTE p257 recorded an OpenTutor name collision; this is the zijinz456 address specifically.
+Open-TutorAi/open-tutor-ai-CE	111	BSD-3-Clause	page-label	Community edition, AI tutoring platform. One of very few non-copyleft platform-shaped rows.
+mwasifanwar/eduadapt-ai	26	NOT-SHOWN	page-label	RL-based adaptive learning. Low attention; licence not visible in fetched portion.
+HugeCatLab/ChatTutor	1.3k	AGPL-3.0	page-label	Visual/interactive tutor (whiteboard, mindmaps). COPYLEFT -- not a build-on candidate for client delivery.
+moodle/moodle	7.5k	GPL-3.0	page-label	Reference LMS. Copyleft, as the standing shelf finding says.
+openedx/openedx-platform	8.2k	AGPL-3.0	page-label	RENAME OBSERVED: github.com/openedx/edx-platform resolves to openedx/openedx-platform. Any shelf cell still on the old slug should be re-pointed.
+instructure/canvas-lms	6.9k	AGPL-3.0	page-label	Copyleft.
+bigbluebutton/bigbluebutton	9.2k	LGPL-3.0	page-label	Virtual-classroom conferencing. Weak copyleft.
+frappe/lms	3.3k	AGPL-3.0	page-label	Copyleft.
+learningequality/kolibri	1.2k	MIT	page-label	Offline-first learning platform. PERMISSIVE platform-shaped row -- rare on this shelf; worth a grant read next pass.
+sakaiproject/sakai	1.2k	ECL-2.0	page-label	Educational Community License 2.0. p216 already flagged ECL as a classifier blind spot.
+chamilo/chamilo-lms	1.0k	GPL-3.0	page-label	Copyleft.
+overhangio/tutor	1.1k	AGPL-3.0	page-label	Docker-based Open edX distribution.
+openeducat/openeducat_erp	888	LGPL-3.0	page-label	Education ERP. Page slug casing is lowercase "openeducat".
+h5p/h5p-php-library	151	GPL-3.0	page-label	Interactive content library. Page carries no repo description.
+#
+# DIVERGENCE FLAGGED FOR THE SHELF (not applied -- no shelf was written this pass).
+# microsoft/autogen is ARCHIVED as of this reading.  p259 already ran an archived
+# census, so this may be known; if any shelf cell still presents AutoGen as a live
+# build-on recommendation, that cell is now stale and should be re-banded.  A dead
+# upstream is a delivery risk, not merely a star-count correction.
+#
+# SECOND DIVERGENCE: the historical globant-kb/education/ mirror (a separate, much
+# older 8-file copy) carries star figures that this page channel contradicts hard --
+# educhain ~12k vs 387 measured, pykt 1.2k vs 450, OATutor ~1.5k vs 267,
+# awesome-ai-llm4education 1.5k vs 220, open-tutor-ai-CE ~800 vs 111,
+# instructional_agents ~200 vs 488 and its licence Apache-2.0 vs MIT measured.
+# That mirror is NOT this repo and was not edited; the contradiction is recorded so a
+# later pass does not re-import those inflated figures as if they were fresh.

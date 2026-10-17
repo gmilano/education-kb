@@ -1,0 +1,26 @@
+# Pass 263 -- WebSearch queries run and what each returned, 2026-10-17.
+#
+# Search is the ONLY regulatory channel in this session (policy-matrix.tsv already
+# records this as a measured property, not a one-off).  Every row below is therefore
+# band=reported.  Nothing here is corroborated by a direct fetch of a primary
+# instrument, because no direct-fetch channel to a policy host exists this pass.
+#
+# A region that returned nothing specific is written down as a GAP, explicitly.
+# Silence is not coverage.
+#
+# Columns: scope	query_gist	band	yield
+scope	query_gist	band	yield
+Global	top open source AI agents education 2026 github MIT	reported	MISS on intent: returned general-purpose agent lists (OpenClaw, OpenHands, opencode, CrewAI), no education-specific agent. Confirms the standing finding that generic "best agents" listicles do not reach this vertical.
+Global	github trending education AI 2026 tutoring agent	reported	HKUDS/DeepTutor is the one clear standout; third-party aggregator (agents-radar) put it at 41,146 stars on 2026-10-12 vs 41.5k read on page 2026-10-17. Also surfaced Study-Mate, Bloom, Claw-ED, ChatTutor, Tov-learn -- mostly topic-page noise, not a trending ranking.
+Global	open source platform education LMS ERP MIT Apache	reported	Re-confirms the standing shelf conclusion: no MIT-licensed LMS located; results are GPL/AGPL/ECL. Sources disagreed on Open edX (AGPL vs Apache) -- the page channel read AGPL-3.0 this pass.
+Global	AI education industry trends 2026 market size	reported	2026 market estimates DIVERGE WIDELY across firms: ~$6.4B to $11.4B. Precedence $9.58B(2026)->$136.79B(2035); GII $8.3B(2025)->$57.2B(2033). Do not publish a single consensus figure. North America ~36% share; APAC fastest at ~35.3% CAGR.
+Global	OECD Digital Education Outlook 2026	reported	STRONGEST FINDING OF THE PASS. OECD (pub. Jan 2026) argues design/pedagogy matters more than adoption: general-purpose chatbot gains "disappear - and sometimes reverse - in exams when access is removed", while purpose-built pedagogically-designed tools show sustained gains. TALIS: 37% of lower-secondary teachers used AI in work (2024); 72% cite academic-integrity concern. Directly supports building bespoke education AI over reselling generic chat.
+North America	AI education NA 2026 adoption regulation players	reported	US regulation is state-level: 134 AI-in-education bills across 31 states in 2026. Named: CA AB 1159 (student data in training), Idaho SB 1227 (privacy). Federal K-12 AI Literacy and Readiness Act (H.R. 8747) advanced in House committee markup 2026-07-21, passage NOT confirmed. District divergence: Katy ISD bans GenAI chatbots K-6; NYC one-year moratorium on student-facing AI through grade 8. Canada: no AI statute, "AI for All" national strategy launched 2026-06-04. 60% of US K-12 teachers used AI in 2024-25, 32% weekly.
+EMEA	AI education EMEA 2026 AI Act schools	reported	Already-binding: AI Act Art.4 AI-literacy duty (since 2025-02-02) and Art.5 emotion-recognition prohibition in education. Annex III high-risk education duties (admission, assessment, path-steering, proctoring) deferred to 2027-12-02 by the Digital Omnibus; 2028-08-02 for embedded. Matches policy-matrix.tsv rows already carried -- CORROBORATES, adds nothing new.
+APAC	AI education APAC 2026 adoption regulation	reported	No common rulebook. China: AI reported compulsory from age six (Sept 2025) -- SECONDARY SOURCE ONLY, not confirmed against MoE. India: AI/computational thinking mandated from Class 3 for 2026-27, same single-source caveat; fastest-growing market at 38.9% CAGR. Singapore: sequences via MOE pilots; ban-support fell 37%->28%. China has binding algorithm/deep-synthesis/GenAI rules + labelling since 2025-09-01 but no general AI law. India: no AI law, DPDP rules phase in to May 2027.
+LATAM	AI education LATAM 2026 adoption regulation	reported	GAP DECLARED -- the honest result. Regulatory context is retrievable (Brazil PL 2338/2023 Senate-approved Dec 2024, still in Chamber, vote expected after Oct 2026 elections; Brazil ran region's first AI regulatory sandbox 2025; Mexico has bills but no enacted AI statute; Peru has an enacted risk-based framework) but NO source located addresses AI-in-EDUCATION policy specifically for Brazil or Mexico. Mexico education datapoint: Public AI Training Center (INFOTEC + TecNM + 14 companies) targeting 10,000 specialists in 2026.
+LATAM	open source education repos of LATAM origin	reported	GAP DECLARED. No LATAM-origin education agent or platform surfaced in this pass's searches. p201/p202 already carry latam-origin-rows and latam-corpus-licences work; this pass adds no new LATAM supply and does not pretend to.
+#
+# NOT SEARCHED THIS PASS, declared so the absence is not read as coverage:
+#   - Africa / MEA instruments (p158, p189, p190, p227 hold the prior work).
+#   - Per-repo grant bodies: impossible this pass, see channel map.
