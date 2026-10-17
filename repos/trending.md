@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 270) — The policy matrix declared five verdicts and carried twelve, and only counting the column found it
+
+⏱️ **Sixteenth pass of `2026-10-17`.** Append-only. Evidence:
+[`verified-repos.2026-10-17-p270.tsv`](../evidence/verified-repos.2026-10-17-p270.tsv) ·
+[`p270-websearch.2026-10-17-p270.tsv`](../evidence/p270-websearch.2026-10-17-p270.tsv) *(9 legs,
+all nine taken from `p269`'s registered backlog; the three saturated global supply legs were
+deliberately NOT re-run, per `p269`'s standing instruction)*.
+
+### 🔴 This file's own channel: zero new repositories, and it was not for want of looking
+
+`p269` measured the generic supply legs as **saturated across four passes** and instructed that they
+be spent **last, not first**. Pass 270 spent them **not at all** and ran one targeted supply leg
+instead (`Gap 367`'s Spanish limb). **Nine repositories returned, eight of them university student
+course portfolios, and the ninth already held.** 🟢 **`repos/foundations.md` therefore gains no
+rows, and this is the fifth consecutive measured nil return on this channel.** Recorded, not padded.
+
+### 🔴 `intel/policy-matrix.tsv` — the header was wrong, and the method that found it was `cut -f4 | sort -u`
+
+The matrix header declares: *"VERDICT vocabulary (closed)"*, **five values**. Counting the actual
+column returned **twelve**:
+
+| state | values |
+|---|---|
+| 🟢 declared from the start | `PROHIBITED` · `GATED` · `MANDATED` · `PROPOSED` · `UNREGULATED` |
+| 🟡 in the data since `p269`, never declared | `NONE_IN_FORCE` · `ADOPTED` · `IN_FORCE_UNENFORCED` |
+| 🔴 in the data and found **only by counting** | `HIGH_RISK` · `FRAMEWORK_LAUNCHED` |
+| 🟢 added by `p270`, because its rows had no honest home | `ADVISORY_NONBINDING` · `NOT_ESTABLISHED` |
+
+🔴 **A consumer that switches on the declared five silently drops every `ZA`, `KR`, `JP`, `US-NC`,
+`EE`, `FI`, `NL`, `SG`, `ID`, `CO`, `CL`, `BR` and `regional` row — i.e. most of this base's
+non-US-state coverage.** 🟢 **The header is now reconciled to the data, each undeclared value
+documented with its mechanism and its occupants, and the count re-derived from the column rather
+than from the header.** Verified after the edit: **12 declared, 12 present, zero undeclared.**
+
+🔵 **This is `T29`'s defect class in a second file on the same day.** A statement *about* an
+artefact disagreed with the artefact, and the statement was the thing being trusted — in
+`agents/trending.md` it was a propagation claim, here it was a vocabulary declaration. **Both were
+invisible to reading and visible to measuring.**
+
+### 🟢 Two new verdict values, and why the original five could not express them
+
+- **`ADVISORY_NONBINDING`** — a **named, dated, non-binding** instrument exists: a voluntary
+  framework, a *"strongly recommends"*, encouraged principles, a national priority. 🔴 **This is the
+  most common state in this field** and the five had no home for it: `UNREGULATED` claims nothing was
+  found (false, and it reads as a green light) and `MANDATED` invents a duty. Four `p270` rows need
+  it — **US-federal** (DOL **TEN No. 07-25**, 2026-02-13, explicitly voluntary), **US-NC** (the AI
+  Leadership Council **Strategic Roadmap**, 2026-07-01, *"strongly recommends"* vendor vetting),
+  **SG** (five encouraged principles, **AI Verify optional**) and **FI** (MoEC national priority,
+  **no standalone AI subject** — AI literacy woven into existing subjects).
+- **`NOT_ESTABLISHED`** — *this base looked and could not establish the row.* 🔵 Distinct from
+  `UNREGULATED`, which asserts the **jurisdiction** has no rule; this asserts only that **we** do not
+  know, **and names the query that would settle it.** Three rows: **NL** (costed next step: Dutch
+  queries against **Ministerie van OCW** and **SLO** — not run), **APAC-regional** (the Ipsos
+  ban-support figures, a public-appetite datum rather than an instrument) and **LATAM-regional**.
+
+### 🟡 Fourteen rows added, every one re-verified rather than transcribed
+
+**North America** — `US-NC` ×2 (**Session Law 2026-41 §7.39** `MANDATED` 2026-07-01, shelving
+`P115-S` at last; the **Strategic Roadmap** `ADVISORY_NONBINDING`) and `US-federal`
+`ai_literacy_instruction`. 🔴 **NC runs THREE layers** — a **2024-01-16** DPI guidebook, the 2026
+Roadmap, and the statute — and **they layer rather than contradict**, unlike `VN`, which `p269` left
+`UNRECONCILED` with two instruments for one `(function, jurisdiction)`. ⚠️ **NC's adoption
+counter-evidence is the engagement-shaping fact:** WRAL, Feb 2026 — only **~1/3 of district leaders**
+had given students any GenAI training.
+**EMEA** — `EE` `MANDATED`, `FI` `ADVISORY_NONBINDING`, `NL` `NOT_ESTABLISHED`.
+**APAC** — `SG` `ADVISORY_NONBINDING`, `JP` `IN_FORCE_UNENFORCED` (**AI Promotion Act** carries **no
+explicit penalties**; same value as `KR` for a **different mechanism** — KR by penalty grace, JP by
+statutory design), `ID` `PROPOSED` (two Presidential Regulations **still unissued** mid-2026),
+`APAC-regional` (Ipsos: ban support **ID 23% · SG 28% · JP 29% · MY 29% · KR 31%** — **every figure
+below one third**).
+**LATAM** — `CO` (**Política Nacional de IA**, Feb 2025), `CL` (2021 policy; bill still *en trámite*),
+`BR` (**ILIA** rates it the region's governance leader while **PL 2.338/2023 remains pending in the
+Câmara** — strategy adopted, statute not passed, and a client slide must not merge them), and
+`LATAM-regional` — a **UAM** analysis finds **no unified framework for AI in Latin American higher
+education**, with most universities deciding in isolation. 🟢 **Directly monetisable: the first
+deliverable for a LATAM university client is frequently the governance scaffold, not the tutor.**
+
+🔴 **One LATAM datum was REFUSED rather than shelved, and the refusal is the finding.** A study blog
+claims **Chile approved a dedicated AI *education* framework in 2025**, and that Brazil and Mexico
+hold only non-binding guidance. **That appears in none of the academic or policy sources located.**
+Recorded `UNVERIFIED-AND-CONTRADICTED` and **not carried** — a Chilean compliance slide built on it
+would assert a framework the policy record does not show.
+
+⚠️ **Band, unchanged and restated:** every row added this pass is **secondary-source grade**. The
+non-GitHub primary channel fails at the **CONNECT layer** and `p268`'s standing instruction is to
+stop spending search budget re-testing it. **Pass 270 obeyed that and no row here claims otherwise.**
+
 ## 2026-10-17 (pass 269) — The Middle East and Africa leg ran for the first time, and the mandates are real while the supply is not
 
 ⏱️ **Fifteenth pass of `2026-10-17`.** Append-only. Evidence:

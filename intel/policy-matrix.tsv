@@ -18,12 +18,52 @@
 #   policy row in this KB would therefore be a defect, today and in any session that
 #   measures the same egress policy.
 #
-# VERDICT vocabulary (closed):
-#   PROHIBITED  - the function may not be deployed at all
-#   GATED       - deployable subject to named obligations (assessment, oversight, logging)
-#   MANDATED    - the jurisdiction REQUIRES the function be taught/performed
-#   PROPOSED    - a bill or draft, not in force; never plan against this
-#   UNREGULATED - searched and nothing specific found.  An informed gap, not a green light.
+# VERDICT vocabulary.  DECLARED CLOSED AT FIVE VALUES, AND THE DATA HAS CARRIED MORE THAN FIVE
+# SINCE PASS 269.  p270 reconciles the header to the data rather than leaving a filter to
+# discover the drift at runtime.  This is the same defect class as T29: a statement ABOUT the
+# file disagreed with the file, and the statement was the thing being trusted.
+#
+#   -- the original five --
+#   PROHIBITED           - the function may not be deployed at all
+#   GATED                - deployable subject to named obligations (assessment, oversight, logging)
+#   MANDATED             - the jurisdiction REQUIRES the function be taught/performed
+#   PROPOSED             - a bill or draft, not in force; never plan against this
+#   UNREGULATED          - searched and nothing specific found.  An informed gap, not a green light.
+#
+#   -- in the data since p269, undeclared until p270 --
+#   NONE_IN_FORCE        - an instrument EXISTED and is abrogated/withdrawn.  Not the same as
+#                          UNREGULATED: something was repealed, so do not read it as a greenfield.
+#   ADOPTED              - a policy or strategy is adopted.  NOT a binding obligation on a
+#                          deliverable; pairs with a separate function row for what actually binds.
+#   IN_FORCE_UNENFORCED  - law is in force and enforcement is absent or suspended.  Scope the
+#                          engagement on ADOPTION risk, not penalty risk (KR by grace period,
+#                          JP by statutory design -- same value, different mechanism, see notes).
+#
+#   -- also in the data, undeclared, found by COUNTING the column instead of reading the header --
+#   HIGH_RISK            - the instrument classifies the function as high-risk WITHOUT yet
+#                          naming the obligations.  Weaker than GATED, which names them.
+#                          Sole occupant: VN assessment_grading under Decision 33/2026/QD-TTg --
+#                          and see that row's UNRECONCILED note, p269: VN carries TWO instruments
+#                          for this one (function, jurisdiction) and no shelf has reconciled them.
+#   FRAMEWORK_LAUNCHED   - a competency//capability framework is published by or with the
+#                          ministry.  Implies a TEACHER-FACING deliverable, not a compliance one.
+#                          Sole occupant: EG teacher_competency (UNESCO + MoETE, 2026-06-03).
+#
+#   -- added by p270, because five of its rows had no honest home in the ten above --
+#   ADVISORY_NONBINDING  - a NAMED, DATED, non-binding instrument exists: voluntary framework,
+#                          "strongly recommends", encouraged principles, national priority.
+#                          THE MOST COMMON STATE IN THIS FIELD and the one the original five
+#                          could not express: UNREGULATED would claim nothing was found, which
+#                          is false and reads as a green light; MANDATED would invent a duty.
+#   NOT_ESTABLISHED      - this base LOOKED and could not establish the row.  Distinct from
+#                          UNREGULATED, which asserts the jurisdiction has no rule; this asserts
+#                          only that WE do not know, and names the query that would settle it.
+#
+# 🔴 ANY FILTER OR COMPILER READING THIS FILE MUST HANDLE TWELVE VALUES, NOT FIVE.  The count
+# was reached by `cut -f4 | sort -u` on the data, NOT by reading this header -- which is the only
+# method that found HIGH_RISK and FRAMEWORK_LAUNCHED at all.  A consumer
+# that switches on the original five will silently drop every ZA, KR, JP, NC, EE, FI, NL, SG,
+# ID, CO, CL, BR and regional row -- i.e. most of the non-US-state coverage this base has.
 #
 # REGION vocabulary (closed, five values, per the KB-wide convention):
 #   North America | EMEA | APAC | LATAM | Global
@@ -68,3 +108,19 @@ EMEA	EG	teacher_competency	FRAMEWORK_LAUNCHED	2026-06-03	UNESCO + Ministry of Ed
 EMEA	EG	curriculum_mandate	MANDATED	2025/26	Coding + AI, first-year general secondary	p269. 236,000+ students enrolled. Technical schools from 2026/27; select primary and middle grades announced with ethics and standards in preparation. WARNING: delivery platform DISPUTED across sources (QUREO vs Kiryo vs a Sprix contract approved Jan 2026) — do not brief one name.
 APAC	VN	assessment_grading	HIGH_RISK	2027-03-01	Decision No. 33/2026/QD-TTg	p269 UNRECONCILED SECOND INSTRUMENT, flagged rather than merged. This matrix ALREADY carries Vietnam assessment_grading as GATED under Decree 142/2026/ND-CP eff. 2026-04-30; the register and README carry Decision No. 33/2026/QD-TTg naming education among six high-risk sectors with a 2027-03-01 compliance date and a further six-month grace for education systems already operating before 2026-08-15. TWO instruments, two dates, same jurisdiction and function, never reconciled on any shelf. Do NOT brief either date alone and do NOT collapse them: establish which instrument governs before quoting a deadline.
 APAC	KR	general_ai_statute	IN_FORCE_UNENFORCED	2026-01-22	AI Basic Act	p269 refinement: MSIT has signalled 2026 as a pilot period with limited enforcement and a one-year grace on penalties (secondary-source grade). Scope Korean engagements on ADOPTION risk, not penalty risk — see T22 and market.md.
+# --- pass 270 (2026-10-17): the North America, EMEA, APAC and LATAM rows from p269's registered
+# --- six-datum backlog, each RE-VERIFIED rather than transcribed. All secondary-source grade.
+North America	US-NC	district_ai_policy	MANDATED	2026-07-01	Session Law 2026-41 s.7.39	p270 shelves P115-S, one of p269's six backlog datums. DPI model AI-use policy due 2026-12-31; local board policies; evaluation framework for GenAI educational tools; public approved-tool list; teacher AI PD by 2028-06-30; AI literacy in K-12 CS standards from 2028-29. GRADE: candidate - unverified-at-primary (the enacted text is unreachable from this environment at the CONNECT layer, not a 404).
+North America	US-NC	vendor_registration	ADVISORY_NONBINDING	2026-07-01	NC AI Leadership Council AI Strategic Roadmap	NEW p270. DPI "strongly recommends" districts review incumbent EdTech providers deploying GenAI and vet them for safety, privacy, reliability and efficacy. NO method specified, so district practice will vary. Same commencement date as s.7.39 above and NOT the same instrument - NC runs THREE layers (2024-01-16 DPI guidebook, this Roadmap, the statute). They LAYER, they do not contradict (contrast VN, which does). ADOPTION COUNTER-EVIDENCE: WRAL Feb 2026 - only ~1/3 of NC district leaders had given students any GenAI training.
+North America	US-federal	ai_literacy_instruction	ADVISORY_NONBINDING	2026-02-13	DOL Training and Employment Notice No. 07-25	NEW p270, and the instrument now has a citable identifier it lacked in the register. FIVE content areas (AI principles / potential uses / directing AI / evaluating outputs / responsible use) + SEVEN delivery principles (incl. experiential learning, embedding learning in context, complementary human skills). Explicitly VOLUNTARY - imposes no new regulatory requirement. Named audiences: workforce boards, community colleges, Job Corps centres. Sits atop DOL guidance permitting WIOA funds and governor's reserve monies for AI skilling, so it is a FUNDING instrument, not a compliance one. Identifier rendering UNRECONCILED: one source gives TEGL 07-25.
+EMEA	EE	ai_literacy_instruction	MANDATED	date NOT established	Estonian national curriculum	NEW p270. Among the FIRST countries in Europe to put AI literacy formally into the national curriculum (Tallinn University study of a 2024 national survey, n=15,631, grades 6-12). Deployment is a MEASURED FACT, not a plan: Education and Research Minister Kristina Kallas told Politico in May 2026 that ~half of the country's 20,000 upper-secondary students were on an OpenAI-partnered platform, rest expected that summer. NOTE for a sovereignty conversation: what is deployed at national scale is a PROPRIETARY US platform. Commencement date NOT established - do not quote one.
+EMEA	FI	ai_literacy_instruction	ADVISORY_NONBINDING	date NOT established	Ministry of Education and Culture national priority	NEW p270. Finland has built NO standalone AI subject; AI literacy is integrated into existing subjects via "phenomenon-based learning". MoEC names AI skills a national priority across all education levels, with teacher support and safe use as focus areas. Entered ADVISORY_NONBINDING deliberately: a national priority plus curricular integration was located, a binding instrument was NOT. A Finnish engagement is a cross-curricular integration problem, not a course-delivery one.
+EMEA	NL	ai_literacy_instruction	NOT_ESTABLISHED	-	none located	NEW p270, and it is a RETRACTION. This base carried "Finland / Estonia / Netherlands as K-12 leaders"; that grouping traces ONLY to an aggregator citing no source. The only Dutch trace located is inclusion among the 14 countries of the Sanoma European teacher survey. NO national-level Dutch AI-in-education instrument or programme was found. Costed next step, NOT run this pass: Dutch-language queries against the Ministerie van OCW and SLO.
+APAC	SG	general_ai_statute	ADVISORY_NONBINDING	-	five encouraged principles + AI Verify	NEW p270. Voluntary adoption of transparency, fairness, ethics, human oversight and accountability; the AI Verify toolkit is OPTIONAL. Consequence for an education deliverable: the binding constraints are procurement, data residency and curriculum alignment - NOT an AI statute. Context: 56% of SG enterprises report progress toward scaled AI adoption, the regional high.
+APAC	JP	general_ai_statute	IN_FORCE_UNENFORCED	2025	AI Promotion Act (2025) + AI Basic Plan (adopted 2025-12-23)	NEW p270. Promotion-led: the Act carries NO explicit penalties and the posture is voluntary guidelines backed by existing law. Same verdict value as KR's AI Basic Act above but for a DIFFERENT reason - KR is unenforced by a signalled pilot period and penalty grace, JP by statutory design.
+APAC	ID	general_ai_statute	PROPOSED	-	two AI Presidential Regulations	NEW p270. Both still UNISSUED as of mid-2026. Never plan against this row. Context: 51% of ID enterprises report progress toward scaled AI adoption, second in the region; and ID shows the region's LOWEST public support for banning AI in schools, 23%.
+APAC	regional	ai_literacy_instruction	NOT_ESTABLISHED	-	Ipsos Education Monitor 2026	NEW p270 - public-appetite datum, not an instrument, entered because clients ask for it by name. Support for BANNING AI in schools: Indonesia 23%, Singapore 28%, Japan 29%, Malaysia 29%, South Korea 31%. EVERY figure below one third. The "parents will not accept it" objection is unsupported in APAC by this measure. KR's position as regional high is consistent with T22's documented rollout failure rather than with general hostility.
+LATAM	CO	national_ai_policy	ADOPTED	2025-02	Politica Nacional de IA	NEW p270. Six objectives spanning ethical governance through digital-talent formation. A national policy, NOT an education-specific binding rule - CO's assessment_grading row above stays UNREGULATED.
+LATAM	CL	national_ai_policy	ADOPTED	2021	Politica Nacional de IA	NEW p270. Chile's national AI policy dates to 2021; its AI BILL remains in tramite before the futures/science committees of both chambers (already carried above as assessment_grading PROPOSED). REFUSED THIS PASS: a study blog claims Chile approved a dedicated AI EDUCATION framework in 2025. That claim appears in NO academic or policy source located and is NOT carried.
+LATAM	BR	national_ai_policy	ADOPTED	-	national AI strategy	NEW p270. The ILIA regional index rates Brazil the region's GOVERNANCE LEADER on the strength of a robust national strategy - which sits alongside PL 2.338/2023 still being PENDING in the Camara dos Deputados after Senate approval in Dec 2024 (row above). Strategy adopted, statute not passed: both true, and a client slide must not merge them.
+LATAM	regional	institutional_policy	NOT_ESTABLISHED	-	none	NEW p270. A Universidad Autonoma de Madrid analysis finds NO unified regulatory framework for AI in Latin American HIGHER education, with most universities operating without clear internal rules and deciding in isolation. This is the INSTITUTION-level inverse of the school-level pattern this base documents for LATAM, and it is directly monetisable: the first deliverable for a LATAM university client is frequently the policy and governance scaffold, not the tutor.

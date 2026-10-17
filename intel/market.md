@@ -46,6 +46,30 @@ document we could open. Prior versions of this file published a five-row market-
 with named research houses — those attributions did not survive re-checking and have been
 removed rather than recycled.
 
+
+### Pass 270 — the EMEA row of that spread now has a second publisher, and they disagree
+
+The table above is **global**. The Europe-specific figure this base has carried for roughly
+200 passes — **$2.64B (2026) → $8.0B (2030) @ 31.9%** — had exactly one publisher behind it.
+Pass 270 ran the leg again and found a **second**, which does not agree:
+
+| Publisher | Europe 2025 | Europe 2026 | Horizon | CAGR |
+|-----------|-------------|-------------|---------|------|
+| *(this base's carried figure, publisher unrecorded)* | — | **$2.64B** | $8.0B by 2030 | 31.9% |
+| MarketDataForecast | $1.59B | **~$2.11B** | ~$20B by 2034 | 32.47% |
+
+🔴 **They disagree by ~25% on the same year and by ~2.5× on the horizon.** The two CAGRs are
+nearly identical (31.9% vs 32.47%) — so the disagreement is entirely in the **baseline**, which
+is the one number this file instructs you to quote. The leg that found MarketDataForecast states
+explicitly that it could locate **no further independent Europe-specific forecast**: these two
+*are* the published universe for this region.
+
+🟢 **Recorded as a spread, not merged and not overwritten.** `p268`'s warning applies — rewriting
+a sound figure on the strength of noise is the opposite error. **For a client: give the EMEA
+range ($2.1–2.6B, 2026) and say it is a two-publisher range.** A single EMEA number is the one
+thing the evidence will not support, and the global table above is a narrow band precisely
+because it has five publishers; Europe has two.
+
 ## Global players
 
 | Player | Type | AI position | Opening for Globant |
@@ -204,6 +228,55 @@ data gets the ranking backwards.
 
 ### North America
 
+
+**Pass 270 — three North America datums discharged from the backlog `p269` registered, and two of
+the three were WRONG as the register carried them.**
+
+- 🟢 **US DOL AI Literacy Framework — confirmed, and it now has a citable identifier.** Issued
+  **2026-02-13** as **Training and Employment Notice No. 07-25** (one secondary source renders it
+  *TEGL* 07-25; the rendering is **unreconciled** and both are recorded). **Five content areas** —
+  understanding AI principles, exploring potential uses, directing AI effectively, evaluating AI
+  outputs, using AI responsibly — and **seven delivery principles**, including experiential
+  learning, embedding learning in context, and building complementary human skills. It is
+  **voluntary guidance and imposes no new regulatory requirement**; its named audiences are
+  **workforce boards, community colleges and Job Corps centres**, and it sits on top of earlier DOL
+  guidance encouraging **WIOA funds and governor's reserve monies** to be spent on AI skilling.
+  🔵 **For the studio this is a funding instrument, not a compliance one** — the five content areas
+  are a ready-made curriculum spec for a publicly-funded AI-literacy deliverable, and the delivery
+  principles are the acceptance criteria. *(secondary-source grade.)*
+
+- 🔴 **`STUDENTS FIRST Act of 2026` is NOT legislation, and this base has been shelving it next to
+  bills.** It is a **student-written model policy**: **98 teenagers from all 50 states**, a mock
+  Senate session in Boston, **passed 82-16 on 2026-07-19**. It has **no legal force at any level**
+  and no district is obliged by it. Its route to influence is **AASA circulating the text to its
+  ~10,000 superintendent members** (publication **2026-08-03** — which is the "August 2026" this
+  base already carried). Contents: AI banned on all graded tests; AI may not do the writing, but
+  may be used for editing, brainstorming and studying **after 8th grade**; states must provide
+  AI-literacy instruction once students are given classroom devices; GenAI vendors must disclose
+  known biases to educational customers. The students **rejected** an absolute parental veto.
+  🔴 **The hazard was adjacency, not ignorance:** `repos/trending.md` lists it inside the same cell
+  as `H.R. 8747`, `AB 1159` and `SB 1227` — three real instruments — with no status marker. A
+  reader building a compliance slide from that cell would brief a student exercise as pending law.
+  🟢 **Shelved here with the marker: `NOT-LAW · model policy · advisory only`.** *(The acronym's
+  expansion is inconsistent across sources and is deliberately NOT resolved here.)*
+
+- 🔴 **North Carolina has THREE layers, and the backlog datum was the oldest and weakest of them.**
+  The register's "North Carolina's K-12 implementation guidance" is **NC DPI's generative-AI
+  recommendations for PK-13 public schools, released 2024-01-16** (with AI for Education) — a
+  2024 artefact, not a 2026 one. The **2026** layer is the **NC AI Leadership Council AI Strategic
+  Roadmap, released 2026-07-01**, which DPI **"strongly recommends"** and which tells districts to
+  vet incumbent EdTech GenAI vendors for **safety, privacy, reliability and efficacy** — without
+  specifying how, so practice will vary by district. The third layer is already on this base as
+  **`P115-S`: Session Law 2026-41 §7.39**, effective **2026-07-01**. 🟢 **Unlike Vietnam (`p269`),
+  these three do not contradict each other — they LAYER**, oldest advisory to newest statute, and
+  the statute and the Roadmap share a commencement date. 🔴 **But shelving the backlog datum alone
+  would have published NC's 2024 position as its current one.**
+  ⚠️ **Adoption counter-evidence, and it is the engagement-shaping fact:** a **WRAL report of
+  February 2026** found only **~one third of NC district leaders had given students any GenAI
+  training**, with many teachers not using it and many prohibiting it for assignments. **North
+  Carolina is a vet-the-incumbent-vendors and train-the-teachers engagement, not a greenfield
+  build** — the same adoption-risk-over-penalty-risk shape `T22` established for Korea.
+
 **Pass 266 addition — the assessment-integrity opening is now permissively tooled.** Oklahoma's
 `SB 1734` (educator supervision, human review, AI barred from high-stakes decisions, annual
 parent disclosure), Ohio's `HB 96` (board-approved AI policy in every district) and California's
@@ -297,6 +370,50 @@ configurability is the product**.
   ⚠️ **Do not brief a state adoption count** — see the pass-268 gap note below.
 
 ### EMEA
+
+
+**Pass 270 — the "Finland / Estonia / Netherlands are the K-12 leaders" claim does not survive
+re-verification as a group, and the three split three ways.**
+
+- 🟢 **Estonia is substantiated, and it is the strongest EMEA adoption datum this base holds.**
+  Education and Research Minister **Kristina Kallas** told *Politico* in **May 2026** that
+  **about half of the country's 20,000 upper-secondary students** were already using an
+  **OpenAI-partnered** education platform, with the remainder expected over that summer. A
+  **Tallinn University** study of a **2024 national survey (n=15,631, grades 6-12)** describes
+  Estonia as among the **first countries in Europe to put AI literacy into the national
+  curriculum**. 🔵 **Estonia is therefore the one EMEA jurisdiction where national-scale
+  deployment is a measured fact rather than a plan** — and note what is deployed: a
+  **proprietary US platform**, in the region whose own permissive supply this file documents
+  immediately above. *(secondary-source grade.)*
+- 🟢 **Finland is substantiated but is a different shape, and the difference matters for scoping.**
+  Finland has built **no standalone AI subject**; AI literacy is woven into existing subjects via
+  **"phenomenon-based learning"**, with the **Ministry of Education and Culture** naming AI skills
+  a national priority across all education levels, with teacher support and safe use as focus
+  areas. 🔵 **A Finnish engagement is therefore a cross-curricular integration problem, not a
+  course-delivery one** — the deliverable attaches to existing subject materials, so
+  curriculum-mapping assets (`DECK6/korean-elementary-learning-map`-shaped) matter more than
+  course generators.
+- 🔴 **The Netherlands is NOT substantiated, and is now an informed gap rather than a carried
+  claim.** The only Dutch trace located is its inclusion among the **14 countries** of a European
+  teacher survey. The three-country "K-12 leaders" grouping itself traces **only to an aggregator
+  citing no source**. 🔵 **This base will stop asserting Dutch leadership.** The named next step,
+  costed: **Dutch-language queries against the Ministerie van OCW and SLO**, which this pass did
+  not run.
+
+**Pass 270 — the Sanoma survey finally reaches this file, and its second number is the one that
+sells education-specific tooling.** The **Sanoma Learning 2026 European Teacher Survey**
+(**>20,000 teachers across 14 countries**) reports **teacher AI use at 63% across Europe** — and
+**only 16% of teachers believing that GENERAL-PURPOSE AI improves learning outcomes**.
+🟢 **That 47-point gap between use and believed efficacy is the single most useful EMEA sentence
+in this file for a studio conversation:** European teachers have already adopted AI and have
+already concluded that the general-purpose tools are not working for them. **The pitch is not
+"adopt AI"; it is "replace the general-purpose tool you are already using with something built
+for your curriculum and your assessment rules."** *(vendor-published survey — Sanoma sells
+education materials, so the finding flatters the publisher. Graded accordingly, and carried
+because the direction is corroborated by the 63%/16% split being self-damaging to general-purpose
+vendors rather than to Sanoma's own category.)*
+🔴 **Why it was missing:** `agents/trending.md` states, of this very survey, *"Recorded in
+`intel/market.md` and `intel/trends.md`."* **It was in neither.** See the pass-270 gap addendum.
 
 **Pass 266 addition — EMEA is where the permissive supply actually comes from, which inverts the
 usual framing.** Both assessment engines verified this pass are EMEA-origin and permissive:
@@ -451,6 +568,32 @@ the rest of MEA remains exactly as unexamined as before.
 
 ### APAC
 
+
+**Pass 270 — the APAC regional leg returned thin education material and solid regulatory shape,
+and the thinness is recorded rather than dressed up.**
+
+- 🟢 **Ipsos Education Monitor 2026 — the only education-specific APAC source the leg returned, and
+  it measures the thing clients actually ask about: public appetite for a ban.** Support for
+  **banning AI in schools**: **Indonesia 23%**, **Singapore 28%**, **Japan 29%**, **Malaysia 29%**,
+  **South Korea 31%**. 🔵 **Every figure is below one third.** The "parents will not accept it"
+  objection is not supported in APAC by this measure, and South Korea — the jurisdiction with this
+  base's best-documented *failed* rollout (`T22`) — has the region's **highest** ban support, which
+  is consistent: the backlash is against a specific botched deployment, not against AI in school.
+- 🟢 **Three jurisdictions, three regulatory postures, none of them hard law for education:**
+  **Singapore — voluntary.** Five encouraged principles (transparency, fairness, ethics, human
+  oversight, accountability); the **AI Verify** toolkit is **optional**.
+  **Japan — promotion-led.** **AI Basic Plan adopted 2025-12-23**; the **2025 AI Promotion Act
+  carries no explicit penalties**, with reliance on voluntary guidelines backed by existing law.
+  **Indonesia — pending.** **Two AI Presidential Regulations were still unissued as of mid-2026.**
+  🔵 **For the studio: in all three, the binding constraints on an education deliverable are
+  procurement, data-residency and curriculum-alignment — not an AI statute.** That is the opposite
+  of the EMEA posture and should change which questions discovery asks first. *(secondary-source.)*
+- ⚠️ **Enterprise scaling, as context rather than education data:** Singapore **56%** and Indonesia
+  **51%** of enterprises report progress toward scaled AI adoption — the two regional leaders.
+- 🔵 **Zero new named edtech players.** The sovereign-model theme the leg returned — **Sahabat AI**
+  (Indonesia), **SEA-LION** (Singapore), **NTT Sarashina** (Japan) — is **already held on this
+  base**, and is infrastructure rather than education supply. **An informed nil return.**
+
 **Pass 266 addition — the APAC base is national, and it is MIT.** **Sunbird**
 ([`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal), MIT, 38,046
 commits) is the stack beneath **DIKSHA**, India's national school platform under NCERT. For an
@@ -558,6 +701,44 @@ question the client has already learned is not the binding one.
 
 
 ### LATAM
+
+
+**Pass 270 — the Linux Foundation LATAM datum is discharged, and the register's NAME for it does
+not exist.**
+
+- 🔴 **There is no "Linux Foundation LATAM AI workforce report".** Cited as the register wrote it,
+  it would not resolve. The artefact is **LF Research's *Economic and Workforce Impacts of AI in
+  Latin America*** — the **fourth** report in a **Meta-sponsored** series, **2026** cover date,
+  authored with **Marco Gerosa (Northern Arizona University)**. Its LATAM figures: **84% of LATAM
+  employers plan to upskill their own workforce** to meet tech-talent demand, and **8–14% of Latin
+  American jobs could see significant productivity increases through AI augmentation**.
+  🔵 **Both numbers point the same way and it is the way a studio wants:** the regional constraint
+  is **skills**, not jobs, and employers have already decided to pay for upskilling. **That is a
+  budget line that exists before the engagement does.**
+  ⚠️ **Do not conflate it with the *2026 State of Tech Talent Report*, which is GLOBAL**
+  (n=**400** hiring/training IT leaders), not LATAM-specific. Its capability-gap ranking — **AI
+  security and risk management 57%, AI operations and monitoring 57%, cost optimisation 54%, AI
+  infrastructure expertise 45%** — is frequently quoted as though it were regional. It is not.
+- 🟢 **The academic finding this base did not have: LATAM higher education has no unified AI
+  framework, and universities are deciding in isolation.** A Universidad Autónoma de Madrid
+  analysis of the Latin American context finds **no unified regulatory framework for AI in higher
+  education**, with **most universities operating without clear internal rules** and making
+  isolated decisions. 🔵 **This is the institution-level inverse of the school-level pattern** this
+  file already documents for LATAM, and it is directly monetisable: **the first deliverable for a
+  LATAM university client is frequently the policy and the governance scaffold, not the tutor.**
+- 🟢 **National instruments, as the leg returned them:** **Colombia** adopted its **Política
+  Nacional de IA in February 2025**, six objectives spanning ethical governance through
+  digital-talent formation. **Brazil's `PL 2338/2023`** was **approved by the Senate in December
+  2024** and **remains pending in the Câmara dos Deputados** — still not law; the **ILIA** regional
+  index nonetheless rates Brazil the region's **governance leader**. **Chile's** national AI policy
+  dates to **2021** and its **AI bill remains in trámite** before the futures/science committees of
+  both chambers.
+- 🔴 **One datum was REFUSED rather than shelved, and the refusal is the finding.** A study blog
+  claims **Chile approved a dedicated AI *education* framework in 2025** and that Brazil and Mexico
+  hold only non-binding guidance. **That claim appears in none of the academic or policy sources
+  located**, which describe Chile via its 2021 policy and its pending bill. 🔵 Recorded as
+  **UNVERIFIED-AND-CONTRADICTED and NOT carried.** A Chilean compliance slide built on it would
+  assert a framework that the policy record does not show.
 
 **Pass 266 addition — the governance deficit is the offer.** The quantified section above is the
 argument: **87% of surveyed LATAM higher-ed institutions use AI, 26% have a formal AI strategy**
@@ -789,3 +970,57 @@ The region where the policy direction most favours what open source actually is.
   seventh turned out to be a conflict rather than an omission.** Pass 269 fixed the
   category for its own MEA findings — they went to this file and to the policy matrix in the same
   change — and registers the backlog rather than quietly inheriting it.
+
+
+### Pass 270 addendum to the declared gaps
+
+🟢 **`p269`'s six-datum backlog is DISCHARGED — and five of the six changed shape under
+re-verification, which is why discharging a backlog is not the same as copying it.** Pass 270's
+rule was: **re-run the leg, do not transcribe the register.** Outcome:
+
+| backlog datum | verdict on re-verification |
+|---|---|
+| US DOL AI Literacy Framework (2026-02-13) | 🟢 **CONFIRMED** — and gained a citable identifier (**Training and Employment Notice No. 07-25**), five content areas and seven delivery principles |
+| STUDENTS FIRST Act of 2026 | 🔴 **RECLASSIFIED** — not a bill, not law; a **student-written model policy**, 98 teens, **82-16 on 2026-07-19**, advisory only |
+| North Carolina K-12 implementation guidance | 🔴 **RE-DATED** — the datum is a **2024-01-16** DPI guidebook; NC's 2026 layer is the **AI Leadership Council Strategic Roadmap (2026-07-01)**, and §7.39 of **Session Law 2026-41** is a third layer |
+| EMEA market figure €/$2.64B (2026) | 🔴 **DISPUTED** — a second publisher (MarketDataForecast) gives **~$2.11B**; ~25% apart on the same year. Published as a **range**, not merged |
+| Finland / Estonia / Netherlands as K-12 leaders | 🔴 **PARTIALLY REFUTED** — Estonia and Finland stand on **different** grounds; **the Netherlands is unsubstantiated** and the grouping traces to an aggregator with no source |
+| Linux Foundation LATAM AI workforce report | 🔴 **RENAMED** — no artefact by that name exists; it is ***Economic and Workforce Impacts of AI in Latin America*** (LF Research, 4th in a Meta-sponsored series) |
+
+🔴 **A FIFTH cross-shelf defect in five passes — and this one is a FALSE SHELVING CLAIM, which is
+a new species.** The four before it were omissions and one contradiction: a datum sat in the
+register and never reached a shelf. This one is different. Of the **Sanoma Learning 2026 European
+Teacher Survey**, `agents/trending.md` states verbatim: *"Recorded in `intel/market.md` and
+`intel/trends.md`."* **Measured this pass: `grep -c Sanoma intel/market.md intel/trends.md` →
+`0` and `0`.** 🔵 **A pass asserted the propagation it had not performed, and every later pass
+that grepped the register for unshelved datums would read that sentence as proof the work was
+done.** 🟢 **The method amendment this forces is one line: a propagation claim is not evidence of
+propagation — grep the TARGET file, never trust the sentence in the source file.** `p268` amended
+the novelty check to grep the slug; **`p270` amends the propagation check to grep the destination.**
+Both defects were invisible to the check that preceded them.
+
+🟡 **Gaps this pass OPENED, stated so they are falsifiable:**
+- 🔴 **The EMEA market figure has no primary source and now no consensus either.** Two publishers,
+  ~25% apart, both secondary. **This file can no longer give a single EMEA number**, and says so.
+- 🔴 **Netherlands: no national-level AI-in-education evidence located.** Named, costed next step:
+  **Dutch-language queries against the Ministerie van OCW and SLO.** Not run this pass.
+- 🟡 **The DOL instrument's identifier is itself unreconciled** — *Training and Employment Notice*
+  No. 07-25 in one rendering, *TEGL* 07-25 in another. Both recorded; neither resolvable without
+  the primary channel this environment lacks.
+- 🟡 **`STUDENTS FIRST`'s acronym expansion is inconsistent across sources and is NOT resolved.**
+- 🔴 **MEA remains unsized, unchanged from `p269`.** This pass added no MEA figure; the Gulf, the
+  Maghreb and sub-Saharan Africa beyond `p269`'s four countries stay unexamined.
+- 🔵 **APAC returned ZERO new named edtech players across a full regional leg.** Recorded as a
+  measured nil return, the fifth consecutive pass in which the supply channel yields nothing
+  education-specific that this base does not already hold.
+
+🟢 **Gap 367 — spent in a THIRD language, closure upheld a third time.** `p269` ran the Hindi and
+Chinese limbs; `p270` ran the **Spanish** one. Nine repositories returned, **eight university
+student course portfolios**, and the single framework-grade result (`nmarafo/OpenDidactia`,
+CC BY-SA 4.0, Spain/LOMLOE) was **already held and is secondary-band**. **Zero new repositories.**
+🔵 **The nearest permissive primary-band artefact remains `DECK6/korean-elementary-learning-map`
+(MIT) — and the distinction is load-bearing: it is an ontology of a primary CURRICULUM, not a
+primary AI-LITERACY course.** Gap 367 asks for the latter and it still does not exist.
+**One falsifiable limb remains, and it is free:** `datawhalechina/ai-edu-for-kids` carries
+CC-BY-NC-SA-4.0 as **organisational template boilerplate** (`p269`), so **asking upstream to
+re-licence costs an email.**

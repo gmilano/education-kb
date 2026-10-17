@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-17
 ---
 
+## 2026-10-17 (pass 270) — The supply channel returned zero new agents, and that is the second-most-interesting thing this pass measured
+
+⏱️ **Sixteenth pass of `2026-10-17`.** Append-only — everything below this section is prior
+history and is not rewritten. Evidence:
+[`verified-repos.2026-10-17-p270.tsv`](../evidence/verified-repos.2026-10-17-p270.tsv) *(ONE
+repository probed, and the honest reason it is one)* · search legs:
+[`p270-websearch.2026-10-17-p270.tsv`](../evidence/p270-websearch.2026-10-17-p270.tsv) *(9 legs,
+every one of them chosen from `p269`'s registered backlog rather than invented)*.
+
+### 🔵 Why only one repository was probed, stated before anything else
+
+`p269` instructed: **spend the generic supply legs LAST, not first** — they have been measured
+saturated across four consecutive passes. **Pass 270 did not run them at all.** The only supply leg
+run was `Gap 367`'s one unspent language limb, in **Spanish**. It returned **nine repositories**:
+**eight are university student course portfolios** (`ia-aplicada-2026` and its forks,
+`InteligenciaArtificial`, `proyecto_ia`, `cursoIA2026`) and the ninth was already on this base.
+
+🟢 **So this pass probed one repository, and `agents/top.md` gains no rows.** That is a measured nil
+return on the agent-supply channel, the fifth consecutive one, and it is recorded rather than
+padded. **Fewer real rows always beat padding.**
+
+### 🔴 `Gap 367` — spent in a THIRD language, and the closure held a third time
+
+| limb | pass | what it found | verdict |
+|---|---|---|---|
+| 🇨🇳 Chinese | `p269` | `datawhalechina/ai-edu-for-kids` — CC-BY-NC-SA-4.0 in README prose, no payload | 🔴 upheld |
+| 🇮🇳 Hindi | `p269` | `CurriculumCraft-AI` — MIT, but **grades 9–12** against a Classes 3–8 mandate | 🔴 upheld |
+| 🇪🇸 **Spanish** | **`p270`** | [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) — **CC BY-SA 4.0 at payload**, Spain/LOMLOE, **already held**, and **secondary band** (examples at 2.º ESO) | 🔴 **upheld** |
+
+🟢 **The grant shape here is worth separating from `p269`'s Chinese row, because the two look
+similar and are not.** `ai-edu-for-kids` is **NonCommercial *and* ShareAlike** — unusable in a
+client deliverable at all. `OpenDidactia` is **ShareAlike WITHOUT NonCommercial** — **commercially
+usable**, with the ShareAlike colouring the *generated content*, not the client's code. 🔵 One is a
+dead end; the other is a licence-boundary design problem, which is a problem this base knows how to
+solve. **"CC with a hyphenated suffix" is not a verdict.**
+
+🔵 **The nearest permissive primary-band artefact, and the distinction is load-bearing:**
+`DECK6/korean-elementary-learning-map` (**MIT**, already held) **is** primary-band and **is**
+permissive — but it is an ontology of a primary **curriculum**, not a primary **AI-literacy
+course**. `Gap 367` asks for the latter. **It still does not exist in any of four languages.**
+🟢 **One falsifiable limb remains and it is free:** `ai-edu-for-kids`'s licence is organisational
+**template boilerplate** (`p269`), so asking upstream to re-licence costs an email.
+
+### 🔴 The thing this pass actually found: this file asserted a propagation it had not performed
+
+The real work of pass 270 was `p269`'s registered backlog — **six regional datums living in the
+register and the README and never shelved.** All six were discharged, and **five of the six changed
+shape under re-verification** (full table in [`intel/market.md`](../intel/market.md) and new trend
+`T31`). But the defect that matters is in **this file**.
+
+Of the **Sanoma Learning 2026 European Teacher Survey**, this file says, verbatim:
+*"Recorded in `intel/market.md` and `intel/trends.md`."*
+
+```
+$ grep -c "Sanoma" intel/market.md intel/trends.md
+intel/market.md:0
+intel/trends.md:0
+```
+
+🔴 **It was in neither.** This is the **fifth cross-shelf defect in five passes** and a **new
+species**: the four before it were omissions — silence, which a grep finds. **This was a sentence
+that answered the grep.** `p269`'s own backlog sweep did not list Sanoma precisely *because this
+file said it was already shelved.*
+
+🟢 **The amendment, now `T29`:** `p268` amended the **novelty** check to grep the *slug*. **`p270`
+amends the *propagation* check to grep the DESTINATION file and never to trust a claim in the source
+file.** Both defects were invisible to exactly the check that came before them. **The survey is now
+genuinely in `market.md` and `trends.md`, and the grep was re-run to prove it.**
+
+🟢 **And the survey earns its place — its second number is the best commercial sentence on this
+base.** >20,000 teachers, 14 countries: **63% of European teachers use AI**, and **only 16% believe
+general-purpose AI improves learning outcomes.** A **47-point gap**. The pitch is not "adopt AI" —
+that is already won and the client has receipts that it did not help. It is **"the general-purpose
+assistant your teachers already use does not know your curriculum, your assessment rules or your
+exam board."** Every curriculum-bound asset on these shelves answers that sentence. New trend
+**`T28`**.
+
+### 🟡 Registered, not claimed
+
+- 🔴 **`STUDENTS FIRST Act of 2026` is not legislation, and this base was shelving it beside bills.**
+  A **student-written model policy**: 98 teenagers, all 50 states, mock Senate in Boston, **passed
+  82-16 on 2026-07-19**, **no legal force**. `repos/trending.md` lists it in the same cell as
+  `H.R. 8747`, `AB 1159` and `SB 1227` with **no status marker**. Now shelved with
+  `NOT-LAW · model policy · advisory only`.
+- 🔴 **The EMEA market figure has a second publisher and they disagree by ~25%.** Carried:
+  **$2.64B** (2026) → $8.0B (2030) @ 31.9%. MarketDataForecast: **~$2.11B** (2026) → ~$20B (2034)
+  @ 32.47%. The CAGRs agree to within half a point, so **the whole disagreement is in the baseline**
+  — the one number this base tells you to quote. Published as a **range**, not merged. New `T30`.
+- 🔴 **The Netherlands is retracted.** "Finland / Estonia / Netherlands as K-12 leaders" traces to
+  **one aggregator citing no source**. Estonia and Finland stand on *different* grounds; the
+  Netherlands has **no located national instrument**. Entered as `NOT_ESTABLISHED`.
+- 🟢 **Estonia is the strongest EMEA adoption datum this base holds** — Minister **Kristina Kallas**
+  to *Politico*, **May 2026**: ~**half of 20,000 upper-secondary students** on an OpenAI-partnered
+  platform. 🔵 Note for a sovereignty conversation: what is deployed at national scale is a
+  **proprietary US platform**, in the region whose permissive supply this base documents.
+- 🟡 **A one-byte re-measurement delta, published as a convention note and NOT as a correction.**
+  `OpenDidactia`'s `LICENSE.md` measures **2,123 B** this pass; this base carries **2.122 B**.
+  Almost certainly trailing-newline counting, not upstream drift. `p268`'s warning applies — a good
+  figure must not be rewritten on noise. A future pass measuring 2,123 should treat **this** row as
+  the reproduction.
+- 🔵 **`agents/top.md` and `repos/foundations.md` gain no rows this pass**, and both already clear
+  the brief's five-row minimum many times over. Nothing was added to meet a quota.
+
 ## 2026-10-17 (pass 269) — Africa has education agents; it does not have a licence for any of them
 
 ⏱️ **Fifteenth pass of `2026-10-17`.** Append-only — everything below this section is prior

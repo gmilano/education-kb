@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 270 — 2026-10-17 — **`p269`'s SIX-DATUM BACKLOG DISCHARGED, FIVE OF THE SIX CHANGED SHAPE, and the FIFTH cross-shelf defect in five passes is a FALSE SHELVING CLAIM — a sentence that answered the grep**
+
+⏱️ **Sixteenth pass of `2026-10-17`.** Append-only; nothing below is rewritten.
+🔵 **Evidence:** [`verified-repos.2026-10-17-p270.tsv`](../evidence/verified-repos.2026-10-17-p270.tsv)
+*(ONE repository probed, and the stated reason it is one)* ·
+[`p270-websearch.2026-10-17-p270.tsv`](../evidence/p270-websearch.2026-10-17-p270.tsv) *(9 legs,
+every one chosen from this register rather than invented)*.
+
+🟢 **This pass, like `p269`, ran only what was already written down here.** `p269` registered a
+backlog in its own words: *"SIX regional datums live in this register and the README and have never
+reached the shelves"*, and named all six. **Pass 270 ran one leg per datum.** Its one rule:
+**re-run the leg, do not transcribe the register.**
+
+### 🟢 Discharged this pass
+
+| gap / action | registered as | how it was discharged | outcome |
+|---|---|---|---|
+| 🟢 **The SIX-DATUM PROPAGATION BACKLOG** — *"SIX regional datums live in this register and the README and have never reached the shelves"* | `p269`, verbatim | 🟢 **All six re-verified by re-running their legs, then shelved into `market.md`, `trends.md` and `policy-matrix.tsv` in the same change.** | 🔴 **FIVE OF THE SIX CHANGED SHAPE.** One reclassified out of the legislation category entirely, one re-dated by two years, one renamed to an artefact that exists, one collapsed-point re-opened into a range, one grouping partially refuted. **Only the DOL framework survived as carried** — and it gained a citable identifier it did not have. Full table in [`market.md`](market.md#pass-270-addendum-to-the-declared-gaps); the generalisation is new trend **`T31`**. |
+| 🟢 **`Gap 367`'s LAST LANGUAGE LIMB** — `p269` left it as *"a permissively licensed PRIMARY-BAND curriculum from any language"* | `p269` | 🟢 **Spanish leg run.** Nine repositories; **eight university student course portfolios**; the ninth (`nmarafo/OpenDidactia`) **already held**, CC BY-SA 4.0 at payload, **secondary band**. | 🔴 **CLOSURE UPHELD A THIRD TIME, in a THIRD language.** Zero new repositories. 🟢 **And the grant-shape distinction is now explicit:** `OpenDidactia` is **ShareAlike WITHOUT NonCommercial** — *commercially usable* — unlike `ai-edu-for-kids` (**NC *and* SA**). **"CC with a hyphenated suffix" is not a verdict.** |
+
+### 🔴 The box this pass earned
+
+| the finding | how it surfaced | why it had not been found |
+|---|---|---|
+| 🔴 **A PROPAGATION CLAIM IS NOT EVIDENCE OF PROPAGATION — and this base asserted one** | 🟢 By grepping the **destination** file instead of reading the sentence in the source file | 🔴 Of the **Sanoma Learning 2026 European Teacher Survey**, `agents/trending.md` says verbatim: *"Recorded in `intel/market.md` and `intel/trends.md`."* **`grep -c Sanoma` on both: `0` and `0`.** 🔵 **The four earlier cross-shelf defects were omissions — silence, which a grep finds. This was a SENTENCE THAT ANSWERED THE GREP.** `p269`'s own backlog sweep did not list Sanoma **because this base said it was already shelved** — so the defect actively suppressed its own detection. 🟢 **Amendment, now `T29`: `p268` amended the NOVELTY check to grep the slug; `p270` amends the PROPAGATION check to grep the DESTINATION.** Both defects were invisible to exactly the check preceding them. |
+| 🔴 **A CARRIED DATUM DECAYS IN ONE DIRECTION — toward overstating its own authority** | 🟢 By re-running six legs instead of copying six facts, then **comparing the direction of each error** | 🔴 Five of six were wrong, and **not one was wrong toward understatement**: a mock-Senate exercise gained the word **"Act"**; a **2024** guidebook became the current position; a real report acquired **a title that does not exist**; a two-publisher **range** collapsed into a point; **one aggregator** citing no source became a three-country finding. 🔵 **The mechanism is COMPRESSION, not carelessness** — restatement drops *qualifiers* (status, date, publisher, sample) and keeps the *claim*, and a claim without qualifiers reads stronger than its evidence. 🟢 **Transferable to clients, with a rate: budget one re-verification pass per six carried datums and expect ~5/6 to move.** New trend **`T31`**. |
+| 🔴 **`STUDENTS FIRST Act of 2026` IS NOT LEGISLATION, and this base was shelving it next to bills** | 🟢 By querying it as a bill and reading what came back | 🔴 It is a **student-written model policy**: **98 teenagers**, all 50 states, mock Senate in Boston, **passed 82-16 on 2026-07-19**, **no legal force anywhere**; AASA circulates it to ~10,000 superintendents (publication 2026-08-03 — the "August 2026" already carried). 🔴 **The hazard was ADJACENCY, not ignorance:** `repos/trending.md` lists it in the same cell as `H.R. 8747`, `AB 1159` and `SB 1227` — three real instruments — **with no status marker**. A compliance slide built from that cell briefs a student exercise as pending law. 🟢 Now shelved as `NOT-LAW · model policy · advisory only`. ⚠️ Its acronym expansion is inconsistent across sources and is **deliberately not resolved.** |
+| 🔴 **The POLICY MATRIX declared five verdict values and carried TWELVE** | 🟢 By `cut -f4 \| sort -u` on the data — the **only** method that found `HIGH_RISK` and `FRAMEWORK_LAUNCHED` at all | 🔴 The header reads *"VERDICT vocabulary (closed)"* and lists five. `NONE_IN_FORCE`, `ADOPTED`, `IN_FORCE_UNENFORCED` entered with `p269`; `HIGH_RISK` (VN) and `FRAMEWORK_LAUNCHED` (EG) were in the data and **declared nowhere**. 🔴 **A consumer switching on the declared five silently drops every `ZA`/`KR`/`JP`/`US-NC`/`EE`/`FI`/`NL`/`SG`/`ID`/`CO`/`CL`/`BR`/`regional` row — most of this base's non-US-state coverage.** 🟢 **Header reconciled to the data, each value documented with mechanism and occupants; verified after the edit: 12 declared, 12 present, zero undeclared.** 🔵 **This is `T29`'s defect class in a second file on the same day** — a statement *about* an artefact disagreeing with the artefact, with the statement being the thing trusted. |
+| 🔴 **North Carolina runs THREE layers and the backlog datum was the oldest** | 🟢 By querying NC and finding **three** instruments where the register named one | 🔴 The register's *"North Carolina's K-12 implementation guidance"* is a **2024-01-16** DPI guidebook. NC's **2026** layer is the **AI Leadership Council AI Strategic Roadmap (2026-07-01)**, DPI *"strongly recommends"*, directing districts to vet incumbent EdTech GenAI vendors for safety/privacy/reliability/efficacy **without specifying how**. A third layer is this base's own `P115-S`: **Session Law 2026-41 §7.39**, effective **2026-07-01**. 🟢 **Unlike VN, these LAYER rather than contradict** — and the statute and Roadmap share a commencement date. 🔴 **Shelving the backlog datum alone would have published NC's 2024 position as current.** ⚠️ **WRAL, Feb 2026: only ~1/3 of NC district leaders had given students any GenAI training** — NC is a vet-the-vendors and train-the-teachers engagement, not greenfield. |
+| 🔴 **The EMEA market figure has a SECOND publisher, and the disagreement is entirely in the baseline** | 🟢 By re-running the leg behind a figure carried ~200 passes instead of trusting it | 🔴 Carried: **$2.64B (2026) → $8.0B (2030) @ 31.9%**. MarketDataForecast: **$1.59B (2025), ~$2.11B (2026), ~$20B (2034) @ 32.47%**. 🔵 **~25% apart on the same year, ~2.5× on the horizon, and the CAGRs agree to within half a point** — so the whole disagreement sits in the **baseline**, the one number this base instructs you to quote. The leg could locate **no third** Europe-specific publisher: **these two are the published universe.** 🟢 **Published as a RANGE, both publishers named, NOT merged** — `p268`'s warning that rewriting a sound figure on noise is the opposite error. 🔵 **Generalises (`T30`): the global band looks tight because five publishers triangulate it; every REGIONAL figure here rests on ONE and has never been tested this way.** |
+| 🟡 **A ONE-BYTE re-measurement delta, published as a convention note and NOT as a correction** | 🟢 By re-measuring a repository this base already held, blind, before grepping it | 🟡 `OpenDidactia`'s `LICENSE.md` measures **2,123 B** (`curl \| wc -c`); this base carries **2.122 B**. 🟢 **Almost certainly a trailing-newline counting convention, not upstream drift** — recorded as such and **not merged into the carried figure**, per `p268`. 🔵 **A future pass measuring 2,123 should treat THIS row as the reproduction, not a second drift.** |
+
+### 🔵 Registered, not claimed
+
+- 🟢 **Estonia is the strongest EMEA adoption datum this base holds, and it has an uncomfortable
+  edge.** Education and Research Minister **Kristina Kallas** told *Politico* (**May 2026**) that
+  **~half of the country's 20,000 upper-secondary students** were on an **OpenAI-partnered**
+  platform, rest expected that summer; a **Tallinn University** study of a **2024 national survey
+  (n=15,631, grades 6-12)** places Estonia among the first in Europe to put AI literacy into the
+  **national curriculum**. 🔴 **What was deployed at national scale is a proprietary US platform**,
+  in the region whose own permissive supply this base documents at length. 🔵 **That is the sales
+  argument for the shelf, not a refutation of it** — see `T28`.
+- 🔴 **The NETHERLANDS is RETRACTED.** *"Finland / Estonia / Netherlands as K-12 leaders"* traces
+  **only to an aggregator citing no source.** Estonia and Finland stand on **different** grounds
+  (Estonia: national curriculum + measured deployment; Finland: **no standalone AI subject**, AI
+  literacy integrated via *phenomenon-based learning*, MoEC priority). **No Dutch national
+  instrument or programme was located.** Entered `NOT_ESTABLISHED`. 🟡 **Costed next step, NOT
+  run:** Dutch-language queries against the **Ministerie van OCW** and **SLO**.
+- 🟢 **The best commercial sentence this base has, now actually shelved:** Sanoma, >20,000 teachers,
+  14 countries — **63% of European teachers use AI** and **only 16% believe general-purpose AI
+  improves learning outcomes.** 🔵 **A 47-point gap.** The pitch is not "adopt AI"; it is *"the
+  general-purpose assistant your teachers already use does not know your curriculum, your
+  assessment rules or your exam board."* New trend **`T28`**, new pattern **`P20`**.
+  ⚠️ **Vendor-published** (Sanoma sells education materials). Carried because the **63%** is
+  self-damaging to the publisher's own framing, and the direction is corroborated by `T22`'s
+  independently documented Korean failure.
+- 🟢 **The LF LATAM artefact exists under a different name, and the register's name does not
+  resolve.** It is **LF Research's *Economic and Workforce Impacts of AI in Latin America*** —
+  **fourth** in a **Meta-sponsored** series, 2026 cover date, with **Marco Gerosa** (Northern
+  Arizona University). **84% of LATAM employers plan to upskill their own workforce**; **8–14% of
+  LATAM jobs** could see significant productivity increases via AI augmentation. 🔵 **The regional
+  constraint is SKILLS, not jobs, and the upskilling budget exists before the engagement does.**
+  ⚠️ **Do not conflate with the *2026 State of Tech Talent Report*, which is GLOBAL** (n=**400**).
+- 🟢 **A LATAM finding this base did not have, and it is monetisable:** a **UAM** analysis finds
+  **no unified regulatory framework for AI in Latin American HIGHER education**, with most
+  universities **operating without clear internal rules and deciding in isolation**. 🔵 **The
+  institution-level inverse of the school-level pattern already documented** — so **the first
+  deliverable for a LATAM university client is frequently the governance scaffold, not the tutor.**
+- 🔴 **One LATAM datum was REFUSED rather than shelved, and the refusal is the finding.** A study
+  blog claims **Chile approved a dedicated AI *education* framework in 2025** and that Brazil and
+  Mexico hold only non-binding guidance. **It appears in none of the academic or policy sources
+  located**, which describe Chile via its **2021** policy and its **pending bill**. Recorded
+  `UNVERIFIED-AND-CONTRADICTED` and **not carried.**
+- 🔵 **APAC returned ZERO new named edtech players across a full regional leg** — the fifth
+  consecutive measured nil return on the supply channel. What it did return is **regulatory shape**:
+  **SG voluntary** (five encouraged principles, AI Verify **optional**), **JP promotion-led**
+  (**AI Basic Plan 2025-12-23**; the 2025 **AI Promotion Act has no explicit penalties**), **ID
+  pending** (two Presidential Regulations **still unissued** mid-2026). 🟢 **In all three the
+  binding constraints on an education deliverable are procurement, data residency and curriculum
+  alignment — NOT an AI statute**, which is the opposite of the EMEA posture and should reorder
+  discovery questions. Plus **Ipsos Education Monitor 2026**: support for **banning AI in schools**
+  is **ID 23% · SG 28% · JP 29% · MY 29% · KR 31%** — **every figure below one third**, and KR's
+  position as regional high is consistent with `T22`'s documented rollout failure rather than with
+  general hostility.
+- 🔴 **MEA remains UNSIZED, unchanged from `p269`.** This pass added no MEA figure. The Gulf, the
+  Maghreb and sub-Saharan Africa beyond `p269`'s four countries stay unexamined.
+- 🟡 **The DOL instrument's own identifier is UNRECONCILED** — *Training and Employment Notice*
+  No. 07-25 in one rendering, *TEGL* 07-25 in another. Both recorded; neither resolvable without the
+  primary channel this environment lacks.
+- ⚠️ **Primary sources: NOT ATTEMPTED, by `p268`'s standing instruction**, obeyed without
+  re-testing. **Every regional and market figure in this pass is secondary-source grade and each
+  shelf cell carrying one says so.**
+- 🔵 **Channel re-confirmation (fourth consecutive pass):** `raw.githubusercontent.com` → **200**;
+  `git ls-remote --symref` → **OK**; `api.github.com` via `curl` → **403**; `github.com` HTML via
+  `WebFetch` → **200**.
+- 🔵 **The generic supply legs were NOT RUN, deliberately, for the first time.** `p269` instructed
+  *"spend the generic legs last, not first"*; `p270` spent them **not at all** and used the budget on
+  this register's backlog instead. 🟢 **Recommended for `p271`: that trade was the right one and
+  should repeat** — but the EMEA two-publisher result means **the NA `$3.68B` and MEA `$0.56B`
+  figures are now the obvious next re-verification targets**, since each rests on **one** publisher
+  and neither has ever been tested.
+
 ## Pass 269 — 2026-10-17 — **`Gap 367`'s TWO NAMED LIMBS RUN AND THE CLOSURE HELD TWICE OVER, the MIDDLE EAST AND AFRICA LEG RUN FOR THE FIRST TIME, and a FOURTH cross-shelf defect — this one a CONTRADICTION, not an omission**
 
 ⏱️ **Fifteenth pass of `2026-10-17`.** Append-only; nothing below is rewritten.

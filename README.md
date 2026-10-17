@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-17
 ---
 
+## Pass 270 — 2026-10-17 — **THE BACKLOG WAS DISCHARGED BY RE-RUNNING ITS LEGS, NOT BY COPYING IT — AND FIVE OF SIX DATUMS CHANGED SHAPE**
+
+⏱️ **Sixteenth pass of `2026-10-17`.** Evidence:
+[`verified-repos.2026-10-17-p270.tsv`](evidence/verified-repos.2026-10-17-p270.tsv) — **one
+repository probed, and the stated reason it is one** — and
+[`p270-websearch.2026-10-17-p270.tsv`](evidence/p270-websearch.2026-10-17-p270.tsv), **9 legs,
+every one taken from [`intel/open-gaps.md`](intel/open-gaps.md) rather than invented**.
+
+### 🟢 The headline: this pass had no new ideas either, and that is twice in a row it paid off
+
+`p269` registered a backlog in its own words — *"SIX regional datums live in this register and the
+README and have never reached the shelves"* — and named all six. **Pass 270 ran one leg per datum,
+under one rule: re-run the leg, do not transcribe the register.**
+
+🔴 **Five of the six came back different.**
+
+| backlog datum | verdict on re-verification |
+|---|---|
+| US DOL AI Literacy Framework (2026-02-13) | 🟢 **CONFIRMED** — and gained the citable identifier **Training and Employment Notice No. 07-25**, five content areas, seven delivery principles, explicitly **voluntary** |
+| STUDENTS FIRST Act of 2026 | 🔴 **RECLASSIFIED** — **not a bill, not law**: a student-written model policy, 98 teens, **82-16 on 2026-07-19** |
+| North Carolina K-12 implementation guidance | 🔴 **RE-DATED** — a **2024-01-16** guidebook; NC's 2026 layer is the **AI Strategic Roadmap (2026-07-01)**, with §7.39 of **Session Law 2026-41** a third layer |
+| EMEA market figure €/$2.64B (2026) | 🔴 **DISPUTED** — a second publisher gives **~$2.11B**; ~25% apart on the same year |
+| Finland / Estonia / Netherlands as K-12 leaders | 🔴 **PARTIALLY REFUTED** — two stand on **different** grounds; **the Netherlands is unsubstantiated** |
+| Linux Foundation LATAM AI workforce report | 🔴 **RENAMED** — no artefact by that name; it is ***Economic and Workforce Impacts of AI in Latin America*** |
+
+🟢 **All six are now on the shelves** — [`intel/market.md`](intel/market.md) by region,
+[`intel/trends.md`](intel/trends.md) as `T28`–`T31`, and
+[`intel/policy-matrix.tsv`](intel/policy-matrix.tsv) as **14 new rows** — and the grep was re-run
+afterwards to prove it, which turns out to matter.
+
+### 🔴 The defect this pass earned: a sentence that answered the grep
+
+Of the **Sanoma Learning 2026 European Teacher Survey**, `agents/trending.md` states verbatim:
+*"Recorded in `intel/market.md` and `intel/trends.md`."*
+
+```
+$ grep -c "Sanoma" intel/market.md intel/trends.md
+intel/market.md:0
+intel/trends.md:0
+```
+
+🔴 **It was in neither.** This is the **fifth cross-shelf defect in five passes** and a **new
+species**: the four before it were omissions — silence, which a grep finds. **This one was a
+sentence that answered the grep**, and it suppressed its own detection: `p269`'s backlog sweep
+**did not list Sanoma, because this base said it was already shelved.**
+
+🟢 **The amendment is one line, now `T29`:** `p268` amended the **novelty** check to grep the
+*slug*; **`p270` amends the *propagation* check to grep the DESTINATION file and never to trust a
+claim in the source file.** 🔵 **The same defect class turned up in a second file the same day** —
+`intel/policy-matrix.tsv` declares *"VERDICT vocabulary (closed)"* with **five** values and the
+column actually carries **twelve**. `HIGH_RISK` and `FRAMEWORK_LAUNCHED` were findable **only by
+counting**. Header now reconciled: **12 declared, 12 present, zero undeclared.**
+
+### 🔴 And the generalisation, which is the part worth taking to a client
+
+**Five errors, and not one of them pointed toward understatement.** A mock-Senate exercise gained
+the word *"Act"*. A two-year-old guidebook became the current position. A real report acquired a
+cleaner title than the one it has. A two-publisher range collapsed into a point. One aggregator
+citing no source became a three-country finding.
+
+🔵 **The mechanism is compression, not carelessness.** Restatement drops **qualifiers** — status,
+date, publisher, sample — and keeps the **claim**; a claim without its qualifiers reads stronger
+than its evidence. 🟢 **So a client knowledge base maintained by restatement is systematically
+overconfident, and the overconfidence concentrates in exactly the cells a slide quotes. The audit
+that catches it is not an audit of the summary — it is re-running the original query.** Budget one
+re-verification pass per six carried datums and expect roughly five to move. New trend **`T31`**.
+
+### 🟢 The best commercial sentence on this base, finally shelved
+
+**Sanoma, >20,000 teachers, 14 countries: 63% of European teachers use AI — and only 16% believe
+general-purpose AI improves learning outcomes.** A **47-point gap**. 🔵 **The pitch is not "adopt
+AI"**; that argument is won and the client has receipts that it did not help. It is *"the
+general-purpose assistant your teachers already use does not know your curriculum, your assessment
+rules or your exam board."* New trend **`T28`** and new pattern **`P20`** — the Spain/LOMLOE
+teacher-workflow engagement, built on `OpenDidactia` (**CC BY-SA 4.0**, verified at payload) read as
+a **specification** rather than shipped as content, with the ShareAlike boundary drawn explicitly.
+
+### 🔵 What this pass did NOT do, on purpose
+
+- 🔴 **The three generic supply legs were not run at all** — measured saturated across four passes;
+  `p269` said spend them last. **`p270` spent them not at all** and used the budget on the backlog.
+  🟢 **Consequence, recorded rather than padded: `agents/top.md` and `repos/foundations.md` gain
+  ZERO rows.** Both already clear the five-row minimum many times over. **Fewer real rows beat
+  padding.**
+- 🔴 **`Gap 367` was tested in a third language (Spanish) and the closure held a third time.** Nine
+  repositories, eight university student course portfolios, the ninth already held. **There is still
+  no permissively licensed primary-band AI-literacy curriculum in any of four languages.**
+- ⚠️ **No primary source was attempted**, per `p268`'s standing instruction. **Every regional and
+  market figure in this pass is secondary-source grade and says so in its own cell.**
+
+🟡 **Named for `p271`, costed:** the EMEA result means **NA's `$3.68B` and MEA's `$0.56B` are the
+obvious next re-verification targets** — each rests on **one** publisher and neither has ever been
+tested. Also unrun and cheap: **Dutch-language queries against the Ministerie van OCW and SLO**, and
+**asking `ai-edu-for-kids` upstream to re-licence**, which costs an email because its CC-BY-NC-SA is
+template boilerplate rather than a decision.
+
 ## Pass 269 — 2026-10-17 — **THE TWO CHEAPEST UNRUN INSTRUCTIONS ON THIS BASE WERE RUN: `Gap 367`'s CLOSURE HELD TWICE OVER, AND "EMEA MEANS EUROPE" IS NO LONGER TRUE**
 
 ⏱️ **Fifteenth pass of `2026-10-17`.** Evidence:

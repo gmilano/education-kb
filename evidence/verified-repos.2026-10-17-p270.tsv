@@ -1,0 +1,49 @@
+# pass 270 — 2026-10-17 — education KB
+# THEME: discharge the SIX-DATUM BACKLOG p269 registered as "live in the register and the README
+#   and never reached the shelves", by RE-VERIFYING each datum rather than copying it across.
+#   Five of the six changed shape under re-verification. One was RECLASSIFIED out of the
+#   legislation category entirely.
+#
+# This pass is DATUM-led, not repository-led: only ONE repository was probed, because the only
+# supply leg run (Gap 367's Spanish limb) returned exactly one candidate and the slug gate
+# caught it as already shelved. That is recorded as a negative supply result, not padded.
+#
+# METHOD (p267/p268/p269's, unchanged):
+#   - Default ref RESOLVED with `git ls-remote --symref <url> HEAD` before any fetch.
+#   - 19 paths x resolved ref: LICENSE/LICENCE + .md/.txt variants, lowercase `license`,
+#     LICENSE-MIT, LICENSE-APACHE, COPYING, COPYING.txt, NOTICE, docs/LICENSE, .github/LICENSE,
+#     and package metadata (package.json, pyproject.toml, setup.py, composer.json) + README.md.
+#   - p268's AMENDED cross-shelf rule applied BEFORE claiming novelty: the SLUG was grepped.
+#     It fired. `OpenDidactia` returns 48 files in this base — the candidate was ALREADY HELD.
+#
+# CHANNELS THIS PASS (measured, not assumed):
+#   raw.githubusercontent.com via curl -> 200  (payload below)
+#   git ls-remote --symref            -> OK    (ref below)
+#   api.github.com via curl           -> 403   (re-confirmed, 4th consecutive pass)
+#   github.com HTML via WebFetch      -> 200   (stars/forks/commits below)
+#   Non-GitHub primary sources        -> NOT ATTEMPTED, per p268's standing instruction.
+#     EVERY regional and market figure in this pass is SECONDARY-SOURCE grade and says so.
+#
+# Columns: slug	grant_state_and_grade	path_on_resolved_ref	stars	forks	commits	region	note
+nmarafo/OpenDidactia	CC-BY-SA-4.0 (payload, 2,123 B) — RE-MEASURED, 1-BYTE DELTA against this base's carried figure	main/LICENSE.md	0	0	50	EMEA	ALREADY HELD (agents/trending.md, repos/trending.md). Probed blind as Gap 367's Spanish limb; the slug gate caught it. Payload l.1 reads "# Licencia Creative Commons Atribucion-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)". GRANT SHAPE MATTERS HERE: ShareAlike WITHOUT NonCommercial — materially different from datawhalechina/ai-edu-for-kids (NC *and* SA, p269), which is not shippable at all. OpenDidactia IS commercially usable; the ShareAlike colours the generated CONTENT, not the client's code. Spain, LOMLOE/CCAA; band is SECONDARY (examples at 2.º ESO), NOT primary. It is an OKF prompt/knowledge framework, NOT runnable code — no language detected by GitHub, 0 stars at 50 commits.
+# BYTE DELTA, recorded rather than silently overwritten (p268's warning: rewriting a good figure
+# on noise is the opposite error):
+#   carried in this base: `2.122 B` (Spanish decimal notation = 2,122 bytes)
+#   measured this pass:   2,123 bytes (`curl | wc -c`, file ends in a newline)
+#   VERDICT: a ONE-BYTE disagreement, almost certainly a trailing-newline counting convention,
+#   NOT an upstream change. Published as a convention note, NOT as a correction, and NOT merged.
+#   A future pass that re-measures 2,123 should treat THIS row as the reproduction, not a drift.
+#
+# GAP 367 — SPANISH LIMB: CLOSURE UPHELD, a THIRD time, in a THIRD language.
+#   p269 spent the Hindi and Chinese limbs. This pass spent the Spanish one.
+#   Leg: `curriculum abierto inteligencia artificial primaria codigo abierto licencia MIT GitHub 2026`
+#   Yield: NINE repositories, EIGHT of them university-level student course portfolios
+#   (ia-aplicada-2026 forks, InteligenciaArtificial, proyecto_ia, cursoIA2026) — none primary-band,
+#   none institutional. The ONLY framework-grade result was OpenDidactia, already held, CC BY-SA,
+#   and SECONDARY band. ZERO new repositories entered this base from this leg.
+#   NEAREST PERMISSIVE PRIMARY-BAND ARTEFACT, and the distinction is load-bearing:
+#   `DECK6/korean-elementary-learning-map` (MIT, 117 commits, already held) IS primary-band and IS
+#   permissive — but it is an ontology of the Korean primary CURRICULUM, not an AI-LITERACY course.
+#   Gap 367 asks for permissive primary-band AI-LITERACY curriculum. It still does not exist.
+#   REMAINING FALSIFIABLE LIMB (now the only one): an upstream re-licence of ai-edu-for-kids —
+#   which p269 established is TEMPLATE BOILERPLATE and therefore free to test by asking.

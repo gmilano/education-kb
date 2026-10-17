@@ -339,3 +339,34 @@ at integration work rather than wholesale import.
   "Korean-language, Korean-format-aware" is. It pairs with South Korea's **AI Basic Act, in force
   22 January 2026** — the one APAC jurisdiction with a comprehensive statute — so the language
   supply and the regulatory demand have appeared in the same country in the same year.
+
+## Pass 270 note — this table gains no rows, and the reason is a measurement
+
+🟢 **Zero agents were added this pass, and nothing was added to meet the brief's five-row minimum —
+the table above clears it many times over.** This is the **fifth consecutive measured nil return**
+on the education-agent supply channel.
+
+**What was and was not searched, so the absence is informed rather than silent:**
+
+| leg | run? | why |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **no** | measured **saturated across four passes**; `p269`'s standing instruction is to spend the generic legs **last, not first**. A fifth identical measurement buys nothing. |
+| `github trending education AI 2026` | 🔴 **no** | same |
+| `open source platform education ERP / CRM / SIS` | 🔴 **no** | same |
+| `curriculum abierto IA primaria ... licencia MIT GitHub 2026` *(Spanish)* | 🟢 **yes** | `Gap 367`'s one unspent language limb |
+
+🔴 **The Spanish leg's yield: nine repositories, eight of them university student course
+portfolios** (`ia-aplicada-2026` and forks, `InteligenciaArtificial`, `proyecto_ia`, `cursoIA2026`)
+**and the ninth already on this base** ([`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia),
+CC BY-SA 4.0 at payload — `p268`'s slug gate caught it). **No row qualified.**
+
+🟢 **`Gap 367` therefore holds in a fourth language** — Hindi and Chinese (`p269`), Spanish (`p270`),
+and English throughout. **There is still no permissively licensed primary-band AI-literacy
+curriculum.** 🔵 The nearest permissive primary-band artefact,
+`DECK6/korean-elementary-learning-map` (**MIT**), is an ontology of a primary **curriculum**, not a
+primary **AI-literacy course** — a distinction that decides whether it answers the gap, and it
+does not.
+
+🟢 **One falsifiable limb remains and it costs an email:** `datawhalechina/ai-edu-for-kids` carries
+CC-BY-NC-SA-4.0 as **organisational template boilerplate**, not as a decision (`p269`, `T27`) — so
+it is the licence on this base **most likely to move if asked.**

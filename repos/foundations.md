@@ -346,3 +346,28 @@ from absence.
   `crpf-mitadt/Indian-AI-for-Education` (CC0-1.0, 7,048 B). 🔵 **`p268` warned that rewriting a
   good figure on noise is as bad as publishing a bad one. Three independent agreements, including
   one to the byte, say this base's APAC licence cells are sound.**
+
+## Pass 270 note — no rows added, and the three legs that would have added them were not run on purpose
+
+🟢 **This file gains no repositories this pass.** `p269` measured the generic supply legs
+(`top open source AI agents education`, `github trending education AI`, `open source platform /
+ERP / SIS`) as **saturated across four consecutive passes** — nine platforms returned, **all nine
+already shelved**, zero education-specific agents — and instructed that they be spent **last, not
+first**. **Pass 270 did not spend them at all.** It ran one targeted supply leg instead
+(`Gap 367`'s Spanish limb), which returned **nine repositories, eight of them university student
+course portfolios and the ninth already held.**
+
+🔵 **The brief's five-repo minimum is met many times over by the table above, and nothing was added
+to pad it.** An informed nil return is the honest output of a saturated channel; a padded row is
+not. **Where this base's shelf-grade rows have come from for five consecutive passes is probing a
+named thing by hand or grepping this repository** — not from a generic search leg.
+
+🟡 **Where this file is still weak, restated rather than quietly inherited:**
+- 🔴 **No permissive North American system of record.** The **Ed-Fi** stack remains shelved
+  (`p268`), and nothing has replaced it.
+- 🔴 **`ls1intum/Athena` is still silent** — no grant across **76 path/ref probes over three
+  passes**. 🔵 Contrast `muskvdc/EduTwin-Africa`, whose README *says* the licence is missing
+  (`PRE-LICENCE`, `p269`): that one is worth an email and Athena is not.
+- ⚠️ **A ref-sensitivity reminder that cost a published figure once:** `learningequality/kolibri`
+  serves **MIT on `develop`** and **404 on `main`**. Probe the **resolved** default ref
+  (`git ls-remote --symref`), never a guessed one.

@@ -850,3 +850,80 @@ delivery against **one** country's instrument, assuming the device and connectiv
 funded (true in Kenya, not assumed elsewhere). **Each additional country is a new curriculum parse
 and a new language pass — price it as a new engagement, not a rollout**, because the permissive
 layer ports and the national layer does not.
+
+## P20 — The Spanish/LOMLOE teacher-workflow engagement, and how to ship against a ShareAlike curriculum framework *(new in pass 270)*
+
+**Target:** Spain (LOMLOE + CCAA autonomous-community curricula). Transfers to any jurisdiction
+whose curriculum publishes **official criteria** a deliverable must demonstrably cover.
+**Why now:** the **Sanoma Learning 2026 European Teacher Survey** (>20,000 teachers, 14 countries)
+measured **63% of European teachers using AI** and **only 16% believing general-purpose AI improves
+learning outcomes** (`T28`). The client already has an AI tool, already has evidence it is not
+working, and the reason is that it does not know their curriculum. **This pattern is the answer to
+that specific objection, and nothing else on these shelves answers it as directly.**
+**Timeline:** 6–8 weeks to a measurable teacher-facing pilot.
+
+```
+[OpenDidactia  CC BY-SA 4.0]  <- READ as a specification, NOT shipped as content
+  nmarafo/OpenDidactia         OKF: curricular schemas for Programaciones Didacticas
+  2,123 B licence payload      and Situaciones de Aprendizaje (LOMLOE / CCAA)
+  50 commits / 0 stars         ** NOT runnable code — prompts + schemas **
+        |
+        |  (the licence boundary lives on THIS arrow — see below)
+        v
+[instructional_agents  MIT]    multi-agent ADDIE: syllabus -> slides -> assessments
+  DaRL-GenAI/instructional_agents    roles: Teaching Faculty / Instructional Designer / TA
+        |
+        v
+[Claw-ED  MIT]                 teacher approves before anything reaches a student;
+  SirhanMacx/Claw-ED           
+                               local-first, curriculum never leaves the institution
+        |
+        v
+[Numbas  Apache-2.0]           assessment execution ENTIRELY CLIENT-SIDE —
+  numbas/Numbas                answers a Spanish data-residency objection structurally
+        |
+        v
+[Moodle  GPL-3.0]              the LMS Spanish public education already runs;
+                               keep it at the process edge, integrate over its API
+```
+
+🔴 **The licence boundary, which is the whole engineering content of this pattern.**
+`OpenDidactia` is **CC BY-SA 4.0** — verified first-hand at `main/LICENSE.md`, 2,123 B, pass 270.
+**ShareAlike, and critically NOT NonCommercial**, which makes it *commercially usable* and puts it
+in a different category from `datawhalechina/ai-edu-for-kids` (**NC *and* SA**, unusable in a
+deliverable at all — `P17`, `p269`). **"CC with a hyphenated suffix" is not a verdict; read which
+suffixes.**
+
+What ShareAlike colours here is **adapted content**, not the client's code:
+1. 🟢 **Read OpenDidactia's OKF schemas to learn the SHAPE of a LOMLOE programación** — the
+   mandatory prior inventory of every official criterion, the 100%-coverage audit line, the
+   analytic rubric per instrument. **Shape and method are not copyrightable; the text is.**
+2. 🔴 **Do not ship its prompt text, its schemas or an edit of them** inside a proprietary
+   deliverable. That is the derivative that triggers SA.
+3. 🟢 **Write your own schemas against the official curriculum** — which is the authoritative source
+   anyway, and which `OpenDidactia` is itself a reading of. **Then the generated programaciones are
+   the client's, under whatever terms the client wants.**
+4. 🟢 **If the client is a public body and SA is acceptable** (common in Spanish public education —
+   CC BY-SA is the default in much of the sector), **adopt OpenDidactia directly and contribute
+   back**. This is the cheaper path and it is available more often than a reflex "no copyleft" rule
+   admits. **Ask which one the client wants in week one; do not decide it for them.**
+
+🟡 **What to verify in week one, because this base cannot.**
+- 🔴 **`OpenDidactia` is 0 stars at 50 commits, GitHub detects no language, and it is a
+  prompt/knowledge framework rather than software.** **There is no community, no release and no
+  maintenance signal.** Treat it as **one practitioner's written-down method** — valuable as that,
+  and **not** as a dependency. Nothing in the chain above calls it at runtime, by design.
+- ⚠️ **CCAA divergence is the real scope risk.** LOMLOE sets the frame; each autonomous community
+  publishes its own criteria. **Price one community, then price each additional one as a new
+  curriculum parse** — the same rule `P19` applies to additional countries.
+- ⚠️ **Every regulatory and market figure behind this pattern is secondary-source grade** and the
+  EMEA market number is now a **two-publisher range ($2.1–2.6B, 2026 — `T30`)**, not a point.
+  **Quote the range and say it is a range.** Scope from teacher and school counts instead.
+
+🟢 **Why this pattern beats the obvious alternative.** The obvious alternative is Estonia's: buy a
+proprietary platform at national scale (`~half of 20,000` upper-secondary students, Minister
+**Kristina Kallas** to *Politico*, May 2026). It works, and it is the thing a sovereignty-conscious
+European procurement will be asked about afterwards. 🔵 **Every component above except Moodle's
+GPL-3.0 edge is MIT or Apache-2.0, and every one of them is EMEA-origin or EMEA-hosted** — which
+this base's EMEA section already establishes as the regional differentiator. **The permissive,
+regionally-governed stack exists; this pattern is the assembly instructions.**

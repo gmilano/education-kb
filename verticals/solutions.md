@@ -319,3 +319,37 @@ while **North-West University became the first SA university with an official AI
 (**QUREO** / the Japanese **Kiryo** / a **Sprix** contract approved January 2026) — **brief the
 framework, not the vendor.** And every regional figure here is **secondary-source grade**: `p268`
 established the non-GitHub DNS failure as environmental, and no ministry document was read.
+
+## Pass 270 note — what the platform shelf does and does not cover, after the EMEA re-verification
+
+🟢 **No platform rows were added this pass, and none needed changing.** The only supply leg run
+(`Gap 367`'s Spanish limb) returned nine repositories, eight of them university student course
+portfolios and the ninth already held. The three generic platform/ERP/SIS legs were **deliberately
+not re-run** — `p269` measured them saturated across four consecutive passes and instructed that
+they be spent last. **This file's shelf is stable, and that is a measurement, not an omission.**
+
+🔴 **But pass 270 found the shelf's sharpest gap by looking at what a national government actually
+bought.** Estonia — the one EMEA jurisdiction where national-scale deployment is a *measured fact*
+rather than a plan — has **~half of its 20,000 upper-secondary students** on an **OpenAI-partnered
+proprietary platform** (Education and Research Minister **Kristina Kallas** to *Politico*, **May
+2026**). 🔵 **Every platform on the shelf above is open source, and the country that moved fastest
+in Europe did not pick one of them.**
+
+🟢 **That is not an argument that the shelf is wrong — it is the sales argument for the shelf**, and
+it has a number attached. The **Sanoma Learning 2026 European Teacher Survey** (>20,000 teachers,
+14 countries) found **63% of European teachers using AI** and **only 16% believing general-purpose
+AI improves learning outcomes** (`T28`). **A proprietary general-purpose platform is exactly what
+84% of them are unconvinced by.** The platforms here — **Moodle** (GPL-3.0, with its
+provider-pluggable AI subsystem since 4.5), **Open edX**, **Canvas** (AGPL-3.0 at source),
+**Kolibri** (MIT **on `develop`**, 404 on `main` — the ref matters, `p269`) — are the ones that can
+be bound to a client's own curriculum and assessment rules, which is the thing the general-purpose
+tool cannot do.
+
+⚠️ **One category correction, so this file is not read as offering something it does not.**
+[`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) (**CC BY-SA 4.0**, verified at
+payload this pass) appears in `agents/trending.md`, `repos/trending.md` and new pattern **`P20`** —
+but it does **not** belong on this shelf and has not been added to it. **It is a prompt/knowledge
+framework (schemas + prompts for LOMLOE programaciones), not a running platform**: GitHub detects no
+language in it, and it is 0 stars at 50 commits. **This shelf is for systems a client can stand up
+and put an agent on top of.** `OpenDidactia` is read as a specification, never deployed — see `P20`
+for the ShareAlike boundary that distinction rests on.

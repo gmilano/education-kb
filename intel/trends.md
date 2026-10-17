@@ -8,7 +8,10 @@ updated: 2026-10-17
 
 > What changed, what it means for a studio engagement, and how confident the evidence is.
 > **T1–T9 are from pass 264. T10 is revised and T11–T14 are new in pass 265. T15–T17 are new in
-> pass 266, which also revises T10 a second time and T14**
+> pass 266, which also revises T10 a second time and T14. T28–T31 are new in pass 270** — the
+> European use-vs-efficacy gap, this base catching itself asserting a propagation it never
+> performed, the 25% spread that appears in a regional market figure the moment a second publisher
+> is found, and the measured direction in which a carried datum decays
 > ([evidence](../evidence/verified-repos.2026-10-17-p265.tsv)), which also retracts two of this
 > base's own declared gaps.
 
@@ -717,3 +720,124 @@ the project's chosen license here before publishing if a specific open-source li
 grant is missing. Against [`ls1intum/Athena`](https://github.com/ls1intum/Athena), silent through 76
 path/ref probes across three passes, the difference is entirely actionable: **one of these rows is
 worth an email and the other is not**, and only a provenance read separates them.
+
+## T28 — European teachers have already adopted AI and already concluded the general-purpose tools do not work
+
+The **Sanoma Learning 2026 European Teacher Survey** — **more than 20,000 teachers across 14
+countries** — reports two numbers that have to be read together:
+
+| | |
+|---|---|
+| European teachers using AI | **63%** |
+| European teachers who believe **general-purpose** AI improves learning outcomes | **16%** |
+
+**A 47-point gap between adoption and believed efficacy.** Adoption is not the open question in
+EMEA; it is settled. What is open is whether the thing being adopted does anything.
+
+**For the studio:** this inverts the standard pitch. The conversation is **not** "you should adopt
+AI" — that argument is already won and the client has the receipts to prove it did not help. The
+conversation is **"the general-purpose assistant your teachers are already using does not know your
+curriculum, your assessment rules or your exam board, and that is why 84% of them do not think it
+works."** Every education-specific, curriculum-bound asset on this base's shelves is an answer to
+that sentence: `instructional_agents` (MIT) binds to a course spec, `Numbas` (Apache-2.0) binds to
+an assessment, `OpenDidactia` (CC BY-SA 4.0) binds to **LOMLOE's own criteria**, and
+`DECK6/korean-elementary-learning-map` (MIT) binds to a national curriculum graph.
+
+⚠️ **Grade:** vendor-published survey. Sanoma sells education materials, so a finding that
+general-purpose AI underperforms flatters the publisher's category. Carried anyway, for a specific
+reason: **the 63% is self-damaging to the publisher's own "teachers need our tools" framing** (it
+concedes teachers already have tools), and the direction is corroborated by `T22`'s independently
+documented Korean failure — a mandated general-purpose rollout that reached **under 30% adoption**
+and lost official textbook status. *Secondary-source; no primary channel available in this
+environment.*
+
+🔵 **The falsifiable form:** if a second, non-vendor European survey puts believed efficacy of
+general-purpose AI materially above 16%, this trend weakens. Nobody has located one.
+
+## T29 — A propagation claim is not evidence of propagation, and this base has now caught itself asserting one
+
+Five consecutive passes have each found the same class of defect — a fact this base **knows** that
+never reached a file this base **ships**. Pass 270's instance is a new species and the worst of the
+five, because it is self-reporting:
+
+Of the Sanoma survey above, `agents/trending.md` states, verbatim:
+*"Recorded in `intel/market.md` and `intel/trends.md`."*
+
+```
+$ grep -c "Sanoma" intel/market.md intel/trends.md
+intel/market.md:0
+intel/trends.md:0
+```
+
+🔴 **A pass asserted the propagation it had not performed.** The four earlier defects were
+omissions — silence, which a grep can find. **This one was worse than silence: it was a sentence
+that answered the grep.** Any later pass auditing the register for unshelved datums would read that
+line as proof the work was done, and `p269`'s backlog sweep — which found six unshelved datums by
+grepping each one — **did not list Sanoma, because the register said it was shelved.**
+
+**The method amendment, one line:** `p268` amended the **novelty** check to grep the *slug* rather
+than the prose. **`p270` amends the *propagation* check to grep the DESTINATION file, never to
+trust a claim in the source file.** Both defects were invisible to precisely the check that
+preceded them, which is the argument for writing the amendment down rather than fixing the instance.
+
+**For the studio:** the same failure mode is what a client's AI-governance register looks like after
+two years. The deliverable that prevents it is not a better register — it is **a check that reads
+the artefact instead of the claim about the artefact.**
+
+## T30 — Regional market sizing is single-publisher sizing, and the EMEA number moves 25% when a second one shows up
+
+This base's global market-size table is a **narrow band ($8.7–10.6B for 2026)** across five
+publishers. Its **regional** figures are nothing like that well supported, and pass 270 measured
+how badly:
+
+| Europe, AI in education | 2026 | Horizon | CAGR |
+|---|---|---|---|
+| carried by this base ~200 passes | **$2.64B** | $8.0B by 2030 | 31.9% |
+| MarketDataForecast | **~$2.11B** | ~$20B by 2034 | 32.47% |
+
+**~25% apart on the same year, ~2.5× apart on the horizon, and their CAGRs agree to within half a
+point** — so the entire disagreement is in the **baseline**, which is the one figure this base's own
+market file instructs you to quote and the one a client slide actually carries. The leg that found
+the second publisher states it could locate **no third**: two is the published universe for Europe.
+
+🔵 **Why this generalises beyond EMEA.** The global band looks tight because five publishers
+triangulate it. Every *regional* figure on this base — NA's **$3.68B**, MEA's **$0.56B**, LATAM's —
+rests on **one** publisher each, and has never been tested the way EMEA's just was. **The tightness
+of the global band is not evidence that the regional splits are sound; it is evidence that only the
+global figure has been checked.**
+
+**For the studio:** quote regional market size as a **range with the publisher count attached**
+("$2.1–2.6B, two publishers"), or quote the global baseline and the regional *share*. A single
+confident regional number is the one claim the evidence will not support — and a client who checks
+will find the other publisher.
+
+## T31 — A carried datum decays in one direction: toward overstating its own authority
+
+Pass 270 re-verified six regional datums this base had carried in prose rather than on a shelf.
+**Five of the six had changed shape.** The changes were not random:
+
+| carried as | actually is | direction of the error |
+|---|---|---|
+| "the **STUDENTS FIRST Act** of 2026" | a student-written **model policy**, 82-16 in a mock Senate | 🔴 exercise → **statute** |
+| "North Carolina's K-12 **implementation guidance**" | a **2024-01-16** DPI guidebook, two layers below NC's current position | 🔴 dated advisory → **current guidance** |
+| "the **Linux Foundation LATAM AI workforce report**" | *Economic and Workforce Impacts of AI in Latin America*, 4th in a Meta-sponsored series | 🔴 real report → **a title that does not exist** |
+| "the EMEA figure of **$2.64B**" | one of **two** publishers, ~25% apart | 🔴 a range → **a number** |
+| "**Finland / Estonia / Netherlands** as K-12 leaders" | two stand on different grounds; the third is **unsubstantiated** | 🔴 one aggregator → **a grouping** |
+| "the **US DOL AI Literacy Framework** (2026-02-13)" | confirmed, **TEN No. 07-25**, five content areas | 🟢 held |
+
+🔴 **Every one of the five errors made the datum sound MORE authoritative than it was** — a model
+policy gained the word "Act", a two-year-old guidebook became the current position, a report
+acquired a cleaner title than the one it has, a forecast range collapsed into a point, and an
+aggregator's grouping became a finding. **None of the five decayed toward understatement.**
+
+🔵 **The mechanism is compression, not carelessness.** Each datum was shortened every time it was
+restated, and the parts that get dropped when you shorten a fact are its **qualifiers** — the
+status marker, the date, the publisher, the sample. What survives compression is the **claim**, and
+a claim without its qualifiers reads as stronger than the evidence behind it.
+
+**For the studio, and this is the transferable part:** a client knowledge base that has been
+maintained by restatement — every quarterly deck summarising the last one — is **systematically
+overconfident**, and the overconfidence is concentrated in exactly the cells a slide quotes.
+**The audit that catches it is cheap and it is not an audit of the summary: re-run the original
+query and compare.** Pass 270 ran six such queries and five came back different. **Budget one
+re-verification pass per six carried datums**, and expect roughly that hit rate.
