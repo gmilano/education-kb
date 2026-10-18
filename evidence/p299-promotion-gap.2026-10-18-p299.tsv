@@ -1,0 +1,19 @@
+slug	layer	verdict	licence_label_sidebar	licence_at_payload	stars	forks	commits	branch	banner	note
+S4-NetQuest/react-scorm-provider	SCORM	ADMITTED	MIT license	not read	67	23	19	master	none	React components for SCORM API comms; named by ACTION PG-3
+raccoongang/edx_xblock_scorm	SCORM	ADMITTED	NO LABEL (bare "License")	Apache-2.0 (11.1 KB, 201 lines)	32	65	49	master	ARCHIVED 2023-11-27	SCORM 1.2+2004 XBlock for Open edX; forks(65) > stars(32); named by ACTION PG-3
+rolfis/qti-convert	QTI conversion	ADMITTED	Apache-2.0 license	not read	22	6	42	main	none	Canvas QTI export -> Word/JSON; named by ACTION PG-3
+metyatech/markdown-to-qti	QTI authoring	ADMITTED	MIT license	not read	2	0	102	main	none	TypeScript CLI, Markdown -> QTI 3.0 XML packages; named by ACTION PG-3
+metyatech/qti-html-renderer	QTI rendering	ADMITTED	MIT license	not read	0	0	47	main	none	QTI 3.0 item XML -> HTML utilities; scoring/report/explanation rendering
+examplary/qti	QTI packaging	ADMITTED	MIT license	not read	1	0	39	main	none	TypeScript QTI 3.0+2.1 package build/parse; IDENTITY GATE vs instructure/qti - NOT a duplicate
+instructure/qti	QTI packaging	ALREADY SHELVED	MIT license	not read	8	10	174	master	none	Ruby gem, QTI 1.2+2.1; already on 4 shelf rows; read only as the gate counterpart
+pie-framework/pie-qti	QTI player	ADMITTED	MIT license	not read	4	1	794	master	none	QTI 2.1/2.2/3.0 players + QTI<->PIE transforms; pre-1.0, warns against high-stakes delivery
+agencyenterprise/qti-3-player	QTI rendering	ADMITTED	MIT license	not read	3	1	88	main	none	@ae-studio/qti-renderer; choice-interaction only, no scoring, no test structure
+sonyccd/qti-playground	QTI authoring	ADMITTED	MIT license	not read	4	0	167	main	none	Web app to view/edit/preview QTI 3.0 XML
+OpenOLAT/qtiworks	QTI engine	ADMITTED	NO LABEL (bare "License")	BSD-3-Clause (2.01 KB, 40 lines)	3	2	2087	master	forked from davemckain/qtiworks	QTI 2.1 delivery engine + JQTI+ Java library + MathAssess; fork carries 14 commits BEYOND dead upstream
+davemckain/qtiworks	QTI engine	REJECTED (abandoned)	NO LABEL (bare "License")	not read	68	55	2073	master	none	Upstream. Description: "This project will be closed in early 2023!"; README: no longer supported
+adlnet/xapi-profiles	xAPI spec	ADMITTED	Apache-2.0 license	not read	60	33	153	master	none	xAPI Profiles companion spec from ADL; About/Structure/Communication
+adlnet/lrs-conformance-test-suite	xAPI conformance	ADMITTED	MIT license	not read	78	52	1039	master	none	NodeJS suite testing MUST requirements of the xAPI Spec; basic auth only, not for production LRS
+php-xapi/client	xAPI client	ADMITTED	MIT license	not read	23	11	137	0.7 (branch viewed)	none	PHP client library for xAPI; composer php-xapi/client
+php-xapi/model	xAPI model	ADMITTED	MIT license	not read	3	8	340	3.x (branch viewed)	none	xAPI model classes for PHP libraries; forks(8) > stars(3)
+EscolaLMS/LRS	xAPI store	ADMITTED	MIT license	not read	7	0	27	main	none	Laravel LRS package, xAPI + cmi5 (x-experience-api-version 1.0.3)
+ashleycribb/learnmcp-xapi	xAPI MCP agent	REJECTED (fork of shelved)	NO LABEL (README says MIT)	not read	0	0	34	main	forked from DavidLMS/learnmcp-xapi	DavidLMS/learnmcp-xapi is ALREADY on a shelf row; GitHub DID show the fork banner

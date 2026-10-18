@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 299: NO new agent row for the second window running; the mandated leg's TWENTY-FIFTH nil, and the one agent-shaped candidate was a declared fork of a repo already shelved
+
+Evidence: [`p299-promotion-gap.2026-10-18-p299.tsv`](../evidence/p299-promotion-gap.2026-10-18-p299.tsv) ·
+[`p299-websearch.2026-10-18-p299.tsv`](../evidence/p299-websearch.2026-10-18-p299.tsv) ·
+[`p299-shelf-diff.2026-10-18-p299.tsv`](../evidence/p299-shelf-diff.2026-10-18-p299.tsv).
+
+🔵 **New on the agents shelf this window: nothing, again, and `p298` called it in advance.** `p299`
+discharged `ACTION PG-3` by reading **twenty-eight** slugs — **fifteen admitted, all onto
+[`repos/foundations.md`](../repos/foundations.md); three rejected; five that no longer exist.** No
+filler row was written here to make the window look productive.
+
+### 🔴 `top open source AI agents education 2026 github MIT` — the twenty-fifth consecutive nil
+
+`p298` diagnosed the failure as the query answering *"education"* with **courses that teach AI**.
+`p299` re-ran it and the diagnosis held exactly: the only education-shaped hits were
+[`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) (~67k★ per
+the listing, MIT) and `pguso/agents-from-scratch` — **curriculum about AI, not agents for education.**
+🟢 **Nil declared, query recorded.** The standing action on [`top.md`](top.md) now asks for a *second,
+directed* leg naming the job (grading, lesson planning, advising, LMS MCP) rather than a twenty-sixth
+run of the same words.
+
+### 🔴 The one agent-layer candidate, rejected — and this time GitHub warned us
+
+[`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) — an MCP server letting
+agents write and read learning activity against an xAPI LRS (LRS SQL, Ralph LRS, Veracity Learning) —
+was the only slug in the batch claiming to be an agent.
+
+| | `ashleycribb/learnmcp-xapi` | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) |
+|---|---|---|
+| fork banner | 🟢 **present, naming the parent** | — |
+| sidebar licence | 🔴 bare `License` *(README says MIT)* | labelled |
+| stars / forks / commits | **0** / **0** / 34 | 🟢 **already on this base's shelf** |
+
+🔵 **`p298`'s expensive case was an *undeclared* copy carrying the original author's copyright; this
+one declared itself.** Two different costs, one cheap check: **run the bare-name query first.**
+
+### 🟢 What moved instead: the agent's substrate, and it is now armed end to end at assessment
+
+Fifteen rows on [`repos/foundations.md`](../repos/foundations.md) this window — **QTI authoring,
+conversion, rendering, packaging and a 2 087-commit delivery engine; SCORM in React and Open edX;
+xAPI client, model, conformance suite, profiles spec and a `cmi5` LRS.** 🔵 **For an agent builder the
+consequence is concrete:** an education agent can now *author* an assessment item
+([`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti), MIT), have it *rendered*
+([`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer), MIT), and write the
+learner's result into a *standards-shaped, permissive* event store
+([`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS), MIT) whose conformance it can *prove*
+([`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite), MIT) —
+all without touching a copyleft LMS. 🟢 **That chain did not exist on these shelves yesterday.**
+
+### 🔴 Negative signal worth logging for agent builders: Caliper is not an option
+
+Agents that emit analytics events should emit **xAPI, not Caliper**. 🔴 **All five Caliper reference
+client libraries return `404`** — the standards body took the upstream private, which is recorded only
+in a university's fork description. The sole permissive remnant is a **20-commit playground**. Details
+on [`verticals/solutions.md`](../verticals/solutions.md) and in
+[`p299-caliper-layer.2026-10-18-p299.tsv`](../evidence/p299-caliper-layer.2026-10-18-p299.tsv).
+
+
 ## 2026-10-18 — Pass 298: NO new agent row, by design; the mandated leg's TWENTY-FOURTH nil, and every hit in it was already on these shelves
 
 Evidence: [`p298-promotion-gap.2026-10-18-p298.tsv`](../evidence/p298-promotion-gap.2026-10-18-p298.tsv) ·

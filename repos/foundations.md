@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 299 — FIFTEEN NEW PERMISSIVE SUBSTRATES, AND THE ONE LAYER `ACTION PG-3` PUT FIRST TURNED OUT TO HAVE BEEN WITHDRAWN FROM PUBLIC VIEW
+
+⏱️ **Twenty-first pass of `2026-10-18`.** Evidence:
+[`p299-promotion-gap.2026-10-18-p299.tsv`](../evidence/p299-promotion-gap.2026-10-18-p299.tsv) ·
+[`p299-caliper-layer.2026-10-18-p299.tsv`](../evidence/p299-caliper-layer.2026-10-18-p299.tsv) ·
+[`p299-channel-control.2026-10-18-p299.tsv`](../evidence/p299-channel-control.2026-10-18-p299.tsv) ·
+[`p299-shelf-diff.2026-10-18-p299.tsv`](../evidence/p299-shelf-diff.2026-10-18-p299.tsv).
+
+🟢 **`ACTION PG-3` discharged on both of its instructions, and the first one is refuted.** `p298`
+ordered **~12 from the layers still at zero rows — Caliper analytics, SCORM tooling, QTI
+authoring/conversion** — and ordered the list de-duplicated case-insensitively first. `p299` read
+**twenty-eight slugs**, admitted **fifteen**, rejected **three**, and found **five more that no longer
+exist.** Fourteen reads are sidebar-grade `github.com` HTML; **five are payload reads**, because this
+pass is the one where the sidebar stopped being good enough.
+
+### 🔴 Caliper: the layer is at zero rows because the code was taken away, not because this base missed it
+
+`p298` wrote the instruction *"Search the list for `caliper`."* 🔴 **It was searched. `p989`'s list
+contains the string `caliper` exactly ZERO times in 528 rows** — so the instrument `ACTION PG-3`
+named could not have supplied this layer at all. It was sourced by WebSearch instead, and what came
+back is the finding:
+
+| Caliper artefact | grant | state |
+|---|---|---|
+| `IMSGlobal/caliper-php-public` · `IMSGlobal/caliper-ruby-public` · `Brightspace/ims-caliper-python` · `1EdTech/caliper-python` · `1EdTech/caliper-java` | — | 🔴 **ALL FIVE 404.** Every reference **client library**, in every runtime |
+| [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | 🔴 **`Other`** *(org listing)*; `/blob/master/LICENSE` is **404** | live · 22★ · 17 forks · 1 058 commits |
+| [`1EdTech/CaliperBootcamp`](https://github.com/1EdTech/CaliperBootcamp) | 🟢 **`MIT`** | live · 2★ · **20 commits** — a playground, not a library |
+| [`1EdTech/caliper-js-example`](https://github.com/1EdTech/caliper-js-example) | 🔴 `LGPL-3.0` *(payload)* | live · 8★ · 67 commits |
+| [`1EdTech/caliper-ontology`](https://github.com/1EdTech/caliper-ontology) | 🔴 `LGPL-3.0` | 🔴 **archived** |
+| [`1EdTech/moodle-logstore_caliper`](https://github.com/1EdTech/moodle-logstore_caliper) | 🔴 `GPL-3.0` | live · 0★ · 13 commits |
+| [`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public) | 🔴 `LGPL-3.0` | live · 3★ · **365 commits** on branch `public` |
+| [`ucsd-ets/openedx-caliper-tracking`](https://github.com/ucsd-ets/openedx-caliper-tracking) | 🔴 `GPL-3.0` | 🔴 **archived** |
+| `ims_caliper` *(RubyGems)* | 🔴 `LGPL-3.0` | v1.0.1, **2016-07-15**, **55 610 downloads**, and its linked source URL is a **404** |
+
+🔴 **The University of Michigan fork says why, in its own description: it "has been unarchived since
+1EdTech made the upstream `caliper-php` private."** A university un-archived a dead fork because the
+standards body closed the original. 🔴 **So the honest row for Caliper is still zero** — the only
+permissive artefact in the whole layer is a **20-commit proof-of-concept playground**, and everything
+load-bearing is LGPL, GPL, archived, or gone.
+
+🔵 **This is the exact opposite shape to `p298`'s LTI and QTI finding, and it lands on `p298`'s own
+advice.** `p298` showed the integration boundary is permissive in six runtimes and told clients
+*"integrate, do not fork."* 🔴 **At Caliper that advice has no permissive surface to land on.** A
+studio that needs standards-shaped analytics events has three options and no fourth: take the
+copyleft, implement the spec from a document whose own grant is `Other`, or **use xAPI instead** —
+which is why the xAPI rows below matter more than their star counts suggest.
+
+### 🟢 The fifteen new rows, read `2026-10-18`
+
+| repo | licence (read `2026-10-18`) | stars | forks | commits | branch | layer, and the boundary in the row |
+|---|---|---|---|---|---|---|
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | 🟢 `MIT` *(sidebar)* | **78** | **52** | **1 039** | `master` | **The highest-adoption row in this batch.** NodeJS suite testing the **`MUST` requirements of the xAPI spec** — from **ADL**, who author the spec. 🟢 This is how you prove an LRS claim instead of repeating it. ⚠️ Its own README: basic auth only, **"should not be run against a production LRS endpoint"** |
+| [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) | 🟢 `Apache-2.0` *(sidebar)* | **60** | 33 | 153 | `master` | The **xAPI Profiles** companion specification, also from ADL. 🔵 **The permissive counterpart to everything Caliper no longer offers:** a standards document you may actually build on. Pairs directly with [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe), shelved `p298`, which filters by Profile templates |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **`BSD-3-Clause`** *(**payload**: `LICENSE.txt`, 2.01 KB — sidebar is **unlabelled**)* | 3 | 2 | 🔴 **2 087** | `master` | **QTI 2.1 delivery engine + JQTI+ Java library + MathAssess extensions.** By far the deepest QTI implementation on this file. 🔴 **Pick this fork, NOT the 68★ upstream** — see the inverted gate below |
+| [`S4-NetQuest/react-scorm-provider`](https://github.com/S4-NetQuest/react-scorm-provider) | 🟢 `MIT` *(sidebar)* | **67** | 23 | 19 | `master` | React components wrapping the **SCORM API**. 🟢 **The first SCORM row in this base.** 19 commits against 67 stars — a small, finished adapter, which is what this layer should look like |
+| [`pie-framework/pie-qti`](https://github.com/pie-framework/pie-qti) | 🟢 `MIT` *(sidebar)* | 4 | 1 | 🔴 **794** | `master` | **QTI 2.1, 2.2 AND 3.0** players plus a bidirectional **QTI ↔ PIE** transform framework, with CLI, web app and IMS Content Package support. ⚠️⚠️ **Its own README: pre-1.0, "not fully conformant or certified", and do not use for untrusted or high-stakes delivery without a backend-authoritative integration.** 🔴 **Never brief this as exam-grade; brief it as the migration tool it is** |
+| [`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti) | 🟢 `MIT` *(sidebar)* | 2 | 0 | 102 | `main` | **Markdown → QTI 3.0 XML packages**, TypeScript CLI on npm, manifest-driven ordering/IDs/points. 🟢 **The authoring half of the QTI layer `p298` left open** — it had armed playback and packaging only |
+| [`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer) | 🟢 `MIT` *(sidebar)* | **0** | **0** | 47 | `main` | QTI 3.0 item XML → **HTML**, with scoring, report and explanation rendering and response-to-prompt binding. 🔴 **Zero stars, zero forks, 47 commits** — the same shape as `Kennisnet/php-qti3` and the fourth confirmation that stars misrank substrate |
+| [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground) | 🟢 `MIT` *(sidebar)* | 4 | 0 | 167 | `main` | Web app to **view, edit and live-preview QTI 3.0 XML** in a split pane. 🔵 The one row in this layer aimed at a **human author** rather than a runtime — useful in a workshop, not in a pipeline |
+| [`rolfis/qti-convert`](https://github.com/rolfis/qti-convert) | 🟢 `Apache-2.0` *(sidebar)* | 22 | 6 | 42 | `main` | Converts a **Canvas QTI export package** to **JSON or Word (.docx)**. 🟢 **The only row on this file that reaches backwards into a vendor's export format** — which is the format a migration engagement is actually handed |
+| [`examplary/qti`](https://github.com/examplary/qti) | 🟢 `MIT` *(sidebar)* | 1 | 0 | 39 | `main` | TypeScript toolkit building **and** parsing **QTI 3.0 and 2.1** packages, manifests, items, tests and stimuli, with automatic version detection. 🔴 **Bare-name collision with [`instructure/qti`](https://github.com/instructure/qti), already shelved — and they are NOT the same thing.** See the gate note |
+| [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player) | 🟢 `MIT` *(sidebar)* | 3 | 1 | 88 | `main` | `@ae-studio/qti-renderer` — framework-agnostic QTI 3.x item renderer with response processing and feedback. ⚠️⚠️ **Boundaries from its own README: NO scoring, single items only (no test structure), `choice-interaction` ONLY, partial expressions, no adaptive behaviour, and MathJax must be supplied by the host.** 🔴 Narrower than [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player); shelve both, sell that one |
+| [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) | 🟢 `Apache-2.0` *(**payload**: `LICENSE`, 11.1 KB — sidebar is **unlabelled**)* | 32 | 🔴 **65** | 49 | `master` | **SCORM 1.2 and 2004 inside Open edX** as an XBlock, Studio-editable, reporting scores and state to the progress tab. 🔴 **ARCHIVED `2023-11-27`** — read it as a pattern, not a dependency. 🔵 **65 forks against 32 stars**: the deployment signature again, and the strongest case yet that an archived repo can still be the live one in practice |
+| [`php-xapi/client`](https://github.com/php-xapi/client) | 🟢 `MIT` *(sidebar)* | 23 | 11 | 137 | `0.7` *(branch read)* | **xAPI client for PHP** via Composer. 🟢 Puts the xAPI boundary in the runtime **Moodle and Tsugi already are** — the same argument `p298` made for `1EdTech/lti-1-3-php-library` |
+| [`php-xapi/model`](https://github.com/php-xapi/model) | 🟢 `MIT` *(sidebar)* | 3 | **8** | 340 | `3.x` *(branch read)* | xAPI **model classes** under the client above. Forks (8) exceed stars (3) again. 🔴 **Neither `php-xapi` repo exposes a default branch on its page** — both were read on the branch GitHub served; cite the branch when you pin |
+| [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) | 🟢 `MIT` *(sidebar)* | 7 | 0 | 27 | `main` | A **Laravel** Learning Record Store package — and 🟢 **the only row in this base that names `cmi5`**, serving `/api/cmi5/**` with `x-experience-api-version: 1.0.3`. 🔵 The permissive, embeddable alternative to standing up [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) beside a PHP application |
+
+### 🔴 The identity gate inverted: this pass the LOW-star fork is the correct slug
+
+`p298`'s gate replaced a 3★ copy with its 138★ canonical original and published the rule. 🔴 **`p299`
+found the case that runs the other way, and a star test alone gets it wrong:**
+
+| | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) *(upstream)* |
+|---|---|---|
+| stars / forks | 3 / 2 | 🟢 **68** / **55** |
+| commits | 🟢 **2 087** | **2 073** |
+| description | the engine, plainly | 🔴 **"This project will be closed in early 2023!"** |
+| README | — | 🔴 **"no longer supported and is going to be closed"** |
+| verdict | 🟢 **SHELVE THIS ONE** | 🔴 abandoned |
+
+🔵 **The fork carries fourteen commits the canonical upstream never got, and the upstream announces
+its own death in its description.** 🟢 **So the gate's test is not "prefer the canonical slug" — it is
+"prefer the slug where the history continues."** Stars measure the past; the commit delta and the
+description measure whether anyone is still there. `p298`'s substitution was right for the reason it
+gave; **its rule was one measurement short.**
+
+🟢 **And the gate's other firing SAVED a row rather than rejecting one.** `examplary/qti` tripped a
+bare-name check against the shelved `instructure/qti`, and the two are unrelated: **TypeScript
+building QTI 3.0/2.1 packages** against **a Ruby gem parsing QTI 1.2/2.1**. Different runtime,
+different QTI generations, different direction of travel. 🔴 **A pass that skipped the name as a
+duplicate would have lost the only permissive QTI 3.0 *packaging* row in TypeScript.** The gate has
+now fired four times in three passes: twice to reject (`p297`, `p298`), once to reject here
+(`ashleycribb/learnmcp-xapi`, a **declared fork** of the already-shelved `DavidLMS/learnmcp-xapi`),
+and **once to admit.**
+
+### 🔴 An unlabelled licence sidebar has at least FOUR causes, and they point to opposite decisions
+
+`p298` registered the rule *"treat an unlabelled sidebar as a question about which repository you are
+on."* 🔴 **Five unlabelled sidebars this pass, and only one of them was that question:**
+
+| repo | what the bare `License` sidebar actually meant | consequence |
+|---|---|---|
+| `raccoongang/edx_xblock_scorm` | 🟢 a **standard `Apache-2.0`** payload, simply unclassified by GitHub | **promoted** |
+| `OpenOLAT/qtiworks` | 🟢 a **`BSD-3-Clause`** payload in `LICENSE.txt`, not `LICENSE` | **promoted** |
+| `1EdTech/caliper-js-example` | 🔴 **`LGPL-3.0`** — *and the org listing labelled it while the sidebar did not* | **rejected** |
+| `1EdTech/caliper-spec` | 🔴 **no `LICENSE` file at that path at all** (`404`); org listing says `Other` | **rejected** |
+| `ashleycribb/learnmcp-xapi` | 🔴 licence **only in the README**, on a declared fork of a shelved repo | **rejected** |
+
+🔴 **Two of the five were permissive and two were copyleft. A scanner that treats the unlabelled
+sidebar as a single signal gets half of them wrong in both directions.** 🟢 **The rule that survives:
+an unlabelled sidebar is a question about WHERE THE GRANT LIVES, and only a payload read answers it.**
+🔵 **And a new surface is now on the record:** `github.com/orgs/<org>/repositories?q=` **classifies
+licences the repository's own sidebar leaves bare** — same repository, same payload, two GitHub
+surfaces, two different verdicts. Read the org listing when the sidebar is silent; read the payload
+before you shelve.
+
+### 🔴 Standing action for the next pass — `ACTION PG-4`
+
+**455 of 525 permissive orphans remain unshelved, row-grade** — and that number is now measured
+correctly, which is itself the instruction:
+
+1. 🔴 **A plain text diff of the list against the shelf files is WRONG, and it has been wrong for
+   three passes.** `p299` measured it: **only 70 slugs sit on an actual table row**, **11 appear ONLY
+   in shelf-file prose**, and **444 are absent entirely**. The 11 are counted as *shelved* by any
+   naive match — **and five of them are the very slugs `ACTION PG-3` named**, because `p298` wrote
+   them into an instruction. 🟢 **Match only lines whose first non-space character is a pipe.**
+2. **Take ~12 from the layers still at zero rows**, and the three now worth naming are
+   **credentialing** ([`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator),
+   [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE)), **the remaining xAPI movement layer**
+   (`pelotech/xapi-lrs`, `xapi-labs/xapi-cli`, `adlnet/xAPI-Spec`), and **SCORM packaging**
+   (`sr258/scorm-h5p-wrapper`, `dhodges47/SCORM-LearningManagementSystem`).
+3. 🔵 **`p298` reported 21 bare-name collisions; the count is 20**, and it is 20 both before and after
+   case-folding, so the three case-only duplicates are not the cause. Resolve them by **owner**, never
+   by name — `canvas-mcp` is still ten owners deep.
+4. 🟢 **Read the payload whenever the sidebar is bare, and read the org listing too.** This pass turned
+   two unlabelled sidebars into shelvable permissive rows and two into rejections. **Three of the
+   fifteen admissions above would have been lost to a sidebar-only read.**
+
+
 ## 🟢 Pass 298 — THIRTEEN NEW PERMISSIVE SUBSTRATES, AND THEY ARM AN INSTRUCTION THIS BASE HAS GIVEN FOR 297 PASSES WITHOUT THE CODE TO FOLLOW IT
 
 ⏱️ **Twentieth pass of `2026-10-18`.** Evidence:

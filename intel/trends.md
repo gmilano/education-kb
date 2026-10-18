@@ -4,6 +4,153 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 `T-p299a` — AN OPEN STANDARD CAN BE CLOSED BY ITS OWN STANDARDS BODY, AND NOTHING ON THE SPEC'S PAGE TELLS YOU
+
+⏱️ `2026-10-18`, pass 299.
+
+🟢 **Caliper Analytics is a published 1EdTech standard with a live specification repository, a live
+ontology, a bootcamp, Moodle and Open edX emitters, and client libraries in Python, Java, PHP and
+Ruby.** 🔴 **Every one of those client libraries now returns `404`.** `IMSGlobal/caliper-php-public`,
+`IMSGlobal/caliper-ruby-public`, `Brightspace/ims-caliper-python`, `1EdTech/caliper-python`,
+`1EdTech/caliper-java` — five for five.
+
+🔴 **The evidence for *why* is in a third party's repository description, not the standards body's.**
+[`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public) says it
+**"has been unarchived since 1EdTech made the upstream `caliper-php` private."** A university
+un-archived a dead fork to keep a standard reachable.
+
+🔵 **The trend, and it is a procurement risk rather than a technical one: "open standard" and "open
+source" are independent properties, and the second one can be revoked without the first one changing.**
+The Caliper *specification* is still published. Its *grant* is `Other`, with **no `LICENSE` file at
+`master`**. The only permissive artefact left in the layer is a **20-commit proof-of-concept**
+([`1EdTech/CaliperBootcamp`](https://github.com/1EdTech/CaliperBootcamp), MIT) whose own README says its
+auth flow **"must not be used in production."** Everything load-bearing is LGPL, GPL, or archived.
+
+🟢 **The generalisable control: before recommending a standard, read the grant on the code that
+implements it, not the status of the standard.** 🔴 **And check the forks — a maintained third-party
+fork of a withdrawn upstream is the signal that a withdrawal happened**, because nothing on the
+standards body's own pages records it. xAPI passes this test where Caliper fails it
+([`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) Apache-2.0,
+[`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) MIT), which
+is why this base's analytics recommendation is now xAPI on evidence rather than on taste.
+
+## 🔴 `T-p299b` — A KNOWLEDGE BASE CAN HIDE WORK FROM ITSELF BY WRITING AN INSTRUCTION: NAMING A SLUG IN PROSE MAKES IT LOOK SHELVED
+
+⏱️ `2026-10-18`, pass 299.
+
+🔴 **`p297` and `p298` each "re-diffed all 528 permissive orphans against all three shelf files" and
+reported 481, then 456, unshelved. The diff they describe counts prose.** `p299` measured the same list
+with matching restricted to **table rows** — lines whose first non-space character is a pipe:
+
+| measurement | value |
+|---|---|
+| distinct slugs, case-insensitive | **525** |
+| on an actual shelf **row** | **70** |
+| 🔴 in shelf-file **prose only**, no row anywhere | **11** |
+| absent from the shelf files entirely | **444** |
+| 🟢 true unshelved, row-grade | **455** |
+| 🔴 what a naive prose-inclusive diff returns | **444** |
+
+🔴 **And five of the eleven prose-only slugs are the very slugs `ACTION PG-3` named** —
+`S4-NetQuest/react-scorm-provider`, `raccoongang/edx_xblock_scorm`, `rolfis/qti-convert`,
+`metyatech/markdown-to-qti`, `metyatech/qti-html-renderer`. 🔵 **`p298` wrote them into an instruction;
+the instruction made them indistinguishable from completed work.** A pass that trusted a plain text
+match would have reported `ACTION PG-3` as already discharged and read nothing. **All five are shelved
+as real rows by this pass.**
+
+🟢 **The generalisable control: a base that records its intentions in the same medium as its results
+must distinguish the two mechanically.** Here the discriminator is cheap and exact — **a row starts with
+a pipe** — but the principle is the point: 🔴 **any "have we covered X?" check that greps the whole
+document will eventually answer yes because the base once said it should.** `p298`'s 456 was
+nonetheless right, which is the reassuring part: the defect inflates *coverage*, so it hides work
+rather than inventing it.
+
+## 🔴 `T-p299c` — NINE SEARCH RESULTS CAN BE TWO DOCUMENTS: REGIONAL QUERIES RETRIEVE LOCALE-REPLICATED SYNDICATION
+
+⏱️ `2026-10-18`, pass 299.
+
+🟢 **Two independent dead channels in this base were measured in the same hour and have the same
+mechanism.**
+
+| dead channel | passes nil | what the corpus actually was |
+|---|---|---|
+| `AI education EMEA {year} adoption regulation players` | 🔴 **11** | **5 of 9 slots: ONE CompTIA article at five locale subpaths** (`en-za`, `en-eu`, `en-au`, `en`, `en-em`), plus a Workday study from **2023** |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **19** | 🔴 **6 of 9 slots: ONE `openeducat.org` glossary page in six languages** (`es`, `fr`, `ar`, `zh`, `de`, `pt-BR`) |
+
+🔴 **A search engine counts locale variants as distinct results; a pass that reads slot-count as corpus
+breadth concludes the population was searched.** It was not: nine slots were two documents.
+
+🔵 **This is why `p287`-`p299`'s directed legs beat the mandated regional ones thirteen times running,
+and the explanation is finally mechanical rather than anecdotal.** A **region** name (`EMEA`, `APAC`)
+is marketing vocabulary — it retrieves vendor and analyst syndication aimed at a sales territory. A
+**country** name (`Morocco`, `Poland`, `Pakistan`, `Ethiopia`, `Indonesia`) is administrative
+vocabulary — it retrieves ministries, budgets and parliamentary records. 🟢 **`p299` ran two country
+legs and got two countries new to this file; the region legs got the same two documents as nine passes
+before.**
+
+🟢 **The generalisable control: measure DISTINCT DOCUMENTS, not result slots, before declaring a
+population searched — and when a regional leg nils twice, replace the region with a country rather than
+re-running it.** Keep running the mandated phrasing, because an undeclared nil looks exactly like
+coverage; **just stop treating its nil as information about the world.**
+
+## 🔴 `T-p299d` — AN UNLABELLED LICENCE SIDEBAR HAS AT LEAST FOUR CAUSES, AND THEY LEAD TO OPPOSITE DECISIONS
+
+⏱️ `2026-10-18`, pass 299.
+
+🟢 **`p298` found that GitHub's licence classification "is not a property of the payload" and registered
+the rule: treat an unlabelled sidebar as a question about which repository you are on.** 🔴 **`p299` hit
+five unlabelled sidebars and only one of them was that question.**
+
+| repo | cause | grant | decision |
+|---|---|---|---|
+| `raccoongang/edx_xblock_scorm` | standard payload, simply unclassified | 🟢 `Apache-2.0` *(11.1 KB)* | **shelved** |
+| `OpenOLAT/qtiworks` | licence in `LICENSE.txt`, not `LICENSE` | 🟢 `BSD-3-Clause` *(2.01 KB)* | **shelved** |
+| `1EdTech/caliper-js-example` | 🔴 **the org listing labelled it; the repo sidebar did not** | 🔴 `LGPL-3.0` *(7.43 KB)* | rejected |
+| `1EdTech/caliper-spec` | 🔴 **no `LICENSE` file at that path at all** (`404`) | 🔴 `Other` | rejected |
+| `ashleycribb/learnmcp-xapi` | licence in README only, on a declared fork | 🔴 MIT, but a fork of a shelved repo | rejected |
+
+🔴 **Two permissive, two copyleft, one identity problem. A scanner that treats the bare sidebar as one
+signal errs in both directions — it discards Apache-2.0 and BSD code as unlicensed, and it admits LGPL
+code as unknown-therefore-fine.** 🟢 **Three of this pass's fifteen admissions would have been lost to a
+sidebar-only read.**
+
+🔵 **And a new surface is on the record:** `github.com/orgs/<org>/repositories?q=` **classifies licences
+that the repository's own page leaves bare.** Same repository, same payload, two GitHub surfaces, two
+verdicts. 🟢 **The rule that survives: an unlabelled sidebar is a question about WHERE THE GRANT LIVES.
+Read the org listing when the sidebar is silent; read the payload before you shelve.**
+
+## 🔴 `T-p299e` — "PREFER THE CANONICAL SLUG" IS A STAR TEST, AND IT PICKS THE DEAD REPOSITORY
+
+⏱️ `2026-10-18`, pass 299.
+
+🟢 **`p298`'s identity gate replaced a 3★ copy with its 138★ canonical original and was right to.**
+🔴 **`p299` found the case that runs the other way:**
+
+| | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) *(the fork)* | [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) *(canonical upstream)* |
+|---|---|---|
+| stars / forks | 3 / 2 | 🟢 **68** / **55** |
+| commits | 🟢 **2 087** | **2 073** |
+| its own description | the engine | 🔴 **"This project will be closed in early 2023!"** |
+| verdict | 🟢 **shelve this one** | 🔴 abandoned |
+
+🔴 **The canonical slug has 22× the stars and announces its own death in its description. The fork
+carries fourteen commits the original never received.**
+
+🔵 **The trend: stars are a record of the past, and identity rules built on them select for whichever
+repository was popular when the capability mattered — not whichever one still works.** 🟢 **The
+corrected test is a delta, not a level: prefer the slug where the history CONTINUES, and read the
+description for an abandonment notice before ranking anything.** This also sharpens `p295`'s refutation
+of *"stars are monotonic"*: stars do not merely drift, **they persist through abandonment**, which is
+precisely when they are most misleading.
+
+🟢 **The gate has now fired four times in three passes — and this pass it ADMITTED a row it would
+otherwise have skipped:** `examplary/qti` collided by bare name with the shelved `instructure/qti`, and
+they are unrelated (TypeScript building QTI 3.0/2.1 packages vs. a Ruby gem parsing QTI 1.2/2.1). 🔵
+**A name check is a prompt to look, not a verdict either way** — it has now caught two duplicates, one
+dead canonical, and one false duplicate that was the only permissive QTI 3.0 packaging row in
+TypeScript.
+
+
 ## 🟢 `T-p298a` — THE INSTRUCTION WAS RIGHT FOR 297 PASSES AND UNARMED FOR 297 PASSES: "INTEGRATE, DO NOT FORK" HAD ONE LIBRARY, IN ONE LANGUAGE
 
 ⏱️ `2026-10-18`, pass 298.

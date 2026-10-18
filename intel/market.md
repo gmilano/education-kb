@@ -4,6 +4,156 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 299 — TWO MANDATED REGIONAL LEGS NILLED AGAIN ON IDENTICAL CORPORA, TWO DIRECTED LEGS PRODUCED TWO COUNTRIES NEW TO THIS FILE, AND THE FIGURE THIS BASE REFUSED TWICE CAME BACK A FOURTH TIME
+
+⏱️ **Twenty-first pass of `2026-10-18`.** Evidence:
+[`p299-websearch.2026-10-18-p299.tsv`](../evidence/p299-websearch.2026-10-18-p299.tsv) — eleven legs,
+one row each, every nil written out with its query.
+
+🔴 **Score: four mandated regional legs → two nils and two material. Two directed legs → two countries
+that appear ZERO times anywhere in this file before today.** The directed-beats-mandated pattern
+`p287`-`p298` measured holds for a thirteenth pass, and this time the two new countries are **Poland
+and Pakistan** — neither of them in the regions those passes had been mining.
+
+### 🔴 EMEA's mandated phrasing: an ELEVENTH nil, and the corpus artefact is now named
+
+`AI education EMEA 2026 adoption regulation players` returned **nine slots**, of which 🔴 **five are
+ONE CompTIA article served at five locale subpaths** — `en-za`, `en-eu`, `en-au`, `en`, `en-em` — and
+one more is a **Workday study originally published in 2023**. 🔵 **This is the same artefact
+`p299` measured on the ERP/CRM leg in [`verticals/solutions.md`](../verticals/solutions.md) within the
+same hour: six of nine slots there were one vendor's glossary page in six languages.**
+
+🟢 **So the two dead channels have the same mechanism, and it is now worth stating as a law rather than
+a complaint:** a query whose terms are *regional* rather than *national* retrieves **locale-replicated
+syndication** — the same document, once per market — and a search engine counts those as distinct
+results. 🔴 **Nine slots can be two documents.** Measuring slot-count as coverage is how an eleven-pass
+nil went unexplained for nine of them.
+
+### 🔴 The USD 169M figure returned a FOURTH time, and the refusal stands
+
+`p296`-`p298` refused an unsourced *"USD 169 million committed to responsible AI in higher education,
+Q1 2026"* figure. It is back, in the same shape: a secondary statistics roundup that 🔴 **does not name
+which government committed it.** 🟢 **`p298` wrote the rule — `RE-CIRCULATION IS NOT CORROBORATION` —
+and this is its fourth confirmation.** The figure is still not published on this file. 🔵 **A number
+that survives four independent retrievals without ever acquiring a primary source is evidence about
+the corpus, not about the money.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Material, and the governance gap is the sellable finding.** The leg returned, from secondary
+roundups: 🔴 **only ~10% of institutions have formal AI guidelines**, and 🔴 **~71% of US teachers lack
+AI training.** Regulation is still **state-piecemeal** — **Colorado** and **Texas** named as
+introducing requirements — against no federal instrument. Named money: **Carnegie Mellon + the Gates
+Foundation, USD 55M into AI courseware for gateway college courses**; **OpenAI launched a
+country-level education programme with eight national partners in Q1 2026.**
+
+🔵 **The opportunity is the inverse of the adoption story.** Where 10% of institutions have a policy
+and 71% of teachers are untrained, the binding constraint is **not** a tutoring model — it is
+**defensible process**. 🟢 **Lead with the governance artefact, as `p298` concluded for Morocco:** an
+AI-use policy, an audit trail, and a human-decision boundary, built on the integrity substrate this
+base now shelves — [`baoguangsheng/fast-detect-gpt`](https://github.com/baoguangsheng/fast-detect-gpt)
+(MIT, ICLR 2024) with its limits stated, and
+[`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) (MIT) to
+make the event trail provable rather than asserted. 🔴 **Do not price the USD 169M figure into a
+pitch** — see above.
+
+### EMEA
+
+🔴 **The mandated phrasing is dead for the eleventh consecutive pass** (corpus above, nil declared).
+🟢 **The directed leg broke it on the first attempt, for the thirteenth time, and Poland is new to this
+file — zero prior mentions.**
+
+| Poland — read `2026-10-18` | value |
+|---|---|
+| AI labs in schools | 🟢 **~1.9 bn złoty**, inside a **> 5 bn złoty** school digital-infrastructure and skills programme |
+| schools in scope | **~8 000 primary + ~4 000 secondary ≈ 12 000**, against a national stock of ~14 000 primary and ~7 000 secondary |
+| EU money | **~EUR 500M, mostly EU funds** |
+| baseline *(IBE PIB, 2025)* | 🔴 **1% of schools had an AI lab; 27% had no Wi-Fi** |
+| named principals | Education Minister **Barbara Nowacka**; PM **Donald Tusk** on "responsible AI use" |
+| 🔴 what is NOT established | whether the labs were actually delivered before the **September 2026** school year — the corpus stops at the announcement |
+
+🔵 **The opportunity, and it is a procurement shape rather than a product shape.** A state buying
+**hardware for 12 000 schools off a 1%-penetration baseline** has bought rooms, not capability — and
+the same corpus notes that **guidance on teacher training and data-privacy rules was still missing in
+2025/26**. 🟢 **The gap between "lab installed" and "lab used" is the engagement**: teacher-facing
+curriculum automation on
+[`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) (Apache-2.0),
+reached through the **LTI boundary** rather than by touching the ministry's stack, and an AI-use policy
+artefact attached from day one. 🔴 **Verify delivery status against the Ministry of Education before
+quoting the 12 000 figure to a client** — this base has recorded the announcement, not the rollout.
+
+### APAC
+
+🔴 **Fourth consecutive nil on education for the mandated phrasing, and the failure mode is stable:
+every education-shaped hit is CORPORATE L&D** — a Pearson + TCS skills alliance, LearnUpon opening a
+Sydney HQ, an Alteryx academy relaunch, NIIT MTS on a custom-content list. Policy hits were
+finance-sector (Singapore) or general governance. 🟢 **The directed leg broke it, and Pakistan is new
+to this file — zero prior mentions**, despite this base having shelved a Pakistani repository
+([`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform), Taleemabad /
+national curriculum) since `p296`. 🔴 **The shelf knew the country and the market map did not.**
+
+| Pakistan — read `2026-10-18` | value |
+|---|---|
+| national instrument | 🟢 **National AI Policy approved July 2025**, with an explicit education component |
+| money | **up to USD 1 bn by 2030**, pledged at **Indus AI Week 2026** |
+| teacher supply | **"Train-the-Trainer": 10 000 educators by 2027** |
+| research pipeline | **1 000 fully funded AI PhD scholarships** |
+| declared reach | federally run schools, plus **Azad Jammu & Kashmir, Gilgit-Baltistan, remote Balochistan** |
+| 🔴 binding constraints *(IT ministry, Oct 2026)* | **rural connectivity, too few qualified instructors, limited training facilities, low awareness** — the ministry's own diagnosis of why AI training "isn't working" |
+| 🔴 conflict recorded, not resolved | one source says **1 m IT graduates trained over five years**, another **1 m AI professionals by 2030**; one gives an Indus AI Week date inconsistent with the October 2026 reporting |
+
+🔵 **The opportunity is the constraint, read literally.** A government that has named **connectivity
+and instructor supply** as what blocks it is not in the market for a cloud tutor. 🟢 **This is the
+offline-first, low-bandwidth pattern `p298` wrote for Angola and Mozambique, and Pakistan states the
+requirement in a ministry document** — plus **WhatsApp-shaped delivery**, which `rumi-platform` already
+does in 15 languages against a national curriculum. 🔴 **The counterparty question `p298` raised
+applies here too: the AI money sits with the IT ministry, the curriculum sits with education.** Qualify
+which one holds the mandate before scoping.
+
+### LATAM
+
+🟢 **The strongest leg again — for the ninth consecutive pass — and this time the adoption-governance
+gap is quantified on both sides from two independent instruments.**
+
+| LATAM — read `2026-10-18` | value | instrument |
+|---|---|---|
+| student engagement | 🟢 **92%** | Digital Education Council, *AI in Higher Education LATAM Survey 2026*, **29 institutions** |
+| faculty engagement | 🟢 **79%** | same |
+| institutions with a **published** AI-use policy | 🔴 **~30%** | same |
+| teaching & learning use | **73.5%** | UNESCO **IESALC**, **200 institutions across 19 countries** |
+| research use | **57.0%** | same |
+| administration use | **34.1%** | same |
+| community engagement use | **20.0%** | same |
+| regulatory state | 🔴 **no unified regional framework.** Chile: national AI policy (2021) + a bill in discussion. Brazil, Colombia: national strategies with **no education-specific rules**. Mexico: **SEP / ANUIES recommendations, non-binding** | multiple |
+| regional index | **IDB** work on AI regulatory frameworks; **ILIA** index across 19 countries | IDB |
+
+🔵 **Two instruments, two sample sizes, one agreeing conclusion: use is near-universal and governance
+is a minority practice.** 🟢 **The 92%-against-30% spread is the single most sellable number in this
+file**, because it describes a risk the client's own faculty have already created. 🔴 **And note the
+ordering in the IESALC data: administration is at 34.1% while teaching is at 73.5%** — the
+institutional layer is half-adopted, which is exactly where this base's new substrate rows
+(OneRoster, xAPI, QTI) attach. 🟢 **Sell the policy-and-audit layer into the 70% without a published
+policy, and the integration layer into the 66% not yet using AI administratively** — two distinct
+engagements out of one survey.
+
+### Global
+
+🔴 **The market-size spread remains wide enough to disqualify any single figure, for a seventh pass.**
+IMARC: **USD 6.4 bn (2025) → 79.6 bn (2034)**. Grand View: **USD 8.3 bn (2025)**, **11.4 bn (2026)**,
+CAGR **25.9%**. The Business Research Company: **USD 7.52 bn (2025) → 10.6 bn (2026)**, CAGR **40.9%**.
+🔴 **Three houses, three 2025 bases spanning 6.4-8.3 bn and two 2026 CAGRs 15 points apart.** 🟢 **Quote
+a range and name the house, never a point estimate.** Segment figures that did recur: **K-12 ≈ 45.6%
+of adoption**, **cloud deployment ≈ 71.2% (2024)**, language learning the fastest-growing segment.
+
+🔵 **The structural global finding of this pass is not a number, and it is on
+[`verticals/solutions.md`](../verticals/solutions.md): the Caliper analytics standard's reference
+implementations have been withdrawn from public view by the standards body itself.** 🟢 **For any
+region, the analytics-interoperability recommendation is therefore xAPI, permissively, and that is now
+backed by read evidence rather than preference.**
+
+
 ## 🟢 Pass 298 — THE FOUR MANDATED LEGS PRODUCED NOT ONE NEW DATUM, TWO DIRECTED LEGS PRODUCED THREE NEW COUNTRIES, AND ONE OF THEM IS ALREADY RUNNING THE CAPABILITY THIS BASE HAS PERMISSIVE CODE FOR
 
 ⏱️ **Twentieth pass of `2026-10-18`.** Evidence:

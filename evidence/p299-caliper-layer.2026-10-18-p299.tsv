@@ -1,0 +1,14 @@
+slug_or_artifact	surface_read	existence	licence_label_sidebar	licence_elsewhere	stars	forks	commits	branch	state	verdict
+IMSGlobal/caliper-php-public	github.com HTML	404 NOT FOUND	-	-	-	-	-	-	withdrawn from public view	UNAVAILABLE
+IMSGlobal/caliper-ruby-public	github.com HTML	404 NOT FOUND	-	-	-	-	-	-	withdrawn from public view	UNAVAILABLE
+Brightspace/ims-caliper-python	github.com HTML	404 NOT FOUND	-	-	-	-	-	-	withdrawn from public view	UNAVAILABLE
+1EdTech/caliper-python	github.com HTML	404 NOT FOUND	-	-	-	-	-	-	not at the renamed org either	UNAVAILABLE
+1EdTech/caliper-java	github.com HTML	404 NOT FOUND	-	-	-	-	-	-	not at the renamed org either	UNAVAILABLE
+1EdTech/caliper-spec	github.com HTML + org listing + blob	EXISTS	NO LABEL (bare "License")	org listing says "Other"; /blob/master/LICENSE is 404	22	17	1058	master	live	NOT PERMISSIVE - grant not SPDX-classifiable and no root LICENSE at master
+1EdTech/CaliperBootcamp	github.com HTML + org listing	EXISTS	MIT license	org listing: MIT License	2	1	20	main	live	PERMISSIVE - but a 20-commit PoC playground, not a library
+1EdTech/caliper-js-example	github.com HTML + org listing + blob	EXISTS	NO LABEL (bare "License")	org listing: LGPL v3.0; payload LGPL-3.0 (7.43 KB, 165 lines)	8	4	67	master	live	COPYLEFT - and the two GitHub surfaces disagree
+1EdTech/caliper-ontology	org listing	EXISTS	LGPL v3.0 (org listing)	-	-	-	-	-	ARCHIVED (public archive)	COPYLEFT
+1EdTech/moodle-logstore_caliper	github.com HTML	EXISTS	GPL-3.0 license	-	0	0	13	master	fork of open-lms-open-source/moodle-logstore_caliper	COPYLEFT
+tl-its-umich-edu/caliper-php-public	github.com HTML	EXISTS	LGPL-3.0 license	-	3	2	365	public	unarchived BECAUSE 1EdTech made upstream private	COPYLEFT - and the reason it survives is the withdrawal
+ucsd-ets/openedx-caliper-tracking	github.com HTML	EXISTS	GPL-3.0 license	-	17	5	150	master	ARCHIVED read-only	COPYLEFT
+ims_caliper (RubyGems)	rubygems.org	EXISTS	LGPL-3.0	-	-	-	-	v1.0.1	released 2016-07-15; 55610 downloads	COPYLEFT - and its linked source URL is a 404

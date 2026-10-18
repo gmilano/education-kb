@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 299 — NINETEENTH CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM, AND THE ONE EMPTY CELL IN `p298`'s BOUNDARY TABLE IS NOW EXPLAINED RATHER THAN DECLARED
+
+⏱️ **Twenty-first pass of `2026-10-18`.** Evidence:
+[`p299-websearch.2026-10-18-p299.tsv`](../evidence/p299-websearch.2026-10-18-p299.tsv) ·
+[`p299-caliper-layer.2026-10-18-p299.tsv`](../evidence/p299-caliper-layer.2026-10-18-p299.tsv).
+
+🔴 **The mandated ERP/CRM leg returned its nineteenth consecutive nil, and the corpus artefact
+`p298` measured has got worse by one slot.** `open source platform education ERP CRM MIT Apache`
+returned **nine** result slots, of which 🔴 **six are `openeducat.org` glossary pages in six different
+languages** — `es`, `fr`, `ar`, `zh`, `de`, `pt-BR`. `p298` measured five of nine in five languages.
+🔵 **Same page, same vendor, one more locale.** The remaining slots are two `openalternative.co`
+category listings and one further glossary page from the same domain. **No source in the corpus states
+OpenEduCat's own licence** — including OpenEduCat's own glossary, which lists MIT and Apache-2.0 only
+as examples of what an OSI licence is.
+
+🔴 **Nothing was promoted and nothing was invented.** One more pass, one more declared nil, with the
+query and the slot-by-slot corpus in the evidence TSV.
+
+### 🟢 The Caliper cell: from "zero rows, declared" to "zero rows, and here is why"
+
+`p298` left exactly one empty cell in the boundary table below and labelled it *"NOTHING. Still zero
+rows. Declared, not glossed."* 🟢 **`ACTION PG-3` sent `p299` after it, and the cell is no longer a
+gap in this base's reading — it is a property of the layer.**
+
+🔴 **Every Caliper reference client library has been withdrawn from public view.**
+`IMSGlobal/caliper-php-public`, `IMSGlobal/caliper-ruby-public`, `Brightspace/ims-caliper-python`,
+`1EdTech/caliper-python` and `1EdTech/caliper-java` **all return `404`**. The University of Michigan's
+fork, [`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public),
+states the cause in its own description: it **"has been unarchived since 1EdTech made the upstream
+`caliper-php` private."**
+
+🔴 **What is left in public is copyleft, archived, or a toy.** The only permissive artefact in the
+entire layer is [`1EdTech/CaliperBootcamp`](https://github.com/1EdTech/CaliperBootcamp) — MIT, **20
+commits**, described by its own README as a proof of concept with a **demo-only OAuth2 flow that
+"must not be used in production."** Everything load-bearing is `LGPL-3.0` or `GPL-3.0`, and two of
+those are archived. The spec repository itself, [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec),
+carries **`Other`** in the org listing and has **no `LICENSE` file at `master`** at all.
+
+🔵 **So the recommendation for a client who needs standards-shaped analytics events is now a
+decision, not a blank:**
+
+| option | what it costs | when to pick it |
+|---|---|---|
+| 🟢 **Use xAPI instead of Caliper** | nothing — it is permissive end to end | 🟢 **The default.** [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) (Apache-2.0) for the vocabulary, [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) (MIT) to prove the store, [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) + [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) (Apache-2.0) to store and move, [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) (MIT) if the stack is PHP |
+| 🟡 **Take the copyleft** | `LGPL-3.0` on the PHP sensor, `GPL-3.0` on the Open edX and Moodle emitters — and two of the four are archived | Only when the client's own Caliper endpoint is contractually fixed |
+| 🔴 **Implement the spec yourself** | a specification whose grant is **`Other`** and whose reference code is gone | 🔴 **Price this as bespoke protocol work, never as "standards integration"** |
+
+🔴 **Do not brief Caliper as an equal alternative to xAPI on open-source terms.** On this evidence it
+is not one. 🔵 **This is the first time a standard has failed this base's integration test not on
+technical grounds but because the vendor-neutral body closed its own source** — and it is the
+sharpest available illustration of why *"integrate, do not fork"* needs a permissive surface to land
+on before it is advice at all.
+
+### 🟢 The boundary table, updated — assessment is now armed end to end
+
+`p298` armed **playback** and **packaging** at the QTI boundary and said so. `p299` adds **authoring,
+conversion, rendering and a full delivery engine**, so the assessment row is no longer a partial
+answer:
+
+| boundary you must cross | permissive component added `p299` *(all on [`repos/foundations.md`](../repos/foundations.md))* | licence | runtime |
+|---|---|---|---|
+| **Author items in the first place** | [`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti) *(Markdown → QTI 3.0)* · [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground) *(edit + live preview)* | 🟢 MIT | TypeScript · browser |
+| **Get items out of a vendor** | [`rolfis/qti-convert`](https://github.com/rolfis/qti-convert) *(Canvas QTI export → JSON / .docx)* | 🟢 Apache-2.0 | Python |
+| **Build and parse packages** | [`examplary/qti`](https://github.com/examplary/qti) *(QTI 3.0 + 2.1, both directions)* | 🟢 MIT | TypeScript |
+| **Render and deliver** | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) *(QTI 2.1 engine + JQTI+ + MathAssess, **2 087 commits**)* | 🟢 BSD-3-Clause | Java |
+| | [`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer) · [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player) ⚠️ `choice-interaction` only, no scoring | 🟢 MIT | browser |
+| | [`pie-framework/pie-qti`](https://github.com/pie-framework/pie-qti) *(QTI 2.1/2.2/3.0 + QTI ↔ PIE transforms)* ⚠️⚠️ **pre-1.0, not certified, not for high-stakes delivery** | 🟢 MIT | TypeScript |
+| **Their content is SCORM, not QTI** | [`S4-NetQuest/react-scorm-provider`](https://github.com/S4-NetQuest/react-scorm-provider) *(React ↔ SCORM API)* | 🟢 MIT | React |
+| | [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) *(SCORM 1.2/2004 inside Open edX)* 🔴 **archived 2023-11-27** | 🟢 Apache-2.0 *(payload-read)* | Open edX XBlock |
+| **Carry events out — xAPI** | [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) *(profiles spec)* | 🟢 Apache-2.0 | spec |
+| | [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) *(prove the LRS)* | 🟢 MIT | NodeJS |
+| | [`php-xapi/client`](https://github.com/php-xapi/client) + [`php-xapi/model`](https://github.com/php-xapi/model) | 🟢 MIT | PHP |
+| | [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) — 🟢 **the only `cmi5` row in this base** | 🟢 MIT | Laravel / PHP |
+| **Analytics events — Caliper** | 🔴 **STILL ZERO, and now explained above rather than declared.** Use xAPI | — | — |
+
+🔵 **The sales consequence, stated plainly.** A client handed an assessment migration can now be told
+which permissive component does each step, in which runtime, and **where the three warnings are**
+(`pie-qti` is not exam-grade, `qti-3-player` supports one interaction type, `edx_xblock_scorm` is
+archived). 🔴 **That is a different conversation from "QTI is open" — and the one empty cell in the
+table is the one a client will hear about from a competitor first, so say it yourself.**
+
+
 ## 🟢 Pass 298 — THE EIGHTEENTH NIL ON A PERMISSIVE EDUCATION ERP/CRM, AND THE "INTEGRATE, DO NOT FORK" INSTRUCTION THIS FILE HAS GIVEN FOR 297 PASSES FINALLY HAS CODE UNDER IT
 
 ⏱️ **Twentieth pass of `2026-10-18`.** Evidence:

@@ -4,6 +4,194 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 299 — three new patterns (`P63`-`P65`), each built from rows promoted THIS pass
+
+⏱️ `2026-10-18`. Evidence:
+[`p299-promotion-gap.2026-10-18-p299.tsv`](../evidence/p299-promotion-gap.2026-10-18-p299.tsv) ·
+[`p299-caliper-layer.2026-10-18-p299.tsv`](../evidence/p299-caliper-layer.2026-10-18-p299.tsv).
+🔴 **Numbered `P63`-`P65`: `P60`-`P62` are taken by `p298`, `P56`-`P59` by `p297`, `P52`-`P55` by
+`p296` and `P51` by `p294`** — the shelf was enumerated before numbering, because a duplicate pattern
+ID compiles into two entities with one name.
+
+🔵 **All three are built on the fifteen substrates promoted this pass.** `p298` armed the integration
+boundary at **launch** (LTI) and at **item playback**; `p299` arms it at **authoring, conversion,
+delivery and measurement** — so for the first time an assessment engagement can be quoted end to end
+without a copyleft dependency. 🟢 **Five of this pass's licence reads are PAYLOAD-grade**
+(`raccoongang/edx_xblock_scorm` → Apache-2.0, `OpenOLAT/qtiworks` → BSD-3-Clause,
+`1EdTech/caliper-js-example` → LGPL-3.0, `1EdTech/caliper-spec` → no file, plus the control reads),
+which is a higher grade than `p297`-`p298` could offer. ⚠️ **The remaining ten are sidebar-grade — see
+the caveat at the end.**
+
+## P63 — An assessment migration off a vendor LMS, permissive end to end (global, runtime-agnostic)
+
+**Who it is for.** Any engagement that must get **assessment content out of Canvas / Blackboard /
+Moodle** and into something the client owns — a migration, a consolidation after a merger, or an exit
+from a per-seat licence. 🔵 **This pattern exists because `p298` could only offer playback and
+packaging; the steps a real migration actually starts and ends with were missing from these shelves
+until this pass.**
+
+**The wiring, in the order the work happens:**
+
+1. **Get the items out of the incumbent.** [`rolfis/qti-convert`](https://github.com/rolfis/qti-convert)
+   (**Apache-2.0**, 22★, 42 commits, Python) converts a **Canvas QTI export package** to **JSON** or
+   **Word (.docx)**. 🟢 **This is the only row in this base that reads a vendor's export format** —
+   and an export package is what the client will hand you on day one.
+2. **Normalise and re-package.** [`examplary/qti`](https://github.com/examplary/qti) (**MIT**,
+   TypeScript) builds *and* parses **QTI 3.0 and 2.1** packages, manifests, items, tests and stimuli,
+   with automatic version detection. For PHP estates use
+   [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) (**MIT**, shelved `p298`).
+   🔴 **Cite `examplary/qti` by owner: [`instructure/qti`](https://github.com/instructure/qti) is a
+   different thing entirely** — a Ruby gem that *parses* QTI **1.2 / 2.1**. Use that one when the
+   legacy corpus predates QTI 3, which on a migration it usually does.
+3. **Author the new items in a format humans will maintain.**
+   [`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti) (**MIT**, TypeScript
+   CLI, npm) turns **Markdown + a manifest** — ordering, IDs, points — into QTI 3.0. 🟢 **This is what
+   makes an LLM a usable item author: generate Markdown, not XML**, then compile it deterministically.
+4. **Let a human see it before it ships.** [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground)
+   (**MIT**) gives a split-pane editor with live QTI 3.0 preview — the review step for step 3.
+5. **Deliver it.** Choose by stakes, and this is the decision that matters:
+   - 🟢 **Exam-shaped, server-authoritative** → [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks)
+     (**BSD-3-Clause**, **2 087 commits**, Java): QTI 2.1 delivery engine + **JQTI+** library +
+     **MathAssess** extensions for mathematical assessment. 🔴 **Take this fork, not the 68★
+     `davemckain/qtiworks`, which announces its own closure in its description.**
+   - 🟡 **Browser-side, low-stakes practice** →
+     [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) (**MIT**, shelved
+     `p298`), with [`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer)
+     (**MIT**) for scoring/report/explanation HTML.
+   - 🔴 **Do NOT use [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player)
+     as a general player** — its own README says **`choice-interaction` only, no scoring, no test
+     structure, partial expressions, host must supply MathJax.**
+   - 🔴 **Do NOT ship [`pie-framework/pie-qti`](https://github.com/pie-framework/pie-qti) as the
+     delivery engine** — its own README says pre-1.0, *"not fully conformant or certified"*, and not
+     for untrusted or high-stakes delivery without a backend-authoritative integration. 🟢 **Use it for
+     what it is: the QTI ↔ PIE transform (794 commits), i.e. step 2 for PIE-shaped corpora.**
+6. **If the content is SCORM rather than QTI** — which on a corporate or older K-12 estate it will be:
+   [`S4-NetQuest/react-scorm-provider`](https://github.com/S4-NetQuest/react-scorm-provider)
+   (**MIT**, 67★) for a React front end, or
+   [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm)
+   (**Apache-2.0**, payload-read) to run SCORM 1.2/2004 **inside Open edX**. ⚠️ **The XBlock is
+   archived (2023-11-27) — read it as a pattern, vendor the code, and own the fork knowingly.** Its
+   **65 forks against 32 stars** say the rest of the market made the same decision.
+7. **Measure the result, and make the measurement provable** — `P64`.
+
+**Why it wins.** 🟢 **Every step is MIT / Apache-2.0 / BSD-3-Clause, and the two steps that look
+cheapest to hand-roll (export parsing and item authoring) are the two that are shelved.** 🔵 **And
+three of the six components carry a disqualifying limit in their own README** — a pitch that names
+those limits before the client's own engineer finds them is the differentiator, not the component list.
+
+**Rough shape.** 6-9 weeks for a single-course pilot through step 5; the corpus size drives step 1-2,
+the stakes drive step 5.
+
+## P64 — Prove the learning-record trail instead of asserting it, permissively (global — and the ONLY standards-shaped option after this pass)
+
+**Who it is for.** Any engagement where an AI system touches a student outcome and someone will later
+ask *what happened* — the North America governance gap (**~10% of institutions have formal AI
+guidelines**), the LATAM one (**92% of students engaged, ~30% of institutions with a published
+policy**), or any regulator-facing deployment.
+
+**The wiring:**
+
+1. 🔴 **Choose xAPI, not Caliper, and this is now a finding rather than a preference.** All five
+   Caliper reference client libraries return **`404`**; 1EdTech made the upstream **private**; the only
+   permissive remnant is a **20-commit playground** whose README says its auth flow *"must not be used
+   in production"*; the spec repository's own grant reads **`Other`** with **no `LICENSE` file at
+   `master`**. See [`p299-caliper-layer.2026-10-18-p299.tsv`](../evidence/p299-caliper-layer.2026-10-18-p299.tsv).
+2. **Fix the vocabulary first.** [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles)
+   (**Apache-2.0**, 60★) — the Profiles specification from **ADL**, who author xAPI itself. 🟢 **Write
+   the profile before the first statement**, or you will be migrating verbs in month four.
+3. **Store the statements, in the runtime you already have:**
+   - **JVM / standalone** → [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (**Apache-2.0**).
+   - **PHP / Laravel** → [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) (**MIT**) — 🟢 **the only
+     `cmi5` row in this base**, serving `/api/cmi5/**` at `x-experience-api-version: 1.0.3`. Use this
+     when the estate is Moodle-adjacent and standing up a JVM service is the thing that kills the
+     pilot.
+   - **Emit from PHP** → [`php-xapi/client`](https://github.com/php-xapi/client) +
+     [`php-xapi/model`](https://github.com/php-xapi/model) (**MIT**). 🔴 **Pin the branch you read —
+     neither repo exposes a default branch on its page** (`0.7` and `3.x` respectively).
+4. 🟢 **Now the step that makes this a pattern rather than a stack:**
+   [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite)
+   (**MIT**, 78★, **1 039 commits**) tests the **`MUST` requirements of the xAPI spec** against your
+   endpoint. ⚠️ **Its own README: basic auth only, and never run it against a production LRS** — so run
+   it in CI against staging, and **ship the output as the deliverable.**
+5. **Move only what the downstream is entitled to.**
+   [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) (**Apache-2.0**, shelved `p298`)
+   forwards statements **filtered by Profile templates and patterns**, resumably. 🔵 **This is the
+   data-minimisation control in code** — the thing a privacy reviewer asks for and usually receives as
+   a paragraph.
+
+**Why it wins.** 🟢 **"Our audit trail is standards-conformant" stops being a claim and becomes a test
+report, produced by the spec's own authors' suite, in CI.** 🔴 **And it inverts the Caliper problem into
+a selling point:** the studio arrives knowing that the competitor's "Caliper-ready" slide is backed by
+LGPL/GPL code or by libraries that no longer exist publicly.
+
+**Rough shape.** 3-5 weeks to a conformance report on a staging LRS; step 2 is the long pole and it is
+a workshop, not an engineering task.
+
+## P65 — Capability, not rooms: converting a national hardware rollout into measured learning (🇵🇱 Poland first · 🇵🇰 Pakistan variant · transferable to any state lab programme)
+
+**Who it is for.** A ministry or regional authority that has **already bought the hardware** and now
+owns the gap between *installed* and *used*. 🟢 **Poland is the live instance:** ~**1.9 bn złoty** for
+AI labs in **~12 000 schools** (~8 000 primary + ~4 000 secondary), inside a **> 5 bn złoty** digital
+programme, **~EUR 500M mostly EU funds** — against an **IBE PIB 2025 baseline of 1% of schools with an
+AI lab and 27% with no Wi-Fi**, and a corpus that notes **teacher-training and data-privacy guidance
+were still missing in 2025/26**.
+
+**The wiring:**
+
+1. **Do not touch the ministry's stack.** Reach it at the **LTI 1.3 boundary** per `P60`, in the
+   studio's own runtime. 🔵 **A hardware programme is procured by one directorate and the curriculum by
+   another; a tool that requires an LMS migration dies between them.**
+2. **Attack the teacher-time constraint, because that is what "unused lab" actually means.**
+   [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents)
+   (**Apache-2.0**, EACL 2026) generates syllabus → slides → assessments under an **ADDIE** multi-agent
+   loop with a **Full Co-Pilot** mode. 🟢 **Run it in co-pilot mode, never autonomously, in a
+   programme whose own documents admit teacher training is missing.**
+3. **Make the output land in the national assessment format, not in a PDF.** `P63` steps 3-5:
+   Markdown → **QTI 3.0** ([`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti)),
+   reviewed in [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground), delivered by
+   [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) (**BSD-3-Clause**) if it is graded.
+4. **Instrument it from day one** — `P64`. 🔴 **A state programme measured only by labs installed cannot
+   be renewed on evidence.** An xAPI profile plus a conformance report is the renewal argument.
+5. **Attach the governance artefact before the first classroom**, as `p298` concluded for Morocco: an
+   AI-use policy, a human-decision boundary, and an audit trail. 🟢 **In the EU this is also the AI Act
+   answer**, and the corpus says the ministry has not written it yet.
+
+**🇵🇰 The Pakistan variant — same pattern, inverted constraint.** Pakistan's **National AI Policy
+(July 2025)** plus **up to USD 1 bn by 2030**, **1 000 AI PhD scholarships** and
+**Train-the-Trainer for 10 000 educators by 2027** sit against an **IT ministry diagnosis (Oct 2026)**
+naming **rural connectivity, instructor supply, training facilities and awareness** as what blocks it.
+🔴 **So steps 2-4 must run offline-first** — `P62`'s shape — with **WhatsApp-class delivery**, for which
+[`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) (**Apache-2.0**,
+Taleemabad, national curriculum, 15 languages) is the shelved reference. 🔴 **And qualify the
+counterparty first, per `p298`'s Mozambique/Angola finding: the AI money sits with the IT ministry and
+the curriculum mandate sits with education.**
+
+**Why it wins.** 🔵 **Both countries have published the gap themselves** — Poland in a 1%-baseline
+study and a missing-guidance note, Pakistan in a ministry statement of why its training "isn't
+working." 🟢 **A proposal that quotes the client's own diagnosis back to them, with permissive
+components named per step, is a different document from a capability deck.**
+
+**Rough shape.** 10-14 weeks for a regional pilot (one voivodeship / one province) through step 5;
+**verify the Poland rollout status with the Ministry of Education before quoting the 12 000 figure** —
+this base has recorded the announcement, not the delivery.
+
+### ⚠️ Grade caveat for `P63`-`P65`
+
+🟢 **Five of `p299`'s licence reads are payload-grade** — `raccoongang/edx_xblock_scorm`
+(`Apache-2.0`, 11.1 KB), `OpenOLAT/qtiworks` (`BSD-3-Clause`, `LICENSE.txt`, 2.01 KB),
+`1EdTech/caliper-js-example` (`LGPL-3.0`, 7.43 KB), `1EdTech/caliper-spec` (**no file — `404`**) and
+the `404` control set. 🔴 **The other ten admissions are SIDEBAR-grade: GitHub's label, not the
+file.** `p298` proved that label is not a property of the payload, and `p299` found **four distinct
+causes** for a bare sidebar pointing at **opposite** decisions (`T-p299d`).
+
+🔴 **Before any of these patterns ships to a client, read the `LICENSE` file of every component you
+actually ship, and check `LICENSE.txt` as well as `LICENSE`** — `OpenOLAT/qtiworks` would have been
+graded unlicensed by a `LICENSE`-only scanner, and it is BSD-3-Clause. ⚠️ **Also re-read the three
+README-stated limits named in `P63`** (`pie-qti` not exam-grade, `qti-3-player` single-interaction,
+`edx_xblock_scorm` archived) **and the two in `P64`** (conformance suite not for production, `php-xapi`
+branches unpinned) **at the version you pin** — this base records them as read on `2026-10-18`.
+
+
 ## 🟢 Pass 298 — three new patterns (`P60`-`P62`), each built from rows promoted THIS pass
 
 ⏱️ `2026-10-18`. Evidence:

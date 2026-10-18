@@ -1,0 +1,10 @@
+probe	channel	result	what_it_licenses
+IMSGlobal/caliper-php-public	WebFetch github.com HTML	HTTP 404 Not Found	WebFetch DISCRIMINATES absence - unlike curl -sI, which p298 proved returns 200 for an invented hostname
+1EdTech/caliper-python	WebFetch github.com HTML	HTTP 404 Not Found	same; four of five client-library slugs answered 404 and two real slugs answered 200 in the same batch
+tl-its-umich-edu/caliper-php-public	WebFetch github.com HTML	200, full sidebar read	positive control in the same batch as the 404s
+1EdTech/caliper-js-example (repo page)	WebFetch github.com HTML	200, sidebar shows bare "License"	sidebar-grade only
+1EdTech/caliper-js-example (org listing)	WebFetch github.com/orgs/1EdTech/repositories?q=caliper	200, listing shows "GNU Lesser General Public License v3.0"	THE ORG LISTING IS A SECOND LICENCE SURFACE AND IT CLASSIFIED WHAT THE SIDEBAR DID NOT
+1EdTech/caliper-js-example (payload)	WebFetch /blob/master/LICENSE	200, LGPL-3.0, 7.43 KB, 165 lines	payload-grade; adjudicates between the two surfaces in favour of the org listing
+1EdTech/caliper-spec (payload)	WebFetch /blob/master/LICENSE	HTTP 404 Not Found	a bare "License" sidebar can also mean NO LICENSE FILE AT THAT PATH - a third cause
+raccoongang/edx_xblock_scorm (payload)	WebFetch /blob/master/LICENSE	200, Apache-2.0, 11.1 KB, 201 lines	a fourth cause: standard permissive payload present, simply unclassified by GitHub
+OpenOLAT/qtiworks (payload)	WebFetch /blob/master/LICENSE.txt	200, BSD-3-Clause, 2.01 KB, 40 lines	payload read turned an unlabelled sidebar into a shelvable permissive row

@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔵 Pass 299 — THE ONE AGENT-LAYER CANDIDATE IN THIS PASS WAS A DECLARED FORK OF A REPOSITORY ALREADY ON THIS SHELF, AND THE MANDATED LEG HAS NOW RETURNED TWENTY-FIVE NILS
+
+⏱️ **Twenty-first pass of `2026-10-18`.** Evidence:
+[`p299-promotion-gap.2026-10-18-p299.tsv`](../evidence/p299-promotion-gap.2026-10-18-p299.tsv) ·
+[`p299-websearch.2026-10-18-p299.tsv`](../evidence/p299-websearch.2026-10-18-p299.tsv) ·
+[`p299-shelf-diff.2026-10-18-p299.tsv`](../evidence/p299-shelf-diff.2026-10-18-p299.tsv).
+
+🔴 **Zero new rows, for the second pass running, and `p299` added no filler to disguise it.** All
+fifteen admissions are on [`repos/foundations.md`](../repos/foundations.md). `p298` predicted this
+exactly — *"an agent-shelf row needs a leg that asks for an agent"* — and `p299` is the confirmation,
+because this pass did run such a leg and it returned nothing again.
+
+🔴 **The mandated agent leg: TWENTY-FIVE consecutive nils.** `top open source AI agents education 2026
+github MIT` returned a corpus of secondary roundup blogs and directory pages. 🔵 **The one new thing
+worth recording about it is the shape of the error, not the nil:** every education-shaped hit is
+courseware for **learning about AI** — [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners)
+(~67k★ per the listing), `pguso/agents-from-scratch` — **not agents built for education.** 🔴 **The
+query's own words select for the wrong noun**, and twenty-five passes of running it unchanged have
+produced twenty-five reports of a population that was never being measured. The leg is written out in
+full in the evidence TSV, nil declared.
+
+### 🔴 The one agent-layer candidate, and it was rejected at the gate
+
+[`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) — an MCP server letting
+agents record and retrieve learning activity against an xAPI Learning Record Store — is the only slug
+in `p299`'s batch of twenty-eight that claims to be an agent. It was read and **shelved nowhere.**
+
+| | `ashleycribb/learnmcp-xapi` | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) *(already shelved)* |
+|---|---|---|
+| GitHub fork banner | 🟢 **present — "forked from `DavidLMS/learnmcp-xapi`"** | — |
+| sidebar licence label | 🔴 **bare `License`, no label** *(README says MIT)* | labelled |
+| stars / forks / commits | **0** / **0** / 34 | on this shelf since an earlier pass |
+
+🟢 **This is the first time the gate had help.** `p298`'s rejection of `ucfopen/pylti1.3` turned on the
+fact that **"GitHub marks neither as a fork, so nothing on either page would have warned a reader."**
+Here the banner was there and named the parent outright. 🔵 **So the gate's two cases are not one
+phenomenon:** a declared fork is a cheap rejection, an **undeclared** copy carrying the original
+author's copyright is the expensive one, and only the second needs a payload read to catch. **Run the
+bare-name check first anyway** — it costs one query and it is what surfaced both.
+
+### 🔵 What `ACTION PG-2` and `ACTION PG-3` have now jointly established about this shelf
+
+Three passes have taken named batches off `p989`'s orphan list — **twelve, then fourteen, then
+twenty-eight slugs** — and the running total onto this file is **two rows** (`p297`), **zero**
+(`p298`), **zero** (`p299`).
+
+🔴 **That is not a failure of the batches; it is a measurement of the list.** `p989`'s list is a
+census of **permissive repositories in this base's own corpus**, and that corpus is overwhelmingly
+**substrate**: standards libraries, players, adapters, forwarders, validators. 🟢 **The orphan list
+is the wrong instrument for an agent row and should stop being asked for one.** `p298` said this
+once; `p299` has now paid for it twice, and the instruction below retires the question rather than
+repeating it.
+
+🔵 **Meanwhile the shelf's own ratio is worth restating against `T-p297b`:** **42 agent rows** sit
+over an institutional layer that was nearly empty three passes ago and now carries **37 new substrate
+rows** from `p297`-`p299` — **9 + 13 + 15**, the three batches having admitted 39 slugs in all, of
+which exactly **two** were agents. 🟢 **The gap `T-p297b` measured is closing — and it is closing from
+below, not by adding agents.**
+
+### 🔴 Standing action for the next pass — the agent leg needs a different query, not another run
+
+1. 🔴 **Stop running the mandated agent phrasing as the only agent leg.** Twenty-five nils is
+   sufficient evidence that `top open source AI agents education {year} github MIT` selects
+   AI-*curriculum* repositories. Keep running it — it is mandated and an undeclared nil looks exactly
+   like coverage — **but add a directed leg that names the job**, e.g. *grading agent*, *lesson
+   planning agent*, *student advising agent*, *MCP server LMS*, and record each separately.
+2. 🟢 **The orphan list is for [`repos/foundations.md`](../repos/foundations.md).** Route it there by
+   default. If a slug on it claims to be an agent, apply `p293`'s README test **and** the fork banner
+   check before reading anything else.
+3. 🔵 **`ACTION PG-4` is on [`repos/foundations.md`](../repos/foundations.md)**, including the
+   measurement defect that made five of `ACTION PG-3`'s own named slugs look already-shelved.
+
+
 ## 🔵 Pass 298 — THIS SHELF GAINS NOTHING, AND THAT IS THE RESULT: `ACTION PG-2` NAMED THREE LAYERS AND ALL THREE TURNED OUT TO BE SUBSTRATE, NOT AGENTS
 
 ⏱️ **Twentieth pass of `2026-10-18`.** Evidence:

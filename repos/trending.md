@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 299: FIFTEEN substrates promoted — the assessment boundary is now armed end to end — and the one layer the instruction put FIRST turned out to have been taken private
+
+Evidence: [`p299-promotion-gap.2026-10-18-p299.tsv`](../evidence/p299-promotion-gap.2026-10-18-p299.tsv) ·
+[`p299-caliper-layer.2026-10-18-p299.tsv`](../evidence/p299-caliper-layer.2026-10-18-p299.tsv) ·
+[`p299-channel-control.2026-10-18-p299.tsv`](../evidence/p299-channel-control.2026-10-18-p299.tsv) ·
+[`p299-shelf-diff.2026-10-18-p299.tsv`](../evidence/p299-shelf-diff.2026-10-18-p299.tsv).
+
+🟢 **Fifteen permissive substrates moved onto [`foundations.md`](foundations.md), read first-hand at
+rendered `github.com` HTML on `2026-10-18` — and five of them were read at the PAYLOAD**, because this
+is the window where the licence sidebar stopped being sufficient. 🔴 **Zero came from the mandated
+trending leg**, which returned its thirteenth consecutive nil for education.
+
+| repo | licence (read `2026-10-18`) | stars | forks | commits | branch | layer it supplies |
+|---|---|---|---|---|---|---|
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | 🟢 `MIT` *(sidebar)* | **78** | **52** | **1 039** | `master` | xAPI conformance — 🔴 **was 0 rows.** From **ADL**, who author the spec |
+| [`S4-NetQuest/react-scorm-provider`](https://github.com/S4-NetQuest/react-scorm-provider) | 🟢 `MIT` *(sidebar)* | **67** | 23 | 19 | `master` | **the first SCORM row in this base** |
+| [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles) | 🟢 `Apache-2.0` *(sidebar)* | **60** | 33 | 153 | `master` | xAPI Profiles spec — the permissive answer to Caliper |
+| [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) | 🟢 `Apache-2.0` *(**payload**, 11.1 KB — sidebar **bare**)* | 32 | 🔴 **65** | 49 | `master` | SCORM 1.2/2004 in Open edX. 🔴 **archived 2023-11-27**; forks ≫ stars |
+| [`php-xapi/client`](https://github.com/php-xapi/client) | 🟢 `MIT` *(sidebar)* | 23 | 11 | 137 | `0.7` | xAPI in PHP — the runtime Moodle and Tsugi already are |
+| [`rolfis/qti-convert`](https://github.com/rolfis/qti-convert) | 🟢 `Apache-2.0` *(sidebar)* | 22 | 6 | 42 | `main` | **Canvas QTI export → JSON / .docx** — reaches into a vendor's export format |
+| [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS) | 🟢 `MIT` *(sidebar)* | 7 | 0 | 27 | `main` | Laravel LRS — 🟢 **the only `cmi5` row in this base** |
+| [`pie-framework/pie-qti`](https://github.com/pie-framework/pie-qti) | 🟢 `MIT` *(sidebar)* | 4 | 1 | **794** | `master` | QTI 2.1/2.2/3.0 players + QTI ↔ PIE transforms. ⚠️⚠️ **pre-1.0, not certified, not for high-stakes** |
+| [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground) | 🟢 `MIT` *(sidebar)* | 4 | 0 | 167 | `main` | QTI 3.0 view/edit/live-preview — aimed at a human author |
+| [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player) | 🟢 `MIT` *(sidebar)* | 3 | 1 | 88 | `main` | QTI 3.x renderer. ⚠️⚠️ **`choice-interaction` ONLY, no scoring, no test structure** |
+| [`php-xapi/model`](https://github.com/php-xapi/model) | 🟢 `MIT` *(sidebar)* | 3 | **8** | 340 | `3.x` | xAPI model classes; forks (8) exceed stars (3) |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **`BSD-3-Clause`** *(**payload**, `LICENSE.txt` 2.01 KB — sidebar **bare**)* | 3 | 2 | 🔴 **2 087** | `master` | **QTI 2.1 engine + JQTI+ + MathAssess.** 🔴 **Take this fork, not the 68★ dead upstream** |
+| [`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti) | 🟢 `MIT` *(sidebar)* | 2 | 0 | 102 | `main` | **Markdown → QTI 3.0** — the authoring half `p298` left open |
+| [`examplary/qti`](https://github.com/examplary/qti) | 🟢 `MIT` *(sidebar)* | 1 | 0 | 39 | `main` | QTI 3.0 + 2.1 build **and** parse in TypeScript. 🔴 **False-duplicate of `instructure/qti`** — the gate admitted it |
+| [`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer) | 🟢 `MIT` *(sidebar)* | **0** | **0** | 47 | `main` | QTI 3.0 → HTML. 🔴 **Zero stars, zero forks, 47 commits** — fourth confirmation that stars misrank substrate |
+
+🔴 **Three rejections, each for a different reason:** `ashleycribb/learnmcp-xapi` (declared fork of a
+shelved repo), `davemckain/qtiworks` (68★ canonical upstream that **announces its own closure in its
+description** while its 3★ fork carries 14 further commits), and `ucfopen`-style sidebar ambiguity
+resolved against two **Caliper** repositories whose payloads read `LGPL-3.0` and `Other`.
+
+### 🔴 The mandated trending leg — thirteenth consecutive nil for education
+
+`github trending education AI 2026` returned no GitHub-trending list filtered to education at all; the
+corpus was AI-engineering learning paths and third-party trending mirrors. 🟢 **Nil declared with its
+query** in [`p299-websearch.2026-10-18-p299.tsv`](../evidence/p299-websearch.2026-10-18-p299.tsv).
+
+### 🔴 Five slugs that no longer exist — the Caliper client libraries
+
+`IMSGlobal/caliper-php-public` · `IMSGlobal/caliper-ruby-public` · `Brightspace/ims-caliper-python` ·
+`1EdTech/caliper-python` · `1EdTech/caliper-java` — 🔴 **all five `404`.** The standards body made the
+upstream private, recorded only in a **University of Michigan fork's description**. 🟢 **A `404` here
+also serves as this window's channel control: `WebFetch` discriminates absence, in the same batch where
+real slugs returned full sidebars — which `curl -sI` provably cannot do** (`p298`: `200 Connection
+Established` for an invented hostname).
+
+
 ## 2026-10-18 — Pass 298: THIRTEEN substrates promoted, and together they arm the instruction this base has given for 297 passes — "integrate, do not fork"
 
 Evidence: [`p298-promotion-gap.2026-10-18-p298.tsv`](../evidence/p298-promotion-gap.2026-10-18-p298.tsv) ·

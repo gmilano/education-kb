@@ -1,0 +1,20 @@
+slug	state	note
+ai-for-education/lesson-plan-parse-mbsse	PROSE-ONLY	named in shelf-file prose but has no table row on any shelf
+deck6/korean-elementary-learning-map	PROSE-ONLY	named in shelf-file prose but has no table row on any shelf
+s4-netquest/react-scorm-provider	PROSE-ONLY	named in shelf-file prose but has no table row on any shelf
+ashishpatel26/500-ai-agents-projects	PROSE-ONLY	named in shelf-file prose but has no table row on any shelf
+avinash201199/free-ai-agents-resources	PROSE-ONLY	named in shelf-file prose but has no table row on any shelf
+metyatech/markdown-to-qti	PROSE-ONLY	named in shelf-file prose but has no table row on any shelf
+metyatech/qti-html-renderer	PROSE-ONLY	named in shelf-file prose but has no table row on any shelf
+oaknational/oak-open-curriculum-ecosystem	PROSE-ONLY	named in shelf-file prose but has no table row on any shelf
+packbackbooks/lti-1-3-php-library	PROSE-ONLY	named in shelf-file prose but has no table row on any shelf
+raccoongang/edx_xblock_scorm	PROSE-ONLY	named in shelf-file prose but has no table row on any shelf
+MEASUREMENT	VALUE	METHOD
+rows on p989 list	528	wc -l
+distinct slugs case-insensitively	525	lowercase set
+names published by 2+ distinct owners	20	owner-set per lowercased repo name; p298 reported 21, and the count is 20 both before and after case-folding
+slugs present in a TABLE ROW on agents/top.md, repos/foundations.md or verticals/solutions.md	70	match restricted to lines whose first non-space character is a pipe
+slugs present ONLY in shelf-file PROSE	11	matched in non-pipe lines only
+slugs absent from the three shelf files entirely	444	neither row nor prose
+TRUE unshelved, row-grade	455	11 prose-only + 444 absent; corroborates p298's 456 within one
+naive prose-inclusive unshelved count	444	THE DEFECT: this is what a plain text diff returns, and it silently counts the 11 prose-only slugs as shelved
