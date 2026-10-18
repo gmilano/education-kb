@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 302 — four new patterns (`P72`-`P75`), each built only from rows payload-pinned THIS pass or already pinned, and each tied to a named regulation or a named funding line
+
+⏱️ `2026-10-18`. Evidence:
+[`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv) ·
+[`p302-websearch.2026-10-18-p302.tsv`](../evidence/p302-websearch.2026-10-18-p302.tsv) ·
+[`p302-reachability.2026-10-18-p302.tsv`](../evidence/p302-reachability.2026-10-18-p302.tsv).
+
+⚠️ **Every component below is MIT or Apache-2.0 with its licence read as a PAYLOAD and its `sha256₁₂`
+recorded.** No AGPL, no GPL, no unlicensed repository appears as a build component in any pattern — the ones
+this pass refused are named in each recipe's *"deliberately not used"* line, because the substitution is the
+reusable part.
+
+---
+
+### 🟢 `P72` — **Conformity evidence for an automated-assessment system** (Vietnam `Decision 33`, Korea AI Basic Act)
+
+**The ask it answers:** *"Our tutor grades and ranks students. The regulator calls that high-risk. Prove it
+is safe."* 🔵 **Note what the client does NOT need: a new model.** They need a protocol and a report.
+
+| step | component | licence (payload, sha256₁₂) | role |
+|---|---|---|---|
+| 1. Harness | [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) | **MIT** *(pinned `p301`)* | Runs the evaluation. Holder is the **UK AI Security Institute** — provenance a regulator recognises. |
+| 2. Protocol | [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | **MIT** `1 150 B` `a1c6b65c5bb1` | The **design**: frozen base model, policy-only variation, cold baseline, weak simulated student, frozen leakage matcher, per-component ablations, 10 replicates × 3 arms, bases never pooled. |
+| 3. Judge calibration | [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | **MIT** `1 154 B` `fef00f185287` *(branch **`master`**)* | Tests **bounded-rating bias** — whether one judge scores weak and strong learners on the same scale. Without this the whole report rests on an uncalibrated instrument. |
+| 4. Source control | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **Apache-2.0** *(carried)* | Answers Decision 33's **first** education system — content from *uncontrolled* sources — by keeping generated material tied to its provenance. |
+| 5. Human-in-loop surface | [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | **MIT** *(carried)* | Swappable LLM pipelines behind a REST API, so the **deferral gate** is a service boundary rather than a prompt. |
+
+**Wiring.** Freeze the client's tutor as the system under test. Wrap it twice: once as-is, once with
+`PedTutor`'s structure (state tracker → decomposer → **deferral gate** → hint cascade) implemented over
+`Pyris` pipelines. Add the cold baseline. Score all three with `inspect_ai` tasks using a weak student
+model so leakage has somewhere to appear, run the frozen `protocol/leakage.py` matcher **before** any
+judge scoring, then ablate tracker / gate / cascade one at a time to attribute the effect to a component.
+Pre-register before running. Deliver the ablation table plus the leakage rate per arm as the conformity
+artefact.
+
+🔴 **Deliberately not used:** [`DAMO-NLP-SG/M3Exam`](https://github.com/DAMO-NLP-SG/M3Exam) — the ideal
+multilingual national-exam item bank, **no licence** (`p302`). Substitute the client's own retired exam
+items, which they have and may use.
+⚠️ **Boundaries:** neither `bydeng01` repo publishes results — **this pattern delivers a protocol and the
+client's own numbers, never a cited effect size.** Vietnam's compliance deadline is **refused** by `p302`
+(three incompatible secondary readings); scope the engagement to the obligation, not to a date.
+
+---
+
+### 🟢 `P73` — **ESEA-fundable teacher enablement with a read-only agent** (US districts, `H.R. 8747`)
+
+**The ask it answers:** *"Our state restricts classroom AI and our district has no policy. What can we
+actually buy?"* 🟢 **`H.R. 8747` (reported `18Y-15N`, `2026-07-21`) would make educator AI knowledge and
+skills an ESEA allowable use — so build on the funded side of the line, not against the restricted side.**
+
+| step | component | licence (payload, sha256₁₂) | role |
+|---|---|---|---|
+| 1. Read-only LMS reach | [`chiptoe-svg/canvas-lms-mcp`](https://github.com/chiptoe-svg/canvas-lms-mcp) | **MIT** `1 070 B` `c29329c5ef3b` *(pinned `p301`)* | **Register the 117 read tools and leave all 48 write tools unregistered.** Plus **FERPA mode**. |
+| 2. Teacher skill library | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **carried** | 165 evidence-based educator skills — the curriculum of the enablement itself. |
+| 3. Literacy that is *measured* | [`ProjectAJ14/eklavya`](https://github.com/ProjectAJ14/eklavya) | **MIT** `1 067 B` `b64948dd9b05` | Quizzes the human on concepts behind what the agent produced, against a local knowledge graph. **Turns "AI literacy" from a workshop into a score.** |
+| 4. Retention loop | [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | **MIT** `1 064 B` `092d389ac156` | Spaced repetition **as a skill**, with a progress dashboard — so the PD sticks past the in-service day. |
+| 5. Governance paper trail | [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | **MIT** *(pinned `p301`)* | Documents the read/write boundary in a form district counsel can read. |
+
+**Wiring.** Stand up the Canvas MCP server with **only** the read tier registered — this is the step that
+makes the deployment *architecturally* incapable of grading, discipline or IEP authoring, which is exactly
+what NYC's red tier prohibits and what Oklahoma and Maryland bar. Load the educator skills as the PD
+content. Run `eklavya` against the artefacts teachers produce during training to generate a literacy
+measure, and `Tov-learn` to schedule reinforcement. Ship the governance toolkit's documentation of the
+117/48 split as the compliance annex. 🔵 **The whole package sits on the fundable side of every US datum on
+[`intel/market.md`](../intel/market.md) and on the permitted side of all of them.**
+
+⚠️ **Boundaries:** `H.R. 8747` is a **reported committee bill, not law** — scope the pitch to "fundable if
+enacted", and note the near-party-line vote. `eklavya` is **10★**. `chiptoe-svg` is a **diverged fork** of
+`bruchris/canvas-lms-mcp` with undocumented deltas — diff before building.
+
+---
+
+### 🟢 `P74` — **A tutor that withholds, with knowledge tracing as its state** (any region; K-12 and CS)
+
+**The ask it answers:** *"Our chatbot just gives students the answer."* 🔵 **This is the industry's most
+common real defect, and `T-p302d` gives the reason it persists: the helpfulness metric rewards it.**
+
+| step | component | licence (payload, sha256₁₂) | role |
+|---|---|---|---|
+| 1. Withholding policy | [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | **MIT** `1 081 B` `3b2ca73e81ad` | The **five-level hint cascade**: gentle observation → pattern nudge → approach direction → technique reveal → pseudocode skeleton *last resort*. **Lift the cascade, not the repo.** |
+| 2. Diagnosis first | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | **MIT** *(carried)* | Establishes the misconception **before** teaching, so the cascade starts at the right rung. |
+| 3. Learner state | [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) | **MIT** `1 104 B` `4b15a1e898b3` | **LangGraph + Bayesian Knowledge Tracing** — the smallest demonstration of BKT as agent state. Copy the shape. |
+| 4. Calibrated BKT | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) · [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** *(carried)* | Production-grade knowledge tracing to replace the toy model in step 3. |
+| 5. Reinforcement | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) · [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | **MIT** *(carried)* | Converts each resolved misconception into scheduled review. |
+| 6. Proof it works | `P72` above | — | **Run the leakage audit on the result.** Otherwise this pattern is a claim. |
+
+**Wiring.** Diagnose → look up mastery in the BKT state → enter the cascade at the rung the mastery
+estimate justifies → advance a rung only on a failed attempt, never on a request → on resolution, emit a
+card to FSRS/Anki and update the trace. 🟢 **The deferral gate from `P72` is the same component as the
+cascade controller here** — build it once.
+
+🔴 **Deliberately not used:** [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) (**AGPL-3.0**)
+for the visual layer and [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) (**GPL**) for the
+misconception catalogue. For visual explanation use
+[`khayyam-math/khayyam-math`](https://github.com/khayyam-math/khayyam-math) (**MIT** `1 079 B`
+`4068e5e09efd`) instead; read LTLTutor's catalogue as prior art and reimplement.
+⚠️ **Boundaries:** `algo-sensei` is 9 commits, `BloodCoded_Agentic` is 2★. **Both are shapes to copy, not
+dependencies to pin.**
+
+---
+
+### 🟢 `P75` — **Offline AI-literacy package for a ministry or rural deployment** (LATAM, Africa, APAC)
+
+**The ask it answers:** *"We have no reliable connectivity and no egress, and we still have to teach AI."*
+🔵 **The constraint this base has flagged repeatedly and never had a full recipe for.**
+
+| step | component | licence (payload, sha256₁₂) | role |
+|---|---|---|---|
+| 1. Carrier | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** *(carried)* | The offline-first LMS: syncs opportunistically, runs disconnected. |
+| 2. Curriculum payload | [`Fazmin/AILearningGuide`](https://github.com/Fazmin/AILearningGuide) | **MIT** `1 081 B` `e29ef713b542` | **Offline desktop app, 51 interactive ML labs.** Runs with no network — the content Kolibri distributes. |
+| 3. Authoring | [`learningequality/studio`](https://github.com/learningequality/studio) | **carried** | Localise and re-sequence the labs for the national curriculum. |
+| 4. Local credential | [`oneorigin-2-0/dcc-credential-co-writer-monorep`](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep) | **MIT** *(pinned `p300`)* | **Runs a fine-tuned `phi-4-mini` under Ollama** — AI-assisted Open Badges v3 authoring with **no egress**. |
+| 5. Verification | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) · [`digitalcredentials/verifier-core`](https://github.com/digitalcredentials/verifier-core) | **carried** | OBv3 output is checkable offline against a standard, not trusted as free text. |
+| 6. Retention | [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | **MIT** `1 064 B` `092d389ac156` | Spaced repetition locally. |
+
+**Wiring.** Kolibri is the distribution and the gradebook; `AILearningGuide` is the payload teachers and
+students actually run; Studio localises it; the DCC co-writer — **the only self-hostable credential
+authoring agent on this shelf, because its model runs under Ollama** — issues OBv3 badges on completion;
+the 1EdTech and DC validators verify them without calling anyone. 🟢 **Every step runs with the network
+cable out**, which is what makes this briefable to a ministry rather than aspirational.
+
+🔴 **Deliberately not used:** [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) (499★,
+multilingual tutoring for underserved learners) — **no licence** (`p302`). It is the most tempting component
+for exactly this engagement and it cannot be used.
+⚠️ **Boundaries:** `AILearningGuide` **teaches** AI; it is not an agent, and its internals were unread this
+pass. The DCC co-writer is **0★ / 1 fork** and is **not** an official DCC release. Kolibri is the only
+production-proven component in the stack.
+
 ## 🟢 Pass 301 — three new patterns (`P69`-`P71`), each built from rows promoted or pinned THIS pass, and every component licence PAYLOAD-verified with a sha256
 
 ⏱️ `2026-10-18`. Evidence:

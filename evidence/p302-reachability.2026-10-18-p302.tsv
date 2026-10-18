@@ -1,0 +1,13 @@
+host	tool	result	what_was_wanted	class
+github.com	WebFetch	200 OK	repo pages: stars, forks, licence label, releases, README	GITHUB
+raw.githubusercontent.com	curl	200 OK	LICENSE payload bytes + sha256	GITHUB
+github.com/search	WebFetch	200 OK (85 / 4.8k results, paginated)	repo enumeration by query+stars+created	GITHUB
+github.com/topics/*	WebFetch	200 OK (ai-tutor 750, ai-education 528, intelligent-tutoring-system 41, education 39007)	repo enumeration by topic, star-sorted	GITHUB
+api.github.com	curl	403 agent-proxy interception	licence_spdx, pushed_at, exact stars	GITHUB-API-GATED
+www.congress.gov	WebFetch	getaddrinfo ENOTFOUND	H.R. 8747 actions + recorded votes	US-GOV-PRIMARY
+www.govinfo.gov	WebFetch	getaddrinfo ENOTFOUND	H.R. 8747 enrolled text	US-GOV-PRIMARY
+docs.house.gov	WebFetch	getaddrinfo ENOTFOUND	H.R. 8747 markup PDF	US-GOV-PRIMARY
+digital-strategy.ec.europa.eu	WebFetch	getaddrinfo ENOTFOUND	AI Act high-risk timeline + Digital Omnibus dates	EU-PRIMARY
+www.iesalc.unesco.org	WebFetch	getaddrinfo ENOTFOUND	LATAM 87/74/26 triple at source (open since p282)	IGO-PRIMARY
+www.vietnam-briefing.com	WebFetch	getaddrinfo ENOTFOUND	Decision 33/2026/QD-TTg education systems + deadlines	PRESS
+www.allenandgledhill.com	WebFetch	getaddrinfo ENOTFOUND	Decision 33/2026/QD-TTg legal analysis	PRESS

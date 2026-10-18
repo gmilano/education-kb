@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 302 — 2026-10-18 — **THE DEAD AGENT LEG WAS REPLACED RATHER THAN REWORDED: GITHUB TOPIC PAGES ARE AN ENUMERATION WITH A DENOMINATOR, AND THEY PAID 14 PERMISSIVE ROWS, 9 LICENCE REFUSALS AND A 29.6k★ REPO WITH NO GRANT**
+
+**One-line summary:** 🔴 The mandated agent phrasing nil'd a **twenty-eighth** time, so `p302` retired it
+and read **`github.com/topics/*` through `WebFetch`** instead — a channel that **publishes its own
+population** (`ai-tutor` **750**, `ai-education` **528**, `intelligent-tutoring-system` **41**, `education`
+**39 007**) and orders it by stars. 🟢 **One leg: 14 new permissive rows, every licence read as a PAYLOAD
+with its `sha256₁₂`, and 9 refusals** — the largest single-leg yield this base has recorded.
+🔴 **The refusal that matters most: [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor)
+— `29.6k★`, `3.3k` forks — has NO LICENCE AT ALL and its README's first heading is `DISCONTINUED`.**
+🟢 **A carried APAC datum was CORRECTED:** the instrument putting education in Vietnam's high-risk tier is
+**`Decision 33/2026/QD-TTg`**, effective **`2026-08-15`** — not "the Law on AI, in force `2026-03-01`" —
+and it names **three** education systems, not two. 🟢 **North America broke a two-pass regional drought with
+three new datums** (`H.R. 8747`, Canada's `AI for All`, Nevada `AB 406`). 🟢 **Four new patterns
+(`P72`-`P75`).**
+
+### 🟢 What was found
+
+| finding | verdict |
+|---|---|
+| `github.com/topics/*` via `WebFetch` is reachable, star-sorted, and reports its own repo count | 🟢 **NEW INSTRUMENT** — replaces the 28-nil mandated phrasing; `p303` should page past rank 20 |
+| 14 new permissive education rows, all payload-verified with byte length + `sha256₁₂` | 🟢 **ADDED** to `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` |
+| 9 of 23 repositories in the star-ordered head refused on licence grounds | 🔴 **≈39 % of this vertical's head is unusable** — first time stated as a RATE over an enumerated population |
+| `JushBJJ/Mr.-Ranedeer-AI-Tutor` (29.6k★ / 3.3k forks) | 🔴 **NO GRANT** (4 filenames × 2 branches all 404; sidebar shows only Readme + Activity) **and DISCONTINUED** |
+| `HugeCatLab/ChatTutor` (1.3k★), best maintained visual tutor after DeepTutor | 🔴 **AGPL-3.0** `34 522 B` `20b067f86de3` — reaches network use; study, do not ship |
+| Vietnam: instrument, date and system count | 🔴 **CORRECTED** — `Decision 33/2026/QD-TTg`, signed `2026-06-30`, effective `2026-08-15`, **46 systems / 6 sectors, education = 3** |
+| Vietnam's **first** education system: content from **UNCONTROLLED DATA SOURCES** | 🟢 **NEW BOUNDARY** — a *provenance* rule, not a decision rule; catches unrestricted RAG tutors on their face |
+| `H.R. 8747` K-12 AI Literacy and Readiness Act of 2026 | 🟢 **NEW** — markup `2026-07-21`, Ordered to be Reported (Amended) **18Y-15N**; would make educator AI skills an **ESEA allowable use**. 🔴 **Not law** |
+| Tutoring **evaluation** arrived as MIT code (`bydeng01` ×2) | 🟢 **NEW TIER** — pre-registered audits of whether a helpfulness judge rewards **answer leakage** |
+| `HKUDS/DeepTutor` | 🟢 **ADVANCED** `v1.6.14` → **`v1.6.15`** (rendered `2026.10.19`); 41.6k★ held; Apache-2.0 re-read at payload `11 408 B` `cd2f54e1e506` |
+| Permissive education ERP/CRM | 🔴 **TWENTY-SECOND CONSECUTIVE NIL** — the tier is copyleft by constitution; keep permissive code in the AGENT tier |
+
+### 🔴 What this pass could NOT do
+
+🔴 **No primary government or IGO source — TWENTY-FIRST pass — but the cause is now NAMED.** This session's
+resolver answers **`github.com`** and **`raw.githubusercontent.com`** and returned **`getaddrinfo
+ENOTFOUND`** for every other host tried: `www.congress.gov`, `www.govinfo.gov`, `docs.house.gov`,
+`digital-strategy.ec.europa.eu`, `www.iesalc.unesco.org`, `www.vietnam-briefing.com`,
+`www.allenandgledhill.com`. 🟢 **It is a resolver SCOPE, not governments being blocked** — which predicts
+every future primary leg fails and every GitHub leg succeeds. Matrix:
+[`evidence/p302-reachability.2026-10-18-p302.tsv`](evidence/p302-reachability.2026-10-18-p302.tsv).
+🔴 **So every non-GitHub datum this pass — the Vietnam correction, `H.R. 8747`'s tallies, Canada's date — is
+SEARCH-SNIPPET-ATTRIBUTED.** Better sourced than what it replaces; still not primary.
+🔴 **`api.github.com` is intercepted by the agent proxy**, so no exact star integer, no `licence_spdx`, no
+`pushed_at`. **All star figures are rendered and rounded.**
+🔴 **`make hooks` was NOT run** (this session could not execute this base's code), reproducing `p301`.
+Licences were read directly from `raw.githubusercontent.com` with byte lengths and hashes recorded.
+🔴 **Three date sets are REFUSED:** Vietnam's compliance deadline (3 incompatible readings), the EU AI Act
+timeline (3 incompatible readings this pass alone — carried `2027-12-02` stands), Nevada `AB 406`'s scope.
+🔴 **Topic pages were read at page 1 only** — rows below rank 20 of 750 and 528 are **unmeasured, not
+absent**.
+🔴 **The IESALC LATAM triple (87/74/26) has still never been read at its publisher** — open since `p282`.
+
 ## Pass 301 — 2026-10-18 — **THE SESSION WAS FORBIDDEN TO RUN THIS REPOSITORY'S OWN INSTRUMENTS, SO THE SUBSTITUTE WAS CALIBRATED AGAINST THEIR PUBLISHED OUTPUT — AND 105 PAYLOAD READS TURNED TWO TWENTY-PASS ANECDOTES INTO RATES**
 
 **One-line summary:** 🔴 `make hooks` **and** `compose/code/lib/probe_payload.sh` were both **DENIED by

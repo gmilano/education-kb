@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 `T-p302a` — WHEN A SEARCH CHANNEL DIES, REPLACE THE INSTRUMENT, NOT THE QUERY: AN ENUMERATION WITH A DENOMINATOR BEATS A RANKED OPINION
+
+⏱️ `2026-10-18`, pass 302. Evidence:
+[`p302-websearch.2026-10-18-p302.tsv`](../evidence/p302-websearch.2026-10-18-p302.tsv) ·
+[`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv).
+
+🔴 **Twenty-eight windows of `top open source AI agents education 2026 github MIT` produced zero new
+education rows.** `p300` and `p301` each recommended retiring it; both re-ran it anyway and recorded another
+nil. 🟢 **`p302` replaced the instrument instead of rewording the query, and the yield in a single leg was
+fourteen new permissive rows and nine licence refusals.**
+
+🟢 **The mechanism is not that the new channel is "better sourced" — it is that it has a DENOMINATOR.**
+`github.com/topics/*` reports its own population (`ai-tutor` **750**, `ai-education` **528**,
+`intelligent-tutoring-system` **41**, `education` **39 007**) and orders it by stars. A listicle reports an
+author's selection with no population and no ordering guarantee; **a topic page reports a census head.**
+That difference converts three previously unanswerable questions into measurements:
+
+| question | under a listicle | under an enumeration |
+|---|---|---|
+| "is this all of them?" | unanswerable | **answerable** — 20 of 750 read, remainder *unmeasured, not absent* |
+| "what fraction is unusable?" | unanswerable | **9 of 23 refused ≈ 39 %** |
+| "is the channel dead or the vertical empty?" | indistinguishable | **distinguishable** — `education` at 39 007 repos has a head of *book lists*, so the channel is mis-aimed, not the vertical empty |
+
+🔵 **The transferable law: a leg that cannot state its denominator cannot distinguish a nil from a
+saturation, and this base has spent dozens of passes unable to tell them apart.** 🟢 **Prefer any channel
+that publishes its population size**, even when its coverage is narrower.
+
+## 🔴 `T-p302b` — AT THE HEAD OF THIS VERTICAL, STAR COUNT IS ANTI-CORRELATED WITH USABILITY
+
+⏱️ `2026-10-18`, pass 302. Evidence:
+[`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv).
+
+🔴 **The two highest-starred education-specific tutoring artefacts on GitHub are both unusable by Globant,
+and for different reasons:**
+
+| rank by stars | repo | stars | grant | usable? |
+|---|---|---|---|---|
+| 1 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **41.6k** | Apache-2.0 (payload `cd2f54e1e506`) | 🟢 **YES** |
+| 2 | [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | **29.6k** | 🔴 **NONE** + **DISCONTINUED** | 🔴 **NO** |
+| 3 | [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | **1.3k** | 🔴 AGPL-3.0 (payload `20b067f86de3`) | 🔴 **NO** (study only) |
+
+🔴 **Rank 2 has 3.3k forks of software nobody has the right to use, and no maintainer left to ask** — the
+README's first heading is `DISCONTINUED`. 🔴 **Rank 3 is the most capable maintained visual tutor in the
+vertical and its copyleft reaches network use**, which is how teaching platforms are delivered.
+
+🟢 **Measured over the star-ordered head: 9 refusals in 23 repositories, about `39 %`.** 🔵 **This is the
+first time this base can state that as a RATE over an enumerated population rather than as an impression**,
+and it is the standing answer whenever a client, a listicle or a search engine advances a star count as
+evidence of usability. 🟢 **The operational rule is unchanged but now priced: read the licence PAYLOAD before
+the README.** A repository's popularity predicts its *visibility*, not its *availability* — and in this
+vertical the correlation at the head is **negative**.
+
+## 🔴 `T-p302c` — THE REGULATORY QUESTION IS NO LONGER ONLY "MAY AI DECIDE ABOUT A STUDENT" — VIETNAM NOW ALSO ASKS WHERE THE TEACHING CONTENT CAME FROM
+
+⏱️ `2026-10-18`, pass 302. Evidence:
+[`p302-websearch.2026-10-18-p302.tsv`](../evidence/p302-websearch.2026-10-18-p302.tsv).
+
+🟢 **Since `p288` this base has carried a convergent finding: every jurisdiction's education rules fall on
+one boundary — is AI permitted to DECIDE about a student?** Vietnam names assessment and ranking; Oklahoma
+and Maryland bar high-stakes decisions; NYC's red tier bars grading, discipline and IEP development; the EU
+puts assessment in its high-risk annex. 🟢 **That finding holds. `p302` adds a SECOND boundary that no other
+jurisdiction on this file has drawn.**
+
+🔴 **Vietnam's `Decision 33/2026/QD-TTg` (effective `2026-08-15`) lists, as the FIRST of its three
+education high-risk systems, those that "generate self-study content for learners from UNCONTROLLED DATA
+SOURCES."** 🔵 **That is a provenance rule, not a decision rule.** A tutor that decides nothing — that only
+explains — is in scope if its corpus is unconstrained. **An unrestricted RAG tutor over scraped material is
+caught on its face.**
+
+🟢 **Three consequences, and they run in the studio's favour:**
+1. 🔵 **Source control becomes a compliance feature with a named legal hook**, and
+   [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) (**Apache-2.0**) already keeps
+   generated teaching material tied to its sources — a pre-built answer to a written requirement.
+2. 🔵 **Curriculum alignment stops being a nice-to-have.** A system aligned to named textbooks — as
+   [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) (**Apache-2.0**) is to
+   统编版 and 人教版 editions — is by construction *not* drawing on uncontrolled sources.
+3. 🔴 **It cuts against the cheapest architecture in the market.** "Point a RAG pipeline at the open web"
+   is the default demo, and in Vietnam it is the regulated case.
+
+⚠️ **This is SEARCH-SNIPPET-ATTRIBUTED** (the Decision's own text and both legal analyses were unreachable),
+and this pass **refuses** the compliance deadline, which three sources give incompatibly. ⚠️ **One source
+states the classification attaches only where the AI output is the SOLE basis for a decision without
+meaningful human review** — **if** that holds it would narrow all three education systems to a design
+question, which is why it must be verified at the Appendix before it is ever briefed.
+
+## 🟢 `T-p302d` — TUTORING EVALUATION ARRIVED AS CODE, AND ITS PREMISE IS THAT THE HELPFULNESS JUDGE MAY BE REWARDING HARM
+
+⏱️ `2026-10-18`, pass 302. Evidence:
+[`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv).
+
+🟢 **This base has carried [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai)
+as the permissive evaluation framework since `p301`. A harness is not a design.** `p302` found the design,
+twice, both **MIT**, both in the low single digits of stars:
+[`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) (arXiv:2607.28128) and
+[`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit).
+
+🔴 **The premise is the trend:** the first asks whether an LLM helpfulness judge *"rewards the answer-leakage
+that reduces the student's later independent work."* 🔵 **Stated plainly — the metric the whole industry
+optimises (did the student find the tutor helpful?) may be positively correlated with the behaviour that
+destroys learning (giving away the answer).** If that holds, every helpfulness-scored tutoring deployment
+is optimising against its own purpose.
+
+🟢 **The method is what makes it reusable, and it is unusually disciplined for a 3-star repository:** one
+**frozen base model** wrapped in two policies that **differ only in structure** — `ConvTutor` (single-node
+LangGraph) against `PedTutor` (state tracker + decomposer + **deferral gate** + hint cascade) — plus a cold
+baseline for the floor, a deliberately **weak simulated student** (**Llama-3.1-8B**) so leakage has
+somewhere to show, Opus as primary judge with a second judge for robustness, a **leakage matcher frozen
+before scoring** (`protocol/leakage.py`), **per-component ablations** removing tracker / gate / cascade one
+at a time, **10 replicates × {cold, conv, ped}** per base, and GPT and Gemini bases run separately and
+**never pooled**.
+
+🔵 **Why it lands now:** Vietnam and Korea have both made automated assessment a named obligation, and the
+difference between an engagement that brings *assurances* and one that brings *evidence* is precisely this
+artefact. 🟢 **The deliverable shape is clear — `inspect_ai` as harness, this as protocol, the client's own
+tutor as the system under test.**
+
+⚠️ **Hard boundary, repeated because it is easy to lose: NO RESULTS ARE STATED ON EITHER PAGE.** The READMEs
+give commands to recompute from tracked tables; the pre-registered hypotheses live in a `paper-plan.md` this
+pass did **not** read. 🔴 **Cite the design. Never cite an effect size from these rows** — and note that
+`ability-levels-audit`'s default branch is **`master`**, so a pin written against `main` 404s.
+
 ## 🔴 `T-p301a` — WHEN THE INSTRUMENT ITSELF IS UNRUNNABLE, THE ONLY HONEST SUBSTITUTE IS A RE-IMPLEMENTATION THAT IS CALIBRATED AGAINST THE ORIGINAL'S OWN PUBLISHED OUTPUT
 
 ⏱️ `2026-10-18`, pass 301. Evidence:

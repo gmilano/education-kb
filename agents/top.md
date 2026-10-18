@@ -4,6 +4,169 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 302 — THE MANDATED AGENT LEG NIL'D A TWENTY-EIGHTH TIME AND WAS REPLACED: GITHUB'S OWN TOPIC PAGES ARE REACHABLE, STAR-SORTED AND ENUMERABLE, AND THEY PAID FOURTEEN PERMISSIVE ROWS IN ONE LEG
+
+⏱️ **First pass of `2026-10-18` after `p301`.** Evidence:
+[`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv) ·
+[`p302-reachability.2026-10-18-p302.tsv`](../evidence/p302-reachability.2026-10-18-p302.tsv) ·
+[`p302-websearch.2026-10-18-p302.tsv`](../evidence/p302-websearch.2026-10-18-p302.tsv).
+
+🔴 **The mandated phrasing `top open source AI agents education 2026 github MIT` returned general-purpose
+agent listicles for the twenty-eighth consecutive window** — OpenClaw, OpenHands, CrewAI, MetaGPT, two
+courses, zero new education rows. `p300` and `p301` both recommended retiring it. **This pass retired it
+and measured the replacement.**
+
+🟢 **The replacement is `github.com/topics/*` read through `WebFetch`.** It is reachable, it is
+**star-sorted**, and it reports its own population: `ai-tutor` **750** repositories, `ai-education`
+**528**, `intelligent-tutoring-system` **41**, `education` **39 007**. That is an *enumeration* with a
+denominator, not a listicle with an opinion. 🟢 **One leg produced fourteen new permissive rows and nine
+licence flags — more than the four mandated legs have produced between them in twenty-eight windows.**
+
+### 🔴 The licence finding of the pass, and it is the biggest single-row risk this base has recorded
+
+🔴 **[`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) — `29.6k★`,
+`3.3k` forks — HAS NO LICENCE AT ALL, AND ITS README OPENS WITH THE HEADING `DISCONTINUED`.**
+
+It is, by stars, the second-most-adopted education-specific AI tutoring artefact on GitHub after
+`HKUDS/DeepTutor`, and it is the one a studio is most likely to reach for from a search engine. ⚠️ **Read
+twice before recording**, because the claim is consequential: `raw.githubusercontent.com` returned **404
+for `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` on both `main` and `master`**, and the rendered
+sidebar's Resources block lists **only "Readme" and "Activity"** — no licence link. 🔴 **No grant means no
+permission**: not MIT, not "probably fine", *absent*. **3.3k forks of a repository nobody has the right to
+use.** 🔵 **Brief it as the cautionary row**: it is the clearest available demonstration that star count is
+not a proxy for usability, and it is also **discontinued**, so the usual "ask the maintainer to add a
+licence" remedy has no addressee.
+
+🔴 **And the highest-starred *maintained* education tutor after DeepTutor is copyleft:**
+[`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) — **`1.3k★` / 189 forks / 193 commits** —
+is **AGPL-3.0** (payload `34 522 B`, sha256₁₂ `20b067f86de3`). Genuinely interesting software: an AI teacher
+with an **electronic whiteboard**, Math Canvas and Mermaid mindmaps, Vue + ElysiaJS + **GeoGebra**,
+self-hostable by `docker compose`, pluggable across OpenAI / Anthropic / DeepSeek. 🔴 **But AGPL reaches
+network use**, so it cannot sit inside a client's proprietary platform. 🔵 **Cite it as the capability
+reference for visual tutoring — the thing to study, not the thing to ship.**
+
+### 🟢 The fourteen new permissive rows, every licence read as a PAYLOAD with its sha256
+
+All fourteen are recorded in
+[`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv) with
+byte length and `sha256₁₂`. ⚠️ **Star counts are as RENDERED on the topic page or the repo page this pass**
+— `api.github.com` is intercepted by this session's agent proxy, so no exact integer was available for any
+row.
+
+🟢 **The three that are worth an engagement conversation:**
+
+1. **[`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei)** — **MIT** (`1 081 B`,
+   `3b2ca73e81ad`), **293★ / 63 forks**, and the most *pedagogically* designed row added this pass. A
+   **Claude Code skill** (`SKILL.md`, installs to `~/.claude/skills/`), five modes — Tutor, Hint, Review,
+   Interview, Pattern Mapper — and a **five-level progressive hint cascade** running from "gentle
+   observation" through "pattern nudge" and "technique reveal" to a pseudocode skeleton **as a last
+   resort**. Its README states the premise explicitly: *"Copy-pasting solutions doesn't build
+   problem-solving skills."* 🔵 **Why it matters past LeetCode:** the hint cascade is a reusable
+   *withholding* policy, and withholding is the part every tutoring engagement has to build and nobody
+   ships. ⚠️ **9 commits.** Copy the cascade; do not take a dependency.
+2. **[`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion)** — **Apache-2.0**
+   (`10 227 B`, `59a378bf23a0`), **108★ / 9 forks**, 10 commits. A K-12 "Trinity" companion: a coordinator
+   persona plus a liberal-arts and a STEM persona, with **"心跳任务" (heartbeat tasks)** — a proactive loop
+   that wakes the student, assigns, verifies completion and cycles. 🟢 **Its distinguishing property is
+   curriculum alignment, which almost nothing on this shelf has:** it names **统编版 Chinese grades 1-12**
+   and **人教版 English grades 3-12**, **人教版/北师大版 grades 7-12** for STEM. 🟢 **And it ships a parent
+   channel** — parent-child translation, a 21-day habit plan, and a parent report covering mastery, concerns
+   and next-week plan. ⚠️ **Boundaries:** it is a *skill*, not a service — it runs inside OpenClaw, Claude
+   Code, Cursor or Codex, so the host is a dependency; it needs a Tencent Cloud key for dialogue; and its
+   own README says it **"不能替代"** professional teachers or counsellors. 🔵 **The heartbeat-plus-parent-report
+   pair is the shape a LATAM or APAC K-12 engagement should copy**, independent of the Chinese textbooks.
+3. **[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem)** — **Apache-2.0**
+   (`10 785 B`, `65125d9e480b`, **© 2023 Technischen Hochschule Mittelhessen**), **24★ / 9 forks**, default
+   branch **`dev`**. *"Intelligent, personalized feedback for students using artificial intelligence"*: it
+   **automatically checks submissions and returns an immediate result**, proposes fixes, and — the part that
+   earns the row — **aggregates common mistakes so the lecturer can address them in class**. 🟢 **An
+   institution-held Apache-2.0 grant with Helm charts and Kubernetes install instructions** is a different
+   risk class from a 2-commit personal repo. ⚠️ **The AI mechanism is not documented on the page**, the
+   Languages panel is empty, the visible demo is an **SQL checker**, and production use at THM is *implied
+   by* a Helm chart and a `frits.mni.thm.de` project site, **not stated**. Read the code before promising a
+   subject beyond SQL.
+
+🟢 **The two that matter most for the regulatory moment, and they are the smallest rows here.**
+[`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) (**MIT**, `1 150 B`,
+`a1c6b65c5bb1`, **3★**, arXiv:2607.28128) and
+[`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) (**MIT**, `1 154 B`,
+`fef00f185287`, **4★**, default branch **`master`**) are **pre-registered audits of LLM judges in a tutoring
+loop.** The first asks whether an LLM helpfulness judge *"rewards the answer-leakage that reduces the
+student's later independent work"* — it wraps **one frozen base model** in two policies (**ConvTutor**, a
+single-node LangGraph policy, versus **PedTutor**, a state machine with tracker, decomposer, **deferral
+gate** and hint cascade), scores them against a cold baseline with a weak simulated student
+(**Llama-3.1-8B**), judges with Opus and cross-checks with a second judge, and ships a **frozen
+answer-leakage matcher** (`protocol/leakage.py`) plus ablations that remove the tracker, the gate or the
+cascade one at a time. Confirmatory design: **10 replicates × {cold, conv, ped}** per tutor base, with GPT
+and Gemini bases run separately and **never pooled**. 🔵 **Why two 3-star repos lead a regulatory section:**
+Vietnam and Korea now require *evidence* about automated assessment (see
+[`intel/market.md`](../intel/market.md)), and this is the only artefact on this shelf that measures whether
+a tutor's helpfulness score is **anti-correlated with learning**. ⚠️ **No results are stated on either
+page** — the README gives commands to recompute from tracked tables, and the hypotheses live in a
+`paper-plan.md` this pass did **not** read. **Cite the design, not an effect size.**
+
+🟢 **The remaining nine permissive rows,** each payload-verified and entered in the table below:
+`assafkip/claudemy` (**MIT**, 309★, topic→cited audio lessons),
+`Fazmin/AILearningGuide` (**MIT**, 202★, offline desktop, 51 labs),
+`KeWang0622/kaogong-skill` (**MIT**, 186★, Chinese civil-service exam prep),
+`PrepLabsAI/InterviewMentor` (**MIT**, 112★),
+`codeXsidd/Studivexa` (**MIT**, 72★),
+`TovTechOrg/Tov-learn` (**MIT**, 36★, spaced repetition as a skill),
+`ProjectAJ14/eklavya` (**MIT**, 10★ — quizzes the developer on code the *agent* wrote),
+`khayyam-math/khayyam-math` (**MIT**, 4★, voice-narrated math figures),
+`sohan1611/BloodCoded_Agentic` (**MIT**, 2★, LangGraph + **Bayesian Knowledge Tracing**).
+
+### 🔴 Seven more rows were found and REFUSED on licence grounds — the refusals are the deliverable
+
+| repo | stars | licence payload | why refused |
+|---|---|---|---|
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | **29.6k** | 🔴 **NONE** (404 × 4 filenames × 2 branches) | **No grant.** Also **DISCONTINUED**. The single most reachable trap in this industry. |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | **1.3k** | AGPL-3.0, `34 522 B`, `20b067f86de3` | Copyleft reaches **network use**. Study it; do not ship it inside a client platform. |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | 499 | 🔴 **NONE** | No grant. Multilingual tutoring for underserved learners — exactly the profile a LATAM pitch wants, and unusable. |
+| [`DAMO-NLP-SG/M3Exam`](https://github.com/DAMO-NLP-SG/M3Exam) | 105 | 🔴 **NONE** | No grant on a **multilingual/multimodal/multilevel exam benchmark** — the evaluation asset this shelf most needs. |
+| [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) | 71 | AGPL-3.0, `34 523 B`, `8486a10c4393` | Copyleft. Learning-material→game conversion. |
+| [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 56 | 🔴 **NONE** | No grant on a **learning-science-grounded** tutor — the academic lineage is the attraction. |
+| [`Jeremy-xuan/SocraticNovel`](https://github.com/Jeremy-xuan/SocraticNovel) | 32 | Creative Commons, `1 227 B`, `593122cbd00b` | 🔴 **A CC licence is not a software licence.** Do not treat it as one. |
+| [`blessed0x/scratch-unified-mcp`](https://github.com/blessed0x/scratch-unified-mcp) | 1 | 🔴 **NONE** | **108 MCP tools** over a headless Scratch VM — the best-shaped K-12 coding artefact seen, with no grant. |
+| [`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion) | 2 | 🔴 **NONE** | No grant. FastAPI + React + RAG learner diagnosis. |
+
+🔵 **Nine refusals against fourteen acceptances is the honest yield of this instrument**, and it is the
+number to carry: **a shelf built from topic pages without payload reads would have been ~39 % unusable.**
+
+### 🟢 `HKUDS/DeepTutor` — re-read, and it advanced a release since `p301`
+
+| cell | carried (`p301`) | read `p302` | verdict |
+|---|---|---|---|
+| stars | 41.6k★ | **41.6k★**, 5.3k forks | 🟢 **HELD** |
+| licence | Apache-2.0 | **Apache-2.0** payload `11 408 B`, sha256₁₂ `cd2f54e1e506` | 🟢 **CONFIRMED at payload** |
+| release | `v1.6.14` `2026.10.8` | 🟢 **`v1.6.15`, rendered `2026.10.19`** | 🟢 **ADVANCED — live cell updated** |
+
+⚠️ **The rendered release date `2026.10.19` is one day ahead of this pass's own date (`2026-10-18`)** —
+GitHub renders release dates in the viewer's locale and this base has no clock authority over it. **Recorded
+as rendered, not as asserted.**
+
+### 🔴 What this pass could NOT do
+
+🔴 **No primary government or IGO source — TWENTY-FIRST pass — and the cause is now NAMED rather than
+guessed.** This session's resolver answers **`github.com` and `raw.githubusercontent.com` and nothing
+else that was tried**: `www.congress.gov`, `www.govinfo.gov`, `docs.house.gov`,
+`digital-strategy.ec.europa.eu`, `www.iesalc.unesco.org`, `www.vietnam-briefing.com` and
+`www.allenandgledhill.com` **all returned `getaddrinfo ENOTFOUND`**, while GitHub answered every time.
+🟢 **So the drought is a RESOLVER SCOPE, not host-specific blocking of governments** — which is a different
+and more useful fact: it predicts that *every* future primary-source leg fails and *every* GitHub leg
+succeeds. Full matrix:
+[`p302-reachability.2026-10-18-p302.tsv`](../evidence/p302-reachability.2026-10-18-p302.tsv).
+🔵 **The standing recommendation for `p303` follows from it: stop spending legs on primary sources from this
+environment, and spend them on GitHub enumeration, where this pass got a 14-row yield.**
+🔴 **`api.github.com` is intercepted by the agent proxy** (it answers with an `add_repo` instruction), so
+**no exact star integer, no `licence_spdx` field and no `pushed_at`** was available for any row this pass.
+Every star figure here is a **rendered, rounded** value.
+🔴 **`make hooks` was NOT run** — this base's gates live in a repository this session was not cleared to
+execute code from, reproducing `p301`. The licence instrument was therefore the direct
+`raw.githubusercontent.com` payload read, which needs no local code and is recorded with byte lengths and
+hashes so any later pass can reproduce it exactly.
+
+
 ## 🟢 Pass 301 — THE DIRECTED LEG PAID AGAIN AND THE MANDATED ONE NIL'D FOR THE TWENTY-SEVENTH TIME; THREE NEW ROWS, AND AN IDENTITY CHECK THAT DEMOTED ONE OF THEM FROM "PROJECT" TO "DIVERGED FORK"
 
 ⏱️ **Twenty-third pass of `2026-10-18`.** Evidence:
@@ -1354,6 +1517,22 @@ non-commercial friction.
 
 | Agent | Repo | Licence | Stars | What it does |
 |-------|------|---------|-------|--------------|
+| 🆕 **algo-sensei** | [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | 🟢 **MIT** *(**payload** `LICENSE`, 1 081 B, sha256₁₂ `3b2ca73e81ad`, read `p302`)* | 🟡 **293★ / 63 forks / 9 commits / `main`** | 🟢 **A Claude Code skill whose real asset is a WITHHOLDING POLICY.** LeetCode/DSA mentor with five modes (Tutor, Hint, Review, Interview, Pattern Mapper) and a **five-level progressive hint cascade**: gentle observation → pattern nudge → approach direction → technique reveal → pseudocode skeleton **as a last resort**. README premise: *"Copy-pasting solutions doesn't build problem-solving skills."* Runs as a skill (`SKILL.md` → `~/.claude/skills/`) or pasted into a Claude.ai Project. 🔵 **Lift the cascade, not the repo** — graduated withholding is what every tutoring engagement must build and almost nothing ships. ⚠️ **9 commits; Languages panel empty, so the implementation was not read.** |
+| 🆕 **feifei-companion** (飞飞学伴) | [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 10 227 B, sha256₁₂ `59a378bf23a0`, read `p302`)* | 🟡 **108★ / 9 forks / 10 commits / `main`** | 🟢 **THE ONLY ROW ON THIS SHELF THAT IS CURRICULUM-ALIGNED AND SHIPS A PARENT CHANNEL.** K-12 "Trinity": coordinator + liberal-arts + STEM personas. **"心跳任务" (heartbeat tasks)** — proactive loop that wakes the learner, assigns, verifies completion, cycles. Alignment is named, not implied: **统编版 Chinese grades 1-12**, **人教版 English grades 3-12**, **人教版/北师大版 STEM grades 7-12**. Parent side: parent-child translation, 21-day habit plan with check-ins, and a report covering mastery / concerns / weekly highlights / next-week plan. ⚠️ **It is a SKILL, not a service** — requires an OpenClaw / Claude Code / Cursor / Codex host, plus a Tencent Cloud key for dialogue. Its own README: **"不能替代"** professional teachers or counsellors. 🔵 **Copy the heartbeat + parent-report pair for K-12 anywhere**; the textbooks are swappable, the shape is the finding. |
+| 🆕 **feedbacksystem** | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 10 785 B, sha256₁₂ `65125d9e480b`, holder **© 2023 Technischen Hochschule Mittelhessen**, read `p302`)* | 🟡 **24★ / 9 forks / branch `dev`** | 🟢 **AN INSTITUTION-HELD GRADING/FEEDBACK SERVICE — a different risk class from a personal repo.** *"Intelligent, personalized feedback for students using artificial intelligence."* Automatically checks submissions and returns an **immediate** result, proposes fixes for mistakes, and **aggregates common mistakes so the lecturer can address them in class** — the loop back to teaching is the part that earns the row. Ships **Helm charts + Kubernetes** production install. ⚠️ **The AI mechanism is undocumented on the page**; Languages panel empty; the visible demo is an **SQL checker**; production use at THM is implied by a Helm chart and `frits.mni.thm.de`, **not stated**. Read the code before promising any subject beyond SQL. |
+| 🆕 **conv-vs-ped-tutor** | [bydeng01/conv-vs-ped-tutor](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** *(**payload** `LICENSE`, 1 150 B, sha256₁₂ `a1c6b65c5bb1`, read `p302`)* | 🔴 **3★ / 0 forks / `main`** | 🟢 **THE EVALUATION ARTEFACT THE REGULATORY MOMENT ACTUALLY REQUIRES (arXiv:2607.28128).** Pre-registered audit of whether an LLM helpfulness judge *"rewards the answer-leakage that reduces the student's later independent work."* **One frozen base model, two policies:** `ConvTutor` (single-node LangGraph) vs `PedTutor` (state tracker + decomposer + **deferral gate** + hint cascade), against a cold baseline, with a weak simulated student (**Llama-3.1-8B**), Opus as primary judge and a second judge for robustness. Ships a **frozen answer-leakage matcher** (`protocol/leakage.py`) and **ablations** removing tracker / gate / cascade individually. Design: **10 replicates × {cold, conv, ped}** per base; GPT and Gemini bases run separately and **never pooled**. 🔵 **This is how you produce evidence rather than assurances for Vietnam's and Korea's automated-assessment duties.** ⚠️ **NO RESULTS ON THE PAGE** — tables are recomputed by command, hypotheses live in an unread `paper-plan.md`. **Cite the design, never an effect size.** |
+| 🆕 **ability-levels-audit** | [bydeng01/ability-levels-audit](https://github.com/bydeng01/ability-levels-audit) | 🟢 **MIT** *(**payload** `LICENSE`, 1 154 B, sha256₁₂ `fef00f185287`, read `p302`)* | 🔴 **4★ / branch `master`** | 🟡 **Companion audit to the row above: pre-registered study of LLM judges with analysis of BOUNDED-RATING BIAS across ability levels.** Matters because every adaptive-tutoring pitch assumes a judge can score a weak learner and a strong learner on the same scale — this measures whether it can. ⚠️ **4★, results not stated on the page, default branch is `master` not `main`** (a pin written against `main` will 404). |
+| 🆕 **claudemy** | [assafkip/claudemy](https://github.com/assafkip/claudemy) | 🟢 **MIT** *(**payload** `LICENSE`, 1 069 B, sha256₁₂ `262b47ee1fff`, holder **Assaf Kipnis**, read `p302`)* | 🟡 **309★** | Course generator that turns a topic into **cited audio lessons** — citation-carrying output in a modality this shelf had no row for. ⚠️ **Stars as rendered; internals unread this pass.** |
+| 🆕 **AILearningGuide** | [Fazmin/AILearningGuide](https://github.com/Fazmin/AILearningGuide) | 🟢 **MIT** *(**payload** `LICENSE`, 1 081 B, sha256₁₂ `e29ef713b542`, holder **Discover AI contributors**, read `p302`)* | 🟡 **202★** | 🟢 **OFFLINE desktop app with 51 interactive ML labs** — relevant wherever egress or connectivity is the constraint (ministries, rural deployments). ⚠️ **Teaches AI; it is not an agent.** Internals unread. |
+| 🆕 **kaogong-skill** | [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | 🟢 **MIT** *(**payload** `LICENSE`, 1 083 B, sha256₁₂ `a6943096ffde`, read `p302`)* | 🟡 **186★** | Exam-prep skill for **Chinese civil-service and public-institution exams**, including wrong-answer review. 🔵 **A high-stakes-exam vertical with a permissive grant** — the closest analogue on this shelf to a national licensing-exam engagement. ⚠️ Internals unread. |
+| 🆕 **InterviewMentor** | [PrepLabsAI/InterviewMentor](https://github.com/PrepLabsAI/InterviewMentor) | 🟢 **MIT** *(**payload** `LICENSE`, 1 071 B, sha256₁₂ `aeb634f7110b`, read `p302`)* | 🟡 **112★** | AI mock interviews for technical job preparation — the employability end of the funnel, which pairs with the credentialing rows on [`repos/foundations.md`](../repos/foundations.md). ⚠️ Internals unread. |
+| 🆕 **Studivexa** | [codeXsidd/Studivexa](https://github.com/codeXsidd/Studivexa) | 🟢 **MIT** *(**payload** `LICENSE`, 1 068 B, sha256₁₂ `58f77360830f`, read `p302`)* | 🟡 **72★** | Student productivity workspace with gamified learning and focus rooms. 🔵 On the shelf for the **engagement/retention** layer, not for instruction. ⚠️ Internals unread. |
+| 🆕 **Tov-learn** | [TovTechOrg/Tov-learn](https://github.com/TovTechOrg/Tov-learn) | 🟢 **MIT** *(**payload** `LICENSE`, 1 064 B, sha256₁₂ `092d389ac156`, holder **TovTech**, read `p302`)* | 🔴 **36★** | Claude Code skill that teaches with **spaced repetition** and a progress dashboard. 🔵 Pairs directly with [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) and the FSRS rows — spaced repetition as a *skill* rather than as an app. ⚠️ **36★**, internals unread. |
+| 🆕 **eklavya** | [ProjectAJ14/eklavya](https://github.com/ProjectAJ14/eklavya) | 🟢 **MIT** *(**payload** `LICENSE`, 1 067 B, sha256₁₂ `b64948dd9b05`, read `p302`)* | 🔴 **10★ / TypeScript** | 🟢 **Inverts the usual direction: a Claude Code plugin that QUIZZES THE DEVELOPER on the concepts behind code the AGENT just wrote**, against a local knowledge graph. 🔵 **The only row on this shelf aimed at the de-skilling problem** — directly relevant to internal enablement and to any client worried that agent adoption hollows out their team. ⚠️ **10★, early.** |
+| 🆕 **khayyam-math** | [khayyam-math/khayyam-math](https://github.com/khayyam-math/khayyam-math) | 🟢 **MIT** *(**payload** `LICENSE`, 1 079 B, sha256₁₂ `4068e5e09efd`, read `p302`)* | 🔴 **4★** | Generates **voice-narrated math figures** from short prompts, with a live tutor. 🔵 On the shelf as the permissive counterpart to `ChatTutor`'s AGPL whiteboard — visual/auditory math explanation with a grant Globant can use. ⚠️ **4★, prototype scale.** |
+| 🆕 **BloodCoded_Agentic** | [sohan1611/BloodCoded_Agentic](https://github.com/sohan1611/BloodCoded_Agentic) | 🟢 **MIT** *(**payload** `LICENSE`, 1 104 B, sha256₁₂ `4b15a1e898b3`, read `p302`)* | 🔴 **2★** | Tutoring agent that **re-targets its goal from a diagnosed failure**, built on **LangGraph + Bayesian Knowledge Tracing** — the classic BKT lineage (`CAHLR/OATutor`, `pykt-team/pykt-toolkit`) wired into a modern agent graph. 🔵 **On the shelf as a SHAPE**: it is the smallest demonstration of BKT-as-agent-state. ⚠️ **2★. Copy the pattern; do not depend on it.** |
+| 🔴 **Mr.-Ranedeer-AI-Tutor** — **REFUSED, NO GRANT** | [JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **NONE** *(404 on `LICENSE`/`LICENSE.md`/`LICENSE.txt`/`COPYING` × `main`+`master`; sidebar Resources lists only Readme and Activity — read `p302`)* | 🔴 **29.6k★ / 3.3k forks** | 🔴 **THE MOST REACHABLE TRAP IN THIS INDUSTRY, AND IT IS ON THIS TABLE SO IT IS NEVER PICKED UP BY ACCIDENT.** By stars the second-most-adopted education-specific tutoring artefact on GitHub, a GPT-4 tutor prompt for "customizable personalized learning experiences" — with **no licence of any kind**, and a README whose **first heading is `DISCONTINUED`**. 🔴 **No grant means no permission** — absent, not permissive-by-default. **3.3k forks of something nobody has the right to use**, and being discontinued, there is no maintainer to ask. ⚠️ **Brief it as the cautionary row whenever a client cites star counts.** |
+| 🔴 **ChatTutor** — **REFUSED, COPYLEFT** | [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0** *(**payload** `LICENSE`, 34 522 B, sha256₁₂ `20b067f86de3`, read `p302`)* | 🟡 **1.3k★ / 189 forks / 193 commits** | 🔴 **The highest-starred MAINTAINED education tutor after DeepTutor — and unusable inside a client's proprietary platform.** *"ChatTutor is an AI teacher equipped with the ability to use an electronic whiteboard"*: Math Canvas, Mermaid mindmaps, **GeoGebra**, Vue + Vite + ElysiaJS, self-hostable via `docker compose`, PostgreSQL, pluggable across OpenAI / Anthropic / DeepSeek, hosted option at `chattutor.app` on the user's own key. 🔴 **AGPL reaches NETWORK use**, so hosting it for a client triggers the obligation. 🔵 **Cite it as the capability reference for visual tutoring — the thing to study, not to ship** — and build the equivalent on `khayyam-math` (MIT) if the client needs to own it. |
 | 🆕 **moodle-mcp** *(falkenslab — **a DIFFERENT repository** from `MarcosNahuel/moodle-mcp` and `Jawadh-Salih/moodle-mcp-server`)* | [falkenslab/moodle-mcp](https://github.com/falkenslab/moodle-mcp) | 🟢 **MIT** *(**payload** `LICENSE`, 1 067 B, sha256₁₂ `66fa873bd85d`, holder **Falkenslab**, read `p301`)* | 🔴 **1★ / 1 fork / 166 commits / `main`** | 🟢 **THE MOODLE ROW THAT NEEDS NO ADMINISTRATOR — and that is the whole finding.** *"MCP server for agents to work in Moodle"*: **~230 tools** covering courses, activities, enrolment, and **"submissions, rubrics and marking guides (read and defined)"**. 🟢 **Its README: *"No web service tokens, no administrator, no plugin: if you can log in, it works."*** Authentication is a browser login. 🔵 **Why that matters more than the tool count:** every other Moodle path on this shelf needs a web-services token, a site admin or a plugin install — the step that converts a two-week pilot into a two-quarter procurement. A teacher with an ordinary account can run this one, and the **rubric is an input rather than a reimplementation**. ⚠️ **Boundaries, stated:** **1★ / 1 fork — nobody has adopted it**; 166 commits means worked-on, not proven; the rendered page's Languages panel is **empty**, so the implementation language was **not read**. 🔴 **And the property that makes it easy makes it dangerous: a browser-session agent acts with the TEACHER'S OWN credentials — no token to scope, no admin to audit.** Brief it as the fastest route to a **pilot**, never as the route to production without a service account. |
 | 🆕 **canvas-lms-mcp** *(chiptoe-svg — 🔴 **a DIVERGED FORK** of `bruchris/canvas-lms-mcp`, already carried)* | [chiptoe-svg/canvas-lms-mcp](https://github.com/chiptoe-svg/canvas-lms-mcp) | 🟢 **MIT** *(**payload** `LICENSE`, 1 070 B, sha256₁₂ `c29329c5ef3b`, holder **Christian Bru**, read `p301`)* — 🔴 **BYTE-IDENTICAL to the upstream row's payload: a fork INHERITS the grant** | 🔴 **0★ / 0 forks / 287 commits / `main`** | 🟡 **Canvas LMS MCP with the read/write boundary WRITTEN DOWN — the only row on this shelf that states it.** **165 registered tools: 117 read-only, 48 write**, over courses, assignments, submissions, rubrics and quizzes; grading and commenting from any MCP client. 🟢 **Plus a FERPA mode** that registers one additional tool (`resolve_pseudonym`, 166 total) — the first US-compliance affordance this shelf has seen in an LMS agent, and directly relevant to a **North America** engagement. 🔴 **Identity, settled at `p301`:** the page says *"forked from bruchris/canvas-lms-mcp"* and the licence payloads are byte-identical, but the HEADs differ (`fa8408a6…` vs `18fa06b5…`), so by `p283`'s rule — *equal HEAD == one repository* — these are **two repositories** and this row stands. ⚠️ **Cite it as a fork.** **0★ / 0 forks** against **287 commits**: the fork is *more* committed-to than adopted, the README is still the upstream's text, and **what it changes relative to upstream is undocumented and UNREAD**. Diff it against `bruchris` before building on it. |
 | 🆕 **gradescope-mcp** *(YeetingWaterbottle — **a DIFFERENT repository** from `Yuanpeng-Li/gradescope-mcp`, already carried)* | [YeetingWaterbottle/gradescope-mcp](https://github.com/YeetingWaterbottle/gradescope-mcp) | 🟢 **MIT** *(**payload** `LICENSE`, 1 089 B, sha256₁₂ `02f326c5fca4`, read `p301`)* | 🔴 **3★ / 1 fork / 2 commits / `main`** | 🔵 **On this shelf as a SHAPE, not as a dependency — the only education agent here that is read-only BY DESIGN and says so.** 6 tools: `gradescope_list_courses`, `gradescope_list_assignments`, `gradescope_upcoming_assignments`, `gradescope_list_submissions`, `gradescope_get_submission_files`, `gradescope_download_submission_file`. Its README states it *"does not expose Gradescope write operations"* and explicitly excludes grading, roster management, extension management and submission upload; the single local write saves a downloaded file and **refuses to overwrite by default**. 🟢 **Why it earns a row at 2 commits:** the hard part of putting an agent near a gradebook is not reach, it is **proving the agent cannot change a grade**. This is the smallest artefact that demonstrates the read-only tier a studio should deploy first — compare `chiptoe-svg`'s 117-read / 48-write split, which is the same idea with the writes present. 🔴 **TWO COMMITS. Do not depend on it; copy the boundary.** |

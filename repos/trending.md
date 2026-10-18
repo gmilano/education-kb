@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 302: GITHUB TOPIC PAGES REPLACED THE DEAD TRENDING PHRASING AND PUBLISHED THEIR OWN DENOMINATORS — 750 / 528 / 41 / 39 007 REPOS, READ AT PAGE 1, FOURTEEN PERMISSIVE AND NINE REFUSED
+
+Evidence: [`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv) ·
+[`p302-reachability.2026-10-18-p302.tsv`](../evidence/p302-reachability.2026-10-18-p302.tsv) ·
+[`p302-websearch.2026-10-18-p302.tsv`](../evidence/p302-websearch.2026-10-18-p302.tsv).
+
+🔴 **`github trending education AI 2026` produced no new education row for the FIFTEENTH window** — it
+returned Open WebUI, BitNet and a 102k★ agent-skills repo, none of which is an education repository.
+🟢 **The replacement instrument is `github.com/topics/*` via `WebFetch`, and its decisive property is that it
+states its own population**, which a trending listicle never does:
+
+| topic | repos GitHub reports | read this pass | new permissive found | refused on licence |
+|---|---|---|---|---|
+| [`ai-tutor`](https://github.com/topics/ai-tutor) | **750** | top 20 (star-sorted) | 6 | 3 |
+| [`ai-education`](https://github.com/topics/ai-education) | **528** | top 20 (star-sorted) | 4 | 4 |
+| [`intelligent-tutoring-system`](https://github.com/topics/intelligent-tutoring-system) | **41** | top 20 (star-sorted) | 4 | 2 |
+| [`education`](https://github.com/topics/education) | **39 007** | top 20 (star-sorted) | 0 | 1 |
+
+🔵 **The `education` topic's zero is itself the useful reading**: at 39 007 repos its star-sorted head is
+*curricula and book lists* — freeCodeCamp 457k, free-programming-books 399k, TheAlgorithms/Python 225k,
+Mr.-Ranedeer at rank 12 — so the generic topic is a **learning-resources** channel, not an
+education-software channel. **The vertical lives in `ai-tutor` and `ai-education`.** Do not spend a leg on
+`education` again.
+
+### 🟢 Trending, licence-verified this pass
+
+| repo | licence (payload + sha256₁₂) | stars | signal |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 `11 408 B` `cd2f54e1e506` | **41.6k★** / 5.3k forks | 🟢 **Release advanced `v1.6.14` → `v1.6.15`** (rendered `2026.10.19`) since `p301`. Still the single most adopted education agent on GitHub, and still the default starting point. |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | 🟢 MIT `1 069 B` `262b47ee1fff` | 309★ | 🆕 Topic → **cited audio lessons**. First audio-modality row with citations on this shelf. |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 🟢 MIT `1 081 B` `3b2ca73e81ad` | 293★ / 63 forks | 🆕 **Five-level progressive hint cascade** — a publishable withholding policy. 9 commits. |
+| [`Fazmin/AILearningGuide`](https://github.com/Fazmin/AILearningGuide) | 🟢 MIT `1 081 B` `e29ef713b542` | 202★ | 🆕 **Offline** desktop, 51 ML labs. Matters where egress is the constraint. |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 🟢 MIT `1 083 B` `a6943096ffde` | 186★ | 🆕 Chinese civil-service exam prep with wrong-answer review — a **high-stakes-exam vertical** with a permissive grant. |
+| [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) | 🟢 MIT `1 071 B` `aeb634f7110b` | 112★ | 🆕 Technical mock interviews — the employability end of the funnel. |
+| [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | 🟢 Apache-2.0 `10 227 B` `59a378bf23a0` | 108★ / 9 forks | 🆕 **Textbook-aligned K-12 + parent reporting + heartbeat tasks.** 10 commits. |
+| [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | 🟢 MIT `1 068 B` `58f77360830f` | 72★ | 🆕 Student workspace, gamified, focus rooms — retention layer. |
+| [`TovTechOrg/Tov-learn`](https://github.com/TovTechOrg/Tov-learn) | 🟢 MIT `1 064 B` `092d389ac156` | 36★ | 🆕 **Spaced repetition as a skill** rather than an app. Pairs with `anki-mcp-server` and the FSRS rows. |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 Apache-2.0 `10 785 B` `65125d9e480b` | 24★ / 9 forks | 🆕 **University-held** auto-check + feedback service, Helm/K8s. Branch `dev`. |
+| [`ProjectAJ14/eklavya`](https://github.com/ProjectAJ14/eklavya) | 🟢 MIT `1 067 B` `b64948dd9b05` | 10★ | 🆕 Quizzes the **developer** on the agent's code — the de-skilling counter-agent. |
+| [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 🟢 MIT `1 154 B` `fef00f185287` | 4★ | 🆕 LLM-judge **bounded-rating bias** audit. Branch **`master`**. |
+| [`khayyam-math/khayyam-math`](https://github.com/khayyam-math/khayyam-math) | 🟢 MIT `1 079 B` `4068e5e09efd` | 4★ | 🆕 **Voice-narrated math figures** — the permissive counterpart to ChatTutor's AGPL whiteboard. |
+| [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 MIT `1 150 B` `a1c6b65c5bb1` | 3★ | 🆕 **Answer-leakage audit** (arXiv:2607.28128). The evaluation design the regulatory moment needs. |
+| [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) | 🟢 MIT `1 104 B` `4b15a1e898b3` | 2★ | 🆕 **LangGraph + Bayesian Knowledge Tracing** — BKT as agent state. Copy the shape. |
+
+### 🔴 Trending AND REFUSED — declared, because a silent refusal reads as an absence
+
+| repo | stars | grant |
+|---|---|---|
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | **29.6k★ / 3.3k forks** | 🔴 **NONE** — four filenames × two branches all 404; sidebar Resources shows only Readme and Activity; README's first heading is **`DISCONTINUED`** |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 1.3k★ / 189 forks | 🔴 **AGPL-3.0** `34 522 B` `20b067f86de3` — reaches network use |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | 499★ | 🔴 **NONE** |
+| [`DAMO-NLP-SG/M3Exam`](https://github.com/DAMO-NLP-SG/M3Exam) | 105★ | 🔴 **NONE** — multilingual/multimodal national-exam benchmark |
+| [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) | 71★ | 🔴 **AGPL-3.0** `34 523 B` `8486a10c4393` |
+| [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 56★ | 🔴 **NONE** |
+| [`Jeremy-xuan/SocraticNovel`](https://github.com/Jeremy-xuan/SocraticNovel) | 32★ | 🔴 **Creative Commons** `1 227 B` `593122cbd00b` — not a software licence |
+| [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | 12★ | 🔴 **GNU GPL** `35 148 B` `8b1ba204bb69` |
+| [`blessed0x/scratch-unified-mcp`](https://github.com/blessed0x/scratch-unified-mcp) | 1★ | 🔴 **NONE** — 108 MCP tools over a headless Scratch VM |
+| [`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion) | 2★ | 🔴 **NONE** |
+
+🔵 **Nine refused against fourteen accepted — about 39 % of the star-ordered head of this vertical is
+unusable by Globant.** That is the first time this base can state the figure as a *rate over an enumerated
+population* rather than as an impression, and it is the standing argument for reading payloads.
+
+### 🔵 Standing note for `p303`
+
+1. 🟢 **Page past rank 20.** `ai-tutor` has 750 repos and `ai-education` 528; this pass read the first 20 of
+   each. Everything below is **unmeasured, not absent.**
+2. 🔴 **Do not re-run** `github trending education AI 2026` (15 nils) or the `education` topic (a
+   learning-resources channel, not a software channel).
+3. 🟢 **Two permissive gaps are now specified well enough to build:** a licensed **headless-Scratch-over-MCP**
+   server (`scratch-unified-mcp` has the shape, no grant) and a licensed **multilingual national-exam
+   benchmark** (`M3Exam` has the content, no grant).
+
 ## 2026-10-18 — Pass 301: ONE HUNDRED AND FIVE payload reads — 72% of the unpinned backlog cleared, zero carried licences refuted, and two of this base's trap anecdotes priced as rates (1 row in 10 on a non-default branch, 1 in 12 not at plain `LICENSE`)
 
 Evidence: [`p301-payload-grade.2026-10-18-p301.tsv`](../evidence/p301-payload-grade.2026-10-18-p301.tsv) ·

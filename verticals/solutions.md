@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 302 — TWENTY-SECOND CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM — AND THE TWO NEW SELF-HOSTABLE PLATFORMS FOUND THIS PASS LAND ON OPPOSITE SIDES OF THE LICENCE LINE
+
+⏱️ **Pass 302 of `2026-10-18`.** Evidence:
+[`p302-websearch.2026-10-18-p302.tsv`](../evidence/p302-websearch.2026-10-18-p302.tsv) ·
+[`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv) ·
+[`p302-reachability.2026-10-18-p302.tsv`](../evidence/p302-reachability.2026-10-18-p302.tsv).
+
+🔴 **The mandated phrasing ran and nil'd for the twenty-second time.** Query:
+`open source platform education ERP CRM MIT Apache student information system`. Returned **OpenEduCat**
+(**LGPL-3.0**), **OpenSIS** (GPL-2.0), **RosarioSIS** (GPL-2.0), **Frappe Education / ERPNext**, **GegoK12**,
+**Fedena**, **SchoolTool** — **every single one already on this file**, and the two the sources *called*
+permissive are the two this base has already examined most closely.
+
+🔵 **This is no longer a search failure; it is a finding about the tier, and `p301` already measured it:
+the education platform layer is COPYLEFT BY CONSTITUTION.** Twenty-two passes of a phrasing that explicitly
+asks for MIT and Apache have produced no permissive education ERP, SIS or CRM, because the sector's
+platforms were built by public institutions and consortia that chose GPL/AGPL/LGPL deliberately. 🟢 **The
+engagement conclusion is unchanged and is the correct one: do not look for a permissive platform to
+replace Moodle or Open edX — integrate with the copyleft platform across a process boundary and keep the
+permissive code in the AGENT tier**, which is where every row this pass added actually sits.
+
+### 🔴 The licence line, drawn through the two new self-hostable platforms
+
+🔴 **[`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) — a genuine self-hostable teaching
+platform, and AGPL-3.0.** Payload `LICENSE` **34 522 B**, sha256₁₂ `20b067f86de3`. **1.3k★ / 189 forks /
+193 commits.** It is a platform by every test this file uses: client + server, **PostgreSQL**
+(`DATABASE_URL`), **`docker compose up -d`**, a Node/Bun development path, Vue + Vite + ElysiaJS +
+**GeoGebra**, object storage for uploads, and provider-pluggable models (**OpenAI / Anthropic / DeepSeek**)
+configured per deployment (`MODEL_API_KEY`). Its capability is the one this tier has never had: *"an AI
+teacher equipped with the ability to use an electronic whiteboard"* — **Math Canvas** and Mermaid
+**mindmaps**, on the stated premise that text-only chat conveys little in STEM.
+
+🔴 **And AGPL-3.0 reaches network use, which is exactly how a teaching platform is delivered.** Hosting it
+for a client triggers the obligation on the hosted service, not merely on redistribution. 🔵 **So its place
+on this file is as the CAPABILITY REFERENCE for visual tutoring — the system to study and to demo — and the
+build-it-yourself target is [`khayyam-math/khayyam-math`](https://github.com/khayyam-math/khayyam-math)
+(**MIT**, payload `1 079 B`, `4068e5e09efd`), which does voice-narrated math figures permissively at
+prototype scale.** ⚠️ **A hosted instance exists at `chattutor.app` on the user's own key** — useful for a
+demo, and **not** a basis for a client deployment.
+
+🟢 **[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) — Apache-2.0, and it is the
+permissive platform-tier row this pass actually adds.** Payload `LICENSE` **10 785 B**, sha256₁₂
+`65125d9e480b`, holder **© 2023 Technischen Hochschule Mittelhessen**. **24★ / 9 forks**, default branch
+**`dev`**. It qualifies for this file rather than the agent shelf because it ships a **deployment**: **Helm
+charts and Kubernetes** production install instructions, a THM-hosted project site (`frits.mni.thm.de`),
+Gradle + Java 11 build. Function: **automatically checks student submissions and returns an immediate
+result**, suggests fixes, and **aggregates recurring mistakes for the lecturer to address in class**.
+
+🔵 **Why it matters to this tier specifically:** every grading and feedback capability this file has found
+has been **inside** a copyleft platform — `ls1intum/Artemis` (MIT, but a whole platform),
+`Submitty/Submitty`, `PrairieLearn/PrairieLearn`, `autolab/Autolab`. 🟢 **`feedbacksystem` is a permissive,
+separately deployable feedback service with its own Helm chart**, so it can sit *beside* Moodle or Open edX
+instead of being adopted wholesale. ⚠️ **Boundaries:** the AI mechanism is **undocumented** on the page, the
+Languages panel is **empty**, the visible demo is an **SQL checker**, and production use at THM is **implied
+by a Helm chart, not stated**. It is a **24-star** project from a university lab — brief it as a credible
+starting point with an institutional copyright holder, **not** as a proven product.
+
+### 🔴 The K-12 platform gap this pass can now specify exactly
+
+🔴 **[`blessed0x/scratch-unified-mcp`](https://github.com/blessed0x/scratch-unified-mcp) — no licence at
+all** (`LICENSE`/`.md`/`.txt`/`COPYING` absent on `main` and `master`). A **headless Scratch VM exposed over
+MCP with 108 tools** letting an agent build, test and publish Scratch projects. 🟢 **Scratch is the most
+widely deployed primary-school programming environment in the world**, and this is the only artefact this
+base has seen that puts it behind an agent. 🔴 **1★ and no grant — unusable.** 🔵 **Recorded as a specified
+gap rather than a row: a permissively licensed headless-Scratch-over-MCP server is a tractable build, and
+there is no alternative on this file.**
+
+### 🟢 Platform-tier state, unchanged and restated for briefing
+
+The tier remains **copyleft at its core and permissive only at the edges**:
+**AGPL/GPL** — `moodle/moodle` (GPL-3.0), `openedx/edx-platform` (AGPL-3.0), `instructure/canvas-lms`
+(AGPL-3.0), `chamilo/chamilo-lms`, `ILIAS-eLearning/ILIAS`, `francoisjacquet/rosariosis` (GPL-2.0),
+`os4ed/openSIS-Classic` (GPL-2.0), `GibbonEdu/core` (GPL-3.0), `Vacademy-io/vacademy_platform` (AGPL-3.0),
+`HugeCatLab/ChatTutor` (AGPL-3.0, **new this pass**).
+**LGPL** — `openeducat/openeducat_erp` (LGPL-3.0, the Odoo-based education ERP; **LGPL is separated from
+AGPL on this file deliberately** — linking is permitted, so an AI layer beside it is viable where an
+Open edX fork is not).
+**Permissive** — `learningequality/kolibri` (MIT, and the offline deployment reference),
+`sakaiproject/sakai` (Apache-2.0), `ls1intum/Artemis` (MIT), `thm-mni-ii/feedbacksystem` (Apache-2.0,
+**new this pass**).
+
+🔵 **Briefing line that follows from twenty-two nils:** *the platform is the client's and it is copyleft;
+what Globant builds and owns is the agent and the evaluation layer beside it.* Every row added in `p302`
+is consistent with that split.
+
+### 🔴 What this pass could NOT do
+
+🔴 **No primary source — twenty-first consecutive pass — and the cause is now named**: this session's
+resolver answers `github.com` and `raw.githubusercontent.com` and returned **`getaddrinfo ENOTFOUND`** for
+every other host tried (`www.congress.gov`, `www.govinfo.gov`, `docs.house.gov`,
+`digital-strategy.ec.europa.eu`, `www.iesalc.unesco.org`, `www.vietnam-briefing.com`,
+`www.allenandgledhill.com`). It is a **resolver scope**, not governments being blocked. Matrix:
+[`p302-reachability.2026-10-18-p302.tsv`](../evidence/p302-reachability.2026-10-18-p302.tsv).
+🔴 **`api.github.com` is proxy-intercepted**, so every star count on this file's new rows is **rendered and
+rounded**, and no `licence_spdx` field was available to cross-check a payload reading.
+🔴 **No platform's own site was reachable** — `chattutor.app` and `frits.mni.thm.de` were **not** fetched, so
+both deployment claims rest on the repositories' own READMEs.
+🔴 **`make hooks` was NOT run** (this session was not cleared to execute this base's code), reproducing
+`p301`. Licence readings were done directly against `raw.githubusercontent.com` with byte lengths and
+hashes recorded for reproduction.
+🔵 **`p303` recommendation, third consecutive registration:** retire the mandated ERP/CRM phrasing. Twenty-two
+runs, zero permissive hits, and `p301` + `p302` have now both explained *why* the tier is constituted that
+way. Replace it with a leg that asks which **copyleft** platforms expose a **stable integration surface**
+(LTI 1.3, xAPI, Caliper, MCP), because that is the question an engagement actually turns on.
+
 ## 🔴 Pass 301 — TWENTY-FIRST CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM — AND THIS PASS STOPPED ASKING AND MEASURED THE PLATFORM TIER INSTEAD: ELEVEN COPYLEFT PLATFORMS PINNED, LGPL SEPARATED FROM AGPL
 
 ⏱️ **Twenty-third pass of `2026-10-18`.** Evidence:

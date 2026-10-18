@@ -4,6 +4,279 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 302 — THE CARRIED VIETNAM DATUM NAMES THE WRONG INSTRUMENT AND THE WRONG DATE, AND IT IS CORRECTED HERE; NORTH AMERICA BROKE A TWO-PASS REGIONAL DROUGHT WITH THREE NEW DATUMS; EMEA AND LATAM NIL'D AGAIN
+
+⏱️ **Pass 302 of `2026-10-18`.** Evidence:
+[`p302-websearch.2026-10-18-p302.tsv`](../evidence/p302-websearch.2026-10-18-p302.tsv) ·
+[`p302-reachability.2026-10-18-p302.tsv`](../evidence/p302-reachability.2026-10-18-p302.tsv).
+
+🟢 **All four mandated regional legs ran. They produced three new datums and one correction, ending the
+two-pass zero recorded at `p300` and `p301`** — and the correction matters more than the new datums,
+because this base has been briefing the wrong instrument for several passes.
+
+### 🔴 CORRECTION — APAC: the instrument that puts education in Vietnam's high-risk tier is a DECISION, not the Law, and it took effect in AUGUST not MARCH
+
+| cell | carried (through `p301`) | read `p302` | verdict |
+|---|---|---|---|
+| instrument | "Vietnam's **Law on AI**" | 🔴 **`Decision 33/2026/QD-TTg`** — the Prime Minister's decision *promulgating the list of high-risk AI systems*, issued under the Law | 🔴 **CORRECTED** |
+| in force | **`2026-03-01`** | 🔴 **Effective `2026-08-15`**; the decision was **signed `2026-06-30`** | 🔴 **CORRECTED** |
+| education systems named | **two** (automated assessment, behavioural monitoring) | 🔴 **THREE** | 🔴 **CORRECTED — one was missing** |
+| scope | education named as high-risk | 🟢 **46 systems across 6 sectors**, of which **education = 3** | 🟢 **ENRICHED** |
+
+🔴 **The carried date `2026-03-01` appears to be the AI Law's own commencement, which this base attached to
+the education listing.** The education listing is not in the Law; it is in the **Decision**, and the
+Decision is the thing a client has to comply with. 🔵 **Any deck that says "in force since March" is wrong
+by five months in the client's favour — which is the dangerous direction, because it overstates how much
+runway has already elapsed.**
+
+🟢 **The three education-sector high-risk systems, as listed:**
+1. **Systems that generate self-study content for learners from UNCONTROLLED DATA SOURCES.** 🔵 **This is the
+   one this base was missing, and it is the broadest of the three** — an unrestricted RAG tutor over
+   scraped material is in scope on its face. Every retrieval-grounded tutoring pitch now needs a
+   source-control story in Vietnam.
+2. **Systems that automatically assess, grade or rank students.**
+3. **Systems that monitor or analyse learner behaviour using biometric data or other automated
+   monitoring** — facial recognition and eye tracking given as examples.
+
+🟢 **Sector split of the 46:** transportation **31**, ethnic and religious affairs **7**, education **3**,
+healthcare **2**, banking **2**, judicial proceedings **1**.
+
+⚠️ **Two things are NOT asserted, because this pass's sources CONFLICT on them and neither could be read at
+the publisher:**
+- 🔴 **The compliance deadline.** One source puts already-operating systems at **`2027-03-01`** with
+  **`2027-09-01`** for health, education and finance; another gives **`2027-09-01`** for health, education
+  and finance; a third describes a **six-month extension** for education systems operating before
+  **`2026-08-15`**. **These are not reconcilable from secondary text. Brief the range, not a date.**
+- 🔴 **The human-review qualifier.** One source states the systems are high-risk **only where the AI output
+  is the sole basis for a decision without meaningful human review**. 🔵 **If that qualifier holds it is the
+  single most important fact in this section** — it converts the obligation into a *design* requirement
+  (keep a human in the loop and the classification may not attach) — **but it is from one secondary source
+  and must be verified against the Appendix before it is ever put in front of a client.**
+
+⚠️ **All of the above is SEARCH-SNIPPET-ATTRIBUTED.** `www.vietnam-briefing.com` and
+`www.allenandgledhill.com` both returned `getaddrinfo ENOTFOUND`, and the official Vietnamese text was not
+reachable. **Brief it with that attribution.**
+
+### 🟢 North America — three new datums, the first new NA material in three passes
+
+1. 🟢 **`H.R. 8747`, the K-12 AI Literacy and Readiness Act of 2026 — a FEDERAL funding instrument, which
+   is new in kind for this file.** Introduced by **Rep. Randy Fine (R-FL)** on **`2026-05-12`**; **full
+   committee markup `2026-07-21`** in House Education and Workforce; **Ordered to be Reported (Amended) by
+   `18Y-15N`**; a **Ranking Member Scott amendment failed `15Y-18N`**. Substance: it amends the
+   **Elementary and Secondary Education Act of 1965** to add **AI knowledge and skills for educators and
+   administrators** to the allowable uses of funds, for both student instruction and teacher/leader funding
+   streams. 🔴 **No floor vote was found — it is a reported committee bill, NOT law.**
+   🔵 **Why it matters commercially:** every NA datum this file has carried is *restrictive* — bans,
+   moratoria, red tiers. This is the first **permissive-and-funded** one. If it passes, ESEA money becomes
+   spendable on AI professional development, and **teacher enablement becomes a budgeted line rather than a
+   pilot**. The near-party-line committee vote is the risk to state alongside it.
+2. 🟢 **Canada — a national "AI for All" strategy launched `2026-06-04`, with an AI-literacy component.**
+   🔵 **The first Canadian datum on this file, which until now has been entirely US state-level.** ⚠️ It is a
+   **strategy, not a statute**; no legislative date was found, and Canada has no comprehensive AI law.
+3. 🟡 **Nevada `AB 406` (2025) prohibits public schools from using AI-powered tools to perform certain
+   functions.** ⚠️ **The scope is NOT established** — the source text was truncated and the statute was not
+   reachable. **Recorded as a pointer for `p303`, not as a briefable restriction.**
+
+🔵 **The regional posture is now explicitly two-sided and should be briefed that way:** US **states**
+restrict classroom use and student-data training (134 bills across 31 states; **California AB 1159**;
+**Idaho SB 1227**; Oklahoma and Maryland barring AI from high-stakes student decisions; **NYC's red tier**
+barring AI from grading, discipline and IEP development), while the **US federal** layer and **Canada** are
+moving to *fund capability*. **An engagement that sells teacher enablement and governance tooling is aligned
+with both halves; one that sells student-facing automated decisions is fighting the state layer.**
+
+### 🔴 EMEA — a THIRTEENTH nil on the mandated phrasing, and the EU dates are refused again
+
+🔴 **Zero new datums.** Everything returned was carried: European AI-in-education at **`USD 2.64 bn`
+(2026) → `8.0 bn` (2030)** at **31.9 %** CAGR; Finland, Estonia and the Netherlands leading K-12
+integration; the **OECD 2026 Digital Education Outlook** and its recommendation to move from
+general-purpose tools to **purpose-built educational AI with durable learning gains**; only **10 %** of
+450+ institutions surveyed having formal AI guidelines.
+
+🔴 **The EU AI Act timeline was returned in three mutually inconsistent forms this pass** — an "AI Omnibus
+package entering into force `2026-07-27`", an AI Act entry into force of `2026-07-31`, and "high-risk
+provisions entering into force August 2026". 🟢 **This base's carried position — that education's high-risk
+obligations bind `2027-12-02` — is NOT revised on secondary text that contradicts itself**, and
+`digital-strategy.ec.europa.eu` was unreachable from this session. ⚠️ **`p296` already caught this deadline
+moving sixteen months once. The carried `2027-12-02` stands, and the honest pitch remains the 2027 date and
+roughly fourteen months of runway, not a manufactured August urgency.**
+
+### 🔴 LATAM — zero new, and the flagship triple is STILL unread at its publisher
+
+🔴 **Zero new datums.** The Digital Education Council 2026 LATAM survey (**92 %** of students and **79 %**
+of faculty engaging with AI, **30 000+** responses across **29** institutions; **88 %** of faculty at
+"minimal to moderate" engagement; assessment uses lowest; **50 %** of students supporting AI-assisted
+feedback against **19 %** of faculty using it that way) and UNESCO IESALC (**200** institutions, **19**
+countries) both returned exactly as carried.
+
+⚠️ **`www.iesalc.unesco.org` returned `getaddrinfo ENOTFOUND` again — the 87/74/26 triple has now been
+AGGREGATOR-ATTRIBUTED since `p282` and has never once been read at the publisher.** 🔵 **It remains this
+file's most-used LATAM number and its least-verified one. Brief it with the attribution, every time.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **The opening has flipped from defensive to fundable, and `H.R. 8747` is why.** The state layer
+restricts: 134 AI-in-education bills across 31 states; **California AB 1159** barring student data from
+model training; **Idaho SB 1227**; Oklahoma and Maryland requiring human oversight and barring AI from
+high-stakes student decisions; Maryland / Idaho / Oklahoma / Virginia mandating district policy; **Ohio**'s
+`2026-07-01` district deadline; North Carolina staged to **2028**; **NYC's traffic-light guidance** whose
+**red tier bars AI from grading, discipline and IEP development**; Katy ISD's K-6 ban. 🟢 **The federal
+layer funds: `H.R. 8747` (reported `18Y-15N`, `2026-07-21`) would make AI knowledge and skills for
+educators an ESEA allowable use** — and **Canada's "AI for All"** (`2026-06-04`) carries an AI-literacy
+push.
+
+🔵 **So the compliant, fundable build is specific:** teacher-and-administrator enablement plus governance
+tooling, with student-facing automated decisions deliberately out of scope. 🟢 **The component that makes it
+demonstrable is unchanged:**
+[`chiptoe-svg/canvas-lms-mcp`](https://github.com/chiptoe-svg/canvas-lms-mcp) (**MIT**, payload-pinned
+`p301`) ships **165 tools on a stated 117-read / 48-write split** plus a **FERPA mode** — deploy the 117
+read tools, leave the 48 write tools unregistered, and the agent is *architecturally* incapable of the three
+things NYC's red tier prohibits. 🟢 **New this pass:** [`ProjectAJ14/eklavya`](https://github.com/ProjectAJ14/eklavya)
+(**MIT**) is the enablement-side artefact — it quizzes a learner on concepts behind code an agent wrote,
+which is the measurable form of "AI literacy" the federal bill would fund. Governance documentation layer:
+[`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) (**MIT**).
+
+### EMEA
+
+🔵 **The opening is a timing argument and it must be stated with the correct date.** Education's high-risk
+obligations under the EU AI Act bind **`2027-12-02`** on this base's carried reading — **not** August 2026,
+and this pass again refused three conflicting secondary timelines rather than revise it. 🟢 **That is roughly
+fourteen months of runway: enough to build conformity-ready assessment AI before the deadline instead of
+retrofitting it**, which is a far stronger pitch than manufactured urgency.
+
+🟢 **Market frame:** **`USD 2.64 bn` (2026) → `8.0 bn` (2030)**, **31.9 %** CAGR; Finland, Estonia and the
+Netherlands leading K-12 integration; the UK's **£4 m** DfE investment in lesson-planning and marking tools;
+Germany's **€20 bn** 2025-2030 AI commitment (general, **not** education-specific); only **10 %** of 450+
+institutions with formal AI guidelines. 🔵 **That last figure is the engagement**: the obligation arrives in
+2027 and nine in ten institutions have no policy to attach it to.
+
+🔴 **Kazakhstan is filed here** under this base's enterprise-geography convention: a **presidential decree of
+`2026-05-12`**, **43 curriculum objectives**, standards due **`2026-09-01`**, **all secondary schools by
+2029**, with personal-data protection written into the plan. ⚠️ **PRESS-ATTRIBUTED** — `primeminister.kz` has
+never been reachable from this environment.
+
+🟢 **New permissive component for a conformity engagement:**
+[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) (**Apache-2.0**, payload-pinned
+`p302`, **held by Technische Hochschule Mittelhessen**) — an EU-institution-held automatic feedback service
+with Helm/Kubernetes deployment, which is a materially easier provenance story for an EU public buyer than a
+personal repository.
+
+### APAC
+
+🟢 **The region's instruments remain the most education-specific anywhere, and this pass sharpened the
+headline one.** **Vietnam's `Decision 33/2026/QD-TTg`** (signed `2026-06-30`, **effective `2026-08-15`**)
+lists **46 high-risk AI systems across six sectors**, of which **three are education**: self-study content
+generation **from uncontrolled data sources**, automatic **assessment / grading / ranking**, and
+**biometric or automated behavioural monitoring**. **Korea's AI Basic Act** is in force **`2026-01-22`**,
+with MSIT treating 2026 as a pilot period under limited enforcement and a one-year penalty grace. Taiwan's
+AI Basic Act (Dec 2025) and Japan's AI Basic Plan impose few direct duties; **Singapore**'s frameworks are
+voluntary; **Australia**'s National AI Plan leans on existing statute; **China** has the most binding
+regime (registration, content labelling, penalties to **CNY 50 m**). **Ipsos Education Monitor 2026: `39 %`
+globally would ban AI in schools**, Australia and New Zealand higher than the Asian markets surveyed.
+
+🔵 **The opening, restated precisely because the dates changed:** Vietnam's obligations attached in
+**August 2026** and bite on already-running systems in **2027** (range, not a date — see the correction
+above). 🟢 **An engagement that produces EVIDENCE about an automated-assessment system — not assurances —
+arrives exactly on time**, and this pass finally has the full evidence stack to offer:
+[`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) (**MIT**) as the harness,
+plus [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) and
+[`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) (both **MIT**, pinned
+`p302`) as the worked **design** — pre-registration, one frozen base model, policy-only variation, a frozen
+answer-leakage matcher and per-component ablations.
+
+🟢 **Second opening, new this pass:** Vietnam's **first** listed system — self-study content from
+*uncontrolled* sources — makes **source control a compliance feature**, and
+[`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) (**Apache-2.0**, carried) exists
+precisely to keep generated teaching material tied to its sources. 🔵 **That is a pre-built answer to a
+named legal requirement.** 🟢 **Curriculum-aligned delivery** now also has a permissive reference in
+[`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) (**Apache-2.0**).
+⚠️ **`p292`'s displacement trap stays armed and is not re-triggered:** much of the APAC education corpus is
+**corporate L&D**, not schooling.
+
+### LATAM
+
+🔴 **Zero new datums; the adoption-versus-governance pair is carried and remains this region's defining
+fact.** UNESCO IESALC across **200 institutions in 19 countries**: **87 %** use AI somewhere, **74 %** in
+teaching and learning, and only **26 %** have a formal AI strategy — **84 %** of private non-profit
+universities against **68 %** public and **52 %** private for-profit. OECD **TALIS 2024**: Brazil **56 %**,
+Chile **55 %**, Colombia **53 %**, Costa Rica **52 %** of secondary teachers had used AI, against an OECD
+average of **36 %**. Uruguay's **Ceibal**: **75 %** of public-school teachers. UNESCO's LAC AI-in-education
+**Observatory** launched **`2026-04-14`**. Digital Education Council 2026 LATAM survey: **30 000+** responses
+across **29** institutions, **92 %** of students and **79 %** of faculty engaging, **88 %** of faculty at
+only minimal-to-moderate depth, and assessment uses the **lowest**-adopted of all.
+
+🟢 **The opening is unchanged and remains the clearest in this file: the gap between `87 %` doing it and
+`26 %` governing it is the engagement.** 🔵 Nothing in that pitch needs a new model — it needs policy,
+evaluation and audit, and the instruments are permissive and payload-pinned
+([`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit),
+[`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai), and now the two `bydeng01`
+audit designs). 🟢 **The faculty-depth figure sharpens the offer**: with **88 %** of faculty shallow and
+assessment the least-adopted use, the sellable first phase is **faculty capability plus assessment
+governance**, in that order.
+
+🔴 **A refusal to carry forward:** [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos)
+(499★) is **multilingual AI tutoring for underserved learners** — on its face the ideal LATAM component —
+and it has **no licence whatsoever** (payload-checked `p302`). **Do not put it in a proposal.**
+
+⚠️ **The 87/74/26 triple remains AGGREGATOR-ATTRIBUTED** — `www.iesalc.unesco.org` is unreachable from this
+environment and the figures have **never** been read at the source, now since `p282`. **Brief them with that
+attribution.**
+
+### Global
+
+🟡 **The 2026 market is between `USD 6.4 bn` and `USD 11.4 bn` depending on which of four firms is asked —
+a `1.8×` spread**, which is why this file still refuses to publish a single figure. North America holds the
+largest share (**36 %**); APAC grows fastest (**35.3 %** CAGR). Teacher use roughly doubled in a year to
+about **60 %**; **86 %** of students across 16 countries and a reported **92 %** of university students use
+AI in their studies; **86 %** of education organisations use generative AI and **most have no policy**.
+
+🔴 **Institutions lag behaviour everywhere** — professional development, student training and district
+policy all trail usage, which is the same shape as LATAM's 87/26 gap measured globally. 🟢 **And the
+convergent regulatory question across all four regions is unchanged and sharper after this pass: is AI
+allowed to DECIDE about a student?** Vietnam names assessment and ranking; Oklahoma and Maryland bar
+high-stakes decisions; NYC's red tier bars grading, discipline and IEP development; the EU puts assessment
+in its high-risk annex. 🔵 **Every one of those lines falls on the same side of the same boundary, so a
+read-only-first architecture is the globally portable answer** — which is exactly what
+`chiptoe-svg/canvas-lms-mcp`'s 117-read / 48-write split and
+[`YeetingWaterbottle/gradescope-mcp`](https://github.com/YeetingWaterbottle/gradescope-mcp)'s read-only-by-design
+posture demonstrate.
+
+🔴 **New global licence caution, and it is a briefing line:** the second-most-starred education tutoring
+artefact on GitHub, [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor)
+(**29.6k★, 3.3k forks**), has **no licence at all** and is marked **DISCONTINUED**; the best-maintained
+visual tutor, [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) (**1.3k★**), is **AGPL-3.0**.
+🟢 **Across the star-ordered head of this vertical, `p302` refused 9 of 23 repositories on licence grounds —
+about 39 %.** 🔵 **Whenever a client cites a star count, that rate is the answer.**
+
+### 🔴 What this pass could NOT do
+
+🔴 **No primary government or IGO source, TWENTY-FIRST pass — but the cause is now NAMED rather than
+inferred.** This session's resolver answers **`github.com`** and **`raw.githubusercontent.com`** and nothing
+else that was tried: `www.congress.gov`, `www.govinfo.gov`, `docs.house.gov`,
+`digital-strategy.ec.europa.eu`, `www.iesalc.unesco.org`, `www.vietnam-briefing.com` and
+`www.allenandgledhill.com` **all returned `getaddrinfo ENOTFOUND`**, while every GitHub host answered on
+every attempt. 🟢 **So this is a resolver scope, not governments being blocked** — a more useful fact,
+because it predicts that *every* primary-source leg from this environment fails and *every* GitHub leg
+succeeds. Full matrix:
+[`p302-reachability.2026-10-18-p302.tsv`](../evidence/p302-reachability.2026-10-18-p302.tsv).
+🔴 **Consequently EVERY non-GitHub datum in this pass is SEARCH-SNIPPET-ATTRIBUTED** — including the
+Vietnam correction, `H.R. 8747`'s vote tallies and Canada's strategy date. **They are better-sourced than
+what they replace, and they are still not primary. Brief them that way.**
+🔴 **The DNS control sweep was NOT attempted.** `p295` and `p301` both recorded it being refused as exfil
+scouting; this pass did not retry it. Reachability was measured only on hosts whose **content this pass
+actually needed**, which is why the matrix has twelve rows and not fifty. *Absent* still cannot be
+separated from *blocked* for any host not listed.
+🔴 **Three date sets are REFUSED and must not be asserted:** Vietnam's compliance deadline (three
+incompatible readings), the EU AI Act timeline (three incompatible readings this pass alone), and Nevada
+`AB 406`'s scope (source truncated).
+🔴 **`make hooks` was NOT run** — `gate-dates`, `gate-absence` and `inbound-claims` did not run against this
+file, reproducing `p301`. **The Vietnam correction was caught by reading, not by a gate.**
+🔵 **Standing recommendation for `p303`, carrying forward `p300`'s and `p301`'s:** the four mandated regional
+phrasings are now at nine runs with a heavy carried-datum rate. **Keep the NA leg** (it paid this pass).
+**Retire the EMEA phrasing** (thirteen nils). **Replace the LATAM leg with a per-country leg** — Brazil,
+Mexico, Colombia, Chile — since the region-named phrasing returns the same aggregator set every time.
+
 ## 🟢 Pass 301 — THE FOUR MANDATED REGIONAL LEGS PRODUCED ZERO NEW FOR A SECOND CONSECUTIVE PASS WHILE ONE DIRECTED LEG PRODUCED THREE; EMEA ENDED A TWELVE-PASS NIL STREAK; AND THE TRENDS LEG'S ONE NEW DATUM IS A DISPERSION, NOT AN ESTIMATE
 
 ⏱️ **Twenty-third pass of `2026-10-18`.** Evidence:

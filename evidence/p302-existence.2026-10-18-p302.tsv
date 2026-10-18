@@ -1,0 +1,7 @@
+slug	method	branch	probe_file	http	verdict	why_this_probe
+JushBJJ/Mr.-Ranedeer-AI-Tutor	raw.githubusercontent + rendered repo page	main	README.md	200	EXISTS	A 404 on LICENSE does NOT prove a repo exists. Every NO-GRANT row was separately proved to exist before being written, so no refusal here is a dead URL misread as a licence absence.
+aaryansamanta/ai-ethos	raw.githubusercontent	main	README.md	200	EXISTS	same
+DAMO-NLP-SG/M3Exam	raw.githubusercontent	main	README.md	200	EXISTS	same
+luffycodes/Tutorbot-Spock	raw.githubusercontent	main	README.md	200	EXISTS	same
+blessed0x/scratch-unified-mcp	raw.githubusercontent	main	README.md	200	EXISTS	same
+ZQR1101/xueyoujing-companion	raw.githubusercontent	main	README.md	200	EXISTS	same

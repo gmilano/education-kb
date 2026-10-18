@@ -4,6 +4,121 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 302 — THE EVALUATION TIER FINALLY HAS PERMISSIVE CODE IN IT, AND THE BENCHMARK THIS SHELF MOST WANTED TURNED OUT TO HAVE NO GRANT
+
+⏱️ **Pass 302 of `2026-10-18`.** Evidence:
+[`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv) ·
+[`p302-reachability.2026-10-18-p302.tsv`](../evidence/p302-reachability.2026-10-18-p302.tsv) ·
+[`p302-websearch.2026-10-18-p302.tsv`](../evidence/p302-websearch.2026-10-18-p302.tsv).
+
+🔴 **The mandated foundations phrasing nil'd again** (`open source platform education ERP CRM MIT Apache
+student information system` → OpenEduCat LGPL-3.0, OpenSIS GPL-2.0, RosarioSIS GPL-2.0, Frappe, GegoK12,
+Fedena, SchoolTool — **every one already carried**; see [`verticals/solutions.md`](../verticals/solutions.md)
+for the twenty-second consecutive nil on a *permissive* education ERP/CRM). 🟢 **The directed GitHub-topic
+leg paid instead, and what it added belongs in the FOUNDATIONS tier rather than the agent tier: evaluation
+and feedback infrastructure.**
+
+### 🟢 New foundational row — an institution-held automatic feedback service
+
+**[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem)** — 🟢 **Apache-2.0**
+(**payload** `LICENSE`, `10 785 B`, sha256₁₂ `65125d9e480b`, holder **© 2023 Technischen Hochschule
+Mittelhessen**) — **24★ / 9 forks**, default branch **`dev`**.
+
+*"Intelligent, personalized feedback for students using artificial intelligence."* It **automatically checks
+submissions and returns an immediate result**, proposes fixes for the student's mistakes, and — the property
+that makes it foundational rather than a demo — **aggregates common mistakes so the lecturer can address
+them in class.** Ships **Helm charts and Kubernetes** production install instructions, with a THM-hosted
+project site at `frits.mni.thm.de`.
+
+🟢 **Why this sits on `foundations.md` and not on `agents/top.md`:** it is a *service a university holds the
+copyright to*, with a deployment story, not a personal repository with a clever prompt. This shelf has
+repeatedly noted that the open grading agent turns out to live **inside a platform**
+([`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) and its
+[`Athena`](https://github.com/ls1intum/Athena) feedback service being the standing example) — `feedbacksystem`
+is the **second** independent instance of that pattern, from a second German institution, and the two
+together make it a pattern rather than an anecdote. ⚠️ **Boundaries, stated:** the AI mechanism is **not
+documented** on the rendered page, the Languages panel is **empty**, the only visible demo is an **SQL
+checker**, and production use at THM is **implied by a Helm chart, not stated**. Read the code before
+promising any subject beyond SQL.
+
+### 🟢 The evaluation tier — two MIT audits, and they answer a question this base has been asking since `p288`
+
+This file has carried [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) as the
+permissive evaluation framework, which is a *harness*. 🟢 **What it lacked was a worked education-specific
+evaluation DESIGN.** Two arrived:
+
+| repo | licence (payload) | stars | what it establishes |
+|---|---|---|---|
+| [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** `1 150 B` `a1c6b65c5bb1` | 3★ | Pre-registered audit (arXiv:2607.28128) of whether an LLM helpfulness judge **rewards answer-leakage that reduces later independent work**. One frozen base model, two policies — `ConvTutor` (single-node LangGraph) vs `PedTutor` (state tracker + decomposer + **deferral gate** + hint cascade) — against a cold baseline, weak simulated student (**Llama-3.1-8B**), Opus primary judge + second-judge robustness check, a **frozen leakage matcher** (`protocol/leakage.py`), and ablations removing tracker / gate / cascade individually. **10 replicates × {cold, conv, ped}** per base; GPT and Gemini bases run separately and **never pooled**. |
+| [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 🟢 **MIT** `1 154 B` `fef00f185287` | 4★, branch **`master`** | Pre-registered audit of LLM judges with analysis of **bounded-rating bias** across ability levels — whether one judge can score a weak and a strong learner on the same scale, which every adaptive-tutoring claim assumes. |
+
+🔵 **Why two repositories in the low single digits of stars earn foundational rows:** the binding constraint
+in this industry has moved from *can an agent tutor* to *can you show it does not harm learning* — Vietnam's
+Decision 33 and Korea's AI Basic Act both now reach automated assessment
+([`intel/market.md`](../intel/market.md)). An engagement that arrives with `inspect_ai` as the harness and
+**this** as the design is answering the actual question. 🟢 **The reusable asset is the structure — frozen
+base model, policy-only variation, pre-registration, a leakage matcher frozen before scoring, and
+per-component ablations** — and it is reusable whatever the subject.
+
+⚠️ **Hard boundary on both: NO RESULTS ARE STATED ON EITHER PAGE.** The READMEs give commands to recompute
+from tracked tables in `results/`; the hypotheses live in a `paper-plan.md` this pass did **not** read.
+**Cite the design. Never cite an effect size from these rows.** ⚠️ And `ability-levels-audit`'s default
+branch is **`master`** — a pin written against `main` will 404, which is exactly the failure mode this base
+priced as a rate at `p301`.
+
+### 🔴 The benchmark this shelf most needed has NO GRANT
+
+🔴 **[`DAMO-NLP-SG/M3Exam`](https://github.com/DAMO-NLP-SG/M3Exam) — 105★ — no `LICENSE`, `LICENSE.md`,
+`LICENSE.txt` or `COPYING` on `main` or `master`.** A **multilingual, multimodal, multilevel** benchmark of
+real exam questions for evaluating LLMs: on paper the single most useful evaluation asset for an education
+engagement outside the OECD core, since it is built from *actual national exams* across languages. 🔴 **No
+grant means the question of whether Globant may redistribute or build on it has an answer, and the answer is
+no.** 🔵 **Brief it as readable prior art — use it to argue that national-exam evaluation is feasible — and
+build the deliverable on the MIT audit designs above.**
+
+### 🔴 Also refused into this tier this pass
+
+🔴 **[`blessed0x/scratch-unified-mcp`](https://github.com/blessed0x/scratch-unified-mcp) — no licence** —
+a **headless Scratch VM exposed over MCP with 108 tools** for an agent to build, test and publish Scratch
+projects. **The best-shaped K-12 computing artefact this base has seen** — Scratch is the near-universal
+primary-school programming environment, and a headless VM behind MCP is precisely the missing piece for an
+agent that *teaches programming by doing it*. 🔴 **1★ and no grant.** 🔵 **Record the shape and build it: the
+capability is a tractable project, and there is no permissive equivalent on this shelf.**
+
+🔴 **[`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor)** — **GNU GPL** (payload `LICENSE.txt`,
+`35 148 B`, `8b1ba204bb69`), 12★, from **Brown PLT**. A misconception-targeting tutor for **Linear Temporal
+Logic** — academically serious and the right *pedagogy* (teach to the misconception, as
+[`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill)
+does permissively). 🔴 **GPL. Study the misconception catalogue; do not link the code.**
+
+### 🟢 New offline-capable row — relevant wherever egress is the constraint
+
+**[`Fazmin/AILearningGuide`](https://github.com/Fazmin/AILearningGuide)** — 🟢 **MIT** (**payload** `LICENSE`,
+`1 081 B`, sha256₁₂ `e29ef713b542`, holder **Discover AI contributors**) — **202★**. An **offline desktop**
+application with **51 interactive labs** on machine-learning topics. 🔵 **On this file because of the offline
+property, not the content**: this base has repeatedly flagged that ministry and rural deployments cannot
+assume egress (the standing example being [`learningequality/kolibri`](https://github.com/learningequality/kolibri)),
+and this is a permissive, self-contained AI-literacy curriculum that runs with no network. 🔵 **Pairs with
+Kolibri for an offline AI-literacy package** — Kolibri carries it, this is payload. ⚠️ **It teaches AI; it is
+not an agent.** Internals unread this pass.
+
+### 🔴 What this pass could NOT do
+
+🔴 **Twenty-first consecutive pass with no primary government or IGO source, and the cause is now NAMED.**
+This session's resolver answers **`github.com` and `raw.githubusercontent.com`**; every other host tried
+returned **`getaddrinfo ENOTFOUND`** — `www.congress.gov`, `www.govinfo.gov`, `docs.house.gov`,
+`digital-strategy.ec.europa.eu`, `www.iesalc.unesco.org`, `www.vietnam-briefing.com`,
+`www.allenandgledhill.com`. 🟢 **That makes it a resolver scope rather than government-specific blocking** —
+a more useful fact, because it predicts the outcome of every future leg. Matrix:
+[`p302-reachability.2026-10-18-p302.tsv`](../evidence/p302-reachability.2026-10-18-p302.tsv).
+🔴 **`api.github.com` is intercepted by the agent proxy**, so no exact star integer, no `licence_spdx` and no
+`pushed_at` for any row; **all star figures are rendered and rounded.**
+🔴 **`make hooks` was NOT run** — this base's gates could not be executed from this session, reproducing
+`p301`. The licence instrument used instead was the direct `raw.githubusercontent.com` payload read, recorded
+with byte length and `sha256₁₂` for every row so any later pass reproduces it exactly.
+🔴 **The IESALC LATAM triple (87/74/26) has still never been read at its publisher** — open since `p282`,
+and the host is unreachable from here. It stays **AGGREGATOR-ATTRIBUTED**.
+
 ## 🟢 Pass 301 — THE BACKLOG'S RANKED ITEM 1 DISCHARGED AT FIVE TIMES `p300`'S SCALE: 105 PAYLOAD READS, 146 UNPINNED ROWS FOUND MECHANICALLY, AND TWO OF THIS BASE'S ANECDOTES TURNED INTO RATES
 
 ⏱️ **Twenty-third pass of `2026-10-18`.** Evidence:

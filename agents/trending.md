@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 302: THE MANDATED AGENT LEG WAS RETIRED AFTER TWENTY-EIGHT NILS AND REPLACED WITH GITHUB TOPIC ENUMERATION — FOURTEEN PERMISSIVE ROWS AND NINE LICENCE REFUSALS IN ONE LEG, INCLUDING A 29.6k★ TUTOR WITH NO GRANT
+
+Evidence: [`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv) ·
+[`p302-reachability.2026-10-18-p302.tsv`](../evidence/p302-reachability.2026-10-18-p302.tsv) ·
+[`p302-websearch.2026-10-18-p302.tsv`](../evidence/p302-websearch.2026-10-18-p302.tsv).
+
+### 🟢 The signal of the week is an INSTRUMENT change, not a repository
+
+🔴 For twenty-eight consecutive windows the mandated phrasing `top open source AI agents education 2026
+github MIT` has returned general-purpose agent listicles — OpenClaw, OpenHands, CrewAI, MetaGPT — and zero
+new education rows. 🟢 **`p302` retired it and read `github.com/topics/*` through `WebFetch` instead.**
+Topic pages are **reachable**, **star-sorted**, and they **publish their own denominator**: `ai-tutor`
+**750** repos, `ai-education` **528**, `intelligent-tutoring-system` **41**, `education` **39 007**.
+🟢 **Yield: 14 new permissive rows + 9 licence refusals in a single leg** — more new permissive rows than
+the four mandated legs have produced between them since the streak began.
+
+🔵 **Carry this as a method finding, not a one-off**: a listicle reports an author's opinion; a topic page
+reports a *population ordered by adoption*, and it can be paged. `p303` should run `ai-tutor` and
+`ai-education` past page 1 — this pass read only the first 20 of each.
+
+### 🔴 Hot signal #1 — the 29.6k★ tutor that nobody may legally use, and it is DISCONTINUED
+
+**Repo**: [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) — **29.6k★ /
+3.3k forks** — 🔴 **NO LICENCE**
+**Why it matters**: it is the second-most-starred education-specific tutoring artefact on GitHub after
+`HKUDS/DeepTutor`, the top organic hit for "AI tutor prompt", and it carries **no grant of any kind** —
+`LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` all 404 on `main` and `master`, and the rendered
+sidebar's Resources block lists only "Readme" and "Activity". 🔴 **Its README's first heading is
+`DISCONTINUED`**, so there is no maintainer to request a licence from. **3.3k forks of software nobody has
+the right to use.** 🔵 **This is now this base's standing answer to "but it has a lot of stars".**
+
+### 🔴 Hot signal #2 — the best-maintained visual tutor is AGPL
+
+**Repo**: [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) — **1.3k★ / 189 forks / 193
+commits** — 🔴 **AGPL-3.0** (payload `34 522 B`, `20b067f86de3`)
+**Why it matters**: *"an AI teacher equipped with the ability to use an electronic whiteboard"* — Math
+Canvas, Mermaid mindmaps, **GeoGebra**, Vue + ElysiaJS, `docker compose`, pluggable across OpenAI /
+Anthropic / DeepSeek. It is the most capable *maintained* education-specific tutor on GitHub after
+DeepTutor. 🔴 **AGPL reaches network use**, so it cannot be hosted inside a client's proprietary platform.
+🔵 **Study it, then build the equivalent on [`khayyam-math`](https://github.com/khayyam-math/khayyam-math)
+(MIT) when the client must own the result.**
+
+### 🟢 Hot signal #3 — tutoring EVALUATION arrived as code, at 3 and 4 stars
+
+**Repos**: [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) (**MIT**, 3★,
+arXiv:2607.28128) · [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit)
+(**MIT**, 4★, branch `master`)
+**Why it matters**: the first artefacts on this shelf that test whether an LLM helpfulness judge *"rewards
+the answer-leakage that reduces the student's later independent work."* One frozen base model, two policies
+(**ConvTutor** single-node LangGraph vs **PedTutor** with tracker + decomposer + **deferral gate** + hint
+cascade), cold baseline, weak simulated student (**Llama-3.1-8B**), Opus as primary judge plus a second
+judge, a **frozen leakage matcher**, and ablations that remove tracker / gate / cascade one at a time.
+**10 replicates × {cold, conv, ped}** per base; GPT and Gemini bases never pooled. 🔵 **Vietnam and Korea
+now ask for evidence about automated assessment — this is the only code here that produces any.**
+⚠️ **No results on either page.** Cite the design, never an effect size.
+
+### 🟢 Hot signal #4 — curriculum alignment and a parent channel, in one Apache-2.0 skill
+
+**Repo**: [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) — **Apache-2.0**,
+**108★ / 9 forks**
+**Why it matters**: almost everything on this shelf tutors *a subject*; this one tutors **a syllabus** —
+**统编版** Chinese grades 1-12, **人教版** English grades 3-12, **人教版/北师大版** STEM 7-12 — and then
+reports to the **parent** (parent-child translation, 21-day habit plan, mastery/concerns/next-week report).
+Its **"心跳任务" (heartbeat tasks)** loop wakes the learner, assigns, verifies, cycles. 🔵 **The
+heartbeat-plus-parent-report pair is the K-12 retention mechanism to copy in LATAM and APAC**; the
+textbooks are swappable. ⚠️ Skill, not service — needs an OpenClaw / Claude Code / Cursor / Codex host.
+
+### 🟢 Hot signal #5 — a withholding policy, written down
+
+**Repo**: [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) — **MIT**, **293★ / 63 forks**
+**Why it matters**: a **five-level progressive hint cascade** (gentle observation → pattern nudge →
+approach direction → technique reveal → pseudocode skeleton *as a last resort*) with the premise stated
+outright: *"Copy-pasting solutions doesn't build problem-solving skills."* 🔵 **Graduated withholding is the
+component every tutoring engagement has to build and practically nobody publishes.** ⚠️ 9 commits — lift the
+cascade, not the dependency.
+
+### 🟡 Hot signal #6 — the de-skilling counter-agent
+
+**Repo**: [`ProjectAJ14/eklavya`](https://github.com/ProjectAJ14/eklavya) — **MIT**, 10★, TypeScript
+**Why it matters**: it **quizzes the developer on the concepts behind code the agent just wrote**, against
+a local knowledge graph — the only row here pointed at agent-induced de-skilling rather than at
+productivity. 🔵 **Directly usable for internal enablement, and it answers a question clients are starting
+to ask out loud.** ⚠️ 10★, early.
+
+### 🔴 The refusals, because an undeclared refusal looks exactly like an absence
+
+| repo | stars | grant | call |
+|---|---|---|---|
+| `JushBJJ/Mr.-Ranedeer-AI-Tutor` | 29.6k | **NONE** + DISCONTINUED | 🔴 **REFUSED** |
+| `HugeCatLab/ChatTutor` | 1.3k | AGPL-3.0 | 🔴 **REFUSED** (study only) |
+| `aaryansamanta/ai-ethos` | 499 | **NONE** | 🔴 **REFUSED** — multilingual tutoring for underserved learners, exactly the LATAM profile, and unusable |
+| `DAMO-NLP-SG/M3Exam` | 105 | **NONE** | 🔴 **REFUSED** — multilingual/multimodal exam benchmark, the evaluation asset this shelf most wants |
+| `yh2072/edgameclaw` | 71 | AGPL-3.0 | 🔴 **REFUSED** |
+| `luffycodes/Tutorbot-Spock` | 56 | **NONE** | 🔴 **REFUSED** — learning-science lineage is the attraction |
+| `Jeremy-xuan/SocraticNovel` | 32 | Creative Commons | 🔴 **REFUSED** — a CC licence is not a software licence |
+| `blessed0x/scratch-unified-mcp` | 1 | **NONE** | 🔴 **REFUSED** — 108 MCP tools over a headless Scratch VM, the best-shaped K-12 coding artefact seen |
+| `ZQR1101/xueyoujing-companion` | 2 | **NONE** | 🔴 **REFUSED** |
+
+🔵 **Nine refusals against fourteen acceptances: a shelf built from topic pages WITHOUT payload reads would
+have been about 39 % unusable.** That ratio is the argument for the payload instrument, stated as a rate.
+
+### 🟢 Carried row that advanced
+
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — **41.6k★ / 5.3k forks**, Apache-2.0 re-read at
+payload (`11 408 B`, sha256₁₂ `cd2f54e1e506`), and the release moved **`v1.6.14` → `v1.6.15`** (rendered
+`2026.10.19`). ⚠️ Rendered one day ahead of this pass's date; recorded as rendered, not asserted.
+
+### 🔴 What did NOT work, declared
+
+🔴 **Primary sources: twenty-first consecutive pass with none, and the cause is now named.** This session's
+resolver answers **`github.com` and `raw.githubusercontent.com`** and returned `getaddrinfo ENOTFOUND` for
+**`www.congress.gov`, `www.govinfo.gov`, `docs.house.gov`, `digital-strategy.ec.europa.eu`,
+`www.iesalc.unesco.org`, `www.vietnam-briefing.com`, `www.allenandgledhill.com`**. 🟢 **It is a resolver
+scope, not governments being blocked** — so it predicts every primary leg fails and every GitHub leg
+succeeds. `p303`: stop spending legs on primary sources from this environment.
+🔴 **`api.github.com` is intercepted by the agent proxy** → no exact star integers, no `licence_spdx`, no
+`pushed_at`. **Every star figure in this section is rendered and rounded.**
+🔴 **GitHub topic pages were read at page 1 only** (20 of 750 and 20 of 528). The rows below rank 20 are
+**unmeasured, not absent.**
+
 ## 2026-10-18 — Pass 301: THREE new agent rows from the DIRECTED leg while the mandated one nil'd a TWENTY-SEVENTH time; a Moodle agent that needs no administrator; and a new row demoted to "diverged fork" by a HEAD check that its licence payload could not have made
 
 Evidence: [`p301-websearch.2026-10-18-p301.tsv`](../evidence/p301-websearch.2026-10-18-p301.tsv) ·

@@ -1,0 +1,26 @@
+slug	branch	file	bytes	sha256_12	detected_licence	copyright_holder_line	permissive	verdict
+HKUDS/DeepTutor	main	LICENSE	11408	cd2f54e1e506	Apache-2.0	(appendix form, holder in NOTICE)	YES	CARRIED-REconfirmed; payload re-read p302
+karanb192/algo-sensei	main	LICENSE	1081	3b2ca73e81ad	MIT	-	YES	NEW ROW
+KeWang0622/kaogong-skill	main	LICENSE	1083	a6943096ffde	MIT	-	YES	NEW ROW
+PrepLabsAI/InterviewMentor	main	LICENSE	1071	aeb634f7110b	MIT	-	YES	NEW ROW
+SimonsTang/feifei-companion	main	LICENSE	10227	59a378bf23a0	Apache-2.0	-	YES	NEW ROW
+codeXsidd/Studivexa	main	LICENSE	1068	58f77360830f	MIT	-	YES	NEW ROW
+ProjectAJ14/eklavya	main	LICENSE	1067	b64948dd9b05	MIT	-	YES	NEW ROW
+thm-mni-ii/feedbacksystem	main	LICENSE	10785	65125d9e480b	Apache-2.0	(c) 2023 Technischen Hochschule Mittelhessen	YES	NEW ROW
+bydeng01/ability-levels-audit	master	LICENSE	1154	fef00f185287	MIT	-	YES	NEW ROW (note: default branch master)
+bydeng01/conv-vs-ped-tutor	main	LICENSE	1150	a1c6b65c5bb1	MIT	-	YES	NEW ROW
+sohan1611/BloodCoded_Agentic	main	LICENSE	1104	4b15a1e898b3	MIT	-	YES	NEW ROW
+khayyam-math/khayyam-math	main	LICENSE	1079	4068e5e09efd	MIT	-	YES	NEW ROW
+assafkip/claudemy	main	LICENSE	1069	262b47ee1fff	MIT	Copyright (c) 2026 Assaf Kipnis	YES	NEW ROW
+Fazmin/AILearningGuide	main	LICENSE	1081	e29ef713b542	MIT	Copyright (c) 2026 Discover AI contributors	YES	NEW ROW
+TovTechOrg/Tov-learn	main	LICENSE	1064	092d389ac156	MIT	Copyright (c) 2026 TovTech	YES	NEW ROW
+HugeCatLab/ChatTutor	main	LICENSE	34522	20b067f86de3	AGPL-3.0	(C) 2007 Free Software Foundation	NO	FLAG-copyleft; 1.3k stars
+yh2072/edgameclaw	main	LICENSE	34523	8486a10c4393	AGPL-3.0	(C) 2007 Free Software Foundation	NO	FLAG-copyleft
+brownplt/LTLTutor	main	LICENSE.txt	35148	8b1ba204bb69	GNU GPL	-	NO	FLAG-copyleft
+Jeremy-xuan/SocraticNovel	main	LICENSE	1227	593122cbd00b	Creative Commons	-	NO	FLAG-CC is not a software licence
+JushBJJ/Mr.-Ranedeer-AI-Tutor	main	-	-	-	NONE	-	NO	FLAG-NO GRANT at 29.6k stars; README header "DISCONTINUED"
+aaryansamanta/ai-ethos	main	-	-	-	NONE	-	NO	FLAG-NO GRANT at 499 stars
+DAMO-NLP-SG/M3Exam	main	-	-	-	NONE	-	NO	FLAG-NO GRANT at 105 stars (benchmark)
+luffycodes/Tutorbot-Spock	main	-	-	-	NONE	-	NO	FLAG-NO GRANT at 56 stars
+blessed0x/scratch-unified-mcp	main	-	-	-	NONE	-	NO	FLAG-NO GRANT; 108 MCP tools
+ZQR1101/xueyoujing-companion	main	-	-	-	NONE	-	NO	FLAG-NO GRANT
