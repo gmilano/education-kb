@@ -13,6 +13,40 @@ updated: 2026-10-18
 > Each pattern states the licence boundary — the line the client's proprietary code must stay
 > on to keep a copyleft platform from colouring the deliverable.
 
+## 🟢 Pass 287 — the binding constraint in a tutoring deliverable is the CURRICULUM'S licence, and no recipe below had a row for it
+
+⏱️ `2026-10-18`, ninth pass. Evidence:
+[`verified-repos.2026-10-18-p287.tsv`](../evidence/verified-repos.2026-10-18-p287.tsv) ·
+[`p287-websearch.2026-10-18-p287.tsv`](../evidence/p287-websearch.2026-10-18-p287.tsv).
+
+🟢 **New pattern `P40` — the two-corpus tutor.** Every recipe in this file prices the **code**
+licence of its components, which is what 287 passes of instrument work have been for.
+🔴 **`p287` read a working project's own content audit and found the constraint that actually
+decides a paid tutoring deliverable, and it is not a code licence at all:**
+[`avps82/mentar`](https://github.com/avps82/mentar)'s `docs/CONTENT_LICENSES.md` clears its
+Khan Academy grounding corpus (`CC BY-NC-SA`) for *"the **non-commercial** local pilot"* and
+states it 🔴 ***"does NOT clear the Phase-3 paid hosted tier."***
+
+🔵 **A Globant deliverable is paid by construction**, so the pilot corpus and the shippable
+corpus are **different corpora** — and the platform's own licence does not change between those
+two phases while the content's obligations do all the work. `P40` makes that split a
+configuration boundary instead of a discovery.
+
+🟢 **The second half of the same finding**: `mentar`'s country strategy
+(`AU = ACARA (CC BY)`, `IN/SG/US = GENERIC packs (no claimed alignment)`) shows that
+**"curriculum-aligned" is claimable only where the curriculum itself is openly licensed.**
+🔴 This base has read **one** national curriculum licence first-hand. `P40` step 4 therefore
+scopes a **research task** per engagement rather than a lookup, and
+[`intel/trends.md`](../intel/trends.md) `T-p287a` ranks reading five ministry licences for
+`p288`.
+
+🔵 **Why this belongs in `compose/` and not only in `intel/`:** the remedy is a *wiring*
+decision with a deadline. Keep `libzim` (GPL-3.0-or-later) an **optional** extra with lazy
+imports and the core stays permissive; make it core and the combined distribution must go
+copyleft. 🟢 **`mentar` documents making exactly that change, with dates** — one dependency's
+placement decided the licence of the whole deliverable, and it is the cheapest high-stakes
+decision in the build.
+
 ## 🟢 Pass 283 — every component address in every recipe below is now PROVEN distinct
 
 ⏱️ `2026-10-18`, fifth pass. Evidence: [`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv) · [`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv).
@@ -2045,3 +2079,78 @@ activity directly before committing a client. And the copyright holder of `twiga
 organisation** — fine for MIT, but confirm the contribution history if the client's procurement
 asks who owns the upstream. 🔴 **APAC-placed components, APAC-placed evidence:** `sekolahyuk-app`
 and `rapkumer` are 🇮🇩; nothing in this pattern establishes East African references for them.
+
+## P40 — The TWO-CORPUS tutor: a pilot that proves it and a deliverable that can actually ship *(new in pass 287)*
+
+**The engagement.** Any paid tutoring deliverable, in any region. The client wants a pilot that
+demonstrates quality fast, then a product. 🔴 **The trap this pattern exists for is that the
+fastest pilot corpus is usually one the product may not use**, and the discovery is normally made
+after the pilot has set expectations.
+
+**Why this pattern exists.** `p287` read
+[`avps82/mentar`](https://github.com/avps82/mentar)'s own `docs/CONTENT_LICENSES.md` — an
+unusually rigorous audit by a working project, not a vendor claim — and it states the boundary
+in its own verdict column: its live grounding source, **Khan Academy (ZIM) under
+`CC BY-NC-SA`**, is ✅ *"cleared for the **non-commercial** local pilot"* and 🔴 ***"does NOT
+clear the Phase-3 paid hosted tier."*** 🟢 **A Globant deliverable is paid by construction**, so
+for this base that is the default case, not an edge case. See [`intel/trends.md`](../intel/trends.md)
+`T-p287a`.
+
+| what | component | licence (payload-read `2026-10-18`) | role |
+|---|---|---|---|
+| 🟡 Reference agent to read before building | [`avps82/mentar`](https://github.com/avps82/mentar) | 🟡 **AGPL-3.0** — root `LICENSE`, 34 523 B, HEAD `9d9d43c` | **839 files.** Local-first multi-curriculum tutor, deterministic answer checker, `CLA.md`. 🔴 **AGPL: import only behind a network boundary, or read it and reimplement** |
+| 🟢 **Pilot corpus** (tier 1) | Khan Academy ZIM, Vikidia, Simple English Wikipedia | 🔴 KA **`CC BY-NC-SA`** · 🟢 Vikidia **`CC BY-SA 3.0`** · 🟢 Simple-WP **`CC BY-SA 4.0`** | Grounding passages for RAG. 🟢 **Vikidia and Simple-WP carry NO NC clause — they survive into tier 2; KA does not** |
+| 🟢 **Shippable corpus** (tier 2) | the NC-free subset only, plus any openly licensed national curriculum | 🟢 **ACARA (AU) is `CC BY`** — alignment claimable | The corpus the paid deliverable is actually built on |
+| 🟢 Offline reader | `libzim` / `python-libzim` | 🔴 **GPL-3.0-or-later** | ZIM access. 🔴 **See the boundary note — this single dependency decided `mentar`'s whole licence** |
+| 🟢 Deterministic maths | `sympy` (BSD), `pint` (BSD), `num2words` (**LGPL**) | 🟢 permissive / weak copyleft | Route arithmetic through a CAS instead of the model — `mentar` and 🇬🇭 `edubot-africa` arrived at this independently |
+| 🟡 Learner model | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | Knowledge tracing over accumulated interaction logs |
+| 🟡 Smallest readable tutor loop | [`bunnywaffle/Open-Education`](https://github.com/bunnywaffle/Open-Education) | 🟢 **Apache-2.0**, 11 357 B | 🔴 **3 files** (`app.py` is the whole thing). Read it in ten minutes as the minimum viable answer-a-learner loop; **not a dependency** |
+
+**How to wire it.**
+
+1. 🟢 **Declare the two corpora on day one, in the SOW.** Tier 1 (pilot, local, non-commercial)
+   may use NC content. Tier 2 (the paid deliverable) may use **only** the NC-free subset. Write
+   the tier boundary into the retrieval configuration, not into a document — one corpus
+   directory per tier, selected by environment, so the shippable build **cannot** read the NC
+   corpus even by mistake.
+2. 🟢 **Keep `libzim` an OPTIONAL extra with lazy imports.** This is `mentar`'s own dated
+   self-correction and the single most portable lesson in its audit: while `libzim`
+   (GPL-3.0-or-later) was a **core** dependency, *"a permissive licence for the combined
+   distribution was NOT viable"*; moving it to an optional `[grounding]` extra — imports lazy,
+   grounding degrading to `""` without it — returned the core to *"every dependency permissive
+   or weak copyleft"*. 🔵 **One dependency's placement decided the licence of the whole
+   deliverable**, which is the cheapest high-stakes decision in the build.
+3. 🟢 **Route every computable answer through a CAS**, not the model. `sympy` for algebra,
+   `pint` for units. Both BSD.
+4. 🟢 **Decide the alignment claim from the curriculum's licence, never from the market plan.**
+   Openly licensed curriculum (🇦🇺 ACARA, `CC BY`) → claim alignment and cite it. Anything else →
+   ship generic packs and **withhold the claim**. 🔴 This base has **not** read the licences for
+   NCERT, FBISE, NaCCA, TIE, NCTB or NCDC — see the caution below.
+5. 🟡 **Attribution is a build task, not a licence task.** `mentar`'s audit notes that **no
+   attribution UI exists for any source today** — grounding passages reach the system prompt and
+   never a learner-visible credit string, while `CC BY`/`BY-SA` require credit. 🟢 **Build the
+   attribution surface in tier 1**, where it is cheap, rather than discovering it in tier 2.
+
+**The licence boundary.** 🔴 **`mentar` is AGPL-3.0: do not vendor it into a proprietary
+deliverable.** Two clean uses: (a) **read it** — the audits are the deliverable here, and reading
+is unrestricted; (b) **run it behind a network boundary** as a separate service, with the
+client's proprietary code on the other side. 🟢 **The corpus components are the real boundary in
+this pattern**, and they are CC, not code: `BY-SA` obliges **attribution and share-alike on
+adaptations**; `BY-NC-SA` adds **NC**, and 🔴 **`SA` COMPOUNDS it** — a redistributed adaptation
+of NC content inherits `CC BY-NC-SA`, carrying NC forward into everything downstream. Vikidia and
+Simple-WP are `BY-SA` **without** NC, which is exactly why they survive into the paid tier and
+Khan Academy does not.
+
+⚠️ **Five cautions.** 🔴 **`mentar`'s audit is not counsel** — its own front matter says *"⚠️ Not
+legal advice"*, its identifications are *"as of 2026-06-14"*, and the repository was **private**
+when it was written (*"no one has yet received the code under AGPL"*), so its AGPL framing
+describes an intent, not a distribution history. 🔴 **The KA ZIM's CC version is unspecified on
+the ZIM itself** — the audit treats it as 3.0/4.0-equivalent *"pending exact confirmation"*;
+confirm before relying on either. 🔴 **This base has read exactly ONE national curriculum licence
+first-hand (ACARA, via this audit)** — the other six markets it names are unverified, so step 4
+is a research task on every new engagement, not a lookup. 🟡 **Star counts are frozen base-wide**
+(`api.github.com/repos` refused by session policy), so judge `mentar`'s 839-file maturity from
+its commit and issue activity directly. 🔴 **And do not import 🇵🇰 `PrepifyAI`'s textbook JSON as
+a shortcut to a corpus** — it redistributes FBISE and Punjab board textbooks with no grant of any
+kind, and that is the one failure in this pattern that a licence-intake ask **cannot** repair
+(`T-p287c`).

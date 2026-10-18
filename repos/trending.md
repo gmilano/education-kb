@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 287) — the repository channel's nil is THIRTEEN deep, and the pass's largest repository is one that AUDITS ITS OWN LICENCES
+
+⏱️ **Ninth pass of `2026-10-18`.** Append-only. Evidence:
+[`verified-repos.2026-10-18-p287.tsv`](../evidence/verified-repos.2026-10-18-p287.tsv) ·
+[`p287-websearch.2026-10-18-p287.tsv`](../evidence/p287-websearch.2026-10-18-p287.tsv).
+
+🔴 **No first-hand trending, same measured reason, now stated as settled policy rather than a
+blocker.** `github.com/trending` answers **403**; `api.github.com/repos/{owner}/{repo}` is
+refused by **session repo scope**. Both are *policy* boundaries, struck from the backlog by
+`p285`. **Every trending ranking on this shelf is third-party, and no star count in this pass
+is first-hand — so this pass carries NONE**, rather than re-publishing `2026-10-17`'s frozen
+figures as though they were re-measured.
+🟢 What is live and did all the work, again: `raw.githubusercontent.com`,
+`git ls-remote --symref`, and `git clone --depth 1 --filter=blob:none`.
+
+### 🟢 Ten addresses probed, 8 grants read, 2 absences enumerated to the file
+
+| repository | ref | payload | bytes | family | tree | verdict |
+|---|---|---|---|---|---|---|
+| [`avps82/mentar`](https://github.com/avps82/mentar) | `main` | `LICENSE` | 34 523 | **AGPL-3.0** | **839** | 🟢 The pass's largest. Ships its **own** licence audit — see below |
+| [`MeetYourAI/AIProf`](https://github.com/MeetYourAI/AIProf) | **`dev`** | `LICENSE` | 35 149 | **GPL-3.0** | — | 🔴 README says **MIT** and links this file |
+| [`saif2012004/PrepifyAI`](https://github.com/saif2012004/PrepifyAI) | `main` | — | 0 | **NONE_IN_TREE** | **389** | 🔴 Enumerated, not guessed. No licence path, no README claim, `"private": true` |
+| [`bunnywaffle/Open-Education`](https://github.com/bunnywaffle/Open-Education) | `main` | `LICENSE` | 11 357 | **Apache-2.0** | **3** | 🔴 Three files total. `HEAD 1fac5bc` |
+| [`aicademyorg/aicademy`](https://github.com/aicademyorg/aicademy) | `main` | `LICENSE` | 1 063 | **MIT** | 72 | 🟡 Real grant, teaching-engineers class |
+| [`somenssarkar/gurukul-ai`](https://github.com/somenssarkar/gurukul-ai) | `main` | — | 0 | **NONE_IN_TREE** | 17 | 🔴 README claims MIT. Five `SKILL.md` packs |
+| [`guedesindev/ai_tutor_forge`](https://github.com/guedesindev/ai_tutor_forge) | `main` | `LICENSE` | 35 149 | **GPL-3.0** | 7 | 🟡 🇧🇷 `HEAD d503ac7` |
+| [`Priyamakeshwari/TeachGPT`](https://github.com/Priyamakeshwari/TeachGPT) | `main` | **`LICENSE.md`** | 1 057 | **MIT** | 18 | 🟢 Untitled MIT body — and `LICENSE.md`, not `LICENSE` |
+| [`sira313/rapkumer`](https://github.com/sira313/rapkumer) | `main` | `LICENSE` | 3 140 | bespoke | — | 🔴 Restriction now **read** by the `id` arm |
+| [`heronerar/OpenGaokao`](https://github.com/heronerar/OpenGaokao) | `main` | `LICENSE` | 15 992 | `OpenGaokao-SAL-1.0` | — | 🔴 Source-available, **not** OSI. Says so itself |
+
+### 🟢 `avps82/mentar` — the first education repository in this base that did the licence work this base builds instruments for
+
+🔵 **Worth its own section not because of the code but because of three documents in it**, each
+the real-world counterpart of an instrument family on this shelf:
+
+| document | what it establishes | the instrument it mirrors |
+|---|---|---|
+| `docs/LICENSE_AUDIT.md` | A **dependency licence closure** with a verdict column. `libzim` (`python-libzim`) is **GPL-3.0-or-later**; while it was a *core* dependency a permissive licence for the whole was **not viable**, which is what forced **AGPL-3.0 + CLA**. Then a dated **self-correction**: `libzim` moved to an optional `[grounding]` extra with lazy imports, so *"nothing in the core forces GPL/AGPL any more"* — core is `pyyaml` MIT, `openai` Apache-2.0, `sympy` BSD, `pint` BSD, `inflect` MIT, `num2words` **LGPL** (weak copyleft) | `compose/code/dependency-licence-closure` |
+| `docs/CONTENT_LICENSES.md` | A **content** audit kept separate from the code audit, with a **per-tier** verdict | `compose/code/pass258-content-licence-family` |
+| `CLA.md` | The relicensing path, held open deliberately: **all 427 commits are the maintainer**, so there is *"no third-party copyright to clear"* | — |
+
+🔴 **And the single most commercially important line this pass read, in anyone's repository:**
+its live grounding source is **Khan Academy (ZIM) under CC BY-NC-SA**, and the audit states the
+consequence precisely — ✅ cleared for *"the **non-commercial** local pilot"*, 🔴 **"does NOT
+clear the Phase-3 paid hosted tier"**. 🔵 **That is the exact seam a Globant engagement lands
+on**, because a studio deliverable is paid by construction: *the same content source is cleared
+for the pilot that proves the idea and blocked for the product that sells it.* The audit also
+notes **SA compounds rather than removes the problem** — a redistributed adaptation of KA text
+inherits CC BY-NC-SA, carrying NC forward.
+
+🟢 **Its country strategy is the second finding, and it is a licensing decision wearing
+product clothing:** `AU = ACARA (CC BY)` versus `IN/SG/US = GENERIC packs (no claimed
+alignment)`. 🔵 **Curriculum alignment is only claimable where the curriculum itself is openly
+licensed.** Australia's ACARA is CC BY, so alignment is claimable; elsewhere the project ships
+generic packs **and withholds the alignment claim**. For a regional engagement that is the
+whole roadmap in one line: *the deliverable's claims are bounded by the host country's
+curriculum licence*, and 🔴 **this base has had no instrument and no pattern for that until
+now.**
+
+🟡 **One honest caveat, from the audit's own front matter:** it is stamped *"⚠️ Not legal
+advice"*, its identifications are *"as of 2026-06-14"*, and the repository was **private** when
+the audit was written (*"no one has yet received the code under AGPL"*). **Read it as an
+unusually good engineering artefact, not as cleared counsel.**
+
+### 🔴 Three refutations of secondary "open source" claims, and the pass's own count
+
+- `somenssarkar/gurukul-ai` — README says *"MIT License — use freely, contribute openly"*;
+  **no licence file on any ladder path across 17 enumerated files.**
+- `MeetYourAI/AIProf` — README says *"This project is **MIT** licensed"* and links `./LICENSE`;
+  **that file is verbatim GPL-3.0.**
+- `saif2012004/PrepifyAI` — described by a search result simply as a GitHub FYP project;
+  **389 files, no grant, `"private": true`.**
+
+🟢 **Of ten addresses probed this pass, four were described as open source or MIT by a secondary
+source and three of those four were wrong.** `p286` measured three of five. **Read the grant,
+never the list** now has a two-pass running rate behind it.
+
+### 🔴 The ref axis decided a verdict for the third time in four passes
+
+`AIProf`'s grant is on **`dev`**. `p285`'s `eledia` was on **`master`** behind a default of
+`51`; `p286`'s `twiga` was on **`development`**. 🔵 **Three different non-standard default refs
+in four passes, each of which would have published `NONE_IN_TREE` under a hardcoded
+`main`/`master` probe.** `probe_default_branch`'s `ls-remote --symref` resolution is not
+defensive engineering; it is **load-bearing**, and this is the measurement that says so.
+
+### 🟡 A note on `PrepifyAI` that the code-licence question structurally cannot see
+
+Its 389 files include **20 `Extracted text books/` JSON files** for `FBISE_CLASS9`,
+`FBISE_CLASS10`, `PUNJAB_CLASS9` and `PUNJAB_CLASS10`. 🔴 **Board textbook text is third-party
+copyright**, so a written code grant from the author — the usual remedy for a
+`NONE_IN_TREE` row — **would not clear this repository**. It is the first education row here
+where **the content problem is strictly larger than the code problem**, and it belongs to the
+same seam `mentar` documents from the other side.
+
 ## 2026-10-18 (pass 286) — the repository channel's nil is TWELVE deep, and the three grants this pass came from exam-board and language queries
 
 ⏱️ **Eighth pass of `2026-10-18`.** Append-only. Evidence:

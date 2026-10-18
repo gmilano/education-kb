@@ -1,0 +1,51 @@
+# p287 — 2026-10-18 — `T-p286b` DISCHARGED: the restriction vocabulary is no longer
+# English-only, and "nothing found" is no longer indistinguishable from "nothing looked for".
+# Every row is `restriction_scan.scan()` output on a REAL payload, before and after.
+#
+# 🔴 The failure direction that ranked this first: the miss reported as NO RESTRICTION,
+# not as CANNOT READ.  A reader acting on the `before` column ships a payload whose §3
+# is titled PROHIBITION OF COMMERCIAL USE as unrestricted.
+payload	bytes	before_verdict	before_hits	after_verdict	after_hits	after_language
+sira313/rapkumer LICENSE (Indonesian, bespoke)	3140	UNCLASSIFIED:no-family-no-restriction	()	🟢 RESTRICTED:added-restriction	larangan penggunaan komersial, tanpa izin tertulis	id
+heronerar/OpenGaokao LICENSE (92.9% CJK)	15992	UNCLASSIFIED:no-family-no-restriction	()	🟢 RESTRICTED:added-restriction	saas, 商业使用必须, 禁止商业使用	zh
+Priyamakeshwari/TeachGPT LICENSE.md (untitled MIT body)	1057	UNCLASSIFIED:no-family-no-restriction	()	🟢 PERMISSIVE (family MIT)	()	en
+Thai control, SYNTHETIC — no arm for this language	~470	UNCLASSIFIED:no-family-no-restriction	()	🟢 UNREADABLE-BODY:no-vocabulary-for-this-language	()	None
+# ── REGRESSION: every payload p257 already graded is graded IDENTICALLY ─────────────────
+usc-academic-1812 (USC Stevens, bespoke academic)	1812	RESTRICTED:added-restriction	6 terms	RESTRICTED:added-restriction	6 terms (unchanged)	en
+apache-2.0-11356 (verbatim)	11356	PERMISSIVE	()	PERMISSIVE	()	en
+gpl-3.0-35146 (verbatim; the benign-hit trap)	35146	COPYLEFT	noncommercial (benign)	COPYLEFT	noncommercial (benign, unchanged)	en
+mit-1091 (verbatim, titled)	1091	PERMISSIVE	()	PERMISSIVE	()	en
+notfound-14 (the 404 body)	14	UNCLASSIFIED:no-family-no-restriction	()	UNCLASSIFIED (below the 400-byte floor, deliberately)	()	None
+#
+# ── WHY A CHEAP LANGUAGE TEST IS SOUND HERE ────────────────────────────────────────────
+# `scan` asks the language test ONE question: covered or not.  So the overwhelmingly likely
+# error — confusing es/pt/it for each other, which share function words — CANNOT change a
+# verdict.  Only two errors can:
+#   * an uncovered language read as COVERED -> a false "no restriction".  COSTLY.
+#   * a covered language read as UNCOVERED  -> a false UNREADABLE-BODY.  Cheap: asks a human.
+# So the test demands POSITIVE evidence of a covered language and defaults to uncovered.
+# That is `P241`'s rule moved onto the language axis: never read the absence of one's own
+# vocabulary as permission.
+#
+# ── THE PORT, MEASURED IN BOTH DIRECTIONS (p637) ───────────────────────────────────────
+# `lib/license_family.sh::commercial_use_ok` carried zh/ja/ko/es/pt/fr/de/it since P240/P241.
+# The Python channel had NO arm for ANY language.  The suite now asserts every shell phrase
+# is reachable from the Python vocabulary, AND that the shell lib really carries them, AND
+# that both gained the `id` arm at p287.  Measured on the live payload:
+instrument	payload	verdict_before_p287	verdict_after_p287
+restriction_scan.scan (Python)	sira313/rapkumer	UNCLASSIFIED:no-family-no-restriction	RESTRICTED:added-restriction
+license_family.sh::commercial_use_ok (shell)	sira313/rapkumer	0 = ALLOWED (FALSE)	1 = RESTRICTED
+license_family.sh::commercial_use_ok (shell)	"Penggunaan komersial diizinkan tanpa batasan apa pun."	0 = ALLOWED	0 = ALLOWED (negative control holds)
+#
+# ── FAILURE CAPABILITY, PROVEN BY MUTATION ─────────────────────────────────────────────
+mutation	controls_passing	what_failed
+none (shipped state)	129/129	-
+remove the `id` arm's §3 phrase	127/129	rapkumer hits its section-3 title; positive control: the 'id' arm fires
+disable the UNREADABLE-BODY branch	127/129	all verdicts reachable (UNREADABLE-BODY unreachable)
+remove the MIT operative-clause body anchor	126/129	mit_untitled.usable, mit_untitled grades MIT, mit_untitled.verdict
+#
+# 🔵 REGISTERED, NOT CLAIMED AS CLOSED: this base holds NO real payload in an uncovered
+# language, so the UNREADABLE-BODY reachability control is SYNTHETIC Thai and labelled as
+# such in the suite.  Every other fixture in `fixtures-p257` is real.  Finding a real
+# uncovered-language payload is a p288 item.  Adding arms SHRINKS the uncovered set; it can
+# never empty it, which is precisely why the verdict exists rather than more arms alone.

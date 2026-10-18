@@ -1,0 +1,25 @@
+# p287 — the TREE-ENUMERATION half of this pass's intake.
+# method: git ls-remote --symref (does it resolve, and what is the REAL default ref?)
+#         -> git clone --depth 1 --filter=blob:none -> git ls-files (every path, zero blob transfer).
+# 🟢 Every row below was ACTUALLY WALKED — all seven. Unlike p286, no row here short-circuited on
+# a payload hit: the grants were read from raw.githubusercontent.com AND the trees were enumerated,
+# so the two NONE_IN_TREE rows are sayable absences rather than the state of a path ladder.
+# 🔴 saif2012004/PrepifyAI: 389 files, no licence-like path, no README licence line, and
+# FYP_FRONTEND-main/package.json carries no `license` key and `"private": true`. Its tree also
+# holds 20 `Extracted text books/` JSON files (FBISE_CLASS9/10, PUNJAB_CLASS9/10) — third-party
+# board textbook content, which is why a licence-intake ASK cannot clear this row (T-p287c).
+# 🔴 somenssarkar/gurukul-ai: 17 files, 5 of them .claude/skills/*/SKILL.md. README asserts
+# "MIT License — use freely, contribute openly, share widely" over a tree with no payload:
+# a DANGLING CLAIM, i.e. an upstream ASK rather than a refusal.
+# 🟢 avps82/mentar is the only row whose licence-like paths are PLURAL, and the extra two are the
+# finding: docs/LICENSE_AUDIT.md (dependency closure) and docs/CONTENT_LICENSES.md (content).
+# 🟢 Priyamakeshwari/TeachGPT serves at LICENSE.md, not LICENSE — and its payload is a verbatim
+# MIT body with NO TITLE LINE, which is the p287 family-axis finding (T-p287d).
+slug	ls_remote	head_sha	files_in_tree	licence_like_paths_in_tree
+saif2012004/PrepifyAI	OK	42cc5edf47e4	389	NONE_IN_TREE
+somenssarkar/gurukul-ai	OK	c2df6a50064b	17	NONE_IN_TREE
+guedesindev/ai_tutor_forge	OK	d503ac7ca56e	7	LICENSE
+bunnywaffle/Open-Education	OK	1fac5bc05ac1	3	LICENSE
+aicademyorg/aicademy	OK	addca949df70	72	LICENSE
+avps82/mentar	OK	9d9d43c66f42	839	LICENSE,docs/CONTENT_LICENSES.md,docs/LICENSE_AUDIT.md
+Priyamakeshwari/TeachGPT	OK	287f71c45620	18	LICENSE.md

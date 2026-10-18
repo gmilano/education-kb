@@ -1,0 +1,63 @@
+RAPKUMER LICENSE
+
+Copyright (c) 2026 Rapkumer
+
+Dengan menggunakan, menyalin, memodifikasi, atau mendistribusikan perangkat lunak ini, Anda dianggap telah menyetujui seluruh ketentuan lisensi berikut.
+
+1. IZIN PENGGUNAAN
+Anda diizinkan untuk:
+- Menggunakan perangkat lunak ini untuk keperluan pribadi.
+- Menggunakan perangkat lunak ini untuk pendidikan atau pembelajaran.
+- Menggunakan perangkat lunak ini untuk penelitian.
+- Mempelajari cara kerja kode sumber.
+- Memodifikasi kode sumber sesuai kebutuhan.
+- Mengirimkan perbaikan (bug fix), fitur baru, atau kontribusi lainnya ke repositori resmi Rapkumer.
+
+2. PENYALINAN DAN DISTRIBUSI
+Anda diperbolehkan menyalin dan mendistribusikan perangkat lunak ini, baik dalam bentuk asli maupun yang telah dimodifikasi, dengan syarat:
+- Seluruh isi lisensi ini tetap disertakan.
+- Pemberitahuan hak cipta (copyright notice) tetap dipertahankan.
+- Tidak menghilangkan identitas pengembang asli.
+
+3. LARANGAN PENGGUNAAN KOMERSIAL
+Perangkat lunak ini tidak boleh digunakan untuk tujuan komersial dalam bentuk apa pun.
+Larangan ini mencakup, tetapi tidak terbatas pada:
+- Menjual perangkat lunak ini.
+- Menjual versi yang telah dimodifikasi.
+- Menjual hasil turunan dari perangkat lunak ini.
+- Menjual lisensi penggunaan perangkat lunak ini.
+- Menyewakan perangkat lunak ini.
+- Memberikan akses berbayar terhadap perangkat lunak ini.
+- Memungut biaya untuk mengunduh perangkat lunak ini.
+- Menawarkan layanan instalasi, konfigurasi, atau dukungan dengan menjadikan perangkat lunak ini sebagai produk utama yang diperjualbelikan.
+- Menggunakan perangkat lunak ini sebagai bagian dari produk atau layanan komersial tanpa izin tertulis dari pemegang hak cipta.
+Jika Anda ingin menggunakan Rapkumer untuk keperluan komersial, Anda wajib memperoleh izin tertulis dari pemegang hak cipta terlebih dahulu.
+
+4. ATRIBUSI
+Apabila Anda mendistribusikan perangkat lunak ini atau versi yang telah dimodifikasi, Anda wajib:
+- Mencantumkan kredit kepada pengembang asli Rapkumer.
+- Menyertakan tautan ke repositori resmi Rapkumer.
+- Menjelaskan bahwa perangkat lunak telah dimodifikasi apabila memang ada perubahan.
+
+5. CAKUPAN LISENSI
+Lisensi ini berlaku untuk:
+- Seluruh kode sumber dalam repositori ini.
+- static/logo.png
+- static/logo.ico
+- static/favicon.ico
+- static/favicon.png
+- static/bipmap2.png
+
+Seluruh aset lain yang tidak disebutkan di atas (termasuk file lain di dalam folder static/) tetap mengikuti lisensi masing-masing sesuai dengan pemegang hak cipta yang bersangkutan.
+
+6. IKON PIHAK KETIGA
+Ikon pada folder:
+src/lib/icons/
+berasal dari proyek Feather Icons dan dilisensikan di bawah lisensi MIT.
+Hak penggunaan ikon tersebut mengikuti ketentuan lisensi MIT dan tidak tunduk pada lisensi Rapkumer.
+
+7. PENAFIAN
+PERANGKAT LUNAK INI DISEDIAKAN "SEBAGAIMANA ADANYA" (AS IS), TANPA JAMINAN DALAM BENTUK APA PUN, BAIK TERSURAT MAUPUN TERSIRAT.
+PEMEGANG HAK CIPTA TIDAK BERTANGGUNG JAWAB ATAS KERUSAKAN, KEHILANGAN DATA, GANGGUAN OPERASIONAL, ATAU KERUGIAN LAIN YANG TIMBUL AKIBAT PENGGUNAAN, KETIDAKMAMPUAN MENGGUNAKAN, ATAU HASIL PENGGUNAAN PERANGKAT LUNAK INI.
+
+Rapkumer - Administrasi Guru Terpadu

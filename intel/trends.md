@@ -4,6 +4,174 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 `T-p287a` — "curriculum-aligned" is not a product decision: it is bounded by the HOST COUNTRY'S CURRICULUM LICENCE, and the pilot corpus may not be shippable
+
+🔵 **The trend, stated as the thing a studio actually hits.** Every education engagement is
+sold on *alignment* — this tutor teaches **your** curriculum. 🔴 **Alignment is a claim about
+third-party copyrighted material, and this base has spent 287 passes auditing the licence of
+the CODE while the alignment claim was governed by a ministry's copyright page that nobody
+read.**
+
+🟢 **One repository found this pass states the rule in its own strategy line**
+([`avps82/mentar`](https://github.com/avps82/mentar), AGPL-3.0, 839 files,
+`docs/CONTENT_LICENSES.md` v0.6):
+
+> `AU = ACARA (CC BY)`, `IN/SG/US = GENERIC packs (no claimed alignment)`
+
+🔵 **Read it round the right way.** It does not ship Australian alignment because Australia is a
+priority market. It ships Australian alignment **because ACARA publishes the Australian
+curriculum under CC BY**. Everywhere the national curriculum is not openly licensed it ships
+**generic packs and withholds the claim**. The licence decides the feature.
+
+🔴 **And the second half is worse, because it splits by COMMERCIAL TIER rather than by
+country.** The same audit on its live grounding source — Khan Academy ZIM, **CC BY-NC-SA**:
+
+| tier | verdict in the audit's own words | why |
+|---|---|---|
+| local, single supervised family, OSS edition | ✅ *"Cleared for the **non-commercial** local pilot"* | a supervised family running it locally does not trigger NC |
+| **Phase-3 paid hosted tier** | 🔴 ***"Does NOT clear"*** | the tier is commercial; **NC bites** |
+
+🔴 **So the pilot that wins the client and the deliverable that bills them may not be able to use
+the same corpus** — and `SA` **compounds** rather than relieves it: a redistributed adaptation of
+NC content **inherits** CC BY-NC-SA, carrying NC forward into everything downstream.
+🟢 **A Globant deliverable is paid by construction**, so this is not an edge case for this base;
+it is the default case, and it has been invisible because the platform's licence does not change
+between the two phases while the content's obligations do all the work.
+
+🟢 **What this base can state today, and what it explicitly cannot:**
+
+| 🟢 established, first-hand | 🔴 NOT established — registered, not assumed |
+|---|---|
+| **Australia: ACARA is CC BY** → alignment claimable | 🔴 **The curriculum licence of every other market probed.** 🇹🇿 TIE (`twiga` grounds on it; `p286` did **not** record its licence), 🇬🇭 NaCCA, 🇵🇰 FBISE + Punjab boards, 🇧🇩 NCTB, 🇮🇳 NCERT, 🇺🇬 NCDC |
+| **The remedy is cheap**: withhold the claim, ship generic packs | 🔴 **Whether any of those ministries permit derivative aligned content at all** |
+| **The tier split is real and documented** | 🔴 Whether an NC-free grounding corpus of comparable quality exists per market |
+
+🔵 **Ranked for `p288`: read five ministry curriculum licences as PRIMARY sources.** A ministry
+copyright page is a primary source, it is a day's reading, and no leg in this base's history has
+ever addressed one. 🔴 **Until then, every "curriculum-aligned" line in this base is an
+UNVERIFIED claim about someone else's copyright**, and saying so is cheaper than finding out in
+a deliverable.
+
+## 🟢 `T-p287b` — the licence gap is PER-PROJECT, not per-region, and the two regional claims this base published were both samples
+
+🔴 **This base has now published a regional licence claim twice and been wrong twice, in
+opposite directions.** `p285`: *"West Africa, five of five unlicensed — the gap is LICENSING,
+not supply"*, drawn over 54 states. `p286` corrected the granularity and split it three ways
+(East Africa permissive, West Africa unlicensed, Kenya `CC BY-NC-ND`).
+
+🟢 **`p287` adds an independent second confirmation 6 000 km away, and it dissolves the regional
+frame rather than refining it.** South Asia: three code rows, **two with no grant**
+(`PrepifyAI` 389 files, `gurukul-ai` 17 files) against **one** that is AGPL (`mentar`) — the
+same ratio as West Africa, in a region with none of its characteristics.
+
+🔵 **So the honest statement is neither continental nor regional: the licence posture is a
+PROPERTY OF THE PROJECT, and only the payload settles it.** Region predicts the *language of
+the payload* and nothing about its *grant*.
+
+🔴 **But one regional distinction survives, and a proposal must not blur it** — it is about the
+REMEDY, not the rate:
+
+| posture | example | remedy | cost |
+|---|---|---|---|
+| 🔴 **unlicensed** (no grant served) | 🇵🇰 `PrepifyAI`, 🇮🇳 `gurukul-ai`, 🇬🇭 `edubot-africa`, 🇳🇬 `naija-learn` | 🟢 **ASK** — a written grant request. The maintainer usually intends to grant; `gurukul-ai`'s README literally says *"MIT — use freely"* | an email |
+| 🔴 **deliberately restricted** | 🇨🇳 `OpenGaokao` (`SAL-1.0`, *"not an OSI licence"*), 🇮🇩 `rapkumer` (total prohibition), 🇰🇪 `shule-ai` (`CC BY-NC-ND`) | 🔴 **NONE.** The author decided. Re-implement or walk | a rebuild |
+| 🔴 **unlicensed AND un-grantable** | 🇵🇰 `PrepifyAI`'s 20 board-textbook JSON files | 🔴 **An ask CANNOT fix it** — the author cannot grant what they do not hold | `T-p287c` |
+
+🟢 **APAC's five education rows are mostly the SECOND row of that table; West Africa's are the
+FIRST.** Same "unusable" count, opposite remedies, and this base filed them under one heading
+until now.
+
+## 🔴 `T-p287c` — `NONE_IN_TREE` has more than one remedy, and this base has been publishing one
+
+🔴 **The standing remedy for a repository that serves no grant is "ask the author"** (`P17`,
+`P19`, and `p286` backlog item 5's licence-intake ask over the five West African repositories).
+🟢 **`saif2012004/PrepifyAI` shows that remedy can be structurally unavailable.** Its 389 files
+include **20 `Extracted text books/` JSON files** for `FBISE_CLASS9/10` and `PUNJAB_CLASS9/10`.
+🔴 **Board textbook text is third-party copyright: the author cannot grant it**, so a perfect
+written code grant leaves the repository unusable.
+
+🔵 **The rule this yields, and it is cheap to apply:** before sending a licence-intake ask,
+**enumerate the tree and ask what is IN it.** A `NONE_IN_TREE` row over 35 files of original
+code and a `NONE_IN_TREE` row over 389 files including a national board's textbooks are the
+same verdict with **different remedies and different prices**, and this base's own ranked
+backlog item would have sent the same email to both.
+
+🟢 **`mentar` documents the same seam from the supply side** (`docs/CONTENT_LICENSES.md`
+separate from `docs/LICENSE_AUDIT.md`). **Two independent arrivals at one boundary in one
+pass:** the code grant and the content grant are different questions, and **the content one is
+the one that bites a paid deliverable.**
+
+## 🔴 `T-p287d` — a licence instrument has TWO failure modes and this base has only been counting one
+
+🔴 **Every licence defect in this base's 287-pass history ran permissive-looking:** a
+restriction unread, a non-OSI grant published as open, `PageLM` reciting MIT before diverging,
+`rapkumer` scanning as *"no restriction"*. The ledger is built around that direction, correctly,
+because it is the one that mis-sells a deliverable.
+
+🟢 **`p287` found the other one in this base's own instrument.**
+[`Priyamakeshwari/TeachGPT`](https://github.com/Priyamakeshwari/TeachGPT) serves a **verbatim MIT
+body with its title line absent** at `LICENSE.md`. `pass257-restriction-scan`'s stage-two
+operative-clause anchors covered **BSD** and **ISC** — the two families that routinely open on a
+bare copyright line — **and not MIT**, the family this base publishes more than all others
+combined. It graded `UNCLASSIFIED` for thirty passes.
+
+🟡 **Nothing was mis-sold: `UNCLASSIFIED` is never published as permissive.** 🔴 **What it cost
+is a real, usable, permissive grant DECLINED FOR NO REASON** — 🔵 **a bill that never appears as
+a defect, because nobody writes down the component they did not use.**
+
+🔴 **This entry's own first draft then overstated the gap, and `p279-absence-claims` queued the
+sentence that did it.** It read *"this base has had no counter, no gate and no trend entry for
+that outcome at all"*. 🟢 **Checked against `compose/code/`, that is false twice:**
+
+| instrument | what it exists for |
+|---|---|
+| 🟢 **`p215-lstree-grant-recovery`** | Asks *"whether `ABSENT` has been a **root-only artefact** all along"* — a false-negative recovery sweep over **94 shelf rows** graded `ABSENT` after 18 root path forms |
+| 🟢 **`p742-grant-body-vs-reference`** | Prevents `P742`: `openeducat/openeducat_erp`'s **LGPLv3 grant, 8 241 B, present in the same file**, filed as *"reference to nothing"* |
+
+🟢 **And `p285` corrected four such rows in a single pass** — `Zenglian990/AI_Tutor_Release`
+**serves MIT at the root** (it had been carried as ungranted since `p153`); `eledia`'s block
+**serves GPL-3.0-or-later on `master`**; and `cs341-illinois/coursebook` **serves three grants**
+from a `LICENSE/` **directory** (`LICENSE.code` NCSA, `LICENSE.original`, `LICENSE.output` CC),
+which withdrew that row's earlier *"Do not use."*
+
+🟢 **So the true claim is narrower and more useful, and it names an AXIS rather than a
+direction.** This base has chased the false negative hard **on the axis of WHERE THE GRANT IS** —
+path, ref, directory, vendored-vs-own. 🔴 **It has never had coverage on the axis of WHAT THE
+GRANT SAYS.** `TeachGPT`'s payload was served at the **first path tried on the default ref**:
+every path-axis instrument here would have handed it over instantly, and it was **then
+mis-graded because the title line was absent.**
+
+🔵 **A grant can be FOUND and still not be READ**, and those are two different instruments. The
+family-axis recovery sweep is `p288` item 2 — and unlike `p215`'s it needs **no network**, since
+the payloads are already captured in `fixtures-*` and `evidence/`.
+
+🔵 **And the shape is familiar: `T-p283`'s, for the third time, and the second inside that one
+function this pass.** `p1054` has carried a `MIT_BODY_MARKER` since it was written — **the base
+already knew an MIT body is identifiable without its title, and the knowledge never crossed to
+the instrument beside it.** The standing lesson is now **bidirectional**: *when a class is
+established in one instrument, check the one beside it — and check both directions of its
+verdict.*
+
+## 🟢 `T-p287e` — the permissive code in a non-English market sits one layer BELOW the agent
+
+🔵 **Four language legs, one shape.** 🇧🇩 Bangladesh: the tutors (`Progga AI`) are commercial, and
+what is open is **infrastructure** — `sagorbrur/bnlp` (Bengali NLP toolkit),
+`banglakit/awesome-bangla`. 🇻🇳 Vietnam (`p286`): `VIETPOET`'s pedagogy was right and its grant
+was missing. 🇮🇩 Indonesia: one MIT app out of seven addresses. 🇹🇿 Tanzania: `twiga` MIT — the
+exception.
+
+🟢 **Stated as an engagement rule: in a non-English market, searching for a TUTOR returns
+proprietary products and reports a gap, while the permissively licensed thing the deliverable
+actually needs — tokenisers, embeddings, ASR, exam-results channels — is sitting one layer down
+unclaimed.** 🔵 For 🇧🇩, 🇻🇳, 🇳🇬 and 🇹🇿 engagements that inverts the build/buy conversation: the
+language layer is **available**, the tutor layer is **not**, and the deliverable is therefore a
+**build on open infrastructure**, not an integration of an open tutor.
+
+🟡 **Honest caveat, and it is this base's own rule applied to itself:** the three Bangla rows
+above arrived from a **search result**, not from a payload. This base's measured rate is that
+**three of four secondary "open source" claims are wrong**, so they are carried as **leads at
+the right layer** and not as verified grants. Probing them is a `p288` item.
+
 ## 🟢 `T-p286a` — "Africa" is not a market for this purpose: the licence posture splits EAST / WEST / KENYA, and a continental claim gets all three wrong
 
 🔵 **The trend, stated as the thing a studio actually hits.** This base has carried a continental

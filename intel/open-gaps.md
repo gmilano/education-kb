@@ -41,14 +41,62 @@ updated: 2026-10-18
 - 🔴 **`T-p286b`: the restriction vocabulary is English-only and its miss publishes as "no
   restriction".** Reproduced on a live payload with an English control beside it.
 
-### Still open, ranked for `p287`
+### 🟢 `p287` — DISCHARGED
+
+- 🟢 **`T-p286b` CLOSED, both halves, in one change.** `pass257-restriction-scan`'s vocabulary is
+  now keyed by language (**10 arms**); the **`id`** arm was added to the Python instrument **and
+  to `lib/license_family.sh::commercial_use_ok`**; the new verdict
+  **`UNREADABLE-BODY:no-vocabulary-for-this-language`** distinguishes *nothing found* from
+  *nothing looked for*. Suite **57 → 129** controls, one **negative AND positive control per
+  language arm**, port measured **both ways** (`p637`), failure capability proven by **three
+  mutations**. 🔴 Measured consequence: the shell gate in `make hooks` went
+  **`0 = ALLOWED` → `1 = RESTRICTED`** on `sira313/rapkumer` — it had been *inventing permission*
+  over a total commercial prohibition.
+  Evidence: [`restriction-vocabulary-multilingual.2026-10-18-p287.tsv`](../evidence/restriction-vocabulary-multilingual.2026-10-18-p287.tsv).
+- 🟢 **Item 4 discharged** — six directed legs by name (Uganda `UNEB`, Rwanda `REB`, Philippines
+  `DepEd`, Pakistan `FBISE`, Egypt `Thanaweya Amma`, Bangladesh), **plus** India `NCERT/CBSE`,
+  Brazil `ENEM` and Turkey `MEB`. **Nine legs, six explicit nils, each with a different shape.**
+- 🔵 **Item 5 re-scoped rather than discharged** — the ask now covers **six** repositories (the
+  five West African rows **plus** `somenssarkar/gurukul-ai`), and 🔴 **`PrepifyAI` is EXCLUDED
+  from it** per `T-p287c`: the author cannot grant third-party board textbooks.
+
+### 🔴 New, found by this pass
+
+- 🔴 **`T-p287d`: a licence instrument has TWO failure modes and this base counts one.**
+  `pass257-restriction-scan` graded `Priyamakeshwari/TeachGPT`'s **verbatim MIT body** as
+  `UNCLASSIFIED` for thirty passes, because stage-two anchors covered BSD and ISC and **not
+  MIT**. Fixed, with the collision measured on all seven fixtures first.
+  🔴 **This item's own first draft said *"there is no instrument for a usable grant read as
+  unclassifiable"* and that is FALSE** — `p215-lstree-grant-recovery` swept 94 `ABSENT` rows for
+  exactly that, `p742-grant-body-vs-reference` was built to prevent it, and `p285` corrected four
+  such rows in one pass. 🟢 **The true gap is an AXIS, not a direction:** every one of those
+  instruments works on **WHERE THE GRANT IS** (path, ref, directory). **None works on WHAT THE
+  GRANT SAYS.** `TeachGPT`'s payload was served at the first path tried on the default ref and
+  mis-graded anyway. 🔵 **A grant can be found and still not be read.** `TeachGPT` proves that
+  population is non-empty without saying how large it is.
+- 🔴 **`T-p287a`: "curriculum-aligned" is bounded by the host country's CURRICULUM licence**, and
+  the pilot corpus may not be shippable (`CC BY-NC-SA` clears a non-commercial pilot and not a
+  paid tier; `SA` compounds it). This base has read **ONE** national curriculum licence
+  first-hand (ACARA 🇦🇺, `CC BY`) and publishes "aligned" freely.
+- 🔴 **`T-p287c`: `NONE_IN_TREE` has more than one remedy** — `PrepifyAI`'s 20 board-textbook JSON
+  files cannot be cleared by any ask. **Enumerate the tree before sending one.**
+- 🟢 **`T-p287b`: the licence gap is PER-PROJECT, not per-region** — South Asia reproduced West
+  Africa's ratio with none of its characteristics. 🔵 The surviving distinction is the **remedy**:
+  *unlicensed* (an ask fixes) vs *deliberately restricted* (it cannot).
+- 🟢 **`T-p287e`: in a non-English market the permissive code sits one layer BELOW the agent** —
+  tutors proprietary, language infrastructure open (🇧🇩 `bnlp`, and the same shape in 🇻🇳/🇮🇩/🇹🇿).
+- 🔵 **A third generative unit for directed legs: the EDUCATION MINISTRY and its POLICY
+  INSTRUMENT.** A state that buys rather than builds (Rwanda, Turkey) leaves a policy trail and
+  no commit history, and a code-shaped query reports that as absence.
+
+### Still open, ranked for `p288`
 
 | # | item | why it is still open |
 |---|---|---|
-| 1 | 🔴 **Multilingual restriction vocabulary + an `UNREADABLE-BODY` verdict** | New, with a **live instance** and a reproduction. The failure direction is the dangerous one: a totally non-commercial Indonesian licence reads as `no-family-no-restriction`. Must land with `scan()`'s downstream gate consumers in one change; one negative control per language arm (Indonesian, Vietnamese, Portuguese, Spanish, Swahili) |
+| ~~1~~ | 🟢 **DISCHARGED at `p287`** — multilingual restriction vocabulary + `UNREADABLE-BODY`. See above. | New, with a **live instance** and a reproduction. The failure direction is the dangerous one: a totally non-commercial Indonesian licence reads as `no-family-no-restriction`. Must land with `scan()`'s downstream gate consumers in one change; one negative control per language arm (Indonesian, Vietnamese, Portuguese, Spanish, Swahili) |
 | 2 | 🔴 **Build `ROOT_OR_SOLE` into the enumeration gate** | Carried from `p285` item 2, **two passes**. Earned by a live over-fire: a nested grant governs only if its directory is a prefix of essentially the whole tree. Needs one new ledger column |
 | 3 | 🔴 **Widen `gate-identity`'s census to the enumeration QUEUE** | Carried from `p285` item 3, **two passes**. Two address pairs that are one repository each sit in a population the gate does not read |
-| 4 | 🔵 **Pick the next four directed legs BY NAME** | The generative unit is measured now: exam board + language of instruction. **`UNEB`** (Uganda), **`REB`** (Rwanda), **`DepEd`** (Philippines), **`FBISE`** (Pakistan), Bangladesh, **`Thanaweya Amma`** (Egypt). 🔴 Do NOT re-run region-named legs expecting code |
+| ~~4~~ | 🟢 **DISCHARGED at `p287`** — nine legs run, six named nils. Next four are in `README.md`'s `p288` backlog item 5. | The generative unit is measured now: exam board + language of instruction. **`UNEB`** (Uganda), **`REB`** (Rwanda), **`DepEd`** (Philippines), **`FBISE`** (Pakistan), Bangladesh, **`Thanaweya Amma`** (Egypt). 🔴 Do NOT re-run region-named legs expecting code |
 | 5 | 🔵 **The licence-intake ASK over the five West African repositories** | Carried from `p285` item 7. Still **nobody has asked**, and the hit rate is unknown for that reason alone. `EduTwin-Africa`'s author has written in the README that the licence is missing — that is the one where asking plainly costs nothing |
 | 6 | 🟡 **`--resolve` over the 14 CANDIDATE control sites** | Carried from `p280` item 1 — **five passes** |
 | 7 | 🟡 **Fold `p281`'s three instrument defects into the gate** | Carried. `ls-remote --symref` is cheap, the channel is built, and `p286` used exactly that call to catch `twiga`'s `development` ref |

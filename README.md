@@ -4,6 +4,185 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 287 — 2026-10-18 — **ITEM 1 DISCHARGED BOTH WAYS, AND THE SAME FUNCTION WAS ALSO REFUSING A REAL MIT GRANT — THE DIRECTION THIS BASE HAS NEVER COUNTED**
+
+**One-line summary:** `p286` ranked *"multilingual restriction vocabulary + an `UNREADABLE-BODY`
+verdict"* first. `p287` landed both halves in one change — **vocabulary keyed by language with
+10 arms, the `id` arm added to BOTH implementations, a new `UNREADABLE-BODY` verdict, suite
+57 → 129 controls, failure capability proven by three mutations** — and then, probing this pass's
+candidates with the fixed instrument, found that **the same function had been grading a verbatim
+MIT grant as `UNCLASSIFIED` for thirty passes.** `make hooks` is **green** (54 PASS, exit 0), run
+before any edit and again after every one.
+
+### 🟢 Item 1 discharged — and the shell gate was INVENTING PERMISSION over a total prohibition
+
+🔴 **Reproduced first, exactly as `p286` left it.** `sira313/rapkumer`'s 3 140-byte Indonesian
+payload, whose §3 is titled `LARANGAN PENGGUNAAN KOMERSIAL` — *prohibition of commercial use* —
+scanned as `UNCLASSIFIED:no-family-no-restriction` with **zero hits**, while an English control
+fired `RESTRICTED:added-restriction` correctly. **The logic was sound; the vocabulary's language
+was the whole defect.**
+
+🟢 **Both halves, as the backlog required, with their downstream consumers:**
+
+| | |
+|---|---|
+| 🟢 **Vocabulary keyed BY LANGUAGE** | `RESTRICTION_TERMS_BY_LANGUAGE`, **10 arms**. The English arm is `p257`'s, **moved not rewritten**, so no English verdict in this base's history changes. zh/ja/ko/es/pt/fr/de/it ported **phrase for phrase** from `lib/license_family.sh::commercial_use_ok` (`P240`/`P241`) |
+| 🟢 **The `id` arm neither implementation had** | Added to the Python instrument **and to the shell lib in the same change** |
+| 🟢 **`UNREADABLE-BODY:no-vocabulary-for-this-language`** | A verdict, not a silence. Adding arms **shrinks** the uncovered set and can never **empty** it |
+| 🟢 **The port measured BOTH WAYS** (`p637`) | The suite asserts every shell phrase is reachable from the Python vocabulary, that the shell lib really carries them, and that both gained `id` |
+
+🔴 **And the measurement that says why this mattered.** On the live payload, the **shell** gate —
+the one inside `make hooks` — went **`0 = ALLOWED` → `1 = RESTRICTED`**. 🔵 It had been **inventing
+permission over a text that prohibits commercial use in any form**, which is `P241`'s own warning
+reproduced in a language `P241` did not reach. Negative control
+(*"Penggunaan komersial diizinkan tanpa batasan apa pun"*) stays `ALLOWED` in both.
+
+🟢 **Second real payload for the `zh` arm:** `heronerar/OpenGaokao`'s 15 992-byte, 92.9 %-CJK
+`OpenGaokao-SAL-1.0` — `禁止商业使用`, and its body states it is **not an OSI-approved licence**.
+Also previously `UNCLASSIFIED`, zero hits.
+
+🔵 **Why a cheap language test is sound here**, stated because a later pass will want to replace
+it: `scan` asks it **one** question — covered or not — so the overwhelmingly likely error
+(confusing `es`/`pt`/`it`, which share function words) **cannot change a verdict**. Of the two
+that can, the costly one is guarded by demanding **positive evidence** of a covered language and
+defaulting to uncovered. **`P241`'s rule, moved onto the language axis.**
+
+### 🔴 The pass's own finding: the instrument was REFUSING a real MIT grant, and nothing in this base counts that
+
+🟢 **`Priyamakeshwari/TeachGPT` serves a VERBATIM MIT body with its TITLE LINE ABSENT**
+(`LICENSE.md`, 1 057 B, `main`). `pass257-restriction-scan`'s stage-two operative-clause anchors
+covered **BSD** and **ISC** — the two families that routinely open on a bare copyright line —
+🔴 **and not MIT**, the family this base publishes more than all others combined. Verdict:
+`UNCLASSIFIED`, for thirty passes.
+
+🔵 **`T-p283`'s shape for the third time, and the second inside this one function in one pass:**
+`p1054` has carried a `MIT_BODY_MARKER` since it was written. **The base already knew an MIT body
+is identifiable without its title, and the knowledge never crossed to the instrument beside it.**
+
+🟡 **The direction is the conservative one, so nothing was ever mis-sold.** 🔴 **What it cost is a
+real, usable, permissive grant DECLINED FOR NO REASON** — a dependency the studio rebuilds at its
+own expense, and a bill that never appears as a defect because **nobody writes down the component
+they did not use.**
+
+🔴 **And the first draft of this very section got the diagnosis wrong, in the way this base's own
+`T-p284b` exists to prevent.** It published *"this base has no gate, no counter and no ledger
+entry for that outcome at all"* — an absence asserted rather than addressed. `p279-absence-claims`
+**queued it**, the claim was checked against `compose/code/`, and **it is false twice over:**
+
+| instrument | what it is, and it is squarely this direction |
+|---|---|
+| 🟢 **`p215-lstree-grant-recovery`** | Built to ask *"whether `ABSENT` has been a **root-only artefact** all along"* — a **false-negative recovery sweep**, run over **94 shelf rows** graded `ABSENT` after 18 root path forms |
+| 🟢 **`p742-grant-body-vs-reference`** | Built to prevent `P742`: `openeducat/openeducat_erp`'s **LGPLv3 grant, 8 241 B, present in the same file**, filed as *"reference to nothing — the artefact exists and is empty"* |
+
+🟢 **And `p285` corrected four such rows in one pass** — `AI_Tutor_Release` (MIT **at the root**,
+carried as `NO GRANT` since `p153`), `eledia` (GPL on `master`), `cs341-illinois/coursebook`
+(three grants inside a `LICENSE/` **directory**, under a published *"Do not use."*).
+
+🔵 **So the corrected finding is narrower and much more useful than the one it replaces.** This
+base has chased the false negative hard — **on the axis of WHERE THE GRANT IS** (path, ref,
+directory, vendored-vs-own). 🔴 **It had no coverage on the axis of WHAT THE GRANT SAYS.**
+`TeachGPT`'s payload was served at the **first path tried**, on the **default ref** — every
+path-axis instrument in this base would have handed it over instantly — **and then it was
+mis-graded, because the title line was absent.** 🟢 **A grant can be found and still not be
+read**, and that is the gap. `T-p287d`.
+
+🔴 **Collision measured on all seven fixtures before the anchor was added** (`P171`'s rule): the
+MIT operative clause occurs in **one** of them — the MIT one — and **not** in `rapkumer`, which
+carries an MIT carve-out for Feather Icons in its own §6. Pinned in the suite both ways.
+
+### 🟢 The engagement finding of the pass, and it is not a code licence
+
+🔴 **`avps82/mentar` (AGPL-3.0, 839 files) is the first education repository in this base that
+publishes its OWN dependency and content licence closure** — `docs/LICENSE_AUDIT.md`,
+`docs/CONTENT_LICENSES.md`, `CLA.md` — i.e. a working project independently arrived at this
+base's own decomposition. 🔴 **And its content audit states the constraint that actually decides a
+paid tutoring deliverable:** its live grounding corpus (Khan Academy ZIM, `CC BY-NC-SA`) is
+✅ cleared for *"the **non-commercial** local pilot"* and 🔴 ***"does NOT clear the Phase-3 paid
+hosted tier."***
+
+🔵 **A Globant deliverable is paid by construction**, so **the pilot corpus and the shippable
+corpus are different corpora** — and `SA` **compounds** rather than relieves it. New pattern
+**`P40`** (the two-corpus tutor) makes that a configuration boundary instead of a discovery.
+
+🟢 **Its country strategy is the same finding in product clothing:** `AU = ACARA (CC BY)`,
+`IN/SG/US = GENERIC packs (no claimed alignment)`. **"Curriculum-aligned" is claimable only where
+the curriculum itself is openly licensed.** 🔴 This base has read **one** national curriculum
+licence first-hand. `T-p287a`.
+
+### 🟢 Both region-named nils were broken in the same hour, and there is a third generative unit
+
+🔴 **EMEA and APAC returned nothing education-specific for a second consecutive pass.** 🟢 **Both
+were broken by directed legs immediately** — a **Turkish** leg found MEB's *Eğitimde Yapay Zeka
+Politika Belgesi ve Eylem Planı* (**4 goals, 15 policies, 40 action steps**, mandating an AI
+Applications Ethics Board), and four Asian legs produced five code rows.
+
+🟢 **`T-p286a` said the generative unit is the exam board and the language of instruction.
+`p287` adds a third: the EDUCATION MINISTRY AND ITS POLICY INSTRUMENT.** A state that **buys**
+rather than **builds** — Rwanda is the clearest case, with Rori, Chidi and a national AI Tutor
+scoped as *"licensing or API requirements"* — leaves a **policy trail and no commit history**, so
+a code-shaped query returns nothing and reports it as absence.
+
+🔴 **Six directed nils, every one named with its own shape** (Uganda, Rwanda, Philippines, Egypt,
+Bangladesh, Turkey), because an undeclared nil is indistinguishable from coverage. 🔵 One is worth
+repeating as a lure: the Philippines leg returned *"P100M for an **MIT-reviewed** AI centre"* —
+**MIT the institution, not the licence**, surfaced by a licence query.
+
+### 🔴 Two claims of this base's own corrected, both about REMEDIES rather than facts
+
+🟢 **`T-p287b` — the licence gap is PER-PROJECT, not per-region.** South Asia reproduced West
+Africa's ratio (three rows, two ungranted) 6 000 km away with none of its characteristics. But a
+distinction survives and a proposal must not blur it: **West Africa's rows are *unlicensed*,
+which an ask can fix; APAC's are *deliberately restricted*, which it cannot.** Same unusable
+count, opposite remedies, filed under one heading until now.
+
+🟢 **`T-p287c` — `NONE_IN_TREE` has more than one remedy.** `saif2012004/PrepifyAI` (389 files, no
+grant) ships **20 board-textbook JSON files** for FBISE and Punjab. 🔴 **The standing remedy — ask
+the author — cannot work: the author cannot grant what they do not hold.** So *enumerate the tree
+before sending the ask*, because this base's own ranked backlog item would have sent the same
+email to a repository where it was pointless.
+
+### 🟢 And the ref axis decided a verdict for the third time in four passes
+
+`AIProf`'s grant is on **`dev`**; `p285`'s `eledia` was on `master` behind a default of `51`;
+`p286`'s `twiga` on `development`. 🔵 **Three different non-standard default refs in four passes,
+each of which would have published `NONE_IN_TREE` under a hardcoded probe.**
+`probe_default_branch`'s `ls-remote --symref` resolution is **load-bearing**, not defensive.
+
+### 🔵 Backlog for `p288`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked:
+
+1. 🔴 **Read FIVE national curriculum licences as PRIMARY sources** — NCERT 🇮🇳, FBISE 🇵🇰, NaCCA 🇬🇭,
+   TIE 🇹🇿, NCTB 🇧🇩 (NCDC 🇺🇬 if cheap). A ministry copyright page is a primary source and **no leg
+   in 287 passes has ever addressed one**, while this base publishes "curriculum-aligned" freely.
+   It is a day's reading and it makes `P40` step 4 a lookup instead of a per-engagement research
+   task. 🟢 ACARA 🇦🇺 (`CC BY`) is the one data point and it came from someone else's audit.
+2. 🔴 **A FAMILY-AXIS recovery sweep** *(new, `T-p287d`)* — `p215` recovered grants the **path**
+   axis had missed across 94 rows; nothing has ever re-read the rows the **family-naming** axis
+   missed. Cheapest form: re-run the widened `family_of` over every `UNCLASSIFIED` cell on the
+   shelves and every captured payload in `fixtures-*`/`evidence/`. 🟢 **`TeachGPT` proves the
+   population is non-empty and nobody knows its size** — and unlike `p215`'s sweep this one needs
+   **no network at all**, because the payloads are already captured.
+3. 🔴 **Build `ROOT_OR_SOLE` into the enumeration gate** *(carried, three passes)* — one new
+   ledger column: per-grant-directory file coverage.
+4. 🔴 **Widen `gate-identity` to census the enumeration QUEUE** *(carried, three passes)*.
+5. 🔵 **The next four directed legs, by name** — the unit is now **exam board, language of
+   instruction, OR education ministry**. Unspent: **Egypt in ARABIC** (the English leg failed and
+   was told so), **Thailand `O-NET`**, **Vietnam `MOET`**, **Mexico `SEP`**, **Peru `MINEDU`**.
+   🔴 Do not re-run the region-named legs expecting code.
+6. 🔵 **Probe the three Bangla infrastructure leads at payload** *(new, `T-p287e`)* —
+   `sagorbrur/bnlp`, `banglakit/awesome-bangla`, `me-shaon/bangla-programming-resources`. They
+   arrived from a search result and this base's measured rate is **three of four secondary
+   "open source" claims wrong**. Carried as leads, not grants, until read.
+7. 🔵 **The licence-intake ASK, now over SIX repositories** *(carried, `p285` item 7)* — the five
+   West African rows plus `somenssarkar/gurukul-ai`, whose README says *"MIT — use freely"* over
+   an empty tree. 🔴 **Exclude `PrepifyAI`**, per `T-p287c`. Still nobody has asked.
+8. 🔵 **Find a REAL payload in an uncovered language** *(new)* — `UNREADABLE-BODY`'s reachability
+   control is **synthetic Thai and labelled as such**; every other fixture in `fixtures-p257` is
+   real. The Thailand leg in item 5 is the cheapest way to buy both at once.
+9. 🟡 **`--resolve` over the 14 CANDIDATE control sites** *(carried, six passes)*.
+10. 🟡 **Fold `p281`'s three instrument defects into the gate** *(carried)*.
+
 ## Pass 286 — 2026-10-18 — **THE TOP-RANKED ITEM WAS MEASURING THE WRONG POPULATION, AND THE CONTINENTAL CLAIM IT SAT BESIDE WAS A WEST AFRICAN SAMPLE**
 
 **One-line summary:** `p285` ranked *"case-close the `copying` family — 117 ladders, 0 CASE-CLOSED"*

@@ -321,7 +321,7 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── pass256-ladder-closure (p256: the LIVE ladder's closure, verified)"; \
 	cd compose/code/pass256-ladder-closure && $(PY) -I ladder_closure.py --verify >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
-	echo "── pass257-restriction-scan (p257: the vocabulary runs on EVERY payload, not only MIT-shaped ones)"; \
+	echo "── pass257-restriction-scan (129 controls: p257 runs the vocabulary on EVERY payload; p287 makes it MULTILINGUAL, adds UNREADABLE-BODY, and anchors an untitled MIT body)"; \
 	cd compose/code/pass257-restriction-scan && $(PY) -I test_restriction_scan.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
 	echo "── pass258-content-licence-family (p258: the CC class the gate could not name)"; \

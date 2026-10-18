@@ -10,6 +10,113 @@ updated: 2026-10-18
 > Sourced from web research on 2026-10-17. Vendor-sourced figures are marked; they are
 > carried because they are the only numbers available, not because they are reliable.
 
+## 🟢 Pass 287 — THE TWO REGION-NAMED NILS WERE BROKEN IN THE SAME HOUR BY DIRECTED LEGS, AND THE NEW GENERATIVE UNIT IS THE EDUCATION MINISTRY
+
+⏱️ `2026-10-18`, ninth pass. Evidence:
+[`p287-websearch.2026-10-18-p287.tsv`](../evidence/p287-websearch.2026-10-18-p287.tsv) ·
+[`verified-repos.2026-10-18-p287.tsv`](../evidence/verified-repos.2026-10-18-p287.tsv).
+
+🔵 **The battery ran once and briefly, per the standing instruction.** Two regional legs held,
+**two returned nothing education-specific for the second consecutive pass** — and both of those
+two were **broken by directed legs in the same hour**, which is the finding. Nine directed legs
+ran; **six returned explicit nils and every nil has a different shape.** All recorded per region
+below, nils included, because an undeclared nil is indistinguishable from coverage.
+
+🟢 **The pass's structural result, stated before the regions:** `T-p286a` established that the
+generative unit is the **exam board** and the **language of instruction**, not the region name.
+🟢 **`p287` adds a third: the EDUCATION MINISTRY AND ITS POLICY INSTRUMENT.** A state that
+**buys** rather than **builds** leaves a policy trail and no commit history, so a code-shaped
+query returns nothing and reports it as absence. Turkey and Rwanda are both that shape, and
+both were invisible to the region-named legs.
+
+### 🟡 North America — held, with two NEW datapoints and a governance gap that keeps widening
+
+🟢 **New this pass:** a **$169 M** government commitment to responsible AI in higher education
+in **Q1 2026**, and an **OpenAI country-level education programme with eight national
+partners**. 🔵 The second is the more strategically significant: a **vendor** is now
+contracting at **national** scale, which is the procurement shape that closes a market to
+open-source alternatives before a studio is invited in.
+
+🟡 Carried, unchanged and still vendor-sourced: NA **~$951 M (2024) → ~$2.3 B (2029)**, CAGR
+**15.9 %**; **~36 %** regional share; one independent house puts NA at **37.5 %** of 2025.
+🔴 **The adoption-governance gap is the durable finding and it is wider than LATAM's:**
+**86 %** of students across 16 countries using AI, against **~10 %** of institutions with
+formal AI guidelines and **71 %** of US teachers without AI training.
+🔴 **Regulation remains state-level and fragmented** — Colorado and Texas named, no federal
+framework, and *no FDA-equivalent for educational technology*. For an engagement that means
+**the compliance surface is the client's own policy**, because there is no external one to
+point at.
+
+### 🟢 EMEA — the English region-named leg returned NOTHING for a second pass, and a TURKISH leg broke it immediately
+
+🔴 **The nil, recorded exactly:** the leg returned EU AI Act and enterprise-AI generalities
+(Workday, CompTIA, Bandwidth-Cavell) — **no education-sector players, no 2026 education
+adoption figures, no education-specific rules.** Second consecutive pass.
+
+🟢 **One directed leg in Turkish refuted it on the first attempt.** Türkiye's **MEB** has a
+national instrument — *Eğitimde Yapay Zeka Politika Belgesi ve Eylem Planı* — with a countable
+structure: **4 goals, 15 policies, 40 action steps**, covering ethics rules, AI literacy and
+teacher training, and **mandating a `Yapay Zeka Uygulamaları Etik Kurulu`** (AI Applications
+Ethics Board). Alongside it, **ODTÜ + Kodluyoruz** run a free *"Herkes için Yapay Zeka"*
+programme for high-school students on ODTÜ's Bilgeİş platform.
+
+🔵 **Why this is an opportunity and not a trivium:** a ministry that has **already published an
+ethics board and a 40-step action plan** has pre-committed to a compliance vocabulary. An
+engagement that arrives speaking it is reading from the client's own document — and this is
+also the first EMEA state on this shelf whose AI-in-education posture is **documented and not
+inferred from the AI Act**.
+
+🔴 **No MEB repository exists**, and the licence of the "open source" SDKs announced with its
+earlier software-training programme is **unstated**. Code nil, policy grant.
+
+### 🟢 APAC — the English region-named leg returned NOTHING for a second pass, and FIVE code rows came from four directed legs
+
+🔴 **The nil:** Pearson+TCS's AI learning alliance, LearnUpon's Sydney HQ and Create+ authoring,
+Alteryx's Academy relaunch, OpenAI's ANZ policy lead. **All corporate learning.** Nothing on
+education ministries, curriculum policy or school adoption rates. Second consecutive pass.
+🟡 One governance figure worth carrying because it generalises: **87 %** of organisations
+encourage AI agents, **47 %** have governance for them — the same adoption-governance shape the
+education figures show, in the enterprise.
+
+🟢 **The directed legs produced the pass's code, all of it:** 🇮🇳 `avps82/mentar` (AGPL-3.0, 839
+files) and `somenssarkar/gurukul-ai` (NCERT/CBSE, no grant); 🇵🇰 `saif2012004/PrepifyAI` (FBISE,
+389 files, no grant); 🇨🇳 `heronerar/OpenGaokao` (**source-available, says so itself**); 🇮🇩
+`sira313/rapkumer` (**total commercial prohibition**, now readable).
+
+🔴 **The licence posture of APAC's education code, measured rather than characterised: five rows,
+ONE usable grant, and that one is AGPL.** For a studio deliverable that is the hardest regional
+position on this shelf — harder than West Africa's, because **West Africa's rows are unlicensed
+(which an ask can fix) while APAC's are deliberately restricted (which it cannot).**
+🔵 **That distinction is the one a regional proposal has to get right**, and this base had the
+two cases filed under one heading until now.
+
+### 🟢 LATAM — the battery's strongest leg, and it CORROBORATES `p286` rather than extending it
+
+🟢 **Independently re-derived this pass**, which is worth more than a new figure: Digital
+Education Council LATAM 2026 — **92 % of students, 79 % of faculty** actively engaging with AI,
+**30 000+ responses, 29 institutions**. UNESCO IESALC across **200 institutions in 19
+countries** gives the adoption *shape*: teaching and learning **73.5 %**, research **57.0 %**,
+administration **34.1 %**, community engagement **20.0 %**.
+
+🔴 **Against ~30 % of LATAM universities with a published AI policy.** 🔵 **The engagement read
+is in the UNESCO split, not the headline:** administration at **34.1 %** against teaching at
+**73.5 %** means the back office is the **under-served** half — and it is also the half where
+the deliverable is **not** bounded by a curriculum licence (see `T-p287a`). **The quiet
+opportunity in LATAM is administrative, not pedagogical.**
+
+🟡 **Regulation, re-confirmed:** no binding regional framework. **Chile** leads with a National
+AI Policy since 2021 and a law under discussion; **Brazil** and **Colombia** have national
+strategies with **no education-sector rules**; **Mexico's** SEP/ANUIES recommendations are
+**non-binding**. The **ILIA** index (19 countries, CEPAL among publishers) is the readiness
+benchmark to quote.
+
+🟡 **Code:** one LATAM-origin row, `guedesindev/ai_tutor_forge` (🇧🇷 **GPL-3.0**, 7 files).
+🔴 **And the ENEM-specific gap is now named:** the closest work this base can find is a **2024
+USP MBA thesis** proposing a GenAI ENEM tutor for low-income students — **a PDF, no code, no
+licence.** 🔵 For the region with the strongest *demand* evidence on this shelf, that is the
+sharpest supply gap in the base: **92 % student adoption and no permissively licensed
+ENEM-aligned code at all.**
+
 ## 🟢 Pass 286 — THE FOUR REGIONAL LEGS PRODUCED NO CODE ADDRESS AND TWO EXPLICIT NILS, AND THE EXAM-BOARD LEGS PRODUCED EIGHTEEN
 
 ⏱️ `2026-10-18`, eighth pass. Evidence:
@@ -977,6 +1084,17 @@ data gets the ranking backwards.
 
 ### North America
 
+> **🟢 `p287` (2026-10-18) — two additions and one sharpened warning.** New: a **$169 M**
+> government commitment to responsible AI in higher education in **Q1 2026**, and an **OpenAI
+> country-level education programme with eight national partners**. 🔴 The second is a
+> *procurement* signal, not an adoption one: a vendor contracting at national scale closes a
+> market before a studio is invited in. 🔴 The governance gap here is **wider than LATAM's** —
+> **86 %** student use against **~10 %** of institutions with formal guidelines and **71 %** of
+> US teachers untrained — so the compliance surface an engagement must satisfy is **the
+> client's own policy**, there being no federal one to point at (state-level only; Colorado and
+> Texas named).
+
+
 **Pass 280 — the jurisdiction leg returned ZERO new instruments, and its one gap statement was
 refuted by this file.** Asked region-wide, the channel returned market research only: a secondary
 roundup putting North America at **~36 % regional share** *(a third source says **37.5 %** for 2025,
@@ -1378,6 +1496,19 @@ on AI (2026-04-17)** as a provincial priority, and **Bill 194 (2024)** plus the 
 training at all** — so the first deliverable is the policy and the training, not a platform.
 
 ### EMEA
+
+> **🟢 `p287` (2026-10-18) — the region-named leg returned NOTHING education-specific for a
+> second consecutive pass, and a TURKISH leg broke it on the first attempt.** Türkiye's **MEB**
+> publishes *Eğitimde Yapay Zeka Politika Belgesi ve Eylem Planı*: **4 goals, 15 policies, 40
+> action steps**, covering ethics, AI literacy and teacher training, and **mandating a `Yapay
+> Zeka Uygulamaları Etik Kurulu`** (AI Applications Ethics Board). With it: **ODTÜ +
+> Kodluyoruz**' free *"Herkes için Yapay Zeka"* for high-schoolers on Bilgeİş.
+> 🔵 **The opportunity: a ministry with a published ethics board and a 40-step plan has
+> pre-committed to a compliance vocabulary an engagement can quote back.** This is also the
+> first EMEA state here whose education-AI posture is **documented rather than inferred from
+> the AI Act**. 🔴 No MEB repository; the licence of its announced "open source" SDKs is
+> unstated. **Code nil, policy grant.**
+
 
 **Pass 282 — the Gulf, which is the half of EMEA this shelf has been declaring missing.** The
 region-wide leg returned an informative nil on education for the tenth time, and said so itself:
@@ -1931,6 +2062,19 @@ Seppo, Cornelsen, Lalilo** — 🔴 **none of them open source**, so none is a b
 
 ### APAC
 
+> **🟢 `p287` (2026-10-18) — region-named leg NIL for a second pass (corporate learning only);
+> four directed legs produced FIVE code rows.** 🇮🇳 `avps82/mentar` (AGPL-3.0, 839 files),
+> 🇮🇳 `somenssarkar/gurukul-ai` (NCERT/CBSE, no grant), 🇵🇰 `saif2012004/PrepifyAI` (FBISE, 389
+> files, no grant), 🇨🇳 `heronerar/OpenGaokao` (source-available by its own text), 🇮🇩
+> `sira313/rapkumer` (total commercial prohibition).
+> 🔴 **Measured posture: five rows, ONE usable grant, and it is AGPL.** 🔵 **And the distinction
+> a regional proposal must not blur:** West Africa's rows are **unlicensed**, which a written
+> ask can fix; APAC's are **deliberately restricted**, which it cannot. This base filed both
+> under one heading until `p287`.
+> 🟡 Governance figure that generalises: **87 %** of organisations encourage AI agents, **47 %**
+> have governance for them.
+
+
 **Pass 280 — the region-wide leg is an INFORMATIVE NIL on education policy, and `T53` is demonstrated
 a fourth time.** The APAC query returned enterprise AI only — *"nothing I found addresses AI rules for
 schools or universities"* — with a **supply-side** residue worth keeping: **TCS × Pearson**'s
@@ -2302,6 +2446,24 @@ four dated instruments. **`T53` demonstrated a third time: the region query's si
 not the region's.**
 
 ### LATAM
+
+> **🟢 `p287` (2026-10-18) — independently re-derived, and it CORROBORATES `p286`.** Digital
+> Education Council LATAM 2026: **92 % of students, 79 % of faculty**, 30 000+ responses, 29
+> institutions. UNESCO IESALC, **200 institutions / 19 countries**, gives the shape: teaching
+> and learning **73.5 %**, research **57.0 %**, administration **34.1 %**, community engagement
+> **20.0 %** — against **~30 %** of universities with a published AI policy.
+> 🔵 **The engagement read is in the split, not the headline: administration at 34.1 % against
+> teaching at 73.5 % makes the back office the UNDER-SERVED half — and it is also the half
+> whose deliverable is NOT bounded by a curriculum licence (`T-p287a`). The quiet LATAM
+> opportunity is administrative, not pedagogical.**
+> 🟡 Regulation re-confirmed: no binding regional framework; **Chile** leads (National AI Policy
+> since 2021, law under discussion); **Brazil**/**Colombia** have national strategies with no
+> education-sector rules; **Mexico's** SEP/ANUIES recommendations are non-binding. **ILIA** (19
+> countries, CEPAL among publishers) is the readiness benchmark to quote.
+> 🔴 **Supply gap, now named:** one LATAM-origin code row (`guedesindev/ai_tutor_forge`, GPL-3.0,
+> 7 files), and for **ENEM** the closest work is a **2024 USP MBA thesis** — a PDF, no code, no
+> licence. **92 % student adoption and no permissively licensed ENEM-aligned code at all.**
+
 
 **Pass 280 — the ranked homologation watch MOVED, and the text that becomes binding is not the text
 this base has read.** 🟢 **LATAM was the one region whose region-wide query returned real material**:

@@ -27,6 +27,78 @@ updated: 2026-10-18
 > **reproduced every published figure**, and the search-leg ledger
 > [`p269-websearch.2026-10-17-p269.tsv`](../evidence/p269-websearch.2026-10-17-p269.tsv)).
 
+## 🟢 Pass 287 — a REAL MIT GRANT WAS BEING READ AS UNCLASSIFIABLE, and the repository that proves it also promotes itself onto the build-on tier
+
+⏱️ **Ninth pass of `2026-10-18`.** Evidence:
+[`verified-repos.2026-10-18-p287.tsv`](../evidence/verified-repos.2026-10-18-p287.tsv) ·
+[`p287-websearch.2026-10-18-p287.tsv`](../evidence/p287-websearch.2026-10-18-p287.tsv) ·
+[`restriction-vocabulary-multilingual.2026-10-18-p287.tsv`](../evidence/restriction-vocabulary-multilingual.2026-10-18-p287.tsv).
+
+🔴 **Mandated agent leg: THIRTEENTH consecutive nil**, same population, same reason —
+`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch`. `p286` settled the posture and this pass confirms it:
+**the battery is corroboration, the gap-directed leg is extension.** Four passes running,
+every new row came from a directed leg.
+
+### 🟢 The find of the pass, and it is a licence instrument that found it
+
+| agent | address | grant (read from payload) | why it matters |
+|---|---|---|---|
+| 🟢 **TeachGPT** | [`Priyamakeshwari/TeachGPT`](https://github.com/Priyamakeshwari/TeachGPT) | 🟢 **MIT** — `LICENSE.md`, **1 057 B**, `main` | 18 files. **This base graded it `UNCLASSIFIED` and it was MIT all along** — see below. Build-on tier |
+| 🟢 **mentar** | [`avps82/mentar`](https://github.com/avps82/mentar) | 🟡 **AGPL-3.0** — root `LICENSE`, **34 523 B**, `main`, HEAD `9d9d43c` | **839 files.** Local-first multi-curriculum tutor, deterministic answer checker. 🟢 **Ships its OWN dependency and content licence audit** — the first education repo here that does. Full reading in [`compose/patterns.md`](../compose/patterns.md) `P40` |
+| 🟡 **Open-Education** | [`bunnywaffle/Open-Education`](https://github.com/bunnywaffle/Open-Education) | 🟢 **Apache-2.0** — `LICENSE`, **11 357 B** | 🔴 **Enumeration refutes its own README:** the tree is **THREE FILES** (`LICENSE`, `README.md`, `app.py`), HEAD `1fac5bc`. A one-file Gradio demo under a manifesto. Permissive and real; **not** the "platform" it calls itself |
+| 🟡 **AIcademy** | [`aicademyorg/aicademy`](https://github.com/aicademyorg/aicademy) | 🟢 **MIT** — `LICENSE`, **1 063 B**, © 2025 AIcademy | 72 files, Next.js. 🔴 But it is the **teaching-engineers** class the mandated leg keeps returning — a site that teaches AI, not an agent that serves a learner. Recorded so nobody re-reads the list |
+| 🟡 **ai_tutor_forge** | [`guedesindev/ai_tutor_forge`](https://github.com/guedesindev/ai_tutor_forge) | 🟡 **GPL-3.0** — `LICENSE`, **35 149 B**, HEAD `d503ac7` | 🇧🇷 pt-BR, 7 files. The pass's **only LATAM-origin code row**. Small, and ships a committed `__pycache__` `.pyc` |
+| 🔴 **AIProf** | [`MeetYourAI/AIProf`](https://github.com/MeetYourAI/AIProf) | 🔴 **GPL-3.0** — `LICENSE`, **35 149 B**, on ref **`dev`** | 🔴 **ITS README SAYS `This project is [MIT](./LICENSE) licensed.`** The payload at that exact path is verbatim GPL-3.0. See the channel-conflict row below |
+| 🔴 **PrepifyAI** | [`saif2012004/PrepifyAI`](https://github.com/saif2012004/PrepifyAI) | 🔴 **NONE_IN_TREE** across **389 enumerated files** | 🇵🇰 FBISE Matric/FSc + MDCAT/ECAT RAG tutor, DistilBERT topic predictor. No payload, no README licence line, `package.json` has **no `license` key** and `"private": true` |
+| 🔴 **gurukul-ai** | [`somenssarkar/gurukul-ai`](https://github.com/somenssarkar/gurukul-ai) | 🔴 **NONE_IN_TREE** across 17 files | 🇮🇳 NCERT/CBSE grade 7–8, shipped as **five `SKILL.md` packs** (maths, physics, chemistry/biology, sanskrit, english) — **a form factor new to this base**. README says *"MIT License — use freely"*. **Dangling claim: an ASK, not a refusal** |
+
+### 🔴 The instrument defect that was costing this base usable dependencies
+
+🟢 **`Priyamakeshwari/TeachGPT` is a verbatim MIT body whose TITLE LINE IS SIMPLY ABSENT.**
+It opens on the bare copyright line and goes straight to *"Permission is hereby granted,
+free of charge…"*. `pass257-restriction-scan`'s stage-two anchors covered **BSD and ISC** —
+the two families that routinely open on a copyright line — **and not MIT**, the family this
+base publishes more than any other. So it graded `UNCLASSIFIED:no-family-no-restriction`.
+
+🔵 **This is `T-p283`'s shape for the third time, and the second time in that one function:**
+`p1054` has carried a `MIT_BODY_MARKER` since it was written, so the base already knew an MIT
+body is identifiable without its title. **The class reached one instrument and never reached
+the one beside it.**
+
+🟡 **The direction was the conservative one** — `UNCLASSIFIED` is never published as
+permissive, so it cost no wrong licence claim. 🔴 **It cost the other thing, and this base has
+not been counting it: a real, usable, permissive grant read as unclassifiable is a dependency
+the studio declines for no reason.** Both directions are defects. Collision was measured on
+all seven fixtures before the anchor was added (the MIT clause occurs in **one** of them — the
+MIT one — and **not** in `rapkumer`, which carries an MIT carve-out in its §6), and pinned in
+the suite.
+
+### 🔴 A channel conflict in the dangerous direction, and the ref trap again
+
+`MeetYourAI/AIProf`'s README says **MIT** and links `./LICENSE`; that file is **verbatim
+GPL-3.0** (35 149 B, *"Version 3, 29 June 2007"*). 🔵 Every prior channel conflict this base
+has recorded ran *payload more restrictive than the list* — this one runs **README more
+permissive than its own linked payload**, which is the same error with the reader on the wrong
+side of it. 🔴 **And the grant sits on default ref `dev`** — not `main`, not `master`. That is
+the third pass in four where the ref axis, not the filename ladder, decided the verdict
+(`eledia` on `master`, `twiga` on `development`, `AIProf` on `dev`).
+
+### 🟢 South Asia reproduces West Africa's shape, and that makes the claim a pattern rather than a region
+
+🔴 **Pakistan and India returned three code rows and two of the three serve no grant**
+(`PrepifyAI` 389 files, `gurukul-ai` 17 files) — against **one** that does, and it is AGPL
+(`mentar`). `T-p285a` was stated over West Africa: *the gap is LICENSING, not supply.* 🟢 **It
+now has an independent second confirmation 6 000 km away**, and `T-p286a`'s counterexample
+(East Africa, permissive) holds on both: the posture is **not continental and not regional —
+it is per-project**, and the only thing that settles it is the payload.
+
+🔴 **`PrepifyAI` carries a SECOND grant problem the code-licence question cannot see:** 20
+`Extracted text books/` JSON files for `FBISE_CLASS9/10` and `PUNJAB_CLASS9/10`. Board
+textbook text is third-party copyright, so even a written code grant would not clear it. This
+is the `P26`/content-licence seam, and it is the first education repo here where the content
+problem is **larger** than the code problem.
+
 ## 🟢 Pass 286 — "FIVE AFRICAN ROWS, FIVE UNLICENSED" IS REFUTED AT THE PAYLOAD, AND THE REPO THAT REFUTES IT IS PRODUCTION-SHAPED
 
 ⏱️ `2026-10-18`, eighth pass. Evidence:
@@ -133,6 +205,8 @@ non-commercial friction.
 
 | Agent | Repo | Licence | Stars | What it does |
 |-------|------|---------|-------|--------------|
+| TeachGPT | [Priyamakeshwari/TeachGPT](https://github.com/Priyamakeshwari/TeachGPT) | MIT *(payload, p287)* | — | **New row at `p287`, and it is a row this base ALREADY HELD and could not read.** `LICENSE.md`, **1 057 B** on `main`, 18 files: a **verbatim MIT body with its title line absent**, which `pass257-restriction-scan` graded `UNCLASSIFIED` until this pass taught stage two the MIT operative clause. Small and unproven as software; **the value here is the measurement** — it is the first demonstration that this base's licence instruments were costing it usable permissive dependencies, not just failing to catch restricted ones. |
+| Open-Education | [bunnywaffle/Open-Education](https://github.com/bunnywaffle/Open-Education) | Apache-2.0 *(payload, p287)* | — | ⚠️ **Listed with its size stated, because the README does not state it.** `LICENSE` **11 357 B**, HEAD `1fac5bc` — and the tree is **THREE FILES**: `LICENSE`, `README.md`, `app.py`. A single-file Gradio tutor demo beneath a long manifesto about replacing human teachers. **The grant is real and permissive; the "platform" is not a platform.** Useful as a 200-line reading of the smallest thing that answers a learner, and **not** as a dependency. |
 | DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 41.5k | Lifelong personalized tutoring: a persistent student model that survives between sessions, multi-agent orchestration, citation-grounded feedback. Release v1.6.14 dated 2026.10.8. The single most adopted education agent on GitHub. |
 | Artemis | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | Platform for interactive learning with individual feedback, from the Applied Education Technologies group at **TU Munich**; 12,437 commits, self-hosted by universities in several countries. Ships three config-gated AI subsystems: **Iris** (LLM tutor), **Athena** (feedback suggestion for text/modelling/programming) and **Hyperion** (AI exercise authoring on Spring AI). Programming submissions are built, tested and analysed automatically. The answer to "where is the open grading agent" — it is inside a platform. |
 | ~~Iris~~ → **not a separate repository** | [ls1intum/Iris](https://github.com/ls1intum/Iris) **= [ls1intum/Pyris](https://github.com/ls1intum/Pyris)** | MIT *(the same payload as Pyris, counted twice until now)* | — | 🔴 **`p282`: WITHDRAWN AS A ROW — this address is a GitHub name alias that resolves to `ls1intum/Pyris`.** Identical HEAD (`d7b2c095204e`), identical ref count (245), identical root tree (`4e2f096df767`), 203 files, identical 1 088-byte MIT payload; under **both** names the root `README.MD` opens `# Pyris V2`. **Iris is the user-facing name of the tutor Pyris powers inside Artemis** — the project's own README points at a web page (`artemis.cit.tum.de/about-iris`), not at a repository. The capability is real; the **second address is not**. Build on **Pyris**. Evidence: [`alias-identity.2026-10-18-p282.tsv`](../evidence/alias-identity.2026-10-18-p282.tsv). |

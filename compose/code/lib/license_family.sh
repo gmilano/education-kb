@@ -1179,6 +1179,34 @@ commercial_use_ok() {
     *"usage non commercial"*|*"fins non commerciales"*|*"à des fins non commerciales"*) return 1 ;;
     *"nicht-kommerziell"*|*"nicht kommerzielle nutzung"*|*"keine kommerzielle nutzung"*) return 1 ;;
     *"uso non commerciale"*) return 1 ;;
+    # -----------------------------------------------------------------------
+    # p287 (2026-10-18).  EL BRAZO INDONESIO/MALAYO FALTABA EN LAS DOS
+    # IMPLEMENTACIONES, y lo encontro un payload real, no un repaso.
+    #
+    # Especimen: `sira313/rapkumer`, `LICENSE` de 3.140 B en `main`, leido de
+    # primera mano.  Su §3 se titula `LARANGAN PENGGUNAAN KOMERSIAL` -- PROHIBICION
+    # DE USO COMERCIAL -- y prohibe el uso comercial en cualquier forma.  Medido
+    # ANTES de esta rama, igual que `OpenGaokao` en P240:
+    #     osi_family_of     -> UNCLASSIFIED   (correcto: licencia bespoke)
+    #     commercial_use_ok -> 0, o sea ALLOWED   (FALSO, y es el veredicto que importa)
+    #
+    # 🔵 Es exactamente P240 otra vez, en un tercer idioma, y la leccion no es
+    # «faltaba indonesio»: es que ESTA LISTA SOLO CUBRE LOS IDIOMAS EN QUE ALGUIEN
+    # YA SE EQUIVOCO.  `pass257-restriction-scan` cierra esa direccion del lado
+    # Python con un veredicto `UNREADABLE-BODY` -- «no se pudo leer» en vez de «no
+    # hay restriccion» -- para cualquier cuerpo sin brazo de idioma.  Esta funcion
+    # shell NO lo tiene todavia y queda registrado como tal, no como cubierto.
+    #
+    # Misma regla de siempre: FRASE, nunca palabra sola.  `komersial` aparece en el
+    # §6 del propio `rapkumer`, que sub-licencia Feather Icons bajo MIT, y aparece
+    # en cualquier aviso permisivo indonesio que mencione el uso comercial para
+    # PERMITIRLO.  Control negativo en `pass257-restriction-scan/test_restriction_scan.py`
+    # («Penggunaan komersial diizinkan tanpa batasan apa pun») y el port se mide en
+    # las dos direcciones ahi mismo (p637), no se confia en que coincidan.
+    *"larangan penggunaan komersial"*|*"penggunaan komersial dilarang"*) return 1 ;;
+    *"dilarang menggunakan secara komersial"*|*"dilarang untuk tujuan komersial"*) return 1 ;;
+    *"tidak untuk tujuan komersial"*|*"tujuan non-komersial"*) return 1 ;;
+    *"non-komersial"*|*"nonkomersial"*|*"bukan untuk komersial"*) return 1 ;;
   esac
   # -------------------------------------------------------------------------
   # P241 (pase 241 del 2026-10-16).  P240 LEYO EL DEFECTO COMO IDIOMA; ES MAS ANCHO.

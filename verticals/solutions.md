@@ -18,6 +18,65 @@ updated: 2026-10-18
 > (its source is AGPL-3.0, 78,765 commits), and adds a European public-sector school platform, an
 > e-testing platform and an offline assessment platform.
 
+## 🔴 Pass 287 — no new platform, and the pass found the thing that actually governs a platform engagement: the CURRICULUM's licence, not the platform's
+
+⏱️ **Ninth pass of `2026-10-18`.** Evidence:
+[`verified-repos.2026-10-18-p287.tsv`](../evidence/verified-repos.2026-10-18-p287.tsv) ·
+[`p287-websearch.2026-10-18-p287.tsv`](../evidence/p287-websearch.2026-10-18-p287.tsv).
+
+🔴 **The mandated vertical leg added nothing, and names its returns so the nil is checkable:**
+`OpenEduCat` (already shelved), **ERPNext GPL-3.0**, **Twenty CRM BSL-1.1**
+(*source-available, not open source*). 🟢 **Nine passes of this query in ten; the finding is
+about the supply.** There is still no education ERP/CRM under MIT or Apache that this base can
+locate, and `p286`'s break came from a **directed** leg, not this one.
+
+### 🟢 The pass's real platform finding is a CONSTRAINT this shelf never had a row for
+
+🔵 **`avps82/mentar` (AGPL-3.0, 839 files) ships a country strategy, and it is a licensing
+decision wearing product clothing:**
+
+> `AU = ACARA (CC BY)`, `IN/SG/US = GENERIC packs (no claimed alignment)`
+
+🟢 **Read it the right way round and it is the most reusable thing in this pass.** The project
+does not ship Australian alignment because Australia is a priority market; it ships Australian
+alignment because **ACARA publishes the Australian curriculum under CC BY**. Everywhere the
+national curriculum is *not* openly licensed, it ships **generic packs and withholds the
+alignment claim**.
+
+🔴 **So "curriculum-aligned" is not a feature a studio can promise per engagement — it is
+BOUNDED BY THE HOST COUNTRY'S CURRICULUM LICENCE**, and that is a question none of the
+platforms on the shelf below answers. Moodle's GPL, Open edX's AGPL and Canvas's AGPL govern
+the **code**; the alignment claim is governed by a **ministry's copyright page**.
+
+🟡 **What this shelf can say today, and what it cannot:**
+
+| 🟢 established this pass | 🔴 NOT established, and registered as a gap |
+|---|---|
+| **Australia: ACARA is CC BY** — alignment claimable, per `mentar`'s audit | 🔴 The curriculum licence for **every other** market this base has probed. 🇹🇿 `twiga` grounds on Tanzania Institute of Education material and `p286` did **not** record TIE's licence; 🇬🇭 `edubot-africa` on NaCCA; 🇵🇰 `PrepifyAI` on FBISE/Punjab board textbooks; 🇧🇩 Progga on NCTB; 🇮🇳 `gurukul-ai` on NCERT |
+| **The remedy exists and is cheap**: withhold the alignment claim and ship generic content | 🔴 **Whether NCERT/FBISE/NaCCA/TIE/NCTB permit derivative aligned content at all.** A ministry copyright page is a **primary source** and none has been read by this base |
+
+🔵 **This is the fourth time a `p28x` pass has found that the binding constraint sits one layer
+away from where the shelf was looking** — and the first time the layer is a *government's
+copyright page* rather than a repository's `LICENSE`. **Ranked for `p288`: read five ministry
+curriculum licences as primary sources.** It is a day's reading and it would let this shelf say
+which markets support an alignment claim, for every engagement rather than one.
+
+### 🔴 The tier trap, stated as a platform question because that is where it lands
+
+🔴 **`mentar`'s grounding source is Khan Academy under `CC BY-NC-SA`, and its own audit says
+the quiet part:** cleared for *"the non-commercial local pilot"*, 🔴 **"does NOT clear the
+Phase-3 paid hosted tier."**
+
+🔵 **Every platform on the shelf below can be stood up for a pilot on content that cannot ship
+in the product.** The platform's licence does not change between those two phases; **the
+content's does the work**, and `SA` makes it worse rather than better — a redistributed
+adaptation of NC content **inherits** NC. 🟢 **The engagement-shaped version:** the pilot that
+wins the client and the deliverable that bills them may not be able to use the same corpus, and
+the discovery phase is where that has to be found, not the build.
+
+See [`compose/patterns.md`](../compose/patterns.md) **`P40`** for the two-corpus recipe this
+implies, and [`intel/trends.md`](../intel/trends.md) `T-p287a`.
+
 ## 🟢 Pass 286 — the EIGHT-PASS vertical nil is BROKEN, by a directed leg rather than the mandated one
 
 ⏱️ `2026-10-18`, eighth pass. Evidence:

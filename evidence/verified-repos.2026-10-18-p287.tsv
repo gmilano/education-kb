@@ -1,0 +1,43 @@
+# p287 — 2026-10-18 — EVERY ROW READ FIRST-HAND from raw.githubusercontent.com on an
+# `ls-remote --symref`-resolved ref.  Trees enumerated with
+# `git clone --depth 1 --filter=blob:none` (the blobless channel p285 established).
+# 🔴 github.com/trending still answers 403 and api.github.com/repos is still refused by
+# session repo scope, so NO star count in this pass is first-hand.  Star counts are
+# NOT carried in this file for that reason.
+#
+# verdict vocabulary: PERMISSIVE / COPYLEFT / RESTRICTED / NONE_IN_TREE / CHANNEL-CONFLICT
+repo	ref	payload_path	bytes	family	verdict	tree_files	note
+sira313/rapkumer	main	LICENSE	3140	bespoke RAPKUMER LICENSE	RESTRICTED	-	🔴 §3 LARANGAN PENGGUNAAN KOMERSIAL — total commercial prohibition. p286 measured this payload as UNCLASSIFIED/0-hits; p287's id arm now reads it. §6 sub-licences Feather Icons under MIT and that carve-out does NOT make the payload MIT (asserted)
+heronerar/OpenGaokao	main	LICENSE	15992	OpenGaokao-SAL-1.0	RESTRICTED	-	🔴 92.9% CJK. First clause 禁止商业使用; body states it is NOT an OSI-approved licence. Source-available, not open source. 🇨🇳 Gaokao national exam. Was UNCLASSIFIED/0-hits in the Python channel until p287
+MeetYourAI/AIProf	dev	LICENSE	35149	GPL-3.0	CHANNEL-CONFLICT	-	🔴 README.md says "This project is [MIT](./LICENSE) licensed." The payload at that very path is verbatim GPL-3.0 ("Version 3, 29 June 2007"). Default ref is `dev`, not main/master. Direction is the DANGEROUS one: a reader trusting the README ships GPL as MIT
+saif2012004/PrepifyAI	main	-	0	NONE_IN_TREE	NONE_IN_TREE	389	🔴 🇵🇰 FBISE Matric/FSc + MDCAT/ECAT RAG tutor, DistilBERT topic predictor. No licence-named path across 389 enumerated files; no licence line in README; FYP_FRONTEND package.json has NO license key and "private": true. 🔴 AND 20 Extracted-text-books JSON files for FBISE_CLASS9/10 + PUNJAB_CLASS9/10 — a CONTENT grant problem on top of the missing code grant
+bunnywaffle/Open-Education	main	LICENSE	11357	Apache-2.0	PERMISSIVE	3	🟡 Real Apache-2.0 grant, learner-serving intent. 🔴 But the tree is THREE FILES (LICENSE, README.md, app.py), HEAD 1fac5bc. The README is a manifesto about replacing human teachers; the code is one Gradio file. A demo, not the "platform" it calls itself
+aicademyorg/aicademy	main	LICENSE	1063	MIT	PERMISSIVE	72	🟡 Real MIT grant (© 2025 AIcademy). Next.js community site teaching AI — the TEACHING-ENGINEERS class, not a learner-serving agent. Carries CITATION.cff, SECURITY.md, CODE_OF_CONDUCT.md
+avps82/mentar	main	LICENSE	34523	AGPL-3.0	COPYLEFT	839	🟢 THE FIND OF THE PASS. Local-first multi-curriculum tutor (incl. Indian), deterministic answer checker, HEAD 9d9d43c. Ships docs/LICENSE_AUDIT.md + docs/CONTENT_LICENSES.md + CLA.md — the first education repo in this base to publish its OWN dependency-and-content licence closure
+somenssarkar/gurukul-ai	main	-	0	NONE_IN_TREE	NONE_IN_TREE	17	🔴 🇮🇳 NCERT/CBSE grade 7–8 tutor shipped as five Claude Code SKILL.md packs (math, physics, chemistry/biology, sanskrit, english) — a form factor new to this base. README says "MIT License — use freely, contribute openly". NO licence file on any ladder path. DANGLING CLAIM: an upstream ASK, not a refusal
+guedesindev/ai_tutor_forge	main	LICENSE	35149	GPL-3.0	COPYLEFT	7	🟡 🇧🇷 pt-BR agent that builds tutors (agente_final.py, escolher_modelo.py), HEAD d503ac7. Real GPL-3.0 grant. Small, and ships a committed __pycache__ .pyc. The pass's only LATAM-origin code row
+Priyamakeshwari/TeachGPT	main	LICENSE.md	1057	MIT	PERMISSIVE	18	🟢 Real MIT. 🔴 AND THE INSTRUMENT FINDING: a VERBATIM MIT body with its TITLE LINE ABSENT, at LICENSE.md rather than LICENSE. Graded UNCLASSIFIED by p257..p286 because BODY_ANCHORS had BSD and ISC and not MIT. Promoted to usable by p287's second fix
+# ── ADDRESSES THAT DID NOT RESOLVE OR WERE NOT ON GITHUB ────────────────────────────
+Uganda SIMU (NCDC-aligned tutor)	-	-	0	-	NOT-ON-GITHUB	-	🔴 Cohort-4 grant winner, "curriculum-aligned AI tutor for Uganda's classrooms" on verified NCDC-approved materials. No public repository named in any source
+Rwanda Rori / Chidi	-	-	0	-	NOT-ON-GITHUB	-	🔴 Rori (Rising Academies, with MINEDUC+REB) and Chidi (ALX + Anthropic + Govt of Rwanda, built on Claude). Rwanda Coding Academy's national AI Tutor is explicitly scoped as "licensing or API requirements" — an API build, not a public repo
+Bangladesh Progga AI	-	-	0	-	NOT-ON-GITHUB	-	🔴 NCTB-aligned, Bangla+English. ProductHunt-launched commercial platform. No repository, no licence
+Turkey MEB	-	-	0	-	NOT-ON-GITHUB	-	🔴 MEB's "Eğitimde Yapay Zeka Politika Belgesi ve Eylem Planı" is a POLICY instrument (4 goals, 15 policies, 40 action steps, ethics board), not code. No ministry repository located
+# ── ADDRESS RESOLUTION, every URL this pass PUBLISHES, via `git ls-remote --symref` ──────
+# 🔴 github.com HTML answers 403 from this session, so `curl -sI` on a repo page proves nothing
+# here. Resolution is therefore done over the channel that works, and the REF is recorded because
+# three of this base's last four passes had a verdict decided by it.
+slug	resolved_default_ref
+MeetYourAI/AIProf	🔴 dev
+Priyamakeshwari/TeachGPT	main
+aicademyorg/aicademy	main
+avps82/mentar	main
+bunnywaffle/Open-Education	main
+guedesindev/ai_tutor_forge	main
+heronerar/OpenGaokao	main
+saif2012004/PrepifyAI	main
+sira313/rapkumer	main
+somenssarkar/gurukul-ai	main
+sagorbrur/bnlp	main	(LEAD — licence not read this pass)
+banglakit/awesome-bangla	main	(LEAD — licence not read this pass)
+me-shaon/bangla-programming-resources	🔴 master	(LEAD — licence not read this pass)
+pykt-team/pykt-toolkit	main	(carried row, re-resolved)

@@ -25,6 +25,74 @@ updated: 2026-10-18
 > carried as the only permissive North American system of record for roughly 200 passes while
 > *this* file carried no Ed-Fi row at all.
 
+## 🟢 Pass 287 — a Bangla NLP toolchain is the foundation layer a Bengali engagement has had no answer for, and the mandated vertical leg again found nothing
+
+⏱️ **Ninth pass of `2026-10-18`.** Evidence:
+[`verified-repos.2026-10-18-p287.tsv`](../evidence/verified-repos.2026-10-18-p287.tsv) ·
+[`p287-websearch.2026-10-18-p287.tsv`](../evidence/p287-websearch.2026-10-18-p287.tsv).
+
+🔴 **The mandated verticals leg produced no new permissive row, for the ninth time in ten
+passes.** It returned `OpenEduCat` (Odoo-based, licence unstated by the source; this shelf
+already carries it), **ERPNext GPL-3.0**, and **Twenty CRM under BSL-1.1** —
+*source-available, not open source*, which is the `PageLM`/`Suna`/`OpenGaokao` pattern arriving
+for the fourth time through a fourth channel. 🟢 **Said plainly: there is still no education
+ERP or CRM under MIT or Apache that this base has been able to locate**, and nine passes of
+the same query is now evidence about the supply, not about the search.
+
+### 🟢 The genuinely new foundation row, and it came from a NIL
+
+🔵 **The Bangladesh leg found no tutor and that is not what makes it useful.** It found that
+**real Bangla open source exists and is INFRASTRUCTURE**:
+
+| repository | what it is | why it is a FOUNDATION and not an agent |
+|---|---|---|
+| [`sagorbrur/bnlp`](https://github.com/sagorbrur/bnlp) | *"Natural language processing toolkit for Bengali Language"* — tokenisation, embeddings, NER, POS | 🟢 **The layer a Bengali-medium tutor is built ON.** No education repo on any shelf here can serve a 🇧🇩 learner in Bangla without something at this level |
+| [`banglakit/awesome-bangla`](https://github.com/banglakit/awesome-bangla) | A collection of tools, datasets and resources for Bangla computing | 🔵 An **index of the layer**, which is how a studio finds the rest of it in week one |
+| [`me-shaon/bangla-programming-resources`](https://github.com/me-shaon/bangla-programming-resources) | Bangla-language programming tutorials and references | Content, not code — relevant to a **teacher-training** scope rather than a learner-facing one |
+
+🟡 **Licences NOT read first-hand this pass and therefore NOT published here as grants** — these
+rows arrived from a search result, and this base's own two-pass record is that **three of four
+secondary "open source" claims are wrong**. They are **leads at the right layer**, and probing
+them is a `p288` item. Recording them as leads rather than as shelf rows is the whole point of
+the distinction.
+
+🟢 **What this pass DID establish about them, because it is cheap and it shortens `p288`'s
+probe: all three RESOLVE, and their default refs are resolved rather than assumed.**
+
+| lead | `ls-remote --symref` default ref |
+|---|---|
+| `sagorbrur/bnlp` | `main` |
+| `banglakit/awesome-bangla` | `main` |
+| `me-shaon/bangla-programming-resources` | 🔴 **`master`** |
+
+🔴 **The third row is the reason this table exists rather than a sentence.** A `p288` probe that
+hardcodes `main` would publish `NONE_IN_TREE` over it — which is the exact failure this pass saw
+a third time in four passes (`AIProf` on `dev`, `eledia` on `master`, `twiga` on `development`).
+**Resolve the ref; never assume it.**
+
+🔵 **The general lesson, which is about where this base looks for foundations:** the language
+legs keep returning **tutors that are proprietary** and **language infrastructure that is
+open**. For every non-English market probed so far — 🇧🇩 Bangla, 🇻🇳 Vietnamese, 🇮🇩 Indonesian,
+🇹🇿 Swahili — *the permissive code sits one layer BELOW the agent*, and an engagement that goes
+looking for a tutor finds nothing while the thing it actually needs is sitting there unclaimed.
+
+### 🔴 A correction to how this shelf has been reading `NONE_IN_TREE`
+
+🔴 **`saif2012004/PrepifyAI` (389 files, no grant) shows that a code grant is not always the
+binding constraint.** Its tree carries **20 `Extracted text books/` JSON files** for
+`FBISE_CLASS9/10` and `PUNJAB_CLASS9/10`. 🔵 **This shelf's standing remedy for a
+`NONE_IN_TREE` row is "ask the author for a written grant"** (`P17`, `P19`, and `p286` item 5's
+licence-intake ask). 🔴 **That remedy would not clear this repository**: the author cannot grant
+what they do not hold, and board textbook text is third-party copyright. 🟢 **So the remedy for
+a `NONE_IN_TREE` row depends on WHAT IS IN THE TREE**, and this shelf has been treating the
+verdict as though it had one remedy. Annotated, not rewritten. `T-p287c`.
+
+🟢 **The same seam, documented from the supply side by `avps82/mentar`'s own
+`docs/CONTENT_LICENSES.md`** — see [`repos/trending.md`](trending.md) and
+[`compose/patterns.md`](../compose/patterns.md) `P40`. Two independent arrivals at the same
+boundary in one pass: **the code grant and the content grant are different questions, and the
+content one is the one that bites a PAID deliverable.**
+
 ## 🟢 Pass 286 — a national EXAM-RESULTS channel joins this shelf, and it is the layer an East African engagement has had no answer for
 
 ⏱️ `2026-10-18`, eighth pass. Evidence:
