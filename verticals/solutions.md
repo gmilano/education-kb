@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # Vertical solutions — Education
@@ -326,6 +326,45 @@ while **North-West University became the first SA university with an official AI
 (**QUREO** / the Japanese **Kiryo** / a **Sprix** contract approved January 2026) — **brief the
 framework, not the vendor.** And every regional figure here is **secondary-source grade**: `p268`
 established the non-GitHub DNS failure as environmental, and no ministry document was read.
+
+## Pass 279 — no new permissive platform for a fifth pass, and the hardest procurement mandate on this shelf was legislated away
+
+🟡 **The mandated platform query returned this base's own shelf.** Moodle, Open edX, Sakai, ILIAS,
+Canvas, Chamilo and OpenEduCat all came back; **every one is already here**, and `make carried` was run
+on each **before** the nil was written up. 🔴 **Fifth consecutive pass with no new permissive
+platform** — and, as in `p278`, the results carried **no licence detail at all**, so nothing in them
+could have been shelved on their authority anyway. 🔵 **One genuine gap in the search itself: no
+open-source SIS comparison exists to be found.** `OpenEduCat` was the only result described as an
+education ERP, which is why the SIS question on this shelf keeps resolving to it.
+
+### 🔴 The platform decision that changed is a POLICY one, and it removes a mandate
+
+**Korea reclassified AI digital textbooks out of "textbook" status** — amendment to the Elementary and
+Secondary Education Act, reported **August 2025** — so **adoption is optional**: Korean and home
+economics are excluded, social studies and science **delayed to 2027**, the review for 2026-year
+products **halted**, and **~10 publishers sued the government in June 2026 for roughly KRW 200bn**.
+Full detail in `intel/trends.md` `T62`.
+
+🟢 **Why that belongs on a PLATFORM shelf.** A procurement mandate is what makes a vertical platform
+buyable at national scale, and this one evaporated in under two years with its vendors in court.
+🔵 **So sequence a platform recommendation against what an institution may CHOOSE** — which is what
+every row on this shelf is already scoped for, since a self-hostable open platform survives a mandate
+reversal and a proprietary national programme does not.
+
+### 🟢 Where a platform engagement has a dated hook instead
+
+| jurisdiction | hook | what it implies for the platform choice |
+|---|---|---|
+| 🟢 **Singapore** | **every** primary/secondary/JC teacher must finish MOE AI modules by **end-2027**, **module 1 by end-2026** | 🔴 **the student channel runs on MOE's own tools on SLS** — so the platform work is teacher-facing and institutional, not classroom delivery |
+| 🟢 **India** | **CBSE Circular Acad-15/2026**, Classes **III–VIII**, session **2026-27** | 🔴 **AI is NOT a standalone subject** — computational thinking is woven across subjects, so the need is cross-curricular content and assessment inside an existing LMS, not a new one |
+| 🟡 **Canada (Ontario)** | no province-wide guidance, but a **Ministry-mandated AI PD day (2026-04-17)**, plus **Bill 194 (2024)** binding school boards | 🟢 the buyer is the **board**; the first deliverable is policy and training on whatever platform they already run |
+
+⚠️ **Unchanged and still un-dischargeable here:** the **Canvas Free-for-Teacher** discontinuation
+remains unverified — `instructure.com` and `community.canvaslms.com` are both unreachable from this
+environment, on **both** fetch channels *(`T61`)*. **Do not promise a zero-cost Canvas environment in
+a proposal.**
+
+---
 
 ## Pass 278 — four platforms on this shelf declare MIT in a manifest while committing AGPL-3.0, and a client's own CI will wave all four through
 

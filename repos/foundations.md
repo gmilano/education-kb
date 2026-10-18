@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # Foundational repos — Education
@@ -379,6 +379,43 @@ from absence.
   `crpf-mitadt/Indian-AI-for-Education` (CC0-1.0, 7,048 B). 🔵 **`p268` warned that rewriting a
   good figure on noise is as bad as publishing a bad one. Three independent agreements, including
   one to the byte, say this base's APAC licence cells are sound.**
+
+## Pass 279 — a vendored-path exclusion is a FLOOR, so every "no grant here" on this shelf is a lower bound
+
+🟢 **`p278` established that *a licence file inside a repository is not the repository's licence*
+(`T58`). `p279` found the same principle one channel over, and it bites harder: a MANIFEST inside a
+repository is not the repository's manifest either**, and the predicate this base uses to tell them
+apart is weaker than the repositories it is pointed at.
+
+🔴 **Measured, not inferred.** `tadreeb-lms/tadreeblms` vendors `moment`, `swiper`, `tailwindcss`,
+`prismjs` and three CKEditor builds **twice**, under two different directory spellings in the same
+repository:
+
+| spelling | caught by `is_bundled` before `p279`? |
+|---|---|
+| `public/assets/libs/…` | 🔴 **no** — the vocabulary knew `node_modules/`, `vendor/`, `third_party/`, `dist/`, `build/`, `bower_components/`, `Pods/`, `.yarn/`, `target/`, `site-packages/` and not this |
+| `resources/views/backend/assetslib/libs/…` | 🔴 **no** — and still not after `assets/libs` was added, which is the point |
+| `inc/libraries/…` *(LearnPress, the WordPress convention)* | 🔴 **no** |
+
+🟢 **All three spellings are in `lib/licence_path.sh` now, with 10 new controls — 4 positive and 6
+negative, so the widening cannot swallow a real workspace package** (`packages/ai-assistant/`,
+`apps/api/`, Athena's `assessment_module_manager/` and `src/libs/` are all asserted NOT vendored).
+The **byte-for-byte identity control against `p196`'s copy stays green**, which is how this base stops
+a shared predicate becoming a fork: the suite went **44/44 → 54/54**.
+
+🔴 **The honest consequence for this shelf: a path vocabulary can only reject the conventions somebody
+enumerated, and one repository defeated it twice inside one hour.** So every vendored-manifest count
+published here is a **LOWER BOUND**, and the residual is named rather than hidden —
+`Open-TutorAi/open-tutor-ai-CE`'s `ui/static/pyodide/package.json`, a bundled Pyodide runtime under a
+path no convention names. 🔵 **The durable channel reads a package `name` against a list of known
+third-party projects. This base does not have that list.** Registered for `p280`.
+
+🔵 **And the controls themselves taught the lesson a third time.** They were first appended **below**
+the suite's `echo "$p/$t"; [ "$p" = "$t" ] || exit 1` line — so they ran, graded nothing, and could
+not have failed the build. **The count gave it away: 44/44 both before and after adding ten
+assertions.** Position relative to the thing that reads you is load-bearing.
+
+---
 
 ## Pass 278 — a licence file inside a repository is not the repository's licence, and the biggest LMS plugin on this base proves it twice
 

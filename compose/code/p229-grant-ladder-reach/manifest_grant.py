@@ -113,7 +113,12 @@ def read(filename, payload):
     return out
 
 
-if __name__ == '__main__':
+# 🔵 p279: this block is now gated on the flag's ABSENCE.  `attributable` is defined
+# BELOW it (the `T229-M2` section), so the new mode cannot be served from here -- and a
+# second `if __name__` block appended at EOF cannot be reached either, because this one
+# reads `sys.argv[1]` as a file and dies on the flag first.  Two drafts of the p279 CLI
+# failed that way: dead code, then a NameError.  Gating here is what makes EOF reachable.
+if __name__ == '__main__' and '--attributable' not in sys.argv:
     print('\t'.join(['slug', 'file', 'state', 'value', 'family', 'bound', 'note']))
     for line in open(sys.argv[1], encoding='utf-8'):
         slug, path, body_path = line.rstrip('\n').split('\t')
@@ -181,3 +186,28 @@ def attributable(slug, filename, payload):
     if any(_norm(p) == _norm(owner) for p in parts):
         return (True, declared)
     return (False, declared)
+
+
+# 🟢 p279: the `attributable` CLI, so a SHELL instrument can REUSE `T229-M2` instead of
+# re-implementing the name check.  `p279` built the per-package manifest walk and counted a
+# monorepo's VENDORED dependency manifests as the repository's own declarations -- `moment`,
+# `swiper`, `tailwindcss` and three CKEditor builds under `public/assets/libs/`, plus a
+# bundled `pyodide` under `ui/static/`.  `T229-M2` already answers that question -- *"a
+# manifest's `name` is a claim about whose manifest it is"* -- and it answers it by NAME,
+# which catches a vendored directory that no path vocabulary enumerates.
+# 🔵 It sits at EOF because `attributable` is defined above it and not above the other block.
+#   usage: manifest_grant.py --attributable <slug> <manifest-basename> <file>
+#   exit 0 = attributable to this repository, 1 = FOREIGN, 2 = usage
+if __name__ == '__main__' and '--attributable' in sys.argv:
+    import pathlib as _pl
+    _i = sys.argv.index('--attributable')
+    try:
+        _slug, _fname, _path = sys.argv[_i + 1], sys.argv[_i + 2], sys.argv[_i + 3]
+    except IndexError:
+        print('usage: manifest_grant.py --attributable <slug> <basename> <file>',
+              file=sys.stderr)
+        sys.exit(2)
+    _ok, _declared = attributable(
+        _slug, _fname, _pl.Path(_path).read_text(encoding='utf-8', errors='replace'))
+    print(_declared or '-')
+    sys.exit(0 if _ok else 1)

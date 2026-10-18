@@ -1,8 +1,236 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-17
+updated: 2026-10-18
 ---
+
+## Pass 279 — 2026-10-18 — **THE GATE `p278` ASKED FOR IS BUILT, AND BUILDING IT FOUND THREE MORE INSTRUMENTS THAT WERE NEVER WIRED, NEVER RUN, OR WRONG ONE LAYER DOWN**
+
+⏱️ **First pass of `2026-10-18`.** Evidence:
+[`channel-conflict.2026-10-17-p279.tsv`](evidence/channel-conflict.2026-10-17-p279.tsv) — **14 slugs,
+manifests walked PER PACKAGE, 17 columns** ·
+[`p279-websearch.2026-10-17-p279.tsv`](evidence/p279-websearch.2026-10-17-p279.tsv) — **14 legs, 10
+jurisdictions, 4 informative nils** ·
+[`p279-inbound-emea.2026-10-17-p279.txt`](evidence/p279-inbound-emea.2026-10-17-p279.txt) — **`ACTION
+SH`'s first run, 2 hits**.
+
+### 🟢 Headline: `p278`'s top two items are discharged, and `make hooks` grew two standing gates
+
+`p278` ranked **"make `make claims` a STEP, not an instruction"** first at zero searches, on the
+ground that its own headline was *a gate that exists and was not run*. 🟢 **Built, wired, and it
+catches the original defect**: `compose/code/p279-absence-claims/` runs in `make hooks`, and
+**Control Zero is `p277`'s verbatim sentence over a fixture carrying `p121`'s real claim** — a gate
+built from a historical defect that cannot reproduce that defect is a gate built from a story.
+
+🟢 **Proven on the live corpus, both arms, not just on fixtures:**
+
+```
+C1  an ASSERTED absence over the real shelves   -> REFUTED conflict ... 9 shelves   exit 1
+C2  the unmodified base                         -> ABSENCE-REFUTED=0               exit 0
+```
+
+🔴 **Had this existed, `p277` could not have got a green `make hooks`.**
+
+### 🔴 Its own predicate was wrong twice, and the second one was `p278`'s lesson re-committed
+
+🔴 **First run over the live pass section reported `p278`'s own headline as a fresh assertion.** It
+was right about the text and wrong about the act: `p278` was **quoting** `p277` in order to document
+the error, which is the opposite of committing it. A gate that cannot tell an assertion from a report
+would punish the forensic write-up this base is built on, and would have been switched off within a
+pass. 🔵 **The distinction already existed one subject over** — `p223`'s date gate grades `QUOTED`
+separately *"because the KB reporting what a source said is evidence, not a defect"*. Same
+distinction, different predicate; cited, not reinvented.
+
+🔴 **And the first fix for THAT computed quote parity per LINE, which still failed on the real
+README** — because the sentence **wraps**, and the opening `*"` sits on the line above the absence
+phrase. 🔵 **`p278` repaired exactly this class in its own anchors** — *"an anchor that breaks when a
+paragraph is reflowed is the same brittleness class as one copied from the number it checks"* — so a
+line-local predicate over a hard-wrapped corpus is that class one layer out. Quote state is tracked
+across the **paragraph** now, and the real wrapped text is a control.
+
+🔵 A `QUOTED` hit is still **printed**, never dropped: a pass could quote itself to evade the gate, and
+the output has to make that visible if it ever happens.
+
+### 🟢 `ACTION SH` is built after 53 passes, and it caught the fifth recurrence of this base's worst claim
+
+🔴 **The claim that the EU AI Act's education high-risk obligations took effect in August 2026 arrived
+from an inbound source for the FIFTH pass running** — this time through `p279`'s own mandated EMEA
+leg, from a source these shelves do not cite. It is wrong by **fifteen months in the expensive
+direction**: it tells an EMEA client they are bound now. **Annex III point 3 applies `2027-12-02`**;
+**`2026-08-02` is Article 50 transparency**, which *is* live.
+
+🔵 **`p226` registered the remedy and named it precisely:** *"`ACTION SA`'s gate watches outbound
+prose; `ACTION SH` is registered to run the same table against inbound search results instead."* 🟢
+**Built, as a mode on the existing classifier rather than a second implementation** —
+`make inbound-claims FILE=…`, `make claims`'s exit-1 STOP polarity, out of `hooks` because it takes a
+file. **It caught both stale assertions in this pass's EMEA evidence.**
+
+🔴 **It caught the second one only after the table was widened twice, and both gaps generalise:**
+
+| gap | the sentence that exposed it |
+|---|---|
+| 🔴 the subject vocabulary knew `AI Act` and **not `Digital Omnibus`** — the instrument that *amends* it | *"the Digital Omnibus proposal requires approval … the legal obligation remains August 2, 2026"* |
+| 🔴 the effect vocabulary knew *"full effect"* but not a claim asserted by **denying the correction** | *"the obligation **remains** August 2, 2026"* |
+| 🔴 and the first fix spelled the date `august 2026`, missing **`August 2, 2026`** | **the one spelling a reader actually meets** |
+
+🔵 **A KB that audits only its own prose is guarding the wrong door.** The shelves were clean on all
+five occasions; the cost was a human re-adjudicating the same fact every hour, and the risk is the one
+pass that does not.
+
+### 🔴 `p223`'s date gate was never in `make hooks` — 56 passes after it was written
+
+🟢 `grep -c p223 Makefile` returned **0**. The gate passes **15 controls** and scans the live corpus
+**0 ASSERTED, 0 ATTRIBUTED**. 🔵 **It is the Makefile's own opening class, still live** — *"a working
+gate that stayed a one-off because it could not be invoked from the place a hook runs"*. **Standing
+now, as `make gate-dates`.**
+
+### 🟢 Item 2: the manifest channel is enumerated, and the first three fixes were each wrong differently
+
+`p278` left one defect named and unfixed — `sweep.sh` read **root** manifests only, so `ls1intum/Athena`
+returned `NO-CHANNEL` while `p275` had established **12 of its 14 manifests declare MIT**, all in
+subdirectories. 🟢 **Discharged**: the walk enumerates the tree over the blobless-clone channel
+`enumerate.sh` proved, and **`Athena` returns `14` in tree, `12` declaring, `1` distinct — `p275`'s
+numbers exactly, from code written for every row rather than for that one.** A one-off census says
+*this was true when somebody looked*; a reproduction through an unrelated instrument says *this is a
+property of the repository*.
+
+🔴 **Three fixes, three different wrongs, every one measured rather than read:**
+
+1. 🔴 **The walk found Athena's 12 declarations and still published `NO-CHANNEL`** — the silent root
+   `pyproject.toml` claimed the chosen slot before any declaring manifest could, so **the root's
+   SILENCE shadowed twelve subpackages that do declare.** Enumeration is useless while the SELECTION
+   prefers the root.
+2. 🔴 **Vendored dependency manifests were counted as the repository's own** — `tadreeblms` returned
+   *13 declaring*, of which ten were `moment`, `swiper`, `tailwindcss`, `prismjs` and three CKEditor
+   builds under `public/assets/libs/`, which `is_bundled`'s vocabulary does not know.
+3. 🔴 **The first fix for (2) MISUSED a correct predicate** — applying `T229-M2`'s NAME check at every
+   depth rejected **12 of Athena's 14** as foreign, because `T229-M2` asks *"is this **ROOT** manifest
+   **upstream's**?"*, and a workspace package has no reason to carry its repository's name. 🔵 **The
+   same lesson as (2), against a different shared predicate, inside one hour: a predicate is valid at
+   the depth it was built for.**
+
+🔴 **And used as a REJECTION the name check was wrong a fourth time** — it marked four root manifests
+foreign that plainly are not: `mcp-canvas-lms` names its package `canvas-mcp-server`,
+`open-source-curriculum` names its `course-content-player`, `Studivexa` names its
+`student-management-backend`. **Naming a package differently from its repository is ordinary.**
+🔴 **`p229`'s own positive control for `mcp-canvas-lms` passes on the payload
+`{"name":"@dmontgomery40/mcp-canvas-lms"}`, which the repository does not serve** — the control was
+written against an invented manifest, so it could not have caught this. The name is **recorded** now,
+not enforced. Registered for `p280`.
+
+### 🔴 The new class a root-only read cannot see at all, and one row revises `p278`
+
+**A studio vendoring one directory of a monorepo gets THAT directory's grant, not the root's.** Three
+rows report more than one distinct declaration, and they are **not the same finding**:
+
+| row | its own manifests declare | real? |
+|---|---|---|
+| 🔴 **`LearnPress/learnpress`** | root `composer.json` **GPL-3.0-or-later** · root `package.json` **ISC** · `packages/dependecy-extraction-webpack-plugin/` **MIT** | 🔴 **REAL — and the two ROOT manifests disagree with each other** |
+| 🔴 **`classroomio/classroomio`** | root **MIT** · `apps/api/` **ISC** *(`@classroomio/api`)* | 🔴 **REAL** |
+| 🟡 `Open-TutorAi/open-tutor-ai-CE` | **MIT** + **Apache-2.0** from `ui/static/pyodide/` | 🟡 **ARTEFACT — a bundled Pyodide runtime** |
+
+🔴 **`LearnPress` revises `p278`**, which concluded it *"commits no grant of its own"* — true of its
+**payload**, while the manifest channel shows **three** declarations across three of its own files.
+
+### 🔴 `tadreeblms` is a Laravel boilerplate fork, and its `MIT` is not about itself
+
+Its root `composer.json` declares `"name": "rappasoft/laravel-boilerplate-upgraded"` — 🔴 **`p229`'s
+`openmage/magento-lts` shape exactly: a fork serving upstream's manifest at its root.** The value is
+real, first-hand and correctly parsed, and it is **a statement about `rappasoft`, not about the LMS a
+client would adopt.** The name check's one true positive, and it earned the column.
+
+### 🔴 A vendored-path exclusion is a FLOOR, and one repository defeated it twice in one hour
+
+Adding `assets/libs/` caught `tadreeblms`'s vendored copy and left a **second copy of the same
+libraries** under `resources/views/backend/assetslib/libs/` — **the same repository vendors the same
+CKEditor builds under two spellings**, and the survivor was still publishing a false *"subpackages
+disagree"* on CKEditor's GPL-2.0.
+
+🟢 Both spellings and `inc/libraries/` are in `lib/licence_path.sh` now, with **10 new controls (4
+positive, 6 negative** so the widening cannot swallow a real workspace package**)**, and the
+**byte-for-byte identity control against `p196`'s copy still green** — **44/44 → 54/54**.
+🔴 **So every vendored-manifest count on these shelves is a LOWER BOUND**, and the residual is named:
+`ui/static/pyodide/`, which no path convention reaches. **The durable channel reads a package `name`
+against a list of known third-party projects, and this base has no such list.** Ranked for `p280`.
+
+### 🔵 One shape, three times, in a single pass: position relative to the thing that reads you
+
+🔴 The `attributable` CLI was first appended **below** a `__main__` that reads `sys.argv[1]` as a file
+and dies on the flag — **dead code on arrival**. 🔴 Moved up, it hit `NameError`, because
+`attributable` is defined **below** that block. 🔴 And the ten new `is_bundled` controls were appended
+**below** the suite's own `echo "$p/$t"; [ "$p" = "$t" ] || exit 1`, so they ran, **graded nothing, and
+could not have failed the build** — *the count gave it away: `44/44` before and after adding ten
+assertions*. 🔵 **`p278` found this class in paragraph reflow; here it is in file ORDER.**
+
+### 🟢 The regional battery: ten jurisdictions, and the APAC region-query nil broke on every retry
+
+🔴 **`T53` demonstrated a third time.** The mandated region-wide APAC query named **no
+education-specific ministry, policy or vendor at all** — and four jurisdiction-targeted retries
+produced four dated instruments. **The region query's silence was the query's, not the region's.**
+
+| jurisdiction | instrument | binding? |
+|---|---|---|
+| 🔴 **Korea** | **Elementary and Secondary Education Act amended** (reported **Aug 2025**) — AI digital textbooks **reclassified from textbooks to "educational materials"** | 🔴 **the MANDATE IS GONE.** Adoption optional; Korean + home economics excluded; social studies/science **delayed to 2027**; 2026-year review **halted**; **~10 publishers suing for ~KRW 200bn** (Jun 2026) |
+| 🟢 **Singapore** | **Teacher AI Literacy Professional Learning Roadmap** (Aug 2025) | 🟢 **BINDING and DATED — every primary/secondary/JC teacher, modules by end-2027, MODULE 1 BY END-2026.** Students from **P4** on MOE's own SLS tools; P1–P3 print-first, no chatbots |
+| 🟢 **India** | **CBSE Circular Acad-15/2026**, `CBSE/ACAD/AP&AD(AC)/2026`, **2026-04-01**, signed **Dr. Praggya M. Singh** | 🟢 Classes **III–VIII**, session **2026-27**; **Acad-18/2026** adds resource books, *"AI-literate learners by 2030"*. 🔴 **NOT a standalone subject** — woven across subjects, reportedly no board exam |
+| 🟡 **Japan** | **MEXT Ver. 2.0** — 🔴 **dated `2024-12-26`, NOT 2026**: the PDF filename carries `20260324`, the document shows 2024 | 🟡 guidance; revision underway, unconfirmed. **DX High School: 1,249 schools FY2026** |
+| 🟢 **Brazil** | **Parecer CNE/CP nº 15/2026** approved **2026-09-01**, DOU summary **2026-10-06** | 🟡 **binding ON HOMOLOGATION, which has not happened** — the highest-value LATAM trigger to watch. Plus MEC's **2026-04-09** guidance, with UNESCO |
+| 🟡 **Canada (Ontario)** | 🔵 **the `p278` conflict SETTLES, and both sources were right** | see below |
+
+🟢 **`p278` ranked the Ontario conflict seventh and `ontario.ca` was unreachable to decide it. It did
+not need to be.** The two sources were answering **different predicates**: the Ministry has published
+**no** AI-in-education guidance for school boards *and* it **has** issued a **Ministry-mandated AI
+professional development day (2026-04-17)**, while the province's **Responsible Use of AI Directive**
+and **Bill 194 (2024)** bind public sector entities **including school boards**. 🔵 **A conflict
+between two sources answering different questions is not resolved by a third source — it is resolved
+by splitting the question**, which cost nothing. 🟡 ~**50.7%** of Ontario teachers report a school
+student-AI policy *(a second source says 42.3% of boards)*; **more than half report no training.**
+
+### 🟡 Fifth consecutive pass with no new agent, and the supply test ran on every candidate first
+
+Nine candidates through `make carried` **before** anything was written up. **Eight `CARRIED`.** 🟢 The
+one `NEW` slug — `aneelv75/github-trending` — **is not a row, and the reason is recorded rather than
+left as silence**: it is a curated list, **not an education agent**, and its tree was *enumerated*
+(**1 file, `NONE_IN_TREE`**), so it commits **no grant** and there is nothing to build on.
+🔵 **A nil with a reason is a finding; a nil with a row is padding.**
+
+### 🔴 `T61` now holds on a SECOND client channel, so it is the environment and not a tool
+
+`p278` measured eleven policy hosts failing over `curl` while every code channel answered. 🟢 **`p279`
+re-measured the same hosts through a different client (`WebFetch`) and got the identical failure** —
+`cbseacademic.nic.in` and `moe.gov.sg` are **DNS-unresolvable**, `ontario.ca` and `federalregister.gov`
+are **proxy-403**, while `raw.githubusercontent.com` **200**, `git ls-remote` **OK** and
+`registry.npmjs.org` **200**. 🔵 **Two independent client channels, one failure mode: primary policy
+reads need an egress-enabled run and should stop being ranked as sandbox backlog.** Every policy fact
+above therefore rests on **secondary** sources, and says so. ⚠️ **The Canvas Free-for-Teacher
+discontinuation is still unverified — do not promise a zero-cost Canvas environment in a proposal.**
+
+### 🔵 Declared gaps and the backlog for `p280`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked, the first two at zero searches:
+
+1. 🔴 **Give the manifest walk a KNOWN-THIRD-PARTY NAME channel.** The path vocabulary is a floor —
+   proved twice by one repository this pass — and the residual (`ui/static/pyodide/`) is only
+   reachable by name. This is the fix that makes every vendored count an upper bound as well as a
+   lower one.
+2. 🔴 **Re-write `p229`'s `mcp-canvas-lms` control against the manifest the repository actually
+   serves.** It asserts `{"name":"@dmontgomery40/mcp-canvas-lms"}`; the real root `package.json`
+   declares `canvas-mcp-server`. **A control written against an invented payload cannot fail on the
+   real one** — and audit the other `T229-M2` controls for the same thing.
+3. 🟡 **Raise `MANIFEST_CAP` or make it adaptive.** `leemonade/leemons` has **114** manifests and
+   **100 were skipped**, so its *"12 declaring"* is 12 of the first 14 read. The bound is published,
+   which is not the same as being adequate.
+4. 🟡 **Sweep the remaining metadata-graded rows** — `p278` did the four build-on rows, `p279` did the
+   14-slug conflict list; the census found **107** metadata/manifest-graded table rows in all.
+5. 🟡 **Scope the absence queue to the latest statement per subject** (`T56`, carried from `p277` and
+   `p278`): `QUEUE-UNENUMERATED=69` is still published as an upper bound.
+6. 🟡 **Work the `ABSENCE-QUEUED` backlog.** The new gate reports **124 refuted / 239 queued** in
+   whole-corpus census mode. Those are historical sentences each already adjudicated by the pass that
+   wrote it, and the census is explicitly non-fatal — but **nobody has read the 124.**
+7. 🔵 **Watch Brazil's homologation of `Parecer CNE/CP nº 15/2026`** — the moment it moves from
+   orientation to binding rule.
+8. 🔵 **Read the primary policy texts on an egress-enabled run** — `Ley 2626`'s scope first, then CBSE
+   `Acad-15/2026` and MEXT. 🔴 Not dischargeable here, now measured on two channels (`T61`).
 
 ## Pass 278 — 2026-10-17 — **THE CLASS RANKED FIRST FOR THIS PASS WAS BUILT 157 PASSES AGO, THE GATE THAT SAYS SO EXISTS AND WAS NOT RUN, AND THE COUNT `p277` PROTECTED WAS STALE AFTER ALL**
 

@@ -1,0 +1,10 @@
+# p279 inbound-claim evidence — ACTION SH's first real run.
+# Verbatim claim-bearing sentences from the mandated EMEA leg of this pass's search battery
+# (query: "EU AI Act August 2026 education high-risk obligations schools providers deployers").
+# Source identities kept as the search returned them.
+A Cloud Security Alliance research note states: the Digital Omnibus proposal requires approval from the European Parliament and Council, and until a formal legislative extension is enacted, the legal obligation remains August 2, 2026.
+It also notes the EU AI Act, taking full effect in August 2026, classifies education AI as high-risk.
+One source says Annex III, point 3 obligations were originally due 2 August 2026 but have been delayed to 2 December 2027 under the Digital Omnibus, approved by the European Parliament on 16 June 2026.
+Another lists 2 August 2026 as the general date of application of the Regulation, including Article 50 transparency obligations, and places the Annex III education obligations on 2 December 2027.
+Under Article 26, schools using a purchased tool must ensure the system complies with the AI Act and inform students, parents and teachers about the use of AI.
+Most state schools qualify as bodies governed by public law and must complete an Article 27 Fundamental Rights Impact Assessment before deploying any Annex III point 3 high-risk tool.

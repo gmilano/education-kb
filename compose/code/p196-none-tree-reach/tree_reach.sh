@@ -27,6 +27,29 @@ is_bundled() {
     */node_modules/*|node_modules/*|*/vendor/*|vendor/*|*/third_party/*|third_party/*) return 0 ;;
     */site-packages/*|*/dist-packages/*|*/.venv/*|.venv/*|*/venv/*|venv/*)             return 0 ;;
     */bower_components/*|*/Pods/*|*/.yarn/*|*/target/*|*/build/*|*/dist/*)             return 0 ;;
+    # 🟢 p279: two vendoring conventions this corpus actually uses and this predicate did
+    # not know.  Found by the per-package manifest walk, not by reading: `tadreeblms`
+    # bundles `moment`, `swiper`, `tailwindcss`, `prismjs` and three CKEditor builds under
+    # `public/assets/libs/`, and `LearnPress` bundles `wp-background-process` under
+    # `inc/libraries/` (the WordPress plugin convention).  Counted as the repository's own
+    # per-package declarations, they turned ten dependency licences into a false
+    # "SUBPACKAGES DISAGREE" verdict.
+    # 🔵 A path vocabulary can only reject the conventions somebody enumerated, which is
+    # why this list is a floor and not a proof -- see `T229-M2` for the NAME channel, and
+    # the residual `ui/static/pyodide/` that neither channel safely catches.
+    */assets/libs/*|assets/libs/*|*/inc/libraries/*|inc/libraries/*)                   return 0 ;;
+    # 🔴 THE SAME REPOSITORY VENDORS THE SAME LIBRARIES TWICE, UNDER TWO SPELLINGS.
+    # `tadreeblms` carries `moment`, `swiper`, `tailwindcss`, `prismjs` and three CKEditor
+    # builds under `public/assets/libs/` AND again under
+    # `resources/views/backend/assetslib/libs/`.  Adding `assets/libs` above caught the
+    # first copy and left the second, so the repository still published a false
+    # "SUBPACKAGES DISAGREE" on CKEditor's GPL-2.0.
+    # 🔵 This is the measured proof that a path vocabulary is a FLOOR AND NOT A PROOF: one
+    # repository defeated it twice in one hour.  The durable channel is the one that reads
+    # the package NAME against a list of known third-party projects, which this base does
+    # not have -- registered for `p280`, and until it exists every vendored-manifest count
+    # here is a LOWER BOUND.
+    */assetslib/*|assetslib/*)                                                         return 0 ;;
   esac
   return 1
 }

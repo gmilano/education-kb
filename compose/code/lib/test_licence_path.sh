@@ -85,4 +85,31 @@ else
   chk "el original de p196 esta presente" si no
 fi
 
+
+# 🔴 p279: THESE CONTROLS WERE APPENDED BELOW THE SUMMARY LINE AND THEREFORE DID NOT RUN AS
+# CONTROLS.  `echo "$p/$t"; [ "$p" = "$t" ] || exit 1` had already decided the suite's exit
+# status, so ten new assertions printed their failures into a suite that had already passed.
+# The count gave it away: 44/44 both before and after adding them.
+# 🔵 Third instance of ONE shape in this single pass -- a CLI appended below the `__main__`
+# that dies first, a second `__main__` below the function it needs, and now controls below
+# the summary that grades them.  `p278` wrote "an anchor that breaks when a paragraph is
+# reflowed is the same brittleness class as one copied from the number it checks"; this is
+# that class in file ORDER.  **Position relative to the thing that reads you is load-bearing.**
+# --- p279: the two vendoring conventions the per-package manifest walk exposed -----------
+# Each of these was counted as a repository's OWN per-package licence declaration before
+# `is_bundled` learned the convention.  Real paths from real rows on these shelves.
+yes_bun "public/assets/libs/moment/package.json"
+yes_bun "public/assets/libs/@ckeditor/ckeditor5-build-classic/package.json"
+yes_bun "assets/libs/swiper/package.json"
+yes_bun "inc/libraries/wp-background-process/composer.json"
+# 🔵 The NEGATIVE controls that keep the widening narrow: a real workspace package must
+# still read as the repository's own, or the walk this was built for stops seeing anything.
+no_bun  "packages/ai-assistant/package.json"
+no_bun  "apps/api/package.json"
+no_bun  "assessment_module_manager/pyproject.toml"
+no_bun  "src/libs/helper.js"
+# 🔴 the SECOND spelling in the SAME repository -- the floor-not-a-proof control
+yes_bun "resources/views/backend/assetslib/libs/moment/package.json"
+yes_bun "resources/views/backend/assetslib/libs/@ckeditor/ckeditor5-build-classic/package.json"
+
 echo "$p/$t"; [ "$p" = "$t" ] || exit 1

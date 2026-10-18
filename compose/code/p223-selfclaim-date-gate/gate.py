@@ -33,13 +33,30 @@ import re
 import sys
 import pathlib
 
-SUBJECT = re.compile(r"(ai act|aiact|high-risk|alto riesgo|annex iii|anexo iii)", re.I)
+# 🟢 p279: `digital omnibus` joins the subject vocabulary.  `ACTION SH`'s first real run
+# caught one of the TWO stale assertions in its own inbound file and missed the other,
+# because the missed sentence names only the instrument that AMENDS the Act -- and this
+# base's own note records the Omnibus "AMENDS Regulation (EU) 2024/1689, the AI Act".
+# A table that knows the Act and not its amending instrument has a hole the size of every
+# source that writes about the delay rather than the Act.
+SUBJECT = re.compile(
+    r"(ai act|aiact|high-risk|alto riesgo|annex iii|anexo iii|digital omnibus)", re.I)
 
 FULL_EFFECT = re.compile(
     r"(?:full(?:y)?[ -]?(?:effect(?:ive)?|application|aplicaci[oó]n)|"
     r"plena (?:vigencia|aplicaci[oó]n)|applies from|taking full effect|effective)"
     r"[^.\n]{0,40}august\s*`?\**\s*2026"
-    r"|august\s*`?\**\s*2026\**`?[^.\n]{0,30}(?:full effect|pleno|plena)",
+    r"|august\s*`?\**\s*2026\**`?[^.\n]{0,30}(?:full effect|pleno|plena)"
+    # 🟢 p279: the "it has NOT moved" shape, which asserts the stale date by denying the
+    # correction rather than by stating an effective date.  Narrowly bound to an
+    # obligation/deadline/date subject so that a bare "approaching the August 2026
+    # deadline" -- a true sentence about Article 50 -- is still not a hit.
+    # 🔴 And the first cut of THIS arm missed its own motivating sentence, because it
+    # spelled the date `august\s*2026` while the source wrote "August 2, 2026" -- a DAY
+    # number between the month and the year.  `2026-08-02` is the date the whole table is
+    # about, so the one spelling a reader would actually meet was the one not matched.
+    r"|(?:obligation|deadline|date)\s+remains[^.\n]{0,20}august[^.\n]{0,8}2026"
+    r"|remains\s+(?:at\s+)?august[^.\n]{0,8}2026",
     re.I)
 
 CORRECTED = re.compile(
@@ -102,6 +119,14 @@ CONTROLS = [
     ("Boston Public Schools makes AI fluency a graduation requirement from September 2026", None),
     ("13% of Italian universities had operational AI governance approaching the August 2026 deadline", None),
     ("EU AI Act classifies education AI as high-risk, with full effect in August 2026.\u201d The source", "QUOTED-MULTILINE"),
+    # --- p279: the shapes ACTION SH's first inbound run exposed -------------------------
+    ("until a formal legislative extension is enacted, the AI Act legal obligation remains August 2, 2026", "ASSERTED"),
+    ("the Digital Omnibus is not adopted, so the deadline remains August 2026", "ASSERTED"),
+    ("13% of Italian universities had operational AI governance approaching the August 2026 high-risk deadline", None),
+    # Not a candidate at all: no August-2026 claim is made, so there is nothing to correct.
+    # (This control was first written expecting CORRECTED -- wrongly.  CORRECTED is a verdict
+    # on a line that DOES carry the stale date and also carries its refutation.)
+    ("the Digital Omnibus moved Annex III education high-risk to 2 December 2027", None),
 ]
 
 
@@ -117,9 +142,51 @@ def self_test() -> int:
     return 1 if bad else 0
 
 
+def inbound(path) -> int:
+    """🟢 p279 — `ACTION SH`, registered since p226 and never built.
+
+    `ACTION SA`'s gate watches OUTBOUND prose: where does the KB assert the stale claim?
+    `ACTION SH` asks it of the INBOUND side -- where does a source this pass just read
+    assert it? -- and it is the same table, so it is the same classifier and NOT a second
+    implementation of one.
+
+    🔴 Why it is worth a recipe.  The *"education high-risk from August 2026"* claim has now
+    arrived from an inbound source in FIVE separate passes, each time from a source these
+    shelves do not cite, and each time it was caught by a person reading carefully.  `p279`'s
+    own mandated EMEA leg returned it again, which is the fifth.  A claim this base refuted
+    on 2026-10-15 should not need re-adjudicating by hand every hour.
+
+    🔵 Polarity is `make claims`'s: exit 1 is the STOP signal.  An inbound stale claim is not
+    a defect in the KB -- nothing is wrong on a shelf -- so this stays OUT of `make hooks`
+    and is run against a research file BEFORE its findings are written up.
+    """
+    text = pathlib.Path(path).read_text(encoding="utf-8", errors="replace")
+    hits = []
+    for n, line in enumerate(text.splitlines(), 1):
+        v = classify(line)
+        # QUOTED/CORRECTED are clean OUTBOUND, because they mean the KB is reporting or
+        # fixing the claim.  INBOUND there is no such exemption: the source asserting it
+        # inside quotation marks is still the source asserting it.
+        if v and v != "CORRECTED":
+            hits.append((v, n, line.strip()[:160]))
+    print("verdict\tline\ttext")
+    for v, n, t in hits:
+        print(f"{v}\t{n}\t{t}")
+    print(f"# {len(hits)} inbound stale-claim hit(s) in {path}")
+    if hits:
+        print("🔴 STOP — a source read this pass asserts a claim these shelves have already "
+              "refuted.  Annex III point 3 (education) applies 2027-12-02; 2026-08-02 is "
+              "Article 50 transparency.  Do NOT shelve this.")
+        return 1
+    print("🟢 no refuted date-claim in this inbound text")
+    return 0
+
+
 if __name__ == "__main__":
     if "--self-test" in sys.argv:
         sys.exit(self_test())
+    if "--inbound" in sys.argv:
+        sys.exit(inbound(sys.argv[sys.argv.index("--inbound") + 1]))
     root = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else ".")
     rows = scan(root)
     print("verdict\tfile\tline\ttext")

@@ -1,7 +1,107 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-17
+updated: 2026-10-18
+---
+
+## 2026-10-18 (pass 279) — the manifest channel is ENUMERATED now, not laddered, and the first three fixes for it were each wrong in a different way
+
+⏱️ **First pass of `2026-10-18`.** Append-only — everything below this section is prior history and
+is not rewritten. Evidence:
+[`channel-conflict.2026-10-17-p279.tsv`](../evidence/channel-conflict.2026-10-17-p279.tsv) *(14 slugs,
+17 columns: `manifests_in_tree`, `manifests_declaring`, `declared_distinct`, `manifests_skipped`,
+`manifests_foreign`, `root_manifest_name` are new)*.
+
+### 🟢 Headline: `p278`'s one standing defect is discharged, and it was hiding a second class
+
+`p278` left exactly one defect named and unfixed: *"`sweep.sh` reads **root** manifests only, so
+`ls1intum/Athena` returned `NO-CHANNEL` while `p275` established **12 of its 14 manifests declare
+MIT**, all in subdirectories. *'A monorepo declares its grant per package'* is `p275`'s own sentence,
+and this instrument re-committed the error it corrects."*
+
+🟢 **The manifest channel now enumerates the tree** — blobless shallow clone plus
+`git ls-tree -r`, the channel `enumerate.sh` proved, and **not `api.github.com`**, which is `403`
+from this session and has been for five passes. Four columns of accounting ship with it, because a
+bounded walk that does not publish its bound is a ladder wearing a different name.
+
+| row | `p278` verdict | `p279` verdict | manifests in tree | declaring | distinct |
+|---|---|---|---|---|---|
+| 🟢 **`ls1intum/Athena`** | 🔴 `NO-CHANNEL` | 🟢 **`SINGLE-CHANNEL-MANIFEST`** | **14** | **12** | 1 |
+| `leemonade/leemons` | `MANIFEST-OVERSTATES` | `MANIFEST-OVERSTATES` | **114** *(100 over cap)* | 12 | 1 |
+| `classroomio/classroomio` | `MANIFEST-OVERSTATES` | `MANIFEST-OVERSTATES` | 27 | 2 | 🔴 **2** |
+| `LearnPress/learnpress` | `SINGLE-CHANNEL-MANIFEST` | `SINGLE-CHANNEL-MANIFEST` | 3 | 3 | 🔴 **3** |
+| `codelitdev/courselit` | `MANIFEST-OVERSTATES` | `MANIFEST-OVERSTATES` | 19 | 10 | 1 |
+| `tadreeb-lms/tadreeblms` | `MANIFEST-OVERSTATES` | `MANIFEST-OVERSTATES` | 2 | 1 | 1 |
+
+🔵 **Every verdict `p278` published is preserved. The only verdict that MOVED moved off
+`NO-CHANNEL`** — i.e. the walk added grades, it did not re-grade anything.
+
+### 🔴 The new class: `declared_distinct` — a monorepo whose own packages disagree
+
+A root-only read cannot see this at all. **A studio vendoring one directory of a monorepo gets THAT
+directory's grant, not the root's**, so a single repository can hand over two different obligations
+depending on which folder was copied. Three rows report more than one distinct declaration, and they
+are **not** the same finding:
+
+| row | declarations | real? |
+|---|---|---|
+| 🔴 **`LearnPress/learnpress`** | root `composer.json` **GPL-3.0-or-later**, root `package.json` **ISC**, `packages/dependecy-extraction-webpack-plugin/` **MIT** | 🔴 **REAL — three of the repository's own manifests, three different grants** |
+| 🔴 **`classroomio/classroomio`** | root `package.json` **MIT**, `apps/api/package.json` **ISC** *(`@classroomio/api` — its own scoped workspace package)* | 🔴 **REAL** |
+| 🟡 `Open-TutorAi/open-tutor-ai-CE` | **MIT**, plus **Apache-2.0** from `ui/static/pyodide/package.json` | 🟡 **ARTEFACT — a bundled Pyodide runtime, see the residual below** |
+
+🔴 **`LearnPress` is the expensive one, and it revises `p278`.** `p278` concluded this repository
+*"commits no grant of its own"* — true of its licence **payload**, and the manifest channel now shows
+**three** declarations across three of its own files, the root pair alone disagreeing
+**GPL-3.0-or-later against ISC**. A `readme.txt` resolution stands for the payload; it is no longer
+the whole picture.
+
+### 🔴 Three fixes, three different wrongs, all measured rather than read
+
+🔵 Recorded in full because the sequence is the finding: **enumerating the paths was less than half
+of this job.**
+
+1. 🔴 **The walk found Athena's 12 declarations and still published `NO-CHANNEL`.** The root
+   `pyproject.toml` exists and is *silent*, and the no-licence-field marker claimed the chosen slot
+   before any declaring manifest could — so **the root's SILENCE shadowed twelve subpackages that do
+   declare.** Enumeration is useless if the SELECTION still prefers the root. A grant now outranks a
+   silence; the marker is a fallback consulted only when nothing declared.
+2. 🔴 **Vendored dependency manifests were counted as the repository's own.** `tadreeblms` returned
+   **13 declaring**, of which ten were `moment`, `swiper`, `tailwindcss`, `prismjs` and three
+   CKEditor builds under `public/assets/libs/`; `LearnPress` contributed `wp-background-process`
+   under `inc/libraries/`. `is_bundled`'s vocabulary is `node_modules/`, `vendor/`, `dist/`,
+   `build/` and friends — **`public/assets/libs/` is none of them.**
+3. 🔴 **And the first fix for (2) was a MISUSE of a correct predicate.** Applying `T229-M2`'s NAME
+   check at every depth rejected **12 of Athena's 14** as foreign, because `T229-M2` asks *"is this
+   **ROOT** manifest **upstream's**?"* — and a workspace package has no reason whatever to carry its
+   repository's name. 🔵 **The same lesson as (2), against a different shared predicate, inside one
+   hour: a predicate is valid at the depth it was built for.** Each depth is asked the question it
+   can answer now — name at the root, path below it.
+
+### 🔴 `is_bundled` is a FLOOR AND NOT A PROOF, and one repository proved it twice
+
+Adding `assets/libs/` caught `tadreeblms`'s vendored copy — and left a **second copy of the same
+libraries** under `resources/views/backend/assetslib/libs/`. **The same repository vendors the same
+CKEditor builds under two different directory spellings**, and the surviving copy was still
+publishing a false `SUBPACKAGES DISAGREE` on CKEditor's GPL-2.0 after the first widening.
+
+🔵 **A path vocabulary can only reject the conventions somebody enumerated.** Both spellings are in
+`lib/licence_path.sh` now, with **10 new controls** *(4 positive, 6 negative, so the widening cannot
+swallow a real workspace package)* and the **byte-for-byte identity control against `p196`'s copy
+still green** — the suite went **44/44 → 54/54**. 🔴 **Every vendored-manifest count on this shelf is
+therefore a LOWER BOUND**, and the durable channel — reading a package `name` against a list of
+known third-party projects — does not exist on this base. Registered for `p280`; the residual it
+would catch is `open-tutor-ai-CE`'s `ui/static/pyodide/`, which no path convention names.
+
+### 🟡 The bound, published rather than hidden
+
+`MANIFEST_CAP=14` *(Athena's own manifest count)*. `leemonade/leemons` has **114** manifests in tree
+and **100 were skipped**, so its *"12 declaring"* is **12 of the first 14 read, not 12 of 114** —
+which is why `manifests_skipped` is a column and not a comment. 🔵 `p278` made an **empty** read
+fatal; this pass found that a **truncated** read was not. `git clone` inside the loop body was
+**consuming the slug list from stdin** — the sweep processed **10 of 14 slugs and exited 0**. The
+list is read on **FD 3** now, and the row count is **asserted against the input file** rather than
+trusted.
+
 ---
 
 ## 2026-10-17 (pass 278) — `p121`'s contradiction census REPRODUCES to the byte six days on, and **one of its ten rows was under-graded**

@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # Compose patterns — Education
@@ -1632,3 +1632,112 @@ document, read the official text** — above all **Ley 2626**'s scope, where *"b
 optional for private"* decides whether a private-school client has an obligation at all. 🔴 And two
 figures that circulate widely are **not** usable: **"27 states"** counts **active bills**, not enacted
 laws, and the **"$2.5B K-12 AI grant program"** traces to a single weakly-sourced blog.
+
+---
+
+## P34 — The monorepo grant audit, because what a client vendors is a DIRECTORY and not a repository *(new in pass 279)*
+
+**When a client asks for it:** *"We're reusing this open-source LMS — legal says it's MIT, are we
+clear?"* 🔴 **A monorepo does not have "a licence". It has one per package, and your client is copying
+a folder.**
+
+### The evidence this pattern is built on, measured on this base's own shelves
+
+`p279` rebuilt the channel sweep to walk manifests **per package** across 14 carried rows. Three carry
+**more than one distinct declaration among their own manifests**:
+
+| repository | what its own manifests declare | what a studio must notice |
+|---|---|---|
+| 🔴 [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | root `composer.json` **GPL-3.0-or-later** · root `package.json` **ISC** · `packages/dependecy-extraction-webpack-plugin/` **MIT** | 🔴 **Three grants in one repository — and the two ROOT manifests disagree with each other.** Which applies depends on what you took |
+| 🔴 [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | root **MIT** · `apps/api/` **ISC** *(`@classroomio/api`)* | 🟢 Both permissive, so nothing you may *do* changes — 🔴 **but the attribution obligation differs per directory** |
+| 🔴 [`ls1intum/Athena`](https://github.com/ls1intum/Athena) | **12 of 14** manifests **MIT**; root `pyproject.toml` **silent** | 🟢 Unanimous where it speaks — 🔴 **and a root-only reader sees NOTHING**, which is how this row spent a pass ungraded |
+
+### The procedure
+
+```bash
+# 1. ENUMERATE the tree -- never guess a path (p275)
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/<slug> /tmp/t
+git -C /tmp/t ls-tree -r --name-only HEAD > /tmp/paths.txt
+
+# 2. walk EVERY manifest, not the root one           (12 of Athena's 14 are subpackages)
+# 3. reject vendored paths with the SHARED predicate (is_bundled -- and see warning 1)
+# 4. read the ROOT manifest's `name` against the slug (T229-M2 -- and see warning 2)
+make conflict-sweep SLUGS=/tmp/slugs.txt    # all four, with the accounting columns
+```
+
+### 🔴 Two warnings that each cost a pass, so put them in the SOW
+
+1. 🔴 **A vendored dependency's manifest is not a per-package declaration, and a path list will not
+   reliably separate them.** `tadreeblms` vendors `moment`, `swiper`, `tailwindcss`, `prismjs` and
+   three CKEditor builds under **two different directory spellings in the same repository**
+   (`public/assets/libs/` and `resources/views/backend/assetslib/libs/`). Excluding the first still
+   left a false *"the subpackages disagree"* from the second. 🔵 **A vendored-path exclusion is a
+   floor; read the package names of anything surprising.**
+2. 🔴 **A root manifest may not be the project's own.** `tadreeb-lms/tadreeblms`'s root
+   `composer.json` declares `"name": "rappasoft/laravel-boilerplate-upgraded"` — **a Laravel
+   boilerplate fork serving upstream's file**, so its `MIT` describes `rappasoft`, not the LMS your
+   client is adopting. 🟡 **But a name that merely DIFFERS is innocent:** `mcp-canvas-lms` names its
+   package `canvas-mcp-server`, `Studivexa` names its `student-management-backend`, and both are
+   plainly their own. **The name is a flag for a human, never an automatic rejection.**
+
+### What you sell
+
+🟢 **A per-directory grant map of everything the client intends to vendor** — committed payload beside
+declared manifest for each, plus an explicit list of directories whose obligation differs from the
+root's. 🔵 **Two to three days across a handful of repositories, run on `make conflict-sweep` plus
+judgement.** It prevents the one outcome legal cannot remediate afterwards: **shipping an AGPL or
+non-commercial obligation that a manifest-reading check called MIT.** 🔴 `leemonade/leemons` has **114
+manifests** — nobody does this by eye.
+
+---
+
+## P35 — The "already refuted" intake check, sold as the research function a client cannot staff *(new in pass 279)*
+
+**When a client asks for it:** *"Our people keep bringing us contradictory answers on AI regulation —
+can you just tell us what's true?"* 🟢 **Yes — and the durable deliverable is not the answer. It is the
+mechanism that stops the wrong answer arriving again.**
+
+### The evidence, and it is this base's own worst recurring error
+
+🔴 **The claim that the EU AI Act's education high-risk obligations took effect in August 2026 has
+arrived from an inbound source in FIVE separate passes**, each from a source these shelves do not
+cite, each caught by a careful reader. It is wrong by **fifteen months in the direction that tells a
+client they are bound now.** Correct: **Annex III point 3 applies `2027-12-02`**; **`2026-08-02` is
+Article 50 transparency**, which *is* live.
+
+🔵 **Note what did NOT work.** This base had settled the question on `2026-10-15`, published the
+instrument number, and flagged the stale claim four times. **None of it stopped the fifth arrival**,
+because a settled fact on a shelf does not inspect what the next search returns.
+
+### The build, in two halves — a client needs both
+
+| half | what it checks | result here |
+|---|---|---|
+| 🟢 **Outbound** | does OUR OWN prose assert a claim we refuted? | 🟢 clean — **0 ASSERTED** across 10 shelves, 28,000+ lines |
+| 🔴 **Inbound** | does a source we JUST READ assert it? | 🔴 **2 hits in one pass's research file** |
+
+One classifier, one table of refuted claims, checked in both directions — so the claim is defined
+once. Four verdicts, so a report is not a rejection: `ASSERTED` *(the source states it — stop)*,
+`ATTRIBUTED` *(reporting verb, no verdict — warn)*, `QUOTED` *(quoting someone else — clean outbound,
+**not** clean inbound)*, `CORRECTED` *(states it **and** refutes it — clean)*.
+
+### 🔴 The two vocabulary gaps, because a client's table will have the same ones
+
+1. 🔴 **Know the AMENDING instrument, not just the Act.** The table knew `AI Act` and not **`Digital
+   Omnibus`** — which is what every source writing about the *delay* actually names. **A table that
+   knows an Act and not its amending instrument has a hole the size of the whole conversation about
+   the change.**
+2. 🔴 **A claim can be asserted by DENYING its correction.** *"Until a formal legislative extension is
+   enacted, the obligation **remains** August 2, 2026"* carries no *effective* or *full effect* token
+   at all. 🔵 And the first fix spelled the date `august 2026`, missing **`August 2, 2026`** — the one
+   spelling a reader actually meets.
+
+### What you sell
+
+🟢 **A refuted-claims register for the client's own domain, plus the two-directional gate that reads
+it**, wired into whatever their analysts already use. **The register is the asset:** every
+expensively-wrong claim their team has re-adjudicated, written down once with its refutation and its
+instrument number. 🔵 **Price it as research infrastructure, not a report** — a report answers this
+quarter's question; this stops the question being re-asked every hour by whoever searched last.
+🔴 **And wire it in rather than document it:** this base's own gate for this exact class existed,
+passed its controls, and **had never been run by `make hooks` in 56 passes.**

@@ -22,9 +22,9 @@ PY ?= python3
 GATE_LOG ?= /tmp/education-kb-gate-enumeration.log
 TABLE_LOG ?= /tmp/education-kb-gate-tables.log
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict enumerate conflict-sweep
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep
 
-hooks: gate-offline recount gate-enumeration gate-tables gate-conflict ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, plus p278's channel-conflict gate
+hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, plus p223's date gate made standing
 
 # 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
 # p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
@@ -67,6 +67,49 @@ gate-conflict: ## ACTION p278 — no typed CONFLICT verdict may disagree with it
 	@cd compose/code/p278-channel-conflict && { $(PY) -I test_direction.py > $(GATE_CONFLICT_LOG) 2>&1 || { echo "🔴 p278-channel-conflict/direction FAILED — the suite's own report follows:" ; sed "s/^/   /" $(GATE_CONFLICT_LOG) ; false ; } ; } && echo "── p278-channel-conflict/direction (p121's ten reproduced + the Commons-Clause arm)" && echo "   PASS" || exit 1
 	@cd compose/code/p278-channel-conflict && { $(PY) -I test_conflict_gate.py >> $(GATE_CONFLICT_LOG) 2>&1 || { echo "🔴 p278-channel-conflict/gate-parsing FAILED — report follows:" ; sed "s/^/   /" $(GATE_CONFLICT_LOG) ; false ; } ; } && echo "── p278-channel-conflict/gate-parsing (the hyphen regression, NC-before-CC-BY ordering)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p278-channel-conflict/conflict_gate.py --root . || exit 1
+
+# 🟢 p279 (`p278`'s declared item 1): MAKE `make claims` A STEP, NOT AN INSTRUCTION.
+# `p278`'s headline was a gate that EXISTS and WAS NOT RUN: `p277` published "no class at
+# all for CONFLICT" over a class `p121` had built 157 passes earlier and shelved in 26 cells
+# of repos/trending.md, and `make claims TOKEN=conflict` would have said so and exited 1.
+# 🔵 `p278` registered the remedy as "the next pass should not be able to publish an absence
+# without it having run" -- so the index is READ BY A GATE now, and the Makefile help string
+# that documented it as "THE GATE" stops being the only thing that enforces it.
+# 🔴 Two of its own predicates were wrong before it was wired in, both measured on the real
+# README rather than read: it reported `p278`'s forensic QUOTATION of `p277` as a fresh
+# assertion, and the first fix for that computed quote parity PER LINE, which fails on a
+# hard-wrapped quote -- `p278`'s own reflow-brittleness class, one layer out.  Both are
+# controls now.  No network.
+ABSENCE_LOG ?= /tmp/education-kb-gate-absence.log
+
+gate-absence: ## ACTION p279 — no pass may publish an absence the index already refutes
+	@cd compose/code/p279-absence-claims && { $(PY) -I test_absence_claims.py > $(ABSENCE_LOG) 2>&1 || { echo "🔴 p279-absence-claims FAILED — the suite's own report follows:" ; sed "s/^/   /" $(ABSENCE_LOG) ; false ; } ; } && echo "── p279-absence-claims (Control Zero is p277's real sentence; the quoted and wrapped shapes)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p279-absence-claims/absence_claims.py --root . || exit 1
+
+absence-census: ## ACTION p279 — the whole-corpus arm: a measurement, never a failure
+	@$(PY) -I compose/code/p279-absence-claims/absence_claims.py --root . --census
+
+# 🔴 p279: `p223`'s self-claim date gate WAS NEVER WIRED IN.  It passes its controls, it
+# scans the live corpus clean, and `grep -c p223 Makefile` returned **0** -- so the one
+# instrument this base owns for its most-repeated factual error has been a one-off for 56
+# passes.  That is the Makefile header's own opening class ("a working gate that stayed a
+# one-off because it could not be invoked from the place a hook runs"), still live.
+# 🟢 Standing now.  The stale claim it guards -- *"AI Act education high-risk from August
+# 2026"* -- is wrong by fifteen months in the expensive direction: it tells an EMEA client
+# they are bound now.  Annex III point 3 applies `2027-12-02`; `2026-08-02` is Article 50
+# transparency and IS live.  No network.
+DATES_LOG ?= /tmp/education-kb-gate-dates.log
+
+gate-dates: ## ACTION p279 — the KB may not ASSERT a date it has already refuted
+	@cd compose/code/p223-selfclaim-date-gate && { $(PY) -I gate.py --self-test > $(DATES_LOG) 2>&1 || { echo "🔴 p223-selfclaim-date-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(DATES_LOG) ; false ; } ; } && echo "── p223-selfclaim-date-gate (15 controls: ASSERTED / ATTRIBUTED / QUOTED / CORRECTED)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p223-selfclaim-date-gate/gate.py . || exit 1
+
+# 🔴 ONLINE-ADJACENT half (`ACTION SH`, registered since p226): the same table, run against
+# a file of INBOUND research text rather than the KB's own prose.  Takes a file, so it stays
+# out of `hooks`; exit 1 is `make claims`'s STOP polarity.
+inbound-claims: ## ACTION SH — run the refuted-claims table over a research file BEFORE writing it up
+	@test -n "$(FILE)" || { echo "usage: make inbound-claims FILE=evidence/....txt"; exit 2; }
+	@$(PY) -I compose/code/p223-selfclaim-date-gate/gate.py --inbound "$(FILE)"
 
 # 🔴 ONLINE half — needs raw.githubusercontent.com + git ls-remote.  OUT of `hooks`.
 conflict-sweep: ## ACTION p278 — re-read BOTH channels for a slug list: make conflict-sweep SLUGS=f

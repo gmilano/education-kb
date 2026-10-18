@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # Market map — Education
@@ -1046,6 +1046,35 @@ region's dollar figures trace back to a single upstream decomposition anyway. No
 headline table. Query: `AI education North America 2026 adoption regulation players`.
 
 
+
+#### Pass 279 — the demand signals are real and the figures behind them are still vendor-sourced
+
+🟢 **Three fresh, dated commitments**, all reported rather than primary *(no `.gov` or press-release
+host is reachable from here — `T61`)*:
+
+| signal | figure | what it buys a studio |
+|---|---|---|
+| Responsible AI in higher education | **$169M**, Q1 2026 | 🟢 a named budget line, HE-scoped |
+| **Carnegie Mellon + Gates Foundation** AI courseware | **$55M** | 🟢 **targeted at GATEWAY college courses** — the highest-failure, highest-enrolment classes, i.e. a measurable-outcome engagement |
+| **OpenAI** country-level education programme | **8 national partners** | 🔴 a competitive fact: the frontier labs are selling at MINISTRY level, not department level |
+
+🔴 **The governance gap is the engagement, and it widened.** **86%** of students across 16 countries
+use AI in their studies, **only 10% of institutions have formal AI guidelines**, and **71% of US
+teachers report no AI training**. 🟢 **That asymmetry — near-universal use against one-in-ten
+governance — is a policy-and-enablement deliverable before it is a software one**, and it is the
+same shape as the Ontario board finding below.
+
+⚠️ **The NA market series ($951M 2024 → $2,303.2M 2029, 15.9% CAGR) still cannot be quoted against
+this page's 31–41.5% global CAGRs** — the definition warning filed in pass 273 stands, and a fifth
+pass has not resolved it.
+
+🟢 **Canada — the buyer is the board, and the Ministry has now opened the door.** See `T65`: Ontario
+has **no** province-wide AI-in-education guidance, but it **mandated a professional development day
+on AI (2026-04-17)** as a provincial priority, and **Bill 194 (2024)** plus the province's
+**Responsible Use of AI Directive** bind public sector entities **including school boards**.
+🔴 **About half of Ontario teachers report a school student-AI policy and more than half report no
+training at all** — so the first deliverable is the policy and the training, not a platform.
+
 ### EMEA
 
 **Pass 277 — the UK's supplier-facing instrument was revised THIS YEAR, and it adds four standards
@@ -1475,6 +1504,36 @@ curriculum AI guidance by member state), which is the same retargeting that work
 at `p274`.
 
 
+
+#### Pass 279 — the live obligation is a TRANSPARENCY duty, and the high-risk date is still fifteen months out
+
+🔴 **This is the claim most likely to be got wrong in an EMEA proposal, and an inbound source got it
+wrong again this pass** *(fifth consecutive — `T66`)*:
+
+| obligation | applies | status |
+|---|---|---|
+| 🟢 **Article 50 transparency** — users must be told they are dealing with an AI system | **2026-08-02** | 🟢 **LIVE NOW** |
+| 🔴 **Annex III point 3 — education as high-risk** | **2027-12-02** | 🔴 **NOT yet in force** |
+| Annex I | **2028-08-02** | not in force |
+
+🔵 Instrument: **Regulation (EU) 2026/1744**, OJ **2026-07-24**, in force **2026-07-27**; Parliament
+**2026-06-16**, Council **2026-06-29**. ⚠️ Still unverified against EUR-Lex, which is unreachable here
+*(`ACTION ND`)* — so quote it as **reported** in a deck, and say so in the meeting.
+
+🟢 **What a studio can sell TODAY against a 2027 deadline:** the duties that are already live and the
+ones that take longest to build. **Article 26** makes a school using a purchased tool responsible for
+monitoring it and for informing students, parents and teachers; **Article 27** requires a
+**Fundamental Rights Impact Assessment** from deployers *governed by public law* — **which a state
+school or state university is** — before deploying an Annex III point 3 system. 🔵 **An FRIA is a
+document with a method, not a feature**, and a 2027 deadline is a 2026 engagement because the
+assessment has to precede the deployment. 🔴 Emotion inference in educational institutions is
+**prohibited in principle**, which rules out a whole category of "engagement analytics".
+
+🟡 **Market, for sizing only:** Europe ~**$512.6M** (2024), UK / Germany / France the largest
+contributors; **64%** of Europeans expect AI literacy to be necessary by 2030 while only **37%** in
+Germany use AI for work or study. Named commercial players: **LEGO Education, Oxford University Press,
+Seppo, Cornelsen, Lalilo** — 🔴 **none of them open source**, so none is a build-on starting point.
+
 ### APAC
 
 **Pass 277 — THE TEN-PASS APAC NIL ENDS, and it ended on the first query that named a
@@ -1783,6 +1842,45 @@ quantified APAC adoption section above, which this leg did not reach. 🟢 **Nex
 named jurisdictions and instruments** (Korea's AI Basic Act in education, Singapore MOE AI guidance,
 Japan's MEXT guidelines, India NEP/AI curriculum), not the regional abbreviation.
 
+
+
+#### Pass 279 — the hardest mandate in the region was LEGISLATED AWAY, and the nearest deadline is a teacher-training one
+
+🔴 **Korea — a mandate reversal, and a cautionary tale worth more than an adoption curve.** See `T62`.
+AI digital textbooks were **reclassified from "textbooks" to "educational materials"** by amendment to
+the Elementary and Secondary Education Act (reported **August 2025**), which **removes the adoption
+mandate**. Korean and home economics are excluded, social studies and science are **delayed to 2027**,
+the review for 2026-year products was **halted**, and **~10 publishers sued the government in June
+2026 for roughly KRW 200bn**. 🟢 **Procurement thesis: price against what a school may CHOOSE, never
+against what a ministry has ANNOUNCED. In Korea the buyer is now the school and the district.**
+
+🟢 **Singapore — the nearest dated obligation anywhere on these shelves.** See `T63`. **Every**
+primary, secondary and JC teacher must complete MOE AI modules by **end-2027**, with **module 1 due by
+the end of 2026**. 🔴 **The student channel is closed** — delivery runs on MOE's own tools on the
+Singapore Student Learning Space, from **Primary 4** only, with P1–P3 deliberately print-first. 🟢 **So
+the opportunity is teacher enablement, completion evidence and institutional integration**, not a
+classroom product.
+
+🟢 **India — dated, scoped, and cross-curricular.** See `T64`. **Circular Acad-15/2026 (2026-04-01)**,
+Classes **III–VIII**, session **2026-27**, with **Acad-18/2026** covering resource books and a stated
+aim of *"AI-literate learners by 2030"*. 🔴 **AI is NOT a standalone subject** — computational thinking
+is woven into maths, science, languages and social studies, reportedly with **no board exam**. 🟢 The
+sellable artefact is **cross-curricular material, teacher enablement and project assessment**.
+
+🟡 **Japan — a date correction.** MEXT's Ver. 2.0 guideline is dated **2024-12-26**, not 2026: the PDF
+filename carries `20260324` while the document itself shows 2024. A revision is underway and
+**unconfirmed as published**. 🟢 **DX High School adopted 1,249 schools in FY2026** — a funding
+programme, not a rule.
+
+🟡 **Region-wide, for sizing only:** APAC ~**$591.6M** (2024) at a reported **20.9% CAGR** to 2029,
+described by two houses as the fastest-growing region. 🔴 **Regulation remains genuinely fragmented** —
+Singapore has mature responsible-AI guidance, China legislates against algorithmic misconduct, the
+ASEAN AI governance guide is early-stage — and **none of that is education-specific**.
+
+🔵 **An instructive nil, recorded rather than hidden:** the mandated region-wide APAC query named **no
+education-specific ministry, policy or vendor at all**. Four jurisdiction-targeted retries produced
+four dated instruments. **`T53` demonstrated a third time: the region query's silence is the query's,
+not the region's.**
 
 ### LATAM
 
@@ -2238,6 +2336,32 @@ regional story on this base: the deliverable a LATAM institution needs is **not*
 sovereignty), **CEPAL / ILIA 2025** (the Latin American AI Index, 19 countries, with a governance
 dimension), and institutionally **UNAM** and **UPC** alongside Tec de Monterrey.
 
+
+
+#### Pass 279 — the governance research base is now citable, and the figures still are not
+
+🟢 **Two sources worth naming in a proposal**, both carried already and both re-confirmed this pass:
+the **UNESCO IESALC working paper (September 2026)**, built on a survey of **200 higher education
+institutions across 19 LAC countries** between August and October 2025 and covering teaching,
+research, administration and governance; and **ILIA 2025 (CEPAL)**, whose governance dimension carries
+a regulation sub-dimension. 🟢 A comparative study of AI regulation in higher education across
+**Argentina, Brazil, Chile, Peru and Spain** gives a five-jurisdiction frame a regional deck can cite
+directly.
+
+🟢 **Brazil — a second, firmer instrument.** Beyond MEC's **"IA na Educação Básica: Caminhos para o
+Currículo e a Prática Docente"** *(launched **2026-04-09**, with UNESCO cooperation)*, **Parecer
+CNE/CP nº 15/2026** was approved **2026-09-01** with its summary published in the **DOU on
+2026-10-06**, and **becomes binding on ministerial homologation** — which had not happened as of this
+pass. 🔵 **The CNE opinion holds that AI must stay subordinate to educational purposes and must not
+replace education professionals**, which is a constraint on solution design, not merely on
+procurement. 🔴 **Watch the homologation**: it is the moment Brazil moves from orientation to binding
+rule, and it is the single highest-value LATAM trigger to monitor.
+
+⚠️ **The figures remain the weakest part of this region's page.** The *"Rest of Latin America"* series
+(**$18.2M 2024 → $36M 2029**) is one vendor's page, covers an undefined subset of the region, and
+**cannot be reconciled** with the LATAM figures elsewhere in this file. 🔵 **Equity is the stated
+regional risk** in the regional expert forum material — adoption deepening inequality between and
+within countries — which is a reason to scope delivery around access, not only capability.
 
 ## Declared gaps
 

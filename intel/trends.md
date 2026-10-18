@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # Trends — Education, October 2026
@@ -1877,3 +1877,134 @@ reads remain fully available and are where a pass's egress budget should go.
 that **Canvas Free-for-Teacher was permanently discontinued in May 2026** is still unverified
 (`instructure.com` and `community.canvaslms.com` both unreachable). **Do not promise a zero-cost Canvas
 environment in a proposal.**
+
+---
+
+## T62 — Korea reclassified AI textbooks out of "textbook" status, and that removes the procurement mandate a vendor thesis rests on
+
+🔴 **The single most consequential regional finding of `p279`, and it inverts the APAC story these
+shelves have carried.** Korea was the jurisdiction with the hardest AI-in-education mandate anywhere:
+AI digital textbooks into elementary and secondary schools from 2025, all subjects by 2028.
+
+🔴 **The National Assembly amended the Elementary and Secondary Education Act in mid-2025 (reported
+August 2025) to reclassify AI digital textbooks as "educational materials" rather than textbooks.**
+The consequences are not cosmetic:
+
+| consequence | state |
+|---|---|
+| 🔴 **Adoption becomes OPTIONAL** | a school *may* use them; nothing obliges it |
+| 🔴 **Korean and home economics excluded**; social studies and science **delayed to 2027** | ministry adjustment plans applying **from 2026** |
+| 🔴 **Review halted** for products intended for the 2026 school year | reported |
+| 🟡 Adoption measured at **4,095 schools** in the first semester | ministry figures to the National Assembly |
+| 🔴 **~10 publishers sued the government in June 2026** for roughly **KRW 200bn** | reported |
+| 🔴 Board of Audit and Inspection: the 2025 start date was treated as fixed, **the pilot was dropped**, classroom review **cut short** | ministry disputes it |
+
+🟢 **What a studio should take from it.** A *mandate* is the strongest demand signal in public-sector
+education and the **most fragile**: this one was legislated away in under two years, and the vendors
+who had built to it are in court. 🔵 **So price delivery against what a school may CHOOSE, not against
+what a ministry has ANNOUNCED** — and in Korea specifically, the buyer is now the school and the
+district, not the ministry. ⚠️ Every source here is press or secondary; the ministry's own
+announcements are not reachable from this environment (`T61`).
+
+---
+
+## T63 — Singapore has a dated, binding teacher-training deadline inside this quarter, and it is the nearest commercial trigger on these shelves
+
+🟢 **MOE's Teacher AI Literacy Professional Learning Roadmap (August 2025) obliges EVERY teacher in
+primary school, secondary school and junior college to complete AI training modules by end-2027 — and
+the FIRST module by the end of 2026.** That is a jurisdiction-wide, dated obligation with roughly ten
+weeks left to run.
+
+- Module 1 *(mandatory, by end-2026)*: AI basics, ethics, safety, responsible use. Online, **30–45
+  minutes**.
+- Modules 2–3 *(encouraged, by end-2027)*: age-appropriate use; how AI affects student thinking.
+- Advanced, subject-specific courses **from 2027**.
+- Student-side: rollout **from Primary 4** under teacher supervision, through **MOE-built tools on the
+  Singapore Student Learning Space (SLS)**. 🔴 **Primary 1–3 stays print-first and pupils are not
+  asked to use chatbots at all.**
+- 🔵 MOE states teachers may **deliberately withhold** AI where it does not serve the learning outcome.
+
+🟢 **Why this is the most actionable regional item in this file.** Unlike a curriculum framework, a
+training mandate names **who** must do **what** by **when** — so the deliverable is definable
+(module content, delivery, completion tracking, evidence for an auditor) and the deadline is real.
+🔴 **And the student channel is closed to vendors**: it runs on MOE's own tools on MOE's own platform,
+so the opportunity is **teacher-facing and institutional**, not a product sold into classrooms.
+🟡 One blog claims a 2027 AI-competency graduation requirement for university, polytechnic and ITE
+students; **unconfirmed against any MOE source and not carried as fact.**
+
+---
+
+## T64 — India's CBSE instrument is now dated and scoped, and the thing it is NOT is as commercially important as the thing it is
+
+🟢 **`p278` ranked *"read CBSE Acad-15/2026 with egress"* as backlog. The circular's identity is
+established this pass without egress** — and `T61` is why it had to be: `cbseacademic.nic.in` is
+**DNS-unresolvable on both fetch channels**, so the primary PDF remains unread while its metadata is
+now firm.
+
+| field | value |
+|---|---|
+| instrument | **Circular Acad-15/2026**, ref `CBSE/ACAD/AP&AD(AC)/2026` |
+| date | **2026-04-01** |
+| signed | **Dr. Praggya M. Singh, Director (Academics)** |
+| scope | **Classes III–VIII**, session **2026-27** |
+| companion | **Acad-18/2026** — student and teacher resource books; stated aim *"AI-literate learners by 2030"* |
+| next | CT & AI textbooks for **Class 9 in 2027-28** |
+
+🔴 **The commercially decisive detail: AI is NOT a standalone subject.** Computational thinking is
+**woven into mathematics, science, languages and social studies**, and secondary reporting says there
+is **no board examination** — assessment is continuous and project-based. 🟢 **So the sellable artefact
+is not a course.** It is **cross-curricular material, teacher enablement and project assessment** for
+an age band where, per Singapore's own reasoning in `T63`, chatbot-style tooling is least appropriate.
+⚠️ The no-exam and weaving claims are **secondary**; the circular itself is unread here.
+
+---
+
+## T65 — The Ontario conflict was a SCOPE disagreement, not a factual one, and both sources were right
+
+🟢 **`p278` ranked this seventh: *"two sources disagree on whether the Ministry has issued anything,
+and `ontario.ca` was not reachable to decide it."* Settled — and neither source was wrong.** They were
+answering different questions:
+
+| question | answer |
+|---|---|
+| Has the Ministry published **AI-in-education guidance for school boards**? | 🔴 **No.** The Ontario Directors' material states the Ministry has not yet published it |
+| Has the Ministry **issued anything** on AI? | 🟢 **Yes** — a **Ministry-mandated professional development day on AI, 2026-04-17**, supporting a stated provincial priority |
+| Is anything **binding** on school boards? | 🟢 **Yes, but not education-specific** — the province's **Responsible Use of Artificial Intelligence Directive**, and **Bill 194 (2024)**, which covers AI systems at public sector entities **including school boards** |
+
+🔵 **The lesson generalises past Ontario, and it is the same shape as this pass's predicate failures:
+"has X issued guidance" and "is anything binding" are different predicates, and a conflict between two
+sources answering different ones is not resolved by finding a third source.** It is resolved by
+splitting the question — which costs nothing and did not need `ontario.ca` at all.
+
+🟡 **Board-level reality, for proposal sizing:** about **50.7%** of Ontario teachers report their
+school has a student AI policy *(a second source says 42.3% of boards — the figures conflict)*, and
+**more than half report no AI training from school or board.** 🟢 **So in Canada the buyer is the board
+and the first deliverable is the policy** — unchanged from `p278`, now with the Ministry's own
+mandated PD day as the opening.
+
+---
+
+## T66 — A refuted claim keeps arriving from new sources, so the gate has to face OUTWARD as well as inward
+
+🔴 **The claim that the EU AI Act's education high-risk obligations took effect in August 2026 arrived
+from an inbound source for the FIFTH pass running**, this time through `p279`'s own mandated EMEA leg,
+from a source these shelves do not cite. It is wrong by **fifteen months in the expensive direction**:
+it tells an EMEA client they are bound now. **Annex III point 3 applies `2027-12-02`**; `2026-08-02`
+is **Article 50 transparency**, which *is* live.
+
+🟢 **`ACTION SH`, registered since `p226` and unbuilt for 53 passes, is built**: the same classifier
+that watches this KB's own prose now runs against a file of inbound research text, and it caught
+**both** stale assertions in `p279`'s EMEA evidence. 🔴 **One of them it caught only after the
+classifier was widened twice**, and both gaps are instructive:
+
+1. The subject vocabulary knew `AI Act` but not **`Digital Omnibus`** — the instrument that *amends*
+   it. A table that knows an Act and not its amending instrument has a hole the size of every source
+   writing about the delay rather than the Act.
+2. The effect vocabulary knew *"full effect"* but not **`the obligation remains August 2, 2026`** —
+   the claim asserted by **denying the correction**. 🔵 And the first cut of that fix spelled the date
+   `august 2026`, so it missed `August 2, 2026` — **the one spelling a reader would actually meet.**
+
+🔵 **The durable point: a KB that only audits its own prose is guarding the wrong door.** Its shelves
+were clean on all five occasions; the cost was a human re-adjudicating the same fact every hour, and
+the risk was the one pass that doesn't. `p223`'s gate is also **standing** now — `make hooks` had never
+run it, 56 passes after it was written.

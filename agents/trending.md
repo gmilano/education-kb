@@ -1,7 +1,86 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-17
+updated: 2026-10-18
+---
+
+## 2026-10-18 (pass 279) — a FIFTH consecutive pass with no new agent, and the per-package walk reproduces `p275`'s Athena census through a different instrument
+
+⏱️ **First pass of `2026-10-18`.** Append-only — everything below this section is prior history and
+is not rewritten. Evidence:
+[`channel-conflict.2026-10-17-p279.tsv`](../evidence/channel-conflict.2026-10-17-p279.tsv) *(14 slugs,
+both channels, manifests walked PER PACKAGE, 17 columns)* ·
+[`p279-websearch.2026-10-17-p279.tsv`](../evidence/p279-websearch.2026-10-17-p279.tsv) *(14 legs, 10
+jurisdictions, 4 informative nils)* ·
+[`p279-inbound-emea.2026-10-17-p279.txt`](../evidence/p279-inbound-emea.2026-10-17-p279.txt) *(`ACTION
+SH`'s first run)*.
+
+### 🟡 Fifth consecutive pass with no new agent, and this time the supply test was run on every candidate
+
+The four mandated global legs returned **nine results, every one an SEO roundup or an aggregator**.
+Nine candidate slugs were put through `make carried` **before** anything was written up — the check
+`p277` skipped and `p278` restored:
+
+| candidate | supply test | disposition |
+|---|---|---|
+| `microsoft/ai-agents-for-beginners` | 🔴 `CARRIED` | already shelved |
+| `pguso/agents-from-scratch` | 🔴 `CARRIED` | already shelved |
+| `avinash201199/free-ai-agents-resources` | 🔴 `CARRIED` | already shelved |
+| `rohitg00/ai-engineering-from-scratch` | 🔴 `CARRIED` | already shelved — #1 on GitHub Trending 2026-05-24 |
+| `MadsLorentzen/ai-job-search` | 🔴 `CARRIED` | already shelved |
+| `NousResearch/hermes-agent` | 🔴 `CARRIED` | already shelved |
+| `chamilo/chamilo-lms` | 🔴 `CARRIED` | already shelved *(vertical, not an agent)* |
+| `ILIAS-eLearning/ILIAS` | 🔴 `CARRIED` | already shelved *(vertical, not an agent)* |
+| 🟢 **`aneelv75/github-trending`** | 🟢 **`NEW`** | 🔴 **not shelved — see below** |
+
+🔴 **The one `NEW` slug is not a row, and the reason is written down rather than left as silence.**
+`aneelv75/github-trending` resolves (`75df6ba340d9`) and is a curated list of AI repositories — **not
+an education agent**. Its tree was *enumerated*, not laddered: **1 file, `NONE_IN_TREE`**, so it
+commits **no grant of its own** and there is nothing for a studio to build on under any licence.
+🔵 **A nil with a reason attached is a finding; a nil with a row attached is padding.**
+
+### 🟢 `Athena`'s 12-of-14 reproduces through an instrument that was not built for it
+
+`p275` established Athena's grade with a **bespoke, hand-run manifest census**. `p279` rebuilt the
+channel sweep to walk manifests **per package** for every row, and Athena came back
+**`14` manifests in tree, `12` declaring, `1` distinct value** — `p275`'s numbers exactly, from code
+written for a different purpose and run over a different slug list.
+
+🔵 **That is worth more than the original measurement.** A one-off census says *"this was true when
+somebody looked"*; a reproduction through an unrelated instrument says *"this is a property of the
+repository"*. The row's grade note is unchanged in substance and now cites both.
+
+🔴 **And the verdict moved** — `NO-CHANNEL` → **`SINGLE-CHANNEL-MANIFEST`**. Under `p278`'s root-only
+read Athena carried *no grade at all*, because its root `pyproject.toml` is a Poetry workspace stub
+with zero occurrences of the string `license`. **A row a studio is told to build on spent a pass
+ungraded for a structural reason, not an evidentiary one.**
+
+### 🔴 `tadreeblms` is a Laravel boilerplate fork, and its `MIT` is not a statement about itself
+
+The per-package walk reads each root manifest's `name` against the slug (`T229-M2`), and
+`tadreeb-lms/tadreeblms`'s root `composer.json` declares:
+
+```json
+"name": "rappasoft/laravel-boilerplate-upgraded"
+```
+
+🔴 **This is `p229`'s `openmage/magento-lts` shape exactly: a fork serving UPSTREAM's manifest at its
+root.** The `MIT` the shelves carry for this row is real, first-hand and correctly parsed, and it is
+**a declaration about `rappasoft/laravel-boilerplate`, not about `tadreeblms`**. The row's committed
+payload is what grades it; the manifest value should not be read as the project's own choice.
+
+### 🟡 What the searches found and this shelf will not carry
+
+- **North America:** `$169M` committed to responsible AI in higher education in Q1 2026; **Carnegie
+  Mellon + Gates Foundation `$55M`** into AI courseware for gateway college courses; **OpenAI's
+  country-level education programme with 8 national partners**. 🟡 Vendor- and press-sourced, no
+  primary document reachable — carried in `intel/market.md` as *reported*, not as ground truth.
+- **EMEA players:** LEGO Education, Oxford University Press, Seppo, Cornelsen, **Lalilo** *(the only
+  one of the five NOT already claimed by these shelves)*. None is open source; none becomes a row.
+- 🔴 **One inbound source asserted the EU AI Act's education high-risk obligations as "August
+  2026"** for the **fifth** pass running. It is `2027-12-02`. **It did not reach a shelf, and this
+  time a gate said so rather than a reader** — see `README.md`'s `ACTION SH` section.
+
 ---
 
 ## 2026-10-17 (pass 278) — the four metadata-graded agent rows were swept on the payload channel, and all four are *metadata because there is nothing else*

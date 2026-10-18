@@ -94,8 +94,16 @@ FLOORS = uf.read_floors()
 # untouched: both suites arrive gated and exit explicitly (`sys.exit(1)`), so neither joins
 # the silent-zero population.
 # 🔵 Sixth consecutive pass where this census catches the new instrument first.
-chk("python test files on disk", len(ROWS), 217)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 36)
+# 🟢 p279: 217 -> 218 and 36 -> 37.  `p279-absence-claims` ships ONE suite
+# (`test_absence_claims.py`), wired into `make hooks` via `make gate-absence` IN THE SAME
+# CHANGE as this pin -- p261's remedy again, so the census never spends a pass red.
+# `ungated` stays at 181 and the `71`/`110` partition is untouched: the suite arrives gated
+# and exits explicitly (`sys.exit(1)`), so it never joins the silent-zero population.
+# 🔵 SEVENTH consecutive pass where this census catches the new instrument first, and the
+# STREAK is the finding rather than the arithmetic: seven passes running, no pass has added
+# an instrument and remembered this pin without the census going red first.
+chk("python test files on disk", len(ROWS), 218)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 37)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",
