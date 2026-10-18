@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 `T-p285a` — Africa's education-AI gap is a LICENSING gap, not a supply gap, and the two have opposite remedies
+
+🔵 **The trend, stated as the thing a studio actually hits.** This base has described Africa as
+*"not covered"* for several passes, on the strength of legs that returned policy and no code.
+`p285` searched by **exam board and language** instead of by region name and found three
+repositories on the first attempt. Combined with the two already shelved, the picture inverts:
+
+| repository | country / scope | grant, after **tree enumeration** |
+|---|---|---|
+| [`Angel-builds/edubot-africa`](https://github.com/Angel-builds/edubot-africa) | 🇬🇭 NaCCA JHS maths (B7–B9) | 🔴 none — 40 files, no manifest key |
+| [`Onyeocha-Keside/naija-learn`](https://github.com/Onyeocha-Keside/naija-learn) | 🇳🇬 Yoruba / Hausa / Igbo voice-first | 🔴 none — 35 files |
+| [`meduoyeomoyenia-cyber/Education-AI-TUTOR`](https://github.com/meduoyeomoyenia-cyber/Education-AI-TUTOR) | 🇳🇬 WAEC / NECO / JAMB | 🔴 none — 138 files, `"private": true` |
+| [`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa) | 🇿🇦 Grades 8–12 | 🔴 none *(carried since `p269`)* |
+| [`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os) | 🇳🇬 | 🔴 none *(carried since `p269`)* |
+
+🔴 **Five for five.** 🟢 **Why the distinction decides the engagement, and not just the write-up:**
+a **supply** gap is answered by building, and the honest proposal is a greenfield quote. A
+**licensing** gap is answered by **asking** — these are finished, working, often locally-grounded
+systems whose authors have simply never added a `LICENSE` file, and a written grant request costs
+days where a reimplementation costs months. 🔵 **So the first deliverable of an African education
+engagement is not code. It is a licence intake pass over the local prior art** (`P32`, `P35`), and
+the thing that makes it worth doing is that the hit rate on *asking* is unknown precisely because
+nobody in this base's history has asked.
+
+🔴 **And a bound on the optimism:** unlicensed is not the only closure. `p285` also read, from
+`edubot-africa`'s own README, that **Ghana's NaCCA curriculum is *all rights reserved* and WAEC
+past questions carry no public licence**. **The content layer is closed even where the code layer
+opens.** See `P17`, `P19`.
+
+## 🟢 `T-p285b` — the AI Act's marking duty now has a SUPPLY side, and it arrived as a GPL Moodle plugin from a German vendor
+
+🔵 **The trend.** This base has tracked AI Act **Art. 50(2)** transparency as a *duty* for many
+passes, with a family of instruments that measure exposure and marking
+(`compose/code/aiact-50-2-marking`, `-pack`, `-exposure`). 🟢 **`p285` is the first pass to find a
+production component that IMPLEMENTS it:** `local_aitransparency`, shipping inside
+[`eledia/moodle-elediaai-suite-free`](https://github.com/eledia/moodle-elediaai-suite-free)
+(GPL-3.0-or-later, payload read `2026-10-18`), whose stated job is the **marking of AI-generated
+content** inside Moodle.
+
+🔵 **Why this is a trend and not a product note.** It is shipped by a **commercial vendor**
+(eLeDia GmbH, Berlin) in the **free** tier of a paid suite, alongside **quota and audit**
+(`local_elediaai_core`) and a **local RAG backend that calls no external service**
+(`local_literag`). 🟢 **Read together, those three components are a vendor's bet on what EU public
+education will be required to buy**: not a better tutor, but **marking, auditability and data
+residency around one.** That is the compliance posture this base has argued for since the Annex III
+work, arriving as installable software rather than as guidance.
+
+🟢 **Second-order observation for the agent shelf:** the same suite ships `webservice_elediamcp`,
+making this the **fourth MCP-addressable LMS surface** this base has located and the **first that
+is vendor-shipped and in-tree** rather than a third-party server pointed at someone else's LMS.
+🔵 **The direction of travel is that the LMS vendors are building the agent doorway themselves**,
+which moves the studio's differentiating work off the connector and onto the agent behind it
+(`P38`).
+
 ## 🟢 `T-p284a` — the regulator's settled position on AI grading is NOT a ban, and reading it as one loses the engagement
 
 🔵 **The trend, stated as a design rule rather than a jurisdiction.** Three of the most developed

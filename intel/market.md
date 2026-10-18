@@ -10,6 +10,40 @@ updated: 2026-10-18
 > Sourced from web research on 2026-10-17. Vendor-sourced figures are marked; they are
 > carried because they are the only numbers available, not because they are reliable.
 
+## 🔵 Pass 285 — the mandated battery is an INFORMED NIL on numbers, and the one figure it moved is a spread this base already publishes
+
+⏱️ `2026-10-18`, seventh pass. Evidence:
+[`p285-websearch.2026-10-18-p285.tsv`](../evidence/p285-websearch.2026-10-18-p285.tsv).
+
+All four regional legs ran **verbatim, as mandated**. Stated plainly, because an informed nil is
+information and silence is not:
+
+| region | what the leg returned | verdict |
+|---|---|---|
+| 🟡 **North America** | **40 states + Puerto Rico** with official AI guidance (September 2026); CA `A.B. 1159`, VT annual certification, NY `A.9190`, AZ `HB 4040`, ID `SB 1227` **enacted**, MD `SB 720`/`HB 1057`, UT `S.B. 322` sandbox, Katy ISD, `H.R. 8747` | 🟡 **ONE figure moves.** This base carried the vendor-tracker spread as **35 + PR** vs **33–35**; the new reading **widens it to 33–40**. 🔴 **The spread is the finding, not any one number** — four trackers counting "state AI guidance" disagree by seven states. Every named instrument **held, no drift** |
+| 🟢 **EMEA** | Annex III pt 3 high-risk for admissions/grading/placement/proctoring; emotion recognition in schools banned; the leg calls the delay *"likely but unverified, subject to Council adoption"* | 🟢 **This shelf is STRICTLY AHEAD of its own channel**, for a second pass: it carries **Regulation (EU) 2026/1744**, Council **`2026-06-29`**, in force **`2026-07-27`** |
+| 🟡 **APAC** | China AI compulsory from age 6 (Sept 2025); **India: AI + computational thinking mandatory from Class 3, 2026–27**; **Singapore: P4 access structured and teacher-supervised through the Student Learning Space**; Vietnam `Decision 33/2026/QD-TTg`; MEITY labelling amendments (Feb 2026); **Ipsos ban-support band 23 % (Indonesia) → 31 % (South Korea)**, India 26 %, Singapore 28 % | 🟡 Vietnam already carried. The India and Singapore mandates and the Ipsos band are **new, all secondary grade** |
+| 🔵 **LATAM** | HolonIQ LATAM EdTech 100; Ginia (MX); Vetto (BR); **Elevify (BR, US$1.35 M seed)**; M&M **$204.7 M (2029)**; IMARC $18.3 B; IDB **193 initiatives, 59 % generative / 27 % language models**; Google.org + Raspberry Pi Foundation (**1.25 M students by 2028**, nine countries); UNESCO LAC Observatory; CONALEP/DGETI pilot | 🔵 **An informed nil on sizing.** The M&M `$204.7 M` row is **already on this shelf and already corrected** — `p274` found it **one-year-mislabelled**. HolonIQ, Ginia, Vetto, Google.org/RPi and the IDB study are **all already carried**. 🟢 **Only `Elevify` is new**, single-channel secondary. 🔴 **"Never quote a single LATAM figure" STANDS: three publishers span 5.1× at a common year** |
+
+🔴 **The pattern across two consecutive passes is now worth stating as a rule for `p286`:** the
+mandated battery **corroborates** and the **gap-directed leg extends**. `p284`'s Africa leg and
+`p285`'s exam-board and Kuali legs produced every new row in both passes; eight verbatim regional
+legs across the two produced **one widened spread and one seed round**.
+
+### 🔴 Africa — the content-licence constraint, read first-hand, and it reshapes the engagement
+
+🟢 **New this pass, and it is not a policy finding — it is a payload one.** `Angel-builds/edubot-africa`
+states in its own README that **NaCCA's curriculum PDFs are free to download but marked
+*all rights reserved*, and that WAEC past questions carry *no public licence***. Its remedy is the
+reusable part: it uses **the curriculum as taxonomy, not as content** — NaCCA's `B7.1.1.1`
+annotation scheme becomes a **skill graph**, and explanatory prose is grounded on **openly licensed
+sources** instead. See [`../compose/patterns.md`](../compose/patterns.md) `P17` (curriculum that cannot be licensed) and `P19` (regional supply that serves no grant), both **extended this pass**.
+
+🔴 **This generalises well beyond Ghana.** National curricula and examination boards are the two
+assets every education engagement wants to ground on, and in this region **both are closed**. The
+constraint is therefore **architectural, not legal-review**: a design that stores curriculum text
+cannot ship, and a design that stores curriculum *structure* can.
+
 ## 🟢 Pass 284 — THE GAP-DIRECTED LEG `p283` ORDERED IN PLACE OF A VERBATIM ONE BROKE AFRICA OPEN ON ITS FIRST RUN, AND BRAZIL'S PARECER MOVED IN THE DIRECTION THIS SHELF HAD NOT RECORDED
 
 ⏱️ `2026-10-18`, sixth pass. Evidence:

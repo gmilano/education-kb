@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 285 — **THE TOP THREE ITEMS ARE DISCHARGED, AND THE CHANNEL THAT DISCHARGED THEM WAS AVAILABLE THE WHOLE TIME**
+
+⏱️ `2026-10-18`, seventh pass. Evidence:
+[`tree-enumeration.2026-10-18-p285.tsv`](../evidence/tree-enumeration.2026-10-18-p285.tsv) ·
+[`egress-surface.2026-10-18-p285.tsv`](../evidence/egress-surface.2026-10-18-p285.tsv) ·
+[`p285-websearch.2026-10-18-p285.tsv`](../evidence/p285-websearch.2026-10-18-p285.tsv).
+
+### Discharged this pass
+
+| `p284` item | state | what it turned out to be |
+|---|---|---|
+| 1. work the 69 `QUEUE-UNENUMERATED` rows | 🟢 **DISCHARGED, all 69** | `QUEUE` **69 → 1**, `VERIFIED-ABSENT` **56 → 122**, **4 refutations** raised and all 4 corrected. The 1 remaining is `invincible-summer/Next-Tutor-Agent`, which **does not resolve** — correctly held rather than laundered into an absence |
+| 3. resolve the `Kuali` lead | 🟢 **DISCHARGED — and REFUTED** | `rice` **ECL-2.0** (permissive, *middleware*), `kfs` **AGPL-3.0**, `kc` **no grant in 20 627 files**, `student` (**the SIS**) and `ole` **DO NOT RESOLVE**. *"Open foundation therefore permissive"* fails on the limb that mattered |
+| 6. gap-directed leg for African education **CODE** | 🟢 **DISCHARGED** | Exam-board + **language** names worked on the first attempt, exactly as `p284` predicted. **3 new code rows; all serve no grant**, taking the known population to **5 of 5 unlicensed** |
+| 2. case-close the `copying` family | 🔴 **NOT DONE** — see below | Deliberately deferred; the enumeration backlog was ranked first and consumed the pass |
+
+### 🟢 The pass's own finding about its own instruments
+
+🔴 **The egress surface was mis-stated, and the mis-statement cost passes.** This base has carried
+*"`github.com`, `/topics`, `/trending` and `api.github.com` all answer `403`"* and frozen its star
+counts on it. Re-measured this pass:
+
+- 🟢 `api.github.com/rate_limit` → **200** (core limit 15 000). Not a blanket 403.
+- 🔴 `api.github.com/repos/{owner}/{repo}` → refused with an explicit **session repo-scope** message.
+  A **policy boundary, permanent**, not an outage.
+- 🟢 `raw.githubusercontent.com` → **200**; `git ls-remote` → **OK**;
+  `git clone --depth 1 --filter=blob:none` → **OK**.
+
+🔴 **So tree enumeration — the channel that discharged item 1 — was available the whole time**,
+while the backlog carried *"read the primary texts on an egress-enabled run"* as blocked.
+🟢 **Star counts DO remain frozen at `2026-10-17`**, and that verdict is unchanged; but the reason
+is a **policy boundary**, so *"re-probe `api.github.com` later"* should be **struck permanently**
+rather than re-ranked.
+
+### Still open, ranked for `p286`
+
+| # | item | why it is still open |
+|---|---|---|
+| 1 | 🔴 **Case-close the `copying` family** | Carried from `p284` item 2, **now two passes**. Measured: **117 ladders, 0 `CASE-CLOSED`, 64 `CASE-UNVARIED`**; `TIER_A` carries `COPYING COPYING.txt COPYING.md COPYING.LESSER` with **no uppercase extension**. The same two-line fix that closed `notice`; the ratchet will hold it |
+| 2 | 🔴 **Build `ROOT_OR_SOLE` into the enumeration gate** | New, and **earned by a live over-fire**. `ProjectsAndPrograms/school-management-system` served a vendored `phpmailer/LICENSE` and a **foreign-holder** `student_panel/LICENSE`; neither covers the repo. The honest rule is **not a vendor-name list** (`p280`: *identified by what it DECLARES, not by a list*) but **a nested grant governs only if its directory is a prefix of essentially the whole tree** — which is exactly why `eledia`'s nested grant **is** its repo's grant. Needs **one new ledger column**: per-grant-directory file coverage |
+| 3 | 🔴 **Widen `gate-identity`'s census to the enumeration QUEUE** | New. `p285` found **two address pairs that are one repository each** — `emorynlp/LLM-Grading` ≡ `emorynlp/llm-grading` (a **case variant**) and `IC-Redacoes-UTFPR/CorrecaoRedacao` ≡ `YuriMatsumotoSantos/CorrecaoRedacao` — by enumerating. `p283`'s gate censuses **shelf** addresses only, so **the defect class it was built for is live in a population it does not read** |
+| 4 | 🟡 **`--resolve` over the 14 CANDIDATE control sites** | Carried from `p280` item 1 — **four passes** now |
+| 5 | 🟡 **Fold `p281`'s three instrument defects into the gate** | Carried. `ls-remote --symref` is cheap and the channel is built — and `p285` used exactly that call to confirm `eledia`'s `51` default branch |
+| 6 | 🔵 **Gap-directed legs are the extension channel; the battery is corroboration** | **Two consecutive passes** now where every new row came from a gap-directed leg and the eight verbatim regional legs produced one widened spread and one seed round. `p286` should run the battery **once, briefly**, and spend the budget on directed legs. Candidate directions: **Swahili / NECTA / Tanzania and Kenya** (`p285`'s leg returned nothing for East Africa), and **Indonesia / Vietnam** classroom code |
+| 7 | 🔵 **A licence-intake pass over African prior art** | New, and it is a **deliverable, not research** (`P32`, `P35`). Five unlicensed repositories with reachable authors; nobody in this base's history has **asked**. The hit rate is unknown for that reason alone |
+
+### Declared, with their grade, so no later pass reads them as settled
+
+- 🔴 **Star counts remain frozen at `2026-10-17`** — now for a **measured policy reason**
+  (session repo-scope on `api.github.com/repos`), not a transient 403. **Do not re-rank this.**
+- 🔴 **Africa: five code rows, five without a grant.** The gap is **licensing, not supply**. And the
+  **content** layer is closed too — NaCCA *all rights reserved*, WAEC past questions **no public
+  licence** (read first-hand from `edubot-africa`'s README, so **primary** for the claim *about that
+  repository's constraint*, **secondary** for the claim about NaCCA's and WAEC's own terms).
+- 🔴 **Eleven passes, no new education agent from the mandated agent leg.** A property of the
+  supply channel. Both of `p285`'s agents came from elsewhere.
+- 🟡 **North America's state-guidance count now spans 33–40** across four vendor trackers
+  (`p285` adds *40 + Puerto Rico*, September 2026). **The spread is the finding.**
+- 🔵 **`Elevify` (Brazil, US$1.35 M seed)** is single-channel secondary and is the **only** new
+  LATAM item in the battery; the M&M `$204.7 M` figure it also returned is already shelved **and
+  already corrected** by `p274`.
+- 🔴 **`studyield/studyield` does not resolve** — a curated result naming a repository that is not
+  there. **Fourth channel** for the dead-address class.
+
 ## Pass 284 — **ALL THREE TOP ITEMS DISCHARGED, AND EACH WAS WRONG ABOUT ITSELF IN THE SAME DIRECTION**
 
 ⏱️ `2026-10-18`, sixth pass. Evidence:

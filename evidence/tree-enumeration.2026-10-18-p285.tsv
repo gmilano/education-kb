@@ -1,0 +1,77 @@
+# p285 - BACKLOG ITEM 1 DISCHARGED: the 69 QUEUE-UNENUMERATED rows, ENUMERATED (not re-probed).
+# method: git ls-remote HEAD (does the slug resolve?) -> git clone --depth 1 --filter=blob:none --no-checkout
+#         -> git ls-tree -r --name-only HEAD (every path that exists, zero blob transfer).
+# A ladder can only refute the paths it tried; this cannot miss a path because it never guesses one.
+# Channel measured live 2026-10-18: ls-remote OK, blobless clone OK, raw.githubusercontent.com 200,
+#   api.github.com/repos REFUSED (session repo scope), codeload 403, github.com/trending 403.
+# 69 slugs: 68 resolve, 1 SLUG_DOES_NOT_RESOLVE. 4 REFUTED (grant found), 2 same-HEAD address pairs.
+slug	ls_remote	head_sha	files_in_tree	licence_like_paths_in_tree
+AI4Bharat/indicnlp_catalog	OK	7c608d6fddbe	3	NONE_IN_TREE
+Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent	OK	310272df46f1	60	NONE_IN_TREE
+AmericasNLP/americasnlp2021	OK	d3f519c6b382	146	NONE_IN_TREE
+AmericasNLP/americasnlp2023	OK	a177cd52846f	92	NONE_IN_TREE
+AmericasNLP/americasnlp2024	OK	4482a872bc0a	160	NONE_IN_TREE
+AmericasNLP/americasnlp2025	OK	6adf0e484928	227	NONE_IN_TREE
+CAHLR/CAHLR-OATutor-Staging-V2	OK	8f0cf8101423	340	NONE_IN_TREE
+Elia43/DataPilot	OK	ae6137495a80	50	NONE_IN_TREE
+HetviBarot21/SmartAttend	OK	c3803f3d81e3	163	NONE_IN_TREE
+IC-Redacoes-UTFPR/CorrecaoRedacao	OK	792ddffb2eab	356	NONE_IN_TREE
+Kaiji-Z/LookatStudy	OK	0721d7c51742	570	LICENSE
+Llamacha/IWSLT2025_Quechua_data	OK	c55cd76c1dc0	2270	NONE_IN_TREE
+MartinNuc/hass-skola-online	OK	f470454123c4	50	NONE_IN_TREE
+Obi-Wahn/zeitstrahl-werkstatt	OK	b555f7549429	40	NONE_IN_TREE
+ProjectsAndPrograms/school-management-system	OK	6b6fae542604	542	admin_panel/noticeboard.php,assets/js/notice.js,noticeUploads/A98765432101718791385.png,noticeUploads/A98765432101718791411.png,noticeUploads/A98765432101718791447.png,owner_panel/fetch-data/notice-delete.php,owner_panel/notices.php,phpmailer/LICENSE,student_panel/LICENSE,teacher_panel/noticeboard.php
+RutujaDeshmukh29/Adaptive-AI	OK	7b2860baf50c	186	NONE_IN_TREE
+Sujal-Shejwal/adaptive-ai-tutor	OK	e3b02775383a	229	NONE_IN_TREE
+UBC-NLP/IndT5	OK	4c0c38d195c8	2	NONE_IN_TREE
+YuriMatsumotoSantos/CorrecaoRedacao	OK	792ddffb2eab	356	NONE_IN_TREE
+Zenglian990/AI_Tutor_Release	OK	60f336c49907	451	LICENSE
+Zion-support/curriculum-alignment-checker	OK	c148b676a06c	3	NONE_IN_TREE
+a5anka/ai-lab-2026-africa-agent-manager	OK	cc0284893053	22	NONE_IN_TREE
+adlnet/SCORM-2004-4ed-Test-Suite	OK	050f1b4282c9	777	software_development/TestSuite/CTS_Readme/licenseCopyright.html
+adlnet/SCORM-to-TLA-Roadmap	OK	da1b9a2d66e5	484	examples/ITSEC2014/android/.idea/copyright/profiles_settings.xml,examples/ITSEC2014/android/LICENSE,examples/ITSEC2014/charts/xAPI-Dashboard/LICENSE
+aisingapore/sealion	OK	4d09759127b8	96	NONE_IN_TREE
+aoncevay/mt-peru	OK	9244b759e972	3	NONE_IN_TREE
+aoncevay/quechua-nlp	OK	5a07a7c97c6a	1	NONE_IN_TREE
+bigdata-ustc/Zero-1-to-3	OK	5b59ed21bddd	16	NONE_IN_TREE
+brettlballard/DIF	OK	abec188eae79	12	NONE_IN_TREE
+caiuc/proyectos-hacaithon-2026	OK	b329619b5cbb	1	NONE_IN_TREE
+cs341-illinois/coursebook	OK	0d5ee4e7bd40	263	LICENSE/LICENSE.code,LICENSE/LICENSE.original,LICENSE/LICENSE.output,LICENSE/README.md
+datalab912/RATASv1	OK	04dd9831f18f	22	NONE_IN_TREE
+douglas150206/IF_VEST_Redacao_Correcao	OK	a6c664f750a2	59	NONE_IN_TREE
+eledia/moodle-block_elediaai_tutor	OK	0ebc900bea1f	153	public/blocks/eledia_aitutor/LICENSE
+emorynlp/LLM-Grading	OK	b37150e0191a	5	NONE_IN_TREE
+emorynlp/llm-grading	OK	b37150e0191a	5	NONE_IN_TREE
+eth-lre/mathtutorbench	OK	6faed173ec2b	40	NONE_IN_TREE
+eugeborzone/Auto_Grade_Guarani	OK	35b9cda15da3	5	NONE_IN_TREE
+horaciohudson/corretor-redacao	OK	34dac76bf46c	74	NONE_IN_TREE
+invincible-summer/Next-Tutor-Agent	FAIL	-	-	SLUG_DOES_NOT_RESOLVE
+jacksonrakena/gradekeeper	OK	a3c9c09db172	77	NONE_IN_TREE
+jadrianlg16/learning-tutor	OK	afcd95d5b08d	242	NONE_IN_TREE
+jgabriel-sntx/Corretor-de-redacao-ENEM	OK	2bbc89a3823f	59	NONE_IN_TREE
+jnehring/awesome-low-resource-languages	OK	deb7535fd8a0	1	NONE_IN_TREE
+kaushal0494/UnifyingAITutorEvaluation	OK	bbef521ddb87	37	NONE_IN_TREE
+kerntau/class-log-system	OK	bb79f3815cba	50	NONE_IN_TREE
+ldsalud/school-management-system	OK	2ff8c8f5c25d	1	NONE_IN_TREE
+lovejzzz/CourseMapper	OK	63d81725d52a	1868	src/components/NoticeBanner.jsx
+luffycodes/Tutorbot-Spock	OK	fcec41644339	17	NONE_IN_TREE
+luizengdev/opensga-frontend	OK	12b646e08c00	279	NONE_IN_TREE
+mahseema/aibooks	OK	0d714022e7f6	1	NONE_IN_TREE
+monirome/asr-indigenous-languages	OK	0ee29832daa3	32	NONE_IN_TREE
+natiworldclass/adaptive-tutor	OK	ef2e34d81bde	54	NONE_IN_TREE
+neiltonsantana9-star/redacao	OK	aeb4a5d74f39	72	NONE_IN_TREE
+omerbbbb/ai-graded-assessment-platform	OK	698401d994d1	108	NONE_IN_TREE
+samrathreddy/Tutor-multi-ai-agent	OK	6ab71bd73661	42	NONE_IN_TREE
+shrutika00/StudyMate	OK	4df6ea7c7383	59	NONE_IN_TREE
+skfriese/simple-scorm-api	OK	cfec748a0b29	2	NONE_IN_TREE
+slegroux/dandelion	OK	1804eda00796	128	NONE_IN_TREE
+spal740/GradeScribe	OK	26dab0457638	22	NONE_IN_TREE
+speedyapply/2026-AI-College-Jobs	OK	b09e43c09939	22	NONE_IN_TREE
+tzyll/goparrot	OK	0c1825fb6418	67	NONE_IN_TREE
+umaarmirzaa/chalk	OK	dadeaa8f4428	11	NONE_IN_TREE
+usenkovpro/deck	OK	48728add062a	46	NONE_IN_TREE
+victor934034/simulade	OK	93b3570b7263	56	NONE_IN_TREE
+weiwei1392/knowledge-tracing	OK	136efef8b5b9	1	NONE_IN_TREE
+wenjing1170/llm_grader	OK	d48b82101027	51	NONE_IN_TREE
+xiaolai/the-craft-of-selfteaching	OK	987a8e8a9ce2	228	NONE_IN_TREE
+yxonic/DTransformer	OK	1dc459804911	30	NONE_IN_TREE

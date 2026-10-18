@@ -220,6 +220,36 @@ check("D6 NEGATIVE ARM: and that base still matches its own spelling",
 check("D6: a possessive mention of a digit-bearing name is still not the subject",
       attribute("GegoK12's sibling has no licence payload", ["Gego-K12/gegok12"]), [])
 
+# --- p285 D1-D3: the three exclusions the LIVE CORPUS earned ---------------------------
+# p285 enumerated the 69 QUEUE rows; the gate returned SIX refutations and THREE were the
+# instrument over-firing.  Each control below is a path observed first-hand on 2026-10-18,
+# not an invented shape.  Without them a pass is handed example apps and IDE settings as
+# "grants", and a gate that cries wolf is a gate the next pass learns to ignore.
+check("p285 D1: an `examples/` demo app is vendored, exactly as `samples/` already was",
+      candidate_grants(["examples/ITSEC2014/android/LICENSE",
+                        "examples/ITSEC2014/charts/xAPI-Dashboard/LICENSE"]), [])
+check("p285 D1: singular `example/`, and `demo`/`fixtures` spellings of the same idea",
+      candidate_grants(["example/app/LICENSE", "demo/LICENSE", "fixtures/LICENSE"]), [])
+check("p285 D2: a licence-like HTML page is documentation, not a grant payload",
+      candidate_grants(["software_development/TestSuite/CTS_Readme/licenseCopyright.html"]), [])
+check("p285 D3: an IntelliJ copyright PROFILE is an IDE setting, not a grant",
+      candidate_grants(["examples/ITSEC2014/android/.idea/copyright/profiles_settings.xml"]), [])
+check("p285 D3: and `.vscode` likewise",
+      candidate_grants([".vscode/licence.json"]), [])
+# NEGATIVE ARMS -- the three additions must not swallow a real grant.
+check("p285 NEGATIVE ARM: a root LICENSE still survives all three new exclusions",
+      candidate_grants(["LICENSE"]), ["LICENSE"])
+check("p285 NEGATIVE ARM: cs341-illinois/coursebook keeps a DIRECTORY named LICENSE/ and "
+      "all three of its real grants must survive -- this is the pass's headline refutation",
+      candidate_grants(["LICENSE/LICENSE.code", "LICENSE/LICENSE.original",
+                        "LICENSE/LICENSE.output"]),
+      ["LICENSE/LICENSE.code", "LICENSE/LICENSE.original", "LICENSE/LICENSE.output"])
+check("p285 NEGATIVE ARM: the eledia plugin grant is nested but is NOT excluded",
+      candidate_grants(["public/blocks/eledia_aitutor/LICENSE"]),
+      ["public/blocks/eledia_aitutor/LICENSE"])
+check("p285 NEGATIVE ARM: `.md`/`.txt` licence payloads are untouched by the html|xml arm",
+      candidate_grants(["LICENSE.md", "LICENSE.txt"]), ["LICENSE.md", "LICENSE.txt"])
+
 if FAILED:
     print(f"# {len(FAILED)} FAILING:")
     for f in FAILED:

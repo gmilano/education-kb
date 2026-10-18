@@ -1,0 +1,16 @@
+# p285 — the egress surface, RE-MEASURED.  This base has carried "github.com, /topics, /trending
+# and api.github.com all answer 403" for several passes and frozen its star counts on it.
+# That sentence is now too coarse, and the correction CHANGES WHAT A LATER PASS SHOULD ATTEMPT.
+surface	probe	result	consequence
+api.github.com/rate_limit	curl -sI	🟢 200 (core limit 15000, 14999 remaining)	NOT a blanket 403. The host is reachable
+api.github.com/repos/{owner}/{repo}	curl	🔴 REFUSED, explicit: "GitHub access to this repository is not enabled for this session"	A SESSION REPO-SCOPE boundary, not an outage. PERMANENT for third-party repos
+api.github.com/orgs/{org}/repos	curl	🔴 REFUSED: "sessions are bound to their configured repositories"	Org enumeration unavailable by policy
+github.com/	curl -sI	400	—
+github.com/trending	curl -sI	🔴 403	No first-hand trending. Every trending ranking stays third-party
+codeload.github.com/.../tar.gz	curl -sI	🔴 403	No tarball enumeration
+raw.githubusercontent.com	curl, 6 repos	🟢 200	THE GRANT CHANNEL IS LIVE. Payload reads are first-hand
+git ls-remote	3 public repos	🟢 OK (HEAD SHAs served)	Identity + reachability channel live. p285 note: a DOES_NOT_RESOLVE slug returns a credential prompt, which is indistinguishable from private — that IS the control
+git clone --depth 1 --filter=blob:none	72 repos this pass	🟢 OK	🟢 TREE ENUMERATION IS AVAILABLE. This is what unlocked p284 backlog item 1
+# VERDICT: star counts REMAIN FROZEN at 2026-10-17 — but the reason is a POLICY boundary, not a
+# transient block, so "re-probe api.github.com on a later run" should be STRUCK from the backlog
+# permanently rather than re-ranked.  Tree enumeration, by contrast, was available all along.

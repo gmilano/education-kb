@@ -35,7 +35,7 @@ hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-abse
 # ls1intum/Athena declares MIT in 12 of 14 manifests, while the ladder probed the one
 # manifest that is silent.  Both false negatives were structurally guaranteed.  No network.
 gate-enumeration: ## ACTION p275 — no shelf may assert an absent grant that an enumeration refutes
-	@cd compose/code/pass275-grant-enumeration && { $(PY) test_enumeration_gate.py > $(GATE_LOG) 2>&1 || { echo "🔴 pass275-grant-enumeration FAILED — the suite's own report follows (p277: this went to /dev/null for three passes, so no pass could name the failing control):" ; sed "s/^/   /" $(GATE_LOG) ; false ; } ; } && echo "── pass275-grant-enumeration (30 controls incl. the C3 positive control; vendored/icon/source paths, two-subject lines)" && echo "   PASS" || exit 1
+	@cd compose/code/pass275-grant-enumeration && { $(PY) test_enumeration_gate.py > $(GATE_LOG) 2>&1 || { echo "🔴 pass275-grant-enumeration FAILED — the suite's own report follows (p277: this went to /dev/null for three passes, so no pass could name the failing control):" ; sed "s/^/   /" $(GATE_LOG) ; false ; } ; } && echo "── pass275-grant-enumeration (64 controls incl. the C3 positive control; vendored/icon/source paths, two-subject lines, p285 examples/IDE/html-xml exclusions)" && echo "   PASS" || exit 1
 	@cd compose/code/pass275-grant-enumeration && $(PY) -I enumeration_gate.py --root ../../.. || exit 1
 
 # 🟢 p277 (`ACTION AB`): p276 found a `|---|` separator sitting BELOW its table's first data

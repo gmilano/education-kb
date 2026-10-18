@@ -115,13 +115,26 @@ MIN_BARE_NAME = 4
 ABSENT_KEY = re.compile(r"no licen[cs]e key|^-+$|^none$", re.I)
 
 # Directories whose licence files belong to a VENDORED dependency, not to the repo.
+# 🔴 p285 D1 -- earned by the live corpus, not by imagination.  p285 enumerated the 69
+# QUEUE rows and the gate returned SIX refutations, of which THREE were the instrument
+# over-firing.  `adlnet/SCORM-to-TLA-Roadmap`'s three "grants" are ALL inside
+# `examples/ITSEC2014/` -- vendored demo applications shipped to illustrate a spec.  The
+# vocabulary carried `samples` and not `examples`, so one spelling of the same idea was a
+# blind spot.  A gate that cries wolf on an example app is a gate the next pass ignores.
 VENDORED = re.compile(
     r"(^|/)(vendor|node_modules|custompackages|libraries|third_party|thirdparty|"
-    r"precompiled-icons|plugins|samples)(/|$)",
+    r"precompiled-icons|plugins|samples|examples?|demos?|fixtures?)(/|$)",
     re.I,
 )
 # Extensions that make a licence-like path a SOURCE FILE, not a grant.
-SOURCEY = re.compile(r"\.(php|java|vue|py|js|ts|jsx|tsx|go|rb|cs|png|svg|jpg|gif)$", re.I)
+# 🔴 p285 D2: a licence-like path that is an HTML or XML DOCUMENT is documentation or
+# tool config, not a grant payload.  Both observed this pass:
+#   * adlnet/SCORM-2004-4ed-Test-Suite -> software_development/TestSuite/CTS_Readme/
+#     licenseCopyright.html  -- a help page inside a readme directory.
+#   * adlnet/SCORM-to-TLA-Roadmap -> examples/ITSEC2014/android/.idea/copyright/
+#     profiles_settings.xml  -- an IntelliJ copyright-header profile.  An IDE SETTING.
+SOURCEY = re.compile(
+    r"\.(php|java|vue|py|js|ts|jsx|tsx|go|rb|cs|png|svg|jpg|gif|html?|xml)$", re.I)
 # 🔴 p276 D2: a licence-like path is not automatically THIS REPO'S CODE GRANT, and the
 # first version of this module had no scope test at all.  Three species, each with a
 # control from p276's enumeration:
@@ -133,8 +146,10 @@ SOURCEY = re.compile(r"\.(php|java|vue|py|js|ts|jsx|tsx|go|rb|cs|png|svg|jpg|gif
 #                       translations of the SAME GPL-2.0 whose real payload is html/license.txt.
 # Without this test both asset rows report REFUTED, and a REFUTED row FAILS the gate: the
 # instrument built to stop false absences would have manufactured two false presences.
+# 🔴 p285 D3: IDE/editor state directories are not part of the distributed work.
 SCOPED = re.compile(
-    r"(^|/)(assets?|dataset|datasets|fonts?|icons?|images?|media|javascripts|\.corepack)(/|$)",
+    r"(^|/)(assets?|dataset|datasets|fonts?|icons?|images?|media|javascripts|"
+    r"\.corepack|\.idea|\.vscode)(/|$)",
     re.I,
 )
 TRANSLATION = re.compile(r"(^|/)licen[cs]e_[a-z]+\.(txt|md)$", re.I)

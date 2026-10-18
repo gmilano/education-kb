@@ -632,6 +632,22 @@ adoption — 38,046 commits and 317 forks are the signal, re-measured and reprod
 
 ## P17 — Delivering a primary-school AI-literacy mandate when the curriculum cannot be licensed *(new in pass 268)*
 
+> 🟢 **EXTENDED pass 285 — a second, independent instance of this pattern's premise, and this one
+> states the remedy in its own words.** [`Angel-builds/edubot-africa`](https://github.com/Angel-builds/edubot-africa)
+> records, first-hand in its README, that **Ghana's NaCCA curriculum PDFs are free to download but
+> marked *all rights reserved*, and that WAEC past questions carry *no public licence*.** Its
+> architecture is this pattern's remedy, independently arrived at: **use the curriculum as
+> taxonomy, not as content** — NaCCA's `B7.1.1.1` annotation scheme becomes a **skill graph**, and
+> explanatory prose is grounded on **openly licensed sources** instead.
+>
+> 🔵 **Why this is worth carrying as a design rule rather than a Ghana footnote.** The two assets
+> every education engagement wants to ground on are the **national curriculum** and the
+> **examination board's past papers**, and across this region **both are closed**. So the
+> constraint is **architectural, not a legal-review item**: *a design that stores curriculum TEXT
+> cannot ship; a design that stores curriculum STRUCTURE can.* Structure — codes, strands,
+> outcomes, progressions — is the part a tutor actually needs to sequence and assess against.
+
+
 **The engagement.** A ministry or large district must deliver AI instruction to primary pupils
 against a dated mandate — China (≥8 h/year from age six, since Sep 2025), Singapore MoE (Mar 2026),
 India CBSE Classes 3-8 (session 2026-27), or the EU AI Act Art. 4 staff-literacy duty.
@@ -814,6 +830,31 @@ KB cycles), `os4ed/openSIS-Classic` (🟢 **GPL-2.0 at payload since p275** — 
 
 
 ## P19 — Delivering an African or Middle Eastern ministry mandate when the regional supply serves no grant *(new in pass 269)*
+
+> 🟢 **EXTENDED pass 285 (`2026-10-18`) — the evidence base for this pattern's central claim went
+> from two rows to five, and the claim held.** `p284` left the instruction to search African
+> education **code** by **exam-board and language names** rather than by the word *"Africa"*. It
+> worked on the first attempt, and every repository it found was tree-enumerated:
+>
+> | repository | what it is | tree | grant |
+> |---|---|---|---|
+> | [`Angel-builds/edubot-africa`](https://github.com/Angel-builds/edubot-africa) | 🇬🇭 Maths tutor on the **Ghanaian JHS NaCCA Common Core (B7–B9)**; withholds solutions by construction, routes arithmetic through **SymPy**, gates retrieval quality **in CI** | 40 files | 🔴 **NONE_IN_TREE**; `pyproject.toml` declares **no licence key** |
+> | [`Onyeocha-Keside/naija-learn`](https://github.com/Onyeocha-Keside/naija-learn) | 🇳🇬 **Voice-first** study Q&A in **Yoruba, Hausa, Igbo, Nigerian English** (N-ATLaS ASR + YarnGPT2) | 35 files | 🔴 **NONE_IN_TREE**; no licence line in `README` |
+> | [`meduoyeomoyenia-cyber/Education-AI-TUTOR`](https://github.com/meduoyeomoyenia-cyber/Education-AI-TUTOR) | 🇳🇬 **WAEC / NECO / JAMB** SS1–SS3 tutor, Nigerian Pidgin | 138 files | 🔴 **NONE_IN_TREE**; `web/package.json` has **no `license` key**, `"private": true` |
+>
+> 🔴 **Five African education code rows are now known to this base. All five serve no grant** —
+> the two this pattern already named plus these three. 🟢 **That is no longer a thin sample, and it
+> upgrades this pattern's premise from an observation to a measured regional property:** the
+> constraint in MEA is **not** that nobody is building. It is that **nothing being built is
+> licensed**. For a studio the practical consequence is unchanged but now firmly evidenced — these
+> repositories are **readable prior art and unusable dependencies**, and the two lawful routes are
+> a **written grant request to the author** or a **clean reimplementation** against the same
+> curriculum structure.
+>
+> 🔴 **One lure to carry:** `studyield/studyield`, returned by the same leg as a self-described
+> open-source learning platform, **does not resolve**. Fourth channel for the dead-address class.
+> Evidence: [`tree-enumeration.2026-10-18-p285.tsv`](../evidence/tree-enumeration.2026-10-18-p285.tsv).
+
 
 **The engagement.** A ministry of education — or a development funder working through one — has a
 **funded, dated AI mandate** and no licensed software to execute it. Kenya (**10,382** junior
@@ -1908,3 +1949,52 @@ carries — marking prose — and it is aimed at it in the **one form a regulato
 banning it has said yes to**. 🟢 And the argument that moved MEC is the argument that sells it:
 *"impedia um recurso que facilita a rotina docente sem substituir o professor"* — a resource that
 eases the teaching routine without replacing the teacher.
+
+## P38 — The agentic layer over Moodle a client can install rather than commission *(new in pass 285)*
+
+**The engagement.** A university, ministry or public-sector training body already runs **Moodle**
+— the default LMS of public education worldwide — and wants an AI tutor, AI-assisted content
+preparation and an MCP surface over it, under procurement rules that require **data residency**
+and, in the EU, **transparency about AI-generated content**.
+
+**Why this pattern exists.** Every prior Moodle recipe in this file wires a **third-party** MCP
+server to Moodle across a companion `local_` plugin. Pass 285 found a **vendor-shipped suite that
+already is that layer**, in-tree and payload-verified, which changes the proposal from *build* to
+*install, configure and extend*.
+
+| what | component | licence | role |
+|---|---|---|---|
+| LMS of record | [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | The system the client already runs |
+| Tutor in the course | `blocks/elediaai_tutor` | **GPL-3.0-or-later** | Chat in course and dashboard |
+| Chat engine | `local/elediaai_chatengine` | **GPL-3.0-or-later** | Threads, streaming, shared UI |
+| Core | `local/elediaai_core` | **GPL-3.0-or-later** | Feature registry, **quota**, **audit** |
+| Content → knowledge base | `local/elediaai_sources` | **GPL-3.0-or-later** | **17 extractor subplugins** (assign, book, data, feedback, folder, glossary, h5pactivity, imscp, label, lesson, page, …) |
+| 🟢 Data residency | `local/literag` | **GPL-3.0-or-later** | **Local RAG over Moodle's own full-text search — no external service** |
+| 🟢 AI Act Art. 50(2) | `local/aitransparency` | **GPL-3.0-or-later** | **Marking of AI-generated content** |
+| 🟢 Agent surface | `webservice/elediamcp` | **GPL-3.0-or-later** | **MCP connector: Moodle tools for AI assistants** |
+
+All seven ship from one repository:
+[`eledia/moodle-elediaai-suite-free`](https://github.com/eledia/moodle-elediaai-suite-free)
+(880 files, root `LICENSE` = full GPL-3.0 text, 35 149 B; each plugin carries its own
+*"either version 3"* grant — all payload-read `2026-10-18`).
+
+**How to wire it.** Install in the suite's own documented dependency order —
+`local_elediaai_core` → `local_elediaai_chatengine` → `webservice_elediamcp` →
+`block_elediaai_tutor` — then add `local_elediaai_sources` for the knowledge base, `local_literag`
+where no external inference endpoint is permitted, and `local_aitransparency` wherever the AI Act
+marking duty applies. The client's own agent talks to `webservice_elediamcp` over MCP; **the
+studio's differentiating work sits in that agent, on the far side of the MCP boundary.**
+
+**The licence boundary — and the reason this is sellable.** GPL-3.0-or-later with **no network
+clause**: hosting a modified Moodle triggers nothing, while a **distributed** Moodle image carrying
+these plugins ships as GPL-3.0-or-later. 🔵 **That is the licence the engagement already had** —
+Moodle itself is GPL-3.0 — **so adopting the suite does not change the deliverable's licence
+position at all.** Proprietary studio code stays in the agent across the MCP boundary, exactly as
+in `P23`.
+
+⚠️ **Two cautions.** The GitHub repository is a **mirror of eLeDia's GitLab**, so upstream patches
+go through their issue tracker, not pull requests; and it is the **free** subset of a commercial
+suite, so scope which components are in the SOW (`T20`, failure mode 3). 🔴 **EMEA-placed (DE)** —
+the deployment evidence is German-speaking higher education, and nothing here establishes
+references in other regions.
+

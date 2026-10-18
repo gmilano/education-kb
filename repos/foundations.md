@@ -25,6 +25,37 @@ updated: 2026-10-18
 > carried as the only permissive North American system of record for roughly 200 passes while
 > *this* file carried no Ed-Fi row at all.
 
+## 🟢 Pass 285 — the `Kuali` lead is RESOLVED AT PAYLOAD, and "open foundation, therefore permissive" is refuted on the limb that mattered
+
+⏱️ `2026-10-18`, seventh pass. Evidence:
+[`tree-enumeration.2026-10-18-p285.tsv`](../evidence/tree-enumeration.2026-10-18-p285.tsv).
+
+🔵 `p284` registered **Kuali** as a lead and graded it honestly: *"HE **ERP/SIS/research admin** —
+the thinnest column on the vertical shelf. Source **undated**, **no ref or payload read**, and
+*'open foundation therefore permissive'* is the **parent-inference** grade this base ranks weakest."*
+🟢 **Resolved this pass, one `ls-remote` and one payload read per repository** — and the
+parent-inference was wrong in both directions at once:
+
+| repository | resolves? | grant, read from payload `2026-10-18` | what it is |
+|---|---|---|---|
+| [`kuali/rice`](https://github.com/kuali/rice) | 🟢 yes | 🟢 **ECL-2.0** — `master/LICENSE.txt`, 11 182 B, *"Educational Community License, Version 2.0, April 2007"* | middleware. **Apache-derived, permissive** — the only permissive row in the family |
+| [`kuali/kfs`](https://github.com/kuali/kfs) | 🟢 yes | 🔴 **AGPL-3.0** — `master/LICENSE`, 33 755 B, title window *"The GNU **Affero** General Public License … requires the operator of a network server to provide the source code"* | **Financials / ERP**. Network copyleft |
+| [`kuali/kc`](https://github.com/kuali/kc) | 🟢 yes (HEAD `53fee5c1abef`) | 🔴 **no grant anywhere in the tree** — **20 627 files enumerated**, every licence-like hit is a Java class, an XML config or a help page (`NoticeOfOpportunity*.java`, `copyingadocument.htm`, `copyrightandlicensing.htm`) | Coeus — research administration |
+| [`kuali/student`](https://github.com/kuali/student) | 🔴 **DOES NOT RESOLVE** | — | 🔴 **the SIS — i.e. the exact thing the thin column needed** |
+| [`kuali/ole`](https://github.com/kuali/ole) | 🔴 **DOES NOT RESOLVE** | — | library system |
+
+🔴 **So the answer to the lead is "no", and it is specific:** there is **no public Kuali SIS
+repository**; the ERP is **AGPL-3.0**, not permissive; the research-admin codebase serves **no
+grant at all** across twenty thousand files; and the one permissive grant in the family
+(**ECL-2.0**) covers **middleware**, not an administrative system.
+🟢 **This confirms, at payload grade, this base's own earlier conclusion that *Kuali's licence is
+per REPO, not per ORGANISATION*** — which secondary sources (Wikipedia, EDUCAUSE, Maven Central,
+linux.com) flatten into a single *"Kuali is licensed pursuant to the ECL, Version 2.0"*.
+
+🔵 **The vertical shelf's thinnest column stays thin — but now for a MEASURED reason rather than an
+unread lead.** The permissive HE-administration row this base has wanted for many passes is still
+`Gego-K12/gegok12` (MIT, open-core), and Kuali does not join it.
+
 **Pass 273 — no rows added, eighth consecutive nil, and the reason is now specific.** The scheduled
 platform/SIS/ERP leg returned only systems already shelved here or on
 [`verticals/solutions.md`](../verticals/solutions.md), and two listicles contradicted each other on

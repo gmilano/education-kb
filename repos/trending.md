@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 285) — the repository channel's nil is eleven deep, and the BACKLOG, not the channel, is what produced four grants this pass
+
+⏱️ **Seventh pass of `2026-10-18`.** Append-only. Evidence:
+[`tree-enumeration.2026-10-18-p285.tsv`](../evidence/tree-enumeration.2026-10-18-p285.tsv) ·
+[`p285-websearch.2026-10-18-p285.tsv`](../evidence/p285-websearch.2026-10-18-p285.tsv) ·
+[`egress-surface.2026-10-18-p285.tsv`](../evidence/egress-surface.2026-10-18-p285.tsv).
+
+### 🔴 The trending leg: eleventh nil, and the structural reason is unchanged
+
+Returned `developer-roadmap`, Karpathy's `nanochat`, `rohitg00/ai-engineering-from-scratch`
+(carried since `p279`), Open WebUI, `agent-skills`, PyTorch. 🔴 **None serves a learner in an
+education institution.** And the two measurement caveats this shelf has bounded itself with
+**both stand**: there is still **no official GitHub Trending category for education**, and star
+counts in this channel are still social-media grade.
+
+### 🟢 `make gate-enumeration` — the backlog is worked, and the numbers are the finding
+
+`p284` item 1 was *"work the 69 `QUEUE-UNENUMERATED` rows — **enumerate, do not re-probe**"*.
+Done, all 69, via `ls-remote` → `git clone --depth 1 --filter=blob:none` → `git ls-tree -r HEAD`:
+
+| measure | before `p285` | 🟢 after |
+|---|---|---|
+| `QUEUE-UNENUMERATED` | **69** | 🟢 **1** |
+| `VERIFIED-ABSENT` | 56 | 🟢 **122** |
+| `REFUTED` (live, uncorrected) | 0 | 🟢 **0** — four were raised and all four are corrected in place |
+
+🔵 **The one remaining queue row is correct to remain queued:**
+`invincible-summer/Next-Tutor-Agent` **does not resolve**, and a dead address cannot be enumerated.
+The gate holds it rather than laundering it into an absence — which is `p274`'s `gegok12` lesson
+working as designed.
+
+### 🟢 The headline refutation: a ladder that probes `LICENSE` as a FILE cannot see a DIRECTORY named `LICENSE/`
+
+[`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) — UIUC's open
+systems-programming textbook, and the highest-velocity education repository this KB has recorded —
+was carried **`NONE` (2 branches × 6 filenames)** and **"Do not use."** 🔴 **All twelve probes were
+guaranteed to miss**: the repository keeps a **directory** at `LICENSE/`. Inside it, **three grants**:
+
+| path | bytes | grant | covers |
+|---|---|---|---|
+| `LICENSE/LICENSE.code` | 1 698 | 🟢 **NCSA** (*University of Illinois/NCSA Open Source License*, © 2018–2019 University of Illinois) | **the code — permissive** |
+| `LICENSE/LICENSE.original` | 18 887 | 🔵 **upstream cession** — the text is a remix of the `angrave/SystemProgramming` wikibook | the inherited prose |
+| `LICENSE/LICENSE.output` | 17 106 | 🔵 **Creative Commons** | *the PDF builds* |
+
+🟢 **"Do not use" is WITHDRAWN.** This is a clean **three-layer code / content / output split**,
+and it is the shape a studio should expect from any university course text: **the code grant and
+the content grant are different grants, and the built artefact may carry a third.**
+
+### 🔵 Two address pairs that are ONE repository each — found by enumeration, not by the identity gate
+
+`p283`'s `make gate-identity` censuses **shelf** addresses. These sat in the **queue**, so it never
+saw them. Both confirmed by equal HEAD on `ls-remote`:
+
+| addresses | shared HEAD | nature |
+|---|---|---|
+| `emorynlp/LLM-Grading` ≡ `emorynlp/llm-grading` | `b37150e0191a…` | 🔴 a **case variant** of one slug — GitHub resolves both |
+| `IC-Redacoes-UTFPR/CorrecaoRedacao` ≡ `YuriMatsumotoSantos/CorrecaoRedacao` | `792ddffb2eab…` | 🔴 a fork pair serving identical HEAD |
+
+🟢 **Registered for `p286`: the identity gate's census population should include the enumeration
+queue, not only the published shelves.** The defect class `p283` built the gate for is live in a
+population the gate does not read.
+
+### 🔴 The gate over-fired three times, and the live corpus is what caught it — again
+
+Of six refutations raised, **three were the instrument, not the shelves**. Each exclusion added is
+a path observed first-hand this pass, never an invented shape:
+
+| over-fire | path | fix |
+|---|---|---|
+| `adlnet/SCORM-to-TLA-Roadmap` | `examples/ITSEC2014/android/LICENSE` (+1 more) | 🟢 `VENDORED` carried **`samples`** and not **`examples`** — one spelling of the same idea was a blind spot |
+| `adlnet/SCORM-to-TLA-Roadmap` | `examples/…/.idea/copyright/profiles_settings.xml` | 🟢 an **IntelliJ copyright-header profile**. `.idea`/`.vscode` added to `SCOPED` |
+| `adlnet/SCORM-2004-4ed-Test-Suite` | `software_development/TestSuite/CTS_Readme/licenseCopyright.html` | 🟢 a **help page**. `html?`/`xml` added to `SOURCEY`: a licence-like path that is an HTML or XML *document* is documentation or config, not a grant payload |
+
+🟢 **Nine controls pin all three, with four negative arms** proving the additions do not swallow a
+real grant (a root `LICENSE`, the three `LICENSE/` payloads above, the nested-but-governing
+`eledia` plugin grant, and `.md`/`.txt` payloads). Suite **55 → 64**, green.
+🔴 **And the Makefile label said `30 controls` — stale before this pass, when the suite already ran 55.** Corrected to 64.
+
+### 🔵 One correction that is NOT a refutation, because the paths are real and still not a grant
+
+[`ProjectsAndPrograms/school-management-system`](https://github.com/ProjectsAndPrograms/school-management-system)
+was carried as *"no grant on **any path or manifest**"*. 🔴 **That wording is withdrawn** — two
+licence payloads exist. 🟢 **The verdict stands anyway, and the reason is the useful part:**
+
+- `phpmailer/LICENSE` → **LGPL-2.1**, 26 529 B — a **vendored third-party library**.
+- `student_panel/LICENSE` → **MIT**, 1 070 B — but the holder is **`Adityapayal26`**, *not the
+  repository owner*: a copied-in panel, scoped to its own subtree.
+
+🔵 **Neither covers the repository**, so it remains unusable. 🟢 **Registered for `p286`:** the
+honest general rule here is not a vendor-name list (`p280`: *identified by what it DECLARES, not by
+a list*) but **`ROOT_OR_SOLE`** — a nested grant governs only if its directory is a prefix of
+essentially the whole tree. That is why `eledia`'s nested grant **is** the repo's grant (all 153
+files sit under it) and `student_panel/`'s **is not**. It needs one new ledger column
+(per-grant-directory file coverage), which this pass's ledger does not yet carry.
+
+
 ## 2026-10-18 (pass 284) — the repository channel's nil is now ten passes deep, and the ladder that reads repositories got one family closed and one false verdict withdrawn
 
 ⏱️ **Sixth pass of `2026-10-18`.** Append-only. Evidence:
@@ -4695,7 +4791,8 @@ and bounded shelf:
 | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** · `15 214` B | **646** | `391` | 🔵 **Default branch is `mobile`, not `main`** — a read at `main` returns nothing |
 | [yungifez/skuul](https://github.com/yungifez/skuul) | 🟢 **MIT** · `1 069` B | **409** | `147` | 🟢 **Multi-school (multi-tenant) and MIT** — the better base for a group or ministry deployment |
 | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🔴 **GPL-2.0 at a NON-ROOT path** *(see below)* | **345** | `288` | Commercial-grade SIS; root read says "no licence" and is wrong |
-| [ProjectsAndPrograms/school-management-system](https://github.com/ProjectsAndPrograms/school-management-system) | 🔴 **no grant on any path or manifest** | **206** | `111` | 🔴 Unusable regardless of quality |
+| [ProjectsAndPrograms/school-management-system](https://github.com/ProjectsAndPrograms/school-management-system) | 🔴 **no grant on any path or manifest** — 🔵 **CORRECTED `2026-10-18` (p285): the wording is withdrawn; licence paths DO exist, but both are foreign-scoped (vendored LGPL-2.1 + a foreign-holder MIT), so there is still no repo-level grant** | **206** | `111` | 🔴 Unusable regardless of quality |
+| 🔵 **CORRECTED `2026-10-18` (p285) — the verdict STANDS, the reason was wrong** | 🔴 **no REPO-LEVEL grant** | — | — | Enumeration (542 files) finds two licence payloads and **neither covers this repository**: **`phpmailer/LICENSE`** is **LGPL-2.1** (26 529 B) — a **vendored third-party library**; **`student_panel/LICENSE`** is **MIT** (1 070 B) but its holder is **`Adityapayal26`**, *not the repository owner* — a copied-in panel, scoped to its own subtree. 🔴 **Still unusable**, and the `on any path or manifest` wording is withdrawn: the paths exist, they just are not this repo's grant |
 
 🟢 **The useful reduction: of the `7`, exactly `2` are permissive — `lav_sms` (MIT, `1 042★`)
 and `skuul` (MIT, `409★`), both Laravel.** Everything above them in the ranking is copyleft or
@@ -19538,7 +19635,8 @@ fifth pass had nothing in that quadrant.
 
 | Repo | Signal | Licence (payload) | Verdict |
 |---|---|---|---|
-| [cs341-illinois/coursebook](https://github.com/cs341-illinois/coursebook) | **~1,626★ gained in one week** — the highest-velocity education repository seen in any pass of this KB | **NONE** (2 branches × 6 filenames) | **Do not use.** An open systems-programming textbook from **UIUC**. A university's own course text, trending hard, with no grant attached |
+| 🟢 **SUPERSEDED `2026-10-18` (p285) — REFUTED, and it is the clearest ladder failure in this base** | — | 🟢 **THREE grants, in a DIRECTORY named `LICENSE/`** | The `NONE (2 branches × 6 filenames)` ladder probed `LICENSE` as a **file** and this repository keeps a **directory** at that name, so all six probes were guaranteed to miss. Payloads read: **`LICENSE/LICENSE.code`** → **NCSA** (*University of Illinois/NCSA Open Source License*, 1 698 B, © 2018–2019 University of Illinois) — **permissive**; **`LICENSE/LICENSE.original`** (18 887 B) → an **upstream cession**, the text being a remix of the `angrave/SystemProgramming` wikibook; **`LICENSE/LICENSE.output`** (17 106 B) → **Creative Commons**, covering *the PDF builds*. 🟢 **"Do not use" is WITHDRAWN.** The code is NCSA; the prose and the built PDF carry their own terms — a three-layer code/content/output split. Evidence: [`tree-enumeration.2026-10-18-p285.tsv`](../evidence/tree-enumeration.2026-10-18-p285.tsv) |
+| [cs341-illinois/coursebook](https://github.com/cs341-illinois/coursebook) | **~1,626★ gained in one week** — the highest-velocity education repository seen in any pass of this KB | **NONE** (2 branches × 6 filenames) — 🟢 **SUPERSEDED `2026-10-18` (p285): REFUTED — the ladder probed `LICENSE` as a FILE and this repo keeps a DIRECTORY at that name; three grants inside it, code is NCSA** | **Do not use.** 🟢 **WITHDRAWN (p285).** An open systems-programming textbook from **UIUC**. A university's own course text, trending hard, with no grant attached |
 | [781991937/TOFAN-AI-2026](https://github.com/781991937/TOFAN-AI-2026) | the only substantial Arabic-language education agent found in 7 passes | **NONE** | **Do not use.** Full write-up in `agents/trending.md`, Finding 4 |
 | [biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | the one candidate on the proctoring shelf | 🔴 **CORRECTED 2026-10-07 (pass 33): `MIT`**, `master/LICENSE`, 1068 B, © 2026 Prem Biswal. Previously recorded here as **NONE** | 🟢 **USABLE — the previous "Do not use" was wrong.** Local, explainable, human-gated *and* permissively licensed. The grant sits on `master`; this repo has no `main` branch. See `P461` |
 | [malaysia-ai/malaysian-dataset](https://github.com/malaysia-ai/malaysian-dataset) | **345★**, the org's 2nd most-starred repo, ahead of `malaya-speech` | **NONE** | **Not shippable.** Its two code siblings are both MIT |

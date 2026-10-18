@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 285 — 2026-10-18 — **THE BACKLOG, NOT THE SEARCH CHANNEL, PRODUCED EVERY FINDING — AND THE CHANNEL THAT WORKED THE BACKLOG WAS AVAILABLE ALL ALONG**
+
+**One-line summary:** `p284` ranked *"enumerate the 69 queued rows"* first. `p285` did all 69 —
+`QUEUE` **69 → 1**, `VERIFIED-ABSENT` **56 → 122**, **four refutations** corrected — then
+discharged the `Kuali` and **African-code** items too. 🔴 **And the channel that made it possible,
+blobless tree enumeration, was reachable the whole time** while the backlog carried egress as
+blocked. `make hooks` is **green**, run before any edit and again after every one.
+
+### 🟢 What the enumeration found
+
+| | |
+|---|---|
+| 🟢 **`cs341-illinois/coursebook`** | Carried **`NONE` (2 branches × 6 filenames)** and *"Do not use."* 🔴 **All twelve probes were guaranteed to miss: the repo keeps a DIRECTORY at `LICENSE/`.** Inside, **three grants** — `LICENSE.code` **NCSA** (permissive), `LICENSE.original` (upstream wikibook cession), `LICENSE.output` **CC** (the PDF builds). A clean **code / content / output** split. *"Do not use"* **withdrawn** |
+| 🟢 **`Zenglian990/AI_Tutor_Release`** | Carried `NO GRANT` since `p153`. **MIT at the root.** Now shippable |
+| 🟢 **`eledia/moodle-block_elediaai_tutor`** | Carried *"no grant body"*. **GPL-3.0-or-later** on `master`. 🔵 This base's own `51`-default-branch finding was **correct** — the grant simply sits on a ref the axis never tried |
+| 🔵 **`ProjectsAndPrograms/school-management-system`** | *"no grant on any path or manifest"* **withdrawn**: a **vendored** LGPL-2.1 and a **foreign-holder** MIT exist. 🔴 Verdict unchanged — neither covers the repo |
+| 🔴 **Two address pairs that are ONE repo each** | `emorynlp/LLM-Grading` ≡ `emorynlp/llm-grading` (**case variant**), `IC-Redacoes-UTFPR/CorrecaoRedacao` ≡ `YuriMatsumotoSantos/CorrecaoRedacao`. `p283`'s identity gate censuses **shelves**, not the queue — so its own defect class is live where it cannot see |
+
+### 🟢 The largest new row: a seven-plugin Moodle AI suite this base had filed as "not on GitHub"
+
+[`eledia/moodle-elediaai-suite-free`](https://github.com/eledia/moodle-elediaai-suite-free) —
+**880 files, GPL-3.0-or-later**, eLeDia GmbH (Berlin). Tutor block, chat engine, core with
+**quota + audit**, **17 content extractors**, **`local_literag`** (local RAG, no external service),
+🟢 **`local_aitransparency`** (marking of AI-generated content) and 🟢 **`webservice_elediamcp`**
+(MCP connector). 🔴 **It refutes this base's own cell** publishing the eLeDia MCP connector as
+licence *"unknown"* and *"NO — distributed from `eledia.de`, not GitHub."* New pattern **`P38`**.
+
+🔵 **Two reasons it matters beyond one row:** it is the **fourth MCP-addressable LMS surface** here
+and the **first vendor-shipped, in-tree, payload-verified** one; and `local_aitransparency` is the
+**first production component implementing the AI Act Art. 50(2) marking duty** this base's own
+instrument family measures.
+
+### 🔴 Kuali, and Africa
+
+**Kuali** — `rice` **ECL-2.0** (permissive, but *middleware*), `kfs` **AGPL-3.0**, `kc` **no grant
+across 20 627 files**, `student` (**the SIS**) and `ole` **DO NOT RESOLVE**. The thin
+higher-education-administration column stays thin, now for a **measured** reason.
+
+**Africa** — searching by **exam board and language** instead of by region name returned three new
+code rows on the first attempt (`edubot-africa` 🇬🇭, `naija-learn` 🇳🇬, `Education-AI-TUTOR` 🇳🇬).
+🔴 **All three serve no grant, taking the known population to five of five unlicensed.**
+🟢 **The gap is LICENSING, not supply** — which has the opposite remedy: **ask**, don't rebuild.
+`P17` and `P19` extended; `T-p285a` added.
+
+### 🔴 The instrument was wrong three times, and the live corpus caught it
+
+Six refutations were raised and **three were the gate over-firing** — `examples/` demo apps (the
+vocabulary carried `samples` and not `examples`), an **IntelliJ copyright profile**, and an HTML
+**help page**. Nine controls added with four negative arms; suite **55 → 64**, green.
+🔴 **The Makefile label read `30 controls` — stale before this pass.** Corrected to 64.
+
+### 🔵 Backlog for `p286`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked:
+
+1. 🔴 **Case-close the `copying` family** *(carried, two passes)* — 117 ladders, **0 `CASE-CLOSED`**.
+2. 🔴 **Build `ROOT_OR_SOLE` into the enumeration gate** — a nested grant governs only if its
+   directory is a prefix of essentially the whole tree. Needs one new ledger column.
+3. 🔴 **Widen `gate-identity` to census the enumeration queue**, where two live collisions sit.
+4. 🟡 `--resolve` over the 14 CANDIDATE control sites *(carried, four passes)*.
+5. 🟡 Fold `p281`'s three instrument defects into the gate *(carried)*.
+6. 🔵 **Run the mandated battery once and briefly; spend the budget on gap-directed legs.** Two
+   consecutive passes where every new row came from a directed leg. Try **Swahili / NECTA /
+   Tanzania / Kenya** — `p285`'s leg found nothing for East Africa — and Indonesia / Vietnam.
+7. 🔵 **A licence-intake pass over the five unlicensed African repositories** — a deliverable
+   (`P32`, `P35`), not research. Nobody in this base's history has asked.
+
 ## Pass 284 — 2026-10-18 — **THE EIGHT-PASS RED STREAK WAS PINNING THE WRONG POPULATION, `p283`'S `NOTICE` HEADLINE WAS HALF AN INSTRUMENT ERROR, AND THE ONE LEG `p283` TOLD THIS PASS TO REPLACE BROKE A FOUR-PASS NIL**
 
 **One-line summary:** all three of `p283`'s top items are discharged, and each one turned out to be

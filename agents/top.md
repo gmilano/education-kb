@@ -27,6 +27,30 @@ updated: 2026-10-18
 > **reproduced every published figure**, and the search-leg ledger
 > [`p269-websearch.2026-10-17-p269.tsv`](../evidence/p269-websearch.2026-10-17-p269.tsv)).
 
+## 🟢 Pass 285 — two agents promoted out of the ENUMERATION BACKLOG, and a seven-plugin EMEA suite that was on this base's "not on GitHub" list
+
+⏱️ `2026-10-18`, seventh pass. Evidence:
+[`tree-enumeration.2026-10-18-p285.tsv`](../evidence/tree-enumeration.2026-10-18-p285.tsv) ·
+[`egress-surface.2026-10-18-p285.tsv`](../evidence/egress-surface.2026-10-18-p285.tsv).
+
+🔴 **The mandated agent leg returned its eleventh consecutive nil.** Both agents added this pass
+came from **gap-directed** legs and from **working the backlog**, not from the battery — the second
+consecutive pass where that is true.
+
+| agent | licence (payload-read `2026-10-18`) | tier | note |
+|---|---|---|---|
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 **MIT** — root `LICENSE`, 1 068 B | 🟢 **build-on** | Carried `NO GRANT` / *"unshippable"* since `p153`. The verdict rested on a **path ladder**; the tree holds 451 files and the grant is at the **root**. **Now shippable** |
+| [`eledia/moodle-elediaai-suite-free`](https://github.com/eledia/moodle-elediaai-suite-free) | 🔴 **GPL-3.0-or-later** — root `LICENSE` 35 149 B + a per-plugin grant in each of 7 plugins | **integrate across a boundary** | eLeDia GmbH, Berlin. **880 files.** The in-course tutor, chat engine, 17 content extractors, a **local RAG** backend, **AI-transparency marking** and an **MCP connector**. Full table in [`verticals/solutions.md`](../verticals/solutions.md) |
+| [`eledia/moodle-block_elediaai_tutor`](https://github.com/eledia/moodle-block_elediaai_tutor) | 🔴 **GPL-3.0-or-later** — `master/public/blocks/eledia_aitutor/LICENSE`, 1 254 B | **archived — use the suite above** | This base published *"no grant body"*. 🔵 Its `51`-default-branch finding was **right**; the grant sits on **`master`**, a ref the axis never tried |
+
+🔴 **Africa — three new code rows, none of them usable.** [`Angel-builds/edubot-africa`](https://github.com/Angel-builds/edubot-africa)
+(🇬🇭 NaCCA JHS maths, SymPy-routed arithmetic, CI-gated retrieval),
+[`Onyeocha-Keside/naija-learn`](https://github.com/Onyeocha-Keside/naija-learn) (🇳🇬 voice-first
+Yoruba/Hausa/Igbo) and [`meduoyeomoyenia-cyber/Education-AI-TUTOR`](https://github.com/meduoyeomoyenia-cyber/Education-AI-TUTOR)
+(🇳🇬 WAEC/NECO/JAMB) were all **tree-enumerated** and all serve **NONE_IN_TREE** with **no manifest
+licence key**. 🟢 **Five African education code rows are now known to this base and all five are
+unlicensed. The gap is not code — it is LICENSING.** Treat as **prior art, not dependencies**.
+
 ## Build-on-this tier — permissive licences (MIT / Apache-2.0 / BSD)
 
 These are the rows a studio engagement can start from without copyleft or

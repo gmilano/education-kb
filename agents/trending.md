@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 285) — the eleventh nil arrived exactly as predicted, and BOTH of this pass's agents came from the gap-directed legs instead
+
+⏱️ **Seventh pass of `2026-10-18`.** Append-only — everything below this section is prior history
+and is not rewritten. Evidence:
+[`p285-websearch.2026-10-18-p285.tsv`](../evidence/p285-websearch.2026-10-18-p285.tsv) ·
+[`tree-enumeration.2026-10-18-p285.tsv`](../evidence/tree-enumeration.2026-10-18-p285.tsv) ·
+[`egress-surface.2026-10-18-p285.tsv`](../evidence/egress-surface.2026-10-18-p285.tsv).
+
+### 🔴 The mandated agent leg: eleventh consecutive nil, and `p284` told this pass not to expect otherwise
+
+The global leg ran verbatim and returned `microsoft/ai-agents-for-beginners`,
+`ashishpatel26/500-AI-Agents-Projects`, and the general-purpose set this shelf already carries —
+OpenHands, CrewAI, LangGraph, Hermes. 🔴 **Every row is a curriculum for engineers.** `p283`'s
+diagnosis now has eleven passes behind it: in this channel *"educational"* names a repository that
+**teaches machine learning**, not one that **serves a learner**.
+
+🟢 **The useful part is where the agents actually came from.** Two new agent rows reached this
+shelf in `p285` and **neither came from the mandated battery** — both came from gap-directed legs.
+That is now **twice in a row** (`p284`'s Africa leg, `p285`'s exam-board and Kuali legs).
+🔵 **The battery is corroboration; the gap-directed leg is extension.** Rank accordingly.
+
+### 🟢 TWO agents promoted out of the enumeration backlog — not found by searching, found by ENUMERATING
+
+`p284` ranked *"work the 69 `QUEUE-UNENUMERATED` rows — enumerate, do not re-probe"* first. It was
+done, all 69, and two of the four refutations are agents this shelf had written off:
+
+| agent | address | grant, read from payload | what changed |
+|---|---|---|---|
+| 🟢 **AI_Tutor_Release** | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 **MIT** — root `LICENSE`, 1 068 B, *"Copyright (c) 2026 Zenglian990"* | carried **`NO GRANT` / "still unshippable"** since `p153`. The verdict rested on a path ladder; the tree has 451 files and the grant is at the **root** |
+| 🟢 **eLeDia.ai Tutor** (Moodle block) | [`eledia/moodle-block_elediaai_tutor`](https://github.com/eledia/moodle-block_elediaai_tutor) | 🟢 **GPL-3.0-or-later** — `master/public/blocks/eledia_aitutor/LICENSE`, 1 254 B, © 2025–2026 **eLeDia GmbH, Berlin** | carried **"no grant body"**. 🔵 The base's own `51`-default-branch observation was **CORRECT** (`ls-remote --symref` re-confirms `ref: refs/heads/51`) — the grant simply sits on **`master`**, a ref the axis never tried |
+
+🔴 **The lesson is the same one in both rows, and it is about the instrument, not the repositories:**
+*a ladder can only refute the paths it tried, and a ref axis can only refute the refs it tried.*
+Enumeration guesses nothing. **69 queued rows → 1**; `VERIFIED-ABSENT` **56 → 122**.
+
+### 🟢 The eLeDia row is much larger than the block, and it closes a question this base asked and answered WRONG
+
+The archived block repository names its own successor, and it is a **seven-plugin Moodle AI suite**:
+[`eledia/moodle-elediaai-suite-free`](https://github.com/eledia/moodle-elediaai-suite-free) —
+HEAD `0eeabf92312c`, default branch `main`, **880 files**, **GPL-3.0-or-later** (root `LICENSE` is
+the full GPL-3.0 text at 35 149 B; every plugin carries its own *"either version 3"* grant).
+Full component table in [`verticals/solutions.md`](../verticals/solutions.md).
+
+🔴 **It refutes a published cell on [`repos/trending.md`](../repos/trending.md).** That shelf
+carries the **eLeDia MCP Connector** as licence **"unknown"** and *"**NO** — distributed from
+`eledia.de`, not GitHub"*. 🟢 **It is on GitHub, in-tree, at `webservice/elediamcp`, GPL-3.0-or-later,
+payload read this pass.** The cell is annotated in place.
+
+🔵 **Two things make this the most useful agent row of the pass:**
+
+1. 🟢 It is the **fourth MCP-addressable LMS surface** this base has located (after the Moodle
+   community servers, Canvas and Google Classroom) and the **first that is vendor-shipped,
+   in-tree and payload-verified** rather than a third-party server pointed at an LMS.
+2. 🟢 `local_aitransparency` is a **production Moodle plugin whose job is marking AI-generated
+   content**. This base has an entire instrument family for AI Act Art. 50(2) marking
+   (`compose/code/aiact-50-2-marking`, `-pack`, `-exposure`). **This is the first supply-side
+   component that implements the duty those instruments measure**, and it is GPL, in an EMEA
+   vendor's production suite.
+
+### 🔴 Africa: three new code rows, and the finding is NOT that Africa is covered
+
+`p284` left item 6: *"try exam-board and language names (WAEC, NECTA, Yoruba, Hausa, Swahili)
+rather than the word Africa."* 🟢 **It worked on the first attempt** — the same lesson that broke
+the nil last pass. Three repositories this base had never seen, all enumerated:
+
+| repository | what it is | tree | grant |
+|---|---|---|---|
+| [`Angel-builds/edubot-africa`](https://github.com/Angel-builds/edubot-africa) | 🇬🇭 Maths tutor on the **Ghanaian JHS NaCCA Common Core (B7–B9)**. Withholds solutions by construction, routes arithmetic through **SymPy**, gates retrieval quality **in CI** | 40 files | 🔴 **NONE_IN_TREE**, and `pyproject.toml` carries **no licence key** |
+| [`Onyeocha-Keside/naija-learn`](https://github.com/Onyeocha-Keside/naija-learn) | 🇳🇬 **Voice-first** study Q&A in **Yoruba, Hausa, Igbo and Nigerian English** (N-ATLaS ASR + YarnGPT2) | 35 files | 🔴 **NONE_IN_TREE**, no licence line in `README` |
+| [`meduoyeomoyenia-cyber/Education-AI-TUTOR`](https://github.com/meduoyeomoyenia-cyber/Education-AI-TUTOR) | 🇳🇬 **WAEC / NECO / JAMB** SS1–SS3 tutor, Nigerian Pidgin support. Backend + Next.js web | 138 files | 🔴 **NONE_IN_TREE**; `web/package.json` has **no `license` key** and `"private": true` |
+
+🔴 **`studyield/studyield`, returned by the same leg, DOES NOT RESOLVE** — a curated result naming
+a repository that is not there. **Fourth channel for the dead-address class.**
+
+🟢 **So the corrected statement of the Africa gap, which this base has had wrong in BOTH directions:**
+it is **not** that there is no African education AI code — there are now **five** such rows here —
+and it is **not** that Africa is covered. 🔴 **All five serve no usable grant.**
+**Africa's gap is not absence of code. It is absence of LICENSING**, and that is a different
+problem with a different remedy: for a Globant engagement these are **readable prior art and
+unusable dependencies**, and the remedy is a written grant request or a clean reimplementation.
+
+
 ## 2026-10-18 (pass 284) — the tenth consecutive nil in the agent channel, and `p283`'s instruction not to repeat the regional legs is what produced the pass's two findings
 
 ⏱️ **Sixth pass of `2026-10-18`.** Append-only — everything below this section is prior history and
@@ -2786,7 +2868,8 @@ See `T242-A` in [`agents/top.md`](top.md). [`AnonymousOnyx22/brightspace-d2l-mcp
 - 🔴 [`itmir913/score-reporter`](https://github.com/itmir913/score-reporter) — **PolyForm Noncommercial**, Korea. Browser-only 모의고사 analysis, nothing sent to a server. 🔴 **Not OSI; GitHub's API reported `NOASSERTION` and the first-hand read named it.**
 - 🔴 [`fentas/lani`](https://github.com/fentas/lani) — `AGPL-3.0`, Slovene. Learn a language by living in a pixel-art village with a Claude Code tutor.
 - 🔴 [`neteye-platform/ai-tutor-plugin`](https://github.com/neteye-platform/ai-tutor-plugin), [`udit-001/pharos`](https://github.com/udit-001/pharos), [`umaarmirzaa/chalk`](https://github.com/umaarmirzaa/chalk) — **no grant body at `40` paths × `2` refs.** 🔵 `ABSENT-AT-THE-PATHS-PROBED`, not proven grantless.
-- 🔴 [`eledia/moodle-block_elediaai_tutor`](https://github.com/eledia/moodle-block_elediaai_tutor) — no grant body, **and its default branch is `51`**. 🟢 **The ref axis earned its keep: a `main|master` guess would have reported this as a 404 at every path and called it grantless.**
+- 🔴 [`eledia/moodle-block_elediaai_tutor`](https://github.com/eledia/moodle-block_elediaai_tutor) — no grant body, **and its default branch is `51`**. 🟢 **SUPERSEDED `2026-10-18` (p285): the no-grant limb is REFUTED by payload — GPL-3.0-or-later at `master/public/blocks/eledia_aitutor/LICENSE`; detail on the line below.** 🟢 **The ref axis earned its keep: a `main|master` guess would have reported this as a 404 at every path and called it grantless.**
+  🟢 **SUPERSEDED `2026-10-18` (p285) — the "no grant body" limb is REFUTED by payload.** A tree enumeration (`git ls-tree -r HEAD`, 153 files) finds the grant at **`public/blocks/eledia_aitutor/LICENSE`** and the payload reads **GPL-3.0-or-later** (1 254 B, *"block_eledia_aitutor … Copyright (C) 2025–2026 eLeDia GmbH, Berlin … This program is free software"*, `either version 3`). 🔵 **The `51` limb STANDS and was re-confirmed** — `ls-remote --symref` returns `ref: refs/heads/51`. The grant simply sits on **`master`**, a ref the axis did not try: the defect was never the branch *name*, it was enumerating one ref instead of the tree. 🟢 **The repository is ARCHIVED and names its own successor:** [`eledia/moodle-elediaai-suite-free`](https://github.com/eledia/moodle-elediaai-suite-free) (GPL-3.0-or-later, 880 files, 7 plugins) — see this pass's section in [`verticals/solutions.md`](../verticals/solutions.md). Evidence: [`tree-enumeration.2026-10-18-p285.tsv`](../evidence/tree-enumeration.2026-10-18-p285.tsv).
 
 ### 🔴 The WebSearch leg produced `0` new agent rows for a FOURTH consecutive pass
 
@@ -7476,7 +7559,8 @@ be a data controller, or satisfy an EU AI Act deployer duty.
 | [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | **106** | 🟢 Apache-2.0, 10 227 B | K-12 companion |
 | [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | **72** | 🟢 MIT, 1 068 B | Student workspace, gamified |
 | [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) | **71** | 🔴 AGPL-3.0, 34 523 B | 🟢 **Material → game-based course**, the only game-generation row |
-| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **63** | 🔴 **NO GRANT** *(p153)* | 🟢 First ★ reading — 🔴 **still unshippable** |
+| 🟢 **SUPERSEDED `2026-10-18` (p285)** | — | 🟢 **MIT — REFUTED, payload read** | The `NO GRANT` verdict rested on a path ladder. Enumeration (451 files) finds a **root `LICENSE`**; payload is **MIT**, 1 068 B, *"MIT License Copyright (c) 2026 Zenglian990"*. 🟢 **Shippable — moves to the build-on tier.** Evidence: [`tree-enumeration.2026-10-18-p285.tsv`](../evidence/tree-enumeration.2026-10-18-p285.tsv) |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **63** | 🔴 **NO GRANT** *(p153)* — 🟢 **SUPERSEDED `2026-10-18` (p285): REFUTED, root `LICENSE` is MIT** | 🟢 First ★ reading — 🔴 **still unshippable** — 🟢 **SUPERSEDED (p285): shippable, MIT** |
 
 🟢 **19 of 19 existence checks passed via `git ls-remote`, with TWO negative controls returning
 no SHA.** 🟢 **19 of 19 licence bodies read and classified by NAME LINE** (`P48`).
