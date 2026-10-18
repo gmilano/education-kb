@@ -696,6 +696,27 @@ data gets the ranking backwards.
 
 ### North America
 
+**Pass 280 — the jurisdiction leg returned ZERO new instruments, and its one gap statement was
+refuted by this file.** Asked region-wide, the channel returned market research only: a secondary
+roundup putting North America at **~36 % regional share** *(a third source says **37.5 %** for 2025,
+and this base has logged that spread before)*, with *"only 10 % of institutions have formal AI
+guidelines"* and *"71 % of U.S. teachers lack AI training"* as the stated adoption gaps. Asked per
+jurisdiction, it returned **`SB 720` (Maryland), `SB 1227` (Idaho), `SB 394` (Virginia), Ohio's
+district duty and Oklahoma — every one already on this shelf.**
+
+| what moved | detail |
+|---|---|
+| 🟢 **new to the shelves** | **`HB 1186`** is `SB 394`'s **House companion**; both direct the Virginia Department of Education, in consultation with local divisions, to issue guidance that **local boards must align to** |
+| 🟢 **new, as volume** | **134 AI-in-education bills across 31 states** in the 2026 session *(tracker figure; a second tracker gives a different enacted count, so the **enacted** number is not shelved)* |
+| 🟡 **detail added to a carried row** | **Maryland `SB 720`** also **requires human-in-the-loop use and bars AI as the primary basis for high-stakes decisions such as grading or discipline** — the same substantive line Brazil's pending parecer draws, reached independently |
+| 🔴 **REFUTED BY THIS FILE** | the leg concluded *"I did not find any U.S. Department of Education federal guidance"*. 🔵 **`make claims TOKEN=federal` returned `ALREADY CLAIMED … STOP` over 23 cells here and exited 1.** This shelf holds **Federal Register `2026-07087`** *(Secretary's Supplemental Priority on Advancing AI in Education, published `2026-04-13`)*, plus **Dear Colleague Letters** of `2025-07-22` and `2026-08-20`. The 🔵 **distinction this shelf already draws stands: `2026-07087` is a GRANTS instrument that weights discretionary competitions and binds no school** — which is why a federal-level query reads as an absence to anyone who expects a mandate |
+
+🔵 **The opportunity is unchanged and better dated.** State duties are **enacted and in the past**
+(Ohio's policy deadline was `2026-07-01`), the federal layer moves **money, not classrooms**, and the
+constraint both Maryland and Brazil now write down — **no AI-determined grading or discipline** — is
+an *architecture* requirement for any assessment product sold into either.
+
+
 **Pass 278 — the per-jurisdiction query returns NAMED STATUTES where the federal query returns a
 GRANTS instrument, and the two were being read as one thing.** Asked at federal level, the US
 answer looks like policy; asked per jurisdiction, **the binding duties are all at state level** and
@@ -1076,6 +1097,34 @@ on AI (2026-04-17)** as a provincial priority, and **Bill 194 (2024)** plus the 
 training at all** — so the first deliverable is the policy and the training, not a platform.
 
 ### EMEA
+
+**Pass 280 — the region-wide leg is an INFORMATIVE NIL on education for the ninth time, and the
+jurisdiction leg reproduced this shelf's AI Act rows exactly.** The region query named **no
+education-sector player, no ministry and no education AI rule** — in its own words, *"the results
+don't name education-sector players … or any EMEA education AI rules"* — returning only general
+adoption context (*"40 % of EMEA business leaders worry about the trustworthiness of AI"*,
+compliance complexity and data governance as the stated barriers). 🔵 **Recorded as a nil with its
+cause, because silence looks exactly like coverage.**
+
+| the AI Act, as this pass's sources served it | this shelf |
+|---|---|
+| Digital Omnibus = **Regulation (EU) 2026/1744**; Parliament **`2026-06-16`**, Council **`2026-06-29`**, signed **`2026-07-08`**, OJ **`2026-07-24`**, in force **`2026-07-27`** | 🟢 **identical, to the day** |
+| **Annex III point 3 — education — `2027-12-02`** *(was `2026-08-02`)* | 🟢 identical |
+| Annex I embedded-product high-risk — **`2028-08-02`** | 🟢 identical |
+| 🟢 **Article 50 transparency NOT delayed, live since `2026-08-02`; marking grace for already-deployed systems to `2026-12-02`** | 🟢 **UPGRADED: single-sourced → two-sourced** |
+| 🟡 high-risk systems used by **public authorities** — **`2028`/`2030-08-02`** | 🟡 **single-sourced, new, NOT shelved as settled** — it would matter for a ministry deployment and needs a second channel |
+
+🟡 **The GRADE DOES NOT CHANGE: `SECONDARY-CONVERGENT, PRIMARY UNREAD`.** Another secondary channel
+agreeing is not the Official Journal, and `eur-lex.europa.eu` is refused at this session's proxy
+(`T61`, now measured on two independent clients). 🟢 **What is settled is the status**: `p279` carried
+the Omnibus with the caveat *"the proposal requires approval"*, and it is **law**.
+
+🔴 **The actionable date is six weeks out, not fourteen months.** Every engagement conversation in
+this region has been framed around `2027-12-02`; **Article 50's marking grace expires `2026-12-02`**,
+and it applies to systems **already deployed**. A tutoring or content-generation deployment live in
+the EU today has a **marking and disclosure** obligation landing first, and it is the cheaper of the
+two to retrofit badly.
+
 
 **Pass 277 — the UK's supplier-facing instrument was revised THIS YEAR, and it adds four standards
 that bite on exactly what an education agent does.** `p276` ended the nine-pass EMEA nil on the EU AI
@@ -1536,6 +1585,29 @@ Seppo, Cornelsen, Lalilo** — 🔴 **none of them open source**, so none is a b
 
 ### APAC
 
+**Pass 280 — the region-wide leg is an INFORMATIVE NIL on education policy, and `T53` is demonstrated
+a fourth time.** The APAC query returned enterprise AI only — *"nothing I found addresses AI rules for
+schools or universities"* — with a **supply-side** residue worth keeping: **TCS × Pearson**'s
+multi-year AI learning alliance *(corporate upskilling, not K-12 or HE)*, **LearnUpon** expanding
+with a **Sydney HQ** and Create+ AI authoring, and **49 % of APAC businesses** naming insufficient
+real-time data infrastructure as the adoption barrier. 🔵 **Jurisdiction-targeted retries answered
+immediately, which is the pattern now, not the exception.**
+
+| jurisdiction | instrument | binding? |
+|---|---|---|
+| 🟢 **China** | **two MOE guidelines (2025)** — one on AI education generally, one the ***Guide to Using Generative Artificial Intelligence in Primary and Secondary Schools (2025 Edition)*** | 🟢 **ministry guidance with per-stage usage standards.** 🔴 **Primary pupils are barred from autonomous use of open-ended content-generating tools**; *"AI can complement but not replace human-led teaching"* |
+| 🟢 **China, 2026 expansion** | **CGTN, `2026-04-10`**: AI enters **teacher examinations**; the ministry will **fully incorporate AI into local curricula**, defining objectives, content and **class hours** per level | 🟡 announced direction. 🟢 **Beijing already runs ≥ 8 class hours of AI per pupil per academic year** *(official, via gov.cn)* |
+| 🔴 **China, the unconfirmed claim** | *"introductory AI courses required in all elementary and middle schools from the 2026–27 academic year, with no standardized AI testing until at least 2030"* | 🔴 **SECONDARY-ONLY. Not confirmed against any ministry document, and not shelved as a mandate.** The two 2025 guidelines and the Beijing hours are what this base will brief |
+| 🟡 **Australia** | **Australian Framework for Generative Artificial Intelligence in Schools**, released **`2023-12-01`**, commissioned by education ministers | 🔴 **NOT binding — six principles, no penalties.** Applies across government, Catholic and independent schools; **binding rules sit with the states** *(Victoria's own policy is the worked example)* |
+| 🟡 **Australia, 2026** | 🔴 **INFORMATIVE NIL: no revised national framework in 2026.** Education ministers' **June 2025** review found the framework **fit for purpose** | 🟢 Live work instead: **ESA with AERO** developing **product expectations** for generative-AI tools — privacy and security, human rights and wellbeing, education impact — funded **A$1.8 M** by Education Ministers |
+| 🔴 **Australia — a LURE SIGNAL** | two third-party sites present **unsourced "rules"** and a *"2026 Update"* to a framework that has not been revised; one renames it the *"National AI in Schools Framework"* | 🔴 **`p238-lure-signature`'s class in the policy channel.** A client who has read those pages believes they have obligations they do not have — 🟢 **and that misreading is itself the opening for a policy engagement** |
+
+🔵 **The APAC opportunity has a precise shape now:** China's constraint is **product capability**
+(supervised mode, per-stage limits, measurable class hours), Australia's is **procurement**
+(state-level policy plus ESA/AERO product expectations a vendor must answer), and neither is reachable
+through a region-wide query.
+
+
 **Pass 277 — THE TEN-PASS APAC NIL ENDS, and it ended on the first query that named a
 jurisdiction.** `p276` ranked exactly one instruction for this cell: *"`p277` must query APAC per
 jurisdiction — MEXT, Singapore MOE, India's NEP, China's MoE, Korea's AI textbooks — not by the word
@@ -1883,6 +1955,42 @@ four dated instruments. **`T53` demonstrated a third time: the region query's si
 not the region's.**
 
 ### LATAM
+
+**Pass 280 — the ranked homologation watch MOVED, and the text that becomes binding is not the text
+this base has read.** 🟢 **LATAM was the one region whose region-wide query returned real material**:
+a **UNESCO IESALC × UNU-IAS working paper dated September 2026**, surveying **200 higher-education
+institutions across 19 countries** (fieldwork late 2025) on teaching, research, administration and
+governance — the largest institution-level instrument on this shelf for the region — alongside
+**ILIA 2025** with **CEPAL** and a 2025 comparative study of HE AI rules in **Argentina, Brazil,
+Chile, Peru and Spain**.
+
+| Brazil — `Parecer CNE/CP nº 15/2026` | state as of `2026-10-18` |
+|---|---|
+| approved by **CNE** | **`2026-09-01`** |
+| DOU summary published | **`2026-10-06`** |
+| 🔴 **homologated?** | 🔴 **NO — not in any source found.** Under **art. 2 of Lei nº 9.131/1995 it has no normative force until the homologating act is published** |
+| 🟢 **reported imminent, WITH CHANGES** | **`2026-10-13`** reporting: minister **Leonardo Barchini** would homologate that week, and one amendment **bars AI tools from determining a pupil's approval or failure — marks are given only by teachers** |
+| 🟢 **new substance** | the text **classifies AI uses by RISK LEVEL**, gives institutions a **12-month adequacy window from homologation**, and **prohibits autonomous AI use up to the 5th year** on UNESCO's **age-13** parameter |
+| official text | `gov.br/mec/pt-br/cne/2026/setembro-2026/pcp015_26.pdf` *(not read — `T61`)* |
+
+🔴 **The engagement consequence is sharper than "watch it".** The amendments mean the binding text
+**differs from the approved one**, so any curriculum or assessment mapping built against the
+September text has to be re-checked on publication — and the **12-month clock starts at that
+publication**, which makes the homologating act a **dated engagement trigger** rather than news.
+
+| Colombia — `Ley 2626 de 2026` | this pass |
+|---|---|
+| 🟢 **scope, which `p279` ranked for an egress-enabled run** | 🟢 **RESOLVED from a secondary source:** it modernises the **Tecnología e Informática** subject, phasing in **computational thinking, programming, AI, data science and digital citizenship**. **Binding on official public institutions; private establishments MAY adopt the curricular model** — so a private-school client has **no statutory obligation**, which is the commercially decisive half |
+| 🟡 **a contested attribution** | this shelf says the *lineamientos* are owed by **MEN jointly with MinTIC and MinCiencias**; this pass's source names **MEN with a `Comisión Nacional de Educación Digital`**, which must review curricular guidelines, competency standards and pedagogical orientations **at least every three years**. 🔴 **Both secondary. Recorded as a conflict, not resolved** |
+| 🟢 **new** | conscience-freedom for pupils and teachers, and the **parents' preferential right to choose** their children's education, are written into the statute |
+| 🔴 **a pending amendment to the statute itself** | **`PL 418/2026`** proposes adding an **`art. 3A`** on the ethical and responsible use of AI and social media; **`PL 568/2026`** would make digital transformation and AI **transversal axes** of education. 🔴 **Projects, not law** — but the instrument this base calls LATAM's first binding one **has a moving spec** |
+| 🔵 **the discrimination worth keeping** | a September 2026 source stating *"Colombia has no approved AI law"* is about **general** AI regulation and **says nothing about `Ley 2626`**. Two different instruments; conflating them loses the one statute that binds |
+
+🔵 **The regional motion is now dated end-to-end:** Colombia has a **statute without guidance**
+(implementation engagement, no spec), Brazil has **guidance about to become a rule with a 12-month
+clock**, and the UNESCO IESALC survey gives the first region-wide institutional baseline to sell
+governance against.
+
 
 **Pass 278 — the region was carried on ONE regional query for 277 passes, and five jurisdictions
 answer with NAMED, DATED instruments the moment they are asked separately.** `p275` diagnosed the

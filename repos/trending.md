@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 280) — the bound was set to the example's own size, and lifting it corrected a published count by 6× and exposed a conflict that was hiding inside it
+
+⏱️ **Second pass of `2026-10-18`.** Append-only — everything below this section is prior history and
+is not rewritten. Evidence:
+[`channel-conflict.2026-10-18-p280.tsv`](../evidence/channel-conflict.2026-10-18-p280.tsv) *(the same
+14 slugs, 19 columns: `manifests_thirdparty` and `thirdparty_paths` are new, `MANIFEST_CAP` raised
+`14 → 250`)* ·
+[`package-provenance.2026-10-18-p280.tsv`](../evidence/package-provenance.2026-10-18-p280.tsv) *(192
+manifests graded per package: `declared_name`, `declared_repo`, verdict, reason)*.
+
+### 🔴 Headline: `MANIFEST_CAP = 14` was `Athena`'s own manifest count
+
+`p279` built the per-package walk, debugged it on `ls1intum/Athena` — **14 manifests** — and set the
+bound to **14**, with the honest note that *"what was SKIPPED is published, so the bound is never
+invisible"*. 🔵 **Publishing a bound is not the same as the bound being adequate**, which `p279` also
+wrote, and ranked third. Measured:
+
+| repo | p279 | p280 (`cap 250`, **0 skipped on every row**) | what changed |
+|---|---|---|---|
+| 🔴 **`leemonade/leemons`** | `114` in tree, **`12` declaring**, 100 skipped | **`72` declaring of 114**, all **MIT** | 🔴 **a 6× correction to the count under this base's most consequential verdict** |
+| `classroomio/classroomio` | 27 in tree, `2` declaring, 13 skipped | **`5` declaring**, `2` distinct (root MIT, `apps/api` **ISC**) | more evidence, same verdict |
+| 🔴 **`codelitdev/courselit`** | 19 in tree, `10` declaring, 5 skipped, **`1` distinct** | **`15` declaring, `2` DISTINCT** | 🔴 **a NEW intra-repo disagreement** |
+| `ls1intum/Athena` | 14 / 12 / 1 / 0 | **14 / 12 / 1 / 0 — unchanged** | 🟢 the negative control: nothing was wrongly excluded |
+| `codeXsidd/Studivexa` | **3** in tree | **2** in tree | 🟢 a build cache excluded (below) |
+
+🔴 **`leemons`'s verdict is six times better evidenced and says exactly the same thing.**
+`MANIFEST-OVERSTATES`: **72 manifests declare `MIT`** over a committed `LICENSE.md` that is
+**FAIRCODE**. A studio reading *any one* of 72 manifests gets a permissive answer; the committed
+grant is not permissive. 🔵 `p121`'s rule is the one that holds — *"a manifest licence field is a
+HINT; the committed licence file is the GRANT"* — and it now holds against 72 hints.
+
+### 🔴 `codelitdev/courselit` — the conflict the cap was hiding, in a BUILD-ON row
+
+Reading all 19 manifests instead of the first 14:
+
+| declaration | manifests |
+|---|---|
+| `MIT` | **14** — root `package.json` plus 13 `@courselit/*` workspace packages |
+| 🔴 **`ISC`** | **1** — `packages/scripts/package.json` (`@courselit/scripts`) |
+
+🟡 **Both permissive, so the commercial exposure is low** — and the shape is identical to
+`classroomio`'s (`apps/api` ISC under a MIT root), which `p279` graded **REAL**. 🔵 **The finding is
+not the ISC. It is that a published bound produced a published-false count on a row this shelf tells
+studios to build on**, and that a studio vendoring `packages/scripts/` gets **that** directory's
+grant, not the root's.
+
+### 🟢 `Open-TutorAi/open-tutor-ai-CE` — the false "SUBPACKAGES DISAGREE" is gone, by code
+
+`p279` published `declared_distinct = 2` with the note *"SUBPACKAGES DISAGREE (2 distinct
+declarations)"*, and `p278` had already typed the right answer by hand — *"🟡 ARTEFACT — a bundled
+Pyodide runtime"*. 🟢 **`p280` excludes it from the walk**, because the payload declares its own
+provenance:
+
+```json
+{ "name": "pyodide", "homepage": "https://github.com/pyodide/pyodide",
+  "repository": { "url": "https://github.com/pyodide/pyodide" }, "license": "Apache-2.0" }
+```
+
+| | p279 | p280 |
+|---|---|---|
+| `manifests_declaring` | 2 | **1** |
+| `declared_distinct` | 🔴 **2** | 🟢 **1** |
+| `manifests_thirdparty` | — | 🟢 **1** |
+| `thirdparty_paths` | — | 🟢 `ui/static/pyodide/package.json` |
+| note | 🔴 *"SUBPACKAGES DISAGREE"* | 🟢 *(gone)* |
+
+🔴 **COVERAGE, PUBLISHED AS A BOUND:** **24 of 192 manifests (12.5 %) declare a repository at all.**
+The declared channel answers where it answers; the claim worth making is that **the 12.5 % contains
+the one vendored manifest no path vocabulary reached**.
+
+### 🟢 A build cache in the denominator — `frontend/.vite/deps/package.json`
+
+`codeXsidd/Studivexa` commits **Vite's dependency-optimiser cache** to its tree, and the shared
+vendored-path predicate knew `*/dist/*`, `*/build/*` and `*/.yarn/*` but not `.vite`. 🟡 It graded
+`SILENT` (no name, no licence field) **so no count was corrupted today** — 🔵 which is the argument
+for widening a floor from a *measurement* rather than from a defect: the next committed cache to
+carry a `license` field would have been counted as the repository's own. `.vite` `.next` `.nuxt`
+`.turbo` are in `lib/licence_path.sh` now, with **4 positive and 4 negative controls** so the
+widening cannot swallow a real `packages/vite-plugin-*/` workspace package. `lib`: **54 → 62**
+controls, byte-identity with `p196`'s copy still green.
+
+### 🟡 Trending supply, this pass
+
+🔴 **The GitHub-trending leg returned no education repository this base does not hold.** What it
+returned — `rohitg00/ai-engineering-from-scratch` (**#1 on GitHub Trending `2026-05-24`**),
+`aneelv75/github-trending`, Karpathy's *Neural Networks: Zero to Hero*,
+`microsoft/ai-agents-for-beginners` — are **curricula and curated lists**, all `CARRIED`, and a
+secondary report that *"nine of GitHub's top ten monthly trending projects in February 2026 were
+AI-related"* is context, not a repository. 🔵 The trending channel for this industry is returning
+**general** AI material through education-shaped queries, which is a property of the channel and is
+recorded as such rather than as a quiet gap.
+
 ## 2026-10-18 (pass 279) — the manifest channel is ENUMERATED now, not laddered, and the first three fixes for it were each wrong in a different way
 
 ⏱️ **First pass of `2026-10-18`.** Append-only — everything below this section is prior history and

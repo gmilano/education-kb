@@ -71,6 +71,41 @@ SENTENCE = re.compile(r'\b(notices?|owners?|holders?|laws?|works?|licen[sc]e[ds]
                       r'shall|defined|rights?|that|which|upon|include[ds]?|attached|'
                       r'permission|hereby|granted|liable|damages|claim)\b', re.I)
 
+# 🔴 p280: THE `SENTENCE` VOCABULARY IS A FLOOR, and the real GPL-3.0 text defeats it.
+# `GibbonEdu/core`'s `LICENSE` (the verbatim GPL-3.0, 35 121 B, read first-hand 2026-10-18)
+# yields `'on the Program, and are irrevocable provided the stated'` -- a fragment of the
+# licence's own body, published as a holder.  Not one of its words is in `SENTENCE`:
+# `Program`, `irrevocable` and `stated` are simply not on the list, and adding them is the
+# third floor-widening of this pass (`is_bundled` took two).
+# 🟢 So the guard is STRUCTURAL instead of lexical: a copyright holder is a NAME, and a name
+# does not contain a run of function words.  THREE OR MORE CONSECUTIVE ALL-LOWERCASE WORDS
+# is prose, whatever the words are.
+# 🔵 Deliberately NOT "starts with a lowercase letter", which was the first draft: `openSUSE
+# Project`, `ownCloud GmbH` and `iText Group` are real lowercase-initial holders, and a
+# predicate that rejects them trades a false negative for a false positive.  Measured on the
+# controls: every expected holder in this file has at most ONE lowercase word in a row.
+BODY_FRAGMENT = re.compile(r'(?:^|\s)[a-z][a-z\'-]*(?:\s+[a-z][a-z\'-]*){2,}(?:\s|[,.;:]|$)')
+
+
+def looks_like_prose(h):
+    """-> True when a candidate is a fragment of the licence body rather than a name.
+
+    MEASURED, not designed: every one of the 29 `Copyright`-anchored candidates the real
+    GPL-3.0 text yields was listed and graded (`evidence/holder-candidates.2026-10-18-p280
+    .tsv`).  `STEWARD` catches the FSF line, `PLACEHOLDER` the unfilled appendix, `SENTENCE`
+    nineteen of them and the lowercase-run rule six more -- and exactly ONE survived all
+    four: `'are not'`.  Two lowercase words is below the run threshold, so the threshold was
+    not the predicate.
+    """
+    if BODY_FRAGMENT.search(h):
+        return True
+    # A NAME carries a capital or a digit somewhere.  A multi-word candidate with neither is
+    # prose -- and the word count matters: a SINGLE lowercase word may be a real holder
+    # (`tldraw`, `ownCloud`'s lowercase sibling forms), so it is left to the other guards.
+    if len(h.split()) > 1 and not re.search(r'[A-Z0-9]', h):
+        return True
+    return False
+
 def holder(text):
     """The first FILLED copyright holder in the license text, or None."""
     for m in COPY.finditer(text):
@@ -84,10 +119,45 @@ def holder(text):
             continue
         if re.fullmatch(r'[\[\]\(\)<>0-9\s.,;:-]+', h):
             continue
-        if SENTENCE.search(h) or STEWARD.search(h):
+        if SENTENCE.search(h) or STEWARD.search(h) or looks_like_prose(h):
             continue
         return h[:90]
     return None
+
+# 🟢 p280: THE DATED-APPENDIX READER.  The copyleft/Apache families carry tens of kilobytes
+# of prose ABOUT copyright, and `p184`'s `D7` control already proved no stop-word list closes
+# that class.  But a FILLED appendix notice differs from body prose structurally and not
+# lexically: it carries a YEAR between the word `Copyright` and the name.  Measured over the
+# three real full texts this base holds --
+#
+#   GibbonEdu/core  LICENSE  (GPL-3.0, filled)    -> ('2010', 'Gibbon Foundation')
+#   moodle/moodle   COPYING  (GPL-3.0, UNfilled)  -> none
+#   HKUDS/DeepTutor LICENSE  (Apache-2.0, filled) -> ('2025', 'Data Intelligence Lab, The
+#                                                     University of Hong Kong')
+#
+# -- exactly one candidate each, and ZERO prose fragments.  `holder()` on the same Apache
+# text returns `'statement to Your modifications and'`, so the year is doing the work.
+# 🔵 NOT used for MIT/BSD/ISC: `p237-grant-payload-shapes` controls YEAR-LESS MIT grants, so
+# requiring a year there would reject real holders.  The year is required only where the
+# alternative is prose.
+DATED_COPY = re.compile(r'copyright[ \t]*(?:\(c\)|\(C\)|©)?[ \t]*'
+                        r'((?:19|20)\d{2}(?:[ \t]*[-–,][ \t]*(?:19|20)?\d{2,4})?)[ \t]+'
+                        r'([^\n\r]{2,90})', re.I)
+
+
+def dated_holder(text):
+    """The first FILLED, DATED copyright holder, or None.  For the families whose template
+    puts the holder in an appendix rather than in the terms."""
+    for m in DATED_COPY.finditer(text):
+        h = re.sub(r'\s+', ' ', m.group(2).strip().strip('.,;:-—').strip())[:90]
+        h = re.sub(r'^(and|the)\s+', '', h, flags=re.I)
+        if not h or PLACEHOLDER.search(h) or STEWARD.search(h):
+            continue
+        if SENTENCE.search(h) or looks_like_prose(h):
+            continue
+        return h
+    return None
+
 
 def toks(s):
     return {t for t in re.split(r'[^a-z0-9]+', s.lower()) if len(t) > 2}
@@ -107,11 +177,39 @@ def classify(slug, text, family=None):
     # answer without one instead of guessing.
     if family is None:
         return 'FAMILY-REQUIRED', '(the holder question is not answerable family-blind)'
+    # 🔴 p280: THE `by construction` ARGUMENT IS REFUTED BY A REAL PAYLOAD, 96 passes on.
+    # This branch returned `NOT-APPLICABLE` for every copyleft family, on the ground that
+    # "the project's own copyright is not in the file at all".  That is true of the GPL's
+    # TERMS and false of its APPENDIX: `GibbonEdu/core`'s `LICENSE` (verbatim GPL-3.0,
+    # 35 121 B, read first-hand 2026-10-18) fills the interactive-notice template at line
+    # 655 with its own real values --
+    #
+    #     Core  Copyright (C) 2010  Gibbon Foundation
+    #
+    # -- so for this repository the holder IS in the licence text, stated plainly, and the
+    # instrument answered "not answerable".
+    # 🔵 WHY IT SURVIVED SO LONG: the control for this branch is `moodle/moodle`'s real
+    # `COPYING`, which ships the appendix UNFILLED (`<year> <name of author>`).  The argument
+    # was validated on the unfilled case only, and `PLACEHOLDER` -- already in this file --
+    # is exactly what tells the two apart.
+    # 🟢 So the family no longer decides the ANSWER, it decides the FALLBACK: an unfilled
+    # appendix is still `NOT-APPLICABLE` by construction, and a FILLED one is a holder like
+    # any other.  Both arms are controlled, on the two real payloads, in `test_holder.py`.
+    # 🔴 AND THE FIRST FIX FOR IT RE-OPENED THE DEFECT `D7` WAS BUILT TO CLOSE.  Letting
+    # every copyleft text fall through to `holder()` made `HKUDS/DeepTutor`'s FULL Apache
+    # payload publish `'statement to Your modifications and'` as a holder -- `D7`'s own
+    # sentence, re-committed by the fix for the branch `D7` wrote.  The appendix reader is
+    # therefore the DATED one, which is structural rather than lexical.
     if not family.upper().startswith(HOLDER_FAMILIES):
-        return 'NOT-APPLICABLE', f'({family}: holder not in the license text by construction)'
-    h = holder(text)
-    if h is None:
-        return 'NO-HOLDER', '-'
+        h = dated_holder(text)
+        if h is None:
+            return ('NOT-APPLICABLE',
+                    f'({family}: holder not in the license text by construction — '
+                    f'appendix unfilled or absent)')
+    else:
+        h = holder(text)
+        if h is None:
+            return 'NO-HOLDER', '-'
     owner, _, repo = slug.partition('/')
     ht, pt = toks(h), toks(owner) | toks(repo)
     # Also compare with separators removed, so THU-MAIC matches thumaic.

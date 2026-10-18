@@ -1,0 +1,108 @@
+# p280 INBOUND RESEARCH TEXT — graded by `make inbound-claims` BEFORE any of it was written
+# up.  ACTION SH, built p279.  Claims are reproduced as the sources phrased them.
+
+## LEG 1 — global: top open source AI agents education 2026 github MIT
+"The search turned up only a few education-focused MIT repos. Most results were general
+agent tools." microsoft/ai-agents-for-beginners is MIT, ~67,000 stars as of June 2026.
+pguso/agents-from-scratch MIT, 796 stars. "I didn't find a single authoritative 2026 ranking
+of education-focused agent repos."
+
+## LEG 2 — global: github trending education AI 2026
+rohitg00/ai-engineering-from-scratch reached #1 on GitHub Trending on May 24, 2026.
+aneelv75/github-trending is a curated list. "A Japanese article reports that in February
+2026, nine of GitHub's top ten monthly trending projects were AI-related."
+
+## LEG 3 — global: open source platform education LMS SIS MIT Apache 2026
+Moodle is GPLv3 and LMS-only with no integrated SIS. Open edX is AGPLv3, originally
+developed by MIT and Harvard, now stewarded by Axim Collaborative. OpenEduCat combines LMS
+and SIS; licence not stated in the results. Richie is MIT and Aspects is Apache-2.0, both
+built on Open edX.
+
+## LEG 4 — global: AI education industry trends 2026
+"One report puts the global market at USD 8.3 billion in 2025 and USD 11.4 billion in 2026,
+while another projects $10.6 billion in 2026. A third estimates USD 6.4 Billion in 2025,
+with growth to USD 79.6 Billion by 2034." "global student AI usage surged from 66% in 2024
+to 92% in 2025." "K-12 institutions accounted for 45.62% of total adoption." "Cloud-based
+solutions held 71.22% market share in 2024." "North America AI in education market held the
+major share of 37.5% in 2025."
+
+## LEG 5 — region-wide: North America
+"roughly $951 million in 2024, with one report projecting about $2.3 billion by 2029 at a
+15.9% CAGR." "only 10% of institutions have formal AI guidelines and 71% of U.S. teachers
+lack AI training." "The EU AI Act treats education AI as high-risk, which matters for any
+North American vendor selling into Europe." "a Q1 2026 country-level education program with
+eight national partners launched by OpenAI, and a $55 million investment by Carnegie Mellon
+and the Gates Foundation in AI courseware."
+
+## LEG 6 — region-wide: EMEA  -> INFORMATIVE NIL on education
+"The search didn't return anything specific to AI in education in EMEA for 2026."
+"40% of EMEA business leaders worry about the trustworthiness of AI technologies."
+"The results don't name education-sector players ... or any EMEA education AI rules."
+
+## LEG 7 — region-wide: APAC  -> INFORMATIVE NIL on education policy
+"The search returned little that is specific to AI in education."
+"Nothing I found addresses AI rules for schools or universities."
+TCS and Pearson announced a multi-year AI learning alliance. LearnUpon expanding with a
+Sydney HQ. "nearly half (49%) of APAC businesses cited insufficient infrastructure".
+
+## LEG 8 — region-wide: LATAM  -> REAL FINDINGS
+"A UNESCO IESALC and UNU-IAS working paper, dated September 2026, maps AI use in
+universities across the region. It draws on a survey of 200 higher education institutions in
+19 countries, conducted in late 2025." Mexico Business News January 2026: AI must move
+beyond pilots. "a value of $18.2 million in 2024, projected to reach $36 million by 2029."
+2025 comparative study of higher education AI rules in Argentina, Brazil, Chile, Peru, Spain.
+Latin American AI Index (ILIA) 2025 with CEPAL.
+
+## LEG 9 — jurisdiction: Brazil, the ranked homologation watch
+"O CNE aprovou o parecer em 1º de setembro de 2026." "A súmula foi publicada no Diário
+Oficial da União em 6 de outubro de 2026 e o texto segue agora para homologação pelo
+Ministério da Educação (MEC), quando então terá força normativa." "o parecer só produzirá
+efeitos após a publicação do ato homologatório do Ministro de Estado da Educação" (art. 2º,
+Lei nº 9.131/1995). "Reportagens de 13 de outubro dizem que o ministro Leonardo Barchini
+faria a homologação naquela semana, mas com alterações. Uma delas veda que ferramentas de IA
+determinem aprovação ou reprovação de alunos, e as notas devem ser dadas apenas pelos
+professores." "O texto classifica os usos de IA por nível de risco e prevê prazo de 12 meses
+para as instituições se adequarem após a homologação." "proíbe o uso autônomo de IA por
+alunos até o 5º ano" "a Unesco indica o uso autônomo de ferramentas de IA somente após os 13
+anos de idade". Official text: gov.br/mec/pt-br/cne/2026/setembro-2026/pcp015_26.pdf
+
+## LEG 10 — jurisdiction: China
+MOE "issued two guidelines to promote AI education in primary and secondary schools, one on
+general AI education and one on generative AI use." "Guide to Using Generative Artificial
+Intelligence in Primary and Secondary Schools (2025 Edition)". "primary students are barred
+from using open-ended content-generating AI tools on their own" and "AI can complement but
+not replace human-led teaching." CGTN 2026-04-10: "China to include AI in teacher exams";
+the ministry "plans to fully incorporate AI into local curricula, with guidelines to define
+learning objectives, content and class hours at different education levels." Beijing: "every
+primary and secondary student in the city takes at least eight class hours of AI courses per
+academic year." The Silicon Review: "introductory AI courses are required in all elementary
+and middle schools starting in the 2026–2027 academic year, with no standardized AI testing
+until at least 2030" -- NOT confirmed against any ministry document.
+
+## LEG 11 — jurisdiction: Australia  -> INFORMATIVE NIL on a new 2026 instrument
+"The results don't show a new mandatory national AI-in-schools rule for 2026."
+Australian Framework for Generative Artificial Intelligence in Schools: commissioned by
+education ministers in 2023, "released on 1 December 2023", "six principles and no
+penalties", applies across government, Catholic and independent schools. "Education
+ministers endorsed a review of the framework in June 2025 that found it fit for purpose."
+"no revised framework has been published in 2026." AI Taskforce product expectations:
+"$1.8 million from Education Ministers to ESA to set them in partnership with AERO."
+LURE SIGNAL: "A compliance checklist on responsibleaiaustralia.com.au lists prohibitions and
+consent requirements as 'rules,' but it doesn't cite an official source for them. Another
+site calls the framework the 'National AI in Schools Framework' and describes a '2026 Update'
+that I couldn't confirm against government sources."
+
+## LEG 12 — jurisdiction/EMEA: the EU Digital Omnibus
+"The Council gave final approval on June 29, 2026, and the Digital Omnibus on AI was adopted
+by Parliament on 16 June 2026 and by the Council on 29 June 2026, signed on 8 July 2026, and
+entered into force on 27 July 2026. It is published as Regulation (EU) 2026/1744 in the
+Official Journal of the EU on 24 July 2026."
+"Education is one of the Annex III use cases, and the Annex III high-risk requirements
+(employment, credit, education, biometrics) apply from 2 December 2027. The original date was
+2 August 2026."
+"AI embedded in regulated products under Annex I moves to 2 August 2028."
+"High-risk systems used by public authorities have a later date of 2 August 2030."
+"Article 50 transparency duties were not delayed and apply from August 2026. The
+watermarking requirement for systems already deployed has a grace period to 2 December 2026."
+"One Usercentrics page still carries a stale line saying the Act has not been formally
+delayed, which conflicts with its own later confirmation of the delay."

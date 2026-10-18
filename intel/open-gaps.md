@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 280 — **THE REMEDY RANKED FIRST NEEDED A LIST, AND BOTH HALVES OF A CHANNEL THAT NEEDS NONE WERE ALREADY ON THIS SHELF**
+
+⏱️ `2026-10-18`, second pass. Evidence:
+[`package-provenance.2026-10-18-p280.tsv`](../evidence/package-provenance.2026-10-18-p280.tsv) ·
+[`channel-conflict.2026-10-18-p280.tsv`](../evidence/channel-conflict.2026-10-18-p280.tsv) ·
+[`holder-candidates.2026-10-18-p280.tsv`](../evidence/holder-candidates.2026-10-18-p280.tsv) ·
+[`p280-inbound-raw.2026-10-18-p280.txt`](../evidence/p280-inbound-raw.2026-10-18-p280.txt).
+
+### 🟢 DISCHARGED — `p279`'s items 1, 2 and 3, all three
+
+| `p279` item | verdict |
+|---|---|
+| 1. 🔴 *"Give the manifest walk a KNOWN-THIRD-PARTY NAME channel … this base has no such list"* | 🟢 **DISCHARGED, and the registered remedy was the wrong one.** A name vocabulary can only reject the projects somebody enumerated — `p279`'s own argument against its path vocabulary, one layer out. The residual (`ui/static/pyodide/package.json`) **declares `pyodide/pyodide` in `repository` AND `homepage`, in its own bytes**. 🔵 Both halves of that channel already existed: `lib/package_repo.sh::normalise_repo_url` *(pass 75)* and `p436-fork-hypothesis` *(pass 24, with the measured warning that a differing declaration has three innocent causes)*. `pass280-package-provenance/` imports both. 🔴 **Coverage is bounded and published: 24 of 192 manifests (12.5 %) declare a repository at all** |
+| 2. 🔴 *"Re-write `p229`'s `mcp-canvas-lms` control against the manifest the repository actually serves … and audit the other `T229-M2` controls"* | 🟢 **DISCHARGED on all four, plus two more in another instrument.** 1 exact, 2 approximations, **1 invented asserting the OPPOSITE verdict**. All read captured payloads now with `slug/ref/head_sha/sha256/date`. 🔴 **And the audit refuted a 96-pass-old fact** — see below |
+| 3. 🟡 *"Raise `MANIFEST_CAP` or make it adaptive"* | 🟢 **DISCHARGED: `14 → 250`, `0` skipped on all 14 slugs.** `leemons` **12 → 72 declaring of 114** *(a 6× correction)*, `classroomio` 2 → 5, `courselit` 10 → 15. 🔴 **And removing the bound exposed a conflict inside it**: `courselit` `1 → 2` distinct declarations |
+
+### 🔴 NEW, and the most consequential finding of the pass — a settled fact refuted by its own corpus
+
+`p184-holder-mismatch` exempted every non-MIT/BSD/ISC family with `NOT-APPLICABLE`, on the stated
+ground that *"the project's own copyright is not in the license text by construction"*.
+
+| payload | appendix | the holder |
+|---|---|---|
+| 🔴 `GibbonEdu/core` `LICENSE` — verbatim **GPL-3.0**, 35 121 B | **FILLED**, line 655 | `Core  Copyright (C) 2010  Gibbon Foundation` |
+| 🔴 `HKUDS/DeepTutor` `LICENSE` — **Apache-2.0** | **FILLED** | `Copyright 2025 Data Intelligence Lab, The University of Hong Kong` |
+| 🟢 `moodle/moodle` `COPYING` — **GPL-3.0** | **UNFILLED** (`<year> <name of author>`) | none — the argument holds here |
+
+🔴 **The argument is true of a licence's TERMS and false of its APPENDIX**, and it was validated on
+the unfilled case only. 🔴 **Cost: the whole copyleft half of a 503-slug holder sweep was silently
+skipped, and the provenance of this base's TOP AGENT ROW was invisible.** 🟢 Fixed with a **dated**
+appendix reader — a filled notice carries a year between `Copyright` and the name, body prose does
+not — **70 candidates graded, exactly 3 survive all four guards**, `p184` **22 → 30** controls.
+
+### 🔵 THREE FLOORS WIDENED, and one of them was caught by the census on itself
+
+| floor | defeated by | durable form |
+|---|---|---|
+| `SENTENCE` *(lexical holder guard)* | the real GPL-3.0 body — `'on the Program, and are irrevocable provided the stated'`, **not one word of it on the list** | structural: lowercase runs + a capital/digit test. 🔵 Explicitly **not** *"starts lowercase"*, which would reject `openSUSE Project` |
+| `is_bundled` *(vendored paths)* | 🟢 `codeXsidd/Studivexa` commits **`frontend/.vite/deps/package.json`** — Vite's optimiser cache | `.vite` `.next` `.nuxt` `.turbo`, **4 positive + 4 negative controls**; `lib` **54 → 62** |
+| 🔴 `is_gated` *(`p252`'s gate census)* | **`p280`'s own suite.** One added suite moved the pinned literals by **TWO** — `p791-registry-id-provenance/test_provenance.py`, **which no recipe runs**, shares a basename | line-anchored `(directory, basename)`. 🔵 `p251-prefix-collision`'s class inside the instrument that measures gating, and `is_gated`'s own docstring one step finer |
+
+🟢 **A census whose counts are PINNED is the only reason the third was visible**; unpinned it would
+have reported 39 gated and been believed. Population now **219 / 38 gated / 181 ungated / 71
+silent-zero / 110 immune**.
+
+### 🟢 The gates earned their keep this pass, in both directions
+
+- 🟢 **`make inbound-claims` (`ACTION SH`): `0` hits** over the whole research file. The
+  *"education high-risk from August 2026"* claim arrived for **five passes running**; this is the
+  **first clean leg in six**, and substantively so — the sources now cite **Regulation (EU)
+  2026/1744** itself.
+- 🔴 **`make claims` STOPPED an absence this pass would have published.** The NA leg concluded *"I did
+  not find any U.S. Department of Education federal guidance"*; the gate returned `ALREADY CLAIMED …
+  STOP` over **23 cells** and exited 1. This base holds Federal Register **`2026-07087`**. 🔵 The gap
+  was the channel's, not the world's.
+
+### 🔵 Declared gaps, carried and new
+
+| gap | state |
+|---|---|
+| 🔴 **`T61` — primary policy text unreachable** | 🔴 **CARRIED, and now measured on two independent clients.** Every policy fact on these shelves is **secondary**, including every AI Act date. `eur-lex`, `cbseacademic.nic.in`, `moe.gov.sg`, `ontario.ca` all refused |
+| 🟡 **EU AI Act dates: `SECONDARY-CONVERGENT, PRIMARY UNREAD`** | 🟡 **UNCHANGED as a grade**, reproduced to the day by a further independent channel. 🟢 **The Annex III point 3 date stays SETTLED at `2027-12-02`** *(settled by `p233` on the OJ dates and `p241` on the superseded-date count; **Regulation (EU) 2026/1744**)* — this pass adds a channel, it re-opens nothing. 🟢 **Two upgrades:** the Article 50 **marking grace `2026-12-02`** is now **two-sourced**, and `p279`'s *"the proposal requires approval"* caveat is **settled — it is law** |
+| 🔴 **the public-authority high-risk date (`2028`/`2030-08-02`)** | 🔴 **NEW, SINGLE-SOURCED, not shelved as settled.** It would govern a **ministry** deployment, which is this base's highest-value LATAM and APAC shape |
+| 🟡 **Colombia: who owes `Ley 2626`'s lineamientos** | 🔴 **NEW CONFLICT.** This shelf: **MEN + MinTIC + MinCiencias**. This pass: **MEN + a `Comisión Nacional de Educación Digital`**, with a **≥ 3-year** review cycle. Both secondary; **recorded, not resolved** |
+| 🔴 **`Ley 2626` has a pending amendment** | 🔴 **NEW.** `PL 418/2026` would add an **`art. 3A`** on ethical AI and social-media use; `PL 568/2026` would make AI a transversal axis. Projects, not law — but the spec a client is mapped against may move |
+| 🟡 **`OpenEduCat`'s licence** | 🔴 **NEW, UNRESOLVED.** The only LMS **+ SIS** combination the platform leg found, and **the source does not state a licence** — and the pages describing it are its own. A payload read, not another search |
+| 🔴 **China's `2026–27` curriculum mandate** | 🔴 **NEW, SECONDARY-ONLY.** Not confirmed against any ministry document; **not briefed as a mandate**. What is briefable: the two 2025 MOE guidelines and **Beijing's ≥ 8 class hours** |
+| 🔴 **Australia: a LURE SIGNAL in the policy channel** | 🔴 **NEW.** Two third-party sites present unsourced *"rules"* and a *"2026 Update"* to a framework **last reviewed June 2025 and found fit for purpose**, with **no 2026 revision**. `p238-lure-signature`'s class, outside the repository channel |
+| 🟡 **`ABSENCE-QUEUED` backlog** | 🟡 **CARRIED: 124 refuted / 239 queued** in whole-corpus census mode. **Nobody has read the 124** |
+| 🟡 **`T56` — scope the absence queue per subject** | 🟡 **CARRIED from `p277`, `p278`, `p279`** |
+| 🟡 **the remaining metadata-graded rows** | 🟡 **CARRIED: 107** found by census; `p278` did 4, `p279` 14, `p280` re-swept the same 14 with two new columns |
+| 🔴 **the invented-payload class, beyond the six adjudicated** | 🔴 **NEW: 14 CANDIDATE control sites across 8 distinct slugs, `0` provenance-backed before this pass, 6 of 8 slugs still unread.** The durable discriminator is `--resolve` *(one `git ls-remote` per candidate)*, because the census's own buckets are floors |
+| 🔵 **Brazil homologation** | 🟢 **MOVED, still open.** Reported imminent **with amendments**; the **12-month adequacy clock starts at publication**, so this is a dated engagement trigger |
+| 🟡 **sixth consecutive pass with no new agent** | 🟡 **CARRIED, with its cause recorded rather than left as silence:** the discovery channel returns **general** AI material — courses, curricula, curated lists — through education-shaped queries. Every candidate was run through `make carried` first |
+
 ## Pass 278 — **A DECLARED GAP THAT WAS A REDISCOVERY, AND THE GATE THAT WOULD HAVE CAUGHT IT EXISTS AND WAS NOT RUN**
 
 ⏱️ **Twenty-fourth pass of `2026-10-17`.** Append-only; nothing below is rewritten.

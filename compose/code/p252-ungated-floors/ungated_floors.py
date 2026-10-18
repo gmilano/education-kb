@@ -83,10 +83,34 @@ def is_gated(relpath: str, mk: str) -> bool:
 
     Matching on the FILE, not the directory: `p251`'s `321` came from counting
     directories, and a directory can hold a gated suite beside an ungated one.
+
+    🔴 p280, AND THE CENSUS FOUND IT ON ITSELF.  A BARE BASENAME IS NOT A FILE EITHER.
+    `p280` added `pass280-package-provenance/test_provenance.py` to `make hooks`, and this
+    predicate immediately credited `p791-registry-id-provenance/test_provenance.py` -- a
+    different suite, in a different directory, that NO recipe runs -- as gated, because the
+    two share a basename.  The pinned population moved by two for one added suite, which is
+    how it surfaced: `gated 37 -> 39`, `ungated 181 -> 180`.
+    🔵 That is `p251-prefix-collision`'s class (a short token colliding onto a real subject)
+    arriving inside the instrument that measures gating, and it is this docstring's own
+    lesson one step finer: `p251` moved from the DIRECTORY to the FILE, and the move from
+    the FILE to its BASENAME was never made.
+    🟢 A recipe reaches a suite when ONE LINE names both its DIRECTORY and its BASENAME --
+    which is the shape every recipe in this Makefile actually has, in both of its forms
+    (`cd compose/code/X && $(PY) test_y.py`, and `$(PY) -I compose/code/X/test_y.py`).
+    A directory alone still does not gate, so `p251`'s finding is preserved.
     """
     if relpath in GATE_FLOORS:
         return True
-    return relpath in mk or os.path.basename(relpath) in mk
+    if relpath in mk:
+        return True
+    base = os.path.basename(relpath)
+    folder = os.path.basename(os.path.dirname(relpath))
+    if not folder:
+        return base in mk
+    for line in mk.splitlines():
+        if base in line and folder in line:
+            return True
+    return False
 
 
 def walk(code_root: str = None):

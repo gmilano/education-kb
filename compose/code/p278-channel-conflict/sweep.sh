@@ -48,7 +48,16 @@ MANIFESTS="package.json pyproject.toml composer.json Cargo.toml pom.xml"
 # problem: the first `MANIFEST_CAP` non-vendored manifests in path order answer "does this
 # repository declare a grant per package", and what was SKIPPED is published, so the bound
 # is never invisible.  14 is `Athena`'s own manifest count -- the control case fits exactly.
-MANIFEST_CAP="${MANIFEST_CAP:-14}"
+# 🟢 p280 (`p279`'s declared item 3): THE CAP WAS THE CONTROL CASE'S OWN COUNT.  14 is
+# `Athena`'s manifest count, and `leemonade/leemons` has 114 -- so its published
+# "12 declaring" was 12 OF THE FIRST 14 READ, with 100 skipped.  A bound set to the size of
+# the example is not a bound on the corpus.  The cost it bounds is one
+# `raw.githubusercontent.com` GET per manifest; 250 covers every tree this base has
+# enumerated (max 114, measured) and `manifests_skipped` is still published, so a tree that
+# exceeds it still says so instead of looking complete.
+# 🔵 MEASURED after raising it: `leemons` reads 114 of 114, `0` skipped --
+# `evidence/package-provenance.2026-10-18-p280.tsv`.
+MANIFEST_CAP="${MANIFEST_CAP:-250}"
 PYBIN="${PYBIN:-python3}"
 
 # Enumerate every non-vendored manifest path in the tree.  Same channel as `enumerate.sh`:
@@ -130,7 +139,10 @@ _decl_from() { # _decl_from <manifest-name> <file>
 # p279 APPENDS its four columns rather than replacing any: every `channel-conflict.*.tsv`
 # already in `evidence/` stays readable against this header, and a diff between a p278 row
 # and a p279 row is a diff in the MEASUREMENT, not in the schema.
-printf 'slug\tdefault_ref\thead_sha\tpayload_path\tpayload_bytes\tpayload_family\tmanifest_path\tmanifest_declares\tverdict\tseverity\tnote\tmanifests_in_tree\tmanifests_declaring\tdeclared_distinct\tmanifests_skipped\tmanifests_foreign\troot_manifest_name\n'
+# p280 APPENDS two columns for the same reason p279 appended four: every earlier
+# `channel-conflict.*.tsv` stays readable against this header, so a diff between a p279 row
+# and a p280 row is a diff in the MEASUREMENT.
+printf 'slug\tdefault_ref\thead_sha\tpayload_path\tpayload_bytes\tpayload_family\tmanifest_path\tmanifest_declares\tverdict\tseverity\tnote\tmanifests_in_tree\tmanifests_declaring\tdeclared_distinct\tmanifests_skipped\tmanifests_foreign\troot_manifest_name\tmanifests_thirdparty\tthirdparty_paths\n'
 
 # Resolve the input ONCE, explicitly: a file argument if given, otherwise stdin.
 # 🔴 p279, MEASURED: the slug list is read on FD 3, not stdin.  With the per-package walk
@@ -173,7 +185,7 @@ while read -r slug <&3; do
 
   # ---- manifest channel, ENUMERATED PER PACKAGE (p279)
   m_path="-"; m_decl="-"; m_in_tree=0; m_declaring=0; m_skipped=0; m_distinct="-"
-  m_fallback=""; m_foreign=0; m_rootname="-"
+  m_fallback=""; m_foreign=0; m_rootname="-"; m_thirdparty=0; tp_paths=""
   declared_list=""
   # 🔵 Capture the status ONCE.  Distinguishing "the tree has no manifest" from "the clone
   # failed" matters -- `p278` could not tell them apart, and they are different findings:
@@ -226,6 +238,26 @@ while read -r slug <&3; do
         # 🟢 So the name is RECORDED, not enforced: a differing root name is a flag for
         # adjudication, which is how `p229` actually used it, and the vendoring exclusion
         # rests on the PATH predicate, which is controlled and was widened this pass.
+        # 🟢 p280 (`p279`'s declared item 1): THE DECLARED-PROVENANCE CHANNEL.  `p279`
+        # registered this as "a list of known third-party projects, which this base does
+        # not have" -- and the residual it named, `ui/static/pyodide/package.json`, needs
+        # no list: it declares `"repository": "https://github.com/pyodide/pyodide"` and
+        # `"homepage"` the same, in its own bytes.  A subpackage manifest that names
+        # ANOTHER repository is vendored; at the ROOT the same difference is only recorded,
+        # because `p436` measured three innocent causes for it and `p279` a fourth.
+        # 🔵 Both halves of the channel were already on this base's shelf
+        # (`lib/package_repo.sh::normalise_repo_url`, `p436-fork-hypothesis`), so
+        # `pass280-package-provenance/provenance.py` imports them rather than writing a
+        # third parser.  Coverage is bounded and published: 24 of 192 manifests across
+        # these 14 slugs declare a repository at all (12.5 %), and ONE of those 24 is the
+        # residual no path vocabulary could reach.
+        if $PYBIN -I "$HERE/../pass280-package-provenance/provenance.py" \
+             --row "$slug" "$br" "$mf" "$t" 2>/dev/null \
+             | awk -F'\t' '$8=="THIRD-PARTY" || $8=="THIRD-PARTY-NAMED"{found=1} END{exit !found}'; then
+          m_thirdparty=$((m_thirdparty + 1))
+          tp_paths="${tp_paths:+$tp_paths,}$mf"
+          rm -f "$t"; continue
+        fi
         if [ "$(awk -F/ '{print NF-1}' <<< "$mf")" -eq 0 ]; then
           m_rootname=$($PYBIN -I "$HERE/../p229-grant-ladder-reach/manifest_grant.py" \
             --attributable "$slug" "${mf##*/}" "$t" 2>/dev/null) || m_foreign=$((m_foreign + 1))
@@ -269,10 +301,11 @@ while read -r slug <&3; do
   if [ "$m_distinct" != "-" ] && [ "$m_distinct" -gt 1 ] 2>/dev/null; then
     note="$note; SUBPACKAGES DISAGREE ($m_distinct distinct declarations)"
   fi
-  printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' \
+  printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' \
     "$slug" "$br" "${sha:--}" "$p_path" "$p_bytes" "$p_fam" "$m_path" "$m_decl" \
     "$verdict" "$severity" "$note" \
-    "$m_in_tree" "$m_declaring" "$m_distinct" "$m_skipped" "$m_foreign" "${m_rootname:--}"
+    "$m_in_tree" "$m_declaring" "$m_distinct" "$m_skipped" "$m_foreign" "${m_rootname:--}" \
+    "$m_thirdparty" "${tp_paths:--}"
   sleep 1   # the session git proxy caps concurrent smart-HTTP ops; serialise deliberately
 done
 

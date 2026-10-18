@@ -327,6 +327,37 @@ while **North-West University became the first SA university with an official AI
 framework, not the vendor.** And every regional figure here is **secondary-source grade**: `p268`
 established the non-GitHub DNS failure as environmental, and no ministry document was read.
 
+## Pass 280 — no new permissive platform for a sixth pass, and the one candidate the leg returned has no readable licence
+
+🔵 **Evidence:** [`p280-inbound-raw.2026-10-18-p280.txt`](../evidence/p280-inbound-raw.2026-10-18-p280.txt)
+*(the platform leg, verbatim)*.
+
+🔴 **The mandated platform leg returned what this shelf already holds**, and the comparison pages it
+surfaced were mostly one vendor's own site:
+
+| what the leg named | this shelf's position |
+|---|---|
+| **Moodle** — GPLv3, most widely deployed, **LMS-only, no integrated SIS** | 🟢 CARRIED. `p273` established the plugin door is permissive; the core is GPL-3.0 |
+| **Open edX** — AGPLv3, originated at **MIT and Harvard**, now stewarded by **Axim Collaborative** | 🟢 CARRIED |
+| **Richie** (MIT) and **Aspects** (Apache-2.0), both built on Open edX | 🟢 CARRIED — components, not platforms |
+| 🟡 **OpenEduCat** — the **only** LMS **+ SIS** combination the leg found, *"consolidates LMS, SIS, fees and parent app on one database"* | 🔴 **the source does not state its licence**, and the pages describing it are **its own**. 🔵 Not shelved as a licence on a vendor's self-description — the question for `p281` is a payload read, not another search |
+
+🔵 **The structural point a studio needs is unchanged and was restated by this leg from the other
+side:** the deployed platforms in this industry are **copyleft** (Moodle GPL-3.0, Open edX AGPL-3.0),
+and the permissive surface is in the **extension points** — plugins, XBlocks, MCP servers, design
+systems. 🟢 **That is where this base's build-on tier lives, and it is a consequence of the licence
+map rather than a preference.**
+
+### 🔵 A deployment constraint for every platform on this shelf, from three jurisdictions
+
+**China** (MOE's 2025 generative-AI guide), **Brazil** (`Parecer CNE/CP nº 15/2026`, pending
+homologation) and **Singapore** (teacher roadmap, `p279`) independently prohibit or withhold
+**autonomous generative-AI use by the youngest learners** — primary pupils, up to the 5th year, and
+P1–P3 respectively. 🟢 **For a platform integration this is a routing requirement**: the pupil-facing
+surface must be able to run **teacher-mediated**, with the teacher as requester, per class or per year
+group. 🔴 **No platform on this shelf ships that as a built-in mode** — Moodle and Open edX both have
+the role model to express it, which makes it buildable rather than blocked.
+
 ## Pass 279 — no new permissive platform for a fifth pass, and the hardest procurement mandate on this shelf was legislated away
 
 🟡 **The mandated platform query returned this base's own shelf.** Moodle, Open edX, Sakai, ILIAS,

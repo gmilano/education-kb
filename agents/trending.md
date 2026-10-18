@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 280) — a SIXTH consecutive pass with no new agent, and the licence under the agent this shelf recommends first turns out to be institutionally held
+
+⏱️ **Second pass of `2026-10-18`.** Append-only — everything below this section is prior history and
+is not rewritten. Evidence:
+[`holder-candidates.2026-10-18-p280.tsv`](../evidence/holder-candidates.2026-10-18-p280.tsv) *(70
+holder candidates from three real full licence texts, each graded by the guard that rejects it)* ·
+[`package-provenance.2026-10-18-p280.tsv`](../evidence/package-provenance.2026-10-18-p280.tsv) ·
+[`p280-inbound-raw.2026-10-18-p280.txt`](../evidence/p280-inbound-raw.2026-10-18-p280.txt) *(12 legs,
+graded by `ACTION SH` before write-up: **0 hits**)*.
+
+### 🟢 `HKUDS/DeepTutor`'s Apache-2.0 grant is held by **The University of Hong Kong**, and this base could not see it
+
+Row 1 of [`agents/top.md`](top.md). Its real `LICENSE` fills the Apache appendix:
+
+```
+Copyright 2025 Data Intelligence Lab, The University of Hong Kong
+```
+
+🟢 **An institutionally-held permissive grant is a STRONGER build-on signal than an individually-held
+one** — the holder is a university lab, not a single maintainer, so the grant does not depend on one
+person's continued goodwill, and a client's legal review can name a counterparty. 🔴 **This base
+reported `NOT-APPLICABLE` for it**, because `p184-holder-mismatch` exempted every non-MIT/BSD/ISC
+family on the ground that *"the project's own copyright is not in the license text by construction"*.
+That argument is true of a licence's **terms** and false of its **appendix** when a project fills it
+in. See [`../README.md`](../README.md) for the full account; `GibbonEdu/core`'s verbatim GPL-3.0 does
+the same at line 655 (`Core  Copyright (C) 2010  Gibbon Foundation`).
+
+🟡 **The verdict prints as `HOLDER-UNRELATED` and that is the instrument's limit, not a warning:**
+`HKUDS` *is* HKU's Data Science group, and no token comparison bridges an acronym to its expansion.
+🔵 `p184`'s own rule governs the reading — **`HOLDER-UNRELATED` shortens the reading list, it does not
+decide it.**
+
+### 🟡 Sixth consecutive pass with no new agent — and the supply legs said why
+
+🔴 The mandated global legs returned **no education-specific agent repository** this base does not
+already hold, and one said so in its own words: *"I didn't find a single authoritative 2026 ranking of
+education-focused agent repos."*
+
+| candidate the legs returned | what it actually is | disposition |
+|---|---|---|
+| `microsoft/ai-agents-for-beginners` (MIT, ~67 k★ Jun 2026) | a **12-lesson course** | 🔴 `CARRIED`, and **not an agent** |
+| `pguso/agents-from-scratch` (MIT, 796★) | a **teaching repo**, no framework | 🔴 `CARRIED`, and not an agent |
+| `rohitg00/ai-engineering-from-scratch` | a curriculum; **#1 GitHub Trending `2026-05-24`** | 🔴 `CARRIED` |
+| `aneelv75/github-trending` | a curated list — `p279` enumerated its tree: **1 file, `NONE_IN_TREE`** | 🔴 **not a row, and the reason is recorded** |
+| `avinash201199/free-ai-agents-resources` (635★) | a learning hub; **licence not stated by the source** | 🔴 `CARRIED`; no licence shelved |
+
+🔵 **A nil with a reason is a finding; a nil with a row is padding.** The pattern across six passes is
+stable and worth naming: **the agent-discovery channel for education returns GENERAL AI material
+through education-shaped queries.** That is a property of the channel, and it is why the jurisdiction
+and platform legs are now where this base's new material comes from.
+
+### 🔵 Three education systems, three instruments, one line for the youngest learners
+
+| jurisdiction | instrument | the line |
+|---|---|---|
+| 🟢 **China** | MOE, *Guide to Using Generative AI in Primary and Secondary Schools* (**2025 Edition**) | **primary pupils barred from autonomous use of open-ended generative tools**; *"AI can complement but not replace human-led teaching"* |
+| 🟢 **Brazil** | `Parecer CNE/CP nº 15/2026` *(approved `2026-09-01`, **pending homologation**)* | **autonomous AI use prohibited up to the 5th year**, on UNESCO's **age-13** parameter |
+| 🟢 **Singapore** | Teacher AI Literacy Professional Learning Roadmap *(`p279`)* | **P1–P3 print-first, no chatbots**; MOE's own SLS tools from **P4** |
+
+🔵 **Written independently on three continents, converging on the same rule.** For an agent this is a
+**capability** requirement, not a policy footnote: a K-12 tutoring agent needs a **supervised /
+teacher-mediated mode** — one where the teacher is the requester and the pupil never holds an
+open-ended prompt — or it is undeployable in all three. 🟢 `DeepTutor`'s Socratic mode and
+`OATutor`'s structured-tutoring model are the closest shapes already on this shelf; neither ships
+teacher-in-the-loop *routing* as such. 🔵 **That is the gap a studio can build into**, and it is
+specified by three real instruments rather than by a hunch.
+
+### 🟢 `ACTION SH` fired clean for the first time in six passes, and the reason is substantive
+
+🔴 The claim that the EU AI Act's education high-risk obligations took effect **August 2026** arrived
+through the mandated EMEA leg for **five passes running**. 🟢 **`make inbound-claims` over this
+pass's entire research file returns `0` hits** — the sources now cite the amending instrument itself,
+**Regulation (EU) 2026/1744**, and `p279`'s *"the Digital Omnibus proposal requires approval"* caveat
+is settled: it is law *(Parliament `2026-06-16`, Council `2026-06-29`, OJ `2026-07-24`, in force
+`2026-07-27`)*. 🟡 **Still `SECONDARY-CONVERGENT, PRIMARY UNREAD`** — another secondary channel is not
+the Official Journal.
+
+🔴 **And one date now binds in weeks, not years:** **Article 50's marking grace for already-deployed
+systems expires `2026-12-02`** — two-sourced as of this pass, where it had been single-sourced. Annex
+III point 3 (*education*) is still **`2027-12-02`**.
+
 ## 2026-10-18 (pass 279) — a FIFTH consecutive pass with no new agent, and the per-package walk reproduces `p275`'s Athena census through a different instrument
 
 ⏱️ **First pass of `2026-10-18`.** Append-only — everything below this section is prior history and

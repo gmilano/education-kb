@@ -111,6 +111,60 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | [muskvdc/EduTwin-Africa](https://github.com/muskvdc/EduTwin-Africa) | LIVE, **PRE-LICENCE — the placeholder is still in the README** *(new in pass 269)* | Curriculum-aware tutor over **South African** curriculum knowledge, **Grades 8–12**: RAG, adaptive learning, bounded multi-agent collaboration, ReAct tools, guardrails. 0★ / 0 forks / 7 commits, default ref `main`. **No payload on 19 of 19 paths, no `license` field in `pyproject.toml`**, and the README says, in the author's own words: *"Add the project's chosen license here before publishing if a specific open-source license is required."* 🔵 **This is a state this shelf has not carried before.** `Athena` and `autoGrader-frontend` are *silent*; this one is **explicitly not yet licensed**. The practical difference is that it is the one row here where asking costs nothing and might work — the author has written down that they know it is missing. Until then: all rights reserved. |
 | [Valexxy/edunaija-os](https://github.com/Valexxy/edunaija-os) | LIVE, **no grant on any channel** *(new in pass 269)* | *"A security-conscious starter codebase for a Nigerian-first learning platform"*; `package.json` name is `nigeria-learning-platform`. 0★ / 0 forks / 6 commits. No payload on 19 of 19 paths and **no `license` field in `package.json`** — the two channels that could have carried a grant both empty. Names **no exam board and no institution**. 🔴 **Cite it carefully: it is NOT the EduNaija AI Tutor of the AfricaNLP 2026 paper** (that system is a five-agent LangChain + FAISS RAG tutor with English/Yoruba/Hausa/Igbo support; this is a starter codebase with a similar name). **Two different artefacts, one name** — see the trends file. |
 
+## Pass 280 — the licence under row 1 is held by a UNIVERSITY, and this shelf reported it as unanswerable
+
+🔵 **Evidence:** [`holder-candidates.2026-10-18-p280.tsv`](../evidence/holder-candidates.2026-10-18-p280.tsv)
+*(70 holder candidates from three real full licence texts, each graded by the guard that rejects it)* ·
+[`channel-conflict.2026-10-18-p280.tsv`](../evidence/channel-conflict.2026-10-18-p280.tsv) *(the 14
+metadata-graded slugs re-swept, `MANIFEST_CAP` `14 → 250`, two new columns)* ·
+[`fixtures/PROVENANCE.tsv`](../compose/code/pass280-package-provenance/fixtures/PROVENANCE.tsv)
+*(every payload a control now asserts, with `slug / ref / head_sha / sha256 / date`)*.
+
+### 🟢 `HKUDS/DeepTutor` — **Apache-2.0, held by `Data Intelligence Lab, The University of Hong Kong`**
+
+Read first-hand from the repository's own `LICENSE` payload this pass. The Apache template puts the
+holder in an **appendix** that most projects ship unfilled; `DeepTutor` filled it:
+
+```
+Copyright 2025 Data Intelligence Lab, The University of Hong Kong
+```
+
+🟢 **For a studio this strengthens the row rather than qualifying it.** The counterparty on the
+permissive grant is a **university lab**, not an individual maintainer — the grant does not rest on
+one person's continued goodwill, and a client's legal review has a nameable institution. 🔴 **This
+base published `NOT-APPLICABLE` ("holder not in the license text by construction") for every
+non-MIT/BSD/ISC family for 96 passes**, so the strongest provenance fact about its top row was
+invisible. 🟡 The holder-vs-account comparison prints `HOLDER-UNRELATED`, which is the instrument's
+limit and **not** a fork signal: `HKUDS` is HKU's Data Science group, and no token test bridges an
+acronym to its expansion.
+
+🔵 **Same class, different family:** `GibbonEdu/core` fills the **GPL-3.0** appendix at line 655 —
+`Core  Copyright (C) 2010  Gibbon Foundation` — so a verbatim-GPL payload can carry the project's own
+holder too. `moodle/moodle`'s `COPYING` ships it **unfilled** (`<year> <name of author>`), which is
+why the construction argument held for so long. The discriminator is a **year** between `Copyright`
+and the name; all three payloads are controlled.
+
+### 🔴 Two metadata-graded build-on rows change their measured licence shape
+
+| row | published before | measured this pass |
+|---|---|---|
+| 🔴 **[codelitdev/courselit](https://github.com/codelitdev/courselit)** | manifest **MIT**, `1` distinct declaration across the tree | 🔴 **`2` distinct: 14 manifests MIT, `packages/scripts/package.json` (`@courselit/scripts`) ISC.** Committed payload is **AGPL-3.0**, so the row keeps `MANIFEST-OVERSTATES` — and a studio vendoring `packages/scripts/` gets **ISC**, not the root's MIT and not the payload's AGPL |
+| 🟢 **[DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms)** | 🟡 flagged `manifests_foreign = 1` — its root `package.json` names `canvas-mcp-server`, which matches neither half of the slug | 🟢 **CLEARED.** The same manifest declares `"repository": "git+https://github.com/DMontgomery40/mcp-canvas-lms.git"` — its own repository. **Naming a package differently from its repository is ordinary**, and the declared channel proves it here rather than asking a reader to assume it |
+
+🟡 **Three of the four root-name flags are NOT cleared** — `cccareers/open-source-curriculum`,
+`codeXsidd/Studivexa` and `Gnanakamalesh-M/student-dropout-early-warning` **declare no repository at
+all**, so for them the name difference stays *recorded, never enforced*.
+
+### 🟢 `Open-TutorAi/open-tutor-ai-CE` — the row's licence conflict was an artefact, and it is excluded by code now
+
+The second "declaration" in this repository's tree was a **bundled Pyodide runtime** under
+`ui/static/pyodide/`, Apache-2.0, which produced a false *"SUBPACKAGES DISAGREE (2 distinct)"* note.
+🟢 The bundled manifest declares `"repository": "https://github.com/pyodide/pyodide"` in its own
+bytes, so it is excluded by **what it says about itself** rather than by a path convention or a
+hand-maintained list of library names. The row's own grant is unchanged: **BSD-3-Clause payload**
+against a **MIT** `pyproject.toml` — `p121`'s row 8, still the same wrong-name-both-permissive
+verdict.
+
 ## Pass 278 — the metadata grade, measured on the other channel: four build-on rows have NO committed grant, and the tree proves it
 
 🔵 **Evidence:** [`channel-conflict.2026-10-17-p278.tsv`](../evidence/channel-conflict.2026-10-17-p278.tsv)

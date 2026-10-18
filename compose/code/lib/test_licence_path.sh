@@ -39,6 +39,19 @@ no_lic  "licenses.json"
 yes_bun "node_modules/foo/LICENSE"; yes_bun "vendor/bar/COPYING"
 yes_bun "web/third_party/x/LICENSE"; yes_bun ".venv/lib/LICENSE"
 no_bun  "LICENSE"; no_bun "docs/License.txt"; no_bun "aoe-web-frontend/LICENSE"
+# 🟢 p280: los caches de build.  `codeXsidd/Studivexa` sirve
+# `frontend/.vite/deps/package.json` -- el cache del optimizador de dependencias de Vite,
+# comprometido al arbol.  Medido en `evidence/package-provenance.2026-10-18-p280.tsv`.
+yes_bun "frontend/.vite/deps/package.json"        # el caso REAL medido
+yes_bun ".vite/deps/package.json"
+yes_bun "apps/web/.next/standalone/package.json"
+yes_bun ".turbo/cache/x/package.json"
+# 🔴 Y LOS NEGATIVOS, porque un ensanchamiento sin ellos se traga paquetes reales: el mismo
+# error que `p279` cometio dos veces en una hora con el vocabulario de rutas.
+no_bun  "packages/vite-plugin-foo/package.json"   # un paquete PROPIO que nombra a vite
+no_bun  "vite.config.ts"
+no_bun  "src/nextjs/package.json"                 # `.next` es el cache; `nextjs` no
+no_bun  "turbo.json"
 # --- casos nuevos de p197, de las rutas que esta pasada leyo de verdad -----------------
 yes_lic "license.txt"                             # frappe/education -- minuscula, 19 B
 yes_lic "License"                                 # una de las 3 raices que la escalera perdio

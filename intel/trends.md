@@ -7,6 +7,13 @@ updated: 2026-10-18
 # Trends — Education, October 2026
 
 > What changed, what it means for a studio engagement, and how confident the evidence is.
+>
+> **`T67`–`T69` are new in pass 280** — the K-12 autonomous-use prohibition that three
+> jurisdictions wrote independently, the same three converging again on who may decide a grade,
+> and the measured observation that this base's remaining expensive errors are the **bounds and
+> floors inside its own instruments** rather than facts about the world
+> ([evidence](../evidence/package-provenance.2026-10-18-p280.tsv),
+> [evidence](../evidence/holder-candidates.2026-10-18-p280.tsv)).
 > **T1–T9 are from pass 264. T10 is revised and T11–T14 are new in pass 265. T15–T17 are new in
 > pass 266, which also revises T10 a second time and T14. T28–T31 are new in pass 270** — the
 > European use-vs-efficacy gap, this base catching itself asserting a propagation it never
@@ -2008,3 +2015,68 @@ classifier was widened twice**, and both gaps are instructive:
 were clean on all five occasions; the cost was a human re-adjudicating the same fact every hour, and
 the risk was the one pass that doesn't. `p223`'s gate is also **standing** now — `make hooks` had never
 run it, 56 passes after it was written.
+
+## T67 — Three education systems on three continents independently prohibit unsupervised generative AI for the youngest learners, and that is a product requirement
+
+🟢 **Written down, dated, and arrived at separately:**
+
+| jurisdiction | instrument | the line it draws |
+|---|---|---|
+| **China** | MOE, *Guide to Using Generative Artificial Intelligence in Primary and Secondary Schools* (**2025 Edition**) | **primary pupils barred from autonomous use of open-ended content-generating tools**; *"AI can complement but not replace human-led teaching"* |
+| **Brazil** | `Parecer CNE/CP nº 15/2026` *(approved `2026-09-01`, **pending homologation**)* | **autonomous AI use prohibited up to the 5th year**, citing UNESCO's **age-13** parameter |
+| **Singapore** | Teacher AI Literacy Professional Learning Roadmap *(Aug 2025, `p279`)* | **P1–P3 print-first, no chatbots**; MOE's own SLS tools from **P4** |
+
+🔵 **Three regulators, three legal traditions, no shared drafting process, one rule.** A convergence
+of that kind stops being policy news and becomes a **design constraint**: a K-12 product needs a
+**teacher-mediated mode** in which the teacher is the requester and the pupil never holds an
+open-ended prompt — not a content filter, a different *routing* of the request.
+
+🔴 **Nothing on these shelves ships it.** `DeepTutor`'s Socratic mode and `OATutor`'s structured
+tutoring are the nearest shapes; both still assume a pupil-initiated turn. 🟢 Moodle and Open edX
+both have the role model to express the constraint, so this is buildable on what is already shelved.
+
+🟡 **Confidence:** the Chinese and Singaporean instruments are issued; **Brazil's is not yet
+binding**, and its *reported* amendments do not touch this clause. The convergence holds on two of
+three today and three of three on homologation.
+
+## T68 — The same instruments converge a second time, on who may decide a grade
+
+🟢 **Maryland `SB 720`** bars AI from being the **primary basis for high-stakes decisions such as
+grading or discipline**, and requires **human-in-the-loop** use. 🟢 **Brazil's pending parecer** is
+reported to be homologated **with an amendment barring AI tools from determining a pupil's approval
+or failure — marks given only by teachers.** 🔵 **A US state statute and a Brazilian national
+parecer, independently, draw the same line in the same place.**
+
+🔴 **This is the harder of the two constraints to retrofit**, because it is architectural rather than
+modal: an assessment product whose scoring path can *produce* a final mark has to grow a
+**recommendation + teacher-adjudication** boundary, with the adjudication **recorded**. 🟢 A product
+built that way is sellable in both jurisdictions and reads as defensible in every other, which makes
+it the safer default even where nothing yet binds.
+
+🔵 **What a studio should take from `T67` and `T68` together:** the two most common K-12 AI product
+shapes — *pupil-facing chat tutor* and *automated grader* — are each **directly constrained by
+written instruments in multiple regions**, and the constraints are **capability-shaped**, so they can
+be designed for once rather than negotiated per deal.
+
+## T69 — This base's most expensive errors are no longer facts, they are the BOUNDS and FLOORS inside its own instruments
+
+🔵 Measured over `p279` and `p280`, a pattern worth naming because it changes where to look:
+
+| the defect | what it was | what it cost |
+|---|---|---|
+| a **cap** set to the control case's own size (`MANIFEST_CAP = 14`, `Athena`'s manifest count) | an honest, **published** bound | 🔴 a **6×** error in `leemons`'s declaring count, and a **hidden** second conflict in `courselit` |
+| a **path vocabulary** (`is_bundled`) | a list of conventions somebody enumerated | 🔴 defeated **twice by one repository in one hour**; a committed `.vite` cache in the denominator |
+| a **word list** (`SENTENCE`, the holder guard) | a list of prose words somebody enumerated | 🔴 a GPL body fragment published as a copyright holder |
+| a **family exemption** (`HOLDER_FAMILIES`) | a true statement about licence **templates** | 🔴 the whole copyleft half of a **503-slug** sweep silently skipped, and the holder of this shelf's **top row** invisible for 96 passes |
+| a **basename match** (`is_gated`, the gate census) | a reach proof that was a string match | 🔴 an unrun suite counted as gated — **a coverage measurement erring in the only direction it must not** |
+
+🔵 **The common shape: each one is a list or a threshold that was CORRECT when written, published
+honestly, and then read as a measurement.** None was a wrong fact; every one produced wrong numbers.
+🟢 **The durable replacements were all structural rather than enumerative** — read what the artefact
+declares about itself (`repository`, a dated appendix), or anchor on a shape (a lowercase run, a
+`(directory, basename)` pair) — and they were **cheaper** than extending the lists, not more
+expensive.
+
+🔵 **Operationally:** when an instrument on these shelves publishes a bound, the next pass's question
+is not *"is the bound documented"* but *"what does the corpus look like past it"* — and when it
+publishes a vocabulary, *"what does the artefact say about itself instead"*.

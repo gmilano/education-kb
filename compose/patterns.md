@@ -1741,3 +1741,55 @@ instrument number. 🔵 **Price it as research infrastructure, not a report** �
 quarter's question; this stops the question being re-asked every hour by whoever searched last.
 🔴 **And wire it in rather than document it:** this base's own gate for this exact class existed,
 passed its controls, and **had never been run by `make hooks` in 56 passes.**
+
+## P36 — Teacher-mediated K-12 tutoring for the three jurisdictions that prohibit unsupervised use
+
+**Where it is live now:** 🟢 **China** (MOE's *Guide to Using Generative AI in Primary and Secondary
+Schools*, 2025 Edition — primary pupils barred from autonomous open-ended generative tools) ·
+🟢 **Singapore** (teacher roadmap — **P1–P3 print-first, no chatbots**, MOE's own SLS tools from
+**P4**) · 🟢 **Brazil** (`Parecer CNE/CP nº 15/2026` — **autonomous use prohibited up to the 5th
+year**; *pending homologation, reported imminent with amendments, **12-month adequacy window from
+publication***). See [`../intel/trends.md`](../intel/trends.md) `T67`.
+
+**Why it is a pattern and not a filter:** the constraint is on **who makes the request**, not on what
+comes back. A content filter in front of a pupil-initiated chat turn satisfies none of the three.
+
+### The wiring
+
+| layer | what to use | licence | why this one |
+|---|---|---|---|
+| tutoring engine | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — **Socratic** and **Quiz** modes | **Apache-2.0**, held by **Data Intelligence Lab, The University of Hong Kong** *(payload-verified `p280`)* | 🟢 the holder is an **institution**, so the grant does not rest on one maintainer — the strongest provenance on this shelf |
+| knowledge state | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | the pupil model must live **outside** the chat surface, because the pupil may not drive the chat surface |
+| request routing | the **LMS role model** — Moodle *(GPL-3.0)* capabilities or Open edX *(AGPL-3.0)* roles | copyleft **at the platform**, permissive at the extension point | 🔵 the teacher is the authenticated requester; the pupil's client never holds a prompt. `p273`: the Moodle plugin door is permissive, so the extension you write is yours |
+| transport | an **MCP server** per data source, behind the LMS's own auth | per server | `T3`: MCP is the integration layer; keep the pupil-facing surface with **no tool of its own** |
+
+### The flow, which is the whole pattern
+
+1. The **teacher** selects a class, an objective and a pupil or group inside the LMS.
+2. The platform — **not the model** — resolves the pupil's knowledge state from `pykt`.
+3. `DeepTutor` runs in **Socratic** mode against *that* state and returns **candidate prompts,
+   hints and a next step**, to the **teacher's** screen.
+4. The teacher releases a step to the pupil. 🔴 **The pupil's surface renders released content and
+   accepts bounded replies only** — no free-text prompt reaches a model.
+5. Every release and every pupil reply is written to the LMS's own log, **per pupil, per objective**.
+
+### What the deliverable is
+
+🟢 **A release gate and an audit trail, not a chatbot.** The sellable artefact is step 3→5: the
+teacher-facing review queue, the release control, and the per-pupil record of what was released and
+by whom. 🔵 **That record is also what answers `T68`** — Maryland `SB 720` bars AI as the primary
+basis for grading or discipline, and Brazil's amendment bars AI from determining approval or failure,
+so a system that already records *human released this, human adjudicated that* has the evidence both
+regimes ask for. 🔴 **Build the teacher-facing half first**: in all three jurisdictions it is the only
+half that is unambiguously permitted today.
+
+### What to check before quoting
+
+- 🔴 **Brazil: the binding text is not the text that was approved.** Homologation is reported
+  imminent **with amendments**; re-check `pcp015_26.pdf` against the DOU homologating act, and start
+  the **12-month** clock from that publication, not from `2026-09-01`.
+- 🟡 **China: brief the two 2025 guidelines and Beijing's ≥ 8 class hours per pupil per year.** The
+  *"required in all schools from 2026–27"* claim is **secondary-only** and should not appear in a
+  proposal.
+- 🟢 **Licence surface:** `DeepTutor` Apache-2.0 and `pykt` MIT are both **payload-verified**. The
+  platform is copyleft; your extension is not, provided it stays on the documented extension point.

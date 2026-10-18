@@ -42,18 +42,65 @@ check('composer array is a disjunction',
       'OSL-3.0 | AFL-3.0')
 
 # ---- T229-M2: the foreign manifest ----------------------------------------------------
-check('T229-M2 upstream skeleton is NOT attributable',
+# 🔴 p280 (`p279`'s declared item 2): FOUR OF THESE CONTROLS NAMED A REAL REPOSITORY AND
+# ASSERTED A PAYLOAD IT DOES NOT SERVE.  `p279` found the worst one: the scope control
+# asserted `{"name":"@dmontgomery40/mcp-canvas-lms"}` and expected `True`, while the
+# repository's real root `package.json` declares `"name": "canvas-mcp-server"` -- on which
+# `attributable` returns **False**.  So the control that was supposed to prove
+# *"a scoped npm name attributes fine"* passed on an invented payload while the real one
+# exercised the opposite branch, which is exactly the false positive `p279` then had to
+# neutralise by making the name RECORDED instead of ENFORCED.
+#
+# 🔵 THE DISTINCTION THAT MAKES THIS A CLASS AND NOT A TYPO.  A control whose subject is
+# SYNTHETIC (`a/b`, `{"name":"x"}`) is a unit test of the predicate and is legitimate as
+# written.  A control that NAMES A REAL SLUG makes a claim about that repository, and a
+# claim about a repository has to come from the repository's bytes.  The four below are of
+# the second kind, so they read CAPTURED PAYLOADS -- byte-for-byte, with
+# `slug/ref/head_sha/sha256/date` recorded in `pass280-package-provenance/fixtures/
+# PROVENANCE.tsv` -- and cannot drift from what the repository serves again.
+FIXTURES = HERE + '/../pass280-package-provenance/fixtures'
+
+
+def payload(name):
+    """The captured bytes, or a LOUD failure.  A missing fixture must never read as a pass."""
+    try:
+        return open(FIXTURES + '/' + name, encoding='utf-8').read()
+    except OSError as e:
+        FAILED.append('fixture %s unreadable: %s' % (name, e))
+        return ''
+
+
+# 🟢 REAL, and it reproduces the finding `T229-M2` was built on: a fork serving upstream's
+# manifest at its own root.  Captured 2026-10-18 at `55ad5acbc42e`.
+check('T229-M2 upstream skeleton is NOT attributable (REAL payload)',
       mg.attributable('LMS-Laravel/LMS-Laravel', 'composer.json',
-                      '{"name":"laravel/laravel","license":"MIT"}')[0], False)
-check('T229-M2 magento fork is NOT attributable',
+                      payload('LMS-Laravel.root.composer.json'))[0], False)
+# 🟢 REAL.  `p229` asserted the licence array as `["OSL-3.0"]`; the repository serves TWO
+# elements, so the disjunction is asserted here as well -- the truncated literal could not
+# have caught a parser that drops the tail.
+check('T229-M2 magento fork is NOT attributable (REAL payload)',
       mg.attributable('alfredang/ai-mms', 'composer.json',
-                      '{"name":"openmage/magento-lts","license":["OSL-3.0"]}')[0], False)
-check('T229-M2 CONTROL own name IS attributable',
+                      payload('ai-mms.root.composer.json'))[0], False)
+check('T229-M2 the REAL composer array is a two-term disjunction',
+      mg.read('composer.json', payload('ai-mms.root.composer.json'))['value'],
+      'OSL-3.0 | AFL-3.0')
+# 🟢 REAL, and it is the genuine scoped-name case: `p229` asserted the UNSCOPED spelling
+# `sisu-mcp`; the repository serves `@ink-waffle/sisu-mcp`.  Same verdict, real bytes --
+# and this, not `mcp-canvas-lms`, is what exercises the `@scope/pkg` branch.
+check('T229-M2 CONTROL scoped own name IS attributable (REAL payload)',
       mg.attributable('ink-waffle/sisu-mcp', 'package.json',
-                      '{"name":"sisu-mcp","license":"MIT"}')[0], True)
-check('T229-M2 CONTROL npm scope IS attributable',
+                      payload('sisu-mcp.root.package.json'))[0], True)
+# 🔴 REAL, AND THE VERDICT IS THE OPPOSITE OF WHAT THE INVENTED CONTROL ASSERTED.  This is
+# `attributable`'s documented FALSE POSITIVE when used as a REJECTION, pinned so that any
+# future pass tempted to enforce the name channel meets it: naming a package differently
+# from its repository is ordinary.
+check('T229-M2 the REAL mcp-canvas-lms root name is NOT attributable',
       mg.attributable('DMontgomery40/mcp-canvas-lms', 'package.json',
-                      '{"name":"@dmontgomery40/mcp-canvas-lms"}')[0], True)
+                      payload('mcp-canvas-lms.root.package.json'))[0], False)
+check('T229-M2 and the REAL declared name is canvas-mcp-server, not the scoped slug',
+      mg.manifest_owner('package.json', payload('mcp-canvas-lms.root.package.json')),
+      'canvas-mcp-server')
+# 🟢 SYNTHETIC BY DESIGN and left as written: the subject is the predicate, not a repository.
 check('T229-M2 CONTROL silence is not a counter-claim',
       mg.attributable('a/b', 'package.json', '{"license":"MIT"}')[0], True)
 

@@ -102,9 +102,38 @@ FLOORS = uf.read_floors()
 # 🔵 SEVENTH consecutive pass where this census catches the new instrument first, and the
 # STREAK is the finding rather than the arithmetic: seven passes running, no pass has added
 # an instrument and remembered this pin without the census going red first.
-chk("python test files on disk", len(ROWS), 218)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 37)
+# 🟢 p280: 218 -> 219 and 37 -> 38.  `pass280-package-provenance` ships ONE suite
+# (`test_provenance.py`) and it arrives INSIDE `make hooks` as `gate-provenance`, so
+# `ungated` stays at 181 and the `71`/`110` partition is untouched.
+# 🔴 AND THIS PIN IS WHAT CAUGHT A DEFECT IN `is_gated` ITSELF.  One added suite moved the
+# gated literal by TWO, because `is_gated` matched a BARE BASENAME against the Makefile and
+# `p791-registry-id-provenance/test_provenance.py` -- which no recipe runs -- shares that
+# basename.  The predicate is line-anchored on `(directory, basename)` now; see its
+# docstring.  🔵 A census whose counts are pinned is how a predicate's defect becomes
+# visible at all: an unpinned census would have reported 39 gated and been believed.
+chk("python test files on disk", len(ROWS), 219)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 38)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
+# 🔴 p280's regression control for the basename collision, both arms.  A gate-census that
+# cannot tell two same-named suites apart over-reports its own coverage, which is the one
+# direction a coverage measurement must never err in.
+import ungated_floors as _uf  # noqa: E402
+chk("p280 a shared BASENAME does not gate an unrun suite",
+    _uf.is_gated("p791-registry-id-provenance/test_provenance.py",
+                 "cd compose/code/pass280-package-provenance && python3 test_provenance.py"),
+    False)
+chk("p280 ...and the suite the recipe DOES name is still gated",
+    _uf.is_gated("pass280-package-provenance/test_provenance.py",
+                 "cd compose/code/pass280-package-provenance && python3 test_provenance.py"),
+    True)
+chk("p280 the path form gates too",
+    _uf.is_gated("p230-prose-path-ladder/test_prose_path_ladder.py",
+                 "python3 -I compose/code/p230-prose-path-ladder/test_prose_path_ladder.py"),
+    True)
+chk("p280 a DIRECTORY alone still does not gate (p251, preserved)",
+    _uf.is_gated("pass280-package-provenance/test_provenance.py",
+                 "cd compose/code/pass280-package-provenance && ls"),
+    False)
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",
     sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]), 110)

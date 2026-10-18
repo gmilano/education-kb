@@ -22,9 +22,9 @@ PY ?= python3
 GATE_LOG ?= /tmp/education-kb-gate-enumeration.log
 TABLE_LOG ?= /tmp/education-kb-gate-tables.log
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep
 
-hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, plus p223's date gate made standing
+hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel
 
 # 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
 # p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
@@ -103,6 +103,35 @@ DATES_LOG ?= /tmp/education-kb-gate-dates.log
 gate-dates: ## ACTION p279 — the KB may not ASSERT a date it has already refuted
 	@cd compose/code/p223-selfclaim-date-gate && { $(PY) -I gate.py --self-test > $(DATES_LOG) 2>&1 || { echo "🔴 p223-selfclaim-date-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(DATES_LOG) ; false ; } ; } && echo "── p223-selfclaim-date-gate (15 controls: ASSERTED / ATTRIBUTED / QUOTED / CORRECTED)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p223-selfclaim-date-gate/gate.py . || exit 1
+
+
+# 🟢 p280 (`p279`'s declared items 1 and 2).
+# ITEM 1 asked for "a KNOWN-THIRD-PARTY NAME channel ... this base has no such list".
+# 🔴 The remedy as registered needed a list this base would have had to invent, and a name
+# vocabulary can only reject the projects somebody enumerated -- `p279`'s own sentence about
+# its path vocabulary, one layer out.  The residual it named,
+# `Open-TutorAi/open-tutor-ai-CE  ui/static/pyodide/package.json`, DECLARES ITS OWN
+# PROVENANCE: `"repository": "https://github.com/pyodide/pyodide"`, `"homepage"` the same.
+# 🔵 And both halves of that channel were already on the shelf --
+# `lib/package_repo.sh::normalise_repo_url` (pass 75) and `p436-fork-hypothesis` (pass 24,
+# with the measured warning that a differing declaration has three innocent causes) -- so
+# the instrument imports them instead of writing a third parser.
+# ITEM 2: four `T229-M2` controls named real repositories and asserted payloads they do not
+# serve.  The fixtures are captured now, with `slug/ref/head_sha/sha256/date`, and
+# `--verify` keeps them captured.  No network.
+PROV_LOG ?= /tmp/education-kb-gate-provenance.log
+
+gate-provenance: ## ACTION p280 — a vendored manifest is identified by what it DECLARES, not by a list
+	@cd compose/code/pass280-package-provenance && { $(PY) -I test_provenance.py > $(PROV_LOG) 2>&1 || { echo "🔴 pass280-package-provenance FAILED — the suite's own report follows:" ; sed "s/^/   /" $(PROV_LOG) ; false ; } ; } && echo "── pass280-package-provenance (31 controls: the residual p279 called unreachable, and the workspace packages that must NOT be rejected)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/pass280-package-provenance/invented_payload_census.py --verify || exit 1
+
+provenance-census: ## ACTION p280 — which controls name a real repo and assert bytes nobody read?
+	@$(PY) -I compose/code/pass280-package-provenance/invented_payload_census.py --census
+
+# 🔴 ONLINE half — needs a blobless clone + raw.githubusercontent.com.  OUT of `hooks`.
+provenance-sweep: ## ACTION p280 — grade every manifest in a slug list: make provenance-sweep SLUGS=f
+	@test -n "$(SLUGS)" || { echo "usage: make provenance-sweep SLUGS=path/to/slugs.txt"; exit 2; }
+	@compose/code/pass280-package-provenance/measure.sh "$(CURDIR)/$(SLUGS)"
 
 # 🔴 ONLINE-ADJACENT half (`ACTION SH`, registered since p226): the same table, run against
 # a file of INBOUND research text rather than the KB's own prose.  Takes a file, so it stays

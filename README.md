@@ -4,6 +4,288 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 280 — 2026-10-18 — **THE CHANNEL `p279` SAID THIS BASE DID NOT HAVE WAS ALREADY ON ITS SHELF IN TWO HALVES, THE CAP IT RANKED THIRD WAS HIDING A 6× ERROR IN THE MOST CONSEQUENTIAL ROW, AND THE AUDIT IT ASKED FOR REFUTED A FACT THIS BASE HAS ASSERTED FOR 96 PASSES**
+
+⏱️ **Second pass of `2026-10-18`.** Evidence:
+[`package-provenance.2026-10-18-p280.tsv`](evidence/package-provenance.2026-10-18-p280.tsv) —
+**192 manifests across 14 slugs, graded per package, 10 columns** ·
+[`channel-conflict.2026-10-18-p280.tsv`](evidence/channel-conflict.2026-10-18-p280.tsv) — **the
+same 14 slugs re-swept with the new channel wired in, 19 columns** ·
+[`holder-candidates.2026-10-18-p280.tsv`](evidence/holder-candidates.2026-10-18-p280.tsv) — **70
+holder candidates from three real full licence texts, each graded by the guard that rejects it** ·
+[`p280-inbound-raw.2026-10-18-p280.txt`](evidence/p280-inbound-raw.2026-10-18-p280.txt) — **12 legs,
+4 region-wide + 8 jurisdiction/global, graded by `ACTION SH` before a word of it was written up**.
+
+### 🟢 Headline: item 1 asked for a LIST. The thing it was a list *of* declares itself.
+
+`p279` ranked this first, at zero searches:
+
+> *"Give the manifest walk a KNOWN-THIRD-PARTY NAME channel. The path vocabulary is a floor —
+> proved twice by one repository this pass — and the residual (`ui/static/pyodide/`) is only
+> reachable by name."*
+
+🔴 **The remedy as registered is the defect it replaces, one layer out.** `p279` wrote the argument
+itself about its own path vocabulary — *"a path vocabulary can only reject the conventions somebody
+enumerated"* — and a **name** vocabulary can only reject the projects somebody enumerated. A floor
+built to replace a floor.
+
+🟢 **The residual needs no list, because the vendored manifest states its own provenance.** Read
+first-hand this pass, `Open-TutorAi/open-tutor-ai-CE` `ui/static/pyodide/package.json`:
+
+```json
+{ "name": "pyodide",
+  "homepage":   "https://github.com/pyodide/pyodide",
+  "repository": { "type": "git", "url": "https://github.com/pyodide/pyodide" },
+  "license": "Apache-2.0" }
+```
+
+The payload `p279` declared unreachable by any channel names the repository it belongs to, **in two
+fields, in its own bytes**.
+
+🔵 **AND BOTH HALVES OF THAT CHANNEL WERE ALREADY ON THIS SHELF:**
+
+| half | where it already was | built for |
+|---|---|---|
+| URL → `owner/repo`, with the loud verdict vocabulary (`NO-REPO`, `NON-GITHUB`, `UNRESOLVABLE-HOST`) | `lib/package_repo.sh::normalise_repo_url` | **pass 75, `2026-10-09`** — the *registry* channel |
+| declared slug vs cited slug → `SELF` / `UPSTREAM`, **plus the measured warning that a difference has three innocent causes and only one is a fork** | `p436-fork-hypothesis/resolve_homepage.py` | **pass 24, `2026-10-07`** |
+
+🟢 So `compose/code/pass280-package-provenance/` **imports both and writes no third parser**, and
+`p436`'s warning is what sets the depth rule: at the **root** a differing declaration is *recorded*
+(`p436`'s three causes, plus `p279`'s fourth — naming a package differently from its repository is
+ordinary); at **depth > 0** a subpackage declaring another repository is **vendored**.
+
+🟢 **Measured, wired into `p278`'s walk, and the artefact is gone:**
+
+```
+                                     p279                      p280
+Open-TutorAi/open-tutor-ai-CE   3 in tree, 2 declaring,   3 in tree, 1 declaring,
+                                2 DISTINCT                1 distinct, 1 THIRD-PARTY
+                                "SUBPACKAGES DISAGREE"    (ui/static/pyodide/package.json)
+```
+
+🔵 **`p278` typed that row's verdict by hand** — *"🟡 ARTEFACT — a bundled Pyodide runtime"* — and it
+is **excluded by code** now, which is the `p228 → p229` move this Makefile's own header describes.
+
+🔴 **THE COVERAGE IS BOUNDED AND PUBLISHED, because a channel that answers sometimes is not a
+channel that answers:** **24 of 192 manifests (12.5 %) declare a repository at all.** The honest
+claim is not *"provenance is solved"* — it is that **the 12.5 % contains the one vendored manifest no
+path vocabulary reached**, and the name floor (10 projects + 4 scopes, `make -s provenance-census`
+prints it) sits *below* the declared channel rather than instead of it.
+
+### 🔴 Item 3: the cap was the CONTROL CASE'S OWN COUNT, and it was hiding a 6× error
+
+`MANIFEST_CAP` was `14`. **`14` is `ls1intum/Athena`'s manifest count** — the example the walk was
+debugged on. `leemonade/leemons` has **114**.
+
+| row | p279 published | p280 measured, cap `250`, **0 skipped** |
+|---|---|---|
+| 🔴 **`leemonade/leemons`** | `12` declaring, **100 skipped** | 🔴 **`72` declaring of 114** — all 72 **MIT** |
+| `classroomio/classroomio` | `2` declaring, 13 skipped | `5` declaring |
+| 🔴 **`codelitdev/courselit`** | `10` declaring, 5 skipped, **`1` distinct** | 🔴 **`15` declaring, `2` DISTINCT** |
+
+🔴 **`leemons`'s headline verdict is now six times better evidenced and says the same thing:**
+`MANIFEST-OVERSTATES` — **72 manifests declare MIT over a committed `LICENSE.md` that is FAIRCODE.**
+A studio that reads *any* of 72 manifests gets a permissive answer; the committed grant is not one.
+
+🔴 **AND REMOVING THE BOUND FOUND A CONFLICT THAT WAS INSIDE IT.** `codelitdev/courselit` was
+published with `1` distinct declaration; reading all 19 manifests instead of the first 14 shows
+**14 MIT and `packages/scripts/package.json` (`@courselit/scripts`) declaring ISC** — the same shape
+`p279` graded **REAL** for `classroomio` (`apps/api` ISC over a MIT root). 🟡 Both permissive, so the
+exposure is low; 🔵 **the finding is that a published bound hid a published-false count**, and
+`courselit` is a **build-on** row.
+
+### 🔴 Item 2: four controls named a real repository and asserted bytes nobody had read
+
+`p279` scoped this to one control. Measured on all four:
+
+| control, as `p229` wrote it | what the repository serves | verdict |
+|---|---|---|
+| `LMS-Laravel` `{"name":"laravel/laravel","license":"MIT"}` | 🟢 exactly that | **REAL** |
+| `ai-mms` `{"name":"openmage/magento-lts","license":["OSL-3.0"]}` | 🟡 licence array has **two** terms, `["OSL-3.0","AFL-3.0"]` | **TRUNCATED** |
+| `sisu-mcp` `{"name":"sisu-mcp"}` | 🟡 `@ink-waffle/sisu-mcp` — the **scoped** form | **APPROXIMATED** |
+| 🔴 `mcp-canvas-lms` `{"name":"@dmontgomery40/mcp-canvas-lms"}`, expecting `True` | 🔴 **`"name": "canvas-mcp-server"`**, on which `attributable` returns **`False`** | **INVENTED, AND THE OPPOSITE VERDICT** |
+
+🔴 **The control that existed to prove *"a scoped npm name attributes fine"* passed on a payload
+nobody served, while the real payload exercised the branch that produced `p279`'s false positives.**
+🟢 All four read **captured bytes** now, with `slug / ref / head_sha / sha256 / date` in
+[`fixtures/PROVENANCE.tsv`](compose/code/pass280-package-provenance/fixtures/PROVENANCE.tsv), and the
+real scoped payload (`sisu-mcp`) is what exercises the `@scope/pkg` branch.
+
+🟢 **And the declared channel SETTLES one of the four root-name flags `p279` could only record:**
+`mcp-canvas-lms`'s root declares `git+https://github.com/DMontgomery40/mcp-canvas-lms.git` — its own
+repository. **1 of 4 cleared; 3 (`open-source-curriculum`, `Studivexa`, `student-dropout-early-warning`)
+declare no repository at all, so for them `p279`'s record-don't-enforce still stands.**
+
+🔵 **The AUDIT is the half worth building, and it needed a discriminator, not a sweep.** A control
+whose subject is **synthetic** (`a/b`, `{"name":"x"}`) is a unit test of a predicate and is correct as
+written. A control that **names a real slug** asserts that a particular repository serves particular
+bytes. `make provenance-census` separates them: **59 slug-shaped literals near a payload → 15
+RPC-method (`tools/call` is not a repository), 23 not-a-slug, 7 declared-synthetic, and `14`
+CANDIDATE across 8 distinct slugs — `0` of which had recorded provenance before this pass.**
+🔵 **Its own vocabularies are floors and say so:** the durable discriminator is `--resolve`, one
+`git ls-remote` per candidate, because a slug that resolves is a real repository whatever a list says.
+
+### 🔴 And auditing two of those candidates refuted a fact this base has asserted for 96 passes
+
+`p184-holder-mismatch` holds two real-slug controls. Both assert payloads their repositories do not
+serve — and `GibbonEdu/core`'s real `LICENSE` (the verbatim GPL-3.0, **35 121 B**) refutes the
+instrument's central argument.
+
+🔴 **`extract_holder.classify` returned `NOT-APPLICABLE` for every copyleft family**, on the stated
+ground that *"the project's own copyright is not in the file at all"*. **That is true of the GPL's
+TERMS and false of its APPENDIX.** `GibbonEdu/core`, line **655**:
+
+```
+    Core  Copyright (C) 2010  Gibbon Foundation
+```
+
+🔴 **The holder IS in the licence text, dated and plainly stated, and the instrument answered "not
+answerable".** 🔵 **Why it survived:** the control for that branch is `moodle/moodle`'s real
+`COPYING`, which ships the appendix **UNFILLED** (`<year> <name of author>`) — the argument was
+validated on the unfilled case only, and `PLACEHOLDER`, already in the file, is exactly what tells
+them apart. 🟡 **And the invented control was *right about the world and wrong about the bytes*:
+`HOLDER-MATCH / Gibbon Foundation` is what the repository supports — asserted under the MIT family,
+so it proved nothing about the GPL path where the question actually lives.** An invented payload that
+reaches the right answer is still not evidence.
+
+🔴 **The same is true of `HKUDS/DeepTutor`, this shelf's top row, whose own fixture refutes its own
+control:** its real Apache-2.0 `LICENSE` fills the appendix with **`Copyright 2025 Data Intelligence
+Lab, The University of Hong Kong`**. 🟢 **So the licence under the agent this base recommends first
+is INSTITUTIONALLY held — a stronger build-on signal than an individually-held permissive grant, and
+this base could not see it.** 🟡 The verdict is `HOLDER-UNRELATED` and that is the instrument's honest
+limit, not a fork signal: `HKUDS` *is* HKU's Data Science group and no token test bridges the acronym.
+
+🟢 **Three fixes, each measured rather than read, and the second was `D7`'s own defect re-committed:**
+
+1. 🔴 The `SENTENCE` guard is a **lexical floor** and the real GPL text walks through it:
+   `'on the Program, and are irrevocable provided the stated'`. **Not one of its words is on the
+   list.** 🟢 Replaced by a **structural** predicate — three or more consecutive all-lowercase words
+   is prose, whatever the words are — explicitly **not** *"starts lowercase"*, which would reject
+   `openSUSE Project` and `ownCloud GmbH`.
+2. 🔴 **Letting every copyleft text fall through to `holder()` re-opened exactly what `D7` closed**:
+   `DeepTutor`'s Apache payload then published `'statement to Your modifications and'` as a holder.
+   🟢 So the appendix reader is the **DATED** one, which is structural: a filled notice carries a
+   **year** between `Copyright` and the name, and body prose does not.
+3. 🔴 Even the structural run-length rule left **one** survivor, `'are not'` — two words, below the
+   threshold. 🟢 A **name carries a capital or a digit**; a multi-word candidate with neither is
+   prose. Single lowercase words are left alone, so `tldraw` survives.
+
+🔵 **MEASURED, NOT DESIGNED**: all **70** candidates from the three real full texts are graded in
+[`holder-candidates.2026-10-18-p280.tsv`](evidence/holder-candidates.2026-10-18-p280.tsv). Of 29
+(GPL filled) + 29 (GPL unfilled) + 12 (Apache filled), **exactly three survive all four guards**, and
+the year is what separates the two that are real from the one that is prose. **`p184`: 22 → 30
+controls, six of them negative controls on the widened predicate.**
+
+### 🔵 Three floors widened in one pass, and the third was caught by the census ON ITSELF
+
+| floor | what defeated it | the durable form |
+|---|---|---|
+| `SENTENCE` (lexical holder guard) | the real GPL-3.0 body | **structural**: lowercase runs, capital/digit test |
+| `is_bundled` (vendored paths) | 🟢 `codeXsidd/Studivexa` serves **`frontend/.vite/deps/package.json`** — Vite's dependency-optimiser **cache**, committed | `.vite` `.next` `.nuxt` `.turbo` added, **4 positive + 4 negative controls** so the widening cannot swallow `packages/vite-plugin-foo/` |
+| 🔴 `is_gated` (`p252`'s gate census) | **`p280`'s own new suite** | line-anchored `(directory, basename)` |
+
+🔴 **The third is the sharpest.** Adding ONE gated suite moved `p252`'s pinned literals by **TWO** —
+`gated 37 → 39`, `ungated 181 → 180` — because `is_gated` matched a **bare basename** against the
+Makefile, and `p791-registry-id-provenance/test_provenance.py`, **which no recipe runs**, shares that
+basename with `pass280-package-provenance/test_provenance.py`. 🔵 **A gate census that cannot tell
+two same-named suites apart over-reports its own coverage**, which is the one direction a coverage
+measurement must never err in. It is `p251-prefix-collision`'s class inside the instrument that
+measures gating, and it is `is_gated`'s own docstring one step finer: `p251` moved from the
+**directory** to the **file**; the move from the file to its **basename** was never made.
+🟢 **Fixed, with both arms controlled, and a census whose counts are PINNED is the only reason it was
+visible at all** — unpinned, it would have reported 39 gated and been believed.
+🟢 Population now **219 / 38 gated / 181 ungated / 71 silent-zero / 110 immune**.
+
+### 🟢 `make hooks` is green with the new gate standing, and `ACTION SH` fired clean for the first time
+
+```
+── pass280-package-provenance (31 controls)                              PASS
+   1 pinned suite(s) still read CAPTURED payloads
+ALL OFFLINE LICENCE CONTROLS PASS                                        exit 0
+```
+
+🟢 **`make inbound-claims` over this pass's whole research file: `0` hits.** The claim that the EU AI
+Act's education high-risk obligations took effect **August 2026** arrived for **five passes running**;
+this is the **first leg in six that does not carry it**, and the reason is substantive rather than
+lucky — the sources now cite the amending instrument itself.
+
+🔴 **And `make claims` STOPPED an absence this pass's own research would have published.** The North
+America leg ended *"I did not find any U.S. Department of Education federal guidance"*. The gate
+returned `ALREADY CLAIMED … STOP` over **23 cells in `intel/market.md`** and exited 1: this base holds
+**Federal Register `2026-07087`** (*Secretary's Supplemental Priority on Advancing AI in Education*,
+published `2026-04-13`) — 🔵 **a GRANTS instrument that weights discretionary competitions and binds
+no school**, which is the distinction the shelf row already draws. The leg's gap was the channel's,
+not the world's.
+
+### 🟢 The regional battery: 4 region-wide legs, 8 targeted, and `T53` demonstrated a FOURTH time
+
+🔴 **Three of four region-wide queries named no education-specific instrument, player or figure.**
+That is `T53` again, and the jurisdiction retries answered immediately.
+
+| region | the region-wide query | the targeted retry |
+|---|---|---|
+| 🟡 **North America** | market-research pages only; one secondary claim of **~36 % regional share**, *"only 10 % of institutions have formal AI guidelines"*, *"71 % of U.S. teachers lack AI training"* | 🔴 **0 new instruments** — `SB 720`, `SB 1227`, `SB 394`, Ohio and Oklahoma are all **CARRIED**. 🟢 New: **`HB 1186`** is `SB 394`'s House companion (on this shelf only in the README until now), and the 2026 session count is **134 bills across 31 states** *(tracker figures, two sources disagreeing on the enacted count)* |
+| 🔴 **EMEA** | 🔴 **INFORMATIVE NIL on education.** *"The results don't name education-sector players … or any EMEA education AI rules."* Only general AI-adoption context | 🟢 **Regulation (EU) 2026/1744 reproduced EXACTLY as shelved** — Parliament `2026-06-16`, Council `2026-06-29`, signed `2026-07-08`, **OJ `2026-07-24`, in force `2026-07-27`**, Annex III pt 3 **`2027-12-02`**, Annex I `2028-08-02`. 🟡 **The grade does NOT change: still `SECONDARY-CONVERGENT, PRIMARY UNREAD`** — another secondary channel is not the Official Journal. 🟢 **Two upgrades:** the Article 50 **marking grace to `2026-12-02`** goes from single- to **two-sourced** *(and it is **six weeks away**)*, and `p279`'s *"the Digital Omnibus proposal requires approval"* caveat is **settled — it is law** |
+| 🔴 **APAC** | 🔴 **INFORMATIVE NIL on education policy.** *"Nothing I found addresses AI rules for schools or universities."* Supply side only: TCS × Pearson upskilling alliance, LearnUpon's Sydney HQ | 🟢 **China** returns dated instruments: **two 2025 MOE guidelines** (general AI education + the *Guide to Using Generative AI in Primary and Secondary Schools, 2025 Edition*), **primary pupils barred from autonomous open-ended generative tools**, *"AI can complement but not replace human-led teaching"*; **2026-04-10 (CGTN)** AI enters **teacher examinations** and the ministry will define objectives, content and **class hours** per level; **Beijing: ≥ 8 class hours/pupil/year**. 🔴 The *"required in all elementary and middle schools from 2026–27"* claim is **secondary-only — not confirmed against any ministry document**. 🟡 **Australia: INFORMATIVE NIL on a new 2026 instrument** — the *Australian Framework for Generative AI in Schools* (released **2023-12-01**, **six principles, no penalties**) was reviewed by education ministers in **June 2025** and found **fit for purpose**; **no revised 2026 framework**; binding rules sit with the states. 🟢 Live work: ESA × AERO **product expectations**, **A$1.8 M** from Education Ministers |
+| 🟢 **LATAM** | 🟢 **the one region-wide leg that returned material**: **UNESCO IESALC × UNU-IAS working paper, September 2026**, surveying **200 HEIs in 19 countries** (fieldwork late 2025); ILIA 2025 with CEPAL; a 2025 comparative study of HE AI rules in **Argentina, Brazil, Chile, Peru, Spain** | 🟢 **The ranked homologation watch MOVED.** `Parecer CNE/CP nº 15/2026`: approved **2026-09-01**, DOU summary **2026-10-06**, and **2026-10-13 reporting says minister Leonardo Barchini would homologate that week WITH CHANGES** — one of them **barring AI tools from determining pass/fail, with marks given only by teachers**. 🔴 **Still NOT homologated in any source found**, and under **art. 2 of Lei nº 9.131/1995 it has no normative force until the homologating act is published**. 🟢 New substance: **risk-tiered classification of AI uses**, a **12-month adequacy window after homologation**, and **autonomous AI use prohibited up to the 5th year** on UNESCO's age-13 parameter |
+
+### 🔵 One rule, three jurisdictions, three instruments — and it is a product constraint
+
+🟢 **China** bars primary pupils from autonomous open-ended generative tools · 🟢 **Brazil**'s pending
+parecer prohibits autonomous AI use **up to the 5th year** · 🟢 **Singapore** keeps **P1–P3**
+print-first with no chatbots *(`p279`)*. 🔵 **Three education systems on three continents, written
+independently, converge on the same line: no unsupervised generative AI for the youngest learners.**
+A K-12 product without a **supervised / teacher-mediated mode** is not deployable in any of them, and
+that is a design constraint rather than a compliance note — see
+[`compose/patterns.md`](compose/patterns.md).
+
+### 🟡 Sixth consecutive pass with no new agent, and the supply test ran first
+
+🔴 The global supply legs returned **no education-specific agent repository** this base does not
+hold. What they returned — `microsoft/ai-agents-for-beginners` (MIT, ~67 k★), `pguso/agents-from-scratch`
+(MIT, 796★), `rohitg00/ai-engineering-from-scratch` — are **courses and curricula, not education
+agents**, and one leg said so outright: *"I didn't find a single authoritative 2026 ranking of
+education-focused agent repos."* 🔵 **A nil with a reason is a finding; a nil with a row is padding.**
+The platform leg likewise returned only what is shelved (Moodle GPL-3.0, Open edX AGPL-3.0, Richie
+MIT, Aspects Apache-2.0), plus **OpenEduCat** as the one LMS+SIS combination — 🔴 **licence not stated
+by the source, so it is not shelved as a licence**.
+
+### 🔵 Declared gaps and the backlog for `p281`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked, the first two at zero searches:
+
+1. 🔴 **Run `--resolve` over the 14 CANDIDATE control sites.** The census's buckets are floors by
+   construction; one `git ls-remote` per candidate turns *"looks like a slug"* into *"is a
+   repository"*, and then the 8 distinct slugs can be adjudicated against their served bytes the way
+   `p229`'s four and `p184`'s two were. **6 of 8 are still unread.**
+2. 🔴 **Re-grade every GPL/AGPL row's holder.** The `by construction` exemption silently skipped the
+   whole copyleft half of a **503-slug** sweep, and on an education shelf that half is large (Moodle
+   plugins, `GibbonEdu`, `LearnPress`). `GibbonEdu` proves at least one filled appendix exists; nobody
+   knows how many.
+3. 🟡 **Raise `MANIFEST_CAP`'s bound honestly, or prove it is not reached.** `250` covers every tree
+   enumerated so far (max **114**) and is still a number chosen against today's corpus.
+4. 🟡 **Sweep the remaining metadata-graded rows** — `p278` did four, `p279` 14, `p280` re-swept the
+   same 14 with two new columns; the census found **107** metadata/manifest-graded rows in all.
+5. 🟡 **Scope the absence queue to the latest statement per subject** (`T56`, carried from `p277`,
+   `p278`, `p279`).
+6. 🟡 **Work the `ABSENCE-QUEUED` backlog** — **124 refuted / 239 queued** in whole-corpus census
+   mode; **nobody has read the 124.**
+7. 🔵 **Brazil: watch for the homologating act in the DOU.** It is now reported as imminent **with
+   amendments**, so the text that becomes binding is **not** the text this base has read — and the
+   **12-month adequacy window starts on that publication**.
+8. 🔵 **EMEA: the Article 50 marking grace expires `2026-12-02`** — six weeks out, two-sourced, and
+   the first AI Act date that binds an education deployment *now* rather than in 2027.
+9. 🔵 **Read the primary texts on an egress-enabled run** — the Official Journal for Reg (EU)
+   2026/1744 first *(every date on these shelves is secondary)*, then `pcp015_26.pdf`,
+   `Ley 2626`'s articles, CBSE `Acad-15/2026` and MEXT. 🔴 Not dischargeable here (`T61`, measured on
+   two client channels).
+10. 🟡 **Colombia: one shelved attribution is now contested.** This shelf says `Ley 2626`'s
+    *lineamientos* are owed by **MEN jointly with MinTIC and MinCiencias**; this pass's source names
+    **MEN with a `Comisión Nacional de Educación Digital`** and a **≥ 3-year review cycle**. Both are
+    secondary. 🔴 **And `PL 418/2026` proposes adding an `art. 3A` to `Ley 2626` on ethical AI and
+    social-media use** — the statute this base calls LATAM's first binding instrument has a pending
+    amendment, so the spec a client is mapped against may move.
+
 ## Pass 279 — 2026-10-18 — **THE GATE `p278` ASKED FOR IS BUILT, AND BUILDING IT FOUND THREE MORE INSTRUMENTS THAT WERE NEVER WIRED, NEVER RUN, OR WRONG ONE LAYER DOWN**
 
 ⏱️ **First pass of `2026-10-18`.** Evidence:

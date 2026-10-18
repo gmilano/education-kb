@@ -380,6 +380,38 @@ from absence.
   good figure on noise is as bad as publishing a bad one. Three independent agreements, including
   one to the byte, say this base's APAC licence cells are sound.**
 
+## Pass 280 — the bound on "no grant here" was the example's own size, and lifting it corrected the biggest count on this shelf
+
+🔵 **Evidence:** [`channel-conflict.2026-10-18-p280.tsv`](../evidence/channel-conflict.2026-10-18-p280.tsv)
+*(14 slugs, 19 columns, `MANIFEST_CAP` `14 → 250`, **0 skipped on every row**)* ·
+[`package-provenance.2026-10-18-p280.tsv`](../evidence/package-provenance.2026-10-18-p280.tsv) *(192
+manifests graded per package)*.
+
+`p279` closed by making every vendored-manifest count on these shelves **a lower bound**, because a
+path vocabulary is a floor. 🟢 **Two of the three bounds are now closed, and the third is named.**
+
+| bound | p279 | p280 |
+|---|---|---|
+| 🔴 the **cap** — `MANIFEST_CAP = 14`, which is `ls1intum/Athena`'s own manifest count | `leemonade/leemons`: **12 declaring of 114, 100 skipped** | 🟢 **72 declaring of 114, 0 skipped** — a **6× correction** |
+| 🔴 the **residual** no path convention reaches (`ui/static/pyodide/`) | *"only reachable by name … this base has no such list"* | 🟢 **reached, with no list** — the payload declares `pyodide/pyodide` in `repository` **and** `homepage` |
+| 🟡 the **path vocabulary** itself | two conventions added | 🟡 **a third class added** (`.vite` `.next` `.nuxt` `.turbo` build caches), **and it is still a floor** — stated, not claimed closed |
+
+### 🔴 `leemonade/leemons` — the same verdict, six times better evidenced
+
+**72 of 114 manifests declare `MIT`.** The committed `LICENSE.md` (10 830 B) is **FAIRCODE**.
+🔵 `p121`'s operational rule is what a studio needs here — *"a manifest licence field is a HINT; the
+committed licence file is the GRANT"* — and the number of hints is now 72. 🔴 **Any manifest-reading
+licence scanner returns PASS on this repository**, and the obligation it misses is non-commercial.
+🟢 **42 of the 114 declare nothing at all**, which is the honest remainder: silence, not a grant.
+
+### 🟢 The counts that did NOT move are the control
+
+`ls1intum/Athena` reads **14 in tree / 12 declaring / 1 distinct / 0 skipped** — `p275`'s census
+exactly, now reproduced by a **third** independent instrument (`p275`'s enumeration, `p279`'s walk,
+`p280`'s per-package grader). 🔵 **A vendoring predicate that rejects a monorepo's own workspace
+packages destroys the very count it was added to protect** — `p279` measured that when a root-name
+check rejected 12 of Athena's 14 — so `Athena` is the negative control, and it is unchanged.
+
 ## Pass 279 — a vendored-path exclusion is a FLOOR, so every "no grant here" on this shelf is a lower bound
 
 🟢 **`p278` established that *a licence file inside a repository is not the repository's licence*

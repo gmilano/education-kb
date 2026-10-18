@@ -1,0 +1,193 @@
+slug	ref	path	depth	bytes	declared_name	declared_repo	verdict	reason	declares_licence
+leemonade/leemons	main	package.json	0	2779	leemons-monorepo	leemonade/leemons	OWN-DECLARED	manifest declares this repository	MIT
+leemonade/leemons	main	apps/dev/package.json	2	6185	leemons-app	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	packages/leemons-academic-portfolio/package.json	2	700	@leemons/academic-portfolio	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-aws/package.json	2	236	@leemons/aws	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	packages/leemons-cache/package.json	2	789	@leemons/cache	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-common/package.json	2	595	@leemons/common	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-cronjobs/package.json	2	623	@leemons/cronjobs	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-deployment-manager/package.json	2	796	@leemons/deployment-manager	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-emails/package.json	2	919	@leemons/emails	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-error/package.json	2	713	@leemons/error	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-hooks/package.json	2	197	leemons-hooks	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-library/package.json	2	606	@leemons/library	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-lrn/package.json	2	583	@leemons/lrn	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-menu-builder/package.json	2	662	@leemons/menu-builder	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-middlewares/package.json	2	699	@leemons/middlewares	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-mongodb-helpers/package.json	2	633	@leemons/mongodb-helpers	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-mongodb/package.json	2	856	@leemons/mongodb	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-mqtt/package.json	2	691	@leemons/mqtt	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-multi-events/package.json	2	726	@leemons/multi-events	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-multilanguage/package.json	2	778	@leemons/multilanguage	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-permissions/package.json	2	635	@leemons/permissions	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-providers/package.json	2	620	@leemons/providers	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-react/package.json	2	1967	@leemons/react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-runner/package.json	2	916	@leemons/runner	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-service-name-parser/package.json	2	545	@leemons/service-name-parser	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-testing/package.json	2	326	@leemons/testing	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	packages/leemons-transactions/package.json	2	538	@leemons/transactions	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-users/package.json	2	560	@leemons/users	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-utils/package.json	2	636	@leemons/utils	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-validator/package.json	2	703	@leemons/validator	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-widgets/package.json	2	635	@leemons/widgets	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-xapi/package.json	2	530	@leemons/xapi	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-academic-calendar/backend/package.json	3	1293	leemons-plugin-academic-calendar	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-academic-calendar/frontend/package.json	3	632	leemons-plugin-academic-calendar-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-academic-portfolio/backend/package.json	3	1408	leemons-plugin-academic-portfolio	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-academic-portfolio/frontend/package.json	3	1573	leemons-plugin-academic-portfolio-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-admin/backend/package.json	3	1334	leemons-plugin-admin	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-admin/frontend/package.json	3	681	leemons-plugin-admin-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-assignables/backend/package.json	3	1257	leemons-plugin-assignables	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-assignables/frontend/package.json	3	1327	leemons-plugin-assignables-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-attendance-control/backend/package.json	3	1304	leemons-plugin-attendance-control	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-attendance-control/frontend/package.json	3	504	leemons-plugin-attendance-control-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-board-messages/backend/package.json	3	1328	leemons-plugin-board-messages	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-board-messages/frontend/package.json	3	484	leemons-plugin-board-messages-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-bulk-data/backend/package.json	3	1167	leemons-plugin-bulk-data	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-calendar/backend/package.json	3	1377	leemons-plugin-calendar	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-calendar/frontend/package.json	3	1523	leemons-plugin-calendar-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-common/backend/package.json	3	1150	leemons-plugin-common	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-common/frontend/package.json	3	634	leemons-plugin-common-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-comunica/backend/package.json	3	1371	leemons-plugin-comunica	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-comunica/frontend/package.json	3	550	leemons-plugin-comunica-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-content-creator/backend/package.json	3	1374	leemons-plugin-content-creator	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-content-creator/frontend/package.json	3	669	leemons-plugin-content-creator-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-curriculum/backend/package.json	3	1363	leemons-plugin-curriculum	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-curriculum/frontend/package.json	3	1280	leemons-plugin-curriculum-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-dashboard/backend/package.json	3	1322	leemons-plugin-dashboard	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-dashboard/frontend/package.json	3	552	leemons-plugin-dashboard-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-dataset/backend/package.json	3	1262	leemons-plugin-dataset	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-dataset/frontend/package.json	3	985	leemons-plugin-dataset-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-deployment-manager/backend/package.json	3	1158	leemons-plugin-deployment-manager	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-deployment-manager/frontend/package.json	3	325	leemons-plugin-deployment-manager-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-emails-aws-ses/backend/package.json	3	1222	leemons-plugin-emails-aws-ses	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-emails-aws-ses/frontend/package.json	3	352	leemons-plugin-emails-aws-ses-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-emails-smtp/backend/package.json	3	1191	leemons-plugin-emails-smtp	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-emails-smtp/frontend/package.json	3	349	leemons-plugin-emails-smtp-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-emails/backend/package.json	3	1287	leemons-plugin-emails	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-emails/frontend/package.json	3	396	leemons-plugin-emails-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-families-emergency-numbers/backend/package.json	3	1211	leemons-plugin-families-emergency-numbers	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-families-emergency-numbers/frontend/package.json	3	210	leemons-plugin-families-emergency-numbers-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-families/backend/package.json	3	1316	leemons-plugin-families	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-families/frontend/package.json	3	570	leemons-plugin-families-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-feedback/backend/package.json	3	1419	leemons-plugin-feedback	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-feedback/frontend/package.json	3	1136	leemons-plugin-feedback-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-fundae/backend/package.json	3	1300	leemons-plugin-fundae	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-fundae/frontend/package.json	3	511	leemons-plugin-fundae-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-gateway/backend/package.json	3	944	leemons-plugin-gateway	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-grades/backend/package.json	3	1278	leemons-plugin-grades	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-grades/frontend/package.json	3	1142	leemons-plugin-grades-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-layout/backend/package.json	3	967	leemons-plugin-layout	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-layout/frontend/package.json	3	420	leemons-plugin-layout-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-learning-paths/backend/package.json	3	1363	leemons-plugin-learning-paths	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-learning-paths/frontend/package.json	3	644	leemons-plugin-learning-paths-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-leebrary-aws-s3/backend/package.json	3	1048	leemons-plugin-leebrary-aws-s3	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-leebrary-aws-s3/frontend/package.json	3	264	leemons-plugin-leebrary-aws-s3-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-leebrary/backend/package.json	3	2140	leemons-plugin-leebrary	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-leebrary/frontend/package.json	3	1866	leemons-plugin-leebrary-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-menu-builder/backend/package.json	3	1213	leemons-plugin-menu-builder	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-menu-builder/frontend/package.json	3	1766	leemons-plugin-menu-builder-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-mqtt-aws-iot/backend/package.json	3	1416	leemons-plugin-mqtt-aws-iot	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-mqtt-aws-iot/frontend/package.json	3	521	leemons-plugin-mqtt-aws-iot-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-mqtt-socket-io/frontend/package.json	3	518	leemons-plugin-mqtt-socket-io-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-multilanguage/backend/package.json	3	1209	leemons-plugin-multilanguage	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-multilanguage/frontend/package.json	3	1018	leemons-plugin-multilanguage-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-package-manager/frontend/package.json	3	173	leemons-plugin-package-manager-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-scores/backend/package.json	3	1310	leemons-plugin-scores	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-scores/frontend/package.json	3	1329	leemons-plugin-scores-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-scorm/backend/package.json	3	1344	leemons-plugin-scorm	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-scorm/frontend/package.json	3	670	leemons-plugin-scorm-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-tasks/backend/package.json	3	1354	leemons-plugin-tasks	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-tasks/frontend/package.json	3	746	leemons-plugin-tasks-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-tests/backend/package.json	3	1413	leemons-plugin-tests	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-tests/frontend/package.json	3	626	leemons-plugin-tests-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-timetable/backend/package.json	3	1297	leemons-plugin-timetable	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-timetable/frontend/package.json	3	419	leemons-plugin-timetable-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-transactions/backend/package.json	3	933	leemons-plugin-transactions	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-users/backend/package.json	3	1692	leemons-plugin-users	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-users/frontend/package.json	3	1292	leemons-plugin-users-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-widgets/backend/package.json	3	1163	leemons-plugin-widgets	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-widgets/frontend/package.json	3	349	leemons-plugin-widgets-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-xapi/backend/package.json	3	1118	leemons-plugin-xapi	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+leemonade/leemons	main	plugins/leemons-plugin-xapi/frontend/package.json	3	254	leemons-plugin-xapi-frontend-react	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	packages/leemons-react/src/templates/package.json	4	475	{{it.name}}	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-families-emergency-numbers/frontend/src/package.json	4	71	frontend-src	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+leemonade/leemons	main	plugins/leemons-plugin-package-manager/frontend/src/package.json	4	71	frontend-src	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+classroomio/classroomio	main	package.json	0	4399	classroomio	-	OWN-DECLARED	root manifest names this repository	MIT
+classroomio/classroomio	main	apps/api/package.json	2	2821	@cio/api	classroomio/classroomio	OWN-DECLARED	manifest declares this repository	ISC
+classroomio/classroomio	main	apps/course-app/package.json	2	1548	@cio/course-app	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	apps/dashboard/package.json	2	4243	@cio/dashboard	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	apps/docs/package.json	2	913	@cio/docs	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	apps/embeds/package.json	2	1412	@cio/embeds	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	apps/encoder/package.json	2	449	@cio/encoder	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	apps/help-cms/package.json	2	399	@cio/help-cms	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	apps/help/package.json	2	897	@cio/help	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	apps/jobs/package.json	2	2051	@cio/jobs-worker	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	apps/tenant-router/package.json	2	404	@cio/tenant-router	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	apps/website/package.json	2	1691	@cio/website	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/ai-assistant/package.json	2	1290	@cio/ai-assistant	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/analytics/package.json	2	808	@cio/analytics	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/certificates/package.json	2	502	@cio/certificates	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/core/package.json	2	1925	@cio/core	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/course-app/package.json	2	1125	@classroomio/course-app	classroomio/classroomio	OWN-DECLARED	manifest declares this repository	MIT
+classroomio/classroomio	main	packages/db/package.json	2	5436	@cio/db	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/email/package.json	2	1135	@cio/email	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/jobs/package.json	2	1633	@cio/jobs	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/mcp/package.json	2	1328	@classroomio/mcp	classroomio/classroomio	OWN-DECLARED	manifest declares this repository	MIT
+classroomio/classroomio	main	packages/question-types/package.json	2	665	@cio/question-types	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/storybook/package.json	2	1702	@cio/storybook	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/tsconfig/package.json	2	140	@cio/tsconfig	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+classroomio/classroomio	main	packages/ui/package.json	2	3233	@cio/ui	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/utils/package.json	2	3042	@cio/utils	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+classroomio/classroomio	main	packages/course-app/src/template/package.json	4	1410	courseapp	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+codelitdev/courselit	main	package.json	0	3052	courselit	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	apps/docs-new/package.json	2	1003	@courselit/docs-new	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+codelitdev/courselit	main	apps/docs/package.json	2	761	@courselit/docs	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+codelitdev/courselit	main	apps/queue/package.json	2	1714	@courselit/queue	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+codelitdev/courselit	main	apps/web/package.json	2	4965	@courselit/web	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+codelitdev/courselit	main	packages/common-logic/package.json	2	1629	@courselit/common-logic	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/common-models/package.json	2	1262	@courselit/common-models	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/components-library/package.json	2	3151	@courselit/components-library	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/email-editor/package.json	2	2196	@courselit/email-editor	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/icons/package.json	2	1267	@courselit/icons	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/orm-models/package.json	2	1555	@courselit/orm-models	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/page-blocks/package.json	2	2242	@courselit/page-blocks	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/page-models/package.json	2	1095	@courselit/page-models	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/page-primitives/package.json	2	1825	@courselit/page-primitives	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/scripts/package.json	2	837	@courselit/scripts	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	ISC
+codelitdev/courselit	main	packages/tailwind-config/package.json	2	811	tailwind-config	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/text-editor/package.json	2	2467	@courselit/text-editor	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/tsconfig/package.json	2	515	tsconfig	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+codelitdev/courselit	main	packages/utils/package.json	2	1443	@courselit/utils	codelitdev/courselit	OWN-DECLARED	manifest declares this repository	MIT
+tadreeb-lms/tadreeblms	main	composer.json	0	2627	rappasoft/laravel-boilerplate-upgraded	-	ROOT-NAME-DIFFERS	root manifest names neither the owner nor the repository -- RECORDED (p279: naming a package differently from its repository is ordinary)	MIT
+tadreeb-lms/tadreeblms	main	package.json	0	2059	-	-	SILENT	no name and no repository field -- attributed here	-
+LearnPress/learnpress	develop	composer.json	0	1878	learnpress/learnpress	LearnPress/learnpress	OWN-DECLARED	manifest declares this repository	GPL-3.0-or-later
+LearnPress/learnpress	develop	package.json	0	2892	learnpress	LearnPress/LearnPress	OWN-DECLARED	manifest declares this repository	ISC
+LearnPress/learnpress	develop	packages/dependecy-extraction-webpack-plugin/package.json	2	124	@learnpress/dependency-extraction-webpack-plugin	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+cccareers/open-source-curriculum	main	package.json	0	894	course-content-player	-	ROOT-NAME-DIFFERS	root manifest names neither the owner nor the repository -- RECORDED (p279: naming a package differently from its repository is ordinary)	MIT
+Gnanakamalesh-M/student-dropout-early-warning	main	pyproject.toml	0	5034	dropout-ews	-	ROOT-NAME-DIFFERS	root manifest names neither the owner nor the repository -- RECORDED (p279: naming a package differently from its repository is ordinary)	-
+Gnanakamalesh-M/student-dropout-early-warning	main	frontend/package.json	1	1074	dropout-ews-frontend	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+Open-TutorAi/open-tutor-ai-CE	main	pyproject.toml	0	4009	open-tutorai	-	OWN-DECLARED	root manifest names this repository	-
+Open-TutorAi/open-tutor-ai-CE	main	ui/package.json	1	4115	open-tutorai	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+Open-TutorAi/open-tutor-ai-CE	main	ui/static/pyodide/package.json	3	3270	pyodide	pyodide/pyodide	THIRD-PARTY	subpackage manifest declares a DIFFERENT repository -- vendored	Apache-2.0
+codeXsidd/Studivexa	main	package.json	0	855	student-management-backend	-	ROOT-NAME-DIFFERS	root manifest names neither the owner nor the repository -- RECORDED (p279: naming a package differently from its repository is ordinary)	ISC
+codeXsidd/Studivexa	main	frontend/package.json	1	763	frontend	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+codeXsidd/Studivexa	main	frontend/.vite/deps/package.json	3	23	-	-	SILENT	no name and no repository field -- attributed here	-
+nextcloud/llm2	main	pyproject.toml	0	763	llm2	-	OWN-DECLARED	root manifest names this repository	AGPL-3.0
+adriasantacreu/google-classroom-mcp	master	package.json	0	899	google-classroom-mcp	adriasantacreu/google-classroom-mcp	OWN-DECLARED	manifest declares this repository	MIT
+ls1intum/Athena	develop	pyproject.toml	0	632	Athena	-	OWN-DECLARED	root manifest names this repository	-
+ls1intum/Athena	develop	assessment_module_manager/pyproject.toml	1	729	assessment-module-manager	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+ls1intum/Athena	develop	athena/pyproject.toml	1	716	athena	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+ls1intum/Athena	develop	llm_core/pyproject.toml	1	657	llm_core	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+ls1intum/Athena	develop	log_viewer/pyproject.toml	1	534	log-viewer	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+ls1intum/Athena	develop	playground/package.json	1	2244	playground	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	-
+ls1intum/Athena	develop	modules/modeling/module_modeling_llm/pyproject.toml	3	787	module_modeling_llm	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+ls1intum/Athena	develop	modules/programming/module_example/pyproject.toml	3	824	module_example	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+ls1intum/Athena	develop	modules/programming/module_programming_apted/pyproject.toml	3	920	module_programming_apted	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+ls1intum/Athena	develop	modules/programming/module_programming_llm/pyproject.toml	3	1020	module_programming_llm	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+ls1intum/Athena	develop	modules/programming/module_programming_themisml/pyproject.toml	3	1649	module_programming_themisml	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+ls1intum/Athena	develop	modules/programming/module_programming_winnowing/pyproject.toml	3	841	module_programming_winnowing	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+ls1intum/Athena	develop	modules/text/module_text_cofee/pyproject.toml	3	958	module_text_cofee	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+ls1intum/Athena	develop	modules/text/module_text_llm/pyproject.toml	3	828	module_text_llm	-	OWN-SUBPACKAGE	subpackage manifest declares no repository -- attributed here	MIT
+learningequality/kolibri-design-system	develop	package.json	0	3764	kolibri-design-system	learningequality/kolibri-design-system	OWN-DECLARED	manifest declares this repository	MIT
+DMontgomery40/mcp-canvas-lms	main	package.json	0	3461	canvas-mcp-server	DMontgomery40/mcp-canvas-lms	OWN-DECLARED	manifest declares this repository	MIT

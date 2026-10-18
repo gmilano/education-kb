@@ -1,0 +1,11 @@
+slug	ref	head_sha	path	fixture	bytes	sha256_12	captured
+DMontgomery40/mcp-canvas-lms	main	c0646ba10ac2	package.json	mcp-canvas-lms.root.package.json	3461	402ae4c9b542	2026-10-18
+ink-waffle/sisu-mcp	main	c20eccd2f264	package.json	sisu-mcp.root.package.json	999	461199bb29b3	2026-10-18
+LMS-Laravel/LMS-Laravel	master	55ad5acbc42e	composer.json	LMS-Laravel.root.composer.json	2614	dbc99b43f2f5	2026-10-18
+alfredang/ai-mms	main	7a8d835c3fc7	composer.json	ai-mms.root.composer.json	7348	3676c0b8ed35	2026-10-18
+Open-TutorAi/open-tutor-ai-CE	main	196c547291da	ui/static/pyodide/package.json	open-tutor-ai-CE.pyodide.package.json	3270	eeb1156e7841	2026-10-18
+Open-TutorAi/open-tutor-ai-CE	main	196c547291da	ui/package.json	open-tutor-ai-CE.ui.package.json	4115	e7e95bd9bef3	2026-10-18
+cccareers/open-source-curriculum	main	dd01b983835d	package.json	open-source-curriculum.root.package.json	894	f30e0d9217b5	2026-10-18
+codeXsidd/Studivexa	main	6ac279946ca9	package.json	Studivexa.root.package.json	855	cef2f542b1b1	2026-10-18
+GibbonEdu/core	v31.0.00	65f86bf061fa	LICENSE	GibbonEdu-core.LICENSE.txt	35121	93178a43d6d3	2026-10-18
+marcusgreen/moodle-tool_aiconnect	main	7bb295e9e967	version.php	moodle-tool_aiconnect.version.php	1088	33434c02ea13	2026-10-18

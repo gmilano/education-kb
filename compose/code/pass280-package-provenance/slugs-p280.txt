@@ -1,0 +1,16 @@
+# p121's ten measured contradictions, re-read six days on
+leemonade/leemons
+classroomio/classroomio
+codelitdev/courselit
+tadreeb-lms/tadreeblms
+LearnPress/learnpress
+cccareers/open-source-curriculum
+Gnanakamalesh-M/student-dropout-early-warning
+Open-TutorAi/open-tutor-ai-CE
+codeXsidd/Studivexa
+nextcloud/llm2
+# the metadata-graded rows a studio is told to BUILD ON (agents/top.md)
+adriasantacreu/google-classroom-mcp
+ls1intum/Athena
+learningequality/kolibri-design-system
+DMontgomery40/mcp-canvas-lms

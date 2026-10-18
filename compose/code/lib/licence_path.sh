@@ -42,6 +42,15 @@ is_bundled() {
     # not have -- registered for `p280`, and until it exists every vendored-manifest count
     # here is a LOWER BOUND.
     */assetslib/*|assetslib/*)                                                         return 0 ;;
+    # 🟢 p280, FOUND BY ENUMERATION AND NOT BY READING: `codeXsidd/Studivexa` serves
+    # `frontend/.vite/deps/package.json` -- Vite's dependency-optimiser CACHE, a build
+    # artefact committed to the tree.  This predicate knew `*/dist/*`, `*/build/*` and
+    # `*/.yarn/*` and not `.vite`, so the cache was in the manifest walk's denominator.
+    # 🔵 It graded SILENT (no name, no licence field) so no count was corrupted TODAY --
+    # which is the whole argument for widening a floor from a measurement rather than from
+    # a defect: the next cache directory to carry a `license` field would have been counted.
+    # Measured: `evidence/package-provenance.2026-10-18-p280.tsv`.
+    */.vite/*|.vite/*|*/.next/*|.next/*|*/.nuxt/*|.nuxt/*|*/.turbo/*|.turbo/*)         return 0 ;;
   esac
   return 1
 }
