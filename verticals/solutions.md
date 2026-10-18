@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 294 — the fifteenth consecutive nil on a permissive education ERP/CRM, and for once it is a nil with FOUR VERIFIED NEGATIVES
+
+⏱️ **Sixteenth pass of `2026-10-18`.** Evidence:
+[`p294-websearch.2026-10-18-p294.tsv`](../evidence/p294-websearch.2026-10-18-p294.tsv) ·
+[`p294-pin-grant.2026-10-18-p294.tsv`](../evidence/p294-pin-grant.2026-10-18-p294.tsv).
+
+🔴 **`open source platform education ERP CRM MIT Apache` — FIFTEENTH consecutive nil.** The leg's
+own summary states it: *"no single product that clearly combines education ERP, CRM, and an MIT or
+Apache license."*
+
+🟢 **What is different this pass is the shape of the nil.** Fourteen passes recorded that nothing
+came back. This one read every candidate's grant **at a pin** and disqualified it on its **payload**:
+
+| candidate | grant, read FIRST-HAND at a pin | education claims in README | verdict |
+|---|---|---|---|
+| [`ONLYOFFICE/CommunityServer`](https://github.com/ONLYOFFICE/CommunityServer) | **Apache-2.0**, `11 357 B`, sha256₁₂ `c71d239df917` | **0 tokens / 6 262 B** | 🔴 Collaboration suite. Not ERP, not CRM, not education |
+| [`ChurchCRM/CRM`](https://github.com/ChurchCRM/CRM) | **MIT**, `1 076 B`, sha256₁₂ `82ad0787803a` | **0 tokens / 5 703 B** | 🔴 Membership management. The closest permissive *analogue*, not an education CRM |
+| Frappe CRM | 🔴 **AGPL-3.0**, per the leg's own source | — | 🔴 Copyleft. Matters precisely because it is hosted for others |
+| "AI-native CRM/ERP foundation", "self-hosted CRM" (MIT, per listings) | 🔴 **no slug named by any source** | — | 🔴 Not probeable. A listing without a path is not a finding |
+
+🔵 **Four permissive repositories exist and none of them is an education platform** — a stronger
+statement than *"nothing came back"*, and the one a studio can act on.
+
+### 🟡 OpenEduCat — the Odoo dependency, now stated by the vendor itself
+
+🟢 `OpenEduCat`'s **own glossary** says the product runs on **Odoo's framework**, which supplies
+accounting, CRM and HR, with the education layer (students, courses) added on top. 🔴 **Vendor
+marketing, so ATTRIBUTED** — but it is the vendor conceding the dependency, which is the direction
+that matters. 🟢 The grant is unchanged and read first-hand: **`LGPL-3.0`**, `8 241 B`, sha256₁₂
+**`528f84036800`**, on branch **`19.0`** — an Odoo-version branch, not `master`, which `p293`
+corrected against `p292`.
+
+🔵 **The consequence for an engagement, unchanged and worth restating:** the education verticals are
+copyleft end to end — OpenEduCat `LGPL-3.0`, Moodle `GPL-3.0`, Open edX `AGPL-3.0`, Frappe CRM
+`AGPL-3.0`, ERPNext `GPL-3.0`. 🔴 **A permissive education ERP does not exist to be found**; the
+permissive layer is what a studio *adds* — the agent tier, which is MIT/Apache almost without
+exception.
+
+### 🔴 The vertical layer this pass did NOT reach
+
+🔴 **No primary ministry or government platform source, for the sixteenth pass.** `moe.gov.sg`,
+`asean.org`, `gov.br/mec` and now `unu.edu`, `educationforallinindia.com`, `conference.acuass.org`
+and `nm-aist.ac.tz` all answer **`000`** through the agent proxy. 🔵 And `p294` established that
+**`000` cannot be read as a verdict on those hosts at all**: an invented hostname returns the same
+code and earns the same proxy-ledger entry. See
+[`p798`](../compose/code/p798-proxy-refusal-ledger/README.md).
+
 ## 🟡 Pass 293 — the permissive education ERP/CRM leg is NIL for the FOURTEENTH pass, and the vendor itself now confirms why — plus a CORRECTION to a carried row's branch
 
 ⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:

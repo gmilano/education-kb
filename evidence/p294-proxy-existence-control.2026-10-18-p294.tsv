@@ -1,0 +1,12 @@
+host	probe	curl_code	in_relay_ledger	ledger_kind	ledger_detail	known_state	channel_verdict	existence_verdict
+raw.githubusercontent.com	GET blob at pin	200	no	-	-	REAL - payload read	200	EXISTENCE-CONFIRMED (payload read)
+github.com	GET repo page	403	no	-	-	REAL - five LICENSE blobs read via raw at pins	403 (gateway policy)	EXISTENCE-CONFIRMED (payload read, OTHER channel)
+this-host-does-not-exist-p294.example	GET	000	YES	connect_rejected	gateway answered 403 to CONNECT (policy denial or upstream failure)	INVENTED - no DNS record anywhere	EGRESS_DENIED (allowlist)	EXISTENCE-UNMEASURED (channel refused)
+en.wikipedia.org	GET	000	YES	connect_rejected	gateway answered 403 to CONNECT (policy denial or upstream failure)	REAL - nobody believes it is down	EGRESS_DENIED (allowlist)	EXISTENCE-UNMEASURED (channel refused)
+unu.edu	GET publication page	000	YES	connect_rejected	gateway answered 403 to CONNECT (policy denial or upstream failure)	UNKNOWN - cited by the LATAM leg	EGRESS_DENIED (allowlist)	EXISTENCE-UNMEASURED (channel refused)
+educationforallinindia.com	GET report PDF	000	YES	connect_rejected	gateway answered 403 to CONNECT (policy denial or upstream failure)	UNKNOWN - cited by the HINDI leg	EGRESS_DENIED (allowlist)	EXISTENCE-UNMEASURED (channel refused)
+sota.io	GET EU AI Act edtech post	000	YES	connect_rejected	gateway answered 403 to CONNECT (policy denial or upstream failure)	UNKNOWN - cited by the AI Act leg	EGRESS_DENIED (allowlist)	EXISTENCE-UNMEASURED (channel refused)
+www.aigl.blog	GET EU AI Act education guide	000	YES	connect_rejected	gateway answered 403 to CONNECT (policy denial or upstream failure)	UNKNOWN - cited by the AI Act leg	EGRESS_DENIED (allowlist)	EXISTENCE-UNMEASURED (channel refused)
+conference.acuass.org	GET ACA 2026 call for abstracts	000	YES	connect_rejected	gateway answered 403 to CONNECT (policy denial or upstream failure)	UNKNOWN - cited by the SWAHILI leg	EGRESS_DENIED (allowlist)	EXISTENCE-UNMEASURED (channel refused)
+www.marketsandmarkets.com	GET NA regional market page	000	YES	connect_rejected	gateway answered 403 to CONNECT (policy denial or upstream failure)	UNKNOWN - cited by three regional legs	EGRESS_DENIED (allowlist)	EXISTENCE-UNMEASURED (channel refused)
+nm-aist.ac.tz	GET AfriAI workshop page	000	YES	connect_rejected	gateway answered 403 to CONNECT (policy denial or upstream failure)	UNKNOWN - cited by the SWAHILI leg	EGRESS_DENIED (allowlist)	EXISTENCE-UNMEASURED (channel refused)

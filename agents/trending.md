@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 294) — the nil is TWENTY deep, the fifth national language is non-nil and ALREADY CARRIED, and a channel this base wrote off as closed refuted three of its own published figures
+
+⏱️ **Sixteenth pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept, as
+`p232`-`p293` kept theirs. Evidence:
+[`p294-websearch.2026-10-18-p294.tsv`](../evidence/p294-websearch.2026-10-18-p294.tsv) ·
+[`p294-star-channel.2026-10-18-p294.tsv`](../evidence/p294-star-channel.2026-10-18-p294.tsv) ·
+[`p294-proxy-existence-control.2026-10-18-p294.tsv`](../evidence/p294-proxy-existence-control.2026-10-18-p294.tsv).
+
+### 🔴 The mandated battery, as a trend line
+
+| leg | this pass | run |
+|---|---|---|
+| open source AI agents, education | 🔴 **NIL** | **20th consecutive** |
+| GitHub trending, education | 🔴 **NIL for education** | **11th consecutive** |
+| permissive education ERP/CRM | 🔴 **NIL** | **15th consecutive** |
+| AI education trends (market) | 🟢 non-nil, no code | figures diverge more widely than ever |
+| region: North America | 🟢 non-nil, no code | held |
+| region: EMEA (mandated phrasing) | 🔴 **NIL** | **8th consecutive**, *identical corpus to `p293`* |
+| region: APAC (mandated phrasing) | 🟢 **non-nil — and it REFUTES `p293`'s read of this channel** | — |
+| region: LATAM | 🟢 non-nil, no code | held |
+
+🔴 **Code, from every regional leg: NIL. Fifth pass running.** The regions generate *instruments*;
+code comes from directed legs, and this pass none of them produced an education repository either.
+
+### 🟢 THE WEEK'S SIGNAL: a closed channel that was never closed
+
+🔴 `p293` published: *"No star count in this pass is first-hand and none is published"* — on the
+strength of `api.github.com` answering `403` to repository metadata. 🟢 **`WebFetch` over the
+rendered `github.com` page answers normally**, which is the channel `P349` was built on at `p110`.
+
+🔴 **Three figures fall:**
+
+1. `microsoft/ai-agents-for-beginners` renders **77.4k stars / 25.4k forks / MIT**. `p293` recorded
+   **67.2k** and **47.3k** from two social posts, called the 42 % spread unresolvable, and declined
+   to publish either. 🟢 The policy was right; **both numbers were wrong**, and the true figure is
+   above both.
+2. The same page's description reads **"18 Lessons to Get Started Building AI Agents"**. This base
+   has called it a **12-lesson** course since `p275` — **eighteen passes of a stale cell** on an
+   open channel.
+3. `HKUDS/DeepTutor` renders **41.6k / 5.3k / Apache-2.0**, release `v1.6.14` dated `2026.10.8`.
+   🔴 This pass's own directed leg returned *"over 32,741 stars and 4,274 forks"* — **refuted**:
+   stars are monotonic and this base read **40.8k** first-hand at `p110`, two weeks earlier.
+
+🔵 **One root cause, and `p293` named it itself:** *guessing what the channel will tell you.*
+`api.github.com` answering `403` is evidence about `api.github.com`.
+
+### 🔴 THE METHOD FINDING: the national-language channel is SATURATED, not exhausted-by-luck
+
+🇻🇳 `p290` · 🇲🇽 `p291` · 🇪🇬 `p292` · 🇮🇩 `p293` · 🇮🇳 **`p294`** — five for five on *non-nil*.
+🔴 **But the fifth is the first whose yield is almost entirely already on these shelves.**
+
+| 🇮🇳 the Hindi leg returned | state |
+|---|---|
+| **AI & Computational Thinking mandatory for Classes 3-8 from the 2026-27 academic session**, extending to Classes 9-10 in 2027-28 (MoE Dept of School Education, announced Oct 2025) | 🔴 **CARRIED** — five files already |
+| OpenAI's *"India-first"* education programme, research collaboration with **IIT Madras**, partnerships with IIT Delhi / IIM Ahmedabad / AIIMS New Delhi | 🔴 **CARRIED** |
+| teacher AI tooling tied to the **BHASHINI** project | 🔴 **CARRIED** |
+| **Bharat Bodhan AI Conclave 2026**, Bharat Mandapam, billed as India's first national AI-in-Education gathering | 🟢 **NEW** |
+| a repository, a licence, a slug | 🔴 **NIL** |
+
+🟢 **The better-yielding leg was the unspent one: 🌍 SWAHILI / Africa**, and it is the axis `p293`
+ranked *second* behind Hindi.
+
+- 🟢 **NEW — `Google.org` $4M** funding an **AI Upskilling Programme** for higher-education
+  institutions in **Nigeria, Ghana, Kenya and South Africa.**
+- 🟢 **NEW — UNESCO**, at the G20 AI-in-Africa meeting (Paris): a plan to train **15 000 public
+  servants and 5 000 judicial officers** for digital transformation.
+- 🟢 **NEW — ACA 2026**, the Africa Curriculum Association conference, **Dar es Salaam, 15-18
+  September 2026**, hosted by the **Tanzania Institute of Education**.
+- 🟢 NM-AIST + University of Dodoma **AfriAI Research Lab**, 2nd International Workshop on AI for
+  Africa's Sustainable Development, Arusha, July 2026.
+- 🔴 **NIL on platform, licence and ministry repository**, declared by the leg itself, which names
+  **OER** as the term it did not try.
+
+🔴 **A COLLISION HAZARD, named before it is folded.** This base already carries **`Google.org`
+$4.6M** for Raspberry Pi's **Experience AI** across **LATAM**. The new grant is **$4.0M**, a
+**different programme**, in **EMEA/Africa**. 🔵 Two Google.org education grants, two regions, 4.0
+against 4.6 — recorded so no later pass averages them into one.
+
+🔵 **What this means for the method:** the channel is not failing, it is *catching up*. For regions
+this base has already worked through other languages, a sixth language will return non-nil and
+mostly carried. 🟢 **The unspent axis is a region, not a language** — Africa yielded three new
+instruments in one leg; India yielded one.
+
+### 🟡 EMEA: the nil broke, and behind it was material this base already held
+
+🔴 **Mandated phrasing — EIGHTH consecutive nil**, and the corpus is **byte-for-byte the same three
+sources as `p293`**: CompTIA EMEA IT trends, the Workday EMEA adoption study, Bandwidth-Cavell 2026.
+A measurement of a dead channel, not an absence of EMEA education activity.
+
+🟢 **Re-phrased in the same hour** (`EU AI Act education high-risk Annex III schools Europe 2026
+guidance`) the leg returns immediately — 🔴 **and almost all of it is carried:** Annex III point 3's
+four education uses (`p291`, ATTRIBUTED), the **Article 5(1)(f)** emotion-recognition ban in
+educational institutions live since **2025-02-02**, the **2027-12-02** deferral (held since `p233`),
+the **Omnibus political agreement of 2026-05-07**.
+
+| 🟢 the one genuinely new citation | **Article 6(3)** — the derogation by which a listed system escapes high-risk status where it poses no significant risk of harm. **0 prior occurrences** across these shelves |
+|---|---|
+
+🔴 **And the superseded date was served again** — one source still gives **August 2026** for the
+Annex III obligations. That is the **EIGHTH** recorded re-service of a date this base corrected at
+`p233`. 🟡 The deferral itself is still **ATTRIBUTED**: no source read here confirms formal adoption
+of the Omnibus agreement.
+
+🔵 **So the eight-pass EMEA nil was not hiding unknown EMEA content.** Re-phrasing recovers what
+other channels already delivered. That is worth more than a ninth re-run and less than a new axis.
+
+### 🟢 APAC: `p293`'s verdict on the mandated channel is WITHDRAWN
+
+🔴 `p293` ran the English and Indonesian APAC legs in one hour and concluded the mandated phrasing
+yields *"corporate L&D, 4 of 4"*. 🟢 **The same phrasing this pass returned education regulation
+directly:** Vietnam's AI law grace period of up to 18 months for legacy high-risk systems in
+health, **education** and finance (to ~March/September 2027), and South Korea's **AI Basic Act** in
+force **2026-01-22**. 🔴 Both carried — so the *content* is not new; **the verdict on the channel
+is what changes.** A single pass's read of a search channel is a sample, not its character.
+
+### 🔴 The mandated verification method does not work on this channel, and that is measured
+
+🔴 The quality bar says *verify every URL with `curl -sI`*. 🟢 Calibrated against controls in one
+session: `raw.githubusercontent.com` → **`200`**; `github.com` → **`403`**; `en.wikipedia.org` →
+**`000`**; an **invented** hostname → **`000`**. 🔴 **A real URL and a fabricated one return the
+same code**, so curl cannot discharge the instruction here. 🔵 And `github.com`'s `403` was never
+evidence about the repositories: five `LICENSE` blobs were read at pins through
+`raw.githubusercontent.com` in the same minute. The working channels are
+**`raw.githubusercontent.com`** and **`WebFetch`**.
+
 ## 2026-10-18 (pass 293) — the nil is NINETEEN deep, the EMEA candidate resolved to a non-education model, and the week's real agent story is that the national-language channel broke APAC
 
 ⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:

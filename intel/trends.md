@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 294 — A CHANNEL THIS BASE DECLARED CLOSED WAS OPEN, AND READING IT REFUTED THREE OF ITS OWN PUBLISHED CELLS
+
+⏱️ **Sixteenth pass of `2026-10-18`.** Evidence:
+[`p294-star-channel.2026-10-18-p294.tsv`](../evidence/p294-star-channel.2026-10-18-p294.tsv) ·
+[`p294-proxy-existence-control.2026-10-18-p294.tsv`](../evidence/p294-proxy-existence-control.2026-10-18-p294.tsv) ·
+[`p294-websearch.2026-10-18-p294.tsv`](../evidence/p294-websearch.2026-10-18-p294.tsv).
+
+### 🟢 Trend 1 — the industry trend is unchanged and the SPREAD is the story: buying is ahead of governing
+
+🔵 Two unrelated publishers, two unrelated instruments, same conclusion. Market maturity is scored
+**35/100** — *"most institutions are still in pilot mode"* — while **~10 %** of North American
+institutions have formal AI guidelines and **71 %** of US teachers have no AI training. 🟢 **The gap
+between deployment and governance is now corroborated across channels**, which is more than this
+file could say when it first carried the observation.
+
+🔴 **And the sizing numbers got further apart, not closer:** **$6.4 B (2025) → $79.6 B (2034)**
+against **$7.52 B (2025) → $10.6 B (2026)**, with CAGRs quoted from **28 %** to **36 %**. Five
+publishers, five definitions. 🔵 A studio quoting any one of them in a bid should quote the spread.
+
+### 🔴 Trend 2 — the national-language channel is SATURATED where the region has been worked
+
+🇻🇳 `p290` · 🇲🇽 `p291` · 🇪🇬 `p292` · 🇮🇩 `p293` · 🇮🇳 `p294` — **five for five on non-nil.** 🔴 **The
+fifth is the first whose yield is almost entirely carried**: India's mandatory AI & Computational
+Thinking curriculum for **Classes 3-8 from 2026-27**, the OpenAI/IIT Madras collaboration and the
+BHASHINI tie-in are all already on these shelves, in five files. One new datum — the **Bharat Bodhan
+AI Conclave 2026**.
+
+🟢 **The leg that paid was the unworked REGION, not the new language.** 🌍 Swahili/Africa, never
+queried before by this base, returned three new instruments in one hour: **`Google.org` $4 M** for
+AI upskilling across **Nigeria, Ghana, Kenya and South Africa**; **UNESCO**'s plan to train **15 000
+public servants and 5 000 judicial officers**; **ACA 2026** in **Dar es Salaam, 15-18 September
+2026**, hosted by the **Tanzania Institute of Education**.
+
+🔵 **The generalisation, stated so the next pass can spend its legs well:** the variable is not the
+language, it is **whether the region has already been reached by some channel**. 🔴 A sixth language
+aimed at a worked region will return non-nil and mostly carried — which looks like a result and is
+not one.
+
+### 🟢 Trend 3 — `api.github.com` is evidence about `api.github.com`
+
+🔴 `p293` measured `api.github.com` (`rate_limit` → `200`, repository metadata → `403` by policy) and
+concluded: *"No star count in this pass is first-hand and none is published."* 🟢 **The channel its
+own [`P349`](../compose/code/p349-star-resolution-band/README.md) instrument is built on —
+`WebFetch` over the rendered `github.com` page, used at `p110` on `2026-10-05` — answers today.**
+
+| cell | published | rendered `2026-10-18` |
+|---|---|---|
+| `microsoft/ai-agents-for-beginners` stars | **67.2k** *and* **47.3k** (`p293`, 42 % apart, unresolved) | 🔴 **77.4k** · 25.4k forks · MIT |
+| …its description | *"a **12-lesson** course"*, this base's prose since `p275` | 🔴 **"18 Lessons to Get Started Building AI Agents"** |
+| `HKUDS/DeepTutor` stars | **41.5k** | 🟢 **41.6k** · 5.3k forks · `v1.6.14`, `2026.10.8` |
+| a claim from this pass's own leg | *"over 32 741 stars and 4 274 forks"* | 🔴 **refuted** — stars are monotonic and `p110` read **40.8k** |
+
+🔵 **The error class matters more than the four cells.** `p293` named it in the same pass —
+*"guessing a name the channel will tell you"* — and then committed it against a different channel.
+🟢 **Resolution bound carried unchanged:** `K-3CIFRAS`, ±50 in this band. **41.6k** and **77.4k** are
+figures with a stated error, not integers.
+
+### 🔴 Trend 4 — a refusal that cannot tell a real host from an invented one
+
+🟢 **Calibrated in one session, with both a known-real and a known-fake control:**
+
+| probe | curl | in the proxy's own ledger | truth |
+|---|---|---|---|
+| `raw.githubusercontent.com` | **`200`** | no | real |
+| `github.com` | **`403`** | no | real — **five `LICENSE` blobs read through `raw` in the same minute** |
+| `en.wikipedia.org` | **`000`** | **yes**, `connect_rejected` | real |
+| **an invented hostname** | **`000`** | **yes**, *byte-identical mechanism* | 🔴 **cannot exist** |
+
+🔴 **So `EGRESS_DENIED (allowlist)` says nothing about whether a source exists.** The gateway refuses
+the CONNECT **before name resolution**, so an invented host earns the same ledger entry as a real
+one. 🔵 [`P798`](../compose/code/p798-proxy-refusal-ledger/README.md) read that ledger as licensing
+*"the source is fine, this environment may not read it"*. **It licenses neither** — repaired this
+pass with a separate `existence_verdict()` over a closed two-token vocabulary, **9 → 22 controls**,
+and wired into `make hooks`.
+
+🔵 **The consequence for every regional figure on these shelves:** the mandated *"verify every URL
+with `curl -sI`"* is **unsatisfiable on this channel**, so regional sources are ATTRIBUTED by
+construction, and a `000` beside one of them is a fact about the gateway. 🟢 The channels that do
+work are **`raw.githubusercontent.com`** and **`WebFetch`**, and every grant this pass published was
+read through the first.
+
+### 🟡 Trend 5 — the permissive layer is still the agent layer, and that is now measured four times over
+
+🔴 Fifteen passes with no permissive education ERP/CRM. This pass read **four** permissive
+repositories at pins — [`ChurchCRM/CRM`](https://github.com/ChurchCRM/CRM) (MIT),
+[`ONLYOFFICE/CommunityServer`](https://github.com/ONLYOFFICE/CommunityServer) (Apache-2.0),
+[`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) (MIT),
+[`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search) (MIT) — and
+**disqualified all four on their READMEs**, three of them with **zero** education tokens.
+
+🔵 **The structural trend, now with verified negatives behind it:** the education verticals are
+copyleft end to end (Moodle `GPL-3.0`, Open edX `AGPL-3.0`, OpenEduCat `LGPL-3.0`, ERPNext and
+Frappe CRM `GPL`/`AGPL`), while the agent tier is MIT/Apache almost without exception. 🟢 **A
+permissive education platform is not a thing to find; it is a thing a studio assembles** — which is
+what every recipe on [`compose/patterns.md`](../compose/patterns.md) does.
+
 ## 🟢 Pass 293 — THE REGIONAL NILS ARE A QUERY-LANGUAGE ARTEFACT, PROVEN IN A SINGLE PASS; AND THE TREND THAT MATTERS IS A MANDATE THAT NAMES ASSESSMENT
 
 ⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:

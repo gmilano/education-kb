@@ -65,7 +65,6 @@ p445-classifier-divergence/test_divergence.py	UNITTEST-MAIN	22
 p446-pinned-parent-chain/test_parent_chain.py	UNITTEST-MAIN	25
 p637-cross-instrument-licence-agreement/test_agreement.py	UNITTEST-MAIN	9
 p786-scope-verdict-agreement/test_agree.py	UNITTEST-MAIN	15
-p798-proxy-refusal-ledger/test_ledger.py	UNITTEST-MAIN	9
 p799-board-census/test_census.py	UNITTEST-MAIN	12
 p800-region-provenance/test_region_provenance.py	UNITTEST-MAIN	8
 pattern-citation-audit/test_audit.py	UNITTEST-MAIN	21

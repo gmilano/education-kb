@@ -50,3 +50,46 @@ it is their **co-occurrence** that proves neither predicts the other.
 
 🔴 **The allowlist is not enumerated.** `P744` holds: four of four denied is **not a rate**, and
 `noProxy` is a **bypass** list, not the allowlist. Nothing here says which hosts would be allowed.
+
+---
+
+## 🔴 `P294` (pass 294, 2026-10-18) — THE NEGATIVE CONTROL THIS FILE NEVER RAN
+
+🟢 **22/22 green under `python3 -I`** (was 9/9; `p294` adds 13).
+
+`P798`'s negative control is `example.invalid`, a host it **asserted** was absent from the ledger
+rather than one it probed. `p294` probed one: **`this-host-does-not-exist-p294.example`**, an
+invented name with no DNS record anywhere.
+
+🔴 **It is IN the ledger**, with the byte-identical mechanism the seven real hosts got —
+`connect_rejected` · `gateway answered 403 to CONNECT`. The gateway refuses the CONNECT
+**before any name resolution**, so a ledger entry is written for a host that cannot exist.
+
+| what `P798` said | what `p294` measured |
+|---|---|
+| an unlogged `000` must not be promoted to a policy denial | 🟢 **still true, and now known to be unreachable** — every HTTPS host probed through the gateway is logged, so `verdict()`'s `UNDETERMINED` arm never runs |
+| a ledger hit says *"the source is fine, this environment may not read it"* | 🔴 **REFUTED.** The invented host earns the same hit. It says nothing about the source |
+| `EGRESS_DENIED (allowlist)` as a verdict | 🟢 **kept, unchanged** — as a statement about the **channel** it is right, for the invented host too |
+
+🟢 **The repair is a SECOND verdict, not a new folder.** `existence_verdict()` is a separate
+function with a closed two-token vocabulary, so a channel reading can never be spent as an
+existence reading: `EXISTENCE-CONFIRMED (payload read)` is available **only** from a payload
+actually read on a channel that was not refused, and `EXISTENCE-UNMEASURED (channel refused)` is
+everything else.
+
+🔵 **The case that shows why it matters.** `github.com` answers **`403`** to curl here. `p294`
+nonetheless read **five** `LICENSE` blobs at pins through `raw.githubusercontent.com`. The refusal
+was never evidence about those repositories — and the mandated instruction to *"verify every URL
+with `curl -sI`"* cannot be satisfied on this channel at all, because a real URL and an invented
+one return the same `000`.
+
+🔴 **And one trap this pass set for itself and caught.** The first draft of `existence_verdict()`
+branched on `host`/`transport_code` with **identical tokens in both arms** — `p293`'s `C36` trap
+(`... or True`) arriving one pass later, a condition written from the author's intent rather than
+from the value. Nothing could make it fail. The branch is gone;
+`test_the_verdict_is_INVARIANT_under_host_and_code` now asserts its absence across 4 hosts × 4
+codes × 3 ledgers.
+
+🔴 **What `p294` did NOT measure:** a name resolution **off** the proxy path, which is the one
+experiment that would separate *absent* from *blocked*. `test_a_DNS_only_probe_was_not_run` says
+so rather than implying the question is closed.

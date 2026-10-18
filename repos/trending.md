@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 294) — the trending leg is ELEVEN deep for education, and the two star figures it carried are both wrong
+
+⏱️ **Sixteenth pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept, as
+`p232`-`p293` kept theirs. Evidence:
+[`p294-websearch.2026-10-18-p294.tsv`](../evidence/p294-websearch.2026-10-18-p294.tsv) ·
+[`p294-star-channel.2026-10-18-p294.tsv`](../evidence/p294-star-channel.2026-10-18-p294.tsv).
+
+🔴 **`github trending education AI 2026` — ELEVENTH consecutive nil for education.** No live
+`github.com/trending` page was returned by any leg; every ranking came from an aggregator snapshot
+or a blog, each with its own date. What the leg returned:
+
+| repo | signal as reported | grant | 🔴 verdict |
+|---|---|---|---|
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | #1 on `2026-05-24` (Trendshift); #1 "TRENDING NEW 2026" in programming examples as of `2026-06-21` (GitTrend) | — | 🔴 **CARRIED** since `p291`. An AI-engineering **curriculum** |
+| [`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search) | #1 on `2026-07-07` | 🟢 **MIT**, read at pin `30158c0493ae8ae1610769955ad04b189049afe8`, `1 071 B`, sha256₁₂ `accbf0accb87` | 🔴 **CARRIED.** Careers tooling — 3 education-ish tokens in 34 kB of README |
+| `microsoft/ai-agents-for-beginners` | "47.3k stars, enterprise-backed" (a LinkedIn post) | **MIT** | 🔴 **REFUTED — see below** |
+| AI Engineering Hub · karpathy *Zero to Hero* | curated-list features | — | 🔴 Curricula, not education-sector repositories |
+
+🟡 One aggregate worth keeping as context, not as a measurement: a Japanese blog reports **9 of the
+top 10** of GitHub's monthly trending for **February 2026** were AI-related.
+
+### 🟢 The trending leg's star figures, settled first-hand
+
+🔴 `p293` recorded this file's and `agents/trending.md`'s standing problem exactly: the same
+repository came back at **~67.2k★** from one social post and **~47.3k★** from another, *42 % apart,
+in one pass*, and it published neither. 🟢 **`p294` read the rendered page.**
+
+| repo | claimed, by channel | rendered `2026-10-18` | verdict |
+|---|---|---|---|
+| `microsoft/ai-agents-for-beginners` | **67.2k** (social) · **47.3k** (LinkedIn) · *"about 67 000 as of 2026-06-14"* (roundup) | **77.4k** stars · **25.4k** forks · **MIT** · *"18 Lessons to Get Started Building AI Agents"* | 🔴 **ALL THREE REFUTED**, and the description's *"12 lessons"* with them |
+| `HKUDS/DeepTutor` | *"over 32 741 stars and 4 274 forks"* · *"1 021 commits, 3 600+ forks"* | **41.6k** stars · **5.3k** forks · `v1.6.14` dated `2026.10.8` | 🔴 **REFUTED.** Stars are monotonic; this base read **40.8k** at `p110` on `2026-10-05` |
+
+🔵 **The reusable part.** `api.github.com` answers `403` for unattached slugs, which `p293` read as
+*no star channel*. The channel is `WebFetch` over the rendered page — `P349`'s own channel, open
+since `p110`. **Resolution bound unchanged:** `K-3CIFRAS`, ±50 in this band, so **41.6k** and
+**77.4k** are figures with a stated error, not exact integers.
+
+### 🔴 Declared nil, so it is not mistaken for coverage
+
+- **No education repository trended this window.** Eleven passes.
+- **No permissive education ERP/CRM.** Fifteen passes. The two new permissive repos this pass found
+  ([`ONLYOFFICE/CommunityServer`](https://github.com/ONLYOFFICE/CommunityServer),
+  [`ChurchCRM/CRM`](https://github.com/ChurchCRM/CRM)) are on
+  [`repos/foundations.md`](foundations.md) as **substrates**, with 0 education tokens each.
+- **No code from any regional leg.** Fifth pass running.
+
 ## 2026-10-18 (pass 293) — the trending channel is unreachable for the FIFTEENTH pass, and the only new repositories this pass found came from a SEARCH LEG aimed at a path
 
 ⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:

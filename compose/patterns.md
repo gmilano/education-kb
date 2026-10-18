@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 294 — a new recipe, and it exists because THIS BASE CARRIED A STALE FIGURE FOR EIGHTEEN PASSES ON A CHANNEL THAT WAS NEVER CLOSED
+
+⏱️ **Sixteenth pass of `2026-10-18`.** Evidence:
+[`p294-star-channel.2026-10-18-p294.tsv`](../evidence/p294-star-channel.2026-10-18-p294.tsv) ·
+[`p294-proxy-existence-control.2026-10-18-p294.tsv`](../evidence/p294-proxy-existence-control.2026-10-18-p294.tsv).
+
+🔴 **`p293` declared the star channel closed** after `api.github.com` answered `403` to repository
+metadata, and published *"none is first-hand and none is published"*. 🟢 `WebFetch` over the
+rendered `github.com` page — **the channel `P349` was built on at `p110`** — answered on the first
+try. Reading it refuted **three cells this base had published**, including a description
+(*"12-lesson course"*) carried in its own prose since `p275`.
+
+🔵 **The deliverable lesson is not "re-read your numbers".** It is that a figure in a client
+artefact has **four** parts, and this base was shipping one of them: the **value**, its **channel**,
+that channel's **resolution bound**, and the **date it was read**. A value alone cannot be checked,
+cannot be aged, and cannot be defended when a client's own analyst pulls a different number.
+
+### 🔵 The one error class behind all three refuted cells
+
+🔴 **Measuring channel A and concluding about subject B.** `p293` measured `api.github.com` and
+concluded about *stars*. `p292` probed two guessed slug spellings and concluded about a *project*.
+`p294` ran `make carried` on a **guessed** slug (`NousResearch/Hermes`), got `NEW`, and nearly
+opened a row for a repository `CARRIED` since `p275` — the real spelling,
+`NousResearch/hermes-agent`, was in the index the whole time. 🟢 Three passes, one class, and the
+standing answer is `p293`'s: **ask, calibrate, then believe.**
+
+## P51 — Every figure in the deliverable carries its channel, its bound and its read-date *(new in pass 294)*
+
+**Target:** any education engagement whose output contains numbers a client will act on — a market
+sizing, a build-versus-buy comparison, an adoption baseline, a shortlist with popularity or
+maturity signals. 🔵 In this sector the numbers come almost entirely from **vendor market research
+and social posts**, and this base has now measured the same repository at **47.3k**, **67.2k** and
+**77.4k** stars in two passes. A deck that states one of those is wrong 2 times in 3.
+
+🔴 **Why this is a recipe and not a disclaimer.** The failure is not *imprecision*, it is
+**unfalsifiability**. A cell reading `41.5k` cannot be checked by the client, cannot be aged by the
+studio, and gets re-quoted for eighteen passes. A cell reading
+`41.6k · WebFetch github.com page · ±50 (K-3CIFRAS) · 2026-10-18` is checkable in thirty seconds by
+anyone, including the client's procurement analyst — which is what makes it a procurement artefact.
+
+### The wiring
+
+| layer | what to use | licence | why this one |
+|---|---|---|---|
+| the figure's channel, declared | [`compose/code/p798-proxy-refusal-ledger`](code/p798-proxy-refusal-ledger/README.md) | 🟢 **this base's** | **22 offline controls.** Separates the **channel** verdict from the **existence** verdict, so *"we could not fetch it"* can never be written up as *"the source is not there"* — `p294` proved an **invented** hostname earns the identical refusal |
+| the resolution bound on a rendered count | [`compose/code/p349-star-resolution-band`](code/p349-star-resolution-band/README.md) + [`p351-star-digit-sweep`](code/p351-star-digit-sweep/README.md) | 🟢 **this base's** | the bound is a **step function**, not "3 significant figures": **exact** below 1 000, **±50** in the `41.6k` band, **±500** above 100k. 🔴 Quote `41.6k ±50`, never `41,600` |
+| is the figure a positive-class artefact | [`compose/code/p415-positive-class-stars`](code/p415-positive-class-stars/README.md) | 🟢 **this base's** | a shortlist ranked on stars inherits the sampling of whatever list surfaced the candidates |
+| monotonic sanity | the read-date column itself | — | 🟢 **The cheapest check in the set, and it caught a claim this pass.** Stars never fall: *"32 741"* dated after a first-hand **40.8k** is refuted by arithmetic, with no second fetch |
+| derived quantities re-derived from rows | `make recount` → [`compose/code/p274-quantity-recount`](code/p274-quantity-recount/README.md) | 🟢 **this base's** | any total, count or "N of M" in the deck is recomputed from the rows instead of being retyped |
+| currency of a pinned payload | [`compose/code/p987-census-sha-currency`](code/p987-census-sha-currency/README.md) | 🟢 **this base's** | the same discipline for grants: **bytes + sha256₁₂ at a pin**, so "unchanged" is a measurement — `HKUDS/DeepTutor`'s `11 408 B` / `cd2f54e1e506` reproduced at a **new** pin this pass |
+| the grant beside the figure | [`p228-shelf-gate/classify_grant.py`](code/p228-shelf-gate/classify_grant.py) over `raw.githubusercontent.com/<slug>/<sha>/<path>` | 🟢 **this base's** | 🔴 `github.com` answers **`403`** in a restricted-egress environment while `raw` answers `200`. **Never let one host's refusal stand for the repository** |
+
+### What you hand over
+
+1. **A figure table with four columns, not one:** value · channel · bound · read-date. Any cell
+   missing a channel is marked **`UNSOURCED`** and does not go in the deck.
+2. **A channel appendix** naming, per host, what answered and what refused — with the refusal
+   attributed to the **layer that logged it**, and an explicit
+   `EXISTENCE-UNMEASURED (channel refused)` wherever the environment, not the source, was the limit.
+3. **The monotonic column.** Any quantity that can only increase (stars, forks, enrolled cohorts,
+   cumulative spend) is checked against the previous read before publication. 🔵 This is the one
+   control that needs no network.
+4. **A re-read cadence, with the cadence stated.** 🔴 The defect this recipe exists for was not a
+   wrong number: it was a **right** number that nothing re-read. Eighteen passes.
+
+### 🔴 What to check before quoting
+
+- 🔴 **A vendor market size is not a measurement.** This pass alone: **$6.4 B**, **$7.52 B**,
+  **$10.6 B** for overlapping windows, endpoints **$10.6 B (2026)** to **$79.6 B (2034)**, CAGRs
+  **28 %** to **36 %**. 🟢 **Quote the spread and name the publishers**, or quote nothing.
+- 🔴 **Two-decimal shares are a tell, not precision.** *"K-12 = 45.62 % of adoption"* comes with no
+  method. Carry it as a **ranking** (K-12 leads, language learning grows fastest), never as a value.
+- 🔴 **A secondary figure the source itself flags as secondary** — *"student AI usage 66 % → 92 %"* —
+  does not enter a deliverable until the original report is read.
+- 🔴 **`EGRESS_DENIED` is not `404`, and `curl -sI` cannot tell them apart here.** Real and invented
+  hosts both return `000`. 🟢 Any claim of the form *"the source is gone"* needs a channel that
+  answered.
+
 ## 🟢 Pass 293 — a new recipe, and it exists because ONE ORGANISATION SHIPPED TWO GRANTS IN ONE WEEK AND ONLY ONE OF THEM IS REAL
 
 ⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:

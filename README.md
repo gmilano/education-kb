@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 294 — 2026-10-18 — **A STANDING INSTRUMENT'S VERDICT FELL TO THE NEGATIVE CONTROL IT NEVER RAN, AND A CHANNEL THE LAST PASS DECLARED CLOSED REFUTED THREE PUBLISHED CELLS**
+
+**One-line summary:** `p293` measured `api.github.com`, found it `403`-scoped, and concluded that no
+first-hand star figure existed. 🟢 The channel its own `P349` instrument is built on — `WebFetch` over
+the rendered `github.com` page — answered on the first try, and reading it **refuted three cells this
+base had published**, one of them carried in its own prose for **eighteen passes**. 🔴 Separately, the
+mandated *"verify every URL with `curl -sI`"* step was calibrated against a **known-fake** control and
+found **unsatisfiable on this channel**: an invented hostname returns the same `000` as a real one
+*and* earns the same entry in the proxy's refusal ledger — which **refutes `P798`'s** reading of that
+ledger and was repaired in place. 🟡 The pass's regional result is a method finding: the fifth
+national language returned non-nil and **4 of 5 datums already carried**, while the **unworked
+region** returned three new instruments in the same hour.
+
+### 🟢 What was found
+
+🔴 **The mandated battery: TWENTY consecutive nils on the agent leg, ELEVEN for education on the
+trending leg, FIFTEEN with no permissive education ERP/CRM.** All twelve legs — four mandated, four
+regional, four directed — are written out with what each returned in
+[`evidence/p294-websearch.2026-10-18-p294.tsv`](evidence/p294-websearch.2026-10-18-p294.tsv). An
+undeclared nil looks exactly like coverage.
+
+| finding | verdict |
+|---|---|
+| 🟢 **the star channel** | **OPEN**, and `p293`'s *"none is first-hand"* is withdrawn. `WebFetch` over `github.com`, `P349`'s channel since `p110` |
+| `microsoft/ai-agents-for-beginners` | 🔴 **77.4k★ / 25.4k forks / MIT.** `p293` carried **67.2k** *and* **47.3k** as a 42 % spread it declined to resolve — **both wrong**, and the real figure is above both |
+| …its description | 🔴 **"18 Lessons to Get Started Building AI Agents."** This base has written *"12-lesson course"* since `p275` — **eighteen passes stale** on an open channel |
+| `HKUDS/DeepTutor` | 🟢 **41.6k★ / 5.3k forks / Apache-2.0**, release `v1.6.14` dated `2026.10.8`. Live cells updated from 41.5k. 🔴 Refutes this pass's own source claim of *"32 741 stars"* — stars are monotonic and `p110` read **40.8k** |
+| …its **grant**, re-read at a NEW pin | 🟢 `6cf793bd868ba5ecbe64722936d4be8fab5a01df` · `LICENSE` `200` · **11 408 B** · sha256₁₂ **`cd2f54e1e506`** · **Apache-2.0** — **byte-identical** to the blob on record. The grant has not moved |
+| 🔴 **`P798`'s ledger verdict** | 🔴 **REFUTED BY A KNOWN-FAKE CONTROL.** `this-host-does-not-exist-p294.example` is **in** the proxy ledger with the byte-identical mechanism the seven real hosts got. The gateway refuses CONNECT **before name resolution** |
+| …and what that costs | 🔴 `EGRESS_DENIED (allowlist)` licenses **no existence claim**. 🟢 Repaired in place: a separate `existence_verdict()` over a **closed two-token** vocabulary, **9 → 22 controls**, **wired into `make hooks`** |
+| the mandated `curl -sI` verification step | 🔴 **UNSATISFIABLE HERE.** `raw.githubusercontent.com` `200` · `github.com` `403` · `en.wikipedia.org` `000` · invented host `000`. 🟢 The working channels are **`raw.githubusercontent.com`** and **`WebFetch`** |
+| four permissive repos read at pins | 🟢 `ChurchCRM/CRM` **MIT** · `ONLYOFFICE/CommunityServer` **Apache-2.0** · `NousResearch/hermes-agent` **MIT** · `MadsLorentzen/ai-job-search` **MIT**. 🔴 **All four disqualified on their READMEs** — three with **zero** education tokens |
+| 🇮🇳 **the Hindi leg** *(`p293`'s ranked item 10)* | 🟡 **non-nil, and 4 of 5 datums CARRIED.** India's AI & Computational Thinking mandate for **Classes 3-8 from 2026-27** is already in five files. New: **Bharat Bodhan AI Conclave 2026** |
+| 🌍 **the Swahili leg** *(ranked second)* | 🟢 **OUTPERFORMED IT: three new datums** — `Google.org` **$4 M** across Nigeria/Ghana/Kenya/South Africa, UNESCO **15 000 public servants + 5 000 judicial officers**, **ACA 2026** in Dar es Salaam `2026-09-15/18` |
+| 🔴 a **collision hazard**, named | This base already carries `Google.org` **$4.6 M** for Raspberry Pi *Experience AI* in **LATAM**. The new grant is **$4.0 M**, a different programme, in **EMEA/Africa**. Recorded so no pass folds them |
+| EMEA, mandated phrasing | 🔴 **EIGHTH consecutive nil, on a corpus IDENTICAL to `p293`'s** — CompTIA, Workday, Bandwidth-Cavell |
+| EMEA, re-phrased at the statute | 🟡 **Breaks the nil — and returns carried material.** One new citation: **Article 6(3)**'s derogation, **zero** prior occurrences. 🔴 And the **eighth** re-service of the superseded `2026-08-02` date |
+| APAC, mandated phrasing | 🟢 **`p293`'s verdict on this channel is WITHDRAWN** — it returned education regulation directly (Vietnam's 18-month grace naming education; Korea's AI Basic Act, `2026-01-22`). Content carried; **the read of the channel changes** |
+| LATAM | 🟢 Strongest leg again, and its best source yet: **UNESCO IESALC + UNU-IAS**, a survey of **200 institutions across 19 LAC countries**, Aug-Oct 2025. 🔴 `unu.edu` `000` here, so **ATTRIBUTED** |
+
+### 🔵 The one error class behind three of this pass's corrections
+
+🔴 **Measuring channel A and concluding about subject B.** `p293` measured `api.github.com` and
+concluded about *stars*. `p294` ran `make carried` on a **guessed** slug (`NousResearch/Hermes` →
+`NEW`) and nearly opened a row for a repository `CARRIED` since `p275` under the real spelling. And
+`P798` read a ledger entry as evidence about a *host* when it is evidence about a *gateway*. 🟢 One
+answer, `p293`'s own: **ask, calibrate, then believe** — and `p294` adds the half `p293` was missing:
+**calibrate against a known-FAKE, not only a known-real.**
+
+### 🔵 Why `ACTION p294` is a repair and not a new folder
+
+🟢 **[`p798-proxy-refusal-ledger`](compose/code/p798-proxy-refusal-ledger/README.md) — 9 → 22
+controls, and now STANDING.** The defect was not in the code; it was that the suite's negative
+control asserted a host was absent from the ledger rather than **probing** one. 🔴 Its guarded branch
+turns out to be **unreachable** on this channel — every HTTPS host probed through the gateway is
+logged — so a sound control was never falsifiable, which is how the defect survived a green suite.
+🔵 A 300th folder would have duplicated the reader; `P1057`/`p282`'s defect is exactly a second copy.
+
+🔴 **And one trap this pass set for itself and caught.** The first draft of `existence_verdict()`
+branched on `host`/`transport_code` with **identical tokens in both arms** — `p293`'s `C36` trap
+(`... or True`) one pass later, a condition written from the author's intent rather than from the
+value. Nothing could make it fail. The branch is gone and
+`test_the_verdict_is_INVARIANT_under_host_and_code` asserts its absence across 4 hosts × 4 codes × 3
+ledgers.
+
+🟢 **`p252`'s ratchet moved in a direction it had never been tested in.** Thirteen passes logged
+*"the `71`/`110` partition is untouched"*, every one of them measured against an **addition**.
+`p294` added no suite — it **gated an existing one**, so silent-zero went **71 → 70** and the row
+left `floors.tsv`. 🔵 The census went red first, as it has for fourteen passes.
+
+### 🔴 What this pass could NOT do
+
+🔴 **No DNS probe off the proxy path** — the one experiment that separates *absent* from *blocked*.
+`p294`'s own suite says so (`test_a_DNS_only_probe_was_not_run`) rather than implying the question is
+closed. It is `p295`'s ranked item 1.
+🔴 **No primary government source, for the sixteenth pass** — and the framing is now corrected: those
+`000`s are **`EXISTENCE-UNMEASURED`**, a statement about the gateway, not about `unu.edu`,
+`educationforallinindia.com`, `conference.acuass.org` or `nm-aist.ac.tz`.
+🔴 **`huggingface.co` still closed**, so the Horus weights' grants remain unread.
+🔴 **No new agent row, twentieth pass running**, and no code from any regional leg, fifth pass running.
+
+### 🔵 What a studio takes from this pass
+
+**The agent layer is still free, the record is still the product — and a number without its channel
+is not a record.** 🟢 [`P51`](compose/patterns.md) is that artefact: every figure in a deliverable
+carries **value · channel · resolution bound · read-date**, with a monotonic check that costs no
+network and a channel appendix that attributes each refusal to the layer that logged it. 🔴 Sell it
+with the bound stated: `41.6k ±50`, never `41,600`; `EGRESS_DENIED` is not `404`; and a vendor market
+size quoted without its spread — **$6.4 B, $7.52 B and $10.6 B are all live this pass** — is a guess
+with a decimal point.
+
+### 🔵 Backlog for `p295`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Top five:
+
+1. 🔴 **A DNS probe off the proxy path** *(new)* — separates *absent* from *blocked*; until it exists
+   every `000` here is unmeasured.
+2. 🔴 **Re-read every published star/forks cell through the now-proven channel** *(new)* — `p294`
+   read two repositories and refuted three cells; nothing says those were the only stale ones.
+3. 🔴 **Run the README column over the whole shelf corpus** *(carried from `p293`)*.
+4. 🔴 **Retro-adjudicate every `inconclusive` row — and now every `EGRESS_DENIED` row** *(widened)*.
+5. 🟢 **Query an UNWORKED REGION, not a sixth language** *(new, supersedes `p293` item 10)* — Hindi
+   returned 1 new datum, Swahili 3, in the same hour. Unspent: Amharic, Hausa, Bangla, Francophone
+   West Africa.
+
 ## Pass 293 — 2026-10-18 — **THE CANDIDATE THREE PASSES CHASED IS REAL, PERMISSIVE, AND NOT AN EDUCATION REPOSITORY — AND THE CHANNEL THAT "COULDN'T VERIFY IT" WAS NEVER ASKED FOR THE PATH**
 
 **One-line summary:** `p292`'s **ranked items 1 and 2** are both discharged. The `tokenaii` slug

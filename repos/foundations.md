@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 294 — two NEW permissive substrates read at pins, and the boundary is in the row
+
+⏱️ **Sixteenth pass of `2026-10-18`.** Evidence:
+[`p294-pin-grant.2026-10-18-p294.tsv`](../evidence/p294-pin-grant.2026-10-18-p294.tsv).
+
+🔴 **No new education foundation for the fifteenth pass running.** What the mandated ERP/CRM leg
+and the agent leg returned were **general-purpose** repositories with real permissive grants. They
+are shelved here as *substrates* — `p293`'s precedent for `tokenaii/Horus-Taleeq-0.2B-Base` — with
+their disqualification stated in the row, because a substrate mis-shelved as an education platform
+is the error this file exists to prevent.
+
+| Repo | Grant, read FIRST-HAND at the pin | Pin | What it is | 🔴 Boundary |
+|---|---|---|---|---|
+| [`ONLYOFFICE/CommunityServer`](https://github.com/ONLYOFFICE/CommunityServer) 🆕 | **Apache-2.0** · `LICENSE` `200` · **11 357 B** · sha256₁₂ **`c71d239df917`** · title @33 · no dual grant | `fe1fa7babd093969e939ba6ff45a9fee1299dc93` (`refs/heads/master`, from the symref) | "ONLYOFFICE Groups" — document management, project tracking, collaboration for an institution | **0 education tokens in 6 262 B of README.** Not an LMS, not a CRM, not an ERP. A collaboration layer an engagement can *put under* an education product |
+| [`ChurchCRM/CRM`](https://github.com/ChurchCRM/CRM) 🆕 | **MIT** · `LICENSE` `200` · **1 076 B** · sha256₁₂ **`82ad0787803a`** · title @4 · no dual grant | `bcf15df5de17cb9907f8db94fe44893a93bf72c4` (`refs/heads/master`) | PHP membership management: members, groups, events, finances | **0 education tokens in 5 703 B of README.** Shelved only as the **closest permissive analogue** to a member-institution CRM — the shape an education CRM would take, not an education CRM |
+
+🔵 **Why these are worth a row at all.** The ERP/CRM leg has returned nil for fifteen passes, and
+the standing reason is that the education verticals are **copyleft** — OpenEduCat `LGPL-3.0`,
+Moodle `GPL-3.0`, Open edX `AGPL-3.0`, Frappe CRM `AGPL-3.0`. A studio that needs a permissive
+base has to assemble one. 🔴 **Stated as a bound, not a recommendation:** neither row is an
+education system, and calling either one would be the `p286` category error.
+
+### 🟢 The two the index already held, re-read anyway
+
+| Repo | Grant at the pin | Why it is here and not on [`agents/top.md`](../agents/top.md) |
+|---|---|---|
+| [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | **MIT** · **1 070 B** · sha256₁₂ **`821556e63367`** · title @0 · pin `9e01b44dd23978f9ff40b7837467f3a9f1582130` | **0 education tokens in 16 924 B.** A general local-first agent. 🔴 `CARRIED` since `p275` — and `p294` nearly re-opened it as new by querying the index with a **guessed** slug (`NousResearch/Hermes`, which is `ABSENT-OR-PRIVATE`) |
+| [`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search) | **MIT** · **1 071 B** · sha256₁₂ **`accbf0accb87`** · title @0 · pin `30158c0493ae8ae1610769955ad04b189049afe8` | **3 education-ish tokens in 34 105 B** (1× *course*, 2× *education*). Careers tooling. 🔴 `CARRIED` |
+
+### 🟢 `HKUDS/DeepTutor`'s grant has not moved
+
+Re-read at a **new** pin, `6cf793bd868ba5ecbe64722936d4be8fab5a01df`: **Apache-2.0**, `11 408 B`,
+sha256₁₂ **`cd2f54e1e506`** — 🟢 **byte-identical to the blob already on record.** Same payload at a
+different commit, so the row keeps its grade without re-grading.
+
+🔵 **The channel note that makes all of the above reproducible.** `github.com` answers **`403`** to
+curl in this environment; every grant in this section was nonetheless read through
+**`raw.githubusercontent.com`**, which answers `200`. 🔴 A refusal on one host is not evidence about
+a repository — see [`p798`](../compose/code/p798-proxy-refusal-ledger/README.md), which `p294`
+extended and wired into `make hooks` for exactly this reason.
+
 ## 🟢 Pass 293 — ONE NEW ROW, and it is the first EMEA-origin permissive grant this base has read rather than been told about
 
 ⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:

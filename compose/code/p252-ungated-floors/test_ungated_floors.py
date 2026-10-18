@@ -208,7 +208,22 @@ chk("p280 a DIRECTORY alone still does not gate (p251, preserved)",
     _uf.is_gated("pass280-package-provenance/test_provenance.py",
                  "cd compose/code/pass280-package-provenance && ls"),
     False)
-chk("ungated AND silent-zero (the XR population)", len(POP), 71)
+# 🔴 p294: 71 -> 70, AND THE `71`/`110` PARTITION MOVES FOR THE FIRST TIME.  Every pass
+# from p261 to p293 logged the same sentence here -- *"`ungated` stays at 181 and the
+# `71`/`110` partition is untouched"* -- because each ADDED a suite that arrived gated.
+# p294 added no suite.  It took an EXISTING member of the XR population,
+# `p798-proxy-refusal-ledger/test_ledger.py`, extended it (9 -> 22 controls) and wired it
+# into `gate-offline` in the same change, so it left the population by the only door that
+# was ever supposed to exist: it became gated.  `ungated` 181 -> 180, silent-zero 71 -> 70,
+# explicit-exit 110 unchanged, and the row is struck from `floors.tsv`.
+# 🔵 The census went red FIRST, as it has for thirteen consecutive passes -- and this time
+# on a shape it had never seen.  The eight-pass streak p280 called "the finding rather than
+# the arithmetic" was measured only against ADDITIONS; p294 is the first evidence that the
+# same pin catches a REMOVAL, which is the direction a coverage census must never miss: a
+# suite silently leaving the backlog without being gated would read as progress.
+# 🔴 What this does NOT mean: the XR defect is no less latent in the remaining 70.  One
+# suite gated is one suite, not a trend.
+chk("ungated AND silent-zero (the XR population)", len(POP), 70)
 chk("ungated AND explicit-exit (immune by construction)",
     sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]), 110)
 chk("the partition closes: silent-zero + explicit == ungated",
@@ -227,7 +242,7 @@ chk("the pin file holds no row outside the population",
     sorted(set(FLOORS) - {r["relpath"] for r in POP}), [])
 chk("no floor is zero (a zero floor pins nothing)",
     sorted(k for k, v in FLOORS.items() if v < 1), [])
-chk("floors.tsv is the pinned count of the population", len(FLOORS), 71)
+chk("floors.tsv is the pinned count of the population", len(FLOORS), 70)
 
 # ── verdict_for: the grading, and its precedence ──
 chk("a count at the floor is OK",
@@ -272,11 +287,11 @@ chk("and it names the suite", [r for r, _ in _fails], [_victim])
 
 _fails_nopin, _ = uf.verify(floors={}, rows=POP)
 chk("a MISSING pin file fails as UNPINNED, it does not read as clean",
-    len(_fails_nopin), 71)
+    len(_fails_nopin), 70)
 
 _clean, _table = uf.verify(floors=FLOORS, rows=POP)
 chk("the real population verifies clean", _clean, [])
-chk("the table has one row per member", len(_table), 71)
+chk("the table has one row per member", len(_table), 70)
 
 chk("read_floors on a missing path returns empty, not an exception",
     uf.read_floors(os.path.join(uf.HERE, "no-such-file.tsv")), {})

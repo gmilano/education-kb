@@ -10,6 +10,39 @@ updated: 2026-10-18
 > Sourced from web research on 2026-10-18. Vendor-sourced figures are marked; they are
 > carried because they are the only numbers available, not because they are reliable.
 
+## 🟢 Pass 294 — THE REGIONAL CHANNEL IS SATURATED, NOT BLOCKED: the fifth national language returned non-nil and ALREADY CARRIED, while the unspent REGION returned three new instruments
+
+⏱️ **Sixteenth pass of `2026-10-18`.** Evidence:
+[`p294-websearch.2026-10-18-p294.tsv`](../evidence/p294-websearch.2026-10-18-p294.tsv) ·
+[`p294-proxy-existence-control.2026-10-18-p294.tsv`](../evidence/p294-proxy-existence-control.2026-10-18-p294.tsv).
+
+🔵 **The methodological result first, because it tells the next pass where to spend its legs.**
+`p290`-`p293` established the national-language channel as four-for-four and `p293` ranked 🇮🇳 **Hindi**
+as the fifth. 🟢 Run, it returned **non-nil** — and 🔴 **four of its five datums are already on these
+shelves**, in five files. The one new item is a conference.
+
+🟢 **The leg `p293` ranked SECOND — 🌍 Swahili / Africa — returned three new instruments in the same
+hour.** So the channel's yield does not depend on the language; it depends on **whether the region
+has been worked**. India has been reached repeatedly through English and through policy legs.
+Sub-Saharan Africa had never been queried at all.
+
+| axis | leg | yield |
+|---|---|---|
+| 🇮🇳 fifth **language**, worked region | `AI शिक्षा भारत 2026 …` | 🟡 non-nil · **1 new** datum · 4 carried · **0 code** |
+| 🌍 first **unworked region** | `AI elimu Afrika 2026 …` | 🟢 non-nil · **3 new** datums · **0 code** |
+
+🔴 **Code, from every regional leg: NIL — fifth pass running.** Four regions, five passes of policy
+and money, **no repository, no licence, no slug.**
+
+🔴 **And the mandated verification method is unusable on this channel, which is measured rather than
+asserted.** `curl` through the agent proxy returns **`000`** for `unu.edu`, for
+`educationforallinindia.com`, for `conference.acuass.org`, for `nm-aist.ac.tz`, for
+`marketsandmarkets.com` — **and for a hostname this pass invented.** 🟢 Calibrated in one session:
+`raw.githubusercontent.com` → `200`, `github.com` → `403`, `en.wikipedia.org` → `000`, invented host
+→ `000`. 🔵 **Every regional figure on this file is therefore ATTRIBUTED by construction**, and the
+`000`s above are *not* evidence that those sources are unreachable in general — see
+[`p798`](../compose/code/p798-proxy-refusal-ledger/README.md), refuted and repaired this pass.
+
 ## 🟢 Pass 293 — ALL FOUR REGIONAL LEGS RAN, AND APAC'S FOUR-PASS "NO EDUCATION POLICY" VERDICT WAS REFUTED BY AN INDONESIAN LEG IN THE SAME HOUR
 
 ⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:
@@ -1444,6 +1477,24 @@ data gets the ranking backwards.
 
 ### North America
 
+#### 🟡 Pass 294 (`2026-10-18`) — held, and the sizing figure gets a second independent restatement
+
+🟢 **Restated, not new:** **~$951 M (2024) → ~$2 303.2 M (2029), 15.9 % CAGR**, the figure `p291`
+first carried with a stated base year — returned again this pass by the same publisher class.
+🟡 Still a single publisher; carried as a direction. The **36 %** regional-share claim recurred and
+is **declined for the third pass**: aggregator, unsourced.
+🔴 **The governance gap is unchanged and is the sellable fact:** **~10 %** of institutions with
+formal AI guidelines, **71 %** of US teachers without AI training. One analysis this pass puts it
+most usefully — education AI *"operates in a relative regulatory vacuum"*, with adoption decided by
+individual schools, districts or universities *"with minimal external oversight"*, while states like
+**Colorado** and **Texas** add piecemeal requirements.
+🟡 Carried and re-returned: **$55 M** from Carnegie Mellon and the Gates Foundation into AI courseware
+for gateway college courses; the **OpenAI** country-level education programme with **eight national
+partners** (Q1 2026). Players named: **IBM, Microsoft, Google**.
+🔵 **Opportunity, unchanged in substance and sharper in framing:** with no sector regulator, the
+client's own policy *is* the compliance surface. 🔴 **No federal source was reached**, and the leg
+**still fails to separate the US from Canada and Mexico — seven passes running.**
+
 #### 🟡 Pass 292 (`2026-10-18`) — the heaviest public money in the set, and the widest governance gap
 
 🟢 **New this pass, all Q1 2026:** **$55 M** from Carnegie Mellon and the Gates Foundation into
@@ -1977,6 +2028,43 @@ evidenced** — Oklahoma/Maryland's human-oversight rule and NYC's K-8 moratoriu
 hardest configurations, and they are specifiable today.
 
 ### EMEA
+
+#### 🔴 Pass 294 (`2026-10-18`) — the EIGHTH consecutive nil on the mandated phrasing, and the re-phrase that broke it returned material this base already held
+
+🔴 **Mandated phrasing: eighth consecutive nil, and the corpus is the SAME THREE SOURCES as `p293`** —
+CompTIA's EMEA IT-strategy piece, the Workday EMEA adoption study (**38 %** of EMEA organisations
+not yet piloting), Bandwidth-Cavell 2026. Zero education results. An eight-point measurement of a
+dead channel, **not** an absence of EMEA education activity.
+
+🟢 **Re-phrased in the same hour, aimed at the statute** — and it answers at once. 🔴 **Almost all
+of it is carried:** Annex III point 3's four education uses (admissions/access; evaluating learning
+outcomes; judging the appropriate education level; monitoring for prohibited behaviour during
+tests), the **Article 5(1)(f)** ban on emotion recognition in educational institutions live since
+**2025-02-02**, the **2027-12-02** deferral (held since `p233`), the **Omnibus political agreement
+of 2026-05-07**.
+
+| 🟢 the one new citation | **Article 6(3)** — the derogation by which a listed system escapes high-risk status where it poses no significant risk of harm. **Zero prior occurrences** on these shelves |
+|---|---|
+
+🔴 **The superseded date was served AGAIN** — one source still gives **August 2026** for the Annex III
+obligations: the **eighth** recorded re-service of a date corrected at `p233`. 🟡 And the deferral
+stays **ATTRIBUTED**: no source read here confirms the Omnibus agreement was formally adopted, and
+AI Office guidance on the *"sufficient level"* of AI literacy is **expected, not published**.
+
+🟢 **AFRICA ENTERS THIS REGION'S SHELF, from the Swahili leg — three new datums:**
+- **`Google.org` $4 M** funding an **AI Upskilling Programme** for higher-education institutions in
+  **Nigeria, Ghana, Kenya and South Africa.**
+- **UNESCO**, at the G20 AI-in-Africa meeting in Paris: a plan to train **15 000 public servants and
+  5 000 judicial officers** for digital transformation.
+- **ACA 2026** — the Africa Curriculum Association conference, **Dar es Salaam, 15-18 September
+  2026**, hosted by the **Tanzania Institute of Education**. Plus NM-AIST + University of Dodoma's
+  **AfriAI Research Lab** workshop, Arusha, July 2026.
+
+🔴 **A COLLISION HAZARD, named before a later pass folds it.** This shelf already carries
+**`Google.org` $4.6 M** for Raspberry Pi's **Experience AI** across **LATAM**. The new grant is
+**$4.0 M**, a **different programme**, in **this** region. Two grants, two regions, 4.0 against 4.6.
+🔴 **NIL on platform, licence and ministry repository**, declared by the leg itself, which names
+**OER** as the term it did not try.
 
 #### 🟢 Pass 292 (`2026-10-18`) — a SIXTH nil on the mandated phrasing, and a non-EU EMEA opportunity shape the shelf did not have
 
@@ -2681,6 +2769,39 @@ EMEA ed-tech vendor**. 🔴 A declared hole, not a silence, and it stays ranked.
 
 ### APAC
 
+#### 🟢 Pass 294 (`2026-10-18`) — `p293`'s verdict on the mandated channel is WITHDRAWN, and India's mandate is confirmed from a Hindi source
+
+🔴 `p293` ran the English APAC leg and an Indonesian one in the same hour and concluded the mandated
+phrasing yields *"corporate L&D, 4 of 4"*, with no education-specific regulation. 🟢 **The same
+phrasing this pass returned education regulation directly:**
+
+| datum | state |
+|---|---|
+| **Vietnam**'s AI law — grace period of up to **18 months** for legacy high-risk systems in health, **education** and finance (to ~March/September 2027) | 🔴 **CARRIED** |
+| **South Korea**'s **AI Basic Act** in force **2026-01-22**, covering high-impact systems and generative-AI labelling | 🔴 **CARRIED** |
+| APAC market **$591.6 M (2024) → $1 848.1 M (2029)**, **20.9 % CAGR**, described as the fastest-growing region | 🟡 vendor projection |
+| **Diligent** APAC Governance Outlook 2026 — **48 %** of Asia governance leaders rank AI adoption a top 2026 priority | 🟡 secondary |
+| Forrester: **no common APAC AI legislative framework** — Singapore mature guidelines, China focused on algorithmic-misconduct law | 🟡 a 2025 prediction piece, may be dated |
+
+🔵 **So the content is carried and the VERDICT ON THE CHANNEL is what changes.** `p293` was right
+that a region-named English leg measures English-language coverage; it was premature in concluding
+from **one** run that this particular leg is displaced to corporate L&D. **A single pass's read of a
+search channel is a sample, not its character.**
+
+🟢 **🇮🇳 The Hindi leg — the fifth national language, and its value is CONFIRMATION, not discovery.**
+India's MoE Department of School Education, announced October 2025: **AI and Computational Thinking
+becomes a mandatory curriculum component for Classes 3-8 from the 2026-27 academic session**,
+extending to **Classes 9-10 in 2027-28**. 🔴 **Carried in five files** — now corroborated from a
+Hindi-language source rather than English coverage of it. Also carried: OpenAI's *"India-first"*
+education programme with **IIT Madras**, and partnerships named with IIT Delhi, IIM Ahmedabad and
+AIIMS New Delhi; teacher tooling tied to **BHASHINI**.
+🟢 **New:** the **Bharat Bodhan AI Conclave 2026** at Bharat Mandapam, billed as India's first
+national AI-in-Education gathering.
+🔵 **The contrast with Indonesia (`p293`) is the pitchable asymmetry:** India's AI curriculum is
+**dated and sessioned**; Indonesia's is *pending teacher, curriculum and infrastructure readiness*.
+Same regional work plan, two very different procurement timelines.
+🔴 **NIL on repository, licence and slug.**
+
 #### 🟡 Pass 292 (`2026-10-18`) — no education institution reached, and every education-adjacent hit was CORPORATE learning
 
 🔴 **Fourth pass with no national education policy, ministry programme or institutional adoption
@@ -3203,6 +3324,32 @@ Korea's act pairs its obligations with **state adoption support**, which is unus
 naming in a pitch.
 
 ### LATAM
+
+#### 🟢 Pass 294 (`2026-10-18`) — the strongest leg again, and the best primary-ish source it has ever returned
+
+🟢 **New, and it is the most citable LATAM source on this shelf:** a **UNESCO IESALC + UNU-IAS**
+working paper mapping AI across higher education in the region — **a survey of 200 higher-education
+institutions across 19 LAC countries, conducted August-October 2025**, covering teaching, research,
+administration and governance. 🔴 `unu.edu` answers **`000`** through the agent proxy, so the paper
+is **ATTRIBUTED, not read** — and per this pass's control that `000` is *not* evidence the host is
+down.
+
+🟡 Carried and re-returned: the **ILIA 2025** index (CEPAL) and its governance chapter on regulation,
+international engagement and institutions.
+🟡 **New sizing datum, and small enough to be a warning:** *"Rest of Latin America"* AI-in-education
+at **$18.2 M (2024) → $36 M (2029)**. 🔴 A **subregional** vendor figure that excludes Brazil and
+Mexico — not comparable with the regional totals elsewhere on this file, and not to be summed with
+them.
+
+🔴 **The structural read, in the sources' own words:** policy is *"a patchwork of pilot policies,
+vulnerable to being tossed out with each new administration"* — with **Chile** named as the
+counter-example whose AI roadmap survived a change of government. Schools are described as
+*"underfunded, uneven, and still reeling from the pandemic"*, and the stated risk is that AI
+**deepens** inequality between countries rather than closing it.
+🔴 **No 2026 education-specific regulation was named, and no code.** The named players were generic.
+🔵 **Opportunity:** Chile is the only durability case the sources offer, which makes it the natural
+reference account for a multi-administration engagement — and the IESALC survey is the instrument a
+bid can cite for institutional readiness rather than asserting it.
 
 #### 🟢 Pass 292 (`2026-10-18`) — the adoption-governance gap is now DOUBLE-quantified, and the Mexican code leg is discharged
 
@@ -3895,6 +4042,32 @@ region where the economics state it outright.
 
 
 ### Global
+
+#### 🔴 Pass 294 (`2026-10-18`) — the market-size spread widened AGAIN, and the student-adoption figure that gets quoted everywhere is second-hand
+
+🔴 **Five publishers, five numbers, and the spread is now the widest this shelf has recorded:**
+
+| source class | 2025 / 2026 base | endpoint | CAGR |
+|---|---|---|---|
+| IMARC-based summary | **$6.4 B (2025)** | **$79.6 B (2034)** | — |
+| The Business Research Company | **$7.52 B (2025)** | **$10.6 B (2026)** | — |
+| third source | — | — | **36 %** |
+| fourth source | — | — | **~28 % through 2036** |
+
+🔵 **The warning this shelf has carried since `p291` is reinforced, not revised:** these are vendor
+and market-research pages with different definitions of the market. **Carried as a direction.**
+
+🔴 **Two widely-quoted adoption figures, both downgraded on inspection:**
+- *"global student AI usage surged from **66 % (2024)** to **92 % (2025)**"* — 🔴 the source states
+  itself to be **secondary**. Not to be quoted without the original report.
+- **K-12 = 45.62 %** of total adoption, and **language learning** the fastest-growing segment —
+  🟡 single vendor, two-decimal precision on a share figure that no method is given for. 🔴 **The
+  precision is the tell**; carried as a ranking, not a measurement.
+
+🟡 **The one figure worth a pitch:** market maturity scored **35 / 100**, i.e. *"most institutions
+are still in pilot mode"*, against intense competition. 🔵 It agrees with North America's **10 %**
+formal-guidelines figure from an unrelated publisher — **two independent channels, same conclusion:
+the buying is ahead of the governing**, which is the gap a studio's assurance layer sells into.
 
 #### 🟡 Pass 291 (`2026-10-18`) — the market-size spread WIDENED, which strengthens the warning rather than resolving it
 

@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 294 — THE TWENTIETH NIL, TWO NEW SLUGS BOTH DISQUALIFIED BY THEIR OWN READMEs — and a star channel `p293` declared closed was open the whole time
+
+⏱️ **Sixteenth pass of `2026-10-18`.** Evidence:
+[`p294-websearch.2026-10-18-p294.tsv`](../evidence/p294-websearch.2026-10-18-p294.tsv) ·
+[`p294-pin-grant.2026-10-18-p294.tsv`](../evidence/p294-pin-grant.2026-10-18-p294.tsv) ·
+[`p294-star-channel.2026-10-18-p294.tsv`](../evidence/p294-star-channel.2026-10-18-p294.tsv).
+
+🔴 **`top open source AI agents education 2026 github MIT` — TWENTIETH consecutive nil.** Population
+unchanged from `p275`: `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`avinash201199/free-ai-agents-resources`, plus the general-purpose set. `p286`'s reclassification
+holds: **a repository that teaches agent-building is not an education-sector agent.** One source
+again warns on its own that it stretches *"open source"* to cover source-available projects.
+
+### 🟢 Four slugs read at pins, two of them new — and the README test struck all four off this shelf
+
+`p293` set the precedent (read the README before shelving an agent) and it keeps paying.
+
+| slug | branch as read | pin | grant, FIRST-HAND | README | verdict |
+|---|---|---|---|---|---|
+| [`ChurchCRM/CRM`](https://github.com/ChurchCRM/CRM) 🆕 | `refs/heads/master` | `bcf15df5de17cb9907f8db94fe44893a93bf72c4` | **MIT**, `1 076 B`, sha256₁₂ **`82ad0787803a`**, title @4 | 5 703 B, **0 education tokens** | 🔴 **NOT-EDUCATION** — church/membership management |
+| [`ONLYOFFICE/CommunityServer`](https://github.com/ONLYOFFICE/CommunityServer) 🆕 | `refs/heads/master` | `fe1fa7babd093969e939ba6ff45a9fee1299dc93` | **Apache-2.0**, `11 357 B`, sha256₁₂ **`c71d239df917`**, title @33 | 6 262 B, **0 education tokens** | 🔴 **NOT-EDUCATION** — collaboration substrate |
+| [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | `refs/heads/main` | `9e01b44dd23978f9ff40b7837467f3a9f1582130` | **MIT**, `1 070 B`, sha256₁₂ **`821556e63367`**, title @0 | 16 924 B, **0 education tokens** | 🔴 **CARRIED**, and not education |
+| [`MadsLorentzen/ai-job-search`](https://github.com/MadsLorentzen/ai-job-search) | `refs/heads/master` | `30158c0493ae8ae1610769955ad04b189049afe8` | **MIT**, `1 071 B`, sha256₁₂ **`accbf0accb87`**, title @0 | 34 105 B, **3 tokens in 34 kB** | 🔴 **CARRIED** — careers tooling |
+
+🔵 **The nil is now a nil WITH VERIFIED NEGATIVES.** Nineteen passes recorded an unexamined nil on
+this leg. This one reads every candidate's grant at a pin and then disqualifies it on its payload,
+which is a stronger statement than *"nothing came back"*: four permissive repositories exist, and
+none of them is an education agent.
+
+### 🔴 The error `p293` NAMED, committed by `p294` against this base's own index
+
+🔵 `p293` wrote the lesson: *"guessing a name the channel will tell you."* The mandated leg
+returned a bare *"Hermes Agent (Nous Research, MIT)"* with no path. `p294` guessed
+`NousResearch/Hermes`, ran `make carried` on **the guess**, got **`NEW`**, and came within one
+step of opening a row for it.
+
+🔴 **`NousResearch/Hermes` is `ABSENT-OR-PRIVATE`; `NousResearch/hermes-agent` resolves, and it has
+been `CARRIED` since `p275`** — `agents/trending.md:1167` already reads *"`CARRIED` — already
+shelved."* 🟢 The index was the channel, and it was not asked with the right spelling. `P1057`'s
+sentence generalises once more: **a one-spelling query has not asked the index; it has asked one
+spelling of it.**
+
+### 🟢 THE PASS'S REAL RESULT: the star channel is OPEN, and reading it refutes three published figures
+
+🔴 **`p293` concluded no first-hand star figure was available**, because `api.github.com` answers
+`403` by policy for any slug this session is not attached to. 🟢 **It never tried the channel its
+own [`P349`](../compose/code/p349-star-resolution-band/README.md) instrument is built on** —
+`WebFetch` over the rendered `github.com` repository page, which `p110` used on **2026-10-05** and
+which answers today.
+
+| cell | what was published | read first-hand, `2026-10-18` | verdict |
+|---|---|---|---|
+| `microsoft/ai-agents-for-beginners` stars | `p293`: **67.2k** *and* **47.3k**, 42 % apart, from two social posts | **77.4k** stars · **25.4k** forks · **MIT** | 🔴 **BOTH REFUTED.** `p293` declined to resolve the spread and was right to; neither figure was close |
+| …its **description** | *"a 12-lesson **course** about building agents"*, this base's own prose since `p275` | *"**18 Lessons** to Get Started Building AI Agents"* | 🔴 **STALE FOR EIGHTEEN PASSES** on a channel that was open throughout |
+| `HKUDS/DeepTutor` stars | **41.5k** on this shelf | **41.6k** · 5.3k forks · Apache-2.0 · `v1.6.14`, `2026.10.8` | 🟢 **CONFIRMED and advanced.** Live cells updated |
+| …a claim from this pass's own leg | *"over 32,741 stars and 4,274 forks"* | **41.6k / 5.3k** | 🔴 **REFUTED.** Stars are monotonic, and this base read **40.8k** at `p110`; a lower figure dated later is not a measurement |
+
+🔵 **The error class, stated so it is not repeated:** `api.github.com` answering `403` is evidence
+about `api.github.com`. `p293` wrote that sentence about `rate_limit` in the same pass it drew the
+opposite conclusion about stars.
+
+### 🟢 `HKUDS/DeepTutor` — the grant has NOT moved, re-read at a new pin
+
+`LICENSE` at `refs/heads/main` pin **`6cf793bd868ba5ecbe64722936d4be8fab5a01df`**: `200`,
+**`11 408 B`**, sha256₁₂ **`cd2f54e1e506`**, family **Apache-2.0**, title @34, no dual grant.
+🟢 **Byte-identical to the blob already on record** (`11 408 B`, sha256 `cd2f54e1e5066644`). Same
+payload, different pin — so the grant has not moved, and the row needs no re-grading.
+
+### 🔴 What this pass did NOT do
+
+🔴 **`huggingface.co` remains closed**, so the Horus **weights'** grants are still unread —
+`p293`'s bound is unchanged, and a grant read on training code says nothing about weights.
+🔴 **No new agent row for the twentieth pass running.** The structural reason stands: one source
+states outright that no dedicated ranking of education-focused agents exists.
+
 ## 🔴 Pass 293 — NO NEW AGENT ROW, the NINETEENTH nil — and the candidate three passes chased turned out not to be an education agent at all
 
 ⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:
@@ -686,7 +761,7 @@ non-commercial friction.
 |-------|------|---------|-------|--------------|
 | TeachGPT | [Priyamakeshwari/TeachGPT](https://github.com/Priyamakeshwari/TeachGPT) | MIT *(payload, p287)* | — | **New row at `p287`, and it is a row this base ALREADY HELD and could not read.** `LICENSE.md`, **1 057 B** on `main`, 18 files: a **verbatim MIT body with its title line absent**, which `pass257-restriction-scan` graded `UNCLASSIFIED` until this pass taught stage two the MIT operative clause. Small and unproven as software; **the value here is the measurement** — it is the first demonstration that this base's licence instruments were costing it usable permissive dependencies, not just failing to catch restricted ones. |
 | Open-Education | [bunnywaffle/Open-Education](https://github.com/bunnywaffle/Open-Education) | Apache-2.0 *(payload, p287)* | — | ⚠️ **Listed with its size stated, because the README does not state it.** `LICENSE` **11 357 B**, HEAD `1fac5bc` — and the tree is **THREE FILES**: `LICENSE`, `README.md`, `app.py`. A single-file Gradio tutor demo beneath a long manifesto about replacing human teachers. **The grant is real and permissive; the "platform" is not a platform.** Useful as a 200-line reading of the smallest thing that answers a learner, and **not** as a dependency. |
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 41.5k | Lifelong personalized tutoring: a persistent student model that survives between sessions, multi-agent orchestration, citation-grounded feedback. Release v1.6.14 dated 2026.10.8. The single most adopted education agent on GitHub. |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 41.6k *(rendered, p294)* | Lifelong personalized tutoring: a persistent student model that survives between sessions, multi-agent orchestration, citation-grounded feedback. Release v1.6.14 dated 2026.10.8. The single most adopted education agent on GitHub. |
 | Artemis | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | Platform for interactive learning with individual feedback, from the Applied Education Technologies group at **TU Munich**; 12,437 commits, self-hosted by universities in several countries. Ships three config-gated AI subsystems: **Iris** (LLM tutor), **Athena** (feedback suggestion for text/modelling/programming) and **Hyperion** (AI exercise authoring on Spring AI). Programming submissions are built, tested and analysed automatically. The answer to "where is the open grading agent" — it is inside a platform. |
 | ~~Iris~~ → **not a separate repository** | [ls1intum/Iris](https://github.com/ls1intum/Iris) **= [ls1intum/Pyris](https://github.com/ls1intum/Pyris)** | MIT *(the same payload as Pyris, counted twice until now)* | — | 🔴 **`p282`: WITHDRAWN AS A ROW — this address is a GitHub name alias that resolves to `ls1intum/Pyris`.** Identical HEAD (`d7b2c095204e`), identical ref count (245), identical root tree (`4e2f096df767`), 203 files, identical 1 088-byte MIT payload; under **both** names the root `README.MD` opens `# Pyris V2`. **Iris is the user-facing name of the tutor Pyris powers inside Artemis** — the project's own README points at a web page (`artemis.cit.tum.de/about-iris`), not at a repository. The capability is real; the **second address is not**. Build on **Pyris**. Evidence: [`alias-identity.2026-10-18-p282.tsv`](../evidence/alias-identity.2026-10-18-p282.tsv). |
 | Pyris | [ls1intum/Pyris](https://github.com/ls1intum/Pyris) | MIT | 12 | The LLM microservice behind Iris: a REST API fronting swappable LLM pipelines, with exercise feedback, RAG over instructor-supplied course material, and automated competency generation. The reusable piece — it will serve a stack that is not Artemis. |
@@ -1185,7 +1260,7 @@ Correcting them is the point of the pass.
 ## Agents by function
 
 ### Personalized tutoring
-**DeepTutor** (Apache-2.0, 41.5k) is the default starting point — persistent student model,
+**DeepTutor** (Apache-2.0, 41.6k) is the default starting point — persistent student model,
 multi-agent, actively released. **OATutor** (MIT) when the client wants Bayesian Knowledge
 Tracing they can audit rather than an LLM they must trust. **Bloom** and
 **universal-diagnostic-tutor-skill** when the deliverable is a skill inside an assistant the

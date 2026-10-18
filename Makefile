@@ -411,6 +411,9 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── pass262-scoped-reservation-audit (p262: ACTION ZI — the STEWARD reservation, the X11 grant, and a row's state is not what it QUOTES)"; \
 	cd compose/code/pass262-scoped-reservation-audit && $(PY) test_reservation_audit.py >/dev/null 2>&1 && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
+	echo "── p798-proxy-refusal-ledger (p294: the INVENTED host is in the ledger too — 22 controls)"; \
+	cd compose/code/p798-proxy-refusal-ledger && $(PY) -I test_ledger.py >/dev/null 2>&1 && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code || exit 1; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"

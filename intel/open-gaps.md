@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 294 — **A STANDING INSTRUMENT'S VERDICT WAS REFUTED BY THE NEGATIVE CONTROL IT NEVER RAN, AND A CHANNEL DECLARED CLOSED REFUTED THREE PUBLISHED CELLS**
+
+⏱️ `2026-10-18`, sixteenth pass. Evidence:
+[`p294-websearch.2026-10-18-p294.tsv`](../evidence/p294-websearch.2026-10-18-p294.tsv) ·
+[`p294-pin-grant.2026-10-18-p294.tsv`](../evidence/p294-pin-grant.2026-10-18-p294.tsv) ·
+[`p294-star-channel.2026-10-18-p294.tsv`](../evidence/p294-star-channel.2026-10-18-p294.tsv) ·
+[`p294-proxy-existence-control.2026-10-18-p294.tsv`](../evidence/p294-proxy-existence-control.2026-10-18-p294.tsv).
+
+### Discharged this pass
+
+| item | verdict |
+|---|---|
+| `p293` item 10 — **the fifth national language, 🇮🇳 HINDI** | 🟡 **RUN, non-nil, and 4 of 5 datums ALREADY CARRIED.** New: **Bharat Bodhan AI Conclave 2026** only. 🔴 Nil on repo, licence, slug |
+| `p293` item 10's other half — **🌍 AFRICA (Swahili)** | 🟢 **RUN, and it outperformed the ranked leg: three new datums** — `Google.org` **$4 M** (Nigeria/Ghana/Kenya/South Africa), UNESCO **15 000 + 5 000** trainees, **ACA 2026** Dar es Salaam `2026-09-15/18` |
+| `p293` item 16 — **do not re-run the mandated EMEA phrasing for its own sake** | 🟡 **Run once as a control, then replaced.** 🔴 **8th consecutive nil on an IDENTICAL corpus**; the re-phrase broke it and returned **carried** material — one new citation, **Article 6(3)** |
+| 🆕 **`P798`'s ledger verdict, audited against a known-FAKE control** *(unranked, found by running the mandated curl step)* | 🔴 **REFUTED.** An invented hostname is in the proxy ledger with the byte-identical mechanism. `EGRESS_DENIED (allowlist)` licenses **no** existence claim. 🟢 Repaired: separate `existence_verdict()`, closed 2-token vocabulary, **9 → 22 controls**, and **wired into `make hooks`** |
+| 🆕 **the star channel `p293` declared closed** *(unranked)* | 🟢 **OPEN.** `WebFetch` over the rendered `github.com` page — `P349`'s own channel since `p110`. Refutes **three published cells** |
+
+### 🔴 What the discharges cost the shelves
+
+🔴 **Three cells refuted, one of them eighteen passes old:**
+`microsoft/ai-agents-for-beginners` is **77.4k★ / 25.4k forks** (`p293` carried 67.2k *and* 47.3k,
+both wrong) and its description is **"18 Lessons"**, not the *"12-lesson course"* this base has
+written since `p275`. `HKUDS/DeepTutor` is **41.6k** (live cells updated from 41.5k), which refutes
+this pass's own source claim of *"32 741 stars"* by monotonicity against `p110`'s **40.8k**.
+
+🔴 **And `p294` committed the error class it is recording.** It ran `make carried` on a **guessed**
+slug, `NousResearch/Hermes` → `NEW`, and nearly opened a row; the real spelling,
+`NousResearch/hermes-agent`, has been `CARRIED` since `p275`. The index was the channel and was
+asked with one spelling of the name.
+
+🟢 **`p252`'s ratchet moved for the first time in the other direction.** Thirteen passes of
+*"`ungated` stays at 181 and the `71`/`110` partition is untouched"* were all measured against
+**additions**. `p294` added no suite; it **gated an existing one**, so silent-zero went **71 → 70**
+and the row left `floors.tsv`. 🔵 The census went red first, as always — but on a shape it had never
+seen, which is the direction a coverage pin must never miss.
+
+### 🔵 Backlog for `p295`
+
+**Ranked:**
+
+1. 🔴 **A DNS probe off the proxy path** *(new, this pass's residue)* — the ONE experiment that
+   separates *absent* from *blocked*, and `p294`'s own suite asserts it was not run
+   (`test_a_DNS_only_probe_was_not_run`). Until it exists, every `000` on these shelves is
+   `EXISTENCE-UNMEASURED` and sixteen passes of *"primary government sources unreachable"* is a
+   statement about the gateway. **Cheapest remaining item with the widest reach.**
+2. 🔴 **Re-read EVERY published star/forks cell on the shelves through the now-proven channel**
+   *(new)* — `p294` read **two** repositories and refuted **three** cells. Nothing establishes those
+   were the only stale ones, and `P349`'s band plus the monotonic check make the sweep mechanical.
+   **Known-productive, one channel, no new instrument.**
+3. 🔴 **Run the README column over the WHOLE shelf corpus** *(carried from `p293` item 1)* — still
+   the cheapest unspent **build** item; the column is in `hooks` and has been run over four slugs,
+   finding one `DANGLING-CLAIM` on each live run since.
+4. 🔴 **Retro-adjudicate every `inconclusive` row in `evidence/`** *(carried, `p293` item 2)* — and
+   now **widened**: `p294` showed the same re-audit is owed to every `EGRESS_DENIED` row that was
+   read as *"the source is fine"*. **No network** for the census.
+5. 🔴 **A printf-arity-vs-header census across every instrument** *(carried, `p293` item 3)* — **no
+   network**; `p294` added four TSVs and checked their arity by hand, which is the argument for it.
+6. 🔴 **FAMILY-AXIS recovery sweep over every `UNCLASSIFIED` cell** *(carried, SIX passes)* —
+   known-productive since `p290`. **No network.**
+7. 🟡 **`P46`'s intervention log and `P47`'s deadline layer, as components** *(carried from `p292`)*
+   — 🟢 and `p294` gives the deadline layer its first live content: **Article 6(3)**, the
+   `2027-12-02` deferral still **ATTRIBUTED** with no confirmed adoption, and the **eighth**
+   re-service of the superseded `2026-08-02`.
+8. 🔴 **A licence-CHANGE-WITH-A-DATE-BOUNDARY column** *(carried, SEVEN passes)*.
+9. 🔴 **`ROOT_OR_SOLE` in the enumeration gate** *(carried, TEN passes)*.
+10. 🔴 **Widen `gate-identity` to census the enumeration QUEUE** *(carried, TEN passes)*.
+11. 🟡 **The Annex III(3) → payload-language classifier** *(carried from `p291`)* — 🟢 `p294` supplies
+    the missing limb text (**Article 6(3)**'s derogation), so the classifier can now grade *"listed
+    but derogated"* rather than treating the Annex as binary.
+12. 🟢 **Query an UNWORKED REGION, not a sixth language** *(new — supersedes `p293` item 10)* —
+    `p294`'s controlled result: 🇮🇳 Hindi (worked region) returned **1** new datum, 🌍 Swahili
+    (unworked region) returned **3** in the same hour. Unspent: **Amharic/Ethiopia**,
+    **Hausa/Nigeria**, **Bangla/Bangladesh**, **Francophone West Africa**.
+13. 🔵 **Ask TokenAI for a licence payload on `Horus-Lens-1.0`** *(carried from `p293`)* — posture is
+    literally `ASK` and this base has still never exercised it against a vendor.
+14. 🔴 **Teach the enumeration gate that a licence-like path can be a SOURCE FILE** *(carried)*.
+15. 🔵 **Anchor the evidence store's `head()`** *(carried from `p292`)*. **No network.**
+16. 🔵 **Enumerate `iblai/iblai-claw-setup`'s tree** *(carried)* — grant read, tree never walked.
+17. 🟡 **`--resolve` over the 14 CANDIDATE control sites** *(carried, TWELVE passes)*.
+18. 🔴 **Do NOT spend a leg re-running the mandated EMEA phrasing** — now **EIGHT** consecutive nils
+    on a corpus identical to `p293`'s. 🟢 `p294` ran it once as a control and spent the budget on a
+    statute-aimed re-phrase and an unworked region. Do that again.
+
 ## Pass 293 — **BOTH TOP ITEMS DISCHARGED, AND THE FIRST ONE'S PAYLOAD DISQUALIFIED THE ROW IT WAS WANTED FOR**
 
 ⏱️ `2026-10-18`, fifteenth pass. Evidence:
