@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 284) — the repository channel's nil is now ten passes deep, and the ladder that reads repositories got one family closed and one false verdict withdrawn
+
+⏱️ **Sixth pass of `2026-10-18`.** Append-only. Evidence:
+[`p284-websearch.2026-10-18-p284.tsv`](../evidence/p284-websearch.2026-10-18-p284.tsv) ·
+[`ladder-census.2026-10-18-p284.tsv`](../evidence/ladder-census.2026-10-18-p284.tsv).
+
+### 🟡 The trending leg: nil for the education sector, and the reason is structural
+
+The leg returned `rohitg00/ai-engineering-from-scratch` (**GitHub Trending #1 on `2026-05-24`**,
+CARRIED on this shelf since `p279`), Karpathy's **Neural Networks: Zero to Hero**, and the curated
+list `aneelv75/github-trending`. 🔴 **All three teach engineers to build AI; none serves a learner
+in an education institution.** Same channel property `agents/trending.md` records at ten passes.
+
+🔵 **Two measurement caveats worth keeping, because they bound what this shelf can ever claim here:**
+
+1. 🔴 **There is no official GitHub Trending category for education.** Every "trending education AI"
+   ranking this channel returns is a **third-party aggregator** (Trendshift, GitTrend) or a blog.
+2. 🔴 **Star counts in this channel are social-media grade.** One leg's `47.3k★` for
+   `microsoft/ai-agents-for-beginners` came from a LinkedIn post; another gave **67.2k★** as of
+   `2026-06-14`. 🔵 **A 20k spread on one repository in one pass** — and this base's own
+   `github.com`/`api.github.com` surface is still `403`, so **star counts stay frozen at
+   `2026-10-17`** exactly as `p282`/`p283` recorded. **Do not refresh a star count from a listicle.**
+
+### 🟢 The grant ladder these shelves read repositories WITH is now closed on the `NOTICE` family
+
+🔴 `p283` measured the `notice` family at **0.0 % case-closed** and published *"Not one `NOTICE`
+ladder on this base can find `NOTICE.TXT`"*. 🟢 `p284` found that claim to be **one real defect plus
+one instrument error**, and both are resolved:
+
+| | `p283` | 🟢 `p284` |
+|---|---|---|
+| `notice` family `CASE-CLOSED` | 0 | **1** |
+| `notice` family `CASE-UNVARIED` | 1 | **0** |
+| `notice` family `STEM-ONLY` | 1 | **0** |
+| base-wide `CASE-CLOSED` | 20 | **21** |
+| base-wide `STEM-ONLY` | 24 | **22** |
+| new verdict `GENERATED-CASE-VARIED` | — | **3** |
+
+🟢 **The real defect:** `p229`'s `TIER_A` — the 41-path ladder `make reach` prints *"so nobody
+retypes it"*, and the one that decides this base's own grant verdicts — carried `NOTICE NOTICE.txt`
+and nothing else. **`NOTICE.TXT` and `notice.txt` added.** Cost is **+2 requests per slug**;
+`pass256-ladder-closure` re-ran green at **38/38**, and the `AGREEMENT` control holds because
+`is_licence_path` lower-cases the basename before matching.
+
+🔴 **The instrument error, and it lands on the instrument that invented the rule.**
+`p1057-licence-path-case` was graded `STEM-ONLY` for `notice` — yet its `candidate_paths` is a cross
+product over `STEMS × EXTS × _casings(stem) × {ext, ext.upper()}` and **generates `NOTICE.TXT`
+already**. The audit reads *literals*; a cross product has none to read. 🟢 Regraded, with the
+caveat moved out of the docstring and **into code** as `GENERATED-CASE-VARIED`, and **13 new
+controls** (`p1057`'s suite 16 → 29) asserting the generated ladder directly.
+
+### 🟢 `p283` item 2 discharged as a RATCHET, not a pin — and that choice is `p284` item 1's lesson
+
+🔴 `p283` *"produced the numbers and pinned none of them"*, so nothing stopped the next pass from
+un-closing a ladder silently. 🟢 [`ratchet.tsv`](../compose/code/p283-ladder-case-audit/ratchet.tsv)
+now holds six bounds, checked by a new control in `make gate-ladder-case`.
+
+🔵 **Why a ratchet and not a pin.** An exact count goes red every time an instrument is added —
+which is precisely how the `p252` census burned **eight consecutive passes** (see `p284` item 1).
+A **floor** on the good verdicts and a **ceiling** on the defective ones goes red **only on an
+actual regression**. 🟢 Adding instruments can never break it; un-closing a ladder always will.
+
+| verdict | direction | bound |
+|---|---|---|
+| `CASE-CLOSED` | MIN | 21 |
+| `GENERATED-CASE-VARIED` | MIN | 3 |
+| `TREE-ENUMERATED` | MIN | 45 |
+| `CASE-UNVARIED` | MAX | 167 |
+| `STEM-ONLY` | MAX | 22 |
+| `SINGLE-SPELLING` | MAX | 227 |
+
+🔵 **The join `p283` identified still stands and is still the biggest backlog here:** this shelf
+carries **69 `QUEUE-UNENUMERATED`** rows whose negative verdicts rest on a path ladder. 🟢 Those
+ladders are now **one family less dangerous**, but `SINGLE-SPELLING` is unchanged at **227** and
+`TREE-ENUMERATED` at **45 of 580 (7.8 %)** — so `p275`'s *"a path ladder cannot prove absence"* is
+still shelved as a principle and practised at under a tenth of the ladders. **Working that queue
+with today's ladders would still re-derive false absences** outside the `notice` family.
+
 ## 2026-10-18 (pass 283) — the repository channel is still half shut, and the half that is open answered 138 of 138
 
 ⏱️ **Fifth pass of `2026-10-18`.** Append-only. Evidence:

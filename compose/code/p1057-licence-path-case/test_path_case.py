@@ -59,9 +59,36 @@ check("channel falls back when no path is declared",
 check("limit truncates", len(candidate_paths(limit=4)), 4)
 check("truncated list still leads with LICENSE", candidate_paths(limit=4)[0], "LICENSE")
 
+# --- p284: the NOTICE family is CASE-CLOSED here, and `p283` published that it was not ---
+# 🔴 `p283`'s ladder-case audit graded this instrument `STEM-ONLY` for the `notice` family
+# and published the headline *"Not one `NOTICE` ladder on this base can find
+# `NOTICE.TXT`"*, with `notice` as *"the only family at 0.0 %"*.  🟢 THAT IS FALSE OF THIS
+# INSTRUMENT, and this instrument is the one whose entire job is to GENERATE the ladder.
+# `candidate_paths` is a cross product over `STEMS x EXTS x _casings(stem) x {ext, ext.upper()}`,
+# so the uppercase extension is produced by construction for EVERY stem, `notice` included.
+# 🔵 Why the audit read it otherwise, and it is in the audit's own scope caveat: the audit
+# reads the LITERAL path vocabulary, and the only `notice` literals in this file are the
+# lower-case stem in `STEMS` and the word in a prose line.  A concatenating generator has no
+# literal `NOTICE.TXT` to find.  These controls assert the GENERATED ladder instead, so the
+# claim is settled against the artefact that decides probes rather than against the source text.
+_LADDER = candidate_paths()
+check("p284 NOTICE.TXT is in the generated ladder", "NOTICE.TXT" in _LADDER, True)
+check("p284 NOTICE.MD is in the generated ladder", "NOTICE.MD" in _LADDER, True)
+check("p284 notice.txt (all lower) is in the generated ladder", "notice.txt" in _LADDER, True)
+check("p284 Notice.txt (capitalised stem) is in the generated ladder",
+      "Notice.txt" in _LADDER, True)
+check("p284 the bare NOTICE is still in the generated ladder", "NOTICE" in _LADDER, True)
+# The same property, stated for every family at once so no family can regress alone —
+# this is the generalisation `p282` asked for and `p283` measured in the wrong place.
+for _stem in ("license", "licence", "copying", "notice"):
+    check("p284 %s is case-closed on the extension (upper stem + UPPER ext)" % _stem,
+          (_stem.upper() + ".TXT") in _LADDER, True)
+    check("p284 %s is case-closed on the extension (upper stem + lower ext)" % _stem,
+          (_stem.upper() + ".txt") in _LADDER, True)
+
 if fails:
-    print(f"FAIL {len(fails)}/{16}")
+    print(f"FAIL {len(fails)}/{29}")
     for f in fails:
         print("  -", f)
     sys.exit(1)
-print("PASS 16/16 — P1057")
+print("PASS 29/29 — P1057")

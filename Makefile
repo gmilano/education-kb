@@ -161,7 +161,7 @@ gate-identity: ## ACTION p283 — no shelf may recommend one repository under tw
 # draft made (a distant `.lower()` read as immunity; a four-rung ladder called "single").
 # 🔴 Registered, not built: a RATCHET over these counts.  Stated so it is not mistaken for done.
 gate-ladder-case: ## ACTION p283 — which path ladders can find an uppercase extension?
-	@cd compose/code/p283-ladder-case-audit && { $(PY) test_ladder_case.py > $(LADDER_LOG) 2>&1 || { echo "🔴 p283-ladder-case-audit FAILED — the suite's own report follows:" ; sed "s/^/   /" $(LADDER_LOG) ; false ; } ; } && echo "── p283-ladder-case-audit (10 controls: the distant-fold and multi-rung overclaims)" && echo "   PASS" || exit 1
+	@cd compose/code/p283-ladder-case-audit && { $(PY) test_ladder_case.py > $(LADDER_LOG) 2>&1 || { echo "🔴 p283-ladder-case-audit FAILED — the suite's own report follows:" ; sed "s/^/   /" $(LADDER_LOG) ; false ; } ; } && echo "── p283-ladder-case-audit (14 controls: the distant-fold and multi-rung overclaims, p284's generator verdict and the RATCHET)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . | tail -2
 
 ladder-audit: ## ACTION p283 — the full per-ladder table.  make ladder-audit FAMILY=readme

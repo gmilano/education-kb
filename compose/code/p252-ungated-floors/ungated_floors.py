@@ -113,6 +113,94 @@ def is_gated(relpath: str, mk: str) -> bool:
     return False
 
 
+# 🟢 p284 (`p283` item 1, an EIGHT-pass streak): derive the census, stop typing it.
+#
+# `p283` registered this: *"The remedy is not 'remember next time', which is what eight
+# passes have now tried: it is to DERIVE these three literals from the Makefile instead
+# of typing them."*  This is that derivation, and writing it exposed WHY the streak ran
+# for eight passes — which is a sharper finding than the streak.
+#
+# 🔴 THE THREE LITERALS WERE PINNING THE WRONG POPULATION.  `--verify` already fails on
+# `UNPINNED`, so a newly added suite that is ungated AND silent-zero — the only shape
+# `ACTION XR` exists to catch — was ALREADY caught, by name, with no literal involved.
+# What the literals added on top of that was a count of FILES ON DISK.  In all eight
+# reds the added suite arrived INSIDE `make hooks` (p261, p262, p275, p277, p278, p279,
+# p280, p283 all say so in their own notes above: *"`ungated` stays at 181"*).  So eight
+# consecutive passes were stopped by a red gate over a change that moved the exposure by
+# ZERO.  A gate that fires on every change and on no risk trains the reader to bump the
+# number, which is precisely what eight passes did.
+#
+# 🟢 What the literals DID uniquely protect, and what is kept: `is_gated` itself.  `p280`
+# found that predicate crediting an unrun suite only because `gated` moved by two for one
+# added suite.  That detection does not need a typed number — it needs a SECOND, INDEPENDENT
+# reading of the gate's reach to disagree with the first.  `derive_gated` is that second
+# reading, and it is written in the opposite direction on purpose: `is_gated` walks DISK
+# FILES and asks the Makefile "does a line reach me?", while `derive_gated` walks MAKEFILE
+# LINES and asks disk "which file did I just name?".  Set equality between the two is
+# therefore a real cross-check and not a tautology, and it carries no literal that a pass
+# has to remember.
+#
+# 🔵 A recipe reaches a suite two ways, and both are honoured here, so "derived from the
+# Makefile" is stated precisely: a Makefile LINE naming it, or `p251`'s in-gate floor
+# registry (`gate_reach.FLOORS`), which the gate reads directly rather than through a
+# recipe.  Omitting the second would make the two readings disagree by exactly those five.
+_DERIVE_PATH = re.compile(r"(?:compose/code/)?([A-Za-z0-9_.-]+)/(test_[A-Za-z0-9_.-]*\.py)")
+_DERIVE_DIR = re.compile(r"compose/code/([A-Za-z0-9_.-]+)")
+_DERIVE_BASE = re.compile(r"(test_[A-Za-z0-9_.-]*\.py)")
+
+
+def derive_from_recipes(mk: str, on_disk) -> set:
+    """The suites the `Makefile` RECIPES reach, read from the recipes OUTWARD.
+
+    The inverse of `is_gated`.  `is_gated(relpath, mk)` starts from a file and searches
+    the recipes; this starts from the recipes and emits files, then keeps only those that
+    exist.  The `on_disk` filter is what makes the direction matter: a line naming a
+    directory and a basename that do not combine into a real file contributes NOTHING
+    here, while `is_gated` would never have been asked about it.
+
+    Both recipe forms in this Makefile are covered:
+      `cd compose/code/X && $(PY) test_y.py`      -> directory and basename, one line
+      `$(PY) -I compose/code/X/test_y.py`         -> an explicit relative path
+    A directory alone gates nothing (`p251`) and a bare basename alone gates nothing
+    (`p280`): neither form can produce a relpath without the other half, so both findings
+    are preserved here as behaviour rather than as a count that moves.
+
+    🔵 This reads the RECIPES ONLY, deliberately.  `derive_gated` adds `p251`'s in-gate
+    floor registry on top.  Keeping them separate is what lets the controls test this
+    reading in isolation — the first version of this function unioned the registry
+    unconditionally, and four controls could then not express "this Makefile text reaches
+    nothing", because five registry suites came back on every call.
+    """
+    on_disk = set(on_disk)
+    out = set()
+    for line in mk.splitlines():
+        for folder, base in _DERIVE_PATH.findall(line):
+            rel = folder + "/" + base
+            if rel in on_disk:
+                out.add(rel)
+        folders = set(_DERIVE_DIR.findall(line))
+        bases = set(_DERIVE_BASE.findall(line))
+        for folder in folders:
+            for base in bases:
+                rel = folder + "/" + base
+                if rel in on_disk:
+                    out.add(rel)
+    return out
+
+
+def derive_gated(mk: str, on_disk) -> set:
+    """The gate's FULL reach: the recipes, plus `p251`'s in-gate floor registry.
+
+    🔵 "Derived from the Makefile" has to be stated precisely, because a recipe is not the
+    only way the gate reaches a suite: `gate_reach.FLOORS` is read by the gate directly.
+    Omitting those five would make this reading disagree with `is_gated` by exactly them —
+    a false finding manufactured by the instrument, which is the class `p281` logged three
+    times in one pass.
+    """
+    on_disk = set(on_disk)
+    return derive_from_recipes(mk, on_disk) | {r for r in GATE_FLOORS if r in on_disk}
+
+
 def walk(code_root: str = None):
     """Yield `(relpath, source)` for every python test file under `compose/code`."""
     root = code_root or CODE_ROOT
@@ -206,6 +294,24 @@ def main(argv):
             1 for r in rows if not r["gated"] and not r["silent_zero"]))
         print("collects_zero\t%d" % sum(1 for r in pop if r["collected"] == 0))
         return 0
+
+    if mode == "--derive":
+        # p284: the census with NO typed literal in it. `python_test_files` is a disk
+        # enumeration, `gated` is the Makefile read outward, `ungated` is the remainder,
+        # and `agree` is the cross-check that replaces the three pins.
+        disk = {r["relpath"] for r in rows}
+        pred = {r["relpath"] for r in rows if r["gated"]}
+        drv = derive_gated(makefile_text(), disk)
+        print("python_test_files\t%d" % len(disk))
+        print("gated_predicate\t%d" % len(pred))
+        print("gated_derived\t%d" % len(drv))
+        print("ungated\t%d" % (len(disk) - len(pred)))
+        print("agree\t%s" % ("YES" if pred == drv else "NO"))
+        for rel in sorted(pred - drv):
+            print("  PREDICATE-ONLY\t%s" % rel)
+        for rel in sorted(drv - pred):
+            print("  DERIVED-ONLY\t%s" % rel)
+        return 0 if pred == drv else 1
 
     if mode == "--pin":
         with open(FLOORS_TSV, "w", encoding="utf-8") as fh:

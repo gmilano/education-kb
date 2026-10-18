@@ -80,10 +80,43 @@ def _near(text, toks, rx, window=2):
     return False
 
 
+# 🟢 p284 — A GENERATOR IS NOT A LADDER, AND GRADING IT ON ITS LITERALS PUBLISHED A FALSE
+# HEADLINE.  `p283` graded `p1057-licence-path-case/path_case.py` as `STEM-ONLY` for the
+# `notice` family and published *"Not one `NOTICE` ladder on this base can find
+# `NOTICE.TXT`"*, with `notice` *"the only family at 0.0 %"*.
+# 🔴 `p1057` IS THE INSTRUMENT WHOSE JOB IS TO GENERATE THE LADDER, and its
+# `candidate_paths` is a cross product over `STEMS x EXTS x _casings(stem) x {ext, ext.upper()}`
+# — so `NOTICE.TXT`, `NOTICE.MD` and `Notice.txt` are all produced, for every stem.  The
+# audit could not see them because it reads LITERAL path vocabulary and a cross product has
+# no literal to read.  That caveat was in this file's own docstring and the headline ignored
+# it, which is this base's recurring shape: a scope limit stated in prose and forgotten at
+# the point of publication.
+# 🟢 So the caveat is now ENFORCED IN CODE rather than documented.  An instrument that
+# varies the case of BOTH halves programmatically is graded on what it generates.
+# 🔵 The predicate is deliberately narrow — it requires an EXTENSION-case idiom AND a
+# STEM-case idiom — so it cannot fire on a literal ladder that merely happens to call
+# `.upper()` somewhere, which is exactly the overclaim `_near`'s docstring records.
+_EXT_VARY = re.compile(r"ext\.upper\(\)|ext\.lower\(\)|ext_case|\{\s*ext\s*,|ext\.swapcase\(\)")
+_STEM_VARY = re.compile(r"_casings\(|stem_case|stem\.upper\(\)|word\.upper\(\)|stem\.capitalize\(\)")
+
+
+def generates_case_variants(text):
+    """True when the file BUILDS its ladder with both halves' case varied in code.
+
+    Both idioms are required.  An extension-case loop alone could be unrelated string
+    handling; a stem-case helper alone is `STEM-ONLY` by another route.  Together they
+    are the cross product `p1057` actually performs, and nothing else in this corpus
+    matches both.
+    """
+    return bool(_EXT_VARY.search(text) and _STEM_VARY.search(text))
+
+
 def classify(fam_spellings, text):
     """Return a verdict for ONE family's ladder inside one file."""
     if _near(text, fam_spellings, TREE) or TREE.search(text) and len(fam_spellings) < 2:
         return "TREE-ENUMERATED"
+    if generates_case_variants(text):
+        return "GENERATED-CASE-VARIED"
     if _near(text, fam_spellings, FOLD):
         return "FOLD-ON-PATH"
     if len(fam_spellings) < 2:

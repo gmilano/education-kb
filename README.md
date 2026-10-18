@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 284 — 2026-10-18 — **THE EIGHT-PASS RED STREAK WAS PINNING THE WRONG POPULATION, `p283`'S `NOTICE` HEADLINE WAS HALF AN INSTRUMENT ERROR, AND THE ONE LEG `p283` TOLD THIS PASS TO REPLACE BROKE A FOUR-PASS NIL**
+
+**One-line summary:** all three of `p283`'s top items are discharged, and each one turned out to be
+**wrong about itself in the same direction** — the remedy it asked for was smaller than the defect it
+revealed. The census streak was a gate firing on zero risk; the `NOTICE` family was one real defect
+plus one false verdict against the instrument that invented the rule; and the regional battery's
+four-pass *"Africa is empty"* was a property of the query. `make hooks` was run **before any edit**
+(green on `p283`'s state) and after every edit.
+
+### 🟢 Item 1 discharged — and the eight-pass streak has a cause, not just a remedy
+
+🔴 `p283` registered: *"DERIVE these three literals from the Makefile instead of typing them."*
+🟢 Done. 🔴 **But writing it exposed why eight passes failed, and it is not forgetfulness.**
+
+| | |
+|---|---|
+| the three literals | `221` test files · `40` gated · `181` ungated |
+| what they pinned | **a count of FILES ON DISK** |
+| what the eight added suites did to EXPOSURE | 🟢 **nothing** — p261, p262, p275, p277, p278, p279, p280 and p283 each wrote *"`ungated` stays at 181"* |
+| what already caught the only at-risk shape | `--verify`'s **`UNPINNED`**, by name, with no literal involved |
+
+🔵 **Eight consecutive passes were stopped by a red gate over a change that moved the risk by zero.**
+A gate that fires on every change and on no risk trains its reader to bump the number — which is
+exactly what eight passes did. 🟢 The replacement is a **cross-check between two readings of the
+gate's reach, written in opposite directions**: `is_gated` walks disk files and searches the recipes;
+the new `derive_gated` walks recipe lines and emits files that exist. **They agree, suite by suite,
+40 = 40, with no literal anywhere** — and a **positive control injects `p280`'s exact false credit
+(`p791-registry-id-provenance/test_provenance.py`) and requires the agreement to break**, so the
+defect the pins uniquely caught is still caught. Suite **43 → 46**. The `71`-suite exposure
+population **stays pinned**: a change there *is* a change in risk.
+Evidence: [`census-derivation.2026-10-18-p284.tsv`](evidence/census-derivation.2026-10-18-p284.tsv).
+
+### 🟢 Items 2 and 3 discharged — one real defect, one false verdict, and a ratchet instead of a pin
+
+🔴 `p283` published *"**Not one `NOTICE` ladder on this base can find `NOTICE.TXT`**"*, `notice` being
+*"the only family at **0.0 %**"*. 🟢 **Half was real. Half was the measuring instrument.**
+
+| ladder | `p283` | 🟢 `p284` |
+|---|---|---|
+| `p229-grant-ladder-reach/ladder.sh` `TIER_A` | `CASE-UNVARIED` | 🟢 **`CASE-CLOSED`** — a **REAL** defect: it carried `NOTICE NOTICE.txt` only. `NOTICE.TXT` + `notice.txt` added (+2 requests/slug); `pass256-ladder-closure` green at **38/38** |
+| `p1057-licence-path-case/path_case.py` | `STEM-ONLY` | 🟢 **`GENERATED-CASE-VARIED`** — 🔴 a **FALSE POSITIVE against the instrument that invented case-closure**: `candidate_paths` is a cross product over `STEMS × EXTS × _casings(stem) × {ext, ext.upper()}` and **already generates `NOTICE.TXT`** |
+
+🔵 **Why the audit misread it — and the caveat was its own.** `p283`'s audit reads the **literal**
+path vocabulary, and its docstring says so: *"An instrument that builds its paths by concatenation is
+reported as what its literals show."* A cross product has no literal to read. 🔴 **The caveat sat in
+the prose and was ignored at the point of publication**, which is this base's recurring shape — so it
+is now **enforced in code** as a `GENERATED-CASE-VARIED` verdict whose predicate requires **both** an
+extension-case and a stem-case idiom. **13 new controls in `p1057`'s own suite (16 → 29)** assert the
+**generated** ladder directly. `notice` is now **1 `CASE-CLOSED`, 0 `STEM-ONLY`, 0 `CASE-UNVARIED`**.
+
+🟢 **Item 2 as a RATCHET, not a pin** — [`ratchet.tsv`](compose/code/p283-ladder-case-audit/ratchet.tsv),
+six bounds, checked in `make gate-ladder-case`. 🔵 **That choice is item 1's lesson carried across:**
+an exact count goes red on every added instrument (the `p252` streak); a **floor** on good verdicts
+and a **ceiling** on defective ones goes red **only on a real regression**. Base-wide `CASE-CLOSED`
+**20 → 21**, `STEM-ONLY` **24 → 22**.
+Evidence: [`ladder-census.2026-10-18-p284.tsv`](evidence/ladder-census.2026-10-18-p284.tsv).
+
+### 🟢 Item 8 was the highest-value item on the list: the gap-directed leg broke Africa open
+
+🔴 `p283` ranked *"replace one regional leg with a gap-directed leg (Africa)"* **eighth**, and it
+returned more than the four mandated legs combined. On its first run: the **AU Continental Education
+Strategy `2026–2035`**, the **AU Continental AI Strategy**, **Kenya's National AI Strategy
+`2025–2030`**, **South Africa's DBE coding & robotics (Grades R–9)**, **North-West University's
+first SA university AI policy (Jan 2026)**, a **pan-African ethical AI curriculum** (`arXiv
+2604.27708`) and an **open-source-LLM recommendation for African universities** (`arXiv 2510.18902`).
+
+🔵 **The methodological finding is the bigger one.** Four passes published Africa as empty on the
+strength of a leg that **had never asked about Africa** — it asked about EMEA. That is `p254`'s *the
+base inherits its own conclusions about what is impossible*. 🟢 **New rule, recorded in
+[`intel/trends.md`](intel/trends.md) as `T-p284b`: before a gap is published as a property of the
+world, one leg must have addressed it by name.** 🟡 And the gap **changed shape rather than closed** —
+everything returned is policy, curriculum or preprint; there is still **no production open-source
+education agent built for an African deployment**.
+
+### 🟢 LATAM: the ranked homologation watch moved, in the direction this shelf had NOT recorded
+
+🔴 This base published that a `2026-10-13` amendment *"bars AI tools from determining a pupil's
+approval or failure"*. 🟢 True, and **half the story**. The same amendment **PERMITS AI as a
+`primeiro filtro` assisting essay correction**, which the CNE's September text had **banned
+outright** — MEC reversed it, judging a total ban *"impedia um recurso que facilita a rotina docente
+sem substituir o professor"*. 🔴 Also new: **`educação infantil` is a total prohibition**, and **the
+one-year adequacy window does NOT defer the bans** — they apply from publication. 🔴 Still **not
+homologated** in any source found. ⚠️ Two outlets, secondary grade; `T61` blocked both primary reads
+(DNS failure).
+
+🟢 **This is the most actionable regulatory cell in the base, because the pair of rules is a design
+brief:** assistive grading permitted, the **mark** stays human. New pattern
+**[`P37`](compose/patterns.md)** builds exactly that, and **`P10` is annotated with the scope limit
+it never stated** — a test suite cannot grade prose, so `P10` had nothing to offer the workload a
+secondary teacher actually carries.
+
+### 🟡 The other legs: ten passes of nil in the agent channel, and one licence warning worth having
+
+🟡 **Tenth consecutive pass with no new education agent.** The leg returned
+`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch` and the general-purpose set —
+curricula for engineers. `p283`'s diagnosis reproduces exactly: in this channel *"educational"* means
+**teaching ML**, not **serving a learner**. 🟢 **Do not re-run this query an eleventh time.**
+🟢 The one thing it earned: a result named **`Suna` under Elastic License 2.0 — source-available, not
+open source**, which is the `all-rights-reserved` lure arriving through **a curated list** rather
+than a repository. Third channel for that pattern. **Read the grant, never the list.**
+
+🟢 **EMEA held, and this shelf is now strictly AHEAD of its own channel:** the leg called the Annex
+III education delay *"likely but unverified, subject to Council adoption"*; this base already carries
+**Regulation (EU) 2026/1744** with Council **`2026-06-29`** and in force **`2026-07-27`**.
+🟡 **APAC held, with one new figure:** Korea's **USD 960 M** plan for AI talent centres and
+vocational high schools through 2030 — the sequel to the one national programme in this KB that was
+built, deployed and unwound. **The state moved the money from courseware to capacity.**
+🟢 **North America held**, with the familiar vendor-tracker spread (**35 + Puerto Rico** vs **33–35**).
+🟡 **Verticals: seventh consecutive nil.** One lead registered and deliberately **not shelved** — the
+**Kuali Foundation** (HE ERP/SIS/research admin), from an **undated** source, **no ref or payload
+read**.
+
+### 🔵 Backlog for `p285`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked:
+
+1. 🔴 **Work the 69 `QUEUE-UNENUMERATED` rows** *(carried, `p283` item 4)* — now **one family safer**,
+   but `SINGLE-SPELLING` is unchanged at **227** and `TREE-ENUMERATED` is **45 of 580 (7.8 %)**, so
+   outside `notice` these ladders still re-derive false absences. **Enumerate; do not re-probe.**
+2. 🔴 **Case-close the `copying` family next** — **117 ladders, 0 `CASE-CLOSED`**, and `TIER_A` has
+   `COPYING COPYING.txt COPYING.md COPYING.LESSER` with **no uppercase extension**. Same two-line
+   fix that worked for `notice` this pass; the ratchet will hold it.
+3. 🟡 **Resolve the `Kuali` lead** — one `git ls-remote` plus one payload read; it would extend the
+   thinnest column on the vertical shelf (higher-education administration).
+4. 🟡 **`--resolve` over the 14 CANDIDATE control sites** *(carried, `p280` item 1, now three passes)*.
+5. 🟡 **Fold `p281`'s three instrument defects into the gate** *(carried)* — `ls-remote --symref` is
+   cheap and the channel is built.
+6. 🔵 **A gap-directed leg for African education CODE**, not policy — the `p284` leg returned the
+   regulatory frame and no repository. Try exam-board and language names (WAEC, NECTA, Yoruba,
+   Hausa, Swahili) rather than the word "Africa".
+7. 🔵 **Read the primary texts on an egress-enabled run** — 🔴 still blocked by `T61`, re-confirmed
+   this pass by two DNS failures. **Stop ranking it as sandbox backlog.**
+
 ## Pass 283 — 2026-10-18 — **THE CENSUS `p282` LEFT OUT OF THE MAKEFILE IS STANDING, AND ON ITS FIRST RUN IT FOUND THE ROW `p282`'S OWN CORRECTION MISSED**
 
 **One-line summary:** `p282` ranked *"make the identity census standing"* first because it had

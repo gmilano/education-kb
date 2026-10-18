@@ -111,6 +111,35 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | [muskvdc/EduTwin-Africa](https://github.com/muskvdc/EduTwin-Africa) | LIVE, **PRE-LICENCE — the placeholder is still in the README** *(new in pass 269)* | Curriculum-aware tutor over **South African** curriculum knowledge, **Grades 8–12**: RAG, adaptive learning, bounded multi-agent collaboration, ReAct tools, guardrails. 0★ / 0 forks / 7 commits, default ref `main`. **No payload on 19 of 19 paths, no `license` field in `pyproject.toml`**, and the README says, in the author's own words: *"Add the project's chosen license here before publishing if a specific open-source license is required."* 🔵 **This is a state this shelf has not carried before.** `Athena` and `autoGrader-frontend` are *silent*; this one is **explicitly not yet licensed**. The practical difference is that it is the one row here where asking costs nothing and might work — the author has written down that they know it is missing. Until then: all rights reserved. |
 | [Valexxy/edunaija-os](https://github.com/Valexxy/edunaija-os) | LIVE, **no grant on any channel** *(new in pass 269)* | *"A security-conscious starter codebase for a Nigerian-first learning platform"*; `package.json` name is `nigeria-learning-platform`. 0★ / 0 forks / 6 commits. No payload on 19 of 19 paths and **no `license` field in `package.json`** — the two channels that could have carried a grant both empty. Names **no exam board and no institution**. 🔴 **Cite it carefully: it is NOT the EduNaija AI Tutor of the AfricaNLP 2026 paper** (that system is a five-agent LangChain + FAISS RAG tutor with English/Yoruba/Hausa/Igbo support; this is a starter codebase with a similar name). **Two different artefacts, one name** — see the trends file. |
 
+## 🟡 Pass 284 — no row added for the TENTH pass, and the one thing the leg was good for was a licence warning
+
+⏱️ `2026-10-18`, sixth pass. Evidence: [`p284-websearch.2026-10-18-p284.tsv`](../evidence/p284-websearch.2026-10-18-p284.tsv).
+
+🔴 **What was searched and what was missing**, stated so the nil is an informed gap and not silence.
+The leg `top open source AI agents education 2026 github MIT` returned
+`microsoft/ai-agents-for-beginners` (MIT, *"12 Lessons to Get Started Building AI Agents"*),
+`pguso/agents-from-scratch` (MIT, agents from first principles on a local LLM),
+`free-ai-agents-resources` (licence unstated), and the general-purpose set already known to this
+base — Hermes, `aider`, `Cline`, `AutoGen`, `LangGraph`.
+
+🔵 **None is an education-sector agent.** `p283`'s diagnosis is reproduced by an independent run:
+in this channel *"educational"* names a repository that **teaches machine learning**, not one that
+**serves a learner**. 🔴 **Ten passes.** The shelf above is therefore unchanged, and an eleventh
+run of the same query is not the way to extend it — see the backlog in [`../README.md`](../README.md).
+
+### 🔴 The warning the leg DID earn: a third channel for the `all-rights-reserved` lure
+
+A reviewer result in the same leg observed that *"open source"* is being stretched this year and
+named **`Suna` under Elastic License 2.0** — **source-available, not open source**. 🔵 This base has
+now met that pattern through **three different channels**: a repository describing itself
+permissively (`PageLM`), a repository whose bespoke licence wears an MIT-shaped description
+(`mewcp-google-classroom`, *"AStheTECH Community License"*), and now **a curated list asserting
+open-source status on a project's behalf**.
+
+🟢 **The operational rule is unchanged and this is the third proof of it:** the grade comes from the
+grant payload, never from the thing that recommended the repository. Every row in the tables above
+is payload- or manifest-graded for exactly this reason, and the grade is written in the row.
+
 ## 🟢 Pass 283 — every live address on this shelf is now PROVEN to be a distinct repository, and the proof is a standing gate
 
 ⏱️ `2026-10-18`, fifth pass. Evidence: [`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv) · [`ladder-case-audit.2026-10-18-p283.tsv`](../evidence/ladder-case-audit.2026-10-18-p283.tsv) · [`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv).

@@ -10,6 +10,119 @@ updated: 2026-10-18
 > Sourced from web research on 2026-10-17. Vendor-sourced figures are marked; they are
 > carried because they are the only numbers available, not because they are reliable.
 
+## 🟢 Pass 284 — THE GAP-DIRECTED LEG `p283` ORDERED IN PLACE OF A VERBATIM ONE BROKE AFRICA OPEN ON ITS FIRST RUN, AND BRAZIL'S PARECER MOVED IN THE DIRECTION THIS SHELF HAD NOT RECORDED
+
+⏱️ `2026-10-18`, sixth pass. Evidence:
+[`p284-websearch.2026-10-18-p284.tsv`](../evidence/p284-websearch.2026-10-18-p284.tsv).
+
+🔵 `p283` ended with an instruction rather than a backlog item: *"`p284` is told **not** to re-run
+the four regional legs verbatim, and to spend the budget on a gap-directed leg instead."* 🟢 **It
+was followed, and it is the reason this pass has two regional findings instead of an eight-for-eight
+nil.** Three consecutive passes ran the mandated battery verbatim and returned nothing; one leg
+aimed at the declared gap returned a shelf's worth on the first attempt.
+
+### 🟢 Africa — the four-pass "empty" is REFUTED, and it was a query defect, not an absence
+
+🔴 `p283` published *"Africa re-confirmed empty for the fourth time … **No open-source education AI
+project for Africa or the Middle East** was returned, again"*, on the strength of the EMEA leg's
+Africa content. 🟢 **A leg addressed to Africa directly returned the following, none of it on this
+shelf before.** The pattern is the one `p254` named — *the base inherits its own conclusions about
+what is impossible* — and the remedy was one differently-worded search.
+
+| fact | detail | grade |
+|---|---|---|
+| **AU Continental Education Strategy `2026–2035`** | Treats **digitalization and AI as one of three megatrends** education systems must adapt to — the continental frame this shelf had no entry for | institutional |
+| **AU Continental AI Strategy (2024)** | Places education at the centre of inclusive digital futures | institutional |
+| **Kenya National AI Strategy `2025–2030`** | Plans to **embed AI literacy across education** and pilot **Digital Innovation Hubs** as curriculum anchors | institutional |
+| **South Africa — DBE coding & robotics** | Curricula under development for **Grades R–9** | reported |
+| **South Africa — North-West University** | Reported as the country's **first official university AI policy**, **January 2026** | reported |
+| **Pan-African ethical AI curriculum** | `arXiv 2604.27708` — culturally contextualized framework for primary/secondary, **age-banded progression**, **Ubuntu-based ethics** | preprint |
+| **LLMs for career guidance, 10 African countries** | `arXiv 2510.18902` — recommends African universities **prioritise open-source LLMs**; open models (Llama) outscored a proprietary one on the task. ⚠️ **One evaluation, one task** — not a model ranking | preprint |
+| **African higher-education constraints** | 2026 exploratory study (ICHEI): **every** digitalization/AI constraint rated **≥ 3.5 of 5**, outdated faculty capability and infrastructure among them | study |
+
+🔵 **The studio-relevant reading, and it is not "Africa is now covered".** What the leg returned is
+**policy and curriculum frames, plus two preprints** — it still returned **no production open-source
+education agent built for an African deployment**. 🟢 So the gap narrows and changes shape: this base
+now holds the **regulatory and curricular context** for an African engagement and still holds **no
+shelf-ready code artefact** for one. The two African-context repositories this base already carries
+([`muskvdc/EduTwin-Africa`](https://github.com/muskvdc/EduTwin-Africa), pre-licence, and
+[`Valexxy/edunaija-os`](https://github.com/Valexxy/edunaija-os), no grant) remain the only code, and
+both still serve no usable licence.
+
+🔴 **A NAME COLLISION a studio will hit, and this base has been burned by this exact shape twice.**
+Reporting names an AI robot tutor called **"Iris"**, launched in **South Africa, August 2025**. This
+KB already carries **`Iris`** as the user-facing name of the TUM tutor that
+[`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) powers — the row `p282` withdrew as an alias.
+**Two unrelated artefacts, one name**, which is precisely the `EduNaija` double-artefact trap already
+recorded in `intel/trends.md`. 🔵 Cite "Iris" with its origin attached, always.
+
+### 🟢 LATAM — the ranked homologation watch MOVED, and the movement is the opposite of what this shelf recorded
+
+🔴 **What this file published at `## Opportunities by region → LATAM` until this pass:** that a
+`2026-10-13` amendment *"bars AI tools from determining a pupil's approval or failure — marks are
+given only by teachers"*. 🟢 **That half is confirmed and stands.** 🔴 **What was missing is the
+other half, and it inverts the engagement:** the same amendment **PERMITS** AI in essay correction,
+which the CNE's September text had **prohibited outright**.
+
+| element of `Parecer CNE/CP nº 15/2026` | state as of `2026-10-18` |
+|---|---|
+| CNE approval | **`2026-09-01`**; súmula in the **DOU `2026-10-06`** (Ed. 189, Seç. 1, p. 18) |
+| 🟢 **AI in essay/dissertation correction** | **PERMITTED as a `primeiro filtro` — a first pass that assists the teacher.** The CNE's original text banned it; **MEC changed this before homologation**, judging that a total ban *"impedia um recurso que facilita a rotina docente sem substituir o professor"* |
+| 🔴 **final mark, approval and failure** | **PROHIBITED to automated systems.** The teacher assigns the grade and decides progression |
+| 🔴 **`educação infantil` (early childhood)** | **USE TOTALLY FORBIDDEN** at this stage; later stages carry progressive rules |
+| ⏱️ **adequacy window** | institutions have **one year** to comply — 🔴 **but the PROHIBITIONS apply from publication of the parecer**, not after the window |
+| 🔴 **homologation** | **STILL not confirmed in any source found.** Reporting of `2026-10-13`/`2026-10-14` says minister **Leonardo Barchini** would homologate that week. Under **art. 2 of Lei nº 9.131/1995 there is no normative force until the homologating act is published** |
+
+🔵 **Why this is the most actionable regulatory cell in this file.** The pair of rules is not a
+restriction plus a restriction; it is **a design brief with a named architecture**: assistive
+grading is *expressly permitted*, autonomous decision-making is *expressly forbidden*, and the
+boundary is the **assignment of the mark**. A studio can build essay-support tooling for Brazilian
+institutions **today** and must put the teacher on the mark. 🔴 And the two-speed commencement is a
+trap for a delivery plan: a team that reads *"one year to adapt"* and ships an autonomous grader in
+month three has shipped into a prohibition that was already in force.
+
+⚠️ **Grade: secondary-source, two outlets, consistent.** `T61` still blocks the primary texts —
+`mixvale.com.br` and `semesp.org.br` both failed DNS resolution from this sandbox this pass, so the
+DOU and the parecer itself remain unread. A second outlet (`apufsc.org.br`, `2026-10-13`) carries
+the same amendment detail, so this is **two-sourced rather than single-sourced**, and the
+pre-amendment September reporting (*"CNE proíbe uso de IA para corrigir redações e provas"*) is
+**superseded, not contradictory** — it describes the text before MEC changed it.
+
+### 🟡 APAC — held, with ONE new figure
+
+🟢 Every APAC fact this base holds was returned again and **matched to the digit**: China compulsory
+AI from age six and Beijing's **eight hours a year**; Korea's `AI Basic Act` in force `2026-01-22`
+with education in the high-impact class; the AI-digital-textbook unwinding (under 30 % adoption,
+official status stripped); Japan's second AI Basic Plan; India's ten-million-teacher constraint.
+
+🟢 **New:** Korea's response to the textbook failure is a **USD 960 million plan to build AI talent
+centres and vocational high schools through 2030**. ⚠️ Secondary-source. 🔵 It matters because it is
+the **sequel to the one national programme in this KB that was built, deployed and unwound** — the
+state did not retreat from AI in education, it **moved the money from courseware to capacity**.
+
+### 🟢 EMEA and North America — held, no drift, and the EMEA leg came back WEAKER than this shelf
+
+🟢 **EMEA: no drift, and the direction of the discrepancy is worth recording.** The leg returned the
+Annex III education delay as *"from 2 December 2027 … the Digital Omnibus delays this by 16 months
+**(subject to Council adoption)** … treat the December 2027 date as **likely but unverified**"*.
+🔵 **This shelf is strictly ahead of its own supply channel:** it already carries the instrument as
+**Regulation (EU) 2026/1744**, Parliament `2026-06-16`, **Council `2026-06-29`**, signed
+`2026-07-08`, OJ `2026-07-24`, **in force `2026-07-27`** — so the Council question the channel calls
+open was settled four months ago and is recorded here to the day. Nothing changed; **the entry is
+upgraded from "current" to "better than the channel"**, which is a different and more useful claim.
+🟢 The Article 50 transparency duties (live `2026-08-02`) and the emotion-inference prohibition
+(in force, **not** deferred by the 2027 delay) were both returned and both match.
+
+🟢 **North America: no drift on substance, and the familiar count spread.** The leg returned **35
+states plus Puerto Rico** with official AI guidance against another tracker's **33–35**, ~**100
+AI-in-education bills** in the 2026 session, **Ohio HB 96** (board-approved district AI policy,
+deadline **`2026-07-01`**), Utah's phased model policies, **Idaho SB 1227**, California's January
+2026 framework and Maryland's State Board guidance. 🔵 Higher education stays the thin half, as this
+shelf already says: the one concrete item is **Florida's rule requiring all 28 Florida College
+System institutions to adopt AI-use policies** covering academic integrity and grading. 🔴 The
+state-count spread is the same vendor-tracker disagreement this file documents for market size —
+**quote the range, name the tracker, never pick one number**.
+
 ## 🟢 Pass 283 — the full eight-leg battery ran and moved not one figure, and THAT is the measurement
 
 ⏱️ `2026-10-18`, fifth pass. Evidence: [`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv) · [`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv).
@@ -1180,6 +1293,38 @@ open-source education AI project aimed at Africa or the Middle East; the only Af
 closed study (Google DeepMind, Sierra Leone, May 2026) already carried. 🟢 The two African-context
 agents `p269` located remain this base's only rows there, and both still **serve no grant at all**.
 
+> ## 🟢 `p284` — THE "AFRICA IS EMPTY" FINDING ABOVE IS HALF REFUTED, BY ONE DIFFERENTLY-WORDED LEG
+>
+> 🔴 Four passes, including `p283`, published Africa as *"re-confirmed empty"* on the strength of an
+> EMEA-framed leg. 🟢 A leg addressed to **Africa directly** returned, on its first run: the
+> **AU Continental Education Strategy `2026–2035`** (digitalization and AI as one of three
+> megatrends); the **AU Continental AI Strategy (2024)**; **Kenya's National AI Strategy
+> `2025–2030`** (AI literacy embedded across education, Digital Innovation Hubs as curriculum
+> anchors); **South Africa's DBE coding & robotics curricula for Grades R–9**; **North-West
+> University** reported as South Africa's **first official university AI policy, January 2026**;
+> a **pan-African culturally contextualized ethical AI curriculum** (`arXiv 2604.27708`, age-banded,
+> Ubuntu-based ethics); an evaluation of **LLMs for career guidance across ten African countries**
+> (`arXiv 2510.18902`) that **recommends African universities prioritise open-source LLMs**; and a
+> 2026 ICHEI study of African higher education in which **every** digitalization/AI constraint rated
+> **≥ 3.5 of 5**.
+>
+> 🔵 **What the refutation does and does not say.** It refutes *"the channel returns nothing for
+> Africa"*. It does **not** make Africa covered: every item above is **policy, curriculum or a
+> preprint**, and the leg still returned **no production open-source education agent built for an
+> African deployment**. 🟢 The gap has therefore **changed shape rather than closed** — the
+> regulatory and curricular context for an African engagement is now on this shelf; the code is
+> still missing, and `EduTwin-Africa` and `edunaija-os` are still the only two rows, still
+> ungranted. 🔴 **The methodological finding is the bigger one:** a nil repeated four times was a
+> property of the QUERY, not of the world, which is `p254`'s *the base inherits its own conclusions
+> about what is impossible* — and `p283` is the pass that broke it, by ordering a gap-directed leg
+> instead of a fourth verbatim one.
+>
+> 🔴 **Name collision, and this base has been burned by this shape twice.** Reporting names an AI
+> robot tutor **"Iris"** launched in **South Africa, August 2025**. This KB carries **`Iris`** as
+> the user-facing name of the TUM tutor [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris)
+> powers — the row `p282` withdrew as a GitHub alias. **Two unrelated artefacts, one name**, the
+> same trap as the two `EduNaija` artefacts. Cite "Iris" with its origin attached.
+
 **Pass 280 — the region-wide leg is an INFORMATIVE NIL on education for the ninth time, and the
 jurisdiction leg reproduced this shelf's AI Act rows exactly.** The region query named **no
 education-sector player, no ministry and no education AI rule** — in its own words, *"the results
@@ -1718,6 +1863,7 @@ school. The measured consequences:
 | the state auditor's finding | the textbooks were **brought into schools without a pilot** |
 | publisher suits against the reversal | **dismissed**, Seoul Administrative Court, **Jul and Aug 2026** |
 | MoE's 2026 posture | voluntary school-by-school adoption; **review process for 2026-year products halted** |
+| 🟢 **`p284`: what the state did NEXT** | a **USD 960 million** plan to build **AI talent centres and vocational high schools through 2030**. ⚠️ Secondary-source. 🔵 **Korea did not retreat from AI in education — it moved the money from COURSEWARE to CAPACITY**, which is the single most useful data point in this table for sequencing an engagement |
 
 **The cited causes were not model quality.** They were **factual errors in generated content, privacy
 risk, increased screen time, and heavier teacher workload** — every one of them an *implementation and
@@ -2052,6 +2198,9 @@ Chile, Peru and Spain**.
 | DOU summary published | **`2026-10-06`** |
 | 🔴 **homologated?** | 🔴 **NO — not in any source found.** Under **art. 2 of Lei nº 9.131/1995 it has no normative force until the homologating act is published** |
 | 🟢 **reported imminent, WITH CHANGES** | **`2026-10-13`** reporting: minister **Leonardo Barchini** would homologate that week, and one amendment **bars AI tools from determining a pupil's approval or failure — marks are given only by teachers** |
+| 🟢 **`p284`: the OTHER half of that amendment, and it runs the other way** | **AI in essay/dissertation correction is PERMITTED as a `primeiro filtro` that assists the teacher.** The CNE's September text **banned it outright**; MEC changed that before homologation, judging a total ban *"impedia um recurso que facilita a rotina docente sem substituir o professor"*. 🔵 So the rule is **not** *"no AI in grading"* — it is **assistive grading allowed, the MARK stays human**. Two outlets, `2026-10-13`/`2026-10-14` |
+| 🔴 **`p284`: `educação infantil`** | **AI use TOTALLY FORBIDDEN** at the early-childhood stage; later stages carry **progressive** rules |
+| 🔴 **`p284`: the window does NOT defer the bans** | institutions get **one year to adapt**, 🔴 **but the prohibitions apply from PUBLICATION of the parecer**. A delivery plan that reads *"12 months"* and ships an autonomous grader in month three ships into a prohibition already in force |
 | 🟢 **new substance** | the text **classifies AI uses by RISK LEVEL**, gives institutions a **12-month adequacy window from homologation**, and **prohibits autonomous AI use up to the 5th year** on UNESCO's **age-13** parameter |
 | official text | `gov.br/mec/pt-br/cne/2026/setembro-2026/pcp015_26.pdf` *(not read — `T61`)* |
 

@@ -120,9 +120,74 @@ FLOORS = uf.read_floors()
 # both recipes, and still went red here first.  🔵 The remedy is not "remember next time",
 # which is what eight passes have now tried: it is to DERIVE these three literals from the
 # Makefile instead of typing them.  Registered, not built.
-chk("python test files on disk", len(ROWS), 221)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 40)
-chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
+# 🟢 p284 — THE THREE TYPED LITERALS ARE GONE.  They read `221`, `40` and `181` here, and
+# `p283` registered their removal as item 1 after an EIGHT-pass red streak.  What replaces
+# them is not a looser check; it is a cross-check between two readings of the gate's reach
+# written in OPPOSITE directions (`is_gated` walks disk and searches the recipes;
+# `uf.derive_gated` walks the recipes and emits files that exist).  See `derive_gated`'s
+# own comment block for why the streak ran for eight passes: the literals were counting
+# FILES ON DISK, while every one of the eight added suites arrived already inside
+# `make hooks` — eight reds for zero change in exposure.  `--verify`'s `UNPINNED` verdict,
+# which is what actually catches a new at-risk suite, never needed a literal at all.
+_DISK = {r["relpath"] for r in ROWS}
+_PRED = {r["relpath"] for r in ROWS if r["gated"]}
+_DERIVED = uf.derive_gated(uf.makefile_text(), _DISK)
+
+# The live cross-check. A disagreement names the suite, in whichever direction it falls —
+# which is how `p280`'s basename collision would surface now, WITHOUT a pinned count.
+chk("p284 the two readings of the gate's reach agree, suite by suite", _PRED, _DERIVED)
+chk("p284 ...and neither reading is empty (a vacuous agreement is not an agreement)",
+    len(_PRED) > 0 and len(_DERIVED) > 0, True)
+chk("p284 the derived reading is genuinely OTHER code, not an alias of the predicate",
+    uf.derive_gated.__code__ is not uf.is_gated.__code__, True)
+
+# The partition, asserted as a partition instead of as three numbers that must be
+# arithmetically consistent by hand.
+chk("p284 gated + ungated partitions the disk population exactly",
+    sum(1 for r in ROWS if r["gated"]) + sum(1 for r in ROWS if not r["gated"]),
+    len(_DISK))
+chk("p284 every gated row is on disk (no phantom credit)", _PRED - _DISK, set())
+chk("p284 the census enumerates each file once", len(ROWS), len(_DISK))
+
+# 🔵 The three regression shapes, now asserted as BEHAVIOUR of `derive_from_recipes` rather than
+# as side effects of a count moving.  `p251`'s finding (a directory is not a suite) and
+# `p280`'s finding (a basename is not a file) are preserved from the new direction, and the
+# third is the one only this direction can state: a line may name both halves and still
+# reach nothing, because the file does not exist.
+chk("p284 a DIRECTORY alone derives nothing (p251, from the other direction)",
+    uf.derive_from_recipes("\tcd compose/code/p252-ungated-floors && ls\n", _DISK),
+    set())
+chk("p284 a bare BASENAME alone derives nothing (p280, from the other direction)",
+    uf.derive_from_recipes("\t$(PY) test_ungated_floors.py\n", _DISK),
+    set())
+chk("p284 both halves on one line, but NO such file -> derives nothing",
+    uf.derive_from_recipes("\tcd compose/code/p252-ungated-floors && $(PY) test_nonexistent.py\n",
+                    _DISK),
+    set())
+chk("p284 ...and the real recipe shape for this very suite DOES derive",
+    "p252-ungated-floors/test_ungated_floors.py" in uf.derive_from_recipes(
+        "\tcd compose/code/p252-ungated-floors && $(PY) -I test_ungated_floors.py\n", _DISK),
+    True)
+chk("p284 the explicit-path recipe shape derives too",
+    uf.derive_from_recipes(
+        "\t$(PY) -I compose/code/p252-ungated-floors/test_ungated_floors.py\n", _DISK),
+    {"p252-ungated-floors/test_ungated_floors.py"})
+
+# 🟢 p284 POSITIVE CONTROL — the cross-check that replaced the literals must be able to
+# FAIL, and specifically on `p280`'s defect.  `p280` found `is_gated` crediting
+# `p791-registry-id-provenance/test_provenance.py` (which no recipe runs) as gated, and it
+# surfaced only because a PINNED count moved by two.  With the pins gone, this is the
+# control that keeps that detection: inject exactly that false credit into the predicate's
+# side and the set comparison must reject it, by name.  🔴 Without this, "the two readings
+# agree" could be an agreement between two empty or two identical readings — the vacuity
+# `p250`'s `lazy_lint.py` was.
+_COLLISION = "p791-registry-id-provenance/test_provenance.py"
+chk("p284 positive control: the collision subject is on disk and NOT gated today",
+    (_COLLISION in _DISK, _COLLISION in _PRED), (True, False))
+chk("p284 positive control: injecting p280's false credit BREAKS the agreement",
+    (_PRED | {_COLLISION}) == _DERIVED, False)
+chk("p284 positive control: ...and the comparison names it as predicate-only",
+    sorted((_PRED | {_COLLISION}) - _DERIVED), [_COLLISION])
 # 🔴 p280's regression control for the basename collision, both arms.  A gate-census that
 # cannot tell two same-named suites apart over-reports its own coverage, which is the one
 # direction a coverage measurement must never err in.

@@ -35,6 +35,36 @@ that **teach AI** (`generative-ai-for-beginners`, `nanochat`, `developer-roadmap
 where pass 273's finding landed**; it landed on the agent shelf and on licence method — see `T41` and
 [`repos/trending.md`](trending.md).
 
+## 🟡 Pass 284 — no row added, and the one candidate the leg produced is NOT shelved, on purpose
+
+⏱️ `2026-10-18`, sixth pass. Evidence: [`p284-websearch.2026-10-18-p284.tsv`](../evidence/p284-websearch.2026-10-18-p284.tsv).
+
+🔴 **What was searched and what came back.** The leg
+`open source platform education ERP CRM MIT Apache student information system` returned
+**OpenEduCat** (LGPL-3.0, built on Odoo) — **already on this base's vertical shelf** — and
+explicitly returned **nothing MIT- or Apache-licensed**. The result's own words: *"It did not return
+anything on MIT- or Apache-licensed education platforms."*
+
+🟡 **One candidate, named and deliberately NOT shelved: the `Kuali Foundation`.** A Linux.com article
+describes it as *"the premiere open source educational administration project"*, producing **ERP, SIS
+and research-administration systems** for higher education — a category this base's vertical shelf
+has thin coverage of. 🔴 **Three reasons it stays off the shelf this pass:**
+
+1. 🔴 **The source is undated**, and it names **Compiere** and **Openbravo** alongside it — projects
+   whose heyday was over a decade ago. That dates the article, not Kuali, but it means the
+   *currency* of the claim is unestablished.
+2. 🔴 **No repository, no grant, no ref was read.** This base's standing rule is that a row carries a
+   licence read **first-hand from the payload**. Nothing was read here.
+3. 🔵 **Kuali's licence history is the specific reason not to guess:** the project is widely
+   associated with a move toward a commercial entity, so an inference of *"it is an open foundation,
+   therefore the code is permissive"* is exactly the **parent-inference grade** this base ranks
+   weakest and has already been burned by (`kolibri-design-system`, `Athena`).
+
+🟢 **Registered, not published.** Resolving it costs one `git ls-remote` plus one payload read and
+would extend the thinnest part of the vertical shelf (**higher-education administration**). It is in
+the backlog in [`../README.md`](../README.md) rather than in a table, because a row here is a
+recommendation and this is a lead.
+
 ## 🔴 Pass 283 — the Artemis row on THIS shelf recommended one repository twice, and `p282`'s correction never reached it
 
 ⏱️ `2026-10-18`, fifth pass. Evidence: [`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv) · [`ladder-case-audit.2026-10-18-p283.tsv`](../evidence/ladder-case-audit.2026-10-18-p283.tsv) · [`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv).

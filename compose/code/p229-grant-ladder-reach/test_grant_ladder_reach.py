@@ -137,7 +137,20 @@ out = subprocess.run([HERE + '/ladder.sh', '--reach'], capture_output=True, text
 # within one keystroke of publishing `NO_LICENCE_FILE` on `openedx/xblock-sdk`.  The count is
 # re-asserted and not loosened, for the reason above, and the JOIN that stops the ladder
 # drifting from the proven set again is `compose/code/pass256-ladder-closure/`.
-check('T272 reach is printable', out.startswith('tierA=26 tierB=15 tierC=10 total=51'), True)
+# p284 widened Tier A by TWO names, closing the `NOTICE` family's CASE: the ladder carried
+# `NOTICE NOTICE.txt` -- one stem casing, one extension casing -- so `NOTICE.TXT` and
+# `notice.txt` are added.  `p283` measured this family at 0.0 % case-closed and published
+# "not one NOTICE ladder on this base can find NOTICE.TXT"; of the two ladders it named, THIS
+# one was the real defect (the other, `p1057`, generates the uppercase extension already).
+# Cost is +2 requests per slug.  `pass256-ladder-closure` re-ran green at 38/38, and
+# `lib/licence_path.sh`'s `is_licence_path` accepts both -- it lower-cases the basename first.
+# 🔵 This count is re-asserted and NOT loosened, and p284 is the pass that can say why a pin
+# is right HERE and was wrong for the `p252` census it dismantled in the same change: this one
+# guards PROBE REACH, which really does change when the ladder changes (+2 requests on every
+# slug, forever).  `p252`'s guarded a count of FILES ON DISK and moved for changes that altered
+# no exposure at all -- which is why it went red for eight consecutive passes and is now
+# derived.  A pin earns its place when the quantity it names is a cost or a risk.
+check('T272 reach is printable', out.startswith('tierA=28 tierB=15 tierC=10 total=53'), True)
 check('T272 LICENSE-CODE is in the printed reach (p247)', 'LICENSE-CODE' in out, True)
 check('T272 the code grant is probed BEFORE the bare LICENSE (p247)',
       out.index('LICENSE-CODE') < out.index('\nLICENSE\n'), True)

@@ -1,0 +1,10 @@
+measure	value	source
+python_test_files	221	disk enumeration (compose/code/**/test_*.py)
+gated_predicate	40	is_gated: walks disk files, searches the Makefile
+gated_derived	40	derive_gated: walks Makefile lines, emits files that exist, plus p251 gate_reach.FLOORS
+agreement	YES	set equality, suite by suite
+ungated	181	len(disk) - gated
+typed_literals_removed	3	221 / 40 / 181, red for eight consecutive passes
+new_controls	13	incl. a positive control injecting p280's collision, which must break the agreement
+exposure_population_pinned	71	ungated AND silent-zero; left pinned deliberately - a change here IS a change in risk
+red_streak_cause	added suites arrived GATED	p261 p262 p275 p277 p278 p279 p280 p283 each recorded "ungated stays at 181" i.e. zero exposure change

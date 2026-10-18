@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 284) — the tenth consecutive nil in the agent channel, and `p283`'s instruction not to repeat the regional legs is what produced the pass's two findings
+
+⏱️ **Sixth pass of `2026-10-18`.** Append-only — everything below this section is prior history and
+is not rewritten. Evidence:
+[`p284-websearch.2026-10-18-p284.tsv`](../evidence/p284-websearch.2026-10-18-p284.tsv) ·
+[`ladder-census.2026-10-18-p284.tsv`](../evidence/ladder-census.2026-10-18-p284.tsv).
+
+### 🟡 Tenth pass, no new agent — and the diagnosis reproduced word for word
+
+The global agent leg ran. What came back: `microsoft/ai-agents-for-beginners` (MIT, **67.2k★ as
+reported 2026-06-14**, *"12 Lessons to Get Started Building AI Agents"*), `pguso/agents-from-scratch`
+(MIT, ~796★, builds agents from first principles on a local LLM), `free-ai-agents-resources`
+(licence unstated), and the general-purpose set this shelf already carries — Hermes, `aider`,
+`Cline`, `AutoGen`, `LangGraph`.
+
+🔵 **`p283`'s diagnosis is now reproduced by an independent run of the same leg:** in this channel
+*"educational"* names a repository that **teaches machine learning**, not one that **serves a
+learner**. Every row above is a curriculum for engineers. 🔴 **Ten passes. This is a property of the
+supply channel, not a dry spell**, and an eleventh pass through the same query should not be
+expected to differ.
+
+🟢 **One genuinely useful warning came out of the leg, and it is a licence warning.** A reviewer
+result noted that *"open source"* is being stretched this year and listed **Suna under Elastic
+License 2.0** — **source-available, not open source**. That is the `PageLM`/`mewcp-google-classroom`
+pattern arriving through a *listicle* rather than through a repository, and it is the third channel
+by which this base has now met it. **Read the grant, never the list.**
+
+### 🟢 What this pass added instead: the NOTICE ladder is closed, and `p283`'s headline about it was false
+
+🔴 `p283` published: *"**Not one `NOTICE` ladder on this base can find `NOTICE.TXT`**"*, `notice`
+being *"the only family at **0.0 %**"*. 🟢 **Half of that was a real defect and is now fixed; the
+other half was an artefact of the measuring instrument.**
+
+| ladder | `p283` verdict | 🟢 `p284` | what happened |
+|---|---|---|---|
+| [`p229-grant-ladder-reach/ladder.sh`](../compose/code/p229-grant-ladder-reach/ladder.sh) `TIER_A` | `CASE-UNVARIED` | 🟢 **`CASE-CLOSED`** | **A REAL defect.** The ladder carried `NOTICE NOTICE.txt` — one stem casing, one extension casing. `NOTICE.TXT` and `notice.txt` added; `pass256-ladder-closure` stays green at **38/38**, and `lib/licence_path.sh`'s `is_licence_path` accepts both (it lower-cases the basename first) |
+| [`p1057-licence-path-case/path_case.py`](../compose/code/p1057-licence-path-case/path_case.py) | `STEM-ONLY` | 🟢 **`GENERATED-CASE-VARIED`** | 🔴 **A FALSE POSITIVE, against the instrument that INVENTED case-closure.** `candidate_paths` is a cross product over `STEMS × EXTS × _casings(stem) × {ext, ext.upper()}`, so it **already generates `NOTICE.TXT`, `NOTICE.MD`, `Notice.txt` and `notice.txt`, for every stem** |
+
+🔵 **Why the audit misread it, and the caveat was its own.** `p283`'s audit reads the **literal**
+path vocabulary of each file, and its docstring says so: *"An instrument that builds its paths by
+concatenation is reported as what its literals show."* A cross product has no literal `NOTICE.TXT`
+to find. 🔴 **The caveat was in the prose and ignored at the point of publication** — this base's
+recurring shape, and the reason it is now **enforced in code**: a new `GENERATED-CASE-VARIED`
+verdict grades a generator on what it generates, gated by a predicate that requires **both** an
+extension-case idiom and a stem-case idiom, so it cannot fire on a literal ladder that merely calls
+`.upper()` somewhere.
+
+🟢 **13 new controls in `p1057`'s own suite (16 → 29) assert the generated ladder directly**, so the
+claim is settled against the artefact that decides probes rather than against the source text.
+
+### 🟢 And the census that burned eight passes is derived, not typed
+
+🔴 `p283` registered as item 1: *"DERIVE these three literals from the Makefile instead of typing
+them."* 🟢 Done — and writing it exposed **why** the streak ran:
+
+| | |
+|---|---|
+| the three literals | `221` test files · `40` gated · `181` ungated |
+| 🔴 what they were pinning | **a count of FILES ON DISK** |
+| 🔴 what every one of the eight added suites did to EXPOSURE | **nothing** — p261, p262, p275, p277, p278, p279, p280 and p283 each wrote *"`ungated` stays at 181"* |
+| 🟢 what already caught the only shape that matters | `--verify`'s **`UNPINNED`** verdict, by name, with no literal involved |
+
+🔵 **Eight passes were stopped by a red gate over a change that moved the risk by zero.** A gate
+that fires on every change and on no risk teaches its reader to bump the number — which is exactly
+what eight passes did. 🟢 The replacement is a **cross-check between two readings of the gate's
+reach written in opposite directions** (`is_gated` walks disk and searches the recipes;
+`derive_gated` walks the recipes and emits files that exist), which carries **no literal** and still
+catches `p280`'s basename collision — asserted by a **positive control that injects that exact
+false credit and requires the agreement to break**. The `71`-suite exposure population **stays
+pinned**, deliberately: a change there *is* a change in risk.
+
+
 ## 2026-10-18 (pass 283) — the agent channel returns nothing for the ninth pass running, and the shelf can now prove no two of its rows are one repository
 
 ⏱️ **Fifth pass of `2026-10-18`.** Append-only — everything below this section is prior history and

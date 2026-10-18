@@ -332,6 +332,16 @@ policy document.
 tightening fastest, it is cheaper than an LLM grader, and it gets *more* defensible as
 regulation increases rather than less.
 
+🔴 **`p284` — the scope limit this pattern did not state: a test suite cannot grade prose.**
+Everything above is for programming, notebook and modelling work; it has **nothing to offer essay
+marking**, which is the workload a secondary teacher actually carries. 🟢 And the conservatism here —
+*"the model only ever produces explanation text … never proposes or alters the mark"* — is now
+**stricter than at least one regulator requires**: Brazil's MEC, amending `Parecer CNE/CP nº 15/2026`
+before homologation, **permits AI as a `primeiro filtro` that proposes** in essay correction and
+forbids only the **assignment of the mark** and the approval/failure decision. 🔵 Use this pattern
+where the grade can be **computed**; use **`P37`** where it cannot. The boundary between the two is
+**not** regulatory — it is whether the artefact being assessed is executable.
+
 ## P11 — Agent layer over India's national stack (MIT end-to-end, no copyleft anywhere)
 
 **When:** an APAC public-sector engagement — a state education department or ministry — that
@@ -1820,3 +1830,81 @@ half that is unambiguously permitted today.
   proposal.
 - 🟢 **Licence surface:** `DeepTutor` Apache-2.0 and `pykt` MIT are both **payload-verified**. The
   platform is copyleft; your extension is not, provided it stays on the documented extension point.
+
+## P37 — Assistive essay grading where the regulator PERMITS the suggestion and FORBIDS the mark *(new in pass 284)*
+**Target:** Brazilian institutions under `Parecer CNE/CP nº 15/2026`; Vietnamese institutions under
+`Decision 33/2026/QD-TTg`; EU institutions building ahead of Annex III pt 3 (`2027-12-02`)
+**Timeline:** 5–7 weeks
+
+🔵 **Why this is not `P10`.** `P10` produces the mark **deterministically, from a test suite**, and
+the model is confined to explaining an already-computed result. That is the right architecture for
+programming and notebook work and it has **nothing to offer an essay** — a test runner cannot grade
+prose. 🟢 **`p284` found that Brazil's MEC, amending the CNE text before homologation, explicitly
+PERMITS AI as a `primeiro filtro` in essay and dissertation correction** while forbidding an
+automated system from assigning the final mark or deciding approval/failure. **That is a larger
+permitted scope than `P10` assumes**, and this pattern is the one that uses it.
+
+```
+[Artemis  MIT]                      the platform: text exercises, submissions, auditable runner
+        |
+[Athena  MIT (metadata, 12/14)]     deploy ONE module: module_text_llm
+        |                           -> a RUBRIC-ANCHORED feedback SUGGESTION per criterion,
+        |                              each with the span of text it is about
+        v
+[suggestion record]                 status = PROPOSED.  Carries: rubric criterion, span,
+        |                           suggested band, model+prompt version, timestamp.
+        |                           🔴 It is NOT a grade and is never written to a grade field.
+        v
+[teacher review surface]            accept / edit / reject, per criterion, with the span shown
+        |                           🔴 No "accept all".  The mark field is writable ONLY here.
+        v
+[mark assignment]                   the teacher's value is the ONLY value recorded as the mark
+        |
+        +--> [lrsql  Apache-2.0]     xAPI record of BOTH values and who moved the state
+        |                            -> this is the artefact that proves compliance
+        v
+[bruchris/canvas-lms-mcp  MIT]      optional: write the mark back to the Canvas the client runs,
+                                    with its opt-in FERPA pseudonymisation on the way in
+```
+
+**Wiring.** Three properties do the regulatory work, and each is a build decision rather than a
+policy sentence:
+
+1. **Two fields, not one.** `suggested_band` and `mark` are separate columns with separate write
+   permissions. The model's credential can write the first and **cannot** write the second. *"AI did
+   not assign the grade"* is then a schema property, demonstrable from the grant table.
+2. **No bulk accept.** The prohibition is on the automated system *deciding*. An "accept all 180
+   essays" button reintroduces the decision at the UI layer with the audit log still looking clean —
+   it is the single highest-risk affordance in this pattern and it must not exist.
+3. **The span is mandatory.** Each suggestion cites the text it is about. This is what makes a
+   teacher's review a review rather than a rubber stamp, and it is what makes the `primeiro filtro`
+   framing defensible: the teacher is reading evidence, not a verdict.
+
+**Licence boundary.** `Artemis` MIT, `lrsql` Apache-2.0, `canvas-lms-mcp` MIT. ⚠️ **`Athena` is MIT
+at *metadata* grade** — 12 of 14 manifests declare it, **no licence file exists** (tree enumerated,
+691 paths). Write the grade into the SOW and request a payload from TUM; do not brief it as
+payload-verified. 🔴 **Do not substitute `ECNU-ICALK/EduChat` for the essay-assessment half without
+reading its three-way split** — Apache-2.0 code, **AGPL-3.0 model**, **CC-BY-NC-4.0 data**.
+
+🔴 **Two scheduling constraints, and both are easy to get wrong.**
+- **Brazil: the adequacy window does not defer the bans.** Institutions get **one year to adapt**,
+  but the **prohibitions apply from publication of the parecer**. Ship the two-field schema and the
+  human mark gate in the **first** increment, not the last.
+- **Brazil: `educação infantil` is a hard exclusion.** AI use is **totally forbidden** at the
+  early-childhood stage. Scope the deployment to the stages with progressive rules and say so in
+  writing; a platform-wide rollout crosses a prohibition.
+- ⚠️ **The parecer is NOT homologated** in any source found as of `2026-10-18`. Under **art. 2 of
+  Lei nº 9.131/1995 it has no normative force until the homologating act is published** — so this
+  pattern is **build-ahead**, and the binding text differs from the September one. Re-read on
+  publication. Secondary-source, two outlets; `T61` blocks the primary.
+
+🔴 **The honest gap.** This base shelves `dodona-edu/dolos` (MIT) for **source-code** similarity and
+has **no permissive text-similarity or AI-text-detection component** on any shelf. An integrity
+claim about *essays* cannot be assembled from these rows — say so in the proposal rather than
+implying the integrity layer transfers from `P10`.
+
+**Why it sells.** It is the only pattern here aimed at the workload a secondary teacher actually
+carries — marking prose — and it is aimed at it in the **one form a regulator that just considered
+banning it has said yes to**. 🟢 And the argument that moved MEC is the argument that sells it:
+*"impedia um recurso que facilita a rotina docente sem substituir o professor"* — a resource that
+eases the teaching routine without replacing the teacher.

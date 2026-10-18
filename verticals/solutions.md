@@ -18,6 +18,32 @@ updated: 2026-10-18
 > (its source is AGPL-3.0, 78,765 commits), and adds a European public-sector school platform, an
 > e-testing platform and an offline assessment platform.
 
+## 🟡 Pass 284 — the platform shelf is unchanged for a seventh pass, and the leg said so explicitly
+
+⏱️ `2026-10-18`, sixth pass. Evidence: [`p284-websearch.2026-10-18-p284.tsv`](../evidence/p284-websearch.2026-10-18-p284.tsv).
+
+🟢 **The vertical leg returned one platform and it is already here.** `OpenEduCat` (LGPL-3.0, on
+Odoo), with its module list reproduced as this shelf carries it — student records, attendance, fees,
+timetables, exams, LMS, parent portal, plus an enrolment CRM. 🔴 **The leg returned nothing MIT or
+Apache**, in its own words: *"It did not return anything on MIT- or Apache-licensed education
+platforms."* That matches what this shelf has said for seven passes: **the education platform layer
+is copyleft, and the permissive layer sits above it as agents and MCP servers**, not as platforms.
+
+🟡 **One lead, registered rather than shelved: the `Kuali Foundation`** — higher-education **ERP, SIS
+and research administration**, which is the thinnest column on this shelf. 🔴 Not added: the source
+is **undated** (it names Compiere and Openbravo beside it), **no repository, ref or grant payload was
+read**, and Kuali's association with a move to a commercial entity makes *"open foundation, therefore
+permissive"* exactly the **parent-inference** grade this base ranks weakest. Resolving it costs one
+`git ls-remote` and one payload read; it is in the backlog in [`../README.md`](../README.md).
+
+🔵 **Why a seventh consecutive nil is worth a heading.** The platforms a studio customises for an
+education client — Moodle, Open edX, Canvas, Kolibri, OpenEduCat, Sakai, BigBlueButton, H5P — are a
+**stable, essentially closed set**, and seven passes of searching have added none. 🟢 That stability
+is a planning asset: the integration surface a studio learns this year is the one it will still be
+integrating against next year. **The volatility in this industry is in the agent layer, not the
+platform layer** — and this base's own numbers say the agent layer has been still for ten passes
+too, which makes the whole stack unusually predictable to quote against.
+
 ## 🟢 Pass 283 — the platform shelf is unchanged, and that is now a measured statement rather than an absence of news
 
 ⏱️ `2026-10-18`, fifth pass. Evidence: [`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv) · [`ladder-case-audit.2026-10-18-p283.tsv`](../evidence/ladder-case-audit.2026-10-18-p283.tsv) · [`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv).

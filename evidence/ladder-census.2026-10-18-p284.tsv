@@ -1,0 +1,14 @@
+measure	p283	p284	note
+CASE-CLOSED	20	21	p229 TIER_A notice family closed by adding NOTICE.TXT and notice.txt
+CASE-UNVARIED	168	167	the p229 notice ladder left this class
+STEM-ONLY	24	22	p1057 regraded: a cross-product generator is not a literal ladder
+FOLD-ON-PATH	96	95	one p1057 family regraded to GENERATED-CASE-VARIED
+SINGLE-SPELLING	227	227	unchanged
+TREE-ENUMERATED	45	45	unchanged
+GENERATED-CASE-VARIED	n/a	3	new verdict: the ladder is built by cross product, graded on what it GENERATES
+ladders	580	580	unchanged
+instruments	332	332	unchanged
+notice-family-CASE-CLOSED	0	1	p283 item 3 discharged
+notice-family-STEM-ONLY	1	0	p1057 was a FALSE POSITIVE of the literal-reading audit
+notice-family-CASE-UNVARIED	1	0	p229 TIER_A closed
+p283-claim-NOTICE.TXT-unreachable	published	REFUTED	p1057 candidate_paths generates NOTICE.TXT, NOTICE.MD, Notice.txt and notice.txt for every stem; asserted by 13 new controls in test_path_case.py

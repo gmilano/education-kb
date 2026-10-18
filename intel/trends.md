@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 `T-p284a` — the regulator's settled position on AI grading is NOT a ban, and reading it as one loses the engagement
+
+🔵 **The trend, stated as a design rule rather than a jurisdiction.** Three of the most developed
+AI-in-education instruments in this base now draw the **same line in the same place**, and it is not
+the line a studio expects:
+
+| jurisdiction | instrument | what is PERMITTED | what is PROHIBITED |
+|---|---|---|---|
+| 🟢 **Brazil** | `Parecer CNE/CP nº 15/2026` (amended by MEC pre-homologation) | AI as a **`primeiro filtro`** assisting the teacher in **essay/dissertation correction** | an automated system **assigning the final mark** or **deciding approval/failure** |
+| 🟢 **Vietnam** | `Decision 33/2026/QD-TTg` | automated assessment and behavioural monitoring **with meaningful human review** | the same, where **the AI output is the sole basis for a decision without meaningful human review** |
+| 🟢 **EU** | AI Act Annex III pt 3 (duties from `2027-12-02`) | assessing learning outcomes **under the Article 14 human-oversight duty** | deployment without the oversight, documentation and bias controls |
+
+🔴 **The convergence is on the DECISION, not on the technique.** None of the three forbids a model
+from reading student work. All three forbid the model from being the thing that decides. 🟢 So the
+compliant architecture is the same in all three, and this base can now state it as a pattern rather
+than as three regional footnotes: **the model produces a graded suggestion with its evidence; a named
+human accepts, edits or rejects it; the accepted value is the one that is recorded, and the record
+keeps both.** See [`../compose/patterns.md`](../compose/patterns.md) `P8`.
+
+🔵 **Why this matters more than a permission.** `p284`'s Brazil leg found that the CNE's September
+text **banned AI essay correction outright** and that **MEC reversed that before homologation**,
+judging a total ban *"impedia um recurso que facilita a rotina docente sem substituir o professor"*.
+🟢 **A regulator moved from prohibition to permission in six weeks, and the thing that moved it was
+the teacher-workload argument** — which is the same argument Korea's post-mortem produced (factual
+errors, privacy, screen time and **heavier teacher workload** were the cited causes of the
+AI-textbook reversal) and the same one `p284`'s Africa leg produced independently (*"AI should be
+part of permanent teacher training"*; *"teachers should help design localized tools rather than only
+use imported ones"*). 🔵 **Three regions, three channels, one argument.** A proposal that leads with
+teacher workload relief and human-in-the-loop marking is arguing with the grain of every instrument
+in this file.
+
+🔴 **The trap, and it is a scheduling trap.** Brazil's parecer gives institutions **one year to
+adapt** but its **prohibitions bite from publication**. A plan that reads *"12 months"* and ships an
+autonomous grader in month three ships into a live prohibition. ⚠️ Secondary-source, two outlets;
+`T61` blocks the primary text.
+
+## 🟢 `T-p284b` — a four-pass "Africa is empty" was a property of the QUERY, and the fix was one differently-worded leg
+
+🔴 Passes 280–283 each recorded Africa as returning nothing, and `p283` published it as
+*"re-confirmed empty for the fourth time"*. 🟢 **`p283` also ordered the remedy** — spend the budget
+on a gap-directed leg rather than a fourth verbatim regional one — and on its first run that leg
+returned the **AU Continental Education Strategy `2026–2035`**, the **AU Continental AI Strategy**,
+**Kenya's National AI Strategy `2025–2030`**, **South Africa's DBE coding & robotics curricula
+(Grades R–9)**, **North-West University's January 2026 AI policy**, a **pan-African ethical AI
+curriculum** (`arXiv 2604.27708`) and an **open-source-LLM recommendation for African universities**
+(`arXiv 2510.18902`). Detail and grades in [`market.md`](market.md).
+
+🔵 **The generalisable lesson, and it is this base's own.** `p254` wrote that *the base inherits its
+own conclusions about what is impossible*. 🔴 **Four passes inherited "Africa is empty" from a leg
+that had never asked about Africa** — it asked about EMEA and reported what EMEA returned. 🟢 **A
+repeated nil is evidence about the query until a differently-worded query has been tried.** That is
+now a rule for this file: **before a gap is published as a property of the world, one leg must have
+addressed the gap by name.**
+
+🟡 **What the refutation does NOT say.** Every item returned is **policy, curriculum or a preprint**.
+The leg still returned **no production open-source education agent built for an African deployment**,
+and the two African-context repositories this base holds (`EduTwin-Africa`, `edunaija-os`) still
+serve **no usable grant**. 🟢 **The gap changed shape rather than closed:** the regulatory and
+curricular context is now on the shelf; the code is still missing. 🔴 **And one hazard came with it:**
+an AI robot tutor named **"Iris"** launched in South Africa, August 2025 — colliding with `Iris`, the
+user-facing name of the TUM tutor `ls1intum/Pyris` powers. **Two unrelated artefacts, one name**, the
+same trap as the two `EduNaija` artefacts recorded below.
+
 ## 🔴 `T-p283` — a fix propagates to the family it was built for and to no other, and this base can now measure that
 
 `P1057` (p189) established the rule this base has repeated for ninety-odd passes:

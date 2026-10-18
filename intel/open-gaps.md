@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 284 — **ALL THREE TOP ITEMS DISCHARGED, AND EACH WAS WRONG ABOUT ITSELF IN THE SAME DIRECTION**
+
+⏱️ `2026-10-18`, sixth pass. Evidence:
+[`p284-websearch.2026-10-18-p284.tsv`](../evidence/p284-websearch.2026-10-18-p284.tsv) ·
+[`census-derivation.2026-10-18-p284.tsv`](../evidence/census-derivation.2026-10-18-p284.tsv) ·
+[`ladder-census.2026-10-18-p284.tsv`](../evidence/ladder-census.2026-10-18-p284.tsv).
+
+### Discharged this pass
+
+| `p283` item | state | what it actually turned out to be |
+|---|---|---|
+| 1. derive `p252`'s three pinned literals | 🟢 **DISCHARGED** | The literals pinned **files on disk**, and all eight red passes added suites that arrived **gated** — the gate fired on **zero** exposure change eight times. Replaced by a two-direction cross-check (`is_gated` vs new `derive_gated`), **40 = 40**, no literal; positive control injects `p280`'s false credit. Suite **43 → 46** |
+| 2. ratchet the ladder census | 🟢 **DISCHARGED as a RATCHET, not a pin** | A pin would reproduce item 1's defect. [`ratchet.tsv`](../compose/code/p283-ladder-case-audit/ratchet.tsv): 6 bounds (MIN on good verdicts, MAX on defects), checked in `make gate-ladder-case` |
+| 3. case-close the `NOTICE` family | 🟢 **DISCHARGED — one real defect, one false verdict** | `p229` `TIER_A` carried `NOTICE NOTICE.txt` only → **`NOTICE.TXT` + `notice.txt` added**, `pass256` green 38/38. 🔴 `p1057` was graded `STEM-ONLY` **falsely** — its cross product already generates `NOTICE.TXT`. New `GENERATED-CASE-VARIED` verdict; `p1057` suite **16 → 29** |
+| 8. replace one regional leg with a gap-directed leg | 🟢 **DISCHARGED, and it was the highest-value item on the list** | Ranked **eighth**, returned more than the four mandated legs combined. Africa's four-pass nil **refuted** — it was a property of the **query** |
+
+### Still open, ranked for `p285`
+
+| # | item | why it is still open |
+|---|---|---|
+| 1 | 🔴 **Work the 69 `QUEUE-UNENUMERATED` rows** | Carried from `p283` item 4. One family safer, but `SINGLE-SPELLING` unchanged at **227** and `TREE-ENUMERATED` **45 of 580 (7.8 %)**. **Enumerate, do not re-probe** |
+| 2 | 🔴 **Case-close the `copying` family** | **Measured this pass: 117 ladders, 0 `CASE-CLOSED`, 64 `CASE-UNVARIED`.** `TIER_A` carries `COPYING COPYING.txt COPYING.md COPYING.LESSER` — **no uppercase extension**. Same two-line fix that worked for `notice`; the ratchet will hold it |
+| 3 | 🟡 **Resolve the `Kuali` lead** | New this pass. HE **ERP/SIS/research admin** — the thinnest column on the vertical shelf. Source **undated**, **no ref or payload read**, and *"open foundation therefore permissive"* is the **parent-inference** grade this base ranks weakest |
+| 4 | 🟡 **`--resolve` over the 14 CANDIDATE control sites** | Carried from `p280` item 1 — **three passes** now |
+| 5 | 🟡 **Fold `p281`'s three instrument defects into the gate** | Carried. `ls-remote --symref` is cheap, the channel is built |
+| 6 | 🔵 **Gap-directed leg for African education CODE** | `p284`'s leg returned the **regulatory frame and no repository**. Try exam-board and language names (WAEC, NECTA, Yoruba, Hausa, Swahili) rather than the word *"Africa"* — which is the same lesson that broke the nil |
+| 7 | 🔵 **Primary policy texts** | 🔴 `T61` re-confirmed by **two DNS failures** this pass (`mixvale.com.br`, `semesp.org.br`). Needs an egress-enabled run; **stop ranking it as sandbox backlog** |
+
+### Declared, with their grade, so no later pass reads them as settled
+
+- 🔴 **Brazil `Parecer CNE/CP nº 15/2026` is NOT homologated** in any source found as of `2026-10-18`.
+  Under **art. 2 of Lei nº 9.131/1995** it has no normative force until the homologating act is
+  published. The amendment detail (assistive essay correction **permitted**; final mark and
+  approval/failure **prohibited**; `educação infantil` **totally forbidden**; prohibitions effective
+  **from publication**, not after the 12-month window) is **two-outlet secondary grade**.
+- 🔴 **Africa is NOT covered.** Everything the gap-directed leg returned is **policy, curriculum or
+  preprint**. There is still **no production open-source education agent built for an African
+  deployment**, and `EduTwin-Africa` and `edunaija-os` remain the only two code rows — both still
+  serving **no usable grant**.
+- 🔴 **Korea's USD 960 M** talent-centre/vocational plan is **secondary-source**, single channel.
+- 🔴 **Star counts remain frozen at `2026-10-17`.** `github.com` pages, `/topics`, `/trending` and
+  `api.github.com` all answer `403`; `git ls-remote` answers. A listicle's star figure is not a
+  refresh — one leg gave `47.3k★` for a repository another gave at **67.2k★** in the same pass.
+- 🟡 **Ten passes, no new education agent.** A property of the supply channel, not a dry spell.
+  **The same query should not be run an eleventh time.**
+
 ## Pass 283 — **THE CENSUS `p282` LEFT OUT OF THE MAKEFILE IS STANDING, AND ON ITS FIRST RUN IT FOUND THE ROW `p282`'S OWN CORRECTION MISSED**
 
 ⏱️ `2026-10-18`, fifth pass. Evidence:

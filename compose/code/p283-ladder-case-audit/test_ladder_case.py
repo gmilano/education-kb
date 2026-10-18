@@ -77,5 +77,71 @@ print(f"{'  ok  ' if not got else '  FAIL'} C10 negative control: no vocabulary,
 if got:
     FAILED.append("C10")
 
-print(f"\n{10 - len(FAILED)}/10 controls pass")
+# C11-C13 — p284: a GENERATOR is graded on what it generates, not on its literals.
+run("C11 a cross-product generator is GENERATED-CASE-VARIED",
+    ["notice", "NOTICE"],
+    'STEMS = ("license", "notice")\n'
+    'def _casings(word): return (word.upper(), word.capitalize(), word.lower())\n'
+    'for ext in EXTS:\n  for stem_case in _casings(stem):\n'
+    '    for ext_case in ({ext, ext.upper()} if ext else {""}): p = f"{stem_case}{ext_case}"',
+    "GENERATED-CASE-VARIED")
+
+# 🔴 The predicate must need BOTH halves.  An extension-case loop with no stem-case helper
+# is not a closed generator, and grading it as one would be the same overclaim one layer in.
+# 🔵 The fold idiom is held AWAY from the path vocabulary in both fixtures (the same
+# 10-line separation C5 uses), because a fold sitting BESIDE the path is a legitimate
+# `FOLD-ON-PATH` hit under C6 and would mask the property under test.  The first draft of
+# these two controls put them on adjacent lines and read `FOLD-ON-PATH`, so the fixture was
+# testing C6 over again rather than the generator predicate.
+run("C12 an EXTENSION-case idiom alone is not a generator",
+    ["README", "README.md"],
+    'for ext_case in {ext, ext.upper()}: q = stem + ext_case\n' + "\n" * 10 +
+    'paths = ["README", "README.md"]',
+    "CASE-UNVARIED")
+run("C13 a STEM-case helper alone is not a generator",
+    ["README", "README.md", "readme.md"],
+    'def _casings(word): return (word.upper(), word.lower())\n' + "\n" * 10 +
+    'paths = ["README", "README.md", "readme.md"]',
+    "STEM-ONLY")
+
+# C14 — THE RATCHET, which is `p283`'s item 2.  `p283` produced these numbers and pinned
+# none of them, so nothing stopped the next pass from regressing a ladder silently.
+# 🔵 It is a RATCHET, not a pin, and that distinction is `p284` item 1's lesson carried
+# across: an EXACT count goes red every time an instrument is added — which is how the
+# `p252` census burned eight passes — while a FLOOR goes red only on an actual regression.
+# Adding instruments can never break it; un-closing a ladder always will.
+RATCHET = pathlib.Path(__file__).resolve().parent / "ratchet.tsv"
+import ladder_case as _lc  # noqa: E402
+
+_rows = _lc.audit(str(pathlib.Path(__file__).resolve().parents[3]))
+_counts = {}
+for _r in _rows:
+    _counts[_r[2]] = _counts.get(_r[2], 0) + 1
+# direction: MIN = must not fall below (good things); MAX = must not rise above (defects).
+_BOUNDS = {}
+if RATCHET.exists():
+    for _i, _ln in enumerate(RATCHET.read_text(encoding="utf-8").splitlines()):
+        _p = _ln.split("\t")
+        if _i == 0 and _p[0] == "verdict":
+            continue
+        if len(_p) >= 3:
+            _BOUNDS[_p[0]] = (_p[1], int(_p[2]))
+if not _BOUNDS:
+    print("  FAIL C14 ratchet.tsv is missing or empty — a ratchet nobody wrote is not a ratchet")
+    FAILED.append("C14")
+else:
+    _bad = []
+    for _v, (_dir, _bound) in sorted(_BOUNDS.items()):
+        _got = _counts.get(_v, 0)
+        if _dir == "MIN" and _got < _bound:
+            _bad.append(f"{_v} fell to {_got}, floor {_bound}")
+        if _dir == "MAX" and _got > _bound:
+            _bad.append(f"{_v} rose to {_got}, ceiling {_bound}")
+    if _bad:
+        print("  FAIL C14 the ladder ratchet regressed: " + "; ".join(_bad))
+        FAILED.append("C14")
+    else:
+        print(f"  ok   C14 the ladder ratchet holds ({len(_BOUNDS)} bounds)")
+
+print(f"\n{14 - len(FAILED)}/14 controls pass")
 sys.exit(1 if FAILED else 0)
