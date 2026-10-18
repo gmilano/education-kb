@@ -1,0 +1,17 @@
+# p286 — the search legs, with their yield.  Battery run ONCE and briefly per p285 item 6.
+leg	kind	yield	note
+top open source AI agents education 2026 github MIT	MANDATED	🔴 NIL (12th consecutive)	microsoft/ai-agents-for-beginners, pguso/agents-from-scratch, rohitg00/ai-engineering-from-scratch. "Educational" = TEACHING ML, not SERVING A LEARNER. p283's diagnosis reproduces for the fourth pass running
+github trending education AI 2026	MANDATED	🔴 NIL	no first-hand trending (github.com/trending 403, p285); same teaching-ML population
+open source platform education ERP CRM MIT Apache	MANDATED	🔴 NIL (8th consecutive)	OpenEduCat already shelved; ERPNext GPL-3.0, Twenty BSL-1.1 -- neither permissive nor education
+AI education industry trends 2026	MANDATED	🟡 figures only	student AI use 66% (2024) -> 92% (2025); cloud 71.22% share 2024; market maturity 35/100 "most institutions still in pilot". All vendor/secondary
+AI education North America 2026	REGIONAL	🟡 held + 2 new	$951M (2024) -> $2.3B (2029) @15.9% CAGR; 10% of institutions have formal AI guidance; 71% of US teachers untrained; CMU + Gates $55M into gateway-course AI courseware
+AI education EMEA 2026	REGIONAL	🔴 EXPLICIT NIL	returned ENTERPRISE AI only -- no education vendor, ministry or institution named. This base is AHEAD of its channel: it already carries Regulation (EU) 2026/1744 (Council 2026-06-29, in force 2026-07-27)
+AI education APAC 2026	REGIONAL	🔴 EXPLICIT NIL for education	closest hits are CORPORATE learning: TCS+Pearson alliance, LearnUpon Sydney HQ. Singapore National AI Strategy 2.0 and Australia's National AI Plan are general, not education
+AI education LATAM 2026	REGIONAL	🟢 STRONGEST battery leg	Digital Education Council LATAM 2026: 92% students / 79% faculty, 30 000+ responses, 29 institutions. UNESCO IESALC 200 institutions / 19 countries. Only ~30% of LATAM universities publish AI policy
+NECTA / Tanzania / Swahili education AI github	GAP-DIRECTED	🟢 2 MIT REPOS	Tanzania-AI-Community/twiga (MIT) and vincent-laizer/NECTA-API (MIT) -- the first LICENSED African education code in this base
+Kenya / KCSE AI tutor open source github	GAP-DIRECTED	🟢 1 LURE	gabrielmahia/shule-ai -- listed as "open-source" on GitHub Topics, payload is CC BY-NC-ND 4.0
+Indonesia / Kurikulum Merdeka AI guru github	GAP-DIRECTED	🟢 7 addresses, 2 grants	Jahirrrr/sekolahyuk-app MIT; sira313/rapkumer bespoke non-commercial; 5 VERIFIED_ABSENT
+Vietnam / AI giao duc github	GAP-DIRECTED	🟢 6 addresses, 1 grant	longnhgsvn/Learn-with-AI-tieng-viet AGPL-3.0; 4 VERIFIED_ABSENT, 1 DOES_NOT_RESOLVE
+# VERDICT: THIRD CONSECUTIVE PASS in which every new row came from a GAP-DIRECTED leg and the
+# mandated battery extended nothing. 4 of 4 regional legs produced no new code address; the
+# three directed legs produced 18 addresses and 6 first-hand grants.

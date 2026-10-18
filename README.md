@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 286 — 2026-10-18 — **THE TOP-RANKED ITEM WAS MEASURING THE WRONG POPULATION, AND THE CONTINENTAL CLAIM IT SAT BESIDE WAS A WEST AFRICAN SAMPLE**
+
+**One-line summary:** `p285` ranked *"case-close the `copying` family — 117 ladders, 0 CASE-CLOSED"*
+first. `p286` did it — **5 standing probes widened, standing `copying` now 0 `CASE-UNVARIED` / 0
+`STEM-ONLY`** — and then measured the headline that ranked it: those 117 are **100 historical
+one-offs + 5 superseded + 12 STANDING**. Meanwhile an **East African** leg refuted this base's own
+17-pass *"no permissively licensed African education agent"* with **two MIT repositories on the
+first attempt**. `make hooks` is **green**, run before any edit and again after every one.
+
+### 🟢 Item 1 discharged — and the number that ranked it was counting history, not exposure
+
+🟢 **Five standing absence-deciding probes widened**, each of which could previously not find
+`COPYING.TXT` at all: `p229`'s TIER_A (the canonical ladder, now `tierA=30 total=55`, +2 requests
+per slug, `T272` re-asserted), **`lib/probe_payload.sh`** (the shared default — highest reach of the
+five), `p228-shelf-gate`, `p247-mit-tier-sweep` and `p278-channel-conflict`. Base-wide
+`CASE-CLOSED` **21 → 26** on the old basis.
+
+🔴 **But `117 ladders, 0 CASE-CLOSED` was the wrong quantity**, and acting on it literally would
+have meant editing 64 frozen one-off scripts. Bucketed by whether `make hooks` **invokes** the
+instrument:
+
+| | |
+|---|---|
+| 🔴 **historical one-off pass scripts** | **100** — already run; their ladders cannot produce a false absence again |
+| 🔴 **superseded / negative-control files** | **5** — two carry `SUPERSEDED` in their own filename |
+| 🟢 **STANDING** | **12** — the entire actionable population |
+| of those 12 | **5 real defects** (fixed) · **3 carried no path vocabulary in code at all** · **1 shell cross-product graded on its literals** · 3 already immune |
+
+🔵 **This is `p284` item 1's lesson in a second place:** a corpus-wide count over an **append-only
+archive** measures HISTORY, not EXPOSURE, and a reader who acts on it rewrites frozen evidence to
+move a number. New **`standing`** column; **ceilings now bind the STANDING population only**, floors
+stay base-wide, and the ratchet file carries the reason in its own header.
+Evidence: [`ladder-census.2026-10-18-p286.tsv`](evidence/ladder-census.2026-10-18-p286.tsv) ·
+[`copying-standing-bucket.2026-10-18-p286.tsv`](evidence/copying-standing-bucket.2026-10-18-p286.tsv).
+
+### 🔴 Three defects in the measuring instrument, one of them p286's own rejected fix
+
+| | |
+|---|---|
+| 🔴 **`COMMENT-ONLY`** | 3 of the 12 standing `copying` ladders carried **no path vocabulary in code**. `lib/license_family.sh`'s only `copying` token is a byte-offset note in a `#` comment; `pass256-ladder-closure`'s is a docstring sentence; `p230-prose-path-ladder`'s two were both prose while its real regex varies case explicitly |
+| 🔴 **the shell half of `p284`'s generator finding** | `p207-permissive-half-audit/locate.sh` reads `for b in … COPYING Copying copying; do for e in "" .txt .TXT .md .MD` — a **fully case-closed cross product**, graded `SINGLE-SPELLING`. `p284` taught the audit to grade a **Python** generator on what it generates; the **shell** idiom beside it never inherited it |
+| 🔴 **p286's OWN first attempt, measured and rejected** | The obvious fix was `re.I` on the bare-token regex. It imported **prose as path vocabulary** — `GNU AFFERO GENERAL PUBLIC LICENSE` from a title regex, `*"unauthorized copying"*` from a restriction `case`, `license="MIT"` from a fixture — and drove `STEM-ONLY` **22 → 125** on noise. 🟢 **Recorded in the instrument and asserted by control `C24`, rather than shipped** |
+
+🟢 **Suite 14 → 25 controls, five of them negative arms.** 🔴 The Makefile label read `14 controls`
+and is corrected — `p284` was caught by exactly that staleness one pass ago.
+
+### 🟢 The largest finding of the pass: "five African rows, five unlicensed" is refuted at the payload
+
+[`Tanzania-AI-Community/twiga`](https://github.com/Tanzania-AI-Community/twiga) — **MIT**, 1 073 B,
+**230 files**, WhatsApp assistant for Tanzanian teachers with RAG over **Tanzania Institute of
+Education** curriculum, 30 tests, 12 migrations, `monitoring/`, `docker/`, CI. 🔴 **It closes the
+gap `p284` and `p285` both declared open** — *"no production open-source education agent built for
+an African deployment"* — and `vincent-laizer/NECTA-API` (**MIT**) adds the national-results channel
+beneath it. New pattern **`P39`**.
+
+🔴 **The grant sits on a `development` default ref.** A probe trying only `main`/`master` would have
+published `NONE_IN_TREE` on an MIT repository — **`p285`'s `eledia` finding, reproduced in another
+hemisphere one pass later**, and now two of this base's last five promotions.
+
+🔵 **The correction is geographic, and `T-p286a` states the rule it breaks.** `T-p284b` already
+required that *"before a gap is published as a property of the world, one leg must have addressed it
+by name"*. `p285` **met that rule and was still wrong**, because it addressed the gap at the wrong
+**granularity**: one leg named "Africa", and the conclusion was drawn over 54 states and dozens of
+exam boards. The posture splits three ways — 🟢 **East Africa permissive**, 🔴 **West Africa five of
+five unlicensed**, 🔴 **Kenya `CC BY-NC-ND`** — and a proposal treating "Africa" as one market gets
+the licence position wrong in both directions.
+
+### 🔴 Three secondary "open source" claims, three refutations
+
+`eldorray/modulajar-ai` was called **MIT** by a search result and serves **no grant across 310
+enumerated files**; `Dondo0936/vietnamese-ai-for-beginner` was called **MIT** and **does not
+resolve**; `gabrielmahia/shule-ai` is listed as **open-source** on GitHub Topics and is
+**CC BY-NC-ND 4.0** in a 209-byte reference-only payload. 🟢 **Of five addresses a secondary source
+described as permissive this pass, three were wrong.** Read the grant, never the list.
+
+### 🔴 `T-p286b` — the restriction vocabulary is English-only, and its miss reads as "no restriction"
+
+[`sira313/rapkumer`](https://github.com/sira313/rapkumer)'s bespoke **`RAPKUMER LICENSE`** (3 140 B,
+Indonesian) prohibits commercial use **in any form** in a §3 titled `LARANGAN PENGGUNAAN KOMERSIAL`.
+🔴 **`pass257-restriction-scan` returns `UNCLASSIFIED:no-family-no-restriction` with zero hits**,
+while an English control fires correctly — so the **logic is sound and the vocabulary is the
+defect**, and the failure direction is the dangerous one: *"nothing found"* rather than *"cannot
+read"*. 🔵 `lib/license_family.sh` already carries **38 non-English grant-title tokens**, so this is
+`T-p283`'s shape again — a class that reached the title channel and not the restriction channel
+beside it. **Ranked first for `p287` and deliberately not half-fixed:** `scan()`'s verdict strings
+are consumed by the shelf gates.
+
+### 🟡 The battery: two explicit nils, and the extension channel is now settled
+
+🔴 **Agent leg: TWELFTH consecutive nil** (teaching-ML curricula again). 🔴 **Verticals: the
+eight-pass nil was broken by the Indonesian directed leg, not the mandated one.** 🔴 **EMEA and APAC
+returned nothing education-specific at all** — recorded explicitly, since an undeclared nil looks
+like coverage. 🟢 **LATAM was the strongest battery leg:** Digital Education Council 2026 — **92 % of
+students, 79 % of faculty**, 30 000+ responses, 29 institutions — against **~30 % of universities
+with a published AI policy**, corroborated by UNESCO IESALC across 200 institutions in 19 countries.
+🟢 **North America:** CMU + Gates **$55 M** into gateway-course AI courseware.
+🔵 **Three passes running, every new row came from a gap-directed leg.** The generative unit is the
+**exam board and the language of instruction** — `NECTA`, `KCSE`, `Kurikulum Merdeka`, `giáo dục` —
+not the region name.
+
+### 🔵 Backlog for `p287`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked:
+
+1. 🔴 **`T-p286b` — multilingual restriction vocabulary + an `UNREADABLE-BODY` verdict.** A live
+   instance, and the failure direction is permissive-looking. Land it with its downstream gate
+   consumers in one change; negative control per language arm.
+2. 🔴 **Build `ROOT_OR_SOLE` into the enumeration gate** *(carried, two passes)* — needs one new
+   ledger column: per-grant-directory file coverage.
+3. 🔴 **Widen `gate-identity` to census the enumeration QUEUE** *(carried, two passes)* — two live
+   collisions sit where the gate cannot see.
+4. 🔵 **Exam-board / language legs are the extension channel — pick the next four by name.**
+   Candidates: **Uganda `UNEB`**, **Rwanda `REB`**, **Philippines `DepEd`/K-12**, **Pakistan
+   `FBISE`**, **Bangladesh**, **Egypt `Thanaweya Amma`**.
+5. 🔵 **The licence-intake ASK over the five West African repositories** *(carried, `p285` item 7)* —
+   now sharper: East Africa proves licensed African education code exists, so the ask has a precedent
+   to cite. A deliverable (`P32`, `P35`), not research. Nobody in this base's history has asked.
+6. 🟡 **`--resolve` over the 14 CANDIDATE control sites** *(carried, five passes)*.
+7. 🟡 **Fold `p281`'s three instrument defects into the gate** *(carried)*.
+8. 🔵 **Two standing `SINGLE-SPELLING` `copying` ladders remain** (`lib/license_family.sh`'s
+   neighbours in the shared lib). One rung cannot prove an absence; cheap to close now the ratchet
+   holds the floor.
+
 ## Pass 285 — 2026-10-18 — **THE BACKLOG, NOT THE SEARCH CHANNEL, PRODUCED EVERY FINDING — AND THE CHANNEL THAT WORKED THE BACKLOG WAS AVAILABLE ALL ALONG**
 
 **One-line summary:** `p284` ranked *"enumerate the 69 queued rows"* first. `p285` did all 69 —

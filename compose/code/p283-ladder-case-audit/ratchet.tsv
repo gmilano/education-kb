@@ -1,7 +1,24 @@
+# p286 — THE BASIS CHANGED THIS PASS, AND THAT IS WHY THESE NUMBERS MOVED.
+# p284 built this ratchet over ONE population: every ladder under compose/code/.  p286
+# measured that population and found it counts HISTORY, not EXPOSURE -- 100 of the 117
+# `copying` ladders belong to one-off scripts that have already run, 5 carry SUPERSEDED or
+# negative-control in their own filename, and only 12 are invoked by `make hooks`.
+#
+# 🔴 So a CEILING over the ALL population is the p252 defect again: adding any instrument
+# that carries an ungraded ladder turns the gate red while moving risk by zero, which is
+# precisely what trained eight passes to bump a number.  Ceilings therefore bind ONLY the
+# STANDING population (prefix `STANDING:`), which is the one that can still produce a false
+# absence.  Floors stay on the ALL population, where growth is always safe and only a real
+# un-closing can breach them.
+#
+# Re-derived on p286's basis: case-insensitive extraction from shell `for` lists and exact
+# regex alternations, COMMENT-ONLY for prose-only vocabulary, method-attribute exclusion.
 verdict	direction	bound
-CASE-CLOSED	MIN	21
-GENERATED-CASE-VARIED	MIN	3
-TREE-ENUMERATED	MIN	45
-CASE-UNVARIED	MAX	167
-STEM-ONLY	MAX	22
-SINGLE-SPELLING	MAX	227
+CASE-CLOSED	MIN	24
+GENERATED-CASE-VARIED	MIN	9
+TREE-ENUMERATED	MIN	42
+COMMENT-ONLY	MIN	143
+STANDING:CASE-CLOSED	MIN	8
+STANDING:CASE-UNVARIED	MAX	7
+STANDING:STEM-ONLY	MAX	3
+STANDING:SINGLE-SPELLING	MAX	17

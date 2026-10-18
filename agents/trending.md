@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 286) — the twelfth nil arrived, and an EAST AFRICAN leg refuted this base's own 17-pass "no permissively licensed African education agent"
+
+⏱️ **Eighth pass of `2026-10-18`.** Append-only — everything below this section is prior history
+and is not rewritten. Evidence:
+[`regional-intake.2026-10-18-p286.tsv`](../evidence/regional-intake.2026-10-18-p286.tsv) ·
+[`p286-websearch.2026-10-18-p286.tsv`](../evidence/p286-websearch.2026-10-18-p286.tsv) ·
+[`ladder-census.2026-10-18-p286.tsv`](../evidence/ladder-census.2026-10-18-p286.tsv) ·
+[`restriction-vocabulary-language.2026-10-18-p286.tsv`](../evidence/restriction-vocabulary-language.2026-10-18-p286.tsv).
+
+🔴 **Mandated agent leg: TWELFTH consecutive nil.** The population is unchanged and so is the
+reason — in this channel *"educational AI"* means **teaching engineers to build agents**
+(`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch`), not **serving a learner**. `p284` wrote *"do not re-run
+this query an eleventh time"*; it has now been run twice more, under the standing instruction to
+run the battery once and briefly, and has extended nothing either time. 🔵 **The recommendation is
+no longer "do not re-run" but "re-run it as corroboration and never as the extension channel"** —
+three consecutive passes have been extended **entirely** by gap-directed legs.
+
+### 🟢 The week's movement, all of it from directed legs
+
+| signal | address | licence (first-hand) | why it matters |
+|---|---|---|---|
+| 🟢 **The find of the pass** | [`Tanzania-AI-Community/twiga`](https://github.com/Tanzania-AI-Community/twiga) | **MIT**, `development/LICENSE` 1 073 B | 🇹🇿 WhatsApp assistant for Tanzanian teachers, RAG over **Tanzania Institute of Education** curriculum. 230 files, 30 tests, migrations, monitoring, CI. **The first African-deployment, permissive, production-shaped education agent in this base** |
+| 🟢 Results channel | [`vincent-laizer/NECTA-API`](https://github.com/vincent-laizer/NECTA-API) | **MIT**, 1 092 B | 🇹🇿 NECTA national-exam results fetcher. Unofficial, still in development |
+| 🟢 Indonesia | [`Jahirrrr/sekolahyuk-app`](https://github.com/Jahirrrr/sekolahyuk-app) | **MIT**, 1 064 B | Free open-source school learning app; the only permissive grant of **seven** 🇮🇩 addresses probed |
+| 🔴 Lure, new channel | [`gabrielmahia/shule-ai`](https://github.com/gabrielmahia/shule-ai) | **CC BY-NC-ND 4.0**, 209 B reference-only | 🇰🇪 KCSE/CBC tutor listed as *"open-source"* on **GitHub Topics**. NonCommercial **and** NoDerivatives — unusable twice over |
+| 🔴 Non-English proprietary | [`sira313/rapkumer`](https://github.com/sira313/rapkumer) | bespoke **`RAPKUMER LICENSE`**, 3 140 B | 🇮🇩 §3 `LARANGAN PENGGUNAAN KOMERSIAL` — total commercial prohibition, scope-split assets, Feather-Icons MIT carve-out |
+| 🟡 Vietnam | [`longnhgsvn/Learn-with-AI-tieng-viet`](https://github.com/longnhgsvn/Learn-with-AI-tieng-viet) | **AGPL-3.0**, 35 149 B | WordPress + AI, large catalogue. Network-boundary integration only |
+| 🔵 Best design, no grant | [`nguyenbaophuc27129-web/VIETPOET`](https://github.com/nguyenbaophuc27129-web/VIETPOET) | **NONE_IN_TREE** (198 files) | 🇻🇳 Socratic poetry tutor for high-school literature, **fully offline on CPU** on a compressed Qwen2.5-1.5B. The pedagogy and the deployment constraint are both right; the grant is missing |
+
+### 🔴 Two defects found in this base's own instruments, both of the same shape
+
+🟢 **`p285` item 1 discharged — the `copying` family is case-closed.** `COPYING.TXT` was as
+unreachable as `LICENSE.TXT` before `p256` and `NOTICE.TXT` before `p284`. Five standing probes
+widened (`p229` TIER_A, `lib/probe_payload.sh`, `p228-shelf-gate`, `p247-mit-tier-sweep`,
+`p278-channel-conflict`); the standing `copying` population is now **0 `CASE-UNVARIED`, 0
+`STEM-ONLY`**.
+
+🔴 **But the `117 ladders, 0 CASE-CLOSED` headline that ranked the work was measuring the wrong
+population.** Bucketed by whether `make hooks` actually invokes the instrument: **100 historical
+one-off scripts + 5 superseded or negative-control files + 12 STANDING ladders** — and two of the
+five carry `SUPERSEDED` in their own filename. Of the 12, **5 were real** (fixed), **3 carried no
+path vocabulary in code at all** (the only `copying` token in `lib/license_family.sh` is a
+byte-offset note in a comment), and **1 was a shell cross-product graded on its literals** —
+`p284`'s generator finding, one language across. 🔵 **A corpus-wide count over an append-only
+archive measures HISTORY, not EXPOSURE**, and a reader who acts on it edits frozen evidence to move
+a number. New `standing` column; ceilings now bind the standing population only.
+
+🔴 **`T-p286b` — `pass257-restriction-scan`'s vocabulary is ENGLISH-ONLY, and its miss reports as
+"no restriction".** Reproduced: `rapkumer`'s 3 140-byte body, whose §3 is titled *PROHIBITION OF
+COMMERCIAL USE*, scans as **`UNCLASSIFIED:no-family-no-restriction`** with **zero hits**, while an
+English control fires `RESTRICTED:added-restriction` correctly. `lib/license_family.sh` already
+carries **38 non-English grant-title tokens**, so the base knows grants arrive in other languages
+in the *title* channel — the *restriction* channel never inherited it. **Ranked first for `p287`**,
+not half-fixed here: `scan`'s verdict strings are consumed by the shelf gates.
+
 ## 2026-10-18 (pass 285) — the eleventh nil arrived exactly as predicted, and BOTH of this pass's agents came from the gap-directed legs instead
 
 ⏱️ **Seventh pass of `2026-10-18`.** Append-only — everything below this section is prior history

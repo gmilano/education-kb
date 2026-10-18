@@ -174,7 +174,7 @@ while read -r slug <&3; do
 
   # ---- payload channel
   p_path="-"; p_bytes=0; p_fam="-"
-  for fn in LICENSE LICENSE.md LICENSE.txt LICENCE LICENCE.md COPYING COPYING.txt License license LICENSE-MIT; do
+  for fn in LICENSE LICENSE.md LICENSE.txt LICENCE LICENCE.md COPYING COPYING.txt COPYING.TXT License license LICENSE-MIT; do
     t=$(mktemp); _raw_at "$slug" "$br" "$fn" > "$t"
     if [ -s "$t" ] && ! _is404 "$t"; then
       p_path="$fn"; p_bytes=$(wc -c < "$t" | tr -d ' '); p_fam=$(family_of_file "$t")

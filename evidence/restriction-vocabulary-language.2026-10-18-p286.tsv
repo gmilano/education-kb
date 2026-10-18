@@ -1,0 +1,15 @@
+# p286 — `pass257-restriction-scan`'s VOCABULARY IS ENGLISH-ONLY, AND ITS MISS REPORTS AS
+# "NO RESTRICTION" RATHER THAN "CANNOT READ".  Reproduced, not inferred: both rows below are
+# `restriction_scan.scan()` output on this pass's own payloads.
+# 🔴 The consequence is the dangerous direction: a body whose section 3 is titled
+# `LARANGAN PENGGUNAAN KOMERSIAL` ("PROHIBITION OF COMMERCIAL USE") is published as carrying
+# no restriction at all.  `lib/license_family.sh` already carries 38 non-English grant-title
+# tokens (`licenca publica geral` and kin), so the base KNOWS grants arrive in other
+# languages in the TITLE channel -- the RESTRICTION channel never inherited it.  That is
+# p282's shape exactly: a class established in one instrument and not in the one beside it.
+subject	bytes	verdict	hits	comment
+sira313/rapkumer LICENSE (Indonesian, bespoke)	3140	UNCLASSIFIED:no-family-no-restriction	()	🔴 TOTAL commercial prohibition in section 3, plus a section-5 asset-scope split and a section-6 Feather-Icons MIT carve-out. NONE of it read
+English control ("NonCommercial ... Commercial use is prohibited")	66	RESTRICTED:added-restriction	commercial use, noncommercial	🟢 the instrument works -- in English
+# VERDICT: the defect is the vocabulary's LANGUAGE, not its logic.  Registered as p287 item 1
+# rather than half-fixed this pass: `scan`'s verdict strings are consumed by the shelf gates,
+# so a new `UNREADABLE-BODY` verdict has to land with its downstream consumers in one change.

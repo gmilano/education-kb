@@ -18,6 +18,42 @@ updated: 2026-10-18
 > (its source is AGPL-3.0, 78,765 commits), and adds a European public-sector school platform, an
 > e-testing platform and an offline assessment platform.
 
+## 🟢 Pass 286 — the EIGHT-PASS vertical nil is BROKEN, by a directed leg rather than the mandated one
+
+⏱️ `2026-10-18`, eighth pass. Evidence:
+[`regional-intake.2026-10-18-p286.tsv`](../evidence/regional-intake.2026-10-18-p286.tsv).
+
+🔴 **The mandated verticals leg returned its eighth consecutive nil** — `OpenEduCat` is already
+shelved, `ERPNext` is GPL-3.0 and general-purpose, `Twenty` is BSL-1.1. 🟢 **The shelf gains a row
+anyway, from the Indonesian directed leg**, which is the third pass running where that is the only
+channel that extends anything.
+
+| platform | repo | licence (payload `2026-10-18`) | region | what it is |
+|---|---|---|---|---|
+| **SekolahYuk** | [`Jahirrrr/sekolahyuk-app`](https://github.com/Jahirrrr/sekolahyuk-app) | 🟢 **MIT**, root `LICENSE` 1 064 B | **APAC** (🇮🇩) | *"Aplikasi pembelajaran Sekolah Gratis dan Open Source"* — a free, open-source school learning application. 🟢 **The only permissive grant among seven Indonesian addresses probed**, and the only Kurikulum-Merdeka-era platform on this shelf a studio may bill against |
+
+### 🔴 The Indonesian platform a studio must NOT start from, and it is the best-built one
+
+[`sira313/rapkumer`](https://github.com/sira313/rapkumer) is a working alternative to Indonesia's
+official **e-Rapor** report-card system, with an AI generator for learning scopes and objectives
+derived from **BSKAP** learning outcomes — the most platform-shaped artefact the leg returned.
+🔴 **Its grant is a bespoke `RAPKUMER LICENSE`, 3 140 B, in Indonesian, and §3
+`LARANGAN PENGGUNAAN KOMERSIAL` prohibits commercial use in any form** — naming, explicitly, paid
+access, charging for installation or support **as the product**, and inclusion in a commercial
+service. Written permission from the holder is required for any of it.
+
+🔵 **Two details worth carrying, because they are unusually well drafted and this base's
+instruments are not built for either.** §5 **splits the licence's scope**: it covers the source and
+**five named static assets**, while everything else under `static/` *"follows its own copyright
+holder"* — the monorepo scope problem of `P34`, written by the author rather than discovered by an
+auditor. §6 carves out `src/lib/icons/` as **Feather Icons, MIT**. 🔴 And this base's restriction
+scanner reads the whole body as **`no-family-no-restriction`**, because its vocabulary is English
+(`T-p286b`).
+
+🔵 **The shelf's standing rule, restated with a non-English instance:** a vertical is a starting
+point only if its grant permits the engagement. `rapkumer` is **prior art and a design reference** —
+read it to learn what Indonesian report-card compliance requires, then build clean.
+
 ## 🟡 Pass 284 — the platform shelf is unchanged for a seventh pass, and the leg said so explicitly
 
 ⏱️ `2026-10-18`, sixth pass. Evidence: [`p284-websearch.2026-10-18-p284.tsv`](../evidence/p284-websearch.2026-10-18-p284.tsv).

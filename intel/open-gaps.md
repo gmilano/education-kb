@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 286 — **THE TOP ITEM WAS DISCHARGED AND ITS OWN HEADLINE WAS REFUTED IN THE SAME PASS**
+
+⏱️ `2026-10-18`, eighth pass. Evidence:
+[`ladder-census.2026-10-18-p286.tsv`](../evidence/ladder-census.2026-10-18-p286.tsv) ·
+[`copying-standing-bucket.2026-10-18-p286.tsv`](../evidence/copying-standing-bucket.2026-10-18-p286.tsv) ·
+[`regional-intake.2026-10-18-p286.tsv`](../evidence/regional-intake.2026-10-18-p286.tsv) ·
+[`restriction-vocabulary-language.2026-10-18-p286.tsv`](../evidence/restriction-vocabulary-language.2026-10-18-p286.tsv) ·
+[`p286-websearch.2026-10-18-p286.tsv`](../evidence/p286-websearch.2026-10-18-p286.tsv).
+
+### Discharged this pass
+
+| `p285` item | state | what it turned out to be |
+|---|---|---|
+| 1. case-close the `copying` family | 🟢 **DISCHARGED** | 5 standing probes widened; standing `copying` is now **0 `CASE-UNVARIED`, 0 `STEM-ONLY`**. 🔴 **And the `117 ladders` headline that ranked it was 100 historical one-offs + 5 superseded + 12 standing** — the actionable population was never 117 |
+| 6. battery once and briefly; spend on directed legs | 🟢 **DISCHARGED, and settled** | 4 regional legs → **0 code addresses, 2 explicit nils** (EMEA, APAC). 3 directed legs → **18 addresses, 6 first-hand grants**. Third consecutive pass with the same result |
+| 7. licence intake over African prior art | 🟡 **PARTLY — and reframed** | Not an ask yet, but the population changed: **East Africa has two MIT repositories**, so the gap is **West African**, and the ask now has a precedent to cite |
+| 2. `ROOT_OR_SOLE` in the enumeration gate | 🔴 **NOT DONE** | Deliberately deferred; item 1 plus the instrument defects it exposed consumed the pass |
+| 3. widen `gate-identity` to the queue | 🔴 **NOT DONE** | Deliberately deferred, same reason |
+
+### 🟢 The pass's own findings about its own instruments
+
+- 🔴 **A corpus-wide count over an append-only archive measures HISTORY, not EXPOSURE.** New
+  `standing` column; **ceilings bind the standing population only**, floors stay base-wide. This is
+  `p284` item 1's lesson in a second location, and the ratchet now carries its basis in its header
+  (which required fixing the ratchet parser — it was pinned to line 0 and broke on its first
+  comment, so *a file format that cannot carry a comment cannot carry the reason for its numbers*).
+- 🔴 **`COMMENT-ONLY`:** 3 of 12 standing `copying` ladders carried no path vocabulary in code at
+  all. A prose mention is not a ladder.
+- 🔴 **The shell half of `p284`'s generator finding:** a `for b in … ; for e in "" .txt .TXT` cross
+  product was graded on its literals. Same defect, one language across.
+- 🔴 **p286's own first fix was measured and REJECTED.** `re.I` on the bare-token regex imported
+  prose as path vocabulary and moved `STEM-ONLY` 22 → 125 on noise. It is asserted against by
+  control `C24` so no later pass re-attempts it. 🔵 **This is the first time this base has recorded a
+  rejected fix as a control rather than as a sentence.**
+- 🔴 **`T-p286b`: the restriction vocabulary is English-only and its miss publishes as "no
+  restriction".** Reproduced on a live payload with an English control beside it.
+
+### Still open, ranked for `p287`
+
+| # | item | why it is still open |
+|---|---|---|
+| 1 | 🔴 **Multilingual restriction vocabulary + an `UNREADABLE-BODY` verdict** | New, with a **live instance** and a reproduction. The failure direction is the dangerous one: a totally non-commercial Indonesian licence reads as `no-family-no-restriction`. Must land with `scan()`'s downstream gate consumers in one change; one negative control per language arm (Indonesian, Vietnamese, Portuguese, Spanish, Swahili) |
+| 2 | 🔴 **Build `ROOT_OR_SOLE` into the enumeration gate** | Carried from `p285` item 2, **two passes**. Earned by a live over-fire: a nested grant governs only if its directory is a prefix of essentially the whole tree. Needs one new ledger column |
+| 3 | 🔴 **Widen `gate-identity`'s census to the enumeration QUEUE** | Carried from `p285` item 3, **two passes**. Two address pairs that are one repository each sit in a population the gate does not read |
+| 4 | 🔵 **Pick the next four directed legs BY NAME** | The generative unit is measured now: exam board + language of instruction. **`UNEB`** (Uganda), **`REB`** (Rwanda), **`DepEd`** (Philippines), **`FBISE`** (Pakistan), Bangladesh, **`Thanaweya Amma`** (Egypt). 🔴 Do NOT re-run region-named legs expecting code |
+| 5 | 🔵 **The licence-intake ASK over the five West African repositories** | Carried from `p285` item 7. Still **nobody has asked**, and the hit rate is unknown for that reason alone. `EduTwin-Africa`'s author has written in the README that the licence is missing — that is the one where asking plainly costs nothing |
+| 6 | 🟡 **`--resolve` over the 14 CANDIDATE control sites** | Carried from `p280` item 1 — **five passes** |
+| 7 | 🟡 **Fold `p281`'s three instrument defects into the gate** | Carried. `ls-remote --symref` is cheap, the channel is built, and `p286` used exactly that call to catch `twiga`'s `development` ref |
+| 8 | 🔵 **Two standing `SINGLE-SPELLING` `copying` ladders** | One rung cannot prove an absence. Cheap now that the ratchet holds a floor |
+
+### Declared, with their grade, so no later pass reads them as settled
+
+- 🔴 **Star counts remain frozen at `2026-10-17`** — session repo-scope on `api.github.com/repos` is
+  a **policy** boundary, permanent. **Do not re-rank this.** Consequence for `p286`'s own rows:
+  `twiga`'s adoption is **unmeasured**; assess from commit and issue activity directly.
+- 🟢 **RETRACTED: "no African-origin permissively licensed education agent"** (carried 17 passes).
+  `twiga` and `NECTA-API` are both **MIT**, read first-hand. What survives, narrowed: **no
+  permissively licensed education agent of WEST AFRICAN origin** — five rows, five with no grant.
+- 🔴 **Kenya is a distinct shape, not part of either cluster:** `shule-ai` is **CC BY-NC-ND 4.0**
+  while being listed as *open-source*. Unusable for billing **and** for modification.
+- 🔴 **The agent battery should be run as corroboration only.** Twelve consecutive nils; the
+  population is curricula that teach engineers to build agents. It is no longer an extension channel.
+- 🟡 **`rapkumer`'s §5 asset-scope split and §6 icon carve-out** are the `P34` monorepo-scope problem
+  written by an author rather than found by an auditor. No instrument on this base reads an
+  author-declared partial scope; not ranked, but recorded.
+
 ## Pass 285 — **THE TOP THREE ITEMS ARE DISCHARGED, AND THE CHANNEL THAT DISCHARGED THEM WAS AVAILABLE THE WHOLE TIME**
 
 ⏱️ `2026-10-18`, seventh pass. Evidence:

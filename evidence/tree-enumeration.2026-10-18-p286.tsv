@@ -1,0 +1,22 @@
+# p286 - the TREE-ENUMERATION half of this pass's regional intake.
+# method: git ls-remote --symref (does it resolve, and what is the REAL default ref?)
+#         -> git clone --depth 1 --filter=blob:none -> git ls-files (every path, zero blob transfer).
+# 🔴 Only rows this pass ACTUALLY ENUMERATED appear here.  The six GRANT_READ rows short-circuited
+# on a raw.githubusercontent payload hit and their trees were NOT walked, so claiming enumeration
+# for them would be the laundering p275 built this ledger to prevent.  They are first-hand grant
+# reads, recorded in regional-intake.2026-10-18-p286.tsv, and they assert no absence.
+# 🔵 `twiga`'s grant sits on the `development` ref: ls-remote --symref is what caught it.
+slug	ls_remote	head_sha	files_in_tree	licence_like_paths_in_tree
+Colin-J-Emmanuel/Somo	OK	f6bac48d97d0	23	NONE_IN_TREE
+HanChein/ElimuAI	DOES_NOT_RESOLVE	-	0	DOES_NOT_RESOLVE
+eldorray/modulajar-ai	OK	e8acba9fd709	310	NONE_IN_TREE
+faruqeclypst/modulajar-generator	OK	6c07bc22bcc0	79	NONE_IN_TREE
+indri007/eduragmerdeka	OK	365ecedb7927	16	NONE_IN_TREE
+aisyahrr/siakad-kurikulum-merdeka	OK	6ff2c2ae7c17	126	NONE_IN_TREE
+odifunan4-ux/Guruku-ID	OK	6dd9cb2383d2	14	NONE_IN_TREE
+DooWuy/AI-tutor-	OK	a6822a61fe90	735	NONE_IN_TREE
+Dondo0936/vietnamese-ai-for-beginner	DOES_NOT_RESOLVE	-	0	DOES_NOT_RESOLVE
+nguyenbaophuc27129-web/VIETPOET	OK	f9a3c51f7c46	198	NONE_IN_TREE
+thanh01pmt/vietnam-k12-ai-curriculum	OK	b6ebf1033423	15	NONE_IN_TREE
+SeNgoNhatMinh/Ai_Turtor	OK	3f2ffb17762c	1640	NONE_IN_TREE
+# 10 slugs enumerated to NONE_IN_TREE, 2 DOES_NOT_RESOLVE.

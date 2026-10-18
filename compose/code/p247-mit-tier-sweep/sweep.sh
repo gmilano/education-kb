@@ -32,7 +32,7 @@ probe_one() {
   key="$(printf '%s' "$slug" | tr '/' '_')"
   dest="$out/bodies/$key.body"
   for ref in main master; do
-    for path in LICENSE LICENSE.md LICENSE.txt LICENCE COPYING; do
+    for path in LICENSE LICENSE.md LICENSE.txt LICENCE COPYING COPYING.txt COPYING.TXT; do
       code=$(curl -sS -o "$dest.tmp" -w '%{http_code}' --max-time 25 \
              "https://raw.githubusercontent.com/$slug/$ref/$path" 2>/dev/null || echo 000)
       if [ "$code" = "200" ]; then

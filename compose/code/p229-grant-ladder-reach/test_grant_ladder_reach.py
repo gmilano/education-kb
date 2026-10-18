@@ -150,7 +150,17 @@ out = subprocess.run([HERE + '/ladder.sh', '--reach'], capture_output=True, text
 # slug, forever).  `p252`'s guarded a count of FILES ON DISK and moved for changes that altered
 # no exposure at all -- which is why it went red for eight consecutive passes and is now
 # derived.  A pin earns its place when the quantity it names is a cost or a risk.
-check('T272 reach is printable', out.startswith('tierA=28 tierB=15 tierC=10 total=53'), True)
+# p286 widened Tier A by TWO names, closing the `copying` family's CASE on the same
+# argument p284 used for `notice`: the ladder carried `COPYING COPYING.txt COPYING.md
+# COPYING.LESSER copying.txt` -- stem case varied, and NOT ONE UPPERCASE EXTENSION -- so
+# `COPYING.TXT` was as unreachable as `LICENSE.TXT` was before p256 and `NOTICE.TXT` before
+# p284.  `COPYING.TXT` and the bare lowercase `copying` are added.  Cost is +2 requests per
+# slug, and the count is re-asserted rather than loosened for T272's reason above.
+# 🔵 p286 also measured what the `117 copying ladders, 0 CASE-CLOSED` headline that ranked
+# this work was counting: 100 one-off historical scripts, 5 superseded files, and 12
+# STANDING ladders.  THIS one was the canonical defect; four more standing probes were
+# widened the same way, and the rest were already immune or carried no ladder in code.
+check('T272 reach is printable', out.startswith('tierA=30 tierB=15 tierC=10 total=55'), True)
 check('T272 LICENSE-CODE is in the printed reach (p247)', 'LICENSE-CODE' in out, True)
 check('T272 the code grant is probed BEFORE the bare LICENSE (p247)',
       out.index('LICENSE-CODE') < out.index('\nLICENSE\n'), True)

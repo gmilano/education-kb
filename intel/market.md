@@ -10,6 +10,91 @@ updated: 2026-10-18
 > Sourced from web research on 2026-10-17. Vendor-sourced figures are marked; they are
 > carried because they are the only numbers available, not because they are reliable.
 
+## 🟢 Pass 286 — THE FOUR REGIONAL LEGS PRODUCED NO CODE ADDRESS AND TWO EXPLICIT NILS, AND THE EXAM-BOARD LEGS PRODUCED EIGHTEEN
+
+⏱️ `2026-10-18`, eighth pass. Evidence:
+[`p286-websearch.2026-10-18-p286.tsv`](../evidence/p286-websearch.2026-10-18-p286.tsv) ·
+[`regional-intake.2026-10-18-p286.tsv`](../evidence/regional-intake.2026-10-18-p286.tsv).
+
+🔵 **The battery was run once and briefly, as `p285` item 6 instructed, and the result is the
+clearest version yet of why.** Four regional legs: **two held with figures, two returned nothing
+about education at all.** Three directed legs addressed to **exam boards and languages** returned
+**18 code addresses and 6 first-hand grants**. Recorded per region below, nils included — because
+an undeclared nil is indistinguishable from coverage.
+
+### 🟡 North America — held, and two figures worth carrying
+
+- **$951 M (2024) → $2.3 B (2029), 15.9 % CAGR** for the regional AI-in-education market
+  *(MarketsandMarkets, vendor-sourced — the same house whose regional pages `p271`–`p275` showed
+  are one upstream publisher re-sold; quote it as a **direction**, not a number)*.
+- 🔴 **The procurement-relevant pair: only ~10 % of institutions have formal AI guidance, and
+  ~71 % of US teachers report no AI training.** ⚠️ Secondary, one statistics roundup.
+- 🟢 **New and concrete: Carnegie Mellon + the Gates Foundation, $55 M into AI courseware for
+  gateway college courses.** This is the shape of North American money right now — **courseware for
+  high-failure-rate introductory courses**, not institution-wide agents. ⚠️ Single secondary source.
+- 🔴 Regulation is **fragmented by state** (Colorado, Texas named) with **no federal education-AI
+  instrument**. That is the opposite of EMEA and it changes the sale: there is no single compliance
+  deadline to organise an engagement around, so the lever is **district or system procurement**.
+
+### 🔴 EMEA — an EXPLICIT NIL, and this shelf is again AHEAD of its own channel
+
+🔴 **The leg returned enterprise AI only: not one education vendor, ministry, institution or
+programme.** Its regulatory content was generic GDPR-and-AI-Act commentary. 🟢 **This base already
+carries the primary fact the leg could not reach — `Regulation (EU) 2026/1744`, Council
+`2026-06-29`, in force `2026-07-27`** — so the nil costs nothing except the budget it consumed.
+🔵 **Stated as a property of the CHANNEL, not of the world** (`T-p284b`): *"AI education EMEA"* as
+a query reaches consultancy trend-blogging. The leg that worked in EMEA was `p285`'s, addressed to
+a **vendor and a plugin ecosystem** (eLeDia), not to a region.
+
+### 🔴 APAC — an EXPLICIT NIL for education; the only hits are CORPORATE learning
+
+🔴 No education-specific adoption or regulation returned. The closest results were **TCS + Pearson's
+multi-year AI learning alliance** and **LearnUpon's Sydney HQ with AI course authoring** — both
+**workforce** rather than schooling — plus Singapore's **National AI Strategy 2.0** and Australia's
+**National AI Plan**, neither education-specific. 🟡 Held from prior passes: Korea's **USD 960 M**
+through 2030 for AI talent centres and vocational high schools. 🔵 **Directed legs into APAC DID
+work this pass** — Indonesia and Vietnam, by curriculum name and language, returned **13 addresses**
+— so the APAC nil is a **query** nil, and the remedy is already demonstrated.
+
+### 🟢 LATAM — the strongest battery leg, and the adoption-governance gap is now quantified twice
+
+- 🟢 **Digital Education Council, *AI in Higher Education LATAM Survey 2026*: 92 % of students and
+  79 % of faculty actively engaging with AI**, from **30 000+ responses across 29 institutions**.
+  Partners named: **Tecnológico de Monterrey** and its Institute for the Future of Education.
+- 🟢 **UNESCO IESALC, 200 institutions across 19 countries**, by function: **teaching and learning
+  73.5 %**, research **57.0 %**, administration **34.1 %**, community engagement **20.0 %**.
+- 🔴 **And the governance half: only ~30 % of LATAM universities have published an AI-use policy.**
+  🔵 **That pairing — 92 % of students using it, 30 % of institutions governing it — is the single
+  most sellable number in this file**, and it is now corroborated by two independent publishers
+  (a council survey and a UN agency), which is more than most figures on this shelf can claim.
+- 🔴 **Regulation stays heterogeneous and non-binding for education.** **Chile** leads with a
+  National AI Policy since 2021 and a bill under discussion; **Brazil** and **Colombia** have
+  national AI strategies with **no education-sector instrument**; in **Mexico**, **SEP** and
+  **ANUIES** have issued recommendations that **lack binding force**. Regional indices: the **IDB**
+  ILIA (19 countries) and **CEPAL**'s ILIA 2025 governance subdimensions.
+- 🟡 Carried, unmoved: Brazil's `2026-10-13` CNE amendment (assistive essay correction **permitted**
+  as a *primeiro filtro*, the **mark** reserved to the teacher, `educação infantil` a total
+  prohibition) is **still not homologated** in any source found this pass.
+
+### 🟢 Africa — the regional claim on this shelf was a WEST AFRICAN sample, and East Africa refutes it
+
+🔴 This base has published, for 17 passes, that there is **no permissively licensed African-origin
+education agent**, and two passes ago that **"five African code rows, five unlicensed — the gap is
+LICENSING, not supply"**. 🟢 **An East African leg refuted it on its first attempt:**
+[`Tanzania-AI-Community/twiga`](https://github.com/Tanzania-AI-Community/twiga) is **MIT** (1 073 B,
+read first-hand off the **`development`** ref), **230 files**, RAG over **Tanzania Institute of
+Education** curriculum, with tests, migrations, monitoring and CI; `vincent-laizer/NECTA-API` is
+**MIT** on the national-results channel.
+🔵 **The correction is geographic, and it matters for how an engagement is scoped:** the unlicensed
+cluster is **🇬🇭 Ghana and 🇳🇬 Nigeria** (five rows, five without a grant), while **🇹🇿 Tanzania has
+permissive, production-shaped code with an active community organisation behind it.** A studio
+proposal that treats "Africa" as one market gets the licence posture wrong in both directions.
+🔴 **Kenya is the third shape:** [`gabrielmahia/shule-ai`](https://github.com/gabrielmahia/shule-ai)
+(KCSE/CBC, Kiswahili + English) is listed as *open-source* on GitHub Topics and is in fact
+**CC BY-NC-ND 4.0** — **non-commercial and no-derivatives**, i.e. unusable for client work twice
+over. 🟡 Carried and unchanged: the **content** layer stays closed (NaCCA all-rights-reserved, WAEC
+past questions under no public licence).
+
 ## 🔵 Pass 285 — the mandated battery is an INFORMED NIL on numbers, and the one figure it moved is a spread this base already publishes
 
 ⏱️ `2026-10-18`, seventh pass. Evidence:

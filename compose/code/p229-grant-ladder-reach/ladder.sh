@@ -66,8 +66,8 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 # El coste es 7 peticiones mas por slug; el precio de no tenerlas fue dos verdictos falsos
 # en una sola pasada.  `compose/code/pass256-ladder-closure/` lo sostiene mecanicamente.
 TIER_A="LICENSE-CODE LICENSE LICENSE.md LICENSE.txt LICENSE.TXT LICENCE LICENCE.txt
-licence.txt COPYING COPYING.txt COPYING.md COPYING.LESSER license.txt license.md
-License.txt copying.txt LICENSE.rst NOTICE NOTICE.txt NOTICE.TXT notice.txt License licenses MIT-LICENSE
+licence.txt COPYING COPYING.txt COPYING.TXT COPYING.md COPYING.LESSER license.txt license.md
+License.txt copying copying.txt LICENSE.rst NOTICE NOTICE.txt NOTICE.TXT notice.txt License licenses MIT-LICENSE
 MIT-LICENSE.txt LICENSE-MIT LICENSE-APACHE APACHE-LICENSE-2.0.txt"
 # Tier B — non-root licence paths THIS KB HAS ALREADY RECORDED, plus the SPDX `LICENSES/` dir.
 TIER_B="docs/License.txt docs/LICENSE docs/LICENSE.txt docs/license.txt html/license.txt

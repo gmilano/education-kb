@@ -1998,3 +1998,50 @@ suite, so scope which components are in the SOW (`T20`, failure mode 3). 🔴 **
 the deployment evidence is German-speaking higher education, and nothing here establishes
 references in other regions.
 
+## P39 — The WhatsApp teacher assistant for an East African ministry, on a stack that is already MIT *(new in pass 286)*
+
+**The engagement.** A ministry, examinations council, teacher-training college or education NGO in
+**Tanzania or the wider East African Community** wants AI support for **teachers** — lesson
+preparation, curriculum-aligned question generation, marking help — under three constraints that
+rule out every pattern above it in this file: teachers reach the internet **on a phone, through
+WhatsApp**, the language of instruction is **Swahili as well as English**, and the curriculum
+authority is **TIE**, not a European or North American framework.
+
+**Why this pattern exists.** Every prior pattern in this file assumes a browser, an LMS of record
+and a Western curriculum body. Pass 286 found a repository that already makes the opposite
+assumptions, **MIT-licensed and production-shaped**, which turns this from a build into an
+extension. 🔴 It also retires this base's own 17-pass claim that no such thing existed.
+
+| what | component | licence (payload-read `2026-10-18`) | role |
+|---|---|---|---|
+| 🟢 Teacher-facing agent | [`Tanzania-AI-Community/twiga`](https://github.com/Tanzania-AI-Community/twiga) | 🟢 **MIT** — `development/LICENSE`, 1 073 B | WhatsApp assistant for Tanzanian teachers. **230 files**: `app/` (101) with `clients/whatsapp_client.py` and `clients/agent_client.py`, `database/` with 12 migrations, **30 tests**, 15 docs, `monitoring/`, `docker/`, CI |
+| 🟢 Curriculum knowledge | TIE curriculum + textbooks, via `twiga`'s own RAG path | — | Already wired in-tree; the retrieval corpus is the ministry's own material |
+| 🟢 National results channel | [`vincent-laizer/NECTA-API`](https://github.com/vincent-laizer/NECTA-API) | 🟢 **MIT** — root `LICENSE`, 1 092 B | **NECTA** examination results. The cohort-outcome signal the agent otherwise has no access to |
+| 🟡 Learner model, if the scope reaches analytics | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | Knowledge tracing over whatever interaction log the deployment accumulates |
+| 🟡 Offline-capable tutoring, if the scope reaches pupils | [`nguyenbaophuc27129-web/VIETPOET`](https://github.com/nguyenbaophuc27129-web/VIETPOET) as a **design reference only** | 🔴 **no grant — do not import** | Its Socratic-prompting + compressed-model-on-CPU design is the right answer to intermittent connectivity. **Reimplement; do not vendor** |
+
+**How to wire it.** `twiga` is already the spine: WhatsApp Business API → `whatsapp_client` →
+`agent_client` → retrieval over the TIE corpus, with its own quota and persistence behind it. The
+studio's work is (1) **operate it** — the repo ships `docker/`, `migrations/` and `monitoring/`, so
+the deployment is a configuration and SRE exercise, not a rewrite; (2) **widen the corpus** to the
+syllabus years and subjects in scope; (3) **join `NECTA-API` results to cohorts** so the ministry
+gets outcome reporting the agent can be measured against; (4) **add Swahili evaluation** — the one
+thing no component supplies, and the thing a local engagement is uniquely able to staff.
+
+**The licence boundary.** 🟢 **MIT throughout** — `twiga` and `NECTA-API` both. Studio
+modifications may stay proprietary, the deliverable carries no copyleft obligation, and nothing here
+needs a network boundary to keep it clean. 🔵 **This is the only African-deployment pattern in this
+file with that property**, and it is why the sub-region matters: the 🇬🇭/🇳🇬 prior art is
+**unlicensed** (ask first — `P32`, `P35`) and 🇰🇪 `shule-ai` is **CC BY-NC-ND**, which forbids both
+billing and modification.
+
+⚠️ **Four cautions.** `twiga`'s default ref is **`development`**, not `main` — pin a commit, and
+expect the branch to move under you. `NECTA-API` is **unofficial and self-described as in
+development**, so treat the results channel as a scraper with an SLA of zero and cache
+aggressively. Star counts are **frozen at `2026-10-17`** base-wide (`api.github.com/repos` is
+refused by session policy), so **adoption is unmeasured here** — assess it from commit and issue
+activity directly before committing a client. And the copyright holder of `twiga`'s MIT grant is an
+**individual** (*Victor Oldensand*, 2024) while the repository sits under a **community
+organisation** — fine for MIT, but confirm the contribution history if the client's procurement
+asks who owns the upstream. 🔴 **APAC-placed components, APAC-placed evidence:** `sekolahyuk-app`
+and `rapkumer` are 🇮🇩; nothing in this pattern establishes East African references for them.

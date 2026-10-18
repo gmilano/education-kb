@@ -27,6 +27,76 @@ updated: 2026-10-18
 > **reproduced every published figure**, and the search-leg ledger
 > [`p269-websearch.2026-10-17-p269.tsv`](../evidence/p269-websearch.2026-10-17-p269.tsv)).
 
+## 🟢 Pass 286 — "FIVE AFRICAN ROWS, FIVE UNLICENSED" IS REFUTED AT THE PAYLOAD, AND THE REPO THAT REFUTES IT IS PRODUCTION-SHAPED
+
+⏱️ `2026-10-18`, eighth pass. Evidence:
+[`regional-intake.2026-10-18-p286.tsv`](../evidence/regional-intake.2026-10-18-p286.tsv) ·
+[`p286-websearch.2026-10-18-p286.tsv`](../evidence/p286-websearch.2026-10-18-p286.tsv).
+
+🔴 **The mandated agent leg returned its TWELFTH consecutive nil** — `microsoft/ai-agents-for-beginners`,
+`pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`: curricula that teach engineers
+to build agents. `p283`'s diagnosis reproduces for the fourth pass running. 🟢 **All three rows
+below came from gap-directed legs** — the third consecutive pass where that is true.
+
+🔴 **The claim this pass overturns is this shelf's own, published two passes ago:** *"Five African
+education code rows are now known to this base and **all five are unlicensed**. The gap is not code
+— it is LICENSING."* 🟢 **It was a WEST AFRICAN sample generalised to a continent.** `p285`'s own
+leg recorded that it *"found nothing for East Africa"*; a leg addressed to **Tanzania by its exam
+board and its language** returned **two MIT repositories on the first attempt**.
+
+| agent | licence (payload-read `2026-10-18`, first-hand) | tier | note |
+|---|---|---|---|
+| [`Tanzania-AI-Community/twiga`](https://github.com/Tanzania-AI-Community/twiga) | 🟢 **MIT** — `development/LICENSE`, 1 073 B, holder *Victor Oldensand* | 🟢 **build-on** | 🇹🇿 WhatsApp assistant for **Tanzanian teachers**, RAG over **Tanzania Institute of Education** curriculum and textbooks. **230 files**: `app/` (101), **30 tests**, 12 migrations, 15 docs, `monitoring/`, `docker/`, CI. 🔴 **This closes the gap `p284` and `p285` both declared open** — *"no production open-source education agent built for an African deployment"*. It is the first row here that is African-deployment-targeted, permissive AND production-shaped |
+| [`vincent-laizer/NECTA-API`](https://github.com/vincent-laizer/NECTA-API) | 🟢 **MIT** — root `LICENSE`, 1 092 B | 🟢 **build-on (data channel)** | 🇹🇿 Python package that fetches **NECTA** national examination results. Not an agent: it is the **results channel** a Tanzanian engagement needs underneath one. Author states it is **not an official NECTA API** and is still in development — treat the upstream as unstable, the licence as clean |
+| [`Jahirrrr/sekolahyuk-app`](https://github.com/Jahirrrr/sekolahyuk-app) | 🟢 **MIT** — root `LICENSE`, 1 064 B | 🟢 **build-on** | 🇮🇩 *"Aplikasi pembelajaran Sekolah Gratis dan Open Source"* — free, open-source school learning app. The **only permissive grant in seven Indonesian addresses probed** this pass |
+
+🔴 **The grant that the default ref hid, again.** `twiga`'s grant is on **`development`**, not `main`
+or `master`. A probe trying the two conventional refs would have published `NONE_IN_TREE` on an
+MIT repository. 🔵 **That is `p285`'s `eledia` finding — a grant sitting on a ref the axis never
+tried — reproduced in a different hemisphere one pass later**, and it is now **two of this base's
+last five promotions**. `ls-remote --symref` costs one call and is the only thing that prevents it.
+
+### 🔴 Three "open source" claims from secondary sources, all three refuted by the payload
+
+| address | what the source said | 🔴 what the payload says |
+|---|---|---|
+| [`gabrielmahia/shule-ai`](https://github.com/gabrielmahia/shule-ai) | GitHub Topics lists it as **open-source**: 🇰🇪 Kenyan-curriculum tutor, KCSE/CBC, Kiswahili + English, *"runs on any phone"* | 🔴 **CC BY-NC-ND 4.0** — 209 B, **reference-only** (a URL to the legalcode, no body). **NonCommercial AND NoDerivatives**: a studio may neither bill for it nor modify it. The single most restrictive grant on this shelf |
+| [`eldorray/modulajar-ai`](https://github.com/eldorray/modulajar-ai) | search result: *"released under the **MIT** license"* | 🔴 **NONE_IN_TREE across 310 enumerated files.** There is no grant to be MIT |
+| [`Dondo0936/vietnamese-ai-for-beginner`](https://github.com/Dondo0936/vietnamese-ai-for-beginner) | search result: *"under the **MIT** license"*, 260+ topics | 🔴 **DOES_NOT_RESOLVE.** The address does not serve a ref at all |
+
+🔵 **Three secondary licence claims, three refutations, one pass.** This base's standing rule —
+**read the grant, never the list** — now has a measured hit rate in the direction that matters: of
+**five** addresses a secondary source called MIT or open-source this pass, **three were wrong**.
+
+### 🟡 Two verified grants a studio cannot build on, recorded so nobody re-reads the list
+
+- 🔴 [`sira313/rapkumer`](https://github.com/sira313/rapkumer) (🇮🇩 Kurikulum-Merdeka report-card
+  app, an alternative to the official **e-Rapor**, with an AI generator for learning objectives) —
+  **bespoke `RAPKUMER LICENSE`, 3 140 B, in Indonesian.** §3 *`LARANGAN PENGGUNAAN KOMERSIAL`*
+  prohibits commercial use **in any form**, naming paid access, paid support-as-product and
+  inclusion in a commercial service. §5 splits scope — the grant covers the source and **five
+  named static assets**, everything else in `static/` follows its own holder — and §6 carves out
+  Feather Icons as MIT. 🔵 A sophisticated, scope-partitioned proprietary licence that is **not in
+  English**, which is what makes it this pass's instrument finding (see
+  [`intel/trends.md`](../intel/trends.md) `T-p286b`).
+- 🟡 [`longnhgsvn/Learn-with-AI-tieng-viet`](https://github.com/longnhgsvn/Learn-with-AI-tieng-viet)
+  (🇻🇳 WordPress + AI platform, large course catalogue) — **AGPL-3.0, 35 149 B.** Integrate across a
+  network boundary or not at all.
+
+### 🟢 Four Vietnamese and Indonesian addresses enumerated to a clean absence
+
+[`DooWuy/AI-tutor-`](https://github.com/DooWuy/AI-tutor-) (735 files),
+[`SeNgoNhatMinh/Ai_Turtor`](https://github.com/SeNgoNhatMinh/Ai_Turtor) (1 640 files),
+[`nguyenbaophuc27129-web/VIETPOET`](https://github.com/nguyenbaophuc27129-web/VIETPOET) (198 files —
+🔵 a **Socratic** poetry tutor for Vietnamese high-school literature that runs **offline on CPU** on
+a compressed Qwen2.5-1.5B, which is the most interesting *design* found this pass),
+[`thanh01pmt/vietnam-k12-ai-curriculum`](https://github.com/thanh01pmt/vietnam-k12-ai-curriculum)
+(15 files), plus 🇮🇩 `faruqeclypst/modulajar-generator` (79), `indri007/eduragmerdeka` (16),
+`aisyahrr/siakad-kurikulum-merdeka` (126), `odifunan4-ux/Guruku-ID` (14) and 🇹🇿
+`Colin-J-Emmanuel/Somo` (23 — a NECTA CSEE photo-tutor built in one day at a hackathon).
+**All nine tree-enumerated, all `VERIFIED_ABSENT`.** Prior art, not dependencies — and under
+`P32`/`P35` the right move is to **ask**, which nobody in this base's history has done.
+
 ## 🟢 Pass 285 — two agents promoted out of the ENUMERATION BACKLOG, and a seven-plugin EMEA suite that was on this base's "not on GitHub" list
 
 ⏱️ `2026-10-18`, seventh pass. Evidence:
@@ -50,6 +120,11 @@ Yoruba/Hausa/Igbo) and [`meduoyeomoyenia-cyber/Education-AI-TUTOR`](https://gith
 (🇳🇬 WAEC/NECO/JAMB) were all **tree-enumerated** and all serve **NONE_IN_TREE** with **no manifest
 licence key**. 🟢 **Five African education code rows are now known to this base and all five are
 unlicensed. The gap is not code — it is LICENSING.** Treat as **prior art, not dependencies**.
+> 🔴 **WITHDRAWN IN PLACE by pass 286.** The three rows above are 🇬🇭/🇳🇬 and the verdict on each
+> still stands, but *"all five are unlicensed"* generalised a **West African** sample to the
+> continent. An **East African** leg found [`Tanzania-AI-Community/twiga`](https://github.com/Tanzania-AI-Community/twiga)
+> (**MIT**) and [`vincent-laizer/NECTA-API`](https://github.com/vincent-laizer/NECTA-API)
+> (**MIT**) on its first attempt. The licensing gap is **West African**, not African.
 
 ## Build-on-this tier — permissive licences (MIT / Apache-2.0 / BSD)
 
@@ -699,7 +774,16 @@ at integration work rather than wholesale import.
 
 ## Declared gaps
 
-- 🔴 **NEW in pass 269 — no AFRICAN-ORIGIN permissively licensed education agent, measured at the
+- 🟢 **RETRACTED in pass 286 — "no AFRICAN-ORIGIN permissively licensed education agent" is no
+  longer the claim.** [`Tanzania-AI-Community/twiga`](https://github.com/Tanzania-AI-Community/twiga)
+  is **MIT** (`development/LICENSE`, 1 073 B, read first-hand), 230 files, Tanzania Institute of
+  Education curriculum, with tests, migrations, monitoring and CI; `vincent-laizer/NECTA-API` is
+  **MIT** on the results channel. 🔵 The claim below held for 17 passes because every leg that
+  produced it addressed **West Africa or "Africa"**; the one addressed to **Tanzania by exam board
+  and language** refuted it immediately. What remains true, narrowed: **no permissively licensed
+  education agent of WEST AFRICAN origin** — five rows there, five without a grant.
+- 🔴 **Superseded text, kept for the record (pass 269) — no AFRICAN-ORIGIN permissively licensed
+  education agent, measured at the
   payload.** Both African-context agents located this pass serve no grant (above). The only
   Africa-engaged permissive code this base carries is
   [`AI-for-Education`](https://github.com/AI-for-Education) — MIT, LMIC-focused, Sierra Leone MBSSE

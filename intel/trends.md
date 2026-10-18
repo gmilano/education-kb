@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 `T-p286a` — "Africa" is not a market for this purpose: the licence posture splits EAST / WEST / KENYA, and a continental claim gets all three wrong
+
+🔵 **The trend, stated as the thing a studio actually hits.** This base has carried a continental
+claim about African education code for 17 passes — first *"no African-origin permissively licensed
+education agent"* (`p269`), then, sharpened two passes ago into `T-p285a`, *"five rows, five
+unlicensed: the gap is LICENSING, not supply"*. 🔴 **Every leg that produced that claim addressed
+either "Africa" or West Africa.** `p285` recorded, in its own text, that its leg *"found nothing
+for East Africa"* — and published the continental conclusion anyway.
+
+🟢 **One leg addressed to Tanzania by its exam board (`NECTA`) and its language (Swahili) returned
+two MIT repositories on the first attempt.** The resulting picture has **three** shapes, not one:
+
+| sub-region | population known to this base | licence posture | what it means for an engagement |
+|---|---|---|---|
+| 🟢 **East Africa (🇹🇿)** | `Tanzania-AI-Community/twiga` (**MIT**, 230 files, TIE curriculum, tests + migrations + CI), `vincent-laizer/NECTA-API` (**MIT**) | 🟢 **permissive, production-shaped, community-backed** | **Build on it.** This is a dependency, not prior art — the first such row for any African deployment in this base |
+| 🔴 **West Africa (🇬🇭 🇳🇬)** | `edubot-africa`, `naija-learn`, `Education-AI-TUTOR`, `EduTwin-Africa`, `edunaija-os` | 🔴 **five rows, five with no grant on any channel** | **Prior art. ASK** — `P32`/`P35`. `EduTwin-Africa`'s author has written down that the licence is missing, so it is the one where asking plainly costs nothing |
+| 🔴 **Kenya (🇰🇪)** | `gabrielmahia/shule-ai` (KCSE/CBC, Kiswahili + English) | 🔴 **CC BY-NC-ND 4.0** — listed as *"open-source"* on GitHub Topics | 🔴 **Worse than unlicensed for a studio:** NonCommercial blocks billing, NoDerivatives blocks modification. Unusable twice over, and it looks usable |
+
+🔴 **The methodological half is the durable finding, and it is the second time in three passes.**
+`T-p284b` already established: *"before a gap is published as a property of the world, one leg must
+have addressed it by name."* 🔴 **`p285` satisfied the letter of that rule and still got it wrong,
+because it addressed the gap at the wrong GRANULARITY** — one leg named "Africa", so the rule was
+met, while the conclusion was drawn over a unit (a continent of 54 states and dozens of exam
+boards) that no single leg can cover. 🟢 **`T-p286a` extends the rule: the leg must address the gap
+at the granularity at which the CONCLUSION is stated.** A claim about Africa needs legs per
+sub-region or per exam board; a claim about Tanzania needs one.
+
+🔵 **And the queries that work are now a measured pattern, three passes running.** `p284` found
+Africa with the AU strategy by name; `p285` found three West African repos by exam board and
+language; `p286` found East Africa, Indonesia and Vietnam the same way — **`NECTA`, `KCSE`,
+`Kurikulum Merdeka`, `giáo dục`**. 🟢 **The generative unit is the EXAM BOARD and the LANGUAGE OF
+INSTRUCTION, not the region**: both are proper nouns a local system must name, and neither appears
+in consultancy trend-blogging, which is what region-named queries reach.
+
+## 🔴 `T-p286b` — the restriction vocabulary is ENGLISH-ONLY, and its miss is published as "no restriction" rather than "cannot read"
+
+🔵 **The trend as a defect with a live instance.** The directed legs that now extend this base reach
+**non-English-speaking** education systems, and grants there are written in the local language.
+`p286` read [`sira313/rapkumer`](https://github.com/sira313/rapkumer)'s **3 140-byte bespoke
+`RAPKUMER LICENSE`**, whose §3 is titled **`LARANGAN PENGGUNAAN KOMERSIAL`** — *prohibition of
+commercial use* — and which forbids commercial use **in any form**, naming paid access, paid
+support-as-product and inclusion in a commercial service.
+
+🔴 **`pass257-restriction-scan` returns `UNCLASSIFIED:no-family-no-restriction` on that body, with
+zero hits.** The English control (*"NonCommercial … Commercial use is prohibited"*) fires
+`RESTRICTED:added-restriction` correctly, so **the logic is sound and the vocabulary is the defect**:
+`noncommercial`, `non-commercial`, `commercial use`, and nothing else.
+Evidence: [`restriction-vocabulary-language.2026-10-18-p286.tsv`](../evidence/restriction-vocabulary-language.2026-10-18-p286.tsv).
+
+🔴 **The dangerous part is the DIRECTION of the failure.** The verdict string a consumer reads is
+`no-family-no-restriction` — *"I looked and there is nothing"* — when the truth is *"I cannot read
+this language."* A permissive-looking verdict on a totally non-commercial licence is exactly the
+error class this base built `p238-lure-signature` and `p248-named-proprietary` to prevent, arriving
+through a channel neither of them watches.
+
+🔵 **And it is `T-p283`'s shape once more — a fix that reached the family it was built for and no
+other.** `lib/license_family.sh` **already carries 38 non-English grant tokens** (the Portuguese and
+Spanish GPL titles, `licença pública geral` and kin), added when this base started reading LATAM
+payloads. So the base has known for many passes that grants arrive in other languages — **in the
+TITLE channel. The RESTRICTION channel never inherited it.**
+
+🟢 **Ranked first for `p287`, and deliberately not half-fixed here.** `scan()`'s verdict strings are
+consumed by the shelf gates, so a new `UNREADABLE-BODY` verdict has to land together with its
+downstream consumers; and the vocabulary should be extended in the languages this base's own
+directed legs now reach — **Indonesian, Vietnamese, Portuguese, Spanish, Swahili** — each arm with
+a negative control, because a restriction term is a word that must not fire on prose.
+
 ## 🔴 `T-p285a` — Africa's education-AI gap is a LICENSING gap, not a supply gap, and the two have opposite remedies
 
 🔵 **The trend, stated as the thing a studio actually hits.** This base has described Africa as

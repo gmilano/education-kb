@@ -13,7 +13,7 @@ fetch_one() {
   o=${slug%%/*}; r=${slug##*/}
   key="${o}__${r}"
   for ref in main master; do
-    for path in LICENSE LICENSE.md LICENSE.txt license.txt COPYING LICENCE; do
+    for path in LICENSE LICENSE.md LICENSE.txt license.txt COPYING COPYING.txt COPYING.TXT LICENCE; do
       f="$out/$key.body"
       code=$(curl -sS -o "$f" -w '%{http_code}' --max-time 30 \
               "https://raw.githubusercontent.com/$slug/$ref/$path" 2>/dev/null)

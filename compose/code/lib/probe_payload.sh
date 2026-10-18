@@ -55,7 +55,7 @@ _PROBE_LIB_DIR="${_PROBE_LIB_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}
 . "$_PROBE_LIB_DIR/payload_measure.sh"
 
 # Ordered shortest-first: the names that actually paid out in this base's censuses.
-PROBE_NAMES="${PROBE_NAMES:-LICENSE LICENSE.md LICENSE.txt LICENCE COPYING}"
+PROBE_NAMES="${PROBE_NAMES:-LICENSE LICENSE.md LICENSE.txt LICENCE COPYING COPYING.txt COPYING.TXT}"
 
 _raw() { curl -sS --max-time "${PROBE_TIMEOUT:-25}" "https://raw.githubusercontent.com/$1/$2/$3" 2>/dev/null; }
 

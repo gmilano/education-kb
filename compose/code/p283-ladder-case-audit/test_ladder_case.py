@@ -104,6 +104,67 @@ run("C13 a STEM-case helper alone is not a generator",
     'paths = ["README", "README.md", "readme.md"]',
     "STEM-ONLY")
 
+# ── p286's three instrument changes, each with a NEGATIVE ARM ──────────────────────────
+# 🔵 p284's lesson applied to controls, not just to bounds: a predicate asserted only in
+# the direction it is supposed to fire can be satisfied by a predicate that fires always.
+
+# C15/C16/C17 — COMMENT-ONLY.  The positive arm is `lib/license_family.sh`'s real shape:
+# the only `copying` token in the file is a byte-offset note in a `#` comment.
+run("C15 vocabulary only in a # comment is COMMENT-ONLY",
+    ["COPYING"], '#  - GPL-3.0 seccion 13, moodle/COPYING  byte 28.272\nreturn 1', "COMMENT-ONLY")
+run("C16 NEGATIVE ARM: the same vocabulary in CODE is not COMMENT-ONLY",
+    ["COPYING"], 'for f in COPYING; do curl $f; done', "SINGLE-SPELLING")
+run("C17 vocabulary only in a docstring is COMMENT-ONLY",
+    ["COPYING"], '"""The ladder carried LICENSE.md and COPYING."""\nx = 1', "COMMENT-ONLY")
+
+# C18/C19/C20 — the SHELL cross product, `p207-permissive-half-audit/locate.sh`'s shape.
+_SH_GEN = ('for b in LICENSE License license COPYING Copying copying; do\n'
+           '  for e in "" .txt .TXT .md .MD; do printf \'%s%s\\n\' "$b" "$e"; done\ndone')
+run("C18 a shell stem x extension cross product is GENERATED-CASE-VARIED",
+    ["COPYING", "Copying", "copying"], _SH_GEN, "GENERATED-CASE-VARIED")
+run("C19 NEGATIVE ARM: a shell ext list with NO case variation is not a generator",
+    ["COPYING", "Copying", "copying"],
+    'for b in COPYING Copying copying; do\n  for e in "" .txt .md; do echo "$b$e"; done\ndone',
+    "STEM-ONLY")
+run("C20 NEGATIVE ARM: ext case varied but stems NOT is not a generator",
+    ["COPYING"],
+    'for b in COPYING; do\n  for e in .txt .TXT; do echo "$b$e"; done\ndone', "SINGLE-SPELLING")
+
+# C21/C22 — a variable named `LICENCE` takes attribute access, and `BARE`'s optional
+# `.ext` ate it: `p124-correction-form-marker` was graded on `LICENCE.findall`.
+_attr = {t for _, t in spellings('LICENCE = re.compile(r"x")\nLICENCE.findall(s)\nLICENCE.pattern')}
+ok = _attr == {"LICENCE"}
+print(f"{'  ok  ' if ok else '  FAIL'} C21 a method attribute is not a path spelling (got {sorted(_attr)})")
+if not ok:
+    FAILED.append("C21")
+_real = {t for _, t in spellings('p = ["LICENCE.txt", "LICENCE.md"]')}
+ok = _real == {"LICENCE.txt", "LICENCE.md"}
+print(f"{'  ok  ' if ok else '  FAIL'} C22 NEGATIVE ARM: a real extension is still a spelling (got {sorted(_real)})")
+if not ok:
+    FAILED.append("C22")
+
+# C23/C24 — the regex ALTERNATION context, and the phrase that must stay out of it.
+_alt = {t for _, t in spellings(r'RX = r"(?:COPYING|copying|Copying|NOTICE)"')}
+ok = {"COPYING", "copying", "Copying", "NOTICE"} <= _alt
+print(f"{'  ok  ' if ok else '  FAIL'} C23 an exact-word alternation yields case variants (got {sorted(_alt)})")
+if not ok:
+    FAILED.append("C23")
+# 🔴 This is the control that rejects p286's own first attempt (`re.I` on BARE), which
+# imported `general public license` from a title regex as licence-path vocabulary.
+_phrase = {t for _, t in spellings(r"TITLE='^(gnu (affero |lesser )?general public license)$'")}
+ok = not _phrase
+print(f"{'  ok  ' if ok else '  FAIL'} C24 NEGATIVE ARM: a body-text phrase yields no spelling (got {sorted(_phrase)})")
+if not ok:
+    FAILED.append("C24")
+
+# C25 — grade on what the CODE carries.  `p230-prose-path-ladder` had `COPYING` in a regex
+# and `COPYING.txt` ONLY in its docstring, and was graded as a two-rung CASE-UNVARIED
+# ladder on the strength of the prose rung.
+run("C25 a rung that exists only in prose is not graded as a rung",
+    ["COPYING", "COPYING.txt"],
+    '"""...sat in the grantless class because COPYING.txt was not in the list."""\n'
+    'for f in COPYING; do curl $f; done', "SINGLE-SPELLING")
+
 # C14 — THE RATCHET, which is `p283`'s item 2.  `p283` produced these numbers and pinned
 # none of them, so nothing stopped the next pass from regressing a ladder silently.
 # 🔵 It is a RATCHET, not a pin, and that distinction is `p284` item 1's lesson carried
@@ -117,12 +178,23 @@ _rows = _lc.audit(str(pathlib.Path(__file__).resolve().parents[3]))
 _counts = {}
 for _r in _rows:
     _counts[_r[2]] = _counts.get(_r[2], 0) + 1
+    # 🟢 p286: `STANDING:<verdict>` keys bind only the ladders `make hooks` actually
+    # invokes.  A ceiling on the ALL population goes red when an instrument is ADDED,
+    # which is the p252 shape this ratchet exists to avoid.
+    if _r[4] == "STANDING":
+        _k = "STANDING:" + _r[2]
+        _counts[_k] = _counts.get(_k, 0) + 1
 # direction: MIN = must not fall below (good things); MAX = must not rise above (defects).
 _BOUNDS = {}
 if RATCHET.exists():
-    for _i, _ln in enumerate(RATCHET.read_text(encoding="utf-8").splitlines()):
+    # 🔴 p286: the header skip was pinned to line 0, so the first `#` comment line added
+    # to the ratchet moved the header down and the parser tried `int("bound")`.  A file
+    # format that cannot carry a comment cannot carry the reason for its own numbers.
+    for _ln in RATCHET.read_text(encoding="utf-8").splitlines():
+        if not _ln.strip() or _ln.lstrip().startswith("#"):
+            continue
         _p = _ln.split("\t")
-        if _i == 0 and _p[0] == "verdict":
+        if _p[0] == "verdict":
             continue
         if len(_p) >= 3:
             _BOUNDS[_p[0]] = (_p[1], int(_p[2]))
@@ -143,5 +215,5 @@ else:
     else:
         print(f"  ok   C14 the ladder ratchet holds ({len(_BOUNDS)} bounds)")
 
-print(f"\n{14 - len(FAILED)}/14 controls pass")
+print(f"\n{25 - len(FAILED)}/25 controls pass")
 sys.exit(1 if FAILED else 0)

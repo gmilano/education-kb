@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 286) — the repository channel's nil is TWELVE deep, and the three grants this pass came from exam-board and language queries
+
+⏱️ **Eighth pass of `2026-10-18`.** Append-only. Evidence:
+[`regional-intake.2026-10-18-p286.tsv`](../evidence/regional-intake.2026-10-18-p286.tsv) ·
+[`p286-websearch.2026-10-18-p286.tsv`](../evidence/p286-websearch.2026-10-18-p286.tsv).
+
+🔴 **No first-hand trending, for the same measured reason.** `github.com/trending` answers **403**
+and `api.github.com/repos/{owner}/{repo}` is refused by **session repo scope** — a *policy*
+boundary, permanent, struck from the backlog by `p285` rather than re-ranked. **Every trending
+ranking on this shelf is third-party, and star counts remain frozen at `2026-10-17`.**
+🟢 What *is* live and did all the work: `raw.githubusercontent.com`, `git ls-remote --symref` and
+`git clone --depth 1 --filter=blob:none`.
+
+### 🟢 18 addresses probed, 6 grants read, 9 absences enumerated, 2 non-resolving
+
+| repo | licence (payload, `2026-10-18`) | files | verdict |
+|---|---|---|---|
+| [`Tanzania-AI-Community/twiga`](https://github.com/Tanzania-AI-Community/twiga) | 🟢 **MIT** 1 073 B — on **`development`** | 230 | `GRANT_READ` |
+| [`vincent-laizer/NECTA-API`](https://github.com/vincent-laizer/NECTA-API) | 🟢 **MIT** 1 092 B | — | `GRANT_READ` |
+| [`Jahirrrr/sekolahyuk-app`](https://github.com/Jahirrrr/sekolahyuk-app) | 🟢 **MIT** 1 064 B | — | `GRANT_READ` |
+| [`longnhgsvn/Learn-with-AI-tieng-viet`](https://github.com/longnhgsvn/Learn-with-AI-tieng-viet) | 🟡 **AGPL-3.0** 35 149 B | — | `GRANT_READ` |
+| [`sira313/rapkumer`](https://github.com/sira313/rapkumer) | 🔴 bespoke **non-commercial** 3 140 B (Indonesian) | — | `GRANT_READ` |
+| [`gabrielmahia/shule-ai`](https://github.com/gabrielmahia/shule-ai) | 🔴 **CC BY-NC-ND 4.0** 209 B, reference-only | — | `GRANT_READ` |
+| [`DooWuy/AI-tutor-`](https://github.com/DooWuy/AI-tutor-) | 🔴 none | 735 | `VERIFIED_ABSENT` |
+| [`SeNgoNhatMinh/Ai_Turtor`](https://github.com/SeNgoNhatMinh/Ai_Turtor) | 🔴 none | 1 640 | `VERIFIED_ABSENT` |
+| [`eldorray/modulajar-ai`](https://github.com/eldorray/modulajar-ai) | 🔴 none — **a source called this MIT** | 310 | `VERIFIED_ABSENT` |
+| [`nguyenbaophuc27129-web/VIETPOET`](https://github.com/nguyenbaophuc27129-web/VIETPOET) | 🔴 none | 198 | `VERIFIED_ABSENT` |
+| [`aisyahrr/siakad-kurikulum-merdeka`](https://github.com/aisyahrr/siakad-kurikulum-merdeka) | 🔴 none | 126 | `VERIFIED_ABSENT` |
+| [`faruqeclypst/modulajar-generator`](https://github.com/faruqeclypst/modulajar-generator) | 🔴 none | 79 | `VERIFIED_ABSENT` |
+| [`Colin-J-Emmanuel/Somo`](https://github.com/Colin-J-Emmanuel/Somo) | 🔴 none | 23 | `VERIFIED_ABSENT` |
+| [`indri007/eduragmerdeka`](https://github.com/indri007/eduragmerdeka) | 🔴 none | 16 | `VERIFIED_ABSENT` |
+| [`thanh01pmt/vietnam-k12-ai-curriculum`](https://github.com/thanh01pmt/vietnam-k12-ai-curriculum) | 🔴 none | 15 | `VERIFIED_ABSENT` |
+| [`odifunan4-ux/Guruku-ID`](https://github.com/odifunan4-ux/Guruku-ID) | 🔴 none | 14 | `VERIFIED_ABSENT` |
+| [`HanChein/ElimuAI`](https://github.com/HanChein/ElimuAI) | — | — | 🔴 `DOES_NOT_RESOLVE` |
+| [`Dondo0936/vietnamese-ai-for-beginner`](https://github.com/Dondo0936/vietnamese-ai-for-beginner) | — | — | 🔴 `DOES_NOT_RESOLVE` — **a source called this MIT** |
+
+🔵 **The hit rate is the finding.** 18 addresses from three directed legs yielded **3 permissive
+grants**; the four mandated regional legs yielded **none**. And of the five addresses a secondary
+source described as MIT or open-source, **three were wrong** — one absent across 310 files, one
+non-resolving, one CC BY-NC-ND.
+
+🟢 **The intake instrument is now in the tree** at
+[`compose/code/p286-regional-intake/intake.sh`](../compose/code/p286-regional-intake/intake.sh):
+`ls-remote --symref` for the real default ref, `p229`'s TIER_A **as widened this pass** for the
+payload, and a **blobless tree enumeration** before any absence is recorded — never a path ladder
+(`p275`). It is the first intake on this base that probes `COPYING.TXT`.
+
 ## 2026-10-18 (pass 285) — the repository channel's nil is eleven deep, and the BACKLOG, not the channel, is what produced four grants this pass
 
 ⏱️ **Seventh pass of `2026-10-18`.** Append-only. Evidence:

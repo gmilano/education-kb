@@ -25,6 +25,36 @@ updated: 2026-10-18
 > carried as the only permissive North American system of record for roughly 200 passes while
 > *this* file carried no Ed-Fi row at all.
 
+## 🟢 Pass 286 — a national EXAM-RESULTS channel joins this shelf, and it is the layer an East African engagement has had no answer for
+
+⏱️ `2026-10-18`, eighth pass. Evidence:
+[`regional-intake.2026-10-18-p286.tsv`](../evidence/regional-intake.2026-10-18-p286.tsv).
+
+🟢 **One row added, and it is a FOUNDATION rather than an agent** —
+[`vincent-laizer/NECTA-API`](https://github.com/vincent-laizer/NECTA-API), **MIT**, root `LICENSE`
+1 092 B, payload-read `2026-10-18`. A Python package that fetches results of Tanzania's national
+examinations (**NECTA**). 🔵 **Why it belongs on this shelf and not on `agents/top.md`:** it carries
+no model and no pedagogy — it is the **system-of-record channel** that a tutor, a dropout-prediction
+model or a ministry dashboard reads underneath. This shelf's thinnest column has been *national
+assessment data outside Europe and North America*, and this is the first row in it.
+
+⚠️ **Two cautions, both from the author's own words:** it is **not an official NECTA API** (it reads
+the published results service, so it breaks when that service changes) and it is **still in
+development**. 🟢 The licence, however, is clean and permissive — which is the part a studio cannot
+fix for itself.
+
+🟢 **Also permissive, also new, and shelved as a platform rather than a foundation:**
+[`Jahirrrr/sekolahyuk-app`](https://github.com/Jahirrrr/sekolahyuk-app) (🇮🇩, **MIT**, 1 064 B) — see
+[`verticals/solutions.md`](../verticals/solutions.md).
+
+🔴 **What this shelf did NOT gain, and the reason is a licence rather than an absence.** Seven
+Indonesian and six Vietnamese addresses were probed. The one with the most platform-shaped scope,
+[`sira313/rapkumer`](https://github.com/sira313/rapkumer) — a working alternative to Indonesia's
+official **e-Rapor** report-card system, with an AI generator for learning objectives from **BSKAP**
+outcomes — serves a **bespoke non-commercial licence** and therefore cannot be a foundation for
+anything billable. 🔵 **Recorded here because the next pass must not re-discover it as a candidate:
+the grant is the blocker, and it is a written policy of its author, not an omission.**
+
 ## 🟢 Pass 285 — the `Kuali` lead is RESOLVED AT PAYLOAD, and "open foundation, therefore permissive" is refuted on the limb that mattered
 
 ⏱️ `2026-10-18`, seventh pass. Evidence:
