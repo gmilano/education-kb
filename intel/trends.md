@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 290 — THE GOVERNANCE TREND HAS A SUPPLY SIDE NOW, AND IT ARRIVED AS CONFIGURATION RATHER THAN CODE
+
+⏱️ `2026-10-18`, twelfth pass. Evidence:
+[`p290-websearch.2026-10-18-p290.tsv`](../evidence/p290-websearch.2026-10-18-p290.tsv) ·
+[`verified-repos.2026-10-18-p290.tsv`](../evidence/verified-repos.2026-10-18-p290.tsv) ·
+[`submodule-grant-boundary.2026-10-18-p290.tsv`](../evidence/submodule-grant-boundary.2026-10-18-p290.tsv).
+
+### 🟢 1. `T-p288a` has a supply side — the human checkpoint is shipping as PROMPT CONFIGURATION
+
+🔵 **The trend `p288` and `p289` recorded was demand-side**: four regions converging on one
+engineering requirement — a recorded human decision point wherever AI output would be the sole
+basis for a decision about a student. 🟢 **What `p290` found is the first supply-side answer,
+and its form is the surprise.** It is not a library, an audit framework or a compliance SDK. It
+is **three MIT prompt configurations that refuse the sole-basis act in their own text**:
+
+| agent | the clause, verbatim from its `SOUL.md` | the regime it clears |
+|---|---|---|
+| `application-reader-agent` | *"Never issue a final admit or deny decision unilaterally; always present findings as input for the human reader"* | 🇪🇺 EU AI Act **high-risk**: admission decisions |
+| `special-education-agent` | *"Never make eligibility determinations — eligibility requires a qualified multidisciplinary team evaluation and legal decision"* | 🇺🇸 IDEA 2004 + the Oklahoma/Maryland **high-stakes student decision** bar |
+| `retention-agent` | *"Treat every risk flag as a hypothesis to be confirmed, not a verdict"*, and *"log every intervention — date, method, response, outcome"* | 🇻🇳 Vietnam's **sole-basis** clause; the audit trail generally |
+
+🔴 **Why this is a trend and not three files.** `p288` found the same pattern *implemented* —
+`agentic-automated-assignment-grading`'s `needs_review` terminal state — in a repository with
+**no grant across 1 531 files**. 🟢 One pass later the pattern appears **under MIT, in three
+sibling agents, in two market segments, written as a refusal rather than a feature flag.** The
+compliance posture has moved from something a studio engineers into something a studio can
+**start from**, and the artefact it starts from is a prompt, not a product.
+
+🔵 **The actionable read.** When the deliverable is an auditable workflow, the **cheap half is
+now free and the expensive half is the evidence store.** Nothing in these configs records
+anything: *"log every intervention"* is an instruction to a model, not a schema, a retention
+policy or an append-only log. 🔴 **That gap is the billable deliverable** — and it is the same
+gap in all four regions at once.
+
+### 🔴 2. The EMEA hole was in this base's instrument, not in the market
+
+🔴 **Four passes of EMEA legs named only regulators** — Commission, UNESCO, OECD — and `p289`
+registered the hole as item 10. 🟢 **One directed vendor leg broke it**, and the market it found
+is not thin:
+
+- **HolonIQ 2026 Europe EdTech 200** — UK the largest hub; France, Germany, Italy and Spain
+  growing; the cohort **weighted toward workforce learning** rather than K-12. Synthesia and
+  **NOLEJ AI** named on the content-generation side.
+- **Rounds, with amounts**: **Knowunity** 🇩🇪 €27M Series B (XAnge), 20M+ students across 15
+  countries · **Preply** $150M Series D (WestCap) at a **$1.2B** valuation, 100k+ tutors ·
+  **Gizmo** 🇬🇧 $22M Series A · **Multiverse** 🇬🇧 £70M growth round (May 2026) ·
+  **BOOKR Kids** 🇭🇺 €6.1M Series A (Aug 2026) · **Sparkli** $5M seed (Jan 2026) ·
+  **Chalkie** $4M seed (Mar 2026).
+- 🔴 **And the direction of the money, which is the part that changes a pitch**: roughly
+  **$1B of global edtech venture funding in H1 2026, down 26% year over year** (HolonIQ).
+
+🔵 **So the trend is a selective market, not a boom**: capital is down a quarter while the large
+rounds concentrate in **workforce and tutoring-marketplace** models — Preply, Multiverse and
+Knowunity are the three biggest numbers on the list and **none of them sells to a school**.
+🟡 The EMEA buyer with budget is an **employer or a learner**, not a ministry — the inverse of
+what this base's own EMEA sections (all regulators) implied for four passes.
+🔴 **Dates attributed, not asserted**: aggregator metadata on the Knowunity round conflicts
+with itself; the round is published here, the date is not.
+
+### 🟢 3. The EMEA code hole closed in the same hour, and the code is a MEASUREMENT library
+
+🟢 [`cedanl/student-signal`](https://github.com/cedanl/student-signal) — **MIT**, Dutch higher
+education, the first EMEA-origin education code row in four passes. 🔵 **Its shape is the
+trend**: it does not predict dropout for you, it **ranks** students and then reports
+**precision and recall at every invitation threshold**. A product that tells its buyer how many
+of the students it flags will be wrong, before anyone is contacted.
+
+🔵 **Set that beside §1 and the pairing is the year's engagement in one line:** `student-signal`
+produces a defensible number, `retention-agent` is forbidden from treating that number as a
+verdict, and the thing neither of them has is the **record** that the human looked.
+
+### 🔴 4. "Curriculum-aligned" is spreading as a MANDATE while the licence layer stays unreadable
+
+🟢 `p289` found England's curriculum ceded for commercial reuse with 38 SHACL shapes to validate
+against. 🔴 **Vietnam this pass is the counter-case, and it is the more common one**: MOET's
+Decision `3439/QĐ-BGDĐT` promulgates a pilot AI content framework on the 2018 General Education
+Program, referencing **UNESCO's AI Competency Framework**, four strands — human-centred
+thinking, AI ethics, AI techniques and applications, AI system design — rolling out **grades
+1–12 from the 2026-2027 school year** with **12 compulsory periods a year**. 🔴 **No repository,
+no open licence, no curriculum published as data.**
+
+🔵 **The trend, stated for a studio:** AI-in-the-curriculum is becoming a **national mandate**
+faster than curricula are becoming **licensed data**. England is one jurisdiction with a
+checkable grant; Vietnam is a mandate with grades, periods and a start date and **nothing to
+validate against**. 🟡 The gap between "we must teach this" and "here is the licensed artefact"
+is where a studio sells curriculum engineering — and the first question in the engagement is
+still *which jurisdiction's curriculum is licensed for what you are about to sell.*
+
+### 🟡 5. Teacher-first and the adoption-governance gap — corroborated, not advanced
+
+🟢 The institutional maturity datum this pass is independent of the ones already carried: one
+analysis rates **institutional maturity at 35/100**, most institutions still in pilot. 🔵 That
+**corroborates** UNESCO IESALC's 87%-use / 26%-formal-strategy split from a second instrument,
+which matters because this base has spent passes learning what a single vendor source costs.
+🔴 **No figure is promoted off this leg**: the 2026 market-size estimates ranged **$6.4B–$10.6B**
+across four reports for overlapping years, which is the spread this file already warns about,
+and a widely-repeated student-use jump (66% → 92%) is single-source and is **not published**.
+
+🟡 **LATAM, recorded as a provenance upgrade rather than a new fact**: the 87%/26% figures now
+trace to a **UNESCO IESALC + UNU-IAS working paper** (200 institutions, 19 countries, surveyed
+**Aug–Oct 2025**) rather than a press summary. 🔴 **Peru** adds policy and no code —
+`Proyecto DocenteTec`, 87 000+ teachers reported trained, and **two bills, neither approved**.
+🔴 **Mexico `SEP` returned an explicit nil**: zero results naming SEP at all. The
+second-largest Spanish-speaking school system in the region has **no code row on these
+shelves**, and that is written down as a gap rather than left as silence.
+
 ## 🟢 Pass 289 — THE TREND IS NO LONGER "AI IN EDUCATION", IT IS **GOVERNANCE**, AND THE GOVERNED OBJECT IS ASSESSMENT
 
 ⏱️ `2026-10-18`, eleventh pass. Evidence:

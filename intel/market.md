@@ -1173,6 +1173,34 @@ data gets the ranking backwards.
 
 ### North America
 
+#### 🟡 Pass 290 (`2026-10-18`) — the first code row on these shelves from a US STATE EDUCATION AGENCY, and three money datums that are all secondary
+
+🟢 **New, and it is provenance rather than a dependency.**
+[`jknowles/EWStools`](https://github.com/jknowles/EWStools) — **GPL-3.0 only**, 35 156 B,
+read first-hand — is the R tooling behind modules of the **Wisconsin Dropout Early Warning
+System**, authored at the **Wisconsin Department of Public Instruction** (`@dpi.wi.gov`).
+🔵 **Why it belongs in a market map and not just on a repo shelf:** it is proof that a US state
+agency built, shipped and open-sourced an early-warning stack. That is the reference a
+procurement conversation with a state or district can be anchored on. 🔴 **Last commit
+`2016-02-03`** — the artefact is a decade old; port the method, not the package.
+
+🟡 **Three 2026 money datums, all secondary and none verified against a primary**: a **$169M**
+government commitment to responsible AI in higher education (Q1 2026); **Carnegie Mellon + the
+Gates Foundation, $55M** into AI courseware; and an **OpenAI country-level education programme
+with 8 national partners** (Q1 2026, partners not named by the source). 🔴 Recorded as
+`ATTRIBUTED` under `p223`, not asserted.
+
+🔴 **The regulatory read is unchanged from `p288` and is the opportunity:** no comprehensive
+federal instrument, a dense state-by-state surface (**134 bills across 31 states** in the 2026
+session), with **Oklahoma** and **Maryland** barring AI from high-stakes student decisions.
+🟢 **What is new is that the supply side now exists**: `iblai/higher-education-agents` ships
+`application-reader-agent` under **MIT** with *"never issue a final admit or deny decision
+unilaterally"* in its own prompt. The oversight clause is no longer the thing a studio
+writes — 🔴 **the evidence store that proves the human looked still is.**
+
+🔴 **The leg did not separate the US from Canada or Mexico**, and this subsection should not be
+read as covering either.
+
 #### 🟢 Pass 288 — the US regulatory surface is now STATE-BY-STATE AND DENSE, which makes compliance a product feature rather than a legal review
 
 🔵 **Scale of the 2026 session: 134 AI-in-education bills across 31 states** (tracker count,
@@ -1646,6 +1674,43 @@ evidenced** — Oklahoma/Maryland's human-oversight rule and NYC's K-8 moratoriu
 hardest configurations, and they are specifiable today.
 
 ### EMEA
+
+#### 🟢 Pass 290 (`2026-10-18`) — THE VENDOR HOLE IS CLOSED, AND THE BUYER IS AN EMPLOYER RATHER THAN A MINISTRY
+
+🔴 **What this shelf did for four passes:** named regulators — Commission, UNESCO, OECD — and
+**not one EMEA vendor**. `p289` registered it as item 10. 🟢 **One directed leg closed it.**
+
+| company | round | what it sells |
+|---|---|---|
+| **Preply** | **$150M Series D** (WestCap), **$1.2B** valuation | Tutor marketplace, 100k+ tutors, 180 countries |
+| **Multiverse** 🇬🇧 | **£70M** growth (May 2026), Schroders Capital + General Catalyst | AI and tech skills via apprenticeships |
+| **Knowunity** 🇩🇪 | **€27M Series B**, XAnge | Student learning app, 20M+ students, 15 countries |
+| **Gizmo** 🇬🇧 | **$22M Series A**, Shine Capital + Ada Ventures | AI study platform |
+| **BOOKR Kids** 🇭🇺 | **€6.1M Series A** (Aug 2026) | Literacy, assessment, teacher support |
+| **Sparkli** | **$5M seed** (Jan 2026) | AI learning engine, ages ~5–12 |
+| **Chalkie** | **$4M seed** (Mar 2026) | AI lesson planning for teachers |
+| **Synthesia · NOLEJ AI** | — | Learning-content generation (HolonIQ cohort) |
+
+🟢 **The structural datum: ~$1B of global edtech venture funding in H1 2026, DOWN 26% year over
+year** (HolonIQ), with the **2026 Europe EdTech 200** cohort weighted toward **workforce
+learning** and the UK the largest hub, France/Germany/Italy/Spain growing.
+
+🔵 **The positioning consequence, and it inverts what this file implied for four passes.** The
+three largest rounds — Preply, Multiverse, Knowunity — **sell to employers and learners, not to
+schools**. Capital is down a quarter while it concentrates in workforce and marketplace models.
+🟡 An EMEA engagement pitched at a ministry is pitched at the segment with the least private
+capital behind it; **corporate L&D and apprenticeship delivery is where the money actually
+is**, and the EU AI Act's high-risk tier applies to those just as much once their output
+influences access to a qualification.
+
+🟢 **And the EMEA CODE hole closed in the same hour.**
+[`cedanl/student-signal`](https://github.com/cedanl/student-signal) — **MIT**, 1 078 B, Dutch
+higher education, Dutch-language docs — is the **first EMEA-origin education code row in four
+passes**. 🔵 Dutch HE is a sector that builds **shared sector tooling**; it is the likeliest
+source of the next one, and a better-aimed leg than another regulator sweep.
+
+🔴 **Dates attributed, not asserted:** aggregator metadata on the Knowunity round conflicts
+with itself. The round is published here; its date is not.
 
 #### 🟡 Pass 288 — the EU AI Act is the binding frame and it reaches NON-EU VENDORS, but this leg again returned REGULATORS AND NO VENDORS
 
@@ -2269,6 +2334,40 @@ EMEA ed-tech vendor**. 🔴 A declared hole, not a silence, and it stays ranked.
 
 ### APAC
 
+#### 🔴 Pass 290 (`2026-10-18`) — Vietnam mandates AI across grades 1–12 and publishes NOTHING a build can validate against
+
+🟢 **The policy, from the directed MOET leg** *(`p289` register item 9)*: Decision
+`3439/QĐ-BGDĐT` promulgates a **Pilot Content Framework** putting AI into the general education
+curriculum, built on the **2018 General Education Program** and referencing **UNESCO's AI
+Competency Framework for students**. Four strands: **human-centred thinking, AI ethics, AI
+techniques and applications, AI system design**. Rollout **grades 1 to 12 from the 2026-2027
+school year**, **12 compulsory periods per academic year** plus a school-discretion extension.
+Teacher training co-organised by **MOET + UNICEF Viet Nam + STEAM for Vietnam** (Dec 2025).
+
+🔴 **And the supply side is empty.** No repository, no open licence, no curriculum published as
+data. 🔴 A third-party innovation profile describes a platform *"EduOne"* as *"open-source by
+design, adaptable to any nation's curriculum"* and **links no repository**: recorded as an
+**unverified claim**, not a row.
+
+🔵 **The opportunity, placed.** Vietnam is simultaneously (a) the APAC jurisdiction that names
+**education** a high-risk sector with a **sole-basis** test, and (b) a jurisdiction rolling a
+compulsory AI curriculum to **12 grade levels at once**. 🟢 **Both halves are the same
+engagement**: curriculum-aligned content with a validation target, plus the human-review
+record the high-risk classification requires. 🔴 The validation target **does not exist as
+licensed data**, so building it — or licensing England's, which `p289` proved is ceded for
+commercial reuse — is the first scoping question, not an implementation detail.
+
+🔴 **The mandated APAC leg itself returned NIL for education** — Boomi/TechRepublic enterprise
+priorities, Singapore's financial-institution consultations, a 49% real-time-infrastructure
+barrier, an **87%-encourage / 47%-govern** agent-governance split. Education-adjacent only:
+**TCS + Pearson** skills alliance, **LearnUpon** Sydney HQ, **Alteryx** Academy relaunch — all
+corporate L&D. 🔵 Written down because this is the fourth pass where the region-named phrasing
+returns enterprise IT and the directed phrasing returns the education answer.
+
+🟡 **Unspent and named, so the next pass does not re-derive them:** **Thailand `O-NET`**,
+**Egypt in Arabic** *(EMEA)*, and a repository-channel leg on **STEAM for Vietnam**, which is
+the one named actor in the MOET programme likely to publish code.
+
 #### 🟢 Pass 288 — TWO BINDING AI LAWS ARE NOW IN FORCE, and Vietnam names EDUCATION a high-risk sector outright
 
 🟢 **South Korea — Framework Act on AI (the "AI Basic Act"), in force since `2026-01-22`.** The
@@ -2713,6 +2812,40 @@ Korea's act pairs its obligations with **state adoption support**, which is unus
 naming in a pitch.
 
 ### LATAM
+
+#### 🟡 Pass 290 (`2026-10-18`) — Peru adds policy and no code, and MEXICO'S `SEP` RETURNED AN EXPLICIT NIL
+
+🟢 **Peru, from the directed MINEDU leg** *(`p289` register item 9)*, all dates **as reported**
+and reconciled against no primary text: a **national AI regulation** published (reported July
+2026) covering public entities, private sector, civil society and academia; a **national AI
+strategy** presented (reported June 2026). MINEDU's own activity: **`Proyecto DocenteTec`** plus
+a plan for AI use in the educational process (UGEL Canchis memo, April 2026), teacher training
+at the 2026 school-year opening, and a 2025 report of **87 000+ teachers trained in AI**.
+🔴 **Two bills, NEITHER APPROVED**: one would put digital literacy and AI training into Basic
+Education with **National Curriculum adaptation from 2028**; **PL 10717/2024** is declarative
+*("de interés nacional")*. 🔵 **The engagement read: Peru is a teacher-training market right
+now and a curriculum market in 2028** — and the 2028 date is in a bill that has not passed, so
+it is a pipeline signal and not a plan.
+
+🔴 **Mexico `SEP`: an EXPLICIT NIL.** The directed leg returned **zero results naming SEP,
+Mexico, or a Mexican education platform** — the result set was unrelated general AI-tooling
+pages. 🔵 **This is written down as a finding because of its size**: Mexico is the
+second-largest Spanish-speaking school system in the region and these shelves hold **no Mexican
+education code row at all**. 🟡 The nil is a verdict on **this phrasing**, not on Mexico;
+re-run it against Spanish-language primary sources (`gob.mx/sep`, Diario Oficial) rather than a
+GitHub-flavoured query, which is the same correction the Vietnam leg needed.
+
+🟢 **A provenance upgrade on figures this file already publishes.** The **87% use / 26% formal
+strategy** split now traces to a **UNESCO IESALC + UNU-IAS working paper** — 200 higher
+education institutions, **19 countries**, surveyed **Aug–Oct 2025**, across teaching and
+learning, research, community engagement, administration and governance — rather than a press
+summary. 🔵 A figure whose instrument is citable survives a client challenge; the same number
+off a press cutting does not.
+
+🔴 **Not published, and named so it is not re-found as new:** a *"99% of LATAM startups use
+AI"* figure and a single named edtech player (**Ednova**, Chile) both arrived single-source and
+vendor-shaped. 🟡 Baker McKenzie on regulatory fragmentation is corroboration of what this
+section already carries, not a new fact.
 
 #### 🟢 Pass 288 — the strongest PRIMARY source of the four regions, and it says adoption is INDIVIDUAL while governance is absent
 
@@ -3335,6 +3468,32 @@ region where the economics state it outright.
 > reported `P383-MISSING-REGION: Global` on every run and no pass discharged it. It is not a
 > formality: an opportunity that is real in all four regions and *placeable in none of them*
 > was previously written into whichever region the pass happened to be looking at.
+
+#### 🟢 Pass 290 (`2026-10-18`) — the cross-region opportunity: the human checkpoint is free and the EVIDENCE STORE is not
+
+🟢 **The genuinely global finding this pass**, and it is a change in what a studio has to
+build. `p288` and `p289` established that all four regions regulate the same narrow act — **AI
+as the sole basis for a decision about a student** — and that the portable requirement is a
+recorded, evidenceable human decision point plus provenance marking.
+
+🟢 **`p290` found the first half shipping under MIT**, in three sibling agents across two market
+segments: `application-reader-agent` *("never issue a final admit or deny decision
+unilaterally")*, `special-education-agent` *("never make eligibility determinations")* and
+`retention-agent` *("treat every risk flag as a hypothesis to be confirmed, not a verdict")*.
+
+🔴 **The second half is not shipping anywhere.** *"Log every intervention — date, method,
+response, outcome"* is an instruction to a model. It is **not** a schema, an append-only store,
+a retention policy, or an artefact an auditor can be shown. 🔵 **So the cross-region
+opportunity has inverted since `p288` wrote it**: the compliance *posture* is now a free,
+permissive starting point, and the **billable deliverable is the record** — the thing that
+proves a human decided, survives the student's challenge, and satisfies the EU AI Act's
+high-risk tier, Vietnam's sole-basis clause, Korea's marking duty and the Oklahoma/Maryland
+oversight rules **from one implementation**.
+
+🟡 **One global supply datum, kept because it prices the above:** roughly **$1B of global edtech
+venture funding in H1 2026, down 26% year over year** (HolonIQ). 🔵 Capital is selective, which
+favours a deliverable that is **demonstrably required by regulation** over one that is
+differentiated by model quality.
 
 #### Pass 289 (`2026-10-18`) — the cross-region opportunity: curriculum provenance
 

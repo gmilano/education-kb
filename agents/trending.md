@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 290) — the mandated nil is SIXTEEN deep, and the week's agent news is 95 MIT agents that live in SEVEN repositories behind one licence file
+
+⏱️ **Twelfth pass of `2026-10-18`.** Append-only — everything below this section is prior
+history and is not rewritten. Evidence:
+[`verified-repos.2026-10-18-p290.tsv`](../evidence/verified-repos.2026-10-18-p290.tsv) ·
+[`submodule-grant-boundary.2026-10-18-p290.tsv`](../evidence/submodule-grant-boundary.2026-10-18-p290.tsv) ·
+[`p290-websearch.2026-10-18-p290.tsv`](../evidence/p290-websearch.2026-10-18-p290.tsv).
+
+🔴 **Mandated agent leg: SIXTEENTH consecutive nil.** Same five-ish rows, same reason:
+engineer curricula and link catalogues, not learner-facing agents. 🟢 **Every new row this
+pass came from a directed leg** — the sixth consecutive pass where that is true, which has
+stopped being an observation and is now this base's measured discovery posture.
+
+### 🟢 New this week — two directed legs, five verified addresses, three refused
+
+| agent | grant (first-hand) | what it does |
+|---|---|---|
+| 🟢 [`iblai/iblai-claw-agents`](https://github.com/iblai/iblai-claw-agents) | **MIT**, 1 063 B, `f1269b7b2313`, HEAD `acbd32b4a938` | OpenClaw/NemoClaw configurations, **95 agents + 76 tool skills** over 7 segments. 🔴 **13-file tree; 7 entries are gitlinks** |
+| 🟢 [`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) | **MIT**, own payload, 1 063 B, HEAD `1a2d898bbd04` | Campus Assistant **+ 16 specialists**, 90 files. Admissions (`application-reader`, `enrollment`, `yield`), `retention`, `financial-aid`, `academic-advisor`. Skills: Canvas, Banner, Slate, Workday, EAB Navigate, Civitas |
+| 🟢 [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) | **MIT**, own payload, 1 063 B, HEAD `54ee9d91eecd` | School Assistant **+ 12 specialists**, 79 files. **`special-education-agent`**, `assessment`, `curriculum-alignment`, `writing-feedback`, `student-safety`. Skills: PowerSchool, Google Classroom, NWEA MAP, i-Ready, Edulastic |
+| 🟢 [`cedanl/student-signal`](https://github.com/cedanl/student-signal) | **MIT**, 1 078 B, `2c4289f4e480`, HEAD `4463e8d17cfb` | 🇳🇱 Dutch HE dropout prediction as a **library**: `prepare()`/`rank()`/`evaluate()`, sklearn-compatible, invitation rule (Eegdeman, 2022). **The first EMEA-origin education code row in four passes** |
+| 🟡 [`jknowles/EWStools`](https://github.com/jknowles/EWStools) | **GPL-3.0 only**, 35 156 B, `65a7aee2cb0d` | 🇺🇸 The R engine behind the **Wisconsin DEWS** (`@dpi.wi.gov` author). 🔴 Last commit **2016-02-03** — provenance, not a dependency |
+| 🔴 `sp103107/NORA` | **address does not resolve** | Returned as an admissions agent with a scoring rubric. No `200` on 13 rungs × 2 refs, not even a README; `ls-remote` prompts for credentials. **DISCARD** |
+| 🔴 `anwarulh007/eduprotect` | **address does not resolve** — and an aggregator publishes **`MIT`** for it | Listed by `awesome.ecosyste.ms` with a licence field *and* a star count. 🔵 **A machine-readable grant on a phantom address** — worse than a dangling README claim |
+| 🔴 [`ekoffi2/Machine-learning`](https://github.com/ekoffi2/Machine-learning) | **none in a 2-file tree** | `README.md` + `Studnt dropout predictions.Rmd` (sic). Enumeration refutes the "project" shape the search channel implied |
+
+🟡 **One row was withheld to stop an identity duplicate:** `iblai/claws` is the same repository
+as `iblai/iblai-claw-agents` — identical HEAD, byte-identical `LICENSE` and byte-identical
+`README.md`. `gate-identity`'s shape, caught **before** publication for once.
+
+### 🔴 The licence shape of the week: the gitlink
+
+`ACTION p290` adds the axis **`GRANTED-AT-PIN` vs `UNVERIFIED-AT-PIN`**. A grant can be
+present, root-level, authoritative and verbatim MIT while the bytes a studio vendors sit in
+**another repository entirely**. 🟢 The axis closes well here — both education submodules serve
+their own byte-identical MIT at **exactly** the commit the superproject pins, so a
+`--recurse-submodules` clone receives MIT in all three. 🔴 **Five of seven segments are
+unprobed** and that is written down as a gap, because the superproject's one MIT badge is
+exactly what a reader would substitute for the measurement.
+
+🔵 **Why it is a different axis and not `p289` again.** Every instrument here asks *where* the
+grant is or *what it says*. A gitlink asks **what it covers** — and unlike `p289`'s catalogue
+badge, that question is answerable in bulk, because a submodule pin is an exact SHA.
+
+### 🟢 Two of this base's own published verdicts moved this pass
+
+🟢 **`T-p288b`'s *"zero permissive"* for special education is CORRECTED** — `k-12-agents` ships
+an MIT `special-education-agent` grounded in IDEA 2004, the 13 disability categories, §504,
+FAPE/LRE, PWN, triennial re-evaluation, RTI/MTSS, ESY, age-16 transition and FERPA. 🟡 Bounded:
+it is **configuration**, not an application, so *"a studio writes the app"* still stands. What
+is refuted is *"no permissive starting point exists"*.
+
+🟢 **`p287`'s widened `family_of` was confirmed PROSPECTIVELY.** `cedanl/student-signal`'s
+`LICENSE` **opens with an empty line** and puts *"The MIT License (MIT)"* on line 2 — the exact
+class `p287` repaired after mis-grading `TeachGPT` for 30 passes. Run against this
+never-before-seen payload, the widened classifier returned **`MIT`** on first contact. 🔵 A
+repair that fires correctly on a payload it was not built against is worth more than the
+repair. 🟡 **The second such confirmation this base has recorded**, after `ACTION VM`; no
+running tally is asserted here, because this pass did not re-derive one.
+
+### 🔴 And the register's unspent directed legs, three of five run
+
+**Vietnam `MOET`** 🟢 policy hit, 🔴 **no code**: Decision `3439/QĐ-BGDĐT` promulgates a pilot
+AI content framework on the 2018 General Education Program, referencing **UNESCO's AI
+Competency Framework**, four strands, **grades 1–12 from the 2026-2027 school year**, 12
+compulsory periods a year. A third-party profile calls a platform *"EduOne"* *"open-source by
+design"* and **links no repository** — recorded as an unverified claim, not a row.
+**Peru `MINEDU`** 🟢 policy hit, 🔴 no code: `Proyecto DocenteTec`, 87 000+ teachers reported
+trained, **two bills neither of which is approved**. **Mexico `SEP`** 🔴 **explicit nil** — zero
+results naming SEP at all, written down because the second-largest Spanish-speaking school
+system in the region still has **no code row on these shelves**. 🟡 Unspent: **Egypt in
+Arabic**, **Thailand `O-NET`**.
+
 ## 2026-10-18 (pass 289) — the mandated nil is FIFTEEN deep, and the week's real agent news is that a NATIONAL CURRICULUM ships an AI-assistant plugin under MIT
 
 ⏱️ **Eleventh pass of `2026-10-18`.** Append-only — everything below this section is prior

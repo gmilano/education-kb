@@ -4,6 +4,196 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 290 — three recipes whose compliance layer is a DEPENDENCY instead of a deliverable, and one evidence store that is neither
+
+⏱️ **Twelfth pass of `2026-10-18`.** Evidence:
+[`verified-repos.2026-10-18-p290.tsv`](../evidence/verified-repos.2026-10-18-p290.tsv) ·
+[`submodule-grant-boundary.2026-10-18-p290.tsv`](../evidence/submodule-grant-boundary.2026-10-18-p290.tsv).
+
+🔵 **The licence boundary shared by all three recipes below, because it is unusual and it is
+NOT where a reader will look for it.** The MIT grant that matters is **not** the one on
+[`iblai/iblai-claw-agents`](https://github.com/iblai/iblai-claw-agents). That repository is a
+13-file shell whose segment directories are **`160000 commit` gitlinks**. The payload that
+covers the configurations you vendor is each **submodule's own** `LICENSE`:
+
+| what you clone | grant read first-hand | HEAD read = gitlink pinned? |
+|---|---|---|
+| [`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) | 🟢 **MIT**, 1 063 B, sha256₁₂ `f1269b7b2313` | 🟢 **yes** — `1a2d898bbd04` |
+| [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) | 🟢 **MIT**, 1 063 B, sha256₁₂ `f1269b7b2313` | 🟢 **yes** — `54ee9d91eecd` |
+| [`iblai/iblai-claw-setup`](https://github.com/iblai/iblai-claw-setup) (the host) | 🟢 **MIT**, 1 063 B | tree **not enumerated** — stated, not assumed |
+
+🔴 **Quote the submodule, never the superproject.** If a later HEAD moves past the pinned
+commit, the pin is an **unread commit** and the correct posture is `UNVERIFIED-AT-PIN`: re-read
+the payload at the pin before shipping. 🔴 **Five of seven segments are unprobed** — enterprise,
+government, legal, financial-services, medical-healthcare. A non-education engagement **must
+probe its own segment**; the superproject's single MIT badge is not an answer for it.
+
+🔴 **And the honest shape of what these configs are**: `SOUL.md` / `IDENTITY.md` / `MEMORY.md` /
+`TOOLS.md` / `auth-profiles.json` per agent, plus `openclaw.json`, `.config-hash`, `skills/` and
+`.env.example`. **No application code, no build, no tests** — the README says so itself. They
+are a **prompt-and-wiring layer**, which is why every recipe below puts the billable work
+somewhere else.
+
+## P45 — The admissions reader that is STRUCTURALLY INCAPABLE of admitting anyone *(new in pass 290)*
+
+**Target:** any institution whose admissions output reaches an EU-located applicant (EU AI Act
+**Annex III**: admission decisions and evaluation of learners are **high-risk**), plus US
+institutions under the **Oklahoma / Maryland** bar on AI in high-stakes student decisions, plus
+Vietnamese institutions under the **sole-basis** test.
+
+🔵 **Why this is a pattern and not a product.** Every commercial application-scoring tool sells
+*the score*. The regulated act is **not scoring** — it is **deciding**. A recipe that cannot
+decide is cheaper to build, cheaper to defend, and is the only shape that is unambiguously
+permitted in all three regimes today.
+
+### The wiring
+
+| layer | what to use | licence | why this one |
+|---|---|---|---|
+| reader agent | [`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) → `agents/application-reader-agent` | 🟢 **MIT** at pinned `1a2d898bbd04` | 🟢 **Its `SOUL.md` already refuses the regulated act**: *"Never issue a final admit or deny decision unilaterally; always present findings as input for the human reader"*, and *"flag anomalies — grade inflation, unexplained gaps, inconsistent self-reported data — as observations, not conclusions"* |
+| funnel siblings | same repo → `enrollment-agent`, `yield-agent`, `prospective-student-agent` | 🟢 MIT | the same rubric and the same refusal across the whole funnel, so one evidence schema covers all of it |
+| host runtime | [`iblai/iblai-claw-setup`](https://github.com/iblai/iblai-claw-setup) (OpenClaw) or **NVIDIA NemoClaw** | 🟢 MIT / per vendor | the configs are drop-in: copy `openclaw.json`, `.config-hash`, `agents/`, `skills/`, `workspace/` into `/sandbox/.openclaw/`, recompute the hash, reload the gateway |
+| systems of record | `skills/slate` (admissions), `skills/banner` (SIS), `skills/salesforce-education-cloud`, `skills/workday` | 🟢 MIT **adapters** | 🔴 the adapter is MIT; **Slate, Banner, Salesforce and Workday are proprietary** — contract, credentials and API terms per system. This is the schedule risk, not the licence |
+| 🔴 **the evidence store** | **you build it** | **the client's** | 🔴 **Nothing in the stack records anything.** This is the deliverable — see below |
+
+### The flow
+
+1. An application lands in **Slate**; the adapter pulls it with the institution's **published
+   rubric** as the only scoring authority.
+2. `application-reader-agent` returns **observations**: academic indicators, contextual factors,
+   anomalies flagged as observations, and an explicit statement of *what the score does and does
+   not capture*.
+3. 🔴 **Nothing is written to the applicant record.** Output goes to a **human reader's queue**.
+4. The human reader decides. 🟢 **The decision, the reader's identity, the timestamp, the
+   observations shown to them, and the rubric version in force are written to an append-only
+   store.**
+5. Distress flag: the config instructs *"flag any application that contains information
+   suggesting the applicant is in distress for immediate human follow-up"* — route it to a named
+   human, not to a queue.
+
+### What the deliverable is
+
+🟢 **Steps 3–4: the review queue and the append-only decision record.** The agent layer is a
+free MIT dependency now; the thing a regulator, an auditor or a rejected applicant's lawyer
+asks for is **the record that a human decided and what they were shown**. 🔵 Build it once and
+it answers the EU high-risk oversight requirement, the Oklahoma/Maryland bar and Vietnam's
+sole-basis clause from one implementation.
+
+### What to check before quoting
+
+- 🔴 **The prompt is not a control.** *"Never issue a final decision"* is an instruction to a
+  model. The **enforcement** is that the agent has no write path to the applicant record —
+  verify that in `auth-profiles.json` and in the host sandbox policy, not in the prose.
+- 🟡 **Rubric versioning is in scope and is not in the repo.** "Apply the rubric consistently"
+  is only auditable if the rubric in force at decision time is recorded with the decision.
+- 🟢 **Licence surface is clean**: MIT at the pinned commit, verified per repository.
+
+## P46 — The retention loop with a DEFENSIBLE number, where the model is permissive and the threshold is the client's *(new in pass 290)*
+
+**Target:** institutions with an SIS and a student-success team; strongest fit in 🇳🇱/EMEA higher
+education (where the library originates) and 🇺🇸 state/district systems (where the reference
+design originates).
+
+🔵 **Why the measurement layer comes first.** `p288`'s regulatory finding was that a risk score
+which drives an intervention without human review is the regulated act. The usual failure is
+upstream of that: nobody can say **how wrong the score is**. This recipe starts from the one
+component that answers that question in its own API.
+
+### The wiring
+
+| layer | what to use | licence | why this one |
+|---|---|---|---|
+| risk measurement | [`cedanl/student-signal`](https://github.com/cedanl/student-signal) — `prepare()` → `rank()` → `evaluate()` | 🟢 **MIT**, 1 078 B, HEAD `4463e8d17cfb` | 🟢 It **ranks** rather than labels, and `evaluate()` reports **precision/recall at multiple invitation thresholds** with a traffic-light status. **Invitation-rule methodology (Eegdeman, 2022)** |
+| the model | **the client's choice** — any sklearn-compatible estimator | 🟢 **the client's** | 🔵 `student-signal` deliberately does **not** pick one. The client's model and thresholds stay the client's IP beside an MIT library |
+| reference design | [`jknowles/EWStools`](https://github.com/jknowles/EWStools) | 🟡 **GPL-3.0 only** | 🟢 ROC testing, model search and post-prediction adjustment as a **US state education agency** shipped them (Wisconsin DEWS). 🔴 **Last commit `2016-02-03` — port the method, never the package.** Linking it in an R deliverable makes that deliverable a derivative work |
+| intervention agent | [`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) → `agents/retention-agent` | 🟢 **MIT** at pinned `1a2d898bbd04` | 🟢 Its `SOUL.md` carries the posture the regime requires: *"Treat every risk flag as a hypothesis to be confirmed, not a verdict"*, *"use the risk score to triage, not to rank human worth"*, and *"know the difference between academic struggle and a mental health or safety concern"* |
+| data in | `skills/banner` or `skills/powerschool` (SIS), `skills/canvas` (engagement), `skills/eab-navigate` / `skills/civitas-learning` | 🟢 MIT adapters over 🔴 proprietary systems | one adapter set for both the measurement feed and the outreach surface |
+| 🔴 **the intervention log** | **you build it** | **the client's** | 🔴 *"Log every intervention — date, method, response, outcome"* is a sentence in a prompt. The **store** is the deliverable |
+
+### The flow
+
+1. Nightly SIS + LMS extract → `prepare(train_df, pred_df, target_col=..., id_col=...)`.
+2. The client's estimator trains; `rank()` produces a **ranked list**, not a flag.
+3. 🟢 `evaluate()` publishes **precision and recall at the invitation threshold the institution
+   actually intends to use**, before anyone is contacted. **This is the number that makes the
+   programme defensible** — it states how many invited students will be false positives.
+4. The success team sets the threshold. 🔴 **Not the model, not the studio, not the agent.**
+5. `retention-agent` drafts **non-stigmatising** outreach and coordinates across advisor /
+   instructor / counsellor / financial aid — and treats each flag as a hypothesis requiring a
+   confirming conversation.
+6. Every intervention — date, method, response, outcome — is appended to the log. Safety and
+   mental-health concerns escalate to counselling **immediately, outside the queue**.
+
+### What the deliverable is
+
+🟢 **Step 3 and step 6: the threshold report and the intervention log.** 🔵 The threshold report
+is also the sales artefact — it is the only thing in this market that tells a provost *"at this
+threshold you will contact 400 students and roughly 120 of them were never at risk"*, in
+advance. 🔴 The log is what makes every later intervention auditable.
+
+### What to check before quoting
+
+- 🔴 **`student-signal` requires Python 3.13+** and `uv`; parts of its docs are **in Dutch**
+  (`docs/aan-de-slag.md`). Budget a translation/readthrough, not a rewrite.
+- 🔴 **Do not take `EWStools` as a dependency.** GPL-3.0 **only** (no "or later" bound — the
+  *"any later version"* strings in its payload are How-to-Apply boilerplate), and dormant for a
+  decade.
+- 🟡 **The demo data is synthetic.** `data/01-raw/demo/synth_data_*.csv` proves the pipeline
+  runs; it proves nothing about the client's base rates.
+
+## P47 — The special-education documentation assistant, where the STATUTORY LAYER is now a free dependency *(new in pass 290)*
+
+**Target:** 🇺🇸 US districts and charter networks under **IDEA 2004** and **Section 504**.
+🔵 **This recipe did not exist two passes ago, and this base said so in print.**
+
+🔴 **What `T-p288b` published at `p288`:** of the entire open source answer to IEP/504
+administration — *"One copyleft, two unusable. Zero permissive. A studio taking an IEP
+engagement **writes it**."* 🟢 **`p290` corrects the "zero permissive" half.**
+🟡 **The "writes the application" half still stands**, and that is exactly why this is a
+pattern: the dependency covers the reasoning, the deliverable is the workflow.
+
+### The wiring
+
+| layer | what to use | licence | why this one |
+|---|---|---|---|
+| statutory reasoning | [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) → `agents/special-education-agent` | 🟢 **MIT** at pinned `54ee9d91eecd` | 🟢 Its `MEMORY.md` is a **seeded statutory corpus**: IDEA 2004, **the 13 IDEA disability categories**, §504 as civil-rights law *(not special-education law)*, **FAPE/LRE**, **prior written notice**, annual review + **triennial re-evaluation**, **RTI/MTSS**, **ESY** recoupment, **age-16 transition planning**, and FERPA treatment of disability records |
+| the refusal | same config, `SOUL.md` | 🟢 MIT | 🟢 *"Never make eligibility determinations — eligibility requires a qualified multidisciplinary team evaluation and legal decision"*, *"IEP decisions are made by the full team, including parents and guardians, not by any single professional or AI tool"*, and *"do not generate legal advice"* |
+| drafting scope | same config | 🟢 MIT | **SMART IEP goals** (measurable, observable, standards-aligned), evidence-based accommodations by disability category, meeting agendas, **present-levels** summaries, goal-progress narratives, and a flag when a related-services evaluation (OT/PT/speech/counselling) may be needed |
+| SIS + assessment | `skills/powerschool`, `skills/nwea-map`, `skills/i-ready` | 🟢 MIT adapters over 🔴 proprietary systems | present-levels and progress narratives need the assessment record, not a chat history |
+| family comms | same repo → `agents/family-communication-agent` | 🟢 MIT | 🟡 The `p288` row this replaces (`hdronamraju/sped-agent`, **all rights reserved**) was valued for **bilingual EN/es parent notices**; check that requirement against this config rather than assuming it |
+| 🔴 **deadline calendar + record** | **you build it** | **the client's** | 🔴 **The hard part, and it is absent** — see below |
+
+### What the deliverable is
+
+🔴 **The deadline engine and the documentation record.** `p288` measured this category as
+*"statutory, calendar-bound and evidence-producing"*, and **the calendar is the half no MIT
+component supplies.** Annual review dates, triennial re-evaluation windows, evaluation
+timelines, PWN-before-change gates, ESY determinations and age-16 transition triggers are
+**day-counting rules per state**. 🟢 The MIT config now knows *what the rules are*; 🔴 nothing
+in it knows *what day it is for this student*, and nothing records that the team met, that the
+parent was noticed, or that the notice was in the parent's language.
+
+🔵 **So the engagement is: free statutory reasoning + a built deadline-and-evidence
+system** — which is a far better quote than `p288`'s *"write all of it"*, and a far more
+honest one than *"there is an open source IEP agent."*
+
+### What to check before quoting
+
+- 🔴 **FERPA data class.** Disability records are among the most sensitive FERPA categories, and
+  the config says so itself. The host sandbox policy, the `.env` credential surface and the
+  model's retention terms are **in scope before any pilot** — and a hosted model endpoint is a
+  disclosure question, not an infrastructure question.
+- 🔴 **State rules are not in the corpus.** `MEMORY.md` is federal. The `p288` rows that carried
+  **state** rules were Colorado and California, and both were unusable
+  (`AaronGrace978/EduHelp` is **AGPL-3.0**; `hdronamraju/sped-agent` is **all rights
+  reserved**). State day-counting is **net new** in every engagement.
+- 🟡 **It is 5 files.** Read `SOUL.md`, `IDENTITY.md`, `MEMORY.md`, `TOOLS.md` and
+  `auth-profiles.json` end to end before quoting — it is a short read and it is the entire
+  dependency.
+- 🟢 **Person-first language is the default** in the config, with an explicit note to follow a
+  student's or family's stated preference for identity-first language. Keep that behaviour;
+  do not "normalise" it in a rewrite.
+
 # Compose patterns — Education
 
 > Concrete recipes: named repos, named licences, named wiring. Every component below was

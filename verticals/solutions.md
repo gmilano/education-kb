@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 290 — the vertical that matters this pass is not a platform, it is the SKILL ADAPTER LAYER to the platforms a school already runs
+
+⏱️ **Twelfth pass of `2026-10-18`.** Evidence:
+[`verified-repos.2026-10-18-p290.tsv`](../evidence/verified-repos.2026-10-18-p290.tsv) ·
+[`submodule-grant-boundary.2026-10-18-p290.tsv`](../evidence/submodule-grant-boundary.2026-10-18-p290.tsv).
+
+🔴 **Mandated verticals leg: no new permissive education ERP/CRM, ELEVENTH consecutive pass.**
+The entire result set was `openeducat.org`'s own glossary in seven languages. 🟢 One datum kept
+from the vendor's own page: **OpenEduCat is LGPLv3** — not MIT, not Apache. The vendor itself
+rules out the licence class the leg asks for. OpenEduCat and Odoo are both already carried
+below, and nothing on this shelf changes on their account.
+
+### 🔵 What DID move: an MIT inventory of the systems of record, named one by one
+
+🔵 **Why this belongs on the verticals shelf rather than the agent shelf.** This shelf exists to
+answer *"what functioning system do we start from?"* For 290 passes the answer has been a
+**platform** — Moodle, Open edX, OpenEduCat, Gibbon. [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents)
+and [`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) answer a
+different and more common engagement shape: **the client is not replacing their platform.**
+They ship `skills/<tool>/SKILL.md` adapters aimed at the commercial systems a school or
+university already runs, each declaring the env vars it needs.
+
+| segment | systems of record with an MIT skill adapter | grant |
+|---|---|---|
+| **K-12** | **PowerSchool** (SIS) · **Google Classroom** · **Google Workspace for Education** · **NWEA MAP** · **i-Ready** · **Edulastic** · **Khan Academy** · **ClassDojo** · **ParentSquare** · **Frontline** · **EBSCO** · Canvas | 🟢 **MIT**, read first-hand at the pinned commit `54ee9d91eecd` |
+| **Higher education** | **Banner** (SIS) · **Canvas** (LMS) · **Slate** (admissions) · **Workday** · **EAB Navigate** · **Civitas Learning** · **Handshake** · **Salesforce Education Cloud** · **ServiceNow** · **Blackbaud Raiser's Edge** | 🟢 **MIT**, read first-hand at the pinned commit `1a2d898bbd04` |
+
+🔴 **Read what this is before costing an engagement on it.** Each adapter is a `SKILL.md`
+declaring a name, a description and a single-line `metadata` naming its env vars — **an
+interface declaration, not a client**. There is no application code, no build and no tests in
+either repository; the README says so in its own words. 🟢 **The value is the enumeration**: it
+is a worked, MIT-licensed answer to *"which systems does an education agent have to speak to"*,
+for both segments, and it names **Slate**, **Banner**, **EAB Navigate**, **Civitas Learning**,
+**NWEA MAP** and **i-Ready** — commercial systems of record this shelf had never named.
+🔴 **Every one of them is proprietary**: the adapter is MIT, the system it reaches is not, and
+each needs its own contract, credentials and API terms. That is a per-engagement procurement
+question, not a licence question, and it is the real schedule risk.
+
+🟡 **The platform question it does NOT answer.** None of these adapters replaces Moodle or
+Open edX, and none is a system of record itself. A client with **no** SIS still needs the
+platform rows below.
+
+### 🟢 And the measurement layer under them, new this pass
+
+| component | grant | role in a vertical build |
+|---|---|---|
+| 🟢 [`cedanl/student-signal`](https://github.com/cedanl/student-signal) | **MIT**, 1 078 B | 🇳🇱 Turns SIS extracts into a **ranked risk list** with precision/recall reported at each invitation threshold. The honest half of a retention product: it quantifies how many of the students you invite will be false positives, **before** anyone is contacted |
+| 🟡 [`jknowles/EWStools`](https://github.com/jknowles/EWStools) | **GPL-3.0 only**, 35 156 B | 🇺🇸 The **reference design** a state agency actually shipped (Wisconsin DEWS). 🔴 Dormant since `2016-02-03` — port the method, never the package |
+
 # Vertical solutions — Education
 
 > Real, running platforms a studio engagement can start from and put an agentic layer on

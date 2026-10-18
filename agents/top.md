@@ -4,6 +4,121 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 290 — THE GRANT WAS ON THE SUPERPROJECT AND THE AGENTS WERE IN SEVEN OTHER REPOSITORIES, AND READING EACH ONE OVERTURNED THIS BASE'S OWN "ZERO PERMISSIVE" VERDICT
+
+⏱️ **Twelfth pass of `2026-10-18`.** Evidence:
+[`verified-repos.2026-10-18-p290.tsv`](../evidence/verified-repos.2026-10-18-p290.tsv) ·
+[`submodule-grant-boundary.2026-10-18-p290.tsv`](../evidence/submodule-grant-boundary.2026-10-18-p290.tsv) ·
+[`p290-websearch.2026-10-18-p290.tsv`](../evidence/p290-websearch.2026-10-18-p290.tsv).
+
+🔴 **Mandated agent leg: SIXTEENTH consecutive nil.** Same population as every pass since
+`p275` — `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch`, `avinash201199/free-ai-agents-resources`, plus the
+general-purpose set. Engineer curricula and link catalogues, not learner-facing education
+agents. The nil is recorded, not hidden: an undeclared nil looks exactly like coverage.
+🟢 **Every row below came from a DIRECTED leg**, the sixth pass running.
+
+### 🟢 The new rows — one MIT configuration set across three repositories, plus two early-warning rows
+
+| agent | address | grant (read from payload) | why it matters |
+|---|---|---|---|
+| 🟢 **Claw Agents (superproject)** | [`iblai/iblai-claw-agents`](https://github.com/iblai/iblai-claw-agents) | 🟢 **MIT** — root `LICENSE`, **1 063 B**, HEAD `acbd32b4a938`, sha256₁₂ `f1269b7b2313` | Drop-in **OpenClaw / NemoClaw** agent configurations, **95 agents and 76 tool skills** across 7 segments. 🔴 **Its own tree is 13 files and 7 of them are `160000 commit` gitlinks** — see the boundary finding below |
+| 🟢 **Higher-education agents** | [`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) | 🟢 **MIT** — own root `LICENSE`, **1 063 B**, HEAD `1a2d898bbd04`, sha256₁₂ `f1269b7b2313` | **Campus Assistant + 16 specialists**, 90 files. Includes `application-reader-agent`, `enrollment-agent`, `yield-agent`, `retention-agent`, `financial-aid-agent`, `academic-advisor-agent`, `tutoring-agent`. Tool skills for **Canvas, Banner, Slate, Workday, EAB Navigate, Civitas Learning, Handshake, Salesforce Education Cloud, ServiceNow, Blackbaud Raiser's Edge** |
+| 🟢 **K-12 agents** | [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) | 🟢 **MIT** — own root `LICENSE`, **1 063 B**, HEAD `54ee9d91eecd`, sha256₁₂ `f1269b7b2313` | **School Assistant + 12 specialists**, 79 files. Includes `special-education-agent`, `assessment-agent`, `curriculum-alignment-agent`, `writing-feedback-agent`, `lesson-planning-agent`, `student-safety-agent`, `family-communication-agent`. Tool skills for **PowerSchool, Google Classroom, Google Workspace for Education, NWEA MAP, i-Ready, Edulastic, Khan Academy, ClassDojo, ParentSquare, Frontline, EBSCO** |
+| 🟢 **student-signal** | [`cedanl/student-signal`](https://github.com/cedanl/student-signal) | 🟢 **MIT** — root `LICENSE`, **1 078 B**, HEAD `4463e8d17cfb`, sha256₁₂ `2c4289f4e480` | 🇳🇱 **EMEA-origin code**, Dutch higher education. Dropout prediction as a *library*, not an app: `prepare()` / `rank()` / `evaluate()`, any sklearn-compatible estimator, **invitation-rule methodology (Eegdeman, 2022)**, precision/recall at multiple invitation thresholds. 36 files, CI + docs + publish workflows, 4 test modules |
+| 🟡 **EWStools** | [`jknowles/EWStools`](https://github.com/jknowles/EWStools) | 🟡 **GPL-3.0 only** — root `LICENSE`, **35 156 B**, HEAD `025a5dd5f1a3`, sha256₁₂ `65a7aee2cb0d`; `DESCRIPTION` declares `License: GPL-3` | 🇺🇸 The R tooling **behind the Wisconsin Dropout Early Warning System** (author email `Jared.Knowles@dpi.wi.gov`) — the first code row on these shelves whose provenance is a **US state education agency**. 🔴 **Dormant: last commit `2016-02-03`.** Read it as a requirements document, not as a dependency |
+
+🔴 **Three addresses the same legs returned, and NONE of them is a row:**
+`sp103107/NORA` and `anwarulh007/eduprotect` **do not resolve on either available channel**
+(13 licence rungs × 2 refs return no `200`, not even a README; `git ls-remote` answers with a
+credential prompt rather than a SHA). `ekoffi2/Machine-learning` resolves and serves **no
+grant** across a **2-file tree** — `README.md` and `Studnt dropout predictions.Rmd`.
+🔵 **`anwarulh007/eduprotect` is the worse shape of the two phantoms:** `awesome.ecosyste.ms`
+lists it **with an MIT licence field and a star count**. A machine-readable grant assertion for
+an address that does not resolve outranks a dangling README claim, because an aggregator is
+exactly what a dependency scanner would believe.
+
+### 🔵 The boundary finding: `ACTION p290` — a grant can be PRESENT, ROOT-LEVEL, AUTHORITATIVE AND VERBATIM, and still not cover the bytes you vendor
+
+Every licence instrument on these shelves asks one of two questions. **Where is the grant?**
+(`p215` path, `p969` root-only, `p742` body-vs-reference, `p259` location class.) **What does
+the grant say?** (`p287` family, `p289` authority-vs-restatement.) 🔴 **A `160000 commit`
+gitlink asks neither.** The payload is present, at the root, authoritative and byte-verbatim
+MIT — and the 95 agent configurations a studio would actually copy into `/sandbox/.openclaw/`
+**are not in that repository at all.**
+
+🟢 **The rule this pass writes down, and the condition that makes it sound:** a submodule's
+grant is verified when its **own payload is read first-hand** *and* the **HEAD it was read at
+equals the gitlink SHA the superproject pins**. The second half is what keeps this inside
+`ACTION VM` *(no row inherits a grant from a sibling)* — the commit whose grant was read is the
+commit a recursive clone lands on. Where a submodule has moved past its pin, the pin is an
+**unread commit** and the verdict is `UNVERIFIED-AT-PIN`, never `GRANTED`.
+
+🟢 **Measured, 2 of 2 education segments `GRANTED-AT-PIN`:** `higher-education` pins
+`1a2d898bbd04ffd6…` and HEAD is `1a2d898bbd04`; `k-12` pins `54ee9d91eecd964f…` and HEAD is
+`54ee9d91eecd`. Both serve a payload **byte-identical** to the superproject's.
+🔴 **Five of seven segments are UNPROBED** — enterprise, government, legal, financial-services,
+medical-healthcare — and that is a declared gap, not a pass. This base publishes education, so
+they are out of scope here; a Globant engagement in any of those verticals **must probe its own
+segment**, because the single MIT badge on the superproject is precisely what would be read
+instead.
+
+🔵 **Contrast with `p289`, one pass back.** `p289` found a **catalogue** licence mistaken for a
+project licence (`500-AI-Agents-Projects`: an MIT badge over links it does not own). A gitlink
+is the same question with a **better answer available** — a catalogue's targets cannot be
+checked in bulk, a submodule's can, because the superproject pins an exact commit.
+
+### 🔴 `T-p288b` CORRECTED — "zero permissive" for special education was true for application code and FALSE for the category
+
+🔴 **What this base published two passes ago** *(`intel/trends.md`, `T-p288b`)*: of the entire
+open source answer to IEP/504 administration, *"One copyleft, two unusable. Zero permissive. A
+studio taking an IEP engagement **writes it**."*
+
+🟢 **What `p290` read first-hand:** [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents)
+ships `agents/special-education-agent/` under **MIT**, and its `SOUL.md` and `MEMORY.md` encode
+the statutory frame the three `p288` repositories were valued for: **IDEA 2004**, the **13 IDEA
+disability categories**, **Section 504**, **FAPE/LRE**, **prior written notice**, **annual
+review and triennial re-evaluation**, **RTI/MTSS**, **ESY**, **age-16 transition planning**, and
+**FERPA** treatment of disability records.
+
+🟡 **The correction is bounded, and the boundary matters more than the headline.** This is an
+**agent configuration**, not an application: 5 files, no application code, no build, no tests,
+and it requires an OpenClaw/NemoClaw host to run. `T-p288b`'s sentence *"a studio writes the
+application"* **still holds**. What is refuted is *"zero permissive in the category"* — there is
+now an MIT starting point for the **statutory reasoning layer**, which was the expensive half.
+
+🟢 **And the config encodes the compliance posture `T-p288a` says is the regulatory interface:**
+*"Never make eligibility determinations — eligibility requires a qualified multidisciplinary
+team evaluation and legal decision"*, and *"IEP decisions are made by the full team, including
+parents and guardians, not by any single professional or AI tool."*
+
+🔵 **The same property, verified across the two high-risk siblings**, which is why it reads as a
+design stance rather than one file's wording — `application-reader-agent`: *"Never issue a final
+admit or deny decision unilaterally; always present findings as input for the human reader"*,
+plus *"flag anomalies … as observations, not conclusions"*; `retention-agent`: *"Treat every risk
+flag as a hypothesis to be confirmed, not a verdict"*, *"use the risk score to triage, not to
+rank human worth"*, and *"log every intervention — date, method, response, outcome"*.
+🟢 **Admissions, student evaluation and IEP eligibility are the three acts the EU AI Act,
+Vietnam's sole-basis clause and the Oklahoma/Maryland rules all name**, and all three configs
+refuse the sole-basis act in their own text.
+
+🟡 **One identity correction, before it becomes two rows.** `iblai/claws` is **not** a second
+repository: identical HEAD `acbd32b4a938`, byte-identical `LICENSE` *(`f1269b7b2313`)* and
+byte-identical `README.md` *(13 723 B, `2db8651cc58b`)* as `iblai/iblai-claw-agents`. GitHub
+serves both spellings and the superproject's own quickstart names the shorter one.
+**`ACTION WX` / `gate-identity`'s exact shape, caught before publication rather than after.**
+
+### 🔴 What this pass could NOT do, stated because a silent limitation reads as a clean run
+
+🔴 **This base's own `ladder.sh` and `enumerate.sh` would not execute in this environment** —
+the runner refused to run shell scripts from the clone. The measurement was re-implemented
+directly: a **13-rung** path ladder × 2 refs over `raw.githubusercontent.com`, and
+`git clone --depth 1` + `git ls-tree -r` for enumeration. 🔴 **13 rungs is not `make reach`'s
+55**, so **no absence in this pass carries 55-rung authority** — the positives are payloads
+read first-hand, the negatives are 13-rung negatives and are labelled as such in the evidence.
+🟡 `make hooks` itself ran clean *(all 12 gates PASS)*; only the two directly-invoked scripts
+were refused.
+
 # Top AI agents — Education
 
 > Education-specific open source agents Globant AI Studios can compose or customize.

@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 290 — 2026-10-18 — **THE GRANT WAS AT THE ROOT, AUTHORITATIVE AND VERBATIM, AND THE AGENTS WERE IN SEVEN OTHER REPOSITORIES**
+
+**One-line summary:** a directed admissions leg — a category this base had never searched,
+despite its own `T-p288a` naming admissions **high-risk in the EU AI Act** — found a
+**95-agent, 76-tool-skill, 7-segment MIT configuration set** whose education halves are
+**separate repositories aggregated as git submodules**; reading each one at the **exact commit
+the superproject pins** verified MIT per repository and **overturned this base's own
+`T-p288b`**, which published *"zero permissive"* for special education two passes ago.
+`ACTION p290` adds the axis (`GRANTED-AT-PIN` vs `UNVERIFIED-AT-PIN`), the register's
+**EMEA vendor hole closed**, and **2 of 6 addresses the search channel returned do not resolve
+at all** — one of them published **with an MIT licence field** by an aggregator.
+
+### 🟢 What was found
+
+🔴 **The mandated battery is now SIXTEEN consecutive nils on the agent leg**, nil for education
+on the trending leg for the **seventh** pass, and **no new permissive education ERP/CRM for the
+eleventh**. Every leg, global and regional, is written down with what it returned in
+[`evidence/p290-websearch.2026-10-18-p290.tsv`](evidence/p290-websearch.2026-10-18-p290.tsv) —
+an undeclared nil looks exactly like coverage.
+
+| finding | verdict |
+|---|---|
+| `iblai/iblai-claw-agents` MIT payload, 1 063 B | 🟢 **AUTHORITATIVE-BODY** — and it covers a **13-file shell**, 7 of whose entries are `160000 commit` gitlinks |
+| The two education submodules' own grants | 🟢 **MIT, byte-identical** (`f1269b7b2313`), each read first-hand |
+| HEAD read vs gitlink pinned, both education segments | 🟢 **2/2 EQUAL** → `GRANTED-AT-PIN`, which is what keeps this inside `ACTION VM` |
+| The other five segments | 🔴 **UNPROBED and declared** — the superproject's one MIT badge says nothing about them |
+| `T-p288b`'s *"zero permissive"* for special education | 🔴 **CORRECTED** — `k-12-agents` ships an MIT `special-education-agent` on IDEA 2004 / §504 / FAPE / LRE / PWN / RTI-MTSS / ESY / FERPA |
+| `T-p288b`'s *"a studio writes it"* | 🟢 **STANDS** — the config is 5 files, no application code, no build, no tests |
+| `iblai/claws` | 🔴 **NOT a second repository** — identical HEAD, byte-identical LICENSE **and** README. `gate-identity`'s shape, caught before publication |
+| `cedanl/student-signal` | 🟢 **MIT**, 🇳🇱 — the **first EMEA-origin education code row in four passes** |
+| `p287`'s widened `family_of`, run on it | 🟢 **PROSPECTIVELY CONFIRMED** — the payload's first line is **empty**, the title is on line 2, and the classifier returned `MIT` on first contact |
+| `jknowles/EWStools` | 🟡 **GPL-3.0 only**, 🇺🇸 Wisconsin DPI provenance, 🔴 **dormant since `2016-02-03`** |
+| `sp103107/NORA`, `anwarulh007/eduprotect` | 🔴 **DO NOT RESOLVE** on either available channel. A 404 is not a finding |
+| `awesome.ecosyste.ms` publishing **MIT** for `anwarulh007/eduprotect` | 🔴 **A machine-readable grant on a phantom address** — worse than a dangling README claim |
+| `ekoffi2/Machine-learning` | 🔴 **No grant, 2-file tree** — enumeration refutes the "project" shape the search channel implied |
+| The register's **EMEA vendor hole** (item 10, four passes of regulators only) | 🟢 **CLOSED** — 8 vendors with named rounds, and **global edtech VC ~$1B in H1 2026, down 26% YoY** |
+| Vietnam `MOET` (item 9) | 🟢 Policy: Decision `3439/QĐ-BGDĐT`, grades 1–12 from 2026-2027, 12 compulsory periods. 🔴 **No code, no licensed curriculum data** |
+| Mexico `SEP` (item 9) | 🔴 **EXPLICIT NIL** — zero results naming SEP. The region's second-largest Spanish-speaking school system has **no code row here** |
+
+### 🔵 Why `ACTION p290` is a new axis and not `p289` again
+
+Every licence instrument on these shelves asks **where the grant is** (`p215` path, `p969`
+root-only, `p742` body-vs-reference, `p259` location class) or **what the grant says** (`p287`
+family, `p289` authority-vs-restatement). 🔴 **A gitlink asks neither** — it asks **what the
+grant covers**, with the payload present, root-level, authoritative and verbatim.
+
+🟢 **And unlike `p289`'s catalogue badge, this question is answerable in bulk**, because a
+submodule pin is an exact SHA. The rule: a submodule's grant is verified when its own payload
+is read first-hand **and** the HEAD it was read at equals the pinned gitlink. Where the
+submodule has moved past its pin, the pin is an **unread commit** → `UNVERIFIED-AT-PIN`.
+
+### 🔴 What this pass could NOT do
+
+🔴 **This base's own `ladder.sh` and `enumerate.sh` would not execute in this environment** —
+the runner refused to run shell scripts from the clone, so `make gate-online`, `make enumerate`
+and `make provenance-sweep` were unavailable. The measurement was re-implemented directly: a
+**13-rung** licence ladder × 2 refs over `raw.githubusercontent.com`, and
+`git clone --depth 1` + `git ls-tree -r` for tree enumeration.
+🔴 **13 rungs is not `make reach`'s 55**, so **no absence in this pass carries 55-rung
+authority**; positives are payloads read first-hand, negatives are labelled 13-rung negatives
+in the evidence. 🟢 `make hooks` itself ran clean — **all 12 gates PASS**, before and after the
+shelf writes.
+
+🔴 **`github.com/trending`, `github.com` HTML and `api.github.com/repos` all answer `403`.** No
+star count in this pass is first-hand and **none is published.** 🟢 Two channels do answer and
+they agreed on every existence verdict: `raw.githubusercontent.com` and `git ls-remote`.
+
+### 🔵 What a studio takes from this pass
+
+**The compliance posture stopped being the deliverable and became a dependency.** Three MIT
+sibling agents — `application-reader`, `special-education`, `retention` — each **refuse the
+sole-basis act in their own prompt**, which is the one engineering requirement the EU AI Act,
+Vietnam's sole-basis clause and the Oklahoma/Maryland rules all converge on. 🔴 **What none of
+them has is the record**: *"log every intervention — date, method, response, outcome"* is an
+instruction to a model, not a schema, an append-only store or an artefact an auditor can be
+shown. 🟢 **That store is the billable half, it is the same build in all four regions, and it is
+written out as [`P45`](compose/patterns.md), [`P46`](compose/patterns.md) and
+[`P47`](compose/patterns.md).** 🟡 And quote the **submodule**, never the superproject.
+
+### 🔵 Backlog for `p291`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked:
+
+1. 🔴 **Probe the five unprobed `iblai` segments at payload** *(new, `ACTION p290`'s own
+   residue)* — enterprise, government, legal, financial-services, medical-healthcare. 🔵 Cheap
+   (5 slugs × the ladder), and this base now publishes a rule that is **measured on 2 of 7**.
+   The other five matter to a Globant engagement even though they are not education.
+2. 🔴 **Build `GRANTED-AT-PIN` into `make hooks`** *(new)* — `ACTION p290` is a rule written in
+   prose and an evidence table. Until it is a gate, a later pass can publish a superproject's
+   grant as covering its submodules, which is the exact defect this pass found.
+   Cheapest form: a `.gitmodules` + gitlink-SHA column in `pass275-grant-enumeration`.
+3. 🔴 **Wire the README channel into `p278`'s sweep itself** *(carried, UNADDRESSED in 289 and
+   290)* — `p288` built the channel and ran it **beside** `conflict-sweep`, not **inside** it.
+   One column in `sweep.sh`; the classifier already exists.
+4. 🔴 **A FAMILY-AXIS recovery sweep over every `UNCLASSIFIED` cell** *(carried from `p287`
+   item 2; `p290` gave it a reason)* — the widened `family_of` was confirmed **prospectively**
+   on `student-signal`'s blank-first-line MIT, so the back-sweep over captured payloads is now
+   known to be productive rather than hoped to be. **No network needed.**
+5. 🔴 **A licence-CHANGE-WITH-A-DATE-BOUNDARY column** *(carried from `p288`)* — `AIHawk` is MIT
+   for releases after `2026-09-02` and AGPL-3.0 before it. No shelf cell can express that.
+6. 🔴 **Teach the enumeration gate that a licence-like path can be a SOURCE FILE** *(carried
+   from `p288`)* — exclude source extensions from `licence_like_paths_in_tree`.
+7. 🔴 **Build `ROOT_OR_SOLE` into the enumeration gate** *(carried, six passes)*.
+8. 🔴 **Widen `gate-identity` to census the enumeration QUEUE** *(carried, six passes)*.
+9. 🟢 **The evidence-store reference implementation** *(new, and it is the commercial item on
+   this list)* — `P45`/`P46`/`P47` all terminate in the same missing component: an append-only
+   record of *who decided what, shown what, under which rubric version*. Three recipes, one
+   build, four regions. 🔵 Nothing on these shelves supplies it; it is the thing a studio sells.
+10. 🔵 **Mexico `SEP` in SPANISH, against primary sources** *(new, from `p290`'s explicit nil)* —
+    `gob.mx/sep` and the Diario Oficial, not a GitHub-flavoured query. Same correction the
+    Vietnam leg needed.
+11. 🔵 **A repository-channel leg on `STEAM for Vietnam`** *(new)* — the one named non-ministry
+    actor in the MOET teacher-training programme, and the likeliest Vietnamese publisher of code.
+12. 🔵 **The next directed legs, by name** — unspent: **Egypt in ARABIC**, **Thailand `O-NET`**.
+    🔴 Do not re-run the region-named legs expecting code: `p290` makes it **four passes** where
+    the region phrasing returned enterprise IT and the directed phrasing returned the answer.
+13. 🔵 **The licence-intake ASK, still over SEVEN repositories** *(carried, `p285` item 7)* —
+    nobody has asked.
+14. 🟡 **`--resolve` over the 14 CANDIDATE control sites** *(carried, eight passes)*.
+
 ## Pass 289 — 2026-10-18 — **THE ITEM THIS REGISTER RANKED FIRST FOR THREE PASSES WAS FINALLY RUN, AND RUNNING IT PROVED THE CHANNEL DOES NOT EXIST**
 
 **One-line summary:** the gap-directed leg *"read five national curriculum licences as primary

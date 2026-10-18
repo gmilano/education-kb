@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 290 — the early-warning layer gets its first two foundational rows, and one of them is a US STATE EDUCATION AGENCY's own code
+
+⏱️ **Twelfth pass of `2026-10-18`.** Evidence:
+[`verified-repos.2026-10-18-p290.tsv`](../evidence/verified-repos.2026-10-18-p290.tsv) ·
+[`p290-websearch.2026-10-18-p290.tsv`](../evidence/p290-websearch.2026-10-18-p290.tsv).
+
+🔵 **Why these are foundations and not agent rows.** Neither is an agent and neither wants to
+be. They are the **measurement layer** underneath `retention-agent` and
+`special-education-agent`: the thing that produces a risk score an agent then has to act on
+without treating it as a verdict.
+
+| repo | grant (read from payload) | what it gives you | base for AI? |
+|---|---|---|---|
+| 🟢 [`cedanl/student-signal`](https://github.com/cedanl/student-signal) | 🟢 **MIT** — root `LICENSE`, **1 078 B**, HEAD `4463e8d17cfb`, sha256₁₂ `2c4289f4e480` | 🇳🇱 Dropout prediction as a **domain library**: `prepare()` cleans and transforms, `rank()` orders students by predicted probability, `evaluate()` reports **precision/recall at multiple invitation thresholds** with a traffic-light status. Bring any sklearn-compatible estimator. **Invitation-rule methodology (Eegdeman, 2022)**. 36 files, Python 3.13+, `uv`, CI/docs/publish workflows, 4 test modules, synthetic demo data committed | 🟢 **yes — the cleanest foundation found for this layer.** It deliberately does NOT choose your model, so the agent layer sits on top without a rewrite |
+| 🟡 [`jknowles/EWStools`](https://github.com/jknowles/EWStools) | 🟡 **GPL-3.0 only** — root `LICENSE`, **35 156 B**, sha256₁₂ `65a7aee2cb0d`; `DESCRIPTION`: `License: GPL-3` | 🇺🇸 R tooling for building and testing education early-warning models on top of `caret`: ROC testing, model search, post-prediction adjustment. 71 files. 🟢 **Provenance is the value**: README names it the source behind modules of the **Wisconsin Dropout Early Warning System** (Wisconsin Dept of Public Instruction; author `Jared.Knowles@dpi.wi.gov`) | 🔴 **no.** Last commit **`2016-02-03`**, `DESCRIPTION` Date `2015-02-10`, version `0.9.2.9000`, Travis badges. 🟢 Read it as the **reference design** a state agency actually shipped — the model-search and ROC-testing structure is the reusable part, not the code |
+
+🔴 **The licence boundary, stated because the two rows are not interchangeable.**
+`student-signal` is MIT: a client's proprietary model, features and scoring thresholds stay
+proprietary beside it. `EWStools` is **GPL-3.0 only** — no "or later" bound; the three *"any
+later version"* strings in its payload are the How-to-Apply boilerplate, **not** a grant on
+this package. An R deliverable that links it is a derivative work. 🟢 In practice this costs
+nothing, because nobody should take a 2016 dependency: **port the method, not the package.**
+
+🟡 **Two addresses the same leg returned and neither is on this shelf:**
+`anwarulh007/eduprotect` **does not resolve** on either channel while `awesome.ecosyste.ms`
+publishes an **MIT licence field** for it, and `ekoffi2/Machine-learning` resolves with **no
+grant in a 2-file tree**. Recorded in
+[`verified-repos.2026-10-18-p290.tsv`](../evidence/verified-repos.2026-10-18-p290.tsv) so no
+later pass re-reads them.
+
+🔴 **Mandated verticals leg: no new permissive education ERP/CRM, ELEVENTH consecutive pass.**
+The whole result set was `openeducat.org`'s own glossary in seven languages. 🟢 One datum kept,
+from the vendor's own page: **OpenEduCat is LGPLv3, not MIT or Apache** — the vendor itself
+rules out the licence class the leg asks for. Both it and Odoo are already carried.
+
 # Foundational repos — Education
 
 > The layer below the agents: platforms, standards, assessment engines and learner-model

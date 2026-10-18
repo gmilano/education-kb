@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 290) — the trending channel is 403 for the twelfth pass, and the real repo signal is a 7-repository submodule fan-out behind one MIT file
+
+⏱️ **Twelfth pass of `2026-10-18`.** Append-only — everything below this section is prior
+history and is not rewritten. Evidence:
+[`verified-repos.2026-10-18-p290.tsv`](../evidence/verified-repos.2026-10-18-p290.tsv) ·
+[`submodule-grant-boundary.2026-10-18-p290.tsv`](../evidence/submodule-grant-boundary.2026-10-18-p290.tsv) ·
+[`p290-websearch.2026-10-18-p290.tsv`](../evidence/p290-websearch.2026-10-18-p290.tsv).
+
+🔴 **`github.com/trending` answers `403` from this environment — twelfth consecutive pass — so
+NO star count in this pass is first-hand and none is published.** `github.com` HTML and
+`api.github.com/repos` are **also** `403`. 🟢 What *does* answer: `raw.githubusercontent.com`
+(grants) and `git ls-remote` (existence + HEAD). Every figure below comes from one of those two.
+
+🔴 **Mandated trending leg: nil for education, SEVENTH consecutive pass.** With the trending
+page refused, the leg resolves to third-party trackers and opinion posts, and returned
+`rohitg00/ai-engineering-from-scratch`, Karpathy's zero-to-hero, D2L and
+`speedyapply/2026-AI-College-Jobs` — **engineer curricula, not education repositories.** One
+secondary claim recorded without endorsement: a tracker reports 9 of the top 10 February 2026
+monthly-trending projects were AI-related.
+
+### 🟢 The movement this week — six addresses, every grant read from payload
+
+| repo | grant (first-hand) | signal | why it matters |
+|---|---|---|---|
+| 🟢 [`iblai/iblai-claw-agents`](https://github.com/iblai/iblai-claw-agents) | **MIT**, 1 063 B, `f1269b7b2313` | 🔵 **13 files, 7 of them gitlinks** | The superproject. **95 agents / 76 tool skills / 7 segments**, and almost none of it is in this repository |
+| 🟢 [`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) | **MIT**, own payload, HEAD `1a2d898bbd04` = **the pinned gitlink** | 90 files | Campus Assistant + 16 specialists. The admissions trio (`application-reader`, `enrollment`, `yield`) lands in the EU AI Act's **high-risk** tier by name |
+| 🟢 [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) | **MIT**, own payload, HEAD `54ee9d91eecd` = **the pinned gitlink** | 79 files | School Assistant + 12 specialists. **Corrects `T-p288b`**: an MIT `special-education-agent` exists |
+| 🟡 [`iblai/iblai-claw-setup`](https://github.com/iblai/iblai-claw-setup) | **MIT**, 1 063 B, HEAD `db780e052460` | tree **not enumerated** | The OpenClaw gateway/host the configurations load into. 🔴 Recorded as **unenumerated**, not as clean |
+| 🟢 [`cedanl/student-signal`](https://github.com/cedanl/student-signal) | **MIT**, 1 078 B, `2c4289f4e480` | 36 files, Python 3.13+ | 🇳🇱 **The first EMEA-origin education code row in four passes**, and it arrived through a vendor-directed leg aimed at the EMEA hole |
+| 🟡 [`jknowles/EWStools`](https://github.com/jknowles/EWStools) | **GPL-3.0 only**, 35 156 B | 🔴 last commit **2016-02-03** | 🇺🇸 Wisconsin DEWS provenance. On this shelf as a **dormant reference**, explicitly not as momentum |
+
+🔴 **Three refusals, kept on the shelf as refusals:** `sp103107/NORA` and
+`anwarulh007/eduprotect` **do not resolve** on either channel — and the second is published
+**with an MIT licence field** by `awesome.ecosyste.ms`, which is the more dangerous of the two
+shapes. `ekoffi2/Machine-learning` resolves with **no grant across 2 files**.
+
+### 🔵 The instrument: `ACTION p290` — `GRANTED-AT-PIN`
+
+A submodule's grant counts as verified only when its **own** payload is read first-hand **and**
+the HEAD it was read at **equals the gitlink SHA the superproject pins**. Both education
+segments pass; **five of seven segments were not probed** and are declared, not assumed.
+🔵 This keeps the finding inside `ACTION VM` *(no row inherits a grant from a sibling)* — the
+commit whose grant was read is the commit a recursive clone lands on.
+
+🔴 **A limitation of this pass, stated rather than left to look like a clean run:** this base's
+own `ladder.sh` and `enumerate.sh` could not be executed here, so grants were probed on a
+**13-rung** ladder × 2 refs rather than `make reach`'s 55. **Positives are payloads; negatives
+carry 13-rung authority only.** `make hooks` ran clean across all 12 gates.
+
 ## 2026-10-18 (pass 289) — the trending channel is still 403, and the pass's most valuable repository is 8 stars wide and holds a national curriculum
 
 ⏱️ **Eleventh pass of `2026-10-18`.** Append-only. Evidence:

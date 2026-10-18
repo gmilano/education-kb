@@ -1,0 +1,40 @@
+# p290 — 2026-10-18 — ACTION p290: THE SUBMODULE BOUNDARY AS A GRANT AXIS.
+# The question: when a repository's MIT payload sits in a superproject whose content is seven
+# `160000 commit` gitlinks, WHAT DOES THE GRANT COVER?
+#
+# 🔵 Why this is not an axis this base already had.  Every prior instrument asks WHERE the
+# grant is (`p215` path, `p969` root-only, `p742` body-vs-reference, `p259` location class) or
+# WHAT IT SAYS (`p287` family, `p289` authority-vs-restatement).  A gitlink asks neither: the
+# payload is present, at the root, authoritative, and verbatim — and the bytes a studio would
+# actually vendor are NOT IN THIS REPOSITORY AT ALL.
+#
+# 🔴 The adjacent known shape, for contrast: `p289` found a CATALOGUE licence mistaken for a
+# project licence (`ashishpatel26/500-AI-Agents-Projects` — an MIT badge over links it does not
+# own).  A gitlink is the same question with a different answer available: a catalogue's targets
+# cannot be checked in bulk, a submodule's CAN, because the superproject PINS AN EXACT COMMIT.
+#
+# 🟢 THE RULE THIS PASS WRITES DOWN: a submodule grant is verified when (1) the submodule's own
+# payload is read first-hand, AND (2) the HEAD that payload was read at EQUALS the gitlink SHA
+# the superproject pins.  Condition (2) is what stops this being `ACTION VM` inheritance: the
+# commit whose grant was read is the commit a recursive clone lands on.
+# 🔴 Where (2) fails — submodule HEAD has moved past the pin — the pin is an UNREAD commit and
+# the correct verdict is UNVERIFIED-AT-PIN, not GRANTED.
+superproject	submodule_path	submodule_slug	pinned_gitlink_sha	submodule_head_sha	pin_equals_head	payload_path	payload_bytes	payload_sha256_12	family	verdict
+iblai/iblai-claw-agents	higher-education	iblai/higher-education-agents	1a2d898bbd04ffd60498bb23a4aa14e3eb5f8a66	1a2d898bbd04	🟢 YES	LICENSE	1063	f1269b7b2313	MIT	🟢 GRANTED-AT-PIN
+iblai/iblai-claw-agents	k-12	iblai/k-12-agents	54ee9d91eecd964fc100f4ec4bb2dbf500c82985	54ee9d91eecd	🟢 YES	LICENSE	1063	f1269b7b2313	MIT	🟢 GRANTED-AT-PIN
+iblai/iblai-claw-agents	enterprise	iblai/enterprise-agents	7f00879a9f578c6c3ccf8f8ed9e61ce38badc74f	NOT-PROBED	-	-	-	-	-	🟡 OUT-OF-SCOPE (not an education segment; NOT probed, and recorded as unprobed rather than clean)
+iblai/iblai-claw-agents	government	iblai/government-agents	fbf903250c96b1b2683786f746a03ff942f014c5	NOT-PROBED	-	-	-	-	-	🟡 OUT-OF-SCOPE (not probed)
+iblai/iblai-claw-agents	legal	iblai/legal-agents	b059cd452bf3e2bd86ac947821ba6463d54a02d1	NOT-PROBED	-	-	-	-	-	🟡 OUT-OF-SCOPE (not probed)
+iblai/iblai-claw-agents	financial-services	iblai/financial-services-agents	6ea18f015b1efa60a040d4cd68c93ceaff23abb5	NOT-PROBED	-	-	-	-	-	🟡 OUT-OF-SCOPE (not probed)
+iblai/iblai-claw-agents	medical-healthcare	iblai/medical-healthcare-agents	cd0d9fcfa523ff2466fce3e11eb96ac86814f461	NOT-PROBED	-	-	-	-	-	🟡 OUT-OF-SCOPE (not probed)
+#
+# 🟢 RESULT, 2 of 2 education segments: GRANTED-AT-PIN.  Both submodules serve a payload
+# BYTE-IDENTICAL to the superproject's (same sha256_12 `f1269b7b2313`, 1063 B) at exactly the
+# pinned commit.  A studio running `git clone --recurse-submodules` on the education segments
+# receives MIT in all three repositories, read per repository.
+#
+# 🔴 FIVE OF SEVEN SEGMENTS ARE UNPROBED, and that is a declared gap rather than a pass.
+# The superproject's MIT says NOTHING about them; this base publishes education only, so the
+# other five are out of scope — but a Globant engagement in legal, healthcare, financial
+# services, government or enterprise MUST probe its own segment before vendoring.  Written
+# down because the superproject's single MIT badge is exactly what would be read instead.
