@@ -4,6 +4,176 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 297 — four new patterns (`P56`-`P59`), each built from rows promoted THIS pass
+
+⏱️ `2026-10-18`. Evidence:
+[`p297-promotion-gap.2026-10-18-p297.tsv`](../evidence/p297-promotion-gap.2026-10-18-p297.tsv).
+🔴 **Numbered `P56`-`P59`: `P52`-`P55` are taken by `p296` and `P51` by `p294`** — the shelf was
+enumerated before numbering, because a duplicate pattern ID compiles into two entities with one name.
+
+🔵 **All four are built on the nine substrates promoted this pass**, and that is deliberate: `T-p297b`
+measured that this base had **42 agent rows** over an **institutional layer that was nearly empty**,
+so the patterns that were *missing* were never tutor patterns. Every component below was
+licence-read on `2026-10-18` and is shelved on [`agents/top.md`](../agents/top.md),
+[`repos/foundations.md`](../repos/foundations.md) or [`verticals/solutions.md`](../verticals/solutions.md).
+⚠️ **Read the grade caveat at the end before any of these ships** — all twelve `p297` reads are
+**sidebar-grade, not payload-grade.**
+
+## P56 — An evaluation harness a regulator will accept (EMEA, portable)
+
+**Who it is for.** A university or ministry deploying anything that touches **admissions ranking,
+student evaluation or exam scoring** — the three uses the EU AI Act keeps in **Annex III high-risk**,
+now due **`2027-12-02`** (`T-p296a`). 🔵 **`P52` covers the deployment; `P56` is the evidence
+artefact** — the thing you hand an auditor.
+
+**The wiring, bottom to top:**
+
+1. **Harness:** [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai)
+   (**MIT**, 3.0k★, **8 033 commits**). Scaffolding for LLM evals, maintained by the **UK AI Security
+   Institute**. 🟢 *A government-maintained harness is a materially easier artefact to defend to a
+   regulator than a bespoke test script* — that is the whole reason it is in this slot.
+   🔴 **Its README names no education use: you supply every education task.**
+2. **Task set:** [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+   (**MIT**, shelved `p296`) — teacher-exam items including a **Chilean MINEDUC** question bank
+   (arXiv:2506.18710). This is what turns the empty harness into a *pedagogical* eval.
+3. **Content scoring:** [`AI-for-Education/edu-qurating`](https://github.com/AI-for-Education/edu-qurating)
+   (**MIT**, 277 commits) — scores generated teaching material on **factual accuracy, pedagogical
+   quality and lesson engagement**, keeping the top 50th percentile. Run it on **your system's
+   output**, not on training data.
+4. **Alignment assertion:** [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE)
+   (**Apache-2.0**, CASE 1.0/1.1) — bind each eval item to a **named curriculum standard**, so
+   *"curriculum-aligned"* becomes **machine-checkable instead of asserted in a slide**.
+5. **Run log:** [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit)
+   (**MIT**, 6.4k★) — **tamper-evident audit records** of every eval run, with actions bound to a
+   specific agent identity.
+
+**What you hand over.** An eval suite versioned next to the model config; a per-release report scored
+on the three named pedagogical axes; a standards-alignment map; and a signed, tamper-evident log of
+every run. **~6-8 weeks.**
+
+🔴 **What to check before quoting.** `edu-qurating`'s trained models live on **`huggingface.co`, which
+is unreachable at this environment's resolver** (`p295`) — the **code** is usable, the **published
+weights are unread**. And `inspect_ai` + `agent-governance-toolkit` are **not education software**;
+the education judgement is entirely yours.
+
+## P57 — The evidence pack that unlocks a state pilot's scale gate (EMEA / Central Asia)
+
+**Who it is for.** A government that has **already bought the platform** and set a scale gate by
+decree. The live instance: **Kazakhstan** — **165 000 ChatGPT Edu licences**, AI in schools from
+**`2026-09-01`**, pilot in **10 rural schools** (Pavlodar, Kyzylorda), **500 institutions by January
+2027**. 🔵 **`P55` is a LATAM governance retrofit over tools already in casual use; `P57` is
+different** — here the procurement is done, the deadline is a **decree**, and the deliverable is the
+**evidence that justifies going from 10 schools to 500.**
+
+**The wiring:**
+
+1. **Policy enforcement at the call site:** [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit)
+   (**MIT**) — decides whether a tool call is **allowed before it runs**, binds it to an agent
+   identity, and writes a tamper-evident record. This is what makes *"AI is used responsibly in our
+   schools"* a **query against a log** rather than a claim.
+2. **Pre-deployment and periodic evals:** [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai)
+   (**MIT**) — see `P56`; the gate report needs a *measured* answer, not a satisfaction survey.
+3. **The surface teachers actually touch:** [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)
+   (**MIT**, 295★, 1 026 commits) or [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp)
+   (**MIT**) — reach the incumbent LMS **without forking it**. ⚠️ `moodle-mcp`'s writes are
+   **ungated** (this base's `T4`): put it behind the policy layer in step 1, not beside it.
+4. **The outcome number the ministry will ask for:** [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool)
+   (**MIT**, 3 015 commits, shelved `p296`) for retention, **or**
+   [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis)'s *Insights*, which derives topic
+   understanding from **submission and test-result timestamps** — 🟢 **an outcome signal that needs no
+   extra instrumentation and no new student data collection**, which matters where data rules bite.
+5. **If sovereignty is raised** (Forrester expects it to shape infrastructure for ~half of APAC firms,
+   and Kazakhstan runs a sovereign **KazLLM**): [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite)
+   (**Apache-2.0**, Intel/OpenVINO, shelved `p296`) for on-prem inference.
+
+**What you hand over.** A policy pack enforced in code; an audit trail per school; an eval report at
+the gate; and one retention or understanding metric with a stated baseline. **~8-10 weeks**, sized to
+land **before** the January 2027 gate.
+
+🔴 **The honest risk.** The platform is **proprietary and already chosen** — you are not replacing it
+and should not propose to. ⚠️ **KazLLM's parameter sizes (8B/70B) are commentary-attributed and
+unread**; do not design a sovereign fallback around them without reading the grant.
+
+## P58 — A Hausa teacher coach built on state-published weights (EMEA, Nigeria)
+
+**Who it is for.** A Nigerian state, NGO or donor programme that needs a **teacher-facing** coach in
+**Hausa**. 🔴 **The gap this answers is measured, not assumed:** the most deployed Hausa teacher tool,
+**`aprendIA`** (IRC), reaches **5 800 teachers today with a projection of 137 000 by 2028** — and it
+is **proprietary**. Every *open* Hausa instrument this base found is a **model or a paper**; the
+**deployed product is closed.**
+
+**The wiring:**
+
+1. **Language layer — published by the state:** **N-ATLAS**, Nigeria's government-released open
+   multilingual model (Sept 2025: **Hausa, Yoruba, Igbo, Nigerian-accented English**), now being
+   scaled as a **template** across the continent by **GSMA + five African governments** as
+   **ATLAS Umoja AI**. Fallback/complement: **InkubaLM** (open, five African languages incl. Hausa).
+   🔴 **BLOCKING CHECK: no repository slug was recovered for N-ATLAS this pass and its licence terms
+   are UNREAD.** *"Open-sourced"* is **press-attributed**. **Read the grant before a SOW names it.**
+2. **Delivery shape — already proven in a comparable system:** [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform)
+   (**Apache-2.0**, 847 commits, shelved `p296`) — Pakistan/Taleemabad national curriculum over
+   **WhatsApp**, **15 languages**. 🟢 Same constraint set as northern Nigeria: low bandwidth, teacher
+   on a phone, many languages. **Do not rebuild this; fork it.**
+3. **Curriculum-bound lesson planning:** [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot)
+   (**MIT**, MSR India + Sikshana Foundation, shelved `p296`) — the capability is *lesson planning
+   bound to a specific curriculum*, which is the task, not open-ended chat.
+4. **The measurement nobody runs and everybody assumes:** [`AI-for-Education/voice-ai-evaluation-framework`](https://github.com/AI-for-Education/voice-ai-evaluation-framework)
+   (**MIT**) — **EGRA child-speech ASR evaluation**, built for **Kiswahili** and the right shape to
+   re-point at Hausa. 🔴 **Adult-speech WER does not predict performance on a six-year-old in a noisy
+   classroom.** If the programme has a reading component, this is the gate, not a nice-to-have.
+5. **Human checkpoint:** the shape in [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent)
+   (**MIT**, shelved `p296`) — **approve/reject before export, auto-grading deliberately frozen.**
+   `T-p288a` records that regulators in all four regions now require exactly this.
+
+**What you hand over.** A WhatsApp Hausa teacher coach on state-published weights, with a **measured
+ASR floor on child speech** and a human approval step before anything reaches a learner.
+**~10-12 weeks.**
+
+## P59 — A verifiable skills credential for the APAC corporate-learning buyer (APAC, portable)
+
+**Who it is for.** The buyer APAC's channel actually surfaces. 🔴 **`T-p297d`: four passes running,
+every non-nil APAC education hit was CORPORATE learning** — **TCS + Pearson**'s AI learning alliance
+on employer skills gaps, **Alteryx**'s Academy relaunch *with credentials*, **LearnUpon**'s Sydney
+APAC HQ, **NIIT MTS**'s sixteenth year on a corporate-content list. 🔵 **For this buyer the
+deliverable is not a tutor; it is a credential a third party can verify.**
+
+**The wiring:**
+
+1. **Assessment engine:** [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) (**MIT**, 382★,
+   **1 638 commits**, NYU Tandon) — a repo per assignment, **push-triggered tests** as objective
+   evidence of competence, **timestamps** as evidence of effort. 🟢 Newly the **first permissively
+   licensed LMS** on [`verticals/solutions.md`](../verticals/solutions.md), so it can be **forked**,
+   unlike every other platform row there. ⚠️ Scoped to **computing-science** courses, and running it
+   means running **Kubernetes** — price the operations.
+2. **Competency binding:** [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE)
+   (**Apache-2.0**, CASE 1.0/1.1) — bind each credential to a **named competency** rather than a
+   course title, which is the difference between a certificate and something an employer can filter
+   on.
+3. **Verification:** [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator)
+   (**Apache-2.0**, **628 commits**, from the standards body) — validate issued **Open Badges 3.0**
+   (2.0 also accepted). 🔴 **Two boundaries, both read rather than assumed:** its sidebar mentions
+   *Comprehensive Learner Record* but **its README describes Open Badges only — do not promise CLR**;
+   and **a validator validates, it does not issue.** You still build or buy the issuer.
+4. **If the cohort is Indian:** [`AI4Bharat/IndicTrans2`](https://github.com/AI4Bharat/IndicTrans2)
+   (**MIT**, 482★) — **22 scheduled Indic languages**. ⚠️ Substrate only; it mentions no education use.
+5. **If an LLM grades anything:** add `P56`'s harness. An employer-facing credential whose grading is
+   unevaluated is a liability dressed as a product.
+
+**What you hand over.** An assessment engine, a competency map, issued badges and an independent
+validator — i.e. **a credential whose claims can be checked by someone who does not trust you**.
+**~6-8 weeks.**
+
+### 🔴 The grade caveat that applies to all four patterns
+
+**Every one of the twelve repositories read this pass was read on ONE path: the rendered
+`github.com` sidebar/About licence label plus README body.** `curl -sI` was **403 on 4/4** probes
+(including an invented hostname, so a 403 licenses no existence claim), and there is **no
+`api.github.com` channel** and **no raw payload channel** from this environment. 🔴 **No `LICENSE`
+file was read at payload for any `p297` row.** This base has been bitten twice by single-path licence
+reads (`p295`: `Submitty` served `BSD-3-Clause` at `LICENSE.md` with plain `LICENSE` at **404**).
+**Request the payload before any of these components ships in a deliverable** — the patterns are
+sound, the grants are **sidebar-grade**.
+
 ## 🟢 Pass 296 — four new patterns (`P52`-`P55`), built only from rows promoted this pass
 
 ⏱️ `2026-10-18`. Evidence:

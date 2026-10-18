@@ -1,0 +1,5 @@
+probe	url	method	result	interpretation
+star-channel	https://github.com/UKGovernmentBEIS/inspect_ai	curl -sI	403	EGRESS_DENIED - licenses no existence claim
+star-channel	https://github.com/1EdTech/OpenCASE	curl -sI	403	EGRESS_DENIED - licenses no existence claim
+api-channel	https://api.github.com/repos/1EdTech/OpenCASE	curl -sI	403	no api.github.com channel exists
+NEGATIVE-CONTROL	https://github.com/this-host-does-not-exist-xyz-control/nope	curl -sI	403	KNOWN-FAKE returns the SAME 403 as real repos - confirms p294 rule

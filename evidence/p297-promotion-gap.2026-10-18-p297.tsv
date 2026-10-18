@@ -1,0 +1,13 @@
+slug	channel	read_date	licence_label_verbatim	licence_path	stars	forks	commits	branch	verdict	shelf	note
+UKGovernmentBEIS/inspect_ai	WebFetch-github.com-HTML	2026-10-18	MIT license	sidebar	3000	827	8033	main	ADMIT-SUBSTRATE	repos/foundations.md	README names no education use; admitted as eval substrate with boundary in row
+microsoft/agent-governance-toolkit	WebFetch-github.com-HTML	2026-10-18	MIT license	sidebar	6400	1100	2880	main	ADMIT-SUBSTRATE	repos/foundations.md	README does not mention education; policy/sandbox/audit for autonomous agents
+AI4Bharat/IndicTrans2	WebFetch-github.com-HTML	2026-10-18	MIT license	sidebar	482	135	124	main	ADMIT-SUBSTRATE	repos/foundations.md	22 scheduled Indic languages; no education framing in README
+AnubisLMS/Anubis	WebFetch-github.com-HTML	2026-10-18	MIT license	sidebar	382	54	1638	main	ADMIT	repos/foundations.md+verticals	NYU Tandon; autograding + cloud IDE + insights
+1EdTech/digital-credentials-public-validator	WebFetch-github.com-HTML	2026-10-18	Apache-2.0 license	sidebar	17	12	628	main	ADMIT	repos/foundations.md	Open Badges 3.0 + 2.0; sidebar claims CLR, README does not describe CLR validation
+1EdTech/OpenCASE	WebFetch-github.com-HTML	2026-10-18	Apache-2.0 license	sidebar	9	3	191	main	ADMIT	repos/foundations.md	CASE 1.0/1.1; README states ready for 1EdTech certification
+AI-for-Education/edu-qurating	WebFetch-github.com-HTML	2026-10-18	MIT license	sidebar	3	0	277	main	ADMIT	repos/foundations.md	QuRating fork; filters on factual accuracy + pedagogical quality + lesson engagement
+AI-for-Education/voice-ai-evaluation-framework	WebFetch-github.com-HTML	2026-10-18	MIT license	sidebar	1	0	61	main	ADMIT	repos/foundations.md	EGRA Kiswahili child-speech ASR eval; no country named in README
+google/prog-edu-assistant	WebFetch-github.com-HTML	2026-10-18	Apache-2.0 license	sidebar	34	17	165	main	ADMIT-ARCHIVED	repos/foundations.md	ARCHIVED by owner 2025-07-23, read-only; Jupyter/Colab autograding
+LEARNableLabs/opentutor	WebFetch-github.com-HTML	2026-10-18	MIT license	sidebar+README	1	0	300	main	ADMIT-DISAMBIGUATED	agents/top.md	NAME COLLISION with shelved zijinz456/OpenTutor (MIT,142*) - unrelated repo
+aryankeluskar/canvas-mcp	WebFetch-github.com-HTML	2026-10-18	ISC license	sidebar	11	9	59	master	ADMIT-NARROW	agents/top.md	ISC = licence class new to these shelves; only Gradescope-reaching row; dominated on adoption by vishalsachdev/canvas-mcp
+AI-for-Education/fabdata-llm	WebFetch-github.com-HTML	2026-10-18	MIT license	sidebar	9	10	175	main	REJECT	-	generic LLM provider abstraction; no education framing in README; LiteLLM-class alternatives better adopted

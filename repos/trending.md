@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 297: NINE substrates promoted, all one layer, and the orphan list turned out to be PARTITIONED rather than uniform
+
+Evidence: [`p297-promotion-gap.2026-10-18-p297.tsv`](../evidence/p297-promotion-gap.2026-10-18-p297.tsv).
+
+🟢 **Nine permissive substrates moved onto [`repos/foundations.md`](foundations.md) this pass, and not
+one was a discovery** — every one came out of
+[`p989`'s orphan list](../compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt)
+of `2026-10-10`, read first-hand at `github.com` HTML.
+
+| repo | licence (read `2026-10-18`) | stars | forks | commits | branch | layer it supplies |
+|---|---|---|---|---|---|---|
+| [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 `MIT` *(sidebar)* | **6.4k** | 1.1k | 2 880 | `main` | governance / audit — 🔴 **was 0 rows**. ⚠️ not an education repo |
+| [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) | 🟢 `MIT` *(sidebar)* | **3.0k** | 827 | **8 033** | `main` | evaluation (UK AI Security Institute). ⚠️ not an education repo |
+| [`AI4Bharat/IndicTrans2`](https://github.com/AI4Bharat/IndicTrans2) | 🟢 `MIT` *(sidebar)* | 482 | 135 | 124 | `main` | language substrate — **22 scheduled Indic languages** |
+| [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 🟢 `MIT` *(sidebar)* | 382 | 54 | **1 638** | `main` | autograding LMS + cloud IDE + timestamp insights (**NYU Tandon**) |
+| [`google/prog-edu-assistant`](https://github.com/google/prog-edu-assistant) | 🟢 `Apache-2.0` *(sidebar)* | 34 | 17 | 165 | `main` | Jupyter/Colab autograding. 🔴 **ARCHIVED `2025-07-23`** |
+| [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 `Apache-2.0` *(sidebar)* | 17 | 12 | **628** | `main` | credentialing — **Open Badges 3.0** — 🔴 **was 0 rows** |
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | 🟢 `Apache-2.0` *(sidebar)* | 9 | 3 | 191 | `main` | curriculum-standards interop — **CASE 1.0/1.1** — 🔴 **was 0 rows** |
+| [`AI-for-Education/edu-qurating`](https://github.com/AI-for-Education/edu-qurating) | 🟢 `MIT` *(sidebar)* | 3 | 0 | **277** | `main` | pedagogical data curation — scores **factual accuracy · pedagogical quality · lesson engagement** |
+| [`AI-for-Education/voice-ai-evaluation-framework`](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | 🟢 `MIT` *(sidebar)* | 1 | 0 | 61 | `main` | **child-speech** eval — EGRA, **Kiswahili** |
+
+🔴 **THE FINDING OF THE PASS IS ABOUT THE LIST, NOT THE ROWS. `p296` left the impression of a uniform
+~500-slug backlog; it is partitioned, and the partitions are worth wildly different amounts.** `p297`
+re-diffed **all 528** permissive orphans against all three shelf files: **481 remain unshelved.**
+Sorted by capability:
+
+- 🔴 **The densest cluster is ~20 LMS-integration MCP adapters** (Canvas, Moodle, Google Classroom,
+  plus `myschoolapp-mcp` and `usp-mcp`) — against **ten such servers already shelved**. That cluster
+  is **duplicative capability**, and reading it further is near-worthless.
+- 🟢 **The layers that were EMPTY are the ones an institution contracts about** — standards,
+  credentialing, governance, evaluation. All four are now non-zero, and **three of them were filled by
+  a standards body, a government and a vendor — not by the education-AI community.**
+
+🔴 **Second confirmation that the star column ranks this file backwards, and the spread is now
+extreme.** The three most engagement-critical rows added this pass hold **5 stars between them**
+(`edu-qurating` 3, `voice-ai-evaluation-framework` 1, `OpenCASE` 9 — 13 with OpenCASE), while the
+**highest-star row admitted (6.4k) is not an education repository at all.** 🔵 `p296` said rank on
+commits plus a named deployment; `p297` adds: **on the substrate layer, stars measure the size of the
+repo's developer audience, not its usefulness to an education engagement.**
+
+⚠️ **One row is archived and shelved anyway, with the date in its cell.**
+`google/prog-edu-assistant` was **archived by its owner on `2025-07-23`** and is read-only. Apache-2.0
+is irrevocable and the notebook-autograding shape is stable, so it is a **complete worked reference** —
+and it must **never** be briefed as maintained.
+
+⚠️ **Channel:** `curl -sI` over `github.com` was **403 on 4/4**, **including an invented hostname that
+returned the identical 403** (`p294`'s rule holds: a 403 licenses no existence claim). No
+`api.github.com` path. All reads are `WebFetch` over rendered HTML; star/fork figures are **rendered**
+and **not monotonic** (`p295`).
+
 ## 2026-10-18 — Pass 296: three substrates promoted, two already shelved, and the commit column beat the star column on all five
 
 Evidence: [`p296-promotion-gap.2026-10-18-p296.tsv`](../evidence/p296-promotion-gap.2026-10-18-p296.tsv).

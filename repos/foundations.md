@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 297 — NINE NEW PERMISSIVE SUBSTRATES, AND THEY ARE ALL ONE THING: THE LAYERS BETWEEN THE AGENT AND THE INSTITUTION
+
+⏱️ **Nineteenth pass of `2026-10-18`.** Evidence:
+[`p297-promotion-gap.2026-10-18-p297.tsv`](../evidence/p297-promotion-gap.2026-10-18-p297.tsv) ·
+[`p297-channel-control.2026-10-18-p297.tsv`](../evidence/p297-channel-control.2026-10-18-p297.tsv).
+
+🟢 **This file grew by NINE rows and not one came from a search.** `p296` left `ACTION PG` — work
+[`p989`'s orphan list](../compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt)
+before running the mandated leg. `p297` ran a named batch of twelve out of it: **nine admitted here,
+two onto [`agents/top.md`](../agents/top.md), one rejected outright.**
+
+🔵 **The nine are not a miscellany. Sorted by what they sit between, they are one finding:** this
+base had shelves for the **agent** (42 rows) and for the **platform** (Moodle, Canvas, Open edX,
+Kolibri) and **almost nothing for the layers in between** — the ones an institution actually
+contracts about.
+
+| layer | rows before `p297` | added `p297` |
+|---|---|---|
+| **evaluation** | 1 *(`pedagogy-benchmark`, `p296`)* | [`inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) · [`edu-qurating`](https://github.com/AI-for-Education/edu-qurating) · [`voice-ai-evaluation-framework`](https://github.com/AI-for-Education/voice-ai-evaluation-framework) |
+| **curriculum standards interop** | 🔴 **0** | [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) |
+| **credentialing** | 🔴 **0** | [`digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) |
+| **governance / audit** | 🔴 **0** | [`agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) |
+| **autograding platform** | 2 *(`Autolab`, `Artemis`)* | [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) · [`google/prog-edu-assistant`](https://github.com/google/prog-edu-assistant) ⚠️ archived |
+| **language substrate** | several *(regional)* | [`AI4Bharat/IndicTrans2`](https://github.com/AI4Bharat/IndicTrans2) |
+
+🔴 **Two rows on this file are deliberately NOT education repositories, and both say so in their own
+cell.** [`inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) (3.0k★, **8 033 commits**, UK AI
+Security Institute) and
+[`agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) (6.4k★, 2 880
+commits) **mention neither education nor teaching nor students in their READMEs.** They were kept off
+the agents shelf on `p293`'s README test and admitted here as **substrates**, because the two things
+every regional leg names as the binding constraint — *documented evaluation* and *auditable
+governance* — had **zero rows** on any shelf in this base. The boundary is in the row; a reader
+cannot pick either up believing it was built for a classroom.
+
+⚠️ **One row is archived and is shelved anyway, with the date in the cell.**
+[`google/prog-edu-assistant`](https://github.com/google/prog-edu-assistant) was **archived by its
+owner on `2025-07-23`** and is read-only. Apache-2.0 is irrevocable and the notebook-autograding
+shape has not moved, so it is a **complete worked reference** for a client teaching Python in Colab —
+and it must **never** be briefed as maintained software.
+
+### 🔴 What the star column would have done to this batch, again
+
+`p296` measured that ranking these rows on stars inverts them. `p297` is a second confirmation from a
+wider sample, and the spread is now extreme:
+
+- [`voice-ai-evaluation-framework`](https://github.com/AI-for-Education/voice-ai-evaluation-framework) — **1★**, and it is the only instrument in this base that measures **child** speech recognition, which every literacy pattern here silently assumes works.
+- [`edu-qurating`](https://github.com/AI-for-Education/edu-qurating) — **3★ / 277 commits**, and it scores teaching material on **pedagogical quality** rather than readability.
+- [`agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) — **6.4k★**, and it is **not an education repository at all.**
+
+🔵 **The rule this file now states plainly: on the substrate layer, stars measure the size of the
+repo's developer audience, not its usefulness to an education engagement.** The three most
+engagement-critical rows added this pass have **5 stars between them.**
+
+### 🔵 The channel
+
+`curl -sI` over `github.com`: **403 on 4 of 4**, **including an invented hostname that returned the
+identical 403** — so `p294`'s rule stands, a `403` **licenses no existence claim**, and there is no
+`api.github.com` path. All twelve reads are `WebFetch` over rendered `github.com` HTML (sidebar/About
+licence label plus README body). Star and fork figures are **rendered** reads and `p295` showed they
+are **not monotonic**.
+
+### 🔴 Next batch for this file — `ACTION PG-2`
+
+**481 of the 528 permissive orphans are still unshelved**, but `p297` measured that they are **not
+equally worth reading**: the densest cluster (~20 LMS-integration MCP adapters) is **already covered
+four times over** on the agents shelf. The next pass should take ~12 from the layers still at **zero
+or one row** — assessment integrity, retention/early-warning, and **student-records interop**, where
+`1EdTech` has further repositories on the list (`lti-1-3-php-library`, `OpenCASE`'s siblings) — and
+**skip the adapter cluster** unless a candidate reaches a system no shelved row reaches.
+
 ## 🟢 Pass 296 — THREE NEW PERMISSIVE SUBSTRATES, TWO SELF-CORRECTIONS, AND NOT ONE OF THE FIVE WAS A DISCOVERY
 
 ⏱️ **Eighteenth pass of `2026-10-18`.** Evidence:
@@ -644,9 +715,22 @@ second repository to pair with `Pyris`; it is an alias of `Pyris`. See
 | 🆕 [datakind/student-success-tool](https://github.com/datakind/student-success-tool) | 🟢 **MIT** *(sidebar, `p296`)* | **8★ / 2 forks / 3 015 commits / `develop`** | 🟢 **PROMOTED AT `p296`, and the star count is the least informative number on this row.** A **3 015-commit** Python pipeline for data-assisted academic advising: ingestion, feature creation, exploratory analysis, modelling and tests, built to surface the students who most need contact. From **DataKind**, funded by **Google.org**; README reports a senior-graduation gain at **John Jay College** (CUSP). Default branch is **`develop`** — read it there or read nothing. 🔵 **The early-warning layer `P3` and `P13` both call for, now with a permissive grant** and a named deployment outcome rather than a benchmark. |
 | 🆕 [open-edge-platform/education-ai-suite](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0** *(sidebar + README, `p296`)* | **0★ / 11 forks / 450 commits / `main`** | 🟢 **PROMOTED AT `p296` — the on-premise *runtime* answer, from Intel.** Reference apps, libraries, microservices and **benchmarking tools** for education AI workloads: audio and video pipelines shipped as *Smart Classroom* and *Teaching Assistant* applications, with tooling to decide **which hardware a use case actually needs**. Targets **Intel CPUs, integrated GPUs and NPUs** via **OpenVINO**. ⚠️ **0★ — this is a vendor reference stack, not a community project; its 11 forks and 450 commits are the only adoption signal.** 🔵 **Why it matters anyway:** every sovereign / air-gapped pattern on this base (`P7`, `P9`, `P12`) has had to hand-roll its inference layer. ⚠️ **It is hardware-coupled by design** — price the lock-in, and do not brief it as portable. |
 | 🆕 [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** *(sidebar, `p296`)* | **12★ / 0 forks / 5 commits / `main`** | 🟢 **PROMOTED AT `p296` — and it is the first row on this file that measures *pedagogical* competence rather than code.** Two benchmarks that test how well an LLM understands **teaching**, built from **teacher-qualification exam** questions, with the extraction and preprocessing scripts included. Paper: *Benchmarking the Pedagogical Knowledge of Large Language Models* (**arXiv:2506.18710**). 🔴 **Its question bank is LATAM:** the acknowledgements credit **Chile's Ministry of Education** — *Agencia de la Calidad de la Educación* and **CPEIP** — for developing and sharing the exams. 🔵 **This is the partial answer to this base's standing "no education-specific eval" gap**, and the first time that gap has had a LATAM-sourced instrument. ⚠️ **5 commits: it is a benchmark release, not a maintained harness** — and a model that scores well on Chilean teacher-certification items has not thereby been shown to teach a Chilean child. |
+| 🆕 [1EdTech/OpenCASE](https://github.com/1EdTech/OpenCASE) | 🟢 **Apache-2.0** *(sidebar, read `p297`)* | 9★ / 3 forks / **191 commits** / `main` | **The curriculum-standards layer, published by the standards body itself.** *"Implementations of CASE Server and Editor"* — CASE (Competencies and Academic Standards Exchange) **1.0 and 1.1**, and the README states it is **ready for 1EdTech certification**. 🔵 **Why this is a foundation and not a nice-to-have:** every pattern on [`compose/patterns.md`](../compose/patterns.md) that claims *"curriculum-aligned"* has so far meant *aligned to a PDF someone parsed*. CASE is the interchange format ministries and publishers actually exchange standards in, which makes alignment **checkable by a machine instead of asserted in a slide**. Promoted from `p989`'s orphan list. |
+| 🆕 [1EdTech/digital-credentials-public-validator](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 **Apache-2.0** *(sidebar, read `p297`)* | 17★ / 12 forks / **628 commits** / `main` | **The credentialing layer — the first row on this file that validates what a learner walks away with.** Validator for **Open Badges 3.0**, also accepting 2.0 submissions. 628 commits from the standards body. ⚠️ **Boundary, read rather than assumed:** the sidebar description also says *"Comprehensive Learner Record"*, **but the README describes Open Badges validation only.** Do not promise CLR conformance on this row until the CLR path is read at payload. Promoted from `p989`'s orphan list. |
+| 🆕 [AnubisLMS/Anubis](https://github.com/AnubisLMS/Anubis) | 🟢 **MIT** *(sidebar, read `p297`)* | **382★** / 54 forks / **1 638 commits** / `main` | **A whole autograding LMS under a permissive grant, with a named university behind it.** *"Distributed LMS for automating Computing Science Courses From NYU"* — each student gets a **GitHub repo per assignment**, pushes trigger tests, and **results are visible before the deadline**; plus one-click browser **Cloud IDEs** and *"Insights"*, which derives topic understanding from submission and test-result **timestamps**. README names **NYU Tandon**, used there for several semesters. 🔵 This is the permissive answer to *"where is the open grading platform"* that does not require entering `Artemis`'s Java stack — and the **timestamp-derived insight** is an early-warning signal that needs no extra instrumentation. |
+| 🆕 [AI-for-Education/edu-qurating](https://github.com/AI-for-Education/edu-qurating) | 🟢 **MIT** *(sidebar, read `p297`)* | 3★ / 0 forks / **277 commits** / `main` | **Educational-text quality scoring, and it is the first row here that scores teaching material on PEDAGOGY rather than on readability.** A QuRating fork that scores, samples and trains over a Fineweb-Edu-fortified dataset, with a filter keeping the **top 50th percentile on three named axes: factual accuracy, pedagogical quality and lesson engagement.** Ships three templates — *Core Educational*, *Foundational Literacy – Teacher-Facing*, *Foundational Literacy – Student-Facing* — and is tied to an arXiv paper, with trained models on HuggingFace. ⚠️ **The weights are on `huggingface.co`, which is closed at this environment's resolver** (`p295`): the **code** is readable here, the **models are not**. |
+| 🆕 [AI-for-Education/voice-ai-evaluation-framework](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | 🟢 **MIT** *(sidebar, read `p297`)* | 1★ / 0 forks / 61 commits / `main` | **Child-speech evaluation — a layer no row on any shelf here had.** Evaluates **NeMo ASR models on Early Grade Reading Assessment (EGRA)** for **Kiswahili child speech**, everything in Docker (CPU-only or GPU). 🔵 **Why a 1★ repo is a foundation row:** every literacy-tutor pattern this base has written assumes a speech front-end that works on a six-year-old in a noisy classroom, and **adult-speech WER does not predict that.** This is the instrument that measures the assumption. ⚠️ The README **names no country**; Kiswahili implies East Africa, and the row says so rather than inventing a deployment. |
+| 🆕 [AI4Bharat/IndicTrans2](https://github.com/AI4Bharat/IndicTrans2) | 🟢 **MIT** *(sidebar, read `p297`)* | **482★** / 135 forks / 124 commits / `main` | **The language layer for an Indian engagement.** *"Translation models for 22 scheduled languages of India"* — the README's list runs to 26 entries, 25 Indic variants (with Kashmiri, Sindhi and Manipuri appearing in more than one script) plus English. From **AI4Bharat**, whose other repositories (`IndicTTS`, `IndicWav2Vec`, `Shoonya`, `IndicLLMSuite`) remain **unshelved on `p989`'s list** and are the obvious next batch. ⚠️ **Boundary: the page mentions no education use.** It is a substrate — the thing a Hindi or Tamil tutor is *built on*, not an education instrument itself. |
+| 🆕 [UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | 🟢 **MIT** *(sidebar, read `p297`)* | **3.0k★** / 827 forks / **8 033 commits** / `main` | **The evaluation harness this base has declared a gap for several passes — and it is a government's.** *"Inspect: A framework for large language model evaluations"*, from the **UK AI Security Institute** (`UKGovernmentBEIS`). **8 033 commits** makes it the deepest history admitted to this file this pass by a factor of five. 🔴 **Boundary, and it is the reason this row is NOT on [`agents/top.md`](../agents/top.md): the README mentions neither education, teaching nor students.** It is a general eval framework. 🔵 It earns a foundation row because the EU's Annex III high-risk classification for student evaluation (`T-p296a`) demands **documented, reproducible evals**, and a UK-government-maintained harness is an easier artefact to defend to a regulator than a bespoke test script. |
+| 🆕 [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** *(sidebar, read `p297`)* | **6.4k★** / 1.1k forks / **2 880 commits** / `main` | **The governance layer, and governance is the barrier every regional leg on [`intel/market.md`](../intel/market.md) keeps naming.** *"Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents"* — it checks whether an agent's tool call is **allowed** before it runs, binds actions to a specific agent identity, keeps **tamper-evident audit records**, and ships compliance mapping. 🔴 **Boundary: the README does not mention education.** Substrate, not an education instrument. 🔵 Against **LATAM's 30%-of-universities-have-a-published-AI-policy** figure and the EU literacy duty already in force, the auditable-log half of this repo is the part that converts a pilot into something an institution can sign. |
+| 🆕 [google/prog-edu-assistant](https://github.com/google/prog-edu-assistant) | 🟢 **Apache-2.0** *(sidebar, read `p297`)* | 34★ / 17 forks / 165 commits / `main` | ⚠️ **ARCHIVED BY ITS OWNER ON `2025-07-23`, read-only — shelved WITH that written down, not quietly.** *"An easy system to create autograding tests in Jupyter Python notebook and deploy to cloud"*: autograding for Python courses run in Jupyter or Colab, with three execution modes — inside the student notebook, hosted on Google Cloud Run, or by script. 🔵 **Why an archived repo is still a row:** Apache-2.0 is irrevocable, the notebook-autograding shape is stable, and for a client teaching Python in Colab this is a **complete worked reference** — 165 commits, Google's. 🔴 **Never brief it as maintained.** Vendor the pattern; do not take a dependency on it. |
 
-**31 permissive foundation rows** (17 from pass 264, 4 in pass 265, 6 added and payload-verified in
-pass 267, 4 Ed-Fi rows in pass 268). Pass 267's six were all found by **ranking candidates by commits
+**48 permissive foundation rows, re-enumerated at `p297`** (39 before this pass, **+9 promoted by
+`p297` out of `p989`'s orphan list**). 🔴 **`p297` CORRECTION: this sentence read *"31 permissive
+foundation rows"* and had done for several passes — the table held 39.** The figure was written as a
+sum of the passes that had added rows (17 at `p264`, 4 at `p265`, 6 at `p267`, 4 at `p268`) and then
+never re-summed as later passes appended, so it drifted exactly like the star cells `p294` refuted.
+**It is now a COUNT OF THE TABLE, measured by enumerating it, not a running total carried in prose.** Pass 267's six were all found by **ranking candidates by commits
 and probing named institutions and ministries by hand** — not one of them would surface in a
 star-sorted topic listing. **Pass 268's four were not found by searching at all**: they were sitting
 in this base's own gap register, Apache-2.0 and payload-read, while this file had no row for them.

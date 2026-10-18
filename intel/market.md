@@ -10,6 +10,52 @@ updated: 2026-10-18
 > Sourced from web research on 2026-10-18. Vendor-sourced figures are marked; they are
 > carried because they are the only numbers available, not because they are reliable.
 
+## 🟢 Pass 297 — ALL FOUR REGIONS RE-RUN, THE HAUSA LEG BROKE EMEA'S NINTH NIL, AND ONE REGION NOW HOLDS TWO OPPOSITE NATIONAL POSTURES
+
+⏱️ **Nineteenth pass of `2026-10-18`.** Evidence:
+[`p297-promotion-gap.2026-10-18-p297.tsv`](../evidence/p297-promotion-gap.2026-10-18-p297.tsv) ·
+[`p297-channel-control.2026-10-18-p297.tsv`](../evidence/p297-channel-control.2026-10-18-p297.tsv).
+
+| region | leg | result |
+|---|---|---|
+| **North America** | mandated | 🟡 **held.** Spread still too wide for a single figure; governance gap widened; **$55 M** CMU + Gates into gateway courses. 🔴 **One public-money figure REFUSED for want of a source** |
+| **EMEA** | mandated | 🔴 **NINTH consecutive nil** on education-specific material — enterprise AI only |
+| **EMEA** | directed: **🇳🇬 Hausa** | 🟢 **BROKEN IN THE SAME HOUR — five instruments, four new.** N-ATLAS, ATLAS Umoja AI, aprendIA, InkubaLM, a teacher-education framework |
+| **EMEA** | directed: **🌏 Central Asia** | 🟢 **NEW REGION, and it holds an education-named in-force national date** — Kazakhstan, `1 Sept 2026`, by decree |
+| **APAC** | mandated | 🔴 **nil on education.** Every non-nil hit was **corporate learning** — reproduces `p292` exactly |
+| **LATAM** | mandated | 🟢 **strongest again (8th time), with the governance gap now DOUBLE-INSTRUMENTED** |
+
+🟢 **`p295`'s prediction has now held FOUR times and should be promoted from a finding to a standing
+rule: yield tracks how UNWORKED a region is, not its size, its wealth or its language.** The two
+directed legs this pass (**Hausa**, **Central Asia**) produced **nine new datums** between them; the
+two mandated regional legs that have been run every pass for nine passes produced **one** (a cross-leg
+corroboration, below). 🔵 **The mandated EMEA and APAC phrasings should be run once as controls and
+the budget spent on an unworked region** — unspent still: **Amharic** (native-language, against
+`p295`'s English-language Ethiopia leg), **Lusophone Africa**, and now **the Caucasus** and
+**Francophone Maghreb**.
+
+🟢 **The pass's cheapest check, and it is new to this base: CROSS-LEG CORROBORATION.** North America's
+leg reported *"OpenAI launched a country-level education programme with eight national partners in Q1
+2026."* The Central Asia leg, run independently in the same pass, named **Kazakhstan in that inaugural
+cohort with a seat count (165 000 ChatGPT Edu licences)**. **Two legs, neither aware of the other,
+agreeing on one programme.** 🔵 A global claim should appear in the legs of the countries it names —
+and when it does not, that absence is now a measurable signal rather than a silence.
+
+🔴 **THE BRIEFING-GRADE FINDING OF THE PASS: one `region` value now contains two opposite national
+postures, 2026, both state-driven.**
+
+| | 🇳🇬 **Nigeria** | 🇰🇿 **Kazakhstan** |
+|---|---|---|
+| **what the state did** | **published an open multilingual model** (N-ATLAS) and, via **GSMA + 5 governments**, is scaling it as a **template** across the continent | **bought 165 000 proprietary ChatGPT Edu seats** and mandated AI in schools **by presidential decree** from `1 Sept 2026` |
+| **the studio's opening** | build **on state-published weights**; the deployed teacher tool (`aprendIA`, 5 800 teachers) is **closed — that is the gap** | the **governance, evaluation and integration layer** around a platform the state **already owns** |
+| **what it needs from these shelves** | language substrate + WhatsApp delivery ([`rumi-platform`](https://github.com/Orenda-Project/rumi-platform)) | 🆕 [`agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) · 🆕 [`inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) |
+
+🔵 **Both engagements are `EMEA` and neither brief transfers to the other.** This is the clearest case
+this base has produced for why `region` alone cannot scope an engagement — **the field places the
+opportunity; the national posture decides what you sell.** The nine substrate rows promoted onto
+[`repos/foundations.md`](../repos/foundations.md) this pass are what the Kazakh column needs, and they
+existed in this repository, unshelved, the whole time.
+
 ## 🔴 Pass 296 — ALL FOUR REGIONS RE-RUN, AND THE EU DEADLINE THIS BASE HAS BEEN SELLING AGAINST MOVED SIXTEEN MONTHS
 
 ⏱️ **Eighteenth pass of `2026-10-18`.** Every regional leg was run. Findings are placed in
@@ -1539,6 +1585,43 @@ data gets the ranking backwards.
 
 ### North America
 
+#### 🟡 `p297` · `2026-10-18` — held, with ONE cross-leg corroboration and ONE figure this pass REFUSES to carry
+
+**The spread is still live and still disqualifies a single figure.** This pass's leg returned North
+America at **$951 M (2024) → $2.3 B (2029)**, ~**15.9% CAGR**, and a regional share of **36%** in one
+source against **37.5%** in another. Global 2026 estimates ranged **$10.6 B–$11.4 B** off 2025 bases
+of **$6.4 B**, **$7.52 B** and **$8.3 B**. 🔵 **Quote the band and name the source, or quote nothing**
+— `p295` said the same and nothing has narrowed since.
+
+**The governance gap is the number that actually sells work, and it widened again.** Only **~10% of
+institutions have formal AI guidelines** while **71% of US teachers lack AI training** — against
+student usage the same corpus puts at **92%**. 🔴 That is the shape of every North American
+engagement this base has described for ten passes: **adoption is not the problem; the absence of a
+defensible policy and a trained workforce is.**
+
+🟢 **Public money, named:** **Carnegie Mellon + the Gates Foundation, $55 M** into AI courseware aimed
+at **gateway college courses** — the highest-failure-rate, highest-attrition courses in a US degree,
+which is exactly where the retention rows on
+[`repos/foundations.md`](../repos/foundations.md) (`datakind/student-success-tool`,
+`AnubisLMS/Anubis`'s timestamp insights) apply.
+
+🔴 **One figure is REFUSED, not carried.** A *"$169 M government commitment to responsible AI in
+higher education in Q1 2026"* appeared in this leg with **no primary source and no naming of which
+government**. It is **not** entered on this file. `p295`'s standing rule: an unattributed public-money
+figure in a SOW is a liability, not a datum.
+
+🟢 **Cross-leg corroboration — two independent legs, one programme.** This leg reported that
+**OpenAI launched a country-level education programme with eight national partners in Q1 2026**. The
+**Central Asia** leg of the same pass independently named **Kazakhstan as a member of that inaugural
+cohort**, with a seat count. 🔵 Neither leg knew about the other; they agree. **This is the first time
+this base has corroborated a North-America-sourced claim from a non-Western leg**, and it is a cheap
+check worth repeating: a global programme should show up in the legs of the countries it names.
+
+🔵 **Regulatory posture unchanged and still the architectural constraint:** education AI operates with
+minimal external oversight, decisions sit with **individual schools, districts and universities**, and
+state action is piecemeal — **Colorado** and **Texas** named this pass, on top of the
+**California AB 1159 / Oklahoma / Maryland** cluster `p296` priced.
+
 #### 🟢 `p296` · `2026-10-18` — the regulation is at STATE level, and it now constrains the architecture, not just the rollout
 
 **What the leg returned.** A 2026 legislative tracker counts **134 AI-in-education bills introduced
@@ -2148,6 +2231,83 @@ evidenced** — Oklahoma/Maryland's human-oversight rule and NYC's K-8 moratoriu
 hardest configurations, and they are specifiable today.
 
 ### EMEA
+
+#### 🟢 `p297` · `2026-10-18` — the mandated phrasing's NINTH nil, broken the same hour by HAUSA; and the region now contains TWO OPPOSITE national postures
+
+🔴 **`AI education EMEA 2026 adoption regulation players` returned its NINTH consecutive nil on
+education-specific material.** It served general enterprise AI only: **38% of EMEA organisations have
+not begun piloting**, **60% report siloed data**, UK/Germany/France/Netherlands/Nordics as early
+adopters, UAE and Saudi Arabia as heavy state investors. **Not one education vendor, ministry or
+institution.** `p291` declared this phrasing a measured dead channel; **nine passes of identical
+corpus is no longer a measurement, it is a cost.** Run it as a control at most.
+
+🟢 **The directed leg broke it immediately — FOURTH consecutive confirmation that yield tracks how
+UNWORKED a region is, not how large or how English-speaking.** `p297` spent its directed leg on
+**🇳🇬 HAUSA**, unspent on `p295`'s backlog, and it returned **five instruments, four of them new to
+this base**:
+
+| instrument | what it is | grant |
+|---|---|---|
+| **N-ATLAS** | **Nigeria's government-released open multilingual model** (Sept 2025): **Hausa, Yoruba, Igbo and Nigerian-accented English**, open-sourced deliberately so others on the continent could build on it | 🟢 open-sourced *(terms unread — no slug recovered this pass)* |
+| **ATLAS Umoja AI** | **GSMA + five African governments** launched an initiative to **scale Nigeria's language-model template across the continent** | — |
+| **aprendIA Nigeria** (IRC) | WhatsApp teacher coach, **English + Hausa**, low-bandwidth, voice-to-text. **5 800 teachers today → projected 137 000 by 2028** | 🔴 **NOT open source** |
+| **InkubaLM** | open base model over **five African languages including Hausa** | 🟢 open |
+| Nigerian teacher-education framework | Sept 2026 paper: fine-tuned LLaMA + **Hausa ASR + Hausa TTS** for Integrated Science teacher education in Nigerian colleges | reference design, **not evaluated** |
+
+🔵 **THE GENERATIVE UNIT HAS CHANGED AGAIN, and this is the finding of the leg.** `p287` recorded that
+the generative unit in education had become **the ministry**. In Nigeria it is now **a government
+publishing a model for other governments to fork** — N-ATLAS as a *template*, scaled by **ATLAS Umoja
+AI** across five more states. 🟢 For a studio this is the cheapest possible entry: the language layer
+for sub-Saharan Africa is being **paid for and published by the state**, not licensed.
+
+🔴 **And the informed gap is the exact inverse: the most DEPLOYED Hausa teacher tool is the one with
+no grant.** `aprendIA` reaches 5 800 teachers and is **proprietary**. Every open instrument in the
+table above is a **model or a paper**; the **deployed teacher-facing product is closed.** That is a
+build opportunity, stated as a measurement rather than a hope — pair the open language layer
+(N-ATLAS / InkubaLM) with the open delivery shapes this base already shelves
+([`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform), WhatsApp, 15
+languages, Apache-2.0).
+
+🔵 **TechInHausa** (48+ Hausa educational video resources) is an **initiative, not a model** — recorded
+so a later pass does not chase it as a repository.
+
+#### 🟡 `p297` · `2026-10-18` — 🌏 CENTRAL ASIA, filed HERE, and it holds the strongest proprietary national rollout this base has measured
+
+⚠️ **Placement stated, because the vocabulary forces a choice.** `region` is a closed five-value
+field. **Kazakhstan and Uzbekistan are filed under `EMEA`** here, following the common enterprise
+grouping of Central Asia/CIS with EMEA rather than APAC. **The countries are named in the prose**, per
+this base's own rule, so a reader who groups them with APAC loses nothing.
+
+🟢 **Kazakhstan has an education-named, in-force national rollout date — the category `T-p296b` said
+only APAC had.**
+
+- **Joined OpenAI's "Education for Countries" programme in January 2026**, in the **inaugural
+  cohort** — the same programme the North America leg saw as *"eight national partners"*.
+- **165 000 ChatGPT Edu licences, free of charge**, across the education system, from a memorandum
+  signed **November 2025** with **OpenAI + Freedom Holding + Bilim Group**.
+- **AI enters Kazakh schools from `1 September 2026`** by **presidential decree**: pilot in **10 rural
+  schools** (**Pavlodar** and **Kyzylorda** regions), scaling to **500 institutions by January 2027**.
+- Talent pipeline: **TUMO Astana**, **Tomorrow School**, and **QAIRU** research university, launching
+  **September 2026**.
+
+🟡 **Uzbekistan is a strategy, not yet a rollout.** The **"Strategy for the Development of Artificial
+Intelligence Technologies until 2030"** was approved **October 2024** and covers education.
+**AI Leaders 2026** — with **Stanford HAI** and **OpenAI Academy** — launched **8 April 2026**, runs
+**8 weeks**, with interpretation into **Uzbek, Russian and Kazakh**. ⚠️ A target of **5 million AI
+specialists by 2030** attributed to President Mirziyoyev is **secondary-source only** and is carried
+with that flag.
+
+🔴 **Declared gap: NEITHER country has a national OPEN-SOURCE AI education strategy, and both national
+rollouts are PROPRIETARY-PLATFORM rollouts.** KazLLM (sovereign, reportedly **8B and 70B**) is
+**commentary-attributed** and unread; Uzbekistan reportedly relies on **external and open-source model
+integration** rather than a sovereign stack.
+
+🔵 **The contrast inside this ONE region field is the briefing-grade finding.** **Nigeria publishes an
+open model and invites five governments to fork it. Kazakhstan licenses 165 000 proprietary seats by
+decree.** Both are `EMEA`, both 2026, and **they imply opposite engagements**: in Nigeria the studio
+builds on state-published weights; in Kazakhstan the studio's opening is the **governance, evaluation
+and integration layer around a platform the state has already bought** — which is precisely the layer
+[`repos/foundations.md`](../repos/foundations.md) gained nine rows for this pass.
 
 #### 🔴 `p296` · `2026-10-18` — THE EU HIGH-RISK DEADLINE FOR EDUCATION MOVED BY SIXTEEN MONTHS, AND THE DUTY THAT BINDS TODAY DID NOT MOVE AT ALL
 
@@ -2998,6 +3158,40 @@ EMEA ed-tech vendor**. 🔴 A declared hole, not a silence, and it stays ranked.
 
 ### APAC
 
+#### 🔴 `p297` · `2026-10-18` — nil on education-specific regulation, and EVERY non-nil hit was CORPORATE learning again
+
+🔴 **`AI education APAC 2026 adoption regulation players` returned nothing education-specific.** The
+corpus was enterprise AI: *"from AI pilots to production"*, sovereignty, real-time data. **This
+reproduces `p292`'s finding exactly** — in APAC the mandated phrasing resolves to **corporate L&D**,
+not to schools or universities. Four passes now agree, so it is a property of the channel.
+
+🟡 **What it did return is corporate learning, and it is recorded as such rather than as education
+data:**
+
+| player | move | note |
+|---|---|---|
+| **TCS + Pearson** | multi-year **AI learning alliance** targeting employer skills gaps | corporate skilling, not K-12 or HE |
+| **LearnUpon** | APAC expansion, **Sydney HQ**, **Create+** AI course authoring | vendor LMS |
+| **Alteryx** | Academy relaunched with **personalised AI learning paths + credentials** | 🔵 credentials — see `digital-credentials-public-validator`, new this pass |
+| **NIIT MTS** | **sixteenth consecutive** year on Training Industry's Top-20 custom content list (2026) | corporate content |
+
+🔵 **Policy, thin but non-zero:** **OpenAI appointed an ANZ policy lead** as **Canberra tightens AI
+governance and copyright rules**; **Singapore** is consulting on AI in **financial institutions**
+(explicitly not education); and **Forrester** expects **sovereignty to shape infrastructure choices
+for roughly half of APAC firms**. **49% of APAC businesses** name insufficient real-time data
+infrastructure as an adoption barrier — enterprise, not education.
+
+🟢 **Carried, not re-derived:** `T-p296b`'s in-force education-touching instruments —
+**South Korea's Framework Act on AI (in force `2026-01-22`)** and **Vietnam's AI law** — remain the
+region's binding dates. `p297` adds **Kazakhstan's `1 September 2026` school decree** to that same
+category but **files it under `EMEA`** (see the Central Asia block there), so a reader comparing
+APAC-only will not see it.
+
+🔴 **The standing APAC problem is now explicit: ANZ is not part of the compliance market and the
+corporate-learning corpus crowds out the education one.** A directed, country-named leg
+(`p291`'s Indonesia, `p293`'s ASEAN) has broken this nil **every time it has been tried**. The
+mandated regional phrasing has broken it **never**.
+
 #### 🟢 `p296` · `2026-10-18` — THREE BINDING NATIONAL AI LAWS ARE NOW IN FORCE IN THIS REGION, AND ONE HAS AN EDUCATION-SPECIFIC GRACE PERIOD
 
 🔴 **APAC is no longer the "voluntary guidance" region this base has been briefing.** It is split, and
@@ -3618,6 +3812,48 @@ Korea's act pairs its obligations with **state adoption support**, which is unus
 naming in a pitch.
 
 ### LATAM
+
+#### 🟢 `p297` · `2026-10-18` — the strongest leg AGAIN, and the governance gap is now measured by TWO independent instruments that must not be blended
+
+🟢 **LATAM out-returned all three other regions for the eighth time, and it did so with named
+instruments rather than vendor estimates.**
+
+**Adoption — two surveys, both large:**
+
+- **Digital Education Council, *AI in Higher Education LATAM Survey 2026*:** **92% of students** and
+  **79% of faculty** actively engaging with AI, from **30 000+ responses across 29 institutions**, run
+  with **Tecnológico de Monterrey** and its **Institute for the Future of Education**.
+- **UNESCO IESALC + UNU-IAS working paper:** **200 institutions across 19 countries**, with use split
+  **teaching and learning 73.5% · research 57.0% · administration 34.1% · community engagement 20.0%**.
+
+🔴 **Governance — and here `p297` makes a correction to how this file reports the gap.** This leg
+returned *"only **30%** of universities in Latin America have published AI policies."* This base
+already carries IESALC's *"**26%** with a strategy"* (`p281`, `p293`). 🔵 **These are TWO DIFFERENT
+INSTRUMENTS measuring two different things — a *published policy* and a *strategy* — and they must
+not be averaged, merged, or quoted as a range as if one number had moved.** They agree on the order of
+magnitude, which is the claim that survives: **adoption is near-universal and governance sits around
+a quarter to a third.** That is the gap, and it is now **independently double-sourced** rather than
+doubled by restatement.
+
+🟡 **Regulation remains heterogeneous, with no unified regional framework:**
+
+| country | instrument | binding? |
+|---|---|---|
+| **Chile** | **National AI Policy since 2021**, AI law **under discussion** | 🟢 most advanced in the region |
+| **Brazil** | national AI strategy, **no education-sector rules** | 🟡 |
+| **Colombia** | national AI strategy, **no education-sector rules** | 🟡 |
+| **Mexico** | **SEP**, **ANUIES** and **Observatorio IA** recommendations | 🔴 **explicitly lack binding force** |
+
+🔵 **Institutions and instruments to name in a LATAM proposal:** **Tec de Monterrey**, **UNAM** (its
+own AI-in-education project), **UPC Peru** (**weekly** teacher training — the only named recurring
+cadence in the region), **Pontificia Universidad Católica de Chile**; the **IDB**'s study on
+regulatory models for the region; and the **ILIA 2025** index, produced with **CEPAL**, which tracks
+readiness, adoption and governance across **19 countries**.
+
+⚠️ **Channel limitation, stated because a silent one reads as a clean run.** `unu.edu` remains
+**unreachable at this environment's resolver** (`p295`: `EAI_NONAME`, same allowlist layer as the
+gateway), so the **UNU/IESALC paper and the DEC survey are SEARCH-ATTRIBUTED, not read at source.**
+🔴 **Seventeen passes and still no primary government or IGO source read first-hand on this file.**
 
 #### 🔴 `p296` · `2026-10-18` — 87% ADOPTION AGAINST 26% STRATEGY: the region's engagement is GOVERNANCE RETROFIT, measured on 200 institutions
 

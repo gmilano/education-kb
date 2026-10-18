@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 297 — THE SEVENTEENTH NIL ON A PERMISSIVE EDUCATION ERP/CRM, AND THIS TABLE FINALLY GAINS A PERMISSIVELY-LICENSED LMS ANYWAY
+
+⏱️ **Nineteenth pass of `2026-10-18`.** Evidence:
+[`p297-promotion-gap.2026-10-18-p297.tsv`](../evidence/p297-promotion-gap.2026-10-18-p297.tsv).
+
+🔴 **The mandated vertical leg is nil for the SEVENTEENTH consecutive pass, and the saturation `p293`
+measured is now total in a new way: every one of the ten result slots resolved to ONE vendor's
+domain.** The leg `open source platform education LMS SIS MIT Apache 2026` returned **ten
+`openeducat.org` URLs** — the same vendor's comparison page in eight languages, plus two glossary
+pages. 🔵 **There is no longer a corpus here to search; there is a single SEO estate.** Recorded so the
+next pass spends the budget elsewhere.
+
+🟡 **What the vendor's own pages restate, carried as vendor-sourced:** the groupings
+*course-centric* (Moodle, Open edX), *institutional* (Sakai, ILIAS), *open-core* (Canvas LMS),
+*lightweight* (Chamilo) and *integrated education ERP* (OpenEduCat); that **OpenEduCat is the only
+option combining LMS + SIS + fees on one database** (its own product, and `p293` recorded its **Odoo
+dependency**); and Moodle's own statistics of **400M+ users across ~150 000 sites**. ⚠️ Vendor
+restatement, not an independent reading — and `p296` caught this exact corpus publishing
+`frappe/lms` as MIT when its sidebar says **AGPL-3.0**.
+
+🟢 **This table gains a row anyway, and it closes a gap every previous pass on this file has had to
+apologise for: THE FIRST PERMISSIVELY-LICENSED LMS HERE.**
+[`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) — **MIT**, **382★ · 54 forks · 1 638
+commits · `main`**, **NYU Tandon** named in its README — was promoted out of
+[`p989`'s orphan list](../compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt),
+**not** out of the leg.
+
+🔴 **Why that matters on THIS file specifically.** Every other platform row here carries a licence
+conversation: **Moodle** GPL-3.0, **Canvas** AGPL-3.0 (network clause), **Open edX** AGPL,
+**OpenEduCat** dual-licensed on top of Odoo. The standing advice has therefore been *"integrate, do
+not fork."* 🟢 **Anubis is the first row where forking is a legitimate option** — with two honest
+boundaries: it is scoped to **computing-science courses** (not a Moodle replacement), and operating it
+means **operating Kubernetes**. **Price the operations, not the licence.**
+
+🔵 **The ERP/CRM gap is unchanged and is now stated as a measurement rather than a nil.** After
+seventeen passes: **there is no permissively-licensed education ERP/CRM.** The permissive layer in
+education is **tooling** (autograding, standards, credentialing, evaluation — six new rows across this
+pass); the **system-of-record layer is copyleft, open-core, or Odoo-dependent, without exception.** A
+studio that needs a permissive system of record must **build on `Ed-Fi-ODS`** (already on
+[`repos/foundations.md`](../repos/foundations.md)) and accept that **no ERP exists to start from.**
+
 ## 🔴 Pass 296 — the SIXTEENTH nil on a permissive education ERP/CRM, and a widely-republished "MIT" LMS claim died at the sidebar
 
 ⏱️ **Eighteenth pass of `2026-10-18`.** Evidence:
@@ -594,6 +635,7 @@ indented diagrams are not rows, which is control `C7`.
 | **Frappe LMS** | [frappe/lms](https://github.com/frappe/lms) | `AGPL-3.0` *(`license.txt` — lowercase **and** `.txt` — `33 893` B, payload read `p276`)* | Frappe/Python + Vue | **A modern course platform on the Frappe stack** (courses, batches, live classes, quizzes, certificates, programmable via the Frappe API). 🔴 **Carried as `LIVE-NOGRANT` — *"no payload at eleven filenames"* — until `p276` enumerated the tree.** ⚠️ **Licence boundary:** `AGPL-3.0` reaches users over a network, so client-proprietary code must sit **outside** the deployment — call it as a separate service over the REST API, never as a Frappe app in the same bench. [evidence](../evidence/tree-enumeration.2026-10-17-p276.tsv) |
 | **LearnPress** | [LearnPress/learnpress](https://github.com/LearnPress/learnpress) | `GPL-3.0-or-later` *(`composer.json` + `readme.txt` `License: GPLv3`, read `p276`; **no `LICENSE` file** in 1 985 paths)* | WordPress plugin (PHP) | **The WordPress route into LMS work** — the lowest-friction platform when a client already runs WordPress. 🟢 **`p276` discharged this base's own hypothesis** that the grant lives in a plugin header channel invisible to filename probes. ⚠️ Copyleft, and the add-on ecosystem is commercial. |
 | **nextSIS** | [Kosudo/nextSIS](https://github.com/Kosudo/nextSIS) | `GPL-3.0` *(`license.txt`, `39 890` B composite — nextSIS + CodeIgniter + Bootstrap — payload read `p276`)* | PHP / CodeIgniter | **A student information system, and an early-stage one** — the README says early development, and 0★. 🔴 **Carried as *"NO GRANT, 17 filenames probed"*; the grant was at `license.txt` all along.** ⚠️ **Not a starting point today** — shelved so the *licence* refusal is not what carries the exclusion. The honest reason is maturity. |
+| 🆕 **Anubis** | [AnubisLMS/Anubis](https://github.com/AnubisLMS/Anubis) | 🟢 **MIT** *(sidebar, read `p297`)* | Python/Flask + Kubernetes, React front end | **The first PERMISSIVELY-licensed LMS on this table, promoted at `p297` — every other platform row here is GPL, AGPL or open-core.** *"Distributed LMS for automating Computing Science Courses From NYU"* — **382★ · 54 forks · 1 638 commits · `main`.** A student **GitHub repo per assignment**, pushes trigger tests, **results visible before the deadline**; one-click browser **Cloud IDEs**; and *"Insights"*, which infers topic understanding from submission and test-result **timestamps**. Named deployment: **NYU Tandon**, several semesters. 🔵 **Where it fits:** scoped to **computing-science courses** — it is not a Moodle replacement, and that narrowness is the point. For a CS faculty engagement it is the only row here a studio can **fork and ship without a copyleft or open-core conversation**. ⚠️ Operating it means operating **Kubernetes**; price that, not the licence. |
 
 **24 platform rows, all licence-verified from payload** (13 from pass 264, 4 in pass 265, 5 added in
 pass 267, **2 in pass 271**). Pass 267's five came from **commit-ranking and hand-probing named programmes**, not from

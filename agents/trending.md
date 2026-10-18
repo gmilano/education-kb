@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 297: two rows promoted, a NAME COLLISION caught at the gate, and the mandated leg's TWENTY-THIRD nil re-served figures this base refuted
+
+Evidence: [`p297-promotion-gap.2026-10-18-p297.tsv`](../evidence/p297-promotion-gap.2026-10-18-p297.tsv) ·
+[`p297-channel-control.2026-10-18-p297.tsv`](../evidence/p297-channel-control.2026-10-18-p297.tsv).
+
+🔵 **New on the agents shelf this window, by first-hand read:**
+
+| repo | licence (read `2026-10-18`) | stars | forks | commits | branch | note |
+|---|---|---|---|---|---|---|
+| [`LEARNableLabs/opentutor`](https://github.com/LEARNableLabs/opentutor) | 🟢 `MIT` *(sidebar + README)* | 1 | 0 | **300** | `main` | 293 courses; asks before it explains; resurfaces missed concepts days later. 🔴 **Name collision — see below.** **Now shelved** |
+| [`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp) | 🟢 **`ISC`** *(sidebar)* | 11 | 9 | 59 | `master` | Canvas **+ Gradescope** (submission status) — the only shelf row reaching Gradescope. **Now shelved** |
+
+🔴 **The identity gate stopped a row from contradicting itself.** Both candidates were **new by slug**
+and **both tripped a bare-name check**, which is the trap `p296` fell into with `dolos` and `Autolab`:
+
+- **`opentutor`** → this shelf already carries [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor)
+  (MIT, **142★**). `LEARNableLabs/opentutor` is **an entirely different repository with the same name**
+  (MIT, **1★**, 300 commits). Published bare, the table would have shown one name with two star
+  counts. **Both rows now name the other, and the shelf's rule is: cite the owner, never the bare
+  name.**
+- **`canvas-mcp`** → the bare name hit **all three shelf files**. The slug was new; the **capability
+  is this shelf's most redundant** (four Canvas MCP servers now). That demoted the row from a
+  promotion to **a promotion for one named reason** — Gradescope — and its own cell tells a reader to
+  pick [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (295★, 1 026 commits)
+  instead for Canvas alone.
+
+🔵 **`ISC` is a licence class these shelves have never carried.** Every permissive grant here has been
+MIT, Apache-2.0 or BSD. ISC is OSI-approved and functionally BSD-2-Clause. 🟢 **The licence gate's
+vocabulary should be taught it** rather than meeting it for the first time on a live engagement.
+
+🔴 **The mandated leg `top open source AI agents education 2026 github MIT` returned its TWENTY-THIRD
+consecutive nil — and it re-served, verbatim, two figures this base refuted on `p294`.** It again
+published `microsoft/ai-agents-for-beginners` as a **"12-lesson course"** with **"67,223 stars"**. The
+first-hand read on `p294` was **77.4k★ / 25.4k forks** and the repository's own description is
+**"18 Lessons"**. 🔵 **The SEO corpus this leg draws on is not merely behind the repositories it ranks;
+it is stable in its wrongness across three passes.** It is a control, not a source.
+
+🟡 **Non-education candidates the leg surfaced, recorded so a later pass does not re-chase them:**
+`rohitg00/ai-engineering-from-scratch` (reached #1 on GitHub Trending `2026-05-24`) and
+`pguso/agents-from-scratch` are **courseware for building agents**, not agents for education — the
+category error `p293` discharged after chasing it for three passes. ⚠️ **Hermes Agent** was published
+in this leg at *"180 000+ GitHub stars since its February 2026 launch"*; this base holds the slug as
+`NousResearch/hermes-agent` (`p294`'s spelling correction) and **has not verified that figure** — it
+is not entered anywhere.
+
+🔴 **Three slugs read at payload this pass and kept OFF this shelf on the README test:**
+[`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) (MIT, **3.0k★**,
+8 033 commits) and
+[`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) (MIT,
+**6.4k★**, 2 880 commits) **mention neither education, teaching nor students** — both shelved as
+substrates on [`repos/foundations.md`](../repos/foundations.md) with that boundary in the row.
+[`AI-for-Education/fabdata-llm`](https://github.com/AI-for-Education/fabdata-llm) (MIT, 9★) was
+**rejected outright**: a generic multi-provider LLM wrapper whose **only education signal is its
+owner's name**. 🔵 The same owner's three other repositories **were** admitted — **the README is the
+test, not the namespace.**
+
+⚠️ **Star counts here are sidebar-rendered reads.** `curl` over `github.com` was **403 on 4/4**
+probes, **including a deliberately invented hostname which returned the identical 403** — so a 403
+licenses **no** existence claim (`p294`), and there is no `api.github.com` channel. See `p295`: stars
+are **not** monotonic.
+
 ## 2026-10-18 — Pass 296: the trending log had the row the shelf was missing, for at least two passes
 
 Evidence: [`p296-promotion-gap.2026-10-18-p296.tsv`](../evidence/p296-promotion-gap.2026-10-18-p296.tsv).

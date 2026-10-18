@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 `T-p297a` — THE STATE HAS BECOME A MODEL PUBLISHER, AND IN THE SAME REGION ANOTHER STATE BECAME A PLATFORM BUYER
+
+⏱️ `2026-10-18`, pass 297.
+
+`T-p287` recorded that the generative unit in education had become **the ministry**. `p297` measures
+the next move, and it **splits in two opposite directions inside one `region` value**.
+
+🟢 **Nigeria publishes.** **N-ATLAS** — a government-released open multilingual model covering
+**Hausa, Yoruba, Igbo and Nigerian-accented English** (Sept 2025) — was open-sourced *deliberately*,
+so others on the continent could build on it. **GSMA and five African governments** then launched
+**ATLAS Umoja AI** to scale **Nigeria's language-model template across the continent**. The unit is no
+longer a ministry procuring a system; it is **a state shipping weights for other states to fork.**
+
+🔴 **Kazakhstan buys.** The same quarter, by **presidential decree**, AI enters Kazakh schools from
+**`1 September 2026`** — pilot in **10 rural schools** (Pavlodar, Kyzylorda), **500 institutions by
+January 2027** — on **165 000 free ChatGPT Edu licences** from a **November 2025** memorandum with
+**OpenAI, Freedom Holding and Bilim Group**, as part of OpenAI's **"Education for Countries"**
+inaugural cohort.
+
+🔵 **Why this is one trend and not two.** Both are **state-driven, 2026, and filed `EMEA`** — and they
+imply **engagements with nothing in common**. Where the state publishes, the studio's opening is the
+**delivery and evaluation layer on top of public weights**, and the gap is that the most deployed tool
+is closed (`aprendIA`, **5 800 teachers → 137 000 projected by 2028**, proprietary). Where the state
+buys, the opening is the **governance, evaluation and integration layer around a platform already
+paid for**.
+
+⚠️ **What to check before this trend carries a date in a SOW.** N-ATLAS's **licence terms are unread**
+— this pass recovered **no repository slug** for it, so *"open-sourced"* is **press-attributed**, the
+same grade `p295` gave the Ethiopian instruments. **KazLLM** (reportedly 8B and 70B) is
+**commentary-attributed and unread.** The dates and seat counts are reported; **the grants are not
+verified.**
+
+## 🔴 `T-p297b` — THE OPEN EDUCATION-AI STACK IS TOP-HEAVY: 42 AGENT ROWS OVER AN INSTITUTIONAL LAYER THAT WAS NEARLY EMPTY
+
+⏱️ `2026-10-18`, pass 297. Evidence:
+[`p297-promotion-gap.2026-10-18-p297.tsv`](../evidence/p297-promotion-gap.2026-10-18-p297.tsv).
+
+🔴 **Measured, not asserted.** Entering this pass these shelves carried **42 agent rows** and, for the
+layers an institution actually contracts about:
+
+| layer | rows before `p297` |
+|---|---|
+| evaluation | **1** |
+| curriculum-standards interop | 🔴 **0** |
+| credentialing | 🔴 **0** |
+| governance / audit | 🔴 **0** |
+| LMS-integration MCP adapters | **10** *(4 Canvas, 3 Google Classroom, 3 Moodle)* |
+
+🔵 **The redundancy and the vacancy are the same finding.** The community has built the **agent** and
+the **adapter** many times over — `p297` found **~20 more LMS adapters** sitting unshelved in this
+base's own orphan list, i.e. **duplicative capability** — while **nothing** was building the
+standards, credentialing and audit layers. Those are now filled from the **standards body itself**
+(`1EdTech`), a **government** (`UKGovernmentBEIS/inspect_ai`, 8 033 commits) and a **vendor**
+(`microsoft/agent-governance-toolkit`, 6.4k★) — **not** from the education-AI community.
+
+🟢 **The consequence for a studio is a pricing one.** The tutor is a commodity: **36 permissive agent
+rows** can start one. What a client cannot download is **a defensible evaluation, a machine-checkable
+curriculum alignment, a verifiable credential and an audit trail** — and until this pass this base had
+**almost no answer** for any of them. **That is where the margin is.**
+
+## 🟢 `T-p297c` — ALL FOUR REGIONS NOW NAME THE SAME BINDING CONSTRAINT, AND IT IS NOT MODEL QUALITY
+
+⏱️ `2026-10-18`, pass 297.
+
+| region | adoption | governance |
+|---|---|---|
+| **North America** | students **92%** | 🔴 **~10%** of institutions have formal AI guidelines; **71%** of US teachers untrained |
+| **EMEA** | — | **Art. 4 AI-literacy duty in force since `2026-02-02`**; Annex III education high-risk **`2027-12-02`** (`T-p296a`) |
+| **APAC** | — | Korea Framework Act in force **`2026-01-22`**; Kazakhstan school decree **`2026-09-01`** *(filed EMEA)* |
+| **LATAM** | students **92%** · faculty **79%** | 🔴 **~26% with a strategy** *(IESALC)* / **~30% with a published policy** *(DEC leg)* |
+
+🔵 **Four regions, four instruments, one gap: near-universal use with governance in the 10–30% band.**
+⚠️ **The LATAM pair must not be blended** — *published policy* and *strategy* are different
+measurements from different surveys; they corroborate an **order of magnitude**, not a trend line.
+
+🟢 **This is why `p297` spent its promotion budget on substrates rather than agents.** The constraint
+every region names is **documentation, oversight and auditability** — and the EU's extra sixteen
+months (`T-p296a`) is **build time, not relief**. The rows that answer it are now shelved:
+[`inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai),
+[`agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit),
+[`edu-qurating`](https://github.com/AI-for-Education/edu-qurating),
+[`OpenCASE`](https://github.com/1EdTech/OpenCASE) and
+[`digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator).
+
+## 🔴 `T-p297d` — IN APAC THE MANDATED EDUCATION QUERY RESOLVES TO CORPORATE L&D, AND FOUR PASSES NOW AGREE
+
+⏱️ `2026-10-18`, pass 297.
+
+🔴 `AI education APAC 2026 adoption regulation players` returned **no education-specific regulation**
+for the fourth pass in a row, and **every non-nil hit was corporate learning**: **TCS + Pearson**'s
+multi-year AI learning alliance, **LearnUpon**'s Sydney APAC HQ and *Create+* authoring,
+**Alteryx**'s Academy relaunch with credentials, **NIIT MTS**'s sixteenth year on a corporate-content
+list. `p292` found exactly this; `p297` confirms it is **a property of the channel, not of the
+quarter.**
+
+🔵 **The actionable reading is not "APAC is thin."** It is that **in APAC the buyer the corpus
+surfaces is an employer, not a ministry** — so an APAC pitch built from this channel will be a
+**skills-and-credentialing** pitch, which is why
+[`digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator)
+(new this pass) matters more here than a tutor does. 🟢 A **country-named** leg has broken this nil
+**every time it has been tried** (`p291` Indonesia, `p293` ASEAN); the mandated phrasing has broken it
+**never**.
+
 ## 🔴 `T-p296a` — THE EU'S EDUCATION HIGH-RISK DEADLINE MOVED TO DECEMBER 2027, AND THE DUTY THAT ACTUALLY BINDS TODAY IS THE ONE NOBODY IS SELLING
 
 ⏱️ `2026-10-18`, pass 296.

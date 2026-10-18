@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 297 — THE ORPHAN LIST IS NOT UNIFORM: THE EVAL/STANDARDS LAYERS WERE GENUINELY MISSING, THE LMS-MCP CLUSTER WAS ALREADY COVERED FOUR TIMES OVER
+
+⏱️ **Nineteenth pass of `2026-10-18`.** Evidence:
+[`p297-promotion-gap.2026-10-18-p297.tsv`](../evidence/p297-promotion-gap.2026-10-18-p297.tsv) ·
+[`p297-channel-control.2026-10-18-p297.tsv`](../evidence/p297-channel-control.2026-10-18-p297.tsv).
+
+🟢 **`ACTION PG` discharged.** `p296` ordered the next pass to *"work the orphan list before running
+the mandated leg, and promote or reject a named batch."* `p297` ran **a named batch of twelve** out of
+`p989`'s list: **eleven admitted, one rejected**, every one read first-hand at `github.com` HTML. The
+batch and its verdicts are in the evidence TSV, one row per slug.
+
+🔴 **But the headline finding is about the LIST, not the rows: the promotion gap is NOT uniform, and
+`p296` left that impression.** `p297` re-diffed all `528` permissive orphans against all three shelf
+files: **481 are still unshelved.** Sorting those 481 by capability shows the single densest cluster
+is **~20 LMS-integration MCP adapters** (Canvas, Moodle, Google Classroom, one `myschoolapp`, one
+`usp-mcp`) — and **this shelf already carries four Canvas MCP servers, three Google Classroom servers
+and three Moodle servers.** That cluster is **duplicative capability, not missing capability.**
+
+🔵 **What was genuinely missing is a different shape entirely: the layers between the agent and the
+institution.** Evaluation, curriculum standards, and credentialing had **no row on any shelf** —
+against a shelf that has carried a **declared evaluation gap for several passes**. Nine of the eleven
+admissions this pass are substrate rows and are on
+[`repos/foundations.md`](../repos/foundations.md); only two belong on this file.
+
+### 🟢 The two new agent rows, and both carry a boundary in the row
+
+| repo | licence (read `2026-10-18`) | stars | forks | commits | branch | why it is here |
+|---|---|---|---|---|---|---|
+| [`LEARNableLabs/opentutor`](https://github.com/LEARNableLabs/opentutor) | 🟢 `MIT` *(sidebar + README)* | 1 | 0 | **300** | `main` | 293 courses, spaced retrieval as the product. 🔴 **NAME COLLISION** — see below |
+| [`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp) | 🟢 **`ISC`** *(sidebar)* | 11 | 9 | 59 | `master` | **the only row on this shelf that reaches Gradescope.** 🔵 New licence class |
+
+🔴 **The identity gate earned its keep twice this pass, and `p296` is the reason it was run at all.**
+Both candidates passed a full-slug check and **both tripped a bare-name check**:
+
+1. **`opentutor`** — this shelf has carried [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor)
+   (MIT, 142★) since before this pass. `LEARNableLabs/opentutor` is an **unrelated repository with the
+   same name.** Not a duplicate — but published without disambiguation it would have read as one row
+   contradicting itself on its own star count. Both rows now name the other.
+2. **`canvas-mcp`** — the bare name hit **all three shelf files**. The slug is new; the *capability* is
+   the shelf's most heavily covered. This is what demoted the row from "promotion" to "promotion for
+   one named reason", and it is why the row says *choose `vishalsachdev` instead* in its own cell.
+
+🔵 **`ISC` is a licence class these shelves have never carried.** Every permissive grant here was
+MIT, Apache-2.0 or BSD. ISC is OSI-approved and functionally BSD-2-Clause; the licence gate's
+vocabulary should be taught it rather than left to classify it on first contact.
+
+### 🔴 Three slugs read at payload and KEPT OFF this shelf on the README test
+
+The README test — *does the repository itself claim an education use* — struck three admitted-elsewhere
+repositories off **this** file, and `p293` set that precedent when it discharged a candidate it had
+chased for three passes as *"real, permissive, and not an education repository."*
+
+| repo | licence | adoption | why NOT an agent row |
+|---|---|---|---|
+| [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) | 🟢 `MIT` | **3.0k★ · 8 033 commits** | UK AI Security Institute's LLM eval framework. 🔴 **README mentions neither education, teaching nor students.** Shelved as a **substrate** |
+| [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 `MIT` | **6.4k★ · 2 880 commits** | Policy enforcement, zero-trust agent identity, sandboxing, tamper-evident audit. 🔴 **No education mention.** Shelved as a **substrate** |
+| [`AI-for-Education/fabdata-llm`](https://github.com/AI-for-Education/fabdata-llm) | 🟢 `MIT` | 9★ · 175 commits | 🔴 **REJECTED OUTRIGHT, not shelved anywhere.** A generic multi-provider LLM wrapper; **the only education signal is the owner's name.** LiteLLM-class alternatives are orders of magnitude better adopted |
+
+🔵 **`fabdata-llm` is the useful rejection.** An owner called `AI-for-Education` published four repos
+on `p989`'s list; **three are real education instruments and the fourth is plumbing.** An
+org-name heuristic would have carried all four. The README is the test, not the namespace.
+
+### 🔵 The channel, restated with its negative control
+
+`curl -sI` over `github.com` was **403 on 4 of 4** probes — **including a deliberately invented
+hostname, which returned the byte-identical 403.** `p294`'s rule therefore holds unchanged: a `403`
+**licenses no existence claim**. All twelve reads this pass are `WebFetch` over rendered
+`github.com` HTML (sidebar/About licence label plus README body). There is **no `api.github.com`
+channel**; every star and fork figure below is a **rendered** read, and `p295` showed those are
+**not** monotonic.
+
+### 🔴 Standing action for the next pass — `ACTION PG-2`
+
+**The orphan list is now partitioned; work the partition, not the list.** 481 slugs remain unshelved,
+but they are not equally worth a read. `p297` measured that the **MCP/LMS-adapter cluster (~20) is
+saturated** and the **institutional-layer clusters were empty**. The next pass should take the next
+**named batch of ~12 from the layers this shelf still has no row for** — assessment-integrity,
+early-warning/retention, and student-records interop (`1EdTech` has further repos on the list) — and
+**skip the adapter cluster entirely** unless a candidate reaches a system no shelved row reaches, the
+one test that admitted `aryankeluskar/canvas-mcp`.
+
 ## 🟢 Pass 296 — THE 21-PASS "NIL" WAS NOT A SUPPLY PROBLEM: A 41 000-STAR MIT ROW WAS SITTING VERIFIED IN THIS REPOSITORY, UNSHELVED
 
 ⏱️ **Eighteenth pass of `2026-10-18`.** Evidence:
@@ -887,7 +968,7 @@ non-commercial friction.
 | Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT | 288 | Private AI tutor that adapts lessons to the learner. Ships both as an agent skill and as a web app. |
 | universal-diagnostic-tutor-skill | [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | MIT | 246 | Diagnosis-first tutor for STEM and CS: establishes the misconception before it teaches. |
 | OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | 267 | Intelligent tutoring system with Bayesian Knowledge Tracing, ReactJS + Firebase. UC Berkeley CAHL lab, 1,045 commits. The reference open ITS for maths/STEM. |
-| OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT | 142 | Local, block-based adaptive workspace that generates notes, quizzes and flashcards. Runs without a cloud dependency. |
+| OpenTutor *(zijinz456 — **a DIFFERENT repository** from `LEARNableLabs/opentutor` below)* | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT | 142 | Local, block-based adaptive workspace that generates notes, quizzes and flashcards. Runs without a cloud dependency. 🔴 **Disambiguated at `p297`:** a second, unrelated MIT project named *OpenTutor* (`LEARNableLabs/opentutor`, 1★, 300 commits) was promoted onto this table in the same pass. **Cite the owner, never the bare name.** |
 | education-skills | [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | MIT | 114 | Collection of education-focused agent skills for teaching and tutoring workflows. |
 | Claw-ED | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | MIT | 62 | Local-first assistant that drafts editable lessons, student materials and slides from a curriculum. Teacher-reviewed beta — human-in-the-loop by design. |
 | AI_Tutor_Release (EduAgent) | [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | MIT | 65 | RAG tutor targeted at grades 1–9. |
@@ -907,8 +988,10 @@ non-commercial friction.
 | Shiksha Copilot | [microsoft/Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) | MIT *(sidebar + README legal notices, p296)* | 9 | 🟢 **PROMOTED AT `p296`.** Teacher lesson-planning and classroom-material generation bound to a **chosen curriculum, grade, subject and chapter**, with teacher review before export to Word, PowerPoint or student handouts. **149 commits · 12 forks · `main`.** From **Microsoft Research India** with the **Sikshana Foundation** as education partner. ⚠️ README states it was *primarily tested on English inputs and outputs* — the curriculum binding is the reusable part, not the language coverage. The export-to-Office step is why it survives a teacher-review mandate: the artefact a teacher edits is a file they already own. |
 | k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 *(sidebar, p296)* | 572 | 🟢 **PROMOTED AT `p296` — the highest-star *skills* row on this shelf, and it ships an evaluation framework with the skills.** Source and eval harness for the agent skills in **Claude for Teachers**, co-developed with **Learning Commons**: four K-12 skills — lesson-plan creation, lesson differentiation, lesson prep, and formative check-for-understanding builders. **105 forks · 4 commits · `main`** — a small, finished artefact, not a living platform. Pairs directly with `T2` (education agents ship as skills) and with the eval gap this base has declared for several passes. |
 | AI-Teaching-Agent | [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | MIT *(sidebar + README, p296)* | 0 | 🟡 **Promoted at `p296` as a READING, not a dependency.** One Markdown teaching source → reviewable, locally exportable Lab and Exam packages plus an optional 5-8 slide deck; **human approve/reject before any export**, nothing auto-published, and the README says automatic grading is **deliberately frozen**. **0★ · 0 forks · 30 commits · `main`.** Its value is the *shape*: it is the smallest complete worked example of the human-checkpoint architecture `T-p288a` says the regulators in all four regions now require. Do not brief it as software a client can adopt. |
+| OpenTutor *(LEARNableLabs — **a DIFFERENT repository** from `zijinz456/OpenTutor` above)* | [LEARNableLabs/opentutor](https://github.com/LEARNableLabs/opentutor) | MIT *(sidebar + README, p297)* | 1 | 🟡 **Promoted at `p297` out of `p989`'s orphan list, and it arrives with a NAME COLLISION this shelf must not blur.** Two unrelated MIT projects are now both called *OpenTutor* on this one table; this is the `LEARNableLabs` one. *"Compounding Deliberate Curiosity"* — teaches one short lesson at a time, **asks a question before it explains**, revisits what the learner keeps missing and resurfaces ideas days later, i.e. **spaced retrieval as the product rather than a feature**. Ships **293 courses** and will build a course for an arbitrary topic; runs on web, Telegram, **or inside another agent**. **1★ · 0 forks · 300 commits · `main`.** 🔵 The 300-commit history against 1★ is the same adoption-versus-depth inversion `p296` measured on the substrate shelf. Brief it as a **reading of the spaced-retrieval tutor loop**, not as a dependency. ⚠️ This base has **not** read `zijinz456/OpenTutor`'s commit count, so the two are compared here on stars only. |
+| canvas-mcp *(Gradescope reach)* | [aryankeluskar/canvas-mcp](https://github.com/aryankeluskar/canvas-mcp) | **ISC** *(sidebar, p297)* | 11 | 🟡 **The FOURTH Canvas MCP row on this shelf, promoted for exactly ONE reason: it is the only row here that reaches GRADESCOPE.** *"Collection of Canvas LMS and Gradescope tools for the model context protocol."* Canvas side: courses, modules, module items, file URLs, calendar events, assignments. Gradescope side: courses, assignments **and submission status** — a surface no other row on this shelf has. **11★ · 9 forks · 59 commits · `master`.** 🔴 **Dominated on adoption and depth by `vishalsachdev/canvas-mcp` (295★, 1 026 commits).** Choose this one **only** when the engagement must read Gradescope; for Canvas alone, choose `vishalsachdev`. 🔵 **`ISC` is a licence class new to these shelves** — OSI-approved and functionally equivalent to BSD-2-Clause. Every permissive grant carried here until now was MIT, Apache-2.0 or BSD; the gate's vocabulary should learn this one. |
 
-**34 permissive rows in this table, measured at `p296` by enumerating it** — of which **33 are
+**36 permissive rows in this table, measured at `p297` by enumerating it** — of which **35 are
 distinct repositories**, because **1 line is the withdrawn non-repository row** `~~Iris~~` (withdrawn
 at `p282` as a GitHub name alias for `ls1intum/Pyris`, kept as a line so the alias stays documented).
 🔵 **Both numbers are published because the standing gate counts LINES (`34`) and an engagement needs

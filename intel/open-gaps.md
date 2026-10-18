@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 297 — **`ACTION PG` DISCHARGED, AND DISCHARGING IT REFUTED `p296`'S OWN FRAMING OF THE LIST IT ORDERED WORKED**
+
+⏱️ `2026-10-18`, nineteenth pass. Evidence:
+[`p297-promotion-gap.2026-10-18-p297.tsv`](../evidence/p297-promotion-gap.2026-10-18-p297.tsv) ·
+[`p297-channel-control.2026-10-18-p297.tsv`](../evidence/p297-channel-control.2026-10-18-p297.tsv).
+
+### 🟢 Discharged this pass
+
+| item | outcome |
+|---|---|
+| **`ACTION PG`** *(`p296`: work the orphan list, promote or reject a named batch)* | 🟢 **DISCHARGED. Named batch of 12: 11 admitted** (9 → `repos/foundations.md`, 2 → `agents/top.md`), **1 rejected** (`AI-for-Education/fabdata-llm`). 🔴 **And it REFUTED the framing of the action itself** — see below |
+| **`p296` backlog 3 — spend the directed leg on an UNWORKED REGION** | 🟢 **DISCHARGED TWICE, and the prediction held a FOURTH time.** 🇳🇬 **Hausa** → 5 instruments, 4 new · 🌏 **Central Asia** → a new region with an **education-named in-force national date**. **9 new datums from 2 directed legs; 1 from 4 mandated legs** |
+| 🆕 **`p296`'s "~500 uniform orphans" framing** *(unranked — found by executing the action)* | 🔴 **REFUTED.** The list is **partitioned**: its densest cluster (**~20 LMS-integration MCP adapters**) is **already covered 10× on these shelves**, while standards/credentialing/governance sat at **0 rows**. **481 of 528 remain unshelved, and they are not equally worth reading** |
+| 🆕 **A stale prose total on `repos/foundations.md`** *(unranked)* | 🟢 **CORRECTED.** The file said *"31 permissive foundation rows"* for several passes; **the table held 39.** It was a carried sum of per-pass additions, never re-summed. Now a **measured count of the table** (48 after this pass) |
+
+### 🔴 The finding that cost the most to learn
+
+🔴 **`p296` ordered the next pass to work a list it described as ~500 permissive orphans, and the
+description was the thing most worth correcting.** Working it revealed the backlog is not a queue of
+equivalent candidates. **~20 of the 481 unshelved slugs are Canvas/Moodle/Classroom MCP adapters**, and
+this base **already shelves ten such servers** — reading further into that cluster buys **duplicative
+capability**. Meanwhile **four layers an institution actually contracts about had 0 or 1 rows**:
+evaluation (1), curriculum-standards interop (**0**), credentialing (**0**), governance/audit (**0**).
+
+🔵 **The generalisable error: `p296` counted the gap by SLUG and reported a volume. The gap that
+mattered was by CAPABILITY, and reporting a volume hid it.** A promotion backlog must be
+**partitioned before it is prioritised**, or a pass will spend its budget on the cluster that is
+easiest to enumerate.
+
+### 🔴 Still open
+
+| gap | why it survived `p297` |
+|---|---|
+| 🔴 **ALL TWELVE `p297` ROWS ARE SIDEBAR-GRADE** *(new, and this pass CREATED it)* | **No `LICENSE` payload was read for any of them.** `curl` 403 on 4/4, no `api.github.com`, no raw path. This base has been bitten **twice** by single-path reads (`p295`: `Submitty` → `LICENSE.md` present, plain `LICENSE` **404**). **12 new rows at the weakest grade this file grades** — the largest evidence-grade regression of the pass, caused by it |
+| 🔴 **`ISC` is not in the licence gate's vocabulary** *(new)* | `aryankeluskar/canvas-mcp` is **ISC** — OSI-approved, functionally BSD-2-Clause, and **the first non-MIT/Apache/BSD permissive grant these shelves carry.** The gate will meet it for the first time **on a live row** |
+| 🔴 **The ten remaining star/forks cells** | 🔴 **UNTOUCHED for a second pass** — `uPortal` 286★ · `schulcloud-server` 81★ · `studio` 193★ · `Tangerine` 70★ · `DFE-Digital` 38★ · `Ed-Fi-ODS` 28★ · `nbgrader` 1.4k★ · `Numbas` 215★ · `PrairieLearn` 519★ · `OpenEMIS` 7★. `p297` spent its budget on `ACTION PG` as ordered; **the prior for this set is not zero** (`p295` refuted 2 of 11) |
+| 🔴 **Licences read on a single path, across the whole shelf corpus** | 🔴 **Carried a third pass, and `p297` made it worse by 12 rows.** Four spellings now live here: `LICENSE`, `LICENCE`, `LICENSE.md`, `LICENSE.txt` |
+| 🔴 **Other prose-carried totals** *(new)* | The `31`-vs-`39` error was found by accident. **Every count written as prose rather than measured from its table is suspect** — this file, `agents/top.md`'s tier counts, and `floors.tsv`'s census line |
+| 🔴 **The README column over the whole shelf corpus** | **FOUR passes carried** (`p293`-`p297`) |
+| 🔴 **No primary government or IGO source, EIGHTEENTH pass** | `unu.edu` remains **unreachable at the resolver** (`p295`: `EAI_NONAME`, same allowlist layer as the gateway). The **UNU/IESALC** paper and the **DEC LATAM survey** are **search-attributed**. Kazakhstan's decree and Nigeria's N-ATLAS are **press-attributed** |
+| 🔴 **N-ATLAS has no slug and no read grant** *(new)* | Nigeria's government model is the **language layer of `P58`** and *"open-sourced"* is **press-attributed only**. 🔴 **`P58` must not be sold until this is read** |
+| 🔴 **`huggingface.co`** | Still closed at the resolver. `edu-qurating`'s trained models and the Horus weights remain **unread** |
+| 🟡 **The `no-label` signal, un-reconciled** | Untouched. Known **non-specific** since `p295` |
+| 🔴 **No code from any regional leg, SEVENTH pass** | Hausa and Central Asia both returned **instruments, programmes and dates — no permissive repository slug.** The regional legs inform `intel/`; they have never yet produced a shelf row |
+
+### 🔵 Backlog for `p298`, ranked
+
+1. 🔴 **Payload-grade the twelve `p297` rows.** Highest because this pass created it: 12 new rows whose
+   grants were read from **rendered HTML only**. Probe all four `LICENSE` spellings per slug. If no
+   payload channel exists, **say so in each row** rather than leaving the grade implied.
+2. 🔴 **`ACTION PG-2` — the next named batch of ~12, drawn ONLY from the layers still at 0 or 1 row**:
+   assessment integrity, retention/early-warning, and **student-records interop** (`1EdTech` has more
+   on the list — `lti-1-3-php-library`, `OpenCASE`'s siblings; also `openedx/platform-plugin-aspects`,
+   `AI4Bharat`'s four unshelved repos). 🔴 **Skip the ~20-slug adapter cluster** unless a candidate
+   reaches a system **no shelved row reaches** — the one test that admitted `aryankeluskar/canvas-mcp`.
+3. 🔴 **Teach the licence gate `ISC`**, before it classifies a live row `UNCLASSIFIED`.
+4. 🔴 **The ten remaining star/forks cells** — two passes carried, prior is not zero.
+5. 🟢 **Another UNWORKED REGION** — confirmed **four times** now, and it should be promoted from a
+   finding to a standing rule. Unspent: **Amharic** *(native-language, against `p295`'s
+   English-language Ethiopia leg — still the one control never run)*, **Lusophone Africa**, **the
+   Caucasus**, **Francophone Maghreb**.
+6. 🔴 **Audit every prose-carried total against its own table** — the `31`-vs-`39` class.
+7. 🔴 **Recover N-ATLAS's slug and read its grant.** It is a `P58` blocker and the only unread
+   component in a pattern this base now publishes.
+8. 🔴 **The README column over the whole shelf corpus** — four passes carried.
+9. 🟡 **Reconcile the `no-label` signal** against every row it has been read on.
+
+### 🔴 Declared gaps — measured absences, not silences
+
+- 🔴 **No permissively-licensed education ERP/CRM.** **Seventeen consecutive nils.** `p297` adds that
+  the leg is now **a single vendor's SEO estate** — **10 of 10 result slots** resolved to
+  `openeducat.org`. The permissive layer in education is **tooling**; the **system-of-record layer is
+  copyleft, open-core or Odoo-dependent, without exception.**
+- 🔴 **The mandated agents leg is a dead channel: TWENTY-THREE consecutive nils**, and it **re-served
+  two figures this base refuted on `p294`** (`ai-agents-for-beginners` as *"12 Lessons" / 67,223★*
+  against a first-hand **"18 Lessons" / 77.4k★**). **Stable in its wrongness across three passes** —
+  it is a control, not a source.
+- 🔴 **The mandated EMEA regional phrasing: NINE consecutive nils.** The mandated APAC phrasing
+  resolves to **corporate L&D**, four passes running (`T-p297d`).
+- 🔴 **The most deployed Hausa teacher tool is proprietary** (`aprendIA`, 5 800 teachers → 137 000
+  projected by 2028). Every open Hausa instrument found is a **model or a paper**.
+- 🔴 **Neither Kazakhstan nor Uzbekistan has a national OPEN-SOURCE AI education strategy**; both
+  national rollouts are **proprietary-platform rollouts**.
+
 ## Pass 295 — **THE LAW `p294` PUBLISHED WITH ITS CHANNEL IS FALSE, AND THE DNS PROBE'S PREMISE WENT WITH IT**
 
 ⏱️ `2026-10-18`, seventeenth pass. Evidence:
