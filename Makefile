@@ -29,7 +29,39 @@ ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 
 .PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe
 
-hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm, plus p293's calibrated slug-existence oracle
+# 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
+# `gate-identity` went red at p298 on four findings that were its own false positives
+# (a sibling cited in a description cell, harvested as a second recommendation).  make
+# stops at the first failing prerequisite, so `gate-ladder-case`, `gate-readme-channel`,
+# `gate-restatement`, `gate-pin-grant`, `gate-evidence-store` and `gate-slug-oracle` did
+# not run AT ALL at p298 or p299 -- and nothing said so, because the output ended with a
+# failure that looked like the whole story.  Measured at p300: all six were green, so the
+# realised loss was zero and the EXPOSURE was six unrun gates for two passes.  The next
+# masked gate will not be green.
+#
+# 🔵 The generalisable error: ORDERING A SET OF INDEPENDENT CHECKS AS A CHAIN.  These
+# gates share no state and none is a precondition for another, so first-failure-stops
+# buys nothing and silently sheds coverage.  `hooks` now runs EVERY gate, reports a
+# per-gate verdict, and exits non-zero if any failed -- same exit-code contract, no
+# masking.  A gate that cannot mask its siblings is the only kind whose green means
+# anything.
+HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
+             gate-absence gate-dates gate-provenance gate-identity gate-ladder-case \
+             gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
+             gate-slug-oracle
+
+hooks: ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm, plus p293's calibrated slug-existence oracle, and p300's no-masking runner
+	@rc=0; red=""; green=0; \
+	for g in $(HOOK_GATES); do \
+	  if $(MAKE) --no-print-directory $$g; then green=$$((green+1)); \
+	  else rc=1; red="$$red $$g"; echo "🔴 $$g FAILED — continuing, so no gate can mask its siblings (p300)"; fi; \
+	done; \
+	echo ""; \
+	echo "── p300 hooks runner — every gate ran, none masked"; \
+	n=$$(echo $(HOOK_GATES) | wc -w); \
+	if [ $$rc -eq 0 ]; then echo "🟢 PASS — $$green/$$n gates green."; \
+	else echo "🔴 FAIL — $$green/$$n gates green; RED:$$red"; fi; \
+	exit $$rc
 
 # 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
 # p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
@@ -213,7 +245,7 @@ slug-probe: ## ACTION p293 — is it a repository?  make slug-probe SLUGS="owner
 	@$(PY) -I compose/code/p293-slug-existence-oracle/slug_oracle.py --online $(SLUGS) --out evidence/p293-slug-oracle-$$(date +%F).tsv
 
 gate-identity: ## ACTION p283 — no shelf may recommend one repository under two live rows
-	@cd compose/code/p283-repo-identity && { $(PY) test_identity_gate.py > $(IDENTITY_LOG) 2>&1 || { echo "🔴 p283-repo-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(IDENTITY_LOG) ; false ; } ; } && echo "── p283-repo-identity (12 controls: withdrawn-in-place, the cross-table index, both halves in one cell)" && echo "   PASS" || exit 1
+	@cd compose/code/p283-repo-identity && { $(PY) test_identity_gate.py > $(IDENTITY_LOG) 2>&1 || { echo "🔴 p283-repo-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(IDENTITY_LOG) ; false ; } ; } && echo "── p283-repo-identity (17 controls: withdrawn-in-place, the cross-table index, both halves in one cell, plus p300's subject scope — the description-cell false positive, the cell-1 overfit guard and the preserved alias arm)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p283-repo-identity/identity_gate.py --root . || exit 1
 
 # 🟢 p283 (`p282`'s declared item 2): CASE-CLOSE EVERY PATH LADDER, NOT JUST THE LICENCE ONE.

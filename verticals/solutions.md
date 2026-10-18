@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 300 — TWENTIETH CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM, AND THE LEG RETURNED ONE VENDOR'S GLOSSARY IN TEN LANGUAGES — THE SAME ARTEFACT `p299` MEASURED
+
+⏱️ **Twenty-second pass of `2026-10-18`.** Evidence:
+[`p300-websearch.2026-10-18-p300.tsv`](../evidence/p300-websearch.2026-10-18-p300.tsv).
+
+🔴 **`open source platform education ERP CRM MIT Apache` — the TWENTIETH consecutive nil.** 🟢 **Nil
+declared with its query, and this time the corpus is worth naming because it replicates `p299`
+exactly:** of ten slots, **every one** was an **OpenEduCat glossary page** — the same two articles
+(*"Open-Source ERP Framework"*, *"what is open source software"*) served at **`ar`, `fr`, `pt-BR`,
+`zh`, `de`, `es`** and the bare path. 🔵 **Ten results, two documents, one vendor.**
+
+🟢 **This is `T-p299c`'s locale-syndication law confirmed on a second, different leg** — `p299`
+measured it on the EMEA regional query and on this one; `p300` reproduces both. **A law that predicts
+the next observation is worth more than one that explains the last.**
+
+### 🔴 And the vendor's own glossary settles the question the leg was asked
+
+🔵 **The content, read rather than dismissed:** OpenEduCat is built on the **Odoo** framework, reusing
+its ORM, web framework, reporting engine and security model — and 🔴 **it is licensed `LGPL-3.0`**,
+which the glossary itself describes as applying copyleft to the library while permitting closed
+applications to link against it.
+
+🔴 **So the twentieth nil is not an absence of candidates — it is a correct negative.** The most
+visible open-source education ERP in the corpus **is copyleft, by its own documentation**, and
+`p295`-`p299`'s reading of this layer stands: **the education ERP/CRM layer has no permissive
+option**, and the honest advice remains this file's oldest — **integrate at the boundary, do not
+fork.** 🟢 That advice now has code under it (`p298`'s LTI row set) and, as of this pass, a
+**credentialing** boundary too.
+
+### 🟢 What this file gains instead: the layer a registrar actually contracts about
+
+🟢 **Twelve credentialing rows landed on
+[`repos/foundations.md`](../repos/foundations.md) this pass** (the layer stood at **one**), and three
+of them matter at *this* file's altitude — the platform level, where a client asks *"what runs in
+front of my student information system?"*
+
+| boundary | the permissive option, as of `p300` | what it replaces |
+|---|---|---|
+| **learner-held credential** | [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) — MIT, **89★**, iOS **and** Android, 1 309 commits | a vendor badge portal |
+| **verification, embeddable** | [`digitalcredentials/verifier-core`](https://github.com/digitalcredentials/verifier-core) (MIT, engine) behind [`verifier-plus`](https://github.com/digitalcredentials/verifier-plus) (MIT, app) | a hosted verify-this-certificate page |
+| **EU ↔ US format bridge** | [`impierce/credential-converter`](https://github.com/impierce/credential-converter) — Apache-2.0, Rust, **OBv3 ↔ ELM/Europass** | a bespoke mapping project |
+
+🔵 **Why these belong in a platform conversation and not only a repository list:** credentialing is
+the one layer where the **institution of record** is the customer, the **standard** is fixed
+(OBv3 / W3C VC), and the incumbent is usually a hosted vendor whose lock-in is the credential itself.
+🟢 **All three rows above are permissive and payload-verified**, so a studio can put the learner's
+credential beyond the vendor's reach without touching the copyleft LMS at all.
+
+🔴 **The counter-example to carry with them:**
+[`issuebadge/mcp-server`](https://github.com/issuebadge/mcp-server) is **MIT** and was **rejected**,
+because the certificates are minted by a **hosted commercial issuer** behind an `ISSUEBADGE_API_KEY`.
+🔵 **An MIT grant over a thin client to somebody else's service is not an open platform** — and at
+this file's altitude that distinction is the whole job.
+
+
 ## 🔴 Pass 299 — NINETEENTH CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM, AND THE ONE EMPTY CELL IN `p298`'s BOUNDARY TABLE IS NOW EXPLAINED RATHER THAN DECLARED
 
 ⏱️ **Twenty-first pass of `2026-10-18`.** Evidence:

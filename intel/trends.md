@@ -4,6 +4,149 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 `T-p300a` — A REFUSAL IS A FACT ABOUT THE HOST YOU ASKED, NOT ABOUT THE SESSION; AND THE INSTRUMENT FOR THE HOST NOBODY ASKED WAS ALREADY IN THE REPOSITORY
+
+⏱️ `2026-10-18`, pass 300. Evidence:
+[`p300-raw-channel-control.2026-10-18-p300.tsv`](../evidence/p300-raw-channel-control.2026-10-18-p300.tsv).
+
+🔴 **`p297` wrote: *"`curl` 403 on 4/4, no `api.github.com`, no raw path."*** `p299` inherited that
+bound and graded 14 of its 15 new rows **sidebar-only**. Between them, **27 rows** were published at
+this base's weakest evidence grade.
+
+🟢 **Two of those three clauses reproduce exactly at `p300`. The third was never measured.**
+`raw.githubusercontent.com` answers **`200` with the licence payload** while `github.com` and
+`api.github.com` both **403**. 🟢 **And it discriminates:** a known-fake owner and a known-fake
+repository both `404` — which is more than `p294`'s and `p295`'s gateway probes could do.
+
+🔴 **The part that should sting: this base had already written the loop.**
+[`compose/code/lib/probe_payload.sh`](../compose/code/lib/probe_payload.sh) opens with *"SHARED
+PAYLOAD PROBE — source this, do not rewrite it"*, reads exactly that host, resolves the real default
+branch with `ls-remote --symref`, walks a filename ladder, and classifies with the hardened shared
+classifier. **It answered correctly on the first call — including both traps its own header
+documents**: a `dev` default branch and a `LICENSE.md` grant.
+
+🔵 **The generalisable claim is narrower than it looks.** The error was not *"a channel was
+mislabelled"*. It was **writing a conclusion from channel A as a property of the environment**: a 403
+from `api.github.com` became *"this session cannot read payloads."* That is `p294`'s own refuted
+move — **measure channel A, conclude about B** — and it survived three passes because it was phrased
+as a fact about the **session** rather than as what it was: **a fact about two URLs.**
+
+🟢 **The clause the standing oracle gains: NAME THE HOST YOU MEASURED.** An absence claim must carry
+the address it was measured at, or it is a claim about the prober.
+
+🔴 **The second lesson is this base's oldest.** The Makefile header already says *"a rule that has to
+be remembered is not a control"* and *"a control nobody has to assemble is the only kind that gets
+used."* `probe_payload.sh` **is** assembled. It still was not reached for, because **a bound written
+in prose was believed over a tool sitting in the tree.** 🔵 **A base that writes bounds faster than
+it runs its own instruments will reliably under-grade its own shelf.**
+
+
+## 🔴 `T-p300b` — "SHELVED" HAD TWO MEANINGS HERE AND THEY CAME APART: FIFTEEN VERIFIED ROWS WERE ANNOUNCED ON A FILE AND NEVER WRITTEN TO ITS TABLE
+
+⏱️ `2026-10-18`, pass 300.
+
+🔴 **Of the fifteen slugs `p299` admitted to [`repos/foundations.md`](../repos/foundations.md), ZERO
+appeared on a row of that file's `## Permissive foundations` table.** They lived only inside `p299`'s
+own narrative section. `p298`'s thirteen all reached the table.
+
+🔵 **Why this is a trend entry and not a typo.** This base runs instruments that read **table rows** —
+the identity gate, the table-structure gate, `recount`, and the orphan diff whose rule `p299` itself
+published in the same breath (*"match only lines whose first non-space character is a pipe"*). 🔴 **So
+fifteen rows of real, boundary-annotated work were invisible to every instrument that measures this
+shelf — and to any studio reading the shelf rather than the history.**
+
+🟢 **`T-p299b` is this entry's sibling, and `p299` wrote it**: *naming a slug in prose makes it look
+shelved.* 🔴 **This is the inverse — publishing a row in the wrong table makes verified work look
+absent.** Together they say something sharper than either: **a knowledge base needs exactly one
+answer to "where does a fact live", and a file whose narrative and whose shelf are both tables will
+generate both errors.**
+
+🟢 **All fifteen restored at `p300`, marked ♻️**, with `p299`'s figures and boundaries intact. 🔵 **And
+the file's prose row-total had drifted a second time** — 48 published against a table of 61, the exact
+defect `p297` corrected one pass earlier. **A count re-derived by a gate cannot drift; one a pass must
+remember to re-sum will.** Registered as `ACTION PG-5` item 4, not claimed as fixed.
+
+
+## 🔴 `T-p300c` — A LAYER BACKLOG BUILT BY SUBSTRING MATCH ON THE SLUG IS NOT A LAYER BACKLOG
+
+⏱️ `2026-10-18`, pass 300. Evidence:
+[`p300-promotion-gap.2026-10-18-p300.tsv`](../evidence/p300-promotion-gap.2026-10-18-p300.tsv) ·
+[`p300-subject-oracle.2026-10-18-p300.tsv`](../evidence/p300-subject-oracle.2026-10-18-p300.tsv).
+
+`ACTION PG-4` named seven slugs across three layers. 🔴 **Measured at `p300`: three were already on
+this base's tables, and one was not in the named layer at all.**
+
+[`xapi-labs/xapi-cli`](https://github.com/xapi-labs/xapi-cli) was named as part of *"the remaining
+xAPI movement layer."* 🔴 **It is `xapi-to` (`xapi.to`): an agent capability/API-calling CLI with
+crypto, `x402` payments and Cloudflare Workers. Zero Experience-API markers in a 50 919-byte
+README** — no *"Experience API"*, no LRS, no statement, no actor/verb, no `1.0.3`.
+
+🔵 **Both halves of the defect have one cause: the candidate was selected by the string in its
+name.** `p299` had already diagnosed and fixed this on the **shelf** side of the orphan diff. **The
+candidate side was never checked** — so the instruction pushed three already-shelved slugs and one
+mis-layered one into the next pass's budget.
+
+🔴 **And the tokens are ambiguous, measured rather than asserted:** the word `credential` fires
+**15 times** in `xapi-cli`'s README and **not once** about learning — it means an **API key** there.
+🟢 **A layer's vocabulary has to be its NARROW terms** (*open badge*, *verifiable credential*, *CLR*)
+— and even those miss: `issuebadge/mcp-server` says *"verifiable **certificates**"* and scored
+**zero**.
+
+🟢 **So the subject oracle built this pass ships as a RANKER with its measured error rates — one
+false positive and one false negative in twenty — and deliberately NOT wired into `make hooks`.**
+🔵 **A base that had gated on it would have rejected the single agent row this pass found.** The
+decisive read, in all twenty cases, was the README's **first declarative line**.
+
+
+## 🔴 `T-p300d` — AN INDEPENDENT RUN THAT RETURNS EVERYTHING YOU ALREADY HAVE IS CORROBORATION, NOT COVERAGE
+
+⏱️ `2026-10-18`, pass 300. Evidence:
+[`p300-websearch.2026-10-18-p300.tsv`](../evidence/p300-websearch.2026-10-18-p300.tsv).
+
+🟢 **Every datum every regional leg returned was checked against the COMMITTED state of
+[`intel/market.md`](market.md) before being called new.** Result: **21 datums examined, 17 already
+carried, 4 new** — and **the four mandated regional legs produced ZERO new datums between them**,
+while one directed leg at an unworked region (Lusophone Africa) produced **three**.
+
+🔴 **This forced two corrections on the same pass's own first draft, and the corrections are the
+entry:**
+
+1. The draft claimed *"five new datums"* for North America. **Zero were new.** It had been written
+   from what the leg **returned** rather than from what this base **did not already hold**. 🔵 That
+   is `T-p299c` one level up — **counting results as coverage**. A non-nil leg is not a productive
+   leg, and *"the strongest leg again"* is a sentence about volume.
+2. 🔴 **The carried-check itself was wrong on its first run.** It called LATAM's governance figure
+   NEW because it matched the exact string `30% of universities`, while this base holds the same
+   datum as `~30%`. 🔵 **An exact-string carried-check is a LOWER BOUND on what is carried, never a
+   measurement of what is new.**
+
+🟢 **The rule worth keeping: a pass's output is `new datums`, not `datums`** — and the subtraction
+must be done mechanically against the committed file, because no pass can hold 5 400 lines in mind.
+
+
+## 🟢 `T-p300e` — A 168-BYTE DIFFERENCE IN A LICENCE PAYLOAD WAS ENTIRELY ENCODING, SO BYTE-INEQUALITY IS NOT EVIDENCE OF DIFFERENT TERMS
+
+⏱️ `2026-10-18`, pass 300.
+
+🟢 **This base pins grants by byte size, and `p295` celebrated a *"byte size identical"* re-read as
+proof a grant had not moved.** That inference is sound in **one direction only**, and `p300` measured
+the other.
+
+[`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec)'s `LICENSE` is **11 525 B** against the
+**11 357 B** stock Apache-2.0 text carried byte-identically by four other rows read this pass
+(sha256₁₂ `c71d239df917`). 🔴 **A 168-byte excess on a licence payload reads exactly like an appended
+rider.**
+
+🟢 **It decomposes precisely:** **+200** carriage returns (CRLF line endings), **−1** trailing
+newline, **−31** leading spaces on the title line = **168**. `family_of` returns `Apache-2.0`;
+`rider_restriction` returns **empty**. **Same grant, different encoding.**
+
+🔵 **The asymmetry, stated for reuse:** byte-size **equality** at a pin is strong evidence of
+identity; byte-size **inequality** is evidence of nothing until the payload is normalised. 🔴 **A
+probe that flags a size delta as a terms change raises a false alarm on every CRLF repository** — and
+one that treats a size match as sufficient will miss a rider that happens to fit.
+
+
 ## 🔴 `T-p299a` — AN OPEN STANDARD CAN BE CLOSED BY ITS OWN STANDARDS BODY, AND NOTHING ON THE SPEC'S PAGE TELLS YOU
 
 ⏱️ `2026-10-18`, pass 299.

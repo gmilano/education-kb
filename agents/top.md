@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 300 — THE 26-WINDOW DROUGHT ON THIS SHELF ENDS, AND THE ROW CAME FROM THE BACKLOG THE LAST TWO PASSES RETIRED FROM EXACTLY THIS QUESTION
+
+⏱️ **Twenty-second pass of `2026-10-18`.** Evidence:
+[`p300-promotion-gap.2026-10-18-p300.tsv`](../evidence/p300-promotion-gap.2026-10-18-p300.tsv) ·
+[`p300-websearch.2026-10-18-p300.tsv`](../evidence/p300-websearch.2026-10-18-p300.tsv) ·
+[`p300-subject-oracle.2026-10-18-p300.tsv`](../evidence/p300-subject-oracle.2026-10-18-p300.tsv) ·
+[`p300-payload-grade.2026-10-18-p300.tsv`](../evidence/p300-payload-grade.2026-10-18-p300.tsv).
+
+🟢 **ONE NEW ROW: [`oneorigin-2-0/dcc-credential-co-writer-monorep`](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep)**
+— MIT at payload, 440 commits, an AI-assisted **Open Badges v3** authoring agent that runs a
+fine-tuned `phi-4-mini` under **Ollama** and emits a **standard** rather than prose. It is the first
+addition to this shelf since `p273`, and the first that a studio can run **entirely self-hosted**.
+
+### 🔴 The mandated agent leg: the TWENTY-SIXTH consecutive nil, and the directed leg did not beat it either
+
+`top open source AI agents education 2026 github MIT` returned, for the twenty-sixth time, courseware
+about AI rather than agents for education — [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners)
+(MIT, ~67k★ reported), `pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`,
+`rohitg00/ai-engineering-from-scratch` (GitHub Trending #1 on `2026-05-24`). 🔴 **All four already
+carried.** `p298`'s diagnosis holds a third pass: **the query's own words select for the wrong noun.**
+
+🟢 **`p299`'s standing action was carried out: a second, DIRECTED leg was run**, naming the job —
+`open source MCP server grading lesson planning student advising LMS 2026 MIT license`. 🔴 **It
+returned [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) and
+`RohanMuppa/brightspace-mcp` — both already on these shelves, and nothing else.** So the directed leg
+is **not** the fix either, and that is worth recording rather than quietly re-running next pass.
+
+🔵 **What actually produced the row, for the FOURTH pass running: the promotion backlog.** `p285`
+established it, and `p300` makes four confirmations. 🔴 **And the sharper point is that `p298` and
+`p299` had just retired the backlog from this question** — *"the orphan list is the wrong instrument
+for an agent row and should stop being asked for one"* — on the evidence of **two** batches returning
+zero agents. 🟢 **A third batch returned one.** The retirement was a population claim drawn from two
+samples, which is `p295`'s recorded error class (*"measure two instances, conclude about the
+population"*) applied to a *channel* rather than to repositories. **The honest rule: route the orphan
+list to [`repos/foundations.md`](../repos/foundations.md) by default — as `p299` said — but do not
+stop looking at the agent-shaped slugs on it, because the base rate is not zero.**
+
+### 🔴 The one agent-shaped rejection, and it was not about the licence
+
+[`issuebadge/mcp-server`](https://github.com/issuebadge/mcp-server) — *"Issue verifiable certificates
+and badges from any AI agent"*, an MCP server, MIT at payload (1 072 B, sha256₁₂ `598d5bc7db8d`).
+
+| signal | reading |
+|---|---|
+| licence | 🟢 **MIT, payload-read.** The gate had no objection |
+| stars / forks / commits | 🔴 **0 / 0 / 5** |
+| description | 🔴 *"No description, website, or topics provided"* |
+| what mints the credential | 🔴 **the hosted IssueBadge API, not this code.** It requires an `ISSUEBADGE_API_KEY` obtained from `app.issuebadge.com` |
+
+🔴 **Rejected on substance.** A five-commit client to a commercial issuer is a vendor SDK with an MIT
+wrapper; shelving it would tell a studio it can build on something it cannot run. 🔵 **Note how
+little the licence decided this pass:** all 20 payloads read were permissive, and **all three
+rejections turned on subject, archive status or vendor dependency** — see
+[`repos/foundations.md`](../repos/foundations.md) `p300`.
+
+### 🔴 A subject oracle was built, calibrated, and deliberately NOT made a gate
+
+The pass needed to know whether a slug claiming a layer was *in* that layer, after `ACTION PG-4`
+named `xapi-labs/xapi-cli` — which is **not the Experience API at all** — as part of "the xAPI
+movement layer". So each candidate's README was read and scored against layer vocabularies.
+
+🔴 **It was measured against its own errors before being believed, and it has one of each in 20:**
+
+| error | case | cause |
+|---|---|---|
+| **false positive** | `xapi-labs/xapi-cli` scored **15** on the credential vocabulary | the bare word *"credential"* means an **API key** there, not a learner's diploma |
+| **false negative** | `issuebadge/mcp-server` scored **0** on the narrow vocabulary | it says *"verifiable **certificates**"* and *"badges"*, never *"verifiable credentials"* or *"open badges"* |
+
+🟢 **So it is published as a RANKER with its error rates stated, not wired into `make hooks`.** A
+keyword oracle on a README cannot settle subject; the decisive read was the README's **first
+declarative line**, in all 20 cases. 🔵 **This base's own standing clause — *ask, calibrate,
+believe, and state the sample* — is the reason this is a ranker and not a gate.**
+
+### 🔵 The shelf ratio, restated
+
+**37 rows in the build-on tier** *(measured by enumerating the table at `p300`: 36 before this pass,
++1)*. Over four batches off `p989`'s orphan list — **12, 14, 28, 20 slugs** — this shelf has gained
+**2, 0, 0, 1**. 🟢 The institutional layer gained **9 + 13 + 15 + 13**. **The gap `T-p297b` measured
+is still closing from below, and this is the first pass in four where it also closed a little from
+above.**
+
+### 🔴 Standing action for the next pass
+
+1. 🔴 **Keep the mandated leg AND the directed leg, and add a THIRD shape: the organisation.** Both
+   query shapes have now failed — the mandated one 26 times, the directed one once. The row that
+   worked this pass was found by reading **an organisation's repositories** (`digitalcredentials/*`).
+   Try `oneorigin-2-0`'s three unread predecessors and the `digitalcredentials` org listing.
+2. 🟢 **Payload-grade this shelf.** The channel is open (see `repos/foundations.md` `p300`) and most
+   rows here still carry a sidebar or an em-dash in the Stars column. `probe_repo <slug>` is one line.
+3. 🔵 **`ACTION PG-5` is on [`repos/foundations.md`](../repos/foundations.md)**, including the
+   candidate-side selection rule that `ACTION PG-4` needed and did not have.
+
+
 ## 🔵 Pass 299 — THE ONE AGENT-LAYER CANDIDATE IN THIS PASS WAS A DECLARED FORK OF A REPOSITORY ALREADY ON THIS SHELF, AND THE MANDATED LEG HAS NOW RETURNED TWENTY-FIVE NILS
 
 ⏱️ **Twenty-first pass of `2026-10-18`.** Evidence:
@@ -1132,6 +1225,7 @@ non-commercial friction.
 
 | Agent | Repo | Licence | Stars | What it does |
 |-------|------|---------|-------|--------------|
+| 🆕 **DCC Credential Co-writer** | [oneorigin-2-0/dcc-credential-co-writer-monorep](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep) | 🟢 **MIT** *(**payload** `LICENSE`, 1 087 B, sha256₁₂ `7f62d1bf385d`, holder **Digital Credentials Consortium**, read `p300`)* | 🔴 **0★ / 1 fork / 440 commits / `main`** | 🟢 **THE FIRST NEW ROW ON THIS SHELF IN 27 WINDOWS — and it came from the promotion backlog, not from any search leg.** *"AI-assisted Open Badges v3 authoring"*: paste or upload course content and it drafts the credential's **title, description, criteria and skills**, then renders the badge image. Three services in one monorepo — a **Next.js 15** UI, a **FastAPI + Ollama** service running a **fine-tuned `phi-4-mini`** SLM for badge metadata, and a **FastAPI + Pillow** image service. **23 languages**, streaming output, **human-in-the-loop editor.** 🟢 **Why it matters beyond the row: it is a SELF-HOSTABLE education agent** — the model runs under Ollama, so a ministry or registrar with no egress can run the whole pipeline — **and it terminates in a STANDARD (OBv3) rather than in free text**, which is what makes its output checkable by [`credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) and [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) on [`repos/foundations.md`](../repos/foundations.md). 🔵 Developed through a collaboration **led by the DCC** and funded by **Walmart**; the copyright is the DCC's, though the repository sits under a vendor org (**OneOrigin**). ⚠️ **Boundaries, stated:** **0 stars and 1 fork — nobody has adopted this yet**; its README says the three services were previously standalone repositories under a `digitalcredentials` org, so the consolidation is recent and the predecessors are **unread**; and the page nowhere claims this is an official DCC release. Brief it as the strongest available reference for AI-assisted credential authoring, **not** as a maintained product. |
 | TeachGPT | [Priyamakeshwari/TeachGPT](https://github.com/Priyamakeshwari/TeachGPT) | MIT *(payload, p287)* | — | **New row at `p287`, and it is a row this base ALREADY HELD and could not read.** `LICENSE.md`, **1 057 B** on `main`, 18 files: a **verbatim MIT body with its title line absent**, which `pass257-restriction-scan` graded `UNCLASSIFIED` until this pass taught stage two the MIT operative clause. Small and unproven as software; **the value here is the measurement** — it is the first demonstration that this base's licence instruments were costing it usable permissive dependencies, not just failing to catch restricted ones. |
 | Open-Education | [bunnywaffle/Open-Education](https://github.com/bunnywaffle/Open-Education) | Apache-2.0 *(payload, p287)* | — | ⚠️ **Listed with its size stated, because the README does not state it.** `LICENSE` **11 357 B**, HEAD `1fac5bc` — and the tree is **THREE FILES**: `LICENSE`, `README.md`, `app.py`. A single-file Gradio tutor demo beneath a long manifesto about replacing human teachers. **The grant is real and permissive; the "platform" is not a platform.** Useful as a 200-line reading of the smallest thing that answers a learner, and **not** as a dependency. |
 | DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 41.6k *(rendered, p294)* | Lifelong personalized tutoring: a persistent student model that survives between sessions, multi-agent orchestration, citation-grounded feedback. Release v1.6.14 dated 2026.10.8. The single most adopted education agent on GitHub. |

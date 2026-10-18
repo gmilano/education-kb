@@ -1,0 +1,22 @@
+# p300 — THE PAYLOAD CHANNEL p297 RECORDED AS ABSENT, MEASURED WITH BOTH CONTROLS.
+# p297: "No LICENSE payload was read for any of them. curl 403 on 4/4, no
+# api.github.com, no raw path."  The first two clauses reproduce exactly.  The third
+# is refuted: raw.githubusercontent.com answers 200 with the payload, and unlike the
+# gateway probes of p294/p295 it DISCRIMINATES — a known-fake owner and a known-fake
+# repo both 404 while the real path 200s.
+# Run 2026-10-18.  curl via the session's agent proxy, no auth.
+probe	url	http	bytes	verdict
+KNOWN-REAL repo + path	raw.githubusercontent.com/digitalcredentials/vc/main/LICENSE	200	1525	🟢 PAYLOAD READ
+KNOWN-FAKE repo	raw.githubusercontent.com/digitalcredentials/zzz-not-a-real-repo-9931/main/LICENSE	404	14	🟢 discriminates
+KNOWN-FAKE owner	raw.githubusercontent.com/kqwmvnbxzpqwe8812/alsofake771/main/LICENSE	404	14	🟢 discriminates
+REAL repo, WRONG spelling (LICENCE)	raw.githubusercontent.com/digitalcredentials/vc/main/LICENCE	404	14	🟡 404 is NOT absence
+REAL repo, WRONG branch (master)	raw.githubusercontent.com/digitalcredentials/vc/master/LICENSE	200	1525	🔵 served identically
+api.github.com (control, p293's channel)	api.github.com/repos/digitalcredentials/vc	403	378	🔴 still scoped
+github.com rendered (control, curl)	github.com/digitalcredentials/vc	403	378	🔴 still 403 to curl
+#
+# THE BOUND, STATED.  A 200 proves existence AND delivers the grant: that is strictly
+# stronger than EXISTENCE-UNMEASURED and it is what 20 of 20 slugs returned this pass.
+# A 404 does NOT prove absence — it conflates absent repo, wrong path spelling and
+# wrong branch, and rows 4 and 5 above are the proof of that conflation.  So this
+# channel is a POSITIVE oracle only, and p295's EXISTENCE-UNMEASURED verdict stands
+# for anything that does not answer 200.

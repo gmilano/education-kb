@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 300: THIRTEEN new substrates and FIFTEEN restored — the payload channel three passes called absent was this base's own uncalled instrument, and `p299`'s rows had never reached the shelf table
+
+Evidence: [`p300-promotion-gap.2026-10-18-p300.tsv`](../evidence/p300-promotion-gap.2026-10-18-p300.tsv) ·
+[`p300-raw-channel-control.2026-10-18-p300.tsv`](../evidence/p300-raw-channel-control.2026-10-18-p300.tsv) ·
+[`p300-payload-grade.2026-10-18-p300.tsv`](../evidence/p300-payload-grade.2026-10-18-p300.tsv) ·
+[`p300-gate-masking.2026-10-18-p300.tsv`](../evidence/p300-gate-masking.2026-10-18-p300.tsv) ·
+[`p300-websearch.2026-10-18-p300.tsv`](../evidence/p300-websearch.2026-10-18-p300.tsv).
+
+### 🔴 `github trending education AI 2026` — the THIRTEENTH consecutive nil for education
+
+The mandated trending leg returned, again, **repositories for learning about AI** rather than
+repositories for education: `rohitg00/ai-engineering-from-scratch` (GitHub Trending **#1 on
+`2026-05-24`** per Trendshift), `microsoft/ai-agents-for-beginners`, an *AI Engineering Hub*
+roadmap, `MadsLorentzen/ai-job-search` (Trending #1 on `2026-07-07`) and
+`speedyapply/2026-AI-College-Jobs`. One Japanese review reports that in **February 2026 nine of the
+top ten** projects on GitHub's monthly trending ranking were AI-related — context for the nil, not a
+finding in education. 🟢 **Nil declared, corpus recorded.**
+
+🔵 **Thirteen nils is enough to say what the leg actually measures.** GitHub's trending surface ranks
+by **star velocity**, and education repositories do not accrue stars at that rate — this base has
+recorded the inverse signature over and over: substrate rows at 0-5★ carrying hundreds or thousands
+of commits, and fork-to-star ratios above 0.5 on the rows people actually deploy
+(`raccoongang/edx_xblock_scorm` 65 forks / 32★; `dhodges47/SCORM-LearningManagementSystem` 95 / 184).
+🔴 **A velocity-ranked channel cannot surface this industry's load-bearing code.** The channel that
+did, for the fourth pass running, was the promotion backlog.
+
+### 🟢 What moved: 13 new rows, 15 restored, 3 upgraded
+
+Full detail on [`repos/foundations.md`](foundations.md). The count is not the headline:
+
+| finding | verdict |
+|---|---|
+| 🟢 **the payload channel** | 🟢 **OPEN, and it always was.** `raw.githubusercontent.com` answers **200** with the grant while `github.com` and `api.github.com` both **403** to `curl`. `p297` recorded *"no raw path"* having probed only those other two hosts; `p299` then graded 14 of its 15 rows sidebar-only on that bound. **20 of 20 payloads read this pass, each pinned with a sha256** |
+| 🔴 **…and the instrument was already here** | 🔴 [`compose/code/lib/probe_payload.sh`](../compose/code/lib/probe_payload.sh) — *"SHARED PAYLOAD PROBE — source this, do not rewrite it"* — reads that exact path, resolves the real default branch via `ls-remote --symref`, and classifies with the hardened shared classifier. **It answered correctly on the first call.** Three passes wrote a bound around a loop sitting unused in this repository |
+| 🔴 **`p299`'s fifteen rows** | 🔴 **NEVER ON THE SHELF TABLE.** All fifteen lived only inside `p299`'s narrative section; `p298`'s thirteen all reached the table. **Restored this pass, marked ♻️**, with `p299`'s figures intact |
+| 🔴 **the row count in prose** | 🔴 **DRIFTED A SECOND TIME** — the file said **48** against a table of **61**, exactly the defect `p297` had corrected one pass earlier. Now **89**, and the arithmetic closes: 61 + 15 + 13 |
+| 🟢 **sidebar vs payload** | 🟢 **10 of 10 AGREED.** The older sidebar rows were **unproven, not wrong** — good news about this base's history, and worth stating plainly rather than leaving implied |
+| 🔴 **`adlnet/xAPI-Spec`, 955★ / 402 forks** | 🔴 **HOLDS 1.0.3 ONLY.** Its own README: the current version is **xAPI 2.0**, the specification's home has moved to **IEEE**, and *"the next version of the specification has not been planned."* The milder form of `p299`'s Caliper shape — relocated rather than withdrawn, and only the repository's own text says so |
+| 🟢 **the 2.0 answer** | 🟢 [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) — **0★**, 128 commits, implements **1.0.3 and 2.0**, and **takes over an existing `lrsql` database in place.** The pass's most valuable row and its least visible one |
+| 🔴 **`xapi-labs/xapi-cli`** | 🔴 **REJECTED — not the Experience API at all.** It is `xapi-to` (`xapi.to`): agent capability calling with crypto, `x402` payments and Cloudflare Workers. **Zero** Experience-API markers in 50 919 bytes of README. `ACTION PG-4` named it on a **substring match of the slug** |
+| 🔴 **`digitalcredentials/sign-and-verify`** | 🔴 **REJECTED — ARCHIVED by its owner on `2026-08-26`**, read-only, no successor named. Its payload read was clean and entirely silent about it: **archive status lives on the rendered page, not in the grant** |
+| 🔴 **the standing gate** | 🔴 **RED SINCE `p298`, ON ITS OWN FALSE POSITIVES** — and because `make hooks` was a fail-fast chain, **six gates did not run at all for two passes.** All six were green when finally run: **exposure two passes, realised loss zero.** Both defects fixed this pass |
+
+### 🔵 What a studio takes from this window
+
+**Read the host you are actually going to read.** A refusal from `api.github.com` is a fact about
+`api.github.com` and nothing else. 🟢 Three passes of this base's rows were graded down on a bound
+that two URLs' 403s could never support, and the correction cost **one `curl`**. 🔴 **And check that
+the row you announced is on the table you announced it to** — fifteen rows of real, verified work
+were invisible to every instrument that reads this shelf, including the matching rule `p299` had
+published in the same breath.
+
+
 ## 2026-10-18 — Pass 299: FIFTEEN substrates promoted — the assessment boundary is now armed end to end — and the one layer the instruction put FIRST turned out to have been taken private
 
 Evidence: [`p299-promotion-gap.2026-10-18-p299.tsv`](../evidence/p299-promotion-gap.2026-10-18-p299.tsv) ·

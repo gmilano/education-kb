@@ -4,6 +4,183 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 300 — `p299`'S LOCALE-SYNDICATION LAW REPLICATED EXACTLY ON A SECOND RUN, LATAM SUPPLIED THE ADOPTION-VERSUS-GOVERNANCE GAP AS A MEASURED PAIR, AND THE UNWORKED REGION PRODUCED A LEARNING-CRISIS FIGURE THAT CUTS AGAINST THIS BASE'S OWN PITCH
+
+⏱️ **Twenty-second pass of `2026-10-18`.** Evidence:
+[`p300-websearch.2026-10-18-p300.tsv`](../evidence/p300-websearch.2026-10-18-p300.tsv).
+
+**Ten legs: four mandated, four regional, two directed.** Four returned nils, each declared below
+with its query.
+
+### 🔴 The pass's most important measurement is about this base's own legs: 17 of 21 datums were ALREADY CARRIED, and the four mandated REGIONAL legs produced ZERO new between them
+
+🟢 **Every datum every leg returned was checked against the COMMITTED state of this file**
+(`git show HEAD:intel/market.md`) before being called new — mechanically, not by eye:
+
+| leg | new / returned |
+|---|---|
+| **North America** *(mandated)* | 🔴 **0 / 6** |
+| **EMEA** *(mandated)* | 🔴 **0 / 0** — nil, the twelfth |
+| **APAC** *(mandated)* | 🔴 **0 / 3** |
+| **LATAM** *(mandated)* | 🔴 **0 / 7** |
+| **trends** *(mandated)* | 🟡 **1 / 6** |
+| 🇦🇴🇲🇿 **Lusophone Africa** *(DIRECTED, unworked region)* | 🟢 **3 / 7** |
+
+**The four new datums, in full:** the **SACMEQ** Grade 6 Portuguese collapse (**62.7 % → 16 %**);
+Mozambique's **Higher Education Strategic Plan 2026-2035** with Chapo's call on AI and data-science
+research; Mozambique's **National Commission for AI**, reported `2026-05-10` *(aggregator-attributed)*;
+and the **AI-tutor segment's 2024 base of USD 1.63 B** — whose 2030 endpoint (USD 7.99 B) this file
+already held.
+
+🔵 **So the four mandated regional legs produced NOTHING NEW between them, and one directed leg at an
+unworked region produced three.** Sixth confirmation of a pattern `p294` first recorded, and the first
+time it has been **measured against the committed file** rather than judged by reading.
+
+🔴 **TWO corrections this measurement forced on this pass's own first draft, both recorded because the
+error shapes are the instructive part:**
+
+**(a)** The draft claimed *"five new datums"* for North America. **Zero were new** — the USD 169 M
+refusal, the CMU/Gates USD 55 M, OpenAI's eight national partners, the 10 % guidelines figure, the
+71 % teacher figure and Colorado/Texas were **all already on this file.** The claim had been written
+from what the leg **returned** rather than from what this base **did not already hold**. 🔵 That is
+`p299`'s locale finding one level up: **a result is not a finding, and a non-nil leg is not a
+productive one.**
+
+**(b)** 🔴 **The carried-check itself was wrong on its first run, and that is the sharper lesson.** It
+reported LATAM's governance figure as **NEW** because it matched the exact string `30% of
+universities`, while this file holds the same datum as **`~30%`**. 🔵 **An exact-string
+carried-check is a LOWER BOUND on what is carried — never a measurement of what is new.** The loose
+re-check produced the 17/4 above; the first run's 16/5 is recorded here as **wrong**, because a pass
+that quietly replaces its own numbers teaches the next pass nothing.
+
+### 🟢 `p299`'s locale-syndication law, replicated — the first time a law of this base's has been tested on a second independent run
+
+`p299` measured the EMEA leg's nine slots, found **five were one CompTIA article at five locale
+subpaths** (`en-za`, `en-eu`, `en-au`, `en`, `en-em`) plus **a Workday study originally from 2023**,
+and generalised: *a query whose terms are REGIONAL rather than NATIONAL retrieves locale-replicated
+syndication, and a search engine counts those as distinct results.*
+
+🟢 **`p300` re-ran the identical query and got the identical corpus** — the same five CompTIA locale
+subpaths, the same 2023-origin Workday study, the same total absence of schools, universities, edtech
+vendors or national education policy. 🔵 **A law that predicts the next observation is worth more
+than one that explains the last.** This one did, and it now carries the recommendation at the end of
+this section rather than being filed as a complaint about a nil.
+
+🔴 **EMEA's mandated phrasing: the TWELFTH consecutive nil for education**, declared with its query.
+
+### 🔴 LATAM — non-nil, corroborating, and ZERO new: all seven datums were already on this file
+
+| datum | figure | source posture |
+|---|---|---|
+| students actively engaging with AI | **92 %** | Digital Education Council **LATAM Survey 2026**, with Tecnológico de Monterrey and its Institute for the Future of Education |
+| faculty actively engaging with AI | **79 %** | the same survey |
+| universities with a **published AI policy** | 🔴 **30 %** | *"Only 30% of universities in Latin America have published policies on how to use AI"* |
+| institutions where **teaching and learning** leads adoption | **73.5 %** | **UNESCO IESALC**, **200 institutions** across **19 countries**, surveyed **August-October 2025** |
+| …research | **57.0 %** | same |
+| …administration | **34.1 %** | same |
+| …community engagement | **20.0 %** | same |
+
+🔴 **All seven rows below were already published here**, the governance figure as `~30%`. 🔵 **Why the pair rather than the headline: 92 % use against 30 % governance is the gap a studio can
+actually sell into**, and this is the first pass where the institutional denominator (200
+institutions, 19 countries, with field dates) sits beside the percentage instead of a bare figure.
+
+🟡 **Regulatory posture by country, as reported:** **Chile** has had a national AI policy since
+**2021** with a law under discussion; **Brazil** and **Colombia** hold national AI strategies with
+**no education-specific rules**; in **Mexico**, **SEP** and **ANUIES** recommendations are
+**non-binding**; the Caribbean is uneven. 🔴 **No unified regional framework for AI in higher
+education exists.**
+
+🔴 **Provenance bound, restated rather than quietly dropped: the UNU/IESALC paper and the DEC survey
+are SEARCH-ATTRIBUTED, not read at source.** `unu.edu` has been unreachable **at the resolver** since
+`p295` (`EAI_NONAME`, the same allowlist layer as the gateway). **Nineteenth pass with no primary
+government or IGO source.**
+
+### 🔴 North America — NON-NIL AND ZERO NEW: all six datums were already on this file
+
+🔴 **Every row below was already published here before this pass** — checked against
+`git show HEAD:intel/market.md`. They are reproduced because an independent second run **corroborates
+figures this base had on single sourcing**, which is worth something; but **this leg extended nothing**,
+and recording it as productive would have been the error the measurement above caught.
+
+| datum | figure | note |
+|---|---|---|
+| government funding committed to **responsible AI in higher education** | **USD 169 M**, Q1 2026 | 🔴 **THE FIGURE THIS BASE HAS NOW REFUSED FOUR TIMES**, returning from a different secondary source. **The refusal stands** — recorded as *encountered*, not adopted |
+| **Carnegie Mellon + Gates Foundation** into AI courseware | **USD 55 M** | aimed at **gateway college courses** — the highest-failure-rate courses, which is the procurement-relevant detail |
+| **OpenAI** country-level education programme | **8 national partners**, Q1 2026 | 🔵 a vendor building *state-level* distribution — the shape a studio either competes with or plugs into |
+| institutions with **formal AI guidelines** | 🔴 **10 %** | the governance gap again, on the other side of the equator |
+| US teachers **lacking AI training** | 🔴 **71 %** | the enablement gap every pattern on [`compose/patterns.md`](../compose/patterns.md) runs into |
+| regional share / growth | **36 %** share; APAC fastest at **35.3 %** CAGR | vendor-report figures, directional only |
+
+🟡 **Regulation: a relative vacuum, and fragmenting.** Adoption decisions sit with individual schools,
+districts and universities under minimal external oversight, while **Colorado** and **Texas**
+introduce piecemeal requirements. 🔵 **The mirror image of the EU posture: not one compliance gate to
+design against, but fifty possible ones.**
+
+### 🔴 APAC — the displacement trap re-arms a fourth time, and the inference is NOT re-made
+
+Every education-tagged hit is **corporate L&D**: **TCS + Pearson**'s multi-year AI learning alliance,
+**LearnUpon**'s Sydney HQ with `Create+` AI course authoring, **Alteryx Academy**'s relaunch with AI
+learning paths. 🔴 **`p292` drew a schooling conclusion from exactly this corpus and `p293` withdrew
+it. It is not re-made here.** Nothing in this corpus speaks to schooling at all.
+
+🟡 **The two non-L&D datums worth keeping:** **Australia** is tightening AI governance and copyright
+rules, and **OpenAI has appointed a policy lead for Australia and New Zealand** (Brent Thomas) — a
+vendor staffing a regulatory relationship, which is a leading indicator. **Forrester** expects data
+sovereignty to shape infrastructure choices for roughly **half** of APAC firms.
+
+### 🟢 Lusophone Africa — THREE new datums of seven, the most of any leg, and one of them argues AGAINST an AI-first engagement
+
+🟢 **Seven datums, the most of any leg this pass.** `p298` worked this region and found *"two
+countries new to this base"*; `p300` went back in Portuguese and found the instruments:
+
+| 🇦🇴 / 🇲🇿 | instrument | status |
+|---|---|---|
+| 🇦🇴 **Angola** | an **AI pilot in 10 primary schools across 10 provinces**, under a **2024 MoU with the UAE's Digital School**, opening with training for **teachers and administrators** | 🟡 press-attributed, 2026 |
+| 🇦🇴 | the minister's own framing — AI *"will never replace"* teachers | 🔵 the political constraint, in the sponsor's words |
+| 🇦🇴 | Angolan delegates at a London forum arguing AI **and climate education** belong in **non-university** curricula | May 2024 |
+| 🇲🇿 **Mozambique** | a **National AI Strategy**, draft presented at the **ITU "AI for Good" workshop in Kenya**, coordinated by **INTIC**, with education named among its sectors | 🟡 press-attributed, 2026 |
+| 🇲🇿 | a **National Commission for Artificial Intelligence**, reported established **2026-05-10** | 🔴 **AGGREGATOR-ATTRIBUTED ONLY** — an event listing, unconfirmed against any primary source. **Do not brief this one** |
+| 🇲🇿 | President Chapo calling on universities to expand AI, data-science and advanced-computing research; recommendations feed the **Higher Education Strategic Plan 2026-2035** | 🟡 press-attributed |
+| 🇲🇿 | 🔴 **SACMEQ: Grade 6 pupils at an acceptable level of Portuguese proficiency fell from 62.7 % (2013) to 16 % (2023)** | cited by a former minister |
+
+🔴 **That last figure is the most important thing this file learned this pass, and it cuts against
+this base's own instincts.** A system in which **roughly 84 % of Grade 6 pupils cannot read the
+language of instruction at an acceptable level** is not a system whose binding constraint is tutoring
+sophistication. 🔵 **The honest studio read: foundational literacy measurement and teacher support
+come first, and the relevant permissive row is
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT, offline-first) used
+for assessment — not a tutor.** 🟢 **A datum that disqualifies the obvious pitch is worth more than
+another adoption percentage.**
+
+🔴 **Declared gaps on this leg:** no Portuguese-language source on **Lusophone-wide** policy, and
+**Cabo Verde, Guinea-Bissau, São Tomé and Príncipe and Timor-Leste were not checked at all.**
+
+### 🔴 The mandated trends leg — non-nil, and the spread is still disqualifying
+
+| source | base | forecast | implied CAGR |
+|---|---|---|---|
+| IMARC | ~**USD 6.4 B** (2025) | **USD 79.6 B** by 2034 | **31.35 %** (2026-2034) |
+| The Business Research Company | **USD 7.52 B** (2025) → **USD 10.6 B** (2026) | — | **40.9 %** |
+| a third firm | — | — | ~**28 %** (2026-2036) |
+
+🔴 **A 2025 base of 6.4 against 7.52, and CAGRs of 28 / 31.35 / 40.9 from three houses in one hour.**
+The standing refusal holds: **this file publishes no single market-size figure.** 🟡 Segment datums:
+AI tutors **USD 1.63 B (2024) → USD 7.99 B (2030)**, **K-12** the largest adoption share, **language
+learning** the fastest-growing subject. One source puts market maturity at **35/100** — *"most
+institutions are still in pilot mode"* — which is the only figure here that matches what the regional
+legs actually show.
+
+### 🔵 Standing note for `p301` — retire the EMEA phrasing rather than re-running it
+
+🟢 **The law is now tested twice.** `AI education EMEA {year} adoption regulation players` returns
+locale-replicated vendor syndication because **"EMEA" is a vendor sales region and education
+ministries do not publish to it.** 🔴 **Twelve nils is not a gap in the world; it is a gap in the
+query.** Keep the mandated leg — an undeclared nil looks exactly like coverage — **but spend the EMEA
+budget on named national systems**, which is exactly what the regional and directed legs have done
+successfully for five passes running (Hausa, Central Asia, Francophone Maghreb, Ethiopia, Lusophone
+Africa).
+
+
 ## 🟢 Pass 299 — TWO MANDATED REGIONAL LEGS NILLED AGAIN ON IDENTICAL CORPORA, TWO DIRECTED LEGS PRODUCED TWO COUNTRIES NEW TO THIS FILE, AND THE FIGURE THIS BASE REFUSED TWICE CAME BACK A FOURTH TIME
 
 ⏱️ **Twenty-first pass of `2026-10-18`.** Evidence:
@@ -59,9 +236,57 @@ base now shelves — [`baoguangsheng/fast-detect-gpt`](https://github.com/baogua
 make the event trail provable rather than asserted. 🔴 **Do not price the USD 169M figure into a
 pitch** — see above.
 
+#### 🔴 `p300` · `2026-10-18` — this leg returned all six of those datums again, and extended NOTHING
+
+🟢 **Recorded as corroboration, not as coverage.** An independent second run reproduced every figure
+above, which raises confidence in figures this file had on single sourcing — **and produced no new
+datum at all.** 🔵 **The four mandated regional legs produced zero new datums between them this
+pass; see the measurement table in the `p300` section at the top of this file.**
+
+#### 🇦🇴🇲🇿 `p300` · `2026-10-18` — Lusophone Africa, and the figure that reorders the pitch
+
+🟢 **Three new datums, the most of any leg this pass.**
+
+| instrument | detail | posture |
+|---|---|---|
+| 🇦🇴 **Angola — AI in primary school** | a pilot in **10 primary schools across 10 provinces**, under a **2024 MoU with the UAE's Digital School**, opening with **teacher and administrator training**; the minister states AI *"will never replace"* teachers | 🟡 press-attributed, 2026 |
+| 🇲🇿 **Mozambique — National AI Strategy** | draft presented at the **ITU "AI for Good" workshop in Kenya**, coordinated by **INTIC**, with education named among its sectors | 🟡 press-attributed, 2026 |
+| 🇲🇿 **Higher Education Strategic Plan 2026-2035** | President **Chapo** calling on universities to expand AI, data-science and advanced-computing research; conference recommendations feed the plan | 🟢 **NEW to this file** |
+| 🇲🇿 **National Commission for AI** | reported established **`2026-05-10`** to advise on AI ethics, law, security and labour | 🔴 **AGGREGATOR-ATTRIBUTED ONLY — do not brief this one** |
+| 🇲🇿 🔴 **SACMEQ: the learning base** | Grade 6 pupils at an acceptable level of **Portuguese** proficiency: **62.7 % (2013) → 16 % (2023)** | 🟢 **NEW, and the most consequential datum of the pass** |
+
+🔴 **THE OPPORTUNITY HERE IS NOT A TUTOR, AND THIS FILE SHOULD SAY SO PLAINLY.** Where roughly
+**84 % of Grade 6 pupils cannot read the language of instruction at an acceptable level**, the
+binding constraint is **foundational literacy**, not tutoring sophistication. A personalised-tutor
+pitch into that system is a pitch past the problem.
+
+🟢 **What to lead with instead — and this base already shelves it:**
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri), **MIT, offline-first**,
+39 803 commits, used for **foundational assessment and teacher support** rather than tutoring.
+Angola's own pilot design agrees: it **opens with training teachers and administrators.** 🔵 **The
+sponsor has already told us the sequence; the SACMEQ figure tells us why they are right.**
+
+🔴 **Declared gaps on this leg:** no Portuguese-language source on **Lusophone-wide** policy, and
+**Cabo Verde, Guinea-Bissau, São Tomé and Príncipe and Timor-Leste were not checked at all.**
+
 ### EMEA
 
-🔴 **The mandated phrasing is dead for the eleventh consecutive pass** (corpus above, nil declared).
+#### 🔴 `p300` · `2026-10-18` — the TWELFTH consecutive nil, and `p299`'s explanation for it is now a tested prediction
+
+🔴 **`AI education EMEA 2026 adoption regulation players` returned the IDENTICAL corpus `p299`
+measured** — the same **five CompTIA locale subpaths** (`en-za`, `en-eu`, `en-au`, `en`, `en-em`), the
+same **Workday study originally from 2023**, and nothing whatsoever on schools, universities, edtech
+vendors or national education policy. 🟢 **Nil declared with its query.**
+
+🟢 **`p299` predicted exactly this and said why:** a query whose terms are **regional rather than
+national** retrieves **locale-replicated syndication**, which a search engine counts as distinct
+results. 🔵 **This is the first law of this base's to be confirmed on a second independent run, and
+it changes the instruction rather than the complaint: "EMEA" is a VENDOR SALES REGION, and education
+ministries do not publish to it.** 🔴 **Twelve nils is a gap in the query, not in the world** —
+`p301` is told to keep the mandated leg for the record and spend the EMEA budget on **named national
+systems**, which is what has worked for five passes running.
+
+🔴 **The mandated phrasing was dead for the eleventh consecutive pass at `p299`** (corpus above, nil declared).
 🟢 **The directed leg broke it on the first attempt, for the thirteenth time, and Poland is new to this
 file — zero prior mentions.**
 
@@ -86,7 +311,20 @@ quoting the 12 000 figure to a client** — this base has recorded the announcem
 
 ### APAC
 
-🔴 **Fourth consecutive nil on education for the mandated phrasing, and the failure mode is stable:
+#### 🔴 `p300` · `2026-10-18` — the trap re-arms a FIFTH time, the inference is not re-made, and zero new datums
+
+🔴 **Identical failure mode, identical corpus shape: every education-tagged hit is CORPORATE L&D** —
+**TCS + Pearson**'s multi-year AI learning alliance, **LearnUpon**'s Sydney HQ with `Create+` AI
+course authoring, **Alteryx Academy**'s relaunch with AI learning paths. 🔴 **`p292` drew a schooling
+conclusion from this exact corpus and `p293` withdrew it. It is NOT re-made here.**
+
+🟡 **Non-L&D datums, both already carried:** **Australia** tightening AI governance and copyright
+rules, and **OpenAI appointing a policy lead for Australia and New Zealand** (Brent Thomas) — a
+vendor staffing a regulatory relationship, which is a leading indicator. **Forrester** expects data
+sovereignty to shape infrastructure choices for roughly **half** of APAC firms. 🔴 **New datums this
+pass: zero.**
+
+🔴 **Fourth consecutive nil on education for the mandated phrasing at `p299`, and the failure mode is stable:
 every education-shaped hit is CORPORATE L&D** — a Pearson + TCS skills alliance, LearnUpon opening a
 Sydney HQ, an Alteryx academy relaunch, NIIT MTS on a custom-content list. Policy hits were
 finance-sector (Singapore) or general governance. 🟢 **The directed leg broke it, and Pakistan is new

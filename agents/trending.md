@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 300: THE DROUGHT ENDS — a self-hostable Open Badges authoring agent, from the backlog the last two passes retired from this exact question; the mandated leg's TWENTY-SIXTH nil, and the directed leg returned only rows already shelved
+
+Evidence: [`p300-promotion-gap.2026-10-18-p300.tsv`](../evidence/p300-promotion-gap.2026-10-18-p300.tsv) ·
+[`p300-websearch.2026-10-18-p300.tsv`](../evidence/p300-websearch.2026-10-18-p300.tsv) ·
+[`p300-subject-oracle.2026-10-18-p300.tsv`](../evidence/p300-subject-oracle.2026-10-18-p300.tsv) ·
+[`p300-payload-grade.2026-10-18-p300.tsv`](../evidence/p300-payload-grade.2026-10-18-p300.tsv).
+
+🟢 **New on the agents shelf this window: ONE ROW, the first since `p273` — 27 windows.**
+[`oneorigin-2-0/dcc-credential-co-writer-monorep`](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep),
+**MIT at payload** (1 087 B, sha256₁₂ `7f62d1bf385d`, holder **Digital Credentials Consortium**),
+**440 commits**, `main`. *"AI-assisted Open Badges v3 authoring"*: a **Next.js 15** UI, a
+**FastAPI + Ollama** service running a **fine-tuned `phi-4-mini`** that drafts the credential's
+title, description, criteria and skills, and a **FastAPI + Pillow** badge renderer. **23 languages**,
+streaming, human-in-the-loop.
+
+### 🟢 Why this row is different from the 42 already here
+
+🔵 **It runs entirely on the client's own hardware and it ends in a standard.** The model is served
+by **Ollama**, so a ministry, registrar or university with no egress can run the whole pipeline — and
+the output is **OBv3**, not prose, so it is *checkable* by two rows this base shelved in the same
+hour: [`credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) (MIT, offline,
+zero-dependency) and [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator)
+(Apache-2.0, from the standards body). 🟢 **An agent whose output can be validated by an instrument
+the same engagement already owns is a different proposition from an agent that emits text.**
+
+⚠️ **Boundaries, in the row and repeated here: 0 stars, 1 fork — nobody has adopted it yet**; its
+three services were standalone repositories under a `digitalcredentials` org until recently, and
+those predecessors are **unread**; and the page nowhere claims this is an official DCC release.
+
+### 🔴 The mandated agent leg — TWENTY-SIXTH consecutive nil, and the DIRECTED leg failed too
+
+`top open source AI agents education 2026 github MIT` returned, for the twenty-sixth time, courseware
+*about* AI: `microsoft/ai-agents-for-beginners` (MIT, ~67k★ reported),
+`pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`,
+`rohitg00/ai-engineering-from-scratch`. 🔴 **All four already carried.** `p298`'s diagnosis holds a
+third pass.
+
+🟢 **`p299`'s standing action was discharged — a second, DIRECTED leg naming the job was run:**
+`open source MCP server grading lesson planning student advising LMS 2026 MIT license`. 🔴 **It
+returned [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) and
+`RohanMuppa/brightspace-mcp` (20★, MIT per its listing) — both already on these shelves — and nothing
+else.** 🔵 **So the directed phrasing is not the fix either. Recorded now, so `p301` does not spend
+its budget re-running it as though it were untried.**
+
+### 🔵 The finding behind the row: a retirement drawn from two samples
+
+🔴 **`p298` and `p299` had just retired the orphan list from the agent question** — *"the orphan list
+is the wrong instrument for an agent row and should stop being asked for one"* — on the evidence of
+**two** batches returning zero agents. 🟢 **The third batch returned one.**
+
+🔵 That is `p295`'s recorded error class — *measure two instances, conclude about the population* —
+applied to a **channel** instead of to repositories, and it is the second time in six passes this
+base has published a law from a sample of two. 🟢 **The rule that survives: route the orphan list to
+[`repos/foundations.md`](../repos/foundations.md) by default, as `p299` said, but keep reading its
+agent-shaped slugs, because the base rate is 1 in 74, not 0.**
+
+### 🔴 The one agent-shaped rejection, and the licence had nothing to do with it
+
+[`issuebadge/mcp-server`](https://github.com/issuebadge/mcp-server) — *"Issue verifiable certificates
+and badges from any AI agent"* — is **MIT at payload** and was still rejected: **5 commits, 0★, no
+description**, and it requires an `ISSUEBADGE_API_KEY` from `app.issuebadge.com`, where **the
+certificates are actually minted**. 🔵 **An MIT wrapper around somebody else's hosted issuer is a
+vendor SDK.** Shelving it would tell a studio it can build on something it cannot run.
+
+### 🔴 A subject oracle was built, calibrated against its own errors, and NOT made a gate
+
+`ACTION PG-4` named `xapi-labs/xapi-cli` as part of "the xAPI movement layer". 🔴 **It is not the
+Experience API at all** — it is `xapi-to` (`xapi.to`), agent capability calling with crypto, `x402`
+payments and Cloudflare Workers: **zero** Experience-API markers in a 50 919-byte README. So each
+candidate's README was scored against layer vocabularies — and the oracle was then measured against
+itself:
+
+| | case | cause |
+|---|---|---|
+| 🔴 **false positive** | `xapi-labs/xapi-cli` scored **15** on the credential vocabulary | *"credential"* there means an **API key**, not a learner's diploma |
+| 🔴 **false negative** | `issuebadge/mcp-server` scored **0** on the narrow vocabulary | it says *"verifiable **certificates**"* and *"badges"*, never *"verifiable credentials"* or *"open badges"* |
+
+🟢 **One of each in twenty, so it is published as a RANKER with its error rates stated, not wired
+into `make hooks`.** The decisive read in all twenty cases was the README's **first declarative
+line**. 🔵 **A keyword oracle cannot settle subject — and a base that wired this one in as a gate
+would have rejected the agent row it found this pass.**
+
+
 ## 2026-10-18 — Pass 299: NO new agent row for the second window running; the mandated leg's TWENTY-FIFTH nil, and the one agent-shaped candidate was a declared fork of a repo already shelved
 
 Evidence: [`p299-promotion-gap.2026-10-18-p299.tsv`](../evidence/p299-promotion-gap.2026-10-18-p299.tsv) ·

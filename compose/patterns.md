@@ -4,6 +4,141 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 300 — three new patterns (`P66`-`P68`), each built from rows promoted THIS pass, and every component licence PAYLOAD-verified
+
+⏱️ `2026-10-18`. Evidence:
+[`p300-promotion-gap.2026-10-18-p300.tsv`](../evidence/p300-promotion-gap.2026-10-18-p300.tsv) ·
+[`p300-payload-grade.2026-10-18-p300.tsv`](../evidence/p300-payload-grade.2026-10-18-p300.tsv).
+
+🔴 **Numbered `P66`-`P68`: `P63`-`P65` are taken by `p299`, `P60`-`P62` by `p298`, `P56`-`P59` by
+`p297`** — the shelf was enumerated before numbering, because a duplicate pattern ID compiles into
+two entities with one name.
+
+🟢 **Every component named below carries a sha256-pinned licence payload.** `p299` could offer five
+payload reads of fifteen and flagged the rest; 🟢 **`p300` read 20 of 20**, so for the first time a
+pattern on this file can be quoted with **no sidebar-grade dependency in it.**
+
+## P66 — Credentials the institution owns, on a copyleft LMS it does not fork (global; EU variant noted)
+
+**The engagement.** A university or ministry issues certificates through a hosted vendor. The
+credential — the thing the learner carries for forty years — lives in that vendor's database, and
+leaving means re-issuing everything. The LMS is Moodle (GPL-3.0), Canvas (AGPL-3.0) or Open edX
+(AGPL), so forking is off the table.
+
+**The build — all permissive, all payload-read `2026-10-18`:**
+
+| step | component | licence (pinned) |
+|---|---|---|
+| 1. reach the LMS **without forking it** | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) · [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) · [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | Apache-2.0 / Apache-2.0 / MIT *(`p298`)* |
+| 2. **issue and revoke** | [`digitalcredentials/issuer-coordinator`](https://github.com/digitalcredentials/issuer-coordinator) | 🟢 MIT · 1 087 B · `ca28a7ae5c7e` |
+| 3. **sign** over W3C VC | [`digitalcredentials/vc`](https://github.com/digitalcredentials/vc) | 🟡 BSD-3-Clause · 1 525 B · `4f0d287e80be` *(holder Digital Bazaar; a declared fork — read the row)* |
+| 4. put it in the **learner's hands** | [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 MIT · 1 092 B · `1032f65dd2f6` |
+| 5. let **anyone verify** | [`digitalcredentials/verifier-core`](https://github.com/digitalcredentials/verifier-core) *(engine)* + [`verifier-plus`](https://github.com/digitalcredentials/verifier-plus) *(app)* | 🟢 MIT · `6e7a616c4d70` / `85569d7ed8fc` |
+| 6. **prove conformance** before go-live | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 Apache-2.0 · 11 357 B · `c71d239df917` |
+| 7. **CI gate** on every issued batch | [`TanimowoObaloluwaDavid/credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) — `credlens`, JSON output, offline | 🟢 MIT · 1 080 B · `f65f32330671` |
+
+🇪🇺 **EU variant:** insert [`impierce/credential-converter`](https://github.com/impierce/credential-converter)
+(Apache-2.0, Rust, `efd09e39cb61`) between steps 3 and 4 to emit **ELM** for Europass alongside OBv3,
+with [`impierce/digital-credential-data-models`](https://github.com/impierce/digital-credential-data-models)
+(Apache-2.0, **branch `dev`**) as the typed model. For skills vocabulary, bind to **ESCO** using
+[`BeBadges/escobadges`](https://github.com/BeBadges/escobadges) (MIT) as the worked reference —
+🔴 **18 commits: read it, do not depend on it.**
+
+⚠️ **Boundaries that belong in the proposal, not in discovery:** `verifier-plus` supports **VC v1/v2
+and OBv3 but NOT OBv2**, so a client on OBv2 needs the converter from day one; `credential-lens` is
+**3 commits** and validates **structure only** — *no signature verification, no status-list fetch, no
+DID resolution*; and the chain is **standards-conformant, not accredited** — OBv3 conformance is not
+a statement about what a registrar will legally accept.
+
+🔴 **What NOT to use, and it is the cheapest finding in this pattern:**
+[`issuebadge/mcp-server`](https://github.com/issuebadge/mcp-server) is MIT and looks like a shortcut
+through steps 2-4. **Its certificates are minted by a hosted commercial issuer behind an
+`ISSUEBADGE_API_KEY`** — it reproduces the exact lock-in the engagement exists to remove.
+
+**Sequencing, 10-12 weeks.** Weeks 1-2: LTI launch against the client's own LMS instance. 3-5: issuer
+and signing, **revocation included** *(the half vendors skip and registrars ask about)*. 6-8: wallet
+and verification page. 9-10: validator in CI, conformance evidence pack. 11-12: migration of existing
+credentials, with the converter if the source is OBv2 or ELM.
+
+## P67 — An agent that drafts credentials and cannot invent one (global; runs air-gapped)
+
+**The engagement.** Writing credential metadata — title, criteria, skills, description — for hundreds
+of courses is the work that stalls a credentialing programme after procurement. An LLM is the obvious
+tool and the obvious risk: free-text output nobody can validate, on a hosted model the institution
+may not send student or curriculum data to.
+
+**The build.** 🟢 **The agent and its validator are both permissive and both read this pass:**
+
+1. **Draft** with [`oneorigin-2-0/dcc-credential-co-writer-monorep`](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep)
+   — 🟢 **MIT**, 1 087 B, `7f62d1bf385d`, holder **DCC**, 440 commits: a Next.js 15 UI, a
+   **FastAPI + Ollama** service running a **fine-tuned `phi-4-mini`**, and a Pillow badge renderer.
+   **23 languages**, streaming, **human-in-the-loop editor.**
+2. 🔵 **Pin it on-premises.** The model is served by **Ollama** — no egress, no student or curriculum
+   data leaving the institution. **That is what makes this sellable to a ministry**, and why the row
+   sits on [`agents/top.md`](../agents/top.md) at 0 stars.
+3. **Constrain the output to a standard, not to a prompt.** It emits **OBv3**, so `credential-lens`
+   (MIT, offline) gates structure in CI and `1EdTech/digital-credentials-public-validator`
+   (Apache-2.0) proves conformance. 🟢 **An agent whose output is checkable by an instrument the same
+   engagement already owns is a different proposition from an agent that emits prose.**
+4. **Align skills to a controlled vocabulary:** **CASE** via
+   [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) (Apache-2.0, `ccf5a4564e72`) so
+   *"curriculum-aligned"* becomes machine-checkable — or **ESCO** in the EU.
+5. **Record the drafting events** as xAPI (see `P68`) so the human-in-the-loop edits are auditable.
+
+⚠️ **State this boundary first, in writing: 0 stars, 1 fork — nobody has adopted it**; its three
+services were standalone repositories until recently and those predecessors are **unread**; and the
+page nowhere claims an official DCC release. 🔵 **Quote it as the strongest available reference
+implementation and budget for reading its code, not for depending on it.**
+
+**6-8 weeks** on top of `P66`: 1-2 stand up Ollama and the SLM service on client hardware; 3-4 wire
+the authoring UI to the course catalogue; 5-6 CASE/ESCO binding; 7-8 the CI validation gate and the
+human-review workflow.
+
+## P68 — Move the learning-record estate to xAPI 2.0 without a migration project
+
+**The engagement.** A client has a Learning Record Store and wants *"standards-shaped analytics."*
+🔴 **Two traps this base has now measured, both of which a studio walks into by default:**
+
+| trap | what was measured |
+|---|---|
+| 🔴 **Caliper is not an option** | `p299`: **all five** reference client libraries `404`; the standards body took the upstream private; the only permissive remnant is a **20-commit playground** |
+| 🔴 **xAPI's headline repository is the OLD version** | `p300`: [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) — **955★ / 402 forks** — says in its own README that it holds **1.0.3**, that the current version is **xAPI 2.0**, that the spec moved to **IEEE**, and that *"the next version has not been planned"* |
+
+**The build.** 🟢 **One row on this base implements 2.0, and it was promoted this pass:**
+
+1. **Run** [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) — 🟢 Apache-2.0, 11 357 B,
+   `c71d239df917`; **xAPI 1.0.3 AND 2.0**; Hono with **PostgreSQL or PGlite** (embedded, so the same
+   build runs offline on a laptop and in a datacentre); statement validation, attachments, **SSE**
+   streaming, JWT/Basic auth, admin UI, OpenTelemetry.
+2. 🟢 **Migrate without a migration.** It **takes over an existing
+   [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) database in place** — so a client on
+   this base's `p298`/`p299` 1.0.3 stack reaches 2.0 **without a data-migration workstream**, which
+   is normally the line item that kills the project.
+3. **Prove the claim instead of repeating it** with
+   [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) — MIT,
+   78★, 1 039 commits, from **ADL, who author the spec**. ⚠️ **Its own README: basic auth only, and
+   never run it against a production endpoint** — stand up a conformance instance.
+4. **Shape the statements** with [`adlnet/xapi-profiles`](https://github.com/adlnet/xapi-profiles)
+   (Apache-2.0) and filter or forward with
+   [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) (Apache-2.0), which filters by
+   Profile templates.
+5. **In PHP estates** (Moodle, Tsugi) reach the boundary in-runtime with
+   [`php-xapi/client`](https://github.com/php-xapi/client) + [`php-xapi/model`](https://github.com/php-xapi/model)
+   (MIT) — 🔴 **and cite the branch**, since neither exposes a default branch on its page.
+6. **For a Laravel application** needing `cmi5`, [`EscolaLMS/LRS`](https://github.com/EscolaLMS/LRS)
+   (MIT) serves `/api/cmi5/**` — 🔴 **pinned to 1.0.3**, so pair it with `xapi-lrs` where 2.0 is
+   required.
+
+🔵 **The sentence for the proposal:** *"your analytics layer will emit xAPI 2.0, verified by the
+specification author's own conformance suite, on an Apache-2.0 store that can adopt your existing LRS
+database in place."* 🔴 **Never write "Caliper-compatible", and never cite `xAPI-Spec`'s star count
+as evidence of currency.**
+
+**4-6 weeks:** 1-2 stand up `xapi-lrs` beside the existing store; 3 take over the `lrsql` database in
+a staging copy and diff; 4 conformance suite green; 5-6 profiles, forwarding, and the dashboards the
+client actually asked for.
+
+
 ## 🟢 Pass 299 — three new patterns (`P63`-`P65`), each built from rows promoted THIS pass
 
 ⏱️ `2026-10-18`. Evidence:

@@ -111,5 +111,48 @@ print(f"{'  ok  ' if len(ids) == 2 else '  FAIL'} C12 a blank line ends a table 
 if len(ids) != 2:
     FAILED.append("C12")
 
-print(f"\n{12 - len(FAILED)}/12 controls pass")
+# ── p300 ──────────────────────────────────────────────────────────────────────────
+# C13 — THE FALSE POSITIVE THAT WAS RED FOR TWO PASSES, pinned in shape from
+# repos/foundations.md:951,972.  Row A recommends one repository and CITES a sibling in
+# its description; row B recommends that sibling.  Two rows, one table, one
+# recommendation each.  Whole-row harvesting called this a duplicate, four times over.
+run("C13 a sibling cited in a description cell is not a second recommendation", H
+    + "| 1EdTech/lti-1-3-php-library | https://github.com/1EdTech/lti-1-3-php-library | "
+      "Apache-2.0 | the sanctioned route, cf. https://github.com/tsugiproject/tsugi |\n"
+    + "| tsugiproject/tsugi | https://github.com/tsugiproject/tsugi | Apache-2.0 | "
+      "framework for LTI tools |\n", 0)
+
+# C14 — OVERFIT GUARD.  The subject is the first ADDRESS-BEARING cell, NOT cell 1.
+# Measured at p300: 153 of 379 live address rows on this corpus carry no address in
+# cell 1, so a cell-1 rule would silently stop checking 40 % of the shelf.  Here the
+# duplicated subject sits in cell 2 behind a plain-text name and MUST still fire.
+run("C14 subject found past a nameless first cell (cell-1 overfit guard)", H
+    + "| Canvas MCP | https://github.com/vishalsachdev/canvas-mcp | MIT |\n"
+    + "| Canvas (MCP) | https://github.com/vishalsachdev/canvas-mcp | MIT |\n", 1)
+
+# C15 — the ALIAS arm must NOT be narrowed along with the address arm.  Both halves of
+# a PROVEN pair in one row, the alias reachable only from a description cell: that is
+# C6's defect, and p283 found it live.  A symmetric "fix" would delete this finding.
+run("C15 alias arm keeps whole-row scope (C6 preserved at the new boundary)", H
+    + "| Artemis | https://github.com/ls1intum/Artemis | MIT | bundles "
+      "https://github.com/ls1intum/Iris and https://github.com/ls1intum/Pyris |\n", 1)
+
+# C16 — a repository cited ONLY as a cross-reference, by two different rows, is
+# recommended by neither.  The complement of C13, and the shape that proves the new
+# scope asks about the SUBJECT rather than counting mentions.
+run("C16 cited twice but recommended never", H
+    + "| a | https://github.com/x/a | MIT | see https://github.com/third/party |\n"
+    + "| b | https://github.com/x/b | MIT | also https://github.com/third/party |\n", 0)
+
+# C17 — subject_only must not change the ROW COUNT, only the addresses per row.
+n_all = len(live_rows(H + "| a | https://github.com/x/y | MIT | cf https://github.com/p/q |\n"))
+n_sub = len(live_rows(H + "| a | https://github.com/x/y | MIT | cf https://github.com/p/q |\n",
+                      subject_only=True))
+print(f"{'  ok  ' if n_all == n_sub == 1 else '  FAIL'} C17 subject scope changes "
+      f"addresses, not row count (got {n_all} / {n_sub})")
+if not (n_all == n_sub == 1):
+    FAILED.append("C17")
+
+TOTAL = 17
+print(f"\n{TOTAL - len(FAILED)}/{TOTAL} controls pass")
 sys.exit(1 if FAILED else 0)

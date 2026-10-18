@@ -1,0 +1,32 @@
+# p300 — HOW LONG `gate-identity` WAS RED, AND WHAT ITS REDNESS HID.
+# Method: for each commit, `git show <commit>:<shelf>` into a scratch root for the
+# three shelves the gate reads, then run the gate UNPATCHED at that corpus.
+commit	pass	ADDRESS-TWICE findings	gate verdict
+3a688d7	295	0	🟢 green
+c1e7d60	296	0	🟢 green
+ad065b9	297	0	🟢 green
+063a0ec	298	4	🔴 RED — regression enters here
+9759985	299	4	🔴 RED — pushed red a second time
+#
+# All four findings were FALSE POSITIVES of one shape: a sibling repository cited in a
+# row's description cell, harvested as a second recommendation of that sibling.
+foundations.md rows	subject of the row	address also harvested	recommended by
+951 / 972	1EdTech/lti-1-3-php-library	tsugiproject/tsugi	one row (972)
+953 / 993	jupyterhub/ltiauthenticator	jupyterhub/jupyterhub	one row (993)
+957 / 974	yetanalytics/xapipe	yetanalytics/lrsql	one row (974)
+962 / 967	automoss/automoss	dodona-edu/dolos	one row (967)
+#
+# WHAT THE REDNESS HID.  `hooks` was a fail-fast chain, so the six gates ordered after
+# gate-identity did not run at p298 or p299.  Each was run individually at p300:
+blocked gate	exit at p300	verdict
+gate-ladder-case	0	🟢 PASS (632 ladders, 349 instruments)
+gate-readme-channel	0	🟢 PASS (32 controls)
+gate-restatement	0	🟢 PASS (40 controls)
+gate-pin-grant	0	🟢 PASS (31 controls, 7 segment rows GRANTED-AT-PIN)
+gate-evidence-store	0	🟢 PASS (106 controls, 0 findings)
+gate-slug-oracle	0	🟢 PASS (45 controls)
+#
+# EXPOSURE = six unrun gates across two passes.  REALISED LOSS = zero; all six green.
+# Stated this way deliberately: the exposure is the finding, and the next gate that
+# gets masked will not be green.  Suites executed by `make hooks`: 55 before (the
+# chain stopped at gate-identity), 62 after.

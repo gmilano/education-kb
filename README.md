@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 300 — 2026-10-18 — **THE PAYLOAD CHANNEL THREE PASSES RECORDED AS ABSENT WAS THIS BASE'S OWN INSTRUMENT, UNCALLED — AND THE STANDING GATE HAD BEEN RED FOR TWO PASSES ON ITS OWN FALSE POSITIVES**
+
+**One-line summary:** 🟢 `ACTION PG-4` discharged — **20 slugs read, 17 admitted, 3 rejected, 0
+absent, and every licence read at PAYLOAD with a sha256**, the first batch in this base's history of
+which that is true. 🔴 It was possible because `p297`'s recorded bound — *"no raw path"* — was never
+measured: `raw.githubusercontent.com` answers **200 with the grant**, and the loop that reads it has
+sat in `compose/code/lib/` the whole time. 🔴 Separately, `make hooks` had been **red since `p298`**
+on four findings that were the gate's **own** false positives, and because `hooks` was a fail-fast
+chain, **six gates had not run at all for two passes**. 🔴 And `p299`'s fifteen announced rows were
+**never written to the shelf table**.
+
+### 🟢 What was found
+
+🔴 **The mandated battery: TWENTY-SIX consecutive nils on the agent leg, THIRTEEN for education on
+the trending leg, TWENTY with no permissive education ERP/CRM, and a TWELFTH EMEA nil on a corpus
+identical to `p299`'s.** All ten legs — four mandated, four regional, two directed — are written out
+with what each returned in
+[`evidence/p300-websearch.2026-10-18-p300.tsv`](evidence/p300-websearch.2026-10-18-p300.tsv).
+An undeclared nil looks exactly like coverage.
+
+| finding | verdict |
+|---|---|
+| 🟢 **`p297`'s *"no raw path"*** | 🔴 **REFUTED — AND IT WAS NEVER MEASURED.** The `curl` 403s at `github.com` and `api.github.com` reproduce exactly; `raw.githubusercontent.com` returns **200 with the payload** and **discriminates** — a known-fake owner and a known-fake repo both `404`. **20 of 20 payloads read** |
+| 🔴 …and the instrument | 🔴 [`lib/probe_payload.sh`](compose/code/lib/probe_payload.sh) — *"SHARED PAYLOAD PROBE — source this, do not rewrite it"* — reads that exact host, resolves the real default branch, walks a filename ladder and classifies with the shared classifier. **It answered on the first call**, catching a **`dev`** default branch and `LICENSE.md` / `LICENSE.txt` grants |
+| 🔵 …and what it generalises to | 🔵 **A REFUSAL IS A FACT ABOUT THE HOST YOU ASKED.** *403 from `api.github.com`* became *"this session cannot read payloads"* — `p294`'s own refuted **measure-A-conclude-about-B**, surviving three passes because it was phrased as a property of the **session** rather than of **two URLs** |
+| 🔴 **`make hooks`** | 🔴 **RED SINCE `p298`, ON ITS OWN FALSE POSITIVES.** All four `ADDRESS-TWICE` findings were one shape: **a sibling cited in a row's description cell, harvested as a second recommendation.** Measured green at `p297`, red at `p298` and `p299` |
+| 🔴 …and what the redness hid | 🔴 **SIX GATES DID NOT RUN FOR TWO PASSES** — `hooks` was a fail-fast chain of checks that share no state. All six were **green** when finally run: **exposure two passes, realised loss zero.** 🟢 Now **15/15 gates and 62 suites**, against 55 while the chain stopped early |
+| 🟢 …the fix, deliberately asymmetric | 🟢 `ADDRESS-TWICE` scopes to the row's **SUBJECT** — the first address-bearing cell, because **153 of 379** live address rows carry none in cell 1 and a cell-1 rule would blind the gate on 40 % of the shelf. `ALIAS-PAIR-LIVE` **keeps whole-row scope**, since control C6 pins a live `p283` finding a symmetric fix would have deleted. **17 controls, all pass** |
+| 🔴 **`p299`'s fifteen rows** | 🔴 **ZERO OF FIFTEEN were on `## Permissive foundations`.** They lived only in `p299`'s narrative section — invisible to every instrument that reads table rows, including the matching rule `p299` itself published. 🟢 **All fifteen restored, marked ♻️** |
+| 🔴 …and the row total | 🔴 **DRIFTED A SECOND TIME**: the file said **48** against a table of **61**, the exact defect `p297` corrected one pass earlier. 🟢 Now a measured **89** = 61 + 15 restored + 13 new |
+| 🟢 **The credentialing layer** | 🟢 **1 row → 12.** Six are the **Digital Credentials Consortium** family — 2 732 commits between them — which `ACTION PG-4` **never named**; it named the standards body's validator, already shelved |
+| 🟢 **The agent shelf's 26-window drought** | 🟢 **ENDS.** [`oneorigin-2-0/dcc-credential-co-writer-monorep`](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep) — MIT at payload, holder **DCC**, 440 commits: AI-assisted **OBv3** authoring on a fine-tuned `phi-4-mini` under **Ollama**, so it runs **air-gapped**, emitting a **standard** rather than prose |
+| 🔴 …and where it came from | 🔴 **The promotion backlog — which `p298` and `p299` had just RETIRED from the agent question**, on the evidence of two batches returning zero. A population claim from a sample of two: `p295`'s own recorded error class |
+| 🔴 **`xapi-labs/xapi-cli`** | 🔴 **REJECTED — not the Experience API at all.** It is `xapi-to` (`xapi.to`): agent capability calling with crypto, `x402` payments and Workers. **Zero** Experience-API markers in 50 919 bytes of README. `ACTION PG-4` named it on a **substring match of the slug** |
+| 🔴 **`adlnet/xAPI-Spec`, 955★ / 402 forks** | 🔴 **HOLDS 1.0.3 ONLY**, by its own README: the current version is **xAPI 2.0**, the spec's home moved to **IEEE**, *"the next version has not been planned."* 🟢 The only 2.0-capable row is [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) — **0★** — which also **takes over an `lrsql` database in place** |
+| 🔴 **`digitalcredentials/sign-and-verify`** | 🔴 **REJECTED — ARCHIVED by its owner `2026-08-26`.** Its payload read was clean and entirely silent about it: **archive status lives on the rendered page, not in the grant** |
+| 🟢 **sidebar vs payload** | 🟢 **10 of 10 AGREED.** The older sidebar rows were **unproven, not wrong** — worth saying plainly rather than leaving implied |
+| 🔴 **The regional legs** | 🔴 **21 datums examined, 17 ALREADY CARRIED, 4 new**, checked mechanically against the committed file. **The four mandated regional legs produced ZERO new between them**; one directed leg at an unworked region produced **three** |
+| 🇲🇿 **The pass's most consequential datum** | 🔴 **SACMEQ: Grade 6 pupils at acceptable Portuguese proficiency in Mozambique fell 62.7 % (2013) → 16 % (2023).** Where ~84 % cannot read the language of instruction, **the binding constraint is not tutoring sophistication** — and this base's answer is `kolibri` (MIT, offline) used for assessment, not a tutor |
+
+### 🔵 The one error class behind this pass's corrections
+
+🔴 **Believing a written bound over a runnable instrument.** Three of this pass's four headline
+findings share that shape: a claim was recorded in prose — *"no raw path"*, *"the orphan list is the
+wrong instrument for an agent row"*, *"48 permissive foundation rows"* — while the thing that would
+have checked it was **already in the repository**: `probe_payload.sh`, the orphan list itself, the
+table. 🔵 **This base's Makefile header has carried the operative sentence since `p229`: *a rule that
+has to be remembered is not a control.*** `p300`'s contribution is the corollary — **a bound that has
+to be trusted is not a measurement** — and the two gate fixes are the first time it has been turned
+into code rather than restated.
+
+🔵 **Note the asymmetry worth keeping.** `p297` and `p299` were **right** to mark their rows
+sidebar-grade: labelling weak evidence weakly is exactly correct. What was wrong was **concluding
+that no better evidence was obtainable**, without asking the host that would have supplied it.
+🟢 **A conservative grade is a virtue; an unmeasured bound dressed as one is not.**
+
+### 🔴 What this pass could NOT do
+
+🔴 **The ten remaining star/forks cells are untouched for a fourth pass** — the budget went to
+`ACTION PG-4` and to the gate.
+🔴 **No primary government or IGO source, nineteenth pass.** `unu.edu` is unreachable at the
+resolver; Angola's pilot and Mozambique's strategy are **press-attributed**, and Mozambique's AI
+Commission is **aggregator-attributed only and must not be briefed**.
+🔴 **`huggingface.co` still closed at the resolver.**
+🔴 **No code from any regional leg, eighth pass.** Lusophone Africa returned instruments, dates and a
+learning-crisis figure — no permissive slug.
+🔴 **The row count was corrected by hand, not moved into `recount`.** It has now drifted twice, and
+the fix is registered rather than claimed.
+
+### 🔵 What a studio takes from this pass
+
+**Ask the host you actually intend to read.** 🟢 Twenty-seven of this base's rows were graded at its
+weakest evidence level because two URLs returned 403 and a third was never tried; the correction cost
+one `curl` and produced sha256-pinned grants for a whole batch. 🔴 **And check that the row you
+announced is on the table you announced it to** — fifteen rows of real, verified, boundary-annotated
+work were invisible to every instrument that measures this shelf. 🔵 **A green gate means little
+until you know it was not the only gate that ran.**
+
+### 🔵 Backlog for `p301`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Top five:
+
+1. 🟢 **Payload-grade the whole shelf** — the channel is open, `probe_repo <slug>` is one line, and
+   the 27 sidebar-only rows are the cheapest large gain in twenty passes.
+2. 🔴 **Re-run candidate selection with `p299`'s own rule** — table rows only, plus the layer's
+   narrow vocabulary. Leads: `sign-and-verify-core`, `oneorigin-2-0`'s three unread predecessors.
+3. 🔴 **The ten star/forks cells** *(fourth time of asking)*.
+4. 🔴 **Move the row count into `recount`** so it cannot drift a third time.
+5. 🔵 **Retire the EMEA regional phrasing** and spend the budget on named national systems. Unspent
+   unworked regions: Amharic native-language, Central Asia beyond its first leg, and Cabo Verde /
+   Guinea-Bissau / São Tomé and Príncipe / Timor-Leste.
+
 ## Pass 295 — 2026-10-18 — **ELEVEN REPOSITORIES RE-READ THROUGH THE CHANNEL `p294` PROVED — AND THE LAW `p294` PUBLISHED ALONGSIDE IT IS FALSE: STARS ARE NOT MONOTONIC**
 
 **One-line summary:** `p294` opened the star channel, read **two** repositories, refuted three cells

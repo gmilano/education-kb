@@ -4,6 +4,154 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 300 — THE PAYLOAD CHANNEL THREE PASSES RECORDED AS ABSENT WAS THIS BASE'S OWN INSTRUMENT, UNCALLED — AND `p299`'S FIFTEEN ROWS WERE NEVER ON THIS TABLE
+
+⏱️ **Twenty-second pass of `2026-10-18`.** Evidence:
+[`p300-promotion-gap.2026-10-18-p300.tsv`](../evidence/p300-promotion-gap.2026-10-18-p300.tsv) ·
+[`p300-payload-grade.2026-10-18-p300.tsv`](../evidence/p300-payload-grade.2026-10-18-p300.tsv) ·
+[`p300-raw-channel-control.2026-10-18-p300.tsv`](../evidence/p300-raw-channel-control.2026-10-18-p300.tsv) ·
+[`p300-subject-oracle.2026-10-18-p300.tsv`](../evidence/p300-subject-oracle.2026-10-18-p300.tsv) ·
+[`p300-gate-masking.2026-10-18-p300.tsv`](../evidence/p300-gate-masking.2026-10-18-p300.tsv) ·
+[`p300-websearch.2026-10-18-p300.tsv`](../evidence/p300-websearch.2026-10-18-p300.tsv).
+
+🟢 **`ACTION PG-4` discharged: 20 slugs read, 17 admitted, 3 rejected, 0 absent — and every single
+licence is a PAYLOAD read with a sha256, the first batch in this base's history of which that is
+true.** 13 are new rows here, 1 is a new row on [`agents/top.md`](../agents/top.md), and 3 were
+**already shelved** and are upgraded in place.
+
+### 🔴 The finding that cost the most: `p297` and `p299` graded 27 rows "sidebar-only" against a channel that was open, and the instrument for it was already in this repository
+
+`p297` wrote the bound plainly: *"No `LICENSE` payload was read for any of them. `curl` 403 on 4/4,
+no `api.github.com`, **no raw path**."* `p299` inherited it and graded 14 of its 15 rows
+sidebar-grade. 🔴 **Two of those three clauses reproduce exactly at `p300`. The third is false:**
+
+| channel | result at `p300` | status |
+|---|---|---|
+| `curl` → `github.com/<slug>` | **403**, 378 B | 🔴 as recorded |
+| `curl` → `api.github.com/repos/<slug>` | **403**, 378 B | 🔴 as recorded |
+| `curl` → **`raw.githubusercontent.com/<slug>/<branch>/LICENSE`** | 🟢 **200, 1 525 B, the grant itself** | 🔴 **RECORDED AS ABSENT. IT IS OPEN** |
+
+🔴 **And it is worse than an unmeasured channel, because this base had already built the loop.**
+[`compose/code/lib/probe_payload.sh`](../compose/code/lib/probe_payload.sh) — *"SHARED PAYLOAD PROBE
+— source this, do not rewrite it"* — reads exactly that path, resolves the real default branch with
+`ls-remote --symref`, walks a filename ladder and classifies with the hardened shared classifier. It
+answered on the **first call**, correctly, including the two traps its own header documents:
+
+- `impierce/digital-credential-data-models`' default branch is **`dev`** — not `main`, not `master`.
+- `digitalcredentials/verifier-core`'s grant is at **`LICENSE.md`**; `dhodges47/...` at **`LICENSE.txt`**.
+
+🔵 **The generalisable error, and it is not "a channel was mislabelled".** `p297` concluded *"no raw
+path"* from probes of **two other hosts**. That is `p294`'s own refuted move — *measure channel A,
+conclude about B* — and it survived three passes because the conclusion was written as a **property
+of the session** rather than as what it was: **a property of the two URLs actually tried.** 🟢 The
+clause this base's oracle gains: *name the host you measured, and never generalise a refusal across
+hosts.*
+
+### 🔴 `p299`'s fifteen rows were announced on this file and were never written to its table
+
+🔴 **Measured at `p300`: of the fifteen slugs `p299` admitted, ZERO appear on a row of
+`## Permissive foundations`.** They live only inside `p299`'s own narrative table, further up this
+same file. `p298`'s thirteen, by contrast, all reached the table.
+
+🔵 **Why this matters more than a formatting slip: "shelved" has two meanings here and they came
+apart.** The canonical table is what a studio reads under *"Permissive foundations"*; the pass
+sections are history. A reader of this file's shelf was **fifteen rows short of what the pass
+announced**. 🟢 **All fifteen are restored above, marked ♻️**, with `p299`'s own figures and
+boundaries carried intact.
+
+🔴 **And the file's prose total had drifted again, by exactly the thirteen rows `p298` added** — the
+defect `p297` had corrected one pass earlier. Both corrections are recorded at the table.
+
+### 🟢 The thirteen new rows, by layer — and the layer counts that were zero
+
+| layer | rows before `p300` | after | the row that carries it |
+|---|---|---|---|
+| **credentialing** | 🔴 **1** *(a validator)* | 🟢 **12** | [`learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) — 89★, iOS **and** Android |
+| **xAPI 2.0 capable** | 🔴 **0** | 🟢 **1** | [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) — and it takes over an `lrsql` database **in place** |
+| **SCORM** | 1 | 🟢 **3** | [`dhodges47/SCORM-LearningManagementSystem`](https://github.com/dhodges47/SCORM-LearningManagementSystem) — 184★ / 95 forks on 36 commits |
+| **EU skills taxonomy (ESCO)** | 🔴 **0** | 🟢 **1** | [`BeBadges/escobadges`](https://github.com/BeBadges/escobadges) — in the hour EMEA returned its twelfth nil |
+
+🔵 **Six of the twelve credentialing rows are one family — the `digitalcredentials/*` repositories of
+the MIT-based Digital Credentials Consortium, 2 732 commits between them — and `ACTION PG-4` named
+none of them.** It named the standards body's validator instead, which was already on this table.
+
+### 🔴 What `ACTION PG-4` got wrong, measured: 3 of its 7 named slugs were already shelved, and 1 was not xAPI at all
+
+| slug `PG-4` named | what it turned out to be |
+|---|---|
+| `1EdTech/digital-credentials-public-validator` | 🔴 **already a row on this table**, shelved `p297` |
+| `1EdTech/OpenCASE` | 🔴 **already a row on this table**, shelved `p297` |
+| `adlnet/xAPI-Spec` | 🔴 **already a row on this table** (ungraded) — upgraded, not added |
+| `xapi-labs/xapi-cli` | 🔴 **NOT EXPERIENCE API.** It is `xapi-to` (`xapi.to`): agent capability/API calling, with crypto, `x402` payments and Cloudflare Workers. **Zero** Experience-API markers in a 50 919-byte README; 22 hits for API-credential/auth senses |
+| `pelotech/xapi-lrs` | 🟢 new, correct, and the best row of the batch |
+| `sr258/scorm-h5p-wrapper` | 🟢 new and correct |
+| `dhodges47/SCORM-LearningManagementSystem` | 🟢 new and correct |
+
+🔴 **`p299` published the rule that would have caught three of these four errors in the same breath
+as the instruction that made them.** Its own `ACTION PG-4` item 1 reads: *"a plain text diff of the
+list against the shelf files is WRONG… match only lines whose first non-space character is a pipe."*
+That rule was applied to the **shelf** side of the diff and never to the **candidate** side.
+
+🔵 **The error class, stated for reuse: a layer backlog assembled by SUBSTRING MATCH on the slug is
+not a layer backlog.** `xapi` in an owner name is not the Experience API; `credential` in a README is
+as likely to mean an API key as a learner's diploma — **measured this pass: the word `credential`
+fires 15 times in `xapi-cli`'s README and not once about learning.** A candidate must be checked
+against the shelf and against the layer's *narrow* vocabulary before a pass is told to spend its
+budget on it.
+
+### 🔴 The two rejections that were not about licences
+
+🟢 **All 20 payloads were permissive — 13 MIT, 6 Apache-2.0, 1 BSD-3-Clause, zero copyleft.** So for
+the first time on this file the licence gate rejected **nothing**, and all three rejections turned on
+substance:
+
+| rejected | why, and the channel that said so |
+|---|---|
+[`xapi-labs/xapi-cli`](https://github.com/xapi-labs/xapi-cli) | 🔴 wrong subject entirely — see the table above |
+[`digitalcredentials/sign-and-verify`](https://github.com/digitalcredentials/sign-and-verify) | 🔴 **ARCHIVED BY ITS OWNER `2026-08-26`, read-only.** 7★ / 9 forks / 197 commits, and its README names `sign-and-verify-core` only as a **dependency**, never as a successor. 🔵 An archive notice is a *rendered-page* signal: the payload read was clean and said nothing about it |
+[`issuebadge/mcp-server`](https://github.com/issuebadge/mcp-server) | 🔴 **5 commits, 0★, no description — and it requires an `ISSUEBADGE_API_KEY` from a hosted commercial issuer, which mints the certificates.** The MIT grant covers a thin client to somebody else's service. Rejected on substance; it was the pass's one *agent-shaped* near-miss |
+
+🔵 **Note the asymmetry worth keeping: the payload channel settles the GRANT and is silent on
+everything that matters next.** Archived-ness, a fork banner, a vendor key requirement and the real
+subject all live on the rendered page or in the README. A base that upgrades to payload grade and
+stops reading the page will shelve archived repositories with beautiful digests.
+
+### 🟢 Sidebar against payload: 10 of 10 agreed, so the old rows were unproven, not wrong
+
+🔵 Ten rows were read on **both** channels this pass. **All ten agreed** (MIT×6, Apache-2.0×3,
+and `digitalcredentials/vc`'s BSD-3-Clause, where the sidebar was also right and the README adds a
+second, narrower MIT claim). 🟢 **That is worth saying plainly, because it is good news about this
+base's history:** the sidebar-grade rows `p297` and `p299` published were **accurate**; what they
+lacked was proof and a digest. The payload read adds the pin, the holder and the path — and catches
+the `LICENSE.md` / `LICENSE.txt` / `dev`-branch cases a sidebar cannot see.
+
+### 🔴 Standing action for the next pass — `ACTION PG-5`
+
+**425 of 525 permissive orphans remain unshelved.** Ranked:
+
+1. 🟢 **PAYLOAD-GRADE THE WHOLE SHELF. The channel is open and the loop is written** —
+   `source compose/code/lib/probe_payload.sh; probe_repo <slug>`. Every row still marked
+   *(sidebar, read `pNNN`)* can be pinned with a sha256 this pass. Start with the 27 rows `p297` and
+   `p299` published sidebar-only, then the ♻️ fifteen restored above.
+2. 🔴 **Re-run `ACTION PG-4`'s candidate selection with the rule `p299` already wrote.** Before
+   naming any slug for a layer: (a) check it against **table rows only** — first non-space character
+   a pipe; (b) check the layer's **narrow** vocabulary, not the bare token. The remaining credential
+   cluster is `digitalcredentials/sign-and-verify`'s successor `sign-and-verify-core`, and
+   `oneorigin-2-0`'s three predecessor repositories, which its README says were standalone under a
+   `digitalcredentials` org.
+3. 🔴 **The ten remaining star/forks cells — UNTOUCHED FOR A FOURTH PASS.** `uPortal` 286★ ·
+   `schulcloud-server` 81★ · `studio` 193★ · `Tangerine` 70★ · `DFE-Digital` 38★ · `Ed-Fi-ODS` 28★ ·
+   `nbgrader` 1.4k★ · `Numbas` 215★ · `PrairieLearn` 519★ · `OpenEMIS` 7★. The prior is not zero:
+   `p295` refuted 2 of 11.
+4. 🔴 **Put the row count in `recount`.** This prose total has now drifted twice (`p297`: 31 vs 39;
+   `p300`: 48 vs 61) and been corrected twice by hand. A count that is re-derived by a gate cannot
+   drift; one that a pass must remember to re-sum will.
+5. 🟡 **Audit the xAPI layer against version 2.0.** Every xAPI row on this file except
+   `pelotech/xapi-lrs` implements **1.0.3**, and `adlnet/xAPI-Spec` says so of itself. A client
+   briefed on "standards-shaped analytics" is being briefed on a superseded version unless the row
+   says which.
+
+
 ## 🟢 Pass 299 — FIFTEEN NEW PERMISSIVE SUBSTRATES, AND THE ONE LAYER `ACTION PG-3` PUT FIRST TURNED OUT TO HAVE BEEN WITHDRAWN FROM PUBLIC VIEW
 
 ⏱️ **Twenty-first pass of `2026-10-18`.** Evidence:
@@ -947,6 +1095,34 @@ second repository to pair with `Pyris`; it is an alias of `Pyris`. See
 
 | Repo | Licence | Stars | Why it is a foundation |
 |------|---------|-------|------------------------|
+| 🆕 [digitalcredentials/learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT** *(**payload** `LICENSE`, 1 092 B, sha256₁₂ `1032f65dd2f6`, read `p300`)* | **89★ / 50 forks / 1 309 commits / `main`** | **The highest-adoption row of the `p300` batch, and the credentialing layer's anchor.** Cross-platform **iOS and Android** wallet for storing and sharing digital learner credentials; TypeScript + React Native/Expo. 🟢 From the **Digital Credentials Consortium** — the MIT-based body whose six repositories `ACTION PG-4` never named. 🔵 This is the row that makes the layer *end-user reachable*: everything else in it issues or verifies; this is where the learner keeps the credential. |
+| 🆕 [digitalcredentials/verifier-plus](https://github.com/digitalcredentials/verifier-plus) | 🟢 **MIT** *(**payload** `LICENSE`, 1 087 B, sha256₁₂ `85569d7ed8fc`, read `p300`)* | **19★ / 14 forks / 397 commits / `main`** | *"VerifierPlus allows users to verify any supported digital academic credential"* — a Next.js app where a credential is pasted, uploaded, linked or **scanned**, then checked for signature, expiry, revocation status and issuer, plus an optional MongoDB-backed store that returns a shareable link. 🔴 **Boundary in the row: Verifiable Credentials v1 and v2 and Open Badges v3 — NOT Open Badges v2.** A client still on OBv2 needs a conversion step first; that is the next row but one. |
+| 🆕 [digitalcredentials/verifier-core](https://github.com/digitalcredentials/verifier-core) | 🟢 **MIT** *(**payload** `LICENSE.md`, 1 087 B, sha256₁₂ `6e7a616c4d70`, read `p300`)* | **2★ / 4 forks / 272 commits / `main`** | The verification **engine** beneath `verifier-plus`. 🔴 **FIFTH licence spelling on this shelf** — the grant is at `LICENSE.md`, and `p295` was bitten by exactly this on `Submitty`, where plain `LICENSE` was `404`. 🔵 **2★ against 272 commits** is the substrate signature this file has now recorded five times. Take this one, not the app, when embedding verification in a client's own interface. |
+| 🆕 [digitalcredentials/issuer-coordinator](https://github.com/digitalcredentials/issuer-coordinator) | 🟢 **MIT** *(**payload** `LICENSE`, 1 087 B, sha256₁₂ `ca28a7ae5c7e`, read `p300`)* | **11★ / 4 forks / 55 commits / `main`** | *"An app that issues signed Verifiable Credentials and allows them to be revoked."* 🟢 **Revocation is the half most credentialing demos omit — and the half a registrar actually asks about.** 55 commits, small because it coordinates rather than implements. |
+| 🆕 [digitalcredentials/vc](https://github.com/digitalcredentials/vc) | 🟡 **BSD-3-Clause** *(**payload** `LICENSE`, 1 525 B, sha256₁₂ `4f0d287e80be`, holder **Digital Bazaar, Inc.**, read `p300`)* | **6★ / 5 forks / 502 commits / `main`** | JavaScript implementation of the **W3C Verifiable Credentials** standard, underneath the DCC stack above. 🔴 **A DECLARED FORK of [`digitalbazaar/vc`](https://github.com/digitalbazaar/vc)**, taken at v1.0.0 to add React Native compatibility — and cited here rather than upstream because *this* is the one the DCC stack depends on. 🔴 **TWO GRANTS IN ONE ROW:** the payload is New BSD (3-clause) © 2020-2021 Digital Bazaar; the README *additionally* declares **MIT** over *"DCC — TypeScript compatibility"*. The payload is what this shelf grades; the MIT claim covers only the DCC additions and is **README-stated, not payload-read**. |
+| 🆕 [impierce/credential-converter](https://github.com/impierce/credential-converter) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 11 356 B, sha256₁₂ `efd09e39cb61`, read `p300`)* | **12★ / 2 forks / 250 commits / `main`** | **Rust** CLI and library translating between credential data formats — **Open Badges v3 ↔ ELM**, the European Learner Model that Europass consumes — extensible to any standard with a JSON Schema, and able to import mappings from **DESM CSV** files. 🟢 **The one row on this shelf that crosses the Atlantic standards divide**, and so the first row an EMEA engagement with a US-shaped credential stack needs. |
+| 🆕 [impierce/digital-credential-data-models](https://github.com/impierce/digital-credential-data-models) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 11 357 B, sha256₁₂ `c71d239df917`, read `p300`)* | **5★ / 1 fork / 8 commits / 🔴 `dev`** | Rust library modelling **Open Badges v3.0** and **European Learner Model v3.2**, under the converter above. 🔴 **ITS DEFAULT BRANCH IS `dev`, NOT `main` OR `master`** — trap #1 in this base's own [`lib/probe_payload.sh`](../compose/code/lib/probe_payload.sh) header, met live. A probe with a hardcoded branch writes this repository down as **ungranted**; the grant is there, on `dev`. 🔵 8 commits: a data-model crate, correctly small. |
+| 🆕 [BeBadges/escobadges](https://github.com/BeBadges/escobadges) | 🟢 **MIT** *(**payload** `LICENSE.md`, 1 067 B, sha256₁₂ `95fc2f1c5370`, read `p300`)* | **5★ / 1 fork / 18 commits / `master`** | *"A Badge Builder web app based on the ESCO classification"* — designs and issues **Open Badges** against the **EU's ESCO skills pillar**, reached over its API. 🟢 **The one EMEA-anchored row of this pass — and it arrived in the hour the mandated EMEA leg returned its TWELFTH nil.** Not from that leg: from the promotion backlog. 🔴 **Boundary: 18 commits, and a Travis CI badge for a service that no longer runs that way.** A worked ESCO-binding reference, never a maintained dependency. |
+| 🆕 [TanimowoObaloluwaDavid/credential-lens](https://github.com/TanimowoObaloluwaDavid/credential-lens) | 🟢 **MIT** *(**payload** `LICENSE`, 1 080 B, sha256₁₂ `f65f32330671`, read `p300`)* | 🔴 **0★ / 0 forks / 3 commits / `main`** | *"Inspect and validate Open Badges 3.0 / W3C Verifiable Credentials. Zero dependencies, works offline."* A CLI (`credlens`), a library (`validate`, plus `window.CredentialLens`) and a static web UI; JSON output for CI; every finding carries a JSON Pointer, a message and a suggested fix; score 0-100, any error capping it at 59. 🔴 **THREE COMMITS — the thinnest row on this file, published with that in the row rather than hidden.** 🟢 **Why it is here:** it states its own non-goals out loud — *no signature verification, no status-list fetching, no DID resolution* — which is more than most of this layer does, and zero-dependency offline validation is what an air-gapped ministry pilot can actually run. |
+| 🆕 [CogniPilot/credentials](https://github.com/CogniPilot/credentials) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 11 357 B, sha256₁₂ `c71d239df917`, read `p300`)* | 🔴 **0★ / 0 forks / 365 commits / `main`** | *"Credentials platform for OpenBadges3.0"* — issuing, updating, revoking and **W3C-validating** OBv3 badges, in production for a **non-education engineering community** (example badges: *"Rumoca Maintainer"*). 🟢 **Why a non-education repository earns a row on an education shelf: it is the proof that this layer is domain-neutral**, and at 365 commits it is the most complete worked OBv3 *deployment* in the batch. 🔴 **Boundary: an INSTANCE, not a library.** Read its wiring; do not import it. |
+| 🆕 [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 11 357 B, sha256₁₂ `c71d239df917`, read `p300`)* | 🔴 **0★ / 0 forks / 128 commits / `main`** | 🟢 **THE ONLY xAPI 2.0 ROW ON THIS BASE, and the most strategically important row of the pass despite zero stars.** An xAPI-conformant Learning Record Store implementing **both 1.0.3 AND 2.0**, on Hono with PostgreSQL *or* **PGlite** (embedded, for local and offline use), with statement validation, attachments, **Server-Sent Events** for real-time statement streaming, JWT and Basic auth, an admin UI and OpenTelemetry metrics. 🟢 **Its migration story is the row's real value: it can take over an existing [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) database IN PLACE** — so the 1.0.3 stack this base shelved across `p298`-`p299` has a forward path to 2.0 that does not open with a data-migration project. |
+| 🆕 [sr258/scorm-h5p-wrapper](https://github.com/sr258/scorm-h5p-wrapper) | 🟢 **MIT** *(**payload** `LICENSE`, 1 073 B, sha256₁₂ `e5a1f41b0bb5`, read `p300`)* | **58★ / 32 forks / 32 commits / `master`** | *"A NodeJS application that packs H5P content into SCORM objects"* — packages H5P so it runs in any SCORM-capable LMS, reporting scores back through the SCORM API. 🟢 **The bridge between the two content layers this base already shelves and the SCORM rows beside it.** 🟢 **Shelved partly BECAUSE of its own README**, which ships a *"Disadvantages"* section — no cross-content library caching, no in-LMS H5P editing, no library updates, larger packages — and concludes *"you should only package H5P into SCORM if there are compelling reasons to do so."* **Quote that to a client before the feature list.** |
+| 🆕 [dhodges47/SCORM-LearningManagementSystem](https://github.com/dhodges47/SCORM-LearningManagementSystem) | 🟢 **MIT** *(**payload** `LICENSE.txt`, 1 091 B, sha256₁₂ `8e079631dedc`, holder *David Hodges dba Outermost Software, LLC*, read `p300`)* | **184★ / 95 forks / 36 commits / `master`** | *"Open Source SCORM Learning Management System demo"* — .NET Core 2.1, EF Core and SQL Server: upload SCORM packages, play them in a built-in **SCORM Player**, track results per student. **SCORM 1.2, with some 2004 support.** 🔴 **184★ and 95 forks on 36 commits, and its own README calls the pages *"very lightly styled"*** — a reference implementation a great many people have cloned, not a product. 🔵 **A 0.52 fork-to-star ratio: the deployment signature this file keeps finding on substrate rows.** 🔴 Grant at `LICENSE.txt` — the fourth spelling, again. |
+| ♻️ [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) | 🟢 **MIT** *(sidebar, read `p299`)* | **78★ / 52 forks / 1 039 commits / `master`** | *(**row restored to this table by `p300`** — `p299` admitted it and never wrote it here)* NodeJS suite testing the **`MUST` requirements of the xAPI specification**, from **ADL**, who author the spec. 🟢 **The highest-adoption row of `p299`'s batch, and how you prove an LRS claim instead of repeating it.** ⚠️ Its own README: basic auth only, *"should not be run against a production LRS endpoint."* |
+| ♻️ [adlnet/xapi-profiles](https://github.com/adlnet/xapi-profiles) | 🟢 **Apache-2.0** *(sidebar, read `p299`)* | **60★ / 33 forks / 153 commits / `master`** | *(**row restored by `p300`**)* The **xAPI Profiles** companion specification, also from ADL. 🔵 **The permissive counterpart to everything Caliper no longer offers:** a standards document you may actually build on. Pairs directly with [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe), which filters by Profile templates. |
+| ♻️ [OpenOLAT/qtiworks](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause** *(**payload** `LICENSE.txt`, 2.01 KB, read `p299`; sidebar unlabelled)* | **3★ / 2 forks / 🔴 2 087 commits / `master`** | *(**row restored by `p300`**)* **QTI 2.1 delivery engine, the JQTI+ Java library and MathAssess extensions** — by far the deepest QTI implementation on this file. 🔴 **Pick this fork, NOT the 68★ upstream [`davemckain/qtiworks`](https://github.com/davemckain/qtiworks)**, whose own description announces *"This project will be closed in early 2023!"*. The fork carries 14 commits the original never got: `p299`'s rule is **prefer the slug where the history continues.** |
+| ♻️ [S4-NetQuest/react-scorm-provider](https://github.com/S4-NetQuest/react-scorm-provider) | 🟢 **MIT** *(sidebar, read `p299`)* | **67★ / 23 forks / 19 commits / `master`** | *(**row restored by `p300`**)* React components wrapping the **SCORM API**. 🟢 **The first SCORM row this base ever shelved.** 19 commits against 67 stars — a small, finished adapter, which is what this layer should look like. |
+| ♻️ [pie-framework/pie-qti](https://github.com/pie-framework/pie-qti) | 🟢 **MIT** *(sidebar, read `p299`)* | **4★ / 1 fork / 🔴 794 commits / `master`** | *(**row restored by `p300`**)* **QTI 2.1, 2.2 AND 3.0** players plus a bidirectional **QTI ↔ PIE** transform framework, with a CLI, a web app and IMS Content Package support. ⚠️⚠️ **Its own README: pre-1.0, *"not fully conformant or certified"*, and not for untrusted or high-stakes delivery without a backend-authoritative integration.** 🔴 **Never brief this as exam-grade; brief it as the migration tool it is.** |
+| ♻️ [metyatech/markdown-to-qti](https://github.com/metyatech/markdown-to-qti) | 🟢 **MIT** *(sidebar, read `p299`)* | **2★ / 0 forks / 102 commits / `main`** | *(**row restored by `p300`**)* **Markdown → QTI 3.0 XML packages**, a TypeScript CLI on npm, with manifest-driven ordering, IDs and points. 🟢 **The authoring half of the QTI layer**, which `p298` had left open having armed playback and packaging only. |
+| ♻️ [metyatech/qti-html-renderer](https://github.com/metyatech/qti-html-renderer) | 🟢 **MIT** *(sidebar, read `p299`)* | 🔴 **0★ / 0 forks / 47 commits / `main`** | *(**row restored by `p300`**)* QTI 3.0 item XML → **HTML**, with scoring, report and explanation rendering and response-to-prompt binding. 🔴 **Zero stars, zero forks, 47 commits** — the same shape as `Kennisnet/php-qti3`, and the fourth confirmation on this file that **stars misrank substrate.** |
+| ♻️ [sonyccd/qti-playground](https://github.com/sonyccd/qti-playground) | 🟢 **MIT** *(sidebar, read `p299`)* | **4★ / 0 forks / 167 commits / `main`** | *(**row restored by `p300`**)* A web app to **view, edit and live-preview QTI 3.0 XML** in a split pane. 🔵 The one row in this layer aimed at a **human author** rather than a runtime — useful in a workshop, not in a pipeline. |
+| ♻️ [rolfis/qti-convert](https://github.com/rolfis/qti-convert) | 🟢 **Apache-2.0** *(sidebar, read `p299`)* | **22★ / 6 forks / 42 commits / `main`** | *(**row restored by `p300`**)* Converts a **Canvas QTI export package** into **JSON or Word (.docx)**. 🟢 **The only row on this file that reaches backwards into a vendor's export format** — which is the format a migration engagement is actually handed on day one. |
+| ♻️ [examplary/qti](https://github.com/examplary/qti) | 🟢 **MIT** *(sidebar, read `p299`)* | **1★ / 0 forks / 39 commits / `main`** | *(**row restored by `p300`**)* TypeScript toolkit building **and** parsing **QTI 3.0 and 2.1** packages, manifests, items, tests and stimuli, with automatic version detection. 🔴 **Bare-name collision with [`instructure/qti`](https://github.com/instructure/qti), also on this shelf — and they are NOT the same thing**: TypeScript building QTI 3.0/2.1 against a Ruby gem parsing QTI 1.2/2.1. A pass that skipped the name as a duplicate would have lost the only permissive QTI 3.0 *packaging* row in TypeScript. |
+| ♻️ [agencyenterprise/qti-3-player](https://github.com/agencyenterprise/qti-3-player) | 🟢 **MIT** *(sidebar, read `p299`)* | **3★ / 1 fork / 88 commits / `main`** | *(**row restored by `p300`**)* `@ae-studio/qti-renderer` — a framework-agnostic QTI 3.x item renderer with response processing and feedback. ⚠️⚠️ **Boundaries from its own README: NO scoring, single items only (no test structure), `choice-interaction` ONLY, partial expressions, no adaptive behaviour, and MathJax must be supplied by the host.** 🔴 Narrower than [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player); shelve both, sell that one. |
+| ♻️ [raccoongang/edx_xblock_scorm](https://github.com/raccoongang/edx_xblock_scorm) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 11.1 KB, read `p299`; sidebar unlabelled)* | **32★ / 🔴 65 forks / 49 commits / `master`** | *(**row restored by `p300`**)* **SCORM 1.2 and 2004 inside Open edX** as an XBlock, Studio-editable, reporting scores and state to the progress tab. 🔴 **ARCHIVED `2023-11-27`** — read it as a pattern, not a dependency. 🔵 **65 forks against 32 stars:** the deployment signature again, and the strongest case on this file that an archived repository can still be the live one in practice. |
+| ♻️ [php-xapi/client](https://github.com/php-xapi/client) | 🟢 **MIT** *(sidebar, read `p299`)* | **23★ / 11 forks / 137 commits / `0.7`** *(branch read)* | *(**row restored by `p300`**)* **xAPI client for PHP**, via Composer. 🟢 Puts the xAPI boundary in the runtime **Moodle and Tsugi already are** — the same argument `p298` made for `1EdTech/lti-1-3-php-library`. 🔴 Exposes no default branch on its page; cite the branch when you pin. |
+| ♻️ [php-xapi/model](https://github.com/php-xapi/model) | 🟢 **MIT** *(sidebar, read `p299`)* | **3★ / 8 forks / 340 commits / `3.x`** *(branch read)* | *(**row restored by `p300`**)* xAPI **model classes** beneath the client above. Forks (8) exceed stars (3) again. 🔴 Also exposes no default branch. |
+| ♻️ [EscolaLMS/LRS](https://github.com/EscolaLMS/LRS) | 🟢 **MIT** *(sidebar, read `p299`)* | **7★ / 0 forks / 27 commits / `main`** | *(**row restored by `p300`**)* A **Laravel** Learning Record Store package — and 🟢 **the only row in this base that names `cmi5`**, serving `/api/cmi5/**` with `x-experience-api-version: 1.0.3`. 🔵 The permissive, embeddable alternative to standing up [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) beside a PHP application. 🔴 **Pinned to 1.0.3** — see `pelotech/xapi-lrs` above for the 2.0 path. |
 | 🆕 [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** *(sidebar, read `p298`)* | **373★ / 86 forks / 575 commits / `master`** | **LTI 1.3 tool provider in TypeScript — the highest-adoption permissive LTI row on this file.** Launches, Deep Linking, Assignment & Grade Services, Names & Roles, Dynamic Registration, with the security and validation already implemented. 🟢 **This is how a Node studio puts its own application inside Moodle, Canvas or Open edX without touching the LMS codebase** — the `p298` arming of this file's oldest instruction, *"integrate, do not fork."* ⚠️ README says *"educational environments"* and never *students*: it is a protocol library, not a teaching product. |
 | 🆕 [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 **Apache-2.0** *(sidebar, read `p298`)* | **124★ / 107 forks / 110 commits / `master`** | **LTI 1.3 from the standards body itself**: OIDC login, message launches, Deep Linking, Names & Roles, Assignments & Grades. 🔵 **107 forks against 124 stars** — forks exceeding stars is this file's established deployment signature (`Submitty`, `gegok12`, `Ed-Fi-ODS`): institutions **run** this, developers do not **star** it. Pair with [tsugi](https://github.com/tsugiproject/tsugi) when you want a whole tool framework rather than a protocol library. |
 | 🆕 [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** *(sidebar, read `p298`)* | **138★ / 84 forks / 178 commits / `master`** | **LTI 1.3 Advantage in Python, with Django and Flask adapters** (other frameworks by reimplementing `OIDCLogin` and `MessageLaunch`). The row a Python-first engagement needs to reach a copyleft LMS. 🔴 **`p989`'s orphan list named [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) instead — 3★, 1 fork, no sidebar licence label, and a root `LICENSE` reading `Copyright (c) 2019 Dmitry Viskov`.** That is a **re-publication of this repository**, not a fork GitHub tracks, and `p298` substituted the canonical slug at the identity gate. **Cite this owner.** |
@@ -970,7 +1146,7 @@ second repository to pair with `Pyris`; it is an alias of `Pyris`. See
 | [HFUT-LEC/EduStudio](https://github.com/HFUT-LEC/EduStudio) | MIT | 78 | Unified library for student cognitive modelling, with a configuration-driven pipeline. Good for sweeping many models when the client wants a comparison, not a bet. |
 | [numbas/Numbas](https://github.com/numbas/Numbas) | Apache-2.0 | 215 | Maths and science e-assessment: randomised questions, algebraic marking, SCORM-packaged output. Apache-2.0 makes it embeddable in a commercial deliverable. **Pass 266:** 215★, 4,209 commits, 130 forks, **Newcastle University** School of Maths, Stats & Physics (README-quoted → EMEA-origin). Tests run **entirely in the browser** — a Python 3 compiler producing a JavaScript runtime — so no student submission need leave the device. That answers a data-residency objection structurally rather than contractually. |
 | [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | Apache-2.0 | — | Framework for building **LTI** tools that plug into any compliant LMS. The sanctioned way to put an AI tool inside Moodle/Canvas/Open edX without forking the LMS. |
-| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | Apache-2.0 | — | The xAPI (Experience API) specification itself. The vocabulary for "what did this learner actually do" across systems. |
+| ⬆️ [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 11 525 B, sha256₁₂ `a1587287ff04`, read `p300`)* | **955★ / 402 forks / 1 835 commits / `master`** | The xAPI (Experience API) specification itself — the vocabulary for *"what did this learner actually do"* across systems. 🔴 **`p300` UPGRADED THIS ROW FROM UNGRADED TO PAYLOAD, AND READING IT FOUND THE LAYER'S BIGGEST QUALIFICATION: this repository holds 1.0.3 ONLY.** Its own README states that the current version is **xAPI 2.0**, that the specification's home has moved to **IEEE** (`opensource.ieee.org/xapi/xapi-base-standard-documentation`), and that *"the next version of the specification has not been planned."* 🔵 **So the highest-starred xAPI artefact on this shelf is a superseded version of the standard, still carrying 955★ and 402 forks** — the Caliper shape from `p299` in a milder form: not withdrawn, but relocated, and only the repository's own text says so. 🟢 The permissive 2.0-capable row is [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs), above. 🔵 **Byte note:** its 11 525 B against the stock 11 357 B is **entirely encoding** — 200 CRLFs, minus one trailing newline, minus 31 title-line spaces = exactly 168 B. Same grant, and `rider_restriction` is empty. |
 | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | Apache-2.0 | — | SQL-backed **Learning Record Store** for xAPI. The missing piece between an agent that observes learning and a model that needs training data. |
 | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | MIT | — | Modern SCORM 1.2 / 2004 and AICC runtime. Most institutional content is still SCORM; this is how an agentic front end keeps reading it. |
 | [openfun/richie](https://github.com/openfun/richie) | MIT | — | MOOC portal CMS (Django + React) from France Université Numérique. MIT means the client's catalogue front end is genuinely theirs. |
@@ -999,8 +1175,8 @@ second repository to pair with `Pyris`; it is an alias of `Pyris`. See
 | 🆕 [datakind/student-success-tool](https://github.com/datakind/student-success-tool) | 🟢 **MIT** *(sidebar, `p296`)* | **8★ / 2 forks / 3 015 commits / `develop`** | 🟢 **PROMOTED AT `p296`, and the star count is the least informative number on this row.** A **3 015-commit** Python pipeline for data-assisted academic advising: ingestion, feature creation, exploratory analysis, modelling and tests, built to surface the students who most need contact. From **DataKind**, funded by **Google.org**; README reports a senior-graduation gain at **John Jay College** (CUSP). Default branch is **`develop`** — read it there or read nothing. 🔵 **The early-warning layer `P3` and `P13` both call for, now with a permissive grant** and a named deployment outcome rather than a benchmark. |
 | 🆕 [open-edge-platform/education-ai-suite](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0** *(sidebar + README, `p296`)* | **0★ / 11 forks / 450 commits / `main`** | 🟢 **PROMOTED AT `p296` — the on-premise *runtime* answer, from Intel.** Reference apps, libraries, microservices and **benchmarking tools** for education AI workloads: audio and video pipelines shipped as *Smart Classroom* and *Teaching Assistant* applications, with tooling to decide **which hardware a use case actually needs**. Targets **Intel CPUs, integrated GPUs and NPUs** via **OpenVINO**. ⚠️ **0★ — this is a vendor reference stack, not a community project; its 11 forks and 450 commits are the only adoption signal.** 🔵 **Why it matters anyway:** every sovereign / air-gapped pattern on this base (`P7`, `P9`, `P12`) has had to hand-roll its inference layer. ⚠️ **It is hardware-coupled by design** — price the lock-in, and do not brief it as portable. |
 | 🆕 [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** *(sidebar, `p296`)* | **12★ / 0 forks / 5 commits / `main`** | 🟢 **PROMOTED AT `p296` — and it is the first row on this file that measures *pedagogical* competence rather than code.** Two benchmarks that test how well an LLM understands **teaching**, built from **teacher-qualification exam** questions, with the extraction and preprocessing scripts included. Paper: *Benchmarking the Pedagogical Knowledge of Large Language Models* (**arXiv:2506.18710**). 🔴 **Its question bank is LATAM:** the acknowledgements credit **Chile's Ministry of Education** — *Agencia de la Calidad de la Educación* and **CPEIP** — for developing and sharing the exams. 🔵 **This is the partial answer to this base's standing "no education-specific eval" gap**, and the first time that gap has had a LATAM-sourced instrument. ⚠️ **5 commits: it is a benchmark release, not a maintained harness** — and a model that scores well on Chilean teacher-certification items has not thereby been shown to teach a Chilean child. |
-| 🆕 [1EdTech/OpenCASE](https://github.com/1EdTech/OpenCASE) | 🟢 **Apache-2.0** *(sidebar, read `p297`)* | 9★ / 3 forks / **191 commits** / `main` | **The curriculum-standards layer, published by the standards body itself.** *"Implementations of CASE Server and Editor"* — CASE (Competencies and Academic Standards Exchange) **1.0 and 1.1**, and the README states it is **ready for 1EdTech certification**. 🔵 **Why this is a foundation and not a nice-to-have:** every pattern on [`compose/patterns.md`](../compose/patterns.md) that claims *"curriculum-aligned"* has so far meant *aligned to a PDF someone parsed*. CASE is the interchange format ministries and publishers actually exchange standards in, which makes alignment **checkable by a machine instead of asserted in a slide**. Promoted from `p989`'s orphan list. |
-| 🆕 [1EdTech/digital-credentials-public-validator](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 **Apache-2.0** *(sidebar, read `p297`)* | 17★ / 12 forks / **628 commits** / `main` | **The credentialing layer — the first row on this file that validates what a learner walks away with.** Validator for **Open Badges 3.0**, also accepting 2.0 submissions. 628 commits from the standards body. ⚠️ **Boundary, read rather than assumed:** the sidebar description also says *"Comprehensive Learner Record"*, **but the README describes Open Badges validation only.** Do not promise CLR conformance on this row until the CLR path is read at payload. Promoted from `p989`'s orphan list. |
+| ⬆️ [1EdTech/OpenCASE](https://github.com/1EdTech/OpenCASE) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 11 264 B, sha256₁₂ `ccf5a4564e72`, re-read `p300`; sidebar `p297`)* | 9★ / 3 forks / **191 commits** / `main` *(confirmed exactly, `p300`)* | **The curriculum-standards layer, published by the standards body itself.** *"Implementations of CASE Server and Editor"* — CASE (Competencies and Academic Standards Exchange) **1.0 and 1.1**, and the README states it is **ready for 1EdTech certification**. 🔵 **Why this is a foundation and not a nice-to-have:** every pattern on [`compose/patterns.md`](../compose/patterns.md) that claims *"curriculum-aligned"* has so far meant *aligned to a PDF someone parsed*. CASE is the interchange format ministries and publishers actually exchange standards in, which makes alignment **checkable by a machine instead of asserted in a slide**. Promoted from `p989`'s orphan list. |
+| ⬆️ [1EdTech/digital-credentials-public-validator](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 11 357 B, sha256₁₂ `c71d239df917` — the stock Apache text, byte-identical to three other rows, so **no rider**, read `p300`; sidebar `p297`)* | 17★ / 12 forks / **628 commits** / `main` *(confirmed exactly, `p300`)* | **The credentialing layer — the first row on this file that validates what a learner walks away with.** Validator for **Open Badges 3.0**, also accepting 2.0 submissions. 628 commits from the standards body. ⚠️ **Boundary, read rather than assumed:** the sidebar description also says *"Comprehensive Learner Record"*, **but the README describes Open Badges validation only.** Do not promise CLR conformance on this row until the CLR path is read at payload. Promoted from `p989`'s orphan list. |
 | 🆕 [AnubisLMS/Anubis](https://github.com/AnubisLMS/Anubis) | 🟢 **MIT** *(sidebar, read `p297`)* | **382★** / 54 forks / **1 638 commits** / `main` | **A whole autograding LMS under a permissive grant, with a named university behind it.** *"Distributed LMS for automating Computing Science Courses From NYU"* — each student gets a **GitHub repo per assignment**, pushes trigger tests, and **results are visible before the deadline**; plus one-click browser **Cloud IDEs** and *"Insights"*, which derives topic understanding from submission and test-result **timestamps**. README names **NYU Tandon**, used there for several semesters. 🔵 This is the permissive answer to *"where is the open grading platform"* that does not require entering `Artemis`'s Java stack — and the **timestamp-derived insight** is an early-warning signal that needs no extra instrumentation. |
 | 🆕 [AI-for-Education/edu-qurating](https://github.com/AI-for-Education/edu-qurating) | 🟢 **MIT** *(sidebar, read `p297`)* | 3★ / 0 forks / **277 commits** / `main` | **Educational-text quality scoring, and it is the first row here that scores teaching material on PEDAGOGY rather than on readability.** A QuRating fork that scores, samples and trains over a Fineweb-Edu-fortified dataset, with a filter keeping the **top 50th percentile on three named axes: factual accuracy, pedagogical quality and lesson engagement.** Ships three templates — *Core Educational*, *Foundational Literacy – Teacher-Facing*, *Foundational Literacy – Student-Facing* — and is tied to an arXiv paper, with trained models on HuggingFace. ⚠️ **The weights are on `huggingface.co`, which is closed at this environment's resolver** (`p295`): the **code** is readable here, the **models are not**. |
 | 🆕 [AI-for-Education/voice-ai-evaluation-framework](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | 🟢 **MIT** *(sidebar, read `p297`)* | 1★ / 0 forks / 61 commits / `main` | **Child-speech evaluation — a layer no row on any shelf here had.** Evaluates **NeMo ASR models on Early Grade Reading Assessment (EGRA)** for **Kiswahili child speech**, everything in Docker (CPU-only or GPU). 🔵 **Why a 1★ repo is a foundation row:** every literacy-tutor pattern this base has written assumes a speech front-end that works on a six-year-old in a noisy classroom, and **adult-speech WER does not predict that.** This is the instrument that measures the assumption. ⚠️ The README **names no country**; Kiswahili implies East Africa, and the row says so rather than inventing a deployment. |
@@ -1009,8 +1185,22 @@ second repository to pair with `Pyris`; it is an alias of `Pyris`. See
 | 🆕 [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** *(sidebar, read `p297`)* | **6.4k★** / 1.1k forks / **2 880 commits** / `main` | **The governance layer, and governance is the barrier every regional leg on [`intel/market.md`](../intel/market.md) keeps naming.** *"Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents"* — it checks whether an agent's tool call is **allowed** before it runs, binds actions to a specific agent identity, keeps **tamper-evident audit records**, and ships compliance mapping. 🔴 **Boundary: the README does not mention education.** Substrate, not an education instrument. 🔵 Against **LATAM's 30%-of-universities-have-a-published-AI-policy** figure and the EU literacy duty already in force, the auditable-log half of this repo is the part that converts a pilot into something an institution can sign. |
 | 🆕 [google/prog-edu-assistant](https://github.com/google/prog-edu-assistant) | 🟢 **Apache-2.0** *(sidebar, read `p297`)* | 34★ / 17 forks / 165 commits / `main` | ⚠️ **ARCHIVED BY ITS OWNER ON `2025-07-23`, read-only — shelved WITH that written down, not quietly.** *"An easy system to create autograding tests in Jupyter Python notebook and deploy to cloud"*: autograding for Python courses run in Jupyter or Colab, with three execution modes — inside the student notebook, hosted on Google Cloud Run, or by script. 🔵 **Why an archived repo is still a row:** Apache-2.0 is irrevocable, the notebook-autograding shape is stable, and for a client teaching Python in Colab this is a **complete worked reference** — 165 commits, Google's. 🔴 **Never brief it as maintained.** Vendor the pattern; do not take a dependency on it. |
 
-**48 permissive foundation rows, re-enumerated at `p297`** (39 before this pass, **+9 promoted by
-`p297` out of `p989`'s orphan list**). 🔴 **`p297` CORRECTION: this sentence read *"31 permissive
+**89 permissive foundation rows, counted by enumerating the table at `p300`.** The arithmetic closes
+exactly: **61** (the table as `p298` left it) **+ 15** (`p299`'s admissions, which never reached this
+table and were **restored here by `p300`** — marked ♻️) **+ 13** (`p300`'s own new rows, marked 🆕) =
+**89**. Three further rows were **upgraded, not added** (marked ⬆️): `adlnet/xAPI-Spec`,
+`1EdTech/OpenCASE` and `1EdTech/digital-credentials-public-validator`.
+
+🔴 **`p300` CORRECTION, AND IT IS THE SECOND TIME THIS SENTENCE HAS DRIFTED.** It read *"48
+permissive foundation rows, re-enumerated at `p297`"* while the table held **61** — thirteen behind,
+because `p298` added thirteen rows and did not re-sum. 🔴 **That is precisely the defect `p297`
+corrected one pass earlier**, quoted immediately below, and it came back in the very next pass. 🔵 So
+the lesson `p297` drew was right and insufficient: *"count the table, don't carry the sum"* is a rule
+a pass has to remember, and [this base's own Makefile header](../Makefile) says the quiet part —
+**a rule that has to be remembered is not a control.** The count belongs in `recount`, which is
+registered below as `ACTION PG-5` item 4 rather than claimed as done.
+
+🔴 **`p297` CORRECTION, kept on the record: this sentence read *"31 permissive
 foundation rows"* and had done for several passes — the table held 39.** The figure was written as a
 sum of the passes that had added rows (17 at `p264`, 4 at `p265`, 6 at `p267`, 4 at `p268`) and then
 never re-summed as later passes appended, so it drifted exactly like the star cells `p294` refuted.

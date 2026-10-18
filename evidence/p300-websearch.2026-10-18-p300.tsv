@@ -1,0 +1,78 @@
+# p300 — EVERY SEARCH LEG RUN THIS PASS, WITH WHAT IT RETURNED.
+# An undeclared nil looks exactly like coverage.  2026-10-18.  Year COMPUTED, not
+# hardcoded: 2026.
+leg	type	query	result	new datums
+agent	mandated	top open source AI agents education 2026 github MIT	🔴 NIL — TWENTY-SIXTH CONSECUTIVE	0
+trending	mandated	github trending education AI 2026	🔴 NIL for education — THIRTEENTH	0
+vertical	mandated	open source platform education ERP CRM MIT Apache	🔴 NIL — EIGHTEENTH with no permissive education ERP/CRM	0
+trends	mandated	AI education industry trends 2026	🟡 NON-NIL, all vendor/market-research	2 new (35/100 maturity; AI-tutor base USD 1.63B 2024) of 6 datums
+North America	regional	AI education North America 2026 adoption regulation players	🔴 NON-NIL AND ZERO NEW — all 6 datums already carried	0 of 6
+EMEA	regional	AI education EMEA 2026 adoption regulation players	🔴 NIL FOR EDUCATION — TWELFTH	0
+APAC	regional	AI education APAC 2026 adoption regulation players	🔴 DISPLACEMENT TRAP RE-ARMED — corporate L&D only, and ZERO new	0 of 3
+LATAM	regional	AI education LATAM 2026 adoption regulation players	🔴 NON-NIL AND ZERO NEW — every datum carried, including the 30% governance figure (held as "~30%")	0 of 7
+agent/directed	directed	open source MCP server grading lesson planning student advising LMS 2026 MIT license	🟡 NON-NIL but ALL ALREADY SHELVED	0
+Lusophone Africa	directed (UNWORKED REGION)	Lusophone Africa Mozambique Angola AI education policy 2026 ensino inteligencia artificial	🟢 STRONGEST LEG OF THE PASS	3 new of 7 (SACMEQ 62.7%->16% Grade 6 Portuguese; Chapo/Higher-Ed Strategic Plan 2026-2035; Mozambique AI Commission 2026-05-10 aggregator-attributed)
+#
+# THE AGENT LEG'S DIAGNOSIS HOLDS A THIRD PASS (p298 made it, p299 confirmed it).
+# The corpus answers "education" with courses that TEACH AI:
+#   microsoft/ai-agents-for-beginners (MIT, ~67k* reported) — a 12-lesson course
+#   pguso/agents-from-scratch (MIT, ~796* reported) — a construction tutorial
+#   avinash201199/free-ai-agents-resources — a link directory
+#   rohitg00/ai-engineering-from-scratch — a learning repo, GitHub Trending #1 2026-05-24
+# All four already carried.  p299's standing action asked for a SECOND, DIRECTED leg
+# naming the job instead of a 26th run of the same words.  It was run (row 9) and it
+# returned vishalsachdev/canvas-mcp and RohanMuppa/brightspace-mcp — both already on
+# these shelves.  🔵 So the directed leg did not beat the mandated one; the PROMOTION
+# BACKLOG did, for the fourth pass running (p285's finding, now with four confirmations).
+#
+# 🔴 THE DIRECTED AGENT LEG'S REAL RESULT: the pass's one new agent row came from the
+# backlog, NOT from any search leg — oneorigin-2-0/dcc-credential-co-writer-monorep.
+# The agent shelf's 26-window drought broke on a channel the mandated query cannot see.
+#
+# EMEA, STATED AS A GAP RATHER THAN LEFT SILENT: ten passes, no education result. The
+# corpus returns enterprise AI adoption (Workday, CompTIA, Bandwidth/Cavell) and the
+# EU AI Act as backdrop. Nothing on schools, universities, edtech vendors or national
+# education policy. The phrasing is the suspect: "EMEA" is a VENDOR SALES REGION and
+# education ministries do not publish to it. p301 should spend this leg on a named
+# national system instead, as the regional legs already do.
+#
+# APAC: every education-tagged hit is corporate L&D — TCS+Pearson, LearnUpon (Sydney
+# HQ + Create+ authoring), Alteryx Academy — not schooling. p293 withdrew exactly this
+# inference and it is NOT re-made here. Non-L&D datums: Australia tightening AI
+# governance and copyright; OpenAI named Brent Thomas policy lead for ANZ; Forrester
+# expects sovereignty to shape infrastructure for ~half of APAC firms.
+#
+# 🔴 THE PASS'S MOST IMPORTANT MEASUREMENT, AND IT IS ABOUT THIS BASE'S OWN LEGS.
+# Every datum returned by every leg was checked against the COMMITTED state of
+# intel/market.md (`git show HEAD:intel/market.md`) before being called new. Result:
+#
+#   21 datums examined.  17 ALREADY CARRIED.  4 NEW.
+#
+#   leg                        new / returned
+#   North America (mandated)        0 / 6
+#   EMEA (mandated)                 0 / 0   (nil, twelfth)
+#   APAC (mandated)                 0 / 3
+#   LATAM (mandated)                0 / 7
+#   trends (mandated)               1 / 6   (AI-tutor 2024 base USD 1.63B; maturity 35/100)
+#   Lusophone Africa (DIRECTED)     3 / 7
+#
+# THE FOUR NEW DATUMS, IN FULL:
+#   1. SACMEQ: Grade 6 pupils at acceptable Portuguese proficiency 62.7% (2013) -> 16% (2023)
+#   2. Mozambique Higher Education Strategic Plan 2026-2035; Chapo on AI/data-science research
+#   3. Mozambique National Commission for AI, reported 2026-05-10 (AGGREGATOR-ATTRIBUTED)
+#   4. AI-tutor segment 2024 base USD 1.63B (the 2030 endpoint USD 7.99B was already carried)
+#
+# 🔵 THE FOUR MANDATED REGIONAL LEGS PRODUCED ZERO NEW DATUMS BETWEEN THEM. The one
+# directed leg at an unworked region produced THREE. Sixth confirmation of a pattern this
+# base first recorded at p294, and the first time it is measured mechanically against the
+# committed file rather than judged by eye.
+#
+# 🔴 TWO CORRECTIONS THIS MEASUREMENT FORCED ON THIS PASS'S OWN FIRST DRAFT:
+#   (a) It claimed "five new datums" for North America. ZERO were new. The claim had been
+#       written from what the leg RETURNED rather than from what this base DID NOT ALREADY
+#       HOLD — the same error shape as counting search slots as coverage.
+#   (b) The first run of the carried-check itself reported the LATAM governance figure as
+#       NEW, because it matched the exact string "30% of universities" while the file holds
+#       it as "~30%". An exact-string carried-check is a LOWER BOUND on what is carried,
+#       never a measurement of what is new. The loose re-check is what produced the 17/4
+#       figures above, and the first run's answer (16/5) is recorded here as wrong.

@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 300 — **THE PAYLOAD CHANNEL WAS NEVER CLOSED, THE STANDING GATE HAD BEEN RED FOR TWO PASSES ON ITS OWN FALSE POSITIVES, AND `p299`'S FIFTEEN ROWS WERE NEVER ON THE SHELF TABLE**
+
+⏱️ `2026-10-18`, twenty-second pass. Evidence:
+[`p300-raw-channel-control.2026-10-18-p300.tsv`](../evidence/p300-raw-channel-control.2026-10-18-p300.tsv) ·
+[`p300-gate-masking.2026-10-18-p300.tsv`](../evidence/p300-gate-masking.2026-10-18-p300.tsv) ·
+[`p300-promotion-gap.2026-10-18-p300.tsv`](../evidence/p300-promotion-gap.2026-10-18-p300.tsv) ·
+[`p300-payload-grade.2026-10-18-p300.tsv`](../evidence/p300-payload-grade.2026-10-18-p300.tsv) ·
+[`p300-subject-oracle.2026-10-18-p300.tsv`](../evidence/p300-subject-oracle.2026-10-18-p300.tsv) ·
+[`p300-websearch.2026-10-18-p300.tsv`](../evidence/p300-websearch.2026-10-18-p300.tsv).
+
+### 🟢 Discharged this pass
+
+| item | outcome |
+|---|---|
+| **`ACTION PG-4`** *(`p299`: ~12 from the layers at zero rows; de-duplicate by owner; read the payload when the sidebar is bare)* | 🟢 **DISCHARGED. 20 slugs read, 17 admitted** (13 new on `repos/foundations.md`, 1 new on `agents/top.md`, 3 upgraded in place), **3 rejected, 0 absent.** 🔴 **And it refuted its own candidate list** — below |
+| **payload-grade the sidebar-only rows** *(`p297`/`p298` backlog item 1)* | 🟢 **DISCHARGED FOR THIS BATCH AND THE BOUND REFUTED.** `p297` recorded *"no raw path"*; **`raw.githubusercontent.com` answers `200` with the grant.** **20 of 20** payloads read, each with a sha256 |
+| **`p299`'s standing action — a DIRECTED agent leg naming the job** | 🟢 **RUN, and it failed too.** `open source MCP server grading lesson planning student advising LMS 2026 MIT` returned only slugs already shelved. Recorded so `p301` does not spend budget re-running it as though untried |
+| 🆕 **The standing gate's two-pass red** *(unranked — found by running `make hooks` before touching anything)* | 🟢 **FIXED, both halves.** `gate-identity` was red from `p298` on **four of its own false positives**, and `hooks` was a **fail-fast chain**, so **six gates did not run at all for two passes** |
+| 🆕 **`p299`'s fifteen admissions** *(unranked — found by re-measuring the table)* | 🟢 **RESTORED.** **Zero of fifteen** were on `## Permissive foundations`; all fifteen are rows now, marked ♻️ |
+| 🆕 **The prose row-total, drifted again** *(unranked)* | 🟢 **CORRECTED to a measured 89.** It read **48** against a table of **61** — the defect `p297` fixed one pass earlier, reintroduced by `p298` |
+
+### 🔴 The findings that cost the most to learn
+
+🔴 **1. A refusal is a fact about the host you asked.** `p297` concluded *"no raw path"* from 403s at
+`github.com` and `api.github.com` — two **other** hosts — and `p299` then graded 14 of 15 rows
+sidebar-only on that bound. 🔴 **Worse: the loop for the host nobody asked was already in this
+repository.** [`compose/code/lib/probe_payload.sh`](../compose/code/lib/probe_payload.sh) — *"source
+this, do not rewrite it"* — answered correctly on the **first call**, including both traps its own
+header documents. 🔵 **A bound written in prose was believed over a tool sitting in the tree.** Full
+entry: `T-p300a`.
+
+🔴 **2. A fail-fast chain of independent checks sheds coverage silently.** `gate-identity`'s four
+findings were one shape: **a sibling repository cited in a row's description cell, harvested as a
+second recommendation.** The gate's own docstring had already named that error class at *file* scope
+and fixed it there; it survived at *row* scope. 🟢 **Fixed asymmetrically** — `ADDRESS-TWICE` now
+scopes to the row's **subject** (the first address-bearing cell; measured: **153 of 379** live
+address rows carry none in cell 1, so a cell-1 rule would blind the gate on 40 % of the shelf), while
+`ALIAS-PAIR-LIVE` **keeps whole-row scope**, because control C6 pins a live `p283` finding that a
+symmetric fix would have deleted. **17 controls — 12 original plus 5 new — all pass.** 🟢 `hooks` now
+runs **every** gate with a per-gate verdict: **15/15 green across 62 instrument suites**, against 55
+when the chain stopped early.
+
+🔴 **3. A layer backlog built by substring match on the slug is not a layer backlog.** Of
+`ACTION PG-4`'s seven named slugs, **three were already on this base's tables** and one —
+`xapi-labs/xapi-cli` — **is not the Experience API at all.** 🔵 `p299` published the rule that would
+have caught three of the four *in the same breath as the instruction that made them*: it applied
+*"match only table rows"* to the **shelf** side of the diff and never to the **candidate** side.
+
+🔴 **4. A non-nil leg is not a productive leg.** Checked mechanically against the committed
+`intel/market.md`: **21 datums examined, 17 already carried, 4 new** — and **the four mandated
+regional legs produced ZERO between them** against 3 from one directed leg. This corrected two of
+this pass's own draft claims, including a carried-check that was itself wrong on first run. Entry:
+`T-p300d`.
+
+### 🔴 Still open
+
+| gap | why it survived `p300` |
+|---|---|
+| 🔴 **The ten remaining star/forks cells** | 🔴 **UNTOUCHED FOR A FOURTH PASS** — `uPortal` 286★ · `schulcloud-server` 81★ · `studio` 193★ · `Tangerine` 70★ · `DFE-Digital` 38★ · `Ed-Fi-ODS` 28★ · `nbgrader` 1.4k★ · `Numbas` 215★ · `PrairieLearn` 519★ · `OpenEMIS` 7★. `p300` spent its budget on `ACTION PG-4` and on the gate. The prior is not zero — `p295` refuted 2 of 11 |
+| 🟢→🔴 **Licences read on a single path** | 🟢 **No longer true of the `p300` batch** — all 20 walked a filename ladder, and it paid: `LICENSE.md` ×2, `LICENSE.txt` ×1, and a **`dev`** default branch. 🔴 **Still true of every row shelved before this pass** — now `ACTION PG-5` item 1, and finally *actionable* |
+| 🔴 **The row count lives in prose, not in `recount`** | 🔴 **Drifted TWICE, corrected twice by hand** (`p297`: 31 vs 39; `p300`: 48 vs 61). **A rule that has to be remembered is not a control** |
+| 🔴 **The xAPI layer is pinned to a superseded version** | 🆕 `adlnet/xAPI-Spec` holds **1.0.3** and says so; the spec's home is **IEEE**; `EscolaLMS/LRS` serves `1.0.3`. **Only `pelotech/xapi-lrs` reaches 2.0**, and no row before this pass stated its version at all |
+| 🔴 **No primary government or IGO source, NINETEENTH pass** | `unu.edu` unreachable **at the resolver** since `p295`. UNU/IESALC and the DEC LATAM survey are **search-attributed**; Angola's pilot and Mozambique's strategy **press-attributed**; Mozambique's AI Commission is **aggregator-attributed only and must not be briefed** |
+| 🔴 **The four mandated regional legs are no longer productive** | 🆕 **Zero new datums between all four.** EMEA is on its **twelfth** nil with a corpus identical to `p299`'s — five CompTIA locale subpaths and a 2023 Workday study. The vertical ERP/CRM leg is on its **twentieth**, returning one vendor's glossary in **ten languages** |
+| 🔴 **`huggingface.co`** | Still closed at the resolver. `edu-qurating`'s models and the Horus weights remain unread |
+| 🟡 **Two `## Opportunities by region` headings in `intel/market.md`** | 🆕 The canonical one is at the top; a second, older one sits deep in the pass history. **Left in place rather than rewriting history**, and registered here instead of silently edited |
+| 🔴 **No code from any regional leg, EIGHTH pass** | Lusophone Africa returned instruments, dates and a learning-crisis figure — **no permissive repository slug** |
+| 🟡 **The `no-label` signal, un-reconciled** | Untouched. Known **non-specific** since `p295`. 🟢 `p300` adds that sidebar and payload **agreed 10 of 10** where both were read, so the old sidebar rows are **unproven, not wrong** |
+
+### 🔵 Backlog for `p301`, ranked
+
+1. 🟢 **PAYLOAD-GRADE THE WHOLE SHELF — the channel is open and the loop is one line.**
+   `source compose/code/lib/probe_payload.sh; probe_repo <slug>`. Start with the 27 rows `p297` and
+   `p299` published sidebar-only, then the ♻️ fifteen. **Ranked first because it is the cheapest
+   large gain this base has had in twenty passes, and because three passes of rows were graded down
+   for no measured reason.**
+2. 🔴 **Re-run candidate selection with the rule `p299` already wrote.** Before naming a slug for a
+   layer: check it against **table rows only** (first non-space character a pipe) **and** against the
+   layer's **narrow** vocabulary. Named leads: `sign-and-verify-core` (the archived repo's named
+   dependency) and `oneorigin-2-0`'s three unread predecessor repositories.
+3. 🔴 **The ten star/forks cells, fourth time of asking.**
+4. 🔴 **Put the row count in `recount`**, so it cannot drift a third time.
+5. 🟡 **Audit every xAPI row for its spec version** and state `1.0.3` or `2.0` in the row.
+6. 🔵 **Spend the EMEA budget on named national systems and retire the regional phrasing.** Twelve
+   nils with a reproducible cause is a finished question. Unspent unworked regions: **Amharic
+   native-language**, **Central Asia** beyond its first leg, and **Cabo Verde / Guinea-Bissau / São
+   Tomé and Príncipe / Timor-Leste**, named and unchecked this pass.
+
+
 ## Pass 297 — **`ACTION PG` DISCHARGED, AND DISCHARGING IT REFUTED `p296`'S OWN FRAMING OF THE LIST IT ORDERED WORKED**
 
 ⏱️ `2026-10-18`, nineteenth pass. Evidence:

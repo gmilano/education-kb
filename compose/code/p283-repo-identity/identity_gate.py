@@ -45,6 +45,37 @@ indented ASCII diagram, annotated `ls1intum/Iris is an ALIAS of this repo -- p28
 is the base explaining the alias, which is the opposite of the defect, and a row-scoped
 predicate excludes it for free.
 
+🔴 p300: AND THE SAME ERROR CLASS SURVIVED *INSIDE* THE ROW, where it went red for two
+passes.  The note above records that FILE scope produced 15 false positives, every one of
+them a CROSS-REFERENCE, and narrowed the unit to the table to fix it.  A row's DESCRIPTION
+cell cites sibling repositories in exactly the same way -- this base's house style -- so
+from `p298` this gate reported four ADDRESS-TWICE findings that were all that same shape
+one level down:
+
+    | 1EdTech/lti-1-3-php-library | Apache-2.0 | ... cf. tsugiproject/tsugi |
+    | tsugiproject/tsugi          | Apache-2.0 | ... |
+
+Two rows of one table, `tsugiproject/tsugi` harvested from both -- and RECOMMENDED by one.
+🔴 Measured red at `p298` and `p299` and green at `p297`; and because `make hooks` was a
+fail-fast chain, the SIX gates ordered after this one did not run at all for two passes.
+
+🟢 THE SPLIT THAT FIXES IT, and it is deliberately NOT symmetric:
+
+  ADDRESS-TWICE   -> the row's SUBJECT only.  "Recommended twice" means two rows whose
+                     subject is the same repository.  A citation in a later cell is the
+                     house style, not a second recommendation.
+  ALIAS-PAIR-LIVE -> the WHOLE row, unchanged.  Control C6 pins a live finding `p283`
+                     made: ONE row presenting `Iris` and `Pyris` as two distinct MIT
+                     subsystems.  Naming both halves of a PROVEN alias pair anywhere in
+                     one row is that defect whatever cell they sit in, so narrowing this
+                     arm would delete the finding the gate was built on.
+
+🔵 The subject is the FIRST ADDRESS-BEARING CELL, never cell 1.  Measured on this corpus
+at `p300`: of 379 live address rows, 153 carry no address in cell 1 at all (the first cell
+is a plain name), so a cell-1 rule would blind the gate on 40 % of the shelf.  29 rows
+spread addresses across more than one cell -- that is the entire cross-reference
+population, and it is what the subject scope excludes.
+
 🔵 One thing it deliberately does NOT do: resolve aliases over the network in the offline
 half.  `ls1intum/Iris` 302s to `Pyris` at the HTTP layer, but that needs egress, and
 `p281` recorded that an instrument which cannot run where the pass runs is an instrument
@@ -77,8 +108,12 @@ def load_aliases(path):
     return pairs
 
 
-def live_rows(text):
+def live_rows(text, subject_only=False):
     """Yield (table_id, lineno, addresses) for every LIVE markdown table data row.
+
+    `subject_only` yields ONLY the addresses of the first address-bearing cell -- the
+    repository the row RECOMMENDS -- rather than every address on the line.  The two
+    arms of this gate want different answers; the module docstring says why.
 
     A row is dead -- and so invisible to this gate -- if it is struck through in its
     first cell or marked WITHDRAWN.  See the module docstring: p282's correction is
@@ -107,10 +142,24 @@ def live_rows(text):
         first = cells[1] if len(cells) > 1 else ""
         if "~~" in first or "WITHDRAWN" in line.upper():
             continue
-        addrs = {
-            f"{m.group(1)}/{m.group(2)}".lower().rstrip(".").removesuffix(".git")
-            for m in ADDR.finditer(line)
-        }
+        def harvest(chunk):
+            return {
+                f"{m.group(1)}/{m.group(2)}".lower().rstrip(".").removesuffix(".git")
+                for m in ADDR.finditer(chunk)
+            }
+
+        if subject_only:
+            # 🔵 The FIRST cell carrying any address is the subject.  A cell may carry
+            # two legitimately (C6's shape), so the whole cell is taken, never the
+            # first match -- and the search starts at cells[1] because a markdown row
+            # splits to an empty cells[0].
+            addrs = set()
+            for cell in cells[1:]:
+                addrs = harvest(cell)
+                if addrs:
+                    break
+        else:
+            addrs = harvest(line)
         if addrs:
             out.append((table, i, addrs))
     return out
@@ -122,11 +171,18 @@ def check_offline(root, aliases):
         p = root / shelf
         if not p.exists():
             continue
-        rows = live_rows(p.read_text(encoding="utf-8"))
+        text = p.read_text(encoding="utf-8")
+        rows = live_rows(text)
+        # 🔵 p300: the two arms read DIFFERENT scopes of the same rows, and that
+        # asymmetry is the fix -- see the module docstring.  The alias arm keeps the
+        # whole row (C6); the duplicate-address arm takes the row's subject (C13).
+        subj = {(t, n): s for t, n, s in live_rows(text, subject_only=True)}
         tables = sorted({t for t, _, _ in rows})
         for t in tables:
             trows = [(n, s) for tt, n, s in rows if tt == t]
-            # (1) a recorded alias pair, both halves recommended by one table
+            # (1) a recorded alias pair, both halves recommended by one table.
+            #     WHOLE-ROW scope, deliberately: naming both halves of a proven alias
+            #     anywhere in one row is p283's C6 finding.
             for a, b, prov in aliases:
                 la = [n for n, s in trows if a in s]
                 lb = [n for n, s in trows if b in s]
@@ -137,10 +193,13 @@ def check_offline(root, aliases):
                         f"ALIAS-PAIR-LIVE\t{shelf}:{where}\t{a} == {b}\t"
                         f"one repository recommended twice{same} (ledger: {prov})"
                     )
-            # (2) the same address live twice in one table
+            # (2) the same address RECOMMENDED by two live rows of one table.
+            #     SUBJECT scope: a sibling cited in a description cell is a
+            #     cross-reference, which is this base's house style and not a
+            #     second recommendation.  Whole-row scope here was red for two passes.
             seen = {}
-            for n, addrs in trows:
-                for a in addrs:
+            for n, _ in trows:
+                for a in subj.get((t, n), ()):
                     seen.setdefault(a, []).append(n)
             for a, lines in sorted(seen.items()):
                 if len(lines) > 1:
