@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 295 — THE TWENTY-FIRST NIL, AND THE LAW `p294` PUBLISHED WITH ITS STAR CHANNEL IS FALSE
+
+⏱️ **Seventeenth pass of `2026-10-18`.** Evidence:
+[`p295-websearch.2026-10-18-p295.tsv`](../evidence/p295-websearch.2026-10-18-p295.tsv) ·
+[`p295-star-channel.2026-10-18-p295.tsv`](../evidence/p295-star-channel.2026-10-18-p295.tsv) ·
+[`p295-dns-control.2026-10-18-p295.tsv`](../evidence/p295-dns-control.2026-10-18-p295.tsv).
+
+🔴 **`top open source AI agents education 2026 github MIT` — TWENTY-FIRST consecutive nil.**
+Population unchanged from `p275`. 🔵 **And the leg carried its own proof of staleness this time:**
+two separate results re-served `microsoft/ai-agents-for-beginners` as ***"12 Lessons / 67,223
+stars"*** and ***"47.3k stars"*** — the exact figures `p294` refuted first-hand **the same day**
+(`77.4k★`, *"18 Lessons"*). The SEO corpus this leg draws on is not merely thin; it is **demonstrably
+behind the repository it describes**.
+
+### 🔴 `p294`'s *"stars are monotonic"* — REFUTED, one pass later, in `p294`'s own channel
+
+`p294` opened the `WebFetch`-over-`github.com` channel, read **two** repositories, refuted three
+cells, and published a **rule about all repositories** — using it to discard a `32 741`-star source
+claim. `p295` ran the same channel over **eleven** published cells.
+
+| cell | published on these shelves | read `p295`, `2026-10-18` | verdict |
+|---|---|---|---|
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) stars | **819★**, 12,437 commits | 🔴 **817★** · 395 forks · **12,440 commits** · MIT · branch `develop` | 🔴 **REFUTES THE RULE.** Stars **down 2** while commits advanced **3**. Up-and-down in one read is what a live repository does; a broken read would disturb **both** |
+| `jupyterhub/jupyterhub` | 8.4k★, 2.1k forks, BSD-3-Clause, 8,913 commits | 8.4k★ · 2.1k · BSD-3-Clause · 8,913 | 🟢 **EXACT** |
+| `instructure/canvas-lms` | 6.9k★, 3.0k forks, AGPL-3.0, 78,765 commits | 6.9k★ · 3.0k · AGPL-3.0 · 78,765 | 🟢 **EXACT** |
+| `oppia/oppia` | 6.9k★, Apache-2.0, 17,004 commits | 6.9k★ · **5.8k forks** · Apache-2.0 · 17,004 | 🟢 **EXACT**, forks **new** |
+| `Sunbird-Ed/SunbirdEd-portal` | 41★, 317 forks, MIT, 38,046 commits | 41★ · 317 · MIT · 38,046 | 🟢 **EXACT** — the star-blindness row holds to the digit |
+| `HKUDS/DeepTutor` | 41.6k★, 5.3k forks, Apache-2.0, `v1.6.14` | 41.6k★ · 5.3k · Apache-2.0 · `v1.6.14` `2026.10.8` | 🟢 **EXACT** — `p294`'s own figure, re-read independently the same day |
+| `learningequality/kolibri` | 1.2k★, MIT, 39,803 commits | 1.2k★ · **1.0k forks** · MIT · 39,803 | 🟢 **EXACT**, forks **new** |
+| `portabilis/i-educar` | 719★, GPL-2.0, 34,948 commits | 719★ · **550 forks** · GPL-2.0 · 34,948 | 🟢 **EXACT**, forks **new** |
+| `code-dot-org/code-dot-org` | 215,796 commits, 901★, 538 forks | 901★ · 538 · **215,808 commits** | 🟡 **DRIFTED** `+12`, not refuted |
+| `Submitty/Submitty` | 802★, 1.1k forks, 9,316 commits | 802★ · 1.1k · **9,321 commits** | 🟡 **DRIFTED** `+5` |
+| `Gego-K12/gegok12` | 54★, **98 forks** | 54★ · **101 forks** · **123 commits** | 🔴 **FORKS REFUTED.** The cell self-declared *"no star read this pass"* |
+
+🔵 **Seven of eleven are exact, and that is the finding — not the two that moved.** Every cell
+`p294` refuted came from a **social post or an SEO blog**; every cell read **first-hand at a pin**
+confirmed. 🔵 **Staleness on these shelves tracks PROVENANCE, not age.** The defect was never *old
+figures* — it was **figures this base never measured itself.**
+
+🔵 **The asymmetry worth keeping:** `p294` was **right** to throw out the `32 741` figure — a 27 %
+gap is not unstar drift. What was wrong is the **reason it gave**, and a correct answer resting on a
+false rule fails the next time it is applied: under *"monotonic"*, Artemis's `−2★` reads as a broken
+channel. 🟢 It is not. **A delta is not an error signal, and a downward delta is not a bad read.**
+
+### 🔵 What this changes in how a figure is written here
+
+🟢 `P51`'s **value · channel · resolution bound · read-date** stands, and `p295` adds the fifth
+field it was missing: **the sample a general claim rests on.** `p295` read eleven and writes
+*eleven* — never *all*.
+
 ## 🔴 Pass 294 — THE TWENTIETH NIL, TWO NEW SLUGS BOTH DISQUALIFIED BY THEIR OWN READMEs — and a star channel `p293` declared closed was open the whole time
 
 ⏱️ **Sixteenth pass of `2026-10-18`.** Evidence:

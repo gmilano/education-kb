@@ -1,0 +1,6 @@
+host	control_class	getaddrinfo_verdict	observed	what_it_licenses
+github.com	KNOWN-REAL, ALLOWLISTED	RESOLVES	140.82.113.4	Resolution succeeds for an allowlisted host, so the resolver is not globally dead.
+unu.edu	KNOWN-REAL, NOT ALLOWLISTED	GAIERROR	EAI_NONAME (-2)	A host this base has cited all pass and which certainly exists fails IDENTICALLY to an invented one.
+huggingface.co	KNOWN-REAL, NOT ALLOWLISTED	GAIERROR	EAI_NONAME (-2)	Same. p293/p294 recorded huggingface.co as 'closed'; this shows the closure is visible at the RESOLVER, not only at the gateway.
+nm-aist.ac.tz	KNOWN-REAL (p294 cited), NOT ALLOWLISTED	GAIERROR	EAI_NONAME (-2)	One of the four hosts p294 filed as EXISTENCE-UNMEASURED. Still unmeasured.
+this-host-does-not-exist-p295.example	KNOWN-FAKE	GAIERROR	EAI_NONAME (-2)	The negative control. Byte-identical verdict to three known-real hosts.

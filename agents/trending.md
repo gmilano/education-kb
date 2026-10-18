@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 295) — the nil is TWENTY-ONE deep, and the leg now re-serves figures this base refuted the same day
+
+⏱️ **Seventeenth pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept, as
+`p232`-`p294` kept theirs. Evidence:
+[`p295-websearch.2026-10-18-p295.tsv`](../evidence/p295-websearch.2026-10-18-p295.tsv) ·
+[`p295-star-channel.2026-10-18-p295.tsv`](../evidence/p295-star-channel.2026-10-18-p295.tsv).
+
+🔴 **TWENTY-ONE consecutive nils on the agent leg.** No new education-sector agent. The population
+is unchanged from `p275`.
+
+🔵 **The signal this week is about the CHANNEL, not the population.** The mandated agent leg and the
+mandated trending leg **both** returned `microsoft/ai-agents-for-beginners` — one as *"12 Lessons to
+Get Started Building AI Agents, 67,223 stars"*, the other, via a LinkedIn post, as *"roughly 47.3k
+stars"*. 🔴 **`p294` read that repository first-hand the same day: `77.4k★`, `25.4k` forks, and
+*"18 Lessons"*.** So the two figures are not merely stale and 42 % apart from each other — **both are
+below the live count, and the description is wrong in both.**
+
+🔵 **What a trend-watcher should take from that:** the SEO/aggregator corpus feeding this leg lags
+the repositories it ranks by enough to invert a ranking. A "trending" list built on it is a snapshot
+of **when the list was written**, not of this week. The only figures on these shelves worth quoting
+are the ones read at the page or the payload.
+
+### 🟢 The eleven-cell re-read, and the rule that died in it
+
+`p294` opened the star channel and published *"stars are monotonic"*. 🔴 **`ls1intum/Artemis` reads
+`817★` today against `819★` on this shelf — down — while its commits advanced `12,437 → 12,440`.**
+Seven of the eleven cells re-read are **exact**; two drifted upward; two were refuted. Full table in
+[`agents/top.md`](top.md).
+
+🔵 **The durable lesson for this file:** a star count that *falls* is not evidence of a bad read.
+Users unstar. Any trend claim of the form *"X is accelerating"* built on two reads a day apart is
+noise unless the delta clears the channel's own resolution — and `WebFetch` renders `8.4k`, not
+`8,412`, so **the bound on a four-digit-plus count here is `±50`.**
+
+### 🔴 Declared nils, this pass
+
+| leg | outcome | why it produced no row |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **NIL, 21st consecutive** | hits are **courses about building agents** and general-purpose frameworks; no education-sector agent |
+| `github trending education AI 2026` | 🔴 **NIL for education, 12th** | no live `github.com/trending` page; all aggregator snapshots, one re-serving a refuted star count |
+| 🇧🇩 Bangla, directed | 🔴 **NIL, declared** | `teachers.gov.bd` blog/opinion posts only; two `bdnews24` topic pages returned **navigation chrome and no article body** |
+
 ## 2026-10-18 (pass 294) — the nil is TWENTY deep, the fifth national language is non-nil and ALREADY CARRIED, and a channel this base wrote off as closed refuted three of its own published figures
 
 ⏱️ **Sixteenth pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept, as

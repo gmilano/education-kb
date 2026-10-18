@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 295) — eleven published repository cells re-read: seven exact, two drifted, two refuted
+
+⏱️ **Seventeenth pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept, as
+`p232`-`p294` kept theirs. Evidence:
+[`p295-star-channel.2026-10-18-p295.tsv`](../evidence/p295-star-channel.2026-10-18-p295.tsv) ·
+[`p295-websearch.2026-10-18-p295.tsv`](../evidence/p295-websearch.2026-10-18-p295.tsv).
+
+🔴 **TWELFTH consecutive nil for education on the trending leg**, and **SIXTEENTH** with no
+permissive education ERP/CRM. The ERP leg's corpus was **9 of 9 vendor-glossary or directory pages —
+five of them the same OpenEduCat glossary page in five languages.**
+
+### 🟢 The re-read, which is this pass's actual trending signal
+
+`p294` proved the channel on two repositories. `p295` ran it over eleven.
+
+🟢 **Seven exact:** `jupyterhub` · `canvas-lms` · `oppia` · `Sunbird-Ed/SunbirdEd-portal` ·
+`DeepTutor` · `kolibri` · `i-educar`.
+🟡 **Two drifted upward:** `code-dot-org` **215,796 → 215,808** commits; `Submitty` **9,316 → 9,321**.
+🔴 **Two refuted:** `ls1intum/Artemis` **819★ → 817★** *(down)*; `Gego-K12/gegok12` **98 → 101 forks**.
+
+🔵 **Three fork counts this file had never published**, and all three carry the same signal:
+
+| repo | stars | forks | what the ratio says |
+|---|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 6.9k | **5.8k** | forks at **84 %** of stars — this is a *deployed* platform, not a bookmarked one |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1.2k | **1.0k** | **83 %** — consistent with offline deployments that fork to localise |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 719 | **550** | **76 %** — the Brazilian municipal-deployment pattern this file predicted |
+
+🔵 **This is the `Submitty`/`Ed-Fi` signature generalising.** This base has argued for many passes
+that *forks approaching or exceeding stars* marks software that institutions **run** rather than
+developers **bookmark**. It now holds on three more rows, on three continents, and it is the single
+most useful thing a studio can read off a GitHub page when star counts are suppressed by
+public-sector provenance.
+
+### 🔴 A licence path, and a licence label, both wrong in the same pass
+
+🔴 **[`Submitty/Submitty`](https://github.com/Submitty/Submitty)'s grant is at `LICENSE.md`;
+plain `LICENSE` is `404`.** Pin `81fb6a2334633ad0fe6148c201e04160db6a9bdb`, `1 542 B`, sha256₁₂
+`c123708cb4ef`, *"BSD 3-Clause License"*. **Third spelling on this shelf** after `DFE-Digital`'s
+`LICENCE` and `Ed-Fi`'s `LICENSE.txt`. A probe that tries one path and reports *"unlicensed"* is
+reporting on **its own path**, not on the repository.
+
+🔴 **[`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) shows a License link with NO LABEL —
+and its payload is a 1 150-byte MIT file.** Re-read at a new pin
+(`99da145f55a17d26ac2d67ae258a4f9beb385874`, sha256₁₂ `b8694396d7dc`), **byte-identical** to `p274`.
+🔵 So `p267`'s no-label signal is **real but NOT specific**: the same channel reported a label for
+**7 of 9** repositories in the same hour, so the absence is a property of the page — but it does
+**not** imply a non-standard grant. **Never downgrade a row on it alone.**
+
 ## 2026-10-18 (pass 294) — the trending leg is ELEVEN deep for education, and the two star figures it carried are both wrong
 
 ⏱️ **Sixteenth pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept, as

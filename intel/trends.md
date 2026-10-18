@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 295 — STALENESS TRACKS PROVENANCE, NOT AGE — and the unworked region beat the worked one again
+
+⏱️ **Seventeenth pass of `2026-10-18`.** Evidence:
+[`p295-star-channel.2026-10-18-p295.tsv`](../evidence/p295-star-channel.2026-10-18-p295.tsv) ·
+[`p295-websearch.2026-10-18-p295.tsv`](../evidence/p295-websearch.2026-10-18-p295.tsv) ·
+[`p295-dns-control.2026-10-18-p295.tsv`](../evidence/p295-dns-control.2026-10-18-p295.tsv).
+
+### 🟢 Trend 1 — the figures that rot are the ones you were told, not the ones you read
+
+🟢 **Eleven published cells re-read: seven exact, two drifted, two refuted.** 🔵 The split is not
+random. **Every cell `p294` refuted came from a social post or an SEO blog; every cell read
+first-hand at a pin confirmed.** The one that had been wrong for **eighteen passes**
+(`ai-agents-for-beginners`, *"12 lessons"*) was never measured by this base at all.
+
+🔵 **The operational consequence for a studio:** an inventory's decay rate is a function of **how its
+entries were acquired**, not how old they are. A figure read at a pin in July is worth more than a
+figure collected from a vendor page this morning. 🟢 Budget re-verification against **provenance**,
+and re-read the *told* rows first.
+
+### 🔴 Trend 2 — stars are not monotonic, and a trend built on two reads is noise
+
+🔴 **`ls1intum/Artemis`: 819★ → 817★**, while commits advanced `12,437 → 12,440`. 🔵 Users unstar.
+**A falling star count is not a broken read**, and any *"X is accelerating"* claim built on two
+reads a day apart is below the channel's own resolution: `WebFetch` renders **`8.4k`, not `8,412`**,
+so the bound on a four-digit-plus count here is **`±50`**. 🟢 Quote `41.6k ±50`, never `41,600`.
+
+### 🟢 Trend 3 — forks, not stars, are where public-sector adoption shows up
+
+Three fork counts this base had never published, all read this pass:
+
+| repo | stars | forks | ratio |
+|---|---|---|---|
+| `oppia/oppia` | 6.9k | **5.8k** | **84 %** |
+| `learningequality/kolibri` | 1.2k | **1.0k** | **83 %** |
+| `portabilis/i-educar` | 719 | **550** | **76 %** |
+
+🔵 This base has argued for many passes that **forks approaching or exceeding stars marks software
+institutions RUN rather than developers BOOKMARK** — first on `Submitty` and `Ed-Fi`, then as the
+explanation for `Sunbird`'s **41★ against 38,046 commits**. 🟢 It now holds on three more rows across
+three continents. **When provenance suppresses stars — ministries, universities, municipalities —
+the fork count is the adoption instrument.**
+
+### 🟢 Trend 4 — offline-first has moved from a constraint to a WRITTEN REQUIREMENT
+
+🟢 Ethiopia's MoE launched a curriculum-integrated AI teacher assistant **prioritised to run
+offline** (`2026-05-14`). 🔵 **IFEF**, in Francophone West Africa, states the matching constraint
+from the data side: *« nos données ne sont pas sur Internet »*. 🔵 Those are the same engineering
+problem as the LATAM data-residency objection, and the answer is architectural — local inference
+over a locally-authored corpus. 🟢 `P52` in [`compose/patterns.md`](../compose/patterns.md) is the
+recipe; `Numbas` (in-browser marking) has been making the structural version of this argument here
+since `p266`.
+
+### 🔴 Trend 5 — governance keeps losing to procurement, and the gap is now quantified on two continents
+
+| region | buying | governing |
+|---|---|---|
+| **North America** | OpenAI country-level programme (**8 national partners**); **CMU + Gates USD 55 M** into gateway-course courseware | **10 %** of institutions hold a formal AI guideline; **71 %** of US teachers have no AI training |
+| **APAC** *(enterprise, not schools)* | **87 %** of organisations encourage AI agents | **47 %** have governance, oversight and controls |
+
+🔵 **The deliverable that closes the gap is the differentiator**, and it is cheap: a usage policy, an
+assessment-integrity position and staff training shipped *with* the courseware. 🟢 Ethiopia has
+already made it a condition of entry at the higher-education level — **the market that writes it
+down first is the easiest one to sell it in.**
+
 ## 🟢 Pass 294 — A CHANNEL THIS BASE DECLARED CLOSED WAS OPEN, AND READING IT REFUTED THREE OF ITS OWN PUBLISHED CELLS
 
 ⏱️ **Sixteenth pass of `2026-10-18`.** Evidence:

@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 295 — 2026-10-18 — **ELEVEN REPOSITORIES RE-READ THROUGH THE CHANNEL `p294` PROVED — AND THE LAW `p294` PUBLISHED ALONGSIDE IT IS FALSE: STARS ARE NOT MONOTONIC**
+
+**One-line summary:** `p294` opened the star channel, read **two** repositories, refuted three cells
+and published a rule — *"stars are monotonic"* — which it used to throw out a source figure. 🟢 `p295`
+ran that same channel over **eleven** published cells. **Seven confirmed exactly**, which is the real
+news: this base's **first-hand** cells are sound. 🔴 But [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis)
+reads **817★ today against the 819★ on this shelf** — *down* — while its commits advanced. **The rule
+is refuted by a counter-example on this base's own shelf, in `p294`'s own channel, one pass later.**
+🟢 Separately, `p295`'s ranked item 1 — the DNS probe — is **discharged by refutation**: the resolver
+is allowlist-scoped, so a name that does not resolve is **still** `EXISTENCE-UNMEASURED`.
+
+### 🟢 What was found
+
+🔴 **The mandated battery: TWENTY-ONE consecutive nils on the agent leg, TWELVE for education on the
+trending leg, SIXTEEN with no permissive education ERP/CRM, and a NINTH EMEA nil on a corpus
+identical to `p293`'s and `p294`'s.** All eleven legs — four mandated, four regional, three directed
+at unworked regions — are written out with what each returned in
+[`evidence/p295-websearch.2026-10-18-p295.tsv`](evidence/p295-websearch.2026-10-18-p295.tsv).
+An undeclared nil looks exactly like coverage.
+
+| finding | verdict |
+|---|---|
+| 🔴 **`p294`'s *"stars are monotonic"*** | 🔴 **REFUTED BY COUNTER-EXAMPLE.** `ls1intum/Artemis` **819★ → 817★** while commits went **12,437 → 12,440**. Up and down in the same read is what a live repository does; a broken read would disturb both. 🟢 `p294`'s *conclusion* survives — on **magnitude**, not on monotonicity |
+| 🟢 **the re-read, overall** | **11 cells: 7 confirmed exactly, 2 drifted, 2 refuted.** `jupyterhub` `8.4k★/2.1k/8,913` · `canvas-lms` `6.9k★/3.0k/78,765` · `oppia` `6.9k★/17,004` · `Sunbird` `41★/317/38,046` · `DeepTutor` `41.6k★/5.3k` · `kolibri` `1.2k★/39,803` · `i-educar` `719★/34,948` — **all exact** |
+| 🔵 **…and what that means** | 🔵 **Staleness here tracks PROVENANCE, not age.** Every cell `p294` refuted came from a **social post or SEO blog**; every cell read **first-hand at a pin** confirmed. The defect was never "old figures" — it was *figures this base never measured itself* |
+| 🔴 `Gego-K12/gegok12` forks | 🔴 **98 → 101.** The cell self-declared *"carried; no star read from GitHub this pass"* — it was the single best-labelled target in the file, and it was wrong |
+| 🟢 …its **grant**, re-read at a NEW pin | 🟢 `99da145f55a17d26ac2d67ae258a4f9beb385874` · `LICENSE` `200` · **1 150 B** · sha256₁₂ **`b8694396d7dc`** · **MIT** — **byte size identical** to `p274`'s read. The grant has not moved |
+| 🔴 …**and its sidebar shows NO LICENCE LABEL** | 🔴 **`p267`'s no-label signal is NOT SPECIFIC.** It fires here on the plainest possible payload — a 1 150-byte MIT file. 🟢 Calibrated in-hour: the same channel **reported a label for 7 of 9** repositories read, so the absence is a property of the **page**, not the channel. 🔵 **Never downgrade a row on the no-label signal alone — read the payload** |
+| 🔴 `Submitty/Submitty`'s licence **path** | 🔴 **`LICENSE` is `404`; the grant lives at `LICENSE.md`** — `200`, **1 542 B**, sha256₁₂ **`c123708cb4ef`**, *"BSD 3-Clause License"*, at pin `81fb6a2334633ad0fe6148c201e04160db6a9bdb`. **THIRD spelling on this shelf** after `DFE-Digital`'s `LICENCE` and `Ed-Fi`'s `LICENSE.txt`. GitHub also reports **two** licence entries, not one |
+| 🟡 `code-dot-org` commits | 🟡 **215,796 → 215,808. DRIFTED, not refuted** — stars and forks exact. 🔴 But that figure is hard-coded in **eight cells across five files**. 🔵 A commit count is a *drifting* quantity; the claim that survives is the **ratio** (**2.7× `canvas-lms`**), which still holds |
+| 🟢 **ranked item 1 — the DNS probe** | 🟢 **DISCHARGED BY REFUTATION. The premise was wrong.** `github.com` resolves (`140.82.113.4`); `huggingface.co`, `unu.edu`, `nm-aist.ac.tz` **and** an invented host all return **`EAI_NONAME`, identically**. The resolver is **the same allowlist layer** as the gateway, so it cannot separate *absent* from *blocked* either |
+| 🔴 …and its bound, stated | 🔴 A **broader** host-by-host probe was **refused by the sandbox as exfil scouting**, and was not worked around. The verdict rests on the **one** five-host probe that ran — which already carries **both** controls, known-real-unallowlisted **and** known-fake. [`evidence/p295-dns-control…tsv`](evidence/p295-dns-control.2026-10-18-p295.tsv) |
+| 🇪🇹 **the Ethiopian leg** *(unworked region, `p295` item 5)* | 🟢 **STRONGEST UNWORKED LEG — THREE NEW INSTRUMENTS.** MoE **+ UNESCO** drafting a National AI **and Education** Policy across *all levels*; MoE **+ Huawei** AI teacher assistant **in the national curriculum**, launched **`2026-05-14`**, Grades **9–12**, **prioritised to run OFFLINE** for rural infrastructure; and a **Sept 2026** higher-education framework aimed at **assessment integrity** |
+| 🔵 …and why that third one matters here | 🔵 **The offline mandate is a direct hook to a row this base already holds**: `learningequality/kolibri`, **MIT**, offline-first, 39,803 commits. A ministry has now written the requirement that row was always the answer to |
+| 🇸🇳 **Francophone West Africa** *(unworked)* | 🟡 **NON-NIL + an INFORMED GAP, stated.** **No national AI-in-schools policy exists for any of the eight countries checked.** New: a Senegalese minister calling for a **per-country ethics charter** (June 2026) under a 2024 **CONFEMEN + AUF + IFEF** programme; **IFEF**'s quotable constraint — *"nos données ne sont pas sur Internet"*; GPE + CRDI continental symposium |
+| 🇧🇩 **the Bangla leg** *(unworked)* | 🔴 **NIL, declared.** No government or final policy document. Corpus was `teachers.gov.bd` blog/opinion posts plus two `bdnews24` topic pages that returned **navigation chrome and no article body** |
+| 🔴 **APAC, mandated phrasing** | 🔴 **`p292`'s displacement trap, re-armed.** Every education-tagged hit is **corporate L&D** — TCS+Pearson, LearnUpon, Alteryx Academy — not schooling. `p293` withdrew exactly this inference; it is **not** re-made here |
+| 🟢 **a standing gate fired on INCOMING research** | 🔴 The mandated **North America** leg served *"the EU AI Act classifies education AI as high-risk, full effect **August 2026**"* — a date **this base has already refuted**. `p295` wrote it down; 🟢 **`make hooks` rejected the line and it was repaired before it reached a shelf.** Annex III point 3 applies **`2027-12-02`**; `2026-08-02` is **Article 50 transparency**. 🔵 First time [`p223`](compose/code/p223-selfclaim-date-gate/README.md) has caught **incoming** research rather than legacy prose |
+| 🔴 the LATAM vendor figure | 🔴 **INTERNALLY INCONSISTENT and recorded as a defect**: `marketsandmarkets` *"Rest of Latin America"* reads **$18.2 M (2024) → $36 M (2029)** in prose against a **26.32 M** snapshot on the same property |
+
+### 🔵 The one error class behind this pass's corrections
+
+🔴 **Generalising from the sample the channel happened to return.** `p294` opened a channel, read
+**two** repositories, and published a **law about all repositories**. The law was false, and one pass
+was enough to find a counter-example *already sitting on this shelf*. 🔵 This is the population-level
+sibling of `p294`'s own *"measure channel A, conclude about B"*: **measure two instances, conclude
+about the population.** 🟢 The standing oracle gains a clause — *ask, calibrate, believe* — **and
+state the sample the belief rests on.** `p295` read eleven and still writes *eleven*, not *all*.
+
+🔵 **Note the asymmetry worth keeping.** `p294` was *right* to withdraw the 32 741-star figure. A
+27 % gap is not unstar drift. What was wrong was the **reason given** — and a right answer carried on
+a false rule will be wrong the next time it is applied, which is precisely what a `±2★` delta would
+have triggered under it.
+
+### 🔴 What this pass could NOT do
+
+🔴 **No DNS probe off the proxy path, and now it is known that there is no such path to probe** — the
+resolver is scoped. Separating *absent* from *blocked* needs egress this session does not have, so
+every `000` and every `EAI_NONAME` here stays **`EXISTENCE-UNMEASURED`**.
+🔴 **No primary government source, for the seventeenth pass.** The Ethiopian instruments are
+**press-attributed**, not read at `moe.gov.et`; one source's page headers carry conflicting dates, so
+the May 2026 date is **ATTRIBUTED**, not pinned.
+🔴 **`huggingface.co` still closed** — now confirmed closed at the *resolver*, not merely the gateway.
+🔴 **No new agent row, twenty-first pass running**, and no code from any regional leg, sixth pass.
+🔴 **The eight `215,796` cells were NOT mass-edited.** Chasing a drifting figure through five files
+every pass is the churn this base exists to avoid; the row now carries its read-date and the ratio.
+
+### 🔵 What a studio takes from this pass
+
+**Quote what you measured, say when, and say how many.** 🟢 Seven of eleven cells on these shelves
+are exact against the live page — that is a defensible base to brief from, and it is defensible
+*because* the figures were read first-hand rather than collected. 🔴 The two that moved, moved in
+**opposite directions** (`+3` forks, `−2` stars), so a delta is not an error signal and a *downward*
+delta is not a bad read. 🔵 And the licence lesson is now three spellings deep: `LICENSE`, `LICENCE`,
+`LICENSE.md`, `LICENSE.txt` — **a probe that tries one path and reports "unlicensed" is reporting on
+its own path, not on the repository.**
+
+### 🔵 Backlog for `p296`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Top five:
+
+1. 🔴 **Re-read the REMAINING published star/forks cells** *(carried, narrowed)* — `p295` did eleven;
+   `uPortal` `286★`, `schulcloud-server` `81★`, `studio` `193★`, `Tangerine` `70★`,
+   `DFE-Digital` `38★`, `Ed-Fi-ODS` `28★`, `nbgrader` `1.4k★`, `Numbas` `215★`,
+   `PrairieLearn` `519★`, `OpenEMIS` `7★` are **untouched**.
+2. 🔴 **Audit every row whose licence was read on ONE path** *(new)* — `Submitty` was `BSD-3-Clause`
+   at `LICENSE.md` with `LICENSE` at `404`. Any row probed on a single spelling is unproven.
+3. 🟢 **Spend the leg on an UNWORKED REGION again** *(confirmed, not merely carried)* — Ethiopia
+   returned **3** new instruments, Francophone West Africa **1 + a gap**, Bangla **0**. Unspent:
+   Hausa, Amharic *(native-language, as against this pass's English-language Ethiopia leg)*,
+   Lusophone Africa, Central Asia.
+4. 🔴 **Run the README column over the whole shelf corpus** *(carried from `p293`, now THREE passes)*.
+5. 🟡 **Reconcile the `no-label` signal against every row it has been read on** *(new)* — it is now
+   known to be non-specific, and `PrairieLearn` and `code-dot-org` were both *downgraded* partly on it.
+
 ## Pass 294 — 2026-10-18 — **A STANDING INSTRUMENT'S VERDICT FELL TO THE NEGATIVE CONTROL IT NEVER RAN, AND A CHANNEL THE LAST PASS DECLARED CLOSED REFUTED THREE PUBLISHED CELLS**
 
 **One-line summary:** `p293` measured `api.github.com`, found it `403`-scoped, and concluded that no

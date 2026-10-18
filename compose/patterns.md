@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 295 — `P52`, and it exists because A MINISTRY WROTE DOWN THE REQUIREMENT THIS BASE ALREADY HELD THE ANSWER TO
+
+⏱️ **Seventeenth pass of `2026-10-18`.** Evidence:
+[`p295-websearch.2026-10-18-p295.tsv`](../evidence/p295-websearch.2026-10-18-p295.tsv) ·
+[`p295-star-channel.2026-10-18-p295.tsv`](../evidence/p295-star-channel.2026-10-18-p295.tsv).
+
+🔵 Most patterns here start from a capability looking for a buyer. 🟢 **`P52` starts from a
+procurement document.** Ethiopia's Ministry of Education launched an AI teacher assistant **into the
+national curriculum** on **`2026-05-14`** for Grades **9–12**, **prioritised to function OFFLINE**
+because of rural infrastructure gaps — and is separately drafting a higher-education AI framework
+whose stated focus is **assessment integrity**. Those are two requirements, written by the customer,
+that this base can already answer with **permissive, first-hand-verified rows**.
+
+### `P52` — Offline-first, curriculum-aligned teacher assistant with an integrity half
+
+**When to reach for it:** a ministry, state or district engagement where (a) connectivity cannot be
+assumed, (b) the deliverable must map to a **national curriculum**, and (c) the buyer has named
+**academic integrity** as a condition rather than a feature. Ethiopia is the live instance; the
+pattern holds for rural LATAM, low-bandwidth APAC and Francophone West Africa, where **IFEF** has
+stated the matching constraint — *« nos données ne sont pas sur Internet »*.
+
+| layer | repo | licence | verified | what it does here |
+|---|---|---|---|---|
+| **Delivery substrate** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 🟢 **re-read `p295`**: 1.2k★ / **1.0k forks** / 39,803 commits | Runs **fully offline**, syncs opportunistically. The forks-to-stars ratio (**83 %**) is the deployment signature — this is software institutions *run* |
+| **Curriculum authoring** | [`learningequality/studio`](https://github.com/learningequality/studio) | **MIT** | 🟡 **carried** (193★, 15,493 commits) — *not re-read this pass* | Authors the curriculum **channels** Kolibri ships. This is where Grades 9–12 mapping lives |
+| **Tutor / assistant** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** | 🟢 **re-read `p295`**: 41.6k★ / 5.3k forks / `v1.6.14` (`2026.10.8`) | Model-agnostic across **Ollama, LM Studio, llama.cpp, vLLM** — which is the whole reason it can run with no egress |
+| **Local inference** | `llama.cpp` / Ollama / vLLM *(via DeepTutor's own adapters)* | — | 🔵 substrate, not an education row | Keeps inference **on the device or on a school server**. No student utterance leaves the building |
+| **Integrity half** | [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | **BSD-3-Clause** ⚠️ payload at **`LICENSE.md`**, plain `LICENSE` is `404` | 🟢 **re-read `p295`**: 802★ / 1.1k forks / 9,321 commits | Submission, autograding **and** the TA grading workflow — the artefact an assessment-integrity framework actually asks for |
+
+**How it wires together.**
+
+1. **Author the curriculum in Studio, not in the tutor.** Grades 9–12 content becomes Kolibri
+   channels. 🔵 This is the step that makes the deliverable *national-curriculum-aligned* rather
+   than *generically pedagogical*, and it is the step vendors skip.
+2. **Ship Kolibri to the school as the only networked component**, syncing opportunistically. It
+   already does this; nothing is built here.
+3. **Run DeepTutor against a local model** through its existing `llama.cpp`/Ollama adapters, scoped
+   to the Kolibri channel as its RAG corpus. 🟢 **The offline requirement is then met structurally,
+   not contractually** — the same argument `Numbas` makes for in-browser assessment.
+4. **Attach Submitty for anything graded**, so the integrity position is a running system rather
+   than a policy PDF.
+5. **Sync artefacts, not transcripts.** When connectivity appears, push *aggregates* — mastery,
+   completion, item difficulty — and leave student utterances on the device. That is what makes the
+   data-residency answer survive a procurement review.
+
+**🔴 Price these before the SOW — all four are real and all four are recorded elsewhere in this base:**
+
+- 🔴 **DeepTutor is not a stable dependency.** `125` open PRs / `129` open issues at `p234`,
+  `v1.6.14` eight days before this pass. **Pin a tag; do not track `main`.**
+- 🔴 **Submitty's licence path is a trap** — a probe that tries only `LICENSE` reads it as
+  unlicensed. Verified **BSD-3-Clause** at `LICENSE.md`, `1 542 B`, sha256₁₂ `c123708cb4ef`.
+- 🔴 **`learningequality/studio` was NOT re-read this pass.** Its figures are carried. Re-read before
+  quoting them — `p295` refuted two carried cells out of eleven.
+- 🔴 **"Offline" must be verified per component, not per stack.** Kolibri's offline operation is
+  first-hand on these shelves; DeepTutor's is an **inference from its adapter list**, not a measured
+  property. 🔵 **Measure it in the pilot before it appears in a proposal.**
+
+**🔵 What to say to the buyer.** Every layer is **MIT, Apache-2.0 or BSD-3-Clause** — no copyleft
+reaches the deliverable, and no network clause reaches a hosted deployment. 🟢 The Ethiopian
+requirement, the Francophone West African constraint and the LATAM data-residency objection are the
+**same engineering problem**, and this stack answers all three by keeping inference and student data
+local.
+
 ## 🟢 Pass 294 — a new recipe, and it exists because THIS BASE CARRIED A STALE FIGURE FOR EIGHTEEN PASSES ON A CHANNEL THAT WAS NEVER CLOSED
 
 ⏱️ **Sixteenth pass of `2026-10-18`.** Evidence:

@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 295 — **THE LAW `p294` PUBLISHED WITH ITS CHANNEL IS FALSE, AND THE DNS PROBE'S PREMISE WENT WITH IT**
+
+⏱️ `2026-10-18`, seventeenth pass. Evidence:
+[`p295-websearch.2026-10-18-p295.tsv`](../evidence/p295-websearch.2026-10-18-p295.tsv) ·
+[`p295-star-channel.2026-10-18-p295.tsv`](../evidence/p295-star-channel.2026-10-18-p295.tsv) ·
+[`p295-dns-control.2026-10-18-p295.tsv`](../evidence/p295-dns-control.2026-10-18-p295.tsv).
+
+### 🟢 Discharged this pass
+
+| `p295` backlog item | outcome |
+|---|---|
+| **1. A DNS probe off the proxy path** | 🟢 **DISCHARGED BY REFUTING ITS PREMISE.** There is no off-path resolver here: `github.com` resolves, while `huggingface.co`, `unu.edu`, `nm-aist.ac.tz` **and a known-fake host** all return `EAI_NONAME` **identically**. The resolver is the **same allowlist layer** as the gateway. 🔴 Every `000` and every `EAI_NONAME` stays **`EXISTENCE-UNMEASURED`** |
+| **2. Re-read every published star/forks cell** | 🟡 **ELEVEN DONE, NOT ALL.** 7 exact · 2 drifted · 2 refuted. Carried forward, narrowed, as item 1 below |
+| **5. Query an UNWORKED REGION** | 🟢 **DISCHARGED AND CONFIRMED.** Ethiopia **3** new instruments · Francophone West Africa **1 + an 8-country informed gap** · Bangla **0**. The prediction held: yield tracks **how unworked the region is**, not the language |
+
+### 🔴 Still open
+
+| gap | why it survived `p295` |
+|---|---|
+| 🔴 **The remaining star/forks cells** | `uPortal` 286★ · `schulcloud-server` 81★ · `studio` 193★ · `Tangerine` 70★ · `DFE-Digital` 38★ · `Ed-Fi-ODS` 28★ · `nbgrader` 1.4k★ · `Numbas` 215★ · `PrairieLearn` 519★ · `OpenEMIS` 7★ — **untouched.** `p295` refuted 2 of the 11 it did read, so the prior for this set is **not zero** |
+| 🔴 **Rows whose licence was read on ONE path** *(new)* | `Submitty` was `BSD-3-Clause` at **`LICENSE.md`** with plain `LICENSE` at **`404`**. Four spellings now live on this shelf — `LICENSE`, `LICENCE`, `LICENSE.md`, `LICENSE.txt`. **Any row probed on a single spelling is unproven** |
+| 🟡 **The `no-label` signal, un-reconciled** *(new)* | It is now known to be **non-specific** — it fires on `gegok12`'s plain 1 150-byte MIT payload. 🔴 `PrairieLearn` and `code-dot-org` were both partly downgraded on it. Neither verdict is wrong *(both have genuinely split grants, read at payload)*, but **the signal that pointed at them does not carry the weight it was given** |
+| 🔴 **The README column over the whole shelf corpus** | **THREE passes carried** (`p293`, `p294`, `p295`) |
+| 🔴 **No primary government source, seventeenth pass** | The Ethiopian instruments are **press-attributed**. `moe.gov.et` was not reached, and one source's page headers carry conflicting dates, so the May 2026 date is **ATTRIBUTED**, not pinned |
+| 🔴 **`huggingface.co`** | Still closed — and now shown closed **at the resolver**, not merely at the gateway. The Horus weights' grants remain unread |
+| 🔴 **No new agent row, 21st pass; no code from any regional leg, 6th pass** | The mandated agent leg's corpus is **demonstrably behind the repositories it ranks** — it re-served two figures `p294` refuted the same day |
+| 🟡 **Eight hard-coded `215,796` cells** | Deliberately **not** mass-edited. Chasing a drifting integer through five files each pass is churn; the row now carries its read-date and the **ratio** (2.7× `canvas-lms`), which is the claim that survives |
+
+### 🔵 Backlog for `p296`, ranked
+
+1. 🔴 **Re-read the ten remaining star/forks cells** — the prior is not zero.
+2. 🔴 **Audit every licence read on a single path** — four spellings, and the trap has now bitten twice.
+3. 🟢 **Spend the directed leg on another UNWORKED REGION** — confirmed twice, not merely carried.
+   Unspent: **Hausa**, **Amharic** *(native-language, against `p295`'s English-language Ethiopia
+   leg — the one control this pass could not run)*, **Lusophone Africa**, **Central Asia**.
+4. 🔴 **Run the README column over the whole shelf corpus** — three passes carried.
+5. 🟡 **Reconcile the `no-label` signal** against every row it has been read on.
+
 ## Pass 294 — **A STANDING INSTRUMENT'S VERDICT WAS REFUTED BY THE NEGATIVE CONTROL IT NEVER RAN, AND A CHANNEL DECLARED CLOSED REFUTED THREE PUBLISHED CELLS**
 
 ⏱️ `2026-10-18`, sixteenth pass. Evidence:
