@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 298 — THE FOUR MANDATED LEGS PRODUCED NOT ONE NEW DATUM, TWO DIRECTED LEGS PRODUCED THREE NEW COUNTRIES, AND ONE OF THEM IS ALREADY RUNNING THE CAPABILITY THIS BASE HAS PERMISSIVE CODE FOR
+
+⏱️ **Twentieth pass of `2026-10-18`.** Evidence:
+[`p298-promotion-gap.2026-10-18-p298.tsv`](../evidence/p298-promotion-gap.2026-10-18-p298.tsv) ·
+[`p298-channel-control.2026-10-18-p298.tsv`](../evidence/p298-channel-control.2026-10-18-p298.tsv).
+
+| region | leg | result |
+|---|---|---|
+| **North America** | mandated | 🔴 **held, and NOTHING new.** Every datum already carried — and the figure `p293` downgraded was **re-served from the same unsourced blog** |
+| **EMEA** | mandated | 🔴 **TENTH consecutive nil** on education-specific material. Enterprise AI only |
+| **APAC** | mandated | 🔴 **nil on education for the third pass running.** Every education-adjacent hit was **corporate learning** again |
+| **LATAM** | mandated | 🟡 **corroboration, not extension.** Strongest leg for the ninth time and **every datum already on this file** |
+| **EMEA** | directed: 🇲🇦🇹🇳🇩🇿 **Francophone Maghreb** | 🟢 **NEW REGION — Morocco yields a national programme, a budgeted school target and an operating dropout-detection pilot.** 🔴 Tunisia and Algeria: declared nil |
+| **EMEA** | directed: 🇲🇿🇦🇴 **Lusophone Africa** | 🟢 **NEW REGION — two countries, neither previously in this base, and the regulator is NOT the education ministry** |
+
+🟢 **`p295`'s rule holds for a FIFTH consecutive pass and should now be read as the battery's design
+principle, not a finding: yield tracks how UNWORKED a region is.** Two directed legs produced **three
+countries this base had zero prior mentions of** (Morocco, Mozambique, Angola — `grep` count **0** in
+`intel/` and `compose/` before this pass) plus **two honest nils** (Tunisia, Algeria). The four
+mandated legs, run every pass for ten passes, produced **zero new datums.** 🔵 **The mandated
+phrasings are now controls, not research.**
+
+### 🔴 The methodological finding of the pass, and it is the negative twin of `p297`'s
+
+`p297` introduced **cross-leg corroboration**: a global claim should appear in the legs of the
+countries it names. `p298` supplies its counterpart, because the North American leg re-served the
+**`USD 169M` "government commitment to responsible AI in higher education"** figure — the one
+`p293` **DOWNGRADED** because *its source reports the figure without naming the government*, and
+`p297` refused again.
+
+🔴 **The same single blog returned it a third time, and a third appearance is not a third source.**
+🟢 **The rule, stated so no later pass mistakes repetition for confirmation: RE-CIRCULATION IS NOT
+CORROBORATION.** A figure that reappears because the same leg reaches the same page has gained
+nothing. Corroboration requires an **independent** leg — ideally one aimed at the jurisdiction the
+claim names, which is exactly what would resolve this one: **a leg naming the government.** 🔴 **The
+refusal stands. Do not quote `USD 169M` to a client.**
+
+### 🟢 Francophone Maghreb — a new region, and Morocco is the find
+
+🔴 **Zero prior mentions of Morocco anywhere in this base.** The leg
+(`intelligence artificielle éducation Maroc Tunisie Algérie 2026 ministère stratégie nationale`)
+returned a dense national picture, and it is almost entirely Moroccan.
+
+| datum | detail | grade |
+|---|---|---|
+| national strategy | AI named a cornerstone of **"Maroc Digital 2030"**; Ministry of Digital Transition announces tailored training tracks | 🟡 `ATTRIBUTED` — press, not primary text |
+| institutional build-out | **Jazzari** regional technology institutes, to supply AI skills across **all 12 regions** | 🟡 `ATTRIBUTED` |
+| 🟢 **school equipment target** | Ministry of Education: **12 000+ establishments** to receive digital solutions **by 2027** | 🟢 **budgeted and dated — briefing-grade** |
+| 🟢 **programme scale** | *"Caravane pour tous"*: **74 880 beneficiaries (2023) → 625 000+ by 2027** | 🟢 **an 8.3× scale-up with both endpoints named** |
+| 🟢 **an OPERATING pilot** | an **AI school-support system piloted in the Draâ-Tafilalet academy to identify students at risk of dropping out**, with positive results opening a path to **national extension** | 🟢 **the strongest single datum of the pass — see below** |
+| 🔴 governance | a **parliamentary report** finds governance unclear and demands a **legal framework**; a parliamentary group has formally questioned the minister | 🔴 **the gap is on the record domestically, not inferred by this base** |
+| 🔴 **Tunisia and Algeria** | 🔴 **DECLARED NIL.** The only document reached is a **UNESCO Maghreb ecosystem mapping from 2020** stating the Maghreb countries *"ne disposent pas jusqu'à aujourd'hui de stratégies nationales d'intelligence artificielle"* — **six years stale and explicitly not a 2026 reading** | 🔴 published with its query. Needs **Arabic-language** or ministry-site legs |
+
+🟢 **THE BRIEFING-GRADE FINDING: Morocco is operating, at academy scale and with a stated national
+extension path, the exact capability this base already holds permissive code for.** Dropout
+early-warning is **two shelved MIT rows** —
+[`cedanl/student-signal`](https://github.com/cedanl/student-signal) (precision/recall at multiple
+invitation thresholds, Eegdeman invitation-rule methodology) and
+[`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) (**3 015
+commits**, a named deployment outcome). 🔵 **This is the first time a named national pilot in a region
+this base had NO rows for lines up one-to-one with a row this base already verified.** 🔴 **And the
+parliamentary governance complaint is the other half of the engagement**: the instrument exists, the
+legal framework is being demanded, and `inspect_ai` + `pedagogy-benchmark` (`P56`) is the evidence
+artefact that answers it. See **`P61`** in [`compose/patterns.md`](../compose/patterns.md).
+
+### 🟢 Lusophone Africa — two countries new to this base, and the regulator is the wrong ministry
+
+🔴 **Zero prior mentions of Mozambique or Angola.** The leg
+(`inteligência artificial educação Moçambique Angola 2026 política ministério educação`) returned
+civil-society, university and **non-education-ministry** activity.
+
+| 🇲🇿 Mozambique | detail | grade |
+|---|---|---|
+| 🔴 **who regulates** | the **Minister of Planning and Development, Salim Valá**, announced a **multisectoral national commission to regulate AI**, explicitly framed so that *"a regulamentação da Inteligência Artificial em Moçambique não deverá inibir o avanço da inovação na área"* | 🟡 `ATTRIBUTED`, **no date in the result** |
+| schools programme | the **Ministry of Communications and Digital Transformation** (not Education) backs **STEMMOZ** to train **~5 000 public-school pupils** in robotics and AI, *"abrangendo todas escolas públicas"* by end of 2025 | 🟡 `ATTRIBUTED`; the target date has passed — **verify delivery before quoting** |
+| national AI document | **INTIC**, **May 2025**: *"Inteligência Artificial: Desafios e Oportunidades para Moçambique"*, held in **UniSCED**'s AI-in-education collection | 🟡 named instrument, **unread** — a payload lead for the next pass |
+| academic layer | **Conferência IA 2025** hosted at the **Universidade Pedagógica** (`up.ac.mz`); **UEM** names student engagement and unequal technology access as the standing constraints | 🟡 `ATTRIBUTED` |
+
+| 🇦🇴 Angola | detail | grade |
+|---|---|---|
+| national forum | **FNIA 2026** — Fórum Nacional de Inteligência Artificial | 🟡 `ATTRIBUTED` |
+| skills supply | **Intellico** reports having trained **~1 000 young Angolans** in AI, and names **human-capacity building** as the principal constraint | 🟡 vendor-sourced |
+| 🔴 **the binding constraint, named by a local** | FNIA co-founder **Estevão Zinga**: *"ainda temos algumas zonas cinzentas, províncias que não têm conexão à internet"* | 🔴 **connectivity, stated domestically** |
+
+🔴 **DECLARED GAP, published with its query: neither country's EDUCATION ministry has an AI policy
+this leg could reach.** Mozambique's AI regulator is being built by **Planning and Development**, and
+its schools programme is run by **Communications and Digital Transformation**. 🔵 **That is a
+procurement fact, not an absence of news: in Mozambique the AI counterparty is not the education
+ministry**, which is the opposite of the pattern `T-p287` recorded (*the generative unit is the
+education ministry*) and the opposite of Morocco in the same pass.
+
+🟢 **Angola's constraint also selects from this base's own shelves.** *Provinces with no internet
+connection* is an **offline-first** requirement, and the offline row has been on
+[`verticals/solutions.md`](../verticals/solutions.md) throughout: **Kolibri (MIT)**. Pair it with
+**IndicTrans2**-class language substrate thinking for Portuguese-plus-local-language delivery. See
+**`P62`**.
+
+### 🔴 The three mandated legs that produced nothing, stated with their queries
+
+- **EMEA** — `AI education EMEA 2026 adoption regulation players`: 🔴 **tenth consecutive nil.**
+  Returned CompTIA on EMEA IT strategy 2026, a **2023** Workday study, a **2024** year-in-review, and
+  a Bandwidth-Cavell communications report. 🔵 **Every EMEA finding this base holds arrived through a
+  jurisdiction- or language-named leg — never this phrasing.** `p298` makes ten. It was run because
+  the battery mandates it; the honest gain is a ten-point measurement of a dead channel, and the two
+  directed legs run in the same hour produced three countries.
+- **APAC** — `AI education APAC 2026 adoption regulation players`: 🔴 **nil on education for the
+  third pass running** (`p292`, `p297`, `p298`). Every education-adjacent hit was **corporate
+  learning**: a TCS–Pearson multi-year learning alliance, LearnUpon's Sydney HQ and *Create+* AI
+  authoring, an Alteryx Academy relaunch. 🟡 Governance datums are real but **not education**:
+  **OneTrust 2026 — 87% of organisations encourage AI-agent use while only 47% have governance,
+  oversight and controls**; **Forrester** expects sovereignty to shape infrastructure choices for
+  **~half** of APAC firms; **49%** cite insufficient real-time data infrastructure; OpenAI appointed
+  an **Australia/New Zealand policy lead** as Canberra tightens AI governance and copyright;
+  Singapore's consultations are **financial-sector**. 🔵 The **87% / 47%** split is the APAC analogue
+  of the North American governance gap and is the one carryable line here.
+- **LATAM** — `AI education LATAM 2026 adoption regulation players`: 🟡 **strongest leg for the ninth
+  time, and extension is now nil.** It re-served the **UNESCO IESALC + UNU-IAS** working paper
+  (**200 HEIs, 19 countries, fieldwork `2025-08`→`2025-10`**) already at `### LATAM` on this file; the
+  **Ibero-American comparative study** of higher-education AI regulation across **Argentina, Brazil,
+  Chile, Peru and Spain**; the **ILIA / CEPAL** regulation subdimension; and the **`$18.2M (2024) →
+  $36M (2029)`** figure **this file already flags as subregional** — *Rest of Latin America*, i.e.
+  excluding the two largest markets, which is why it must never be set beside this base's LATAM
+  band. 🔵 **A ninth consecutive "strongest leg" that adds nothing is the signal to stop running it
+  and start naming countries**, as `p298` did for the Maghreb and Lusophone Africa.
+
 # Market map — Education
 
 > Key players, regulatory ground truth and opportunities **placed by region**.
@@ -1585,6 +1710,28 @@ data gets the ranking backwards.
 
 ### North America
 
+#### 🔴 `p298` · `2026-10-18` — NOTHING NEW, and the refused figure came back a third time
+
+**The mandated leg added no datum this file does not already hold.** The spread, the **36%** share,
+the **~10% of institutions with formal AI guidelines** against **71% of US teachers without AI
+training**, the **`$55M` Carnegie Mellon + Gates** commitment into gateway courses, the **IBM /
+Microsoft / Google** player set, the **no-FDA-equivalent** framing and the **Colorado / Texas**
+piecemeal state requirements are all carried above.
+
+🔴 **The one thing that changed is a refusal hardening into a rule.** The **`USD 169M` "government
+commitment to responsible AI in higher education"** — downgraded by `p293` because *the source
+reports the figure without naming the government*, refused again by `p297` — **was re-served by this
+pass's leg from the same unsourced blog.** 🟢 **RE-CIRCULATION IS NOT CORROBORATION.** Three
+appearances via one leg reaching one page is one source. **Do not quote it.** The resolving move is a
+leg that **names a government** and reaches an appropriation instrument.
+
+🔵 **Opportunity, unchanged and now cheaper to arm.** The North American engagement is still
+*"adoption is not the problem; the absence of a defensible policy and a trained workforce is"* —
+and as of `p298` the **evidence artefact** is permissive end to end: `inspect_ai` (MIT) +
+`pedagogy-benchmark` (MIT) for documented evals, `agent-governance-toolkit` (MIT) for auditable
+policy, and — new this pass — **`Ed-Fi-Alliance-OSS/edfi-oneroster` (Apache-2.0) to speak OneRoster
+1.2 off an existing Ed-Fi ODS without waiting on DMS** (`Gap 309`). See `P60`.
+
 #### 🟡 `p297` · `2026-10-18` — held, with ONE cross-leg corroboration and ONE figure this pass REFUSES to carry
 
 **The spread is still live and still disqualifies a single figure.** This pass's leg returned North
@@ -2231,6 +2378,52 @@ evidenced** — Oklahoma/Maryland's human-oversight rule and NYC's K-8 moratoriu
 hardest configurations, and they are specifiable today.
 
 ### EMEA
+
+#### 🟢 `p298` · `2026-10-18` — the mandated phrasing's TENTH nil, broken in the same hour by TWO directed legs: the Maghreb and Lusophone Africa
+
+🔴 **`AI education EMEA 2026 adoption regulation players` — nil for the tenth consecutive pass.**
+Enterprise AI only: CompTIA on EMEA IT strategy 2026, a **2023** Workday study, a **2024**
+year-in-review, a Bandwidth-Cavell communications report. 🔵 **Ten points now say the same thing: no
+EMEA finding this base holds has ever come from this phrasing.** Run it as a control or not at all.
+
+🟢 **🇲🇦 MOROCCO — new to this base, and the best-specified national programme EMEA has produced in
+several passes.** AI is a cornerstone of **"Maroc Digital 2030"**; **Jazzari** regional technology
+institutes are to supply skills across **all 12 regions**; the Ministry of Education intends
+**12 000+ establishments** to receive digital solutions **by 2027**; *"Caravane pour tous"* scales from
+**74 880 beneficiaries (2023) to 625 000+ by 2027**; the **first Assises nationales de l'IA** were held
+in Rabat. 🔴 **A parliamentary report finds governance unclear and demands a legal framework** — the
+gap is on the domestic record, not inferred here.
+
+🟢 **The opportunity is unusually concrete, because the pilot already exists.** An **AI school-support
+system is running in the Draâ-Tafilalet academy to identify students at risk of dropping out**, with
+positive results and a stated path to **national extension**. 🔵 **That is a one-to-one match with two
+MIT rows this base has already verified** —
+[`cedanl/student-signal`](https://github.com/cedanl/student-signal) and
+[`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) — **plus** the
+evidence layer the parliamentary complaint is asking for (`inspect_ai` + `pedagogy-benchmark`). **Sell
+the national extension with the governance artefact attached, in French and Arabic.** See `P61`.
+⚠️ Everything above is `ATTRIBUTED` press, not primary text: a ministry-site leg is the next step.
+
+🔴 **🇹🇳 TUNISIA and 🇩🇿 ALGERIA — DECLARED NIL, published with the query.** The only document reached
+is a **2020 UNESCO Maghreb ecosystem mapping** stating the Maghreb countries had **no national AI
+strategies** — **six years stale**, and not usable as a 2026 reading. **Needs Arabic-language or
+ministry-site legs. Do not brief either country from this file yet.**
+
+🟢 **🇲🇿 MOZAMBIQUE and 🇦🇴 ANGOLA — new to this base, and the procurement shape is the finding.**
+🔴 **In Mozambique the AI counterparty is NOT the education ministry.** A **multisectoral national
+commission to regulate AI** is being created by the **Minister of Planning and Development, Salim
+Valá**, framed so regulation *"não deverá inibir o avanço da inovação"*; the schools programme —
+**STEMMOZ**, ~**5 000 public-school pupils** in robotics and AI — is run by the **Ministry of
+Communications and Digital Transformation**. **INTIC** published *"Inteligência Artificial: Desafios e
+Oportunidades para Moçambique"* in **May 2025** (named, unread — a payload lead). 🔵 **This inverts
+`T-p287`'s rule that the generative unit is the education ministry, and it inverts Morocco in the same
+pass: two EMEA countries, two different counterparties.** Qualify the ministry before the pitch.
+
+🔴 **🇦🇴 Angola's binding constraint is named by a local, not by this base:** FNIA 2026 co-founder
+**Estevão Zinga** — *"províncias que não têm conexão à internet"*; **Intellico** reports ~**1 000**
+young Angolans trained and names human-capacity building as the principal constraint. 🟢 **That
+selects the architecture from this file's own shelf: Kolibri (MIT), offline-first, Portuguese.** See
+`P62`.
 
 #### 🟢 `p297` · `2026-10-18` — the mandated phrasing's NINTH nil, broken the same hour by HAUSA; and the region now contains TWO OPPOSITE national postures
 
@@ -3158,6 +3351,32 @@ EMEA ed-tech vendor**. 🔴 A declared hole, not a silence, and it stays ranked.
 
 ### APAC
 
+#### 🔴 `p298` · `2026-10-18` — nil on education for the THIRD pass running, and every education-adjacent hit was corporate learning again
+
+🔴 **`AI education APAC 2026 adoption regulation players` reproduces `p292` and `p297` exactly.** The
+education-shaped results are all **workforce** products: a **TCS–Pearson** multi-year AI learning
+alliance aimed at employers, **LearnUpon**'s new Sydney HQ and *Create+* AI course authoring, an
+**Alteryx Academy** relaunch with AI learning paths and credentials. 🔵 **Three passes is enough to
+state it as a property of the corpus rather than of the region: in APAC this phrasing resolves to
+corporate L&D, and APAC's actual education-policy layer has only ever been reached by
+country-named legs** (`p293`'s Indonesian leg; Korea, Taiwan, China, Vietnam at `### APAC` above).
+
+🟡 **The governance datums are real, carryable, and not about schools:**
+
+| datum | source grade |
+|---|---|
+| 🔵 **87% of organisations encourage AI-agent use; only 47% have established governance, oversight and controls** (OneTrust, 2026) | 🟡 vendor survey — **the APAC analogue of the North American governance gap, and the one line worth carrying** |
+| **Forrester**: sovereignty will shape infrastructure choices for **~half** of APAC firms | 🟡 `ATTRIBUTED` |
+| **49%** of APAC businesses cite insufficient real-time data infrastructure as an adoption barrier | 🟡 `ATTRIBUTED` |
+| OpenAI appointed an **Australia / New Zealand policy lead** as Canberra tightens AI governance and copyright rules | 🟡 `ATTRIBUTED` |
+| Singapore's AI consultations named by this leg are **financial-sector** (transparency, accountability, risk oversight) | 🔴 **not education — do not reuse as an education datum** |
+
+🔵 **Opportunity, unchanged in substance:** the **87/47 split** sells the same engagement as North
+America's 10%/71% gap — a defensible governance and evaluation artefact — and the sovereignty finding
+says to price it **on-premises**. `open-edge-platform/education-ai-suite` (Apache-2.0) plus
+`inspect_ai` (MIT) is the permissive answer, and `ACTION PG-3` should spend APAC's budget on a
+**country-named** leg rather than this phrasing.
+
 #### 🔴 `p297` · `2026-10-18` — nil on education-specific regulation, and EVERY non-nil hit was CORPORATE learning again
 
 🔴 **`AI education APAC 2026 adoption regulation players` returned nothing education-specific.** The
@@ -3812,6 +4031,33 @@ Korea's act pairs its obligations with **state adoption support**, which is unus
 naming in a pitch.
 
 ### LATAM
+
+#### 🟡 `p298` · `2026-10-18` — the ninth consecutive "strongest leg", and for the first time it extended NOTHING
+
+🟡 **Every datum the mandated LATAM leg returned is already on this file**, which is the honest result
+and the reason to change the question:
+
+- the **UNESCO IESALC + UNU-IAS** working paper — **200 HEIs, 19 LAC countries**, fieldwork
+  **`2025-08` → `2025-10`**, five dimensions — **carried above**;
+- an **Ibero-American comparative analysis** of higher-education AI regulation across **Argentina,
+  Brazil, Chile, Peru and Spain**, framed as a gap-identification exercise — **the framing is
+  carried**;
+- the **ILIA 2025** index (CEPAL and partners) and its **regulation subdimension** — **carried**;
+- expert warnings that AI adoption could **deepen existing inequalities** in access, capability and
+  financing, and concern about **corporate control from the Global North** — **carried**;
+- **`$18.2M (2024) → $36M (2029)`, 12.1% CAGR**, which this file **already flags as *Rest of Latin
+  America*** — a **subregional** scope excluding the two largest markets. 🔴 **Never set it beside
+  this base's LATAM band; the scopes differ by orders of magnitude and mixing them is a briefing
+  error this file has already caught once.**
+
+🔵 **The supply gap is unchanged: adoption high, strategy and governance low, and no LATAM institution
+appears as a licence holder on any grant these shelves carry.** 🟢 **What `p298` adds for LATAM is not
+a market datum but a tool: the integration boundary is now permissive in six runtimes** (see
+[`verticals/solutions.md`](../verticals/solutions.md) `p298`), which matters most where the incumbent
+estate is Moodle and the studio must stay off GPL — the standing LATAM architecture. 🔵 **And the
+Morocco pilot in the same pass is a transferable reference**: a Spanish/Portuguese-language dropout
+early-warning deployment with a governance artefact attached now has a named precedent to cite. See
+`P61`.
 
 #### 🟢 `p297` · `2026-10-18` — the strongest leg AGAIN, and the governance gap is now measured by TWO independent instruments that must not be blended
 

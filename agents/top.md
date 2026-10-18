@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔵 Pass 298 — THIS SHELF GAINS NOTHING, AND THAT IS THE RESULT: `ACTION PG-2` NAMED THREE LAYERS AND ALL THREE TURNED OUT TO BE SUBSTRATE, NOT AGENTS
+
+⏱️ **Twentieth pass of `2026-10-18`.** Evidence:
+[`p298-promotion-gap.2026-10-18-p298.tsv`](../evidence/p298-promotion-gap.2026-10-18-p298.tsv) ·
+[`p298-channel-control.2026-10-18-p298.tsv`](../evidence/p298-channel-control.2026-10-18-p298.tsv) ·
+[`p298-identity-gate.2026-10-18-p298.tsv`](../evidence/p298-identity-gate.2026-10-18-p298.tsv).
+
+🟢 **`ACTION PG-2` discharged in full.** `p297` ordered a named batch of ~12 from the layers at zero
+or one row — **assessment integrity, retention/early-warning, student-records interop** — and ordered
+the adapter cluster skipped. `p298` read **fourteen slugs**, admitted **thirteen**, rejected **one**,
+and **read no adapter at all.**
+
+🔴 **Not one of the thirteen belongs on this file, and `p298` added no filler row to pretend
+otherwise.** Every admission is on [`repos/foundations.md`](../repos/foundations.md). The reason is
+`p293`'s README test, applied thirteen times in a row with the same answer: **LTI libraries, QTI
+players, OneRoster servers, xAPI forwarders, similarity engines and detectors do not claim to be
+agents, and they are not.** They are the layers an agent *stands on*.
+
+🔵 **So the honest reading of `ACTION PG-2` is that it was aimed one layer below this shelf.** `p297`
+chose those three layers because they had **zero or one row**; what it could not know until they were
+read is that **a layer empty on every shelf is empty because it is substrate, and this base's agent
+shelf was never the thing missing a row.** `T-p297b` measured **42 agent rows over a nearly empty
+institutional layer**. `p298` is the correction arriving on the correct file: **thirteen rows under
+the agents, none beside them.**
+
+### 🔴 The one rejection, and it is a new shape for the identity gate
+
+`p989`'s list named **[`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3)**. It was read and
+**not shelved anywhere.**
+
+| | `ucfopen/pylti1.3` | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) |
+|---|---|---|
+| sidebar licence label | 🔴 **a `License` link with NO label** | 🟢 `MIT license` |
+| root `LICENSE` line 1 / size | `MIT License` / **1.04 KB** *(payload-read)* | — |
+| copyright line | 🔴 **`Copyright (c) 2019 Dmitry Viskov`** | the same holder, on his own repository |
+| stars / forks / commits | **3** / 1 / 180 | **138** / **84** / 178 |
+| GitHub fork banner | none | none |
+
+🔴 **The list named the three-star copy of a 138-star library, and the copy carries the original
+author's copyright verbatim.** GitHub marks neither as a fork, so nothing on either page would have
+warned a reader. `p298` substituted the canonical slug and both are named in the foundations row.
+
+🟢 **The new rule, and it extends `p267`'s signal rather than repeating it:** an **unlabelled licence
+sidebar is not a property of the grant.** Here the *same* grant, *same* holder and *same* name is
+**classified on the original and unclassified on the copy.** A sidebar-reading scanner grades the copy
+*unlicensed*. 🔵 **Treat an unlabelled sidebar as a question about which repository you are on, not a
+verdict on the licence.** This is the second time in two passes the gate has earned its keep on a
+**bare name** (`p297`: `opentutor`, `canvas-mcp`).
+
+### 🔴 The adapter cluster, measured properly — and `p297`'s own number was soft
+
+`p297` called the cluster *"~20 LMS-integration MCP adapters"* and ruled it saturated. `p298`
+measured `p989`'s list directly and the shape is sharper than that:
+
+| measurement | value |
+|---|---|
+| rows on the list | **528** |
+| distinct slugs **case-insensitively** | 🔴 **525** — the list's own headline count is inflated by three |
+| slugs differing **only** by case | **3** — `DavidLMS/learnmcp-xapi` vs `davidlms/…`; `LongsightGroup/oneroster` vs `longsightgroup/…`; `LongsightGroup/qti3` vs `longsightgroup/…` |
+| repository **names** published by two or more different owners | 🔴 **21** |
+| worst single collision | 🔴 **`canvas-mcp` — TEN distinct owners** |
+
+🔵 **`canvas-mcp` is not twenty capabilities; it is one name ten people published.** This shelf
+carries two of the ten ([`vishalsachdev`](https://github.com/vishalsachdev/canvas-mcp),
+[`aryankeluskar`](https://github.com/aryankeluskar/canvas-mcp)) and the other eight are the same
+capability again. 🟢 **The standing instruction this file already gives — cite the owner, never the
+bare name — is now backed by a count: on this list, one name in twenty-five belongs to more than one
+owner.**
+
+🔴 **And the gate fired inside `p298`'s own batch:** `bgwdotdev/go-oneroster` was admitted while
+`fffnite/go-oneroster` sits unread on the same list. The admitted row says so in its own cell.
+
+### 🔵 The channel, and a negative control that is now decisive
+
+`curl -sI` returned **`HTTP/1.1 200 Connection Established` on 4 of 4** — real repositories, **an
+invented hostname**, and `api.github.com` alike. 🔴 **That is the proxy's `CONNECT` handshake, not an
+origin status: under `-I` a `200` here licenses no existence claim**, which is strictly stronger than
+`p294`'s rule about a `403`. A full `GET` returned **`403` with a `378`-byte body, byte-identical for
+a real slug and a fabricated one.**
+
+🟢 **`api.github.com` finally answered in words**: *"GitHub access to this repository is not enabled
+for this session. Use add_repo to request access."* `p294`-`p297` inferred from bare status codes that
+there is no API channel. **The inference was right and the cause is now on the record: session
+repo-scoping — not rate limiting, not repository absence.** All fourteen reads are `WebFetch` over
+rendered `github.com` HTML, **sidebar-grade**, except the one payload read the gate forced.
+
+### 🔴 Standing action for the next pass — `ACTION PG-3`
+
+**456 of 528 permissive orphans remain unshelved.** Two instructions, and the second is a correction
+of `p297`:
+
+1. **Take ~12 from the layers still at zero rows**, and expect them on
+   [`repos/foundations.md`](../repos/foundations.md) rather than here: **Caliper** analytics (the
+   third 1EdTech standard, after LTI and QTI, and still at **0**), **SCORM** tooling
+   (`S4-NetQuest/react-scorm-provider`, `raccoongang/edx_xblock_scorm`), and **QTI authoring /
+   conversion** (`rolfis/qti-convert`, `metyatech/markdown-to-qti`) — the half of the QTI layer
+   `p298` left open, having armed only playback and packaging.
+2. 🔴 **Stop ranking the list by cluster size. `p297` conflated size with saturation and `p298`
+   refuted it:** the interop cluster is **~60 slugs, three times the adapter cluster, and it stood at
+   zero rows.** The test is **rows-on-shelf against cluster-size**, never size alone. **De-duplicate
+   the list case-insensitively and resolve the 21 bare-name collisions before reading anything.**
+3. 🔵 **If a pass wants a row on THIS file, the orphan list is the wrong instrument for it.** Thirteen
+   consecutive admissions landed one layer down. An agent-shelf row needs a leg that asks for an
+   agent — and the mandated one has now returned **twenty-four** consecutive nils.
+
 ## 🟢 Pass 297 — THE ORPHAN LIST IS NOT UNIFORM: THE EVAL/STANDARDS LAYERS WERE GENUINELY MISSING, THE LMS-MCP CLUSTER WAS ALREADY COVERED FOUR TIMES OVER
 
 ⏱️ **Nineteenth pass of `2026-10-18`.** Evidence:

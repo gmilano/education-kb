@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 298: THIRTEEN substrates promoted, and together they arm the instruction this base has given for 297 passes — "integrate, do not fork"
+
+Evidence: [`p298-promotion-gap.2026-10-18-p298.tsv`](../evidence/p298-promotion-gap.2026-10-18-p298.tsv) ·
+[`p298-identity-gate.2026-10-18-p298.tsv`](../evidence/p298-identity-gate.2026-10-18-p298.tsv).
+
+🟢 **Thirteen permissive substrates moved onto [`repos/foundations.md`](foundations.md), and not one
+was a discovery** — every one came out of
+[`p989`'s orphan list](../compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt),
+read first-hand at rendered `github.com` HTML on `2026-10-18`. 🔴 **Zero came from the mandated
+trending leg**, which produced nothing this base did not already carry (see below).
+
+| repo | licence (read `2026-10-18`) | stars | forks | commits | branch | layer it supplies |
+|---|---|---|---|---|---|---|
+| [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) | 🟢 `MIT` *(sidebar + README)* | **633** | **351** | 86 | `master` | proctoring — 🔴 **was 0 rows.** ⚠️ its own README disqualifies two subsystems |
+| [`baoguangsheng/fast-detect-gpt`](https://github.com/baoguangsheng/fast-detect-gpt) | 🟢 `MIT` *(sidebar)* | **436** | 85 | 76 | `main` | AI-text detection — 🔴 **was 0 rows.** ICLR 2024 |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 `Apache-2.0` *(sidebar)* | **373** | 86 | **575** | `master` | LTI 1.3 in TypeScript — **highest-adoption permissive LTI row here** |
+| [`automoss/automoss`](https://github.com/automoss/automoss) | 🟢 `MIT` *(sidebar)* | 157 | 26 | **791** | `main` | code similarity — a **second** engine beside `dolos` |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 `MIT` *(sidebar)* | 138 | 84 | 178 | `master` | LTI 1.3 in Python (Django/Flask). 🔴 **not the slug the list named** |
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 `Apache-2.0` *(sidebar)* | 124 | **107** | 110 | `master` | LTI 1.3 from the **standards body**; forks exceed stars |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 `BSD-3-Clause` *(sidebar)* | 73 | 56 | **523** | `main` | LTI 1.1 + 1.3 → **JupyterHub** as a tool provider |
+| [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 `MIT` *(sidebar)* | 30 | 6 | **596** | `main` | **QTI 3 item playback — was 0 rows** |
+| [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | 🟢 `Apache-2.0` *(sidebar)* | 17 | 9 | 310 | `main` | xAPI statement **forwarding** — the sibling of shelved `lrsql` |
+| [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster) | 🟢 `MIT` *(sidebar)* | 8 | 1 | 237 | `master` | OneRoster server in Go. ⚠️ non-standard `PUT` writes |
+| [`instructure/qti`](https://github.com/instructure/qti) | 🟢 `MIT` *(sidebar)* | 8 | 10 | 174 | `master` | **QTI 1.2 / 2.1** parsing — the legacy formats a migration meets |
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 `Apache-2.0` *(sidebar)* | 6 | 5 | 151 | `main` | **OneRoster 1.2 over Ed-Fi ODS — the `Gap 309` bridge** |
+| [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | 🟢 `MIT` *(sidebar)* | 🔴 **0** | **0** | **255** | `main` | QTI 3 **packaging** (🇳🇱 Dutch public-education foundation) |
+
+🔴 **THE FINDING OF THE PASS: the advice was right and the toolkit was absent.** Every pass that has
+touched a copyleft LMS has said *"reach Moodle (GPL-3.0), Canvas (AGPL-3.0) and Open edX (AGPL) at the
+integration boundary, do not fork."* These shelves carried **one** row for that boundary —
+[`tsugi`](https://github.com/tsugiproject/tsugi), Apache-2.0, **PHP only** — and **zero** QTI rows,
+**zero** OneRoster implementations and **zero** Caliper rows. 🟢 **The boundary is now reachable from
+PHP, Node/TypeScript, Python, Go, Ruby and JupyterHub.** The instruction has code under it for the
+first time in 298 passes.
+
+🔵 **The second finding is a correction of `p297`'s partition rule.** `p297` ruled the ~20-slug MCP
+adapter cluster saturated and inferred that dense clusters are low-value. The cluster `p298` worked is
+**~60 slugs — three times the size — and it stood at zero rows.** 🔴 **Cluster size and cluster
+saturation are different measurements; `p297` conflated them. The test is rows-on-shelf against
+cluster-size, never size alone.**
+
+### 🔴 `github trending education AI 2026` — nil on anything this base does not hold
+
+The leg returned `rohitg00/ai-engineering-from-scratch` (GitHub Trending #1, `2026-05-24`),
+`MadsLorentzen/ai-job-search` (#1, `2026-07-07`), `microsoft/ai-agents-for-beginners`, curated "awesome"
+lists, and a Japanese report that **9 of the top 10** on GitHub's February 2026 monthly trending were
+AI-related. 🔴 **All already carried, and none is an education repository** — they are repositories
+*about* AI, in a category search engines return for the word "education". ⚠️ Trendshift and GitTrend
+snapshot dates vary, so none of these rankings was treated as current.
+
+### 🔴 And the list itself is 0.6% shorter than every pass has quoted
+
+| measurement | value |
+|---|---|
+| rows on `p989`'s list | **528** |
+| distinct case-**insensitively** | 🔴 **525** |
+| only-by-case duplicates | **3** — `DavidLMS`/`davidlms` `learnmcp-xapi`, `LongsightGroup`/`longsightgroup` `oneroster` and `qti3` |
+| names published by ≥2 owners | 🔴 **21**, worst is `canvas-mcp` at **TEN owners** |
+| unshelved after `p298` | **456** of 528 |
+
+🔵 Recorded so `ACTION PG-3` de-duplicates before reading: three of the next pass's "new" slugs would
+otherwise be case variants of each other.
+
 ## 2026-10-18 — Pass 297: NINE substrates promoted, all one layer, and the orphan list turned out to be PARTITIONED rather than uniform
 
 Evidence: [`p297-promotion-gap.2026-10-18-p297.tsv`](../evidence/p297-promotion-gap.2026-10-18-p297.tsv).

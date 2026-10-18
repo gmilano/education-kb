@@ -1,0 +1,11 @@
+measurement	value	method	what_it_means
+orphan_list_rows	528	wc -l on promotion-gap-permissive-orphans.txt	the count every pass since p989 has quoted
+orphan_list_distinct_exact	528	set() over rows	no byte-identical duplicate rows
+orphan_list_distinct_case_insensitive	525	set() over lowercased rows	the list's own count is inflated by 3
+slugs_differing_only_by_case	3	case-folded grouping	DavidLMS/learnmcp-xapi vs davidlms/learnmcp-xapi; LongsightGroup/oneroster vs longsightgroup/oneroster; LongsightGroup/qti3 vs longsightgroup/qti3
+bare_name_collisions_across_owners	21	grouping by the segment after the slash	21 repository names on this list are each published by two or more different owners
+worst_bare_name_collision	canvas-mcp (10 owners)	same	AmirF194, BartMassey-upstream, abr-Projects, aryankeluskar, caleb-media-studio, harrywang, jsrodr, lindsay-cheng, vishalsachdev, zhenghh04
+collision_inside_p298_own_batch	go-oneroster (2 owners)	same	bgwdotdev/go-oneroster (read and admitted) vs fffnite/go-oneroster (also on the list, NOT read). The admitted row names the other
+unshelved_after_p297	469	case-sensitive substring re-diff of all 528 against agents/top.md + repos/foundations.md + verticals/solutions.md	p297 reported 481; its own 12 promotions account for the difference
+interop_cluster_size	~60 slugs	keyword scan for lti/qti/oneroster/xapi/caliper/scorm/ed-fi on the unshelved set	LARGER than the ~20-slug MCP adapter cluster p297 called saturated
+interop_cluster_rows_on_shelf_before_p298	0 LTI libraries, 0 QTI, 0 OneRoster clients, 0 Caliper	grep -c over the three shelf files	cluster SIZE and cluster SATURATION are different measurements, and p297 conflated them

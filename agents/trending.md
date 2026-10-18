@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 298: NO new agent row, by design; the mandated leg's TWENTY-FOURTH nil, and every hit in it was already on these shelves
+
+Evidence: [`p298-promotion-gap.2026-10-18-p298.tsv`](../evidence/p298-promotion-gap.2026-10-18-p298.tsv) ·
+[`p298-channel-control.2026-10-18-p298.tsv`](../evidence/p298-channel-control.2026-10-18-p298.tsv) ·
+[`p298-identity-gate.2026-10-18-p298.tsv`](../evidence/p298-identity-gate.2026-10-18-p298.tsv).
+
+🔵 **New on the agents shelf this window: nothing, and the row count is the finding.** `p298`
+discharged `ACTION PG-2` by reading **fourteen** slugs out of
+[`p989`'s orphan list](../compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt)
+and admitting **thirteen** — **all thirteen onto [`repos/foundations.md`](../repos/foundations.md), none
+here.** `p293`'s README test returned the same answer thirteen times: an LTI library, a QTI player, a
+OneRoster server, an xAPI forwarder and a similarity engine **do not claim to be agents.** No filler
+row was written to make the shelf look busy.
+
+### 🔴 `top open source AI agents education 2026 github MIT` — the twenty-fourth consecutive nil, and this one is diagnosable
+
+`p275`-`p297` recorded twenty-three. `p298` makes twenty-four, and for the first time the *reason* is
+legible in the results rather than guessed at: **the corpus answers the word "education" with courses
+that teach AI, not with agents that teach students.**
+
+| what the leg returned | what it actually is | status here |
+|---|---|---|
+| `microsoft/ai-agents-for-beginners` (MIT, ~67k★ reported) | a **12-lesson course about building agents** | 🔴 already carried |
+| `pguso/agents-from-scratch` (MIT, 796★ reported) | an **agent-construction tutorial** | 🔴 already carried |
+| `avinash201199/free-ai-agents-resources` (635★, licence not shown) | a **link directory** | 🔴 already carried |
+| `rohitg00/ai-engineering-from-scratch` | a trending **learning repository** | 🔴 already carried |
+| Hermes Agent · Aider · Cline · CrewAI · AutoGen · LangGraph | **general-purpose agent frameworks**, no education claim | 🔴 already carried |
+
+🟢 **So the nil is an informed nil on two axes at once: nothing new, AND nothing on-topic.** 🔵 The
+distinction to carry into the next pass: *"AI education"* in search-engine terms means **教 AI** —
+teaching people about AI — while this base means **agents for education**. A leg that keeps asking the
+first question will keep getting courses. 🔴 `ACTION PG-3` therefore records that the orphan list is
+the wrong instrument for an agent row *and* that the mandated phrasing is the wrong question.
+
+### 🔴 The identity gate fired again, and on a shape this base has not recorded before
+
+`p989`'s list named **[`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3)** — **3★**, **no
+licence label in its sidebar**, root `LICENSE` reading `MIT License` with
+**`Copyright (c) 2019 Dmitry Viskov`**. The canonical repository is
+**[`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3)** — **138★ / 84 forks**, and
+its sidebar **does** say `MIT license`. GitHub flags neither as a fork.
+
+🟢 **The rule: GitHub's licence classification is not a property of the payload.** The *same* grant,
+holder and name is classified on the original and unclassified on the copy — so `p267`'s
+"unlabelled sidebar" signal means *"check which repository you are on"*, not *"the grant is
+doubtful"*. **The copy was rejected; the original was shelved.**
+
+### 🔴 And a count that makes "cite the owner, never the bare name" a measurement
+
+| measurement on `p989`'s list | value |
+|---|---|
+| rows | **528** |
+| distinct slugs case-**insensitively** | 🔴 **525** |
+| slugs differing only by case | **3** |
+| repository names published by **two or more owners** | 🔴 **21** |
+| `canvas-mcp` | 🔴 **TEN distinct owners** |
+
+🔵 `p297` described the adapter cluster as *"~20 LMS-integration MCP adapters"*. It is more precisely
+**one name that ten people published**, of which this shelf carries two. 🔴 The gate also fired inside
+`p298`'s own batch: **`bgwdotdev/go-oneroster` admitted while `fffnite/go-oneroster` sits unread on the
+same list.**
+
+### 🔵 Channel
+
+`curl -sI`: **`HTTP/1.1 200 Connection Established` on 4 of 4** — including **an invented hostname**
+and `api.github.com`. 🔴 That is the proxy `CONNECT` line, not an origin status, so **a `200` from
+`-I` licenses no existence claim** (stronger than `p294`'s rule, which was written about a `403`).
+`curl -s` GET: **`403`, `378` bytes, byte-identical real vs fabricated.** 🟢 **`api.github.com`
+explained itself for the first time** — *"GitHub access to this repository is not enabled for this
+session"* — confirming `p294`-`p297`'s inference **and** naming its cause as session repo-scoping.
+All fourteen reads: `WebFetch` over rendered `github.com` HTML, **sidebar-grade**; `p295`'s warning
+that rendered star counts are **not monotonic** still binds.
+
 ## 2026-10-18 — Pass 297: two rows promoted, a NAME COLLISION caught at the gate, and the mandated leg's TWENTY-THIRD nil re-served figures this base refuted
 
 Evidence: [`p297-promotion-gap.2026-10-18-p297.tsv`](../evidence/p297-promotion-gap.2026-10-18-p297.tsv) ·

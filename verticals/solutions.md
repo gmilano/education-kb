@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 298 — THE EIGHTEENTH NIL ON A PERMISSIVE EDUCATION ERP/CRM, AND THE "INTEGRATE, DO NOT FORK" INSTRUCTION THIS FILE HAS GIVEN FOR 297 PASSES FINALLY HAS CODE UNDER IT
+
+⏱️ **Twentieth pass of `2026-10-18`.** Evidence:
+[`p298-promotion-gap.2026-10-18-p298.tsv`](../evidence/p298-promotion-gap.2026-10-18-p298.tsv).
+
+🔴 **The mandated vertical leg is nil for the EIGHTEENTH consecutive pass**, and the corpus `p297`
+described as *"a single SEO estate"* has now been measured twice. `open source platform education ERP
+CRM MIT Apache` returned **five `openeducat.org` glossary URLs — the same page in Spanish, French,
+Arabic, Brazilian Portuguese and Chinese** — plus a CRM-directory tag page, a vendor "knowledge
+collection" blog, **a Drupal mailing-list post from July 2010** announcing CK-ERP 0.30.1, and an
+academic paper about using an ERP as a *teaching environment for operations management*.
+
+🔵 **The shape of the nil has changed and it is worth recording precisely.** `p297` measured **10 of
+10** slots on one vendor's domain. `p298` measures **5 of 9** — and **the half that is not the vendor
+is older and further off-topic than the vendor's own pages.** A sixteen-year-old mailing-list post and
+a paper about teaching *with* an ERP are what this query reaches once the SEO estate is subtracted.
+🔴 **There is no corpus here. Eighteen passes is enough: `ACTION PG-3` should run this phrasing once as
+a control, or not at all.**
+
+🔴 **One claim in the result set was REFUSED rather than carried.** A directory listing described *"an
+AI-native CRM/ERP foundation, 80% already built, MIT licensed"* **without naming the repository**. An
+unnamed slug cannot be read, and this file's own history is the reason to refuse it: `p296` caught a
+2026 comparison publishing [`frappe/lms`](https://github.com/frappe/lms) as *"MIT"* when its sidebar
+says **AGPL-3.0**. 🟡 **Apache OFBiz** also surfaced as a generic ERP — correctly licensed, and **not
+an education product**. Neither reaches this table.
+
+### 🟢 What this pass actually adds: the integration boundary, permissively armed in six runtimes
+
+🔴 **This file has told every client the same thing since it was written: reach Moodle (GPL-3.0),
+Canvas (AGPL-3.0) and Open edX (AGPL) *at the integration boundary*, and keep the studio deliverable
+on the permissive side of it. The instruction was right. The code for it was not on these shelves.**
+Before `p298` the entire boundary was one row — [`tsugi`](https://github.com/tsugiproject/tsugi),
+Apache-2.0, **PHP only** — with **zero** QTI rows, **zero** OneRoster implementations and **zero**
+Caliper rows.
+
+| boundary you must cross | permissive component *(all read `2026-10-18`, all on [`repos/foundations.md`](../repos/foundations.md))* | licence | runtime |
+|---|---|---|---|
+| **Launch your tool from their LMS** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 | Node / TypeScript |
+| | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) *(the standards body's own)* · [`tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 Apache-2.0 | PHP |
+| | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 MIT | Python — Django / Flask |
+| | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 BSD-3-Clause | JupyterHub |
+| **Move their assessment items** | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) *(play QTI 3)* · [`instructure/qti`](https://github.com/instructure/qti) *(read legacy QTI 1.2 / 2.1)* | 🟢 MIT | browser · Ruby |
+| | [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) *(build + validate QTI 3 packages)* | 🟢 MIT | PHP |
+| **Roster their students** | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) *(OneRoster 1.2 over an Ed-Fi ODS)* | 🟢 Apache-2.0 | .NET |
+| | [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster) ⚠️ adds non-standard `PUT` writes | 🟢 MIT | Go |
+| **Carry their learning events out** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) *(store)* + [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) *(forward, Profile-filtered, resumable)* | 🟢 Apache-2.0 | JVM |
+| **Their content is SCORM** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 MIT | browser |
+| **Analytics events (Caliper)** | 🔴 **NOTHING. Still zero rows.** Declared, not glossed — `ACTION PG-3` | — | — |
+
+🟢 **Why this changes a sales conversation rather than just a shelf.** The standing advice used to
+arrive with a single implementation language attached: *integrate, do not fork — in PHP*. A Node, Go,
+Python or notebook-first engagement had to either stand up PHP or quietly fork something. 🔵 **The
+boundary is now crossable from the runtime the client already runs**, which is the difference between
+an architectural recommendation and a deliverable.
+
+🔵 **And the vendor-licence split is the clearest evidence this boundary is the real one.**
+**Instructure publishes [`instructure/qti`](https://github.com/instructure/qti) under MIT while
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) is AGPL-3.0.** The company that
+owns the copyleft platform ships its interchange tooling permissively. 🟢 **Quote that in a
+procurement meeting: the licence boundary this file has drawn for 297 passes is the same one the
+platform vendor draws itself.**
+
+### 🔴 The ERP/CRM measurement, restated after eighteen passes
+
+**There is no permissively-licensed education ERP/CRM.** `p297` stated it; `p298` confirms it on a
+corpus that has visibly thinned. 🟢 **What `p298` adds is that the permissive layer's shape is now
+fully mapped:** the system-of-record layer is **copyleft, open-core or Odoo-dependent, without
+exception** — and the **interchange** layer around it is **permissive, standards-based and, as of this
+pass, complete in six runtimes except for Caliper.** 🔵 **So the honest architecture for a client who
+needs a permissive system of record is unchanged — build on
+[`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) and accept that no ERP exists to start
+from — but the integration surface around it no longer has to be written from scratch.**
+
 ## 🟢 Pass 297 — THE SEVENTEENTH NIL ON A PERMISSIVE EDUCATION ERP/CRM, AND THIS TABLE FINALLY GAINS A PERMISSIVELY-LICENSED LMS ANYWAY
 
 ⏱️ **Nineteenth pass of `2026-10-18`.** Evidence:
@@ -845,7 +918,14 @@ mapping.
    and a re-provision**. The cheap route is to write AI-generated evidence into the **LRS**
    instead and leave the system of record alone.
 3. **OneRoster is absent from DMS v8.0** (`Gap 309`) while native OneRoster 1.2 shipped in the
-   **ODS/API 7.3.2** line. Say which line you are quoting.
+   **ODS/API 7.3.2** line. Say which line you are quoting. 🆕 **`p298` adds the bridge rather than
+   just the warning:** [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster)
+   (**Apache-2.0**, 151 commits, `main`) **serves a OneRoster 1.2 API off an Ed-Fi ODS** across Data
+   Standards **4.0, 5.x and 6.1** — so a client on the ODS/API line can speak OneRoster to a vendor
+   today, from a permissive grant, **without waiting on DMS.** For a non-.NET estate,
+   [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster) (MIT, Go, MongoDB) is the
+   alternative — ⚠️ it adds non-standard `PUT` create/update/upsert beyond OneRoster's read-only `GET`
+   surface, so name which surface the SOW promises.
 
 ⚠️ **Do not brief a state count.** Neither Ed-Fi README names a state or an agency; the 14-state
 list is third-party, and the South Carolina department page that would settle it **did not resolve

@@ -4,6 +4,157 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 298 — three new patterns (`P60`-`P62`), each built from rows promoted THIS pass
+
+⏱️ `2026-10-18`. Evidence:
+[`p298-promotion-gap.2026-10-18-p298.tsv`](../evidence/p298-promotion-gap.2026-10-18-p298.tsv).
+🔴 **Numbered `P60`-`P62`: `P56`-`P59` are taken by `p297`, `P52`-`P55` by `p296` and `P51` by
+`p294`** — the shelf was enumerated before numbering, because a duplicate pattern ID compiles into
+two entities with one name.
+
+🔵 **All three are built on the thirteen substrates promoted this pass**, and that is deliberate:
+`T-p298a` measured that this base has told clients *"integrate, do not fork"* for 297 passes while
+carrying **one** integration-boundary row, in **one** language. Every component below was
+licence-read on `2026-10-18` and is shelved on [`repos/foundations.md`](../repos/foundations.md) or
+[`verticals/solutions.md`](../verticals/solutions.md).
+⚠️ **Read the grade caveat at the end before any of these ships** — all fourteen `p298` reads are
+**sidebar-grade, not payload-grade.**
+
+## P60 — Put your own tool inside their copyleft LMS, in the language you already use (global, runtime-agnostic)
+
+**Who it is for.** Any engagement whose incumbent estate is **Moodle** (GPL-3.0), **Canvas**
+(AGPL-3.0) or **Open edX** (AGPL) and whose deliverable must stay permissive. 🔵 **This is `P60`'s
+whole reason to exist: the advice existed, the implementation did not, and the studio's runtime
+decided whether the advice was usable.**
+
+**The wiring, bottom to top:**
+
+1. **Pick the LTI 1.3 library by YOUR runtime, not by their LMS** — LTI is the contract, so all four
+   reach all three platforms:
+   - **Node / TypeScript** → [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (**Apache-2.0**,
+     373★, 575 commits). Launches, **Deep Linking**, **AGS**, **NRPS**, **Dynamic Registration**.
+   - **PHP** → [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library)
+     (**Apache-2.0**, 124★, **107 forks**) for the protocol, or
+     [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (**Apache-2.0**) for a whole tool
+     framework.
+   - **Python** → [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (**MIT**,
+     138★) with its Django or Flask adapter. 🔴 **Cite this owner — `ucfopen/pylti1.3` is a 3★
+     re-publication carrying this author's own copyright line.**
+   - **Notebooks** → [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator)
+     (**BSD-3-Clause**, 523 commits): the LMS launches JupyterHub directly, and `nbgrader` or
+     `otter-grader` (both BSD-3) grade underneath. **The whole lane is permissive.**
+2. **Agent surface, if the deliverable is conversational:** the MCP row for the platform —
+   [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT) for Canvas,
+   or `aryankeluskar/canvas-mcp` (ISC) **only** when Gradescope must be reached.
+3. **Keep the data boundary where the licence boundary is:** write learner evidence to
+   [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (**Apache-2.0**) and forward a
+   filtered subset with 🆕 [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe)
+   (**Apache-2.0**) — **never into the LMS database.**
+
+🔴 **What this pattern refuses to do:** fork the LMS, patch its templates, or ship a plugin that
+inherits its grant. **The AGPL network clause reaches a hosted deployment; an LTI tool launched
+*from* it does not cross it.** 🟢 **And the vendor agrees: Instructure publishes
+[`instructure/qti`](https://github.com/instructure/qti) under MIT while
+[`canvas-lms`](https://github.com/instructure/canvas-lms) is AGPL-3.0.** Quote that in procurement.
+
+**Effort.** 3-5 weeks for a launched, graded, rostered tool against one platform; **add ~1 week per
+further platform**, not per further tenant.
+
+## P61 — A dropout early-warning deployment with the governance artefact already attached (EMEA · 🇲🇦 Morocco first, LATAM transferable)
+
+**Who it is for.** A ministry or academy that **already has a dropout-detection pilot and a
+governance complaint about it.** 🟢 **This is not a hypothetical: `p298`'s Maghreb leg found an AI
+school-support system operating in Morocco's Draâ-Tafilalet academy to identify students at risk of
+dropping out, with positive results and a stated path to national extension — while a parliamentary
+report finds the governance framework unclear and demands a legal one.** 🔵 **The instrument and the
+objection arrived in the same leg, which is why they belong in one pattern.**
+
+**The wiring:**
+
+1. **The model layer, and it is already permissive:**
+   [`cedanl/student-signal`](https://github.com/cedanl/student-signal) (**MIT**) — `prepare()`,
+   `rank()`, `evaluate()` reporting **precision/recall at multiple invitation thresholds** on the
+   **Eegdeman invitation-rule methodology**. 🟢 It deliberately does **not** choose your estimator, so
+   a ministry's existing model drops in. Beside it,
+   [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) (**MIT**,
+   **3 015 commits**, a named deployment outcome) when the client wants a worked precedent.
+2. **The data layer:** rostering via 🆕 [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster)
+   (**MIT**) or 🆕 [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster)
+   (**Apache-2.0**) where an Ed-Fi ODS exists; event stream via `lrsql` + 🆕 `xapipe`.
+3. 🟢 **The governance artefact — the half that wins the procurement:**
+   [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) (**MIT**, 8 033
+   commits) as the harness, [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+   (**MIT**) as the task set, and [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit)
+   (**MIT**) for tamper-evident audit. 🔵 **A government-maintained harness is materially easier to
+   defend to a parliament than a bespoke test script** — see `P56`, which `P61` consumes rather than
+   repeats.
+4. **Delivery language:** French **and** Arabic for Morocco; the same stack ships to LATAM in Spanish
+   or Portuguese, where this base's standing architecture already assumes a Moodle incumbent — reach
+   it with `P60`.
+
+🔴 **Three prices to quote honestly.** (1) **A ranking that decides about a student is EU AI Act
+Annex III high-risk** (`T-p296a`, due `2027-12-02`) — Morocco is not EU-bound, but a Moroccan
+deployment reused in Europe is, so build to the stricter rule once. (2) **The evaluation layer is
+not optional and is not free**: it is the artefact the parliamentary report is asking for.
+(3) ⚠️ **Everything known about the Moroccan pilot is `ATTRIBUTED` press, not primary text** — a
+ministry-site leg is the first billable hour, not an assumption.
+
+**Effort.** 6-8 weeks to a ranked cohort with a documented eval; **the eval harness is ~2 of those
+weeks and should be sold separately, because it is what survives a change of government.**
+
+## P62 — Offline-first delivery where connectivity is the binding constraint (🇦🇴 Angola · 🇲🇿 Mozambique · transferable to any low-connectivity estate)
+
+**Who it is for.** An estate where **the constraint is not the model, it is the network.** 🟢 **Named
+domestically rather than inferred here:** FNIA 2026 co-founder **Estevão Zinga** on Angola —
+*"ainda temos algumas zonas cinzentas, províncias que não têm conexão à internet"* — and Mozambique's
+**UEM** naming unequal access to technology as a standing constraint.
+
+**The wiring:**
+
+1. **The platform decides itself:** **Kolibri** (**MIT**) — the offline-first row this base's
+   platform shelf has carried throughout. 🔵 **In this pattern the licence and the architecture agree
+   for once: the only offline-capable platform here is also the only permissive one.**
+2. **Content exchange, so the material is not trapped in one deployment:** 🆕
+   [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) (**MIT**) to build and validate
+   **QTI 3 packages** server-side, 🆕 [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player)
+   (**MIT**) to play them **in the browser, on the device**, and
+   [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (**MIT**) for the SCORM material
+   a ministry already owns. 🟢 **Items authored once, synced as packages, scored locally.**
+3. **Sync, not streaming:** 🆕 [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe)
+   (**Apache-2.0**) is the component that makes this work — **it resumes an interrupted job from the
+   file system or Redis**, which is precisely the failure mode of a province with intermittent
+   connectivity. Local `lrsql` at the school, forward when the link returns.
+4. **Inference on-premises or on-device:**
+   [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite)
+   (**Apache-2.0**) rather than a hosted API.
+5. **Language:** Portuguese plus local languages. 🔴 ⚠️ **If any of this becomes voice-led, read
+   [`AI-for-Education/voice-ai-evaluation-framework`](https://github.com/AI-for-Education/voice-ai-evaluation-framework)
+   (**MIT**) first: it is the only instrument in this base that measures CHILD speech recognition**,
+   which every literacy deliverable silently assumes works.
+
+🔴 **The procurement warning that is specific to these two countries, from `T-p298c`: qualify WHICH
+ministry holds the mandate.** In **Mozambique** the AI regulator is being created by the **Minister
+of Planning and Development** and the schools robotics-and-AI programme is run by the **Ministry of
+Communications and Digital Transformation** — **the education ministry appears nowhere in the leg.**
+A deck addressed to Education may reach the wrong department. ⚠️ **Mozambique's STEMMOZ target
+(~5 000 pupils, *"todas escolas públicas"*) was dated end-2025: verify delivery before citing it.**
+
+**Effort.** 4-6 weeks for a syncing Kolibri estate with locally-scored QTI content at pilot scale;
+🔴 **the cost driver is device logistics and teacher training, not software** — price those or the
+engagement will be mispriced.
+
+### ⚠️ Grade caveat for `P60`-`P62`
+
+All fourteen `p298` reads are **`WebFetch` over rendered `github.com` HTML — sidebar/About licence
+label plus README body.** That is **sidebar-grade, not payload-grade**: only
+`ucfopen/pylti1.3`'s root `LICENSE` was opened at payload (1.04 KB), and it is the one row `p298`
+**rejected**. 🔴 `curl` is unavailable as a channel this pass — **`curl -sI` returned the proxy's
+`HTTP/1.1 200 Connection Established` for an invented hostname as readily as for a real repository,
+and a full `GET` returned a `403` whose 378-byte body is byte-identical for both.** 🟢 Before any of
+these patterns ships, **re-read the grant of every component at its payload and pin the commit** —
+`p295` also showed rendered star counts are **not monotonic**, so treat every figure above as a
+reading taken on `2026-10-18` and not as a property of the repository.
+
 ## 🟢 Pass 297 — four new patterns (`P56`-`P59`), each built from rows promoted THIS pass
 
 ⏱️ `2026-10-18`. Evidence:

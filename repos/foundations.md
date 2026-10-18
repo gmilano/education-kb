@@ -4,6 +4,138 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 298 — THIRTEEN NEW PERMISSIVE SUBSTRATES, AND THEY ARM AN INSTRUCTION THIS BASE HAS GIVEN FOR 297 PASSES WITHOUT THE CODE TO FOLLOW IT
+
+⏱️ **Twentieth pass of `2026-10-18`.** Evidence:
+[`p298-promotion-gap.2026-10-18-p298.tsv`](../evidence/p298-promotion-gap.2026-10-18-p298.tsv) ·
+[`p298-channel-control.2026-10-18-p298.tsv`](../evidence/p298-channel-control.2026-10-18-p298.tsv) ·
+[`p298-identity-gate.2026-10-18-p298.tsv`](../evidence/p298-identity-gate.2026-10-18-p298.tsv).
+
+🟢 **`ACTION PG-2` discharged.** `p297` ordered the next pass to take **~12 from the layers still at
+zero or one row** — assessment integrity, retention/early-warning, student-records interop — and to
+**skip the adapter cluster entirely**. `p298` read **fourteen slugs**, admitted **thirteen**, rejected
+**one**, and **read not a single adapter**. Every read is first-hand at `github.com` rendered HTML.
+**All thirteen land on this file. None belongs on [`agents/top.md`](../agents/top.md)** — and that is
+a finding, not an omission (see that file's `p298` note).
+
+### 🔴 The finding: this base's oldest piece of advice was unarmed
+
+Every pass that has touched [`verticals/solutions.md`](../verticals/solutions.md) has told a client the
+same thing about a copyleft LMS: **"integrate, do not fork."** Reach Moodle (GPL-3.0), Canvas
+(AGPL-3.0) and Open edX (AGPL) **at the integration boundary** and keep the studio deliverable on the
+permissive side of it. 🔴 **The advice was correct and the toolkit for it did not exist on these
+shelves.** Before this pass:
+
+| boundary layer | rows before `p298` | added `p298` |
+|---|---|---|
+| **LTI tool provider** | **1** — [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) (Apache-2.0, PHP framework) | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) · [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) · [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) · [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) |
+| **QTI — assessment items** | 🔴 **0** | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) · [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) · [`instructure/qti`](https://github.com/instructure/qti) |
+| **OneRoster — rostering client/server** | 🔴 **0** *(prose only, via Ed-Fi)* | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) · [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster) |
+| **xAPI — statement movement** | 1 store *(`lrsql`)* + 1 spec | [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) |
+| **integrity — AI-text detection** | 🔴 **0** | [`baoguangsheng/fast-detect-gpt`](https://github.com/baoguangsheng/fast-detect-gpt) |
+| **integrity — proctoring** | 🔴 **0** | [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) ⚠️ boundary in the row |
+| **integrity — code similarity** | 1 *(`dolos`)* | [`automoss/automoss`](https://github.com/automoss/automoss) |
+| **Caliper — analytics events** | 🔴 **0** | 🔴 **still 0.** Declared, not glossed |
+
+🔵 **The language coverage is the point, not the row count.** The boundary was reachable in **PHP
+only**. It is now reachable in **PHP, Node/TypeScript, Python, Go and Ruby**, plus **JupyterHub** as a
+first-class tool provider. A studio can now meet an AGPL LMS from whatever runtime the engagement
+already uses, instead of standing up PHP to do it.
+
+### 🟢 The thirteen rows, read `2026-10-18`
+
+| repo | licence (read `2026-10-18`) | stars | forks | commits | branch | layer, and the boundary in the row |
+|---|---|---|---|---|---|---|
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 `Apache-2.0` *(sidebar)* | **373** | 86 | **575** | `master` | LTI 1.3 in TypeScript — launches, Deep Linking, AGS, NRPS, Dynamic Registration. **The highest-adoption permissive LTI row this base has.** README says *"educational environments"* and never *students* |
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 `Apache-2.0` *(sidebar)* | 124 | **107** | 110 | `master` | LTI 1.3 from **the standards body itself**. 🔵 **107 forks against 124 stars** — the deployment signature this file named on Submitty and `gegok12`: this is a library institutions *run*, not one developers *star* |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 `MIT` *(sidebar)* | 138 | 84 | 178 | `master` | LTI 1.3 Advantage in Python, **Django + Flask adapters**. 🔴 **This is NOT the slug `p989` named** — see the identity-gate note below |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **`BSD-3-Clause`** *(sidebar)* | 73 | 56 | **523** | `main` | Makes **JupyterHub** an LTI Tool Provider, **LTI 1.1 and 1.3**, naming Canvas, Moodle, Open edX, Blackboard. 🟢 It sits directly under [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) (8.4k★), already the highest-adoption permissive row on this file |
+| [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 `MIT` *(sidebar)* | 30 | 6 | **596** | `main` | **The first QTI row in this base.** Browser component that renders 1EdTech **QTI 3** items, saves item state and runs response scoring. 596 commits against 30 stars |
+| [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) | 🟢 `MIT` *(sidebar)* | **0** | **0** | **255** | `main` | QTI 3.0 **packages**, tests and items in PHP: import, export, validate, parse, generate, edit-in-package. 🇳🇱 **Kennisnet** is the Dutch public-education ICT foundation. 🔴 **Zero stars, zero forks, 255 commits** — the clearest case on this file for the rule below |
+| [`instructure/qti`](https://github.com/instructure/qti) | 🟢 `MIT` *(sidebar)* | 8 | 10 | 174 | `master` | Ruby gem parsing **QTI 1.2 and 2.1** — the legacy item formats a migration actually meets. 🔵 **Authored by Instructure under MIT while [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) is AGPL-3.0**: the vendor's own licence split is where the integration boundary physically is |
+| [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | 🟢 `Apache-2.0` *(sidebar)* | 17 | 9 | 310 | `main` | **LRSPipe** — one-way xAPI statement forwarding between Learning Record Stores, filtered by xAPI **Profile templates/patterns**, resumable via file system or Redis. The sibling of [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql), already shelved: `lrsql` stores, `xapipe` **moves** |
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 `Apache-2.0` *(sidebar)* | 6 | 5 | 151 | `main` | Serves a **OneRoster 1.2** API from an **Ed-Fi ODS**; Data Standards **4.0, 5.x, 6.1**; `classes`, `courses`, `users`, `schools`. 🟢 **This is the bridge for `Gap 309`** — the register records OneRoster as *absent* from DMS v8.0 while native OneRoster 1.2 shipped in ODS/API 7.3.2 |
+| [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster) | 🟢 `MIT` *(sidebar)* | 8 | 1 | 237 | `master` | OneRoster API server in **Go** on MongoDB. 🔵 It **adds `PUT` create/update/upsert beyond the spec's read-only `GET` surface** — useful and non-standard, so say which one you are selling. 🔴 **Bare-name collision:** `fffnite/go-oneroster` is also on `p989`'s list and was **not** read |
+| [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) | 🟢 `MIT` *(sidebar + README)* | **633** | **351** | 86 | `master` | Vision **+ audio** proctoring: eye tracking, mouth-open, person and phone detection, head pose, face spoofing, speech transcription against a question paper. ⚠️⚠️ **Three boundaries, all from its own README: face spoofing *"accuracy is not good currently"*, speech-to-text *"might not work well for all dialects"*, and the facial-landmark model was trained on NON-COMMERCIAL datasets.** 🔴 **Never brief this as a shippable proctoring product; it is a reference implementation of the capability** |
+| [`baoguangsheng/fast-detect-gpt`](https://github.com/baoguangsheng/fast-detect-gpt) | 🟢 `MIT` *(sidebar)* | **436** | 85 | 76 | `main` | Zero-shot detection of machine-generated text via **conditional probability curvature**, **ICLR 2024**. The highest-adoption permissive row in the integrity layer and **the only one with a peer-reviewed method behind it.** 🔴 README names no education use |
+| [`automoss/automoss`](https://github.com/automoss/automoss) | 🟢 `MIT` *(sidebar)* | 157 | 26 | **791** | `main` | Local web app automating **Stanford MOSS** code-similarity runs across a set of assignments. Composes with [`dolos`](https://github.com/dodona-edu/dolos): **two independent similarity engines on one submission set is a defensible integrity finding; one is an accusation** |
+
+### 🔴 The identity gate changed one row's owner, and the licence gate is the reason
+
+`p989`'s list named **`ucfopen/pylti1.3`**. `p298` read it and **did not shelve it.**
+
+| | `ucfopen/pylti1.3` | `dmitry-viskov/pylti1.3` |
+|---|---|---|
+| sidebar licence label | 🔴 **a `License` link with NO label** | 🟢 **`MIT license`** |
+| root `LICENSE`, line 1 | `MIT License` | — |
+| copyright line | 🔴 **`Copyright (c) 2019 Dmitry Viskov`** | *(the same holder, on his own repository)* |
+| stars / forks / commits | **3** / 1 / 180 | **138** / **84** / 178 |
+
+🔴 **The list named the three-star copy, not the 138-star original** — and the copy carries the
+original author's copyright line verbatim. GitHub flags neither as a fork, so this is a
+**re-publication, not a fork relationship**, and no banner would have warned a reader.
+
+🔵 **The new licence-gate shape, and it is one this base has not recorded: GitHub's licence
+classification is not a property of the payload.** `p267`'s signal — *a `License` link with no
+label* — has always been read as a property of the **file**. Here the **same grant, same holder, same
+name**, is **classified on the original and unclassified on the copy.** A scanner reading sidebars
+would grade the copy *unlicensed* and the original *MIT*. 🟢 **The rule: an unlabelled sidebar is a
+question about the repository, not a verdict on the grant — and the answer may be that you are looking
+at the wrong repository.**
+
+### 🔴 What the star column would have done to this batch — a third confirmation, and now it is a rule
+
+`p296` measured it, `p297` confirmed it on a wider sample, `p298` confirms it a third time and the
+spread is again extreme:
+
+- [`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) — **0★, 0 forks, 255 commits**, and it
+  is the only QTI 3 **packaging** library on this file. A star filter at `>0` deletes it.
+- [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) — **107 forks
+  against 124 stars.** Forks exceeding stars, from the standards body itself.
+- [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) — **633★**, the
+  second-highest in the batch, and **its own README disqualifies two of its five subsystems.**
+
+🟢 **Promoted from finding to standing rule on this file: rank substrate rows by commits, by forks
+against stars, and by named deployment. Stars rank the developer audience, and on this layer the
+developer audience is not the buyer.** ⚠️ `p295`'s warning still binds: these are **rendered** reads
+and are **not** monotonic.
+
+### 🔵 The channel, with a negative control that is now decisive
+
+`curl -sI` returned **`HTTP/1.1 200 Connection Established` on 4 of 4** probes — **including an
+invented hostname and including `api.github.com`.** 🔴 **That line is the proxy's `CONNECT`
+handshake, not an origin status**, so under `-I` a `200` here licenses **no existence claim** —
+strictly stronger than `p294`'s rule, which was written about a `403`. A full `GET` returned **`403`
+with a `378`-byte body that is byte-identical for a real repository and a fabricated one.**
+
+🟢 **What is new is that `api.github.com` answered in words.** Its `403` body reads: *"GitHub access
+to this repository is not enabled for this session. Use add_repo to request access."* 🔵 `p294`-`p297`
+inferred *"there is no `api.github.com` channel"* from status codes alone. **The inference was right
+and the mechanism is now documented: this is session repo-scoping, not rate limiting and not repo
+absence.** All fourteen reads are `WebFetch` over rendered `github.com` HTML — **sidebar-grade, not
+payload-grade**, except `ucfopen/pylti1.3`, whose root `LICENSE` was read at payload (1.04 KB) because
+the gate demanded it.
+
+### 🔴 Next batch for this file — `ACTION PG-3`
+
+**456 of the 528 permissive orphans remain unshelved.** `p298` adds a correction to `p297`'s
+partition rule: **cluster SIZE and cluster SATURATION are different measurements, and `p297`
+conflated them.** The interop cluster `p298` worked is **~60 slugs — three times the adapter
+cluster — and it stood at zero rows.** The test is **rows-on-shelf against cluster-size**, never
+size alone.
+
+The next pass should take ~12 from:
+
+1. **Caliper analytics** — 🔴 still **0 rows**, and it is the third 1EdTech standard after LTI and
+   QTI. Search the list for `caliper`.
+2. **SCORM tooling** — 3 mentions, 1 row (`scorm-again`); the list carries
+   `S4-NetQuest/react-scorm-provider`, `raccoongang/edx_xblock_scorm`, `sr258/scorm-h5p-wrapper`.
+3. **QTI conversion** — `rolfis/qti-convert`, `metyatech/markdown-to-qti`,
+   `metyatech/qti-html-renderer`: the **authoring** half of the layer `p298` opened at the
+   **playback** half.
+4. 🔴 **And resolve the three case-duplicate slugs and the 21 bare-name collisions `p298` measured
+   before reading any of them** — `canvas-mcp` alone has **ten distinct owners** on this list.
+
 ## 🟢 Pass 297 — NINE NEW PERMISSIVE SUBSTRATES, AND THEY ARE ALL ONE THING: THE LAYERS BETWEEN THE AGENT AND THE INSTITUTION
 
 ⏱️ **Nineteenth pass of `2026-10-18`.** Evidence:
@@ -676,6 +808,19 @@ second repository to pair with `Pyris`; it is an alias of `Pyris`. See
 
 | Repo | Licence | Stars | Why it is a foundation |
 |------|---------|-------|------------------------|
+| 🆕 [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** *(sidebar, read `p298`)* | **373★ / 86 forks / 575 commits / `master`** | **LTI 1.3 tool provider in TypeScript — the highest-adoption permissive LTI row on this file.** Launches, Deep Linking, Assignment & Grade Services, Names & Roles, Dynamic Registration, with the security and validation already implemented. 🟢 **This is how a Node studio puts its own application inside Moodle, Canvas or Open edX without touching the LMS codebase** — the `p298` arming of this file's oldest instruction, *"integrate, do not fork."* ⚠️ README says *"educational environments"* and never *students*: it is a protocol library, not a teaching product. |
+| 🆕 [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 **Apache-2.0** *(sidebar, read `p298`)* | **124★ / 107 forks / 110 commits / `master`** | **LTI 1.3 from the standards body itself**: OIDC login, message launches, Deep Linking, Names & Roles, Assignments & Grades. 🔵 **107 forks against 124 stars** — forks exceeding stars is this file's established deployment signature (`Submitty`, `gegok12`, `Ed-Fi-ODS`): institutions **run** this, developers do not **star** it. Pair with [tsugi](https://github.com/tsugiproject/tsugi) when you want a whole tool framework rather than a protocol library. |
+| 🆕 [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | 🟢 **MIT** *(sidebar, read `p298`)* | **138★ / 84 forks / 178 commits / `master`** | **LTI 1.3 Advantage in Python, with Django and Flask adapters** (other frameworks by reimplementing `OIDCLogin` and `MessageLaunch`). The row a Python-first engagement needs to reach a copyleft LMS. 🔴 **`p989`'s orphan list named [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) instead — 3★, 1 fork, no sidebar licence label, and a root `LICENSE` reading `Copyright (c) 2019 Dmitry Viskov`.** That is a **re-publication of this repository**, not a fork GitHub tracks, and `p298` substituted the canonical slug at the identity gate. **Cite this owner.** |
+| 🆕 [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** *(sidebar, read `p298`)* | **73★ / 56 forks / 523 commits / `main`** | **LTI 1.1 *and* 1.3 authenticators that make JupyterHub an LTI Tool Provider** — students reach the hub only through a compliant platform, never directly. Its README names **Canvas, Moodle, Open edX and Blackboard**. 🟢 **It sits directly under [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) (8.4k★, the highest-adoption permissive row on this file) and under both permissive notebook autograders** (`nbgrader`, `otter-grader`): this is the row that turns a notebook teaching stack into something an institution's LMS can launch. 🔵 **BSD-3-Clause, the same grant as the `jupyterhub` and `nbgrader`/`otter-grader` rows it sits with — the notebook teaching lane is now permissive from authentication to grading.** |
+| 🆕 [amp-up-io/qti3-item-player](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** *(sidebar, read `p298`)* | **30★ / 6 forks / 596 commits / `main`** | 🟢 **THE FIRST QTI ROW IN THIS BASE — the assessment-item layer was at zero for 297 passes.** A browser component that loads and renders **1EdTech QTI 3** items, saves item state, and runs response scoring. README says *"classroom assessment settings"*. 🔵 **Why it matters more than its star count:** QTI is how item banks move between systems, so without a QTI row every "migrate their assessments" conversation had to be answered with bespoke parsing. **596 commits against 30 stars.** |
+| 🆕 [Kennisnet/php-qti3](https://github.com/Kennisnet/php-qti3) | 🟢 **MIT** *(sidebar, read `p298`)* | 🔴 **0★ / 0 forks / 255 commits / `main`** | **QTI 3.0 packages, tests and items in PHP** — import and export as ZIP or folder, validate, parse, generate, and edit items inside a package. 🇳🇱 **Kennisnet is the Dutch public-education ICT foundation**, so this is an EMEA public-sector grant, not a hobby repository. 🔴 **Zero stars and zero forks against 255 commits makes this the single clearest case on this file for the rule that stars do not rank substrates** — it is the only QTI **packaging** library here, and a `stars > 0` filter deletes it. Pair with `qti3-item-player`: this one builds and validates the package, that one plays it. |
+| 🆕 [instructure/qti](https://github.com/instructure/qti) | 🟢 **MIT** *(sidebar, read `p298`)* | **8★ / 10 forks / 174 commits / `master`** | Ruby gem parsing **QTI 1.2 and 2.1** — True/False, Multiple Choice, Multiple Answer — exposing manifests, assessments and items to Ruby. **The legacy item formats a real migration actually meets**, as against `qti3-item-player`'s QTI 3. 🔵 **The briefing-grade detail is the authorship: Instructure publishes this under MIT while [instructure/canvas-lms](https://github.com/instructure/canvas-lms) is AGPL-3.0.** The vendor's own licence split marks exactly where the integration boundary physically lies — tooling permissive, platform copyleft. |
+| 🆕 [yetanalytics/xapipe](https://github.com/yetanalytics/xapipe) | 🟢 **Apache-2.0** *(sidebar, read `p298`)* | **17★ / 9 forks / 310 commits / `main`** | **LRSPipe** — standalone middleware that continually forwards xAPI Statements **one-way** from source Learning Record Stores into target stores, across one or more jobs. Filters forwarded statements by **xAPI Profile Statement Templates or Patterns**, and persists progress to the file system or Redis so an interrupted job **resumes**. 🟢 **The companion to [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) already on this table: `lrsql` stores statements, `xapipe` moves them** — which is what a data-residency or multi-tenant engagement actually needs (keep the institution's LRS authoritative, forward a filtered subset to the analytics estate). |
+| 🆕 [Ed-Fi-Alliance-OSS/edfi-oneroster](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **Apache-2.0** *(sidebar, read `p298`)* | **6★ / 5 forks / 151 commits / `main`** | **Serves a OneRoster 1.2 API from an Ed-Fi ODS** — Data Standards **4.0, 5.x and 6.1** — exposing `classes`, `courses`, `users` and `schools`. 🟢 **This is the bridge for `Gap 309`**, which records OneRoster as *absent* from DMS v8.0 while native OneRoster 1.2 shipped in ODS/API 7.3.2: a client on the ODS/API line can speak OneRoster to a vendor **today**, from a permissive grant, without waiting on DMS. 🔵 The first OneRoster **implementation** row on this file — the standard was prose here until `p298`. |
+| 🆕 [bgwdotdev/go-oneroster](https://github.com/bgwdotdev/go-oneroster) | 🟢 **MIT** *(sidebar, read `p298`)* | **8★ / 1 fork / 237 commits / `master`** | **OneRoster-compliant REST API server in Go**, backed by MongoDB. 🔵 **It deliberately exceeds the specification: beyond OneRoster's read-only `GET` surface it supports create, update and upsert via `PUT`** — genuinely useful when the roster must be *written*, and **non-standard**, so name which of the two you are selling before a vendor conformance conversation. 🔴 **Bare-name collision: `fffnite/go-oneroster` is also on `p989`'s list and was not read** (`p298` identity gate) — cite the owner, never `go-oneroster`. |
+| 🆕 [vardanagarwal/Proctoring-AI](https://github.com/vardanagarwal/Proctoring-AI) | 🟢 **MIT** *(sidebar + README, read `p298`)* | **633★ / 351 forks / 86 commits / `master`** | **The first proctoring row in this base** — vision **and** audio: eye tracking, mouth-open detection, person and phone detection, head-pose estimation, face-spoofing detection, plus speech transcription flagged against a question paper. ⚠️⚠️ **THREE BOUNDARIES, ALL QUOTED FROM ITS OWN README: face-spoofing *"accuracy is not good currently"*; speech-to-text *"might not work well for all dialects"*; and the facial-landmark model was trained on NON-COMMERCIAL datasets.** 🔴 **Never brief this as shippable proctoring software. It is a complete reference implementation of the capability** — and the dialect caveat lands hardest in exactly the LATAM, African and Indic engagements this base places most of its work in. 🔴 Any deployment touching student evaluation is **EU AI Act Annex III high-risk** (`T-p296a`). |
+| 🆕 [baoguangsheng/fast-detect-gpt](https://github.com/baoguangsheng/fast-detect-gpt) | 🟢 **MIT** *(sidebar, read `p298`)* | **436★ / 85 forks / 76 commits / `main`** | **Zero-shot detection of machine-generated text via conditional probability curvature — ICLR 2024** (*"Fast-DetectGPT: Efficient Zero-Shot Detection of Machine-Generated Text via Conditional Probability Curvature"*). Ships a local demo scoring how likely a passage is machine-generated, plus experiment scripts across several models. 🟢 **The only row in this base's integrity layer with a peer-reviewed method behind it**, which is the difference between an instrument and a hunch when a student contests a finding. 🔴 **Its README names no education use** — shelved as a substrate. ⚠️ **Zero-shot detectors carry false-positive rates that harm non-native writers: never wire this to an automated penalty, only to a human review queue.** |
+| 🆕 [automoss/automoss](https://github.com/automoss/automoss) | 🟢 **MIT** *(sidebar, read `p298`)* | **157★ / 26 forks / 791 commits / `main`** | Local web app (via `make run` or Docker) that **automates Stanford MOSS code-similarity runs across a whole set of assignments**, with a user manual. README says *"computer science assignments"*; the repository's own topics say `academic-dishonesty` and `plagiarism-detection`. 🟢 **Composes with [dolos](https://github.com/dodona-edu/dolos) above, and the composition is the point: two independent similarity engines agreeing on one submission set is a defensible integrity finding — one engine is an accusation.** 791 commits against 157 stars. |
 | 🆕 [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** *(`main/LICENSE`, `1 150` B, payload read + diffed, `p274`; 🟢 **re-read at a NEW pin `p295`** — `99da145f55a17d26ac2d67ae258a4f9beb385874`, `LICENSE` `200`, **1 150 B**, sha256₁₂ **`b8694396d7dc`**, title `MIT License` — **byte size identical, the grant has not moved**)* ⚠️ **its GitHub sidebar shows a License link with NO LABEL** — `p267`'s signal fires here on the plainest possible payload, so **the signal is not specific and this row is NOT downgraded by it** — ⚠️ **core only: 12 Pro modules sold separately** | 🔴 **54★ / `101` forks / `123` commits** *(re-read `p295` — the cell carried **98** forks and self-declared "no star read this pass"; it was the best-labelled target in this file and it was wrong)* | **Self-hosted school ERP / SIS** on PHP 8.4 + Laravel. 🟢 **The permissive SIS layer this base has said for nine passes does not exist** — and the reason it was missing is that the base probed a slug that does not resolve, twice (`T44`). 🔵 **Its fork network is its adoption evidence**: 98 forks, near-zero fork stars, institution-shaped fork names across **India, Indonesia and Vietnam** (`P933` — software institutions RUN rather than developers EXTEND). ⚠️ **Deployment-placed APAC; origin not established.** ⚠️ **Price the Pro modules before the SOW** |
 | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | **Interactive learning with automated feedback**, from TUM Applied Education Technologies. Programming, quiz, modelling and text exercises with automatic assessment and an integrated CI runner. The strongest MIT-licensed teaching platform found this pass — production-grade and university-maintained. **Pass 266:** it ships three *config-gated* AI subsystems — **Iris/Pyris** (the LLM tutor and the microservice behind it: 🔴 **`p283`: ONE repository, [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris), MIT** — `ls1intum/Iris` is a name alias of it, not a second subsystem; `p282` established the identity and corrected `agents/top.md`, `compose/patterns.md` and `verticals/solutions.md`, and **this row was missed**. *Iris* is the user-facing name of the tutor Pyris powers) and **Athena** (feedback suggestion, [`ls1intum/Athena`](https://github.com/ls1intum/Athena), 🟢 **MIT at metadata grade since p275** — no licence *file* exists (tree enumerated, 691 paths) but **12 of 14 manifests declare `license = "MIT"`**; the earlier *"all-rights-reserved"* verdict is retracted), plus **Hyperion** (AI exercise authoring, not a separate repo). Config-gated matters: the platform runs identically with AI off, which is the posture an EU AI Act high-risk classification wants. |
 | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | MIT | 4.1k | FSRS, the modern spaced-repetition scheduler. The highest-adoption learning-science component in open source. Pair with [fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) (BSD-3-Clause) for a Rust core you can embed. |
@@ -791,11 +936,29 @@ in this base's own gap register, Apache-2.0 and payload-read, while this file ha
 
 ## What to reach for, by job
 
-- **"Put an AI tutor inside our existing LMS"** → `tsugi` (LTI) or `openedx/XBlock`. Do not fork the LMS.
+- **"Put an AI tutor inside our existing LMS"** → 🆕 **pick the LTI library by the runtime you already
+  have, not by the LMS**: `ltijs` (Apache-2.0, TypeScript), `1EdTech/lti-1-3-php-library` or `tsugi`
+  (both Apache-2.0, PHP), `dmitry-viskov/pylti1.3` (MIT, Django/Flask), `jupyterhub/ltiauthenticator`
+  (BSD-3-Clause) when the deliverable is notebooks — or `openedx/XBlock` for Open edX specifically.
+  **Do not fork the LMS.** *(`p298` — before this pass the only answer here was PHP.)*
+- 🆕 **"Migrate / exchange their assessment items"** → `amp-up-io/qti3-item-player` to play QTI 3,
+  `Kennisnet/php-qti3` to build and validate the packages, `instructure/qti` to read the **QTI 1.2 /
+  2.1** legacy items a real migration meets. *(`p298` — this layer was at zero rows.)*
+- 🆕 **"Roster our students between systems"** → `Ed-Fi-Alliance-OSS/edfi-oneroster` to serve
+  **OneRoster 1.2** off an Ed-Fi ODS (the `Gap 309` bridge), or `bgwdotdev/go-oneroster` for a Go
+  server — ⚠️ the latter adds non-standard `PUT` writes, so say which surface you are selling.
+- 🆕 **"Move learning events without moving the system of record"** → `yetanalytics/lrsql` to store,
+  🆕 `yetanalytics/xapipe` to forward a **Profile-filtered** subset onward. This is the permissive
+  answer to a data-residency objection.
 - **"Automatically assess student work"** → `Artemis` for programming and modelling, `Numbas` for maths.
 - **"Tell us which students are at risk"** → `academico` or `GibbonEdu` for the data, `pykt-toolkit` or `pyedmine` for the model, `lrsql` + `xAPI-Spec` for the event stream.
 - **"Make retention stick"** → `fsrs4anki` / `fsrs-rs`. Spaced repetition is the one intervention with a scheduler worth reusing instead of inventing.
-- **"We must prove academic integrity"** → `dolos`.
+- **"We must prove academic integrity"** → `dolos`, 🆕 **plus a second independent engine**:
+  `automoss/automoss` for code (two engines agreeing is a finding; one is an accusation), 🆕
+  `baoguangsheng/fast-detect-gpt` (ICLR 2024) for machine-written prose — ⚠️ **into a human review
+  queue, never an automated penalty**, because zero-shot detectors misfire on non-native writers. 🆕
+  `vardanagarwal/Proctoring-AI` is the **reference implementation** of proctoring, not a product: its
+  own README disqualifies its face-spoofing accuracy and warns on dialects.
 - **"Our content is all SCORM"** → `scorm-again`, and keep the content where it is.
 - **"Grade programming work automatically"** → `Submitty/Submitty` (BSD-3) where submission, autograding *and* TA grading must all be covered, `autolab/Autolab` (Apache-2.0) for a course-management shell with autograding, `jupyter/nbgrader` (BSD-3) or `ucbds-infra/otter-grader` (BSD-3, also R) where the work is notebooks, `Artemis` (MIT) where feedback matters more than marks. **Five permissive options, none of them an agent** — this is a solved, copyleft-free problem.
 - **"The client runs Canvas"** → do **not** start from `instructure/canvas-lms` (AGPL-3.0, 78,765 commits). Reach it through its API — `vishalsachdev/canvas-mcp` (MIT) for an agent surface, LTI via `tsugi` for a tool — and keep your deliverable outside the AGPL boundary.

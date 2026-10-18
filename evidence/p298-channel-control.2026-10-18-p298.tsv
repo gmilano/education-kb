@@ -1,0 +1,9 @@
+probe	target	method	observed_first_line_or_code	body_bytes	is_negative_control	what_it_licenses
+1	github.com/1EdTech/lti-1-3-php-library	curl -sI	HTTP/1.1 200 Connection Established	0	no	NOTHING. This is the proxy CONNECT handshake line, not an origin status
+2	github.com/Cvmcosta/ltijs	curl -sI	HTTP/1.1 200 Connection Established	0	no	NOTHING. Same handshake line
+3	github.com/thisdoesnotexist-p298-globant/nope	curl -sI	HTTP/1.1 200 Connection Established	0	YES	NOTHING. An invented slug returns the identical 200 line, so curl -sI cannot distinguish a real repository from a fabricated one
+4	api.github.com/repos/Cvmcosta/ltijs	curl -sI	HTTP/1.1 200 Connection Established	0	no	NOTHING. Same handshake line for a different host entirely
+5	github.com/Cvmcosta/ltijs	curl -s (GET)	403	378	no	NOTHING
+6	github.com/thisdoesnotexist-p298-globant/nope	curl -s (GET)	403	378	YES	NOTHING. Byte-identical length to probe 5: the 403 is emitted before any origin lookup
+7	api.github.com/repos/Cvmcosta/ltijs	curl -s (GET)	403	n/a (JSON body read)	no	THE REASON, in plain text: "GitHub access to this repository is not enabled for this session. Use add_repo to request access." Not rate limiting, not repo absence: session repo-scoping
+8	github.com/* (14 slugs)	WebFetch rendered HTML	200 rendered	n/a	no	Sidebar/About licence label, README body, star/fork/commit counts, default branch. THE ONLY WORKING CHANNEL THIS PASS

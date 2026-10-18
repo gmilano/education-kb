@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 `T-p298a` — THE INSTRUCTION WAS RIGHT FOR 297 PASSES AND UNARMED FOR 297 PASSES: "INTEGRATE, DO NOT FORK" HAD ONE LIBRARY, IN ONE LANGUAGE
+
+⏱️ `2026-10-18`, pass 298.
+
+Every pass of this base that has met a copyleft LMS has given the same instruction: reach **Moodle**
+(GPL-3.0), **Canvas** (AGPL-3.0) and **Open edX** (AGPL) **at the integration boundary**, and keep the
+studio deliverable on the permissive side of it. 🔴 **The instruction was architecturally correct and
+operationally empty.** These shelves carried exactly **one** boundary row —
+[`tsugi`](https://github.com/tsugiproject/tsugi), Apache-2.0, **PHP** — and **zero** QTI rows, **zero**
+OneRoster implementations and **zero** Caliper rows.
+
+🟢 **`p298` armed it in six runtimes**: LTI 1.3 in **TypeScript** ([`ltijs`](https://github.com/Cvmcosta/ltijs),
+Apache-2.0, 373★), **PHP** ([`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library),
+the standards body's own, **107 forks against 124 stars**), **Python**
+([`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3), MIT) and **JupyterHub**
+([`ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator), BSD-3-Clause); QTI 3 playback and
+packaging plus QTI 1.2/2.1 parsing; OneRoster 1.2 in **.NET** and **Go**; and xAPI forwarding beside
+the store this base already had.
+
+🔵 **The trend this names is not about education — it is about how a knowledge base goes wrong.** This
+base did not hold a *false* belief; it held a **true** recommendation with **no inventory behind
+it**, for 297 passes, while its agent shelf grew to **42 rows**. 🔴 **An advice layer and an inventory
+layer can drift apart silently, because neither contradicts the other.** Nothing in this repository
+was ever inconsistent — the gap only became visible when a pass went looking for the code that the
+advice presupposed. 🟢 **The generalisable control: for every standing instruction this base gives,
+there should be a shelved row that executes it. `p298` recommends auditing the remaining
+instructions the same way** — starting with *"generate H5P content and play it through the MIT
+runtime"* (`ACTION PW`) and *"write AI evidence into the LRS, not the system of record"* (`Gap 314`),
+both of which now have components but have never been checked end to end.
+
+## 🔴 `T-p298b` — CLUSTER SIZE IS NOT CLUSTER SATURATION, AND `p297` CONFLATED THEM
+
+⏱️ `2026-10-18`, pass 298.
+
+`p297` re-diffed `p989`'s **528** permissive orphans, found the densest cluster to be **~20
+LMS-integration MCP adapters**, observed that the agents shelf already carried **four Canvas MCP
+servers, three Google Classroom servers and three Moodle servers**, and concluded: *"that cluster is
+duplicative capability, not missing capability."* 🟢 **That conclusion was correct.** 🔴 **The rule
+`p297` left behind was not: it ranked the list by cluster density, as though a dense cluster is
+evidence of saturation.**
+
+`p298` worked the **standards-interop cluster — LTI, QTI, OneRoster, xAPI, SCORM, Ed-Fi — roughly 60
+slugs, three times the adapter cluster.** It stood at **zero rows for QTI, zero for OneRoster
+implementations, zero for Caliper, and one for LTI.** 🔵 **Density said "skip"; the shelf said
+"empty".**
+
+| cluster | size on the list | rows on shelf before | verdict |
+|---|---|---|---|
+| LMS/MCP adapters | ~20 | **10** | 🔴 **saturated** — skip, as `p297` said |
+| standards interop | 🔴 **~60** | 🔴 **1** | 🟢 **the richest unworked layer in the list** |
+
+🟢 **The corrected test, and it is one number against another: rows-on-shelf ÷ cluster-size. Never
+size alone.** A big cluster is a big *opportunity* when the shelf is empty and a big *waste* when it
+is not, and the two are indistinguishable without looking at the shelf. 🔵 `ACTION PG-3` carries this
+forward: **Caliper** is the next cluster at **zero**.
+
+## 🔴 `T-p298c` — THE COUNTERPARTY IS NOT ALWAYS THE EDUCATION MINISTRY, AND TWO NEW EMEA COUNTRIES PROVED IT IN OPPOSITE DIRECTIONS IN ONE PASS
+
+⏱️ `2026-10-18`, pass 298.
+
+`T-p287` recorded that **the generative unit in education had become the ministry**, and `T-p297a`
+split that into a publisher (Nigeria) and a buyer (Kazakhstan). 🟢 **`p298` adds a third axis, and it
+is a procurement axis rather than a posture: WHICH ministry.**
+
+🟢 **🇲🇦 Morocco behaves as `T-p287` predicts.** The **Ministry of Education** owns the school
+programme — **12 000+ establishments** to be equipped **by 2027**, *"Caravane pour tous"* from **74 880
+(2023) to 625 000+ (2027)** — and an **AI dropout-detection system is already operating in the
+Draâ-Tafilalet academy** with a stated national-extension path, inside **"Maroc Digital 2030"** and the
+**Jazzari** institutes across **12 regions**. 🔴 A **parliamentary report** says the governance
+framework is missing.
+
+🔴 **🇲🇿 Mozambique inverts it.** The AI **regulator** is a multisectoral commission being created by
+the **Minister of Planning and Development**; the **schools** robotics-and-AI programme (STEMMOZ,
+~**5 000** pupils) is run by the **Ministry of Communications and Digital Transformation**; the
+national AI document (**INTIC**, May 2025) comes from the ICT institute. 🔵 **The education ministry
+appears nowhere in this leg.**
+
+🟢 **So the briefing rule is now explicit: qualify WHICH ministry holds the mandate before the
+pitch, because it varies inside one `region` value and inside one quarter.** 🔵 Three postures now
+coexist under `EMEA`: **ministry-of-education-led** (Morocco), **digital/planning-led** (Mozambique),
+and **state-as-model-publisher** (Nigeria, `T-p297a`). A deck that assumes the education ministry is
+the buyer will be addressed to the wrong department in at least one of the three.
+
+🔴 **And the honest other half: 🇹🇳 Tunisia and 🇩🇿 Algeria returned a declared nil** — only a **2020**
+UNESCO Maghreb mapping, six years stale. **🇦🇴 Angola's constraint was named by a local rather than
+inferred here**: *"províncias que não têm conexão à internet"* (FNIA 2026 co-founder Estevão Zinga),
+which is an **offline-first** requirement that selects **Kolibri (MIT)** off this base's own platform
+shelf before any model choice is made.
+
+## 🔵 `T-p298d` — RE-CIRCULATION IS NOT CORROBORATION
+
+⏱️ `2026-10-18`, pass 298.
+
+`p297` introduced **cross-leg corroboration**: a global claim ought to appear in the legs of the
+countries it names, and when it does not, the absence is a signal. 🟢 **`p298` supplies the negative
+twin, and it is the more dangerous of the two because it looks like evidence.**
+
+The North American leg re-served the **`USD 169M` "government commitment to responsible AI in higher
+education"** — the figure `p293` **downgraded** because *its source reports it without naming the
+government*, and `p297` refused again. 🔴 **This is its third appearance, from the same leg reaching
+the same unsourced blog, and a third appearance is not a third source.**
+
+🟢 **The rule: a figure that returns because you asked the same question again has gained nothing.
+Corroboration requires an INDEPENDENT leg** — for this one, a leg that **names a government** and
+reaches an appropriation instrument. 🔵 **The practical danger is that re-circulation is
+indistinguishable from corroboration in a search result**, which is why the grade must travel with
+the datum: this base downgraded the figure once and has now had three chances to re-promote it on
+nothing. **The refusal stands.**
+
 ## 🟢 `T-p297a` — THE STATE HAS BECOME A MODEL PUBLISHER, AND IN THE SAME REGION ANOTHER STATE BECAME A PLATFORM BUYER
 
 ⏱️ `2026-10-18`, pass 297.
