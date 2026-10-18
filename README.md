@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 301 — 2026-10-18 — **THE SESSION WAS FORBIDDEN TO RUN THIS REPOSITORY'S OWN INSTRUMENTS, SO THE SUBSTITUTE WAS CALIBRATED AGAINST THEIR PUBLISHED OUTPUT — AND 105 PAYLOAD READS TURNED TWO TWENTY-PASS ANECDOTES INTO RATES**
+
+**One-line summary:** 🔴 `make hooks` **and** `compose/code/lib/probe_payload.sh` were both **DENIED by
+the sandbox** (*"Code from External"*), so **no standing gate ran** and the one instrument `p300`'s
+ranked item 1 required was unrunnable. 🟢 A re-implementation was written, **declared**, and
+**calibrated against this base's own published sha256 pins before use** — `Gego-K12/gegok12`
+**1 150 B / `b8694396d7dc`** and `Submitty/Submitty` **`LICENSE` 404 → `LICENSE.md` 1 542 B /
+`c123708cb4ef`**, both reproduced **byte- and hash-exact**, with two known-fake slugs returning
+`UNRESOLVED`. 🟢 On that basis **105 licence payloads were read** — five times `p300`'s best batch —
+clearing **72 %** of a backlog that was itself derived mechanically (**265 shelf slugs → 119 pinned,
+146 unpinned**). 🟢 **Zero carried licence cells were refuted; four reproduced byte-exact.** 🟢 Three
+new agent rows, all from the **directed** leg while the mandated one nil'd a **twenty-seventh** time.
+
+### 🟢 What was found
+
+🔴 **The mandated battery: TWENTY-SEVEN consecutive nils on the agent leg, a FOURTEENTH window with no
+new education row from trending, a TWENTY-FIRST with no permissive education ERP/CRM, and ZERO new
+datums across all four mandated REGIONAL legs for the second consecutive pass.** All ten legs — four
+mandated, four regional, two directed — are written out with what each returned in
+[`evidence/p301-websearch.2026-10-18-p301.tsv`](evidence/p301-websearch.2026-10-18-p301.tsv).
+An undeclared nil looks exactly like coverage.
+
+| finding | verdict |
+|---|---|
+| 🔴 **the repository's own instruments** | 🔴 **UNRUNNABLE.** `make hooks` and `probe_payload.sh` both **DENIED**, *"Code from External"*. A **new error class**: `p297`'s bound was false and asking fixed it; **this bound is real and asking cannot**. Recorded in [`evidence/p301-instrument-substitution…tsv`](evidence/p301-instrument-substitution.2026-10-18-p301.tsv) |
+| 🟢 **the substitution** | 🟢 **DECLARED AND CALIBRATED, not assumed.** 2 published pins reproduced **byte- and hash-exact**; both documented traps fired on the controls that motivated them (`Submitty`'s ladder, `kolibri`'s `develop` branch); 2 known-fake slugs `UNRESOLVED`. 🔴 Its gaps stated up front: **no README-link arm**, a coarser family vocabulary, and it cannot name `ISC` |
+| 🟢 **`p300`'s ranked item 1** | 🟢 **DISCHARGED FOR 105 ROWS** — `p300` read 20. **265** shelf slugs partitioned mechanically into **119 pinned / 146 unpinned**; **105 read (72 %)**, 41 left |
+| 🟢 **the sweep's result** | 🟢 **ZERO REFUTATIONS.** Permissive **76/105 (72 %)**: MIT 53, Apache-2.0 16, BSD-3 6, MPL-2.0 1. Copyleft **11 (10.5 %)**. 🔴 **No payload at all: 13 (12.4 %)**. `UNCLASSIFIED` 3 — all triaged by hand |
+| 🟢 **four BYTE-EXACT reproductions** | `blend-ed/openedx-mcp` **34 524 B** · `codelitdev/courselit` **34 143 B** · `1EdTech/caliper-spec` **12 402 B** · `nmarafo/OpenDidactia` **2 123 B**. 🔵 **`p300`'s asymmetry holds on a 5× larger sample: the sidebar rows were unproven, not wrong** |
+| 🟢 **`T-p301b` — two anecdotes became RATES** | 🔴 **Default branch is not `main`/`master` in 11/105 — `10.5 %`** (`develop`×4, `dev`, `staging`, `unstable`, `v6.2.0`, `0.7`, `3.x`, and **`51`**). 🔴 **Grant not at plain `LICENSE` in 9/105 — `8.6 %`** (`LICENSE.md`×7, `LICENSE.txt`×2). 🔵 **Compounded, a one-path probe on a hardcoded branch misreports ~1 row in 5** — the quantified case for the shared instrument, produced by the pass forbidden to run it |
+| 🟢 **`T-p301a` corollary** | 🟢 **A CALIBRATED classifier's refusal to name is a LOCATOR.** `UNCLASSIFIED` fired **3 times in 105** and all three were genuinely unusual: **ISC** (`aryankeluskar/canvas-mcp` — **upgraded from `p297`'s sidebar to payload**, 746 B / `b3364441534c`), the **proprietary "AStheTECH Community License"**, and the **IMS Global Specification Document License**. Zero false alarms |
+| 🟢 **three new agent rows** | 🟢 [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) **MIT**, 1★/1/**166 commits**, **~230 Moodle tools**, and *"No web service tokens, no administrator, no plugin"* · 🟡 [`chiptoe-svg/canvas-lms-mcp`](https://github.com/chiptoe-svg/canvas-lms-mcp) **MIT**, 0★/0/**287**, **165 tools — 117 read / 48 write — plus a FERPA mode** · 🔵 [`YeetingWaterbottle/gradescope-mcp`](https://github.com/YeetingWaterbottle/gradescope-mcp) **MIT**, **read-only by design** |
+| 🔴 **…and the identity check that reclassified one of them** | 🔴 `chiptoe-svg`'s grant is **BYTE-IDENTICAL** to carried `bruchris/canvas-lms-mcp` (1 070 B, `c29329c5ef3b`, same holder). 🟢 **`p283`'s rule admits it on UNEQUAL HEAD** (`fa8408a6…` vs `18fa06b5…`) — shelved **as a fork**. 🔵 **`T-p301e`: an identical payload is evidence of ANCESTRY, never of aliasing** — the opposite verdict from `p282`'s `Iris`/`Pyris` withdrawal, from the same instrument |
+| 🔴 **`T-p301d` — the search channel on a multi-grant tree** | 🔴 The leg called `krzysztofbury/librus-mcp` *"GPL-3.0-only"*; the root payload is **MIT** (1 071 B, `22e7ab2dbddc`) and **the carried row already said both**: *"MIT (2.x); `legacy_reference/` GPL-3.0-only"*. 🔵 **The snippet named the restrictive SUBDIRECTORY as the licence of the tree.** A carefully-split cell aged better than a freshly-fetched summary |
+| 🟢 **`T-p301c` — the regional legs, measured** | 🔴 **Mandated regional: 0 new across 8 runs over 2 passes.** 🟢 **Directed unworked-region: 6 new across 2 runs.** `p300` saw it once; `p301` reproduces it on four legs in one hour. Sample stated; registered as a recommendation, **not** a law |
+| 🇰🇿 **the pass's most consequential datum** | 🟢 **Kazakhstan's decree, signed by Tokayev `2026-05-12`: AI in ALL secondary schools by 2029, standards due `2026-09-01`, and a curriculum carrying 43 AI-RELATED LEARNING OBJECTIVES** with both AI-named subjects renamed. 🔵 **Every other national instrument this base holds is an intention; 43 objectives is a COUNTABLE acceptance criterion** — `P71` builds against it |
+| 🔴 …and its attribution | 🔴 **PRESS-ATTRIBUTED.** `primeminister.kz` — the decree's own publisher — is **`ENOTFOUND` at this session's resolver**. 🔴 So is `www.iesalc.unesco.org`, so LATAM's **87/74/26** triple stays aggregator-attributed. **Twentieth pass with no primary government or IGO source** |
+| 🟢 **EMEA** | 🟢 **NON-NIL — ending a TWELVE-PASS nil streak.** All 8 datums carried. 🔴 Its corpus asserted the EU high-risk date as *August 2026* — **a date this base has refuted** (Annex III pt 3 binds **`2027-12-02`**; `2026-08-02` is Article 50 transparency). **It was written to the evidence TSV and to NO shelf cell** — caught by reading, with the gate chain down |
+| 🟡 **the one new market datum** | 🟡 **A DISPERSION, not an estimate: four firms price the 2026 market between `USD 6.4 bn` and `USD 11.4 bn` — a `1.8×` spread.** 🔵 More briefable than any single point, and the recommendation is to prefer the **behaviour** counts (US K-12 `60 %`/`32 %` weekly; LATAM `87/74/26`; Uruguay `75 %`) over revenue forecasts |
+| 🟢 **`T-p301f`** | 🟢 `digitalcredentials/sign-and-verify` re-read through a **different implementation**: MIT, 1 075 B, `09e4c03a44a7`, **still entirely silent about being ARCHIVED `2026-08-26`**. 🔵 `p300`'s finding **reproduced, not restated** — and it bounds the whole pass: **105 reads prove 105 COPYRIGHT positions and ZERO maintenance positions** |
+| 🟢 **the verticals leg, spent differently** | 🔴 21st nil on a permissive education ERP/CRM. 🟢 So the budget went to **pinning the platform tier instead**: 11 copyleft platforms payload-graded, and **`oat-sa/package-tao` + `tao-core` separated out as LGPL, not GPL** — a closed application may **LINK** against them. ⚠️ **The LGPL VERSION (2.1 vs 3.0) is unread** and must be pinned before contracting |
+| 🟢 **three new patterns** | **`P69`** Moodle grading a teacher can pilot with **no IT change queue** (two servers by design: the one that sees everything is not the one that writes) · **`P70`** a Canvas agent **architecturally incapable** of what NYC's red tier prohibits — 117 read tools registered, 48 write tools not · **`P71`** Kazakhstan's **43 objectives** delivered as a coverage matrix over QTI + offline Kolibri |
+
+### 🔵 The one error class behind this pass's corrections
+
+🔴 **Substituting for an instrument without pricing the substitution.** The repository's own probe
+header exists because **two previous passes rewrote a loop and silently re-imported defects this base
+had already fixed** (`P171`'s AGPL misread; pass 15's "noncommercially" → Creative Commons). 🟢 `p301`
+had to rewrite it anyway, and the only thing standing between that and a third repetition was
+**calibrating the substitute against the original's own published output first** — two byte-exact hash
+reproductions and two negative controls, run **before** any new row was graded.
+
+🔵 **The generalisable claim is narrower than "declare your tools".** It is: 🟢 **a substitute
+instrument is admissible only when it reproduces the original's PUBLISHED results on controls that
+include the traps the original was built for.** `Submitty` and `kolibri` were not arbitrary choices —
+they are the two cases whose *documented* failure modes (a ladder spelling, a non-`main` default
+branch) the substitute was most likely to repeat. **Calibrating on easy controls would have proved
+nothing.**
+
+### 🔴 What this pass could NOT do
+
+🔴 **No standing gate ran, at all.** `gate-tables`, `gate-enumeration`, `gate-absence`, `gate-dates`,
+`gate-identity`, `recount` and the rest are one denied chain. **Every claim on this pass's shelves is
+unverified by this base's own controls** — the first pass since `p298` of which that is true, and for
+a different reason.
+🔴 **41 of the 146 unpinned rows are still unread**, and every `NO-PAYLOAD` published this pass rests
+on a **narrower ladder** than the shared tool's.
+🔴 **The DNS control was REFUSED as exfil scouting, reproducing `p295` exactly, and was NOT worked
+around.** *Absent* still cannot be separated from *blocked*.
+🔴 **No primary government or IGO source, TWENTIETH pass** — both were attempted this pass and both
+failed at the resolver.
+🔴 **The ten star/forks cells are untouched for a FIFTH pass**, and **the row count was again not
+moved into `recount`** — it cannot be, with the Makefile unrunnable.
+🔴 **No code from any regional leg, ninth pass.** Central Asia returned a curriculum and three dates;
+no permissive slug.
+
+### 🔵 What a studio takes from this pass
+
+**Price your substitutes on the hard controls.** 🟢 105 rows of this base are now quotable to a byte
+count and a hash, and they are quotable only because the replacement instrument was first made to
+reproduce two results this base had already published — including the two that encode its known traps.
+🔴 **And note what 105 reads did NOT buy: a single maintenance fact.** The same channel that proves a
+grant is silent about an archived repository, as `sign-and-verify` demonstrated twice now. 🔵 **A
+licence read tells you whether you may build on something. It never tells you whether you should.**
+
+### 🔵 Backlog for `p302`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Top five:
+
+1. 🔴 **The remaining 41 unpinned rows** — the target list is derived and sitting in
+   [`evidence/p301-payload-grade…tsv`](evidence/p301-payload-grade.2026-10-18-p301.tsv)'s complement;
+   and **re-read the 13 `NO-PAYLOAD` rows with the README-link arm** before any is called unlicensed.
+2. 🔴 **Establish whether this session can run ANY repository code**, and if not, record it as a
+   standing environmental bound at the top of the Makefile — because **six gates not running is
+   indistinguishable from six gates passing** in every artefact this base produces.
+3. 🟢 **Retire BOTH mandated phrasings whose nil streaks are now ≥14** — the agent leg (27) and the
+   ERP/CRM leg (21) — and spend the slots on **named national systems**, which is where `p295`,
+   `p300` and `p301` each found their best material.
+4. 🔴 **Pin the `oat-sa` LGPL version (2.1 vs 3.0)** — the obligations differ and a pattern now
+   depends on it.
+5. 🔴 **The ten star/forks cells** *(fifth time of asking)*, and **`ERPNext`'s licence**, the one
+   plausible education-ERP candidate this base has never graded.
+
+
 ## Pass 300 — 2026-10-18 — **THE PAYLOAD CHANNEL THREE PASSES RECORDED AS ABSENT WAS THIS BASE'S OWN INSTRUMENT, UNCALLED — AND THE STANDING GATE HAD BEEN RED FOR TWO PASSES ON ITS OWN FALSE POSITIVES**
 
 **One-line summary:** 🟢 `ACTION PG-4` discharged — **20 slugs read, 17 admitted, 3 rejected, 0

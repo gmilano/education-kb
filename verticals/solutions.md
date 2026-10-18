@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 301 — TWENTY-FIRST CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM — AND THIS PASS STOPPED ASKING AND MEASURED THE PLATFORM TIER INSTEAD: ELEVEN COPYLEFT PLATFORMS PINNED, LGPL SEPARATED FROM AGPL
+
+⏱️ **Twenty-third pass of `2026-10-18`.** Evidence:
+[`p301-websearch.2026-10-18-p301.tsv`](../evidence/p301-websearch.2026-10-18-p301.tsv) ·
+[`p301-payload-grade.2026-10-18-p301.tsv`](../evidence/p301-payload-grade.2026-10-18-p301.tsv) ·
+[`p301-instrument-substitution.2026-10-18-p301.tsv`](../evidence/p301-instrument-substitution.2026-10-18-p301.tsv).
+
+🔴 **`open source platform education ERP CRM MIT Apache` — the TWENTY-FIRST consecutive nil.** 🟢 **Nil
+declared with its query and its corpus:** **OpenEduCat** (**LGPL-3.0**, built on the Odoo framework),
+**ERPNext**'s education module (licence unstated anywhere in the corpus), **Apache OFBiz**
+(Apache-2.0 — a business suite, **not** education), plus **Grocy** (MIT, a household tool) and
+**Huly** (Apache-2.0, not education). 🔵 **Five candidates, zero that are both permissive and
+education.**
+
+🟢 **The vendor-glossary syndication `p299` and `p300` measured reproduces a third time** — the
+OpenEduCat property again supplied multiple slots of the ten. 🔵 **`T-p299c`'s locale-syndication law
+is now three passes deep on this leg.**
+
+### 🔵 Twenty-one nils is an answer. This pass spent the budget on the question behind it instead
+
+🔴 **The leg keeps asking "is there a permissive education ERP?" and the answer keeps being no.** What
+a studio actually needs is not another nil — it is **the boundary around each platform it will meet on
+site.** 🟢 **So `p301` graded the platform tier at payload.** Eleven of this base's platform rows now
+carry a byte count and a hash rather than a label:
+
+| platform | licence *(payload, read `p301`)* | bytes | sha256₁₂ | what the boundary means |
+|---|---|---|---|---|
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 **AGPL-3.0** | 36 983 | `f3fba75145cf` | network copyleft — assessment engine stays a **service**, never vendored |
+| [`hpi-schul-cloud/schulcloud-server`](https://github.com/hpi-schul-cloud/schulcloud-server) | 🔴 **AGPL-3.0** | 34 520 | `76a97c878c9c` | the German state school cloud — integrate, do not fork |
+| [`Vacademy-io/vacademy_platform`](https://github.com/Vacademy-io/vacademy_platform) | 🔴 **AGPL-3.0** | 34 523 | `0d96a4ff68ad` | e-learning platform; same constraint |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | 🔴 **AGPL-3.0** *(at `LICENSE.md`)* | 34 143 | `281e174e4d5f` | 🟢 **byte-exact against the carried cell** |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | 🔴 **AGPL-3.0** | 34 524 | `8d56b405468a` | 🟢 **byte-exact against the carried cell** — the only Open edX MCP path, and it is AGPL |
+| [`OpenBoard-org/OpenBoard`](https://github.com/OpenBoard-org/OpenBoard) | 🔴 **GPL-3.0** | 35 147 | `8ceb4b9ee5ad` | interactive whiteboard; desktop, so no network clause |
+| [`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine) | 🔴 **GPL-3.0** *(at `LICENSE.txt`)* | 35 147 | `8ceb4b9ee5ad` | offline assessment at national scale — **keep behind an API** |
+| [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | 🔴 **GPL-3.0** *(at `LICENSE.md`, branch `dev`)* | 35 147 | `8ceb4b9ee5ad` | open-textbook publishing |
+| [`ucsd-ets/openedx-caliper-tracking`](https://github.com/ucsd-ets/openedx-caliper-tracking) | 🔴 **GPL-3.0** | 35 149 | `3972dc9744f6` | Caliper analytics for Open edX |
+| [`oat-sa/package-tao`](https://github.com/oat-sa/package-tao) | 🟡 **LGPL** | 18 027 | `a45d0bb572ed` | 🟢 **LGPL, NOT GPL** — a closed application may **link** against it |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 **LGPL** *(branch `develop`)* | 18 025 | `a01259a1b522` | 🟢 same — the most permissive terms in the assessment-platform tier |
+
+### 🟢 The finding a studio can act on: TAO is LGPL, and that is not what "copyleft" implied
+
+🔵 **This base has carried the `oat-sa` rows inside the general copyleft group.** 🟢 **At payload they
+are `LGPL` — 18 027 B and 18 025 B, the GNU *Lesser* text, holder *"1989, 1991 Free Software
+Foundation, Inc"*.**
+
+🔴 **That is a materially different engagement.** Under AGPL-3.0, a hosted assessment service built on
+`PrairieLearn` obliges source release to every user over the network. Under **LGPL**, a proprietary
+application may **link** against the TAO libraries and keep its own code closed, provided the TAO
+parts stay replaceable and their own changes are published. 🟢 **For a client that wants a QTI-capable
+assessment platform inside a commercial product, `oat-sa` is the row to start from — and nothing on
+this shelf said so until the payload was read.**
+
+⚠️ **The grade's limit, stated:** the payload names the **Lesser** licence family; **this pass did not
+establish whether it is LGPL-2.1 or LGPL-3.0**, and the obligations differ. The 18 KB size and the
+*"1989, 1991"* holder line point to the **2.1** lineage, but that is an inference, not a read.
+**Pin the version before contracting on it.**
+
+### 🟢 And the QTI tier around it is permissive, which is the pairing that matters
+
+🟢 **The standards-side tooling a TAO engagement needs is MIT or Apache at payload:**
+[`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) (**MIT**, 1 076 B,
+`7faa621251d7`) · [`agencyenterprise/qti-3-player`](https://github.com/agencyenterprise/qti-3-player)
+(**MIT**, 1 066 B, `9e8db37a05d0`, holder *AE Studio*) ·
+[`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti) (**MIT**, 1 066 B,
+`5bb49280d709`) · [`metyatech/qti-html-renderer`](https://github.com/metyatech/qti-html-renderer)
+(**MIT**, 1 067 B, `83e89f7df45d`) · [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground)
+(**MIT**, 1 070 B, `3a9fde8de919`) · [`rolfis/qti-convert`](https://github.com/rolfis/qti-convert)
+(**Apache-2.0**, 11 357 B, `c71d239df917`) ·
+[`pie-framework/pie-qti`](https://github.com/pie-framework/pie-qti) (**MIT**, 1 097 B, `d95343578cb4`) ·
+[`davemckain/qtiworks`](https://github.com/davemckain/qtiworks) (**BSD-3-Clause**, 2 058 B,
+`a5c692f12090`, holder *University of Edinburgh*, at `LICENSE.txt`) ·
+[`Kennisnet/php-qti3`](https://github.com/Kennisnet/php-qti3) (**MIT**, 1 066 B, `27fb6d463569`,
+holder *Kennisnet* — the Dutch education-ICT public body).
+
+🔵 **So the shape of a buildable assessment engagement is now pinned end to end:** **permissive item
+authoring, rendering and conversion** in front of a **copyleft platform kept behind an API** — and the
+one platform that may be *linked* rather than merely called is **TAO**.
+
+### 🔴 The LMS/SIS rows that serve no grant at all
+
+🔴 [`OpenEMIS/OpenEMIS-Core`](https://github.com/OpenEMIS/OpenEMIS-Core) — **NO-PAYLOAD** on `master`,
+confirming the carried cell. 🔵 This base already records *why* that matters: OpenEMIS is the
+education-management system most associated with **ministry-level deployment**, and it is the one a
+studio cannot price.
+🔴 [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) — **NO-PAYLOAD** on `develop`,
+confirming the carried finding that its two **root manifests disagree with each other**.
+🔴 [`openstax/os-webview`](https://github.com/openstax/os-webview) and
+[`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) — **NO-PAYLOAD**. The latter is a
+psychometrics library: **IRT and BKT code with no grant** is a dependency no client can accept.
+
+⚠️ **`NO-PAYLOAD` here means the filename ladder found nothing** — this pass's probe omitted the
+shared instrument's README-link arm, which is exactly how `p300` found `OS4ED/openSIS-Classic`'s grant
+at `docs/License.txt`. **Treat each as UNRESOLVED, not as unlicensed.**
+
+### 🔴 What this pass could NOT do
+
+🔴 **`make hooks` and the repository's own `probe_payload.sh` were DENIED by the sandbox**
+(*"Code from External"*); no standing gate ran against this file. See
+[`intel/trends.md`](../intel/trends.md) `T-p301a`.
+🔴 **The LGPL version (2.1 vs 3.0) on both `oat-sa` rows is UNREAD.**
+🔴 **ERPNext's licence was not resolved** — the corpus never stated it, and no payload was read for
+it. It remains the one plausible education-ERP candidate this base has never graded.
+🔴 **Twenty-one nils and the leg is unchanged.** The recommendation registered for `p302` is to
+**retire the mandated ERP/CRM phrasing** and spend the slot on **named national SIS deployments**,
+which is where this tier's real rows have come from.
+
+
 ## 🔴 Pass 300 — TWENTIETH CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM, AND THE LEG RETURNED ONE VENDOR'S GLOSSARY IN TEN LANGUAGES — THE SAME ARTEFACT `p299` MEASURED
 
 ⏱️ **Twenty-second pass of `2026-10-18`.** Evidence:

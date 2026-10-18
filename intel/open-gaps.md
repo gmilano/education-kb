@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 301 — **THE INSTRUMENTS EXIST, ARE CORRECT, AND COULD NOT BE EXECUTED — SO SIX GATES NOT RUNNING IS NOW INDISTINGUISHABLE FROM SIX GATES PASSING**
+
+⏱️ `2026-10-18`, twenty-third pass. Evidence:
+[`p301-instrument-substitution.2026-10-18-p301.tsv`](../evidence/p301-instrument-substitution.2026-10-18-p301.tsv) ·
+[`p301-probe-calibration.2026-10-18-p301.tsv`](../evidence/p301-probe-calibration.2026-10-18-p301.tsv) ·
+[`p301-payload-grade.2026-10-18-p301.tsv`](../evidence/p301-payload-grade.2026-10-18-p301.tsv) ·
+[`p301-identity.2026-10-18-p301.tsv`](../evidence/p301-identity.2026-10-18-p301.tsv) ·
+[`p301-websearch.2026-10-18-p301.tsv`](../evidence/p301-websearch.2026-10-18-p301.tsv).
+
+### 🟢 Discharged this pass
+
+| action | condition it was registered under | verdict |
+|---|---|---|
+| 🟢 **`p300` item 1 — payload-grade the shelf** | *"the channel is open, `probe_repo <slug>` is one line, and the 27 sidebar-only rows are the cheapest large gain in twenty passes"* | 🟢 **DISCHARGED FOR 105 ROWS**, 5× `p300`'s batch — though **not with `probe_repo`**, which was denied. Backlog derived mechanically: **265 slugs → 119 pinned / 146 unpinned → 105 read (72 %)**. 🟢 **Zero refutations; four byte-exact reproductions** |
+| 🟢 **`p300` item 2 — re-run candidate selection on the narrow vocabulary** | *"table rows only, plus the layer's narrow vocabulary"* | 🟢 **DISCHARGED AND IT PAID: 3 new rows** from `open source MCP server student information system grading rubric agent 2026 github license`, against the mandated leg's 27th nil |
+| 🟢 **`p295` item 2 — audit rows whose licence was read on ONE path** | *"`Submitty` was BSD-3-Clause at `LICENSE.md` with `LICENSE` at 404. Any row probed on a single spelling is unproven"* | 🟢 **DISCHARGED AT SCALE and PRICED: 9 of 105 rows (`8.6 %`) serve the grant somewhere other than plain `LICENSE`** — `LICENSE.md`×7, `LICENSE.txt`×2 |
+| 🟢 **`p300` item 5 — spend the slot on an unworked region** | *"unspent: Central Asia beyond its first leg…"* | 🟢 **DISCHARGED — 3 new datums** (Tokayev + `2026-05-12`; the two renamed AI-named subjects; the **43 learning objectives**) 🔴 **and one informed gap: Uzbekistan returned NOTHING** |
+| 🟢 **`p293` — the slug-existence oracle, as applied** | a credential prompt is a measurement | 🟢 **55 of 55 slugs cited in this pass's new sections resolve at `git ls-remote`. Zero 404s, zero inventions** |
+
+### 🔴 Registered this pass — NEW
+
+| gap | why it matters | condition for discharge |
+|---|---|---|
+| 🔴 **THIS SESSION CANNOT EXECUTE REPOSITORY CODE** | `make hooks` **and** `bash -c '. compose/code/lib/probe_payload.sh; …'` both **DENIED**, *"Code from External"*. 🔴 **Consequence: `gate-enumeration`, `gate-tables`, `gate-conflict`, `gate-absence`, `gate-dates`, `gate-identity`, `recount` and the rest did not run, and NOTHING in this pass's output says so except the prose that says so.** 🔵 **A gate that cannot run is reported by every downstream artefact exactly as a gate that passed** — which is `p300`'s own masking finding, arriving through a new door | Either a session that may execute the Makefile, **or** a committed `ENVIRONMENT` note at the top of `Makefile` plus a `hooks` recipe that **writes a dated receipt** so a later pass can tell "ran and passed" from "never ran" |
+| 🔴 **Every `NO-PAYLOAD` at `p301` rests on a NARROWER ladder than the shared tool's** | 13 rows were published `NO-PAYLOAD` by a probe with **no README-link arm** — the exact arm with which `p300` found `OS4ED/openSIS-Classic`'s GPL-2.0 at `docs/License.txt`. 🔴 **Three of the 13 are special-education / IEP-compliance or automated-grading repositories** — the highest-stakes uses in the corpus | Re-probe all 13 with the README-link arm (or the shared instrument, if it becomes runnable) before any is described as unlicensed |
+| 🔴 **41 of the 146 unpinned shelf rows are unread** | the complement of [`p301-payload-grade…tsv`](../evidence/p301-payload-grade.2026-10-18-p301.tsv) against the 146-row target set | all 146 pinned |
+| 🔴 **The `oat-sa` LGPL VERSION is unread** | `package-tao` (18 027 B) and `tao-core` (18 025 B) read as the GNU **Lesser** text, holder *"1989, 1991 Free Software Foundation, Inc"* — pointing at the **2.1** lineage, which is an **inference, not a read**. 🔴 **`verticals/solutions.md` now recommends TAO as linkable on the strength of "LGPL"**, and 2.1 vs 3.0 differ | Read the version line at payload and pin it |
+| 🔴 **`ERPNext`'s licence has never been graded** | it is the one plausible education-ERP candidate the 21 nils keep surfacing, and the corpus has **never stated its licence** | one payload read |
+| 🟡 **What `chiptoe-svg/canvas-lms-mcp` changes relative to `bruchris` is UNREAD** | a fork at **0★ / 0 forks / 287 commits** whose README is still the upstream's; `P70` recommends it for its **117-read / 48-write** split and **FERPA mode**, which are README claims, not verified behaviour | diff the fork against upstream; verify the tool counts and that the write tools can actually be left unregistered |
+| 🟡 **`falkenslab/moodle-mcp`'s implementation language is UNREAD** | the rendered page's Languages panel is empty; `P69` is built on it | one read |
+| 🔴 **105 payload reads bought ZERO maintenance facts** | `T-p301f`: `digitalcredentials/sign-and-verify` reads clean MIT and is **ARCHIVED `2026-08-26`** — the grant is silent, on two independent reads now. 🔴 **So all 105 rows pinned this pass are licence-proven and maintenance-unproven** | a second channel (rendered page or README) over the rows any pattern depends on, before client recommendation |
+
+### 🔴 Carried, unchanged
+
+| gap | passes carried | note at `p301` |
+|---|---|---|
+| 🔴 **No primary government or IGO source** | **TWENTIETH** | 🟢 **Both were ATTEMPTED this pass and both failed at the RESOLVER**: `primeminister.kz` (the Kazakh decree's own publisher) and `www.iesalc.unesco.org` (the LATAM study's own publisher) return `getaddrinfo ENOTFOUND` while `github.com` answers. So Kazakhstan's dates are **press-attributed** and LATAM's 87/74/26 triple stays **aggregator-attributed** |
+| 🔴 **Absent cannot be separated from blocked** | carried from `p295` | 🔴 **The 6-host DNS control — with known-real-unallowlisted AND known-fake controls — was REFUSED by the sandbox as *"Exfil Scouting"*, reproducing `p295` exactly. NOT worked around.** Every unreachable host stays `EXISTENCE-UNMEASURED` |
+| 🔴 **The ten star/forks cells** | **FIFTH** | `uPortal` 286★, `schulcloud-server` 81★, `studio` 193★, `Tangerine` 70★, `DFE-Digital` 38★, `Ed-Fi-ODS` 28★, `nbgrader` 1.4k★, `Numbas` 215★, `PrairieLearn` 519★, `OpenEMIS` 7★ — untouched. 🔵 Note `p301` payload-read **six** of these repositories without reading a single star: **the channels are independent** |
+| 🔴 **The row count is not in `recount`** | **SECOND** | 🔴 **It cannot be moved this pass — `recount` is in the denied Makefile.** Registered, not claimed |
+| 🔴 **No code from any regional leg** | **NINTH** | Central Asia returned a curriculum, a signatory and three dates. No permissive slug |
+| 🔴 **`huggingface.co` closed at the resolver** | carried | unchanged |
+| 🟢 **The mandated agent leg** | **27 nils** | 🟢 **Recommendation upgraded from "diagnose" to "RETIRE": two passes have now shown the directed phrasing pays where this one does not (6 new / 2 directed runs vs 0 new / 8 mandated regional runs)** |
+| 🟢 **The mandated ERP/CRM leg** | **21 nils** | 🟢 Same recommendation. `p301` spent the slot on **pinning the platform tier** instead and it produced the LGPL/AGPL separation — the most actionable verticals finding in several passes |
+| 🔴 **The mandated REGIONAL phrasing** | **2 passes, 8 runs, 0 new** | 🟢 `T-p301c`, with its sample attached. Registered as a **recommendation, not a law** — `p295`'s correction on generalising from a small sample stands |
+
+
 ## Pass 300 — **THE PAYLOAD CHANNEL WAS NEVER CLOSED, THE STANDING GATE HAD BEEN RED FOR TWO PASSES ON ITS OWN FALSE POSITIVES, AND `p299`'S FIFTEEN ROWS WERE NEVER ON THE SHELF TABLE**
 
 ⏱️ `2026-10-18`, twenty-second pass. Evidence:

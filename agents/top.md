@@ -4,6 +4,135 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 301 — THE DIRECTED LEG PAID AGAIN AND THE MANDATED ONE NIL'D FOR THE TWENTY-SEVENTH TIME; THREE NEW ROWS, AND AN IDENTITY CHECK THAT DEMOTED ONE OF THEM FROM "PROJECT" TO "DIVERGED FORK"
+
+⏱️ **Twenty-third pass of `2026-10-18`.** Evidence:
+[`p301-websearch.2026-10-18-p301.tsv`](../evidence/p301-websearch.2026-10-18-p301.tsv) ·
+[`p301-payload-grade.2026-10-18-p301.tsv`](../evidence/p301-payload-grade.2026-10-18-p301.tsv) ·
+[`p301-probe-calibration.2026-10-18-p301.tsv`](../evidence/p301-probe-calibration.2026-10-18-p301.tsv) ·
+[`p301-identity.2026-10-18-p301.tsv`](../evidence/p301-identity.2026-10-18-p301.tsv) ·
+[`p301-instrument-substitution.2026-10-18-p301.tsv`](../evidence/p301-instrument-substitution.2026-10-18-p301.tsv).
+
+### 🔴 The mandated agent leg: the TWENTY-SEVENTH consecutive nil
+
+`top open source AI agents education 2026 github MIT` returned, for the twenty-seventh time,
+**general-purpose agents and courseware ABOUT AI** rather than agents FOR education:
+[`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners),
+`avinash201199/free-ai-agents-resources`, `NirDiamant/GenAI_Agents`, `e2b-dev/awesome-ai-agents`,
+plus OpenHands, OpenClaw, MetaGPT, CrewAI, AutoGen and LangGraph. 🔵 One datum worth keeping from the
+corpus: **`AgentGPT` is GPL-3.0 and was ARCHIVED `2026-01-28`** — a row no studio should now start from.
+🟢 **Nil declared with its query.** `p298`'s diagnosis holds a fourth pass: **the query's own words
+select for the wrong noun.**
+
+🟢 **And `p300`'s standing action paid a second time: the DIRECTED leg was run and it produced three
+new slugs.** The query named the *job*, not the technology —
+`open source MCP server student information system grading rubric agent 2026 github license` — and
+returned **nine** education-system agents, **six already carried**, **three new**.
+
+| leg | new / returned |
+|---|---|
+| **agents** *(mandated)* | 🔴 **0 / 10** — twenty-seventh nil |
+| **agents** *(DIRECTED, the job named)* | 🟢 **3 / 9** |
+
+🔵 **Two passes, two payouts, same shape.** This is no longer a one-off: when the leg names the
+*system of record* (`moodle`, `canvas`, `gradescope`, `rubric`, `grading`) rather than the
+*technique* (`AI agent`), this shelf gains rows. **The mandated phrasing should be read as a control
+that keeps failing, not as a measurement of the field.**
+
+### 🟢 Three new rows — and every licence is a PAYLOAD read with a sha256
+
+| row | payload | what it buys |
+|---|---|---|
+| 🟢 [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | **MIT**, `LICENSE` **1 067 B**, sha256₁₂ `66fa873bd85d`, holder *2026 Falkenslab* | 🟢 **~230 Moodle tools, and it needs NO admin** |
+| 🟡 [`chiptoe-svg/canvas-lms-mcp`](https://github.com/chiptoe-svg/canvas-lms-mcp) | **MIT**, `LICENSE` **1 070 B**, sha256₁₂ `c29329c5ef3b`, holder *2026 Christian Bru* | 🟡 **165 tools with a read/write split stated, plus a FERPA mode** — but see the identity finding |
+| 🔵 [`YeetingWaterbottle/gradescope-mcp`](https://github.com/YeetingWaterbottle/gradescope-mcp) | **MIT**, `LICENSE` **1 089 B**, sha256₁₂ `02f326c5fca4` | 🔵 **a deliberately read-only Gradescope path** — 6 tools, no writes |
+
+### 🟢 Why `falkenslab/moodle-mcp` is the most consequential row this shelf has gained in some time
+
+🔵 **Its README closes the obstacle that kills LMS pilots:** *"No web service tokens, no
+administrator, no plugin: if you can log in, it works."* Authentication is a browser login.
+
+🔴 **Every other Moodle path on this shelf needs something from the institution's IT function** — a
+web-services token, a site administrator, or a plugin install — and that is the step that turns a
+two-week pilot into a two-quarter procurement. 🟢 **A teacher with an ordinary Moodle account can run
+this one.** It covers *"submissions, rubrics and marking guides (read and defined)"*, so the rubric is
+an input, not a reimplementation.
+
+⚠️ **Boundaries, stated.** **1★ / 1 fork** — nobody has adopted it; **166 commits** on `main`, so it
+is worked-on rather than abandoned; the Languages panel is empty on the rendered page, so the
+implementation language was **not** read. 🔴 **And the property that makes it easy is also the
+property that makes it dangerous**: a browser-session agent acts with *the teacher's own
+credentials*, with no token to scope and no admin to audit it. Brief it as the **fastest route to a
+pilot**, and never as the route to production without a service account.
+
+### 🔴 The identity finding: a new row that is a DIVERGED FORK of a row already on this shelf
+
+🔴 **`chiptoe-svg/canvas-lms-mcp` serves a licence payload BYTE-IDENTICAL to carried
+[`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp)** — both **1 070 B**, both
+sha256₁₂ **`c29329c5ef3b`**, both holder *"2026 Christian Bru"*. The rendered page states it plainly:
+*"forked from bruchris/canvas-lms-mcp."*
+
+🟢 **`p283`'s gate decides this, and it decides it in the fork's favour:** *equal HEAD == one
+repository.* The HEADs are **not** equal —
+
+| address | HEAD |
+|---|---|
+| `chiptoe-svg/canvas-lms-mcp` | `fa8408a64dc2ba6a94e7863893d303aabf5dc9d5` |
+| `bruchris/canvas-lms-mcp` | `18fa06b5758e52c19ff48155b857f251bf9f8cfc` |
+
+🟢 **So it is admissible as a distinct row — and it is listed as a fork, never as an independent
+project.** 🔵 **The generalisable point: an identical licence payload is what a fork INHERITS, so
+payload identity is evidence of ancestry, not of aliasing.** `p282` withdrew `ls1intum/Iris` on
+*equal* HEAD; this row survives on *unequal* HEAD. **The same instrument, opposite verdicts, and the
+discriminator is the HEAD, not the grant.**
+
+### 🟢 A sidebar-grade licence upgraded to payload, and the classifier that found it by failing
+
+🟢 **[`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp) — `p297` published it
+`ISC` *(sidebar)*. It is now PAYLOAD-PINNED: `LICENSE` on `master`, **746 B**, sha256₁₂
+`b3364441534c`, first line *"ISC License"*, holder *"2025, Aryan Keluskar"*.** 🟢 **Confirmed, and
+upgraded one evidence grade.**
+
+🔵 **How it surfaced is the part worth keeping.** This pass's probe returned `UNCLASSIFIED` for it,
+because `ISC` is not in the classifier's ladder. It returned `UNCLASSIFIED` **exactly three times
+across 105 reads**, and all three are genuinely non-standard grants:
+
+| row | what `UNCLASSIFIED` actually was |
+|---|---|
+| `aryankeluskar/canvas-mcp` | 🟢 **ISC** — a real OSI-permissive licence the ladder does not name |
+| [`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom) | 🔴 **PROPRIETARY** — *"AStheTECH Community License… limited, non-exclusive, non-transferable, non-sublicensable, and revocable… All rights not expressly granted are reserved"* (6 489 B). **Confirms the carried cell exactly** |
+| [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | 🔴 **IMS Global Specification Document License**, 12 402 B — a *document* licence, no OSI. **Confirms the carried cell, byte-exact** |
+
+🟢 **A calibrated classifier's refusal to name a licence is a LOCATOR for the odd ones.** Three
+`UNCLASSIFIED` verdicts, three genuinely unusual grants, **zero false alarms** — so the verdict is
+worth triaging by hand rather than treating as instrument failure.
+
+### 🔴 The search channel collapsed a two-grant repository, and this base's row was already right
+
+🔴 **The directed leg reported [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp)
+as *"GNU General Public License v3.0 only"*.** 🟢 **The root payload reads MIT — `LICENSE`, 1 071 B,
+sha256₁₂ `22e7ab2dbddc`, holder *2026 Krzysztof Bury*.**
+
+🟢 **And the carried row already held the truth, in full:** *"🟡 **MIT** (2.x); `legacy_reference/`
+**GPL-3.0-only**"*. 🔵 **The snippet reported the RESTRICTIVE SUBDIRECTORY as the licence of the whole
+repository.** Neither answer is "the" licence — the repository has two grants, and only the shelf row
+says so. **A single-licence answer about a multi-grant tree is wrong even when the licence it names is
+really in there.**
+
+### 🔴 What this pass could NOT do on this shelf
+
+🔴 **`make hooks` and the repository's own `probe_payload.sh` were both DENIED by the sandbox**
+(*"Code from External"*), so **no standing gate ran against this section** and the payload instrument
+was a declared re-implementation. See [`intel/trends.md`](../intel/trends.md) `T-p301a` for the
+substitution and its calibration; the bound is recorded in
+[`p301-instrument-substitution.2026-10-18-p301.tsv`](../evidence/p301-instrument-substitution.2026-10-18-p301.tsv).
+🔴 **`YeetingWaterbottle/gradescope-mcp` has TWO COMMITS.** It is on this shelf as a *read-only shape
+worth copying*, not as a dependency, and the row says so.
+🔴 **No star/forks re-read**, fifth pass of asking.
+🔴 **The `falkenslab/moodle-mcp` implementation language was not determined** — the rendered page's
+Languages panel is empty.
+
+
 ## 🟢 Pass 300 — THE 26-WINDOW DROUGHT ON THIS SHELF ENDS, AND THE ROW CAME FROM THE BACKLOG THE LAST TWO PASSES RETIRED FROM EXACTLY THIS QUESTION
 
 ⏱️ **Twenty-second pass of `2026-10-18`.** Evidence:
@@ -1225,6 +1354,9 @@ non-commercial friction.
 
 | Agent | Repo | Licence | Stars | What it does |
 |-------|------|---------|-------|--------------|
+| 🆕 **moodle-mcp** *(falkenslab — **a DIFFERENT repository** from `MarcosNahuel/moodle-mcp` and `Jawadh-Salih/moodle-mcp-server`)* | [falkenslab/moodle-mcp](https://github.com/falkenslab/moodle-mcp) | 🟢 **MIT** *(**payload** `LICENSE`, 1 067 B, sha256₁₂ `66fa873bd85d`, holder **Falkenslab**, read `p301`)* | 🔴 **1★ / 1 fork / 166 commits / `main`** | 🟢 **THE MOODLE ROW THAT NEEDS NO ADMINISTRATOR — and that is the whole finding.** *"MCP server for agents to work in Moodle"*: **~230 tools** covering courses, activities, enrolment, and **"submissions, rubrics and marking guides (read and defined)"**. 🟢 **Its README: *"No web service tokens, no administrator, no plugin: if you can log in, it works."*** Authentication is a browser login. 🔵 **Why that matters more than the tool count:** every other Moodle path on this shelf needs a web-services token, a site admin or a plugin install — the step that converts a two-week pilot into a two-quarter procurement. A teacher with an ordinary account can run this one, and the **rubric is an input rather than a reimplementation**. ⚠️ **Boundaries, stated:** **1★ / 1 fork — nobody has adopted it**; 166 commits means worked-on, not proven; the rendered page's Languages panel is **empty**, so the implementation language was **not read**. 🔴 **And the property that makes it easy makes it dangerous: a browser-session agent acts with the TEACHER'S OWN credentials — no token to scope, no admin to audit.** Brief it as the fastest route to a **pilot**, never as the route to production without a service account. |
+| 🆕 **canvas-lms-mcp** *(chiptoe-svg — 🔴 **a DIVERGED FORK** of `bruchris/canvas-lms-mcp`, already carried)* | [chiptoe-svg/canvas-lms-mcp](https://github.com/chiptoe-svg/canvas-lms-mcp) | 🟢 **MIT** *(**payload** `LICENSE`, 1 070 B, sha256₁₂ `c29329c5ef3b`, holder **Christian Bru**, read `p301`)* — 🔴 **BYTE-IDENTICAL to the upstream row's payload: a fork INHERITS the grant** | 🔴 **0★ / 0 forks / 287 commits / `main`** | 🟡 **Canvas LMS MCP with the read/write boundary WRITTEN DOWN — the only row on this shelf that states it.** **165 registered tools: 117 read-only, 48 write**, over courses, assignments, submissions, rubrics and quizzes; grading and commenting from any MCP client. 🟢 **Plus a FERPA mode** that registers one additional tool (`resolve_pseudonym`, 166 total) — the first US-compliance affordance this shelf has seen in an LMS agent, and directly relevant to a **North America** engagement. 🔴 **Identity, settled at `p301`:** the page says *"forked from bruchris/canvas-lms-mcp"* and the licence payloads are byte-identical, but the HEADs differ (`fa8408a6…` vs `18fa06b5…`), so by `p283`'s rule — *equal HEAD == one repository* — these are **two repositories** and this row stands. ⚠️ **Cite it as a fork.** **0★ / 0 forks** against **287 commits**: the fork is *more* committed-to than adopted, the README is still the upstream's text, and **what it changes relative to upstream is undocumented and UNREAD**. Diff it against `bruchris` before building on it. |
+| 🆕 **gradescope-mcp** *(YeetingWaterbottle — **a DIFFERENT repository** from `Yuanpeng-Li/gradescope-mcp`, already carried)* | [YeetingWaterbottle/gradescope-mcp](https://github.com/YeetingWaterbottle/gradescope-mcp) | 🟢 **MIT** *(**payload** `LICENSE`, 1 089 B, sha256₁₂ `02f326c5fca4`, read `p301`)* | 🔴 **3★ / 1 fork / 2 commits / `main`** | 🔵 **On this shelf as a SHAPE, not as a dependency — the only education agent here that is read-only BY DESIGN and says so.** 6 tools: `gradescope_list_courses`, `gradescope_list_assignments`, `gradescope_upcoming_assignments`, `gradescope_list_submissions`, `gradescope_get_submission_files`, `gradescope_download_submission_file`. Its README states it *"does not expose Gradescope write operations"* and explicitly excludes grading, roster management, extension management and submission upload; the single local write saves a downloaded file and **refuses to overwrite by default**. 🟢 **Why it earns a row at 2 commits:** the hard part of putting an agent near a gradebook is not reach, it is **proving the agent cannot change a grade**. This is the smallest artefact that demonstrates the read-only tier a studio should deploy first — compare `chiptoe-svg`'s 117-read / 48-write split, which is the same idea with the writes present. 🔴 **TWO COMMITS. Do not depend on it; copy the boundary.** |
 | 🆕 **DCC Credential Co-writer** | [oneorigin-2-0/dcc-credential-co-writer-monorep](https://github.com/oneorigin-2-0/dcc-credential-co-writer-monorep) | 🟢 **MIT** *(**payload** `LICENSE`, 1 087 B, sha256₁₂ `7f62d1bf385d`, holder **Digital Credentials Consortium**, read `p300`)* | 🔴 **0★ / 1 fork / 440 commits / `main`** | 🟢 **THE FIRST NEW ROW ON THIS SHELF IN 27 WINDOWS — and it came from the promotion backlog, not from any search leg.** *"AI-assisted Open Badges v3 authoring"*: paste or upload course content and it drafts the credential's **title, description, criteria and skills**, then renders the badge image. Three services in one monorepo — a **Next.js 15** UI, a **FastAPI + Ollama** service running a **fine-tuned `phi-4-mini`** SLM for badge metadata, and a **FastAPI + Pillow** image service. **23 languages**, streaming output, **human-in-the-loop editor.** 🟢 **Why it matters beyond the row: it is a SELF-HOSTABLE education agent** — the model runs under Ollama, so a ministry or registrar with no egress can run the whole pipeline — **and it terminates in a STANDARD (OBv3) rather than in free text**, which is what makes its output checkable by [`credential-lens`](https://github.com/TanimowoObaloluwaDavid/credential-lens) and [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) on [`repos/foundations.md`](../repos/foundations.md). 🔵 Developed through a collaboration **led by the DCC** and funded by **Walmart**; the copyright is the DCC's, though the repository sits under a vendor org (**OneOrigin**). ⚠️ **Boundaries, stated:** **0 stars and 1 fork — nobody has adopted this yet**; its README says the three services were previously standalone repositories under a `digitalcredentials` org, so the consolidation is recent and the predecessors are **unread**; and the page nowhere claims this is an official DCC release. Brief it as the strongest available reference for AI-assisted credential authoring, **not** as a maintained product. |
 | TeachGPT | [Priyamakeshwari/TeachGPT](https://github.com/Priyamakeshwari/TeachGPT) | MIT *(payload, p287)* | — | **New row at `p287`, and it is a row this base ALREADY HELD and could not read.** `LICENSE.md`, **1 057 B** on `main`, 18 files: a **verbatim MIT body with its title line absent**, which `pass257-restriction-scan` graded `UNCLASSIFIED` until this pass taught stage two the MIT operative clause. Small and unproven as software; **the value here is the measurement** — it is the first demonstration that this base's licence instruments were costing it usable permissive dependencies, not just failing to catch restricted ones. |
 | Open-Education | [bunnywaffle/Open-Education](https://github.com/bunnywaffle/Open-Education) | Apache-2.0 *(payload, p287)* | — | ⚠️ **Listed with its size stated, because the README does not state it.** `LICENSE` **11 357 B**, HEAD `1fac5bc` — and the tree is **THREE FILES**: `LICENSE`, `README.md`, `app.py`. A single-file Gradio tutor demo beneath a long manifesto about replacing human teachers. **The grant is real and permissive; the "platform" is not a platform.** Useful as a 200-line reading of the smallest thing that answers a learner, and **not** as a dependency. |

@@ -4,6 +4,192 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 301 — THE FOUR MANDATED REGIONAL LEGS PRODUCED ZERO NEW FOR A SECOND CONSECUTIVE PASS WHILE ONE DIRECTED LEG PRODUCED THREE; EMEA ENDED A TWELVE-PASS NIL STREAK; AND THE TRENDS LEG'S ONE NEW DATUM IS A DISPERSION, NOT AN ESTIMATE
+
+⏱️ **Twenty-third pass of `2026-10-18`.** Evidence:
+[`p301-websearch.2026-10-18-p301.tsv`](../evidence/p301-websearch.2026-10-18-p301.tsv) ·
+[`p301-instrument-substitution.2026-10-18-p301.tsv`](../evidence/p301-instrument-substitution.2026-10-18-p301.tsv).
+
+**Ten legs: four mandated, four regional, two directed.** Two returned nils; both are declared below
+with their queries.
+
+### 🟢 Every datum was checked against the COMMITTED file before being called new — and the result replicates `p300` exactly
+
+🔵 **Checked mechanically** (`git grep` over `HEAD`, non-archive), not by eye:
+
+| leg | new / returned |
+|---|---|
+| **North America** *(mandated)* | 🔴 **0 / 13** |
+| **EMEA** *(mandated)* | 🔴 **0 / 8** — 🟢 but **non-nil**, ending a **twelve-pass nil streak** |
+| **APAC** *(mandated)* | 🔴 **0 / 8** |
+| **LATAM** *(mandated)* | 🔴 **0 / 9** |
+| **trends** *(mandated)* | 🟡 **1 / 9** |
+| 🌏 **Central Asia** *(DIRECTED, unworked-region slot)* | 🟢 **3 / 9** |
+
+🟢 **`p300` measured this same shape and `p301` reproduces it on four different mandated legs:** the
+**mandated regional phrasing has now produced ZERO new datums across two consecutive passes and eight
+leg-runs**, while the **directed unworked-region slot has paid in both** — three datums at `p300`
+(Lusophone Africa), three at `p301` (Central Asia). 🔵 **Sample stated: 2 passes, 8 mandated regional
+runs, 0 new; 2 directed runs, 6 new.** That is enough to act on and not enough to call a law about all
+regions — `p295`'s correction stands.
+
+### 🟢 The three new datums, in full — Kazakhstan's decree, read closer than this base had it
+
+🔴 **This base already carried Kazakhstan's `1 September 2026` school date** (added `p297`). 🟢 **The
+directed leg refined it into an instrument with a signatory, a span and a curriculum:**
+
+| datum | value | status |
+|---|---|---|
+| 🟢 **the signatory and the signing date** | the decree was signed by **President Tokayev** on **`2026-05-12`** | 🟢 **NEW** — `Tokayev` appeared nowhere on this base |
+| 🟢 **the renamed subjects** | grades **1–4** → *"Digital Literacy and **Artificial Intelligence**"*; grades **5–11** → *"Computer Science and **Artificial Intelligence**"* | 🟢 **NEW** |
+| 🟢 **the measurable target** | the updated curriculum carries **43 AI-related learning objectives** | 🟢 **NEW** |
+| 🟡 the span | AI across **all secondary schools by 2029** | 🟡 refines the carried single date into a **2026–2029 programme** |
+| 🟡 the sequence | 2026–2029 national plan due **`2026-07-01`** · pilot schools' high-speed internet by **`2026-08-01`** · AI-in-secondary **standards** due **`2026-09-01`** | 🟡 🔴 **and it corrects how this base read its own carried date**: `1 Sept 2026` is the deadline for **STANDARDS**, not for the rollout |
+| 🟡 the pilot | from **grade 4**, in **Kazakh language, mathematics and digital literacy** | 🟡 refines the carried *"pilot in 10 rural schools"* |
+| 🟢 the groundwork | **2025**: national standards for AI use in education covering **ethics, legal regulation, personal-data protection and academic integrity** | 🟢 context for the 2026 decree |
+
+🔵 **Why the `43 objectives` datum is the most useful thing on this page for a studio.** Every other
+national AI-in-education instrument this base holds is a *policy*: an intention, a date, a budget.
+🟢 **Kazakhstan has published a COUNTABLE curriculum target.** 43 objectives is a specification — it
+can be mapped to items, items to a QTI bank, and the bank to a coverage report. **That turns a
+ministry engagement from advocacy into delivery against an acceptance criterion**, and the permissive
+QTI tier on [`verticals/solutions.md`](../verticals/solutions.md) is what delivers it.
+
+🔴 **UZBEKISTAN: NIL, declared.** The leg named both countries and returned **no Uzbek instrument at
+all** — no policy, no date, no curriculum. 🔵 This base already records that *"neither Kazakhstan nor
+Uzbekistan has a national OPEN-SOURCE AI education strategy"*; `p301` narrows the Uzbek half further:
+**not merely no open-source strategy — no retrievable national AI-education instrument.** An informed
+gap, not silence.
+
+### 🟡 The trends leg's one new datum is a SPREAD, which is worth more than another point estimate
+
+🟡 **Four research firms priced the 2026 AI-in-education market between `USD 6.4 bn` and
+`USD 11.4 bn`.** 🟢 **NEW** — this base carries several point estimates (Precedence **`9.58 bn`**
+→ `136.79 bn` by 2035; an alternative **`11.4 bn`** 2026 → `57.2 bn` 2033 at **25.9 %** CAGR) and had
+never recorded their **dispersion**.
+
+🔵 **The spread is a `1.8×` ratio between the lowest and highest 2026 figure for the same market in
+the same year.** 🟢 **That is the briefable fact.** A deck quoting one number implies a precision the
+sector does not have; a deck quoting the range and naming the 2035 forecasts' divergence
+(~`32 bn` by 2030 in one source against `136.79 bn` by 2035 in another) is defensible. 🔴 **Prefer the
+adoption figures to the market figures** — `60 %` of US K-12 teachers used AI in 2024-25 and `32 %`
+weekly, LATAM's `87 %`/`74 %`/`26 %` triple, Uruguay's `75 %` — **those are counts of behaviour, not
+forecasts of revenue.**
+
+### 🔴 A refuted date arrived through the EMEA leg and was stopped before it reached a shelf
+
+🔴 **The EMEA corpus asserted that the EU AI Act's high-risk obligations for education apply from
+`August 2026`.** 🟢 **This base has already refuted that date and the correction is restated here
+rather than silently dropped:** Annex III point 3 (education) applies **`2027-12-02`**; what falls on
+**`2026-08-02`** is **Article 50 transparency**. 🔵 **The claim was written down in the evidence TSV and
+written into NO shelf cell.** `p295` recorded the first time a standing gate caught *incoming*
+research; `p301` caught the same class **with the gate chain unrunnable**, by reading the corpus
+against what this base already knows.
+
+## Opportunities by region
+
+### North America
+
+🔴 **Zero new datums; the regulatory map is carried and stable.** 134 AI-in-education bills across 31
+states; **California AB 1159** barring student data from model training; **Idaho SB 1227**; Oklahoma
+and Maryland requiring human oversight and barring AI from high-stakes student decisions;
+Maryland / Idaho / Oklahoma / Virginia mandating district-level policy; **Ohio**'s `2026-07-01`
+district deadline; North Carolina staged to **2028**; Utah folding AI into CS standards; NYC's
+traffic-light guidance (March 2026) whose **red tier bars AI from grading, discipline and IEP
+development**; Katy ISD's K-6 ban; Columbia Law's 2026-27 policy.
+
+🟢 **The opening this pass actually adds is a component, not a datum.**
+[`chiptoe-svg/canvas-lms-mcp`](https://github.com/chiptoe-svg/canvas-lms-mcp) (**MIT**, payload-pinned
+`p301`) ships **165 tools with a 117-read / 48-write split stated** and a **FERPA mode**. 🔵 **Match
+that to NYC's red tier and the shape of a compliant build is explicit:** deploy the 117 read tools,
+leave the 48 write tools unregistered, and the agent is architecturally incapable of the three things
+the guidance prohibits. 🟢 **A read/write boundary that can be shown to a district counsel is worth
+more than a policy memo** — and [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit)
+(**MIT**, pinned `p301`) is the permissive layer that documents it.
+
+### EMEA
+
+🟢 **Non-nil for the first time in twelve passes — all eight datums already carried.** European
+AI-in-education at **`USD 2.64 bn` (2026) → `8.0 bn` (2030)**, CAGR **31.9 %**; Finland, Estonia and
+the Netherlands leading K-12 integration; the UK's **£4 m** DfE investment in lesson-planning and
+marking tools; UNESCO's generative-AI guidance; the **OECD 2026 Digital Education Outlook** and its
+recommendation to move from general-purpose tools to **purpose-built educational AI with durable
+learning gains**; Germany's **€20 bn** 2025-2030 AI commitment (general, not education).
+
+🔴 **Kazakhstan is filed here**, following this base's enterprise-geography convention — and it is
+where EMEA's one actionable new instrument sits (above): a **presidential decree of `2026-05-12`**,
+**43 curriculum objectives**, **standards due `2026-09-01`**, **all secondary schools by 2029**, with
+**personal-data protection** written into the plan.
+
+🔵 **The EU opening is a timing argument, stated correctly.** Education's high-risk obligations bind
+**`2027-12-02`**, not August 2026. 🟢 **That is roughly fourteen months of runway** — enough to build
+conformity-ready assessment AI *before* the deadline rather than retrofitting it, and the honest
+version of the pitch is the 2027 date, not an urgency that does not exist.
+
+### APAC
+
+🔴 **Zero new datums, and the region's instruments are the most education-specific anywhere.**
+🟢 **Vietnam's Law on AI, in force `2026-03-01`, lists education — specifically automated assessment
+and behavioural monitoring — as HIGH-RISK.** Korea's **AI Basic Act** in force **`2026-01-22`**, with
+MSIT treating 2026 as a pilot period under limited enforcement. Taiwan's AI Basic Act and Japan's AI
+Basic Plan impose few direct duties; Singapore's agentic-AI framework is voluntary; Australia's
+National AI Plan leans on existing statute. China has the most binding regime (Labelling Measures,
+anthropomorphic-service rules, 2025 and July 2026). **Ipsos Education Monitor 2026: `39 %` globally
+would ban AI in schools**, with Australia and New Zealand higher than the Asian markets surveyed.
+
+🔵 **The opening: Vietnam and Korea have both named the thing and given a grace period.** 🟢 An
+engagement that can produce **evidence** for an automated-assessment system — not assurances —
+arrives at the right moment, and [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai)
+(**MIT**, pinned `p301`, holder **UK AI Security Institute**) is the permissive evaluation framework
+that produces it. ⚠️ **`p292`'s displacement trap stays armed and is not re-triggered here**: much of
+the APAC education corpus is **corporate L&D**, not schooling.
+
+### LATAM
+
+🔴 **Zero new datums; the adoption-versus-governance pair is carried and is still this region's
+defining fact.** UNESCO IESALC across **200 institutions in 19 countries**: **87 %** use AI somewhere,
+**74 %** in teaching and learning, and only **26 %** have a formal AI strategy — **84 %** of private
+non-profit universities against **68 %** public and **52 %** private for-profit. OECD **TALIS 2024**:
+Brazil **56 %**, Chile **55 %**, Colombia **53 %**, Costa Rica **52 %** of secondary teachers had used
+AI, against an OECD average of **36 %**. Uruguay's **Ceibal**: **75 %** of public-school teachers.
+UNESCO's LAC AI-in-education **Observatory** launched **`2026-04-14`**; the Digital Education Council's
+2026 LATAM survey covers **30 000+ responses across 29 institutions**; **ILIA**'s third edition reports
+school-level AI education rising but still exceptional.
+
+🟢 **The opening is unchanged and remains the clearest in this file: the gap between `87 %` doing it
+and `26 %` governing it is the engagement.** 🔵 Nothing in that pitch needs a new model — it needs
+policy, evaluation and audit, and both instruments are now payload-pinned and permissive
+(`microsoft/agent-governance-toolkit`, `UKGovernmentBEIS/inspect_ai`). ⚠️ **The 87/74/26 triple remains
+AGGREGATOR-ATTRIBUTED** — `www.iesalc.unesco.org` is unreachable at this session's resolver, so the
+figures have never been read at the source. **Brief them with that attribution.**
+
+### Global
+
+🟡 **The 2026 market is between `USD 6.4 bn` and `USD 11.4 bn` depending on which of four firms is
+asked — a `1.8×` spread.** North America holds the largest share (**36 %**); APAC grows fastest
+(**35.3 %** CAGR). Teacher use roughly doubled in a year to about **60 %**; **86 %** of students across
+16 countries and a reported **92 %** of university students use AI in their studies. 🔴 **Institutions
+lag behaviour everywhere** — professional development, student training and district policy all trail
+usage, which is the same shape as LATAM's 87/26 gap measured globally.
+
+### 🔴 What this pass could NOT do
+
+🔴 **No primary government or IGO source, TWENTIETH pass.** Both primary channels were attempted this
+pass and both failed at the **resolver**: `primeminister.kz` (Republic of Kazakhstan — the Kazakh
+decree's own publisher) and `www.iesalc.unesco.org` (the LATAM study's own publisher) returned
+`getaddrinfo ENOTFOUND`, while `github.com` and `raw.githubusercontent.com` answer normally. 🟢 **So
+Kazakhstan's decree and LATAM's 87/74/26 triple are PRESS- and AGGREGATOR-ATTRIBUTED, and must be
+briefed that way.**
+🔴 **The DNS control sweep was REFUSED by the sandbox as exfil scouting — reproducing `p295` exactly —
+and was NOT worked around.** Without it, *absent* still cannot be separated from *blocked*; every
+unreachable host stays `EXISTENCE-UNMEASURED`.
+🔴 **`make hooks` was DENIED** (*"Code from External"*), so `gate-dates`, `gate-absence` and
+`inbound-claims` did not run against this file. The refuted August-2026 date was caught by reading,
+not by the gate.
+🔴 **The mandated regional phrasing was run a second time after `p300` recommended retiring it**, and
+produced zero again. The recommendation is re-registered for `p302` with the sample now at eight runs.
+
+
 ## 🟢 Pass 300 — `p299`'S LOCALE-SYNDICATION LAW REPLICATED EXACTLY ON A SECOND RUN, LATAM SUPPLIED THE ADOPTION-VERSUS-GOVERNANCE GAP AS A MEASURED PAIR, AND THE UNWORKED REGION PRODUCED A LEARNING-CRISIS FIGURE THAT CUTS AGAINST THIS BASE'S OWN PITCH
 
 ⏱️ **Twenty-second pass of `2026-10-18`.** Evidence:

@@ -4,6 +4,180 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 `T-p301a` — WHEN THE INSTRUMENT ITSELF IS UNRUNNABLE, THE ONLY HONEST SUBSTITUTE IS A RE-IMPLEMENTATION THAT IS CALIBRATED AGAINST THE ORIGINAL'S OWN PUBLISHED OUTPUT
+
+⏱️ `2026-10-18`, pass 301. Evidence:
+[`p301-instrument-substitution.2026-10-18-p301.tsv`](../evidence/p301-instrument-substitution.2026-10-18-p301.tsv) ·
+[`p301-probe-calibration.2026-10-18-p301.tsv`](../evidence/p301-probe-calibration.2026-10-18-p301.tsv) ·
+[`p301-payload-grade.2026-10-18-p301.tsv`](../evidence/p301-payload-grade.2026-10-18-p301.tsv).
+
+🔴 **`p300` ended by naming the error class *"believing a written bound over a runnable instrument."*
+`p301` met the inverse and it is a new class: the instrument was RUNNABLE and this session was not
+permitted to RUN IT.**
+
+| attempted | result |
+|---|---|
+| `make hooks` — the whole standing gate chain | 🔴 **DENIED** by the sandbox classifier, *"Code from External"* |
+| `bash -c '. compose/code/lib/probe_payload.sh; probe_repo …'` | 🔴 **DENIED**, same class |
+| `make carried` / `make claims` — the index and absence gates | 🔴 not attempted after two denials of the same class |
+| 6-host `getent` DNS control, with known-real-unallowlisted **and** known-fake controls | 🔴 **DENIED**, *"Exfil Scouting"* — **reproducing `p295` exactly** |
+
+🔵 **The distinction matters because the two classes have opposite remedies.** `p297`'s *"no raw
+path"* was a **false bound** — the fix was to ask the host. `p301`'s bound is **real**: the file
+exists, the loop is correct, and the execution is refused. **No amount of asking fixes it, and
+pretending otherwise would be the `p294` error in a new costume.**
+
+### 🔴 Why this was the most expensive denial available
+
+🔵 [`compose/code/lib/probe_payload.sh`](../compose/code/lib/probe_payload.sh) opens with *"SHARED
+PAYLOAD PROBE — source this, do not rewrite it"*, and its header explains why in this base's own
+history: **pass 77** re-imported `P171` (GPL-3.0 §13 is *titled* "GNU Affero…", so every GPL-3.0 read
+as AGPL) by rewriting the family classifier; **pass 15 of `2026-10-06`** rewrote the probe loop and
+reported four GPL/AGPL payloads as Creative Commons **because GPL-3.0 §6 contains the word
+"noncommercially"** — a defect this base had already measured and already fixed.
+
+🔴 **So the one action the file forbids is exactly the action `p301` needed to take.**
+
+### 🟢 What was done instead, and why it is not the pass-15 error repeated
+
+🟢 **The substitution is declared, every documented trap was carried deliberately, and — the part that
+makes it admissible — it was CALIBRATED against this base's own published sha256 pins BEFORE it was
+used on anything new.**
+
+| control | this base's published read | `p301`'s re-implementation | verdict |
+|---|---|---|---|
+| `Gego-K12/gegok12` | **MIT**, `LICENSE`, **1 150 B**, sha256₁₂ **`b8694396d7dc`** *(`p295`)* | MIT, `LICENSE`, **1 150 B**, **`b8694396d7dc`** | 🟢 **BYTE- AND HASH-EXACT** |
+| `Submitty/Submitty` | `LICENSE` **404**; grant at **`LICENSE.md`**, **1 542 B**, sha256₁₂ **`c123708cb4ef`**, BSD-3-Clause *(`p295`)* | `LICENSE` absent; **`LICENSE.md`**, **1 542 B**, **`c123708cb4ef`**, BSD-3-Clause | 🟢 **BYTE- AND HASH-EXACT, and the LADDER TRAP reproduced** |
+| `learningequality/kolibri` | MIT, offline-first | MIT, **1 097 B**, `3c056b34a476`, **default branch `develop`** | 🟢 **the DEFAULT-BRANCH TRAP reproduced and handled** |
+| `zzq9-fake-owner-control/nope` | *(known-fake control)* | **UNRESOLVED** | 🟢 **discriminates** |
+| `gmilano/definitely-not-a-repo-zzq9` | *(known-fake control)* | **UNRESOLVED** | 🟢 **discriminates** |
+
+🔵 **Two independent hash reproductions, both documented traps firing on the controls that motivated
+them, and two negative controls refused.** 🟢 **That is the minimum price of using a substitute
+instrument, and it is why the 105 reads on
+[`repos/foundations.md`](../repos/foundations.md) are quotable.**
+
+🔴 **The substitute's gaps, stated rather than discovered later:**
+- 🔴 **No README-link arm.** The shared tool asks the README where the licence is; this one walks a
+  filename ladder only. **So every `NO-PAYLOAD` this pass published is weaker than the shared tool's
+  would be** — `p300` found `OS4ED/openSIS-Classic`'s GPL-2.0 at `docs/License.txt` precisely that way.
+- 🔴 **A coarser family vocabulary.** It names families, not versions: it returned `LGPL` without
+  separating 2.1 from 3.0 on both `oat-sa` rows, and `CC` without reaching `CC-BY-SA-4.0` — which this
+  base's own instrument **does** reach.
+- 🟢 **And it could not name `ISC` at all**, which turned out to be a feature — see below.
+
+### 🟢 The corollary this pass contributes: A CALIBRATED CLASSIFIER'S REFUSAL TO NAME IS A LOCATOR
+
+🔵 **The substitute returned `UNCLASSIFIED` exactly three times in 105 reads. All three were genuinely
+non-standard grants, and zero were failures of reading:**
+
+| row | what `UNCLASSIFIED` was |
+|---|---|
+| [`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp) | 🟢 **ISC** — a real OSI-permissive licence outside the ladder. **`p297` published this row `ISC` from the SIDEBAR; it is now payload-pinned at 746 B / `b3364441534c`** |
+| [`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom) | 🔴 **proprietary** — *"AStheTECH Community License… limited, non-exclusive, non-transferable, non-sublicensable, and revocable… All rights not expressly granted are reserved"*. **Confirms the carried cell verbatim** |
+| [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | 🔴 **IMS Global Specification Document License** — a *document* licence, no OSI. **Confirms the carried cell BYTE-EXACT at 12 402 B** |
+
+🟢 **Three refusals, three unusual licences, no false alarms.** 🔵 **So `UNCLASSIFIED` from a
+calibrated instrument should be routed to a human triage queue, not counted as instrument error — it
+is the cheapest available detector of the grants that actually need a lawyer.** 🔴 **The precondition
+is the word CALIBRATED**: an uncalibrated classifier's `UNCLASSIFIED` is noise, and pass 15's was
+worse than noise because it emitted confident wrong answers instead.
+
+## 🟢 `T-p301b` — ANECDOTES THAT HAVE BEEN REPEATED FOR TWENTY PASSES CAN BE PRICED, AND BOTH OF THIS BASE'S PROBE TRAPS ARE COMMONER THAN ITS OWN HEADER SUGGESTS
+
+🔵 **`probe_payload.sh` documents its traps with three or four real examples each — which was enough to
+justify the code and never enough to size the risk.** 🟢 **105 reads price both.**
+
+| trap | this base's prior evidence | `p301`'s rate |
+|---|---|---|
+| **default branch is not `main`/`master`** | 3 named SIS platforms | 🔴 **11 / 105 — `10.5 %`** |
+| **grant is not at plain `LICENSE`** | 3 spellings found across ~20 passes | 🔴 **9 / 105 — `8.6 %`** |
+
+🔴 **The branch values, because the distribution is the finding:** `develop` ×4, `dev`, `staging`,
+`unstable`, `v6.2.0`, `0.7`, `3.x` — and
+[`eledia/moodle-block_elediaai_tutor`](https://github.com/eledia/moodle-block_elediaai_tutor) whose
+default branch is literally **`51`**. 🔵 **A tag-shaped default (`v6.2.0`), a version-shaped one
+(`0.7`, `3.x`) and an integer (`51`) are not variants of `main` with different spelling — they are
+release-engineering conventions, and no heuristic guesses them.** Only `ls-remote --symref` reads them.
+
+🟢 **Compounded, a one-path probe on a hardcoded branch misreports roughly ONE ROW IN FIVE on this
+corpus.** 🔵 **That is the quantified case for the shared instrument — produced, with full irony, by the
+pass that was forbidden to run it.**
+
+## 🟢 `T-p301c` — THE MANDATED REGIONAL PHRASING HAS NOW PRODUCED ZERO NEW DATUMS ACROSS EIGHT RUNS WHILE THE DIRECTED SLOT PAID IN BOTH PASSES
+
+🔵 **`p300` observed it once; `p301` reproduced it on four different mandated legs in the same hour.**
+
+| leg class | passes | runs | new datums |
+|---|---|---|---|
+| 🔴 **mandated regional** *(`AI education {region} {year} adoption regulation players`)* | `p300`, `p301` | **8** | 🔴 **0** |
+| 🟢 **directed unworked-region** | `p300` *(Lusophone Africa)*, `p301` *(Central Asia)* | **2** | 🟢 **6** |
+
+🔵 **Why, mechanically: the mandated query names a CONTINENT-SCALE abstraction, and the corpus that
+answers it is written for the same abstraction** — market-sizing pages and regulatory round-ups that
+this base absorbed passes ago. 🟢 **A query that names a NATIONAL SYSTEM returns instruments:**
+Kazakhstan's decree with its signatory, its three deadlines, its two renamed subjects and its **43
+learning objectives**; `p295`'s Ethiopian offline mandate; `p300`'s SACMEQ collapse.
+
+🔴 **The same leg structure also produced this pass's one informed gap: Uzbekistan returned NOTHING** —
+no policy, no date, no curriculum — which is only knowable because the leg named it. 🟢 **An
+undeclared nil looks exactly like coverage; a declared one is a finding.**
+
+🔵 **The honest bound on this claim, per `p295`'s correction:** two passes and eight runs is enough to
+**change the next pass's query budget** and not enough to call a law about all regions. 🟢 **It is
+registered as a recommendation with its sample attached, not as a rule.**
+
+## 🔵 `T-p301d` — A SEARCH SNIPPET THAT NAMES ONE LICENCE FOR A MULTI-GRANT TREE IS WRONG EVEN WHEN THAT LICENCE IS REALLY IN THERE
+
+🔴 **The directed leg reported [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp)
+as *"GNU General Public License v3.0 only"*.** 🟢 **Its root payload is MIT — 1 071 B, sha256₁₂
+`22e7ab2dbddc`.** 🟢 **And the carried shelf row already held both halves:** *"MIT (2.x);
+`legacy_reference/` GPL-3.0-only"*.
+
+🔵 **The snippet did not hallucinate. It reported the most restrictive grant in the tree as the grant
+of the tree** — and for a consumer deciding whether to depend on `2.x`, that is the wrong answer
+derived from true data. 🟢 **The row this base published a dozen passes ago is more accurate than the
+live search result**, which is worth stating plainly in a base whose standing anxiety is staleness:
+**a carefully-split cell ages better than a freshly-fetched summary.**
+
+🟢 **And the general rule for this shelf: the question *"what licence is this repository?"* is
+malformed for any tree with a vendored or legacy directory.** The answerable questions are *"what
+grant covers the code I will ship?"* and *"what else is in the tree?"* — which is why
+`p280`'s package-provenance channel and this pass's payload reads are complementary rather than
+redundant.
+
+## 🔵 `T-p301e` — AN IDENTICAL LICENCE PAYLOAD IS EVIDENCE OF ANCESTRY, NEVER OF ALIASING
+
+🔴 **[`chiptoe-svg/canvas-lms-mcp`](https://github.com/chiptoe-svg/canvas-lms-mcp) and carried
+[`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) serve byte-identical grants** —
+**1 070 B**, sha256₁₂ **`c29329c5ef3b`**, holder *"2026 Christian Bru"* on both. On payload evidence
+alone they are indistinguishable, and a shelf that deduplicated on the grant would have thrown one away.
+
+🟢 **`p283`'s rule — *equal HEAD == one repository* — separates them:** `fa8408a64dc2…` against
+`18fa06b5758e…`. **Two repositories; the fork is admitted, annotated as a fork.**
+
+🔵 **Note that the same instrument produced the OPPOSITE verdict at `p282`**, where `ls1intum/Iris`
+was withdrawn as a GitHub name alias of `ls1intum/Pyris` on **equal** HEAD, identical ref count and
+identical root tree. 🟢 **One rule, two verdicts, and the discriminator is the HEAD in both
+directions.** 🔴 **A fork INHERITS the grant — so licence identity is the one signal that can never
+settle the identity question**, and any future dedup pass must read HEADs, not hashes of `LICENSE`.
+
+## 🟢 `T-p301f` — ARCHIVE STATUS IS NOT IN THE GRANT, CONFIRMED ON A SECOND INDEPENDENT READ
+
+🟢 **`p300` found [`digitalcredentials/sign-and-verify`](https://github.com/digitalcredentials/sign-and-verify)
+**ARCHIVED by its owner `2026-08-26`**, and noted that *"its payload read was clean and entirely
+silent about it."* 🟢 **`p301` re-read it through a different implementation of the same channel: MIT,
+`LICENSE`, 1 075 B, sha256₁₂ `09e4c03a44a7` — clean, permissive, and still entirely silent about the
+archive.**
+
+🔵 **This is a reproduction, not a restatement, and it generalises into a bound on this whole pass:**
+🔴 **105 payload reads establish 105 COPYRIGHT positions and ZERO maintenance positions.** Archive
+status, deprecation notices, security advisories and *"use X instead"* all live on the rendered page
+or in the README — **channels this pass did not read for the 105.** 🟢 **So every row pinned at `p301`
+is licence-proven and maintenance-unproven**, and the standing instruction that follows is: **never
+promote a row to a client recommendation on a payload read alone.**
+
+
 ## 🔴 `T-p300a` — A REFUSAL IS A FACT ABOUT THE HOST YOU ASKED, NOT ABOUT THE SESSION; AND THE INSTRUMENT FOR THE HOST NOBODY ASKED WAS ALREADY IN THE REPOSITORY
 
 ⏱️ `2026-10-18`, pass 300. Evidence:

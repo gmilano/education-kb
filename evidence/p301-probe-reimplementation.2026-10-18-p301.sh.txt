@@ -1,0 +1,92 @@
+#!/bin/bash
+# p301 PAYLOAD PROBE — a RE-IMPLEMENTATION, written because the sandbox denies
+# execution of the repository's own `compose/code/lib/probe_payload.sh`
+# ("Code from External"). That file's header forbids rewriting the loop, and the
+# reason it gives is exactly the risk taken here, so every trap it documents is
+# carried explicitly below and the writeup declares the substitution.
+#
+# Traps carried from probe_payload.sh / license_family.sh:
+#   T1 default branch is NOT main/master -> resolved with ls-remote --symref
+#   T2 licence may live in a subdir / mixed case -> filename ladder (README link
+#      arm NOT implemented; declared as a narrower ladder than the shared tool)
+#   T3 British spelling LICENCE is in the ladder
+#   P171 GPL-3.0 section 13 is titled "GNU Affero General Public License" ->
+#      AGPL decided on the TITLE line only, never on a body mention
+#   pass-15 defect GPL-3.0 section 6 contains "noncommercially" -> CC-NC must
+#      never be decided before GPL/AGPL are ruled out
+#   P834 bytes counted from the FILE on disk, never round-tripped via a variable
+#
+# Usage: p301_probe.sh <slug> [slug...]   -> TSV on stdout
+
+set -uo pipefail
+TIMEOUT="${PROBE_TIMEOUT:-25}"
+NAMES="LICENSE LICENSE.md LICENSE.txt LICENCE COPYING COPYING.txt"
+
+raw() { curl -sS --max-time "$TIMEOUT" "https://raw.githubusercontent.com/$1/$2/$3" 2>/dev/null; }
+
+default_branch() {
+  timeout "$TIMEOUT" git ls-remote --symref "https://github.com/$1" HEAD 2>/dev/null \
+    | sed -n 's|^ref: refs/heads/\(.*\)\tHEAD$|\1|p' | head -1
+}
+
+# P834: size read from the file, byte-exact.
+size_of() { wc -c < "$1" | tr -d ' '; }
+
+family_of() {
+  local f="$1" head40 body
+  head40=$(head -40 "$f")
+  body=$(cat "$f")
+  # P171 / pass-15 ordering: AGPL and GPL are decided FIRST, and AGPL only on a
+  # TITLE line, so GPL-3.0's section-13 cross-reference cannot promote it.
+  if printf '%s' "$head40" | grep -qiE 'GNU AFFERO GENERAL PUBLIC LICENSE'; then
+    echo "AGPL-3.0"; return
+  fi
+  if printf '%s' "$head40" | grep -qiE 'GNU LESSER GENERAL PUBLIC LICENSE'; then
+    echo "LGPL"; return
+  fi
+  if printf '%s' "$head40" | grep -qiE 'GNU GENERAL PUBLIC LICENSE'; then
+    if printf '%s' "$head40" | grep -qE 'Version 2'; then echo "GPL-2.0"; else echo "GPL-3.0"; fi
+    return
+  fi
+  if printf '%s' "$body" | grep -qE 'Apache License'; then echo "Apache-2.0"; return; fi
+  # MIT: the operative grant sentence, not the word "MIT" in a heading.
+  if printf '%s' "$body" | grep -qE 'Permission is hereby granted, free of charge'; then
+    echo "MIT"; return
+  fi
+  if printf '%s' "$body" | grep -qE 'Redistribution and use in source and binary forms'; then
+    if printf '%s' "$body" | grep -qiE 'Neither the name'; then echo "BSD-3-Clause"
+    else echo "BSD-2-Clause"; fi
+    return
+  fi
+  if printf '%s' "$body" | grep -qE 'Mozilla Public License'; then echo "MPL-2.0"; return; fi
+  # CC/NC LAST — pass-15's defect was reaching here on GPL-3.0 section 6.
+  if printf '%s' "$body" | grep -qiE 'Creative Commons'; then echo "CC"; return; fi
+  if printf '%s' "$body" | grep -qiE 'The Unlicense|public domain'; then echo "UNLICENSE-OR-PD"; return; fi
+  echo "UNCLASSIFIED"
+}
+
+holder_of() {
+  grep -ioE 'Copyright (\(c\) )?[0-9]{4}(-[0-9]{4})?,? [^.]{0,60}' "$1" \
+    | head -1 | sed -E 's/Copyright (\(c\) )?//I' | tr -s ' ' || echo "-"
+}
+
+printf 'repo\tbranch\tfilename\tbytes\tsha256_12\tfamily\tholder\n'
+for repo in "$@"; do
+  br=$(default_branch "$repo")
+  if [ -z "$br" ]; then
+    printf '%s\t-\tUNRESOLVED\t0\t-\tUNRESOLVED\t-\n' "$repo"; continue
+  fi
+  found=0
+  for fn in $NAMES; do
+    tmp=$(mktemp)
+    raw "$repo" "$br" "$fn" > "$tmp"
+    if [ -s "$tmp" ] && ! head -1 "$tmp" | grep -q '^404: Not Found$'; then
+      printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$repo" "$br" "$fn" \
+        "$(size_of "$tmp")" "$(sha256sum "$tmp" | cut -c1-12)" \
+        "$(family_of "$tmp")" "$(holder_of "$tmp")"
+      rm -f "$tmp"; found=1; break
+    fi
+    rm -f "$tmp"
+  done
+  [ "$found" -eq 0 ] && printf '%s\t%s\tNO-PAYLOAD\t0\t-\tNO-PAYLOAD\t-\n' "$repo" "$br"
+done

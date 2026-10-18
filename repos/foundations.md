@@ -4,6 +4,153 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 301 — THE BACKLOG'S RANKED ITEM 1 DISCHARGED AT FIVE TIMES `p300`'S SCALE: 105 PAYLOAD READS, 146 UNPINNED ROWS FOUND MECHANICALLY, AND TWO OF THIS BASE'S ANECDOTES TURNED INTO RATES
+
+⏱️ **Twenty-third pass of `2026-10-18`.** Evidence:
+[`p301-payload-grade.2026-10-18-p301.tsv`](../evidence/p301-payload-grade.2026-10-18-p301.tsv) ·
+[`p301-probe-calibration.2026-10-18-p301.tsv`](../evidence/p301-probe-calibration.2026-10-18-p301.tsv) ·
+[`p301-instrument-substitution.2026-10-18-p301.tsv`](../evidence/p301-instrument-substitution.2026-10-18-p301.tsv) ·
+[`p301-websearch.2026-10-18-p301.tsv`](../evidence/p301-websearch.2026-10-18-p301.tsv).
+
+🟢 **`p300`'s backlog item 1 — *"payload-grade the whole shelf… the cheapest large gain in twenty
+passes"* — is DISCHARGED for 105 rows.** `p300` read 20 payloads and called that its best-ever batch;
+`p301` read **105**.
+
+### 🟢 The target set was derived mechanically, not chosen
+
+🔵 **Which rows needed grading was not a judgement call.** Every `github.com/<owner>/<repo>` on this
+file and [`agents/top.md`](../agents/top.md) was extracted, de-duplicated, and partitioned by whether
+any non-archive line mentioning the slug also carries a sha256 or a 12-hex pin:
+
+| shelf slugs, de-duplicated | **265** |
+|---|---|
+| 🟢 already carrying a payload pin | **119** |
+| 🔴 **unpinned — the actual backlog** | **146** |
+| 🟢 **read at payload this pass** | **105** *(72 % of the backlog)* |
+| 🔴 left for `p302` | **41** |
+
+### 🟢 The result, and it is the same asymmetry `p300` found — stated again because it replicated
+
+| family | rows |
+|---|---|
+| 🟢 **MIT** | **53** |
+| 🟢 **Apache-2.0** | **16** |
+| 🟢 **BSD-3-Clause** | **6** |
+| 🟢 **MPL-2.0** | **1** |
+| 🔴 **AGPL-3.0** | **5** |
+| 🔴 **GPL-3.0** | **4** |
+| 🟡 **LGPL** | **2** |
+| 🟡 **CC** *(not a software licence)* | **2** |
+| 🔴 **no payload served at all** | **13** |
+| 🟡 `UNCLASSIFIED` *(triaged by hand below)* | **3** |
+
+🟢 **Permissive — MIT + Apache-2.0 + BSD + MPL — is 76 of 105, or 72 %.** 🔴 **Copyleft is 11, or
+10.5 %.** 🔵 **And not one carried licence cell was REFUTED.** Every row whose published licence this
+pass could check came back the same, several of them **byte-exact** against figures this base printed
+in earlier passes:
+
+| row | carried cell | `p301` payload | verdict |
+|---|---|---|---|
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | **AGPL-3.0 (34 524 B)** | AGPL-3.0, **34 524 B**, sha256₁₂ `8d56b405468a` | 🟢 **BYTE-EXACT** |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | **AGPL-3.0, 34.143 B** | AGPL-3.0 at `LICENSE.md`, **34 143 B**, sha256₁₂ `281e174e4d5f` | 🟢 **BYTE-EXACT** |
+| [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | **IMS Specification Document License, 12.402 B** | the IMS document licence, **12 402 B**, sha256₁₂ `6178707d6c68` | 🟢 **BYTE-EXACT** |
+| [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) | **CC BY-SA 4.0, 2 123 B** | CC family at `LICENSE.md`, **2 123 B**, sha256₁₂ `c5faf8ce5bec` | 🟢 **BYTE-EXACT** |
+| [`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom) | **proprietary "AStheTECH Community License", all rights reserved** | *"limited, non-exclusive, non-transferable, non-sublicensable, and revocable… All rights not expressly granted are reserved"*, 6 489 B | 🟢 **CONFIRMED verbatim** |
+| [`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine) | **GPL-3.0** | GPL-3.0 at **`LICENSE.txt`**, 35 147 B | 🟢 **CONFIRMED** |
+| [`OpenEMIS/OpenEMIS-Core`](https://github.com/OpenEMIS/OpenEMIS-Core) | *"LIVE, no licence payload"* | **NO-PAYLOAD** on `master` | 🟢 **CONFIRMED** |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | root manifests disagree; **no single grant** | **NO-PAYLOAD** on `develop` | 🟢 **CONFIRMED** |
+| [`digitalcredentials/sign-and-verify`](https://github.com/digitalcredentials/sign-and-verify) | **ARCHIVED `2026-08-26`; payload clean and silent about it** | MIT, 1 075 B, sha256₁₂ `09e4c03a44a7` — **silent on archive status** | 🟢 **`p300`'s finding REPRODUCED on a second read** |
+
+🔵 **`p300` wrote that its sidebar-grade rows were *"accurate; unproven, not wrong."* `p301` is the
+larger sample that holds it: 105 reads, zero refutations.** 🟢 **The value delivered is not corrected
+data — it is that 105 rows a studio may now quote are pinned to a byte count and a hash.**
+
+### 🟢 TWO ANECDOTES BECAME RATES — and both are larger than this base assumed
+
+🔵 **`compose/code/lib/probe_payload.sh` documents its traps with three or four measured examples
+each. 105 reads price them.**
+
+🔴 **Trap 1 — the default branch is not `main`/`master`: 11 of 105, `10.5 %`.** A probe that hardcodes
+the branch writes **one row in ten** down as ungranted:
+
+| branch | rows |
+|---|---|
+| `develop` | `oat-sa/tao-core` · `oppia/oppia-android` · `datakind/student-success-tool` · `LearnPress/learnpress` |
+| `dev` | `pressbooks/pressbooks` |
+| `staging` | `code-dot-org/code-dot-org` |
+| `unstable` | `learningequality/studio` |
+| `v6.2.0` | `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard` |
+| `0.7` / `3.x` | `php-xapi/client` · `php-xapi/model` |
+| 🔴 **`51`** | [`eledia/moodle-block_elediaai_tutor`](https://github.com/eledia/moodle-block_elediaai_tutor) — **a bare integer as a default branch** |
+
+🔴 **Trap 2 — the grant is not at plain `LICENSE`: 9 of 105, `8.6 %`.** `LICENSE.md` **×7**
+(`1EdTech/caliper-spec`, `AStheTECH/mewcp-google-classroom`, `codelitdev/courselit`,
+`datakind/student-success-tool`, `haxtheweb/haxcms-php`, `nmarafo/OpenDidactia`,
+`pressbooks/pressbooks`), `LICENSE.txt` **×2** (`Tangerine-Community/Tangerine`,
+`davemckain/qtiworks`). 🟢 **`p295` found this on `Submitty` and called it *"a THIRD spelling"*; at
+this sample it is a standing property of the corpus, not a curiosity.**
+
+🔵 **Taken together, a one-path probe on a hardcoded branch would misreport roughly 1 row in 5 on this
+shelf.** That is the quantified case for the shared instrument — and `p301` could not run it.
+
+### 🔴 THIRTEEN shelf rows serve NO licence payload at all — named, because an unnamed count is not actionable
+
+| row | branch |
+|---|---|
+| [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) | `main` |
+| [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | `develop` |
+| [`OpenEMIS/OpenEMIS-Core`](https://github.com/OpenEMIS/OpenEMIS-Core) | `master` |
+| [`anastasasenov/bbmcps`](https://github.com/anastasasenov/bbmcps) | `main` |
+| [`arijit8972/agentic-automated-assignment-grading`](https://github.com/arijit8972/agentic-automated-assignment-grading) | `main` |
+| [`eakarsu/ai-special-education-iep-compliance`](https://github.com/eakarsu/ai-special-education-iep-compliance) | `main` |
+| [`eledia/moodle-block_elediaai_tutor`](https://github.com/eledia/moodle-block_elediaai_tutor) | `51` |
+| [`hdronamraju/sped-agent`](https://github.com/hdronamraju/sped-agent) | `main` |
+| [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | `master` |
+| [`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) | `main` |
+| [`openstax/os-webview`](https://github.com/openstax/os-webview) | `main` |
+| [`touretzkyds/ai4k12`](https://github.com/touretzkyds/ai4k12) | `master` |
+| [`yoyoconnor/BlackboardMCP`](https://github.com/yoyoconnor/BlackboardMCP) | `main` |
+
+⚠️ **`NO-PAYLOAD` is a statement about the FILENAME LADDER, not a finding of "unlicensed."** This
+pass's probe did **not** implement the shared instrument's README-link arm, so a grant living at an
+unusual subdirectory path would be missed here — and `p300` recorded exactly that case
+(`OS4ED/openSIS-Classic`, GPL-2.0 at `docs/License.txt`). 🔴 **Three of these rows sit in special
+education and IEP compliance** (`eakarsu/…-iep-compliance`, `hdronamraju/sped-agent`) **or automated
+grading** (`arijit8972/…`) — the highest-stakes uses in the corpus, with no grant a client can rely
+on. **Do not brief any of the thirteen as buildable until the gap is closed.**
+
+### 🟢 The three permissive rows worth naming out of this sweep
+
+🟢 **[`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) — MIT, 1 081 B,
+sha256₁₂ `c593c2afc813`, holder *UK AI Security Institute*.** An evaluation framework from a
+**national AI safety institute**, permissively licensed. 🔵 This base has recorded *"no dominant OSS
+agent eval"* as a gap in a sibling industry; for education it is the instrument that lets a studio
+**measure** a tutor instead of demonstrating one — and its provenance is the kind a ministry accepts.
+
+🟢 **[`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite)
+— Apache-2.0, 11 351 B, sha256₁₂ `3f17cff4210f`, holder **Intel Corporation**.** Already carried;
+now pinned, and the holder is confirmed at payload rather than inferred from the org name.
+
+🟢 **[`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) —
+MIT, 1 074 B, sha256₁₂ `7df20dcdf919`.** The governance layer every regional leg this pass asked for
+(LATAM's **26 %-with-a-strategy** gap, Kazakhstan's data-protection clause) and the one a studio can
+ship without a licence negotiation.
+
+### 🔴 What this pass could NOT do
+
+🔴 **The repository's own payload instrument was UNRUNNABLE.** `bash -c '. compose/code/lib/probe_payload.sh;
+probe_repo …'` was **DENIED by the sandbox** (*"Code from External"*), as was `make hooks`. 🟢 **The
+substitution is declared, and it was CALIBRATED before it was trusted** — see
+[`intel/trends.md`](../intel/trends.md) `T-p301a` and
+[`p301-probe-calibration.2026-10-18-p301.tsv`](../evidence/p301-probe-calibration.2026-10-18-p301.tsv).
+🔴 **41 of the 146 unpinned rows are still unread**, and the ladder used was **narrower** than the
+shared instrument's (no README-link arm), so every `NO-PAYLOAD` above is weaker than the shared tool's
+would be.
+🔴 **No standing gate ran against this file.** `gate-tables`, `gate-enumeration`, `gate-absence` and
+the rest are part of the same denied chain.
+🔴 **The ten star/forks cells remain untouched — FIFTH pass of asking.**
+
+
 ## 🟢 Pass 300 — THE PAYLOAD CHANNEL THREE PASSES RECORDED AS ABSENT WAS THIS BASE'S OWN INSTRUMENT, UNCALLED — AND `p299`'S FIFTEEN ROWS WERE NEVER ON THIS TABLE
 
 ⏱️ **Twenty-second pass of `2026-10-18`.** Evidence:

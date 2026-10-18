@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 301 — three new patterns (`P69`-`P71`), each built from rows promoted or pinned THIS pass, and every component licence PAYLOAD-verified with a sha256
+
+⏱️ `2026-10-18`. Evidence:
+[`p301-payload-grade.2026-10-18-p301.tsv`](../evidence/p301-payload-grade.2026-10-18-p301.tsv) ·
+[`p301-probe-calibration.2026-10-18-p301.tsv`](../evidence/p301-probe-calibration.2026-10-18-p301.tsv) ·
+[`p301-websearch.2026-10-18-p301.tsv`](../evidence/p301-websearch.2026-10-18-p301.tsv).
+
+🔴 **Numbered `P69`-`P71`: `P66`-`P68` are taken by `p300`, `P63`-`P65` by `p299`, `P60`-`P62` by
+`p298`, `P56`-`P59` by `p297`** — the shelf was enumerated before numbering, because a duplicate
+pattern ID compiles into two entities with one name.
+
+⚠️ **One boundary applies to all three and is stated once: every licence below is a PAYLOAD read, so
+every component's COPYRIGHT position is proven. None of the three carries a MAINTENANCE position** —
+archive status and deprecation live on channels this pass did not read (`T-p301f`). **Diff and
+date-check each component before contracting.**
+
+## P69 — A Moodle grading assistant a teacher can pilot without the institution's IT change queue (global; EU variant noted)
+
+**The engagement.** A university or school system runs Moodle. Marking is the staff's largest time
+sink, the rubrics already exist inside Moodle, and every previous AI proposal died at the same step:
+it needed a web-services token, a site administrator, or a plugin install — which moves a two-week
+pilot into a two-quarter procurement.
+
+🟢 **What changed at `p301`:** [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp)
+states *"No web service tokens, no administrator, no plugin: if you can log in, it works."*
+
+**The build — all permissive, all payload-read `2026-10-18`:**
+
+| step | component | licence (pinned) |
+|---|---|---|
+| reach into Moodle as the teacher | [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) — ~230 tools, reads *"submissions, rubrics and marking guides"* | 🟢 **MIT** · 1 067 B · `66fa873bd85d` |
+| write grades only as unreleased drafts | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) — *"no grading logic"*; the LLM scores against **your** rubric and a human releases | 🟢 **MIT** · 1 120 B · `3f35b8b7b31d` |
+| measure the grader before trusting it | [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) — eval framework, **UK AI Security Institute** | 🟢 **MIT** · 1 081 B · `c593c2afc813` |
+| document the agent's permissions | [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** · 1 074 B · `7df20dcdf919` |
+
+**How they wire together.** `falkenslab/moodle-mcp` is the **read** path: it pulls the assignment, the
+submissions and the **rubric as the institution defined it** — so the model scores against the real
+instrument rather than a reconstruction. Scoring runs against that rubric, and the **write** path is
+deliberately the *other* server: `toshieji/moodle-grading-mcp` posts **unreleased drafts only**, and a
+human releases them in Moodle's own UI. 🟢 **Two servers instead of one is the design, not an
+accident** — the component that can see everything is not the component that can change anything.
+Before any of it reaches a student, `inspect_ai` runs the grader over a held-out set of
+human-marked submissions and reports agreement; that report, plus the governance toolkit's
+permissions write-up, is the artefact the academic board approves.
+
+🔴 **The risk that must be written into the proposal.** `falkenslab/moodle-mcp` authenticates by
+**browser login**, so the agent acts with **the teacher's own credentials** — there is no token to
+scope, no service account to revoke and no admin-side audit trail. 🟢 **That is acceptable for a
+supervised pilot on one teacher's courses and unacceptable for production.** The exit is explicit: once
+the pilot proves agreement, migrate the read path to a **scoped web-services token** and put the
+institution's admin back in the loop. ⚠️ **1★ / 1 fork, 166 commits — unadopted, and the
+implementation language was not read.**
+
+🇪🇺 **EU variant.** Assessment is Annex III point 3, binding **`2027-12-02`** — not August 2026
+(`intel/market.md`). 🟢 **The human-release boundary above is what makes the build defensible:** the
+agent proposes, a human decides, and `inspect_ai`'s agreement report is the documented evaluation.
+Build it now, in the runway, rather than retrofitting it in 2027.
+
+## P70 — A Canvas agent that is architecturally incapable of what NYC's guidance prohibits (North America)
+
+**The engagement.** A US district or university wants agent help in Canvas. Its counsel has read NYC's
+March 2026 traffic-light guidance, whose **red tier bars AI from grading, discipline and IEP
+development**, and will not approve a system whose safety rests on a prompt instruction.
+
+🟢 **What changed at `p301`:** [`chiptoe-svg/canvas-lms-mcp`](https://github.com/chiptoe-svg/canvas-lms-mcp)
+publishes a **tool-level read/write split — 165 tools, 117 read-only, 48 write** — plus a **FERPA
+mode** that registers `resolve_pseudonym` (166 total).
+
+**The build — all permissive, all payload-read `2026-10-18`:**
+
+| step | component | licence (pinned) |
+|---|---|---|
+| Canvas reach with an explicit read/write boundary + FERPA mode | [`chiptoe-svg/canvas-lms-mcp`](https://github.com/chiptoe-svg/canvas-lms-mcp) | 🟢 **MIT** · 1 070 B · `c29329c5ef3b` |
+| the adopted upstream, for comparison and fallback | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) *(same payload — a fork inherits the grant)* | 🟢 **MIT** · 1 070 B · `c29329c5ef3b` |
+| a second, independently-maintained Canvas path | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** · 1 071 B · `5385a26e2fac` |
+| read-only Gradescope reach, if assessment lives there | [`YeetingWaterbottle/gradescope-mcp`](https://github.com/YeetingWaterbottle/gradescope-mcp) — 6 tools, **no writes** | 🟢 **MIT** · 1 089 B · `02f326c5fca4` |
+| …or the Gradescope path with writes, preview-first | [`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) — rubric CRUD behind `confirm_write=True` | 🟢 **MIT** · 1 068 B · `29d0f3f4463a` |
+| permissions documentation for counsel | [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** · 1 074 B · `7df20dcdf919` |
+
+**How they wire together.** 🟢 **Deploy the 117 read tools and do not register the 48 write tools.**
+The prohibition then holds at the **tool-registration layer**, not in a system prompt: the agent cannot
+post a grade because no tool exists that posts a grade. Phase two adds write tools **individually**,
+each with a named approver, and the ones NYC's red tier covers — grading, discipline, IEP — are simply
+never added. FERPA mode's `resolve_pseudonym` is what lets the agent work on de-identified rosters and
+re-identify only on an explicit, logged call. Gradescope reach, when needed, starts at
+`YeetingWaterbottle`'s read-only server and moves to `Yuanpeng-Li`'s preview-first writes only after the
+same approval step.
+
+🔵 **Why this is the strongest compliance story in this file:** it converts a policy into an
+**enumerable artefact** — a list of 117 registered tools and 48 unregistered ones — that counsel can
+audit without reading the model's prompts. 🔴 **Boundaries:** `chiptoe-svg` is a **fork at 0★ / 0 forks
+with 287 commits**; its README is still upstream's and **what it changes is undocumented and unread** —
+diff it against `bruchris` first, and keep the upstream as the fallback. **`YeetingWaterbottle` has two
+commits: copy its boundary, do not depend on its code.**
+
+## P71 — Delivering Kazakhstan's 43 curriculum objectives as a measurable acceptance criterion (EMEA)
+
+**The engagement.** Kazakhstan's presidential decree of **`2026-05-12`** puts AI into **all secondary
+schools by 2029**: standards were due **`2026-09-01`**, the pilot runs from **grade 4** in Kazakh
+language, mathematics and digital literacy, grades 1–4 now study *"Digital Literacy and **Artificial
+Intelligence**"* and grades 5–11 *"Computer Science and **Artificial Intelligence**"* — carrying **43
+AI-related learning objectives**. Personal-data protection is written into the national plan.
+
+🔵 **Why this is a different engagement from every other national policy this base holds.** The others
+are intentions. 🟢 **43 objectives is a COUNTABLE specification** — so the deliverable can be *coverage
+of a published curriculum*, verified, rather than a tool with a training deck.
+
+**The build — all permissive, all payload-read `2026-10-18`:**
+
+| step | component | licence (pinned) |
+|---|---|---|
+| author items against each objective, in Markdown | [`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti) | 🟢 **MIT** · 1 066 B · `5bb49280d709` |
+| render and play the QTI items | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** · 1 076 B · `7faa621251d7` |
+| convert between QTI versions / vendor exports | [`rolfis/qti-convert`](https://github.com/rolfis/qti-convert) | 🟢 **Apache-2.0** · 11 357 B · `c71d239df917` |
+| deliver where connectivity fails (rural pilot schools) | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) — offline-first, branch **`develop`** | 🟢 **MIT** · 1 097 B · `3c056b34a476` |
+| model mastery per objective | [`ZhijieXiong/pyedmine`](https://github.com/ZhijieXiong/pyedmine) · [`bigdata-ustc/EduData`](https://github.com/bigdata-ustc/EduData) | 🟢 **MIT** · 1 085 B · `fc84421fcf96` · 🟢 **Apache-2.0** · 11 346 B · `8aaf2e630b1c` |
+| evaluate any AI tutor before it reaches a classroom | [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) | 🟢 **MIT** · 1 081 B · `c593c2afc813` |
+| the data-protection and permissions record the plan requires | [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** · 1 074 B · `7df20dcdf919` |
+
+**How they wire together.** Each of the **43 objectives** becomes a row in a coverage matrix. Items are
+authored in Markdown and compiled to **QTI 3** by `markdown-to-qti`, so the bank is a **standard** the
+ministry owns rather than a vendor's database — and `qti-convert` is the escape hatch from whatever
+format an incumbent supplier exports. `qti3-item-player` renders them. Because the pilot is explicitly
+rural and the decree funds connectivity only by **`2026-08-01`**, delivery runs through **Kolibri**,
+which is offline-first by design. `pyedmine` and `EduData` turn responses into per-objective mastery, so
+the report back to the ministry is *"objectives 1–43, coverage and mastery"* — the acceptance criterion
+the decree implies. Any generative tutor added later is gated by an `inspect_ai` evaluation, and the
+governance toolkit produces the data-protection documentation the national plan demands.
+
+🔴 **Boundaries, stated.** The decree and its dates are **PRESS-ATTRIBUTED**: `primeminister.kz` — the
+Republic of Kazakhstan's own publisher, and the one source that would settle it — is **unreachable at
+this session's resolver** (`intel/market.md`). 🟢 **The `43` figure and the renamed subjects come from a
+regional news report, not from a ministry document, and must be verified against the published
+curriculum before anything is signed.** 🔴 **Nothing here addresses language**: the pilot is in
+**Kazakh**, and no component above is claimed to work in Kazakh. 🔴 **And `kolibri` is an
+assessment-and-delivery substrate, not a tutor** — this pattern deliberately does not promise one.
+
+
 ## 🟢 Pass 300 — three new patterns (`P66`-`P68`), each built from rows promoted THIS pass, and every component licence PAYLOAD-verified
 
 ⏱️ `2026-10-18`. Evidence:

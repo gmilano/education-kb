@@ -4,6 +4,121 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 301: THREE new agent rows from the DIRECTED leg while the mandated one nil'd a TWENTY-SEVENTH time; a Moodle agent that needs no administrator; and a new row demoted to "diverged fork" by a HEAD check that its licence payload could not have made
+
+Evidence: [`p301-websearch.2026-10-18-p301.tsv`](../evidence/p301-websearch.2026-10-18-p301.tsv) ·
+[`p301-payload-grade.2026-10-18-p301.tsv`](../evidence/p301-payload-grade.2026-10-18-p301.tsv) ·
+[`p301-identity.2026-10-18-p301.tsv`](../evidence/p301-identity.2026-10-18-p301.tsv) ·
+[`p301-probe-calibration.2026-10-18-p301.tsv`](../evidence/p301-probe-calibration.2026-10-18-p301.tsv) ·
+[`p301-instrument-substitution.2026-10-18-p301.tsv`](../evidence/p301-instrument-substitution.2026-10-18-p301.tsv).
+
+🟢 **New on the agents shelf this window: THREE ROWS — the largest single-window gain since `p273`.**
+
+| row | payload licence | stars / forks / commits | the one-line reason |
+|---|---|---|---|
+| 🟢 [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | **MIT**, 1 067 B, sha256₁₂ `66fa873bd85d` | 🔴 **1★ / 1 / 166** | **~230 Moodle tools and NO administrator required** |
+| 🟡 [`chiptoe-svg/canvas-lms-mcp`](https://github.com/chiptoe-svg/canvas-lms-mcp) | **MIT**, 1 070 B, sha256₁₂ `c29329c5ef3b` | 🔴 **0★ / 0 / 287** | **165 tools, 117 read / 48 write, + a FERPA mode** |
+| 🔵 [`YeetingWaterbottle/gradescope-mcp`](https://github.com/YeetingWaterbottle/gradescope-mcp) | **MIT**, 1 089 B, sha256₁₂ `02f326c5fca4` | 🔴 **3★ / 1 / 2** | **read-only by design, and it says so** |
+
+### 🔴 The mandated leg, for the twenty-seventh time
+
+`top open source AI agents education 2026 github MIT` returned general-purpose agents and courseware
+*about* AI: `microsoft/ai-agents-for-beginners`, `avinash201199/free-ai-agents-resources`,
+`NirDiamant/GenAI_Agents`, `e2b-dev/awesome-ai-agents`, OpenHands, OpenClaw, MetaGPT, CrewAI, AutoGen,
+LangGraph. 🟢 **Nil declared with its query and its corpus.** 🔵 One usable datum fell out of it:
+**`AgentGPT` is GPL-3.0 and was ARCHIVED `2026-01-28`** — worth carrying so no engagement starts there.
+
+🟢 **The DIRECTED leg — `open source MCP server student information system grading rubric agent 2026
+github license` — returned nine education-system agents: six carried, three new.** 🔵 **Two
+consecutive passes in which the directed phrasing paid and the mandated phrasing did not. The pattern
+is now replicated, and the sample is stated: 2 passes, 19 returned rows, 4 new, all 4 from directed
+legs.**
+
+### 🟢 The row that changes what a Moodle engagement costs
+
+🔵 **[`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp)'s README: *"No web service
+tokens, no administrator, no plugin: if you can log in, it works."*** Authentication is a browser
+login; the server exposes about **230 tools**, including *"submissions, rubrics and marking guides
+(read and defined)"*.
+
+🔴 **Every other Moodle path this base holds requires a web-services token, a site administrator or a
+plugin install.** That requirement, not the model, is what stalls LMS pilots: it moves the work from a
+teacher's desk into an IT change queue. 🟢 **This row removes that step** — and because the rubric is
+*read*, the agent scores against the institution's own instrument rather than a reconstruction of it.
+
+🔴 **The same property is its risk, stated plainly: a browser-session agent acts with the teacher's
+own credentials.** There is no token to scope, no service account to revoke and no admin-side audit
+trail. 🟢 **Fastest route to a pilot; not a route to production.**
+
+### 🔴 An identity check that a licence read could never have made
+
+🔴 **`chiptoe-svg/canvas-lms-mcp`'s licence payload is BYTE-IDENTICAL to carried
+[`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp)** — 1 070 B, sha256₁₂
+`c29329c5ef3b`, holder *"2026 Christian Bru"* on both. On payload evidence alone the two are
+indistinguishable.
+
+🟢 **`p283`'s rule settled it, and settled it the other way from `p282`:**
+
+| address | HEAD | verdict |
+|---|---|---|
+| `chiptoe-svg/canvas-lms-mcp` | `fa8408a64dc2ba6a94e7863893d303aabf5dc9d5` | 🟢 **distinct repository — row admitted** |
+| `bruchris/canvas-lms-mcp` | `18fa06b5758e52c19ff48155b857f251bf9f8cfc` | 🟢 already carried |
+| `vishalsachdev/canvas-mcp` | `1ffa789eb931138aa2744cafee02b099c1304b30` | 🟢 already carried, unrelated |
+
+🔵 **The lesson generalises past this row: an identical grant is what a fork INHERITS, so payload
+identity is evidence of ANCESTRY, not of aliasing.** `p282` withdrew `ls1intum/Iris` as an alias on
+**equal** HEAD; `p301` admits this one on **unequal** HEAD. Same instrument, opposite verdicts, and
+the discriminator is the HEAD — **never the licence.** ⚠️ **It is shelved as a fork**: its README is
+still the upstream's, and what it changes is undocumented and unread. **0★ / 0 forks against 287
+commits** — committed-to rather than adopted.
+
+### 🔵 Why a two-commit repository earned a row
+
+🟢 **[`YeetingWaterbottle/gradescope-mcp`](https://github.com/YeetingWaterbottle/gradescope-mcp) is
+here as a SHAPE, not a dependency, and the row says so.** Six tools, all reads; the README states it
+*"does not expose Gradescope write operations"* and names what it excludes — grading, roster
+management, extension management, submission upload. Its only local write refuses to overwrite by
+default.
+
+🔵 **The hard part of putting an agent near a gradebook is not reach, it is demonstrating the agent
+CANNOT change a grade.** This is the smallest artefact that demonstrates that tier, and it pairs
+exactly with `chiptoe-svg`'s **117-read / 48-write** split — the same boundary, once without the
+writes and once with them counted. 🔴 **Two commits. Copy the boundary; do not depend on the code.**
+
+### 🟢 A licence this base published from a sidebar is now pinned — found by a classifier that FAILED on it
+
+🟢 **[`aryankeluskar/canvas-mcp`](https://github.com/aryankeluskar/canvas-mcp): `p297` published
+`ISC` *(sidebar)*; `p301` reads the payload — `LICENSE` on `master`, **746 B**, sha256₁₂
+`b3364441534c`, *"ISC License"*, holder *"2025, Aryan Keluskar"*.** 🟢 **Confirmed and upgraded.**
+
+🔵 **It surfaced because the probe could not classify it.** Across 105 reads the classifier returned
+`UNCLASSIFIED` exactly **three** times, and all three were genuinely non-standard: **ISC** here, the
+**proprietary "AStheTECH Community License"** on `AStheTECH/mewcp-google-classroom`, and the **IMS
+Global Specification Document License** on `1EdTech/caliper-spec`. 🟢 **Zero false alarms — so a
+calibrated classifier's refusal to name a grant is a LOCATOR for the unusual ones, not instrument
+failure.** Both of the latter two **confirm their carried cells**, the IMS one byte-exact at 12 402 B.
+
+### 🔴 The search channel reported one licence for a two-grant repository
+
+🔴 The leg described [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp) as
+*"GNU General Public License v3.0 only"*. 🟢 **The root payload is MIT — 1 071 B, sha256₁₂
+`22e7ab2dbddc`** — and the carried row already said the whole truth: *"MIT (2.x); `legacy_reference/`
+GPL-3.0-only"*. 🔵 **The snippet named the restrictive SUBDIRECTORY as the repository's licence.** A
+single-licence answer about a multi-grant tree is wrong even when the licence it names is really
+present — and the shelf row was right before the search was run.
+
+### 🔴 What this window could NOT do
+
+🔴 **`make hooks` and the repository's own `probe_payload.sh` were both DENIED by the sandbox**
+(*"Code from External"*). No standing gate ran against this file, and the payload figures above come
+from a **declared, calibrated re-implementation** — see [`intel/trends.md`](../intel/trends.md)
+`T-p301a`.
+🔴 **No star/forks re-read, fifth window.**
+🔴 **`falkenslab/moodle-mcp`'s implementation language is UNREAD** — the rendered page's Languages
+panel is empty.
+🔴 **What `chiptoe-svg` changes relative to `bruchris` is UNREAD.**
+
+
 ## 2026-10-18 — Pass 300: THE DROUGHT ENDS — a self-hostable Open Badges authoring agent, from the backlog the last two passes retired from this exact question; the mandated leg's TWENTY-SIXTH nil, and the directed leg returned only rows already shelved
 
 Evidence: [`p300-promotion-gap.2026-10-18-p300.tsv`](../evidence/p300-promotion-gap.2026-10-18-p300.tsv) ·

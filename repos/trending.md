@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 301: ONE HUNDRED AND FIVE payload reads — 72% of the unpinned backlog cleared, zero carried licences refuted, and two of this base's trap anecdotes priced as rates (1 row in 10 on a non-default branch, 1 in 12 not at plain `LICENSE`)
+
+Evidence: [`p301-payload-grade.2026-10-18-p301.tsv`](../evidence/p301-payload-grade.2026-10-18-p301.tsv) ·
+[`p301-probe-calibration.2026-10-18-p301.tsv`](../evidence/p301-probe-calibration.2026-10-18-p301.tsv) ·
+[`p301-instrument-substitution.2026-10-18-p301.tsv`](../evidence/p301-instrument-substitution.2026-10-18-p301.tsv) ·
+[`p301-websearch.2026-10-18-p301.tsv`](../evidence/p301-websearch.2026-10-18-p301.tsv).
+
+### 🔴 `github trending education AI 2026` — the FOURTEENTH consecutive window with no NEW education row
+
+The mandated trending leg returned, again, education repositories **this base already carries**:
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (**~41.6k★**, reported *GitHub Trending
+Repository of the Day*), `Miaotofu01/Study-Mate` (~1.1k★), [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom),
+plus `098765d/AI_Tutor` and four GitHub **topic** pages (`ai-tutor`, `ai-education`, `tutoring`,
+`study-assistant`). 🟢 **Non-nil, zero new — declared with its corpus.**
+
+🔵 **Fourteen windows is past the point of re-running the query and worth stating as a property.**
+GitHub's trending surface ranks on **star velocity**; this corpus's load-bearing code does not accrue
+stars at that rate, and `p301`'s own three new agent rows are the demonstration —
+**1★, 0★ and 3★, carrying 166, 287 and 2 commits.** 🟢 **A repository with 287 commits and zero stars
+is invisible to a velocity-ranked channel and perfectly visible to a directed query.** The channel
+that works for this industry is the one that names the system of record.
+
+### 🟢 The pass's substantive work: `p300`'s ranked item 1, discharged at five times its scale
+
+🟢 **105 licence payloads read, each with a byte count and a sha256₁₂.** `p300` read 20 and called it
+this base's best batch.
+
+🔵 **The 146-row target set was derived mechanically**, not chosen: every slug on
+[`repos/foundations.md`](../repos/foundations.md) and [`agents/top.md`](../agents/top.md) extracted
+and de-duplicated (**265**), then partitioned by whether any non-archive line mentioning it carries a
+hash pin (**119 pinned / 146 unpinned**). **105 of the 146 were read — 72 %.**
+
+| family | rows | share |
+|---|---|---|
+| 🟢 **MIT** | **53** | 50.5 % |
+| 🟢 **Apache-2.0** | **16** | 15.2 % |
+| 🟢 **BSD-3-Clause** | **6** | 5.7 % |
+| 🟢 **MPL-2.0** | **1** | 1.0 % |
+| 🔴 **AGPL-3.0** | **5** | 4.8 % |
+| 🔴 **GPL-3.0** | **4** | 3.8 % |
+| 🟡 **LGPL** | **2** | 1.9 % |
+| 🟡 **CC** *(not a software licence)* | **2** | 1.9 % |
+| 🟡 `UNCLASSIFIED` *(all three triaged by hand)* | **3** | 2.9 % |
+| 🔴 **NO PAYLOAD SERVED** | **13** | 12.4 % |
+
+🟢 **Permissive is 76 of 105 (72 %); copyleft 11 (10.5 %).** 🟢 **And not one carried licence cell was
+refuted** — four came back **byte-exact** against figures printed in earlier passes
+(`blend-ed/openedx-mcp` 34 524 B · `codelitdev/courselit` 34 143 B · `1EdTech/caliper-spec` 12 402 B ·
+`nmarafo/OpenDidactia` 2 123 B).
+
+### 🟢 Two anecdotes became rates — and the rates are higher than the instrument's header implies
+
+🔴 **The default branch is neither `main` nor `master` in 11 of 105 rows — `10.5 %`.** `develop` ×4,
+`dev`, `staging`, `unstable`, `v6.2.0`, `0.7`, `3.x`, and
+[`eledia/moodle-block_elediaai_tutor`](https://github.com/eledia/moodle-block_elediaai_tutor) on a
+branch literally named **`51`**. `probe_payload.sh` documents this trap with three examples;
+**one row in ten is the rate.**
+
+🔴 **The grant is not at plain `LICENSE` in 9 of 105 — `8.6 %`.** `LICENSE.md` ×7, `LICENSE.txt` ×2.
+
+🔵 **Compounded, a single-path probe on a hardcoded branch misreports roughly one row in five on this
+shelf.** 🟢 **That is the quantified argument for the shared instrument — and the sharpest irony of
+the pass is that `p301` was not permitted to run it.**
+
+### 🔴 Thirteen rows on these shelves serve no licence payload at all
+
+[`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) ·
+[`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) ·
+[`OpenEMIS/OpenEMIS-Core`](https://github.com/OpenEMIS/OpenEMIS-Core) ·
+[`anastasasenov/bbmcps`](https://github.com/anastasasenov/bbmcps) ·
+[`arijit8972/agentic-automated-assignment-grading`](https://github.com/arijit8972/agentic-automated-assignment-grading) ·
+[`eakarsu/ai-special-education-iep-compliance`](https://github.com/eakarsu/ai-special-education-iep-compliance) ·
+[`eledia/moodle-block_elediaai_tutor`](https://github.com/eledia/moodle-block_elediaai_tutor) ·
+[`hdronamraju/sped-agent`](https://github.com/hdronamraju/sped-agent) ·
+[`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) ·
+[`open-spaced-repetition/fsrs4anki-helper`](https://github.com/open-spaced-repetition/fsrs4anki-helper) ·
+[`openstax/os-webview`](https://github.com/openstax/os-webview) ·
+[`touretzkyds/ai4k12`](https://github.com/touretzkyds/ai4k12) ·
+[`yoyoconnor/BlackboardMCP`](https://github.com/yoyoconnor/BlackboardMCP).
+
+⚠️ **`NO-PAYLOAD` is a statement about the ladder, not a finding of "unlicensed"** — this pass's
+probe omitted the shared instrument's README-link arm, which is exactly how `p300` found
+`OS4ED/openSIS-Classic`'s grant at `docs/License.txt`. 🔴 **Three of the thirteen are special-education
+/ IEP-compliance or automated-grading repositories** — the highest-stakes uses in the corpus, with no
+grant a client can rely on. **None of the thirteen is buildable until the gap is closed.**
+
+### 🟢 Three permissive substrates worth naming from the sweep
+
+🟢 **[`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai)** — **MIT**,
+1 081 B, sha256₁₂ `c593c2afc813`, holder **UK AI Security Institute**. An evaluation framework from a
+national AI safety institute, permissively licensed: the instrument that lets a studio **measure** a
+tutor rather than demonstrate one, with provenance a ministry will accept.
+🟢 **[`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit)** —
+**MIT**, 1 074 B, sha256₁₂ `7df20dcdf919`. The governance layer three regional legs asked for this
+pass.
+🟢 **[`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite)**
+— **Apache-2.0**, 11 351 B, sha256₁₂ `3f17cff4210f`, holder **Intel Corporation** — the holder now
+read at payload rather than inferred from the org name.
+
+### 🔴 And the copyleft rows, pinned, because a studio needs the boundary not the label
+
+| row | family | bytes |
+|---|---|---|
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | **AGPL-3.0** | 36 983 |
+| [`hpi-schul-cloud/schulcloud-server`](https://github.com/hpi-schul-cloud/schulcloud-server) | **AGPL-3.0** | 34 520 |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | **AGPL-3.0** | 34 524 |
+| [`Vacademy-io/vacademy_platform`](https://github.com/Vacademy-io/vacademy_platform) | **AGPL-3.0** | 34 523 |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | **AGPL-3.0** | 34 143 |
+| [`OpenBoard-org/OpenBoard`](https://github.com/OpenBoard-org/OpenBoard) | **GPL-3.0** | 35 147 |
+| [`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine) | **GPL-3.0** | 35 147 |
+| [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | **GPL-3.0** | 35 147 |
+| [`ucsd-ets/openedx-caliper-tracking`](https://github.com/ucsd-ets/openedx-caliper-tracking) | **GPL-3.0** | 35 149 |
+| [`oat-sa/package-tao`](https://github.com/oat-sa/package-tao) | **LGPL** | 18 027 |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | **LGPL** | 18 025 |
+
+🔵 **All eleven stay usable — behind an API boundary, not inside a client deliverable.** 🟢 The two
+`oat-sa` rows are **LGPL**, which is a materially different constraint from the AGPL rows above them,
+and that distinction is now pinned rather than carried as "copyleft".
+
+### 🔴 What this window could NOT do
+
+🔴 **The repository's own `probe_payload.sh` and the whole `make hooks` chain were DENIED by the
+sandbox** (*"Code from External"*). Figures above come from a declared re-implementation, calibrated
+against this base's published pins — `Gego-K12/gegok12` **1 150 B / `b8694396d7dc`** and
+`Submitty/Submitty` **`LICENSE` 404 → `LICENSE.md` 1 542 B / `c123708cb4ef`**, both reproduced
+**byte- and hash-exact**, plus two known-fake slugs returning `UNRESOLVED`.
+🔴 **41 of 146 unpinned rows remain unread.**
+🔴 **The ladder was narrower than the shared tool's** (no README-link arm), so every `NO-PAYLOAD`
+here is a weaker claim than that tool would make.
+🔴 **No primary government or IGO source, TWENTIETH window** — `primeminister.kz` and
+`www.iesalc.unesco.org` both `ENOTFOUND` at the resolver while `github.com` answers.
+
+
 ## 2026-10-18 — Pass 300: THIRTEEN new substrates and FIFTEEN restored — the payload channel three passes called absent was this base's own uncalled instrument, and `p299`'s rows had never reached the shelf table
 
 Evidence: [`p300-promotion-gap.2026-10-18-p300.tsv`](../evidence/p300-promotion-gap.2026-10-18-p300.tsv) ·
