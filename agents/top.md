@@ -27,6 +27,97 @@ updated: 2026-10-18
 > **reproduced every published figure**, and the search-leg ledger
 > [`p269-websearch.2026-10-17-p269.tsv`](../evidence/p269-websearch.2026-10-17-p269.tsv)).
 
+## 🟢 Pass 289 — THE CURRICULUM LAYER IS READABLE AFTER ALL, AND WHAT IT SERVES IS A **RESTATEMENT** OF A LICENCE NOBODY HERE CAN REACH
+
+⏱️ **Eleventh pass of `2026-10-18`.** Evidence:
+[`curriculum-licence-restatement.2026-10-18-p289.tsv`](../evidence/curriculum-licence-restatement.2026-10-18-p289.tsv) ·
+[`curriculum-authority-egress.2026-10-18-p289.tsv`](../evidence/curriculum-authority-egress.2026-10-18-p289.tsv) ·
+[`p289-websearch.2026-10-18-p289.tsv`](../evidence/p289-websearch.2026-10-18-p289.tsv).
+
+🔴 **Mandated agent leg: FIFTEENTH consecutive nil**, same population, same reason —
+`microsoft/ai-agents-for-beginners`, `ashishpatel26/500-AI-Agents-Projects`,
+`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, the Hugging Face Agents Course,
+`rasbt/LLMs-from-scratch`. The one education-shaped hit this pass was a *"Virtual AI Tutor"*
+entry **inside** `500-AI-Agents-Projects` — 🔵 **a link in a catalogue, and the catalogue's own
+MIT badge does not cover the projects it lists.** Recorded so no later pass reads that badge
+as a grant.
+
+### 🟢 The three new agent-layer rows, all MIT, all read first-hand
+
+| agent | address | grant (read from payload) | why it matters |
+|---|---|---|---|
+| 🟢 **Oak Curriculum API** | [`oaknational/oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) | 🟢 **MIT** — root `LICENSE`, **1 077 B**, `main`, HEAD `17fc866b2611`, sha256₁₂ `0eeb9d32caed` | The service layer over the **National Curriculum for England**. 🔴 Its own `LICENSE` covers the **code only**: *"Curriculum content served through the API — lesson materials, videos, worksheets and quizzes — is not covered by this repository's licence."* |
+| 🟢 **Oak AI plugins** | [`oaknational/oak-ai-plugins`](https://github.com/oaknational/oak-ai-plugins) | 🟢 **MIT** — root `LICENSE`, **1 085 B**, `main`, HEAD `f5a1e88242ea`, sha256₁₂ `e90b3e1c8e94` | Oak's Open Curriculum plugin **for AI assistants** — the agent-facing edge of a national curriculum. Curriculum data rides under **OGL v3.0**, not MIT |
+| 🟢 **Oak curriculum ontology** | [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🔵 **SPLIT: MIT** (`CODE-LICENSE.md`, 1 491 B, `427f1d8b0cc1`) **+ OGL v3.0** (`DATA-LICENSE.md`, 2 408 B, `c117e319f357`) | The curriculum **as a knowledge graph** an agent can reason over: 31 classes, 75 properties, **38 SHACL shapes**, Turtle/JSON-LD/RDF-XML/N-Triples/SQLite |
+
+🟡 `oaknational/oak-open-curriculum-ecosystem` returned **`CARRIED`** from `make carried`
+before a row was written, and `fundacion-hiperactiva/ona-oak-ai-plugins` and
+`fh-yarbouh/oak-open-curriculum-ecosystem` are **forks**. Four of seven candidates were not
+new, which is what that gate is for.
+
+### 🔴 The finding a studio has to read before it sells anything "curriculum-aligned"
+
+`ACTION p289` grades a licence payload on an axis no instrument here had:
+**is the payload the licence, or the licensee's RESTATEMENT of one?**
+
+| | self-contained | restated |
+|---|---|---|
+| what it is | the payload **is** the licence (MIT, Apache-2.0, AGPL-3.0) | a paraphrase of a licence whose authoritative text lives on a **third-party host** |
+| verifiable from the clone? | 🟢 yes | 🔴 no |
+| `p742`'s verdict | `GRANTED` | 🔴 **also `GRANTED`** |
+
+Seven payloads over five Oak repositories: **5 `AUTHORITATIVE-BODY` (all MIT — the code) and
+2 `RESTATEMENT` (both OGL v3.0 — the curriculum data).** 🔵 **The split is the finding: the
+code is verifiable and the asset is not.**
+
+🔴 **And both restated payloads require TWO DIFFERENT attributions.** `DATA-LICENSE.md`
+line 19 prescribes, verbatim:
+
+> Contains public sector information licensed under the Open Government Licence v3.0.
+
+…and line 54, in its own summary block, asks instead for `Must provide attribution: "Oak
+National Academy"`. `LICENSE.md` does the same thing forty lines apart (L27 / L67).
+**A studio that credits "Oak National Academy" and stops has not met the condition the same
+file states above it.** 🔵 All three Oak licence files pair terms with a friendly summary, and
+**in all three the summary states the obligation differently from the terms above it** — 3 of
+3. A reader who stops at the summary, which is what a summary is for, discharges the wrong
+obligation.
+
+🟡 `LICENSE.md` also advertises `DATA-LICENSE.md` as the *"Full OGL 3.0 License"*. It is a
+restatement; the authoritative text is at the National Archives. `self_description_verdict()`
+→ **`OVERSTATED`**.
+
+### 🟢 Two things this pass CONFIRMED, and one it REFUTED
+
+- 🟢 **Commercial use is real, and now payload-backed.** `DATA-LICENSE.md`, first-hand:
+  *"exploit the information commercially and non-commercially … by including it in your own
+  product or application."* These shelves have carried that permission **since pass 5 on
+  British education press alone**. It is now read from the grant.
+- 🔴 **The UK-only reservation is REFUTED.** This base has carried *"indicios de restricción
+  geográfica al Reino Unido, que hay que confirmar antes de proponer el corpus fuera de UK"*
+  beside that claim. The payload carries **no territorial term at all**. Its only jurisdiction
+  clause is *"This licence is governed by the laws of England and Wales"* — 🔵 **choice of law,
+  not a restriction on where the corpus may be used.** The reservation is withdrawn.
+- 🟡 **The exemptions are the real bound, and they cannot be closed from the payload.** OGL
+  does not cover *"third party rights Oak National Academy is not authorised to license"* —
+  unbounded from outside, over **50 948 key learning points**. `T-p287a` is sharpened, not
+  discharged: *"curriculum-aligned"* is safe for the **ontology and the structure**, and the
+  per-asset clearance question stays open.
+
+### 🔴 Why the primary sources are not on this page
+
+The register has ranked *"read five national curriculum licences as primary sources"* **first
+for three passes** and no pass had run it. `p289` ran it. **It cannot be run from here:**
+**12 jurisdictions' licensing-authority hosts, 2 independent egress paths, 12/12
+`POLICY-REFUSED`, 0 reachable** — including the National Archives text that Oak's own payloads
+name as authoritative, and **including ACARA**, the one curriculum licence this base has
+always claimed to have read first-hand.
+
+🔵 **That is a measurement, not a deferral**, and it is the same class as the `github.com/trending`
+403 that `p285` struck from the backlog. Every curriculum-licence claim on these shelves is
+sourced from a **derivative publisher's restatement** or from **secondary press** — now stated,
+where before it was silent.
+
 ## 🟢 Pass 288 — BLACKBOARD IS THE FOURTH MCP-ADDRESSABLE LMS AND THE FIRST WHOSE COMMUNITY SERVERS SERVE NO GRANT AT ALL, and special education is a whole category with no permissive answer
 
 ⏱️ **Tenth pass of `2026-10-18`.** Evidence:

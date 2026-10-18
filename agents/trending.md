@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 289) — the mandated nil is FIFTEEN deep, and the week's real agent news is that a NATIONAL CURRICULUM ships an AI-assistant plugin under MIT
+
+⏱️ **Eleventh pass of `2026-10-18`.** Append-only — everything below this section is prior
+history and is not rewritten. Evidence:
+[`curriculum-licence-restatement.2026-10-18-p289.tsv`](../evidence/curriculum-licence-restatement.2026-10-18-p289.tsv) ·
+[`curriculum-authority-egress.2026-10-18-p289.tsv`](../evidence/curriculum-authority-egress.2026-10-18-p289.tsv) ·
+[`p289-websearch.2026-10-18-p289.tsv`](../evidence/p289-websearch.2026-10-18-p289.tsv).
+
+🔴 **Mandated agent leg: FIFTEENTH consecutive nil.** Same five rows, same reason: engineer
+curricula and link catalogues, not learner-facing agents. 🔵 The one new shape in the leg is a
+**catalogue licence mistaken for a project licence** — `ashishpatel26/500-AI-Agents-Projects`
+carries an MIT badge and a *"Virtual AI Tutor"* entry, and the badge covers **the catalogue**.
+The nil is recorded, not hidden: an undeclared nil looks exactly like coverage.
+
+### 🟢 New this week — three MIT rows from one national curriculum agency, all verified first-hand
+
+| agent | grant | what it does |
+|---|---|---|
+| 🟢 [`oaknational/oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) | **MIT**, 1 077 B, `0eeb9d32caed` | Service layer over the National Curriculum for England. 🔴 **Code only** — lesson materials, videos, worksheets and quizzes are explicitly *not* covered |
+| 🟢 [`oaknational/oak-ai-plugins`](https://github.com/oaknational/oak-ai-plugins) | **MIT**, 1 085 B, `e90b3e1c8e94` | Open Curriculum plugin **for AI assistants**: the agent-facing edge of a national curriculum |
+| 🔵 [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | **MIT** (code, `427f1d8b0cc1`) **+ OGL v3.0** (data, `c117e319f357`) | The curriculum as a knowledge graph: 31 classes, 75 properties, **38 SHACL shapes**, Turtle/JSON-LD/RDF-XML/N-Triples/SQLite |
+
+🟡 **Four of seven candidates were not new** — `oak-open-curriculum-ecosystem` returned
+`CARRIED`, and `fundacion-hiperactiva/ona-oak-ai-plugins` plus
+`fh-yarbouh/oak-open-curriculum-ecosystem` are forks.
+
+### 🔴 The licence shape of the week: a grant you can quote and cannot check
+
+`ACTION p289` adds the axis **`AUTHORITATIVE-BODY` vs `RESTATEMENT`** — 40 controls, in
+`make hooks`. Of seven Oak payloads: **5 authoritative MIT bodies (the code), 2 OGL v3.0
+restatements (the curriculum data).** A restatement paraphrases a licence whose real text sits
+on a third-party host, and `p742` grades both as `GRANTED`.
+
+🔴 **Both restatements prescribe two different attributions in the same file** —
+the OGL statement verbatim at `DATA-LICENSE.md` L19, and a bare `"Oak National Academy"`
+credit at L54. **All three** Oak licence files that carry a summary block state the obligation
+differently in the summary than in the terms above it.
+
+🟢 **What this pass confirmed:** commercial use is explicit in the payload —
+*"exploit the information commercially … by including it in your own product or application"* —
+a permission these shelves carried since pass 5 **on British press alone**.
+🔴 **What it refuted:** the *"restricción geográfica al Reino Unido"* reservation. There is no
+territorial term; *"governed by the laws of England and Wales"* is **choice of law**.
+
+### 🔴 And the register's top item, attempted for the first time in three passes
+
+**12 licensing-authority hosts, 2 independent egress paths, 12/12 `POLICY-REFUSED`.** The
+National Archives OGL text, gov.uk, NCERT, BNCC, Common Core, NZ Tahurangi, MOE Singapore, BC,
+DBE, NCCA — **and ACARA**, the one curriculum licence this base has always claimed first-hand.
+The primary-source channel does not exist from this environment; the policy boundary is
+measured per host, per channel, and the item leaves the register as **bounded**, not deferred.
+
 ## 2026-10-18 (pass 288) — the mandated nil is FOURTEEN deep, and the week's new agents are a fifth MCP-addressable LMS plus a special-education category with no permissive answer
 
 ⏱️ **Tenth pass of `2026-10-18`.** Append-only — everything below this section is prior

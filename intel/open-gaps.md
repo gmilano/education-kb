@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 289 — **THE TOP ITEM WAS RUN AT LAST, AND RUNNING IT PROVED IT CANNOT BE RUN FROM HERE**
+
+⏱️ `2026-10-18`, eleventh pass. Evidence:
+[`curriculum-authority-egress.2026-10-18-p289.tsv`](../evidence/curriculum-authority-egress.2026-10-18-p289.tsv) ·
+[`curriculum-licence-restatement.2026-10-18-p289.tsv`](../evidence/curriculum-licence-restatement.2026-10-18-p289.tsv) ·
+[`p289-websearch.2026-10-18-p289.tsv`](../evidence/p289-websearch.2026-10-18-p289.tsv) ·
+[`ladder-case-audit-2026-10-18.tsv`](../evidence/ladder-case-audit-2026-10-18.tsv).
+
+### Discharged this pass
+
+| `p288` item | state | what it turned out to be |
+|---|---|---|
+| **1. read five national curriculum licences as primary sources** (ranked first by `p287` **and** `p288`, unaddressed by both) | 🟢 **DISCHARGED — as a BOUND, not as a reading** | `p289` is the first pass to **attempt** it. **12 licensing-authority hosts across 10 jurisdictions, 2 independent egress paths (curl-through-gateway and WebFetch), 12/12 `POLICY-REFUSED`, 0 reachable.** 🔴 **The primary-source channel does not exist from this environment** — including the National Archives OGL text that Oak's own payloads name as authoritative, and **including ACARA**, the one curriculum licence this base has always claimed to have read first-hand. 🔵 Same class as the `github.com/trending` 403 `p285` struck from the backlog: **a policy boundary, measured per host per channel.** It leaves the register; it does not come back as a deferral |
+| 🟡 **…and the leg was RE-AIMED rather than abandoned** | 🟢 **produced the pass's finding** | Curriculum licences **are** readable where a derivative publisher commits them to a git host. 7 payloads over 5 Oak repositories, read first-hand: **5 `AUTHORITATIVE-BODY` (MIT, the code) and 2 `RESTATEMENT` (OGL v3.0, the curriculum data)** |
+| 🔴 **`p288`'s own residue: fold the README channel into `p278`'s sweep** | 🔴 **NOT ADDRESSED** | Carried. Still the cheapest item on the list — one column in `sweep.sh`, classifier already written. **Two passes now** |
+| 🔴 **A licence-change-with-a-date-boundary column** (`AIHawk`: MIT after `2026-09-02`, AGPL-3.0 before) | 🔴 **NOT ADDRESSED** | Carried unchanged, **two passes** |
+| 🔴 **Teach the enumeration gate that a licence-like path can be a SOURCE FILE** | 🔴 **NOT ADDRESSED** | Carried, **two passes** |
+| 🔵 **An EMEA ed-tech VENDOR leg** | 🔴 **STILL OPEN, and now measured a third time** | `p289`'s EMEA leg again returned **only regulators and standards bodies** — Commission, OECD, UNESCO, national agencies — and **not one EMEA vendor**. Three passes, three nils on the same axis. 🔵 It stays ranked, and the next pass should name vendors in the query rather than the region, which is exactly what broke Africa open at `p284` |
+| 2. family-axis recovery sweep | 🔴 **NOT ADDRESSED** | Carried. Still needs **no network** |
+| 3. `ROOT_OR_SOLE` in the enumeration gate | 🔴 **NOT ADDRESSED** | Carried, **five passes** |
+| 4. widen `gate-identity` to census the enumeration QUEUE | 🔴 **NOT ADDRESSED** | Carried, **five passes** |
+| 7. the licence-intake ASK (seven repositories) | 🔴 **NOT ADDRESSED** | Carried unchanged. **No new entrant this pass** — `p289`'s population was permissive or restated, not silent |
+
+### 🟢 Discharged in passing — two standing defects this pass did NOT set out to fix
+
+- 🟢 **`intel/market.md` is `p383`-clean for the first time: 2 findings → 0.** The gate has
+  reported `P383-MISSING-REGION: Global` on **every run for roughly 170 passes** and no pass
+  discharged it, because the closed vocabulary has **five** values and the canonical block
+  carried four. 🔵 It was never a formality: an opportunity real in all four regions and
+  *placeable in none* was previously written into whichever region the pass happened to be
+  looking at. `### Global` now exists **and carries this pass's cross-region finding**, which is
+  curriculum provenance. The second finding — a non-region `###` sibling inside the canonical
+  block — was **demoted one level**, text unchanged.
+  🔴 **And this pass created the breach it then fixed**: inserting its own
+  `## Opportunities by region` made `P383-MULTIPLE-BLOCKS` = 2. The encargo says **one**. The
+  duplicate was removed and the per-region content merged into the single canonical block.
+- 🟢 **`make ladder-audit` has never written a dated table, and now does.** Its recipe said
+  `$$(date +%%F)`. 🔵 `%%` is not a make escape in a recipe body — it reaches `date` as a
+  literal `%`, so `date +%%F` prints **`%F`** and **every audit this base has ever run wrote to
+  the same undated file `evidence/ladder-case-audit-%F.tsv`**, overwriting its predecessor.
+  Fixed to `$$(date +%F)`; the artefact is deleted and
+  [`ladder-case-audit-2026-10-18.tsv`](../evidence/ladder-case-audit-2026-10-18.tsv) is the
+  first genuinely dated run. 🔴 This base **has** a `p175-dated-evidence-gate`, and the
+  instrument that feeds the ratchet was outside it.
+
+### 🟢 The pass's own instrument, and what its own gates did to it
+
+`ACTION p289` (`compose/code/p289-restatement-authority/`, **40 controls**, in `make hooks`)
+grades a payload on an axis nothing here had: **`AUTHORITATIVE-BODY` vs `RESTATEMENT`**, plus
+the attribution the payload *requires*.
+
+🔴 **`p283`'s ladder ratchet rejected it twice, and both rejections were correct.**
+
+1. Its first ladder was a hand-written list of uppercase stems with lowercase extensions —
+   `CASE-UNVARIED/no-upper-ext`. **The identical defect `p288` was built to fix one family
+   over.** Rewritten as a generated stem × extension cross product; both the `licence` and
+   `copying` families now grade `GENERATED-CASE-VARIED`.
+2. 🔴 **Its first FIX was then measured and rejected too** — crossing stems × extensions ×
+   directories took the probe from **18 requests per repository to 597**. `p286` recorded a
+   rejected fix as a control rather than a sentence; this one is recorded in the probe's own
+   comment, and the ladder was trimmed to **94** with exhaustive recovery left to
+   `pass275-grant-enumeration`, which is where `p288` proved it actually belongs.
+
+🔵 **And a third finding about `p283`'s audit itself, which this pass is the first instrument
+to expose:** the extractor reads an **exact-word alternation in a regex** as path vocabulary
+(its own `C23` asserts exactly that). `p289`'s classifier is the first instrument here whose
+job is to read licence **prose**, so `r"full (?:licence|license) text"` graded it as carrying a
+licence ladder it does not have. Rewritten as the character class `licen[cs]e`, the module
+grades **`COMMENT-ONLY`**, which is the truth: it has no path ladder at all.
+
+### New this pass
+
+| item | why it exists |
+|---|---|
+| 🔴 **Read the OGL v3.0 authoritative text from ANY reachable mirror** | This base now publishes, payload-backed, what Oak's **restatement** of OGL v3.0 permits. It has never read **OGL itself**. 🔵 The restatement is 2 408 B and the real licence is longer; nothing here can say whether the paraphrase is faithful. The authority host is refused, so the leg is: find OGL v3.0 committed **as a payload** in a reachable repository and diff the two. `p289`'s `posture()` already has the `VERIFY` branch waiting for it |
+| 🔴 **The exemption axis: "third party rights … not authorised to license" is UNBOUNDED from outside** | The single most expensive sentence in the pass. Over **50 948 key learning points**, nothing in the payload says *which* assets are third-party. 🔵 `T-p287a` is **sharpened, not discharged**: the ontology and structure are clear, the per-asset clearance is not, and no instrument can close it from a licence file. The remedy is an **ask to the publisher**, and it should join the licence-intake ASK as its eighth entry — the first one that is a *scope* question rather than a *grant* question |
+| 🟡 **`OpenStax` and `Siyavula` returned NOTHING while NAMED IN THE QUERY** | Both were in the gap-directed query verbatim and the leg returned neither. 🔵 A nil on a **named** subject is stronger evidence than a nil on a category, and these are the two best-known permissive textbook corpora in the world (US and South Africa). **Next pass's cheapest directed leg** |
+| 🔴 **Two regulatory DATE CONFLICTS this pass refused to resolve** | EU AI Act high-risk: *Aug 2026* (one guide) vs *31 July 2026* / *27 July 2026* (Commission milestones). Vietnam: compliance *2027-03-01* with a pre-*2026-08-15* grace, vs a report the law took effect *2026-03-01*. 🔵 Both are **recorded as conflicts and asserted by neither shelf** — `p223`'s gate exists because this base once asserted dates it had not reconciled. Resolving them needs primary texts, which is the **same refused channel** as the curriculum licences |
+| 🟡 **A `RESTATEMENT` census over the whole corpus** | `p289` graded 7 payloads. The shelves carry **hundreds**, and the restated population among them is **unmeasured**. Every CC-BY, OGL or ministry-terms cell on any shelf is a candidate. `probe.sh` takes a slug list and the classifier is written; this is a **sweep, not a build** |
+
 ## Pass 288 — **THE TOP-RANKED ITEM WAS NOT TOUCHED, AND SAYING SO IS THE POINT OF THIS REGISTER**
 
 ⏱️ `2026-10-18`, tenth pass. Evidence:

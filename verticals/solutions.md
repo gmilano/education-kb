@@ -18,6 +18,63 @@ updated: 2026-10-18
 > (its source is AGPL-3.0, 78,765 commits), and adds a European public-sector school platform, an
 > e-testing platform and an offline assessment platform.
 
+## 🟢 Pass 289 — THE PLATFORM SHELF GAINS A LAYER THAT IS NOT A PLATFORM: THE **CURRICULUM ITSELF**, CEDED AND ADDRESSABLE
+
+⏱️ **Eleventh pass of `2026-10-18`.** Evidence:
+[`curriculum-licence-restatement.2026-10-18-p289.tsv`](../evidence/curriculum-licence-restatement.2026-10-18-p289.tsv) ·
+[`curriculum-authority-egress.2026-10-18-p289.tsv`](../evidence/curriculum-authority-egress.2026-10-18-p289.tsv).
+
+🟢 Four passes asked *"can an agent reach this platform"*. This pass asks the question one layer
+down: **once the agent is in, what is it allowed to teach?** A platform licence clears the
+*software*. The **curriculum** is a separate grant, held by a separate body, and until this pass
+no row on this shelf named one.
+
+| layer | example | licence | who holds it |
+|---|---|---|---|
+| LMS / platform | Moodle, Canvas, Open edX | GPL-3.0 / AGPL-3.0 | the software project |
+| integration | MCP servers (`p267`, `p268`, `p288`) | MIT…none | the server's author |
+| **curriculum content** | **National Curriculum for England via Oak** | 🔵 **OGL v3.0 (restated)** | 🔴 **a national agency — NOT the platform, NOT the integrator** |
+
+🔴 **A studio that clears Moodle and Canvas has cleared nothing about the lessons.** That is
+the whole reason this row exists.
+
+### 🟢 The vertical row
+
+| platform | platform licence | agent reach | content grant | permissive? |
+|---|---|---|---|---|
+| **Oak National Academy Open Curriculum** | 🟢 **MIT** — API (`0eeb9d32caed`), SDK/MCP (`02c5a8e84229`), plugins (`e90b3e1c8e94`) | 🟢 **MCP, public beta** (`mcp.thenational.academy/mcp`) + SDK + ontology | 🔵 **OGL v3.0**, commercial use **explicit** in payload | 🟡 **code yes; content is OGL, which is permissive-equivalent for use but is a RESTATEMENT here** |
+
+⚠️ **Two operational conditions, both read first-hand and both easy to miss.** The API needs a
+**free API key on request**, and the ecosystem repo **does not accept external PRs** — so the
+pattern is *consume the service and own your client*, not *fork the platform*.
+
+### 🔴 The grant shape, because it changes what "customizable" means
+
+`ACTION p289` grades this content layer as a **`RESTATEMENT`**: the payload paraphrases OGL
+v3.0 and points at `nationalarchives.gov.uk` for the authoritative text — a host measured
+**`POLICY-REFUSED`** from this environment along with **11 other** licensing authorities
+(12/12, two independent egress paths).
+
+🔵 **So the vertical recipe for a content layer differs from the one for a platform.** For
+Moodle you read the platform's own licence and you are done. For a curriculum you get
+**three** artefacts that must agree: the publisher's restatement, the authority's text, and
+the per-asset exemptions — and here **only the first is readable**. Record the bound in the
+engagement; do not fold it into "OGL, fine".
+
+🔴 **And the attribution the shelf must ship is the prescribed one, not the friendly one.**
+`DATA-LICENSE.md` L19 prescribes `"Contains public sector information licensed under the Open
+Government Licence v3.0."`; L54 of the same file asks for `"Oak National Academy"`. All three
+Oak licence files carrying a summary block do this. **Ship both strings.**
+
+### 🟢 What a studio gets, concretely
+
+The **ontology and structure** — 50 948 key learning points, 11 207 misconceptions, 7 432
+prerequisite edges, 160 progression threads, **38 SHACL shapes** — are commercially clear
+under the payload's own words. 🟡 What is not clear from the payload is the exemption for
+*"third party rights Oak National Academy is not authorised to license"*: that is a **per-asset
+clearance**, and an engagement that ships Oak's **graph** is on much firmer ground than one
+shipping Oak's **media**.
+
 ## 🟡 Pass 288 — the MCP-addressable platform set gains BLACKBOARD, and it is the first entrant whose integration layer carries no grant
 
 ⏱️ **Tenth pass of `2026-10-18`.** Evidence:

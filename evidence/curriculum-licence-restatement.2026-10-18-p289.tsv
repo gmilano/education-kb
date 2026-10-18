@@ -1,0 +1,58 @@
+# p289 — 2026-10-18 — EVERY PAYLOAD READ FIRST-HAND on an `ls-remote --symref`-resolved ref.
+# Graded by `compose/code/p289-restatement-authority/probe.sh` (18-path ladder, British AND
+# American spellings, EVERY rung that answers 200 recorded -- the probe never stops at the
+# first hit, because a dual-licensed curriculum repo graded on its first 200 gets filed under
+# its CODE licence while the DATA it exists to publish sits under another one).
+#
+# classification   AUTHORITATIVE-BODY  the payload IS the licence; the body travels with the clone
+#                  RESTATEMENT         the licensee's paraphrase of a licence authored elsewhere
+#                  BARE-REFERENCE      a name and a link, no operative terms
+#                  NO-GRANT            neither
+# attribution      SINGLE | DISAGREEMENT | NONE  -- how many DIFFERENT required attribution
+#                                                  forms the one payload prescribes
+# body_vs_summary  does the friendly summary state the SAME obligation as the terms above it?
+#
+# 🔵 THE SPLIT IS THE FINDING: the CODE is verifiable and the DATA is not.
+slug	ref	head_sha	path	http	bytes	sha256_12	classification	attribution	body_vs_summary	authority_host
+oaknational/oak-curriculum-ontology	main	52489e604870	LICENSE.md	200	1867	98ac0c16f708	RESTATEMENT	DISAGREEMENT	SUMMARY-REPLACES-PRESCRIBED	nationalarchives.gov.uk
+oaknational/oak-curriculum-ontology	main	52489e604870	DATA-LICENSE.md	200	2408	c117e319f357	RESTATEMENT	DISAGREEMENT	SUMMARY-REPLACES-PRESCRIBED	nationalarchives.gov.uk
+oaknational/oak-curriculum-ontology	main	52489e604870	CODE-LICENSE.md	200	1491	427f1d8b0cc1	AUTHORITATIVE-BODY	SINGLE	SUMMARY-ADDS-OBLIGATION	-
+oaknational/oak-open-curriculum-ecosystem	main	2a77738377a4	LICENCE	200	1086	02c5a8e84229	AUTHORITATIVE-BODY	NONE	NO-SUMMARY	-
+oaknational/oak-curriculum-api	main	17fc866b2611	LICENSE	200	1077	0eeb9d32caed	AUTHORITATIVE-BODY	NONE	NO-SUMMARY	-
+oaknational/oak-ai-plugins	main	f5a1e88242ea	LICENSE	200	1085	e90b3e1c8e94	AUTHORITATIVE-BODY	NONE	NO-SUMMARY	-
+oaknational/oak-ai-lesson-assistant	main	626fc5681184	LICENSE	200	1077	d150aadcccd2	AUTHORITATIVE-BODY	NONE	NO-SUMMARY	-
+# ---- TALLY: 7 payloads, 5 repositories ----
+#   AUTHORITATIVE-BODY  5   (all MIT -- the code layer)
+#   RESTATEMENT         2   (both OGL v3.0 -- the CURRICULUM DATA layer, 50 948 key learning
+#                            points, 11 207 misconceptions, National Curriculum for England 2014)
+#   DISAGREEMENT        2   both restated payloads prescribe TWO different attributions
+#   SUMMARY diverges    3 of 3 files that HAVE a summary block
+#
+# ---- THE TWO VERBATIM ATTRIBUTION CONFLICTS, with line numbers ----
+# DATA-LICENSE.md L19  > Contains public sector information licensed under the Open Government Licence v3.0.
+# DATA-LICENSE.md L54  * ⚠️ Must provide attribution: "Oak National Academy"
+# LICENSE.md      L27  - ⚠️ Acknowledge the source with the attribution: "Contains public sector information licensed under the Open Government Licence v3.0."
+# LICENSE.md      L67  When using this work, please credit **"Oak National Academy"**.
+# CODE-LICENSE.md L38  **Attribution:** When using this work, please credit **"Oak National Academy"**
+#                      ...over a VERBATIM MIT body whose own condition is the copyright-and-
+#                      permission notice.  MIT does not require a credit string.
+#
+# ---- SELF-DESCRIPTION ----
+# LICENSE.md advertises DATA-LICENSE.md as the "Full OGL 3.0 License".  It is a RESTATEMENT.
+# `self_description_verdict()` -> OVERSTATED.
+#
+# ---- BLIND RE-MEASURE OF TWO CARRIED ROWS (p269's corroboration arm) ----
+# oak-ai-lesson-assistant LICENSE   shelf claimed 1 077 B / d150aadcccd2  -> REPRODUCED EXACTLY
+# oak-open-curriculum-ecosystem LICENCE  shelf claimed 1 086 B / 02c5a8e84229 -> REPRODUCED EXACTLY
+#
+# ---- WHAT THE RESTATED PAYLOAD ACTUALLY PERMITS (read first-hand, DATA-LICENSE.md) ----
+# 🟢 "exploit the information commercially and non-commercially ... by including it in your
+#    own product or application" -- COMMERCIAL USE IS EXPLICIT.  This CONFIRMS, from payload,
+#    a claim these shelves have carried since pass 5 on BRITISH EDUCATION PRESS alone.
+# 🔴 "This licence is governed by the laws of England and Wales" is a CHOICE-OF-LAW clause and
+#    NOT a territorial restriction.  There is NO UK-only term anywhere in the payload.  This
+#    REFUTES the "indicios de restricción geográfica al Reino Unido" reservation this base has
+#    carried beside that claim.  See intel/open-gaps.md.
+# 🟡 The exemptions BIND what "curriculum-aligned" can ship and cannot be resolved from the
+#    payload: "third party rights Oak National Academy is not authorised to license" is
+#    unbounded from outside, over a corpus of 50 948 learning points.  T-p287a sharpened.

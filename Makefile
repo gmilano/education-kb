@@ -25,9 +25,9 @@ IDENTITY_LOG ?= /tmp/education-kb-gate-identity.log
 LADDER_LOG ?= /tmp/education-kb-gate-ladder.log
 README_LOG := $(shell mktemp)
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement
 
-hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case gate-readme-channel ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel
+hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case gate-readme-channel gate-restatement ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer
 
 # 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
 # p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
@@ -147,6 +147,19 @@ provenance-census: ## ACTION p280 — which controls name a real repo and assert
 gate-readme-channel: ## ACTION p288 — a README-only grant claim or reservation is not "no channel"
 	@cd compose/code/p288-readme-channel && { $(PY) -I test_readme_claim.py > $(README_LOG) 2>&1 || { echo "🔴 p288-readme-channel FAILED — the suite's own report follows:" ; sed "s/^/   /" $(README_LOG) ; false ; } ; } && echo "── p288-readme-channel (32 controls: the lowercase rung, the MIT-RAISE collision arm, the postfix/markdown-link claim, reservation-outranks)" && echo "   PASS" || exit 1
 
+RESTATEMENT_LOG := $(shell mktemp)
+
+# 🟢 p289: `p742` asks whether a licence file carries a GRANT BODY or only a POINTER.  A
+# payload can carry operative terms and still be the LICENSEE'S RESTATEMENT of a licence
+# whose authoritative text lives on a third-party host -- which is where every public-sector
+# CURRICULUM grant lives (OGL v3.0, the CC suite, ministry terms).  Both grade GRANTED under
+# p742; only one can be verified from the clone.  Oak's curriculum ontology publishes the
+# National Curriculum for England under TWO restated payloads, and both of them require a
+# DIFFERENT attribution string in their summary block from the one they prescribe in their
+# terms.  No network: the fixtures are the payloads, quoted verbatim with their sha256s.
+gate-restatement: ## ACTION p289 — a restatement of an unreachable authority is not a verified grant
+	@cd compose/code/p289-restatement-authority && { $(PY) -I test_restatement.py > $(RESTATEMENT_LOG) 2>&1 || { echo "🔴 p289-restatement-authority FAILED — the suite's own report follows:" ; sed "s/^/   /" $(RESTATEMENT_LOG) ; false ; } ; } && echo "── p289-restatement-authority (40 controls: the OGL restatement pair, the MIT collision arm, the CC generality arm, posture keyed to MEASURED reachability)" && echo "   PASS" || exit 1
+
 gate-identity: ## ACTION p283 — no shelf may recommend one repository under two live rows
 	@cd compose/code/p283-repo-identity && { $(PY) test_identity_gate.py > $(IDENTITY_LOG) 2>&1 || { echo "🔴 p283-repo-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(IDENTITY_LOG) ; false ; } ; } && echo "── p283-repo-identity (12 controls: withdrawn-in-place, the cross-table index, both halves in one cell)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p283-repo-identity/identity_gate.py --root . || exit 1
@@ -169,7 +182,7 @@ gate-ladder-case: ## ACTION p283 — which path ladders can find an uppercase ex
 	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . | tail -2
 
 ladder-audit: ## ACTION p283 — the full per-ladder table.  make ladder-audit FAMILY=readme
-	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . $(if $(FAMILY),--family $(FAMILY),) --out evidence/ladder-case-audit-$$(date +%%F).tsv
+	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . $(if $(FAMILY),--family $(FAMILY),) --out evidence/ladder-case-audit-$$(date +%F).tsv
 
 # 🔴 ONLINE half — one `git ls-remote` per live build-on address.  OUT of `hooks`.
 # A HEAD collision is a FINDING, not a verdict: two distinct forks share a HEAD on the day

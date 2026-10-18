@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 289 — THE TREND IS NO LONGER "AI IN EDUCATION", IT IS **GOVERNANCE**, AND THE GOVERNED OBJECT IS ASSESSMENT
+
+⏱️ `2026-10-18`, eleventh pass. Evidence:
+[`p289-websearch.2026-10-18-p289.tsv`](../evidence/p289-websearch.2026-10-18-p289.tsv) ·
+[`curriculum-licence-restatement.2026-10-18-p289.tsv`](../evidence/curriculum-licence-restatement.2026-10-18-p289.tsv).
+
+### 🟢 1. Experimentation → governance, and this is now the consensus rather than a forecast
+
+The mandated trends leg returned the same shape from every independent source: institutions
+have stopped *trying tools* and started building **policy, oversight and evaluation**. The
+operative phrase across the leg — *"clear policies, data boundaries, and oversight"*.
+
+🔵 **Why a studio should care about the direction of that sentence.** When the constraint was
+capability, the deliverable was a model. When the constraint is governance, the deliverable is
+an **auditable workflow** — and audit artefacts are specifiable, testable and billable in a way
+"better answers" never was. The regions agree: 🇱🇹 Lithuania is building a **register of
+approved tools**, 🇺🇸 Oklahoma and Maryland **bar AI from high-stakes student decisions**,
+🇻🇳 Vietnam names **automated assessment** high-risk.
+
+### 🔴 2. The governed object is ASSESSMENT, specifically, in two binding regimes
+
+| regime | what is named |
+|---|---|
+| 🇪🇺 EU AI Act | systems that **evaluate learners** or **influence access to qualifications** → high-risk |
+| 🇻🇳 Vietnam | **automated assessment** and **behavioural monitoring**, among six high-risk sectors |
+
+🔵 **"AI that grades" is the most-requested education build and the most-regulated one.** This
+base has carried grading agents since early passes; the trend worth recording is that the
+compliance surface around them stopped being European and became **plural**.
+
+🔴 **Both regimes' dates are in conflict across sources and this shelf asserts neither.** The
+EU: *Aug 2026* per one guide, *31 July 2026* / *27 July 2026* per the Commission's own
+milestones page. Vietnam: compliance *2027-03-01* with a pre-*2026-08-15* grace, against a
+report that the law took effect *2026-03-01*. 🔵 `p223`'s date gate exists because this base
+once asserted dates it had not reconciled. **A conflict recorded is worth more than a date
+guessed.**
+
+### 🟢 3. Teacher-first, and time saved is the retention predictor
+
+The leg is consistent: deployments that begin with **teachers** outlast those that begin with
+students, and **time saved** predicts whether a school keeps using a tool. HolonIQ places the
+clearest measured gains in **course design support** and **teacher productivity** — *not* in
+broad personalisation, which it expects to be displaced by *"proven instructional benefit"*.
+
+🔵 **This is the single most actionable trend in the file** and it inverts a common pitch: the
+buyer is the teacher's calendar, not the learner's engagement curve. Adoption data agrees —
+**60%** of US K-12 teachers used AI in 2024-25 (**32%** weekly), **75%** of Uruguayan
+public-school teachers, **56%/55%/53%/52%** in Brazil/Chile/Colombia/Costa Rica against an
+**OECD average of 36%**.
+
+### 🔴 4. Adoption has outrun governance, and the number is now institutional
+
+**UNESCO IESALC, 200 institutions, 19 countries: 87% use AI, 26% have a formal strategy.**
+**1 in 2 students** reports confusion about what use is appropriate.
+
+🔵 **A 61-point gap between practice and policy is a demand signal with a name.** It is also
+why the governance trend above is not a compliance tax but the product: the institutions have
+already adopted, and they know they are exposed.
+
+### 🟢 5. NEW this pass — "curriculum-aligned" is a LICENCE claim, and it has a readable layer
+
+This pass read a national curriculum's grant first-hand for the first time by going to the
+**publisher's repository** rather than the ministry's website. The result splits:
+
+- 🟢 **The code is verifiable** — 5 of 7 Oak payloads are `AUTHORITATIVE-BODY` MIT.
+- 🔴 **The curriculum data is a `RESTATEMENT`** — a paraphrase of OGL v3.0 whose authoritative
+  text sits on a host measured unreachable (12 licensing authorities, 12/12 `POLICY-REFUSED`).
+
+🔵 **The trend statement, and it will outlast this pass:** as curricula are published **as
+data** — ontologies, SHACL shapes, APIs, MCP servers — the alignment claim becomes **checkable**
+and the licence becomes **the constraint**. England has ceded its curriculum with commercial
+use explicit. 🟡 The direction of travel is that *"curriculum-aligned"* stops being marketing
+and starts being a validation run against 38 shapes — and the next question in every engagement
+is **which jurisdiction's curriculum is licensed for what you are about to sell**.
+
+### 🔴 6. Digital credentials and skills-based hiring — carried, not promoted
+
+The leg again reports momentum behind digital credentials and skills-based hiring, driven by
+shifting employer expectations. 🟡 **Carried as a direction with no figure attached**: the leg
+offered none that was not vendor-sourced, and this shelf has spent five passes learning what
+that costs.
+
 ## 🟢 `T-p288a` — the human checkpoint stopped being a UX choice and became THE REGULATORY INTERFACE, in all four regions at once
 
 🔵 **The trend, stated as the thing a studio actually hits.** Four regional legs ran this pass

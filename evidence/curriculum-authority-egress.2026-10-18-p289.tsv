@@ -1,0 +1,46 @@
+# p289 — 2026-10-18 — THE REGISTER'S TOP ITEM, ATTEMPTED AND BOUNDED.
+# `p287` item 1 ("read five national curriculum licences as PRIMARY SOURCES") was ranked
+# first by p287 and p288 and NOT ADDRESSED by either.  p289 is the first pass to ATTEMPT it.
+# It cannot be done from this environment, and that is a MEASUREMENT, not a deferral.
+#
+# Two independent channels, both recorded:
+#   dns          — `getent hosts <host>` inside the sandbox
+#   curl_connect — `curl -sI` through the agent proxy; 000 means the GATEWAY refused CONNECT
+#
+# 🔵 The channels AGREE, and the agreement is what makes the reading safe: allowlisted hosts
+# resolve locally AND answer (raw.githubusercontent.com dns=RESOLVES https=301;
+# github.com dns=RESOLVES https=400), so NXDOMAIN here is a gated resolver rather than a
+# dead domain, and the gateway's own relay-failure ledger names each refusal:
+#   "gateway answered 403 to CONNECT (policy denial or upstream failure)"
+# The ledger named 11 of the 12 rows below by host at the time it was read
+# ($HTTPS_PROXY/__agentproxy/status, p798's ledger channel); basenacionalcomum.mec.gov.br
+# was probed in the same batch and is carried on its curl verdict alone.
+#
+# 🔴 CONSEQUENCE FOR THE SHELVES: every curriculum-licence claim this base publishes is
+# sourced from a DERIVATIVE PUBLISHER's restatement or from secondary press, never from the
+# licensing authority's own text.  That is now a stated bound, not a silence.  The ONE
+# exception this base has always claimed first-hand — ACARA (CC BY) — is on this table too,
+# and it is POLICY-REFUSED like the rest.
+jurisdiction	document	url	dns	curl_connect	gateway_ledger	verdict
+England	National Curriculum (programmes of study)	https://www.gov.uk/government/collections/national-curriculum	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+England	OGL v3.0 AUTHORITATIVE TEXT (the authority Oak's payloads name)	https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+Australia	ACARA v9 copyright and terms of use	https://v9.australiancurriculum.edu.au/copyright-and-terms-of-use	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+Australia	ACARA copyright (acara.edu.au)	https://www.acara.edu.au/contact-us/copyright	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+New Zealand	NZ Curriculum (Tahurangi)	https://newzealandcurriculum.tahurangi.education.govt.nz/	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+Singapore	MOE syllabuses	https://www.moe.gov.sg/	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+India	NCERT copyright	https://ncert.nic.in/	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+Brazil	BNCC (MEC)	http://basenacionalcomum.mec.gov.br/	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+USA	Common Core public licence	https://www.thecorestandards.org/public-license/	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+Canada (BC)	BC curriculum	https://curriculum.gov.bc.ca/	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+South Africa	DBE CAPS	https://www.education.gov.za/Curriculum/NationalCurriculumStatementsGradesR-12.aspx	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+Ireland	NCCA curriculum online	https://curriculumonline.ie/	NXDOMAIN	000 (CONNECT refused)	403 to CONNECT	POLICY-REFUSED
+# ---- the WebFetch channel, probed separately on the same hosts ----
+# WebFetch is a DIFFERENT egress path from curl and it fails the same way, which is why this
+# is a policy boundary rather than a tooling defect:
+#   www.gov.uk                -> getaddrinfo ENOTFOUND www.gov.uk
+#   www.thecorestandards.org  -> getaddrinfo ENOTFOUND www.thecorestandards.org
+#   ncert.nic.in              -> getaddrinfo ENOTFOUND ncert.nic.in
+#   corestandards.org         -> getaddrinfo ENOTFOUND corestandards.org
+# and it SUCCEEDS on the allowlisted host, same call shape, same pass:
+#   raw.githubusercontent.com/AaronGrace978/EduHelp/main/LICENSE -> read, graded AGPL-3.0
+# TALLY: 12 rows probed, 12 POLICY-REFUSED, 0 REACHABLE, across 2 independent egress paths.

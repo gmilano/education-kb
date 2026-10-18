@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 289) — the trending channel is still 403, and the pass's most valuable repository is 8 stars wide and holds a national curriculum
+
+⏱️ **Eleventh pass of `2026-10-18`.** Append-only. Evidence:
+[`curriculum-licence-restatement.2026-10-18-p289.tsv`](../evidence/curriculum-licence-restatement.2026-10-18-p289.tsv) ·
+[`curriculum-authority-egress.2026-10-18-p289.tsv`](../evidence/curriculum-authority-egress.2026-10-18-p289.tsv) ·
+[`p289-websearch.2026-10-18-p289.tsv`](../evidence/p289-websearch.2026-10-18-p289.tsv).
+
+🔴 **No first-hand trending, same measured reason, carried as settled policy.**
+`github.com/trending` answers **403** and `api.github.com/repos/{owner}/{repo}` is refused by
+**session repo scope**. Both are *policy* boundaries, struck from the backlog by `p285`.
+**No star count in this pass is first-hand, so this pass publishes none.**
+
+🔴 **Mandated trending leg: nil for education, sixth pass running.** `karpathy/nanochat`,
+`caramaschiHG/awesome-ai-agents-2026`, `developer-roadmap`, Open WebUI, the DeepLearning.AI and
+Microsoft GenAI-for-Beginners courses. Engineer curricula and general infrastructure. The one
+GitHub-Education datum in the leg — Copilot Student gaining **200 monthly AI credits from
+2026-06-01** — is a *plan change*, not a repository.
+
+### 🟢 The repositories that did come in, and why the ranking channel would never have found them
+
+| repo | grant (payload, first-hand) | why it is here |
+|---|---|---|
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🔵 **MIT** code `427f1d8b0cc1` · **OGL v3.0** data `c117e319f357` | **38 SHACL shapes** over the National Curriculum for England. A *validatable* national curriculum |
+| [`oaknational/oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) | 🟢 **MIT**, 1 077 B, `0eeb9d32caed` | The API layer. 🔴 Code only — curriculum content excluded in its own `LICENSE` |
+| [`oaknational/oak-ai-plugins`](https://github.com/oaknational/oak-ai-plugins) | 🟢 **MIT**, 1 085 B, `e90b3e1c8e94` | Curriculum plugin for AI assistants |
+
+🔵 **None of these would ever surface on a star ranking, and that is the standing argument of
+this shelf:** a repository published by a *national curriculum agency* is worth more to an
+engagement than one with forty thousand stars published by a vendor. The asset is the **ceded
+curriculum**, not the popularity.
+
+### 🟢 Two carried rows blind-re-measured, and both reproduced EXACTLY
+
+| row | shelf claimed | `p289` measured | verdict |
+|---|---|---|---|
+| `oaknational/oak-ai-lesson-assistant` `LICENSE` | 1 077 B · `d150aadcccd2` | 1 077 B · `d150aadcccd2` | 🟢 **reproduced** |
+| `oaknational/oak-open-curriculum-ecosystem` `LICENCE` | 1 086 B · `02c5a8e84229` | 1 086 B · `02c5a8e84229` | 🟢 **reproduced** |
+
+That is `p269`'s corroboration arm doing its job: the figures on these shelves were measured,
+not copied.
+
+### 🔴 The probe bug worth recording, because `set -u` is the only reason it was caught
+
+`p289`'s own `probe.sh` wrote payload captures to `"$OUT/$safe__..."`. Bash parses `$safe__` as
+the variable **`safe__`**, not `safe` followed by `__`. Under `set -u` it aborted on the first
+repository. **Without it, every payload would have been written to the same path and the last
+one graded five times** — and the dual-licence split the instrument exists to find is exactly
+what that would have erased. 🔵 A probe that records *every* rung answering 200, rather than
+stopping at the first, is the same lesson in the other direction: a repo that splits its grant
+by directory gets filed under its **code** licence while the **data** sits under another one.
+
 ## 2026-10-18 (pass 288) — the trending channel is still 403, and the pass's largest repository is 1 531 files because it COMMITS `node_modules`
 
 ⏱️ **Tenth pass of `2026-10-18`.** Append-only. Evidence:

@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 289 — 2026-10-18 — **THE ITEM THIS REGISTER RANKED FIRST FOR THREE PASSES WAS FINALLY RUN, AND RUNNING IT PROVED THE CHANNEL DOES NOT EXIST**
+
+**One-line summary:** the gap-directed leg *"read five national curriculum licences as primary
+sources"* — ranked **first** by `p287` and by `p288`, run by **neither** — was run, and
+**12 licensing-authority hosts across 10 jurisdictions are `POLICY-REFUSED` on 2 independent
+egress paths, 12/12, zero reachable**; re-aimed at the channel that *is* reachable, it read a
+**national curriculum's grant first-hand for the first time** and found that the curriculum
+data ships under a **`RESTATEMENT`** — a paraphrase of OGL v3.0 whose authoritative text sits
+on one of those refused hosts — **requiring two different attributions in the same file**.
+`ACTION p289` builds that axis (**40 controls**, in `make hooks`), and `p283`'s ratchet then
+**rejected the new instrument twice**, the second time rejecting its own first *fix*.
+
+### 🟢 What was found
+
+🔴 **The mandated battery is now FIFTEEN consecutive nils on the agent leg**, nil for education
+on the trending leg for the **sixth** pass, and **no new permissive education ERP/CRM for the
+tenth**. Every leg, global and regional, is written down with what it returned in
+[`evidence/p289-websearch.2026-10-18-p289.tsv`](evidence/p289-websearch.2026-10-18-p289.tsv) —
+an undeclared nil looks exactly like coverage.
+
+| finding | verdict |
+|---|---|
+| The **primary-source** channel for curriculum licences | 🔴 **does not exist from here** — 12 hosts, 2 egress paths, **12/12 `POLICY-REFUSED`**, incl. the National Archives OGL text **and ACARA**, the one licence this base claimed first-hand |
+| A national curriculum's grant, read from a **publisher's repository** instead | 🟢 **7 payloads over 5 Oak repositories, all first-hand** |
+| The split between those 7 | 🔵 **5 `AUTHORITATIVE-BODY` (MIT — the code) · 2 `RESTATEMENT` (OGL v3.0 — the curriculum DATA)**. The code is verifiable and **the asset is not** |
+| What both restated payloads require | 🔴 **TWO different attributions**, 35 and 40 lines apart in the same file |
+| Files pairing terms with a friendly summary | 🔴 **3 of 3 state the obligation differently in the summary than in the terms above it** |
+| `LICENSE.md` calling `DATA-LICENSE.md` the *"Full OGL 3.0 License"* | 🔴 **`OVERSTATED`** — it is a restatement |
+| Commercial use under OGL, carried since pass 5 **on British press alone** | 🟢 **CONFIRMED from payload**: *"exploit the information commercially … by including it in your own product or application"* |
+| The *"restricción geográfica al Reino Unido"* reservation carried beside it | 🔴 **REFUTED** — no territorial term exists; *"governed by the laws of England and Wales"* is **choice of law** |
+| `make carried` on 7 candidates | 🟡 **4 were not new** — 1 `CARRIED`, 2 forks |
+
+### 🟢 Two standing defects discharged in passing
+
+- 🟢 **`intel/market.md` is `p383`-clean for the first time, 2 findings → 0.** The gate has
+  reported `P383-MISSING-REGION: Global` on **every run for ~170 passes**: the closed vocabulary
+  has five values and the canonical block carried four. `### Global` now exists and carries this
+  pass's genuinely cross-region finding. 🔴 **This pass also created, and then removed, a
+  `P383-MULTIPLE-BLOCKS` breach of its own** — the encargo says **one** canonical block.
+- 🟢 **`make ladder-audit` has never written a dated table.** Its recipe said `$$(date +%%F)`;
+  `%%` is not a make escape in a recipe body, so `date` printed the literal **`%F`** and every
+  audit ever run overwrote `evidence/ladder-case-audit-%F.tsv`. Fixed. 🔴 This base **has** a
+  `p175-dated-evidence-gate`, and the instrument feeding the ratchet sat outside it.
+
+### 🔴 What this pass's own gates did to this pass
+
+**`p283`'s ladder ratchet rejected `ACTION p289` twice, and both times it was right.**
+
+1. The instrument's first ladder was uppercase stems with lowercase extensions —
+   `CASE-UNVARIED/no-upper-ext`, **the identical defect `p288` was built to fix one family
+   over**. Rewritten as a generated cross product; `licence` and `copying` both now grade
+   `GENERATED-CASE-VARIED`.
+2. 🔴 **The first fix was then measured and rejected too**: crossing stems × extensions ×
+   directories took the probe from **18 requests per repository to 597**. Trimmed to **94**,
+   with exhaustive recovery left to `pass275-grant-enumeration` — where `p288` proved it
+   belongs, because the tree, not the ladder, is what found `bbmcps`'s lower-case `readme.md`.
+
+🔵 **And one finding about `p283`'s audit itself:** its extractor reads an exact-word regex
+alternation as path vocabulary (its own `C23` asserts that). `p289`'s classifier is the first
+instrument here whose job is reading licence **prose**, so `r"full (?:licence|license) text"`
+made it look like a ladder. As the character class `licen[cs]e` it grades **`COMMENT-ONLY`** —
+the truth, since it has no path ladder at all.
+
+🔵 **Also measured:** `set -u` caught `"$OUT/$safe__..."` in this pass's own probe, which bash
+parses as the variable **`safe__`**. Without it, every payload would have been written to one
+path and **the last one graded five times** — erasing precisely the dual-licence split the
+instrument exists to find.
+
+### 🟢 Two carried rows blind-re-measured, both reproduced exactly
+
+`oak-ai-lesson-assistant` `LICENSE` (1 077 B · `d150aadcccd2`) and
+`oak-open-curriculum-ecosystem` `LICENCE` (1 086 B · `02c5a8e84229`) — the figures on these
+shelves were measured, not copied.
+
+### 🔵 What a studio takes from this pass
+
+**England is the one jurisdiction in this base whose curriculum is ceded for commercial reuse,
+and the proof is now a payload rather than a press cutting.** Build on the **graph** — 50 948
+key learning points, 11 207 misconceptions, **38 SHACL shapes**, so *"curriculum-aligned"*
+becomes a validation run rather than a claim ([`P43`](compose/patterns.md)). Ship **both**
+attribution strings, and gate the licence layer in CI, because `p742` and every off-the-shelf
+scanner grade a restatement `GRANTED` ([`P44`](compose/patterns.md)). 🟡 Clear the **media**
+per engagement: OGL exempts third-party rights Oak cannot license, and over 50 948 learning
+points that exemption is unbounded from outside.
+
 ## Pass 288 — 2026-10-18 — **THE GATE THAT GRADES A NEW ROW WAS READING TWO CHANNELS OUT OF THREE, AND BOTH OF THIS PASS'S DECISIVE SIGNALS LIVED IN THE THIRD**
 
 **One-line summary:** a directed leg opened **Blackboard Learn** as the fifth MCP-addressable

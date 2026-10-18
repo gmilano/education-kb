@@ -13,6 +13,109 @@ updated: 2026-10-18
 > Each pattern states the licence boundary — the line the client's proprietary code must stay
 > on to keep a copyleft platform from colouring the deliverable.
 
+## 🟢 Pass 289 — the first recipe in this file whose alignment claim is CHECKABLE, and a gate that stops a restated licence shipping as a verified one
+
+⏱️ **Eleventh pass of `2026-10-18`.** Evidence:
+[`curriculum-licence-restatement.2026-10-18-p289.tsv`](../evidence/curriculum-licence-restatement.2026-10-18-p289.tsv) ·
+[`curriculum-authority-egress.2026-10-18-p289.tsv`](../evidence/curriculum-authority-egress.2026-10-18-p289.tsv).
+
+### `P43` — the curriculum-aligned tutor whose alignment is VALIDATED, not asserted
+
+🔵 **Why this recipe did not exist before pass 289.** This base has published
+*"curriculum-aligned"* for roughly 200 passes with **no alignment target in it**. An agent said
+*"this lesson covers fractions at year 5"* and nothing could contradict it. Pass 289 found a
+target that can.
+
+**The licence boundary first, because it is unusual and it is split by directory:**
+
+| component | address | grant (payload, first-hand) | boundary |
+|---|---|---|---|
+| curriculum graph | [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) `ontology/` `data/` `docs/` | 🔵 **OGL v3.0** — `DATA-LICENSE.md`, 2 408 B, `c117e319f357`. **`RESTATEMENT`** | commercial use **explicit**; 🔴 exemption for third-party rights is **not closable from the payload** |
+| graph tooling | same repo, `scripts/` + `.github/workflows/` | 🟢 **MIT** — `CODE-LICENSE.md`, 1 491 B, `427f1d8b0cc1` | clean |
+| curriculum service | [`oaknational/oak-curriculum-api`](https://github.com/oaknational/oak-curriculum-api) | 🟢 **MIT**, 1 077 B, `0eeb9d32caed` | 🔴 **code only** — *"lesson materials, videos, worksheets and quizzes are not covered"* |
+| agent edge | [`oaknational/oak-ai-plugins`](https://github.com/oaknational/oak-ai-plugins) | 🟢 **MIT**, 1 085 B, `e90b3e1c8e94` | clean |
+| SDK + MCP | [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT**, 1 086 B, `02c5a8e84229` | ⚠️ **API key required** (free, on request); **no external PRs accepted** |
+| the agent | client code | proprietary | stays proprietary — nothing above is copyleft |
+
+**The wiring, in the order it must be built:**
+
+1. **Pull the graph, not the media.** Clone `oak-curriculum-ontology` and load
+   `data/` + `ontology/` — Turtle, JSON-LD, RDF/XML, N-Triples, SQLite or property-graph
+   JSONL. 🔵 **Take the SQLite build for a pilot**: 50 948 key learning points, 11 207
+   misconceptions, 7 432 prerequisite edges, 160 progression threads, 12 subjects, queryable
+   with no triplestore to operate.
+2. **Make "aligned" a validation, not a claim.** The repo ships **38 SHACL shapes**. The agent
+   emits a *proposed* lesson plan carrying the key-learning-point IRIs it claims to cover;
+   the pipeline validates that against the shapes. **A plan that does not validate does not
+   reach a teacher.** This is the step that distinguishes `P43` from every prior tutor recipe
+   in this file.
+3. **Use the prerequisite edges as the tutor's actual policy.** 7 432 prerequisite relations
+   and 160 progression threads are a ready-made curriculum ordering. Remediation becomes a
+   **graph walk backwards** from the failed objective, not a prompt asking the model what
+   comes first.
+4. **Mine the misconceptions as assessment distractors.** 11 207 recorded misconceptions are
+   the highest-value and least-replicable asset in the corpus: generating *plausible wrong
+   answers* is exactly what a model does badly and what this graph already contains.
+5. **Reach live content through MCP**, not by vendoring: `mcp.thenational.academy/mcp` (public
+   beta) plus the TypeScript/Zod SDK. Own the client; do not fork the platform — the repo takes
+   no external PRs.
+6. 🔴 **Emit BOTH attribution strings** (see `P44`; the payload prescribes two and says which
+   discharges it nowhere).
+7. 🟡 **Clear the media per engagement.** Ship the **graph**; treat lesson videos, worksheets
+   and quizzes as out of scope until cleared — the API's own `LICENSE` excludes them and OGL
+   exempts third-party rights Oak cannot license.
+
+**Where this is sellable:** 🇬🇧 **England first** — the only jurisdiction in this base whose
+curriculum is ceded with commercial use explicit. 🔵 The *pattern* ports anywhere a ministry
+publishes curriculum as data; the *corpus* does not port, because the grant is national.
+
+---
+
+### `P44` — the licence-provenance gate: stop a RESTATED grant from shipping as a VERIFIED one
+
+🔴 **The failure this prevents, and it is one line in a deliverable.** A build pulls a
+curriculum corpus, a scanner reports *"OGL-3.0 — permissive, commercial use allowed"*, and the
+compliance file says the grant was verified. **It was not.** The payload was the licensee's
+**paraphrase**; the authoritative text lives on a third-party host, and in this environment
+**12 of 12** licensing authorities are unreachable. `p742` grades that payload `GRANTED`, and
+so does every off-the-shelf licence scanner.
+
+**The wiring:**
+
+1. Vendor [`compose/code/p289-restatement-authority/`](code/p289-restatement-authority/README.md)
+   into the client's CI (**40 controls**, no network needed for the suite).
+2. On every dependency carrying a licence payload, run `classify_payload()`:
+   **`AUTHORITATIVE-BODY`** → the body travels with the clone, nothing more owed.
+   **`RESTATEMENT`** → the real text is elsewhere; record the authority host.
+   **`BARE-REFERENCE`** / **`NO-GRANT`** → **stop the build**.
+3. For each `RESTATEMENT`, probe its authority host and pass the **measured** result to
+   `posture()`. Reachable → `VERIFY` (diff the restatement against the authority and keep the
+   diff). Unreachable → `USE-WITH-RECORDED-BOUND`. Nobody probed → `UNPROBED`.
+   🔵 **The posture is a property of the environment, not of the repository** — the same payload
+   grades differently behind a different egress policy, which is exactly the fact a compliance
+   file should carry and normally loses.
+4. Run `attribution_verdict()`. **`DISAGREEMENT` means the payload prescribes two different
+   obligations**, and the build emits **both**:
+
+   ```
+   Contains public sector information licensed under the Open Government Licence v3.0.
+   Oak National Academy
+   ```
+
+   🔴 Both Oak OGL payloads do this. Crediting *"Oak National Academy"* alone — the form the
+   friendly summary asks for — **does not meet the condition the same file states 35 lines
+   above it**.
+5. Run `body_vs_summary_attribution()`. **3 of 3** Oak licence files with a summary block state
+   the obligation differently there than in their terms. 🔵 **Gate the summary, because the
+   summary is what a human reads.**
+6. Run `self_description_verdict()`. `LICENSE.md` advertises `DATA-LICENSE.md` as the
+   *"Full OGL 3.0 License"*; it is a restatement → **`OVERSTATED`**. A file's claim about itself
+   is not evidence about itself.
+
+**What the client gets:** a compliance file that distinguishes *"we read this grant"* from
+*"we read someone's description of this grant and here is the host we could not reach"* —
+and the attribution strings, emitted by the build rather than remembered by a developer.
+
 ## 🟢 Pass 288 — two recipes for the shape this pass actually found: a platform you can REACH but not VENDOR, and a compliance design that exists only in unusable code
 
 ⏱️ **Tenth pass of `2026-10-18`.** Evidence:

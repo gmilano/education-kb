@@ -25,6 +25,60 @@ updated: 2026-10-18
 > carried as the only permissive North American system of record for roughly 200 passes while
 > *this* file carried no Ed-Fi row at all.
 
+## 🟢 Pass 289 — THE FOUNDATION LAYER GAINS A **NATIONAL CURRICULUM AS A VALIDATABLE GRAPH**, and the grant under it is a restatement
+
+⏱️ **Eleventh pass of `2026-10-18`.** Evidence:
+[`curriculum-licence-restatement.2026-10-18-p289.tsv`](../evidence/curriculum-licence-restatement.2026-10-18-p289.tsv) ·
+[`curriculum-authority-egress.2026-10-18-p289.tsv`](../evidence/curriculum-authority-egress.2026-10-18-p289.tsv) ·
+[`p289-websearch.2026-10-18-p289.tsv`](../evidence/p289-websearch.2026-10-18-p289.tsv).
+
+🔴 **Mandated vertical/ERP leg: no new permissive education row, TENTH pass running.** Apache
+OFBiz (Apache-2.0), Huly (Apache-2.0), Krayin CRM (MIT), Aureus ERP (MIT), Atomic CRM (MIT),
+iDempiere, Compiere, ERPNext (**GPL-3.0**, the only system in the leg naming Education among
+its verticals), Dolibarr (GPL-3.0), Twenty (**AGPL-3.0 / BSL — source-available, not open
+source**). 🔵 The leg's own summary states the finding: *"The results don't identify any MIT or
+Apache project built for education."* **Ten passes. The education ERP/CRM gap is a gap in the
+world, not in this base's searching** — administration is served by copyleft or by proprietary
+SIS vendors, and a studio needing a permissive admin core **builds** it.
+
+### 🟢 The new foundation row, and it is a layer this file did not have
+
+| repo | grant (read from payload) | what it puts under an engagement |
+|---|---|---|
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🔵 **SPLIT** — **MIT** (`CODE-LICENSE.md`, 1 491 B, sha256₁₂ `427f1d8b0cc1`) for `scripts/` and workflows · **OGL v3.0** (`DATA-LICENSE.md`, 2 408 B, `c117e319f357`) for `ontology/`, `data/`, `docs/` | The **National Curriculum for England (2014)** as a formal graph: 31 classes, 75 properties, **38 SHACL shapes**, served as Turtle, JSON-LD, RDF/XML, N-Triples, SQLite and property-graph JSONL. 50 948 key learning points, 11 207 misconceptions, 7 432 prerequisites, 160 progression threads, 12 subjects |
+
+🔵 **Why this belongs on the foundation shelf and not only on a trending one.** Every other
+row in this file is a *platform* — something an engagement runs. This is a **curriculum
+substrate**: an agent that claims a learning objective can be made to *validate* that claim
+against 38 SHACL shapes instead of asserting it. 🔴 **This base has published
+"curriculum-aligned" for ~200 passes with no alignment target in it.** This is the first row
+that is one.
+
+### 🔴 The grant beneath it is not the kind this file has been grading
+
+`ACTION p289` separates two populations `p742` collapses:
+
+- **`AUTHORITATIVE-BODY`** — the payload *is* the licence; the body travels with the clone.
+  Every MIT/Apache/AGPL row on this shelf is one.
+- **`RESTATEMENT`** — the payload *paraphrases* a licence authored by a third party, and names
+  an off-repo host for the real text. **Both grade `GRANTED` under `p742`.**
+
+The OGL half of this row is a `RESTATEMENT`, and 🔴 **the authority it names
+(`nationalarchives.gov.uk`) is one of 12 licensing-authority hosts measured
+`POLICY-REFUSED` from this environment — 2 independent egress paths, 12/12, zero reachable.**
+
+🔵 **Stated plainly for a studio:** the structure, the ontology and the SHACL shapes are
+**usable and commercially clear** — read first-hand from the payload:
+*"exploit the information commercially and non-commercially … by including it in your own
+product or application."* What is **not** closable from the payload is the exemption for
+*"third party rights Oak National Academy is not authorised to license"* across 50 948 learning
+points. **Build on the graph; clear the assets per engagement.**
+
+🟡 **One obligation to get right, because the payload states it twice and differently.** OGL
+prescribes `"Contains public sector information licensed under the Open Government Licence
+v3.0."`; the same file's summary block asks for `"Oak National Academy"`. **Ship both.** The
+cheaper reading is the one the file's own terms do not support.
+
 ## 🔴 Pass 288 — the foundation layer gained NOTHING this pass, and the reason is worth more than a filler row
 
 ⏱️ **Tenth pass of `2026-10-18`.** Evidence:
