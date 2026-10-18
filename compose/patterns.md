@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 292 — the evidence store, BUILT; and the backlog entry that asked for it was wrong about its own size
+
+⏱️ **Fourteenth pass of `2026-10-18`.** Evidence:
+[`decision-store-worked.2026-10-18-p292.jsonl`](../evidence/decision-store-worked.2026-10-18-p292.jsonl) ·
+[`p292-websearch.2026-10-18-p292.tsv`](../evidence/p292-websearch.2026-10-18-p292.tsv).
+
+🟢 **`p291`'s ranked item 1 is done.** The component `P45`-`P48` terminate in — *"an append-only
+record of who decided what, shown what, under which rubric version"* — exists, with **90
+offline controls** in `make hooks`:
+[`compose/code/p292-decision-evidence-store`](code/p292-decision-evidence-store/README.md).
+It needs no network, no server and no dependency outside the standard library.
+
+🔴 **And building it refuted the entry that asked for it.** `p290` wrote *"three recipes … and
+one evidence store"*; `p291` wrote *"now **four** recipes, one build"*. Measured against the
+shelves, **two** recipes terminate in the decision record:
+
+| recipe | what the shelf actually says it needs | is it this component? |
+|---|---|---|
+| `P45` admissions | *"the evidence store — you build it"*; *"the append-only decision record"* | 🟢 **yes** |
+| `P48` vocational | *"Terminate in the evidence store — the same append-only record"* | 🟢 **yes** |
+| `P46` retention | *"the **intervention log** — date, method, response, outcome"* | 🔴 **adjacent** — an outcome log over time |
+| `P47` grading | *"a built **deadline-and-evidence** layer"*, *"statutory, calendar-bound"* | 🔴 **adjacent** — a calendar |
+
+🔵 **Why that is not a wording quibble.** *"One build"* sounds like one thing, so it was costed
+as one thing — and deferred as one thing, for **four passes**. Stated correctly it is **one
+substrate, four schemas**: all four surfaces write into the same chain, each with its own
+closed act vocabulary, and `P46` and `P47` each additionally need a component this store does
+**not** supply. 🟢 Said that way it was buildable in a single pass. 🔴 Arm `S2` makes the
+overclaim standing — no line mentioning the store may assert more store-bearing recipes than
+the shelves carry — and it fails `p291`'s own sentence.
+
+### 🔴 The boundary, because this product category's standard overclaim is exactly here
+
+The chain is **tamper-EVIDENT, not tamper-proof.** It catches an edit, a deletion or a reorder
+*in place*; it does **not** catch a writer who rewrites the whole file, because that writer
+recomputes every link and the result verifies clean. 🟢 **Control `C18` asserts that failure as
+a control**, so no reader of the suite can mistake the guarantee, and `anchor_statement()`
+prints the sentence beside the real head value. What closes the gap is publishing `head()`
+where the writer cannot reach it — **the anchor is the client's**.
+
+### 🟢 The one place where the obvious control was the wrong one
+
+The tempting rule is to reject a decision identical to the agent's recommendation as a rubber
+stamp. 🔴 That is wrong twice over: a human who agrees with a correct recommendation **has still
+decided**, and a store that rejects agreement teaches its users to stop recording the
+recommendation — destroying the only evidence the question can be answered from. 🟢 So
+concurrence is **derived, sealed into the digest, and never refused**, and `concurrence_rate()`
+returns `(concurred, comparable, rate)`. **A rate near 1.0 over a large denominator is the
+rubber-stamp finding** an oversight audit is actually looking for, and it is measurable only
+because the record was kept. The worked example reports `2/6 = 0.33`.
+
+## P49 — The oversight record sold as the deliverable, because the agent layer is now free and the record never was *(new in pass 292)*
+
+**Target:** any client whose education or vocational AI output reaches a human who then decides
+— EU **Annex III(3)** high-risk oversight, the **Oklahoma / Maryland** bar on AI in high-stakes
+student decisions, **Vietnam**'s sole-basis test. 🔵 All three regimes ask the *same* question —
+*can you show a human decided, and what they were shown?* — so one implementation answers all
+of them, in all four regions.
+
+🔵 **Why this is the billable half.** `P45`-`P48` establish that the agent layer is MIT and
+free: `iblai`'s segment configs are `GRANTED-AT-PIN` MIT, `cedanl/student-signal` is MIT. 🔴 What
+no repository on these shelves supplies, after 292 passes of looking, is **the record**. A
+client cannot buy it, cannot defend an audit without it, and the four regimes above all
+terminate in it.
+
+### The wiring
+
+| layer | what to use | licence | why this one |
+|---|---|---|---|
+| the record | [`compose/code/p292-decision-evidence-store`](code/p292-decision-evidence-store/README.md) | 🟢 **this base's** — reference implementation, adapt freely | 106 offline controls; JSON-Lines + sha256 chain; no server, no dependency outside the standard library. An auditor reads it with `jq` |
+| the acts | `SURFACES` — admissions · retention · grading · credential · vocational | — | 🔵 A **closed** vocabulary per surface, so *"scored"* can never be written in the slot that means *"decided"* |
+| the agent layer | `iblai/*-agents` at their pins · [`cedanl/student-signal`](https://github.com/cedanl/student-signal) | 🟢 **MIT** | already verified at the pin (`p291`); the store records them as `role: "advisory"` and refuses any other role |
+| the anchor | 🔴 **the client's** — publish `head()` daily outside the writer's reach | the client's | 🔴 Without it the chain is tamper-evident only. **Say so in the SOW**; `anchor_statement()` prints the sentence |
+| the read model | 🔴 **beside the chain, never in it** | the client's | Deliberate non-feature: a store that also serves queries stops being append-only the first time someone needs an index rebuilt |
+
+### What you hand over
+
+1. **The chain** — one JSON line per decision, `fsync`ed, linked by sha256 over canonical bytes.
+2. **Ten refusals that are controls, not validation** — the agent cannot be recorded as the
+   decider (`R1`); no decision without the digest-bound observations the human saw (`R2`); no
+   decision without the rubric version in force (`R3`); distress routes to a **named human**,
+   not a queue (`R10`); the subject reference must be pseudonymous (`R9`).
+3. **`verify()`** — a chain walk that catches edit-in-place, deletion and reorder, with the
+   file-and-line of every finding.
+4. **`concurrence_rate()`** — the rubber-stamp measurement, per surface.
+5. **`limb_census()`** — every Annex III limb exercised, `NONE-DECLARED` included, which is
+   `P48` step 2's recorded exclusion and the first thing an auditor probes.
+
+### 🔴 What to check before quoting
+
+- 🔴 **Retention is out of scope and jurisdiction-specific.** `R9` keeps the long-lived record
+  pseudonymous so retention stays a client decision; the schedule itself is counsel's.
+- 🔴 **`R1` fixes attribution, not authorisation.** It ensures the *record* cannot misattribute
+  the decision. It cannot stop a badly-scoped agent from writing elsewhere — that is
+  `auth-profiles.json` and the host sandbox policy, as `P45` already says.
+- 🟡 **The Annex III limb tokens are `ATTRIBUTED`**, keyed to a conference reproduction plus
+  commentary; EUR-Lex has been unreachable since `p289`. The code does not depend on the
+  wording — `ANNEX_LIMBS` is a closed token set. Check the Official Journal before a client
+  relies on the mapping.
+- 🟢 **Licence surface is clean**: standard library only, so there is no third-party grant to
+  audit in the deliverable itself.
+
 ## 🟢 Pass 291 — the licence boundary, corrected and completed; and one recipe for the part of the AI Act that the segment labels hide
 
 ⏱️ **Thirteenth pass of `2026-10-18`.** Evidence:
@@ -86,9 +188,18 @@ unreachable from here (`p289`). Verify against the Official Journal before a cli
    mapping from payload language → Annex III limb so the engineer's words and the auditor's
    list meet. **This is the deliverable nothing on these shelves supplies.**
 5. **Terminate in the evidence store** — the same append-only record of *who decided what,
-   shown what, under which rubric version* that [`P45`](#p45--the-admissions-reader-that-is-structurally-incapable-of-admitting-anyone-new-in-pass-290),
-   `P46` and `P47` all terminate in. 🔵 It is still missing, it is still the billable half, and
-   `P48` makes **four** recipes that need the identical component.
+   shown what, under which rubric version* that [`P45`](#p45--the-admissions-reader-that-is-structurally-incapable-of-admitting-anyone-new-in-pass-290)
+   terminates in. 🟢 **BUILT in `p292`:**
+   [`compose/code/p292-decision-evidence-store`](code/p292-decision-evidence-store/README.md),
+   106 offline controls, in `make hooks`. Write this surface's acts through the `vocational`
+   vocabulary and record the limb — `NONE-DECLARED` included, which is step 2's exclusion.
+   🔴 **CORRECTED in `p292`:** this step used to read *"that `P45`, `P46` and `P47` all terminate
+   in … `P48` makes **four** recipes that need the identical component."* Measured against the
+   shelves it is **two** — `P46` needs an **intervention log** and `P47` a
+   **deadline-and-evidence layer**, which are adjacent components, not this one. 🔵 *"One
+   build"* sounded like one thing, so it was costed as one thing and deferred for four passes;
+   stated as **one substrate, four schemas** it took a single pass. Arm `S2` now fails the old
+   sentence.
 
 **Shape.** 🔵 Steps 1-2 are a 2-3 week audit that is sellable on its own and produces the
 inventory the rest depends on. Steps 3-4 are ~4 weeks. Step 5 is the build, and it is the same
@@ -146,7 +257,7 @@ permitted in all three regimes today.
 | funnel siblings | same repo → `enrollment-agent`, `yield-agent`, `prospective-student-agent` | 🟢 MIT | the same rubric and the same refusal across the whole funnel, so one evidence schema covers all of it |
 | host runtime | [`iblai/iblai-claw-setup`](https://github.com/iblai/iblai-claw-setup) (OpenClaw) or **NVIDIA NemoClaw** | 🟢 MIT / per vendor | the configs are drop-in: copy `openclaw.json`, `.config-hash`, `agents/`, `skills/`, `workspace/` into `/sandbox/.openclaw/`, recompute the hash, reload the gateway |
 | systems of record | `skills/slate` (admissions), `skills/banner` (SIS), `skills/salesforce-education-cloud`, `skills/workday` | 🟢 MIT **adapters** | 🔴 the adapter is MIT; **Slate, Banner, Salesforce and Workday are proprietary** — contract, credentials and API terms per system. This is the schedule risk, not the licence |
-| 🔴 **the evidence store** | **you build it** | **the client's** | 🔴 **Nothing in the stack records anything.** This is the deliverable — see below |
+| 🟢 **the evidence store** | [`compose/code/p292-decision-evidence-store`](code/p292-decision-evidence-store/README.md) — **built in `p292`**, adapt it | 🔴 the **anchor** is the client's | 🔴 **Nothing else in the stack records anything**, and that is still the deliverable. 🟢 Now a reference implementation rather than a line item: 106 offline controls, `admissions` act vocabulary, `R1` refuses the agent as decider, `R10` routes distress to a named human. 🔴 It is tamper-**evident**, not tamper-proof — publish `head()` outside the writer's reach |
 
 ### The flow
 

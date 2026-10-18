@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 292 — NO NEW AGENT ROW, the mandated leg's EIGHTEENTH nil, and one deployed state education agent that cannot be carried because it has no grant
+
+⏱️ **Fourteenth pass of `2026-10-18`.** Evidence:
+[`p292-websearch.2026-10-18-p292.tsv`](../evidence/p292-websearch.2026-10-18-p292.tsv) ·
+[`decision-store-worked.2026-10-18-p292.jsonl`](../evidence/decision-store-worked.2026-10-18-p292.jsonl).
+
+🔴 **No row is added to the table below this pass.** What was searched, and what each leg
+returned, is written down leg by leg in the evidence TSV — **four mandated legs, four regional
+legs, three directed legs**. Summary of the misses, because an informed gap is information:
+
+| leg | outcome | why it produced no row |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **NIL, 18th consecutive** | population unchanged since `p275`; the hits are **courses about building agents** and general-purpose frameworks, not education-sector agents |
+| `github trending education AI 2026` | 🔴 **NIL for education, 9th** | `github.com/trending` answers `403`; the leg degrades to third-party trackers |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **NIL for a NEW permissive platform, 13th** | 10 of 10 results were vendor-glossary or directory pages; the three named platforms are all **already carried** |
+| `AI education industry trends 2026` | 🟡 non-nil, **no code** | market sizing and adoption percentages only |
+| the four mandated regional legs | 🔴 EMEA **6th nil** · 🟡 APAC thin · 🟢 NA and LATAM non-nil | policy, money and adoption figures; **no repository address in any of the four** |
+| `Egypt in Arabic` *(directed, `p291` item 9)* | 🟢 **non-nil** | returned a **deployed** state education agent with **no grant** — see below |
+| `Mexican education CODE in Spanish` *(directed, `p291` item 10)* | 🔴 **NIL on code** | the Mexican state ships education platforms as **services behind an identity gate**, not repositories. Leg **discharged as a measured negative** |
+
+### 🔴 `سيا` (Sia) — an education agent in production that this shelf cannot carry
+
+🟢 Egypt's MCIT launched, early 2026, a secondary-school **AI teacher** named `سيا` (Sia)
+alongside the national LLM `كرنك` (Karnak), which officials place inside **public digital
+infrastructure** so startups can build on it.
+🔴 **No repository, no licence, no code channel reachable from here.** 🟡 ATTRIBUTED to Egyptian
+press and MCIT announcements; primary government sources were not read.
+
+🔵 **Recorded as a named non-row on purpose.** The quality bar on this shelf is a real repo URL,
+a real licence and a real description; `Sia` has none of the three. Writing it into the table
+would compile an entity whose licence field is a guess. 🔵 It is written **here** so the next
+pass recognises it rather than re-discovering it as new. The same posture covers **TokenAI's
+Horus family** (reported MIT / Apache-2.0, Cairo) — recorded in full with its four refused
+verification channels on [`agents/trending.md`](trending.md), **not admitted here**.
+
+### 🟢 What DID change for every agent row on this shelf
+
+🟢 **The thing these agents' recommendations terminate in now exists:**
+[`compose/code/p292-decision-evidence-store`](../compose/code/p292-decision-evidence-store/README.md),
+**106 offline controls**, in `make hooks`. 🔴 **Refusal `R1` is the one that concerns this
+shelf: an agent cannot be recorded as the decider.** Every row here that scores, ranks, flags
+or recommends about a learner is an *advisory* input under the Act's education limb, and the
+store refuses to record it as anything else — `R5b` rejects any agent `role` but `"advisory"`.
+🔵 `P45` has said in prose since `p290` that *"the prompt is not a control."* That sentence now
+has an implementation behind it.
+
 ## 🟢 Pass 291 — ALL SEVEN SEGMENTS ARE VERIFIED **AT THE PIN**, THE RULE THAT SAID THEY COULDN'T BE WAS THIS BASE'S OWN, AND THE FIVE "NOT EDUCATION" SEGMENTS EACH SHIP A TRAINING AGENT
 
 ⏱️ **Thirteenth pass of `2026-10-18`.** Evidence:

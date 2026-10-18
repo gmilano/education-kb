@@ -23,11 +23,12 @@ GATE_LOG ?= /tmp/education-kb-gate-enumeration.log
 TABLE_LOG ?= /tmp/education-kb-gate-tables.log
 IDENTITY_LOG ?= /tmp/education-kb-gate-identity.log
 LADDER_LOG ?= /tmp/education-kb-gate-ladder.log
+STORE_LOG ?= /tmp/education-kb-gate-evidence-store.log
 README_LOG := $(shell mktemp)
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store
 
-hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case gate-readme-channel gate-restatement gate-pin-grant ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis
+hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm
 
 # 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
 # p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
@@ -173,6 +174,21 @@ PIN_GRANT_LOG ?= /tmp/education-kb-gate-pin-grant.log
 gate-pin-grant: ## ACTION p291 — a submodule grant is verified AT THE PIN, and no shelf may cite a superproject without the boundary
 	@cd compose/code/p291-submodule-pin-grant && { $(PY) test_pin_grant.py > $(PIN_GRANT_LOG) 2>&1 || { echo "🔴 p291-submodule-pin-grant FAILED — the suite's own report follows:" ; sed "s/^/   /" $(PIN_GRANT_LOG) ; false ; } ; } && echo "── p291-submodule-pin-grant (31 controls: the read-at-HEAD rejection, the 7-submodule census, block-scoped shelf claims, append-only live-section scope)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p291-submodule-pin-grant/pin_grant.py --root . || exit 1
+
+# 🟢 `ACTION p292` (p291's ranked item 1) — THE EVIDENCE STORE, BUILT.  `P45`-`P48` each
+# terminate in "an append-only record of who decided what, shown what, under which rubric
+# version", each said "you build it", and for four passes nothing here supplied it.
+# 🔴 Building it refuted the backlog entry that asked for it: p291 said FOUR recipes need the
+# identical component; the shelves carry TWO.  `P46` needs an intervention log and `P47` a
+# deadline-and-evidence layer — adjacent components, not this one.  "One build" sounded like
+# one thing, so it was costed as one thing and never started.  Arm `S2` makes that overclaim
+# standing and fails p291's own sentence.
+# 🔵 The suite is OFFLINE, so it belongs in `hooks`.  Control `C18` asserts the honest limit:
+# a full rewrite of the file verifies CLEAN.  The chain is tamper-EVIDENT, not tamper-proof,
+# and what closes the gap is anchoring `head()` outside the writer's reach.
+gate-evidence-store: ## ACTION p292 — the decision record's own controls, and no recipe may depend on a component it does not locate
+	@cd compose/code/p292-decision-evidence-store && { $(PY) test_decision_store.py > $(STORE_LOG) 2>&1 || { echo "🔴 p292-decision-evidence-store FAILED — the suite's own report follows:" ; sed "s/^/   /" $(STORE_LOG) ; false ; } ; } && echo "── p292-decision-evidence-store (106 controls: the agent-as-decider refusal, the shown-digest binding, the tamper-evident limit asserted as C18, and S2's recipe-count overclaim)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p292-decision-evidence-store/decision_store.py --root . || exit 1
 
 gate-identity: ## ACTION p283 — no shelf may recommend one repository under two live rows
 	@cd compose/code/p283-repo-identity && { $(PY) test_identity_gate.py > $(IDENTITY_LOG) 2>&1 || { echo "🔴 p283-repo-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(IDENTITY_LOG) ; false ; } ; } && echo "── p283-repo-identity (12 controls: withdrawn-in-place, the cross-table index, both halves in one cell)" && echo "   PASS" || exit 1

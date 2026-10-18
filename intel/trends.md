@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 292 — THE COMPLIANCE RECORD IS THE PRODUCT, THE NATIONAL LANGUAGE IS THE CHANNEL FOR THE THIRD TIME, AND THE LICENCE RISK RUNS OPPOSITE TO EXPECTATION
+
+⏱️ `2026-10-18`, fourteenth pass. Evidence:
+[`p292-websearch.2026-10-18-p292.tsv`](../evidence/p292-websearch.2026-10-18-p292.tsv) ·
+[`decision-store-worked.2026-10-18-p292.jsonl`](../evidence/decision-store-worked.2026-10-18-p292.jsonl).
+
+### 🟢 `T-p292a` — the agent layer went free; the RECORD never did, and that is now demonstrable rather than argued
+
+🔵 **The trend this base has been circling for four passes, stated as a built fact.** Across
+`P45`-`P49` the model layer is permissive and costless: `iblai`'s segment configs are
+`GRANTED-AT-PIN` MIT across all seven segments (`p291`), `cedanl/student-signal` is MIT. 🔴 **What
+no repository on these shelves supplies, after 292 passes, is the record of who decided what,
+shown what, under which rubric version.**
+
+🟢 **`p292` built it** — [`compose/code/p292-decision-evidence-store`](../compose/code/p292-decision-evidence-store/README.md),
+**106 offline controls**, standard library only. 🔵 The strategic shape: three separate regimes
+— EU **Annex III(3)** human oversight, the **Oklahoma / Maryland** bar on AI in high-stakes
+student decisions, **Vietnam**'s sole-basis test — all ask the *same* question, *can you show a
+human decided and what they were shown?*, so **one implementation answers all three in all four
+regions**. That is a rare property and it is the commercial centre of this whole file.
+
+🔴 **The counter-trend to price in: this product category's standard overclaim is exactly here.**
+A hash chain in a file is tamper-**evident**, not tamper-proof. Control `C18` asserts that a
+full rewrite verifies **clean**, so the limit is a control rather than a footnote, and what
+closes it is anchoring the head where the writer cannot reach it. 🔵 Any vendor selling an
+"immutable audit log" that cannot say where its anchor lives is selling the chain and not the
+guarantee.
+
+### 🟢 `T-p292b` — the vocational displacement is now visible on BOTH sides of the market at once
+
+🔴 `p291` measured it on the **supply** side: inside the one MIT corpus this base has read end
+to end, the learning-and-development agents sit in segments labelled `enterprise`,
+`government`, `legal`, `financial-services`, `medical-healthcare` — and are the **least**
+guarded (1 of 6 carried a human-decision guard, against 23 % inside the education-labelled
+segments).
+
+🟢 **This pass the same displacement arrived from the demand side, unprompted.** The APAC
+regional leg returned **three** education-adjacent items and **all three are corporate L&D**:
+TCS + Pearson's multi-year AI learning alliance aimed at employer skills gaps, LearnUpon's
+Sydney HQ with AI course authoring, Alteryx's Academy relaunch with AI learning paths. 🔴 **Zero**
+school, university or ministry results in that leg. The global trends leg named **corporate
+reskilling** as a demand driver in the same breath as tutoring.
+
+🔵 **The trend, stated for a studio:** the education-regulated buyer increasingly **is not an
+education institution**. A law firm tracking CLE, a broker-dealer tracking FINRA continuing
+education, a hospital tracking credentialing — each is operating inside the Act's education
+limb and none of them answers an education-sector sales motion. `P48` is the recipe; `T-p292b`
+is now its second independent corroboration.
+
+### 🟢 `T-p292c` — the national language is the channel: THIRD proof, and the English regional leg is a measured query defect
+
+🔴 **The mandated EMEA phrasing has now returned SIX consecutive nils.** `p291` ranked it as a
+dead channel and said not to re-run it; it was re-run this pass because the standing battery
+mandates it, and it returned a sixth nil — enterprise-AI generalities (CompTIA, Workday,
+Bandwidth-Cavell) with **no** schools, universities, edtech vendors or national education
+policy. 🔵 Six measurements is now enough to call it a property of the **query**, not of EMEA.
+
+🟢 **Against that, the directed language legs keep working on the first attempt:**
+
+| pass | language | what the English leg had returned | what the national-language leg returned |
+|---|---|---|---|
+| `p290` | 🇻🇳 Vietnamese | nothing on mandate level | compulsory grades 1-12, against 🇹🇭 optional |
+| `p291` | 🇲🇽 Spanish | an explicit nil | SaberesMx, `labmexia.gob.mx`, a 1.5 M-student SEP survey |
+| `p292` | 🇪🇬 Arabic | six consecutive EMEA nils | a national LLM, a deployed school AI teacher, **and a permissive Cairo model family** |
+
+🔵 **Three for three.** The generative unit is the one `T-p286a` and `p287` identified — exam
+board, language of instruction, education ministry — and **never the region name**. 🔴 The
+operational consequence is a query-design rule, not a research tip: a region-named English leg
+measures **English-language press coverage of that region**, which is a different population
+from the region's education sector.
+
+### 🔴 `T-p292d` — the licence risk inverts: the SOVEREIGN model is the unlicensed one, the STARTUP model is permissive
+
+🔵 **The intuition a studio arrives with** is that a state-funded national model will be openly
+licensed and a startup's will be locked down. 🔴 **Egypt this pass is the opposite.** Karnak is
+placed by officials *inside public digital infrastructure* so startups can build on it, and one
+outlet reports it open-sourced at 41 B parameters — **and no licence is stated anywhere this
+base could reach**, including MCIT's own pages, which do not mention weights at all. The
+school-facing `Sia` has no grant either. Meanwhile **TokenAI, a Cairo startup, reports MIT on
+two models and Apache-2.0 on a third**, one of them released *with its training code and data
+sources*.
+
+🔴 **Neither side is verified**, and that is the finding's other half: four verification channels
+closed this pass (`huggingface.co` `403` by one egress path and `ENOTFOUND` by a second; the
+sole outlet `ENOTFOUND`; anonymous `git ls-remote` inconclusive; `raw` `404` on guessed
+spellings only). 🔵 **For an engagement:** *"it is a sovereign model, so the licence will be
+fine"* is not a finding, and *"it is a startup, so it will be restrictive"* is not either. The
+grant is a file to read at a pin — and where it cannot be read, the honest posture is
+`CANDIDATE-ATTRIBUTED` and a named directed leg, not a row in a table.
+
+### 🟡 `T-p292e` — the adoption-governance gap is now double-quantified in LATAM and widest in North America
+
+🟢 **LATAM, two independent instruments this pass.** Digital Education Council's *AI in Higher
+Education LATAM Survey 2026*: **>30 000 responses, 29 institutions**, **92 %** of students and
+**79 %** of faculty actively engaging with AI. UNESCO IESALC across **200 HEIs in 19 countries**:
+teaching and learning **73.5 %**, research **57.0 %**, administration **34.1 %**, community
+engagement **20.0 %**. 🔴 Against **only 30 %** of LATAM universities having published AI-use
+policies (Tec de Monterrey).
+
+🔴 **North America's gap is wider still:** **~36 %** regional share and the heaviest public money
+in the set, against **~10 %** of institutions holding formal AI guidelines and **71 %** of US
+teachers without AI training.
+
+🔵 **Why this keeps being the most sellable number on the shelf:** demand-side adoption is a
+*fait accompli* in both regions and the governance layer is missing in both. 🟢 That is the same
+hole `T-p292a`'s component fills, which is why the two trends are one engagement and not two.
+
 ## 🟢 Pass 291 — THE SUPPLY-SIDE GUARD IS REAL, IT DOES NOT SPEAK THE REGULATOR'S LANGUAGE, AND IT IS THINNEST EXACTLY WHERE THE REGULATION IS WIDEST
 
 ⏱️ `2026-10-18`, thirteenth pass. Evidence:

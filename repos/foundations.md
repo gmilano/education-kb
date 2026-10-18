@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 292 — NO NEW FOUNDATIONAL ROW for a second pass, and the candidate that would have been the first EMEA-origin one could not be resolved to a slug
+
+⏱️ **Fourteenth pass of `2026-10-18`.** Evidence:
+[`p292-websearch.2026-10-18-p292.tsv`](../evidence/p292-websearch.2026-10-18-p292.tsv).
+
+🔴 **No new foundational repository this pass.** The mandated agent leg returned its
+**eighteenth** consecutive nil, the trending leg its **ninth** for education, and the vertical
+leg its **thirteenth** for a new permissive platform. All eleven legs — four mandated, four
+regional, three directed — are written out with what each returned in the evidence TSV.
+
+### 🟡 The candidate, and exactly why it is not a row
+
+**TokenAI (Cairo), the Horus family** — reported `Horus 1.0-4B` **MIT**, `Horus Taleeq 0.2B
+Base` **MIT** (Arabic-only, ~6 B Arabic tokens, **shipped with its training code and data
+sources**, pretraining-only), `Horus Lens 1.0` **Apache-2.0**, plus two further models with no
+stated grant.
+
+🔵 **Why it matters.** This shelf has **no EMEA-origin permissive model row**, and an
+Arabic-only base model released with its training corpus is precisely the foundation an Arabic
+tutoring or assessment build needs — the layer that `P40`'s two-corpus tutor and `P39`'s
+ministry assistant both have to supply from somewhere.
+
+🔴 **Why it is not admitted.** Every grant above is **press-reported, not read.** Four channels,
+all closed or inconclusive this pass: `huggingface.co` `403` via curl **and** `ENOTFOUND` via
+WebFetch (two distinct egress paths); the one outlet carrying the licence claims `ENOTFOUND`;
+`git ls-remote` on four guessed `tokenaii/*` slugs → anonymous credential prompt, **inconclusive
+rather than negative**; `raw.githubusercontent.com` `404` on two guessed paths.
+🔴 **No source named a repository path**, so the slug itself is unknown and the probe had nothing
+correct to ask for. 🟡 Posture **`CANDIDATE-ATTRIBUTED`**. 🔵 `p293`'s top directed leg: recover
+the slug, then read the grant **at a pin** — `p291`'s standing method, which works wherever
+`raw.githubusercontent.com` answers.
+
+### 🟢 What this layer gained instead
+
+🟢 A **first-party** component rather than a found one:
+[`compose/code/p292-decision-evidence-store`](../compose/code/p292-decision-evidence-store/README.md)
+— **106 offline controls**, standard library only, no network, no server, wired into
+`make hooks`. 🔵 It is the one layer in `P45`-`P49` that no repository on these shelves supplies
+after 292 passes of looking, which is exactly why it is the billable half of those engagements.
+🔴 It is a reference implementation to adapt, **not a dependency to install**, and it is
+tamper-**evident** rather than tamper-proof — control `C18` asserts that limit as a control.
+
 ## 🔴 Pass 291 — the foundation layer gained NO NEW ROW, and what changed instead is that an existing row's grant is now verified across **all seven** of its repositories
 
 ⏱️ **Thirteenth pass of `2026-10-18`.** Evidence:

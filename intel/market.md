@@ -10,6 +10,125 @@ updated: 2026-10-18
 > Sourced from web research on 2026-10-17. Vendor-sourced figures are marked; they are
 > carried because they are the only numbers available, not because they are reliable.
 
+## 🟢 Pass 292 — ALL FOUR REGIONAL LEGS RAN, EMEA'S MANDATED PHRASING IS A SIX-POINT DEAD CHANNEL, AND THE ARABIC LEG BROKE IT ON THE FIRST ATTEMPT AGAIN
+
+⏱️ **Fourteenth pass of `2026-10-18`.** Evidence:
+[`p292-websearch.2026-10-18-p292.tsv`](../evidence/p292-websearch.2026-10-18-p292.tsv).
+
+🔵 Every leg is written down below, nils included, because an undeclared nil is
+indistinguishable from coverage.
+
+🟢 **The pass's structural result, stated before the regions.** The mandated **region-named
+English** legs produced **zero code addresses** for the fourth pass running, while a
+**national-language directed** leg produced a named sovereign model, a deployed school AI
+teacher and a permissive startup model family — on its first attempt, for the **third
+consecutive pass** (🇻🇳 `p290`, 🇲🇽 `p291`, 🇪🇬 `p292`). 🔴 A region-named English leg measures
+**English-language press coverage of a region**, which is not the same population as that
+region's education sector.
+
+### 🟡 North America — held, with the heaviest public money in the set and the widest governance gap
+
+🟢 **Carried forward and re-confirmed this pass:** NA leads regional adoption at **~36 %**
+share; **~$951 M (2024) → ~$2.3 B (2029)**, CAGR **15.9 %** (single publisher, secondary — a
+direction, not a forecast). A separate *"AI for kids"* scope at **$482 M (2024), 12.5 % CAGR** is
+🔴 **not comparable** — different scope, stated rather than blended.
+
+🟢 **The Q1 2026 money, which is the region's distinguishing feature:** a **$169 M** government
+commitment to responsible AI in higher education; an **OpenAI country-level education programme
+with eight national partners**; and **$55 M** from Carnegie Mellon and the Gates Foundation into
+AI courseware for **gateway college courses**. 🔴 The second remains the strategically dangerous
+one for a studio: a **vendor contracting at national scale** closes a market to open-source
+alternatives before an integrator is invited in.
+
+🔴 **The governance gap is the widest on this shelf:** **~10 %** of institutions hold formal AI
+guidelines and **71 %** of US teachers lack AI training. 🔴 **No sector regulator** — no
+FDA-equivalent for edtech, adoption decided school-by-school, with **Colorado and Texas** adding
+piecemeal state requirements. 🟡 ATTRIBUTED; no primary regulatory text was reached this pass.
+
+🔵 **The engagement shape, unchanged and now better funded:** in NA you sell assurance to a
+**buyer**, because there is no external regulator to point at. The client's own policy *is* the
+compliance surface — which is precisely why
+[`compose/code/p292-decision-evidence-store`](../compose/code/p292-decision-evidence-store/README.md)
+is sellable here without a statute forcing it.
+
+### 🟢 EMEA — a SIXTH consecutive nil on the mandated phrasing, and the Arabic leg answered immediately
+
+🔴 **The nil, recorded exactly.** `AI education EMEA 2026 adoption regulation players` returned
+enterprise-AI generalities only: CompTIA on EMEA IT strategy (AI fluency must reach
+legal/compliance and frontline staff), Workday (EMEA finance teams ahead on adoption; the EU AI
+Act as backdrop), a Bandwidth-Cavell report (`2026-02`) naming compliance complexity and data
+governance as the barriers. **No schools, no universities, no edtech vendors, no national
+education policy.** 🔵 `p291` ranked this leg as a measured dead channel and advised against
+re-running it; it was re-run because the standing battery mandates it, and the result is now a
+**six-point** measurement instead of a five-point one.
+
+🟢 **One Arabic directed leg broke it on the first attempt — the third national-language proof.**
+🇪🇬 **Egypt's MCIT** launched, early 2026, a national LLM `كرنك` (**Karnak**) and a
+secondary-school AI teacher `سيا` (**Sia**). Officials place Karnak **inside public digital
+infrastructure** explicitly so startups can build applications on top; one secondary outlet
+reports it open-sourced at **41 B parameters**, while MCIT's own pages do not mention weights.
+Separately `مدرستك في مصر` (*Madrasatak fi Masr*), an MoE + MoFA platform with interactive
+classes aligned to the Egyptian curriculum, framed by the ministry as **complementary to**
+classroom teaching. 🔴 No licence is stated for any of it.
+
+🟢 **And the leg surfaced the first permissive EMEA-origin model family this base has seen:**
+**TokenAI** (Cairo) — `Horus 1.0-4B` reported **MIT**, `Horus Taleeq 0.2B Base` reported **MIT**
+and **released with its training code and data sources** (Arabic-only, ~6 B Arabic tokens),
+`Horus Lens 1.0` reported **Apache-2.0**. 🔴 **All press-reported, none read**: four verification
+channels closed or inconclusive this pass. Posture **`CANDIDATE-ATTRIBUTED`** — detail on
+[`agents/trending.md`](../agents/trending.md).
+
+🔵 **The EMEA opportunity this reframes.** This shelf's EMEA story has been *"the AI Act makes
+your system high-risk"*. 🟢 Egypt adds a second, non-EU EMEA shape: a **state that publishes a
+sovereign model as public infrastructure and invites building on top**, with an
+**Arabic-language** education surface already deployed. 🔴 The blocker is a licence nobody has
+read — which is a scoping question with a known answer-procedure, not an unknown.
+
+### 🟡 APAC — thin on education, and every education-adjacent hit was CORPORATE learning
+
+🔴 **No national education policy, no ministry programme, no school or university adoption rate**
+in the mandated leg — fourth pass that this leg has failed to reach an education institution.
+
+🟢 **What it did return is a finding in its own right: three of three education-adjacent hits
+are L&D.** TCS + Pearson's multi-year AI learning alliance aimed at **employer** skills gaps;
+LearnUpon expanding with a Sydney HQ and *"Create+"* AI course authoring; Alteryx relaunching
+its Academy with AI learning paths and credentials. 🔵 This is `T-p292b`: the same vocational
+displacement `p291` measured on the **supply** side, arriving from the **demand** side
+unprompted.
+
+🟡 **Governance and infrastructure, carried as context:** one survey finds **87 %** of
+organisations encourage AI agents while only **47 %** have governance, oversight and controls
+for them; Forrester expects **sovereignty** to shape infrastructure choices for roughly **half**
+of APAC firms; **49 %** of APAC businesses cite insufficient real-time data infrastructure as an
+adoption barrier. Regulation moves **by market, not regionally** — Singapore consulting on AI in
+financial institutions, OpenAI naming an ANZ policy lead as Canberra tightens AI governance and
+copyright rules. 🔵 Consistent with `P30`: there is no APAC requirement to build against, only a
+jurisdiction list.
+
+### 🟢 LATAM — the strongest leg again, and the adoption-governance gap is now DOUBLE-quantified
+
+🟢 **Two independent instruments this pass.** Digital Education Council, *AI in Higher Education
+LATAM Survey 2026*: **>30 000 responses across 29 LATAM institutions**, **92 %** of students and
+**79 %** of faculty actively engaging with AI (one framing: 92 % regularly, **67 %** at least
+weekly). UNESCO **IESALC**, **200 HEIs across 19 countries**: teaching and learning **73.5 %**,
+research **57.0 %**, administration **34.1 %**, community engagement **20.0 %**.
+
+🔴 **Against that, only ~30 %** of LATAM universities have published AI-use policies (Tec de
+Monterrey). 🔵 The gap is now measured by **two** instruments on the demand side and one on the
+governance side, which is the firmest version of this shelf's longest-running LATAM finding.
+
+🔴 **Regulation remains fragmented and sector-blind:** Chile has had a national AI policy since
+2021 with a bill under discussion; Brazil and Colombia hold national strategies but **no
+education-sector rules**; **Mexico has no binding instrument** — SEP, ANUIES and Observatorio IA
+recommendations are explicitly non-binding. Regional bodies in play: **IDB** (AI regulatory
+design) and **CEPAL/ILIA** (Latin American AI Index, 19 countries).
+
+🔴 **No code, no licence, no repository in this leg** — and the Spanish-language Mexican **code**
+leg (`p291` item 10) is now **discharged as a measured negative**: SaberesMx and MéxicoX ship as
+**services behind a `Llave MX` identity gate**, not as repositories. 🔵 The LATAM supply gap this
+shelf has tracked for dozens of passes is therefore unchanged: strong demand signal, published
+policy, **no national code channel**.
+
 ## 🟢 Pass 291 — THE MEXICO NIL WAS A LANGUAGE ARTEFACT, THE ASEAN PAIR SPLITS ON MANDATE LEVEL, AND THE MANDATED REGIONAL PHRASING IS NOW A MEASURED DEAD CHANNEL FOR EMEA
 
 ⏱️ `2026-10-18`, thirteenth pass. Evidence:
@@ -1216,6 +1335,21 @@ data gets the ranking backwards.
 
 ### North America
 
+#### 🟡 Pass 292 (`2026-10-18`) — the heaviest public money in the set, and the widest governance gap
+
+🟢 **New this pass, all Q1 2026:** **$55 M** from Carnegie Mellon and the Gates Foundation into
+AI courseware for **gateway college courses** — the first figure on this shelf aimed at a
+*specific* course tier rather than at institutions in general. Carried and re-confirmed: the
+**$169 M** responsible-AI-in-higher-education commitment and the **OpenAI eight-national-partner**
+programme.
+🔴 **The gap widened again in relative terms:** **~10 %** of institutions with formal AI
+guidelines, **71 %** of US teachers without AI training, against **~36 %** regional market share.
+🔵 **Opportunity:** with **no sector regulator**, the client's own policy is the compliance
+surface — so the oversight record built this pass
+([`p292-decision-evidence-store`](../compose/code/p292-decision-evidence-store/README.md)) sells
+to a **buyer** here, without a statute forcing it. 🔴 The leg still fails to separate the US from
+Canada and Mexico — **five** passes running.
+
 #### 🟡 Pass 291 (`2026-10-18`) — one new sizing datum, and a structural point about who regulates
 
 🟢 **New, and it is the first regional sizing figure this shelf has carried with a stated base
@@ -1734,6 +1868,26 @@ evidenced** — Oklahoma/Maryland's human-oversight rule and NYC's K-8 moratoriu
 hardest configurations, and they are specifiable today.
 
 ### EMEA
+
+#### 🟢 Pass 292 (`2026-10-18`) — a SIXTH nil on the mandated phrasing, and a non-EU EMEA opportunity shape the shelf did not have
+
+🔴 **Sixth consecutive nil** on `AI education EMEA 2026 adoption regulation players`:
+enterprise-AI generalities only (CompTIA, Workday, Bandwidth-Cavell `2026-02`), **no** schools,
+universities, edtech vendors or national education policy. Re-run against `p291`'s advice
+because the standing battery mandates it; the value is that the measurement is now **six
+points**, not five.
+🟢 **One Arabic leg answered immediately.** 🇪🇬 **Egypt MCIT**: national LLM `كرنك` (**Karnak**),
+placed by officials inside **public digital infrastructure** so startups may build on top (one
+outlet reports 41 B parameters, open-sourced; MCIT pages do not mention weights), plus a
+deployed secondary-school AI teacher `سيا` (**Sia**) and the MoE + MoFA platform
+`مدرستك في مصر`. 🔴 No licence stated for any of it.
+🟢 **First permissive EMEA-origin model family on this shelf — as a CANDIDATE:** **TokenAI**
+(Cairo), `Horus 1.0-4B` MIT, `Horus Taleeq 0.2B Base` MIT **with training code and data
+sources** (Arabic-only, ~6 B tokens), `Horus Lens 1.0` Apache-2.0. 🔴 Press-reported only; four
+verification channels closed. Posture **`CANDIDATE-ATTRIBUTED`**.
+🔵 **Opportunity:** a second EMEA shape beside *"the AI Act makes you high-risk"* — a sovereign
+stack published **as infrastructure** with an Arabic education surface already live. 🔴 Blocked
+on an unread licence, which is a scoping question with a known procedure.
 
 #### 🔴 Pass 291 (`2026-10-18`) — the mandated phrasing is a MEASURED DEAD CHANNEL, and the high-risk category is wider than this shelf has been treating it
 
@@ -2418,6 +2572,22 @@ EMEA ed-tech vendor**. 🔴 A declared hole, not a silence, and it stays ranked.
 
 ### APAC
 
+#### 🟡 Pass 292 (`2026-10-18`) — no education institution reached, and every education-adjacent hit was CORPORATE learning
+
+🔴 **Fourth pass with no national education policy, ministry programme or institutional adoption
+rate** from the mandated leg.
+🟢 **The nil is itself the finding: three of three education-adjacent hits are L&D** — TCS +
+Pearson's multi-year AI learning alliance aimed at **employer** skills gaps, LearnUpon's Sydney
+HQ with *"Create+"* AI authoring, Alteryx's Academy relaunch with AI learning paths and
+credentials. 🔵 This corroborates `p291`'s **supply**-side measurement from the **demand** side,
+and it is `P48`'s market, arriving unprompted.
+🟡 Context carried: **87 %** of organisations encourage AI agents vs **47 %** with governance for
+them; Forrester expects sovereignty to shape infrastructure for **~half** of APAC firms; **49 %**
+cite insufficient real-time data infrastructure. Regulation moves **by market** — Singapore
+consulting on AI in financial institutions, OpenAI naming an ANZ policy lead.
+🔵 **Opportunity:** brief per jurisdiction (`P30`) and sell the **vocational** retrofit (`P48`),
+because in this region the education-regulated buyer is an **employer**.
+
 #### 🟢 Pass 291 (`2026-10-18`) — Thailand placed, and the ASEAN pair now splits on MANDATE LEVEL
 
 🔴 **The mandated APAC leg was nil for education again** — Boomi/TechRepublic enterprise
@@ -2924,6 +3094,24 @@ Korea's act pairs its obligations with **state adoption support**, which is unus
 naming in a pitch.
 
 ### LATAM
+
+#### 🟢 Pass 292 (`2026-10-18`) — the adoption-governance gap is now DOUBLE-quantified, and the Mexican code leg is discharged
+
+🟢 **Two independent demand-side instruments.** Digital Education Council, *AI in Higher
+Education LATAM Survey 2026*: **>30 000 responses, 29 LATAM institutions**, **92 %** of students
+and **79 %** of faculty actively engaging with AI (one framing: 92 % regularly, **67 %** at least
+weekly). UNESCO **IESALC**, **200 HEIs in 19 countries**: teaching and learning **73.5 %**,
+research **57.0 %**, administration **34.1 %**, community engagement **20.0 %**.
+🔴 **Against only ~30 %** of LATAM universities with published AI-use policies (Tec de
+Monterrey) — the gap measured by two instruments on one side and one on the other.
+🔴 **Regulation sector-blind:** Chile national AI policy since 2021 + a bill under discussion;
+Brazil and Colombia hold national strategies with **no education-sector rules**; **Mexico has no
+binding instrument** (SEP / ANUIES / Observatorio IA recommendations are non-binding). Bodies:
+**IDB**, **CEPAL/ILIA** (Latin American AI Index, 19 countries).
+🔴 **The Spanish-language Mexican CODE leg is DISCHARGED as a measured negative:** SaberesMx and
+MéxicoX ship as **services behind a `Llave MX` identity gate**, not as repositories. 🔵 The LATAM
+supply gap is therefore **unchanged, not closed**: strong demand, published policy, **no
+national code channel**.
 
 #### 🟢 Pass 291 (`2026-10-18`) — Mexico finally returns substance, and the thing that changed was the LANGUAGE of the query
 

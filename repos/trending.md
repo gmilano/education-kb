@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 292) — the trending channel is 403 for the FOURTEENTH pass, and the only new repository-shaped thing this pass found is one this base wrote
+
+⏱️ **FOURTEENTH pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept.
+Evidence:
+[`p292-websearch.2026-10-18-p292.tsv`](../evidence/p292-websearch.2026-10-18-p292.tsv) ·
+[`decision-store-worked.2026-10-18-p292.jsonl`](../evidence/decision-store-worked.2026-10-18-p292.jsonl).
+
+🔴 **`github trending education AI 2026` — NIL for education, ninth consecutive.**
+`github.com/trending` still answers **`403`** from here, re-measured, so the leg resolves to
+third-party trackers and opinion posts: `gittrend.io`, `trendshift.io`, a Substack guide, a
+LinkedIn post, a Japanese monthly-trending blog. Returned
+`rohitg00/ai-engineering-from-scratch` (reported #1 on GitHub Trending `2026-05-24`), Karpathy
+zero-to-hero, `aneelv75/github-trending`, `speedyapply/2026-AI-College-Jobs`.
+🔴 **Every star figure in this leg is a self-reported social-post number. None is published by
+this base**, and `api.github.com` plus `github.com` HTML both remain `403` — so no star count
+anywhere in this pass is first-hand.
+
+🔵 **One datum from the leg is worth keeping, because it explains the nil structurally rather
+than excusing it.** A blog reports **9 of the top 10** on GitHub's `2026-02` monthly trending
+list were AI projects. Education repositories are a thin subset of a saturated list, which is
+why a trending-shaped query returns the same general-purpose agents every pass. 🔴 Nine
+consecutive nils is now a property of **the channel**, not a week's weather.
+
+### 🟡 The candidate this pass could not resolve to a repository
+
+`tokenaii` (TokenAI, Cairo) — the Horus family, reported MIT and Apache-2.0 — is recorded in
+full on [`agents/trending.md`](../agents/trending.md) with its four refused verification
+channels. 🔴 **No repository path was named by any source**, so there is no slug to carry here.
+🔴 The `raw.githubusercontent.com` `404`s are evidence about **two guessed spellings**, not
+about the repository: `P1057`'s lesson applied one level out, from paths to slugs.
+
+### 🟢 The repository-shaped deliverable of this pass is this base's own instrument
+
+🟢 [`compose/code/p292-decision-evidence-store`](../compose/code/p292-decision-evidence-store/README.md)
+— **106 offline controls**, standard library only, wired into `make hooks` as
+`gate-evidence-store`. It is the component `P45` and `P48` terminate in, deferred for four
+passes, and it needs no network.
+
+🔴 **Stated plainly so it is not mistaken for a discovery:** this is a repository this base
+*wrote*, not one it *found*. The trending leg's ninth nil is unchanged by it. 🔵 What it does
+change is that the shelves no longer carry a load-bearing component with no address — which
+`gate-evidence-store`'s arm `S1` now enforces, and arm `S2` enforces that no pass overstates
+how many recipes need it. **`S2` fails `p291`'s own sentence**, which is how the overclaim was
+found.
+
 ## 2026-10-18 (pass 291) — the trending channel is 403 for the thirteenth pass, and the repo signal is a verification technique rather than a repository
 
 ⏱️ **THIRTEENTH pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept.

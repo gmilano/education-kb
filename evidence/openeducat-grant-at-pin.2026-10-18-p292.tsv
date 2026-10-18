@@ -1,0 +1,12 @@
+# p292 — 2026-10-18 — OpenEduCat's grant, READ FIRST-HAND AT THE PIN.
+# Method: p291's.  `git ls-remote <repo> master` for the SHA, then read the payload at that
+# SHA on raw.githubusercontent.com — never at HEAD, never at a branch name.
+# 🔴 The default branch is `master`, NOT `main`: /main/LICENSE answers 404 and that 404 is
+# evidence about the branch name, not about the grant.
+# Family assigned by compose/code/lib/license_family.sh (P237, the shared classifier) over the
+# payload's TITLE BLOCK — not by eye and not by a body grep (P171).
+slug	read_at_ref	payload_path	http	payload_bytes	payload_sha256_12	family	verdict	note
+openeducat/openeducat_erp	2670adb20457caf46ab5621320be580cbb6bbaa3	LICENSE	200	8241	528f84036800	LGPL-3.0	🟢 GRANTED-AT-PIN	First line of the payload is "For copyright information, please see the COPYRIGHT file."; title block carries GNU LESSER GENERAL PUBLIC LICENSE / Version 3, 29 June 2007. family_of() returns LGPL-3.0.
+openeducat/openeducat_erp	main	LICENSE	404	14	-	-	🔴 BRANCH-NAME-MISS	/main/ answers 404 because the default branch is `master`. Recorded so the 404 is never re-read as an absent grant.
+openeducat Enterprise Edition modules	n/a — not a repository path	doc.openeducat.org/legal/legal.html	n/a	n/a	-	PROPRIETARY	🟡 ATTRIBUTED	Separate proprietary licence restricting use to a valid OpenEduCat Enterprise Agreement and forbidding publishing, distributing, sublicensing or selling copies. 🔴 A WEB PAGE, not a committed payload — the boundary itself remains unread-as-a-file and is the residual gap.
+odoo (the platform underneath)	not probed this pass	-	-	-	-	-	🔴 NOT-READ	Stated as unread rather than assumed. Its own community/enterprise split is a separate grant.

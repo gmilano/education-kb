@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 292) — the mandated nil is EIGHTEEN deep, and the week's real agent story is a CAIRO startup shipping a permissive Arabic model family that four verification channels refused to confirm
+
+⏱️ **FOURTEENTH pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept,
+as `p232`-`p291` kept theirs. Evidence:
+[`p292-websearch.2026-10-18-p292.tsv`](../evidence/p292-websearch.2026-10-18-p292.tsv) ·
+[`decision-store-worked.2026-10-18-p292.jsonl`](../evidence/decision-store-worked.2026-10-18-p292.jsonl).
+
+🔴 **`top open source AI agents education 2026 github MIT` — NIL, eighteenth consecutive.** The
+population is **unchanged** from `p275` onward: `microsoft/ai-agents-for-beginners` (MIT, a
+12-lesson **course about building agents**), `pguso/agents-from-scratch` (MIT, teaching repo),
+`avinash201199/free-ai-agents-resources` (licence not stated by the source), plus the
+general-purpose set — Aider, Cline, CrewAI, AutoGen, LangGraph. 🔵 Same category confusion
+`p286` reclassified: **a repository that teaches agent-building is not an education-sector
+agent.** Every leg, global and regional, is written down with what it returned in the evidence
+TSV; an undeclared nil looks exactly like coverage.
+
+### 🟢 The finding the mandated battery did not produce: `tokenaii` / the Horus family
+
+🔵 **It came through the ARABIC channel.** `p291` ranked *"Egypt in Arabic"* as the last unspent
+directed leg. Run, it returned Egypt's state programme (below) — and, chasing that, a **Cairo
+startup, TokenAI**, shipping a model family under **permissive** grants:
+
+| model | reported grant | reported shape |
+|---|---|---|
+| `Horus 1.0-4B` | 🟡 **MIT** | 4 B parameters, seven deployment variants |
+| `Horus Taleeq 0.2B Base` | 🟡 **MIT** | Arabic-**only** decoder-only causal Transformer, ~6 B Arabic tokens, ~30 h on one RTX PRO 6000 Blackwell, **released with its training code and data sources**; pretraining-only — no instruction tuning, no safety alignment |
+| `Horus Lens 1.0` | 🟡 **Apache-2.0** | vision/OCR line, per the vendor's own post |
+| `Horus Cyber Nano 1.0` | 🔴 **not stated** | 16 B multimodal, weights reported `2026-09-08` |
+| `Horus-Hiero-9B` | 🔴 **not stated** | a Hugging Face page URL was returned for it |
+
+🔴 **NOT ADMITTED to `agents/top.md` or `repos/foundations.md`, and the reason is the whole
+point.** Every licence above is **press-reported**, not read. Four verification channels, all
+closed or inconclusive this pass:
+
+- `huggingface.co` → **`403`** via curl through the agent proxy, **and `ENOTFOUND`** via the
+  WebFetch path. 🔵 Two distinct egress routes, both shut — consistent with `p289`'s 12-host
+  `POLICY-REFUSED` measurement.
+- `www.middleeastainews.com`, the one outlet carrying the licence claims → **`ENOTFOUND`**.
+- `git ls-remote https://github.com/tokenaii/{Horus,horus,Horus-Taleeq,taleeq}` → anonymous
+  **credential prompt** on all four. 🔴 **Inconclusive, not negative.**
+- `raw.githubusercontent.com/tokenaii/{Horus,horus}/main/LICENSE` → **`404`** on both.
+
+🔴 **And the `404` must not be read as a verdict on the repository.** No source named a
+repository path, so the probe asked for **two guessed spellings** and learned that those two
+are not there. `P1057` (`p189`) is the standing lesson in the other direction — *"a one-spelling
+path list has not looked for the file; it has looked for one spelling of it"* — and the same
+applies to a **slug**. 🟡 Posture: **`CANDIDATE-ATTRIBUTED`**, no payload read, no resolvable
+slug. 🔵 If it resolves, it is the **first permissive EMEA-origin model row** this base has
+carried, and `p293`'s top directed leg is to recover the slug and read the grant at a pin.
+
+### 🟡 Egypt's state programme — a deployed education agent with no grant at all
+
+🟢 **Egypt's MCIT launched, early 2026, a national LLM `كرنك` (Karnak) and a secondary-school AI
+teacher `سيا` (Sia).** Officials place Karnak **inside public digital infrastructure** explicitly
+so startups can build on top; one secondary outlet reports it open-sourced at **41 B
+parameters**; MCIT-side pages do not mention weights. Separately `مدرستك في مصر`
+(*Madrasatak fi Masr*), an MoE + MoFA platform with interactive classes aligned to the Egyptian
+curriculum, framed by the ministry as **complementary to** classroom teaching.
+
+🔴 **`Sia` is an education-sector agent in production, and it has no repository, no grant and no
+code channel this base can reach.** 🟡 ATTRIBUTED to Egyptian press and MCIT announcements;
+`gob`-equivalent primary sources were not read. 🔵 It is recorded here as a **named non-row** so
+the next pass does not re-discover it and mistake it for new.
+
+### 🔵 The agent-adjacent build: what the agents on this shelf now terminate in
+
+🟢 **`p291`'s ranked item 1 is done.** Every agent row on these shelves that *recommends*
+something about a learner now has a place to put the human decision that follows it:
+[`compose/code/p292-decision-evidence-store`](../compose/code/p292-decision-evidence-store/README.md),
+**106 offline controls**, in `make hooks`. 🔴 Its first refusal, `R1`, is the one that matters to
+this shelf: **an agent cannot be recorded as the decider.** `P45` has said in prose for two
+passes that *"the prompt is not a control"* — this is where that sentence becomes one.
+
 ## 2026-10-18 (pass 291) — the mandated nil is SEVENTEEN deep, and the week's agent story is that five segments labelled "not education" each ship a training agent
 
 ⏱️ **THIRTEENTH pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept,

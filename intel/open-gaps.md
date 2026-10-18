@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 292 — **THE TOP ITEM WAS BUILT, AND BUILDING IT REFUTED THE ENTRY THAT ASKED FOR IT**
+
+⏱️ `2026-10-18`, fourteenth pass. Evidence:
+[`p292-websearch.2026-10-18-p292.tsv`](../evidence/p292-websearch.2026-10-18-p292.tsv) ·
+[`decision-store-worked.2026-10-18-p292.jsonl`](../evidence/decision-store-worked.2026-10-18-p292.jsonl).
+
+### Discharged this pass
+
+| `p291` item | state | what it turned out to be |
+|---|---|---|
+| **1. the evidence store as a reference implementation** *(ranked first; carried four passes)* | 🟢 **DISCHARGED — BUILT** | [`p292-decision-evidence-store`](../compose/code/p292-decision-evidence-store/README.md): **106 offline controls**, standard library only, wired into `make hooks` as `gate-evidence-store`, with a committed worked run over four surfaces |
+| 🔴 **…and doing it REFUTED the entry's own sizing** | 🟢 **CORRECTED in place, and the correction is arm `S2`** | The entry said **four** recipes need the identical component. The shelves carry **two**: `P46` names an **intervention log**, `P47` a **deadline-and-evidence layer**. 🔵 *"One build"* was costed as one thing and deferred four passes; as **one substrate, four schemas** it was one pass's work |
+| **9. Egypt in ARABIC** *(the last unspent directed leg)* | 🟢 **DISCHARGED — NON-NIL** | MCIT's national LLM `كرنك` (Karnak), placed inside **public digital infrastructure**; a deployed secondary-school AI teacher `سيا` (Sia); `مدرستك في مصر` (MoE + MoFA). 🔴 **No licence stated for any of it.** 🟢 The leg also surfaced **TokenAI / Horus** — see the new item 1 below |
+| **10. a Mexican education CODE leg, in Spanish** | 🔴 **DISCHARGED AS A MEASURED NEGATIVE** | SaberesMx (registration from `2025-11`, institutions UNAM · UnADM · TecNM · IPN · UABC · UdeG, gated behind a `Llave MX` account, initial catalogue one course) and MéxicoX (teacher training, 83 courses). 🔴 **No source code, no GitHub, no licence** in any result: the Mexican state ships education platforms as **services behind an identity gate**, not repositories |
+| **14. do not re-run the mandated EMEA phrasing** | 🟡 **RE-RUN ANYWAY, DELIBERATELY** | The standing battery mandates the per-region legs, so it was run and returned a **sixth** consecutive nil. 🔵 The gain is that the dead channel is now a **six-point** measurement rather than a five-point one; the cost was one leg |
+| **9. read OpenEduCat's `LICENSE` blob at a pin** *(registered and discharged within this pass)* | 🟢 **DISCHARGED** | 🔵 Registered from the vertical leg's own correction, then done the same hour, because `raw.githubusercontent.com` answers `200` at an arbitrary SHA. `GRANTED-AT-PIN`, pin `2670adb20457`, `LICENSE` **8 241 B**, sha256₁₂ **`528f84036800`**, family **LGPL-3.0**. 🔴 **And it caught a false-absence trap:** the default branch is **`master`**, so `/main/LICENSE` answers `404` — evidence about the **branch name**, not the grant. `P1057` on a third axis, after path spellings and repository slugs |
+
+### Still open, re-ranked for `p293`
+
+| rank | item | age | why it is where it is |
+|---|---|---|---|
+| **1** | 🔴 **Recover `tokenaii`'s real repository slug, then read the grant AT A PIN** | 🆕 new | The first permissive **EMEA-origin** model family this base has seen is blocked by an **unknown slug**, not an unreadable licence. `raw.githubusercontent.com` answers `200` at arbitrary SHAs, so `p291`'s method already works — the missing input is a path. 🔴 The two `404`s this pass were **guessed spellings**, which is evidence about the guesses |
+| **2** | 🔴 **Wire the README channel into `p278`'s sweep** | **five passes** | One column in `sweep.sh`; the classifier has been written since `p288`. Cheapest item on the register and the longest ignored — that combination is itself the finding |
+| **3** | 🔴 **FAMILY-AXIS recovery sweep over every `UNCLASSIFIED` cell** | four passes | Known-productive since `p290`. **No network needed**, which removes the usual excuse |
+| **4** | 🟡 **`P46`'s intervention log and `P47`'s deadline layer, as components** | 🆕 new | `p292` established these are **not** the decision record. Two live recipes now terminate in named components that do not exist. 🟢 The store's substrate (chained JSON-Lines, digest-bound payload, closed vocabularies) is reusable for both, so this is adaptation rather than design |
+| **5** | 🟡 **The Annex III(3) → payload-language classifier** | two passes | `p291` measured the vocabulary gap (**1** keyword hit in 95 agents, and it is a false positive, against **12** real guards under four other phrasings) and published a table. It is still not an instrument |
+| **6** | 🔴 **`ROOT_OR_SOLE` in the enumeration gate** | **eight passes** | `p291` handed it seven fresh positive controls and they are still unspent |
+| **7** | 🔴 **Widen `gate-identity` to census the enumeration QUEUE** | **eight passes** | The QUEUE is at 2 rows; the gate still does not look at it |
+| **8** | 🔴 **A licence-CHANGE-WITH-A-DATE-BOUNDARY column** | five passes | 🟢 `p292` hands it a live case: OpenEduCat's community grant is dated *"Effective: January 1, 2024"*, which is exactly the shape the column is for |
+| **9** | 🟡 **Read the OpenEduCat ENTERPRISE boundary as a committed payload, and probe Odoo's own grant** | 🆕 new *(residual)* | 🟢 The **community** half was registered and **discharged in the same pass**: `GRANTED-AT-PIN`, pin `2670adb20457`, 8 241 B, sha256₁₂ `528f84036800`, LGPL-3.0 by the shared `P237` classifier. 🔴 What remains is the half that decides redistributability: the Enterprise terms are a **web page**, not a file read at a commit, and **Odoo's grant was not probed at all** |
+| **10** | 🔴 **Teach the enumeration gate that a licence-like path can be a SOURCE FILE** | carried | Unchanged |
+| **11** | 🔵 **A reference anchoring adapter for the store's `head()`** | 🆕 new | The one thing control `C18` says the component **cannot** do for itself. 🔵 Specifiable with no network; it is what turns tamper-**evident** into tamper-resistant, and it is the first question a client's auditor will ask |
+| **12** | 🔵 **Enumerate `iblai/iblai-claw-setup`'s tree** | carried | Grant read at the pin; the tree has still never been walked |
+| **13** | 🟡 **`--resolve` over the 14 CANDIDATE control sites** | **ten passes** | The oldest item on the register. 🔴 Stated plainly: ten passes of deferral means it should either be done or struck, and it has not been struck |
+
+### 🔴 Declared gaps — measured absences, not silences
+
+- 🔴 **No first-hand star count anywhere in this pass.** `api.github.com` and `github.com` HTML
+  both answer `403`, re-measured. Every star figure the trending leg returned is a self-reported
+  social-post number and **none is published** on these shelves.
+- 🔴 **`huggingface.co` is closed on two distinct egress paths** — `403` via curl through the agent
+  proxy, `ENOTFOUND` via the WebFetch path. **No model-card grant has ever been read by this
+  base**, which is now a structural limit on every model-layer row, not a one-pass miss.
+- 🔴 **EUR-Lex still unread** (`p289`: 12 authority hosts `POLICY-REFUSED` across 2 egress paths).
+  Every Annex III(3) claim on these shelves, including the new component's limb tokens, is
+  **ATTRIBUTED**.
+- 🔴 **No dominant OSS education-agent evaluation or observability layer** — carried, and the
+  eighteenth consecutive nil on the mandated agent leg does not change it.
+- 🔴 **No national education CODE channel in LATAM.** Two instruments now quantify the demand
+  side (DEC: 92 % / 79 % over 30 000 responses; IESALC: 200 HEIs, 19 countries) and one the
+  governance side (30 % with published policies). The **supply** gap is confirmed on another
+  axis, not closed.
+- 🔴 **APAC reached no education institution for the fourth pass.** All three education-adjacent
+  hits were corporate L&D. Recorded as a measured property of the leg.
+- 🔴 **No primary government source for Egypt or Mexico.** Both findings are as-reported by
+  national-language press; `gob.mx` and the Egyptian ministry sites were not read.
+
 ## Pass 291 — **THE TOP TWO ITEMS WERE BOTH RUN, AND RUNNING THE FIRST ONE REFUTED THE RULE THE SECOND WAS MEANT TO ENFORCE**
 
 ⏱️ `2026-10-18`, thirteenth pass. Evidence:

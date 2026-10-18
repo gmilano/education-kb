@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 292 — 2026-10-18 — **THE EVIDENCE STORE IS BUILT, AND BUILDING IT REFUTED THE BACKLOG ENTRY THAT ASKED FOR IT**
+
+**One-line summary:** `p291`'s **ranked item 1** — the append-only decision record that `P45`-`P48`
+all terminate in, deferred for four passes as *"you build it"* — now exists with **106 offline
+controls** in `make hooks`. 🔴 And writing it refuted the entry: `p291` said **four** recipes need
+the identical component; the shelves carry **two**. *"One build"* sounded like one thing, so it
+was costed as one thing and never started. Stated correctly — **one substrate, four schemas** —
+it took a single pass. 🟢 Separately the **Arabic** directed leg broke EMEA's six-nil channel on
+the first attempt for the **third consecutive national-language proof**, surfacing Egypt's state
+AI teacher and a Cairo startup's permissive model family — **neither admitted**, because four
+verification channels are closed.
+
+### 🟢 What was found
+
+🔴 **The mandated battery is now EIGHTEEN consecutive nils on the agent leg**, nil for education
+on the trending leg for the **ninth** pass, and no new permissive education ERP/CRM for the
+**thirteenth**. Every leg, global and regional, is written down with what it returned in
+[`evidence/p292-websearch.2026-10-18-p292.tsv`](evidence/p292-websearch.2026-10-18-p292.tsv) —
+an undeclared nil looks exactly like coverage.
+
+| finding | verdict |
+|---|---|
+| `p291`'s ranked item 1, the evidence store | 🟢 **BUILT** — [`p292-decision-evidence-store`](compose/code/p292-decision-evidence-store/README.md), **106 controls**, offline, in `make hooks`, standard library only |
+| `p291`'s *"**four** recipes need the identical component"* | 🔴 **REFUTED — it is two.** `P46` needs an **intervention log**, `P47` a **deadline-and-evidence layer**. Adjacent components, not this one |
+| Why the name-collapse mattered | 🔴 *"One build"* was costed as one thing and deferred **four passes**. As *"one substrate, four schemas"* it was a single pass's work |
+| The honest limit, as a control | 🟢 **`C18` asserts that a full rewrite verifies CLEAN.** The chain is tamper-**evident**, not tamper-proof; the **anchor is the client's** |
+| The control that would have been wrong | 🟢 **Refusing agent-concurrence.** A human who agrees has still decided, and refusing it would destroy the only evidence. Recorded instead — `concurrence_rate()` returns the rubber-stamp measurement |
+| 🇪🇬 **Egypt in Arabic** *(`p291` item 9, the last unspent directed leg)* | 🟢 **NON-NIL** — MCIT's national LLM `كرنك` (Karnak, inside *public digital infrastructure*), a deployed school AI teacher `سيا` (Sia), and `مدرستك في مصر`. 🔴 **No licence stated for any of it** |
+| **TokenAI / Horus** (Cairo) — first permissive **EMEA-origin** model family seen here | 🟡 **`CANDIDATE-ATTRIBUTED`, NOT ADMITTED.** Reported MIT ×2 + Apache-2.0; `Horus Taleeq 0.2B` ships **with its training code and data sources**. Four verification channels closed |
+| The `raw.githubusercontent.com` `404`s on `tokenaii` | 🔴 **Evidence about two GUESSED SPELLINGS, not about the repository.** No source named a repo path — `P1057`'s lesson, one level out from paths to **slugs** |
+| 🇲🇽 **Mexican education CODE in Spanish** *(`p291` item 10)* | 🔴 **DISCHARGED as a measured negative** — SaberesMx and MéxicoX ship as **services behind a `Llave MX` identity gate**, not repositories |
+| **OpenEduCat**, re-read from its own sources | 🟢 **CORRECTED: it is DUAL-licensed.** Community LGPL-3.0; **Enterprise is proprietary and agreement-gated**, forbidding publishing, distributing, sublicensing or selling copies |
+| …and the community half **READ AT THE PIN** in the same pass | 🟢 **`GRANTED-AT-PIN`** — pin `2670adb20457`, `LICENSE` **`200`**, **8 241 B**, sha256₁₂ **`528f84036800`**, family **LGPL-3.0** by the shared `P237` classifier. 🔴 The default branch is **`master`**: `/main/LICENSE` answers `404`, which is evidence about the **branch name** — `P1057` on a third axis |
+| EMEA on the mandated phrasing | 🔴 **SIXTH consecutive nil.** Re-run against `p291`'s advice because the battery mandates it; the gain is a six-point measurement of a dead channel |
+| The national-language channel | 🟢 **THREE FOR THREE** — 🇻🇳 `p290`, 🇲🇽 `p291`, 🇪🇬 `p292`. A region-named English leg measures **English press coverage of a region** |
+| APAC's education-adjacent hits | 🔴 **3 of 3 are corporate L&D** — `p291`'s supply-side displacement, now corroborated from the **demand** side |
+
+### 🔵 Why `ACTION p292` is a build and not another audit
+
+Twelve of this base's thirteen standing gates measure what the shelves **say**. 🔴 `p291`'s item 1
+was different: it asked for the one thing a client would actually **buy**, and three passes in a
+row had deferred it while shipping instruments about licence text. 🟢 The component is 500-odd
+lines, needs no network, and closes the gap that `P45`-`P49` all terminate in.
+
+🔴 **Two defects this pass's own gate had on first run, both found by running it on the real
+shelf rather than on its fixtures.** (1) `S2` flagged `p290`'s heading — *"three recipes whose
+compliance layer is a DEPENDENCY … and one evidence store that is neither"* — which **contrasts**
+the count with the store instead of predicating it on the store. The repair is a required
+**dependency predicate** at clause scope. (2) The repair's first vocabulary then matched the bare
+noun *"DEPENDENCY"*, which is the very word in that heading, so clause scope was right and the
+vocabulary was still wrong. 🔴 **And control `C28h` had asserted the first false positive as
+desired behaviour** — a control written from the gate's *intent* rather than from a real sentence
+will happily pin a defect. `C28h` is now inverted and says so in the source.
+
+### 🔴 What this pass could NOT do
+
+🔴 **`huggingface.co` is closed on two distinct egress paths** — `403` via curl through the agent
+proxy and `ENOTFOUND` via the WebFetch path — so no model-card grant was read. The only outlet
+carrying TokenAI's licence claims is also `ENOTFOUND`. Anonymous `git ls-remote` against four
+guessed `tokenaii/*` slugs returns a credential prompt, which is **inconclusive, not negative**.
+
+🔴 **`api.github.com` and `github.com` HTML both remain `403`.** **No star count in this pass is
+first-hand and none is published.** 🟢 `raw.githubusercontent.com` still answers `200`, including
+at an arbitrary commit SHA — `p291`'s pin-reading method is intact.
+
+🔴 **EUR-Lex was not read**, so the Annex III(3) limb tokens in the new component stay
+**ATTRIBUTED**. 🟢 The code does not depend on the wording: `ANNEX_LIMBS` is a closed token set
+with `NONE-DECLARED` as a first-class member.
+
+🔴 **No primary government source was reached** for Egypt or Mexico; both findings are
+as-reported by national-language press.
+
+### 🔵 What a studio takes from this pass
+
+**The agent layer is free; the record never was, and now it exists.** Three regimes — EU Annex
+III(3) oversight, the Oklahoma/Maryland bar, Vietnam's sole-basis test — ask the same question,
+*can you show a human decided and what they were shown?* 🟢 One implementation answers all three
+in all four regions, and it is [`P49`](compose/patterns.md). 🔴 Sell it with its boundary stated:
+tamper-**evident**, with the anchor as the client's, because the standard overclaim in this
+category is exactly the one `C18` refuses to make.
+
+### 🔵 Backlog for `p293`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked:
+
+1. 🔴 **Recover `tokenaii`'s real repository slug, then read the grant AT A PIN** *(new, this
+   pass's residue)* — the first permissive EMEA-origin model family this base has seen is stuck
+   behind an unknown slug, not behind an unreadable licence. `raw.githubusercontent.com` answers
+   `200`, so the method already works; what is missing is the path.
+2. 🔴 **Wire the README channel into `p278`'s sweep** *(carried, FIVE passes)* — one column in
+   `sweep.sh`, classifier already written. Cheapest item here, longest ignored.
+3. 🔴 **FAMILY-AXIS recovery sweep over every `UNCLASSIFIED` cell** *(carried, four passes)* —
+   known-productive since `p290`. **No network.**
+4. 🟡 **`P46`'s intervention log and `P47`'s deadline layer, as components** *(new)* — `p292`
+   established they are **not** the decision record. Two recipes now terminate in named
+   components that do not exist, and the store's substrate is reusable for both.
+5. 🟡 **The Annex III(3) → payload-language classifier** *(carried from `p291`)* — the vocabulary
+   gap is measured and published; it is still not an instrument.
+6. 🔴 **`ROOT_OR_SOLE` in the enumeration gate** *(carried, eight passes)*.
+7. 🔴 **Widen `gate-identity` to census the enumeration QUEUE** *(carried, eight passes)*.
+8. 🔴 **A licence-CHANGE-WITH-A-DATE-BOUNDARY column** *(carried, five passes)* — 🟢 `p292` hands
+   it a live case: OpenEduCat's community grant is dated *"Effective: January 1, 2024"*.
+9. 🟢 **~~Read OpenEduCat's `LICENSE` blob at a pin~~ — DISCHARGED IN-PASS.** Done the hour it
+   was registered: `GRANTED-AT-PIN`, LGPL-3.0, 8 241 B. 🔴 **The residual is the Enterprise
+   boundary**, which is a *web page* and not a committed payload — that half stays ATTRIBUTED,
+   and Odoo's own grant is still unprobed.
+10. 🔴 **Teach the enumeration gate that a licence-like path can be a SOURCE FILE** *(carried)*.
+11. 🔵 **Anchor the evidence store's `head()` — a reference anchoring adapter** *(new)* — the one
+    thing `C18` says the component cannot do for itself. No network needed to specify it.
+12. 🔵 **Enumerate `iblai/iblai-claw-setup`'s tree** *(carried)* — grant read, tree never walked.
+13. 🟡 **`--resolve` over the 14 CANDIDATE control sites** *(carried, ten passes)*.
+14. 🔴 **Do NOT re-run the mandated EMEA region phrasing for its own sake** — now **six**
+    consecutive nils. Spend the leg on a national language instead; three for three.
+
 ## Pass 291 — 2026-10-18 — **THE FIVE SEGMENTS THIS BASE CALLED "NOT EDUCATION" EACH SHIP A TRAINING AGENT, AND THE RULE THAT SAID THEIR GRANTS COULDN'T BE READ WAS OUR OWN**
 
 **One-line summary:** `p290`'s two ranked items were both run, and running the first **refuted

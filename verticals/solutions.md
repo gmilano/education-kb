@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟡 Pass 292 — the permissive education ERP/CRM leg is NIL for the THIRTEENTH pass, and the leg's own rediscovery produced a real CORRECTION to a carried row
+
+⏱️ **Fourteenth pass of `2026-10-18`.** Evidence:
+[`p292-websearch.2026-10-18-p292.tsv`](../evidence/p292-websearch.2026-10-18-p292.tsv).
+
+🔴 **`open source platform education ERP CRM MIT Apache` — no new permissive platform,
+thirteenth pass running.** **10 of 10** results were vendor-glossary or directory pages —
+`openeducat.org`'s own glossary in five languages, plus `openalternative.co` and a listicle.
+The vendor-domain saturation `p283` first measured on this exact phrasing is unchanged.
+
+🟢 **All three platforms the leg named are ALREADY CARRIED, and the index says so rather than
+this pass asserting it:** `make carried SLUG=openeducat/openeducat_erp` returns **`CARRIED`**.
+OpenEduCat (education ERP on Odoo), ERPNext (GPL-3.0) and Twenty (BSL-1.1, non-OSI) all sit on
+these shelves already. 🔵 Two further results advertised an unnamed *"MIT CRM/ERP"* and could
+not be resolved to a slug — **not findings**.
+
+### 🟢 The correction: OpenEduCat is DUAL-licensed, and a one-line LGPL entry loses the half that matters
+
+🔴 **What a bare *"LGPL-3.0"* entry does not say.** Read this pass from the project's own
+sources: `github.com/openeducat/openeducat_erp`'s README states **LGPL-3.0** with the text in
+its `LICENSE` file — but `doc.openeducat.org/legal/legal.html` adds that this covers the
+**Community Edition only**, and that the **Enterprise Edition is under a separate PROPRIETARY
+licence** whose terms restrict use to a valid OpenEduCat Enterprise Agreement and **forbid
+publishing, distributing, sublicensing or selling copies**. The community-licence page dates its
+LGPL-3.0 text *"Effective: January 1, 2024"*.
+
+| what you take | grant | what it means for a build |
+|---|---|---|
+| OpenEduCat **Community Edition** | 🟡 **LGPL-3.0** | copyleft on the module, not on the application that calls it; the usual LGPL care about linking and modification applies |
+| OpenEduCat **Enterprise Edition** modules | 🔴 **proprietary, agreement-gated** | 🔴 **cannot be vendored, redistributed or sublicensed.** A client already running Enterprise is a *contract* conversation, not a licence one |
+| the Odoo platform underneath | 🔴 **not re-verified this pass** | stated as unread rather than assumed — a separate grant with its own community/enterprise split |
+
+### 🟢 …and the community half is now READ AT THE PIN, not attributed
+
+🟢 **Upgraded within the same pass.** `p291`'s method applied directly — `git ls-remote` for the
+SHA, then the payload at that SHA, never at `HEAD` and never at a branch name:
+
+| slug | read at | payload | family | verdict |
+|---|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | pin `2670adb20457` | `LICENSE`, **`200`**, **8 241 B**, sha256₁₂ **`528f84036800`** | 🟡 **LGPL-3.0** | 🟢 **`GRANTED-AT-PIN`** |
+
+🔵 The family is assigned by this base's **shared** classifier
+(`compose/code/lib/license_family.sh`, `P237`) over the payload's **title block** — not by eye
+and not by a body grep, which is `P171`'s standing defect. The payload opens *"For copyright
+information, please see the COPYRIGHT file."* and its title block carries **GNU LESSER GENERAL
+PUBLIC LICENSE / Version 3, 29 June 2007**.
+
+🔴 **One trap worth recording, because it would have produced a false absence:** the default
+branch is **`master`**, not `main`. `/main/LICENSE` answers **`404`** — and that `404` is
+evidence about **the branch name**, not about the grant. This is `P1057`'s lesson on a third
+axis: after path spellings and repository slugs, **branch names**.
+
+🔴 **What is still NOT read, stated rather than rounded off.** The **Enterprise** boundary is a
+**web page** (`doc.openeducat.org/legal/legal.html`), not a committed payload, so the
+proprietary half stays 🟡 **ATTRIBUTED** — first-party, since it is the project's own legal
+page, but not a file anyone has read at a commit. And **Odoo's own grant was not probed this
+pass**: stated as unread rather than assumed. Evidence:
+[`openeducat-grant-at-pin.2026-10-18-p292.tsv`](../evidence/openeducat-grant-at-pin.2026-10-18-p292.tsv).
+
+🔵 **Why this is worth a correction rather than a shrug.** This shelf exists so a studio can
+tell, before quoting, what it may ship. *"OpenEduCat — LGPL-3.0"* reads as **one** permissive-ish
+answer; the truth is a **boundary**, and the boundary is where a customisation engagement either
+is or is not redistributable. 🔴 The thirteenth nil on *new* platforms is therefore not the
+pass's only vertical result — **an existing row got more accurate**, which on a shelf this old
+is worth more than a fourteenth listicle.
+
 ## 🔴 Pass 291 — the permissive education ERP/CRM leg is NIL for the TWELFTH consecutive pass, and this time the result set refuted the leg's own premise
 
 ⏱️ **Thirteenth pass of `2026-10-18`.** Evidence:
