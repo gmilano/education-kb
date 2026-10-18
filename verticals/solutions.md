@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟡 Pass 293 — the permissive education ERP/CRM leg is NIL for the FOURTEENTH pass, and the vendor itself now confirms why — plus a CORRECTION to a carried row's branch
+
+⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:
+[`p293-websearch.2026-10-18-p293.tsv`](../evidence/p293-websearch.2026-10-18-p293.tsv) ·
+[`channel-conflict.2026-10-18-p293.tsv`](../evidence/channel-conflict.2026-10-18-p293.tsv).
+
+### 🔴 The leg, and the vendor-domain saturation is now TOTAL
+
+`open source platform education ERP CRM MIT Apache` returned **10 of 10** results from
+`openeducat.org`'s own glossary, in **six languages** (`ar`, `fr`, `pt-BR`, `zh`, `de`, `es`).
+🔵 `p283` first recorded this phrasing drifting onto vendor domains; at `p293` there is nothing
+else left on the page.
+
+🟢 **And the vendor answers the question against itself.** OpenEduCat's own glossary page
+explains that **MIT and Apache-2.0 are permissive** and that **OpenEduCat uses LGPLv3** — i.e.
+the single most prominent education-ERP vendor in this channel states in its own words that it is
+*not* the thing the leg is looking for. 🔵 That is the most informative form this nil has taken
+in fourteen passes: not *"nothing found"* but *"the category's leading open platform is
+copyleft, by its own documentation"*. Named alongside it: Moodle, Koha, LibreOffice, Linux —
+🟢 all carried, none new, and `make carried SLUG=openeducat/openeducat_erp` returns `CARRIED`.
+
+### 🔴 CORRECTION to `p292`: OpenEduCat's default branch is `19.0`, not `master`
+
+`p292` read the community `LICENSE` at a pin and got the right answer by the right method. 🔴 But
+it wrote: *"The default branch is `master`: `/main/LICENSE` answers `404`, which is evidence about
+the branch name"*.
+
+| claim | state at `p293`, first-hand |
+|---|---|
+| the lesson — *"the `404` is evidence about the BRANCH NAME"* | 🟢 **STANDS.** `P1057` on a third axis, and correct |
+| the branch name itself, `master` | 🔴 **WRONG. It is `19.0`** — `git ls-remote --symref` returns `ref: refs/heads/19.0\tHEAD`. An **Odoo-version** branch, which is what an Odoo-based product would use |
+| `LICENSE` at pin `2670adb20457`, **8 241 B**, sha256₁₂ **`528f84036800`**, LGPL-3.0 | 🟢 **CONFIRMED EXACTLY**, and the same blob is served at the current HEAD `46a5d7d40082` — the grant has not moved between the two pins. Classifier: `LGPL-3.0`, title line **@94**, **§13 absent** |
+| the README channel, which `p292` did not read | 🟢 **`AGREE`** — the README states LGPL-3.0 too. Posture **`BUILD-ON`** for the community half |
+
+🔵 **Why the miss is worth a paragraph and not just a fix.** `p292` had the method for reading a
+*name* from the channel — it used the symref method on other slugs in the same pass — and here it
+**inferred** `master` from a `404` instead. That is the same error as the four guessed `tokenaii`
+slugs in the same pass: 🔴 **guessing a name the channel will tell you.** Two instances, one root
+cause, one hour apart. `p293`'s oracle exists because of it.
+
+### 🔴 The Enterprise boundary, still the open half
+
+🟢 `p292`'s dual-licence correction **stands and is the important half for a studio**: Community
+is **LGPL-3.0**, **Enterprise is proprietary and agreement-gated**, forbidding publishing,
+distributing, sublicensing or selling copies, with the community text dated *"Effective: January
+1, 2024"*. 🔴 That Enterprise boundary is a **web page**, not a committed payload, so it stays
+`ATTRIBUTED` — a licence claim cannot be pinned when it is not in a repository. 🔴 Odoo's own
+grant beneath it is still unprobed.
+
+### 🟢 What a studio takes from fourteen nils
+
+🔵 **Stop shopping for a permissive education ERP; it is not there, and the vendor says so.** The
+engagement shape these shelves keep arriving at is unchanged and now better evidenced: take the
+**copyleft platform as the system of record** — Moodle, Open edX, OpenEduCat Community — and keep
+the **AI layer and the decision record** as separate, permissively-licensed components over an
+HTTP/LTI boundary. 🔴 The licence risk lives at that boundary, not in the platform, and the
+`DANGLING-CLAIM` found elsewhere this pass is a reminder of what to check before building on
+anything: a README that asserts a grant no file serves.
+
 ## 🟡 Pass 292 — the permissive education ERP/CRM leg is NIL for the THIRTEENTH pass, and the leg's own rediscovery produced a real CORRECTION to a carried row
 
 ⏱️ **Fourteenth pass of `2026-10-18`.** Evidence:

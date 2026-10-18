@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 293 — ONE NEW ROW, and it is the first EMEA-origin permissive grant this base has read rather than been told about
+
+⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:
+[`p293-websearch.2026-10-18-p293.tsv`](../evidence/p293-websearch.2026-10-18-p293.tsv) ·
+[`p293-slug-oracle.2026-10-18-p293.tsv`](../evidence/p293-slug-oracle.2026-10-18-p293.tsv).
+
+🔴 The mandated legs returned their **nineteenth** (agents), **tenth** (trending) and
+**fourteenth** (permissive vertical) consecutive nils. All twelve legs — four mandated, four
+regional, four directed — are written out with what each returned in the evidence TSV.
+
+### 🟢 ADMITTED: `tokenaii/Horus-Taleeq-0.2B-Base` — as a SUBSTRATE, with its boundary in the row
+
+`p292` registered this as ranked item 1 — *"recover the slug, then read the grant at a pin"* —
+with the posture `CANDIDATE-ATTRIBUTED` and four refused verification channels. 🟢 Discharged.
+
+| field | value, first-hand |
+|---|---|
+| slug | [`tokenaii/Horus-Taleeq-0.2B-Base`](https://github.com/tokenaii/Horus-Taleeq-0.2B-Base) |
+| alias | [`tokenaii/Horus-Taleeq-0.2B`](https://github.com/tokenaii/Horus-Taleeq-0.2B) — 🟡 **same HEAD, one tree under two names** (see below) |
+| default branch | `main`, read from the **symref**, not inferred |
+| pin | `f7a7700289791a9c114ab038af73b4d45c17c7e7` |
+| grant | 🟢 **MIT · `GRANTED-AT-PIN`** — `LICENSE` **`200`**, **1 080 B**, sha256₁₂ **`96c22722c817`**, family by the shared `p228`/`P237` classifier, **title line @0**, no dual-grant preamble |
+| README channel | 🟢 **`AGREE`** — the README states MIT too. Posture **`BUILD-ON`** (`p288`) |
+| what it is | Arabic-only **small language model**, decoder-only causal Transformer, **exactly 199 916 160 parameters**, 24 layers, hidden 640, 10 heads, **2 KV heads (GQA)**, 128 000-token SentencePiece vocabulary, 4 096-token context, RoPE θ=1 000 000, tied embeddings, bf16 |
+| ledger | **6 000 308 224** tokenizer IDs (3 616 305 152 initial + 2 384 003 072 raw continuation); core pretraining **28 h 40 m 20.604 s** |
+| shipped with it | 🟢 **training code, training stages, data policy and a compute profile** — `configs/`, `docs/CURRENT_MODEL.md`, `TRAINING_STAGES.md`, `DATA_SOURCES.md`, `DATA_AND_REPRODUCIBILITY.md`, `COMPUTE_PROFILE.md` |
+| holder | **TokenAI** and **Assem Sabry** (from the `LICENSE` copyright line, not from press) |
+
+🔵 **Why it earns a row here and not on the agent shelf.** This layer had **no EMEA-origin
+permissive model**, and an Arabic-only base model released *with its corpus policy and training
+code* is exactly the substrate an Arabic-medium tutoring or assessment build has to supply from
+somewhere — the gap `P39`'s ministry assistant and `P40`'s two-corpus tutor both open.
+🔴 **And the boundary belongs in the row, because the README states it plainly:** this is a
+**base-model development release**, *"not a finished production chat model"*, with **no
+instruction tuning and no safety alignment**. A studio adds both. 🔴 It also **does not claim
+full corpus reproducibility** — the historical raw streams and the cleaned Parquet export are
+not identical, and the repo says so itself.
+
+🔴 **Zero education claims in it.** The one `teacher` hit is *"teacher outputs"*, i.e.
+distillation. 🔵 It is a substrate, filed as a substrate. `p286`'s rule, applied to a candidate
+this base wanted to be more than it is.
+
+### 🟡 NOT admitted: the rest of the family, and each for a different measured reason
+
+| slug | oracle verdict | grant |
+|---|---|---|
+| [`tokenaii/Horus-Lens-1.0`](https://github.com/tokenaii/Horus-Lens-1.0) | 🟢 `EXISTS-PUBLIC`, pin `86cade44ab562fb929539a482f440aef28ca301c` | 🔴 **`DANGLING-CLAIM`** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` all **`404`** at the pin; README (5 138 B, sha256₁₂ `46be1ff03067`) asserts *"licensed under the Apache License 2.0"*. Posture **`ASK`**. 🔴 And it is a **text-to-image** model fine-tuned from `Tongyi-MAI/Z-Image` — not education, not language |
+| `tokenaii/Horus-1.0-4B` | 🔴 `ABSENT-OR-PRIVATE` | press reports MIT; **no GitHub repository under that name**. The search leg places the weights on Hugging Face, which stays unreachable |
+| `tokenaii/Horus-Hiero-9B` | 🔴 `ABSENT-OR-PRIVATE` | as above |
+| `tokenaii/Horus`, `tokenaii/horus` | 🔴 `ABSENT-OR-PRIVATE` | 🔵 **two of `p292`'s four guesses, now adjudicated as negatives rather than left inconclusive** |
+
+🟡 **The HEAD collision is a finding, not a verdict.** `Horus-Taleeq-0.2B-Base` and
+`Horus-Taleeq-0.2B` return the **identical** HEAD `f7a7700289791a9c114ab038af73b4d45c17c7e7`, so
+they are one tree under two names, and the shelf carries **one** row — `p283`'s rule, reused
+rather than re-invented. 🔵 It also explains the parameter discrepancy the press carried: the
+*"older 0.2B repo"* and the base repo are not two repositories with two parameter counts; the
+repo says **199 916 160** at this pin and the 204.6M figure belongs to the Hugging Face card.
+
+### 🔵 How the slug was recovered, since the method is the reusable part
+
+🔴 `p292` spent four `git ls-remote` probes on **guessed spellings** and recorded the result as
+*"an anonymous credential prompt … INCONCLUSIVE and not a negative"*. 🟢 Calibrated against a
+known-real and a known-fake control, that prompt **discriminates** — it is this channel's answer
+for *"no repository I will serve you"*, and it is a different string from its answer for *"I
+could not reach the host"*. The slug itself came from a **search leg**, in the first result, the
+moment one was aimed at the path rather than at the licence.
+
+🟢 Both halves are now an instrument:
+[`compose/code/p293-slug-existence-oracle`](../compose/code/p293-slug-existence-oracle/README.md)
+— **45 offline controls**, a closed five-token verdict vocabulary, and a calibration pair that
+**gates every verdict**. 🔴 Its honest bound is a control: the signature cannot separate *absent*
+from *private*, so the token is **`ABSENT-OR-PRIVATE`** and `C9` forbids a bare `ABSENT` from
+ever entering the vocabulary.
+
 ## 🔴 Pass 292 — NO NEW FOUNDATIONAL ROW for a second pass, and the candidate that would have been the first EMEA-origin one could not be resolved to a slug
 
 ⏱️ **Fourteenth pass of `2026-10-18`.** Evidence:

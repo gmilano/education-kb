@@ -25,10 +25,11 @@ IDENTITY_LOG ?= /tmp/education-kb-gate-identity.log
 LADDER_LOG ?= /tmp/education-kb-gate-ladder.log
 STORE_LOG ?= /tmp/education-kb-gate-evidence-store.log
 README_LOG := $(shell mktemp)
+ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe
 
-hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm
+hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm, plus p293's calibrated slug-existence oracle
 
 # 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
 # p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
@@ -189,6 +190,27 @@ gate-pin-grant: ## ACTION p291 — a submodule grant is verified AT THE PIN, and
 gate-evidence-store: ## ACTION p292 — the decision record's own controls, and no recipe may depend on a component it does not locate
 	@cd compose/code/p292-decision-evidence-store && { $(PY) test_decision_store.py > $(STORE_LOG) 2>&1 || { echo "🔴 p292-decision-evidence-store FAILED — the suite's own report follows:" ; sed "s/^/   /" $(STORE_LOG) ; false ; } ; } && echo "── p292-decision-evidence-store (106 controls: the agent-as-decider refusal, the shown-digest binding, the tamper-evident limit asserted as C18, and S2's recipe-count overclaim)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p292-decision-evidence-store/decision_store.py --root . || exit 1
+
+# 🟢 p293 (`p292`'s ranked item 1, and the method half that outlives the finding):
+# IS A GUESSED SLUG A REPOSITORY?  `p292` probed four guessed `tokenaii/*` slugs, got an
+# anonymous credential prompt on each, and recorded the result as "INCONCLUSIVE and not a
+# negative".  🔴 Measured against a known-real and a known-fake control in the same session,
+# that prompt DISCRIMINATES -- it is this channel's answer for "no repository I will serve
+# you", and a different string from "I could not reach the host".  So three of those four
+# probes were real negatives thrown away as noise.
+# 🔴 THE BOUND IS A CONTROL: the same prompt answers for a PRIVATE repository, and nothing in
+# this channel separates the two.  `C9` asserts that a bare `ABSENT` is not in the vocabulary.
+# 🔵 The suite is OFFLINE -- every fixture is a recorded payload from p293's live probes -- so
+# it belongs in `hooks`.  The ONLINE half stays out, and calibrates before it reports.
+gate-slug-oracle: ## ACTION p293 — a credential prompt is a MEASUREMENT, not an inconclusive result
+	@cd compose/code/p293-slug-existence-oracle && { $(PY) test_slug_oracle.py > $(ORACLE_LOG) 2>&1 || { echo "🔴 p293-slug-existence-oracle FAILED — the suite's own report follows:" ; sed "s/^/   /" $(ORACLE_LOG) ; false ; } ; } && echo "── p293-slug-existence-oracle (45 controls: p292's four discarded probes re-adjudicated, the ABSENT-OR-PRIVATE bound as C9-C11, transport-before-refusal, and the two defective controls this suite's own first draft shipped)" && echo "   PASS" || exit 1
+
+# 🔴 ONLINE half — one `git ls-remote` per slug, and it CALIBRATES FIRST.  OUT of `hooks`.
+# An uncalibrated read of this channel is exactly what produced p292's "inconclusive" row, so
+# a control-pair failure reports NO verdict rather than a guess.
+slug-probe: ## ACTION p293 — is it a repository?  make slug-probe SLUGS="owner/a owner/b"
+	@test -n "$(SLUGS)" || { echo 'usage: make slug-probe SLUGS="owner/name owner/other"'; exit 2; }
+	@$(PY) -I compose/code/p293-slug-existence-oracle/slug_oracle.py --online $(SLUGS) --out evidence/p293-slug-oracle-$$(date +%F).tsv
 
 gate-identity: ## ACTION p283 — no shelf may recommend one repository under two live rows
 	@cd compose/code/p283-repo-identity && { $(PY) test_identity_gate.py > $(IDENTITY_LOG) 2>&1 || { echo "🔴 p283-repo-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(IDENTITY_LOG) ; false ; } ; } && echo "── p283-repo-identity (12 controls: withdrawn-in-place, the cross-table index, both halves in one cell)" && echo "   PASS" || exit 1

@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 293 — NO NEW AGENT ROW, the NINETEENTH nil — and the candidate three passes chased turned out not to be an education agent at all
+
+⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:
+[`p293-websearch.2026-10-18-p293.tsv`](../evidence/p293-websearch.2026-10-18-p293.tsv) ·
+[`p293-slug-oracle.2026-10-18-p293.tsv`](../evidence/p293-slug-oracle.2026-10-18-p293.tsv).
+
+🔴 **The mandated agent leg is NINETEEN consecutive nils**, and the population is unchanged from
+`p275`: `microsoft/ai-agents-for-beginners` (MIT, a 12-lesson **course** about building agents),
+`pguso/agents-from-scratch` (MIT, a teaching repo), `avinash201199/free-ai-agents-resources`
+(grant not stated by the source), plus the general-purpose set. 🔵 `p286`'s reclassification
+holds without amendment: **a repo that teaches agent-building is not an education-sector agent.**
+🔴 One source this pass states outright that no dedicated ranking of education-focused agents
+exists — which is the structural reason the leg is nineteen deep rather than a search defect.
+
+### 🔴 `p292`'s ranked item 1 is DISCHARGED — and discharging it REMOVED a candidate from this shelf
+
+`p292` recorded **TokenAI's Horus family** as `CANDIDATE-ATTRIBUTED` and called it *"the actual
+finding"* of that pass: the first permissive **EMEA-origin** model family this base had seen,
+stuck behind an unknown slug. `p293` recovered the slug, read the grant at a pin — and the read
+is what disqualifies it.
+
+| what `p292` reported | what the payload says, read at a pin |
+|---|---|
+| `Horus Taleeq 0.2B Base`, reported **MIT** | 🟢 **CONFIRMED FIRST-HAND. `GRANTED-AT-PIN`** — slug [`tokenaii/Horus-Taleeq-0.2B-Base`](https://github.com/tokenaii/Horus-Taleeq-0.2B-Base), branch `main`, pin `f7a7700289791a9c114ab038af73b4d45c17c7e7`, `LICENSE` **`200`**, **1 080 B**, sha256₁₂ **`96c22722c817`**, family **MIT** by the shared `p228`/`P237` classifier (title line @0, no dual-grant preamble) |
+| …and its README | 🟢 Also states MIT → `p288` channel verdict **`AGREE`**, posture **`BUILD-ON`**. Both channels, one answer |
+| *"~6 B Arabic tokens"*, *"~30 h on one RTX PRO 6000"* | 🟢 **Sharpened from the repo itself**: ledger **6 000 308 224** tokenizer IDs; core pretraining wall-clock **28 h 40 m 20.604 s** — press rounded 28.67 h up to 30 |
+| the parameter count, reported two ways (~199.9M / ~204.6M) | 🟢 **RESOLVED: the repository claims "exactly 199,916,160".** The 204.6M figure is not what the repo says |
+| *"TokenAI (Cairo)"* | 🔴 **NOT RESOLVED, and this base asserts neither.** One outlet says Cairo, another Alexandria; **the README names no city.** Owner is named: **Assem Sabry**; TokenAI self-describes as *"a startup and nonprofit organization focused on open Arabic AI research"* |
+| 🔴 **its place on an EDUCATION shelf** | 🔴 **REFUTED. The README carries ZERO education claims.** The single `teacher` hit is *"teacher outputs"* — distillation, not pedagogy. No tutoring, no assessment, no curriculum, no learner |
+
+🔴 **And the second family member settles the question.** The oracle found one more live repo,
+[`tokenaii/Horus-Lens-1.0`](https://github.com/tokenaii/Horus-Lens-1.0) (pin
+`86cade44ab562fb929539a482f440aef28ca301c`) — and it is a **text-to-image** model fine-tuned from
+`Tongyi-MAI/Z-Image`. Not education. Not even language. Its grant is a
+**`DANGLING-CLAIM`**: `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` all `404` at the pin,
+while the README asserts Apache-2.0 — posture **`ASK`**, per `p288`.
+
+🔵 **So the honest verdict is the one this shelf's own rule already implies.** `p286` struck an
+agent-building *course* off this table for the same reason: the subject matter is not education.
+A general-purpose Arabic base model is a **substrate**, and it belongs on
+[`repos/foundations.md`](../repos/foundations.md) with its boundary stated — **not here**.
+🟢 That is a better outcome than the row would have been: the first EMEA-origin permissive grant
+this base has ever read first-hand, filed where a studio would actually reach for it.
+
+### 🔵 What a studio takes from this
+
+🔴 **Nineteen passes of looking have not produced an education-sector agent with a permissive
+grant.** That is now a measurement, not a gap in the search. The agent layer a client asks for
+gets **composed** from general-purpose frameworks over a vertical platform — which is what every
+recipe in [`compose/patterns.md`](../compose/patterns.md) already does — and the billable
+component is the one no repository supplies: the decision record (`P49`). 🟢 What `p293` adds to
+that story is a *substrate* for Arabic-medium work, where this base had none.
+
 ## 🔴 Pass 292 — NO NEW AGENT ROW, the mandated leg's EIGHTEENTH nil, and one deployed state education agent that cannot be carried because it has no grant
 
 ⏱️ **Fourteenth pass of `2026-10-18`.** Evidence:

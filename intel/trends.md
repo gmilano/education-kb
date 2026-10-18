@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 293 — THE REGIONAL NILS ARE A QUERY-LANGUAGE ARTEFACT, PROVEN IN A SINGLE PASS; AND THE TREND THAT MATTERS IS A MANDATE THAT NAMES ASSESSMENT
+
+⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:
+[`p293-websearch.2026-10-18-p293.tsv`](../evidence/p293-websearch.2026-10-18-p293.tsv).
+
+### 🟢 Trend 1 — the national-language channel is FOUR FOR FOUR, and it is now a controlled measurement
+
+🇻🇳 `p290` · 🇲🇽 `p291` · 🇪🇬 `p292` · 🇮🇩 **`p293`**.
+
+🔵 Every earlier proof spanned two passes. **`p293` ran the English APAC leg and the Indonesian
+APAC leg in the same hour, over the same region**, and they disagree about whether an education
+policy layer exists in Asia: the English leg returned four corporate-L&D items and its own
+summary of *"no education-specific APAC regulation"*; the Indonesian leg returned a **fourteen-
+nation ministerial work plan**. 🔴 So `p292`'s *"3 of 3 are corporate L&D — supply-side
+displacement corroborated from the demand side"* is **withdrawn**: the displacement was in the
+query. 🔵 `p286`'s APAC "explicit nil" has the same explanation, retrospectively.
+
+🔴 **The operational consequence for this base**: a region-named English leg is not a measurement
+of a region. It is a measurement of English-language press coverage of a region, and the two
+differ most where the education system is largest.
+
+### 🟢 Trend 2 — the regional mandate now names ASSESSMENT, which is where this base's findings already were
+
+The **ASEAN Work Plan on Education 2026-2030** (launched at the 14th ASEAN Education Ministers
+Meeting, Singapore, `2026-07-22`) anchors on **AI readiness, STEM capability and holistic student
+development**, and defines AI readiness as *"updating curricula, teaching methods **and
+assessments**"*.
+
+🔵 **That matters because of a bias this base measured on itself.** `T229` recorded that the
+vertical's live edge is **exam-shaped** — four of five new finds were assessment — while the
+shelf's rows were almost all **tutoring**. 🟢 A fourteen-nation mandate naming assessment turns
+that from a sampling bias into a *market* reading: **the procurable work is assessment and
+readiness, not tutor deployment**, and now a regional instrument says so.
+
+🔴 **And Indonesia's commitment is conditional in exactly the procurable way.** AI becomes a
+compulsory subject *only after* **teacher readiness, curriculum and learning infrastructure** are
+judged adequate. The gate is the engagement: readiness assessment, teacher training, curriculum
+and assessment redesign. 🔵 Named in the instrument, not inferred from it.
+
+### 🔴 Trend 3 — the licence risk keeps running OPPOSITE to expectation, and this pass has a clean case
+
+🔵 This file has recorded for several passes that the licence surprises run the *wrong* way: the
+permissive-looking thing is gated and the copyleft thing is honest. `p293` adds a pair that makes
+the point in one line each:
+
+| artefact | expectation | measured |
+|---|---|---|
+| `tokenaii/Horus-Taleeq-0.2B-Base` — a 200M-parameter model from a startup | "weights-available, licence vague" | 🟢 **MIT, read at a pin**, 1 080 B, sha256₁₂ `96c22722c817`, and the README **agrees** with the payload. Shipped **with training code, data policy and a compute profile** |
+| `tokenaii/Horus-Lens-1.0` — the same org, the same week | "same org, same grant" | 🔴 **`DANGLING-CLAIM`.** Four licence paths `404` at the pin; the README asserts Apache-2.0 and nothing serves it. Posture **`ASK`** |
+| **OpenEduCat**, the sector's leading open ERP | "LGPL-3.0, done" | 🔴 **DUAL.** Community LGPL-3.0; **Enterprise proprietary and agreement-gated**, forbidding publishing, distributing, sublicensing or selling copies (`p292`, standing) |
+
+🔵 **One org, one week, two grades.** The unit of licence risk is **the repository**, never the
+organisation and never the model family — which is why these shelves pin per-slug and why
+`p293`'s README column now runs on every swept row rather than by hand.
+
+### 🟡 Trend 4 — the market numbers did not move, and the spread is still the finding
+
+IMARC **USD 6.4B** (2025) → **79.6B** (2034); Grand View via GIIResearch **8.3B** (2025) →
+**57.2B** (2033); The Business Research Company **10.6B** (2026), up from **7.52B** (2025).
+Student AI use **66% (2024) → 92% (2025)**. AI-tutor market **USD 1.63B** (2024), language
+learning the fastest-growing segment. Sector maturity rated **35/100**, *"most institutions still
+in pilot"*.
+
+🔵 **Every figure here was already on this shelf at `p292`; the leg moved nothing**, which is
+itself worth recording after fifteen passes in a day. 🔴 And the LATAM pairing is the one to
+quote: **92% of students engaging** against a **"Rest of Latin America" market of USD 18.2M
+(2024) → 36M (2029)**. Near-universal adoption with no budget line is not a contradiction — it is
+the shape of the engagement, and it argues for small, fast, self-funding work over a platform
+programme.
+
+### 🔴 What this pass could NOT establish
+
+🔴 **No primary government source was read**, for the fifteenth pass. `moe.gov.sg` (including the
+exact speech URL, now recorded), `asean.org` and `gov.br/mec` answer `ENOTFOUND` via WebFetch and
+`000` via curl — two distinct egress routes, both closed. The ASEAN work plan and the MEC
+Referencial are **`ATTRIBUTED`** to press, each corroborated by multiple independent outlets.
+
+🔴 **`huggingface.co` remains closed**, so the Horus weights' model cards were not read; the GGUF
+and 4B variants are Hugging Face-only and stay unverifiable from here.
+
+🔴 **`api.github.com` is reachable but SCOPED**, and that is a correction worth recording for any
+pass that reads its own channel notes: `rate_limit` answers **`200`** with an authenticated
+15 000-request budget, which looks exactly like an open channel. 🔴 Repository metadata for any
+slug this session is not attached to answers **`403`** by policy, and `search/repositories` is
+refused outright. 🔵 **A `200` on `rate_limit` is evidence about `rate_limit`** — `P1057`'s lesson
+one more level out. No star count in this pass is first-hand, and none is published.
+
 ## 🟢 Pass 292 — THE COMPLIANCE RECORD IS THE PRODUCT, THE NATIONAL LANGUAGE IS THE CHANNEL FOR THE THIRD TIME, AND THE LICENCE RISK RUNS OPPOSITE TO EXPECTATION
 
 ⏱️ `2026-10-18`, fourteenth pass. Evidence:

@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 293 — **BOTH TOP ITEMS DISCHARGED, AND THE FIRST ONE'S PAYLOAD DISQUALIFIED THE ROW IT WAS WANTED FOR**
+
+⏱️ `2026-10-18`, fifteenth pass. Evidence:
+[`p293-websearch.2026-10-18-p293.tsv`](../evidence/p293-websearch.2026-10-18-p293.tsv) ·
+[`p293-slug-oracle.2026-10-18-p293.tsv`](../evidence/p293-slug-oracle.2026-10-18-p293.tsv) ·
+[`channel-conflict.2026-10-18-p293.tsv`](../evidence/channel-conflict.2026-10-18-p293.tsv).
+
+### Discharged this pass
+
+| `p292` item | state | what it turned out to be |
+|---|---|---|
+| **1. recover `tokenaii`'s slug, then read the grant AT A PIN** *(ranked first)* | 🟢 **DISCHARGED — and the answer was one search leg away** | [`tokenaii/Horus-Taleeq-0.2B-Base`](https://github.com/tokenaii/Horus-Taleeq-0.2B-Base), branch `main` **from the symref**, pin `f7a7700289791a9c114ab038af73b4d45c17c7e7`, `LICENSE` **`200`**, **1 080 B**, sha256₁₂ **`96c22722c817`**, family **MIT**, title @0, no dual grant; README **`AGREE`**, posture **`BUILD-ON`**. 🔵 `p292` aimed its queries at the *licence* and got press about licences; a query aimed at the **path** returned the path in its first result |
+| 🔴 **…and reading it REFUTED the row it was wanted for** | 🟢 **CORRECTED before publication** | `p292` called the Horus family *"the actual finding"* and wanted it on an education shelf. 🔴 **The README carries ZERO education claims** — the one `teacher` hit is *"teacher outputs"*, i.e. distillation — and sibling `Horus-Lens-1.0` is **text-to-image**. Filed on [`repos/foundations.md`](../repos/foundations.md) as a **substrate**, struck from the agent candidate list. `p286`'s rule, applied against this base's own preference |
+| **2. wire the README channel into `p278`'s sweep** *(carried FIVE passes)* | 🟢 **DISCHARGED — BUILT** | Three appended columns (`readme_path`, `readme_claim`, `readme_channel`) in [`sweep.sh`](../compose/code/p278-channel-conflict/sweep.sh) via [`readme_column.py`](../compose/code/p278-channel-conflict/readme_column.py); the ladder is read from `p288` so there is **one** copy of it; the sweep **refuses to run** on an empty ladder. 🟢 Productive on its **first live run**: `Horus-Lens-1.0` → **`DANGLING-CLAIM`** |
+| **14. do not re-run the mandated EMEA phrasing** | 🟡 **RE-RUN ANYWAY, DELIBERATELY — and the advice was taken in the other half** | The standing battery mandates the per-region leg, so it ran and returned a **seventh** consecutive nil. 🟢 The leg *added* in its place was **Indonesian**, and that is the leg that broke **APAC's** nil. The register's advice was right about where the value is, and this pass acted on it |
+| 🆕 **`p292`'s own verdict that the channel was *"inconclusive"*** | 🔴 **REFUTED, with controls** | Calibrated against a known-real and a known-fake probe **in the same session**, the credential prompt **discriminates**: `rc=128` + `Authentication failed` for a slug the channel will not serve, `rc=128` + `unable to access` for an unreachable host, `rc=0` + refs for a real one. 🔴 **Three of `p292`'s four probes were real negatives discarded as noise.** Now an instrument: [`p293-slug-existence-oracle`](../compose/code/p293-slug-existence-oracle/README.md), **45 offline controls**, in `make hooks` |
+| 🆕 **`p292`'s *"OpenEduCat's default branch is `master`"*** | 🔴 **WRONG — it is `19.0`** | An Odoo-version branch, read from `--symref`. 🟢 The *lesson* `p292` drew (*"the `404` is evidence about the branch name"*) **stands and was correct**; the name itself was **inferred** rather than read, in a pass that used the symref method correctly on other slugs. 🔵 Same error class as the four guessed slugs, one hour apart |
+| 🆕 **`p292`'s OpenEduCat pin figures** | 🟢 **CONFIRMED EXACTLY** | **8 241 B**, sha256₁₂ **`528f84036800`**, `LGPL-3.0`, title @94, §13 absent — and the **same blob at both `2670adb20457` and the current HEAD `46a5d7d40082`**, so the grant has not moved between them |
+
+### Still open, re-ranked for `p294`
+
+| rank | item | age | why it is where it is |
+|---|---|---|---|
+| **1** | 🔴 **Run the now-standing README column over the WHOLE shelf corpus** | 🆕 new | The column exists, is in `hooks`, and has been run over **four** slugs — on which it already found one `DANGLING-CLAIM`. One command (`make conflict-sweep SLUGS=…`). 🔵 This is now the cheapest unspent item on the register, which is **exactly where item 2 sat for five passes**. Naming the pattern is the only defence against repeating it |
+| **2** | 🔴 **Retro-adjudicate every `inconclusive` row in `evidence/` with the calibrated oracle** | 🆕 new | `p292`'s discarded negatives were found **by accident**, while chasing something else. Nothing establishes that `p292` is the only pass that wrote a credential prompt down as a non-result. **No network** for the census; the oracle supplies the verdicts |
+| **3** | 🔴 **A printf-arity-vs-header census across every instrument** | 🆕 new | `p293` found an **11-against-19** column raggedness in `sweep.sh` only because it widened that schema; the defect had shipped into every `channel-conflict.*.tsv` carrying a slug that did not resolve. **Nothing checks this**, and every one of these scripts writes a TSV that something else reads **by index**. **No network**. 🔵 This row was itself reworded to clear `p253`'s gate: the first draft wrote one of `p253`'s own hedge tokens in its *slug* sense, and because a contiguous run of `|`-lines is ONE scope, that token attached to the **Annex III** row below it. 🟢 The gate fired correctly and is left exactly as it is — `p253`'s README says a pinned fact is defended until the pin changes, and a false positive is the cheap side of that trade |
+| **4** | 🔴 **FAMILY-AXIS recovery sweep over every `UNCLASSIFIED` cell** | **five passes** | Known-productive since `p290`. **No network needed**, which removes the usual excuse |
+| **5** | 🟡 **`P46`'s intervention log and `P47`'s deadline layer, as components** | one pass | `p292` established they are **not** the decision record. Two recipes terminate in named components that do not exist; the store's substrate is reusable for both |
+| **6** | 🔴 **A licence-CHANGE-WITH-A-DATE-BOUNDARY column** | **six passes** | 🟢 Two live cases now: OpenEduCat's *"Effective: January 1, 2024"*, and `Horus-Lens-1.0`'s README claim with **no payload and no date at all** |
+| **7** | 🔴 **`ROOT_OR_SOLE` in the enumeration gate** | **nine passes** | — |
+| **8** | 🔴 **Widen `gate-identity` to census the enumeration QUEUE** | **nine passes** | — |
+| **9** | 🟡 **The Annex III(3) → payload-language classifier** | two passes | The vocabulary gap is measured and published; it is still not an instrument. EUR-Lex unreachable since `p289`. 🔵 **The date itself is SETTLED and not in question here:** Annex III education high-risk applies **`2027-12-02`** per **Reg. (EU) 2026/1744** (`p233` OJ dates, `p241` superseded-date count) — what is missing is the classifier, not the date |
+| **10** | 🟡 **The fifth national language: 🇮🇳 HINDI** | 🆕 new | The channel is **four for four** — 🇻🇳 `p290`, 🇲🇽 `p291`, 🇪🇬 `p292`, 🇮🇩 `p293` — and India is the **largest education system this base has never queried in-language**. 🔴 Africa (Swahili, Amharic) is the other unspent axis |
+| **11** | 🔵 **Ask TokenAI for a licence payload on `Horus-Lens-1.0`** | 🆕 new | The `DANGLING-CLAIM` posture is literally **`ASK`**, and this base has produced that posture many times without ever exercising it against a vendor. 🔵 The outcome is informative either way |
+| **12** | 🔴 **Teach the enumeration gate that a licence-like path can be a SOURCE FILE** | carried | — |
+| **13** | 🔵 **Anchor the evidence store's `head()`** | one pass | The one thing `C18` says the component cannot do for itself. **No network** needed to specify it |
+| **14** | 🔵 **Enumerate `iblai/iblai-claw-setup`'s tree** | carried | Grant read, tree never walked |
+| **15** | 🟡 **`--resolve` over the 14 CANDIDATE control sites** | **eleven passes** | — |
+| **16** | 🔴 **Do NOT re-run the mandated EMEA region phrasing for its own sake** | **seven nils** | 🟢 `p293` spent the leg on a national language and broke a *different* region's nil with it. Do that again |
+
+### 🔴 Declared gaps — measured absences, not silences
+
+| gap | measurement |
+|---|---|
+| **an education-sector agent with a permissive grant** | 🔴 **NINETEEN consecutive nils** on the mandated leg. One source this pass states outright that no dedicated ranking of education-focused agents exists. 🔵 This is a property of the sector, not of the query |
+| **a new permissive education ERP/CRM** | 🔴 **FOURTEEN consecutive nils** — and 🟢 the leading vendor's **own glossary** now states that MIT/Apache-2.0 are permissive and that **OpenEduCat is LGPLv3**. The category's flagship says it is not the thing being looked for |
+| **education on the trending channel** | 🔴 **TEN consecutive nils**; `github.com/trending` unreachable for **fifteen** passes. 🔵 The leg's standing value is measuring how far apart the social star figures are — this pass, the **same repo at ~67.2k★ and ~47.3k★** |
+| **EMEA on the mandated region phrasing** | 🔴 **SEVEN consecutive nils.** Every EMEA finding this base carries arrived through a jurisdiction- or language-named leg |
+| **code from any regional leg** | 🔴 **Five passes**, four regions each. The regions generate **instruments**; code arrives through directed legs |
+| **a primary government source** | 🔴 **Fifteen passes.** `moe.gov.sg`, `asean.org`, `gov.br/mec`: `ENOTFOUND` via WebFetch **and** `000` via curl. 🟢 The **exact MOE speech URL** is now recorded, so this is a blocked fetch rather than an unfound document |
+| **a first-hand star count** | 🔴 **Still none, and the reason is newly precise.** `api.github.com` is **reachable and authenticated** (`rate_limit` → `200`, 15 000-request budget) but **scoped to attached repositories**; third-party repo metadata is `403` **by policy** and `search/repositories` is refused. 🔵 A `200` on `rate_limit` is evidence about `rate_limit` |
+| **the Horus weights' grants** | 🔴 `huggingface.co` closed on both egress paths. `Horus-1.0-4B` and `Horus-Hiero-9B` are HF-only and `ABSENT-OR-PRIVATE` on GitHub. 🔵 A grant read on training code says **nothing** about the weights |
+| **OpenEduCat Enterprise, and Odoo beneath it** | 🔴 The Enterprise boundary is a **web page**, not a committed payload, so it stays `ATTRIBUTED` — a licence claim cannot be pinned when it is not in a repository. Odoo's own grant is still unprobed |
+
 ## Pass 292 — **THE TOP ITEM WAS BUILT, AND BUILDING IT REFUTED THE ENTRY THAT ASKED FOR IT**
 
 ⏱️ `2026-10-18`, fourteenth pass. Evidence:

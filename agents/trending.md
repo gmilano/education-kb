@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 293) — the nil is NINETEEN deep, the EMEA candidate resolved to a non-education model, and the week's real agent story is that the national-language channel broke APAC
+
+⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:
+[`p293-websearch.2026-10-18-p293.tsv`](../evidence/p293-websearch.2026-10-18-p293.tsv) ·
+[`p293-slug-oracle.2026-10-18-p293.tsv`](../evidence/p293-slug-oracle.2026-10-18-p293.tsv).
+
+### 🔴 The mandated battery, as a trend line rather than a result
+
+| leg | this pass | run |
+|---|---|---|
+| open source AI agents, education | 🔴 **NIL** | **19th consecutive** |
+| GitHub trending, education | 🔴 **NIL for education** | **10th consecutive** |
+| permissive education ERP/CRM | 🔴 **NIL** | **14th consecutive** |
+| AI education trends (market) | 🟢 non-nil, no code | unchanged since `p292` |
+| region: North America | 🟢 non-nil, no code | held, **one figure corrected** |
+| region: EMEA (mandated phrasing) | 🔴 **NIL** | **7th consecutive** |
+| region: APAC (mandated phrasing) | 🟡 corporate L&D only | **and refuted in-pass** |
+| region: LATAM | 🟢 non-nil, no code | strongest leg again |
+
+🔵 **The trend worth recording is the one inside the star figures.** The trending leg returned
+`microsoft/ai-agents-for-beginners` at **~67.2k★** from one social post and **~47.3k★** from
+another — the same repository, two self-reported numbers, **42% apart**, in the same pass.
+🔴 Neither is published by this base, and that is the whole policy: a figure whose only channel
+is a social post is not a measurement.
+
+### 🟢 The one new agent-adjacent repository, and why it left the agent shelf
+
+`p292` chased **TokenAI's Horus family** for a pass and ranked recovering its slug as item 1.
+🟢 **Recovered, and read at a pin:** [`tokenaii/Horus-Taleeq-0.2B-Base`](https://github.com/tokenaii/Horus-Taleeq-0.2B-Base)
+is **MIT**, first-hand, 1 080 B, sha256₁₂ `96c22722c817`, at pin
+`f7a7700289791a9c114ab038af73b4d45c17c7e7` — the **first permissive EMEA-origin grant this base
+has ever read rather than been told about.**
+
+🔴 **And it is not an education agent.** Zero education claims in its README; its sibling
+`Horus-Lens-1.0` is a text-to-image model with a **`DANGLING-CLAIM`** Apache-2.0 (README asserts
+it, no payload serves it). Filed as a *substrate* on [`repos/foundations.md`](../repos/foundations.md),
+struck from the agent candidate list. 🔵 `p286` set this precedent and it keeps paying.
+
+### 🟢 THE WEEK'S REAL SIGNAL: the national-language channel is FOUR FOR FOUR, and this pass made it a controlled test
+
+🇻🇳 `p290` · 🇲🇽 `p291` · 🇪🇬 `p292` · 🇮🇩 **`p293`**.
+
+🔵 Every earlier proof was sequential — an English leg failed in one pass, a language leg
+succeeded in the next, and the comparison spanned passes. **`p293` ran both legs over the same
+region in the same hour:**
+
+| leg, same region, same pass | what it returned |
+|---|---|
+| `AI education APAC 2026 adoption regulation players` | 🟡 **Corporate L&D, 4 of 4.** TCS + Pearson, LearnUpon's Sydney HQ, Alteryx Academy, an OpenAI ANZ policy hire. The leg's own summary: no education-specific APAC regulation, no national player list |
+| `AI pendidikan Indonesia 2026 platform sumber terbuka lisensi repositori Kemendikbud` | 🟢 **A 14-nation ministerial work plan.** The **14th ASEAN Education Ministers Meeting** (Singapore, **2026-07-22**) launching the **ASEAN Work Plan on Education 2026-2030**, anchored on **AI readiness, STEM and holistic development**; Indonesia's Mendikdasmen **Abdul Mu'ti** on AI as a **compulsory subject** pending teacher/curriculum/infrastructure readiness; **ImajiNation 2026** with Assemblr EDU and Samsung for Education |
+
+🔴 **`p292`'s APAC conclusion is therefore withdrawn.** It read *"3 of 3 are corporate L&D"* as
+supply-side displacement corroborated from the demand side. The displacement was in the
+**query**. 🟢 Corroborated by four independent outlets plus Singapore's own government page;
+🔴 the page itself is unreachable from here, so the work plan stays **ATTRIBUTED**.
+
+### 🔴 Nil declared explicitly, so it is not mistaken for coverage
+
+- **EMEA on the mandated phrasing: seventh consecutive nil.** Zero education results; the corpus
+  is enterprise AI (CompTIA, Workday, Bandwidth-Cavell). A seven-point measurement of a dead
+  channel, not an absence of EMEA education activity.
+- **Code, from every regional leg: nil.** Four regions, four passes of policy and money, **no
+  repository, no licence, no slug.** The regions generate *instruments*; the code comes from
+  directed legs.
+- **Primary government sources: nil, and now named.** `moe.gov.sg`, `asean.org` and
+  `gov.br/mec` answer `ENOTFOUND` via WebFetch and `000` via curl — two routes, both closed.
+  🟢 The exact MOE speech URL is recorded in the evidence TSV so the next pass with egress
+  fetches it directly instead of re-finding it.
+
 ## 2026-10-18 (pass 292) — the mandated nil is EIGHTEEN deep, and the week's real agent story is a CAIRO startup shipping a permissive Arabic model family that four verification channels refused to confirm
 
 ⏱️ **FOURTEENTH pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept,

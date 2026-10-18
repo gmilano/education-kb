@@ -1,0 +1,11 @@
+# p293 slug-existence oracle — calibrated against the control pair above.
+# ABSENT-OR-PRIVATE does NOT mean absent: this channel cannot separate
+# a missing repository from a private one.
+slug	url	verdict	head_sha	detail
+tokenaii/Horus-Taleeq-0.2B-Base	https://github.com/tokenaii/Horus-Taleeq-0.2B-Base	EXISTS-PUBLIC	f7a7700289791a9c114ab038af73b4d45c17c7e7	1 ref line(s), symref refs/heads/main
+tokenaii/Horus-Taleeq-0.2B	https://github.com/tokenaii/Horus-Taleeq-0.2B	EXISTS-PUBLIC	f7a7700289791a9c114ab038af73b4d45c17c7e7	1 ref line(s), symref refs/heads/main
+tokenaii/Horus-1.0-4B	https://github.com/tokenaii/Horus-1.0-4B	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)
+tokenaii/Horus	https://github.com/tokenaii/Horus	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)
+tokenaii/horus	https://github.com/tokenaii/horus	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)
+tokenaii/Horus-Hiero-9B	https://github.com/tokenaii/Horus-Hiero-9B	ABSENT-OR-PRIVATE	-	channel refusal signature (absent and private NOT separable)
+tokenaii/Horus-Lens-1.0	https://github.com/tokenaii/Horus-Lens-1.0	EXISTS-PUBLIC	86cade44ab562fb929539a482f440aef28ca301c	1 ref line(s), symref refs/heads/main

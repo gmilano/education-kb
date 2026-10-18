@@ -1,0 +1,9 @@
+# p293 — 2026-10-18 — p278's channel-conflict sweep with p288's README channel wired in as THREE APPENDED COLUMNS.
+# Backlog item carried p289-p292 as 'one column in sweep.sh, classifier already written'. Built at p293.
+# The ladder is read from p288 via readme_column.py --paths, so there is ONE copy of it.
+# 🔴 The unresolved-slug row previously emitted 11 columns against a 19-column header; padded to 22 here.
+slug	default_ref	head_sha	payload_path	payload_bytes	payload_family	manifest_path	manifest_declares	verdict	severity	note	manifests_in_tree	manifests_declaring	declared_distinct	manifests_skipped	manifests_foreign	root_manifest_name	manifests_thirdparty	thirdparty_paths	readme_path	readme_claim	readme_channel
+tokenaii/Horus-Taleeq-0.2B-Base	main	f7a770028979	LICENSE	1080	MIT	-	-	SINGLE-CHANNEL-PAYLOAD	GREY	payload read, manifest NOT read — agreement is unestablished, not established	0	0	-	0	0	-	0	-	README.md	MIT	AGREE
+tokenaii/Horus-Lens-1.0	main	86cade44ab56	-	0	-	-	-	NO-CHANNEL	GREY	neither channel read — this row carries no grade	0	0	-	0	0	-	0	-	README.md	Apache-2.0	DANGLING-CLAIM
+openeducat/openeducat_erp	19.0	46a5d7d40082	LICENSE	8241	LGPL-3.0	-	-	SINGLE-CHANNEL-PAYLOAD	GREY	payload read, manifest NOT read — agreement is unestablished, not established	0	0	-	0	0	-	0	-	README.md	LGPL-3.0	AGREE
+tokenaii/Horus-1.0-4B	-	-	-	0	UNRESOLVED	-	-	NO-CHANNEL	GREY	slug did not resolve	0	0	-	0	0	-	0	-	-	-	NO-CHANNEL

@@ -142,7 +142,24 @@ _decl_from() { # _decl_from <manifest-name> <file>
 # p280 APPENDS two columns for the same reason p279 appended four: every earlier
 # `channel-conflict.*.tsv` stays readable against this header, so a diff between a p279 row
 # and a p280 row is a diff in the MEASUREMENT.
-printf 'slug\tdefault_ref\thead_sha\tpayload_path\tpayload_bytes\tpayload_family\tmanifest_path\tmanifest_declares\tverdict\tseverity\tnote\tmanifests_in_tree\tmanifests_declaring\tdeclared_distinct\tmanifests_skipped\tmanifests_foreign\troot_manifest_name\tmanifests_thirdparty\tthirdparty_paths\n'
+# p293 APPENDS THREE columns for the same reason p279 appended four and p280 appended two:
+# every earlier `channel-conflict.*.tsv` stays readable against this header.  These three are
+# `p288`'s README channel, carried on the backlog as "one column in sweep.sh, classifier
+# already written" for FIVE passes (p289-p292) and run BY HAND in the meantime -- which is the
+# state the Makefile's own header calls out as the reason a working gate stays a one-off.
+# 🔵 The ladder is read from `p288` via `readme_column.py --paths`, so there is ONE copy of it.
+printf 'slug\tdefault_ref\thead_sha\tpayload_path\tpayload_bytes\tpayload_family\tmanifest_path\tmanifest_declares\tverdict\tseverity\tnote\tmanifests_in_tree\tmanifests_declaring\tdeclared_distinct\tmanifests_skipped\tmanifests_foreign\troot_manifest_name\tmanifests_thirdparty\tthirdparty_paths\treadme_path\treadme_claim\treadme_channel\n'
+
+# 🔴 Read the ladder ONCE, and FAIL LOUD if it is empty.  An empty ladder would walk zero README
+# paths and print `-` for every row, which is this script's own silent-zero class (`p252`,
+# `ACTION XR`) arriving a third time: a channel that never looked would look exactly like a
+# channel that looked and found nothing.
+README_LADDER="$(python3 -I "$HERE/readme_column.py" --paths)"
+if [ -z "${README_LADDER// }" ]; then
+  echo "🔴 sweep.sh could not read p288's README ladder — the README channel would report a" >&2
+  echo "   measured absence it never measured.  Refusing to run." >&2
+  exit 1
+fi
 
 # Resolve the input ONCE, explicitly: a file argument if given, otherwise stdin.
 # 🔴 p279, MEASURED: the slug list is read on FD 3, not stdin.  With the per-package walk
@@ -166,7 +183,14 @@ while read -r slug <&3; do
 
   br=$(probe_default_branch "$slug")
   if [ -z "$br" ]; then
-    printf '%s\t-\t-\t-\t0\tUNRESOLVED\t-\t-\tNO-CHANNEL\tGREY\tslug did not resolve\n' "$slug"
+    # 🔴 MEASURED AT p293, and it predates p293: this row emitted ELEVEN columns against a
+    # NINETEEN-column header, so an unresolved slug was short by eight and anything reading
+    # `channel-conflict.*.tsv` by column INDEX misread every field after `note` on those rows.
+    # Appending p293's three columns would have widened the gap to eleven, so the row is padded
+    # to the full width here.  🔵 The eight pre-p293 columns are `-`/`0` and NOT back-filled with
+    # a measurement: this slug did not resolve, so no channel was read, and `NO-CHANNEL` is the
+    # honest value for the README column too.
+    printf '%s\t-\t-\t-\t0\tUNRESOLVED\t-\t-\tNO-CHANNEL\tGREY\tslug did not resolve\t0\t0\t-\t0\t0\t-\t0\t-\t-\t-\tNO-CHANNEL\n' "$slug"
     sleep 1; continue
   fi
   sha=$(GIT_TERMINAL_PROMPT=0 timeout 45 git ls-remote "https://github.com/$slug" HEAD 2>/dev/null \
@@ -182,6 +206,22 @@ while read -r slug <&3; do
     fi
     rm -f "$t"
   done
+
+  # ---- README channel (p288's classifier, wired as a column at p293)
+  # 🔵 Walks p288's ladder, which is CASE-CLOSED: `README.MD` is on it because `p282` found
+  # exactly that spelling on `ls1intum/Pyris` after a shorter ladder reported "no README".
+  r_path="-"; r_claim="-"; r_chan="NO-CHANNEL"
+  while IFS= read -r rfn; do
+    [ -z "$rfn" ] && continue
+    t=$(mktemp); _raw_at "$slug" "$br" "$rfn" > "$t"
+    if [ -s "$t" ] && ! _is404 "$t"; then
+      r_path="$rfn"
+      read -r r_claim r_chan < <(python3 -I "$HERE/readme_column.py" "$t" "$p_fam" \
+          | awk -F'\t' '{print $1, $2}')
+      rm -f "$t"; break
+    fi
+    rm -f "$t"
+  done <<< "$README_LADDER"
 
   # ---- manifest channel, ENUMERATED PER PACKAGE (p279)
   m_path="-"; m_decl="-"; m_in_tree=0; m_declaring=0; m_skipped=0; m_distinct="-"
@@ -301,11 +341,12 @@ while read -r slug <&3; do
   if [ "$m_distinct" != "-" ] && [ "$m_distinct" -gt 1 ] 2>/dev/null; then
     note="$note; SUBPACKAGES DISAGREE ($m_distinct distinct declarations)"
   fi
-  printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' \
+  printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' \
     "$slug" "$br" "${sha:--}" "$p_path" "$p_bytes" "$p_fam" "$m_path" "$m_decl" \
     "$verdict" "$severity" "$note" \
     "$m_in_tree" "$m_declaring" "$m_distinct" "$m_skipped" "$m_foreign" "${m_rootname:--}" \
-    "$m_thirdparty" "${tp_paths:--}"
+    "$m_thirdparty" "${tp_paths:--}" \
+    "$r_path" "${r_claim:--}" "${r_chan:-NO-CHANNEL}"
   sleep 1   # the session git proxy caps concurrent smart-HTTP ops; serialise deliberately
 done
 

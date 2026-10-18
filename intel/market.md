@@ -7,8 +7,117 @@ updated: 2026-10-18
 # Market map — Education
 
 > Key players, regulatory ground truth and opportunities **placed by region**.
-> Sourced from web research on 2026-10-17. Vendor-sourced figures are marked; they are
+> Sourced from web research on 2026-10-18. Vendor-sourced figures are marked; they are
 > carried because they are the only numbers available, not because they are reliable.
+
+## 🟢 Pass 293 — ALL FOUR REGIONAL LEGS RAN, AND APAC'S FOUR-PASS "NO EDUCATION POLICY" VERDICT WAS REFUTED BY AN INDONESIAN LEG IN THE SAME HOUR
+
+⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:
+[`p293-websearch.2026-10-18-p293.tsv`](../evidence/p293-websearch.2026-10-18-p293.tsv).
+
+🔵 **The methodological result first, because it changes how every region row on this file should
+be read.** Since `p287` this base has carried an inference: *a region-named English leg measures
+English-language press coverage of a region, not the region*. Every proof was **sequential** — an
+English leg failed in one pass, a language-named leg succeeded in the next. 🟢 `p293` ran the
+**English APAC leg and an Indonesian APAC leg in the same pass, over the same region**:
+
+| leg | returned |
+|---|---|
+| `AI education APAC 2026 adoption regulation players` | 🟡 **corporate L&D, 4 of 4**, and the leg's own summary says it found no education-specific APAC regulation |
+| `AI pendidikan Indonesia 2026 platform sumber terbuka lisensi repositori Kemendikbud` | 🟢 a **14-nation ministerial work plan** with AI as one of three anchors |
+
+🔴 **So `p292`'s APAC conclusion is withdrawn.** It read *"3 of 3 are corporate L&D"* as the
+supply-side displacement *"corroborated from the demand side"*. The displacement was in the
+**query**, and `p286`'s APAC "explicit nil" has the same explanation. 🟢 The inference is now a
+controlled measurement.
+
+### 🟡 North America — held, and one figure this base published is DOWNGRADED
+
+| datum | state |
+|---|---|
+| market, NA | ~**USD 951M** (2024) → ~**USD 2 303.2M** (2029), CAGR **15.9%** (MarketsandMarkets) |
+| "AI for kids", NA | **USD 482M** (2024) → **USD 1 082M** (2034) — 🔴 a *different scope*; not comparable with the row above |
+| adoption | NA leads at **36%** share; **10%** of institutions have formal AI guidelines; **71%** of US teachers lack AI training |
+| 🔴 **the student-usage figures in the same roundup** | **GLOBAL, not North American.** A region row must not borrow them, and this one does not |
+| named players | **IBM, Microsoft, Google**; OpenAI's country-level education programme with **8 national partners** (Q1 2026); **Carnegie Mellon + Gates Foundation, USD 55M** into AI courseware for gateway college courses |
+| 🔴 **"USD 169M government commitment to responsible AI in higher ed"** | 🔴 **DOWNGRADED. `p292` published this; its source reports the figure WITHOUT NAMING THE GOVERNMENT.** Not to be quoted to a client until a named instrument is found |
+| regulation | 🔴 **relative regulatory vacuum** — no FDA-equivalent for edtech; Colorado and Texas piecemeal. 🟡 `ATTRIBUTED`; no primary regulatory text reached this pass |
+
+### 🔴 EMEA — a SEVENTH consecutive nil on the mandated phrasing
+
+🔴 Zero education results, again. The corpus is enterprise AI: CompTIA on EMEA IT strategy 2026
+(AI fluency must reach business leaders, compliance teams and frontline staff; privacy a top
+driver in a GDPR-centred environment), Workday (**38%** of EMEA organisations have **yet to begin
+piloting**; data silos the obstacle), a Bandwidth-Cavell study (`2026-02`) naming compliance
+complexity and data governance as barriers.
+
+🔵 **Seven points now, and the shape of the measurement is what matters:** every EMEA finding this
+file carries — the EU AI Act Annex III(3) limb, the Turkish leg at `p287`, Egypt's Karnak and Sia
+at `p292` — arrived through a **jurisdiction- or language-named** leg. None ever came from this
+phrasing. 🔴 `p292` ranked *"do NOT re-run it for its own sake"*; it was re-run because the
+standing battery mandates the per-region leg, and the honest gain is a seven-point measurement of
+a dead channel. 🟢 The leg **added** instead of skipped — Indonesian — is the one that produced.
+
+### 🟢 APAC — the education-policy layer EXISTS, at regional scale, and it is new to this file
+
+| element | state, as reported |
+|---|---|
+| the meeting | **14th ASEAN Education Ministers Meeting (ASED)**, **Singapore**, **`2026-07-22`** |
+| the instrument | 🟢 **ASEAN Work Plan on Education 2026-2030**, launched at it |
+| its three anchors | 🟢 **AI readiness · STEM capability · holistic student development** |
+| what "AI readiness" means in it | *"updating curricula, teaching methods and assessments"* — 🔵 i.e. **assessment is named in the mandate**, which is the limb `P48` and this file's exam-shaped findings keep landing on |
+| who | Minister **Desmond Lee** delivered it; **Singapore chairs ASEAN education 2026-2027**; **Brunei** hosts the 15th; Indonesian coverage counts **15 joint-statement points** |
+| a second, distinct document | a **Philippines-hosted ASEAN Higher Education Policy Dialogue** statement on AI-enabled learning, ethical AI use, lifelong learning and faculty development — listed for notation at the **49th ASEAN Leaders' Summit** |
+| Indonesia, nationally | **AI to become a compulsory subject** — 🔴 **conditional**, and the condition is the finding: *only after teacher readiness, curriculum and learning infrastructure are judged adequate* (Mendikdasmen **Abdul Mu'ti**) |
+| Indonesia, programme | **ImajiNation 2026**, a national visual-coding competition for pupils and teachers, Kemendikdasmen with **Assemblr EDU** and **Samsung for Education** |
+| 🔴 source conflict, unresolved | one report credits the **Philippines** with the 2026 ASEAN chairmanship while Singapore's own government page and Malaysian coverage describe **Singapore** as *education* chair. Plausibly different roles; **no source reconciles them and this file asserts neither** |
+| 🔴 primary source | **IDENTIFIED, NOT REACHED.** `moe.gov.sg` (the exact speech URL is in the evidence TSV) and `asean.org` answer `ENOTFOUND` via WebFetch and `000` via curl. The work plan stays **`ATTRIBUTED`** to four independent outlets |
+| 🔴 no "ethical AI declaration" text | the work plan and the HE statement are **different documents**; no standalone declaration was found, and none is asserted |
+
+🔵 **What changes for an engagement.** APAC's row on this file has read *"corporate L&D, no
+education policy"* since `p286`. 🟢 It should read: **a five-year regional work plan naming AI
+readiness and assessment, with a national compulsory-subject commitment gated on teacher and
+infrastructure readiness.** That gate is procurable work — readiness assessment, teacher
+training, curriculum and assessment redesign — and it is named in the instrument itself.
+
+### 🟢 LATAM — the strongest leg again, and the adoption-versus-SPEND gap is the number to carry
+
+| source | what it gives |
+|---|---|
+| **UNESCO IESALC + UNU-IAS** working paper, *AI Implementation in Higher Education in Latin America and the Caribbean* | **200 HEIs**, **19 LAC countries**, surveyed **2025-08 → 2025-10**; covers teaching, research, community engagement, administration, governance. 🔴 Listed publication date **2026-09**, so it may be a forthcoming or updated version of figures already on this file |
+| **ILIA / Latin American AI Index** (CEPAL and partners) | a **regulation subdimension** inside governance; the 2023 chapter records experts calling for frameworks to *"protect people's rights, minimize algorithmic biases and ensure transparency and accountability"*, with explicit concern about **developer control held in the Global North** |
+| a 2025 comparative study (`repositorio.uflo.edu.ar`) | AI-in-higher-education rules compared across **Argentina, Brazil, Chile, Peru and Spain** |
+| 🔴 **MarketsandMarkets, "Rest of Latin America"** | **USD 18.2M** (2024) → **USD 36M** (2029) |
+
+🟢 **Carry that last row precisely because it is embarrassing.** This file also carries **92% of
+students** and **79% of faculty** actively engaging with AI in LATAM. **Near-universal adoption and
+USD 18M of regional spend are both true**, and a studio should quote **the gap**, not one side of
+it: the demand is real, the budget line is not there yet, and the engagement that sells into that
+shape is small, fast and self-funding — not a platform programme.
+
+🔴 **No code, no licence, no repository in any of the four regional legs**, for the fifth pass
+running. 🔵 The regions generate **instruments**; the code arrives through directed legs.
+
+### 🟡 Brazil — the Referencial is SHARPER, and a dead deadline was caught before publication
+
+🟢 New to this file: the MEC *Referencial para Desenvolvimento e Uso Responsáveis de Inteligência
+Artificial na Educação* is **241 pages**, and it shipped alongside a **regulatory sandbox built
+with the AGU** (Advocacia-Geral da União). 🔵 Civil society — **Campanha Nacional pelo Direito à
+Educação** — filed contributions arguing the text needed firmer normative grounding, which
+corroborates this file's existing note that the Referencial is **self-declared non-normative**.
+
+🔴 **The date correction, caught by a verification leg before anything was published.** The first
+Brazilian leg returned a public consultation *"aberta na plataforma Brasil Participativo até 29 de
+outubro"* **with no year attached**. A second leg places it in **October 2025** — the consultation
+that *preceded* the March 2026 Referencial. 🔴 Published as live, this file would have handed a
+studio a consultation deadline **eleven days out that closed a year ago**. 🔵 `p223`'s date gate
+exists for exactly this shape, and the lesson is the cheap one: a deadline with no year is not a
+deadline.
+
+🔴 **Nil on code:** no Brazilian result — Referencial, sandbox, Projeto ConsciêncIA (a UFMS
+extension project with SBC/EduComp and WEI papers), the *IA na prática docente* course on
+Plataforma Mais Professores, or Paraná's public technical course in AI — states a repository, a
+public code location or a licence. `gov.br/mec` is unreachable from here.
 
 ## 🟢 Pass 292 — ALL FOUR REGIONAL LEGS RAN, EMEA'S MANDATED PHRASING IS A SIX-POINT DEAD CHANNEL, AND THE ARABIC LEG BROKE IT ON THE FIRST ATTEMPT AGAIN
 

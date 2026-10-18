@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 293) — the trending channel is unreachable for the FIFTEENTH pass, and the only new repositories this pass found came from a SEARCH LEG aimed at a path
+
+⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:
+[`p293-websearch.2026-10-18-p293.tsv`](../evidence/p293-websearch.2026-10-18-p293.tsv) ·
+[`p293-slug-oracle.2026-10-18-p293.tsv`](../evidence/p293-slug-oracle.2026-10-18-p293.tsv) ·
+[`channel-conflict.2026-10-18-p293.tsv`](../evidence/channel-conflict.2026-10-18-p293.tsv).
+
+🔴 **`github.com/trending` is still unreachable from this session**, so the mandated trending leg
+resolves to third-party trackers and opinion posts for the fifteenth pass running, and returned
+**nil for education** for the **tenth**. What it did return: `rohitg00/ai-engineering-from-scratch`
+(reported #1 on GitHub Trending `2026-05-24`), Karpathy's zero-to-hero, `aneelv75/github-trending`,
+`speedyapply/2026-AI-College-Jobs`, "AI Engineering Hub" — 🔵 agent-engineering curricula, the
+same population since `p275`, and none of it education.
+
+### 🔴 The star-count measurement this leg is actually good for
+
+| repository | star figure | channel |
+|---|---|---|
+| `microsoft/ai-agents-for-beginners` | **~67 223★** (22 180 forks) | a mid-2026 metrics mirror |
+| `microsoft/ai-agents-for-beginners` | **~47.3k★** | a LinkedIn post |
+
+🔴 **The same repository, in the same pass, 42% apart.** Neither is published by this base.
+🔵 The leg's standing value is this: it measures *how far apart the social channels are*, which
+is the number that justifies the policy of never quoting them. One source in the leg also warns
+that *"open source" is applied loosely* and names a tool under Elastic License 2.0 — consistent
+with the licence-flag discipline these shelves run.
+
+### 🟢 The new repositories, and they came from a path-shaped query
+
+🔵 **The method, stated because it is the transferable part:** `p292` tried to verify TokenAI's
+grants and got four closed channels. `p293` asked a search leg for the **repository path** and
+got it in the first result. A licence-shaped query returns press about licences; a path-shaped
+query returns paths.
+
+| repository | verdict | grant, at a pin |
+|---|---|---|
+| [`tokenaii/Horus-Taleeq-0.2B-Base`](https://github.com/tokenaii/Horus-Taleeq-0.2B-Base) | 🟢 `EXISTS-PUBLIC`, `main`, pin `f7a7700289791a9c114ab038af73b4d45c17c7e7` | 🟢 **MIT**, 1 080 B, sha256₁₂ `96c22722c817`, payload + README **`AGREE`** |
+| [`tokenaii/Horus-Taleeq-0.2B`](https://github.com/tokenaii/Horus-Taleeq-0.2B) | 🟡 `EXISTS-PUBLIC` — **identical HEAD**, one tree under two names (`p283`) | as above; shelved as **one** row |
+| [`tokenaii/Horus-Lens-1.0`](https://github.com/tokenaii/Horus-Lens-1.0) | 🟢 `EXISTS-PUBLIC`, `main`, pin `86cade44ab562fb929539a482f440aef28ca301c` | 🔴 **`DANGLING-CLAIM`** — four licence paths `404`, README asserts Apache-2.0. Posture **`ASK`** |
+| `tokenaii/Horus-1.0-4B` · `Horus-Hiero-9B` · `Horus` · `horus` | 🔴 `ABSENT-OR-PRIVATE` (4) | no GitHub repository under those names |
+
+🔴 **None of them is education software.** Taleeq is a general Arabic base LM with zero education
+claims; Lens is text-to-image. They are filed as a **substrate** on
+[`repos/foundations.md`](foundations.md), not as education repos.
+
+### 🟢 The README channel is now a COLUMN of the sweep, after five passes on the backlog
+
+`p289`-`p292` each carried *"wire the README channel into `p278`'s sweep — one column in
+`sweep.sh`, classifier already written"* as the cheapest unspent item on the register.
+🟢 **Built this pass**, and productive on its first live run:
+
+| slug | `payload_family` | `readme_claim` | `readme_channel` |
+|---|---|---|---|
+| `tokenaii/Horus-Taleeq-0.2B-Base` | `MIT` | `MIT` | 🟢 **`AGREE`** |
+| `tokenaii/Horus-Lens-1.0` | `-` | `Apache-2.0` | 🔴 **`DANGLING-CLAIM`** |
+| `openeducat/openeducat_erp` | `LGPL-3.0` | `LGPL-3.0` | 🟢 **`AGREE`** |
+| `tokenaii/Horus-1.0-4B` | `UNRESOLVED` | `-` | `NO-CHANNEL` |
+
+🔵 The ladder is read from `p288` via `readme_column.py --paths`, so there is **one** copy of it —
+a second copy is the `p282`/`P1057` defect waiting to happen, where a ladder with no uppercase
+extension published *"neither repository serves a README"*. 🔴 The sweep now **refuses to run** on
+an empty ladder: a channel that never looked must not look like a channel that found nothing.
+
+🔴 **And one defect that predates `p293`, found by widening the schema:** the unresolved-slug row
+emitted **eleven** columns against a **nineteen**-column header, so anything reading
+`channel-conflict.*.tsv` by column index misread every field after `note` on those rows. Padded
+to the full width (now 22), with the un-measured cells left as `-`/`0` rather than back-filled.
+
 ## 2026-10-18 (pass 292) — the trending channel is 403 for the FOURTEENTH pass, and the only new repository-shaped thing this pass found is one this base wrote
 
 ⏱️ **FOURTEENTH pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept.

@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 293 — a new recipe, and it exists because ONE ORGANISATION SHIPPED TWO GRANTS IN ONE WEEK AND ONLY ONE OF THEM IS REAL
+
+⏱️ **Fifteenth pass of `2026-10-18`.** Evidence:
+[`p293-websearch.2026-10-18-p293.tsv`](../evidence/p293-websearch.2026-10-18-p293.tsv) ·
+[`p293-slug-oracle.2026-10-18-p293.tsv`](../evidence/p293-slug-oracle.2026-10-18-p293.tsv) ·
+[`channel-conflict.2026-10-18-p293.tsv`](../evidence/channel-conflict.2026-10-18-p293.tsv).
+
+| finding | verdict |
+|---|---|
+| `p292`'s ranked item 1 — recover `tokenaii`'s slug, read the grant at a pin | 🟢 **DISCHARGED.** [`tokenaii/Horus-Taleeq-0.2B-Base`](https://github.com/tokenaii/Horus-Taleeq-0.2B-Base), pin `f7a7700289791a9c114ab038af73b4d45c17c7e7`, `LICENSE` **MIT**, 1 080 B, sha256₁₂ `96c22722c817` |
+| `p292`'s ranked item 2 — the README channel as a column *(carried FIVE passes)* | 🟢 **DISCHARGED.** Three appended columns in `p278`'s `sweep.sh`; ladder read from `p288`, one copy |
+| `p292`'s *"credential prompt = INCONCLUSIVE"* | 🔴 **REFUTED.** Calibrated against a known-real and a known-fake control, the prompt **discriminates**. `p292` threw away three real negatives |
+| `p292`'s *"OpenEduCat's default branch is `master`"* | 🔴 **WRONG — it is `19.0`.** The lesson (*"the 404 is about the branch name"*) stands; the name was guessed instead of read from the symref |
+| the candidate's place on an education shelf | 🔴 **REFUTED by its own README** — zero education claims; filed as a substrate, not an agent |
+
+### 🔵 The one error class behind three of those rows
+
+🔴 **Guessing a name the channel will tell you.** The slug (four guesses, thrown away as
+inconclusive), the branch (`master` inferred from a `404`), and the refusal signature itself
+(read as noise when it was a measurement). Three findings, one root cause, all inside one hour of
+`p292`. 🟢 `p293`'s oracle is the standing answer: **ask, calibrate, then believe**.
+
+---
+
+## P50 — The grant bill of materials, pinned, as the first deliverable of any education AI build *(new in pass 293)*
+
+**Target:** any education or vocational client who will **redistribute, host for others, or
+procure** an AI layer — i.e. all of them. 🔵 Public-sector education procurement in every region
+this base maps asks the same question before it asks about pedagogy: *what is in it, and are we
+allowed to ship it?*
+
+🔴 **Why this is a recipe and not hygiene.** `p293` measured **one organisation, one week, two
+grades**: `Horus-Taleeq-0.2B-Base` is MIT with its payload and README in agreement, and its
+sibling `Horus-Lens-1.0` asserts Apache-2.0 in a README while **four licence paths `404` at the
+pin**. 🔵 A bill of materials built from organisation names, press coverage or GitHub's licence
+badge would have carried both as permissive. The unit of licence risk is **the repository, at a
+commit** — never the org, never the model family.
+
+### The wiring
+
+| layer | what to use | licence | why this one |
+|---|---|---|---|
+| does this slug exist at all | [`compose/code/p293-slug-existence-oracle`](code/p293-slug-existence-oracle/README.md) | 🟢 **this base's** | **45 offline controls**; a **calibration pair gates every verdict**, so a channel that changed its refusal wording cannot silently invert the answer |
+| the grant body, at a commit | `git ls-remote --symref` for the branch and HEAD, then `raw.githubusercontent.com/<slug>/<sha>/<path>` | — | 🔴 **Read the branch, never guess it** — `openeducat/openeducat_erp` is `19.0`, not `master` or `main`. 🔵 `raw` answers at an **arbitrary SHA**, which is what makes the read reproducible |
+| the family, from the body | [`compose/code/p228-shelf-gate/classify_grant.py`](code/p228-shelf-gate/classify_grant.py) | 🟢 **this base's** | positional: the **earliest licence title in document order** wins, because every unsafe channel failed on a substring later in the body than the real title |
+| the README channel | [`compose/code/p288-readme-channel`](code/p288-readme-channel/README.md), now a **column** of [`p278`'s sweep](code/p278-channel-conflict/sweep.sh) | 🟢 **this base's** | turns `AGREE` / `DANGLING-CLAIM` / `NO-CHANNEL` into a per-row verdict instead of a hand-run |
+| the manifest channel | the same sweep's per-package walk | 🟢 **this base's** | catches **subpackage disagreement** — a studio vendoring one directory of a monorepo gets *that* directory's grant |
+| one repo, two names | `head_sha()` collision report (`p283`'s rule) | 🟢 **this base's** | `Horus-Taleeq-0.2B-Base` and `Horus-Taleeq-0.2B` share a HEAD: **one** row, not two |
+| the platform underneath | **Moodle** (GPL-3.0) · **Open edX** (Apache-2.0) · **OpenEduCat Community** (LGPL-3.0) | copyleft | 🔴 Keep them as the **system of record behind an HTTP/LTI boundary**; the AI layer stays separate and permissive. 🔴 OpenEduCat **Enterprise is proprietary and agreement-gated** |
+
+### What you hand over
+
+1. **One row per dependency**, each carrying: slug · default branch **as read from the symref** ·
+   pin · licence path · **bytes** · **sha256₁₂** · family · README verdict · manifest verdict.
+2. **A verdict vocabulary that cannot overclaim.** `ABSENT-OR-PRIVATE` is one token, because this
+   channel cannot separate a missing repository from a private one — control `C9` forbids a bare
+   `ABSENT` from entering the set at all.
+3. **The `DANGLING-CLAIM` list, with its posture.** Each one is an **`ASK`**: a grant is claimed
+   and never served, so the vendor is asked for a licence payload *before* the build depends on it.
+4. **The re-run.** Every figure above is reproducible from the pin by a third party with network
+   access and no credentials — which is the property that makes it a procurement artefact rather
+   than an assertion.
+
+### 🔴 What to check before quoting
+
+- 🔴 **`ABSENT-OR-PRIVATE` is not "does not exist".** A private repository answers identically.
+  Do not write a non-existence finding into a client deliverable on this channel's word alone.
+- 🔴 **A README claim is a reference, not a grant.** `p742`'s distinction: `AGREE` means two
+  channels concur, `DANGLING-CLAIM` means one channel asserts and none serves. Only a **body**
+  read at a pin is a grant.
+- 🔴 **The oracle must be calibrated where it runs.** The refusal signature is a property of the
+  *channel*, not of git or of github.com. `--online` runs the control pair first and reports
+  nothing if either control fails — 🔵 an uncalibrated read is exactly what produced `p292`'s row.
+- 🔴 **Byte counts and digests must be taken from a FILE, not a shell variable.** `$(...)` strips
+  trailing newlines, so the same blob measures **8 240 B / `8f4ce028f93d`** through command
+  substitution and **8 241 B / `528f84036800`** as a file. 🟡 Caught this pass only because `p292`
+  had published the digest. A one-byte difference is a completely different sha.
+- 🟡 **Model weights are usually NOT in the repository.** Taleeq's repo carries training code,
+  stages, data policy and a compute profile; the weights live on a host that is unreachable from
+  here. 🔴 A grant read on the code says nothing about the weights' licence — ask separately.
+
+### 🟢 The Arabic-medium variant, since this pass is where the substrate came from
+
+For an Arabic-medium tutoring or assessment build — the MENA engagements `P39` and `P40` open and
+this base could never supply a substrate for — the stack is:
+**`tokenaii/Horus-Taleeq-0.2B-Base` (MIT, at its pin)** for the Arabic language layer ·
+**Moodle or Open edX** as the system of record · **`P49`**'s decision store for the oversight
+record · **`P50`** (this recipe) as the procurement artefact that makes the first item defensible.
+
+🔴 **State the substrate's boundary in the SOW, because the repository states it:** this is a
+**base-model development release**, *"not a finished production chat model"*, with **no
+instruction tuning and no safety alignment**, and it **does not claim full corpus
+reproducibility**. Instruction tuning, alignment and evaluation are the studio's work, and they
+are the majority of it. 🟢 That is a feature of the quote, not a caveat buried in it.
+
 ## 🟢 Pass 292 — the evidence store, BUILT; and the backlog entry that asked for it was wrong about its own size
 
 ⏱️ **Fourteenth pass of `2026-10-18`.** Evidence:
