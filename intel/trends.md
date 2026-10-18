@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 `T-p288a` — the human checkpoint stopped being a UX choice and became THE REGULATORY INTERFACE, in all four regions at once
+
+🔵 **The trend, stated as the thing a studio actually hits.** Four regional legs ran this pass
+and every one of them regulates the same narrow act: **AI as the *sole* basis for a decision
+about a student.** The instruments share no drafting, no timetable and no enforcement model —
+and they converge on one engineering requirement.
+
+- **EMEA** — the EU AI Act puts **admission decisions, student evaluation and exam scoring** in
+  the **high-risk** tier: risk management, **human oversight**, conformity assessment *before*
+  deployment, and it reaches **non-EU vendors** whose outputs affect EU-located students.
+- **APAC** — **Vietnam** (law in force `2026-03-01`) names **education** among six high-risk
+  sectors, high-risk **only where the output is the sole basis for a decision without
+  meaningful human review**. **South Korea** (Framework Act, in force `2026-01-22`) requires
+  **disclosure that the user is dealing with AI** and **marking of generated content**.
+- **North America** — no comprehensive national law in any of the three economies; **Oklahoma**
+  and **Maryland** require **human oversight** and bar AI from **high-stakes student
+  decisions**, inside a 2026 session carrying **134 bills across 31 states**.
+- **LATAM** — no education-specific 2026 instrument, but **Mexico**'s federal bill mirrors the
+  risk-based approach and **Peru**'s law adds **regulatory sandboxes**: the same frame, arriving
+  later.
+
+🟢 **So the deliverable requirement is singular and portable:** a **recorded, evidenceable human
+decision point**, plus **provenance marking on every generated artefact**. Build it once and it
+clears Vietnam's sole-basis clause, Korea's marking duty, the EMEA high-risk tier and the
+Oklahoma/Maryland oversight rules. 🔴 **A tutor or grader that cannot produce the audit trail of
+who decided what is not a weak product — it is unshippable in EMEA and APAC and exposed in
+North America.**
+
+🔵 **And this pass found the pattern already implemented, in a repository nobody can use.**
+[`arijit8972/agentic-automated-assignment-grading`](https://github.com/arijit8972/agentic-automated-assignment-grading)
+carries a **`needs_review` terminal state**, with review flags raised on **evaluation errors,
+low confidence and evaluator disagreement**, and a flagged submission still produces a report
+whose feedback is **marked as draft**. 🔴 That is the compliance artefact, and the repo serves
+**no grant** across **1 531 files** whose 66 licence-like paths are **all vendored
+`node_modules`**. 🟢 **The design is the finding; the code is not vendorable.** Written out as
+`P42` in [`compose/patterns.md`](../compose/patterns.md).
+
+## 🔴 `T-p288b` — special education is a REGULATED, DEADLINE-DRIVEN, DOCUMENT-HEAVY workflow with no permissive open source answer at all
+
+🔵 **A directed leg opened a category this base had never carried, and the category is
+uniformly unbuildable.** IEP/504 administration is statutory, calendar-bound and
+evidence-producing — on paper the ideal agent target. The entire open source answer to it, as
+verified first-hand this pass:
+
+| repository | grant (verified) | what it actually solves |
+|---|---|---|
+| [`AaronGrace978/EduHelp`](https://github.com/AaronGrace978/EduHelp) | 🟡 **AGPL-3.0**, 34 523 B payload | IEP/504 **eligibility** for families, Colorado + California rules, BYOK multi-provider |
+| [`hdronamraju/sped-agent`](https://github.com/hdronamraju/sped-agent) | 🔴 **all rights reserved** (README) | California **day-counting deadline** rules, coordinator approval gate, bilingual EN/es parent notices |
+| [`eakarsu/ai-special-education-iep-compliance`](https://github.com/eakarsu/ai-special-education-iep-compliance) | 🔴 **none in 21 files** | Evaluation timelines, service delivery, annual reviews, corrective action |
+
+🔴 **One copyleft, two unusable. Zero permissive.** A studio taking an IEP engagement **writes
+it**, and the three repos above are its requirements document rather than its dependency set.
+
+🔵 **`sped-agent` is the most valuable of the three precisely because it cannot be used.** It
+states the real requirement set a specification would miss: **nothing is sent until a
+coordinator approves it** (the `T-p288a` checkpoint, built), California's own day-counting
+rules rather than generic date arithmetic, and **Spanish-language statutory notices** as a
+first-class output. 🔴 Its posture is a **REFUSAL, not an absence** — *"please ask before
+reusing the code"* — which is a distinction this base could not previously record, and
+`ACTION p288` now grades it (`RESERVED-NO-PAYLOAD` → **STOP**, never `ASK`).
+
 ## 🟢 `T-p287a` — "curriculum-aligned" is not a product decision: it is bounded by the HOST COUNTRY'S CURRICULUM LICENCE, and the pilot corpus may not be shippable
 
 🔵 **The trend, stated as the thing a studio actually hits.** Every education engagement is

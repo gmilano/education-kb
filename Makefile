@@ -23,10 +23,11 @@ GATE_LOG ?= /tmp/education-kb-gate-enumeration.log
 TABLE_LOG ?= /tmp/education-kb-gate-tables.log
 IDENTITY_LOG ?= /tmp/education-kb-gate-identity.log
 LADDER_LOG ?= /tmp/education-kb-gate-ladder.log
+README_LOG := $(shell mktemp)
 
 .PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit
 
-hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit
+hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case gate-readme-channel ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel
 
 # 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
 # p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
@@ -143,6 +144,9 @@ provenance-census: ## ACTION p280 — which controls name a real repo and assert
 # 🟢 It found a live residue on its first run: repos/foundations.md:66 still presented Iris
 # and Pyris as two distinct MIT subsystems inside ONE cell.  p282 corrected three files and
 # missed that one.
+gate-readme-channel: ## ACTION p288 — a README-only grant claim or reservation is not "no channel"
+	@cd compose/code/p288-readme-channel && { $(PY) -I test_readme_claim.py > $(README_LOG) 2>&1 || { echo "🔴 p288-readme-channel FAILED — the suite's own report follows:" ; sed "s/^/   /" $(README_LOG) ; false ; } ; } && echo "── p288-readme-channel (32 controls: the lowercase rung, the MIT-RAISE collision arm, the postfix/markdown-link claim, reservation-outranks)" && echo "   PASS" || exit 1
+
 gate-identity: ## ACTION p283 — no shelf may recommend one repository under two live rows
 	@cd compose/code/p283-repo-identity && { $(PY) test_identity_gate.py > $(IDENTITY_LOG) 2>&1 || { echo "🔴 p283-repo-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(IDENTITY_LOG) ; false ; } ; } && echo "── p283-repo-identity (12 controls: withdrawn-in-place, the cross-table index, both halves in one cell)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p283-repo-identity/identity_gate.py --root . || exit 1
@@ -161,7 +165,7 @@ gate-identity: ## ACTION p283 — no shelf may recommend one repository under tw
 # draft made (a distant `.lower()` read as immunity; a four-rung ladder called "single").
 # 🔴 Registered, not built: a RATCHET over these counts.  Stated so it is not mistaken for done.
 gate-ladder-case: ## ACTION p283 — which path ladders can find an uppercase extension?
-	@cd compose/code/p283-ladder-case-audit && { $(PY) test_ladder_case.py > $(LADDER_LOG) 2>&1 || { echo "🔴 p283-ladder-case-audit FAILED — the suite's own report follows:" ; sed "s/^/   /" $(LADDER_LOG) ; false ; } ; } && echo "── p283-ladder-case-audit (25 controls: the distant-fold and multi-rung overclaims, p284's generator verdict, p286's COMMENT-ONLY, shell-generator, method-attribute and alternation arms, and the RATCHET)" && echo "   PASS" || exit 1
+	@cd compose/code/p283-ladder-case-audit && { $(PY) test_ladder_case.py > $(LADDER_LOG) 2>&1 || { echo "🔴 p283-ladder-case-audit FAILED — the suite's own report follows:" ; sed "s/^/   /" $(LADDER_LOG) ; false ; } ; } && echo "── p283-ladder-case-audit (29 controls: the distant-fold and multi-rung overclaims, p284's generator verdict, p286's COMMENT-ONLY, shell-generator, method-attribute and alternation arms, p288's IMPORTED-LADDER arm with its overclaim guard, and the RATCHET)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . | tail -2
 
 ladder-audit: ## ACTION p283 — the full per-ladder table.  make ladder-audit FAMILY=readme

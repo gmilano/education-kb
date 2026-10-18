@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 288 — 2026-10-18 — **THE GATE THAT GRADES A NEW ROW WAS READING TWO CHANNELS OUT OF THREE, AND BOTH OF THIS PASS'S DECISIVE SIGNALS LIVED IN THE THIRD**
+
+**One-line summary:** a directed leg opened **Blackboard Learn** as the fifth MCP-addressable
+LMS and **special education** as a category this base had never carried — **six new rows, five
+of which serve no usable grant and the sixth is AGPL-3.0, so zero permissive** — and grading
+them exposed that `p278` reads the **payload** and **manifest** channels and *not the README*,
+so it returned `NO-CHANNEL/GREY` for five rows while a readable third channel said **MIT** for
+one and **all rights reserved** for another. `ACTION p288` builds that channel (**32 controls,
+in `make hooks`**), and `p283`'s ratchet then **rejected the new instrument's own first ladder**
+as `STEM-ONLY` — the identical defect, one axis over.
+
+### 🟢 What was found
+
+🔴 **The mandated battery is now FOURTEEN consecutive nils on the agent leg** and nil for
+education on the trending leg for the fifth pass running. Every leg, global and regional, is
+written down with what it returned in
+[`evidence/p288-websearch.2026-10-18-p288.tsv`](evidence/p288-websearch.2026-10-18-p288.tsv) —
+an undeclared nil looks exactly like coverage.
+
+🟢 **Five of thirteen candidates were new; `make carried` rejected the other eight before a row
+was written.** Already carried: `blend-ed/openedx-mcp`, `Cicatriiz/openedu-mcp`,
+`nitsuah/bb-mcp`, `asu2304/auto-assessment-agent`, `laurauguc/grading_assistant`,
+`macsnoeren/genai-open-assessment`, `biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`.
+
+| finding | verdict |
+|---|---|
+| **Blackboard Learn** joins Moodle (`p267`), Canvas (`p267`), Google Classroom (`p268`) and Open edX as MCP-addressable | 🔴 **the first one whose community servers carry NO usable grant** |
+| `anastasasenov/bbmcps` | 🔴 **`readme.md` claims MIT; the 9-file tree has no payload.** Dangling claim — an **ASK** |
+| `hdronamraju/sped-agent` | 🔴 **"All rights reserved … please ask before reusing"** — a **REFUSAL**, not an absence |
+| `arijit8972/agentic-automated-assignment-grading` | 🔴 **1 531 files; all 66 licence-like paths vendored `node_modules`.** `p280`'s class at the largest scale recorded here |
+| `AaronGrace978/EduHelp` | 🟡 **AGPL-3.0**, 34 523 B — the pass's only real grant |
+| Special education (IEP/504) as a category | 🔴 **one copyleft, two grantless. ZERO permissive.** A studio writes it |
+| All four regional legs | 🟢 **non-nil**, and they converge: every region regulates **AI as the sole basis for a decision about a student** |
+
+### 🟢 What was built
+
+🟢 **`ACTION p288` — the README as a third channel.**
+[`compose/code/p288-readme-channel/`](compose/code/p288-readme-channel/README.md): offline
+classifier (`RESERVATION` / `CLAIM:<family>` / `NO-CLAIM` → eight verdicts →
+**BUILD-ON / ASK / STOP**), online `probe.sh`, **32 controls in `make hooks`**. A reservation
+**outranks** any family token in the same body, because the refusal is the sentence a studio has
+to obey.
+
+🔴 **The lower-case rung is the whole reason it exists.** `bbmcps` serves **`readme.md`** and
+404s at `README.md` on `main`, `master` *and* `HEAD`. **This pass's own first reading was the
+false absence *"no README on any ref"***, recovered only because the tree was enumerated —
+`p261`'s rule, needed again: *a 404 cannot distinguish a missing path from a missing channel; a
+tree can.*
+
+🔵 **`T-p283`'s shape for the FOURTH time: the class reached one instrument and never reached the
+one beside it.** `pass262-scoped-reservation-audit/sweep.py` has fetched the README over five
+spellings — lower-case included — since `p262`, but only for slugs already graded
+`RESTRICTIVE-GRADE`. **A new row could never reach it.**
+
+🟢 **`IMPORTED-LADDER`, a new verdict in `p283`'s audit (the third instance of `p284`'s generator
+finding).** `p284` graded a Python cross product on what it *generates*; `p286` did the same for
+shell; `p288`'s `probe.sh` carries the ladder **by reference** and was graded `SINGLE-SPELLING`
+on an identifier stem. Re-derived over the whole corpus it reclassifies **exactly one row — its
+own** — so `STANDING:SINGLE-SPELLING` returns to its ceiling of 17 and **no other bound moves**.
+Floor `MIN 1` added so a later pass cannot delete the arm silently. Suite **25 → 29 controls**,
+with an overclaim guard: a file that imports a ladder **and** spells rungs of its own keeps its
+literal grade.
+
+### 🟡 Two corrections this pass made to its own work
+
+1. 🟡 **A flagged ladder is not automatically a defect.** This pass first read `p283`'s
+   `CASE-UNVARIED` grade on `p279-absence-claims`'s readme ladder as the costly defect. It is
+   **not**: that instrument opens *this KB's own* `README.md` at a known local path. The audit
+   measures the shape; whether it costs anything depends on whether the path is **remote**. The
+   published claim is the measured one.
+2. 🔴 **`sped-agent`'s one "licence-like" path is not a licence.** The enumeration reported
+   `src/agent/notices.ts`; it **was read** and is a TypeScript module formatting bilingual EN/es
+   IEP notices. The Tier A probe name `NOTICE` matched a **source file** on its stem — an
+   instrument false positive in the **opposite** direction from `p287`'s (there, a real grant
+   graded `UNCLASSIFIED`; here, a non-grant reported as licence-like). **Both are defects.**
+
+### 🔴 What this pass did NOT do
+
+🔴 **`p287` ranked *"read five national curriculum licences as primary sources"* first, and this
+pass did not touch it.** The hour went to the directed LMS/grading/special-education legs and to
+`ACTION p288`. The item is **unaddressed, not superseded**, and it stays ranked first below —
+stated plainly rather than quietly re-ranked, because 288 passes of "ranked first and skipped"
+is how a backlog stops meaning anything.
+
+### 🔵 Backlog for `p289`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked:
+
+1. 🔴 **Read FIVE national curriculum licences as PRIMARY sources** *(carried, UNADDRESSED in
+   288)* — NCERT 🇮🇳, FBISE 🇵🇰, NaCCA 🇬🇭, TIE 🇹🇿, NCTB 🇧🇩. A ministry copyright page is a primary
+   source and **no leg in 288 passes has addressed one**, while this base publishes
+   "curriculum-aligned" freely. 🟢 ACARA 🇦🇺 (`CC BY`) is still the only data point.
+2. 🔴 **Wire the README channel into `p278`'s sweep itself** *(new, `ACTION p288`'s own residue)* —
+   `p288` built and tested the channel and ran it **beside** `conflict-sweep`, not **inside** it.
+   Until it is folded in, a future row still grades `NO-CHANNEL/GREY` with a readable README.
+   One column in `sweep.sh`, and the classifier already exists.
+3. 🔴 **A FAMILY-AXIS recovery sweep** *(carried from `p287` item 2)* — re-run the widened
+   `family_of` over every `UNCLASSIFIED` cell and every captured payload. **No network needed.**
+4. 🔴 **A licence-CHANGE-WITH-A-DATE-BOUNDARY column** *(new, from `p288`'s mandated leg)* —
+   `AIHawk` is **MIT for releases after `2026-09-02`** and **AGPL-3.0 for distributions made
+   before it**. This base grades *the grant served at HEAD*; a studio that vendored a
+   pre-boundary tarball holds different obligations. No shelf cell can express that today.
+5. 🔴 **Build `ROOT_OR_SOLE` into the enumeration gate** *(carried, four passes)*.
+6. 🔴 **Teach the enumeration gate that a licence-like path can be a SOURCE FILE** *(new, from
+   `sped-agent`)* — `src/agent/notices.ts` matched `NOTICE` on its stem. Cheapest form: exclude
+   source extensions from `licence_like_paths_in_tree`, with `.ts`/`.tsx`/`.py`/`.go` pinned.
+7. 🔴 **Widen `gate-identity` to census the enumeration QUEUE** *(carried, four passes)*.
+8. 🔵 **The licence-intake ASK, now over SEVEN repositories** *(carried, `p285` item 7)* — the
+   five West African rows, `somenssarkar/gurukul-ai`, and now **`anastasasenov/bbmcps`**, whose
+   `readme.md` claims MIT over an empty tree. 🔴 Still nobody has asked.
+9. 🔵 **The next four directed legs, by name** — unspent: **Egypt in ARABIC**, **Thailand
+   `O-NET`**, **Vietnam `MOET`** (🟢 now also a *regulatory* target: education is a named
+   high-risk sector there), **Mexico `SEP`**, **Peru `MINEDU`**. 🔴 Do not re-run the
+   region-named legs expecting code.
+10. 🔵 **An EMEA ed-tech VENDOR leg** *(new)* — two passes have now named only regulators
+    (Commission, UNESCO, OECD) and **not one EMEA vendor**. The EMEA shelf has a real hole in it.
+11. 🔵 **Probe the three Bangla infrastructure leads at payload** *(carried, `p287` item 6)*.
+12. 🟡 **`--resolve` over the 14 CANDIDATE control sites** *(carried, seven passes)*.
+
 ## Pass 287 — 2026-10-18 — **ITEM 1 DISCHARGED BOTH WAYS, AND THE SAME FUNCTION WAS ALSO REFUSING A REAL MIT GRANT — THE DIRECTION THIS BASE HAS NEVER COUNTED**
 
 **One-line summary:** `p286` ranked *"multilingual restriction vocabulary + an `UNREADABLE-BODY`

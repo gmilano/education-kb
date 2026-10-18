@@ -1,0 +1,14 @@
+# p288 — 2026-10-18 — THE README CHANNEL, READ FIRST-HAND over p288's CASE-CLOSED 13-rung
+# ladder on an `ls-remote --symref`-resolved ref.  Produced by `p288-readme-channel/probe.sh`.
+# 🔴 Row 1 is why the lower-case rung exists: `anastasasenov/bbmcps` answers 404 at the
+# upper-case spelling on main, master AND HEAD, and 200 at `readme.md`.  Probed at the
+# upper-case spelling alone, this pass's FIRST reading of it was the false absence
+# "no README on any ref" — corrected only because the TREE was enumerated (p261's rule:
+# a 404 cannot distinguish a missing path from a missing channel; a tree can).
+slug	ref	head_sha	readme_path	http	bytes	claim_kind	claim_family
+anastasasenov/bbmcps	main	e9f2e5aab0f4	readme.md	200	1582	CLAIM	MIT
+yoyoconnor/BlackboardMCP	main	9a470b29bae8	README.md	200	4551	NO-CLAIM	-
+arijit8972/agentic-automated-assignment-grading	main	09eb1eaac241	README.md	200	12000	NO-CLAIM	-
+eakarsu/ai-special-education-iep-compliance	main	fbe896eef888	README.md	200	1020	NO-CLAIM	-
+hdronamraju/sped-agent	main	861e00153682	README.md	200	12689	RESERVATION	-
+AaronGrace978/EduHelp	main	2cceb0544ba9	README.md	200	4233	NO-CLAIM	-

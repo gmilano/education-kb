@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 288 — **THE TOP-RANKED ITEM WAS NOT TOUCHED, AND SAYING SO IS THE POINT OF THIS REGISTER**
+
+⏱️ `2026-10-18`, tenth pass. Evidence:
+[`verified-repos.2026-10-18-p288.tsv`](../evidence/verified-repos.2026-10-18-p288.tsv) ·
+[`tree-enumeration.2026-10-18-p288.tsv`](../evidence/tree-enumeration.2026-10-18-p288.tsv) ·
+[`p288-readme-channel.2026-10-18-p288.tsv`](../evidence/p288-readme-channel.2026-10-18-p288.tsv) ·
+[`p288-websearch.2026-10-18-p288.tsv`](../evidence/p288-websearch.2026-10-18-p288.tsv).
+
+### Discharged this pass
+
+| `p287` item | state | what it turned out to be |
+|---|---|---|
+| 1. read five national curriculum licences as primary sources | 🔴 **NOT ADDRESSED** | The hour went to the directed LMS / grading / special-education legs and to `ACTION p288`. **Unaddressed, not superseded** — it stays ranked **first** for `p289`. 🔴 **Three passes have now ranked a curriculum-licence leg and none has run one**, while the shelves keep publishing "curriculum-aligned" |
+| 2. family-axis recovery sweep | 🔴 **NOT ADDRESSED** | Carried unchanged. Still needs **no network**, which is what makes its repeated deferral hard to justify |
+| 3. `ROOT_OR_SOLE` in the enumeration gate | 🔴 **NOT ADDRESSED** | Carried, **four passes** |
+| 4. widen `gate-identity` to census the enumeration QUEUE | 🔴 **NOT ADDRESSED** | Carried, **four passes**. 🟡 The queue itself is back to its pre-existing **2** rows: `p288` added six and enumerated all six |
+| 5. next four directed legs by name | 🟡 **PARTIAL, off-list** | `p288` ran **three** directed legs and none was from the list — LMS-MCP, grading, special-education. 🟢 All three produced rows; the list's own legs remain unspent |
+| 7. the licence-intake ASK | 🔴 **NOT ADDRESSED**, and it **grew** | Now **seven** repositories: `anastasasenov/bbmcps` joins, with a `readme.md` MIT claim over a 9-file tree carrying no payload |
+
+### New this pass
+
+| item | why it exists |
+|---|---|
+| 🔴 **Fold the README channel into `p278`'s sweep** | `ACTION p288` built, tested (32 controls) and **ran** the channel — *beside* `conflict-sweep`, not *inside* it. Until it is folded in, a new row with a readable README still grades `NO-CHANNEL/GREY`. **This is `p288`'s own residue and it is the cheapest item on the list:** one column in `sweep.sh`, classifier already written |
+| 🔴 **A licence-change-with-a-date-boundary column** | `AIHawk` is **MIT after `2026-09-02`** and **AGPL-3.0 for distributions before it**. These shelves grade *the grant served at HEAD*; a studio holding a pre-boundary tarball has different obligations, and **no cell on any shelf can express that** |
+| 🔴 **Teach the enumeration gate that a licence-like path can be a SOURCE FILE** | `hdronamraju/sped-agent`'s only "licence-like" path was `src/agent/notices.ts` — a TypeScript module, matched by the Tier A probe name `NOTICE` on its stem. 🔵 Opposite direction from `p287`'s defect, same cost |
+| 🔵 **An EMEA ed-tech VENDOR leg** | Two passes have named only **regulators** — Commission, UNESCO, OECD — and **not one EMEA vendor.** A declared hole, not a silence |
+
+### 🟡 One item this register is closing as NOT A DEFECT
+
+🟡 **`p283`'s `CASE-UNVARIED` grade on `p279-absence-claims`'s readme ladder.** `p288` opened this
+expecting the pass's headline and **measured it instead**: that instrument opens *this KB's own*
+`README.md` at a known local path, so case variance there **cannot** produce a false absence.
+🔵 The audit measures a **shape**; whether the shape costs anything depends on whether the path
+is **remote**. Recorded so a later pass does not re-open it as a defect — and so the genuine
+remote-path case `p288` *did* find is not diluted by it.
+
 ## Pass 286 — **THE TOP ITEM WAS DISCHARGED AND ITS OWN HEADLINE WAS REFUTED IN THE SAME PASS**
 
 ⏱️ `2026-10-18`, eighth pass. Evidence:

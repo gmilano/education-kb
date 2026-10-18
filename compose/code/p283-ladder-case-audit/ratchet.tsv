@@ -13,7 +13,14 @@
 #
 # Re-derived on p286's basis: case-insensitive extraction from shell `for` lists and exact
 # regex alternations, COMMENT-ONLY for prose-only vocabulary, method-attribute exclusion.
+# p288 — `IMPORTED-LADDER` is new this pass: a file whose only literal is a status value and
+# whose real ladder is READ from an already-CASE-CLOSED module (p284's generator finding, third
+# instance).  Re-derived over the whole corpus, it reclassifies EXACTLY ONE row — p288's own
+# `probe.sh` — so `STANDING:SINGLE-SPELLING` returns to 17 and no other bound moves.  The floor
+# is MIN 1 so a later pass cannot quietly delete the arm and send that row back to a spurious
+# `SINGLE-SPELLING`.
 verdict	direction	bound
+IMPORTED-LADDER	MIN	1
 CASE-CLOSED	MIN	24
 GENERATED-CASE-VARIED	MIN	9
 TREE-ENUMERATED	MIN	42

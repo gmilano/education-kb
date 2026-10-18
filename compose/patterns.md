@@ -13,6 +13,82 @@ updated: 2026-10-18
 > Each pattern states the licence boundary — the line the client's proprietary code must stay
 > on to keep a copyleft platform from colouring the deliverable.
 
+## 🟢 Pass 288 — two recipes for the shape this pass actually found: a platform you can REACH but not VENDOR, and a compliance design that exists only in unusable code
+
+⏱️ **Tenth pass of `2026-10-18`.** Evidence:
+[`verified-repos.2026-10-18-p288.tsv`](../evidence/verified-repos.2026-10-18-p288.tsv) ·
+[`p288-readme-channel.2026-10-18-p288.tsv`](../evidence/p288-readme-channel.2026-10-18-p288.tsv).
+
+### `P41` — Blackboard Learn agent reach, where every community server is a dead end
+
+🔴 **The licence boundary first, because it is the whole reason this recipe differs from
+`P12`'s Moodle/Canvas shape.** All three community Blackboard MCP servers are unusable as
+dependencies:
+
+| component | verified grant | may the studio ship it? |
+|---|---|---|
+| [`anastasasenov/bbmcps`](https://github.com/anastasasenov/bbmcps) | 🔴 **NONE_IN_TREE** across 9 files, 55 paths × 2 refs → 404. `readme.md` **claims MIT** | 🔴 **No.** The claim is an **ASK** — request a licence payload from the author before any use |
+| [`yoyoconnor/BlackboardMCP`](https://github.com/yoyoconnor/BlackboardMCP) | 🔴 **NONE_IN_TREE** across 9 files; `pyproject.toml` has no `license` key | 🔴 **No.** Read as a **design reference** only |
+| [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) *(already carried)* | see its carried row | 🟡 Check its row before use; RBAC middleware is its distinguishing feature |
+
+🟢 **So the wiring owns the server and borrows nothing:**
+
+1. **Surface** — the **Blackboard Learn REST API**. This is the stable, documented, vendor-owned
+   contract and the only part of this stack that is not a 9-file community wrapper.
+2. **Server** — write a **thin MCP server** the studio owns outright. Scope it read-only first,
+   exactly as `yoyoconnor/BlackboardMCP` does by design (*"it never submits, posts or changes
+   anything"*): courses, class times, assignments, grades, course materials.
+3. **Authorization** — copy the posture from Open edX's plugin
+   ([`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp), 🟡 **AGPL-3.0**, carried):
+   **re-check the platform's own staff/superuser flags live on every request; never cache a
+   role.** 🔵 Reading that plugin for its *posture* is fine; linking its AGPL-3.0 code into a
+   proprietary deliverable is not.
+4. **RBAC** — role-based access control at the tool boundary, per `nitsuah/bb-mcp`'s approach,
+   so a student-scoped session cannot reach instructor-scoped tools.
+5. **Audit** — log *who asked what*, because under `T-p288a` that log is half the human-oversight
+   evidence an EMEA high-risk deployment has to produce.
+
+🔴 **The trap this recipe exists to prevent:** `bbmcps` is discoverable, small, reads as
+finished, and a secondary listicle reports it as **"MIT License"**. The MIT exists **only in its
+`readme.md` sentence and in that listicle — never in a payload.** 🔵 And it is served at
+**lower-case `readme.md`**, 404 at the upper-case spelling on every ref, which is how this pass
+nearly recorded it as having no README at all.
+
+### `P42` — a grader that is shippable in all four regions, assembled from a design this pass could not license
+
+🔵 **The requirement comes from [`intel/trends.md`](../intel/trends.md) `T-p288a`:** a recorded
+human decision point plus provenance marking clears Vietnam's sole-basis clause, Korea's marking
+duty, the EMEA high-risk tier and the Oklahoma/Maryland oversight rules **in one build**.
+
+🔴 **Licence boundary:** the reference implementation,
+[`arijit8972/agentic-automated-assignment-grading`](https://github.com/arijit8972/agentic-automated-assignment-grading),
+serves **no grant** — **1 531 files**, and its **66** licence-like paths are **all vendored
+`ui/node_modules/**`**, which is `p280`'s class, not a grant. 🟢 **Read it, do not vendor it.**
+For the parts that must be real dependencies, use rows this base has already payload-verified
+(`asu2304/auto-assessment-agent`, `laurauguc/grading_assistant` — both carried, both MIT per
+their carried rows; re-read the row before shipping).
+
+🟢 **Wiring:**
+
+1. **Intake** — accept PDF, image, plain text and DOCX; batch a whole class against one rubric.
+2. **Criterion-level scoring** — score **per rubric criterion**, with the evidence span that
+   produced each score attached. An aggregate grade with no per-criterion evidence cannot be
+   defended to a parent or an auditor.
+3. **Confidence + disagreement flags** — raise a flag on evaluation errors, low confidence, and
+   disagreement between evaluators. 🔵 Copied from the reference implementation's design.
+4. 🟢 **The `needs_review` terminal state — THE compliance artefact.** A flagged submission
+   still produces a report, and **its feedback is marked `draft`**. The grade is *not* released
+   on the model's say-so. **This is the sole-basis clause satisfied in code**, not in a policy
+   document.
+5. **Provenance marking** — mark every generated artefact as AI-generated (Korea's Framework Act
+   makes this an explicit duty; nothing else in this stack is harder to retrofit later).
+6. **Audit record** — persist who reviewed, when, and what they changed, so the human decision
+   point is *evidenceable* and not merely *present*.
+
+🔴 **Do not skip step 4 to ship faster.** It is the single step that distinguishes a grader that
+is legal in Vietnam, Korea and the EU from one that is not, and it costs a state field and a
+release gate.
+
 ## 🟢 Pass 287 — the binding constraint in a tutoring deliverable is the CURRICULUM'S licence, and no recipe below had a row for it
 
 ⏱️ `2026-10-18`, ninth pass. Evidence:

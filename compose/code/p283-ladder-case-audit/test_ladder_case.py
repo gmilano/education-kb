@@ -172,6 +172,38 @@ run("C25 a rung that exists only in prose is not graded as a rung",
 # `p252` census burned eight passes — while a FLOOR goes red only on an actual regression.
 # Adding instruments can never break it; un-closing a ladder always will.
 RATCHET = pathlib.Path(__file__).resolve().parent / "ratchet.tsv"
+# ── p288's IMPORTED-LADDER arm (the third instance of p284's generator finding) ──────────
+# 🔵 The real shape, from `p288-readme-channel/probe.sh`: the file spells NO rung of its own.
+# Its single `readme`-family literal is the STATUS VALUE `NO-README` in its own output schema,
+# and the ladder it actually walks is read out of `readme_claim.README_PATHS`, which this
+# audit grades CASE-CLOSED in its own right.  Graded on literals that is SINGLE-SPELLING — a
+# one-rung ladder that cannot prove an absence.  Graded on what it walks, it is closed.
+run("C29 one literal plus an imported ladder is IMPORTED-LADDER",
+    ["README"],
+    'PATHS=$(python3 -c "import readme_claim;print(readme_claim.README_PATHS)")\n'
+    'printf "%s\\tNO-README\\n" "$slug"',
+    "IMPORTED-LADDER")
+
+# C30 — 🔴 THE OVERCLAIM GUARD.  A file that imports a ladder AND spells rungs of its own
+# keeps its LITERAL grade; importing must not launder a hand-spelled stem-only ladder.
+run("C30 import plus own rungs keeps the literal grade",
+    ["README", "README.md", "readme.md"],
+    'import readme_claim\nextra = ["README", "README.md", "readme.md"]\n'
+    'both = readme_claim.README_PATHS + extra',
+    "STEM-ONLY")
+
+# C31 — the identifier must belong to THIS family.  A one-rung `copying` ladder beside an
+# imported README ladder is still SINGLE-SPELLING.
+run("C31 a foreign identifier does not grade this family",
+    ["COPYING"],
+    'import readme_claim\np = readme_claim.README_PATHS\nif n == "COPYING": pass',
+    "SINGLE-SPELLING")
+
+# C32 — a LOCAL assignment is not an import: the ladder must come from a module reference,
+# or every one-rung ladder could immunise itself by naming its own variable well.
+run("C32 a local assignment is not an imported ladder",
+    ["README"], 'README_PATHS = ["README"]\nprint("NO-README")', "SINGLE-SPELLING")
+
 import ladder_case as _lc  # noqa: E402
 
 _rows = _lc.audit(str(pathlib.Path(__file__).resolve().parents[3]))

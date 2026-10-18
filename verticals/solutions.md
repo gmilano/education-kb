@@ -18,6 +18,49 @@ updated: 2026-10-18
 > (its source is AGPL-3.0, 78,765 commits), and adds a European public-sector school platform, an
 > e-testing platform and an offline assessment platform.
 
+## 🟡 Pass 288 — the MCP-addressable platform set gains BLACKBOARD, and it is the first entrant whose integration layer carries no grant
+
+⏱️ **Tenth pass of `2026-10-18`.** Evidence:
+[`verified-repos.2026-10-18-p288.tsv`](../evidence/verified-repos.2026-10-18-p288.tsv) ·
+[`p288-websearch.2026-10-18-p288.tsv`](../evidence/p288-websearch.2026-10-18-p288.tsv).
+
+🟢 **The platform shelf's real question is no longer "can this platform be customized" but
+"can an agent reach it".** Four passes have answered that for the permissive and copyleft LMS
+set; this pass answers it for the proprietary one.
+
+| platform | platform licence | agent reach | permissive server available |
+|---|---|---|---|
+| Moodle | GPL-3.0 | MCP (`p267`) | 🟢 yes |
+| Canvas LMS | AGPL-3.0 | MCP (`p267`) | 🟢 yes |
+| Google Classroom / Workspace for Education | 🔴 proprietary SaaS | MCP (`p268`) | 🟢 7 of 8 servers probed |
+| Open edX | AGPL-3.0 | MCP (carried) | 🟡 AGPL-3.0 only (`blend-ed/openedx-mcp` + `tutor-contrib-openedxmcp`) |
+| **Blackboard Learn** | 🔴 **proprietary** | **MCP (`p288`)** | 🔴 **none — all three community servers unusable or copyleft-free** |
+| OpenEduCat | LGPL-3.0 | ERP modules | 🟡 copyleft |
+| Kolibri | MIT | offline-first | 🟢 yes |
+
+🔴 **Blackboard is the shape a studio should expect more of:** a proprietary platform with a
+documented REST API, a handful of enthusiastic community MCP wrappers, and **not one of them
+carrying a grant you can ship**. `nitsuah/bb-mcp` (already carried) wraps the Learn REST API
+with RBAC middleware; `yoyoconnor/BlackboardMCP` is read-only by design and serves no grant;
+`anastasasenov/bbmcps` **claims MIT in its `readme.md` and has no licence payload in any of
+its 9 files**.
+
+🟢 **The vertical recipe therefore inverts.** For Moodle or Canvas the studio adopts a server
+and customizes it. For Blackboard the studio **owns a thin server against the published REST
+API** and treats every community repo as a *design reference* — which is exactly what `P41` in
+[`compose/patterns.md`](../compose/patterns.md) specifies, including the authorization
+posture to copy from Open edX's plugin (re-check the platform's own staff/superuser flags
+live on every request, never cache a role).
+
+### 🔴 No new customizable platform this pass
+
+The mandated verticals leg returned Apache OFBiz, Huly, Krayin, Aureus ERP, Atomic CRM,
+ERPNext, Dolibarr, iDempiere, Compiere and Twenty. 🔴 **None is education-specific under a
+permissive grant**; the single system in the leg that names Education among its verticals is
+**ERPNext, and it is GPL-3.0**. Twenty is **source-available (AGPL-3.0 / BSL-1.1), not open
+source** — recorded explicitly, because a vendor comparison in the same leg listed it beside
+genuinely open systems. The tables below are unchanged.
+
 ## 🔴 Pass 287 — no new platform, and the pass found the thing that actually governs a platform engagement: the CURRICULUM's licence, not the platform's
 
 ⏱️ **Ninth pass of `2026-10-18`.** Evidence:

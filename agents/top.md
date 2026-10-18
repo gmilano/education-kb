@@ -27,6 +27,91 @@ updated: 2026-10-18
 > **reproduced every published figure**, and the search-leg ledger
 > [`p269-websearch.2026-10-17-p269.tsv`](../evidence/p269-websearch.2026-10-17-p269.tsv)).
 
+## 🟢 Pass 288 — BLACKBOARD IS THE FOURTH MCP-ADDRESSABLE LMS AND THE FIRST WHOSE COMMUNITY SERVERS SERVE NO GRANT AT ALL, and special education is a whole category with no permissive answer
+
+⏱️ **Tenth pass of `2026-10-18`.** Evidence:
+[`verified-repos.2026-10-18-p288.tsv`](../evidence/verified-repos.2026-10-18-p288.tsv) ·
+[`p288-websearch.2026-10-18-p288.tsv`](../evidence/p288-websearch.2026-10-18-p288.tsv) ·
+[`p288-readme-channel.2026-10-18-p288.tsv`](../evidence/p288-readme-channel.2026-10-18-p288.tsv).
+
+🔴 **Mandated agent leg: FOURTEENTH consecutive nil**, same population, same reason —
+`microsoft/ai-agents-for-beginners`, `ashishpatel26/500-AI-Agents-Projects`,
+`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, the Hugging Face Agents Course,
+`rasbt/LLMs-from-scratch`. Every row is a **curriculum for engineers** or a **catalogue of
+links**. `p286` settled the posture and the four passes since have each confirmed it: **the
+battery is corroboration, the gap-directed leg is extension.** Five passes running, every
+new row came from a directed leg.
+
+### 🟢 The six new rows, and FIVE of them cannot be built on
+
+| agent | address | grant (read from payload) | why it matters |
+|---|---|---|---|
+| 🟡 **EduHelp** | [`AaronGrace978/EduHelp`](https://github.com/AaronGrace978/EduHelp) | 🟡 **AGPL-3.0** — root `LICENSE`, **34 523 B**, `main`, HEAD `2cceb0544ba9` | 69 files. IEP/504 **eligibility** aid for *families* under Colorado and California rules; BYOK across OpenAI / Anthropic / OpenRouter / Ollama. **The pass's only real grant.** Copyleft tier, not build-on |
+| 🔴 **bbmcps** | [`anastasasenov/bbmcps`](https://github.com/anastasasenov/bbmcps) | 🔴 **NONE_IN_TREE** across **9 enumerated files** — 55 paths × 2 refs all 404 | 🔴 **Its `readme.md` line 84 says *"open-source and available under the MIT License."*** There is no MIT payload anywhere in the tree. **Dangling claim: an ASK, not a refusal.** See the channel reading below |
+| 🔴 **BlackboardMCP** | [`yoyoconnor/BlackboardMCP`](https://github.com/yoyoconnor/BlackboardMCP) | 🔴 **NONE_IN_TREE** across 9 files; `pyproject.toml` has **no `license` key** | Read-only Blackboard Learn MCP server — courses, class times, assignments, grades, slide decks. *"It never submits, posts or changes anything."* Silent in **all three** channels |
+| 🔴 **sped-agent** | [`hdronamraju/sped-agent`](https://github.com/hdronamraju/sped-agent) | 🔴 **ALL RIGHTS RESERVED** — README line 53; `package.json` has no `license` key and `"private": true` | 97 files. California IEP **deadline** agent. 🔴 This is a **REFUSAL, not an absence**: *"© 2026 hdronamraju. All rights reserved. … please ask before reusing the code."* 🔵 Its `src/agent/notices.ts` emits **bilingual EN/es** parent notices |
+| 🔴 **ai-special-education-iep-compliance** | [`eakarsu/ai-special-education-iep-compliance`](https://github.com/eakarsu/ai-special-education-iep-compliance) | 🔴 **NONE_IN_TREE** across 21 files | React + Node/Express + PostgreSQL. Evaluation timelines, service delivery, annual reviews, corrective action. No grant in any channel |
+| 🔴 **agentic-automated-assignment-grading** | [`arijit8972/agentic-automated-assignment-grading`](https://github.com/arijit8972/agentic-automated-assignment-grading) | 🔴 **NONE_IN_TREE** — its **66** licence-like paths are **all vendored `ui/node_modules/**`** | **1 531 files**, because the repo **commits `node_modules`**. OCR + rubric-matching grading pipeline. `p280`'s class, at the largest scale this base has recorded |
+
+🔵 **The count that matters to a studio: six new rows, one usable grant, and it is copyleft.**
+Zero permissive. That is the finding of the pass, not a shortfall in searching — every leg is
+written down with what it returned in
+[`p288-websearch`](../evidence/p288-websearch.2026-10-18-p288.tsv).
+
+### 🟢 Blackboard joins the MCP-addressable set, and it is the first one that is empty
+
+`p267` established Moodle and Canvas as MCP-addressable; `p268` added Google Classroom
+(eight servers probed, seven permissive, one all-rights-reserved wearing the same
+description). This pass's directed leg adds **Blackboard Learn** — and the shape is new:
+
+| LMS | established | community MCP servers | permissive among them |
+|---|---|---|---|
+| Moodle | `p267` | several | 🟢 yes |
+| Canvas | `p267` | several | 🟢 yes |
+| Google Classroom / Workspace for Education | `p268` | 8 probed | 🟢 7 of 8 |
+| **Blackboard Learn** | **`p288`** | **2 new this pass + `nitsuah/bb-mcp` already carried** | 🔴 **none of the two new ones** |
+| Open edX | carried (`blend-ed/openedx-mcp`) | 1 + Tutor plugin | 🟡 AGPL-3.0 |
+
+🔴 **So the one LMS whose own product is proprietary is also the one whose community
+integration layer carries no grant.** A Blackboard engagement cannot vendor either new
+server; the pattern for it is written fresh in
+[`compose/patterns.md`](../compose/patterns.md) `P41`.
+
+### 🔴 The channel this base was not reading, and both new signals lived in it
+
+`p278` grades a row on **two** channels — licence **payload** and package **manifest**. For
+five of this pass's six rows both are empty, so `p278/sweep.sh` returned, five times:
+
+```
+NO-CHANNEL   GREY   "neither channel read — this row carries no grade"
+```
+
+🔴 **For two of those five a THIRD channel was readable and said something decisive, in
+OPPOSITE directions** — `bbmcps` **claims** MIT it never serves; `sped-agent` **reserves all
+rights**. One is an **ASK**, the other is a **STOP**, and `GREY` was the same wrong word for
+both. 🟢 `ACTION p288` builds the channel
+([`compose/code/p288-readme-channel/`](../compose/code/p288-readme-channel/README.md),
+**32 controls, now in `make hooks`**) and grades the eight verdicts, with `posture()`
+reporting **BUILD-ON / ASK / STOP**.
+
+🔴 **And the lower-case rung is not decoration.** `bbmcps` serves **`readme.md`**; it answers
+**404** at `README.md` on `main`, `master` *and* `HEAD`. **This pass's own first reading of it
+was the false absence *"no README on any ref"***, corrected only because the tree was
+enumerated and showed the real spelling — `p261`'s rule, which this base wrote down and then
+needed again: *a 404 cannot distinguish a missing path from a missing channel; a tree can.*
+
+🔵 **`T-p283`'s shape for the FOURTH time: the class reached one instrument and never reached
+the one beside it.** `pass262-scoped-reservation-audit/sweep.py` has fetched the README over
+five spellings — lower-case `readme.md` among them — since `p262`. But it runs **only** over
+slugs the shelves *already* grade `RESTRICTIVE-GRADE`, so a **new** row can never reach it.
+The reach existed in this codebase; the gate that grades new rows did not have it.
+
+🟡 **Not every flagged ladder is a defect, and this pass checked rather than assumed.**
+`p283`'s audit also flags the readme ladder in `p279-absence-claims` as `CASE-UNVARIED` — and
+**that one is harmless**, because it opens *this KB's own* `README.md` at a known local path.
+The audit measures the shape; whether the shape costs anything depends on whether the path is
+remote. The claim published here is the one that was measured.
+
 ## 🟢 Pass 287 — a REAL MIT GRANT WAS BEING READ AS UNCLASSIFIABLE, and the repository that proves it also promotes itself onto the build-on tier
 
 ⏱️ **Ninth pass of `2026-10-18`.** Evidence:

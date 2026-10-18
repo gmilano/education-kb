@@ -1,0 +1,30 @@
+# p288 — 2026-10-18 — EVERY ROW READ FIRST-HAND on an `ls-remote --symref`-resolved ref.
+# Grants probed with `p229-grant-ladder-reach/ladder.sh` (55 paths x 2 refs, the printable
+# vocabulary `make reach` emits).  Trees enumerated with `pass275-grant-enumeration`
+# (`git clone --depth 1 --filter=blob:none` — p285's blobless channel).  READMEs read with
+# this pass's own `p288-readme-channel/probe.sh` over a CASE-CLOSED 13-rung ladder.
+# 🔴 github.com/trending still answers 403 and api.github.com/repos is still refused by
+# session repo scope, so NO star count in this pass is first-hand.  No star count is
+# published off this pass.
+#
+# 🔴 THE HEADLINE: SIX new rows, and FIVE of them serve NO USABLE GRANT.  The one real grant
+# is AGPL-3.0.  Zero permissive rows.  That is the finding, not a shortfall in searching.
+#
+# 🔵 Cross-channel ref agreement: head_sha below was resolved INDEPENDENTLY by the grant
+# ladder, the tree enumeration and the README probe.  All three agree on all six rows.
+slug	head_sha	files_in_tree	payload_path	payload_bytes	payload_family	manifest	readme_path	readme_bytes	readme_claim	channel_verdict	posture	note
+anastasasenov/bbmcps	e9f2e5aab0f4	9	NONE_IN_TREE	-	-	none-in-tree	readme.md	1582	CLAIM:MIT	DANGLING-CLAIM	ASK	🔴 `readme.md` line 84: "This project is open-source and available under the MIT License." 55 paths x 2 refs return 404 and the 9-file tree carries NO candidate grant. 🔴 LOWERCASE readme — answers 404 at the upper-case spelling on main, master AND HEAD. A secondary listicle reported this repo as "MIT License"; the MIT exists ONLY in the readme sentence and the listicle, never in a payload
+yoyoconnor/BlackboardMCP	9a470b29bae8	9	NONE_IN_TREE	-	-	pyproject.toml(no-licence-field)	README.md	4551	NO-CLAIM	SILENT-NO-PAYLOAD	STOP	Read-only Blackboard Learn MCP server (courses, class times, assignments, grades, slide decks). 9 files. `pyproject.toml` has NO `license` key; README asserts nothing. Silent in all three channels
+arijit8972/agentic-automated-assignment-grading	09eb1eaac241	1531	NONE_IN_TREE	-	-	pyproject.toml(no-licence-field)	README.md	12000	NO-CLAIM	SILENT-NO-PAYLOAD	STOP	🔴 1 531 files and EVERY ONE of its 66 licence-like paths is a VENDORED `ui/node_modules/**/LICENSE` — p280's class exactly. The repo COMMITS `node_modules`. Its OWN tree carries no grant and its own manifest declares none. OCR + rubric-matching grading pipeline
+eakarsu/ai-special-education-iep-compliance	fbe896eef888	21	NONE_IN_TREE	-	-	backend/package.json(no-licence-field)	README.md	1020	NO-CLAIM	SILENT-NO-PAYLOAD	STOP	React + Node/Express + PostgreSQL IEP-compliance app (evaluation timelines, service delivery, annual reviews, corrective action). 21 files, no root manifest, no grant in any channel
+hdronamraju/sped-agent	861e00153682	97	NONE_IN_TREE	-	-	package.json(no-licence-field, "private": true)	README.md	12689	RESERVATION	RESERVED-NO-PAYLOAD	STOP	🔴 README line 53: "(c) 2026 hdronamraju. All rights reserved. ... please ask before reusing the code." An explicit REFUSAL, not an absence. 🔵 California IEP deadline agent; `src/agent/notices.ts` emits BILINGUAL EN/es parent notices (ES_DAYS/ES_MONTHS, "de {time} a {time}") — Spanish-language statutory notice generation, in a US-domestic repo
+AaronGrace978/EduHelp	2cceb0544ba9	69	LICENSE	34523	AGPL-3.0	package.json(no-licence-field, name=aaron-grace-med)	README.md	4233	NO-CLAIM	PAYLOAD-ONLY	BUILD-ON-COPYLEFT	🟡 The pass's ONLY real grant: verbatim AGPL-3.0, "Version 3, 19 November 2007", 34 523 B — byte-identical in length to p287's `avps82/mentar` payload. IEP/504 eligibility aid for FAMILIES under Colorado and California rules, BYOK (OpenAI/Anthropic/OpenRouter/Ollama). 🔵 Root manifest is named `aaron-grace-med`, NOT `EduHelp` — a foreign/renamed manifest, recorded so a later pass does not read it as another project
+#
+# 🔴 AN INSTRUMENT FALSE POSITIVE, IN THE OPPOSITE DIRECTION FROM p287'S:
+# `hdronamraju/sped-agent`'s enumeration reports its only licence-like path as
+# `src/agent/notices.ts`.  It was READ: it is a TypeScript module that formats IEP meeting
+# notices in English and Spanish.  It is NOT a grant.  The Tier A probe name `NOTICE` matched
+# a SOURCE FILE on its stem.  p287 found a real grant graded UNCLASSIFIED (conservative
+# direction, cost a usable dependency); this is a non-grant reported as licence-like (the
+# other direction).  Both are defects.  The verdict above rests on the ENUMERATION plus a
+# read of the file, not on the path name.

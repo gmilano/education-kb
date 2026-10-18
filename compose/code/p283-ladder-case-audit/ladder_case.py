@@ -194,6 +194,40 @@ def shell_generates_case_variants(text, fam_spellings):
     return ext_varies and stem_varies
 
 
+# 🟢 p288 — THE THIRD INSTANCE OF `p284`'s GENERATOR FINDING, and the first that carries the
+# ladder by REFERENCE.  `p284` taught this audit to grade a Python cross product on what it
+# GENERATES; `p286` did the same for the shell `for` construction.  `p288`'s `probe.sh` is the
+# same idea once more: it does not spell the ladder at all, it READS it out of
+# `readme_claim.README_PATHS` — a ladder this audit grades `CASE-CLOSED` in its own right.
+# The only `readme`-family literal left in the file is the STATUS VALUE `NO-README` in its
+# own output schema, which is not a path at all.  Graded on literals, that is
+# `SINGLE-SPELLING`: a one-rung ladder that cannot prove an absence.  Graded on what it
+# actually walks, it is the closed ladder it imported.
+#
+# 🔵 T272 is the reason this construction is worth a verdict rather than a bump: a file that
+# re-spells a ladder it could import is a ladder that FORKS.  Importing is the behaviour this
+# audit should reward, and before this arm existed it was the behaviour the ratchet punished.
+# Named, not folded into an immunity, for p286's stated reason — the count stays readable.
+_IMPORTED = re.compile(r"\b\w+\.([A-Z][A-Z0-9]*(?:_[A-Z0-9]+)*_(?:PATHS|NAMES|LADDER|SPELLINGS))\b")
+
+
+def imports_graded_ladder(text, fam_spellings):
+    """True when the only literal is the stem of an imported ladder identifier.
+
+    Narrow by construction: ONE scraped spelling, and an `<module>.<IDENT>_PATHS`-shaped
+    reference whose identifier stem case-folds onto that spelling.  A file that both imports
+    a ladder AND spells rungs of its own keeps its literal grade.
+    """
+    if len(fam_spellings) != 1:
+        return False
+    only = next(iter(fam_spellings)).partition(".")[0].lower()
+    for m in _IMPORTED.finditer(text):
+        ident = m.group(1)
+        if ident.rpartition("_")[0].lower() == only:
+            return True
+    return False
+
+
 def classify(fam_spellings, text):
     """Return a verdict for ONE family's ladder inside one file."""
     # 🟢 p286: re-extract with the IDENTICAL rules over code-only text.  An earlier draft
@@ -213,6 +247,8 @@ def classify(fam_spellings, text):
     if _near(text, fam_spellings, FOLD):
         return "FOLD-ON-PATH"
     if len(fam_spellings) < 2:
+        if imports_graded_ladder(text, fam_spellings):
+            return "IMPORTED-LADDER"
         return "SINGLE-SPELLING"
     stems, exts = set(), set()
     for sp in fam_spellings:

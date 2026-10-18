@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 288) — the mandated nil is FOURTEEN deep, and the week's new agents are a fifth MCP-addressable LMS plus a special-education category with no permissive answer
+
+⏱️ **Tenth pass of `2026-10-18`.** Append-only — everything below this section is prior
+history and is not rewritten. Evidence:
+[`verified-repos.2026-10-18-p288.tsv`](../evidence/verified-repos.2026-10-18-p288.tsv) ·
+[`p288-websearch.2026-10-18-p288.tsv`](../evidence/p288-websearch.2026-10-18-p288.tsv) ·
+[`p288-readme-channel.2026-10-18-p288.tsv`](../evidence/p288-readme-channel.2026-10-18-p288.tsv).
+
+🔴 **Mandated agent leg: FOURTEENTH consecutive nil.** `microsoft/ai-agents-for-beginners`,
+`ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, the
+Hugging Face Agents Course, `rasbt/LLMs-from-scratch`, plus the general-purpose set these
+shelves already carry. **Engineer curricula and link catalogues, not learner-facing agents.**
+The nil is recorded, not hidden: an undeclared nil looks exactly like coverage.
+
+🟢 **One genuinely new datum did come out of the mandated leg, and it is a licence shape
+rather than a repository.** The leg reports `AgentGPT` **archived 2026-01-28** (read-only),
+and `AIHawk` **relicensed MIT for releases after 2026-09-02 while distributions made before
+that date remain AGPL-3.0**. 🔵 A **licence change with a date boundary** is a shape this base
+has no column for: a row is graded on *the grant served at HEAD*, and a studio that vendored a
+pre-boundary tarball holds different obligations from one that clones today. Registered for a
+later pass; no shelf cell is changed on it this pass.
+
+### 🟢 New this week — all six verified first-hand, and five cannot be built on
+
+| agent | grant | what it does |
+|---|---|---|
+| 🟡 [`AaronGrace978/EduHelp`](https://github.com/AaronGrace978/EduHelp) | **AGPL-3.0**, 34 523 B payload | IEP/504 eligibility aid for families, Colorado + California rules, BYOK multi-provider. 69 files |
+| 🔴 [`anastasasenov/bbmcps`](https://github.com/anastasasenov/bbmcps) | **none in 9 files** — but `readme.md` **claims MIT** | Blackboard MCP server. Dangling claim; an **ASK**, not a refusal |
+| 🔴 [`yoyoconnor/BlackboardMCP`](https://github.com/yoyoconnor/BlackboardMCP) | **none in 9 files** | Read-only Blackboard Learn MCP: courses, class times, assignments, grades, slide decks |
+| 🔴 [`hdronamraju/sped-agent`](https://github.com/hdronamraju/sped-agent) | 🔴 **all rights reserved** (README) | California IEP deadline agent, bilingual EN/es parent notices. A **REFUSAL** |
+| 🔴 [`eakarsu/ai-special-education-iep-compliance`](https://github.com/eakarsu/ai-special-education-iep-compliance) | **none in 21 files** | IEP compliance: evaluation timelines, service delivery, annual reviews |
+| 🔴 [`arijit8972/agentic-automated-assignment-grading`](https://github.com/arijit8972/agentic-automated-assignment-grading) | **none** — 66 vendored `node_modules` grants | OCR + rubric grading pipeline. **1 531 files**, `node_modules` committed |
+
+🔴 **Four of the pass's grading candidates were ALREADY CARRIED** — `asu2304/auto-assessment-agent`,
+`laurauguc/grading_assistant`, `macsnoeren/genai-open-assessment`,
+`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`. `make carried` returned `CARRIED`
+on each before any row was written, which is what that gate is for.
+
+🟡 **Two rows the leg returned that are NOT education rows, recorded so nobody re-reads them:**
+`Community-Access/accessibility-agents` and `OpenOS-Project-OSP/accessibility-agents` are
+WCAG-2.2-AA review skills for *coding assistants*. They help build accessible software; they
+do not run an IEP process. `scaleapi/researchrubrics` and `AdaRubric` grade **LLM agent
+trajectories**, not student work.
+
+🟢 **The instrument this week:** `ACTION p288` adds the **README as a third channel**
+([`p288-readme-channel`](../compose/code/p288-readme-channel/README.md), 32 controls, in
+`make hooks`). `bbmcps` serves **lower-case `readme.md`** and 404s at the upper-case spelling
+on every ref; probed upper-case only, this pass first wrote the **false absence** *"no README
+on any ref"*. 🔵 `p283`'s own ladder ratchet then **rejected the first version of the new
+instrument** as `STEM-ONLY` — the identical defect, one axis over, caught in the instrument
+written to fix it. The ladder is `CASE-CLOSED` now.
+
 ## 2026-10-18 (pass 287) — the thirteenth nil, and the pass's best finding is that this base's own instruments were REFUSING A REAL MIT GRANT
 
 ⏱️ **Ninth pass of `2026-10-18`.** Append-only — everything below this section is prior history

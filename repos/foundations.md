@@ -25,6 +25,57 @@ updated: 2026-10-18
 > carried as the only permissive North American system of record for roughly 200 passes while
 > *this* file carried no Ed-Fi row at all.
 
+## 🔴 Pass 288 — the foundation layer gained NOTHING this pass, and the reason is worth more than a filler row
+
+⏱️ **Tenth pass of `2026-10-18`.** Evidence:
+[`verified-repos.2026-10-18-p288.tsv`](../evidence/verified-repos.2026-10-18-p288.tsv) ·
+[`p288-websearch.2026-10-18-p288.tsv`](../evidence/p288-websearch.2026-10-18-p288.tsv).
+
+🔴 **Mandated vertical/ERP leg: no new permissive education row, NINTH pass running.** The leg
+returned a clean set of general-purpose systems and **not one education-specific one under a
+permissive grant**:
+
+| system | licence as the leg reported it | why it is not a foundation row here |
+|---|---|---|
+| Apache OFBiz | Apache-2.0 | ERP/CRM/HR automation suite. **No education vertical** — no student records, no admissions, no enrolment |
+| Huly Platform | Apache-2.0 | Team/project platform, not an education system |
+| Krayin CRM | MIT | CRM only |
+| Aureus ERP | MIT | ERP with a plugin system; no education module |
+| Atomic CRM | MIT | CRM only |
+| ERPNext | **GPL-3.0** | 🟡 **The only system in the whole leg that names Education among its verticals** — and it is copyleft, so it cannot join the permissive tier |
+| Dolibarr | GPL-3.0 | Copyleft; no education module |
+| Twenty | AGPL-3.0 / BSL-1.1 | 🔴 **Source-available, NOT open source.** Recorded so a later pass does not read it as permissive |
+
+🔵 **Stated plainly: the education ERP/CRM gap is not a gap in this base's searching — it is a
+gap in the world.** Nine passes have run this leg. The answer each time is that education
+administration is served either by copyleft (ERPNext, OpenEduCat, Dolibarr) or by proprietary
+SIS vendors, and the permissive tier has no entrant. A studio needing a permissive admin core
+builds it; it does not adopt one.
+
+### 🔴 The Blackboard integration surface is real, and nothing on it is vendorable
+
+The directed LMS-MCP leg added **Blackboard Learn** to the MCP-addressable set (see
+[`agents/top.md`](../agents/top.md) for the full comparison against Moodle, Canvas, Google
+Classroom and Open edX). As a *foundation* question the answer is negative and precise:
+
+- 🔴 [`anastasasenov/bbmcps`](https://github.com/anastasasenov/bbmcps) — **no grant** in 9
+  enumerated files, though its `readme.md` claims MIT. **An ASK, not a licence.**
+- 🔴 [`yoyoconnor/BlackboardMCP`](https://github.com/yoyoconnor/BlackboardMCP) — **no grant**
+  in 9 files; `pyproject.toml` carries no `license` key.
+- 🟡 [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) — **already carried**;
+  AGPL-3.0 per the Open edX project's own announcement, targets Ulmo, Tutor local and
+  Kubernetes, and re-checks platform staff/superuser flags live on every request.
+
+🟢 **What IS a foundation here is the API, not the server.** The Blackboard Learn **REST API**
+is the stable surface; the community MCP servers in front of it are 9-file wrappers with no
+grants. `P41` in [`compose/patterns.md`](../compose/patterns.md) wires that surface directly
+and names what must be written fresh.
+
+🔴 **No row is added to the tables below this pass.** Five real foundation repos were sought
+and none was found that is both education-specific and permissively licensed. **Fewer real
+rows beat padding**, and the searches that produced this nil are written down leg by leg in
+[`p288-websearch`](../evidence/p288-websearch.2026-10-18-p288.tsv).
+
 ## 🟢 Pass 287 — a Bangla NLP toolchain is the foundation layer a Bengali engagement has had no answer for, and the mandated vertical leg again found nothing
 
 ⏱️ **Ninth pass of `2026-10-18`.** Evidence:

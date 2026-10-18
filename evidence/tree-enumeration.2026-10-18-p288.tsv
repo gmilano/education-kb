@@ -1,0 +1,30 @@
+# p288 — the TREE-ENUMERATION half of this pass's intake.
+# method: git ls-remote --symref (does it resolve, and what is the REAL default ref?)
+#         -> git clone --depth 1 --filter=blob:none -> git ls-files (every path, zero blob transfer).
+# 🟢 All SIX rows were ACTUALLY WALKED, so every NONE_IN_TREE below is a SAYABLE ABSENCE and
+# not the state of a path ladder.  Grants were read from raw.githubusercontent.com in the same
+# pass and the head_sha agrees across all three channels (ladder, enumeration, README probe).
+#
+# 🔴 arijit8972/agentic-automated-assignment-grading: 1 531 files, and all 66 licence-like
+# paths are vendored `ui/node_modules/**` — the repo COMMITS its dependency tree.  Its own
+# grant is absent and its own pyproject.toml has no `license` key.  p280's class, at the
+# largest scale this base has recorded.
+#
+# 🔴 hdronamraju/sped-agent: its one "licence-like" path, `src/agent/notices.ts`, WAS READ and
+# is a TypeScript module that formats bilingual EN/es IEP meeting notices.  It is NOT a grant.
+# The Tier A probe name `NOTICE` matched a SOURCE FILE on its stem — an instrument false
+# positive in the OPPOSITE direction from p287's (there a real grant graded UNCLASSIFIED; here
+# a non-grant reported as licence-like).  The repo's real posture is an explicit
+# ALL-RIGHTS-RESERVED reservation in its README, which is a REFUSAL and not an absence.
+#
+# 🔴 anastasasenov/bbmcps: 9 files, no candidate grant, and its readme is served LOWER-CASE
+# (`readme.md`) — 404 at the upper-case spelling on main, master AND HEAD.  The tree is what
+# recovered the real spelling, and with it the MIT claim this base would otherwise have
+# recorded as "no README at all".
+slug	ls_remote	head_sha	files_in_tree	licence_like_paths_in_tree
+anastasasenov/bbmcps	OK	e9f2e5aab0f4	9	NONE_IN_TREE
+yoyoconnor/BlackboardMCP	OK	9a470b29bae8	9	NONE_IN_TREE
+arijit8972/agentic-automated-assignment-grading	OK	09eb1eaac241	1531	ui/node_modules/@babel/code-frame/LICENSE,ui/node_modules/@babel/compat-data/LICENSE,ui/node_modules/@babel/core/LICENSE,ui/node_modules/@babel/generator/LICENSE,ui/node_modules/@babel/helper-compilation-targets/LICENSE,ui/node_modules/@babel/helper-globals/LICENSE,ui/node_modules/@babel/helper-module-imports/LICENSE,ui/node_modules/@babel/helper-module-transforms/LICENSE,ui/node_modules/@babel/helper-plugin-utils/LICENSE,ui/node_modules/@babel/helper-string-parser/LICENSE,ui/node_modules/@babel/helper-validator-identifier/LICENSE,ui/node_modules/@babel/helper-validator-option/LICENSE,ui/node_modules/@babel/helpers/LICENSE,ui/node_modules/@babel/parser/LICENSE,ui/node_modules/@babel/plugin-transform-react-jsx-self/LICENSE,ui/node_modules/@babel/plugin-transform-react-jsx-source/LICENSE,ui/node_modules/@babel/template/LICENSE,ui/node_modules/@babel/traverse/LICENSE,ui/node_modules/@babel/types/LICENSE,ui/node_modules/@jridgewell/gen-mapping/LICENSE,ui/node_modules/@jridgewell/remapping/LICENSE,ui/node_modules/@jridgewell/resolve-uri/LICENSE,ui/node_modules/@jridgewell/sourcemap-codec/LICENSE,ui/node_modules/@jridgewell/trace-mapping/LICENSE,ui/node_modules/@rolldown/pluginutils/LICENSE,ui/node_modules/@types/babel__core/LICENSE,ui/node_modules/@types/babel__generator/LICENSE,ui/node_modules/@types/babel__template/LICENSE,ui/node_modules/@types/babel__traverse/LICENSE,ui/node_modules/@types/estree/LICENSE,ui/node_modules/@vitejs/plugin-react/LICENSE,ui/node_modules/baseline-browser-mapping/LICENSE.txt,ui/node_modules/browserslist/LICENSE,ui/node_modules/caniuse-lite/LICENSE,ui/node_modules/convert-source-map/LICENSE,ui/node_modules/cookie/LICENSE,ui/node_modules/debug/LICENSE,ui/node_modules/electron-to-chromium/LICENSE,ui/node_modules/esbuild/LICENSE.md,ui/node_modules/escalade/license,ui/node_modules/fdir/LICENSE,ui/node_modules/gensync/LICENSE,ui/node_modules/js-tokens/LICENSE,ui/node_modules/jsesc/LICENSE-MIT.txt,ui/node_modules/json5/LICENSE.md,ui/node_modules/lru-cache/LICENSE,ui/node_modules/ms/license.md,ui/node_modules/nanoid/LICENSE,ui/node_modules/node-releases/LICENSE,ui/node_modules/picocolors/LICENSE,ui/node_modules/picomatch/LICENSE,ui/node_modules/postcss/LICENSE,ui/node_modules/react-dom/LICENSE,ui/node_modules/react-refresh/LICENSE,ui/node_modules/react-router-dom/LICENSE.md,ui/node_modules/react-router/LICENSE.md,ui/node_modules/react/LICENSE,ui/node_modules/rollup/LICENSE.md,ui/node_modules/scheduler/LICENSE,ui/node_modules/semver/LICENSE,ui/node_modules/set-cookie-parser/LICENSE,ui/node_modules/source-map-js/LICENSE,ui/node_modules/tinyglobby/LICENSE,ui/node_modules/update-browserslist-db/LICENSE,ui/node_modules/vite/LICENSE.md,ui/node_modules/yallist/LICENSE
+eakarsu/ai-special-education-iep-compliance	OK	fbe896eef888	21	NONE_IN_TREE
+hdronamraju/sped-agent	OK	861e00153682	97	src/agent/notices.ts
+AaronGrace978/EduHelp	OK	2cceb0544ba9	69	LICENSE

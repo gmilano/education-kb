@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 288) — the trending channel is still 403, and the pass's largest repository is 1 531 files because it COMMITS `node_modules`
+
+⏱️ **Tenth pass of `2026-10-18`.** Append-only. Evidence:
+[`verified-repos.2026-10-18-p288.tsv`](../evidence/verified-repos.2026-10-18-p288.tsv) ·
+[`p288-websearch.2026-10-18-p288.tsv`](../evidence/p288-websearch.2026-10-18-p288.tsv).
+
+🔴 **No first-hand trending, same measured reason, carried as settled policy.**
+`github.com/trending` answers **403** and `api.github.com/repos/{owner}/{repo}` is refused by
+**session repo scope**. Both are *policy* boundaries, struck from the backlog by `p285`.
+**Every trending ranking on this shelf is third-party, and NO star count in this pass is
+first-hand — so this pass publishes none.**
+
+🔴 **Mandated trending leg: nil for education, fifth pass running.** `karpathy/nanochat`,
+`rohitg00/ai-engineering-from-scratch`, `caramaschiHG/awesome-ai-agents-2026`, Open WebUI,
+PyTorch, `addyosmani/agent-skills`. All engineer curricula or general infrastructure. The one
+education-adjacent framing in the leg — *"PyTorch proficiency is non-negotiable for modern ML
+engineering"* — is a **claim about hiring**, not an education repository.
+
+### 🔴 The provenance finding, at the largest scale this base has recorded
+
+[`arijit8972/agentic-automated-assignment-grading`](https://github.com/arijit8972/agentic-automated-assignment-grading)
+(HEAD `09eb1eaac241`) enumerates to **1 531 files**. Its tree contains **66 licence-like
+paths** and **every single one** is under `ui/node_modules/**` — `@babel/*`, `react`,
+`vite`, `rollup`, `postcss`, `caniuse-lite` and the rest of a committed dependency tree.
+
+🔴 **Its own grant: `NONE_IN_TREE`.** Its own `pyproject.toml` has **no `license` key**. A
+path-ladder probe that stopped at *"a `LICENSE` file exists in this repository"* would grade
+this repo permissive **sixty-six times over** and be wrong every time — `p280`'s class
+exactly, which is why that gate reads what a manifest **declares** rather than what a tree
+**contains**.
+
+🔵 **The useful signal underneath the noise:** the repo is a working OCR → rubric-match →
+feedback pipeline with a `needs_review` terminal state and review flags on low confidence and
+evaluator disagreement. **The design is worth reading; the code is not vendorable.**
+
+### 🟡 Carried rows re-confirmed, not re-counted
+
+Four grading repositories the directed leg surfaced were already on these shelves and
+returned `CARRIED` from `make carried` before anything was written:
+`asu2304/auto-assessment-agent`, `laurauguc/grading_assistant`,
+`macsnoeren/genai-open-assessment`,
+`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`. Likewise
+`blend-ed/openedx-mcp`, `Cicatriiz/openedu-mcp` and `nitsuah/bb-mcp` on the LMS-MCP leg.
+**Seven of thirteen candidates were already here. That ratio is the shelf working.**
+
 ## 2026-10-18 (pass 287) — the repository channel's nil is THIRTEEN deep, and the pass's largest repository is one that AUDITS ITS OWN LICENCES
 
 ⏱️ **Ninth pass of `2026-10-18`.** Append-only. Evidence:
