@@ -693,6 +693,26 @@ data gets the ranking backwards.
 
 ## Opportunities by region
 
+> 🔵 **`p281` regional battery — corroboration, not extension (`2026-10-18`).** All four mandated
+> regional legs ran and returned **no fact this base did not already hold**. Stated plainly because
+> an informed nil is information and silence is not: `Vietnam` already returns **1 067** hits across
+> 37 files, `IESALC` **630**, `Oklahoma` **486**, `Basic Act` **375**, `TALIS` **145**.
+>
+> | region | what the leg restated | value this pass |
+> |---|---|---|
+> | **North America** | **134** bills / **31** states; `H.R. 8747` advanced in committee `2026-07-21`; OK + MD human-oversight duties; NYC moratorium through grade 8; **36%** of global market | 🔴 carried |
+> | **EMEA** | AI Act education duties; amending instrument **in force `2026-07-27`**; Europe **$2.64 B → $8.0 B (2030)**, CAGR **31.9%**; **10%** of 450+ institutions hold formal guidelines | 🟡 the in-force date **second-sources** `Reg (EU) 2026/1744` |
+> | **APAC** | Korea `2026-01-22`; Taiwan Dec 2025; China anthropomorphic-AI `2026-07-15`; Vietnam `2027-03-01` **+6 months** if live before `2026-08-15` | 🟢 the **+6-month** structure is now **three-sourced**, and the resulting **`2027-09-01`** is propagated into [`compose/patterns.md`](../compose/patterns.md) |
+> | **LATAM** | IESALC **87%** adoption vs **26%** with a strategy; TALIS **BR 56 · CL 55 · CO 53 · CR 52** vs OECD **36**; Brazil **53%** of administrators using AI, **22%** with guidelines; Argentina **75%** high-SES vs **42%** low-SES; observatory launched `2026-04-14` | 🔴 carried |
+>
+> 🟢 **The LATAM supply gap is unchanged and now swept on one more channel.** `p281`'s copyright-holder
+> census read every copyleft grant on these shelves: **no LATAM institution appears as a licence
+> holder**, which is one of the four conditions this base named for closing the gap. 🔵 The two
+> Brazilian platform rows ([`i-educar`](https://github.com/portabilis/i-educar),
+> [`i-diario`](https://github.com/portabilis/i-diario)) ship **verbatim, unfilled** grants, so the
+> holder channel yields nothing for them either — **the gap is confirmed on a new axis, not closed.**
+
+
 
 ### North America
 

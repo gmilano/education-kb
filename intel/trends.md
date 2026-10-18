@@ -4,6 +4,27 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔵 `T-p281` — on a mature shelf, the valuable instrument is the one that CONFIRMS cheaply
+
+🟢 **Observed `2026-10-18` (`p281`), and it is a trend about this base rather than about the market.**
+Pass 281 ran the full mandated battery — four global legs, four regional legs — and a payload census
+over **39** copyleft rows. 🔴 **It extended the shelves in exactly one place** (Vietnam's `2027-09-01`
+propagated into [`compose/patterns.md`](../compose/patterns.md)) and **confirmed them everywhere
+else.**
+
+🔵 **The reading that matters for a studio.** A knowledge base reaches a point where new *facts* are
+rare and the live risk shifts to **drift** — a date that moved, a licence that was relabelled, a
+default branch that changed under a sweep. 🟢 At that point the instrument that earns its cost is the
+one that **re-reads cheaply and says "unchanged" with evidence**, not the one that hunts for novelty.
+🔴 `p281`'s own census is the warning attached to that: it was **wrong twice** before producing a
+true row — 39 false `NO-PAYLOAD`, then 31 false `FILLED` — and both were caught only because a
+**positive control with a known answer** was run first.
+
+🟢 **So the standing rule this base keeps re-deriving gets one more instance:** a confirmation is only
+worth the control that backs it. **An instrument that has never been run against a known answer is
+not evidence, however confident its output table looks.**
+
+
 # Trends — Education, October 2026
 
 > What changed, what it means for a studio engagement, and how confident the evidence is.

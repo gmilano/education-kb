@@ -364,7 +364,15 @@ camel-case (`SunbirdEd-portal`, `SunbirdEd-mobile-app`).
 **The governing fact** ⚠️ *(secondary-source grade)*: Vietnam's July 2026 decision makes these
 uses high-risk **only where the AI output is the sole basis for a decision without meaningful
 human review.** Compliance **2027-03-01**; **+6 months** if the system was live before
-**2026-08-15**.
+**2026-08-15** — so an education system already running on that date has until **2027-09-01**
+*(Law `134/2025/QH15`'s 18-month transition for pre-existing healthcare, education and finance
+systems; adjudicated across four publishers in [`intel/open-gaps.md`](../intel/open-gaps.md), and
+restated by `p281`'s APAC leg as a third independent source)*.
+
+🔴 **The counter-intuitive consequence, and it decides sequencing:** a **later-launched** education
+system has the **earlier** deadline. Replacing a legacy Vietnamese system therefore moves a client
+from the **September 2027** rung to the **March 2027** rung — so a migration that looks like
+modernisation buys six months *less* runway, not more.
 
 **So the deliverable is not a compliance document — it is an architecture that stays out of the
 high-risk class.**

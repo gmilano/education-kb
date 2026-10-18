@@ -4,6 +4,141 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 281) — the copyleft blind spot `p280` ranked second is MEASURED, and it is almost empty: 30 of 35 readable grants are UNFILLED
+
+⏱️ **Third pass of `2026-10-18`.** Append-only — everything below this section is prior history and
+is not rewritten. Evidence:
+[`copyleft-holder-regrade.2026-10-18-p281.tsv`](../evidence/copyleft-holder-regrade.2026-10-18-p281.tsv)
+*(39 copyleft rows, each fetched at payload and graded FILLED / UNFILLED / NO-PAYLOAD)*.
+
+### 🟢 `ACTION p281-2` DISCHARGED — the `by construction` exemption hid 14%, and four of those five were already shelved
+
+`p280` registered this second, in its own words: *"`GibbonEdu` proves at least one filled appendix
+exists; **nobody knows how many**."* 🟢 **Now somebody does.** Every row on
+[`agents/top.md`](top.md), [`repos/foundations.md`](../repos/foundations.md) and
+[`verticals/solutions.md`](../verticals/solutions.md) graded `GPL`/`AGPL`/`LGPL` — **39 rows, 34
+distinct repositories** — was fetched at payload and read for a filled appendix.
+
+| verdict | n | what it means |
+|---|---|---|
+| 🟢 `FILLED` | **5** | the project wrote its own holder into the appendix — a nameable counterparty |
+| 🔴 `UNFILLED` | **30** | verbatim licence text, holder nowhere in the payload |
+| 🟡 `NO-PAYLOAD` | **4** | no grant at the probed paths — **and three of the four are instrument defects, not absences** (below) |
+
+The five filled grants, with the holder exactly as the payload writes it:
+
+| repository | family | holder line, verbatim | already on this shelf? |
+|---|---|---|---|
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | AGPL-3.0 | `2021-present PrairieLearn, Inc.` + `2013-2021 University of Illinois Board of Trustees` | 🟡 partly — the row said *"UIUC in the copyright line"*, not the two-party split |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | GPL-3.0 | `2010 Gibbon Foundation` | 🟢 yes — `p280` found it by hand |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | LGPL-3.0 | `2025 GegoSoft Technologies and GegoK12 Contributors` | 🟢 yes |
+| [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | GPL-3.0 | `2026 Italicia` | 🟢 yes — carried as `region: UNMEASURED` |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | AGPL-3.0 | `2026 Human Skill Tree Contributors` | 🔴 **no — the one genuinely new holder** |
+
+🔵 **The honest reading, and it is the point of the measurement.** `p280` feared a large unmeasured
+half. The half is real — the exemption did skip all 39 rows — **but it was nearly empty**: copyleft
+projects overwhelmingly ship the licence verbatim and never touch the appendix, so **86% have no
+holder to find**, and of the 14% that do, **four were already known**. 🟢 **A blind spot that is
+measured and nearly empty is a closed question, not a carried one**, and this is the class of result
+that stops a backlog item being re-registered for an eleventh pass.
+
+🟢 **`PrairieLearn` is the one row the census materially sharpens**, and in the direction `p280`
+named: its grant is held by **a named company and a university's Board of Trustees jointly**, which
+is a stronger counterparty for a client's legal review than either alone. 🔵 Note the row was
+*already* correctly graded **`SPLIT LICENCE — read the payload, not the label`**; the census adds the
+holders, not the split.
+
+### 🔴 The instrument was wrong twice before it produced a single true row, and a positive control caught both
+
+🔵 This base's standing lesson is *run the instrument before trusting it*. It earned its keep twice.
+
+| # | defect | what it produced | how it surfaced |
+|---|---|---|---|
+| 1 | the slug list had **no tabs**, so `l.split('\t')[0]` kept the **trailing newline**; every URL became `.../GibbonEdu/core%0A/master/LICENSE` | 🔴 **39 of 39 `NO-PAYLOAD`** — a perfect, confident, entirely false nil | a hand `curl` of the *same* URL returned `200` / 35 121 B |
+| 2 | `^\s*Copyright` under `re.I` matched **licence prose**, because the GPL wraps lines and one begins `copyright holder saying it may be distributed` | 🔴 **31 false `FILLED`**, each "holding" the string *"on the Program, and are irrevocable provided the stated"* | the `GibbonEdu` positive control returned prose where `p280` had read `2010 Gibbon Foundation` |
+
+🟢 **The fix that made it sound is one predicate: a filled appendix must carry a YEAR.** `Copyright
+(C) 2010  Gibbon Foundation` has one; licence prose never does. With that, the control returned
+`2010 Gibbon Foundation` exactly as `p280` read it by hand.
+
+🔴 **And two FLOORS remained, both of which this pass can name because the nils were chased:**
+
+- **a `>200`-byte floor** silently dropped [`frappe/education`](https://github.com/frappe/education),
+  whose entire grant is **19 bytes** (`License: GNU GPL V3`). 🔵 This base already classes that as
+  `GRANT-BY-REFERENCE` / `BARE-TOKEN` — so the floor hid a row the shelves had *already* adjudicated.
+- **a `master`/`main` branch list** dropped [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks),
+  whose default branch is **`dev`** (`LICENSE.md`, 35 147 B, verbatim GPL-3.0 → `UNFILLED`).
+
+🔵 So of four `NO-PAYLOAD` verdicts, **three are the instrument's** and only
+[`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) is a real absence — which `p276`
+had already established over **1 985 paths**.
+
+### 🔴 A path ladder cannot prove absence — `p275`'s lesson, re-committed by this pass's own instrument
+
+[`ECNU-ICALK/EduChat`](https://github.com/ECNU-ICALK/EduChat) returned `NO-PAYLOAD` on 15 paths × 3
+branches. 🔴 **The reason is that `LICENSE` is a DIRECTORY, not a file** — `LICENSE/LICENSE.txt`
+serves **Apache-2.0** and `LICENSE/DISCLAIMER` returns `200`. 🟢 `p275` built the enumeration gate for
+exactly this and wrote *"a path ladder cannot prove absence"*; this pass shipped a path ladder anyway.
+🔵 **The gate exists and was not run — which is `p278`'s finding about `p277`, recurring.**
+
+🟢 **Graded properly at payload, `EduChat`'s Apache-2.0 appendix is `UNFILLED`** — and that is worth
+one line beside `p280`'s headline:
+
+| Apache-2.0 agent, university-built | appendix | counterparty a client's legal review can name |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) *(row 1 of `top.md`)* | 🟢 **FILLED** — `Copyright 2025 Data Intelligence Lab, The University of Hong Kong` | 🟢 **yes** |
+| [`ECNU-ICALK/EduChat`](https://github.com/ECNU-ICALK/EduChat) | 🔴 **UNFILLED** — verbatim Apache text | 🔴 **no** |
+
+🔵 **Two Apache-2.0 education agents, both out of university labs, and only one names its grantor.**
+That is the holder axis `p280` opened, applied to the shelf's other university agent.
+
+### 🟡 Seventh consecutive pass with no new agent, and the channel diagnosis holds a seventh time
+
+🔴 The mandated global legs — agents, GitHub trending, vertical platforms, industry trends — returned
+**no education-specific agent repository** this base does not already hold. One leg said so outright:
+*"The search didn't turn up a ranked list of open-source AI agents specifically for education … the
+education angle is thin."*
+
+| what the legs returned | what it is | disposition |
+|---|---|---|
+| `opencode` (MIT, ~194 k★), `OpenHands`, `CrewAI` (MIT, 56 723★), `LangGraph` | general coding / orchestration agents | 🔴 `CARRIED` — not education |
+| `ashishpatel26/500-AI-Agents-Projects` (MIT) | a **catalogue of use cases** with an education chapter | 🔴 `CARRIED`, and not an agent |
+| `microsoft/ai-agents-for-beginners` (~56 k★ in this leg, ~67 k★ in `p280`'s) | a **12-lesson course** | 🔴 `CARRIED` — and the two star figures disagree, so neither is shelved |
+| `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `caramaschiHG/awesome-ai-agents-2026` | curated lists | 🔴 not rows |
+
+🔵 **Seven passes is no longer a dry spell, it is a measured property of the channel:** education-shaped
+queries into the agent-discovery channel return GENERAL AI material. 🟢 The platform and jurisdiction
+legs remain where this base's new material actually comes from, and they produced again this pass.
+
+### 🔵 The regional battery: four region legs ran, and the result is corroboration, not news
+
+All four mandated regional legs ran. 🔴 **Every substantive fact they returned is already shelved** —
+measured, not assumed: `Vietnam` returns **1 067** hits across 37 files, `IESALC` **630**, `Oklahoma`
+**486**, `Basic Act` **375**, `Taiwan` **199**, `TALIS` **145**.
+
+| region | what the leg returned | status |
+|---|---|---|
+| 🟢 **North America** | **134** AI-in-education bills across **31** states; `H.R. 8747` *(K-12 AI Literacy and Readiness Act of 2026)* advanced in committee **2026-07-21**; Oklahoma and Maryland require human oversight; NYC's one-year student-facing moratorium through grade 8; NA holds **36%** of the global market | 🔴 all `CARRIED` |
+| 🟢 **EMEA** | AI Act high-risk duties for education; the amending instrument **in force `2026-07-27`**; Europe **$2.64 B (2026) → $8.0 B (2030)**, CAGR **31.9%**; only **10%** of 450+ institutions hold formal guidelines | 🟡 `CARRIED`; the in-force date **corroborates** `p280`'s `Reg (EU) 2026/1744` *(OJ `2026-07-24`)* from a second channel |
+| 🟢 **APAC** | Korea's AI Basic Act in force **`2026-01-22`**; Taiwan's **Dec 2025**; China's anthropomorphic-AI measures **`2026-07-15`**; Vietnam education high-risk, compliance **`2027-03-01`**, **+6 months** if live before **`2026-08-15`** | 🟡 `CARRIED`; the Vietnam **+6-month** structure is now **three-sourced** — see the fix below |
+| 🟢 **LATAM** | UNESCO IESALC: **87%** of 200 HEIs in 19 countries use AI, **26%** hold a strategy; TALIS teacher use **BR 56% · CL 55% · CO 53% · CR 52%** vs OECD **36%**; Brazil **53%** of administrators use AI, **22%** have guidelines; Argentina **75%** high-SES vs **42%** low-SES; UNESCO regional observatory launched **`2026-04-14`** | 🔴 all `CARRIED` |
+
+🔵 **An informed nil, stated plainly:** the regional battery produced **no new regional fact** this
+pass. 🟢 That is a different and more useful statement than silence, and it is the first time the
+battery has corroborated rather than extended — which is what a 281st pass over a mature shelf should
+mostly do.
+
+### 🟢 One real propagation defect, and it is on the shelf a studio actually opens
+
+🔴 [`compose/patterns.md`](../compose/patterns.md) stated Vietnam's education deadline as *"Compliance
+`2027-03-01`; **+6 months** if the system was live before `2026-08-15`"* — correct, and it **never
+names the resulting date**. 🟢 [`intel/open-gaps.md`](../intel/open-gaps.md) has it fully adjudicated
+across **four publishers** as **`2027-09-01`**, with the counter-intuitive consequence spelled out.
+🔵 **The base's own finding was sitting one file away from the shelf a delivery team reads**, and this
+pass's APAC leg independently restated the `+6 months` structure a third time. **Fixed in
+`patterns.md`.**
+
+
 ## 2026-10-18 (pass 280) — a SIXTH consecutive pass with no new agent, and the licence under the agent this shelf recommends first turns out to be institutionally held
 
 ⏱️ **Second pass of `2026-10-18`.** Append-only — everything below this section is prior history and

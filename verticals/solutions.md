@@ -20,6 +20,20 @@ updated: 2026-10-18
 
 ## The platform shelf
 
+> 🟢 **Copyright-holder census (`p281`).** Every `GPL`/`AGPL`/`LGPL` row on this shelf was fetched at
+> payload and read for a filled licence appendix: **5 of 35 readable grants name a holder, 30 do
+> not.** 🔵 **What that means when a client's legal review asks "who grants this?"** — for the 30,
+> *nobody is named in the licence*, and the answer has to be built from the commit history or the
+> project's governance page, not quoted from the payload. 🟢 The platforms that **do** name a
+> counterparty are [`GibbonEdu/core`](https://github.com/GibbonEdu/core) (`2010 Gibbon Foundation`),
+> [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) (`2025 GegoSoft Technologies`) and
+> [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) (`PrairieLearn, Inc.`
+> with the `University of Illinois Board of Trustees`). 🔴 **An unfilled appendix is not a defect and
+> not a risk** — verbatim text is the normal way to ship copyleft; it is simply a question the
+> payload cannot answer. Evidence:
+> [`copyleft-holder-regrade.2026-10-18-p281.tsv`](../evidence/copyleft-holder-regrade.2026-10-18-p281.tsv).
+
+
 | Platform | Repo | Licence | Stack | Where it fits |
 |----------|------|---------|-------|---------------|
 | **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 *(`COPYING.txt`)* | PHP + MySQL/PostgreSQL | The default LMS of public education worldwide. Has a **first-party AI subsystem since 4.5** — provider-pluggable, so a client can point it at OpenAI, Azure, or a local Ollama/vLLM endpoint. Start here for K-12 and public universities. 🟢 **Pass 273 — the agent doorway into Moodle is permissive, which this file did not say.** Beyond the first-party AI subsystem, Moodle is now **MCP-addressable under MIT**: [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) (**MIT**, 40 tools + `ws_raw`, teacher-side **writes**, upsert-by-`idnumber`, any Moodle 4.x/5.x) and [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) (**MIT**, Go, student-side). ⚠️ **The licence boundary is the write path, not the wrapper:** the writes go through a companion Moodle `local_` plugin, so the **deployed combination is GPL-3.0** — no network clause, so hosting is unaffected, but a *distributed* Moodle image carrying it ships as GPL-3.0. 🔵 **So the GPL-3.0 in this cell is the licence of the whole engagement, and that was already true before the agent arrived** — the MCP layer adds no new copyleft reach. See `P23`. |

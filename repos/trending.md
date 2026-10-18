@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 281) — four of this shelf's repositories default to a branch that is neither `master` nor `main`, and two of them are the LATAM rows
+
+⏱️ **Third pass of `2026-10-18`.** Append-only. Evidence:
+[`copyleft-holder-regrade.2026-10-18-p281.tsv`](../evidence/copyleft-holder-regrade.2026-10-18-p281.tsv).
+
+### 🔴 The branch assumption is a floor, and `git ls-remote --symref` prices it in one call
+
+`p281`'s holder census probed `master`, `main` and `develop`. Chasing its own nils turned up a
+structural fact worth its own row: **the default branch of a live education repository is routinely
+neither of the first two**, and on this shelf the exceptions cluster in the places that matter most.
+
+| repository | default branch *(`ls-remote --symref`)* | what a `master`/`main` sweep does |
+|---|---|---|
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 **`2.12`** | reads a stale `master`; the real head is a **version branch** |
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🔴 **`1.6`** | same shape, same owner |
+| [`pressbooks/pressbooks`](https://github.com/pressbooks/pressbooks) | 🔴 **`dev`** | 🔴 returns `NO-PAYLOAD` — a **false absence**, corrected this pass |
+| [`frappe/education`](https://github.com/frappe/education) · [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🟡 **`develop`** | already known to this base |
+
+🔵 **Why the first two are the consequential ones:** they are this shelf's **Brazilian municipal
+SIS and teacher portal** — the LATAM platform pair the base recommends for a sovereignty-first
+engagement. 🟢 A version-numbered default branch is a *maintenance* signal in its own right: it says
+the project ships from release lines, not from a rolling trunk, which is what a municipal client
+procuring a supported deployment wants to see. 🔴 It also means **any sweep keyed to `master` has been
+reading a branch the maintainers do not ship from.**
+
+🟢 **Read at their true defaults, both LATAM rows confirm the shelf's grades** — a clean positive
+control: `i-educar@2.12` serves **GPL-2.0** (`Version 2, June 1991`, 18 093 B) and `i-diario@1.6`
+serves **AGPL-3.0**, both exactly as [`repos/foundations.md`](foundations.md) records them.
+
+### 🟢 And the `pt-BR` payload note was already right
+
+🔵 `i-diario`'s only licence payload is **`LICENÇA PÚBLICA GERAL AFFERO GNU, Versão 3`** — an
+unofficial **Portuguese translation**, which the FSF says has no legal force. 🟢 This pass re-read it
+at the true default branch `1.6` and [`repos/foundations.md`](foundations.md) **already carries the
+finding and the remedy** (*"cite the English AGPL-3.0 in any SOW"*). 🔵 **Recorded here as a
+confirmation, not a discovery** — a re-read that agrees is still worth its line, because the next
+pass otherwise pays to find it again.
+
+
 ## 2026-10-18 (pass 280) — the bound was set to the example's own size, and lifting it corrected a published count by 6× and exposed a conflict that was hiding inside it
 
 ⏱️ **Second pass of `2026-10-18`.** Append-only — everything below this section is prior history and

@@ -4,6 +4,121 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 281 — 2026-10-18 — **THE COPYLEFT BLIND SPOT `p280` RANKED SECOND IS MEASURED AND NEARLY EMPTY, THE INSTRUMENT THAT MEASURED IT WAS WRONG TWICE FIRST, AND THE BATTERY CORROBORATED EVERYTHING IT TOUCHED**
+
+**One-line summary:** `p280`'s item 2 asked how many copyleft grants on these shelves name a holder —
+*"nobody knows how many"*. The answer is **5 of 35 readable payloads**; **four of the five were
+already shelved**; the census instrument produced **39 false nils and then 31 false positives**
+before a positive control made it sound; and the full mandated battery — four global legs, four
+regional legs — **extended the shelves in exactly one place.**
+
+### 🟢 Item 2 discharged: the exemption skipped 39 rows and hid almost nothing
+
+Every `GPL`/`AGPL`/`LGPL` row across [`agents/top.md`](agents/top.md),
+[`repos/foundations.md`](repos/foundations.md) and
+[`verticals/solutions.md`](verticals/solutions.md) was fetched at payload and graded. Evidence:
+[`evidence/copyleft-holder-regrade.2026-10-18-p281.tsv`](evidence/copyleft-holder-regrade.2026-10-18-p281.tsv).
+
+| verdict | n |
+|---|---|
+| 🟢 `FILLED` | **5** |
+| 🔴 `UNFILLED` | **30** |
+| 🟡 `NO-PAYLOAD` | **4** — and **3 of the 4 are instrument defects, not absences** |
+
+🔵 **`24kchengYe/human-skill-tree` (`2026 Human Skill Tree Contributors`) is the only genuinely new
+holder.** `GibbonEdu` was `p280`'s, `GegoSoft` and `Italicia` were already shelved, and
+`PrairieLearn` was known to have *"UIUC in the copyright line"* — the census sharpens it to a
+**joint** grant held by `PrairieLearn, Inc.` **with** the `University of Illinois Board of Trustees`,
+which is the stronger-counterparty shape `p280`'s headline identified.
+
+🟢 **This is a closed question, not a carried one.** The copyleft half is genuinely unmeasured no
+longer, and the measurement says copyleft projects ship verbatim text and leave the appendix alone
+**86%** of the time. 🔴 **It should not be re-registered.**
+
+### 🔴 The instrument was wrong twice, and only a positive control caught it
+
+1. 🔴 A **trailing newline** in the slug parse made every URL malformed → **39 of 39 `NO-PAYLOAD`**, a
+   perfectly confident and entirely false nil. Caught because a hand `curl` of the *same* slug
+   returned `200` / 35 121 B.
+2. 🔴 `^\s*Copyright` under `re.I` matched **licence prose** (the GPL wraps a line beginning
+   `copyright holder saying it may be distributed`) → **31 false `FILLED`**, each reporting the
+   holder as *"on the Program, and are irrevocable provided the stated"*. Caught because the
+   `GibbonEdu` control returned prose where `p280` had read `2010 Gibbon Foundation`.
+
+🟢 **The sound predicate is one word: a filled appendix carries a YEAR.** 🔴 **And two floors
+survived** — a `>200`-byte minimum that hid `frappe/education`'s 19-byte `GRANT-BY-REFERENCE`, and a
+`master`/`main` branch list that produced a false absence for `pressbooks/pressbooks` (default
+branch **`dev`**).
+
+### 🔴 `p275`'s lesson re-committed by this pass's own code
+
+`ECNU-ICALK/EduChat` returned `NO-PAYLOAD` on 15 paths × 3 branches **because `LICENSE` is a
+DIRECTORY** — `LICENSE/LICENSE.txt` serves Apache-2.0. 🟢 `p275` built the enumeration gate for
+precisely this and wrote *"a path ladder cannot prove absence"*; **this pass shipped a path ladder
+anyway.** 🔵 Graded properly, EduChat's Apache appendix is **`UNFILLED`** — against
+`HKUDS/DeepTutor`'s **`FILLED`** (`Data Intelligence Lab, The University of Hong Kong`). **Two
+university-built Apache-2.0 education agents; one names its grantor.**
+
+### 🟢 Four repositories default to a branch that is neither `master` nor `main` — and two are the LATAM rows
+
+`portabilis/i-educar` → **`2.12`**, `portabilis/i-diario` → **`1.6`**, `pressbooks` → **`dev`**,
+`frappe/education` and `LearnPress` → **`develop`**. 🔵 The first two are this shelf's **Brazilian
+municipal SIS and teacher portal**; a version-numbered default is a **maintenance signal** a
+municipal procurement wants to see. 🟢 Re-read at their true defaults, **both confirm the shelf's
+grades** (`i-educar@2.12` GPL-2.0; `i-diario@1.6` AGPL-3.0, payload still the unofficial `pt-BR`
+translation the shelf already flags for SOW purposes).
+
+### 🟡 Seventh consecutive pass with no new agent
+
+The global legs returned general coding and orchestration agents (`opencode`, `OpenHands`, `CrewAI`,
+`LangGraph`), two `awesome-*` lists, a 12-lesson Microsoft course and a use-case catalogue. One leg
+said it outright: *"the education angle is thin."* 🔵 **Seven passes makes this a property of the
+channel, not a dry spell** — and the two star figures for `ai-agents-for-beginners` (~56 k here,
+~67 k at `p280`) disagree, so neither is shelved.
+
+### 🔵 The battery corroborated, and that is the honest headline for a 281st pass
+
+All four regional legs ran; **every substantive fact was already held**. The one real defect found
+was a **propagation** gap, not a knowledge gap: [`compose/patterns.md`](compose/patterns.md) gave
+Vietnam's education rule as *"+6 months if live before `2026-08-15`"* without ever naming
+**`2027-09-01`**, while [`intel/open-gaps.md`](intel/open-gaps.md) had it adjudicated across four
+publishers. 🟢 **Fixed, with the sequencing consequence attached:** a later-launched system has the
+*earlier* deadline, so replacing a legacy Vietnamese system moves a client from the September rung to
+the March rung.
+
+### 🔴 `make hooks` was NOT run this pass, and the reason is environmental
+
+🔴 The standing gate suite could not be executed: the execution sandbox for this run **refuses to run
+repository-provided code**. 🟢 **What was done instead**, so the shelves are not unverified: table
+structure was checked by hand at every insertion point (`p277`'s class), the single `## Opportunities
+by region` heading with its four `###` subsections was confirmed intact, frontmatter was confirmed on
+all eight shelves, and every URL written this pass was resolved before it was written. 🔴 **This is
+not equivalent to the gate and is not claimed to be.** 🔵 **`p282` must run `make hooks` first** and
+treat a failure as `p281`'s, not its own.
+
+### 🔵 Declared gaps and the backlog for `p282`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked:
+
+1. 🔴 **Run `make hooks`.** It did not run this pass (above). Nothing else in this list matters until
+   the standing gates are green on `p281`'s edits.
+2. 🔴 **Run `--resolve` over the 14 CANDIDATE control sites** *(carried from `p280` item 1, still
+   undischarged; **6 of 8 distinct slugs unread**)*.
+3. 🟡 **Fold the three defects `p281` found in its own instrument into the standing gate**: the
+   year-mandatory appendix predicate, the byte-floor that hides `GRANT-BY-REFERENCE`, and
+   **`ls-remote --symref` for the default branch** instead of a `master`/`main` guess. 🔵 The third is
+   the cheapest and catches the widest class.
+4. 🟡 **Raise `MANIFEST_CAP`'s bound honestly, or prove it is not reached** *(carried, `p280` item 3)*.
+5. 🟡 **Sweep the remaining metadata-graded rows** — **107** found by the census; `p278`–`p280` did 14.
+6. 🟡 **Scope the absence queue to the latest statement per subject** (`T56`, carried four passes).
+7. 🟡 **Work the `ABSENCE-QUEUED` backlog** — **124 refuted / 239 queued**; nobody has read the 124.
+8. 🔵 **Brazil: watch for the homologating act in the DOU** — reported imminent **with amendments**,
+   so the binding text is not the text this base has read.
+9. 🔵 **EMEA: the Article 50 marking grace expires `2026-12-02`** — now **six weeks out**.
+10. 🔵 **Read the primary texts on an egress-enabled run** (OJ for Reg (EU) 2026/1744 first).
+    🔴 Still not dischargeable here (`T61`, now measured on three client channels).
+11. 🟡 **Colombia: `Ley 2626`'s attribution stays contested and `PL 418/2026` is pending** *(carried)*.
+
 ## Pass 280 — 2026-10-18 — **THE CHANNEL `p279` SAID THIS BASE DID NOT HAVE WAS ALREADY ON ITS SHELF IN TWO HALVES, THE CAP IT RANKED THIRD WAS HIDING A 6× ERROR IN THE MOST CONSEQUENTIAL ROW, AND THE AUDIT IT ASKED FOR REFUTED A FACT THIS BASE HAS ASSERTED FOR 96 PASSES**
 
 ⏱️ **Second pass of `2026-10-18`.** Evidence:
