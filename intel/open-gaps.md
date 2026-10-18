@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 282 — **THE SHELF RECOMMENDED ONE REPOSITORY TWICE, AND THE GATE THAT GUARDS THIS BASE'S MOST-REPEATED ERROR COULD NOT SPELL IT**
+
+⏱️ `2026-10-18`, fourth pass. Evidence:
+[`alias-identity.2026-10-18-p282.tsv`](../evidence/alias-identity.2026-10-18-p282.tsv) ·
+[`tier-head-census.2026-10-18-p282.tsv`](../evidence/tier-head-census.2026-10-18-p282.tsv) ·
+[`readme-path-case.2026-10-18-p282.tsv`](../evidence/readme-path-case.2026-10-18-p282.tsv) ·
+[`channel-reach.2026-10-18-p282.tsv`](../evidence/channel-reach.2026-10-18-p282.tsv) ·
+[`verified-repos.2026-10-18-p282.tsv`](../evidence/verified-repos.2026-10-18-p282.tsv) ·
+[`p282-inbound-raw.2026-10-18-p282.txt`](../evidence/p282-inbound-raw.2026-10-18-p282.txt).
+
+### 🟢 DISCHARGED
+
+| item | verdict |
+|---|---|
+| 🔴 `p268`'s *"neither repository serves a README"* | 🟢 **REFUTED.** It serves `README.MD`, `200`, on both names. The ladder's four spellings had **no uppercase extension**. `p1057-licence-path-case`'s class, which this base built for **licence** paths and never gave the README ladder |
+| 🟡 `p281`'s *"`ACTION SH` fired clean for the first time in six passes"* | 🔴 **The clean run does not generalise.** The claim arrived a **sixth** time this pass and the gate scored `0`: its onset vocabulary held `applies from` and not the **plural** `apply from`, which is how sources actually write it. **Fixed; 31 controls, up from 15** |
+| 🟢 the build-on tier's identity | 🟢 **MEASURED AND CLOSED.** 27 addresses, 27 resolve, **26 distinct repositories**, **exactly one** alias pair. A census that bounds the rest is a closed question |
+
+### 🔴 NEW, and the most consequential finding of the pass
+
+`agents/top.md` carried `ls1intum/Iris` and `ls1intum/Pyris` as **two rows of the build-on tier**.
+They are **one repository**: HEAD `d7b2c095204e`, 245 refs, root tree `4e2f096df767`, 203 files,
+MIT at 1 088 B — identical on every axis — and under both names the root `README.MD` opens
+`# Pyris V2` and states *"Pyris powers Iris, a virtual AI tutor"*, linking Iris to a **web page**.
+
+🔴 **Cost: six recipes in [`compose/patterns.md`](../compose/patterns.md) told a delivery team to
+compose the two.** 🟢 All six corrected, plus `verticals/solutions.md`'s Sunbird stack; the `top.md`
+row is **withdrawn in place**, not deleted.
+
+🔵 **Why twenty passes of licence rigour could not see it.** Every instrument was right about the
+row it measured. 🔴 **Duplication is a relation BETWEEN rows, and this base owns no per-pair check.**
+`recount` matched 27 rows to 27 because 27 rows is what the file has.
+
+### 🔴 A defect class fixed in one instrument, live in its sibling
+
+`p279` repaired exactly this in `p279-absence-claims`: *"a line-local predicate over a hard-wrapped
+corpus is the same defect one layer out."* 🔴 The date gate standing beside it was **never re-read
+for the same class**, so it judged line by line and reported two **forensic quotations** as fresh
+assertions while missing the real one. 🟢 Now paragraph-scoped — **with a refinement this corpus
+forced: a markdown table ROW is its own unit**, or the correction vocabulary in one row launders the
+stale assertion in the next. 🔴 Measured, not reasoned about: the one genuinely stale cell sits in
+such a table.
+
+🔴 **And `make hooks` had been FAILING, invisibly, for as long as the gate has been standing** —
+`repos/trending.md:18012` asserted *"high-risk duties … apply from August 2026 — already in force"*.
+Corrected in place; green again.
+
+### 🔵 Declared gaps, carried and new
+
+| gap | state |
+|---|---|
+| 🔴 **`T61` — primary policy text unreachable** | 🔴 **CARRIED, nineteenth reproduction, both clients.** `spa.gov.sa` → `ENOTFOUND` / CONNECT `403`. Every Gulf fact this pass is `REPORTED, NOT CONFIRMED` |
+| 🔴 **the star-count channel** | 🔴 **NEW.** `github.com` repository pages, `/topics`, `/trending` and `api.github.com` all `403`. `raw` and `git` remain open, so **grants are current and popularity is frozen at `2026-10-17`** |
+| 🔴 **Saudi / UAE curriculum dates conflict** | 🔴 **NEW, UNRESOLVED.** 2025-26 launch vs "Phase 1 August 2026"; UAE May 2025 vs `2026-09-02`. Both secondary; recorded, not resolved |
+| 🔴 **Africa** | 🔴 **CARRIED and re-confirmed as empty.** A gap-directed leg returned **no** open-source education AI project for Africa or the Middle East; the two African-context agents from `p269` still serve **no grant at all** |
+| 🟡 **teacher-mediated routing** | 🟡 **CARRIED, and the Gulf strengthens it.** China, Brazil and Singapore restrict open-ended generative tools for the youngest learners; a mandatory Gulf K-12 subject wants the same shape. **No agent on this shelf ships it** |
+| 🔴 **no per-pair identity check is standing** | 🔴 **NEW.** `p282` ran the HEAD census **by hand**. It is one `ls-remote` per address and belongs in `make hooks`' online half — registered, not built |
+| 🟡 **eighth pass with no new agent** | 🟡 **CARRIED.** Every candidate `CARRIED` under `make carried`. The channel diagnosis is unchanged |
+
+### 🔵 Registered for the next pass
+
+1. 🔴 **Make the identity census standing.** `p282` proved the instrument in ten lines of shell and
+   left it out of the Makefile — this base's **own** recurring failure mode *(the Makefile header's
+   opening paragraph: "a working gate that stayed a one-off")*. One recipe, online half.
+2. 🔴 **Case-close every path ladder, not just the licence one.** `p1057` exists for licences;
+   `README.MD` proves the README ladder never inherited it. Audit which ladders are case-closed.
+3. 🟡 **Re-read each gate for the classes its SIBLINGS have already fixed.** `p282` found `p279`'s
+   repaired defect alive one directory away. The cheap version is a list of repaired classes and a
+   pass over the other instruments asking which of them is still open.
+
+
 ## Pass 280 — **THE REMEDY RANKED FIRST NEEDED A LIST, AND BOTH HALVES OF A CHANNEL THAT NEEDS NONE WERE ALREADY ON THIS SHELF**
 
 ⏱️ `2026-10-18`, second pass. Evidence:

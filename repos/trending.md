@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 282) — the repository channel is half shut, and the tier's address count is not its repository count
+
+⏱️ **Fourth pass of `2026-10-18`.** Append-only. Evidence:
+[`channel-reach.2026-10-18-p282.tsv`](../evidence/channel-reach.2026-10-18-p282.tsv) ·
+[`tier-head-census.2026-10-18-p282.tsv`](../evidence/tier-head-census.2026-10-18-p282.tsv) ·
+[`verified-repos.2026-10-18-p282.tsv`](../evidence/verified-repos.2026-10-18-p282.tsv).
+
+### 🔴 Channel state, measured before anything was written
+
+| channel | result | what it costs this pass |
+|---|---|---|
+| `github.com/<slug>` | **403** | 🔴 **no star count could be refreshed** |
+| `github.com/topics/<topic>` | **403** | 🔴 the topic-listing discovery channel `p264`–`p269` used is **shut** |
+| `github.com/trending` | **403** | 🔴 the GitHub Trending leg cannot be run first-hand |
+| `api.github.com` | **403** | carried from `p281` |
+| `raw.githubusercontent.com` | 🟢 **200** | licence payloads still read first-hand |
+| `git ls-remote` | 🟢 **OK** | existence, default branch and HEAD |
+| `git clone --filter=blob:none --bare` | 🟢 **OK** | **tree enumeration**, which is what settled this pass's headline |
+
+🔵 **So the trending leg this pass is secondary by necessity**, and is labelled as such. Every
+candidate a blog named was put through `make carried`; **all were already shelved.** The only
+first-hand repository work available was through `git` and `raw`, and that is where the pass's
+findings came from.
+
+### 🟢 All 27 build-on addresses resolve — and they are 26 repositories
+
+`ls-remote` over every address in [`agents/top.md`](../agents/top.md)'s build-on tier, grouped by
+HEAD SHA:
+
+| measure | value |
+|---|---|
+| addresses published in the tier | **27** |
+| addresses that resolve | **27** — no dead row |
+| distinct repositories behind them | 🔴 **26** |
+| alias pairs found | **1** — `ls1intum/Iris` = `ls1intum/Pyris`, HEAD `d7b2c095204e`, tree `4e2f096df767`, 203 files |
+
+🔵 **A census that finds exactly one instance and bounds the rest is a closed question**, not a
+carried one. The full account of the pair, and the six delivery recipes it corrupted, is in
+[`agents/trending.md`](../agents/trending.md) under pass 282.
+
+### 🟢 Eight rows re-read at payload, every family matching the shelf
+
+`DeepTutor` **Apache-2.0** (11 407 B) · `OATutor` **MIT** · `Artemis` **MIT** · `Pyris` **MIT** ·
+`canvas-mcp` **MIT** · `moodle-mcp` **MIT** · `instructional_agents` **MIT**. 🔴 **No star figure was
+re-measured** — see the channel table above.
+
+
 ## 2026-10-18 (pass 281) — four of this shelf's repositories default to a branch that is neither `master` nor `main`, and two of them are the LATAM rows
 
 ⏱️ **Third pass of `2026-10-18`.** Append-only. Evidence:
@@ -18009,7 +18056,7 @@ Mojibake Inc. — a CKAN **MCP server**) and
 | `open source platform education ERP CRM MIT Apache student information system` | 🟡 **repeat pass** | **OpenEduCat** (Odoo-based, 300 modules / 65 languages, "3M+ users") and **.LRN** (MIT-originated LMS) — the same two names as pass 16. **No new platform.** |
 | `AI education industry trends 2026` | 🟢 pass (market only) | See the forecast conflict below — this query returned **two incompatible forecasts** for the same market this pass. |
 | `AI education North America 2026 adoption regulation players` | 🟢 pass | 134 bills in 31 states; NA = **36%** of the global market, **$3.68B in 2026**; 60% of US K-12 teachers used AI in 2024-25, 32% weekly. |
-| `AI education EMEA 2026 adoption regulation players` | 🟢 **pass, and it is this pass's regional headline** | EU AI Act high-risk duties for education **apply from August 2026 — i.e. already in force as this is written**. Europe **$2.64B (2026) → $8.0B (2030), 31.9% CAGR**. FI/EE/NL lead K-12 integration. Only **10%** of 450+ surveyed institutions have formal AI guidelines. |
+| `AI education EMEA 2026 adoption regulation players` | 🟢 **pass, and it is this pass's regional headline** | EU AI Act high-risk duties for education **apply from August 2026 — i.e. already in force as this is written**. Europe **$2.64B (2026) → $8.0B (2030), 31.9% CAGR**. FI/EE/NL lead K-12 integration. Only **10%** of 450+ surveyed institutions have formal AI guidelines.  🔴 **`p282` CORRECTION (in place; the leg's words are preserved above):** this is the **refuted** claim. Annex III point 3 (education) applies **`2027-12-02`** *(Regulation (EU) 2026/1744)*; **`2026-08-02` is Article 50 transparency**, not the high-risk tier. The row is kept because the append-only log records what the channel returned, not what is true. |
 | `AI education APAC 2026 adoption regulation players` | 🟢 pass | **Three binding AI statutes inside 12 months**: Vietnam (in force **2026-03-01**, education among six high-risk sectors, naming automated assessment and behavioural monitoring), South Korea AI Basic Act (**2026-01-22**), Taiwan (passed Dec 2025). |
 | `AI education LATAM 2026 adoption regulation players` | 🟢 pass | **92% of students and 79% of faculty** engaging with AI, but **88% of faculty "minimal to moderate"**; 72% of faculty positive vs **57% globally**; UNESCO warns institutional governance is missing. |
 

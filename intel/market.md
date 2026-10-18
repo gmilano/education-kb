@@ -1118,6 +1118,39 @@ training at all** — so the first deliverable is the policy and the training, n
 
 ### EMEA
 
+**Pass 282 — the Gulf, which is the half of EMEA this shelf has been declaring missing.** The
+region-wide leg returned an informative nil on education for the tenth time, and said so itself:
+*"the EMEA-specific picture, especially Middle East and Africa, is largely missing."* 🟢 **A
+gap-directed leg into exactly that space produced the first Gulf material this base holds**, and
+both items are **NEW** against `make claims`.
+
+| jurisdiction | the instrument | what it commits to | grade |
+|---|---|---|---|
+| 🟢 **Saudi Arabia** | national K-12 AI curriculum, built by the Ministry of Education with the **National Centre for Curriculum**, the Ministry of Communications and IT, and **SDAIA** | AI as a **required school subject**, reach reported at **~6 million pupils** | 🔴 **REPORTED, NOT CONFIRMED** |
+| 🟢 **UAE** | Cabinet approval reported **`2026-09-02`**, extending the AI curriculum to **all public *and private* schools**; Design, Innovation and Computer Science **merged into one subject, "Artificial Intelligence and Technology"**, aligned to the National AI Curriculum Framework | a **teacher-training programme of 22 000 educators** | 🔴 **REPORTED, NOT CONFIRMED** |
+
+🔴 **The sources conflict, and this base does not pick a winner.** Saudi coverage puts the launch in
+the **2025-26 academic year** and a vendor guide puts "Phase 1" at **August 2026**; UAE coverage
+carries both a **May 2025** Cabinet approval and the **`2026-09-02`** one. 🔵 Both conflicts are
+recorded rather than resolved, because the primary texts — the Saudi Press Agency release, SDAIA and
+the UAE Ministry of Education — are **unreachable from this session**: `T61`, reproduced for the
+nineteenth time on both clients (`WebFetch` → `getaddrinfo ENOTFOUND`; `curl` → *"CONNECT tunnel
+failed, response 403"*).
+
+🟢 **Why it is still worth shelving, graded.** A **mandatory** AI subject with a **named teacher-
+training number** is the strongest engagement signal in EMEA on this shelf: it means the buyer is a
+**ministry with a delivery deadline**, not a university with a pilot, and the deliverable is
+**curriculum-aligned teacher enablement** rather than a student-facing tutor. 🔴 It also lands
+against this base's standing constraint from `p281` — China, Brazil and Singapore all restrict
+open-ended generative tools for the youngest learners — so a Gulf K-12 engagement wants the same
+**teacher-mediated routing**, and that capability is still **not shipped by any agent on this
+shelf**.
+
+🔵 **Africa remains the declared half of the gap.** The same gap-directed leg returned **no**
+open-source education AI project aimed at Africa or the Middle East; the only African item was a
+closed study (Google DeepMind, Sierra Leone, May 2026) already carried. 🟢 The two African-context
+agents `p269` located remain this base's only rows there, and both still **serve no grant at all**.
+
 **Pass 280 — the region-wide leg is an INFORMATIVE NIL on education for the ninth time, and the
 jurisdiction leg reproduced this shelf's AI Act rows exactly.** The region query named **no
 education-sector player, no ministry and no education AI rule** — in its own words, *"the results

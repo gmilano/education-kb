@@ -4,6 +4,33 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 `T-p282` — a shelf's row count is not its repository count, and the gap is invisible to every gate that counts rows
+
+This base verifies **grants** first-hand and has done so for twenty passes. It had never verified
+**identity**: that two addresses on the same shelf are two *things*. `p282` found the build-on tier
+recommending `ls1intum/Iris` **and** `ls1intum/Pyris` — one repository, identical HEAD, identical
+203-file tree, identical 1 088-byte MIT payload — and **six delivery recipes wiring them together**.
+
+🔵 **Why no gate caught it, and the lesson that generalises.** Every instrument here was correct:
+the licence was read first-hand *(twice, from the same bytes)*, the row rendered as a row, the
+`recount` gate matched **27 rows** to the **27** the file claims. 🔴 **Each measured a property of
+the ROW; none measured a property of the REPOSITORY.** A per-row check cannot see a relation
+*between* rows, and duplication is a relation.
+
+🟢 **The cheap instrument for it already existed** — `git ls-remote`, one call per address, grouped
+by HEAD. Over all 27: **27 resolve, 26 distinct repositories, one alias pair.** 🔵 For a studio the
+consequence is concrete: *compose two components* and *compose one component with itself* are
+different engagements, and only one of them works.
+
+## 🟡 `T-p282b` — a discovery channel can shut without the shelf noticing
+
+`agents/top.md` promises star counts *"as served by the repository page or the GitHub topic
+listing."* 🔴 This pass **both of those return `403`**, along with `github.com/trending` and
+`api.github.com`, while `raw.githubusercontent.com` and `git` stay open. 🔵 **So the base's licence
+evidence is undisturbed and its popularity evidence is frozen**, and the two age at different rates
+from here. 🟢 A figure that cannot be re-measured should be dated at the point of use rather than
+restated; every star number on these shelves is carried from `2026-10-17`.
+
 ## 🔵 `T-p281` — on a mature shelf, the valuable instrument is the one that CONFIRMS cheaply
 
 🟢 **Observed `2026-10-18` (`p281`), and it is a trend about this base rather than about the market.**

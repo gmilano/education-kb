@@ -1,0 +1,12 @@
+# p282 — the rows this pass NAMES, re-verified first-hand. Existence via git ls-remote,
+# licence family read from the payload at raw.githubusercontent.com. No star counts:
+# the repository-page channel returned 403 this pass (see channel-reach tsv).
+slug	head_sha12	licence_path	http	bytes	family	matches_shelf
+HKUDS/DeepTutor	6cf793bd868b	main/LICENSE	200	11407	Apache-2.0	yes
+CAHLR/OATutor	a1df9d67bc7b	main/LICENSE	200	1104	MIT	yes
+ls1intum/Artemis	dc78a2bcba53	main/LICENSE	200	1090	MIT	yes
+ls1intum/Iris	d7b2c095204e	main/LICENSE	200	1088	MIT	ALIAS OF Pyris — see alias-identity tsv
+ls1intum/Pyris	d7b2c095204e	main/LICENSE	200	1088	MIT	yes
+vishalsachdev/canvas-mcp	1ffa789eb931	main/LICENSE	200	1070	MIT	yes
+MarcosNahuel/moodle-mcp	d5ca68e8cd1b	main/LICENSE	200	1064	MIT	yes
+DaRL-GenAI/instructional_agents	f835eb45f508	main/LICENSE	200	1066	MIT	yes

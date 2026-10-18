@@ -1,0 +1,14 @@
+# p282 — p268 published "neither repository serves a README". It serves one: README.MD.
+# The p268 ladder probed four spellings, none with an UPPERCASE EXTENSION.
+# This is p1057-licence-path-case's class, applied to READMEs instead of licences.
+slug	ref	path	http	probed_by_p268
+ls1intum/Iris	main	README.MD	200	NO
+ls1intum/Iris	main	README.md	404	yes
+ls1intum/Iris	main	readme.md	404	yes
+ls1intum/Iris	main	README.rst	404	yes
+ls1intum/Iris	main	README	404	yes
+ls1intum/Pyris	main	README.MD	200	NO
+ls1intum/Pyris	main	README.md	404	yes
+ls1intum/Pyris	main	readme.md	404	yes
+ls1intum/Pyris	main	README.rst	404	yes
+ls1intum/Pyris	main	README	404	yes

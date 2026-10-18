@@ -35,6 +35,26 @@ that **teach AI** (`generative-ai-for-beginners`, `nanochat`, `developer-roadmap
 where pass 273's finding landed**; it landed on the agent shelf and on licence method — see `T41` and
 [`repos/trending.md`](trending.md).
 
+## 🔴 Pass 282 — no new foundation, and the star column on this shelf is FROZEN
+
+🔴 The mandated vertical and trending legs returned **no foundational repository this base does not
+already hold**. Every candidate they named — `Apache OFBiz` (Apache-2.0, a general business suite,
+not education), `Huly` (Apache-2.0), `OpenEduCat` (**LGPL-3.0**, Odoo-based, 73+ modules),
+`frappe/lms`, `LearnHouse` — returned `CARRIED` under `make carried`. 🔵 The leg's own words:
+*"the search turned up few education-specific platforms under MIT or Apache."*
+
+🔴 **And the channel that serves star counts is shut this pass:** `github.com/<slug>`,
+`/topics/*`, `/trending` and `api.github.com` all answer **`403`**, while
+`raw.githubusercontent.com` and `git ls-remote` answer normally. 🟢 **So every licence on this shelf
+is still first-hand and current, and every star figure is carried from `2026-10-17` and was not
+re-measured.** Evidence:
+[`channel-reach.2026-10-18-p282.tsv`](../evidence/channel-reach.2026-10-18-p282.tsv).
+
+🟢 `ls1intum/Artemis` was re-read at payload this pass — **MIT, `main/LICENSE`, 1 090 B, HEAD
+`dc78a2bcba53`** — unchanged. 🔴 **Note for anyone composing from it:** `ls1intum/Iris` is **not** a
+second repository to pair with `Pyris`; it is an alias of `Pyris`. See
+[`agents/top.md`](../agents/top.md) pass 282.
+
 ## Permissive foundations (MIT / Apache-2.0 / BSD)
 
 > 🆕 **Pass 274 adds the first row to this table in nine passes, and it is a row this base REFUSED

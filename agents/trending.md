@@ -4,6 +4,174 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 282) — the shelf recommends TWO repositories that are ONE, and the gate that should have caught this pass's stale claim could not spell it
+
+⏱️ **Fourth pass of `2026-10-18`.** Append-only — everything below this section is prior history and
+is not rewritten. Evidence:
+[`alias-identity.2026-10-18-p282.tsv`](../evidence/alias-identity.2026-10-18-p282.tsv) ·
+[`tier-head-census.2026-10-18-p282.tsv`](../evidence/tier-head-census.2026-10-18-p282.tsv) *(all 27
+build-on addresses grouped by HEAD)* ·
+[`readme-path-case.2026-10-18-p282.tsv`](../evidence/readme-path-case.2026-10-18-p282.tsv) ·
+[`channel-reach.2026-10-18-p282.tsv`](../evidence/channel-reach.2026-10-18-p282.tsv) ·
+[`verified-repos.2026-10-18-p282.tsv`](../evidence/verified-repos.2026-10-18-p282.tsv) ·
+[`p282-inbound-raw.2026-10-18-p282.txt`](../evidence/p282-inbound-raw.2026-10-18-p282.txt).
+
+### 🔴 `ls1intum/Iris` and `ls1intum/Pyris` are the same repository, and six delivery recipes told a studio to wire them together
+
+Row 3 of [`agents/top.md`](top.md)'s build-on tier was `Iris`. Row 4 was `Pyris`. They are **one
+repository under two names**, and every instrument available this pass says so at once:
+
+| measurement | `ls1intum/Iris` | `ls1intum/Pyris` |
+|---|---|---|
+| `ls-remote` HEAD | `d7b2c095204e19026b48262b8078803ca785154e` | **the same SHA** |
+| ref count | 245 | **245** |
+| root tree | `4e2f096df767b0ec912a8d544ec85eb78915ee8f` | **the same tree** |
+| files in tree | 203 | **203** |
+| `LICENSE` payload | MIT, 1 088 B | **MIT, 1 088 B** |
+| what the root README says | `# Pyris V2` | `# Pyris V2` |
+
+🔵 **The project itself is unambiguous**, in its own bytes: *"Pyris is an intermediary system that
+connects the Artemis platform with various Large Language Models… Currently, **Pyris powers Iris**, a
+virtual AI tutor."* And the README's link for Iris points at **`artemis.cit.tum.de/about-iris`** — a
+**web page**. 🔴 **Iris is the user-facing NAME of the tutor; it was never a repository**, and
+`github.com/ls1intum/Iris` is a name alias that silently resolves to `Pyris`.
+
+🔴 **The cost is not cosmetic, and it landed on the shelf a delivery team actually opens.**
+[`compose/patterns.md`](../patterns.md) named *"`Iris` + `Pyris`"* as **two components to compose** in
+**six** places — a stack diagram, a region playbook, a jurisdiction playbook and three recipes. A
+studio following them clones the same 203 files twice and wires a microservice to itself. 🟢 **All
+six are corrected**, along with [`verticals/solutions.md`](../verticals/solutions.md)'s Sunbird stack
+and the `top.md` row, which is now **withdrawn as a row** rather than deleted, so the mistake stays
+legible.
+
+🟢 **And the question is CLOSED, not just this instance fixed.** Every one of the build-on tier's
+**27 addresses** was resolved by `ls-remote` and grouped by HEAD: **27 of 27 resolve, 26 distinct
+repositories, exactly one alias pair.** 🔵 The tier therefore publishes **27 rows against 26
+repositories** — the count the `recount` gate verifies is the row count, and it is correct as a row
+count; this is the first pass to measure the *repository* count beside it.
+
+### 🔴 `p268` recorded "neither repository serves a README". It serves one — at `README.MD`
+
+The same `p268` note that graded these two rows also published a defect: `README.md`, `readme.md`,
+`README.rst` and `README` all 404 across three branches. 🟢 **`README.MD` returns `200`** — on both
+names, at `main`. 🔴 **None of the four probed spellings carries an uppercase EXTENSION.**
+
+🔵 This base already owns the class: **`p1057-licence-path-case`**. It was built for **licence**
+paths, and the README ladder standing next to it never inherited it. 🟢 So the general lesson is
+`p275`'s, one layer out: *a path ladder cannot prove absence* — **and a ladder that is not
+case-closed cannot even prove a 404.**
+
+### 🔴 `ACTION SH` reported `0` hits on a file that contains the refuted claim — the gate was ONE INFLECTION wide
+
+`p281` closed with *"`ACTION SH` fired clean for the first time in six passes, and the reason is
+substantive."* 🔴 **This pass's mandated EMEA leg returned the claim again — the sixth arrival — and
+`make inbound-claims` reported `0`:**
+
+> One guide says requirements for high-risk AI systems **apply from** August 2026.
+
+🔴 The gate's onset vocabulary carried **`applies from`** and nothing else. The subject of this
+sentence in the wild is **plural** — *requirements* apply, *obligations* apply, *duties* apply — so
+**the spelling a source actually writes was the one spelling the table did not hold.** 🔵 Same class
+as the `August 2, 2026` miss `p279` fixed in the arm below it: the table knew **a spelling of the
+claim** rather than the claim.
+
+🟢 **Fixed and pinned.** The onset arm now covers `apply/applies/applied from|as of|in`, `in force
+from`, `come(s) into force/effect/application`, `take(s) effect`, `start(s)/begin(s) from|in|on`,
+`kick(s) in` and `entra(n) en vigor`, the day-number spelling moves to **every** arm rather than one,
+and **`2026-08-02` really being Article 50's date** is protected by an explicit exemption: a sentence
+about transparency or marking that says nothing about the high-risk tier is **true** and is not
+flagged. **31 controls, up from 15**, in both directions.
+
+### 🔴 And the widened gate immediately found THREE live cells on this base's own shelves
+
+The claim was not only inbound. Re-scanned, the corpus returned **three** cells the narrow gate had
+never been able to see — in a base that has run this gate as a standing check since `p279`:
+
+| cell | what it is | disposition |
+|---|---|---|
+| [`agents/trending.md`](trending.md)`:19652` | a **forensic quotation** of `trends.md` trend 39, refuted in the next sentence | 🟢 `CORRECTED` — correct as written |
+| `compose/code/p226-inbound-gate/README.md:65` | the refuted claim **named as the example** the gate exists for | 🟢 `CORRECTED` — correct as written |
+| 🔴 [`repos/trending.md`](../repos/trending.md)`:18012` | *"EU AI Act high-risk duties for education **apply from August 2026 — i.e. already in force as this is written**"* | 🔴 **a real stale assertion on a live shelf** |
+
+🔴 **The first two read as assertions only because the classifier worked LINE BY LINE**, and this
+base's write-ups hard-wrap. 🔵 **That is the exact defect `p279` repaired in the sibling instrument
+`p279-absence-claims`** — *"a line-local predicate over a hard-wrapped corpus is the same defect one
+layer out"* — **live, unexamined, in the gate standing next to it.** A class fixed in one instrument
+is not fixed in the base.
+
+🟢 The verdict is now computed at **paragraph** scope, as `p279` established — **with one refinement
+this corpus forced.** A markdown **table row is its own unit**: a table is one block of text and many
+independent claims, and at block scope the correction vocabulary in one row **launders the stale
+assertion in the row beside it**. 🔴 Measured, not reasoned about — the one genuinely stale cell sits
+in exactly such a table. 🟢 Pinned by five unit controls, including that laundering shape.
+
+🟢 **The stale cell is corrected in place rather than rewritten**, because `repos/trending.md` is
+append-only and the log's job is to record *what the channel returned*, not what is true. The row now
+carries its own refutation: **Annex III point 3 (education) applies `2027-12-02`** *(Regulation (EU)
+2026/1744)*; **`2026-08-02` is Article 50 transparency.** `make hooks` is green again — it had been
+**failing**, invisibly, for as long as the gate has been standing.
+
+### 🟡 Eighth consecutive pass with no new agent, and every candidate was supply-tested
+
+🔴 The four mandated global legs returned **no education-specific agent repository** this base does
+not already hold. One leg said so in its own words: *"no source ranked open-source AI agents
+specifically for education under MIT."* Every candidate went through `make carried` **before**
+write-up:
+
+| candidate | what it is | `make carried` |
+|---|---|---|
+| `opencode`, `OpenHands`, `MetaGPT`, `CrewAI`, `LangGraph`, `Hermes Agent` | general coding / orchestration agents | 🔴 `CARRIED` — not education |
+| `LearnHouse/learnhouse` | AI-tagged open LMS | 🔴 `CARRIED` |
+| `frappe/lms` | open LMS, no AI layer | 🔴 `CARRIED` |
+| `Open-TutorAi/open-tutor-ai-CE` | tutoring platform, **CC BY-NC-SA 4.0 — non-commercial** | 🔴 `CARRIED`, and already shelved with that grade |
+| `Apache OFBiz`, `Huly`, `OpenEduCat` *(LGPL-3.0)* | ERP/CRM, not education agents | 🔴 `CARRIED` |
+| `microsoft/ai-agents-for-beginners`, `agent-skills`, Karpathy's guidelines repo | courses and curated lists | 🔴 `CARRIED`, **and not agents** |
+
+🔵 **Eight passes. The channel diagnosis holds unchanged:** education-shaped queries into the
+agent-discovery channel return **general AI material**. 🟢 The platform, jurisdiction and — this pass
+— **instrument** legs remain where this base's new material comes from.
+
+### 🔴 The star-count channel is SHUT this pass, and no figure on these shelves was refreshed
+
+Measured rather than assumed, because `agents/top.md`'s header promises star counts *"as served by
+the repository page or the GitHub topic listing"*:
+
+| channel | result | consequence |
+|---|---|---|
+| 🔴 `github.com/<slug>`, `/topics/*`, `/trending` | **403** | **no star count is refreshable this pass** |
+| 🔴 `api.github.com` | **403** | carried from `p281` |
+| 🟢 `raw.githubusercontent.com` | **200** | licence payloads still first-hand |
+| 🟢 `git ls-remote` / blobless clone | **OK** | existence, default branch, HEAD and **tree enumeration** all open |
+
+🟢 **So this pass verified what the open channels can verify and said nothing about the rest.** Eight
+named rows were re-read at payload — `DeepTutor` (Apache-2.0, 11 407 B), `OATutor`, `Artemis`,
+`Pyris`, `canvas-mcp`, `moodle-mcp`, `instructional_agents` (all MIT) — **every family matches the
+shelf**. 🔴 **Every star figure in this file is carried from `2026-10-17` and was NOT re-measured
+today.**
+
+### 🔵 The regional battery: four legs ran, one region produced genuinely new material
+
+| region | what the leg returned | status |
+|---|---|---|
+| 🟢 **North America** | 134 bills / 31 states; `H.R. 8747` advanced `2026-07-21`; CA `AB 1159`; ID `SB 1227`; Maryland's 24 districts by fall 2026; NYC K-8 moratorium; NA **36%** of market; Canada's *AI for All* `2026-06-04`; AASA student framework `2026-08-03` | 🔴 all `CARRIED` — `make claims` returned `ALREADY CLAIMED` on every token |
+| 🟡 **EMEA** | AI Act high-risk for admissions screening; Europe **$2.64 B (2026)**; FI/EE/NL lead K-12; only **10%** of 450+ institutions hold formal guidelines; OECD *Digital Education Outlook 2026* | 🔴 `CARRIED` — **and the leg also re-delivered the refuted August-2026 claim**, above |
+| 🟢 **EMEA → the Gulf, against the leg's OWN declared gap** | Saudi Arabia's national K-12 AI curriculum *(MoE + **National Centre for Curriculum** + MCIT + **SDAIA**, ~6 M pupils)*; UAE Cabinet approval **`2026-09-02`** extending AI to all public **and private** schools, **22 000 teachers** trained, subject merged as *"Artificial Intelligence and Technology"* | 🟢 **two NEW tokens** — `National Centre for Curriculum` and the `22,000 teachers` programme. 🔴 **REPORTED, NOT CONFIRMED** *(see below)* |
+| 🟡 **APAC** | Korea `2026-01-22`; Taiwan Dec 2025; Vietnam education high-risk, `2027-03-01`, **+6 months** if live before `2026-08-15`; China's lifecycle framework | 🔴 all `CARRIED`; the Vietnam structure is now **four-sourced** |
+| 🟢 **LATAM** | UNESCO IESALC **87% / 26%** over 200 HEIs in 19 countries; TALIS BR/CL/CO/CR above the OECD **36%**; **Ceibal 2026: 75% of Uruguayan public-school teachers**; Digital Education Council LATAM survey | 🔴 all `CARRIED` |
+
+🔴 **`T61` reproduced for the nineteenth time, on both clients.** The Gulf facts come from a
+government press release — `spa.gov.sa` — and it is unreachable: `WebFetch` → `getaddrinfo
+ENOTFOUND`, `curl` → *"CONNECT tunnel failed, response 403"*. 🔵 **The Saudi and UAE dates conflict
+across the secondary sources that carry them** (a 2025-26 launch against an "August 2026 Phase 1"; a
+May 2025 Cabinet approval against `2026-09-02`), and with no primary text reachable **this base does
+not pick a winner** — both are shelved as `REPORTED, NOT CONFIRMED`, with the conflict named.
+
+🔵 **An informed nil, stated plainly:** North America, APAC and LATAM produced **no new regional
+fact** this pass. 🟢 The Gulf is the one place the battery extended rather than corroborated — and it
+extended into the gap the EMEA leg itself declared: *"the EMEA-specific picture, especially Middle
+East and Africa, is largely missing."*
+
+
 ## 2026-10-18 (pass 281) — the copyleft blind spot `p280` ranked second is MEASURED, and it is almost empty: 30 of 35 readable grants are UNFILLED
 
 ⏱️ **Third pass of `2026-10-18`.** Append-only — everything below this section is prior history and

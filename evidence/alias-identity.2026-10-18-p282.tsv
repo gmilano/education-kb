@@ -1,0 +1,19 @@
+# p282 — are ls1intum/Iris and ls1intum/Pyris two repositories or one?
+# instrument: git ls-remote (full SHA + ref count) + blobless bare clone + tree-hash compare
+# channel: github.com HTML 403 this pass, so no repository page was read; git and raw only.
+measurement	ls1intum/Iris	ls1intum/Pyris	verdict
+ls_remote_HEAD_full	d7b2c095204e19026b48262b8078803ca785154e	d7b2c095204e19026b48262b8078803ca785154e	IDENTICAL
+ls_remote_ref_count	245	245	IDENTICAL
+symref_default_branch	refs/heads/main	refs/heads/main	IDENTICAL
+root_tree_sha	4e2f096df767b0ec912a8d544ec85eb78915ee8f	4e2f096df767b0ec912a8d544ec85eb78915ee8f	IDENTICAL
+files_in_tree	203	203	IDENTICAL
+LICENSE_bytes	1088	1088	IDENTICAL
+LICENSE_family	MIT	MIT	IDENTICAL
+root_README_path	README.MD	README.MD	IDENTICAL
+README_self_title	# Pyris V2	# Pyris V2	the repository calls itself PYRIS under BOTH names
+# CONCLUSION: ONE repository. `ls1intum/Iris` is a GitHub name alias that resolves to
+# `ls1intum/Pyris`; it is not a separately buildable component. Iris is the USER-FACING
+# name of the tutor Pyris powers inside Artemis, documented at a web page
+# (artemis.cit.tum.de/about-iris), not a repository.
+# README verbatim: "Pyris is an intermediary system that connects the Artemis platform with
+# various Large Language Models (LLMs)... Currently, Pyris powers Iris, a virtual AI tutor".

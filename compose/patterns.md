@@ -329,7 +329,8 @@ project-sunbird/knowledge-platform MIT    content/knowledge backend  <-- integra
 Sunbird-Ed/SunbirdEd-mobile-app    MIT    mobile client
   |
   +-- ls1intum/Pyris               MIT    LLM microservice (REST, swappable pipelines)
-  |     +-- ls1intum/Iris          MIT    tutor: hints and leading questions, not answers
+  |     +-- ls1intum/Pyris         MIT    tutor: hints and leading questions, not answers
+  |              ("Iris" is the tutor's USER-FACING name; the repo is Pyris — p282)
   +-- numbas/Numbas                Apache-2.0  assessment, executes in-browser
   +-- pykt-team/pykt-toolkit       MIT    learner model over Sunbird telemetry
   +-- yetanalytics/lrsql           Apache-2.0  xAPI Learning Record Store
@@ -380,7 +381,7 @@ high-risk class.**
 ```
 ls1intum/Artemis            MIT   assessment platform, human-in-the-loop by construction
   +-- ls1intum/Athena       (!!)  feedback SUGGESTED to instructor, never applied to student
-  +-- ls1intum/Iris         MIT   tutor: hints only, no grading authority
+  +-- ls1intum/Pyris        MIT   tutor ("Iris") : hints only, no grading authority
   +-- ls1intum/Pyris        MIT   LLM microservice; swap to a local model for data residency
   +-- config gate           ----  every AI subsystem independently switchable OFF
   |
@@ -427,7 +428,7 @@ Phase 3  Instrumentation  make the policy observable instead of aspirational
          +-- adlnet/xAPI-Spec       Apache-2.0  the vocabulary
 Phase 4  Controlled pilot one faculty, one use case, measured
          +-- ls1intum/Artemis       MIT   if assessment; config-gated AI
-         +-- ls1intum/Iris + Pyris  MIT   if tutoring; local model where data cannot leave
+         +-- ls1intum/Pyris         MIT   if tutoring; local model where data cannot leave
 Phase 5  Learner model    only once phases 1-4 produce trustworthy data
          +-- pykt-team/pykt-toolkit MIT
 ```
@@ -469,7 +470,7 @@ Doorway   vishalsachdev/canvas-mcp      MIT   295*, 1,026 commits, v1.14.0 (Oct 
 Pedagogy  ls1intum/Pyris                MIT   LLM microservice: exercise feedback, RAG over
           |                                   instructor-supplied course material
           +-- ArnaudGuiovanna/tutor-mcp  MIT   when a constrained tutoring loop is enough
-          +-- ls1intum/Iris              MIT   hints and leading questions, not answers
+          +-- ls1intum/Pyris             MIT   hints and leading questions, not answers
          |
          v
 Grading   Submitty/Submitty             BSD-3  submission + autograde + TA workflow
@@ -571,7 +572,7 @@ Curriculum DaRL-GenAI/instructional_agents        MIT   488*, EACL'26: ADDIE pip
            |                                              that stay TIED TO THEIR SOURCES
            v
 Teacher    SirhanMacx/Claw-ED                     MIT   local-first, teacher-reviewed lesson drafts
-enablement ls1intum/Iris + Pyris                  MIT   tutor + LLM microservice, RAG over the
+enablement ls1intum/Pyris                         MIT   tutor microservice, RAG over the
            |                                            ministry's own curriculum documents
            v
 Offline    learningequality/kolibri                MIT  offline delivery where bandwidth fails
@@ -620,7 +621,7 @@ proposal rather than delaying it.
 | Content authoring + national-curriculum remix | [`learningequality/studio`](https://github.com/learningequality/studio) | **MIT** | The pipeline that organises originated lessons into channels and aligns them to the national curriculum |
 | Teacher-facing generation, human-in-the-loop | [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | **MIT** (EACL'26) | ADDIE multi-agent: syllabus → slides → assessments, for *teacher review* |
 | Local-first lesson drafting | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | **MIT** | Draft editable lessons where pupil data cannot leave the building |
-| Pupil-facing tutoring, if in scope at all | [`ls1intum/Iris`](https://github.com/ls1intum/Iris) + [`Pyris`](https://github.com/ls1intum/Pyris) | **MIT** | Pedagogically constrained by design (hints, not answers) — the posture a high-risk classification wants |
+| Pupil-facing tutoring, if in scope at all | [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) *(the tutor is called **Iris**; `ls1intum/Iris` is an alias of this same repo — `p282`)* | **MIT** | Pedagogically constrained by design (hints, not answers) — the posture a high-risk classification wants |
 
 **Wiring.**
 1. **Fork the Code.org platform, strip the content.** Deploy the Apache-2.0 engine. Delete, do not
@@ -1280,8 +1281,8 @@ manifests**, and the reusable modules are precisely the ones that declare it.
 | role | repo | grant | grade |
 |---|---|---|---|
 | Platform, exercises, CI runner | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | **MIT** | payload (root `LICENSE`) |
-| Tutor — hints, leading questions | [`ls1intum/Iris`](https://github.com/ls1intum/Iris) | **MIT** | payload |
-| LLM microservice behind Iris (REST, swappable pipelines, RAG) | [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | **MIT** | payload |
+| Tutor (**Iris**) *and* the LLM microservice behind it — REST, swappable pipelines, RAG | [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | **MIT** | payload |
+| 🔴 ~~`ls1intum/Iris` as a second component~~ | **withdrawn by `p282`** — a name alias of `ls1intum/Pyris`, identical tree `4e2f096df767` | — | [`alias-identity`](../evidence/alias-identity.2026-10-18-p282.tsv) |
 | 🟢 **Feedback / grading suggestions — NEW to this pattern** | [`ls1intum/Athena`](https://github.com/ls1intum/Athena) | **MIT** | ⚠️ **metadata** — 12 of 14 manifests; **no licence FILE** (tree enumerated, 691 paths) |
 
 🔵 **Why TU Munich specifically:** this is one institution's stack, so the four pieces are *designed* to
@@ -1508,7 +1509,7 @@ first-hand-by-query; see [`intel/market.md`](../intel/market.md#apac).
    needs a GPL-3.0 companion plugin — see `P23`) — and keep **every** write behind an explicit teacher
    confirmation. **That confirmation is not UX polish in Japan; it is the policy.**
 4. **Where tutoring is in scope, use a pedagogically-constrained tutor, not a general assistant:**
-   [`ls1intum/Iris`](https://github.com/ls1intum/Iris) + [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris)
+   [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) *(one repository — `Iris` is its tutor's name, not a second clone)*
    (**MIT**) give hints and leading questions rather than answers, and `Pyris` is the reusable half —
    a REST API over swappable pipelines that will serve a stack that is not Artemis.
 5. **If procurement excludes copyleft**, the platform is
@@ -1621,7 +1622,7 @@ core — ⚠️ **26 of 38 modules free, 12 sold separately: scope the modules i
 administrative rather than instructional; [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (**MIT**)
 as the reference ITS; [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents)
 (**MIT**) for the syllabus → slides → assessment pipeline a curriculum mandate actually asks for; and
-[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) + [`ls1intum/Iris`](https://github.com/ls1intum/Iris)
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) + [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris)
 (**MIT**) where automated feedback is in scope.
 
 🔵 **Two framings that travel across all three shapes.** **(1)** Teach *about* AI before teaching

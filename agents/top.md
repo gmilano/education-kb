@@ -36,7 +36,7 @@ non-commercial friction.
 |-------|------|---------|-------|--------------|
 | DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 41.5k | Lifelong personalized tutoring: a persistent student model that survives between sessions, multi-agent orchestration, citation-grounded feedback. Release v1.6.14 dated 2026.10.8. The single most adopted education agent on GitHub. |
 | Artemis | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | Platform for interactive learning with individual feedback, from the Applied Education Technologies group at **TU Munich**; 12,437 commits, self-hosted by universities in several countries. Ships three config-gated AI subsystems: **Iris** (LLM tutor), **Athena** (feedback suggestion for text/modelling/programming) and **Hyperion** (AI exercise authoring on Spring AI). Programming submissions are built, tested and analysed automatically. The answer to "where is the open grading agent" — it is inside a platform. |
-| Iris | [ls1intum/Iris](https://github.com/ls1intum/Iris) | MIT | — | Artemis's virtual AI tutor: hints and leading questions rather than answers. Deployable with Artemis, and the cleanest MIT reference for a tutor that is pedagogically constrained by design. |
+| ~~Iris~~ → **not a separate repository** | [ls1intum/Iris](https://github.com/ls1intum/Iris) **= [ls1intum/Pyris](https://github.com/ls1intum/Pyris)** | MIT *(the same payload as Pyris, counted twice until now)* | — | 🔴 **`p282`: WITHDRAWN AS A ROW — this address is a GitHub name alias that resolves to `ls1intum/Pyris`.** Identical HEAD (`d7b2c095204e`), identical ref count (245), identical root tree (`4e2f096df767`), 203 files, identical 1 088-byte MIT payload; under **both** names the root `README.MD` opens `# Pyris V2`. **Iris is the user-facing name of the tutor Pyris powers inside Artemis** — the project's own README points at a web page (`artemis.cit.tum.de/about-iris`), not at a repository. The capability is real; the **second address is not**. Build on **Pyris**. Evidence: [`alias-identity.2026-10-18-p282.tsv`](../evidence/alias-identity.2026-10-18-p282.tsv). |
 | Pyris | [ls1intum/Pyris](https://github.com/ls1intum/Pyris) | MIT | 12 | The LLM microservice behind Iris: a REST API fronting swappable LLM pipelines, with exercise feedback, RAG over instructor-supplied course material, and automated competency generation. The reusable piece — it will serve a stack that is not Artemis. |
 | Instructional Agents | [DaRL-GenAI/instructional_agents](https://github.com/DaRL-GenAI/instructional_agents) | MIT | 488 | EACL'26 Main paper. Multi-agent ADDIE pipeline: syllabus → LaTeX slides → assessments, with Teaching Faculty / Instructional Designer / TA / Coordinator roles. Also ships as a Claude Code Skills release (2026.4.15). |
 | Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT | 1.0k | AI study partner that plans learning paths, explains concepts and guides projects end to end. |
@@ -110,6 +110,28 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | [OpenEMIS/OpenEMIS-Core](https://github.com/OpenEMIS/OpenEMIS-Core) | LIVE, **no licence payload**, none in the page sidebar | *"Manage students and staff information at school, district, and national level."* OpenEMIS is the education-management system most associated with **ministry-level** deployment, which is why pass 267 probed it by hand. What this KB can actually reach is a **32-commit Docker packaging repo (7★) with no licence and no ministry or country named in it.** The application source was not located this pass. **Ministry provenance is not established — do not brief it as a public-sector reference.** |
 | [muskvdc/EduTwin-Africa](https://github.com/muskvdc/EduTwin-Africa) | LIVE, **PRE-LICENCE — the placeholder is still in the README** *(new in pass 269)* | Curriculum-aware tutor over **South African** curriculum knowledge, **Grades 8–12**: RAG, adaptive learning, bounded multi-agent collaboration, ReAct tools, guardrails. 0★ / 0 forks / 7 commits, default ref `main`. **No payload on 19 of 19 paths, no `license` field in `pyproject.toml`**, and the README says, in the author's own words: *"Add the project's chosen license here before publishing if a specific open-source license is required."* 🔵 **This is a state this shelf has not carried before.** `Athena` and `autoGrader-frontend` are *silent*; this one is **explicitly not yet licensed**. The practical difference is that it is the one row here where asking costs nothing and might work — the author has written down that they know it is missing. Until then: all rights reserved. |
 | [Valexxy/edunaija-os](https://github.com/Valexxy/edunaija-os) | LIVE, **no grant on any channel** *(new in pass 269)* | *"A security-conscious starter codebase for a Nigerian-first learning platform"*; `package.json` name is `nigeria-learning-platform`. 0★ / 0 forks / 6 commits. No payload on 19 of 19 paths and **no `license` field in `package.json`** — the two channels that could have carried a grant both empty. Names **no exam board and no institution**. 🔴 **Cite it carefully: it is NOT the EduNaija AI Tutor of the AfricaNLP 2026 paper** (that system is a five-agent LangChain + FAISS RAG tutor with English/Yoruba/Hausa/Igbo support; this is a starter codebase with a similar name). **Two different artefacts, one name** — see the trends file. |
+
+## 🔴 Pass 282 correction to the pass-268 note below — "Iris and Pyris" are ONE repository, and it DOES serve a README
+
+`p268` probed these as two rows and recorded a defect: *"neither repository serves a README"*.
+Both halves of that sentence are wrong, and the same instrument produced both errors.
+
+1. 🔴 **They are not two repositories.** `ls1intum/Iris` is a **name alias** that resolves to
+   `ls1intum/Pyris`: identical HEAD `d7b2c095204e`, identical **245** refs, identical root tree
+   `4e2f096df767`, **203** files, identical **1 088**-byte MIT payload. The grant `p268` graded
+   "for both rows" is **one grant, read twice**.
+2. 🔴 **It does serve a README — at `README.MD`.** `p268`'s ladder probed `README.md`, `readme.md`,
+   `README.rst` and `README`; **none of its four spellings carries an uppercase EXTENSION**, and
+   that is the only spelling the repository uses. 🔵 This base already owns the class —
+   `p1057-licence-path-case` — and it was built for **licence** paths only, so the README ladder
+   beside it never inherited it. A path ladder cannot prove absence (`p275`), and a path ladder
+   that is not case-closed cannot even prove a 404.
+
+🟢 What survives `p268` intact: the grant is **MIT at payload grade**, and the copyright line
+**"Copyright (c) 2023 TUM Applied Software Engineering"** is payload-quoted TU Munich provenance.
+That was right, and it is a property of **one** repository.
+Evidence: [`alias-identity.2026-10-18-p282.tsv`](../evidence/alias-identity.2026-10-18-p282.tsv) ·
+[`readme-path-case.2026-10-18-p282.tsv`](../evidence/readme-path-case.2026-10-18-p282.tsv).
 
 ## Pass 280 — the licence under row 1 is held by a UNIVERSITY, and this shelf reported it as unanswerable
 

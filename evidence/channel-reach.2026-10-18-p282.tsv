@@ -1,0 +1,12 @@
+# p282 — channel state, measured this pass. The star-count channel is SHUT.
+target	transport	result	consequence
+https://github.com/HKUDS/DeepTutor	curl	403	repository pages unreadable — NO star count can be refreshed this pass
+https://github.com/ls1intum/Artemis	curl	403	same
+https://github.com/topics/ai-tutor	curl	403	the TOPIC listing channel, which p264-p269 used, is shut
+https://github.com/trending	curl	403	GitHub Trending unreadable
+https://api.github.com/repos/HKUDS/DeepTutor	curl	403	API blocked (carried from p281)
+https://raw.githubusercontent.com/...	curl	200	LICENCE PAYLOAD channel OPEN — grants still first-hand
+git ls-remote https://github.com/<slug>	git	OK	EXISTENCE + default branch + HEAD channel OPEN
+git clone --filter=blob:none --bare	git	OK	TREE ENUMERATION channel OPEN
+https://www.spa.gov.sa/en/N2384135	WebFetch	getaddrinfo ENOTFOUND	T61 reproduced, 19th probe
+https://www.spa.gov.sa/en/N2384135	curl	CONNECT tunnel failed, 403	T61 reproduced on the second client

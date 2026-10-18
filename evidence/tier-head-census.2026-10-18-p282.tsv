@@ -1,0 +1,32 @@
+# p282 — the build-on tier's 27 addresses, grouped by HEAD SHA.
+# Question: is ls1intum/Iris == ls1intum/Pyris the only pair of rows that are ONE repository?
+# Answer: YES. 27 addresses, 27 resolve, 26 distinct repositories, exactly one alias pair.
+# Channel: git ls-remote (github.com HTML was 403 all pass).
+slug	head_sha	refs
+ArnaudGuiovanna/tutor-mcp	05c56616ee24f55d9712f34105262383acb328d8
+CAHLR/OATutor	a1df9d67bc7b90157bcbbaf38ac3f04b42e139f0
+DMontgomery40/mcp-canvas-lms	c0646ba10ac207d45cc2122d80b3b98e12b497d0
+DaRL-GenAI/instructional_agents	f835eb45f508889cc9f3e6bb5af03f4f3590f678
+ECNU-ICALK/EduChat	fa30b6d5632c9364c67ba3ed726acfecc3f62eb7
+HKUDS/DeepTutor	6cf793bd868ba5ecbe64722936d4be8fab5a01df
+Jawadh-Salih/moodle-mcp-server	a65aefa6d26eb37ec7bd891882c12ea551b47507
+JuneYaooo/lineage-skill	7e2cbc5dc317139f39c86f47c60aba4e34ac7838
+Kimmahone/edu-workspace-mcp	cc5420018192413a6d015ae3dd67b468f6213410
+Li-Evan/Bloom	b3918981bb34ef5d3090dc81cc5b184555ae3bd6
+MarcosNahuel/moodle-mcp	d5ca68e8cd1b0ebc861a3f35916cfe9fb5ff7fdd
+Miaotofu01/Study-Mate	e0f0eb30e282cf2c907e41522efbe7dca993fd58
+OmarNiazi/classroom-mcp	ff4a2406608f2507db8b3c2a04b11c3639c6db79
+SenmuuuuW/universal-diagnostic-tutor-skill	075c1895d2559aaa5554e3aab00fd9f83c90fbac
+SirhanMacx/Claw-ED	18f2e223cdd166e9d19fb20d588433fc7883b09f
+ZeKaiNie/universal-examprep-skill	b9e84f5fef3accb8eddcbe76c89b50748264c610
+Zenglian990/AI_Tutor_Release	60f336c499074e25ab9823631bf983f3c8b26fbf
+adriasantacreu/google-classroom-mcp	29c2c2a07670692da28d3fdcee38cb7a54c8f18a
+ankimcp/anki-mcp-server	e0e347f7f39960422ee5ccb973db3d403af64cd0
+flysheep-ai/education-skills	b4c935210206d38cc4990cfe7dc02ba2f946c29f
+ls1intum/Artemis	dc78a2bcba539ffc24325c500d273277bff5e54d
+ls1intum/Athena	6316d302c92967d26d85ea62ce66cb7170b994ba
+ls1intum/Iris	d7b2c095204e19026b48262b8078803ca785154e
+ls1intum/Pyris	d7b2c095204e19026b48262b8078803ca785154e
+open-spaced-repetition/fsrs4anki-helper	29208f220f21ff994c199712a6aaac47636773bf
+vishalsachdev/canvas-mcp	1ffa789eb931138aa2744cafee02b099c1304b30
+zijinz456/OpenTutor	a890519f3632efa14cf24449b366b3b9d901eecf

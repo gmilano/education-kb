@@ -1,0 +1,88 @@
+# p282 inbound research — raw leg text, graded by `make inbound-claims` BEFORE write-up (ACTION SH)
+# date: 2026-10-18 (fourth pass of the day)
+
+## LEG 1 (global, agents): "top open source AI agents education 2026 github MIT"
+No source ranked open-source AI agents specifically for education under MIT; treat as a general shortlist.
+OpenHands MIT ~83,335 / 86.9k stars (sources disagree). MetaGPT MIT ~69.9k. CrewAI MIT 56,723.
+LangGraph MIT 39,083. Hermes Agent (Nous Research) MIT, self-hosted. opencode MIT ~194,461.
+LLMs-from-scratch and Microsoft ai-agents-for-beginners are educational, licences not stated by source.
+AgentGPT reported archived 2026-01-28, repository read-only.
+
+## LEG 2 (global, trending): "github trending education AI 2026"
+No dedicated trending-education-AI list for 2026. Addy Osmani agent-skills 102,488 stars.
+Karpathy CLAUDE.md guidelines repo 218,545 stars. Karpathy nanochat. developer-roadmap.
+Microsoft GenAI for Beginners 21-lesson course. Central European University + GitHub collaboration 2026-04.
+Star counts from third-party blogs, possibly stale.
+
+## LEG 3 (global, verticals): "open source platform education ERP CRM MIT Apache"
+Few education-specific platforms under MIT or Apache. Apache OFBiz (Apache-2.0, Java, general business
+suite with CRM, not education). Huly Apache-2.0. Grocy MIT (not education). OpenEduCat LGPL-3.0,
+73+ modules, SIS/LMS/finance/HR. ERPNext education module; licence not stated by source.
+
+## LEG 4 (global, trends): "AI education industry trends 2026"
+Shift from experimentation to governed, workflow-focused adoption. 1EdTech expects institutions to build
+AI strategies covering governance, compliance, evaluation. HolonIQ: ethics, transparency, proven
+instructional benefit over personalization claims. Teachbetter: market moving from generic chatbots to
+tools built around learning objectives and curriculum. Educativa: agents that plan and draft teaching
+materials for teacher review; generative AI built into the LMS. Digital credentials as workforce currency.
+CAVEAT from the leg itself: "$12.3B market", "83% of institutions plan AI teaching assistants",
+"62% test score increase", "86% of students using AI" are vendor-blog figures with weak sourcing.
+
+## LEG 5 (North America): "AI education North America 2026 adoption regulation players"
+134 bills related to AI in education across 31 states (tracker, March 2026).
+California AB 1159 bars using student data to train AI models. Idaho SB 1227 requires privacy
+protections for school AI tools. Oklahoma and Maryland require human oversight, bar AI from high-stakes
+student decisions. Maryland's 24 school districts must adopt AI policies by fall 2026.
+H.R. 8747 K-12 AI Literacy and Readiness Act of 2026 advanced in committee 2026-07-21, largely party-line.
+Nebraska column urges districts to model New York City's one-year moratorium on student-facing AI
+through eighth grade. Canada launched national "AI for All" strategy 2026-06-04 — direction, not law;
+no date for legislation confirmed. Mexico: no comprehensive AI education law.
+60% of U.S. K-12 teachers used AI tools during the 2024-2025 school year, 32% at least weekly.
+North America holds 36% of the global AI in education market (market-research aggregator).
+White House executive order on AI literacy in education; pledge to America's Youth now includes
+commitments from over 200 tech companies including Google, OpenAI, Microsoft, NVIDIA, Salesforce.
+Student-drafted "STUDENTS FIRST Act of 2026" (AASA, 2026-08-03) rejects both an outright ban and
+unrestricted adoption. UChicago Law to pilot banning electronic devices from core 1L classes fall 2026.
+
+## LEG 6 (EMEA): "AI education EMEA 2026 adoption regulation players"
+EU AI Act is the binding framework; an AI admissions screening tool counts as high-risk because its
+output directly affects access to education.
+One guide says requirements for high-risk AI systems apply from August 2026.
+European Commission page lists 31 July 2026 as the entry into force of the AI Act, and 27 July 2026
+for the AI Omnibus. Leg itself says: check the official text before relying on either date.
+European AI in education market $2.64 billion in 2026; Finland, Estonia and the Netherlands leading
+in K-12 AI integration (vendor-style estimate).
+UK: principles-based regime, sector regulators applying existing rules.
+South Korea reportedly invested approximately $740 million (2024-2026) to train teachers on AI tools.
+OECD 2026 Digital Education Outlook recommends moving beyond general-purpose AI tools toward
+purpose-built educational AI designed to produce durable learning gains.
+UNESCO generative AI guidance for education cited as an international reference point.
+Only 10% of schools and universities across 450+ institutions have established formal guidelines.
+60% of educators say their districts have not made AI policies clear.
+Leg's own gap statement: the EMEA-specific picture, especially Middle East and Africa, is largely missing.
+
+## LEG 7 (APAC): "AI education APAC 2026 adoption regulation players"
+South Korea AI Basic Act entered into force 22 January 2026.
+Vietnam: high-risk list covers education (automated assessment, behavioural monitoring); obligations
+from 1 March 2027, with a six-month grace period for education systems already operating before
+15 August 2026.
+Taiwan passed an AI Basic Act in December 2025.
+China has the densest framework, binding requirements across the full AI system lifecycle.
+Singapore and Japan rely on voluntary guidelines backed by existing law. Australia, India and ASEAN
+updating frameworks.
+Market report names Google, Microsoft, IBM, Pearson, Byjus as key players; China, India and Japan
+dominate the APAC AI in education market.
+Leg's own caveat: sources disagree on dates; no solid APAC-wide education adoption statistics found.
+
+## LEG 8 (LATAM): "AI education LATAM 2026 adoption regulation players"
+UNESCO IESALC report launched during Digital Learning Week 2026: 200 institutions in 19 countries,
+87% use AI in at least one area, 74% in teaching and learning, 57% for research including data analysis.
+Only 26% had a formal AI strategy.
+2024 TALIS: teacher AI use in Brazil, Chile, Colombia and Costa Rica above the OECD average of 36%.
+2026 Ceibal study: 75% of public-school teachers in Uruguay use these tools.
+Digital Education Council LATAM higher-ed AI survey: 29 institutions, over 30,000 responses.
+ILIA / Latin American AI Index (third edition, 2025): school-level AI education growing but still limited.
+CENIA and ECLAC flag low public AI investment in the region.
+UNESCO capacity work with Ecuadorian and Chilean officials on AI regulation and ethics.
+Leg's own gap statement: none of the results describe a specific 2026 AI-in-education law or regulation
+in a LATAM country.

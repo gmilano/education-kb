@@ -138,7 +138,8 @@ the municipality.
 Sunbird-Ed/SunbirdEd-portal (MIT) + project-sunbird/knowledge-platform (MIT)
   └── already proven at DIKSHA scale under NCERT
   └── agent layer attaches at the knowledge-platform API, not in the portal
-       ├── tutoring: ls1intum/Iris + Pyris (MIT) pointed at the course content store
+       ├── tutoring: ls1intum/Pyris (MIT) pointed at the course content store
+       │            (the tutor is named "Iris"; ls1intum/Iris is an ALIAS of this repo — p282)
        ├── assessment: numbas/Numbas (Apache-2.0) embedded, browser-side execution
        └── learner model: pykt-toolkit (MIT) over Sunbird telemetry
   └── MIT throughout — no copyleft obligation anywhere in this stack
