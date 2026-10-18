@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 291 — ALL SEVEN SEGMENTS ARE VERIFIED **AT THE PIN**, THE RULE THAT SAID THEY COULDN'T BE WAS THIS BASE'S OWN, AND THE FIVE "NOT EDUCATION" SEGMENTS EACH SHIP A TRAINING AGENT
+
+⏱️ **Thirteenth pass of `2026-10-18`.** Evidence:
+[`submodule-pin-grant.2026-10-18-p291.tsv`](../evidence/submodule-pin-grant.2026-10-18-p291.tsv) ·
+[`segment-education-surface.2026-10-18-p291.tsv`](../evidence/segment-education-surface.2026-10-18-p291.tsv) ·
+[`guard-vocabulary.2026-10-18-p291.tsv`](../evidence/guard-vocabulary.2026-10-18-p291.tsv) ·
+[`p291-websearch.2026-10-18-p291.tsv`](../evidence/p291-websearch.2026-10-18-p291.tsv).
+
+🔴 **Mandated agent leg: SEVENTEENTH consecutive nil**, same population as every pass since
+`p275`. 🔴 Trending leg nil for education for the **eighth**; verticals leg found no new
+permissive ERP/CRM for the **twelfth**. Every leg is written down with what it returned — an
+undeclared nil looks exactly like coverage. 🟢 **Everything below came from reading
+repositories**, the sixth pass running.
+
+### 🟢 `p290`'s ranked item 1, discharged: the five unprobed segments
+
+`p290` probed **2 of 7** `iblai` segments and left the rest as its own first backlog item.
+All five are read, **at the commit the superproject pins**, and all five carry their own
+payload — byte-identical to the two already on this shelf and to the superproject's:
+
+| segment | address | pinned gitlink | grant read **at that commit** |
+|---|---|---|---|
+| 🟢 enterprise | [`iblai/enterprise-agents`](https://github.com/iblai/enterprise-agents) | `7f00879a9f57` | 🟢 **MIT**, root `LICENSE`, 1 063 B, sha256₁₂ `f1269b7b2313` |
+| 🟢 government | [`iblai/government-agents`](https://github.com/iblai/government-agents) | `fbf903250c96` | 🟢 **MIT**, root `LICENSE`, 1 063 B, sha256₁₂ `f1269b7b2313` |
+| 🟢 legal | [`iblai/legal-agents`](https://github.com/iblai/legal-agents) | `b059cd452bf3` | 🟢 **MIT**, root `LICENSE`, 1 063 B, sha256₁₂ `f1269b7b2313` |
+| 🟢 financial-services | [`iblai/financial-services-agents`](https://github.com/iblai/financial-services-agents) | `6ea18f015b1e` | 🟢 **MIT**, root `LICENSE`, 1 063 B, sha256₁₂ `f1269b7b2313` |
+| 🟢 medical-healthcare | [`iblai/medical-healthcare-agents`](https://github.com/iblai/medical-healthcare-agents) | `cd0d9fcfa523` | 🟢 **MIT**, root `LICENSE`, 1 063 B, sha256₁₂ `f1269b7b2313` |
+
+🟢 **7 of 7 `GRANTED-AT-PIN`**, one licence path each, all at the root. The gitlinks were
+re-derived **blind** (`git ls-tree HEAD` on a fresh clone) and reproduce `p290`'s seven
+exactly, as do its **95 agents / 76 tool skills** — counted independently, same totals.
+
+### 🔴 And the rule `p290` wrote was wrong, in the direction that loses rows
+
+`p290` required that a submodule's `HEAD` **equal** the pinned gitlink before its grant
+counted. It read each one at `HEAD` because that is what `git ls-remote` returns.
+🟢 **But `raw.githubusercontent.com` serves a payload at an arbitrary commit, so the pinned
+SHA is directly readable** — 7/7 answered `200` at their pin this pass. `HEAD` is not an
+input at all.
+
+🔴 **The old rule fails in the restrictive direction, which is the dangerous one here.** It
+reports *"cannot verify"* for a submodule whose `HEAD` has merely moved on — inviting the
+next pass to re-probe at `HEAD`, find a relicensed `HEAD`, and publish **that** licence, when
+a `git clone --recurse-submodules` lands on **the pin**.
+🟢 `ACTION p291` is the corrected rule, with **31 controls in `make hooks`**:
+[`gate-pin-grant`](../compose/code/p291-submodule-pin-grant/README.md).
+
+### 🔴 The five segments are **not** "not education" — every one ships a training agent
+
+`p290` wrote the five off as `OUT-OF-SCOPE (not an education segment)`. That judgement was
+made from the **segment name**, never from the agent list. Reading the agent list:
+
+| segment | the learning agent inside it | regulated credential? |
+|---|---|---|
+| enterprise | `training-agent` — *"Learning Coach"*: employee development paths, skill-gap analysis, course recommendations | no |
+| government | `employee-training-agent` — workforce development, mandatory training compliance, upskilling | no |
+| legal | `training-agent` — *"Training & CLE"*: **CLE credit tracking**, associate development | 🔴 **yes — CLE** |
+| financial-services | `employee-training-agent` — compliance certification tracking, **FINRA continuing education** | 🔴 **yes — FINRA CE** |
+| medical-healthcare | `compliance-training-agent` (HIPAA training, certification status) · `patient-education-agent` (patient-facing materials at a health-literacy level) | no |
+
+🔴 **Six learning-and-development agents, one in every one of the five excluded segments, two
+of them tracking a regulated professional credential.** Under **EU AI Act Annex III(3)** the
+high-risk education category is not "schools": limb (a) covers access, admission or assignment
+to educational **and vocational** training institutions, and limb (b) the evaluation of
+learning outcomes including where they steer a learner's path. Matching **one** limb suffices.
+🟡 Posture: Annex III(3)'s wording is **ATTRIBUTED** to a conference reproduction and
+commentary — EUR-Lex was not read, and `p289` measured those hosts `POLICY-REFUSED` from here.
+
+🔴 **And the guard density runs the wrong way.** 7 of 30 agents inside the two education
+segments carry a human-decision guard (**23 %**); 5 of 65 outside them do (**8 %**). Of the six
+L&D agents above, **one** carries any guard. The agents sitting in the high-risk **vocational
+training** bucket are the ones without it.
+
+### 🟡 A wording correction to this shelf's own `p290` row
+
+`p290` published that three sibling agents *"refuse the **sole-basis** act in their own text"*.
+🟢 **The substance is confirmed** — all three carry a human-decision guard, re-read first-hand.
+🔴 **The words are not theirs.** *"Sole basis"* is the **regulator's** phrase. It occurs in
+**1 of 95** agents in this corpus, and that one occurrence is a note about CPT code selection
+in `medical-coding-agent`'s `MEMORY.md` — not a guard. What the payloads actually say is
+*"unilaterally"*, *"not a verdict"*, *"not by any single professional or AI tool"*,
+*"never make eligibility determinations"*, *"support human decision-making"*.
+
+🔵 **Why that is worth a correction and not a shrug:** a compliance sweep that greps the
+regulator's vocabulary over this MIT corpus scores **one hit, and it is a false positive**,
+while the guard it is hunting is present in **12** agents under four other phrasings. An
+auditor's keyword list and an engineer's prompt do not share a dictionary. Full vocabulary:
+[`guard-vocabulary.2026-10-18-p291.tsv`](../evidence/guard-vocabulary.2026-10-18-p291.tsv).
+
 ## 🟢 Pass 290 — THE GRANT WAS ON THE SUPERPROJECT AND THE AGENTS WERE IN SEVEN OTHER REPOSITORIES, AND READING EACH ONE OVERTURNED THIS BASE'S OWN "ZERO PERMISSIVE" VERDICT
 
 ⏱️ **Twelfth pass of `2026-10-18`.** Evidence:

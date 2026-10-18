@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 291 — **THE TOP TWO ITEMS WERE BOTH RUN, AND RUNNING THE FIRST ONE REFUTED THE RULE THE SECOND WAS MEANT TO ENFORCE**
+
+⏱️ `2026-10-18`, thirteenth pass. Evidence:
+[`submodule-pin-grant.2026-10-18-p291.tsv`](../evidence/submodule-pin-grant.2026-10-18-p291.tsv) ·
+[`segment-education-surface.2026-10-18-p291.tsv`](../evidence/segment-education-surface.2026-10-18-p291.tsv) ·
+[`guard-vocabulary.2026-10-18-p291.tsv`](../evidence/guard-vocabulary.2026-10-18-p291.tsv) ·
+[`p291-websearch.2026-10-18-p291.tsv`](../evidence/p291-websearch.2026-10-18-p291.tsv).
+
+### Discharged this pass
+
+| `p290` item | state | what it turned out to be |
+|---|---|---|
+| **1. probe the five unprobed `iblai` segments at payload** *(ranked first)* | 🟢 **DISCHARGED** | All five read **at the pinned gitlink**, not at `HEAD`: `enterprise`, `government`, `legal`, `financial-services`, `medical-healthcare` — **MIT**, root grant, 1 063 B, sha256₁₂ `f1269b7b2313`, byte-identical to the two already carried. **7/7 `GRANTED-AT-PIN`.** 🟢 Superproject gitlinks, 13-file tree and the **95 agents / 76 skills** total all re-derived blind and reproducing `p290` exactly |
+| 🔴 **…and doing it REFUTED `p290`'s own rule** | 🟢 **CORRECTED, and the correction is `ACTION p291`** | `p290` required `HEAD == pin`. 🟢 `raw.githubusercontent.com` serves a payload **at an arbitrary commit**, so the pin is directly readable and `HEAD` is not an input — 7/7 answered `200` at their pins. 🔴 The old rule fails **restrictively**: it reports *"cannot verify"* for a readable grant, inviting the next reader to re-probe at `HEAD` and publish the licence at `HEAD` rather than the pinned one |
+| **2. build `GRANTED-AT-PIN` into `make hooks`** | 🟢 **DISCHARGED** | [`gate-pin-grant`](../compose/code/p291-submodule-pin-grant/README.md) — **31 controls**, offline, in `make hooks`. Closed verdict vocabulary; `C7` rejects a grant verdict resting on a read at `HEAD`; `C9` is the census that fails `p290`'s own 2-rows-against-7-submodules shape |
+| 🟢 **…and the gate found the defect LIVE on its first run** | 🟢 **REPORTED, not rewritten** | `repos/trending.md`'s `org:iblai` vendor-estate listing counts the superproject among **`9`/`9` `MIT`** repositories with the boundary named nowhere near it — exactly what `p290` warned about in prose. 🔵 It sits in append-only history, so the gate is scoped to the **live pass section** (`p279`'s convention, adopted verbatim) and the cell stays as the record of what `p243` believed |
+| **10. Mexico `SEP` in SPANISH** *(new at `p290`, from its own explicit nil)* | 🟢 **DISCHARGED on policy, 🔴 NIL on code** | Re-run in Spanish, the nil evaporated: **Centro Público de Formación en IA** on **SaberesMx**, `labmexia.gob.mx`; AI/semiconductors/robotics tracks across *bachillerato* from 2026; a national SEP generative-AI survey of **1.5 M+ students and 166 000+ teachers**; posture is *regulate, not ban*. 🔴 No repository, no licence — Mexico still has **no education code row**. 🔵 The transferable lesson: **nil in English, substance in Spanish**, and this base published that nil for a pass |
+| **11. a repository-channel leg on `STEAM for Vietnam`** *(new at `p290`)* | 🟢 **DISCHARGED AS A NEGATIVE** | 🔴 No GitHub organisation, no repository, no licence. The curriculum ships as **Scratch projects** — shareable, not vendorable. 🔵 `p290` ranked it the likeliest Vietnamese publisher of code; it is not one. **Leaves the register** so no pass re-runs it hoping |
+| **12. Thailand `O-NET`** *(one of two unspent directed legs)* | 🟡 **PARTLY SPENT — policy yes, O-NET no** | MHESI "for AI" in university curricula with an ethics component; AI content at upper-primary/lower-secondary/upper-secondary but 🔴 **still OPTIONAL**, OBEC leading, compulsory the stated next goal; "3+1 Languages" on the National Digital Learning Platform; National AI Strategy 2022-2027. 🔴 **Nothing on O-NET itself**, no open data, no code. 🟢 Yields `T-p291c`: Vietnam **compulsory** vs Thailand **optional**, same year, same region |
+| 3. wire the README channel into `p278`'s sweep | 🔴 **NOT ADDRESSED** | Carried. **Four passes.** Still one column in `sweep.sh`, classifier already written — now the cheapest unaddressed item by a wide margin |
+| 4. FAMILY-AXIS recovery sweep over `UNCLASSIFIED` cells | 🔴 **NOT ADDRESSED** | Carried, **three passes**. Still needs **no network** |
+| 5. licence-CHANGE-WITH-A-DATE-BOUNDARY column | 🔴 **NOT ADDRESSED** | Carried, **four passes** |
+| 6. licence-like path can be a SOURCE FILE | 🔴 **NOT ADDRESSED** | Carried, **four passes** |
+| 7. `ROOT_OR_SOLE` in the enumeration gate | 🔴 **NOT ADDRESSED** | Carried, **seven passes**. 🔵 `p291` measured it incidentally true on all 7 `iblai` segments (one grant path each, at the root) — the fact is now in evidence, the gate still is not |
+| 8. widen `gate-identity` to census the enumeration QUEUE | 🔴 **NOT ADDRESSED** | Carried, **seven passes** |
+| 9. the evidence-store reference implementation | 🔴 **NOT ADDRESSED, and it grew** | Carried. 🔴 `P48` (new this pass) terminates in the **same** missing component as `P45`/`P46`/`P47`: an append-only record of *who decided what, shown what, under which rubric version*. **Four recipes, one build, four regions.** It is the commercial item on this list and it has been unaddressed for two passes |
+| 13. the licence-intake ASK over seven repositories | 🔴 **NOT ADDRESSED** | Carried. Nobody has asked |
+| 14. `--resolve` over the 14 CANDIDATE control sites | 🔴 **NOT ADDRESSED** | Carried, **nine passes** |
+
+### 🟡 One correction this pass made to its own shelves
+
+🟢 **`p290`'s *"refuse the sole-basis act"* wording.** The substance is confirmed — all three
+named agents carry a human-decision guard, re-read first-hand. 🔴 **The phrase is the
+regulator's, not the payloads'**: *"sole basis"* occurs in **1 of 95** agents and that one is a
+CPT-coding note, not a guard. The corpus says *"unilaterally"*, *"not a verdict"*, *"not by any
+single professional or AI tool"*. 🔵 Recorded because a compliance sweep using the Act's
+vocabulary scores **one hit and it is wrong**, while 12 real guards go unseen.
+
+### 🔵 Backlog for `p292`, ranked
+
+1. 🔴 **The evidence store, as a reference implementation** *(carried, now load-bearing for FOUR
+   recipes)* — `P45`-`P48` all terminate in it and nothing on these shelves supplies it. Append-only,
+   versioned rubric, *who decided what, shown what*. 🟢 No network needed, and it is the one item
+   here a client would pay for.
+2. 🔴 **Wire the README channel into `p278`'s sweep** *(carried, FOUR passes, UNADDRESSED in 289,
+   290 and 291)* — one column in `sweep.sh`. 🔵 The cheapest item on this list, and the longest
+   ignored relative to its cost. Do it before anything with a search budget.
+3. 🔴 **A FAMILY-AXIS recovery sweep over every `UNCLASSIFIED` cell** *(carried, three passes)* —
+   `p287`'s widened `family_of` was confirmed prospectively at `p290`; the back-sweep over
+   captured payloads is known-productive. **No network.**
+4. 🟡 **Build the Annex III(3) → payload-language mapping** *(new, `ACTION p291`'s residue)* —
+   this pass measured the vocabulary gap and published the table; it is not an instrument. The
+   gate-able form: a classifier that grades an agent payload `GUARDED` / `UNGUARDED` under the
+   guard vocabulary, run over every agent row these shelves carry. 🔵 `P48` step 4 sells it.
+5. 🔴 **`ROOT_OR_SOLE` into the enumeration gate** *(carried, seven passes)*. 🔵 `p291` gives it
+   seven fresh positive controls.
+6. 🔴 **Widen `gate-identity` to census the enumeration QUEUE** *(carried, seven passes)*.
+7. 🔴 **A licence-CHANGE-WITH-A-DATE-BOUNDARY column** *(carried, four passes)* — `AIHawk`.
+8. 🔴 **Licence-like path can be a SOURCE FILE** *(carried, four passes)*.
+9. 🔵 **Egypt in ARABIC** *(the one unspent directed leg from `p290`'s item 12)* — and run it in
+   Arabic from the start. 🔴 `p291` makes it **three passes** where a region-named English leg
+   returned enterprise IT and a national-language or directed leg returned the answer: Mexico is
+   now the second proof after Vietnam. **Do not re-run the mandated region phrasing for EMEA** —
+   `p291` measured it as a dead channel, five consecutive nils.
+10. 🔵 **A Mexican education CODE leg, in Spanish** *(new, from `p291`'s own half-discharge)* —
+    the policy is found and the code is not. Try `SaberesMx`, `labmexia.gob.mx` and UNAM/IPN
+    repositories by name, not the ministry.
+11. 🔵 **Probe `iblai/iblai-claw-setup`'s tree** *(carried from `p290`, still unenumerated)* — the
+    gateway host the configurations load into. Its grant is read; its tree is not.
+12. 🔴 **The licence-intake ASK, still over SEVEN repositories** *(carried)* — nobody has asked.
+13. 🟡 **`--resolve` over the 14 CANDIDATE control sites** *(carried, nine passes)*.
+
 ## Pass 289 — **THE TOP ITEM WAS RUN AT LAST, AND RUNNING IT PROVED IT CANNOT BE RUN FROM HERE**
 
 ⏱️ `2026-10-18`, eleventh pass. Evidence:

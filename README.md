@@ -4,6 +4,135 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 291 — 2026-10-18 — **THE FIVE SEGMENTS THIS BASE CALLED "NOT EDUCATION" EACH SHIP A TRAINING AGENT, AND THE RULE THAT SAID THEIR GRANTS COULDN'T BE READ WAS OUR OWN**
+
+**One-line summary:** `p290`'s two ranked items were both run, and running the first **refuted
+the rule the second was built to enforce** — all seven `iblai` segments are `GRANTED-AT-PIN`
+because `raw.githubusercontent.com` serves a payload **at an arbitrary commit**, so the
+`HEAD == pin` condition `p290` imposed is not merely unnecessary but **restrictive in the
+dangerous direction**. `ACTION p291` is the corrected rule with **31 controls in `make hooks`**,
+and it caught a live instance of `p290`'s warned-about defect on its first run. Reading the
+five segments then refuted `p290`'s *other* judgement: it called them out of scope from their
+**names**, and every one of them ships a learning-and-development agent — two tracking a
+**regulated professional credential**.
+
+### 🟢 What was found
+
+🔴 **The mandated battery is now SEVENTEEN consecutive nils on the agent leg**, nil for
+education on the trending leg for the **eighth** pass, and no new permissive education ERP/CRM
+for the **twelfth**. Every leg, global and regional, is written down with what it returned in
+[`evidence/p291-websearch.2026-10-18-p291.tsv`](evidence/p291-websearch.2026-10-18-p291.tsv) —
+an undeclared nil looks exactly like coverage.
+
+| finding | verdict |
+|---|---|
+| The five unprobed `iblai` segments *(`p290`'s ranked item 1)* | 🟢 **ALL FIVE `GRANTED-AT-PIN`** — MIT, root grant, 1 063 B, sha256₁₂ `f1269b7b2313`, byte-identical to the two already carried. **7/7** |
+| `p290`'s rule *"verified when HEAD equals the pin"* | 🔴 **CORRECTED** — the payload is readable **at the pin**; `HEAD` is not an input. 7/7 answered `200` at their pinned SHA |
+| Why that direction matters | 🔴 The old rule says *"cannot verify"* about a **readable** grant → the next reader re-probes at `HEAD`, finds a relicensed `HEAD`, and publishes a licence the superproject does not pin |
+| `ACTION p291` as a standing gate | 🟢 **`gate-pin-grant`, 31 controls, offline, in `make hooks`** — closed verdict vocabulary, `C7` rejects a read-at-`HEAD` verdict, `C9` fails `p290`'s own 2-rows-against-7 shape |
+| What the gate found on its **first run** | 🔴 **A LIVE INSTANCE** — `repos/trending.md`'s `org:iblai` listing counts the superproject among `9`/`9` MIT repositories with the boundary named nowhere near it. Exactly `p290`'s prose warning, in this base's own shelf |
+| `p290`'s *"OUT-OF-SCOPE — not an education segment"* on the five | 🔴 **REFUTED** — the judgement was made from segment **names**. All five ship an L&D agent; `legal` tracks **CLE**, `financial-services` tracks **FINRA continuing education** |
+| EU AI Act **Annex III(3)** scope | 🔵 Covers educational **and vocational** training, and evaluation of learning outcomes; **one limb suffices**. 🟡 ATTRIBUTED — EUR-Lex unreachable (`p289`: 12 hosts `POLICY-REFUSED`) |
+| Guard density, measured over all 95 agents | 🔴 **23 %** inside the education-labelled segments, **8 %** outside — and **1 of 6** L&D agents. The high-risk vocational bucket is the **least** guarded |
+| `p290`'s *"refuse the sole-basis act"* | 🟡 **SUBSTANCE STANDS, WORDING CORRECTED** — *"sole basis"* is the **regulator's** phrase; it occurs in **1 of 95** agents and that one is a CPT-coding note, not a guard |
+| A compliance grep for the Act's vocabulary over this corpus | 🔴 **1 hit, and it is a false positive**, while **12** real guards under four other phrasings go unseen |
+| Mexico `SEP` *(`p290` item 10)* | 🟢 **The nil was a LANGUAGE artefact** — re-run in Spanish it returns SaberesMx, `labmexia.gob.mx`, a 1.5 M-student SEP survey. 🔴 Still no code, no licence |
+| `STEAM for Vietnam` *(`p290` item 11)* | 🔴 **DISCHARGED AS A NEGATIVE** — no GitHub org, no repository, no licence. The curriculum ships as **Scratch projects** |
+| Thailand *(`p290` item 12)* | 🟡 Policy yes, **O-NET no, code no**. 🟢 Yields the pair: 🇻🇳 **compulsory** grades 1-12 vs 🇹🇭 **optional**, same year |
+| EMEA on the mandated phrasing | 🔴 **FIFTH consecutive nil** — recorded as a **measured dead channel**, not retried |
+
+### 🔵 Why `ACTION p291` is a correction and not `p290` again
+
+`p290` asked **what the grant covers** when the content is gitlinks, and answered it with a
+two-condition rule. 🟢 The first condition — read the submodule's own payload — was right.
+🔴 The second — that its `HEAD` must equal the pin — encodes a limitation of the *tool* `p290`
+happened to use (`git ls-remote` returns `HEAD`) as a property of the *evidence*. A pinned SHA
+is a perfectly good ref on `raw.githubusercontent.com`. So the grant that a
+`git clone --recurse-submodules` actually lands on can be read directly, and equality of `HEAD`
+and pin on the day of measurement is **timing, not evidence**. That is control `C7`, and it
+rejects `p290`'s own two rows if they are ever re-asserted without being re-read.
+
+### 🔴 What this pass's own gates did to this pass
+
+🟢 **`p283`'s ladder ratchet rejected `ACTION p291` once, and it was right.** The new
+instrument graded `STANDING:SINGLE-SPELLING`, taking the ceiling from 17 to 18, over a **single
+capitalised licence filename inside a human-readable finding message**. The module has **no
+path ladder at all** — it never probes for a grant, it reads `payload_path` out of the evidence
+TSV. 🔵 This is `p289`'s situation exactly (its prose regex looked like a ladder until it was
+written as `licen[cs]e`) and the remedy is the same: say it in words that are not a filename.
+Reworded to *"root grant"*; the ceiling is back to 17 and the reason is recorded **in the
+source**, so a later pass does not "restore" the capitalised word.
+
+🔴 **And `p291`'s own shelf check was wrong on its first run: 7 findings, 6 of them false.**
+It was written **line**-scoped, and `compose/patterns.md` names the gitlinks **two lines below**
+the citation it flagged. A line is not the unit a reader reads. Rescoped to the blank-line
+**block**, it drops all 6 and keeps the one real finding. 🔵 A second defect of the same kind
+was caught beside it: the check recognised only its own jargon, so a cell saying *"It is a
+pointer; the seven sector configurations are separate repositories"* — which names the boundary
+**better** than the word "gitlink" does — was flagged. A gate that only matches its own
+vocabulary measures the vocabulary.
+
+🔵 **One scope decision, stated because it is a judgement call.** On the append-only shelves
+(`agents/trending.md`, `repos/trending.md`) the shelf arm reads only the newest `## Pass`
+section — **`p279-absence-claims`'s convention, adopted verbatim rather than invented twice**.
+Those files keep history by design; a gate failing on passes 243 onward would be red on arrival
+and disabled within a pass. The historical `org:iblai` cell is therefore **reported and left
+standing**: history is the record of what each pass believed, and the gate's job is that the
+*next* citation cannot repeat it.
+
+### 🔴 What this pass could NOT do
+
+🔴 **`api.github.com` and `github.com` HTML both answer `403`**, re-measured. **No star count in
+this pass is first-hand and none is published.** 🟢 `raw.githubusercontent.com` answers `200`,
+including at an arbitrary commit SHA, and `git ls-remote` / `git fetch --depth 1 <sha>` both
+answer — three channels, agreeing on every existence verdict here.
+
+🔴 **EUR-Lex was not read.** The Annex III(3) wording this pass publishes is ATTRIBUTED to a
+conference reproduction plus commentary. `p289` measured 12 authority hosts as `POLICY-REFUSED`
+across 2 egress paths and eur-lex was not retried; a client-facing use must check the Official
+Journal.
+
+🔴 **`gob.mx` was not reached.** Everything in the Mexico finding is as-reported by Mexican
+press summaries.
+
+### 🔵 What a studio takes from this pass
+
+**The Annex III work is not where the word "education" is.** A client running CLE tracking for
+a law firm, FINRA continuing education for a broker-dealer, or HIPAA certification for a
+hospital is operating a **vocational training** system inside the Act's education limb, and
+none of them calls itself an education buyer. 🔴 In the one MIT corpus this base has read end to
+end, those are precisely the agents **without** the human-decision guard that their
+education-labelled siblings one directory over already carry — guards that are MIT and
+copyable rather than draftable. 🟢 That retrofit, plus the payload-language-to-Annex-III
+translation table that no keyword audit currently supplies, is written out as
+[`P48`](compose/patterns.md). 🔴 And like `P45`-`P47` before it, it terminates in the evidence
+store nothing here supplies — now **four recipes, one build, four regions**.
+
+### 🔵 Backlog for `p292`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked:
+
+1. 🔴 **The evidence store, as a reference implementation** — now load-bearing for **four**
+   recipes (`P45`-`P48`). No network needed; the one item a client would pay for.
+2. 🔴 **Wire the README channel into `p278`'s sweep** *(carried, FOUR passes)* — one column in
+   `sweep.sh`, classifier already written. Cheapest item here, longest ignored.
+3. 🔴 **FAMILY-AXIS recovery sweep over every `UNCLASSIFIED` cell** *(carried, three passes)* —
+   known-productive since `p290`. **No network.**
+4. 🟡 **The Annex III(3) → payload-language classifier** *(new, this pass's residue)* — `p291`
+   measured the vocabulary gap and published a table; it is not yet an instrument.
+5. 🔴 **`ROOT_OR_SOLE` in the enumeration gate** *(carried, seven passes)* — `p291` hands it
+   seven fresh positive controls.
+6. 🔴 **Widen `gate-identity` to census the enumeration QUEUE** *(carried, seven passes)*.
+7. 🔴 **A licence-CHANGE-WITH-A-DATE-BOUNDARY column** *(carried, four passes)*.
+8. 🔴 **Teach the enumeration gate that a licence-like path can be a SOURCE FILE** *(carried)*.
+9. 🔵 **Egypt in ARABIC** — the last unspent directed leg. 🔴 **Do not re-run the mandated EMEA
+   region phrasing**: `p291` measured it dead, five consecutive nils. Mexico is now the second
+   proof after Vietnam that the national language is the channel.
+10. 🔵 **A Mexican education CODE leg, in Spanish** *(new)* — the policy is found, the code is not.
+11. 🔵 **Enumerate `iblai/iblai-claw-setup`'s tree** *(carried)* — grant read, tree never walked.
+12. 🔴 **The licence-intake ASK, still over SEVEN repositories** *(carried)*.
+13. 🟡 **`--resolve` over the 14 CANDIDATE control sites** *(carried, nine passes)*.
+
 ## Pass 290 — 2026-10-18 — **THE GRANT WAS AT THE ROOT, AUTHORITATIVE AND VERBATIM, AND THE AGENTS WERE IN SEVEN OTHER REPOSITORIES**
 
 **One-line summary:** a directed admissions leg — a category this base had never searched,

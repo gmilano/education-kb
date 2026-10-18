@@ -25,9 +25,9 @@ IDENTITY_LOG ?= /tmp/education-kb-gate-identity.log
 LADDER_LOG ?= /tmp/education-kb-gate-ladder.log
 README_LOG := $(shell mktemp)
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant
 
-hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case gate-readme-channel gate-restatement ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer
+hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case gate-readme-channel gate-restatement gate-pin-grant ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis
 
 # 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
 # p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
@@ -159,6 +159,20 @@ RESTATEMENT_LOG := $(shell mktemp)
 # terms.  No network: the fixtures are the payloads, quoted verbatim with their sha256s.
 gate-restatement: ## ACTION p289 — a restatement of an unreachable authority is not a verified grant
 	@cd compose/code/p289-restatement-authority && { $(PY) -I test_restatement.py > $(RESTATEMENT_LOG) 2>&1 || { echo "🔴 p289-restatement-authority FAILED — the suite's own report follows:" ; sed "s/^/   /" $(RESTATEMENT_LOG) ; false ; } ; } && echo "── p289-restatement-authority (40 controls: the OGL restatement pair, the MIT collision arm, the CC generality arm, posture keyed to MEASURED reachability)" && echo "   PASS" || exit 1
+
+PIN_GRANT_LOG ?= /tmp/education-kb-gate-pin-grant.log
+
+# 🟢 p291 (`p290`'s ranked item 2): `ACTION p290` wrote the submodule-boundary rule in PROSE
+# and an evidence table, and recorded that until it is a gate, "a later pass can publish a
+# superproject's grant as covering its submodules, which is the exact defect this pass found."
+# This is that gate — and it found the defect LIVE on its first run, in a vendor-estate
+# listing that counted the superproject among `9/9 MIT` repositories.
+# 🔴 It also CORRECTS p290's rule: the payload is readable AT THE PINNED SHA over
+# `raw.githubusercontent.com`, so `HEAD == pin` is not a condition of verification and a
+# GRANTED verdict resting on a read at HEAD is rejected (control `C7`).  No network.
+gate-pin-grant: ## ACTION p291 — a submodule grant is verified AT THE PIN, and no shelf may cite a superproject without the boundary
+	@cd compose/code/p291-submodule-pin-grant && { $(PY) test_pin_grant.py > $(PIN_GRANT_LOG) 2>&1 || { echo "🔴 p291-submodule-pin-grant FAILED — the suite's own report follows:" ; sed "s/^/   /" $(PIN_GRANT_LOG) ; false ; } ; } && echo "── p291-submodule-pin-grant (31 controls: the read-at-HEAD rejection, the 7-submodule census, block-scoped shelf claims, append-only live-section scope)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p291-submodule-pin-grant/pin_grant.py --root . || exit 1
 
 gate-identity: ## ACTION p283 — no shelf may recommend one repository under two live rows
 	@cd compose/code/p283-repo-identity && { $(PY) test_identity_gate.py > $(IDENTITY_LOG) 2>&1 || { echo "🔴 p283-repo-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(IDENTITY_LOG) ; false ; } ; } && echo "── p283-repo-identity (12 controls: withdrawn-in-place, the cross-table index, both halves in one cell)" && echo "   PASS" || exit 1

@@ -1,0 +1,29 @@
+# p291 — 2026-10-18 — THE GUARD IS REAL AND THE REGULATOR'S PHRASE IS NOT IN IT.
+#
+# 🔴 WHAT THIS CORRECTS.  `p290` published, and `agents/top.md` carries: "Three MIT sibling
+# agents — `application-reader`, `special-education`, `retention` — each REFUSE THE SOLE-BASIS
+# ACT in their own prompt."  The substance is CONFIRMED — all three carry a human-decision
+# guard, read first-hand below.  🔴 The WORDING is not theirs.  "Sole basis" is the
+# REGULATOR'S phrase (GDPR Art. 22 / AI Act human-oversight language).  It appears in
+# 1 of 95 agents in this corpus, and that one occurrence is a note about CPT code selection
+# in `medical-coding-agent`'s MEMORY.md — not a guard at all.
+#
+# 🔵 WHY IT MATTERS, and it is not pedantry: a compliance sweep that greps the regulator's
+# vocabulary over this MIT corpus returns ONE hit and that hit is a false positive, while the
+# guard it is looking for is present in 12 agents under four other phrasings.  An auditor's
+# keyword list and an engineer's prompt do not share a dictionary.  Written down so a later
+# pass does not grep "sole basis", score zero, and publish "no human-oversight guard".
+#
+# Vocabulary below is what the payloads ACTUALLY say, collected by reading them.
+phrasing	regex_family	agents_matching_of_95	example_verbatim
+🟢 unilateral	unilateral	3	"Never issue a final admit or deny decision unilaterally; always present findings as input for the human reader" (higher-education/application-reader-agent)
+🟢 not-a-verdict	not a verdict / observations, not conclusions / hypothesis to be confirmed	3	"Treat every risk flag as a hypothesis to be confirmed, not a verdict" (higher-education/retention-agent)
+🟢 human-judgment	human judgment / human reader / human decision-making	4	"Your outputs support human decision-making — you do not independently authorize position limits, hedging trades, or risk limit overrides" (financial-services/risk-assessment-agent)
+🟢 human-review	human review / human reviewer / human follow-up	5	"If a student expresses distress, mentions self-harm, or raises a safety concern, immediately advise speaking with a trusted adult and flag for human review" (k-12/tutoring-agent)
+🟢 not-single-actor	not by any single / full team / multidisciplinary team	2	"IEP decisions are made by the full team, including parents and guardians, not by any single professional or AI tool" (k-12/special-education-agent)
+🟢 never-final	never issue/make a ... decision|determination / do not independently authorize	3	"Never make eligibility determinations -- eligibility requires a qualified multidisciplinary team evaluation and legal decision" (k-12/special-education-agent)
+🔴 sole basis (THE REGULATOR'S PHRASE)	sole basis / only basis / sole determinant	1	"1995 and 1997 documentation guidelines are no longer the sole basis for code selection" (medical-healthcare/medical-coding-agent MEMORY.md) — 🔴 NOT A GUARD, a coding-rules note
+#
+# 🟢 12 of 95 agents carry at least one guard phrasing.  p290's three named agents are all
+# among them, so p290's FINDING stands; only its quotation marks do not.
+# 🔴 0 of 95 carry the regulator's phrase AS A GUARD.

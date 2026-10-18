@@ -1,0 +1,6 @@
+# Superproject slugs this base has MEASURED as submodule-bearing: their tree is
+# `160000 commit` gitlinks and their root LICENSE covers a shell, not the code.
+# A shelf citing one of these must name the submodule boundary (p291 shelf_claims).
+# Measured p291 (2026-10-18) by `git ls-tree HEAD` on the clone, 7/13 entries gitlinks.
+iblai/iblai-claw-agents
+iblai/claws

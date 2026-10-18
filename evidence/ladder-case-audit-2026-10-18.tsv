@@ -465,6 +465,8 @@ compose/code/p289-restatement-authority/probe.sh	copying	GENERATED-CASE-VARIED	n
 compose/code/p289-restatement-authority/probe.sh	licence	GENERATED-CASE-VARIED	no-upper-ext	STANDING	LICENCE LICENCE.md LICENSE LICENSE.md Licence License licence license
 compose/code/p289-restatement-authority/probe.sh	readme	COMMENT-ONLY	no-upper-ext	STANDING	README.md
 compose/code/p289-restatement-authority/restatement.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	licence
+compose/code/p291-submodule-pin-grant/pin_grant.py	licence	SINGLE-SPELLING	no-upper-ext	STANDING	LICENSE
+compose/code/p291-submodule-pin-grant/pin_grant.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
 compose/code/p308-phrase-anchor-sweep/anchor_form.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p308-phrase-anchor-sweep/field_check.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p308-phrase-anchor-sweep/field_check.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENSE LICENSE.txt

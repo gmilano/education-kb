@@ -10,6 +10,49 @@ updated: 2026-10-18
 > Sourced from web research on 2026-10-17. Vendor-sourced figures are marked; they are
 > carried because they are the only numbers available, not because they are reliable.
 
+## 🟢 Pass 291 — THE MEXICO NIL WAS A LANGUAGE ARTEFACT, THE ASEAN PAIR SPLITS ON MANDATE LEVEL, AND THE MANDATED REGIONAL PHRASING IS NOW A MEASURED DEAD CHANNEL FOR EMEA
+
+⏱️ `2026-10-18`, thirteenth pass. Evidence:
+[`p291-websearch.2026-10-18-p291.tsv`](../evidence/p291-websearch.2026-10-18-p291.tsv) ·
+[`segment-education-surface.2026-10-18-p291.tsv`](../evidence/segment-education-surface.2026-10-18-p291.tsv).
+
+🟡 **Two of four mandated regional legs returned nil for education** (EMEA, APAC) and two
+returned carried material with one new datum each (North America, LATAM). 🟢 **Both nils were
+then broken by directed legs** — the sixth pass running where that is the shape of the result.
+
+🔴 **This pass's refusals, stated before its findings.** Declined for the shelf: *"99 % of LATAM
+startups use AI"* and *"85 % integrate it natively"* (single-vendor), the *"66 % → 92 % student
+use"* figure (vendor summary, recurring), and *"North America = 36 % of the global market"*
+(aggregator, unsourced — declined for the second pass running).
+
+### 🟢 Mexico: `p290`'s explicit nil was the query's fault, not the country's
+
+`p290` searched in **English**, got zero results naming SEP, and wrote the nil down. Re-run in
+**Spanish**, as `p290`'s own register demanded, the same country returns substance:
+
+- A **Centro Público de Formación en IA** presented on the **SaberesMx** platform, free and
+  also delivered online; first call posted at `labmexia.gob.mx`.
+- **AI, semiconductors and robotics** technical tracks reaching most *bachillerato* campuses
+  from **2026**.
+- A national **SEP survey on generative AI in higher education** covering **1.5 M+ students**
+  and **166 000+ teachers**.
+- Stated federal posture: **regulate** student AI use rather than ban it.
+
+🔴 **Still no code, no licence, no repository.** SaberesMx is a government platform, not a
+published codebase, so Mexico remains without an education code row here. 🟢 But the nil is now
+an **informed** one, and the lesson generalises: this base's region legs have twice returned
+nil in English and substance in the national language.
+🟡 Posture: ATTRIBUTED to Mexican press summaries (Record, Xataka MX, El Imparcial, ADN40);
+`gob.mx` itself was not reached.
+
+### 🔴 EMEA: the mandated phrasing has now failed five passes running
+
+`AI education EMEA 2026 adoption regulation players` returned CompTIA IT-strategy pieces, a
+2023 Workday study and a Feb-2026 enterprise telecoms report — **not one education-sector
+actor**, for the fifth consecutive pass. 🔵 `p290` broke the EMEA vendor hole with a **directed**
+leg, not this one. The mandated phrasing is hereby recorded as a **measured dead channel** for
+EMEA education: run it as the corroboration it is, and put the search budget on directed legs.
+
 ## 🟢 Pass 289 — FOUR REGIONS RETURNED AGAIN, AND THE BINDING CONSTRAINT MOVED FROM *GUIDANCE* TO *NAMED HIGH-RISK SECTOR* IN A SECOND JURISDICTION
 
 ⏱️ `2026-10-18`, eleventh pass. Evidence:
@@ -1173,6 +1216,23 @@ data gets the ranking backwards.
 
 ### North America
 
+#### 🟡 Pass 291 (`2026-10-18`) — one new sizing datum, and a structural point about who regulates
+
+🟢 **New, and it is the first regional sizing figure this shelf has carried with a stated base
+year**: a market report puts North America at **~$951 M (2024) → ~$2.3 B (2029), 15.9 % CAGR**.
+🟡 Secondary, single publisher — carried as a direction, not a forecast. 🔴 The *"36 % of the
+global market"* share claim recurred and is **declined again**: aggregator, unsourced.
+
+🔵 **The structural datum is worth more than the number.** One analysis makes the point this
+shelf had implied but never stated: education AI has **no sector regulator** — there is no
+FDA-equivalent for educational technology, and adoption is decided school-by-school,
+district-by-district. 🔴 **That is the inverse of EMEA**, where Annex III(3) makes the same
+systems high-risk by law. A North American engagement sells assurance to a *buyer*; an EMEA one
+sells it to a *regulator*. Same build, different purchaser.
+
+🔴 **The leg again failed to separate the US from Canada and Mexico** — four passes running.
+Mexico's own material now sits under LATAM, reached only by a Spanish-language directed leg.
+
 #### 🟡 Pass 290 (`2026-10-18`) — the first code row on these shelves from a US STATE EDUCATION AGENCY, and three money datums that are all secondary
 
 🟢 **New, and it is provenance rather than a dependency.**
@@ -1674,6 +1734,30 @@ evidenced** — Oklahoma/Maryland's human-oversight rule and NYC's K-8 moratoriu
 hardest configurations, and they are specifiable today.
 
 ### EMEA
+
+#### 🔴 Pass 291 (`2026-10-18`) — the mandated phrasing is a MEASURED DEAD CHANNEL, and the high-risk category is wider than this shelf has been treating it
+
+🔴 **Fifth consecutive nil on `AI education EMEA 2026 adoption regulation players`.** Returned
+CompTIA EMEA IT-strategy pieces, a 2023 Workday study and a Feb-2026 enterprise telecoms
+report — **not one education-sector actor**. 🔵 Recorded as a dead channel rather than retried:
+`p290`'s EMEA vendor findings came from a **directed** leg and the directed form is where the
+budget belongs.
+
+🔴 **The scope correction, and it enlarges the addressable market here.** **Annex III(3)** does
+not say "schools". Limb (a) reaches access, admission or assignment to educational **and
+vocational** training institutions; limb (b) the evaluation of learning outcomes including
+where they steer a learner's path; **one limb suffices**. 🟢 **So corporate L&D, professional
+certification and continuing-education systems are in the same high-risk bucket as a university
+admissions tool** — and measured against the one MIT corpus this base has read in depth, they
+are the *least* guarded part of it (1 of 6 learning agents outside the education-labelled
+segments carries any human-decision guard, against 23 % inside them).
+
+🔵 **The EMEA opportunity that follows:** a guard-clause remediation and evidence layer aimed at
+**vocational training and professional-certification** operators, not at schools. HolonIQ's
+2026 Europe EdTech 200 cohort is already *weighted to workforce learning* (`p290`) — the
+regulated population and the commercial population are the same population.
+🟡 Posture: Annex III(3) wording ATTRIBUTED to a conference reproduction plus commentary;
+EUR-Lex unreachable from here (`p289`: 12 authority hosts `POLICY-REFUSED`, 2 egress paths).
 
 #### 🟢 Pass 290 (`2026-10-18`) — THE VENDOR HOLE IS CLOSED, AND THE BUYER IS AN EMPLOYER RATHER THAN A MINISTRY
 
@@ -2334,6 +2418,34 @@ EMEA ed-tech vendor**. 🔴 A declared hole, not a silence, and it stays ranked.
 
 ### APAC
 
+#### 🟢 Pass 291 (`2026-10-18`) — Thailand placed, and the ASEAN pair now splits on MANDATE LEVEL
+
+🔴 **The mandated APAC leg was nil for education again** — Boomi/TechRepublic enterprise
+priorities, Singapore FI consultations, Forrester on sovereignty. 🟢 One governance datum kept:
+**OpenAI has appointed an ANZ policy lead** as Canberra tightens AI governance and copyright
+rules. 🟢 **The education answer came from the directed Thailand leg**, the fifth pass running
+where region phrasing fails and directed phrasing works.
+
+🟢 **Thailand, newly placed:**
+- **MHESI "for AI"** folds AI literacy **plus an ethics component** into university curricula.
+- **Basic education:** AI content added at upper-primary, lower-secondary and upper-secondary —
+  🔴 **still optional**, with compulsory status the stated *next* goal. **OBEC**'s curriculum
+  bureau leads.
+- **MoE "3+1 Languages"** (Thai/Chinese/English + digital literacy) runs through the **National
+  Digital Learning Platform**; **Microsoft** is a named partner.
+- **National AI Strategy and Action Plan 2022-2027**, PM-chaired National AI Committee. A 2026
+  PSU country report notes **AI-based curriculum auditing** and **PDPA** compliance duties.
+
+🔵 **The pair is the finding.** 🇻🇳 Vietnam: **compulsory**, grades 1-12, from 2026-2027, 12
+periods a year. 🇹🇭 Thailand: **optional**, same year. Two neighbours, opposite mandate levels —
+and mandate level is what determines whether a ministry engagement is a procurement or a pilot.
+
+🔴 **Neither publishes code or licensed curriculum data.** `STEAM for Vietnam` — the one named
+non-ministry actor in the MOET teacher-training programme and `p290`'s ranked candidate — was
+probed directly: **no GitHub organisation, no repository, no licence.** Its curriculum ships as
+**Scratch projects**: shareable, not vendorable. 🔴 Nothing found on **O-NET** itself.
+🟡 All ATTRIBUTED to ministry and press summaries; no primary text read.
+
 #### 🔴 Pass 290 (`2026-10-18`) — Vietnam mandates AI across grades 1–12 and publishes NOTHING a build can validate against
 
 🟢 **The policy, from the directed MOET leg** *(`p289` register item 9)*: Decision
@@ -2812,6 +2924,30 @@ Korea's act pairs its obligations with **state adoption support**, which is unus
 naming in a pitch.
 
 ### LATAM
+
+#### 🟢 Pass 291 (`2026-10-18`) — Mexico finally returns substance, and the thing that changed was the LANGUAGE of the query
+
+🟢 **`p290` recorded an EXPLICIT NIL for Mexico** — zero results naming SEP — and ranked a
+Spanish-language re-run as its item 10. Re-run in Spanish, the same country returns:
+- A **Centro Público de Formación en IA** on the **SaberesMx** platform, free, also online;
+  first call at `labmexia.gob.mx`.
+- **AI, semiconductors and robotics** tracks reaching most *bachillerato* campuses from **2026**.
+- A national **SEP survey on generative AI in higher education**: **1.5 M+ students**,
+  **166 000+ teachers** — the largest single education-AI survey population on this shelf.
+- Federal posture: **regulate, do not ban**, student AI use.
+
+🔴 **Still no code, no licence, no repository** — SaberesMx is a platform, not a codebase, so
+the region's second-largest Spanish-speaking school system **still has no code row here**.
+🟢 **But the methodological finding transfers to every LATAM leg**: nil in English, substance in
+Spanish. The nil was an artefact of the query, and this base published it for a pass.
+
+🟢 **Two new named actors**, both carried as actors rather than verified rows: Chile's **CENIA**
+(National Center for Artificial Intelligence) and **ECLAC**, which published on public AI
+investment. 🟡 The **UNESCO IESALC + UNU-IAS** working paper — 200 HEIs, 19 countries, surveyed
+Aug-Oct 2025, already this shelf's source for the 87 %-use / 26 %-strategy gap — is now located
+as a **citable working paper** rather than a press summary. 🔴 Ednova (Chile) still unverified.
+🔴 The *"99 % of LATAM startups use AI"* / *"85 % integrate natively"* figures remain
+single-vendor-sourced and are **not carried**.
 
 #### 🟡 Pass 290 (`2026-10-18`) — Peru adds policy and no code, and MEXICO'S `SEP` RETURNED AN EXPLICIT NIL
 
@@ -3462,6 +3598,25 @@ region where the economics state it outright.
 
 
 ### Global
+
+#### 🟡 Pass 291 (`2026-10-18`) — the market-size spread WIDENED, which strengthens the warning rather than resolving it
+
+🔴 **Four vendor reports, four different numbers, and the spread is now wider than when this
+shelf first warned about it**: **$6.4 B (2025)**, **$10.6 B (2026)**, **$11.4 B (2026)**, with
+endpoints from **$57.2 B (2033)** to **$79.6 B (2034)** and CAGRs from **~31 %** upward.
+🔵 This shelf carries no single figure as authoritative and that posture is now **measured**,
+not cautious: two of these publishers disagree by **78 %** on the *current* year.
+
+🟢 **One genuinely cross-region corroboration.** An analyst rates institutional AI maturity
+**low — most institutions still in pilot**, from an instrument independent of **UNESCO
+IESALC**'s LATAM survey, which found **87 % use against 26 % with a strategy**. Two unrelated
+methods, same shape: **consumption is universal and governance is not**. 🔵 That gap is the one
+finding on this shelf that has held in all four regions, across six passes, from four
+independent sources — and it is the commercial premise under every pattern in
+[`compose/patterns.md`](../compose/patterns.md).
+
+🔴 **Declined again:** the *"66 % → 92 % student use"* progression (vendor summary, recurring
+for three passes) and *"North America = 36 % of the global market"* (aggregator, unsourced).
 
 > 🔵 **Why this subsection exists (`p289`).** The region vocabulary is closed and has **five**
 > values; this block carried four for roughly 170 passes, so `p383-region-heading-gate`

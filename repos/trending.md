@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 291) — the trending channel is 403 for the thirteenth pass, and the repo signal is a verification technique rather than a repository
+
+⏱️ **THIRTEENTH pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept.
+Evidence:
+[`submodule-pin-grant.2026-10-18-p291.tsv`](../evidence/submodule-pin-grant.2026-10-18-p291.tsv) ·
+[`p291-websearch.2026-10-18-p291.tsv`](../evidence/p291-websearch.2026-10-18-p291.tsv).
+
+🔴 **`github trending education AI 2026` — NIL for education, eighth consecutive.**
+`github.com/trending` answers **403** from here (re-measured), so the leg degrades to
+third-party trackers and opinion posts: gittrend.io, trendshift.io, a Substack guide, a
+LinkedIn post. Returned `rohitg00/ai-engineering-from-scratch`, "AI Engineering Hub", Karpathy
+zero-to-hero, D2L, `speedyapply/2026-AI-College-Jobs`. 🔴 Star figures in that set are
+self-reported social-post numbers — **none published**. **No education repository.**
+
+### 🟢 No new repository rows. What this pass adds is a way to verify ones already carried
+
+🟢 **`raw.githubusercontent.com` serves a payload at an arbitrary commit SHA**, not only at a
+branch. That is the whole of `ACTION p291`, and it closes a question `p290` left open:
+
+```sh
+PIN=$(git ls-tree HEAD <segment> | awk '{print $3}')        # the 160000 gitlink
+curl -fsS "https://raw.githubusercontent.com/<owner>/<repo>/$PIN/LICENSE"
+```
+
+🔴 `p290`'s rule read each submodule at `HEAD` and then checked `HEAD == pin`, which fails in
+the **restrictive** direction: a submodule whose `HEAD` has merely moved on gets
+`UNVERIFIED-AT-PIN` though its grant is readable — and the next reader re-probes at `HEAD` and
+publishes the licence at `HEAD`, which is **not** the one a `--recurse-submodules` clone lands
+on. 🟢 Run this pass over all seven `iblai` segments: **7/7 answered `200` at their pins**, one
+root `LICENSE` each, all `MIT`, all byte-identical (**1 063 B**, sha256₁₂ `f1269b7b2313`).
+
+🟢 **Now a standing gate**: [`gate-pin-grant`](../compose/code/p291-submodule-pin-grant/README.md),
+**31 controls**, in `make hooks`.
+
+### 🔴 What the new gate found in this shelf's own history, reported and NOT rewritten
+
+The gate's shelf arm flagged the **`org:iblai` vendor-estate listing** below (pass `243`
+lineage): it counts `iblai/claws` among **`9`/`9` `MIT`** repositories with the submodule
+boundary named nowhere near it. 🔴 That is exactly the defect `p290` warned about in prose —
+the superproject's `LICENSE` covers a **13-file shell**, not the estate's code.
+
+🔵 **It stays as written.** This shelf is append-only by design, and the gate is scoped to the
+**live pass section** — `p279-absence-claims`'s convention, adopted verbatim rather than
+invented a second time. History is the record of what each pass believed; the gate's job is
+that the *next* citation cannot repeat it.
+
+### 🟡 Licence datums from the verticals leg, recorded as directions and not promoted to rows
+
+From the result set, **not** payloads this pass read: `frappe/erpnext` **GPL-3.0**;
+`twentyhq/twenty` **BSL-1.1** (source-available, commercial/SaaS limits). 🔵 Both argue against
+the leg that surfaced them — twelve passes of searching for a permissive education ERP/CRM keep
+returning copyleft and source-available, which is a **structural** answer, not bad luck.
+
 ## 2026-10-18 (pass 290) — the trending channel is 403 for the twelfth pass, and the real repo signal is a 7-repository submodule fan-out behind one MIT file
 
 ⏱️ **Twelfth pass of `2026-10-18`.** Append-only — everything below this section is prior

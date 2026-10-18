@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 291 — the foundation layer gained NO NEW ROW, and what changed instead is that an existing row's grant is now verified across **all seven** of its repositories
+
+⏱️ **Thirteenth pass of `2026-10-18`.** Evidence:
+[`submodule-pin-grant.2026-10-18-p291.tsv`](../evidence/submodule-pin-grant.2026-10-18-p291.tsv) ·
+[`p291-websearch.2026-10-18-p291.tsv`](../evidence/p291-websearch.2026-10-18-p291.tsv).
+
+🔴 **No new foundational repository this pass, and the reason is the finding.** The mandated
+agent leg returned its **seventeenth** consecutive nil and the trending leg its **eighth** for
+education; both returned the same agent-engineering curricula they have returned since `p275`.
+🔵 A filler row would be worse than the gap: `p288` set that precedent and it holds.
+
+🟢 **What did change is verification depth, not breadth.** The `iblai` configuration set
+already on these shelves was carried on **2 of its 7** repositories. All seven are now read
+**at the commit the superproject pins** — `GRANTED-AT-PIN`, `MIT`, one root `LICENSE` each,
+every payload byte-identical (1 063 B, sha256₁₂ `f1269b7b2313`):
+
+| repository | pinned gitlink | files at the pin | grant |
+|---|---|---|---|
+| [`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) | `1a2d898bbd04` | 90 | 🟢 MIT |
+| [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) | `54ee9d91eecd` | 79 | 🟢 MIT |
+| [`iblai/enterprise-agents`](https://github.com/iblai/enterprise-agents) | `7f00879a9f57` | 77 | 🟢 MIT |
+| [`iblai/government-agents`](https://github.com/iblai/government-agents) | `fbf903250c96` | 77 | 🟢 MIT |
+| [`iblai/legal-agents`](https://github.com/iblai/legal-agents) | `b059cd452bf3` | 75 | 🟢 MIT |
+| [`iblai/financial-services-agents`](https://github.com/iblai/financial-services-agents) | `6ea18f015b1e` | 78 | 🟢 MIT |
+| [`iblai/medical-healthcare-agents`](https://github.com/iblai/medical-healthcare-agents) | `cd0d9fcfa523` | 76 | 🟢 MIT |
+
+🔵 **The technique is the transferable part, and it is cheap.** A submodule's grant does not
+have to be read at `HEAD` and then reconciled against the pin:
+`raw.githubusercontent.com/<owner>/<repo>/<pinned-sha>/LICENSE` serves the payload **at the
+pin**, which is the commit a `--recurse-submodules` clone actually lands on. 7/7 answered
+`200`. Any foundational row that is a submodule of something else can be verified this way,
+and [`gate-pin-grant`](../compose/code/p291-submodule-pin-grant/README.md) now requires it.
+
+🔴 **A standing caution this pass re-measured, unchanged:** `api.github.com` and `github.com`
+HTML both answer `403` from this environment. No star count on this shelf is first-hand.
+
 ## 🟢 Pass 290 — the early-warning layer gets its first two foundational rows, and one of them is a US STATE EDUCATION AGENCY's own code
 
 ⏱️ **Twelfth pass of `2026-10-18`.** Evidence:

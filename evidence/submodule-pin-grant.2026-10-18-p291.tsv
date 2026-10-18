@@ -1,0 +1,36 @@
+# p291 — 2026-10-18 — ACTION p291: A SUBMODULE GRANT IS VERIFIED **AT THE PIN**.
+#
+# 🔵 What p290 left and what this discharges.  p290 built the submodule-boundary axis on
+# TWO of seven segments and declared the other five UNPROBED — its own ranked item 1.
+# All seven are probed here, and the five it called "OUT-OF-SCOPE (not an education
+# segment)" are re-graded: see `evidence/segment-education-surface.2026-10-18-p291.tsv`.
+#
+# 🔴 AND THE RULE ITSELF IS CORRECTED.  p290 read each submodule at HEAD and then checked
+# HEAD == pin.  `raw.githubusercontent.com` serves a payload AT AN ARBITRARY COMMIT, so the
+# pinned SHA is directly readable and HEAD is not an input at all.  p290's rule reports
+# "cannot verify" for a submodule whose HEAD has merely moved on — wrong in the RESTRICTIVE
+# direction, which is the dangerous one: it invites a later pass to re-probe at HEAD and
+# publish the licence at HEAD rather than the licence the superproject pins.  A studio
+# running `git clone --recurse-submodules` receives THE PIN.
+#
+# 🟢 CHANNEL.  Every `payload_sha256_12` below is a payload THIS PASS read at the pinned SHA
+# over `raw.githubusercontent.com` (200 on 7/7).  The gitlinks were re-derived blind by
+# `git ls-tree HEAD` on a fresh clone and reproduce p290's seven exactly.
+# 🔴 `api.github.com` and `github.com` HTML both answer 403 from here; no star count is
+# first-hand and none is published.
+superproject	submodule_path	submodule_slug	pinned_gitlink_sha	read_at_ref	read_at_equals_pin	payload_path	payload_bytes	payload_sha256_12	family	licence_paths_in_tree	files_at_pin	verdict	declares_submodule_paths
+iblai/iblai-claw-agents	higher-education	iblai/higher-education-agents	1a2d898bbd04ffd60498bb23a4aa14e3eb5f8a66	1a2d898bbd04ffd60498bb23a4aa14e3eb5f8a66	🟢 YES	LICENSE	1063	f1269b7b2313	MIT	LICENSE	90	GRANTED-AT-PIN	higher-education,k-12,enterprise,government,legal,financial-services,medical-healthcare
+iblai/iblai-claw-agents	k-12	iblai/k-12-agents	54ee9d91eecd964fc100f4ec4bb2dbf500c82985	54ee9d91eecd964fc100f4ec4bb2dbf500c82985	🟢 YES	LICENSE	1063	f1269b7b2313	MIT	LICENSE	79	GRANTED-AT-PIN	higher-education,k-12,enterprise,government,legal,financial-services,medical-healthcare
+iblai/iblai-claw-agents	enterprise	iblai/enterprise-agents	7f00879a9f578c6c3ccf8f8ed9e61ce38badc74f	7f00879a9f578c6c3ccf8f8ed9e61ce38badc74f	🟢 YES	LICENSE	1063	f1269b7b2313	MIT	LICENSE	77	GRANTED-AT-PIN	higher-education,k-12,enterprise,government,legal,financial-services,medical-healthcare
+iblai/iblai-claw-agents	government	iblai/government-agents	fbf903250c96b1b2683786f746a03ff942f014c5	fbf903250c96b1b2683786f746a03ff942f014c5	🟢 YES	LICENSE	1063	f1269b7b2313	MIT	LICENSE	77	GRANTED-AT-PIN	higher-education,k-12,enterprise,government,legal,financial-services,medical-healthcare
+iblai/iblai-claw-agents	legal	iblai/legal-agents	b059cd452bf3e2bd86ac947821ba6463d54a02d1	b059cd452bf3e2bd86ac947821ba6463d54a02d1	🟢 YES	LICENSE	1063	f1269b7b2313	MIT	LICENSE	75	GRANTED-AT-PIN	higher-education,k-12,enterprise,government,legal,financial-services,medical-healthcare
+iblai/iblai-claw-agents	financial-services	iblai/financial-services-agents	6ea18f015b1efa60a040d4cd68c93ceaff23abb5	6ea18f015b1efa60a040d4cd68c93ceaff23abb5	🟢 YES	LICENSE	1063	f1269b7b2313	MIT	LICENSE	78	GRANTED-AT-PIN	higher-education,k-12,enterprise,government,legal,financial-services,medical-healthcare
+iblai/iblai-claw-agents	medical-healthcare	iblai/medical-healthcare-agents	cd0d9fcfa523ff2466fce3e11eb96ac86814f461	cd0d9fcfa523ff2466fce3e11eb96ac86814f461	🟢 YES	LICENSE	1063	f1269b7b2313	MIT	LICENSE	76	GRANTED-AT-PIN	higher-education,k-12,enterprise,government,legal,financial-services,medical-healthcare
+#
+# 🟢 RESULT: 7 of 7 GRANTED-AT-PIN.  One licence path per segment, at the root (`ROOT_OR_SOLE`
+# holds on all seven), and all seven payloads are BYTE-IDENTICAL to each other and to the
+# superproject's — 1 063 B, sha256_12 `f1269b7b2313`, `MIT License` / `Copyright (c) 2026 ibl.ai`.
+# 🟢 The superproject's own census reproduces p290 blind: HEAD `acbd32b4a938`, 13 root entries,
+# 7 of them `160000 commit`, and `.gitmodules` declares exactly those 7 paths.
+# 🟢 Segment sizes at the pin: 95 agent directories and 76 skill directories in total —
+# p290's "95-agent, 76-tool-skill" count, re-derived independently and reproduced exactly.

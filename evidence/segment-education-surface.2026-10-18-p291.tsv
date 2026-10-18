@@ -1,0 +1,33 @@
+# p291 — 2026-10-18 — THE FIVE SEGMENTS p290 CALLED "NOT AN EDUCATION SEGMENT" EACH CARRY ONE.
+#
+# 🔵 Why this was measured.  `p290` probed 2 of 7 `iblai` segments and wrote the other five off
+# as `OUT-OF-SCOPE (not an education segment; NOT probed)`.  The scope judgement was made from
+# the SEGMENT NAME — enterprise, government, legal, financial-services, medical-healthcare —
+# and never from the agent list inside.  p291 read the agent list.
+#
+# 🔴 THE SCOPE JUDGEMENT WAS WRONG.  All five ship a learning-and-development agent, and two of
+# them track a REGULATED PROFESSIONAL CREDENTIAL (CLE for lawyers, FINRA continuing education).
+# Under EU AI Act Annex III(3) the high-risk education category is not "schools": it covers
+# access/admission/assignment to educational AND **VOCATIONAL** training institutions, and the
+# evaluation of learning outcomes including where those outcomes steer a learner's path.
+# 🟡 POSTURE (`p223`): the Annex III(3) wording here is ATTRIBUTED to a conference reproduction
+# of the text and to secondary commentary, NOT read from EUR-Lex — `p289` measured the
+# authoritative hosts as `POLICY-REFUSED` from this environment, and eur-lex was not retried.
+#
+# 🟢 CHANNEL: every row read first-hand from the segment's own tree AT THE PINNED GITLINK SHA
+# (see `submodule-pin-grant.2026-10-18-p291.tsv`), not at HEAD.
+segment	pinned_at	nominal_class_p290	agents	skills	ld_agents_core	ld_agent_names	regulated_credential	agents_with_human_decision_guard	guard_rate
+iblai/higher-education-agents	1a2d898bbd04	EDUCATION	17	10	-	(the segment IS education)	-	3	18%
+iblai/k-12-agents	54ee9d91eecd	EDUCATION	13	12	-	(the segment IS education)	-	4	31%
+iblai/enterprise-agents	7f00879a9f57	🔴 "not an education segment"	13	12	1	training-agent ("Learning Coach": employee development paths, compliance training deadlines, skill gap analysis, course recommendations)	no	1	8%
+iblai/government-agents	fbf903250c96	🔴 "not an education segment"	13	10	1	employee-training-agent (workforce development, mandatory training compliance, upskilling)	no	1	8%
+iblai/legal-agents	b059cd452bf3	🔴 "not an education segment"	13	11	1	training-agent ("Training & CLE": CLE credit tracking, associate development, professional learning coordination)	🔴 YES — CLE	0	0%
+iblai/financial-services-agents	6ea18f015b1e	🔴 "not an education segment"	13	11	1	employee-training-agent ("Training Coordinator": compliance certification tracking, FINRA continuing education, staff onboarding curricula)	🔴 YES — FINRA CE	2	15%
+iblai/medical-healthcare-agents	cd0d9fcfa523	🔴 "not an education segment"	13	10	2	compliance-training-agent (HIPAA training, certification status); patient-education-agent (patient-facing educational materials at a health-literacy level)	no	1	8%
+#
+# 🟢 TOTALS, re-derived independently and reproducing p290's headline exactly: 95 agents, 76 skills.
+# 🔴 6 core L&D agents live in the five segments p290 excluded — one in EVERY one of the five.
+#    1 of those 6 carries any human-decision guard.  (A wider band that also counts employee
+#    orientation and clinician credentialing gives 10 agents, still 1 guarded.)
+# 🔴 GUARD DENSITY: 7/30 inside the two education segments (23%), 5/65 outside them (8%).
+#    The agents in the HIGH-RISK vocational-training bucket are the ones WITHOUT the guard.

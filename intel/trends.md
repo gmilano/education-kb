@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 291 — THE SUPPLY-SIDE GUARD IS REAL, IT DOES NOT SPEAK THE REGULATOR'S LANGUAGE, AND IT IS THINNEST EXACTLY WHERE THE REGULATION IS WIDEST
+
+⏱️ `2026-10-18`, thirteenth pass. Evidence:
+[`guard-vocabulary.2026-10-18-p291.tsv`](../evidence/guard-vocabulary.2026-10-18-p291.tsv) ·
+[`segment-education-surface.2026-10-18-p291.tsv`](../evidence/segment-education-surface.2026-10-18-p291.tsv) ·
+[`p291-websearch.2026-10-18-p291.tsv`](../evidence/p291-websearch.2026-10-18-p291.tsv).
+
+### 🟡 `T-p291a` — the guard and the regulation use different words, and the gap is measurable
+
+🟢 **`T-p290a` stands**: the human-checkpoint requirement has a supply side, shipping as MIT
+prompt configuration. `p291` measured the whole corpus rather than the three agents `p290`
+quoted, and the trend survives with one correction attached.
+
+🔴 **The corpus does not contain the regulator's phrase.** Across **95 agents**, *"sole basis"*
+appears **once**, in a note about CPT code selection — not a guard. The guard itself is present
+in **12** agents, under four other phrasings:
+
+| what the payloads say | agents of 95 |
+|---|---|
+| *"...unilaterally"* | 3 |
+| *"a hypothesis to be confirmed, not a verdict"* / *"observations, not conclusions"* | 3 |
+| *"support human decision-making"* / *"input for the human reader"* | 4 |
+| *"flag for human review"* | 5 |
+| *"not by any single professional or AI tool"* / *"the full team"* | 2 |
+| *"never make eligibility determinations"* / *"do not independently authorize"* | 3 |
+| 🔴 **the regulator's own *"sole basis"*** | **1 — and it is a false positive** |
+
+🔵 **Why this is a trend and not a lexicography note.** The compliance market forming around
+`T-p288a` sells *evidence that a human checkpoint exists*. The checkpoint is being written by
+engineers in engineers' words and audited by reviewers with regulators' keyword lists. A sweep
+of this MIT corpus for AI-Act vocabulary scores **one hit and it is wrong**, while 12 real
+guards sit untouched. 🟢 **That mismatch is a billable translation layer** — a guard-clause
+taxonomy mapping payload language to Annex III limbs — and nothing on these shelves supplies it.
+
+### 🔴 `T-p291b` — the high-risk category is wider than the segment labels, and the guards are thinnest in the wider part
+
+🔴 **EU AI Act Annex III(3) is not "schools".** Limb (a) covers access, admission or assignment
+to educational **and vocational** training institutions; limb (b) the evaluation of learning
+outcomes, including where they steer a learner's path. **One limb suffices.** 🟡 Posture:
+ATTRIBUTED — a conference reproduction of the text plus commentary; EUR-Lex was not reached.
+
+🔴 **Measured against that, the corporate L&D layer is in-scope and under-guarded.** The five
+`iblai` segments labelled *not education* each ship a learning agent — and two track a
+**regulated professional credential** (CLE for lawyers, FINRA continuing education):
+
+| | education-labelled segments | the five others |
+|---|---|---|
+| agents | 30 | 65 |
+| carrying a human-decision guard | 7 (**23 %**) | 5 (**8 %**) |
+| L&D agents among them | — | 6, of which **1** is guarded |
+
+🔵 **The direction for a studio:** the guard discipline that `p290` found in the admissions and
+special-education agents has **not** travelled to the training agents one directory over, even
+though the Act's education limb reaches both. The remediation is small and identical in all
+four regions — which is what makes it a product rather than an engagement.
+
+### 🟡 `T-p291c` — two ASEAN neighbours, same year, opposite mandate levels
+
+🟢 A contrast worth recording because it is the kind of thing a regional engagement is priced
+on. 🇻🇳 **Vietnam** made AI **compulsory** across grades 1-12 from the 2026-2027 school year —
+Decision `3439/QĐ-BGDĐT`, 12 compulsory periods a year (`p290`). 🇹🇭 **Thailand** has added AI
+content at upper-primary, lower-secondary and upper-secondary and it remains **optional**, with
+compulsory status the stated *next* goal; OBEC's curriculum bureau leads, and the national AI
+Strategy and Action Plan runs 2022-2027 under a PM-chaired committee.
+
+🔴 **Neither publishes code or licensed curriculum data.** Vietnam's likeliest non-ministry
+publisher, **STEAM for Vietnam**, was probed directly this pass: no GitHub organisation, no
+repository, no licence — its curriculum ships as **Scratch projects**, shareable but not
+vendorable. 🟡 All of the above is ATTRIBUTED to press and ministry summaries, not primary text.
+
 ## 🟢 Pass 290 — THE GOVERNANCE TREND HAS A SUPPLY SIDE NOW, AND IT ARRIVED AS CONFIGURATION RATHER THAN CODE
 
 ⏱️ `2026-10-18`, twelfth pass. Evidence:

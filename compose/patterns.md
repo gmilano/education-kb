@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 291 — the licence boundary, corrected and completed; and one recipe for the part of the AI Act that the segment labels hide
+
+⏱️ **Thirteenth pass of `2026-10-18`.** Evidence:
+[`submodule-pin-grant.2026-10-18-p291.tsv`](../evidence/submodule-pin-grant.2026-10-18-p291.tsv) ·
+[`segment-education-surface.2026-10-18-p291.tsv`](../evidence/segment-education-surface.2026-10-18-p291.tsv) ·
+[`guard-vocabulary.2026-10-18-p291.tsv`](../evidence/guard-vocabulary.2026-10-18-p291.tsv).
+
+### 🟢 The licence boundary for every recipe that vendors `iblai` configurations — now all seven, read at the pin
+
+🔵 **Supersedes the `p290` table below.** That table asked *"HEAD read = gitlink pinned?"* and
+could answer for two segments. The question was the wrong one: `raw.githubusercontent.com`
+serves a payload **at any commit**, so the grant can be read **at the pin itself** and `HEAD`
+never enters. All seven, read that way this pass:
+
+| what you clone | pinned gitlink | grant read **at that commit** |
+|---|---|---|
+| [`iblai/higher-education-agents`](https://github.com/iblai/higher-education-agents) | `1a2d898bbd04` | 🟢 **MIT**, 1 063 B, sha256₁₂ `f1269b7b2313` |
+| [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) | `54ee9d91eecd` | 🟢 **MIT**, 1 063 B, sha256₁₂ `f1269b7b2313` |
+| [`iblai/enterprise-agents`](https://github.com/iblai/enterprise-agents) | `7f00879a9f57` | 🟢 **MIT**, 1 063 B, sha256₁₂ `f1269b7b2313` |
+| [`iblai/government-agents`](https://github.com/iblai/government-agents) | `fbf903250c96` | 🟢 **MIT**, 1 063 B, sha256₁₂ `f1269b7b2313` |
+| [`iblai/legal-agents`](https://github.com/iblai/legal-agents) | `b059cd452bf3` | 🟢 **MIT**, 1 063 B, sha256₁₂ `f1269b7b2313` |
+| [`iblai/financial-services-agents`](https://github.com/iblai/financial-services-agents) | `6ea18f015b1e` | 🟢 **MIT**, 1 063 B, sha256₁₂ `f1269b7b2313` |
+| [`iblai/medical-healthcare-agents`](https://github.com/iblai/medical-healthcare-agents) | `cd0d9fcfa523` | 🟢 **MIT**, 1 063 B, sha256₁₂ `f1269b7b2313` |
+
+🔴 **Quote the submodule, never the superproject** — that still holds, and it is now a gate
+([`gate-pin-grant`](code/p291-submodule-pin-grant/README.md), 31 controls in `make hooks`).
+🟢 **But the verification recipe changes**, and it is two lines:
+
+```sh
+# the grant a `git clone --recurse-submodules` ACTUALLY lands on:
+PIN=$(git ls-tree HEAD <segment> | awk '{print $3}')        # the 160000 gitlink
+curl -fsS "https://raw.githubusercontent.com/<owner>/<repo>/$PIN/LICENSE"
+```
+
+🔵 Do **not** read the submodule at `HEAD` and then check `HEAD == pin`. If `HEAD` has moved,
+that check reports *"cannot verify"* for a grant that is sitting there readable — and the next
+reader re-probes at `HEAD` and ships the licence at `HEAD`, which is not the one pinned.
+
+## P48 — The vocational-training guard retrofit: the Annex III work that nobody labels "education" *(new in pass 291)*
+
+**Who it is for.** Any client running corporate L&D, professional certification or
+continuing-education systems in the EU — law firms (CLE), financial services (FINRA CE),
+healthcare (HIPAA/credentialing), government workforce development. 🔴 **None of them calls
+itself an education buyer**, and all of them are inside the Act's education limb.
+
+**The premise, measured rather than assumed.** EU AI Act **Annex III(3)** limb (a) covers
+access, admission or assignment to educational **and vocational** training institutions; limb
+(b) the evaluation of learning outcomes including where they steer a learner's path. **One
+limb suffices.** 🟡 ATTRIBUTED — a conference reproduction plus commentary; EUR-Lex is
+unreachable from here (`p289`). Verify against the Official Journal before a client relies on it.
+
+🔴 **The measured gap, from the one MIT corpus this base has read end to end:**
+
+| | education-labelled segments | the five "non-education" segments |
+|---|---|---|
+| agents | 30 | 65 |
+| with a human-decision guard | 7 (**23 %**) | 5 (**8 %**) |
+| L&D agents | — | **6**, of which **1** guarded |
+
+### The build
+
+1. **Inventory the learning surface, not the org chart.** Walk every agent, workflow and model
+   and keep the ones that *recommend a learning path, score a learner, track a credential or
+   gate a certification*. Precedent: in `iblai`'s set those live in `enterprise/training-agent`,
+   `government/employee-training-agent`, `legal/training-agent` (CLE),
+   `financial-services/employee-training-agent` (FINRA CE),
+   `medical-healthcare/compliance-training-agent`. **The segment label will not find them.**
+2. **Map each to an Annex III(3) limb**, and record the ones that match none — the exclusions
+   are what an auditor will probe first.
+3. **Retrofit the guard clause**, copying the language that is already MIT and already written:
+   *"Never issue a final … decision unilaterally; always present findings as input for the
+   human reader"* (`higher-education/application-reader-agent`) ·
+   *"Treat every risk flag as a hypothesis to be confirmed, not a verdict"*
+   (`higher-education/retention-agent`) · *"decisions are made by the full team … not by any
+   single professional or AI tool"* (`k-12/special-education-agent`). 🟢 All three are
+   `GRANTED-AT-PIN` MIT: copy them, do not draft them.
+4. **Build the translation table.** 🔴 The corpus contains the regulator's phrase *"sole basis"*
+   **once in 95 agents**, and that occurrence is a CPT-coding note, not a guard. A keyword
+   audit scores one hit and it is a false positive, while 12 real guards go unseen. Ship a
+   mapping from payload language → Annex III limb so the engineer's words and the auditor's
+   list meet. **This is the deliverable nothing on these shelves supplies.**
+5. **Terminate in the evidence store** — the same append-only record of *who decided what,
+   shown what, under which rubric version* that [`P45`](#p45--the-admissions-reader-that-is-structurally-incapable-of-admitting-anyone-new-in-pass-290),
+   `P46` and `P47` all terminate in. 🔵 It is still missing, it is still the billable half, and
+   `P48` makes **four** recipes that need the identical component.
+
+**Shape.** 🔵 Steps 1-2 are a 2-3 week audit that is sellable on its own and produces the
+inventory the rest depends on. Steps 3-4 are ~4 weeks. Step 5 is the build, and it is the same
+build in all four regions. 🔴 **Scope boundary:** step 3 changes what an agent *says* it will
+not do. That is a prompt-level control, not an enforced one — do not sell it as enforcement.
+Enforcement is step 5's store plus the client's own workflow gate.
+
 ## 🟢 Pass 290 — three recipes whose compliance layer is a DEPENDENCY instead of a deliverable, and one evidence store that is neither
 
 ⏱️ **Twelfth pass of `2026-10-18`.** Evidence:

@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 291) — the mandated nil is SEVENTEEN deep, and the week's agent story is that five segments labelled "not education" each ship a training agent
+
+⏱️ **THIRTEENTH pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept,
+as `p232`-`p290` kept theirs. Evidence:
+[`segment-education-surface.2026-10-18-p291.tsv`](../evidence/segment-education-surface.2026-10-18-p291.tsv) ·
+[`guard-vocabulary.2026-10-18-p291.tsv`](../evidence/guard-vocabulary.2026-10-18-p291.tsv) ·
+[`submodule-pin-grant.2026-10-18-p291.tsv`](../evidence/submodule-pin-grant.2026-10-18-p291.tsv) ·
+[`p291-websearch.2026-10-18-p291.tsv`](../evidence/p291-websearch.2026-10-18-p291.tsv).
+
+🔴 **`top open source AI agents education 2026 github MIT` — SEVENTEENTH consecutive nil.**
+Identical population to every pass since `p275`: `microsoft/ai-agents-for-beginners`,
+`pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`,
+`avinash201199/free-ai-agents-resources`, plus the general-purpose set. Agent-engineering
+**curricula**, not learner-facing education agents. One source in this week's set warns on its
+own that some entries it calls open source are **source-available** — the same licence trap
+`p288` recorded. The nil is written down because an undeclared nil looks exactly like coverage.
+
+### 🟢 No new agent rows — five *existing* rows got their grant, and the segment labels got refuted
+
+🟢 **The five remaining `iblai` segments are read at the commit the superproject pins** —
+`enterprise`, `government`, `legal`, `financial-services`, `medical-healthcare`. All five:
+`MIT`, root `LICENSE`, **1 063 B**, sha256₁₂ `f1269b7b2313`, byte-identical to the two already
+carried. **7 of 7 `GRANTED-AT-PIN`.** The superproject's gitlinks, its 13-file tree, and the
+**95 agents / 76 tool skills** total were all re-derived blind and reproduce `p290` exactly.
+
+🔴 **The week's actual finding is what is inside them.** `p290` wrote these five off as *"not
+an education segment"* from their **names**. Every one ships a learning-and-development agent:
+
+| segment | the learning agent | regulated credential |
+|---|---|---|
+| enterprise | `training-agent` — *"Learning Coach"*, skill-gap analysis, course recommendations | no |
+| government | `employee-training-agent` — workforce development, mandatory training compliance | no |
+| legal | `training-agent` — *"Training & CLE"*, **CLE credit tracking** | 🔴 **CLE** |
+| financial-services | `employee-training-agent` — **FINRA continuing education**, certification tracking | 🔴 **FINRA CE** |
+| medical-healthcare | `compliance-training-agent` (HIPAA) · `patient-education-agent` | no |
+
+🔵 **EU AI Act Annex III(3)** reaches educational **and vocational** training, and evaluation of
+learning outcomes; one limb suffices. 🔴 **Guard density runs backwards against that**: 23 % of
+agents inside the education-labelled segments carry a human-decision guard, **8 %** outside —
+and **1 of the 6** L&D agents above. 🟡 Annex III wording ATTRIBUTED, not read from EUR-Lex.
+
+### 🟡 A correction to last pass's wording, and a reusable lesson in it
+
+`p290` wrote that three agents *"refuse the **sole-basis** act in their own text"*. 🟢 The
+substance holds — re-read first-hand, all three carry a guard. 🔴 The phrase does not: *"sole
+basis"* is the **regulator's** word and occurs **once in 95 agents**, in a CPT-coding note that
+is not a guard at all. The payloads say *"unilaterally"*, *"not a verdict"*, *"not by any
+single professional or AI tool"*, *"never make eligibility determinations"*.
+🔵 **A compliance grep for the Act's vocabulary over this corpus scores one hit and it is
+wrong, while 12 real guards go unseen.** Recorded so a later pass does not run that grep,
+score zero, and publish *"no human-oversight guard"*.
+
+### 🔵 Channel note, re-measured this pass
+
+🔴 `api.github.com` and `github.com` HTML both answer **403**; **no star count below is
+first-hand and none is published.** 🟢 `raw.githubusercontent.com` answers `200` — **including
+at an arbitrary commit SHA**, which is what made reading all seven grants *at their pins*
+possible and is the technique `ACTION p291` is built on.
+
 ## 2026-10-18 (pass 290) — the mandated nil is SIXTEEN deep, and the week's agent news is 95 MIT agents that live in SEVEN repositories behind one licence file
 
 ⏱️ **Twelfth pass of `2026-10-18`.** Append-only — everything below this section is prior

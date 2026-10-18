@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 291 — the permissive education ERP/CRM leg is NIL for the TWELFTH consecutive pass, and this time the result set refuted the leg's own premise
+
+⏱️ **Thirteenth pass of `2026-10-18`.** Evidence:
+[`p291-websearch.2026-10-18-p291.tsv`](../evidence/p291-websearch.2026-10-18-p291.tsv).
+
+🔴 **`open source platform education ERP CRM MIT Apache` — no new permissive platform, twelfth
+pass running.** The result set was once more openeducat.org's own multilingual glossary plus
+generic ERP/CRM listicles.
+
+🟢 **Two licence datums are worth keeping precisely because they argue against the leg:**
+
+| candidate the leg surfaced | licence | permissive? |
+|---|---|---|
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `GPL-3.0` | 🔴 no — copyleft |
+| [`twentyhq/twenty`](https://github.com/twentyhq/twenty) | `BSL-1.1` | 🔴 no — source-available, with commercial/SaaS limits |
+| OpenEduCat *(already carried)* | `LGPL-3.0` | 🔴 no — and the **vendor's own page** says so |
+
+🔵 **Read together with the eleven passes before it, that is a structural answer rather than a
+run of bad luck:** the education ERP/CRM layer that exists is **copyleft or source-available**,
+and the permissive layer a studio can build on sits *above* it — adapters, skills and agent
+configurations against platforms the school already runs, which is where `p290`'s skill-adapter
+finding and this pass's seven `MIT` segments both landed.
+
+🟡 Licences above are **as reported by the result set**, not payloads this pass read. They are
+recorded as a direction for the next verticals leg, not promoted to verified rows.
+
 ## 🟢 Pass 290 — the vertical that matters this pass is not a platform, it is the SKILL ADAPTER LAYER to the platforms a school already runs
 
 ⏱️ **Twelfth pass of `2026-10-18`.** Evidence:
