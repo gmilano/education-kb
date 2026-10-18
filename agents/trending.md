@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 283) — the agent channel returns nothing for the ninth pass running, and the shelf can now prove no two of its rows are one repository
+
+⏱️ **Fifth pass of `2026-10-18`.** Append-only — everything below this section is prior history and
+is not rewritten. Evidence:
+[`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv) ·
+[`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv).
+
+### 🟡 Nine passes, no new agent — and the reason is now stated precisely
+
+Both global agent legs ran. What came back: `OpenHands`, `MetaGPT`, `CrewAI`, `LangGraph`,
+`NousResearch/hermes-agent`, two `awesome-ai-agents-2026` lists,
+`ashishpatel26/500-AI-Agents-Projects`, the Hugging Face Agents Course, `karpathy/nanochat` and
+`rohitg00/ai-engineering-from-scratch` (CARRIED since `p279`).
+
+🔵 **The precise diagnosis, which nine passes now support:** in this channel *"educational"* names
+a repository that **teaches machine learning**, not one that **serves a learner**. `nanochat` and
+`ai-engineering-from-scratch` are curricula for engineers; `500-AI-Agents-Projects` is a use-case
+catalogue. None is an education-sector agent. 🔴 One result said the education angle was thin
+outright. **This is a property of the supply channel, not a dry spell**, and a tenth pass through
+the same four queries should not be expected to change it.
+
+### 🟢 What this shelf gained instead: identity, proven and standing
+
+| measure | value |
+|---|---|
+| live addresses censused (`git ls-remote`, all three shelves) | **138** |
+| distinct HEADs | **138** |
+| alias pairs remaining | **0** |
+| unreachable | **0** |
+
+🔵 `p282` censused 27 addresses by hand and found exactly one alias pair. 🟢 `p283` censused **138**
+with a gate that is now in `make hooks`, and the answer is that **p282's pair was the only one**.
+🔴 It also re-confirms `p282`'s split channel from the other side: **git answered 138 of 138** while
+`github.com` pages and `api.github.com` stay `403`. Grants and identity are current; **the star
+column on every shelf remains frozen at `2026-10-17`**.
+
 ## 2026-10-18 (pass 282) — the shelf recommends TWO repositories that are ONE, and the gate that should have caught this pass's stale claim could not spell it
 
 ⏱️ **Fourth pass of `2026-10-18`.** Append-only — everything below this section is prior history and

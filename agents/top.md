@@ -111,6 +111,59 @@ Real projects, real code, but the licence changes the engagement. None of these 
 | [muskvdc/EduTwin-Africa](https://github.com/muskvdc/EduTwin-Africa) | LIVE, **PRE-LICENCE — the placeholder is still in the README** *(new in pass 269)* | Curriculum-aware tutor over **South African** curriculum knowledge, **Grades 8–12**: RAG, adaptive learning, bounded multi-agent collaboration, ReAct tools, guardrails. 0★ / 0 forks / 7 commits, default ref `main`. **No payload on 19 of 19 paths, no `license` field in `pyproject.toml`**, and the README says, in the author's own words: *"Add the project's chosen license here before publishing if a specific open-source license is required."* 🔵 **This is a state this shelf has not carried before.** `Athena` and `autoGrader-frontend` are *silent*; this one is **explicitly not yet licensed**. The practical difference is that it is the one row here where asking costs nothing and might work — the author has written down that they know it is missing. Until then: all rights reserved. |
 | [Valexxy/edunaija-os](https://github.com/Valexxy/edunaija-os) | LIVE, **no grant on any channel** *(new in pass 269)* | *"A security-conscious starter codebase for a Nigerian-first learning platform"*; `package.json` name is `nigeria-learning-platform`. 0★ / 0 forks / 6 commits. No payload on 19 of 19 paths and **no `license` field in `package.json`** — the two channels that could have carried a grant both empty. Names **no exam board and no institution**. 🔴 **Cite it carefully: it is NOT the EduNaija AI Tutor of the AfricaNLP 2026 paper** (that system is a five-agent LangChain + FAISS RAG tutor with English/Yoruba/Hausa/Igbo support; this is a starter codebase with a similar name). **Two different artefacts, one name** — see the trends file. |
 
+## 🟢 Pass 283 — every live address on this shelf is now PROVEN to be a distinct repository, and the proof is a standing gate
+
+⏱️ `2026-10-18`, fifth pass. Evidence: [`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv) · [`ladder-case-audit.2026-10-18-p283.tsv`](../evidence/ladder-case-audit.2026-10-18-p283.tsv) · [`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv).
+
+🔴 `p282` found this shelf recommending **one repository as two rows** (`ls1intum/Iris` ==
+`ls1intum/Pyris`), proved the remedy **by hand**, and left it out of the Makefile — the failure
+mode this base's own Makefile header opens with, *"a working gate that stayed a one-off"*. `p283`
+registered it first for that reason. **It is now `make gate-identity`, inside `make hooks`.**
+
+🟢 **The online half bounds the whole question, and far wider than `p282` did.** One
+`git ls-remote` per **live** address across all three shelves:
+
+| measure | p282 (by hand) | 🟢 p283 (standing) |
+|---|---|---|
+| addresses censused | 27 (build-on tier only) | **138** (all three shelves) |
+| distinct repositories | 26 | **138** |
+| alias pairs | 1 | **0 remaining** |
+| unreachable | — | **0** |
+
+🔵 **138 of 138 resolve, and 138 distinct HEADs means no two live rows are the same repository.**
+The duplication question is closed, not carried. 🔴 It also sharpens `p282`'s channel finding: the
+**git** channel is fully open (138/138) while `github.com` pages and `api.github.com` stay `403`,
+so **grants and identity are current and only the star column is frozen**.
+
+### 🔴 The gate found a live residue on its first run — in a row `p282` did not correct
+
+`p282` corrected `agents/top.md`, `compose/patterns.md` and `verticals/solutions.md`.
+🔴 **[`repos/foundations.md`](../repos/foundations.md) was missed**: the `ls1intum/Artemis` row still
+presented *"**Iris** (LLM tutor, `ls1intum/Iris`, MIT), **Pyris** (the LLM microservice behind it,
+`ls1intum/Pyris`, MIT)"* — the two halves of one repository, inside **one cell**, as two distinct
+MIT subsystems. 🟢 Corrected. 🔵 **A hand-correction that spans four files misses one; that is the
+argument for the gate, made by the gate, on the pass that built it.**
+
+### 🔴 The first draft of the gate was wrong, and the real corpus is what caught it
+
+🔴 Scoped to the **file**, it produced **15 findings on a green shelf** — every one a row in this
+file's own `## Agents by function` **index** pointing at a repository the build-on tier also lists.
+That is a cross-reference, which is what an index is *for*. 🟢 **The unit is the TABLE, not the
+file**, and the 15 false positives are pinned as controls `C4`/`C5`.
+
+🔵 The one subtlety worth stating, because it constrains every future version: `p282` withdrew the
+`Iris` row **in place**, struck through, carrying its own evidence. A gate that fires on a published
+correction can never be green without deleting the forensic record. **A row is live unless its first
+cell is struck through or the row says `WITHDRAWN`** — controls `C2`/`C3`.
+
+### 🟡 Ninth consecutive pass with no new agent
+
+All four global legs ran. They returned general-purpose coding and orchestration agents
+(`OpenHands`, `MetaGPT`, `CrewAI`, `LangGraph`), two `awesome-*` lists, a Hugging Face course and
+`karpathy/nanochat`. 🔵 **"Educational" in this channel means *teaching ML*, not *serving a
+learner*** — and one result said the education angle was thin outright. **Nine passes makes this a
+property of the channel, not a dry spell.**
+
 ## 🔴 Pass 282 correction to the pass-268 note below — "Iris and Pyris" are ONE repository, and it DOES serve a README
 
 `p268` probed these as two rows and recorded a defect: *"neither repository serves a README"*.

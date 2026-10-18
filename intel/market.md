@@ -10,6 +10,35 @@ updated: 2026-10-18
 > Sourced from web research on 2026-10-17. Vendor-sourced figures are marked; they are
 > carried because they are the only numbers available, not because they are reliable.
 
+## 🟢 Pass 283 — the full eight-leg battery ran and moved not one figure, and THAT is the measurement
+
+⏱️ `2026-10-18`, fifth pass. Evidence: [`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv) · [`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv).
+
+🔵 Four global legs and **all four regional legs** ran. Every substantive fact returned was already
+on this shelf, and — this is the part worth recording — **every figure matched to the digit**. This
+was checked as a drift test, not asserted:
+
+| region | what the channel returned this pass | verdict |
+|---|---|---|
+| North America | 134 bills / 31 states · `H.R. 8747` · Canada *AI for All* · NA 36 % share · AFT National Academy for AI Instruction · AASA student framework | 🟢 **held, no drift** |
+| EMEA | Digital Omnibus `2027-12-02` / `2028-08-02` · Annex III education high-risk · EdTech Hub MENA tiering (KSA/UAE/Qatar vs Egypt/Morocco/Jordan) · Europe `$2.64 B` · MEA `$0.56 B` | 🟢 **held, no drift** |
+| APAC | Korea `AI Basic Act` in force `2026-01-22`, education in the high-impact class · Vietnam in force `2026-03-01`, education transition to `2027-09` · Ipsos Education Monitor 2026 · seven sovereign models | 🟢 **held, no drift** |
+| LATAM | UNESCO IESALC **87 % / 74 % / 26 %** over 200 institutions in 19 countries · LAC Observatory `2026-04-14` · Brazil **53 % / 22 %** · Argentina **75 %** vs **42 %** by SES · Uruguay CoE · `CONPES 4144` · CONALEP/DGETI pilot | 🟢 **held, no drift** |
+
+🔴 **An eight-for-eight nil is not a quiet pass; it is a property of the channel.** `p281` reported
+the battery corroborating everything it touched, `p282` the same, and `p283` makes it three
+consecutive full batteries returning **no new regional fact and no changed figure**. 🔵 The
+consequence for a studio: **these numbers are stable enough to quote in a proposal**, and the
+remaining uncertainty is not staleness but **provenance** — most are vendor-sourced, which this
+file marks per row and which `T61` (primary texts unreachable from this sandbox) still blocks.
+
+🔴 **Africa re-confirmed empty for the fourth time.** The EMEA leg's only Africa content was the
+EdTech Hub capacity-building tier (Egypt, Morocco, Jordan). **No open-source education AI project
+for Africa or the Middle East** was returned, again.
+
+🔵 Opportunities are unchanged and stay under the single
+[`## Opportunities by region`](#opportunities-by-region) heading below, one `###` per region.
+
 ## Market size — and a warning about these numbers
 
 | Figure | Value | Source grade |

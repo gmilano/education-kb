@@ -18,6 +18,22 @@ updated: 2026-10-18
 > (its source is AGPL-3.0, 78,765 commits), and adds a European public-sector school platform, an
 > e-testing platform and an offline assessment platform.
 
+## 🟢 Pass 283 — the platform shelf is unchanged, and that is now a measured statement rather than an absence of news
+
+⏱️ `2026-10-18`, fifth pass. Evidence: [`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv) · [`ladder-case-audit.2026-10-18-p283.tsv`](../evidence/ladder-case-audit.2026-10-18-p283.tsv) · [`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv).
+
+🔵 The global vertical leg returned **OpenEduCat, Open edX, Canvas, Moodle, Sakai, OpenOLAT,
+Forma LMS, Chamilo and ILIAS**. 🟢 **All nine are already on this shelf.** The two licence
+disagreements the sources carried — Sakai as *Apache-2.0* vs *ECL-2.0*, Open edX as *AGPL-3.0* vs
+*"Apache-2.0 for some components"* — are **both already adjudicated here from payload**, which is
+the shelf doing its job: a secondary source's confusion is not new information.
+
+🟢 **Identity verified, not assumed.** Every live address on this shelf was resolved with
+`git ls-remote` this pass as part of the 138-address census: **138 distinct HEADs, 0 collisions,
+0 unreachable.** The Sunbird stack's `ls1intum/Pyris` entry and the diagram note explaining that
+`ls1intum/Iris` is an alias of it both survive the new `make gate-identity` unchanged — prose and
+indented diagrams are not rows, which is control `C7`.
+
 ## The platform shelf
 
 > 🟢 **Copyright-holder census (`p281`).** Every `GPL`/`AGPL`/`LGPL` row on this shelf was fetched at

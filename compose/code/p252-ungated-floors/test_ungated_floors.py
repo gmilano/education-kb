@@ -111,8 +111,17 @@ FLOORS = uf.read_floors()
 # basename.  The predicate is line-anchored on `(directory, basename)` now; see its
 # docstring.  🔵 A census whose counts are pinned is how a predicate's defect becomes
 # visible at all: an unpinned census would have reported 39 gated and been believed.
-chk("python test files on disk", len(ROWS), 219)
-chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 38)
+# 🟢 p283: 219 -> 221 and 38 -> 40.  `p283-repo-identity` and `p283-ladder-case-audit`
+# ship ONE suite each (`test_identity_gate.py`, `test_ladder_case.py`) and BOTH arrive
+# inside `make hooks`, as `gate-identity` and `gate-ladder-case`, so `ungated` stays at
+# 181 and the `71`/`110` partition is untouched.
+# 🔴 EIGHTH consecutive pass.  p280 wrote that the streak, not the arithmetic, is the
+# finding; p283 did exactly what the seven before it did -- built the instruments, wired
+# both recipes, and still went red here first.  🔵 The remedy is not "remember next time",
+# which is what eight passes have now tried: it is to DERIVE these three literals from the
+# Makefile instead of typing them.  Registered, not built.
+chk("python test files on disk", len(ROWS), 221)
+chk("gated by a Makefile recipe", sum(1 for r in ROWS if r["gated"]), 40)
 chk("ungated", sum(1 for r in ROWS if not r["gated"]), 181)
 # 🔴 p280's regression control for the basename collision, both arms.  A gate-census that
 # cannot tell two same-named suites apart over-reports its own coverage, which is the one

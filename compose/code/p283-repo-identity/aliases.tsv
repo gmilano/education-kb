@@ -1,0 +1,9 @@
+# p283 — THE ALIAS LEDGER: pairs of addresses PROVEN to be one repository.
+#
+# This is the offline memory of what the online half (`make gate-identity-online`)
+# found and a human adjudicated.  A HEAD collision alone does NOT belong here: two
+# genuinely distinct forks share a HEAD on the day one is forked from the other.
+# A row is added only when identity is established on more than the HEAD.
+#
+# alias_address	canonical_address	established_by	head_at_establishment
+ls1intum/iris	ls1intum/pyris	p282 (HEAD + 245 refs + root tree 4e2f096df767 + 203 files + identical 1088-byte MIT payload; both names serve a README.MD opening "# Pyris V2")	d7b2c095204e

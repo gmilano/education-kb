@@ -21,10 +21,12 @@ PY ?= python3
 # and could not name it.  It is captured here and printed on failure instead.
 GATE_LOG ?= /tmp/education-kb-gate-enumeration.log
 TABLE_LOG ?= /tmp/education-kb-gate-tables.log
+IDENTITY_LOG ?= /tmp/education-kb-gate-identity.log
+LADDER_LOG ?= /tmp/education-kb-gate-ladder.log
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit
 
-hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel
+hooks: gate-offline recount gate-enumeration gate-tables gate-conflict gate-absence gate-dates gate-provenance gate-identity gate-ladder-case ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit
 
 # 🟢 p275: a negative licence verdict is only a finding if the TREE WAS ENUMERATED.
 # p274 ranked "re-probe every negative verdict with ls-remote as a positive control" first.
@@ -127,6 +129,49 @@ gate-provenance: ## ACTION p280 — a vendored manifest is identified by what it
 
 provenance-census: ## ACTION p280 — which controls name a real repo and assert bytes nobody read?
 	@$(PY) -I compose/code/pass280-package-provenance/invented_payload_census.py --census
+
+# 🟢 p283 (`p282`'s declared item 1): THE PER-PAIR IDENTITY CHECK.
+# 🔴 `p282` found `agents/top.md` recommending ONE repository as TWO build-on rows
+# (`ls1intum/Iris` == `ls1intum/Pyris`: same HEAD, same 245 refs, same root tree, same
+# 1 088-byte MIT payload) and six recipes in compose/patterns.md composing the two.  Every
+# licence instrument was right about the row it measured: DUPLICATION IS A RELATION BETWEEN
+# ROWS, and `recount` matched 27 rows to 27 because 27 rows is what the file has.
+# 🔴 `p282` then proved the remedy BY HAND and left it out of this file — the failure mode
+# this Makefile's own header opens with, "a working gate that stayed a one-off".
+# 🔵 The OFFLINE half reads the shelved alias ledger and is in `hooks`; the ONLINE half is
+# one `ls-remote` per address and stays out, per this file's standing convention.
+# 🟢 It found a live residue on its first run: repos/foundations.md:66 still presented Iris
+# and Pyris as two distinct MIT subsystems inside ONE cell.  p282 corrected three files and
+# missed that one.
+gate-identity: ## ACTION p283 — no shelf may recommend one repository under two live rows
+	@cd compose/code/p283-repo-identity && { $(PY) test_identity_gate.py > $(IDENTITY_LOG) 2>&1 || { echo "🔴 p283-repo-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(IDENTITY_LOG) ; false ; } ; } && echo "── p283-repo-identity (12 controls: withdrawn-in-place, the cross-table index, both halves in one cell)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p283-repo-identity/identity_gate.py --root . || exit 1
+
+# 🟢 p283 (`p282`'s declared item 2): CASE-CLOSE EVERY PATH LADDER, NOT JUST THE LICENCE ONE.
+# 🔴 `P1057` (p189) established that raw.githubusercontent.com is CASE-SENSITIVE and that a
+# one-spelling path list "has not looked for the file; it has looked for one spelling of it".
+# `pass256-ladder-closure` keeps the LICENCE ladder closed against p229's TIER_A — and
+# `p282` found `README.MD` on ls1intum/Pyris after `p268` published "neither repository
+# serves a README" off a four-rung ladder with no uppercase extension in it.
+# 🔵 Measured here, 2026-10-18: of 580 ladders in 332 instruments only 20 are CASE-CLOSED.
+# By family, the share carrying ANY uppercase extension is licence 11.1 %, copying 15.4 %,
+# readme 5.3 %, NOTICE 0.0 % — p1057's fix reached the family it was built for and no other.
+# 🔵 The census is a BACKLOG, printed and not failed, exactly as gate-enumeration treats its
+# QUEUE rows.  The controls DO fail: they pin the two overclaims this instrument's own first
+# draft made (a distant `.lower()` read as immunity; a four-rung ladder called "single").
+# 🔴 Registered, not built: a RATCHET over these counts.  Stated so it is not mistaken for done.
+gate-ladder-case: ## ACTION p283 — which path ladders can find an uppercase extension?
+	@cd compose/code/p283-ladder-case-audit && { $(PY) test_ladder_case.py > $(LADDER_LOG) 2>&1 || { echo "🔴 p283-ladder-case-audit FAILED — the suite's own report follows:" ; sed "s/^/   /" $(LADDER_LOG) ; false ; } ; } && echo "── p283-ladder-case-audit (10 controls: the distant-fold and multi-rung overclaims)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . | tail -2
+
+ladder-audit: ## ACTION p283 — the full per-ladder table.  make ladder-audit FAMILY=readme
+	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . $(if $(FAMILY),--family $(FAMILY),) --out evidence/ladder-case-audit-$$(date +%%F).tsv
+
+# 🔴 ONLINE half — one `git ls-remote` per live build-on address.  OUT of `hooks`.
+# A HEAD collision is a FINDING, not a verdict: two distinct forks share a HEAD on the day
+# one is forked from the other.  Adjudicate, then shelve the pair in `aliases.tsv`.
+gate-identity-online: ## ACTION p283 — ls-remote every address; equal HEAD == one repository
+	@$(PY) -I compose/code/p283-repo-identity/identity_gate.py --root . --online --out evidence/repo-identity-$$(date +%%F).tsv
 
 # 🔴 ONLINE half — needs a blobless clone + raw.githubusercontent.com.  OUT of `hooks`.
 provenance-sweep: ## ACTION p280 — grade every manifest in a slug list: make provenance-sweep SLUGS=f

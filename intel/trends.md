@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 `T-p283` — a fix propagates to the family it was built for and to no other, and this base can now measure that
+
+`P1057` (p189) established the rule this base has repeated for ninety-odd passes:
+**`raw.githubusercontent.com` is case-sensitive, so a one-spelling path list has not looked for the
+file; it has looked for one spelling of the file.** `pass256-ladder-closure` keeps the **licence**
+ladder closed. 🔴 `p282` then found `README.MD` on `ls1intum/Pyris` after `p268` published
+*"neither repository serves a README"* from a four-rung ladder with **no uppercase extension in it**,
+and named the class: *"`p1057`'s licence-path-case class, never inherited by the README ladder
+beside it."*
+
+🟢 **`p283` measured how far the fix actually travelled.** Every literal path ladder under
+`compose/code/` — **580 ladders in 332 instruments** — graded by whether it can find a file whose
+extension is uppercase. Evidence:
+[`ladder-case-audit.2026-10-18-p283.tsv`](../evidence/ladder-case-audit.2026-10-18-p283.tsv).
+
+| family | ladders | 🟢 `CASE-CLOSED` | carry ANY uppercase extension |
+|---|---|---|---|
+| licence | 270 | **15** | **11.1 %** |
+| copying | 117 | 0 | 15.4 % |
+| readme | 150 | 5 | **5.3 %** |
+| notice | 43 | 0 | **0.0 %** |
+
+🔴 **The answer is that it did not travel.** Only **20 of 580** ladders are case-closed. The
+**licence** family holds **15 of the 20** — it is the one family a pass built an instrument for.
+🔴 **Not one `NOTICE` ladder on this base can find `NOTICE.TXT` or `NOTICE.MD`**, and **33 README
+ladders decide that a file is ABSENT** while being unable to spell `README.MD` — which is precisely
+`p268`'s published error, still live in 33 places.
+
+🔵 **The generalisable shape, and the reason this is a trend and not a bug report:** a defect class
+on this base gets repaired *where it was found*. `p275` wrote *"a path ladder cannot prove absence"*
+and built the enumeration gate — and **only 45 of 580 ladders enumerate a tree**. `p279` repaired
+line-local predicates over a hard-wrapped corpus, and `p282` found the same defect alive one
+directory away. 🟢 **The remedy that follows is not another gate: it is a standing list of repaired
+classes and a sweep asking which instruments are still open to each.** `p282` registered that as its
+item 3; `p283` now attaches a number to it.
+
 ## 🔴 `T-p282` — a shelf's row count is not its repository count, and the gap is invisible to every gate that counts rows
 
 This base verifies **grants** first-hand and has done so for twenty passes. It had never verified

@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 283 — 2026-10-18 — **THE CENSUS `p282` LEFT OUT OF THE MAKEFILE IS STANDING, AND ON ITS FIRST RUN IT FOUND THE ROW `p282`'S OWN CORRECTION MISSED**
+
+**One-line summary:** `p282` ranked *"make the identity census standing"* first because it had
+proved the remedy by hand and left it out of the Makefile. `p283` built it, wired it into
+`make hooks`, and **it immediately found a live residue of the exact defect in a fourth file
+`p282` never corrected**. The second registered item — *case-close every path ladder* — is now
+measured: **of 580 ladders in 332 instruments, 20 are case-closed.** And `make hooks` is
+**green**, which it had not been verified to be for two passes.
+
+### 🟢 `make hooks` ran, first, and is green
+
+🔴 `p281` could not execute repository code and said so: *"`p282` must run `make hooks` first and
+treat a failure as `p281`'s, not its own."* 🟢 This sandbox can. The suite was run **before any
+edit** — green on `p282`'s state — and again after every edit, including the two new gates.
+
+### 🟢 Item 1 discharged: `make gate-identity`, and it earned its place immediately
+
+| measure | p282 (by hand) | 🟢 p283 (standing) |
+|---|---|---|
+| addresses censused | 27 (build-on tier) | **138** (all three shelves) |
+| distinct repositories | 26 | **138** |
+| alias pairs | 1 | **0 remaining** |
+| unreachable | — | **0** |
+
+🔴 **The residue it found:** [`repos/foundations.md`](repos/foundations.md)'s `ls1intum/Artemis` row
+still presented *"**Iris** (LLM tutor, `ls1intum/Iris`, MIT), **Pyris** (… `ls1intum/Pyris`, MIT)"*
+as **two distinct config-gated subsystems, inside one cell**. `p282` corrected `agents/top.md`,
+`compose/patterns.md` and `verticals/solutions.md` and **missed this one**. 🟢 Corrected.
+
+🔵 **A hand-correction spanning four files missed one, and the gate built to replace
+hand-correction caught it on its first execution.** That is the case for item 1, made by item 1.
+
+### 🔴 The gate was wrong twice first, and the real corpus is what caught it
+
+1. 🔴 **File scope → 15 findings on a green shelf**, every one a row in `agents/top.md`'s
+   `## Agents by function` **index** pointing at a repository the tier also lists. A
+   cross-reference is what an index is *for*. 🟢 **The unit is the TABLE**, not the file.
+2. 🔴 The ladder audit returned **`CASE-INSENSITIVE` for 316 of 580 ladders** on the strength of any
+   `.lower()` anywhere in the file — an immunity claim resting on unrelated string-folding. 🟢 Now
+   a **proximity** predicate, renamed **`FOLD-ON-PATH`** because it is a screen and the verdict
+   should say so. 96 survive.
+
+🔵 The subtlety that constrains every future version: `p282` withdrew the `Iris` row **in place**,
+struck through, carrying its own evidence. **A gate that fires on a published correction can never
+be green without deleting the forensic record.** Hence: a row is live unless struck through or
+marked `WITHDRAWN`.
+
+### 🔴 Item 2 measured: `p1057`'s fix reached the family it was built for and no other
+
+| family | ladders | 🟢 `CASE-CLOSED` | carry ANY uppercase extension |
+|---|---|---|---|
+| licence | 270 | **15 of the 20** | 11.1 % |
+| copying | 117 | 0 | 15.4 % |
+| readme | 150 | 5 | **5.3 %** |
+| notice | 43 | 0 | **0.0 %** |
+
+🔴 **Not one `NOTICE` ladder on this base can find `NOTICE.TXT`.** 🔴 **33 README ladders decide
+that a file is ABSENT and cannot spell `README.MD`** — `p268`'s published error, live in 33 places.
+🔵 **Only 45 of 580 ladders enumerate a tree**: `p275`'s *"a path ladder cannot prove absence"* is
+shelved as a principle and practised at **7.8 %**.
+
+🔵 **The join no pass had made:** `repos/trending.md` carries **69 `QUEUE-UNENUMERATED`** rows whose
+negative verdicts rest on a path ladder. Those ladders are overwhelmingly case-unvaried, so
+**working the enumeration queue with today's ladders would re-derive the same false absences.**
+The two backlogs are one backlog.
+
+### 🔴 `p252`'s census went red first — for the eighth consecutive pass
+
+`p283` built two instruments, wired **both** into `make hooks`, and still failed the pinned
+population (219 → 221, 38 → 40). 🔵 `p280` wrote that *the streak, not the arithmetic, is the
+finding*. 🔴 Eight passes have tried "remember next time". 🟢 **Derive the literals from the
+Makefile** — registered as `p284` item 1.
+
+### 🟡 The battery: eight legs, eight nils, zero drift
+
+All four global and **all four regional** legs ran. Every substantive fact was already held and
+**every figure matched to the digit** — checked as a drift test, not asserted. 🔵 Three consecutive
+full batteries, no new regional fact. 🟡 **Ninth** pass with no new agent: in this channel
+*"educational"* means **teaching ML**, not **serving a learner**. 🔴 Africa empty, fourth time.
+🟢 So `p284` is told **not** to re-run the four regional legs verbatim, and to spend the budget on
+a gap-directed leg instead.
+
+### 🔵 Backlog for `p284`
+
+**Full register:** [`intel/open-gaps.md`](intel/open-gaps.md). Ranked:
+
+1. 🔴 **Derive `p252`'s three pinned literals from the Makefile** — eight-pass streak, cheapest fix.
+2. 🔴 **Ratchet the ladder census** — `p283` produced the numbers and pinned none of them.
+3. 🔴 **Case-close the `NOTICE` family first** — the only family at **0.0 %**, and the smallest.
+4. 🟡 **Work the 69 `QUEUE-UNENUMERATED` rows with a case-closed ladder**, not today's.
+5. 🟡 **`--resolve` over the 14 CANDIDATE control sites** *(carried, `p280` item 1)*.
+6. 🟡 **Fold `p281`'s three instrument defects into the gate** — `ls-remote --symref` is now cheap,
+   the channel is built.
+7. 🔵 **Read the primary texts on an egress-enabled run** — 🔴 still blocked by `T61`.
+8. 🔵 **Replace one regional leg with a gap-directed leg** (Africa; teacher-mediated routing).
+
+
 ## Pass 281 — 2026-10-18 — **THE COPYLEFT BLIND SPOT `p280` RANKED SECOND IS MEASURED AND NEARLY EMPTY, THE INSTRUMENT THAT MEASURED IT WAS WRONG TWICE FIRST, AND THE BATTERY CORROBORATED EVERYTHING IT TOUCHED**
 
 **One-line summary:** `p280`'s item 2 asked how many copyleft grants on these shelves name a holder —

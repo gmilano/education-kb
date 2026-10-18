@@ -35,6 +35,29 @@ that **teach AI** (`generative-ai-for-beginners`, `nanochat`, `developer-roadmap
 where pass 273's finding landed**; it landed on the agent shelf and on licence method — see `T41` and
 [`repos/trending.md`](trending.md).
 
+## 🔴 Pass 283 — the Artemis row on THIS shelf recommended one repository twice, and `p282`'s correction never reached it
+
+⏱️ `2026-10-18`, fifth pass. Evidence: [`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv) · [`ladder-case-audit.2026-10-18-p283.tsv`](../evidence/ladder-case-audit.2026-10-18-p283.tsv) · [`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv).
+
+🔴 `p282` established that `ls1intum/Iris` and `ls1intum/Pyris` are **one repository** (identical
+HEAD `d7b2c095204e`, 245 refs, root tree `4e2f096df767`, 203 files, the same 1 088-byte MIT payload)
+and corrected `agents/top.md`, `compose/patterns.md` and `verticals/solutions.md`.
+
+🔴 **It did not correct this file.** The `ls1intum/Artemis` row went on naming *"**Iris** (LLM tutor,
+`ls1intum/Iris`, MIT)"* and *"**Pyris** (the LLM microservice behind it, `ls1intum/Pyris`, MIT)"* as
+**two distinct config-gated AI subsystems**, inside a single cell. A studio reading this row would
+have scoped two integrations where one exists. 🟢 **Corrected above.**
+
+🟢 **Found by `make gate-identity`, which `p283` built and wired, on its first run** — the whole
+point of the gate, demonstrated on the pass that shipped it. 🔵 The count that matters for this
+shelf: **138 live addresses across the three shelves, 138 distinct HEADs, 0 unreachable** — no other
+row on any shelf recommends one repository twice.
+
+🔵 **No new foundation this pass**, and the star column stays **frozen at `2026-10-17`** — `p282`'s
+channel finding is re-confirmed and sharpened: `github.com` pages and `api.github.com` still answer
+`403`, while the **git** channel answered **138 of 138**. Grants and identity are current; only
+popularity is stale.
+
 ## 🔴 Pass 282 — no new foundation, and the star column on this shelf is FROZEN
 
 🔴 The mandated vertical and trending legs returned **no foundational repository this base does not
@@ -63,7 +86,7 @@ second repository to pair with `Pyris`; it is an alias of `Pyris`. See
 | Repo | Licence | Stars | Why it is a foundation |
 |------|---------|-------|------------------------|
 | 🆕 [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** *(`main/LICENSE`, `1 150` B, payload read + diffed, `p274`)* — ⚠️ **core only: 12 Pro modules sold separately** | 54★ / **98 forks** *(carried; no star read from GitHub this pass)* | **Self-hosted school ERP / SIS** on PHP 8.4 + Laravel. 🟢 **The permissive SIS layer this base has said for nine passes does not exist** — and the reason it was missing is that the base probed a slug that does not resolve, twice (`T44`). 🔵 **Its fork network is its adoption evidence**: 98 forks, near-zero fork stars, institution-shaped fork names across **India, Indonesia and Vietnam** (`P933` — software institutions RUN rather than developers EXTEND). ⚠️ **Deployment-placed APAC; origin not established.** ⚠️ **Price the Pro modules before the SOW** |
-| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | **Interactive learning with automated feedback**, from TUM Applied Education Technologies. Programming, quiz, modelling and text exercises with automatic assessment and an integrated CI runner. The strongest MIT-licensed teaching platform found this pass — production-grade and university-maintained. **Pass 266:** it ships three *config-gated* AI subsystems — **Iris** (LLM tutor, [`ls1intum/Iris`](https://github.com/ls1intum/Iris), MIT), **Pyris** (the LLM microservice behind it, [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris), MIT) and **Athena** (feedback suggestion, [`ls1intum/Athena`](https://github.com/ls1intum/Athena), 🟢 **MIT at metadata grade since p275** — no licence *file* exists (tree enumerated, 691 paths) but **12 of 14 manifests declare `license = "MIT"`**; the earlier *"all-rights-reserved"* verdict is retracted), plus **Hyperion** (AI exercise authoring, not a separate repo). Config-gated matters: the platform runs identically with AI off, which is the posture an EU AI Act high-risk classification wants. |
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | MIT | 819 | **Interactive learning with automated feedback**, from TUM Applied Education Technologies. Programming, quiz, modelling and text exercises with automatic assessment and an integrated CI runner. The strongest MIT-licensed teaching platform found this pass — production-grade and university-maintained. **Pass 266:** it ships three *config-gated* AI subsystems — **Iris/Pyris** (the LLM tutor and the microservice behind it: 🔴 **`p283`: ONE repository, [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris), MIT** — `ls1intum/Iris` is a name alias of it, not a second subsystem; `p282` established the identity and corrected `agents/top.md`, `compose/patterns.md` and `verticals/solutions.md`, and **this row was missed**. *Iris* is the user-facing name of the tutor Pyris powers) and **Athena** (feedback suggestion, [`ls1intum/Athena`](https://github.com/ls1intum/Athena), 🟢 **MIT at metadata grade since p275** — no licence *file* exists (tree enumerated, 691 paths) but **12 of 14 manifests declare `license = "MIT"`**; the earlier *"all-rights-reserved"* verdict is retracted), plus **Hyperion** (AI exercise authoring, not a separate repo). Config-gated matters: the platform runs identically with AI off, which is the posture an EU AI Act high-risk classification wants. |
 | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | MIT | 4.1k | FSRS, the modern spaced-repetition scheduler. The highest-adoption learning-science component in open source. Pair with [fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) (BSD-3-Clause) for a Rust core you can embed. |
 | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT | 450 | The reference PyTorch knowledge-tracing benchmark library: standard datasets, standard splits, comparable baselines. If a client asks "can you predict what this student knows", this is the honest starting point. |
 | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT | 352 | Source-code plagiarism detection (UGent). In the GenAI era this is no longer a niche: it is the integrity layer every coding course now needs. |

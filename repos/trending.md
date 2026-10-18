@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 (pass 283) — the repository channel is still half shut, and the half that is open answered 138 of 138
+
+⏱️ **Fifth pass of `2026-10-18`.** Append-only. Evidence:
+[`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv) ·
+[`ladder-case-audit.2026-10-18-p283.tsv`](../evidence/ladder-case-audit.2026-10-18-p283.tsv) ·
+[`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv).
+
+### 🟢 `p282`'s channel finding, measured from the other side
+
+`p282` recorded that `github.com` repository pages, `/topics`, `/trending` and `api.github.com` all
+answer `403`, so **grants are current and popularity is frozen**. 🟢 `p283` put a number on the open
+half: **one `git ls-remote` per live shelf address, 138 of 138 resolved, 0 unreachable, 0 timeouts.**
+
+🔵 **The operational reading for a later pass:** anything derivable from refs — existence, default
+branch, HEAD, identity, ref count — is **fully available** here. Anything derivable from the HTML
+or REST surface — stars, topics, trending — is **not**. A pass that needs a star count must declare
+it frozen at `2026-10-17`; a pass that needs to know whether two rows are the same repository has
+no excuse.
+
+### 🔴 580 path ladders, 20 case-closed — and the trending shelf is where this bites
+
+`p282` found `README.MD` (uppercase extension) on `ls1intum/Pyris` after `p268` had published
+*"neither repository serves a README"*. 🟢 `p283` graded **every literal path ladder under
+`compose/code/`: 580 ladders in 332 instruments, only 20 CASE-CLOSED.**
+
+| family | ladders | 🟢 `CASE-CLOSED` | carry ANY uppercase extension |
+|---|---|---|---|
+| licence | 270 | 15 | 11.1 % |
+| copying | 117 | 0 | 15.4 % |
+| readme | 150 | 5 | **5.3 %** |
+| notice | 43 | 0 | **0.0 %** |
+
+🔴 **33 README ladders decide that a file is ABSENT and cannot spell `README.MD`.** This shelf
+carries **69 `QUEUE-UNENUMERATED` rows** whose negative verdicts rest on a path ladder — the
+enumeration backlog `p275` opened — and the audit says those ladders are **overwhelmingly
+case-unvaried**. 🔵 **The two backlogs are the same backlog**, which no pass had stated: working the
+enumeration queue with a case-unvaried ladder re-derives the same false absence.
+
 ## 2026-10-18 (pass 282) — the repository channel is half shut, and the tier's address count is not its repository count
 
 ⏱️ **Fourth pass of `2026-10-18`.** Append-only. Evidence:

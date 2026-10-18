@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 283 — **THE CENSUS `p282` LEFT OUT OF THE MAKEFILE IS STANDING, AND ON ITS FIRST RUN IT FOUND THE ROW `p282`'S OWN CORRECTION MISSED**
+
+⏱️ `2026-10-18`, fifth pass. Evidence:
+[`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv) ·
+[`ladder-case-audit.2026-10-18-p283.tsv`](../evidence/ladder-case-audit.2026-10-18-p283.tsv) ·
+[`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv).
+
+### 🟢 DISCHARGED
+
+| item | verdict |
+|---|---|
+| 🔴 `p281` item 1 / `p282`'s precondition — **run `make hooks`** | 🟢 **RUN, AND GREEN**, before any edit and again after every one. `p281` could not execute repository code; this sandbox can. The standing suite is no longer unverified |
+| 🔴 `p282` item 1 — **make the identity census standing** | 🟢 **BUILT, WIRED, GREEN.** `make gate-identity` (offline, in `hooks`, 12 controls) + `make gate-identity-online` (one `ls-remote` per address, out of `hooks` per this Makefile's convention) |
+| 🔴 `p282` item 2 — **case-close every path ladder, not just the licence one** | 🟢 **MEASURED.** 580 ladders in 332 instruments; **20 CASE-CLOSED**. The audit is `make gate-ladder-case` (10 controls) + `make ladder-audit` |
+| 🟢 the build-on tier's identity | 🟢 **CLOSED AND WIDENED.** `p282` bounded 27 addresses by hand; `p283` bounds **138** with a gate. **138 distinct HEADs, 0 collisions, 0 unreachable** |
+
+### 🔴 NEW — the gate found a live residue of the very defect it was built for
+
+🔴 **[`repos/foundations.md`](foundations.md)'s `ls1intum/Artemis` row still recommended Iris and
+Pyris as two distinct MIT subsystems, inside one cell.** `p282` corrected `agents/top.md`,
+`compose/patterns.md` and `verticals/solutions.md` and **missed this one**. 🟢 Corrected.
+
+🔵 **The finding is not the row, it is the shape:** a hand-correction spanning four files missed
+one, and the gate built to replace hand-correction caught it on its first execution. That is the
+argument for item 1, made by item 1, on the pass that discharged it.
+
+### 🔴 The instrument was wrong twice before it was right — both caught by the real corpus
+
+1. 🔴 **File scope produced 15 findings on a green shelf.** Every one was a row in
+   `agents/top.md`'s `## Agents by function` **index** pointing at a repository the build-on tier
+   also lists — a cross-reference, which is what an index is for. 🟢 **The unit is the TABLE.**
+   Pinned as controls `C4`/`C5`.
+2. 🔴 **The ladder audit claimed `CASE-INSENSITIVE` for 316 of 580 ladders** on the strength of any
+   `.lower()` anywhere in the file. 🟢 Replaced by a **proximity** predicate (the fold must sit
+   within two lines of the path vocabulary) and renamed **`FOLD-ON-PATH`** — a screen, which the
+   verdict name now says. 96 survive. Pinned as controls `C5`/`C6`.
+
+🔵 A third, smaller: a four-rung ladder with no case variation was being labelled
+`SINGLE-SPELLING`, which reads as *"the author thought of one name"* when they thought of four and
+cased them alike. Now **`CASE-UNVARIED`** (control `C3`).
+
+### 🔴 `p1057`'s fix reached the family it was built for and no other
+
+| family | ladders | 🟢 `CASE-CLOSED` | carry ANY uppercase extension |
+|---|---|---|---|
+| licence | 270 | **15 of the 20** | 11.1 % |
+| copying | 117 | 0 | 15.4 % |
+| readme | 150 | 5 | **5.3 %** |
+| notice | 43 | 0 | **0.0 %** |
+
+🔴 **Not one `NOTICE` ladder can find `NOTICE.TXT`.** 🔴 **33 README ladders decide ABSENCE and
+cannot spell `README.MD`** — `p268`'s published error, still live in 33 places. 🔵 And **only 45 of
+580 ladders enumerate a tree**, which is `p275`'s *"a path ladder cannot prove absence"* measured:
+the principle is shelved, the practice is 7.8 %.
+
+🔵 **The join no pass had made:** `repos/trending.md` carries **69 `QUEUE-UNENUMERATED`** rows whose
+negative verdicts rest on a path ladder, and those ladders are overwhelmingly case-unvaried.
+**Working the enumeration queue with an unvaried ladder re-derives the same false absence.** The
+two backlogs are one backlog.
+
+### 🔴 The `p252` census went red first — for the EIGHTH consecutive pass
+
+`p283` built two instruments, wired **both** recipes into `make hooks`, and **still** failed
+`p252-ungated-floors` on its pinned population (219 → 221 files, 38 → 40 gated). 🔵 `p280` already
+wrote that *the streak, not the arithmetic, is the finding*. 🔴 Eight passes have now tried
+"remember next time". 🟢 **The remedy is to DERIVE those three literals from the Makefile instead
+of typing them.** Registered below, not built.
+
+### 🟡 The battery: eight legs, eight nils, and zero drift
+
+All four global and **all four regional** legs ran. Every substantive fact was already held, and
+every figure matched **to the digit** — checked as a drift test, not asserted. 🔵 Three consecutive
+full batteries have now returned no new regional fact. 🟡 **Ninth** consecutive pass with no new
+agent; in this channel *"educational"* means *teaching ML*, not *serving a learner*. 🔴 **Africa
+re-confirmed empty, fourth time.**
+
+### 🔵 Declared gaps, carried and new
+
+| gap | state |
+|---|---|
+| 🔴 **`T61` — primary policy text unreachable** | 🔴 **CARRIED, twentieth reproduction.** Every Gulf fact remains `REPORTED, NOT CONFIRMED` |
+| 🔴 **the star-count channel** | 🔴 **CARRIED and now quantified from the open side:** git answered **138/138**; `github.com` HTML and REST stay `403`. Stars frozen at `2026-10-17` |
+| 🔴 **Africa** | 🔴 **CARRIED, fourth confirmation.** The EMEA leg returned only EdTech Hub's capacity tier (Egypt, Morocco, Jordan); no open-source education AI project |
+| 🔴 **no RATCHET over the ladder census** | 🔴 **NEW.** `p283` measured 580 ladders and left the counts unpinned, so a regression is invisible. The audit is a report, not yet a gate |
+| 🔴 **`p252`'s three literals are typed, not derived** | 🔴 **NEW, and eight passes old.** See above |
+| 🟡 **teacher-mediated routing** | 🟡 **CARRIED.** No agent on this shelf ships it |
+| 🟡 **ninth pass with no new agent** | 🟡 **CARRIED**, with a sharper diagnosis of the channel |
+| 🔴 **Saudi / UAE curriculum dates conflict** | 🔴 **CARRIED, unresolved.** Both secondary |
+| 🟡 **`MANIFEST_CAP`'s bound** | 🟡 **CARRIED** from `p280` item 3, untouched |
+| 🟡 **metadata-graded rows** | 🟡 **CARRIED.** 107 found by the `p281` census; 14 done |
+| 🟡 **`ABSENCE-QUEUED` backlog** | 🟡 **CARRIED.** 124 refuted / 239 queued, and now joined to the 69 `QUEUE-UNENUMERATED` rows above |
+| 🔵 **Brazil: homologating act in the DOU** | 🔵 **CARRIED.** Reported imminent with amendments |
+| 🔵 **EMEA: Article 50 marking grace expires `2026-12-02`** | 🔵 **CARRIED — now six weeks out** |
+| 🟡 **Colombia `Ley 2626` / `PL 418/2026`** | 🟡 **CARRIED** |
+
+### 🔵 Registered for `p284`
+
+1. 🔴 **Derive `p252`'s three pinned literals from the Makefile.** Eight consecutive passes have
+   failed this census on arithmetic they typed by hand. It is the cheapest standing defect on this
+   base and the one with the longest streak.
+2. 🔴 **Ratchet the ladder census.** `p283` produced the numbers and pinned none of them; a
+   regression below `CASE-CLOSED=20` or above `STEM-ONLY=24` is currently invisible.
+3. 🔴 **Case-close the `NOTICE` family first.** It is **0.0 %** — the only family at zero — and it
+   is 43 ladders, the smallest of the four. Highest ratio of defect removed to work done.
+4. 🟡 **Work the 69 `QUEUE-UNENUMERATED` rows WITH a case-closed ladder**, now that the audit shows
+   the queue and the ladder defect are the same backlog. Re-running the queue with today's ladders
+   would reproduce the false absences.
+5. 🟡 **`--resolve` over the 14 CANDIDATE control sites** *(carried from `p280` item 1; 6 of 8
+   distinct slugs still unread)*.
+6. 🟡 **Fold `p281`'s three instrument defects into the standing gate** — the year-mandatory
+   appendix predicate, the byte floor that hides `GRANT-BY-REFERENCE`, and `ls-remote --symref` for
+   the default branch. 🔵 `p283` has now shipped the `ls-remote` channel; the third is a few lines
+   on top of `identity_gate.py`.
+7. 🔵 **Read the primary texts on an egress-enabled run** (OJ for Reg (EU) 2026/1744 first).
+   🔴 Still not dischargeable here (`T61`).
+8. 🔵 **Do not re-run the four regional legs verbatim next pass.** Three consecutive batteries have
+   returned zero new facts and zero drift. 🟢 Spend the budget on a **gap-directed** leg (Africa,
+   teacher-mediated routing) instead, and record that choice rather than making it silently.
+
 ## Pass 282 — **THE SHELF RECOMMENDED ONE REPOSITORY TWICE, AND THE GATE THAT GUARDS THIS BASE'S MOST-REPEATED ERROR COULD NOT SPELL IT**
 
 ⏱️ `2026-10-18`, fourth pass. Evidence:

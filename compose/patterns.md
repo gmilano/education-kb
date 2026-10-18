@@ -13,6 +13,24 @@ updated: 2026-10-18
 > Each pattern states the licence boundary — the line the client's proprietary code must stay
 > on to keep a copyleft platform from colouring the deliverable.
 
+## 🟢 Pass 283 — every component address in every recipe below is now PROVEN distinct
+
+⏱️ `2026-10-18`, fifth pass. Evidence: [`p283-websearch.2026-10-18-p283.tsv`](../evidence/p283-websearch.2026-10-18-p283.tsv) · [`repo-identity.2026-10-18-p283.tsv`](../evidence/repo-identity.2026-10-18-p283.tsv).
+
+🔴 `p282` found **six recipes in this file** wiring together `ls1intum/Iris` and `ls1intum/Pyris` —
+**one repository under two names**. A delivery team following any of those six would have scoped an
+integration between a component and itself. All six were corrected by hand.
+
+🟢 **`p283` turns that hand-check into a standing one.** `make gate-identity` is in `make hooks`,
+and its online half resolved **138 live addresses across the three component shelves to 138 distinct
+HEADs, 0 collisions, 0 unreachable**. 🔵 **Every repo named in P1–P10 below is a distinct
+repository**, and a later pass cannot reintroduce the defect without the gate going red.
+
+🔴 **One caveat a recipe author must keep.** The gate proves *distinctness of address*, not
+*independence of component*. `ls1intum/Artemis` and `ls1intum/Pyris` are genuinely two repositories
+and Pyris is still the AI layer *inside* Artemis; composing them is one deployment, not two
+integrations. **Distinct HEAD is a floor, not an architecture.**
+
 ## P1 — Teacher co-pilot for a national AI-literacy mandate
 **Target:** India (Class 3 mandate, AY 2026-27), Mexico (SEP teacher formation), Brazil (MEC basic-education guidance)
 **Timeline:** 8–10 weeks to a measurable pilot
