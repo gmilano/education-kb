@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 296 — THE 21-PASS "NIL" WAS NOT A SUPPLY PROBLEM: A 41 000-STAR MIT ROW WAS SITTING VERIFIED IN THIS REPOSITORY, UNSHELVED
+
+⏱️ **Eighteenth pass of `2026-10-18`.** Evidence:
+[`p296-promotion-gap.2026-10-18-p296.tsv`](../evidence/p296-promotion-gap.2026-10-18-p296.tsv).
+
+🔴 **The mandated leg `top open source AI agents education 2026 github MIT` returned its
+twenty-second consecutive nil, and this pass stopped treating that as the measurement that
+matters.** `p275`-`p295` ran the same query twenty-one times, recorded twenty-one nils, and
+concluded each time that the population was unchanged. **The population was not the constraint.**
+
+### 🔴 The finding: this base has a measured promotion gap and has never worked it
+
+`p989` (`2026-10-10`) wrote
+[`promotion-gap-permissive-orphans.txt`](../compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt)
+— **~500 slugs that appear in this repository with a permissive grant and appear on no shelf** (out of
+`1 119` orphans in all). It named the gap, published the list, and **no pass since has promoted a row
+out of it.** Eight days and twenty-one "nils" later the list still contains:
+
+| orphan named by `p989` | read `p296`, `2026-10-18` | why the nil was false |
+|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** · **41.0k★** · 6.3k forks · 729 commits · `main` | 🔴 **The largest education-AI repository this base knows of, and it was not on the agents shelf.** `agents/trending.md` verified its MIT grant *first-hand* at l.3532 (`1 065` B, `sha256 ba2525637432`) and at l.3538 recorded `40 873★` — then left it in the trending log |
+| [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) | 🟢 **Apache-2.0** · 18★ · 19 forks · **847 commits** · `main` | Pakistan / Taleemabad national curriculum, WhatsApp delivery, 15 languages. Present in `agents/trending.md`, `repos/trending.md` **and** `intel/open-gaps.md` — three files, no shelf |
+| [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | 🟢 **MIT** · 9★ · 12 forks · 149 commits · `main` | Microsoft Research India + Sikshana Foundation. Curriculum-bound lesson planning — the exact capability `p292` went looking for and declared missing |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0** · **572★** · 105 forks · 4 commits · `main` | Four K-12 skills **plus an eval framework**, against a shelf that has declared an evaluation gap for several passes |
+
+**Eight rows were promoted this pass** — five onto this shelf, three onto
+[`repos/foundations.md`](../repos/foundations.md) — **and not one of them was a discovery.** Every one
+was already verified somewhere in this repository.
+
+🔴 **`p296` SELF-CORRECTION, caught by this base's own `p283` identity gate, not by a reader.** This
+pass first wrote **ten**, having taken `p989`'s orphan list as current. Two of those ten —
+[`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) and
+[`autolab/Autolab`](https://github.com/autolab/Autolab) — **were already on the foundations shelf**,
+and publishing them again produced `ADDRESS-TWICE` on two rows of one table. 🔵 **The orphan list is
+dated `2026-10-10` and is itself now partly stale**, so a promotion out of it must be checked against
+the shelf before it is written — **the list names candidates, not absences.** Both rows were merged
+instead of duplicated, and both gained their first commit/fork/branch readings in the process; the
+`Autolab` merge **downgraded** its published grade to `README-ONLY`. The agents leg was never short of supply; the path
+from *verified* to *shelved* was not being walked.
+
+🔵 **What this changes for a studio engagement, which is the only reason the shelf exists.** A reader
+who opened `agents/top.md` for the last twenty-one passes was shown a shelf whose top row was
+`HKUDS/DeepTutor` at `41.6k★` and was **not** shown `OpenMAIC` at `41.0k★` — a second
+permissively-licensed, comparably-adopted, architecturally *different* option (multi-agent classroom
+with AI classmates, versus one-to-one lifelong tutoring). **The shelf did not merely omit a row; it
+misrepresented the shape of the choice.**
+
+### 🔵 The channel, stated so the grade is auditable
+
+`curl -sI` over `github.com` returned **HTTP 403 on 4 of 4** probes this pass — the proxy block
+`p989` measured is still closed, so **no `curl` and no `api.github.com` star channel exists.** All
+eleven reads this pass are **`WebFetch` over `github.com` HTML** (sidebar/About licence label plus
+README body), the channel `p294` opened and `p295` reproduced. One row is weaker than the rest and is
+marked in its own cell: [`autolab/Autolab`](https://github.com/autolab/Autolab) shows a
+**License link with no licence name** in its sidebar and declares `Apache-2.0` **only in README
+prose** — `README-ONLY` grade, shelved on the foundations file with that written down.
+
+### 🔴 Standing action for the next pass — `ACTION PG`
+
+**Work the orphan list before running the mandated leg.** ~500 permissive orphans remain. A pass that
+returns a nil on the search leg *and* promotes nothing out of that list has not measured a thin
+market; it has skipped the cheapest shelf-improving work available to it. The next pass should
+promote or reject a named batch and record which.
+
 ## 🔴 Pass 295 — THE TWENTY-FIRST NIL, AND THE LAW `p294` PUBLISHED WITH ITS STAR CHANNEL IS FALSE
 
 ⏱️ **Seventeenth pass of `2026-10-18`.** Evidence:
@@ -838,8 +902,36 @@ non-commercial friction.
 | mcp-canvas-lms | [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | MIT *(manifest + registry — see grade note)* | 103 | **Canvas LMS MCP server, 54 tools, `v2.3.1`** — full student functionality plus account management, vitest suite, 19 releases on npm as `canvas-mcp-server`. 🔴 **`p276` withdrew this shelf's own *"Do not use. No licence = all rights reserved"*:** `package.json` l.66 declares `"license": "MIT"` and npm ships it MIT across **19** versions. ⚠️ **Grade note:** manifest + registry, **no payload in the tree** (36 paths enumerated; the `files` array names a `LICENSE` the repo does not contain). Same grade this shelf already gives `adriasantacreu/google-classroom-mcp`. [evidence](../evidence/manifest-channel.2026-10-17-p276.tsv) |
 | fsrs4anki-helper | [open-spaced-repetition/fsrs4anki-helper](https://github.com/open-spaced-repetition/fsrs4anki-helper) | MIT | 325 | **FSRS spaced-repetition scheduling** — the retention-optimising scheduler a tutoring agent can call instead of inventing review intervals: reschedule, postpone, advance, load-balance. 🔴 **`p276` refuted *"NO GRANT in 6 filenames"*:** the grant is at **`License`** — mixed case, **no extension** — `1 079` B, read at payload. [evidence](../evidence/tree-enumeration.2026-10-17-p276.tsv) |
 | EduChat *(code tier only)* | [ECNU-ICALK/EduChat](https://github.com/ECNU-ICALK/EduChat) | Apache-2.0 **for the code** *(holder 🔴 `UNFILLED`, `p281`)* · 🔴 `AGPL-3.0` model · 🔴 `CC-BY-NC-4.0` data | 973 | **Educational LLM from ECNU** (retrieval-augmented tutoring, emotional support, essay assessment). 🔴 **`p276` withdrew *"cannot be used"*:** at the same ref `fa30b6d5632c` the tree serves `LICENSE/LICENSE.txt` — **Apache-2.0, `11 357` B**, the pristine length. 🔵 **Six path probes and GitHub's API both missed it because `LICENSE` is a DIRECTORY**, so each probe hit a tree, not a blob. ⚠️ **Build on the CODE only:** shipping the weights pulls in `AGPL-3.0`, and the data is non-commercial. [evidence](../evidence/tree-enumeration.2026-10-17-p276.tsv) |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | MIT *(sidebar, p296)* | 41.0k | 🟢 **PROMOTED AT `p296` — and it is the largest education-AI repository on these shelves, by an order of magnitude.** Open Multi-Agent Interactive Classroom, from **Tsinghua (THU-MAIC)**: turns any topic or document into an interactive classroom with AI teachers *and* AI classmates, delivering lessons through slides, quizzes, simulations and whiteboards, with real-time AI grading of single/multiple-choice and short-answer items. **41.0k★ · 6.3k forks · 729 commits · `main`.** 🔴 **This row was verified in `agents/trending.md` on at least two prior passes and was never carried onto this shelf** — see the `p296` promotion-gap note at the top of this file. It is the single strongest permissive starting point for a cohort-simulation or AI-classmate engagement. |
+| Rumi | [Orenda-Project/rumi-platform](https://github.com/Orenda-Project/rumi-platform) | Apache-2.0 *(sidebar + README, p296)* | 18 | 🟢 **PROMOTED AT `p296` — the first teacher-coaching agent on this shelf whose delivery channel is WhatsApp rather than a web app.** Classroom coaching on real lessons, reading assessment from a voice note, lesson plans, curriculum quizzes and teacher PD. **847 commits · 19 forks · `main`** — production-shaped despite 18★. Built by **Taleemabad (Pakistan)** and ships their **national-curriculum** content library. ⚠️ **Language count is self-contradictory:** the README table names **15** languages (English, Urdu, Arabic, Spanish, Punjabi, Sindhi, Pashto, Balochi, Sri Lankan Tamil, Hindi, Bengali, Marathi, Telugu, Tamil, Kannada) while the repo's own sidebar blurb says **9**. Quote the README list, not the blurb. **The right row for a low-bandwidth, high-language-count deployment in any region** — the channel, not the country, is what transfers. |
+| Shiksha Copilot | [microsoft/Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) | MIT *(sidebar + README legal notices, p296)* | 9 | 🟢 **PROMOTED AT `p296`.** Teacher lesson-planning and classroom-material generation bound to a **chosen curriculum, grade, subject and chapter**, with teacher review before export to Word, PowerPoint or student handouts. **149 commits · 12 forks · `main`.** From **Microsoft Research India** with the **Sikshana Foundation** as education partner. ⚠️ README states it was *primarily tested on English inputs and outputs* — the curriculum binding is the reusable part, not the language coverage. The export-to-Office step is why it survives a teacher-review mandate: the artefact a teacher edits is a file they already own. |
+| k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 *(sidebar, p296)* | 572 | 🟢 **PROMOTED AT `p296` — the highest-star *skills* row on this shelf, and it ships an evaluation framework with the skills.** Source and eval harness for the agent skills in **Claude for Teachers**, co-developed with **Learning Commons**: four K-12 skills — lesson-plan creation, lesson differentiation, lesson prep, and formative check-for-understanding builders. **105 forks · 4 commits · `main`** — a small, finished artefact, not a living platform. Pairs directly with `T2` (education agents ship as skills) and with the eval gap this base has declared for several passes. |
+| AI-Teaching-Agent | [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | MIT *(sidebar + README, p296)* | 0 | 🟡 **Promoted at `p296` as a READING, not a dependency.** One Markdown teaching source → reviewable, locally exportable Lab and Exam packages plus an optional 5-8 slide deck; **human approve/reject before any export**, nothing auto-published, and the README says automatic grading is **deliberately frozen**. **0★ · 0 forks · 30 commits · `main`.** Its value is the *shape*: it is the smallest complete worked example of the human-checkpoint architecture `T-p288a` says the regulators in all four regions now require. Do not brief it as software a client can adopt. |
 
-**27 permissive rows.** (14 from passes 264-265, plus Artemis, Iris and Pyris in pass 266, plus
+**34 permissive rows in this table, measured at `p296` by enumerating it** — of which **33 are
+distinct repositories**, because **1 line is the withdrawn non-repository row** `~~Iris~~` (withdrawn
+at `p282` as a GitHub name alias for `ls1intum/Pyris`, kept as a line so the alias stays documented).
+🔵 **Both numbers are published because the standing gate counts LINES (`34`) and an engagement needs
+REPOSITORIES (`33`)** — `T-p282`'s distinction, now visible in the sentence instead of only in the
+gate. Of the rows, **5 are new at `p296`** (`THU-MAIC/OpenMAIC`, `Orenda-Project/rumi-platform`,
+`microsoft/Shiksha-Copilot`, `anthropics/k12-teacher-skills`,
+`littlecookie0722/AI-Teaching-Agent`), so **28 were carried in.**
+
+🔴 **`p296` CORRECTION — the count published here read `27`, and the table it describes held `29`
+lines.** The `27` was assembled by adding promotions pass by pass (`14 + 3 + 1 + 3 + 2 + 1 + 3`), and
+it **still counts `Iris`**, which `p282` withdrew from this very table eight passes earlier without
+decrementing the total. Two errors in one number, pulling in opposite directions: it **over**-counted
+by including a withdrawn alias and **under**-counted the real rows by more than that. 🔵 **The lesson is the one `p277` already wrote down and this file kept re-learning: a count
+derived by accumulating deltas drifts from the artefact it claims to describe.** This number is now
+published with its derivation attached, and `T37`'s re-count can check the arithmetic rather than
+only the total.
+
+**`p296` promoted `8` rows in total** — these 5 plus 3 substrates on
+[`repos/foundations.md`](../repos/foundations.md). **`34` is this table's line count and `8` is the
+pass's; the two are not interchangeable** (`T-p282`: a shelf's row count is not its repository count).
+**24 of the carried rows are payload-verified**; `adriasantacreu/google-classroom-mcp` and
+`ls1intum/Athena` are metadata grade, and all 5 new rows are **sidebar/README grade** — stated in
+their own cells, because the count is not allowed to launder the weaker rows. 🔴 **None of the 9 was a discovery — every one was already verified somewhere in this repository and had never been carried onto a shelf.** The prior count read: (14 from passes 264-265, plus Artemis, Iris and Pyris in pass 266, plus
 `canvas-mcp` in pass 267, plus three Google Classroom servers in pass 268, plus **two MIT Moodle
 servers in pass 273**, plus **`ls1intum/Athena` in pass 275** — moved here from the licence-UNVERIFIED
 table below, not newly discovered — plus the **three rows `p276` added: `DMontgomery40/mcp-canvas-lms`,

@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 296 — four new patterns (`P52`-`P55`), built only from rows promoted this pass
+
+⏱️ `2026-10-18`. Evidence:
+[`p296-promotion-gap.2026-10-18-p296.tsv`](../evidence/p296-promotion-gap.2026-10-18-p296.tsv).
+🔴 **Numbered `P52`-`P55`: `P29`-`P32` are taken by passes 277-278, and this pass caught itself
+about to re-issue them — a duplicate pattern ID compiles into two entities with one name.**
+Every component below was licence-read on `2026-10-18` and is now shelved on
+[`agents/top.md`](../agents/top.md) or [`repos/foundations.md`](../repos/foundations.md).
+
+## P52 — Defensible student evaluation for the EU's December 2027 window (EMEA)
+
+**Who it is for.** A European university or exam board whose assessment system falls in **Annex III**
+(student evaluation, exam scoring, admissions ranking). `T-p296a`: the deadline moved to
+**2 December 2027**, the **classification did not change**, and the **Art. 4 literacy duty binds
+now**. So this is a build-time pattern, not a relief pattern.
+
+**Wiring.**
+
+| layer | component | licence | why this one |
+|---|---|---|---|
+| submission + autograding platform | [`autolab/Autolab`](https://github.com/autolab/Autolab) | 🟡 Apache-2.0 **README-ONLY** | 808★ / 2 179 commits; runs the assignment and the automatic grade. ⚠️ **get the LICENSE payload in writing before this is a dependency** |
+| integrity evidence | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 MIT | 3 838 commits, Ghent University; detects modified copies. **This is the artefact that survives an appeal** — use it as the JS library so results land in your own record, not a separate tool's UI |
+| feedback suggestion (advisory) | [`ls1intum/Athena`](https://github.com/ls1intum/Athena) | 🟡 MIT *(metadata, 12/14 manifests)* | per-module Poetry packages; `module_programming_llm` for code, `module_text_llm` for prose |
+| human checkpoint | — | — | 🔴 **the AI output is advisory; a human sets the grade.** `T-p288a`: in all four regions this is the regulatory interface, not a UX nicety |
+| pedagogical eval | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 MIT | the measurement to put **in the conformance file** |
+
+**Sequence.** Autolab runs the submission → Dolos produces an integrity score as structured evidence →
+Athena proposes feedback → **a human issues the grade, with both machine outputs attached as
+rationale**. Log every step: Annex III wants traceability, and the log *is* the conformance artefact.
+
+⚠️ **Two licence prices in one stack.** Autolab is `README-ONLY` grade; Athena is `metadata` grade
+(no licence file, 12 of 14 manifests declare MIT). **Both are usable and neither is payload-verified
+— write that in the SOW rather than discovering it at legal review.** Timeline: **10-12 weeks** to a
+conformance-shaped pilot on one faculty.
+
+## P53 — Teacher-facing pilot that ships inside a US district AI moratorium (North America)
+
+**Who it is for.** A district like **NYC**, which bans **student-facing** AI through grade 8, in a
+state like **California (AB 1159)**, which bars training on student data. `p296`'s North America
+block: 134 bills, 31 states. **The pilot that survives is teacher-facing and trains on nothing.**
+
+**Wiring.**
+
+| layer | component | licence | role |
+|---|---|---|---|
+| teacher skills | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 Apache-2.0 | lesson planning, differentiation, prep, formative checks — **plus the eval framework**, which is what answers the district AI committee |
+| curriculum binding | [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | 🟢 MIT | grade/subject/chapter binding and **export to Word/PowerPoint/handouts** — the teacher edits a file they already own |
+| advisor-side early warning | [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) | 🟢 MIT | 3 015 commits; surfaces students needing contact. ⚠️ branch **`develop`**. **Advisor-facing, never student-facing** |
+| retrieval, not training | corpus RAG over district material | — | 🔴 **AB 1159 makes fine-tuning on student data illegal.** RAG is the compliant architecture, not merely the cheap one |
+
+**Why it clears the committee.** Nothing is student-facing; nothing trains on student data; every
+output is a document a teacher reviews and edits; and the eval framework ships with the skills, so the
+pilot arrives with its own measurement. Timeline: **6-8 weeks**.
+
+## P54 — WhatsApp teacher coach for a low-bandwidth, many-language system (APAC, portable)
+
+**Who it is for.** A ministry or NGO where teachers have phones and intermittent data, not laptops.
+
+**Wiring.** [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform)
+(🟢 **Apache-2.0**, 847 commits) is the base: WhatsApp-delivered classroom coaching, **reading
+assessment from a voice note**, lesson plans and teacher PD, with a **national-curriculum content
+library** (Taleemabad, Pakistan). Add [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot)
+(🟢 MIT) to re-bind generation to the **host country's** curriculum, and
+[`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite)
+(🟢 Apache-2.0) if the speech pipeline must run **on-premise** — it ships the audio pipelines **and the
+benchmarking tools to size the hardware**.
+
+🔵 **The transferable asset is the channel, not the country.** WhatsApp delivery plus voice-note
+assessment removes the device, bandwidth and literacy barriers that kill web-app pilots — which is why
+this pattern also fits **LATAM** and African deployments, where `P9` previously had no permissive base.
+
+⚠️ **Quote the README's 15 languages, not the sidebar's 9** — the repo contradicts itself.
+⚠️ **The bundled curriculum is Pakistan's**; replacing it is the bulk of the work, and `T-p287a` warns
+the host country's curriculum **licence** may not permit shipping it at all. **Check that before
+estimating.** Timeline: **8-10 weeks** per country.
+
+## P55 — Governance retrofit over AI that is already in use (LATAM)
+
+**Who it is for.** The **74%**. UNESCO IESALC: **87%** of 200 institutions across 19 countries use AI;
+**26%** have a strategy; adoption is driven by individuals. 🔵 **Do not sell adoption into this — the
+adoption already happened, unowned.**
+
+**Sequence, and note that steps 1-3 ship no model at all.**
+
+1. **Inventory.** Enumerate the AI already in use by faculty and students. This is interviews and
+   log analysis, not engineering, and it is the step that produces the shock that funds the rest.
+2. **Boundaries.** Data-minimisation at the tool boundary (`P24`), aligned to the **risk-based
+   taxonomies** the region's lawmakers are converging on — which are EU-shaped, so EU-conformant
+   design is reusable here.
+3. **Measurement.** [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+   (🟢 MIT) — and in this region it is the **locally sourced** instrument: its question bank is
+   **Chile's Ministry of Education** teacher-certification exams (*Agencia de la Calidad* + CPEIP).
+4. **Only then, a sanctioned system.** [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool)
+   (🟢 MIT, 3 015 commits) for retention, which is the outcome a LATAM university is actually measured
+   on, with a named deployment behind it (John Jay College, funded by Google.org).
+
+**Who to involve.** The **UNESCO Observatory on AI in Education for LAC** (launched **14 April 2026**,
+Santiago) runs policy and teacher-training pilots — including **Mexico with CONALEP and DGETI**.
+**Uruguay** is the one country with a binding external commitment (Council of Europe Framework
+Convention, 2025); **Colombia** has **CONPES 4144**.
+
+⚠️ **Scope to higher education.** The UNESCO instrument is HE-only; **K-12 is not covered**, and ILIA
+2025 finds school-level AI education remains an exception. Do not quote 87% at a ministry about
+schools. Timeline: **6 weeks** (steps 1-3) **+ 8 weeks** (step 4).
+
 ## 🟢 Pass 295 — `P52`, and it exists because A MINISTRY WROTE DOWN THE REQUIREMENT THIS BASE ALREADY HELD THE ANSWER TO
 
 ⏱️ **Seventeenth pass of `2026-10-18`.** Evidence:

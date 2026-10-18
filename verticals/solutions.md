@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 296 — the SIXTEENTH nil on a permissive education ERP/CRM, and a widely-republished "MIT" LMS claim died at the sidebar
+
+⏱️ **Eighteenth pass of `2026-10-18`.** Evidence:
+[`p296-promotion-gap.2026-10-18-p296.tsv`](../evidence/p296-promotion-gap.2026-10-18-p296.tsv).
+
+🔴 **`open source platform education ERP CRM MIT Apache` — nil for the sixteenth consecutive pass.**
+No permissive education ERP/CRM exists to find that this shelf does not already carry. The leg
+returned nine vendor and comparison blogs, every one of them a 2026 "best open source LMS" ranking,
+and **their licence columns are the finding.**
+
+### 🔴 `frappe/lms` is `AGPL-3.0`. A 2026 LMS comparison published it as MIT, and this shelf nearly carried it
+
+The leg's top results included a ranked comparison listing **Frappe LMS as *"MIT licensed"***, aimed
+at *"tech SMBs and nonprofits"*. Read first-hand this pass:
+
+| cell | secondary source claimed | read `p296`, `2026-10-18` |
+|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) licence | **`MIT`** | 🔴 **`AGPL-3.0`** *(sidebar/About)* — and **the string `MIT` does not occur on the page at all** |
+| stars / forks / commits | — | `3.3k★` · `1.6k` forks · **`7 828` commits** |
+| default branch | — | ⚠️ **`develop`**, not `main` |
+
+🔵 **The error is not cosmetic and it is not conservative.** `AGPL-3.0` reaches through **network
+use**: a hosted multi-tenant deployment for a client triggers source obligations over the whole
+combined work. A studio that took the comparison blog's column at face value would have scoped a
+"permissive LMS" engagement onto the single most copyleft-exposed shape there is — **a hosted LMS.**
+`frappe/lms` was already on this shelf, correctly; what `p296` adds is the **refutation of the claim
+now circulating about it**, so the next reader who arrives holding that blog has the answer here.
+
+⚠️ **Same leg, same failure mode, three more times.** The comparisons also listed **Forma LMS** as
+Apache-2.0 in one article and LGPL in another; **OpenOlat** as Apache-2.0 *(unverified this pass — the
+targeted follow-up leg returned nothing on its licence at all)*; and **Fedena** as Apache-2.0, which
+this shelf's `p276` already settled on different grounds. 🔴 **Not one of the nine blogs cited a
+`LICENSE` file.** The standing rule holds and is now evidenced four times in one pass: **a licence
+column in a comparison article is a claim, not a grade.**
+
+🔵 **The one real gain this pass is on the other shelves, not this one.** Five permissive substrates
+were promoted onto [`repos/foundations.md`](../repos/foundations.md) — including
+[`autolab/Autolab`](https://github.com/autolab/Autolab), a **course-management platform with
+automatic programming-assignment grading (CMU, 808★, 2 179 commits)**. ⚠️ It is **not** an ERP/CRM and
+does not close this leg's nil, but it is the closest thing to an administrative *platform* this base
+has shelved permissively, and a reader who arrives at this file looking for one should be sent there.
+Its grant is **`README-ONLY`** grade — see the note on that row before it becomes a dependency.
+
 ## 🔴 Pass 294 — the fifteenth consecutive nil on a permissive education ERP/CRM, and for once it is a nil with FOUR VERIFIED NEGATIVES
 
 ⏱️ **Sixteenth pass of `2026-10-18`.** Evidence:

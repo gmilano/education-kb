@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 `T-p296a` — THE EU'S EDUCATION HIGH-RISK DEADLINE MOVED TO DECEMBER 2027, AND THE DUTY THAT ACTUALLY BINDS TODAY IS THE ONE NOBODY IS SELLING
+
+⏱️ `2026-10-18`, pass 296.
+
+The **Digital Omnibus on AI** moved **Annex III stand-alone high-risk obligations — education's
+bucket — from `2 August 2026` to `2 December 2027`** (Annex I embedded: `2 August 2028`). **The Art. 4
+AI-literacy duty was not delayed and has applied since `2 February 2025`. Prohibitions were not
+delayed.**
+
+🔴 **Two things follow, and they point in opposite directions from each other.** (1) **The compliance
+pitch is dead for sixteen months** — a client told *"you must be conformant by August 2026"* will find
+out. (2) **The literacy duty is overdue and unsold**: it binds every organisation using an AI system,
+which is every school, and the **EC/OECD AI Literacy Framework for Primary and Secondary Education
+(18 June 2026)** is a ready-made curriculum spine for delivering it.
+
+🔵 **The classification did not change** — admissions ranking, student evaluation and exam scoring are
+still Annex III high-risk. So the extra time is **build time, not relief**: design to the high-risk
+standard now, because retrofitting conformance into a shipped grading pipeline is the expensive path.
+⚠️ The omnibus dates are contested (Council `29 Jun 2026` vs Commission *"in force 27 Jul 2026"*) —
+**check the Official Journal before a SOW carries a date.**
+
+## 🟢 `T-p296b` — APAC HAS THE ONLY EDUCATION-NAMED COMPLIANCE DATE IN FORCE ANYWHERE, AND ANZ IS NOT PART OF ITS MARKET
+
+**South Korea's Framework Act on AI** (horizontal, in force **22 Jan 2026**) and **Vietnam's AI law**
+(in force **1 Mar 2026**) end the "APAC is voluntary guidance" reading this base has carried.
+🔴 **Vietnam's is the sharper instrument: systems in education, healthcare and finance already
+operating before `15 Aug 2026` get an additional six-month grace period** — an education-named,
+dated migration window, and the only one of its kind the legs have found in any region.
+
+🔴 **And the region splits on sentiment in a way that breaks "APAC" as a unit.** The **Ipsos Education
+Monitor 2026** finds lower support for banning AI in schools across the Asian markets surveyed, **with
+Australia and New Zealand the explicit exception — higher support for a ban.** The student-facing pilot
+that sells in Southeast Asia is the one that draws organised opposition in ANZ. **Place ANZ
+separately**, exactly as `T-p286a` concluded for Africa: a continental label gets the licence and now
+the sentiment posture wrong.
+
+## 🔴 `T-p296c` — ADOPTION IS NO LONGER THE SELLABLE PROBLEM: 87% ADOPTED, 26% GOVERNED
+
+**UNESCO IESALC**, 200 higher-education institutions, 19 LATAM countries: **87% use AI in at least one
+area; 26% have a formal AI strategy**, and adoption is driven by **individual academics, researchers
+and students** rather than institutional plans.
+
+🔵 **That is shadow AI at institutional scale, and it generalises past LATAM.** 1EdTech reports the
+same move worldwide — *experimentation → governance* — and HolonIQ reports the real gains are in
+**course design, teacher productivity and administrative workflows**, not student-facing novelty.
+**The deliverable is shifting from a system to a system plus a policy plus an evaluation regime.**
+
+🔴 **The commercial edge of this base's evaluation gap.** 1EdTech reports buyers now demand evidence
+that products improve learning, persistence, well-being or job-relevant skills. **An engagement with
+no measurement plan is becoming unsellable** — so the missing eval layer is a revenue problem, not
+only a technical one. `p296` shelved the first permissive, education-specific instrument against it:
+[`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+(MIT, Chilean MINEDUC teacher-exam items), alongside the eval framework shipped with
+[`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) (Apache-2.0).
+⚠️ Neither is a maintained harness. The gap is **narrowed, not closed.**
+
+## 🔴 `T-p296d` — A KB'S BINDING CONSTRAINT STOPS BEING DISCOVERY AND BECOMES PROMOTION, AND NOTHING IN THE PIPELINE NOTICES
+
+**Measured on this base, this pass.** The agents leg returned its **22nd consecutive nil** while
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — **MIT, 41.0k★, the largest education-AI
+repository this base knows of** — sat verified **inside this repository**, in `agents/trending.md`,
+**unshelved**. `p989` had already measured the condition on `2026-10-10`, publishing **~500 permissive
+orphans** out of `1 119`; no pass worked the list. `p296` promoted **8 rows** from it and **not one
+was a discovery** — and the attempt to promote **two more was refused by this base's own identity
+gate, because they were already shelved.** 🔴 **So the orphan list is itself partly stale: it names
+candidates, not absences, and a promotion must be checked against the shelf before it is written.**
+
+🔵 **The generalisable finding, which is the one worth carrying to other industries' bases:** a
+curation pipeline that measures itself by *what it found this pass* will report a thin market when it
+actually has a **broken promotion path** — and the two failure modes produce **identical output**, a
+nil. 🔴 **Twenty-one nils were read as evidence about the world; they were evidence about the
+pipeline.** The distinguishing test is cheap: before searching, ask whether anything already verified
+is unshelved. `ACTION PG` now stands on [`agents/top.md`](../agents/top.md).
+
+⚠️ **The star column was complicit.** Three of the five substrates read this pass exceed 2 000
+commits and none exceeds 352★; `datakind/student-success-tool` has **8★ / 3 015 commits** and a
+reported graduation gain at a named college. **Rank on commits and named deployments, not stars.**
+
 ## 🟢 Pass 295 — STALENESS TRACKS PROVENANCE, NOT AGE — and the unworked region beat the worked one again
 
 ⏱️ **Seventeenth pass of `2026-10-18`.** Evidence:
@@ -1581,9 +1659,16 @@ Where the client runs Moodle, the honest answer is the AGPL open-core server or 
 against Moodle Web Services — i.e. actual engineering, not an install.
 
 ⚠️ **And the category is invisible to indexes:** the `mcp-server-education` GitHub topic is
-**still empty** while **21 distinct education MCP server slugs are shelved on `agents/top.md`**
-(**15** when `p274` measured it, plus the five that pass shelved from `trending.md`).
+**still empty** while **23 distinct education MCP server slugs are shelved on `agents/top.md`**
+(**15** when `p274` measured it; `21` at `p278`).
 None was found through a topic listing.
+
+🟢 **CORRECTED AT `p296`: 21 → 23, and the correction came from the gate rather than from a reader.**
+`T37`'s standing re-count reported `published 21 · measured 23 · STALE` on **every pass since the
+value was last touched**, and this is the pass that acted on it. ⚠️ **The `23` is the whole-file
+`MCP_HINT` scope**, not the MCP section's own table, which measures `19` and matches its own
+sentence — `p278` registered both scopes precisely because a bare count cannot be checked. Quote the
+scope with the number or neither is verifiable.
 
 🟢 **CORRECTED AT `p278`: 20 → 21.** `p277` left this at 20 because its own fresh enumeration
 returned 20 and `T37` returned 21. **`p278` reproduced both and the gate was right.** `p277`'s

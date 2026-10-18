@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 296: three substrates promoted, two already shelved, and the commit column beat the star column on all five
+
+Evidence: [`p296-promotion-gap.2026-10-18-p296.tsv`](../evidence/p296-promotion-gap.2026-10-18-p296.tsv).
+
+🟢 **Three permissive substrates moved onto [`repos/foundations.md`](foundations.md) this pass, none
+of them newly discovered — and two more were caught already being there.** All five were in this
+repository, named on
+[`p989`'s permissive-orphan list](../compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt)
+of `2026-10-10`, which no pass had worked.
+
+| repo | licence (read `2026-10-18`) | stars | commits | branch | layer it supplies |
+|---|---|---|---|---|---|
+| ⚠️ [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 `MIT` *(sidebar)* | 352 | **3 838** | `main` | academic-integrity evidence (Ghent University). 🔴 **ALREADY SHELVED** — row enriched, not added |
+| [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) | 🟢 `MIT` *(sidebar)* | **8** | **3 015** | `develop` | dropout early-warning (DataKind / Google.org; John Jay College) |
+| ⚠️ [`autolab/Autolab`](https://github.com/autolab/Autolab) | 🟡 `Apache-2.0` **README-ONLY** | 808 | 2 179 | `master` | autograding platform (CMU). 🔴 **ALREADY SHELVED** — row enriched and its grade **downgraded** from a bare `Apache-2.0` |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | 🟢 `Apache-2.0` *(sidebar + README)* | **0** | 450 | `main` | on-prem inference runtime (Intel / OpenVINO) |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 `MIT` *(sidebar)* | 12 | 5 | `main` | pedagogical evaluation (Chile MINEDUC items) |
+
+🔴 **The star column would have ranked these backwards.** `student-success-tool` has **8★ and 3 015
+commits** with a reported senior-graduation gain at a named college; `education-ai-suite` has **0★**
+and is Intel's. Meanwhile the two highest-star rows (`Autolab` 808★, `dolos` 352★) are the two with
+the deepest histories, so stars are not *useless* here — they are **uncorrelated enough that ranking
+on them alone inverts the list.** Rank on commits plus a named deployment.
+
+⚠️ **Two branch traps in five rows:** `student-success-tool` defaults to **`develop`** and `Autolab`
+to **`master`**. A ladder that probes `main` reads nothing on either and reports an absence.
+
+⚠️ **`autolab/Autolab` is shelved at a weaker grade than the other four**: its sidebar shows a
+License link with **no licence name** and `Apache-2.0` appears **only in README prose**. Shelved
+because `808★ / 2 179 commits` is too useful to omit; marked `README-ONLY` because the grant was not
+read.
+
 ## 2026-10-18 (pass 295) — eleven published repository cells re-read: seven exact, two drifted, two refuted
 
 ⏱️ **Seventeenth pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept, as

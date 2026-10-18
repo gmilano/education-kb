@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 296: the trending log had the row the shelf was missing, for at least two passes
+
+Evidence: [`p296-promotion-gap.2026-10-18-p296.tsv`](../evidence/p296-promotion-gap.2026-10-18-p296.tsv).
+
+🔴 **This file is where the twenty-one-pass agents "nil" actually ends, and it is uncomfortable.**
+At l.3532 **this log verified `THU-MAIC/OpenMAIC`'s MIT grant first-hand** (`1 065` B, `sha256₁₂`
+`ba2525637432`, read at `main`) and at l.3538 recorded it at **`40 873★`**, calling it *"still the
+largest education-AI repository on these shelves by an order of magnitude."* **It was never carried
+onto [`agents/top.md`](../agents/top.md).** `p296` promoted it, at **41.0k★ / 6.3k forks / 729
+commits / `main`**, along with four more agent rows and three substrates.
+
+🔵 **What is new this window, by first-hand read rather than by search result:**
+
+| repo | licence (read `2026-10-18`) | stars | forks | commits | note |
+|---|---|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 `MIT` *(sidebar)* | **41.0k** | 6.3k | 729 | up from the `40 873` this log last recorded. **Now shelved** |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 `Apache-2.0` *(sidebar)* | **572** | 105 | 4 | 4 K-12 skills **plus an eval framework**; Claude for Teachers × Learning Commons. **Now shelved** |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 `MIT` *(sidebar)* | 352 | 48 | **3 838** | Ghent University. ⚠️ **Already a foundation row** — `p296` tried to promote it, the identity gate refused the duplicate, and the existing row was **enriched** with these three numbers instead |
+| [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) | 🟢 `Apache-2.0` *(sidebar + README)* | 18 | 19 | **847** | Pakistan / Taleemabad, WhatsApp, 15 languages. **Now shelved** |
+| [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | 🟢 `MIT` *(sidebar + legal notices)* | 9 | 12 | 149 | MSR India + Sikshana Foundation. **Now shelved** |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 `MIT` *(sidebar)* | 12 | 0 | 5 | teacher-exam benchmark, **Chilean MINEDUC** question bank, arXiv:2506.18710 |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 `MIT` *(sidebar + README)* | 0 | 0 | 30 | human approve/reject before export; **auto-grading deliberately frozen** |
+
+🔴 **The mandated leg `top open source AI agents education 2026 github MIT` returned its
+twenty-second consecutive nil**, and again re-served stale figures — the SEO corpus it draws on is
+behind the repositories it describes. **Searching is no longer the binding constraint on this shelf;
+promotion is.** ~500 permissive orphans remain in
+[`p989`'s list](../compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt).
+
+⚠️ **Star counts here are sidebar-rendered reads, not API reads.** `curl` over `github.com` was
+**403 on 4/4** probes this pass; there is no `api.github.com` channel. Treat `41.0k` as the rendered
+value, and see `p295` — stars are **not** monotonic.
+
 ## 2026-10-18 (pass 295) — the nil is TWENTY-ONE deep, and the leg now re-serves figures this base refuted the same day
 
 ⏱️ **Seventeenth pass of `2026-10-18`.** **APPEND-ONLY** — history below this section is kept, as

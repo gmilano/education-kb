@@ -1,0 +1,15 @@
+# p296  2026-10-18  channel: WebFetch over github.com (HTML sidebar/About + README)
+# curl -sI over github.com returned HTTP 403 on 4/4 probes this pass (proxy), as at p989/p295.
+# Population: permissive orphans named in compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt
+slug	licence_read	grade	stars	forks	commits	default_branch	region_placed	placing_evidence	verdict
+THU-MAIC/OpenMAIC	MIT	sidebar	41000	6300	729	main	APAC	Tsinghua (THU) org, OpenMAIC = Open Multi-Agent Interactive Classroom	PROMOTE-to-agents-top
+Orenda-Project/rumi-platform	Apache-2.0	sidebar+README	18	19	847	main	APAC	README names Pakistan + Taleemabad national-curriculum library	PROMOTE-to-agents-top
+microsoft/Shiksha-Copilot	MIT	sidebar+README-legal-notices	9	12	149	main	APAC	README names Microsoft Research India + Sikshana Foundation	PROMOTE-to-agents-top
+anthropics/k12-teacher-skills	Apache-2.0	sidebar	572	105	4	main	North America	Claude for Teachers, co-developed with Learning Commons	PROMOTE-to-agents-top
+littlecookie0722/AI-Teaching-Agent	MIT	sidebar+README	0	0	30	main	UNPLACED	no country/institution named	PROMOTE-reference-only
+dodona-edu/dolos	MIT	sidebar	352	48	3838	main	EMEA	README names Ghent University / Team Dodona	PROMOTE-to-foundations
+autolab/Autolab	Apache-2.0	README-ONLY	808	234	2179	master	North America	README: initially developed by students at Carnegie Mellon University	PROMOTE-to-foundations-with-grade-note
+datakind/student-success-tool	MIT	sidebar	8	2	3015	develop	North America	README names John Jay College (CUSP) + funder Google.org	PROMOTE-to-foundations
+open-edge-platform/education-ai-suite	Apache-2.0	sidebar+README	0	11	450	main	Global	Intel; targets Intel CPU/iGPU/NPU via OpenVINO	PROMOTE-to-foundations
+AI-for-Education/pedagogy-benchmark	MIT	sidebar	12	0	5	main	LATAM	README acknowledges Chile MINEDUC Agencia de la Calidad de Educacion + CPEIP exams; arXiv:2506.18710	PROMOTE-to-foundations
+frappe/lms	AGPL-3.0	sidebar	3300	1600	7828	develop	n/a	MIT claim in 2026 LMS roundup REFUTED; no occurrence of MIT on the page	CORRECTION-no-shelf-change
