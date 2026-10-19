@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 305 — TWENTY-FIFTH NIL ON A PERMISSIVE EDUCATION ERP/CRM, NOT RE-LITIGATED — AND A CONSTRAINT THAT OUTRANKS LICENCE WHEN CHOOSING A PLATFORM TO BUILD ON
+
+⏱️ **Pass 305 of `2026-10-19`.** Evidence:
+[`p305-regional.2026-10-19-p305.tsv`](../evidence/p305-regional.2026-10-19-p305.tsv) ·
+[`p305-prohibited-practice.2026-10-19-p305.tsv`](../evidence/p305-prohibited-practice.2026-10-19-p305.tsv) ·
+[`p305-licence-payload.2026-10-19-p305.tsv`](../evidence/p305-licence-payload.2026-10-19-p305.tsv).
+
+🔴 **`open source platform education ERP CRM MIT Apache` nil'd for the TWENTY-FIFTH time.** 🟢 **`p304`
+settled this licensor-confirmed — OpenEduCat's own glossary pages state `LGPLv3` and confirm it is built on
+Odoo — so `p305` records the nil and does NOT re-litigate a settled finding.** 🔵 **An independent draw this
+pass agrees and adds nothing: Open edX is **AGPLv3**, Moodle **GPL**, Canvas community edition **AGPLv3**,
+Sakai **ECL-2.0** (permissive), OpenOlat **Apache-2.0** (permissive), and the sources conflict on Frappe
+Learning (**MIT** in one, **AGPL-3.0** in another) — ⚠️ **recorded as a CONFLICT, not resolved, because no
+payload was read for it this pass.**
+
+🟢 **`p304`'s correction stands and is the right frame for this file:** *"what is missing is a permissive
+SYSTEM OF RECORD; the permissive platforms are the ones AROUND it"* — `Ed-Fi-ODS` (Apache-2.0),
+`learningequality/studio` (MIT) and `uPortal` (Apache-2.0) are all permissive **and** platform-scale.
+
+### 🔴 The finding that outranks the licence question when choosing a platform
+
+⚠️ **For any EMEA deployment, a platform's AFFECT features decide admissibility before its licence does.**
+🔴 **EU AI Act Article 5(1)(f) prohibits AI inferring emotions in educational institutions and has applied
+since `2025-02-02`** — public and private, all levels, in-person and online, **no consent exception**,
+medical/safety carve-out only.
+
+🟢 **Why this is a verticals question and not an agents question: proctoring and engagement-analytics are
+PLATFORM features, shipped by the LMS or an LMS add-on, not things a studio writes.** 🔵 **Proctoring tools
+are the named example in the Commission's guidance, and that guidance reportedly leaves open whether
+emotion inference as a **secondary** functionality is in scope — so a platform that ships
+"attention insights" as a minor dashboard widget is exactly the arguable case.**
+
+🔴 **The concrete demonstration is on this base's own shelf, and its licence is clean:**
+[`mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE`](https://github.com/mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE)
+is **MIT, 1 060 B, `c744c1abbfbb`** and infers engagement/frustration/confusion/boredom from **facial Action
+Units**. 🟢 **A clean MIT grant does not make a prohibited practice deployable** → **`P84`** carries the
+screen and the response-data substitution.
+
+### 🟢 Platform-adjacent rows admitted this pass
+
+| Plataforma / componente | Repo | Licencia | bytes · sha256₁₂ | Rol en un stack educativo |
+|---|---|---|---|---|
+| **Feedbacksystem** | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | **Apache-2.0** | 10 785 · `65125d9e480b` | 🟢 **Personalised-feedback service run in production by a German university.** Sits BESIDE the LMS rather than replacing it — which is the only shape that works against an AGPL system of record, since it avoids linking into it |
+| **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | 1 073 · `1e05c9440068` | 🟢 **The integration seam.** MCP in front of the tutoring layer means the LMS's licence never reaches the studio's code — the AGPL-isolation shape `P85` and `p303`'s AGPL pricing both depend on |
+| **gen-mentor** | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | **CC0-1.0** | 7 048 · `a2010f343487` | 🟢 **Goal-oriented learning-path generation with NO licence condition at all** — safe to embed in a client tree that must stay proprietary |
+| **peolatsi** | [ocala/peolatsi](https://github.com/ocala/peolatsi) | **Apache-2.0** | 11 357 · `c71d239df917` | 🟡 Virtual-lab pattern (electronics) monitored by CTAT tutoring. 1★ — a reference shape for lab-based verticals, not a product |
+
+### 🔴 Refused for this file
+
+- 🔴 **[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)** —
+  **877★**, **CC BY-SA 4.0**, 1 230 B `f952182df4eb`. 🔴 **The biggest teaching-asset library in the
+  vertical, and ShareAlike reaches the derived CURRICULUM** — which in an education engagement is the
+  deliverable itself. 🟢 Commercial use IS permitted; the cost is relicensing the client's curriculum
+  → **`P85`** isolates it in three zones.
+- 🔴 **[`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach)** — **842 B reserved grant**,
+  `76d0b7213617`. **Refutes `p304`'s `bytes < 400` rule.**
+- 🟡 **Frappe Learning** — **licence CONFLICT across sources (MIT vs AGPL-3.0), no payload read.**
+  🔵 **Registered as the cheapest high-value payload probe available to `p306`: if it really is MIT it
+  would be the first permissive platform-scale LMS this base has found in 25 draws.**
+
+### 🟢 The size rule, restated with this pass's evidence
+
+🟢 **`p303`'s rule holds: PERMISSIVE and PLATFORM-SCALE are nearly disjoint in education.** 🔵 **`p305` adds
+the mechanism from the other end — the permissive rows admitted this pass are 1★ to 135★ and every one of
+them is a COMPONENT (a feedback service, an MCP seam, a path generator, a lab pattern), while every
+platform-scale system of record in the vertical is AGPL or GPL.** ⚠️ **So the architecture is forced, not
+chosen: an AGPL system of record with permissive components around it, joined over a network interface.**
+🟢 **That is why [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) is the most valuable 51★ row on
+these shelves — it is the seam that makes the forced architecture buildable.**
+
+
 ## 🔴 Pass 304 — TWENTY-FOURTH CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM, AND THIS TIME THE LICENSOR SAYS SO ITSELF — PLUS AN INDEPENDENT MEASUREMENT OF THIS FILE'S OWN SIZE RULE
 
 ⏱️ **Pass 304 of `2026-10-19`.** Evidence:

@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 305 — THE DEFAULT BRANCH IS NOW READ RATHER THAN GUESSED, WHICH RETIRES A WHOLE CLASS OF FALSE ABSENCE FROM THIS FILE
+
+⏱️ **Pass 305 of `2026-10-19`.** Evidence:
+[`p305-channel-calibration.2026-10-19-p305.tsv`](../evidence/p305-channel-calibration.2026-10-19-p305.tsv) ·
+[`p305-licence-payload.2026-10-19-p305.tsv`](../evidence/p305-licence-payload.2026-10-19-p305.tsv) ·
+[`p305-topic-census.2026-10-19-p305.tsv`](../evidence/p305-topic-census.2026-10-19-p305.tsv).
+
+🟢 **`p304` recorded that this environment yields no repository metadata: `curl` on a `github.com` repo path
+returns `403` for every slug including a fabricated control, and `api.github.com` is an authorization
+boundary. 🟢 Both CONFIRMED against the same control. 🟢 But a third channel works, and `p304` did not have
+it: `git ls-remote --symref` returns existence AND the default branch.**
+
+| channel | control that cannot exist | real slug | discriminates | yields |
+|---|---|---|---|---|
+| `curl https://github.com/{slug}` | `403` | `403` | 🔴 **NO** | nothing |
+| `curl https://api.github.com/repos/{slug}` | `403` | `403` | 🔴 **NO** | nothing |
+| `raw.githubusercontent.com/{slug}/{br}/LICENSE` | `404` | `200` | 🟢 YES | the licence **payload** |
+| 🟢 **`git ls-remote --symref {url} HEAD`** | **credential prompt** — `p293`: a MEASUREMENT, not an inconclusive result | `sha` + `ref: refs/heads/{br}` | 🟢 **YES** | 🟢 **existence AND DEFAULT BRANCH** |
+
+🔴 **Why this matters to a foundations file more than to any other shelf: substrate repositories are old,
+and old repositories do not publish on `main`.** `p303`'s ladder cost **6 filenames × 3 branches = 18
+probes** per slug and still could only find a branch it had guessed. 🟢 **`p305` pays 1 `ls-remote` + ≤6
+raw probes on the ONE correct branch — fewer requests AND strictly more coverage.**
+
+🔴 **Two branches this pass prove it is not theoretical:**
+
+| repo | default branch | would a `main`/`master`/`dev` ladder find it? |
+|---|---|---|
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | **`dev`** | 🟡 Yes, but only on the third try |
+| [`im-rk/SkillTrace`](https://github.com/im-rk/SkillTrace) | 🔴 **`development`** | 🔴 **NO — the branch is not in the ladder at all** |
+
+⚠️ **A ladder would have published `NO_PAYLOAD` for `SkillTrace` — a FALSE ABSENCE on a branch it never
+asked for.** 🟢 **That is the failure mode this base polices hardest (`gate-absence`, `ACTION p275`), and it
+was reachable by construction until this pass.** 🔵 **Standing recommendation: read the branch before
+probing the payload, always.**
+
+### 🟢 New permissive foundations rows, every grant read as a payload
+
+| Repo | Licencia | bytes · sha256₁₂ | branch | Por qué es foundational | ★ |
+|------|----------|---|---|------------------------|---|
+| [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | **Apache-2.0** | 10 785 · `65125d9e480b` | `dev` | AI-driven personalised student feedback, built and run by **TH Mittelhessen**. 🟢 **Institutional provenance + Apache-2.0 + EMEA placement — the combination this file has been short of.** Feedback-at-scale is the workflow every LMS engagement hits first | 24 |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | 1 073 · `1e05c9440068` | `main` | 🟢 **The composition point for this whole vertical.** An MCP server turning any LLM into an ITS — so tracing, scheduling and content layers sit behind ONE interface an agent host already speaks. **This is the row that makes `P84` assemblable** | 51 |
+| [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | **CC0-1.0** | 7 048 · `a2010f343487` | `main` | WWW '25 multi-agent framework for goal-oriented learning. 🟢 **CC0 is a public-domain dedication — MORE permissive than MIT, with no attribution condition — so it is the one row that cannot contaminate anything it is combined with.** See `P85` Zone B | 135 |
+| [sohan1611/BloodCoded_Agentic](https://github.com/sohan1611/BloodCoded_Agentic) | **MIT** | 1 104 · `4b15a1e898b3` | `main` | 🟢 **Three layers in one small repository: LangGraph orchestration + Bayesian knowledge tracing + a prerequisite DAG.** At 2★ it is immature, but it is the only row on these shelves that wires all three together — read it as a reference architecture | 2 |
+| [bydeng01/ability-levels-audit](https://github.com/bydeng01/ability-levels-audit) | **MIT** | 1 154 · `fef00f185287` | `master` | 🟢 **Pre-registered LLM-judge audit of ability-level assignment, shipped WITH frozen data.** Pre-registration + frozen data is what turns a mastery claim into an auditable one | 4 |
+| [bydeng01/conv-vs-ped-tutor](https://github.com/bydeng01/conv-vs-ped-tutor) | **MIT** | 1 150 · `a1c6b65c5bb1` | `main` | 🟢 **The control for the withholding-pedagogy cluster** `p303` found convergent across four implementations — audits tutor helpfulness against **answer leakage**. A cascade is unfalsifiable without exactly this | 3 |
+| [ocala/peolatsi](https://github.com/ocala/peolatsi) | **Apache-2.0** | 11 357 · `c71d239df917` | `master` | Electronics virtual lab monitored by CTAT-built tutoring. 🟢 **5th recurrence of the stock Apache-2.0 payload hash `p303` identified** — the hash instrument now has five confirmations | 1 |
+| [khayyam-math/khayyam-math](https://github.com/khayyam-math/khayyam-math) | **MIT** | 1 079 · `4068e5e09efd` | `main` | Voice-narrated maths figures from one-line prompts, with a live tutor. 🟡 Small, but the **generated-figure + narration** pairing is a reusable content primitive | 4 |
+
+🔵 **All seven MIT/Apache payloads above fall inside `p304`'s 1 060–1 180 B band (for MIT) or match a known
+stock Apache hash — the band is corroborated with seven fresh samples and keeps its use as a cheap SCREEN.**
+🔴 **It is NOT a classifier: see `agents/top.md`'s 842 B reserved grant, which clears every length threshold
+this base has written.** 🟢 **The deciding test is the PERMISSION CLAUSE** → `P83`.
+
+### 🔴 Refused for this file, with the reason
+
+- 🔴 **[`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach)** — **RESERVED GRANT**, 842 B
+  `76d0b7213617`. *"All rights reserved… portfolio and code-review purposes only."* **Refutes `p304`'s
+  `bytes < 400` rule.**
+- 🔴 **[`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm)** — **PHANTOM GRANT**: README
+  `## License / MIT`, no file on `main`. **Third instance of `p303`'s class in three passes.**
+- 🔴 **[`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE)** —
+  ungranted, **and a prohibited practice** under EU AI Act Art 5(1)(f) (in force since `2025-02-02`).
+  ⚠️ **Its MIT sibling is refused for the same second reason despite a clean grant** → `P84`.
+- 🔴 **[`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas)** — ungranted. 🟡 **The
+  only row in all 41 with a stated classroom validation (74 students), LATAM-placed. Cite the result;
+  reimplement the system.**
+- 🔴 **11 further tail rows (ranks 21–40) ungranted** — see
+  [`p305-licence-payload`](../evidence/p305-licence-payload.2026-10-19-p305.tsv).
+
+⚠️ **`make hooks` could not be run this pass** — the environment refused the recipe as external code.
+🔴 **These rows are published WITHOUT the base's 31-control gate**, and `p304` had found two gates already
+RED at `HEAD`. 🟢 **Each grant above was read first-hand as a payload by an instrument calibrated 8/8 this
+pass**, but the gate is an open item → `ACTION p305-R`.
+
+
 ## 🟢 Pass 304 — `ACTION PG-5` ITEM 3 DISCHARGED AFTER FOUR PASSES OF BEING DEFERRED, AND THE TEN CELLS PAID A NEW INSTRUMENT: FORK-TO-STAR RATIO SEPARATES THE REPOS PEOPLE *DEPLOY* FROM THE ONES THEY *READ*
 
 ⏱️ **Pass 304 of `2026-10-19`.** Evidence:

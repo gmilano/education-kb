@@ -1,0 +1,19 @@
+# p305 — a NEW AXIS, orthogonal to the grant: is the TECHNIQUE lawful to deploy?
+# Every instrument in this base grades the LICENCE. None grades the PRACTICE.
+# EU AI Act Art 5(1)(f) prohibits AI inferring emotions in educational institutions.
+# Applies since 2025-02-02. Public AND private, all levels, in-person AND online. NO consent exception.
+# Carve-out: medical or safety purposes only.
+slug	topic_rank	stars	technique	input_signal	grant	grant_bytes	sha256_12	EU_Art_5_1_f	deployable_EMEA
+mskljns/ComprehensionProblems_DAiSEE	10	5	engagement / frustration / confusion / boredom classification	FACIAL VIDEO via OpenFace Action Units + landmarks	NONE (payload 404 x6; README + sidebar silent)	-	-	PROHIBITED	NO
+mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE	27	0	comprehension-problem recognition during learning, triggers re-explanation	FACIAL VIDEO (same DAiSEE pipeline)	MIT	1060	c744c1abbfbb	PROHIBITED	NO
+# THE POINT OF THIS TABLE, AND IT IS THE WHOLE POINT:
+# The two rows are the SAME author, the SAME technique, and OPPOSITE grant status.
+# Row 1 is ungranted. Row 2 is a clean, complete, unmodified MIT payload at 1060 B.
+# Row 2 passes every licence instrument this base owns, including p305's own new clause test.
+# BOTH are undeployable in the EU, for a reason no licence check can see.
+# => A CLEAN MIT GRANT DOES NOT MAKE A PROHIBITED PRACTICE DEPLOYABLE.
+# DAiSEE itself: multi-label video dataset of students watching MOOCs, labelled for
+# engagement + frustration + confusion + boredom. Affect recognition from faces, by construction.
+# The compliant substitution (see P84): infer mastery from RESPONSE data — correctness, latency,
+# spacing — never from the face. fsrs4anki (MIT, 1079 B) and the pyKT family already carried
+# by this base do exactly that, and are untouched by Art 5(1)(f).

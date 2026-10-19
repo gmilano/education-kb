@@ -1,0 +1,17 @@
+# p305 — `intelligent-tutoring-system` enumerated to EXHAUSTION: 41 of 41, pages 1-3.
+# p303 claimed this topic was "enumerated whole (population 41)". That claim is REFUTED:
+# 14 of the 41 rows had never been carried by any pass. p303 read the HEAD and called it the whole.
+page	ranks	rows_shown	star_range	carried_before_p305	uncarried	note
+1	1-20	20	4.1k -> 1	20	0	the head; fully carried, consistent with p303 having read it
+2	21-40	20	1 -> 0	7	13	18 of 20 rows are 0-star. THE FLOOR IS AT RANK ~22
+3	41	1	0	1	0	ShuyunYuan/talentcoach — and it is the pass's RESERVED GRANT
+# GRANT RATE, head vs tail — p303's carried rule INVERTS here:
+# HEAD (ranks 1-20):  12 of 20 carry a licence payload = 60.0%
+# TAIL (the 13 uncarried rows of ranks 21-40): 1 of 13 = 7.7%  (koljapluemer/youtube-immmersion-flashcards, MIT 1073 B)
+# p303 wrote: "the tail is cleaner than the head — so licence risk RISES with adoption."
+# On `ai-tutor` that held (tail refused 1 of 20). On `intelligent-tutoring-system` it is INVERTED and
+# the margin is not marginal: 60.0% vs 7.7%.
+# => THE HEAD/TAIL GRANT RELATIONSHIP IS TOPIC-SPECIFIC, NOT A LAW OF THE VERTICAL.
+# Mechanism: this topic's tail is coursework and personal study projects, which are published without
+# a licence as a matter of habit. `ai-tutor`'s tail was small tools, which ship with one.
+# A rule derived from one topic's tail must not be applied to another's.

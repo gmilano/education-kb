@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 305 — three new patterns (`P83`-`P85`), each built only from rows payload-pinned THIS pass, and each answering a defect this pass MEASURED
+
+⏱️ `2026-10-19`. Evidence:
+[`p305-rule-calibration.2026-10-19-p305.tsv`](../evidence/p305-rule-calibration.2026-10-19-p305.tsv) ·
+[`p305-prohibited-practice.2026-10-19-p305.tsv`](../evidence/p305-prohibited-practice.2026-10-19-p305.tsv) ·
+[`p305-licence-payload.2026-10-19-p305.tsv`](../evidence/p305-licence-payload.2026-10-19-p305.tsv).
+
+### 🟢 `P83` — The permission-clause gate: a licence screen a reserved grant cannot pass
+
+**The problem it solves.** 🔴 **Two repositories in this base ship a file named `LICENSE`, at a canonical
+path, opening with a well-formed `Copyright (c) YYYY Holder` line, that grant nothing**:
+[`ai-shifu/skills`](https://github.com/ai-shifu/skills) (279 B, `5b1cf701a7fd`) and
+[`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach) (**842 B**, `76d0b7213617`).
+🔴 **The second closes with MIT's warranty disclaimer verbatim and defeats `p304`'s `bytes < 400` rule.**
+
+**The recipe.** Three ordered tests on the payload, cheapest first, and the third is the only one that
+decides:
+
+1. 🟡 **SCREEN (cheap, not a verdict)** — `bytes`. A permissive template sits in **1 060–1 180 B**
+   (12 samples across `p303`-`p305`). Outside the band, look harder. **Inside it, you have learned
+   nothing** — `talentcoach` at 842 B and `Intelligent_Tutor_…DAiSEE` at 1 060 B are 218 B apart with
+   opposite verdicts.
+2. 🟡 **IDENTIFY the variant line, never the family.** `head -3` of the payload. 🔴 **"CC" is not a verdict:
+   CC0-1.0 ([`gen-mentor`](https://github.com/GeminiLight/gen-mentor), 7 048 B) is more permissive than MIT,
+   CC BY-SA 4.0 ([`education-agent-skills`](https://github.com/GarethManning/education-agent-skills),
+   1 230 B) is content copyleft.**
+3. 🟢 **DECIDE on the operative grant clause.** `grep -q "Permission is hereby granted"` for MIT/ISC;
+   `grep -q "hereby grants to You a perpetual"` for Apache-2.0; the AGPL/GPL/LGPL header line for the
+   copylefts. 🔴 **No clause ⇒ NO GRANT, whatever the filename, length, copyright line or disclaimer say.**
+
+**Calibration, run this pass: 8/8** — both reserved grants refused, six MIT payloads spanning 1 060–1 154 B
+admitted. 🔴 **The length rule scored 7/8 on the same set: 50 % recall on the two known reserved grants.**
+
+**Wiring.** 🟢 Run step 3 over every slug on every shelf **before** a pass publishes a grant verdict, and
+over any new row at probe time. 🔵 **It is one `grep` against a file already fetched, so it costs nothing
+beyond what the existing probe already pays.** ⚠️ **`make hooks` could not be executed in this environment
+(the recipe was refused as external code), so `P83` is specified here and NOT yet wired into the gate** —
+registered as the first item of `ACTION p305-R`.
+
+### 🔴 `P84` — Screen the PRACTICE before the LICENCE: the Article 5(1)(f) filter for any EMEA education engagement
+
+**The problem it solves.** 🔴 **A clean MIT grant does not make a prohibited practice deployable.**
+[`mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE`](https://github.com/mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE)
+is **MIT, 1 060 B, `c744c1abbfbb`** — complete and unmodified — and infers **engagement, frustration,
+confusion and boredom** from **facial Action Units** via OpenFace. ⚠️ **EU AI Act Art 5(1)(f) prohibits
+emotion inference in educational institutions and has applied since `2025-02-02`: public and private, all
+levels, in-person and online, no consent exception, medical/safety carve-out only.**
+
+**The recipe — a two-stage screen, practice first:**
+
+1. 🔴 **STAGE 1, the practice screen (new, and it must run FIRST).** For every candidate component, ask
+   what the model takes as INPUT and what it INFERS. **Refuse outright** anything inferring affect,
+   emotion, attention or engagement **from face, voice prosody, gaze or other biometrics** in an education
+   setting. **No licence makes this one buildable, and no conformity dossier makes it lawful** — Annex III's
+   `2027-12-02` high-risk route does not apply to an Article 5 prohibition.
+2. 🟢 **STAGE 2, the licence screen** — `P83`, on whatever survives stage 1.
+
+**The compliant substitution, built from rows already on these shelves.** 🟢 **Infer mastery from RESPONSE
+data, never from the learner's body:**
+
+- **Scheduling / retention signal** — [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki)
+  (**MIT**, 1 079 B, `2ec9e6e61ed8`): correctness and review interval.
+- **Knowledge state** — the **`pyKT`** family already carried by this base (BKT/DKT/SAKT): mastery from the
+  response sequence.
+- **Prerequisite structure + tracing in one** — [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic)
+  (**MIT**, 1 104 B, `4b15a1e898b3`): LangGraph + Bayesian knowledge tracing + a prerequisite DAG.
+- **Auditability of the mastery claim** — [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit)
+  (**MIT**, 1 154 B, `fef00f185287`), pre-registered with frozen data, and
+  [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) (**MIT**, 1 150 B,
+  `a1c6b65c5bb1`) for **answer-leakage** control.
+- **Delivery** — [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (**MIT**,
+  1 073 B, `1e05c9440068`) exposes the tutor over MCP, so the above sit behind one interface.
+
+🟢 **Every component is MIT and payload-pinned, and none of them looks at a face.** 🔵 **The substitution is
+not a compromise: response-data tracing is the better-evidenced technique, and `pyKT`/FSRS have the
+benchmarks that facial-affect pipelines do not.**
+
+**Sell it as.** 🟢 **An Art 5(1)(f) exposure audit of an institution's existing edtech estate** — the
+Commission's guidance reportedly leaves open whether emotion inference as a *secondary* functionality is
+covered, and proctoring is the named example, so the screen finds arguable exposure rather than a clean
+bill. 🔵 **Composes with `P76`'s one-conformity-product-three-dossiers play: the practice screen is the
+cheap first pass, the Annex III dossier the deeper one.**
+
+### 🔴 `P85` — Content-copyleft isolation: using CC BY-SA teaching assets without relicensing the client's curriculum
+
+**The problem it solves.** 🔴 **The most dangerous licence in this vertical is not on an AGPL tutor; it is
+on the second-biggest repository in it.** [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+— **877★**, *"165 evidence-grounded AI skills for teachers, school leaders and EdTech builders"* — is
+**CC BY-SA 4.0** (1 230 B, `f952182df4eb`).
+
+🟢 **The inversion that makes this a pattern rather than a warning:**
+
+| | reaches | leaves alone | the education consequence |
+|---|---|---|---|
+| 🟡 **AGPL-3.0** ([`LTLTutor`](https://github.com/brownplt/LTLTutor) 35 148 B · [`logicits`](https://github.com/IgorFonck/logicits) 35 149 B) | 🔴 **your CODE**, over a network | 🟢 your curriculum and prompts | 🟡 **Priced** — isolate it as a service |
+| 🔴 **CC BY-SA 4.0** (the 877★ row) | 🔴 **your CONTENT** — every derived skill, prompt, curriculum artefact | 🟢 your surrounding code | 🔴 **Hits the deliverable, because an education deliverable IS content** |
+
+⚠️ **ShareAlike explicitly permits commercial use** — *"even commercially"*, twice, in its own text — so
+this is **not** a NonCommercial stop like `p303`'s `ailey-bailey-canvas`. 🔴 **The cost is that every skill
+derived from it must ship under CC BY-SA 4.0, i.e. the client's curriculum is relicensed to the world.**
+
+**The recipe — three zones, and the boundary is a build step, not a promise:**
+
+1. 🟢 **ZONE A — reference, never remixed.** Keep the CC BY-SA corpus in its own directory with its
+   `LICENSE` intact and its attribution block. **Read it for design. Cite it in the engagement's design
+   record.** 🔴 **Never copy a skill file into the client tree, and never paste its text into a prompt
+   template that ships.**
+2. 🟢 **ZONE B — the client's own curriculum, authored clean.** Write skills and prompts against the
+   *structure* the reference corpus demonstrates, not its text. 🔵 **Structure, taxonomy and pedagogical
+   approach are not copyrightable; the expression is.** Generate and store these under the client's own
+   terms, scaffolded by **MIT** tooling — [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
+   (1 073 B) for delivery, [`gen-mentor`](https://github.com/GeminiLight/gen-mentor) (**CC0-1.0**, 7 048 B)
+   where generator code is wanted, since **CC0 imposes no condition at all and cannot contaminate Zone B**.
+3. 🟢 **ZONE C — the boundary, enforced mechanically.** A CI check that fails the build if any Zone-A file
+   hash, or a near-duplicate of its text, appears under the Zone-B tree. 🔵 **The licence boundary has to be
+   a test, because on a long engagement it will otherwise be crossed by a well-meaning copy-paste.**
+
+**When to just not.** 🔴 **If the engagement's deliverable IS a teaching-skills library — the same artefact
+class as the upstream corpus — Zone B is most of the work and Zone A saves little.** 🟢 **Then build from
+the CC0 and MIT rows and treat the 877★ corpus purely as a design benchmark**, or 🔵 **negotiate a separate
+licence with the author, which is tractable here: it is a single named individual holder, not a foundation.**
+
+
 ## 🟢 Pass 304 — three new patterns (`P80`-`P82`), each built only from rows payload-pinned THIS pass or already pinned, and each answering a finding this pass MEASURED rather than a finding it read
 
 ⏱️ `2026-10-19`. Evidence:

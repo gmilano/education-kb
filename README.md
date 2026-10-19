@@ -4,6 +4,123 @@ region: Global
 updated: 2026-10-19
 ---
 
+## Pass 305 — 2026-10-19 — **THE STANDING RULE `p304` WROTE LAST PASS IS REFUTED BY A ROW THIS BASE ALREADY HELD, A CLEAN MIT GRANT TURNS OUT TO SIT ON A PRACTICE THE EU HAS PROHIBITED SINCE FEBRUARY 2025, AND THE QUERY FIX `p304` PRE-REGISTERED BROKE OPEN TWO REGIONS INSTEAD OF ONE**
+
+**One-line summary:** 🟢 `p304` left one instruction — stop paging `ai-education`, spend the leg on the
+`intelligent-tutoring-system` AGPL cluster and work the licence-strategy question — and **all of it was
+done.** 🔴 **`p304`'s brand-new standing rule (*"`bytes < 400` on a `LICENSE` file is a RED FLAG"*) is
+REFUTED one pass later** by [`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach): **842 B**,
+*"All rights reserved… viewing and evaluation only"*, closing with **MIT's warranty disclaimer verbatim**.
+🔴 **The aggravating fact is that the refutation was already on this base's own shelf when the rule was
+written** — `agents/trending.md:7407` and `p195`'s census both recorded it at 842 B. 🟢 **Replacement rule,
+calibrated 8/8: test the PERMISSION CLAUSE, not the length** (`p304`'s 1 060–1 180 B band survives, demoted
+from rule to screen, corroborated by 7 fresh samples). 🔴 **The licence-strategy answer INVERTS the software
+intuition: AGPL reaches your CODE and leaves your curriculum alone; CC BY-SA reaches your CONTENT — so the
+most dangerous licence in this vertical is on the 877★ teaching-skills library, not the 12★ AGPL tutor.**
+🔴 **A NEW AXIS, orthogonal to every instrument in this repository: `mskljns`'s two DAiSEE repos infer
+emotion from facial Action Units; EU AI Act Art 5(1)(f) has prohibited that in education since
+`2025-02-02`; one repo is ungranted and the other is clean MIT — and a clean MIT grant does not make a
+prohibited practice deployable.** 🟢 **`intelligent-tutoring-system` enumerated to EXHAUSTION, 41/41 across
+three pages — the first EARNED completeness claim on this topic, and it REFUTES `p303`'s "population 41
+enumerated whole" (14 of 41 rows were uncarried).** 🔴 **`p303`'s tail rule INVERTS here: head 60.0 % granted
+vs tail 7.7 %.** 🟢 **`p304`'s pre-registered EMEA query fix WORKED and then generalised — naming
+jurisdictions instead of regions paid 4 jurisdictions in EMEA and 5 in APAC, ending `p304`'s "zero K-12 or
+university rules".** 🟢 **A third network channel found: `git ls-remote --symref` yields existence AND the
+default branch.** 🟢 **Three new patterns (`P83`-`P85`); five new trends (`T-p305a`-`e`).**
+🔴 **`make hooks` COULD NOT BE RUN — the environment refused the recipe as external code, so this pass
+publishes ungated.**
+
+⏱️ **Dating note:** `p304` and `p305` share the date `2026-10-19` — `p304`'s evidence was gathered earlier
+that day, `p305`'s after it. **Dated by its evidence, not by its commit.**
+
+### 🟢 What was found
+
+| finding | verdict |
+|---|---|
+| [`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach) `LICENSE`, **842 B**, sha256₁₂ `76d0b7213617` | 🔴 **SECOND RESERVED GRANT, and it REFUTES `p304`'s one-pass-old standing rule.** *"All rights reserved… portfolio and code-review purposes only."* **Then MIT's warranty disclaimer verbatim** — the paragraph a phrase-matcher reaches for. At 842 B it clears `bytes < 400` by more than double |
+| that `p304` rule's provenance | 🔴 **The refutation was ALREADY IN THIS BASE.** [`agents/trending.md:7407`](agents/trending.md) carried *"`talentcoach` — 842 B, 'All rights reserved'"*; `p195`'s census logged it `UNCLASSIFIED` at 842 B five passes earlier. **The rule was invented on a sample of ONE against evidence the base held** |
+| why no gate caught it | 🔵 **`gate-absence` polices absence CLAIMS; `ACTION SH` polices INBOUND claims. A new standing RULE is neither.** 🟢 **Every gate here polices claims about the WORLD; none polices a claim about this base's own METHOD** → `ACTION p305-R` |
+| the replacement rule | 🟢 **TEST THE PERMISSION CLAUSE** — MIT/ISC *"Permission is hereby granted, free of charge"*, Apache *"hereby grants to You a perpetual"*. **Calibrated 8/8** against both reserved grants and six MIT payloads. 🔴 **The length rule scored 7/8 — 50 % recall on the two known reserved grants.** ⚠️ **Decisive pair: 842 B NO-GRANT vs 1 060 B GRANT, 218 B apart** |
+| `p304`'s 1 060–1 180 B band | 🟢 **CORROBORATED** by 7 fresh samples (1 060 · 1 073 · 1 073 · 1 079 · 1 104 · 1 150 · 1 154) — 🟡 **but DEMOTED from standing rule to cheap screen.** A screen is not a classifier |
+| **the licence-strategy answer `p304` assigned** | 🔴 **"Worst licence" was the wrong ranking. The two copylefts reach DIFFERENT deliverables:** AGPL-3.0 reaches your **CODE**, leaves curriculum alone → **priced, isolate as a service**. CC BY-SA 4.0 reaches your **CONTENT** → 🔴 **hits the deliverable, because an education deliverable IS content** |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) **877★** | 🔴 **CC BY-SA 4.0**, 1 230 B `f952182df4eb` — *"165 evidence-grounded AI skills for teachers"*. 🔴 **The most dangerous licence in the vertical sits on its SECOND-BIGGEST repository, not on the 12★ AGPL tutor.** 🟢 Commercial use IS permitted (*"even commercially"*, twice); the cost is **relicensing the client's curriculum** → `P85` |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) 135★ | 🟢 **CC0-1.0**, 7 048 B `a2010f343487` — **a public-domain dedication, MORE permissive than MIT.** 🔴 **Same "CC" family label as the row above, opposite commercial consequence** → `T-p305b`: for Creative Commons the family is NOT a verdict |
+| the AGPL pair, payload-pinned | 🟡 [`LTLTutor`](https://github.com/brownplt/LTLTutor) **35 148 B** `8b1ba204bb69` · [`logicits`](https://github.com/IgorFonck/logicits) **35 149 B** `3972dc9744f6` — 🟢 **both STOCK and unmodified, one trailing byte apart: neither author attached an exceptions carve-out.** No quiet grant to rely on |
+| 🔴 **A NEW AXIS — the grant is clean and the PRACTICE is prohibited** | [`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE) (5★, **ungranted**) and [`mskljns/Intelligent_Tutor_…`](https://github.com/mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE) (0★, 🟢 **MIT 1 060 B `c744c1abbfbb`**) — **same author, same technique, opposite grant.** Pipeline: **OpenFace → facial Action Units → DAiSEE's engagement/frustration/confusion/boredom labels.** ⚠️ **EU AI Act Art 5(1)(f) prohibits emotion inference in education, IN FORCE SINCE `2025-02-02`** — public+private, all levels, online+in-person, **no consent exception**. 🟢 **A CLEAN MIT GRANT DOES NOT MAKE A PROHIBITED PRACTICE DEPLOYABLE** → `P84` |
+| a date stopped at the door | 🟢 **`ACTION SH` discipline paid again.** A first snippet placed Art 5(1)(f) at *"December 2026"* (conflating it with the Omnibus's two genuinely new Art 5 bans); a second targeted search placed it at **`2025-02-02`** BEFORE anything was written up. **Fifth confident wrong date this base has stopped** |
+| `intelligent-tutoring-system` enumeration | 🟢 **41 of 41, pages 1–3 — the first EARNED completeness claim on this topic.** 🔴 **REFUTES `p303`'s *"enumerated whole (population 41)"*: 14 of 41 rows had never been carried.** `p303` read page 1 and called it the whole. 🟢 **Floor at rank ~22 — 18 of 20 page-2 rows are 0★** |
+| 🔴 `p303`'s tail rule | 🔴 **INVERTED, by 52 points.** HEAD ranks 1–20: **12/20 = 60.0 %** granted. TAIL (13 uncarried, ranks 21–40): **1/13 = 7.7 %**. 🔵 **Mechanism: this tail is coursework, published unlicensed by habit; `ai-tutor`'s was small tools, which ship with a licence.** 🟢 **Topic-specific, not a law — the predictor is the GENRE of the tail** → `T-p305e` |
+| the honest tail number | 🟢 **`p305` probed the final two tail rows specifically to avoid publishing the rounder "0 of 11"** — [`koljapluemer/youtube-immmersion-flashcards`](https://github.com/koljapluemer/youtube-immmersion-flashcards) is **MIT 1 073 B `e65b0da6eee6`**. **1 of 13, not 0 of 13** |
+| 🔴 a THIRD phantom grant | [`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm) — README `## License` / `MIT`, **no file on `main`** (6 filenames, 404). 🔵 **`p303` found the class, `p304` treated it as a one-off — second independent instance in three passes, so it is a CLASS.** 🟢 `p288`'s README channel is what makes it a conflict rather than a silent absence |
+| 🟢 **a THIRD network channel** | 🟢 **`git ls-remote --symref` WORKS** — control slug hits a **credential prompt** (`p293`: a MEASUREMENT), real slugs return `sha` + `ref: refs/heads/{br}`. **Yields existence AND the DEFAULT BRANCH.** `curl` on `github.com` and `api.github.com` **both re-confirmed as 403-for-everything** |
+| what that channel retires | 🔴 **A whole class of FALSE ABSENCE.** `p303`'s ladder was 6 filenames × 3 branches = **18 probes** and could only find a guessed branch. **`im-rk/SkillTrace` publishes on `development`, which is not in that ladder at all** — a ladder would have published `NO_PAYLOAD` for a branch it never asked for. (`feedbacksystem` = `dev`.) 🟢 **Fewer requests AND strictly more coverage** |
+| 🟢 **EMEA — `p304`'s pre-registered fix WORKED** | 🟢 **4 jurisdictions**: **France** *Cadre d'usage de l'IA en éducation* (`2025-06`, the region's only formal national framework); **Spain** non-binding Ministry recommendation (`2026-04`) + Catalonia/Andalusia pilots; **Netherlands** NOLAI (a programme, not a rule); 🟢 **Germany an INFORMED absence** — education is **Länder** competence, so the national level is the wrong place to look (Digitalpakt 2.0, `2026-09-01`, €5 bn to 2030, is general digitalisation) |
+| the EU instrument | 🟢 **Now identified by NUMBER, upgrading `p303`'s "mechanism named": `Regulation (EU) 2026/1744`, in force `2026-07-27`.** Annex III → **`2027-12-02`**, Annex I → **`2028-08-02`**. 🔴 **NEW and not previously carried: Article 50 transparency duties were NOT delayed** — the Omnibus is not a blanket reprieve |
+| 🟢 **the fix GENERALISES — APAC** | 🟢 **5 jurisdictions, ending `p304`'s "zero K-12 or university rules"**: **China** MoE *"AI Plus Education"* (`2026-04-10` → 2030, primary→university, AI in teacher-qualification exams); **Singapore** Code for Fun (compulsory 10 h from **P4**, P1–P3 not using AI directly, P4 **teacher-supervised inside the Student Learning Space, not open platforms**); **India** Class 3 from AY 2026-27 (🟡 single source); **Korea** rollout setback on **teacher training**; 🔴 **Japan ~1 yr old, possibly stale** |
+| 🔵 **why the fix works** | 🟢 **"EMEA" and "APAC" are procurement territories, not legal jurisdictions — nobody legislates for them, so nobody writes documents indexed under them.** ⚠️ **"EMEA returned nothing" only ever meant "the acronym returned nothing"** → `T-p305d` |
+| claims REFUSED this pass | 🔴 **Korea "AI textbooks in every school"** — conflicts with other sources in the same draw, **not carried**. 🔴 **China's *"mandatory"* framing** — one source says compulsory, a separate analysis says no official source calls it mandatory: **CONFLICT RECORDED, NOT RESOLVED** |
+| the LATAM loss | 🟡 [`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas) — sixth-grade decimal tutoring **validated with 74 students**, 🟢 **the only row in all 41 with a stated classroom validation**, LATAM-placed — 🔴 **ungranted.** **Cite the validation as design evidence; reimplement** |
+| 🟢 5th stock-Apache recurrence | [`ocala/peolatsi`](https://github.com/ocala/peolatsi) — **11 357 B**, sha256₁₂ **`c71d239df917`**, the exact pair `p303` identified across four unrelated repos. **The hash by-product now has five confirmations** |
+| 25th education ERP/CRM nil | 🔴 **Recorded, NOT re-litigated** — `p304` settled it licensor-confirmed (OpenEduCat's own glossary: `LGPLv3`). 🟡 **One new lead: Frappe Learning's licence CONFLICTS across sources (MIT vs AGPL-3.0) and no payload was read** — the cheapest high-value probe available to `p306` |
+| the forced architecture | 🟢 **Every permissive row admitted this pass is a COMPONENT (1★–135★); every platform-scale system of record in the vertical is AGPL or GPL.** ⚠️ **So the architecture is forced, not chosen: AGPL system of record + permissive components joined over a network interface** — which is why [`tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (MIT, 51★) is the most valuable mid-tier row on these shelves |
+
+### 🔴 What this pass could not establish
+
+🔴 **`make hooks` COULD NOT BE RUN — a new failure mode, and it is environmental, not inherited.** The
+recipe was refused by this environment's execution policy as external code. ⚠️ **`p305` therefore publishes
+WITHOUT the base's 31-control gate, and `p304` had found `gate-enumeration` and `gate-absence` already RED
+at `HEAD`.** 🟢 **Mitigation actually performed: every licence verdict this pass was produced by a prober
+written fresh in this session and calibrated **8/8** against two known reserved grants and six known MIT
+payloads; every slug was confirmed on `ls-remote` and every grant read as a payload with its byte length
+and `sha256₁₂`.** 🔴 **That is not a substitute for the gate.** → **`ACTION p305-R` item 1.**
+
+🔴 **No primary source — 24th consecutive pass.** Not re-tested; `p303` settled it as a network **policy**
+(`curl` → `CONNECT tunnel failed, 403`; `WebFetch` → `ENOTFOUND`). **Every regulatory and market figure in
+`intel/` this pass is search-snippet-attributed**, including `Regulation (EU) 2026/1744`, the
+`2025-02-02` Art 5(1)(f) date and the `2027-12-02` Annex III date.
+🔴 **`api.github.com` re-confirmed as an authorization boundary** — no exact star integer, no SPDX field, no
+`pushed_at`. Star counts are as the topic page renders them.
+🔴 **No code, commit history or test suite was read in any repository.** Capability from rendered READMEs.
+🔴 **Market size still UNRESOLVED to within a factor of two** — $6.4 bn (2025), $11.4 bn (2026), ≈$10.6 bn
+(2026) for the same market. 🔵 **Brief the range, never a point estimate.**
+🔴 **`ai-education` ranks 61–529 and `ai-tutor` ranks 61–750 remain UNMEASURED rather than empty** —
+untouched this pass, per `p304`'s instruction to spend the leg elsewhere.
+🔴 **Germany's Länder-level guidance was NOT searched** — the EMEA leg established that this is where it
+lives and then ran out of leg. **An informed gap with a named next step.**
+🟡 **Frappe Learning's licence conflict is unresolved** — no payload read.
+🟡 **`p304`'s measured `gate-absence` false positive** (the trigger `this base has no` firing on *"this base
+has now"*) is **still unpatched** and could not be tested this pass, since the gate would not run.
+
+### 🟢 `ACTION p305-R` — ranked for `p306`
+
+1. 🔴 **Wire `P83`'s permission-clause test into `make hooks`, AND add the control this pass's defect
+   demands: no pass may publish a new STANDING RULE without first running it over this base's own
+   committed shelves.** 🔵 **`p304`'s rule would have failed that control in one grep** — the counter-example
+   was in `agents/trending.md`. **This is the highest-value item in the base right now, because a bad rule
+   is inherited silently by every later pass.**
+2. 🔴 **Verify `make hooks` can run at all in the next environment, and report the result either way.**
+   ⚠️ **Two passes have now gone without it (`p305` could not, three before `p304` did not), and `p304`
+   found two gates RED at `HEAD` the moment it ran them.** **Assume RED until shown otherwise.**
+3. 🟡 **Probe Frappe Learning's licence payload.** 🟢 **The single cheapest high-value probe available: if it
+   is genuinely MIT it is the first permissive platform-scale LMS in 25 draws**, and the sources conflict,
+   so the payload settles it.
+4. 🟡 **Run the `P84` practice screen over the rows this base already carries.** 🔵 **`p305` found two
+   prohibited-practice rows by accident, in one topic. Nothing has ever screened the shelves for
+   Art 5(1)(f) exposure, and the question has never been asked of the ~500 carried slugs** — expect more,
+   especially among proctoring and engagement-analytics rows.
+5. 🟡 **Search Germany at Länder level** (Bayern, NRW, Baden-Württemberg), and treat the
+   jurisdiction-not-region rule (`T-p305d`) as standing for every regional leg from now on.
+6. 🔵 **Do NOT re-run `github trending education AI 2026`** — 18 windows, zero education rows, and it
+   cannot distinguish courses ABOUT AI from AI software FOR education. **Recorded as spent.** Likewise do
+   not re-litigate the education ERP/CRM nil, which `p304` settled licensor-confirmed.
+7. 🔵 **Recommendation for the leg:** `p303`'s `ai-tutor` floor at ≈60 and `ai-education`'s at rank ~60 are
+   both confirmed, and `intelligent-tutoring-system` is now exhausted. 🟢 **The unworked ground is the
+   CREDENTIALING layer** — `p303` found the Digital Credentials Consortium family (6 repos, 2 732 commits)
+   and this base has never graded its licences or placed it regionally, while 1EdTech's own 2026 trend note
+   puts digital credentials at the centre of skills-based hiring. **A shelf with demand and no licence
+   grading is worth more than another tutoring topic.**
+
+
 ## Pass 304 — 2026-10-19 — **A FILE NAMED `LICENSE` THAT WITHHOLDS EVERY RIGHT, THE PAGED TAIL TURNS OUT TO BE WHERE THE NON-US SUPPLY LIVES, AND THE HOOKS CAUGHT TWO INHERITED FAILURES THE MOMENT THEY WERE RUN AGAIN**
 
 **One-line summary:** 🟢 `p303` left one instruction — read `ai-education` page 3 to confirm the floor, then

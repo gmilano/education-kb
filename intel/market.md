@@ -4,6 +4,168 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 305 — `p304`'s PRE-REGISTERED QUERY FIX WORKED ON EMEA, AND THE SAME FIX THEN BROKE APAC OPEN TOO: NAMING JURISDICTIONS INSTEAD OF REGIONS IS THE INSTRUMENT, NOT A PHRASING PREFERENCE
+
+⏱️ **Pass 305 of `2026-10-19`.** Evidence:
+[`p305-regional.2026-10-19-p305.tsv`](../evidence/p305-regional.2026-10-19-p305.tsv) ·
+[`p305-prohibited-practice.2026-10-19-p305.tsv`](../evidence/p305-prohibited-practice.2026-10-19-p305.tsv).
+
+🔴 **`p304` recorded EMEA as a declared gap — *"returned nothing education-specific"* — and PRE-REGISTERED
+the remedy: drop the acronym "EMEA", name jurisdictions.** 🟢 **`p305` ran it. It paid four jurisdictions.**
+🟢 **Then the same fix was applied to APAC, where `p304` reported *"only corporate training; zero K-12 or
+university rules"* — and it paid five.** 🔵 **Two regions, one query change: the acronym was the defect.
+A region is not a search term because no ministry publishes to a region.**
+
+### 🟢 EMEA — four jurisdictions, and the regulation finally has a NUMBER
+
+| jurisdiction | instrument | date | status |
+|---|---|---|---|
+| 🟢 **France** | **Cadre d'usage de l'IA en éducation** (Ministry framework) | `2025-06` | 🟢 **IN FORCE — the most formal national framework in the region.** Covers teacher *and* student AI literacy (OECD *Digital Education Outlook 2026*) |
+| 🟡 **Spain** | Ministerio de Educación recommendation | `2026-04` | 🟡 **NON-BINDING.** Endorses AI literacy from secondary; **devolves tool choice to the regions.** Pilots *"IA en el aula"* in **Catalonia** and **Andalusia** |
+| 🟡 **Netherlands** | **NOLAI** (National Education Lab AI) | ongoing | 🟡 **A PROGRAMME, NOT A RULE** — government + academia + industry + schools co-designing GenAI tools. No ministry rulebook surfaced |
+| 🔴 **Germany** | **none AI-specific for schools** | — | 🔴 **DECLARED GAP, with its reason:** education is **Länder** competence, so national guidance is the wrong place to look. **Digitalpakt 2.0** (in force `2026-09-01`, **€5 bn to 2030**) is general digitalisation, not AI policy |
+
+🟢 **The EU-level instrument is now identified by NUMBER, not just by mechanism.** `p303` named the
+mechanism (*"the `Digital Omnibus on AI`"*); 🟢 **`p305` has it as `Regulation (EU) 2026/1744`, in force
+`2026-07-27`** — Annex III high-risk moved to **`2027-12-02`**, Annex I to **`2028-08-02`**.
+🔴 **And a thing `p303`/`p304` did not carry: Article 50 transparency duties were NOT delayed.** ⚠️ **So the
+Omnibus is not a blanket reprieve — the disclosure obligations bite on the original timetable while the
+conformity work slipped.**
+
+🔴 **THE BINDING CONSTRAINT IN EMEA IS NOT A FUTURE DEADLINE — IT IS ALREADY IN FORCE.** **AI Act Article
+5(1)(f) prohibits AI inferring emotions in educational institutions, and it has applied since
+`2025-02-02`.** Public **and** private, **all levels**, in-person **and** online, 🔴 **no consent
+exception**; the only carve-out is **medical or safety** purpose.
+
+⚠️ **A date this pass nearly published wrong, recorded because the save is the lesson:** a first snippet
+placed Art 5(1)(f) at *"December 2026"*, conflating it with the Omnibus's two genuinely **new** Article 5
+prohibitions. 🟢 **A second targeted search placed it at `2025-02-02` before anything was written up** —
+`ACTION SH` discipline, and the fifth time this base has stopped a confident wrong date at the door.
+
+🟢 **OECD DEO 2026 measurement:** **nine** systems were developing or planning GenAI guidance — Greece,
+Latvia, Lithuania, Luxembourg, **Netherlands**, Portugal, Slovakia, Slovenia, Switzerland.
+🔵 **Useful as a pipeline: these are the jurisdictions where a governance product has a buyer and no
+incumbent framework.**
+
+### 🟢 APAC — five jurisdictions, ending `p304`'s "zero K-12 or university rules"
+
+| jurisdiction | instrument | date | status |
+|---|---|---|---|
+| 🟢 **China** | **MoE *"AI Plus Education"* action plan** | announced `2026-04-10`, full by **2030** | 🟢 **Primary → university.** Introductory AI courses from **AY 2026-27**; **AI in teacher-qualification exams**; universities to make AI a core general-education subject |
+| 🔴 **China** | the word *"mandatory"* | — | 🔴 **CONFLICT, RECORDED NOT RESOLVED.** One source says compulsory from AY 2026-27; a separate analysis states **no official source calls it mandatory**. ⚠️ **Do not brief it as a mandate** |
+| 🟢 **Singapore** | **Code for Fun** — compulsory 10-hour programme from **Primary 4** | current | 🟢 **IN FORCE, and it is a GOVERNANCE PATTERN worth copying:** P1–P3 **not** required to use AI directly; P4 tools **teacher-supervised inside the Student Learning Space, not open platforms** |
+| 🟡 **India** | AI + computational thinking from **Class 3** | from AY `2026-27` | 🟡 **REPORTED — single secondary source.** Do not brief as settled |
+| 🟡 **South Korea** | AI talent as *"national survival strategy"* | 2026 | 🟡 **Rollout SETBACK reported: mandates without matching teacher training.** 🔵 **The most briefable APAC lesson — the constraint is teacher capacity, not policy** |
+| 🔴 **Japan** | guidelines + selected pilot schools | ~2025 | 🔴 **POSSIBLY STALE** — source ≈1 year old. Flagged, not carried as current |
+
+🔴 **REFUSED:** a claim that **Korea has AI-powered textbooks in every school** — it conflicts with other
+reports in the same draw. **Not carried.**
+
+### 🟡 Market size — unchanged and still unreconciled
+
+🔴 **`p304`'s verdict stands verbatim and `p305` adds nothing to it: the global figure is UNRESOLVED to
+within a factor of two** — $6.4 bn (2025), $11.4 bn (2026) and ≈$10.6 bn (2026) for the same market.
+🔵 **Brief the RANGE, never a point estimate.** ⚠️ **No primary source — 24th consecutive pass; every
+figure here is search-snippet-attributed.**
+
+## Opportunities by region
+
+### North America
+
+🟡 **No new NA measurement this pass; `p303`'s state layer is carried unchanged and not re-tested** — 134
+bills across 31 states, CA **AB 1159** (bars student data for model training), **Oklahoma + Maryland bar AI
+from high-stakes decisions about students**, `H.R. 8747` advanced in committee `2026-07-21`, NYC K-8
+moratorium as the counter-signal. Canada's **"AI for All"** (`2026-06`) remains a strategy with **no
+legislation date**.
+
+🟢 **The opportunity is the convergence `p303` named, now with a third instrument behind it.** Oklahoma and
+Maryland regulate **an automated decision ABOUT a student**; the EU regulates the same act via Annex III;
+Vietnam lists education in its high-risk tier. 🟢 **One conformity product, three dossiers** → `P76`.
+🔵 **NA is where that product can be sold first, because the state statutes are already enforceable while
+the EU's Annex III work has slipped to `2027-12-02`** — the buyer has a deadline that has not moved.
+
+### EMEA
+
+🔴 **The highest-value finding in this file this pass, and it is a STOP, not an opportunity: emotion
+inference on students has been PROHIBITED in the EU since `2025-02-02`.** ⚠️ **Any engagement-detection,
+attention-tracking or affect-aware tutoring feature in an EMEA proposal is not a compliance risk to be
+managed — it is a prohibited practice, with no consent route and no high-risk conformity path.**
+🟢 **This is immediately actionable as a DUE-DILIGENCE product: screen an institution's existing edtech
+estate for Art 5(1)(f) exposure.** 🔵 **Proctoring tools are the named example, and the Commission's
+guidelines reportedly leave open whether emotion inference as a *secondary* functionality is covered — so
+the screen finds real, arguable exposure rather than a clean bill.** → `P84`.
+
+🟢 **The second EMEA opportunity is the fragmentation itself.** France has a binding framework, Spain has a
+non-binding recommendation with regional implementation, the Netherlands has a lab and no rulebook, and
+Germany has **no national AI schools policy at all** because the competence sits with the Länder.
+🔵 **A multinational operating across these four cannot run one compliance posture** — and the nine OECD
+systems still drafting guidance are the pipeline.
+
+🟢 **Third: `Regulation (EU) 2026/1744` moved the conformity deadline to `2027-12-02` but left Article 50
+transparency in place.** ⚠️ **Clients who read the Omnibus as a reprieve are wrong about disclosure** —
+that gap is a short, concrete engagement.
+
+🟢 **Permissive EMEA-placed substrate now exists on the shelf:**
+[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) (**Apache-2.0**, 10 785 B,
+`65125d9e480b`), from a German university of applied sciences.
+
+### APAC
+
+🟢 **China's `AI Plus Education` plan is a 2030 programme announced `2026-04-10`, reaching primary through
+university — the largest single addressable education-AI programme this base has recorded.** ⚠️ **Entry is
+constrained by the content and data regime, and the *"mandatory"* framing is contested; brief the programme,
+not the mandate.**
+
+🟢 **Singapore's Code for Fun is the transferable GOVERNANCE pattern of the pass: age-gating by *mode of
+access* rather than by prohibition** — P1–P3 do not use AI directly, P4 uses it only teacher-supervised
+inside the Student Learning Space rather than on open platforms. 🔵 **That is a walled-garden architecture,
+and it is exactly what an EMEA or NA district under an AI moratorium (see NYC K-8) actually needs:
+a deployable middle path between a ban and open ChatGPT access.** 🟢 **Sell the Singapore pattern into the
+NA moratorium districts.**
+
+🟡 **South Korea is the cautionary case and the clearest services opportunity: the rollout stalled on
+teacher training, not on technology.** 🔵 **Teacher-capability programmes are the product, and `p304`'s
+carried NA datum — 68 % of urban teachers with no AI training — says the same constraint is global.**
+
+🟡 **India (Class 3 from AY 2026-27) is reported by a single secondary source and is a lead to verify, not
+a plan to brief.** 🔴 **Japan's guidance is ~1 year old and may be stale — unmeasured, not absent.**
+
+### LATAM
+
+🟡 **No new LATAM measurement this pass; `p303`/`p304`'s instrumentation is carried unchanged** — UNESCO
+IESALC across **200 institutions / 19 countries**: **87 %** using AI in at least one area against **26 %**
+with a formal strategy (**~43-point governance gap**, the adoption hierarchy running teaching & learning
+73.5 % > research 57.0 % > administration 34.1 % > community 20.0 %); Brazil **53 % / 22 %** (Cetic.br);
+Argentina **75 % vs 42 %** by socio-economic class; Uruguay first CoE Framework Convention signatory;
+UNESCO's **Observatory on AI in Education for LAC** launched `2026-04` at ECLAC, Santiago.
+
+🟢 **The governance gap remains the most briefable number in this file, and `p304` established it is
+STRUCTURAL rather than LATAM-specific — ~40 points wherever both sides share a denominator.** 🔵 **So the
+remediation product is the same one that sells in EMEA and APAC; LATAM is where the gap is best MEASURED,
+not where it is worst.**
+
+🟡 **The code-supply finding this pass is a loss:**
+[`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas) — sixth-grade decimal-operations
+tutoring **validated with 74 students**, the only row in all 41 of the `intelligent-tutoring-system`
+population with a stated classroom validation — **carries no licence.** 🔵 **Cite the validation as design
+evidence and reimplement; the pedagogical result is the asset, and it is citable even though the code is
+not usable.** ⚠️ **`p304`'s LATAM platform-scale gap STANDS.**
+
+### Global
+
+🔴 **Market size unresolved to within a factor of two; no primary source for the 24th consecutive pass.**
+
+🟢 **The cross-regional finding of the pass is the REGULATORY ONE, and it does not respect regions:**
+Art 5(1)(f) (EU, in force), Oklahoma/Maryland (US states, in force), Annex III (EU, `2027-12-02`) and
+Vietnam's high-risk list all regulate **what the system DECIDES or INFERS about a student** rather than
+which model it uses. 🟢 **A technique screen therefore travels where a model-governance posture does not**
+→ `P84`, and it composes with `P76`'s one-product-three-dossiers conformity play.
+
+🔵 **Standing caution for every figure above: search-snippet-attributed, mostly vendor and aggregator
+sources. The regulatory instruments are the strongest material in this file; the market numbers are the
+weakest.**
+
+
 ## 🟡 Pass 304 — THE GOVERNANCE GAP IS THE SAME SIZE IN EVERY REGION THAT MEASURES IT (~40 POINTS), AND THAT IS THE MOST BRIEFABLE NUMBER IN THIS FILE — BUT EMEA NIL'D ON EDUCATION AND THE FOUR-REGION STREAK ENDS AT ONE
 
 ⏱️ **Pass 304 of `2026-10-19`.** Evidence:

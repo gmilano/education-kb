@@ -1,0 +1,19 @@
+# p305 — REFUTATION of p304's `bytes < 400` standing rule, and the calibration of its replacement.
+# p304 wrote: "bytes < 400 on a LICENSE file is a RED FLAG, not a short MIT" — invented on ONE sample (ai-shifu/skills, 279 B).
+# p305 refutes it with a SECOND reserved grant at 842 B that ALSO carries MIT's verbatim warranty disclaimer.
+# The replacement test is the PERMISSION CLAUSE, not the length, not the copyright line, not the disclaimer.
+slug	bytes	opens_copyright_line	has_warranty_disclaimer	has_permission_clause	p304_bytes_lt_400_verdict	p305_clause_verdict	TRUTH
+ShuyunYuan/talentcoach	842	YES	YES	NO	PASS-as-grant(WRONG)	NO-GRANT	RESERVED_GRANT
+ai-shifu/skills	279	YES	NO	NO	FLAG(right)	NO-GRANT	RESERVED_GRANT
+ArnaudGuiovanna/tutor-mcp	1073	YES	YES	YES	PASS(right)	GRANT	MIT
+bydeng01/ability-levels-audit	1154	YES	YES	YES	PASS(right)	GRANT	MIT
+khayyam-math/khayyam-math	1079	YES	YES	YES	PASS(right)	GRANT	MIT
+sohan1611/BloodCoded_Agentic	1104	YES	YES	YES	PASS(right)	GRANT	MIT
+koljapluemer/youtube-immmersion-flashcards	1073	YES	YES	YES	PASS(right)	GRANT	MIT
+mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE	1060	YES	YES	YES	PASS(right)	GRANT	MIT
+# SCORE: p304 length rule 7/8 (misses the 842 B reserved grant — 50% recall on the 2 known reserved grants)
+# SCORE: p305 clause rule 8/8 (separates 842 B NO-GRANT from 1060 B GRANT, 218 B apart — length CANNOT)
+# AGGRAVATING: the base's OWN SHELF already recorded talentcoach at 842 B "All rights reserved"
+#   (agents/trending.md:7407) and p195's census marked it UNCLASSIFIED
+#   (compose/code/p195-shelf-licence-census/result.census.2026-10-14-p195.tsv:112).
+#   p304's rule was refuted by evidence already in this base at the moment it was written.

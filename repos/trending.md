@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 305: A TOPIC ENUMERATED TO EXHAUSTION FOR THE FIRST TIME (41/41) REFUTES BOTH A COMPLETENESS CLAIM AND A TAIL RULE THIS BASE WAS CARRYING
+
+Evidence: [`p305-topic-census.2026-10-19-p305.tsv`](../evidence/p305-topic-census.2026-10-19-p305.tsv) ·
+[`p305-licence-payload.2026-10-19-p305.tsv`](../evidence/p305-licence-payload.2026-10-19-p305.tsv) ·
+[`p305-channel-calibration.2026-10-19-p305.tsv`](../evidence/p305-channel-calibration.2026-10-19-p305.tsv) ·
+[`p305-rule-calibration.2026-10-19-p305.tsv`](../evidence/p305-rule-calibration.2026-10-19-p305.tsv).
+
+🔴 **`github trending education AI 2026` produced no education row for the EIGHTEENTH window.**
+🔵 **`p303` retired the phrasing, `p304` confirmed it, `p305` ran it once for the standing mandate: courses
+ABOUT AI again (`hello-agents` 83k★, `ai-engineering-from-scratch`, HF/DeepLearning.AI course repos).
+🟢 Recorded as SPENT, not as a gap — stop re-running it.**
+🔴 **`open source platform education ERP CRM MIT Apache` nil'd for the TWENTY-FIFTH time.** 🔵 **`p304`
+settled it licensor-confirmed (OpenEduCat's own glossary states `LGPLv3`); `p305` adds nothing and does not
+re-litigate it.**
+
+### 🟢 The instrument of the week: `git ls-remote --symref` as an existence-AND-branch oracle
+
+🔴 **`p304` recorded that no channel in this environment yields repository metadata: `curl` on a
+`github.com` repo path returns `403` for every slug including a fabricated control, and `api.github.com` is
+an authorization boundary.** 🟢 **Both confirmed. But a third channel works and `p304` did not have it.**
+
+| channel | control (cannot exist) | real slug | discriminates | yields |
+|---|---|---|---|---|
+| `curl github.com/{slug}` | `403` | `403` | 🔴 **NO** | nothing |
+| `curl api.github.com/repos/{slug}` | `403` | `403` | 🔴 **NO** | nothing |
+| `raw.githubusercontent.com/{slug}/{br}/LICENSE` | `404` | `200` | 🟢 YES | the licence **payload** |
+| 🟢 **`git ls-remote --symref {url} HEAD`** | **credential prompt** (`p293`: a MEASUREMENT) | `sha` + `ref: refs/heads/{br}` | 🟢 **YES** | 🟢 **existence AND DEFAULT BRANCH** |
+
+🟢 **Why it matters for substrate work specifically: the default branch is now READ rather than guessed.**
+`p303`'s ladder cost **6 filenames × 3 branches = 18 probes** per slug and still could not cover an
+unguessed branch. 🔴 **Two branches this pass prove the point:
+[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) publishes on `dev`, and
+[`im-rk/SkillTrace`](https://github.com/im-rk/SkillTrace) on **`development`** — which is not in the
+`main`/`master`/`dev` ladder at all.** 🟢 **A ladder would have published `NO_PAYLOAD` for a branch it never
+asked for: a FALSE ABSENCE, which is the failure mode this base polices hardest.**
+
+### 🟢 The census: 41 of 41, and a carried completeness claim falls
+
+| page | ranks | rows | ★ range | carried before `p305` | 🔴 uncarried |
+|---|---|---|---|---|---|
+| 1 | 1–20 | 20 | 4.1k → 1 | 20 | 🟢 0 |
+| 2 | 21–40 | 20 | 1 → 0 | 7 | 🔴 **13** |
+| 3 | 41 | 1 | 0 | 1 | 0 |
+
+🔴 **`p303` recorded this topic as *"enumerated whole (population 41)"*. It had read page 1.** 🟢 **`p305`
+read all three pages: 41 of 41 — the first EARNED completeness claim on this topic, and the only one in
+this base backed by a page-by-page census.** 🟢 **The floor is at rank ~22: 18 of 20 page-2 rows are 0★**,
+far shallower than `ai-tutor`'s ≈60.
+
+### 🔴 The tail rule inverts — and the inversion has a mechanism
+
+| | rows | carry a payload | rate |
+|---|---|---|---|
+| 🟢 **HEAD** ranks 1–20 | 20 | 12 | 🟢 **60.0 %** |
+| 🔴 **TAIL** (13 uncarried, ranks 21–40) | 13 | 1 | 🔴 **7.7 %** |
+
+🔴 **`p303`: *"the tail is cleaner than the head — so licence risk RISES with adoption."*** 🔵 **On
+`ai-tutor` that held. Here it inverts by 52 points.** 🟢 **Mechanism: this tail is coursework and personal
+study projects, which are published without a licence as a matter of habit; `ai-tutor`'s tail was small
+tools, which ship with one.** ⚠️ **So the rule is a property of what a topic's tail CONTAINS, not of
+adoption. It must not be carried across topics.**
+
+🟢 **The single tail grant is
+[`koljapluemer/youtube-immmersion-flashcards`](https://github.com/koljapluemer/youtube-immmersion-flashcards)
+— MIT, 1 073 B, `e65b0da6eee6`.** 🔵 **`p305` probed the final two tail rows specifically to avoid
+publishing the rounder "0 of 11" claim it was on course to make.**
+
+### 🟢 New permissive substrate rows, payload-pinned
+
+| Repo | Licencia | bytes · sha256₁₂ | branch | Qué es | ★ |
+|------|----------|---|---|--------|---|
+| [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | **Apache-2.0** | 10 785 · `65125d9e480b` | `dev` | AI-driven personalised student feedback from TH Mittelhessen. 🟢 **EMEA-placed institutionally and permissive — an uncommon pair on this shelf** | 24 |
+| [ocala/peolatsi](https://github.com/ocala/peolatsi) | **Apache-2.0** | 11 357 · `c71d239df917` | `master` | Electronics virtual lab monitored by CTAT-built tutoring. 🟢 **5th recurrence of the stock Apache hash `p303` identified** | 1 |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | 1 073 · `1e05c9440068` | `main` | MCP server turning any LLM into an ITS. 🟢 **The composition point: MCP drops into an existing agent host** | 51 |
+| [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | **CC0-1.0** | 7 048 · `a2010f343487` | `main` | WWW '25 multi-agent goal-oriented learning framework. 🟢 **Public-domain dedication — no attribution condition** | 135 |
+| [bydeng01/ability-levels-audit](https://github.com/bydeng01/ability-levels-audit) | **MIT** | 1 154 · `fef00f185287` | `master` | Pre-registered LLM-judge audit of ability-level assignment, **with frozen data** | 4 |
+| [bydeng01/conv-vs-ped-tutor](https://github.com/bydeng01/conv-vs-ped-tutor) | **MIT** | 1 150 · `a1c6b65c5bb1` | `main` | Audits tutor helpfulness against **answer leakage** — the control for the withholding-pedagogy cluster | 3 |
+| [sohan1611/BloodCoded_Agentic](https://github.com/sohan1611/BloodCoded_Agentic) | **MIT** | 1 104 · `4b15a1e898b3` | `main` | LangGraph + Bayesian knowledge tracing + **prerequisite DAG** — all three layers in one small repo | 2 |
+| [khayyam-math/khayyam-math](https://github.com/khayyam-math/khayyam-math) | **MIT** | 1 079 · `4068e5e09efd` | `main` | Voice-narrated maths figures from one-line prompts, with a live tutor | 4 |
+
+### 🔴 Refused this window, with the reason
+
+| Repo | ★ | Why refused |
+|---|---|---|
+| [ShuyunYuan/talentcoach](https://github.com/ShuyunYuan/talentcoach) | 0 | 🔴 **RESERVED GRANT, 842 B `76d0b7213617`** — *"All rights reserved… portfolio and code-review purposes only"*, then MIT's disclaimer verbatim. **Refutes `p304`'s `bytes < 400` rule** |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | **877** | 🔴 **CC BY-SA 4.0, 1 230 B `f952182df4eb`** — ShareAlike reaches derived CURRICULUM. Commercial use is permitted; relicensing of the deliverable is the cost → `P85` |
+| [brownplt/LTLTutor](https://github.com/brownplt/LTLTutor) | 12 | 🟡 **AGPL-3.0, 35 148 B `8b1ba204bb69`** — stock, no exceptions carve-out. Priced, not blocked |
+| [IgorFonck/logicits](https://github.com/IgorFonck/logicits) | 1 | 🟡 **AGPL-3.0, 35 149 B `3972dc9744f6`** — stock. One trailing byte from `LTLTutor`'s payload |
+| [tianshuo/trainingllm](https://github.com/tianshuo/trainingllm) | 2 | 🔴 **PHANTOM GRANT** — README `## License / MIT`, no file on `main` (6 filenames, 404). **Third instance of `p303`'s class** |
+| [mskljns/ComprehensionProblems_DAiSEE](https://github.com/mskljns/ComprehensionProblems_DAiSEE) | 5 | 🔴 **Ungranted AND a PROHIBITED PRACTICE** — facial-affect inference on students, EU AI Act Art 5(1)(f), in force since `2025-02-02` |
+| [JustinoLM/STI-matematicas](https://github.com/JustinoLM/STI-matematicas) | 0 | 🔴 **Ungranted.** 🟡 **The loss worth naming — the only row in all 41 with a stated classroom validation (74 students), and LATAM-placed** |
+| [gautamyadavs/AVLTree](https://github.com/gautamyadavs/AVLTree) · [luffycodes/Tutorbot-Spock-Phys](https://github.com/luffycodes/Tutorbot-Spock-Phys) | 8 · 9 | 🔴 Ungranted, both new at `p305` |
+| 11 further tail rows, ranks 21–40 | 0 | 🔴 **Ungranted** — see [`p305-licence-payload`](../evidence/p305-licence-payload.2026-10-19-p305.tsv) |
+
+⚠️ **`make hooks` could not be run this pass** — the environment refused the recipe as external code.
+🟢 **Every verdict above came from a prober written fresh this pass and calibrated 8/8 against two known
+reserved grants**; 🔴 **but the base's 31-control gate did not run, and `p304` had found two gates RED at
+`HEAD`.** **Recorded as an open risk, not as a clean pass.**
+
+
 ## 2026-10-19 — Pass 304: FORK-TO-STAR RATIO SEPARATES THE REPOS PEOPLE *DEPLOY* FROM THE ONES THEY *READ*, AND IT PROMOTES THIS TIER'S WEAKEST-STARRED ROW TO ITS MOST ADOPTED
 
 Evidence: [`p304-starcells.2026-10-19-p304.tsv`](../evidence/p304-starcells.2026-10-19-p304.tsv) ·

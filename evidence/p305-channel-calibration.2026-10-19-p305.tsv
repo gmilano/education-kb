@@ -1,0 +1,13 @@
+# p305 — channel calibration against a CONTROL slug that cannot exist.
+# p304 recorded: curl on a github.com repo path returns 403 for EVERY slug (not an existence oracle);
+# api.github.com is an authorization boundary. p305 CONFIRMS both AND adds a third channel p304 lacked.
+channel	probe	control_zzz-nonexistent-xyz/definitely-not-a-repo-9988	real_slug	discriminates	yields
+curl https://github.com/{slug}	HTTP status	403	403 (numbas/Numbas)	NO	nothing — confirms p304
+curl https://api.github.com/repos/{slug}	HTTP status	403	403 (numbas/Numbas)	NO	nothing — confirms p304
+curl raw.githubusercontent.com/{slug}/{br}/LICENSE	HTTP status	404	200 (fsrs4anki)	YES	licence PAYLOAD — confirms p304
+git ls-remote --symref https://github.com/{slug} HEAD	stdout	credential prompt (p293 = a MEASUREMENT)	sha + "ref: refs/heads/{branch}"	YES	existence AND DEFAULT BRANCH — NEW at p305
+# CONSEQUENCE: the default branch is now READ, not guessed. p303's ladder needed 6 filenames x 3 branches = 18 probes
+# per slug; p305 needs 1 ls-remote + <=6 raw probes on the ONE correct branch. Branches found this pass that a
+# main/master/dev ladder would have mis-ordered or missed: thm-mni-ii/feedbacksystem = `dev`, im-rk/SkillTrace = `development`.
+# `development` is NOT in p303's ladder at all — a main/master/dev ladder would have reported NO_PAYLOAD for a
+# branch it never asked for. The oracle removes a whole class of false absence.

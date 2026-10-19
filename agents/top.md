@@ -4,6 +4,194 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 305 — THE RULE `p304` WROTE LAST PASS IS ALREADY REFUTED, BY A ROW THAT WAS ON THIS BASE'S OWN SHELF WHEN IT WAS WRITTEN — AND THE REPLACEMENT IS ONE GREP THAT SCORED 8/8
+
+⏱️ **Pass 305 of `2026-10-19`, following `p304` of `2026-10-19`.** Evidence:
+[`p305-licence-payload.2026-10-19-p305.tsv`](../evidence/p305-licence-payload.2026-10-19-p305.tsv) ·
+[`p305-rule-calibration.2026-10-19-p305.tsv`](../evidence/p305-rule-calibration.2026-10-19-p305.tsv) ·
+[`p305-topic-census.2026-10-19-p305.tsv`](../evidence/p305-topic-census.2026-10-19-p305.tsv) ·
+[`p305-prohibited-practice.2026-10-19-p305.tsv`](../evidence/p305-prohibited-practice.2026-10-19-p305.tsv) ·
+[`p305-channel-calibration.2026-10-19-p305.tsv`](../evidence/p305-channel-calibration.2026-10-19-p305.tsv) ·
+[`p305-regional.2026-10-19-p305.tsv`](../evidence/p305-regional.2026-10-19-p305.tsv).
+
+⏱️ **Two passes share the date `2026-10-19`.** `p304`'s evidence was gathered earlier the same day;
+`p305`'s was gathered after it. **Dated by its evidence, not by its commit** — the base's standing rule.
+
+🟢 **`p304` closed with one instruction: stop paging `ai-education`, spend the leg on the
+`intelligent-tutoring-system` AGPL cluster and work the licence-strategy question. Both halves were done,
+the topic is enumerated to exhaustion for the first time, and the leg produced a defect that lands on
+`p304` itself.**
+
+### 🔴 The defect of the pass — `p304`'s `bytes < 400` RULE IS REFUTED AT 842 BYTES
+
+**Repo**: [`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach) — **0★**, topic rank **41** —
+🔴 **a SECOND reserved grant.** Payload: `LICENSE`, **842 B**, sha256₁₂ `76d0b7213617`:
+
+> `Copyright (c) 2026 Shuyun Yuan. All rights reserved.` · *"This repository is published for portfolio and
+> code-review purposes only. Viewing the source on GitHub is permitted; no other rights are granted."* ·
+> *"…no part of this software or its documentation may be used, copied, modified, merged, published,
+> distributed, sublicensed, sold, or otherwise exploited… without the prior written permission of the
+> copyright holder."*
+
+🔴 **Then it closes with MIT's own warranty disclaimer, verbatim** — `THE SOFTWARE IS PROVIDED "AS IS"…
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE
+LIABLE…`. **That is the paragraph a phrase-matching classifier reaches for.**
+
+⚠️ **`p304` wrote, one pass ago: *"`bytes < 400` on a `LICENSE` file is a RED FLAG, not a short MIT"*, and
+promoted it to a STANDING RULE on a sample of ONE.** 🔴 **At 842 B this payload clears that threshold by
+more than double, opens with a well-formed copyright line, and carries a warranty disclaimer — it passes
+every screen `p304` described, and it grants nothing.**
+
+🔴 **The aggravating fact, and it is the one worth recording: the refutation was already on this base's own
+shelf.** [`agents/trending.md:7407`](trending.md) already carried *"`ShuyunYuan/talentcoach` — `842` B,
+*'All rights reserved…'*"*, and `p195`'s census already marked it `UNCLASSIFIED` at 842 B
+([`result.census.2026-10-14-p195.tsv:112`](../compose/code/p195-shelf-licence-census/result.census.2026-10-14-p195.tsv)).
+**`p304`'s rule was refuted by evidence this base already held at the moment it was written.**
+
+🔵 **Why no gate caught it: `gate-absence` polices absence CLAIMS against the index, and `ACTION SH`
+polices inbound search claims. A new standing RULE is neither.** 🟢 **`ACTION p305-R` below registers the
+missing control.**
+
+### 🟢 The replacement rule — THE PERMISSION CLAUSE, and it scored 8 of 8
+
+🟢 **Length is a screen. It is not a classifier, and it never was.** The discriminator is the **operative
+grant sentence** — MIT/ISC's *"Permission is hereby granted, free of charge…"*, Apache-2.0's
+*"…hereby grants to You a perpetual… copyright license"*. 🔴 **A reserved grant has a copyright line and a
+disclaimer and NO permission clause.** That is what makes it a notice rather than a licence.
+
+| slug | bytes | copyright line | disclaimer | **permission clause** | `p304` length rule | **`p305` clause rule** | truth |
+|---|---|---|---|---|---|---|---|
+| [`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach) | **842** | 🔴 yes | 🔴 yes | 🟢 **NO** | 🔴 **passes — WRONG** | 🟢 **NO-GRANT** | 🔴 reserved |
+| [`ai-shifu/skills`](https://github.com/ai-shifu/skills) | 279 | 🔴 yes | no | 🟢 **NO** | 🟢 flags | 🟢 **NO-GRANT** | 🔴 reserved |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 1 073 | yes | yes | 🟢 **YES** | 🟢 passes | 🟢 **GRANT** | 🟢 MIT |
+| [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 1 154 | yes | yes | 🟢 **YES** | 🟢 passes | 🟢 **GRANT** | 🟢 MIT |
+| [`khayyam-math/khayyam-math`](https://github.com/khayyam-math/khayyam-math) | 1 079 | yes | yes | 🟢 **YES** | 🟢 passes | 🟢 **GRANT** | 🟢 MIT |
+| [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) | 1 104 | yes | yes | 🟢 **YES** | 🟢 passes | 🟢 **GRANT** | 🟢 MIT |
+| [`koljapluemer/youtube-immmersion-flashcards`](https://github.com/koljapluemer/youtube-immmersion-flashcards) | 1 073 | yes | yes | 🟢 **YES** | 🟢 passes | 🟢 **GRANT** | 🟢 MIT |
+| [`mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE`](https://github.com/mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE) | **1 060** | yes | yes | 🟢 **YES** | 🟢 passes | 🟢 **GRANT** | 🟢 MIT |
+
+🟢 **`p305` clause rule: 8/8.** 🔴 **`p304` length rule: 7/8 — 50 % recall on the two known reserved
+grants.** 🔵 **The decisive pair is `842 B` NO-GRANT against `1 060 B` GRANT: 218 bytes apart, on opposite
+sides of the only question that matters. No length threshold can separate them. The clause separates them
+every time.** 🟢 **`p304`'s band (1 060–1 180 B) is CORROBORATED by seven fresh samples and keeps its use as
+a cheap screen — but it is demoted from rule to screen.**
+
+### 🟢 Five new permissive rows, each payload-pinned
+
+| Nombre | Repo | Licencia | bytes · sha256₁₂ | Descripción | ★ |
+|--------|------|----------|---|-------------|---|
+| **gen-mentor** | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | **CC0-1.0** | 7 048 · `a2010f343487` | LLM multi-agent framework for goal-oriented learning (WWW '25). 🟢 **Public-domain dedication — the most permissive grant in the entire topic, more permissive than MIT: no attribution condition at all.** | 135 |
+| **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | 1 073 · `1e05c9440068` | MCP server that turns any LLM into an intelligent tutoring system. 🟢 **The cleanest composition point in the topic — MCP means it drops into an existing agent host without a rewrite.** | 51 |
+| **feedbacksystem** | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | **Apache-2.0** | 10 785 · `65125d9e480b` | AI-driven personalised student feedback, from TH Mittelhessen. 🟢 **EMEA-placed institutionally (German university of applied sciences) and Apache-2.0 — rare combination on this shelf.** | 24 |
+| **ability-levels-audit** | [bydeng01/ability-levels-audit](https://github.com/bydeng01/ability-levels-audit) | **MIT** | 1 154 · `fef00f185287` | Code + frozen data for a **pre-registered LLM-judge audit** of ability-level assignment. 🟢 **Pre-registration and frozen data are what make a tutoring claim auditable — the measurement half this base keeps asking for.** | 4 |
+| **conv-vs-ped-tutor** | [bydeng01/conv-vs-ped-tutor](https://github.com/bydeng01/conv-vs-ped-tutor) | **MIT** | 1 150 · `a1c6b65c5bb1` | Audits LLM-tutor helpfulness against **answer leakage**. 🟢 **Directly instruments the withholding-pedagogy cluster `p303` found convergent across four implementations — this is its control.** | 3 |
+
+🔵 **Both `bydeng01` rows are 3–4★ and both are measurement instruments. The pedagogy sits at the top of
+this topic; the evidence that it works sits at the bottom.**
+
+### 🔴 The licence-strategy answer `p304` asked for — AND IT INVERTS THE SOFTWARE INTUITION
+
+🟢 **The assigned question was: the vertical's best pedagogy sits under its worst licences — what is the
+strategy?** The answer is that *"worst"* was the wrong ranking, because **two different copylefts reach two
+different deliverables**:
+
+| instrument | rows | what the copyleft REACHES | what it leaves alone | the education consequence |
+|---|---|---|---|---|
+| 🟡 **AGPL-3.0** | [`LTLTutor`](https://github.com/brownplt/LTLTutor) **35 148 B** `8b1ba204bb69` · [`logicits`](https://github.com/IgorFonck/logicits) **35 149 B** `3972dc9744f6` | 🔴 **your CODE**, and over a network | 🟢 **your curriculum, prompts and content** | 🟡 **Priced, not blocked.** Run it as an isolated service; the client's content stays theirs |
+| 🔴 **CC BY-SA 4.0** | [`education-agent-skills`](https://github.com/GarethManning/education-agent-skills) **1 230 B** `f952182df4eb` | 🔴 **your CONTENT** — every derived skill, prompt and curriculum artefact | 🟢 **your surrounding code** | 🔴 **Blocked where it matters.** An education deliverable IS content |
+
+🔴 **So the most dangerous licence in this topic is not on the 12★ AGPL tutor. It is on the 877★ row** —
+the second-biggest repository in the vertical, *"165 evidence-grounded AI skills for teachers, school
+leaders and EdTech builders"*. 🟢 **ShareAlike permits commercial use explicitly** (*"even
+commercially"*, twice, in its own text) — **so it is not a NonCommercial stop like `p303`'s
+`ailey-bailey-canvas`.** ⚠️ **What it does instead is require that every skill you derive from it ship
+under CC BY-SA 4.0 too.** 🔵 **In a studio engagement whose deliverable is a curriculum and a prompt
+library, that is the client's core asset relicensed to the world.** → **`P85`**.
+
+🔴 **Both AGPL payloads are stock and unmodified** — 35 148 and 35 149 B, one trailing byte apart, so
+**neither author attached an additional-permissions exception.** There is no quiet carve-out to rely on.
+
+### 🔴 A NEW AXIS: the grant is clean and the PRACTICE is prohibited
+
+**Repos**: [`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE)
+(5★, **no grant**) and
+[`mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE`](https://github.com/mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE)
+(0★, 🟢 **MIT, 1 060 B, `c744c1abbfbb`**).
+
+🟢 **Same author. Same technique. Opposite grant status.** The pipeline, read from the README: **OpenFace →
+Action Units + facial landmarks → features → classification** against DAiSEE's labels — a multi-label video
+dataset of students watching MOOCs, labelled for **engagement, frustration, confusion and boredom**.
+🔴 **That is inference of emotional state from facial biometrics, in an educational setting.**
+
+⚠️ **EU AI Act Article 5(1)(f) prohibits exactly this — and it has applied since `2025-02-02`, for twenty
+months.** Public **and** private, all levels, in-person **and** online, **no consent exception**; the only
+carve-out is medical or safety purpose.
+
+🔴 **The second row passes every licence instrument this base owns, including `p305`'s own new clause
+test, and is still undeployable in the EU.** 🟢 **A CLEAN MIT GRANT DOES NOT MAKE A PROHIBITED PRACTICE
+DEPLOYABLE** — and no licence probe in this repository can see the difference. → **`P84`** carries the
+compliant substitution: infer mastery from **response** data (correctness, latency, spacing), never from
+the face. 🔵 **[`fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) (MIT, 1 079 B) and the
+`pyKT` family already on these shelves do precisely that and are untouched by Article 5(1)(f).**
+
+### 🔴 A THIRD phantom grant — the class recurs
+
+**Repo**: [`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm) — 2★ — 🔴 **README carries a
+`## License` heading reading `MIT`; no licence file exists on the default branch** (6 filenames probed on
+`main`, all 404). 🔵 **`p303` found the phantom grant on `fenago/LearnGraph` and `p304` treated it as a
+one-off. It is not: this is the second independent instance in three passes.** 🟢 **`p288`'s README channel
+is what makes this visible rather than a silent `NO_PAYLOAD` — a README-only grant claim is a channel, and
+a conflicting one.**
+
+### 🔴 `p303`'s completeness claim on this topic is REFUTED
+
+🟢 **`intelligent-tutoring-system` is now enumerated to EXHAUSTION — 41 of 41, pages 1, 2 and 3.** 🔴 **`p303`
+recorded it as *"enumerated whole (population 41)"*. It was not: 14 of the 41 rows had never been carried
+by any pass.** `p303` read the head — all 20 page-1 rows are carried — and called it the whole.
+
+| page | ranks | ★ range | carried before `p305` | 🔴 uncarried |
+|---|---|---|---|---|
+| 1 | 1–20 | 4.1k → 1 | 20 | 🟢 0 |
+| 2 | 21–40 | 1 → 0 | 7 | 🔴 **13** |
+| 3 | 41 | 0 | 1 | 0 — and it is this pass's reserved grant |
+
+🟢 **The floor on this topic is at rank ~22**, far shallower than `ai-tutor` (≈60) — **18 of 20 page-2 rows
+are 0★.**
+
+### 🔴 And `p303`'s tail rule INVERTS here
+
+🔴 **`p303` wrote: *"the tail is cleaner than the head — so licence risk RISES with adoption."*** On this
+topic the opposite holds, and not marginally:
+
+| | rows | carry a payload | rate |
+|---|---|---|---|
+| 🟢 **HEAD** (ranks 1–20) | 20 | 12 | 🟢 **60.0 %** |
+| 🔴 **TAIL** (the 13 uncarried rows, ranks 21–40) | 13 | 1 | 🔴 **7.7 %** |
+
+🔵 **Mechanism: this tail is coursework and personal study projects, published without a licence as a
+matter of habit. `ai-tutor`'s tail was small tools, which ship with one.** 🟢 **So the head/tail grant
+relationship is TOPIC-SPECIFIC, not a law of the vertical, and a rule derived from one topic's tail must
+not be carried to another's.** ⚠️ **The one tail grant is
+[`koljapluemer/youtube-immmersion-flashcards`](https://github.com/koljapluemer/youtube-immmersion-flashcards)
+(MIT, 1 073 B, `e65b0da6eee6`) — recorded because 1 of 13 is not 0 of 13, and this pass probed the last two
+rows specifically to avoid publishing the rounder claim.**
+
+### 🟡 The LATAM loss worth naming
+
+🔴 **[`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas)** — intelligent tutoring
+for decimal operations in sixth grade, **validated with 74 students** — is **ungranted** (payload 404 ×6 on
+`master`, README silent). 🟡 **It is the only row in the whole 41 with a stated classroom validation, it is
+LATAM-placed, and it cannot be built on.** 🔵 **Cite the validation as design evidence; reimplement.**
+
+### 🟢 Also measured
+
+- 🟢 **5th recurrence of the stock Apache-2.0 hash:** [`ocala/peolatsi`](https://github.com/ocala/peolatsi)
+  — `11 357 B`, sha256₁₂ **`c71d239df917`**, the exact pair `p303` identified across four unrelated repos.
+  **The by-product instrument holds.**
+- 🟢 **`gautamyadavs/AVLTree`** (8★, CTAT-built) and **`luffycodes/Tutorbot-Spock-Phys`** (9★) — 🔴 **both
+  ungranted**, both new at `p305`.
+
+
 ## 🟢 Pass 304 — THE PAGED TAIL HAS A FLOOR *AND* IT IS WHERE THE NON-US ROWS LIVE; PLUS A LICENCE DEFECT WORSE THAN THE PHANTOM GRANT — A FILE NAMED `LICENSE` THAT WITHHOLDS EVERY RIGHT
 
 ⏱️ **Pass 304 of `2026-10-19`, following `p303` of `2026-10-18`.** Evidence:

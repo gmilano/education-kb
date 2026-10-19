@@ -1,0 +1,23 @@
+# p305 regional leg. p304 recorded EMEA as a declared gap and PRE-REGISTERED the fix:
+# "drop 'EMEA', name jurisdictions". p305 ran the fix. It PAID — and it generalises to APAC,
+# where p304 reported "zero K-12 or university rules".
+region	jurisdiction	instrument	date	status	confidence	note
+EMEA	France	Cadre d'usage de l'IA en education (Ministry framework)	2025-06	IN FORCE	MEDIUM	the most formal national framework in the region; covers teacher + student AI literacy (OECD DEO 2026)
+EMEA	Spain	Ministerio de Educacion recommendation	2026-04	NON-BINDING	LOW	devolves tool choice to regions; pilots "IA en el aula" in Catalonia + Andalusia
+EMEA	Netherlands	NOLAI (National Education Lab AI)	ongoing	PROGRAMME not rule	MEDIUM	gov+academia+industry+schools co-design GenAI tools; no ministry rulebook surfaced
+EMEA	Germany	NONE AI-specific for schools	-	DECLARED GAP	MEDIUM	education is Lander competence; Digitalpakt 2.0 in force 2026-09-01, EUR 5B to 2030, is general digitalisation
+EMEA	EU-wide	Regulation (EU) 2026/1744 "Digital Omnibus"	in force 2026-07-27	BINDING	MEDIUM	moves Annex III high-risk to 2027-12-02; Annex I to 2028-08-02; Article 50 transparency NOT delayed
+EMEA	EU-wide	AI Act Art 5(1)(f) emotion inference ban, education	APPLIES SINCE 2025-02-02	BINDING NOW	MEDIUM	public AND private, all levels, in-person AND online; NO consent exception; medical/safety carve-out only
+EMEA	EU-wide	OECD DEO 2026: 9 systems developing GenAI guidance	2026-01	MEASUREMENT	MEDIUM	Greece Latvia Lithuania Luxembourg Netherlands Portugal Slovakia Slovenia Switzerland
+APAC	China	MoE "AI Plus Education" action plan	announced 2026-04-10, full by 2030	POLICY	MEDIUM	primary->university; intro AI courses from AY2026-27; AI in teacher qualification exams
+APAC	China	"mandatory" label	-	CONFLICT — UNRESOLVED	LOW	one source says compulsory from AY2026-27; a separate analysis states no official source calls it mandatory. RECORDED, NOT RESOLVED
+APAC	Singapore	Code for Fun, compulsory 10h from Primary 4	current	IN FORCE	MEDIUM	P1-P3 not required to use AI directly; P4 tools teacher-supervised via Student Learning Space, NOT open platforms
+APAC	India	AI + computational thinking from Class 3	from AY2026-27	REPORTED	LOW	single secondary source — do not brief as settled
+APAC	South Korea	AI talent as "national survival strategy"	2026	POLICY	LOW	rollout setback reported: mandates without matching teacher training
+APAC	Japan	guidelines + selected pilot schools	~2025	POSSIBLY STALE	LOW	source ~1 year old; flagged as such rather than carried as current
+APAC	South Korea	"AI textbooks in every school"	-	REFUSED	-	kidsaitools claim conflicts with other reports; NOT carried
+NA	US federal	H.R. 8747 K-12 AI Literacy and Readiness Act	cttee 2026-07-21	ADVANCED	MEDIUM	corroborates p303; not re-tested this pass
+NA	US states	134 bills / 31 states; CA AB 1159; OK + MD bar AI from high-stakes student decisions	2026	CARRIED p303	MEDIUM	not re-tested this pass
+NA	Canada	"AI for All" strategy, Canada Trusted AI Certification	2026-06	STRATEGY not statute	LOW	no legislation date set
+LATAM	regional	UNESCO IESALC: 87% of 200 institutions / 19 countries use AI; 26% have a formal strategy	2026	MEASUREMENT	MEDIUM	carried; the ~43pt governance gap
+LATAM	regional	UNESCO Observatory on AI in Education for LAC, ECLAC Santiago	2026-04	LAUNCHED	MEDIUM	carried

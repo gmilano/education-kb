@@ -1,0 +1,40 @@
+# p305 licence payloads — intelligent-tutoring-system topic, ranks 1-41 (the ACTION assigned by p304)
+# Channel: git ls-remote --symref (existence + DEFAULT BRANCH) then raw.githubusercontent.com/{slug}/{branch}/{name}
+# family read from the payload BODY, never from a sidebar label or a README sentence
+slug	rank	stars_rendered	exists	default_branch	licence_file	http	bytes	sha256_12	family	verdict
+open-spaced-repetition/fsrs4anki	1	4.1k	YES	main	LICENSE	200	1079	2ec9e6e61ed8	MIT	GREEN-carried-p303
+GarethManning/education-agent-skills	2	877	YES	main	LICENSE	200	1230	f952182df4eb	CC-BY-SA-4.0	RED-CONTENT-COPYLEFT-new-p305
+GeminiLight/gen-mentor	3	135	YES	main	LICENSE	200	7048	a2010f343487	CC0-1.0	GREEN-PUBLIC-DOMAIN-new-p305
+luffycodes/Tutorbot-Spock	4	56	YES	main	-	404	-	-	NO_PAYLOAD	RED-carried-p303
+ArnaudGuiovanna/tutor-mcp	5	51	YES	main	LICENSE	200	1073	1e05c9440068	MIT	GREEN-pinned-p305
+thm-mni-ii/feedbacksystem	6	24	YES	dev	LICENSE	200	10785	65125d9e480b	APACHE-2.0	GREEN-pinned-p305
+brownplt/LTLTutor	7	12	YES	main	LICENSE.txt	200	35148	8b1ba204bb69	AGPL-3.0	AMBER-pinned-p305
+luffycodes/Tutorbot-Spock-Phys	8	9	YES	main	-	404	-	-	NO_PAYLOAD	RED-new-p305
+gautamyadavs/AVLTree	9	8	YES	master	-	404	-	-	NO_PAYLOAD	RED-new-p305
+mskljns/ComprehensionProblems_DAiSEE	10	5	YES	main	-	404	-	-	NO_PAYLOAD	RED-new-p305-AND-PROHIBITED-PRACTICE
+HyeonahKang/LatentVariableModel-IntelligentTutor	11	4	YES	-	-	-	-	-	NO_GRANT	RED-carried-p303
+bydeng01/ability-levels-audit	12	4	YES	master	LICENSE	200	1154	fef00f185287	MIT	GREEN-pinned-p305
+khayyam-math/khayyam-math	13	4	YES	main	LICENSE	200	1079	4068e5e09efd	MIT	GREEN-pinned-p305
+bydeng01/conv-vs-ped-tutor	14	3	YES	main	LICENSE	200	1150	a1c6b65c5bb1	MIT	GREEN-pinned-p305
+tianshuo/trainingllm	15	2	YES	main	-	404	-	-	PHANTOM_GRANT	RED-new-p305-README-says-MIT-no-file
+LeParisien-dev/EduAI	16	2	YES	-	-	-	-	-	NO_GRANT	RED-carried-p303
+ZQR1101/xueyoujing-companion	17	2	YES	-	-	-	-	-	NO_GRANT	RED-carried-p303
+sohan1611/BloodCoded_Agentic	18	2	YES	main	LICENSE	200	1104	4b15a1e898b3	MIT	GREEN-pinned-p305
+ocala/peolatsi	19	1	YES	master	LICENSE	200	11357	c71d239df917	APACHE-2.0	GREEN-pinned-p305-FIFTH-stock-hash-recurrence
+IgorFonck/logicits	20	1	YES	master	LICENSE	200	35149	3972dc9744f6	AGPL-3.0	AMBER-pinned-p305
+# --- TAIL: ranks 21-41, the 13 rows NO prior pass had carried (refutes p303's "population 41 enumerated whole") ---
+mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE	27	0	YES	master	LICENSE.md	200	1060	c744c1abbfbb	MIT	GREEN-but-PROHIBITED-PRACTICE
+koljapluemer/youtube-immmersion-flashcards	39	0	YES	main	LICENSE	200	1073	e65b0da6eee6	MIT	GREEN-new-p305
+AyaDeeb/Intelligent-Tutoring-System	24	0	YES	main	-	404	-	-	NO_PAYLOAD	RED-new-p305
+im-rk/SkillTrace	25	0	YES	development	-	404	-	-	NO_PAYLOAD	RED-new-p305
+koljapluemer/know-every-year	28	0	YES	main	-	404	-	-	NO_PAYLOAD	RED-new-p305
+gokhanmeteerturk/energy-storage-ITS	29	0	YES	main	-	404	-	-	NO_PAYLOAD	RED-new-p305
+tobydragon/tecmap	31	0	YES	master	-	404	-	-	NO_PAYLOAD	RED-new-p305
+koljapluemer/secret-language-app	32	0	YES	main	-	404	-	-	NO_PAYLOAD	RED-new-p305
+munzahmed07/RL-for-Intelligent-Tutoring-Systems	34	0	YES	main	-	404	-	-	NO_PAYLOAD	RED-new-p305
+xkrejc70/python-tutor	35	0	YES	master	-	404	-	-	NO_PAYLOAD	RED-new-p305
+voidCounter/intellics	36	0	YES	main	-	404	-	-	NO_PAYLOAD	RED-new-p305
+010Ankushsharma/AdaptaLearn	37	0	YES	master	-	404	-	-	NO_PAYLOAD	RED-new-p305
+tharoosha/LAAI	38	0	YES	main	-	404	-	-	NO_PAYLOAD	RED-new-p305
+JustinoLM/STI-matematicas	40	0	YES	master	-	404	-	-	NO_PAYLOAD	RED-new-p305-LATAM-validated-74-students
+ShuyunYuan/talentcoach	41	0	YES	main	LICENSE	200	842	76d0b7213617	RESERVED-GRANT	RED-new-p305-REFUTES-p304-bytes-lt-400-RULE

@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 `T-p305a` — A LICENCE RULE INVENTED ON A SAMPLE OF ONE SURVIVES EXACTLY ONE PASS, AND ITS REFUTATION IS USUALLY ALREADY ON THE SHELF
+
+⏱️ `2026-10-19`, pass 305. Evidence:
+[`p305-rule-calibration.2026-10-19-p305.tsv`](../evidence/p305-rule-calibration.2026-10-19-p305.tsv).
+
+🔴 **`p304` read one 279 B reserved grant and promoted *"`bytes < 400` is a RED FLAG, not a short MIT"* to a
+STANDING RULE.** 🔴 **`p305` found a second reserved grant at 842 B which carries MIT's warranty disclaimer
+verbatim — the rule fails it, and fails it in the dangerous direction.**
+
+⚠️ **The structural lesson is not "that rule was wrong". It is that the refutation was already in this
+repository when the rule was written** — [`agents/trending.md:7407`](trending.md) carried
+`ShuyunYuan/talentcoach` at *"842 B, All rights reserved"*, and `p195`'s census logged it `UNCLASSIFIED` at
+the same byte count five passes earlier.
+
+🔵 **Why no gate caught it:** `gate-absence` checks absence CLAIMS against the index; `ACTION SH` checks
+INBOUND search claims. 🔴 **A new standing RULE is neither of those things, so nothing looked.**
+🟢 **The generalisation: this base's gates all police CLAIMS ABOUT THE WORLD. None polices a CLAIM ABOUT
+ITS OWN METHOD.** A rule is the most load-bearing thing a pass can publish, because every later pass
+inherits it and applies it silently — and it is the one artefact that ships unverified. → **`ACTION p305-R`**.
+
+🟢 **The replacement rule, calibrated 8/8: test the PERMISSION CLAUSE** — MIT/ISC's *"Permission is hereby
+granted, free of charge…"*, Apache-2.0's *"…hereby grants to You a perpetual… copyright license"*.
+🔵 **A reserved grant has a copyright line, often a disclaimer, and no operative grant. That absence is
+what makes it a notice.** ⚠️ **The decisive pair: 842 B NO-GRANT vs 1 060 B GRANT — 218 bytes apart, and no
+threshold can separate them.** 🟢 **`p304`'s 1 060–1 180 B band survives, demoted from RULE to SCREEN,
+corroborated by seven fresh samples.**
+
+## 🔴 `T-p305b` — "CC" IS NOT A LICENCE FAMILY; IT IS TWO OPPOSITE ANSWERS UNDER ONE LABEL
+
+⏱️ `2026-10-19`, pass 305. Evidence:
+[`p305-licence-payload.2026-10-19-p305.tsv`](../evidence/p305-licence-payload.2026-10-19-p305.tsv).
+
+🟢 **Two rows in the same topic, both resolving to "Creative Commons" on any family classifier:**
+[`gen-mentor`](https://github.com/GeminiLight/gen-mentor) (135★) is **CC0-1.0** — a public-domain
+dedication, **more permissive than MIT**, no attribution condition whatever.
+[`education-agent-skills`](https://github.com/GarethManning/education-agent-skills) (**877★**) is
+**CC BY-SA 4.0** — **content copyleft**.
+
+🔴 **A "CC" verdict therefore merges the single most permissive grant in the vertical with a copyleft
+one.** 🟢 **`p305`'s own prober did exactly this and is recorded doing it** — the honest demonstration,
+since the defect is in the abstraction, not in the implementation. 🔵 **The rule: for Creative Commons, the
+FAMILY is not a verdict. Read the variant line.** ⚠️ **And the CC BY-SA payload is 1 230 B — just above
+`p304`'s MIT band, so it reads like a slightly long MIT and is not one.**
+
+## 🔴 `T-p305c` — IN EDUCATION THE BINDING CONSTRAINT IS THE TECHNIQUE, NOT THE LICENCE — AND EVERY INSTRUMENT IN THIS BASE IS BLIND TO IT
+
+⏱️ `2026-10-19`, pass 305. Evidence:
+[`p305-prohibited-practice.2026-10-19-p305.tsv`](../evidence/p305-prohibited-practice.2026-10-19-p305.tsv).
+
+🟢 **The demonstration is one author's two repositories.**
+[`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE) is
+ungranted; [`mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE`](https://github.com/mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE)
+is **MIT, 1 060 B, `c744c1abbfbb`** — complete, unmodified, and it passes every licence instrument in this
+repository including `T-p305a`'s new clause test. 🔴 **Both are undeployable in the EU.**
+
+🔴 **The pipeline is OpenFace → facial Action Units + landmarks → DAiSEE's labels: engagement, frustration,
+confusion, boredom.** Emotion inference from facial biometrics, applied to students.
+⚠️ **EU AI Act Article 5(1)(f) prohibits precisely this in educational institutions, and it has applied
+since `2025-02-02` — not a deadline, a live prohibition.** Public and private, all levels, in-person and
+online, **no consent exception**; medical/safety carve-out only.
+
+🟢 **So: A CLEAN MIT GRANT DOES NOT MAKE A PROHIBITED PRACTICE DEPLOYABLE.** 🔵 **This is a NEW AXIS. Every
+probe, census, gate and ladder in this repository answers *may we COPY this code?* None answers *may we RUN
+this behaviour?*** ⚠️ **The second question has a harder answer and a nearer deadline.**
+
+🟢 **The substitution is cheap and already on these shelves: infer mastery from RESPONSE data — correctness,
+latency, spacing — never from the face.** [`fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki)
+(MIT, 1 079 B) and the `pyKT` family do exactly that and are untouched by Art 5(1)(f). → **`P84`**.
+
+## 🟢 `T-p305d` — A REGION IS NOT A SEARCH TERM, BECAUSE NO MINISTRY PUBLISHES TO A REGION
+
+⏱️ `2026-10-19`, pass 305. Evidence:
+[`p305-regional.2026-10-19-p305.tsv`](../evidence/p305-regional.2026-10-19-p305.tsv).
+
+🔴 **`p304` nil'd EMEA on education and pre-registered the fix: drop the acronym, name jurisdictions.**
+🟢 **`p305` ran it and EMEA paid four jurisdictions** — France's *Cadre d'usage* (`2025-06`, the region's
+only formal national framework), Spain's non-binding recommendation (`2026-04`) with Catalonia and
+Andalusia pilots, the Netherlands' NOLAI, and **Germany's informed absence** (education is Länder
+competence, so the national level is the wrong place to look — an answer, not a gap).
+
+🟢 **Then the same fix was applied to APAC, which `p304` reported as *"zero K-12 or university rules"* —
+and it paid five jurisdictions**, including China's `AI Plus Education` plan (`2026-04-10` → 2030) and
+Singapore's Code for Fun.
+
+🔵 **Two regions, one query change, both broken open: the acronym was the defect.** 🟢 **"EMEA" and "APAC"
+are procurement territories, not legal jurisdictions — nobody legislates for them, so nobody writes
+documents indexed under them.** ⚠️ **The standing correction: the mandated per-region query must be run as
+a per-JURISDICTION query, and a region that yields nothing must be reported with the jurisdictions actually
+asked for — otherwise "EMEA returned nothing" means only "the acronym returned nothing."**
+
+🟢 **Corollary with teeth: Germany's nil is now INFORMATIVE rather than empty** — it names the Länder as the
+level to search next, which is a lead the acronym query could never have produced.
+
+## 🔴 `T-p305e` — THE HEAD/TAIL GRANT RELATIONSHIP IS A PROPERTY OF WHAT A TOPIC'S TAIL CONTAINS, NOT OF ADOPTION
+
+⏱️ `2026-10-19`, pass 305. Evidence:
+[`p305-topic-census.2026-10-19-p305.tsv`](../evidence/p305-topic-census.2026-10-19-p305.tsv).
+
+🔴 **`p303` wrote: *"the tail is cleaner than the head — so licence risk RISES with adoption"*, measured on
+`ai-tutor`'s paged tail (1 refusal in 20).** 🔴 **On `intelligent-tutoring-system`, enumerated to exhaustion
+this pass, it inverts by 52 points:**
+
+| | rows | carry a payload | rate |
+|---|---|---|---|
+| 🟢 **HEAD** ranks 1–20 | 20 | 12 | 🟢 **60.0 %** |
+| 🔴 **TAIL** 13 uncarried rows, ranks 21–40 | 13 | 1 | 🔴 **7.7 %** |
+
+🔵 **The mechanism, and it is what makes this transferable: `intelligent-tutoring-system`'s tail is
+coursework and personal study projects — 18 of 20 page-2 rows are 0★ — and student projects are published
+without a licence as a matter of habit. `ai-tutor`'s tail was small working tools, which ship with one.**
+
+🟢 **So neither "the tail is cleaner" nor "the head is cleaner" is a law of the vertical. The predictor is
+the GENRE of the tail, which is readable from the descriptions before any licence is probed.** ⚠️ **A rule
+derived from one topic's tail must not be carried to another's — and `p303`'s was, for two passes.**
+
+🟢 **Collateral: `p303`'s claim that this topic was *"enumerated whole (population 41)"* is REFUTED — 14 of
+41 rows were uncarried. `p305` read pages 1, 2 and 3 and holds 41 of 41, the first completeness claim in
+this base backed by a page-by-page census.** 🔵 **"Population N" from a topic header is not an enumeration;
+it is a number printed next to one.**
+
+
 ## 🔴 `T-p304a` — A LICENCE FILE CAN BE AN ANTI-LICENCE, AND EVERY CHEAP CHECK IS STRUCTURALLY BLIND TO IT
 
 ⏱️ `2026-10-19`, pass 304. Evidence:
