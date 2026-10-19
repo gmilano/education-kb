@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 314 — THE AGENT TIER IS `9/9` PERMISSIVE AND THE PLATFORM TIER UNDER IT IS `AGPL`: THE SPLIT IS THE ESTIMATE, AND ONE GRANT NOW READS AT FIVE DIFFERENT LENGTHS
+
+⏱️ **Pass 314 of `2026-10-19`.** Evidence:
+[`p314-payload-pins.2026-10-19-p314.tsv`](../evidence/p314-payload-pins.2026-10-19-p314.tsv) ·
+[`p314-grant-corroboration.2026-10-19-p314.tsv`](../evidence/p314-grant-corroboration.2026-10-19-p314.tsv).
+
+🟢 **The code channel RAN this pass** (`ACTION p313-R` item 2): `make hooks` reports
+**`22/22` gates green**, so the readings here are measurements. 🔵 `p313`'s `90 %`-of-cells figure
+is still history and no coverage percentage is re-claimed; what IS claimed is the family coverage
+the new fixtures add, and it is derived from the census rather than typed.
+
+### 🟢 Two families gained payload coverage, and the bigger one is the point
+
+| family | published cells | before `p314` | now |
+|---|---|---|---|
+| `BSD-3-Clause` | **`331`** | 🔴 no pinned payload — the largest permissive family with none | 🟢 **BOTH shapes pinned** (`ACTION p313-R` item 5) |
+| `CC-BY-NC-ND-4.0` | `29` | 🔴 none | 🟡 **covered by payload, and by NO GRANT** — see below |
+
+🔴 **`BSD-3-Clause` is `331` cells, not the `301` `p313` recorded.** 🔵 The shelves moved under the
+figure between two passes of the same day, which is exactly why this base derives cell counts from
+the census instead of carrying them.
+
+### 🔴 The foundational layer's split, stated as the thing that should govern an estimate
+
+🟢 **The agent tier this pass read is `9` of `9` PERMISSIVE** (see
+[`agents/top.md`](../agents/top.md)): `Apache-2.0` ×3, `MIT` ×5, `BSD-3-Clause` ×1.
+🔴 **The platform tier underneath it is the opposite.** Read first-hand today:
+
+| repo | layer | grant *(read first-hand)* | bytes · sha | 🔵 what it means |
+|---|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) · `main` · `license.txt` | LMS | 🔴 `AGPL-3.0` | `33 893` · `db1a87ba81e8` | 🔴 **a FIFTH distinct byte length for one grant, and the new low.** §13 reaches hosted delivery |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) · `main` | LMS (Svelte) | 🔴 `AGPL-3.0` | `34 523` · `8486a10c4393` | 🔴 §13. 🟢 Byte-identical to `p313`'s pin — **fifth unrelated repository at this sha** |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) · `dev` | LMS, AI-featured | 🔴 `AGPL-3.0` | `34 523` · `8486a10c4393` | 🔴 §13. 🟢 Fourth repository at this sha, and note the rung is on `dev`, not `main` |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) · `main` | tutoring agent | 🟢 `Apache-2.0` | `11 408` · `cd2f54e1e506` | 🟢 permissive + patent grant. 🟡 A **third** `Apache-2.0` length, `50` B above canonical |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) · `main` | agent framework | 🟢 `Apache-2.0` | `11 357` · `c71d239df917` | 🟢 the canonical Apache payload, exactly |
+| [`huggingface/agents-course`](https://github.com/huggingface/agents-course) · `main` | enablement | 🟢 `Apache-2.0` | `11 357` · `c71d239df917` | 🟢 same grant, byte-identical |
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) · `main` · `LICENSE.md` | curriculum + platform | 🟢 `BSD-3-Clause` | `1 513` · `e2a20708d0fd` | 🟢 permissive, titled — the readable `BSD` shape |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) · `main` | multi-user notebooks | 🟢 `BSD-3-Clause` | `1 475` · `7069c7e8d60e` | 🟢 permissive — 🔴 **untitled, zero `BSD` tokens** |
+| [`open-tutorai/open-tutor-ai-ce`](https://github.com/open-tutorai/open-tutor-ai-ce) · `main` | tutoring platform | 🟢 `BSD-3-Clause` | `1 531` · `57c341d09920` | 🟢 permissive — 🔴 **untitled, zero tokens of ANY family** |
+| [`cahlr/OATutor`](https://github.com/cahlr/OATutor) · `main` | ITS with Bayesian Knowledge Tracing | 🟢 `MIT` | `1 105` · `5baaaf977a28` | 🟢 the mastery-model layer |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) · `main` | content generation | 🟢 `MIT` | `1 092` · `e3321a1b62cd` | 🟢 the authoring layer |
+| [`mozilla/common-voice`](https://github.com/mozilla/common-voice) · `main` | speech corpus platform | 🟡 `MPL-2.0` | `16 726` · `3f3d9e0024b1` | 🟢 file-level copyleft: proprietary code may sit alongside |
+
+🔵 **The number for a client conversation: `3` of the `12` rows above are `AGPL-3.0`, and all three
+are the LMS layer.** 🟢 **Nine are permissive or weak-copyleft, and all nine are the agent,
+tutoring, authoring and infrastructure layers.** 🔴 **So the obligation in an education engagement
+does not come from "using open source AI". It comes from the LEARNER-FACING PLATFORM the AI is bolted
+onto** — and that is a structural fact about this sector, not a property of any one repository.
+
+### 🔴 `p311`'s rule holds at `n=5`, and this pass found its converse
+
+🟢 **Same grant, different bytes — now five lengths.** `AGPL-3.0` at
+`33 893` / `34 523` / `34 524` / `34 541` / `35 136`. `Apache-2.0` at `11 357` / `11 358` / `11 408`.
+🔵 *Byte length and sha answer «is this the same FILE?» and never «is this the same GRANT?»* —
+confirmed on a second family and a fifth length.
+
+🔴 **Same bytes, different grant document.** Two `MPL-2.0` payloads at **exactly `16 726` B** with
+different shas (`3f3d9e0024b1`, `fab3dd6bdab2`). 🔵 **The rule's converse: byte length does not
+reliably answer *"is this the same file?"* either.** The equality is a compensation coincidence — a
+trailing space in one against a longer URL scheme in the other — and no `bytes`+`sha` ledger has a
+shape that would ever place those two rows side by side. 🟢 `ACTION p313-R` item 2a asked for
+precisely this control and it is now standing.
+
+### 🟡 A family can be COVERED and hold no grant — the census cannot tell
+
+🔴 `CC-BY-NC-ND-4.0` is now *covered* because `p314` pinned three payloads for it. 🔴 **Not one of
+them is an operative grant**: `224` B and `209` B bare citations, and a `1 470` B hand-written
+paraphrase that adds a prior-written-permission term the legalcode does not contain.
+🟢 `is_this_a_grant()` grades all three correctly and `ACTION p313-R` item 4 is discharged.
+🔵 **But the coverage census still counts PAYLOADS**, so this base now reports a covered family whose
+every pin is a citation. 🔴 **That is `p311`'s own conflation one storey up:** `bytes`+`sha` answered
+*"same file?"* and was read as *"same grant?"*; a fixture directory answers *"is a payload pinned?"*
+and is read as *"is the family exercised?"* → `ACTION p314-R` item 1.
+
+
+
 ## 🔴 Pass 313 — THE FOUNDATIONAL LAYER'S LICENCE EVIDENCE IS SOUND AND ITS COVERAGE CLAIM IS NOT: `11` OF THIS PASS'S `14` PAYLOADS ARE COPYLEFT, AND THE ONE PERMISSIVE FAMILY WITH `301` CELLS HAS A SHAPE NO CHANNEL HERE CAN READ
 
 ⏱️ **Pass 313 of `2026-10-19`.** Evidence:

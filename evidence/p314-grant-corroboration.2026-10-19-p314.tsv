@@ -1,0 +1,7 @@
+sha256_12	bytes	family	repositories_serving_it	n	note
+8486a10c4393	34523	AGPL-3.0	openedx/frontend-app-learning; MeetPlanBackend; koakademy; learnhouse/learnhouse; classroomio/classroomio	5	p313 had n=3. p314 adds learnhouse (dev) and classroomio (main) first-hand — FIFTH unrelated repository, fifth filename context
+c71d239df917	11357	Apache-2.0	constructorfabric/reference-audit; ai-for-edu/time-series-analysis-for-education; huggingface/smolagents; huggingface/agents-course	4	p311 had n=2. p314 adds two Hugging Face repositories at the canonical Apache length
+cfc7749b96f6	11358	Apache-2.0	NoplagLabs/noplag-engine; oppia/oppia	2	the same grant one leading newline longer — p311's fixed-document pair, unchanged
+(multiple)	33893 / 34523 / 34524 / 34541 / 35136	AGPL-3.0	frappe/lms; classroomio+learnhouse+frontend-app-learning; LibreLingo; openstax-cms; edx-platform	5	FIVE distinct byte lengths for ONE grant. p313 had four; frappe/lms at 33893 B is the new low. p311's rule holds at n=5
+(multiple)	11357 / 11358 / 11408	Apache-2.0	smolagents+agents-course; noplag+oppia; HKUDS/DeepTutor	3	DeepTutor at 11408 B is a third Apache-2.0 length, 50 B above the canonical — the appendix slot is the likely cause and was NOT verified this pass
+fab3dd6bdab2 vs 3f3d9e0024b1	16726 BOTH	MPL-2.0	SafeExamBrowser/seb-win-refactoring; mozilla/common-voice	2	THE CONVERSE CASE: two DIFFERENT files at IDENTICAL byte length. p311 showed equal grants at different bytes; this is the pair a bytes-and-sha ledger reports as the same size and never puts side by side

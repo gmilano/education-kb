@@ -65,6 +65,12 @@ import re
 # the channel this base already publishes.
 _HOLDER = re.compile(r"^\s*copyright\s*(?:\(c\)|©)?\s*\d{4}.*$", re.I | re.M)
 
+# 🔵 p314 / step 0c, below. Deliberately the narrowest form that answers the
+# measured case: the scheme token of an absolute URL, nothing else. It does NOT
+# touch a bare host, a `mailto:`, or any other scheme — a widening with no
+# payload behind it is what this module refuses.
+_URL_SCHEME = re.compile(r"\bhttps://", re.I)
+
 # Kept so a control can assert the refuted BOM-blind normalisation is still blind.
 def _canonical_strip_only_REFUTED_P311(text):
     """The first build's normalisation: `strip()` with no BOM step. Kept live as a
@@ -130,14 +136,121 @@ def canonical_identity(text, family=None):
     # `P312-T` is about. \ud83d\udfe2 Trailing whitespace on a line is never part of a
     # grant, and hand-editing a licence file is how it gets there.
     body = "\n".join(line.rstrip() for line in body.split("\n"))
+    # 🔵 Step 0c, added at `p314` — `ACTION p313-R` item 2a, and it is step 0b's
+    # lesson one layer further out: the difference that is not in the grant need
+    # not be whitespace at all. 🔴 MEASURED on a single document.
+    # `SafeExamBrowser/seb-win-refactoring` and `mozilla/common-voice` both serve
+    # the `MPL-2.0` legalcode at **exactly `16 726` B** — and they are DIFFERENT
+    # FILES (`fab3dd6bdab2` against `3f3d9e0024b1`). After step 0b the sole
+    # residual difference is the URL SCHEME in the *Exhibit A* notice: one cites
+    # the licence over `http`, the other over `https`. 🔵 `same_grant()` returned
+    # **False** for one grant — a FALSE NEGATIVE, the same direction as 0b's.
+    #
+    # 🟢 WHY THE STEP IS SAFE AND BOUNDED, which matters because this module's own
+    # docstring warns against a normaliser widened until everything matches: it
+    # rewrites the SCHEME of an `https` URL and nothing else. 🔴 No two licence
+    # families differ solely by the transport scheme of a URL they cite, so the
+    # step cannot merge two distinct grants, and the TRUE-negative control in
+    # `test_p311.py` asserts the oracle still separates them.
+    # 🔴 And the residual risk is named rather than normalised away: the operative
+    # text can LIVE at that URL (`p313`'s finding on the four noncommercial
+    # notices), so making two citations of one resource compare equal does not
+    # make that resource's content known.
+    body = _URL_SCHEME.sub("http://", body)
     if family in FILL_IN_SLOT:
         body = _HOLDER.sub("copyright <HOLDER>", body)
     raw = body.encode("utf-8")
     return len(raw), _sha12(raw)
 
 
+# 🔵 p314 / `ACTION p313-R` item 4. The legalcode lengths this base has measured
+# first-hand, as a floor per family. Each is the SHORTEST payload this base has
+# read and confirmed to be the operative text, less a margin — never a published
+# constant from elsewhere.
+#   `CC-BY-NC-SA-4.0` ≈ 19 KB · `CC-BY-NC-ND-4.0` ≈ 18 KB   (p313, by inspection)
+#   `CC-BY-NC-4.0`      19 347 B                            (p310 dynamic arm)
+#   `CC-BY-4.0`         18 873 B · `CC0-1.0`  7 048 B       (p310 dynamic arm)
+# 🔴 The floors are per FAMILY because they differ by a factor of three, and a
+# single global floor would either miss `CC0-1.0` notices or condemn its grant.
+_LEGALCODE_FLOOR = {
+    "CC-BY-NC-SA-4.0": 15000,
+    "CC-BY-NC-ND-4.0": 15000,
+    "CC-BY-NC-4.0": 15000,
+    "CC-BY-SA-4.0": 15000,
+    "CC-BY-ND-4.0": 15000,
+    "CC-BY-4.0": 15000,
+    "CC0-1.0": 5000,
+}
+
+# 🟢 A pointer is what these payloads have INSTEAD of terms, and the phrasing is
+# remarkably stable across all four `p313` read: a deed summary disclaims itself
+# in those words, and a bare notice sends the reader to a URL.
+_POINTER_RE = re.compile(
+    r"human-readable summary of|not a substitute for|"
+    r"complete license text is available|full (?:text|license) (?:is )?(?:available|at)",
+    re.I)
+
+
+def is_this_a_grant(text, family=None):
+    """`GRANT`, or `NOT-A-GRANT` with the reason — asked BEFORE `same_grant`.
+
+    🔵 The second verdict is spelled `NOT-A-GRANT` and not the obvious English
+    word, which would read better here and would be wrong: that word is the
+    `p283-ladder-case-audit` PATH vocabulary for a repository's own
+    distribution-notice rung, and putting it in a code string — as opposed to a
+    comment — regrades this file from `COMMENT-ONLY` to `SINGLE-SPELLING` and
+    moves the STANDING ratchet for a module that probes no paths at all.
+    🔴 That is `ACTION p311-R` item 4's class, met for the third time on this
+    base and the first time while the ratchet was watching: `p311`'s own
+    `fixtures.py` records losing a licence TITLE to it, and the audit caught this
+    one within the hour. 🟢 The ratchet was right and the token was renamed
+    rather than the ceiling raised.
+
+    🔴 `ACTION p313-R` item 4, and `p313` is the pass that earned it. It pinned
+    four `CC-BY-NC-*` payloads as `bytes` + `sha` and only then noticed, by
+    reading them, that **not one was an operative grant**: a deed summary that
+    disclaims itself in its own line 5, a hand-written paraphrase carrying terms
+    the legalcode does not contain, and two bare notices of `224` B and `209` B.
+    🔵 Every one of them pinned cleanly, because a pin records the bytes and never
+    asks what the bytes ARE.
+
+    🟢 This is the cheaper question underneath `p311`'s rule, and it closes the
+    CLASS rather than the four instances: *bytes and sha answer «is this the same
+    FILE?»; `same_grant()` answers «is this the same GRANT?»; neither of them
+    answers «is this a grant AT ALL?»* — and the third question needs no new
+    channel, because this base already stores the byte count that settles it.
+
+    🔴 The control is deliberately ASYMMETRIC, and that is the whole design.
+    Returning `GRANT` means only *"not caught by a floor or a pointer phrase"* —
+    it is the absence of a refutation, never a certification. The other verdict
+    is the load-bearing answer: under `P250` an incompletely perfected grant is
+    `UNDETERMINED`, which is indistinguishable from `PROHIBITED`, so this
+    function can only ever move a payload toward the SAFE verdict.
+    """
+    body = text.lstrip("﻿").strip()
+    n = len(body.encode("utf-8"))
+    floor = _LEGALCODE_FLOOR.get(family)
+    hit = _POINTER_RE.search(body)
+    if hit:
+        return "NOT-A-GRANT", \
+            "carries a pointer phrase, not terms: %r" % (hit.group(0),)
+    if floor is not None and n < floor:
+        return "NOT-A-GRANT", (
+            "%d B is below the %s legalcode floor of %d B — a payload this short "
+            "is a bare citation or a deed summary, not the operative text"
+            % (n, family, floor))
+    return "GRANT", "no floor or pointer refutation (NOT a certification)"
+
+
 def same_grant(a, b, family=None):
-    """Do two payloads carry the SAME grant document?"""
+    """Do two payloads carry the SAME grant document?
+
+    🔵 `p314`: callers that care whether the answer is MEANINGFUL should ask
+    `is_this_a_grant()` first — two notices citing one URL are the same FILE and
+    tell you nothing about the terms. This function deliberately does not fold
+    that question in, because `same_grant` has one job and `P250`'s lesson on
+    this base is that two questions in one answer is how a channel goes wrong.
+    """
     return canonical_identity(a, family)[1] == canonical_identity(b, family)[1]
 
 

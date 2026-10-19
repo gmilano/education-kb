@@ -138,10 +138,23 @@ COARSE = {
     # base. The grade belongs to the ANSWER, not to the fixture set's age.
     "MIT": {"permissive-software", "permissive", "mit-0"},
     "Apache-2.0": {"permissive-software", "permissive", "apache"},
+    # 🔴 ADDED AT p314, and it is the comment above recurring one vocabulary item
+    # further on — the third instance of this exact mechanism in this one dict.
+    # `p314` pinned the first UNTITLED `BSD-3-Clause` payload
+    # (`jupyterhub/jupyterhub`, `1 475` B · `7069c7e8d60e`: no title line, zero
+    # `BSD` tokens). On it `p211` falls back to its documented clause-structure
+    # rung and returns `BSD-family` — which `p211` declares, in its own source, as
+    # the answer for the BSD redistribution clause when no clause-count title is
+    # present. 🟢 That is the grader's own definition of COARSE: *"a less precise
+    # but correct answer — `GPL` for `GPL-3.0`"*. It is already honest imprecision
+    # under the same semantics as `bsd-unversioned`, declared coarse on the line
+    # below since `p311`.
+    # 🔵 It graded DEFECT for one reason only — absence from this dict — which is
+    # verbatim what the `p311` comment above says this map must not do again.
     "BSD-2-Clause": {"permissive-software", "permissive", "bsd", "bsd-2",
-                     "bsd-unversioned"},
+                     "bsd-unversioned", "bsd-family"},
     "BSD-3-Clause": {"permissive-software", "permissive", "bsd", "bsd-3",
-                     "bsd-unversioned"},
+                     "bsd-unversioned", "bsd-family"},
 }
 
 # A wrong answer that CROSSES a commercial-use boundary. This is the grade that

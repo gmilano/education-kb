@@ -496,18 +496,36 @@ def test_the_cell_queue_and_the_risk_queue_disagree_at_the_top():
 
 
 @check
-def test_the_two_noncommercial_families_are_still_uncovered():
-    """🟡 PINNED ON A VALUE AN OPEN ACTION EXISTS TO CHANGE, and declared as such
-    per `ACTION p310-R` item 4. `ACTION p311-R` item 1 is *pin CC-BY-NC-SA-4.0
-    and CC-BY-NC-ND-4.0*; when it is discharged THIS CONTROL MUST GO RED and be
-    rewritten to assert coverage. It is here so that the claim on the shelves —
-    *the two families a studio may not ship have no payload* — cannot go stale
-    silently."""
-    rows = RISK.queue(ROOT)
-    unc = {r[0] for r in rows if not r[3]}
-    assert {"CC-BY-NC-SA-4.0", "CC-BY-NC-ND-4.0"} <= unc, (
-        "a noncommercial family gained a payload — rewrite this control and "
-        "discharge ACTION p311-R item 1 on the shelves")
+def test_one_noncommercial_family_is_covered_by_payload_and_the_other_is_not():
+    """🟢 INVERTED AT p314, exactly as this control's previous body instructed and
+    as `ACTION p313-R` item 3 asked. It went red the moment `p314` pinned
+    `CC-BY-NC-ND-4.0`, which is the whole reason it was written to assert the
+    absence rather than to describe it.
+
+    🔴 AND THE INVERSION IS NOT *"now covered"*, because that would carry a
+    falsehood these same shelves refute. `p313` read all four noncommercial
+    payloads first-hand and **not one is an operative grant**: a deed summary
+    that disclaims itself in its own line 5, a hand-written paraphrase carrying
+    terms the legalcode does not contain, and two bare citations of `224` B and
+    `209` B. 🔵 So this base now has a family the census calls COVERED whose every
+    pinned payload is a citation rather than a licence, and the census cannot see
+    the difference because coverage counts PAYLOADS.
+
+    🔴 That is `p311`'s own conflation one level up: `bytes`+`sha` answered *"same
+    file?"* and was read as *"same grant?"*; a fixture directory answers *"is a
+    payload pinned?"* and is read as *"is the family exercised?"*. 🟢 The
+    grant/not-a-grant grading itself is `p314`'s to own and is controlled in
+    `p314`'s suite — asserted there, not restated here.
+    🟡 PINNED ON A VALUE AN OPEN ACTION EXISTS TO CHANGE: `ACTION p314-R` item 1
+    is *teach the coverage census the grant/not-a-grant distinction*; when that is
+    discharged this control must go red again and assert the stronger property."""
+    covered = {r[0]: r[3] for r in RISK.queue(ROOT)}
+    assert covered.get("CC-BY-NC-ND-4.0"), \
+        "CC-BY-NC-ND-4.0 lost the payload coverage p314 gave it"
+    assert not covered.get("CC-BY-NC-SA-4.0"), (
+        "CC-BY-NC-SA-4.0 gained payload coverage — a payload for it has sat in "
+        "this tree for many passes WITHOUT registering (p313's finding), so check "
+        "where it registered before calling the family exercised")
 
 
 @check

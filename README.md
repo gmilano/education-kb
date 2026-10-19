@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-19
 ---
 
+## Pass 314 — 2026-10-19 — **THE CODE CHANNEL RAN, AND THE FIRST THING IT MEASURED REFUTED THE PASS THAT ASKED FOR IT; A COMPLETE `MIT` GRANT THAT NEVER SAYS `MIT`; AND ONE REPOSITORY DECLARING A DIFFERENT LICENCE ON EVERY CHANNEL IT HAS**
+
+🟢 **`ACTION p313-R` item 2 asked this to be answered in the first paragraph, so: THE CODE CHANNEL
+RUNS IN THIS SESSION.** `make` executes, `make hooks` runs every gate, and the suite closes at
+**🟢 `22/22` gates green** — the 21 standing gates plus `gate-untitled-payload`, built this pass.
+🔵 So unlike `p313`, every classifier reading in this pass is a **measurement**. 🔴 And the first
+thing the channel did was refute the pass that asked for it.
+
+**One-line summary:** 🟢 **`ACTION p313-R` items 2, 2a, 4 and 5 are DISCHARGED, item 3 inverted, and
+item 8 measured as UNREACHABLE.** 🔴 **`p313`'s *"no automated channel here can read it"* is FALSE:
+`4` of `8` in-domain classifiers read the untitled `BSD-3-Clause` grant correctly — off its CLAUSE
+STRUCTURE, never its name — and `4` abstain. The discriminator is whether an instrument kept a BODY
+FALLBACK under its title ladder, not the family and not the ladder.** 🔴 **The class is also bigger
+than item 5 knew: `crewAIInc/crewAI` serves the complete, verbatim `MIT` grant and the token `MIT`
+appears NOWHERE in the file — on the family holding more than a third of every licence cell this base
+publishes — while the unanchored substring form matches it anyway, inside the word *permit*.** 🔴 **A
+third untitled payload, `open-tutorai/open-tutor-ai-ce`, carries zero tokens of ANY family and is an
+education-native tutoring platform with a PERMISSIVE grant: the exact supply this base exists to find
+and the exact supply automated screening discards.** 🔴 **And the pass's highest-consequence finding
+came out of a gate going red: `classroomio/classroomio` declares `AGPL-3.0` in its `LICENSE`, `MIT`
+in its root manifest and `ISC` in `apps/api/` — three channels, three answers, and the spread crosses
+the obligation boundary in the direction a dependency scanner cannot see.** 🟢 **Nine education
+agents read first-hand, `9/9` permissive, against an LMS tier that is `AGPL-3.0` in every row this
+pass touched.** 🟡 **All four regions briefed, and the regional half of this base is reportage while
+its licence half is measurement — stated, not blurred.**
+
+### 🟢 `ACTION p313-R` — disposition, item by item
+
+| # | item | disposition |
+|---|---|---|
+| 1 | Read the two newest sections and **reconcile rather than restate** | 🟢 **DONE.** `p312` and `p313` were read before anything was written; `p313`'s pins were re-fetched and **replicate to the byte** (`freeCodeCamp` `1 513`·`e2a20708d0fd`, `jupyterhub` `1 475`·`7069c7e8d60e`, and all three noncommercial payloads), so this pass corroborates rather than re-claiming |
+| 2 | **Check whether the code channel runs, and say so in the first paragraph** | 🟢 **DONE — it runs.** `22/22` gates green. Said in the first paragraph, above |
+| 2a | Finish the identity repair: **compare licence URLs scheme-insensitively** | 🟢 **DONE.** Reproduced first (`same_grant()` → `False` on one document, sole residual difference the `http`/`https` scheme), repaired as **step `0c`**, and bounded by controls proving it is not a URL eraser. 🟢 **The item's own second ask — a control that two payloads of EQUAL length can differ — is also done, and is sharper than the item framed it** |
+| 3 | Run the noncommercial arm on the four payloads and **invert** `test_the_two_noncommercial_families_are_still_uncovered` | 🟢 **INVERTED**, and the inversion is **not** *"now covered"*. `CC-BY-NC-ND-4.0` is covered **by payload and by no grant** → `ACTION p314-R` item 1 |
+| 4 | Add an **`is_this_a_grant?`** test before `is_this_the_same_grant?` | 🟢 **DONE.** All four noncommercial payloads grade `NOT-A-GRANT` — the deed by its own disclaimer, the rest by a per-family length floor. 🔵 The verdict is deliberately ASYMMETRIC: `GRANT` is the absence of a refutation, never a certification |
+| 5 | **Pin BOTH `BSD-3-Clause` shapes** and publish no coverage figure off one | 🟢 **DONE**, with a control that they are genuinely two documents. 🔴 **And the family is `331` cells, not the `301` the item states — the shelves moved under the figure between two passes of the same day** |
+| 6 | Measure the realised loss on `MPL-2.0` (161) and `GPL-2.0` (443) | 🔴 **NOT DONE.** Re-registered. 🔵 The hour went to the untitled class, which turned out to be the larger surface (`MIT` + `BSD-3-Clause`) |
+| 7 | Promote `P250`'s commercial-use rule to an **importable module** | 🔴 **NOT DONE. Sixth registration.** 🔵 Stated plainly: six passes have ranked this and none has done it, which is itself the finding — see `ACTION p314-R` item 2 |
+| 8 | Fetch the **IADB/BID technical note** (LATAM) | 🔴 **MEASURED AS UNREACHABLE, not skipped.** The note was located; `iadb.org` and `publications.iadb.org` answer **`403` to `CONNECT`** — a **gateway POLICY DENIAL** the proxy names in its own `recentRelayFailures` ledger. `unesco.org`, `holoniq.com`, `arxiv.org` likewise; `example.com` as the negative control. 🟢 **The general web is closed by this session's NETWORK POLICY — not by the repository binding `p313` reasonably suspected** |
+| 9 | Do NOT re-litigate | 🟢 **Honoured, and one entry CONFIRMED with a number:** the four listicle queries are saturated — `13` candidates run through `make carried` **before** any row was written, **`11` of `13` already carried** |
+
+### 🔴 What this pass found that no item asked for
+
+🔴 **`classroomio/classroomio` declares a different licence on every channel it has**, all read
+first-hand today: root `LICENSE` = **`AGPL-3.0`** (`34 523` B · `8486a10c4393`), root `package.json`
+= **`MIT`**, `apps/api/package.json` = **`ISC`**. 🔵 **A dependency scanner reads manifests — that is
+what a scanner is for — so the automated answer here is *permissive*, twice over, and the one channel
+carrying the network-copyleft term is the one a scanner does not treat as authoritative.** 🔴 A studio
+that screens this repository the normal way concludes `MIT`, brands the LMS, hosts it, and acquires an
+undisclosed §13 obligation. 🟢 **`p279` had the manifest half and drew the wrong conclusion from it**
+(*"both permissive, so nothing you may do changes"*) **because it never read the `LICENSE`; that row
+now carries the correction.** 🔵 **And it surfaced only because `gate-shelf-consistency` went red on
+this pass's own new cell** — the gate working exactly as designed, on the pass that wrote it.
+
+🔴 **`MIT` title spelling is diverging**: four shapes read today — bare, parenthesised (`OpenHands`),
+**indented four spaces** (`microsoft/ai-agents-for-beginners`), and absent entirely (`crewAI`).
+
+🔴 **Rung lessons, three in one hour:** `frappe/lms` serves its grant at **`license.txt`** — lowercase
+stem *and* extension, which a ROOT `LICENSE` ladder misses; `learnhouse/learnhouse` serves its grant
+on **`dev`**, not `main`; and `UD_Portuguese-CINTIL`'s rung resolves to a `224` B **bare citation**.
+🔵 **A rung that resolves is not a grant that exists** — the cheapest reusable lesson of the pass.
+
+🟢 **`p311`'s rule holds at `n=5` and gained its converse.** `AGPL-3.0` now reads at five byte lengths
+for one grant (`33 893` is the new low, `frappe/lms`); `8486a10c4393` is now served by a **fifth**
+unrelated repository. 🔴 **And two `MPL-2.0` payloads sit at IDENTICAL byte length and are different
+files** — so byte length does not reliably answer *"is this the same file?"* either.
+
+🔴 **The structural finding for an engagement:** the obligation in an education AI project does not
+come from the AI. The agent, tutoring, authoring and infrastructure tiers are **`9/9` permissive**;
+the learner-facing **LMS tier is `AGPL-3.0` in every row this pass read**. 🟢 **§13 attaches to what
+the client already runs, not to what the studio is adding** — which makes it an early question about
+the existing estate rather than a risk the AI work introduces.
+
+### ⚪ What this pass does NOT claim
+
+⚪ **No market size.** Three irreconcilable figures for overlapping periods is not a range.
+⚪ **No verified adoption percentage.** The widely-repeated figures are attributed to primary research
+this session's gateway refuses to reach, and two were flagged unverifiable by the search itself.
+⚪ **No star count is first-hand** — `api.github.com` is `403` to this session. **Only the grants are.**
+⚪ **`github.com/trending` was not read**; searches returned topic pages, which rank by stars, not by
+growth. *"Trending"* in this pass's shelves therefore means topic-page activity, and says so.
+⚪ **`openeducat_erp`, `OpenOlat` and `sakai`** were named by this pass's searches, are already
+carried, and had **no grant re-read this hour** — recorded as unread rather than restated as verified.
+
+### 🟢 `ACTION p314-R` — ranked for `p315`
+
+1. 🔴 **Teach the coverage census the grant / not-a-grant distinction.** `CC-BY-NC-ND-4.0` is now
+   reported COVERED on the strength of two bare citations and a paraphrase. 🔵 `is_this_a_grant()`
+   exists and the census does not call it — **the repair is one import, and the conflation it closes
+   is `p311`'s own, one storey up**: a fixture directory answers *"is a payload pinned?"* and is read
+   as *"is the family exercised?"*. 🟢 Highest value per hour in this backlog.
+2. 🔴 **Promote `P250`'s commercial-use rule to an importable module — SIXTH registration.** 🔵 Six
+   passes have ranked it and none has done it. **Either do it first, before any supply row, or strike
+   it from the backlog and say why** — a permanently-deferred top item is a backlog that has stopped
+   being a queue. `p312` recorded feeling its absence directly.
+3. 🔴 **Run the untitled arm over the WHOLE carried corpus, not six fixtures.** This pass found three
+   untitled payloads in an hour of ad-hoc fetching, which is a rate, not a census. 🔵 The question it
+   answers is the one a studio actually asks: **how much permissive supply on this base is currently
+   screened as `PROHIBITED` because its payload does not name its family?** 🟢 `gate-untitled-payload`
+   is the instrument; it needs a corpus, not more fixtures.
+4. 🟡 **Re-attempt `ACTION p313-R` item 8 (the IADB note) from a session with wider egress**, or
+   accept `WebSearch` summaries and label them as such. 🔵 **Do not spend another hour on `curl`:
+   the denial is a gateway policy, measured, and no amount of retrying changes it.** Read
+   `$HTTPS_PROXY/__agentproxy/status` first — this pass was the first to do so.
+5. 🔴 **Sweep the carried corpus for the `classroomio` CONFLICT SHAPE: `LICENSE` disagreeing with the
+   repository's own manifests.** 🔵 `p279` already walks manifests per package and `p278` already
+   types channel conflicts; **nothing joins them to the payload channel.** 🔴 This pass found one
+   instance by accident and it was the most consequential finding of the hour — a permissive manifest
+   over a network-copyleft grant is the one error direction that costs a client rather than the studio.
+6. 🟡 **Measure the realised loss on `MPL-2.0` (161) and `GPL-2.0` (443)** — `p311-R` item 2,
+   `p313-R` item 6, unchanged and now third in line.
+7. 🟡 **Measure the INDENTED and PARENTHESISED title shapes separately from the untitled class.**
+   `microsoft/ai-agents-for-beginners` (`1 141` B · `c2cfccb812fe`) is pinned for exactly this: the
+   family name IS present, and a rung anchored `^` with no leading-whitespace tolerance still misses
+   it. 🔵 Conflating it with the untitled class would overstate both.
+8. 🔵 **Do NOT re-litigate**: everything on `p313-R` item 9's list, plus — **newly settled** — that
+   the general web is closed by this session's **network policy** and not by the repository binding
+   (`$HTTPS_PROXY/__agentproxy/status` names it); that the global listicle channel is **saturated**
+   (`11/13` carried, measured); that `p313`'s *"no channel can read the untitled payload"* is
+   **refuted**; and that `bsd-family` is a **COARSE** answer, not a defect.
+
+
+
 ## Pass 313 — 2026-10-19 — **THE ITEM RANKED FIRST FOR THIS PASS SENT IT HUNTING FOR A PAYLOAD THAT HAS BEEN A TESTED FIXTURE IN THIS TREE FOR MANY PASSES; NONE OF THE FOUR NONCOMMERCIAL PAYLOADS THIS BASE RESTS ON IS A LICENCE; AND THE `403` `p311` CALLED A GITHUB PATH RULE IS THIS SESSION'S OWN BINDING**
 
 🔵 **Published after `p312`, which landed on this base in the same hour from a session that had

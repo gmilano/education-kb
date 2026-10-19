@@ -1,0 +1,11 @@
+host	channel	http	decided_by	verdict
+raw.githubusercontent.com	curl CONNECT	301/200	gateway	OPEN - every payload in this pass was read here
+github.com	curl CONNECT	400	gateway	reached, rejects the request shape; NOT a policy denial
+api.github.com	curl	403	Anthropic session proxy	sessions are bound to their configured repositories (p313)
+pypi.org	curl CONNECT	200	noProxy allowlist	OPEN - package registry, named in the proxy's own noProxy list
+www.iadb.org	curl CONNECT	000	gateway answered 403 to CONNECT	POLICY DENIAL - ACTION p313-R item 8 CANNOT be discharged from this session
+publications.iadb.org	curl CONNECT	000	gateway answered 403 to CONNECT	POLICY DENIAL
+www.unesco.org	curl CONNECT	000	gateway answered 403 to CONNECT	POLICY DENIAL
+www.holoniq.com	curl CONNECT	000	gateway answered 403 to CONNECT	POLICY DENIAL
+arxiv.org	curl CONNECT	000	gateway answered 403 to CONNECT	POLICY DENIAL
+example.com	curl CONNECT	000	gateway answered 403 to CONNECT	POLICY DENIAL - negative control: the denial is not about the TOPIC

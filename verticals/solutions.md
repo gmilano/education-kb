@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 314 — THE PERMISSIVE ROW ON THIS SHELF IS THE ONE NO LICENCE SCREEN CAN READ, AND THIS PASS ADDED A SECOND ONE WITH THE SAME DEFECT
+
+⏱️ **Pass 314 of `2026-10-19`.** Evidence:
+[`p314-payload-pins.2026-10-19-p314.tsv`](../evidence/p314-payload-pins.2026-10-19-p314.tsv) ·
+[`p314-untitled-payload-arm.2026-10-19-p314.tsv`](../evidence/p314-untitled-payload-arm.2026-10-19-p314.tsv).
+
+🟢 **Code channel RAN** (`22/22` gates green), so the blindness recorded below is **measured**, not
+inferred as it necessarily was at `p313`.
+
+### 🔴 The finding that matters to an engagement, not to an instrument
+
+`p313` closed its vertical shelf on a precise observation: of `13` platforms, exactly two are
+permissive, and one of them — [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) —
+is a payload **no channel on this base can read** (no title line, zero `BSD` tokens).
+
+🔴 **This pass added a second row with the same defect, and this one is education-native.**
+[`open-tutorai/open-tutor-ai-ce`](https://github.com/open-tutorai/open-tutor-ai-ce) — the
+personalised + immersive learning platform behind arXiv `2602.07176` — serves a **complete
+`BSD-3-Clause` grant** at `1 531` B · `57c341d09920`, with all three clauses including the
+endorsement clause, and it contains **zero tokens of ANY licence family**: not `BSD`, not `MIT`, not
+`Apache`, not `Mozilla`, not `GNU`.
+
+🔵 **So the cost of the untitled shape is now concrete and it runs in one direction only.** Under
+`P250` an abstention is indistinguishable from `PROHIBITED`, so an automated licence screen
+**discards a permissive, education-specific tutoring platform a studio could have built on.**
+🟢 **The loss is USABLE SUPPLY EXCLUDED, never a wrong licence shipped** — the same direction as
+`p309`'s and `p311`'s `MPL-2.0` losses, and on `MIT` + `BSD-3-Clause` it is the largest such surface
+this base has measured.
+
+🟢 **Measured, finally, rather than inferred:** `4` of `8` in-domain classifiers DO read both
+untitled payloads — off the **clause structure**, never the name — and `4` abstain. The
+discriminator is whether the instrument kept a body fallback under its title ladder. **`p313`'s
+*"no automated channel here can read it"* is refuted.**
+
+### 🟢 Three vertical rows added, grants read first-hand this pass
+
+🔵 These are the `Odoo`/`OpenMRS`/`Moodle` class — real systems a studio customises — and all three
+are LMS platforms that `p313`'s shelf did not carry:
+
+| platform | layer | repo · ref · rung | grant *(read first-hand)* | bytes · sha | 🔵 what a studio may do with it |
+|---|---|---|---|---|---|
+| **Frappe LMS** | LMS on the Frappe/ERPNext stack — the closest thing on this shelf to an education **ERP** | [`frappe/lms`](https://github.com/frappe/lms) · `main` · `license.txt` | 🔴 `AGPL-3.0` | `33 893` · `db1a87ba81e8` | 🔴 **§13 reaches hosted delivery.** 🟡 Note the rung: `license.txt`, lowercase — a ROOT `LICENSE` ladder misses it entirely |
+| **ClassroomIO** | LMS, Svelte, positioned as a Moodle/Open edX alternative | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) · `main` | 🔴 `AGPL-3.0` — 🔴 **and its own manifests disagree: see the conflict below** | `34 523` · `8486a10c4393` | 🔴 §13, and this is the layer a studio most often brands |
+| **LearnHouse** | LMS with AI-assisted authoring features | [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) · `dev` | 🔴 `AGPL-3.0` | `34 523` · `8486a10c4393` | 🔴 §13. 🟡 **The grant is served at `dev`, not `main`** — a default-branch assumption returns nothing here |
+| **Open TutorAI (CE)** | 🟢 **tutoring platform, generative-AI native** — the new permissive vertical row | [`open-tutorai/open-tutor-ai-ce`](https://github.com/open-tutorai/open-tutor-ai-ce) · `main` | 🟢 **`BSD-3-Clause`** | `1 531` · `57c341d09920` | 🟢 **permissive, no copyleft obligation** — and 🔴 unreadable by every title-keyed channel. **The single most valuable row this pass added** |
+
+### 🔴 The highest-consequence finding this pass: one repository, three channels, and the spread crosses the obligation boundary
+
+🔴 **`classroomio/classroomio` declares a different licence on every channel it has**, all three read
+first-hand at `main` on `2026-10-19`:
+
+| channel · rung | grant read at that rung | what a studio reading ONLY that channel concludes |
+|---|---|---|
+| root `LICENSE` | `34 523` B · `8486a10c4393` — the **Affero** network-copyleft grant | 🔴 §13 reaches a hosted, modified deployment: **source owed to users** |
+| root `package.json` | `"license": "MIT"` · `4 399` B · `f2c5960ebbfc` | 🟢 permissive, no obligation |
+| `apps/api/package.json` | `"license": "ISC"` · `2 821` B · `0590d7599c0f` | 🟢 permissive, no obligation |
+
+🔴 **This is the shape that actually costs a client money**, and it is worth being precise about why.
+🔵 A dependency scanner reads **manifests** — that is what a scanner is for — so the automated answer
+here is *permissive*, twice over. The **`LICENSE` file is the one channel a scanner does not treat as
+authoritative**, and it is the one carrying the network-copyleft term. 🔴 **A studio that screens this
+repository the normal way concludes `MIT`, brands the LMS, hosts it for the client, and acquires an
+undisclosed §13 source obligation.**
+
+🟢 **`p279` found the manifest half of this and drew the wrong conclusion from it** — *"both
+permissive, so nothing you may *do* changes"* — because it never read the `LICENSE`. 🔵 The row in
+[`compose/patterns.md`](../compose/patterns.md) now carries that correction.
+🔴 **And the general rule is the sharper output:** on this base, a manifest `license` field is a
+DECLARATION and the `LICENSE` payload is the GRANT; where they disagree, the conservative reading is
+the grant, and *"the manifests agree with each other"* is no evidence at all — here both agreed, and
+both were the wrong channel.
+
+🟡 **Not asserted:** which channel is legally controlling for `classroomio` specifically. 🔵 That is
+a question for counsel on an actual engagement, and the useful finding is that **the disagreement
+exists and spans the obligation boundary** — not a verdict on how a court would resolve it.
+
+### 🔴 The vertical tier's shape, restated with the new rows
+
+🔴 **Of the `17` vertical platforms this base has now read first-hand across `p313` and `p314`,
+`13` are copyleft and `8` of those are `AGPL-3.0`.** 🟢 **Three are permissive — `oppia/oppia`
+(`Apache-2.0`), `jupyterhub/jupyterhub` and `open-tutorai/open-tutor-ai-ce` (both
+`BSD-3-Clause`) — and one is weak-copyleft (`mozilla/common-voice`, `MPL-2.0`).**
+
+🔵 **And the uncomfortable overlap: `2` of the `3` permissive rows are payloads this base's own
+automated channels cannot read.** 🔴 **A studio that screens supply by licence badge will see a
+vertical shelf that looks almost entirely copyleft, because the permissive exceptions are the ones
+that screen as unknown.** 🟢 That is a reason to read grants first-hand on this tier specifically —
+not a general principle, a measured property of this shelf.
+
+### ⚪ Declared absences on this shelf
+
+⚪ **The education `ERP`/`CRM` nil is settled and not re-litigated** (`ACTION p313-R` item 9).
+🔵 This pass's search for an `MIT`/`Apache` platform covering **both** SIS and LMS returned the same
+answer it has before: the realistic path is a permissive LMS paired with a separate SIS, or Frappe
+LMS — which sits on an ERP stack and is `AGPL-3.0`, read above. 🟡 **`OpenEduCat`
+([`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp)) is carried on this
+base and its grant was NOT read first-hand this pass** — stated as an unread rung rather than
+carried forward as a fact.
+
+⚪ **`OpenOlat` and `Sakai` were named by this pass's searches as the Apache-family LMS options**
+(`Apache-2.0` and `ECL-2.0` respectively) and **both are already carried**; neither grant was
+re-read first-hand this hour, so neither is restated here as verified.
+
+
+
 ## 🔴 Pass 313 — EVERY VERTICAL PLATFORM THIS PASS READ FIRST-HAND IS COPYLEFT, AND THE TWO LATAM SIS ROWS ARE `GPL-2.0`, THE HEAVIEST GRANT ON THIS SHELF TO COMPOSE WITH
 
 ⏱️ **Pass 313 of `2026-10-19`.** Evidence:

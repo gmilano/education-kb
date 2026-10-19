@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 314 — THE CODE CHANNEL RAN, AND THE FIRST THING IT MEASURED REFUTED THE PASS THAT ASKED FOR IT: A COMPLETE `MIT` GRANT THAT NEVER SAYS `MIT`
+
+⏱️ **Pass 314 of `2026-10-19`, following `p313` and `p312` of the same day.** Evidence:
+[`p314-payload-pins.2026-10-19-p314.tsv`](../evidence/p314-payload-pins.2026-10-19-p314.tsv) ·
+[`p314-untitled-payload-arm.2026-10-19-p314.tsv`](../evidence/p314-untitled-payload-arm.2026-10-19-p314.tsv) ·
+[`p314-grant-corroboration.2026-10-19-p314.tsv`](../evidence/p314-grant-corroboration.2026-10-19-p314.tsv) ·
+[`p314-transport-boundary.2026-10-19-p314.tsv`](../evidence/p314-transport-boundary.2026-10-19-p314.tsv).
+
+🟢 **Read this first, because `ACTION p313-R` item 2 asked for it in the first paragraph: THE CODE
+CHANNEL RUNS IN THIS SESSION.** `make` executes, `make hooks` runs every gate, and the suite is
+**🟢 22/22 gates green** — 21 standing gates plus `gate-untitled-payload`, built this pass. 🔵 So
+unlike `p313`, every classifier reading below is a **measurement**, not an inference from a
+payload's shape. 🔴 And the first thing the channel did was refute the pass that asked for it.
+
+### 🔴 `ACTION p313-R` item 5 asked for a `BSD-3-Clause` fixture. The class is bigger and it reaches `MIT`
+
+`p313` read [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) and found a
+complete `BSD-3-Clause` grant with **no title line and zero `BSD` tokens**, then wrote that *"no
+automated channel here can read it"* — honestly flagged as inference, because it had no way to run
+one. 🟢 This pass pinned the shape on a second family and measured both:
+
+| payload | family | shape | bytes · sha | first non-blank line |
+|---|---|---|---|---|
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | `MIT` | 🟢 titled | `1 092` · `e3321a1b62cd` | the family name, bare |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | `MIT` | 🟡 titled, **indented 4 spaces** | `1 141` · `c2cfccb812fe` | the family name, indented |
+| [`All-Hands-AI/OpenHands`](https://github.com/All-Hands-AI/OpenHands) | `MIT` | 🟡 titled, parenthesised variant | `1 096` · `e1d1fa9f3a8d` | a third title spelling |
+| [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | `MIT` | 🔴 **UNTITLED** | `1 055` · `28868731966f` | the copyright declaration |
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | `BSD-3-Clause` | 🟢 titled | `1 513` · `e2a20708d0fd` | the family name |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | `BSD-3-Clause` | 🔴 **UNTITLED** | `1 475` · `7069c7e8d60e` | the copyright declaration |
+| [`open-tutorai/open-tutor-ai-ce`](https://github.com/open-tutorai/open-tutor-ai-ce) | `BSD-3-Clause` | 🔴 **UNTITLED** | `1 531` · `57c341d09920` | the copyright declaration |
+
+🔴 **`crewAIInc/crewAI` serves the complete, verbatim `MIT` grant body and the string `MIT` does not
+appear in the file.** That is the family holding **more than a third of every licence cell this base
+publishes** (`p311`'s own standing control), with a live payload on which a title channel is blind.
+
+🔴 **And the substring form this base has refuted three times matches it anyway — for the wrong
+reason.** `"mit" in low` returns `True` on that payload because it matches *inside* `permit`,
+`limitation` and `LIMITED`. 🔵 `p306` met this class as `"affero" in low` and again as `"cc0" in
+low`, and until now it has only ever been a POSSIBILITY. **Here is the payload that makes it a
+measured false friend: a classifier can be right on this file by accident, and the arm now reports
+the token channel beside the verdict so the two can never be counted together.**
+
+### 🟢 What the arm actually measured — and `p313`'s inference is FALSE
+
+`8` in-domain classifiers × `7` payloads, grader imported from `p310` rather than restated:
+**🟢 `0` defects, `0` crossed commercial-use boundaries.** 🔴 But not `0` blindness:
+
+| reading | classifiers | what it means |
+|---|---|---|
+| 🟢 **reads BOTH shapes, both families** | `p198`, `p228`, `p306`, `p211` | the family is read off the **CLAUSE STRUCTURE**, not the name |
+| 🔴 **TITLE-ONLY on `MIT`** | `p419`, `p191`, `p153`, `p150` | reads the titled payload, **abstains on the same family's grant** when the first line does not name it |
+
+🔴 **So `p313`'s *"no channel can read it"* is refuted: half of them do.** 🟢 And the discriminator
+is nameable, which is the result worth more than either verdict: **it is whether the instrument kept
+a BODY FALLBACK underneath its title ladder.** 🔵 The sharpest instance is almost funny —
+`p198-title-line-family`, the instrument whose entire thesis is *"classify on the TITLE LINE, not on
+a window"*, is one of the four that survives, because it is title-line-**FIRST** and not
+title-line-**ONLY**: two lines at the bottom of it fall through to the grant clause. **The four that
+go blind have no such fallback.**
+
+🟡 **One grading was repaired, in `p310`'s own file and not shadowed here.** `p211` falls back to its
+documented clause-structure rung on the untitled `BSD` payloads and returns `bsd-family` — which
+`p211`'s source declares as its answer for the BSD redistribution clause absent a clause-count
+title. 🔴 That graded **DEFECT** for one reason only: absence from `p310`'s COARSE vocabulary — which
+is *verbatim* what that dict's own `p311`-era comment says it must never do again (*"the grade
+belongs to the ANSWER, not to the fixture set's age"*). 🟢 **Third instance of that one mechanism in
+that one dict.** `bsd-family` is now declared coarse and the arm is clean.
+
+### 🟢 The agent shelf, every grant read first-hand this pass
+
+🔵 Nine agents and agent frameworks, each grant fetched over `raw.githubusercontent.com` today —
+**`9` of `9` PERMISSIVE**, which is a sharp contrast with this base's vertical and foundational
+tiers, where `10` of `13` and `10` of `14` are copyleft.
+
+| agent | what it is | repo · ref · rung | grant *(read first-hand)* | bytes · sha | 🔵 posture for a studio |
+|---|---|---|---|---|---|
+| **DeepTutor** | lifelong personalised tutoring agent; the most-starred AI-tutor repo (≈`41.6k`★, updated `2026-10-18`) | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) · `main` · `LICENSE` | 🟢 `Apache-2.0` | `11 408` · `cd2f54e1e506` | 🟢 **permissive with an express patent grant.** The strongest education-native starting point on this shelf |
+| **Open TutorAI (CE)** | personalised + immersive learning platform, generative-AI native (arXiv `2602.07176`) | [`open-tutorai/open-tutor-ai-ce`](https://github.com/open-tutorai/open-tutor-ai-ce) · `main` | 🟢 **`BSD-3-Clause`** | `1 531` · `57c341d09920` | 🟢 permissive — and 🔴 **its payload names NO family at all**, so a licence screen will report it unknown and `P250` will read that as prohibited. **Usable supply that automated screening drops** |
+| **Educhain** | content generation — syllabus, quizzes, flashcards; video/PDF → course | [`satvik314/educhain`](https://github.com/satvik314/educhain) · `main` | 🟢 `MIT` | `1 092` · `e3321a1b62cd` | 🟢 the lightest grant on the shelf; the authoring layer |
+| **OATutor** | intelligent tutoring system with Bayesian Knowledge Tracing, UC Berkeley | [`cahlr/OATutor`](https://github.com/cahlr/OATutor) · `main` | 🟢 `MIT` | `1 105` · `5baaaf977a28` | 🟢 the mastery-model layer, and the one row here with an academic evaluation tradition behind it |
+| **smolagents** | minimal code-writing agent framework | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) · `main` | 🟢 `Apache-2.0` | `11 357` · `c71d239df917` | 🟢 **the canonical Apache payload**, byte-identical to two other repositories on this base |
+| **OpenHands** | agent + sandboxed runtime, end-to-end platform | [`All-Hands-AI/OpenHands`](https://github.com/All-Hands-AI/OpenHands) · `main` | 🟢 `MIT` | `1 096` · `e1d1fa9f3a8d` | 🟢 general-purpose, not education-native; the execution substrate when a tutor must RUN student code |
+| **CrewAI** | multi-agent orchestration | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) · `main` | 🟢 `MIT` | `1 055` · `28868731966f` | 🟢 permissive — and 🔴 **the untitled-payload headline above**. The grant is clean; the *screening* of it is not |
+| **AI Agents for Beginners** | 12-lesson curriculum for building agents (Microsoft) | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) · `main` | 🟢 `MIT` | `1 141` · `c2cfccb812fe` | 🟡 **a curriculum, not a runtime** — the enablement asset for a studio team, and the row most likely to be miscounted as a tool |
+| **HF Agents Course** | open course on building agents | [`huggingface/agents-course`](https://github.com/huggingface/agents-course) · `main` | 🟢 `Apache-2.0` | `11 357` · `c71d239df917` | 🟡 same: enablement. 🟢 Byte-identical grant to `smolagents` |
+
+### 🟢 `bytes` + `sha` corroborated further, and then INVERTED
+
+🟢 **Same grant, same bytes, unrelated projects — `p311`'s rule, now at `n=5` on one sha.**
+`8486a10c4393` / `34 523` B (`AGPL-3.0`) is served by
+[`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) (`dev`) and
+[`classroomio/classroomio`](https://github.com/classroomio/classroomio) (`main`), read first-hand
+today — **the fourth and fifth unrelated repositories at that exact sha**, after `p313`'s three.
+🟢 `c71d239df917` (`Apache-2.0`) gains two more: `smolagents` and `agents-course`.
+
+🔴 **Same grant, more lengths.** `Apache-2.0` reads at three payload lengths — `11 357` / `11 358` /
+`11 408`.
+
+🔴 And `AGPL-3.0` now reads at **five** — `33 893` / `34 523` / `34 524` / `34 541` / `35 136`,
+**five byte lengths for one grant**, the new low being
+[`frappe/lms`](https://github.com/frappe/lms) at `33 893` B · `db1a87ba81e8`.
+
+🔴 **AND THE CONVERSE, WHICH IS NEW AND SHARPER.** `ACTION p313-R` item 2a asked for a control that
+*"two payloads of EQUAL length can differ"*. It exists:
+[`mozilla/common-voice`](https://github.com/mozilla/common-voice) and `seb-win-refactoring` both
+serve the `MPL-2.0` legalcode at **exactly `16 726` B** and they are **different files**
+(`3f3d9e0024b1` against `fab3dd6bdab2`). 🔵 `p311` established that equal grants can have different
+bytes. **This is two different files at identical bytes — so byte length does not answer *"is this
+the same file?"* either, and the equality here is a coincidence of compensation: one payload carries
+an extra trailing space and the shorter URL scheme.** 🟢 Step `0c` now reconciles them, with its
+true-negative and URL-eraser bounds controlled.
+
+### ⚪ Declared absences on this shelf, measured rather than assumed
+
+⚪ **The global listicle channel is SATURATED and this pass says so with a number.** Thirteen
+candidates from four `2026` searches were run through this base's own `make carried` gate before any
+row was written (`P312-A`): **`11` of `13` were already carried.** The two that were new —
+`crewAIInc/crewAI` and `All-Hands-AI/OpenHands` — are general-purpose agents, not education-native,
+and they are on the shelf above for what their *payloads* taught, not for novelty.
+🔵 **`ACTION p313-R` item 9 already forbade re-litigating the four listicle queries. This pass
+confirms the instruction was right and attaches the measurement to it.**
+
+⚪ **No education-specific agent with a NON-permissive grant was added**, because none of the nine
+read today has one — stated as a finding rather than a selection: the agent tier of this sector is
+genuinely permissive, and it is the **platform** tier underneath it that is AGPL.
+
+
+
 ## 🔴 Pass 313 — THE ITEM RANKED FIRST FOR THIS PASS ASKED IT TO GO FIND A PAYLOAD THAT HAS BEEN A TESTED FIXTURE IN THIS TREE FOR MANY PASSES; AND NOT ONE OF THE FOUR NONCOMMERCIAL PAYLOADS THIS BASE RESTS ON IS A LICENCE
 
 ⏱️ **Pass 313 of `2026-10-19`, following `p311` of `2026-10-19`.** Evidence:

@@ -1,0 +1,14 @@
+classifier	family	titled_payload	untitled_payload	delta	note
+p198-title-line-family/family_title_line.py	MIT	mit	mit	both	BODY FALLBACK on the grant clause - the title-line instrument survives because it is title-line-FIRST, not title-line-ONLY
+p198-title-line-family/family_title_line.py	BSD-3-Clause	bsd	bsd-3-clause	both	distinguishes 3-clause from 2-clause off the clause structure, with NO family token in the file
+p228-shelf-gate/classify_grant.py	MIT	mit	mit	both	body fallback
+p228-shelf-gate/classify_grant.py	BSD-3-Clause	bsd-3-clause	bsd-3-clause	both	body fallback
+p306-licence-probe/licence_probe.py	MIT	mit	mit	both	body fallback
+p306-licence-probe/licence_probe.py	BSD-3-Clause	bsd	bsd	both	body fallback, coarse
+p211-full-column-grant-audit/classify.py	MIT	mit	mit	both	body fallback on the grant clause
+p211-full-column-grant-audit/classify.py	BSD-3-Clause	bsd-3-clause	bsd-family	both	COARSE on the untitled shape - graded DEFECT until p314 added bsd-family to p310's COARSE map
+p419-copyleft-identity/identidad_copyleft.py	MIT	mit	(abstain)	TITLE-ONLY	no body fallback
+p191-spec-license-sweep/classify_spec.py	MIT	permissive-software	(abstain)	TITLE-ONLY	no body fallback
+p153-declaration-surfaces/surfaces.py	MIT	mit	(abstain)	TITLE-ONLY	no body fallback
+p150-gpl-affero-discrimination/gpl_affero.py	MIT	mit	(abstain)	TITLE-ONLY	no body fallback
+p129-transcription-audit/holder.py	-	-	-	OUT-OF-DOMAIN	reads the HOLDER, not the family (p129's own subject)

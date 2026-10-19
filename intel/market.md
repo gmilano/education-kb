@@ -4,6 +4,176 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟡 Pass 314 — THE REGULATORY SHAPE OF ALL FOUR REGIONS IS LEGIBLE AND THE COMMERCIAL SHAPE OF THREE IS NOT; AND LATAM'S BEST PRIMARY SOURCE IS POLICY-DENIED AT THIS SESSION'S GATEWAY
+
+⏱️ **Pass 314 of `2026-10-19`.** Evidence:
+[`p314-regional-intel.2026-10-19-p314.tsv`](../evidence/p314-regional-intel.2026-10-19-p314.tsv) ·
+[`p314-transport-boundary.2026-10-19-p314.tsv`](../evidence/p314-transport-boundary.2026-10-19-p314.tsv).
+
+🔴 **Read the confidence column before using any row below.** Every regional finding this pass is
+**`WebSearch` over secondary sources** — policy trackers, law-firm briefings, market-research
+summaries, vendor blogs. 🔵 The payload channel that gives this base its licence findings their
+weight (`curl` to `raw.githubusercontent.com`, first-hand, bytes + sha) **has no equivalent here**,
+and this pass did not reach a single regional primary source. 🟢 That is stated as a property of the
+evidence, not buried: the licence half of this base is measurement, the regional half is reportage,
+and they should not be read with the same confidence.
+
+### 🔴 The transport boundary, measured — and it closes `ACTION p313-R` item 8 as UNREACHABLE
+
+`ACTION p313-R` item 8 ranked the **IADB/BID technical note** (Sept `2026`, generative AI in
+classroom platforms, Ceibal 🇺🇾 + Brazil) as *"the first LATAM primary-ish source this battery has
+surfaced in several passes"*. 🟢 **This pass located it. It cannot be fetched from here.**
+
+| host | result | decided by |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 `200` | open — **every payload in this pass was read here** |
+| `pypi.org` | 🟢 `200` | the proxy's own `noProxy` allowlist |
+| `github.com` | 🟡 `400` | reached; rejects the request shape. **Not a policy denial** |
+| `api.github.com` | 🔴 `403` | Anthropic session proxy — *"sessions are bound to their configured repositories"* (`p313`) |
+| `iadb.org`, `publications.iadb.org` | 🔴 **`403` to `CONNECT`** | **gateway POLICY DENIAL** |
+| `unesco.org`, `holoniq.com`, `arxiv.org` | 🔴 **`403` to `CONNECT`** | **gateway POLICY DENIAL** |
+| `example.com` | 🔴 **`403` to `CONNECT`** | **the negative control: the denial is not about the TOPIC** |
+
+🟢 **And the proxy names the reason itself.** `GET $HTTPS_PROXY/__agentproxy/status` returns a
+`recentRelayFailures` ledger reading, verbatim, *"gateway answered 403 to CONNECT (policy denial or
+upstream failure)"* for each host above. 🔵 **No prior pass on this base appears to have read that
+endpoint**, and it settles a question `p313` left framed as a repository binding: **the general web
+is closed by this session's NETWORK POLICY, and only the GitHub raw host plus the package-registry
+allowlist are open.** 🔴 `p313`'s instruction — *"read the `403` body before attributing it to a
+host"* — generalises: read the **proxy's own status** before attributing a denial to a binding.
+
+🟡 **So item 8 is not discharged and is not closable by effort.** It needs a session with wider
+egress, or the note's content must arrive through `WebSearch` summaries. → `ACTION p314-R` item 4.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The shape is legible and it is PROCUREMENT-SHAPED, not model-shaped.** Federal action stays at
+guidance plus a grant priority (the AI grant-priority rule was finalised `2026-04-13`); the binding
+movement is at state level — **`134` bills across `31` states** in the `2026` session, themed on
+student data privacy, classroom use limits and human oversight.
+
+- 🔴 **Maryland** is the most comprehensive: districts must adopt aligned AI policies and name **AI
+  coordinators**, a statewide AI Education Collaborative exists, tools are evaluated and certified,
+  and **procurement is aligned to state guidance**.
+- 🟡 **Ohio**'s district AI-policy deadline (`2026-07-01`) has passed; **Oklahoma**'s lands before
+  the `2027-28` school year.
+- 🔵 **The opportunity is compliance-and-evidence engineering, not tutoring.** Federal guidance
+  presses states to judge tools by **learning outcomes** and to build **evidence requirements into
+  purchasing**. 🟢 **A studio that can instrument an existing platform to produce outcome evidence
+  and an auditable AI-use policy trail is selling into a mandate with dates on it** — and the
+  `AGPL-3.0` LMS layer this base measures is exactly where that instrumentation attaches.
+- 🔴 **Direction is NOT uniform and a pitch must not assume it is.** One state earmarked `$10m` to
+  fund an AI tutoring tool statewide; a large district told principals to **pause** educational
+  software purchases pending updated AI guidance. ⚪ Whether Ohio's deadline produced a documented
+  procurement surge is **contested between this pass's sources** and is not asserted here.
+- ⚪ **DECLARED GAP: Canada and Mexico.** The North America searches returned **no** education-specific
+  AI policy for either. 🔵 Mexico is also covered under LATAM below, where it leads the region on
+  open-source adoption — the gap is in its *education regulation*, not in its relevance.
+
+### EMEA
+
+🔴 **The most legible regulatory regime of the four, and the one with a hard date.** Education AI is
+largely **high-risk under Annex III** of the EU AI Act: admissions and placement, evaluation of
+learning outcomes, determining the level of education a learner receives, and **monitoring behaviour
+during tests**.
+
+- 🟢 **Emotion recognition in education is PROHIBITED outright** (Art. 5), and the **AI-literacy
+  duty (Art. 4) has been live since `2025-02-02`.** These are in force now, not pending.
+- 🟡 **The high-risk obligations moved to `2027-12-02`** — the Digital Omnibus vote of `2026-06-16`
+  postponed Annex III duties from `2026-08-02`. 🔴 **This pass's sources disagree on the instrument
+  number and on the Council's final-approval date**, so the shift and the date are reported and the
+  **citation is not**; the Official Journal is not reachable from this session (see above).
+- 🟢 **Learners — and where applicable parents or legal representatives — may demand a meaningful
+  explanation of an AI system's role in a decision affecting them.** 🔵 **That is an engineering
+  requirement, not a legal one:** per-decision provenance, retained and renderable to a
+  non-specialist. It is the single most concrete EMEA build item on this shelf.
+- 🟢 **The delay is the opportunity.** Eighteen months of lead time on a known obligation is when
+  conformity tooling gets built — Annex III classification of an existing estate, explanation
+  surfaces, proctoring review. 🔴 **And an AI proctoring or auto-grading feature shipped into the EU
+  now is being shipped into a high-risk classification with a known date**, which is a pricing fact.
+- ⚪ **DECLARED GAP: the EMEA COMMERCIAL shape.** Searches returned institutional guidance only.
+  **No reliable EMEA adoption rate and no vendor or market ranking was obtained.** 🔵 This region's
+  regulatory shape is the best-covered on this base and its commercial shape is among the worst.
+
+### APAC
+
+🔴 **The most divergent region: four jurisdictions, four different postures, no regional instrument.**
+
+- 🔴 **China — binding, and the only compulsory-curriculum case.** Binding rules on algorithms, deep
+  synthesis and generative AI; the amended Cybersecurity Law took effect `2026-01-01` with an AI
+  governance clause and fines up to **RMB `10m`**. 🟡 **AI has been a compulsory subject from age six
+  since Sept `2025`, alongside mathematics** — the single most load-bearing APAC claim here and it
+  rests on secondary sources. ⚪ Sources note ethics, data privacy and equal access have lagged the
+  rollout.
+- 🟡 **India — no AI statute; the existing intermediary framework does the work.** From `2026-02`,
+  platforms above `5m` registered users must obtain user declarations for AI-generated content and
+  **label it prominently**. 🔵 For an education product at scale in India, labelling and declaration
+  are a build requirement today.
+- 🟢 **Japan — a statute with NO penalties.** The AI Basic Plan under the AI Promotion Act was
+  adopted `2026-07-14`; the posture is promotion-first. Education demand is framed around an ageing
+  population.
+- 🟢 **Singapore — entirely voluntary, and compliance-shaped in practice.** The Model AI Governance
+  Framework, the generative-AI framework and an **agentic AI framework launched `2026-01`** are all
+  voluntary, as is the **AI Verify** testing toolkit — 🔵 **but vendors selling to banks and
+  government are expected to point to it**, which makes a voluntary instrument a procurement gate.
+  🟢 National push on student and teacher AI literacy, with teacher training at all levels by `2026`.
+- 🔴 **The opportunity is the DIVERGENCE itself.** A single APAC education product cannot satisfy
+  China's binding rules, India's labelling duty, Japan's promotion posture and Singapore's voluntary
+  assurance with one configuration. 🟢 **Jurisdiction-aware policy routing — the obligation as
+  configuration rather than as a fork — is the APAC engagement shape**, and it is the same
+  architecture the EMEA explanation duty needs.
+- 🟡 **Market structure, directionally:** post-crackdown China has seen non-academic tutoring (STEM,
+  coding, AI) rebound while the test-prep model is gone; TAL pivoted into AI learning hardware;
+  ByteDance's Gauth became a top US education app. India: BYJU'S collapsed from a `$22bn` peak,
+  PhysicsWallah IPO'd at ≈`$5bn` in Nov `2025` with its own AI tutor. ⚪ **Specific valuations are
+  LOW confidence.**
+
+### LATAM
+
+🟢 **The strongest quantitative LATAM datapoint this base has carried, and it is directly about open
+source.** A Linux Foundation report puts **`38 %` of LATAM organisations already using open-source
+AI, with Mexico at `65 %` and Brazil at `46 %` leading the region.**
+
+- 🔵 **That is the single most actionable regional number on this shelf for this base's purpose.**
+  An open-source-first studio practice is not an uphill argument in Mexico or Brazil; it is the
+  majority posture in Mexico. 🟢 **It also inverts the usual framing — LATAM as the region that
+  receives platforms — into LATAM as the region most ready to adopt an open-source stack.**
+- 🟡 **Brazil — Bill `2.338/2023`** is Senate-approved and sits in the Chamber of Deputies. It would
+  classify **student selection for education as HIGH-RISK** — 🔵 **the same axis as EU Annex III**,
+  which means one conformity design could serve both. 🔴 **LOW confidence: this came from a source
+  the search itself flagged as low-trust, and the bill's current status needs a primary check.**
+- 🟢 **Argentina, Brazil, Chile, Colombia, Costa Rica, Mexico and Peru have formally adopted the
+  OECD AI Principles** — a shared vocabulary to design against even without binding statutes.
+- 🟢 **Demand signal with money attached:** Google.org committed `$4.6m` to expand the Raspberry Pi
+  Foundation's *Experience AI* across Argentina, Brazil, Chile, Colombia, Dominican Republic,
+  El Salvador, Mexico, Peru and Uruguay, targeting **`1.25m` students by `2028`**.
+- 🟢 **The market is moving teacher-ward.** HolonIQ's `2026` LATAM EdTech 100 reports AI-native
+  positioning in product descriptions has **quadrupled since `2020`**, stepping up sharply across the
+  last two cohorts; Brazil's **Teachy** (AI lesson preparation) is named a regional incumbent and has
+  expanded beyond the region into Asia. 🔵 **Teacher-facing lesson preparation, not student-facing
+  tutoring, is where the LATAM product gravity is** — and it is the cheapest thing to build on the
+  permissive authoring layer this base carries (`educhain`, `OATutor`).
+- 🔴 **DECLARED GAP, and it is the ranked one:** the **IADB review of `193` AI education solutions**
+  (Ceibal 🇺🇾, Brazil) is **policy-denied at this session's gateway**, measured above. The region's
+  best primary source remains unread. ⚪ **DECLARED GAP: Mexico** has no education-specific AI
+  regulation in this pass's results, despite leading the region on open-source adoption; a
+  UNESCO/CONALEP/DGETI centres-of-excellence pilot was named but not characterised.
+
+### ⚪ What this section does NOT claim
+
+⚪ **No market size is stated.** This pass's sources put AI-in-education at `$12.3bn`, `$23bn` and
+*"≈`$6bn` in 2024 toward `$32bn` by 2030"* for overlapping periods. 🔴 **Three irreconcilable figures
+is not a range, it is an absence of a figure**, and this base does not publish one.
+
+⚪ **Global adoption percentages are reported in the trends shelf with their sources' own hedges, not
+here.** 🔵 Several widely-repeated statistics in this pass's results were attributed to primary
+research (Microsoft, RAND, EDUCAUSE, HolonIQ) that **this session could not reach to verify** — the
+same gateway denial measured above.
+
+
+
 ## 🔴 Pass 313 — THE SECTOR'S SIZING SPREAD IS UNCHANGED AND THE SUPPLY-SIDE NUMBER THAT MATTERS IS NEW: `10` OF `13` VERTICAL PLATFORMS ARE COPYLEFT AND `5` ARE `AGPL`
 
 ⏱️ **Pass 313 of `2026-10-19`.** Evidence:

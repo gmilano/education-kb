@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 314 — the LMS tier read first-hand: three new `AGPL-3.0` platforms, one on a non-default branch, one on a lowercase rung
+
+🟢 **APPEND-ONLY shelf. Everything below this section is history and is not rewritten.**
+
+⏱️ Evidence:
+[`p314-payload-pins.2026-10-19-p314.tsv`](../evidence/p314-payload-pins.2026-10-19-p314.tsv) ·
+[`p314-grant-corroboration.2026-10-19-p314.tsv`](../evidence/p314-grant-corroboration.2026-10-19-p314.tsv).
+
+### 🟢 New this window — repositories whose grants were read first-hand today
+
+| repo | layer | grant *(first-hand)* | bytes · sha | 🔵 the rung is the finding |
+|---|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | LMS on the Frappe/ERPNext stack | 🔴 `AGPL-3.0` | `33 893` · `db1a87ba81e8` | 🟡 **served at `license.txt` — lowercase.** A ROOT `LICENSE` ladder misses it. 🔴 And `33 893` B is a **fifth distinct length** for this one grant |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | LMS (Svelte), positioned against Moodle/Open edX | 🔴 `AGPL-3.0` | `34 523` · `8486a10c4393` | 🟢 **fifth unrelated repository at this exact sha** |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | LMS with AI-assisted authoring | 🔴 `AGPL-3.0` | `34 523` · `8486a10c4393` | 🟡 **served at `dev`, not `main`.** A default-branch assumption returns nothing. Fourth repository at this sha |
+| [`open-tutorai/open-tutor-ai-ce`](https://github.com/open-tutorai/open-tutor-ai-ce) | tutoring platform, generative-AI native | 🟢 **`BSD-3-Clause`** | `1 531` · `57c341d09920` | 🔴 **zero tokens of ANY licence family** in the payload — permissive, and invisible to every title-keyed channel |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | multi-user notebooks for teaching | 🟢 `BSD-3-Clause` | `1 475` · `7069c7e8d60e` | 🟢 `p313`'s pin **replicated to the byte** from a different session |
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | curriculum + platform | 🟢 `BSD-3-Clause` | `1 513` · `e2a20708d0fd` | 🟢 `p313`'s pin **replicated to the byte**; the titled `BSD` shape |
+| [`mozilla/common-voice`](https://github.com/mozilla/common-voice) | speech-corpus platform | 🟡 `MPL-2.0` | `16 726` · `3f3d9e0024b1` | 🔴 **the equal-length pair**: same byte count as this base's other `MPL-2.0` payload, **different file** |
+
+### 🔴 Three rung lessons this window, each from a real repository
+
+🔵 Recorded because each one is a ladder defect a KB like this acquires silently, and all three were
+found in a single hour of fetching:
+
+1. 🟡 **`frappe/lms` serves its grant at `license.txt` — lowercase stem AND lowercase extension.**
+   A ladder probing `LICENSE`, `LICENSE.md`, `LICENSE.txt` at ROOT returns nothing.
+2. 🟡 **`learnhouse/learnhouse` serves its grant on `dev`.** `main` does not carry it. A probe that
+   assumes the default branch records an absence that is not there.
+3. 🟡 **`UniversalDependencies/UD_Portuguese-CINTIL` serves at `LICENSE.txt` on `master`** — and the
+   payload is a `224` B **bare citation**, not a grant. 🔵 **A rung that resolves is not a grant
+   that exists**, which is this window's cheapest and most reusable lesson.
+
+### 🟢 Corroboration this window
+
+- 🟢 **`8486a10c4393` / `34 523` B (`AGPL-3.0`) now has `n=5`** unrelated repositories:
+  `frontend-app-learning`, `MeetPlanBackend`, `koakademy` (`p313`), plus `learnhouse` and
+  `classroomio` (this pass). 🔵 That is what a fixed-document family looks like when nobody edits it.
+- 🟢 **`c71d239df917` / `11 357` B (`Apache-2.0`) now has `n=4`**: `reference-audit`,
+  `time-series-analysis-for-education`, plus `smolagents` and `agents-course`.
+- 🔴 **`AGPL-3.0` reads at five lengths and `Apache-2.0` at three** for one grant each.
+  🔴 **And two `MPL-2.0` payloads read at ONE length and are two files.**
+
+### ⚪ Declared absences this window
+
+- ⚪ **`github.com/trending` was not read.** Searches returned GitHub **topic** pages, which rank by
+  stars rather than by recent growth. 🔵 *"Trending"* here therefore means **topic-page activity**,
+  and the distinction is stated rather than smoothed over.
+- ⚪ **Star counts in this section are secondary** — `api.github.com` is `403` to this session
+  (repository binding). 🔴 **Only the grants are first-hand.**
+- ⚪ **`openeducat/openeducat_erp`, `openolat/OpenOlat` and `sakaiproject/sakai`** were named by this
+  pass's platform searches and are **already carried**; none had its grant re-read this hour, so none
+  is restated as verified. 🔵 An unread rung is recorded as unread.
+- ⚪ **No new permissive LMS was found.** Every LMS read first-hand this window is `AGPL-3.0`. The
+  permissive rows this pass added are the **tutoring and notebook** layers, not the LMS layer —
+  stated as the measured shape of the tier, not as a search failure.
+
+
+
 ## 📈 2026-10-19 · Pass 313 — THE `403` `p311` CALLED A GITHUB PATH RULE IS THIS SESSION'S OWN REPOSITORY BINDING, AND IT EXPLAINS WHY THE PRESCRIBED SUPPLY BATTERY KEEPS SATURATING
 
 **Append-only. Added above `p311`'s section; nothing below is rewritten.**

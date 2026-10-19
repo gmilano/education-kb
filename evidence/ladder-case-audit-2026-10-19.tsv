@@ -490,8 +490,8 @@ compose/code/p309-affero-rung-census/rung_census.py	licence	TREE-ENUMERATED	no-u
 compose/code/p310-family-coverage/family_coverage.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README README.md
 compose/code/p310-family-coverage/fixtures.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p310-family-coverage/run_families.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	licence license
-compose/code/p311-permissive-family-arm/payload_identity.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENCE
-compose/code/p311-permissive-family-arm/payload_identity.py	notice	COMMENT-ONLY	no-upper-ext	STANDING	NOTICE
+compose/code/p311-permissive-family-arm/payload_identity.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENCE license
+compose/code/p311-permissive-family-arm/payload_identity.py	notice	SINGLE-SPELLING	no-upper-ext	STANDING	NOTICE
 compose/code/p312-template-identity/template_identity.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p317-data-license-layer/corpus_axis.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p317-data-license-layer/corpus_axis.py	readme	TREE-ENUMERATED	no-upper-ext	HISTORICAL	README README.md

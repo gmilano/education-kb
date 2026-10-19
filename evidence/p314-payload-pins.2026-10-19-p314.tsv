@@ -1,0 +1,12 @@
+repo	ref	rung	bytes	sha256_12	bom	first_nonblank_line	family_read_first_hand	payload_class	title_names_family
+satvik314/educhain	main	LICENSE	1092	e3321a1b62cd	none	MIT License	MIT	full grant, titled	yes
+microsoft/ai-agents-for-beginners	main	LICENSE	1141	c2cfccb812fe	none	    MIT License	MIT	full grant, titled but INDENTED 4 spaces	yes
+All-Hands-AI/OpenHands	main	LICENSE	1096	e1d1fa9f3a8d	none	The MIT License (MIT)	MIT	full grant, parenthesised title variant	yes
+crewAIInc/crewAI	main	LICENSE	1055	28868731966f	none	Copyright (c) 2025 crewAI, Inc.	MIT	full grant, UNTITLED	NO - zero MIT tokens as a word
+freeCodeCamp/freeCodeCamp	main	LICENSE.md	1513	e2a20708d0fd	none	BSD 3-Clause License	BSD-3-Clause	full grant, titled	yes
+jupyterhub/jupyterhub	main	LICENSE	1475	7069c7e8d60e	none	Copyright 2014-, Jupyter Development Team	BSD-3-Clause	full grant, UNTITLED	NO - zero BSD tokens
+open-tutorai/open-tutor-ai-ce	main	LICENSE	1531	57c341d09920	none	Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2D-	BSD-3-Clause	full 3-clause grant, UNTITLED	NO - zero tokens of ANY family
+mozilla/common-voice	main	LICENSE	16726	3f3d9e0024b1	none	Mozilla Public License Version 2.0	MPL-2.0	full legalcode	yes
+UniversalDependencies/UD_Portuguese-CINTIL	master	LICENSE.txt	224	73c169eb6bbf	none	The treebank is licensed under the Creative Commons Attributio	CC-BY-NC-ND-4.0	BARE CITATION - not a grant	yes
+mzyphur/responsible-ai-in-research-training	main	LICENSE	1470	39b4d330a934	none	Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 I	CC-BY-NC-ND-4.0 (claimed)	PARAPHRASE - adds terms the legalcode lacks	yes
+gabrielmahia/shule-ai	main	LICENSE	209	9dd285c3704d	none	Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 I	CC-BY-NC-ND-4.0	BARE CITATION - not a grant	yes

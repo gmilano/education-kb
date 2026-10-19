@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 314 — three untitled permissive grants in one hour, and the code channel open to measure them
+
+🟢 **APPEND-ONLY shelf. Everything below this section is history and is not rewritten.**
+
+⏱️ Evidence:
+[`p314-payload-pins.2026-10-19-p314.tsv`](../evidence/p314-payload-pins.2026-10-19-p314.tsv) ·
+[`p314-untitled-payload-arm.2026-10-19-p314.tsv`](../evidence/p314-untitled-payload-arm.2026-10-19-p314.tsv).
+
+### 🟢 New this window — agents whose grants were read first-hand today
+
+| agent | repo | grant *(first-hand)* | bytes · sha | 🔵 why it is here this window |
+|---|---|---|---|---|
+| **Open TutorAI (CE)** | [`open-tutorai/open-tutor-ai-ce`](https://github.com/open-tutorai/open-tutor-ai-ce) | 🟢 `BSD-3-Clause` | `1 531` · `57c341d09920` | 🔴 **the pass's most valuable row.** Education-native tutoring platform, permissive grant, and a payload naming **no licence family at all** — permissive supply that automated screening discards |
+| **DeepTutor** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | `11 408` · `cd2f54e1e506` | ≈`41.6k`★, updated `2026-10-18` — the most-starred AI-tutor repository this window, and still moving |
+| **Educhain** | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 `MIT` | `1 092` · `e3321a1b62cd` | the authoring layer: syllabus, quizzes, flashcards, video/PDF → course |
+| **OATutor** | [`cahlr/OATutor`](https://github.com/cahlr/OATutor) | 🟢 `MIT` | `1 105` · `5baaaf977a28` | Bayesian Knowledge Tracing — the mastery-model layer, with an academic evaluation tradition |
+| **CrewAI** | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 🟢 `MIT` | `1 055` · `28868731966f` | 🔴 **the untitled-`MIT` headline**: the complete grant, and the token `MIT` appears nowhere in the file |
+| **OpenHands** | [`All-Hands-AI/OpenHands`](https://github.com/All-Hands-AI/OpenHands) | 🟢 `MIT` | `1 096` · `e1d1fa9f3a8d` | agent + sandboxed runtime; the substrate when a tutor must RUN student code |
+| **smolagents** | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 `Apache-2.0` | `11 357` · `c71d239df917` | byte-identical to the canonical Apache payload on this base |
+| **AI Agents for Beginners** | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 `MIT` | `1 141` · `c2cfccb812fe` | 🟡 a 12-lesson **curriculum**, not a runtime — enablement, and the row most often miscounted as a tool. Title line is **indented 4 spaces** |
+| **HF Agents Course** | [`huggingface/agents-course`](https://github.com/huggingface/agents-course) | 🟢 `Apache-2.0` | `11 357` · `c71d239df917` | 🟡 enablement; same grant bytes as `smolagents` |
+
+🟢 **`9` of `9` permissive.** 🔵 Worth recording as a window property rather than a list: the
+education **agent** tier is permissive while the **LMS** tier beneath it is `AGPL-3.0` — every LMS
+this pass read (`frappe/lms`, `classroomio`, `learnhouse`) is `AGPL-3.0`.
+
+### 🔴 The movement this window, as distinct from the list
+
+- 🔴 **The untitled-grant shape went from one instance to three in a single hour** — `crewAI`
+  (`MIT`), `jupyterhub` and `open-tutor-ai-ce` (`BSD-3-Clause`). 🟢 **Measured for the first time**
+  (`p313` could only infer it, having no code channel): `4` of `8` in-domain classifiers abstain on
+  them; `4` read them off the **clause structure**. The discriminator is a **body fallback** under
+  the title ladder — not the family and not the ladder.
+- 🔴 **`MIT` title spelling is diverging**: four shapes read today — bare, parenthesised
+  (`OpenHands`), **indented** (`microsoft`), and absent (`crewAI`).
+- 🟢 **`p313`'s *"no automated channel here can read it"* is REFUTED**, and the refutation is the
+  more useful result than the original warning.
+
+### ⚪ Declared absences this window
+
+- ⚪ **The global listicle channel is saturated, with a number attached.** `13` candidates from four
+  `2026` searches were run through `make carried` **before** any row was written (`P312-A`): **`11`
+  of `13` already carried.** The two new ones are general-purpose, not education-native.
+- ⚪ **No new education-specific agent with a non-permissive grant** was found this window — stated
+  as a finding, not a filter.
+- ⚪ **`github.com/trending` itself was not read.** Searches returned GitHub **topic** listings
+  (ranked by stars, not by recent growth), so *"trending"* in this window means **topic-page activity
+  and star counts**, not GitHub's own trending ranking. 🔵 The distinction is recorded because this
+  shelf exists to track movement and a star total is not a movement.
+- ⚪ **Star counts above are as reported by this pass's sources and were NOT verified first-hand** —
+  `api.github.com` returns `403` to this session (repository binding). 🔴 Only the **grants** in this
+  section are first-hand.
+
+
+
 ## 📈 2026-10-19 · Pass 313 — THIS WEEK'S SIGNAL IS A NEGATIVE ONE, MEASURED: THE PRESCRIBED SEARCH BATTERY RETURNED EIGHT QUERIES OF MATERIAL AND NOT ONE ITEM THIS BASE DID NOT ALREADY HOLD
 
 **Append-only. This section is added above `p311`'s; nothing below it is rewritten.**

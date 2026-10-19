@@ -95,6 +95,23 @@ HISTORY = [
     # a defect here — and the count is why this row matters to the flatness
     # reading below rather than to the defect rate.
     ("BSD-2-Clause", "p312", 0),
+    # 🔴 p314 pinned BOTH `BSD-3-Clause` SHAPES — `ACTION p313-R` item 5, which
+    # forbids a coverage figure computed off one of them: `freeCodeCamp` carries
+    # the family in its title line, `jupyterhub` carries no title line and **zero
+    # `BSD` tokens anywhere in the file**. 🟢 `0` defects once the coarse
+    # vocabulary gained `bsd-family` (`p310`'s COARSE map — the third instance of
+    # that same missing-vocabulary mechanism), and the untitled shape is still
+    # read correctly by 4 of 8 in-domain classifiers — off its CLAUSE STRUCTURE,
+    # never its name. 🔵 It is the row that refutes `p313`'s inference that no
+    # channel here could read it; `p313` had no code channel and said so.
+    ("BSD-3-Clause", "p314", 0),
+    # 🔴 `CC-BY-NC-ND-4.0` is covered BY PAYLOAD AND BY NO GRANT. Its three pins
+    # are two bare citations (`224` B, `209` B) and a paraphrase that is not the
+    # licence it names. 🟡 Counted `0` defects because the classifiers answer the
+    # family correctly on what they are handed; the exposure here is not a defect
+    # rate but the census's inability to tell a pinned PAYLOAD from a pinned
+    # GRANT — `ACTION p314-R` item 1.
+    ("CC-BY-NC-ND-4.0", "p314", 0),
 ]
 
 

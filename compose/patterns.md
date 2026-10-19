@@ -4,6 +4,146 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 314 — FOUR RECIPES BUILT ONLY FROM GRANTS READ FIRST-HAND THIS PASS, PLUS THE SCREENING STEP THAT WOULD HAVE THROWN TWO OF THEM AWAY
+
+⏱️ **Pass 314 of `2026-10-19`.** Evidence:
+[`p314-payload-pins.2026-10-19-p314.tsv`](../evidence/p314-payload-pins.2026-10-19-p314.tsv) ·
+[`p314-untitled-payload-arm.2026-10-19-p314.tsv`](../evidence/p314-untitled-payload-arm.2026-10-19-p314.tsv) ·
+[`p314-regional-intel.2026-10-19-p314.tsv`](../evidence/p314-regional-intel.2026-10-19-p314.tsv).
+
+🔵 **Every component named below had its grant fetched over `raw.githubusercontent.com` today**, with
+bytes and sha in the shelves. 🔴 **The licence column is the load-bearing one**: three of these four
+recipes are deliberately built to avoid the `AGPL-3.0` LMS tier, because that is where this sector's
+§13 obligation actually lives.
+
+### 🟢 `P314-1` — Permissive tutoring stack that avoids §13 entirely · **4–6 weeks**
+
+🔵 **For:** a client who wants an AI tutor shipped as a hosted product and does **not** want a
+whole-work source obligation on their platform.
+
+| role | component | grant |
+|---|---|---|
+| tutoring platform | [`open-tutorai/open-tutor-ai-ce`](https://github.com/open-tutorai/open-tutor-ai-ce) `1 531` B · `57c341d09920` | 🟢 `BSD-3-Clause` |
+| tutoring agent + lifelong memory | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `11 408` B · `cd2f54e1e506` | 🟢 `Apache-2.0` |
+| mastery model (Bayesian Knowledge Tracing) | [`cahlr/OATutor`](https://github.com/cahlr/OATutor) `1 105` B · `5baaaf977a28` | 🟢 `MIT` |
+| content generation | [`satvik314/educhain`](https://github.com/satvik314/educhain) `1 092` B · `e3321a1b62cd` | 🟢 `MIT` |
+| orchestration | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) `1 055` B · `28868731966f` | 🟢 `MIT` |
+
+**Wiring.** `educhain` generates the item bank from client curriculum material and writes it to
+`OATutor`'s item schema. `OATutor` owns mastery state per learner per skill — it is the only
+component here with a defensible model of *"has this learner learned it"*, and it should not be
+replaced by an LLM judgement. `DeepTutor` runs the dialogue, reading mastery from `OATutor` and
+never writing it. `crewAI` sequences the three as tools. `open-tutor-ai-ce` is the delivery surface.
+
+🔴 **The licence point is the whole recipe: not one component is copyleft, so a hosted, modified
+deployment carries no source-disclosure obligation.** 🔵 Compare the obvious alternative — the same
+tutor bolted onto `frappe/lms`, `classroomio` or `learnhouse`, all `AGPL-3.0`, read today — where
+§13 reaches the hosted deliverable.
+
+🔴 **The trap, and it is this pass's headline:** `open-tutor-ai-ce` and `crewAI` are **both payloads
+whose licence file never names its family.** 🟢 **A licence screen will report two of these five
+components as unknown, and `P250` turns unknown into prohibited.** Read both grants first-hand before
+the architecture review, or this recipe dies in procurement for a reason that is not true.
+
+### 🟡 `P314-2` — AGPL-aware LMS augmentation: the obligation priced, not avoided · **6–9 weeks**
+
+🔵 **For:** the common real case — the client already runs an `AGPL-3.0` LMS and is not replacing it.
+
+| role | component | grant |
+|---|---|---|
+| existing estate *(client's, not the studio's choice)* | [`frappe/lms`](https://github.com/frappe/lms) `AGPL-3.0` · [`classroomio/classroomio`](https://github.com/classroomio/classroomio) · [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 `AGPL-3.0` |
+| AI services, **out of process** | `DeepTutor` `Apache-2.0` + `educhain` `MIT` + `crewAI` `MIT` | 🟢 permissive |
+| code-execution sandbox | [`All-Hands-AI/OpenHands`](https://github.com/All-Hands-AI/OpenHands) `1 096` B · `e1d1fa9f3a8d` | 🟢 `MIT` |
+| notebook teaching surface | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) `1 475` B · `7069c7e8d60e` | 🟢 `BSD-3-Clause` |
+
+**Wiring.** The AI tier runs as **separate services behind an API**, not as LMS plugins. The LMS is
+integrated through its own extension points and standard interop, and the studio's AI code is never
+linked into the AGPL work. `OpenHands` provides the sandbox when learners run code; `JupyterHub`
+hosts notebook-based teaching.
+
+🔴 **State the boundary honestly to the client rather than as a guarantee.** The process boundary is
+what keeps the studio's AI code outside the AGPL work; **any modification to the LMS itself is
+inside §13**, and a hosted deployment of a modified AGPL LMS owes source to its users. 🟢 **The
+deliverable of this pattern is therefore partly a document: which changes landed inside the AGPL
+boundary and which outside.** 🔵 Decide it at design time — it is far cheaper than discovering it at
+the compliance review, and `learnhouse`'s grant sitting on `dev` rather than `main` is a reminder
+that nobody has checked.
+
+### 🟢 `P314-3` — Annex III conformity surface for an EMEA engagement · **10–14 weeks**
+
+🔵 **For:** an EU client whose existing platform does admissions, placement, grading or proctoring —
+all **high-risk under Annex III**, with obligations landing `2027-12-02`.
+
+| role | component | grant |
+|---|---|---|
+| decision orchestration with explicit state | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) `MIT` | 🟢 `MIT` |
+| mastery evidence, auditable and non-LLM | [`cahlr/OATutor`](https://github.com/cahlr/OATutor) `MIT` | 🟢 `MIT` |
+| learner-facing explanation UI | [`open-tutorai/open-tutor-ai-ce`](https://github.com/open-tutorai/open-tutor-ai-ce) `BSD-3-Clause` | 🟢 `BSD-3-Clause` |
+| team enablement | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) `MIT` + [`huggingface/agents-course`](https://github.com/huggingface/agents-course) `Apache-2.0` | 🟢 permissive |
+
+**Wiring.** Every graded or placement decision is written as a **provenance record** — inputs,
+model, version, the `OATutor` mastery state at decision time, and the human review step — and
+`crewAI`'s orchestration is structured so that record is a by-product of the run rather than a
+reconstruction after it. `open-tutor-ai-ce` renders it to a learner or parent on request.
+
+🔴 **Two hard requirements this pass measured, not inferred from principle:**
+- 🔴 **Emotion recognition in education is PROHIBITED outright** (Art. 5, in force since
+  `2025-02-02`). If the existing estate has engagement-detection or affect-scoring, that is a
+  **removal**, not a conformity task, and it is the first thing to audit.
+- 🟢 **Learners, and where applicable parents or legal representatives, may demand a meaningful
+  explanation of an AI system's role in a decision affecting them.** 🔵 That makes
+  **per-decision provenance, retained and renderable to a non-specialist**, the concrete build item —
+  which is why `OATutor` carries the mastery state rather than an LLM: *"the model said so"* is not
+  a meaningful explanation.
+
+🟡 **`ACTION p313-R`-grade caution:** the Annex III date shift is reported consistently by this pass's
+sources but **their citations disagree** and the Official Journal is unreachable from this session.
+**Verify the instrument before it goes in a client contract.**
+
+### 🟢 `P314-4` — Teacher-first lesson preparation for LATAM · **5–7 weeks**
+
+🔵 **For:** the market gravity this pass measured — LATAM AI-native positioning quadrupled since
+`2020`, with **teacher-facing lesson preparation**, not student tutoring, as the centre (Brazil's
+Teachy named a regional incumbent). 🟢 And the adoption ground is unusually favourable: **`38 %` of
+LATAM organisations already use open-source AI — Mexico `65 %`, Brazil `46 %`.**
+
+| role | component | grant |
+|---|---|---|
+| lesson, quiz and flashcard generation | [`satvik314/educhain`](https://github.com/satvik314/educhain) `MIT` | 🟢 `MIT` |
+| curriculum-aligned item bank | [`cahlr/OATutor`](https://github.com/cahlr/OATutor) `MIT` | 🟢 `MIT` |
+| teacher-review workflow | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) `MIT` | 🟢 `MIT` |
+| offline / low-connectivity delivery | `kiwix` *(carried; `GPL-3.0`, **not** re-read this pass)* | 🟡 `GPL-3.0` — unverified this hour |
+
+**Wiring.** `educhain` drafts against the national curriculum; **every artefact goes to a teacher for
+approval before a learner sees it** — the teacher-first finding is an architectural constraint here,
+not a nicety, and it is corroborated by two independent channels in this pass's shelves.
+Approved artefacts land in the `OATutor` item bank, which gives the lesson a mastery model instead of
+a PDF. `crewAI` runs draft → review → publish.
+
+🟢 **Why this is the cheapest of the four:** the whole stack is `MIT`, it needs no LMS, and it targets
+a buyer already disposed to open source. 🔴 **The offline row is the honest weak point** — `kiwix` is
+carried on this base at `GPL-3.0` but was **not** re-read this hour, and offline distribution **is**
+distribution, so the obligation attaches at the device. Verify it before promising an offline mode.
+
+### 🔴 The step that belongs in all four: screen grants by READING them
+
+🔵 **This pass measured why.** `4` of `8` of this base's own in-domain classifiers **abstain** on a
+complete, valid, permissive grant whose first line does not name its family — and under `P250` an
+abstention is indistinguishable from `PROHIBITED`.
+
+🔴 **Two components in `P314-1` are exactly that shape** (`open-tutor-ai-ce`, `crewAI`), and
+`crewAI`'s payload will additionally match a naive substring test **for the wrong reason** — it
+contains no `MIT` token, but `"mit"` appears inside `permit` and `limitation`.
+
+🟢 **So the recipe step is:** before a component enters an architecture, fetch its licence payload,
+record `bytes` + `sha`, and read the **clause structure** rather than the title line. 🔵 This base
+ships that as `make gate-untitled-payload` and `is_this_a_grant()` — and the second one exists
+because three payloads this base pinned as licences turned out to be **bare citations**, and one a
+paraphrase carrying terms its named licence does not contain. **A rung that resolves is not a grant
+that exists.**
+
+
+
 ## 🟢 Pass 313 — two recipes, both composed only of rows whose grant this pass read first-hand
 
 ### `P101` — The AGPL-safe education platform build *(all regions, 6–9 weeks)*
@@ -4813,7 +4953,7 @@ a folder.**
 | repository | what its own manifests declare | what a studio must notice |
 |---|---|---|
 | 🔴 [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | root `composer.json` **GPL-3.0-or-later** · root `package.json` **ISC** · `packages/dependecy-extraction-webpack-plugin/` **MIT** | 🔴 **Three grants in one repository — and the two ROOT manifests disagree with each other.** Which applies depends on what you took |
-| 🔴 [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | root **MIT** · `apps/api/` **ISC** *(`@classroomio/api`)* | 🟢 Both permissive, so nothing you may *do* changes — 🔴 **but the attribution obligation differs per directory** |
+| 🔴 [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | manifests read as root **MIT** · `apps/api/` **ISC** *(`@classroomio/api`)*, rather than the grant its `LICENSE` carries | 🔴 **`p279`'s conclusion here — *«both permissive, so nothing you may do changes»* — was REFUTED at `p314`**, which read the repository's own root `LICENSE` first-hand on `2026-10-19`: `34 523` B · `8486a10c4393`, the **Affero** network-copyleft grant, not either manifest value. 🔵 Three channels, three answers, and the spread **crosses the obligation boundary**. See [`verticals/solutions.md`](../verticals/solutions.md) |
 | 🔴 [`ls1intum/Athena`](https://github.com/ls1intum/Athena) | **12 of 14** manifests **MIT**; root `pyproject.toml` **silent** | 🟢 Unanimous where it speaks — 🔴 **and a root-only reader sees NOTHING**, which is how this row spent a pass ungraded |
 
 ### The procedure

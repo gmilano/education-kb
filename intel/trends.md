@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟡 Pass 314 — THE SECTOR'S TREND LINE IS *AWAY FROM GENERIC TOOLS AND TOWARD POLICY-GATED PROCUREMENT*, AND THE ADOPTION NUMBERS BEHIND IT CANNOT BE VERIFIED FROM HERE
+
+⏱️ **Pass 314 of `2026-10-19`.** Evidence:
+[`p314-regional-intel.2026-10-19-p314.tsv`](../evidence/p314-regional-intel.2026-10-19-p314.tsv) ·
+[`p314-transport-boundary.2026-10-19-p314.tsv`](../evidence/p314-transport-boundary.2026-10-19-p314.tsv).
+
+🔴 **The confidence statement first, because this shelf is the one most tempting to read as
+measurement.** Everything below is `WebSearch` over **secondary** sources. 🟢 The one thing this pass
+measured first-hand on the trend axis is the **licence** trend (next section), because
+`raw.githubusercontent.com` is the only general channel open to this session — `arxiv.org`,
+`unesco.org`, `iadb.org` and `holoniq.com` are all **`403` at `CONNECT`**, a gateway policy denial
+the proxy names in its own status endpoint.
+
+### 🟡 Four trends the sources agree on
+
+1. 🟢 **Away from generic assistants, toward education-specific platforms.** The most consistent
+   claim across this pass's results, and several analyses name it as *the* defining `2026` movement.
+   🔵 It matches what this base measures independently: the education-native agent tier it read today
+   is `9` of `9` permissive and growing, which is what a sector building its own tooling looks like.
+2. 🟢 **From experimentation to OPERATIONAL use.** Described as a shift in posture rather than in
+   volume — AI moving into timetabled, funded, policy-governed workflows.
+3. 🔴 **Teacher-first, not student-first.** Multiple sources argue successful rollouts begin with
+   teachers. 🔵 Independently corroborated from the LATAM market shape: HolonIQ's `2026` cohort shows
+   AI-native positioning quadrupling since `2020` with **teacher-facing lesson preparation** as the
+   gravity centre (Brazil's Teachy). 🟢 **Two unrelated channels pointing the same way is the
+   strongest trend claim on this shelf.**
+4. 🔴 **Policy-driven procurement is now a dated, not a speculative, force.** Ohio's district
+   AI-policy deadline (`2026-07-01`) has passed; Oklahoma's precedes `2027-28`; Maryland aligns
+   procurement to state guidance and requires AI coordinators; US federal guidance presses states to
+   build **evidence requirements into purchasing**; the EU's Annex III high-risk duties land
+   `2027-12-02`. 🔵 **The trend is not "AI in education" — it is that buying it now has
+   preconditions with dates.**
+
+### ⚪ Adoption figures: reported, hedged, and NOT verified
+
+⚪ This pass's sources report teacher use at `60 %` of US K-12 in `2024-25` with ≈ a third weekly and
+a doubling year-on-year; K-12 student use at `54 %`; university student use at `92 %` (from `66 %`);
+and education at `86 %` of organisations using generative AI — **first of any industry**.
+🟡 Consistently reported alongside these: **training and policy lag usage**, with most institutions
+lacking a policy.
+
+🔴 **None of it is verified here.** The figures are attributed to primary research (Microsoft, RAND,
+EDUCAUSE) that **this session's gateway refuses to reach**, several carrying sources are vendor blogs
+and aggregators, and two widely-repeated statistics were flagged *by the search itself* as
+unverifiable against their claimed origin. 🔵 **The direction — rapid, uneven, ahead of governance —
+is safe to brief. The decimals are not, and a client deck should carry the source, not the number.**
+
+🔴 **No market size is published by this base.** Three figures for overlapping periods (`$12.3bn`,
+`$23bn`, `≈$6bn`→`$32bn` by `2030`) do not constitute a range.
+
+### 🟢 The licence trend, which this pass DID measure
+
+🔵 This is the part of the trend shelf that rests on bytes and shas rather than on reportage, and it
+moved this pass:
+
+1. 🔴 **The UNTITLED GRANT is not an anomaly; it is a shape.** Three payloads found in one hour
+   carrying complete, valid, permissive grants whose first line does not name the family —
+   `crewAIInc/crewAI` (`MIT`), `jupyterhub/jupyterhub` and `open-tutorai/open-tutor-ai-ce` (both
+   `BSD-3-Clause`). 🟢 **Measured consequence: `4` of `8` in-domain classifiers abstain on them, and
+   under `P250` an abstention is indistinguishable from `PROHIBITED`.** The trend direction is
+   **usable permissive supply being screened out**, and it reaches the education vertical.
+2. 🔴 **Title spelling is diverging on the biggest family.** Four distinct `MIT` title shapes read
+   today: bare, parenthesised, **indented by four spaces**, and absent entirely. 🔵 A title ladder
+   anchored with `^` and no leading-whitespace tolerance is becoming less reliable over time, not
+   more.
+3. 🔴 **One grant, five byte lengths.** `AGPL-3.0` now reads at `33 893` / `34 523` / `34 524` /
+   `34 541` / `35 136`; `Apache-2.0` at `11 357` / `11 358` / `11 408`. 🟢 `p311`'s rule holds at
+   `n=5`.
+4. 🔴 **And its converse, new this pass: two DIFFERENT files at IDENTICAL byte length** — two
+   `MPL-2.0` payloads both at `16 726` B with different shas, equal only by a compensation
+   coincidence. 🔵 **Byte length does not reliably answer even *"is this the same file?"***.
+5. 🟡 **A licence family can be *covered* and hold no grant.** `CC-BY-NC-ND-4.0` gained three pins
+   this pass and **not one is an operative grant** — two bare citations and a paraphrase that adds
+   terms the legalcode does not contain. 🟢 `is_this_a_grant()` now catches the class;
+   🔴 the coverage census still cannot (`ACTION p314-R` item 1).
+
+### 🟢 One structural trend worth a client's attention
+
+🔴 **The obligation in an education AI engagement does not come from the AI.** Measured across
+`p313` and `p314`: the **agent, tutoring, authoring and infrastructure tiers are overwhelmingly
+permissive** (`9/9` this pass), while the **learner-facing platform tier is `AGPL-3.0`** — `8` of the
+`17` vertical platforms read first-hand, including every LMS this pass touched (`frappe/lms`,
+`classroomio`, `learnhouse`).
+
+🟢 **So the §13 hosted-delivery obligation attaches to the thing the client already runs, not to the
+thing the studio is adding.** 🔵 That reframes the licence conversation in an engagement: it is a
+question about the existing estate, surfaced early, rather than a risk introduced by the AI work —
+and it is the same conclusion the regional shelf reaches from the procurement side.
+
+
+
 ## 🔴 Pass 313 — THE DEFECT THIS BASE KEEPS FINDING IS NOT IN ITS LADDERS, IT IS IN ITS ACTION ITEMS: FIVE ITEMS ACROSS TWO PASSES HAD THEIR PREMISE REFUTED BY THEIR OWN TREE, AND TWO SESSIONS DERIVED THAT LAW INDEPENDENTLY IN THE SAME HOUR
 
 ⏱️ **Pass 313 of `2026-10-19`.** Evidence:

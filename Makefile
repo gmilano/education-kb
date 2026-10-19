@@ -32,8 +32,9 @@ AFFERO_LOG ?= /tmp/education-kb-gate-affero-rung.log
 FAMILY_LOG ?= /tmp/education-kb-gate-family-coverage.log
 PERMISSIVE_LOG ?= /tmp/education-kb-gate-permissive-arm.log
 TEMPLATE_LOG ?= /tmp/education-kb-gate-template-identity.log
+UNTITLED_LOG ?= /tmp/education-kb-gate-untitled-payload.log
 
-.PHONY: gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung affero-rung-census
+.PHONY: gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung affero-rung-census
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -56,7 +57,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
              gate-slug-oracle gate-payload-pin gate-shelf-consistency \
              gate-affero-rung gate-family-coverage gate-permissive-arm \
-             gate-template-identity
+             gate-template-identity gate-untitled-payload
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -107,6 +108,25 @@ risk-order: ## p311 — the fixture queue on BOTH axes: descending cells, and wh
 gate-template-identity: ## p312 — ACTION p310-R item 1: MIT and Apache-2.0 identified by TEMPLATE, never by a byte band
 	@cd compose/code/p312-template-identity && { $(PY) test_template_identity.py > $(TEMPLATE_LOG) 2>&1 || { echo "🔴 p312-template-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(TEMPLATE_LOG) ; false ; } ; } && echo "── p312-template-identity (80 controls: the refuted MIT band and this module's own three wrong rungs as live negative controls, the 7-payload template collapse at a constant of 1038, Apache's prefix bimodality, and the UNKNOWN-TEMPLATE abstention contract)" && echo "   PASS" || exit 1
 	@cd compose/code/p312-template-identity && $(PY) -I template_identity.py || exit 1
+
+# 🔴 p314: EVERY ARM ON THIS BASE HAS BEEN KEYED ON A LICENCE FAMILY.  This one is keyed
+# on a payload SHAPE and holds the family constant, because `p313` found a complete,
+# valid `BSD-3-Clause` grant carrying NO TITLE LINE and ZERO `BSD` tokens — and could
+# not run a single classifier against it, the code channel being refused in that session.
+# 🔵 The shape is not rare and it is not confined to BSD: `crewAIInc/crewAI` serves the
+# verbatim MIT grant with no title line and no `MIT` token, on the family that holds more
+# than a third of every licence cell this base publishes.
+# 🟢 Measured here: four declared classifiers read the family when the first line names it
+# and ABSTAIN on the same family's grant when it does not; several others read the untitled
+# payload correctly off its CLAUSE STRUCTURE, which refutes `p313`'s inference that no
+# channel could.  The discriminator is whether an instrument kept a BODY FALLBACK under
+# its title ladder — not the family, and not the ladder.
+gate-untitled-payload: ## p314 — ACTION p313-R item 5 + items 2a and 4: the untitled-grant class, on MIT and BSD-3-Clause
+	@cd compose/code/p314-untitled-payload-arm && { $(PY) test_p314.py > $(UNTITLED_LOG) 2>&1 || { echo "🔴 p314-untitled-payload FAILED — the suite's own report follows:" ; sed "s/^/   /" $(UNTITLED_LOG) ; false ; } ; } && echo "── p314-untitled-payload (19 controls: both BSD shapes pinned per item 5, the untitled-MIT headline, the substring form matching by accident inside «permit» as a live false friend, step 0c's scheme repair with its true-negative and URL-eraser bounds, and item 4's notice-vs-grant class over all four of p313's noncommercial payloads)" && echo "   PASS" || exit 1
+	@cd compose/code/p314-untitled-payload-arm && $(PY) -I run_untitled.py || exit 1
+
+untitled-arm: ## p314 — the dynamic arm alone: titled vs untitled, family held constant
+	@cd compose/code/p314-untitled-payload-arm && $(PY) -I run_untitled.py
 
 hooks: ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm, plus p293's calibrated slug-existence oracle, and p300's no-masking runner
 	@rc=0; red=""; green=0; \
