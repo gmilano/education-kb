@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-18
 ---
 
+
+## Pass 322 — gaps opened, closed and measured
+
+**Closed this pass.**
+- ✅ **`openeduhub` enumeration.** p321 declared *"57 of the 67 were not listed on the first page and
+  remain unenumerated."* **All 67 are now enumerated** and sixteen read first-hand. Method note that
+  made the difference: the org listing must be paged under **two sort orders** — six of the twelve
+  repositories added this pass never appear on the star-sorted first page.
+- ✅ **The six repositories p321 named as unread** (`metalookup`, `oeh-search-frontend`,
+  `edu-sharing-python-client`, `lernpfadeditor`, `wlo-quellenliste`,
+  `metadata-browser-plugin-fuerAPI`) — **five read first-hand**; `oeh-search-frontend` was not read
+  and stays open below.
+
+**Opened this pass — measured, not assumed.**
+- 🔴 **`openeduhub/wlo-topic-assistant` is a 404** although `python-kidra` advertises it as one of
+  seven bundled services. A public gateway naming a service with no public source.
+- 🔴 **`kea`** (Wikipedia article linking) is not a repository in the org; `python-kidra` forwards to
+  an **unidentified external service**.
+- 🔴 **`z-api-runner`'s LLM backend is unstated** in its README; `app/` and `requirements.txt` were
+  not read, so the model and provider behind the org's bulk-inference tier are unknown.
+- 🔴 **`metalookup`'s extracted field list** lives in `docs/features.md` and `docs/acceptance.md`,
+  **not read** — this KB has the capability but not the field schema.
+- 🔴 **`wlo-quellenliste`'s JSON/CSV output schema** is not documented on the repository page.
+- 🔴 **Unread and named so p323 does not re-discover them:** `topic-statistics`, `its-prep`,
+  `its-data`, `mappings`, `skohub-vocabs-oeh-patched`, `oeh-search-frontend`. **`topic-statistics`
+  and `its-prep` are the two `python-kidra` depends on** — read those first.
+- 🔴 **No second organisational instance of the "archived the chatbot, built the pipeline"
+  sequence.** The p322 trend reading rests on one operator in one country. Until a North American,
+  APAC or LATAM public operator's repository history is read the same way, it is a hypothesis with
+  one deep instance.
+- 🔴 **Licence provenance of the pretrained `wirlernenonline.oeh.h5` weights** shipped in
+  `discipline-classification`: the repository is GPL-3.0, but the training data behind the model is
+  not described.
+
+**Measured again, unchanged — the search channel.**
+- 🔴 **Third consecutive pass in which the prescribed battery added nothing.** All eight searches
+  were run; every regional result was already held, most at higher precision. Recorded per region
+  in `intel/market.md` under *Declared regional gaps*, including that **EMEA returned no
+  education-specific result at all** and **APAC returned corporate L&D for the fifth pass running**.
+- 🔴 **Non-GitHub origins remain unreachable.** `www.digitaleducationcouncil.com` failed at DNS this
+  pass. **Everything in `intel/` is snippet-sourced**; nothing in it has a primary read behind it.
+
 ## Pass 301 — **THE INSTRUMENTS EXIST, ARE CORRECT, AND COULD NOT BE EXECUTED — SO SIX GATES NOT RUNNING IS NOW INDISTINGUISHABLE FROM SIX GATES PASSING**
 
 ⏱️ `2026-10-18`, twenty-third pass. Evidence:

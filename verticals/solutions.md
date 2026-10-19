@@ -194,6 +194,46 @@ and keep your own tutor and evaluation layers permissive. The GPL-3.0 platform t
 deployed service you talk to over HTTP — the same posture this file takes on Moodle and OpenOLAT.
 Pattern **P21** in `compose/patterns.md` wires it.
 
+## Pass 322 — edu-sharing re-verified, and the pipeline that runs on it is now mapped
+
+**No platform row added this pass. One platform re-read first-hand and one structural addition to
+what is already here.**
+
+**`edu-sharing/edu-sharing-community-repository` re-verified at p322, and p321's reading stands
+exactly:** **GPL-3.0** (sidebar and `LICENSE.txt`), **30 ★, 20 forks, 16,110 commits** on the
+`maven/fixes/10.0` branch building `maven-fixes-10.0-SNAPSHOT`, a project running since 2007, Maven
+with separate Backend and Frontend trees, a Cordova folder, an Alfresco module path, Docker and
+Kubernetes packaging. **No AI features are described in the README or the About section** — which is
+the point: the AI lives in the services around it, not in it. One new and verifiable detail: **the
+repository root contains a `CLAUDE.md`**, an AI-assistant configuration file. Recorded as observed;
+the page does not explain its contents, and it says nothing about product features.
+
+**The structural addition: this platform is no longer the whole EMEA public-sector story.** Pass 322
+enumerated all 67 repositories of `openeduhub`, the operator account that runs WirLernenOnline on
+edu-sharing, and read sixteen first-hand. Around the GPL-3.0 platform sits a **twelve-service AI
+metadata pipeline** — LLM extraction into eleven schemas, a human-review canvas with per-field
+confidence badges, MinHash deduplication, Flesch/Wiener readability, Lighthouse accessibility and
+licence screening, a Pyro Bayesian metadata predictor, a Keras discipline classifier shipping its
+weights, bulk prompt running, a factual-accuracy judge and a unified gateway. **Rows for all twelve
+are in `repos/foundations.md`; the recipe that assembles them is P22 in `compose/patterns.md`.**
+
+**Why that changes how this file should be used for an EMEA bid.** The platform question
+("which LMS or repository?") is answered here and is copyleft almost everywhere. The *buildable*
+question is the service layer, and there the licences divide by architectural layer rather than by
+product: **119 commits of Apache-2.0 interaction shells and a 519-commit Apache-2.0 generated API
+client are takeable; 790 commits of GPL-3.0 analysers are service-boundary-only; and 1,852 commits
+containing every model and every harvester carry no licence at all.** The permissive surface of
+Germany's publicly funded education AI contains none of its machine learning — so for a public OER
+buyer, **the platform is integration work and the pipeline is build work**, which is the better half
+of the engagement anyway.
+
+**The deployment evidence, because "committed" and "running" are different claims.** The
+Manifest V3 browser extension `metadata-browser-plugin-fuerAPI` (Apache-2.0) points at a live
+backend host for both `/generate` and guest `/upload`. This KB has not probed that host — the
+sandbox reaches github.com only — but a shipped extension configured against a deployed endpoint is
+the strongest evidence available from the code that this pipeline is in use and not a prototype
+shelf.
+
 ## Moodle ships its own AI subsystem now — check it before proposing a tutor
 
 Moodle's core **AI subsystem** (since 4.5, documented through 5.3) is not a plugin a client has to

@@ -96,6 +96,65 @@ engagement where an agent generates metadata, feedback or assessment text, that 
 thing a client can be shown and will understand — and the KB's own caution applies: it is three
 commits, so take the design and expect to rebuild it.
 
+## The public sector tried the chatbot, archived it, and built a metadata pipeline instead — NEW in p322
+
+**This is the clearest evidence in this KB for where institutional AI money actually goes, and it
+comes from a complete organisational history rather than a survey.** `openeduhub`, the GitHub
+account behind Germany's publicly funded OER portal WirLernenOnline, was enumerated in full at p322
+— all 67 repositories, sixteen read first-hand. The sequence is legible in the dates:
+
+- **August 2023:** `wlo-chat-gpt-block`, a WordPress ChatGPT block. **Archived.**
+- **2024–2026:** a twelve-service metadata pipeline, still being pushed — LLM extraction into
+  eleven schemas, a human-review canvas with per-field confidence badges, MinHash deduplication,
+  Flesch/Wiener readability, Lighthouse accessibility and licence lookup, a Pyro Bayesian metadata
+  predictor, a Keras discipline classifier, bulk prompt running, a factual-accuracy judge and a
+  unified API gateway.
+- **The conversational artefact that survives is a 10-commit prototype** (`tutor-chatbot`, p321),
+  against **60 commits** on the metadata review UI and **1,852 commits** across the inference core.
+
+**The reading: for an institutional buyer, the first AI product that pays is cataloguing, not
+tutoring.** Extraction, enrichment, deduplication, readability and accessibility scoring are
+measurable, low-risk, do not touch a child, and attach to a backlog the institution already knows
+it has. This converges from the opposite direction with trend 1 (institutional deployment is not
+landing) and the p320 reading that governance has displaced experimentation — but it is stronger,
+because it is not what a buyer *said* in a survey, it is what a public operator **spent three years
+of engineering on after shutting down its chatbot.** For a studio pitch: lead with the catalogue,
+not the tutor, and the tutor becomes a later phase with cleaner data under it.
+
+**The caveat that keeps this honest.** This is one operator in one country. The pattern is
+suggestive, not measured across jurisdictions, and this KB has no equivalent organisational history
+for a North American, APAC or LATAM public operator — **Ed-Fi (p316) is the nearest comparable and
+it is a data-standard body, which is itself consistent with the reading.** Treat it as a strong
+hypothesis with one deep instance, and look for a second instance before putting a number on it.
+
+## Permissive at the edges, unlicensed at the core — the licence pattern inside publicly funded AI — NEW in p322
+
+Trend 4 records a permissive-agent / copyleft-platform split across the sector. **Pass 322 found a
+third shape inside a single organisation, and it is the one that actually blocks delivery.** In
+`openeduhub` the licence tracks the architectural layer:
+
+| Layer | Commits | Licence |
+|---|---|---|
+| Interaction shells (review UI, browser plugin, path editor, tutor, judge, dedup, registry) | 119 | Apache-2.0, or claimed as such |
+| Analysers (accessibility/licence lookup, readability, discipline classifier) | 790 | 🟡 GPL-3.0 |
+| **Inference core** (gateway, Bayesian predictor, text extraction, bulk prompt runner, QA generation, harvester) | **1,852** | 🔴 **none at all** |
+| Generated API client | 519 | Apache-2.0 |
+
+**The permissive surface contains none of the organisation's machine learning.** Pass 321 saw one
+unlicensed repository and read it as an oversight; across sixteen reads it is the rule. The
+mechanism is mundane and therefore likely general: licence files get added when a repository is
+published *as a thing other people should use*, and research and plumbing code is never published
+that way, even when it is where the effort went.
+
+**Two consequences for how this KB should be read.** First, **"the org is permissive" is not a
+property an org has** — ask which layer. Second, and this is the measured hazard: in this
+organisation **four repositories state a licence the repository does not carry** — two say MIT while
+shipping an Apache-2.0 `LICENSE`, and two claim a licence with no file in the root at all. That is a
+copied README template, and it means **a licence column built from READMEs would have been wrong
+four times out of sixteen in a single org.** It is the second independent confirmation of trend 11
+(the sector's published metadata is unreliable in both directions), now reproduced inside one
+account rather than across vendors.
+
 ## 1. Institutional AI deployment is not landing — and that, not adoption, is the gap
 
 Earlier passes framed this sector as "usage is ahead of governance". The Digital Education Council

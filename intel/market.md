@@ -649,6 +649,33 @@ provider options are **OpenAI or GWDG** (German academic compute), and `ki-promp
 **AcademicCloud**. A publicly funded buyer that must keep inference inside national or academic
 infrastructure now has a working reference implementation to point at — see `intel/trends.md`.
 
+**Pass 322 completes that EMEA picture, and the licence asymmetry p321 identified is sharper than
+it looked.** All 67 `openeduhub` repositories were enumerated and sixteen read first-hand. The
+portal has shipped a **twelve-service AI metadata pipeline** — ingestion, LLM extraction into
+eleven schemas, a human-review canvas with per-field confidence, MinHash deduplication, Flesch and
+Wiener readability scoring, Lighthouse accessibility and licence lookup, a Pyro Bayesian metadata
+predictor, a Keras discipline classifier shipping its pretrained weights, bulk prompt running, a
+factual-accuracy judge, and a unified gateway over the lot. **And the licences divide by layer:
+119 commits of Apache-2.0 interaction shells plus a 519-commit Apache-2.0 API client, 790 commits
+of GPL-3.0 analysers, and 1,852 commits — every model and every harvester — with no licence file
+at all.**
+
+**What that means commercially, stated plainly.** The permissive surface of Germany's publicly
+funded education AI contains **none of its machine learning**. An EMEA bid can take the
+`edu-sharing-python-client` (Apache-2.0, 389 generated operations, verified against edu-sharing
+11.0) and the interaction layers, must keep the GPL-3.0 analysers behind a process boundary, and
+**cannot ship the inference core at all** — so either reimplement it or open a licence conversation
+with the operator. For a publicly funded body sitting on 1,852 commits of unlicensed public money,
+**licence remediation is itself a sellable engagement**, and it is a cheaper first conversation than
+a replatforming pitch. Per-repository detail is in `repos/foundations.md`; the README-versus-LICENSE
+hazard that cost this pass four separate verifications is recorded there too.
+
+**One more EMEA detail worth a pitch sentence.** The sovereign-inference path p321 found in two
+prototypes is now visible in the production line as well: `metadata-agent-api` and
+`metadata-agent-canvas` both ship a **B-API→AcademicCloud (`deepseek-r1`)** provider alongside
+OpenAI. A buyer that must keep inference inside German academic compute has a working reference for
+the *metadata* workload, not just the tutor demo.
+
 1. **Provider-grade conformity packaging.** Under the AI Act the school is the deployer and the
    tool-builder is the provider; a Globant-built tutor inherits the heavier duty. Productise it:
    technical documentation, risk management, data governance and post-market monitoring shipped
@@ -859,6 +886,43 @@ price it as greenfield, because there is nothing to fork.
    same offer as pattern P3 with the compliance driver replaced by an evidence driver.
 
 ## Declared regional gaps — what was searched this pass and not found
+
+**Pass 322 — the four regional searches were run and here is exactly what each returned.** Recorded
+in full because an unrecorded region reads identically to a covered one.
+
+- **North America — nothing new.** Returned the 36%-share and USD 951m/2024 market framings, the
+  "86% of students across 16 countries" roundup, the 10%-of-institutions-with-guidelines and
+  71%-of-US-teachers-untrained pair, OpenAI's eight-partner country programme, and Carnegie
+  Mellon/Gates USD 55m courseware. **All already held**, and the regulation commentary was thinner
+  than the bill-level tracking already in this file. One unusable item: a "USD 169m committed to
+  responsible AI in higher education, Q1 2026" figure **that names no government** — not recorded
+  as a fact.
+- **EMEA — nothing new from the search channel.** The battery returned enterprise-AI governance
+  material (Workday, CompTIA, a Bandwidth/Cavell barriers study) with **no education-specific
+  result at all**: no ministry, no edtech vendor, no school-data rule. **Everything EMEA gained
+  this pass came from the GitHub channel instead**, and that asymmetry is the finding.
+- **APAC — nothing new, and the fifth consecutive pass with no education institution.** All
+  education-adjacent hits were corporate L&D again: TCS–Pearson, LearnUpon, NIIT MTS, Alteryx's
+  academy, plus OpenAI's ANZ policy appointment. The governance figure that did come back
+  (87% encouraging agents, 47% with governance) is an enterprise statistic, not an education one,
+  and is **not** recorded as such.
+- **LATAM — nothing new, and the gap is unchanged.** The battery returned the Digital Education
+  Council survey (92%/79%, 30,000+ responses), IESALC's 200 institutions across 19 countries with
+  the 73.5%/57.0%/34.1%/20.0% activity split, the 30%-with-published-policies governance figure,
+  the 50/19 feedback gap and the usual Chile/Brazil/Colombia/Mexico policy picture — **every one of
+  which this file already holds, most at higher precision.** The two numbers that looked newest
+  were checked individually against the KB and were present. **The LATAM supply-side gap stands:
+  still no national education code channel, still no LATAM market-size figure that is not derived
+  from a global forecast.**
+
+**The method conclusion, now third-pass stable and worth acting on:** for this industry the
+prescribed search battery has stopped adding information, while the GitHub channel produced twelve
+verified rows this pass. The regional searches are still worth running as a **negative control** —
+they are how this KB knows coverage has not changed — but a pass should budget them at a quarter of
+its effort, not half. Non-GitHub primary sources remain unreachable from this sandbox
+(`www.digitaleducationcouncil.com` → `getaddrinfo ENOTFOUND` this pass), so **every figure in this
+file is snippet-sourced and should be re-verified against the publishing house before it reaches a
+client deck.**
 
 - ~~**No EMEA AI-in-education market-size figure**~~ — **RESOLVED this pass, with a caveat that
   matters more than the number.** Europe-specific figures exist: **Marketdataforecast ($2.11B 2026

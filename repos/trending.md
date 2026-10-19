@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 322 — 1,852 commits of publicly funded ML with no licence file
+
+**Eighth pass of 2026-10-19.** Twelve rows added to `repos/foundations.md`, bringing it to
+**thirty-five**, all twelve read first-hand off github.com. They are one organisation —
+`openeduhub`, the GitHub account behind **WirLernenOnline.de**, Germany's publicly funded OER
+portal — and together they are a **twelve-service AI metadata pipeline**: ingestion, extraction,
+human review, deduplication, readability, accessibility and licence lookup, Bayesian metadata
+prediction, discipline classification, bulk prompt running, factual-accuracy judging and a unified
+gateway over the lot.
+
+### The repos, by licence tier
+
+**🔴 No licence at all — and this is the inference core**
+
+| Repo | ★ | Commits | What it is |
+|---|---|---|---|
+| `python-kidra` | 0 | **137** | *"A unified API to the various AI applications we have built"* (IT's JOINTLY). Fronts seven services: text extraction, text statistics, topic statistics, Bayesian metadata prediction, topic assistant, discipline classification, Wikipedia linking |
+| `its-jointprobability` | 0 | **200** | **Pyro ProdLDA** topic model, black-box variational inference over PyTorch BoW tensors; predicts school discipline, university discipline, resource type, target audience, educational context and WLO topic from raw text via `/predict` |
+| `text-extraction` | 0 | **77** | trafilatura + markitdown with a **Playwright headless Chromium** fallback for JS-heavy sites, plus per-domain multibucket rate limiting |
+| `z-api-runner` | 0 | **37** | Swagger API to run **one prompt in bulk over a set of collections/materials**. Model and provider unstated in the README |
+| `its-qna` | 0 | **4** | LLM question–answer pair generation, packaged as OCI images via nix2container; CUDA variant **broken** per its own README |
+| `oeh-search-etl` | 8 | **1,397** | The Scrapy → Postgres → Elasticsearch harvester (read at p321) |
+
+**1,852 commits. No grant on any of it.**
+
+**🟡 GPL-3.0 — the analysers**
+
+| Repo | ★ | Commits | What it is |
+|---|---|---|---|
+| `metalookup` | 5 | **623** | OER metadata from a URL — **accessibility via Lighthouse**, licensing, advertising; Playwright fetch, container set with optional Postgres cache, `POST /extract` |
+| `text-statistics` | 0 | **94** | Reading time from 200 WPM adjusted by **Flesch Reading Ease**, plus Flesch score, difficulty class and the **Wiener Sachtextformel**. No ML — a fixed formula |
+| `discipline-classification` | 0 | **73** | Keras/TensorFlow subject classifier, **ships the pretrained `wirlernenonline.oeh.h5`** with labels and tokenizer; top-3 disciplines with scores; CherryPy on 8080. Fork of `yovisto/wlo-classification` |
+
+**✅ Apache-2.0 — the shells and the client**
+
+| Repo | ★ | Commits | What it is |
+|---|---|---|---|
+| `edu-sharing-python-client` | 0 | **519** | Async-first client for edu-sharing and the **b-api**; **389 operations generated from `openapi.json`**; v0.3.6, verified against **edu-sharing 11.0**; exposes an LLM gateway, text extraction and the metadata agent. Not on PyPI |
+| `duplicate-detection` | 0 | **25** | FastAPI dedup by **MinHash over shingles** — explicitly not embeddings — with URL and title normalisation. 🔴 README wrongly says MIT; the `LICENSE` was read and is Apache 2.0 |
+| `wlo-quellenliste` | 0 | **6** | FastAPI source registry that merges the harvest with an **editorial correction CSV** at serve time, plus an Angular 18 `<wlo-sources>` component. 🔴 README wrongly says MIT |
+
+**🔴 Licence claimed in prose with no file behind it**
+
+| Repo | ★ | Commits | What it is |
+|---|---|---|---|
+| `metadata-agent-api` | 0 | **24** | The engine under the canvas and the plugin: FastAPI extraction into the WLO/OEH schema from text, URL or node; **11 active schemas**; **per-field origin tags**; `/generate`, `/extract-field`, `/validate`, `/upload`, `/screenshot`; providers include **AcademicCloud `deepseek-r1`** — a sovereign-inference path. README says MIT, **root has no licence file** |
+
+### Why this is the pass's finding rather than twelve rows
+
+**Licence divides by architectural layer, not by repository.** The Apache-2.0 tier is 119 commits of
+interaction code plus a 519-commit generated client; the GPL-3.0 tier is 790 commits of analysers;
+the unlicensed tier is 1,852 commits containing **every model and every harvester**. The permissive
+surface holds none of the organisation's machine learning. The practical rule: **take the shells and
+the client, keep the GPL-3.0 analysers behind a process boundary, and reimplement or negotiate the
+core** — which, for a publicly funded operator, is a licence-remediation conversation rather than a
+fork.
+
+### Census, and the archived first attempt
+
+67 public repositories; **17 pushed in 2026, 30 last touched 2020–2022, 5 archived.** Among the
+archived is **`wlo-chat-gpt-block`** (JavaScript, August 2023) — a WordPress ChatGPT block. **The
+public operator tried the chatbot first, archived it, and spent the following three years building a
+metadata pipeline.** That reading is carried into `intel/trends.md`.
+
+### Gaps declared from this pass
+
+`openeduhub/wlo-topic-assistant` is a **404** although `python-kidra` advertises it; `kea` forwards
+to an unidentified external service; `z-api-runner`'s LLM backend is unstated; `metalookup`'s field
+list (`docs/features.md`) and `wlo-quellenliste`'s output schema were not read; and
+`topic-statistics`, `its-prep`, `its-data`, `mappings`, `skohub-vocabs-oeh-patched` and
+`oeh-search-frontend` are named in the census but unread — **`topic-statistics` and `its-prep` are
+the two `python-kidra` depends on**, so they are pass 323's first targets.
+
+---
+
 ## 2026-10-19 — Pass 321 — a CC0 competency vocabulary with 938 commits, and a 1,397-commit harvester with no licence
 
 **Seventh pass of 2026-10-19.** Two rows added to `repos/foundations.md`, bringing it to

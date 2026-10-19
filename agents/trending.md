@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 322 — the whole `openeduhub` org, and the licences divide by layer, not by repo
+
+**Eighth pass of 2026-10-19.** Three rows added to `agents/top.md`, one to its evaluation table,
+twelve to `repos/foundations.md`, one measured 404. **Sixteen repositories read first-hand; all
+sixty-seven in the organisation enumerated**, closing the gap p321 declared in its own words:
+*"57 of the 67 were not listed on the first page and remain unenumerated."*
+
+### The method note worth copying: one sort order hides what the other shows
+
+The org listing had to be paged **twice, under two different sorts**. Star-sorted, the first page is
+the 2020–2023 metadata plumbing. Push-sorted — the default — the first page is the AI-era services,
+and **six of the twelve repositories added this pass never appear on the star-sorted first page.**
+p321 swept the star-sorted view and came away with four reads and a note that 57 were unenumerated.
+This is the same lesson as p317's star finding, in a new place: **a star-ranked sweep of a publicly
+funded org finds its dead code and misses its live pipeline.**
+
+### What is new in `agents/top.md`
+
+- **`openeduhub/lernpfadeditor` — Apache-2.0, 0 ★, 6 commits.** AI editor for **differentiated**
+  learning paths: GPT-4o generates the path template from a natural-language description and ranks
+  WLO resources for each step, Whisper handles dictation, up to **20 parallel AI calls**; React/TS/
+  Vite, Tailwind, Zustand. *Binnendifferenzierung* is the teacher-facing feature clients name
+  explicitly and this KB had no permissive implementation of it until now. 6 commits: read the
+  prompt design, not the code.
+- **`openeduhub/metadata-agent-canvas` — 🔴 README claims Apache-2.0, no licence file in the root —
+  0 ★, 60 commits.** The most-developed AI artefact in the org, and the human-in-the-loop review UI
+  this KB has described in the abstract since p317: parallel LLM field filling, a **confidence badge
+  per extracted value**, inline editing, vocabulary validation, geocoding via Photon/OSM behind a
+  server-side proxy, and an explicit *Bestätigen* confirm before download or submission. Angular 19
+  + Angular Material + **LangChain**; providers OpenAI, B-API→OpenAI and **B-API→AcademicCloud
+  (DeepSeek-R1)**. Standalone, bookmarklet and plugin modes.
+- **`openeduhub/metadata-browser-plugin-fuerAPI` — Apache-2.0, 0 ★, 11 commits.** Manifest V3
+  Chrome/Edge extension v2.1.0: AI indexing of the page the teacher is on, review, then upload to
+  WLO **signed in or as a guest**; plus a lesson-plan "shopping cart", watch list and upload history.
+  It points at a **live backend** — `metadata-agent-api.vercel.app` `/generate` and `/upload` —
+  which is the clearest evidence in this KB that this line is deployed and not merely committed.
+- **Evaluation table: `openeduhub/llm-judge` — Apache-2.0, 0 ★, 1 commit.** A factual-accuracy judge
+  for OER descriptions, six criteria declared in `config.yaml`, gpt-4o-mini default. **1 commit —
+  a published intent, not a tool.** Note what it judges: **content accuracy, not pedagogy**, so it
+  complements the four pedagogical evaluators rather than replacing them, and its README states
+  neither scale nor prompts nor aggregation, so its numbers compare to nothing.
+
+### The finding: licence by architectural layer
+
+| Layer | Commits | Licence |
+|---|---|---|
+| Shells — review UI, plugin, path editor, tutor, judge, dedup, source registry | **119** | Apache-2.0 (or claimed) |
+| Analysers — `metalookup`, `text-statistics`, `discipline-classification` | **790** | 🟡 GPL-3.0 |
+| **Inference core** — `python-kidra`, `its-jointprobability`, `text-extraction`, `z-api-runner`, `its-qna`, `oeh-search-etl` | **1,852** | 🔴 **none** |
+| API client — `edu-sharing-python-client` | **519** | Apache-2.0 |
+
+**The permissive surface contains none of the org's machine learning.** p321 read its one unlicensed
+repository as a lapse; over sixteen reads it is where the effort went and the licence file never
+followed. Detail and the engagement implication are in `repos/foundations.md`.
+
+### The README hazard — four instances in one organisation
+
+`duplicate-detection` and `wlo-quellenliste` say **MIT** in the README and ship an **Apache-2.0**
+`LICENSE`. `metadata-agent-api` says **MIT** with **no licence file in the root**;
+`metadata-agent-canvas` says **Apache-2.0** with **no licence file in the root**. The
+`duplicate-detection` `LICENSE` was opened and read to settle it — Apache 2.0, January 2004 text.
+**Two understate the grant, two assert one that does not exist.** Rule applied from here: the
+licence file governs.
+
+### Negative results, written down rather than left silent
+
+- **`openeduhub/wlo-topic-assistant` → 404.** `python-kidra` advertises it as one of seven bundled
+  services and there is no public repository under this org.
+- **`openeduhub/wlo-classification` does not exist under that name** — it redirects to
+  `openeduhub/discipline-classification`, a GPL-3.0 fork of `yovisto/wlo-classification` that ships
+  a **pretrained `wirlernenonline.oeh.h5`** and returns the top three disciplines.
+- **`kea`** (Wikipedia linking) is not a repository here; kidra forwards to an unidentified external
+  service.
+- **The prescribed search battery returned nothing new — third pass running.** All eight searches
+  were run. Everything regional that came back (the Digital Education Council LATAM survey, IESALC's
+  200 institutions, Carnegie Mellon/Gates USD 55m, OpenAI's eight-partner programme, TCS–Pearson,
+  the 50/19 feedback gap) was already in `intel/market.md`, mostly at higher precision. Two numbers
+  were checked individually and were also already held.
+- **Method re-tested, not inherited.** github.com is reachable with the fetch tool;
+  `www.digitaleducationcouncil.com` failed at DNS (`getaddrinfo ENOTFOUND`) this pass. No scanning
+  probe was attempted — p319–p321 recorded `curl -sI` as 403 at the proxy and two probes refused by
+  the sandbox classifier. **Everything in `intel/` is snippet-sourced and labelled there.**
+
+### Counts after this pass
+
+`agents/top.md` 30 rows (27 before; p321's prose said 26, which was its own pre-addition count),
+evaluation table 6, `repos/foundations.md` 35, `verticals/solutions.md` unchanged.
+
+---
+
 ## 2026-10-19 — Pass 321 — `wirlernenonline` is a 404; the organisation is `openeduhub`, and it has 67 repositories
 
 **Seventh pass of 2026-10-19.** One row added to `agents/top.md`, one to its evaluation table, two to

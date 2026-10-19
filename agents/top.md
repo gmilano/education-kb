@@ -5,6 +5,79 @@ updated: 2026-10-19
 ---
 # Top open source AI agents — education
 
+## Pass 322 · 2026-10-19 (eighth pass of this date) — the `openeduhub` org, enumerated in full, and the finding is licence-by-layer
+
+**Three rows added here, one to the evaluation table, twelve to `repos/foundations.md`, one measured
+404.** Pass 321 found the `openeduhub` organisation, read four of its repositories and wrote down the
+names of six it had not read, explicitly *"so p322 does not re-discover them"*, closing with
+**"57 of the 67 were not listed on the first page and remain unenumerated."** Pass 322 enumerated all
+sixty-seven — by paging the org listing under two different sort orders, because one sort order hides
+what the other shows — and read **sixteen repositories first-hand**, every one of the AI-era ones.
+
+**The finding is not a repository, it is a shape.** Germany's publicly funded OER portal has shipped a
+twelve-service AI metadata pipeline: extraction, human review, deduplication, readability scoring,
+accessibility and licence lookup, Bayesian metadata prediction, discipline classification, bulk prompt
+running, factual-accuracy judging and a unified gateway over the lot. **And its licences divide by
+architectural layer, not by repository:**
+
+| Layer | Repos | Commits | Licence |
+|---|---|---|---|
+| Thin shells — UI, REST wrapper, browser plugin, path editor | `metadata-agent-canvas`, `metadata-browser-plugin-fuerAPI`, `lernpfadeditor`, `tutor-chatbot`, `llm-judge`, `wlo-quellenliste`, `duplicate-detection` | 60, 11, 6, 10, 1, 6, 25 | **Apache-2.0** (or claimed — see the README hazard) |
+| Analysers and classifiers | `metalookup`, `text-statistics`, `discipline-classification` | 623, 94, 73 | 🟡 **GPL-3.0** |
+| **The inference core** | `python-kidra`, `its-jointprobability`, `text-extraction`, `z-api-runner`, `its-qna`, `oeh-search-etl` | 137, 200, 77, 37, 4, 1,397 | 🔴 **none at all** |
+
+**1,852 commits of ML and data plumbing carry no grant whatsoever, and they are precisely the part a
+studio cannot write in a sprint.** Pass 321 observed that "the unlicensed repository is the one with
+the most commits" and read it as one bad apple. It is not one repository — **it is the entire
+inference core, and the permissive surface contains none of the org's machine learning.** The
+practical rule for an engagement is in `repos/foundations.md`: take the shells and the API client,
+reimplement or negotiate the brains, and keep the GPL-3.0 analysers behind a process boundary.
+
+**The README hazard, now at four instances in one organisation.** Four repositories state a licence
+in their README that the repository does not carry:
+
+| Repo | README says | Repository actually carries | Verified how |
+|---|---|---|---|
+| `duplicate-detection` | "MIT License" | **Apache-2.0** | `LICENSE` read first-hand — it is the Apache 2.0, January 2004 text |
+| `wlo-quellenliste` | "Lizenz: MIT" | **Apache-2.0** (sidebar + `LICENSE`) | sidebar and file listing |
+| `metadata-agent-api` | "Lizenz: MIT" | 🔴 **nothing** — no `LICENSE`, `LICENSE.md`, `LICENSE.txt` or `COPYING` in the root | root file listing enumerated first-hand |
+| `metadata-agent-canvas` | "Apache License 2.0", "Copyright 2025 Jan Schachtschabel" | 🔴 **no licence file in the root listing**; sidebar shows no licence | root file listing enumerated first-hand |
+
+The pattern is a copied README template, and it cuts both ways: twice it understates the grant, twice
+it asserts a grant the repository does not make. **The rule this KB now applies: the `LICENSE` file
+governs, and a README licence claim with no file behind it is not a grant.** That is the opposite of
+the assumption a reader makes when a README says MIT.
+
+**One measured 404.** `python-kidra`'s README lists seven bundled services; six have public
+repositories in the org and **`openeduhub/wlo-topic-assistant` returns 404.** `wlo-classification`
+does not exist under that name either — it **redirects to `openeduhub/discipline-classification`**,
+a GPL-3.0 fork of `yovisto/wlo-classification`. Recorded rather than left silent: the gateway
+advertises a capability whose source is not public under this org.
+
+**Method, re-tested this pass rather than inherited, and it reproduces exactly.** `github.com` is
+reachable with the fetch tool; non-GitHub origins are not —
+`www.digitaleducationcouncil.com` failed at DNS (`getaddrinfo ENOTFOUND`) when attempted directly
+this pass. No scanning probe was attempted, because passes 319–321 recorded that `curl -sI` returns
+403 at the session proxy and that two probe attempts were refused by the sandbox classifier.
+**Every repository and licence claim in this pass is first-hand off github.com. Every regional claim
+in `intel/` remains snippet-sourced and is labelled there.**
+
+**The prescribed search battery returned nothing this KB did not already hold — third pass running.**
+All four global searches and all four regional searches were run. The global battery returned
+general-purpose agent roundups with no education focus, one vendor LMS comparison, and market
+forecasts spanning USD 6.4bn–10.6bn for the same year. The regional battery returned the Digital
+Education Council LATAM survey, the IESALC 200-institution survey, the Carnegie Mellon/Gates USD 55m
+courseware investment, OpenAI's eight-partner country programme, the TCS–Pearson alliance and the
+50/19 feedback gap — **every one already in `intel/market.md`, most with a precision the snippets
+lacked.** Two numbers were checked individually against the KB and were also already held. The
+verdict and what it implies for how a pass should spend its budget are in `intel/trends.md`.
+
+**A recount, because the number in the p321 text was stale.** This file's main table holds
+**twenty-seven rows before this pass, thirty after** — p321's prose said twenty-six, which was the
+count before its own addition. `repos/foundations.md` holds twenty-three before this pass,
+thirty-five after.
+
+
 ## Pass 321 · 2026-10-19 (seventh pass of this date) — the named-gap sweep, executed
 
 **One row added here, one to the evaluation table, two to `repos/foundations.md`, and six measured negatives recorded in that file's sweep table.** Pass 319 closed its topic-sweep section with an explicit to-do: *"Untested and worth a pass: Arabic, Hindi, Japanese, Korean, French and Indonesian topic tags, and the `wirlernenonline` organisation, whose GitHub org page could not be read this pass."* **Pass 321 executed that list in full.** Six of the seven items are negatives, and they are written down in `repos/foundations.md` rather than left as silence. The seventh is the pass's find.
@@ -62,6 +135,9 @@ commit count, release cadence and licence.**
 
 | Agent | Repo | Licence | ★ | Checked | What it does | Use it for |
 |---|---|---|---|---|---|---|
+| lernpfadeditor | https://github.com/openeduhub/lernpfadeditor | **Apache-2.0** (sidebar + LICENSE) | 0 | p322 | **AI-assisted editor for differentiated learning paths** (*"Ein KI-gestützter Editor zur Erstellung differenzierter Lernpfade"*), built for WirLernenOnline.de: generates a path template from a natural-language description, performs automatic internal differentiation (*Binnendifferenzierung*) into tiered tasks, and ranks WLO resources for assignment to each step. **GPT-4o** for template generation and resource ranking, **Whisper** for dictation, **up to 20 parallel AI calls**; React + TypeScript + Vite, TailwindCSS, Zustand; needs Node 18+ and an OpenAI key. 6 commits | **Differentiation is the teacher-facing feature clients ask for by name and this KB had no permissive implementation of it.** 6 commits is a prototype — read the differentiation prompt design, not the code |
+| metadata-agent-canvas | https://github.com/openeduhub/metadata-agent-canvas | 🟡 **README claims Apache-2.0 — no licence file in the root listing** | 0 | p322 | **Human-in-the-loop metadata canvas**: an Angular web component that fills schema fields from a text in parallel via LLM, shows each extracted value with a **confidence badge** for inline editing, validates required fields against controlled vocabularies, normalises values, enriches addresses with geocoordinates (Photon/OpenStreetMap through a server-side proxy) and ends on an explicit *Bestätigen* confirm step before JSON download or submission to the WLO repository. Standalone, bookmarklet and browser-plugin modes. Angular 19, Angular Material, RxJS, **LangChain (`@langchain/openai`)**, Netlify Functions / Vercel / Docker+nginx. Providers: OpenAI direct, B-API→OpenAI, **B-API→AcademicCloud (DeepSeek-R1)**. 60 commits — the most-developed AI artefact in the org | **The review-UI pattern this KB has been describing in the abstract since p317, implemented.** Confidence badge → inline edit → explicit confirm is the shape a human-oversight requirement actually takes in a product. 🔴 **Do not depend on it:** the README states Apache-2.0 and the repository root carries no licence file, so the grant is unverified — read it for the interaction design |
+| metadata-browser-plugin-fuerAPI | https://github.com/openeduhub/metadata-browser-plugin-fuerAPI | **Apache-2.0** (sidebar + LICENSE) | 0 | p322 | **Manifest V3 extension for Chrome and Edge (v2.1.0)** that indexes educational resources from the page the teacher is on: extracts metadata *per KI*, lets the user review it, and uploads to the WLO repository **either signed in or as a guest**; plus a "shopping cart" that collects materials into a printable lesson plan, and a watch list and upload history. Calls a deployed backend at `metadata-agent-api.vercel.app` — `/generate` for extraction, `/upload` for guest submission. 11 commits, 1 fork | **The browser is the capture surface for teacher-contributed OER, and this is a working instance of it.** Also the clearest evidence in this KB that the metadata-agent line is deployed, not just committed: the plugin points at a live Vercel host |
 | tutor-chatbot | https://github.com/openeduhub/tutor-chatbot | Apache-2.0 | 0 | p321 | Learning-companion chatbot for **WirLernenOnline.de**, Germany's publicly funded OER portal: blends a curated QA dataset with LLM answers, queries the WLO / edu-sharing API (`https://www.wirlernenonline.de/api/v1`) for matching learning materials and attaches them to the answer as direct links, filters by subject, content type and source, and reports **Bloom-taxonomy learning analytics**; extracts learning metadata from the learner's question. Provider is **OpenAI or GWDG** (German academic compute). 10 commits, React/Vite, Apache-2.0 stated in both the LICENSE and the README | **The only Apache-2.0 public-sector tutor in this KB, and the only one with a sovereign-inference path** — read it for the architecture, not as a dependency: 10 commits is a prototype |
 | DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 41.8k | p320 | Lifelong personalised tutoring agent; v1.6.15 (2026-10-19), 2,935 commits, 5.3k forks, paper arXiv 2604.26962. README now describes it as an "agent-native learning workspace" with an inspectable three-layer memory, Co-Writer, Book and Partners | The strongest permissive starting point for a tutor product |
 | Study-Mate | https://github.com/Miaotofu01/Study-Mate | MIT | 1.1k | p319 | Maths/CS study partner shipped as a skill bundle: plans a learning route, explains concepts, drives project work; five roles (material collection, illustration, course design, teaching, exercise evaluation); progress stored as files in a local workspace with a shared cross-subject memory of skill level and effective explanation styles; 723 commits; packaged for DeepSeek Harness, Google Antigravity and Codex/ChatGPT Work; docs zh + en | The largest permissive APAC skill bundle — read it for the files-as-learner-state pattern |
@@ -98,6 +174,7 @@ and they do not agree with the way this sector reports quality.
 
 | Artefact | Repo | Licence | ★ | Commits | What it is |
 |---|---|---|---|---|---|
+| llm-judge | https://github.com/openeduhub/llm-judge | **Apache-2.0** (sidebar + README + LICENSE) | 0 | 1 | **A factual-accuracy judge for educational content, published by a public OER operator** — *"KI-gestütztes Bewertungstool für Sachrichtigkeit von Bildungsinhalten"*. Scores the description field of a learning object (`cclom:general_description`) against **six criteria declared in `config.yaml`**: factual correctness, clarity and comprehensibility, objectivity, relevance, structure and length, language and style. Input is JSON with `node.properties` and a `sys:node-uuid`; single or batch; `gpt-4o-mini` default or `gpt-4o` via `MODEL_ID`, with an optional `BASE_URL` to point at a different endpoint; 30 s default API timeout. Outputs CSV scores, JSON with improvement suggestions, and interactive charts — **1 commit** — this is a published intent, not a tool. And note what it judges: **content accuracy, not pedagogy.** It is the complement to the four pedagogical evaluators above, not a substitute, and the README states neither the scoring scale, the prompts nor the aggregation — so its numbers are not comparable to anything |
 | ki-prompt-benchmark | https://github.com/openeduhub/ki-prompt-benchmark | Apache-2.0 | 0 | 3 | **An LLM-as-judge prompt bench published by a public OER operator.** Compares the metadata-generation prompts live in edu-sharing's `mds.xml` v10.0 against an optimised set: a judge model scores both on **five criteria, 1–10**, names a winner and gives a rationale, while the harness measures generation time and token usage across providers (OpenAI direct, B-API→OpenAI, **AcademicCloud**). Test material can be a sample, a WLO repository item or any URL via a text-extraction service. Judge feedback is accumulated across runs to regenerate an improved prompt per field, and prompt sets export back to `mds.xml`. Next.js 15 / React 19 / TS 5 |
 | MathTutorBench | https://github.com/eth-lre/mathtutorbench | **CC BY 4.0 badge / CC BY-SA 4.0 footer — contradictory, see below** | 45 | 25 | Peer-reviewed benchmark for open-ended pedagogical capability: 3 teacher skills, 7 tasks, 9 configs — problem solving, socratic questioning, solution correctness, mistake location, mistake correction, plus four pedagogy win-rate tasks. **Pedagogy is scored by a ~1.5B scaffolding reward model against ground-truth teacher utterances, not by an LLM judge.** EMNLP 2025 main, oral (arXiv 2502.18940); Macina, Daheim, Hakimi, Kapur, Gurevych, Sachan; reward-model data on Hugging Face (`dmacjam/pedagogical-rewardmodel-data`) |
 | AITutor-EvalKit | https://github.com/kaushal0494/AITutor-EvalKit | MIT | 3 | 8 | Evaluation framework for LLMs as maths tutors: a LoRA-finetuned automated evaluator, an open LLM-as-judge path (`prometheus-eval/prometheus-7b-v2.0`) and a GPT-5 judge path; backend plus a frontend demo; v1.0.0, 1 Dec 2025; ships a 10-example sample only — you bring the dataset. MBZUAI EduNLP Lab (Naeem, Maurya, Petukhova, Kochmar), arXiv 2512.03688 |

@@ -103,6 +103,68 @@ and 6 rest on prototypes of 10 and 3 commits, and step 6's reference exports to 
 provider and the evaluation harness** — this recipe tells you the shape and the licence position,
 not that the code exists.
 
+## P22 — The OER catalogue enrichment pipeline: the first AI product a public education buyer will actually sign — NEW in p322
+
+**When to propose it.** Any buyer that owns a large, badly catalogued body of learning content —
+national or regional OER portal, ministry repository, university consortium, publisher backlist,
+corporate academy after three acquisitions — and has been told to "do something with AI". It is the
+pattern to lead with **instead of** a tutor (P1, P21) when the content layer is not yet trustworthy,
+and p322's trend reading is the argument: Germany's public OER operator archived its chatbot in 2023
+and spent the following three years building exactly this pipeline.
+
+**Why it closes.** Every step is measurable against a before/after count, none of it touches a
+child, none of it makes a pedagogical claim that has to be defended, and the output is the
+prerequisite for every later AI phase. Under the EU AI Act this workload sits far away from the
+Annex III education triggers that make P4 expensive — **it processes content, not learners.**
+
+**The reference implementation exists, service by service, and was read first-hand at p322.** It is
+`openeduhub` / WirLernenOnline. Use it as the architecture and **not** as the dependency set,
+because the licences divide by layer:
+
+| Step | Reference service (read p322) | Licence | Take it or rebuild it |
+|---|---|---|---|
+| 1. Harvest | `openeduhub/oeh-search-etl` (1,397 commits, Scrapy→Postgres→Elasticsearch) | 🔴 none | **Rebuild.** Use Scrapy directly; copy the spider layout only |
+| 2. Clean text from a URL | `openeduhub/text-extraction` (77 commits) | 🔴 none | **Rebuild** on `trafilatura` + `markitdown` with a Playwright fallback — and copy its per-domain multibucket rate limiting, which is the part homegrown harvesters omit and publishers block over |
+| 3. Deduplicate | `openeduhub/duplicate-detection` (25 commits, **MinHash over shingles**, URL + title normalisation) | **Apache-2.0** (`LICENSE` read first-hand; its README wrongly says MIT) | **Take it.** Hash-based, not embeddings: a MinHash threshold is defensible to a client, a cosine distance is not |
+| 4. Extract metadata with an LLM | `openeduhub/metadata-agent-api` (24 commits, 11 schemas, **per-field origin tags**, `/generate` `/extract-field` `/validate` `/upload`) | 🔴 README says MIT, **no licence file** | **Rebuild to its endpoint shape.** Copy the schema set and the origin-tag idea; the origin tags are the provenance feature a public buyer now asks for by name |
+| 5. Human review before anything is written | `openeduhub/metadata-agent-canvas` (60 commits, Angular 19 + LangChain, **confidence badge → inline edit → explicit confirm**) | 🔴 README claims Apache-2.0, **no licence file** | **Rebuild the interaction, which is the valuable part.** This is what a human-oversight requirement looks like as a UI instead of a policy sentence |
+| 6. Capture from the teacher's browser | `openeduhub/metadata-browser-plugin-fuerAPI` (11 commits, **Manifest V3**, guest upload, lesson-plan cart) | **Apache-2.0** | **Take it** as the starting point for the contribution surface |
+| 7. Readability / reading level | `openeduhub/text-statistics` (94 commits, Flesch Reading Ease + **Wiener Sachtextformel**, 200 WPM baseline, **no ML**) | 🟡 GPL-3.0 | **Deploy as a service behind HTTP, never link.** Confirm the Wiener formula before applying it outside German |
+| 8. Accessibility + licence screen | `openeduhub/metalookup` (623 commits, Playwright + **Lighthouse**, `POST /extract`) | 🟡 GPL-3.0 | **Deploy as a service.** This is the compliance screen public procurement asks for and it already exists |
+| 9. Predict missing metadata without labels | `openeduhub/its-jointprobability` (200 commits, **Pyro ProdLDA**, predicts discipline, resource type, audience, educational context, topic) | 🔴 none | **Rebuild** — and this is the row that justifies the engagement when the client has no labelling budget |
+| 10. Subject classification | `openeduhub/discipline-classification` (73 commits, Keras/TF, **ships pretrained `wirlernenonline.oeh.h5`**, top-3 with scores) | 🟡 GPL-3.0 | **Service boundary**, and check the training-data provenance before shipping the weights |
+| 11. Bulk-run one prompt over the catalogue | `openeduhub/z-api-runner` (37 commits, Swagger, model unstated) | 🔴 none | **Rebuild.** Trivial to write, universally needed, never budgeted |
+| 12. Judge the output | `openeduhub/llm-judge` (1 commit, 6 criteria in `config.yaml`, gpt-4o-mini) + `openeduhub/ki-prompt-benchmark` (Apache-2.0, LLM-as-judge prompt bench, p321) | **Apache-2.0** | **Take the configuration shape, not the scores** — `llm-judge` publishes neither scale nor prompts nor aggregation, and it judges **factual accuracy, not pedagogy** |
+| Everything above, to the platform | `openeduhub/edu-sharing-python-client` (519 commits, **389 operations generated from `openapi.json`**, verified against **edu-sharing 11.0**) | **Apache-2.0** | **Take it, and start here.** A permissive generated client is how you touch a GPL-3.0 edu-sharing instance with no linking question |
+| Vocabularies for every field above | `openeduhub/oeh-metadata-vocabs` (938 commits, SKOS/Turtle, DigCompEdu/ESCO/EQF-DQR) | **CC0-1.0** | **Take it.** No attribution condition at all |
+
+**The correction overlay, which is the non-obvious step.** `openeduhub/wlo-quellenliste`
+(Apache-2.0, 6 commits) does the thing every one of these projects eventually needs and nobody
+designs for: it merges the harvest with an **editorial correction CSV at serve time** rather than
+mutating the harvested records. Build this in from day one — the harvest will be wrong, the
+editorial team will be right, and overwriting the source destroys the ability to re-harvest.
+
+**Inference placement, for an EMEA public buyer.** `metadata-agent-api` and `metadata-agent-canvas`
+both ship a **B-API→AcademicCloud (`deepseek-r1`)** provider alongside OpenAI. A buyer that must
+keep inference in national or academic compute therefore has a working reference for *this*
+workload, not just for a tutor demo — quote it in the pitch, and see `intel/trends.md`.
+
+**Sequencing and estimate.** Steps 1–3 and the client (the trustworthy-catalogue milestone) is where
+the measurable win is: **6–8 weeks**. Steps 4–6 with human review in the loop: **a further 6–8
+weeks**, and this is the phase that needs the client's editorial team committed, not just their IT.
+Steps 7–12 are individually small and should be sold as a menu, not a block. **Timings are
+engagement estimates, not measurements.**
+
+**The three risks to put in the proposal yourself.**
+1. **Six of the twelve reference services carry no licence** — 1,852 commits of it. The estimate
+   above assumes rebuilding steps 1, 2, 4, 9 and 11, so do not let a reviewer price it as reuse.
+2. **The GPL-3.0 analysers (7, 8, 10) must stay behind a process boundary.** Containerise and call
+   over HTTP; if a client's security policy forbids that topology, those three steps become
+   rebuilds too.
+3. **Four of the reference repositories state a licence the repository does not carry.** Verify
+   from the `LICENSE` file, not the README, on every one of them and on anything else you add — the
+   full instance list is in `repos/foundations.md`.
+
 ## P1 — Curriculum-grounded lifelong tutor
 
 **For:** any institution that wants a tutor answering from *its* material, with a learner model that
