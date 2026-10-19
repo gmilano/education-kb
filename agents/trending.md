@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 307: FOUR NEW AGENT-LAYER ROWS, AND THE MOST IMPORTANT ONE IS A LICENCE CORRECTION THAT MOVES THREE TUTORS FROM "STUDY IT" TO "DEPLOYABLE"
+
+🔵 **This window's leg was `ACTION p306-R` item 1 — read this base's own sidebar/README backlog as
+payloads — so the shelf gains from CORRECTION as much as from discovery.** 🟢 **59 backlog slugs plus 11
+settled controls were probed: 70 first-hand payloads, every branch read rather than guessed, every root
+tree enumerated rather than laddered.**
+
+### 🔴 The correction, and it is the largest change to the buildable surface this pass
+
+🟢 **Three tutoring systems this base carried as `AGPL-3.0` are `GPL-3.0`.** Read from the title line of
+the payload, which no previous pass opened:
+
+| slug | payload | title line | was | is |
+|---|---|---|---|---|
+| [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | `LICENSE.txt` **35 148 B** `8b1ba204bb69` | `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007` | 🔴 AGPL-3.0 | 🟢 **GPL-3.0** |
+| [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | `LICENSE` **35 149 B** `3972dc9744f6` | `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007` | 🔴 AGPL-3.0 | 🟢 **GPL-3.0** |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | `LICENSE` **35 149 B** `3972dc9744f6` | `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007` | *(new)* | 🟢 **GPL-3.0** |
+
+🔵 **All three normalise to `3743f7a4ab51` — one stock GPL-3.0 text, three repositories.**
+🟢 **Consequence: GPL-3.0 has no § 13 network clause, so these may be HOSTED FOR A CLIENT with no
+source-disclosure duty.** 🔴 **The duty attaches to conveying the code.** 🔵 **`p305` priced this pair as
+*"the AGPL network clause blocks hosting it for a client"*; that advice was against the wrong licence.**
+
+### 🟢 New rows
+
+🟢 **[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)** —
+**BSD-3-Clause**, payload `LICENSE` **1 531 B** `fa56a9650ca4`, **111★ / 193 forks**, 380 commits on
+`main`. 🟢 **Stock BSD-3 with no added clause** — diffed line-by-line against
+[`digitalcredentials/ezcap`](https://github.com/digitalcredentials/ezcap)'s payload; the only difference
+is the copyright line. Community Edition of an open-core product with a named proprietary Enterprise
+Edition (theming, SLA, LTS). Python + SvelteKit, Docker-first, Ollama and OpenAI-compatible back ends
+(LMStudio, GroqCloud, Mistral, OpenRouter), local RAG with pluggable web search, adaptive tutoring,
+personas and avatars, voice/video modes, **role-based access control and a human-in-the-loop framework for
+evaluating LLM responses**, UI in **Arabic, French and English**. 🔵 **The first permissive platform-scale
+tutoring system in this base, and the first EMEA/Maghreb supply row at that scale.**
+🟡 **Its licence opens with the words *"All rights reserved"* — which is stock BSD-3 boilerplate, and a
+calibration point worth keeping: this base's RESERVED class keys on that phrase, so the CLAUSE test must
+run before the reserved test, or every BSD-3 grant in the vertical grades as withheld.**
+
+🟢 **[`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent)** — **MIT**, payload `LICENSE`
+**1 072 B** `7935829db2c9`. LangGraph tutoring loop: structured tutorial → Q&A → knowledge evaluation.
+🔵 **Small, and the point is the SHAPE: a composable tutoring loop under a permissive grant is the scarce
+thing on this shelf, where the pedagogically strong rows are copyleft.**
+
+🟢 **[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor)** — **MIT**, payload `LICENSE`
+**1 068 B** `72c03c50ecf0`. 🟡 **Recorded mainly as a NAME-COLLISION guard:** it is not
+[`LEARNableLabs/opentutor`](https://github.com/LEARNableLabs/opentutor) and not
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE). 🔵 **Three distinct
+projects whose names differ by punctuation — `p251-prefix-collision`'s class, logged before it bites.**
+
+### 🔴 What this window REFUSED
+
+🔴 **[`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach)** stays off the shelf —
+re-confirmed `RESERVED` by payload (`842 B` `76d0b7213617`, *"all rights reserved"*).
+🔴 **[`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm)** stays off — 🟢 **upgraded from
+*"six filenames 404'd"* to *"root tree ENUMERATED, 13 entries, no licence-named blob"*.** The README's
+`## License / MIT` is a phantom grant, now measured rather than inferred.
+🔴 **`Open TutorAI`'s Enterprise Edition** is named in the CE's own README and is proprietary — 🔵 **the CE
+is what this base carries; the EE is a vendor conversation, not a build input.**
+
+### 🔵 Carried forward
+
+🔴 **`ACTION p306-R` item 5 (a CODE read on the camera-touching rows) was NOT done** — the clone channel
+now makes it possible, so this is a refusal of scope rather than of capability.
+🟢 **`p306`'s Art 5(1)(f) boundary is unchanged**: the prohibition is on inferring an affective state, not
+on watching. [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) is now
+payload-pinned **MIT, `1 071 B` `e4ecd14cc886`** — the *(sidebar + README)* pin `p306` flagged as the
+visible example of the backlog is discharged.
+
 ## 2026-10-19 — Pass 306: NO NEW AGENT ROW, AND BOTH REASONS ARE MEASUREMENTS — THE ASSIGNED LEG RETURNED SUBSTRATE, AND THE PROHIBITED-PRACTICE SCREEN REFUTED THE PREDICTION THAT ORDERED IT
 
 🔵 **This window's leg was `ACTION p305-R` item 7: the CREDENTIALING layer, chosen because it had demand

@@ -1,0 +1,11 @@
+slug	branch	found	file	bytes	sha12	nsha12	verdict	family	note
+digitalcredentials/did-io	main	LICENSE	LICENSE	2228	6d391c21eda5	a66b41631b9b	GRANT	BSD-3-Clause	clause=BSD
+Ebimsv/AITutorAgent	main	LICENSE	LICENSE	1072	c8050f8df7c1	7935829db2c9	GRANT	MIT	clause=MIT/ISC
+plastic-labs/tutor-gpt	main	LICENSE	LICENSE	35149	3972dc9744f6	3743f7a4ab51	GRANT	GPL-3.0	clause=GPL-family
+zijinz456/OpenTutor	main	LICENSE	LICENSE	1068	5352b4967982	72c03c50ecf0	GRANT	MIT	clause=MIT/ISC
+digitalcredentials/bnid	main	LICENSE	LICENSE	1498	1beb16f4b859	fb408e6f6832	GRANT	BSD-3-Clause	clause=BSD
+digitalcredentials/did-method-key	main	LICENSE	LICENSE	2236	35c8c7e21af0	a243a20303fe	GRANT	BSD-3-Clause	clause=BSD
+digitalcredentials/ezcap	main	LICENSE	LICENSE	1528	fd5a010a48a0	e599011c209f	GRANT	BSD-3-Clause	clause=BSD
+digitalcredentials/cred-admin	main	LICENSE.md	LICENSE.md	1060	abbc361fde10	0bf0f897aadf	GRANT	MIT	clause=MIT/ISC
+digitalcredentials/docs	main	LICENSE	LICENSE	1075	09e4c03a44a7	f08b8fdc5771	GRANT	MIT	clause=MIT/ISC
+Open-TutorAi/open-tutor-ai-CE	main	LICENSE	LICENSE	1531	57c341d09920	fa56a9650ca4	GRANT	BSD-3-Clause	clause=BSD

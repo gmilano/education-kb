@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 307 — THE "FORCED ARCHITECTURE" BREAKS AT THE TUTORING LAYER: A BSD-3-CLAUSE, SELF-HOSTABLE TUTORING PLATFORM AT 111★ / 193 FORKS, AND THE MECHANISM IS OPEN-CORE RATHER THAN GEOGRAPHY
+
+⏱️ **Pass 307 of `2026-10-19`.** Evidence:
+[`p307-new-supply.2026-10-19-p307.tsv`](../evidence/p307-new-supply.2026-10-19-p307.tsv) ·
+[`p307-payload-pin.2026-10-19-p307.tsv`](../evidence/p307-payload-pin.2026-10-19-p307.tsv).
+
+### 🟢 A new platform row, and it is the one this file has been missing
+
+| platform | licence, read as bytes | scale | what it is |
+|---|---|---|---|
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** — payload `LICENSE`, **1 531 B**, `sha256₁₂` `fa56a9650ca4`, **stock, no added clause** | **111★ / 193 forks**, 380 commits on `main` | 🟢 **Self-hostable AI tutoring platform.** Python + SvelteKit; Docker Compose first-class (bundled Ollama container, or any OpenAI-compatible endpoint — LMStudio, GroqCloud, Mistral, OpenRouter); local RAG with pluggable web search; adaptive tutoring, personas and avatars; voice and video modes; **RBAC**; **a human-in-the-loop framework for evaluating LLM responses**; PWA; UI in **Arabic, French and English** |
+
+🟢 **Why this row changes the file's standing conclusion.** `p305` recorded a **forced architecture** —
+*"every permissive row is a COMPONENT (1★–135★); every platform-scale system of record is AGPL or GPL"* —
+and `p306` refined it once already, at the credentialing layer. 🔴 **`p307` breaks it at the TUTORING
+layer, which is the layer the rule was written about.** 🔵 **A client can now be offered a tutoring
+platform that is permissive, self-hosted and customisable, with no copyleft to price and no service
+isolation to engineer.**
+
+🔵 **And the mechanism is not geography or institution type — it is MONETISATION.** The CE's own README
+names a proprietary **Enterprise Edition** (custom theming and branding, SLA support, LTS). 🟢 **Open-core
+picks permissive because the moat is the EE.** 🔴 **A commons-defending system of record picks copyleft.**
+🟡 **One observation at this layer; recorded as a mechanism, not yet a rule** → `T-p307f`.
+
+🔴 **What the studio must put in the proposal, not discover later:**
+
+- 🔴 **The EE is proprietary.** Theming, SLA and LTS sit behind it. 🟢 **Everything above is in the CE**,
+  but a client told *"it is open source"* without that sentence will hear *"supported"*.
+- 🟡 **`193 forks against 111 stars` is an inverted ratio** — forks exceeding stars reads as a codebase
+  being taken and changed rather than watched. 🔵 **Consistent with a self-hosted deployable; also
+  consistent with coursework.** 🔴 **Two rendered integers, one reading, not independently verified.**
+- 🟢 **The human-in-the-loop response-evaluation framework is the feature that matters for EMEA**, and it
+  is the one to demo where `§ 6 DUVO` applies: 🔴 **Baden-Württemberg bans AI from AWARDING grades**
+  (`p306`), and a platform with a built-in review step is architecturally on the right side of that line.
+- 🟢 **Arabic + French + English as first-class UI languages** makes this the only row on these shelves
+  that is directly deployable in Maghreb, Gulf and francophone-Africa engagements.
+
+### 🟢 The copyleft map of this vertical, corrected
+
+🔴 **Three of the rows this file described as AGPL are GPL-3.0**, read from the payload's title line
+(detail on [`agents/top.md`](../agents/top.md) and [`repos/foundations.md`](../repos/foundations.md)):
+
+| layer | row | licence, title-read | hosting a client deployment |
+|---|---|---|---|
+| system of record | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** (`33 893 B`, `license.txt`) | 🔴 **§ 13 applies** — serving IS distribution |
+| system of record | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** (`34 520 B`) | 🔴 **§ 13 applies** |
+| tutoring | [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | 🟡 **GPL-3.0** (`35 148 B`) — corrected `p307` | 🟢 **No network clause. Hostable.** |
+| tutoring | [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | 🟡 **GPL-3.0** (`35 149 B`) — corrected `p307` | 🟢 **Hostable.** |
+| tutoring | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟡 **GPL-3.0** (`35 149 B`) — new `p307` | 🟢 **Hostable.** |
+| tutoring | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** (`1 531 B`) | 🟢 **No obligation beyond attribution.** |
+
+🔵 **The shape that falls out: copyleft concentrates in the SYSTEM OF RECORD and thins out as you move
+toward the learner.** 🟢 **`p306`'s layer rule survives; what changes is that the tutoring layer is no
+longer the AGPL trap this file described.**
+
+### 🟢 Settled, and not re-litigated
+
+🟢 **[`frappe/lms`](https://github.com/frappe/lms) is AGPL-3.0** — re-confirmed this pass by title line
+(`GNU AFFERO GENERAL PUBLIC LICENSE Version 3`), on `license.txt`, on the `develop` branch.
+🔵 **The conflict row this file carries is CORRECT as a conflict record: `MIT` is the refuted secondary
+claim, `AGPL-3.0` is the payload.** 🔴 **Not re-opened.**
+🔵 **The education ERP/CRM nil** (`p304`, licensor-confirmed, OpenEduCat LGPLv3) — **recorded, not
+re-run**, per `ACTION p306-R` item 7.
+🔵 **Proctoring stays filed here as a platform FEATURE rather than a studio build**, and
+[`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) is now payload-pinned
+**MIT `1 071 B` `e4ecd14cc886`** rather than sidebar-pinned.
+
 ## 🟢 Pass 306 — THE 26th LMS NIL IS SETTLED BY PAYLOAD RATHER THAN BY SOURCES, AND IN THE SAME PASS THE NIL IS SHOWN TO BE A PROPERTY OF THE LMS LAYER ONLY: CREDENTIALING HAS PERMISSIVE PLATFORMS
 
 ⏱️ **Pass 306 of `2026-10-19`.** Evidence:
@@ -305,9 +372,9 @@ deployment (you may ship it; you must publish your modifications), whereas **Non
 engagement itself** — there is no compliance posture that makes a paid client deployment permissible. 🟢 Its
 dual-persona design (empathetic coach + critical inquirer) is a *design idea*, which no licence withholds.
 
-🔴 **[`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) (AGPL-3.0, `35 148 B` `8b1ba204bb69`, Brown
-University) and [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) (AGPL-3.0, `35 149 B`
-`3972dc9744f6`)** — two more **university-held, AGPL** teaching systems. 🔵 **Fourth and fifth instances of
+🔴 **[`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) (🔴 **GPL-3.0**, `35 148 B` `8b1ba204bb69`, Brown
+University) and [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) (🔴 **GPL-3.0**, `35 149 B`
+`3972dc9744f6`)** — 🔴 **both CORRECTED `p307` from `AGPL-3.0`** — two more **university-held, copyleft** teaching systems. 🔵 **Fourth and fifth instances of
 this file's standing pattern: the institution-built teaching system is copyleft.** That is now a count, not an
 impression.
 

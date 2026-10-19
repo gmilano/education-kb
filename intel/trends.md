@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔵 Pass 307 — SEVEN TRENDS, AND FOUR OF THEM ARE ABOUT HOW THIS BASE KNOWS THINGS RATHER THAN ABOUT THE MARKET
+
+⏱️ **Pass 307 of `2026-10-19`.** Evidence:
+[`p307-channel-map.2026-10-19-p307.tsv`](../evidence/p307-channel-map.2026-10-19-p307.tsv) ·
+[`p307-payload-pin.2026-10-19-p307.tsv`](../evidence/p307-payload-pin.2026-10-19-p307.tsv) ·
+[`p307-regional.2026-10-19-p307.tsv`](../evidence/p307-regional.2026-10-19-p307.tsv).
+
+### 🔴 `T-p307a` — An absence is established by a channel that ENUMERATES, never by one that is ASKED
+
+🟢 **`T-p306a` said a declared absence must carry the list of addresses tried.** 🔴 **`p307`
+shows that is necessary and not sufficient.** [`openedx/XBlock`](https://github.com/openedx/XBlock)
+was declared licence-less by **two independent channels** — `raw.githubusercontent.com`
+returned `404`, `github.com/.../blob/...` returned `404` on a different client — and both
+were wrong, because both had been handed the same wrong address (`LICENSE.txt`, where the
+file is `LICENSE.TXT`). 🔵 **Channel independence buys nothing when the address is shared.**
+🟢 **The fix is categorical: enumerate the root tree (`git ls-tree`) instead of asking for
+names.** 🔵 **Generalises past licences — it is the difference between *"the endpoint I
+tried 404s"* and *"this thing does not exist."***
+
+### 🔴 `T-p307b` — Licence identity is the TITLE. Not the length, and not the hash either.
+
+🟢 **`p304` ruled on LENGTH and was refuted at `p305`. `p306` wrote *"length is not an
+identity key"* — and in the same pass named a licence family from a length SERIES.**
+🔴 **That series was two licences:** `33 893` / `34 520` are **AGPL-3.0**; `35 148` /
+`35 149` are **GPL-3.0**, and this base carried two tutors under the wrong one for two
+passes.
+
+🔴 **The hash fails in the other direction.** Normalising (CRLF → LF, strip the ends)
+collapses **nine** stock-Apache payloads to one value `283ea6cc2997` — across **three**
+byte lengths (`11 357`, `11 358`, `11 359`) and **four** raw `sha256₁₂`. 🔵 **The base's
+*"stock Apache = `c71d239df917`"* instrument, with six confirmations over four passes, was
+counting one byte-representation of at least four and reporting the others as distinct
+payloads.** 🟢 **Same correction on the copyleft side: `p305` noted `LTLTutor` and
+`logicits` were *"one trailing byte apart"* — normalised, they are byte-identical
+(`3743f7a4ab51`), and so is `plastic-labs/tutor-gpt`.**
+
+🟢 **Operational form: read the first line. `GNU AFFERO GENERAL PUBLIC LICENSE Version 3`
+and `GNU GENERAL PUBLIC LICENSE Version 3` are one word apart and that word is § 13.**
+
+### 🟡 `T-p307c` — A POINTER payload yields an IDENTITY, never TERMS
+
+🟢 **`p306` found the class in a 167 B W3C file.** 🔴 **`p307` finds it on the 877★
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills),
+whose `LICENSE` is the Creative Commons **deed**, not the legalcode, and says so in its own
+last line.** 🔵 **`p305` quoted *"even commercially"* from that file twice. The verdict is
+right and the provenance is not** — the deed is a summary CC itself declares
+non-operative. 🟢 **Rule: a clause-level claim sourced from a POINTER must be labelled as
+read from a deed or a reference, not from the licence.**
+
+### 🔴 `T-p307d` — The inherited environmental absence is this base's most expensive recurring error
+
+🟢 **Three were refuted in two passes, and every test was cheap:**
+
+| carried as | passes it survived | tested at | cost | result |
+|---|---|---|---|---|
+| *"no primary source"* | 24 | `p306` | one `curl` | 🔴 **false** for `raw.githubusercontent.com` |
+| *"`git clone` of third-party repos is refused"* | 2 | `p307` | one `git clone` | 🔴 **false** — `rc=0`, 2.4 s |
+| *"`make` is refused as external code"* | 2 | `p307` | one `make hooks` | 🔴 **false** — 14/15 gates green |
+
+🔵 **The mechanism is the same each time: a refusal is measured once, generalised into a
+CLASS, and the class is then used to justify not measuring.** 🟢 **Standing rule, and it
+costs one command: re-test every inherited environmental absence once per pass, before
+planning the leg around it.**
+
+### 🔴 `T-p307e` — No instrument in this base compares its own shelves to each other
+
+🟢 **The `AGPL`/`GPL` error above was CONTRADICTED INSIDE THE BASE while it stood.**
+`repos/foundations.md` line 583 said *"GNU GPL"*, `compose/patterns.md` line 614 said
+*"(GPL)"*, and `intel/open-gaps.md` line 9975 recorded `plastic-labs/tutor-gpt` as
+`GPL-3.0` — while five other places said `AGPL-3.0`. 🔴 **Fifteen gates ran and none could
+see it.**
+
+🔵 **The reason is structural, and `p305` named half of it:** `gate-absence` polices absence
+CLAIMS, `ACTION SH` polices INBOUND claims, `p253` polices a pass against PINNED facts.
+🔴 **Every one grades this base against something outside it. Nothing grades slug `X`'s
+licence cell on one shelf against slug `X`'s licence cell on another** → `ACTION p307-R`
+item 2. 🟢 **It is a cheap gate to build: the shelves are tables, the slug is the key.**
+
+### 🟢 `T-p307f` — The permissive platform-scale tutoring system EXISTS, and it is Maghreb open-core
+
+🔴 **`p305`'s *"forced architecture"* said every platform-scale system in this vertical is
+AGPL or GPL and every permissive row is a component (1★–135★).** 🟢 **`p306` refined it:
+credentialing carries four permissive platform-scale systems.** 🔴 **`p307` breaks it at
+the TUTORING layer**, which is the layer the rule was written about.
+
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) —
+🟢 **BSD-3-Clause, stock, no added clause** (payload `1 531 B` `fa56a9650ca4`) — **111★ /
+193 forks**, Docker-first, Ollama + OpenAI-compatible, local RAG, RBAC, a human-in-the-loop
+response-evaluation framework, UI in **Arabic, French and English**, copyright *"Mohamed
+El hajji on behalf of all R2D-dev"*.
+
+🔵 **The mechanism that explains it is not geography, it is BUSINESS MODEL.** This is a
+Community Edition whose README names a proprietary Enterprise Edition. 🟢 **Open-core
+chooses permissive, because the moat is the EE, not the licence.** 🔴 **A commons-defending
+system of record chooses copyleft — `p306`'s rule, unchanged.**
+🟡 **So the refined statement: the licence follows the MONETISATION, and copyleft marks the
+projects with no second tier to sell.** ⚠️ **One observation at the tutoring layer. Not yet
+a rule.**
+
+🟢 **Second-order, and it is a procurement fact: `193 forks against 111 stars` is an
+inverted ratio** — forks exceeding stars is the signature of a codebase being *taken and
+changed*, not watched. 🔵 **Consistent with a self-hosted deployable, and consistent with
+coursework.** 🔴 **Not independently verified; it is one reading of two rendered integers.**
+
+### 🟡 `T-p307g` — A gate that grades only the newest section cannot stay red across a pass
+
+🟢 **`make hooks` ran for the first time in three passes: 14/15 green at `HEAD`, 16/16 at
+publication.** The one red, `gate-offline` → `p253-settled-fact-regression`, fired on
+**`p306`'s** sections, not on this pass's — and `p306` published without being able to see it. 🔴 **Because `p253` grades
+only each file's CURRENT section, that red expires the moment `p307` prepends.** 🔵 **A
+gate whose finding is visible to exactly one pass, and whose finding that pass cannot fix
+without rewriting published history, is a gate that reports into a void.**
+
+🟢 **Measured, so a later pass can act rather than re-measure: `--all` reports `20`
+findings across the base; `14` of them are on
+[`intel/open-gaps.md`](open-gaps.md)** — 🔵 **a file whose declared purpose is to record
+unresolved things, sitting inside a gate that fires on the word *"unresolved"*.**
+🟡 **Both halves are registered for `p308`, unpatched: a pass should not redesign a control
+in the same hour it first manages to run it** → `ACTION p307-R` item 3.
+
 ## 🟢 `T-p306a` — A "NETWORK POLICY" THAT HELD FOR TWENTY-FOUR PASSES WAS A CHANNEL ASSUMPTION, AND IT WAS RETIRED BY ONE UNTESTED HOSTNAME
 
 🔴 **`p303` measured two things correctly — `curl` → `github.com` and `api.github.com` return 403, and

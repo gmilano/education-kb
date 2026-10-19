@@ -1,0 +1,60 @@
+slug	shelf_row	shelf_licence_cell	payload_family	verdict	payload_file	bytes	nsha12
+LEARNableLabs/opentutor	agents/top.md:1248	MIT (sidebar + README)	MIT	GRANT	LICENSE	1079	c7578ff30a3f
+aryankeluskar/canvas-mcp	agents/top.md:1249	ISC (sidebar)	ISC	GRANT	LICENSE	746	125530a3e966
+Kimmahone/edu-workspace-mcp	agents/top.md:2216	MIT	MIT	GRANT	LICENSE	1087	f1112f62a389
+THU-MAIC/OpenMAIC	agents/top.md:2224	MIT (sidebar, p296)	MIT	GRANT	LICENSE	1065	76c1f69f6b95
+Orenda-Project/rumi-platform	agents/top.md:2225	Apache-2.0 (sidebar + README, p296)	Apache-2.0	GRANT	LICENSE	11287	dbffd405fe67
+microsoft/Shiksha-Copilot	agents/top.md:2226	MIT (sidebar + README legal notices, p29	MIT	GRANT	LICENSE	1141	ff82c90f8494
+anthropics/k12-teacher-skills	agents/top.md:2227	Apache-2.0 (sidebar, p296)	Apache-2.0	GRANT	LICENSE	11357	283ea6cc2997
+littlecookie0722/AI-Teaching-Agent	agents/top.md:2228	MIT (sidebar + README, p296)	MIT	GRANT	LICENSE	1069	7d424cd79455
+adlnet/lrs-conformance-test-suite	repos/foundations.md:963	MIT (sidebar)	MIT	GRANT	LICENSE	1046	62b9b932cf5e
+adlnet/xapi-profiles	repos/foundations.md:964	Apache-2.0 (sidebar)	Apache-2.0	GRANT	LICENSE	11357	6dc0e068dcf3
+yetanalytics/xapipe	repos/foundations.md:964	Apache-2.0 (sidebar)	Apache-2.0	GRANT	LICENSE	11357	283ea6cc2997
+S4-NetQuest/react-scorm-provider	repos/foundations.md:966	MIT (sidebar)	MIT	GRANT	LICENSE	1068	e86f327ab05d
+pie-framework/pie-qti	repos/foundations.md:967	MIT (sidebar)	MIT	GRANT	LICENSE	1097	74d5c93a6db7
+metyatech/markdown-to-qti	repos/foundations.md:968	MIT (sidebar)	MIT	GRANT	LICENSE	1066	9b4945712346
+metyatech/qti-html-renderer	repos/foundations.md:969	MIT (sidebar)	MIT	GRANT	LICENSE	1067	272185bf71d5
+sonyccd/qti-playground	repos/foundations.md:970	MIT (sidebar)	MIT	GRANT	LICENSE	1070	b406f858b7a7
+rolfis/qti-convert	repos/foundations.md:971	Apache-2.0 (sidebar)	Apache-2.0	GRANT	LICENSE	11357	283ea6cc2997
+examplary/qti	repos/foundations.md:972	MIT (sidebar)	MIT	GRANT	LICENSE	1069	df8821020a78
+instructure/qti	repos/foundations.md:972	MIT (sidebar)	MIT	GRANT	LICENSE	1084	68f173592a64
+agencyenterprise/qti-3-player	repos/foundations.md:973	MIT (sidebar)	MIT	GRANT	LICENSE	1066	327f84d8c534
+amp-up-io/qti3-item-player	repos/foundations.md:973	MIT (sidebar)	MIT	GRANT	LICENSE	1076	881a8d1f848a
+php-xapi/client	repos/foundations.md:975	MIT (sidebar)	MIT	GRANT	LICENSE	1068	b45425c7755e
+php-xapi/model	repos/foundations.md:976	MIT (sidebar)	MIT	GRANT	LICENSE	1068	0064ed058efd
+EscolaLMS/LRS	repos/foundations.md:977	MIT (sidebar)	MIT	GRANT	LICENSE	1066	39ba15d409a1
+yetanalytics/lrsql	repos/foundations.md:977	MIT (sidebar)	Apache-2.0	GRANT	LICENSE	11357	283ea6cc2997
+Cvmcosta/ltijs	repos/foundations.md:1093	Apache-2.0 (sidebar)	Apache-2.0	GRANT	LICENSE	11361	24b32fbb9687
+1EdTech/lti-1-3-php-library	repos/foundations.md:1094	Apache-2.0 (sidebar)	Apache-2.0	GRANT	LICENSE	11343	2bd5a1e00e6a
+dmitry-viskov/pylti1.3	repos/foundations.md:1095	MIT (sidebar)	MIT	GRANT	LICENSE	1070	d9691d31247d
+jupyterhub/ltiauthenticator	repos/foundations.md:1096	BSD-3-Clause (sidebar)	BSD-3-Clause	GRANT	LICENSE	1528	be3d5db97b9f
+jupyterhub/jupyterhub	repos/foundations.md:1096	BSD-3-Clause (sidebar)	BSD-3-Clause	GRANT	LICENSE	1475	b4e26843370f
+Kennisnet/php-qti3	repos/foundations.md:1098	MIT (sidebar)	MIT	GRANT	LICENSE	1066	7f879d87deb9
+instructure/canvas-lms	repos/foundations.md:1099	MIT (sidebar)	AGPL-3.0	GRANT	LICENSE	34520	5537d2d539c9
+Ed-Fi-Alliance-OSS/edfi-oneroster	repos/foundations.md:1101	Apache-2.0 (sidebar)	Apache-2.0	GRANT	LICENSE	10173	4bf96504d6e8
+bgwdotdev/go-oneroster	repos/foundations.md:1102	MIT (sidebar)	MIT	GRANT	LICENSE	1064	a409481b9866
+vardanagarwal/Proctoring-AI	repos/foundations.md:1103	MIT (sidebar + README)	MIT	GRANT	LICENSE	1071	6793ed7eb444
+baoguangsheng/fast-detect-gpt	repos/foundations.md:1104	MIT (sidebar)	MIT	GRANT	LICENSE	1071	343607ad1c50
+automoss/automoss	repos/foundations.md:1105	MIT (sidebar)	MIT	GRANT	LICENSE	1065	999c0ce8fad7
+dodona-edu/dolos	repos/foundations.md:1105	MIT (sidebar)	MIT	GRANT	LICENSE	1084	9e2ceeedb426
+tsugiproject/tsugi	repos/foundations.md:1884	Apache-2.0 (sidebar, read p298)	Apache-2.0	GRANT	LICENSE	10273	9ff562631a04
+ucfopen/pylti1.3	repos/foundations.md:1885	MIT (sidebar, read p298)	MIT	GRANT	LICENSE	1070	d9691d31247d
+numbas/Numbas	repos/foundations.md:1904	Apache-2.0	Apache-2.0	GRANT	LICENSE	11357	283ea6cc2997
+openedx/XBlock	repos/foundations.md:1913	Apache-2.0 (README-stated — see note)	Apache-2.0	GRANT	LICENSE.TXT	11358	283ea6cc2997
+Submitty/Submitty	repos/foundations.md:1924	BSD-3-Clause —  the payload is at LICENS	BSD-3-Clause	GRANT	LICENSE.md	1542	2e64a08f22ce
+datakind/student-success-tool	repos/foundations.md:1932	MIT (sidebar, p296)	MIT	GRANT	LICENSE.md	1080	04c23f1c41cd
+open-edge-platform/education-ai-suite	repos/foundations.md:1933	Apache-2.0 (sidebar + README, p296)	Apache-2.0	GRANT	LICENSE	11351	7dceb1ccba07
+AI-for-Education/pedagogy-benchmark	repos/foundations.md:1934	MIT (sidebar, p296)	MIT	GRANT	LICENSE	1064	676c30f95fd8
+AnubisLMS/Anubis	repos/foundations.md:1937	MIT (sidebar, read p297)	MIT	GRANT	LICENSE	1083	4694496889d3
+AI-for-Education/edu-qurating	repos/foundations.md:1938	MIT (sidebar, read p297)	MIT	GRANT	LICENSE	1063	db72920969b2
+AI-for-Education/voice-ai-evaluation-framework	repos/foundations.md:1939	MIT (sidebar, read p297)	MIT	GRANT	LICENSE	1074	9a61b817cef8
+AI4Bharat/IndicTrans2	repos/foundations.md:1940	MIT (sidebar, read p297)	MIT	GRANT	LICENSE	1128	7b69fd46c735
+UKGovernmentBEIS/inspect_ai	repos/foundations.md:1941	MIT (sidebar, read p297)	MIT	GRANT	LICENSE	1081	e2b3a025023d
+microsoft/agent-governance-toolkit	repos/foundations.md:1942	MIT (sidebar, read p297)	MIT	GRANT	LICENSE	1074	a03acaea0251
+google/prog-edu-assistant	repos/foundations.md:1943	Apache-2.0 (sidebar, read p297)	Apache-2.0	GRANT	LICENSE	11358	283ea6cc2997
+oat-sa/package-tao	repos/foundations.md:2015	GPL-2.0	GPL-2.0	GRANT	LICENSE	18027	a01259a1b522
+oat-sa/tao-core	repos/foundations.md:2015	GPL-2.0	GPL-2.0	GRANT	LICENSE	18025	a01259a1b522
+frappe/lms	verticals/solutions.md:839	MIT	AGPL-3.0	GRANT	license.txt	33893	543fa96aec22
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	compose/patterns.md:286	Apache-2.0 (sidebar)	Apache-2.0	GRANT	LICENSE.txt	10172	4bf96504d6e8
+learningequality/studio	compose/patterns.md:287	MIT (sidebar)	MIT	GRANT	LICENSE	1115	d658e0e4cd56
+uPortal-Project/uPortal	compose/patterns.md:288	Apache-2.0 (sidebar)	Apache-2.0	GRANT	LICENSE	11359	283ea6cc2997

@@ -26,8 +26,9 @@ LADDER_LOG ?= /tmp/education-kb-gate-ladder.log
 STORE_LOG ?= /tmp/education-kb-gate-evidence-store.log
 README_LOG := $(shell mktemp)
 ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
+PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -48,7 +49,7 @@ ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-absence gate-dates gate-provenance gate-identity gate-ladder-case \
              gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
-             gate-slug-oracle
+             gate-slug-oracle gate-payload-pin
 
 hooks: ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm, plus p293's calibrated slug-existence oracle, and p300's no-masking runner
 	@rc=0; red=""; green=0; \
@@ -236,6 +237,16 @@ gate-evidence-store: ## ACTION p292 — the decision record's own controls, and 
 # it belongs in `hooks`.  The ONLINE half stays out, and calibrates before it reports.
 gate-slug-oracle: ## ACTION p293 — a credential prompt is a MEASUREMENT, not an inconclusive result
 	@cd compose/code/p293-slug-existence-oracle && { $(PY) test_slug_oracle.py > $(ORACLE_LOG) 2>&1 || { echo "🔴 p293-slug-existence-oracle FAILED — the suite's own report follows:" ; sed "s/^/   /" $(ORACLE_LOG) ; false ; } ; } && echo "── p293-slug-existence-oracle (45 controls: p292's four discarded probes re-adjudicated, the ABSENT-OR-PRIVATE bound as C9-C11, transport-before-refusal, and the two defective controls this suite's own first draft shipped)" && echo "   PASS" || exit 1
+
+# 🟢 p307 — `ACTION p305-R` item 1, outstanding for two passes because `make` could not be
+# run, is DISCHARGED here: the permission-clause test is now a STANDING control rather than
+# a thing each pass re-invents.  Nine controls, offline, and every one of them is a defect
+# this instrument was actually caught on before publication: the line-wrapped Apache clause,
+# GPL-2.0 recommending the Lesser licence in its own body, AGPL-3.0's title containing
+# GPL-3.0's, BSD-3's discriminator sitting behind BSD-2's shared sentence, p305's reserved
+# grant that closes with MIT's warranty paragraph, and p306's two pointer classes.
+gate-payload-pin: ## p307 — the three-valued grant classifier (GRANT / POINTER / RESERVED), 9 offline controls
+	@cd compose/code/p307-payload-pin && { $(PY) test_probe_p307.py > $(PAYLOAD_LOG) 2>&1 || { echo "🔴 p307-payload-pin FAILED — the suite's own report follows:" ; sed "s/^/   /" $(PAYLOAD_LOG) ; false ; } ; } && echo "── p307-payload-pin (9 controls: the wrapped Apache clause, GPL-2.0-not-LGPL, GPL-3.0-not-AGPL-3.0, BSD-3-not-BSD-2, p305's reserved grant, p306's two pointer classes)" && echo "   PASS" || exit 1
 
 # 🔴 ONLINE half — one `git ls-remote` per slug, and it CALIBRATES FIRST.  OUT of `hooks`.
 # An uncalibrated read of this channel is exactly what produced p292's "inconclusive" row, so

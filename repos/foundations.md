@@ -4,6 +4,184 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 307 — THE FILENAME LADDER IS RETIRED, NOT EXTENDED: A BLOBLESS CLONE READS THE ROOT TREE, AND THE CHANNEL THAT MAKES IT POSSIBLE WAS CARRIED AS "REFUSED" FOR TWO PASSES
+
+⏱️ **Pass 307 of `2026-10-19`.** Evidence:
+[`p307-channel-map.2026-10-19-p307.tsv`](../evidence/p307-channel-map.2026-10-19-p307.tsv) ·
+[`p307-payload-pin.2026-10-19-p307.tsv`](../evidence/p307-payload-pin.2026-10-19-p307.tsv) ·
+[`p307-shelf-agreement.2026-10-19-p307.tsv`](../evidence/p307-shelf-agreement.2026-10-19-p307.tsv) ·
+[`p307-new-supply.2026-10-19-p307.tsv`](../evidence/p307-new-supply.2026-10-19-p307.tsv).
+
+### 🔴 `ACTION p306-R` item 3 asked for a longer ladder. The ladder is the bug.
+
+🟢 **`p306` ordered: *"Add lower-case `license.txt` and `licence.txt` to every filename
+ladder in this repository."*** 🟢 **A prober was built to exactly that spec** — fifteen
+filenames, lower case included, on the branch read from `git ls-remote` rather than guessed.
+
+🔴 **It returned `NO-PAYLOAD` for [`openedx/XBlock`](https://github.com/openedx/XBlock)** —
+a repository whose README says *"The code in this repository is licensed the Apache 2.0
+license"* and links `LICENSE.txt`. 🔴 **Two independent channels agreed with the absence:**
+`raw.githubusercontent.com/.../LICENSE.txt` → **404**, and
+`github.com/openedx/XBlock/blob/master/LICENSE.txt` → **404** on `WebFetch`.
+
+🔴 **Both were wrong, and they were wrong together, because they were given the same
+address.** The file is at **`LICENSE.TXT`** — upper-case extension. 🔴 **The README's own
+link, and the licence badge's target, use the lower-case spelling that 404s.**
+
+🟢 **What resolved it was `p280`'s package-provenance channel**, doing precisely the job it
+was built for: PyPI's sdist for `XBlock 6.3.4` carries
+`License-Expression: Apache-2.0` and `License-File: LICENSE.TXT`. 🟢 **The payload then read
+clean: `LICENSE.TXT`, 11 358 B, `sha256₁₂` `cfc7749b96f6`.**
+
+🔵 **The rule this yields is sharper than `p306`'s, and it supersedes it:**
+
+> 🔴 **Two channels that share an ADDRESS share its error.** `p306` wrote *"a declared
+> absence must carry the list of addresses tried"*; that is necessary and not sufficient.
+> 🟢 **An absence is only established by a channel that ENUMERATES, never by a channel that
+> is ASKED.**
+
+🟢 **And the case axis has no bound, so the ladder cannot be completed.** Measured inside
+one organisation: [`openedx/edx-platform`](https://github.com/openedx/edx-platform) →
+`LICENSE`, [`openedx/openedx-events`](https://github.com/openedx/openedx-events) →
+`LICENSE.txt`, [`openedx/XBlock`](https://github.com/openedx/XBlock) → `LICENSE.TXT`.
+🔵 **Three spellings, three sibling repositories, one org.** Add
+[`frappe/lms`](https://github.com/frappe/lms)'s lower-case `license.txt` (`p306`'s
+near-miss) and that is two case-driven false absences in two consecutive passes.
+
+### 🟢 The replacement channel, measured
+
+🔴 **`p305` and `p306` both carried *"`git clone` of third-party repos is refused by the
+execution policy."*** 🔴 **RE-TESTED AT `p307`: IT IS NOT.**
+
+```
+git clone --depth 1 --filter=blob:none https://github.com/{slug}   # rc=0, ~2.4 s, ~1.5 MB
+git -C {repo} ls-tree HEAD                                         # the EXACT root filenames
+git -C {repo} show HEAD:LICENSE.TXT                                # lazy single-blob fetch
+```
+
+🟢 **This is strictly better than any ladder: fewer requests, no guessed filename, no
+guessed branch, and an absence that is a MEASUREMENT.** 🔵 **`p305` taught the base not to
+guess the branch; the same lesson one level down says do not guess the filename either.**
+
+🔴 **Third inherited environmental absence refuted by re-testing in two passes** — `p306`
+refuted *"no primary source"*, `p307` refutes *"clone refused"* **and** *"`make` is refused
+as external code"* (see below). 🔵 **`T-p306a`'s class is not an anecdote; it is this
+base's most expensive recurring failure, and all three instances were cheap to test.**
+
+### 🟢 `ACTION p306-R` item 1 — 70 payloads, and the shelves held
+
+🟢 **59 distinct slugs carry a licence pinned *(sidebar)*, *(README)* or *(secondary)* on
+the four shelves. All 59 were probed, with 11 settled control slugs alongside: 70 rows.**
+
+| verdict | n | rows |
+|---|---|---|
+| 🟢 `GRANT` | **64** | 36 MIT · 17 Apache-2.0 · 3 BSD-3-Clause · 2 GPL-3.0 · 2 GPL-2.0 · 2 AGPL-3.0 · 1 ISC · 1 CC0-1.0 |
+| 🟡 `POINTER` | 2 | [`w3c/vc-data-model`](https://github.com/w3c/vc-data-model) · [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) |
+| 🔴 `RESERVED` | 1 | [`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach) |
+| 🔴 `NO-PAYLOAD` | 2 | [`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm) · [`im-rk/SkillTrace`](https://github.com/im-rk/SkillTrace) |
+| 🔴 `NO-SLUG` | 1 | [`concentricsky/badgr-server`](https://github.com/concentricsky/badgr-server) |
+
+🟢 **`56/56` of the comparable backlog rows AGREE with their payload.** 🔵 **The sidebar
+channel, as this base used it, was honest — that is a result, and it is the opposite of
+what a *"pin everything by bytes"* action implicitly expects to find.**
+
+🟢 **Two absences upgraded from LADDER-MISS to ENUMERATED.**
+[`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm) (`p305`'s third phantom
+grant — README says `## License / MIT`) and
+[`im-rk/SkillTrace`](https://github.com/im-rk/SkillTrace) (default branch `development`)
+now read *"root tree enumerated, 13 / 12 entries, no licence-named blob."* 🔵 **`p305` could
+only say *"six filenames 404'd"*. The claim is now a measurement.**
+
+🟢 **One address SETTLED.** [`concentricsky/badgr-server`](https://github.com/concentricsky/badgr-server)
+— `p306` left it *"UNRESOLVED, no verdict carried."* 🔴 **The address is dead**, and so are
+`1EdTech/badgr-server` and `IMSGlobal/badgr-server`. 🔵 **No verdict is carried, but the
+question is closed: there is nothing at any of the three addresses to read.**
+
+### 🔴 The default branch is not `main` or `master` in 1 of 10 rows, measured
+
+🟢 **7 of 70 probed repositories publish on something else:**
+`frappe/lms` → `develop` · `oat-sa/tao-core` → `develop` ·
+`datakind/student-success-tool` → `develop` · `learningequality/studio` → `unstable` ·
+`im-rk/SkillTrace` → `development` · `php-xapi/client` → `0.7` · `php-xapi/model` → `3.x`.
+🔵 **`p305`'s `ls-remote` channel is worth 10 % of this base's rows** — now a number, not an
+argument. 🔴 **And `php-xapi`'s `0.7` and `3.x` are not even branch-shaped guesses: no
+ladder would have reached them.**
+
+### 🟡 The POINTER class is not rare, and it sits on the base's second-biggest repository
+
+🟢 **`p306` found the class in a 167 B W3C file one pass ago and called it a fourth licence
+class.** 🔴 **`p307` finds the second instance on
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+— 877★, the second-largest repository on these shelves.** Payload `LICENSE`, **1 230 B**,
+`f952182df4eb`: it names *Creative Commons Attribution-ShareAlike 4.0 International*,
+summarises the terms in prose, and closes with
+*"This is a human-readable notice. The full legal terms are available at: …/legalcode."*
+
+🔵 **What a POINTER yields is an IDENTITY, not TERMS.** 🔴 **`p305` read *"even
+commercially"* off this payload twice and priced the row on it. That phrase is from the
+CC DEED, not from the licence.** 🟢 **The deed and the legalcode do agree here — CC BY-SA 4.0
+does permit commercial use — so the verdict stands; the PROVENANCE does not.**
+🔵 **Standing rule: a clause-level claim read from a POINTER payload must say so, because
+the operative text was never opened** → `T-p307c`.
+
+### 🟢 `ACTION p306-R` item 4 — `digitalcredentials` page 2, and the "Other" label decoded
+
+🟢 **Page 2 enumerated: 30 repositories, every one showing a licence in the column** — 26
+MIT, 2 BSD-3-Clause, **2 `Other`**. 🟢 **Six probed as payloads, 6/6 GRANT.**
+
+| slug | column says | payload says |
+|---|---|---|
+| [`digitalcredentials/docs`](https://github.com/digitalcredentials/docs) **22★** | MIT | 🟢 MIT, 1 075 B `f08b8fdc5771` |
+| [`digitalcredentials/cred-admin`](https://github.com/digitalcredentials/cred-admin) | MIT | 🟢 MIT, 1 060 B `0bf0f897aadf` |
+| [`digitalcredentials/bnid`](https://github.com/digitalcredentials/bnid) | BSD-3-Clause | 🟢 BSD-3-Clause, 1 498 B `fb408e6f6832` |
+| [`digitalcredentials/ezcap`](https://github.com/digitalcredentials/ezcap) | BSD-3-Clause | 🟢 BSD-3-Clause, 1 528 B `e599011c209f` |
+| [`digitalcredentials/did-io`](https://github.com/digitalcredentials/did-io) | 🔴 **`Other`** | 🟢 **BSD-3-Clause**, 2 228 B `a66b41631b9b` |
+| [`digitalcredentials/did-method-key`](https://github.com/digitalcredentials/did-method-key) | 🔴 **`Other`** | 🟢 **BSD-3-Clause**, 2 236 B `a243a20303fe` |
+
+🟢 **`p306` found `did-method-web` reading `Other` over a clean BSD payload and called the
+column *"useless on IDENTITY."*** 🟢 **With `did-io` and `did-method-key` that is `3/3`, and
+the error has a DIRECTION: in this org, `Other` means BSD-3-Clause with a non-stock
+preamble, never a withheld grant.** 🔵 **Useless as a classifier, usable as a TRIAGE
+SIGNAL — and only in an org whose licence policy has been calibrated.**
+🔴 **66 of the 126 repositories (pages 3-5) remain unread. An informed gap with an exact
+denominator.**
+
+### 🟢 A THIRD channel for licence identity, and it caught this pass's own error
+
+🟢 **Five package registries are reachable from here** (`pypi.org`, `registry.npmjs.org`,
+`packagist.org`, `rubygems.org`, `repo1.maven.org`), plus `hub.docker.com`. Cross-checked
+against payloads read the same hour:
+
+| package | registry says | payload says |
+|---|---|---|
+| `ltijs` (npm) | Apache-2.0 | 🟢 Apache-2.0 `11 361 B` |
+| `php-xapi/client` (Packagist) | MIT | 🟢 MIT `1 068 B` |
+| `PyLTI1p3` (PyPI) | MIT | 🟢 MIT `1 070 B` |
+| `oat-sa/tao-core` (Packagist) | 🔴 **GPL-2.0-only** | 🟢 **GPL-2.0** `18 025 B` |
+
+🔴 **That last row is the one that matters: this pass's own classifier briefly graded both
+TAO payloads `LGPL`, because GPL-2.0's text says *"use the GNU Lesser General Public License
+instead of this License"* and a body-wide match reaches it.** 🟢 **The shelf was right, the
+registry was right, and the INSTRUMENT was wrong — caught before publication by a channel
+that is independent of the payload.** 🔵 **Cheap, standing, and it costs one HTTP request.**
+
+### 🔴 What this file still cannot say
+
+🔴 **`huggingface.co` is NOT reachable** (`000`). 🔵 **Every education model and dataset
+published there is outside this base's reach — an informed gap, newly addressed.**
+🟢 **`gitlab.com` IS reachable** and has never been searched by any pass → `ACTION p307-R`.
+🔴 **No primary legal or market source is reachable.** Addresses tried and refused this pass,
+per `T-p306a`'s rule: `eur-lex.europa.eu`, `ec.europa.eu`, `gesetze-im-internet.de`,
+`ontario.ca`, `unesdoc.unesco.org`, `oecd.org` — all `000` on `curl`, `ENOTFOUND` on
+`WebFetch`. 🔵 **`crates.io` refuses with `403`.**
+🔴 **`api.github.com` is reachable and AUTHENTICATED** (`/rate_limit` → `200`, limit
+`15 000/h`) **but every repository, org and search endpoint outside this session's scope
+returns `403` with a session-scoping message.** 🔵 **It is an AUTHORIZATION boundary, not a
+network one — which is why no star integer is available and `WebFetch` on `github.com` is
+still how stars are read.**
+🔴 **No code was read in any repository.** The clone channel makes it possible; the leg was
+spent elsewhere.
+
 ## 🟢 Pass 306 — THE PRIMARY-SOURCE DROUGHT ENDS AT TWENTY-FOUR PASSES, AND THE LAYER IT WAS SPENT ON INVERTS THIS VERTICAL'S "FORCED ARCHITECTURE": 23 GRANTS IN THE CREDENTIALING LAYER, EVERY ONE PERMISSIVE, AT PLATFORM SCALE
 
 ⏱️ **Pass 306 of `2026-10-19`, following `p305` of `2026-10-19`.** Evidence:
@@ -448,20 +626,23 @@ the opposite licence outcome** — WWW '25 paper code under **CC0 1.0** (payload
 verified this pass), i.e. a public-domain dedication. **Academic provenance predicts nothing about the grant;
 read it every time.**
 
-### 🔴 And the misconception-based tutor — the best pedagogy in the topic — is AGPL
+### 🔴 And the misconception-based tutor — the best pedagogy in the topic — is copyleft 🔴 *(heading corrected `p307`: it is GPL-3.0, not AGPL)*
 
-🔴 **[`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor)** — **AGPL-3.0** (payload `LICENSE.txt`,
-`35 148 B`, `sha256₁₂` `8b1ba204bb69`), **12★**, from **Brown University's Programming Languages Team**. A
+🔴 **[`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor)** — 🔴 **GPL-3.0, CORRECTED `p307` from `AGPL-3.0`** (payload `LICENSE.txt`,
+`35 148 B`, `sha256₁₂` `8b1ba204bb69`, normalised `3743f7a4ab51`, title `GNU GENERAL PUBLIC LICENSE Version 3`), **12★**, from **Brown University's Programming Languages Team**. A
 **misconception-based** tutor for Linear Temporal Logic.
 
 🔵 **"Misconception-based" is a stronger pedagogical claim than anything else in the `intelligent-tutoring-system`
 topic**, including the rows this file already carries: instead of scoring an answer right or wrong, it models
 *which specific wrong belief* produces the error and teaches against that. 🟢 **The reusable asset is the
 misconception catalogue as a design artefact** — enumerate the wrong beliefs for a subject, then write
-diagnostics that discriminate between them. 🔴 **AGPL-3.0's network clause reaches a hosted deployment**, so
-the code cannot sit inside a client platform. Same verdict for
-[`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) (**AGPL-3.0**, `35 149 B` `3972dc9744f6`, Java
-natural-deduction ITS).
+diagnostics that discriminate between them. 🟢 **CORRECTED `p307`: GPL-3.0 has NO network clause, so a hosted
+deployment triggers nothing** — the duty attaches to CONVEYING the code. The code may sit behind a client's
+platform; what it may not do is ship inside a proprietary binary. Same verdict for
+[`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) (🔴 **GPL-3.0**, `35 149 B` `3972dc9744f6`, Java
+natural-deduction ITS) and for [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt)
+(🔴 **GPL-3.0**, `35 149 B` `3972dc9744f6`, admitted `p307`) — 🔵 **all three normalise to `3743f7a4ab51`: one
+stock GPL-3.0 text, three repositories.**
 
 ### 🟢 The `intelligent-tutoring-system` topic is now FULLY enumerated at its head, and that is a completeness claim
 

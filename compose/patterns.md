@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 307 — THREE NEW RECIPES (`P89`-`P91`), AND TWO OF THEM ONLY BECAME BUILDABLE BECAUSE A LICENCE LABEL WAS WRONG
+
+⏱️ **Pass 307 of `2026-10-19`.** Evidence:
+[`p307-payload-pin.2026-10-19-p307.tsv`](../evidence/p307-payload-pin.2026-10-19-p307.tsv) ·
+[`p307-new-supply.2026-10-19-p307.tsv`](../evidence/p307-new-supply.2026-10-19-p307.tsv) ·
+[`p307-regional.2026-10-19-p307.tsv`](../evidence/p307-regional.2026-10-19-p307.tsv).
+
+🔵 **Every component named below is payload-pinned this pass: byte length and `sha256₁₂` are on the
+evidence TSV, the branch was read from the remote, and the filename came out of the root tree.**
+
+### 🟢 `P89` — The EMEA sovereign tutoring stack, and it is permissive end to end
+
+🔴 **The problem this solves:** every previous tutoring recipe in this file had to route around copyleft
+at the platform tier, because `p305`'s *"forced architecture"* left nothing permissive at platform scale.
+
+**Components, all payload-pinned:**
+
+| role | component | licence |
+|---|---|---|
+| tutoring platform | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** `1 531 B` `fa56a9650ca4` |
+| local inference | Ollama, via the CE's bundled Docker service | 🟢 permissive, carried |
+| governance wrapper | [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** `1 074 B` `7df20dcdf919` |
+| evaluation harness | [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) | 🟢 **MIT** `1 081 B` `c593c2afc813` |
+| pedagogy benchmark | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** `1 064 B` `4cdfd8894a13` |
+| standards boundary | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (LTI 1.3 into the client's LMS) | 🟢 **Apache-2.0** `11 361 B` `d5fcb264ff39` |
+
+**Wiring:** 🟢 **Deploy the CE by Docker Compose with the bundled Ollama container** (≥ 8 GB RAM;
+NVIDIA/AMD overlays ship with it) so no student text leaves the client's estate. 🟢 **Point the CE at the
+client's LMS over `ltijs`** rather than importing rosters — LTI 1.3 is the contract the LMS already
+honours, and it keeps the system of record (which is AGPL) on the other side of a network boundary.
+🟢 **Put `agent-governance-toolkit` in front of the CE's human-in-the-loop review step**, and run
+`inspect_ai` over the `pedagogy-benchmark` task set on every model or prompt change, as the regression
+gate the client's DPO will ask for.
+
+🔴 **The hard boundary, and it is the whole design constraint in Germany:** `§ 115b Abs. 9 SchG` plus
+`§ 6 DUVO` (Baden-Württemberg, in force `2024-10-10`) **ban AI from awarding grades or making other
+essential school decisions.** 🟢 **So the CE's review step is not a nice-to-have — it is the component
+that makes the stack lawful there.** 🔵 **Pitch it as *"the teacher decides, the system drafts"*, and make
+the review step non-bypassable in configuration, not in policy.**
+
+🟢 **Why EMEA specifically:** the CE ships **Arabic, French and English** interfaces, which no other row
+on these shelves does. 🔵 **Maghreb, Gulf and francophone-Africa engagements get a localised platform on
+day one.**
+
+🟡 **Scope: 8-10 weeks** for a single-tenant deployment with LTI into one LMS and the evaluation gate in
+CI. 🔴 **Not included: the Enterprise Edition's theming, SLA and LTS — those are a vendor conversation.**
+
+### 🟢 `P90` — The misconception-driven tutor, HOSTED — a recipe this base previously told the studio not to build
+
+🔴 **`p305` closed this door:** *"the AGPL network clause blocks hosting it for a client"*, and
+[`compose/patterns.md`](patterns.md) listed `LTLTutor` under **also not used**. 🟢 **The licence label was
+wrong. All three misconception/theory-of-mind tutors are GPL-3.0, which has no § 13 network clause, so a
+hosted deployment triggers no source-disclosure duty at all.**
+
+| role | component | licence |
+|---|---|---|
+| misconception catalogue + diagnostics | [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | 🟡 **GPL-3.0** `35 148 B` `8b1ba204bb69` |
+| natural-deduction ITS (second domain) | [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | 🟡 **GPL-3.0** `35 149 B` `3972dc9744f6` |
+| theory-of-mind dialogue loop | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🟡 **GPL-3.0** `35 149 B` `3972dc9744f6` |
+| permissive orchestration shell | [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT** `1 072 B` `7935829db2c9` |
+| mastery model (response data only) | `fsrs4anki` / the `pyKT` family, carried | 🟢 permissive, carried |
+| delivery surface | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** |
+
+**Wiring:** 🟢 **Run the GPL-3.0 tutors as their own service, reached over HTTP**, and keep the client's
+curriculum, prompt library and branding in the MIT/BSD layers. 🔵 **Not because the licence forces the
+split — it does not — but because the split is what keeps the client's CONTENT out of any future
+conveyance question.** 🟢 **Lift the misconception catalogue as a design artefact first**: enumerate the
+wrong beliefs for the target subject, then write diagnostics that discriminate between them.
+🟢 **Drive mastery from RESPONSE data — correctness, latency, spacing** — which is the clean side of
+`p306`'s Art 5(1)(f) line.
+
+🔴 **The one real obligation:** if any GPL-3.0 code is CONVEYED — shipped in an on-premise appliance, an
+installer, a container image handed to the client — 🔴 **the source goes with it.** 🟢 **A SaaS deployment
+the studio operates conveys nothing.** 🟡 **Two different contracts, and the pattern is only safe if the
+commercial team knows which one they signed.**
+
+🟡 **Scope: 6-8 weeks** for one subject domain, catalogue plus diagnostics plus delivery.
+
+### 🟢 `P91` — The Canadian division-level AI approval pack
+
+🔴 **The buyer is not the province.** `p307` measured it: Alberta has **no ministry framework** — the
+document in circulation is the **School Boards Association's v1.0 of `2024-09-13`** — while **Lethbridge
+School Division requires a full Privacy Impact Assessment before any generative-AI model is approved
+division-wide**, and Northern Gateway's board policy leaves deployment to the teacher. 🟢 **Ontario, in
+parallel, has made *"Cyber Safety and Artificial Intelligence"* one of four MANDATORY professional-activity
+day topics for 2026-27.**
+
+🔵 **So the product is a TEMPLATE sold many times, not a bespoke engagement sold once** — many small
+buyers, each needing the same artefact.
+
+| role | component | licence |
+|---|---|---|
+| model inventory + policy controls | [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** `1 074 B` `7df20dcdf919` |
+| evaluation evidence for the PIA | [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) | 🟢 **MIT** `1 081 B` `c593c2afc813` |
+| pedagogical quality evidence | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** `1 064 B` `4cdfd8894a13` |
+| content-suitability screen | [`AI-for-Education/edu-qurating`](https://github.com/AI-for-Education/edu-qurating) | 🟢 **MIT** `1 063 B` `e6081fef4354` |
+| student-outcome analytics | [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) | 🟢 **MIT** `1 080 B` `04c23f1c41cd` (branch `develop`) |
+| academic-integrity pair | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) 🟢 MIT `881163366572` · [`baoguangsheng/fast-detect-gpt`](https://github.com/baoguangsheng/fast-detect-gpt) 🟢 MIT `3f49eca8e2cf` | 🟢 **MIT** |
+
+**Wiring:** 🟢 **Produce the PIA as a generated artefact, not a document**: the governance toolkit holds
+the model inventory and the data-flow record; `inspect_ai` runs the task suite and emits the evaluation
+appendix; `pedagogy-benchmark` and `edu-qurating` supply the quality and suitability evidence that a
+division's board will actually read. 🟢 **Re-run the whole thing in CI** so the PIA is regenerated when a
+model version changes — 🔵 **which is the part a consultancy's static report cannot do, and the reason
+this is a product.**
+
+🟢 **Ontario attaches to the same pack from the other end:** the mandatory PA-day topic is a budgeted,
+province-wide TRAINING obligation, and the pack's evaluation outputs are the teaching material.
+🟡 **A Fraser Institute survey puts ~63 % of teachers as having had no training on instructing students in
+reasonable AI use** — the demand is measured, not assumed.
+
+🟡 **Scope: 4-6 weeks** for the template, then 1-2 weeks per division.
+🔴 **Provenance warning for the proposal: every Canadian regulatory fact above is search-snippet-grade.
+No ministry or division page is reachable from this base** (`ontario.ca` → `ENOTFOUND`). 🔵 **Verify the
+PIA requirement against the division's own policy before quoting it back to them.**
+
 ## 🟢 Pass 306 — three new patterns (`P86`-`P88`), each built only from rows payload-pinned THIS pass, and each answering a defect or a demand datum this pass MEASURED
 
 🔵 **Standing rule, unchanged: a pattern may only name a repository whose licence this base has read as a
@@ -203,7 +319,7 @@ on the second-biggest repository in it.** [`GarethManning/education-agent-skills
 
 | | reaches | leaves alone | the education consequence |
 |---|---|---|---|
-| 🟡 **AGPL-3.0** ([`LTLTutor`](https://github.com/brownplt/LTLTutor) 35 148 B · [`logicits`](https://github.com/IgorFonck/logicits) 35 149 B) | 🔴 **your CODE**, over a network | 🟢 your curriculum and prompts | 🟡 **Priced** — isolate it as a service |
+| 🔴 **GPL-3.0** ([`LTLTutor`](https://github.com/brownplt/LTLTutor) 35 148 B · [`logicits`](https://github.com/IgorFonck/logicits) 35 149 B) — 🔴 **CORRECTED `p307` from `AGPL-3.0`** | 🟡 **your CODE, on CONVEYANCE** | 🟢 your curriculum and prompts | 🟢 **Hostable as a service with no disclosure duty** — no § 13 network clause |
 | 🔴 **CC BY-SA 4.0** (the 877★ row) | 🔴 **your CONTENT** — every derived skill, prompt, curriculum artefact | 🟢 your surrounding code | 🔴 **Hits the deliverable, because an education deliverable IS content** |
 
 ⚠️ **ShareAlike explicitly permits commercial use** — *"even commercially"*, twice, in its own text — so
@@ -388,7 +504,7 @@ out of the schema for free.**
 Graph-RAG learner model with 39 psychometric domains and ZPD sequencing, which is *exactly* this pattern's
 step 1 and 2 pre-built. 🔴 **PHANTOM GRANT: its README claims MIT and no licence file exists on any branch**
 (`T-p303b`). **Substitute `capability-space` + `BloodCoded_Agentic` and build the graph yourself.**
-🔴 **Also not used:** [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) (AGPL-3.0) — whose
+🔴 **Also not used:** [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) (🔴 **GPL-3.0**, corrected `p307` from `AGPL-3.0`) — whose
 **misconception-based** diagnosis is the best pedagogy in the corpus. 🔵 **Build a misconception catalogue as
 a design artefact instead** (enumerate the wrong beliefs, write diagnostics that discriminate between them);
 catalogues are not code and no licence withholds the technique.

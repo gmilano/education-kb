@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 307 — THIS SHELF HAS CARRIED TWO TUTORS AS `AGPL-3.0` FOR TWO PASSES AND BOTH ARE `GPL-3.0`; THE BASE HELD THE RIGHT ANSWER IN TWO OTHER FILES THE WHOLE TIME, AND THE INSTRUMENT THAT GOT IT WRONG WAS A BYTE-LENGTH SERIES
+
+⏱️ **Pass 307 of `2026-10-19`, following `p306` of `2026-10-19`.** Evidence:
+[`p307-payload-pin.2026-10-19-p307.tsv`](../evidence/p307-payload-pin.2026-10-19-p307.tsv) ·
+[`p307-shelf-agreement.2026-10-19-p307.tsv`](../evidence/p307-shelf-agreement.2026-10-19-p307.tsv) ·
+[`p307-new-supply.2026-10-19-p307.tsv`](../evidence/p307-new-supply.2026-10-19-p307.tsv) ·
+[`p307-channel-map.2026-10-19-p307.tsv`](../evidence/p307-channel-map.2026-10-19-p307.tsv).
+
+🟢 **`ACTION p306-R` items 1, 2, 3 and 4 were worked; item 6 was discharged; item 5 is
+refused with a reason.** 🔵 **The per-item disposition is on [`README.md`](../README.md).**
+This shelf carries the licence correction and three new agent rows.
+
+### 🔴 The defect of the pass — `LTLTutor` and `logicits` are **GPL-3.0**, not AGPL-3.0
+
+🟢 **`p305` pinned both by bytes** — `brownplt/LTLTutor` **35 148 B** `8b1ba204bb69`,
+`IgorFonck/logicits` **35 149 B** `3972dc9744f6` — and called them *"both STOCK and
+unmodified, one trailing byte apart."* 🟢 **That reading of the BYTES was correct.**
+🔴 **The licence NAME attached to them was not, and no pass read the title line.**
+
+| slug | payload | title line, read at `p307` | carried as | actually |
+|---|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | `license.txt` 33 893 B | `GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007` | AGPL-3.0 | 🟢 **AGPL-3.0 — correct** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `LICENSE` 34 520 B | `GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007` | AGPL-3.0 | 🟢 **AGPL-3.0 — correct** |
+| [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | `LICENSE.txt` 35 148 B | `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007` | 🔴 AGPL-3.0 | 🔴 **GPL-3.0** |
+| [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | `LICENSE` 35 149 B | `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007` | 🔴 AGPL-3.0 | 🔴 **GPL-3.0** |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | `LICENSE` 35 149 B | `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007` | *(new this pass)* | 🔴 **GPL-3.0** |
+
+🔴 **How it happened, and it is an instrument failure, not a typo.** `p306` published *"5th
+distinct AGPL payload length (33 893 · 34 519 · 35 116 · 35 148 · 35 149)"*. 🔵 **That series
+is two licences.** The `33 8xx`/`34 5xx` payloads are AGPL-3.0; the `35 1xx` payloads are
+GPL-3.0. 🔴 **`p306` had already written the rule that forbids this — *"length is not an
+identity key"* — and then used a length SERIES to name a licence family in the same pass.**
+
+🔴 **And the base contradicted itself in writing.**
+[`repos/foundations.md`](../repos/foundations.md) line 583 said *"GNU GPL"* for `LTLTutor`
+and [`compose/patterns.md`](../compose/patterns.md) line 614 said *"(GPL)"*, while this
+shelf, `verticals/solutions.md` and two other places said `AGPL-3.0`. 🔵 **No gate caught
+it, and the reason is structural: every instrument in this repository grades a claim
+against the WORLD or against an INBOUND source. None compares two of this base's own
+shelves to each other** → `ACTION p307-R` item 2.
+
+### 🟢 Why this one is worth a pass, and not just a correction
+
+🔴 **AGPL-3.0 § 13 and GPL-3.0 differ on precisely the deployment this vertical sells.**
+
+- 🟢 **GPL-3.0**: a tutor **served over a network** triggers **no** source-disclosure duty.
+  Conveying a binary does.
+- 🔴 **AGPL-3.0**: *"remote network interaction"* is the trigger. Hosting it for a client
+  **is** the distribution.
+
+🟢 **So `p305`'s advice on this pair — *"the AGPL network clause blocks hosting it for a
+client"*, *"run it as an isolated service"* — was priced against the wrong licence.
+🔵 **For `LTLTutor`, `logicits` and `tutor-gpt` the isolation is UNNECESSARY**: a studio may
+host them for a client and owes source only to those it conveys the code to.
+🔴 **For [`frappe/lms`](https://github.com/frappe/lms) and
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) the isolation stands**
+— those two are the genuine AGPL rows, and they are the systems of record, exactly where
+`p306`'s layer rule predicted copyleft would sit.
+
+🟡 **Declared limit: this is a licence-IDENTITY correction, not legal advice, and the
+clause reading above is the licences' own text, not counsel's.**
+
+### 🟢 The leg that was assigned — 59 backlog rows pinned by bytes, and the shelves held
+
+🟢 **`ACTION p306-R` item 1 ordered the sidebar/README backlog read as payloads.** The
+population was measured, not estimated: **59 distinct slugs** carry a licence pinned
+*(sidebar)*, *(README)* or *(secondary)* across
+[`agents/top.md`](top.md), [`repos/foundations.md`](../repos/foundations.md),
+[`verticals/solutions.md`](../verticals/solutions.md) and
+[`compose/patterns.md`](../compose/patterns.md). 🟢 **All 59 were probed, plus 11 control
+slugs this base had already settled: 70 rows, every one first-hand.**
+
+| result | count |
+|---|---|
+| 🟢 `GRANT` | **64** |
+| 🟡 `POINTER` | 2 |
+| 🔴 `RESERVED` | 1 |
+| 🔴 `NO-PAYLOAD` (root tree enumerated, no licence blob) | 2 |
+| 🔴 `NO-SLUG` (address dead) | 1 |
+
+🟢 **Shelf agreement: of the 56 backlog rows where a licence family could be compared,
+`56/56` AGREE with the payload.** 🔵 **The sidebar channel, where this base used it, was
+honest.** 🔴 **Three apparent disagreements were MY extractor's**, and all three are
+`p298`'s known class — a sibling slug cited inside another row's description cell
+(`yetanalytics/lrsql` inside `EscolaLMS/LRS`'s row, `instructure/canvas-lms` inside
+`instructure/qti`'s row) or a conflict-table row read as a claim (`frappe/lms`).
+🟢 **One more was the PROBER's: `oat-sa/tao-core` and `oat-sa/package-tao` are GPL-2.0, as
+the shelf said, and were briefly graded LGPL** — see the instrument note below.
+
+### 🟢 New agent rows admitted this pass
+
+| repo | licence, read as bytes | ★ | what it is |
+|---|---|---|---|
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** `LICENSE` **1 531 B** `fa56a9650ca4` — **stock BSD-3, no added clause** (diffed against `digitalcredentials/ezcap`: the only difference is the copyright line) | **111★ / 193 forks** | 🟢 **The first PERMISSIVE platform-scale tutoring system this base has found.** Community Edition of an open-core product; Docker-first; Ollama and OpenAI-compatible back ends; local RAG; adaptive tutoring, personas and avatars; voice/video; **role-based access control and a human-in-the-loop framework for evaluating LLM responses**; UI in **Arabic, French and English**. 🔵 Filed in full on [`verticals/solutions.md`](../verticals/solutions.md) |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 **GPL-3.0** `LICENSE` **35 149 B** `3972dc9744f6` *(normalised `3743f7a4ab51`)* | — | Theory-of-mind tutoring agent. 🔵 **Same normalised payload as `LTLTutor` and `logicits`** — three tutors, one stock GPL-3.0 text, and the shelf had the family wrong on two of them |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT** `LICENSE` **1 072 B** `7935829db2c9` | — | LangGraph tutoring loop: structured tutorial → Q&A → knowledge evaluation. 🔵 Small, but it is a **composable loop under a permissive grant**, which is the scarce thing on this shelf |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** `LICENSE` **1 068 B** `72c03c50ecf0` | — | 🟡 **Name collision warning, recorded so a later pass does not merge them**: this is NOT `LEARNableLabs/opentutor` and NOT `Open-TutorAi/open-tutor-ai-CE`. Three distinct projects, three addresses |
+
+### 🔴 What this shelf still cannot say
+
+🔴 **No star integer from an API** — `api.github.com` refuses every repository endpoint for
+repositories outside this session's scope (the exact refusal text is on the channel map).
+The `111★ / 193 forks` above is as `github.com` renders it.
+🔴 **`ACTION p306-R` item 5 — the Art 5(1)(f) CODE read — was NOT performed.** The channel
+to do it now exists (a blobless clone reaches any file), so this is a refusal of scope, not
+of capability: the leg was spent on items 1-4 and 6 → re-registered as `ACTION p307-R`.
+🟡 **`GarethManning/education-agent-skills` (877★) is a POINTER, not a GRANT** — the
+consequence for this shelf is on [`repos/foundations.md`](../repos/foundations.md).
+
 ## 🔵 Pass 306 — THIS SHELF GAINS NOTHING, AND BOTH REASONS ARE RESULTS: THE ASSIGNED LEG IS SUBSTRATE RATHER THAN AGENTS, AND THE PROHIBITED-PRACTICE SCREEN `p305` ORDERED CAME BACK EMPTY AGAINST ITS OWN PREDICTION
 
 ⏱️ **Pass 306 of `2026-10-19`, following `p305` of `2026-10-19`.** Evidence:
@@ -189,7 +298,7 @@ different deliverables**:
 
 | instrument | rows | what the copyleft REACHES | what it leaves alone | the education consequence |
 |---|---|---|---|---|
-| 🟡 **AGPL-3.0** | [`LTLTutor`](https://github.com/brownplt/LTLTutor) **35 148 B** `8b1ba204bb69` · [`logicits`](https://github.com/IgorFonck/logicits) **35 149 B** `3972dc9744f6` | 🔴 **your CODE**, and over a network | 🟢 **your curriculum, prompts and content** | 🟡 **Priced, not blocked.** Run it as an isolated service; the client's content stays theirs |
+| 🔴 **GPL-3.0** — 🔴 **CORRECTED `p307`; this row read `AGPL-3.0` for two passes** | [`LTLTutor`](https://github.com/brownplt/LTLTutor) **35 148 B** `8b1ba204bb69` · [`logicits`](https://github.com/IgorFonck/logicits) **35 149 B** `3972dc9744f6` — both titled `GNU GENERAL PUBLIC LICENSE Version 3` | 🟡 **your CODE, on CONVEYANCE only** | 🟢 **your curriculum, prompts and content** | 🟢 **Hostable for a client with NO source-disclosure duty** — GPL-3.0 has no § 13 network clause. The isolation this row used to prescribe is unnecessary |
 | 🔴 **CC BY-SA 4.0** | [`education-agent-skills`](https://github.com/GarethManning/education-agent-skills) **1 230 B** `f952182df4eb` | 🔴 **your CONTENT** — every derived skill, prompt and curriculum artefact | 🟢 **your surrounding code** | 🔴 **Blocked where it matters.** An education deliverable IS content |
 
 🔴 **So the most dangerous licence in this topic is not on the 12★ AGPL tutor. It is on the 877★ row** —
@@ -592,8 +701,8 @@ flagged for `feifei-companion`.
 | [`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion) | 2 | 🔴 **NO GRANT** — RAG learner diagnosis + planning |
 | [`LeParisien-dev/EduAI`](https://github.com/LeParisien-dev/EduAI) | 2 | 🔴 **NO GRANT** — full-stack intelligent-LMS PoC |
 | [`lemos999/ailey-bailey-canvas`](https://github.com/lemos999/ailey-bailey-canvas) | 20 | 🔴 **CC BY-NC-SA 4.0** `14 770 B` `5d9d28313854`, opening *"All rights reserved"* — **NonCommercial is the hardest exclusion on this shelf, harder than AGPL**: AGPL prices a hosted deployment, NC forbids the engagement outright. Dual-persona cognitive learning framework (empathetic coach + critical inquirer) — 🔵 **brief the two-persona design, which is not copyrightable; use none of the material.** |
-| [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | 12 | 🔴 **AGPL-3.0** `35 148 B` `8b1ba204bb69` — **Brown University PLT**; misconception-based Linear-Temporal-Logic tutor. 🔵 **"Misconception-based" is the pedagogically strongest idea in the ITS topic** — study it; the AGPL network clause blocks hosting it for a client. |
-| [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | 1 | 🔴 **AGPL-3.0** `35 149 B` `3972dc9744f6` — natural-deduction ITS, Java |
+| [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | 12 | 🔴 **GPL-3.0** `35 148 B` `8b1ba204bb69` *(norm. `3743f7a4ab51`)* — 🔴 **CORRECTED `p307` from `AGPL-3.0`; the title line reads `GNU GENERAL PUBLIC LICENSE Version 3`.** **Brown University PLT**; misconception-based Linear-Temporal-Logic tutor. 🔵 **"Misconception-based" is the pedagogically strongest idea in the ITS topic** — and 🟢 **it may be HOSTED for a client**: GPL-3.0 carries no network clause, so the obligation attaches to conveyance, not to serving. |
+| [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | 1 | 🔴 **GPL-3.0** `35 149 B` `3972dc9744f6` *(norm. `3743f7a4ab51`)* — 🔴 **CORRECTED `p307` from `AGPL-3.0`.** Natural-deduction ITS, Java |
 
 🟢 **Measured refusal rate, on an enumerated and paged population:** of **34** previously uncarried
 repositories read across ranks 21–60 of `ai-tutor`, 21–40 of `ai-education` and the `intelligent-tutoring-system`

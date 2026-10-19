@@ -4,6 +4,181 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 307 — CANADA IS SETTLED ON BOTH OPEN QUESTIONS, AND THE MOST ACTIONABLE LATAM DATUM THIS BASE CARRIES IS NOW IN DOUBT SIX WEEKS BEFORE IT BINDS
+
+⏱️ **Pass 307 of `2026-10-19`.** Evidence:
+[`p307-regional.2026-10-19-p307.tsv`](../evidence/p307-regional.2026-10-19-p307.tsv) ·
+[`p307-new-supply.2026-10-19-p307.tsv`](../evidence/p307-new-supply.2026-10-19-p307.tsv).
+
+🟡 **Provenance grade for everything in this section: SEARCH-SNIPPET.** 🔴 **No primary
+legal or government source is reachable from this environment** — `eur-lex.europa.eu`,
+`ec.europa.eu`, `gesetze-im-internet.de`, `ontario.ca`, `unesdoc.unesco.org` and
+`oecd.org` all refuse (`curl` → `000`, `WebFetch` → `ENOTFOUND`). 🔵 **Addresses listed per
+`T-p306a`'s rule, so the absence is informed rather than inherited.**
+
+### 🟢 `ACTION p306-R` item 6 — Canada, and BOTH open questions close
+
+🟢 **`p306` carried an unresolved Ontario conflict and a suspicion about Alberta. Both are
+settled, and the Alberta suspicion was right.**
+
+🟢 **Ontario — the conflict resolves as *"AI rides inside other instruments; there is no AI
+memorandum."*** The Ministry's own **Mandatory Professional Activity Days for 2026-27**
+makes **"Cyber Safety and Artificial Intelligence" one of four mandatory PA-day topics**,
+with an appendix covering AI and digital-literacy learning in the curriculum, educator
+cyber-security, and the duty to safeguard student data when using AI tools.
+**Policy/Program Memorandum 172** separately requires French-language boards to include
+emerging technologies such as AI in in-service training. 🔴 **Neither is an AI memorandum,
+and no AI-specific PPM was found.** 🔵 **For a studio this is the better finding: a
+mandatory PA-day topic is a DATED, BUDGETED, province-wide training obligation, which is a
+procurement hook an advisory memorandum is not.** 🟡 **One third-party guide asserts the
+ministry's index contains no AI memorandum; not independently verified, carried as
+corroboration only.**
+
+🔴 **Alberta — `p306` was right.** The document circulating as Alberta's guidance is the
+**Alberta School Boards Association**'s *AI Policy Guidance* **v1.0, 2024-09-13**, built on
+principles from a University of Alberta team. 🔴 **It is not the ministry's, and no
+provincial ministry framework was found.** 🟢 **Policy is being made at the DIVISION
+level**: Northern Gateway Public Schools' board policy (reported `2026-07`) leaves the
+teacher authority over classroom deployment; **Lethbridge School Division's 2025/26
+generative-AI statement requires a full Privacy Impact Assessment before any generative-AI
+model is approved division-wide.** 🔵 **That PIA requirement is the single most concrete
+procurement gate found in Canada this pass.** 🟡 **A Fraser Institute-commissioned survey
+puts ~63 % of teachers as having received no training on instructing students in reasonable
+AI use** — demand-side evidence for the Ontario PA-day hook.
+
+🟢 **This confirms `T-p306e` on a second continent: the binding instruments are
+SUB-NATIONAL** — Länder in Germany, states in the US, **and now school DIVISIONS in
+Alberta, which is one level below the province.**
+
+### 🔴 LATAM — Chile's date, which `p306` called the region's most actionable datum, is now IN DOUBT
+
+🔴 **`p306` carried *"Chile Ley 21.719 in force `2026-12-01`, ~6 weeks out — the most
+actionable LATAM datum here."*** 🟡 **It needs three qualifications, and a studio briefing
+that omits them is wrong:**
+
+1. 🔴 **A postponement bill is live.** Boletín **18.623-07**, filed `2026-09-01`, *suma
+   urgencia* renewed in October, **still in first trámite**. The alternative date
+   (December 2027) applies **only** if it passes.
+2. 🔴 **The regulator does not exist.** The Agencia de Protección de Datos was **not
+   constituted as of October 2026** — the Senate rejected the proposed *terna* in May.
+3. 🟡 **The sources disagree with each other** on whether the sanctions regime is staged.
+
+🟡 **Provenance: all of it is compliance-consultancy blogs. The Diario Oficial and the
+Congress bulletin are both unreachable from here.** 🔵 **Brief it as *"a date under active
+challenge, with no regulator seated"* — which is a different engagement conversation from
+*"six weeks to comply."***
+
+🟢 **Brazil placed twice, and both are new.** The **MEC guide on AI in basic education
+(`2026-03`)** frames classroom routines for questioning model outputs and protecting
+personal data. Separately, a **federal guide on children's AI use published `2026-10-15`**
+— 🔵 **four days before this pass** — comes from the **justice and human-rights**
+ministries, not education, and addresses families, young people and educators.
+🔵 **Two ministries issuing AI guidance into schools from different directions is the
+pattern to watch; it is how a compliance surface becomes multi-owner.**
+
+🟢 **Peru enters the base** with a World Bank evaluation of AI in Latin American schools
+(`2026-07-02`) — 🔵 **the only outcome EVIDENCE, as opposed to policy, surfaced for the
+region in this pass.**
+
+🔴 **Mexico and Colombia: an INFORMED gap.** A ministry-level school-AI instrument was
+searched for and not found in either. One undated blog claims Mexico has no mandatory
+AI-literacy strand and one cites a 2023 Colombian general AI bill that does not address
+schools; 🔴 **neither is carried as a finding.**
+
+### 🔴 APAC — searched, and nothing new. This is a declared gap, not coverage.
+
+🟢 **A jurisdiction-named search (Japan, Australia, India, Korea — `p305`'s fix, which is
+the correct query shape) returned NO 2026 school-AI instrument for any of the four.**
+🔵 **One roundup places Korea on AI language tools and Japan on official digital textbooks
+— education developments, not regulation.** 🔴 **`p305`'s five APAC jurisdictions are
+CARRIED UNCHANGED and are now two passes old.** 🟡 **A risk-tiered APAC compliance guide
+lists education as high-risk with a September 2027 deadline but names no jurisdiction;
+NOT CARRIED.**
+
+🔵 **Worth stating plainly, because silence would look like coverage: `p305`'s query fix
+locates rules that EXIST. Running it twice and finding nothing new is evidence the 2026
+window is quiet in APAC, not evidence the fix stopped working.**
+
+### 🟢 EMEA — the region gains SUPPLY rather than regulation this pass
+
+🟢 **[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+places EMEA on the SUPPLY side for the first time at platform scale** — BSD-3-Clause,
+111★ / 193 forks, UI in **Arabic, French and English**, authored by *R2D-dev*.
+🔵 **A tutoring platform that ships Arabic and French interfaces as first-class is
+directly usable in Maghreb, Gulf and francophone-Africa engagements, and nothing else on
+these shelves is.** 🔴 **Germany, France, Spain and the Netherlands were NOT re-searched;
+`p305` and `p306`'s readings are carried unchanged.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Ontario's mandatory PA-day topic is a dated, province-wide training obligation** —
+sell the educator-enablement programme against it, not an AI platform.
+🟢 **Alberta's live gate is the Privacy Impact Assessment**, division by division
+(Lethbridge is the worked example): the sellable artefact is a **reusable PIA pack plus
+model-inventory tooling**, and the open-source anchor for the governance half is
+[`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit)
+(🟢 MIT, payload-pinned `p307`).
+🟢 **US: 31 state guidance documents, Ohio district policies due `2026-07-01`, Utah local
+policy by `2027-07`** — carried from `p306`, unchanged.
+🔵 **The two markets diverge: the US buys policy-conformance tooling at STATE level; Canada
+buys it at DIVISION level, which means many small buyers and a template product rather
+than a bespoke engagement.**
+
+### EMEA
+
+🟢 **A permissive, self-hostable tutoring platform now exists for this region**
+([`open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE), BSD-3-Clause,
+Docker, Ollama): 🔵 **sovereignty-compatible, no copyleft to price, Arabic/French UI.**
+🔴 **Baden-Württemberg's `§ 6 DUVO` still bans AI from awarding grades** (`p306`) — the
+product boundary is *assist the teacher's judgement*, never *produce the grade*.
+🟡 **Annex III education duties bind `2027-12-02` under `Regulation (EU) 2026/1744`**
+(settled at `p233`/`p241`; restated here with its authority, not re-opened) — 🟢 **that is
+a 14-month readiness window, which is a sellable programme.**
+
+### APAC
+
+🔴 **No new instrument found this pass.** 🔵 **The honest posture for an APAC engagement is
+that this base's regulatory reading is two passes old** — `p305`'s China MoE *"AI Plus
+Education"*, Singapore's Code for Fun and Student Learning Space boundary, India's Class 3
+rollout, Korea's teacher-training setback, Japan carried as possibly stale.
+🟢 **Singapore remains the only APAC jurisdiction on BOTH sides** — GovTech's
+`open-attestation` (Apache-2.0) on supply, SLS on rules.
+🟡 **Opportunity, stated as a gap to close rather than a lead: re-run the jurisdiction-named
+search per country before any APAC pitch.**
+
+### LATAM
+
+🔴 **Do not sell Chile against a December 2026 deadline without the caveat** — the bill is
+under challenge and the regulator is not seated. 🟢 **Sell the readiness work, which is
+date-insensitive.**
+🟢 **Brazil has TWO ministries issuing guidance** (MEC `2026-03`; justice + human rights
+`2026-10-15`): 🔵 **a multi-owner compliance surface, which favours an advisory engagement
+over a tool sale.**
+🟢 **Peru's World Bank evaluation is the region's only outcome evidence** — 🔵 **cite it in
+pitches; it is what LATAM buyers ask for and the region has almost none.**
+🟢 **Credentialing: the region ADOPTS and does not BUILD** (`p306`, `P87`), on a substrate
+that is MIT and verified. 🔵 **`p307` adds that the substrate's whole neighbourhood is
+permissive — 23 grants across `digitalcredentials`, plus 6/6 more probed this pass, zero
+reserved.** 🟢 **A LATAM credentialing build has no licence obstacle anywhere in its stack.**
+🔴 **Mexico and Colombia remain an informed gap at ministry level.**
+
+### Global
+
+🟢 **The licence correction travels with every engagement**: three of this base's tutoring
+systems are **GPL-3.0, not AGPL-3.0**, so they may be **hosted for a client with no
+source-disclosure duty**. 🔵 **That moves `LTLTutor`, `logicits` and `tutor-gpt` from
+*"study it, reimplement"* to *"deployable"*, and it is the single largest change to this
+base's buildable surface this pass.**
+🔴 **The AGPL constraint stands exactly where `p306` predicted: the systems of record**
+([`frappe/lms`](https://github.com/frappe/lms),
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms)).
+🟡 **Market size unchanged and still a factor-2.4 range** (`$9.58 bn` Precedence · `$10.6 bn`
+R&M · `$12.3 bn` and `$23 bn` both HolonIQ) — 🔵 **brief the range, never a single HolonIQ
+number.** 🟢 **Adoption remains the better figure** (RAND 25 % → 53 % in one school year;
+Gallup 34 % → 61 %).
+
 ## 🟢 Pass 306 — THE BINDING RULES ARE SUB-NATIONAL: `p305`'s JURISDICTION RULE WORKS, AND IT HAS TO GO ONE LEVEL DEEPER — BADEN-WÜRTTEMBERG HAS THE ONLY LEGALLY BINDING SCHOOL-AI RULE IN GERMANY, AND IT BANS AI GRADING OUTRIGHT
 
 ⏱️ **Pass 306 of `2026-10-19`.** Evidence:

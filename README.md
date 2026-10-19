@@ -4,6 +4,143 @@ region: Global
 updated: 2026-10-19
 ---
 
+## Pass 307 — 2026-10-19 — **THE BACKLOG PIN `p306` ORDERED FOUND THE SHELVES HONEST (56/56) AND THE INSTRUMENTS WRONG: TWO TUTORS CARRIED AS AGPL ARE GPL-3.0, A CASE-SENSITIVE 404 WAS AGREED ON BY TWO CHANNELS, AND `make hooks` RUNS**
+
+**One-line summary:** 🟢 **`ACTION p306-R` item 1 discharged — 59 sidebar/README-pinned slugs plus 11
+settled controls, 70 first-hand payloads, and `56/56` comparable shelf claims AGREE with their bytes.**
+🔴 **The errors were all in the INSTRUMENTS.** 🔴 **Headline: [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor)
+(35 148 B) and [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) (35 149 B) have been carried
+as AGPL-3.0 for two passes and both titles read `GNU GENERAL PUBLIC LICENSE Version 3` — they are
+GPL-3.0**, as is [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt), admitted this
+pass → `T-p307b`. 🔵 **`p306`'s *"5th distinct AGPL payload length (33 893 · 34 519 · 35 116 · 35 148 ·
+35 149)"* is a series containing TWO licences.** 🟢 **Consequence, and it is the largest change to the
+buildable surface this pass: GPL-3.0 has no § 13 network clause, so all three may be HOSTED for a client
+with no source-disclosure duty** — `p305`'s *"isolate it as a service"* was priced against the wrong
+licence → `P90`. 🔴 **And the base CONTRADICTED ITSELF the whole time:** `repos/foundations.md:583` said
+*"GNU GPL"*, `compose/patterns.md:614` said *"(GPL)"*, `intel/open-gaps.md:9975` said `GPL-3.0`, while
+five other places said AGPL — **fifteen gates ran and none compares two of this base's own shelves to
+each other** → `T-p307e`, `ACTION p307-R` item 2. 🔴 **`ACTION p306-R` item 3 asked for a longer filename
+ladder; the ladder is RETIRED instead:** built to spec it declared
+[`openedx/XBlock`](https://github.com/openedx/XBlock) licence-less, **two independent channels agreed
+(`raw` 404, `github.com/blob` 404), and both were wrong — the file is `LICENSE.TXT`** → `T-p307a`.
+🟢 **`git clone --depth 1 --filter=blob:none` WORKS on third-party repos** (`rc=0`, 2.4 s), so
+`git ls-tree HEAD` **enumerates** the root instead of guessing names. 🟢 **`make hooks` RUNS — and this pass publishes GATED, 16/16 green, the first time in three passes** —
+refuting the *"refused as external code"* carried by `p305` and `p306`; 🔵 **third inherited
+environmental absence refuted in two passes** → `T-p307d`. 🟢 **`ACTION p306-R` item 6 DISCHARGED: Canada
+settles on BOTH open questions** — Ontario has no AI memorandum but makes *"Cyber Safety and Artificial
+Intelligence"* **one of four MANDATORY PA-day topics for 2026-27**, and Alberta's circulating guidance is
+confirmed to be the **School Boards Association's**, with the real gate at DIVISION level (Lethbridge: a
+full **Privacy Impact Assessment** before any genAI model is approved) → `P91`. 🔴 **Chile's Ley 21.719,
+which `p306` called the region's most actionable datum, is IN DOUBT six weeks out**: delay bill
+`18.623-07` live since `2026-09-01`, and the data-protection agency **is not constituted**. 🟢 **The
+*"forced architecture"* breaks at the TUTORING layer:**
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) is **BSD-3-Clause,
+111★/193 forks, Docker-first, Arabic/French/English** → `T-p307f`, `P89`. 🟢 **Three new patterns
+(`P89`-`P91`), seven new trends (`T-p307a`-`g`), one new standing gate (`gate-payload-pin`, 9 controls).**
+
+⏱️ **Dating note:** `p304` through `p307` all carry `2026-10-19` — **dated by evidence, not by commit**,
+the base's standing rule.
+
+### 🟢 `ACTION p306-R` — disposition, item by item
+
+| # | item | disposition |
+|---|---|---|
+| 1 | Exploit the restored payload channel on this base's own backlog | 🟢 **DISCHARGED — the leg of the pass.** 59 backlog slugs + 11 controls = 70 payloads. `56/56` comparable rows AGREE |
+| 2 | Make the licence verdict THREE-VALUED | 🟢 **DONE and wired standing.** `GRANT` / `POINTER` / `RESERVED`, 9 offline controls in `make hooks` as `gate-payload-pin` |
+| 3 | Add lower-case `license.txt` to every filename ladder | 🔴 **REFUSED AND REPLACED.** Built to spec, the ladder produced a false absence on `openedx/XBlock` (`LICENSE.TXT`). The ladder is retired in favour of `git ls-tree` enumeration |
+| 4 | Enumerate `digitalcredentials` pages 2-5 | 🟡 **PARTLY — page 2 only.** 30 enumerated, 6 probed, 6/6 GRANT. 🔴 **66 of 126 still unread** |
+| 5 | Upgrade the Art 5(1)(f) screen to a CODE read | 🔴 **NOT DONE.** The channel now exists, so this is a refusal of scope, not of capability. Re-registered |
+| 6 | Canada needs a primary-source pass | 🟢 **DISCHARGED on the questions, 🔴 NOT on the provenance.** Both open questions close; no ministry page is reachable, so every Canadian fact is search-snippet-grade |
+| 7 | Do NOT re-litigate Frappe Learning, the ERP/CRM nil, `github trending education AI`, or "no primary source" | 🟢 **OBEYED.** None was re-run. `frappe/lms` was re-confirmed AGPL-3.0 only as a by-product of the title census |
+
+### 🟢 What was found
+
+| finding | verdict |
+|---|---|
+| 🔴 **the licence that was wrong for two passes** | [`LTLTutor`](https://github.com/brownplt/LTLTutor) `35 148 B` and [`logicits`](https://github.com/IgorFonck/logicits) `35 149 B` title-read as **`GNU GENERAL PUBLIC LICENSE Version 3`** → 🔴 **GPL-3.0, not AGPL-3.0.** [`tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) is the same stock text. 🟢 All three normalise to `3743f7a4ab51` |
+| 🟢 **what that changes commercially** | 🟢 **GPL-3.0 has no § 13 network clause: hosting for a client triggers NOTHING.** The duty attaches to CONVEYANCE. 🔴 The AGPL constraint stands exactly where `p306`'s layer rule predicted — on the systems of record, [`frappe/lms`](https://github.com/frappe/lms) `33 893 B` and [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) `34 520 B`, both titled `GNU AFFERO…` |
+| 🔴 **how it survived** | 🔵 **A byte-LENGTH SERIES was used to name a licence family — in the same pass that wrote *"length is not an identity key."*** 🟢 Replacement: **read the title line, version included** → `T-p307b` |
+| 🔴 **the base held the right answer** | `repos/foundations.md:583` *"GNU GPL"* · `compose/patterns.md:614` *"(GPL)"* · `intel/open-gaps.md:9975` `GPL-3.0`. 🔴 **No instrument compares shelf to shelf; every gate grades this base against something OUTSIDE it** → `T-p307e` |
+| 🔴 **the false absence two channels agreed on** | [`openedx/XBlock`](https://github.com/openedx/XBlock): `raw` 404 **and** `github.com/blob` 404, both on `LICENSE.txt`. 🟢 **The file is `LICENSE.TXT`** (11 358 B `cfc7749b96f6`), found via PyPI's sdist (`License-File: LICENSE.TXT`). 🔵 **Two channels that share an ADDRESS share its error** → `T-p307a` |
+| 🔴 **the case axis has no bound** | One org, three spellings: `edx-platform` → `LICENSE`, `openedx-events` → `LICENSE.txt`, `XBlock` → `LICENSE.TXT`. 🔴 **Second case-driven false absence in two passes** (`frappe/lms`, lower-case `license.txt`) |
+| 🟢 **the replacement channel** | 🟢 **`git clone --depth 1 --filter=blob:none` on third-party repos: `rc=0`, ~2.4 s, ~1.5 MB** — carried as REFUSED by `p305` and `p306`. `ls-tree` enumerates, `show` pulls one blob |
+| 🟢 **`make hooks` RUNS** | 🟢 **16/16 green at publication** — refutes two passes of *"refused as external code"*, and `p307` is the first GATED publication since `p304`. 🔴 At `HEAD` it was 14/15: `gate-offline` → `p253` fired on **`p306`'s** sections, which `p306` could not see and which expire the moment this pass prepends → `T-p307g` |
+| 🟢 **the shelves held** | 🟢 **`56/56`.** 🔴 Three apparent disagreements were the EXTRACTOR's (`p298`'s sibling-in-a-description-cell class, twice; a conflict-table row read as a claim, once); one family label was the PROBER's (`oat-sa` GPL-2.0, not LGPL) |
+| 🔴 **three instrument defects, caught pre-publication** | (1) Apache's clause line-wraps and graded as `POINTER`; (2) `Ed-Fi-ODS`'s root entry `Licenses` is a DIRECTORY of PDFs and its tree index graded as LGPL; (3) GPL-2.0 graded LGPL because its own body recommends the Lesser licence. 🟢 **All three are now standing controls** |
+| 🟢 **an independent channel caught defect 3** | 🟢 **Five package registries are reachable** (PyPI, npm, Packagist, RubyGems, Maven Central) plus Docker Hub. Packagist says `oat-sa/tao-core` is `GPL-2.0-only` — agreeing with the shelf, disagreeing with the instrument |
+| 🟢 **stock Apache is ONE text, four representations** | Normalised, **nine** payloads collapse to `283ea6cc2997` across **three** byte lengths and **four** raw `sha256₁₂`. 🔵 `p306`'s *"two distinct Apache payloads at 11 357 B"* = one leading newline vs one missing trailing newline |
+| 🟡 **the POINTER class is not rare** | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) **877★** — `LICENSE` is the CC **deed**, not the legalcode, and says so. 🔴 **`p305` quoted *"even commercially"* from it twice.** 🟢 Verdict right, provenance wrong → `T-p307c` |
+| 🟢 **the forced architecture breaks at the tutoring layer** | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) — 🟢 **BSD-3-Clause, stock, no added clause** (`1 531 B` `fa56a9650ca4`), **111★ / 193 forks**, Docker-first, Ollama + OpenAI-compatible, local RAG, **RBAC + human-in-the-loop response review**, UI **Arabic/French/English**. 🔵 **Mechanism is OPEN-CORE, not geography: it has a proprietary EE to sell** → `T-p307f` |
+| 🟢 **three more permissive agent rows** | [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) MIT `1 072 B` (LangGraph tutoring loop) · [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) MIT `1 068 B` (carried mainly as a NAME-COLLISION guard) · [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) GPL-3.0 |
+| 🟢 **two absences upgraded, one address settled** | [`tianshuo/trainingllm`](https://github.com/tianshuo/trainingllm) and [`im-rk/SkillTrace`](https://github.com/im-rk/SkillTrace) now read *"root tree ENUMERATED, no licence-named blob"*. 🔴 [`concentricsky/badgr-server`](https://github.com/concentricsky/badgr-server) — the address is dead, and so are `1EdTech/` and `IMSGlobal/`. **No verdict carried; the question is closed** |
+| 🔴 **1 in 10 default branches is neither `main` nor `master`** | 7 of 70: `develop` ×3, `unstable`, `development`, and 🔴 **`0.7` / `3.x`** (`php-xapi/*`) — **version-named defaults no ladder would guess** |
+| 🟢 **`digitalcredentials` page 2** | 30 enumerated, all showing a licence (26 MIT, 2 BSD-3, 2 `Other`); 6 probed, 6 GRANT. 🟢 **`Other` decodes to BSD-3-Clause `3/3`** with `p306`'s `did-method-web` — useless as a classifier, usable as triage in a calibrated org |
+| 🟢 **North America — Canada closes** | 🟢 **Ontario: no AI memorandum, but *"Cyber Safety and Artificial Intelligence"* is ONE OF FOUR MANDATORY PA-day topics for 2026-27**, plus PPM 172 for French-language boards. 🔴 **Alberta: the circulating guidance IS the School Boards Association's (v1.0, `2024-09-13`)** — `p306`'s suspicion confirmed; no ministry framework. 🟢 **The live gate is at DIVISION level** — Lethbridge requires a full **PIA** before any genAI model is approved. 🟡 ~63 % of teachers report no AI-instruction training (Fraser Institute) |
+| 🔴 **LATAM — the Chile date is in doubt** | 🔴 Delay bill **`18.623-07`** filed `2026-09-01`, *suma urgencia* renewed in October, still in first trámite; 🔴 **the data-protection Agency is NOT constituted** (Senate rejected the terna in May). 🟡 Sources are consultancy blogs and disagree |
+| 🟢 **LATAM — Brazil twice, Peru once** | 🟢 **MEC guide on AI in basic education `2026-03`**; 🟢 **federal children's-AI guide `2026-10-15`** from JUSTICE + HUMAN RIGHTS, not education — 🔵 a multi-owner compliance surface. 🟢 **Peru: World Bank evaluation `2026-07-02`, the region's only OUTCOME evidence.** 🔴 Mexico and Colombia: informed gap at ministry level |
+| 🔴 **APAC — nothing new, and that is the finding** | A jurisdiction-named search (Japan, Australia, India, Korea) returned **no 2026 school-AI instrument**. 🔴 `p305`'s five APAC jurisdictions are carried UNCHANGED and are now two passes old. 🔵 **Declared, so silence does not read as coverage** |
+| 🟢 **EMEA gains SUPPLY, not regulation** | `open-tutor-ai-CE` places EMEA/Maghreb on the supply side at platform scale for the first time. 🔴 Germany, France, Spain, Netherlands NOT re-searched |
+
+### 🔴 What this pass could not establish
+
+🔴 **No primary legal or market source is reachable.** Addresses tried and refused, per `T-p306a`'s rule:
+`eur-lex.europa.eu`, `ec.europa.eu`, `gesetze-im-internet.de`, `ontario.ca`, `unesdoc.unesco.org`,
+`oecd.org` — all `000` on `curl`, `ENOTFOUND` on `WebFetch`. **Every regulatory and market figure in
+`intel/` this pass is search-snippet-attributed.**
+🔴 **`api.github.com` is reachable and AUTHENTICATED** (`/rate_limit` → `200`, limit `15 000/h`) **but
+every repository, org and search endpoint outside this session's scope returns `403` with an explicit
+session-scoping message.** 🔵 **It is an AUTHORIZATION boundary, not a network one** — which is a
+correction to how this base has described it, and it means **no star integer from an API.** The
+`111★ / 193 forks` above is as `github.com` renders it.
+🔴 **`huggingface.co` is NOT reachable** (`000`) — every education model and dataset published there is
+outside this base's reach. 🟢 **`gitlab.com` IS reachable and has never been searched by any pass.**
+🔴 **No code, commit history or test suite was read in any repository.** The clone channel makes it
+possible for the first time; the leg was spent on items 1-4 and 6.
+🔴 **`ACTION p306-R` item 5 (the Art 5(1)(f) CODE read) was not performed.**
+🔴 **66 of the 126 `digitalcredentials` repositories (pages 3-5) are UNREAD** — an informed gap with an
+exact denominator.
+🟡 **`gate-offline` was RED at `HEAD`, on `p306`'s sections, and is GREEN at publication** — `p253-settled-fact-regression` fires where
+*"Annex III"* in one table row meets *"unresolved"* in another, with no authority token between them.
+🔵 **The fact it is defending is not in question here and is not re-opened: Annex III education duties
+bind on `2027-12-02` under `Regulation (EU) 2026/1744`, settled by `p233` and relied on by `p241`.**
+🔵 **This very paragraph tripped the gate on its first run and was cleared by citing that authority —
+which is the behaviour `p253` was built to produce, demonstrated on the pass that reports it.**
+🟡 **Measured and NOT patched: `--all` reports `20` findings base-wide, `14` of them on
+[`intel/open-gaps.md`](intel/open-gaps.md)** — a file whose purpose is to record unresolved things, inside
+a gate that fires on the word. 🔵 **A pass should not redesign a control in the same hour it first manages
+to run it** → `ACTION p307-R` item 3.
+🔴 **The Canadian, Chilean and Brazilian findings rest on secondary sources only**, several of them
+compliance-consultancy blogs that contradict each other on Chile's staging.
+🟡 **`Open-TutorAi`'s `193 forks / 111 stars` is one reading of two rendered integers**, not independently
+verified.
+
+### 🟢 `ACTION p307-R` — ranked for `p308`
+
+1. 🔴 **Build the SHELF-CONSISTENCY gate** — for every slug carried on two or more shelves, compare the
+   licence cells and fail on disagreement. 🟢 **The data is already tabular and the slug is the key.**
+   🔵 **This pass's headline defect lived in five places against three correct ones for two passes, and
+   fifteen gates could not see it. It is the cheapest high-value instrument left in the base.**
+2. 🔴 **Re-pin every long copyleft payload by TITLE, not length.** The `AGPL`/`GPL-3.0` conflation was
+   found on three rows; 🔴 **nothing has checked the rest of the base's `GPL` labels.** Bounded: filter
+   the shelves for payloads over 17 000 B and read line one of each.
+3. 🟡 **Decide `p253`'s two measured problems, do not drift past them**: (a) a table scope collides a
+   subject in one row with a hedge in another; (b) `intel/open-gaps.md` is inside a gate that fires on
+   the vocabulary that file exists to use. 🔵 **Either narrow the scope to a row window, or drop
+   `open-gaps.md` from `SHELVES` — but decide, and record which.**
+4. 🟡 **Spend the clone channel on CODE, which no pass has ever read.** `ACTION p306-R` item 5 (the
+   Art 5(1)(f) screen on camera-touching rows) is the highest-value first use: the screen so far is
+   names-and-prose, and a repository whose row text never mentions a face can still import one.
+5. 🟡 **Normalise the whole base's hash column.** Nine stock-Apache payloads are recorded as distinct;
+   recompute `nsha12` for every pinned payload and collapse the duplicates. 🔵 **Cheap, and it retires a
+   false "distinct payload" count that four passes have been adding to.**
+6. 🔵 **Search `gitlab.com`.** It is reachable, no pass has touched it, and the EMEA sovereignty thesis
+   predicts European education projects host there rather than on GitHub. 🔴 **Prediction registered in
+   advance so it can be scored.**
+7. 🔵 **Do NOT re-litigate**: Frappe Learning (**AGPL-3.0**, title-confirmed twice), the education
+   ERP/CRM nil, `github trending education AI`, `concentricsky/badgr-server` (all three addresses dead),
+   and *"no primary source"* — which is **true for legal and market hosts and FALSE for GitHub, PyPI,
+   npm, Packagist, RubyGems, Maven Central and Docker Hub.** 🔵 **Say which, every time.**
+
 ## Pass 306 — 2026-10-19 — **THE "NO PRIMARY SOURCE" FINDING THAT TWENTY-FOUR PASSES INHERITED WAS AN UNTESTED HOSTNAME, AND THE LAYER `p305` SENT THIS PASS TO WORK BREAKS THE VERTICAL'S "FORCED ARCHITECTURE": 23 GRANTS IN CREDENTIALING, EVERY ONE PERMISSIVE, AT PLATFORM SCALE**
 
 **One-line summary:** 🟢 **`curl https://raw.githubusercontent.com/{slug}/{branch}/{file}` returns HTTP 200

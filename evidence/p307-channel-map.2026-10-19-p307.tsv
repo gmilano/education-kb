@@ -1,0 +1,31 @@
+channel	address	result	note
+curl	https://raw.githubusercontent.com/{slug}/{branch}/{file}	200	byte-exact payloads; carried from p306, re-confirmed
+curl	https://github.com/{owner}/{repo}	403	agent-proxy refusal, not a GitHub status
+curl	https://api.github.com/rate_limit	200	limit 15000/h, authenticated — the HOST is reachable
+curl	https://api.github.com/repos/{other}/{repo}	403	"GitHub access to this repository is not enabled for this session"
+curl	https://api.github.com/orgs/{org}/repos	403	"sessions are bound to their configured repositories"
+curl	https://api.github.com/search/repositories	403	same session-scoping refusal
+git	ls-remote --symref https://github.com/{slug}	OK	existence + default branch (p305)
+git	clone --depth 1 --filter=blob:none https://github.com/{slug}	OK	~2.4 s, ~1.5 MB — REFUTES the "clone refused" carried at p305/p306
+git	-C {repo} ls-tree HEAD	OK	exact root filenames: retires the filename ladder
+git	-C {repo} show HEAD:{file}	OK	lazy single-blob fetch, byte-exact
+curl	https://pypi.org/pypi/{pkg}/json	200	declared licence + License-File name
+curl	https://files.pythonhosted.org/.../{sdist}	200	sdist PKG-INFO: License-Expression, License-File
+curl	https://registry.npmjs.org/{pkg}	200	declared licence
+curl	https://packagist.org/packages/{vendor}/{pkg}.json	200	declared licence
+curl	https://rubygems.org/api/v1/gems/{gem}.json	200	declared licence
+curl	https://repo1.maven.org/maven2/	200	Maven Central reachable
+curl	https://hub.docker.com/v2/repositories/{ns}/{img}	200	image metadata reachable
+curl	https://gitlab.com/explore	200 (after 301)	a SECOND forge is reachable — untouched this pass
+curl	https://crates.io/api/v1/crates/{crate}	403	refused
+curl	https://huggingface.co/api/models	000	NOT reachable — models/datasets cannot be verified from here
+curl	https://eur-lex.europa.eu/	000	primary legal source NOT reachable
+curl	https://ec.europa.eu/	000	primary legal source NOT reachable
+curl	https://www.gesetze-im-internet.de/	000	primary legal source NOT reachable
+curl	https://www.ontario.ca/	000	primary government source NOT reachable
+curl	https://unesdoc.unesco.org/	000	primary source NOT reachable
+curl	https://www.oecd.org/	000	primary source NOT reachable
+WebFetch	https://github.com/orgs/{org}/repositories?page=N	OK	org listing with licence column and stars
+WebFetch	https://github.com/{slug}	OK	stars, forks, README prose
+WebFetch	https://www.ontario.ca/...	ENOTFOUND	DNS allowlist, not a site error
+make	hooks	RUNS	14/15 green — REFUTES "refused as external code" carried at p305/p306

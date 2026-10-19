@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 307: 70 PAYLOADS, A RETIRED FILENAME LADDER, AND A CASE-SENSITIVE 404 THAT TWO INDEPENDENT CHANNELS AGREED WAS AN ABSENCE
+
+🟢 **Channel, and it supersedes `p306`'s:** `git clone --depth 1 --filter=blob:none` works on third-party
+repositories (`rc=0`, ~2.4 s, ~1.5 MB), so `git ls-tree HEAD` **enumerates the root filenames** and
+`git show HEAD:{file}` pulls the one blob. 🔴 **`p305` and `p306` both carried *"`git clone` of
+third-party repos is refused by the execution policy."* Re-tested this pass: it is not.**
+
+🔴 **Why it matters more than a speed-up.** Built to `ACTION p306-R` item 3's spec — fifteen filenames
+including lower case — a ladder returned `NO-PAYLOAD` for
+[`openedx/XBlock`](https://github.com/openedx/XBlock). `raw.githubusercontent.com` said `404`;
+`github.com/.../blob/master/LICENSE.txt` said `404` on a different client. 🟢 **Both wrong: the file is
+`LICENSE.TXT`.** 🔵 **The README's own link and the licence badge both point at the lower-case spelling
+that 404s.** 🟢 **PyPI's sdist resolved it** (`License-Expression: Apache-2.0`,
+`License-File: LICENSE.TXT`) — `p280`'s package channel doing exactly its job — and the payload then read
+`11 358 B` `cfc7749b96f6`.
+
+🔵 **Inside ONE org:** `openedx/edx-platform` → `LICENSE`, `openedx/openedx-events` → `LICENSE.txt`,
+`openedx/XBlock` → `LICENSE.TXT`. 🔴 **The case axis has no bound. A ladder cannot be completed, so it is
+retired rather than extended.**
+
+### 🟢 The 70-row probe
+
+| verdict | n |
+|---|---|
+| 🟢 `GRANT` | 64 — 36 MIT · 17 Apache-2.0 · 3 BSD-3-Clause · 2 GPL-3.0 · 2 GPL-2.0 · 2 AGPL-3.0 · 1 ISC · 1 CC0-1.0 |
+| 🟡 `POINTER` | 2 |
+| 🔴 `RESERVED` | 1 |
+| 🔴 `NO-PAYLOAD` (root tree enumerated) | 2 |
+| 🔴 `NO-SLUG` (address dead) | 1 |
+
+🟢 **`56/56` comparable backlog rows AGREE with their payload.** 🔵 **The sidebar channel was honest where
+this base used it.**
+
+🔴 **The default branch is not `main`/`master` in `7/70`:** `develop` ×3 (`frappe/lms`, `oat-sa/tao-core`,
+`datakind/student-success-tool`), `unstable` (`learningequality/studio`), `development`
+(`im-rk/SkillTrace`), and 🔴 **`0.7` and `3.x`** (`php-xapi/client`, `php-xapi/model`) — 🔵 **version-named
+default branches, which no branch ladder would ever guess.**
+
+### 🟢 Stock Apache is ONE text with at least four byte-representations
+
+🟢 **Normalising (CRLF → LF, strip the ends) collapses NINE payloads to `283ea6cc2997`:**
+[`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) (11 357) ·
+[`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) (11 357) ·
+[`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (11 357) ·
+[`walt-id/waltid-identity`](https://github.com/walt-id/waltid-identity) (11 357) ·
+[`numbas/Numbas`](https://github.com/numbas/Numbas) (11 357) ·
+[`rolfis/qti-convert`](https://github.com/rolfis/qti-convert) (11 357) ·
+[`google/prog-edu-assistant`](https://github.com/google/prog-edu-assistant) (11 358) ·
+[`openedx/XBlock`](https://github.com/openedx/XBlock) (11 358) ·
+[`uPortal-Project/uPortal`](https://github.com/uPortal-Project/uPortal) (11 359).
+
+🔴 **Three byte lengths, four raw `sha256₁₂`, ONE licence.** 🔵 **`p306`'s *"TWO distinct Apache payloads
+at 11 357 B"* was a leading newline against a missing trailing newline** — measured by `diff` this pass.
+🟢 **The hash is byte-identity; licence identity needs the normalised text.**
+
+🟡 **Non-stock Apache rows, each a genuinely different text:** `Cvmcosta/ltijs` 11 361 ·
+`open-edge-platform/education-ai-suite` 11 351 · `1EdTech/lti-1-3-php-library` 11 343 ·
+`Orenda-Project/rumi-platform` 11 287 · `Ed-Fi-Alliance-OSS/edfi-oneroster` 10 173 ·
+`Ed-Fi-Alliance-OSS/Ed-Fi-ODS` 10 172 · `tsugiproject/tsugi` 10 273 (Apache without the appendix).
+
+### 🟢 `digitalcredentials` page 2 — 30 enumerated, 6 probed, and the `Other` label decodes
+
+🟢 **Every one of the 30 shows a licence in the column: 26 MIT, 2 BSD-3-Clause, 2 `Other`.**
+🟢 **6 probed, 6 GRANT:** [`docs`](https://github.com/digitalcredentials/docs) MIT 1 075 B `f08b8fdc5771`
+(22★) · [`cred-admin`](https://github.com/digitalcredentials/cred-admin) MIT 1 060 B `0bf0f897aadf` ·
+[`bnid`](https://github.com/digitalcredentials/bnid) BSD-3 1 498 B `fb408e6f6832` ·
+[`ezcap`](https://github.com/digitalcredentials/ezcap) BSD-3 1 528 B `e599011c209f` ·
+🔴 [`did-io`](https://github.com/digitalcredentials/did-io) **`Other` → BSD-3** 2 228 B `a66b41631b9b` ·
+🔴 [`did-method-key`](https://github.com/digitalcredentials/did-method-key) **`Other` → BSD-3** 2 236 B
+`a243a20303fe`.
+
+🟢 **With `p306`'s `did-method-web`, the `Other` label is `3/3` BSD-3-Clause with a non-stock preamble.**
+🔵 **Useless as a classifier, usable as TRIAGE in a calibrated org.** 🔴 **66 of 126 (pages 3-5) unread.**
+
+### 🔴 Three defects this pass's own instrument shipped, all caught before publication
+
+🔵 **Recorded because `p306` named the class — a rule defeated by the very thing it screens for — and
+because `ACTION p305-R` item 1 asked for exactly this control.**
+
+1. 🔴 **A line-wrapped clause.** Apache-2.0's *"hereby"* and *"grants to You a perpetual"* fall on
+   opposite sides of a newline in [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi)'s payload;
+   a raw-bytes matcher graded a full Apache licence as a `POINTER`. 🟢 **Fix: match whitespace-flattened
+   text.**
+2. 🔴 **A DIRECTORY read as a payload.** [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS)
+   has a root entry `Licenses` that is a folder of six PDFs; `git show HEAD:Licenses` prints the tree
+   index, the index contains *"GNU Lesser General Public License.pdf"*, and the row graded **LGPL**
+   against a repository that is Apache-2.0 at `LICENSE.txt`. 🟢 **Fix: `ls-tree` with the type column;
+   blobs only.** 🔵 **1 of 70 rows affected, and it is the only row that moved.**
+3. 🔴 **GPL-2.0 graded as LGPL**, because GPL-2.0's own body says *"use the GNU Lesser General Public
+   License instead of this License"*. 🟢 **Fix: the GNU family is read from the TITLE, version included.**
+   🔵 **Caught by an INDEPENDENT channel — Packagist reports `oat-sa/tao-core` as `GPL-2.0-only`, agreeing
+   with the shelf and disagreeing with the instrument.**
+
+🟢 **All three are now standing offline controls in
+[`compose/code/p307-payload-pin/test_probe_p307.py`](../compose/code/p307-payload-pin/test_probe_p307.py),
+wired into `make hooks` as `gate-payload-pin` — 9 controls, green.**
+
 ## 2026-10-19 — Pass 306: THE CREDENTIALING SHELF ENTERS THIS BASE WITH 23 PAYLOAD-PINNED GRANTS AND NOT ONE COPYLEFT AMONG THEM — AND THE ORG IS 126 REPOSITORIES, NOT THE SIX `p303` RECORDED
 
 🟢 **Channel, and it is new: `curl https://raw.githubusercontent.com/{slug}/{branch}/{file}` returns
