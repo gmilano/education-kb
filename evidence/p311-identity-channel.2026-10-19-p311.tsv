@@ -1,0 +1,3 @@
+pair	family	raw_bytes_a	raw_sha_a	raw_bytes_b	raw_sha_b	delta	same_raw	canonical_sha	same_grant
+noplag-engine|reference-audit	Apache-2.0	11358	cfc7749b96f6	11357	c71d239df917	one leading newline (a[1:]==b exactly)	NO	283ea6cc2997	YES
+open-detector|gradebridge	MIT	1066	2e7c69b15c38	1100	6203d12e65d7	34 B holder string, line 3 only, 21 lines each	NO	d27b4c1636e1	YES

@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 311 — THE SIS LAYER IS A REAL VERTICAL AND ITS MOST-STARRED PERMISSIVE ROW IS `MIT` AT `406`★; A `345`★ PROJECT ON THE SAME AXIS SERVES NO GRANT AT ALL
+
+⏱️ **Pass 311 of `2026-10-19`.** Evidence:
+[`p311-licence-probe.2026-10-19-p311.tsv`](../evidence/p311-licence-probe.2026-10-19-p311.tsv) ·
+[`p311-axis-census.2026-10-19-p311.tsv`](../evidence/p311-axis-census.2026-10-19-p311.tsv) ·
+[`p311-carried-check.2026-10-19-p311.txt`](../evidence/p311-carried-check.2026-10-19-p311.txt).
+
+### 🟢 Why the SIS axis IS a vertical, where integrity was not
+
+`p310` concluded *"integrity is not a vertical platform and nobody should sell it as one"* — the
+111 `academic-integrity` repositories were detectors and checks, not systems a client runs.
+🟢 **[`student-information-system`](https://github.com/topics/student-information-system) is the
+opposite case and the distinction is worth stating precisely: these are systems of record.** A SIS
+holds enrolment, attendance, grades, fees and timetables; it is the thing an institution already
+runs, which makes it the natural substrate for an AI layer rather than a product to compete with.
+
+🔵 **That is exactly the Odoo/Moodle/OpenMRS pattern this shelf exists to carry** — customise a
+real system, do not rebuild it.
+
+### 🔴 The licence shape of the axis, and it is the commercial finding
+
+| platform | Repo | ★ | Licence *(payload, bytes · sha)* | what a studio may do |
+|---|---|---|---|---|
+| **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | **647** | 🔴 **GPL-2.0** `15 214` · `d954e14e5c75` | 🔴 Whole-work copyleft. Integrate over the API; do not fork for SaaS |
+| 🟢 **Academico** | [academico-sis/academico](https://github.com/academico-sis/academico) | **406** | 🟢 **MIT** `1 094` · `6051a15f4d44` | 🟢 **Anything.** The most-starred PERMISSIVE SIS read on this axis, and a Laravel/Filament codebase a studio can extend in place |
+| **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | **345** | 🔴 **GPL-2.0** `17 286` · `224ac3d403e3` — served at **`docs/License.txt`**, 🔴 **not at any ROOT rung** | 🔴 Whole-work copyleft. Integrate over the API; do not fork for SaaS |
+| **koakademy** | [yukazakiri/koakademy](https://github.com/yukazakiri/koakademy) | 7 | 🔴 **AGPL-3.0** `34 523` · `8486a10c4393` | 🔴 **Network copyleft — a hosted deployment triggers disclosure.** The sharpest trap on this shelf: SaaS is the normal delivery mode for a SIS |
+| **MeetPlan** | [MeetPlan/MeetPlanBackend](https://github.com/MeetPlan/MeetPlanBackend) | 8 | 🔴 **AGPL-3.0** `34 523` · `8486a10c4393` | 🔴 Same |
+| 🟢 **Shiori** | [infinity-decoder/Shiori](https://github.com/infinity-decoder/Shiori) | 8 | 🟢 **MIT** `1 072` · `03d351572510` | 🟢 **The only permissive row read on this axis.** Small, PHP, grant at `LICENSE.txt` |
+| 🔴 **Matrix** | [HalidCisse/Matrix](https://github.com/HalidCisse/Matrix) | 20 | 🔴 **`DBAD-1.1`** `1 127` · `65569613b0b7` | 🔴 **DO NOT SHIP** — see below |
+
+🔵 **The shape, counted: `2` MIT · `1` GPL-2.0 · `2` AGPL-3.0 · `1` NO-GRANT · `1` unclassifiable.**
+
+🟢 **The good news is at the top of the axis and this base did not expect it:**
+[`academico`](https://github.com/academico-sis/academico) at **406★ is MIT**, so the
+second-most-starred SIS on the axis can be extended in place with no copyleft boundary to defend.
+🔵 For the copyleft rows the consequence is not "avoid these" — a SIS is a system of record and
+copyleft is normal in that layer — it is **that the AI layer must be an integration, not a fork**:
+speak to the SIS over its API or an LTI/MCP boundary and keep the model and orchestration in a
+separate work. 🔴 **A fork of an AGPL SIS delivered as SaaS is a source-disclosure event.**
+
+🔴 **And one 345★ project keeps its grant where no root ladder looks.**
+[`openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) returns `404` at every ROOT licence
+rung this base probes — and it **is** `GPL-2.0`, served at **`docs/License.txt`** (`17 286` B ·
+`224ac3d403e3`) with a second copy at `docs/LICENSE.rtf`. 🔵 This pass wrote *"no grant"* and
+**`gate-enumeration` (`p275`) refuted it by enumerating the tree** — which is precisely what that
+gate is for. 🔴 **A root-ladder `404` means *not at this address*, never *no grant*** (`T-p309c`),
+and a 345★ platform is exactly the row where the difference is worth a tree walk.
+
+### 🔴 This table's first draft was WRONG, and the standing gate caught it
+
+🔴 **The first version of the three rows above asserted `GPL-3.0` for `academico`, `GPL-2.0` for
+`openSIS-Classic` and marked all three *"carried; not re-probed this pass"* — and all three
+assertions were unverified.** `academico` is **MIT**, which
+[`repos/foundations.md`](../repos/foundations.md) had already recorded first-hand at `p272`
+(`1 094` B), and `openSIS-Classic` keeps its `GPL-2.0` grant under `docs/` where no root rung
+reaches it.
+
+🟢 **`gate-shelf-consistency` (`p308`) went red on exactly that**, naming
+`academico-sis/academico: GPL-3.0 (verticals/solutions.md) vs MIT (repos/foundations.md)`. 🔵 **The
+gate `p308` built to stop two shelves disagreeing caught a cell this pass invented while writing
+a third one** — and the repair was to probe all three
+([ledger](../evidence/p311-sis-probe.2026-10-19-p311.tsv)), not to reword the claim.
+🔴 **Then the SECOND draft was wrong in the other direction**, and a second gate caught that one:
+the repair read the root-ladder `404` for `openSIS-Classic` as an absence, and **`gate-enumeration`
+(`p275`) refuted it by walking the tree**, naming two candidate grants under `docs/`. 🟢 **The row
+is `GPL-2.0`, `17 286` B · `224ac3d403e3`** — which is what the discarded first draft had guessed,
+and guessing right is not the same as knowing.
+
+🔴 **The lesson is narrow and worth keeping: *"carried"* is not a citation, and a `404` is not an
+absence.** A licence written from recollection of what a shelf probably says is an assertion; this
+base already holds the first-hand answer for most slugs, one `make carried SLUG=…` away. 🟢 **Two
+standing gates caught two drafts of one table** — `p308`'s cross-shelf check and `p275`'s
+enumeration — which is the clearest demonstration this base has produced that the gates earn their
+runtime.
+
+### 🔴 The 23rd licence family lands on THIS shelf, and it is why "has a licence file?" is not a screen
+
+[`HalidCisse/Matrix`](https://github.com/HalidCisse/Matrix) — 20★, C#/WPF school management — serves
+the **`DON'T BE A DICK PUBLIC LICENSE` v1.1** (`1 127` B · `65569613b0b7`), as markdown with its
+clauses in blockquotes. Clause 1 is *«Do whatever you like with the original work, just don't be a
+dick»* over a list that is explicitly *«not limited to»*; clause 1b forbids reselling the
+unmodified original; clause 2 states an unquantified expectation of payment on commercial success.
+
+🔴 **A studio cannot bound its obligations under an open-ended subjective condition**, so the
+verdict is **do not ship, get counsel** — graded `CRITICAL`, not `LOW`. 🟢 **Every one of this
+base's eight payload readers ABSTAINS on it** and `p306` returns
+`commercial_use=UNDETERMINED`, which under `P250` is indistinguishable from PROHIBITED. **Nothing
+reads it as permissive.** 🔵 The screen that fails here is the cheap one: it HAS a licence file, it
+HAS stars, and both of those pass.
+
+### 🟢 The axis is saturated at the top — which is good news for this shelf
+
+Every top-3-by-stars row on both axes read this pass was **already carried**
+([ledger](../evidence/p311-carried-check.2026-10-19-p311.txt)): `rosariosis`, `academico`,
+`openSIS-Classic`, `Proctoring-AI` (633★), `CloakBox` (406★), `seb-win-refactoring` (355★). 🔵 **So
+this shelf's platform tier was already the right platform tier** — `ACTION p310-R` item 5 listed
+both axes as *"none yet read"* and that premise was wrong. 🟡 **166 of 183 SIS rows and 131 of 148
+proctoring rows remain unread**, and `p303`'s finding that the tail holds the non-US supply is
+untested on both.
+
+### 🔵 Where the proctoring axis sits relative to this shelf
+
+🔴 **Proctoring is NOT a vertical platform either, with one exception.**
+[`SafeExamBrowser`](https://github.com/SafeExamBrowser/seb-win-refactoring) (355★, already carried)
+is genuine platform-grade infrastructure — a locked-down browser institutions deploy at scale, with
+an LMS integration story. 🔵 Everything else read on the axis is a detector or a student project:
+single-purpose checks that belong on [`agents/top.md`](../agents/top.md), not here.
+🟡 **And the axis carries a standing EU AI Act caveat** — `p310` established that these systems are
+Annex III(3) HIGH-RISK and not prohibited, provided no component infers emotion or physiological
+state. That screen was run on code at `p310` for four rows; **it has NOT been run on any row added
+this pass** → `ACTION p311-R` item 6.
+
 ## 🟢 Pass 310 — INTEGRITY IS NOT A VERTICAL PLATFORM AND NOBODY SHOULD SELL IT AS ONE: `111` REPOSITORIES, `0` PLATFORMS, AND THE INSTITUTION ALREADY OWNS THE SYSTEM OF RECORD
 
 ⏱️ **Pass 310 of `2026-10-19`.** Evidence:

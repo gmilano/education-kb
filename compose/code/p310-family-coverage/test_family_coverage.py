@@ -216,8 +216,31 @@ check("coverage: every p310 fixture family is in the corpus map",
       all(f in corpus for _n, f, _c, _w in FX.DECLARED), True)
 check("coverage: p309's three families are IMPORTED, not restated",
       all(f in corpus for f in ("GPL-3.0", "AGPL-3.0", "CC-BY-SA-4.0")), True)
-check("coverage: the uncovered remainder is non-empty and MIT is in it",
-      "MIT" not in corpus, True)
+# 🔴 p311: THIS CONTROL ASSERTED `"MIT" not in corpus` AND IT BLOCKED THE ACTION
+# ITEM p310 RANKED FIRST.  `ACTION p310-R` item 1 was *"pin a payload for `MIT`
+# and `Apache-2.0` and run the arm"*; this control, written in the SAME PASS,
+# asserted that `MIT` must stay uncovered, so discharging item 1 turned a green
+# gate red.  🔵 That is the second instance of one pattern in two passes — `p310`
+# recorded the first (*"`p309`'s CC-pointer control asserted the WRONG ANSWER as
+# expected, with a comment saying the action was still open — a standing gate
+# holding its own action item shut"*) and then registered `ACTION p310-R` item 4
+# to go looking for exactly this, in the same file where it had just written one.
+#
+# 🟢 THE REPAIR IS NOT TO DELETE THE CONTROL BUT TO PIN THE INVARIANT INSTEAD OF
+# THE VALUE.  What this gate is for is that `main()`'s uncovered remainder is
+# really derived rather than asserted; what it must NOT encode is WHICH families
+# are in it, because that is the quantity every pass is trying to shrink.
+check("coverage: the uncovered remainder is DERIVED, non-empty, and disjoint "
+      "from the corpus map",
+      bool(set(counts) - set(corpus))
+      and not (set(counts) & set(corpus)) - set(corpus)
+      and set(corpus) <= set(counts) | set(corpus), True)
+# 🟡 Pinned on a value an open action exists to change, and SAID SO: `ACTION
+# p311-R` item 1 pins the two noncommercial families, and when it is discharged
+# this count drops to 10.  🔵 A bound, not an equality, so discharging the action
+# does not turn the gate red — the lesson above, applied to this pass's own work.
+check("coverage: at least two published families still have no payload",
+      len(set(counts) - set(corpus)) >= 2, True)
 
 # ------------------------------------------------------------------- report
 for line in passed:

@@ -1,0 +1,35 @@
+# p310 fixture coverage — the families this base PUBLISHES against the
+# families the dynamic arms hold a PAYLOAD for.
+#
+# family                            cells   fixture
+  🟢 MIT                                5586   p311-permissive-family-arm/mit-open-detector
+  🟢 Apache-2.0                         2354   p311-permissive-family-arm/apache-2.0-noplag-engine
+  🟢 AGPL-3.0                           1218   p309-affero-rung-census/agpl-3.0-jagr
+  🟢 GPL-3.0                            1040   p309-affero-rung-census/gpl-3.0-gatorgrader
+  🟢 GPL-2.0                             478   p311-permissive-family-arm/gpl-2.0-opensis
+  🟢 proprietary                         380   p310-family-coverage/proprietary-algomind
+  🔴 BSD-3-Clause                        302   —
+  🔴 LGPL-3.0                            291   —
+  🔴 ECL-2.0                             225   —
+  🟢 CC-BY-4.0                           180   p310-family-coverage/ccby-4.0-writing-support
+  🟢 MPL-2.0                             180   p311-permissive-family-arm/mpl-2.0-hacklympics
+  🟢 CC-BY-SA-4.0                        165   p309-affero-rung-census/ccbysa-4.0-education-agent-skills
+  🔴 ISC                                 162   —
+  🔴 CC-BY-NC-SA-4.0                     132   —
+  🟢 CC0-1.0                              80   p310-family-coverage/cc0-1.0-gen-mentor
+  🔴 0BSD                                 49   —
+  🔴 EPL-2.0                              47   —
+  🟢 CC-BY-NC-4.0                         42   p310-family-coverage/ccbync-4.0-aegis-graph
+  🔴 Unlicense                            39   —
+  🔴 BSD-2-Clause                         26   —
+  🟢 PolyForm-Noncommercial-1.0.0         25   p310-family-coverage/polyform-nc-1.0.0-paper-tutor-skills
+  🔴 CC-BY-NC-ND-4.0                      21   —
+#
+# published families=22  with a pinned payload=12  WITHOUT=10  coverage=55%
+#
+# 🔵 This is EXPOSURE WITH A DENOMINATOR, not a list of findings. An
+#    uncovered family means the dynamic arm has never run a single
+#    classifier against that family's real legalcode — so `DEFECT=0`
+#    says nothing about it either way. `p309` reported `11/11 CORRECT`
+#    at 14% coverage (3 of 22 families) and the CC rungs were broken
+#    at the time. This pass takes it to 55%.

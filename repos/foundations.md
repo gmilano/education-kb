@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 311 — THE FOUNDATIONAL LAYER GAINED A PAYLOAD-IDENTITY ORACLE, BECAUSE `bytes` + `sha` HAD BEEN ANSWERING A QUESTION IT CANNOT ANSWER
+
+⏱️ **Pass 311 of `2026-10-19`.** Evidence:
+[`p311-payload-pins.2026-10-19-p311.tsv`](../evidence/p311-payload-pins.2026-10-19-p311.tsv) ·
+[`p311-identity-channel.2026-10-19-p311.tsv`](../evidence/p311-identity-channel.2026-10-19-p311.tsv) ·
+[`p311-family-coverage.2026-10-19-p311.txt`](../evidence/p311-family-coverage.2026-10-19-p311.txt).
+
+### 🔴 The finding: this base's payload-identity convention is not a licence instrument, and `p310` used it as one
+
+Every payload here is pinned as `bytes` + `sha256_12`. That is the right evidence format and it is
+what makes a claim re-checkable. 🔴 **`p310` then certified seven `CC0` rows partly on *"six at the
+legalcode's exact `7 048` B"*.** Byte length and sha answer *"is this the same FILE?"*. They were
+read as answering *"is this the same GRANT?"* — `P250`'s two-questions lesson, in a third channel.
+
+Both halves are refuted on real payloads, and each is now a standing control:
+
+| licence FORM | the pair | raw | the whole difference | same grant? |
+|---|---|---|---|---|
+| **fixed document** | [`noplag-engine`](https://github.com/NoplagLabs/noplag-engine) / [`reference-audit`](https://github.com/constructorfabric/reference-audit) | `11 358` B `cfc7749b96f6` vs `11 357` B `c71d239df917` | 🔴 **one leading newline** — `a[1:] == b` EXACTLY | 🟢 **yes** |
+| **fill-in slot** | [`Open-Detector`](https://github.com/Imalwayshere/Open-Detector) / [`GradeBridge`](https://github.com/BridgeSuite/GradeBridge-Student-Submission) | `1 066` B `2e7c69b15c38` vs `1 100` B `6203d12e65d7` | 🔴 **the holder string** — 21 lines each, line 3 only, 34 B | 🟢 **yes** |
+
+🔵 **The split is exactly `p310`'s own holder-channel boundary** (*fill-in slot → 13 of 13; fixed
+document → 0 of 6*), carried from the HOLDER channel into the IDENTITY channel. 🔴 **For `MIT`,
+`BSD-3-Clause`, `BSD-2-Clause`, `ISC` and `0BSD` — 5 549 + 298 + 23 + 159 + 46 = `6 075` published
+cells — byte length is a function of a field that is NOT the grant, so an exact-byte-length test
+cannot certify the family even in principle.**
+
+🟢 **Corroborated independently the same pass**, on rows found on an unrelated axis:
+[`MeetPlan/MeetPlanBackend`](https://github.com/MeetPlan/MeetPlanBackend) serves `LICENSE` and
+[`yukazakiri/koakademy`](https://github.com/yukazakiri/koakademy) serves `LICENSE.md`, and the
+payload is **byte-identical** — `34 523` B · `8486a10c4393`. Two repositories, two filenames, one
+grant.
+
+### 🟢 The foundational row this adds — `payload_identity.py`
+
+| instrument | what it is | licence |
+|---|---|---|
+| [`p311-permissive-family-arm/payload_identity.py`](../compose/code/p311-permissive-family-arm/payload_identity.py) | The normalising identity oracle: `raw_identity()` (what this base already pins), `canonical_identity()`, `same_grant()`, `holder_line()`. **Six pinned payloads → four distinct grants.** | this KB |
+
+🔵 **It does NOT decide the family.** `p198`, `p150` and `p124` own that channel and this module
+delegates rather than restating them (`p309`: *"import the discriminator, never restate it"*). It
+answers one question: *once the parts that are not the grant are normalised away, is this the same
+grant document?*
+
+🟢 **The normalisation is deliberately MINIMAL and each step is named**, because a normaliser
+widened until everything matches proves nothing:
+
+0. 🔴 **a leading byte-order mark — and this step was MISSING from the first build.**
+   `OS4ED/openSIS-Classic`'s grant begins `ef bb bf`, and **`str.strip()` does not remove
+   `U+FEFF`** because Python does not classify the BOM as whitespace. A BOM'd and a BOM-less copy
+   of one grant produced two canonical shas — `9bd1685b5dad` against `5f42dc1e0231`. 🔵 **The Apache
+   pair's leading newline was caught only because a newline happens to BE whitespace; nothing in
+   the first build distinguished *invisible* from *whitespace*** — an oracle built to collapse
+   invisible prefixes, defeated by one;
+1. leading/trailing whitespace — **the step the Apache pair needs, and the whole of their difference**;
+2. line-ending form — 🟡 **declared and UNEXERCISED**: all seven payloads are LF. Stated, not claimed;
+3. the fill-in slot, **only** for the five families that have one, and the holder line is
+   **replaced by a marker, never deleted** — a template with no holder line is a different document.
+
+🔴 **The control that stops it being an over-loosened matcher**:
+`test_the_normaliser_still_separates_different_grants` requires `MIT` and `Apache-2.0` to remain
+two grants, and `test_masking_the_holder_does_not_delete_the_line` requires a holder-less template
+to stay distinct.
+
+### 🔴 A defect this file's own oracle shipped first, kept live as a negative control
+
+The first build of `holder_line()` was `^\s*copyright\s*(?:\(c\)|©)?.*$` — **a whole-body scan
+wearing an anchor**. On the `Apache-2.0` payloads it returned §4(c) PROSE — *"copyright notice
+that is included in or attached to the work"* — as a holder line.
+
+🔵 **Same class as `p306`'s `"affero" in low` and `"cc0" in low`, met while BUILDING the instrument
+that complains about it.** 🟢 Repaired by requiring an identified 4-digit year, which separates all
+three cases the payloads actually contain — and the refuted pattern is **kept in the module** so
+`test_the_refuted_holder_pattern_is_still_refuted` can assert it still reproduces its defect:
+
+| line | verdict |
+|---|---|
+| `Copyright (c) 2025 LI YUANJI` | 🟢 a notice |
+| `Copyright [yyyy] [name of copyright owner]` | 🔴 an UNFILLED template — **and `p310` graded both Apache rows `BLIND-FIXED-DOCUMENT` with holder `-`, so this is agreement with the channel the base already publishes** |
+| `copyright notice that is included in …` | 🔴 prose |
+
+### 🟢 Fixture coverage, re-reported on the axis that measures the base
+
+| metric | `p309` | `p310` | 🟢 `p311` |
+|---|---|---|---|
+| families with a pinned payload | 3 / 22 = `14 %` | 8 / 22 = `36 %` | **12 / 22 = `55 %`** |
+| 🟢 **CELLS exercised** | — | `3 095` / `12 845` = `24 %` | 🟢 **`11 684` / `12 977` = `90 %`** |
+
+🔵 **`p310` published the family-count number only, and it understated both the exposure and the
+repair.** `MIT` alone is 43 % of all licence cells, so a family-count average weights it equal to
+`CC-BY-NC-ND-4.0`'s 21. Both numbers are true; only one says how much of the base is exercised.
+
+🟢 **`family_coverage.corpus_families()` now DISCOVERS sibling instruments** instead of naming
+`p310` as a literal. Its own docstring said *"a restated list goes stale silently"* — and it did,
+within one pass: the next instrument pinned `MIT` and `Apache-2.0` and the census would have gone
+on reporting them uncovered. `test_the_census_discovers_this_instrument_without_naming_it` asserts
+the discovery **and** asserts the loader still contains no literal pass name.
+
+### 🔴 The `10` published families that still have NO payload, on BOTH axes
+
+| descending cells (the queue as printed) | by what a wrong answer COSTS |
+|---|---|
+| `BSD-3-Clause` 301 · `LGPL-3.0` 291 · `ECL-2.0` 225 · `ISC` 162 · **`CC-BY-NC-SA-4.0` 132** · `0BSD` 49 · `EPL-2.0` 47 · `Unlicense` 39 · `BSD-2-Clause` 26 · **`CC-BY-NC-ND-4.0` 21** | 🔴 **`CC-BY-NC-SA-4.0` 132** · 🔴 **`CC-BY-NC-ND-4.0` 21** · `LGPL-3.0` 291 · `ECL-2.0` 225 · `EPL-2.0` 47 · then the permissive tail |
+
+🔴 **The two families a studio MAY NOT SHIP hold 153 cells between them and sit at positions 5 and
+10 of 10 on the left.** Every `DEFECT-COMMERCIAL` this base has found was on a noncommercial
+family → `ACTION p311-R` item 1.
+
+🟢 **`GPL-2.0` left this list the hard way.** It was the largest uncovered family (443 cells) and it
+was pinned only because `gate-enumeration` refuted this pass's own *"no payload"* claim about
+[`openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) and handed over
+`17 286` B · `224ac3d403e3` — **a root-ladder `404` is *not at this address*, never *no grant***
+(`T-p309c`).
+
 ## 🟢 Pass 310 — THE POST-LLM INTEGRITY LAYER HAS A FOUNDATIONAL TIER AND IT IS `100 %` PERMISSIVE, AGAINST THE ASSESSMENT LAYER'S `4`-TO-`1` COPYLEFT — AND TWO OF ITS ROWS WERE ALREADY HERE
 
 ⏱️ **Pass 310 of `2026-10-19`.** Evidence:

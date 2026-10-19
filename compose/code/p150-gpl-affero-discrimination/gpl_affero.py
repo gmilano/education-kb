@@ -55,9 +55,27 @@ GPL_SEC13_AFFERO = re.compile(r"^\s*13\.\s+Use with the GNU Affero", re.M)
 NAIVE_AGPL = re.compile(r"GNU AFFERO GENERAL PUBLIC LICENSE", re.I)
 
 
+# 🔴 p311: A UTF-8 BOM SILENTLY DISABLED THIS WHOLE SURFACE, AND THE FALLBACK IT
+# DROPPED CALLERS ONTO IS THE BODY LADDER THIS MODULE EXISTS TO REPLACE.
+# `OS4ED/openSIS-Classic` serves `docs/License.txt` beginning `ef bb bf` — so its
+# title line is `"\ufeffGNU GENERAL PUBLIC LICENSE"`, every `TITLES` pattern
+# anchors at position 0, and `title_licence()` returned `None`.
+# 🔵 `str.strip()` does NOT remove `U+FEFF`: Python does not classify the BOM as
+# whitespace, so the existing per-line `.strip()` could never reach it.
+# 🔴 The consequence is measured, not hypothetical: `p191-spec-license-sweep`
+# imports this function, got `None`, fell through to its own body ladder and
+# graded a **GPL-2.0** payload **`GPL-3.0`** — the exact version confusion this
+# module's `GNU_FAMILIES` note was written to prevent, reached by disabling the
+# instrument rather than by getting it wrong.
+# 🟢 One invisible character, removed in one place, for every importer.
+def strip_bom(body):
+    """`body` without a leading byte-order mark. 🔵 Not `.strip()`'s job."""
+    return body.lstrip("\ufeff")
+
+
 def title_window(body):
     """The first `TITLE_WINDOW_LINES` non-blank lines of a licence file."""
-    lines = [ln for ln in body.splitlines() if ln.strip()]
+    lines = [ln for ln in strip_bom(body).splitlines() if ln.strip()]
     return "\n".join(lines[:TITLE_WINDOW_LINES])
 
 
@@ -75,7 +93,7 @@ def title_licence(body):
     what makes the surface independent of the body: no sibling mention inside a sentence
     can satisfy it, because a sentence is never just the licence's name.
     """
-    lines = [ln.strip() for ln in body.splitlines() if ln.strip()]
+    lines = [ln.strip() for ln in strip_bom(body).splitlines() if ln.strip()]
     for line in lines[:TITLE_WINDOW_LINES]:
         for rx, name in TITLES:
             m = rx.match(line)

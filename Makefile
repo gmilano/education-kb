@@ -30,8 +30,9 @@ PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
 AFFERO_LOG ?= /tmp/education-kb-gate-affero-rung.log
 FAMILY_LOG ?= /tmp/education-kb-gate-family-coverage.log
+PERMISSIVE_LOG ?= /tmp/education-kb-gate-permissive-arm.log
 
-.PHONY: gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung affero-rung-census
+.PHONY: gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung affero-rung-census
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -53,7 +54,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-absence gate-dates gate-provenance gate-identity gate-ladder-case \
              gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
              gate-slug-oracle gate-payload-pin gate-shelf-consistency \
-             gate-affero-rung gate-family-coverage
+             gate-affero-rung gate-family-coverage gate-permissive-arm
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -74,11 +75,32 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
 # `DOCUMENT-TEXT`.  p309 concluded "import the discriminator, never restate it" and
 # applied it to the family it was found in rather than to the mechanism.
 gate-family-coverage: ## ACTION p309-R (items 1-2) — fixture coverage with a denominator, and no classifier may cross a commercial-use boundary
-	@cd compose/code/p310-family-coverage && { $(PY) test_family_coverage.py > $(FAMILY_LOG) 2>&1 || { echo "🔴 p310-family-coverage FAILED — the suite's own report follows:" ; sed "s/^/   /" $(FAMILY_LOG) ; false ; } ; } && echo "── p310-family-coverage (51 controls: the refuted CC0 rung as a live negative control, p124's oracle, P250's two columns and its safe half, the three-valued POINTER class, and the four false positives this grader itself produced)" && echo "   PASS" || exit 1
+	@cd compose/code/p310-family-coverage && { $(PY) test_family_coverage.py > $(FAMILY_LOG) 2>&1 || { echo "🔴 p310-family-coverage FAILED — the suite's own report follows:" ; sed "s/^/   /" $(FAMILY_LOG) ; false ; } ; } && echo "── p310-family-coverage (59 controls: the refuted CC0 rung as a live negative control, p124's oracle, P250's two columns and its safe half, the three-valued POINTER class, and the four false positives this grader itself produced)" && echo "   PASS" || exit 1
 	@cd compose/code/p310-family-coverage && $(PY) -I run_families.py || exit 1
 
 family-coverage: ## p310 — the coverage census alone: which published families have no pinned payload
 	@cd compose/code/p310-family-coverage && $(PY) -I family_coverage.py ../../.. || true
+
+# 🔴 p311: `ACTION p310-R` item 1 — `MIT` (5 549 cells) and `Apache-2.0` (2 335) were the two
+# most-published families on this base and NO dynamic arm had ever touched either: 7 884 cells,
+# 61 % of every licence cell published here, resting on rungs never executed against a real
+# payload of their own family.  🟢 THE ANSWER IS ZERO DEFECTS across 9 classifiers.
+#
+# 🔵 And the second finding is in the PAYLOADS, not the classifiers.  This base pins every
+# payload as bytes + `sha256_12`, and `p310` certified seven CC0 rows partly on *"six at the
+# legalcode's exact 7 048 B"*.  Byte length and sha answer *"is this the same FILE?"*; they were
+# read as answering *"is this the same GRANT?"*.  Both halves of that are refuted here on real
+# payloads: the Apache pair differs by ONE LEADING NEWLINE (identical grant, unrelated shas),
+# and the MIT pair's whole 34-byte delta is the HOLDER STRING.
+gate-permissive-arm: ## p311 — ACTION p310-R item 1: the two most-published families, run at last, plus the payload-identity oracle
+	@cd compose/code/p311-permissive-family-arm && { $(PY) -I test_p311.py > $(PERMISSIVE_LOG) 2>&1 || { echo "🔴 p311-permissive-family-arm FAILED — the suite's own report follows:" ; sed "s/^/   /" $(PERMISSIVE_LOG) ; false ; } ; } && echo "── p311-permissive-family-arm (32 controls: the four pins against the shas p310 probed, the one-leading-newline and holder-string negative controls, the refuted holder pattern kept live, the census discovery, and the two orderings' disagreement)" && echo "   PASS" || exit 1
+	@cd compose/code/p311-permissive-family-arm && $(PY) -I run_permissive.py || exit 1
+
+permissive-arm: ## p311 — the dynamic arm alone, on MIT and Apache-2.0
+	@cd compose/code/p311-permissive-family-arm && $(PY) -I run_permissive.py || true
+
+risk-order: ## p311 — the fixture queue on BOTH axes: descending cells, and what a wrong answer COSTS
+	@cd compose/code/p311-permissive-family-arm && $(PY) -I risk_order.py ../../.. || true
 
 hooks: ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm, plus p293's calibrated slug-existence oracle, and p300's no-masking runner
 	@rc=0; red=""; green=0; \

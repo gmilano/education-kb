@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 📈 2026-10-19 · Pass 311 — TWO REPOSITORIES, TWO FILENAMES, ONE BYTE-IDENTICAL GRANT: THE WEEK'S TRENDING READ CORROBORATED THE PASS'S IDENTITY FINDING BY ACCIDENT
+
+**Append-only. Added above `p310`'s section; nothing below is rewritten.**
+
+### 🟢 Trending reads this week, with denominators
+
+| axis | repos on the topic | read | carried | 🟢 NEW | transport |
+|---|---|---|---|---|---|
+| [`proctoring`](https://github.com/topics/proctoring) | **148** | 17 | 7 | 10 | 🔴 `curl` → `403`; second transport → `200` |
+| [`student-information-system`](https://github.com/topics/student-information-system) | **183** | 17 | 5 | 12 | 🔴 same |
+
+🔴 **A new transport boundary, and it is PATH-level rather than host-level.** `curl` returns `403`
+on `github.com/topics/*` while `raw.githubusercontent.com` answers on `curl` throughout this pass
+(all six payload pins were fetched that way). 🔵 `p310` recorded *"`github.com` and
+`raw.githubusercontent.com` answered on both"* channels — true per HOST, and this pass narrows it:
+**the honest statement is per host AND per path.** *"Say which, every time"* now needs a path.
+
+### 🔵 The week's sharpest trending row is a pair
+
+| repo | ★ | licence file | payload |
+|---|---|---|---|
+| [MeetPlan/MeetPlanBackend](https://github.com/MeetPlan/MeetPlanBackend) | 8 | `LICENSE` | 🔴 **AGPL-3.0** `34 523` B · `8486a10c4393` |
+| [yukazakiri/koakademy](https://github.com/yukazakiri/koakademy) | 7 | `LICENSE.md` | 🔴 **AGPL-3.0** `34 523` B · `8486a10c4393` |
+
+🟢 **Byte-identical payload, two different filenames, two unrelated projects** (a Go school
+organiser and a Laravel 12 academic platform). 🔵 **This corroborates this pass's identity finding
+from the opposite direction**: the same sha across different rungs is what a fixed-document family
+looks like when nobody edits it — while the `Apache-2.0` pair on
+[`repos/foundations.md`](foundations.md) shows an identical grant with **different** shas because
+one copy carries a leading newline. 🔴 **Neither bytes nor sha is an identity for a GRANT. They
+are an identity for a FILE**, and the two come apart in both directions on real payloads read this
+week.
+
+### 🟢 Foundational-tier additions this week
+
+| repo | ★ | licence *(bytes · sha)* | why it is foundational rather than an agent |
+|---|---|---|---|
+| [aesophor/hacklympics](https://github.com/aesophor/hacklympics) | 69 | 🟡 **MPL-2.0** `16 725` · `1f256ecad192` | Exam-session substrate — keystroke capture, playback, submission — rather than a model. 🟢 **The base's first exercised FILE-LEVEL copyleft**, and the payload that caught `p153`'s defect |
+| [infinity-decoder/Shiori](https://github.com/infinity-decoder/Shiori) | 8 | 🟢 **MIT** `1 072` · `03d351572510` | A small, permissive PHP SIS. 🟢 **And the axis's real permissive headline is bigger:** [`academico-sis/academico`](https://github.com/academico-sis/academico) at **406★ is MIT** (`1 094` B · `6051a15f4d44`), re-probed this pass after a draft of [`verticals/solutions.md`](../verticals/solutions.md) asserted it was GPL |
+
+### 🔴 The week's third identity observation, and it is invisible
+
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (**345★**) serves its
+`GPL-2.0` grant at **`17 286` B · `224ac3d403e3`** — from a path under `docs/`, **not at any root
+rung**, and beginning with a UTF-8 **BOM** (`ef bb bf`).
+
+🔴 **Both facts cost something.** The path meant a root-ladder probe returned `404`, and this pass
+wrote *"no payload"* on a shelf before `gate-enumeration` walked the tree and refuted it. The BOM
+meant the canonical title reader returned `None` — **`str.strip()` does not remove `U+FEFF`** — so
+a classifier importing it fell through to a body ladder and graded the payload **`GPL-3.0`**.
+
+🔵 **So the week produced three independent ways for one grant to lose its identity:** a leading
+newline (the Apache pair), a holder string (the MIT pair), and a BOM — plus one way for two
+unrelated projects to share one (the AGPL pair below). 🟢 `GPL-2.0` was the largest uncovered
+family at 443 cells and is now pinned, which is the one good thing to come out of a refuted claim.
+
+### 🔴 What did NOT trend, and it is the week's most useful negative
+
+🔴 **`6` of the `12` new repositories probed serve NO licence payload at any rung**, including
+**[`narender-rk10/MyProctor.ai-…`](https://github.com/narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM)
+at 236★ — the 4th-most-starred repo on the whole `proctoring` axis.** 🔵 A trending list ordered by
+stars puts it near the top; a licence screen removes it. `NO_PAYLOAD` is not `NOT-A-REPOSITORY`
+(`T-p309c`): all six exist, and the prober returns `404` for each rung it tries.
+
+🔴 **Both axes are saturated at the TOP.** Every top-3-by-stars row on both was already carried:
+`Proctoring-AI` (633★), `CloakBox` (406★), `seb-win-refactoring` (355★), `rosariosis` (647★),
+`academico` (406★), `openSIS-Classic` (345★). 🔵 This **corrects** `ACTION p310-R` item 5, which
+listed both axes as *"none yet read"*.
+
+### 🟡 Carried forward unread
+
+🟡 **131 of 148 `proctoring` rows** · **166 of 183 `student-information-system` rows** ·
+**91 of 111 `academic-integrity` rows** (`p310`'s axis). 🔵 `p303`'s finding — the tail is where the
+non-US supply is — still has not been tested on any of the three.
+
 ## 📈 2026-10-19 · Pass 310 — SEVEN NEW FOUNDATIONAL ROWS PLUS TWO CARRIED ROWS RE-GRADED, AND THE AXIS THEY CAME OFF IS `100 %` PERMISSIVE AGAINST LAST PASS'S `4`-TO-`1` COPYLEFT
 
 ⏱️ **Pass 310 of `2026-10-19`.** Evidence:

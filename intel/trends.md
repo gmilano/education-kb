@@ -4,6 +4,156 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 311 — THREE PASSES, THREE DEFECTS, AND NOT ONE OF THEM WAS IN THE FAMILY AT THE TOP OF THE QUEUE: THE SECTOR'S BIGGEST LICENCE RISK IS WHERE ITS SMALLEST NUMBERS ARE
+
+⏱️ **Pass 311 of `2026-10-19`.** Evidence:
+[`p311-risk-order.2026-10-19-p311.txt`](../evidence/p311-risk-order.2026-10-19-p311.txt) ·
+[`p311-defects.2026-10-19-p311.tsv`](../evidence/p311-defects.2026-10-19-p311.tsv).
+
+### 🔴 Trend 1 — the exposure a volume metric cannot see
+
+This is a methodological trend and it generalises past this KB, so it is stated first.
+
+| pass | family it ran | published cells | defects |
+|---|---|---|---|
+| `p309` | `GPL-3.0` / `AGPL-3.0` | 1 026 / 1 201 | 🔴 **1** |
+| `p310` | the `CC` families + `PolyForm` | 23 – 180 | 🔴 **4** |
+| 🟢 `p311` | **`MIT` + `Apache-2.0`** | 🟢 **5 549 + 2 335 = 7 884** | 🟢 **0** |
+| 🔴 `p311` | **`MPL-2.0`** | 🔴 **161** | 🔴 **1** |
+| 🔴 `p311` | **`GPL-2.0`** | 🔴 **443** | 🔴 **1** |
+
+🔵 **The two families holding 61 % of all licence cells came back clean on first contact, and both
+defects of the pass were in families holding 1.3 % and 3.4 % of them** — one found because a probe
+on an unrelated supply axis happened to return an `MPL-2.0` payload, the other because a standing
+gate refuted a claim this pass had just written.
+
+🟡 **The honest reading, with its `n` stated:** per family the defect rates are `2/4` above 1 000
+cells against `5/8` below — **flat at `n=12`**, and a trend claim here would be exactly the
+unbounded assertion `ACTION p310-R` item 3 exists to gate. 🔴 **What IS asymmetric is not the
+probability but the COST, and cost is not a sample — it is a property of the grant:** a wrong answer
+between permissive families costs an attribution detail; a noncommercial grant reported as
+permissive costs the right to ship.
+
+🔵 **The transferable lesson for any AI-sourcing practice: volume metrics rank blast radius, and
+they get read as risk rankings.** The most-used dependency in a stack is the one the whole team has
+already looked at. The exposure is in the long tail nobody wrote a rung for — and in this sector the
+long tail is where the **noncommercial** licences live, which is the only class that cannot ship at
+all.
+
+### 🔴 Trend 2 — the sector's open-source supply has a grant problem, and stars hide it
+
+Measured across the two axes read this pass and the one `p310` read:
+
+| axis | repos | read | 🔴 of the NEW rows, with NO readable grant |
+|---|---|---|---|
+| [`proctoring`](https://github.com/topics/proctoring) | 148 | 17 | combined with SIS: 🔴 **6 of 12 probed** |
+| [`student-information-system`](https://github.com/topics/student-information-system) | 183 | 17 | *(as above)* |
+| [`academic-integrity`](https://github.com/topics/academic-integrity) (`p310`) | 111 | 20 | 🔴 **8 of 20 unusable**: 2 noncommercial, 1 proprietary, 1 **zero-byte** licence file, 4 no grant |
+
+🔴 **Across three education axes and 57 rows read first-hand, roughly a third to a half of the new
+supply cannot be built on**, and the defect is never visible from the shortlist: the
+**4th-most-starred repository on the whole `proctoring` axis** (`MyProctor.ai`, 236★) serves no
+licence payload at any rung, and the **2nd-most-starred** row on `academic-integrity`
+(`paper-tutor-skills`, 46★) is **PolyForm Noncommercial**.
+
+🔵 **This is a procurement trend, not a licensing footnote.** A studio shortlisting by stars and
+then checking licences late will lose its top candidates after the estimate is written.
+
+### 🟢 Trend 3 — a 23rd licence family, and the rise of the unclassifiable grant
+
+[`HalidCisse/Matrix`](https://github.com/HalidCisse/Matrix) serves the **`DON'T BE A DICK PUBLIC
+LICENSE` v1.1** (`1 127` B · `65569613b0b7`): *«Do whatever you like with the original work, just
+don't be a dick»* over a list explicitly *«not limited to»*, plus a resale prohibition and an
+unquantified expectation of payment on commercial success.
+
+🔵 **The trend it instances is joke-and-vibe licensing in small education projects** — alongside
+`p310`'s discovery of a `LICENSE` file served at **HTTP 200 and zero bytes**. 🔴 **Both pass a "has
+a licence?" screen and neither grants anything a studio can rely on.** 🟢 **The reassuring half:
+all eight of this base's payload readers abstain on the new family and `p306` returns
+`commercial_use=UNDETERMINED` — the battery fails safe on a grant it has never seen.** 🔵 Under
+`P250`, `UNDETERMINED` is indistinguishable from PROHIBITED, which is the correct posture.
+
+### 🔴 Trend 4 — ONE INVISIBLE BYTE CAN SWITCH A LICENCE CHANNEL OFF, AND THE FALLBACK IS WORSE THAN THE FAILURE
+
+🔵 **The sharpest finding of the pass, and the one that generalises furthest past this KB.**
+
+`OS4ED/openSIS-Classic` (345★) serves its `GPL-2.0` grant beginning `ef bb bf` — a UTF-8 BOM. The
+consequence was measured across two instruments:
+
+| instrument | with the BOM | without it |
+|---|---|---|
+| the canonical title reader (`p150`) | 🔴 **`None`** — every title pattern anchors at position 0 | 🟢 `GPL` |
+| a classifier that IMPORTS it (`p191`) | 🔴 **`GPL-3.0`** — fell through to its own body ladder | 🟢 `GPL-2.0` |
+| this pass's own identity oracle | 🔴 **two shas for one grant** | 🟢 one |
+
+🔴 **`str.strip()` does not remove `U+FEFF`.** Python does not classify the BOM as whitespace, so
+every per-line `.strip()` in the chain passed it straight through.
+
+🔵 **Why this is a different and worse shape than the three defects before it.** `p309`'s, `p310`'s
+and this pass's `MPL-2.0` defect were all instruments *answering wrongly*. Here the instrument
+**did not answer at all** — the title channel built specifically to replace body-substring ladders
+was silently switched off, and the caller fell back onto the exact ladder it exists to replace.
+🔴 **A channel that fails CLOSED looks identical to a channel that was never consulted**, and the
+wrong answer that comes out carries no signal that the good channel was skipped.
+
+🔴 **The cost is not cosmetic**: `GPL-2.0` has no patent grant and no §13, and GPL-2.0-only code
+cannot be combined with GPL-3.0 code — the compatibility question a studio actually asks.
+
+🟢 **The generalisable rule: normalise invisible characters BEFORE any anchored match, and make the
+normalisation one importable step.** The repair was a single `strip_bom()` in the canonical reader,
+which fixed every importer at once. 🔵 **The converse is the warning:** a title/header channel is
+the right design, and its failure mode is silence — so anything that reads one must distinguish
+*"the channel says no"* from *"the channel did not run"*.
+
+### 🟢 Trend 5 — file identity and grant identity are diverging, and tooling assumes they are the same
+
+Two independent observations from one pass:
+
+- 🔴 **Identical grant, different identity:** the `Apache-2.0` legalcode served at `11 358` B
+  (`cfc7749b96f6`) and `11 357` B (`c71d239df917`) — **one leading newline**, shas with no shared
+  prefix.
+- 🟢 **Identical identity, different rung:** `34 523` B · `8486a10c4393` served as `LICENSE` by
+  [`MeetPlanBackend`](https://github.com/MeetPlan/MeetPlanBackend) and as `LICENSE.md` by
+  [`koakademy`](https://github.com/yukazakiri/koakademy) — two unrelated projects, one byte-identical
+  AGPL-3.0 payload.
+- 🔴 **And for the fill-in-slot families — `6 075` published cells here — byte length is a function
+  of the HOLDER STRING**: the same MIT template is `1 066` B with a 12-character holder and `1 100` B
+  with the University of California's name.
+- 🔴 **A UTF-8 BOM does it invisibly:** `openSIS-Classic`'s `GPL-2.0` grant and a BOM-less copy of
+  the identical text differ by 3 bytes and share no sha prefix.
+
+🔵 **Any SBOM, licence-scanner or dedup pipeline that keys on a file hash will over-count grants in
+one direction and under-count them in the other.** The fix is a normalising oracle, and it has to
+be minimal and controlled or it becomes a matcher that unifies everything.
+
+### 🔵 Trend 6 — the readiness gap is now visible from three independent channels
+
+| channel | the gap |
+|---|---|
+| market snippets (`p311`) | `92 %` of students use AI · `10 %` of institutions have guidelines · `71 %` of US teachers untrained · sector maturity `35/100` |
+| regional search (`p309`) | `62 %` of students using AI for homework by `2025-12` · `18 %` of teachers with formal guidance |
+| 🔵 **the SUPPLY itself (`p310`/`p311`)** | the problem class is **structurally absent from this base's own ingest keywords**, because every keyword named a thing AI does *for* education and integrity names a thing AI does *to* it |
+
+🟢 **Three channels, one conclusion, and the third is the one worth selling:** the sector's binding
+constraint is not model capability and not tooling — it is **governance, assessment design and
+licence diligence**, and the open-source supply reflects that by under-serving exactly those
+problems. 🔵 **EMEA is the only region where that constraint has a date attached** (EU AI Act
+Annex III(3), with Art 5(1)(f) prohibitions live since `2 February 2025`), which makes it the
+natural first market for the practice rather than the hardest one.
+
+### 🟡 What this pass did NOT establish
+
+- 🔴 **No benchmark** on any detector, tutor or proctoring row. This base takes **no position on
+  detection accuracy** — restated because the proctoring supply doubled this pass.
+- 🔴 **Every market and regulatory figure above is snippet-grade.** No primary legal, government or
+  market source was reached, now confirmed across three passes and two transports.
+- 🟡 **Neither defect's realised loss was measured.** Both are fixed and gated; no `MPL-2.0` or
+  `GPL-2.0` shelf cell was re-audited against the repaired classifiers → `ACTION p311-R` item 2.
+- 🟡 **No fresh regional token sweep was run**, so this pass adds no new regional denominator and
+  does not imply continuity with `p310`'s `80 %`.
+- 🔴 **The Art 5(1)(f) code screen was NOT run on any row added this pass**, including two new
+  camera-touching proctoring rows → `ACTION p311-R` item 6.
+
 ## 🔴 Pass 310 — THE INDUSTRY'S BIGGEST AI-IN-EDUCATION PROBLEM IS PHRASED AS A PROBLEM *ABOUT* AI, AND THAT IS WHY A KEYWORD SET BUILT FROM SOLUTIONS COULD NOT SEE IT
 
 ⏱️ **Pass 310 of `2026-10-19`.**

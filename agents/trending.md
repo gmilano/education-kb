@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 📈 2026-10-19 · Pass 311 — THE WEEK'S SIGNAL IS THAT HALF THE NEW SUPPLY ON TWO AXES SHIPS NO GRANT, AND THE HIGHEST-STARRED NEW ROW IS AMONG THEM
+
+**Append-only. This section is added above `p310`'s; nothing below it is rewritten.**
+
+### 🟢 What is new this week on the supply side
+
+Two PROBLEM-class axes read for the first time, with denominators
+([ledger](../evidence/p311-axis-census.2026-10-19-p311.tsv)):
+
+| axis | repos | read | carried | 🟢 NEW | with a readable grant |
+|---|---|---|---|---|---|
+| [`proctoring`](https://github.com/topics/proctoring) | 148 | 17 | 7 | 10 | **3 of 10** |
+| [`student-information-system`](https://github.com/topics/student-information-system) | 183 | 17 | 5 | 12 | **3 of 12** |
+
+🔴 **The week's hardest number: `6` of the `12` new candidates probed serve NO licence payload at
+any rung** — and the largest of them,
+[`narender-rk10/MyProctor.ai-…`](https://github.com/narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM)
+at **236★**, is the 4th-most-starred repository on the whole `proctoring` axis. 🔵 A star-ordered
+shortlist puts it first; a licence screen removes it. **Both axes are also saturated at the TOP** —
+every top-3 row by stars was already carried.
+
+### 🟢 New rows this week, graded at the payload
+
+| repo | ★ | licence *(bytes · sha)* | note |
+|---|---|---|---|
+| [aesophor/hacklympics](https://github.com/aesophor/hacklympics) | 69 | 🟡 **MPL-2.0** `16 725` · `1f256ecad192` | 🔴 **The payload that caught `p153`'s `MPL-2.0 → GPL-3.0` defect** |
+| [HalidCisse/Matrix](https://github.com/HalidCisse/Matrix) | 20 | 🔴 **`DBAD-1.1`** `1 127` · `65569613b0b7` | 🔴 A 23rd family — *«don't be a dick … not limited to»*. **Do not ship** |
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | **345** | 🔴 **GPL-2.0** `17 286` · `224ac3d403e3` | 🔴 Grant under `docs/`, **not at any root rung** — and the BOM'd payload that caught defect 2 |
+| [infinity-decoder/Shiori](https://github.com/infinity-decoder/Shiori) | 8 | 🟢 **MIT** `1 072` · `03d351572510` | PHP SIS; grant at `LICENSE.txt` |
+| [MeetPlan/MeetPlanBackend](https://github.com/MeetPlan/MeetPlanBackend) | 8 | 🔴 **AGPL-3.0** `34 523` · `8486a10c4393` | Go school organiser; network copyleft |
+| [yukazakiri/koakademy](https://github.com/yukazakiri/koakademy) | 7 | 🔴 **AGPL-3.0** `34 523` · `8486a10c4393` | 🔵 **Byte-identical payload to the row above, at a different filename** |
+| [Nuthi-Sriram/IntelliProc](https://github.com/Nuthi-Sriram/IntelliProc) | 7 | 🟢 **MIT** `1 133` · `597a288de4e8` | Dual-camera proctoring (phone + webcam) |
+
+### 🔴 The week's instrument news, because it changes how every row above should be read
+
+**`MIT` and `Apache-2.0` were finally run through a dynamic arm** — `7 884` cells, 61 % of every
+licence cell this base publishes, and **zero defects** across 8 payload readers. 🔵 Fixture
+coverage by cells goes `24 %` → **`90 %`**; by families `36 %` → `55 %`.
+
+🔴 **Both real defects of the pass were in small families.** `MPL-2.0` (`161` cells):
+`p153/classify_body` took the first licence marker present anywhere in 4 000 characters, and
+`MPL-2.0` §1.12 names the GNU licences in its *«Secondary License»* definition — Mozilla title at
+char **0**, GNU phrase at char **2 341**, list order beating document position. `GPL-2.0`
+(`443` cells): **a UTF-8 BOM on `openSIS-Classic`'s payload made the canonical title reader return
+`None`** — `str.strip()` does not remove `U+FEFF` — **so `p191` fell through to its own body ladder
+and graded a `GPL-2.0` payload `GPL-3.0`.** 🔵 **The second is the worse shape: the title channel
+built to replace body ladders was not wrong, it was silently switched OFF.**
+
+🔵 **The trend worth recording across three weeks of passes:** `p309` found its defect in
+`GPL`/`AGPL`, `p310` in the `CC` families, `p311` in `MPL-2.0` and `GPL-2.0` — **and not one of the
+four was in the family at the top of the cell-ordered queue.** The queue measures blast radius. It
+does not measure where the defects are.
+
+### 🟡 Gaps this week, stated
+
+- 🔴 **`curl` now returns `403` on `github.com/topics/*`** although `raw.githubusercontent.com`
+  answers on `curl`. A PATH-level boundary inside a host previously recorded as reachable.
+- 🟡 **91 of 111 `academic-integrity` rows** (`p310`'s axis) and **131 of 148 `proctoring` rows**
+  remain unread.
+- 🔴 **No regional placement was obtained from any new row this week.** Every holder line read was
+  a `PERSON` or a blind fixed document.
+
 ## 📈 2026-10-19 · Pass 310 — THE WEEK'S SIGNAL IS A TOPIC AXIS THIS BASE HAD NEVER READ AND A POST-LLM INTEGRITY SUB-TIER IT DID NOT HAVE — AND THE SECOND-MOST-STARRED ROW ON IT IS NONCOMMERCIAL
 
 ⏱️ **Pass 310 of `2026-10-19`.** Evidence:

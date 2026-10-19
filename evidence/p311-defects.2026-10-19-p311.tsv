@@ -1,0 +1,4 @@
+instrument	payload	canonical	before_p311	after_p311	mechanism	direction	cells
+p153-declaration-surfaces/classify_body	aesophor/hacklympics 16725 B 1f256ecad192	MPL-2.0	GPL-3.0	MPL-2.0	list order beat document position (MPL 1.12 names the GNU licences at char 2341; Mozilla title at char 0)	OVER-states obligation (file-level read as whole-work)	161
+p150-gpl-affero-discrimination/title_licence	OS4ED/openSIS-Classic docs 17286 B 224ac3d403e3	GPL	None	GPL	UTF-8 BOM (ef bb bf); every TITLES pattern anchors at position 0; str.strip() does not remove U+FEFF	CHANNEL DISABLED (fails closed, indistinguishable from declining)	443
+p191-spec-license-sweep/classify_spec	OS4ED/openSIS-Classic docs 17286 B 224ac3d403e3	GPL-2.0	GPL-3.0	GPL-2.0	imports p150 title read; got None; fell through to its own body ladder	WRONG VERSION (GPL-2.0 has no patent grant, no section 13, incompatible with GPL-3.0)	443

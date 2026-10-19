@@ -26,6 +26,7 @@ import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+CODE = os.path.normpath(os.path.join(HERE, ".."))
 
 # 🔴 THE SHELF LIST IS IMPORTED, AND THE FIRST BUILD OF THIS FILE RESTATED IT.
 # That is `p308`'s rule — *"import the canonical list, never restate it"* — broken
@@ -119,14 +120,47 @@ def corpus_families():
     # fixtures` — from this file, from the test suite, from a hook — then gets
     # p309's module and dies on `no attribute 'DECLARED'`. 🔵 Two instruments, one
     # plausible filename, first loader wins. Every load is namespaced by pass.
+    # 🟢 p311: the sibling instruments are DISCOVERED, not named. This function's
+    # own docstring says a restated list goes stale silently — and it did, within
+    # one pass: the next pass pinned `MIT` and `Apache-2.0`, the two biggest
+    # families on this base, and this census would have gone on reporting them
+    # uncovered because its loader named one instrument as a literal. 🔵 Any sibling
+    # exporting `DECLARED` in the (prefix, family, commercial, why) form is read;
+    # newest pass first, so the earliest pin keeps the attribution.
     import importlib.util
-    spec = importlib.util.spec_from_file_location(
-        "p310_fixtures_census", os.path.join(HERE, "fixtures.py"))
-    p310 = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(p310)
-    for name, fam, _com, _why in p310.DECLARED:
-        fams[fam] = ("p310-family-coverage", name)
-    p309 = p310.p309_fixtures()
+
+    def _load(dirname):
+        path = os.path.join(CODE, dirname, "fixtures.py")
+        if not os.path.exists(path):
+            return None
+        spec = importlib.util.spec_from_file_location(
+            "%s_census" % dirname.replace("-", "_"), path)
+        mod = importlib.util.module_from_spec(spec)
+        try:
+            spec.loader.exec_module(mod)
+        except Exception:                                # noqa: BLE001
+            return None
+        return mod
+
+    siblings = sorted(
+        (d for d in os.listdir(CODE)
+         if os.path.isdir(os.path.join(CODE, d))
+         and os.path.exists(os.path.join(CODE, d, "fixtures.py"))),
+        reverse=True)
+
+    p310 = None
+    for dirname in siblings:
+        mod = _load(dirname)
+        if mod is None or not hasattr(mod, "DECLARED"):
+            continue
+        if dirname.startswith("p310-"):
+            p310 = mod
+        for entry in mod.DECLARED:
+            name, fam = entry[0], entry[1]
+            fams.setdefault(fam, (dirname, name))
+
+    # 🔵 p309 declares `PINS`, not `DECLARED`, and keeps its own key grammar.
+    p309 = p310.p309_fixtures() if p310 is not None else _load("p309-affero-rung-census")
     if p309 is not None:
         for prefix, (fam, _n, _sha) in _p309_pins(p309).items():
             fams.setdefault(fam, ("p309-affero-rung-census", prefix))

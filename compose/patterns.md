@@ -4,6 +4,137 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 311 — two recipes, both composed only of rows this pass read first-hand
+
+### `P99` — The licence-diligence gate, run BEFORE the estimate is written *(all regions, 1–2 weeks)*
+
+🔵 **Why this exists.** Across three education axes and 57 rows read first-hand, **a third to a half
+of the new open-source supply cannot be built on** — and it is never visible from the shortlist. The
+**4th-most-starred repository** on the whole `proctoring` axis
+([`MyProctor.ai`](https://github.com/narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM),
+236★) serves **no licence payload at any rung**; the **2nd-most-starred** row on
+`academic-integrity` is **PolyForm Noncommercial**. 🔴 A studio that shortlists by stars and checks
+licences after the SoW loses its top candidates with the estimate already signed.
+
+**Wiring. Every component is in this repository and every step is a command.**
+
+1. **Resolve existence before anything else.** `make slug-probe SLUGS="owner/a owner/b"` →
+   [`p293-slug-existence-oracle`](code/p293-slug-existence-oracle/). 🔵 It returns `EXISTS-PUBLIC`
+   with a HEAD sha, and a credential prompt is recorded as a **measurement**, not an inconclusive
+   result. **`NO_PAYLOAD` is never `NOT-A-REPOSITORY`** (`T-p309c`).
+2. **Grade the grant at the payload, not at the badge.**
+   `python3 -I compose/code/p306-licence-probe/licence_probe.py slugs.txt out.tsv` →
+   `GRANT` · `GRANT-NONCOMMERCIAL` · `POINTER` · `POINTER-NONCOMMERCIAL` · `RESERVED-NO-GRANT` ·
+   `NO-GRANT-CLAUSE` · `EMPTY-GRANT-FILE`, each with byte length, `sha256_12` and a holder grade.
+   🔴 On this pass's 12 candidates it returned `404` for **6** of them.
+3. **Normalise the identity before you dedup or cache.**
+   [`p311-permissive-family-arm/payload_identity.py`](code/p311-permissive-family-arm/payload_identity.py)
+   — `canonical_identity()` and `same_grant()`. 🔴 **Needed because the raw sha is not a grant
+   identity in either direction**, both observed this pass: the `Apache-2.0` legalcode at `11 358` B
+   (`cfc7749b96f6`) and `11 357` B (`c71d239df917`) is **one leading newline** apart with unrelated
+   shas, while `34 523` B · `8486a10c4393` is served as `LICENSE` by one project and `LICENSE.md` by
+   an unrelated other. **Six pinned payloads → four distinct grants.**
+4. **Rank what is left by what a wrong answer COSTS, not by how often it appears.**
+   `make risk-order`. 🔵 It prints the descending-cell queue beside the consequence-ordered one and
+   flags every disagreement. **Noncommercial and unclassifiable grants are `CRITICAL`; permissive
+   confusion is `LOW`.**
+5. **Probe the TREE, not only the root, before writing any "unlicensed".**
+   `make enumerate SLUGS=slugs.txt` → [`p275-grant-enumeration`](code/pass275-grant-enumeration/).
+   🔴 **This pass needed it:** [`openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (345★)
+   returns `404` at every root rung and **is `GPL-2.0`**, served under `docs/`. A root `404` is
+   *not at this address*, never *no grant*.
+6. **Normalise invisible characters before any anchored read.** 🔴 A UTF-8 **BOM** on that same
+   payload made the canonical title reader return `None`, and the classifier importing it fell
+   through to a body ladder and reported the wrong GPL **version**. 🔵 `str.strip()` does not
+   remove `U+FEFF`. **A header channel's failure mode is silence**, so check that the channel RAN
+   before trusting that it declined.
+7. **Gate it in CI so the answer cannot rot.** `make gate-permissive-arm` (32 controls) and
+   `make hooks` (**20/20 gates**). 🟢 The suite keeps every refuted classifier alive as a negative
+   control, so a repair cannot be silently undone.
+
+**Stack:** `p293-slug-existence-oracle` · `p306-licence-probe` · `p275-grant-enumeration` ·
+`p311-permissive-family-arm/{payload_identity,risk_order,run_permissive}.py` ·
+`p310-family-coverage/family_coverage.py` for the denominator · `make hooks` as the runner.
+
+**Deliverable:** a per-candidate sheet — exists/HEAD sha, grant verdict with bytes and sha,
+canonical grant identity, commercial-use column, consequence class — and a **named exclusion list**
+with the reason per row. 🔵 Two weeks before the estimate, not four after it.
+
+**What this is NOT:** legal advice. `CRITICAL` is a *get-counsel* flag, and the `DBAD-1.1` row this
+pass found is exactly the case where an engineer must stop and a lawyer must start.
+
+---
+
+### `P100` — The AI layer on the SIS the institution already runs, kept OUTSIDE the copyleft boundary *(all regions, 10–12 weeks)*
+
+🔵 **The framing is the whole value.** A student information system is a **system of record** —
+enrolment, attendance, grades, fees, timetables — so it is substrate to extend, not a product to
+rebuild (the Odoo/Moodle pattern this base carries). 🔴 **But `5` of the `6` licensed platform-grade
+SIS rows read this pass are copyleft and two are AGPL-3.0**, and SaaS is the normal delivery mode
+for a SIS. **A fork of an AGPL SIS delivered as a hosted service is a source-disclosure event.**
+
+**Wiring, in the order that keeps the boundary intact.**
+
+1. **Pick the substrate by its grant, with the delivery model already decided.** All of these
+   were probed at the payload ([ledger](../evidence/p311-sis-probe.2026-10-19-p311.tsv)).
+   🟢 **Permissive, and start here:**
+   [`academico-sis/academico`](https://github.com/academico-sis/academico) (**406★, MIT**,
+   `1 094` B · `6051a15f4d44`) — Laravel/Filament, the most-starred permissive SIS on the axis, and
+   **extensible in place with no boundary to defend**; or
+   [`infinity-decoder/Shiori`](https://github.com/infinity-decoder/Shiori) (**MIT**, `1 072` B ·
+   `03d351572510`) where something smaller fits.
+   🔴 Whole-work copyleft — fine on-premise, integrate-don't-fork for SaaS:
+   [`rosariosis`](https://github.com/francoisjacquet/rosariosis) (647★, **GPL-2.0**, `15 214` B ·
+   `d954e14e5c75`).
+   🔴 **AGPL-3.0 — do not fork for a hosted build:**
+   [`koakademy`](https://github.com/yukazakiri/koakademy) and
+   [`MeetPlanBackend`](https://github.com/MeetPlan/MeetPlanBackend), both `34 523` B ·
+   `8486a10c4393`.
+   🔴 Whole-work copyleft, **with its grant outside the root ladder**:
+   [`openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (345★, **GPL-2.0**, `17 286` B ·
+   `224ac3d403e3`, served at **`docs/License.txt`**). 🔵 Probe the tree, not just the root — a
+   root-ladder `404` on this row would have read as "unlicensed".
+2. **Draw the boundary at the SIS's own API and never inside its tree.** The AI layer is a
+   **separate work** that speaks HTTP/LTI to the SIS. 🔵 This is the step that keeps a GPL or AGPL
+   substrate usable: no linking, no vendored modules, no patched core. **Fork it and the question
+   changes from integration to derivation.**
+3. **Put the orchestration in a permissive repo of your own.** 🟢 Everything the model layer needs
+   is already MIT/Apache-2.0 on [`agents/top.md`](../agents/top.md) and
+   [`repos/foundations.md`](../repos/foundations.md), payload-verified.
+4. **Add integrity at the assessment boundary, not as surveillance — and use BOTH tiers.**
+   🔵 `p310`'s post-publication correction is load-bearing here: this base already carried a
+   SIMILARITY tier that answers *«does this match something else?»*
+   ([`dodona-edu/dolos`](https://github.com/dodona-edu/dolos), MIT, 350★, Ghent University), and a
+   matcher finds nothing when the text is original and machine-written. The post-LLM questions —
+   *was this written by a model, do its citations exist, is the assessment defensible* — are a
+   different tier. **Price both; neither covers the other.**
+   [`Open-Detector`](https://github.com/Imalwayshere/Open-Detector) (**MIT**, `1 066` B ·
+   `2e7c69b15c38`, leader of the AI-text-detection sub-tier — 🟡 **not of the
+   `academic-integrity` axis**, which [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos)
+   leads at 350★; `p310`'s post-publication correction retracted the wider claim) and
+   [`aegis-integrity`](https://github.com/sunilgentyala/aegis-integrity) (**MIT**, `1 071` B ·
+   `c297118f3322`, ships an MCP server). 🔴 **This base runs no benchmark and takes no position on
+   detection accuracy** — present these as signals for a human reviewer, never as verdicts.
+5. **If proctoring is in scope, use the one platform-grade row and screen it.**
+   [`SafeExamBrowser`](https://github.com/SafeExamBrowser/seb-win-refactoring) (355★) is real
+   infrastructure; everything else on the axis is a detector or a student project. 🔴 **Run `P97`'s
+   Art 5(1)(f) screen before writing it into a statement of work** — mandatory in EMEA, and
+   `p310` found a prohibited feature sitting in an otherwise-clean MIT row's roadmap.
+6. **Self-host the residency-sensitive parts.**
+   [`noplag-engine`](https://github.com/NoplagLabs/noplag-engine) (**Apache-2.0**, `11 358` B ·
+   `cfc7749b96f6`) is self-hostable, which answers the data-residency objection in one row —
+   decisive for LATAM ahead of Chile's `Ley 21.719` date and for APAC's sovereignty requirements.
+7. **Run `P99` over the final component list** and attach its sheet to the SoW.
+
+**Stack:** one SIS of record (grant-selected at step 1) · its HTTP/LTI boundary · a permissive
+orchestration repo · `Open-Detector` + `aegis-integrity` (MIT) · `SafeExamBrowser` where proctoring
+applies · `noplag-engine` (Apache-2.0) self-hosted · `P97` for the EU screen · `P99` as the gate.
+
+**What this is NOT:** a SIS replacement, and not a recommendation to fork one. 🟢 **Every licence
+cell at step 1 was probed at the payload this pass**, after the first draft of this recipe asserted
+two of them from recollection and `gate-shelf-consistency` went red — see the correction note on
+[`verticals/solutions.md`](../verticals/solutions.md). 🔵 *"Carried"* is not a citation.
+
 ## 🟢 Pass 310 — two recipes, both composed only of rows this pass read first-hand
 
 ### `P97` — The EU conformity screen for proctoring a client already bought *(EMEA, 4–6 weeks)*
