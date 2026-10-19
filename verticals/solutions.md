@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🔴 Pass 303 — TWENTY-THIRD CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM — BUT FOUR PERMISSIVE *SELF-HOSTABLE* ROWS ARRIVED, AND THEY CONFIRM THE SIZE RULE THIS FILE HAS BEEN CIRCLING
+
+⏱️ **Pass 303 of `2026-10-18`.** Evidence:
+[`p303-websearch.2026-10-18-p303.tsv`](../evidence/p303-websearch.2026-10-18-p303.tsv) ·
+[`p303-licence-payload.2026-10-18-p303.tsv`](../evidence/p303-licence-payload.2026-10-18-p303.tsv) ·
+[`p303-topic-paging.2026-10-18-p303.tsv`](../evidence/p303-topic-paging.2026-10-18-p303.tsv) ·
+[`p303-reachability.2026-10-18-p303.tsv`](../evidence/p303-reachability.2026-10-18-p303.tsv).
+
+🔴 **The mandated phrasing ran and nil'd for the twenty-third time.** Query:
+`open source platform education ERP CRM MIT Apache student information system`. Returned **OpenEduCat**
+(**LGPL-3.0**, confirmed by the vendor's own glossary page), **openSIS**, **Kuali** — all already on this file.
+🟢 **This pass's search sources state the conclusion themselves**, which is new: they report *no MIT- or
+Apache-licensed education ERP exists to name*, rather than offering a candidate that then fails verification.
+🔵 **The engagement conclusion is unchanged and `p301`'s measurement stands: the education platform layer is
+copyleft by constitution.** Do not look for a permissive replacement for Moodle or Open edX. **Integrate with
+the copyleft platform across a process boundary and keep permissive code in the agent and service tiers.**
+
+### 🟢 The size rule, now stated as a rule because this pass tested it from the other direction
+
+🔵 **Observation across 23 passes: permissive education software exists in abundance — but only BELOW the
+platform scale.** This pass adds **four permissive, genuinely self-hostable rows**, and *not one of them is a
+platform a school would run as its system of record*:
+
+| repo | licence (payload, `sha256₁₂`) | ★ | deployment story | what it is NOT |
+|---|---|---|---|---|
+| [`liuwenji007/regulus-academy`](https://github.com/liuwenji007/regulus-academy) | 🟢 **Apache-2.0** `11 357 B` `c71d239df917` | 9 | **Self-hosted**, Go; **PDF import**, knowledge tree, knowledge graph, coach loop | Not an SIS: no enrolment, no roles, no gradebook of record |
+| [`liunor/nlp-agent`](https://github.com/liunor/nlp-agent) | 🟢 **MIT** `1 073 B` `ef01967408a8` | 10 | Teaching platform with dialogue, practice, content **and service observability** | Single-subject (NLP); a teaching service, not an institutional platform |
+| [`MadsDoodle/Career-Navigator`](https://github.com/MadsDoodle/Career-Navigator) | 🟢 **MIT** `1 072 B` `a10c8ca82807` | 17 | TypeScript; **Resume → Skill Gap → path** career lifecycle | Not a student information system; a guidance layer |
+| [`clduab11/thinkrank`](https://github.com/clduab11/thinkrank) | 🟢 **MIT** `1 071 B` `699170d0cb87` | 28 | TypeScript; collaborative ranking + gamified AI | ⚠️ Promotional README; capability unverified — read the code first |
+
+🟢 **`regulus-academy` is the most engagement-relevant of the four**, because **self-hosting plus local PDF
+ingest** is exactly the combination a data-residency-constrained client asks for — and it answers Vietnam's
+Decision 33 first education system (content from *uncontrolled* sources) on its face, since the sources are
+files the institution supplies. ⚠️ **9★, Go, single author. A starting point, not a product.**
+🟢 **`liunor/nlp-agent` is the only row on this file whose own description names observability**, which is
+what an SLA needs and what nothing else in this tier offers.
+
+🔵 **So the rule to brief: in education, PERMISSIVE and PLATFORM-SCALE are nearly disjoint.** The permissive
+tier tops out at a deployable *service*; the moment software becomes a system of record for an institution, it
+was built by a public body or consortium and it is GPL, AGPL or LGPL. **Architect for that split rather than
+fighting it.**
+
+### 🔴 The licence line through the platform-shaped rows that failed
+
+🔴 **[`fenago/LearnGraph`](https://github.com/fenago/LearnGraph) — `14★` — PHANTOM GRANT.** Its README says
+`MIT License - See LICENSE file for details.` and **the file does not exist**: 18 probes (6 filenames ×
+`main`/`master`/`dev`) all 404, and GitHub's sidebar Resources block lists only Readme and Activity. 🔵 **For
+this tier specifically the lesson is procedural: a platform evaluation that reads the README's licence
+section instead of the licence payload will clear this repository for a client build.** It is a Graph-RAG
+learner model with 39 psychometric domains and ZPD sequencing — good enough design that someone will want it.
+**Brief the design; take nothing.** 🟢 The repo is active, so asking the author to commit the referenced file
+is a real remedy.
+
+🔴 **[`LeParisien-dev/EduAI`](https://github.com/LeParisien-dev/EduAI) — `2★` — no grant** (all probes 404).
+A full-stack *"intelligent LMS"* proof of concept, i.e. platform-shaped by intent. Unusable.
+
+🔴 **[`lemos999/ailey-bailey-canvas`](https://github.com/lemos999/ailey-bailey-canvas) — `20★` — CC BY-NC-SA
+4.0** (payload `14 770 B`, `sha256₁₂` `5d9d28313854`), opening *"Copyright (c) 2025 fewweekslater(Ray You).
+All rights reserved."* 🔴 **NonCommercial is the hardest exclusion this file records — harder than AGPL.**
+🔵 **State the difference clearly in a briefing, because it is routinely muddled:** AGPL **prices** a hosted
+deployment (you may ship it; you must publish your modifications), whereas **NonCommercial forbids the
+engagement itself** — there is no compliance posture that makes a paid client deployment permissible. 🟢 Its
+dual-persona design (empathetic coach + critical inquirer) is a *design idea*, which no licence withholds.
+
+🔴 **[`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) (AGPL-3.0, `35 148 B` `8b1ba204bb69`, Brown
+University) and [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) (AGPL-3.0, `35 149 B`
+`3972dc9744f6`)** — two more **university-held, AGPL** teaching systems. 🔵 **Fourth and fifth instances of
+this file's standing pattern: the institution-built teaching system is copyleft.** That is now a count, not an
+impression.
+
+### 🟢 Platform-tier state — one carried row re-pinned, and the content/code licence distinction made explicit
+
+🟢 **[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)** —
+**CC BY-SA 4.0**, payload `1 230 B`, `sha256₁₂` `f952182df4eb`, © 2026 Gareth Manning, **877★** (carried at
+873★). **First payload pin for this row**, and the licence text was read in full.
+
+🔵 **It matters to this tier because of WHAT it licenses.** The grant covers *"the educational skills,
+documentation, examples, and curriculum materials in this repository"* — it is a **content** licence over a
+corpus of 165 teacher-facing skills, and it **explicitly permits commercial use and adaptation**. 🔴 **The
+price is ShareAlike: derivative curriculum must carry CC BY-SA 4.0.** 🔵 **So the distinction a client's legal
+team will ask about, stated once:** embedding this corpus in a proprietary platform is fine as *infrastructure*
+— the ShareAlike obligation attaches to the **adapted materials**, not to the platform code that serves them.
+Keep adapted curriculum in a separately licensed repository and the problem is tractable. ⚠️ **If the
+deliverable IS the curriculum, BY-SA makes it non-exclusive — the client cannot sell it as proprietary
+content.** That is a commercial-model conversation to have early, not a technical blocker.
+
+### 🔴 What this pass could NOT do
+
+🔴 **No permissive education ERP, SIS or CRM — twenty-third consecutive nil.** Stated as a property of the
+sector rather than a search failure, and **this phrasing should be retired**: 23 windows asking explicitly for
+MIT and Apache have produced zero. A future pass should ask instead *which copyleft platform has the best
+integration surface*, which is the question an engagement actually faces.
+🔴 **No primary source — twenty-second consecutive pass.** `curl` gets **`CONNECT tunnel failed, response
+403`** from the agent proxy on every non-GitHub host; `WebFetch` gets `ENOTFOUND`. 🔵 **A network policy on
+hosts that resolve, not a missing DNS record** — correcting `p302`'s resolver-scope reading. Matrix:
+[`p303-reachability.2026-10-18-p303.tsv`](../evidence/p303-reachability.2026-10-18-p303.tsv).
+🔴 **No Moodle, Open edX, Canvas or Sakai release was checked this pass.** Every statement about the major
+platforms on this file is **carried**, not re-verified — including their version numbers. Treat the copyleft
+platform inventory as last verified at `p302`.
+🔴 **`api.github.com` is authenticated but repo-scoped**, `/search/repositories` refused by name; **no exact
+star integers for any row on this file.**
+🔴 **`thm-mni-ii/feedbacksystem`'s AI mechanism remains unread** (open since `p302`): Helm chart present,
+Languages panel empty, visible demo still only an **SQL checker**.
+🔴 **`make hooks` was NOT run** — third consecutive pass.
+
 ## 🔴 Pass 302 — TWENTY-SECOND CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM — AND THE TWO NEW SELF-HOSTABLE PLATFORMS FOUND THIS PASS LAND ON OPPOSITE SIDES OF THE LICENCE LINE
 
 ⏱️ **Pass 302 of `2026-10-18`.** Evidence:

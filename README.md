@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-18
 ---
 
+## Pass 303 — 2026-10-18 — **THE POPULATION WAS PAGED AND IT HAS A FLOOR: `ai-tutor` IS ~60 REAL REPOSITORIES, NOT 750 — PLUS A LICENCE DEFECT WORSE THAN AN ABSENT GRANT, AND THE FIRST PASS IN THIS BASE'S HISTORY WHERE ALL FOUR REGIONS PAID**
+
+**One-line summary:** 🟢 `p302` left one instruction — page the topic populations past rank 20 — and **`?page=N`
+works**: `ai-tutor` read to **rank 60**, `ai-education` to **rank 40**, `intelligent-tutoring-system` enumerated
+whole (population 41). 🟢 **The star distribution collapses to 9★ by rank 60, so "750 repositories" is a tail:
+the real corpus is ≈60 members above 9★ and this base has now read all of them — a COMPLETENESS claim it has
+never been able to make.** 🟢 **23 new permissive rows, every licence read as a payload with its `sha256₁₂`;
+11 refusals.** 🔴 **New defect class — the PHANTOM GRANT:** [`fenago/LearnGraph`](https://github.com/fenago/LearnGraph)
+claims `MIT License` in its README while the file **does not exist on any branch** — worse than `p302`'s
+unlicensed 29.6k★ repo, because it *defeats* the check an absent licence fails. 🟢 **Vietnam is RECONCILED
+rather than re-corrected** (statute and high-risk list are different instruments — both prior readings were
+right about different things). 🟢 **The EU high-risk date finally has a named mechanism: the `Digital Omnibus
+on AI`.** 🟢 **All four regional legs paid — a first.** 🟢 **Four new patterns (`P76`-`P79`).**
+
+⏱️ **Dating note:** this pass's evidence was gathered on `2026-10-18` and every file and cross-reference is
+dated accordingly; the pass completed just after the `2026-10-19` rollover. **Dated by its evidence, not by
+its commit.**
+
+### 🟢 What was found
+
+| finding | verdict |
+|---|---|
+| `github.com/topics/{t}?page=N` paging | 🟢 **WORKS** — answers `p302`'s explicit ask; 101 ranked rows recorded with stars and prior-carry status |
+| `ai-tutor` star decay: rank 1 = 41.6k★, rank 20 = 65★, rank 40 = 17★, rank 60 = **9★** | 🟢 **THE POPULATION HAS A FLOOR** — "750" is a tail; ≈60 real members, **all now read** |
+| Where the novelty actually was | ⚠️ **70 % of new rows came from ranks 41–60** — page 1 paid **zero**. **Novelty is inversely correlated with stars here.** A future leg must not stop at page 2 |
+| 23 new permissive rows, all payload-verified with byte length + `sha256₁₂` | 🟢 **ADDED** across `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` |
+| [`fenago/LearnGraph`](https://github.com/fenago/LearnGraph) (14★) | 🔴 **PHANTOM GRANT — NEW DEFECT CLASS.** README line 774 says `MIT License - See LICENSE file for details.`; **18 probes** (6 filenames × `main`/`master`/`dev`) all **404**; sidebar lists only Readme + Activity. **Gate: read the PAYLOAD, never the README's description of it** |
+| [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) (56★, *"built on learning science principles"*) | 🔴 **NO GRANT** — the most painful refusal of the pass. Cite the papers; reimplement the code-soliloquy technique |
+| [`lemos999/ailey-bailey-canvas`](https://github.com/lemos999/ailey-bailey-canvas) (20★) | 🔴 **CC BY-NC-SA 4.0** — **NonCommercial forbids the engagement outright, a harder stop than AGPL, which merely prices one** |
+| Refusal rate | 🟢 **38 licence reads: 25 permissive, 11 refused — 29 %** (23 % across the 30 previously-uncarried repos). 🔵 **The draws do NOT agree, and that is the finding: `p302` read the star-sorted HEADS at ≈39 %, this pass the paged TAIL at 23 %.** ⚠ **The tail is cleaner than the head — so licence risk RISES with adoption**, concentrating in exactly the repositories a studio reaches for first |
+| [`hakimihou/capability-space`](https://github.com/hakimihou/capability-space) | 🟢 **MIT** `1 086 B` `465174e71a3b` — keeps **activity / evidence / mastery** distinct. **The most valuable idea added this pass, and it is a data model, not an agent** — it is what makes a mastery claim auditable |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) (4.1k★) | 🟢 **MIT PINNED AT LAST** `1 079 B` `2ec9e6e61ed8` — **the scheduler → skill → deliverable chain is now permissive at every link** |
+| [`aimclub/ai-competency-model`](https://github.com/aimclub/ai-competency-model) | 🟢 **BSD-3-Clause** `1 531 B` `bbbc8f2f3ed4` — **first BSD grant on any tier**; institutional holder **© 2022 NSS Lab, ITMO University**. ⚠️ Russian state university — **run a counterparty/sanctions check** |
+| Withholding pedagogy | 🟢 **CONVERGENT — four independent implementations** (`algo-sensei`, `think-before-code`, `Socrate`, `leetmate`), plus its **measurement counterpart** (`agent-tutor-skill`'s **zero-hint quizzes**). *A cascade is unfalsifiable without a zero-hint control* |
+| **Vietnam** | 🟢 **RECONCILED, not re-corrected.** `Law No. 134/2025/QH15` (statute, `2026-03-01`, **extraterritorial**) and `Decision 33/2026/QD-TTg` (high-risk list, `2026-08-15`, education = 3) are **different instruments at different levels** — `p302`'s correction was right about the listing, the carried datum right about the law. 🔴 **The compliance deadline is REFUSED — a fourth incompatible reading** |
+| **EU high-risk date** | 🟢 **MECHANISM NAMED:** the **`Digital Omnibus on AI`** (in force `2026-07`) is what moved stand-alone high-risk to **`2027-12-02`**; 🟢 **new second tier: embedded-in-regulated-products `2028-08-02`**. The carried date is corroborated and now *checkable* — and the "August 2026" readings still circulating are **pre-Omnibus and stale** |
+| **North America** | 🟢 **Second consecutive paying pass:** `134` bills across `31` states; CA **`AB 1159`** (bars student data for model training), Idaho **`SB 1227`**, **Oklahoma + Maryland bar AI from high-stakes decisions about students**; `H.R. 8747` committee date **independently corroborated** (`2026-07-21`). 🔴 **NYC K-8 moratorium is the counter-signal** |
+| **LATAM** | 🟢 **Third independent attribution of the 87/74/26 triple, now with its denominator (200 institutions / 19 countries)**, plus four new datums: Brazil **53 % / 22 %** (Cetic.br), **PISA 2025 nine-in-ten**, Argentina **75 % vs 42 %** by SES, **Uruguay** first CoE Framework Convention signatory |
+| Regulatory convergence | 🟢 **THE MOST REUSABLE FACT IN THIS BASE:** Oklahoma/Maryland, the EU and Vietnam have **independently converged on an automated decision ABOUT a student** as the regulated act. **One conformity product, three dossiers** → `P76` |
+| Adoption-governance gap | 🟢 **STRUCTURAL, NOT REGIONAL** — reproduces at LATAM higher ed (61 pts), Brazil K-12 (31 pts) and MENA (legal vacuum). 🔵 **So it is not a LATAM deficiency, and the same remediation product sells in four regions** |
+| 🟢 **Where the licence risk actually sits** | 🔴 **The academically framed corpus is the LEAST usable part of this vertical.** `ai-tutor`'s paged tail refused **1 of 20**; the `intelligent-tutoring-system` head refused **6 of 20** (`LTLTutor` + `logicits` AGPL; `Tutorbot-Spock`, `EduAI`, `xueyoujing-companion`, `LatentVariableModel` ungranted). 🔵 **The pedagogy is concentrated exactly where the licences are worst** — which is why `P76`-`P79` cite academic work as DESIGN and permissive code as BUILD |
+| Payload-hash by-product | 🟢 `sha256₁₂ c71d239df917` at `11 357 B` recurred on **four unrelated repos** = **stock unmodified Apache-2.0**. The hash now also distinguishes **a boilerplate drop-in from a grant someone actually reviewed** |
+| Permissive education ERP/CRM | 🔴 **TWENTY-THIRD CONSECUTIVE NIL** — and this pass's sources *state* that none exists rather than offering a failing candidate. 🟢 **The size rule: PERMISSIVE and PLATFORM-SCALE are nearly disjoint in education** |
+
+### 🔴 What this pass could NOT do
+
+🔴 **No primary government or IGO source — TWENTY-SECOND consecutive pass — and `p302`'s diagnosis is
+CORRECTED in its mechanism.** `p302` saw `getaddrinfo ENOTFOUND` and inferred a *resolver scope*. This session
+shows **two different failures on two channels**: `curl` returns **`CONNECT tunnel failed, response 403`** —
+an agent proxy *refusing a tunnel to a host it resolved perfectly well* — while `WebFetch` still returns
+`ENOTFOUND`. 🟢 **It is a network POLICY, not a missing DNS record**, for `congress.gov`, `govinfo.gov`,
+`eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `unesco.org`, `iesalc.unesco.org`, `oecd.org` and
+`nces.ed.gov`. Matrix: [`evidence/p303-reachability.2026-10-18-p303.tsv`](evidence/p303-reachability.2026-10-18-p303.tsv).
+**Predicted consequence is unchanged: every primary leg fails, every GitHub leg succeeds.**
+🔴 **So every non-GitHub datum this pass — the Vietnam reconciliation, the Digital Omnibus, every US state
+bill, the whole LATAM set — is SEARCH-SNIPPET-ATTRIBUTED.** Better sourced than what it replaces; still not
+primary.
+🔴 **`api.github.com` is NOT merely "intercepted", and the correction matters because it closes the question.**
+It answers, and it answers **authenticated** — `/rate_limit` reports a **15 000**-request core limit. 🔴 **But
+it is bound to this session's configured repositories:** `/repos/{owner}/{repo}` returns *"GitHub access to
+this repository is not enabled for this session"*, and `/search/repositories` is refused **by name** —
+*"sessions are bound to their configured repositories"*. 🟢 **This is an AUTHORIZATION boundary, not a
+transport fault, so it will never clear on a retry: no exact star integer, no `licence_spdx`, no `pushed_at`,
+permanently, from this environment. All star figures are rendered and rounded. A future pass should stop
+re-testing for it.**
+🔴 **`make hooks` was NOT run** — third consecutive pass; this session could not execute this base's code.
+Licences were read directly from `raw.githubusercontent.com` with byte lengths and `sha256₁₂` recorded instead.
+🔴 **Three mandated phrasings nil'd again and all three should be retired:** the agent phrasing for the
+**29th** consecutive window (it returns courses *about* AI, not AI software for education — a distinction it
+cannot be made to draw), trending for the **16th**, ERP/CRM for the **23rd**.
+🔴 **Four date sets are REFUSED:** Vietnam's education compliance deadline (**fourth** incompatible reading —
+`2027-09-01` this pass), Mexico's federal AI bill status, Peru's law (carried open), and the precise scope of
+the US state statutes (known only through a tracker's summary; **no bill text was read**).
+🔴 **`ai-education` read only to rank 40 of 528, `ai-tutor` only to 60 of 750** — the remainder is
+**unmeasured, not absent**, though the star decay predicts single-digit-star personal repositories.
+🔴 **`education` (39 007) not re-read** — `p302` established it is a learning-resources channel.
+🔴 **No market SIZE figure was adopted, and three circulating ones are explicitly REFUSED:** *"$12.3B by
+2026"* and *"83 % planning AI teaching assistants"* (vendor report attributing to HolonIQ/EDUCAUSE,
+unverifiable at either), *"86 % of students use AI"* (aggregator, no traceable survey), *"62 % test-score
+gain"* (vendor claim, no study). 🔵 **This file's carried market sizing is therefore older than this pass.**
+🔴 **Sub-Saharan Africa: the EMEA leg returned nothing education-specific.** Recorded as an informed gap,
+because silence looks exactly like coverage.
+🔴 **The IESALC triple has STILL never been read at its publisher — open since `p282`.** Three independent
+snippet attributions plus the denominator is the ceiling available here.
+🔴 **No code, commit history or test suite was read in any repository.** Capability statements come from
+rendered READMEs; maturity from rendered star, fork and commit counts. **Most new rows are single-author
+repositories under 30 commits — copy the mechanism, never take the dependency.**
+🔴 **`thm-mni-ii/feedbacksystem`'s AI mechanism remains unread** (open since `p302`): Helm chart present,
+Languages panel empty, visible demo still only an **SQL checker**.
+🔴 **No Moodle, Open edX, Canvas or Sakai release was checked** — the copyleft platform inventory is carried
+from `p302`, version numbers included.
+
 ## Pass 302 — 2026-10-18 — **THE DEAD AGENT LEG WAS REPLACED RATHER THAN REWORDED: GITHUB TOPIC PAGES ARE AN ENUMERATION WITH A DENOMINATOR, AND THEY PAID 14 PERMISSIVE ROWS, 9 LICENCE REFUSALS AND A 29.6k★ REPO WITH NO GRANT**
 
 **One-line summary:** 🔴 The mandated agent phrasing nil'd a **twenty-eighth** time, so `p302` retired it

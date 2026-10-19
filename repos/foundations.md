@@ -4,6 +4,143 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 303 — THE LEARNER-MODEL LAYER FINALLY HAS A PERMISSIVE DATA MODEL, THE SPACED-REPETITION DEPENDENCY CHAIN IS NOW CLEAN END TO END, AND THE SECTOR'S BEST LEARNING-SCIENCE TUTOR TURNS OUT TO HAVE NO GRANT
+
+⏱️ **Pass 303 of `2026-10-18`.** Evidence:
+[`p303-licence-payload.2026-10-18-p303.tsv`](../evidence/p303-licence-payload.2026-10-18-p303.tsv) ·
+[`p303-topic-paging.2026-10-18-p303.tsv`](../evidence/p303-topic-paging.2026-10-18-p303.tsv) ·
+[`p303-reachability.2026-10-18-p303.tsv`](../evidence/p303-reachability.2026-10-18-p303.tsv) ·
+[`p303-websearch.2026-10-18-p303.tsv`](../evidence/p303-websearch.2026-10-18-p303.tsv).
+
+🔴 **The mandated foundations phrasing nil'd for the twenty-third consecutive window** (`open source platform
+education ERP CRM MIT Apache student information system` → **OpenEduCat** LGPL-3.0, **openSIS**, **Kuali** —
+all carried, none permissive; the sources themselves could not name an MIT- or Apache-licensed education ERP).
+🟢 **The paged GitHub-topic leg paid instead, and what it added is the layer BELOW the agents: the learner
+model and the scheduling algorithm.**
+
+### 🟢 New foundational row — a permissive learner-model data layer, and it draws the distinction this tier needed
+
+🟢 **[`hakimihou/capability-space`](https://github.com/hakimihou/capability-space)** — **MIT** (payload
+`LICENSE`, `1 086 B`, `sha256₁₂` `465174e71a3b`) — **10★**, Python.
+
+Its one-line description is the contribution: *"A learner-owned adaptive knowledge space that keeps
+**activity, evidence, and mastery distinct**."*
+
+🔵 **Why a 10-star repository earns a foundational row — and this is a judgement, stated as one.** Every
+adaptive-tutoring build has to answer "what does this learner know?", and almost every one answers it by
+conflating three different things: that the learner *did* something (activity), that something was *produced*
+which bears on competence (evidence), and that a model *infers* competence from it (mastery). 🟢 **Keeping
+them in separate structures is exactly what makes a claim auditable** — and auditability is now a regulatory
+requirement, not a nicety: Vietnam's education listing reaches systems that *assess, grade or rank* students
+and Korea's AI Basic Act reaches high-impact AI ([`intel/market.md`](../intel/market.md)). 🔵 **An auditor asks
+"show me the evidence behind this mastery score"; a schema that cannot separate the two cannot answer.**
+
+🟢 **The reusable asset is the three-way schema, and it is reusable at any scale and in any subject.** ⚠️ **It
+is 10★ and a single author — copy the data model, do not take the dependency.** ⚠️ "Learner-owned" is the
+project's framing; whether a client deployment can honour learner data ownership is a contract question this
+row does not settle.
+
+### 🟢 The spaced-repetition dependency chain is now permissive end to end
+
+🟢 **[`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki)** — **MIT**
+(payload `LICENSE`, `1 079 B`, `sha256₁₂` `2ec9e6e61ed8`) — **4.1k★**, the **highest-starred repository in the
+`intelligent-tutoring-system` topic** and the reference implementation of the **Free Spaced Repetition
+Scheduler**.
+
+🔵 **Why this pin matters more than its novelty.** This base has carried FSRS as an *algorithm name* across
+many passes — `OpenTutor`'s FSRS6, `Bhala-Srinivash/agent-tutor-skill`, `smart-study-agent`'s "FSRS picks the
+timing" — without ever pinning the grant on the thing those rows depend on. 🟢 **It is MIT.** So the chain
+**scheduler → tutoring skill → engagement deliverable** is permissive at every link, with no copyleft and no
+unlicensed hop. ⚠️ **One boundary:** `fsrs4anki` is a *scheduler for Anki*; the portable part is the FSRS
+algorithm and its parameter fitting, not the Anki integration. Lift the algorithm.
+
+### 🟢 A competency framework with an institutional copyright holder — and the tier's first BSD grant
+
+🟢 **[`aimclub/ai-competency-model`](https://github.com/aimclub/ai-competency-model)** — 🟢 **BSD-3-Clause**
+(payload `LICENSE.md`, `1 531 B`, `sha256₁₂` `bbbc8f2f3ed4`, holder **© 2022 NSS Lab, ITMO University**) —
+**30★**.
+
+A structured **professional AI-competency model** (*"Модель профессиональных компетенций в области ИИ"*).
+🟢 **Two firsts for this file:** the **first BSD-3-Clause grant** on any tier here (every prior permissive row
+was MIT or Apache-2.0), and only the **second permissive row with an institutional copyright holder** rather
+than an individual — the other being [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem)
+(Apache-2.0, THM).
+
+🔵 **Why institutional provenance is a foundational property and not a footnote:** a ministry, university or
+accreditation body procuring a competency framework asks who stands behind it. An individual's MIT repository
+cannot answer; a university lab's can. ⚠️ **Boundaries, stated:** this is a **framework document**, not
+running software — do not brief it as a system; and the holder is a **Russian state university**, so **an
+engagement must run its own counterparty and sanctions review before adoption**. That is a procurement
+question, and this base is not competent to answer it — it is flagged so it is not discovered late.
+
+### 🔴 The foundational loss of the pass: the learning-science tutor has no grant
+
+🔴 **[`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) — 56★ — NO LICENCE**
+(`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` all 404 on `main`, `master` and `dev`). Its
+sibling [`Tutorbot-Spock-Phys`](https://github.com/luffycodes/Tutorbot-Spock-Phys) (9★), which generates
+conversations with **code soliloquies for reliable calculations**, is **equally ungranted**.
+
+🔵 **This is the single most painful refusal on this file, because of what it is**: an LLM tutoring chatbot
+*"built on learning science principles"* with academic provenance — precisely the artefact an engagement wants
+to point at when a client asks whether the pedagogy is real rather than asserted. 🔴 **No grant means no
+permission.** 🟢 **The usable residue is the published work, not the code:** cite the papers and reimplement
+the mechanism (the code-soliloquy idea — making the model emit computation separately so arithmetic is not
+hallucinated — is a *technique*, and techniques are not what a licence withholds). 🔵 **Pair it with
+[`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor), which is the same kind of artefact with
+the opposite licence outcome** — WWW '25 paper code under **CC0 1.0** (payload `7 048 B` `a2010f343487`,
+verified this pass), i.e. a public-domain dedication. **Academic provenance predicts nothing about the grant;
+read it every time.**
+
+### 🔴 And the misconception-based tutor — the best pedagogy in the topic — is AGPL
+
+🔴 **[`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor)** — **AGPL-3.0** (payload `LICENSE.txt`,
+`35 148 B`, `sha256₁₂` `8b1ba204bb69`), **12★**, from **Brown University's Programming Languages Team**. A
+**misconception-based** tutor for Linear Temporal Logic.
+
+🔵 **"Misconception-based" is a stronger pedagogical claim than anything else in the `intelligent-tutoring-system`
+topic**, including the rows this file already carries: instead of scoring an answer right or wrong, it models
+*which specific wrong belief* produces the error and teaches against that. 🟢 **The reusable asset is the
+misconception catalogue as a design artefact** — enumerate the wrong beliefs for a subject, then write
+diagnostics that discriminate between them. 🔴 **AGPL-3.0's network clause reaches a hosted deployment**, so
+the code cannot sit inside a client platform. Same verdict for
+[`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) (**AGPL-3.0**, `35 149 B` `3972dc9744f6`, Java
+natural-deduction ITS).
+
+### 🟢 The `intelligent-tutoring-system` topic is now FULLY enumerated at its head, and that is a completeness claim
+
+🟢 **Population 41; this pass read the entire star-ordered head (ranks 1–20) and recorded every row with its
+prior-carry status** in
+[`p303-topic-paging.2026-10-18-p303.tsv`](../evidence/p303-topic-paging.2026-10-18-p303.tsv).
+🔴 **Nineteen of twenty were already carried** — only
+[`HyeonahKang/LatentVariableModel-IntelligentTutor`](https://github.com/HyeonahKang/LatentVariableModel-IntelligentTutor)
+(4★, **R**; latent transition analysis in Mplus and hidden Markov analysis) was new, and it is **research code,
+not a system**. 🔴 **It also has NO GRANT** — no licence in its sidebar, confirmed on the rendered page
+(default branch `main`, 17 commits, root holding `A2_LTM_Analysis.inp`, `A3_HMM_Analysis.R`, `fitstat.R`).
+🔵 **So the ITS head's one new row is unusable anyway** — cite the method, not the code.
+
+🔵 **Read that as a positive result, not a nil.** It means this base's coverage of the *academically framed*
+ITS corpus is effectively complete — the tail below rank 20 runs from 1★ to 4★ — and that future legs should
+go to `ai-tutor` and `ai-education`, where the population is 750 and 528 and the new material actually is.
+🟢 **Below rank 8 the topic is entirely single-digit stars**, so "41 repositories" describes a very small real
+corpus.
+
+### 🔴 What this pass could NOT do
+
+🔴 **No primary source — twenty-second consecutive pass — and the mechanism is now corrected.** `curl`
+receives **`CONNECT tunnel failed, response 403`** from the agent proxy for every non-GitHub host, while
+`WebFetch` receives `ENOTFOUND`; `p302` saw only the latter and inferred a resolver scope. 🔵 **It is a network
+POLICY on hosts that resolve fine.** Consequence for this file: **every market and regulatory datum
+referenced from here is search-snippet-attributed**, never publisher-read.
+🔴 **`api.github.com` answers and is authenticated (15 000-request core limit) but is bound to this session's
+configured repositories** — `/search/repositories` is refused by name. **No exact star integers, no
+`licence_spdx`, no `pushed_at` for any row on this file, and this is an authorization boundary rather than a
+transport fault, so it will not clear on a retry.**
+🔴 **`make hooks` was NOT run** (third consecutive pass).
+🔴 **`feedbacksystem`'s AI mechanism is still unread** — carried from `p302` as an open item; this pass did not
+read its code, so the "SQL checker only" boundary stands unchanged.
+🔴 **No repository on this file had its commit history or test suite read.** Maturity statements are from
+rendered pages: star counts, fork counts and visible commit totals.
+
 ## 🟢 Pass 302 — THE EVALUATION TIER FINALLY HAS PERMISSIVE CODE IN IT, AND THE BENCHMARK THIS SHELF MOST WANTED TURNED OUT TO HAVE NO GRANT
 
 ⏱️ **Pass 302 of `2026-10-18`.** Evidence:

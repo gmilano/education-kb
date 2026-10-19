@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 303: THE TOPIC POPULATIONS WERE PAGED AS `p302` ASKED, AND THE STAR DISTRIBUTION TURNS A DENOMINATOR INTO A FLOOR — `ai-tutor` HAS ~60 REAL MEMBERS, NOT 750
+
+Evidence: [`p303-topic-paging.2026-10-18-p303.tsv`](../evidence/p303-topic-paging.2026-10-18-p303.tsv) ·
+[`p303-licence-payload.2026-10-18-p303.tsv`](../evidence/p303-licence-payload.2026-10-18-p303.tsv) ·
+[`p303-reachability.2026-10-18-p303.tsv`](../evidence/p303-reachability.2026-10-18-p303.tsv) ·
+[`p303-websearch.2026-10-18-p303.tsv`](../evidence/p303-websearch.2026-10-18-p303.tsv).
+
+🔴 **`github trending education AI 2026` produced no new education row for the SIXTEENTH window** — it
+returned `rohitg00/ai-engineering-from-scratch`, Karpathy's *Zero to Hero*,
+`microsoft/ai-agents-for-beginners`, Trendshift aggregators and a Japanese trend blog. 🔵 **Note what those
+are: courses ABOUT AI, not AI software for education.** The phrasing has never distinguished the two and
+cannot be made to. **Retire it.**
+
+### 🟢 The instrument result: `?page=N` works on topic pages, and paging converts a denominator into a FLOOR
+
+🟢 **`p302` discovered that `github.com/topics/*` publishes its own population and asked `p303` to page past
+rank 20. It pages.** This pass read:
+
+| topic | population GitHub reports | read `p302` | read `p303` | new permissive | refused |
+|---|---|---|---|---|---|
+| [`ai-tutor`](https://github.com/topics/ai-tutor) | **750** | ranks 1–20 | 🟢 **ranks 1–60** (pages 1–3) | **14** | 1 |
+| [`ai-education`](https://github.com/topics/ai-education) | **528** | ranks 1–20 | 🟢 **ranks 1–40** (pages 1–2) | **9** | 4 |
+| [`intelligent-tutoring-system`](https://github.com/topics/intelligent-tutoring-system) | **41** | ranks 1–20 | 🟢 **ranks 1–20 — the whole head** | 0 *(1 new row, research code, 🔴 also ungranted)* | **6** |
+| [`education`](https://github.com/topics/education) | **39 007** | ranks 1–20 | 🔴 **not re-read** | — | — |
+
+🔵 **Read the refused column across the three rows, because it is the most useful thing in this table:
+`ai-tutor`'s paged tail refused ONCE in twenty reads, while the `intelligent-tutoring-system` head refused
+SIX times in twenty.** 🟢 **The academically framed corpus is markedly less usable than the hobbyist
+one** — university and research code arrives AGPL or ungranted (`LTLTutor`, `logicits`, `Tutorbot-Spock`,
+`EduAI`, `xueyoujing-companion`, `LatentVariableModel`), while a personal repository usually drops in a
+template MIT file. ⚠ **The pedagogy is concentrated where the licences are worst.** That is the standing
+tension in this vertical, and it is why `P76`-`P79` all cite academic work as DESIGN and permissive code as
+BUILD.
+
+🟢 **The decisive measurement is the star decay, because it bounds the work remaining:**
+
+| `ai-tutor` page | ranks | star range | share of this pass's new rows |
+|---|---|---|---|
+| 1 | 1–20 | **41 600 → 65** | **0 %** — every row already carried |
+| 2 | 21–40 | 64 → 17 | 6 % |
+| 3 | 41–60 | **16 → 9** | 🟢 **70 %** |
+
+🔵 **So "750 repositories" describes a tail, not depth.** By rank 60 the topic is at **9★** and still falling:
+the real corpus is **≈60 members above 9★**, and this base has now read all of them. 🟢 **That turns the
+shelf from a sample into an enumeration, and lets this base make a COMPLETENESS claim for the first time** —
+worth more in a client conversation than a larger number would be. 🟢 **Page 1 paying zero independently
+confirms `p302` consumed the head.**
+
+⚠️ **The operational lesson runs against intuition: 70 % of the new rows came from the BOTTOM of the read
+range.** Novelty and stars are inversely related here, because the high-star head was harvested in earlier
+passes. **Do not stop a future leg at page 2 because the stars look small.**
+
+### 🟢 `intelligent-tutoring-system` is now fully enumerated at its head — read the nil as coverage, not failure
+
+🟢 **Population 41; the entire star-ordered head (ranks 1–20) read and recorded with prior-carry status.**
+🔴 **Nineteen of twenty were already carried.** The only new row —
+[`HyeonahKang/LatentVariableModel-IntelligentTutor`](https://github.com/HyeonahKang/LatentVariableModel-IntelligentTutor)
+(**4★**, **R**; latent transition analysis in Mplus plus hidden Markov analysis) — is **research code, not a
+system**, and 🔴 **it has NO GRANT either** (no licence in the sidebar; confirmed on the rendered page).
+
+🔵 **This is a positive result.** It means coverage of the *academically framed* ITS corpus is effectively
+complete; below rank 8 the topic is entirely single-digit stars, so **"41 repositories" describes a very small
+real corpus**. 🟢 **Future legs belong in `ai-tutor` (750) and `ai-education` (528), where the population and
+the novelty actually are.**
+
+### 🟢 Permissive rows added from the paged range — 23, each licence read as a payload
+
+🟢 **Full table with byte lengths and `sha256₁₂` for all 38 licence reads (25 permissive, 11 refused):**
+[`p303-licence-payload.2026-10-18-p303.tsv`](../evidence/p303-licence-payload.2026-10-18-p303.tsv).
+Detail and engagement framing: [`agents/top.md`](../agents/top.md) ·
+[`repos/foundations.md`](../repos/foundations.md) · [`verticals/solutions.md`](../verticals/solutions.md).
+
+🟢 **The four that change what this base can build** (full rationale in `agents/top.md`):
+
+| repo | licence (payload, `sha256₁₂`) | ★ | why it is a trend and not just a row |
+|---|---|---|---|
+| [`hakimihou/capability-space`](https://github.com/hakimihou/capability-space) | **MIT** `1 086 B` `465174e71a3b` | 10 | Separates **activity / evidence / mastery** — the schema an auditor needs under Vietnam's Decision 33 |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** `1 079 B` `2ec9e6e61ed8` | **4.1k** | 🟢 The FSRS reference, pinned at last — **the scheduler → skill → deliverable chain is now permissive at every link** |
+| [`aimclub/ai-competency-model`](https://github.com/aimclub/ai-competency-model) | **BSD-3-Clause** `1 531 B` `bbbc8f2f3ed4` | 30 | **First BSD grant** on any tier here; holder **© 2022 NSS Lab, ITMO University** ⚠️ run a counterparty/sanctions check |
+| [`MadsDoodle/Career-Navigator`](https://github.com/MadsDoodle/Career-Navigator) | **MIT** `1 072 B` `a10c8ca82807` | 17 | Resume → skill gap → path: the first row answering **HolonIQ's named career-navigation trend** |
+
+🟢 **A language shift worth recording: three of the new rows are Go services** (`regulus-academy`, `XE3-ESL`,
+`leetmate`) on a shelf that has been Python/TypeScript-dominated, and
+[`bystritskiy/ElevenSpeak`](https://github.com/bystritskiy/ElevenSpeak) (**MIT** `1 075 B` `1a9c6f87bfb5`,
+Swift) is the **first native-iOS row**. 🔵 **Reads as the tier maturing from notebook to deployable service.**
+
+### 🔴 Refusals from the paged range — and the rate replicates across two independent draws
+
+🟢 **38 licence reads: 25 permissive, 11 refused — a 29 % refusal rate.** Restricted to the **30
+previously-uncarried** repositories: **7 of 30, or 23 %**.
+
+🔵 **The two draws do NOT agree, and that is the finding: `p302` measured ≈39 % on the star-sorted HEADS,
+this pass 23 % on the paged TAIL.** 🟢 **The tail is cleaner than the head** — the famous unlicensed
+artefacts sit at the top (`Mr.-Ranedeer-AI-Tutor` 29.6k★, `Tutorbot-Spock` 56★), while small personal
+repositories usually drop in a template MIT file. ⚠ **So licence risk rises with adoption**, which is the
+opposite of reassuring: it concentrates in exactly the repositories a studio would reach for first.
+
+🔴 **New defect class — PHANTOM GRANT:** [`fenago/LearnGraph`](https://github.com/fenago/LearnGraph) (14★)
+states `MIT License - See LICENSE file for details.` in its README while **18 probes** (6 filenames ×
+`main`/`master`/`dev`) return **404** and GitHub's sidebar detects no licence. 🔵 **Worse than an absent
+grant, because it defeats the obvious check**: grep README, read "MIT", ship. 🟢 **Gate for this base: read
+the licence PAYLOAD, never the README's description of it.**
+
+🔴 **Also refused:** `luffycodes/Tutorbot-Spock` (**56★**, *"built on learning science principles"*) and
+`Tutorbot-Spock-Phys` — **no grant**; `koofree/research-aied`, `legostin/learn-almost-anything`,
+`shychee/py_ai_tutorial`, `ZQR1101/xueyoujing-companion`, `LeParisien-dev/EduAI` — **no grant**;
+`lemos999/ailey-bailey-canvas` — **CC BY-NC-SA 4.0** (🔴 **NonCommercial forbids the engagement, a harder stop
+than AGPL's price**); `brownplt/LTLTutor` and `IgorFonck/logicits` — **AGPL-3.0**, both university-held.
+
+### 🟢 A method by-product: the payload hash distinguishes a boilerplate drop-in from a reviewed grant
+
+🟢 **`sha256₁₂ c71d239df917` at exactly `11 357 B` recurred on four unrelated repositories** this pass
+(`Socrate`, `regulus-academy`, `personal-tutor`, `RE-GPT`) — the **stock, unmodified Apache-2.0 text with the
+appendix left unfilled**. 🔵 **So the hash does double duty: it pins the grant AND it tells a boilerplate drop
+from a grant someone customised.** A customised Apache payload with a named holder (THM's `10 785 B`
+`65125d9e480b`) indicates institutional legal review; a stock one indicates a template default. **Useful
+signal when weighing whether a repo's licence was a decision or an accident** — and it is exactly the
+distinction `fenago/LearnGraph` failed.
+
+### 🔴 What this week could NOT establish
+
+🔴 **`api.github.com` answers and is AUTHENTICATED (core limit 15 000, used 1) but is bound to this session's
+configured repositories:** `/repos/{owner}/{repo}` returns *"GitHub access to this repository is not enabled
+for this session"* and `/search/repositories` is refused **by name** — *"sessions are bound to their
+configured repositories"*. 🔵 **Correcting `p302`'s "intercepted by the agent proxy": it is an AUTHORIZATION
+boundary.** 🔴 **Consequence: no exact star integer, no `licence_spdx`, no `pushed_at` for any row — ever,
+from this environment. Every star figure in this file is rendered and rounded.** **A future pass should stop
+re-testing this.**
+🔴 **No primary source — 22nd consecutive pass.** `curl` → **`CONNECT tunnel failed, response 403`** (agent
+proxy refusing a tunnel to a host it resolved); `WebFetch` → `ENOTFOUND`. 🔵 **A network POLICY, not a missing
+DNS record** — correcting `p302`'s resolver-scope inference. Matrix:
+[`p303-reachability.2026-10-18-p303.tsv`](../evidence/p303-reachability.2026-10-18-p303.tsv).
+🔴 **`ai-education` ranks 41–528 and `ai-tutor` ranks 61–750 are UNMEASURED, NOT ABSENT** — though the star
+decay predicts the remainder is single-digit-star personal repositories. 🔵 **Recommended for `p304`: one
+page of `ai-education` page 3 to confirm the floor, then stop paging and spend the leg elsewhere.**
+🔴 **`education` (39 007) not re-read** — `p302` established it is a learning-resources channel, not an
+education-software one.
+🔴 **No code, commit history or test suite was read in any repository.** Capability statements come from
+rendered READMEs; maturity from rendered star, fork and commit totals.
+🔴 **`make hooks` was NOT run** — third consecutive pass.
+
 ## 2026-10-18 — Pass 302: GITHUB TOPIC PAGES REPLACED THE DEAD TRENDING PHRASING AND PUBLISHED THEIR OWN DENOMINATORS — 750 / 528 / 41 / 39 007 REPOS, READ AT PAGE 1, FOURTEEN PERMISSIVE AND NINE REFUSED
 
 Evidence: [`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv) ·

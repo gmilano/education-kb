@@ -1,0 +1,39 @@
+repo	branch	licence_file	bytes	sha256_12	detected	verdict	note
+fenago/LearnGraph	-	NONE(main,master,dev x5 names)	0	-	NO-GRANT	RED-no-grant	PHANTOM-GRANT:README-claims-MIT,18-probes-404,sidebar-no-License
+koofree/research-aied	-	NONE(main,master,dev x5 names)	0	-	NO-GRANT	RED-no-grant	
+clduab11/thinkrank	main	LICENSE	1071	699170d0cb87	MIT	GREEN-permissive	
+aimclub/ai-competency-model	main	LICENSE.md	1531	bbbc8f2f3ed4	BSD	GREEN-permissive	BSD-3-Clause,holder=NSS-Lab-ITMO-University
+Far-200/think-before-code	main	LICENSE	1064	60c8dfeeabcf	MIT	GREEN-permissive	
+1024XEngineer/XE3-ESL	main	LICENSE	1071	d6d4c6937d8d	MIT	GREEN-permissive	
+Haaaiawd/Socrate	master	LICENSE	11357	c71d239df917	Apache-2.0	GREEN-permissive	stock-unmodified-Apache-2.0-boilerplate
+hakimihou/capability-space	main	LICENSE	1086	465174e71a3b	MIT	GREEN-permissive	
+liuwenji007/regulus-academy	main	LICENSE	11357	c71d239df917	Apache-2.0	GREEN-permissive	stock-unmodified-Apache-2.0-boilerplate
+DuckInAShirt/leetmate	main	LICENSE	1078	01f565abffa5	MIT	GREEN-permissive	
+briannajzhang/personal-tutor	main	LICENSE	11357	c71d239df917	Apache-2.0	GREEN-permissive	stock-unmodified-Apache-2.0-boilerplate
+eugeniughelbur/doceo	master	LICENSE	1072	94b7323d4984	MIT	GREEN-permissive	
+yarikleto/claude-teacher-plugin	main	LICENSE	1065	b6519647c247	MIT	GREEN-permissive	
+Bhala-Srinivash/agent-tutor-skill	main	LICENSE	1072	771430ec98a9	MIT	GREEN-permissive	
+abdulrdeveloper/klar-AI	main	LICENSE	1072	28f7bbc34a2a	MIT	GREEN-permissive	
+liunor/nlp-agent	main	LICENSE	1073	ef01967408a8	MIT	GREEN-permissive	
+fangyuan-3149/book-learning-tutor	main	LICENSE	1503	54ceeac19921	MIT	GREEN-permissive	
+bystritskiy/ElevenSpeak	main	LICENSE	1075	1a9c6f87bfb5	MIT	GREEN-permissive	
+minicoursegenerator/skills-for-course-creators	master	LICENSE	1078	96137ba5f893	MIT	GREEN-permissive	
+MadsDoodle/Career-Navigator	main	LICENSE	1072	a10c8ca82807	MIT	GREEN-permissive	
+vesperchinn/learn-anything-skill	main	LICENSE	1095	d768d78d4218	MIT	GREEN-permissive	
+alicetinkaya76/microgpt-academy	main	LICENSE	1073	86a462bbaf7b	MIT	GREEN-permissive	
+tong666-bit/liu-xiaoyan-skill	master	LICENSE	1068	8626b7112026	MIT	GREEN-permissive	
+lemos999/ailey-bailey-canvas	main	LICENSE	14770	5d9d28313854	CC	AMBER-content-licence	CC-BY-NC-SA-4.0:NonCommercial-excludes-client-work
+legostin/learn-almost-anything	-	NONE(main,master,dev x5 names)	0	-	NO-GRANT	RED-no-grant	
+mytechnotalent/RE-GPT	main	LICENSE	11357	c71d239df917	Apache-2.0	GREEN-permissive	stock-unmodified-Apache-2.0-boilerplate
+shychee/py_ai_tutorial	-	NONE(main,master,dev x5 names)	0	-	NO-GRANT	RED-no-grant	
+timothywarner-org/az104-cert-buddy	main	LICENSE	1084	351277f4eed2	MIT	GREEN-permissive	
+open-spaced-repetition/fsrs4anki	main	LICENSE	1079	2ec9e6e61ed8	MIT	GREEN-permissive	
+GarethManning/education-agent-skills	main	LICENSE	1230	f952182df4eb	CC	AMBER-content-licence	CC-BY-SA-4.0-confirms-carried-claim
+GeminiLight/gen-mentor	main	LICENSE	7048	a2010f343487	CC	AMBER-content-licence	CC0-1.0-confirms-carried-claim
+luffycodes/Tutorbot-Spock	-	NONE(main,master,dev x5 names)	0	-	NO-GRANT	RED-no-grant	
+brownplt/LTLTutor	main	LICENSE.txt	35148	8b1ba204bb69	AGPL-3.0	RED-copyleft	
+ZQR1101/xueyoujing-companion	-	NONE(main,master,dev x5 names)	0	-	NO-GRANT	RED-no-grant	
+sohan1611/BloodCoded_Agentic	main	LICENSE	1104	4b15a1e898b3	MIT	GREEN-permissive	
+LeParisien-dev/EduAI	-	NONE(main,master,dev x5 names)	0	-	NO-GRANT	RED-no-grant	
+IgorFonck/logicits	master	LICENSE	35149	3972dc9744f6	AGPL-3.0	RED-copyleft	
+HyeonahKang/LatentVariableModel-IntelligentTutor	main	NONE(sidebar-confirmed-via-WebFetch)	0	-	NO-GRANT	RED-no-grant	R-research-code,17-commits,no-licence-in-sidebar

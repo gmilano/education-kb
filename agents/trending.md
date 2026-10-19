@@ -4,6 +4,161 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 2026-10-18 — Pass 303: THE POPULATION WAS PAGED TO RANK 60 AND IT HAS A FLOOR — PLUS A NEW LICENCE DEFECT CLASS (A README THAT CLAIMS MIT OVER A LICENCE FILE THAT DOES NOT EXIST) AND FOUR INDEPENDENT IMPLEMENTATIONS OF THE SAME PEDAGOGY
+
+Evidence: [`p303-licence-payload.2026-10-18-p303.tsv`](../evidence/p303-licence-payload.2026-10-18-p303.tsv) ·
+[`p303-topic-paging.2026-10-18-p303.tsv`](../evidence/p303-topic-paging.2026-10-18-p303.tsv) ·
+[`p303-reachability.2026-10-18-p303.tsv`](../evidence/p303-reachability.2026-10-18-p303.tsv) ·
+[`p303-websearch.2026-10-18-p303.tsv`](../evidence/p303-websearch.2026-10-18-p303.tsv).
+
+### 🟢 The signal of the week: the shelf is not 750 repositories deep. It is about sixty, and we have now read all sixty.
+
+🟢 **`p302` closed with one instruction — page `ai-tutor` and `ai-education` past rank 20. `?page=N` works.**
+This pass read `ai-tutor` to **rank 60**, `ai-education` to **rank 40**, and enumerated the whole head of
+`intelligent-tutoring-system` (**population 41**). 101 ranked rows with stars and prior-carry status:
+[`p303-topic-paging.2026-10-18-p303.tsv`](../evidence/p303-topic-paging.2026-10-18-p303.tsv).
+
+| `ai-tutor` page | ranks | star range | new permissive rows |
+|---|---|---|---|
+| 1 | 1–20 | 41 600 → 65 | **0** — every row already carried |
+| 2 | 21–40 | 64 → 17 | 1 |
+| 3 | 41–60 | **16 → 9** | **16** |
+
+🔵 **Two readings, and both are useful.** 🟢 **First: the enumeration is sound** — page 1 paying *zero* means
+`p302` genuinely consumed the head, and a second instrument independently agreed. 🟢 **Second, and more
+important for briefing: "750 repositories" is a tail, not depth.** By rank 60 the topic is at **9★** and still
+falling, so the real corpus is **roughly sixty members above 9★**. **This base has now read all of them.**
+🔵 **That is a completeness claim this shelf has never been able to make — and completeness is worth more in a
+client conversation than a bigger number.**
+
+⚠️ **The counter-intuitive operational lesson: 16 of 23 new rows came from ranks 41–60.** The novelty was at
+the *bottom* of the read range. **A future leg must not stop at page 2 because the stars look small.**
+
+### 🔴 Hot signal #1 — the PHANTOM GRANT: a README that claims MIT over a licence file that was never committed
+
+**Repo**: [`fenago/LearnGraph`](https://github.com/fenago/LearnGraph) — **14★ / 5 forks / 7 commits** —
+🔴 **NO GRANT, WHILE CLAIMING ONE**
+
+**What it says**: README line 774, under `## License` — *"MIT License - See LICENSE file for details."*
+**What exists**: nothing. **18 probes** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`,
+`license` across branches `main`, `master`, `dev` — **404 on every one.** The rendered sidebar's Resources
+block lists **only Readme and Activity**; GitHub's own licence detector found nothing.
+
+🔵 **Why this is a worse defect than `p302`'s 29.6k★ `Mr.-Ranedeer-AI-Tutor`, and why it is a new class.**
+An absent licence with no claim fails the *obvious* check — a developer looks for a grant, finds none, stops.
+🔴 **A phantom grant defeats exactly that check**: grep the README, read "MIT License", ship. The repository
+has told them they may. **But a README sentence is not a licence** — it names an instrument that was never
+committed, so there is nothing to accept and no terms to point at.
+
+🟢 **Carry it as a gate on method, not just a row: the licence check must read the PAYLOAD, never the README's
+description of it.** Every row on this shelf already meets that bar — this is the first repository found that
+would have **passed** a README-level check and **failed** a payload-level one, which retroactively justifies
+the payload-and-hash discipline. 🟢 **The remedy has an addressee**, unlike `Mr.-Ranedeer`: the project is
+active, so an issue asking the author to commit the file they already cite is reasonable.
+
+⚠️ **And the software is genuinely good, which is what makes it hazardous**: Graph-RAG learner model, **39
+psychometric domains**, Zone-of-Proximal-Development sequencing, gap detection, spaced repetition, remediation
+plans. **Brief the design. Take nothing.**
+
+### 🟢 Hot signal #2 — WITHHOLDING has become a convergent pattern: four independent implementations in one read range
+
+🔵 **`p302` flagged `karanb192/algo-sensei`'s five-level hint cascade as "a reusable *withholding* policy — the
+part every tutoring engagement has to build and nobody ships".** 🟢 **This pass found three more, independently
+authored, in ranks 41–60:**
+
+| repo | licence (payload, `sha256₁₂`) | ★ | the withholding mechanism |
+|---|---|---|---|
+| [`Far-200/think-before-code`](https://github.com/Far-200/think-before-code) | 🟢 **MIT** `1 064 B` `60c8dfeeabcf` | 16 | *"Socratic Agent Skills … **one question at a time**"* |
+| [`Haaaiawd/Socrate`](https://github.com/Haaaiawd/Socrate) | 🟢 **Apache-2.0** `11 357 B` `c71d239df917` | 15 | Socratic teaching **CLI** — *"learn through questions, not lectures"* |
+| [`DuckInAShirt/leetmate`](https://github.com/DuckInAShirt/leetmate) | 🟢 **MIT** `1 078 B` `01f565abffa5` | 9 | Terminal coach — *"**hints, not answers**"*, spaced review, ACM mode |
+| [`Bhala-Srinivash/agent-tutor-skill`](https://github.com/Bhala-Srinivash/agent-tutor-skill) | 🟢 **MIT** `1 072 B` `771430ec98a9` | 11 | **Zero-hint quizzes** + FSRS + concept-level mastery |
+
+🟢 **Four unrelated authors converging on "refuse to answer" is a sector signal, not a coincidence.** 🔵 **And
+`agent-tutor-skill` supplies the piece the other three lack: the MEASUREMENT.** A hint cascade is an
+unfalsifiable claim until some assessment withholds help entirely — **zero-hint quizzing is the control
+condition for a cascade.** 🟢 **Brief the pair together**: cascade plus zero-hint control is a defensible
+pedagogy story, and it is exactly what `bydeng01`'s leakage audits ([`repos/foundations.md`](../repos/foundations.md))
+were built to test.
+
+### 🟢 Hot signal #3 — a Go cluster, and the first native-iOS row
+
+🟢 **Three of this pass's new rows are Go services** — [`liuwenji007/regulus-academy`](https://github.com/liuwenji007/regulus-academy)
+(Apache-2.0, self-hosted, PDF import, knowledge graph),
+[`1024XEngineer/XE3-ESL`](https://github.com/1024XEngineer/XE3-ESL) (MIT, English **speaking** practice),
+[`DuckInAShirt/leetmate`](https://github.com/DuckInAShirt/leetmate) (MIT). 🔵 **New for this shelf, which has
+been Python- and TypeScript-dominated, and it reads as the tier maturing from notebook to service.**
+
+🟢 **[`bystritskiy/ElevenSpeak`](https://github.com/bystritskiy/ElevenSpeak)** — **MIT** `1 075 B`
+`1a9c6f87bfb5`, 17★, **Swift** — is the **first native-iOS row** here, and **voice is the modality this shelf
+is thinnest on**. ⚠️ Three paid third-party APIs sit in its critical path (ChatGPT + Whisper + ElevenLabs).
+
+### 🟢 Hot signal #4 — a learner-model schema worth more than any single agent
+
+🟢 **[`hakimihou/capability-space`](https://github.com/hakimihou/capability-space)** — **MIT** `1 086 B`
+`465174e71a3b`, 10★ — *"keeps **activity, evidence, and mastery** distinct."* 🔵 **The most valuable idea added
+this pass, and it is a data model rather than an agent.** Most tutoring builds conflate "the learner did a
+thing" with "the learner can do the thing"; separating the three is precisely what makes a mastery claim
+auditable — which Vietnam's Decision 33 and Korea's AI Basic Act now require of systems that assess or rank
+students. **Copy the schema; do not take a 10★ dependency.**
+
+### 🔴 The refusal rate, now measured twice by two independent draws
+
+🟢 **38 repositories had their licence read this pass: 25 permissive, 11 refused — a 29 % refusal rate.**
+Restricted to the **30 previously-uncarried** repositories the rate is **7 of 30, or 23 %**.
+
+🔵 **And the comparison with `p302` is the finding, because the two draws do NOT agree: `p302` measured
+≈39 % on the star-sorted HEADS; this pass measured 23 % on the paged TAIL.** 🟢 **The tail is CLEANER than
+the head**, and the mechanism is visible in the rows: the famous unlicensed artefacts sit at the top
+(`Mr.-Ranedeer-AI-Tutor` at 29.6k★, `Tutorbot-Spock` at 56★), while a small personal repository usually drops
+an MIT file in from its editor's template. 🔵 **So "roughly a third of this vertical is unusable" is the
+right order of magnitude but the wrong shape: the risk concentrates in the repositories a studio is MOST
+likely to reach for from a search engine.** ⚠ **That is the opposite of reassuring** — adoption and
+licence risk are positively correlated here.
+
+**The eleven**: `fenago/LearnGraph` (phantom), `luffycodes/Tutorbot-Spock` (**56★**, *"built on learning
+science principles"* — the most painful no-grant of the pass) and `Tutorbot-Spock-Phys`,
+`koofree/research-aied`, `legostin/learn-almost-anything`, `shychee/py_ai_tutorial`,
+`ZQR1101/xueyoujing-companion`, `LeParisien-dev/EduAI` (all **no grant**);
+`lemos999/ailey-bailey-canvas` (**CC BY-NC-SA 4.0** — 🔴 **NonCommercial forbids the engagement outright,
+which is a harder stop than AGPL's price**); `brownplt/LTLTutor` and `IgorFonck/logicits` (**AGPL-3.0**).
+
+### 🟢 Flagship held, and three carried licences pinned to payloads for the first time
+
+🟢 **[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor): 41.6k★ / 5.3k forks / 2 935 commits, release
+string exactly `v1.6.15` dated `2026.10.19`, Apache-2.0.** 🟢 **No advancement since `p302` the same day** —
+fork count 5.3k is new. ⚠️ The release renders **one day ahead of this pass's date**; an upstream timezone
+artefact, recorded so a later pass does not read it as a new release.
+
+🟢 **First payload pins for three carried rows:**
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) **CC BY-SA
+4.0** `1 230 B` `f952182df4eb` (**877★**, carried 873★ — commercial use and adaptation explicitly permitted,
+ShareAlike is the whole price);
+[`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) **CC0 1.0** `7 048 B` `a2010f343487`
+(public-domain dedication — the most permissive grant on the shelf);
+[`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) **MIT** `1 079 B`
+`2ec9e6e61ed8` (**4.1k★** — 🟢 **so the scheduler → skill → deliverable chain is permissive at every link**).
+
+🔵 **Juxtapose the two academic rows in any briefing:** `gen-mentor` is WWW '25 paper code under **CC0**;
+`Tutorbot-Spock` is learning-science tutor code under **nothing at all**. **Academic provenance predicts
+nothing about the grant. Read it every time.**
+
+### 🔴 What this week could NOT establish
+
+🔴 **Mandated phrasings nil'd again: the agent phrasing for the 29th consecutive window, trending for the
+16th, ERP/CRM for the 23rd.** All three re-run and recorded; **none is worth a future leg.**
+🔴 **`api.github.com` answers and is authenticated (15 000-request core limit) but is bound to this session's
+configured repositories**; `/search/repositories` is **refused by name**. 🔵 **Correcting `p302`: this is an
+authorization boundary, not proxy interception — so the missing exact star integers will NOT clear on a
+retry.** **Every star figure above is rendered and rounded.**
+🔴 **No primary source — 22nd consecutive pass.** `curl` gets **`CONNECT tunnel failed, response 403`**;
+`WebFetch` gets `ENOTFOUND`. 🔵 **A network policy on hosts that resolve fine**, correcting `p302`'s
+resolver-scope reading.
+🔴 **`ai-education` read only to rank 40**; ranks 41+ of 528 are **unmeasured, not absent**. `education`
+(39 007) was not re-read — `p302` established it is a learning-resources channel.
+🔴 **No code was read in any repository this pass.** Every capability statement is from a rendered README.
+Most Tier-5 rows are single-author repos under 30 commits — **copy the mechanism, never take the dependency.**
+🔴 **`make hooks` was NOT run** (third consecutive pass).
+
 ## 2026-10-18 — Pass 302: THE MANDATED AGENT LEG WAS RETIRED AFTER TWENTY-EIGHT NILS AND REPLACED WITH GITHUB TOPIC ENUMERATION — FOURTEEN PERMISSIVE ROWS AND NINE LICENCE REFUSALS IN ONE LEG, INCLUDING A 29.6k★ TUTOR WITH NO GRANT
 
 Evidence: [`p302-licence-payload.2026-10-18-p302.tsv`](../evidence/p302-licence-payload.2026-10-18-p302.tsv) ·

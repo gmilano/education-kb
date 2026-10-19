@@ -4,6 +4,203 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 303 — THE TOPIC POPULATION WAS PAGED TO RANK 60 AS `p302` ASKED, AND IT TURNS OUT THE SHELF IS NOT 750 REPOSITORIES — IT IS ABOUT SIXTY, PLUS A NEW LICENCE DEFECT WORSE THAN AN ABSENT GRANT
+
+⏱️ **Pass 303 of `2026-10-18`, following `p302` the same day.** Evidence:
+[`p303-licence-payload.2026-10-18-p303.tsv`](../evidence/p303-licence-payload.2026-10-18-p303.tsv) ·
+[`p303-topic-paging.2026-10-18-p303.tsv`](../evidence/p303-topic-paging.2026-10-18-p303.tsv) ·
+[`p303-reachability.2026-10-18-p303.tsv`](../evidence/p303-reachability.2026-10-18-p303.tsv) ·
+[`p303-websearch.2026-10-18-p303.tsv`](../evidence/p303-websearch.2026-10-18-p303.tsv).
+
+🟢 **`p302` ended with one instruction: page `ai-tutor` and `ai-education` past rank 20. `?page=N` works, and
+this pass read `ai-tutor` to rank 60, `ai-education` to rank 40 and enumerated the whole head of
+`intelligent-tutoring-system` (population 41).** 101 ranked rows are recorded with stars and prior-carry
+status in
+[`p303-topic-paging.2026-10-18-p303.tsv`](../evidence/p303-topic-paging.2026-10-18-p303.tsv).
+
+### 🟢 The finding that changes how this shelf should be briefed: the population has a floor, and we have reached it
+
+🔵 **`p302` treated "750 repositories" as unmeasured depth. It is not depth — it is a tail.** Read as a
+distribution, `ai-tutor` collapses:
+
+| page | ranks | star range | new permissive rows paid |
+|---|---|---|---|
+| 1 | 1–20 | **41 600 → 65** | 0 — *every row already carried* |
+| 2 | 21–40 | **64 → 17** | 1 |
+| 3 | 41–60 | **16 → 9** | **16** |
+
+🔴 **By rank 60 the topic is at 9★ and still falling.** 🟢 **So the honest statement about this vertical is
+not "750 repositories exist" — it is: the `ai-tutor` population has roughly sixty members above 9★, this
+base has now read all sixty, and the remaining ~690 are single-digit-star personal repositories.** 🔵 **That
+is a *completeness* claim, which this shelf has never been able to make before.** Page 1 paying **zero** new
+rows is the proof the enumeration is sound: `p302` consumed it, and a second instrument agreed.
+
+⚠️ **Where the real novelty was, though, was the bottom of the range** — 16 of this pass's 23 new rows came
+from ranks 41–60. **Do not stop a future leg at page 2 because the stars look small.**
+
+### 🔴 The licence finding of the pass — a CLAIMED grant with no instrument behind it
+
+🔴 **[`fenago/LearnGraph`](https://github.com/fenago/LearnGraph) — `14★` / 5 forks / 7 commits — states
+`## License` → `MIT License - See LICENSE file for details.` at line 774 of its README, AND THAT FILE DOES
+NOT EXIST.**
+
+⚠️ **Read twice before recording, because the claim is consequential** — and it was: **18 probes**
+(`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`, `license` × branches `main`, `master`, `dev`)
+returned **404 on every one**, and the rendered sidebar's Resources block lists **only Readme and Activity**
+— GitHub's own licence detector found nothing either.
+
+🔵 **Why this is a worse defect than `p302`'s `Mr.-Ranedeer-AI-Tutor`, and why it deserves its own category.**
+An absent licence with no claim is *detectable by the obvious check*: a developer looks for the grant, finds
+none, and stops. **A phantom grant defeats exactly that check.** A developer greps the README, reads the
+words "MIT License", and ships — the repository has told them they may. 🔴 **There is no grant.** A README
+sentence is not a licence: it names an instrument that was never committed, so there is nothing to accept
+and no terms to point to.
+
+🟢 **Record it as the `PHANTOM GRANT` class, and make it a gate on this base's own method: the licence check
+must read the PAYLOAD, never the README's description of it.** 🔵 Every row on this shelf already meets that
+bar — this is the first time the base has found a repository that would have passed a README-level check and
+failed a payload-level one, which retroactively justifies the payload discipline `p294` onward.
+
+⚠️ **The software itself is interesting, which is what makes it dangerous**: a Graph-RAG learner model with
+**39 psychometric domains**, Zone-of-Proximal-Development sequencing, gap detection, spaced repetition and
+remediation plans, topic-tagged `knowledge-graph`/`psychometrics`/`zpd`. 🔵 **Brief the DESIGN, never the
+dependency** — and note the fix is cheap and has an addressee: unlike `Mr.-Ranedeer`, this repo is active, so
+an issue asking the author to commit the file they already reference is a reasonable ask.
+
+### 🟢 The twenty-three new permissive rows, every licence read as a payload with its `sha256₁₂`
+
+⚠️ **Star counts are as RENDERED this pass.** `api.github.com` is reachable and authenticated in this session
+but **repo-scoped** — see the reachability note below — so **no exact star integer was available for any row**.
+
+#### 🟢 Tier 1 — the five with a mechanism worth reusing
+
+| repo | licence (payload, `sha256₁₂`) | ★ | the reusable mechanism |
+|---|---|---|---|
+| [`hakimihou/capability-space`](https://github.com/hakimihou/capability-space) | 🟢 **MIT** `1 086 B` `465174e71a3b` | 10 | *"A learner-owned adaptive knowledge space that keeps **activity, evidence, and mastery distinct**."* 🔵 **That three-way separation is the single most valuable idea added this pass.** Almost every tutoring build conflates "the learner did a thing" with "the learner can do the thing"; separating activity from evidence from inferred mastery is precisely what an auditor asks for under Vietnam's Decision 33 and Korea's AI Basic Act. **Copy the data model.** |
+| [`Far-200/think-before-code`](https://github.com/Far-200/think-before-code) | 🟢 **MIT** `1 064 B` `60c8dfeeabcf` | 16 | *"Socratic Agent Skills for learning problem-solving and software-engineering judgment — **one question at a time**."* 🟢 A second independent implementation of the **withholding policy** `p302` flagged in `algo-sensei`'s hint cascade. Two independent implementations make it a pattern, not one author's taste. |
+| [`Bhala-Srinivash/agent-tutor-skill`](https://github.com/Bhala-Srinivash/agent-tutor-skill) | 🟢 **MIT** `1 072 B` `771430ec98a9` | 11 | Cognitive-science teaching loop with **FSRS spaced repetition**, **zero-hint quizzes** and concept-level mastery tracking. 🟢 **"Zero-hint quiz" is the measurement counterpart to the hint cascade** — you cannot claim a cascade aided learning unless some assessment withholds help entirely. |
+| [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) | 🟢 **MIT** `1 104 B` `4b15a1e898b3` | 2 | Tutoring agent that **adjusts its objective** using **LangGraph + Bayesian Knowledge Tracing + a prerequisite graph**. 🔵 At 2★ it is a sketch, but it is the only row on this shelf wiring BKT, a prereq graph and an agent framework in one place — the exact composition `P76` needs. |
+| [`MadsDoodle/Career-Navigator`](https://github.com/MadsDoodle/Career-Navigator) | 🟢 **MIT** `1 072 B` `a10c8ca82807` | 17 | Career-lifecycle platform: **Resume → Skill Gap → path**. 🟢 **Lands exactly on HolonIQ's named 2026 trend** — career-navigation tooling spreading across K-12, post-secondary and workforce ([`intel/trends.md`](../intel/trends.md)). The first row on this shelf that addresses it. |
+
+#### 🟢 Tier 2 — an institutional copyright holder, and it is BSD
+
+| repo | licence (payload, `sha256₁₂`) | ★ | note |
+|---|---|---|---|
+| [`aimclub/ai-competency-model`](https://github.com/aimclub/ai-competency-model) | 🟢 **BSD-3-Clause** `1 531 B` `bbbc8f2f3ed4` | 30 | *"Модель профессиональных компетенций в области ИИ"* — a professional **AI competency model**. Holder: **© 2022 NSS Lab, ITMO University**. 🟢 **Only the second permissive row this base has found with an institutional copyright holder rather than an individual** (the other being `thm-mni-ii/feedbacksystem`, Apache-2.0, THM) — and institutional provenance is what a ministry or university procurement actually asks for. 🟢 **BSD-3-Clause is also the first non-MIT/non-Apache permissive grant on this shelf.** ⚠️ **Two boundaries, stated plainly:** the artefact is a **competency framework**, not running software, and the holder is a Russian state university — **an engagement must run its own counterparty and sanctions check before adopting it**, which is a procurement question this base cannot answer. |
+
+#### 🟢 Tier 3 — self-hostable services (three of the four are Go, which is new for this shelf)
+
+| repo | licence (payload, `sha256₁₂`) | ★ | what it is |
+|---|---|---|---|
+| [`liuwenji007/regulus-academy`](https://github.com/liuwenji007/regulus-academy) | 🟢 **Apache-2.0** `11 357 B` `c71d239df917` | 9 | **Go.** Fragmented-learning tutor: knowledge tree + coach loop, **PDF import**, knowledge graph, **self-hosted**. 🟢 Self-hosting plus PDF ingest is the combination a data-residency-constrained client asks for. |
+| [`1024XEngineer/XE3-ESL`](https://github.com/1024XEngineer/XE3-ESL) | 🟢 **MIT** `1 071 B` `d6d4c6937d8d` | 16 | **Go.** "SpeakUp" — English **speaking** practice: voice dialogue, scenario drills, personalised feedback, session review. 🟢 **Speaking practice is a capability gap on this shelf** — most rows are text tutors. |
+| [`DuckInAShirt/leetmate`](https://github.com/DuckInAShirt/leetmate) | 🟢 **MIT** `1 078 B` `01f565abffa5` | 9 | **Go.** Terminal LeetCode coach — *"hints, not answers"*, spaced review, ACM mode. 🟢 **Third independent withholding implementation** this pass (with `think-before-code` and `algo-sensei`). |
+| [`liunor/nlp-agent`](https://github.com/liunor/nlp-agent) | 🟢 **MIT** `1 073 B` `ef01967408a8` | 10 | NLP teaching platform with dialogue, practice, knowledge content **and service observability**. 🟢 **"Observability" named in a tutoring repo's own description is rare and is what an SLA needs.** |
+| [`clduab11/thinkrank`](https://github.com/clduab11/thinkrank) | 🟢 **MIT** `1 071 B` `699170d0cb87` | 28 | TypeScript; collaborative thinking and problem-solving via ranking + gamified AI. ⚠️ Description is promotional; read the code before briefing a capability. |
+
+#### 🟢 Tier 4 — course and content construction
+
+| repo | licence (payload, `sha256₁₂`) | ★ | what it is |
+|---|---|---|---|
+| [`minicoursegenerator/skills-for-course-creators`](https://github.com/minicoursegenerator/skills-for-course-creators) | 🟢 **MIT** `1 078 B` `96137ba5f893` *(branch **`master`**)* | 15 | Curated Agent-Skills directory for **course creators, instructional designers and L&D teams**. 🟢 Addresses the *authoring* side, which this shelf under-covers relative to tutoring. ⚠️ A directory, not a system. |
+| [`fangyuan-3149/book-learning-tutor`](https://github.com/fangyuan-3149/book-learning-tutor) | 🟢 **MIT** `1 503 B` `54ceeac19921` | 10 | 授业 — turns **any book on disk** into a tutor. 🟢 Local-file provenance, which is the controlled-source answer to Decision 33's first education system. |
+| [`mytechnotalent/RE-GPT`](https://github.com/mytechnotalent/RE-GPT) | 🟢 **Apache-2.0** `11 357 B` `c71d239df917` | 29 | Build-a-GPT-from-scratch guided course (Jupyter). 🔵 A *curriculum asset*, not a tutor — brief for AI-literacy programmes, which `H.R. 8747` would fund in the US. |
+| [`alicetinkaya76/microgpt-academy`](https://github.com/alicetinkaya76/microgpt-academy) | 🟢 **MIT** `1 073 B` `86a462bbaf7b` | 15 | Interactive GPT/Transformer learning platform, **Turkish + English**. 🟢 **EMEA-language row** — see the regional note in [`intel/market.md`](../intel/market.md). |
+| [`timothywarner-org/az104-cert-buddy`](https://github.com/timothywarner-org/az104-cert-buddy) | 🟢 **MIT** `1 084 B` `351277f4eed2` | 23 | Certification study buddy generating exam-realistic practice questions. 🔵 **Corporate-certification tutoring is a Globant-adjacent internal use case**, not only a client one. |
+
+#### 🟢 Tier 5 — host-dependent agent skills (permissive, but the host is a dependency)
+
+⚠️ **Every row here runs *inside* Claude Code, Codex, Hermes or OpenClaw.** They are permissively licensed and
+worth copying, but **they are not services** — the host is an architectural dependency, exactly as `p302`
+flagged for `feifei-companion`.
+
+| repo | licence (payload, `sha256₁₂`) | ★ | note |
+|---|---|---|---|
+| [`briannajzhang/personal-tutor`](https://github.com/briannajzhang/personal-tutor) | 🟢 **Apache-2.0** `11 357 B` `c71d239df917` | 15 | Skills turning Claude Code / Codex into a **long-lived** tutor — persistence across sessions is the claim. |
+| [`Haaaiawd/Socrate`](https://github.com/Haaaiawd/Socrate) | 🟢 **Apache-2.0** `11 357 B` `c71d239df917` *(branch **`master`**)* | 15 | Socratic teaching **CLI**, spec-kit-inspired. Fourth withholding implementation this pass. |
+| [`eugeniughelbur/doceo`](https://github.com/eugeniughelbur/doceo) | 🟢 **MIT** `1 072 B` `94b7323d4984` *(branch **`master`**)* | 14 | *"teaches you anything in one screen"* — visual lessons with memory and a feedback loop. |
+| [`yarikleto/claude-teacher-plugin`](https://github.com/yarikleto/claude-teacher-plugin) | 🟢 **MIT** `1 065 B` `b6519647c247` | 12 | Tracks knowledge, quizzes, adapts to level. 🟢 Packaged as a **plugin**, not a bare skill. |
+| [`vesperchinn/learn-anything-skill`](https://github.com/vesperchinn/learn-anything-skill) | 🟢 **MIT** `1 095 B` `d768d78d4218` | 13 | **Multilingual** Agent-Skill pack turning agents into guided learning coaches. |
+| [`abdulrdeveloper/klar-AI`](https://github.com/abdulrdeveloper/klar-AI) | 🟢 **MIT** `1 072 B` `28f7bbc34a2a` | 12 | Free multi-model student chat (6 models, no login). ⚠️ Consumer product shape; the permissive grant is the only reason it is listed. |
+| [`tong666-bit/liu-xiaoyan-skill`](https://github.com/tong666-bit/liu-xiaoyan-skill) | 🟢 **MIT** `1 068 B` `8626b7112026` *(branch **`master`**)* | 18 | Chinese **CET-4/6 and postgraduate English** coaching: reading evidence, listening review, essay correction, revision plan. ⚠️ **Explicitly "非官方" (unofficial)** and styled after a named individual teacher — **do not brief the persona**, brief the structure. 🟢 **APAC exam-prep row.** |
+| [`bystritskiy/ElevenSpeak`](https://github.com/bystritskiy/ElevenSpeak) | 🟢 **MIT** `1 075 B` `1a9c6f87bfb5` | 17 | **Swift** voice language teacher (ChatGPT + Whisper + ElevenLabs). 🟢 **The only native-iOS row on this shelf**, and voice is the modality the shelf is thinnest on. ⚠️ Three third-party paid APIs in the critical path. |
+
+### 🔴 The nine refusals — and the rate is now measured on a paged population
+
+🔴 **Seven repositories in the read range have NO GRANT, one is NonCommercial, and two are AGPL-3.0.**
+
+| repo | ★ | verdict |
+|---|---|---|
+| [`fenago/LearnGraph`](https://github.com/fenago/LearnGraph) | 14 | 🔴 **PHANTOM GRANT** — README claims MIT, 18 probes 404, sidebar detects none *(see above)* |
+| [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 56 | 🔴 **NO GRANT** — and this one stings: *"built on learning science principles"*, the highest-starred academic-provenance tutor in the ITS topic after `gen-mentor`. Its sibling `Tutorbot-Spock-Phys` (9★) is equally ungranted. **Cite the papers; you may not ship the code.** |
+| [`koofree/research-aied`](https://github.com/koofree/research-aied) | 12 | 🔴 **NO GRANT** — AIED research support collection |
+| [`legostin/learn-almost-anything`](https://github.com/legostin/learn-almost-anything) | 9 | 🔴 **NO GRANT** — Tauri + React desktop tutor running on the user's own Claude/ChatGPT subscription; architecturally the most interesting refusal |
+| [`shychee/py_ai_tutorial`](https://github.com/shychee/py_ai_tutorial) | 21 | 🔴 **NO GRANT** — 17-project Python/ML curriculum |
+| [`ZQR1101/xueyoujing-companion`](https://github.com/ZQR1101/xueyoujing-companion) | 2 | 🔴 **NO GRANT** — RAG learner diagnosis + planning |
+| [`LeParisien-dev/EduAI`](https://github.com/LeParisien-dev/EduAI) | 2 | 🔴 **NO GRANT** — full-stack intelligent-LMS PoC |
+| [`lemos999/ailey-bailey-canvas`](https://github.com/lemos999/ailey-bailey-canvas) | 20 | 🔴 **CC BY-NC-SA 4.0** `14 770 B` `5d9d28313854`, opening *"All rights reserved"* — **NonCommercial is the hardest exclusion on this shelf, harder than AGPL**: AGPL prices a hosted deployment, NC forbids the engagement outright. Dual-persona cognitive learning framework (empathetic coach + critical inquirer) — 🔵 **brief the two-persona design, which is not copyrightable; use none of the material.** |
+| [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | 12 | 🔴 **AGPL-3.0** `35 148 B` `8b1ba204bb69` — **Brown University PLT**; misconception-based Linear-Temporal-Logic tutor. 🔵 **"Misconception-based" is the pedagogically strongest idea in the ITS topic** — study it; the AGPL network clause blocks hosting it for a client. |
+| [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | 1 | 🔴 **AGPL-3.0** `35 149 B` `3972dc9744f6` — natural-deduction ITS, Java |
+
+🟢 **Measured refusal rate, on an enumerated and paged population:** of **34** previously uncarried
+repositories read across ranks 21–60 of `ai-tutor`, 21–40 of `ai-education` and the `intelligent-tutoring-system`
+head, **23 were permissive and 7 were refused.** 🟢 **Across ALL 38 licence reads this pass (new rows plus
+carried rows re-verified): 25 permissive, 11 refused — a 29 % refusal rate**; restricted to the 30
+previously-uncarried repositories it is **7 of 30, or 23 %**. 🔵 **`p302` measured ≈39 % on
+the star-sorted heads, and the convergence of two independently drawn samples is the point**: *roughly a third
+of this vertical is unusable, and it is a stable property of the sector rather than an artefact of one leg.*
+
+### 🟢 Carried rows re-verified this pass
+
+| repo | carried | read `p303` | verdict |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `v1.6.15`, 41.6k★, Apache-2.0 | **41.6k★ / 5.3k forks / 2 935 commits**, release string exactly **`v1.6.15`** dated **`2026.10.19`**, sidebar **Apache-2.0** | 🟢 **HELD — no advancement in-day.** 🟢 Fork count **5.3k** is new. ⚠️ The release date renders **one day ahead of this pass's date** — an upstream timezone artefact, recorded so a later pass does not read it as a new release. |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | CC-BY-SA-4.0, 873★ | 🟢 **CC BY-SA 4.0 PAYLOAD-VERIFIED** `1 230 B` `f952182df4eb`, © 2026 Gareth Manning; **877★** | 🟢 **CONFIRMED + first payload pin.** Licence text explicitly permits commercial use and adaptation; **ShareAlike** is the whole price. ⚠️ It licences *"skills, documentation, examples, and curriculum materials"* — a **content** grant over a 877★ skills corpus, so derivative curriculum inherits BY-SA. |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | CC0-1.0, 135★ | 🟢 **CC0 1.0 Universal PAYLOAD-VERIFIED** `7 048 B` `a2010f343487` | 🟢 **CONFIRMED + first payload pin.** WWW '25 paper code under a public-domain dedication — the most permissive grant on this shelf. |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | FSRS reference | 🟢 **MIT PAYLOAD-VERIFIED** `1 079 B` `2ec9e6e61ed8`, **4.1k★** | 🟢 **CONFIRMED.** The spaced-repetition algorithm three rows above depend on is itself MIT — **the dependency chain is clean end to end.** |
+
+🟢 **A method by-product worth keeping:** the payload hash **`c71d239df917` at exactly `11 357 B` recurred on
+four unrelated repositories** this pass (`Socrate`, `regulus-academy`, `personal-tutor`, `RE-GPT`). That is
+the **stock, unmodified Apache-2.0 text with the appendix left unfilled**. 🔵 **So the hash does double duty:
+it pins the grant *and* it distinguishes a boilerplate drop-in from a grant someone actually customised** —
+a customised Apache payload (THM's `10 785 B` `65125d9e480b`, with a named holder) indicates institutional
+legal review; a stock one does not.
+
+### 🔴 What this pass could NOT do
+
+🔴 **No primary government or IGO source — TWENTY-SECOND consecutive pass.** 🟢 **But `p302`'s diagnosis is
+now corrected in its mechanism**, which matters because it changes what a future pass should try. `p302`
+recorded `getaddrinfo ENOTFOUND` and concluded a *resolver scope*. **This session shows two different
+failures on two different channels:** `curl` returns **`CONNECT tunnel failed, response 403`** — an agent
+proxy *refusing* the tunnel, i.e. a **policy decision on a host it resolved fine** — while `WebFetch` still
+returns `ENOTFOUND`. 🔵 **It is a network POLICY, not a missing DNS record**, for `congress.gov`,
+`govinfo.gov`, `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `unesco.org`, `iesalc.unesco.org`,
+`oecd.org` and `nces.ed.gov`. Matrix:
+[`p303-reachability.2026-10-18-p303.tsv`](../evidence/p303-reachability.2026-10-18-p303.tsv).
+**Predicted consequence is unchanged: every primary leg fails, every GitHub leg succeeds. Stop spending legs
+on primary sources from this environment and say so in the deck.**
+
+🔴 **`api.github.com` is NOT simply "intercepted", and the correction is worth carrying.** It answers, and it
+answers **authenticated** — `/rate_limit` returns a **15 000**-request core limit. 🔴 **But it is bound to
+this session's configured repositories**: `/repos/HKUDS/DeepTutor` returns *"GitHub access to this repository
+is not enabled for this session"*, and `/search/repositories` is refused **by name**: *"This GitHub API path
+is not available: sessions are bound to their configured repositories."* 🔵 **So the exact-star-integer and
+`licence_spdx` gap is NOT a transport problem that a future pass might route around — it is an authorization
+boundary.** **All star figures on this shelf are rendered and rounded, permanently, and a pass should stop
+re-testing for it.**
+
+🔴 **`make hooks` was NOT run** — reproducing `p301` and `p302`. Licences were read directly from
+`raw.githubusercontent.com` with byte lengths and `sha256₁₂` recorded instead.
+🔴 **Three mandated phrasings nil'd again:** the agent phrasing for the **29th** consecutive window, the
+trending phrasing for the **16th**, the ERP/CRM phrasing for the **23rd**. All three were re-run and recorded
+in [`p303-websearch.2026-10-18-p303.tsv`](../evidence/p303-websearch.2026-10-18-p303.tsv); none is worth a
+future leg.
+🔴 **`ai-education` was read to rank 40 only, and `education` (39 007) was not read at all** — `p302`
+established that the generic topic is a learning-resources channel, and this pass did not re-test that.
+🔴 **Commit counts and last-commit dates are mostly unread.** Where a row's maturity matters it is stated
+from the rendered page; most Tier-5 rows are single-author repositories with fewer than 30 commits and
+**none should be taken as a dependency**.
+
 ## 🟢 Pass 302 — THE MANDATED AGENT LEG NIL'D A TWENTY-EIGHTH TIME AND WAS REPLACED: GITHUB'S OWN TOPIC PAGES ARE REACHABLE, STAR-SORTED AND ENUMERABLE, AND THEY PAID FOURTEEN PERMISSIVE ROWS IN ONE LEG
 
 ⏱️ **First pass of `2026-10-18` after `p301`.** Evidence:

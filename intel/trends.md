@@ -4,6 +4,206 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 `T-p303a` — A DENOMINATOR IS ONLY HALF AN INSTRUMENT: PAGE IT UNTIL THE DISTRIBUTION HITS A FLOOR, AND A SAMPLE BECOMES AN ENUMERATION
+
+⏱️ `2026-10-18`, pass 303. Evidence:
+[`p303-topic-paging.2026-10-18-p303.tsv`](../evidence/p303-topic-paging.2026-10-18-p303.tsv).
+
+🟢 **`T-p302a` established that an enumeration with a denominator beats a ranked opinion. This pass completes
+the thought: the denominator alone is misleading, and paging is what makes it useful.**
+
+`ai-tutor` reports **750** repositories. Paged to rank 60, the distribution is:
+
+| ranks | star range | share of this pass's 23 new rows |
+|---|---|---|
+| 1–20 | 41 600 → 65 | **0 %** |
+| 21–40 | 64 → 17 | 6 % |
+| 41–60 | **16 → 9** | 🟢 **70 %** |
+
+🔵 **"750" is a tail, not depth.** The real corpus is **≈60 members above 9★** — and that converts the shelf
+from *a sample of an unknown population* into *an enumeration of a bounded one*. 🟢 **This base can now make a
+completeness claim**, which is worth more in a client conversation than a larger number: *"we have read every
+AI-tutoring repository on GitHub above 9 stars"* is checkable and defensible; *"we track 750 repositories"* is
+neither.
+
+🔵 **The generalisable method rule, and it has two halves:**
+1. 🟢 **Page a population until the distribution flattens.** The floor, not the denominator, tells you when
+   you are done.
+2. ⚠️ **Novelty is INVERSELY correlated with rank-position quality.** 70 % of new rows came from the bottom
+   third of the read range, because earlier passes already harvested the head. **A leg that stops when the
+   stars get small stops exactly where the new material is.**
+
+🔵 **Why page 1 paying zero is the reassuring result rather than the disappointing one:** it is independent
+confirmation that `p302`'s read of the head was complete. **Two instruments agreeing on a nil is evidence;
+one instrument finding nothing is not.**
+
+---
+
+## 🔴 `T-p303b` — THE PHANTOM GRANT: A README THAT CLAIMS A LICENCE DEFEATS THE LICENCE CHECK THAT AN ABSENT ONE WOULD FAIL
+
+⏱️ `2026-10-18`, pass 303. Evidence:
+[`p303-licence-payload.2026-10-18-p303.tsv`](../evidence/p303-licence-payload.2026-10-18-p303.tsv).
+
+🔴 **[`fenago/LearnGraph`](https://github.com/fenago/LearnGraph) states `MIT License - See LICENSE file for
+details.` in its README, and that file does not exist** — 18 probes (6 filenames × `main`/`master`/`dev`) all
+404, GitHub's sidebar Resources block listing only Readme and Activity, GitHub's own licence detector finding
+nothing.
+
+🔵 **This is a distinct defect class from an absent licence, and strictly more dangerous.** An absent grant
+with no claim **fails the obvious check**: a developer looks for a licence, finds none, stops. 🔴 **A claimed
+grant with no instrument passes that check and fails only a deeper one.** The developer greps the README,
+reads "MIT License", and ships — *the repository told them they may*.
+
+🟢 **A README sentence is not a licence.** It describes an instrument that was never committed: there is
+nothing to accept, no terms to point to, and no copyright holder has granted anything. 🔴 **The legal position
+is identical to `p302`'s `Mr.-Ranedeer-AI-Tutor` — no permission — while the *detection* position is far
+worse.**
+
+🟢 **The rule this makes non-negotiable, and it is a rule about method rather than about one repository: THE
+LICENCE CHECK MUST READ THE PAYLOAD, NEVER THE README'S DESCRIPTION OF IT.** 🔵 This base has read payloads
+with byte lengths and `sha256₁₂` since `p294`; **`LearnGraph` is the first repository found that would have
+passed a README-level check and failed a payload-level one**, which retroactively justifies the discipline
+and gives it a concrete example to brief.
+
+🟢 **Corollary for engagement estimates: licence verification is a line item, not a formality.** 🔵 **And
+unlike an abandoned repository, a phantom grant has a REMEDY WITH AN ADDRESSEE** — the project is active, so
+an issue asking the author to commit the file they already reference is a reasonable, cheap ask. **Check back
+rather than writing it off.**
+
+---
+
+## 🟢 `T-p303c` — WITHHOLDING HAS BECOME A CONVERGENT PEDAGOGY, AND ITS MEASUREMENT COUNTERPART ARRIVED IN THE SAME READ RANGE
+
+⏱️ `2026-10-18`, pass 303. Evidence:
+[`p303-licence-payload.2026-10-18-p303.tsv`](../evidence/p303-licence-payload.2026-10-18-p303.tsv) ·
+[`p303-topic-paging.2026-10-18-p303.tsv`](../evidence/p303-topic-paging.2026-10-18-p303.tsv).
+
+🔵 **`p302` noted `algo-sensei`'s five-level hint cascade as "a reusable *withholding* policy — the part every
+tutoring engagement has to build and nobody ships".** 🟢 **One pass later it is no longer one author's taste:
+three more independent implementations appeared in ranks 41–60 alone**, all permissive —
+[`Far-200/think-before-code`](https://github.com/Far-200/think-before-code) (MIT, *"one question at a time"*),
+[`Haaaiawd/Socrate`](https://github.com/Haaaiawd/Socrate) (Apache-2.0, *"questions, not lectures"*),
+[`DuckInAShirt/leetmate`](https://github.com/DuckInAShirt/leetmate) (MIT, *"hints, not answers"*).
+
+🟢 **Four unrelated authors converging on "refuse to answer" is a sector signal.** 🔵 **And the reason is
+economic, not pedagogical fashion: a tutor that answers is indistinguishable from the chatbot the student
+already has.** Withholding is the only thing a tutoring product can offer that a general assistant cannot —
+so it is the actual product boundary of this category.
+
+🟢 **The genuinely new piece is the MEASUREMENT counterpart:**
+[`Bhala-Srinivash/agent-tutor-skill`](https://github.com/Bhala-Srinivash/agent-tutor-skill) (MIT) pairs FSRS
+spaced repetition and concept-level mastery with **zero-hint quizzes**. 🔵 **A hint cascade is an
+unfalsifiable claim until some assessment withholds help entirely — zero-hint quizzing is the control
+condition for a cascade.** 🟢 **Brief the pair, never the cascade alone**: cascade + zero-hint control is a
+defensible pedagogy story, and it is precisely what `bydeng01`'s pre-registered leakage audits
+([`repos/foundations.md`](../repos/foundations.md)) were constructed to test. **Policy, control condition and
+audit design are now all permissive and all pinned.**
+
+🔵 **Commercially this lands hardest in LATAM**, where PISA 2025 reports nine in ten 15-year-olds already
+using AI chatbots for schoolwork: **a tutor that refuses to answer is an academic-integrity feature**, not a
+degraded experience. See [`intel/market.md`](../intel/market.md) and `P77`.
+
+---
+
+## 🟢 `T-p303d` — THREE REGULATORY REGIMES HAVE INDEPENDENTLY CONVERGED ON THE SAME REGULATED ACT: AN AUTOMATED DECISION *ABOUT* A STUDENT
+
+⏱️ `2026-10-18`, pass 303. Evidence:
+[`p303-websearch.2026-10-18-p303.tsv`](../evidence/p303-websearch.2026-10-18-p303.tsv).
+⚠️ **All three datums are search-snippet-attributed; no publisher was reachable.**
+
+| jurisdiction | the regulated act, as named |
+|---|---|
+| **Oklahoma, Maryland** (US states) | Require **human oversight** and **bar AI from high-stakes decisions about students** |
+| **EU** (AI Act, high-risk category) | Systems used to **evaluate learning outcomes** or **steer learning processes** |
+| **Vietnam** (`Decision 33/2026/QD-TTg`, education systems 2 and 3) | Systems that **assess, grade or rank** students; **biometric/automated behavioural monitoring** |
+
+🟢 **Three regimes, three legal traditions, no coordination — and the same boundary.** 🔵 **The convergence is
+the finding, and it is the most reusable regulatory fact in this base**, because it means the compliance
+surface is **not** jurisdiction-specific in substance even though the paperwork is.
+
+🔵 **What it implies commercially, stated plainly: ONE conformity-evidence product addresses three
+regimes.** Build the evaluation harness, the pre-registered protocol, the human-oversight surface and the
+auditable learner-model schema once; localise only the dossier. 🟢 **Every component is permissive and
+pinned** — `inspect_ai` (MIT), the two `bydeng01` audit designs (MIT),
+[`hakimihou/capability-space`](https://github.com/hakimihou/capability-space) (MIT) for the
+activity/evidence/mastery separation an auditor actually asks for. **That is `P76`.**
+
+🔵 **And it tells you what NOT to sell: a better model.** None of the three regimes asks whether the model is
+good; all three ask whether the decision about the student is overseen, evidenced and contestable. 🟢 **The
+deliverable is a protocol and a report, not a better tutor.**
+
+⚠️ **The counter-signal, carried honestly:** New York City's answer was a **one-year moratorium on
+student-facing AI through grade 8**. 🔵 **Some buyers will not want a governed system — they will want no
+system.** Have the assistive, teacher-in-the-loop posture ready.
+
+---
+
+## 🟢 `T-p303e` — THE INDUSTRY'S OWN 2026 NARRATIVE HAS MOVED FROM EXPERIMENTATION TO GOVERNANCE, FROM PERSONALISATION TO WORKFLOW, AND FROM OUTPUT TO EVIDENCE
+
+⏱️ `2026-10-18`, pass 303. Evidence:
+[`p303-websearch.2026-10-18-p303.tsv`](../evidence/p303-websearch.2026-10-18-p303.tsv).
+🟢 **The one mandated global leg that paid this pass** (`AI education industry trends 2026`); the other three
+nil'd for the 29th, 16th and 23rd consecutive window.
+
+🟢 **Three shifts, each attributed to a named organisation and each independently corroborating what this
+base's own repository reads have been showing:**
+
+| shift | as named by | what it corroborates here |
+|---|---|---|
+| **Experimentation → governance**: clear policies, data boundaries and oversight as the precondition for adoption | **1EdTech** | 🟢 The regulatory convergence in `T-p303d`, and the 87 %-adoption-vs-26 %-strategy gap in LATAM |
+| **Workflow-first**: the clearest gains came from course design support, teacher productivity and streamlined instructional/administrative workflow — explicitly *over* broad personalisation promises | **HolonIQ** | 🟢 Why [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) (877★, teacher-facing) is the most adopted education-specific artefact on the shelf after DeepTutor |
+| **Output volume → evidence**: systems increasingly expect proof that products improve learning quality, persistence, well-being or job-relevant skills | **HolonIQ**, Tutorflow | 🟢 **The evaluation tier is a REVENUE line, not overhead** — `bydeng01` + `inspect_ai`, permissive end to end |
+
+🟢 **Two further signals worth carrying:** **education-purpose-built platforms are displacing generic AI
+tools** (TeachBetter) — which is the market-side statement of this base's standing architectural advice; and
+**digital credentials are becoming a core mechanism for skills-based learning and hiring** (1EdTech), with
+**career-navigation tooling spreading across K-12, post-secondary and workforce** (HolonIQ). 🔵 **This base
+now has its first permissive row aimed at that last one:**
+[`MadsDoodle/Career-Navigator`](https://github.com/MadsDoodle/Career-Navigator) (MIT, 17★) — 🔴 **a starting
+point, not a product.**
+
+🔴 **Three circulating statistics are REFUSED and named so they are not picked up:** *"$12.3B AI education
+platform market by 2026"* and *"83 % of institutions planning AI teaching-assistant deployment"* (vendor
+report attributing to HolonIQ and EDUCAUSE; **unverifiable at either**); *"86 % of students use AI"*
+(statistics aggregator, no traceable survey); *"62 % test-score gain"* (vendor claim, no study).
+🔵 **These are exactly the numbers a deck reaches for.** 🟢 **The qualitative direction of travel above is
+well-corroborated; the quantities circulating alongside it are not. Use the former, refuse the latter.**
+
+---
+
+## 🟢 `T-p303f` — THE ADOPTION-GOVERNANCE GAP IS STRUCTURAL, NOT REGIONAL: IT REPRODUCES ACROSS CONTINENTS, SECTORS AND EDUCATION LEVELS
+
+⏱️ `2026-10-18`, pass 303. Evidence:
+[`p303-websearch.2026-10-18-p303.tsv`](../evidence/p303-websearch.2026-10-18-p303.tsv).
+⚠️ **All datums search-snippet-attributed.**
+
+🔵 **This base has carried LATAM's 87 %-adoption-against-26 %-strategy gap as a regional headline since
+`p282`. This pass found the same shape in three more places, and that changes what it is.**
+
+| where | adoption | governance | gap |
+|---|---|---|---|
+| **LATAM** higher education (IESALC, 200 institutions / 19 countries) | **87 %** use AI in ≥1 area; 74 % in teaching and learning | 🔴 **26 %** have a formal AI strategy | **61 pts** |
+| **Brazil** K-12 administrators (Cetic.br, 2026) | **53 %** use AI | 🔴 **22 %** have school guidelines | **31 pts** |
+| **MENA** (EdTech Hub) | National platforms live — `Naseej` (Saudi Arabia), `UM6P ChatGPT.Edu` (Morocco) — collecting **sensitive student data** | 🔴 Many countries **lack robust data-protection law** | qualitative, severe |
+| **Europe / North America** | Widespread institutional use | ~**70 %** have AI guidance **or are developing it** | 🟢 **narrowest of the four** ⚠️ aggregator-sourced |
+
+🟢 **Read as one pattern: deployment is driven by individual educators and administrators, while governance
+requires an institutional decision — so adoption always leads, everywhere.** 🔵 **It is therefore NOT a LATAM
+deficiency, and briefing it as one is both wrong and a lost opportunity**: the same remediation product sells
+in Brazil, Riyadh and Casablanca as in Bogotá.
+
+🟢 **Commercial consequence, and it is the useful part: the buyer is remediating a LIVE deployment, not
+evaluating a hypothetical.** 🔵 **That is a materially easier sale than greenfield advocacy** — the AI is
+already in the building, the institution already carries the risk, and the engagement is policy, data
+boundaries, academic-integrity rules and an evaluation posture around what is running.
+🔴 **The sharpest version is MENA**, where the governance gap is a **legal vacuum** rather than an
+institutional lag — student data is being collected under national programmes in jurisdictions without
+data-protection statutes. 🟢 **A student-data minimisation and governance engagement there needs no new
+regulation to justify it.**
+
+⚠️ **The ~70 % Europe/North America figure is aggregator-sourced and NOT adopted by this base**; it is shown
+only to place the other three rows, and the "or are developing it" clause does a great deal of work in it.
+
 ## 🟢 `T-p302a` — WHEN A SEARCH CHANNEL DIES, REPLACE THE INSTRUMENT, NOT THE QUERY: AN ENUMERATION WITH A DENOMINATOR BEATS A RANKED OPINION
 
 ⏱️ `2026-10-18`, pass 302. Evidence:

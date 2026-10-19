@@ -4,6 +4,189 @@ region: Global
 updated: 2026-10-18
 ---
 
+## 🟢 Pass 303 — four new patterns (`P76`-`P79`), each built only from rows payload-pinned THIS pass or already pinned, and each tied to a named regulation, a named funding line, or a named industry trend
+
+⏱️ `2026-10-18`. Evidence:
+[`p303-licence-payload.2026-10-18-p303.tsv`](../evidence/p303-licence-payload.2026-10-18-p303.tsv) ·
+[`p303-websearch.2026-10-18-p303.tsv`](../evidence/p303-websearch.2026-10-18-p303.tsv) ·
+[`p303-topic-paging.2026-10-18-p303.tsv`](../evidence/p303-topic-paging.2026-10-18-p303.tsv) ·
+[`p303-reachability.2026-10-18-p303.tsv`](../evidence/p303-reachability.2026-10-18-p303.tsv).
+
+⚠️ **Every component below is MIT, Apache-2.0, BSD-3-Clause or CC0, with its licence read as a PAYLOAD and
+its `sha256₁₂` recorded.** No AGPL, no GPL, no NonCommercial and no unlicensed repository appears as a build
+component in any pattern — **the ones this pass refused are named in each recipe's *"deliberately not used"*
+line, because the substitution is the reusable part.**
+
+---
+
+### 🟢 `P76` — **An auditable mastery claim** (serves Oklahoma/Maryland + EU high-risk + Vietnam `Decision 33` with ONE build)
+
+**The ask it answers:** *"Our system decides what a student knows and what they get next. Three different
+regulators now call that a regulated act. Show us the decision is overseen, evidenced and contestable."*
+🔵 **Lead with `T-p303d`: three regimes have independently converged on the same boundary — an automated
+decision ABOUT a student — so this is one product with three dossiers, not three projects.** 🔵 **And note
+what the client does NOT need: a better model.** None of the three regimes asks whether the model is good.
+
+| step | component | licence (payload, `sha256₁₂`) | role |
+|---|---|---|---|
+| 1. **Learner-model schema** | [`hakimihou/capability-space`](https://github.com/hakimihou/capability-space) | 🟢 **MIT** `1 086 B` `465174e71a3b` | 🟢 **The keystone, and it is new this pass.** Keeps **activity / evidence / mastery** in distinct structures — so "show me the evidence behind this mastery score" has a literal answer. A schema that conflates them cannot be audited at any price. |
+| 2. Inference layer | [`sohan1611/BloodCoded_Agentic`](https://github.com/sohan1611/BloodCoded_Agentic) | 🟢 **MIT** `1 104 B` `4b15a1e898b3` | **Bayesian Knowledge Tracing over a prerequisite graph, driven by LangGraph.** BKT is the defensible choice here precisely because it is *interpretable* — a posterior over a named skill, not an embedding. ⚠️ **2★: copy the composition, do not import.** |
+| 3. Harness | [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) | 🟢 **MIT** *(pinned `p301`)* | Runs the evaluation. Holder is the **UK AI Security Institute** — provenance a regulator recognises. |
+| 4. Protocol | [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** `1 150 B` `a1c6b65c5bb1` *(pinned `p302`)* | Frozen base model, policy-only variation, cold baseline, weak simulated student, frozen leakage matcher, per-component ablations. |
+| 5. Judge calibration | [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 🟢 **MIT** `1 154 B` `fef00f185287` *(branch **`master`**)* | **Bounded-rating bias** across ability levels — without it the report rests on an uncalibrated instrument. |
+| 6. Retention mechanics | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** `1 079 B` `2ec9e6e61ed8` | 🟢 **Pinned this pass**, so scheduling is permissive too — the whole chain is clean. Lift the FSRS algorithm and its parameter fitting, not the Anki integration. |
+
+**Wiring.** Model the learner in `capability-space`'s three-table shape: an **activity** log (immutable, what
+happened), an **evidence** store (artefacts and responses that bear on competence, each pointing at the
+activity that produced it), and a **mastery** table holding only *inferred* posteriors, every row carrying
+references to the evidence rows that moved it. Run BKT over the prerequisite graph to populate mastery —
+never write to mastery from anywhere else, which is the invariant that makes the audit possible. Put the
+next-item decision behind an explicit policy function so it can be swapped and ablated. Then evaluate with
+`inspect_ai` using `conv-vs-ped-tutor`'s design (cold / unstructured / structured arms, weak student model,
+frozen leakage matcher run **before** judge scoring), calibrate the judge with `ability-levels-audit`, and
+ablate the tracker, the gate and the cascade one at a time to attribute effects to components.
+
+**Deliver three artefacts, which are the actual product:** (1) the **ablation table**, (2) the **leakage rate
+per arm**, (3) an **evidence-trace report** — for a sampled student, every mastery value with the evidence
+rows behind it and the human review events attached. 🟢 **Artefact (3) is what satisfies Oklahoma's and
+Maryland's human-oversight requirement, the EU's high-risk documentation and Vietnam's listing, and it falls
+out of the schema for free.**
+
+🔴 **Deliberately not used:** [`fenago/LearnGraph`](https://github.com/fenago/LearnGraph) — a ready-made
+Graph-RAG learner model with 39 psychometric domains and ZPD sequencing, which is *exactly* this pattern's
+step 1 and 2 pre-built. 🔴 **PHANTOM GRANT: its README claims MIT and no licence file exists on any branch**
+(`T-p303b`). **Substitute `capability-space` + `BloodCoded_Agentic` and build the graph yourself.**
+🔴 **Also not used:** [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) (AGPL-3.0) — whose
+**misconception-based** diagnosis is the best pedagogy in the corpus. 🔵 **Build a misconception catalogue as
+a design artefact instead** (enumerate the wrong beliefs, write diagnostics that discriminate between them);
+catalogues are not code and no licence withholds the technique.
+⚠️ **Boundaries:** neither `bydeng01` repo publishes results — **this pattern delivers a protocol and an
+evidence trail, never an effect size.** `capability-space` is 10★ and single-author; `BloodCoded_Agentic` is
+2★. **Both are schemas and compositions to copy, not dependencies to pin.**
+
+---
+
+### 🟢 `P77` — **The integrity-preserving tutor** (LATAM assessment, PISA 2025's nine-in-ten, and the only defensible product boundary in this category)
+
+**The ask it answers:** *"Nine in ten of our 15-year-olds already use AI chatbots for schoolwork. We cannot
+ban it. How do we deploy a tutor that does not simply do the work?"* 🔵 **The commercial insight from
+`T-p303c`: a tutor that answers is indistinguishable from the chatbot the student already has. Withholding
+IS the product.**
+
+| step | component | licence (payload, `sha256₁₂`) | role |
+|---|---|---|---|
+| 1. Withholding policy | [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 🟢 **MIT** `1 081 B` `3b2ca73e81ad` *(pinned `p302`)* | The **five-level hint cascade** — gentle observation → pattern nudge → technique reveal → pseudocode skeleton **as a last resort**. The most fully specified cascade found. |
+| 2. Socratic turn discipline | [`Far-200/think-before-code`](https://github.com/Far-200/think-before-code) | 🟢 **MIT** `1 064 B` `60c8dfeeabcf` | *"One question at a time."* 🟢 Independent second implementation — **the turn-level constraint that stops a cascade collapsing into a lecture.** |
+| 3. CLI/service shape | [`Haaaiawd/Socrate`](https://github.com/Haaaiawd/Socrate) | 🟢 **Apache-2.0** `11 357 B` `c71d239df917` *(branch **`master`**)* | Third independent implementation, packaged as a **CLI** — the reference for making the policy a process boundary rather than a prompt. |
+| 4. 🟢 **The control condition** | [`Bhala-Srinivash/agent-tutor-skill`](https://github.com/Bhala-Srinivash/agent-tutor-skill) | 🟢 **MIT** `1 072 B` `771430ec98a9` | 🟢 **The piece that makes the claim falsifiable: ZERO-HINT QUIZZES**, plus FSRS and concept-level mastery. **A cascade's benefit is unmeasurable unless some assessment withholds help entirely.** |
+| 5. Scheduling | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** `1 079 B` `2ec9e6e61ed8` | The FSRS reference implementation behind step 4's timing. |
+| 6. Leakage audit | [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** `1 150 B` `a1c6b65c5bb1` | 🔵 **Audits the thing that actually goes wrong**: whether the helpfulness judge *rewards* answer leakage. Its `protocol/leakage.py` matcher must be frozen before scoring. |
+
+**Wiring.** Implement the cascade as an explicit state machine with a hint level per problem per student, not
+as prompt text — prompts drift, state machines are auditable. Enforce `think-before-code`'s one-question
+constraint at the turn boundary and refuse to advance the hint level until the student has responded to the
+current question. Run it as a service behind `Socrate`'s CLI shape so the policy is a boundary a platform
+calls, not an instruction a model may ignore. **Then alternate: every nth assessment is a zero-hint quiz from
+step 4**, scheduled by FSRS, with hints hard-disabled. Score the cascade's effect as *performance on
+zero-hint items over time*, never as session satisfaction. Finally run the leakage matcher over transcripts
+**before** any judge scoring to confirm the cascade is not quietly leaking answers at level 4.
+
+**The deliverable that wins the engagement:** a chart of zero-hint performance over time, next to the
+measured leakage rate. 🟢 **An integrity claim with a control condition and a leakage audit behind it is a
+different conversation from a vendor demo**, and it is exactly what HolonIQ's "evidence" shift (`T-p303e`) is
+asking for.
+
+🔴 **Deliberately not used:** [`lemos999/ailey-bailey-canvas`](https://github.com/lemos999/ailey-bailey-canvas)
+— **CC BY-NC-SA 4.0** (`14 770 B` `5d9d28313854`). Its dual-persona design (empathetic coach + critical
+inquirer) would slot in beautifully at step 2. 🔴 **NonCommercial forbids a paid engagement outright — a
+harder stop than AGPL, which merely prices one.** 🔵 **Reimplement the two-persona split; a design idea is not
+what a licence withholds.**
+🔴 **Also not used:** [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) (56★,
+*"built on learning science principles"*) — **no grant of any kind.** 🔵 **Cite its papers; reimplement the
+code-soliloquy technique** (emit computation separately so arithmetic is not hallucinated).
+⚠️ **Boundaries:** steps 1-4 are all single-author repositories under ~30 commits. **This pattern is four
+mechanisms to implement, not four dependencies to install** — and that is the honest estimate to give.
+
+---
+
+### 🟢 `P78` — **The provenance-bound tutor** (Vietnam `Decision 33`, education system #1: content from UNCONTROLLED data sources)
+
+**The ask it answers:** *"We operate in Vietnam. Our RAG tutor generates study material. We have been told
+that puts us in the high-risk tier."* 🔴 **It does, on its face** — the first of the three listed education
+systems is content generated for learners from **uncontrolled data sources**, and an unrestricted RAG tutor
+over scraped material matches the description exactly. 🟢 **The fix is architectural and cheap: make every
+source controlled and every generated claim traceable to one.** 🔵 **And note the reach: `Law No.
+134/2025/QH15` is extraterritorial, so a non-Vietnamese supplier is in scope.**
+
+| step | component | licence (payload, `sha256₁₂`) | role |
+|---|---|---|---|
+| 1. 🟢 Controlled-corpus ingest | [`liuwenji007/regulus-academy`](https://github.com/liuwenji007/regulus-academy) | 🟢 **Apache-2.0** `11 357 B` `c71d239df917` | 🟢 **New this pass and the right starting shape: SELF-HOSTED, with PDF import and a knowledge tree.** Self-hosting plus institution-supplied PDFs means the corpus is controlled **by construction** — there is no crawler to defend. Go. |
+| 2. Per-document tutoring | [`fangyuan-3149/book-learning-tutor`](https://github.com/fangyuan-3149/book-learning-tutor) | 🟢 **MIT** `1 503 B` `54ceeac19921` | Turns **a specific book on disk** into a tutor. 🔵 The unit of provenance is a *named file the institution owns*, which is precisely the compliance story. |
+| 3. Provenance binding | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | 🟢 **Apache-2.0** *(carried)* | Keeps generated material tied to the source it came from — the lineage record that answers "where did this sentence come from?" |
+| 4. Evidence separation | [`hakimihou/capability-space`](https://github.com/hakimihou/capability-space) | 🟢 **MIT** `1 086 B` `465174e71a3b` | Keeps **evidence** distinct from **mastery**, so a retrieved passage is never silently promoted into a competence claim. |
+| 5. Service boundary | [`ls1intum/Pyris`](https://github.com/ls1intum/Pyris) | 🟢 **MIT** *(carried)* | Swappable LLM pipelines behind a REST API — the refusal-to-answer-outside-corpus rule becomes a service rule, not a prompt. |
+
+**Wiring.** Load **only** institution-supplied documents through `regulus-academy`'s import path; there is no
+open-web retrieval tier, and that absence is the deliverable. Give every document an identifier, an owner and
+a licence record at ingest — **licence provenance of the teaching corpus is a question Vietnamese counsel
+will ask and most RAG builds cannot answer.** Scope each tutoring session to a named document set in
+`book-learning-tutor`'s shape. Emit a lineage record per generated passage via `lineage-skill`. Enforce
+through `Pyris` that a retrieval miss produces *"not in your materials"* rather than a model-knowledge
+fallback — 🔵 **that fallback is the single behaviour that would put the system back in scope**, and it is the
+default in almost every RAG stack.
+
+**Deliver:** a corpus manifest (document, owner, licence, ingest date), a lineage sample showing generated
+passages traced to source pages, and the refusal-rate metric for out-of-corpus questions. 🟢 **Together those
+three answer system #1 directly.**
+
+🔴 **Deliberately not used:** [`DAMO-NLP-SG/M3Exam`](https://github.com/DAMO-NLP-SG/M3Exam) — the ideal
+multilingual national-exam item bank, **no licence** (`p302`). Substitute the client's own retired exam items,
+which they have and may use. 🔴 **Also not used:** `shychee/py_ai_tutorial` and
+`ZQR1101/xueyoujing-companion` (RAG learner diagnosis) — **both ungranted** this pass.
+🔴 **Do NOT put a Vietnamese compliance DATE in the deliverable.** This base has now seen **four incompatible
+readings** of the education transition deadline. 🟢 **State the structure** — law applies since `2026-03-01`,
+high-risk listing since `2026-08-15`, transition running into 2027 — **and have the client's counsel fix the
+date.** ⚠️ All Vietnamese regulatory detail here is **search-snippet-attributed**; no publisher was reachable
+([`p303-reachability`](../evidence/p303-reachability.2026-10-18-p303.tsv)).
+
+---
+
+### 🟢 `P79` — **The teacher-workflow pack** (HolonIQ's workflow-first finding, built with the licence hygiene a content grant demands)
+
+**The ask it answers:** *"We want AI in our schools, and we want the gains the research actually reports."*
+🔵 **From `T-p303e`: the clearest reported gains are course design support, teacher productivity and
+streamlined administrative workflow — explicitly over broad personalisation promises. So pitch the teacher's
+workflow, not the student's chatbot.** 🟢 **It is also the posture a moratorium district can still buy**
+(NYC's K-8 ban is student-facing).
+
+| step | component | licence (payload, `sha256₁₂`) | role |
+|---|---|---|---|
+| 1. Teacher skill corpus | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | ⚠️ **CC BY-SA 4.0** `1 230 B` `f952182df4eb` | **877★, 165 evidence-grounded skills** for teachers and school leaders — by a wide margin the most adopted teacher-facing education artefact on this shelf. 🟢 **Commercial use and adaptation are explicitly permitted.** 🔴 **ShareAlike is the price — see the hygiene rule below.** |
+| 2. Course authoring | [`minicoursegenerator/skills-for-course-creators`](https://github.com/minicoursegenerator/skills-for-course-creators) | 🟢 **MIT** `1 078 B` `96137ba5f893` *(branch **`master`**)* | Skills for instructional designers and L&D — the **authoring** side, which this base under-covers relative to tutoring. |
+| 3. Automated feedback service | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0** `10 785 B` `65125d9e480b` | 🟢 **The institutional row: © Technischen Hochschule Mittelhessen, with Helm charts and Kubernetes install.** Checks submissions, proposes fixes, and **aggregates recurring mistakes for the lecturer to address in class** — the highest-leverage teacher-facing function in the corpus. ⚠️ **Visible demo is an SQL checker; AI mechanism undocumented.** |
+| 4. Competency framing | [`aimclub/ai-competency-model`](https://github.com/aimclub/ai-competency-model) | 🟢 **BSD-3-Clause** `1 531 B` `bbbc8f2f3ed4` | Maps teacher AI-capability targets to a structured model with an **institutional copyright holder** (NSS Lab, ITMO University) — provenance a ministry recognises. ⚠️ **Russian state university: run a counterparty and sanctions check before adoption.** |
+| 5. AI-literacy curriculum | [`mytechnotalent/RE-GPT`](https://github.com/mytechnotalent/RE-GPT) · [`alicetinkaya76/microgpt-academy`](https://github.com/alicetinkaya76/microgpt-academy) | 🟢 **Apache-2.0** `11 357 B` `c71d239df917` · 🟢 **MIT** `1 073 B` `86a462bbaf7b` | Build-a-GPT-from-scratch and interactive transformer teaching. 🟢 **Fits `H.R. 8747`'s allowable-use line if enacted** (🔴 not law), and `microgpt-academy` ships **Turkish + English** for EMEA. |
+
+**Wiring.** Stand up `feedbacksystem` beside the client's existing Moodle or Open edX via its Helm chart —
+🟢 **beside, not inside, which is the whole reason a permissive separately-deployable feedback service is
+worth more here than a feature buried in a copyleft platform.** Adapt the step-1 and step-2 skill corpora to
+the client's curriculum and assessment formats. Use step 4 to define what teacher capability looks like and
+step 5 to deliver it. 🔵 **Instrument the three functions HolonIQ names — course design time, teacher
+preparation time, administrative turnaround — and baseline them BEFORE deployment**, because "evidence that
+the product improves things" is now a market demand and a baseline cannot be collected retroactively.
+
+🔴 **The licence hygiene rule, and it is the point of this pattern: SPLIT THE REPOSITORIES.**
+Step 1 is a **content** grant — it covers *"the educational skills, documentation, examples, and curriculum
+materials"* — so **ShareAlike attaches to adapted CURRICULUM, not to platform code that serves it.**
+🟢 **Keep adapted curriculum in its own repository under CC BY-SA 4.0, with attribution to Gareth Manning,
+and keep platform and integration code in a separate repository under the client's own terms.** The
+obligation then stays where it belongs and nothing contaminates the proprietary deliverable.
+⚠️ **Have the commercial conversation early if the DELIVERABLE IS THE CURRICULUM**: BY-SA makes it
+non-exclusive, so the client cannot sell it as proprietary content. 🔵 **A constraint on the business model,
+not a technical blocker** — and far cheaper to raise in week one than in month six.
+🔴 **Deliberately not used:** `fenago/LearnGraph` (**phantom MIT grant**) and `LeParisien-dev/EduAI`
+(**no grant**, and platform-shaped by intent).
+
 ## 🟢 Pass 302 — four new patterns (`P72`-`P75`), each built only from rows payload-pinned THIS pass or already pinned, and each tied to a named regulation or a named funding line
 
 ⏱️ `2026-10-18`. Evidence:

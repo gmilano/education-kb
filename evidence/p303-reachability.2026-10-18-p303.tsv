@@ -1,0 +1,18 @@
+host_or_path	channel	result	verdict	delta_vs_p302
+github.com	curl	HTTP-400-on-bare-root	GREEN-reachable	same
+raw.githubusercontent.com	curl	HTTP-301	GREEN-reachable	same
+api.github.com/rate_limit	curl	HTTP-200,core-limit=15000,used=1	GREEN-AUTHENTICATED	CHANGED-p302-called-api-intercepted
+api.github.com/repos/{owner}/{repo}	curl	HTTP-200-body=access-not-enabled-for-session	RED-repo-scoped-gate	REFINED-authorization-gate-not-interception
+api.github.com/search/repositories	curl	body='This GitHub API path is not available: sessions are bound to their configured repositories'	RED-path-refused-by-name	NEW-explicit-refusal-message
+github.com/topics/{t}?page=N	WebFetch	HTTP-200,ranks-21-60-rendered	GREEN-PAGING-WORKS	NEW-answers-p302-ask-to-page-past-20
+www.congress.gov	curl	CONNECT-tunnel-failed-403-by-agent-proxy	RED-unreachable	REFINED-p302-saw-ENOTFOUND-this-session-sees-proxy-403
+www.govinfo.gov	curl	CONNECT-tunnel-failed-403-by-agent-proxy	RED-unreachable	REFINED-p302-saw-ENOTFOUND-this-session-sees-proxy-403
+digital-strategy.ec.europa.eu	curl	CONNECT-tunnel-failed-403-by-agent-proxy	RED-unreachable	REFINED-p302-saw-ENOTFOUND-this-session-sees-proxy-403
+www.unesco.org	curl	CONNECT-tunnel-failed-403-by-agent-proxy	RED-unreachable	REFINED-p302-saw-ENOTFOUND-this-session-sees-proxy-403
+www.iesalc.unesco.org	curl	CONNECT-tunnel-failed-403-by-agent-proxy	RED-unreachable	REFINED-p302-saw-ENOTFOUND-this-session-sees-proxy-403
+eur-lex.europa.eu	curl	CONNECT-tunnel-failed-403-by-agent-proxy	RED-unreachable	REFINED-p302-saw-ENOTFOUND-this-session-sees-proxy-403
+www.oecd.org	curl	CONNECT-tunnel-failed-403-by-agent-proxy	RED-unreachable	REFINED-p302-saw-ENOTFOUND-this-session-sees-proxy-403
+nces.ed.gov	curl	CONNECT-tunnel-failed-403-by-agent-proxy	RED-unreachable	REFINED-p302-saw-ENOTFOUND-this-session-sees-proxy-403
+www.congress.gov	WebFetch	getaddrinfo-ENOTFOUND	RED-unreachable	same-as-p302
+github.com/{owner}/{repo}	curl	HTTP-403-for-ALL-52-cited-URLs-incl-topic-pages-known-reachable	RED-curl-blocked-on-github-HTML	NEW-curl -sI-is-NOT-a-valid-existence-check-here
+raw.githubusercontent.com/{owner}/{repo}/{branch}/{file}	curl	HTTP-200	GREEN-VALID-EXISTENCE-CHANNEL	NEW-48-of-48-cited-repos-confirmed-via-raw-or-WebFetch
