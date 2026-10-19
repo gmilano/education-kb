@@ -26,6 +26,7 @@ import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+CODE = os.path.normpath(os.path.join(HERE, ".."))
 
 # 🔴 THE SHELF LIST IS IMPORTED, AND THE FIRST BUILD OF THIS FILE RESTATED IT.
 # That is `p308`'s rule — *"import the canonical list, never restate it"* — broken
@@ -186,45 +187,59 @@ def corpus_families():
     # fixtures` — from this file, from the test suite, from a hook — then gets
     # p309's module and dies on `no attribute 'DECLARED'`. 🔵 Two instruments, one
     # plausible filename, first loader wins. Every load is namespaced by pass.
+    # 🟢 p311: the sibling instruments are DISCOVERED, not named. This function's
+    # own docstring says a restated list goes stale silently — and it did, within
+    # one pass: the next pass pinned `MIT` and `Apache-2.0`, the two biggest
+    # families on this base, and this census would have gone on reporting them
+    # uncovered because its loader named one instrument as a literal. 🔵 Any sibling
+    # exporting `DECLARED` in the (prefix, family, commercial, why) form is read;
+    # newest pass first, so the earliest pin keeps the attribution.
     import importlib.util
-    spec = importlib.util.spec_from_file_location(
-        "p310_fixtures_census", os.path.join(HERE, "fixtures.py"))
-    p310 = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(p310)
-    for name, fam, _com, _why in p310.DECLARED:
-        fams[fam] = ("p310-family-coverage", name)
-    p309 = p310.p309_fixtures()
+
+    def _load(dirname):
+        path = os.path.join(CODE, dirname, "fixtures.py")
+        if not os.path.exists(path):
+            return None
+        spec = importlib.util.spec_from_file_location(
+            "%s_census" % dirname.replace("-", "_"), path)
+        mod = importlib.util.module_from_spec(spec)
+        try:
+            spec.loader.exec_module(mod)
+        except Exception:                                # noqa: BLE001
+            return None
+        return mod
+
+    # 🔴 p312: this sort was `reverse=True`, which with `setdefault` below gave
+    # the attribution to the NEWEST instrument — the opposite of what the comment
+    # above states (*"so the earliest pin keeps the attribution"*) and of what
+    # `p311`'s own control asserts. It went unnoticed while `p311` was the newest
+    # directory and broke the moment `p312` added one that sorts after it: the
+    # census credited `p312-template-identity` with `MIT`, a family `p311` pinned
+    # first. 🟢 Ascending, so the EARLIEST pin keeps the credit, which is also
+    # what makes the census agree with `p311`'s `HISTORY` table.
+    siblings = sorted(
+        d for d in os.listdir(CODE)
+        if os.path.isdir(os.path.join(CODE, d))
+        and os.path.exists(os.path.join(CODE, d, "fixtures.py")))
+
+    p310 = None
+    for dirname in siblings:
+        mod = _load(dirname)
+        if mod is None or not hasattr(mod, "DECLARED"):
+            continue
+        if dirname.startswith("p310-"):
+            p310 = mod
+        for entry in mod.DECLARED:
+            name, fam = entry[0], entry[1]
+            fams.setdefault(fam, (dirname, name))
+
+    # 🔵 p309 declares `PINS`, not `DECLARED`, and keeps its own key grammar.
+    p309 = p310.p309_fixtures() if p310 is not None else _load("p309-affero-rung-census")
     if p309 is not None:
         for prefix, (fam, _n, _sha) in _p309_pins(p309).items():
             fams.setdefault(fam, ("p309-affero-rung-census", prefix))
-    # 🟢 p311 discharged `ACTION p310-R` item 1 — MIT and Apache-2.0, the two
-    # most-published families on this base (7 893 cells between them), finally
-    # hold pinned payloads. They are imported here for the same reason p309's
-    # are: a family covered by a sibling instrument and NOT reflected in the
-    # census makes the census UNDERSTATE coverage, which is the mirror of the
-    # overstatement `P310` exists to stop.
-    for fam, prefix in _p311_pins().items():
-        fams.setdefault(fam, ("p311-template-identity", prefix))
     return fams
 
-
-def _p311_pins():
-    """{family: template label} from p311's DERIVED template registry."""
-    import importlib.util
-    path = os.path.normpath(os.path.join(HERE, "..", "p311-template-identity",
-                                         "template_identity.py"))
-    if not os.path.exists(path):
-        return {}
-    spec = importlib.util.spec_from_file_location("p311_template_identity", path)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    # 🔵 Report the FIXTURE, not the template label: this column answers
-    # "which pinned payload backs this family?", and a label answers a
-    # different question.
-    out = {}
-    for name in mod.fixture_names():
-        out.setdefault(mod._family_of(name), mod.stem_of(name))
-    return out
 
 
 def unbucketed(root):

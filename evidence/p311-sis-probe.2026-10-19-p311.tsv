@@ -1,0 +1,4 @@
+slug	branch	file	http	bytes	sha256_12	verdict	family	holder_grade	holder_line
+academico-sis/academico	main	LICENSE	200	1094	6051a15f4d44	GRANT	MIT	PERSON	Copyright (c) 2020 Thomas Debay and project contributors
+francoisjacquet/rosariosis	master	LICENSE	200	15214	d954e14e5c75	GRANT	GPL-2.0	BLIND-FIXED-DOCUMENT	-
+OS4ED/openSIS-Classic	-	-	404	-	-	NO_PAYLOAD	-	NO-LINE	-

@@ -4,11 +4,11 @@ region: Global
 updated: 2026-10-19
 ---
 
-# `p311-template-identity` — `ACTION p310-R` item 1
+# `p312-template-identity` — `ACTION p310-R` item 1
 
 **Pass 311 — 2026-10-19.** `python3 test_template_identity.py` — **80 passed / 0 failed**,
 fully offline, no network and no clock. Wired standing as `gate-template-identity`;
-**20/20 gates green** at publication.
+**21/21 gates green** at publication.
 
 ## The one-line version
 
@@ -91,7 +91,7 @@ rung was removed** — `fixture_names()` + `splitext` — and the ceiling was le
 
 ## The rule this pass adds
 
-> **`P311-T`.** A licence family is identified by its **TEMPLATE**, never by its byte length.
+> **`P312-T`.** A licence family is identified by its **TEMPLATE**, never by its byte length.
 > Before a length may be compared at all, the family's FORM must be decided: a **fill-in** form
 > has a free variable in it and no interval can bound it; a **fixed-document** form may still be
 > **bimodal by section**, so its lengths are a small enumerated set and the relation between
@@ -103,7 +103,7 @@ rung was removed** — `fixture_names()` + `splitext` — and the ceiling was le
 |---|---|
 | `template_identity.py` | the classifier: `normalise` · `template_digest` · `slot_constant` · `form_of` · `identify` · `appendix_prefix_of` |
 | `test_template_identity.py` | 80 offline controls, including the refuted MIT band and the three rungs above as live negative controls |
-| `fixtures/` | **12 pinned payloads**, each with its byte length in its own filename, every one read first-hand at `p311` over `raw.githubusercontent.com` |
+| `fixtures/` | **12 pinned payloads**, each with its byte length in its own filename, every one read first-hand at `p312` over `raw.githubusercontent.com` |
 
 ## 🔵 Registered, not claimed
 

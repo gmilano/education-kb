@@ -4,11 +4,11 @@ region: Global
 updated: 2026-10-19
 ---
 
-## 🟢 Pass 311 — THE REGIONAL SEARCH CHANNEL IS SATURATED AT `16` OF `16`, AND `T186` SAID SO THREE PASSES AGO: *"SPEND THE PASS ON TREES"* — OBEYED, AND THE TREES PAID
+## 🟢 Pass 312 — THE REGIONAL SEARCH CHANNEL IS SATURATED AT `16` OF `16`, AND `T186` SAID SO THREE PASSES AGO: *"SPEND THE PASS ON TREES"* — OBEYED, AND THE TREES PAID
 
-⏱️ **Pass 311 of `2026-10-19`.** Evidence:
-[`p311-regional-token-census.2026-10-19-p311.tsv`](../evidence/p311-regional-token-census.2026-10-19-p311.tsv) ·
-[`p311-axis-carried-census.2026-10-19-p311.tsv`](../evidence/p311-axis-carried-census.2026-10-19-p311.tsv).
+⏱️ **Pass 312 of `2026-10-19`.** Evidence:
+[`p312-regional-token-census.2026-10-19-p312.tsv`](../evidence/p312-regional-token-census.2026-10-19-p312.tsv) ·
+[`p312-axis-carried-census.2026-10-19-p312.tsv`](../evidence/p312-axis-carried-census.2026-10-19-p312.tsv).
 
 ### 🔴 Four fresh regional sweeps. Sixteen tokens. Zero new.
 
@@ -25,18 +25,18 @@ it returned was checked against the shelves **before** being written up (`ACTION
 
 🔵 **This is the third independent measurement of the same ceiling, and it is rising:** `p309`
 claimed 18 of 22 (`82 %`), `p310` 20 of 25 (`80 %`, honestly `16 %` new after a near-duplicate
-was removed), `p311` **16 of 16 (`100 %`)**. 🔴 **And `T186` already published the conclusion:**
+was removed), `p312` **16 of 16 (`100 %`)**. 🔴 **And `T186` already published the conclusion:**
 *"the web channel has SATURATED on this shelf, measured — 10 of 11 web terms already held
 (`91 %`) … the only genuinely new item the entire web sweep produced was the EU's
 `Apply AI Alliance`. Operational conclusion for the next pass: another identical web sweep is
 near-zero marginal value. **Spend the pass on trees.**"*
 
-🟢 **`p311` re-ran the sweep anyway — and `Apply AI Alliance`, `T186`'s one new item, came back
+🟢 **`p312` re-ran the sweep anyway — and `Apply AI Alliance`, `T186`'s one new item, came back
 ALREADY CARRIED too.** 🔵 **So the honest reading is not that the channel is 100 % exhausted in
 principle; it is that an UNDIRECTED regional sweep on this industry now returns this base's own
 inventory.** 🟢 **The pass was then spent on trees, as instructed, and that is where every
 finding came from** (see [`repos/foundations.md`](../repos/foundations.md) and
-[`agents/top.md`](../agents/top.md)). → **`P311-S`: a channel declared saturated by a prior pass
+[`agents/top.md`](../agents/top.md)). → **`P312-S`: a channel declared saturated by a prior pass
 is re-tested once, with a denominator, and then BUDGETED AGAINST — not re-run as though untried.**
 
 ### 🟢 One thing the sweep did earn: independent corroboration of the EU date, on a third channel
@@ -64,12 +64,12 @@ and Maryland require human oversight and bar AI from high-stakes student decisio
 committee; **NYC runs a one-year moratorium on student-facing AI through grade 8**. Canada's
 *AI for All* (June 2026) is literacy, not statute; Mexico has bills and no regulator.
 
-🟢 **What `p311` adds that is actionable here.** The *"human oversight / no high-stakes automated
+🟢 **What `p312` adds that is actionable here.** The *"human oversight / no high-stakes automated
 decision"* requirement is an **architecture** requirement, and this pass placed the two pieces it
 needs permissively: [academico-sis/academico](https://github.com/academico-sis/academico)
 (🟢 **MIT**, 406★) as a system of record a studio may modify freely, and
 [Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard)
-(🟢 **Apache-2.0**, `10 173` B payload pinned at `p311`, **North America** placed) as the data
+(🟢 **Apache-2.0**, `10 173` B payload pinned at `p312`, **North America** placed) as the data
 standard a US district already speaks. 🔵 **An oversight-logging layer over Ed-Fi + a permissive
 SIS is a defensible engagement under Oklahoma/Maryland-style rules**, and both licences permit
 the proprietary layer the studio sells above them.
@@ -77,7 +77,7 @@ the proprietary layer the studio sells above them.
 
 ### EMEA
 
-🟢 **The clock is `2027-12-02`, and `p311` moved the proctoring answer from "buy it" to "own it".**
+🟢 **The clock is `2027-12-02`, and `p312` moved the proctoring answer from "buy it" to "own it".**
 Annex III education duties bind `2027-12-02` under `Regulation (EU) 2026/1744`; Art 5(1)(f)
 emotion inference in education is **already prohibited**; Article 4 AI-literacy has applied since
 `2025-02-02`. Nearly two-thirds of European education systems now hold AI strategies or
@@ -93,7 +93,7 @@ Art 5(1)(f)-adjacent at worst, and `p310` established there is no usable open-so
 it anyway.
 
 🔴 **And the licence finding lands hardest here.** **EUPL-1.2 and EUPL-1.1 had NO bucket in this
-base's own family census until `p311`** — 80 cells between them, including Finland's national
+base's own family census until `p312`** — 80 cells between them, including Finland's national
 education stack (`koski`, `EUPL-1.1-or-later`, 9 placed addresses). 🔵 **EUPL is the licence an
 EU public-sector education buyer is most likely to require, and the instrument that bounds this
 base's licence exposure could not see it.** Fixed; see [`repos/foundations.md`](../repos/foundations.md).
@@ -108,7 +108,7 @@ and finance getting roughly six months' grace. South Korea's **AI Basic Act** ha
 since **`2026-01-22`**. China enforces the Generative AI measures plus synthetic-content
 identification (from `2025-09-01`). Singapore and Japan remain guidance-led.
 
-🟢 **What `p311` adds.** The axis read this pass is **disproportionately APAC-facing**:
+🟢 **What `p312` adds.** The axis read this pass is **disproportionately APAC-facing**:
 `qingjian` (Pinyin IME, ≈6.9k★), `kana-dojo` (≈3.7k★), `typed-japanese` (≈2k★), `Memento`,
 `asbplayer`, `yomitan`, `anki-jlpt-decks` — **7 of 15 rows target Chinese or Japanese
 acquisition**. 🔵 **The regional supply on this axis is real and it is almost entirely
@@ -131,7 +131,7 @@ briefed alongside it**, as `p310` required.
 
 🔵 **The `61`-point gap between use (`87 %`) and strategy (`26 %`) is the engagement**, and it is
 an institutional-policy and instrumentation job before it is a model job.
-🟢 **What `p311` adds, concretely:** [academico-sis/academico](https://github.com/academico-sis/academico)
+🟢 **What `p312` adds, concretely:** [academico-sis/academico](https://github.com/academico-sis/academico)
 is 🟢 **MIT** and sized for exactly the small and mid-sized institutions this gap sits in, and
 the whole **application** layer of learning analytics was already shelved at `p310` (`OpenLRW`,
 [`openfun/ralph`](https://github.com/openfun/ralph), `my-learning-analytics`, `EdOptimize`,
@@ -139,7 +139,7 @@ the whole **application** layer of learning analytics was already shelved at `p3
 already-carried rows** — which is not true of EMEA proctoring or APAC language learning.
 
 🔴 **LATAM is a NIL on the code channel for the SECOND pass running, and it is stated as one.**
-Of the 18 payloads probed first-hand at `p311`, **zero are placed in LATAM**: holders read as
+Of the 18 payloads probed first-hand at `p312`, **zero are placed in LATAM**: holders read as
 China, Hungary, Singapore, Iran, Japan, Germany, Switzerland, France, the UK and the US.
 🔵 **So the regional asymmetry on these shelves is exact and worth naming: LATAM is where the
 DEMAND evidence is strongest and the SUPPLY evidence is absent.** The engagement is
@@ -148,7 +148,7 @@ integration and governance, not local open source.
 ### 🔵 Registered, not claimed
 
 - 🔴 **Every figure in this section is search-snippet grade.** `p310` confirmed on two transports
-  that no primary legal, government or market host is reachable from this environment; `p311`
+  that no primary legal, government or market host is reachable from this environment; `p312`
   did **not** re-test that and does **not** re-open it.
 - 🔴 **No market size, CAGR or spend figure is published or updated by this pass.** None was
   returned by a reachable primary source.
@@ -156,6 +156,175 @@ integration and governance, not local open source.
   significant figures, so no drift statement is made on any `k`-band row.
 - 🟡 **`SafeExamBrowser`'s standing as the European de-facto standard is secondary-source**; its
   **licence, byte length and digest are first-hand**.
+
+## 🔴 Pass 311 — THE MARKET NUMBERS FOR THIS SECTOR DISAGREE BY A FACTOR OF `7` ON THE SAME YEAR, AND EVERY ONE OF THEM IS STILL SNIPPET-GRADE
+
+⏱️ **Pass 311 of `2026-10-19`.** 🔴 **Transport status, restated because it governs every figure
+below:** no primary legal, government or market source was reached. `p310` confirmed that boundary
+on **two** independent transports. 🔵 This pass narrows it in one direction and widens it in
+another: **`github.com/topics/*` returns `403` on `curl`** while `raw.githubusercontent.com`
+answers on `curl`, and the topic pages answer on the second transport. **The honest statement is
+now per HOST *and* per PATH.**
+
+### 🔴 The sizing spread, tabled rather than averaged
+
+🔵 **`T37`/`p274`'s rule is that a quantity is re-derived from its rows, never splined between
+them.** Four independent 2026-vintage estimates of the same market:
+
+| source form | 2025 | 2026 | terminal | CAGR |
+|---|---|---|---|---|
+| IMARC-attributed roundup | `$6.4 B` | — | `$79.6 B` (2034) | `31.35 %` |
+| second roundup | `$8.3 B` | `$11.4 B` | `$57.2 B` (2033) | — |
+| third roundup | `$7.52 B` | `$10.6 B` | — | — |
+| 🔵 carried from `p310`/`p65` | `$9.58 B` | — | `$42.48 B` (2030) | `41.5 %` |
+
+🔴 **The 2025 column alone spans `$6.4 B` to `$9.58 B` — a 50 % spread — and the terminal values
+span `$42.48 B` to `$79.6 B` on dates four years apart.** 🔵 **Do not average these and do not
+quote a single one as "the market".** For a client deck the defensible statement is the SHAPE:
+every source agrees on a high-twenties-to-low-forties CAGR off a high-single-digit-billions 2025
+base. 🟡 **Nothing here is a primary source**; all four are search snippets of vendor research.
+
+### 🔵 The one adoption asymmetry every source agrees on, and it is the sellable insight
+
+| measure | value | source grade |
+|---|---|---|
+| students using AI | `66 %` (2024) → **`92 %`** (2025) | 🟡 vendor roundup |
+| institutions with formal AI guidelines | 🔴 **`10 %`** | 🟡 vendor roundup |
+| US teachers lacking AI training | 🔴 **`71 %`** | 🟡 vendor roundup |
+| sector maturity | 🔴 **`35 / 100`** — most institutions still in pilot | 🟡 vendor analysis |
+
+🔴 **Student adoption is near-universal and institutional readiness is in the single and low double
+digits.** 🔵 `p309` measured the same gap from a different channel (`62 %` of students using AI for
+homework by `2025-12` against `18 %` of teachers with any formal guidance) and `p310` showed the
+consequence: the problem class the market's own numbers point at — **integrity, governance,
+assessment design** — was structurally invisible to a keyword set built from solutions. **Two
+independent channels, one gap, and it is a services gap rather than a product gap.**
+
+🟡 **Segment mix, single-source and unverified:** STEM `34.78 %` of revenue · language learning the
+fastest-growing segment · K-12 `45.62 %` of adoption.
+
+## Opportunities by region
+
+🔵 **Every regional figure below is snippet-grade. Where a region returned nothing
+education-specific, that is written down as a measured gap rather than left blank** — an informed
+gap is information; a blank looks exactly like coverage.
+
+### North America
+
+🟢 **The best-quantified region, and the one with the sharpest regulatory vacuum.**
+
+- **Market:** `$951 M` (2024) → `$2 303.2 M` (2029), **`15.9 %`** CAGR (MarketsandMarkets,
+  snippet). 🔴 **Note the CAGR is roughly HALF the global figure** while NA holds the largest
+  regional share (`36–37.5 %`, 2025). 🔵 Both cannot be comfortably true: a dominant region growing
+  at half the global rate implies the growth is elsewhere. **Flagged as a contradiction between two
+  snippet sources, not resolved.**
+- **Regulation:** 🔴 **described as a relative vacuum** — no sector regulator for educational
+  technology, adoption decided school-by-school and district-by-district, with
+  **Colorado and Texas** named as introducing piecemeal state requirements.
+- **Named 2026 movements:** OpenAI launched a country-level education programme with **eight
+  national partners** (Q1 2026); **Carnegie Mellon + the Gates Foundation, `$55 M`** into AI
+  courseware aimed at gateway college courses. 🟡 A `$169 M` government commitment to higher-ed AI
+  (Q1 2026) appeared in blog-grade material only and is recorded as unverified.
+- 🟢 **Supply-side placement, FIRST-HAND:** `The Regents of the University of California` holds the
+  `MIT` grant on [`GradeBridge-Student-Submission`](https://github.com/BridgeSuite/GradeBridge-Student-Submission)
+  (`1 100` B · `6203d12e65d7`) — read from the payload this pass, not from a search snippet.
+- 🔵 **The opportunity:** `10 %` guideline coverage against `92 %` student use, in the region with
+  the most money and the least rulemaking. **Governance-and-assessment-design engagements, not
+  tutor builds.**
+
+### EMEA
+
+🟢 **The only region where the regulatory obligation is concrete and dated.**
+
+- **Regulation:** the **EU AI Act classifies education AI as high-risk** (Annex III(3)). 🟢 `p310`
+  established the adjacent boundary first-hand on code: proctoring systems computing blink ratios,
+  gaze and audio energy are **high-risk, not prohibited** — while anything inferring emotion or
+  physiological state in education is **prohibited outright under Art 5(1)(f)**, and has been since
+  **2 February 2025**. 🔴 A commissioned system is a compliance deliverable, not just a product.
+- **Adoption, with a real denominator:** Eurostat 2025 enterprise AI adoption spans
+  **`5.21 %` (Romania) to `42.03 %` (Denmark)**. 🔵 An eightfold intra-region spread, which is why
+  "EMEA" is not a single go-to-market.
+- **Barriers, ranked:** lack of relevant expertise **`70.89 %`**, legal uncertainty **`52.52 %`**
+  (EESC, citing Eurostat). 🟢 **Both are services line-items.**
+- 🟡 Growth is reported at roughly **`30 %` YoY** (AWS EMEA leadership, Jan 2026 interview) and the
+  recurring warning is **inconsistent national implementation producing a patchwork**.
+- 🔴 **Education-specific gap, stated:** this pass's EMEA searches returned **no ministry-level
+  AI-in-schools programme and no education-sector adoption figure**. The regulatory and
+  skills material above is economy-wide, applied to education by inference.
+- 🔵 **The opportunity:** conformity assessment, Annex III documentation and Art 5(1)(f) screening
+  as a billable practice — the one region where the buyer has a deadline.
+
+### APAC
+
+🟡 **The thinnest region on this channel, and the honest result is a near-nil.**
+
+- 🔴 **This pass's APAC searches returned no education-specific regulation and no
+  education-specific adoption figure.** The results were economy-wide enterprise-AI material. That
+  is a measured outcome of the queries run, not a claim that none exists.
+- **Named education-adjacent movements:** **TCS + Pearson** multi-year AI learning alliance aimed
+  at employer skills gaps; **LearnUpon** regional expansion with a Sydney HQ and AI course
+  authoring; **Alteryx** Academy relaunch with personalised AI learning paths; **OpenAI appointed
+  an ANZ policy lead** as Canberra tightens AI governance and copyright rules.
+- **Governance direction:** **AI sovereignty** is expected to shape infrastructure choices for
+  roughly **half** of APAC firms (Forrester, snippet); Singapore's consultations are financial-sector
+  led; the regional forecast is shared principles applied locally.
+- 🟡 **`49 %`** of APAC businesses cite insufficient real-time data infrastructure as an adoption
+  barrier — relevant to any SIS-integrated build.
+- 🟢 **Supply-side placement, FIRST-HAND:** `Sejong University` holds the `MIT` grant on
+  [`ExamShield`](https://github.com/MORSHEDMDMONOARUL/ExamShield) (`p310`, `1 108` B ·
+  `6176918ccd77`). 🔴 **With the standing Art 5(1)(f) caveat `p310` found in its roadmap** — pin the
+  commit and exclude the biometric roadmap item contractually.
+- 🔵 **The opportunity, stated as a hypothesis rather than a finding:** sovereignty requirements plus
+  weak real-time data infrastructure point at **on-premise / in-country deployments** of exactly the
+  offline-capable stack this base carries (Kolibri, SEB, edge proctoring). **Untested on this
+  channel.**
+
+### LATAM
+
+🟡 **Regulation is well-covered; the education market is not, and the one number available is
+narrower than it looks.**
+
+- **Market:** `$18.2 M` (2024) → `$36 M` (2029), **`12.1 %`** CAGR. 🔴 **Read the label: this is
+  *"Rest of Latin America"*** — a residual bucket that excludes the largest economies, so it is NOT
+  the LATAM education market and must not be quoted as one. 🔵 It also sits two orders of magnitude
+  below the `$4.2 B` LATAM figure this base carried at `p65`/`education_cycle3`, which is a
+  **scope mismatch, not a correction** — the two measure different universes and neither was
+  reached at a primary source.
+- **Regulation, the region's strength on this channel:** a **2026 surge in regulatory activity**,
+  fragmented but **all moving toward risk-based governance**, with privacy, consumer-protection,
+  cybersecurity, labour and IP law **already applying to AI today** (Baker McKenzie, snippet).
+  **Brazil's Bill 2 338/2023 pending**; **Chile has introduced a risk-based bill**. The political
+  split is characterised as *"Brazil wants regulation. Argentina rejects it."*
+- 🔵 **Chile's `Ley 21.719`** — carried, **corroborated twice**, binds **`2026-12-01`** unless
+  `18.623-07` is enacted. 🟡 **Brief the contradictory public reading alongside it**, per the
+  standing instruction; not re-litigated this pass.
+- **Education-specific policy:** a 2025 comparative study covers AI regulation in **higher
+  education across Argentina, Brazil, Chile, Peru and Spain**, framed as a gap analysis. **Mexico**
+  is promoting computational thinking and AI education for responsible use.
+- 🔴 **Gap, stated:** this pass's LATAM searches returned **no named 2026 education-sector player
+  and no ministry-level rollout**. 🟡 **And LATAM is a NIL on the code channel for a second pass
+  running:** zero of the six payloads pinned this pass place there, and the only
+  Spanish-language holder line read is a `PERSON`, which places nobody.
+- 🔵 **The opportunity:** the region is legislating before it is buying. **Compliance-readiness and
+  data-residency work ahead of Chile's December date** is the engagement that exists now, and
+  `noplag-engine`'s Apache-2.0 **self-hostable** licence (`11 358` B · `cfc7749b96f6`) answers the
+  residency objection in a single row.
+
+### Global
+
+- 🔴 **The cross-region constant is the readiness gap, not the growth rate.** Student use is
+  near-universal in every region that reported it; institutional guideline coverage is in the single
+  digits where it was measured at all.
+- 🔴 **Regional saturation is a PROPERTY of this channel, now across three passes.** `p309`: 18 of
+  22 tokens already claimed. `p310`: 20 of 25 (`80 %`), honest figure `4 of 25 = 16 %` after
+  discounting a near-duplicate. 🔵 **`p311` did not run a fresh regional token sweep** — the leg
+  went to the payload arm and two supply axes — so this pass adds no new denominator and says so
+  rather than implying continuity.
+- 🟢 **What `p311` DID add regionally is first-hand rather than snippet-grade**, and there are only
+  two of them: `The Regents of the University of California` (NA) and, carried from `p310`,
+  `Sejong University` (APAC). 🔵 **Eleven of twelve holder lines read at `p310` named a PERSON, and
+  five of six payloads pinned this pass name a person or no one at all.** The copyright-line channel
+  places roughly one row in six, and that is its measured yield, not a defect.
 
 ## 🔴 Pass 310 — TWO PASSES, TWO INDEPENDENT QUERY SETS, THE SAME `~80 %` ALREADY-CLAIMED RATE: THE REGIONAL CHANNEL HAS A MEASURED CEILING, NOT A BAD DAY
 

@@ -124,16 +124,50 @@ def family(spdx):
 
 
 def classify_body(text):
-    """Classify a licence body by its distinctive marker. Returns an SPDX id or None."""
+    """Classify a licence body by its distinctive marker. Returns an SPDX id or None.
+
+    🔴 p311: THIS FUNCTION READ EVERY `MPL-2.0` PAYLOAD AS `GPL-3.0`, and the
+    defect is this base's most-repeated class in a third instrument.
+    `BODY_MARKERS` is ordered GNU-family-first — correct, and the comment above
+    it gives the right reason — and the loop then took the first marker present
+    ANYWHERE in 4 000 characters. 🔵 `MPL-2.0` §1.12 defines *«Secondary
+    License»* as *«either the GNU General Public License, Version 2.0, the GNU
+    Lesser General Public License, Version 2.1, the GNU Affero General Public
+    License, Version 3.0»*, so the GNU rung fires on a Mozilla document and the
+    `MPL-2.0` rung two lines below is never reached.
+
+    Measured on `aesophor/hacklympics`'s payload (`16 725` B `1f256ecad192`):
+    `MOZILLA PUBLIC LICENSE` is at character **0**; `GNU GENERAL PUBLIC LICENSE`
+    is at character **2 341**. 🔴 LIST ORDER BEAT DOCUMENT POSITION.
+
+    🟢 THE FIX IS TO SCORE BY POSITION, NOT BY LIST INDEX — the earliest marker
+    in the document wins, with the existing most-specific-first order kept only
+    as the tie-break. That is `p198-title-line-family`'s settled channel (*a
+    licence declares its family in its TITLE*) expressed as the one line this
+    function needed, and it leaves every previously-correct verdict unchanged:
+    the `AGPL`, `LGPL` and `GPL` legalcodes each carry their own title at
+    character 0, and none of their titles contains a rival family's marker as a
+    substring.
+
+    🔵 Direction of the defect, stated: `MPL-2.0` is a FILE-LEVEL copyleft and
+    `GPL-3.0` is a WHOLE-WORK one, so this OVER-states the obligation. Like
+    `p309`'s it excluded usable supply rather than admitting unusable supply —
+    an opportunity cost, not a client breach. `161` published cells.
+    """
     head = text[:4000].upper()
-    for spdx, marker in BODY_MARKERS:
-        if marker in head:
-            if spdx in ("GPL-3.0", "AGPL-3.0", "LGPL-3.0"):
-                m = VERSION_RE.search(head[head.index(marker):head.index(marker) + 200])
-                if m and m.group(1) != "3":
-                    return spdx.replace("3.0", m.group(1) + ".0")
-            return spdx
-    return None
+    hits = []
+    for index, (spdx, marker) in enumerate(BODY_MARKERS):
+        at = head.find(marker)
+        if at != -1:
+            hits.append((at, index, spdx, marker))
+    if not hits:
+        return None
+    at, _index, spdx, marker = min(hits)
+    if spdx in ("GPL-3.0", "AGPL-3.0", "LGPL-3.0"):
+        m = VERSION_RE.search(head[at:at + 200])
+        if m and m.group(1) != "3":
+            return spdx.replace("3.0", m.group(1) + ".0")
+    return spdx
 
 
 def read_text(path, limit=200000):

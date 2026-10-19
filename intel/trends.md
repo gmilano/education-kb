@@ -4,12 +4,12 @@ region: Global
 updated: 2026-10-19
 ---
 
-## 🟢 Pass 311 — THE SUPPLY-SIDE TREND THIS BASE HAD NOT SEEN: THE BIGGEST EDUCATION-ADJACENT AXIS ON GITHUB IS `62 %` COPYLEFT, WHICH INVERTS THE TIER PUBLISHED ONE PASS EARLIER
+## 🟢 Pass 312 — THE SUPPLY-SIDE TREND THIS BASE HAD NOT SEEN: THE BIGGEST EDUCATION-ADJACENT AXIS ON GITHUB IS `62 %` COPYLEFT, WHICH INVERTS THE TIER PUBLISHED ONE PASS EARLIER
 
-⏱️ **Pass 311 of `2026-10-19`.** Evidence:
-[`p311-language-learning-axis.2026-10-19-p311.tsv`](../evidence/p311-language-learning-axis.2026-10-19-p311.tsv) ·
-[`p311-regional-token-census.2026-10-19-p311.tsv`](../evidence/p311-regional-token-census.2026-10-19-p311.tsv) ·
-[`p311-template-identity.2026-10-19-p311.tsv`](../evidence/p311-template-identity.2026-10-19-p311.tsv).
+⏱️ **Pass 312 of `2026-10-19`.** Evidence:
+[`p312-language-learning-axis.2026-10-19-p312.tsv`](../evidence/p312-language-learning-axis.2026-10-19-p312.tsv) ·
+[`p312-regional-token-census.2026-10-19-p312.tsv`](../evidence/p312-regional-token-census.2026-10-19-p312.tsv) ·
+[`p312-template-identity.2026-10-19-p312.tsv`](../evidence/p312-template-identity.2026-10-19-p312.tsv).
 
 🔴 **No new DEMAND-side trend is published this pass.** Four fresh regional sweeps returned
 **16 of 16 tokens already carried** — see [`intel/market.md`](market.md). 🔵 **Every trend below
@@ -19,7 +19,7 @@ is measured off trees, first-hand, which is where `T186` told this base to spend
 
 Two axes, read one pass apart, by the same method, with the same instrument:
 
-| | `academic-integrity` foundational tier (`p310`) | `language-learning` (`p311`) |
+| | `academic-integrity` foundational tier (`p310`) | `language-learning` (`p312`) |
 |---|---|---|
 | repos on the axis | 111 | 🟢 **4 468** |
 | axis leader | `dolos` **350★** | 🟢 **≈10.1k★** |
@@ -53,7 +53,7 @@ Noncommercial). 🔴 **It reproduces here, harder:** the axis's **#1** row by st
 (`read-frog`, ≈10.1k) is **GPL-3.0**, and the **4th** (`anki-jlpt-decks`, ≈3.1k) is
 **CC-BY-NC-4.0 — noncommercial**. 🟢 **Of the four MIT rows, the highest sits at ≈2.7k, below
 five copyleft rows.** 🔵 **Two independent axes now show the same inversion: on an education
-axis, ranking by stars ranks AWAY from what a studio can ship.** → **`P311-F`: a supply table
+axis, ranking by stars ranks AWAY from what a studio can ship.** → **`P312-F`: a supply table
 ordered by adoption must carry the licence column beside it, or it is a recommendation to build
 on what cannot be shipped.**
 
@@ -70,8 +70,8 @@ SECTION, where the short form is a STRICT BYTE PREFIX of the long one** (Apache 
 🔴 **And GPL-2.0 refutes the universal form of that rule**: three payloads, three lengths, **no
 prefix relation at all**, because the FSF boilerplate address differs (`51 Franklin St,` versus
 `51 Franklin Street,`) **before the appendix is ever reached**. 🔵 **Recorded as the boundary of
-this pass's own rule rather than left as an unbounded claim** → `P311-T`, and
-[`compose/code/p311-template-identity/`](../compose/code/p311-template-identity/) (80 controls).
+this pass's own rule rather than left as an unbounded claim** → `P312-T`, and
+[`compose/code/p312-template-identity/`](../compose/code/p312-template-identity/) (80 controls).
 
 ### 🟢 `T311-5` — a coverage ratio is only as sound as the grammar that built its denominator
 
@@ -83,7 +83,7 @@ and a bare `BSD`. 🟢 **Corrected: `31` published families, `13` with a pinned 
 🔴 **Coverage first went DOWN — `36 %` → `35 %` — while three families were ADDED, because the
 denominator grew faster than the numerator**, and `p309`'s retrospective coverage fell from
 `14 %` to `10 %`. 🔵 **`P310` one level up: a ratio whose denominator comes from a restated
-grammar is as unbounded as the `DEFECT=0` it was written to bound.** → `P311-D`.
+grammar is as unbounded as the `DEFECT=0` it was written to bound.** → `P312-D`.
 🔵 **Both ends of the risk spectrum were missing simultaneously** — the EU's own public-sector
 licence (`EUPL`, the single most likely requirement in an EMEA public-education procurement) and
 the source-available families a studio must **not** build on (`BUSL`, `Elastic`, `SSPL`).
@@ -91,24 +91,24 @@ the source-available families a studio must **not** build on (`BUSL`, `Elastic`,
 ### 🟢 `T311-6` — a cell can carry CORRECT data from the WRONG CHANNEL, and no digest check finds it
 
 `p310` registered `Open-Detector`'s digest discrepancy as *irreconcilable* and left it open.
-🟢 **Resolved at `p311`:** `62cc0b4655b5f3` is the first 14 characters of
+🟢 **Resolved at `p312`:** `62cc0b4655b5f3` is the first 14 characters of
 `62cc0b4655b5f361388f493649bbd5c612dbf9a4`, which `git ls-remote` confirms first-hand is the
 repository's **HEAD commit SHA** on `refs/heads/main`. It sits in that full form in two
 `2026-10-10` census ledgers and was published truncated in the **licence-digest** column.
 🔴 **The class is durable and it is undetectable by comparison:** both values are valid hex of
 plausible length, and the byte length in the same row was **right**, which is what kept the row
 looking sound for 214 passes. 🔵 **The only test that finds it asks whether a value is the answer
-to a DIFFERENT question this base also asked.** → **`P311-C`**.
+to a DIFFERENT question this base also asked.** → **`P312-C`**.
 
 ### 🟢 `T311-7` — the undirected regional web channel now returns this base's own inventory
 
 **Third independent measurement, and the ceiling is rising**: `p309` 18/22 (`82 %`), `p310` 20/25
-(`80 %`), `p311` 🔴 **16/16 (`100 %`)** — including `Apply AI Alliance`, which `T186` recorded as
+(`80 %`), `p312` 🔴 **16/16 (`100 %`)** — including `Apply AI Alliance`, which `T186` recorded as
 the single new item its own sweep produced. 🔵 **The claim is narrow and exact: an UNDIRECTED
 regional sweep on this industry is now worth approximately nothing. It is not a claim that no
 regional fact remains to be found.** 🟢 **The one thing the sweep earned was independent
 corroboration, on a third channel, of the EU date `p310` flagged as unconfirmed** — stand-alone
-high-risk `2027-12-02`, embedded `2028-08-02`. **Grade unchanged: search-snippet.** → `P311-S`.
+high-risk `2027-12-02`, embedded `2028-08-02`. **Grade unchanged: search-snippet.** → `P312-S`.
 
 ### 🟢 `T311-8` — the proctoring posture flips, and the measurement that flipped it was one HTTP request
 
@@ -131,6 +131,156 @@ sent it.
   **15 rows, the most-starred end**, and is stated as a sample, not as the axis.
 - 🟡 **`accessibility` was never enumerated**, so no trend is offered for it.
 - 🟡 **No benchmark was run on any detector, tutor or language model** here or at any prior pass.
+
+## 🔴 Pass 311 — THREE PASSES, THREE DEFECTS, AND NOT ONE OF THEM WAS IN THE FAMILY AT THE TOP OF THE QUEUE: THE SECTOR'S BIGGEST LICENCE RISK IS WHERE ITS SMALLEST NUMBERS ARE
+
+⏱️ **Pass 311 of `2026-10-19`.** Evidence:
+[`p311-risk-order.2026-10-19-p311.txt`](../evidence/p311-risk-order.2026-10-19-p311.txt) ·
+[`p311-defects.2026-10-19-p311.tsv`](../evidence/p311-defects.2026-10-19-p311.tsv).
+
+### 🔴 Trend 1 — the exposure a volume metric cannot see
+
+This is a methodological trend and it generalises past this KB, so it is stated first.
+
+| pass | family it ran | published cells | defects |
+|---|---|---|---|
+| `p309` | `GPL-3.0` / `AGPL-3.0` | 1 026 / 1 201 | 🔴 **1** |
+| `p310` | the `CC` families + `PolyForm` | 23 – 180 | 🔴 **4** |
+| 🟢 `p311` | **`MIT` + `Apache-2.0`** | 🟢 **5 549 + 2 335 = 7 884** | 🟢 **0** |
+| 🔴 `p311` | **`MPL-2.0`** | 🔴 **161** | 🔴 **1** |
+| 🔴 `p311` | **`GPL-2.0`** | 🔴 **443** | 🔴 **1** |
+
+🔵 **The two families holding 61 % of all licence cells came back clean on first contact, and both
+defects of the pass were in families holding 1.3 % and 3.4 % of them** — one found because a probe
+on an unrelated supply axis happened to return an `MPL-2.0` payload, the other because a standing
+gate refuted a claim this pass had just written.
+
+🟡 **The honest reading, with its `n` stated:** per family the defect rates are `2/4` above 1 000
+cells against `5/8` below — **flat at `n=12`**, and a trend claim here would be exactly the
+unbounded assertion `ACTION p310-R` item 3 exists to gate. 🔴 **What IS asymmetric is not the
+probability but the COST, and cost is not a sample — it is a property of the grant:** a wrong answer
+between permissive families costs an attribution detail; a noncommercial grant reported as
+permissive costs the right to ship.
+
+🔵 **The transferable lesson for any AI-sourcing practice: volume metrics rank blast radius, and
+they get read as risk rankings.** The most-used dependency in a stack is the one the whole team has
+already looked at. The exposure is in the long tail nobody wrote a rung for — and in this sector the
+long tail is where the **noncommercial** licences live, which is the only class that cannot ship at
+all.
+
+### 🔴 Trend 2 — the sector's open-source supply has a grant problem, and stars hide it
+
+Measured across the two axes read this pass and the one `p310` read:
+
+| axis | repos | read | 🔴 of the NEW rows, with NO readable grant |
+|---|---|---|---|
+| [`proctoring`](https://github.com/topics/proctoring) | 148 | 17 | combined with SIS: 🔴 **6 of 12 probed** |
+| [`student-information-system`](https://github.com/topics/student-information-system) | 183 | 17 | *(as above)* |
+| [`academic-integrity`](https://github.com/topics/academic-integrity) (`p310`) | 111 | 20 | 🔴 **8 of 20 unusable**: 2 noncommercial, 1 proprietary, 1 **zero-byte** licence file, 4 no grant |
+
+🔴 **Across three education axes and 57 rows read first-hand, roughly a third to a half of the new
+supply cannot be built on**, and the defect is never visible from the shortlist: the
+**4th-most-starred repository on the whole `proctoring` axis** (`MyProctor.ai`, 236★) serves no
+licence payload at any rung, and the **2nd-most-starred** row on `academic-integrity`
+(`paper-tutor-skills`, 46★) is **PolyForm Noncommercial**.
+
+🔵 **This is a procurement trend, not a licensing footnote.** A studio shortlisting by stars and
+then checking licences late will lose its top candidates after the estimate is written.
+
+### 🟢 Trend 3 — a 23rd licence family, and the rise of the unclassifiable grant
+
+[`HalidCisse/Matrix`](https://github.com/HalidCisse/Matrix) serves the **`DON'T BE A DICK PUBLIC
+LICENSE` v1.1** (`1 127` B · `65569613b0b7`): *«Do whatever you like with the original work, just
+don't be a dick»* over a list explicitly *«not limited to»*, plus a resale prohibition and an
+unquantified expectation of payment on commercial success.
+
+🔵 **The trend it instances is joke-and-vibe licensing in small education projects** — alongside
+`p310`'s discovery of a `LICENSE` file served at **HTTP 200 and zero bytes**. 🔴 **Both pass a "has
+a licence?" screen and neither grants anything a studio can rely on.** 🟢 **The reassuring half:
+all eight of this base's payload readers abstain on the new family and `p306` returns
+`commercial_use=UNDETERMINED` — the battery fails safe on a grant it has never seen.** 🔵 Under
+`P250`, `UNDETERMINED` is indistinguishable from PROHIBITED, which is the correct posture.
+
+### 🔴 Trend 4 — ONE INVISIBLE BYTE CAN SWITCH A LICENCE CHANNEL OFF, AND THE FALLBACK IS WORSE THAN THE FAILURE
+
+🔵 **The sharpest finding of the pass, and the one that generalises furthest past this KB.**
+
+`OS4ED/openSIS-Classic` (345★) serves its `GPL-2.0` grant beginning `ef bb bf` — a UTF-8 BOM. The
+consequence was measured across two instruments:
+
+| instrument | with the BOM | without it |
+|---|---|---|
+| the canonical title reader (`p150`) | 🔴 **`None`** — every title pattern anchors at position 0 | 🟢 `GPL` |
+| a classifier that IMPORTS it (`p191`) | 🔴 **`GPL-3.0`** — fell through to its own body ladder | 🟢 `GPL-2.0` |
+| this pass's own identity oracle | 🔴 **two shas for one grant** | 🟢 one |
+
+🔴 **`str.strip()` does not remove `U+FEFF`.** Python does not classify the BOM as whitespace, so
+every per-line `.strip()` in the chain passed it straight through.
+
+🔵 **Why this is a different and worse shape than the three defects before it.** `p309`'s, `p310`'s
+and this pass's `MPL-2.0` defect were all instruments *answering wrongly*. Here the instrument
+**did not answer at all** — the title channel built specifically to replace body-substring ladders
+was silently switched off, and the caller fell back onto the exact ladder it exists to replace.
+🔴 **A channel that fails CLOSED looks identical to a channel that was never consulted**, and the
+wrong answer that comes out carries no signal that the good channel was skipped.
+
+🔴 **The cost is not cosmetic**: `GPL-2.0` has no patent grant and no §13, and GPL-2.0-only code
+cannot be combined with GPL-3.0 code — the compatibility question a studio actually asks.
+
+🟢 **The generalisable rule: normalise invisible characters BEFORE any anchored match, and make the
+normalisation one importable step.** The repair was a single `strip_bom()` in the canonical reader,
+which fixed every importer at once. 🔵 **The converse is the warning:** a title/header channel is
+the right design, and its failure mode is silence — so anything that reads one must distinguish
+*"the channel says no"* from *"the channel did not run"*.
+
+### 🟢 Trend 5 — file identity and grant identity are diverging, and tooling assumes they are the same
+
+Two independent observations from one pass:
+
+- 🔴 **Identical grant, different identity:** the `Apache-2.0` legalcode served at `11 358` B
+  (`cfc7749b96f6`) and `11 357` B (`c71d239df917`) — **one leading newline**, shas with no shared
+  prefix.
+- 🟢 **Identical identity, different rung:** `34 523` B · `8486a10c4393` served as `LICENSE` by
+  [`MeetPlanBackend`](https://github.com/MeetPlan/MeetPlanBackend) and as `LICENSE.md` by
+  [`koakademy`](https://github.com/yukazakiri/koakademy) — two unrelated projects, one byte-identical
+  AGPL-3.0 payload.
+- 🔴 **And for the fill-in-slot families — `6 075` published cells here — byte length is a function
+  of the HOLDER STRING**: the same MIT template is `1 066` B with a 12-character holder and `1 100` B
+  with the University of California's name.
+- 🔴 **A UTF-8 BOM does it invisibly:** `openSIS-Classic`'s `GPL-2.0` grant and a BOM-less copy of
+  the identical text differ by 3 bytes and share no sha prefix.
+
+🔵 **Any SBOM, licence-scanner or dedup pipeline that keys on a file hash will over-count grants in
+one direction and under-count them in the other.** The fix is a normalising oracle, and it has to
+be minimal and controlled or it becomes a matcher that unifies everything.
+
+### 🔵 Trend 6 — the readiness gap is now visible from three independent channels
+
+| channel | the gap |
+|---|---|
+| market snippets (`p311`) | `92 %` of students use AI · `10 %` of institutions have guidelines · `71 %` of US teachers untrained · sector maturity `35/100` |
+| regional search (`p309`) | `62 %` of students using AI for homework by `2025-12` · `18 %` of teachers with formal guidance |
+| 🔵 **the SUPPLY itself (`p310`/`p311`)** | the problem class is **structurally absent from this base's own ingest keywords**, because every keyword named a thing AI does *for* education and integrity names a thing AI does *to* it |
+
+🟢 **Three channels, one conclusion, and the third is the one worth selling:** the sector's binding
+constraint is not model capability and not tooling — it is **governance, assessment design and
+licence diligence**, and the open-source supply reflects that by under-serving exactly those
+problems. 🔵 **EMEA is the only region where that constraint has a date attached** (EU AI Act
+Annex III(3), with Art 5(1)(f) prohibitions live since `2 February 2025`), which makes it the
+natural first market for the practice rather than the hardest one.
+
+### 🟡 What this pass did NOT establish
+
+- 🔴 **No benchmark** on any detector, tutor or proctoring row. This base takes **no position on
+  detection accuracy** — restated because the proctoring supply doubled this pass.
+- 🔴 **Every market and regulatory figure above is snippet-grade.** No primary legal, government or
+  market source was reached, now confirmed across three passes and two transports.
+- 🟡 **Neither defect's realised loss was measured.** Both are fixed and gated; no `MPL-2.0` or
+  `GPL-2.0` shelf cell was re-audited against the repaired classifiers → `ACTION p311-R` item 2.
+- 🟡 **No fresh regional token sweep was run**, so this pass adds no new regional denominator and
+  does not imply continuity with `p310`'s `80 %`.
+- 🔴 **The Art 5(1)(f) code screen was NOT run on any row added this pass**, including two new
+  camera-touching proctoring rows → `ACTION p311-R` item 6.
 
 ## 🔴 Pass 310 — THE INDUSTRY'S BIGGEST AI-IN-EDUCATION PROBLEM IS PHRASED AS A PROBLEM *ABOUT* AI, AND THAT IS WHY A KEYWORD SET BUILT FROM SOLUTIONS COULD NOT SEE IT
 

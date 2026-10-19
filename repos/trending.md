@@ -4,29 +4,32 @@ region: Global
 updated: 2026-10-19
 ---
 
-## 📈 2026-10-19 · Pass 311 — FIVE FAMILIES GAINED THEIR FIRST PINNED PAYLOAD, `8 520` CELLS CAME UNDER COVERAGE, AND THE COVERAGE RATIO'S OWN DENOMINATOR GREW FROM `22` TO `31`
+## 📈 2026-10-19 · Pass 312 — THE COVERAGE RATIO'S OWN DENOMINATOR GREW FROM `22` TO `31`, AND A `1`-BYTE DELTA TURNED OUT TO MEAN TWO DIFFERENT THINGS
 
-⏱️ **Pass 311 of `2026-10-19`.** Evidence:
-[`p311-template-identity.2026-10-19-p311.tsv`](../evidence/p311-template-identity.2026-10-19-p311.tsv) ·
-[`p311-permissive-core-classifiers.2026-10-19-p311.tsv`](../evidence/p311-permissive-core-classifiers.2026-10-19-p311.tsv) ·
-[`p311-grammar-blindspot.2026-10-19-p311.tsv`](../evidence/p311-grammar-blindspot.2026-10-19-p311.tsv) ·
-[`p311-digest-provenance.2026-10-19-p311.tsv`](../evidence/p311-digest-provenance.2026-10-19-p311.tsv).
+⏱️ **Pass 312 of `2026-10-19`.** Evidence:
+[`p312-template-identity.2026-10-19-p312.tsv`](../evidence/p312-template-identity.2026-10-19-p312.tsv) ·
+[`p312-permissive-core-classifiers.2026-10-19-p312.tsv`](../evidence/p312-permissive-core-classifiers.2026-10-19-p312.tsv) ·
+[`p312-grammar-blindspot.2026-10-19-p312.tsv`](../evidence/p312-grammar-blindspot.2026-10-19-p312.tsv) ·
+[`p312-digest-provenance.2026-10-19-p312.tsv`](../evidence/p312-digest-provenance.2026-10-19-p312.tsv).
 
 ### 🟢 `ACTION p310-R` item 1 — DISCHARGED. The two most-published families were clean.
 
 | Repo | Licence *(payload, first-hand)* | ★ | Signal |
 |---|---|---|---|
 | 🆕 [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** `1 094` B · `6051a15f4d44` | **406** | Laravel + Filament school platform. 🟢 **The only MIT system of record on these shelves** — and the **9th** MIT payload, landing on the same template digest and the same `1 038` constant from a **different topic axis** |
-| 🆕 [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟢 **MPL-2.0** `16 726` B · `fab3dd6bdab2` | **355** | ETH Zürich lockdown exam browser. 🟢 **First `MPL-2.0` payload this base has pinned (161 cells)**, and it narrows `p310`'s proctoring nil |
-| 🆕 [oat-sa/devkit-lti1p3](https://github.com/oat-sa/devkit-lti1p3) | 🔴 **GPL-2.0** `18 092` B · `8177f9751321` | 20 | LTI 1.3 dev kit (OAT). 🟢 **First `GPL-2.0` payload pinned (443 cells)** |
-| 🆕 [ripose-jp/Memento](https://github.com/ripose-jp/Memento) | 🔴 **GPL-2.0** `18 097` B · `a99d7b0625a0` | ≈1.5k | 🔵 Second `GPL-2.0` — `5` B from `devkit`, **not a prefix of it** |
+| 🆕 [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟢 **MPL-2.0** `16 726` B · `fab3dd6bdab2` | **355** | ETH Zürich lockdown exam browser. 🔴 **NOT the first `MPL-2.0` pin — `p311` pinned `aesophor/hacklympics` (`16 725` B) in the same hour, and the credit is its.** 🟢 **The value of this one is that it is a SECOND, independent payload**: it reads clean through `p311`'s repaired `p153` rung, and the two differ by **one interior trailing space at offset `1 282`** — which defeated `p311`'s own grant-identity oracle until this pass fixed it. 🟢 It also narrows `p310`'s proctoring nil |
+| 🆕 [oat-sa/devkit-lti1p3](https://github.com/oat-sa/devkit-lti1p3) | 🔴 **GPL-2.0** `18 092` B · `8177f9751321` | 20 | LTI 1.3 dev kit (OAT). 🔴 **NOT the first `GPL-2.0` pin either — `p311` pinned `openSIS-Classic`'s BOM'd payload first.** 🟢 **This is a second and a third** (`Memento`, below): three `GPL-2.0` payloads from three unrelated education repositories, which is what made the no-prefix finding measurable |
+| 🆕 [ripose-jp/Memento](https://github.com/ripose-jp/Memento) | 🔴 **GPL-2.0** `18 097` B · `a99d7b0625a0` | ≈1.5k | 🔵 Third `GPL-2.0` — `5` B from `devkit`, **not a prefix of it** |
 | 🆕 [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** `15 214` B · `d954e14e5c75` | **647** | Mature PHP SIS. 🔵 Third `GPL-2.0` — **appendix-less**, `2 883` B from the longest |
 | 🆕 [Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | 🟢 **Apache-2.0** `10 173` B · `a6cba85bc92e` | 21 | 🟢 **The appendix-less Apache mode, pinned** — a **strict byte prefix** of the `11 357` B payload, delta exactly `1 184` B. 🔵 **North America** placed |
 | 🆕 [kantord/LibreLingo](https://github.com/kantord/LibreLingo) *(carried row, payload re-read)* | 🔴 **AGPL-3.0** `34 524` B · `e9df4c4e4e64` | *(carried)* | 🟡 Differs from `asbplayer`'s `34 523` at byte offset `33 212` — recorded, not explained |
-| 🔴 [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🔴 **NO GRANT AT ANY PROBED PATH** | **345** | 5 paths × 2 branches, all miss. 🟡 **A probe nil, not a licence verdict** — but a 345★ SIS that passes a procurement screen and stops a lawyer |
+| 🔴 [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🟢 **GPL-2.0** `17 286` B *(read by `p311`)* | **345** | 🔴 **This pass wrote “no grant at any probed path” off 5 paths × 2 branches. `p311`'s `gate-enumeration` walked the tree and named two grants under `docs/`.** 🔵 **A ladder is not a tree** (`p275`) — the row is corrected here rather than carried |
 
-🟢 **Classifier result on the permissive core — `54` gradings, `9` classifiers, `6` payloads:**
-**`36` CORRECT · `6` COARSE · `6` ABSTAIN · `6` out-of-domain · 🟢 `0` DEFECT.**
+🟢 **Classifier result on the permissive core, re-run after the merge — `90` gradings,
+`9` classifiers, `10` payloads, `5` families:**
+**`63` CORRECT · `7` COARSE · `10` ABSTAIN · `10` out-of-domain · 🟢 `0` DEFECT.**
+🟢 **The `MPL-2.0` and `GPL-2.0` rows independently confirm `p311`'s two repairs, on payloads it
+did not use.**
 🔴 **The weak family is not MIT (20/27 correct) or Apache-2.0 (14/18) — it is the
 under-specified BSD tier: `2` correct, `4` abstentions of `9`**, with `p419` attaching
 *"tratar como no-osi"* to a payload titled `BSD 2-Clause License`. 🔵 Reported as an abstention,
@@ -34,17 +37,30 @@ not graded a defect.
 
 ### 🟢 Coverage, recomputed honestly
 
-| | `p309` | `p310` | 🟢 `p311` |
-|---|---|---|---|
-| published families *(denominator)* | 22 | 22 | 🔴 **31** |
-| with a pinned payload | 3 | 8 | 🟢 **13** |
-| coverage | 14 % *(→ **10 %** re-based)* | 36 % *(→ **35 %** re-based)* | 🟢 **42 %** |
+| | `p309` | `p310` | `p311` | 🟢 `p312` |
+|---|---|---|---|---|
+| published families *(denominator)* | 22 | 22 | 22 | 🔴 **31** |
+| with a pinned payload | 3 | 8 | 12 | 🟢 **13** |
+| coverage BY FAMILIES | 14 % | 36 % | 55 % | 🟢 **42 %** |
+| the same, re-based on the corrected denominator | **10 %** | **26 %** | **39 %** | 🟢 **42 %** |
+| coverage BY CELLS *(`p311`'s metric, the better one)* | — | 24 % | 90 % | 🟢 **87 %** |
+
+🔴 **Read the two coverage rows together before reading either alone.** `p311` published
+**`55 %` of families and `90 %` of cells**, correctly, against the **22**-family denominator this
+base had. 🔴 **`p312` corrected the denominator to `31`, so the same work re-bases to `39 %`, and
+this pass's own extra pin takes it to `42 %`.** 🔵 **Neither figure is wrong and the pair is the
+point: a coverage ratio moves when the numerator grows AND when the denominator is corrected, and
+only one of those is progress.** 🟢 **`p311`'s by-CELLS metric is the more honest of the two** —
+`MIT` alone is over a third of every licence cell here, so a family-count average weights it
+equal to `OFL-1.1`'s five. 🟡 **By cells the correction is small (`90 %` → `87 %`), because every
+family `p312` added is small** — which is itself the finding: the grammar's blind spot was
+concentrated in the long tail, where the noncommercial and source-available families live.
 
 🔴 **Nine families this base publishes with first-hand evidence had NO token in the grammar that
 builds that denominator**: `EUPL-1.2` (45 cells), `LGPL-2.1` (46), `EUPL-1.1` (35), `BUSL-1.1`
 (33), `Elastic-2.0` (20), `OSL-3.0` (8), `SSPL-1.0` (7), `OFL-1.1` (5) and a bare `BSD` (**192**).
 🔵 **Coverage first went DOWN (36 % → 35 %) while three families were ADDED**, because the
-denominator grew faster than the numerator — which is `P310` applied one level up. → **`P311-D`**.
+denominator grew faster than the numerator — which is `P310` applied one level up. → **`P312-D`**.
 🔵 **Both ends of the risk spectrum were missing at once**: the EU's own public-sector licence
 (`EUPL` — Finland's national education stack, 9 placed addresses) and the source-available
 families a studio must not build on (`BUSL`, `Elastic`, `SSPL`).
@@ -63,7 +79,7 @@ BOUND on cells: prose is counted too.**
 truncated in the **licence-digest** column by `p989-sha-identity-fork`.
 🔴 **The class: a cell carrying CORRECT data from the WRONG CHANNEL** — undetectable by
 digest-versus-digest comparison, because both are valid hex of plausible length and the byte
-length in the same row was right. → **`P311-C`**. 🟡 An exhaustive search over **19 hash
+length in the same row was right. → **`P312-C`**. 🟡 An exhaustive search over **19 hash
 algorithms × 7 normalisations** of the exact `1 066` B payload found no match, independently
 widening `p310`'s own check.
 
@@ -73,9 +89,9 @@ widening `p310`'s own check.
 normalised template digest with `bytes − len(copyright line)` = `1 038` EXACTLY**; the ninth is a
 second template (`The MIT License (MIT)`, constant `1 047`). Observed `1 061`–`1 094` against a
 published band of `1 062`–`1 074`. 🔵 **MIT's length is `constant(template) + len(holder)`, so no
-correction can close a band around a free variable.** → **`P311-T`**, and
-[`compose/code/p311-template-identity/`](../compose/code/p311-template-identity/) — **80 controls,
-`20/20` gates green.**
+correction can close a band around a free variable.** → **`P312-T`**, and
+[`compose/code/p312-template-identity/`](../compose/code/p312-template-identity/) — **80 controls,
+`21/21` gates green.**
 
 🟢 **Apache-2.0 and GPL-3.0 are the other case: fixed documents, bimodal by SECTION, short form a
 STRICT BYTE PREFIX of the long one** — deltas exactly `1 184` B and `2 726` B, the instructional
@@ -95,6 +111,81 @@ and declaration counts to discriminate, never the `2 883` B span.**
 `Unlicense` (37), `Elastic-2.0` (20), `CC-BY-NC-ND-4.0` (14), `OSL-3.0` (8), `SSPL-1.0` (7),
 `OFL-1.1` (5). 🔵 **`EUPL-1.2` is the highest-value next hour**: an EMEA public-sector engagement's
 likeliest licence requirement, and nothing on this base has ever read its payload.
+
+## 📈 2026-10-19 · Pass 311 — TWO REPOSITORIES, TWO FILENAMES, ONE BYTE-IDENTICAL GRANT: THE WEEK'S TRENDING READ CORROBORATED THE PASS'S IDENTITY FINDING BY ACCIDENT
+
+**Append-only. Added above `p310`'s section; nothing below is rewritten.**
+
+### 🟢 Trending reads this week, with denominators
+
+| axis | repos on the topic | read | carried | 🟢 NEW | transport |
+|---|---|---|---|---|---|
+| [`proctoring`](https://github.com/topics/proctoring) | **148** | 17 | 7 | 10 | 🔴 `curl` → `403`; second transport → `200` |
+| [`student-information-system`](https://github.com/topics/student-information-system) | **183** | 17 | 5 | 12 | 🔴 same |
+
+🔴 **A new transport boundary, and it is PATH-level rather than host-level.** `curl` returns `403`
+on `github.com/topics/*` while `raw.githubusercontent.com` answers on `curl` throughout this pass
+(all six payload pins were fetched that way). 🔵 `p310` recorded *"`github.com` and
+`raw.githubusercontent.com` answered on both"* channels — true per HOST, and this pass narrows it:
+**the honest statement is per host AND per path.** *"Say which, every time"* now needs a path.
+
+### 🔵 The week's sharpest trending row is a pair
+
+| repo | ★ | licence file | payload |
+|---|---|---|---|
+| [MeetPlan/MeetPlanBackend](https://github.com/MeetPlan/MeetPlanBackend) | 8 | `LICENSE` | 🔴 **AGPL-3.0** `34 523` B · `8486a10c4393` |
+| [yukazakiri/koakademy](https://github.com/yukazakiri/koakademy) | 7 | `LICENSE.md` | 🔴 **AGPL-3.0** `34 523` B · `8486a10c4393` |
+
+🟢 **Byte-identical payload, two different filenames, two unrelated projects** (a Go school
+organiser and a Laravel 12 academic platform). 🔵 **This corroborates this pass's identity finding
+from the opposite direction**: the same sha across different rungs is what a fixed-document family
+looks like when nobody edits it — while the `Apache-2.0` pair on
+[`repos/foundations.md`](foundations.md) shows an identical grant with **different** shas because
+one copy carries a leading newline. 🔴 **Neither bytes nor sha is an identity for a GRANT. They
+are an identity for a FILE**, and the two come apart in both directions on real payloads read this
+week.
+
+### 🟢 Foundational-tier additions this week
+
+| repo | ★ | licence *(bytes · sha)* | why it is foundational rather than an agent |
+|---|---|---|---|
+| [aesophor/hacklympics](https://github.com/aesophor/hacklympics) | 69 | 🟡 **MPL-2.0** `16 725` · `1f256ecad192` | Exam-session substrate — keystroke capture, playback, submission — rather than a model. 🟢 **The base's first exercised FILE-LEVEL copyleft**, and the payload that caught `p153`'s defect |
+| [infinity-decoder/Shiori](https://github.com/infinity-decoder/Shiori) | 8 | 🟢 **MIT** `1 072` · `03d351572510` | A small, permissive PHP SIS. 🟢 **And the axis's real permissive headline is bigger:** [`academico-sis/academico`](https://github.com/academico-sis/academico) at **406★ is MIT** (`1 094` B · `6051a15f4d44`), re-probed this pass after a draft of [`verticals/solutions.md`](../verticals/solutions.md) asserted it was GPL |
+
+### 🔴 The week's third identity observation, and it is invisible
+
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (**345★**) serves its
+`GPL-2.0` grant at **`17 286` B · `224ac3d403e3`** — from a path under `docs/`, **not at any root
+rung**, and beginning with a UTF-8 **BOM** (`ef bb bf`).
+
+🔴 **Both facts cost something.** The path meant a root-ladder probe returned `404`, and this pass
+wrote *"no payload"* on a shelf before `gate-enumeration` walked the tree and refuted it. The BOM
+meant the canonical title reader returned `None` — **`str.strip()` does not remove `U+FEFF`** — so
+a classifier importing it fell through to a body ladder and graded the payload **`GPL-3.0`**.
+
+🔵 **So the week produced three independent ways for one grant to lose its identity:** a leading
+newline (the Apache pair), a holder string (the MIT pair), and a BOM — plus one way for two
+unrelated projects to share one (the AGPL pair below). 🟢 `GPL-2.0` was the largest uncovered
+family at 443 cells and is now pinned, which is the one good thing to come out of a refuted claim.
+
+### 🔴 What did NOT trend, and it is the week's most useful negative
+
+🔴 **`6` of the `12` new repositories probed serve NO licence payload at any rung**, including
+**[`narender-rk10/MyProctor.ai-…`](https://github.com/narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM)
+at 236★ — the 4th-most-starred repo on the whole `proctoring` axis.** 🔵 A trending list ordered by
+stars puts it near the top; a licence screen removes it. `NO_PAYLOAD` is not `NOT-A-REPOSITORY`
+(`T-p309c`): all six exist, and the prober returns `404` for each rung it tries.
+
+🔴 **Both axes are saturated at the TOP.** Every top-3-by-stars row on both was already carried:
+`Proctoring-AI` (633★), `CloakBox` (406★), `seb-win-refactoring` (355★), `rosariosis` (647★),
+`academico` (406★), `openSIS-Classic` (345★). 🔵 This **corrects** `ACTION p310-R` item 5, which
+listed both axes as *"none yet read"*.
+
+### 🟡 Carried forward unread
+
+🟡 **131 of 148 `proctoring` rows** · **166 of 183 `student-information-system` rows** ·
+**91 of 111 `academic-integrity` rows** (`p310`'s axis). 🔵 `p303`'s finding — the tail is where the
+non-US supply is — still has not been tested on any of the three.
 
 ## 📈 2026-10-19 · Pass 310 — SEVEN NEW FOUNDATIONAL ROWS PLUS TWO CARRIED ROWS RE-GRADED, AND THE AXIS THEY CAME OFF IS `100 %` PERMISSIVE AGAINST LAST PASS'S `4`-TO-`1` COPYLEFT
 

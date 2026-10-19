@@ -1,0 +1,60 @@
+# p311 — the fixture queue on BOTH axes. `family_coverage.py` prints the
+# left one; `ACTION p310-R` item 1 read it as the right one.
+#
+# coverage, the way p310 reported it .... 12/22 FAMILIES =  55%
+# coverage, weighted by CELLS ........... 11728/13022 CELLS   =  90%
+# 🔵 p310 published `36%` (8/22 families). By cells it was `24%`. One
+#    family, `MIT`, is 43% of every licence cell this base publishes, so
+#    a family-count average weights it equal to `CC-BY-NC-ND-4.0`'s 14.
+
+# DESCENDING CELLS (the queue as printed)  cells  consequence
+  🟢 MIT                            5586  LOW
+  🟢 Apache-2.0                     2354  LOW
+  🟢 AGPL-3.0                       1218  HIGH
+  🟢 GPL-3.0                        1040  HIGH
+  🟢 GPL-2.0                         478  HIGH
+  🟢 proprietary                     380  CRITICAL
+  🔴 BSD-3-Clause                    302  LOW
+  🔴 LGPL-3.0                        291  MEDIUM
+  🔴 ECL-2.0                         225  MEDIUM
+  🟢 MPL-2.0                         180  MEDIUM
+  🟢 CC-BY-4.0                       180  LOW
+  🟢 CC-BY-SA-4.0                    165  LOW
+  🔴 ISC                             162  LOW
+  🔴 CC-BY-NC-SA-4.0                 132  CRITICAL
+  🟢 CC0-1.0                          80  LOW
+  🔴 0BSD                             49  LOW
+  🔴 EPL-2.0                          47  MEDIUM
+  🟢 CC-BY-NC-4.0                     42  CRITICAL
+  🔴 Unlicense                        39  LOW
+  🔴 BSD-2-Clause                     26  LOW
+  🟢 PolyForm-Noncommercial-1.0.0     25  CRITICAL
+  🔴 CC-BY-NC-ND-4.0                  21  CRITICAL
+
+# 🔴 UNCOVERED ONLY, re-ordered by WHAT A WRONG ANSWER COSTS:
+# family                        cells  consequence
+  🔴 CC-BY-NC-SA-4.0                 132  CRITICAL  may not be shipped at all — a permissive answer is breach
+  🔴 CC-BY-NC-ND-4.0                  21  CRITICAL  may not be shipped at all — a permissive answer is breach
+  🔴 LGPL-3.0                        291  MEDIUM    file-level or weak-copyleft obligation
+  🔴 ECL-2.0                         225  MEDIUM    file-level or weak-copyleft obligation
+  🔴 EPL-2.0                          47  MEDIUM    file-level or weak-copyleft obligation
+  🔴 BSD-3-Clause                    302  LOW       attribution or notice detail; ships either way
+  🔴 ISC                             162  LOW       attribution or notice detail; ships either way
+  🔴 0BSD                             49  LOW       attribution or notice detail; ships either way
+  🔴 Unlicense                        39  LOW       attribution or notice detail; ships either way
+  🔴 BSD-2-Clause                     26  LOW       attribution or notice detail; ships either way
+
+# 🔴 2 UNCOVERED family(ies) a studio MAY NOT SHIP, holding 153 cells:
+#    CC-BY-NC-SA-4.0           132 cells — position 5 of 10 in the descending-cell queue
+#    CC-BY-NC-ND-4.0            21 cells — position 10 of 10 in the descending-cell queue
+# 🔵 Every `DEFECT-COMMERCIAL` this base has found was on a
+#    noncommercial family (p310: CC-BY-NC-4.0, PolyForm). These are the
+#    two noncommercial families with no payload, and the cell axis puts
+#    them last.
+
+# 🟡 the defect history, as a MEASUREMENT with its n stated:
+#   families >=1000 cells  n=4  arms run=4  defects=2  cells=10198  -> 1 defect per 5099 cells
+#   families  <1000 cells  n=8  arms run=8  defects=4  cells= 1530  -> 1 defect per 382 cells
+# 🔵 Per FAMILY the two rates are 2/4 and 4/6 — FLAT at n=10, and this
+#    file does not claim otherwise. The asymmetry is in the COST column,
+#    which is not a sample: it is a property of the grants themselves.

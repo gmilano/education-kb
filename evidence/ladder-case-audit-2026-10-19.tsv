@@ -231,7 +231,7 @@ compose/code/p152-vertical-election/election_verticals.py	copying	TREE-ENUMERATE
 compose/code/p152-vertical-election/election_verticals.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p152-vertical-election/election_verticals.py	notice	COMMENT-ONLY	no-upper-ext	HISTORICAL	NOTICE
 compose/code/p153-declaration-surfaces/surfaces.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt
-compose/code/p153-declaration-surfaces/surfaces.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.md LICENSE.txt licence license
+compose/code/p153-declaration-surfaces/surfaces.py	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.md LICENSE.txt licence license
 compose/code/p153-declaration-surfaces/surfaces.py	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.md README.rst README.txt readme.md
 compose/code/p170-headref-license-sweep/sweep_headref.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p170-headref-license-sweep/sweep_headref.sh	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt license license.md license.txt
@@ -490,7 +490,9 @@ compose/code/p309-affero-rung-census/rung_census.py	licence	TREE-ENUMERATED	no-u
 compose/code/p310-family-coverage/family_coverage.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README README.md
 compose/code/p310-family-coverage/fixtures.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p310-family-coverage/run_families.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	licence license
-compose/code/p311-template-identity/template_identity.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
+compose/code/p311-permissive-family-arm/payload_identity.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENCE
+compose/code/p311-permissive-family-arm/payload_identity.py	notice	COMMENT-ONLY	no-upper-ext	STANDING	NOTICE
+compose/code/p312-template-identity/template_identity.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p317-data-license-layer/corpus_axis.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p317-data-license-layer/corpus_axis.py	readme	TREE-ENUMERATED	no-upper-ext	HISTORICAL	README README.md
 compose/code/p317-data-license-layer/sweep_corpus.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt

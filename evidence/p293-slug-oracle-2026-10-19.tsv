@@ -2,11 +2,18 @@
 # ABSENT-OR-PRIVATE does NOT mean absent: this channel cannot separate
 # a missing repository from a private one.
 slug	url	verdict	head_sha	detail
-Vic-Nas/EditorWatch	https://github.com/Vic-Nas/EditorWatch	EXISTS-PUBLIC	af5b2d32f79360f1d5df02f7799517eb9cfe8b34	1 ref line(s), symref refs/heads/main
-mikuuuuuuk/ai-behavior-forensics	https://github.com/mikuuuuuuk/ai-behavior-forensics	EXISTS-PUBLIC	4b3e3e3b5b14cfc78cd6cdad0f40c25440b2d52f	1 ref line(s), symref refs/heads/main
-danialtranz/sentinel-agent-proctoring	https://github.com/danialtranz/sentinel-agent-proctoring	EXISTS-PUBLIC	9625da1a9c67a15072a77cdf1992b3794e68970a	1 ref line(s), symref refs/heads/main
-SaiHarsha9992/Plagarism-Check	https://github.com/SaiHarsha9992/Plagarism-Check	EXISTS-PUBLIC	dba52cb82b1d71a8758c1326f6dc6c6e729ef13a	1 ref line(s), symref refs/heads/main
-Yva1nne/ZJU_Course	https://github.com/Yva1nne/ZJU_Course	EXISTS-PUBLIC	168eddcf51fd9dd309804ea6a54999219b3f0903	1 ref line(s), symref refs/heads/main
-laser-institute/aera-workshop	https://github.com/laser-institute/aera-workshop	EXISTS-PUBLIC	f72afa633f27e63434cdfe7f406607de3a3bd8d6	1 ref line(s), symref refs/heads/main
-laser-institute/text-mining	https://github.com/laser-institute/text-mining	EXISTS-PUBLIC	914aac2988e2f6433960980b5c2986c9a333a6c7	1 ref line(s), symref refs/heads/main
-la-process-and-theory/syllabus	https://github.com/la-process-and-theory/syllabus	EXISTS-PUBLIC	25fd80f37a4770eb6e3594b3986e2564488b56a1	1 ref line(s), symref refs/heads/master
+aesophor/hacklympics	https://github.com/aesophor/hacklympics	EXISTS-PUBLIC	8571e723e4363e34157f1ad4dc9e3b19c3ca172b	1 ref line(s), symref refs/heads/master
+Nuthi-Sriram/IntelliProc	https://github.com/Nuthi-Sriram/IntelliProc	EXISTS-PUBLIC	e90b908266f2c6ed8141735a9cfeb65454a2e6c8	1 ref line(s), symref refs/heads/main
+infinity-decoder/Shiori	https://github.com/infinity-decoder/Shiori	EXISTS-PUBLIC	eccc55ef9d35b7ce4abdef44074ba3f199d5680b	1 ref line(s), symref refs/heads/main
+MeetPlan/MeetPlanBackend	https://github.com/MeetPlan/MeetPlanBackend	EXISTS-PUBLIC	811597e6b7449d32d90007b3d5e22cb380bc74de	1 ref line(s), symref refs/heads/main
+yukazakiri/koakademy	https://github.com/yukazakiri/koakademy	EXISTS-PUBLIC	d06c6a752334a2cb78943a3358fec735142fcea6	1 ref line(s), symref refs/heads/master
+HalidCisse/Matrix	https://github.com/HalidCisse/Matrix	EXISTS-PUBLIC	ef41cf9aac5a71cd8124a8f1eed219304d08b54f	1 ref line(s), symref refs/heads/master
+OS4ED/openSIS-Classic	https://github.com/OS4ED/openSIS-Classic	EXISTS-PUBLIC	5d546f20117e12e42b528f9ca91c7f6bd21fb21e	1 ref line(s), symref refs/heads/master
+academico-sis/academico	https://github.com/academico-sis/academico	EXISTS-PUBLIC	59dc0e02f2d803ee9791a9a2583325ff9fd633dc	1 ref line(s), symref refs/heads/main
+francoisjacquet/rosariosis	https://github.com/francoisjacquet/rosariosis	EXISTS-PUBLIC	143ec74abd7d4df10f7dffd5e2c0357ccd92b522	1 ref line(s), symref refs/heads/mobile
+narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM	https://github.com/narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM	EXISTS-PUBLIC	e207bfa296d1796ab5aa46be211b9e465f2f953b	1 ref line(s), symref refs/heads/main
+AgnellusX1/GodsEye	https://github.com/AgnellusX1/GodsEye	EXISTS-PUBLIC	fc77fae989b89b931dc34e70b5a2157c97ddabb0	1 ref line(s), symref refs/heads/PreProduction
+Mstfakts/College-Management-System	https://github.com/Mstfakts/College-Management-System	EXISTS-PUBLIC	82ab01d057d96c8893c419cd9cb6870120faaea3	1 ref line(s), symref refs/heads/master
+Felix-au/PrashnaSetu-Public	https://github.com/Felix-au/PrashnaSetu-Public	EXISTS-PUBLIC	374a72e123815617fb3522ae5b3baa27aa01a5d5	1 ref line(s), symref refs/heads/main
+theunstopabble/InterviewMinds	https://github.com/theunstopabble/InterviewMinds	EXISTS-PUBLIC	027926982d71d4d46f3862de25fba7afda0e0d9b	1 ref line(s), symref refs/heads/main
+daniel-ndeto/school-management-system	https://github.com/daniel-ndeto/school-management-system	EXISTS-PUBLIC	d00c5dce91254fadedd00c42e3c89d41bf9ec9db	1 ref line(s), symref refs/heads/main

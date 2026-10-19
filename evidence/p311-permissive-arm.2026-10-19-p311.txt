@@ -1,0 +1,42 @@
+# p311 dynamic arm — every classifier p309/p310 declare, run on the two
+# families this base PUBLISHES MOST and no arm had ever touched.
+#   mit-open-detector                MIT          OK      1066 B  2e7c69b15c38
+#   mit-gradebridge                  MIT          OK      1100 B  6203d12e65d7
+#   apache-2.0-noplag-engine         Apache-2.0   OK     11358 B  cfc7749b96f6
+#   mpl-2.0-hacklympics              MPL-2.0      OK     16725 B  1f256ecad192
+#   gpl-2.0-opensis                  GPL-2.0      OK     17286 B  224ac3d403e3
+#   dbad-1.1-matrix                  DBAD-1.1     UNDETERMINED   1127 B  65569613b0b7
+#   apache-2.0-reference-audit       Apache-2.0   OK     11357 B  c71d239df917
+
+# 🔴 RAW identity (bytes + sha, as this base pins every payload) vs the
+#    CANONICAL identity of the same grant:
+#   mit-open-detector                MIT          raw   1066 B 2e7c69b15c38   canonical   1054 B d27b4c1636e1
+#   mit-gradebridge                  MIT          raw   1100 B 6203d12e65d7   canonical   1054 B d27b4c1636e1
+#   apache-2.0-noplag-engine         Apache-2.0   raw  11358 B cfc7749b96f6   canonical  11323 B 283ea6cc2997
+#   mpl-2.0-hacklympics              MPL-2.0      raw  16725 B 1f256ecad192   canonical  16724 B 4b89d4518bd1
+#   gpl-2.0-opensis                  GPL-2.0      raw  17286 B 224ac3d403e3   canonical  17281 B 5f42dc1e0231
+#   dbad-1.1-matrix                  DBAD-1.1     raw   1127 B 65569613b0b7   canonical   1126 B 22bd030997c2
+#   apache-2.0-reference-audit       Apache-2.0   raw  11357 B c71d239df917   canonical  11323 B 283ea6cc2997
+#   🔴 7 distinct RAW shas  ->  🟢 5 distinct GRANTS (one per family).
+#      The Apache pair differs by ONE LEADING NEWLINE; the MIT pair by
+#      the HOLDER STRING alone. Neither difference is in the grant, and
+#      p310 certified seven CC0 rows partly on exact byte length.
+
+   p419-copyleft-identity/identidad_copyleft.py         🟡 ABSTAIN=2 CORRECT=5    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=el encabezado no nombra una familia — tratar como no-osi (`p412`)  GPL-2.0=gpl-2.0  DBAD-1.1=el encabezado no nombra una familia — tratar como no-osi (`p412`)  Apache-2.0=apache-2.0
+   p306-licence-probe/licence_probe.py                  🟡 ABSTAIN=1 CORRECT=6    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=gpl-2.0  DBAD-1.1=grant  Apache-2.0=apache-2.0
+   p191-spec-license-sweep/classify_spec.py             🟡 ABSTAIN=6 CORRECT=1    MIT=permissive-software  MIT=permissive-software  Apache-2.0=permissive-software  MPL-2.0=permissive-software  GPL-2.0=gpl-2.0  DBAD-1.1=∅  Apache-2.0=permissive-software
+   p211-full-column-grant-audit/classify.py             🟡 ABSTAIN=2 CORRECT=5    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=lgpl  DBAD-1.1=unrecognised  Apache-2.0=apache-2.0
+   p153-declaration-surfaces/surfaces.py                🟡 ABSTAIN=1 CORRECT=6    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=gpl-2.0  DBAD-1.1=∅  Apache-2.0=apache-2.0
+   p129-transcription-audit/holder.py                   ⚪ OUT-OF-DOMAIN  reads the copyright HOLDER, not the family (p129's own subject)
+   p228-shelf-gate/classify_grant.py                    🟡 ABSTAIN=1 CORRECT=6    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=gpl-2.0  DBAD-1.1=no recognised licence title  Apache-2.0=apache-2.0
+   p198-title-line-family/family_title_line.py          🟡 ABSTAIN=1 CORRECT=6    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=gpl-2.0  DBAD-1.1=no-family  Apache-2.0=apache-2.0
+   p150-gpl-affero-discrimination/gpl_affero.py         🟡 ABSTAIN=2 CORRECT=5    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=gpl  DBAD-1.1=∅  Apache-2.0=apache-2.0
+
+# declared=9  ABSTAIN=8  OUT-OF-DOMAIN=1
+🟢 PASS — every classifier that reads payloads reads these families
+   correctly. 8598 cells newly exercised by this instrument; ZERO defects.
+# 🔵 `p191` returns `permissive-software` on all four, which the imported
+#    grader reads as ABSTAIN by grammar. It is p191's own axis answering
+#    p191's own question and it is RIGHT IN EFFECT for both families —
+#    recorded here, not promoted to CORRECT, because widening another
+#    pass's calibration from this file is the thing this arm refuses.

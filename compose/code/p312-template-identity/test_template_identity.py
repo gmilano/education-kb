@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""p311 — controls for template identity. Fully offline: no network, no clock.
+"""p312 — controls for template identity. Fully offline: no network, no clock.
 
 🔵 The three rungs this module got wrong before it got them right are kept here
 as LIVE NEGATIVE CONTROLS, not as comments. `p310` kept the refuted CC0 rung
@@ -17,7 +17,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 def _load():
     spec = importlib.util.spec_from_file_location(
-        "p311_template_identity", os.path.join(HERE, "template_identity.py"))
+        "p312_template_identity", os.path.join(HERE, "template_identity.py"))
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
@@ -230,7 +230,7 @@ check("the MIT observed range is now 1061-1094, still breaking the published "
 
 # ─── 🔴 GPL-2.0 REFUTES the universal form of this module's own rule ─────────
 
-# 🔵 `P311-T` says a fixed-document family may be bimodal by SECTION and that
+# 🔵 `P312-T` says a fixed-document family may be bimodal by SECTION and that
 # the relation between its lengths is stated as a PREFIX. Apache-2.0 and
 # GPL-3.0 both behave that way. GPL-2.0 does NOT, and the counter-example is
 # kept here so the rule is never read as universal — which is the shape

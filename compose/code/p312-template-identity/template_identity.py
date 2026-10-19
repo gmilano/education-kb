@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""p311 — identify a licence payload by its TEMPLATE, not by its byte length.
+"""p312 — identify a licence payload by its TEMPLATE, not by its byte length.
 
 🔴 THE DEFECT THIS REPLACES.  This base has published a MIT byte band four
 times.  `intel/open-gaps.md` carries *"Measured: ... MIT `1 062`-`1 074`"* as a
@@ -12,7 +12,7 @@ say why.  The reason is structural:
 The copyright line carries a free variable — the holder's name — so the band is
 a measurement of WHOSE repositories were sampled, never of the licence.  No
 correction can close it: a five-character holder and a sixty-character holder
-produce different lengths from a byte-identical grant.  Measured at p311 over
+produce different lengths from a byte-identical grant.  Measured at p312 over
 EIGHT first-hand payloads from eight unrelated repositories (five countries,
 2020-2026): observed `1 061`-`1 086`, which already breaks the published band at
 BOTH ends, and `bytes - len(copyright line)` is **1 038 on seven of the eight**.
@@ -164,7 +164,7 @@ def form_of(text):
 
 
 # 🟢 THE REGISTRY.  digest -> (family, label, form, constant).  Every entry was
-# derived by running this module over a payload read first-hand at p311 over
+# derived by running this module over a payload read first-hand at p312 over
 # `raw.githubusercontent.com`; none is transcribed from a shelf cell. `constant`
 # is None for a fixed-document form, where the quantity does not apply.
 #
@@ -278,7 +278,7 @@ _register_from_fixtures()
 
 
 if __name__ == "__main__":
-    print("# p311 template identity — %d fill-in templates, %d fixed documents"
+    print("# p312 template identity — %d fill-in templates, %d fixed documents"
           % (len(TEMPLATES), len(DOCUMENTS)))
     print()
     print("# %-44s %6s  %-12s %-15s %-23s %s"
