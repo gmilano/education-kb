@@ -1,8 +1,94 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-18
+updated: 2026-10-19
 ---
+
+## 2026-10-19 — Pass 304: FORK-TO-STAR RATIO SEPARATES THE REPOS PEOPLE *DEPLOY* FROM THE ONES THEY *READ*, AND IT PROMOTES THIS TIER'S WEAKEST-STARRED ROW TO ITS MOST ADOPTED
+
+Evidence: [`p304-starcells.2026-10-19-p304.tsv`](../evidence/p304-starcells.2026-10-19-p304.tsv) ·
+[`p304-topic-paging.2026-10-19-p304.tsv`](../evidence/p304-topic-paging.2026-10-19-p304.tsv) ·
+[`p304-licence-payload.2026-10-19-p304.tsv`](../evidence/p304-licence-payload.2026-10-19-p304.tsv) ·
+[`p304-websearch.2026-10-19-p304.tsv`](../evidence/p304-websearch.2026-10-19-p304.tsv) ·
+[`p304-reachability.2026-10-19-p304.tsv`](../evidence/p304-reachability.2026-10-19-p304.tsv).
+
+🔴 **`github trending education AI 2026` produced no new education row for the SEVENTEENTH window.**
+🔵 **`p303` retired the phrasing; `p304` re-ran it once for the mandate and confirms the retirement.**
+🔴 **`open source platform education ERP CRM MIT Apache` nil'd for the TWENTY-FOURTH time** — and this
+window the nil is **licensor-confirmed**: OpenEduCat's *own glossary pages* state `LGPLv3`, so the
+long-standing "no permissive education ERP" finding now rests on the vendor's own words rather than on a
+third-party label.
+
+### 🟢 The instrument of the week: forks, not stars, for substrate
+
+🟢 **`ACTION PG-5` item 3 asked for ten deferred star cells. Reading FORKS in the same request cost nothing
+and split this tier in two — not by popularity, but by what people DO with the repository.**
+
+| band | fork : star | rows | reading |
+|---|---|---|---|
+| 🟢 **FORKED TO DEPLOY** | **≥ 0.95** | [`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) **1.71** · [`studio`](https://github.com/learningequality/studio) **1.47** · [`OpenEMIS-Core`](https://github.com/OpenEMIS/OpenEMIS-Core) **1.29** · [`uPortal`](https://github.com/uPortal-Project/uPortal) **0.97** | 🟢 Administrative, data-standard and authoring systems. **Unusable without your own instance, so adoption REQUIRES a fork** |
+| 🟡 middle | 0.47–0.78 | [`PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) 0.78 · [`Numbas`](https://github.com/numbas/Numbas) 0.60 · [`Tangerine`](https://github.com/Tangerine-Community/Tangerine) 0.47 | 🟡 Assessment — deployed by institutions, read by individuals |
+| 🔴 **STARRED TO READ** | **≤ 0.30** | [`apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training) 0.29 · [`schulcloud-server`](https://github.com/hpi-schul-cloud/schulcloud-server) 0.27 · [`nbgrader`](https://github.com/jupyter/nbgrader) 0.25 | 🔴 Pedagogical tools and reference services. **Bookmarked far more than stood up** |
+
+🟢 **The headline consequence: `Ed-Fi-ODS` has 28★ and 48 forks.** 🔴 **On stars it is the weakest row in the
+table and any shortlist would cut it.** 🟢 **On forks it is the most deployed-per-watcher repository this
+base has measured — exactly what a US state education DATA STANDARD should look like, since every adopting
+agency runs its own ODS.** ⚠️ **A star-ranked shortlist systematically discards the administrative tier,
+which is the tier most education engagements actually begin in.**
+
+🔵 **Rule for future passes: for substrate read forks; for agents read stars.** A substrate's users are
+operators who fork; an agent's users are developers who bookmark. 🟡 **It is a proxy, not proof** — forks
+also accumulate from coursework and dead PR branches, and GitHub does not distinguish them. **An intent
+signal, never an install base.**
+
+### 🟢 Movement: three of ten deferred cells moved, and the mover is the authoring tool
+
+| repo | prior | `p304` | Δ |
+|---|---|---|---|
+| [`learningequality/studio`](https://github.com/learningequality/studio) | 193★ | 🟢 **213★** | 🟢 **+20 (~10%)** — **MIT** |
+| [`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine) | 70★ | 🟢 **76★** | 🟢 **+6** — GPL-3.0 |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 519★ | 🟢 **521★** | 🟢 **+2** |
+
+🔵 **`studio` is the content-AUTHORING half of the Kolibri stack this base carries for offline-first
+deployments, and growth in the authoring tool rather than the player says something about who is adopting
+Kolibri: organisations building their own curriculum, not merely serving someone else's.**
+🟢 **`p295` refuted 2 of 11 deferred cells; `p304` moved 3 of 10 — the prior on staleness holds at ~25-30%,
+so deferring these cells a fourth time would have been wrong.**
+
+### 🟡 The sidebar renders no licence on 3 of 10 pages — measured, not assumed
+
+⚠️ **`PrairieLearn`, `schulcloud-server` and `OpenEMIS-Core` render NO licence label in the sidebar**,
+though all three have a `License` link or a `LICENSE` file in the tree. 🔴 **A 30% miss rate on this tier,
+which means "no licence shown" must never be recorded as "no licence."** 🟢 **All three are now the
+highest-value targets for `PG-5` item 1's payload pass.**
+
+### 🟢 The paged tail: floor confirmed, and the tail is where the non-US rows are
+
+🟢 **`ai-education` page 3 (ranks 41–60) read as `p303` directed: 12★ → 7★, and 14 of 20 rows are courses
+or personal study projects. FLOOR CONFIRMED.** ⚠️ **Population drifted 528 → 529 in a single day** — quote a
+denominator only with its date.
+
+🟢 **Eleven payloads probed → 6 permissive, 1 reserved grant, 4 no-grant. Three of the five admitted rows
+are regionally placed** — Brazil (`plataforma-estudo-personalizado`), India (`Stemly`), China
+(`fakao-ai-exam-engine`) — **against a topic head dominated by US and Chinese corporate repositories.**
+🔵 **A topic's head ranks by stars and stars rank by English-language reach; the tail is where regionally
+originated work sits.** ⚠️ **A star floor is the wrong filter for a global studio.** Full rows and the
+licence verdicts are on [`agents/top.md`](../agents/top.md) and
+[`agents/trending.md`](../agents/trending.md).
+
+🔵 **Recommended for `p305`: STOP paging `ai-education`.** Two independent floor confirmations is enough.
+**Spend the leg on the `intelligent-tutoring-system` AGPL cluster** — `p303` showed the vertical's best
+pedagogy sits under its worst licences, and this base has never worked that licence-strategy question.
+
+### 🔴 What this week could NOT establish
+
+🔴 **`api.github.com` NOT re-tested** — settled by `p303` as an authorization boundary bound to this
+session's configured repositories. **No exact star integer, no SPDX field, no `pushed_at`, ever, from this
+environment.** `nbgrader` is recorded as `1.4k` because that is what the page renders.
+🔴 **No primary source — 23rd consecutive pass** (`CONNECT tunnel failed, 403`); not re-tested, per `p303`.
+🔴 **No code, build or test suite was read** in any of the ten repositories or the eleven probed rows.
+🔴 **`ai-education` 61–529 and `ai-tutor` 61–750 remain UNMEASURED, NOT ABSENT.**
+🟢 **`make hooks` WAS run this pass**, ending the three-pass gap `p303` flagged.
 
 ## 2026-10-18 — Pass 303: THE TOPIC POPULATIONS WERE PAGED AS `p302` ASKED, AND THE STAR DISTRIBUTION TURNS A DENOMINATOR INTO A FLOOR — `ai-tutor` HAS ~60 REAL MEMBERS, NOT 750
 

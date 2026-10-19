@@ -1,0 +1,12 @@
+repo	branch	licence_file	bytes	sha256_12	detected	verdict	note
+ai-shifu/skills	main	LICENSE	279	5b1cf701a7fd	NONCOMMERCIAL-NOT-OSI	RED-reserved-grant	NEW-DEFECT-CLASS:file-named-LICENSE-withholds-every-right,"All-rights-reserved","viewing-and-evaluation-only",no-permission-to-use/copy/modify/distribute-without-written-consent
+abubokkor-cse/EduMind-AI-Virtual-Teacher	main	LICENSE	2081	10010547e5ab	MIT	GREEN-permissive-AMBER-access	holder=EduMind(2025-2026);MIT-text-COMPLETE-then-3rd-party-terms-block:ElevenLabs-TTS+Stripe+Firebase/GoogleCloud+DISCLAIMER;P26-access-gate-written-INSIDE-the-payload
+GPA95/SGPA	main	LICENSE	1362	2d37a36a1833	MIT	GREEN-permissive	holder=Ammaar-Ahmad-Khan(2025)
+jeliael/fakao-ai-exam-engine	master	LICENSE	1063	a29b8bca5c59	MIT	GREEN-permissive	holder=Aether(2026);DEFAULT-BRANCH=master-not-main;PROMOTION-enumerated-p171-never-shelved
+pedroestevaodev/plataforma-estudo-personalizado	main	LICENSE	1070	68b9bce8185b	MIT	GREEN-permissive	holder=Pedro-Estevao(2024);LATAM-via-programme-see-p304-placement.tsv
+SH-Nihil-Mukkesh-25/Stemly	master	LICENSE	1099	ae8c3c726efc	MIT	GREEN-permissive	holder="Stemly Team - Amrita Vishwa Vidyapeetham"(2025);DEFAULT-BRANCH=master;APAC-via-institution
+dulanjayabhanu/mononeural	main	LICENSE	1072	a5829e2fae25	MIT	GREEN-permissive-NOT-SHELVED	holder=Dulanjaya-Bhanu(2026);md5=5c5a7a41ac6dc812fca183a1a9517d1d-IDENTICAL-to-prior-pass-record;EXCLUDED-teaches-AI-not-teaches-WITH-AI
+ZhiquAI/zhiyue3.0	main	NONE(main,master,dev x7 names)	0	-	NO-GRANT	RED-no-grant	AI-grading-assistant-junior-high-history-teachers,OCR+NLP
+lk19940215/ai-teaching-ppt	main	NONE(main,master,dev x7 names)	0	-	NO-GRANT	RED-no-grant	textbook-to-interactive-pptx
+adnanahmaddev/synapse	main	NONE(main,master,dev x7 names)	0	-	NO-GRANT	RED-no-grant	course-generator-from-one-prompt,Gemini-or-Ollama
+orionsheep/wordlink	main	NONE(main,master,dev x7 names)	0	-	NO-GRANT	RED-no-grant	vocabulary-app,fine-tuned-1.5B-model-offline-in-browser

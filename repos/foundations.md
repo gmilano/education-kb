@@ -1,8 +1,99 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-18
+updated: 2026-10-19
 ---
+
+## 🟢 Pass 304 — `ACTION PG-5` ITEM 3 DISCHARGED AFTER FOUR PASSES OF BEING DEFERRED, AND THE TEN CELLS PAID A NEW INSTRUMENT: FORK-TO-STAR RATIO SEPARATES THE REPOS PEOPLE *DEPLOY* FROM THE ONES THEY *READ*
+
+⏱️ **Pass 304 of `2026-10-19`.** Evidence:
+[`p304-starcells.2026-10-19-p304.tsv`](../evidence/p304-starcells.2026-10-19-p304.tsv) ·
+[`p304-licence-payload.2026-10-19-p304.tsv`](../evidence/p304-licence-payload.2026-10-19-p304.tsv) ·
+[`p304-reachability.2026-10-19-p304.tsv`](../evidence/p304-reachability.2026-10-19-p304.tsv).
+
+🟢 **`ACTION PG-5` item 3 — *"the ten remaining star/forks cells, UNTOUCHED FOR A FOURTH PASS"* — is
+DISCHARGED. All ten were read this pass, with forks and sidebar licence alongside.**
+
+### 🟢 The discharge: ten cells, three moved, and the mover is the one that matters
+
+| repo | prior | `p304` | Δ | forks | fork : star | sidebar licence |
+|---|---|---|---|---|---|---|
+| [`learningequality/studio`](https://github.com/learningequality/studio) | 193★ | 🟢 **213★** | 🟢 **+20** | **314** | 🟢 **1.47** | 🟢 **MIT** |
+| [`Tangerine-Community/Tangerine`](https://github.com/Tangerine-Community/Tangerine) | 70★ | 🟢 **76★** | 🟢 **+6** | 36 | 0.47 | 🔴 **GPL-3.0** |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 519★ | 🟢 **521★** | 🟢 **+2** | **404** | 0.78 | ⚠️ **not rendered** |
+| [`uPortal-Project/uPortal`](https://github.com/uPortal-Project/uPortal) | 286★ | 286★ | — | **278** | 🟢 **0.97** | 🟢 **Apache-2.0** |
+| [`hpi-schul-cloud/schulcloud-server`](https://github.com/hpi-schul-cloud/schulcloud-server) | 81★ | 81★ | — | 22 | 0.27 | ⚠️ **not rendered** |
+| [`DFE-Digital/apply-for-teacher-training`](https://github.com/DFE-Digital/apply-for-teacher-training) | 38★ | 38★ | — | 11 | 0.29 | 🟢 **MIT** |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 28★ | 28★ | — | **48** | 🟢 **1.71** | 🟢 **Apache-2.0** |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 1.4k★ | 1.4k★ | — | 343 | 0.25 | 🟢 **BSD-3-Clause** |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | 215★ | 215★ | — | 129 | 0.60 | 🟢 **Apache-2.0** |
+| [`OpenEMIS/OpenEMIS-Core`](https://github.com/OpenEMIS/OpenEMIS-Core) | 7★ | 7★ | — | 9 | 🟢 **1.29** | ⚠️ **not rendered** |
+
+🔵 **`p295` refuted 2 of 11 cells; `p304` moved 3 of 10 — so the prior on "a deferred star cell is stale" is
+holding at roughly 25-30%, and item 3 was worth buying.** 🟢 **The mover that matters is
+[`learningequality/studio`](https://github.com/learningequality/studio) at +20 (193 → 213, ~10% in the
+deferral window) — MIT, and the content-authoring half of the Kolibri stack this base already carries for
+offline-first deployments.** 🔵 **Growth in the authoring tool, not the player, is a signal about who is
+adopting Kolibri: organisations making their own curriculum, not just serving someone else's.**
+
+### 🟢 The instrument the discharge produced: fork-to-star ratio as a DEPLOYMENT-INTENT proxy
+
+🟢 **Item 3 asked only for stars. Reading forks in the same request cost nothing and separated this tier
+cleanly in two** — and the split is not by popularity, it is by what people DO with the repository:
+
+| band | fork : star | rows | what the band is |
+|---|---|---|---|
+| 🟢 **FORKED TO DEPLOY** | **≥ 0.95** | `Ed-Fi-ODS` 1.71 · `studio` 1.47 · `OpenEMIS-Core` 1.29 · `uPortal` 0.97 | 🟢 **Administrative, data-standard and content-authoring systems.** You cannot use these without standing up your own instance, so adoption *requires* a fork |
+| 🔴 **STARRED TO READ** | **≤ 0.30** | `nbgrader` 0.25 · `schulcloud-server` 0.27 · `apply-for-teacher-training` 0.29 | 🔴 **Pedagogical tools and reference services.** Bookmarked far more often than stood up |
+| 🟡 middle | 0.47 – 0.78 | `Tangerine` 0.47 · `Numbas` 0.60 · `PrairieLearn` 0.78 | 🟡 Assessment tools — deployed by institutions, read by individuals |
+
+🟢 **Why this is worth more to a studio than a star count: `Ed-Fi-ODS` has 28★ and 48 forks.** 🔵 **On stars
+it is the weakest row in the table and would be cut from any shortlist. On forks it is the most
+deployed-per-watcher row this base has measured** — which is exactly what you would predict of a **state
+education data standard**, where every adopting agency runs its own ODS. ⚠️ **A shortlist built on stars
+systematically discards the administrative tier, which is the tier most education engagements actually
+begin in.**
+
+🔵 **Stated as a rule for future passes: for substrate, read forks; for agents, read stars.** A substrate's
+users are operators who fork; an agent's users are developers who bookmark. 🟡 **The ratio is a proxy and
+not proof** — forks also accumulate from coursework and from abandoned PR branches, and GitHub does not
+distinguish them. **Cite it as an intent signal, never as an install base.**
+
+### 🟡 A licence-rendering gap, now measured rather than assumed
+
+⚠️ **3 of 10 repository pages do NOT render a licence in the sidebar** — `PrairieLearn`,
+`schulcloud-server` and `OpenEMIS-Core`. 🔵 **All three have a `License` link or a `LICENSE` file in the
+tree; the label is simply absent from the rendered sidebar.** 🔴 **So the sidebar is unreliable at a
+measured rate of 30% on this tier, and "no licence shown" must never be written down as "no licence."**
+🟢 **This is precisely the case `probe_payload.sh` exists for, and all three are candidates for `PG-5`
+item 1.**
+
+### 🔴 Restated and still open from `ACTION PG-5`
+
+🔴 **Item 1 — PAYLOAD-GRADE THE WHOLE SHELF.** **425 of 525 permissive orphans remain unshelved** and the
+27 sidebar-only rows from `p297` / `p299` are still unpinned. 🟢 **The channel is confirmed open again this
+pass** (11 probes, 11 answers) — `source compose/code/lib/probe_payload.sh; probe_repo <slug>`.
+🔵 **Start with the three rows above whose sidebar renders nothing; they are the highest-value pins
+available.**
+🔴 **Item 2 — re-run `ACTION PG-4`'s candidate selection** with `p299`'s rule (table rows only; narrow
+vocabulary). Remaining credential cluster: `digitalcredentials/sign-and-verify-core` and `oneorigin-2-0`'s
+three predecessor repositories.
+🟢 **Item 3 — DISCHARGED this pass.** See above.
+🟡 **Item 4 — put the row count in `recount`.** Still outstanding as a gate change; `p304` ran the gate
+rather than extending it.
+🟡 **Item 5 — audit the xAPI layer against version 2.0.** Untouched. Every xAPI row here except
+[`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) implements **1.0.3**.
+
+### 🔴 What this pass did NOT do on this file
+
+🔴 **No new foundational substrate row was added.** 🔵 **That is the correct outcome, not a nil:** the leg
+`p303` directed at `ai-education` page 3 returned **applications and courses, no substrate**, and all five
+admitted rows are agent-shaped, so they went to [`agents/top.md`](../agents/top.md).
+🔴 **No code, build or test suite was read in any of the ten repositories** — stars, forks and sidebar
+labels are rendered values.
+🔴 **`api.github.com` was NOT re-tested** (`p303` settled it as an authorization boundary), so **no exact
+star integer and no SPDX field exists for any row above.** `nbgrader` is recorded as `1.4k` because that is
+what the page renders.
 
 ## 🟢 Pass 303 — THE LEARNER-MODEL LAYER FINALLY HAS A PERMISSIVE DATA MODEL, THE SPACED-REPETITION DEPENDENCY CHAIN IS NOW CLEAN END TO END, AND THE SECTOR'S BEST LEARNING-SCIENCE TUTOR TURNS OUT TO HAVE NO GRANT
 
@@ -186,6 +277,7 @@ evaluation DESIGN.** Two arrived:
 
 | repo | licence (payload) | stars | what it establishes |
 |---|---|---|---|
+| 🆕 [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟡 **Apache-2.0 — MANIFEST-GRANTED, not payload-pinned** *(`pom.xml`, branch `master`, 3 752 B, sha256₁₂ `54d5d8152efb`: `<licenses><license><name>The Apache Software License, Version 2.0</name>…<distribution>repo</distribution>`; README states it independently. ⚠️ **No `LICENSE` file at any ladder name, no sidebar label**, read `p304`)* | **114★ / 47 forks** (ratio 0.41), Java, branch `master` | 🟢 **THE MEASUREMENT LAYER THIS TIER WAS MISSING, and it was on this base's shelves marked UNGRANTED.** A Java psychometrics library: **classical test theory, item response theory (IRT), factor analysis** and related measurement techniques. 🔵 **Pairs directly with `p303`'s learner-model data layer** — `capability-space` gives you somewhere to put activity/evidence/mastery, this gives you a defensible way to ESTIMATE mastery, and IRT is the method an assessment regulator already recognises. 🔴 **Corrected `p304`:** a prior pass published it as *"IRT and BKT code with no grant"* — wrong, and wrong in the expensive direction. `gate-enumeration` caught it on the first hooks run in four passes. ⚠️ **Cite the manifest AND the README together; a manifest grant is a weaker pin than a file.** |
 | [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** `1 150 B` `a1c6b65c5bb1` | 3★ | Pre-registered audit (arXiv:2607.28128) of whether an LLM helpfulness judge **rewards answer-leakage that reduces later independent work**. One frozen base model, two policies — `ConvTutor` (single-node LangGraph) vs `PedTutor` (state tracker + decomposer + **deferral gate** + hint cascade) — against a cold baseline, weak simulated student (**Llama-3.1-8B**), Opus primary judge + second-judge robustness check, a **frozen leakage matcher** (`protocol/leakage.py`), and ablations removing tracker / gate / cascade individually. **10 replicates × {cold, conv, ped}** per base; GPT and Gemini bases run separately and **never pooled**. |
 | [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 🟢 **MIT** `1 154 B` `fef00f185287` | 4★, branch **`master`** | Pre-registered audit of LLM judges with analysis of **bounded-rating bias** across ability levels — whether one judge can score a weak and a strong learner on the same scale, which every adaptive-tutoring claim assumes. |
 

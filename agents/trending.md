@@ -1,8 +1,130 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-18
+updated: 2026-10-19
 ---
+
+## 2026-10-19 — Pass 304: A FILE NAMED `LICENSE` THAT WITHHOLDS EVERY RIGHT — AND THE PAGED TAIL TURNS OUT TO BE WHERE THE NON-US SUPPLY LIVES
+
+Evidence: [`p304-licence-payload.2026-10-19-p304.tsv`](../evidence/p304-licence-payload.2026-10-19-p304.tsv) ·
+[`p304-placement.2026-10-19-p304.tsv`](../evidence/p304-placement.2026-10-19-p304.tsv) ·
+[`p304-topic-paging.2026-10-19-p304.tsv`](../evidence/p304-topic-paging.2026-10-19-p304.tsv) ·
+[`p304-starcells.2026-10-19-p304.tsv`](../evidence/p304-starcells.2026-10-19-p304.tsv) ·
+[`p304-websearch.2026-10-19-p304.tsv`](../evidence/p304-websearch.2026-10-19-p304.tsv) ·
+[`p304-reachability.2026-10-19-p304.tsv`](../evidence/p304-reachability.2026-10-19-p304.tsv).
+
+🔴 **`github trending education AI 2026` nil'd for the SEVENTEENTH window** — `ai-engineering-from-scratch`,
+`ai-job-search`, `2026-AI-College-Jobs`, Karpathy's *Zero to Hero*, `aneelv75/github-trending`.
+🔵 **`p303` retired this phrasing; `p304` re-ran it once to honour the standing mandate and confirms the
+retirement.** **It cannot distinguish courses ABOUT AI from AI software FOR education, and it never will.**
+
+### 🔴 The signal of the week — THE RESERVED GRANT, a defect class worse than `p303`'s phantom grant
+
+**Repo**: [`ai-shifu/skills`](https://github.com/ai-shifu/skills) — **11★**, `ai-education` rank 43 —
+🔴 **`LICENSE` present, 279 B, sha256₁₂ `5b1cf701a7fd`, and it grants NOTHING.** In full:
+
+> `Copyright (c) 2026 AI-Shifu` · `All rights reserved.` · *"This repository is provided for viewing and
+> evaluation only. No permission is granted to use, copy, modify, merge, publish, distribute, sublicense,
+> or sell any part of this repository without prior written consent from AI-Shifu."*
+
+🔴 **`p303` found the phantom grant — a README claiming MIT over a licence file that was never committed.
+This is its mirror image and it is more dangerous**, because the phantom grant fails loudly and this one
+passes every cheap check:
+
+| | file at canonical path | plausible length | opens `Copyright (c) YYYY Holder` | sidebar label | grants |
+|---|---|---|---|---|---|
+| 🔴 phantom grant (`p303`) | **no** | — | — | none | nothing |
+| 🔴 **reserved grant (`p304`)** | 🔴 **yes** | 🔴 **yes** | 🔴 **yes** | 🔴 **none** | 🔴 **nothing, expressly** |
+
+⚠️ **Only reading the body refuses it — and the body is four lines.** 🟢 **The standing rule `p304` adds:
+`bytes < 400` on a licence file is a RED FLAG, not a short MIT.** Every permissive template read by this
+base falls in **1 060–1 180 B**; 279 B is not a licence, it is a notice.
+🔵 **Why it is the week's signal rather than a curiosity: `ai-shifu` is a live product and the repository's
+subject is "skills for building one-on-one interactive AI courses" — the single most liftable-looking asset
+in the paged tail, and the only categorically unusable one.**
+
+### 🟡 Hot signal #2 — an ACCESS gate written inside a copyright payload, for the first time in this base
+
+**Repo**: [`abubokkor-cse/EduMind-AI-Virtual-Teacher`](https://github.com/abubokkor-cse/EduMind-AI-Virtual-Teacher)
+— **10★** — 🟢 **`MIT`, payload 2 081 B** (≈ double the template), sha256₁₂ `10010547e5ab`.
+
+🟢 **The MIT text is complete and unmodified.** 🟡 **Appended to it: a third-party terms block naming
+ElevenLabs TTS, Stripe and Firebase / Google Cloud**, plus *"Users must comply with all third-party service
+terms when using EduMind"* and a disclaimer.
+🔵 **`probe_payload.sh`'s header states that the ACCESS question — may we CALL this system? — "lives in a
+third party's Terms of Use and is invisible to every probe in this directory." This author put it in the
+payload, so the probe read it.** ⚠️ **GREEN on copyright, AMBER on deployability.** 🟢 **Most rows on this
+shelf carry the same runtime debt silently; this one is merely honest about it** — which is why it earns a
+row and a checklist (`P80`).
+
+### 🟢 Hot signal #3 — the tail is where the regional supply is, and a star floor is the wrong filter
+
+🟢 **`p303` asked for one page of `ai-education` to confirm the floor. Page 3 (ranks 41–60) opens at 12★ and
+closes at 7★, and 14 of its 20 rows are courses or personal study projects. FLOOR CONFIRMED, twice over.**
+⚠️ **The population also drifted 528 → 529 in one day — a denominator needs a date every time it is quoted.**
+
+🟢 **The unexpected result is the composition, not the floor. Eleven payloads probed → 6 permissive, 1
+reserved grant, 4 no-grant; five rows admitted — and THREE of the five are regionally placed:**
+
+| row | ★ | placement | class of evidence |
+|---|---|---|---|
+| [`SH-Nihil-Mukkesh-25/Stemly`](https://github.com/SH-Nihil-Mukkesh-25/Stemly) | 8 | 🟢 **APAC** | **INSTITUTIONAL** — *"CS students from Amrita Vishwa Vidyapeetham, Coimbatore"*, on the page |
+| [`jeliael/fakao-ai-exam-engine`](https://github.com/jeliael/fakao-ai-exam-engine) | 10 | 🟢 **APAC** | **JURISDICTIONAL** — scope is China's bar exam; the exam places it, not the holder |
+| [`pedroestevaodev/plataforma-estudo-personalizado`](https://github.com/pedroestevaodev/plataforma-estudo-personalizado) | 8 | 🟡 **LATAM** | **PROGRAMMATIC** — built for Alura + Google's *Imersão IA* 2nd ed.; Alura is Brazilian |
+
+🔴 **Compare the head of the same topic — pages 1–2, 41 600★ down to 17★ — which is dominated by US and
+Chinese corporate repositories.** 🟢 **The inference: a topic's head ranks by stars, and stars rank by
+English-language reach. The tail is where regionally originated work sits.** ⚠️ **A star floor is exactly
+the wrong filter for a global studio, and this base would have skipped the leg on stars alone.**
+
+🟢 **One long-standing gap is NARROWED.** [`intel/open-gaps.md`](../intel/open-gaps.md) has recorded for six
+passes that *"LATAM returned nothing at any star level."* 🟢 **That sub-clause is REFUTED.**
+🔴 **The gap itself STANDS** — the LATAM row is 8★ / 1 fork / 40 commits, a single-purpose generator built
+for a course, **not a platform**.
+
+### 🟢 Hot signal #4 — the placement classes `P800` does NOT refuse
+
+🔴 **`P800` refuses the holder's name as placement evidence, and is right to.** 🟢 **But a named university
+plus city, a named national training programme, and a named national licensing exam are not onomastic —
+they are institutions and instruments that exist at an address.** 🔵 **Pre-registered for promotion to a
+numbered rule: INSTITUTIONAL / PROGRAMMATIC / JURISDICTIONAL admissible; ONOMASTIC refused.** This is the
+first time this base can place a row without a corporate domain or a commit-timezone census.
+⚠️ **Residual recorded rather than buried:** the Alura row places the **programme**, not provably the
+**person** — the course is open with no prerequisites and the author's country is never stated.
+🟢 **Correction to that repo's own README: *Imersão IA* is a free course with an awards layer (180 000
+places May 2025, 190 000 September 2025), NOT a "contest."**
+
+### 🟢 Hot signal #5 — the first cross-pass payload re-read in this base's history, and it agreed
+
+🟢 **[`dulanjayabhanu/mononeural`](https://github.com/dulanjayabhanu/mononeural) was re-probed and came back
+byte-identical to the prior record**: `1 072 B`, `md5 5c5a7a41ac6dc812fca183a1a9517d1d`, now also
+sha256₁₂ `a5829e2fae25`. 🔵 **A re-probe of one already-pinned row per pass prices the stability of every
+pin on the shelf, and it costs one request.** **Pre-registered as a standing control.**
+🔴 **It still does NOT enter the shelf** — a prior pass ruled it *"teaches AI rather than teaching WITH
+AI"*, and `p304` does not disturb that. 🟢 **The rule working on a row that would otherwise qualify is
+itself the result.**
+
+### 🔴 Four teacher-facing tools in the read range carry no grant at all
+
+🔴 `ZhiquAI/zhiyue3.0` (AI grading assistant for junior-high **history** teachers, OCR + NLP) ·
+`lk19940215/ai-teaching-ppt` (textbook → interactive `.pptx`) · `adnanahmaddev/synapse` (course generator,
+Gemini or Ollama) · `orionsheep/wordlink` (vocabulary app, fine-tuned 1.5B model **offline in the
+browser**). ⚠️ **`zhiyue3.0` is the loss worth naming**: a teacher-facing grader for a named school level,
+in a tier this shelf is thin in, and it cannot be carried.
+
+### 🔴 What this week could NOT establish
+
+🔴 **No primary source — 23rd consecutive pass.** Not re-tested: `p303` settled it as a network **policy**
+(`curl` → `CONNECT tunnel failed, 403`; `WebFetch` → `ENOTFOUND`).
+🔴 **`api.github.com` NOT re-tested** — `p303` settled it as an **authorization** boundary bound to this
+session's configured repositories. **No exact star integer, no SPDX field, no `pushed_at` for any row, ever,
+from this environment.** All star figures are rendered and rounded.
+🔴 **`ai-education` ranks 61–529 and `ai-tutor` ranks 61–750 remain UNMEASURED, NOT ABSENT.**
+🔵 **Recommendation: stop paging `ai-education` — the instrument is exhausted. Spend the next leg on
+`intelligent-tutoring-system`'s AGPL cluster, which `p303` showed carries the best pedagogy in the vertical
+under the worst licences.**
+🔴 **No code, commit history or test suite was read in any repository.**
+🟢 **`make hooks` WAS run this pass** — ending a three-pass gap.
 
 ## 2026-10-18 — Pass 303: THE POPULATION WAS PAGED TO RANK 60 AND IT HAS A FLOOR — PLUS A NEW LICENCE DEFECT CLASS (A README THAT CLAIMS MIT OVER A LICENCE FILE THAT DOES NOT EXIST) AND FOUR INDEPENDENT IMPLEMENTATIONS OF THE SAME PEDAGOGY
 

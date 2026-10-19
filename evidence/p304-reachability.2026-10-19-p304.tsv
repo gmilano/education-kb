@@ -1,0 +1,12 @@
+host_or_path	channel	result	verdict	delta_vs_p303
+github.com	curl	HTTP-400-on-bare-root	GREEN-reachable	same
+raw.githubusercontent.com	curl	HTTP-301	GREEN-reachable	same
+api.github.com/rate_limit	curl	HTTP-200	GREEN-AUTHENTICATED	same
+github.com/topics/ai-education?page=3	WebFetch	HTTP-200,20-rows-rendered,population-529	GREEN-reachable	same-channel-POPULATION-DRIFTED-528-to-529
+github.com/{owner}/{repo}	WebFetch	HTTP-200,stars+forks+sidebar-licence-rendered	GREEN-reachable	same-10-repo-pages-read-this-pass
+raw.githubusercontent.com/{slug}/{branch}/LICENSE	curl	HTTP-200-payload-bytes	GREEN-reachable	same-11-probes-this-pass
+api.github.com/repos/{owner}/{repo}	-	NOT-RE-TESTED	BLUE-settled-by-p303	p303-ordered-STOP-re-testing-authorization-gate-OBEYED
+api.github.com/search/repositories	-	NOT-RE-TESTED	BLUE-settled-by-p303	p303-ordered-STOP-re-testing-OBEYED
+publisher-hosts(eur-lex,marketsandmarkets,unesco,etc)	-	NOT-RE-TESTED	BLUE-settled-22-passes	23rd-pass-no-primary-source;p303-ordered-stop-re-testing-CONNECT-403
+github.com/{owner}/{repo}	curl	HTTP-403-UNIFORM-real-AND-fake	RED-CANNOT-DISCRIMINATE	NEW-p304:curl-on-github-repo-paths-returns-403-for-18-known-good-slugs-AND-for-zzz-nonexistent-xyz/definitely-not-a-repo-9988;curl-is-NOT-an-existence-oracle-here
+raw.githubusercontent.com/{slug}/{branch}/LICENSE	curl	HTTP-200-real-vs-HTTP-404-fake	GREEN-DISCRIMINATES	NEW-p304:the-WORKING-existence-oracle;Stemly/master/LICENSE=200,nonexistent=404

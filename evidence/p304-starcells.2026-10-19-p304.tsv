@@ -1,0 +1,11 @@
+repo	prior_stars_recorded	stars_p304	delta	forks_p304	fork_star_ratio	licence_sidebar	tier	verdict
+learningequality/studio	193	213	+20	314	1.47	MIT	content-authoring/admin	GREEN-moved-biggest-mover
+Tangerine-Community/Tangerine	70	76	+6	36	0.47	GPL-3.0	field-assessment	GREEN-moved
+PrairieLearn/PrairieLearn	519	521	+2	404	0.78	not-rendered-in-sidebar	assessment	GREEN-moved
+uPortal-Project/uPortal	286	286	0	278	0.97	Apache-2.0	admin-portal	BLUE-unchanged
+hpi-schul-cloud/schulcloud-server	81	81	0	22	0.27	not-rendered-in-sidebar	LMS/SIS	BLUE-unchanged
+DFE-Digital/apply-for-teacher-training	38	38	0	11	0.29	MIT	gov-service	BLUE-unchanged
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	28	28	0	48	1.71	Apache-2.0	data-standard	BLUE-unchanged-HIGHEST-fork-ratio
+jupyter/nbgrader	1.4k	1.4k	0	343	0.25	BSD-3-Clause	pedagogical-tool	BLUE-unchanged-rendered-rounded
+numbas/Numbas	215	215	0	129	0.60	Apache-2.0	assessment	BLUE-unchanged
+OpenEMIS/OpenEMIS-Core	7	7	0	9	1.29	not-rendered-in-sidebar	SIS/EMIS	BLUE-unchanged

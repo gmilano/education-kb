@@ -1,0 +1,7 @@
+repo	region	evidence_class	evidence_quoted	strength	residual
+pedroestevaodev/plataforma-estudo-personalizado	LATAM	PROGRAMMATIC	repo-README:"Developed for Alura + Google contest [AI Immersion - 2nd Edition]";topics:imersao-alura,imersaodev-alura;repo-name-Portuguese;Alura=Brazilian(alura.com.br,Portuguese-language,Forbes-Brasil-coverage)	AMBER-STRONGER-THAN-ONOMASTIC	author-own-country-NEVER-STATED-on-page;programme-is-Portuguese-language-and-Brazil-marketed-but-open-with-no-prerequisites;places-the-PROGRAMME-not-provably-the-PERSON
+SH-Nihil-Mukkesh-25/Stemly	APAC	INSTITUTIONAL	repo-page:"Stemly was built by Team Mugiwara Coders - CS students from Amrita Vishwa Vidyapeetham, Coimbatore"	GREEN-NAMED-INSTITUTION-AND-CITY	page-never-writes-"India";country-inferred-from-city-Coimbatore;institution-and-city-are-ON-THE-PAGE-so-not-onomastic
+jeliael/fakao-ai-exam-engine	APAC	SUBJECT-MATTER	scope=China-bar-exam(law-checks,mock-exams,essay-grading);jurisdiction-bound-by-construction	GREEN-JURISDICTIONAL	holder="Aether"-is-onomastically-void-P800-applies;placement-rests-on-the-EXAM-not-the-holder
+dulanjayabhanu/mononeural	UNPLACED	NONE-ADMISSIBLE	holder-name-only	RED-REFUSED	P800-holds:holder-name-is-not-placement-evidence;prior-pass-already-recorded-UNPLACED;p304-does-not-disturb-it
+abubokkor-cse/EduMind-AI-Virtual-Teacher	UNPLACED	NONE-ADMISSIBLE	no-institution,no-programme,no-jurisdiction-on-page	RED-REFUSED	-
+GPA95/SGPA	UNPLACED	NONE-ADMISSIBLE	holder=Ammaar-Ahmad-Khan-onomastic-only	RED-REFUSED	P800-applies

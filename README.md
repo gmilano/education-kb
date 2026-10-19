@@ -1,8 +1,88 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-18
+updated: 2026-10-19
 ---
+
+## Pass 304 — 2026-10-19 — **A FILE NAMED `LICENSE` THAT WITHHOLDS EVERY RIGHT, THE PAGED TAIL TURNS OUT TO BE WHERE THE NON-US SUPPLY LIVES, AND THE HOOKS CAUGHT TWO INHERITED FAILURES THE MOMENT THEY WERE RUN AGAIN**
+
+**One-line summary:** 🟢 `p303` left one instruction — read `ai-education` page 3 to confirm the floor, then
+spend the leg elsewhere — and **both halves were done.** 🔴 **New defect class, the RESERVED GRANT:**
+[`ai-shifu/skills`](https://github.com/ai-shifu/skills) ships **279 B** at the canonical path `LICENSE`
+reading *"All rights reserved… provided for viewing and evaluation only"* — 🔴 **it passes a filename check,
+a length sanity check and a `Copyright (c)` grep, and grants nothing**, which makes it worse than `p303`'s
+phantom grant. 🟢 **Counter-measure, cheap and mechanical: `bytes < 400` on a licence file is a red flag, not
+a short MIT** — every permissive template this base has read sits in **1 060–1 180 B**. 🟢 **Five new
+permissive rows, each payload-pinned with a `sha256₁₂`; 11 probes → 6 permissive, 1 reserved, 4 ungranted.**
+🟢 **The composition finding is the valuable one: THREE of the five admitted rows are REGIONALLY PLACED —
+Brazil, India, China — from a page whose stars run 12★ down to 7★**, against a topic head (41 600★→17★)
+dominated by US and Chinese corporate repositories. 🔵 **A star floor is the wrong filter for a global
+studio.** 🟢 **`ACTION PG-5` item 3 DISCHARGED** — all ten deferred star cells read, 3 of 10 moved, and
+reading forks alongside produced a new instrument: **fork-to-star ratio separates repos people DEPLOY from
+repos people READ.** 🟢 **`make hooks` was RUN, ending a three-pass gap — and it immediately earned its
+keep**, catching one inherited false verdict (`meyerjp3/psychometrics`, corrected below) plus one of this
+pass's own. 🟢 **Three new patterns (`P80`-`P82`); five new trends (`T-p304a`-`e`).**
+
+⏱️ **Dating note:** evidence gathered `2026-10-19`; every file and cross-reference is dated accordingly.
+**Dated by its evidence, not by its commit.**
+
+### 🟢 What was found
+
+| finding | verdict |
+|---|---|
+| [`ai-shifu/skills`](https://github.com/ai-shifu/skills) `LICENSE`, 279 B, sha256₁₂ `5b1cf701a7fd` | 🔴 **RESERVED GRANT — a new defect class.** *"All rights reserved… viewing and evaluation only."* Passes every cheap check; grants nothing. **Only reading the body refuses it** |
+| the `bytes < 400` rule | 🟢 **NEW STANDING RULE.** 8 permissive payloads read this pass and last all fall in **1 060–1 180 B**. A short licence is a notice, not a grant |
+| [`abubokkor-cse/EduMind-AI-Virtual-Teacher`](https://github.com/abubokkor-cse/EduMind-AI-Virtual-Teacher) `MIT`, **2 081 B**, `10010547e5ab` | 🟡 **An ACCESS gate written INSIDE the copyright payload** — MIT text complete, then a third-party terms block naming **ElevenLabs TTS**, **Stripe**, **Firebase/Google Cloud**. 🟢 **GREEN on copyright, AMBER on deployability** — the `P26` question a probe normally cannot see |
+| `ai-education` page 3, ranks 41–60 | 🟢 **FLOOR CONFIRMED** — 12★ → 7★, and 14 of 20 rows are courses or personal study projects. ⚠️ **Population drifted 528 → 529 in one day** |
+| placement of the new rows | 🟢 **3 of 5 REGIONALLY PLACED** — `Stemly` **APAC** institutionally (*"CS students from Amrita Vishwa Vidyapeetham, Coimbatore"*), `fakao-ai-exam-engine` **APAC** jurisdictionally (China's bar exam), `plataforma-estudo-personalizado` **LATAM** programmatically (Alura + Google *Imersão IA*) |
+| the placement classes themselves | 🟢 **INSTITUTIONAL / PROGRAMMATIC / JURISDICTIONAL are admissible where ONOMASTIC is not.** `P800` refuses a holder's NAME; a named university+city, a named national programme and a named national exam are institutions at an address. **Pre-registered for promotion to a numbered rule** |
+| *"LATAM returned nothing at any star level"* | 🟢 **REFUTED** by [`pedroestevaodev/plataforma-estudo-personalizado`](https://github.com/pedroestevaodev/plataforma-estudo-personalizado) (`MIT`, `1 070 B`, `68b9bce8185b`). 🔴 **The platform-scale gap STANDS** — 8★, 40 commits, a single-purpose generator |
+| `ACTION PG-5` item 3 — ten deferred star cells | 🟢 **DISCHARGED.** 3 of 10 moved: `studio` **193→213★ (+20, MIT)**, `Tangerine` 70→76★, `PrairieLearn` 519→521★. The staleness prior holds at ~25-30% |
+| fork-to-star ratio, 10 platform-tier rows | 🟢 **NEW INSTRUMENT.** **Forked to deploy (≥0.95):** `Ed-Fi-ODS` **1.71** · `studio` 1.47 · `OpenEMIS-Core` 1.29 · `uPortal` 0.97. **Starred to read (≤0.30):** `nbgrader` 0.25 · `schulcloud-server` 0.27 · `apply-for-teacher-training` 0.29. 🔵 **For substrate read forks; for agents read stars** |
+| `Ed-Fi-ODS` at 28★ / **48 forks** | 🟢 **The decisive case: weakest row on stars, most deployed-per-watcher in the tier** — exactly right for a US state education DATA STANDARD. ⚠️ **A star-ranked shortlist discards the administrative tier** |
+| the 24-pass education ERP/CRM nil | 🔴 **LICENSOR-CONFIRMED this window** — OpenEduCat's own glossary pages (7 languages) state **`LGPLv3`**, and confirm it is built on Odoo. **Settled, not pending** |
+| *"no permissive platform-scale education software"* | 🟢 **CORRECTED — that statement was too broad.** `Ed-Fi-ODS` (Apache-2.0), `studio` (MIT) and `uPortal` (Apache-2.0) are all permissive AND platform-scale. 🟢 **What is missing is a permissive SYSTEM OF RECORD; the permissive platforms are the ones AROUND it.** Architecture, not gap → `P81` |
+| [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) | 🟢 **INHERITED FALSE VERDICT, CORRECTED.** A prior pass published it as ungranted — *"IRT and BKT code with no grant is a dependency no client can accept"*. 🟢 **It is `Apache-2.0` on TWO channels:** `pom.xml` (`master`, 3 752 B, `54d5d8152efb`) `<licenses>` block, and a README stating it. **114★ / 47 forks, Java.** ⚠️ **Manifest-granted, not payload-pinned** — no `LICENSE` file, no sidebar label |
+| `make hooks` | 🟢 **RUN, after three passes without it — and it paid immediately.** `gate-enumeration` and `gate-absence` were **already RED at `HEAD`** (inherited); `gate-dates` flagged one of this pass's own lines. **All three resolved** |
+| the governance gap, 3 regions | 🟢 **~40 POINTS WHEREVER BOTH SIDES SHARE A DENOMINATOR.** **LATAM** 73.5% adopted vs 30% with a published policy (**~43 pts**, UNESCO IESALC, 200 institutions / 19 countries); **APAC** 87% encourage AI agents vs 47% govern them (**40 pts**, OneTrust). ⚠️ **The tempting NA 92%-vs-10% comparison is REFUSED — students vs institutions** |
+| regional legs | 🟢 **NA and LATAM paid richly.** 🔴 **EMEA returned nothing education-specific** (declared gap, with a query fix pre-registered: drop "EMEA", name jurisdictions). 🟡 **APAC paid only corporate training** — TCS+Pearson, LearnUpon, NIIT MTS, Alteryx; **zero K-12 or university rules**. ⚠️ **`p303`'s four-region streak ends at one** |
+| LATAM instrumentation | 🟢 **Digital Education Council 2026: 92% of students, 79% of faculty, 94% of faculty expecting future use** — 30 000+ responses, 29 institutions, with Tecnológico de Monterrey. **UNESCO IESALC adoption hierarchy: teaching & learning 73.5% > research 57.0% > administration 34.1% > community 20.0%** |
+| global market size | 🔴 **UNRESOLVED to within a factor of two** — $6.4B (2025), $11.4B (2026) and ~$10.6B (2026) for the same market. 🔵 **Brief the range, never a point estimate**; the NA share figure (36–37.5%) also contradicts the same sources' NA absolute dollars |
+| cross-pass payload re-read | 🟢 **FIRST ONE IN THIS BASE'S HISTORY, AND IT AGREED.** `mononeural` re-probed byte-identical: `1 072 B`, `md5 5c5a7a41ac6dc812fca183a1a9517d1d`. **Pre-registered as a standing one-request control** |
+| `dulanjayabhanu/mononeural` on the shelf | 🔴 **Correctly kept OFF.** A prior pass ruled it *"teaches AI rather than teaching WITH AI"*; `p304` re-probed and did not disturb that. 🟢 **The rule working on a row that would otherwise qualify is itself the result** |
+
+### 🔴 What this pass could not establish
+
+🔴 **No primary source — 23rd consecutive pass.** Not re-tested: `p303` settled it as a network **policy**
+(`curl` → `CONNECT tunnel failed, 403`; `WebFetch` → `ENOTFOUND`). **Every market figure above is
+search-snippet-attributed.**
+🔴 **`api.github.com` not re-tested** — `p303` settled it as an **authorization** boundary bound to this
+session's configured repositories. **No exact star integer, no SPDX field, no `pushed_at`, ever, from this
+environment.** `nbgrader` is recorded as `1.4k` because that is what the page renders.
+🔴 **`ai-education` ranks 61–529 and `ai-tutor` ranks 61–750 are UNMEASURED rather than empty.**
+🔵 **Recommendation for `p305`: stop paging `ai-education` — two floor confirmations is enough. Spend the leg
+on the `intelligent-tutoring-system` AGPL cluster**, where `p303` showed the vertical's best pedagogy sits
+under its worst licences — a licence-strategy question this base has never worked.
+🔴 **No code, commit history or test suite was read in any repository.** Capability from rendered READMEs;
+maturity from rendered star, fork and commit totals.
+🔴 **Four teacher-facing tools in the read range carry no grant:** `ZhiquAI/zhiyue3.0` (AI grading for
+junior-high history teachers), `lk19940215/ai-teaching-ppt`, `adnanahmaddev/synapse`, `orionsheep/wordlink`.
+⚠️ **`zhiyue3.0` is the loss worth naming.**
+🔴 **The EU AI Act high-risk date (reported as August 2026) still has no primary-source confirmation** from
+this environment — `eur-lex` is 403 at CONNECT and `artificialintelligenceact.eu` does not resolve.
+🔴 **A METHOD CORRECTION that matters for every pass's URL checking, measured this pass:**
+`curl https://github.com/{owner}/{repo}` returns **`403` for EVERY slug — the 18 known-good ones read this
+pass AND a control slug that cannot exist** (`zzz-nonexistent-xyz/definitely-not-a-repo-9988`).
+🔴 **So `curl` against a `github.com` repository path is NOT an existence oracle in this environment: it
+cannot tell a real repository from a fabricated one, and a pass that "verified" URLs that way verified
+nothing.** 🟢 **The channel that DOES discriminate is
+`raw.githubusercontent.com/{slug}/{branch}/LICENSE` — `200` on `Stemly/master/LICENSE`, `404` on the
+control — and `WebFetch` on the repository page, which renders stars and forks.** 🔵 **Every slug published
+by `p304` was verified on one or both of those two channels, never on a `github.com` status code.**
+🟡 **A measured defect in this base's own gate, recorded rather than patched:** `gate-absence`'s trigger
+`this base has no` fires on the substring in *"this base has now"* — a false positive on `p303`'s own
+headline. 🔵 **It stopped mattering once `p304`'s section became the live one, so the fix is left to a pass
+that can test it properly.**
 
 ## Pass 303 — 2026-10-18 — **THE POPULATION WAS PAGED AND IT HAS A FLOOR: `ai-tutor` IS ~60 REAL REPOSITORIES, NOT 750 — PLUS A LICENCE DEFECT WORSE THAN AN ABSENT GRANT, AND THE FIRST PASS IN THIS BASE'S HISTORY WHERE ALL FOUR REGIONS PAID**
 

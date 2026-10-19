@@ -1,8 +1,95 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-18
+updated: 2026-10-19
 ---
+
+## 🔴 Pass 304 — TWENTY-FOURTH CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM, AND THIS TIME THE LICENSOR SAYS SO ITSELF — PLUS AN INDEPENDENT MEASUREMENT OF THIS FILE'S OWN SIZE RULE
+
+⏱️ **Pass 304 of `2026-10-19`.** Evidence:
+[`p304-websearch.2026-10-19-p304.tsv`](../evidence/p304-websearch.2026-10-19-p304.tsv) ·
+[`p304-starcells.2026-10-19-p304.tsv`](../evidence/p304-starcells.2026-10-19-p304.tsv) ·
+[`p304-licence-payload.2026-10-19-p304.tsv`](../evidence/p304-licence-payload.2026-10-19-p304.tsv) ·
+[`p304-reachability.2026-10-19-p304.tsv`](../evidence/p304-reachability.2026-10-19-p304.tsv).
+
+### 🔴 The nil, now licensor-confirmed rather than third-party-labelled
+
+🔴 **`open source platform education ERP CRM MIT Apache` returned nothing permissive for the TWENTY-FOURTH
+consecutive window.** 🟢 **What changed is the quality of the refusal, not the result.** Every prior pass
+recorded OpenEduCat's `LGPLv3` from a third-party label or a GitHub sidebar. **This window the search
+returned OpenEduCat's OWN glossary pages, in six languages, and they state it:**
+
+| claim | source quality this window | reading |
+|---|---|---|
+| **OpenEduCat is `LGPLv3`** | 🟢 **the licensor's own website** (`openeducat.org` glossary, `en`/`fr`/`pt-BR`/`ar`/`de`/`zh`/`es`) | 🔴 **NOT permissive.** The 24-pass nil now rests on the vendor's own words |
+| OpenEduCat is built on the **Odoo framework** | 🟢 licensor's own page | 🔴 **inherits Odoo's licence position** — the ERP layer is not escapable by swapping the education module |
+| MIT and Apache-2.0 are permissive; Apache adds an **explicit patent grant** | 🟡 vendor glossary, restating general knowledge | 🔵 **Notable only because the licensor plainly understands the distinction and chose otherwise** |
+
+🔵 **This is the strongest form this finding has taken in 24 passes, and it should now be briefed as settled
+rather than as "not yet found": there is no permissive education ERP/CRM, and the market's leading open
+candidate says so itself.** ⚠️ **The remaining uncertainty is Odoo's own licence text, which this
+environment still cannot fetch** — recorded as an open item, not as a doubt about the LGPL finding.
+
+### 🟢 The size rule, measured a second way — and the two measurements agree
+
+🟢 **This file's thesis across 23 passes: permissive education software exists in abundance, but only BELOW
+the platform scale.** 🟢 **`p304` tested it with an instrument that has nothing to do with licences — the
+fork-to-star ratio of the ten platform-tier rows read this pass** (full table on
+[`repos/foundations.md`](../repos/foundations.md)). **The two measurements line up exactly:**
+
+| tier | fork : star | rows | licence position |
+|---|---|---|---|
+| 🟢 **PLATFORM SCALE — forked to deploy** | **≥ 0.95** | [`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) 1.71 (Apache-2.0) · [`studio`](https://github.com/learningequality/studio) 1.47 (**MIT**) · [`OpenEMIS-Core`](https://github.com/OpenEMIS/OpenEMIS-Core) 1.29 (⚠️ unlabelled) · [`uPortal`](https://github.com/uPortal-Project/uPortal) 0.97 (Apache-2.0) | 🟡 **mixed — and this is the crack in the size rule** |
+| 🔴 **BELOW PLATFORM SCALE — starred to read** | **≤ 0.30** | `nbgrader` 0.25 (BSD-3) · `schulcloud-server` 0.27 (⚠️ unlabelled) · `apply-for-teacher-training` 0.29 (MIT) | 🟢 permissive, and not systems of record |
+
+🟢 **The size rule survives but needs one amendment, and `p304` can state it precisely: the absence is not
+of permissive platform-scale SOFTWARE — it is of permissive platform-scale *SYSTEMS OF RECORD*.**
+🔵 **Look at the top band: `Ed-Fi-ODS` (Apache-2.0), `studio` (MIT) and `uPortal` (Apache-2.0) are all
+permissive AND all genuinely forked-to-deploy at platform scale.** 🔴 **But not one of them is a school's
+system of record:**
+
+- 🟢 **`Ed-Fi-ODS`** is a **data standard and operational data store** — it is what systems of record
+  *report into*, which is why 48 forks against 28★ is the highest deployment-per-watcher ratio in the
+  table. 🔵 **Apache-2.0, state-level, and the single best permissive foundation on this file for an
+  administrative engagement.**
+- 🟢 **`learningequality/studio`** is **content authoring** for Kolibri — 🟢 **MIT, +20★ this window, 314
+  forks** — it manufactures curriculum, it does not enrol students.
+- 🟢 **`uPortal`** is an **aggregating portal** — Apache-2.0, 278 forks against 286★, near parity — it
+  presents other systems' data.
+
+⚠️ **The SIS/MIS slot specifically — enrolment, roles, gradebook of record — remains copyleft or
+unlabelled across every row this base has read: OpenEduCat (LGPLv3, licensor-confirmed), openSIS (GPL-2.0),
+Moodle (GPL-3.0), Open edX (AGPL-3.0), `schulcloud-server` and `OpenEMIS-Core` (both unlabelled in the
+sidebar).** 🔵 **So the correct brief is not "there is no permissive platform." It is: the permissive
+platforms are the ones AROUND the system of record — the data store, the authoring tool, the portal — and
+the system of record itself is where the copyleft sits.** 🟢 **That is an actionable architecture, not a
+gap: build permissively around a copyleft core you do not modify.** **Pattern `P81` below.**
+
+### 🟡 A measured caution for anyone reading licences off this file
+
+⚠️ **3 of the 10 platform-tier pages read this pass render NO licence label in the GitHub sidebar** —
+`PrairieLearn`, `schulcloud-server`, `OpenEMIS-Core` — **although all three have a `License` link or a
+`LICENSE` file in the tree.** 🔴 **A 30% sidebar miss rate on exactly the tier this file is about.**
+🟢 **"No licence shown" is not "no licence", and on this file it must be read as "unpinned, go to the
+payload."**
+
+🔴 **And a new defect class to carry into any vertical due-diligence: the RESERVED GRANT.**
+[`ai-shifu/skills`](https://github.com/ai-shifu/skills) ships a **279 B** file named `LICENSE` that reads
+*"All rights reserved… provided for viewing and evaluation only."* 🔴 **It passes a filename check, a
+length sanity check and a `Copyright (c)` grep, and grants nothing.** 🟢 **Rule: `bytes < 400` on a licence
+file is a red flag, not a short MIT** — every permissive template this base has read falls in 1 060–1 180 B.
+
+### 🔴 What this pass did NOT establish on this file
+
+🔴 **No new vertical platform row.** 🔵 **Correctly so, not a nil through idleness:** the leg `p303` directed
+at `ai-education` page 3 returned **applications and courses only** — the five admitted rows are
+agent-shaped and went to [`agents/top.md`](../agents/top.md). **No platform candidate appeared at any point
+in ranks 41–60.**
+🔴 **Odoo's own licence text is still unread** — the publisher channel is closed (23rd pass,
+`CONNECT tunnel failed, 403`, not re-tested per `p303`). **The LGPL finding for OpenEduCat does not depend
+on it; the inheritance claim does.**
+🔴 **No code, deployment or test suite was read** in any platform row; deployment stories come from rendered
+READMEs, and fork counts are an intent proxy rather than an install base.
 
 ## 🔴 Pass 303 — TWENTY-THIRD CONSECUTIVE NIL ON A PERMISSIVE EDUCATION ERP/CRM — BUT FOUR PERMISSIVE *SELF-HOSTABLE* ROWS ARRIVED, AND THEY CONFIRM THE SIZE RULE THIS FILE HAS BEEN CIRCLING
 
@@ -301,8 +388,18 @@ studio cannot price.
 🔴 [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) — **NO-PAYLOAD** on `develop`,
 confirming the carried finding that its two **root manifests disagree with each other**.
 🔴 [`openstax/os-webview`](https://github.com/openstax/os-webview) and
-[`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) — **NO-PAYLOAD**. The latter is a
-psychometrics library: **IRT and BKT code with no grant** is a dependency no client can accept.
+[`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) — **NO-PAYLOAD**.
+🟢 **CORRECTED `p304`: `meyerjp3/psychometrics` IS GRANTED — `Apache-2.0`, on TWO independent channels.**
+Its `pom.xml` (branch `master`, 3 752 B, sha256₁₂ `54d5d8152efb`) carries
+`<licenses><license><name>The Apache Software License, Version 2.0</name>…<distribution>repo</distribution>`,
+and its README states *"The library is licensed under the Apache License, Version 2.0."*
+🔴 **The sentence this replaced — *"IRT and BKT code with no grant is a dependency no client can accept"* —
+was wrong, and wrong in the expensive direction: it told a reader to refuse a usable Apache-2.0
+psychometrics library.** 🔵 **`p276` had already established that a grant can live in a manifest; the probe
+that produced this cell ran only the filename ladder. `gate-enumeration` caught it the moment `p304` ran
+the hooks, after three passes in which they were not run.** ⚠️ **There is still NO `LICENSE` file at any
+ladder name and NO sidebar label** — so the row is **MANIFEST-GRANTED, not payload-pinned**, and that is a
+weaker pin than a file. **Name the manifest and the README together when citing it.**
 
 ⚠️ **`NO-PAYLOAD` here means the filename ladder found nothing** — this pass's probe omitted the
 shared instrument's README-link arm, which is exactly how `p300` found `OS4ED/openSIS-Classic`'s grant

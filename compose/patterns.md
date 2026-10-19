@@ -1,8 +1,112 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-18
+updated: 2026-10-19
 ---
+
+## 🟢 Pass 304 — three new patterns (`P80`-`P82`), each built only from rows payload-pinned THIS pass or already pinned, and each answering a finding this pass MEASURED rather than a finding it read
+
+⏱️ `2026-10-19`. Evidence:
+[`p304-licence-payload.2026-10-19-p304.tsv`](../evidence/p304-licence-payload.2026-10-19-p304.tsv) ·
+[`p304-starcells.2026-10-19-p304.tsv`](../evidence/p304-starcells.2026-10-19-p304.tsv) ·
+[`p304-placement.2026-10-19-p304.tsv`](../evidence/p304-placement.2026-10-19-p304.tsv) ·
+[`p304-websearch.2026-10-19-p304.tsv`](../evidence/p304-websearch.2026-10-19-p304.tsv).
+
+⚠️ **Every build component below is MIT, Apache-2.0 or BSD-3-Clause with its licence read as a PAYLOAD and
+its `sha256₁₂` recorded.** 🔴 **`ai-shifu/skills` is named in `P80` as the thing being GUARDED AGAINST, never
+as a component** — it is a reserved grant and unusable at any price.
+
+---
+
+### 🟢 `P80` — **The runtime-debt gate** (answers `T-p304a` + the EduMind access block: a permissive licence is only half of "can we ship this?")
+
+**The ask it answers:** *"Legal cleared the licences. Why did the pilot still stall in procurement?"*
+🔵 **Lead with the distinction this pass measured: a licence payload answers the COPYRIGHT question only.
+The ACCESS question — may we CALL this system, and what does each call cost? — lives in a third party's
+Terms of Use and is invisible to every licence scanner ever built.** 🟢 **One repository this pass wrote
+that question INTO its own licence file, which is how the probe saw it at all.**
+
+| step | component | licence (payload, `sha256₁₂`) | role |
+|---|---|---|---|
+| 1. **The worked example** | [`abubokkor-cse/EduMind-AI-Virtual-Teacher`](https://github.com/abubokkor-cse/EduMind-AI-Virtual-Teacher) | 🟢 **MIT** `2 081 B` `10010547e5ab` | 🟢 **The reference case, and the reason this pattern exists.** MIT text complete and unmodified — then a third-party terms block naming **ElevenLabs TTS**, **Stripe**, **Firebase / Google Cloud**. 🟢 **GREEN on copyright, AMBER on deployability.** Use its licence file as the template for the disclosure you demand of every other component. |
+| 2. **The size gate** | *(policy, not code)* | — | 🔴 **`bytes < 400` on a licence file HALTS the build.** [`ai-shifu/skills`](https://github.com/ai-shifu/skills) is 279 B at the canonical path, opens `Copyright (c) 2026 AI-Shifu`, and grants **nothing** — *"viewing and evaluation only."* 🟢 **Every permissive template this base has read is 1 060–1 180 B.** A short licence is a notice, not a grant. |
+| 3. **The payload probe** | `compose/code/lib/probe_payload.sh` | 🟢 in-repo | `source compose/code/lib/probe_payload.sh; probe_repo <slug>` → repo / branch / filename / bytes / family / holder. 🟢 **Resolves the default branch rather than assuming `main`** — `fakao-ai-exam-engine` and `Stemly` are both on `master`, and a pin written against `main` 404s. |
+| 4. **Avatar/voice layer** | `EduMind`'s lip-sync presentation layer | 🟢 **MIT** (as above) | 🟢 **Lift this** — permissive lip-synced 3D avatar presentation is genuinely scarce. 🔴 **Replace its TTS**: route to a self-hosted voice model, or the ElevenLabs dependency re-enters as opex and as a data-residency question. |
+| 5. Self-hosted substrate | [`liuwenji007/regulus-academy`](https://github.com/liuwenji007/regulus-academy) | 🟢 **Apache-2.0** `11 357 B` `c71d239df917` | Self-hosted Go, local PDF ingest — **the zero-third-party-call baseline** to measure the debt against. |
+
+🟢 **Deliverable: a one-page runtime-debt register per component — licence family, payload `sha256₁₂`, byte
+count, every third-party service called at runtime, and who pays for it.** 🔵 **Three columns of that
+register cannot be filled by any licence scanner, which is exactly why procurement stalls.**
+🔴 **Deliberately not used:** `ai-shifu/skills` (reserved grant — the guard case); `ZhiquAI/zhiyue3.0`,
+`lk19940215/ai-teaching-ppt`, `adnanahmaddev/synapse`, `orionsheep/wordlink` (**no grant at all**).
+⏱️ **2–3 weeks** as a due-diligence engagement; it is a gate, not a product.
+
+---
+
+### 🟢 `P81` — **Permissive around a copyleft core** (answers `T-p304e`: the system of record is where the copyleft sits, and you do not have to modify it)
+
+**The ask it answers:** *"We were told there is no open-source education platform we can build on
+commercially. Our SIS is Moodle/Open edX and we are not replacing it."*
+🔵 **Lead with the correction this pass earned: "no permissive platform-scale education software" is FALSE.
+What is missing is a permissive SYSTEM OF RECORD. The permissive platform-scale rows are the ones AROUND
+it** — and `p304` measured them by fork-to-star ratio, which is the signal that says *operators actually
+stand this up*.
+
+| ring | component | licence (payload / sidebar) | fork : star | role |
+|---|---|---|---|---|
+| **Core — do NOT modify** | Moodle `GPL-3.0` · Open edX `AGPL-3.0` · OpenEduCat **`LGPLv3`** | 🔴 **copyleft** | — | 🔴 **The system of record: enrolment, roles, gradebook.** 🟢 **OpenEduCat's LGPL is now LICENSOR-CONFIRMED from its own glossary**, so this ring is settled, not pending. **Integrate across a process boundary; never link, never fork.** |
+| **Data ring** | [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 **Apache-2.0** (sidebar) | 🟢 **1.71 — highest measured** | 🟢 **The keystone of this pattern.** A US state education **data standard + operational data store**: the thing systems of record report *into*. 28★ and **48 forks** — every adopting agency runs its own. 🔵 **Permissive, platform-scale, and it never touches the gradebook of record.** |
+| **Authoring ring** | [`learningequality/studio`](https://github.com/learningequality/studio) | 🟢 **MIT** (sidebar) | 🟢 **1.47** | 🟢 **Content authoring for Kolibri — +20★ this window (193→213), 314 forks.** Manufactures curriculum; enrols nobody. 🔵 **Growth in the AUTHORING tool rather than the player says the adopters are building their own curriculum.** Pairs with Kolibri for offline-first. |
+| **Presentation ring** | [`uPortal-Project/uPortal`](https://github.com/uPortal-Project/uPortal) | 🟢 **Apache-2.0** (sidebar) | 🟢 **0.97** | Aggregating portal — presents other systems' data behind one sign-on. **286★ / 278 forks, near parity.** |
+| **Agent ring** | [`hakimihou/capability-space`](https://github.com/hakimihou/capability-space) | 🟢 **MIT** `1 086 B` `465174e71a3b` | — | Learner-model schema keeping **activity / evidence / mastery** distinct — so mastery claims written back to the core are auditable (see `P76`). |
+
+🟢 **The architecture in one line: the copyleft core stays unmodified behind a process boundary; everything
+you build, own and sell lives in the permissive rings around it.**
+⚠️ **The pin caution this pass measured: 3 of 10 platform-tier pages render NO licence in the GitHub sidebar**
+(`PrairieLearn`, `schulcloud-server`, `OpenEMIS-Core`) **though all three carry one in the tree.**
+🔴 **Payload-pin every ring component before contract; "no licence shown" is not "no licence."**
+🔴 **Deliberately not used as a build component:** `schulcloud-server` and `OpenEMIS-Core` — **unlabelled in
+the sidebar and unpinned**, so they are candidates, not components.
+⏱️ **8–10 weeks** for the data + authoring rings against an existing Moodle or Open edX core.
+
+---
+
+### 🟢 `P82` — **The regional licensing-exam engine** (answers `T-p304b` + the APAC leg: professional certification is where APAC is actually buying)
+
+**The ask it answers:** *"We are a professional body / ministry running a national licensing examination.
+Can AI prepare candidates without leaking the answer, and can we run it on our own infrastructure?"*
+🔵 **Lead with what the APAC leg measured: APAC's named AI-in-learning players this window are ALL corporate
+training — TCS + Pearson, LearnUpon, NIIT MTS, Alteryx — and ZERO K-12 or university rules were returned.
+Ministries are not procuring yet; professional certification is.**
+
+| step | component | licence (payload, `sha256₁₂`) | role |
+|---|---|---|---|
+| 1. **Exam engine** | [`jeliael/fakao-ai-exam-engine`](https://github.com/jeliael/fakao-ai-exam-engine) | 🟢 **MIT** `1 063 B` `a29b8bca5c59` | 🟢 **The reference implementation, new on the shelf this pass.** China's **bar exam**: law checks, mock exams, essay grading. 🟢 **APAC-placed JURISDICTIONALLY — by the exam, not by the holder** (holder *"Aether"* is onomastically void). ⚠️ **Branch `master`; 10★; internals unread — copy the decomposition, don't import the code.** |
+| 2. Second vertical | [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 🟢 **MIT** `1 083 B` `a6943096ffde` | Chinese **civil-service and public-institution** exams, with wrong-answer review. 🔵 **Two independent MIT implementations of the same shape = the shape is the finding, not either repo.** |
+| 3. **Answer-leakage guard** | [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** `1 150 B` `a1c6b65c5bb1` | 🟢 **The non-negotiable component for a HIGH-STAKES exam.** Ships a **frozen answer-leakage matcher** (`protocol/leakage.py`) plus a **deferral gate** and hint cascade, with ablations. ⚠️ **Cite the DESIGN, never an effect size — no results are published on the page.** |
+| 4. Graduated withholding | [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 🟢 **MIT** `1 081 B` `3b2ca73e81ad` | Five-level hint cascade (observation → pattern nudge → approach → technique → pseudocode **last resort**). 🔵 **Lift the cascade, not the repo.** |
+| 5. On-prem assessment host | [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** (sidebar, 215★ / 129 forks) | Self-hosted assessment delivery — **the data-residency answer** a national body will ask for before anything else. |
+| 6. Governance dossier | *(deliverable, see `P76`)* | — | 🟢 **The APAC governance gap is 87% encourage / 47% govern — the sharpest measured this pass.** Ship the oversight evidence with the engine, not after it. |
+
+🔴 **Deliberately not used:** `ai-shifu/skills` — *"skills for building one-on-one interactive AI courses"*
+is the closest-fitting repository in the entire paged tail and it is a **reserved grant** (279 B, all rights
+reserved). 🔵 **This is the substitution worth remembering: the best-fitting component was the one that had
+to be refused, and only reading the licence BODY caught it.**
+⏱️ **10–12 weeks** including the leakage-guard evaluation harness.
+
+---
+
+🟢 **Regional note on all three patterns, since this pass measured placement properly:** `P82`'s engine is
+APAC-placed by jurisdiction; [`SH-Nihil-Mukkesh-25/Stemly`](https://github.com/SH-Nihil-Mukkesh-25/Stemly)
+(MIT, `1 099 B`, `ae8c3c726efc`) is APAC-placed **institutionally** — *"CS students from Amrita Vishwa
+Vidyapeetham, Coimbatore"* — and supplies the **scanned-diagram → interactive simulation** input modality
+for any curriculum that is still on paper;
+[`pedroestevaodev/plataforma-estudo-personalizado`](https://github.com/pedroestevaodev/plataforma-estudo-personalizado)
+(MIT, `1 070 B`, `68b9bce8185b`) is LATAM-placed **programmatically** via Alura + Google's *Imersão IA*.
+🔵 **For a LATAM engagement the more valuable finding is not that repository but the programme behind it:
+*Imersão IA* put 180 000–190 000 people through a free Gemini course across 2025. That is a staffing pool.**
+🔴 **EMEA has no `p304` component and no `p304` data** — the regional leg nil'd on anything
+education-specific, which is a declared gap, not coverage.
 
 ## 🟢 Pass 303 — four new patterns (`P76`-`P79`), each built only from rows payload-pinned THIS pass or already pinned, and each tied to a named regulation, a named funding line, or a named industry trend
 

@@ -1,8 +1,143 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-18
+updated: 2026-10-19
 ---
+
+## 🔴 `T-p304a` — A LICENCE FILE CAN BE AN ANTI-LICENCE, AND EVERY CHEAP CHECK IS STRUCTURALLY BLIND TO IT
+
+⏱️ `2026-10-19`, pass 304. Evidence:
+[`p304-licence-payload.2026-10-19-p304.tsv`](../evidence/p304-licence-payload.2026-10-19-p304.tsv).
+
+🔴 **`p303` found the PHANTOM GRANT: a README claiming MIT over a licence file that was never committed.
+`p304` found its mirror image and the mirror is worse.**
+[`ai-shifu/skills`](https://github.com/ai-shifu/skills) ships **279 B** at the canonical path `LICENSE`:
+*"All rights reserved… provided for viewing and evaluation only. No permission is granted to use, copy,
+modify, merge, publish, distribute, sublicense, or sell…"*
+
+🟢 **The trend this completes is about INSTRUMENTS, not about one repository.** Three defect classes are now
+on record, and they fail in three different directions:
+
+| class | fails | caught by |
+|---|---|---|
+| 🔴 absent grant | loudly — every probe says *absent* | 🟢 any check |
+| 🔴 phantom grant (`p303`) | loudly at the file, quietly in the README | 🟢 a probe; 🔴 **not** a README reader |
+| 🔴 **reserved grant (`p304`)** | 🔴 **silently, in the permissive direction** | 🔴 **only reading the BODY** |
+
+🔴 **The reserved grant passes a filename check, a length sanity check, a `Copyright (c)` grep and a
+sidebar glance.** 🟢 **The counter-measure is a size rule, and it is cheap: every permissive template this
+base has read falls in 1 060–1 180 B. `bytes < 400` is a RED FLAG, not a short MIT.**
+🔵 **Why it is a trend and not an anecdote: the repository is a live product's skill library for building
+one-on-one AI courses — the most liftable-looking asset in the paged tail. As education AI commercialises,
+"source-available for evaluation" will appear more often, dressed as a licence.**
+
+## 🟢 `T-p304b` — A TOPIC'S HEAD RANKS BY ENGLISH-LANGUAGE REACH; ITS TAIL IS WHERE THE REGIONAL SUPPLY LIVES
+
+⏱️ `2026-10-19`, pass 304. Evidence:
+[`p304-topic-paging.2026-10-19-p304.tsv`](../evidence/p304-topic-paging.2026-10-19-p304.tsv) ·
+[`p304-placement.2026-10-19-p304.tsv`](../evidence/p304-placement.2026-10-19-p304.tsv).
+
+🟢 **`p303` established that paging a topic converts a denominator into a floor. `p304` paged one more page
+and found something the floor hid: the COMPOSITION changes down the ranking, not just the star count.**
+
+| range | stars | character |
+|---|---|---|
+| `ai-education` ranks 1–40 (`p302`/`p303`) | 41 600 → 17 | 🔴 **US and Chinese CORPORATE repositories** |
+| `ai-education` ranks 41–60 (`p304`) | **12 → 7** | 🟢 **3 of 5 admitted rows are REGIONALLY PLACED** — Brazil, India, China |
+
+🟢 **The mechanism is not mysterious: stars accrue from reach, reach follows language, and English-language
+reach is concentrated in US repositories and in Chinese projects large enough to market internationally.**
+🟢 **A Brazilian study-module generator built for a Portuguese-language national course, or an Indian
+university team's Flutter app, cannot accumulate stars at that rate no matter how good it is.**
+⚠️ **Consequence for this base's own method: a star floor is exactly the wrong filter for a global studio,
+and `p304` would have skipped this leg on stars alone.** 🔵 **`p303` warned that 16 of 23 new rows came from
+ranks 41–60 and told the next pass not to stop at page 2 because the stars look small. That warning was
+right for a second, stronger reason than it knew.**
+
+🟢 **This also narrows a six-pass declared gap.** *"LATAM returned nothing at any star level"* is **refuted**
+— [`pedroestevaodev/plataforma-estudo-personalizado`](https://github.com/pedroestevaodev/plataforma-estudo-personalizado)
+is MIT and payload-pinned. 🔴 **The platform-scale gap STANDS** (8★, 40 commits, a single-purpose generator).
+
+## 🟢 `T-p304c` — FOR SUBSTRATE, READ FORKS; FOR AGENTS, READ STARS
+
+⏱️ `2026-10-19`, pass 304. Evidence:
+[`p304-starcells.2026-10-19-p304.tsv`](../evidence/p304-starcells.2026-10-19-p304.tsv).
+
+🟢 **Ten platform-tier rows were read with forks alongside stars for the first time, and the fork-to-star
+ratio split them cleanly — not by popularity, but by what people DO with the repository.**
+
+🟢 **Forked to deploy (≥ 0.95):** `Ed-Fi-ODS` **1.71** · `studio` **1.47** · `OpenEMIS-Core` **1.29** ·
+`uPortal` **0.97** — administrative, data-standard and authoring systems, **unusable without your own
+instance, so adoption REQUIRES a fork.**
+🔴 **Starred to read (≤ 0.30):** `nbgrader` 0.25 · `schulcloud-server` 0.27 ·
+`apply-for-teacher-training` 0.29 — **pedagogical tools and reference services, bookmarked far more than
+stood up.**
+
+🟢 **The decisive case: [`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) has 28★ and 48
+forks.** 🔴 **On stars it is the weakest row in the tier and any shortlist cuts it.** 🟢 **On forks it is the
+most deployed-per-watcher repository this base has measured — exactly right for a US state education DATA
+STANDARD, where every adopting agency runs its own instance.**
+⚠️ **A star-ranked shortlist systematically discards the administrative tier, which is the tier most
+education engagements actually begin in.**
+🟡 **Stated as a proxy, not proof:** forks also accumulate from coursework and abandoned PR branches, and
+GitHub does not distinguish them. **An intent signal, never an install base.**
+
+## 🟢 `T-p304d` — THE GOVERNANCE GAP IS ~40 POINTS IN EVERY REGION THAT MEASURES IT ON ONE DENOMINATOR
+
+⏱️ `2026-10-19`, pass 304. Evidence:
+[`p304-websearch.2026-10-19-p304.tsv`](../evidence/p304-websearch.2026-10-19-p304.tsv).
+
+🟢 **Two independent instruments, two continents, near-identical spread:**
+
+| region | adoption | governance | gap |
+|---|---|---|---|
+| 🟢 **LATAM** (UNESCO IESALC / UNU-IAS, 200 institutions, 19 countries) | **73.5%** adopted AI in teaching & learning | **30%** have published an AI policy | 🔴 **~43 pts** |
+| 🟡 **APAC** (OneTrust 2026, cross-sector) | **87%** encourage AI agents | **47%** have governance and controls | 🔴 **40 pts** |
+
+🟢 **North America agrees in direction — only ~10% of institutions have formal AI guidelines and 71% of US
+teachers lack AI training.** ⚠️ **But the tempting 92%-vs-10% comparison MUST be refused: 92% is a global
+STUDENT figure and 10% a US INSTITUTION figure.** 🔴 **A denominator is only half an instrument, and this
+base has been burned by mixing them before.**
+🟢 **EMEA is the outlier that proves the trend's commercial value: it is the one region where the gap has a
+STATUTORY DEADLINE** — education AI is high-risk under the EU AI Act with full effect slated for
+**August 2026**. ⚠️ **That date still reaches this base only through secondary commentary.**
+
+🔵 **The briefable form: every region has adopted; almost none has governed; the gap is structural rather
+than local; and it closes fastest where a statute forces it.** 🟢 **Policy scaffolding, audit trails,
+assessment-integrity evidence and model-use disclosure are the same engagement in four regions.**
+
+## 🟢 `T-p304e` — THE PERMISSIVE PLATFORMS SIT AROUND THE SYSTEM OF RECORD, NOT IN IT
+
+⏱️ `2026-10-19`, pass 304. Evidence:
+[`p304-starcells.2026-10-19-p304.tsv`](../evidence/p304-starcells.2026-10-19-p304.tsv) ·
+[`p304-websearch.2026-10-19-p304.tsv`](../evidence/p304-websearch.2026-10-19-p304.tsv).
+
+🔴 **The 24-pass nil on a permissive education ERP/CRM is now LICENSOR-CONFIRMED: OpenEduCat's own glossary
+pages state `LGPLv3`**, and the same pages confirm it is built on the Odoo framework, so the ERP layer is
+not escapable by swapping the education module.
+
+🟢 **But `p304`'s fork-ratio read forces a correction to how this base has stated the finding for 23
+passes.** *"No permissive platform-scale education software"* is **false**. `Ed-Fi-ODS` (Apache-2.0),
+`learningequality/studio` (MIT) and `uPortal` (Apache-2.0) are all permissive AND all genuinely
+forked-to-deploy at platform scale.
+
+🟢 **The accurate statement is narrower and far more useful: what is missing is a permissive SYSTEM OF
+RECORD.** The permissive platform-scale rows are the ones **around** it —
+
+- **`Ed-Fi-ODS`** — the **data standard / operational data store** systems of record report *into*
+- **`learningequality/studio`** — **content authoring** (manufactures curriculum; enrols nobody)
+- **`uPortal`** — an **aggregating portal** (presents other systems' data)
+
+🔴 **The enrolment/roles/gradebook-of-record slot is copyleft or unlabelled in every row read: OpenEduCat
+LGPLv3 · openSIS GPL-2.0 · Moodle GPL-3.0 · Open edX AGPL-3.0 · `schulcloud-server` and `OpenEMIS-Core`
+unlabelled.** 🟢 **So the brief is not "there is no permissive platform" — it is "build permissively around
+a copyleft core you do not modify."** 🔵 **That is an architecture, not a gap, and it is the whole of
+pattern `P81`.**
+
+⚠️ **One measured caution attached to this trend: 3 of the 10 platform-tier pages render NO licence label in
+the GitHub sidebar** (`PrairieLearn`, `schulcloud-server`, `OpenEMIS-Core`) **although all three carry a
+licence in the tree. A 30% sidebar miss rate on exactly this tier** — *"no licence shown"* is never
+*"no licence."*
 
 ## 🟢 `T-p303a` — A DENOMINATOR IS ONLY HALF AN INSTRUMENT: PAGE IT UNTIL THE DISTRIBUTION HITS A FLOOR, AND A SAMPLE BECOMES AN ENUMERATION
 

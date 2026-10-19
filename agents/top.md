@@ -1,8 +1,181 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-18
+updated: 2026-10-19
 ---
+
+## 🟢 Pass 304 — THE PAGED TAIL HAS A FLOOR *AND* IT IS WHERE THE NON-US ROWS LIVE; PLUS A LICENCE DEFECT WORSE THAN THE PHANTOM GRANT — A FILE NAMED `LICENSE` THAT WITHHOLDS EVERY RIGHT
+
+⏱️ **Pass 304 of `2026-10-19`, following `p303` of `2026-10-18`.** Evidence:
+[`p304-licence-payload.2026-10-19-p304.tsv`](../evidence/p304-licence-payload.2026-10-19-p304.tsv) ·
+[`p304-placement.2026-10-19-p304.tsv`](../evidence/p304-placement.2026-10-19-p304.tsv) ·
+[`p304-topic-paging.2026-10-19-p304.tsv`](../evidence/p304-topic-paging.2026-10-19-p304.tsv) ·
+[`p304-starcells.2026-10-19-p304.tsv`](../evidence/p304-starcells.2026-10-19-p304.tsv) ·
+[`p304-websearch.2026-10-19-p304.tsv`](../evidence/p304-websearch.2026-10-19-p304.tsv) ·
+[`p304-reachability.2026-10-19-p304.tsv`](../evidence/p304-reachability.2026-10-19-p304.tsv).
+
+🟢 **`p303` closed with one instruction: read `ai-education` page 3 to confirm the floor, then stop paging
+and spend the leg elsewhere. Both halves were done, and the confirmation is stronger than expected.**
+
+### 🔴 The defect of the pass — the RESERVED GRANT: a file named `LICENSE` that grants nothing
+
+**Repo**: [`ai-shifu/skills`](https://github.com/ai-shifu/skills) — **11★**, `ai-education` rank 43 —
+🔴 **`NONCOMMERCIAL-NOT-OSI`, and the word "noncommercial" undersells it.** Payload: `LICENSE`, **279 B**,
+sha256₁₂ `5b1cf701a7fd`. Quoted in full, because its brevity is the point:
+
+> `Copyright (c) 2026 AI-Shifu` / `All rights reserved.` / *"This repository is provided for viewing and
+> evaluation only. No permission is granted to use, copy, modify, merge, publish, distribute, sublicense,
+> or sell any part of this repository without prior written consent from AI-Shifu."*
+
+🔴 **This is a new class, and it is worse than `p303`'s phantom grant.** The phantom grant
+([`fenago/LearnGraph`](https://github.com/fenago/LearnGraph), README claims MIT over a file that was never
+committed) at least **fails loudly**: 18 probes 404, and every instrument says *absent*. The reserved grant
+**fails silently in the one direction that matters** —
+
+| defect class | file exists? | filename-presence check | `Copyright (c)` grep | SPDX/sidebar label | what it actually permits |
+|---|---|---|---|---|---|
+| 🔴 **phantom grant** (`p303`) | **no** | 🟢 correctly fails | correctly fails | *(none)* | nothing |
+| 🔴 **reserved grant** (`p304`, NEW) | **yes** | 🔴 **PASSES** | 🔴 **PASSES** | 🔴 **unlabelled** | 🔴 **nothing — expressly** |
+
+⚠️ **The operational hazard, stated plainly: every cheap licence check this base has ever described gives
+`ai-shifu/skills` a pass.** It has a `LICENSE` file at the canonical path, of plausible length, opening with
+a well-formed `Copyright (c) YYYY Holder` line. 🔵 **Only reading the body refuses it** — and the body is
+four lines long, so there is no excuse for not reading it. 🟢 **`license_family.sh` caught this correctly
+and did not mistake it for GPL-3.0 §6's "noncommercially"**, which is the trap that produced the classifier
+in the first place; at 279 B it is three orders of magnitude too short for GPL-3.0, and the family call was
+confirmed by hand against the raw bytes.
+
+🔵 **Why this one matters commercially and not just methodologically:** `ai-shifu` is a live product, and
+the repository's subject is *"skills for building one-on-one interactive AI courses"* — precisely the asset
+a studio engagement would want to lift. **It is the most tempting row in the paged tail and the only one
+that is categorically unusable.** 🟢 **Standing rule this pass adds: `bytes < 400` on a `LICENSE` file is a
+RED FLAG, not a short MIT.** A permissive template is **1 060–1 180 B**; the eight MIT payloads read this
+pass and last fall in that band without exception.
+
+### 🟡 The second finding on the same probe — an ACCESS gate written INSIDE the copyright payload
+
+**Repo**: [`abubokkor-cse/EduMind-AI-Virtual-Teacher`](https://github.com/abubokkor-cse/EduMind-AI-Virtual-Teacher)
+— **10★** — 🟢 **`MIT`**, but the payload is **2 081 B**, roughly double the template.
+
+🟢 **The MIT text is complete and unmodified** — grant, conditions and the all-caps warranty disclaimer all
+present. 🟡 **What follows it is the interesting part:** a third-party terms block naming
+**ElevenLabs TTS**, **Stripe**, and **Firebase / Google Cloud**, with *"Users must comply with all
+third-party service terms when using EduMind"*, then a `DISCLAIMER` section.
+
+🔵 **`probe_payload.sh`'s own header warns that the ACCESS question — may we CALL this system? — "lives in a
+third party's Terms of Use and is invisible to every probe in this directory." This repository wrote it into
+the payload.** 🟢 **So the probe saw it for the first time, by accident of where the author put it.**
+⚠️ **Read the verdict correctly: the row is GREEN on copyright and AMBER on deployability.** The code may be
+forked and sold; **running it as shipped requires a paid TTS vendor, a payment processor and a Google cloud
+dependency.** 🔵 **That is a useful row precisely because it is honest about it** — most repositories on this
+shelf have the same runtime debt and do not disclose it. **Pattern `P80` below turns this into a checklist.**
+
+### 🟢 Five new permissive rows — and the sixth was refused by this base's own standing rule
+
+🟢 **Eleven payloads probed from `ai-education` ranks 41–60 (every row in the page that is education
+SOFTWARE rather than a course about AI). Result: 6 permissive, 1 reserved grant, 4 no-grant.** Five of the
+six permissive rows enter the shelf below. **The sixth did not, and the reason is worth stating:**
+
+🔵 **[`dulanjayabhanu/mononeural`](https://github.com/dulanjayabhanu/mononeural) — `MIT`, 1 072 B — stays
+OFF the shelf.** A prior pass already ruled it out: *"it teaches AI rather than teaching WITH AI — so it
+fails the same vertical test that excluded `agents-from-scratch`."* 🟢 **`p304` re-probed it and does not
+disturb that ruling.** 🟢 **What the re-probe DID establish is an integrity result: the payload is
+byte-identical and md5-identical to the prior record** — `1 072 B`, `md5 5c5a7a41ac6dc812fca183a1a9517d1d`,
+now also sha256₁₂ `a5829e2fae25`. ⚠️ **This is the first cross-pass payload re-read in this base's history,
+and it agreed.** 🔵 **That is a cheap, repeatable control worth keeping: a re-probe of one already-pinned row
+per pass prices the stability of every pin on the shelf.**
+
+### 🟢 The placement finding: INSTITUTIONAL and PROGRAMMATIC evidence are admissible where ONOMASTIC evidence is not
+
+🔴 **`P800` refuses the holder's name as placement evidence, and it is right to.** 🟢 **But two of this
+pass's rows carry a different and stronger class of evidence, and this base has not previously distinguished
+them.** Full table: [`p304-placement.2026-10-19-p304.tsv`](../evidence/p304-placement.2026-10-19-p304.tsv).
+
+| row | class | the evidence, quoted from the repository's own page | verdict |
+|---|---|---|---|
+| [`SH-Nihil-Mukkesh-25/Stemly`](https://github.com/SH-Nihil-Mukkesh-25/Stemly) | 🟢 **INSTITUTIONAL** | *"Stemly was built by Team Mugiwara Coders — CS students from **Amrita Vishwa Vidyapeetham, Coimbatore**"* | 🟢 **APAC.** A named university **and a named city**, on the page. ⚠️ The page never writes "India" — the country is inferred from Coimbatore, the institution is not |
+| [`pedroestevaodev/plataforma-estudo-personalizado`](https://github.com/pedroestevaodev/plataforma-estudo-personalizado) | 🟡 **PROGRAMMATIC** | README: *"Developed for Alura + Google … [AI Immersion - 2nd Edition]"*; topics `imersao-alura`, `imersaodev-alura` | 🟡 **LATAM via a named national programme.** Alura is Brazilian — `alura.com.br`, Portuguese-language, covered by Forbes Brasil and Convergência Digital |
+| [`jeliael/fakao-ai-exam-engine`](https://github.com/jeliael/fakao-ai-exam-engine) | 🟢 **JURISDICTIONAL** | scope is **China's bar exam** — law checks, mock exams, essay grading | 🟢 **APAC by construction.** Holder *"Aether"* is onomastically void; the **exam** places it, not the holder |
+| [`dulanjayabhanu/mononeural`](https://github.com/dulanjayabhanu/mononeural) | 🔴 **ONOMASTIC ONLY** | holder's name | 🔴 **UNPLACED — `P800` holds.** Unchanged from the prior ruling |
+
+🟢 **The distinction that makes these admissible: `P800` guards against inferring a location from a PERSON'S
+NAME. A named university plus city, a named national training programme, and a named national licensing exam
+are none of them onomastic** — they are institutions and instruments that exist at an address.
+🔵 **Recommend promoting this to a numbered rule; it is the first time this base can place a row without
+either a corporate domain or a commit-timezone census.**
+
+⚠️ **The residual, stated rather than buried:** the Alura row places the **programme**, not provably the
+**person** — Alura's *Imersão IA* is open with no prerequisites, and the author's country is never stated on
+the page. 🟢 **And one correction to the repository itself: its README calls *Imersão IA* a "contest". It is
+not** — it is a **free course with an awards layer** (180 000 places in May 2025, 190 000 in September 2025;
+the 2024 edition awarded its ten best projects). **Cite it as a course, not a competition.**
+
+### 🟢 Why this matters more than five low-star rows normally would: the paged tail is where the non-US supply is
+
+🔴 **Every row on `ai-education` page 3 is in single or low double digits — 12★ down to 7★.** 🔵 **On stars
+alone this base would have skipped the leg.** 🟢 **But of the five rows admitted, THREE are regionally
+placed — Brazil, India and China — against a shelf whose head (pages 1–2, 41 600★ down to 17★) is dominated
+by US and Chinese corporate repositories.** ⚠️ **The inference for future passes: the head of a topic ranks
+by stars, which ranks by English-language reach. The tail is where the regionally originated work is, and a
+star floor is exactly the wrong filter for a global studio.**
+
+🟢 **This NARROWS a long-standing declared gap.** [`intel/open-gaps.md`](../intel/open-gaps.md) records, for
+the sixth consecutive pass, *"no APAC or LATAM originated open-source education PLATFORM"*, with the
+sub-clause **"LATAM returned nothing at any star level."** 🟢 **That sub-clause is now REFUTED**: a
+LATAM-programme-originated permissive education application has been read and pinned.
+🔴 **The gap itself STANDS** — `plataforma-estudo-personalizado` is **8★ / 1 fork / 40 commits**, a
+single-purpose study-module generator built for a course. **It is not a platform.** 🔵 **The honest statement
+is: LATAM supply exists and is individual-scale; the platform-scale absence is unchanged.**
+
+### 🔴 The mandated legs, and what this pass refused to re-test
+
+🔴 **All three repository-finding mandated queries nil'd again** —
+[`p304-websearch.2026-10-19-p304.tsv`](../evidence/p304-websearch.2026-10-19-p304.tsv):
+
+| leg | streak | what came back |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **30th consecutive nil** | `ai-agents-for-beginners`, `agents-from-scratch`, Hermes/Aider/Cline/CrewAI — courses about AI, and general agents |
+| `github trending education AI 2026` | 🔴 **17th consecutive nil** | `ai-engineering-from-scratch`, `ai-job-search`, `2026-AI-College-Jobs`, Karpathy — **retired by `p303`, re-run only to honour the mandate** |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **24th consecutive nil** | OpenEduCat — and this window its **own vendor glossary** states `LGPLv3`, so the nil is now licensor-confirmed |
+
+🟢 **`p303` ordered three things STOPPED, and this pass obeyed all three:** no re-test of
+`api.github.com/repos/*` or `/search/repositories` (an **authorization** boundary, settled), and no re-test
+of publisher hosts (`CONNECT tunnel failed, 403` — a network **policy**, settled; **23rd pass without a
+primary source**). 🔵 **The legs that would have gone there bought the eleven payload probes and the ten star
+cells instead.**
+
+### 🔴 What `p304` could NOT establish
+
+🔴 **No code, commit history or test suite was read in any repository.** Capability statements come from
+rendered READMEs; maturity from rendered star, fork and commit totals.
+🔴 **`ai-education` ranks 61–529 and `ai-tutor` ranks 61–750 remain UNMEASURED, NOT ABSENT.** 🟢 **But the
+floor is now confirmed twice** (page 3 opens at 12★ and closes at 7★, and 14 of its 20 rows are courses or
+personal study projects), so the remainder is predicted to be single-digit-star and mostly off-vertical.
+🔵 **Recommendation: stop paging `ai-education`. The instrument is exhausted and `p303` already said so of
+the head.**
+🔴 **The `ai-education` population drifted 528 → 529 between `p303` and `p304`** — one repository, one day.
+🔵 **Recorded because a denominator that moves needs a date attached every time it is quoted.**
+🔴 **Four rows in the read range carry NO grant at all** — `ZhiquAI/zhiyue3.0` (AI grading for junior-high
+history teachers, OCR + NLP), `lk19940215/ai-teaching-ppt`, `adnanahmaddev/synapse`, `orionsheep/wordlink`.
+⚠️ **`zhiyue3.0` is the loss worth naming: a teacher-facing grading assistant for a named school level, and
+it cannot be carried.**
+
+### 🔴 Standing action for the next pass — `ACTION PG-6`
+
+1. 🟢 **`ACTION PG-5` item 3 is DISCHARGED — all ten star cells read.** See
+   [`repos/foundations.md`](../repos/foundations.md), which also carries the **fork-ratio instrument** the
+   discharge produced. **Items 1, 2 and 5 of `PG-5` remain open and are restated there.**
+2. 🔴 **Apply the `bytes < 400` red flag retroactively.** Every row on this shelf pinned at under 400 B
+   should be re-read in the body, not trusted on its family label. **One pass, mechanical, and it closes the
+   reserved-grant class for good.**
+3. 🟡 **Promote the placement classes to a numbered rule** (institutional / programmatic / jurisdictional
+   admissible; onomastic refused) and re-read the `UNPLACED` backlog against it. **`P800` is not weakened by
+   this — it is sharpened.**
+4. 🔴 **Stop paging `ai-education`.** Two independent floor confirmations is enough. **Spend the leg on
+   `intelligent-tutoring-system`'s AGPL cluster instead**, which `p303` found carries the best pedagogy in
+   the vertical under the worst licences — a licence-strategy question this base has never worked.
+5. 🟡 **Re-probe one already-pinned payload per pass** as a standing control. **`p304` did this by accident
+   and it paid**; `mononeural` agreed byte-for-byte across passes.
 
 ## 🟢 Pass 303 — THE TOPIC POPULATION WAS PAGED TO RANK 60 AS `p302` ASKED, AND IT TURNS OUT THE SHELF IS NOT 750 REPOSITORIES — IT IS ABOUT SIXTY, PLUS A NEW LICENCE DEFECT WORSE THAN AN ABSENT GRANT
 
@@ -1714,6 +1887,11 @@ non-commercial friction.
 
 | Agent | Repo | Licence | Stars | What it does |
 |-------|------|---------|-------|--------------|
+| 🆕 **EduMind AI Virtual Teacher** | [abubokkor-cse/EduMind-AI-Virtual-Teacher](https://github.com/abubokkor-cse/EduMind-AI-Virtual-Teacher) | 🟢 **MIT** *(**payload** `LICENSE`, 2 081 B, sha256₁₂ `10010547e5ab`, holder **EduMind 2025-2026**, read `p304`)* | 🔴 **10★ / `main`** | 🟢 **A virtual teacher with LIP-SYNCED 3D AVATARS, quizzes and Gemini-backed research — and the only row on this shelf that DISCLOSES ITS RUNTIME DEBT IN THE LICENCE FILE.** The MIT grant is complete and unmodified; appended to it is a third-party terms block naming **ElevenLabs TTS**, **Stripe** and **Firebase / Google Cloud**, with *"Users must comply with all third-party service terms."* 🔵 **Lift the avatar/lip-sync presentation layer, which almost nothing permissive ships; do NOT assume the runtime is free.** ⚠️ **GREEN on copyright, AMBER on deployability** — as shipped it needs a paid TTS vendor, a payment processor and a Google cloud dependency. 🔴 **10★; internals unread.** See `P80`. |
+| 🆕 **fakao-ai-exam-engine** (法考) | [jeliael/fakao-ai-exam-engine](https://github.com/jeliael/fakao-ai-exam-engine) | 🟢 **MIT** *(**payload** `LICENSE`, 1 063 B, sha256₁₂ `a29b8bca5c59`, holder **Aether 2026**, read `p304`)* | 🔴 **10★ / branch `master`** | 🟢 **A NATIONAL BAR-EXAM ENGINE UNDER A PERMISSIVE GRANT — and APAC-placed by its subject matter, not by its holder.** Covers law checks, mock exams and essay grading for **China's bar exam**. 🔵 **Pairs with `kaogong-skill` (civil-service exams) to give this shelf two high-stakes national licensing verticals, both MIT** — the closest analogue available to a ministry or professional-body engagement. 🟢 **Promoted out of the enumeration backlog: visible since `p171`, never shelved, now payload-pinned.** ⚠️ **Default branch is `master`** — a pin written against `main` will 404. Internals unread. |
+| 🆕 **Stemly** | [SH-Nihil-Mukkesh-25/Stemly](https://github.com/SH-Nihil-Mukkesh-25/Stemly) | 🟢 **MIT** *(**payload** `LICENSE`, 1 099 B, sha256₁₂ `ae8c3c726efc`, holder **"Stemly Team — Amrita Vishwa Vidyapeetham" 2025**, read `p304`)* | 🔴 **8★ / 4 forks / 99 commits / branch `master`** | 🟢 **SCANNED STEM DIAGRAM → INTERACTIVE PHYSICS SIMULATION, plus study notes and quizzes.** Flutter + FastAPI + Python 3.10, Gemini for the AI layer. 🔵 **The input modality is the finding: a camera pointed at a textbook page, which is the right interface wherever the curriculum is on paper** — and that is most of the world this KB is briefing for. 🟢 **INSTITUTIONALLY PLACED (APAC)**: the page names *"CS students from Amrita Vishwa Vidyapeetham, Coimbatore"* — a named university and city, so `P800` does not apply. ⚠️ **Page never writes "India"**; country inferred from the city. **99 commits is real work for 8★.** Internals unread. |
+| 🆕 **plataforma-estudo-personalizado** | [pedroestevaodev/plataforma-estudo-personalizado](https://github.com/pedroestevaodev/plataforma-estudo-personalizado) | 🟢 **MIT** *(**payload** `LICENSE`, 1 070 B, sha256₁₂ `68b9bce8185b`, holder **Pedro Estevão 2024**, read `p304`)* | 🔴 **8★ / 1 fork / 40 commits / `main`** | 🟢 **THE ROW THAT REFUTES "LATAM RETURNED NOTHING AT ANY STAR LEVEL."** Generates personalised study modules for a chosen topic; Next.js + React + TypeScript + Tailwind on the Gemini API. 🟡 **PROGRAMMATICALLY PLACED (LATAM)**: built for **Alura + Google's *Imersão IA* (2nd edition)**, topics `imersao-alura` / `imersaodev-alura`; Alura is Brazilian (`alura.com.br`, Portuguese-language, Forbes Brasil coverage). ⚠️ **It is NOT a platform** — 8★, 40 commits, a single-purpose generator built for a course, so [`intel/open-gaps.md`](../intel/open-gaps.md)'s platform-scale gap still stands. ⚠️ **The programme is placed, not provably the person**; the author's country is never stated. 🔵 **Correction to the repo's own README: *Imersão IA* is a free course with an awards layer, not a "contest."** |
+| 🆕 **SGPA** | [GPA95/SGPA](https://github.com/GPA95/SGPA) | 🟢 **MIT** *(**payload** `LICENSE`, 1 362 B, sha256₁₂ `2d37a36a1833`, holder **Ammaar Ahmad Khan 2025**, read `p304`)* | 🔴 **10★ / `main`** | 🟡 **A Streamlit study assistant covering the full loop in one small app: explanations, PDF summarisation, quiz generation AND answer grading.** 🔵 **On the shelf as the minimal reference implementation of the four-verb loop** — most rows here do one verb well; this does four badly, which makes it useful for scoping a pilot rather than shipping one. 🔴 **10★, Streamlit, single author — a demo, not a base.** 🔴 **UNPLACED: holder name only, `P800` refuses it.** Internals unread. |
 | 🆕 **algo-sensei** | [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | 🟢 **MIT** *(**payload** `LICENSE`, 1 081 B, sha256₁₂ `3b2ca73e81ad`, read `p302`)* | 🟡 **293★ / 63 forks / 9 commits / `main`** | 🟢 **A Claude Code skill whose real asset is a WITHHOLDING POLICY.** LeetCode/DSA mentor with five modes (Tutor, Hint, Review, Interview, Pattern Mapper) and a **five-level progressive hint cascade**: gentle observation → pattern nudge → approach direction → technique reveal → pseudocode skeleton **as a last resort**. README premise: *"Copy-pasting solutions doesn't build problem-solving skills."* Runs as a skill (`SKILL.md` → `~/.claude/skills/`) or pasted into a Claude.ai Project. 🔵 **Lift the cascade, not the repo** — graduated withholding is what every tutoring engagement must build and almost nothing ships. ⚠️ **9 commits; Languages panel empty, so the implementation was not read.** |
 | 🆕 **feifei-companion** (飞飞学伴) | [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 10 227 B, sha256₁₂ `59a378bf23a0`, read `p302`)* | 🟡 **108★ / 9 forks / 10 commits / `main`** | 🟢 **THE ONLY ROW ON THIS SHELF THAT IS CURRICULUM-ALIGNED AND SHIPS A PARENT CHANNEL.** K-12 "Trinity": coordinator + liberal-arts + STEM personas. **"心跳任务" (heartbeat tasks)** — proactive loop that wakes the learner, assigns, verifies completion, cycles. Alignment is named, not implied: **统编版 Chinese grades 1-12**, **人教版 English grades 3-12**, **人教版/北师大版 STEM grades 7-12**. Parent side: parent-child translation, 21-day habit plan with check-ins, and a report covering mastery / concerns / weekly highlights / next-week plan. ⚠️ **It is a SKILL, not a service** — requires an OpenClaw / Claude Code / Cursor / Codex host, plus a Tencent Cloud key for dialogue. Its own README: **"不能替代"** professional teachers or counsellors. 🔵 **Copy the heartbeat + parent-report pair for K-12 anywhere**; the textbooks are swappable, the shape is the finding. |
 | 🆕 **feedbacksystem** | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0** *(**payload** `LICENSE`, 10 785 B, sha256₁₂ `65125d9e480b`, holder **© 2023 Technischen Hochschule Mittelhessen**, read `p302`)* | 🟡 **24★ / 9 forks / branch `dev`** | 🟢 **AN INSTITUTION-HELD GRADING/FEEDBACK SERVICE — a different risk class from a personal repo.** *"Intelligent, personalized feedback for students using artificial intelligence."* Automatically checks submissions and returns an **immediate** result, proposes fixes for mistakes, and **aggregates common mistakes so the lecturer can address them in class** — the loop back to teaching is the part that earns the row. Ships **Helm charts + Kubernetes** production install. ⚠️ **The AI mechanism is undocumented on the page**; Languages panel empty; the visible demo is an **SQL checker**; production use at THM is implied by a Helm chart and `frits.mni.thm.de`, **not stated**. Read the code before promising any subject beyond SQL. |
