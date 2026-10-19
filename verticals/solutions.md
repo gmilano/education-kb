@@ -6,6 +6,44 @@ updated: 2026-10-19
 
 # Vertical platforms — education
 
+## Pass 325 — the permissive education ERP exists, it is headless, and it was in this KB's history for 198 passes
+
+🔴 **The prescribed `open source platform education ERP CRM MIT Apache` query returned nothing new
+for the third consecutive pass** — OpenEduCat (LGPL-3.0), ERPNext and Dolibarr (GPL-3.0), OFBiz and
+Corteza (Apache-2.0, education layer is a build), and one vendor glossary that names Odoo as
+OpenEduCat's base and then states OpenEduCat is LGPLv3. **The standing conclusion held: at the
+platform tier this market is copyleft.** 🔵 **And it was wrong in one specific, important way,
+which the search channel was never going to surface.**
+
+🟢 **`openfun/joanie` is a headless education ERP under MIT, published by the operator of France's
+national public MOOC platform** — *"a headless ERP for education to manage course
+enrollment/subscription, payment and certificates delivery"* — and this KB has held it in
+`repos/trending.md` since **p127** without ever carrying it here, where the question
+*"is there a permissive Odoo for education?"* actually gets asked. **The answer is a qualified
+yes:** headless and MIT, purpose-built for education rather than a general ERP with a module bolted
+on, but **it is an API and a data model, not a product** — enrolment, subscription, payment and
+certificate issue with the front end left to `richie` or to you.
+
+🟢 **With it comes the rest of a coherent self-hostable public-sector stack, all MIT, all
+re-verified first-hand this pass** (rows below; full licence evidence in `repos/foundations.md`):
+`ralph` as the **xAPI Learning Record Store**, `potsie` as **Grafana dashboards-as-code** over it,
+`ashley` as a **multi-tenant course forum**, `richie` as the portal CMS (already here since p315),
+and `django-lti-toolbox` for the LTI seam. 🔴 **Two honest subtractions:** `warren`, the analytics
+UI, **declares itself a proof of concept not suitable for production**, and `django-lti-toolbox`
+**has no release and has not been pushed since 2024-11-14.** 🔵 **The commercially useful sentence:
+this is the first stack in this file that an EU public buyer can adopt end-to-end without taking on
+AGPL** — and the one AGPL-3.0 repository in the whole organisation, `openedx-docker`, carries it
+because **Open edX is AGPL**, not because the operator chose copyleft. That is trend 4's
+permissive-agent / copyleft-platform split showing up *inside a single org's repository list*.
+
+| platform | licence | shape | how it sits beside the LMS |
+|---|---|---|---|
+| **`openfun/joanie`** (30 ★) | 🟢 **MIT** | Django REST Framework, Docker-first, Terraform + OpenStack Swift for media | **Not beside the LMS — underneath the commercial layer.** It owns enrolment, subscription, payment and certificate delivery; the LMS keeps the learning. The seam a training business actually bills on |
+| **`openfun/ralph`** (51 ★) | 🟢 **MIT** | LRS (HTTP/xAPI, ADL standard) + CLI + library; Elasticsearch; PyPI `ralph-malph`, Docker image, Helm chart | **Alongside, collecting.** Open edX tracking logs and xAPI in, one queryable event history out. The audit substrate for any claim about learning |
+| **`openfun/potsie`** (11 ★) | 🟢 **MIT** | Grafana dashboards as **Jsonnet/grafonnet**, 114 commits | **Reporting, as code.** Teacher and programme dashboards reviewable in a pull request, on a stack institutions already operate |
+| **`openfun/ashley`** (12 ★) | 🟢 **MIT** | Django, **multi-tenant** | **Inside the course.** The cohort surface a tutor product needs, one deployment across many courses or institutions, and a natural xAPI emitter into `ralph` |
+
+
 ## Pass 324 — the platform tier did not move again, and a tier this file never had is now populated
 
 🔴 **The platform search returned nothing new, for the second consecutive pass.** The prescribed
@@ -88,6 +126,10 @@ source** at the popular end of this market. Detail at the end of this file.
 
 | Platform | Repo | Licence | ★ | Checked | What it is | AI-on-top angle |
 |---|---|---|---|---|---|---|
+| Joanie | https://github.com/openfun/joanie | 🟢 **MIT** (`LICENSE` read first-hand, *Copyright (c) 2021 France Université Numérique*) | 30 | p325 | **Headless education ERP** — course enrolment and subscription, payment, and certificate delivery, over Django REST Framework. Built to sit behind the `richie` catalogue (*"Power up Richie catalog"*); Docker-first with `make bootstrap`/`make demo`; Terraform scripts and docs for media on OpenStack Swift. 45 open issues, active | **This is the permissive answer to "an Odoo for education", and the AI angle is the certificate and entitlement boundary.** Put an agent on the catalogue and the tutor; leave enrolment, payment and credential issue to a deterministic ERP with an API — then every AI-side decision that affects a learner's entitlement has an auditable, non-generative system of record behind it. **Also the cleanest place to attach an LRS-backed completion rule** (`ralph`) instead of a hand-written one |
+| Ralph | https://github.com/openfun/ralph | 🟢 **MIT** (`LICENSE.md` read first-hand, *Copyright (c) 2020-present France Université Numérique*; 🔴 `LICENSE` 404s) | 51 | p325 | **xAPI Learning Record Store, CLI and library** to the ADL LRS standard, with converters for **Open edX tracking logs**; Elasticsearch backend; FastAPI + Pydantic; shipped as `ralph-malph` (PyPI), `fundocker/ralph` (Docker Hub) and an `openfuncharts/ralph` Helm chart. Replaced the operator's own deprecated Learning Locker deployment | **The data layer that makes an AI claim checkable, and the one almost nobody installs first.** An agent that recommends, scaffolds or gates needs an event history that predates its own deployment, or there is nothing to measure against; this is the permissive, standards-based place to put it. **Wire it as the capture layer under any pattern in `compose/patterns.md` that promises evidence** |
+| Potsie | https://github.com/openfun/potsie | 🟢 **MIT** (`LICENSE.md` read first-hand, *Copyright (c) 2021-present France Université Numérique*) | 11 | p325 | **Grafana dashboard suite for learning analytics**, authored as Jsonnet with grafonnet; 114 commits | **Dashboards-as-code is the deliverable a public buyer can audit.** The reporting half of an analytics engagement, versioned and reviewable, on infrastructure the institution already runs — and the production-ready alternative to `warren`, which declares itself a proof of concept. 🟡 The Ralph binding is not documented in its README; read the Jsonnet |
+| Ashley | https://github.com/openfun/ashley | 🟢 **MIT** (`LICENSE` read first-hand, *Copyright (c) 2020-present GIP FUN MOOC.*) | 12 | p325 | **Self-hosted multi-tenant discussion forum for learning**, Django | **The cohort layer, and multi-tenancy is why it is listed.** One deployment serving many courses or institutions is the shape a studio actually ships; a per-course forum is not. **AI-on-top:** discussion is the richest unstructured signal in a course — summarisation, unanswered-question detection and escalation-to-human routing all sit here, and every event can be emitted as xAPI into `ralph` |
 | BigBlueButton | https://github.com/bigbluebutton/bigbluebutton | LGPL-3.0 | 9.2k | p315 | Web conferencing purpose-built for virtual classrooms | Post-session agents: transcription, participation analytics, summary-to-LMS |
 | Open edX | https://github.com/openedx/openedx-platform | AGPL-3.0 | 8.2k | p317 | LMS + Studio behind large-scale MOOCs and corporate academies; 68,824 commits. The older `openedx/edx-platform` URL redirects here | Agents as XBlocks or LTI tools; AGPL makes the network boundary non-negotiable |
 | Moodle | https://github.com/moodle/moodle | GPL-3.0 | 7.5k | p317 | The world's most deployed open source LMS; 123,234 commits | **Ships its own core AI subsystem since 4.5 — read the Moodle note below before proposing a custom tutor** |

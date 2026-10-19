@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 325 — six rows were in this file for 198 passes and never became usable, and the French public stack is uniformly MIT
+
+**Eleventh pass of 2026-10-19.** 🔵 **This file is APPEND-ONLY. Everything below this section is
+prior history and stays.**
+
+Eight rows added to `repos/foundations.md`, bringing it to **fifty-six**; four platform rows to
+`verticals/solutions.md`. **Every licence read first-hand on the `raw` channel over the
+seven-filename probe space across five branch names.**
+
+### The finding: a row in this file is not a row a studio can use
+
+🔴 **Six of this pass's eight foundations rows were already in *this* file — some since p127 — and
+had never reached the curated list.** `openfun/ralph` was measured at **p127**, re-measured at
+**p190**, **p208** (where a cell-level comparator corrected its licence from Apache-2.0 to **MIT**)
+and **p256**. `joanie` was written down at p127 as *"headless education ERP — enrolment → payment →
+certificate"*. **And `repos/foundations.md` carried exactly one `openfun` row, `richie`, until this
+pass.**
+
+🔵 **The mechanism matters because it will recur: an append-only history is a *record*, and a
+curated list is a *recommendation*, and nothing in this KB was promoting one to the other.** Rows
+entered here, were verified, were never contradicted, and quietly stopped being read. **Promotion is
+now an explicit pass activity, not a side effect of rediscovery** — and this pass found its six by
+accident, while measuring novelty.
+
+### The licence shape: the exact mirror of p322, which turns a one-off into a trend
+
+| operator | funding | licence distribution across layers |
+|---|---|---|
+| **openeduhub** (DE) — p322 | publicly funded | 🟡 permissive **shells**, **GPL-3.0 analysers**, 🔴 **unlicensed inference core** — the grant gets *weaker* the closer you get to the work |
+| **FUN-MOOC / France Université Numérique** (FR) — **p325** | publicly funded | 🟢 **MIT on every layer**: portal CMS, headless ERP, forum, LRS, analytics viz, Grafana dashboards, LTI toolkit. **AGPL-3.0 appears exactly once** — `openedx-docker` — where it is **inherited from Open edX, not chosen** |
+
+🟢 **Two publicly funded European education operators with opposite licence hygiene, which retires
+the inference p322 invited.** Public funding predicts **nothing** about a licence posture. What
+distinguishes them is observable before signing: **FUN publishes a `handbook` repository of
+engineering practice, its projects carry Helm charts, PyPI packages, CI badges and
+`make bootstrap`; openeduhub's ITS tier does not even settle on a README filename.** 🔵 **Due
+diligence instruction: read the organisation's engineering artefacts, not its funding source.**
+Full trend entry in `intel/trends.md`.
+
+### The rows, with what each is actually for
+
+| repo | licence evidence | ★ | note |
+|---|---|---|---|
+| `openfun/ralph` | **MIT** — `LICENSE.md`; 🔴 `LICENSE` **404s**, the single reason an earlier pass had it in the grant-absent set | 51 | xAPI **LRS** + CLI + library, ADL standard, Open edX tracking-log converters, Elasticsearch, `ralph-malph` on PyPI, Helm chart. 🟢 FUN **deprecated its own Learning Locker deployment to build this** |
+| `openfun/joanie` | **MIT** — `LICENSE`, *Copyright (c) 2021 France Université Numérique* | 30 | **Headless education ERP**: enrolment/subscription → payment → certificate, Django REST Framework |
+| `openfun/warren` | **MIT** — `LICENSE.md` | 17 | 🔴 **Self-declared *"Proof Of Concept not suitable for production yet"***. Listed for one fact: its frontend **renders in an LTI iframe** |
+| `openfun/django-lti-toolbox` | **MIT** — `LICENSE`, *Copyright (c) 2020-present GIP FUN MOOC.* | 14 | 🔴 **34 commits, no release, last pushed `2024-11-14`.** The evidence behind this pass's LTI finding |
+| `openfun/ashley` | **MIT** — `LICENSE` | 12 | **Multi-tenant** course discussion forum, Django |
+| `openfun/potsie` | **MIT** — `LICENSE.md` | 11 | **Grafana dashboards-as-code** (Jsonnet + grafonnet), 114 commits. 🟡 README names neither Ralph nor a datasource |
+| `muhammedalakbarli/imparo` | **MIT**, 🔴 header *Copyright (c) 2017 Contributors* on a repo created **2026-07-01** — unedited template | 2 | **First Azerbaijani artefact in this KB.** Grades 1–8, **154-skill graph**, per-skill mastery + spaced repetition, Next.js/Supabase |
+| `LucasSpinola/assistentes-educacionais-com-ia` | **MIT** — `LICENSE`, *…Lucas Spinola e contribuidores…* | 2 | **Brazil, pt-BR.** A free zero-to-advanced **track for building** educational assistants: NLP → LLM → RAG → agents → learning analytics, Ollama in the stack |
+
+### 🔴 Rejected this pass, recorded so neither is mistaken for supply
+
+- **`010Ankushsharma/AdaptaLearn`** — DKVMN + PPO with a **131M+ interactions** training claim and
+  **no licence file** on the full probe. The claim is not checkable from the repository.
+- **`Kyyota-Wang/cloverailab`** — **no licence**, but it goes to `agents/top.md`'s evaluation table
+  as a *method* to rebuild rather than code to use: **QWK 0.825 against officially scored ETS
+  anchors**, harness committed.
+
+### 🟡 Channel notes for the next pass
+
+- 🔴 **The code channel now returns this KB's own archive.** Exclude `gmilano/*` from every novelty
+  count on it.
+- 🟡 **`raw.githubusercontent.com` remains the only working file channel** — `curl` to `github.com`
+  still 403s through this proxy, and the rendered page via the fetch channel is the only source of
+  commit counts (used for `django-lti-toolbox` = 34 and `potsie` = 114 above).
+- 🔴 **Both primary sources attempted this pass were DNS-blocked**: `unu.edu` and
+  `www.marketsandmarkets.com`, both `getaddrinfo ENOTFOUND`. The UNU/IESALC working paper has now
+  been a named target for three passes and remains unread **for an infrastructural reason, which is
+  a different thing from not having been tried.**
+
 ## 2026-10-19 — Pass 324 — a permissive LICENSE does not survive a restrictive README, and the whole `openeduhub` substrate is unlicensed
 
 **Tenth pass of 2026-10-19.** Ten rows added to `repos/foundations.md`, bringing it to **forty-eight**.

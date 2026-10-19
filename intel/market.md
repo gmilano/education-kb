@@ -936,6 +936,51 @@ price it as greenfield, because there is nothing to fork.
 
 ### LATAM
 
+### 🟢 The region's first measured classroom outcome — Panama, and it belongs in this file (added p325)
+
+**This KB has held `JustinoLM/STI-matematicas` since an earlier pass and this file never carried its
+numbers.** It is, as far as this base reaches, **the only artefact in the whole education KB with a
+measured learning outcome, a significance test and a usability score from a real classroom** — and
+it is LATAM.
+
+**Universidad Tecnológica de Panamá**, Facultad de Ingeniería de Sistemas Computacionales; an
+intelligent tutoring system for sixth-grade decimal arithmetic, validated **May–July 2026 across
+three sixth-grade sections of a Panamanian public school**:
+
+| indicator | result |
+|---|---|
+| students participating | **74** (65 completed at least one practice) |
+| practice sessions completed | **710**, in two months |
+| pre-test → post-test (n = 63, scale 0–8) | **1.83 → 2.56** correct, mean |
+| significance | **Wilcoxon p = 0.0012**; **medium effect, r = 0.41** |
+| perceived usability (SUS, n = 70) | **70.1 / 100** |
+| used the in-app reward shop | **92%** of those who practised |
+
+🟢 **And it states its own limit, in its own README: there was no control group, so the gain cannot
+be attributed to the system alone.** 🔵 **That single sentence is worth more in a bid than the
+p-value.** It is the posture p323's *"prove it teaches"* section asks for, written by a graduating
+student in a public school deployment, and it is **stricter than every commercial uplift claim this
+file records.** Quote the design, name the limit, and the room will trust the rest of the deck.
+
+🔴 **Two hard limits on using it.** (1) **It carries no licence** — seven candidate filenames probed
+across five branch names, none present — so **nothing in it can enter a deliverable**; the project
+is finished, tagged `v1.0-tesis`, its infrastructure decommissioned and there is no live demo.
+(2) The sample is one school and three sections.
+
+🟢 **The part a LATAM public-sector engagement should copy verbatim is the data posture, because it
+is the question a ministry will ask first.** The repository contains **no student data**; passwords
+are **Argon2** hashes only; administrative functions require a server-verified token; each teacher
+sees only their own groups within their own school; and — **the detail to put on a slide** —
+**prompts sent to the language model carry anonymous placeholders substituted server-side, never
+student names.** 🔵 **The model it calls is DeepSeek.** A Panamanian public primary school, a
+Chinese frontier model, and name-stripping at the boundary is **the data-sovereignty conversation of
+this region in one artefact** — and it shows the conversation has a technical answer that does not
+require a sovereign model.
+
+**Wiring this evidence design onto components that *are* licensed is pattern P12 in
+`compose/patterns.md`.**
+
+
 > **Pass 323 — one concrete, peer-reviewed deployment datapoint and one regional measurement, both
 > new to this file.**
 >
@@ -1044,6 +1089,47 @@ price it as greenfield, because there is nothing to fork.
    same offer as pattern P3 with the compliance driver replaced by an evidence driver.
 
 ## Declared regional gaps — what was searched this pass and not found
+
+
+**Pass 325 — the battery ran in full for the FIFTH consecutive saturated pass, it produced exactly
+one new figure, and that figure is worse news than the gap it fills.** Recorded in full, because an
+unrecorded empty search reads identically to coverage.
+
+- 🔴 **Both primary sources attempted this pass were refused at DNS, and they were the two this
+  file has most needed.** `unu.edu` → `getaddrinfo ENOTFOUND` (the **UNU-IAS / UNESCO IESALC**
+  working paper *"AI implementation in higher education in Latin America and the Caribbean"* — named
+  as the clearest target for the LATAM slot at p323, re-named at p324, **and now unread for a third
+  pass for an infrastructural reason rather than for want of trying**). `www.marketsandmarkets.com`
+  → `getaddrinfo ENOTFOUND`. 🔵 **Every figure in this file remains snippet-sourced. Three passes
+  have now tried to change that and the sandbox is the binding constraint, not the research.**
+- 🟡 **LATAM — one new figure, and read the bucket before quoting it.** A market aggregator
+  publishes a **"Rest of Latin America" AI-in-education** line: **USD 18.2m (2024) → USD 36m
+  (2029)**. 🔴 **This does not close the seven-pass LATAM market-size gap and must not be presented
+  as doing so.** *"Rest of Latin America"* is a **residual bucket** — the region minus the markets a
+  buyer actually asks about — and at USD 18.2m against the same class of source's **USD 3.68bn**
+  North America 2026 figure it is **roughly half a percent of that number.** 🔵 **What it is good
+  for:** it is the first LATAM-specific published line this file has found that is not a share of a
+  global forecast, and it establishes an *order of magnitude* for the non-Brazil, non-Mexico
+  remainder. **What it is not good for: any sentence beginning "the LATAM market is".** The standing
+  instruction from p320 holds and is now better supported — **a client asking for LATAM market size
+  is asking whether the demand is real, and the adoption and outcome data answer that better than
+  any of these forecasts** (and this pass added a measured classroom outcome to the LATAM section
+  above, which no forecast in this file can match).
+- 🔴 **EMEA — no education-specific result for the THIRD consecutive pass; the gap is five passes
+  old.** The query returned enterprise AI material again: CompTIA's 2026 EMEA IT-strategy trends, a
+  Workday adoption study (**38% of EMEA organisations have not begun piloting**), a Bandwidth/Cavell
+  barriers study, and the EU AI Act as a general adoption driver. **It named no education vendor, no
+  ministry programme and no school-data rule** — the search's own stated gap, not only this file's.
+  🟢 **But the EMEA gap is materially narrower after this pass for a reason the news channel will
+  never supply: the code channel produced a named, dated, licence-verified public-operator stack.**
+  `repos/foundations.md` now carries **six MIT repositories from France Université Numérique** — the
+  operator of France's national public MOOC platform — covering LRS, analytics, education ERP, forum
+  and LTI plumbing. **That is not a vendor list, and it is better than one for a studio: it is the
+  software a European public buyer is already running.** The *vendor* half of the gap stands.
+- 🔵 **North America and APAC — their own prior contents, re-confirmed, nothing new.** No new
+  statute, no new figure, no new player that this file did not already hold. The p323 method
+  conclusion stands unchanged and is now five passes stable: **the regional query establishes what
+  the channel believes; only a statute-, artefact- or code-level query returns something quotable.**
 
 **Pass 324 — the prescribed eight-search battery was run in full, and for the FOURTH consecutive
 pass it added nothing this file did not already hold at equal or higher precision.** That is the

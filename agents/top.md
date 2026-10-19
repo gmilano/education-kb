@@ -5,6 +5,76 @@ updated: 2026-10-19
 ---
 # Top open source AI agents — education
 
+## Pass 325 · 2026-10-19 (eleventh pass of this date) — the sweep measured this KB's own coverage, and the nine-pass LTI gap stopped being an absence
+
+**Twenty-five repositories were put through a three-axis supply sweep. Twenty were already held.**
+Nine new slugs were added across this KB — **every licence read first-hand this pass** — and
+**not one of them is above 14 ★**. 🔵 **That ratio is the pass's first finding and it is a
+statement about this base, not about the sector:** a fresh broad sweep at this KB's depth now
+returns **36% novelty and 0% above 14 ★**. The `intelligent-tutoring-system` axis census, the whole
+**France Université Numérique** stack and every artefact the fresh-push window returned were
+already on these shelves. **Discovery is no longer where the margin is in this industry; composition
+is.** The rows are in `repos/foundations.md`, the sweep itself in `agents/trending.md`.
+
+🟢 **The pass's main finding upgrades the longest-standing gap in this file from *absent* to
+*diagnosed*, and it is the first positive evidence trend 6 has ever had.** Nine passes have
+recorded *no LTI 1.3 AI agent*. This pass tested it on a **third instrument, GitHub code search,
+new to this KB** — `lti_1p3 mcp server tutor language:python` → **0**;
+`"pylti1p3" OR "ltijs" mcp agent tutor` → **6 hits, none an agent.** But the diagnosis came from
+the supply side: **`openfun/django-lti-toolbox` — MIT, 14 ★, 34 commits, *"a Django application to
+build LTI Tool Providers"*, no release, and last pushed `2024-11-14`, roughly twenty-three months
+untouched.** The permissive LTI plumbing **exists, is published by a national public operator, and
+is being left to rot** while the same operator's MCP-era peers ship weekly and its own analytics UI
+(`openfun/warren`) still renders *inside an LTI iframe*. 🔵 **The gap is not missing libraries. It
+is agent-side adoption of a working, permissive, unmaintained standard** — which is a different
+sentence to put in front of a client, and a cheaper one to act on.
+
+🔴 **The second finding is a method failure caught on this pass itself, and it refines p324's
+declared-gap discount.** This pass searched `special education IEP AI assistant pushed:>2026-01-01
+stars:>3` → **0 results**, then `IEP individualized education program generator LLM` → **0
+results**, and was one step from declaring a special-education gap. **This KB already holds
+`iblai/k-12-agents` — an MIT `special-education-agent` grounded in IDEA 2004, the thirteen
+disability categories and §504 — recorded at p288 as the correction of exactly that claim.** The
+search *terms* were fine. **`stars:>3` and `pushed:>2026-01-01` removed it.** 🔵 **Record the
+sharper rule: p324 said a declared gap is a statement about the query. It is narrower than that —
+a gap declared behind a star or recency filter is a statement about the filter.** The highest-stakes
+tier in this sector is the one most likely to be published by an institution at two stars.
+
+🔴 **And an instrument caveat that will only get worse: the code-search channel now returns this
+KB's own files.** Two of the six hits for the LTI probe were
+`gmilano/education-kb/archive/2026-10-19-p315-pre-rewrite/repos-foundations.md` and
+`gmilano/education-kb/compose/code/p436-fork-hypothesis/homepage.2026-10-07.tsv`. **This base is now
+part of the corpus it searches.** Every future novelty count on this channel must exclude
+`gmilano/*` or it will score its own history as supply.
+
+### Added to the table
+
+- **`dymchenkko/claude-study-agent` — MIT, 2 ★, created 2026-10-10.** The **fresh-push window's only
+  substantial artefact**: a university study agent that takes *the learner's own* slides, PDFs and
+  **lecture recordings** (Whisper), OCRs them, indexes them for semantic search, then quizzes with
+  spaced repetition, tracks mistakes and builds mock exams. Local-first, no external vector store.
+  It is `universal-examprep-skill`'s shape with the **recording** leg added — the first artefact here
+  to treat the lecture itself as ingestible learner-owned corpus.
+
+### Added to the evaluation table
+
+- **`Kyyota-Wang/cloverailab` — 🔴 NO LICENCE, 0 ★.** GRE Analytical Writing reviewer and writer
+  agents: **LLM-as-judge against the published ETS rubric with officially scored anchors, no
+  fine-tuning, QWK 0.825**, harness and results committed. 🔵 **It is the second artefact in this
+  tier to publish a real agreement figure and the second that cannot be used** — `EduGuardBench`
+  (p323) was the first. **The eval tier's measured edge keeps arriving without a grant.**
+
+### Recorded below the listing bar
+
+- **`wildcat430524/Steps2Great-skill` — MIT, 2 ★, zh/en.** A Socratic **mastery-learning** Agent
+  Skill that will not advance until a **three-dimension assessment is all-green** — the gate from
+  `leap-framework`'s State Guard expressed as a prompt contract instead of a server. APAC-authored,
+  consistent with trend 7.
+- **`010Ankushsharma/AdaptaLearn` — 🔴 NO LICENCE, 0 ★.** DKVMN knowledge tracing + PPO, with a
+  claim of training on **131M+ interactions**. Recorded, **not** recommended: the claim is
+  unverifiable from the repository and there is no grant.
+
+
 ## Pass 324 · 2026-10-19 (tenth pass of this date) — the seven-pass integrity gap was a query artefact, and it is closed
 
 **One row added here, one to the evaluation table, ten to `repos/foundations.md` (now forty-eight),
@@ -327,6 +397,7 @@ commit count, release cadence and licence.**
 
 | Agent | Repo | Licence | ★ | Checked | What it does | Use it for |
 |---|---|---|---|---|---|---|
+| claude-study-agent | https://github.com/dymchenkko/claude-study-agent | MIT (`LICENSE` read first-hand — *MIT License, Copyright (c) 2026 dymchenkko*) | 2 | p325 | **A local-first study agent over the learner's own course material, including the lectures.** Ingests slides, PDFs and **lecture recordings** — Whisper for the audio, OCR for scanned pages — then builds a semantic index and runs a study loop over it: spaced-repetition quizzing, mistake tracking and **generated mock exams**. Built on Claude Code; topics declare `local-first`, `rag`, `anki-alternative` and `notebooklm-alternative`. Created 2026-10-10, pushed 2026-10-19, 0 forks | **The lecture-recording leg no other artefact in this file has.** Where `universal-examprep-skill` assumes the learner owns slides and past papers, this one assumes they also own the *recording* of the class — the single richest unexploited corpus in formal education, and the one most likely to carry a consent question. Read it for the ingest chain; treat the recording as personal data from the first line of the proposal |
 | aegis-integrity | https://github.com/sunilgentyala/aegis-integrity | MIT (sidebar + `LICENSE`, Copyright (c) 2026 Sunil Gentyala) | 17 | p324 | **Local-first academic-integrity reviewer exposed as an MCP server** — *"Free, local-first academic integrity checker and MCP server"*. **Seven MCP tools**: `aegis_analyze_paper`, `aegis_check_citations`, `aegis_check_guidelines`, `aegis_compare_papers`, `aegis_index_add`, `aegis_index_summary`, `aegis_status`. Five signal families: **citation-hallucination resolution against Crossref** with verdicts `VALID`/`MISMATCH`/`HALLUCINATED`/`UNRESOLVABLE`/`NO_DOI`; AI-text via **GPT-2 perplexity, burstiness, a stylometric ensemble and lexical-tell density** plus a semantic-coherence analyser; plagiarism via **n-gram MinHash + SBERT/FAISS against a corpus you supply**; ghostwriting via **Burrows' Delta**; and an experimental keyless watermark heuristic that *"never affects the overall integrity risk score"*. Self-plagiarism, essay-mill batch analysis, citation-network analysis and **venue-guideline checks for IEEE, ACM and Elsevier**. `pip install "aegis-integrity[ml]"` + `aegis ui` for a local web app; Claude Code plugin; Claude Desktop `.mcpb`; `docker compose`; GHCR image; `install.bat` on Windows. Crossref/OpenAlex/DataCite are called with **reference metadata only, never the document**, and there is an explicit `offline=true`. 68 commits, 5 forks, changelog at v3.3.2 | **The artefact this KB declared absent for seven passes — and the reason to use it is what it refuses to claim.** It publishes **no accuracy figure for itself**, cites third-party studies instead, and states *"Results are a supporting signal for human review, not a determination of misconduct"* and, on ESL bias, *"Do not treat AEGIS as having solved ESL false positives; keep a human in the loop."* 🔴 **Read its own tension before quoting it:** the marketing section says per-language calibration *"reduce[s] this bias"* while the ESL section says the non-English multipliers *"rarely fire"*, and the changelog records an earlier ESL multiplier that was **inverted** and fixed. Deploy it as the **citation and process-evidence** layer of an integrity review (`compose/patterns.md` **P11**); do not deploy its AI-text score as a finding |
 | civil-ai | https://github.com/zhangl1001/civil-ai | MIT (sidebar + LICENSE) | 41 | p323 | **A reusable, local-first foundation for adaptive education agents on iOS and Web** — its own words: *"Civil AI is a reusable, local-first foundation for building adaptive education Agents on iOS and Web"*, with the Chinese civil-service-exam package as *"the current end-to-end reference adapter"* that *"does not define the scope of the foundation."* Vue 3 + TypeScript, Capacitor iOS shell; **SQLite on iOS and IndexedDB on Web behind repository ports**, with migrations; Anthropic and OpenAI-compatible provider gateway with providers as replaceable adapters; agent runtime with tools, skills, **checkpoints, leases, cancellation and recovery**; an *"evidence-based capability model"* with mastery projection and review priority, and spaced review in the reference app (no algorithm named). English README with a Chinese positioning section; 100 commits, 7 forks; docs reference a v1.2.0 upgrade guide, Releases empty | **The highest-starred education agent pushed since 2026-10-01, and the only artefact in this KB that separates an education-agent runtime from its exam adapter on purpose.** Read it for the ports-and-adapters shape when a client wants one tutor engine across several subjects — and read its own caveat first: **it states that domain portability is unvalidated because both bundled packages are exam-style, question-driven study** |
 | algebench | https://github.com/ibenian/algebench | MIT (sidebar) | 8 | p323 | **Interactive 3D mathematics visualiser with an interruptible AI narrator**: the learner stops a running lesson scene to ask what/how/why and the narrator answers in real time while the visualisation responds, with step-by-step proofs and a semantic graph kept in sync with the 3D view. Scenes built from adjustable parameters and live simulations; Three.js frontend; **lessons stored as JSON files**; runs via a `./algebench` script or Docker image on localhost. **Google Gemini only, bring-your-own-key.** 519 commits, 1 fork | **The interruption is the pedagogy** — this is the only artefact here where the learner controls the explanation mid-stream rather than after it, and lessons-as-JSON makes the scene format readable. **Not a dependency: Gemini-only means the model is not pluggable as shipped**, the same disqualifier this file applied to GradeMate. **519 commits at 8 stars — see the p320 lesson on star counts** |
@@ -369,6 +440,7 @@ and they do not agree with the way this sector reports quality.
 
 | Artefact | Repo | Licence | ★ | Commits | What it is |
 |---|---|---|---|---|---|
+| cloverailab | https://github.com/Kyyota-Wang/cloverailab | 🔴 **NO LICENCE** (7 candidate filenames probed across 5 branch names on the `raw` channel, none returns 200) | 0 | — | **The tier's second measured agreement figure, and the second one with no grant.** GRE **Analytical Writing** reviewer *and* writer agents: an **LLM-as-judge scored against the published ETS rubric using officially scored anchor essays, with no fine-tuning**, reporting **QWK 0.825 against those official anchors** — with the evaluation harness and the results committed to the repository rather than asserted in a README. TypeScript on Cloudflare Workers. 🔵 **Why it matters out of proportion to its zero stars:** every uplift claim a client will be shown in this sector is a judged score, and p323 established that judged helpfulness is the wrong instrument. **This is the opposite case — a judged score against a published rubric and real anchors, which is the one form of LLM-as-judge that can be defended** — and QWK against official anchors is the figure a testing organisation will actually recognise. 🔴 **Read the method and rebuild it; the repository carries no licence, so neither its harness nor its results can enter a deliverable** |
 | knowsim | https://github.com/yjo2lee/knowsim | MIT (`LICENSE` read first-hand — *MIT License, Copyright (c) 2026 Yoonjoo Lee*) | 4 | — | **The simulated learner, not the tutor.** *"Knowledge-state-aware user simulator for evaluating information calibration in LLM assistants"* — arXiv 2608.17150. It supplies the piece every evaluation in this tier has to improvise: a student whose knowledge state is **controlled and known**, so that an assistant's confidence can be scored against what the learner actually knows rather than against an answer key. **Calibration, not pedagogy and not accuracy** — the only artefact in this KB aimed at it, and the complement to MathTutorBench (pedagogy) and `llm-judge` (content accuracy). Small and single-author; read it for the simulator contract |
 | EduGuardBench | https://github.com/YL1N/EduGuardBench | 🔴 **NO LICENCE** (no sidebar licence entry, no LICENSE file) | 5 | 2 | **The eval tier's first artefact published in conference proceedings — and the only one that cannot be used.** arXiv 2511.06890 (10 Nov 2025), **AAAI proceedings article 40399**; Yilin Jiang +7. Dual-component: a **Role-playing Fidelity Score (RFS)** for professional teacher-simulation fidelity, and **persona-based adversarial prompts** targeting general harms and specifically **academic misconduct**, scored by **Attack Success Rate (ASR)** and a **three-tier refusal-quality** assessment, across **14 models**. Ships `SATAs.xlsx` (Select-All-That-Apply teaching-harm items), `adversarial_prompts.xlsx`, Python scripts for both experiments, a shared utilities folder, an analysis/figures notebook and a full appendix PDF (scenarios, ethics taxonomies, dataset design, annotation guidelines) — **with empty `Results/` folders.** Two results worth quoting: an **"Educational Transformation Effect"** in which the safest models convert harmful requests into teachable moments as ideal **Educational Refusals**, a capacity **strongly negatively correlated with ASR**; and a **scaling paradox** in which mid-sized models are the most vulnerable, so safety is **not monotonic in model size**. **Read the paper and the appendix; the repository has no grant, so its data and scripts cannot enter a deliverable** |
 | llm-judge | https://github.com/openeduhub/llm-judge | **Apache-2.0** (sidebar + README + LICENSE) | 0 | 1 | **A factual-accuracy judge for educational content, published by a public OER operator** — *"KI-gestütztes Bewertungstool für Sachrichtigkeit von Bildungsinhalten"*. Scores the description field of a learning object (`cclom:general_description`) against **six criteria declared in `config.yaml`**: factual correctness, clarity and comprehensibility, objectivity, relevance, structure and length, language and style. Input is JSON with `node.properties` and a `sys:node-uuid`; single or batch; `gpt-4o-mini` default or `gpt-4o` via `MODEL_ID`, with an optional `BASE_URL` to point at a different endpoint; 30 s default API timeout. Outputs CSV scores, JSON with improvement suggestions, and interactive charts — **1 commit** — this is a published intent, not a tool. And note what it judges: **content accuracy, not pedagogy.** It is the complement to the four pedagogical evaluators above, not a substitute, and the README states neither the scoring scale, the prompts nor the aggregation — so its numbers are not comparable to anything |

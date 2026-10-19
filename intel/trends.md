@@ -51,6 +51,93 @@ the metric this sector reports is unsound, which forces a correction to pass 318
 and a CI job, and the licences themselves — not just the descriptions of them — are drifting out
 of open source at the popular end of the market.
 
+## Public funding does not predict a licence posture — the operator's engineering maturity does — NEW in p325
+
+**p322 found, inside one publicly funded German organisation (`openeduhub`), licences dividing by
+architectural layer: permissive shells, GPL-3.0 analysers, and an unlicensed inference core — the
+grant getting weaker the closer you got to the work.** p323 found the same sentence by artefact type
+in China (MIT code, NonCommercial curriculum data). **Both readings invited an inference that this
+pass can now retire: that public funding produces a defensive licence posture at the valuable
+layer.**
+
+🟢 **It does not.** p325 measured the complete repository stack of **France Université Numérique /
+GIP FUN-MOOC — the operator of France's national public MOOC platform — and found MIT on every
+layer there is**, each licence file read first-hand:
+
+| layer | repository | licence |
+|---|---|---|
+| portal CMS | `openfun/richie` (316 ★) | **MIT** |
+| headless education ERP | `openfun/joanie` (30 ★) | **MIT** |
+| LTI content management | `openfun/marsha` (150 ★) | **MIT** |
+| xAPI Learning Record Store | `openfun/ralph` (51 ★) | **MIT** |
+| analytics visualisation | `openfun/warren` (17 ★) | **MIT** |
+| dashboards-as-code | `openfun/potsie` (11 ★) | **MIT** |
+| LTI tool-provider plumbing | `openfun/django-lti-toolbox` (14 ★) | **MIT** |
+| course forum | `openfun/ashley` (12 ★) | **MIT** |
+| Open edX packaging | `openfun/openedx-docker` (142 ★) | 🟡 **AGPL-3.0** |
+
+🔵 **The one copyleft row is the one that proves the rule: `openedx-docker` is AGPL-3.0 because
+Open edX is AGPL-3.0.** The copyleft is **inherited from the platform it packages, not chosen by the
+operator** — which is trend 4's permissive-agent / copyleft-platform split appearing *inside a
+single organisation's repository list*, and the cleanest instance of it this KB has recorded.
+
+**So two publicly funded European education operators, same decade, same kind of mandate, opposite
+licence hygiene. What actually distinguishes them is visible before you sign anything:**
+
+| signal | FUN-MOOC | openeduhub (ITS tier) |
+|---|---|---|
+| published engineering practice | 🟢 a `handbook` repository, and a `handbook.openfun.fr` its READMEs cite | 🔴 none found |
+| distribution | 🟢 PyPI packages, Docker Hub images, **Helm charts**, `make bootstrap` | 🔴 nix-run scripts, no HTTP surface on several repos |
+| licence consistency | 🟢 same grant on every layer; `LICENSE.md` vs `LICENSE` is the only inconsistency | 🔴 four READMEs claim grants the repository does not carry |
+| conventions | 🟢 uniform | 🔴 **`README.org` in one tier, `README.md` in another** |
+
+🟢 **The instruction for due diligence, and it is cheap to run:** when a public buyer offers an
+existing codebase as the base of an engagement, **read the organisation's engineering artefacts, not
+its funding source.** Helm charts, a published handbook and a consistent licence across layers
+predict a clean grant; inconsistent README filenames predict an unlicensed core. **This is a
+twenty-minute check that changes what you can promise.**
+
+🔴 **The caveat that keeps this from being a procurement free pass.** Two of FUN's seven permissive
+segments are not load-bearing: `warren` **declares itself** *"a Proof Of Concept not suitable for
+production yet"*, and `django-lti-toolbox` has **no release and no push since `2024-11-14`.**
+**Uniform licensing is not uniform maintenance**, and the maintenance question has to be asked
+per repository even when the licence question has been answered once.
+
+## The declared-gap discount, second mechanism — the FILTER, not only the query — NEW in p325
+
+**p324 recorded, on four instances, that a declared gap is a statement about the query rather than
+about the world. p325 adds the narrower and more dangerous mechanism, and caught it on itself.**
+
+This pass searched **`special education IEP AI assistant pushed:>2026-01-01 stars:>3` → 0 results**,
+then changed the terms completely — **`IEP individualized education program generator LLM` → 0
+results** — and was one step from declaring a special-education supply gap on *two* empty queries.
+
+🔴 **This KB already holds the answer, and has held it since p288: `iblai/k-12-agents`, MIT, shipping
+a `special-education-agent` grounded in IDEA 2004, the thirteen disability categories and §504** —
+recorded at p288 as the correction of an earlier *"zero permissive for special education"* claim —
+plus `eakarsu/ai-special-education-iep-compliance` in the grading/compliance sweep.
+
+🔵 **The terms were never the problem. `stars:>3` and `pushed:>2026-01-01` deleted the answer.**
+
+🟢 **And the bias is systematic, not random, which is what makes it worth a trend entry.** The tiers
+where a filtered sweep fails are **predictably** the high-stakes ones:
+
+- **special education, IEP compliance, assessment integrity, rostering, safeguarding** — published
+  by an institution, a district contractor or a single practitioner, typically **at 0–5 stars**;
+- **institutional infrastructure** — p317 already recorded that stars run *too low* on it;
+- **finished work** — a thesis system, a ministry pilot or a completed grant deliverable stops being
+  pushed, so a recency filter reads *completion* as *abandonment*. **`JustinoLM/STI-matematicas`,
+  which carries the only measured classroom outcome in this KB, is tagged `v1.0-tesis` and
+  deliberately finished** — `pushed:>2026-01-01` happens to keep it, a tighter window would not.
+
+**Operating rules, for every future pass:**
+1. **Never declare a gap from a filtered query.** Re-run it with **no `stars:`, no `pushed:`** before
+   the word "gap" is written.
+2. **Check the base first.** This pass's two empty searches cost less than the retraction would
+   have; `grep` over this KB is the cheapest instrument available and it is not being used first.
+3. **A star filter screens for popularity and therefore screens against regulated subject matter.**
+   In this sector that is an inverse correlation with commercial importance.
+
 ## Sovereign and academic inference shows up in publicly funded edtech code — p321
 
 **The trend, stated from code rather than from a vendor claim.** Both AI tools in Germany's
@@ -448,6 +535,33 @@ persists across sessions and a non-LLM component that decides what comes next** 
 something to integrate rather than build.
 
 ## 6. MCP, not LTI, is where agent integration is actually happening (added p317, revised p319)
+
+### 🟢 Pass 325 — this trend's first POSITIVE evidence, after nine passes of arguing from absence
+
+**Nine passes recorded *no LTI 1.3 AI agent* and every one of them argued from an empty search.**
+p325 tested the gap on a **third instrument — GitHub code search, new to this KB** (`lti_1p3 mcp
+server tutor language:python` → **0**; `"pylti1p3" OR "ltijs" mcp agent tutor` → **6 hits, none an
+agent**) and then found the explanation on the **supply** side, which is where this trend finally
+gets a measurement instead of an absence:
+
+🔴 **`openfun/django-lti-toolbox` — MIT, 14 ★, 34 commits, *"a Django application to build LTI Tool
+Providers"*, NO release, last pushed `2024-11-14`.** Roughly **twenty-three months untouched**,
+published by the operator of France's national public MOOC platform, whose MCP-era peer repositories
+ship weekly — and whose own learning-analytics UI, `openfun/warren`, **still renders inside an LTI
+iframe.**
+
+🔵 **The reframing, and it is the version to use with a client.** The LTI plumbing is **permissive,
+institutional, functional and abandoned.** The absence of LTI agents is therefore **not a tooling
+gap** — the library exists under MIT — **it is agent-side non-adoption of a live standard whose
+maintenance has stopped.** So the sentence changes from *"nobody has built an LTI agent"* (which
+invites the client to ask why you cannot) to: **"the LTI integration layer is permissively licensed
+and effectively unmaintained, so either budget the maintenance or integrate over MCP."** Both are
+answerable; only the second is cheap.
+
+🟡 **And note what this does NOT say.** LTI is not dead as a *delivery* surface — `marsha` (150 ★,
+MIT) is an LTI content-management system and `warren` is delivered through an LTI iframe, both from
+the same operator. **Institutions still mount tools via LTI. Agents are not being written to be
+mounted that way**, which is a statement about who is building, not about what schools can accept.
 
 Every integration artefact found this pass speaks **MCP**: `tutor-mcp` (an entire ITS as an MCP
 server), `ankimcp/anki-mcp-server` (520 ★, spaced repetition exposed to any LLM client), Canvas

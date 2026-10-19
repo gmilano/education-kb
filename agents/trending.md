@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 325 — twenty of twenty-five finds were already here, and the nine-pass LTI gap became a diagnosis
+
+**Eleventh pass of 2026-10-19.** 🔵 **This file is APPEND-ONLY. Everything below this section is
+prior history and stays.**
+
+One row added to `agents/top.md`, one to its evaluation table, two recorded below the bar, **eight
+to `repos/foundations.md` (now fifty-six)**, four platform rows to `verticals/solutions.md`, one
+new pattern (**P12**), one new trend, and **one nine-pass gap moved from *absent* to *diagnosed***.
+Nine repositories' licences read first-hand on the `raw` channel over the seven-filename probe
+space across five branch names.
+
+### 1. 🔵 The coverage measurement — and it is the honest headline of this pass
+
+A three-axis supply sweep ran this pass: the **`intelligent-tutoring-system` topic census**
+(27 repositories), a **`learning-analytics` sweep pushed since 2026-06-01** (210 total, top 25
+read), and a **fresh-push window** (`education AI agent tutor pushed:>2026-10-14 stars:>1` → 4).
+**Twenty-five candidates were carried to a novelty check against this base. Twenty were already
+held.**
+
+| | count |
+|---|---|
+| candidates from the three axes | 25 |
+| already held (name present outside `archive/`) | **20** |
+| new | **9** *(incl. 4 org-sibling rows the sweep surfaced)* |
+| new **above 14 ★** | **0** |
+
+Already held, every one with a licence verdict and a pass number: the whole
+**France Université Numérique** stack (`ralph` p127/p190/p208/p256, `richie`, `joanie`, `marsha`,
+`warren`), `terracotta-education/terracotta` p212, `tl-its-umich-edu/my-learning-analytics` p212,
+`thm-mni-ii/feedbacksystem` p215, `Schlaflied/Plot-Ark`, `sonsoleslp/tna`,
+`JustinoLM/STI-matematicas`, `wwlwgo/cn-primary-math-knowledge-graph`,
+`sohan1611/BloodCoded_Agentic`, `znecho9/knowledge-forest-mcp`, `avps82/mentar`, `braivo/braivo`,
+`theaiagent/SynthEd`, `redbeard-26/asfai-education`, `kqc-real/streamlit`,
+`khayyam-math/khayyam-math`, `im-rk/SkillTrace`, `ujwal2311/proofpilot`, `CGSeb/lessonfolk`.
+🔵 **A prior pass had even recorded the ITS axis exhaustively enough to write *"and 12 more,
+including every ≤4★ tutoring prototype the `intelligent-tutoring-system` axis returned."***
+
+🟢 **What the ratio means, stated for the next pass and for a bid conversation: at this base's
+depth, broad discovery returns 36% novelty and nothing of scale.** The open-source education supply
+tail is, as far as this instrument reaches, **enumerated**. **A pass's marginal value now comes from
+promotion (history → curated list), from composition, and from the licence and evidence layer — not
+from finding repositories.** This pass spent itself accordingly: six of its eight foundations rows
+are **promotions of rows this KB has held for 198 passes without ever making them usable.**
+
+### 2. 🟢 The LTI gap, ninth pass — tested on a third instrument, and now explained
+
+Nine passes have recorded *no LTI 1.3 AI agent*. p324 tested it on changed queries against the REST
+search API. **This pass used GitHub code search, an instrument new to this KB:**
+
+| probe | instrument | result |
+|---|---|---|
+| `lti_1p3 mcp server tutor language:python` | code search | **0** |
+| `"pylti1p3" OR "ltijs" mcp agent tutor` | code search | **6 hits, none an agent** (2 were this KB's own files; 3 were ML training-set dumps; 1 a `pipreqs` requirements file) |
+| `IEP individualized education program generator LLM` | repo search | 0 — **and see finding 3, this one was wrong** |
+
+🟢 **And the supply side explained it.** `openfun/django-lti-toolbox` — **MIT, 14 ★, 34 commits,
+*"a Django application to build LTI Tool Providers"*, no release, last pushed `2024-11-14`** —
+roughly **twenty-three months untouched**, from the same operator whose MCP-era peers ship weekly,
+while that operator's own analytics UI (`openfun/warren`) **renders inside an LTI iframe**.
+
+🔵 **The reframing, which is worth more than the gap was:** the LTI plumbing is **permissive,
+published by a national public operator, working, and abandoned.** The absence of LTI agents is
+**not a tooling gap — it is agent-side non-adoption of a live standard.** That is trend 6's first
+piece of *positive* evidence (a measured decay date) after nine passes of arguing from absence, and
+it changes the client sentence from *"nobody has built it"* to *"the standard is maintained by
+nobody who is building agents — budget the integration or use MCP."*
+
+### 3. 🔴 The method failure, caught on this pass, and it sharpens p324's rule
+
+This pass searched **`special education IEP AI assistant pushed:>2026-01-01 stars:>3` → 0** and
+**`IEP individualized education program generator LLM` → 0**, and was one step from writing down a
+special-education gap. **This KB already holds `iblai/k-12-agents` — MIT, with a
+`special-education-agent` grounded in IDEA 2004, the thirteen disability categories and §504 —
+recorded at p288 precisely as the correction of a *"zero permissive for special education"* claim,
+and it holds `eakarsu/ai-special-education-iep-compliance` besides.**
+
+🔵 **p324's rule was: a declared gap is a statement about the query. The sharper rule this pass
+earned: a gap declared behind a star or recency filter is a statement about the filter.** The terms
+were right. `stars:>3` and `pushed:>2026-01-01` deleted the answer. **And the bias is systematic
+rather than random: the highest-stakes tiers — special education, compliance, assessment — are the
+ones most likely to be published by an institution or a single practitioner at two stars and left
+unpushed for a year.** A filter that screens for popularity screens *against* exactly the material
+a regulated engagement needs. Written into `intel/trends.md`.
+
+### 4. 🔴 Instrument caveat: this KB is now inside the corpus it searches
+
+Two of the six code-search hits for the LTI probe were
+`gmilano/education-kb/archive/2026-10-19-p315-pre-rewrite/repos-foundations.md` and
+`gmilano/education-kb/compose/code/p436-fork-hypothesis/homepage.2026-10-07.tsv`. **Its own history
+is indexed and returnable.** Every novelty measurement on the code channel from here must exclude
+`gmilano/*`, or the base will eventually score its own archive as new supply. Recorded now, while
+the contamination is 33% of one probe and still obvious.
+
+### 5. 🟢 New rows — nine, all licences first-hand, none above 14 ★
+
+| slug | licence (read first-hand this pass) | ★ | region | tier |
+|---|---|---|---|---|
+| `openfun/django-lti-toolbox` | 🟡 **MIT** — `LICENSE`, *Copyright (c) 2020-present GIP FUN MOOC.* | 14 | EMEA (FR) | LTI plumbing — **stale, see finding 2** |
+| `openfun/ashley` | 🟢 **MIT** — `LICENSE`, *Copyright (c) 2020-present GIP FUN MOOC.* | 12 | EMEA (FR) | multi-tenant course forum |
+| `openfun/potsie` | 🟢 **MIT** — `LICENSE.md`, *Copyright (c) 2021-present France Université Numérique* | 11 | EMEA (FR) | Grafana dashboards-as-code, 114 commits |
+| `dymchenkko/claude-study-agent` | 🟢 **MIT** — `LICENSE`, *Copyright (c) 2026 dymchenkko* | 2 | Global | study agent over **lecture recordings** |
+| `muhammedalakbarli/imparo` | 🟡 **MIT**, header *Copyright (c) 2017 Contributors* on a repo created 2026-07-01 | 2 | EMEA (**Azerbaijan**) | 154-skill national-curriculum graph |
+| `wildcat430524/Steps2Great-skill` | 🟢 **MIT** — `LICENSE`, *Copyright (c) 2026 StepsToGreat contributors* | 2 | APAC | Socratic mastery skill, 3-dimension gate |
+| `LucasSpinola/assistentes-educacionais-com-ia` | 🟢 **MIT** — `LICENSE`, *Copyright (c) 2026 Lucas Spinola e contribuidores…* | 2 | LATAM (**Brazil**) | pt-BR build-it-yourself track |
+| `Kyyota-Wang/cloverailab` | 🔴 **NO LICENCE** (7 names × 5 branches) | 0 | Global | eval — **QWK 0.825 vs official ETS anchors** |
+| `010Ankushsharma/AdaptaLearn` | 🔴 **NO LICENCE** (7 names × 5 branches) | 0 | APAC | DKVMN + PPO, 131M-interaction claim — **rejected** |
+
+🔵 **Two of the nine are the eval tier's recurring shape:** `cloverailab` publishes a defensible
+agreement figure — **LLM-as-judge against the published ETS rubric with officially scored anchors
+and no fine-tuning, QWK 0.825, harness committed** — and carries no grant, exactly as
+`EduGuardBench` did at p323. **The measured edge of educational-AI evaluation keeps arriving
+unlicensed.**
+
+### 6. 🟡 What the regional battery returned — fifth consecutive saturation, one real item
+
+The mandated eight searches ran in full. Global: nothing this base did not hold. Regional: North
+America, EMEA and APAC returned their own prior contents (and EMEA again returned *enterprise* AI
+material with **no education-specific result — a gap now five passes old**). **LATAM returned one
+genuinely new figure and it is worse news than the gap it fills** — detail and the two
+DNS-blocked primary sources in `intel/market.md`.
+
 ## 2026-10-19 — Pass 324 — the integrity gap this KB declared for seven passes is not empty, and the query was the thing that was wrong
 
 **Tenth pass of 2026-10-19.** One row added to `agents/top.md`, one to its evaluation table, **ten**

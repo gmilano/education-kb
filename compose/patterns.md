@@ -32,6 +32,114 @@ recipes, and that belongs in the SOW.
 
 ---
 
+## P12 — The measured-outcome public-school pilot: buy the evidence design, not the code — NEW in p325
+
+**The problem this solves.** Every education bid ends at the same question — *does it actually
+teach?* — and p323 established that the sector's usual answer (an LLM judge scoring helpfulness) is
+the wrong instrument, while p319's own favourite example published judged scores about itself.
+**This KB now holds exactly one artefact with a real classroom answer, and it cannot be used:**
+`JustinoLM/STI-matematicas` (Universidad Tecnológica de Panamá) — **74 students, three sixth-grade
+sections of a Panamanian public school, 710 practice sessions, pre→post 1.83 → 2.56 of 8,
+Wilcoxon p = 0.0012, r = 0.41, SUS 70.1** — and **no licence file at all** (seven filenames probed
+across five branch names), project finished, infrastructure decommissioned.
+
+🟢 **So take its *design* and run it on components that are licensed.** This pattern is the
+measurement protocol plus the permissive stack that can carry it. **It is the only pattern here
+whose deliverable is a number rather than a system** — the system is a means to the number.
+
+### What to wire, and why each piece
+
+| role | component | licence | why this one |
+|---|---|---|---|
+| **pedagogy decision layer** | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | Skill graph + **BKT** + **FSRS** + prerequisite rules behind MCP, SQLite local / PostgreSQL hosted. The mastery decision is **deterministic and inspectable** — the model never decides whether the learner has mastered anything |
+| **hint ladder** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | MIT | Read its hint sequencing, and mirror Panama's three rungs: *general strategy → step-by-step → a model-generated hint that points at the committed error without revealing the answer*. **The third rung is the only generative one** |
+| **event capture** | [`openfun/ralph`](https://github.com/openfun/ralph) | MIT | xAPI **LRS** to the ADL standard, from a national public operator. **Install it before the tutor, not after** — a pre/post claim needs an event history that predates the intervention, or there is nothing to measure against |
+| **teacher dashboard** | [`openfun/potsie`](https://github.com/openfun/potsie) | MIT | Grafana **dashboards-as-code** (Jsonnet/grafonnet) over the LRS. Reviewable in a pull request, on infrastructure a ministry already runs |
+| **retention scheduling** | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | MIT | If you need FSRS outside `tutor-mcp`'s implementation |
+| **enrolment / certificates** *(optional)* | [`openfun/joanie`](https://github.com/openfun/joanie) | MIT | Headless education ERP, when the pilot has to issue anything a learner keeps |
+| **leakage check** | [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | MIT | Pre-registered audit of whether a helpfulness judge rewards handing over the answer. **Run it against your own prompt before the pilot**, not after |
+| **pedagogical capability of the model** | [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 🟡 CC BY / CC BY-SA (contradictory — see `agents/top.md`) | The one peer-reviewed benchmark that scores pedagogy **with a trained reward model against real teacher utterances rather than an LLM judge** |
+| **calibration** *(optional)* | [`yjo2lee/knowsim`](https://github.com/yjo2lee/knowsim) | MIT | A learner simulator with a **known** knowledge state, for checking the tutor's confidence against what the learner actually knows |
+
+🔴 **Not in the stack, deliberately:** `JustinoLM/STI-matematicas` itself (no grant),
+`braivo/braivo` and `avps82/mentar` (**AGPL-3.0** — fine to run, fatal to link into client code),
+and any artefact whose only quality evidence is a self-reported judged score.
+
+### The privacy boundary — copy this verbatim, it is the first ministry question
+
+Panama's design is the cheapest defensible answer this KB has read, and **four of its five controls
+cost nothing**:
+
+1. **No student data in the repository, ever** — the validation data was never published.
+2. **Argon2** password hashing only.
+3. **Server-verified admin token** for administrative functions; **teachers scoped to their own
+   groups within their own school.**
+4. 🟢 **Prompts leave with anonymous placeholders substituted server-side — never student names.**
+   This is the control to put on the slide: it decouples *which model you call* from *what the model
+   learns about a child*. Panama's system calls **DeepSeek** from a public primary school on that
+   basis.
+5. **Grade-band gating and teacher-only modes** where the jurisdiction requires them (**P7**, **P9**).
+
+🔵 **Why this matters commercially: it converts the sovereignty objection into an engineering
+line item.** A buyer who believes they must have a sovereign model has an expensive problem; a buyer
+who needs *no identifiers to cross the boundary* has a middleware problem. Offer the sovereign path
+too (`compose` **P4**, **P21** — GWDG / AcademicCloud in the EU), but price the placeholder boundary
+first.
+
+### The measurement protocol — the actual deliverable
+
+**Stage 1 — instrument and baseline (2–3 weeks, before any AI is deployed).**
+Build an **8-item pre-test** per target skill, administered on paper or in the LMS, and stand up
+`ralph` so that baseline behaviour is already being recorded. Register the analysis **before data
+collection**: the primary outcome, the test, the effect-size measure and the exclusion rule. The two
+pre-registered audits in this KB (`conv-vs-ped-tutor`, `ability-levels-audit`) are the template, and
+p323's finding is why it matters — **difference-in-differences on a bounded rating scale can
+manufacture an effect from nothing.**
+
+**Stage 2 — the pilot (6–10 weeks).** Panama's scale is the realistic floor and it was enough for
+significance: **three class sections, ~74 learners, ~700 sessions.** Keep per-session events in the
+LRS, not in application logs.
+
+**Stage 3 — analysis, exactly this.**
+- Pre→post on the 8-item instrument, **paired**, reported as a mean change with n stated.
+- **Wilcoxon signed-rank** (not a t-test — these are bounded small-integer scores), with the
+  **effect size r** alongside the p-value. Panama: *p = 0.0012, r = 0.41 (medium)*.
+- **SUS** for perceived usability, n stated separately (learners who finished the survey ≠ learners
+  who practised). Panama: *70.1 / 100*.
+- Engagement as a **denominator-honest** figure: *65 of 74 completed at least one practice*, not
+  "74 students used it".
+
+**Stage 4 — the disclosure that makes the rest credible.** 🟢 **State the limit in the deliverable,
+in one sentence, before anyone asks:** *without a control group the improvement cannot be attributed
+to the system alone.* **Panama's README says exactly that, and it is why its numbers are worth
+quoting at all.** Then offer the fix as the next phase: **a waitlist or stepped-wedge control** —
+sections receive the system in sequence, so every class gets it and attribution becomes possible.
+**That is the second engagement, and it is an easier sell after an honest first one.**
+
+### What to sell, in order
+
+1. **Stage 1 alone is billable** — instrument design, pre-registration and an LRS that works is a
+   complete piece of work, and the client owns it whatever the pilot shows.
+2. **The pilot.** Deterministic mastery, three-rung hints, placeholder boundary, dashboards-as-code.
+3. **The attributable study.** Stepped-wedge, the number a ministry can act on.
+
+🔴 **The risk to name in the proposal, because it is real: the pilot may show nothing.** A medium
+effect from one school is the *good* case here. **Price Stages 1 and 2 so that a null result is
+still a delivered engagement** — an instrumented school, a reviewable dashboard, a pre-registered
+protocol and a permissive stack are assets regardless — and **never contract on an uplift target.**
+Every vendor in this sector promises one; p323's evidence is that most of those promises are
+measured with the wrong instrument.
+
+### Portability
+
+**LATAM first** — the Panama precedent, Spanish-language, public-school, and `repos/foundations.md`
+now carries a pt-BR enablement track (`LucasSpinola/assistentes-educacionais-com-ia`) for the
+knowledge-transfer line item. **EMEA next**, where the same stack is the public operator's own
+software (**P21**, **P22**) and the EU AI Act's high-risk duties for assessment make a
+pre-registered evidence file an asset rather than an overhead. **APAC as a build**, where
+`muhammedalakbarli/imparo`'s 154-skill graph and `wwlwgo/cn-primary-math-knowledge-graph` show what
+expressing a national curriculum costs.
+
 ## P11 — The academic-integrity evidence chain: sell the audit trail, never the verdict — NEW in p324
 
 **Why this pattern exists now.** For seven passes this KB told studio leads there was no credible
