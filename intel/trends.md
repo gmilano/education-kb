@@ -155,6 +155,99 @@ four times out of sixteen in a single org.** It is the second independent confir
 (the sector's published metadata is unreliable in both directions), now reproduced inside one
 account rather than across vendors.
 
+## Permissive at the edges, restricted at the core — second instance, and the core moved — NEW in p323
+
+p322 recorded a licence pattern inside Germany's publicly funded OER organisation: **permissive
+shells, GPL-3.0 analysers, and an unlicensed inference core.** It named the shape *licence by
+architectural layer*. **Pass 323 found the same sentence in a different structure, and the pairing
+is now a rule worth carrying into due diligence.**
+
+| | p322 — `openeduhub` (Germany, public sector) | p323 — `K12-KGraph` (China, academic) |
+|---|---|---|
+| Divides by | **Architectural layer**, across 16 repositories | **Artefact type**, inside one repository |
+| Permissive part | UI shells, REST wrappers, browser plugin, judge | **The whole pipeline — MIT** |
+| Restricted part | Analysers **GPL-3.0**; inference core **no licence at all** | **The curriculum, benchmark and training data — CC BY-NC-SA 4.0** |
+| What a sidebar badge tells you | Apache-2.0, four times wrongly | *"MIT licenses found"* — and the data is not MIT |
+
+**The rule: in educational AI, the permissive licence covers the part that was cheap to build.** The
+expensive part — the verified curriculum, the trained inference, the annotated corpus — is where the
+restriction sits, whether that restriction is NonCommercial, copyleft, or simply the absence of any
+grant. **This is not cynicism about the authors**; both projects are public goods and both are
+candid in their README text. It is a statement about where to look. **A licence check that reads the
+sidebar badge and stops will clear both of these projects for client work, and both would be
+wrong.**
+
+**What to do with it tomorrow:** on any educational-AI dependency, resolve the licence **separately
+for code, for data, and for model weights**, and record the answer per artefact rather than per
+repository. This KB has now verified **six licence inconsistencies** and two licence-split shapes;
+the split is more dangerous than the inconsistency, because nothing about it looks like an error.
+
+## The education-benchmark literature is outrunning its artefacts — NEW in p323
+
+p322 retired a five-pass gap and declared the evaluation layer *"a real and usable tier."* **That
+holds. But pass 323 touched four 2026 education benchmarks and the supply picture is worse than the
+publication picture:**
+
+| Benchmark | Venue / date | Code | Licence |
+|---|---|---|---|
+| **EduGuardBench** | arXiv 2511.06890, **AAAI proceedings** (art. 40399) | **Yes** — 2 datasets, scripts, notebook, appendix | 🔴 **none** |
+| **EduClaw-Bench** | arXiv 2608.03206, 4 Aug 2026 | **Anonymous review link only** | n/a |
+| **EduFair-Bench** | arXiv 2609.12949, 11 Sep 2026 (EPFL) | **none found** | n/a |
+| **ELBench** | arXiv 2608.09548, 10–11 Aug 2026 | **none found** | n/a |
+
+**Four papers, one repository, zero licences.** The one artefact that shipped is the one published
+in conference proceedings — and it has no LICENSE file, so it cannot enter a deliverable.
+
+**Three findings from these papers that a studio can use without any of the code:**
+
+1. **Capability and fairness are largely orthogonal** (EduFair-Bench). A stronger model is not a
+   fairer tutor, so model upgrades are not a fairness remediation. **And the gaps are largest on
+   language and immigration cues, not gender and SES** — the opposite of where fairness review
+   effort usually goes. For any EMEA or North American public-sector bid, this reorders the test
+   plan.
+2. **Safety is not monotonic in model size** (EduGuardBench). Mid-sized models were the most
+   vulnerable to persona-based academic-misconduct prompts. **"We used a bigger model" is not a
+   safety argument.** The same paper's *Educational Transformation Effect* is the useful positive:
+   the safest models convert a harmful request into a teachable moment, and that capacity is
+   **strongly negatively correlated with attack success rate** — pedagogy and safety aligned, which
+   is rare enough to design toward.
+3. **Education-specialised models lead neither education module** (ELBench, over nine models). The
+   premise that a domain-tuned education model beats a frontier general model on education tasks did
+   not hold in the one multi-module comparison published this year. **Authors' own caveats: the data
+   is synthetic and the benchmark text-only.**
+
+**The practical read:** evaluation in this sector is still something an engagement *builds*, using
+MathTutorBench's task shapes and the pre-registered audits' discipline (freeze the data, hash it,
+keep a decisions log). **The 2026 benchmark literature is a source of test design, not a source of
+tooling** — and anyone claiming an off-the-shelf pedagogical eval suite should be asked which
+repository and which licence.
+
+## The skill tier can carry a personality-rights payload — NEW in p323
+
+Trend 7 has read the skill-as-unit shift as a packaging and licensing story. **Pass 323 found a
+sub-pattern it had not anticipated: permissively licensed skills whose product value is a named,
+living educator's teaching persona.**
+
+`tong666-bit/liu-xiaoyan-skill` (**MIT**, 18 ★) teaches CET-4/6 and postgraduate-entrance English
+*in the style of* 刘晓艳; its sibling `tong666-bit/song-hao-math` (4 ★) does the same for 宋浩.
+**Both disclaim clearly and unprompted** — *"非本人、非官方出品"* (not by the person, not an official
+product), *"刘晓艳风格，非官方"*, and an explicit statement that the class-style lines *"不冒充老师
+原话"*, they do not pass themselves off as the teacher's actual words.
+
+**The structural point: an MIT licence grants rights in code and grants nothing in a persona.** Name,
+likeness and teaching identity are personality / right-of-publicity interests held by the
+individual, and they do not travel with the repository's licence. **A permissive badge therefore
+clears the code and leaves the actual exposure untouched**, which makes this a third variety of the
+licence-split problem above — code permissive, the valuable thing not licensed at all, and in this
+case not licensable by the repository author.
+
+**Guidance:** read these skills for the pedagogy — the attributed-style framing is a genuinely
+effective engagement device and the exam-prep structure is well built. **Never reproduce the persona
+framing in a Globant deliverable**, and treat any client request to "make it teach like
+[named person]" as a legal question before a technical one. **Currently an APAC-only pattern**
+(four of the ten repositories on the first page of the new-supply sweep are Chinese-language
+exam-prep skills). Watch for its arrival in Western skill registries; it has not appeared there yet.
+
 ## 1. Institutional AI deployment is not landing — and that, not adoption, is the gap
 
 Earlier passes framed this sector as "usage is ahead of governance". The Digital Education Council
@@ -538,7 +631,49 @@ PageLM's feature set, cn-math-taxonomy's prerequisite graph, advisingapp's stude
 model, lumen's eval harness and LTLTutor's misconception modelling is genuinely valuable. It is
 just not a bill of materials.
 
-## 12. Curriculum-standard data is the real moat — and exactly one country has built it — NEW in p319
+## 12. Curriculum-standard data is the real moat — two countries have built it, and exactly one licensed it for commercial use — NEW in p319, **headline corrected in p323**
+
+> **🔴 CORRECTION, pass 323.** This trend's headline read *"exactly one country has built it"* for
+> four passes. **It was wrong, and the artefact that disproves it has 420 stars and a NeurIPS 2026
+> acceptance.** `haolpku/K12-KGraph` (`repos/foundations.md`) publishes **China's PEP K-12
+> curriculum** as an evidence-linked knowledge graph: **10,685 nodes and 23,278 edges across 9 edge
+> types over 48 textbooks**, **every edge carrying an `evidence` field linking back to textbook
+> source text**, verified by **12 subject-qualified expert annotators at Fleiss' κ = 0.84** with
+> **DAG validation of the `is_a` and `prerequisites_for` subgraphs** and a 3-expert spot-check at
+> **98.4% fully correct**, plus a **23,640-question benchmark**, 2,267 training pairs and three
+> released checkpoints. **That is the `bncc-dev` discipline, peer-reviewed, in a second
+> jurisdiction.**
+>
+> **What survives, and it is the part that matters commercially.** K12-KGraph's README splits the
+> grant: *"Code (this repository): MIT"* and *"Dataset (graph, benchmark, training data):
+> CC BY-NC-SA 4.0."* **The pipeline is reusable and the curriculum is not** — NonCommercial rules
+> out client work, and ShareAlike would attach to any derivative graph. **Brazil's `bncc-dev`
+> remains the only verified national curriculum in this KB whose *data* Globant can ship**
+> (MIT pipeline, **CC BY 4.0 data**). So the moat is real and the sentence changes: **the artefact
+> has been built twice and licensed for commercial use once.**
+>
+> **Two further claims in this trend are retired by the same finding:**
+>
+> - ~~*"At 22 stars, nobody is competing for this yet."*~~ **Someone is.** 420 stars, 67 forks and a
+>   NeurIPS Evaluations & Datasets acceptance, with academic backing, in China. The build-once
+>   window is narrower than p319 priced it — see `compose/patterns.md` P10.
+> - ~~*"India … hold no verified curriculum dataset at all."*~~ **Contested, not empty.**
+>   `razi-03/NCERT-CKG` exists (Class X Mathematics, 18 NCERT PDFs, 10,417 CKG nodes, **1,682 / 1,682
+>   semantic nodes with provenance**, 13,757 provenance-aware edges) and separates prerequisite
+>   reasoning from textbook ordering, which is the right method. **It has no LICENSE file, 0 stars
+>   and two commits**, so it does not close the gap — but p322 declared the gap empty after sweeping
+>   180 repositories in the `ncert` and `cbse` topics, and **a changed query found this in one
+>   search.**
+>
+> **The method lesson, now on its third consecutive instance:** p318 declared `AITutor-EvalKit`
+> nonexistent and p322 found it by searching the tool name; p322 declared the Indian curriculum
+> artefact nonexistent and p323 found one by searching the *artefact type* instead of the country
+> topic. **A topic sweep is a query, not a census.** And note which sweep was *not* needed: p319's
+> rule was to search GitHub topics in the region's own language, and p319's untested list named
+> Arabic, Hindi, Japanese, Korean, French and Indonesian — **Chinese was never on that list, and the
+> Chinese artefact was found this pass in English.** The language rule holds; it is not the only
+> binding constraint.
+
 
 Every pattern in this KB grounds a tutor in "the client's curriculum" and quietly assumes the
 curriculum is available as data. **Pass 319 checked that assumption across five languages of
@@ -582,7 +717,9 @@ Ed-Fi (`repos/foundations.md`) covers North American **rostering**, which is a d
    ministry, a national edtech. Pattern **P10**.
 3. **It is a procurement moat, not a technical one.** Whoever holds the verified curriculum layer
    for a jurisdiction is in every bid in that jurisdiction, because the alternative is each vendor
-   re-deriving it badly. At 22 stars, nobody is competing for this yet.
+   re-deriving it badly. ~~At 22 stars, nobody is competing for this yet.~~ **Retired in p323: at
+   420 stars and a NeurIPS acceptance, someone is competing — in China, and with the data licensed
+   NonCommercial.** The jurisdictions still uncontested are the ones to pick.
 
 **The method behind the trend, worth copying on its own:** this was found by sweeping GitHub topics
 **in the region's own language** (`educacao`, `educacion`, `bildung`, `onderwijs`, plus `ncert` and

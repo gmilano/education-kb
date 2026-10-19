@@ -5,6 +5,130 @@ updated: 2026-10-19
 ---
 # Top open source AI agents — education
 
+## Pass 323 · 2026-10-19 (ninth pass of this date) — two new rows, one unlicensed benchmark, and a trend headline retracted
+
+**Two rows added here, one to the evaluation table, three to `repos/foundations.md`, four
+repositories recorded below the listing bar, two named gaps from p322 executed and still empty, and
+one open question from p319 closed with a negative answer.** Nine repositories read first-hand.
+
+**The pass's finding is not in this file.** `haolpku/K12-KGraph` — 420 ★, 67 forks, **NeurIPS 2026
+Evaluations & Datasets Track**, China's PEP K-12 curriculum as an evidence-linked knowledge graph
+with 12 expert annotators at Fleiss' κ = 0.84 — **makes `intel/trends.md` trend 12's headline
+("exactly one country has built it") wrong.** Two countries have. **Exactly one licensed the data
+for commercial use:** K12-KGraph splits *"Code (this repository): MIT"* from *"Dataset (graph,
+benchmark, training data): CC BY-NC-SA 4.0."* Full read in `repos/foundations.md`.
+
+**The licence shape is new and it pairs with p322's.** p322 found licences dividing **by
+architectural layer** inside one organisation — permissive shells, GPL analysers, unlicensed
+inference core. This pass found licences dividing **by artefact type** inside one repository —
+permissive code, NonCommercial data. **Both are the same sentence: permissive at the edges,
+restricted at the thing that actually took the work.** In Germany it was the inference core; in
+China it is the curriculum. A studio that reads only the sidebar badge gets both wrong.
+
+### The method lesson, and this is its third consecutive instance
+
+p318 declared `AITutor-EvalKit` nonexistent; p322 found it by searching the paper's tool name and
+wrote down the lesson. **p322 then swept the `ncert` and `cbse` topics — 180 repositories — and
+declared "no verified curriculum dataset at all."** This pass changed the query to *curriculum
+knowledge graph / prerequisite* and found two artefacts the topic sweep could not see, one of them
+the largest in this KB. **A topic sweep is a query, not a census, and a declared gap must be
+re-tested with a changed query — which is now the third time this file has had to say so.**
+
+### What is new in the table
+
+- **`zhangl1001/civil-ai` (MIT, 41 ★, 100 commits)** — **the highest-starred education agent pushed
+  since 2026-10-01**, and a *foundation* rather than an app by its own careful statement. Local-first
+  on iOS and Web, storage behind repository ports, an agent runtime with checkpoints, leases,
+  cancellation and recovery, and an evidence-based capability model with mastery projection. **It
+  volunteers its own weakness** — domain portability unvalidated, both bundled packages exam-style.
+  APAC-authored.
+- **`ibenian/algebench` (MIT, 8 ★, 519 commits)** — an **interruptible** 3D maths narrator: stop the
+  scene, ask why, watch the visualisation answer. Gemini-only BYOK keeps it out of the dependency
+  tier. **519 commits at 8 stars is the second measured instance of this file's p320 lesson that a
+  star count is not a volume measure.**
+
+### The eval tier gained its first in-proceedings artefact, and it has no licence
+
+**`YL1N/EduGuardBench` — 🔴 NO LICENCE, 5 ★, 2 commits — arXiv 2511.06890, AAAI proceedings
+(article 40399).** Role-playing Fidelity Score for teacher-simulation fidelity; persona-based
+adversarial prompts for academic misconduct scored by Attack Success Rate and a three-tier refusal
+assessment; 14 models. **Two results worth a bid slide:** the safest models convert harmful requests
+into teachable moments via *Educational Refusals*, a capacity **strongly negatively correlated with
+ASR** — safety and pedagogy pulling the same direction for once — and a **scaling paradox** in which
+mid-sized models are the most vulnerable, so "bigger is safer" is false in this domain. **It ships
+its two datasets as `.xlsx`, its scripts, a notebook and an appendix PDF, with empty `Results/`
+folders — and no LICENSE file.**
+
+**The correction this forces on p322, stated narrowly.** One pass ago this file retired the
+five-pass gap *"no credible open source way to evaluate pedagogical quality"* and called the eval
+layer **"a real and usable tier."** That stands — MathTutorBench, AITutor-EvalKit and the two
+pre-registered audits are all still there and all still usable. **But the tier's newest entrant, and
+the only one published in conference proceedings rather than on arXiv alone, cannot be used.** The
+tier is real; its peer-reviewed edge is not yet licensed. **And of the four 2026 education
+benchmarks this pass touched — EduGuardBench, EduClaw-Bench, EduFair-Bench, ELBench — one has code
+without a licence and three have no code at all.** That is the actual state of educational-AI
+evaluation in late 2026: the papers are arriving much faster than the artefacts.
+
+### Both p322-named gaps, executed
+
+- **EduClaw-Bench (arXiv 2608.03206)** — 55 scenarios (11 learner personalities × 5 study schedules)
+  over **30 virtual days** each, scored on learning gain, responsiveness and helpfulness plus Gagné
+  and Rosenshine curriculum-design axes. Unggi Lee +5, 4 Aug 2026. **Still only the anonymous review
+  link** `anonymous.4open.science/r/educlaw-bench-anonymous-ED3F`. The author name was searched
+  directly this pass as well; no named repository, no licence.
+- **EduFair-Bench (arXiv 2609.12949)** — EPFL (Zhao, Radmehr, Fawzi, Nazaretsky, Käser), 11 Sep
+  2026; nine demographic levels over gender, immigration background, first language and SES. **No
+  repository, no licence.** Its two findings are usable without the code: **capability and fairness
+  are largely orthogonal**, and **language and immigration cues produce larger gaps than gender and
+  SES** — which is not where fairness review effort usually goes.
+- **ELBench (arXiv 2608.09548)**, new to this KB, no code: four modules over nine models, and
+  **the education-specialised models lead neither education module.** Authors state the data is
+  synthetic and the benchmark text-only. Snippet-and-abstract sourced, not read first-hand.
+
+### Recorded below the listing bar — permissive, real, too thin to list
+
+Consistent with the p322 rejection of `CristianHeyde/language-teaching-skills` on weight alone:
+
+- **`fcescob/understand` (MIT, 5 ★, 6 commits)** — **the most explicit mastery gate in this KB.** A
+  stage passes only **cold, unprompted**: explain it, give an example *and a near miss*, name a
+  misconception, transfer it to a new context — and **retention counts only on a later-day pass**,
+  on a **1 / 3 / 7 / 21 / 60-day ladder**, with per-answer confidence 1–5 and hints before answers.
+  Installs to Claude Code, oh-my-pi, Codex. Documents its own portability defect: **claude.ai
+  uploads and the Skills API reject it over its frontmatter fields.** Read the gate, not the repo.
+- **`fanfanfanfanfan626/mastery-tutor` (MIT, 3 ★, 19 commits, v0.4.1)** — `mastery-coach` plus
+  `mastery-tool-creator`, guided HTML lessons, one local classroom per thread, state in `.mastery/`,
+  no account and no hosted database; records **how much help was needed** and can mark earlier
+  mastery **fragile**. Names no scheduling algorithm. **Says of itself "research-informed, not
+  outcome-proven" and tests software and teaching contracts rather than learning outcomes** — the
+  honest version of the claim every vendor here makes.
+- **`grey8-io/learn-ai-with-grey8` (10 ★)** and **`CGSeb/lessonfolk` (3 ★)** — courses about AI with
+  a tutor attached. Curriculum content, not agent dependencies.
+
+### The APAC skill tier has a personality-rights problem, and this KB has not raised it before
+
+**`tong666-bit/liu-xiaoyan-skill` (MIT, 18 ★, 6 commits)** teaches CET-4/6 and postgraduate-entrance
+English *in the teaching style of a named, living educator* (刘晓艳); its sibling
+**`tong666-bit/song-hao-math` (4 ★)** does the same for 宋浩 across calculus, linear algebra,
+probability and complex analysis. **The disclaiming is explicit and unprompted** — *"非本人、非官方
+出品"* (not by the person, not an official product), About reads *"刘晓艳风格，非官方"*, and the README
+states the class-style lines *"不冒充老师原话"*, they do not pass themselves off as the teacher's
+actual words.
+
+**The point for a studio: the MIT licence covers the code and says nothing about the persona.** The
+product value here is a named individual's pedagogical identity, and right-of-publicity exposure
+travels with whoever ships it. **Read these for the pedagogy; never carry the persona framing into a
+client deliverable.** Trend 7 has treated skills as a packaging story — this is the first evidence
+that the packaging can carry a legal payload. No equivalent exists in the Western skill tier yet.
+
+### The new-supply tail, measured
+
+GitHub repositories matching *education / AI / tutor / agent* **pushed since 2026-10-01**, sorted by
+stars: **the first page holds ten results and the top one has 41 stars.** Four of ten are
+Chinese-language exam-prep skills, three are courses about AI, three are local-first mastery tutors
+at 3–8 stars. **Nothing with real weight entered this category in three weeks, and what did enter is
+skill-shaped and disproportionately APAC-authored.** Both reinforce trend 7; neither supports a
+claim that this tier is consolidating.
+
 ## Pass 322 · 2026-10-19 (eighth pass of this date) — the `openeduhub` org, enumerated in full, and the finding is licence-by-layer
 
 **Three rows added here, one to the evaluation table, twelve to `repos/foundations.md`, one measured
@@ -135,6 +259,8 @@ commit count, release cadence and licence.**
 
 | Agent | Repo | Licence | ★ | Checked | What it does | Use it for |
 |---|---|---|---|---|---|---|
+| civil-ai | https://github.com/zhangl1001/civil-ai | MIT (sidebar + LICENSE) | 41 | p323 | **A reusable, local-first foundation for adaptive education agents on iOS and Web** — its own words: *"Civil AI is a reusable, local-first foundation for building adaptive education Agents on iOS and Web"*, with the Chinese civil-service-exam package as *"the current end-to-end reference adapter"* that *"does not define the scope of the foundation."* Vue 3 + TypeScript, Capacitor iOS shell; **SQLite on iOS and IndexedDB on Web behind repository ports**, with migrations; Anthropic and OpenAI-compatible provider gateway with providers as replaceable adapters; agent runtime with tools, skills, **checkpoints, leases, cancellation and recovery**; an *"evidence-based capability model"* with mastery projection and review priority, and spaced review in the reference app (no algorithm named). English README with a Chinese positioning section; 100 commits, 7 forks; docs reference a v1.2.0 upgrade guide, Releases empty | **The highest-starred education agent pushed since 2026-10-01, and the only artefact in this KB that separates an education-agent runtime from its exam adapter on purpose.** Read it for the ports-and-adapters shape when a client wants one tutor engine across several subjects — and read its own caveat first: **it states that domain portability is unvalidated because both bundled packages are exam-style, question-driven study** |
+| algebench | https://github.com/ibenian/algebench | MIT (sidebar) | 8 | p323 | **Interactive 3D mathematics visualiser with an interruptible AI narrator**: the learner stops a running lesson scene to ask what/how/why and the narrator answers in real time while the visualisation responds, with step-by-step proofs and a semantic graph kept in sync with the 3D view. Scenes built from adjustable parameters and live simulations; Three.js frontend; **lessons stored as JSON files**; runs via a `./algebench` script or Docker image on localhost. **Google Gemini only, bring-your-own-key.** 519 commits, 1 fork | **The interruption is the pedagogy** — this is the only artefact here where the learner controls the explanation mid-stream rather than after it, and lessons-as-JSON makes the scene format readable. **Not a dependency: Gemini-only means the model is not pluggable as shipped**, the same disqualifier this file applied to GradeMate. **519 commits at 8 stars — see the p320 lesson on star counts** |
 | lernpfadeditor | https://github.com/openeduhub/lernpfadeditor | **Apache-2.0** (sidebar + LICENSE) | 0 | p322 | **AI-assisted editor for differentiated learning paths** (*"Ein KI-gestützter Editor zur Erstellung differenzierter Lernpfade"*), built for WirLernenOnline.de: generates a path template from a natural-language description, performs automatic internal differentiation (*Binnendifferenzierung*) into tiered tasks, and ranks WLO resources for assignment to each step. **GPT-4o** for template generation and resource ranking, **Whisper** for dictation, **up to 20 parallel AI calls**; React + TypeScript + Vite, TailwindCSS, Zustand; needs Node 18+ and an OpenAI key. 6 commits | **Differentiation is the teacher-facing feature clients ask for by name and this KB had no permissive implementation of it.** 6 commits is a prototype — read the differentiation prompt design, not the code |
 | metadata-agent-canvas | https://github.com/openeduhub/metadata-agent-canvas | 🟡 **README claims Apache-2.0 — no licence file in the root listing** | 0 | p322 | **Human-in-the-loop metadata canvas**: an Angular web component that fills schema fields from a text in parallel via LLM, shows each extracted value with a **confidence badge** for inline editing, validates required fields against controlled vocabularies, normalises values, enriches addresses with geocoordinates (Photon/OpenStreetMap through a server-side proxy) and ends on an explicit *Bestätigen* confirm step before JSON download or submission to the WLO repository. Standalone, bookmarklet and browser-plugin modes. Angular 19, Angular Material, RxJS, **LangChain (`@langchain/openai`)**, Netlify Functions / Vercel / Docker+nginx. Providers: OpenAI direct, B-API→OpenAI, **B-API→AcademicCloud (DeepSeek-R1)**. 60 commits — the most-developed AI artefact in the org | **The review-UI pattern this KB has been describing in the abstract since p317, implemented.** Confidence badge → inline edit → explicit confirm is the shape a human-oversight requirement actually takes in a product. 🔴 **Do not depend on it:** the README states Apache-2.0 and the repository root carries no licence file, so the grant is unverified — read it for the interaction design |
 | metadata-browser-plugin-fuerAPI | https://github.com/openeduhub/metadata-browser-plugin-fuerAPI | **Apache-2.0** (sidebar + LICENSE) | 0 | p322 | **Manifest V3 extension for Chrome and Edge (v2.1.0)** that indexes educational resources from the page the teacher is on: extracts metadata *per KI*, lets the user review it, and uploads to the WLO repository **either signed in or as a guest**; plus a "shopping cart" that collects materials into a printable lesson plan, and a watch list and upload history. Calls a deployed backend at `metadata-agent-api.vercel.app` — `/generate` for extraction, `/upload` for guest submission. 11 commits, 1 fork | **The browser is the capture surface for teacher-contributed OER, and this is a working instance of it.** Also the clearest evidence in this KB that the metadata-agent line is deployed, not just committed: the plugin points at a live Vercel host |
@@ -174,6 +300,7 @@ and they do not agree with the way this sector reports quality.
 
 | Artefact | Repo | Licence | ★ | Commits | What it is |
 |---|---|---|---|---|---|
+| EduGuardBench | https://github.com/YL1N/EduGuardBench | 🔴 **NO LICENCE** (no sidebar licence entry, no LICENSE file) | 5 | 2 | **The eval tier's first artefact published in conference proceedings — and the only one that cannot be used.** arXiv 2511.06890 (10 Nov 2025), **AAAI proceedings article 40399**; Yilin Jiang +7. Dual-component: a **Role-playing Fidelity Score (RFS)** for professional teacher-simulation fidelity, and **persona-based adversarial prompts** targeting general harms and specifically **academic misconduct**, scored by **Attack Success Rate (ASR)** and a **three-tier refusal-quality** assessment, across **14 models**. Ships `SATAs.xlsx` (Select-All-That-Apply teaching-harm items), `adversarial_prompts.xlsx`, Python scripts for both experiments, a shared utilities folder, an analysis/figures notebook and a full appendix PDF (scenarios, ethics taxonomies, dataset design, annotation guidelines) — **with empty `Results/` folders.** Two results worth quoting: an **"Educational Transformation Effect"** in which the safest models convert harmful requests into teachable moments as ideal **Educational Refusals**, a capacity **strongly negatively correlated with ASR**; and a **scaling paradox** in which mid-sized models are the most vulnerable, so safety is **not monotonic in model size**. **Read the paper and the appendix; the repository has no grant, so its data and scripts cannot enter a deliverable** |
 | llm-judge | https://github.com/openeduhub/llm-judge | **Apache-2.0** (sidebar + README + LICENSE) | 0 | 1 | **A factual-accuracy judge for educational content, published by a public OER operator** — *"KI-gestütztes Bewertungstool für Sachrichtigkeit von Bildungsinhalten"*. Scores the description field of a learning object (`cclom:general_description`) against **six criteria declared in `config.yaml`**: factual correctness, clarity and comprehensibility, objectivity, relevance, structure and length, language and style. Input is JSON with `node.properties` and a `sys:node-uuid`; single or batch; `gpt-4o-mini` default or `gpt-4o` via `MODEL_ID`, with an optional `BASE_URL` to point at a different endpoint; 30 s default API timeout. Outputs CSV scores, JSON with improvement suggestions, and interactive charts — **1 commit** — this is a published intent, not a tool. And note what it judges: **content accuracy, not pedagogy.** It is the complement to the four pedagogical evaluators above, not a substitute, and the README states neither the scoring scale, the prompts nor the aggregation — so its numbers are not comparable to anything |
 | ki-prompt-benchmark | https://github.com/openeduhub/ki-prompt-benchmark | Apache-2.0 | 0 | 3 | **An LLM-as-judge prompt bench published by a public OER operator.** Compares the metadata-generation prompts live in edu-sharing's `mds.xml` v10.0 against an optimised set: a judge model scores both on **five criteria, 1–10**, names a winner and gives a rationale, while the harness measures generation time and token usage across providers (OpenAI direct, B-API→OpenAI, **AcademicCloud**). Test material can be a sample, a WLO repository item or any URL via a text-extraction service. Judge feedback is accumulated across runs to regenerate an improved prompt per field, and prompt sets export back to `mds.xml`. Next.js 15 / React 19 / TS 5 |
 | MathTutorBench | https://github.com/eth-lre/mathtutorbench | **CC BY 4.0 badge / CC BY-SA 4.0 footer — contradictory, see below** | 45 | 25 | Peer-reviewed benchmark for open-ended pedagogical capability: 3 teacher skills, 7 tasks, 9 configs — problem solving, socratic questioning, solution correctness, mistake location, mistake correction, plus four pedagogy win-rate tasks. **Pedagogy is scored by a ~1.5B scaffolding reward model against ground-truth teacher utterances, not by an LLM judge.** EMNLP 2025 main, oral (arXiv 2502.18940); Macina, Daheim, Hakimi, Kapur, Gurevych, Sachan; reward-model data on Hugging Face (`dmacjam/pedagogical-rewardmodel-data`) |
@@ -397,6 +524,30 @@ file, never the badge.
 
 **Pass 320 added five rejections and no rows. They are listed first.**
 
+**Pass 323 added two rejections, both of them artefacts this KB wanted to exist.**
+
+- **`YL1N/EduGuardBench` — NO LICENCE, and it is in the AAAI proceedings.** 5 ★, 3 forks, 2
+  commits. Full read in the evaluation table above. **It is listed there rather than only here
+  because the measurement it defines is usable even though the repository is not** — RFS, ASR and
+  the three-tier refusal assessment are described in the paper and the appendix PDF, and a studio can
+  implement them. **What cannot be used is the shipped material**: two `.xlsx` datasets and the
+  experiment scripts carry no grant. **This is the first unlicensed artefact in this KB's eval tier
+  and the fourth consecutive pass to record a peer-reviewed education artefact whose repository has
+  no licence file.** Ask the authors — a one-line LICENSE commit would make an AAAI-published
+  safety benchmark immediately usable, and that is a cheap ask.
+- **`razi-03/NCERT-CKG` — NO LICENCE, 0 ★, 2 commits, one grade of one subject.** Class X
+  NCERT Mathematics from 18 PDFs into CKG JSON: **10,417 CKG nodes, 1,682 semantic nodes with
+  provenance at 1,682 / 1,682** (*"every semantic node is required to have source evidence"*) and
+  **13,757 provenance-aware edges**. **Rejected on licence and weight, recorded because the method is
+  right:** *"prerequisite reasoning is treated separately from textbook ordering"* and a
+  prerequisite *"must instead be supported by conceptual dependency evidence or an explicit inference
+  procedure"* — the discipline this file praised in `bncc-dev` and faulted `jinanshm/ncert-mcp`
+  for lacking. Two things the README does not say and both matter: **nothing about textbook
+  copyright or whether the 18 NCERT PDFs are bundled**, and nothing about whether an LLM derived the
+  edges — it never mentions an LLM at all, so this is unknown rather than concealed. **It makes
+  India's curriculum gap contested rather than empty. Watch the licence; ask the author.** See
+  `repos/foundations.md` and pattern P10 Variant B.
+
 - **`Willie-Liao/lesson-library` — NO LICENCE, and 1 commit.** 0 ★. An MCP server for teachers in
   which an agent searches a lesson library, folds near-duplicate materials together with vector
   search, proposes progression/regression/related links, and **stages every change for teacher
@@ -497,15 +648,16 @@ file, never the badge.
   call it an early research prototype and **no GitHub repository or licence could be found this
   pass.** Cite the paper as evidence that the eval problem is being worked; do not plan on the code.
 
-## Licence split, recounted over 26
+## Licence split, recounted over 28
 
-MIT (14 — FSRS4Anki, iblai/os, anki-mcp-server, Educhain, Bloom, OATutor, OpenTutor, tutor-mcp,
-Study-Mate, instructional_agents, universal-examprep-skill, claudemy, algo-sensei, Claw-ED),
+MIT (16 — FSRS4Anki, iblai/os, anki-mcp-server, Educhain, Bloom, OATutor, OpenTutor, tutor-mcp,
+Study-Mate, instructional_agents, universal-examprep-skill, claudemy, algo-sensei, Claw-ED,
+**civil-ai**, **algebench**),
 BSD-3-Clause (3 — nbgrader, otter-grader, Open TutorAI CE), Apache-2.0 (3 — DeepTutor, smolagents,
 lineage-skill), **GPL-3.0 (3 — tutor-gpt, lumen, LTLTutor)**, dual MIT/AGPL-3.0 (1 —
 human-skill-tree, skills only), CC0-1.0 (1 — gen-mentor), CC BY-SA 4.0 (1 — education-agent-skills).
 
-**22 of 26 carry a permissive *software* licence Globant can build on commercially** (counting
+**24 of 28 carry a permissive *software* licence Globant can build on commercially** (counting
 human-skill-tree's skills half, and excluding its AGPL app). The exceptions are three copyleft
 agents and two content/dedication licences, all flagged above.
 
@@ -533,11 +685,15 @@ AGPL AI-native LMS rows there — without changing the architectural advice.
 - **No *usably licensed* open source LTI 1.3 agent. Re-checked directly, and the count of
   unlicensed artefacts at this seam went from two to three** — `blamb/lti-tutor` (0 ★, 39 commits,
   "To be decided") and now `JaimeArriagadaRosas/Plugin-Feedback-Canvas` (0 ★, 160 commits, Canvas
-  LTI 1.3 with instructor approval, Spanish docs, no LICENSE). `pylti1.3` (MIT, re-verified p319:
-  138 ★, 84 forks, 178 commits, 39 open issues, **no published release**) is still the solid
-  Python library; **`tsugiproject/tsugi` (Apache-2.0, 4,011 commits) is the newly recorded
-  alternative** with an unresolved question about which LTI versions it implements
-  (`repos/foundations.md`).
+  LTI 1.3 with instructor approval, Spanish docs, no LICENSE). `pylti1.3` (MIT, re-verified p319: 138 ★, 84 forks, 178 commits, 39 open issues, **no published
+  release**) is still the solid Python library. **The p319 question about `tsugiproject/tsugi` is
+  closed this pass, and the answer is that the repository does not say:** Apache-2.0, 376 ★, 266
+  forks, **4,011 commits, Releases section empty**, and the README **names no LTI version at all** —
+  only *"a multi-tenant scalable LTI library and tool hosting environment"* and *"implements an IMS
+  ContentItem App store"* (ContentItem being the LTI 1.1-era content-selection message, which hints
+  at the older generation without declaring it). **An LTI integration cannot be scoped from Tsugi's
+  README**, so the concentration risk is unrelieved: one maintained library, no release tags, and
+  the only alternative does not state what it speaks (`repos/foundations.md`).
 - ~~**No credible open source way to evaluate pedagogical quality.**~~ **RETIRED this pass.** Five
   passes declared it, pass 318 searched for `AITutor-EvalKit` and concluded "no repository located."
   **That was wrong: `kaushal0494/AITutor-EvalKit` exists, is MIT and is public** (3 ★, 8 commits,

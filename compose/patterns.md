@@ -737,10 +737,37 @@ rates ran from **88% down to 3%** — so **no model choice closes a 30-point gro
 
 **Estimate:** 5–7 weeks on top of P1, most of it in step 3 (mapping client material to codes).
 
-### Variant B — India, where the artefact does not exist and the mandate is dated
+### Variant B — India, where the artefact barely exists and the mandate is dated
 
-**The gap, measured this pass:** GitHub's `ncert` and `cbse` topics hold 180 repositories and
-**nothing above 15 stars that is curriculum infrastructure.** The one MCP server
+> **🟡 UPDATE, pass 323.** This variant's premise was *"the artefact does not exist."* **It now
+> partly does, and it has no licence.** `razi-03/NCERT-CKG` (`repos/foundations.md`) covers **Class X
+> NCERT Mathematics from 18 PDFs**: **10,417 CKG nodes, 1,682 semantic nodes with provenance at
+> 1,682 / 1,682, 13,757 provenance-aware edges** — and it **separates prerequisite reasoning from
+> textbook ordering**, explicitly refusing to treat chapter order as prerequisite evidence. **That is
+> step 1 of the build below, done correctly, by someone else, on one grade of one subject.**
+>
+> **What this changes about the engagement, concretely:**
+>
+> - **Step 0 is now "talk to `razi-03`."** 0 stars, 0 forks, **two commits, no LICENSE file**. A
+>   permissive licence on that repository would hand this build a verified Class X Mathematics seed
+>   and a method already aligned with Brazil's. **That is the cheapest possible acceleration of a
+>   10–14 week build, and it costs one email.** If the answer is no, nothing is lost — the method
+>   below is unchanged.
+> - **Two unknowns to resolve before using any of it:** the README says **nothing about textbook
+>   copyright or whether the 18 NCERT PDFs are bundled** (this KB has already recorded one NCERT
+>   project that bundles textbook PDFs, and that is a live copyright question), and it **never
+>   mentions an LLM**, so whether the edges are model-derived is **unknown rather than disclosed.**
+>   Neither can be assumed benign; both are answerable by reading the tree.
+> - **The deadline is unchanged and close:** AI + Computational Thinking compulsory for **Classes
+>   3–8 from 2026-27 across 32,900 CBSE schools.** Class X Mathematics is not in that band, so the
+>   seed does not cover the mandated grades — **it de-risks the method, not the scope.**
+> - **The window is narrower than p319 priced it.** See Variant C: the uncontested-opportunity
+>   framing no longer holds region-wide.
+
+**The gap, as measured in p322 and now qualified:** GitHub's `ncert` and `cbse` topics hold 180
+repositories and **nothing above 15 stars that is curriculum infrastructure** — and that sweep
+**missed** the artefact above, which a query on the *artefact type* rather than the country topic
+found in one search. The one MCP server
 (`jinanshm/ncert-mcp`, 1 ★, 2 commits) is **unlicensed** and ingests by downloading the NCERT PDFs
 and **tagging chunks with an LLM via OpenRouter with no human verification described** — which is a
 hallucination source with a schema. `praj2408/RAG-Enhanced-NCERT-Tutor` (MIT, 3 commits) **bundles
@@ -764,7 +791,11 @@ textbook PDFs**, a copyright question of its own. The best data asset is a **201
 
 **Why do this rather than a tutor:** whoever holds the verified curriculum layer for a jurisdiction
 is in every bid in that jurisdiction, because the alternative is each vendor re-deriving it badly.
-At 22 stars in Brazil, **nobody is competing for this yet.** It is fundable as a standalone asset
+~~At 22 stars in Brazil, **nobody is competing for this yet.**~~ **Corrected in p323: pick the
+jurisdiction deliberately, because one is now contested.** Brazil's `bncc-dev` is still at
+low-double-digit stars and uncontested; **China's equivalent has 420 stars, 67 forks and a NeurIPS
+2026 acceptance** (Variant C). India is contested by one unlicensed two-commit repository. **The
+opportunity is per-jurisdiction, and it is no longer uniformly open.** It is fundable as a standalone asset
 (a board, a ministry, a national edtech, or a foundation), it is reusable across every subsequent
 engagement in the market, and it is the rare deliverable whose quality is **objectively
 demonstrable** — the benchmark is the proof.
@@ -777,6 +808,63 @@ which, on the topics swept this pass, is everywhere except Brazil. Germany's att
 in 2021; the Dutch and Spanish-language topics produced course material; the English `oer` topic
 produced textbooks and no competency metadata. Ed-Fi (`repos/foundations.md`) is the North American
 **rostering** standard and does not cover curriculum.
+
+### Variant C — China and the method-reuse play, where the artefact exists and its data is NonCommercial — NEW in p323
+
+**The situation that makes this a distinct variant:** `haolpku/K12-KGraph` (`repos/foundations.md`)
+has already built what Variants A and B describe, for China's PEP K-12 curriculum, to a standard a
+Globant build would be measured against:
+
+| | What it holds |
+|---|---|
+| Scope | **48 PEP textbooks** — Mathematics 23, Physics 9, Chemistry 7, Biology 9 |
+| Graph | **10,685 nodes**, **23,278 edges across 9 edge types**, **every edge carrying an `evidence` field** linking to textbook source text |
+| Verification | **12 subject-qualified expert annotators, Fleiss' κ = 0.84**; DAG validation of `is_a` and `prerequisites_for`; 3-expert spot-check at **98.4% fully correct** |
+| Proof | **K12-Bench, 23,640 multi-select questions**; K12-Train, 2,267 pairs; three fine-tuned checkpoints on Hugging Face |
+| Standing | **NeurIPS 2026 Evaluations & Datasets Track**, 420 ★, 67 forks |
+| Licence | **MIT (code) / CC BY-NC-SA 4.0 (graph, benchmark, training data)** |
+
+**The licence is the whole design constraint, so state it to the client on day one:** the
+**pipeline is MIT and reusable**; the **curriculum graph, benchmark and training data are
+NonCommercial and ShareAlike and cannot enter a commercial deliverable — in China or anywhere
+else.** ShareAlike would additionally attach to any derivative graph. **There is no version of this
+engagement in which K12-KGraph's data ships.**
+
+**What to actually sell, in order:**
+
+1. **The method transfer, not the data.** Fork the **MIT pipeline** and run it against the client's
+   own corpus — their textbooks, their syllabus, their licensed content. **The expensive, risky part
+   of P10 has a working reference implementation** with a published quality bar; that converts a
+   10–14 week verification project from a research bet into an execution task. **Price the saving,
+   and be explicit that the saving is in the method.**
+2. **Adopt its verification protocol as the acceptance criterion.** Per-edge source evidence,
+   automatic DAG validation of the prerequisite subgraph, multi-annotator agreement with a reported
+   κ, and a stratified expert spot-check. **This is the first externally published, peer-reviewed
+   quality bar for a curriculum graph, and a client can hold a vendor to it.** Brazil's `bncc-dev`
+   supplies the complementary half — character-level verification against the homologated source,
+   contract checks in CI, a decisions log. **Together they are the specification Globant should be
+   writing into its own P10 statements of work.**
+3. **Use K12-Bench as an off-the-shelf evaluation instrument where the licence permits
+   non-commercial use** — internal benchmarking, a research collaboration, a public-sector pilot
+   with a university partner. **Not in a paid deliverable.** Check the specific use against
+   CC BY-NC-SA 4.0 with counsel; "internal" and "non-commercial" are not synonyms.
+4. **Where the client wants the graph itself and the licence forbids it, the answer is Variant A or
+   B's build.** Rebuilt from the client's corpus with the client's grant. **The existence of a
+   NonCommercial artefact is a reason the build is well understood, not a reason to skip it.**
+
+**The competitive read, which is the real reason this variant exists.** p319 priced the verified
+curriculum layer as an **uncontested** build-once opportunity at 22 stars. **In APAC it is
+contested, by an academic group, with a peer-reviewed quality bar and 420 stars.** Two consequences:
+**expect a Chinese or regional client to know this artefact already**, and **expect the quality bar
+in any APAC curriculum-data bid to be K12-KGraph's, not this KB's.** The jurisdictions still open —
+India (barely, see Variant B), most of LATAM beyond Brazil, most of EMEA, and everywhere on
+`repos/foundations.md`'s unswept-language list — are where the uncontested framing still holds, and
+**that framing now has a shelf life.**
+
+**Estimate:** 4–6 weeks for a method-transfer engagement (fork, re-target the pipeline to the
+client's corpus, stand up the verification protocol and acceptance criteria) before any curriculum
+volume is processed; the per-subject build then prices as Variant B. **The first deliverable is the
+acceptance criteria, and it is sellable on its own.**
 
 ---
 
@@ -812,6 +900,50 @@ reach — **AICC was removed in v3.0.0 and cmi5/xAPI are roadmap "potential" onl
 neither.
 
 ---
+
+## The "prove it teaches" stage, specified — what to actually test, pass 323
+
+p322 added a *prove it teaches* stage to P1 and pointed at MathTutorBench. **Pass 323 read four
+2026 education benchmarks and the stage can now be specified as test cases rather than a gesture.**
+Three of the four have **no public code** and the fourth has **no licence** (`intel/trends.md`), so
+**this stage is something an engagement builds** — but the findings tell you exactly what to build.
+
+**Run these four checks, in this order, on any tutor deliverable:**
+
+1. **Pedagogy, scored without an LLM judge.** MathTutorBench's task shapes — problem solving,
+   socratic questioning, solution correctness, mistake location, mistake correction, plus the
+   pedagogy win-rate tasks — scored against ground-truth teacher utterances. **Never report an
+   LLM-judged helpfulness score as evidence of learning**; the leakage audit
+   (`bydeng01/conv-vs-ped-tutor`) exists because a judge will reward a tutor for handing over the
+   answer.
+2. **Demographic fairness, on the cues that actually move** — **language and immigration background
+   first, then first-language, then SES, then gender.** EduFair-Bench's finding is that **language
+   and immigration cues produce larger gaps than gender and SES**, which is the reverse of most
+   fairness test plans. **And because capability and fairness are largely orthogonal, do not accept
+   a model upgrade as a fairness remediation** — re-test after every model change.
+3. **Adversarial safety with teacher personas, not generic jailbreaks.** EduGuardBench's shape:
+   persona-based prompts targeting **academic misconduct** specifically, scored by attack success
+   rate **and** a three-tier refusal-quality assessment. **Grade refusals, do not just count
+   them** — its *Educational Transformation Effect* shows the best outcome is a refusal that becomes
+   a teachable moment, and that capacity is **strongly negatively correlated with attack success
+   rate.** A tutor that refuses bluntly and a tutor that redirects into learning score the same on a
+   binary refusal metric and are not the same product.
+4. **Model selection, tested rather than assumed.** Two results overturn common assumptions:
+   **safety is not monotonic in model size** (mid-sized models were most vulnerable), and
+   **education-specialised models led neither education module** of ELBench's nine-model comparison.
+   **So: no "we used a bigger model" safety argument, and no domain-tuned-model premium without a
+   head-to-head on the client's own tasks.**
+
+**Discipline, borrowed from the two pre-registered audits and non-negotiable if the number will
+appear in a bid:** pre-register the comparison, **freeze the dataset and hash it** before analysis
+runs, separate registered diagnostics from post-hoc analysis, and keep a decisions log. The
+`ability-levels-audit` headline is the warning — **difference-in-differences on a censored rating
+scale can manufacture an effect that is not there**, and that is the shape of most tutoring-uplift
+claims a client will be shown.
+
+**Sellable on its own:** 3–4 weeks as an evaluation engagement over a client's existing tutor,
+whoever built it. **It is the cheapest credible entry point in this KB**, and after this pass it is
+the one with the clearest external references.
 
 ## Pattern selection by region
 

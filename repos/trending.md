@@ -4,6 +4,122 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 323 — 420 stars and a NeurIPS acceptance on the artefact this KB said nobody was competing for
+
+**Ninth pass of 2026-10-19.** Three rows added to `repos/foundations.md`, bringing it to
+**thirty-eight**, all three read first-hand off github.com. **One of them corrects the headline of
+`intel/trends.md` trend 12**, one closes a two-pass open question with a negative answer, and one
+makes this KB's most actionable declared gap *contested* rather than empty.
+
+### 1. `haolpku/K12-KGraph` — MIT code, CC BY-NC-SA 4.0 data, NeurIPS 2026
+
+**420 ★, 67 forks, 16 commits.** Accepted to the **NeurIPS 2026 Evaluations & Datasets Track**
+(`@misc{k12kgraph2026}`, Hao Liang and others). **China's PEP (People's Education Press) K-12
+curriculum as a verified knowledge graph, plus a benchmark, plus training data, plus checkpoints:**
+
+| Component | What ships |
+|---|---|
+| Graph | **10,685 nodes** — 6,579 concepts, 1,364 skills, 652 experiments, 1,171 exercises — and **23,278 edges across 9 edge types**, over **48 textbooks**: Mathematics 23, Physics 9, Chemistry 7, Biology 9 |
+| Evidence | **every edge carries an `evidence` field linking back to textbook source text** |
+| Verification | **12 subject-qualified expert annotators at Fleiss' κ = 0.84**; automatic **DAG validation of the `is_a` and `prerequisites_for` subgraphs**; 3-expert spot-check of stratified benchmark items at **98.4% fully correct** |
+| K12-Bench | **23,640 multi-select questions** across five task families |
+| K12-Train | 2,267 instruction–response pairs |
+| Checkpoints | three models fine-tuned on K12-Train — Llama3.1-8B, Qwen3.5-2B, Qwen3-4B — released on Hugging Face |
+
+**The licence is split by artefact type and both halves are quoted from the README:**
+*"Code (this repository): MIT"* and *"Dataset (graph, benchmark, training data): CC BY-NC-SA 4.0."*
+
+**What that means for a Globant engagement, precisely.** The **pipeline is MIT and reusable** — the
+extraction, the evidence-linking, the DAG validation, the annotation protocol that produced
+κ = 0.84. The **curriculum graph, the benchmark and the training data are NonCommercial and
+ShareAlike** and cannot go into a client deliverable, in China or anywhere else. **Read this repo as
+the method and the proof that the method works; do not ship its data.** It is the strongest argument
+in this KB for the P10 build: the hard part is demonstrably doable, and the artefact that
+demonstrates it is licensed out of commercial reach.
+
+**Two cautions on its own claims.** The About blurb calls the release a *"multimodal training
+dataset"* while the body describes only text instruction–response pairs — **no multimodal content is
+detailed**. And the README reports expert *review*, DAG validation and a spot-check; it **does not
+state that every edge was individually human-verified.** κ = 0.84 measures annotator agreement on
+relation labels, not graph completeness. Both are ordinary research-release caveats and neither is
+hidden — but a bid that quotes "expert-verified" should quote which part.
+
+### 2. `razi-03/NCERT-CKG` — 🔴 NO LICENCE, 0 ★, 2 commits — and the India gap is now contested
+
+p322 swept the `ncert` and `cbse` topics (180 repositories) and concluded **"no verified curriculum
+dataset at all."** A changed query found one. It is not usable, and it is not nothing:
+
+- **Class X Mathematics only**, from **18 NCERT PDFs** — 14 chapters (`jemh101`–`jemh114`), two
+  additional chapters (`jemh1a1`, `jemh1a2`), an answer source (`jemh1an`) and a preliminary file
+  (`jemh1ps`). PDF in, **CKG JSON** out.
+- **10,417 CKG nodes, 1,682 semantic nodes, 13,757 provenance-aware edges**, and provenance coverage
+  reported at **1,682 / 1,682**: *"Every semantic node is required to have source evidence."*
+- **The design virtue is the finding.** *"Prerequisite reasoning is treated separately from textbook
+  ordering"*, and *"a prerequisite relationship must instead be supported by conceptual dependency
+  evidence or an explicit inference procedure."* **That is the exact discipline this KB praised in
+  `bncc-dev` and faulted `jinanshm/ncert-mcp` for lacking** — a chapter appearing earlier is not
+  treated as proof of a prerequisite.
+- **Why it stays out of the usable tier: no LICENSE file, 0 stars, 0 forks, two commits, one subject
+  and one grade.** The README makes **no statement about textbook copyright** and does not say
+  whether the 18 NCERT PDFs are bundled — unresolved, and it matters, because this KB has already
+  recorded one NCERT project that bundles textbook PDFs. It also **never mentions an LLM**, so
+  whether the edges were model-derived is genuinely unknown rather than concealed; the only manual
+  review language is the generic *"should be sampled and reviewed manually."*
+
+**The revised position: India's curriculum gap is contested, not closed.** One unlicensed two-commit
+repository with the right method on one grade of one subject does not close it. **But the shape here
+is the FERPA-cluster shape from p322** — independent authors starting the same component — and it
+shortens the window on P10 Variant B. **Watch the licence.** If `razi-03` files a permissive one,
+this becomes the seed of the Indian artefact, and it is worth asking the author.
+
+### 3. `mizcausevic-dev/curriculum-knowledge-graph` — MIT, 1 ★, 10 commits
+
+FastAPI service modelling courses, prerequisites, skills and outcomes as a graph for
+**higher-education** curriculum analysis, with prerequisite and skill-dependency analysis and a
+capstone pathway explorer; ships `app/data/sample_curriculum.json` as a seeded degree path, so it is
+not framework-only. Its own example names `IS-230` as the highest-bottleneck course. **No
+institution or country stated, and the sample data is not claimed to reflect a real programme** —
+so this is a pattern, not a dataset. **Recorded for two reasons:** bottleneck analysis over a
+prerequisite graph is a higher-ed advising product this KB had no permissive component for, and
+**the author is already in this KB** — `mizcausevic-dev/mcp-ai-tutor` sits in the FERPA governance
+cluster. One author building both a compliance auditor and a curriculum graph at 0–1 stars each is
+the same market-forming signal p322 recorded, now in a second component.
+
+### 4. `tsugiproject/tsugi` — the two-pass open question, answered negatively
+
+p319 recorded Tsugi as *"the newly recorded alternative"* to `pylti1.3` **"with an unresolved
+question about which LTI versions it implements."** p322 carried the question forward. **Read
+first-hand this pass: the repository does not answer it.**
+
+- **Apache-2.0** (sidebar), **376 ★, 266 forks, 4,011 commits**, and **no published release** — the
+  Releases section is empty, the same defect this KB recorded on `pylti1.3`.
+- **The README names no LTI version.** Not 1.1, not 1.3, not Advantage, not Deep Linking, not Names
+  and Role Provisioning, not Assignment and Grade Services. The closest statements are *"Tsugi is a
+  multi-tenant scalable LTI library and tool hosting environment"* and *"this code also implements
+  an IMS ContentItem App store."* **ContentItem is the LTI 1.1-era content-selection message**,
+  which hints at the older generation but is not a version declaration.
+
+**The practical consequence, and it is the useful part:** at 4,011 commits Tsugi is substantial, and
+**an LTI integration cannot be scoped from its README** — version support has to be established by
+reading the source or asking the maintainer. **For a bid, `pylti1.3` (MIT) remains the component you
+can specify, and the LTI 1.3 concentration risk this KB has flagged for four passes is unrelieved:
+one maintained library, no release tags, and the only alternative does not state what it speaks.**
+
+### Declared gaps from this pass — searched, measured, not found
+
+- **No permissively licensed verified curriculum dataset outside Brazil.** Two countries have built
+  the artefact; exactly one licensed the data for commercial use. Searched this pass:
+  `curriculum knowledge graph`, `prerequisite dataset`, NCERT/CBSE by name, and the Chinese PEP
+  artefact by name.
+- **No public code for EduClaw-Bench, EduFair-Bench or ELBench.** Three 2026 education benchmarks,
+  three papers, zero repositories. See `agents/trending.md`.
+- **No NCERT/CBSE curriculum artefact with a licence.** The one that exists has none.
+- **Still untested, and now the list is shorter by one:** p319 listed Arabic, Hindi, Japanese,
+  Korean, French and Indonesian as unswept GitHub-topic languages. **Chinese was never on that list
+  and should have been** — it produced the largest curriculum artefact in this KB this pass, found
+  in English. Arabic, Hindi, Japanese, Korean, French and Indonesian remain unswept.
+
+
 ## 2026-10-19 — Pass 322 — 1,852 commits of publicly funded ML with no licence file
 
 **Eighth pass of 2026-10-19.** Twelve rows added to `repos/foundations.md`, bringing it to

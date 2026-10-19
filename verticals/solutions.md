@@ -76,6 +76,37 @@ source** at the popular end of this market. Detail at the end of this file.
 | ipti/br.tag | https://github.com/ipti/br.tag | **conflicting: README says BSD-3-Clause, sidebar links GPL-2.0 — unresolved** | 20 | p319 | TAG (Tecnologia de Apoio à Gestão), free school-management software built as a social technology for basic education and **especially rural schools**, with **data sync for schools without internet**; 3,959 commits; PHP/Yii; IPTI (Instituto de Pesquisas em Tecnologia e Inovação) with the Prefeitura Municipal de Santa Luzia do Itanhy/SE | No AI features. **Two licences claimed in one repository — resolve before use.** The offline-sync design is directly relevant to pattern P5, and it is Brazilian rather than imported |
 | openedx-ai-extensions | https://github.com/openedx/openedx-ai-extensions | AGPL-3.0 | 17 | p318 | **Official Open edX AI plugin**, built by eduNEXT (Bogotá) as FC-111; 703 commits, 11 forks; docs v2.6.0 dated 2026-09-01. Multi-provider via **LiteLLM** (OpenAI, Anthropic, Gemini, local models); Learning + Authoring MFE integration, content summarisation, config-driven workflows, XBlock AI service registration | **LATAM-authored — and explicitly not production-ready.** See below |
 
+## Pass 323 — the platform tier did not move, and the honest version of that is a short section
+
+**No rows added, no rows changed, and that is a finding rather than a skipped step.** The mandated
+vertical-platform search (`open source platform education LMS SIS MIT Apache 2026`) returned
+**one vendor's marketing content for ten of ten results** — OpenEduCat's own comparison and glossary
+pages, in eight languages. **It confirmed nothing and licensed nothing:** the pages discuss Moodle,
+Open edX, Sakai, ILIAS, Canvas, Chamilo and OpenEduCat as a landscape and **state the licence of
+none of them**, while asserting the general shape this file already holds — that open-source LMS
+platforms are mostly GPL, AGPL, LGPL, BSD or Apache, and that OpenEduCat consolidates LMS, SIS, fees
+and a parent app on one database. **Nothing in the result set was specific to 2026.**
+
+**Recorded for three reasons:**
+
+1. **The licence split in this file stands unchanged over 27**, re-stated rather than re-counted: the
+   platform tier remains predominantly copyleft against a predominantly permissive agent tier, and
+   OpenOLAT remains the crack in that rule. **No new candidate was found to test it with.**
+2. **It is further evidence for this pass's method note** (`intel/market.md`): the generic
+   category query returns vendor aggregation, and every usable artefact this pass came from a query
+   naming an artefact type, a statute or a repository. **For the platform tier specifically, the
+   productive channel has been GitHub organisation sweeps** — p321 and p322 found `edu-sharing` and
+   its twelve-service pipeline that way, not through platform searches.
+3. **An unrecorded empty search reads exactly like a covered one.** This file's own p322 line about
+   regional gaps applies to categories too.
+
+**What p324 should do instead of repeating this query:** the platform-tier leads currently outstanding
+are **Moodle's AI subsystem** (already a section here — re-check its version and whether the agentic
+features moved), **`openedx/openedx-ai-extensions`** (recorded, still not shippable — re-check), and
+**OpenEduCat's actual repository and licence**, which this pass could not establish because every
+result was the vendor's own marketing. That last one is a concrete, answerable question and belongs
+in the next pass's first batch.
+
 ## openedx-ai-extensions: the LATAM gap is no longer empty, and the row is still not shippable
 
 Six passes of this KB have declared the same gap: **no LATAM-authored open source education
