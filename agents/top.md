@@ -6,6 +6,25 @@ updated: 2026-10-19
 
 # Top open source AI agents — education
 
+**Pass 320 · 2026-10-19 (sixth pass of this date). No rows added, and that is the finding.**
+Five new candidates were read first-hand off GitHub this pass; **all five were rejected** — four on
+weight or licence, one because it is not an agent. They are recorded in the rejection section so
+pass 321 does not re-find them. **Three existing rows were re-verified** and one moved
+(`DeepTutor` 41.7k → 41.8k ★). The count stands at twenty-six.
+
+**The method constraint was re-tested this pass rather than inherited, and it reproduces exactly.**
+`curl -sI https://github.com/...` returns **403 at the session proxy**; `www.future-ed.org`,
+`www.lw.com` and `www.iesalc.unesco.org` were each attempted directly with the fetch tool this pass
+and all three failed at DNS (`getaddrinfo ENOTFOUND`). **github.com remains the only reachable
+origin.** Every repository claim below is first-hand; everything in `intel/market.md` is
+snippet-sourced and labelled there.
+
+**The one material addition this pass is in `repos/foundations.md`, not here:**
+`adamzammit/LTIPlugin` (**GPL-3.0**, 14 ★, 97 commits) is the first artefact this KB has found at
+the grade-passback seam that carries **an actual OSI-approved licence** rather than no licence at
+all. It is not an AI tool and probably not LTI 1.3 — read the caveat with it — but it narrows the
+"everything at this seam is unlicensed" claim this file has made for four passes.
+
 **Pass 319 · 2026-10-19.** Twenty-six rows, twenty-six real repos. No header rows, no placeholders,
 no example data.
 
@@ -34,7 +53,7 @@ commit count, release cadence and licence.**
 
 | Agent | Repo | Licence | ★ | Checked | What it does | Use it for |
 |---|---|---|---|---|---|---|
-| DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 41.7k | p318 | Lifelong personalised tutoring agent; v1.6.15 (2026-10-19), 2,935 commits, 5.3k forks, paper arXiv 2604.26962. README now describes it as an "agent-native learning workspace" with an inspectable three-layer memory, Co-Writer, Book and Partners | The strongest permissive starting point for a tutor product |
+| DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 41.8k | p320 | Lifelong personalised tutoring agent; v1.6.15 (2026-10-19), 2,935 commits, 5.3k forks, paper arXiv 2604.26962. README now describes it as an "agent-native learning workspace" with an inspectable three-layer memory, Co-Writer, Book and Partners | The strongest permissive starting point for a tutor product |
 | Study-Mate | https://github.com/Miaotofu01/Study-Mate | MIT | 1.1k | p319 | Maths/CS study partner shipped as a skill bundle: plans a learning route, explains concepts, drives project work; five roles (material collection, illustration, course design, teaching, exercise evaluation); progress stored as files in a local workspace with a shared cross-subject memory of skill level and effective explanation styles; 723 commits; packaged for DeepSeek Harness, Google Antigravity and Codex/ChatGPT Work; docs zh + en | The largest permissive APAC skill bundle — read it for the files-as-learner-state pattern |
 | instructional_agents | https://github.com/DaRL-GenAI/instructional_agents | MIT | 488 | p319 | ADDIE-model multi-agent instructional design: generates syllabus, slides, scripts and assessments; catalog mode for structured input, copilot mode for per-phase feedback; LaTeX/PDF, HTML and PPTX output; web UI, CLI (`run.py`) and REST API; 95 commits, 106 forks; arXiv 2508.19611, **accepted to EACL 2026 Main**; a public fork of `Hyan-Yao/instructional_agents` | Course-production work — the peer-reviewed answer to "reduce faculty workload" |
 | lineage-skill | https://github.com/JuneYaooo/lineage-skill | Apache-2.0 | 459 | p319 | Distils course videos, audio, books, PDFs and transcripts into a source-backed teaching skill: micro-lessons with ASCII/SVG diagrams, two formative questions per topic with feedback, practice/error/review tracking, source references kept on key claims; 50 commits; docs zh + en | **The first permissively licensed skill bundle at scale** — the licence-clean alternative to `education-agent-skills` |
@@ -133,6 +152,22 @@ Until then default copyright applies and Globant cannot use it, fork it, or copy
 a client deliverable.
 
 **Re-check it every pass. It is a one-line check with a large payoff.**
+
+**Pass 320: re-checked, and the gap stands — but it is now a narrower claim.**
+`adamzammit/LTIPlugin` (**GPL-3.0**, 14 ★, 97 commits, `master`) makes **LimeSurvey act as an LTI
+provider**: a learner launches a survey or assessment from the LMS and the plugin **returns a
+score back to the gradebook** as a value between 0.0 and 1.0 derived from a LimeSurvey expression,
+with **setup instructions in the README for Canvas, Moodle, openEdX and Blackboard** and support
+for LimeSurvey 3.x–7.x. **Two caveats decide how this may be used.** First, it is **not an AI
+tool** — it is assessment delivery with outcome passback. Second, **the page never names an LTI
+version**, and it bundles `LTI-Tool-Provider-Library-PHP`, which points at the **legacy LTI 1.x
+Basic Outcomes path rather than 1.3 Advantage AGS** — so do not scope it as an Advantage
+implementation without reading the submodule. **What it does change:** for four passes this file
+has said that every artefact at the grade-passback seam is unlicensed. That is no longer true.
+**GPL-3.0 is a real licence**, it sits on the same copyleft side of this KB's architectural line as
+`tutor-gpt`, `lumen` and `LTLTutor`, and the plugin is a readable, four-LMS reference for how
+outcome passback is actually wired. **The unfilled gap is specifically an AI tutor speaking LTI
+1.3 Advantage under a permissive licence. Nothing found this pass changes that.**
 
 **What did change on the library side:** `repos/foundations.md` now records **`tsugiproject/tsugi`
 (Apache-2.0, 376 ★, 266 forks, 4,011 commits, Apereo Incubating)** — an LTI library and
@@ -271,6 +306,59 @@ file, never the badge.
   rather than linked. `tutor-gpt` for its Theory-of-Mind prompting, `lumen` for its eval harness.
 
 ## Rejected after verification — recorded so the next pass does not re-find them
+
+**Pass 320 added five rejections and no rows. They are listed first.**
+
+- **`Willie-Liao/lesson-library` — NO LICENCE, and 1 commit.** 0 ★. An MCP server for teachers in
+  which an agent searches a lesson library, folds near-duplicate materials together with vector
+  search, proposes progression/regression/related links, and **stages every change for teacher
+  approval in a local web UI before it is written as Markdown/YAML**; graph, timeline and calendar
+  views; docs marked v0.3.2, 2026-10-12. **The shape is right and the review gate is the one this
+  KB keeps asking for.** Three disqualifiers: there is no LICENSE file (the README offers a prose
+  "educational research and non-commercial school lesson preparation" use statement, which is not a
+  licence and reads as a restriction), **the repository has a single commit**, and although the
+  description claims "any subject", **the only documented deployment is middle-school FLAG football
+  (Grade 6/7, 3 teachers, ~60 students)** and the motor-skill taxonomy is football-specific. A
+  general design with a single-domain implementation. Watch the licence.
+- **`CristianHeyde/language-teaching-skills` — MIT, but 0 ★ and 4 commits.** Six standalone agent
+  skills for language teachers: `staff-assistance`, `task-design`, `submission-review`,
+  `study-planning`, `course-architecture`, `lesson-planning`. The README is explicit that the skills
+  **guide procedure only and grant no tools or permissions**, which is the correct design for this
+  category. **The licence is clean and the taxonomy is sensible; the weight is four commits.**
+  Rejected on the same standard this file applied to `Gchism94/ai-tutor` in pass 318 — recorded
+  rather than listed so the rule stays consistent. Re-check if it grows.
+- **`Bimbi-Dev/OpenTeacher` — NO LICENCE, and the agent logic is not written yet.** 0 ★, 32
+  commits. **Peru**, Hackathon AIdea Lima 2026, README in Peruvian Spanish, aimed at MINEDU
+  teachers: a WhatsApp agent to which a teacher reports a classroom incident by text or audio, which
+  replies with emotional containment and immediate tactics and logs the incident for per-student and
+  per-classroom reports. **What actually runs is the web simulator**, audio capture behind a consent
+  gate, Whisper transcription and an Anthropic SDK wrapper, both with mock modes. The WhatsApp
+  webhook is marked *"Congelado, sirve de evidencia"* and **`lib/prompts.ts` and `lib/agents.ts` are
+  marked `PENDIENTE`** pending a product brief. Searched for and recorded **because it is
+  LATAM-authored supply, which this KB has repeatedly declared its scarcest category** — the
+  placement is the finding, not the code. Not usable.
+- **`alarcon7a/english-teacher-ai` — MIT badge with NO LICENSE FILE.** 5 ★, 11 commits. Spanish
+  README; a spoken English tutor taking Spanish or English in and returning text and audio, on
+  Gradio + LangChain with Gemma 2 (9B) via Ollama or Gemini, and **Meta's SeamlessM4Tv2 for both
+  STT and TTS** — a genuinely interesting local-first speech choice. Rejected on two counts: the
+  licence is **declared in a badge but not filed**, so default copyright applies, and the README
+  does not match the tree (it tells you to run `teacher.py`; the file is
+  `English_teacher_with_gemma2.py`) while listing Ollama under "Google tools". **The badge-without-
+  a-file pattern is now frequent enough in this sector to be worth stating as a rule: a licence
+  badge is a claim, a LICENSE file is a licence.**
+- **`laurauguc/grading_assistant` (GradeMate) — MIT, 4 ★, and it carries a correction to this KB's
+  own conclusion.** Already carried: an earlier pass read its licence blob and recorded it at 4 ★
+  inside the "agentic-grading cluster" whose three repos total 4 stars, and concluded **"grading has
+  no open-source shelf."** **This pass read the commit count that conclusion was drawn without:
+  260 commits.** That does not overturn the conclusion but it narrows it — *one* of those three
+  repos has real volume behind it, and "4 stars across three repos" invited the reading that all
+  three were weekend projects. Teacher-facing grading of written work with curated **or
+  teacher-uploaded rubrics**, a `rubrics/` folder and a `load_grading_rubric_data` management
+  command; ReactJS over Django. **It stays out of the table for two reasons that are not weight:**
+  it is a teacher tool rather than an agent, and it **requires a `GOOGLE_API_KEY`**, so the model is
+  not pluggable as shipped. Promote it to `verticals/solutions.md` if a client asks for assisted
+  marking. **The general lesson: a star count is not a volume measure, and this file has now been
+  caught reasoning from one.**
 
 - **`blamb/lti-tutor` — NO LICENCE ("To be decided").** Re-verified p319: unchanged at 0 ★, 39
   commits. The LTI 1.3 tutor this KB needs, and unusable. Watch it every pass.

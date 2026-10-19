@@ -6,6 +6,40 @@ updated: 2026-10-19
 
 # Current trends — education
 
+**Pass 320 · 2026-10-19 (sixth pass of this date). One trend reading is reinforced and one is
+newly separable.**
+
+**Reinforced — governance has displaced experimentation as the thing buyers are actually procuring.**
+Four independent 2026 sources converge on it this pass: institutions are building **policies, data
+rules and oversight** rather than running pilots; the clearest realised gains are in **course
+design, teacher productivity and administrative workflow** rather than in personalisation; buyers
+increasingly want **evidence a product improves learning, persistence or job-relevant skills**; and
+the move is **away from generic chatbots toward purpose-built education platforms with pedagogy
+embedded in the system**. **This is the same conclusion `agents/top.md` reached from the opposite
+direction in pass 319** — that the sector's reported quality metric (LLM-judged helpfulness) is
+unsound and a real evaluation layer has only just appeared. **Demand-side scepticism and
+supply-side measurement arrived in the same quarter, and that coincidence is the sellable
+observation:** a studio that can *evidence* instructional effect is selling into a market that has
+started asking for exactly that. Sources are vendor blogs and analyst notes — **the qualitative
+convergence is credible, the statistics in them are not, and several specific figures were rejected
+outright in pass 319's gap list.**
+
+**Newly separable — "AI literacy mandate" and "AI guardrail mandate" are two different buying
+motions, and this KB has been better at the second.** Pass 320 added **California AB 2876** (AI
+literacy into K-12 curriculum) and **Utah H.B. 273** (AI into state CS standards) to
+`intel/market.md` alongside Georgia, Mississippi and Alabama. **A literacy mandate buys content,
+curriculum alignment and teacher training; a guardrail mandate buys governance tooling, audit logs
+and consent handling.** They land with different budget holders on different timelines. The
+permissively licensed assets for the literacy motion already sit in this KB and have not been
+framed this way before — **`smashburger-dev/argmin`** (MIT + CC BY 4.0, German, 50 lessons, offline
+via Pyodide) is a literacy-mandate asset, not a platform component, and the EU AI Act's **Article 4
+staff-literacy duty** is the same motion in EMEA.
+
+**Unchanged and worth repeating:** the sector's **copyleft lives entirely in the LMS/platform tier**
+while everything you would put *under* a product is permissive — and pass 320 records the **first
+exception in `repos/foundations.md`** (`adamzammit/LTIPlugin`, GPL-3.0), which is a constraint on
+deployment rather than a bar on use.
+
 **Pass 319 · 2026-10-19.** Twelve trends. Each names the evidence behind it and, where the evidence
 is vendor marketing, says so.
 

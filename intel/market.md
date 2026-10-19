@@ -6,6 +6,19 @@ updated: 2026-10-19
 
 # Market intelligence — education
 
+**Pass 320 · 2026-10-19 (sixth pass of this date).** This pass adds **regional regulation only** —
+no market-size figure moved and no new player was found. Four additions and one reconciliation:
+**Taiwan** enters this file for the first time (AI Basic Act, December 2025; implementing committee,
+March 2026); **South Carolina H.B. 5253** gives the parent-consent requirement a **second,
+independent instance** after pass 319 could source it only to a single tracker; **California AB 2876
+and Utah H.B. 273** add to the curriculum-mandate column; and **two European Commission reports of
+2026-09-22** supply a citable substitute for the EU strategy-coverage statistic pass 319 told future
+passes not to quote. The reconciliation is **Vietnam**: the two conflicting education dates this KB
+declared irreconcilable now look like **a grandfathering cutoff and a transition deadline**, not a
+contradiction. **LATAM returned nothing new and that is recorded as an informed gap, not omitted.**
+**Everything in this file remains snippet-sourced — the egress test was re-run this pass, not
+inherited; see the sourcing note at the end.**
+
 **Pass 319 · 2026-10-19.** This pass adds four things and corrects one.
 
 It adds **the first quantified grounding number in this KB** — on Brazil's national curriculum, an
@@ -321,6 +334,25 @@ anything about my institution?" that is not a bespoke integration — and becaus
   (patterns P5 and P7) and for Moodle's Ollama/LiteLLM provider route
   (`verticals/solutions.md`). Treat it as a design constraint, not a legal footnote. FERPA, COPPA
   and state privacy law (CA, IL, NY) continue to do the binding work.
+  **Pass 320 adds a second, independent instance of the parent-consent requirement — which was the
+  weakest-sourced item in this entry.** Pass 319 flagged Oklahoma's **parent opt-out** as appearing
+  in *a single tracker*, unread against the statute, and told future passes to scope for it anyway.
+  **South Carolina H.B. 5253 is reported to require written parental opt-in consent**, among other
+  protections. Opt-*in* is a stricter posture than Oklahoma's opt-*out*, and two states reaching for
+  parent consent by different mechanisms **moves this from a single-tracker curiosity to a product
+  requirement.** Pattern **P7** should treat per-pupil consent state as a first-class data model,
+  not a flag. *(Snippet-sourced; `www.future-ed.org` and `www.multistate.us` are both unreachable
+  from this session — see the sourcing note at the end of this file.)*
+  **Two curriculum mandates new to this KB, both snippet-sourced:** **California AB 2876** is
+  reported to mandate integration of **AI literacy into the K-12 curriculum**, and **Utah H.B. 273**
+  to integrate **AI into the state computer-science standards.** These belong with Georgia,
+  Mississippi and Alabama in the curriculum-mandate column rather than the guardrail column — and
+  the distinction matters commercially, because a literacy mandate buys **content and teacher
+  training**, while a guardrail mandate buys **governance tooling**. This KB has been better at
+  tracking the second than the first.
+  **The FTC's amended COPPA rule reached its general compliance date on 2026-04-22.** This KB
+  already carries COPPA as a design constraint (see P9); **what it lacked was the date**, and a
+  compliance date that has already passed changes how a disclosure-boundary conversation opens.
 - **EMEA:** the EU AI Act lists education in Annex III as stand-alone high-risk — admissions,
   learning-outcome evaluation, student level placement, and exam or behaviour monitoring. **The
   Digital Omnibus (Regulation (EU) 2026/1744, OJ 2026-07-24, in force 2026-07-27) deferred the
@@ -380,6 +412,17 @@ anything about my institution?" that is not a bespoke integration — and becaus
   GCC market-share figure below and the fact that every named MEA platform is proprietary
   (`verticals/solutions.md`), it describes a market with statutory demand, public money and no open
   source supply.
+  **Pass 320, snippet-sourced: two European Commission reports published 2026-09-22** are reported
+  to describe **generative AI as a mainstream tool in EU education**, with its effect on learning
+  depending on how it is used. **Read against this KB's own declared gaps, this is the useful
+  shape:** pass 319 searched for and failed to find the "nearly two-thirds of European education
+  systems have an AI strategy" figure and told future passes not to quote it. **A Commission
+  publication describing mainstream adoption is the citable substitute** for that unciteable
+  statistic — it supports "this is normal in EU classrooms now" without inventing a percentage.
+  `education.ec.europa.eu` and `digital-strategy.ec.europa.eu` remain unreachable from this
+  session, so **the 2026-09-22 date and the characterisation are snippet-grade. Confirm both before
+  a client document**, and note that pass 319 already recorded a *different* Commission education
+  package as "later this year" with no verified month.
 - **APAC — and the first item is the most important thing in this file for an APAC conversation,
   because it is a national AI-in-education mandate that was politically unwound.**
   **South Korea's AI digital textbooks lost their legal status as textbooks.** The National
@@ -459,6 +502,31 @@ anything about my institution?" that is not a bespoke integration — and becaus
   and must be sold into Sydney on restraint. **China has made AI compulsory for school students
   from age six**, which with India's Class 3–8 mandate means the region's two largest school
   systems both have statutory AI curriculum demand running now.
+  **Pass 320 adds a jurisdiction this KB had zero coverage of: Taiwan.** Reported this pass: an
+  **AI Basic Act passed in December 2025**, with an **implementing committee established in March
+  2026**. That is all that was found — no education-specific provision, no high-risk schedule, no
+  classification of education systems. **Recorded because a named statute with a standing committee
+  is a different planning object from silence**, and because this KB's APAC regulation entry has
+  until now gone South Korea → China → Japan → Singapore/India/Australia → Vietnam with no Taiwan
+  row at all. **Treat it as a lead to develop, not a finding to brief.**
+  **Pass 320 also partially reconciles the Vietnam date conflict this KB declared open.** The
+  declared gap records education transition dates of **2026-08-15 in one source and 2027-09-01 in
+  another** and says to verify against the primary text. This pass found **2026-08-15 described not
+  as the transition date but as a grandfathering cutoff**: education AI systems **already operating
+  before 2026-08-15 are reported to get an additional six-month grace period**, with education one
+  of **six sectors where AI systems are classed high-risk** — and high-risk mainly where the output
+  is **the sole basis for a decision without meaningful human review**, which is a materially
+  narrower trigger than "used in education". **If that reading is right, the two dates were never in
+  conflict: one is the cutoff for existing systems and the other a transition deadline.** It is
+  still snippet-sourced and `www.lw.com` is unreachable from this session, so **the gap stays open —
+  but it is now a hypothesis to test against the primary text rather than an unexplained
+  contradiction.** The "sole basis for a decision" trigger is the commercially important half:
+  **a human-in-the-loop design may keep a product out of the high-risk class entirely**, which is
+  exactly what P3's and P7's review gates already build.
+  **One refinement to the Ipsos reading already carried here:** the **Education Monitor 2026**
+  finding of lower support for banning AI in schools across Asian markets is reported with
+  **Australia and New Zealand as the exception** — i.e. the permissive-public story is an *Asian*
+  story, not an APAC-wide one, and an ANZ engagement should not inherit it.
 - **LATAM, new this pass: Brazil signed an AI and technology regulation agreement with the EU in
   June 2026**, which is the clearest signal yet that an EU-shaped conformity file travels in the
   region — and it makes porting the pattern-P4 artefacts to Brazil a near-term rather than
@@ -485,6 +553,17 @@ anything about my institution?" that is not a bespoke integration — and becaus
   international risk-based approach and **proposes an oversight authority**, but still no binding
   national law in force — SEP/ANUIES recommendations are non-binding. A comparative study across Argentina, Brazil, Chile, Peru and Spain found shared
   need for ethical guidelines but sharply different scope and implementation.
+  **Pass 320 searched LATAM and found nothing new — stated explicitly, because an unrecorded empty
+  search is indistinguishable from coverage.** The regional query returned only material this KB
+  already carries first-hand or by snippet: the **UNESCO IESALC 87%/26%** institutional figures (200
+  institutions, 19 countries, 74% in teaching and learning), the **UNESCO Observatory on AI in
+  Education for LAC** launched **2026-04-14** at ECLAC in Santiago, **Uruguay's** Council of Europe
+  framework-convention signature, **Colombia's CONPES 4144**, **Mexico's** 2024 federal bill,
+  **Peru's** regulatory sandboxes, and the ILIA finding that school-level AI education is advancing
+  but remains exceptional. **No new instrument, no new player, no K-12 adoption rate.** The one
+  genuinely new LATAM item this pass is supply-side, not demand-side, and it is a rejection:
+  `Bimbi-Dev/OpenTeacher` (Peru, Hackathon AIdea Lima 2026, no licence, core agent logic unwritten) —
+  see `agents/top.md`. **The LATAM supply gap and the LATAM market-size gap both stand.**
 
 ## Opportunities by region
 
@@ -764,6 +843,24 @@ anything about my institution?" that is not a bespoke integration — and becaus
   paused**, with existing technology-neutral law applying.
 - **Vietnam's AI law dates conflict across sources** (education transition given as 2026-08-15 in
   one, 2027-09-01 in another). Verify against the primary text before quoting either.
+  **Pass 320 narrowed this from a contradiction to a testable hypothesis.** A source this pass
+  describes **2026-08-15 as a grandfathering cutoff** — education AI systems already operating
+  before it get **six further months** — which would make the two dates complementary rather than
+  conflicting. **Still snippet-sourced (`www.lw.com` unreachable), so the gap stays open**, but the
+  next pass should test *that* reading against the primary text rather than re-discovering the
+  conflict. Also new and worth verifying with it: education is **one of six high-risk sectors**, and
+  the high-risk trigger is reported as the output being **the sole basis for a decision without
+  meaningful human review** — if correct, **a human-in-the-loop design may avoid the class
+  altogether**, which changes the commercial shape of a Vietnamese engagement.
+- **No education-specific provision found in Taiwan's AI Basic Act (new gap, pass 320).** The
+  statute and its March 2026 implementing committee were found; **nothing on education
+  classification, high-risk scheduling or school guidance was.** Declared rather than left silent
+  because this is a named instrument with a live committee, i.e. the most likely APAC jurisdiction
+  to produce education rules next. **Sweep it first next pass.**
+- **No new LATAM demand-side intelligence this pass (pass 320), searched and empty.** The regional
+  query returned only already-carried material. Recorded here because this KB's standing instruction
+  is that **an unrecorded empty search is indistinguishable from coverage.** Both standing LATAM
+  gaps — market size, and open-source supply — are unchanged.
 - **The LATAM market-size gap stands, seventh pass — but it matters less than it did.** Still no
   region-specific commercial forecast that is not derived from the global numbers. What changed is
   that the alternative evidence is now strong enough to carry a conversation on its own:

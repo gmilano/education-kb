@@ -6,6 +6,15 @@ updated: 2026-10-19
 
 # Foundational repos — education
 
+**Pass 320 · 2026-10-19 (sixth pass of this date). Twenty-one repos** — one added, and it is the
+only substantive addition anywhere in this KB this pass. **`adamzammit/LTIPlugin` is the first
+artefact this KB has found at the grade-passback seam that carries an OSI-approved licence**
+(GPL-3.0) rather than no licence at all; read the row's caveats before scoping it, because it is
+not an AI tool and probably not LTI 1.3. The method constraint was **re-tested rather than
+inherited** this pass and reproduces exactly: github.com is the only reachable origin, and
+`www.future-ed.org`, `www.lw.com` and `www.iesalc.unesco.org` each failed at DNS when attempted
+directly.
+
 **Pass 319 · 2026-10-19.** Twenty repos. "Foundational" here means: you would put it *under* an
 education product, not ship it as the product. **Checked** says which pass took the licence/star
 reading.
@@ -36,6 +45,7 @@ how most of this was found. The method note at the end is the part worth copying
 | https://github.com/open-spaced-repetition/fsrs-rs | BSD-3-Clause | 447 | p315 | Scheduling | FSRS optimiser and scheduler in Rust — embeddable retention scheduling, no Anki dependency |
 | https://github.com/openfun/richie | MIT | 316 | p315 | Portal/CMS | Education-portal CMS from France Université Numérique. MIT, EMEA-authored, built to front Open edX |
 | https://github.com/dmitry-viskov/pylti1.3 | MIT | 138 | p319 | Integration | LTI 1.3 Advantage tool implementation, 178 commits. Covers **Deep Linking, Assignment & Grade Services, Names and Roles, Course Groups, Submission Review and Data Privacy Launch** — the whole Advantage surface. This is the repo that gets your agent *into* the client's existing LMS. **Re-verified p319: 84 forks, 39 open issues, still no published release** — pin a commit |
+| https://github.com/adamzammit/LTIPlugin | **GPL-3.0** | 14 | p320 | Integration (LTI, outcome passback) | Makes **LimeSurvey act as an LTI provider**: the learner launches a survey or assessment from the LMS and the plugin **returns a score to the gradebook**, as a 0.0–1.0 value computed from a LimeSurvey expression; 97 commits on `master`, LimeSurvey 3.x–7.x. **README documents setup against four platforms — Canvas, Moodle, openEdX and Blackboard** — which makes it the broadest passback reference in this file. **Three caveats, all load-bearing.** (1) **It is not AI** — it is assessment delivery plus outcome passback; the intelligence would be yours. (2) **The page never names an LTI version** and it bundles `LTI-Tool-Provider-Library-PHP`, which points at the **legacy LTI 1.x Basic Outcomes path, not 1.3 Advantage AGS** — read the submodule before scoping. (3) **GPL-3.0 is copyleft**, so it sits with `tutor-gpt`/`lumen`/`LTLTutor` on the far side of this KB's architectural line: run it as a separate service, do not link it into a deliverable. **Its value is as a readable, four-LMS answer to "how does the score actually get back".** No release is published — pin a commit |
 | https://github.com/bncc-dev/bncc-dados | **MIT (code) / CC BY 4.0 (data)** | 22 | p319 | Curriculum standard (LATAM) | **Brazil's national curriculum (BNCC) as verified open data**: 1,721 learnings — 1,580 from the three stages of basic education (93 Educação Infantil, 1,304 Ensino Fundamental, 183 Ensino Médio) plus 141 from the Computing complement (Parecer CNE/CEB 2/2022) — with 20 legal milestones and 5 reference profiles, in JSON (canonical), SQLite, SQL dump and CSV, under JSON Schema draft 2020-12. Content version `dados-2026.08`, schema v1.1.0, status stable; 40 commits. Maintained by **Profy Tecnologias Educacionais Ltda**; docs pt with a full en translation |
 | https://github.com/bncc-dev/bncc-pacotes | **MIT (code) / CC BY 4.0 (data)** | 9 | p319 | Integration (MCP, LATAM) | Machine interfaces to the dataset: npm `@bncc/dados` 0.7.0 (typed API with embedded data), npm `@bncc/mcp` 0.6.0 (**MCP server, seven tools**: `bncc_lookup`, `bncc_buscar`, `bncc_listar`, `bncc_decodificar`, `bncc_estatisticas`, `bncc_estrutura`, `bncc_progressao_ei`), PyPI `bncc` 0.5.0, and a hosted MCP endpoint at `mcp.bncc.dev` on Cloudflare Workers **requiring no API key**; 103 commits. Embedded data is synced from a pinned `bncc-dados` commit with version and checksum records; a well-formed code that is missing returns an explanatory error, not `null` |
 | https://github.com/bncc-dev/bncc-benchmark | **MIT (code) / CC BY 4.0 (items, results, methodology)** | 9 | p319 | Evaluation (LATAM) | Measures how often LLMs invent BNCC codes and texts with no access to the source: four tasks — direct lookup, existence (including plausible fake codes), open generation, reverse lookup — scored against the verified dataset across five dimensions; 82 commits. Official round `oficial-seca-2026-09`; a held-out item set is never published so memorisation is detectable. **Carries the grounding measurement this KB has never had** |
@@ -46,8 +56,12 @@ how most of this was found. The method note at the end is the part worth copying
 | https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service | Apache-2.0 | 12 | p316 | SIS / data standard | Successor to the Ed-Fi ODS/API platform; 1,105 commits. The standards-body reference implementation for student data |
 | https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster | Apache-2.0 | 6 | p316 | Rostering | Serves a **OneRoster 1.2** API from data in an Ed-Fi ODS database; 151 commits |
 
-**Licence split over 20: MIT (8), Apache-2.0 (5), BSD-3-Clause (2), MIT-code-with-CC-BY-4.0-data or
--content (5) — 20/20 usable, 15/20 under a pure software licence.** The five dual-licensed rows
+**Licence split over 21: MIT (8), Apache-2.0 (5), BSD-3-Clause (2), MIT-code-with-CC-BY-4.0-data or
+-content (5), GPL-3.0 (1 — `LTIPlugin`, new in p320) — 21/21 usable, 15/21 under a pure permissive
+software licence.** The GPL-3.0 row is the first copyleft entry this file has ever carried, and it
+is carried deliberately: **a copyleft licence is a constraint on how you deploy, not a bar on
+reading or running it.** Keep it behind a process boundary and it stays usable; link it into a
+client deliverable and it does not. The five dual-licensed rows
 (the three `bncc-dev` repos, `argmin`, and by extension the eval tier in `agents/top.md`) are the
 new shape in this file and they need handling: **CC BY 4.0 is attribution-only, so the data is
 commercially usable, but it is data, and the attribution has to appear in the deliverable.** Put

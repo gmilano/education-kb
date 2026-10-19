@@ -38,7 +38,7 @@ recipes, and that belongs in the SOW.
 survives across sessions. The default education engagement.
 
 **Stack**
-- `HKUDS/DeepTutor` (Apache-2.0, 41.7k ★) — tutoring agent and lifelong learner state
+- `HKUDS/DeepTutor` (Apache-2.0, 41.8k ★, **v1.6.15 released 2026-10-19**) — tutoring agent and lifelong learner state
 - `HKUDS/LightRAG` (MIT, 40.2k ★) — retrieval over the client's curriculum
 - `huggingface/smolagents` (Apache-2.0, 29.9k ★) — the auditable agent loop for custom tools
 - `dmitry-viskov/pylti1.3` (MIT, 138 ★) — LTI 1.3 tool so the tutor launches from the client's LMS
@@ -62,6 +62,18 @@ survives across sessions. The default education engagement.
 3. Expose the service as an LTI 1.3 Advantage tool via `pylti1.3`. The LMS launches it; the LMS is
    never patched. **This is what keeps Globant's code off the GPL/AGPL side of the line.**
 4. Return grades/progress through LTI AGS so the gradebook stays authoritative.
+   **Worked reference, new in pass 320.** This step has been asserted in every pattern in this file
+   without a readable example of the passback itself. There is one now:
+   **`adamzammit/LTIPlugin`** (**GPL-3.0**, 14 ★, 97 commits) makes LimeSurvey an LTI provider and
+   **returns a 0.0–1.0 score to the gradebook, with README setup against Canvas, Moodle, openEdX
+   and Blackboard.** **Read it; do not link it.** Three constraints: it is **not AI**, the page
+   **never states an LTI version** and the bundled `LTI-Tool-Provider-Library-PHP` points at the
+   **legacy 1.x Basic Outcomes path rather than 1.3 Advantage AGS** (verify the submodule before
+   citing it as Advantage), and **GPL-3.0 is copyleft** — run it behind a process boundary, keep it
+   out of the deliverable. **Use it to shorten the "how does the score actually land in four
+   different gradebooks" question from four specifications to one repository.** For the permissive
+   Advantage implementation you will actually ship against, `dmitry-viskov/pylti1.3` remains the
+   dependency, with `tsugiproject/tsugi` as the heavier alternative.
 5. Persist learner state in Globant-owned storage, keyed by the LTI `sub` claim — never by email.
 6. **Prove it teaches, and do not use an LLM judge to do it. New this pass.** Before the pilot
    closes, run an evaluation the client's academics can defend:
@@ -331,6 +343,23 @@ which is a data-quality project and should be priced as one.
 ---
 
 ## P7 — Grade-band gating and teacher-only mode (North America K-12)
+
+**Pass 320 upgrade — model parent consent as state, not as a flag.** Pass 319 scoped the parent
+opt-out from **a single tracker** reporting Oklahoma's statute and flagged it as unverified.
+**There are now two independent instances by two different mechanisms:** Oklahoma's reported
+opt-**out**, and **South Carolina H.B. 5253**, reported to require **written parental opt-in
+consent**. Opt-in and opt-out are **not the same data model** — opt-in defaults a pupil to
+*excluded* and blocks the product until a positive record exists; opt-out defaults to *included*
+and must honour a withdrawal at any time, including retroactively for data already processed.
+**Build the stricter one and configure down:** store a per-pupil consent record with a mode
+(`opt-in` / `opt-out`), a timestamp, the granting party and the jurisdiction, and make the tutor
+check it on every launch rather than at enrolment. **A product that cannot express both modes is
+unbiddable in at least two states**, and the duty to provide **alternative access to core
+instruction** for a non-consenting pupil is a curriculum-delivery requirement, not a feature flag —
+it is what makes `learningequality/kolibri` (MIT, offline) useful in this pattern rather than
+decorative. *(Both statutes are snippet-sourced; `www.future-ed.org` and `www.multistate.us` are
+unreachable from this session. Verify before a bid — and scope for it regardless, because the cost
+of building it is small and the cost of retrofitting it is not.)*
 
 **For:** districts that restrict rather than adopt. **New York City runs a one-year moratorium on
 student-facing AI through eighth grade; Katy ISD (Texas) is banning generative AI chatbots for

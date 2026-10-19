@@ -6,6 +6,27 @@ updated: 2026-10-19
 
 # Vertical platforms — education
 
+**Pass 320 · 2026-10-19 (sixth pass of this date). No platform added; two readings re-confirmed
+first-hand, and one candidate named for promotion.**
+
+**`CaviraOSS/PageLM`'s licence was re-read this pass and pass 319's finding stands exactly:**
+`LICENSE.md` is present and it is the **"CaviraOSS Community License"** — free to use, share and
+modify for **personal and educational** purposes, with **commercial use or resale requiring prior
+written permission from CaviraOSS**. 2.0k ★, 234 commits. **It is not OSI-approved and Globant
+cannot bill against it.** Re-verified rather than inherited because this is the single most
+commercially consequential licence reading in this file, and pass 318 established that secondary
+sources misstate licences in this sector.
+
+**Named for promotion if a client asks for assisted marking: `laurauguc/grading_assistant`
+(GradeMate) — MIT, 4 ★, but 260 commits.** Teacher-facing grading of written work with curated
+**or teacher-uploaded rubrics** (`rubrics/` plus a `load_grading_rubric_data` management command),
+ReactJS over Django. It sits in `agents/top.md`'s rejection list because **it is a teacher tool, not
+an agent** — which is precisely what makes it a candidate for *this* file. **One hard constraint
+before it is proposed: it requires a `GOOGLE_API_KEY` and the model is not pluggable as shipped**,
+so a client with a sovereignty or vendor-neutrality requirement cannot take it unmodified. It is not
+added as a row this pass because its platform-tier behaviour (multi-tenancy, auth, data retention)
+has not been read.
+
 **Pass 319 · 2026-10-19.** Twenty-seven platforms — the real systems a client is already running,
 or would run, with AI built on top. **Checked** says which pass took the licence/star reading.
 

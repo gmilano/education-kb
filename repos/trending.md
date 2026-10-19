@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 320 — the first OSI-licensed artefact at the grade-passback seam, and it is GPL
+
+**Sixth pass of 2026-10-19.** One row added to `repos/foundations.md`, bringing it to twenty-one.
+It is the only substantive addition anywhere in this KB this pass, and it is worth the space
+because of what it replaces: **a claim this KB has repeated for four passes that turns out to be
+too strong.**
+
+**Method, re-tested not inherited.** github.com is the only reachable origin — `curl -sI` to it
+returns **403 at the proxy**, and `www.future-ed.org`, `www.lw.com` and `www.iesalc.unesco.org` all
+failed at **DNS** when attempted directly this pass. **The row below was read first-hand off GitHub.**
+
+### The find: `adamzammit/LTIPlugin` — GPL-3.0, 14 ★, 97 commits
+
+**What it is.** A LimeSurvey plugin that makes **LimeSurvey act as an LTI provider**. A learner
+launches a survey or assessment from inside the LMS; the plugin **passes a score back to the
+gradebook** as a 0.0–1.0 value computed from a LimeSurvey expression. The README documents setup
+against **Canvas, Moodle, openEdX and Blackboard** — four platforms, which makes it the broadest
+outcome-passback reference this file holds. LimeSurvey 3.x–7.x, `master` branch, no published
+release.
+
+**Why it matters, stated precisely.** For four passes `agents/top.md` has said that *everything* at
+the grade-passback seam is unlicensed — `blamb/lti-tutor` ("To be decided"),
+`JaimeArriagadaRosas/Plugin-Feedback-Canvas` (no LICENSE), `luffycodes/Tutorbot-Spock` (no LICENSE).
+**That run is broken: GPL-3.0 is a real, OSI-approved licence.** The correct wording of the gap from
+here on is **"no permissively licensed AI tutor that speaks LTI 1.3 Advantage"**, which is a much
+narrower and more actionable statement than "nothing at this seam is usable".
+
+**The three caveats, because they decide whether it can be used at all.**
+1. 🔴 **It is not an AI tool.** Assessment delivery plus outcome passback. The intelligence is yours.
+2. 🔴 **The LTI version is not stated anywhere on the page**, and the bundled
+   `LTI-Tool-Provider-Library-PHP` points at the **legacy LTI 1.x Basic Outcomes path, not 1.3
+   Advantage AGS.** Read the submodule before scoping it as Advantage. This is the single thing to
+   verify first.
+3. 🟡 **GPL-3.0 is copyleft.** It joins `tutor-gpt`, `lumen` and `LTLTutor` on the far side of this
+   KB's architectural line. **Run it behind a process boundary and it is usable; link it into a
+   client deliverable and it is not.** This is the first copyleft row `repos/foundations.md` has
+   ever carried, and it is carried deliberately — a copyleft licence constrains deployment, it does
+   not bar reading or running.
+
+**How to use it today.** As a **reference implementation**, not a dependency: it is the clearest
+available answer to "how does the score actually get back into four different gradebooks", and
+reading it is faster than reading four LMS specifications. Pattern P1 step 4 and P6 both assert
+passback without a worked example; this is the worked example.
+
+### Re-verified, and nothing else moved
+
+Five search angles — English lists, GitHub trending, **Spanish-language** GitHub search, LTI/grade
+passback, and agent-skills/MCP + curriculum — returned **no new foundational repo besides the row
+above**. `oaknational/oak-open-curriculum-ecosystem`, `learning-commons-org/agent-skills`,
+`Cicatriiz/openedu-mcp` and `Liberate-Labs/ltikit-sdk` were all **already carried**. Six hours after
+pass 319, **the supply side did not move, and the honest record of that is this paragraph.**
+
 ## 2026-10-19 — Pass 319 — a verified national curriculum with a published grounding number, found by searching GitHub in Portuguese
 
 **Fifth pass of 2026-10-19**, and the largest single addition `repos/foundations.md` has had: nine

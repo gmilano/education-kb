@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 320 — five candidates, five rejections, and a star count this KB had been reasoning from
+
+**Sixth pass of 2026-10-19.** **No rows were added to `agents/top.md` and that is the result, not a
+shortfall.** Five candidates were read first-hand; all five failed. The useful output of this pass
+is three corrections and one licence finding, so they are stated before the rejections.
+
+**Method, re-tested rather than inherited.** Pass 319 recorded that the session reaches github.com
+and nothing else. **This pass tested that claim instead of copying it**, and it reproduces exactly:
+`curl -sI https://github.com/...` → **403 at the proxy**; `www.future-ed.org`, `www.lw.com` and
+`www.iesalc.unesco.org` → **`getaddrinfo ENOTFOUND`** on direct fetch attempts. **Every repository
+claim below is first-hand. Everything regional is snippet-sourced and labelled in `intel/market.md`.**
+
+### Correction: this file concluded "grading has no open-source shelf" from a star count
+
+An earlier pass tabled an "agentic-grading cluster" of three repos **totalling 4 stars** and drew
+the conclusion that grading has no open-source shelf. **This pass read the commit count that
+conclusion was drawn without:** `laurauguc/grading_assistant` has **260 commits** behind its 4
+stars. The conclusion survives in substance — there is still no shippable grading shelf — but the
+reasoning does not. **A star count is not a volume measure**, this KB had been treating it as one in
+that specific passage, and pass 317's own finding that institutional infrastructure runs
+star-poor should have caught it. Recorded as a standing caution, not a one-off fix.
+
+### Licence finding: the badge-without-a-file pattern
+
+`alarcon7a/english-teacher-ai` carries an **MIT badge in its README and no LICENSE file in the
+tree**. That is now frequent enough in this sector to state as a rule for every future pass:
+**a licence badge is a claim; a LICENSE file is a licence.** Default copyright applies to the
+badge-only case, which makes it indistinguishable from the "NO LICENCE" rejections this KB already
+carries a dozen of. Check the file list, not the badge.
+
+### The grade-passback seam: a narrower claim than the one this KB has been making
+
+For four passes `agents/top.md` has said every artefact at this seam is unlicensed
+(`blamb/lti-tutor`, `JaimeArriagadaRosas/Plugin-Feedback-Canvas`, `luffycodes/Tutorbot-Spock`).
+**`adamzammit/LTIPlugin` (GPL-3.0, 14 ★, 97 commits) breaks that run** — see
+`repos/foundations.md` for the row and its three caveats. **The gap that actually remains is
+specific and should be worded that way from now on: no permissively licensed AI tutor that speaks
+LTI 1.3 Advantage.** "Nothing licensed at this seam" was too strong.
+
+### The five rejections, in full in `agents/top.md`
+
+| Candidate | Licence | ★ | Commits | Why rejected |
+|---|---|---|---|---|
+| [`Willie-Liao/lesson-library`](https://github.com/Willie-Liao/lesson-library) | 🔴 **none** (prose non-commercial use statement) | 0 | **1** | Right shape — MCP lesson knowledge graph, vector dedup, **teacher approval gate before write**. No licence, one commit, and the only documented deployment is **middle-school FLAG football** despite an "any subject" claim |
+| [`CristianHeyde/language-teaching-skills`](https://github.com/CristianHeyde/language-teaching-skills) | 🟢 MIT | 0 | 4 | Six language-teaching skills, procedure-only by design (grants no tools). **Clean licence, four commits** — rejected on the same weight rule this KB applied to `Gchism94/ai-tutor`. Re-check if it grows |
+| [`Bimbi-Dev/OpenTeacher`](https://github.com/Bimbi-Dev/OpenTeacher) | 🔴 **none** | 0 | 32 | **Peru**, Hackathon AIdea Lima 2026, Peruvian-Spanish, MINEDU-facing WhatsApp incident logger with emotional containment. **`lib/prompts.ts` and `lib/agents.ts` marked `PENDIENTE`**; webhook *"congelado, sirve de evidencia"*. Recorded for its **LATAM placement**, which is this KB's scarcest supply |
+| [`alarcon7a/english-teacher-ai`](https://github.com/alarcon7a/english-teacher-ai) | 🟡 **MIT badge, no LICENSE file** | 5 | 11 | Spanish README; voice English tutor on Gradio + LangChain + Gemma 2 via Ollama/Gemini with **SeamlessM4Tv2 for STT and TTS** — a genuinely good local-first speech choice. Licence not filed; README does not match the tree |
+| [`laurauguc/grading_assistant`](https://github.com/laurauguc/grading_assistant) | 🟢 MIT | 4 | **260** | Already carried. **Not rejected on quality** — kept out of the table because it is a teacher tool, not an agent, and it **hard-requires `GOOGLE_API_KEY`**. Source of the correction above |
+
+### Re-verified first-hand this pass
+
+- **`HKUDS/DeepTutor`** — Apache-2.0, **41.8k ★ (was 41.7k at p318)**, **v1.6.15 dated 2026-10-19**,
+  2,935 commits, 5.3k forks. **It shipped a release on the day of this pass**; the "pin the version"
+  instruction in pattern P1 is not boilerplate.
+- **`CaviraOSS/PageLM`** — pass 319's reading **stands, re-confirmed**: `LICENSE.md` present and it
+  is the **"CaviraOSS Community License"**, free for personal and educational use, **commercial use
+  or resale requires prior written permission**. 2.0k ★, 234 commits. Still the most capable
+  feature set in the sector that Globant cannot bill against.
+- **`ZeKaiNie/universal-examprep-skill`** — MIT, **309 ★, 183 commits**, unchanged from p319.
+
+### Searched and not found this pass
+
+Swept for a genuinely new education agent across five angles — English agent lists, GitHub trending,
+**Spanish-language** GitHub search, LTI/AGS/Moodle/Canvas integration, and agent-skills/MCP +
+curriculum. **Every strong result was already carried** (`oaknational/oak-open-curriculum-ecosystem`,
+`learning-commons-org/agent-skills`, `Cicatriiz/openedu-mcp`, `GarethManning/education-agent-skills`,
+`Liberate-Labs/ltikit-sdk`, `blamb/lti-tutor`, `JaimeArriagadaRosas/Plugin-Feedback-Canvas`).
+**That the carried set now absorbs five independent search angles is itself a coverage signal** —
+and the honest reading of a pass six hours after pass 319 is that **the supply side did not move**.
+
 ## 2026-10-19 — Pass 319 — the evaluation layer arrives and says the sector's metric is broken; star solicitation ships with a CI job
 
 **Fifth pass of 2026-10-19.** Eight rows added to `agents/top.md`, and the two findings worth a
