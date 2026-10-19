@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 📈 2026-10-19 · Pass 309 — TWO NEW AGENT ROWS, AND THE WEEK'S REAL SIGNAL IS THAT THE TUTOR AXIS RETURNED `40` CANDIDATES AND `40` OF THEM WERE ALREADY HERE
+
+⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:
+[`p309-supply-census.2026-10-19-p309.tsv`](../evidence/p309-supply-census.2026-10-19-p309.tsv) ·
+[`p309-payload-pin.2026-10-19-p309.tsv`](../evidence/p309-payload-pin.2026-10-19-p309.tsv) ·
+[`p309-payload-pin-PRE-FIX.2026-10-19-p309.tsv`](../evidence/p309-payload-pin-PRE-FIX.2026-10-19-p309.tsv) ·
+[`p309-root-commit-identity.2026-10-19-p309.tsv`](../evidence/p309-root-commit-identity.2026-10-19-p309.tsv) ·
+[`p309-claims-gate.2026-10-19-p309.tsv`](../evidence/p309-claims-gate.2026-10-19-p309.tsv).
+
+### 🟢 Added this week
+
+| slug | payload | stars · language | why it is a row |
+|---|---|---|---|
+| [`ai-lingnan/econai-agent-platform`](https://github.com/ai-lingnan/econai-agent-platform) | `LICENSE` **34 523 B** `0d96a4ff68ad` → 🔴 **AGPL-3.0** | `39`★ · Python | an **AI dual-agent review** loop inside a course platform — the first assessment-side agent on these shelves |
+| [`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite) | `LICENSE` **35 154 B** `1ab858f515df` → 🟢 **GPL-3.0** | `93`★ · JavaScript | AI-assisted marking driven **across several existing exam platforms** rather than inside one |
+
+### 🔴 Refused this week, with the reason, because a refusal is a finding
+
+| candidate | why it is not a row |
+|---|---|
+| `GatorEducator/gatorgrader` · `pedal-edu/pedal` · `sourcegrade/jagr` | 🟢 **Real, probed, NEW — and autograders with no model in the loop.** They are foundational rows, not agents → [`repos/foundations.md`](../repos/foundations.md). 🔵 **Three real rows on the right shelf beat five on the wrong one** |
+| the `ai-tutor` axis, all 20 rows | 🔴 **`20` of `20` CARRIED.** `make carried` ran on every one |
+| the `intelligent-tutoring-system` axis, all 20 rows | 🔴 **`20` of `20` CARRIED** |
+| the four mandated listicle queries | 🔴 **`0` in-domain rows.** `p308`'s prediction for `github trending education AI` **scored and held** — run once to score it, not skipped in silence |
+
+### 🔴 The defect of the pass is in an INSTRUMENT, and it had already shipped two wrong verdicts
+
+🔴 **`p306-licence-probe` graded four payloads `AGPL-3.0` — every AGPL verdict in its life, all
+four this pass — and two are `GPL-3.0` by title.** The rung was `elif "affero" in low:` over the
+whole body, ordered before the GPL rung, and **GPL-3.0 §13 is titled *"Use with the GNU Affero
+General Public License"*** at lines **552 / 556 / 559** of the 35 191 B payload.
+
+| slug | bytes | title line | prober said | truth |
+|---|---|---|---|---|
+| [`GatorEducator/gatorgrader`](https://github.com/GatorEducator/gatorgrader) | **35 191** | `GNU GENERAL PUBLIC LICENSE` | 🔴 `AGPL-3.0` | 🟢 **GPL-3.0** |
+| [`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite) | **35 154** | `GNU GENERAL PUBLIC LICENSE` | 🔴 `AGPL-3.0` | 🟢 **GPL-3.0** |
+| [`sourcegrade/jagr`](https://github.com/sourcegrade/jagr) | 34 523 | `GNU AFFERO GENERAL PUBLIC LICENSE` | 🟢 `AGPL-3.0` | 🟢 AGPL-3.0 |
+| [`ai-lingnan/econai-agent-platform`](https://github.com/ai-lingnan/econai-agent-platform) | 34 523 | `GNU AFFERO GENERAL PUBLIC LICENSE` | 🟢 `AGPL-3.0` | 🟢 AGPL-3.0 |
+
+🔴 **And the fix was already in this base.** `p150-gpl-affero-discrimination` refuted that exact
+test **159 passes ago**, named `p145`/`p147`/`p149` as its carriers, shipped `title_licence()`,
+and **keeps the bad pattern as its own negative control.** `p306` was written later and
+**restated** it; `p191-spec-license-sweep` carries the same rung. 🟢 **Both now IMPORT p150.**
+🔵 **`p308` learned *"import the canonical list, never restate it"* for SHELF DATA. Nobody applied
+it to the CLASSIFIERS** → `T-p309a`, and the new gate is
+[`compose/code/p309-affero-rung-census/`](../compose/code/p309-affero-rung-census/README.md).
+
+### 🟢 `ACTION p308-R` item 2 — root commits, on two payload-identical pairs, and the method holds
+
+| pair | payload | root commits | verdict |
+|---|---|---|---|
+| `sourcegrade/jagr` · `ai-lingnan/econai-agent-platform` | **byte-identical** `34 523 B` `0d96a4ff68ad` | `0659e0b383ef` vs `1590a60535b0` | 🟢 **DISTINCT PROJECTS** |
+| `IgorFonck/logicits` · `plastic-labs/tutor-gpt` | **byte-identical** `35 149 B` `3972dc9744f6` | `14be65383704` vs `63fec4d87a67` | 🟢 **DISTINCT PROJECTS** |
+
+🟢 **`p308` suspected a copy-paste between its own two rows and said it *"was wrong"* — this
+pass PROVES it, by root commit rather than by inference.** 🔵 **The asymmetry is the rule worth
+carrying: payload equality is COMMON (stock licence text) and carries no identity; root-commit
+equality is RARE and carries all of it.** 🔴 **`4` repositories, `4` distinct roots, `0` shared
+history.** The only true mirror this base has found remains `p308`'s `OpenTutor` pair.
+
+### 🟡 Corrections to this base's own record
+
+| what was carried | what `p309` measured |
+|---|---|
+| `p308`: [`plastic-labs/bloom`](https://github.com/plastic-labs/bloom) is *"absent-or-private, never a repository"* | 🟢 **The slug really is absent (`404`, re-confirmed).** 🔴 **The PROJECT is [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) — MIT `1 069 B` `7d574cf3632e`, `289`★ — and it was CARRIED all along.** An absence keyed on the slug hid a presence keyed on the description → `T-p309c` |
+| `p54`/`p65`: `DeepTutor` at `~22k`/`~24k`★ | 🟡 **`41.7k`★ as `github.com` renders it today.** Not a contradiction — a dated record against a live reading — and **no star integer from an API**, which remains an authorization boundary |
+
 ## 📈 2026-10-19 · Pass 308 — ZERO NEW AGENT ROWS, AND THE WEEK'S REAL SIGNAL IS THAT ONE "NEW" CANDIDATE WAS A MIRROR OF A CARRIED ROW AND ANOTHER WAS CARRIED 68 TIMES OVER
 
 ⏱️ **Pass 308 of `2026-10-19`, following `p307` of `2026-10-19`.** Evidence:

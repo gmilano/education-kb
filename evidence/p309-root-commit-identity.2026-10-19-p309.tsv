@@ -1,0 +1,5 @@
+pair	slug	payload_bytes	payload_sha12	root_commit	head12	commits	verdict
+A	sourcegrade/jagr	34523	0d96a4ff68ad	0659e0b383efbf0835527654bc26dbd0f96cbb03	c8efd02f4d16	774	DISTINCT-PROJECT
+A	ai-lingnan/econai-agent-platform	34523	0d96a4ff68ad	1590a60535b0c60c7b9e0c1153969fc322242936	1bf0c8d93865	168	DISTINCT-PROJECT
+B	IgorFonck/logicits	35149	3972dc9744f6	14be65383704e185a7b56483764ad794da350ba7	54325a26ec25	122	DISTINCT-PROJECT
+B	plastic-labs/tutor-gpt	35149	3972dc9744f6	63fec4d87a67a02b996b32b30be7d3401fb0f98e	5c2f92416c04	663	DISTINCT-PROJECT

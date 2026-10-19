@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 309 — THE REGIONAL CHANNEL IS SATURATED TOO: `18` OF `22` NEW TOKENS WERE ALREADY ON THESE SHELVES, AND CHILE'S "CONTESTED" DATE IS THE ONE CONCLUSION THAT HAS TO INVERT
+
+⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:
+[`p309-claims-gate.2026-10-19-p309.tsv`](../evidence/p309-claims-gate.2026-10-19-p309.tsv) ·
+[`p309-supply-census.2026-10-19-p309.tsv`](../evidence/p309-supply-census.2026-10-19-p309.tsv) ·
+[`p309-payload-pin.2026-10-19-p309.tsv`](../evidence/p309-payload-pin.2026-10-19-p309.tsv).
+
+### 🟢 The claims gate was RUN on every regional token before publication, and that is the finding
+
+🔵 **`p278`'s whole lesson was a gate that existed and was not run.** This pass ran
+`make claims` on **22** tokens taken from five fresh regional searches, **before** writing any
+of them down:
+
+| verdict | count | tokens |
+|---|---|---|
+| 🔴 **ALREADY CLAIMED** | **18 of 22** | `Gallup` · `RAND` · `FutureEd` · `Alabama` · `final rule` · `Eurobarometer` · `Cornelsen` · `Lalilo` · `Skills England` · `AI Adoption Summit` · `Diligent` · `Forrester` · `18.623` · `suma urgencia` · `Rest of Latin America` · `512.6` · `591.6` · `transitorio` |
+| 🟢 **NOT CLAIMED** | 4 | `Allianz` · `ASEAN Guide` · `71 bills` · `16 states` |
+
+🔴 **Five regional searches, one new source.** 🟢 **That is a measured saturation of the regional
+channel, with a denominator — and it is the second one this pass**
+([`agents/top.md`](../agents/top.md) measures the same thing on supply: `40/40` tutor-axis
+candidates already carried). 🔵 **Two independent channels reporting saturation in the same pass
+is the signal that the next pass's effort belongs somewhere else, and
+`ACTION p309-R` says where.**
+
+### 🔴 LATAM — Chile was re-read as `ACTION p308-R` item 5 ordered, nothing in law has changed, and the STANDING CONCLUSION is what was wrong
+
+🟢 **Every Chile fact this base carries was independently corroborated this pass** by a Spanish
+search over a different source set: `Ley 21.719` published `2024-12-13`; delay bill **boletín
+`18.623-07`** filed `2026-09-01` with *suma urgencia* renewed, **still in first trámite as of
+`2026-10-06`**; the Senate **rejected** the Agency's first council slate on `2026-05-20` for want
+of a two-thirds majority, and the appointment deadline was missed.
+
+🟢 **Two details are NEW** — `make claims` says `amonestación`, `vigesimocuarto`, `2027-11-30`
+and `menor tamaño` are not on these shelves:
+
+| new datum | what it is |
+|---|---|
+| 🟢 **the date's derivation** | *artículo primero transitorio* — in force on the first day of the **twenty-fourth month** after publication. `2024-12-13` + 24 months → **`2026-12-01`**. 🔵 **Carrying the derivation means the next pass can re-derive the date instead of re-trusting a blog** |
+| 🟢 **a transitional sanction regime** | between **`2026-12-01`** and **`2027-11-30`** the Agency may sanction **smaller firms** (*empresas de menor tamaño*) with a **written warning instead of a fine**. 🟡 **One source only** |
+
+🔴 **And the conclusion this base has been carrying for two passes needs to INVERT.**
+[`### LATAM`](#latam) says *"do not quote the `Ley 21.719` date to a client this quarter; it is
+contested."* 🔴 **"Contested" invites the inference that the date is probably moving. The
+measured position is the opposite:** the postponement is **not law**, it is in **first trámite**
+with **six weeks** to run, and the 2027 date **applies only if the bill is enacted**. 🟢 **So the
+default is that it BINDS on `2026-12-01`, and the client-facing advice is to plan for that date
+and treat the delay as the contingency** — not the reverse. Corrected in the opportunity block
+below. → `T-p309d`
+
+🔵 **This is `ACTION p308-R` item 1's class exactly** — a standing prose CONCLUSION contradicted by
+the evidence on its own shelf — and it was found by reading, because the instrument this pass
+built covers classifiers, not prose. **Item 1 is therefore only half discharged, and the half
+that remains is the half it was ordered for.**
+
+### 🟡 North America — four numbers, two of them new, and the pairing is the point
+
+| datum | source grade |
+|---|---|
+| 🟢 **`71` bills across `27` states** on AI in classroom instruction (a second summary gives `68`/`27` with `10` enacted) | 🟡 tracker, counts differ by update date — **new to this base** |
+| 🟢 **`16` states enacted** AI-in-education bills in the 2026 session — AL, GA, ID, MD, NC, TN, UT, VA among them | 🟡 secondary, CDT-sourced — **new to this base** |
+| **`62%`** of middle-school and college students used AI for homework in `2025-12`, up from **`48%`** seven months earlier (RAND) | 🔴 **already carried** |
+| only **`18%`** of teachers report any formal school guidance (Gallup, `2026-05`) | 🔴 **already carried** |
+
+🔵 **The pairing is the studio-facing fact and it is worth restating once: `62%` of students are
+already using it and `18%` of teachers have been told how.** 🟢 **That gap is the engagement** —
+and it is a teacher-enablement engagement, not a platform one.
+
+### 🟡 EMEA — a market size, a delivery model, and a named competitor configuration
+
+| datum | note |
+|---|---|
+| Europe AI-in-education **~$512.6M (2024) → ~$1,328.8M (2029)**; **UK + DE + FR > 60%** of regional value | 🔴 **already carried** |
+| Europe **AI-for-kids** `$289M (2024) → $649M (2034)` | 🟡 a **different, smaller segment** — 🔴 **do not splice it into the line above**; `T32`'s class |
+| UK: first **AI Adoption Summit**, **£200m+** committed; delivery = government funding **+ Big Tech delivery partners** (Cisco, IBM, BT, Rolls-Royce) with **Skills England** setting the curriculum framework | 🔴 **already carried** — 🔵 and read as a market structure it is **a competitor configuration**: the integrator seat is already taken by name |
+| **`48%`** use AI at least weekly across eight countries; **Germany lowest at `37%`** for work or study (Allianz Pulse 2026) | 🟢 **NEW** — the only new EMEA source this pass |
+| EU Commission updated its **ethical guidelines on AI in education** (`06-09`); Council conclusions on human-centred AI in May | 🟡 secondary |
+
+🔴 **No education-specific national AI instrument for DE / FR / ES / NL** — `p308`'s nil, carried
+unchanged and **not re-searched this pass**.
+
+### 🟡 APAC — a market size, a governance gap, and zero named education players
+
+| datum | note |
+|---|---|
+| APAC AI-in-education **$591.6M (2024) → $1.85B (2029)**, called the fastest-growing region while **North America leads today** | 🔴 the sizes carried; **`1.85` itself is new** |
+| **No unified AI law**: Singapore on mature guidelines, China targeting algorithmic misconduct, India applying existing criminal law; **ASEAN Guide on AI Governance and Ethics still early-stage** | 🔴 Forrester carried; 🟢 **`ASEAN Guide` is NEW** |
+| **`57%`** of Asian organisations have AI in at least one area, governance frameworks lagging (Diligent Institute) | 🔴 **already carried** |
+
+🔴 **The region query named `0` education vendors, `0` ministries and `0` universities.** 🟢 **`p308`'s
+five APAC jurisdictions (the South Korean reversal, Singapore's SLS, India's Class 3 mandate,
+Japan, AU/NZ) are NOT re-confirmed this pass and are carried unchanged** — said plainly so the
+silence is not read as corroboration.
+
+### 🔴 A scope trap on the one LATAM market cell, caught before it was published as a region
+
+🟡 **"Rest of Latin America" AI-in-education: `$18.2M (2024) → $36M (2029)`, CAGR `12.1%`.**
+🔴 **That is `$18.2M` for a *residual* — the publisher's "Rest of" scope excludes the region's
+largest markets** — and read as *"LATAM"* it would understate the region by orders of magnitude
+next to any Brazil- or Mexico-inclusive figure. 🟢 **`grep` finds no LATAM market-size cell on
+this shelf**, so there was nothing to contradict; the trap was the label, not a conflict.
+🔵 **Carried with its scope attached or not at all.**
+
+### 🟢 And the LATAM governance number a search returned as new is already here
+
+The UNESCO IESALC / UNU-IAS survey of **200 institutions in 19 countries** (fielded
+`2025-08`–`2025-10`) came back from this pass's LATAM query as the best regional source. 🔴 **It
+is on this shelf already**, with the number that matters: **`87%` use AI, `26%` have a strategy —
+a `61`-point governance gap.** 🟢 **The supply test working, for the third time in one pass.**
+
 ## 🟢 Pass 308 — THE UNITED STATES IS THE MOST ACTIONABLE REGION THIS BASE CARRIES, BECAUSE ITS OBLIGATIONS ARE DATED AND ALREADY BINDING; AND APAC'S TWO-PASS SILENCE IS CLOSED WITH FIVE JURISDICTIONS AND ONE REVERSAL
 
 ⏱️ **Pass 308 of `2026-10-19`.** Evidence:
@@ -149,7 +259,11 @@ an obligation that has ALREADY lapsed.** Ohio districts were required to have ad
 policy by **`2026-07-01`**; North Carolina's district deadline is **`2027-06-30`** with the state
 model due **`2026-12-31`**; Maryland's clock is **120 days** from a guidance release. 🔵 **Sell
 the artefact the mandate names — a policy, an inventory of tools in use, a data-protection
-position — and attach the platform work to it.** 🔴 **Oklahoma's `S.B. 1734` makes a
+position — and attach the platform work to it.** 🟢 **`p309` adds the teacher-enablement
+engagement, and it is the better-evidenced one: `62%` of middle-school and college students used
+AI for homework by `2025-12` while **`18%`** of teachers report any formal guidance. Sell teacher
+capacity, delivered through an AI grading assist that leaves the mark with the teacher**
+→ `P95`. 🔴 **Oklahoma's `S.B. 1734` makes a
 **per-learner AI opt-out with no academic penalty** an architectural requirement, which no
 platform row on [`verticals/solutions.md`](../verticals/solutions.md) currently declares** →
 `P93`. 🟢 **Canada's hook is `p307`'s: a mandatory, budgeted PA-day topic for `2026-27`.**
@@ -185,9 +299,13 @@ its measured student response.** 🟢 **Mexico's entry point is named and non-mi
 UNESCO LAC Observatory pilot with CONALEP and DGETI, plus `190`+ universities with AI
 programmes.** 🟢 **Colombia's hook is `CONPES 4144`'s digital-talent objective.** 🔴 **In both
 countries the education ministry is still absent from this base's evidence — pitch to
-institutions and to the science/technology side, not to the ministry.** 🔴 **Chile: do not quote
-the `Ley 21.719` date to a client this quarter; it is contested and the enforcing Agency is not
-constituted.** 🟢 **Brazil: the compliance surface has TWO owners (MEC and Justice/Human
+institutions and to the science/technology side, not to the ministry.** 🟢 **Chile: plan for
+`2026-12-01` and sell the delay as the contingency — CORRECTED `p309` from *"do not quote the
+`Ley 21.719` date to a client this quarter; it is contested"*.** The postponement bill
+(`18.623-07`) is still in **first trámite** with six weeks to run, so the date **binds unless it
+is enacted**, and *"contested"* invited the opposite inference. 🔴 **The enforcing Agency is still
+not constituted**, and until `2027-11-30` the Agency may answer a smaller firm with a **written
+warning instead of a fine** — 🟡 one source only. 🟢 **Brazil: the compliance surface has TWO owners (MEC and Justice/Human
 Rights), which is a reason to scope a compliance artefact rather than assume one regulator.**
 
 ### Global

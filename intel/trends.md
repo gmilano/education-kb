@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 309 — THE FORM FACTOR CHANGED UNDER THIS BASE: A QUARTER OF THE TOP `ai-tutor` REPOSITORIES ARE NOT APPLICATIONS, THEY ARE AGENT **SKILLS**
+
+⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:
+[`p309-claims-gate.2026-10-19-p309.tsv`](../evidence/p309-claims-gate.2026-10-19-p309.tsv) ·
+[`p309-supply-census.2026-10-19-p309.tsv`](../evidence/p309-supply-census.2026-10-19-p309.tsv) ·
+[`p309-payload-pin.2026-10-19-p309.tsv`](../evidence/p309-payload-pin.2026-10-19-p309.tsv).
+
+### 🟢 The trend, counted rather than asserted
+
+Of the **20** rows the [`ai-tutor`](https://github.com/topics/ai-tutor) topic renders by stars,
+**five** ship as an **agent skill** — a prompt-and-instruction bundle loaded by a host agent —
+rather than as a deployable application, and a sixth leads the
+[`intelligent-tutoring-system`](https://github.com/topics/intelligent-tutoring-system) axis:
+
+| slug | stars | form |
+|---|---|---|
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **877** | **165 skills** for teachers and school leaders, targeting three different host agents |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 309 | exam-prep coach with cross-session memory |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 289 | Bloom-2-Sigma tutor — **a skill AND a self-hostable app** |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 247 | diagnosis-first STEM tutor |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 188 | Chinese civil-service exam prep |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 116 | teaching-support skill collection |
+
+🔵 **Why it is a trend and not a taxonomy note.** A skill has **no runtime of its own**: no
+server, no database, no auth, no deployment. 🔴 **So three things this base grades on do not
+apply to it** — there is no hosting posture to assess, no data-residency story to check, and
+**the AGPL's network clause cannot be triggered by software that never serves a request.**
+🟢 **And one thing matters far more: the licence on the CONTENT**, because the deliverable *is*
+the content. The `877`★ leader is **CC BY-SA 4.0** — 🔴 **ShareAlike on curriculum materials**,
+which is a derivative-works obligation on a client's own course content, not a code question at
+all.
+
+🔴 **This base's instruments are built for the other shape.** The licence prober reads
+`LICENSE` payloads and reported `NO-GRANT-CLAUSE` for that CC BY-SA grant-by-reference — true to
+its rule and useless for the row. `ACTION p306-R` item 2's POINTER class, open for three passes,
+is now **load-bearing** rather than tidy. → `ACTION p309-R` item 2
+
+### 🔴 The listicle channel produced `0` in-domain rows, as `p308` predicted, and the prediction is scored
+
+Four mandated queries, run as specified, with the current year computed and not hardcoded:
+
+| query | in-domain rows |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0** — returned general agent frameworks (CrewAI, AutoGen, LangGraph) and *learning-about-AI* courses, which are not education-domain agents |
+| `github trending education AI 2026` | 🔴 **0** — `p308` ordered this one not re-litigated; it was run once to **score** the prediction rather than skipped in silence, and the prediction **holds** |
+| `open source platform education LMS SIS MIT Apache self-hosted 2026` | 🔴 **0 new** — returned one vendor's own marketing pages; **OpenEduCat is LGPL-3.0**, as this base already carries |
+| `AI education industry trends 2026` | 🟡 market-size spread only: `$6.4B (2025) → $79.6B (2034)` against `$8.3B (2025) → $57.2B (2033)` against `$10.6B (2026)` — 🔴 **three irreconcilable vintages, no new structure** |
+
+🟢 **The two channels that DID produce: GitHub topic pages (`5` new rows) and
+`raw.githubusercontent.com` (`10` first-hand payloads).** 🔵 **Say which, every time.**
+
+### 🟢 One student-adoption number worth carrying as a trend rather than a datum
+
+Student AI use **`66%` (2024) → `92%` (2025)** in one source, and RAND's **`48%` → `62%`** over
+seven months to `2025-12` in another. 🔵 **Different populations and different questions, so they
+do not average** — but both are **steep, recent and in the same direction**, against **`18%`** of
+teachers reporting any formal guidance. 🟢 **The governance lag, not the adoption rate, is the
+structural trend.**
+
 ## 🔵 Pass 308 — SEVEN TRENDS, AND THE FIRST THREE ARE ALL THE SAME DISEASE: THIS BASE KEEPS DISCOVERING THINGS IT ALREADY WROTE DOWN
 
 ⏱️ **Pass 308 of `2026-10-19`.** Evidence:

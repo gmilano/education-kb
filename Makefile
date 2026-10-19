@@ -28,8 +28,9 @@ README_LOG := $(shell mktemp)
 ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
+AFFERO_LOG ?= /tmp/education-kb-gate-affero-rung.log
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung affero-rung-census
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -50,7 +51,8 @@ SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
 HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-absence gate-dates gate-provenance gate-identity gate-ladder-case \
              gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
-             gate-slug-oracle gate-payload-pin gate-shelf-consistency
+             gate-slug-oracle gate-payload-pin gate-shelf-consistency \
+             gate-affero-rung
 
 hooks: ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm, plus p293's calibrated slug-existence oracle, and p300's no-masking runner
 	@rc=0; red=""; green=0; \
@@ -513,3 +515,23 @@ carried: ## ACTION UG — is this row already on the shelves?  make carried SLUG
 # controls; here the gate could not SPEAK.  Pinned by `compose/code/p254-exit-status-reach/`.
 claims: ## ACTION UG — THE GATE: run before publishing any "there is no X".  make claims TOKEN=x
 	@$(PY) -I compose/code/p235-carried-index/carried_index.py claims "$(TOKEN)" .
+
+# 🔴 p309: THE TWO INSTRUMENTS THAT GRADED A REAL GPL-3.0 PAYLOAD AS AGPL-3.0.
+# `p306-licence-probe` emitted four AGPL verdicts in its life, all at p309, and two
+# were GPL-3.0 by title — `GatorEducator/gatorgrader` (35 191 B) and
+# `five-plus-one/AI-Marker-Suite` (35 154 B).  The rung was `"affero" in low` over
+# the whole body, ordered before the GPL rung, and GPL-3.0 §13 is TITLED "Use with
+# the GNU Affero General Public License".
+#
+# 🔵 `p150-gpl-affero-discrimination` refuted that test 159 passes earlier and keeps
+# it as its own negative control.  `p306` and `p191` RESTATED it.  `p308` learned
+# "import the canonical list, never restate it" for SHELF DATA; this is the same
+# rule for CLASSIFIERS.  Both now import `p150`, and this gate RUNS every declared
+# classifier on first-hand payloads rather than reading its source: the static
+# screen was wrong 34 times out of 36, the live run decided all 11.
+gate-affero-rung: ## ACTION p308-R (adjacent) — no classifier may read GPL-3.0 as AGPL-3.0
+	@cd compose/code/p309-affero-rung-census && { $(PY) test_rung_census.py > $(AFFERO_LOG) 2>&1 || { echo "🔴 p309-affero-rung-census FAILED — the suite's own report follows:" ; sed "s/^/   /" $(AFFERO_LOG) ; false ; } ; } && echo "── p309-affero-rung-census (36 controls: the §13 discriminator, the family matcher, the version-after-name rung, ladder order and its scope bug, the title window, p471's Spanish window, declared-token grammars, and GPL-3.0-inside-AGPL-3.0)" && echo "   PASS" || exit 1
+	@cd compose/code/p309-affero-rung-census && $(PY) -I run_classifiers.py || exit 1
+
+affero-rung-census: ## p309 — the static screen alone: a ranked backlog with a denominator
+	@cd compose/code/p309-affero-rung-census && $(PY) -I rung_census.py .. || true

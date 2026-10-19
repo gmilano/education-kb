@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 📈 2026-10-19 · Pass 309 — THREE NEW FOUNDATIONAL ROWS, ALL FROM THE `grading` AXIS, AND THE AXIS IS `4`-TO-`1` COPYLEFT AGAINST A TUTOR AXIS THAT IS MIT-DOMINATED
+
+⏱️ **Pass 309 of `2026-10-19`.** Evidence:
+[`p309-supply-census.2026-10-19-p309.tsv`](../evidence/p309-supply-census.2026-10-19-p309.tsv) ·
+[`p309-payload-pin.2026-10-19-p309.tsv`](../evidence/p309-payload-pin.2026-10-19-p309.tsv).
+
+### 🟢 Added this week
+
+| slug | payload | branch | family | stars |
+|---|---|---|---|---|
+| [`GatorEducator/gatorgrader`](https://github.com/GatorEducator/gatorgrader) | `LICENSE.md` **35 191 B** `57756125771d` | 🔴 **`master`** | 🟢 **GPL-3.0** | `85`★ |
+| [`sourcegrade/jagr`](https://github.com/sourcegrade/jagr) | `LICENSE` **34 523 B** `0d96a4ff68ad` | 🔴 **`master`** | 🔴 **AGPL-3.0** | `33`★ |
+| [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) | `LICENSE` **1 103 B** `ffaa010382b0` | 🔴 **`master`** | 🟢 **MIT** | `32`★ |
+
+🔵 **All three default to `master`, which no ladder would guess** — the fifth, sixth and seventh
+non-`main` default branch on these shelves after `i-educar`'s `2.12`, `php-xapi`'s `0.7`/`3.x`
+and `GibbonEdu/core`'s `v31.0.00`.
+
+### 🔴 The licence asymmetry between the two axes, measured on first-hand payloads
+
+| axis | rows probed | permissive | copyleft |
+|---|---|---|---|
+| assessment / grading (`p309`) | 5 | 🟢 **1** — `pedal`, MIT, `32`★ | 🔴 **4** — two GPL-3.0, two AGPL-3.0 |
+| tutors (`p308` and earlier) | every `ai-tutor` row pinned at `p308` | 🟢 **MIT throughout** | — |
+
+🔵 **So *"add AI grading"* and *"add an AI tutor"* are different licence conversations on the same
+engagement**, and the only permissive starting point on the assessment side is a `32`★ Python
+static-analysis library. → `P95` on [`compose/patterns.md`](../compose/patterns.md)
+
+### 🟡 A free region channel, and its yield measured rather than claimed
+
+🟢 **The copyright line of a licence payload is a first-hand holder statement**, arriving in the
+same request as the grant. Measured over the five short payloads this pass:
+**[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) reads
+`Copyright 2021 Technische Hochschule Mittelhessen` → EMEA (Germany), first-hand.** 🔴 **The other
+four read a personal name and place nobody.** 🟡 **Yield `1` in `5`**, and 🔵 **structurally blind
+to the stock copyleft payloads, which carry the FSF's copyright and not the project's** — so the
+four copyleft rows above are unplaceable this way. Registered as `ACTION p309-R` item 4.
+
+### 🔴 Still not reachable, said plainly
+
+🔴 `huggingface.co` **`000`**. 🔴 Every primary legal, market and government host —
+`eur-lex.europa.eu`, `oecd.org`, `unesdoc.unesco.org` and the rest of `T-p306a`'s list — **not
+retried this pass**, and every regulatory and market figure in [`intel/`](../intel/) remains
+**search-snippet grade**. 🔴 `api.github.com` is an **authorization** boundary, not a network one.
+🟢 **Reachable and used this pass: GitHub topic pages, `raw.githubusercontent.com` (10 payloads),
+and the blobless clone channel (4 repositories, root commits only).**
+
 ## 📈 2026-10-19 · Pass 308 — THE FIRST `gitlab.com` SWEEP IN THIS BASE'S HISTORY, AND THE PREDICTION `p307` REGISTERED IN ADVANCE IS REFUTED
 
 ⏱️ **Pass 308 of `2026-10-19`.** Evidence:

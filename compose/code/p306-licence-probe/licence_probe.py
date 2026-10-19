@@ -8,6 +8,7 @@ which is this base's standing evidence format.
 Usage: licence_probe.py slugs.txt out.tsv
 """
 import hashlib
+import os
 import subprocess
 import sys
 
@@ -42,6 +43,29 @@ def fetch(slug, branch, name):
     return code, body[:nl]
 
 
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                "..", "p150-gpl-affero-discrimination"))
+from gpl_affero import title_licence as _title_licence  # noqa: E402
+from gpl_affero import title_version as _title_version  # noqa: E402
+
+
+def _titled_family(text):
+    """The title-line licence WITH its version, e.g. `GPL-3.0`, or None.
+
+    🔴 p150's `title_licence()` returns the bare family `GPL` for both GPL-2.0 and
+    GPL-3.0, and the version is not cosmetic: GPL-2.0 has no patent grant and no
+    section 13 at all, which `p150`'s own notes record against `qxbao/qldt-hanu-mcp`.
+    The two reads compose; neither alone is a licence identifier.
+    """
+    fam = _title_licence(text)
+    if fam is None:
+        return None
+    if "-" in fam:          # AGPL-3.0 already carries its version
+        return fam
+    ver = _title_version(text)
+    return "%s-%s" % (fam, ver) if ver else fam
+
+
 def classify(text):
     """p305 clause rule. Returns (verdict, family)."""
     low = text.lower()
@@ -49,7 +73,28 @@ def classify(text):
     reserved = any(m in low for m in RESERVED_MARKERS)
     if not has_grant:
         return ("RESERVED-NO-GRANT" if reserved else "NO-GRANT-CLAUSE"), "-"
+    # 🔴 p309: THE GNU RUNGS ARE NOT READ FROM THE BODY ANY MORE.
+    #
+    # This function carried `elif "affero" in low:` ordered BEFORE the GPL rung,
+    # over the whole lowercased payload.  GPL-3.0 §13 is TITLED "Use with the GNU
+    # Affero General Public License" and the body names the Affero licence three
+    # times (lines 552/556/559 of the 35 191 B payload pinned in
+    # `p309-affero-rung-census/fixtures/`), so NO GPL-3.0 PAYLOAD COULD EVER REACH
+    # THE GPL RUNG.  Measured at p309: of the four AGPL-3.0 verdicts this prober
+    # has emitted in its life, all four at p309, TWO were GPL-3.0 by title —
+    # `GatorEducator/gatorgrader` (35 191 B) and `five-plus-one/AI-Marker-Suite`
+    # (35 154 B).
+    #
+    # 🔴 And the fix already existed.  `p150-gpl-affero-discrimination` refuted
+    # this exact test, named `p145`/`p147`/`p149` as its carriers, and shipped
+    # `title_licence()`.  `p306` was written LATER and restated the refuted body
+    # test.  🔵 `p308` learned "import the canonical list, never restate it" for
+    # SHELF DATA; this is the same rule for CLASSIFIERS, and this is what skipping
+    # it cost.  The discriminator is IMPORTED, never copied.
     fam = "unknown"
+    titled = _titled_family(text)
+    if titled:
+        return "GRANT", titled
     if "apache license" in low:
         fam = "Apache-2.0"
     elif "mit license" in low or "permission is hereby granted, free of charge" in low:

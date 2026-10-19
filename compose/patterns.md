@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 309 — two recipes, both from this pass's own measurements
+
+### 🟢 `P95` — the AI assessment layer on a copyleft host, with the licence boundary drawn on purpose
+
+🔵 **Why this recipe and not another:** the assessment axis is where this pass found every new
+row, and it is **`4`-to-`1` copyleft** ([`repos/foundations.md`](../repos/foundations.md)) against
+a tutor axis that is MIT-dominated. A studio that treats the two the same will put a client's
+proprietary code inside an AGPL process boundary.
+
+**Wire it this way:**
+
+1. **Host the grading run inside the existing platform, unmodified.**
+   [`INGInious/INGInious`](https://github.com/INGInious/INGInious) (`243`★, runs the course's own
+   tests) or [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) (`1.4k`★) — 🔴 **both
+   copyleft, and neither is modified by this recipe.**
+2. **Put the AI analysis in a SEPARATE process** that reads the submission and writes a comment,
+   speaking to the host over its own interface. 🟢 **Start from
+   [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) — MIT `1 103 B` `ffaa010382b0`, the
+   only permissive row on the axis** — as the static-analysis half, and keep the model call in
+   your own code.
+3. **Do not fork the host.** 🔵 The boundary is the point: the AGPL/GPL obligation follows the
+   host's own source, and a separate process reading its outputs is the configuration that keeps
+   client code out of scope. 🔴 **Scope the legal read in the SoW — this is an architecture, not a
+   legal opinion.**
+4. **Teacher-in-the-loop by construction**, because EMEA requires it: Baden-Württemberg bans AI
+   from *awarding* grades, so the AI writes a **draft comment and a confidence**, and the
+   platform's existing review step remains the only thing that writes a mark.
+5. **Evidence the gap you are closing:** `62%` of students already use AI, `18%` of teachers have
+   formal guidance ([`intel/market.md`](../intel/market.md)). The deliverable is teacher
+   capacity, and the grading assist is how it is delivered.
+
+🟡 **What this recipe does NOT have:** an AI-native assessment platform to start from. 🔴 **`0`
+of the three platform rows declares an AI grading path** — measured, with the denominator, on
+[`verticals/solutions.md`](../verticals/solutions.md).
+
+### 🟢 `P96` — ship the tutor as a SKILL first, and charge for the content licence conversation
+
+🔵 **From this pass's counted trend:** `5` of the top `20` `ai-tutor` repositories, and the
+`877`★ leader of the ITS axis, are **agent skills** rather than applications
+([`intel/trends.md`](../intel/trends.md)).
+
+1. **Pilot as a skill bundle**, not a deployment: no server, no auth, no data-residency review,
+   and therefore **no procurement cycle** — which is the actual blocker in a sector where
+   *"institutional procurement moves more slowly than consumer adoption."*
+2. **Model it on what exists.** [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+   (`877`★) targets **three** host agents from one repository; 🟢 **copy the multi-host structure,
+   not the content.**
+3. 🔴 **Read the content licence before anything else.** That repository is
+   **CC BY-SA 4.0** (`LICENSE` **1 230 B** `f952182df4eb`, a grant **by reference**, holder
+   `Gareth Manning`). **ShareAlike reaches the client's derived course materials.** 🔵 **A
+   permissively-licensed skill corpus is the scarce asset here, and this base has not found one
+   — stated as a gap with its denominator: `1` of `1` skill corpora probed is ShareAlike.**
+4. **Graduate to a runtime only where the regulation demands it.** Oklahoma's `S.B. 1734`
+   per-learner opt-out (`P93`) and Singapore's supervised-inside-SLS model (`P94`) **cannot be
+   satisfied by a skill** — they need a platform that can disable AI per learner and log
+   supervision. 🟢 **So the skill is the wedge and the runtime is the second phase, and the
+   regulation tells you which clients skip phase one.**
+
 ## 🟢 Pass 308 — THREE NEW RECIPES (`P92`-`P94`), AND ALL THREE ARE BOUGHT BY A REGULATION RATHER THAN WANTED BY A USER
 
 ⏱️ **Pass 308 of `2026-10-19`.** Evidence:

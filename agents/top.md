@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 309 — THE `ai-tutor` AXIS IS SATURATED: `25` OF `30` CANDIDATES WERE ALREADY CARRIED, AND ALL `5` NEW ROWS CAME OFF A DIFFERENT AXIS WHERE `4` OF `5` ARE COPYLEFT
+
+⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:
+[`p309-payload-pin.2026-10-19-p309.tsv`](../evidence/p309-payload-pin.2026-10-19-p309.tsv) ·
+[`p309-payload-pin-PRE-FIX.2026-10-19-p309.tsv`](../evidence/p309-payload-pin-PRE-FIX.2026-10-19-p309.tsv) ·
+[`p309-root-commit-identity.2026-10-19-p309.tsv`](../evidence/p309-root-commit-identity.2026-10-19-p309.tsv) ·
+[`p309-supply-census.2026-10-19-p309.tsv`](../evidence/p309-supply-census.2026-10-19-p309.tsv).
+
+### 🟢 The supply census, by axis, with a denominator
+
+🟢 **Three GitHub topic pages, `HTTP 200` throughout, `20` rows rendered each.** 🔵 **Why topics
+and not a listicle: the four mandated listicle queries returned `0` in-domain rows this pass
+(see [`intel/trends.md`](../intel/trends.md)), and `p308` predicted exactly that.**
+
+| axis | repos on the topic | read | already carried | 🟢 NEW |
+|---|---|---|---|---|
+| [`ai-tutor`](https://github.com/topics/ai-tutor) | **750** | 20 | 🔴 **20 of 20** | **0** |
+| [`intelligent-tutoring-system`](https://github.com/topics/intelligent-tutoring-system) | 41 | 20 | 🔴 **20 of 20** | **0** |
+| [`grading`](https://github.com/topics/grading) | 272 | 20 | 15 of 20 | 🟢 **5** |
+
+🔴 **`40` of `40` tutor-axis candidates were already on these shelves.** 🟢 **That is not a
+failed pass — it is a measured saturation, and it says where the next row is: the ASSESSMENT
+axis, which this base has 90 passes of tutor work and almost no grading work behind it.**
+
+### 🟢 New agent rows — `2`, and both are AI-in-the-loop assessment, not tutoring
+
+| slug | payload | stars · language | what it is | region |
+|---|---|---|---|---|
+| [`ai-lingnan/econai-agent-platform`](https://github.com/ai-lingnan/econai-agent-platform) | `LICENSE` **34 523 B** `0d96a4ff68ad` → 🔴 **AGPL-3.0** *(title-read)* | `39`★ · Python | Economics and finance course platform with an **AI dual-agent review** loop | 🟡 **APAC-SUSPECTED** — owner handle and a Chinese-language description, **no first-hand placement** |
+| [`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite) | `LICENSE` **35 154 B** `1ab858f515df` → 🟢 **GPL-3.0** *(title-read; the prober said AGPL-3.0)* | `93`★ · JavaScript | Userscript driving **AI-assisted marking across several online exam platforms** | 🟡 **APAC-SUSPECTED**, same two weak signals |
+
+🔵 **Two rows, not five, and the reason is stated rather than padded:** the other three new slugs
+are autograders with no model in the loop and belong on
+[`repos/foundations.md`](../repos/foundations.md), not on an agent shelf.
+
+### 🔴 A `p308` refusal CORRECTED — the repository exists, under a different owner, and this base already carried it
+
+| what `p308` wrote | what `p309` measured |
+|---|---|
+| [`plastic-labs/bloom`](https://github.com/plastic-labs/bloom) — *"the clone channel returns a credential prompt, which this base's calibrated oracle reads as **absent-or-private**, never as a repository"* | 🟢 **The slug really is absent — `raw.githubusercontent.com` returns `404`, confirmed this pass.** 🔴 **And the PROJECT it described is [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) — MIT `1 069 B` `7d574cf3632e`, `289`★, holder `Li Zhengping`, a Bloom-2-Sigma tutor shipped as a Claude Code skill *and* a self-hostable app — which `make carried` reports **CARRIED*** |
+
+🔵 **The mechanism, and it is `p308`'s own lesson one layer out.** `p308` found that `HEAD` is the
+wrong identity key and the root commit is the right one. **This is the same error on the other
+side: an ABSENCE verdict keyed on the SLUG, for a project whose identity was in its
+DESCRIPTION.** 🔴 **A correct `404` became a wrong conclusion** — *"not a repository"* instead of
+*"not at this address."* → `T-p309c`
+
+### 🟡 One star reading that disagrees with this base by `17.7k`, and the channel is named
+
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) renders **`41.7k`★** on the
+`ai-tutor` topic page today. This base's dated history carries `~22k` (`p54`) and `~24k`
+(`p65`). 🔵 **Not a contradiction — a 2-month-old reading against a live one** — but
+`api.github.com` remains an authorization boundary, so **this is `github.com` as rendered and
+nothing stronger.** 🟡 Its `LICENSE` is Apache-2.0 at **11 408 B**, still the non-stock
+appendix `p308` pinned.
+
 ## 🔴 Pass 308 — THIS SHELF CARRIES ONE PROJECT UNDER TWO ROWS, AND `p283`'s IDENTITY RULE SAYS THEY ARE TWO REPOSITORIES BECAUSE IT TESTS THE WRONG END OF THE HISTORY
 
 ⏱️ **Pass 308 of `2026-10-19`, following `p307` of `2026-10-19`.** Evidence:

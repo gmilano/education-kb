@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 309 — THE ASSESSMENT LAYER IS THE UNWORKED AXIS, AND ITS LICENCE PROFILE IS THE OPPOSITE OF THE TUTOR LAYER'S: `4` OF `5` NEW ROWS ARE COPYLEFT
+
+⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:
+[`p309-payload-pin.2026-10-19-p309.tsv`](../evidence/p309-payload-pin.2026-10-19-p309.tsv) ·
+[`p309-payload-pin-PRE-FIX.2026-10-19-p309.tsv`](../evidence/p309-payload-pin-PRE-FIX.2026-10-19-p309.tsv) ·
+[`p309-root-commit-identity.2026-10-19-p309.tsv`](../evidence/p309-root-commit-identity.2026-10-19-p309.tsv) ·
+[`p309-supply-census.2026-10-19-p309.tsv`](../evidence/p309-supply-census.2026-10-19-p309.tsv).
+
+### 🟢 Three new foundational rows — autograders, no model in the loop, and that is why they are here
+
+| slug | payload | branch | family | what it grades |
+|---|---|---|---|---|
+| [`GatorEducator/gatorgrader`](https://github.com/GatorEducator/gatorgrader) | `LICENSE.md` **35 191 B** `57756125771d` | 🔴 **`master`** | 🟢 **GPL-3.0** *(title-read; 🔴 the prober said AGPL-3.0)* | writers' and programmers' work, `85`★ |
+| [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) | `LICENSE` **1 103 B** `ffaa010382b0` | 🔴 **`master`** | 🟢 **MIT** — **the only permissive row in this cohort** | student Python source, `32`★ |
+| [`sourcegrade/jagr`](https://github.com/sourcegrade/jagr) | `LICENSE` **34 523 B** `0d96a4ff68ad` | 🔴 **`master`** | 🔴 **AGPL-3.0** *(title-read, confirmed)* | Java, in Kotlin, `33`★ |
+
+### 🔴 The licence profile of the assessment axis, measured on `5` first-hand payloads
+
+| family | rows | slugs |
+|---|---|---|
+| 🔴 **GPL-3.0** | 2 | `gatorgrader` · `AI-Marker-Suite` |
+| 🔴 **AGPL-3.0** | 2 | `jagr` · `econai-agent-platform` |
+| 🟢 **MIT** | 1 | `pedal` |
+
+🔵 **Why this matters for a studio rather than for a licence table:** the tutor axis this base
+has worked for ninety passes is **MIT-dominated** — every one of the `ai-tutor` rows pinned at
+`p308` is MIT. **The assessment axis is `4`-to-`1` copyleft.** 🟢 **So "we will add AI grading"
+is a different licence conversation from "we will add an AI tutor", on the same engagement, and
+the only permissive starting point found this pass is a `32`★ Python library.**
+
+### 🟡 A region channel this base has never used, with its yield measured rather than claimed
+
+🟢 **A licence payload's copyright line is a FIRST-HAND holder statement**, fetched in the same
+request as the grant. Measured over the five short payloads probed this pass:
+
+| slug | holder line, verbatim from the payload | places it? |
+|---|---|---|
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | `Copyright 2021 Technische Hochschule Mittelhessen` | 🟢 **YES — EMEA (Germany), first-hand** |
+| [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) | `Copyright (c) 2018 Austin Cory Bart, Luke Gusukuma, Dennis Kafura` | 🔴 no — three personal names |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | `Copyright (c) 2026 Arnaud Guiovanna` | 🔴 no |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | `Copyright (c) 2026 Li Zhengping` | 🔴 no |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `Copyright (c) 2026 Gareth Manning` | 🔴 no |
+
+🟡 **Yield: `1` placement in `5`.** 🔵 **And the stock copyleft payloads carry the FSF's copyright,
+not the project's, so the channel is structurally blind to exactly the rows above** — the four
+copyleft assessment repos are unplaceable this way. 🟢 **It costs nothing (the bytes are already
+fetched) and it is the only first-hand region source this base has for a code row** — every
+regional figure in [`intel/market.md`](../intel/market.md) is search-snippet grade. Registered,
+with its denominator, as `ACTION p309-R` item 4.
+
 ## 🟢 Pass 308 — THE INSTRUMENT THIS BASE WAS MISSING IS NOT A CHANNEL, IT IS A MIRROR: FIFTEEN GATES GRADED THIS BASE AGAINST THE WORLD AND NONE GRADED IT AGAINST ITSELF
 
 ⏱️ **Pass 308 of `2026-10-19`.** Evidence:

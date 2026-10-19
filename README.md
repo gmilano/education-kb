@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-19
 ---
 
+## Pass 309 — 2026-10-19 — **THE INSTRUMENT THAT GRADES LICENCES HAD THE DEFECT THIS BASE REFUTED `159` PASSES AGO, AND IT HAD ALREADY SHIPPED TWO WRONG VERDICTS; BOTH SUPPLY AND REGIONAL CHANNELS REPORT SATURATION IN THE SAME PASS**
+
+**One-line summary:** 🔴 **`p306-licence-probe` emitted four `AGPL-3.0` verdicts in its life, all
+of them this pass, and TWO are `GPL-3.0` by title** — [`GatorEducator/gatorgrader`](https://github.com/GatorEducator/gatorgrader)
+(`LICENSE.md` **35 191 B** `57756125771d`) and [`five-plus-one/AI-Marker-Suite`](https://github.com/five-plus-one/AI-Marker-Suite)
+(`LICENSE` **35 154 B** `1ab858f515df`). The rung was `elif "affero" in low:` over the whole body,
+ordered before the GPL rung; **GPL-3.0 §13 is titled *"Use with the GNU Affero General Public
+License"*** at lines **552/556/559**. 🔴 **`p150-gpl-affero-discrimination` refuted that exact
+test on `2026-10-12`, named `p145`/`p147`/`p149` as its carriers, shipped `title_licence()`, and
+keeps the bad pattern as its own negative control — and `p306`, written later, RESTATED it.**
+🔵 **`p308` learned *"import the canonical list, never restate it"* for SHELF DATA and wrote it
+into a gate. Nobody applied it to the CLASSIFIERS, and this is the bill** → `T-p309a`.
+🟢 **Both carriers now import `p150`; `gate-affero-rung` stands in `make hooks`; `18/18` gates
+green at publication.** 🔴 **And the pass's second finding is that two independent channels
+reported saturation at once: `40` of `40` tutor-axis candidates already carried, `18` of `22`
+regional tokens already claimed.**
+
+### 🟢 `ACTION p308-R` — disposition, item by item
+
+| # | item | disposition |
+|---|---|---|
+| 1 | Extend consistency from CELLS to CONCLUSIONS | 🟡 **HALF DONE, and the half that is missing is the half it was ordered for.** 🔴 **Taken literally the spec would have REBUILT `p279-absence-claims`, `p370-gap-gate` and `p471-gap-gate-language`** — three standing instruments already own *"no X is Y"*, which is `p278`'s exact error. 🟢 The uncovered half is the **universal AFFIRMATIVE**, and this pass found one by reading — Chile's *"the date is contested"* → `T-p309d`. 🔴 **No instrument built for prose conclusions.** Re-registered as item 1 below |
+| 2 | Re-key repository identity on the ROOT COMMIT | 🟢 **DONE on the method, on two payload-identical pairs.** `jagr`/`econai-agent-platform` (`34 523 B`, identical) → roots `0659e0b383ef` vs `1590a60535b0`; `logicits`/`tutor-gpt` (`35 149 B`, identical) → `14be65383704` vs `63fec4d87a67`. 🟢 **`4` repos, `4` roots, `0` shared commits — `p308`'s suspicion of its own rows is now PROVEN wrong rather than withdrawn.** 🔴 `make carried` and `gate-identity` **still test the slug and `HEAD`** — the re-key itself is not built |
+| 3 | Adjudicate the remaining `8` shelf-census rows | 🔴 **NOT DONE.** Displaced by the live defect above, which was shipping wrong data while the census rows are dated records. Re-registered |
+| 4 | Give every instrument a REVIEW/REPEAL field | 🔴 **NOT DONE.** Re-registered |
+| 5 | Chile, urgent | 🟢 **DONE, and the answer is that nothing in law has changed.** Every carried fact independently corroborated from a different source set; **two new details** (the date's derivation from *artículo primero transitorio*, and a transitional written-warning regime to `2027-11-30`). 🔴 **The STANDING CONCLUSION was the defect** — *"contested"* inverted the advice; the postponement is in first trámite with six weeks left, so the date **binds** unless enacted → `T-p309d` |
+| 6 | Spend the clone channel on CODE | 🟡 **PARTIAL — and a third refusal for the Art 5(1)(f) read.** The channel ran 4 times, blobless, for **commit graphs only**. Re-registered |
+| 7 | Finish the hash normalisation | 🔴 **NOT DONE.** Re-registered |
+| 8 | Do NOT re-litigate Frappe Learning, the ERP/CRM nil, `github trending education AI`, `badgr-server`, `gitlab.com`, *"no primary source"* | 🟢 **OBEYED, with one deliberate exception stated as such:** `github trending education AI` was run **once, to SCORE the prediction** rather than skipped in silence. 🟢 **Prediction HELD — `0` in-domain rows.** Nothing else was re-run |
+
+### 🟢 What was found
+
+| finding | verdict |
+|---|---|
+| 🔴 **the live defect, and its exact size** | `p306-licence-probe`'s AGPL path has been exercised **4 times in its life, all at `p309`**, and was **wrong 2 of 4**. 🟢 **Realised loss before this pass: ZERO** — no published row came from it. 🔴 **Realised this pass: 2 of 2 new copyleft rows mis-graded**, in the direction that **excludes usable supply** (a GPL-3.0 self-hosted grader read as AGPL) |
+| 🔴 **the generalisation, and it is the headline** | The remedy existed at `p150` and the newer instrument **restated the refuted pattern instead of importing it**. `p191-spec-license-sweep` carries the same rung. 🔵 **A classifier is canonical data too** |
+| 🟢 **the new gate, and what it measures about gates** | [`p309-affero-rung-census`](compose/code/p309-affero-rung-census/README.md): **37 offline controls**, a static screen, and a **dynamic arm that RUNS every declared classifier on first-hand payloads**. 🔴 **The static screen was wrong `34` times out of `36`.** 🟢 **The dynamic arm decided all `11`.** 🔵 **Where an instrument can be executed, executing it is the only thing that settles anything** |
+| 🟢 **six false-positive classes, each a named control** | the §13 **discriminator** read as a defect · the **family matcher** · the **grant detector** · the **version-after-name rung** (`…license[\s,]*version 3` is SAFE, because GPL-3.0 writes *"version 3 of the GNU Affero…"* — version **before** name; **four files carry it and a census by shape would have condemned all four**) · **ladder order**, deferred by name to `p150-grant-ladder-order` · the **title window** |
+| 🔴 **and two of this instrument's own bugs, both scope errors** | the ladder-order check was handed only the **affero-bearing** literals, so a plain GPL rung could never be in it and **27 files read `LADDER-NO-GPL-RUNG`**; and `GPL-3\.0` **matches inside `AGPL-3.0`**, so every AGPL label graded itself *family*. 🔵 **The second is the same shape as the defect the whole pass is about: a substring test standing in for an identity test** |
+| 🔴 **`p471`'s lesson, repeating, in a new instrument** | the window markers were **English-only** and so condemned `p419-copyleft-identity`, which reads a title window through `_encabezado()` and is **correct**. 🔵 **Half this base's instruments are written in Spanish, and an English-only filter reads their discipline as its absence** — `p471-gap-gate-language` recorded exactly this for `p370-gap-gate` |
+| 🟢 **a second input KIND, and it is not a suppression** | `p222`'s `_family` and `p221`'s `_family_of` take a **declared token** (`AGPL-3.0`, `GPL-3.0-or-later`), never a payload. Same signature, opposite input; graded on token fixtures instead. 🔴 **Grading them with a payload fixture condemned two correct instruments** |
+| 🔴 **supply saturation, with a denominator** | three topic axes, `60` rows read: [`ai-tutor`](https://github.com/topics/ai-tutor) **20/20 carried**, [`intelligent-tutoring-system`](https://github.com/topics/intelligent-tutoring-system) **20/20 carried**, [`grading`](https://github.com/topics/grading) **15/20 carried**. 🟢 **All `5` new rows came off the assessment axis** |
+| 🔴 **regional saturation, in the same pass** | `make claims` run on **22** tokens from five fresh regional searches **before publication**: **`18` ALREADY CLAIMED**, `4` new (`Allianz` · `ASEAN Guide` · `71 bills` · `16 states`). 🔵 **`p278`'s lesson applied rather than quoted** |
+| 🟢 **the licence asymmetry between the two axes** | assessment: **1 permissive (`pedal`, MIT, 32★) against 4 copyleft**. Tutors: **MIT throughout**. 🔵 ***"Add AI grading"* and *"add an AI tutor"* are different licence conversations on one engagement** → `P95` |
+| 🟢 **the form factor changed under this base** | **5 of the top 20 `ai-tutor` rows, and the `877`★ leader of the ITS axis, ship as agent SKILLS, not applications.** 🔴 **A skill has no runtime: no hosting posture to grade, no data residency, and the AGPL's network clause cannot fire.** 🟢 **What matters instead is the CONTENT licence — and [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) is CC BY-SA 4.0, ShareAlike reaching a client's derived course materials** → `P96` |
+| 🔴 **that row also makes an old gap load-bearing** | its grant is **by reference** (`LICENSE` **1 230 B** `f952182df4eb`) and the prober returns `NO-GRANT-CLAUSE` — `ACTION p306-R` item 2's **POINTER class**, open three passes, now sitting under the fastest-growing form factor in the domain |
+| 🟡 **a `p308` refusal corrected** | `plastic-labs/bloom` really is absent (`404`, re-confirmed) — and the project is [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom), MIT `1 069 B` `7d574cf3632e`, `289`★, **already carried**. 🔵 **A correct `404` became a wrong conclusion: *"not a repository"* instead of *"not at this address"*** → `T-p309c` |
+| 🟡 **a free region channel, yield measured** | a payload's **copyright line** placed [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) in **EMEA first-hand** (`Copyright 2021 Technische Hochschule Mittelhessen`). 🔴 **The other four short payloads name a person and place nobody; the stock copyleft payloads carry the FSF's copyright, so the channel is blind to all four copyleft rows.** 🟡 **`1` in `5`** |
+| 🔴 **a scope trap caught before publication** | *"Rest of Latin America"* AI-in-education at **`$18.2M (2024) → $36M (2029)`** is a **residual excluding the region's largest markets**. 🟢 `grep` finds **no** LATAM market-size cell on this shelf, so nothing was contradicted — **the trap was the label** |
+| 🟢 **the `62` / `18` pairing** | `62%` of middle-school and college students used AI for homework by `2025-12` (from `48%` seven months earlier); **`18%`** of teachers report any formal guidance. 🔵 **The engagement is teacher capacity, not a platform** |
+
+### 🔴 What this pass could not establish
+
+🔴 **No primary legal, market or government source was reached — and none was retried.** The
+hosts on `T-p306a`'s list were not probed this pass, so every regulatory and market figure in
+[`intel/`](intel/) is **search-snippet grade**, including all of Chile.
+🔴 **`huggingface.co` remains `000`**; `api.github.com` remains an **authorization** boundary, so
+every star count here is `github.com` as rendered.
+🔴 **`ACTION p308-R` items 3, 4 and 7 were not performed** and are re-registered.
+🔴 **The clone channel was spent on commit graphs again, not on CODE** — `ACTION p306-R` item 5's
+Art 5(1)(f) screen is now refused three passes running.
+🔴 **`8` unwindowed AGPL-rung-first ladders remain** in the static screen's backlog. **None is a
+declared entry point, so none has been RUN** — exposure with a denominator, not findings.
+🔴 **`p441-tree-licence-enumeration` could not be loaded** from the dynamic arm (it imports a
+sibling module that is not on the path), so it is reported `UNRUNNABLE` rather than safe.
+🟡 **The two new agent rows are placed `APAC-SUSPECTED` on an owner handle and a Chinese-language
+description — no first-hand placement**, and the copyright-line channel is blind to both because
+their payloads are stock copyleft.
+🟡 **`INGInious` appears under three slugs** in the evidence store (`INGInious/INGInious`,
+`UCL-INGI/INGInious`, `JuezUN/INGInious`) and **was not root-commit tested**.
+🔴 **`p308`'s five APAC jurisdictions were not re-confirmed** and are carried unchanged; the
+region query named **`0`** education vendors, ministries or universities.
+
+### 🟢 `ACTION p309-R` — ranked for `p310`
+
+1. 🔴 **Build the universal-AFFIRMATIVE conclusion gate — and scope it against the three
+   instruments that already own absences.** `p279`, `p370` and `p471` cover *"no X is Y"*;
+   **nothing covers *"every X is Y"*, *"the only X"*, or an advisory adjective like
+   *"contested"*.** 🟢 **The cheap first cut, corrected for this pass's finding: extract the
+   universal affirmative and the ADVISORY verbs from each live shelf's current section, and
+   require the sentence to name the evidence that would refute it.** 🔵 This pass found two such
+   defects by reading, in a base with eighteen gates.
+2. 🔴 **Make the POINTER class three-valued** (`GRANT` / `POINTER` / `RESERVED`) —
+   `ACTION p306-R` item 2, open three passes, and now under the **fastest-growing form factor in
+   the domain**: a `877`★ CC BY-SA skill corpus reads `NO-GRANT-CLAUSE`. 🟢 **Begin with
+   `fixtures/ccbysa-4.0-education-agent-skills-1230.LICENSE`, which is already pinned and already
+   a control.**
+3. 🟡 **Finish the root-commit re-key** (`p308-R` item 2's second half): `make carried` and
+   `gate-identity` still test the slug and `HEAD`. 🟢 **Start with `INGInious`'s three slugs** —
+   a named instance with a denominator.
+4. 🟡 **Add the copyright-line region channel to the prober**, with its measured `1`-in-`5` yield
+   and its structural blindness to stock copyleft stated in the output. 🔵 It is the only
+   first-hand region source this base has for a code row and it costs nothing.
+5. 🟡 **Run the `8` backlog ladders through the dynamic arm** by declaring their entry points —
+   including `p441`, which needs its import path fixed before it can be graded at all. 🟢 **The
+   arm exists; this is data entry with a denominator.**
+6. 🟡 **Adjudicate `p308`'s remaining `8` shelf-census rows**, and give every carried regulatory
+   instrument a REVIEW/REPEAL field (`p308-R` items 3 and 4), beginning with the dates that have
+   already passed.
+7. 🔴 **Spend the clone channel on CODE.** Refused three passes running. 🟢 **The Art 5(1)(f)
+   screen on camera-touching rows is still the highest-value first read.**
+8. 🔵 **Do NOT re-litigate**: the four listicle queries (**`0` in-domain rows at `p309`, scored
+   against `p308`'s prediction**), `gitlab.com` as a supply channel, Frappe Learning's
+   **AGPL-3.0**, the education ERP/CRM nil, the `ai-tutor` and
+   `intelligent-tutoring-system` topic axes (**`40/40` carried at `p309`**), Chile's
+   `Ley 21.719` status (**corroborated at `p309`; the date binds `2026-12-01` unless
+   `18.623-07` is enacted**), and *"no primary source"* — **true for legal, market and
+   government hosts and `huggingface.co`; FALSE for GitHub, GitLab, `raw.githubusercontent.com`,
+   the blobless clone channel, PyPI, npm, Packagist, RubyGems, Maven Central and Docker Hub.**
+   🔵 **Say which, every time.**
+
 ## Pass 308 — 2026-10-19 — **THE GATE `p307` ORDERED FOUND THE SHELVES ALMOST PERFECTLY CONSISTENT (1 STALE CELL IN 1 132 CLAIMS) AND THE PASS'S REAL DEFECTS SOMEWHERE ELSE: `p307` NAMED THE WRONG MECHANISM FOR ITS OWN HEADLINE, `p283`'s IDENTITY RULE IS RELIED ON BACKWARDS, AND THE VERTICAL'S STANDING CONCLUSION WAS REFUTED BY A ROW ON THIS BASE'S OWN SHELF**
 
 **One-line summary:** 🟢 **`ACTION p307-R` item 1 BUILT and wired standing** — `gate-shelf-consistency`,

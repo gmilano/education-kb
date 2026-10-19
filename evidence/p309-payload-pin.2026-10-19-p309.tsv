@@ -1,0 +1,11 @@
+slug	branch	file	http	bytes	sha256_12	verdict	family
+GatorEducator/gatorgrader	master	LICENSE.md	200	35191	57756125771d	GRANT	GPL-3.0
+pedal-edu/pedal	master	LICENSE	200	1103	ffaa010382b0	GRANT	MIT
+sourcegrade/jagr	master	LICENSE	200	34523	0d96a4ff68ad	GRANT	AGPL-3.0
+ai-lingnan/econai-agent-platform	master	LICENSE	200	34523	0d96a4ff68ad	GRANT	AGPL-3.0
+five-plus-one/AI-Marker-Suite	master	LICENSE	200	35154	1ab858f515df	GRANT	GPL-3.0
+GarethManning/education-agent-skills	main	LICENSE	200	1230	f952182df4eb	NO-GRANT-CLAUSE	-
+ArnaudGuiovanna/tutor-mcp	main	LICENSE	200	1073	1e05c9440068	GRANT	MIT
+Li-Evan/Bloom	main	LICENSE	200	1069	7d574cf3632e	GRANT	MIT
+plastic-labs/bloom	-	-	404	-	-	NO_PAYLOAD	-
+thm-mni-ii/feedbacksystem	main	LICENSE	200	10785	65125d9e480b	GRANT	Apache-2.0

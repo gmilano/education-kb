@@ -21,10 +21,33 @@ The classifier answers one question with a quoted sentence, never a guess:
 A file can carry two marks (the IMS license denies derivatives AND conditions on
 registration).  They are emitted together because they are different obligations.
 """
+import os
 import re, sys
 
 DENY = re.compile(r"no right to create (?:modifications|derivatives)[^.]*", re.I | re.S)
 REG = re.compile(r"registered user", re.I)
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                "..", "p150-gpl-affero-discrimination"))
+from gpl_affero import title_licence as _title_licence  # noqa: E402
+from gpl_affero import title_version as _title_version  # noqa: E402
+
+
+def _titled_family(text):
+    """The title-line licence WITH its version, e.g. `GPL-3.0`, or None.
+
+    🔴 p150's `title_licence()` returns the bare family `GPL` for both GPL-2.0 and
+    GPL-3.0, and the version is not cosmetic: GPL-2.0 has no patent grant and no
+    section 13 at all, which `p150`'s own notes record against `qxbao/qldt-hanu-mcp`.
+    The two reads compose; neither alone is a licence identifier.
+    """
+    fam = _title_licence(text)
+    if fam is None:
+        return None
+    if "-" in fam:          # AGPL-3.0 already carries its version
+        return fam
+    ver = _title_version(text)
+    return "%s-%s" % (fam, ver) if ver else fam
+
 FAMS = [
     ("PERMISSIVE-SOFTWARE", "Apache-2.0", re.compile(r"Apache License\s*,?\s*Version 2\.0", re.I)),
     ("PERMISSIVE-SOFTWARE", "MIT", re.compile(r"^\s*MIT License", re.I | re.M)),
@@ -45,6 +68,20 @@ def classify(text):
         fam = "SPEC-LICENSE"
     if REG.search(text):
         marks.append("REGISTERED-USERS")
+    # 🔴 p309: the GNU half of `FAMS` is a body search, and its AGPL rung —
+    # `re.compile(r"GNU AFFERO GENERAL PUBLIC LICENSE", re.I)` — is the pattern
+    # `p150-gpl-affero-discrimination` pins as `NAIVE_AGPL`, its own NEGATIVE
+    # control.  Ordered before the GPL-3.0 rung, it grades every GPL-3.0 payload
+    # `AGPL-3.0`, because GPL-3.0 §13 is titled "Use with the GNU Affero General
+    # Public License".  Measured at p309 against the real 35 191 B payload:
+    # `('COPYLEFT-SOFTWARE', 'AGPL-3.0')`.  🟢 The title read is IMPORTED from
+    # p150 and tried FIRST; the body ladder still answers for everything else.
+    if not marks:
+        titled = _titled_family(text)
+        if titled:
+            cls = ("COPYLEFT-SOFTWARE" if titled.startswith(("GPL", "AGPL", "LGPL"))
+                   else "PERMISSIVE-SOFTWARE")
+            return cls, titled, quote
     if not marks:
         for cls, name, rx in FAMS:
             if rx.search(text):

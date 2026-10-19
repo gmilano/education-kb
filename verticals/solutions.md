@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟡 Pass 309 — THE ASSESSMENT VERTICAL WAS ALREADY ON THESE SHELVES; WHAT WAS MISSING IS THAT ITS THREE PLATFORM ROWS ARE ALL COPYLEFT AND NONE OF THEM IS AI-NATIVE
+
+⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:
+[`p309-payload-pin.2026-10-19-p309.tsv`](../evidence/p309-payload-pin.2026-10-19-p309.tsv) ·
+[`p309-payload-pin-PRE-FIX.2026-10-19-p309.tsv`](../evidence/p309-payload-pin-PRE-FIX.2026-10-19-p309.tsv) ·
+[`p309-root-commit-identity.2026-10-19-p309.tsv`](../evidence/p309-root-commit-identity.2026-10-19-p309.tsv) ·
+[`p309-supply-census.2026-10-19-p309.tsv`](../evidence/p309-supply-census.2026-10-19-p309.tsv).
+
+🟢 **The `grading` topic's three platform-scale rows are all CARRIED** — `make carried` says so,
+and that is the supply test working rather than a gap:
+
+| platform | slug | stars | what it is | AI in the loop? |
+|---|---|---|---|---|
+| **nbgrader** | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | `1.4k` | assigning and grading Jupyter notebooks | 🔴 **no** |
+| **RELATE** | [`inducer/relate`](https://github.com/inducer/relate) | `437` | course and homework LMS | 🔴 **no** |
+| **INGInious** | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | `243` | automated exercise assessment running the course's own tests | 🔴 **no** |
+
+🔴 **`0` of the three declares an AI grading path**, and this base's own `3`-row licence census
+on the axis ([`repos/foundations.md`](../repos/foundations.md)) is `4`-to-`1` copyleft. 🔵 **So
+the AI assessment layer is a BUILD on a copyleft host, not a pick** — which is the opposite of
+the tutor layer, where `p308`'s [`Selleo/mentingo`](https://github.com/Selleo/mentingo) (MIT,
+AI-native, self-hosted) exists and refuted the standing *"forced architecture"* conclusion.
+
+🟡 **Stated as the bounded claim it is:** none of the three was re-probed for a licence payload
+this pass — they are carried from earlier passes, and `INGInious` appears under **three** slugs
+in this base's evidence store (`INGInious/INGInious`, `UCL-INGI/INGInious`, `JuezUN/INGInious`),
+which is `p308`'s root-commit question and is **not** settled here. → `ACTION p309-R` item 3.
+
 ## 🔴 Pass 308 — THE "FORCED ARCHITECTURE" WAS ALREADY REFUTED AT THE LMS LAYER BY A ROW ON THIS BASE'S OWN SHELF, AND THREE PASSES WENT LOOKING FOR THE BREAK SOMEWHERE ELSE
 
 ⏱️ **Pass 308 of `2026-10-19`.** Evidence:
