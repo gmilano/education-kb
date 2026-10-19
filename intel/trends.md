@@ -6,9 +6,11 @@ updated: 2026-10-19
 
 # Current trends — education
 
-**Pass 316 · 2026-10-19.** Ten trends. Each names the evidence behind it and, where the evidence is
-vendor marketing, says so. Three are new this pass (6, 7, 10); one earlier trend has been
-reformulated because better data arrived (1).
+**Pass 317 · 2026-10-19.** Ten trends. Each names the evidence behind it and, where the evidence is
+vendor marketing, says so. Pass 317 added no new trend — it **revised trends 4 and 6 against
+first-hand repo evidence** and moved one long-standing unverified claim out of the bottom section
+into resolved fact. A pass that changes two trends and retires a bad citation is doing more than a
+pass that invents an eleventh.
 
 ## 1. Institutional AI deployment is not landing — and that, not adoption, is the gap
 
@@ -46,16 +48,34 @@ are not outliers to wait out — they are the shape of K-12 procurement. A produ
 enforce **grade-band gating** and a **teacher-facing-only mode** is unbiddable in those districts,
 and the gate is cheap to build. Treat restriction as a feature spec.
 
-## 4. The permissive-agent / copyleft-platform split is hardening, with one crack
+## 4. The permissive-agent / copyleft-platform split is real but softening — REVISED this pass
 
-13 of 15 agents in `agents/top.md` carry a permissive software licence. 10 of 15 platforms in
-`verticals/solutions.md` are GPL-2.0/GPL-3.0/LGPL-3.0/AGPL-3.0. This is the sector's structure and
-it dictates architecture: permissive agents across a network boundary from a copyleft LMS, LTI 1.3
-as the seam.
+13 of 16 agents in `agents/top.md` carry a permissive software licence. 10 of 16 platforms in
+`verticals/solutions.md` are GPL-2.0/GPL-3.0/LGPL-3.0/AGPL-3.0. This is still the sector's structure
+and it still dictates architecture: permissive agents across a network boundary from a copyleft LMS,
+LTI 1.3 as the seam.
 
-**The crack:** `Selleo/mentingo` (MIT, 96 ★, 1,348 commits) is an MIT-licensed AI-native LMS — a
-platform you can link agent code into. At 96 ★ against Canvas's 6.9k it changes no engagement yet,
-but it is the first counter-example this KB has recorded, and it is worth watching.
+**But "the platforms are all copyleft" is no longer an accurate sentence**, and pass 317 found the
+crack widening from both sides at once:
+
+- **`OpenOLAT/OpenOLAT` — Apache-2.0, 448 ★, 31,877 commits.** A mature LMS from frentix GmbH
+  (Switzerland), built on the University of Zurich's OLAT 7.1. Unlike mentingo this is not a
+  promising young project; it is institution-grade software under a permissive licence, and it means
+  there now exists a real LMS where Globant can link agent code into the platform instead of paying
+  the LTI-boundary tax. **6 of 16 platforms are now permissive.**
+- **`plastic-labs/tutor-gpt` — GPL-3.0, 932 ★.** Copyleft arriving in the *agent* tier, going the
+  other way. One row, but the first.
+
+**What has not changed is the advice**, and this is the important part: for a client already running
+Moodle, Canvas or Open edX — which is nearly every client — the copyleft platform is a given and the
+LTI boundary is still mandatory. The softening matters only for greenfield and sovereignty
+engagements. Do not let it loosen the architecture discipline in the other 90% of cases.
+
+**The deeper lesson is about method, not licences.** OpenOLAT has 31,877 commits and was missed by
+316 passes because it has 448 stars. With Ed-Fi (12 ★) and Sunbird (41 ★) that is three
+confirmations that **a star-ranked search cannot see this sector's institutional infrastructure** —
+it is adopted through procurement, not GitHub. Treat the remaining declared gaps in this KB as
+search-method artefacts until proven otherwise.
 
 ## 5. Deterministic pedagogy under a generative surface is now a shipped architecture
 
@@ -79,8 +99,26 @@ MCP servers in the wild, `iblai/api`. None of them speaks LTI 1.3, SCORM or xAPI
 This is a genuine fork in the road. MCP gets an agent to *tools*; LTI gets an agent into the
 *institution* — launch context, roster, identity, gradebook passback. **A tutor that is MCP-native
 and LTI-absent works beautifully for an individual learner and cannot be deployed by a university.**
-The glue remains unwritten (`pylti1.3`, MIT, 138 ★ is still the only solid library), which makes
-"MCP server inside, LTI tool outside" the integration shape to standardise on across engagements.
+
+**Revised this pass, and the revision is sharp: the LTI-native tutor does exist, and it has no
+licence.** `blamb/lti-tutor` implements LTI 1.3 against Moodle with dynamic registration, deep
+linking (each tutorial placed as its own External tool activity) and completion passback through
+Assignment & Grade Services, on `ltijs`. **Its README states the licence as "To be decided." 0 ★,
+39 commits.** Default copyright therefore applies and Globant cannot use it.
+
+That is the second unlicensed repo this KB has had to reject at exactly this point in the stack
+(after `luffycodes/Tutorbot-Spock`), and together they suggest something structural rather than
+coincidental: **the work closest to the institutional integration problem is written by instructors
+and university staff solving their own course, not by labs or vendors with legal review — so it is
+the least likely work in the sector to carry a licence.** Expect to find the answer to an
+integration problem in an unlicensed repo, and budget to rebuild it.
+
+The glue therefore remains yours to write. `pylti1.3` (MIT, 138 ★, 178 commits) is still the only
+solid library, and pass 317 confirmed it covers the full Advantage surface — Deep Linking, AGS,
+Names and Roles, Course Groups, Submission Review, Data Privacy Launch. **"MCP server inside, LTI
+tool outside" stays the integration shape to standardise on**, with one caveat now named: every
+pattern in this KB crosses the LMS boundary through that single 138-star, single-maintainer library.
+That concentration belongs in the risk section of any SOW.
 
 ## 7. The skill, not the app, is becoming the unit of educational AI — NEW
 
@@ -148,7 +186,20 @@ at least in North America.
 - **APAC growing at ~48% CAGR.** A clear outlier against every other estimate in this KB.
 - **Hinds Community College deploying Project Athena to 7,000 students.** Auto-generated news brief,
   not confirmed against Instructure's own release.
-- **South Korea's AI Data Protection Act imposing strict edtech privacy protocols**, and
-  Australia/Japan data-governance tightening. Single secondary source each, no primary confirmation.
+- ~~**South Korea's AI Data Protection Act imposing strict edtech privacy protocols**~~ —
+  **RESOLVED AND CORRECTED this pass: there is no such act.** Korea's instrument is the **Framework
+  Act on AI (Law No. 20676), in force 2026-01-22**, which reaches education through its high-impact
+  category — the definitions name **student evaluation in early childhood, elementary and secondary
+  education**. It is a real and dated compliance trigger, just not the one this KB was repeating.
+  Details in `intel/market.md`. **The Australia/Japan data-governance claims came from the same weak
+  source and remain unverified**; what is supportable for Australia is the opposite — no AI-specific
+  statute, mandatory guardrails paused.
+- **"The EU AI Act has been delayed."** A misreading this KB should be ready to correct, because
+  clients will arrive holding it. **Enforcement began on schedule: the AI Office and national
+  authorities started enforcing the Act from 2026-08-02.** What moved, under Regulation (EU)
+  2026/1744 (in force 2026-07-27, Parliament 2026-06-16, Council 2026-06-29), is the **Annex III
+  high-risk obligations, to 2027-12-02** — and nothing else. At least one major law firm's public
+  AI-Act tracker still carries pre-adoption text calling the deferral "proposed", so the bad version
+  has authoritative-looking sources behind it.
 - **Corporate reskilling as a primary driver.** Named across several sources but never with
   education-sector-specific figures. Directionally credible, not quotable.

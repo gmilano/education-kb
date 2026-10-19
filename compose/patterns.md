@@ -6,13 +6,16 @@ updated: 2026-10-19
 
 # Compose patterns — education
 
-**Pass 316 · 2026-10-19.** Seven recipes. Every repo named below is in `agents/top.md`,
+**Pass 317 · 2026-10-19.** Eight recipes. Every repo named below is in `agents/top.md`,
 `repos/foundations.md` or `verticals/solutions.md`, with the pass in which it was read first-hand
 recorded there. Timings are engagement estimates, not measurements.
 
-Changes this pass: **P2 is rebuilt around `tutor-mcp`**, which ships the mastery-and-retention
-engine this pattern used to assemble by hand. **P6 is new** — the Ed-Fi/OneRoster data spine.
-**P7 is new** — grade-band gating, which US K-12 districts now require.
+Changes this pass: **P8 is new** — the permissive-LMS build on OpenOLAT (Apache-2.0), the first
+pattern in this KB that does *not* require an LTI boundary. **P1 gains a FERPA-filtered retrieval
+step.** **P4 gains the 2026-12-02 watermarking date and ports to South Korea**, whose Framework Act
+on AI has been in force since 2026-01-22. **Every pattern now carries the `pylti1.3` concentration
+risk explicitly** — one 138-star, single-maintainer MIT library is the seam in seven of eight
+recipes, and that belongs in the SOW.
 
 ---
 
@@ -32,6 +35,13 @@ survives across sessions. The default education engagement.
 **Wiring**
 1. Ingest course material (syllabi, slides, past assignments) into LightRAG; one index per course,
    one namespace per institution.
+1b. **Filter retrieved documents by student identity, institution and authorised category *before*
+   prompt construction, and emit a disclosure record per retrieval.** New this pass. Copy the shape
+   from `ashutoshrana/haystack-ferpa-filter` (Apache-2.0, 41 commits) — **read it, do not import it
+   at 0 stars** — which returns filtered documents plus a `disclosure_record` for the caller to
+   persist. This is cheap to build at design time, effectively impossible to retrofit after a
+   FERPA/GDPR review, and it is the artefact that answers "prove this student could lawfully see
+   that document". It also feeds P3's audit log for free.
 2. Run DeepTutor as a service; pin the version — it released v1.6.15 on 2026-10-19 and moves weekly.
 3. Expose the service as an LTI 1.3 Advantage tool via `pylti1.3`. The LMS launches it; the LMS is
    never patched. **This is what keeps Globant's code off the GPL/AGPL side of the line.**
@@ -137,7 +147,9 @@ admissions, learning-outcome evaluation, student level placement, exam/behaviour
 **Wiring**
 1. **Ship Article 50 transparency now.** It applied from 2026-08-02 and was *not* deferred: AI
    interaction disclosure in the UI and machine-readable marking of generated content. The smallest
-   immediate billable item in EMEA.
+   immediate billable item in EMEA. **The watermarking grace period for AI-generated content runs to
+   2026-12-02** — six weeks from this pass — so machine-readable marking is a dated deliverable, not
+   a backlog item.
 2. **Check the 2026-12-02 prohibitions before that date** — new bans (non-consensual intimate
    imagery, CSAM) take effect six weeks from this pass. For an education product this is a
    content-safety and image-generation audit, and it is not deferred.
@@ -153,10 +165,22 @@ admissions, learning-outcome evaluation, student level placement, exam/behaviour
 6. Keep Open edX or Canvas unmodified behind Richie; AGPL's network clause reaches modified
    platforms, and not modifying it is the cheapest compliance decision available.
 
-**Reuse note:** this conformity file is portable to Brazil. PL 2338/2023 is risk-based and passed
-the Senate in December 2024 — see P-selection below.
+**Reuse note — the conformity file is the most portable artefact in this KB.** It travels to:
+- **Brazil.** PL 2338/2023 is risk-based and passed the Senate in December 2024.
+- **South Korea, and this one is already in force.** The **Framework Act on AI (Law No. 20676) has
+  applied since 2026-01-22**, its **high-impact AI** category explicitly covers **student evaluation
+  in early childhood, elementary and secondary education**, and high-impact operators owe
+  **user-protection measures and records of safety and trust measures (Art. 34(1))** — the same
+  documentation set as the Annex III file. The **fundamental-rights impact assessment is voluntary
+  (Art. 35)**, so lead with it as a differentiator rather than a cost. **A foreign vendor without a
+  Korean presence must appoint a domestic agent** — a commercial arrangement to settle before
+  bidding, not an engineering task. Grace period on fines is reported as one year from entry into
+  force. Read the Enforcement Decree and MSIT guidance before quoting thresholds.
+- **Uruguay**, as the LATAM pilot: first in Latin America to sign the Council of Europe AI Framework
+  Convention, so European-shaped evidence is the evidence it already expects.
 
-**Estimate:** 10–12 weeks including the conformity file.
+**Estimate:** 10–12 weeks including the conformity file. Porting it to a second jurisdiction:
+2–3 weeks, almost entirely mapping and review rather than build.
 
 ---
 
@@ -196,7 +220,7 @@ put over 1 million tablets into primary schools.
 
 ---
 
-## P6 — The roster and SIS data spine (North America) — NEW
+## P6 — The roster and SIS data spine (North America)
 
 **For:** any US district or state engagement, under any of the patterns above. An agent that does
 not know who the student is, what they are enrolled in and which teacher owns them is a demo.
@@ -237,7 +261,7 @@ which is a data-quality project and should be priced as one.
 
 ---
 
-## P7 — Grade-band gating and teacher-only mode (North America K-12) — NEW
+## P7 — Grade-band gating and teacher-only mode (North America K-12)
 
 **For:** districts that restrict rather than adopt. **New York City runs a one-year moratorium on
 student-facing AI through eighth grade; Katy ISD (Texas) is banning generative AI chatbots for
@@ -269,17 +293,101 @@ student-facing AI.** That is the difference between a lost account and a smaller
 
 ---
 
+## P8 — The permissive-LMS build: no LTI boundary (greenfield, and EMEA sovereignty) — NEW
+
+**For:** two specific situations, and no others. (1) A **greenfield** build — a corporate academy,
+a bootcamp, a new programme, a ministry standing up something new — where no incumbent LMS exists.
+(2) An **EMEA sovereignty** engagement where the buyer needs the data, the platform and ideally the
+vendor inside Europe.
+
+**Why it is new:** every other pattern in this KB pays the same architectural tax — Globant's agent
+code must sit on the far side of a network boundary because the LMS is GPL/AGPL. **`OpenOLAT` is
+Apache-2.0 with 31,877 commits**, so for the first time that tax is optional.
+
+**Stack**
+- `OpenOLAT/OpenOLAT` (**Apache-2.0**, 448 ★, 31,877 commits) — the LMS. Teaching, learning,
+  assessment, communication, modular course authoring. frentix GmbH (Switzerland), built on the
+  University of Zurich's OLAT 7.1
+- `ArnaudGuiovanna/tutor-mcp` (MIT, 52 ★) — the P2 pedagogy engine; BKT, FSRS, prerequisite gating
+- `HKUDS/LightRAG` (MIT, 40.2k ★) — retrieval over the client's curriculum
+- `HKUDS/DeepTutor` (Apache-2.0, 41.7k ★) — conversational surface
+- `huggingface/smolagents` (Apache-2.0, 29.9k ★) — agent loop for custom tools
+- Self-hosted models (in-region) for the sovereignty case
+- **Not** `pylti1.3`. That is the point of this pattern
+
+**Wiring**
+1. Confirm the licence from the **file, not the page.** OpenOLAT's GitHub sidebar names no licence;
+   `LICENSE` is the full Apache-2.0 text followed by two provenance notices crediting the OLAT
+   Zentrum at the University of Zurich and the OpenOLAT community/frentix GmbH. **Those are
+   attribution notices in the NOTICE tradition, not additional licence terms** — the grant is
+   Apache-2.0. Record it that way in the licence inventory and attach the file to the SOW. Pin to a
+   commit and keep the NOTICE attribution intact in any distribution.
+2. Deploy OpenOLAT in-region. For the sovereignty case this is the whole proposition: European
+   platform, European maintainer, client-controlled infrastructure, no US hyperscaler dependency.
+3. **Integrate the agent in-process.** Apache-2.0 permits linking Globant's code to the platform, so
+   ship one deployable instead of a tool plus a bridge. Keep the agent in its own module behind a
+   clean interface anyway — not for licence reasons now, but so the work ports to a Moodle or Canvas
+   client later across an LTI boundary (P1).
+4. Run tutor-mcp as the pedagogy engine and LightRAG as the retrieval layer, exactly as in P1/P2.
+   Add P1's **step 1b FERPA/GDPR retrieval filter** — in EMEA this is GDPR and Annex III evidence,
+   not optional.
+5. If the client is EMEA, **run P4 on top.** Apache-2.0 removes the licence boundary; it removes
+   nothing about the AI Act. Globant is still the provider and still owes the conformity file.
+
+**What this pattern does NOT do.** It does not apply to a client already running Moodle, Canvas,
+Open edX or Sakai — which is nearly every client. There, the incumbent platform is a given and the
+LTI boundary is mandatory; use P1. **Do not propose a migration to OpenOLAT.** 448 stars against
+Moodle's 7.5k and Canvas's 6.9k is not a competitive position, the documentation's centre of gravity
+is Swiss-German, and no institution is leaving Canvas for it. This pattern is for the cases where
+there is nothing to migrate from.
+
+**The honest risk:** a smaller community than Moodle or Open edX, which means fewer integrators,
+less third-party plugin supply and a thinner hiring pool. Price support accordingly, and do not
+present it as a like-for-like Moodle substitute.
+
+**Estimate:** 8–10 weeks to pilot (greenfield), 12–14 weeks with P4's conformity file for an EMEA
+public-sector buyer. Roughly 2–3 weeks less than the equivalent P1 build, because the LTI bridge
+and its testing disappear.
+
+---
+
+## The cross-cutting risk this pass added to every pattern
+
+**Seven of these eight patterns cross the LMS boundary through `dmitry-viskov/pylti1.3`: one MIT
+library, 138 stars, 178 commits, a single maintainer, 39 open issues and no visible release
+cadence.** It is the most load-bearing and least redundant component in this KB's architecture, and
+pass 317 is the first pass to say so out loud.
+
+It is good software — it covers the whole LTI Advantage surface (Deep Linking, AGS, Names and Roles,
+Course Groups, Submission Review, Data Privacy Launch), which is why every pattern leans on it. The
+risk is not quality, it is concentration. **Name it in the risk section of any SOW that depends on
+it**, and know the fallbacks: 1EdTech members maintain reference implementations in other languages,
+`ltijs` (Node) is the route `blamb/lti-tutor` took, and **P8 avoids the dependency entirely.**
+
+---
+
 ## Pattern selection by region
 
 | Region | Lead with | Why |
 |---|---|---|
+| Greenfield / no incumbent LMS (any region) | **P8** | Apache-2.0 OpenOLAT removes the LTI boundary; one deployable, 2–3 weeks less build |
 | North America | **P3 + P6**, then P7 where restricted, then P1/P2 | Dated legal requirements (Ohio 2026-07-01, Idaho SB 1227, 134 bills/31 states); governance is the budgeted line and the roster spine is now open source |
-| EMEA | **P4** | Provider-side conformity under Annex III; Article 50 live, 2026-12-02 prohibitions imminent, 2027-12-02 the real deadline |
+| EMEA | **P4**, with **P8** where sovereignty decides the deal | Provider-side conformity under Annex III; Article 50 live, watermarking and new prohibitions both land 2026-12-02, 2027-12-02 the real deadline. OpenOLAT is the only permissive, EMEA-authored, EMEA-maintained LMS in this KB |
 | EMEA — Gulf | **P1/P2 with Arabic-first localisation** | UAE ~28% of GCC edtech, National AI Strategy 2031; incumbents (Alef, Classera, Abwaab) are proprietary and buying integration, not platforms |
 | EMEA — Africa | **P5** | Strongest low-resource evidence base in the world (Edo State, EIDU); DigiSchool tablets are installed hardware needing content |
-| APAC | **P5** (India), P1 + labelling (China), P1 (Japan) | Curriculum mandate plus infrastructure gap; China needs labelling/registration at the generation step; Japan has the fewest blockers |
+| APAC | **P5** (India), P1 + labelling (China), P1 (Japan), **P4 ported** (South Korea) | Curriculum mandate plus infrastructure gap; China needs labelling/registration at the generation step; Japan has the fewest blockers; **Korea's Framework Act on AI is in force since 2026-01-22 and names student evaluation as high-impact**, so the EMEA conformity file sells there now |
+| APAC — Australia / NZ | **P7**, then P1 | Ipsos 2026 finds ANZ public support for banning AI in schools *higher* than in Asian markets — closer to the US restriction posture than to the rest of APAC |
 | LATAM | **P2 grounded in Latam-GPT**, with P4's artefacts ported | The 92%-usage / 30%-satisfaction gap is a delivery problem, which P2 answers; Brazil's PL 2338 is risk-based, so the EU conformity file transfers |
 
 **No pattern here is LATAM-only or North-America-only.** P1 and P2 are the portable core; P3, P4,
-P5, P6 and P7 are the regional wrappers that make them biddable — and P6 and P7, both new this
-pass, are the two that turn a North American pilot into a district-wide contract.
+P5, P6 and P7 are the regional wrappers that make them biddable. **P8, new this pass, is the only
+one selected by the client's starting position rather than by region** — it applies wherever there
+is no incumbent LMS, and it is strongest in EMEA because sovereignty and a permissive European
+platform happen to answer the same objection.
+
+**For LATAM specifically, pass 317 sharpened the pitch without needing a new pattern.** UNESCO
+IESALC (2026-09-09; 200 institutions, 19 countries) found **87% of LAC higher-education institutions
+using AI and only 26% with a formal AI strategy** — a 61-point gap, with adoption driven by
+individuals rather than institutions. That is P3's governance deliverable with the compliance driver
+swapped for an institutional-risk driver, and it is the same work this KB already sells in North
+America.

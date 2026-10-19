@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 317 — the LTI tutor exists and has no licence, OpenOLAT breaks the copyleft-platform rule, and five p315 rows are re-verified
+
+**Third pass of 2026-10-19, and a verification pass by design.** Pass 316 searched outward and added
+seven repos; this pass went back over what was being carried on a same-day-but-earlier reading,
+re-read it first-hand, and then searched the two oldest declared gaps directly. Verification method
+unchanged and re-confirmed against the proxy's own status endpoint: `curl -sI` to github.com returns
+**403 at this session's proxy**, so every repo below was read off its GitHub page.
+
+### ⚠️ The finding of the window is a negative one
+
+- ⚠️ **`blamb/lti-tutor` — LICENCE: "To be decided". 0 ★, 0 forks, 39 commits.** This is the repo
+  this KB has declared missing for three passes: **two LTI 1.3 tools for Moodle and other LTI
+  Advantage platforms**, an AI tutor running a staged Socratic dialogue from faculty-written briefs
+  plus a persona-chat tool, on `ltijs`, with **dynamic registration, deep linking** (each tutorial
+  becomes its own Moodle External tool activity via Select content), **completion passback (1/1)
+  through LTI Assignment & Grade Services**, and course import from a Moodle backup or live sync over
+  Moodle web services. Node 20+, Postgres, Anthropic Claude models.
+  **With no licence, default copyright applies and Globant cannot use it.** Second time this KB has
+  hit that exact trap after `luffycodes/Tutorbot-Spock`, and the pattern is now worth stating:
+  *the work closest to the institutional integration problem is the work least likely to carry a
+  licence*, because instructors and university staff write it for their own course, without legal
+  review. Treat it as a **free design spec** confirming the LTI+AGS route works, build on `pylti1.3`,
+  and watch it — a licence file is one commit away, and MIT or Apache-2.0 on this repo would make it
+  the most strategically valuable project in this KB. **The gap is reworded, not closed: there is no
+  *usably licensed* open source LTI 1.3 AI tutor.**
+
+### 🆕 New to the tables
+
+- 🆕 **`OpenOLAT/OpenOLAT` — Apache-2.0, 448 ★, 31,877 commits.** A mature web-based LMS for
+  teaching, learning, assessment and communication, built by **frentix GmbH (Switzerland) since
+  2011** on the **University of Zurich's OLAT 7.1**. **The most permissively licensed mature LMS in
+  this KB** and the only EMEA-authored, EMEA-maintained, permissive one — it lands squarely on the
+  standing EMEA sovereignty requirement. **Read the licence from the file, not the page:** the
+  sidebar names no licence, the README badge says Apache 2.0, and `LICENSE` is the full Apache-2.0
+  text plus two provenance notices crediting the OLAT Zentrum at the University of Zurich and the
+  OpenOLAT community/frentix — **attribution in the NOTICE tradition, not extra licence terms.**
+  Added to `verticals/solutions.md`; drives new pattern **P8**.
+- 🆕 **`plastic-labs/tutor-gpt` — GPL-3.0, 932 ★, 356 commits, v0.8.0, active (3 open PRs).** An AI
+  tutor built on **Theory-of-Mind reasoning**: it reasons about the learner's needs and rewrites its
+  own prompts to suit them. The most substantial *agent* this KB had never recorded, and a genuinely
+  different design from the BKT/FSRS line this KB favours. **GPL-3.0 — the only copyleft row in
+  `agents/top.md`.** Study the prompting approach; do not take the dependency.
+
+### 🔻 Rejected after verification — recorded so pass 318 does not re-find them
+
+- 🔻 **`CSOAI-ORG/coppa-ferpa-mcp` — MIT, 1 ★, 0 forks, 16 commits.** An MCP server exposing COPPA,
+  FERPA, UK AADC and EU AI Act minors checks (`check_under_13_processing`, `ferpa_audit`,
+  `aadc_uk_check`). It looked like it closed the student-data-privacy gap. Its README sells
+  **"Free: 10 calls/day", "Pro £79/mo", "Enterprise £1,499/mo"** — and a second block on the same
+  page prices Pro at **$99/mo** and Enterprise at **$499/mo**. Two contradictory price lists in one
+  README, self-described as "Production-ready" with "Active maintenance" at 16 commits.
+  **Compliance tooling is the last place to accept vendor self-description.**
+- 🔻 **`capetron/ferpa-compliance-checklist`** — a genuine, useful FERPA checklist covering the
+  school-official exception, directory information and vendor obligations. **Documentation, not
+  code.** Useful in a governance deliverable (pattern P3), not a component.
+- ➡️ **`ashutoshrana/haystack-ferpa-filter` — Apache-2.0, 0 ★, 41 commits.** Not rejected so much as
+  *too small to depend on*, and the right idea: Haystack components that filter retrieved documents
+  by student identity, institution and authorised category **before prompt construction**, returning
+  a `disclosure_record` for the caller to persist. Its README is honest that it does not authenticate
+  users, establish legal compliance or erase source records. **Copy the shape into P1's retrieval
+  step; do not import the package.**
+
+### ➡️ Re-verified first-hand this pass — all five p315 readings confirmed unchanged
+
+Commit counts recorded for the first time, so pass 318 can detect movement rather than re-reading.
+
+| Repo | Licence | ★ | Commits | Note |
+|---|---|---|---|---|
+| https://github.com/huggingface/smolagents | Apache-2.0 | 29.9k | 1,059 | unchanged |
+| https://github.com/open-spaced-repetition/fsrs4anki | MIT | 4.1k | 482 | unchanged |
+| https://github.com/jupyter/nbgrader | BSD-3-Clause | 1.4k | 3,477 | unchanged |
+| https://github.com/satvik314/educhain | MIT | 387 | 578 | unchanged; confirms pass 316's correction of the old "~12k ★" error |
+| https://github.com/CAHLR/OATutor | MIT | 268 | 1,045 | unchanged. **New detail:** README states "For LMS integration, a middleware backend is required by Learning Tools Interoperability (LTI)" — OATutor has always known the gap above |
+| https://github.com/dmitry-viskov/pylti1.3 | MIT | 138 | 178 | unchanged. **New detail:** covers Deep Linking, AGS, Names and Roles, Course Groups, Submission Review and Data Privacy Launch — the whole Advantage surface |
+
+### The concentration risk nobody had named
+
+Reading `pylti1.3` properly made something visible: **every pattern in this KB crosses the LMS
+boundary through one MIT library with 138 stars, 178 commits, a single maintainer, 39 open issues and
+no visible release cadence.** It is the most load-bearing component in the architecture and the least
+redundant. That belongs in any SOW that depends on it. Fallbacks if it ever matters: 1EdTech members
+maintain reference implementations in other languages, and `ltijs` (Node) is the route
+`blamb/lti-tutor` took.
+
+### Method note for pass 318
+
+OpenOLAT has **31,877 commits and 448 stars** and was missed by 316 passes. That is the third
+confirmation of pass 316's lesson, after Ed-Fi (12 ★) and Sunbird (41 ★): **a star-ranked search
+cannot see this sector's institutional infrastructure**, because it is adopted through procurement
+rather than GitHub. Pass 318 should treat the remaining declared gaps as **search-method artefacts
+until proven otherwise**, and search by standard name, vendor, country and funding body rather than
+by popularity.
+
+---
+
 ## 2026-10-19 — Pass 316 — tutor-mcp ships the deterministic-pedagogy engine, the skill overtakes the app, and three repos fail verification
 
 **Second pass of 2026-10-19.** Pass 315 read the existing tier first-hand this morning; this pass
