@@ -567,6 +567,40 @@ anything about my institution?" that is not a bespoke integration — and becaus
 
 ## Opportunities by region
 
+> **Pass 324 — one new opportunity, and it is cross-regional, so it is placed in all four rather
+> than written as a section of its own.** The academic-integrity evidence chain is now buildable
+> from permissive and service-isolatable open source (`sunilgentyala/aegis-integrity` MIT,
+> `NoplagLabs/noplag-engine` Apache-2.0, `jplag/JPlag` GPL-3.0 behind HTTP, over the existing
+> nbgrader / otter-grader / JupyterHub process-evidence stack — wiring in `compose/patterns.md`
+> **P11**). Where it lands, by region, and the ranking is by *dated demand*, not by market size:
+>
+> - **North America — strongest.** Oklahoma and Maryland already require **human oversight** and
+>   bar AI from high-stakes decisions about students; California **AB 1159** bars training on
+>   student data; **134 bills in 31 states**. An integrity product whose output is *evidence for a
+>   human* rather than a verdict is the compliant shape by statute, and the one this stack
+>   produces. Sell the audit trail, and the fact that `aegis-integrity` runs **locally** and sends
+>   only reference metadata to Crossref — never the student's document.
+> - **EMEA — strongest on the regulatory argument.** Under the EU AI Act, AI used in **assessment
+>   and exam scoring** is high-risk with duties live from **August 2026**. A tool that refuses to
+>   issue an authorship verdict and logs human review is materially easier to place in the
+>   high-risk regime than any detector, and **self-hosting plus local-only processing** is the
+>   sovereignty story this region buys. 🔴 Note the licence constraint sharply here: JPlag is
+>   GPL-3.0 — service boundary, never linked.
+> - **APAC — narrower and more specific.** **Vietnam's** high-risk list covers automated assessment
+>   and is explicitly high-risk *"only when the AI output is used as the sole basis for decisions
+>   without meaningful human review"* — i.e. **the statute names the mitigation this stack
+>   implements.** Korea's 2026 penalty grace is the window to deploy in.
+> - **LATAM — highest institutional need, lowest institutional readiness.** UNESCO IESALC / UNU-IAS:
+>   **87% of institutions use AI somewhere and 26% have a formal strategy.** An integrity
+>   evidence chain is a concrete first artefact for the 61-point gap between those numbers, and
+>   `aegis-integrity`'s **venue-guideline checks (IEEE, ACM, Elsevier)** fit the
+>   research-integrity remit of the regional university sector better than a K-12 framing. The
+>   Observatory partners (CENIA, CETIC.br, Ceibal, Tec de Monterrey) are the convening table for it.
+>
+> 🔴 **The one thing not to sell in any region: an AI-authorship verdict.** The best artefacts in
+> this category refuse to make that claim (`intel/trends.md` trend 9), and a client who asks for it
+> should be sold the evidence chain instead.
+
 ### North America
 
 > **Pass 323 — the regional search produced new primary-ish detail on the statute layer, and it
@@ -1010,6 +1044,84 @@ price it as greenfield, because there is nothing to fork.
    same offer as pattern P3 with the compliance driver replaced by an evidence driver.
 
 ## Declared regional gaps — what was searched this pass and not found
+
+**Pass 324 — the prescribed eight-search battery was run in full, and for the FOURTH consecutive
+pass it added nothing this file did not already hold at equal or higher precision.** That is the
+finding, and it is recorded rather than hidden, because an unrecorded empty search is
+indistinguishable from coverage. **Every item the four regional queries returned was checked
+against this file before being called old**, by token — `IESALC`, `UNU-IAS`, `Observatory`,
+`ECLAC`, `AB 1159`, `H.R. 8747`, `omnibus`, `Vietnam`, `AI for All`, `134 bills`, `NYC`,
+`moratorium`, `Digital Education Council`, `87%`, `26%` — **and all fifteen were already present.**
+
+- 🟡 **North America — four items returned, all four already held.** 60% of US K-12 teachers used
+  AI in 2024-25 and 32% weekly; **134 AI-in-education bills across 31 states in 2026**; California
+  **AB 1159** (prohibits using student data to train AI models); the federal **K-12 AI Literacy and
+  Readiness Act (H.R. 8747)** advanced out of House committee on 21 July largely along party lines;
+  Oklahoma and Maryland requiring human oversight and barring AI from high-stakes decisions about
+  students; **NYC's one-year moratorium** on student-facing AI through eighth grade; Canada's June
+  2026 **"AI for All"** strategy (national AI-literacy push, watermarking, a Canada Trusted AI
+  Certification); Mexico with *"a stack of bills and no regulator to enforce them yet"*; the
+  **SREB AI Commission's nine recommendations**; and the student-authored *STUDENTS FIRST Act of
+  2026* from a July youth festival. **New this pass: nothing.** 🔵 The one genuinely new item is
+  **negative**: a market aggregator putting the North American AI-in-education market at
+  **USD 3.68bn in 2026, 36% of global** — a *different* figure from the USD 951m-2024 → USD 2.3bn-2029
+  framing this file already records from the same class of source, with no reconciliation between
+  them. **Recorded as evidence that this sector's market numbers do not survive comparison, not as
+  a market number.**
+- 🔴 **EMEA — no education-specific result for the SECOND consecutive pass, and the gap is now four
+  passes old.** The generic EMEA query returned the EU AI Act timeline (high-risk duties for
+  admissions, assessment and exam scoring from August 2026; AI Office and national enforcement from
+  **2 August 2026**; the targeted **"AI omnibus" amendment in force 27 July 2026**), the
+  Commission's ethical guidelines for educators, Erasmus+ policy-experimentation calls, a vendor
+  estimate of **USD 2.64bn for the European market in 2026** with Finland, Estonia and the
+  Netherlands named as K-12 leaders, a *"only 10% of 450+ institutions have formal AI guidelines"*
+  survey figure, Germany's €20bn 2025-2030 AI commitment, and the UK's principles-based sector-led
+  posture — **all of it already in this file, and the dates independently re-confirmed for the
+  third pass running.** 🔴 **Still missing, now four passes: a named EMEA education-AI vendor list,
+  and a primary-source national school AI policy for any single European country.** One search
+  result stated the same gap in its own words — no consolidated list of EMEA education vendors,
+  ministries, or Middle East and Africa national education rules. **The gap is in the sources, not
+  only in this file.**
+- 🔴 **APAC — corporate and general-AI material for the SIXTH consecutive pass, and the code
+  channel beat the policy channel again.** The regional query returned regulation only: **Vietnam's
+  high-risk AI list covers education** including automated assessment and behavioural monitoring,
+  high-risk *"only when the AI output is used as the sole basis for decisions without meaningful
+  human review"*, with the law reported effective **1 March 2026**; **South Korea's** MSIT
+  signalling 2026 as a pilot period with a one-year penalty grace under the AI Basic Act; **China's**
+  mandatory registration, content labelling and penalties to **CNY 50m**; and Singapore, Japan and
+  Australia on voluntary guidance (Singapore's agentic-AI framework is best practice, not law;
+  Japan's AI Promotion Act is a principles law with no penalties). On players it named only
+  **Google, Microsoft, IBM, Pearson and Byju's** from a commercial report, with China, India and
+  Japan dominating. **All already held.** 🔵 **And for the second pass running everything of APAC
+  value came from GitHub:** this pass, `Kaiji-Z/LookatStudy` (bilingual, BKT, local-first) and
+  `WEIWEI0614/math-bank` (12,030 items against CIE 9709, Edexcel IAL, TMUA, ESAT, BMO, UKMT —
+  **the first international-qualification item bank in this KB**). **Method finding, now twice
+  measured: for APAC, read the code channel first.**
+- 🟡 **LATAM — one new item, and it is a partner list rather than a number.** The regional query
+  returned the UNESCO IESALC / UNU-IAS study (**200 institutions, 19 countries, 87% using AI
+  somewhere, 26% with a formal strategy, 74% in teaching and learning**, adoption driven by
+  individual academics rather than institutional strategy), the **Observatory on AI in Education
+  for Latin America and the Caribbean launched April 2026 at ECLAC headquarters in Santiago**, the
+  Digital Education Council's 2026 LATAM survey (30,000+ responses, 29 institutions), Uruguay as
+  the first LATAM signatory of the Council of Europe AI convention (2025), Mexico's risk-based
+  federal bill in the Senate, Colombia's **CONPES 4144** (February 2025), Peru moving to risk-based
+  governance, and UNESCO ethics training in Ecuador and Chile — **all already held.** 🟢 **New and
+  usable: the Observatory's named partner list** — CAF, **CENIA** (Chile), **CETIC.br** (Brazil),
+  ECLAC, Fundación Santillana, **Tecnológico de Monterrey**, ProFuturo, Universidad del Desarrollo
+  and **Fundación Ceibal** (Uruguay). For a LATAM public-sector engagement that is the convening
+  table, and this file previously named the Observatory without naming who sits at it. **All
+  snippet-sourced; `www.digitaleducationcouncil.com` was unreachable in p322 and was not re-tried
+  this pass.**
+
+🔵 **The standing conclusion, stated once and not re-argued each pass: the prescribed regional
+battery has reached saturation as an intelligence channel.** It now returns this file's own
+contents. The channels still producing new regional facts are **the code channel** (GitHub, where
+author locale and language place a finding by region) and **targeted statute or artefact queries**
+rather than generic regional ones. 🔴 **And the honest caveat on everything in `intel/`:**
+**no claim in this file has a primary-source read behind it.** Every figure here is
+snippet-sourced from a search result or a secondary aggregator; the first-hand reading in this KB
+is all in `agents/` and `repos/`. **The regional half of this base is reportage and its licence
+half is measurement. Do not quote them with the same confidence.**
 
 **Pass 323 — the four regional searches were run plus four targeted follow-ups. What each returned,
 including the empty ones.**

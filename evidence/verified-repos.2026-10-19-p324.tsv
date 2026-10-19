@@ -1,0 +1,66 @@
+# p324 — 2026-10-19 — tenth pass of this date. EVERY ROW MEASURED FIRST-HAND IN THIS PASS.
+#
+# INSTRUMENTS, and this pass changed two of them:
+#   [API]  GitHub REST search via the MCP `search_repositories` tool. REACHABLE in this session,
+#          where earlier cycles of this KB recorded the GitHub API as proxy-blocked. Source of
+#          every stars/forks/pushed/archived/topics value below. `get_file_contents` is REFUSED
+#          (session credentials are scoped to one repository), so it was not used.
+#   [PAGE] The rendered github.com repository page through the fetch channel. Source of commit
+#          counts, sidebar licence entries and README prose.
+#   [RAW]  raw.githubusercontent.com via curl. Source of licence-file EXISTENCE and licence BODY.
+#
+# CHANNEL NOTES — both of these could have produced wrong rows and are recorded so a later pass
+# does not repeat them:
+#   1. `curl` to github.com itself returns 403 through this session's proxy (repository roots and
+#      blob/ paths alike). The task's prescribed `curl -sI` URL check CANNOT be run against
+#      github.com here. A 403 is this session's binding, NOT a dead repository.
+#   2. raw.githubusercontent.com WORKS (controls: facebook/react/main/LICENSE,
+#      moodle/moodle/main/README.md, torvalds/linux/master/COPYING — all 200), BUT:
+#      (a) the openeduhub ITS tier writes README.org, NOT README.md, so a Markdown-shaped probe
+#          returns 404 on every repository in that org. A 404 is evidence of absence ONLY after
+#          the filename space has been enumerated.
+#      (b) through this proxy it served the same file for `main`, `master` AND `develop` on
+#          repositories having only one of those branches, so the BRANCH component of a raw URL
+#          is not a discriminator here — a raw read is a read of the default branch.
+#
+# LICENCE PROBE SPACE (the 7 names every "no licence" verdict below was taken over):
+#   LICENSE, LICENSE.md, LICENSE.org, LICENCE, COPYING, LICENSE.txt, + the package manifest.
+#   Each verdict was then corroborated against the rendered sidebar [PAGE].
+#
+# CENSUS FIGURES measured on [API] this pass:
+#   topic:knowledge-tracing pushed:>2026-06-01 .................... 44
+#   topic:plagiarism-detection pushed:>2026-01-01 stars:>10 ....... 12
+#   education tutor agent pushed:>2026-10-10 stars:>2 ..............  6  (ceiling 41 stars)
+#   topic:lti topic:ai .............................................  2  (neither is an agent)
+#   lti 1.3 mcp server education stars:>0 ..........................  0
+#   topic:lti lti-1-3 OR lti1p3 OR lti-advantage ai agent ..........  0
+#
+slug	licence_verdict	licence_evidence	stars	forks	commits	pushed_or_updated	tier	posture	note
+sunilgentyala/aegis-integrity	MIT	[RAW] LICENSE = MIT text, "Copyright (c) 2026 Sunil Gentyala"; [PAGE] sidebar "MIT license"	17	5	68	2026-10-16	integrity agent	GO	🟢 CLOSES a gap this KB declared for 7 passes. Academic-integrity MCP server, 7 tools. Publishes NO accuracy figure for itself; disclaims determination of misconduct and ESL false positives. Changelog v3.3.2. 🔴 Do not ship its AI-text score as a finding.
+NoplagLabs/noplag-engine	Apache-2.0	[RAW] LICENSE = Apache 2.0 January 2004 text; description agrees	86	76	6	2026-10-16	integrity engine	GO-WITH-CARE	🟢 Winnowing fingerprints as GIN-indexed bigint[] in Postgres; seed-and-extend to exact char ranges; 5 REST endpoints. 🔴 "the API ships with no authentication". 🔴 Open core of hosted noplag.com. 🔴 6 commits vs 86★/76 forks = fork:star 0.88, not an organic signature.
+jplag/JPlag	GPL-3.0	[RAW] LICENSE = GNU GPL v3, 29 June 2007 text; [PAGE] sidebar GPL-3.0	2000	376	5708	2026-10-19	integrity engine	SERVICE-ONLY	🟡 Largest and most-maintained artefact in this KB's integrity tier and never previously listed. ~20 languages, CLI or Java API, Maven Central, local report viewer. 🔴 README names NO LMS/Moodle integration. GPL-3.0 → separate process, never linked.
+thu-cs-lab/jieplag	MIT	[RAW] LICENSE = MIT text, "Copyright (c) 2023 Jiajie Chen, Shengqi Chen"	54	1	—	2026-06-28	integrity engine	GO	🟢 Moss-inspired code similarity in Rust, Tsinghua CS lab. Default branch `master`. The only permissive code-similarity engine here with no commercial product behind it.
+Ganesh-403/semantic-plagiarism-detector	MIT	[RAW] LICENSE = MIT text, "Copyright (c) 2026 Ganesh Kambli"	16	110	—	2026-10-19	integrity (rejected)	NO-GO	🔴 WEIGHT CAVEAT, recorded not recommended: fork:star = 6.9, the signature of a coursework template. p320 said a star count is not a volume measure; a fork count is not one either.
+cu-sanjay/Free-Turnitin-Plagiarism-Checker	—	not probed	148	78	—	2026-10-19	integrity (rejected)	NO-GO	🔴 "[Archived]" in its own description. The highest-starred result of the integrity sweep is dead. Recorded so it is not mistaken for supply.
+ZhijieXiong/pyedmine	CONTRADICTORY	[RAW] LICENSE = MIT text under "Copyright (c) 2023 Stanford Future Data Systems" (unrelated holder); [PAGE] sidebar "MIT license"; [PAGE] README: "All data and code in this project may be used only for academic purposes."	82	13	220	2026-10-05	EDM library	NO-GO	🔴 THE PASS'S SECOND FINDING. File more permissive than the prose — the direction a dependency scanner CANNOT catch: scanner returns MIT and clears procurement, author's own sentence forbids the use. 28 KT + 7 CD + 3 ER + 4 LPR models over 14 datasets; v1.0.0 LTS 2025-08-15. Treat as academic-use-only; open an issue.
+pykt-team/pykt-toolkit	—	[API] metadata only this pass	450	139	—	2026-10-18	EDM library	REFERENCE	🔵 Measured for comparison. Earlier cycles of this KB carried pyKT at "1.2k" stars. 450 is the measured figure; the higher one was never verifiable and should not be requoted.
+yjo2lee/knowsim	MIT	[RAW] LICENSE = MIT text, "Copyright (c) 2026 Yoonjoo Lee"	4	0	—	2026-09-14	eval	GO-READ	🟢 Knowledge-state-aware user simulator, arXiv 2608.17150. The simulated LEARNER, not the tutor. Only calibration-focused artefact in this KB.
+theadamdanielsson/grill	MIT	[RAW] LICENSE = MIT text, "Copyright (c) 2026 Adam Danielsson"	3	1	—	2026-10-19	agent (below bar)	READ-ONLY	Agentic learning system; KT state exposed to OTHER agents over MCP (Obsidian, Ollama, opencode, Codex, Claude Code). The composition shape trend 7 predicts; this KB had no instance.
+Vinger-lee/leap-framework	MIT	[RAW] LICENSE = MIT text, "Copyright (c) 2026 LEAP Framework Contributors"	1	0	—	2026-10-14	agent (below bar)	READ-ONLY	State-driven agentic tutoring runtime over MCP with a SERVER-SIDE State Guard + FSRS. 1 star. Read the State Guard idea — the only artefact here that puts the mastery gate where the model cannot talk past it.
+Kaiji-Z/LookatStudy	MIT	[RAW] LICENSE = MIT text, "Copyright (c) 2026 Kaiji-Z"	8	0	—	2026-10-19	agent (below bar)	READ-ONLY	Repo-to-course with per-concept BKT + SM-2, Electron + SQLite, local-first, BYO key. Bilingual EN/ZH — APAC-authored, consistent with the p323 regional read.
+szhhwh/UniKT	MIT	[RAW] LICENSE = MIT text, "Copyright (c) 2025-2026 UniKT Team"	4	3	—	2026-10-14	library (below bar)	READ-ONLY	Unified knowledge-tracing experiment framework, PyTorch + pixi.
+WEIWEI0614/math-bank	MIT	[RAW] LICENSE present	1	0	—	2026-10-16	content (below bar)	READ-WITH-CARE	12,030 items / 29 units / 1,142 knowledge points for CIE 9709, Edexcel IAL, TMUA, ESAT, BMO, UKMT. First international-qualification item bank in this KB. 🔴 Code is MIT; PAST-PAPER CONTENT PROVENANCE is not addressed in the repository — a copyright question independent of the code grant.
+openeduhub/its-prep	NO LICENCE	[RAW] none of the 7 candidate names returns 200; [PAGE] no sidebar licence entry. README is README.org, NOT README.md	0	0	87	—	NLP substrate (EMEA)	NO-GO	🔴 One of the two python-kidra dependencies p322 told this pass to read first. Generic spaCy filter-pipeline library; every stage keeps-or-discards tokens over an IMMUTABLE Document. German de_core_news_lg (🔴 README's adjacent link points at de_dep_news_trf, a different model). Reimplement the filter contract.
+openeduhub/its-data	NO LICENCE	[RAW] none of the 7 candidate names returns 200; [PAGE] no sidebar licence entry. README.org	0	0	159	—	data substrate (EMEA)	NO-GO	🔴 The second p322-named python-kidra dependency. elasticdump → pandas; resolves URIs against the SKOS vocabularies at vocabs.openeduhub.de. 🟢 COPY THE CONTRACT: `editor_arr` (human-confirmed) and `in_test_set` are FIRST-CLASS FIELDS of the data, not a notebook convention.
+openeduhub/topic-statistics	NO LICENCE	[RAW] none of the 7 candidate names returns 200; [PAGE] no sidebar licence entry. README.org	0	0	9	—	analytics (EMEA)	NO-GO	🔴 9 commits, nix-run only, no HTTP surface. Its own "Possible Improvements" proposes folding the logic into meta-qs — the repository argues against its own existence. p322 list closed.
+openeduhub/oeh-search-frontend	NO LICENCE ON EITHER CHANNEL	[RAW] none of 6 candidate names returns 200; [RAW] package.json has NO `license` key at all; [PAGE] no sidebar licence entry	5	1	1050	—	public UI (EMEA)	NO-GO	🔴 BREAKS the layer rule's extension: the THINNEST shell in the org — a pure Angular 19.2.14 UI, 1,050 commits, 13 open PRs — has no grant on either channel, where p322's rule predicted Apache-2.0. Needs a running Edu-Sharing. Web components copied into a WordPress theme.
+openeduhub/mappings	GPL-3.0	[RAW] LICENSE = GNU GPL v3, 29 June 2007 text	0	0	—	—	vocab mappings (EMEA)	SERVICE-ONLY	🟡 p322-named, measured. Same GPL posture as metalookup / text-statistics / discipline-classification.
+openeduhub/skohub-vocabs-oeh-patched	Apache-2.0	[RAW] LICENSE = Apache 2.0 January 2004 text; [RAW] package.json "license": "Apache License 2.0" — NOT a valid SPDX identifier	0	0	—	—	vocab publishing (EMEA)	GO	🟢 A PATCHED FORK of skohub-io/skohub-vocabs (hbz NRW + graphthinking GmbH); package.json `repository` still points upstream. SKOS static-site generator + lookup API + JSON-LD per concept + GitHub/GitLab rebuild webhook. This is the layer behind vocabs.openeduhub.de. 🟡 Fix the manifest to `Apache-2.0` in your fork before a scanner sees it.
+openeduhub/text-statistics	GPL-3.0 (corroborated)	[RAW] LICENSE returns 200	0	0	94	—	readability (EMEA)	SERVICE-ONLY	Independently corroborates the p322 verdict on the new probe.
+openeduhub/duplicate-detection	Apache-2.0 (corroborated)	[RAW] LICENSE returns 200	0	1	25	—	data quality (EMEA)	GO	Independently corroborates p322's first-hand read (README wrongly says MIT).
+openeduhub/python-kidra	NO LICENCE (corroborated)	[RAW] none of the 7 candidate names returns 200	0	0	137	—	gateway (EMEA)	NO-GO	Independently corroborates p322 on the enumerated probe.
+openeduhub/its-jointprobability	NO LICENCE (corroborated)	[RAW] none of the 7 candidate names returns 200	0	0	200	—	models (EMEA)	NO-GO	Independently corroborates p322.
+openeduhub/its-qna	NO LICENCE (corroborated)	[RAW] none of the 7 candidate names returns 200	0	0	4	—	QG (EMEA)	NO-GO	Independently corroborates p322.
+openeduhub/text-extraction	NO LICENCE (corroborated)	[RAW] none of the 7 candidate names returns 200; README.md exists (this repo DOES use Markdown)	0	0	77	—	ingestion (EMEA)	NO-GO	Independently corroborates p322. 🔵 Note: Markdown here, Org-mode in the ITS tier — the convention is not org-wide, which is why the filename space must be enumerated per repo.
+amirtds/amirtds	—	not probed	0	0	—	2026-04-29	LTI gap re-test	NOT-AN-AGENT	🔴 One of only 2 results for `topic:lti topic:ai`. A personal PROFILE README.
+api-evangelist/packback	—	not probed	0	0	—	2026-10-16	LTI gap re-test	NOT-AN-AGENT	🔴 The other result. A third-party API profile of the COMMERCIAL Packback "Originality" product. The LTI 1.3 agent gap holds for an 8th pass, now across 3 changed queries on a changed instrument.

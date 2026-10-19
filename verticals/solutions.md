@@ -6,6 +6,46 @@ updated: 2026-10-19
 
 # Vertical platforms — education
 
+## Pass 324 — the platform tier did not move again, and a tier this file never had is now populated
+
+🔴 **The platform search returned nothing new, for the second consecutive pass.** The prescribed
+`open source platform education ERP CRM MIT Apache` query returned what it returned in p323 and
+before: **Apache OFBiz** and **Corteza** (Apache-2.0, both already here and both requiring the
+education layer to be built), **Huly/`hcengineering/platform`** (Apache-2.0, already here),
+**Krayin** (MIT, a general CRM with no education surface), **OpenEduCat** (already here, LGPL-3.0),
+**ERPNext** (GPL-3.0) and **Dolibarr** (GPL-3.0), plus one MIT toy (`asadbekme/education-crm`, a
+small student/teacher/admin portal) and one unnamed Apache-2.0 "desktop university administration
+platform" that the result did not identify and this pass could not resolve. 🔵 **The standing
+conclusion is unchanged and is now three passes old: at the platform tier this market is
+copyleft, and the permissive options are general-purpose frameworks on which the education layer
+is a build, not a configuration.** The empty search is recorded rather than omitted.
+
+🟢 **What did move is a tier this file has never carried: assessment integrity as a deployable
+platform layer.** p324 measured three engines first-hand (detail in `repos/foundations.md`,
+wiring in `compose/patterns.md` **P11**), and they belong here rather than only in the agent tier
+because they are **self-hosted services an institution runs**, in the same sense as an LMS:
+
+| platform | licence | shape | how it sits beside the LMS |
+|---|---|---|---|
+| **`jplag/JPlag`** (2.0k ★, 376 forks, **5,708 commits**) | 🟡 **GPL-3.0** | Java service, **Maven Central**, CLI or Java API, local report viewer — *"No data will leave your computer!"* | **The most-maintained platform-tier artefact added to this file in many passes**, and it is a *companion* to the LMS, not a plugin: twenty-odd languages of code similarity and collusion detection behind one HTTP endpoint. 🔴 GPL-3.0 → separate process, never linked. 🔴 **Its README names no LMS or Moodle integration at all**, so the LMS seam is your build |
+| **`NoplagLabs/noplag-engine`** (86 ★) | 🟢 **Apache-2.0** | FastAPI + **PostgreSQL** (winnowing fingerprints as GIN-indexed `bigint[]`), `docker compose up`, five REST endpoints | The permissive text-similarity service. Load the institution's own prior submissions as the corpus — *"the open-source engine matches against your local corpus only."* 🔴 **No authentication as shipped**; it is the open core of hosted noplag.com |
+| **`sunilgentyala/aegis-integrity`** (17 ★) | 🟢 **MIT** | Python package with a **local web UI** (`aegis ui`), **MCP server**, Docker Compose, GHCR image | The citation/provenance layer. Runs on the institution's own machine; sends **reference metadata** to Crossref and **never the document**, with an explicit `offline=true` |
+
+🔵 **Why this matters for the platform read specifically.** Every other tier in this file is a
+story about copyleft incumbents and permissive edges. **The integrity tier inverts it:** the
+largest artefact is GPL-3.0, and the two *permissive* ones are the newer, smaller, more
+agent-shaped entrants — the same shape the agent tier has, arriving in a tier this file had
+written off as *"MOSS-style code-plagiarism detectors"*. **An institution that already runs Moodle
+or Open edX can add this tier without touching the platform licence**, which is the practical
+reason it belongs in a verticals file: it is the rare AI-adjacent capability that composes with a
+copyleft LMS by sitting **next to** it rather than inside it.
+
+🔴 **Declared gap, new and specific: no integrity engine in this tier ships an LTI 1.3 or Moodle
+plugin.** JPlag's README names no LMS integration; `noplag-engine` exposes REST only;
+`aegis-integrity` exposes MCP and a local UI. **The LMS seam is a build in every case** — which is
+the same conclusion `intel/trends.md` trend 6 reaches from the other direction (MCP, not LTI, is
+where 2026 integration is actually happening), and one more datum for the eight-pass LTI gap.
+
 **Pass 320 · 2026-10-19 (sixth pass of this date). No platform added; two readings re-confirmed
 first-hand, and one candidate named for promotion.**
 

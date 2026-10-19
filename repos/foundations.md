@@ -6,6 +6,53 @@ updated: 2026-10-19
 
 # Foundational repos — education
 
+## Pass 324 · 2026-10-19 — ten rows, the integrity tier, and a licence file that is not the grant
+
+**Pass 324 · 2026-10-19 (tenth pass of this date). Forty-eight repos — ten added, all ten measured
+first-hand.** Two findings and one closed list. 🟢 **The first finding closes a gap this KB
+declared for seven passes**: `intel/trends.md` trend 9 said there was *"no credible open source
+AI-detection or academic-integrity project … plus MOSS-style code-plagiarism detectors."* **The
+largest of those "MOSS-style" detectors is `jplag/JPlag` — GPL-3.0, 2.0k ★, 376 forks, 5,708
+commits, twenty-odd languages, usable as a Java API — which is more maintained than any agent on
+these shelves and was never listed.** With it come `NoplagLabs/noplag-engine` (**Apache-2.0**, 86 ★,
+winnowing fingerprints in GIN-indexed PostgreSQL) and `thu-cs-lab/jieplag` (**MIT**, 54 ★, Rust).
+The gap was a query artefact: the topic `plagiarism-detection` returns what *AI detection* never
+did. 🔴 **The second finding runs opposite to every licence defect in this file so far.**
+`ZhijieXiong/pyedmine` — the broadest educational-data-mining library this KB has measured, **28
+knowledge-tracing models plus cognitive diagnosis, exercise recommendation and learning-path
+recommendation over 14 datasets** — ships **the MIT text in `LICENSE`, under someone else's
+copyright line (`Stanford Future Data Systems`), while its README says *"All data and code in this
+project may be used only for academic purposes."*** Every previous instance here was a README
+claiming a grant the repository lacked; **this is the documented grant being narrower than the
+licensed one, which is the direction a dependency scanner cannot catch.** 🟢 **And p322's list of
+six named-unread `openeduhub` repositories is closed: all six measured.** The two it said to read
+first — `its-prep` and `its-data`, the ones `python-kidra` depends on — **both have no licence file
+under any of seven candidate names**, as do `topic-statistics` and, on **both** channels,
+`oeh-search-frontend`. `mappings` is GPL-3.0 and `skohub-vocabs-oeh-patched` is Apache-2.0.
+
+🔴 **What that does to p322's licence-by-layer reading: the unlicensed set is not the "inference
+core", it is the whole substrate plus the UI.** Gateway, models, data loader, token filter **and
+the public Angular search frontend** carry no grant. **A studio cannot lawfully reuse any part of
+this stack from the search box down to the tokeniser.** And the thinnest shell in the organisation
+is the one with no grant on either channel, where the layer rule predicted Apache-2.0 — **so the
+layer rule holds for the backend tiers and does not generalise to the UI tier.**
+
+**Licence split recounted over 48, by classifying each row's own licence cell** (rule stated so it
+can be re-run: *a README claim with no file in the repository counts as no licence*): 🔴 **no
+licence at all (12)**, MIT (11), Apache-2.0 (10), 🟡 GPL-3.0 (6), permissive code with CC BY 4.0
+data or content (4), BSD-3-Clause (2), CC0-1.0 (1), MIT code with CC BY-NC-SA 4.0 data (1), and
+🔴 **the new shape — MIT file contradicted by an academic-use-only README (1, `pyedmine`)**. The
+categories sum to 48. **So 32/48 are usable as software, 12/48 carry no grant at all, and 4/48 are
+usable only under a restriction that bites somewhere a scanner does not look.**
+
+**The licence lesson, third shape in three passes.** p322: licences divide **by architectural
+layer** across an organisation. p323: **by artefact type** inside a repository — MIT code,
+NonCommercial data. p324: **by channel inside a repository, with the restrictive channel being the
+prose one** — the file says MIT and the README says academic-only. The first two reduce to
+*permissive at the edges, restricted at whatever took the work*. **The third does not reduce to
+anything reassuring: it means the licence file is not sufficient evidence of the grant, in either
+direction**, and the only safe reading of a repository is every channel it publishes.
+
 **Pass 323 · 2026-10-19 (ninth pass of this date). Thirty-eight repos — three added, all three read
 first-hand.** The three are one finding and two corrections. **The finding — `haolpku/K12-KGraph`,
 420 ★, NeurIPS 2026 Evaluations & Datasets Track — makes `intel/trends.md` trend 12's headline
@@ -73,6 +120,16 @@ how most of this was found. The method note at the end is the part worth copying
 
 | Repo | Licence | ★ | Checked | Layer | Why it is foundational |
 |---|---|---|---|---|---|
+| https://github.com/ZhijieXiong/pyedmine | 🔴 **CONTRADICTORY — `LICENSE` is the MIT text, the README is academic-use-only.** `LICENSE` read first-hand: *MIT License, `Copyright (c) 2023 Stanford Future Data Systems`* — an organisation unrelated to this project, i.e. a copied file whose holder was never updated. README, verbatim: *"All data and code in this project may be used only for academic purposes."* | 82 | p324 | Educational data mining — KT, CD, exercise & path recommendation | **The broadest educational-data-mining library this KB has measured, and the one it cannot use.** *"A unified experimental workflow"* over **four task families**: knowledge tracing (**28 models** — qDKT_CORE, AKT_CORE, DisKT, ATDKT, CLKT, DTransformer, GRKT, HDLPKT, DKT, DIMKT among them), **cognitive diagnosis (7**, incl. NCD, HyperCD), **exercise recommendation (3)** and **learning-path recommendation (4**, LPKT4LPR as simulator), over **14 EDM datasets** (SLP, assist2009/-full/2012/2015/2017, edi2020, junyi2015, moocradar, poj, slepemapy-anatomy, statics2011, xes3g5m; EdNet-KT1 via a preprocessing note; the edi2020 text extension is *"an unofficial extension"*). **Five dataset-splitting settings**, pretrained weights on Hugging Face, a published model leaderboard, and **cold-start, hard-sample and multi-step** evaluation — with the BES metric self-marked *"has not been validated."* 220 commits, 13 forks, **v1.0.0 (15 Aug 2025) described as a stable LTS release**. Referenced codebases per its README: PYKT, EduKTM, EduCDM, RecBole. 🔵 Measured the same pass for comparison: **`pykt-team/pykt-toolkit` is 450 ★ / 139 forks** — earlier cycles of this KB carried pyKT at *"1.2k"*; **450 is the measured figure** · **Use it for:** 🔴 **Do not put it in a deliverable.** The permissive channel is boilerplate with somebody else's copyright on it; the restrictive channel is the author's own specific sentence. **A scanner returns MIT and clears procurement; a reviewer reads the README and stops the engagement** — and this is the first case in this file where the documented grant is *narrower* than the licensed one, which is the direction scanners do not catch. **Use it to choose a model family and to read the splitting settings, then reimplement, or open an issue and get the contradiction resolved in writing.** When a client needs cognitive diagnosis or exercise recommendation and not just KT, this is the map of the field; `pykt-toolkit` remains the thing you can actually ship |
+| https://github.com/jplag/JPlag | 🟡 **GPL-3.0** — `LICENSE` read first-hand, the GNU GPL v3, 29 June 2007 text; sidebar agrees | 2.0k | p324 | Assessment integrity — source-code plagiarism & collusion | **The largest and most-maintained artefact in this KB's integrity tier by an order of magnitude, and it was never listed. 376 forks, 5,708 commits, pushed 2026-10-19.** Source-code plagiarism **and collusion** detection across twenty-odd languages — Java, C, C++, C#, Python, JavaScript, TypeScript, Go, Kotlin, R, Rust, Swift, Scala, LLVM IR, Scheme, EMF metamodel and model, SCXML, plain text, plus a multi-language mode — with the README's own caveat that *"maturity varies by language."* *"JPlag can either be used via the CLI or directly via its Java API"*, published on **Maven Central**, with a local report viewer that launches automatically from the CLI: *"No data will leave your computer!"* 🔵 The README makes **no comparison to Moss** — `moss` is a topic tag only · **Use it for:** **For any CS-education or bootcamp engagement this is the integrity layer, not a build.** Twenty-language coverage and a Java API mean it drops behind a service boundary in days. 🟡 **GPL-3.0: deploy it as a service over HTTP and never link it into the client's application** — the same rule this file applies to `text-statistics`. Pair it with `aegis-integrity` (prose and citations) in `compose/patterns.md` **P11**; JPlag covers code, which `aegis-integrity` does not |
+| https://github.com/NoplagLabs/noplag-engine | 🟢 **Apache-2.0** — `LICENSE` read first-hand, the Apache 2.0, January 2004 text; description agrees | 86 | p324 | Assessment integrity — verbatim & near-verbatim text matching | **The permissive text-similarity engine the integrity tier needed.** Sentence-window chunks → **winnowing fingerprints stored as a GIN-indexed `bigint[]` in PostgreSQL** → candidate retrieval by fingerprint overlap → **seed-and-extend alignment to exact character ranges.** Five REST endpoints (`POST /v1/checks`, `GET /v1/checks/{id}`, `GET /v1/checks/{id}/report`, `POST /v1/corpus/documents`, `/docs` for OpenAPI), SSE progress per `docs/api.md`, Alembic migrations, `docker compose up`, and a first boot that indexes **~1,000 bundled Wikipedia articles**. Honest about scope: *"This engine detects verbatim and near-verbatim copying"* and *"paraphrase, semantic, and AI-writing detection are on the public roadmap."* Benchmarks stated and bounded: plagdet *"around 0.8+"* with precision ≥ 0.95 on verbatim and lightly obfuscated material, while on the full PAN-PC-11 an L0/L1 engine *"scores near zero by design"* — with an explicit warning against reading one plagdet figure as general accuracy. **6 commits, 76 forks** · **Use it for:** **Take it for the algorithm and the schema; it is a studio-grade reference for fingerprint storage in Postgres, which is the part teams get wrong.** 🔴 **Three cautions:** it is the **open core of the hosted noplag.com** (the hosted side adds live web search; the open engine matches your local corpus only), *"the API ships with no authentication"* so it cannot face a network as given, and **6 commits against 86 stars and 76 forks** is a fork-to-star ratio this KB has not seen on an organically grown repository — read the code before depending on the project |
+| https://github.com/thu-cs-lab/jieplag | 🟢 **MIT** — `LICENSE` read first-hand, *MIT License, Copyright (c) 2023 Jiajie Chen, Shengqi Chen* | 54 | p324 | Assessment integrity — code similarity (Rust) | Moss-inspired plagiarism detection **in Rust**, from the Tsinghua CS teaching lab. 1 fork, default branch `master`, last pushed 2026-06-28 · **Use it for:** **The only permissively licensed code-similarity engine in this file with no commercial product behind it** — which makes it the one to embed rather than service-isolate when a client's constraint is GPL avoidance rather than language coverage. 🔴 Smaller and quieter than JPlag: no multi-language story, and APAC-authored with Chinese-language teaching context |
+| https://github.com/openeduhub/skohub-vocabs-oeh-patched | 🟢 **Apache-2.0** — `LICENSE` read first-hand, the Apache 2.0, January 2004 text. 🟡 `package.json` says `"license": "Apache License 2.0"`, **which is not a valid SPDX identifier** (`Apache-2.0` is), so an SPDX-strict scanner reads the manifest as unknown rather than as Apache | 0 | p324 | Vocabulary publishing (EMEA) | **A patched fork of `skohub-io/skohub-vocabs`** — hbz NRW and graphthinking GmbH upstream; the `package.json` `repository` field still points at `skohub-io/skohub-vocabs`. *"A simple tool for publishing SKOS vocabularies"*: a static-site generator that parses SKOS with **slash or hash URIs** (slash *"better supported"*), renders full concept pages with **machine-readable JSON-LD per concept**, exposes a basic lookup API, supports a **webhook server that rebuilds a vocabulary from GitHub or GitLab**, and selects display language from the browser or a `?lang=` parameter. **This is the publishing layer behind the `vocabs.openeduhub.de` that `its-data` resolves URIs against** · **Use it for:** **The permissive half of the German stack, and the only `openeduhub` repository whose grant came in from outside.** If a client needs controlled vocabularies published as resolvable, machine-readable SKOS — competency frameworks, subject taxonomies, qualification levels — this is the build. 🟡 Fix the manifest to `Apache-2.0` in your fork before it hits the client's dependency scanner |
+| https://github.com/openeduhub/mappings | 🟡 **GPL-3.0** — `LICENSE` read first-hand, the GNU GPL v3, 29 June 2007 text | 0 | p324 | Vocabulary / schema mappings (EMEA) | Vocabulary and schema mappings for the WLO metadata stack. One of p322's six named-unread repositories; measured this pass · **Use it for:** **Service, never linked** — the same GPL-3.0 rule as `metalookup`, `text-statistics` and `discipline-classification`. Its value is as a worked example of mapping one country's education metadata vocabularies onto each other, which is the unglamorous half of every interoperability engagement |
+| https://github.com/openeduhub/its-prep | 🔴 **NO LICENCE** — no licence file under any of `LICENSE`, `LICENSE.md`, `LICENSE.org`, `LICENCE`, `COPYING`, `LICENSE.txt`, nor a manifest grant; no sidebar entry | 0 | p324 | NLP substrate (EMEA) | **87 commits. One of the two repositories p322 told this pass to read first, because `python-kidra` depends on it.** *"A generic interface to various NLP tools"* whose stated goal is to *"stream-line the process of defining natural language pre-processing pipelines, particularly in the context of educational resources."* The design is the part worth reading: **every pipeline stage is a filter that returns a subset of a document's tokens and may not modify them**, over an immutable `Document` that retains the full original text — so a pipeline is auditable and reversible by construction. Worked example (`poc_topic_modeling`): drop unwanted universal POS tags → drop stop words → drop lemmas expected to carry little meaning **for learning resources** → drop lemmas by document frequency at both tails. Named-entity and noun-chunk merging; spaCy analysis caches via `save_caches`/`load_caches`; pip or Nix flake. German `de_core_news_lg` (🔴 the README's link beside it points at `de_dep_news_trf`, a different model) · **Use it for:** 🔴 **No grant: cannot be used.** **Reimplement the filter contract — it is ten lines of interface and it is the right design**: keep-or-discard filters over an immutable document, which is exactly what makes an OER ingestion pipeline explainable to a ministry client. The German model dependency means the tuning does not transfer; the architecture does |
+| https://github.com/openeduhub/its-data | 🔴 **NO LICENCE** — no licence file under any of seven candidate names, no manifest grant, no sidebar entry | 0 | p324 | Data substrate (EMEA) | **159 commits. The second of the two `python-kidra` dependencies p322 named.** *"A Python library that aids in retrieving and processing large data dumps from elasticdump … primarily for the purpose of training and evaluation of AI tools for the automatic generation of metadata."* Two modules: `its_data.fetch` downloads elasticdump files, turns them into **pandas** data frames and **retrieves labels for URIs and SKOS vocabularies**; `its_data.default_pipelines` ships `flat_classification` and friends. A `download-data` CLI; Nix flake recommended, pip *"untested"*. The schema is the useful part: OEH metadata keys (`properties.ccm:taxonid`, `properties.ccm:educationalcontext`) in, and out come `raw_texts` (title + description), `ids`, **`editor_arr` (an editor-confirmed flag)** and `target_data` with `arr`, `uris`, `labels` and **`in_test_set`** — i.e. the train/test split and the human-confirmation flag are **first-class fields of the data contract**, not a notebook convention. URIs resolve against `vocabs.openeduhub.de` · **Use it for:** 🔴 **No grant: cannot be used.** **Copy the contract, not the code.** `editor_arr` + `in_test_set` as fields of the dataset itself is the cheapest governance win in an OER metadata engagement: it makes *"which of these labels did a human confirm"* and *"which rows may be scored"* answerable from the data rather than from tribal memory |
+| https://github.com/openeduhub/topic-statistics | 🔴 **NO LICENCE** — no licence file under any of seven candidate names, no sidebar entry | 0 | p324 | Analytics utility (EMEA) | **9 commits.** *"A very simple application that computes various statistics on WLO topic pages, based on a downloaded copy of the database."* Invoked only as `nix run github:openeduhub/topic-statistics -- --help`; no HTTP surface. Its own *Possible Improvements* section proposes **folding the logic into `meta-qs` rather than running a separate service**, and reading the private ElasticSearch directly instead of a downloaded dump; it links `its-data` for a collection filter · **Use it for:** 🔴 **No grant, 9 commits, and the repository argues against its own existence.** Recorded for completeness and to close p322's list. The transferable observation is organisational: this is what a public operator's analytics looks like before it is a product — a Nix-runnable script over a database dump, with the consolidation already written down |
+| https://github.com/openeduhub/oeh-search-frontend | 🔴 **NO LICENCE ON EITHER CHANNEL** — no licence file under any of six candidate names, **and `package.json` has no `license` key at all**; no sidebar entry | 5 | p324 | Public search UI (EMEA) | **1,050 commits on `develop`, 1 fork, 13 open pull requests — the second most-committed repository in the organisation after `oeh-search-etl`.** The **Angular 19.2.14** public search frontend of WirLernenOnline.de. *"In order to use the frontend, you either need a deployed or a locally running instance of Edu-Sharing."* Split into `api` and `wlo-search` (`core`, `preferences`, `search`, `shared`, `template`); Node pinned via `.nvmrc`; configuration injected through `src/env.js` from environment variables in Docker; **Karma unit tests and Cypress E2E**; Husky + lint-staged + Prettier + ESLint; Angular i18n with locales in `src/locale`; and web components built and copied into a **WordPress theme folder** · **Use it for:** 🔴 **No grant: cannot be used — and this row is why the licence-by-layer rule stops at the backend.** p322 read the org as *permissive shells / GPL analysers / unlicensed inference core*; **the thinnest shell of all, a pure UI, has no grant on either channel**, where that rule predicted Apache-2.0. 🔵 Note the asymmetry for diligence: *no `license` key* is a weaker position than a manifest that disagrees with the `LICENSE` file — there is nothing to argue from. **Rebuild the UI; read it for the WordPress-embed pattern**, which is how a ministry portal actually ships a search experience into an existing CMS |
 | https://github.com/haolpku/K12-KGraph | **MIT (code) / CC BY-NC-SA 4.0 (data)** — README, verbatim: *"Code (this repository): MIT"*, *"Dataset (graph, benchmark, training data): CC BY-NC-SA 4.0"*; sidebar reads *"MIT licenses found"* | 420 | p323 | Curriculum data + benchmark + training data | **China's national curriculum as a verified, evidence-linked knowledge graph — and the peer-reviewed proof that the `bncc-dev` method generalises.** Accepted to the **NeurIPS 2026 Evaluations & Datasets Track**. Built from **48 People's Education Press (PEP) K-12 textbooks** — Mathematics 23, Physics 9, Chemistry 7, Biology 9. **10,685 KG nodes** (6,579 concepts, 1,364 skills, 652 experiments, 1,171 exercises) and **23,278 edges across 9 edge types**; **every edge carries an `evidence` field linking back to textbook source text**. Verification: **12 subject-qualified expert annotators at Fleiss' κ = 0.84**, automatic **DAG validation of the `is_a` and `prerequisites_for` subgraphs**, and a 3-expert spot-check of stratified benchmark items at **98.4% fully correct**. **K12-Bench: 23,640 multi-select questions** over five task families. **K12-Train: 2,267 instruction–response pairs.** Three checkpoints fine-tuned on K12-Train (Llama3.1-8B, Qwen3.5-2B, Qwen3-4B) on Hugging Face. 67 forks, 16 commits | **The pipeline is MIT and the curriculum is not.** Reuse the **method** — extraction, per-edge evidence linking, DAG validation, the annotation protocol that produced κ = 0.84 — in any jurisdiction; **the graph, benchmark and training data are NonCommercial and ShareAlike and cannot enter a client deliverable anywhere.** This is the strongest argument in this KB for the P10 build: it proves the hard part is doable and is itself licensed out of commercial reach. **Two caveats for anyone quoting it:** the About blurb says *"multimodal training dataset"* while the body describes only text instruction–response pairs, and the README reports expert *review* plus validation — **it does not claim every edge was individually human-verified**, and κ = 0.84 measures annotator agreement on relation labels, not graph completeness |
 | https://github.com/razi-03/NCERT-CKG | 🔴 **NO LICENCE** — no sidebar entry, no LICENSE file | 0 | p323 | Curriculum data (India) | **The artefact p322 swept 180 `ncert`/`cbse` repositories for and declared absent — found by changing the query, and it has no grant.** **Class X NCERT Mathematics only**, from **18 PDFs**: 14 chapters (`jemh101`–`jemh114`), two additional chapters (`jemh1a1`, `jemh1a2`), an answer source (`jemh1an`) and a preliminary file (`jemh1ps`). PDF in, **CKG JSON** out. **10,417 CKG nodes, 1,682 semantic nodes, 13,757 provenance-aware edges**, provenance coverage **1,682 / 1,682** — *"every semantic node is required to have source evidence."* The method is the right one: *"prerequisite reasoning is treated separately from textbook ordering"*, and a prerequisite *"must instead be supported by conceptual dependency evidence or an explicit inference procedure"* — a chapter appearing earlier is **not** treated as proof of a prerequisite. 0 forks, 2 commits, no release | **Do not depend on it; do watch it, and consider asking the author for a licence.** It makes India's curriculum gap **contested rather than empty**, which shortens the P10 Variant B window. Two silences matter: the README says **nothing about textbook copyright or whether the 18 NCERT PDFs are bundled** (this KB has already recorded one NCERT project that bundles textbook PDFs), and it **never mentions an LLM**, so whether the edges are model-derived is unknown rather than concealed — the only review language is the generic *"should be sampled and reviewed manually"* |
 | https://github.com/mizcausevic-dev/curriculum-knowledge-graph | MIT (sidebar) | 1 | p323 | Higher-ed curriculum analysis | FastAPI service modelling **courses, prerequisites, skills and outcomes** as a graph, with prerequisite and skill-dependency analysis, **pathway bottleneck analysis** and a capstone pathway explorer. Ships `app/data/sample_curriculum.json` as a seeded degree path, so it is not framework-only; its own example names `IS-230` as the highest-bottleneck course and a capstone path of IS-101 → IS-210 → IS-320 → IS-410. **No institution or country stated, and the sample data is not claimed to reflect a real programme.** 0 forks, 10 commits | **A pattern, not a dataset — and the permissive component this KB lacked for higher-ed advising.** Bottleneck analysis over a prerequisite graph is a sellable higher-ed product (which course silently gates a cohort's time-to-degree) and nothing else here implements it. **Also a market signal: the author is already in this KB** — `mizcausevic-dev/mcp-ai-tutor` sits in the FERPA governance cluster. One author building both a compliance auditor and a curriculum graph, each at 0–1 stars, is p322's market-forming shape appearing in a second component |
@@ -371,6 +428,72 @@ five languages were swept. **"Not found in the topics swept" is the finding. "Do
 not.** Untested and worth a pass: Arabic, Hindi, Japanese, Korean, French and Indonesian topic
 tags, and the `wirlernenonline` organisation, whose GitHub org page could not be read this pass.
 
+## Pass 322: `openeduhub` enumerated in full — and the inference core is the unlicensed part
+
+**All 67 public repositories were enumerated this pass**, closing p321's declared gap
+(*"57 of the 67 were not listed on the first page and remain unenumerated"*). The method matters
+because it is reusable: **the org listing had to be paged under two different sort orders.** Sorted
+by stars, the first page shows the metadata plumbing of 2020–2023; sorted by last push — the default
+— the first page shows the AI-era services, and **six of the twelve repositories added above do not
+appear on the star-sorted first page at all.** A star-ranked sweep of this organisation finds the
+dead code and misses the live pipeline.
+
+### What the org actually is, by date rather than by star count
+
+| | Count |
+|---|---|
+| Public repositories | **67** |
+| Pushed in 2026 | **17** |
+| Last pushed 2020–2022 | **30** |
+| Archived | **5** (`metaqs-api-old`, `metaqs-frontend-old`, `oeh-search-editor-backend`, `oeh-metadata-specs`, `wlo-chat-gpt-block`) |
+| Read first-hand by this KB | **16** — four at p321, twelve at p322 |
+
+**The archived list contains the org's first AI attempt.** `wlo-chat-gpt-block` (JavaScript, last
+touched **August 2023**, archived) is a WordPress ChatGPT block. The line that replaced it is the
+metadata-agent line read above — **extraction, review and classification, not conversation.** A
+public operator tried the chatbot first, archived it, and spent the next three years building a
+metadata pipeline instead. That is the single most useful thing in this pass for a studio pitch, and
+it is recorded as a trend reading in `intel/trends.md`.
+
+### The finding: licence divides by architectural layer
+
+| Layer | Commits | Licence | What it means for an engagement |
+|---|---|---|---|
+| Shells — review UI, REST wrapper, browser plugin, path editor, tutor, judge, source registry, dedup | 60 + 11 + 6 + 10 + 1 + 6 + 25 = **119** | **Apache-2.0**, or claimed as such | Take them. Two of the seven claim a licence the repository does not carry — check before you ship |
+| Analysers and classifiers | 623 + 94 + 73 = **790** | 🟡 **GPL-3.0** | Run as services behind a process boundary; never link |
+| **Inference core** — gateway, Bayesian predictor, text extraction, bulk prompt runner, QA generation, harvester | 137 + 200 + 77 + 37 + 4 + 1,397 = **1,852** | 🔴 **none** | **No grant. Reimplement, or negotiate a licence with the operator** |
+| API client | **519** | **Apache-2.0** | Take it — and it is the only large permissive artefact in the org |
+
+**The permissive surface contains none of the organisation's machine learning.** Every model, every
+harvester and the gateway that fronts them is unlicensed; the Apache-2.0 repositories are
+interaction layers of between 1 and 60 commits. Pass 321 read the one unlicensed repo it found as a
+lapse. Over sixteen reads it is not a lapse — **it is where the org's effort went, and the licence
+file is what never followed it.** For Globant this is the rare case where the *engagement* is the
+finding: a public operator sitting on 1,852 commits of unlicensed, publicly funded ML is a
+licence-remediation conversation, not a fork.
+
+### The README-versus-LICENSE hazard, four instances in one org
+
+`duplicate-detection` and `wlo-quellenliste` both say **MIT** in the README and ship an
+**Apache-2.0** `LICENSE`; `metadata-agent-api` says **MIT** with **no licence file in the root**;
+`metadata-agent-canvas` says **Apache-2.0** with **no licence file in the root**. The `LICENSE`
+file of `duplicate-detection` was opened and read first-hand to settle it — it is the Apache 2.0,
+January 2004 text. **Rule applied from here: the licence file governs; a README claim with no file
+behind it is not a grant.** Two of these four understate the grant and two assert one that does not
+exist, so the error is not conservative in either direction.
+
+### Declared gaps from this pass — searched, measured, not found
+
+| Gap | What was measured |
+|---|---|
+| `openeduhub/wlo-topic-assistant` | **404.** `python-kidra` advertises it as one of seven bundled services; it has no public repository under this org |
+| `kea` (Wikipedia article linking) | Not a repository in this org — `python-kidra`'s README says requests are **forwarded to an external service**, which this KB has not identified |
+| `z-api-runner`'s LLM backend | **Unstated** in the README; `app/` and `requirements.txt` were not read, so the model and provider are unknown |
+| `metalookup`'s extracted field list | In `docs/features.md` and `docs/acceptance.md`, **not read this pass** — so this KB has the capability but not the field schema |
+| `wlo-quellenliste`'s JSON/CSV field schema | **Not documented** on the repository page; would need the code or the live API docs |
+| `topic-statistics`, `its-prep`, `its-data`, `mappings`, `skohub-vocabs-oeh-patched`, `oeh-search-frontend` | Named in the census, **not read.** Listed so pass 323 does not re-discover them — `topic-statistics` and `its-prep` are the two that `python-kidra` depends on |
+| Non-GitHub primary sources | Still unreachable. `www.digitaleducationcouncil.com` failed at DNS this pass; **everything in `intel/` remains snippet-sourced** |
+
 ## Pass 321: the p319 to-do list, executed — and the Germany claim it corrects
 
 Pass 319 ended its sweep section with a named to-do: *"Untested and worth a pass: Arabic, Hindi,
@@ -443,72 +566,6 @@ posture from one repository.** On this evidence the rule for `openeduhub` is: ta
 `oeh-metadata-vocabs` (CC0) and the two Apache-2.0 tools freely; treat `oeh-search-etl` as
 documentation of a harvesting design and **write your own**, or open an issue asking for a licence
 before any engagement depends on it.
-
-## Pass 322: `openeduhub` enumerated in full — and the inference core is the unlicensed part
-
-**All 67 public repositories were enumerated this pass**, closing p321's declared gap
-(*"57 of the 67 were not listed on the first page and remain unenumerated"*). The method matters
-because it is reusable: **the org listing had to be paged under two different sort orders.** Sorted
-by stars, the first page shows the metadata plumbing of 2020–2023; sorted by last push — the default
-— the first page shows the AI-era services, and **six of the twelve repositories added above do not
-appear on the star-sorted first page at all.** A star-ranked sweep of this organisation finds the
-dead code and misses the live pipeline.
-
-### What the org actually is, by date rather than by star count
-
-| | Count |
-|---|---|
-| Public repositories | **67** |
-| Pushed in 2026 | **17** |
-| Last pushed 2020–2022 | **30** |
-| Archived | **5** (`metaqs-api-old`, `metaqs-frontend-old`, `oeh-search-editor-backend`, `oeh-metadata-specs`, `wlo-chat-gpt-block`) |
-| Read first-hand by this KB | **16** — four at p321, twelve at p322 |
-
-**The archived list contains the org's first AI attempt.** `wlo-chat-gpt-block` (JavaScript, last
-touched **August 2023**, archived) is a WordPress ChatGPT block. The line that replaced it is the
-metadata-agent line read above — **extraction, review and classification, not conversation.** A
-public operator tried the chatbot first, archived it, and spent the next three years building a
-metadata pipeline instead. That is the single most useful thing in this pass for a studio pitch, and
-it is recorded as a trend reading in `intel/trends.md`.
-
-### The finding: licence divides by architectural layer
-
-| Layer | Commits | Licence | What it means for an engagement |
-|---|---|---|---|
-| Shells — review UI, REST wrapper, browser plugin, path editor, tutor, judge, source registry, dedup | 60 + 11 + 6 + 10 + 1 + 6 + 25 = **119** | **Apache-2.0**, or claimed as such | Take them. Two of the seven claim a licence the repository does not carry — check before you ship |
-| Analysers and classifiers | 623 + 94 + 73 = **790** | 🟡 **GPL-3.0** | Run as services behind a process boundary; never link |
-| **Inference core** — gateway, Bayesian predictor, text extraction, bulk prompt runner, QA generation, harvester | 137 + 200 + 77 + 37 + 4 + 1,397 = **1,852** | 🔴 **none** | **No grant. Reimplement, or negotiate a licence with the operator** |
-| API client | **519** | **Apache-2.0** | Take it — and it is the only large permissive artefact in the org |
-
-**The permissive surface contains none of the organisation's machine learning.** Every model, every
-harvester and the gateway that fronts them is unlicensed; the Apache-2.0 repositories are
-interaction layers of between 1 and 60 commits. Pass 321 read the one unlicensed repo it found as a
-lapse. Over sixteen reads it is not a lapse — **it is where the org's effort went, and the licence
-file is what never followed it.** For Globant this is the rare case where the *engagement* is the
-finding: a public operator sitting on 1,852 commits of unlicensed, publicly funded ML is a
-licence-remediation conversation, not a fork.
-
-### The README-versus-LICENSE hazard, four instances in one org
-
-`duplicate-detection` and `wlo-quellenliste` both say **MIT** in the README and ship an
-**Apache-2.0** `LICENSE`; `metadata-agent-api` says **MIT** with **no licence file in the root**;
-`metadata-agent-canvas` says **Apache-2.0** with **no licence file in the root**. The `LICENSE`
-file of `duplicate-detection` was opened and read first-hand to settle it — it is the Apache 2.0,
-January 2004 text. **Rule applied from here: the licence file governs; a README claim with no file
-behind it is not a grant.** Two of these four understate the grant and two assert one that does not
-exist, so the error is not conservative in either direction.
-
-### Declared gaps from this pass — searched, measured, not found
-
-| Gap | What was measured |
-|---|---|
-| `openeduhub/wlo-topic-assistant` | **404.** `python-kidra` advertises it as one of seven bundled services; it has no public repository under this org |
-| `kea` (Wikipedia article linking) | Not a repository in this org — `python-kidra`'s README says requests are **forwarded to an external service**, which this KB has not identified |
-| `z-api-runner`'s LLM backend | **Unstated** in the README; `app/` and `requirements.txt` were not read, so the model and provider are unknown |
-| `metalookup`'s extracted field list | In `docs/features.md` and `docs/acceptance.md`, **not read this pass** — so this KB has the capability but not the field schema |
-| `wlo-quellenliste`'s JSON/CSV field schema | **Not documented** on the repository page; would need the code or the live API docs |
-| `topic-statistics`, `its-prep`, `its-data`, `mappings`, `skohub-vocabs-oeh-patched`, `oeh-search-frontend` | Named in the census, **not read.** Listed so pass 323 does not re-discover them — `topic-statistics` and `its-prep` are the two that `python-kidra` depends on |
-| Non-GitHub primary sources | Still unreachable. `www.digitaleducationcouncil.com` failed at DNS this pass; **everything in `intel/` remains snippet-sourced** |
 
 ## The Ed-Fi finding — the gap this KB declared three passes running, closed in p316
 

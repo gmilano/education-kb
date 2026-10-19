@@ -248,6 +248,62 @@ framing in a Globant deliverable**, and treat any client request to "make it tea
 (four of the ten repositories on the first page of the new-supply sweep are Chinese-language
 exam-prep skills). Watch for its arrival in Western skill registries; it has not appeared there yet.
 
+## The licence file is not the grant — in either direction — NEW in p324
+
+Three consecutive passes have found licences fragmenting, and each pass found a different seam:
+
+| pass | the seam | instance |
+|---|---|---|
+| p322 | **by architectural layer**, across an organisation | `openeduhub`: Apache-2.0 shells, GPL-3.0 analysers, **unlicensed** inference core — extended in p324 to the data substrate *and the public UI* |
+| p323 | **by artefact type**, inside one repository | `haolpku/K12-KGraph`: *"Code (this repository): MIT"*, *"Dataset (graph, benchmark, training data): CC BY-NC-SA 4.0"* |
+| p324 | **by channel, with the restrictive channel being the prose one** | `ZhijieXiong/pyedmine`: the MIT text in `LICENSE` — under `Copyright (c) 2023 Stanford Future Data Systems`, an unrelated holder — and a README reading *"All data and code in this project may be used only for academic purposes."* |
+
+🔵 **The first two reduce to one sentence: permissive at the edges, restricted at whatever took the
+work.** p324's does not reduce to anything reassuring. **It means the `LICENSE` file is not
+sufficient evidence of the grant in either direction**, and the direction matters commercially:
+
+- **File more permissive than the prose** (`pyedmine`) — **a dependency scanner returns MIT and
+  the repository clears procurement**, while the author's own specific sentence forbids the use.
+  This is the dangerous direction, because the automated control reports *pass*.
+- **Prose more permissive than the file** (`openeduhub/metadata-agent-api`, `metadata-agent-canvas`,
+  `duplicate-detection`, `wlo-quellenliste`; `classroomio` declaring three licences on three
+  channels) — **the scanner catches it**, and the cost is a conversation rather than an exposure.
+
+🔴 **Two corollaries worth a line each in a diligence checklist.** A licence file can carry
+**somebody else's copyright line** and still be a valid grant from nobody in particular —
+boilerplate copied without editing is now observed often enough to look for. And a manifest can
+state a licence **that is not a valid SPDX identifier** (`openeduhub/skohub-vocabs-oeh-patched`:
+`"license": "Apache License 2.0"` where `Apache-2.0` is the identifier), which an SPDX-strict
+scanner reads as *unknown* rather than as Apache — a false negative in the opposite direction.
+
+**What a studio should do with this:** read **every** channel a repository publishes — `LICENSE`,
+the README, the package manifest, and per-directory licence files — and when they disagree, **plan
+against the most restrictive one and get the contradiction resolved in writing before the grant
+matters.** On this KB's own shelves that rule moves 4 of 48 foundational repositories out of the
+usable set that a scanner would have waved through.
+
+## The declared-gap discount — a method trend, measured four times — NEW in p324
+
+This is a trend about this KB rather than about the sector, and it has now been measured often
+enough to be a policy. **Four consecutive passes have overturned a gap this KB had declared, each
+time by changing the query rather than by the world changing:**
+
+| pass | gap as declared | what changed | outcome |
+|---|---|---|---|
+| p322 | *"no repository located"* for AITutor-EvalKit (p318) | searched the **tool name** from the paper | exists, MIT, public |
+| p323 | *"no verified curriculum dataset at all"* after sweeping 180 `ncert`/`cbse` repositories (p322) | searched **curriculum knowledge graph / prerequisite** instead of the country topic | **two** artefacts, one NeurIPS-accepted |
+| p324 | *"no credible open source AI-detection or academic-integrity project"*, 7 passes | searched the topic **`plagiarism-detection`** instead of *AI detection* | three substantial artefacts, two permissive |
+| p324 | the LTI 1.3 agent gap, 8 passes | **three** changed queries on a **changed instrument** | **held** — the first gap here with positive evidence behind it |
+
+🔵 **The rule: a declared gap is a statement about the query, not about the world, until the query
+has been varied — and a topic sweep is a query, not a census.** Every "searched and not found" line
+in this KB should be read with that discount applied, and the only gap currently exempt is the LTI
+one, because it is the only one that has survived both a changed query and a changed instrument.
+🔴 **For a client conversation this cuts both ways:** it is the reason this KB's gap claims are
+worth something (they are re-tested, and they fall when they should), and the reason a gap should
+never be quoted as *"nothing exists"* — the honest phrasing is **"nothing was found by these
+queries, which are named."**
+
 ## 1. Institutional AI deployment is not landing — and that, not adoption, is the gap
 
 Earlier passes framed this sector as "usage is ahead of governance". The Digital Education Council
@@ -486,19 +542,50 @@ Canvas cannot ship for a jurisdiction it does not own), the deterministic pedago
 the governance and audit layer a US district must buy anyway (trend 2), a defensible efficacy
 measurement (trend 9), and anything on-premise or offline. Price and pitch accordingly.
 
-## 9. Assessment integrity has settled on process evidence, and the detection gap is now a decision
+## 9. Assessment integrity has settled on process evidence — and the "no open source integrity project" premise is RETRACTED in p324
 
 Institutions continue moving to oral defence, process-based work and "use it, cite it" disclosure.
 **57% of students say their assessments come with inadequate AI guidance** (DEC 2026) — the gap is
 guidance, not detection.
 
-Searched again this pass: there is still **no credible open source AI-detection or academic-
-integrity project.** What exists is student-project proctoring (YOLO/OpenCV/MTCNN pipelines,
-Electron kiosk browsers), much of it stale or unlicensed, plus MOSS-style code-plagiarism
-detectors. Published work finds AI-text detectors inaccurate and unreliable, and the surveillance
-posture carries privacy and fairness exposure. **Fifth consecutive pass declaring this gap — and
-the correct reading is that it should stay a gap.** The open source that *is* available (nbgrader,
-otter-grader, JupyterHub provenance) captures process. Sell that.
+~~Searched again this pass: there is still **no credible open source AI-detection or academic-
+integrity project.**~~ 🔴 **RETRACTED in p324, and the retraction is about the query, not the
+sector.** That sentence stood for **seven consecutive passes** on sweeps for *AI detection* and
+*AI-detection agent*. The GitHub topic **`plagiarism-detection`** — same sector, different query —
+returns **twelve repositories pushed since 2026-01-01 above ten stars**, three of them
+substantial, all three measured first-hand in p324:
+
+- 🟢 **`sunilgentyala/aegis-integrity` — MIT, 17 ★, 68 commits, v3.3.2.** A **local-first academic-
+  integrity checker exposed as an MCP server with seven tools**, over citation-hallucination
+  resolution against Crossref, AI-text signals (GPT-2 perplexity, burstiness, stylometric
+  ensemble), corpus-based plagiarism (n-gram MinHash + SBERT/FAISS), ghostwriting detection
+  (Burrows' Delta) and venue-guideline checks for IEEE, ACM and Elsevier.
+- 🟢 **`NoplagLabs/noplag-engine` — Apache-2.0, 86 ★.** Winnowing fingerprints in GIN-indexed
+  PostgreSQL with seed-and-extend alignment to exact character ranges, behind five REST endpoints.
+- 🟡 **`jplag/JPlag` — GPL-3.0, 2.0k ★, 376 forks, 5,708 commits.** Source-code plagiarism **and
+  collusion** detection over twenty-odd languages, CLI or Java API, local report viewer.
+
+🟢 **What survives, and it survives stronger: the recommendation.** The *judgement* this trend
+reached — process evidence over detection, and that the gap "should stay a gap" for AI-text
+*verdicts* — is now **corroborated by the tools themselves rather than by their absence**.
+`aegis-integrity` publishes **no accuracy figure for itself**, cites third-party studies instead,
+and states *"Results are a supporting signal for human review, not a determination of
+misconduct"* and, on ESL bias, *"Do not treat AEGIS as having solved ESL false positives; keep a
+human in the loop."* `noplag-engine` puts *"paraphrase, semantic, and AI-writing detection"* on the
+roadmap rather than in the product, and warns against reading its plagdet figure as general
+accuracy. **The best-engineered artefacts in this category refuse to make the claim this trend
+warned about.** Published work still finds AI-text detectors inaccurate and unreliable, and the
+proctoring posture (YOLO/OpenCV/MTCNN pipelines, Electron kiosk browsers, much of it stale or
+unlicensed) still carries privacy and fairness exposure.
+
+🔵 **So the sentence to use with a client changes shape.** Not *"there is no open source for
+this"* — there is, and it is good — but: **the credible open source in this category is a
+citation, provenance and similarity layer that produces evidence for a human, and the thing that
+does not exist is an AI-authorship verdict anyone should act on.** The process-evidence stack
+(nbgrader, otter-grader, JupyterHub provenance) is the foundation; `aegis-integrity` is the
+citation and prose layer on top of it; JPlag or `noplag-engine` is the similarity engine; and
+`compose/patterns.md` **P11** wires the three together. **Sell the evidence chain, never the
+verdict.**
 
 **The adjacent gap, however, is closed — and this is the substantive change in pass 319.** For four
 passes this KB said there was no credible open source way to measure whether a tutor *teaches*.

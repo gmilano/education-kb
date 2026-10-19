@@ -32,6 +32,60 @@ recipes, and that belongs in the SOW.
 
 ---
 
+## P11 — The academic-integrity evidence chain: sell the audit trail, never the verdict — NEW in p324
+
+**Why this pattern exists now.** For seven passes this KB told studio leads there was no credible
+open source in this category and to sell process evidence instead. **The first half of that was a
+query artefact** (`intel/trends.md` trend 9, retracted in p324) — the components exist, three of
+them measured first-hand this pass, and two are permissive. **The second half was right**, and it
+is the design constraint of this pattern: every component here produces **evidence for a human
+reviewer**, and nothing in it emits an authorship verdict.
+
+**The stack, named repo by repo, with the licence posture each one forces.**
+
+| # | stage | repo | licence | how it wires in |
+|---|---|---|---|---|
+| 1 | **Process evidence** (the foundation, already in this KB) | `jupyter/nbgrader`, `ucbds-infra/otter-grader`, `jupyterhub/jupyterhub` | BSD-3-Clause / BSD-3-Clause / BSD-3-Clause | **Deploy first and unchanged.** Submission history, execution provenance and per-cell autograding are the only artefacts in the chain that evidence *how* the work was produced. If a client will fund one stage, fund this one |
+| 2 | **Prose, citation and stylometric signals** | `sunilgentyala/aegis-integrity` | **MIT** | `pip install "aegis-integrity[ml]"`, then run it **as an MCP server** — seven tools, of which `aegis_check_citations` and `aegis_analyze_paper` are the two to expose first. Pass `offline=true` by default; enable Crossref only with the client's written sign-off, and note in the DPIA that **reference metadata leaves the machine and the document never does** |
+| 3 | **Text similarity against the institution's own corpus** | `NoplagLabs/noplag-engine` | **Apache-2.0** | `docker compose up` with PostgreSQL; load the institution's prior submissions through `POST /v1/corpus/documents`; call `POST /v1/checks` and read character-range matches from `/v1/checks/{id}/report`. 🔴 **Put an auth proxy in front of it on day one** — *"the API ships with no authentication"* |
+| 4 | **Code similarity and collusion** (any CS, data or bootcamp engagement) | `jplag/JPlag` | 🟡 **GPL-3.0** | **Service boundary, never linked.** Run it as its own container exposing one HTTP endpoint; call it from the orchestrator. Twenty-odd languages, Java API or CLI, and its report viewer is local — *"No data will leave your computer!"* Substitute `thu-cs-lab/jieplag` (**MIT**, Rust) when the client's constraint is GPL avoidance rather than language coverage |
+| 5 | **Orchestration and the review UI** | your code, plus the review-UI shape from `openeduhub/metadata-agent-canvas` | — | The canvas pattern this KB recorded in p322 is **exactly** the right interaction here: each signal shown with a **confidence badge**, inline annotation by the reviewer, and an **explicit confirm step** before anything is recorded. Reuse the interaction design; the repository's own grant is unverified, so do not depend on its code |
+| 6 | **Calibration test before go-live** | `yjo2lee/knowsim` (MIT) for assistant-side calibration; the two pre-registered audits (`bydeng01/*`, MIT) for the measurement discipline | MIT | Run the "prove it teaches" discipline from p323 against *this* product too: pre-register what a positive finding means, freeze the evaluation set, log decisions |
+
+**The wiring, in one sentence:** stage 1 runs continuously in the LMS; stages 2–4 run per
+submission behind one orchestrator that **fans out and merges signals into a single reviewer
+packet**; stage 5 is the only place a human decision is recorded; stage 6 gates the launch.
+
+🔴 **The four rules that keep this sellable.**
+
+1. **No verdict, ever.** Mirror `aegis-integrity`'s own language in the product copy: *"Results
+   are a supporting signal for human review, not a determination of misconduct."* A client asking
+   for an AI-authorship score is asking for the one thing the literature does not support.
+2. **Do not ship the AI-text score as a finding.** Use it, if at all, as an internal triage
+   ordering that the reviewer never sees as a number. `aegis-integrity`'s own README warns
+   *"Do not treat AEGIS as having solved ESL false positives"*, and its changelog records an ESL
+   multiplier that was **inverted** in an earlier release. **In any engagement with a
+   second-language cohort — most of LATAM and much of EMEA and APAC — this stage is the fairness
+   exposure, and the mitigation is not shipping its output.**
+3. **Two licence boundaries, both structural.** JPlag is GPL-3.0 → separate process, HTTP only.
+   `noplag-engine` is the **open core of a hosted product** → pin the version, read the diff on
+   upgrade, and expect the roadmap to favour the hosted side.
+4. **State the corpus limit in the proposal.** Both similarity engines match **only against what
+   you load**. *"Plagiarism detection is corpus-based, not a live web/database crawl"* — a client
+   expecting web-wide coverage is expecting the commercial product, and that expectation has to
+   die in the sales conversation rather than in the pilot.
+
+**Effort, measured against what is being assembled rather than guessed:** stages 1 and 3 are
+deployment and data loading; stage 4 is a container and one endpoint; stage 2 is configuration plus
+the DPIA conversation; stage 5 is the only real build. **The honest shape is 6–8 weeks for stages
+1–4 plus a reviewer UI, and the long pole is the client's data-protection sign-off on stage 2, not
+the code.**
+
+**Where it sells, by region:** see `intel/market.md` under *Opportunities by region* — North
+America on the human-oversight statutes, EMEA on the AI Act's high-risk assessment duties, APAC on
+Vietnam's *"sole basis … without meaningful human review"* carve-out, LATAM on the 87%-use /
+26%-strategy gap and the research-integrity remit of its university sector.
+
 ## P21 — The EU public-sector OER tutor: integrate the copyleft platform, own the permissive edges
 
 **When to propose it.** A European public-sector or publicly funded education buyer — ministry,
@@ -958,6 +1012,15 @@ the one with the clearest external references.
 | APAC — Australia / NZ | **P7**, then P1 | Ipsos 2026 finds ANZ public support for banning AI in schools *higher* than in Asian markets — closer to the US restriction posture than to the rest of APAC |
 | LATAM — Brazil | **P10 Variant A**, then P2, with P4's artefacts ported | **The only jurisdiction with a verified open curriculum dataset, an MCP server over it and a published grounding measurement (31.9% → 2.3%)**, plus a 34,948-commit municipally originated SIS with no AI in it. Brazil's June 2026 AI/tech agreement with the EU means the conformity file transfers, and PL 2338 is risk-based |
 | LATAM — Spanish-speaking | **P2**, with P4's artefacts ported, and P10 as a build | No equivalent curriculum data layer was found in the Spanish-language topic sweep, so P10 here is Variant B work. The 92%-usage / 30%-satisfaction gap and the 50/19 feedback gap are delivery problems, which P2 answers |
+
+**P11, new in p324, is the first pattern in this file that is selected by a *requirement* rather
+than by a region or a starting position** — it applies wherever assessment integrity is a stated
+obligation, which on this pass's evidence is all four regions with a different statute behind it in
+each: human-oversight mandates in North America (Oklahoma, Maryland, California AB 1159), high-risk
+assessment duties under the EU AI Act in EMEA, Vietnam's *"sole basis … without meaningful human
+review"* carve-out in APAC, and the 87%-use / 26%-strategy institutional gap in LATAM. **Lead with
+it wherever the buyer has already written an integrity policy and has nothing to implement it
+with**, and pair it with **P3** in North America, where it is the same governance sale.
 
 **No pattern here is LATAM-only or North-America-only.** P1 and P2 are the portable core; P3, P4,
 P5, P6, P7 and P9 are the regional wrappers that make them biddable. **P10 is portable in method and

@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 324 — a permissive LICENSE does not survive a restrictive README, and the whole `openeduhub` substrate is unlicensed
+
+**Tenth pass of 2026-10-19.** Ten rows added to `repos/foundations.md`, bringing it to **forty-eight**.
+**All six repositories p322 named as unread are now measured** — the two it told this pass to read
+first are the two that matter, and both are unlicensed. Two new instrument findings are recorded at
+the end because either one could have put wrong data on these shelves.
+
+### The licence finding, and it runs in the opposite direction to every one before it
+
+This KB has recorded four `openeduhub` repositories whose README claims a permissive grant the
+repository does not carry, and one (`classroomio`) declaring three different licences on three
+channels. **`ZhijieXiong/pyedmine` is the inverse case and it is worse for a studio.**
+
+- 🔴 **`ZhijieXiong/pyedmine` — `LICENSE` is the MIT text, and the README says the project may be
+  used only for academic purposes.** Verbatim, from the README: *"All data and code in this
+  project may be used only for academic purposes."* The `LICENSE` file read first-hand is the MIT
+  grant — and its copyright line reads **`Copyright (c) 2023 Stanford Future Data Systems`**, an
+  organisation unrelated to this project or its author, i.e. **a copied licence file whose holder
+  was never updated.**
+- 🔵 **Why the permissive channel loses.** A dependency scanner reads the `LICENSE` file, returns
+  MIT, and the repository clears procurement. **A reviewer reads the README and stops the
+  engagement.** The restrictive channel is the one a court or a client's counsel would weigh,
+  because it is the author's own expressed intent and it is *specific* where the MIT file is
+  boilerplate with somebody else's name on it. **Treat `pyedmine` as academic-use-only until the
+  author resolves it, and open an issue rather than assuming.** This is the first instance in this
+  KB where the *documented* grant is narrower than the *licensed* one; every previous instance was
+  the other way round, which is the direction scanners are built to catch.
+- 🟢 **And it is a real loss, which is why it is worth an issue.** PyEdmine is the second-largest
+  educational-data-mining library this KB has measured after `pykt-team/pykt-toolkit` — **MIT
+  file, 82 ★, 13 forks, 220 commits, v1.0.0 (15 Aug 2025) described as a stable LTS release** — and
+  it is broader than pyKT, covering **four task families on one workflow**: knowledge tracing
+  (**28 models**: qDKT_CORE, AKT_CORE, DisKT, ATDKT, CLKT, DTransformer, GRKT, HDLPKT, DKT, DIMKT
+  among them), **cognitive diagnosis (7**, incl. NCD and HyperCD), **exercise recommendation (3)**
+  and **learning-path recommendation (4**, with LPKT4LPR as a simulator), over **14 EDM datasets**
+  (SLP, assist2009/-full/2012/2015/2017, edi2020, junyi2015, moocradar, poj, slepemapy-anatomy,
+  statics2011, xes3g5m, plus an EdNet-KT1 preprocessing note). Five dataset-splitting settings,
+  pretrained weights on Hugging Face, a published model leaderboard, and **cold-start, hard-sample
+  and multi-step evaluation** — with the BES metric self-marked *"has not been validated."* Its
+  README names PYKT, EduKTM, EduCDM and RecBole as referenced codebases.
+- 🔵 **For comparison, measured on the same instrument this pass: `pykt-team/pykt-toolkit` is at
+  450 ★, 139 forks.** Earlier cycles of this KB carried pyKT at *"1.2k"* stars. **450 is the
+  measured value**; the higher figure was never verifiable and should not be requoted.
+
+### p322's six named-unread `openeduhub` repositories — all six measured, and the substrate is bare
+
+p322 left six repositories named but unread and said **"`topic-statistics` and `its-prep` are the
+two that `python-kidra` depends on — read those first."** Done, and the answer extends p322's
+licence-by-layer finding **one layer further down than it went**:
+
+| repo | licence, measured | what it is |
+|---|---|---|
+| `openeduhub/its-prep` | 🔴 **no licence file under any of seven names** | 87 commits. Generic **NLP filter-pipeline library over spaCy** — *"a generic interface to various NLP tools"* to *"stream-line the process of defining natural language pre-processing pipelines, particularly in the context of educational resources."* Every stage is a filter that **keeps or discards tokens and may not modify them**, over an immutable `Document` that retains the original text. German `de_core_news_lg` |
+| `openeduhub/its-data` | 🔴 **no licence file under any of seven names** | 159 commits. *"A Python library that aids in retrieving and processing large data dumps from elasticdump … primarily for the purpose of training and evaluation of AI tools for the automatic generation of metadata."* `its_data.fetch` → pandas; `its_data.default_pipelines.flat_classification`; a `download-data` CLI; **resolves URIs against the SKOS vocabularies at `vocabs.openeduhub.de`** |
+| `openeduhub/topic-statistics` | 🔴 **no licence file under any of seven names** | 9 commits. *"A very simple application that computes various statistics on WLO topic pages, based on a downloaded copy of the database."* Its own README proposes folding the logic into `meta-qs` instead |
+| `openeduhub/oeh-search-frontend` | 🔴 **no licence file, and `package.json` has no `license` key at all** | **1,050 commits**, 5 ★, 1 fork, 13 open PRs. The **Angular 19.2.14 public search frontend** of WirLernenOnline. *"In order to use the frontend, you either need a deployed or a locally running instance of Edu-Sharing."* Karma + Cypress, Docker image, Angular i18n, web components copied into a WordPress theme |
+| `openeduhub/mappings` | 🟡 **GPL-3.0** — `LICENSE` read first-hand, the GPL v3 29 June 2007 text | Vocabulary/schema mappings |
+| `openeduhub/skohub-vocabs-oeh-patched` | 🟢 **Apache-2.0** — `LICENSE` read first-hand, the Apache 2.0 January 2004 text | **A patched fork of `skohub-io/skohub-vocabs`** (hbz NRW + graphthinking GmbH) — its `package.json` `repository` field still points upstream. *"A simple tool for publishing SKOS vocabularies"*: static-site generator with a lookup API, JSON-LD per concept, slash and hash URIs, a webhook server for GitHub/GitLab-triggered rebuilds. **This is the publishing layer behind the `vocabs.openeduhub.de` that `its-data` resolves against** |
+
+🔴 **The finding: the unlicensed set is not the "inference core", it is the whole substrate.** p322
+read the licence split as *shells Apache-2.0 / analysers GPL-3.0 / inference core unlicensed*.
+With these six measured, the unlicensed set is `python-kidra`, `its-jointprobability`, `its-qna`,
+`text-extraction`, `z-api-runner`, `oeh-search-etl`, **`its-data`, `its-prep`, `topic-statistics`
+and `oeh-search-frontend`** — gateway, models, data loader, tokenizer *and the public UI*. **A
+studio cannot lawfully reuse any part of this stack from the search box down to the token filter.**
+What it can reuse: the Apache-2.0 shells, `edu-sharing-python-client`, `skohub-vocabs-oeh-patched`,
+and — as a service behind HTTP, never linked — the GPL-3.0 analysers (`metalookup`,
+`text-statistics`, `discipline-classification`, `mappings`).
+
+🔴 **And `oeh-search-frontend` breaks the layer rule's natural extension.** The thinnest shell in
+the organisation — a pure Angular UI — is the one with no grant on *either* channel, where the rule
+predicted Apache-2.0. **The layer rule holds for the backend tiers and does not generalise to the
+UI tier.** Said plainly so p325 does not re-derive it: `package.json` with **no `license` key** is
+not the same defect as a manifest that disagrees with the `LICENSE` file; it is an absence on both
+channels and it is the weaker position of the two.
+
+### Added to the integrity tier (new in this file)
+
+- 🟡 **`jplag/JPlag` — GPL-3.0, 2.0k ★, 376 forks, 5,708 commits, pushed 2026-10-19.** Source-code
+  plagiarism and **collusion** detection over twenty-odd languages, CLI **or Java API**, on Maven
+  Central, local report viewer (*"No data will leave your computer!"*). **This KB's integrity tier
+  dismissed "MOSS-style code-plagiarism detectors" for seven passes while the largest of them had
+  more commits than any agent on these shelves.** GPL-3.0: service, never linked.
+- 🟢 **`NoplagLabs/noplag-engine` — Apache-2.0, 86 ★, 76 forks, 6 commits.** Winnowing fingerprints
+  in GIN-indexed PostgreSQL, seed-and-extend alignment to exact character ranges, five REST
+  endpoints, **no authentication as shipped**, open core of the hosted noplag.com. Honest about
+  scope: *"This engine detects verbatim and near-verbatim copying"*, with paraphrase, semantic and
+  AI-writing detection *"on the public roadmap."*
+- 🟢 **`thu-cs-lab/jieplag` — MIT (`LICENSE` read first-hand, Copyright (c) 2023 Jiajie Chen,
+  Shengqi Chen), 54 ★.** Moss-inspired plagiarism detection **in Rust**, Tsinghua CS lab. The only
+  permissively licensed code-similarity engine here with no commercial product behind it.
+- 🔴 **`Ganesh-403/semantic-plagiarism-detector` — MIT, 16 ★ and 110 forks.** Recorded as a
+  **weight caveat, not a recommendation**: SentenceTransformers + FAISS + Streamlit, and a
+  fork-to-star ratio of **6.9**, which is the signature of a coursework template rather than a
+  dependency. This KB's p320 lesson was that a star count is not a volume measure; **a fork count
+  is not one either.**
+- 🔴 **`cu-sanjay/Free-Turnitin-Plagiarism-Checker` — 148 ★ and `[Archived]` in its own
+  description.** The highest-starred thing the integrity sweep returned is dead. Recorded so it is
+  not mistaken for supply.
+
+### Instrument findings — both of which could have produced wrong rows on these shelves
+
+🟢 **1. The GitHub REST search API is reachable in this session, where earlier cycles recorded it
+blocked.** `rotation.json` carries *"github-api-proxy-blocked"* from the technology cycle, and this
+KB's supply claims have been made off rendered search pages. **The MCP GitHub
+`search_repositories` tool works and returns structured, exact `stargazers_count`, `forks_count`,
+`pushed/updated_at`, `archived`, `default_branch` and `topics`.** Every star and fork count in this
+pass is from it, not from a rendered page. 🔴 **`get_file_contents` is *not* available** — this
+session's GitHub credentials are scoped to one repository and the call is refused by name — so
+**file reads still go through `raw.githubusercontent.com` and the rendered repository page.**
+Census figures this instrument gave, as measurements: `topic:knowledge-tracing` pushed since
+2026-06-01 = **44**; `topic:plagiarism-detection` pushed since 2026-01-01 above 10 ★ = **12**;
+education tutor agents pushed since 2026-10-10 above 2 ★ = **6**.
+
+🔴 **2. A `404` is evidence of absence only after the filename space has been enumerated — and one
+organisational convention can 404 an entire org.** This pass began by probing
+`raw.githubusercontent.com/openeduhub/<repo>/main/README.md` and got **404 on every repository in
+the org**, including ones whose README had just been read through the rendered page. The channel
+was not blocked: **the `openeduhub` ITS tier writes `README.org` (Emacs Org-mode), not
+`README.md`** — every one of them also ships a `flake.nix`, which is the same house style. Had the
+licence probe stopped at `LICENSE`/`LICENSE.md`, three of the rows above would have been recorded
+with the right verdict for the wrong reason. **The licence verdicts in this pass were taken over
+seven candidate names** (`LICENSE`, `LICENSE.md`, `LICENSE.org`, `LICENCE`, `COPYING`,
+`LICENSE.txt`, plus the manifest) **and corroborated against the rendered sidebar.** 🔴 **Second
+caveat on the same channel:** through this session's proxy, `raw.githubusercontent.com` served the
+same file for `main`, `master` *and* `develop` on repositories that have only one of those
+branches, so **the branch component of a raw URL is not a discriminator here** — a raw read is a
+read of the default branch whatever branch you name. 🟢 **Control run, so this is characterised and
+not guessed:** `facebook/react/main/LICENSE`, `moodle/moodle/main/README.md` and
+`torvalds/linux/master/COPYING` all returned 200 in the same session, as did
+`openeduhub/its-prep/main/setup.py` — the channel works, the probe was wrong.
+
+🔴 **3. `curl` to `github.com` itself returns `403` through this session's proxy** (repository roots
+and `blob/` paths alike), so the task's prescribed `curl -sI` URL check **cannot be run against
+github.com here.** URL verification in this pass was done the two ways that do work: the rendered
+page through the fetch channel, and `raw.githubusercontent.com` for file-level existence. Recorded
+so a later pass does not read a `403` as a dead repository.
+
+
 ## 2026-10-19 — Pass 323 — 420 stars and a NeurIPS acceptance on the artefact this KB said nobody was competing for
 
 **Ninth pass of 2026-10-19.** Three rows added to `repos/foundations.md`, bringing it to

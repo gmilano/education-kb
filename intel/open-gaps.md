@@ -1,9 +1,115 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-18
+updated: 2026-10-19
 ---
 
+
+## Pass 324 — gaps opened, closed and measured
+
+Evidence: [`verified-repos.2026-10-19-p324.tsv`](../evidence/verified-repos.2026-10-19-p324.tsv).
+**Note that p323 did not write a section here; this one therefore also disposes of the p322 items
+p323 left standing.**
+
+**Closed this pass.**
+- ✅ 🟢 **"No credible open source AI-detection or academic-integrity project" — SEVEN passes,
+  CLOSED, and it was a query artefact.** The sweeps behind it searched *AI detection*. The topic
+  `plagiarism-detection` returns **12 repositories** pushed since 2026-01-01 above 10 ★, three of
+  them substantial: `sunilgentyala/aegis-integrity` (**MIT**, 17 ★, an integrity **MCP server** with
+  7 tools), `NoplagLabs/noplag-engine` (**Apache-2.0**, 86 ★) and `jplag/JPlag` (**GPL-3.0**,
+  2.0k ★, **5,708 commits**). `intel/trends.md` trend 9's premise is retracted; its recommendation
+  stands and is strengthened. New pattern **P11** in `compose/patterns.md`.
+- ✅ **All six `openeduhub` repositories p322 named as unread.** `its-prep`, `its-data`,
+  `topic-statistics` — **no licence file under seven candidate names**; `oeh-search-frontend` —
+  **no licence on either channel** (no file, and `package.json` has no `license` key);
+  `mappings` — **GPL-3.0**, `LICENSE` read first-hand; `skohub-vocabs-oeh-patched` —
+  **Apache-2.0**, `LICENSE` read first-hand, and it is a **fork of `skohub-io/skohub-vocabs`**.
+- ✅ **p322's "the two `python-kidra` depends on — read those first."** Done. Both unlicensed. The
+  unlicensed set is therefore **the whole substrate plus the UI**, not an "inference core".
+- ✅ 🟢 **The GitHub API channel.** Earlier cycles recorded it blocked (`rotation.json`:
+  *"github-api-proxy-blocked"*). **The MCP `search_repositories` tool works** and supplied every
+  star/fork/push/archived/topic value this pass. 🔴 `get_file_contents` is refused by scope.
+- ✅ **p323's supply claim, reproduced on a second instrument.** Six education agents pushed since
+  2026-10-10 above 2 ★, ceiling **41 ★** — all six already in the KB. First time a supply claim
+  here has been replicated by an independent instrument.
+
+**Opened this pass — measured, not assumed.**
+- 🔴 **`ZhijieXiong/pyedmine`'s licence contradiction is unresolved and someone should resolve it.**
+  MIT `LICENSE` (under an unrelated copyright holder) vs a README reading *"All data and code in
+  this project may be used only for academic purposes."* **Open an issue on the repository and
+  record the maintainer's answer** — this is the highest-value single action available to p325,
+  because a resolved answer either returns the broadest EDM library in this sector to the usable
+  set or confirms the first scanner-invisible restriction on these shelves.
+- 🔴 **No integrity engine in the new tier ships an LTI 1.3 or Moodle plugin.** JPlag's README
+  names no LMS integration at all; `noplag-engine` is REST-only; `aegis-integrity` is MCP + local
+  UI. **The LMS seam is a build in all three cases** — and that is one more datum for the LTI gap.
+- 🔴 **`noplag-engine` was not read below the README.** 6 commits against 86 ★ / 76 forks is an
+  anomalous signature; the winnowing parameters (k-gram size, window size) are **not stated** in
+  the README and the source was not read. **Read `docs/api.md` and the fingerprinting module
+  before P11 is quoted to a client.**
+- 🔴 **`aegis-integrity`'s internal tension is recorded but not resolved.** Its marketing section
+  says per-language calibration *"reduce[s] this bias"* while its ESL section says the non-English
+  multipliers *"rarely fire"*, and the changelog records an earlier ESL multiplier that was
+  **inverted**. **Nobody has measured its ESL false-positive behaviour** — including its author.
+- 🔴 **`jplag/JPlag`'s release and maturity-per-language data were not captured.** The rendered
+  page's Releases section did not render, so no version or date is recorded, and the README's own
+  *"maturity varies by language"* is unquantified. **For any CS engagement, the per-language
+  maturity table is the thing to read next.**
+- 🔴 **`WEIWEI0614/math-bank`'s content provenance.** MIT code, 12,030 past-paper items against
+  **named commercial qualifications** (CIE 9709, Edexcel IAL, TMUA, ESAT, BMO, UKMT), and the
+  repository does not address where the items came from. **A copyright question entirely separate
+  from the code grant, and this KB has no method for it.**
+- 🔴 **Five MIT knowledge-tracing artefacts recorded below the listing bar, unread below their
+  descriptions** — `grill`, `leap-framework`, `LookatStudy`, `UniKT`, `math-bank`. Named so p325
+  does not re-discover them. **`leap-framework`'s server-side State Guard is the single most
+  interesting unread idea in this group.**
+- 🔴 **The `topic:knowledge-tracing` census returned 44 and only 12 were examined.** The remaining
+  32 were not enumerated.
+
+**Measured again, unchanged — the search channel, fourth consecutive pass.**
+- 🔴 **The prescribed eight-search regional battery added nothing for the FOURTH pass running.**
+  All eight ran; **fifteen named tokens from the results were checked against `intel/market.md`
+  and all fifteen were already held.** Recorded per region there, including that **EMEA returned
+  no education-specific result for the second consecutive pass** and **APAC returned corporate and
+  general-AI material for the sixth.** The one genuinely new regional item is the UNESCO LAC
+  Observatory's **named partner list** (CAF, CENIA, CETIC.br, ECLAC, Santillana, Tec de Monterrey,
+  ProFuturo, Universidad del Desarrollo, Ceibal).
+- 🔴 **The platform/vertical search returned nothing new for the second consecutive pass.** OFBiz,
+  Corteza, Huly, Krayin, OpenEduCat, ERPNext, Dolibarr — all held. One unnamed Apache-2.0
+  *"desktop university administration platform"* appeared in a curated list and **could not be
+  resolved to a repository**; recorded as unidentified rather than as a finding.
+- 🔴 **Everything in `intel/` remains snippet-sourced.** No claim in that directory has a
+  primary-source read behind it. **The regional half of this base is reportage; its licence half
+  is measurement.**
+
+**The code channel — 20/22, and the two reds are diagnosed rather than counted.**
+- ✅ 🟢 **`gate-offline` fixed by this pass.** `pass261-current-state-tier-run` failed 2/166 because
+  **`repos/foundations.md`'s `Pass 321` section sat above its `Pass 322` section**; the block was
+  moved, the control was not relaxed, and the suite closes **166/166**.
+- 🔴 **`recount` — 5/5 claims `NO-ANCHOR`, and three of them measure ZERO.** The MCP section's
+  table and the build-on tier are **gone from `agents/top.md`**, so the pins cannot be restored
+  without restoring the structures. **p325: recover them from `archive/` or retire the claims
+  deliberately — do not write a sentence stating `0` to satisfy a regex.** Measured values and the
+  exact anchor regexes are recorded in `README.md` under this pass.
+- 🔴 **`gate-permissive-arm` — 1/32, a stale magnitude pin.** `MIT + Apache-2.0 > 7000` asserted,
+  **6,660 measured** (4,583 + 2,077). All three relational assertions still pass. **This pass did
+  not edit the threshold**: loosening a failing assertion is indistinguishable from hiding the
+  failure. **p325 must decide whether the corpus shrinkage is itself the finding.**
+
+**Instrument caveats opened this pass — both nearly produced right verdicts for wrong reasons.**
+- 🔴 **A 404 is evidence of absence only after the filename space is enumerated.** The
+  `openeduhub` ITS tier writes **`README.org`**, not `README.md`; a Markdown-shaped probe 404s on
+  every repository in the org. Controls (`facebook/react`, `moodle/moodle`, `torvalds/linux`, and
+  `openeduhub/its-prep/main/setup.py`) all returned 200 in the same session — **the channel works,
+  the probe was wrong.** 🔵 And the convention is **not** org-wide: `text-extraction` uses
+  Markdown, so the space must be enumerated **per repository**.
+- 🔴 **`curl` to github.com returns 403 through this session's proxy**, so the task's prescribed
+  `curl -sI` check cannot be run against github.com here. A 403 is this session's binding, not a
+  dead repository. URL verification ran via the rendered page and `raw.githubusercontent.com`.
+- 🔴 **Through this proxy, `raw.githubusercontent.com` served the same file for `main`, `master`
+  and `develop`** on repositories having only one of those branches. **The branch component of a
+  raw URL is not a discriminator here.** Any future claim of the form *"present on branch X,
+  absent on branch Y"* made over this channel is unsound.
 
 ## Pass 322 — gaps opened, closed and measured
 

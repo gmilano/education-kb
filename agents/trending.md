@@ -4,6 +4,152 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 324 — the integrity gap this KB declared for seven passes is not empty, and the query was the thing that was wrong
+
+**Tenth pass of 2026-10-19.** One row added to `agents/top.md`, one to its evaluation table, **ten**
+to `repos/foundations.md` (now forty-eight), **all six of p322's named-unread `openeduhub`
+repositories measured**, and
+**one standing gap closed and one trend premise corrected**. Fourteen repositories measured
+first-hand; two instrument findings recorded below because both could have produced wrong data.
+
+### The finding: "no credible open source academic-integrity project" was a query artefact
+
+`intel/trends.md` trend 9 has said for **seven consecutive passes**: *"there is still no credible
+open source AI-detection or academic-integrity project. What exists is student-project proctoring
+… plus MOSS-style code-plagiarism detectors."* **The second half of that sentence is doing the
+work, and it is wrong.** The sweeps behind it searched for *AI detection* and *AI-detection agent*.
+Searching the **GitHub topic** `plagiarism-detection` instead — same sector, different query —
+returns twelve repositories pushed since 2026-01-01 above ten stars, and three of them are
+substantial:
+
+- 🟢 **`sunilgentyala/aegis-integrity` — MIT, 17 ★, 5 forks, 68 commits, changelog at v3.3.2
+  (October 2026).** *"Free, local-first academic integrity checker and MCP server."* **This is the
+  artefact this KB has been declaring absent.** Seven MCP tools — `aegis_analyze_paper`,
+  `aegis_check_citations`, `aegis_check_guidelines`, `aegis_compare_papers`, `aegis_index_add`,
+  `aegis_index_summary`, `aegis_status` — over five signal families: **citation-hallucination
+  resolution against Crossref** with a five-value verdict (`VALID`, `MISMATCH`, `HALLUCINATED`,
+  `UNRESOLVABLE`, `NO_DOI`); AI-text via **GPT-2 perplexity, burstiness, a stylometric ensemble and
+  lexical-tell density**; plagiarism via **n-gram MinHash plus SBERT/FAISS** against *a corpus you
+  supply*; ghostwriting via **Burrows' Delta**; and an experimental keyless watermark heuristic.
+  Venue-guideline checks for IEEE, ACM and Elsevier. Ships as `pip install
+  "aegis-integrity[ml]"`, a local web UI (`aegis ui`), a Claude Code plugin, a Claude Desktop
+  `.mcpb`, Docker Compose and a GHCR image.
+- 🟢 **`NoplagLabs/noplag-engine` — Apache-2.0 (`LICENSE` read first-hand), 86 ★, 76 forks, 6
+  commits.** Sentence-window chunks → **winnowing fingerprints stored as a GIN-indexed
+  `bigint[]` in PostgreSQL** → candidate retrieval by fingerprint overlap → **seed-and-extend
+  alignment to exact character ranges.** Five-endpoint REST surface (`POST /v1/checks`,
+  `GET /v1/checks/{id}`, `GET /v1/checks/{id}/report`, `POST /v1/corpus/documents`, `/docs`),
+  Alembic migrations, `docker compose up`, and a first boot that indexes ~1,000 bundled Wikipedia
+  articles.
+- 🟡 **`jplag/JPlag` — GPL-3.0 (`LICENSE` read first-hand: the GPL v3, 29 June 2007 text), 2.0k ★,
+  376 forks, 5,708 commits, pushed today.** **The largest and most-maintained artefact in this
+  KB's integrity tier by an order of magnitude, and it was never listed.** Source-code plagiarism
+  and **collusion** detection across **twenty-odd languages** — Java, C, C++, C#, Python,
+  JavaScript, TypeScript, Go, Kotlin, R, Rust, Swift, Scala, LLVM IR, Scheme, EMF metamodel/model,
+  SCXML, plain text, plus a multi-language mode, *"maturity varies by language"*. Usable **as a
+  CLI or directly via its Java API**, published on Maven Central, with a local report viewer:
+  *"No data will leave your computer!"* The README makes **no comparison to Moss** — `moss` is a
+  topic tag only.
+
+🔵 **What this does and does not change.** Trend 9's *conclusion* — sell process evidence, not
+detection — survives intact and is in fact **strengthened**, because `aegis-integrity`'s own README
+is the clearest statement of that posture this KB has read from a tool that could have overclaimed:
+*"Results are a supporting signal for human review, not a determination of misconduct"*; on ESL
+bias, *"Do not treat AEGIS as having solved ESL false positives; keep a human in the loop"*; the
+watermark module *"can report `STATISTICAL_ANOMALY` or `NO_STATISTICAL_ANOMALY`, never a definitive
+watermark claim"* and *"never affects the overall integrity risk score"*; and
+*"Plagiarism detection is corpus-based, not a live web/database crawl."* It publishes **no accuracy
+figure for itself** and cites third-party studies instead. `noplag-engine` is as careful in the
+other direction: *"paraphrase, semantic, and AI-writing detection are on the public roadmap"* —
+it does not claim them today — plagdet *"around 0.8+"* with precision ≥ 0.95 on verbatim and
+lightly obfuscated material, while on the full PAN-PC-11 an L0/L1 engine *"scores near zero by
+design"*, with an explicit warning against reading a single plagdet figure as general accuracy.
+**The premise was false; the recommendation was right.** Trend 9 is corrected accordingly.
+
+🔴 **Two cautions before any of this reaches a client.** `noplag-engine` is **the open core of the
+hosted noplag.com product** (the hosted side adds live web search; the open engine matches your
+local corpus only), ships **6 commits against 86 stars and 76 forks** — a fork-to-star ratio of
+0.88, which this KB has not seen on an organically grown repository — and states that
+*"the API ships with no authentication."* And `jplag/JPlag` is **GPL-3.0**: deploy it behind HTTP
+as a service, never link it into a client's application, which is the same rule this KB already
+applies to `text-statistics`.
+
+### The method lesson, fourth consecutive instance — and it is now the KB's most reliable finding
+
+p318 searched for `AITutor-EvalKit` and declared no repository; p322 found it by the tool name.
+p322 swept the `ncert` and `cbse` topics and declared no curriculum dataset; p323 found two by
+changing the query to *curriculum knowledge graph*. **This pass changed `AI detection` to the topic
+`plagiarism-detection` and overturned a seven-pass gap.** The rule earned four times over: **a
+declared gap is a statement about the query, not about the world, until the query has been varied.
+A topic sweep is a query, not a census.** Every gap this KB still declares should be read with that
+discount applied, and the two below are re-tested on that basis.
+
+### Added to `agents/top.md`
+
+- **`sunilgentyala/aegis-integrity`** — as above. It is the first integrity artefact in this file
+  and the second MCP-exposed agent in it, which is further evidence for trend 6 (*MCP, not LTI, is
+  where agent integration is actually happening*): an integrity reviewer built in 2026 ships seven
+  MCP tools and no LTI surface at all.
+
+### Added to the evaluation table
+
+- **`yjo2lee/knowsim` — MIT (`LICENSE` read first-hand, Copyright (c) 2026 Yoonjoo Lee), 4 ★, 0
+  forks.** *"Knowledge-state-aware user simulator for evaluating information calibration in LLM
+  assistants"*, arXiv 2608.17150. It belongs in the eval tier rather than the agent tier because
+  it is **the simulated learner, not the tutor**: the thing you need to run a tutor against a
+  learner whose knowledge state you control. Small, and the only artefact in this KB aimed at
+  *calibration* — whether the assistant's confidence tracks what the learner actually knows.
+
+### The standing gaps, re-tested with changed queries
+
+- 🔴 **No usably licensed open source LTI 1.3 agent. Eighth consecutive pass — and now measured
+  three ways.** `topic:lti topic:ai` returns **2 repositories**, neither an agent: `amirtds/amirtds`
+  is a personal profile README and `api-evangelist/packback` is a third-party API profile of a
+  **commercial** product (Packback's "Originality"). `lti 1.3 mcp server education stars:>0`
+  returns **0**. `topic:lti lti-1-3 OR lti1p3 OR lti-advantage ai agent` returns **0**. The two
+  known near-misses are unchanged: `blamb/lti-tutor` ("To be decided") and
+  `JaimeArriagadaRosas/Plugin-Feedback-Canvas` (no LICENSE). **This gap has now survived a changed
+  query and a changed instrument, which is the first time this KB can say that of any gap.**
+- 🟢 **Assessment integrity — CLOSED this pass.** See above. Seven passes, one query change.
+
+### The new-supply tail, re-measured on the new instrument and it agrees with p323
+
+`education tutor agent pushed:>2026-10-10 stars:>2`, sorted by stars, returns **six repositories in
+total** and the top one is **`zhangl1001/civil-ai` at 41 ★** — the row p323 added. The other five
+are `grey8-io/learn-ai-with-grey8` (10 ★), `ibenian/algebench` (8 ★), `fcescob/understand` (5 ★),
+`CGSeb/lessonfolk` (3 ★) and `fanfanfanfanfan626/mastery-tutor` (3 ★) — **every one of them already
+recorded in p323**, four of them below this file's listing bar. 🔵 **This is the first time a supply
+claim in this KB has been reproduced by a second, independent instrument** (the REST search API
+rather than a rendered search page), and it replicates exactly: nothing with weight has entered the
+education-agent category in the last nine days, and the ceiling is still 41 stars.
+
+### Recorded below the listing bar — real, permissive, measured, too thin to list
+
+The `topic:knowledge-tracing` sweep (**44 repositories pushed since 2026-06-01**) returned five
+new artefacts that are all MIT and all too small to list. Recorded so p325 does not re-discover
+them, with the one line each that is worth having:
+
+- **`theadamdanielsson/grill` — MIT, 3 ★.** *"An agentic learning system. Grill keeps state on what
+  you know, note by note. Chat, tests and your other agents all work from it."* Topics name
+  **FSRS, MCP, Obsidian plugin, Ollama, opencode, Codex and Claude Code** — the knowledge-tracing
+  state is exposed to *other* agents, which is the composition shape trend 7 predicts and this KB
+  had no instance of.
+- **`Vinger-lee/leap-framework` — MIT, 1 ★.** *"A state-driven agentic tutoring runtime for AI
+  agents, exposed over MCP. Server-side State Guard, evidence-based mastery, FSRS retention."*
+  One star, and the only artefact here that puts the pedagogy guard **server-side** so the model
+  cannot talk its way past the mastery gate. Read the State Guard idea; do not depend on it.
+- **`Kaiji-Z/LookatStudy` — MIT, 8 ★.** Turns a GitHub repository into a course with **per-concept
+  BKT mastery**, SM-2 review, Electron desktop, SQLite, local-first, BYO key. Bilingual
+  (EN/ZH) — APAC-authored, consistent with the p323 regional read.
+- **`szhhwh/UniKT` — MIT, 4 ★.** Unified knowledge-tracing experiment framework (PyTorch, pixi).
+- **`WEIWEI0614/math-bank` — MIT, 1 ★.** 12,030 past-paper items over 29 units and 1,142 knowledge
+  points for **international curricula** (CIE 9709, Edexcel IAL, TMUA, ESAT, BMO, UKMT),
+  zero-runtime-dependency, *"数据不出本机"* — data never leaves the machine. Item banks for named
+  international qualifications are rarer than tutors in this KB; the licence is MIT but the
+  **provenance of past-paper content is not addressed in the repository**, which is a copyright
+  question independent of the code grant.
+
+
 ## 2026-10-19 — Pass 323 — the curriculum moat has a second country, and the eval layer's newest entrant is unlicensed
 
 **Ninth pass of 2026-10-19.** Two rows added to `agents/top.md`, one to its evaluation table, three

@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-19
 ---
 
+## Pass 324 — 2026-10-19 — **A GAP THIS KB DECLARED FOR SEVEN PASSES WAS A PROPERTY OF ITS OWN QUERY; THE LICENCE FILE IS NOT THE GRANT IN EITHER DIRECTION; AND THE GITHUB API CHANNEL IS OPEN FOR THE FIRST TIME**
+
+**One-line summary:** 🟢 **`intel/trends.md` trend 9's premise — *"there is still no credible open
+source AI-detection or academic-integrity project"*, declared for seven consecutive passes — is
+FALSE, and the query was what was wrong.** Searching the GitHub topic **`plagiarism-detection`**
+instead of *AI detection* returns twelve repositories pushed since 2026-01-01 above ten stars, and
+three are substantial: **`sunilgentyala/aegis-integrity`** (MIT, 17 ★, an academic-integrity **MCP
+server with seven tools**), **`NoplagLabs/noplag-engine`** (Apache-2.0, 86 ★, winnowing
+fingerprints in GIN-indexed PostgreSQL) and **`jplag/JPlag`** (GPL-3.0, **2.0k ★, 376 forks, 5,708
+commits**, twenty-odd languages, Java API or CLI) — **the last of which is more maintained than any
+agent on these shelves and had never been listed.** 🔵 **The trend's recommendation survives and is
+strengthened rather than weakened:** the best artefacts in the category **refuse** to issue an
+authorship verdict — *"Results are a supporting signal for human review, not a determination of
+misconduct"* — which is exactly what this KB has been telling studio leads to sell. **The premise
+was false; the advice was right.** 🔴 **Second finding: `ZhijieXiong/pyedmine` ships the MIT text in
+`LICENSE`, under an unrelated copyright holder, while its README says *"All data and code in this
+project may be used only for academic purposes."*** Every previous licence defect in this KB was a
+README claiming a grant the repository lacked; **this is the documented grant being narrower than
+the licensed one — the direction a dependency scanner cannot catch, because the automated control
+reports *pass*.** 🟢 **Third: the GitHub REST search API is reachable in this session** via the MCP
+`search_repositories` tool, where earlier cycles recorded it blocked — so every star, fork,
+push-date and topic value in this pass is a structured API value, **and p323's supply claim was
+reproduced exactly on this second instrument** (six education agents pushed since 2026-10-10,
+ceiling 41 ★, all six already held). 🟢 **Fourth: all six `openeduhub` repositories p322 named as
+unread are measured**, and the two it said to read first are both unlicensed — **so the unlicensed
+set is the whole substrate plus the public UI, not an "inference core", and a studio cannot lawfully
+reuse any part of that stack from the search box down to the tokeniser.** 🔴 **Fifth, and the
+methodological one: two instrument caveats that nearly produced right verdicts for wrong reasons** —
+the `openeduhub` ITS tier writes `README.org`, not `README.md`, so a Markdown-shaped 404 probe 404s
+on every repository in the org, and `curl` to github.com returns 403 through this session's proxy,
+so the prescribed `curl -sI` check **cannot be run against github.com here**. 🟡 **All four regions
+briefed, and for the fourth consecutive pass the prescribed regional battery added nothing** —
+fifteen named tokens from its results were checked against `intel/market.md` and all fifteen were
+already held, recorded per region rather than hidden.
+
+### 🟡 The code channel ran, and the honest number is 20/22 — not the 22/22 `p314` recorded
+
+`make hooks` executes in this session and **every gate ran, none masked**. 🟢 **One gate was red
+before this pass and is green after it:** `gate-offline`'s `pass261-current-state-tier-run` failed
+2 of 166 controls because **`repos/foundations.md`'s dated sections were not newest-first** — its
+`Pass 321` section sat *above* its `Pass 322` section. **Fixed by moving the block, not by
+relaxing the control**, and the suite now closes 166/166. 🔴 **Two gates remain red, both were
+already red on the clean head before this pass's edits** (verified by stashing and re-running), and
+both are diagnosed here rather than left as a number:
+
+- 🔴 **`recount` — 5 of 5 registered claims report `NO-ANCHOR`, which means the *sentences* those
+  claims pin to are gone from the shelves, not that a number drifted.** The anchors are exact
+  regexes in `compose/code/p274-quantity-recount/recount.py`, and the measured values today are:
+  MCP server slugs on `agents/top.md` = **2** (anchor wants `**N distinct education MCP server
+  slugs are shelved` in `intel/trends.md`); slugs in the MCP section's own table = **0**
+  (`**N rows in the table below**`); LMS platforms reachable by MCP on `agents/top.md` = **0**
+  (`**N platforms** are reachable`); the same across both agent shelves = **6**
+  (`MCP reaches **N distinct LMS platforms**`); permissive rows in the build-on tier = **0**
+  (`**N permissive rows`). 🔴 **Three of those measure zero, which means the MCP section's table
+  and the build-on tier themselves are gone from `agents/top.md`** — so restoring the anchor
+  sentences would mean publishing `0` where a structure used to be. **This pass did not write
+  those sentences**, because writing `**0 rows in the table below**` would be fabricating a
+  structure to satisfy a pin. **Named for p325 as the archaeology job it is:** restore the
+  sections from `archive/` or retire the claims deliberately.
+- 🔴 **`gate-permissive-arm` — 1 of 32 controls, and it is a stale magnitude pin, not a defect.**
+  `test_the_defect_was_not_at_the_top_of_the_cell_queue` asserts `MIT + Apache-2.0 > 7000` cells;
+  **measured today: 4,583 + 2,077 = 6,660.** All three of the control's *relational* assertions
+  still pass (`MPL-2.0 < 400`, `GPL-2.0 < Apache-2.0`, `MPL-2.0 × 10 < MIT`), so **the control's
+  argument — cell count is blast radius, not where the defects are — survives; only its absolute
+  threshold is pinned to a corpus size this KB no longer has.** 🔵 **This pass deliberately did
+  not edit the threshold.** Loosening a failing assertion to turn a gate green is the one repair
+  that cannot be distinguished from hiding the failure, and the fix belongs to whoever decides
+  whether the corpus shrinkage is itself the finding.
+
+### What changed, file by file
+
+| file | change |
+|---|---|
+| `agents/top.md` | +1 row (`aegis-integrity`, MIT), +1 evaluation row (`knowsim`, MIT), new pass section. The LTI gap re-tested with **three** changed queries on the new instrument and **it holds** — the first gap here to survive both a changed query and a changed instrument |
+| `repos/foundations.md` | **+10 rows → 48.** The three integrity engines, `jieplag`, `pyedmine`, and all six p322-named `openeduhub` repositories. **Licence split recounted over 48 by classifying each row's own licence cell, and the categories sum to 48:** no licence (12), MIT (11), Apache-2.0 (10), GPL-3.0 (6), permissive code + CC BY 4.0 data (4), BSD-3-Clause (2), CC0-1.0 (1), MIT + CC BY-NC-SA data (1), **MIT file contradicted by academic-only README (1)** |
+| `intel/trends.md` | Trend 9's premise **retracted**, recommendation kept and strengthened. Two new trends: **the licence file is not the grant in either direction** (three seams in three passes — by layer, by artefact type, by channel), and **the declared-gap discount** (four gaps overturned in four passes by changing the query) |
+| `compose/patterns.md` | **New pattern P11 — the academic-integrity evidence chain**, six stages named repo by repo with the licence posture each forces, and four rules that keep it sellable. Added to the regional selection table as the first pattern selected by a *requirement* rather than a region |
+| `verticals/solutions.md` | Platform tier **did not move for the second pass** (empty search recorded, not hidden). New tier: **integrity as a self-hosted platform layer** that composes with a copyleft LMS by sitting *next to* it. New declared gap: **no integrity engine ships an LTI 1.3 or Moodle plugin** |
+| `intel/market.md` | Fourth-consecutive empty regional battery recorded per region with every token checked. **One new usable regional fact: the UNESCO LAC Observatory's named partner list.** New cross-regional opportunity placed in **all four regions** with the statute behind it in each |
+| `agents/trending.md`, `repos/trending.md` | **Appended only** (+145 / +138 lines, 0 deletions) |
+| `intel/open-gaps.md` | p324 section: six closed, eight opened and measured, three instrument caveats. **Highest-value action for p325 named: open an issue on `pyedmine` and get the contradiction resolved in writing** |
+| `evidence/` | `verified-repos.2026-10-19-p324.tsv` — 29 rows, three instruments named per cell, six census figures, and the three channel caveats |
+
 ## Pass 314 — 2026-10-19 — **THE CODE CHANNEL RAN, AND THE FIRST THING IT MEASURED REFUTED THE PASS THAT ASKED FOR IT; A COMPLETE `MIT` GRANT THAT NEVER SAYS `MIT`; AND ONE REPOSITORY DECLARING A DIFFERENT LICENCE ON EVERY CHANNEL IT HAS**
 
 🟢 **`ACTION p313-R` item 2 asked this to be answered in the first paragraph, so: THE CODE CHANNEL
