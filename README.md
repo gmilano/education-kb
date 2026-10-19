@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-19
 ---
 
+## Pass 306 — 2026-10-19 — **THE "NO PRIMARY SOURCE" FINDING THAT TWENTY-FOUR PASSES INHERITED WAS AN UNTESTED HOSTNAME, AND THE LAYER `p305` SENT THIS PASS TO WORK BREAKS THE VERTICAL'S "FORCED ARCHITECTURE": 23 GRANTS IN CREDENTIALING, EVERY ONE PERMISSIVE, AT PLATFORM SCALE**
+
+**One-line summary:** 🟢 **`curl https://raw.githubusercontent.com/{slug}/{branch}/{file}` returns HTTP 200
+with byte-exact bodies.** 🔴 **`p303` measured 403s on `github.com` and `api.github.com`, generalised them
+into *"no primary source"*, and five passes re-stated the generalisation as a finding without re-testing
+it** → `T-p306a`. 🟢 **All 49 licence verdicts this pass are first-hand payloads with locally computed
+`sha256₁₂`.** 🟢 **`ACTION p305-R` item 3 DISCHARGED by bytes: [`frappe/lms`](https://github.com/frappe/lms)
+is **AGPL-3.0** (33 893 B `db1a87ba81e8`, at lower-case `license.txt`) — the MIT claim is refuted and the
+26th LMS nil is the first settled first-hand.** 🔴 **But the nil turns out to be a property of the LMS
+LAYER, not of education:** the credentialing layer carries **four permissive platform-scale systems**
+(`waltid-identity` Apache-2.0 **319★**, `learner-credential-wallet` MIT **89★**, Singapore GovTech's
+`open-attestation`, Blockcerts' `cert-issuer`) → `T-p306b` refines `p305`'s "forced architecture".
+🟢 **`p303`'s "DCC = 6 repos" REFUTED: the org is 126 repositories; page 1 enumerated and 28 probed, 23
+grants across the org, 22 MIT + 1 BSD, ZERO reserved and ZERO phantom grants in 33 draws.**
+🔴 **A FOURTH licence class — the POINTER GRANT:** [`w3c/vc-data-model`](https://github.com/w3c/vc-data-model)
+is 167 B with no grant sentence and one URL; **`p305`'s one-pass-old clause rule gives it the same verdict
+as a reserved grant that withholds every right** → `T-p306c`. 🔴 **`ACTION p305-R` item 4's prediction is
+REFUTED: two independent screens over `366` carried slugs (not `~500`) found ZERO new Art 5(1)(f) rows**,
+and the likeliest candidate (`Proctoring-AI`, 633★) infers no emotion — **the prohibition is on inferring
+an affective state, not on watching** → `T-p306f`. 🟢 **`ACTION p305-R` item 5 DISCHARGED: Germany at
+Länder level pays, and `§ 115b Abs. 9 SchG` + `§ 6 DUVO` (Baden-Württemberg, in force `2024-10-10`) is the
+only legally binding school-AI rule in the country — it BANS AI FROM AWARDING GRADES**, which hits the
+most common pitch in the vertical far harder than Art 5(1)(f) does → `T-p306e`, `P88`.
+🟢 **Canada placed for the first time; LATAM identified as an ADOPTER of credentialing with no local
+open-source supply, on a substrate (Blockcerts) that is MIT and verified.** 🟢 **Three new patterns
+(`P86`-`P88`), six new trends (`T-p306a`-`f`).** 🔴 **`make hooks` COULD NOT BE RUN — refused as external
+code for the SECOND consecutive pass; this pass publishes ungated.**
+
+⏱️ **Dating note:** `p304`, `p305` and `p306` all carry `2026-10-19` — **dated by evidence, not by
+commit**, the base's standing rule.
+
+### 🟢 `ACTION p305-R` — disposition, item by item
+
+| # | item | disposition |
+|---|---|---|
+| 1 | Wire the permission-clause test into `make hooks` + a control on new STANDING RULES | 🟡 **PARTLY.** 🔴 **The hooks half is BLOCKED — `make` is refused by this environment.** 🟢 **The control half was performed MANUALLY and it worked: this pass's own candidate rule was run over 49 fresh payloads before publication, and that is exactly how the pointer grant was caught — one pass after the rule, not five** |
+| 2 | Verify `make hooks` can run, report either way | 🔴 **ANSWERED, NEGATIVE.** Refused as external code — **second consecutive pass.** `gate-enumeration` and `gate-absence` were RED when `p304` last ran them. **Assume still RED** |
+| 3 | Probe Frappe Learning's licence payload | 🟢 **DISCHARGED. AGPL-3.0**, 33 893 B `db1a87ba81e8`. The MIT claim is refuted; 26th LMS nil, first settled by bytes |
+| 4 | Run the `P84` practice screen over carried rows | 🟢 **DISCHARGED, and the PREDICTION IS REFUTED.** 366 slugs, two screens, **zero new exposures** |
+| 5 | Search Germany at Länder level | 🟢 **DISCHARGED and it paid: BW binding (`§ 6 DUVO`), Bayern guidance (`2026-05-19`), NRW stale (`2023-02`)** |
+| 6 | Do NOT re-run `github trending education AI`; do not re-litigate the ERP/CRM nil | 🟢 **OBEYED.** Neither was run |
+| 7 | Work the CREDENTIALING layer | 🟢 **DISCHARGED — the leg of the pass.** 49 probes, 23 grants, a layer rule, a new licence class and a new metadata instrument |
+
+### 🟢 What was found
+
+| finding | verdict |
+|---|---|
+| 🟢 **the channel** | 🟢 **`curl` → `raw.githubusercontent.com` = HTTP 200, byte-exact.** 🟢 `WebFetch` works on raw AND on `github.com` org/repo pages (and 404s a dead slug, so it doubles as a slug oracle). 🔴 `git clone` of third-party repos and `make` are refused by the **execution policy**, not the network. 🔴 `mcp github get_file_contents` = 403, session-scoped. ⚪ **`api.github.com` NOT re-tested — carried as unknown, not as blocked** |
+| 🔴 **how the drought lasted 24 passes** | 🔴 **Two hosts were measured, a CLASS was declared, and the class was then used to justify not measuring.** 🟢 **Rule: a declared absence must carry the list of addresses tried** → `T-p306a` |
+| 🟢 **`frappe/lms`** | 🔴 **AGPL-3.0**, 33 893 B `db1a87ba81e8`. ⚠️ **At `license.txt` — lower-case, which several filename ladders here do not probe: a near-miss false absence.** 🟢 5th distinct AGPL payload length (33 893 · 34 519 · 35 116 · 35 148 · 35 149) |
+| 🟢 **the layer rule** | 🔴 **LMS/system of record: no permissive option in 26 draws.** 🔴 **Tutoring: best pedagogy is AGPL.** 🟢 **Credentialing: four permissive platform-scale systems.** 🔵 **Mechanism — a STANDARD propagating chooses MIT; a SYSTEM OF RECORD defending a commons chooses copyleft** → `T-p306b` |
+| 🟢 **the DCC population** | 🔴 **`p303`'s "6 repos" REFUTED — the org lists `126` across 5 pages** (`p303` read the pinned panel). 🟢 33 probed: **23 grants, 22 MIT + 1 BSD, 0 reserved, 0 phantom.** 🔴 **96 repos unread, not empty** |
+| ⚠️ **identity** | 🟢 **Digital Credentials Consortium → DIGITAL CREDENTIALS COMMONS.** New name on its own sites; old name in the org slug and in every copyright line |
+| 🔴 **a FOURTH licence class** | [`w3c/vc-data-model`](https://github.com/w3c/vc-data-model) `LICENSE.md` **167 B** `232da9c6c2b9` — no grant sentence, one URL to the W3C licence. 🔴 **The clause rule returns `NO-GRANT-CLAUSE`, identical to a reserved grant, opposite in consequence.** 🟢 **Fix: three values — `GRANT` / `POINTER` (URL present) / `RESERVED` (no grant, no URL)** → `T-p306c` |
+| 🔴 **length is not an identity key** | 🔴 **SIX distinct `sha256₁₂` at exactly 1 087 B**, all MIT; **TWO distinct Apache payloads at 11 357 B.** 🔵 MIT's only variable is the copyright line, and holder names collide on length → `T-p306d` |
+| 🟢 **6th stock-Apache recurrence** | [`walt-id/waltid-identity`](https://github.com/walt-id/waltid-identity) — 11 357 B `c71d239df917`. 🟢 **First recurrence in a different LAYER and jurisdiction (credentialing, Austria)** |
+| 🟢 **a new metadata instrument** | **GitHub's licence COLUMN vs payloads: 28/28 on PRESENCE** (18/18 shown→found, 10/10 blank→absent). 🔴 **Useless on IDENTITY** — `did-method-web` reads `Other`, payload is clean BSD. 🔴 **Calibrated on one org with a licence policy; must not be carried to a topic tail** |
+| 🔴 **3 of 5 "absences" were DEAD SLUGS** | 🟢 `blockcerts/`→`blockchain-certificates/` (**MIT** 1 096 B) and `opencerts/`→`Open-Attestation/` (**Apache-2.0** 11 370 B) recovered by fixing the ADDRESS. 🔵 **The asymmetry ran the wrong way — both recovered rows are the LATAM and APAC placements. A typo was about to manufacture a regional gap** |
+| 🔴 **`ACTION p305-R` item 4 — prediction refuted** | 🟢 **366 carried slugs** (`p305` said ~500). Two screens, same 3 rows, **0 new.** 🟢 **[`Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) (MIT, 633★/351 forks) infers NO emotion** — gaze, mouth-open, person and phone detection are observations. 🔴 **Art 5(1)(f) prohibits inferring an AFFECTIVE STATE, not watching** ⚠️ Annex III and biometric duties still apply → `T-p306f` |
+| 🟢 **EMEA — Germany at Länder level** | 🔴 **Baden-Württemberg: `§ 115b Abs. 9 Schulgesetz` + `§ 6 DUVO` (`GBl. 2024 Nr. 81`), in force `2024-10-10` — the ONLY binding school-AI rule in Germany. AI may not AWARD GRADES or make other essential school decisions; Art. 9 GDPR data may not be processed in AI applications.** 🟢 Bayern: Handlungsleitfaden `2026-05-19` + `AIS.chat` + `ByCS-KI` (guidance). 🔴 NRW: `2023-02`, **stale** 🟡 **Gesetzblatt text NOT opened — wording unverified, effect corroborated by the ministry's own page plus one independent aggregator** |
+| 🔴 **the prohibition that actually bites** | 🔵 **Art 5(1)(f) catches a technique present in 2 of 366 carried rows. `§ 6 DUVO` catches "the AI grades it" — the most common pitch in the vertical.** 🟢 **The binding rules are SUB-NATIONAL (Land, state, province) while nations issue guidance** → `T-p306e`, `P88` |
+| 🟢 **North America is TWO markets** | 🟢 **US: 31 state guidance documents by `2026-01`; Ohio district policies due `2026-07-01` (passed); Utah local policy by `2027-07`.** 🔴 Maryland SB 720 **first chamber only — not law, not carried.** 🟢 **Canada placed for the first time: 3 provincial ministries by `2025-12`; BC `2023`; Alberta's document is the SCHOOL BOARDS ASSOCIATION's, not the ministry's; Ontario has no ministry memorandum.** 🔴 Fraser Institute: **no province above 50 % staff AI policy** (Ontario 41.1 %); training 67.6 % untrained in MB/SK vs 37.0 % Atlantic 🟡 **One Ontario source conflicts and is carried as a CONFLICT, unresolved** |
+| 🟡 **LATAM** | 🔴 **No school-level AI regulation in BR/MX/CL/CO — an INFORMED gap, consistent across four sources.** 🔴 **Chile Ley 21.719 in force `2026-12-01`, ~6 weeks out — the most actionable LATAM datum here.** 🟢 **Credentialing: the region ADOPTS and does not BUILD** — Tec de Monterrey on Blockcerts since 2018, UNRN Argentina, and the `2026-05` NTT DATA + Darshana flagship runs on **European** CertiDigital/EBSI. 🟢 **The substrate it already runs is MIT and verified** → `P87` 🔴 Vendor adoption counts not independently verified |
+| 🟢 **APAC** | 🟢 **Singapore appears on BOTH sides: GovTech's `open-attestation` (Apache-2.0) on supply, SLS/Code for Fun on rules.** 🔴 **No APAC jurisdiction re-searched — one pass old, carried** |
+| 🟡 **market size — WIDER, not narrower** | **2026: $9.58 bn** (Precedence) · **$10.6 bn** (R&M) · **$12.3 bn** and 🔴 **$23 bn** both attributed to HolonIQ. **Factor 2.4.** 🔵 **Brief the range, and never a HolonIQ number without saying which one.** 🟢 **Adoption is the better figure: RAND 25 %→53 % in one school year; Gallup 34 % (2023)→61 % (2026) — two methodologies, same story** |
+| 🟢 **the demand gap worth the most** | 🟢 **1EdTech `2026-06`: the technology EXISTS; employers cannot find, trust or interpret credential data and fall back on degrees and résumés.** Fix proposed: a minimal structured data set; partnership with HR Open Standards; standards pair = **Open Badges 3.0 on W3C VC Data Model.** 🔴 **The permissive open-source supply is almost all ISSUING and WALLET code — the failure is EMPLOYER-side** → `P86` |
+
+### 🔴 What this pass could not establish
+
+🔴 **`make hooks` refused as external code — second consecutive pass.** This pass publishes without the
+31-control gate, and `p304` found two gates RED the last time anyone could run them.
+🟡 **Mitigation performed, and its own defect recorded:** a substitute gate
+([`compose/code/p306-licence-probe/check_p306.py`](compose/code/p306-licence-probe/check_p306.py)) was
+written in-session to check frontmatter, the closed region vocabulary, `p277`'s table-structure class and
+placeholder-rows-as-data. 🔴 **Its first run reported 29 failures and ALL 29 WERE FALSE** — the separator
+pattern also matched the legitimate empty-header row `| | |`, so the real separator below it was reported
+as headerless. 🟢 **Fixed (a separator must contain a dash); the run is then GREEN on all nine files.**
+🔵 **Recorded as the THIRD instance of `T-p306c` inside one pass: `p304`'s length rule, `p305`'s clause
+rule and this gate were each defeated by a payload that LOOKS like the thing it screens for.**
+⚠️ **A gate's first red is a claim about the gate at least as often as about the shelves.** 🔴 **A
+substitute is not the 31-control gate.**
+🔴 **96 of the 126 `digitalcredentials` repositories (pages 2-5) are UNREAD** — an informed gap with an
+exact denominator.
+🔴 **No code, commit history or test suite was read in any repository.** The new channel reaches licence
+files; capability is still from rendered READMEs and org listings.
+🔴 **No star integer from an API.** Stars are as `github.com` renders them; 6 of 8 new foundation rows
+have no star cell.
+🔴 **No primary legal or market source was opened** — every regulatory and market figure is
+search-snippet-attributed, including `§ 6 DUVO`, the `2024-10-10` date, Ohio's and Utah's deadlines and
+all four market estimates.
+🔴 **`concentricsky/badgr-server` UNRESOLVED** — address 404s, secondary source says AGPL-3.0, no payload
+read, **no verdict carried.**
+🟡 **`p304`'s measured `gate-absence` false positive is still unpatched** and could not be tested, since
+the gate will not run.
+🔴 **`ai-education` ranks 61-529 and `ai-tutor` ranks 61-750 remain UNMEASURED** — untouched, as the leg
+was assigned elsewhere.
+
+### 🟢 `ACTION p306-R` — ranked for `p307`
+
+1. 🔴 **Exploit the restored payload channel on THIS BASE'S OWN BACKLOG before chasing new topics.** Every
+   row pinned from a **sidebar** or a **README sentence** can now be read as bytes at one probe each
+   (`vardanagarwal/Proctoring-AI`, *"MIT (sidebar + README)"*, is a visible example). 🟢 **Bounded work:
+   366 slugs, one HTTP request each, a calibrated channel. This is the highest value-per-token item in
+   the base.**
+2. 🔴 **Make the licence verdict THREE-VALUED** — `GRANT` / `POINTER` / `RESERVED`. 🔵 Discriminator: a
+   `NO-GRANT-CLAUSE` payload containing an `http(s)://` URL to a licence text is a POINTER; one with
+   *"all rights reserved"* and no URL is RESERVED. **Two-valued verdicts on a four-class world is how
+   `p304`'s and `p305`'s rules both failed.**
+3. 🔴 **Add lower-case `license.txt` and `licence.txt` to every filename ladder in this repository.**
+   `frappe/lms` was a near-miss false absence on a repo this base had discussed for two passes.
+4. 🟡 **Enumerate `digitalcredentials` pages 2-5** (96 repos) with the licence-column oracle first, then
+   probe only the rows that show a licence. 🟢 **28/28 presence agreement makes this cheap.**
+5. 🟡 **Upgrade the Art 5(1)(f) screen from names-and-prose to a CODE read** on the handful of rows that
+   touch a camera. 🟢 The channel now exists to fetch files, so this is newly possible.
+6. 🟡 **Canada needs a primary-source pass** — the Ontario conflict is unresolved, and Alberta's guidance
+   is a school-boards document being cited as if it were a ministry's.
+7. 🔵 **Do NOT re-litigate**: Frappe Learning (**settled AGPL-3.0 by payload**), the education ERP/CRM nil
+   (`p304`, licensor-confirmed), `github trending education AI` (spent, 18 windows). 🔵 **And do not
+   re-state "no primary source" — it is false as of this pass.**
+
 ## Pass 305 — 2026-10-19 — **THE STANDING RULE `p304` WROTE LAST PASS IS REFUTED BY A ROW THIS BASE ALREADY HELD, A CLEAN MIT GRANT TURNS OUT TO SIT ON A PRACTICE THE EU HAS PROHIBITED SINCE FEBRUARY 2025, AND THE QUERY FIX `p304` PRE-REGISTERED BROKE OPEN TWO REGIONS INSTEAD OF ONE**
 
 **One-line summary:** 🟢 `p304` left one instruction — stop paging `ai-education`, spend the leg on the

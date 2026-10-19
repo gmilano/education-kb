@@ -1,0 +1,26 @@
+# p306 regional — jurisdictions named, never regions (T-p305d), and extended one level DOWN to sub-national (T-p306e)
+# ALL ROWS ARE SEARCH-SNIPPET-ATTRIBUTED. No primary legal instrument was opened this pass.
+region	jurisdiction	instrument	date	binding	note
+EMEA	Baden-Wuerttemberg (DE)	S 115b Abs.9 Schulgesetz + S 6 DUVO (GBl. 2024 Nr. 81)	2024-10-10	YES	ONLY binding school-AI rule in Germany. AI may not award grades or make essential school decisions. Art.9 GDPR data barred from AI applications. Gesetzblatt text NOT opened
+EMEA	Bayern (DE)	Handlungsleitfaden KI in der paedagogischen Praxis; AIS.chat; ByCS-KI	2026-05-19	no	guidance
+EMEA	Nordrhein-Westfalen (DE)	Handlungsleitfaden textgenerierende KI-Systeme + QUA-LiS Moodle course	2023-02	no	STALE — 3.5 years, no newer Handreichung found
+North America	United States	31 state education department AI guidance documents	2026-01	mostly no	state layer is where duties are
+North America	Ohio (US)	district AI policy mandate + state model policy	2026-07-01	YES	deadline has PASSED
+North America	Utah (US)	2026 law, phased state-model and local-policy duties	2027-07	YES	local policy deadline
+North America	Maryland (US)	SB 720	2026	NO	passed FIRST CHAMBER ONLY — not law, not carried as one
+North America	Canada (federal)	none — education is provincial	-	-	114th CMEC ministers meeting 2026-06-22 made AI central; CTF asked for national guidance
+North America	British Columbia (CA)	Considerations for using AI tools in schools	2023	no	seven areas of consideration
+North America	Alberta (CA)	Alberta School Boards Association, AI Policy Guidance	2024-09	no	a SCHOOL BOARDS BODY, not the ministry
+North America	Ontario (CA)	no ministry memorandum on AI; boards write their own	-	no	CONFLICT: one source describes 2026-27 responsible-AI expectations. Unresolved, carried as conflict
+North America	Canada (survey)	Fraser Institute, Grades 6-12 teachers	2026-06	-	no province above 50% staff AI policy (Ontario highest 41.1%); students 50.7% Ontario only; untrained 67.6% MB/SK vs 37.0% Atlantic
+APAC	Singapore	GovTech Open-Attestation (Apache-2.0, 11370 B 3a932454c909)	2026	-	SUPPLY-side placement: a government publishing permissive credentialing infrastructure
+APAC	(China, India, Korea, Japan)	carried from p305, NOT re-searched this pass	-	-	one pass old
+LATAM	Chile	Ley 21.719 (personal data)	2026-12-01	YES	in force ~6 weeks after this pass. National AI Policy since 2021; AI bill still in committee
+LATAM	Brazil	PL 2338/2023	2024-12 Senate	NO	pending in the Camara. No specific AI statute
+LATAM	Colombia	national AI strategy	-	no	no sector-specific education rule
+LATAM	Mexico	AI training folded into educational objectives	2026	no	binding constraint is teacher capacity (>1M to train), not law. "Ley Nahui" single-source, NOT carried
+LATAM	(BR/MX/CL/CO)	school-level AI regulation	-	NONE	INFORMED GAP — consistent across four independent sources
+LATAM	credentialing supply	no LATAM-origin open-source credentialing project found	2026	-	region ADOPTS (Tec de Monterrey on Blockcerts since 2018; UNRN Argentina; NTT DATA+Darshana 2026-05 on EUROPEAN CertiDigital/EBSI) and does not BUILD
+Global	market size 2026	Precedence $9.58bn; R&M $10.6bn; HolonIQ $12.3bn AND $23bn	2026	-	factor 2.4; two figures attributed to the SAME firm. Brief the range
+Global	teacher adoption	RAND 25%->53% in one school year; Gallup 34% (2023)->61% (2026)	2026	-	two methodologies, same story — the figure to brief
+Global	credential demand gap	1EdTech, two reports	2026-06	-	tech exists; employers cannot find/trust/interpret credential data and revert to degrees+resumes. Fix: minimal structured data elements. HR Open Standards partnership. Open Badges 3.0 on W3C VC Data Model

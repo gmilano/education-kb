@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 `T-p306a` — A "NETWORK POLICY" THAT HELD FOR TWENTY-FOUR PASSES WAS A CHANNEL ASSUMPTION, AND IT WAS RETIRED BY ONE UNTESTED HOSTNAME
+
+🔴 **`p303` measured two things correctly — `curl` → `github.com` and `api.github.com` return 403, and
+`WebFetch` returned ENOTFOUND — and then generalised them into *"no primary source,"* which five
+subsequent passes inherited as settled.** 🟢 **`p306` tested
+`raw.githubusercontent.com` and it answers **HTTP 200 with byte-exact bodies.**
+
+🔵 **The structure of the error is worth more than the fix.** Two hosts were measured; a *class* was
+declared; the class was then used to justify **not measuring**. 🔴 **Every pass after `p303` re-stated
+"no primary source" as a finding when it was an inherited assumption that nothing re-tested.**
+
+🟢 **The general rule, and it generalises past this repository: an ABSENCE is a measurement of the
+addresses you tried. It is never a property of the world.** 🔵 **This base already knew this about repo
+slugs — `p305`'s ladder lesson, and `p306`'s own 3-of-5 dead-slug recovery — and did not apply it to
+hostnames.** ⚠️ **The same shape, one level up: `p304` generalised a rule from one licence file;
+`p303` generalised completeness from one page of a topic; `p303` generalised a channel from two hosts.**
+🟢 **Counter-measure: a declared absence must carry the list of addresses tried, so a later pass can see
+what was NOT tried.** → `ACTION p306-R` item 1.
+
+## 🟢 `T-p306b` — PERMISSIVENESS IS A PROPERTY OF THE LAYER, NOT OF THE VERTICAL
+
+🔴 **`p305` concluded that this vertical's architecture is FORCED: *"every platform-scale system of record
+in the vertical is AGPL or GPL"*, so a studio must join permissive components to a copyleft core over a
+network boundary.** 🟢 **One layer down that generalisation breaks.**
+
+| layer | permissive option at platform scale? | evidence |
+|---|---|---|
+| 🔴 **LMS / system of record** | 🔴 **NO — 26 consecutive draws** | Moodle, Open edX, OpenEduCat (LGPLv3, licensor-confirmed `p304`), Frappe Learning (**AGPL-3.0, settled by payload this pass**) |
+| 🔴 **tutoring** | 🔴 **NO** | best pedagogy is AGPL-3.0; permissive rows are 1★–135★ components |
+| 🟢 **credentialing** | 🟢 **YES** | `waltid-identity` Apache-2.0 **319★**, `learner-credential-wallet` MIT **89★**, `open-attestation` Apache-2.0, `cert-issuer` MIT |
+
+🔵 **Mechanism, and it is not about ideology: the LMS layer is where the INSTITUTIONAL INCUMBENTS sit, and
+they chose copyleft decades ago to protect a commons against vendor capture. The credentialing layer was
+built recently, by STANDARDS BODIES and research consortia whose goal is adoption of a protocol —
+and a protocol spreads faster under MIT.** 🟢 **Predictive, and therefore testable: wherever the artefact
+is a STANDARD trying to propagate, expect permissive; wherever it is a SYSTEM OF RECORD defending a
+commons, expect copyleft.**
+
+🟢 **The briefing consequence inverts the usual advice: do not ask "what licence can we live with" before
+asking "which layer are we building in".** ⚠️ **A studio that enters this vertical through the LMS door
+has no permissive option; the same studio entering through the credentials door has four.**
+
+## 🔴 `T-p306c` — THE POINTER GRANT: THE ABSENCE OF A GRANT CLAUSE IS NOT THE ABSENCE OF A GRANT
+
+🟢 **`p305` replaced a length rule with a clause rule and calibrated it 8/8. `p306` ran it over 49 fresh
+payloads and found the shape it cannot see.** [`w3c/vc-data-model`](https://github.com/w3c/vc-data-model)
+ships a **167 B** `LICENSE.md` containing no grant sentence and one URL — the W3C Software and Document
+License. 🔴 **The clause rule returns `NO-GRANT-CLAUSE`, the same verdict it returns for a reserved
+grant that withholds every right.**
+
+🔴 **Four classes now, and the two middle ones are byte-level twins with opposite consequences:**
+**clean grant** · **reserved grant** (file, no grant, no pointer → STOP) · **pointer grant** (file, no
+grant, a URL → resolve it) · **phantom grant** (no file, a README claim → STOP).
+
+🟢 **The discriminator is cheap and it is not length: does the payload contain a URL to a licence text?**
+🔵 **Note the recurrence of a pattern this base keeps rediscovering — `p304`'s refuted length rule,
+`p305`'s clause rule, and now this: each instrument is defeated by a payload that LOOKS like the thing it
+screens for.** 🟢 **The lesson is not "write a better classifier". It is that a two-valued verdict on a
+three-valued world will keep producing confident errors.**
+
+## 🔴 `T-p306d` — BYTE LENGTH IS NOT EVEN AN IDENTITY KEY: SIX DISTINCT PAYLOADS AT 1 087 BYTES
+
+🟢 **`p305` demoted length from classifier to screen. `p306` measures how weak the screen is.** In a
+single organisation, **six distinct `sha256₁₂` values occur at exactly 1 087 B**, all MIT; two distinct
+Apache-2.0 payloads occur at exactly **11 357 B**.
+
+🔵 **Mechanism: MIT's only variable region is the copyright line, and many holder names are the same
+LENGTH while being different BYTES.** 🔴 **So "same length" does not imply same licence, same holder, or
+even same file.** 🟢 **The `sha256₁₂` is the identity; the byte count is a label that happens to be
+printed next to it.**
+
+🟢 **A live by-product survives this and gets stronger: the stock Apache-2.0 pair `11 357 B` /
+`c71d239df917` recurred for the SIXTH time, and for the first time in a different LAYER and jurisdiction
+(walt.id, Austria, credentialing).** 🔵 **A hash recurs across unrelated projects because it is literally
+the same file; a length recurs because of arithmetic. Only one of those is evidence.**
+
+## 🔴 `T-p306e` — THE BINDING EDUCATION-AI RULES ARE SUB-NATIONAL, WHILE THE NATIONAL LEVEL ISSUES GUIDANCE
+
+🟢 **`p305`'s `T-p305d` established that regions are procurement territories and jurisdictions are where
+law is written. `p306` finds the rule is right and does not go deep enough.**
+
+| level | what it produces | examples found this pass |
+|---|---|---|
+| 🟡 supranational / national | 🟡 **guidance, strategy, programmes** | France's national framework, Spain's non-binding recommendation, Bayern's Handlungsleitfaden, Canada's provincial guidance documents |
+| 🔴 **sub-national** | 🔴 **BINDING DUTIES** | **Baden-Württemberg `§ 6 DUVO`** (no AI grading, in force `2024-10-10`) · **Ohio** (district policy due `2026-07-01`) · **Utah** (local policy by `2027-07`) |
+
+🔴 **And the sub-national rules bite harder than the supranational one.** EU AI Act Art 5(1)(f) prohibits
+**emotion inference** — a technique that, measured over this base's 366 carried slugs, appears in exactly
+**two**. `§ 6 DUVO` prohibits **AI awarding grades** — which is the most common single pitch in the
+vertical. 🟢 **The rule that affects the most deals is the one written by a German state and a US state,
+not by Brussels.**
+
+🔵 **Procedural consequence for every later pass: a regional leg that stops at the nation-state will
+systematically miss the binding layer in federal systems** — Germany, the US, Canada, and by extension
+Brazil, India and Australia. 🟢 **Name the sub-national unit: Land, state, province.**
+
+## 🔵 `T-p306f` — A PREDICTION THAT FAILS CLEANLY IS WORTH MORE THAN A ROW
+
+🟢 **`p305` predicted that screening the shelves for Art 5(1)(f) exposure would find *"more, especially
+among proctoring and engagement-analytics rows."* Two independent screens over 366 carried slugs found
+ZERO new ones.** 🔵 **And the single row that looked likeliest — `vardanagarwal/Proctoring-AI`, 633★ —
+turns out to be the one that sharpens the rule: eye tracking, mouth-open and phone detection are
+**observations**, not **emotion inference**, so Art 5(1)(f) does not reach them.
+
+🟢 **The useful output is a boundary, not a row: the prohibition is about INFERRING AN AFFECTIVE STATE,
+not about watching a learner.** 🔵 **Which means the compliance question to ask a client's vendor is not
+"do you use a camera" but "do you output a claim about how the learner FEELS".** ⚠️ **Watching is still a
+biometric and Annex III high-risk problem — a different regime, and a different mitigation.**
+
 ## 🔴 `T-p305a` — A LICENCE RULE INVENTED ON A SAMPLE OF ONE SURVIVES EXACTLY ONE PASS, AND ITS REFUTATION IS USUALLY ALREADY ON THE SHELF
 
 ⏱️ `2026-10-19`, pass 305. Evidence:

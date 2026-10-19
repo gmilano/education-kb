@@ -1,0 +1,11 @@
+# p306 channel map — ACTION p305-R item 2, and the finding that retires the 24-pass "no primary source"
+# tested = did p306 actually run this probe. A channel not tested is carried as UNKNOWN, never as blocked.
+channel	tested	result	note
+curl https://raw.githubusercontent.com/{slug}/{branch}/{file}	yes	HTTP 200	byte-exact body; length + sha256_12 computed locally. THE primary-source channel
+WebFetch raw.githubusercontent.com	yes	200	returns text, summarised — good for reading, not for byte counts
+WebFetch github.com org repositories listing	yes	200	paginated repo list with licence column, stars, last-updated
+WebFetch github.com repo page	yes	200 live / 404 dead	doubles as a slug-existence oracle
+git clone (arbitrary third-party repo)	yes	REFUSED	environment execution policy, NOT the network
+make hooks	yes	REFUSED	refused as external code — SECOND consecutive pass (p305, p306)
+mcp github get_file_contents (third-party repo)	yes	403	session scoped to this account's own repositories
+curl https://api.github.com	no	UNKNOWN	NOT re-tested at p306. Carried as unknown, not as confirmed-blocked

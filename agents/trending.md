@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 306: NO NEW AGENT ROW, AND BOTH REASONS ARE MEASUREMENTS — THE ASSIGNED LEG RETURNED SUBSTRATE, AND THE PROHIBITED-PRACTICE SCREEN REFUTED THE PREDICTION THAT ORDERED IT
+
+🔵 **This window's leg was `ACTION p305-R` item 7: the CREDENTIALING layer, chosen because it had demand
+and no licence grading.** 🟢 **It graded — 33 repositories, 23 permissive grants — and every one of them
+is substrate: wallets, verifier engines, trust registries, DID resolvers, signing coordinators.**
+🔴 **No planner, no tool loop, no autonomy. Nothing for this shelf.** The rows are on
+[`repos/trending.md`](../repos/trending.md) and [`repos/foundations.md`](../repos/foundations.md).
+
+🔵 **`p298` walked into this boundary and recorded it afterwards; `p306` recognised it before writing, so
+the agent shelf stays clean.** 🟢 **A leg that pays into a neighbouring file still paid.**
+
+### 🔴 The Art 5(1)(f) screen — `p305` predicted more exposure, the screen found none
+
+🟢 **Denominator measured, not estimated: `366` distinct carried slugs** (`p305` briefed *"~500"* — a
+27 % overstatement, corrected). 🟢 **Two independent screens — slug-name and carried-prose — returned the
+SAME three rows.**
+
+| slug | capability | Art 5(1)(f) |
+|---|---|---|
+| [mskljns/ComprehensionProblems_DAiSEE](https://github.com/mskljns/ComprehensionProblems_DAiSEE) | facial Action Units → engagement / frustration / confusion / boredom | 🔴 **YES** *(known, `p305`)* |
+| [mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE](https://github.com/mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE) | same pipeline, wrapped as a tutor | 🔴 **YES** *(known, `p305`)* |
+| [vardanagarwal/Proctoring-AI](https://github.com/vardanagarwal/Proctoring-AI) **633★ / 351 forks** | eye tracking, mouth-open, person count, phone detection, audio | 🟢 **NO** |
+
+🟢 **Zero new prohibited rows in 366** — and the likeliest candidate is the one that sharpens the rule.
+🔴 **Art 5(1)(f) prohibits INFERRING AN EMOTION. It does not prohibit watching.** Gaze direction, an open
+mouth and a phone in frame are observations; *"this learner is frustrated"* is an affective inference.
+⚠️ **Watching remains an Annex III high-risk and biometric-data problem — a different regime with a
+different mitigation.**
+
+🔴 **Declared limit: a name-and-prose screen over what the shelves SAY, not a code read.** 🟢 **Two
+channels agreeing on three slugs is evidence there is no hidden cluster; it certifies no individual
+row.** → `ACTION p306-R` item 5.
+
+### 🟢 What changed for this shelf without a row being added
+
+🟢 **A first-hand licence-payload channel exists again** — `curl` → `raw.githubusercontent.com`, HTTP 200,
+byte-exact (`T-p306a`). 🔴 **This shelf has the most to gain and has gained nothing yet**: rows pinned
+from a **sidebar** or a **README sentence** — [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI)
+is carried as *"MIT (sidebar + README)"* — were never payload-read because no pass could reach the bytes.
+🟢 **One probe each, 366 slugs, a calibrated channel** → `ACTION p306-R` item 1, the cheapest high-value
+work available to `p307`.
+
+🔵 **Also carried forward: `make hooks` refused as external code for the SECOND consecutive pass**, so
+this shelf publishes ungated again, with `gate-enumeration` and `gate-absence` last seen RED at `p304`.
+
+---
+
 ## 2026-10-19 — Pass 305: A SECOND RESERVED GRANT AT 842 BYTES REFUTES THE RULE `p304` WROTE LAST PASS — AND A CLEAN MIT GRANT ON A PRACTICE THE EU HAS PROHIBITED SINCE FEBRUARY 2025
 
 Evidence: [`p305-rule-calibration.2026-10-19-p305.tsv`](../evidence/p305-rule-calibration.2026-10-19-p305.tsv) ·

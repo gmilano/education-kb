@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 306: THE CREDENTIALING SHELF ENTERS THIS BASE WITH 23 PAYLOAD-PINNED GRANTS AND NOT ONE COPYLEFT AMONG THEM — AND THE ORG IS 126 REPOSITORIES, NOT THE SIX `p303` RECORDED
+
+🟢 **Channel, and it is new: `curl https://raw.githubusercontent.com/{slug}/{branch}/{file}` returns
+HTTP 200 with byte-exact bodies.** 🔴 **Twenty-four passes recorded "no primary source" on the strength of
+`github.com`/`api.github.com` 403s; a third hostname was never tried** (`T-p306a`). 🟢 **Every row below
+is a first-hand payload: bytes counted and `sha256₁₂` computed locally.**
+
+🔴 **Population correction before any row: `p303` recorded the Digital Credentials Consortium family as
+"6 repos". The organisation listing reports `126` repositories across 5 pages.** `p303` read the pinned
+panel. 🟢 **`p306` enumerated page 1 (30) and probed 28, plus 4 more DCC repos by name and 9
+platform-scale systems from outside the org — `49` payload probes in total.** 🔴 **Pages 2-5 (96 repos)
+are UNREAD, not empty.**
+
+⚠️ **Identity: the Digital Credentials Consortium is now the DIGITAL CREDENTIALS COMMONS.** New name on
+the org's own sites, old name still in the GitHub slug and in every copyright line
+(*"Copyright (c) 2021-2026 Digital Credentials Consortium"*).
+
+### 🟢 New this window — platform-scale and permissive
+
+| repo | licence | bytes · sha256₁₂ | ★ / forks | why it is here |
+|---|---|---|---|---|
+| [walt-id/waltid-identity](https://github.com/walt-id/waltid-identity) | 🟢 **Apache-2.0** | 11 357 · `c71d239df917` | **319 / 137** | All-in-one issuer + verifier + wallet + DID toolkit. 🟢 **Largest permissive platform-scale row in this layer. EMEA-placed institutionally (walt.id, Austria).** 🟢 **6th recurrence of the stock Apache pair — first ever in a non-tutoring layer** |
+| [digitalcredentials/learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT** | 1 092 · `1032f65dd2f6` | **89 / 50** | iOS/Android learner wallet. 🟢 **Fork-to-star 0.56 — the highest on these shelves. People DEPLOY this** (`p304`'s instrument) |
+| [Open-Attestation/open-attestation](https://github.com/Open-Attestation/open-attestation) | 🟢 **Apache-2.0** | 11 370 · `3a932454c909` | — | Document-integrity + credential framework **by Singapore GovTech.** 🟢 **A government that both regulates and publishes permissive infrastructure — new shape for this base.** ⚠️ branch `master` |
+| [blockchain-certificates/cert-issuer](https://github.com/blockchain-certificates/cert-issuer) | 🟢 **MIT** | 1 096 · `06d87bf42a0a` | — | The Blockcerts reference issuer. 🟢 **The substrate LATAM already runs** (Tec de Monterrey since 2018) ⚠️ branch `master` |
+| [digitalcredentials/verifier-core](https://github.com/digitalcredentials/verifier-core) | 🟢 **MIT** | 1 087 · `6e7a616c4d70` | 2 | Verification engine. 🟢 **The half of the problem employers actually fail at** (1EdTech `2026-06`) |
+| [digitalcredentials/issuer-coordinator](https://github.com/digitalcredentials/issuer-coordinator) | 🟢 **MIT** | 1 087 · `ca28a7ae5c7e` | — | Signing + status-list orchestration |
+| [digitalcredentials/issuer-registry-client](https://github.com/digitalcredentials/issuer-registry-client) | 🟢 **MIT** | 1 087 · `beb846c6120f` | — | Known-issuer / trust-registry client |
+| [digitalcredentials/dcc-admin-dashboard](https://github.com/digitalcredentials/dcc-admin-dashboard) | 🟢 **MIT** | 1 094 · `0f6a5db4ea6b` | — | Admin surface for issuance |
+| [digitalcredentials/verifier-plus](https://github.com/digitalcredentials/verifier-plus) | 🟢 **MIT** | 1 087 · `85569d7ed8fc` | 19 | Hosted verification for academic credentials |
+| [digitalcredentials/dips-dcc](https://github.com/digitalcredentials/dips-dcc) | 🟢 **MIT** | 1 093 · `c984666ce9b9` | 1 | DIPS WebWallet — Next.js + Hono + SQLite |
+| [digitalcredentials/veri-good](https://github.com/digitalcredentials/veri-good) | 🟢 **MIT** | 1 087 · `a419f0e01e85` | 1 | Embeddable web component for verifying VCs |
+| [digitalcredentials/cred-store](https://github.com/digitalcredentials/cred-store) | 🟢 **MIT** | 1 060 · `abbc361fde10` | — | Relational storage + log service for VCs |
+| [digitalcredentials/vc-test-fixtures](https://github.com/digitalcredentials/vc-test-fixtures) | 🟢 **MIT** | 1 060 · `abbc361fde10` | — | VCs, DIDs and status lists for testing — 🟢 **a conformance corpus, rarer than another implementation** |
+| [digitalcredentials/did-method-web](https://github.com/digitalcredentials/did-method-web) | 🟢 **BSD** | 2 236 · `7009a96644a2` | — | `did:web` resolver. ⚠️ **GitHub's column says `Other`; the payload is a clean BSD grant** |
+| [digitalcredentials/docs](https://github.com/digitalcredentials/docs) | 🟢 **MIT** | 1 075 · `09e4c03a44a7` | — | Documentation for the DCC technologies |
+| [digitalcredentials/batch-issuer-ui](https://github.com/digitalcredentials/batch-issuer-ui) | 🟢 **MIT** | 1 087 · `a419f0e01e85` | — | Batch issuance UI |
+| [digitalcredentials/sandbox-registry](https://github.com/digitalcredentials/sandbox-registry) | 🟢 **MIT** | 1 087 · `85569d7ed8fc` | 1 | Test-only issuer registry |
+| [digitalcredentials/community-registry](https://github.com/digitalcredentials/community-registry) | 🟢 **MIT** | 1 087 · `85569d7ed8fc` | — | Community issuer registry |
+| [digitalcredentials/issuer-dashboard](https://github.com/digitalcredentials/issuer-dashboard) | 🟢 **MIT** | 1 060 · `abbc361fde10` | — | Next.js issuance / revocation / reporting app |
+| [digitalcredentials/credential-co-writer-demo-site](https://github.com/digitalcredentials/credential-co-writer-demo-site) | 🟢 **MIT** | 1 087 · `7f62d1bf385d` | — | Demo site for credential co-writing |
+| [digitalcredentials/mit-web-wallet-poc](https://github.com/digitalcredentials/mit-web-wallet-poc) | 🟢 **MIT** | 1 087 · `7f62d1bf385d` | — | Self-sovereign wallet UI wireframe on mock data |
+| [digitalcredentials/mit-badge-image-generation](https://github.com/digitalcredentials/mit-badge-image-generation) | 🟢 **MIT** | 1 087 · `7f62d1bf385d` | — | Badge image generation |
+| [digitalcredentials/mit-slm](https://github.com/digitalcredentials/mit-slm) | 🟢 **MIT** | 1 087 · `7f62d1bf385d` | — | Small-language-model experiment in the credentials org |
+| [digitalcredentials/badge-assets](https://github.com/digitalcredentials/badge-assets) | 🟢 **MIT** | 1 060 · `abbc361fde10` | — | Public badge image hosting |
+| [digitalcredentials/dcc-website](https://github.com/digitalcredentials/dcc-website) | 🟢 **MIT** | 1 060 · `abbc361fde10` | 1 | Org website ⚠️ branch `master` |
+
+### 🔴 The copyleft counterweight — same layer, opposite instrument
+
+| repo | licence | bytes · sha256₁₂ | note |
+|---|---|---|---|
+| [openedx/credentials](https://github.com/openedx/credentials) | 🔴 **AGPL-3.0** | 35 116 · `28bc942b8134` | Open edX's own credentials service ⚠️ branch `master` |
+| [edubadges/edubadges-server](https://github.com/edubadges/edubadges-server) | 🔴 **AGPL-3.0** | 34 519 · `91b65277959e` | 🟢 **EMEA-placed: the Dutch SURF edubadges programme.** 4th distinct AGPL payload length pinned by this base ⚠️ branch `master` |
+| [frappe/lms](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** | 33 893 · `db1a87ba81e8` | 🟢 **`ACTION p305-R` item 3 DISCHARGED — the MIT-vs-AGPL source conflict is settled at the payload.** ⚠️ path is `license.txt`, lower-case, which several filename ladders here do not probe. **5th distinct AGPL length** |
+| [hyperledger-identus/cloud-agent](https://github.com/hyperledger-identus/cloud-agent) | 🟢 **Apache-2.0** | 11 357 · `2f3967c961cd` | ⚠️ **Same byte length as the stock Apache pair, DIFFERENT hash** — see `T-p306d` |
+
+### 🔴 The refusals and the unresolved — the deliverable, as always
+
+| repo | why not carried |
+|---|---|
+| [w3c/vc-data-model](https://github.com/w3c/vc-data-model) | 🔴 **POINTER GRANT — a NEW fourth licence class.** 167 B `232da9c6c2b9`: no grant sentence, one URL to the W3C Software and Document License. 🔴 **`p305`'s clause rule returns `NO-GRANT-CLAUSE`, the same verdict it gives a reserved grant that withholds everything.** Opposite consequence, identical verdict → `ACTION p306-R` item 2 |
+| `concentricsky/badgr-server` | 🔴 **Repo page 404s** — Badgr now operated by Instructure as Canvas Credentials. Secondary source says AGPL-3.0; **no payload, so no verdict** |
+| `IMSGlobal/openbadges-specification` · `1EdTech/openbadges-specification` | 🔴 **No payload on either org.** A specification repo may legitimately carry none — **unresolved, not ungranted** |
+| `openedx/openedx-certificates` | 🔴 **No payload. Unresolved** |
+| 10 × `digitalcredentials/*` *(`lcw-front-end`, `lcw-back-end`, `lcw-admin-front-end`, `lcw-admin-back-end`, `was-server-aws`, `aws-lambda-issuer`, `status-list-lambda`, `dc-commons-website`, `dc-commons-preview`, `learner-credential-wallet-site`)* | 🔴 **No payload — and GitHub's licence column predicted every one of them.** See the calibration below |
+
+### 🟢 A new instrument — GitHub's licence COLUMN, calibrated against payloads
+
+| the org listing showed | repos | payload found | agreement |
+|---|---|---|---|
+| 🟢 a named licence | 18 | 🟢 18 | 🟢 **18/18** |
+| 🔴 nothing | 10 | 🔴 0 | 🟢 **10/10** |
+
+🟢 **28/28 on PRESENCE — one page-read tells you where thirty payloads are before spending a probe.**
+🔴 **Useless on IDENTITY: `did-method-web` is listed `Other` and is a clean BSD grant.** 🔴 **Calibrated on
+ONE org with a visible licence policy; do not carry this rate to a topic tail** (`p305`'s lesson).
+
+### 🔴 Three of five "absences" in the platform batch were DEAD SLUGS
+
+🟢 **`blockcerts/` → `blockchain-certificates/` and `opencerts/` → `Open-Attestation/` both recovered real
+permissive grants by fixing the ADDRESS, with no change of channel.** 🔴 **`p306`'s own first platform
+slug list was 3/9 wrong.** 🔵 **And the asymmetry ran the wrong way: the two recovered rows are the
+LATAM-relevant issuer and the APAC-placed government platform. A typo was about to manufacture a regional
+gap that does not exist.** 🟢 **`NO_PAYLOAD` means "nothing at that address" and nothing else.**
+
+---
+
 ## 2026-10-19 — Pass 305: A TOPIC ENUMERATED TO EXHAUSTION FOR THE FIRST TIME (41/41) REFUTES BOTH A COMPLETENESS CLAIM AND A TAIL RULE THIS BASE WAS CARRYING
 
 Evidence: [`p305-topic-census.2026-10-19-p305.tsv`](../evidence/p305-topic-census.2026-10-19-p305.tsv) ·

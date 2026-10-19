@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔵 Pass 306 — THIS SHELF GAINS NOTHING, AND BOTH REASONS ARE RESULTS: THE ASSIGNED LEG IS SUBSTRATE RATHER THAN AGENTS, AND THE PROHIBITED-PRACTICE SCREEN `p305` ORDERED CAME BACK EMPTY AGAINST ITS OWN PREDICTION
+
+⏱️ **Pass 306 of `2026-10-19`, following `p305` of `2026-10-19`.** Evidence:
+[`p306-practice-screen.2026-10-19-p306.tsv`](../evidence/p306-practice-screen.2026-10-19-p306.tsv) ·
+[`p306-licence-payload.2026-10-19-p306.tsv`](../evidence/p306-licence-payload.2026-10-19-p306.tsv) ·
+[`p306-channel-map.2026-10-19-p306.tsv`](../evidence/p306-channel-map.2026-10-19-p306.tsv).
+
+🟢 **`ACTION p305-R` ranked seven items. Items 2, 3, 4, 5 and 7 were worked this pass; item 1 is partly
+discharged and item 6 was obeyed.** 🔵 **The per-item disposition is on
+[`README.md`](../README.md).** This shelf carries items **4** and **7**.
+
+### 🔵 Item 7 — the credentialing leg paid heavily, and it paid into `repos/foundations.md`, not here
+
+🟢 **`p305` sent this pass to the credentialing layer on the grounds that it is *"a shelf with demand and
+no licence grading."*** 🟢 **It graded: 33 repositories in the `digitalcredentials` organisation probed at
+payload, 23 grants, every one permissive — the full finding is on
+[`repos/foundations.md`](../repos/foundations.md).**
+
+🔴 **None of it belongs on THIS shelf.** Wallets, verifier engines, trust-registry clients, DID resolvers
+and signing coordinators are **substrate**: they have no planner, no tool loop and no autonomy.
+🔵 **`p298` established this boundary by walking into it** — *"`ACTION PG-2` named three layers and all
+three turned out to be substrate, not agents"* — and the same boundary holds here, with the difference
+that this time it was recognised **before** the rows were written onto the agent shelf rather than after.
+🟢 **A leg that pays into a neighbouring file is still a leg that paid.**
+
+### 🔴 Item 4 — the Art 5(1)(f) screen: `p305` predicted MORE, and the screen found NONE
+
+🟢 **`p305` registered the item in these words: *"`p305` found two prohibited-practice rows by accident, in
+one topic. Nothing has ever screened the shelves for Art 5(1)(f) exposure… expect more, especially among
+proctoring and engagement-analytics rows."*** 🔴 **The prediction is REFUTED.**
+
+🟢 **The denominator, measured rather than estimated: `366` distinct carried slugs** across
+[`agents/top.md`](top.md), [`repos/foundations.md`](../repos/foundations.md),
+[`verticals/solutions.md`](../verticals/solutions.md) and
+[`compose/patterns.md`](../compose/patterns.md). 🔴 **`p305` briefed this population as *"the ~500 carried
+slugs."* It is 366** — a 27 % overstatement, now corrected.
+
+🟢 **Two independent screens were run over it:** a **slug-name** screen (`emotion|affect|facial|face|daisee|
+engage|proctor|gaze|webcam|sentiment`) and a **carried-prose** screen over the capability text of every
+row. 🟢 **Both returned the SAME three slugs.**
+
+| slug | what it actually does | Art 5(1)(f)? |
+|---|---|---|
+| [`mskljns/ComprehensionProblems_DAiSEE`](https://github.com/mskljns/ComprehensionProblems_DAiSEE) | facial Action Units → engagement/frustration/confusion/boredom | 🔴 **YES** — already recorded at `p305` |
+| [`mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE`](https://github.com/mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE) | the same pipeline, wrapped in a tutor | 🔴 **YES** — already recorded at `p305` |
+| [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) **633★ / 351 forks** | eye tracking, mouth-open, person count, phone detection, audio | 🟢 **NO** |
+
+🟢 **Zero new prohibited rows in 366.** 🔵 **And the one row that looked most likely is the one that
+sharpens the rule.** `Proctoring-AI` is the base's only proctoring row and the obvious candidate — **and
+it infers no emotion.** Gaze direction, an open mouth, a second face and a phone in frame are
+**behavioural and object observations**, not affective states. 🔴 **Article 5(1)(f) prohibits the
+INFERENCE OF EMOTION. It does not prohibit watching.**
+
+🟢 **So the boundary is sharper than `P84` drew it, and it is a boundary of CAPABILITY, not of category:**
+
+- 🔴 **Prohibited**: *"the learner is confused / bored / frustrated"* inferred from face, voice or
+  physiology — **whatever the licence, and with no consent exception.**
+- 🟡 **Not prohibited by Art 5(1)(f), but high-risk under Annex III and squarely a biometric-data
+  problem**: *"a second person is in frame"*, *"the gaze left the screen"*. 🔵 **Different regime,
+  different mitigation, different conversation with the client's DPO** — and `verticals/solutions.md`
+  already files proctoring as a platform feature rather than a studio build.
+- 🟢 **Clean**: mastery inferred from **response** data — correctness, latency, spacing. `fsrs4anki` and
+  the `pyKT` family, already carried, are untouched by either regime.
+
+🔴 **Declared limit, and it is the reason this result is reported as a screen and not as a clearance: this
+was a NAME-and-PROSE screen over what the shelves SAY, not a code read.** 🟢 **A repository whose row text
+never mentions a face can still import one.** 🔵 **Two channels agreeing on three slugs raises confidence
+that the shelves are not hiding a cluster; it does not certify any individual row** → `ACTION p306-R`
+item 5.
+
+### 🟢 What the restored payload channel means for THIS shelf
+
+🟢 **`p306` re-established a first-hand channel to licence payloads** (`curl` →
+`raw.githubusercontent.com`, HTTP 200, byte-exact — the full channel map is on
+[`repos/foundations.md`](../repos/foundations.md)). 🔴 **This shelf is the one that stands to gain most
+from it, and it has not gained yet.** Rows on `agents/top.md` carrying a licence read from a **sidebar**
+or a **README sentence** — [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI)
+is a visible example, *"MIT (sidebar + README)"* — have never been payload-pinned because no pass could
+reach the bytes. 🟢 **They can be now, mechanically, at one probe each** → `ACTION p306-R` item 1.
+
+🔵 **This is the highest-value cheap work available to `p307`, and it is bounded: the shelves hold 366
+slugs, the probe is one HTTP request, and the channel is calibrated.**
+
+### 🔵 Carried forward unchanged
+
+- 🔴 **`make hooks` refused for the second consecutive pass.** This shelf publishes ungated again.
+- 🟢 **`p305`'s permission-clause rule survives contact with 49 fresh payloads** — and gains a fourth
+  class it cannot yet see (the **pointer grant**,
+  [`repos/foundations.md`](../repos/foundations.md)). 🔵 **Incomplete, not refuted.**
+- 🔵 **No agent-layer candidate was rejected this pass, because none was examined.** The leg was spent
+  where it was assigned.
+
 ## 🟢 Pass 305 — THE RULE `p304` WROTE LAST PASS IS ALREADY REFUTED, BY A ROW THAT WAS ON THIS BASE'S OWN SHELF WHEN IT WAS WRITTEN — AND THE REPLACEMENT IS ONE GREP THAT SCORED 8/8
 
 ⏱️ **Pass 305 of `2026-10-19`, following `p304` of `2026-10-19`.** Evidence:

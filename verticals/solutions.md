@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 306 — THE 26th LMS NIL IS SETTLED BY PAYLOAD RATHER THAN BY SOURCES, AND IN THE SAME PASS THE NIL IS SHOWN TO BE A PROPERTY OF THE LMS LAYER ONLY: CREDENTIALING HAS PERMISSIVE PLATFORMS
+
+⏱️ **Pass 306 of `2026-10-19`.** Evidence:
+[`p306-licence-payload.2026-10-19-p306.tsv`](../evidence/p306-licence-payload.2026-10-19-p306.tsv).
+
+### 🟢 `ACTION p305-R` item 3 DISCHARGED — Frappe Learning is AGPL-3.0, and the conflict is closed by bytes
+
+🔴 **`p305` recorded the single cheapest high-value probe available to this pass: *"Frappe Learning's
+licence CONFLICTS across sources (MIT vs AGPL-3.0) and no payload was read… if it is genuinely MIT it is
+the first permissive platform-scale LMS in 25 draws."*** 🟢 **The payload was read.**
+
+| repo | path | bytes · sha256₁₂ | verdict |
+|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | `license.txt` *(lower-case — not on the usual ladder)* | 🔴 **33 893** · `db1a87ba81e8` | 🔴 **AGPL-3.0** |
+
+🔴 **The MIT claim is REFUTED at the payload.** 🟢 **26th consecutive nil on a permissive platform-scale
+LMS — and the first one settled by first-hand bytes rather than by a licensor's glossary (`p304`,
+OpenEduCat) or by conflicting secondary sources.**
+
+🔵 **Two by-products worth keeping.** The file is at **`license.txt`**, lower-case, which several of this
+base's filename ladders do not probe — 🟡 **a near-miss false absence on a repository this base has
+discussed for two passes.** And at **33 893 B** it is a **fifth distinct AGPL-3.0 payload length**
+(against 34 519 · 35 116 · 35 148 · 35 149) — 🟢 **further confirmation that length identifies nothing**
+(`T-p306d`).
+
+### 🟢 The finding that changes what the nil MEANS
+
+🔴 **For 26 draws this base has recorded "no permissive platform-scale system" and allowed it to stand for
+the vertical.** 🟢 **It is true of the LMS layer and FALSE one layer across.**
+
+| layer | the platform-scale systems | licence | permissive option? |
+|---|---|---|---|
+| 🔴 **LMS / SIS — system of record** | Moodle · Open edX · **Frappe Learning** *(settled this pass)* · OpenEduCat *(LGPLv3, licensor-confirmed `p304`)* · Koha | 🔴 GPL / AGPL / LGPL | 🔴 **NO — 26 draws** |
+| 🟢 **credentialing — the record of ACHIEVEMENT** | [walt-id/waltid-identity](https://github.com/walt-id/waltid-identity) **319★** · [learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) **89★** · [open-attestation](https://github.com/Open-Attestation/open-attestation) *(Singapore GovTech)* · [cert-issuer](https://github.com/blockchain-certificates/cert-issuer) | 🟢 **Apache-2.0 / MIT** | 🟢 **YES — four** |
+
+🟡 **Credentialing is not uniformly permissive** —
+[`openedx/credentials`](https://github.com/openedx/credentials) (AGPL-3.0, 35 116 B `28bc942b8134`) and
+[`edubadges/edubadges-server`](https://github.com/edubadges/edubadges-server) (AGPL-3.0, 34 519 B
+`91b65277959e`, the Dutch SURF programme) are copyleft. 🟢 **The point is that here a studio CHOOSES;
+in the LMS layer it does not** → `T-p306b`, `P86`, `P87`.
+
+🔵 **So the honest briefing line changes from *"education platforms are copyleft"* to *"the system of
+record is copyleft; the achievement record need not be."*** 🟢 **Which is also the commercially better
+line, because the achievement record is where the 2026 demand is** (`intel/market.md`: 1EdTech's
+employer-side gap).
+
+### 🟡 A platform-selection constraint that outranks licence, restated with a second instance
+
+🔴 **`p305` recorded that a clean grant does not make a prohibited practice deployable** (EU AI Act
+Art 5(1)(f), emotion inference, in force `2025-02-02`). 🟢 **`p306` finds a second, and it bites far more
+platform selections.**
+
+🔴 **Baden-Württemberg — `§ 115b Abs. 9 Schulgesetz` + `§ 6 DUVO`, in force `2024-10-10`: an AI
+application may not award grades or make other essential school decisions, and Art. 9 GDPR
+special-category data may not be processed in AI applications.** 🟢 **Permitted: supporting the individual
+learning path, e.g. differentiated exercises.**
+
+🔵 **Why this is a VERTICALS question.** Automated grading is not something a studio usually writes — **it
+is a feature the LMS or an add-on already ships**, and it is typically on by default. ⚠️ **So the
+constraint applies at PLATFORM SELECTION and configuration time, before any custom code exists.**
+🟢 **The question to ask of a candidate platform in a German engagement is not "what licence" but "can
+automated grade assignment be turned off, and can you prove it stayed off".**
+
+🟡 **Provenance: ministry pages as rendered in search plus one independent aggregator; the Gesetzblatt
+text was not opened** (`intel/market.md`).
+
+### 🔵 Not re-litigated this pass
+
+- 🔵 **The education ERP/CRM nil** — `p304` settled it licensor-confirmed (OpenEduCat, LGPLv3).
+  **Recorded, not re-run**, per `ACTION p305-R` item 6.
+- 🔵 **Proctoring stays filed here rather than on the agent shelf** — a platform feature, not a studio
+  build. 🟢 **`p306`'s screen refines the regime: [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI)
+  (MIT, 633★) does gaze, mouth-open, person and phone detection and infers NO emotion, so Art 5(1)(f)
+  does not reach it** — ⚠️ **Annex III high-risk and biometric-data duties still do.** See
+  [`agents/top.md`](../agents/top.md).
+- 🔴 **`concentricsky/badgr-server` is UNRESOLVED, not AGPL.** The repo address 404s (Badgr is now
+  operated by Instructure as Canvas Credentials); a secondary source says AGPL-3.0; **no payload was
+  read, so no verdict is carried.**
+
 ## 🔴 Pass 305 — TWENTY-FIFTH NIL ON A PERMISSIVE EDUCATION ERP/CRM, NOT RE-LITIGATED — AND A CONSTRAINT THAT OUTRANKS LICENCE WHEN CHOOSING A PLATFORM TO BUILD ON
 
 ⏱️ **Pass 305 of `2026-10-19`.** Evidence:

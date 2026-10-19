@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 306 — three new patterns (`P86`-`P88`), each built only from rows payload-pinned THIS pass, and each answering a defect or a demand datum this pass MEASURED
+
+🔵 **Standing rule, unchanged: a pattern may only name a repository whose licence this base has read as a
+payload.** 🟢 **Every row below carries its byte length and `sha256₁₂`, all read at `p306` through the
+restored `raw.githubusercontent.com` channel.**
+
+### 🟢 `P86` — The employer-side credential interpreter *(North America first; the gap is named and sourced)*
+
+🔴 **The demand datum, from 1EdTech's `2026-06` research:** the technology exists and is not used
+consistently, because **employers cannot find, trust or interpret credential data** and fall back on
+degrees and résumés. 🟢 **The supply datum, from this pass's 33 payload probes:** the permissive
+open-source code in this layer is overwhelmingly **issuing and wallet** code. 🔵 **Nobody has built the
+employer side, and the parts to build it with are all MIT.**
+
+| role | repo | licence · payload |
+|---|---|---|
+| verification engine | [digitalcredentials/verifier-core](https://github.com/digitalcredentials/verifier-core) | 🟢 **MIT** · 1 087 B `6e7a616c4d70` |
+| issuer trust lookup | [digitalcredentials/issuer-registry-client](https://github.com/digitalcredentials/issuer-registry-client) | 🟢 **MIT** · 1 087 B `beb846c6120f` |
+| conformance corpus | [digitalcredentials/vc-test-fixtures](https://github.com/digitalcredentials/vc-test-fixtures) | 🟢 **MIT** · 1 060 B `abbc361fde10` |
+| cross-ecosystem intake | [Open-Attestation/open-attestation](https://github.com/Open-Attestation/open-attestation) | 🟢 **Apache-2.0** · 11 370 B `3a932454c909` |
+| embeddable verify widget | [digitalcredentials/veri-good](https://github.com/digitalcredentials/veri-good) | 🟢 **MIT** · 1 087 B `a419f0e01e85` |
+
+**Wiring.** `verifier-core` answers *"is this credential cryptographically sound and unrevoked"*;
+`issuer-registry-client` answers *"is the issuer one we recognise"*; the LLM layer sits **after both** and
+does the only job the stack does not already do — **normalising heterogeneous claim vocabularies to the
+employer's own skill taxonomy**, with the 1EdTech "minimal structured data elements" recommendation as the
+target schema. `vc-test-fixtures` is the regression corpus; `veri-good` drops the verify step into an ATS
+screen.
+
+🔴 **The boundary that makes this shippable: no AGPL anywhere in the chain.** 🟢 **Unlike every tutoring
+pattern in this file, `P86` has no copyleft core to isolate behind a network interface** (`T-p306b`).
+⚠️ **Do NOT let the model decide validity.** Cryptographic verification is deterministic and already
+solved; an LLM that "judges" authenticity converts a solved problem into a hallucination surface. The
+model maps vocabulary; the library decides trust.
+🔵 **Effort: 6-8 weeks.** 🟡 **Open risk: `verifier-core` is 2★. Permissive and small — read it before
+committing, and budget for carrying it.**
+
+### 🟢 `P87` — LATAM credential issuance on the substrate the region already runs
+
+🔴 **The regional datum:** LATAM **adopts** this layer and does not **build** it — Tec de Monterrey has
+issued on Blockcerts since 2018, UNRN (Argentina) issues micro-credentials on chain, and the newest
+flagship (NTT DATA + Darshana, `2026-05`) runs on **CertiDigital/EBSI, a European platform**. 🟢 **No
+LATAM-origin open-source credentialing project was found this pass** — an informed gap, and an opening.
+
+| role | repo | licence · payload |
+|---|---|---|
+| issuer (the incumbent standard) | [blockchain-certificates/cert-issuer](https://github.com/blockchain-certificates/cert-issuer) | 🟢 **MIT** · 1 096 B `06d87bf42a0a` ⚠️ branch `master` |
+| learner wallet | [digitalcredentials/learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT** · 1 092 B `1032f65dd2f6` · 89★/50 forks |
+| issuance orchestration | [digitalcredentials/issuer-coordinator](https://github.com/digitalcredentials/issuer-coordinator) | 🟢 **MIT** · 1 087 B `ca28a7ae5c7e` |
+| institutional trust registry | [digitalcredentials/community-registry](https://github.com/digitalcredentials/community-registry) | 🟢 **MIT** · 1 087 B `85569d7ed8fc` |
+| revocation at scale | [digitalcredentials/status-list-lambda](https://github.com/digitalcredentials/status-list-lambda) | 🔴 **NO PAYLOAD — ungranted. Reimplement Bitstring Status List v1.1 from the spec; do not vendor this** |
+
+**Wiring.** `cert-issuer` because the region's reference deployment already speaks Blockcerts — **the
+migration story is "same standard, your infrastructure" rather than "new standard".** `issuer-coordinator`
+fronts it; `community-registry` is the consortium trust list (a natural fit for a university network or a
+ministry); `learner-credential-wallet` is the student-facing app, and its **0.56 fork-to-star ratio** says
+it is routinely forked and skinned, which is exactly this engagement.
+
+🔴 **Scope any Chilean deployment against Ley 21.719, in force `2026-12-01`** — roughly six weeks after
+this pass. 🟢 **Credential data is personal data; a verifiable-credential architecture is unusually
+defensible here because the learner holds the artefact and the verifier learns only what is presented.**
+🔵 **Effort: 8-10 weeks.** 🔴 **Hard dependency to flag early: the revocation row is ungranted — budget
+reimplementation, do not plan to vendor it.**
+
+### 🟢 `P88` — The Baden-Württemberg-compliant assessment assistant *(the pattern that survives BOTH prohibition regimes)*
+
+🔴 **Two different prohibitions now bite, and most proposals are drafted against neither:**
+**EU AI Act Art 5(1)(f)** bans **emotion inference** in education (in force `2025-02-02`, public and
+private, online and in person, **no consent exception**). **`§ 115b Abs. 9 Schulgesetz` + `§ 6 DUVO`**
+(Baden-Württemberg, in force `2024-10-10`) bans **AI awarding grades or making essential school
+decisions**, and bars **Art. 9 GDPR** special-category data from AI applications.
+🔵 **`§ 6 DUVO` is the one that actually hits the pipeline, because "the AI grades it" is the most common
+pitch in the vertical** (`T-p306e`).
+
+| role | repo | licence · payload |
+|---|---|---|
+| mastery from RESPONSE data | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** · 1 079 B *(carried, `p305`)* |
+| knowledge tracing | the `pyKT` family | 🟢 **MIT** *(carried)* |
+| tutoring surface over MCP | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** · 1 073 B `1e05c9440068` *(carried, `p305`)* |
+| audit of judge behaviour | [bydeng01/ability-levels-audit](https://github.com/bydeng01/ability-levels-audit) | 🟢 **MIT** · 1 154 B `fef00f185287` ⚠️ branch `master` |
+| answer-leakage control | [bydeng01/conv-vs-ped-tutor](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT** · 1 150 B `a1c6b65c5bb1` |
+
+**Wiring, and the architecture is dictated by the law rather than by taste.**
+1. **Mastery is inferred from responses only** — correctness, latency, spacing. 🔴 **No camera, no
+microphone, no affect channel, at any point.** This is what keeps it outside Art 5(1)(f), and
+`p306`'s screen confirms the carried response-data rows are untouched by it.
+2. 🔴 **The system never emits a grade.** It emits **evidence** — items attempted, mastery estimates,
+spacing history — into a surface where **a teacher makes the decision**. `§ 6 DUVO` reserves the final
+assessment of pupil performance to the teacher; a product that writes a mark into the gradebook is
+unlawful in BW however good it is.
+3. **`tutor-mcp` is the join** — it drops the tutoring behaviour into the client's existing agent host
+over MCP, so the copyleft system of record is never linked against (`T-p306b`: in THIS layer the
+architecture really is forced).
+4. **The two `bydeng01` audits are the acceptance tests, not extras.** One measures bounded-rating bias
+across ability levels; the other measures answer leakage. 🟢 **Under Annex III an education AI system
+needs an evaluation story, and these are pre-registered protocols with frozen data — the cheapest
+credible one available.**
+
+🟢 **Why this generalises beyond one Land: design for the strictest rule found and the product ships
+everywhere.** A no-camera, teacher-decides architecture satisfies BW, satisfies Art 5(1)(f) trivially,
+satisfies Ohio's and Utah's district-policy duties, and gives Canadian boards — who are writing their own
+policies with no ministry memo — a governance artefact to adopt.
+🔵 **Effort: 10-12 weeks.** ⚠️ **The §6 wording was NOT read in the Gesetzblatt** (`intel/market.md`);
+confirm with the client's counsel before contracting against it.
+
 ## 🟢 Pass 305 — three new patterns (`P83`-`P85`), each built only from rows payload-pinned THIS pass, and each answering a defect this pass MEASURED
 
 ⏱️ `2026-10-19`. Evidence:

@@ -1,0 +1,57 @@
+# p306 licence payloads — the CREDENTIALING layer (the leg ACTION p305-R item 7 assigned)
+# Channel: curl https://raw.githubusercontent.com/{slug}/{branch}/{name} — HTTP 200, byte-exact
+# 🟢 CHANNEL CHANGE: this is the first pass in 24 with a PRIMARY SOURCE. p303 settled 'no primary source'
+#    on curl->github.com (403) and WebFetch (ENOTFOUND). raw.githubusercontent.com was never tested.
+# verdict = p305's PERMISSION-CLAUSE rule; family read from the payload BODY, never a sidebar or README
+# NO_PAYLOAD = not found at that address on main/master/dev/develop/development x 6 filenames.
+#    🔴 It does NOT mean ungranted — 3 of this pass's 5 platform NO_PAYLOADs were DEAD SLUGS, recovered below.
+slug	branch	file	http	bytes	sha256_12	verdict	family
+digitalcredentials/lcw-front-end	-	-	404	-	-	NO_PAYLOAD	-
+digitalcredentials/batch-issuer-ui	main	LICENSE	200	1087	a419f0e01e85	GRANT	MIT
+digitalcredentials/was-server-aws	-	-	404	-	-	NO_PAYLOAD	-
+digitalcredentials/verifier-plus	main	LICENSE	200	1087	85569d7ed8fc	GRANT	MIT
+digitalcredentials/sandbox-registry	main	LICENSE	200	1087	85569d7ed8fc	GRANT	MIT
+digitalcredentials/aws-lambda-issuer	-	-	404	-	-	NO_PAYLOAD	-
+digitalcredentials/dcc-website	master	LICENSE.md	200	1060	abbc361fde10	GRANT	MIT
+digitalcredentials/verifier-plugin	main	LICENSE	200	1084	fb3df9b5d418	GRANT	MIT
+digitalcredentials/dc-commons-website	-	-	404	-	-	NO_PAYLOAD	-
+digitalcredentials/dc-commons-preview	-	-	404	-	-	NO_PAYLOAD	-
+digitalcredentials/lcw-back-end	-	-	404	-	-	NO_PAYLOAD	-
+digitalcredentials/badge-assets	main	LICENSE.md	200	1060	abbc361fde10	GRANT	MIT
+digitalcredentials/vc-test-fixtures	main	LICENSE.md	200	1060	abbc361fde10	GRANT	MIT
+digitalcredentials/status-list-lambda	-	-	404	-	-	NO_PAYLOAD	-
+digitalcredentials/veri-good	main	LICENSE	200	1087	a419f0e01e85	GRANT	MIT
+digitalcredentials/lcw-admin-front-end	-	-	404	-	-	NO_PAYLOAD	-
+digitalcredentials/lcw-admin-back-end	-	-	404	-	-	NO_PAYLOAD	-
+digitalcredentials/learner-credential-wallet-site	-	-	404	-	-	NO_PAYLOAD	-
+digitalcredentials/issuer-registry-client	main	LICENSE.md	200	1087	beb846c6120f	GRANT	MIT
+digitalcredentials/credential-co-writer-demo-site	main	LICENSE	200	1087	7f62d1bf385d	GRANT	MIT
+digitalcredentials/cred-store	main	LICENSE.md	200	1060	abbc361fde10	GRANT	MIT
+digitalcredentials/issuer-dashboard	main	LICENSE.md	200	1060	abbc361fde10	GRANT	MIT
+digitalcredentials/mit-web-wallet-poc	main	LICENSE	200	1087	7f62d1bf385d	GRANT	MIT
+digitalcredentials/dips-dcc	main	LICENSE	200	1093	c984666ce9b9	GRANT	MIT
+digitalcredentials/mit-badge-image-generation	main	LICENSE	200	1087	7f62d1bf385d	GRANT	MIT
+digitalcredentials/mit-slm	main	LICENSE	200	1087	7f62d1bf385d	GRANT	MIT
+digitalcredentials/community-registry	main	LICENSE	200	1087	85569d7ed8fc	GRANT	MIT
+digitalcredentials/did-method-web	main	LICENSE	200	2236	7009a96644a2	GRANT	BSD
+digitalcredentials/verifier-core	main	LICENSE.md	200	1087	6e7a616c4d70	GRANT	MIT
+digitalcredentials/issuer-coordinator	main	LICENSE	200	1087	ca28a7ae5c7e	GRANT	MIT
+digitalcredentials/dcc-admin-dashboard	main	LICENSE	200	1094	0f6a5db4ea6b	GRANT	MIT
+digitalcredentials/learner-credential-wallet	main	LICENSE	200	1092	1032f65dd2f6	GRANT	MIT
+digitalbazaar/vc	main	LICENSE	200	1525	4f0d287e80be	GRANT	BSD
+stateofca/opencred	main	LICENSE	200	1507	03a7e6ddfd7e	GRANT	BSD
+1EdTech/openbadges-validator-core	master	LICENSE	200	13185	ba1f153bdba3	GRANT	Apache-2.0
+concentricsky/badgr-server	-	-	404	-	-	NO_PAYLOAD	-
+openedx/credentials	master	LICENSE	200	35116	28bc942b8134	GRANT	AGPL-3.0
+walt-id/waltid-identity	main	LICENSE	200	11357	c71d239df917	GRANT	Apache-2.0
+hyperledger-identus/cloud-agent	main	LICENSE	200	11357	2f3967c961cd	GRANT	Apache-2.0
+1EdTech/openbadges-specification	-	-	404	-	-	NO_PAYLOAD	-
+w3c/vc-data-model	main	LICENSE.md	200	167	232da9c6c2b9	NO-GRANT-CLAUSE	-
+digitalcredentials/docs	main	LICENSE	200	1075	09e4c03a44a7	GRANT	MIT
+opencerts/opencerts	-	-	404	-	-	NO_PAYLOAD	-
+blockcerts/cert-issuer	-	-	404	-	-	NO_PAYLOAD	-
+blockchain-certificates/cert-issuer	master	LICENSE	200	1096	06d87bf42a0a	GRANT	MIT
+edubadges/edubadges-server	master	LICENSE	200	34519	91b65277959e	GRANT	AGPL-3.0
+IMSGlobal/openbadges-specification	-	-	404	-	-	NO_PAYLOAD	-
+Open-Attestation/open-attestation	master	LICENSE	200	11370	3a932454c909	GRANT	Apache-2.0
+openedx/openedx-certificates	-	-	404	-	-	NO_PAYLOAD	-

@@ -4,6 +4,196 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 306 — THE PRIMARY-SOURCE DROUGHT ENDS AT TWENTY-FOUR PASSES, AND THE LAYER IT WAS SPENT ON INVERTS THIS VERTICAL'S "FORCED ARCHITECTURE": 23 GRANTS IN THE CREDENTIALING LAYER, EVERY ONE PERMISSIVE, AT PLATFORM SCALE
+
+⏱️ **Pass 306 of `2026-10-19`, following `p305` of `2026-10-19`.** Evidence:
+[`p306-licence-payload.2026-10-19-p306.tsv`](../evidence/p306-licence-payload.2026-10-19-p306.tsv) ·
+[`p306-channel-map.2026-10-19-p306.tsv`](../evidence/p306-channel-map.2026-10-19-p306.tsv) ·
+[`p306-practice-screen.2026-10-19-p306.tsv`](../evidence/p306-practice-screen.2026-10-19-p306.tsv) ·
+[`p306-regional.2026-10-19-p306.tsv`](../evidence/p306-regional.2026-10-19-p306.tsv).
+
+⏱️ **Three passes now share the date `2026-10-19`** (`p304`, `p305`, `p306`). **Dated by its evidence, not
+by its commit** — the base's standing rule.
+
+### 🟢 THE CHANNEL FINDING, and it is the largest single change to this base's method in twenty-four passes
+
+🔴 **`p303` settled it as a network POLICY and five passes inherited it: *"no primary source."*** The
+settlement rested on two measurements — `curl` → `github.com` and `api.github.com` return **403**, and
+`WebFetch` returned **ENOTFOUND**. 🟢 **Both measurements were real. The conclusion drawn from them was not,
+because a third host was never tested.**
+
+| channel | tested at `p306` | result |
+|---|---|---|
+| 🟢 `curl https://raw.githubusercontent.com/{slug}/{branch}/{file}` | 🟢 **YES** | 🟢 **HTTP 200, byte-exact body** — length and `sha256₁₂` computed locally from the bytes |
+| 🟢 `WebFetch` → `raw.githubusercontent.com` | 🟢 **YES** | 🟢 **200** — returns the text, summarised; good for reading, not for byte counts |
+| 🟢 `WebFetch` → `github.com` org repository listing | 🟢 **YES** | 🟢 **200** — paginated repo list WITH the licence column, star count and last-updated date |
+| 🟢 `WebFetch` → `github.com` repo page | 🟢 **YES** | 🟢 **200** for a live slug, **404** for a dead one — so it doubles as a slug oracle |
+| 🔴 `git clone` of an arbitrary third-party repo | 🟢 **YES** | 🔴 **REFUSED by the environment's execution policy**, not by the network |
+| 🔴 `make hooks` | 🟢 **YES** | 🔴 **REFUSED as external code — SECOND CONSECUTIVE PASS** (`ACTION p305-R` item 2) |
+| 🔴 `mcp github get_file_contents` on a third-party repo | 🟢 **YES** | 🔴 **403 — session scoped to this account's own repositories** |
+| ⚪ `curl` → `api.github.com` | 🔴 **NO** | ⚪ **NOT RE-TESTED this pass. Carried as unknown, not as confirmed-blocked** |
+
+🟢 **Consequence: every licence verdict below is a FIRST-HAND PAYLOAD READ** — the bytes were fetched, the
+length counted and the `sha256₁₂` computed from the body. 🔵 **This base has been pinning payloads for
+dozens of passes; what changed is that the bytes now arrive directly instead of through a search
+snippet.** 🔴 **What it does NOT fix: no code, commit history or test suite was read, and no star integer
+came from an API** — stars below are as `github.com` renders them.
+
+### 🟢 The leg `ACTION p305-R` item 7 assigned — and the enumeration refutes `p303` before the licences are even read
+
+🔴 **`p303` recorded the Digital Credentials Consortium family as *"6 repos, 2 732 commits"*.** 🟢 **The
+organisation listing reports **126 repositories**, 30 to a page across 5 pages.** 🔵 **`p303`'s number was
+the pinned-repos panel, which shows six. The population is twenty-one times larger.**
+
+🟢 **`p306` enumerated PAGE 1 (30 of 126) and probed 28 of them** (`.github` and one duplicate excluded),
+plus four more DCC repos by name and nine platform-scale systems from outside the organisation.
+🔴 **Pages 2–5 — 96 repositories — are UNREAD, not empty.**
+
+⚠️ **The identity finding, recorded before any licence: the Digital Credentials Consortium is now the
+DIGITAL CREDENTIALS COMMONS.** The organisation's own placeholder site (`dc-commons-website`,
+`dc-commons-preview`) carries the new name, while the GitHub org slug, the copyright lines
+(*"Copyright (c) 2021-2026 Digital Credentials Consortium"*) and this base's own prose still carry the old
+one. 🔵 **A row filed under the old name is not wrong yet, but it will be.**
+
+### 🟢 The result that matters: 23 grants in this layer, and NOT ONE of them is copyleft
+
+| | repos probed | 🟢 grant | 🔴 no payload at the address | 🔴 reserved grant | 🔴 phantom grant |
+|---|---|---|---|---|---|
+| 🟢 **`digitalcredentials` org** | **33** | 🟢 **23** (22 MIT · 1 BSD) | 🔴 10 | 🟢 **0** | 🟢 **0** |
+
+🟢 **Zero reserved grants and zero phantom grants in 33 draws**, against a vertical where `p303`, `p304`
+and `p305` each found at least one. 🔵 **An organisation with a licence policy looks different from a
+topic page, and this is the first time this base has measured one.**
+
+### 🟢 The new rows — every licence a payload, with its byte length and `sha256₁₂`
+
+| Nombre | Repo | Licencia | bytes · sha256₁₂ | Descripción | ★ |
+|--------|------|----------|---|-------------|---|
+| **learner-credential-wallet** | [digitalcredentials/learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT** | 1 092 · `1032f65dd2f6` | Cross-platform iOS/Android wallet for storing and sharing learner credentials. 🟢 **89★ / 50 forks — a fork-to-star ratio of 0.56, the highest on these shelves: this is a repo people DEPLOY, not one they read** (`p304`'s instrument). | 89 |
+| **verifier-core** | [digitalcredentials/verifier-core](https://github.com/digitalcredentials/verifier-core) | 🟢 **MIT** | 1 087 · `6e7a616c4d70` | The verification engine — signature, status, expiry, issuer trust. 🟢 **The single highest-value permissive row this pass: verification is the half of the credential problem employers actually fail at** (see `intel/market.md`). | 2 |
+| **issuer-coordinator** | [digitalcredentials/issuer-coordinator](https://github.com/digitalcredentials/issuer-coordinator) | 🟢 **MIT** | 1 087 · `ca28a7ae5c7e` | Orchestrates signing + status-list allocation across issuing services. | — |
+| **issuer-registry-client** | [digitalcredentials/issuer-registry-client](https://github.com/digitalcredentials/issuer-registry-client) | 🟢 **MIT** | 1 087 · `beb846c6120f` | Known-issuer / trust-registry client. 🟢 **Trust-registry lookup is exactly the "can I believe this issuer" step 1EdTech's 2026 research names as the blocker.** | — |
+| **cert-issuer** | [blockchain-certificates/cert-issuer](https://github.com/blockchain-certificates/cert-issuer) | 🟢 **MIT** | 1 096 · `06d87bf42a0a` | The Blockcerts reference issuer. 🟢 **LATAM-relevant beyond its star count: Blockcerts is the standard Tec de Monterrey has issued on since 2018 — the substrate the region already runs, and it is MIT.** ⚠️ Default branch `master`. | — |
+| **open-attestation** | [Open-Attestation/open-attestation](https://github.com/Open-Attestation/open-attestation) | 🟢 **Apache-2.0** | 11 370 · `3a932454c909` | Document-integrity and credential framework **built by Singapore GovTech**. 🟢 **APAC-placed INSTITUTIONALLY — a government-built, permissively-licensed credentialing platform, which is a combination this base has not previously recorded in any layer.** ⚠️ Default branch `master`. | — |
+| **waltid-identity** | [walt-id/waltid-identity](https://github.com/walt-id/waltid-identity) | 🟢 **Apache-2.0** | 11 357 · `c71d239df917` | All-in-one identity and wallet toolkit (issuer, verifier, wallet, DID). 🟢 **319★ / 137 forks (ratio 0.43) — the largest permissive platform-scale row in this layer.** 🟢 **EMEA-placed institutionally (walt.id, Austria).** | 319 |
+| **did-method-web** | [digitalcredentials/did-method-web](https://github.com/digitalcredentials/did-method-web) | 🟢 **BSD** | 2 236 · `7009a96644a2` | `did:web` resolver. ⚠️ **GitHub's licence column calls this `Other`; the payload is a clean BSD grant** — see the calibration below. | — |
+
+### 🟢 A new instrument: GitHub's licence COLUMN calibrated against payloads — 28/28 on presence, and wrong on identity
+
+🟢 **The organisation listing shows a licence for some repositories and nothing for others. `p306` probed
+all 28 and compared.**
+
+| what the listing showed | repos | payload found | agreement |
+|---|---|---|---|
+| 🟢 a named licence | 18 | 🟢 **18** | 🟢 **18/18** |
+| 🔴 nothing | 10 | 🔴 **0** | 🟢 **10/10** |
+
+🟢 **28 of 28. The licence column is a RELIABLE PRESENCE ORACLE** — cheap, one page-read for thirty
+repositories, and it tells you where the payloads are before you spend a probe. 🔴 **It is NOT an identity
+oracle**: `did-method-web` is listed as **`Other`** and its payload is an ordinary BSD grant.
+🔵 **So: use the column to decide WHAT to probe, never to decide WHAT THE LICENCE IS.** 🔴 **Declared
+limit — this is calibrated on ONE organisation with an evident licence policy; a topic page's tail is a
+different population and this agreement rate must not be carried there** (`p305` learned exactly that
+lesson about tail rules).
+
+### 🔴 A FOURTH licence class — the POINTER GRANT, and this base's own new rule gets it wrong
+
+**Repo**: [`w3c/vc-data-model`](https://github.com/w3c/vc-data-model) — `LICENSE.md`, 🔴 **167 B**,
+sha256₁₂ `232da9c6c2b9`. The payload in full:
+
+> `All documents in this Repository are licensed by contributors under the`
+> `[W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software).`
+
+🔴 **`p305`'s permission-clause rule classifies this `NO-GRANT-CLAUSE` — and that verdict is WRONG in
+consequence.** There is no operative grant sentence in the file, and the work is nonetheless licensed; the
+grant simply lives at the other end of a URL. 🟢 **The classes are now four, and two of them look
+identical to every instrument in this repository:**
+
+| class | file present | grant sentence present | actually granted | the verdict that matters |
+|---|---|---|---|---|
+| 🟢 **clean grant** | yes | 🟢 yes | 🟢 **yes** | 🟢 build |
+| 🔴 **reserved grant** (`p304`) | yes | 🔴 no | 🔴 **no** | 🔴 **STOP** |
+| 🔴 **pointer grant** (`p306`) | yes | 🔴 **no** | 🟢 **YES, by reference** | 🟡 **resolve the URL, then decide** |
+| 🔴 **phantom grant** (`p303`) | 🔴 no | — | 🔴 **no** | 🔴 **STOP** |
+
+🔴 **The reserved grant and the pointer grant are the same shape at the byte level and opposite in
+consequence** — exactly the relationship `p305` identified between 842 B and 1 060 B, one level up.
+🟢 **`p305`'s rule is not refuted — it is INCOMPLETE.** It must return three values, not two: `GRANT`,
+`POINTER` (a URL to a known licence, no local grant) and `RESERVED` (no grant and no pointer).
+🔵 **Discriminator, and it is cheap: a `NO-GRANT-CLAUSE` payload containing an `http(s)://` URL to a
+licence text is a POINTER; one containing *"all rights reserved"* and no URL is RESERVED.** → `ACTION p306-R`
+item 2. ⚠️ **Honest note on provenance: this was found by RUNNING the rule, not by reasoning about it —
+one pass after the rule was written, which is the interval `ACTION p305-R` item 1 was created to shorten.**
+
+### 🔴 Byte length is not even an IDENTITY key — SIX distinct payloads at exactly 1 087 B
+
+🟢 **`p305` demoted length from rule to screen. `p306` finds it is weaker still.**
+
+| byte length | distinct `sha256₁₂` found this pass | family |
+|---|---|---|
+| 🔴 **1 087 B** | 🔴 **SIX** — `6e7a616c4d70` · `7f62d1bf385d` · `85569d7ed8fc` · `a419f0e01e85` · `beb846c6120f` · `ca28a7ae5c7e` | all MIT |
+| 🔴 **11 357 B** | 🔴 **TWO** — `c71d239df917` (stock) · `2f3967c961cd` | both Apache-2.0 |
+
+🔵 **Mechanism: MIT's only variable is the copyright line, and `Copyright (c) 2021-2026 Digital Credentials
+Consortium` is the same LENGTH as several sibling lines while being different BYTES.** 🟢 **So two payloads
+agreeing on length tells you nothing at all — not the licence, and not even that they are the same file.**
+🔴 **Any instrument keyed on byte length alone is measuring a collision-rich field.** The `sha256₁₂` is the
+key; the length is a label.
+
+🟢 **6th recurrence of the stock Apache-2.0 pair `11 357 B` / `c71d239df917`** —
+[`walt-id/waltid-identity`](https://github.com/walt-id/waltid-identity). 🟢 **The first recurrence in a
+DIFFERENT LAYER (credentialing, not tutoring) and a different jurisdiction (Austria).** The by-product
+instrument now has six confirmations and demonstrated cross-layer reach.
+
+### 🔴 Three of five "absences" in the platform batch were DEAD SLUGS, not missing licences
+
+🔴 **`p306`'s own first platform list was 3/9 wrong**, and the error shape is the one `p305` warned about:
+
+| slug probed | result | the truth |
+|---|---|---|
+| `concentricsky/badgr-server` | 🔴 `NO_PAYLOAD` | 🔴 **repo page 404s** — Badgr is now operated by Instructure as Canvas Credentials. 🟡 **Wikipedia records the server as AGPL-3.0; NO payload was read, so this base records it as UNRESOLVED, not as AGPL** |
+| `blockcerts/cert-issuer` | 🔴 `NO_PAYLOAD` | 🟢 **wrong org — it is [`blockchain-certificates/cert-issuer`](https://github.com/blockchain-certificates/cert-issuer), MIT 1 096 B** |
+| `opencerts/opencerts` | 🔴 `NO_PAYLOAD` | 🟢 **wrong org — the live work is [`Open-Attestation/open-attestation`](https://github.com/Open-Attestation/open-attestation), Apache-2.0 11 370 B** |
+| `IMSGlobal/openbadges-specification` | 🔴 `NO_PAYLOAD` | 🔴 **unresolved — `1EdTech/` and `IMSGlobal/` both 404 on the payload ladder.** A specification repository may legitimately carry no licence file |
+| `openedx/openedx-certificates` | 🔴 `NO_PAYLOAD` | 🔴 **unresolved.** 🟢 The adjacent [`openedx/credentials`](https://github.com/openedx/credentials) IS granted: **AGPL-3.0, 35 116 B `28bc942b8134`** |
+
+🟢 **Recovery rate 3 of 5 by fixing the ADDRESS, with no change to the channel.** 🔴 **So `NO_PAYLOAD` at
+the raw channel means exactly one thing — *"nothing at that address"* — and this base must never publish
+it as *"ungranted"*.** 🔵 **The cost of the error is asymmetric and it ran the wrong way here: two of the
+three recovered rows are the LATAM-relevant and the APAC-placed platform in this layer. A slug typo was
+about to produce a regional gap that did not exist.**
+
+### 🟢 The structural finding — the "forced architecture" is a property of the LAYER, not of education
+
+🔴 **`p305` closed with: *"every permissive row admitted this pass is a COMPONENT (1★–135★); every
+platform-scale system of record in the vertical is AGPL or GPL — the architecture is FORCED."***
+🟢 **That holds for TUTORING and LMS. It does not hold here.**
+
+| layer | platform-scale systems of record | their licences |
+|---|---|---|
+| 🔴 **LMS / system of record** | Moodle · Open edX · Frappe Learning *(settled this pass, below)* · OpenEduCat | 🔴 **GPL / AGPL / LGPL — 26 draws, no permissive option** |
+| 🔴 **tutoring** | the pedagogy leaders | 🔴 **AGPL-3.0**, permissive rows are 1★–135★ components |
+| 🟢 **CREDENTIALING** | [`waltid-identity`](https://github.com/walt-id/waltid-identity) **319★** · [`learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) **89★** · [`open-attestation`](https://github.com/Open-Attestation/open-attestation) · [`cert-issuer`](https://github.com/blockchain-certificates/cert-issuer) | 🟢 **MIT and Apache-2.0, AT PLATFORM SCALE** |
+
+🟡 **Not uniformly** — [`openedx/credentials`](https://github.com/openedx/credentials) (AGPL-3.0, 35 116 B)
+and [`edubadges/edubadges-server`](https://github.com/edubadges/edubadges-server) (AGPL-3.0, **34 519 B**
+`91b65277959e`, the **fourth** distinct AGPL payload length this base has pinned) are both copyleft.
+🟢 **But in credentialing a permissive platform-scale option EXISTS, and in the LMS layer it does not after
+26 draws.** 🔵 **For a studio this is the difference between pricing a copyleft boundary and not having
+one** → `P86`, `P87`.
+
+### 🔴 What `p306` could NOT do on this shelf
+
+- 🔴 **`make hooks` refused for the SECOND consecutive pass** — `ACTION p305-R` item 2 is **answered in the
+  negative, and reported either way as it required.** 🔴 **`p304` found `gate-enumeration` and
+  `gate-absence` RED at `HEAD`; nothing since has been able to re-run them. Assume still RED.**
+- 🔴 **96 of the 126 `digitalcredentials` repositories (pages 2–5) are UNREAD.** An informed gap with an
+  exact denominator → `ACTION p306-R` item 4.
+- 🔴 **No star integer for 6 of the 8 new rows.** The org listing renders `0`/`1`/`2` for most page-1 repos;
+  the two fetched individually (`319`, `89`) came from the repo page.
+- 🟡 **`concentricsky/badgr-server`'s licence is UNRESOLVED** — the secondary source says AGPL-3.0, no
+  payload was read, and this base does not carry secondary licence claims as verdicts.
+
 ## 🟢 Pass 305 — THE DEFAULT BRANCH IS NOW READ RATHER THAN GUESSED, WHICH RETIRES A WHOLE CLASS OF FALSE ABSENCE FROM THIS FILE
 
 ⏱️ **Pass 305 of `2026-10-19`.** Evidence:

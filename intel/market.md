@@ -4,6 +4,218 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 306 — THE BINDING RULES ARE SUB-NATIONAL: `p305`'s JURISDICTION RULE WORKS, AND IT HAS TO GO ONE LEVEL DEEPER — BADEN-WÜRTTEMBERG HAS THE ONLY LEGALLY BINDING SCHOOL-AI RULE IN GERMANY, AND IT BANS AI GRADING OUTRIGHT
+
+⏱️ **Pass 306 of `2026-10-19`.** Evidence:
+[`p306-regional.2026-10-19-p306.tsv`](../evidence/p306-regional.2026-10-19-p306.tsv).
+🔴 **Every regulatory and market figure below is SEARCH-SNIPPET-ATTRIBUTED.** 🟢 **The payload channel
+restored this pass reaches `raw.githubusercontent.com` only — it is a channel to licence files, not to
+ministries or market reports.** 🔵 **No primary legal instrument was opened.**
+
+### 🟢 EMEA — `ACTION p305-R` item 5 discharged, and Germany's Länder level pays immediately
+
+🟢 **`p305` established by reasoning that German school-AI rules live at Länder level and ran out of leg
+before searching it. `p306` searched it, and the reasoning was right.**
+
+| Land | instrument | date | 🔴 binding? |
+|---|---|---|---|
+| 🟢 **Baden-Württemberg** | 🔴 **`§ 115b Abs. 9 Schulgesetz` + `§ 6 DUVO`** (Digitalunterrichtsverordnung), `GBl. 2024 Nr. 81` | in force **`2024-10-10`** | 🔴 **YES — the only one** |
+| 🟡 **Bayern** | *Handlungsleitfaden „Künstliche Intelligenz in der pädagogischen Praxis"*, plus `AIS.chat` and `ByCS-KI` | **`2026-05-19`** | 🟡 guidance |
+| 🔴 **Nordrhein-Westfalen** | *Handlungsleitfaden zum Umgang mit textgenerierenden KI-Systemen* + a QUA-LiS Moodle course | 🔴 **`2023-02`** | 🟡 guidance |
+
+🔴 **The finding worth briefing: `§ 6 DUVO` prohibits AI systems from AWARDING GRADES or making other
+essential school decisions.** The Kultusministerium states the final assessment of pupil performance
+remains reserved to the teacher, and that **Art. 9 GDPR special-category data may not be processed in AI
+applications.** 🟢 **Permitted explicitly: supporting the individual learning path, e.g. differentiated
+exercises.**
+
+🔴 **This is a SECOND prohibition class, and it is not the one this base has been tracking.** EU AI Act
+Art 5(1)(f) bans **emotion inference**; `§ 6 DUVO` bans **automated assessment**. 🔵 **Art 5(1)(f) hits a
+technique almost nobody was going to ship. `§ 6 DUVO` hits the single most common pitch in the
+vertical — "the AI grades it."** ⚠️ **A studio proposal that is perfectly clean under the AI Act can be
+illegal in Baden-Württemberg.** → `P88`.
+
+🟡 **Provenance, stated plainly: the `§ 115b/§ 6` citation and the 2024-10-10 date come from the
+Kultusministerium's own pages as rendered in search results, corroborated by an independent September-2026
+aggregator that also calls BW the only Land with binding rules.** 🔴 **The Gesetzblatt text itself was not
+opened and the exact wording of `§ 6` is NOT verified.** 🔵 **Two sources, one of them the regulator,
+agreeing on the operative effect — carried, with the wording flagged.**
+
+🟢 **NRW's leading instrument is three and a half years old** (`2023-02`) and no newer Handreichung was
+found — 🟡 **recorded as a STALENESS finding, not as an absence.**
+
+### 🟢 North America — and it is TWO markets, not one
+
+🟢 **United States — the state layer is where the binding duties are:**
+- 🟢 **31 state education departments had published K-12 AI guidance as of `2026-01`** — mostly voluntary.
+- 🔴 **Ohio: districts were required to adopt their own AI policy by `2026-07-01`** (a state model policy
+  is available to adopt or adapt). **A deadline that has already passed.**
+- 🔴 **Utah: a 2026 law phases in state-model and local-policy duties, local deadline `2027-07`.**
+- 🟡 **Maryland SB 720** (department guidance + mandatory local policies, and an opt-out right for parents
+  with no academic penalty) — 🔴 **passed first chamber only. Not law. Not carried as one.**
+
+🟢 **Canada — a different shape entirely, and the first time this base has placed it:**
+- 🔴 **Three provincial education ministries had published AI guidance as of `2025-12`.**
+- 🟡 **British Columbia**: *Considerations for using AI tools in schools* (`2023`), seven areas.
+- 🔴 **Alberta**: the guidance document is the **Alberta School Boards Association**'s
+  (`2024-09`) — **a school-boards body, not the ministry.**
+- 🔴 **Ontario**: no ministry memorandum on AI; boards such as Kawartha Pine Ridge have written their own.
+  🟡 **One source describes 2026-27 Ontario expectations on responsible AI use; it could not be reconciled
+  with the "no memorandum" finding and is CARRIED AS A CONFLICT, not resolved.**
+- 🔴 **The governance gap, measured**: a Fraser Institute survey of Grades 6-12 teachers found **no
+  province above 50 % for staff AI policy** (Ontario highest, **41.1 %**); for student policies only
+  Ontario exceeded half (**50.7 %**). Training is worse and uneven — **67.6 % untrained in
+  Manitoba/Saskatchewan against 37.0 % in Atlantic Canada.**
+
+🔵 **Briefing consequence: "North America" is not a procurement territory for this product. A US K-12
+engagement lands in a state with a policy deadline; a Canadian one lands in a district writing the policy
+itself, because the ministry has not.** 🟢 **The Canadian deal is a governance deal first and a software
+deal second.**
+
+### 🟢 APAC — the credentialing leg places an institution, not just a rule
+
+🟢 **[`Open-Attestation`](https://github.com/Open-Attestation/open-attestation) is built by Singapore
+GovTech and is Apache-2.0** (payload 11 370 B, `3a932454c909`, read this pass). 🔵 **A government-built,
+permissively licensed credentialing platform is a different kind of regional datum from a policy
+document: it is a dependency a client can actually adopt, placed by the institution that wrote it.**
+🟢 **It joins `p305`'s Singapore finding (Code for Fun, compulsory 10 h from P4, inside the Student
+Learning Space rather than open platforms) — the same jurisdiction appearing on both the rule side and
+the supply side.**
+
+🔵 **`p305`'s five APAC jurisdictions (China, Singapore, India, Korea, Japan) were NOT re-searched** —
+one pass old, and `ACTION p305-R` did not ask for them. 🔴 **Carried, not re-verified.**
+
+### 🟡 LATAM — an adopter with no local supply, and a data-protection deadline six weeks out
+
+🔴 **No school-level AI regulation was found in Brazil, Mexico, Chile or Colombia** — consistent across
+four independent sources. 🟢 **This is an INFORMED GAP: the national AI instruments exist and the school
+layer is genuinely empty, which is not the same as the search failing.**
+
+- 🟡 **Chile** — National AI Policy since 2021; an AI bill still in committee. 🔴 **Ley 21.719 (personal
+  data) enters into force `2026-12-01` — about six weeks from this pass.** 🔵 **The most actionable LATAM
+  datum in this file: any Chilean education engagement scoped now will be delivered under a data-protection
+  regime that is not yet in force.**
+- 🟡 **Brazil** — no specific AI statute; **PL 2338/2023** approved by the Senate (`2024-12`), pending in
+  the Câmara.
+- 🟡 **Colombia** — national strategy, no sector-specific education rule.
+- 🟡 **Mexico** — AI training folded into educational objectives; the binding constraint is **teacher
+  capacity (>1 million to train)**, not law. 🔴 **A single source mentions a "Ley Nahui" — NOT
+  corroborated, NOT carried.**
+
+🟢 **The credentialing picture is the sharpest regional finding of the pass, and it is a SUPPLY gap rather
+than a demand gap:**
+- 🟢 **Tec de Monterrey has issued blockchain diplomas on the MIT-originated Blockcerts standard since
+  2018.** Universidad Nacional de Río Negro (Argentina) issues micro-credentials on blockchain.
+  A vendor claims ≥17 institutions across Chile, Peru, Colombia and the Dominican Republic.
+- 🔴 **The newest flagship, NTT DATA + Darshana (`2026-05`), is built on `CertiDigital`/EBSI — a EUROPEAN
+  platform — with W3C VC 2.0.**
+- 🔴 **No LATAM-origin open-source credentialing project was found.** 🟢 **The region ADOPTS this layer and
+  does not BUILD it.**
+- 🟢 **And the substrate it already runs is permissive:**
+  [`blockchain-certificates/cert-issuer`](https://github.com/blockchain-certificates/cert-issuer) is
+  **MIT, 1 096 B `06d87bf42a0a`**, payload-read this pass → `P87`.
+
+🔴 **Vendor-sourced adoption counts (POK, Thomas Signe, NTT DATA) are NOT independently verified** and are
+recorded as directional.
+
+### 🟡 Market size — the range WIDENED, and the honest instruction is unchanged
+
+| source | 2026 figure |
+|---|---|
+| Precedence Research | **$9.58 bn** (and $7.05 bn for 2025) |
+| Research and Markets | **$10.6 bn** |
+| HolonIQ *(as cited by one aggregator)* | **$12.3 bn** |
+| HolonIQ *(as cited by a different aggregator)* | 🔴 **$23 bn** |
+
+🔴 **A factor of 2.4 between the extremes, and two of the four figures are attributed to the SAME firm.**
+🟢 **`p305` recorded the disagreement as "a factor of two"; it is wider this pass, not narrower.**
+🔵 **Brief the range. Never a point estimate — and never a HolonIQ number without saying which one.**
+
+🟢 **Adoption is the better-evidenced number, and two independent instruments agree on level and
+direction:** RAND reports K-12 teachers using generative AI for work doubling **25 % → 53 % in one school
+year**; Gallup reports **34 % (2023) → 61 % (2026)**. 🔵 **Two surveys, two methodologies, the same
+story — this is the figure to brief, not the market size.**
+
+### 🟢 The demand-side finding that reframes the credentialing opportunity
+
+🟢 **1EdTech's `2026-06` research (two reports) states the problem precisely: the technology EXISTS and is
+not used consistently, because EMPLOYERS cannot find, trust or interpret credential data — so they fall
+back on degrees and résumés.** The recommended fix is a **minimal, structured set of data elements**; the
+companion report covers how credential data moves between education, employment and job platforms.
+🟢 **1EdTech has partnered with the HR Open Standards Consortium.** 🟢 **The 2026 standards pair is **Open
+Badges 3.0** on the **W3C Verifiable Credentials Data Model**.
+
+🔴 **Join this to the supply finding and the gap is specific: the permissive open-source code in this
+layer is overwhelmingly ISSUING and WALLET code. The failure is on the EMPLOYER side.** 🔵 **That is the
+rarest thing in this knowledge base — a named, sourced demand gap sitting directly on top of a
+payload-verified permissive substrate** → `P86`.
+
+🟡 **Vendor blogs (sertifier, virtualbadge) were read and NOT carried** — unverified multiplier claims.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The credentialing supply is here and it is permissive** — the Digital Credentials Commons (ex-Digital
+Credentials Consortium, MIT-originated) ships 23 payload-verified grants, 22 of them MIT.
+🟢 **The employer-side interpretation gap named by 1EdTech is a US-shaped problem** (skills-based hiring,
+LERs, the HR Open Standards partnership) → **`P86` is a North America play first.**
+🔴 **K-12 software engagements carry a policy-deadline dimension that varies by state** — Ohio's
+`2026-07-01` has passed, Utah runs to `2027-07`. 🔵 **Ask which state before scoping.**
+🟡 **Canada is a separate motion**: three provinces with guidance, Ontario without a ministry memo, and
+teacher-reported policy coverage below 50 % everywhere. **Lead with governance artefacts, not features.**
+
+### EMEA
+
+🔴 **Baden-Württemberg's `§ 6 DUVO` is the hardest constraint in this file and it is sub-national**: no AI
+grading, no Art. 9 GDPR data in AI applications. 🟢 **Design for it and you are clean everywhere else in
+the EU** → **`P88`**.
+🟢 **Permissive platform-scale supply exists here**:
+[`walt-id/waltid-identity`](https://github.com/walt-id/waltid-identity) (Apache-2.0, 319★/137 forks,
+Austria) is the largest permissive credentialing platform this base carries.
+🟡 **The AGPL counterweight is also EMEA** —
+[`edubadges/edubadges-server`](https://github.com/edubadges/edubadges-server) (AGPL-3.0, 34 519 B), the
+Dutch SURF programme. 🔵 **Both options are available in-region; the choice is a pricing decision, which
+is exactly what the LMS layer does not offer.**
+🟡 **Germany's guidance layer is fragmented and partly stale** (NRW `2023-02`) — **a market for the
+governance artefact itself.**
+
+### APAC
+
+🟢 **Singapore is the standout and it appears twice**: GovTech's
+[`Open-Attestation`](https://github.com/Open-Attestation/open-attestation) (Apache-2.0) on the supply
+side, and the Student Learning Space / Code for Fun rules on the demand side. 🔵 **A government that both
+regulates and publishes permissive infrastructure is the cheapest APAC entry point in this base.**
+🟡 **China's MoE "AI Plus Education" plan (`2026-04-10` → 2030) remains the largest stated programme**,
+carried from `p305` with its *"mandatory"* framing still recorded as a CONFLICT.
+🔴 **No APAC jurisdiction was re-searched this pass** — one pass old, carried.
+
+### LATAM
+
+🟢 **The clearest opportunity in this file, because it is a supply gap rather than a demand gap.** The
+region already issues verifiable credentials (Tec de Monterrey on Blockcerts since 2018; UNRN Argentina;
+claimed adoption across Chile, Peru, Colombia, Dominican Republic) and the newest flagship runs on a
+**European** platform. 🟢 **The substrate is MIT and verified**
+([`cert-issuer`](https://github.com/blockchain-certificates/cert-issuer), 1 096 B `06d87bf42a0a`) →
+**`P87`**.
+🔴 **Scope any Chilean engagement against Ley 21.719, in force `2026-12-01`.**
+🔴 **No school-level AI regulation in BR/MX/CL/CO** — 🟢 **for a studio this lowers the compliance barrier
+and raises the governance-advisory opportunity; it does not remove the EU-style duties for any client
+operating cross-border.**
+🟡 **Mexico's binding constraint is teacher training at scale (>1 M), not law** — a services shape, not a
+software shape.
+
+### Global
+
+🟢 **Brief the adoption number, not the market number**: teacher use roughly doubled in a year on two
+independent surveys, while 2026 market estimates span **$9.58 bn to $23 bn**.
+🟢 **The layer rule is the most portable finding of the pass**: in **credentialing** a permissive
+platform-scale option exists; in **LMS** it does not, after 26 draws; in **tutoring** the best pedagogy is
+AGPL. 🔵 **Pick the layer before picking the licence strategy.**
+🔴 **Two prohibition regimes now bite education AI and they are different**: EU AI Act Art 5(1)(f)
+(emotion inference, in force `2025-02-02`, no consent exception) and sub-national rules on **automated
+assessment** (`§ 6 DUVO`). 🟢 **Response-data mastery modelling satisfies both.**
+
 ## 🟢 Pass 305 — `p304`'s PRE-REGISTERED QUERY FIX WORKED ON EMEA, AND THE SAME FIX THEN BROKE APAC OPEN TOO: NAMING JURISDICTIONS INSTEAD OF REGIONS IS THE INSTRUMENT, NOT A PHRASING PREFERENCE
 
 ⏱️ **Pass 305 of `2026-10-19`.** Evidence:

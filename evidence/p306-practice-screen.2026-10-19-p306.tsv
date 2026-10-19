@@ -1,0 +1,9 @@
+# p306 EU AI Act Art 5(1)(f) screen over CARRIED rows — ACTION p305-R item 4
+# denominator: 366 distinct slugs across agents/top.md, repos/foundations.md, verticals/solutions.md, compose/patterns.md
+# two independent screens: (1) slug-name regex (2) carried-prose regex over capability text. Both returned the same 3 rows.
+# LIMIT: a name-and-prose screen over what the shelves SAY. NOT a code read. Certifies no individual row.
+slug	capability_as_carried	infers_emotion	art5_1_f	note
+mskljns/ComprehensionProblems_DAiSEE	facial Action Units -> engagement/frustration/confusion/boredom	yes	PROHIBITED	already recorded at p305; ungranted
+mskljns/Intelligent_Tutor_ComprehensionProblems_DAiSEE	same pipeline wrapped as a tutor	yes	PROHIBITED	already recorded at p305; MIT 1060 B c744c1abbfbb — clean grant, prohibited practice
+vardanagarwal/Proctoring-AI	eye tracking, mouth-open, person count, phone detection, audio	no	NOT REACHED	633*/351 forks, MIT (sidebar+README, NOT payload-pinned). Observations, not affective inference. Annex III high-risk + biometric duties still apply
+# RESULT: 0 new prohibited rows in 366. p305 predicted "expect more, especially among proctoring and engagement-analytics rows" — REFUTED.
