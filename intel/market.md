@@ -625,6 +625,30 @@ anything about my institution?" that is not a bespoke integration — and becaus
 
 ### EMEA
 
+**New at p321 — the EMEA public-sector stack is now named end to end, and it is mostly copyleft or
+unlicensed.** Germany's publicly funded OER portal WirLernenOnline publishes its plumbing on GitHub
+under the **`openeduhub`** organisation (67 repositories; `github.com/wirlernenonline` is a 404 and
+was this KB's wrong guess for two passes). Read first-hand at p321: the platform
+`edu-sharing/edu-sharing-community-repository` is **GPL-3.0 with 16,110 commits since 2007**; the
+harvester `oeh-search-etl` has **1,397 commits and no licence file**; the metadata layer
+`oeh-metadata-vocabs` is **CC0-1.0 with 938 commits**, carrying SKOS vocabularies for educational
+context, level, discipline, school type, rights, cost, machine-readable quality criteria and the
+**DigCompEdu, ESCO and EQF/DQR** competence frameworks; and two Apache-2.0 AI tools sit on top
+(`tutor-chatbot`, `ki-prompt-benchmark`).
+
+**The commercial read is the licence asymmetry.** The engineering-heavy layers are the unusable
+ones; the permissive ones are a 938-commit *dataset* and two prototypes of 10 and 3 commits. So an
+EMEA bid against a public OER buyer is **integration and extension work, not platform work** — and
+the CC0 competency vocabularies are a genuine shortcut, because mapping a tutor's skill graph onto
+DigCompEdu/ESCO/EQF is otherwise bespoke effort on every engagement. **This is also the EMEA answer
+to the `bncc-dev` precedent LATAM has**: the data layer exists here, it is just German and
+tagged under neither `bildung` nor `oer`.
+
+**`tutor-chatbot` names a sovereign-inference path, which is the detail to carry into a pitch.** Its
+provider options are **OpenAI or GWDG** (German academic compute), and `ki-prompt-benchmark` adds
+**AcademicCloud**. A publicly funded buyer that must keep inference inside national or academic
+infrastructure now has a working reference implementation to point at — see `intel/trends.md`.
+
 1. **Provider-grade conformity packaging.** Under the AI Act the school is the deployer and the
    tool-builder is the provider; a Globant-built tutor inherits the heavier duty. Productise it:
    technical documentation, risk management, data governance and post-market monitoring shipped
@@ -685,6 +709,27 @@ anything about my institution?" that is not a bespoke integration — and becaus
    looking for content.
 
 ### APAC
+
+**New at p321 — Indonesia, measured rather than assumed.** The `pendidikan` GitHub topic holds **42
+repositories**, and exactly one is an AI artefact: `RozhakDev/EduPintarIPAS` (**MIT**, 20 ★, **1
+commit**, Flask + **Azure AI Language Custom Question Answering**), a year-6 `IPAS`
+science-and-social-studies chatbot whose QA set the README says was built from the **official `SD`
+curriculum**, aimed explicitly at **3T regions** (*tertinggal, terdepan, terluar* — underdeveloped,
+frontier, outermost). Everything else in the topic is school administration at 0–4 ★.
+
+**So the Indonesian opportunity has the same shape as the Indian one and a named local precedent.**
+The curriculum-grounded-QA *pattern* is present and someone has already pointed it at the
+hardest-to-serve districts; the *engineering* is one commit. A buyer with a national curriculum and
+no data layer under it is Pattern **P10**, and Indonesia now joins India in that column — with the
+difference that Indonesia has a demonstrated framing (3T equity) a bid can be written around.
+
+**Japanese and Korean are now measured negatives, not blanks.** `kyoiku` holds one repository at
+0 ★; `gyoyuk` **exists and holds zero**. Both were reached only as romanisations — the CJK topic
+slug `教育` is a 404, because GitHub normalises topic slugs to ASCII. **These are findings about the
+open-source supply, not about the market**: Korea has the region's first binding AI statute (in
+force `2026-01-22`, see Regulation by region) and no open education-AI repositories under its own
+language tag. **Demand with no local open supply is a build opportunity, not an absence** — but
+price it as greenfield, because there is nothing to fork.
 
 1. **India's Class 3–8 mandate remains the single most concrete opportunity in this KB.** 32,900
    schools, a fixed 2026-27 start, specified contact hours, and a documented delivery gap — 64.7%

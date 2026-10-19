@@ -155,6 +155,45 @@ for the standards, an agent on the far side of the boundary for the teaching. Se
   Python-first studio integrates across the network boundary anyway, which this KB already
   mandates — but staffing a modification to the platform itself is a different skill mix.
 
+## edu-sharing — the EMEA OER repository platform, found at p321 and copyleft
+
+Pass 321's `openeduhub` finding (`repos/foundations.md`) names the platform its tooling sits on, and
+it is a real system of the Odoo/Moodle/OpenMRS kind this file exists to track.
+
+**`edu-sharing/edu-sharing-community-repository` — GPL-3.0, 30 ★, 16,110 commits, running since
+2007.** Read first-hand at p321. The README describes it as developing "networked E-Learning
+environments for managing and sharing educational contents" **across organisations** — i.e. a
+federated repository for educational content and its metadata, not an LMS and not a course player.
+Backend, Frontend, Cordova and webapp trees; the page shows no dominant language and the Releases
+section is empty, with releases pointing to a separate `edu-sharing-projects-community` repository.
+The branch read was **`maven/fixes/10.0`**.
+
+**The version number is the useful detail.** `openeduhub/ki-prompt-benchmark` benchmarks the
+metadata-generation prompts in **`mds.xml` v10.0** — the same major version. So the AI tooling and
+the platform are in step, and the metadata schema the prompts write into is the platform's own.
+That is a complete, inspectable chain from harvester to vocabulary to platform to AI prompt, all
+public, in one jurisdiction.
+
+| Layer | Artefact | Licence | Commits |
+|---|---|---|---|
+| Platform | `edu-sharing/edu-sharing-community-repository` | 🟡 **GPL-3.0** | 16,110 |
+| Harvest | `openeduhub/oeh-search-etl` | 🔴 **none** | 1,397 |
+| Metadata | `openeduhub/oeh-metadata-vocabs` | 🟢 **CC0-1.0** | 938 |
+| Tutor | `openeduhub/tutor-chatbot` | 🟢 **Apache-2.0** | 10 |
+| Evaluation | `openeduhub/ki-prompt-benchmark` | 🟢 **Apache-2.0** | 3 |
+
+**Read the licence column before proposing the stack.** The two layers with real engineering behind
+them are the two Globant cannot simply take: the platform is **GPL-3.0** and the harvester has **no
+grant**. The three permissive artefacts are the three with 10, 3 and 938 commits — and the 938 is
+data, not code.
+
+**What that implies for an EMEA engagement, stated plainly.** This is not a fork-the-platform
+opportunity. It is an **integrate-and-extend** one: take the CC0 vocabularies as your competency
+model, build against edu-sharing's API the way `tutor-chatbot` does rather than linking its code,
+and keep your own tutor and evaluation layers permissive. The GPL-3.0 platform then stays a
+deployed service you talk to over HTTP — the same posture this file takes on Moodle and OpenOLAT.
+Pattern **P21** in `compose/patterns.md` wires it.
+
 ## Moodle ships its own AI subsystem now — check it before proposing a tutor
 
 Moodle's core **AI subsystem** (since 4.5, documented through 5.3) is not a plugin a client has to

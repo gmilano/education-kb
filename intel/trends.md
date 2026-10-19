@@ -51,6 +51,51 @@ the metric this sector reports is unsound, which forces a correction to pass 318
 and a CI job, and the licences themselves — not just the descriptions of them — are drifting out
 of open source at the popular end of the market.
 
+## Sovereign and academic inference shows up in publicly funded edtech code — p321
+
+**The trend, stated from code rather than from a vendor claim.** Both AI tools in Germany's
+publicly funded OER organisation name a **non-US-hyperscaler inference path as a first-class
+option**: `openeduhub/tutor-chatbot` offers **OpenAI or GWDG** (Gesellschaft für wissenschaftliche
+Datenverarbeitung Göttingen — German academic compute), and `openeduhub/ki-prompt-benchmark` lets
+the operator route through **AcademicCloud** and compare it head-to-head with OpenAI on output
+quality, generation time and token cost. Both are **Apache-2.0** and both were read first-hand at
+p321.
+
+**Why this is a trend and not a configuration detail.** The benchmark exists to answer "which
+provider, at what quality and what token cost" **as an operator decision, repeatedly** — judge-scored
+on five criteria with a stated winner and rationale. That is procurement tooling. A public buyer
+that has to defend where inference happens now has a reference implementation that treats the
+provider as a swappable, measured variable instead of a fixed dependency.
+
+**What it changes in a bid.** This KB has recorded the EU AI Act obligations and the Article 50
+transparency duty that has applied since `2026-08-02`. Those create the compliance question;
+`openeduhub` is the first artefact in this KB that answers the adjacent *infrastructure* question in
+public code. **For a European public-sector engagement, assume the provider must be pluggable and
+the comparison auditable, and say so unprompted** — the buyer's own sector has already published
+the pattern, so proposing a single hard-wired US API now reads as behind the reference
+implementation rather than as a default.
+
+**Limits, so this is not over-read.** Ten commits and three commits respectively: these are
+prototypes, and one organisation in one member state is one data point, not a European consensus.
+The claim here is narrow — **that sovereign inference has moved from policy language into
+publicly funded, permissively licensed code** — and it rests on two repositories, both named.
+
+## The evaluation layer now has an operator-grade instance, not only academic ones — p321
+
+Pass 319 opened this KB's evaluation shelf with peer-reviewed artefacts: `MathTutorBench`,
+`AITutor-EvalKit`, and two pre-registered LLM-judge audits. **All four are research outputs.**
+`openeduhub/ki-prompt-benchmark` (Apache-2.0, 3 commits, read first-hand at p321) is the first one
+published by **an organisation that actually runs a service** — it benchmarks the prompts live in
+its own platform's `mds.xml` v10.0, accumulates judge feedback across runs into a regenerated prompt
+per field, and exports the winning set back into the platform's own schema.
+
+**The shape worth copying is the loop, not the tool.** Research benchmarks score a model against a
+frozen dataset. This scores **your current production prompt against a candidate replacement, on
+your own content, and then writes the improvement back into the system of record.** For any
+engagement where an agent generates metadata, feedback or assessment text, that closed loop is the
+thing a client can be shown and will understand — and the KB's own caution applies: it is three
+commits, so take the design and expect to rebuild it.
+
 ## 1. Institutional AI deployment is not landing — and that, not adoption, is the gap
 
 Earlier passes framed this sector as "usage is ahead of governance". The Digital Education Council

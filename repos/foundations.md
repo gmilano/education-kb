@@ -34,6 +34,8 @@ how most of this was found. The method note at the end is the part worth copying
 
 | Repo | Licence | ★ | Checked | Layer | Why it is foundational |
 |---|---|---|---|---|---|
+| https://github.com/openeduhub/oeh-metadata-vocabs | **CC0-1.0** | 2 | p321 | Curriculum / competency metadata (EMEA) | **938 commits, 7 forks, 5 watchers.** All SKOS vocabulary files for OpenEduHub / WirLernenOnline, as Turtle (`.ttl`) under the namespace `w3id.org/openeduhub/vocabs`, generated into a browsable view with SkoHub-Vocabs at `vocabs.openeduhub.de`. Covers **learning-resource type** (including a LOM-based set, `lom_*`), **educational context, educational level, discipline, school type**, **rights and copyright restriction, cost and price**, **quality criteria** (`quality_*`: data privacy, didactics, language) and **competence frameworks — DigCompEdu, ESCO skills, EQF/DQR levels**. **CC0-1.0 is the most permissive tier this KB has recorded on any asset** — no attribution condition at all. This is the row that corrects the p319 Germany claim below |
+| https://github.com/openeduhub/oeh-search-etl | 🔴 **NO LICENCE FILE** | 8 | p321 | Harvesting (EMEA) | The ETL behind WirLernenOnline: Scrapy spiders → Postgres → Elasticsearch, Python 3.13 managed with Poetry, Splash and Playwright containers for rendered sources; **1,397 commits on `master`** — the most heavily maintained artefact in the `openeduhub` org. 🔴 **Read it, do not depend on it.** No LICENSE file was present in the repository root when it was read first-hand at p321 and the page states no licence, so **there is no grant**. The commit count makes it the most tempting harvester in the sector and the missing licence makes it unusable in a client deliverable. Spider count is not stated in the README — `converter/spiders/` is not enumerated on the page, so this KB does **not** have a source count |
 | https://github.com/virgiliojr94/book-to-skill | MIT | 35.3k | p319 | Enablement / authoring | Converts a technical book, document folder or source set (PDF, EPUB, DOCX, HTML) into a structured agent skill: `SKILL.md` index, per-chapter files, glossary, patterns, cheatsheet; 228 commits, 3.7k forks. **The MIT licence covers the converter only, explicitly not the books you process with it** — which is the copyright question every "turn our textbooks into a tutor" engagement has to answer on day one. Read first-hand this pass: no agent-directed star solicitation in the README |
 | https://github.com/microsoft/ai-agents-for-beginners | MIT | 77.5k | p315 | Enablement | 18 lessons on building agents. Not a dependency — the fastest way to bring an engagement team to a shared baseline |
 | https://github.com/HKUDS/LightRAG | MIT | 40.2k | p319 | Retrieval | simple, fast RAG (EMNLP 2025), 10,873 commits, 5.7k forks. **Re-verified first-hand this pass** (the p316 reading was due a re-read): still MIT, unchanged. The course-material grounding layer under a tutor; same lab as DeepTutor, so the two compose without friction |
@@ -227,6 +229,12 @@ asymmetric, and the asymmetry is itself a regional finding.
 | `bildung` (de) | **One usable asset and one warning.** `smashburger-dev/argmin` (MIT + CC BY 4.0, 343 commits, German AI course, offline-capable) and `davidpomerenke/lernplattform` (GPL-3.0, **archived 2021-01-01**, which pointed to "wir lernen online" as its successor). Also **a 13-repository single-author cluster of near-identical "tech evangelism" pages at 1 star each** — topic pages can be padded, which is one more reason the ★ column is noise |
 | `onderwijs` (nl) | **Rostering glue, no AI.** `sikkepitje/TeamSync` (9 ★, PowerShell, syncs Magister school records into Microsoft School Data Sync) and two open secondary-school course repos (`wiskunde.opmaat`, `natuurkunde.opmaat`) |
 | `oer` (en, for contrast) | 419 repos of **textbooks and course materials**, nothing describing curriculum or competency metadata, and no AI |
+| `pendidikan` (id) | **42 repos, and exactly one AI artefact.** `RozhakDev/EduPintarIPAS` (**MIT**, 20 ★, **1 commit**, Flask, **Azure AI Language Custom Question Answering**) answers `IPAS` science-and-social-studies questions for Indonesian year-6 pupils off a QA set the README says was built from the official `SD` curriculum, and is aimed explicitly at **3T regions** (*tertinggal, terdepan, terluar* — underdeveloped, frontier, outermost) where tutoring is scarce. Everything else in the topic is school administration at 0–4 ★ — enrolment (`PPDB-online`), tuition (`aplikasi-spp`), facilities (`sisp`), a boarding-school monitor. **The curriculum-grounded-QA pattern exists in Indonesian; the engineering behind it does not — one commit is a demo, not a dependency** |
+| `enseignement` (fr) | **40 repos, zero AI.** Almost entirely teaching material for the French system: the `NSI` computer-science specialism at lycée, `CAPES` oral topic lists, LaTeX maths and geometry courses, a Python teaching IDE (`Pydiderot/pydiderotIDE`). The one infrastructure artefact, `ValbionGroup/Gadia` (**MPL-2.0**, 6 ★, 63 commits, Laravel/Blade school-life management — timetable, class notebook, grades, absences, canteen), was **archived by its owner on 2025-10-28 and is read-only**, and its README already warned the features were not guaranteed. **France's tag is pedagogy, not platform** |
+| `kyoiku` (ja) | **1 repo, 0 ★.** `mitsurutech/joho-puroguramingu-renshu` — 48 Python, SQL and web (HTML/CSS/JS) exercises for Japanese high-school *jōhō*, starter code, deliberately no solutions. No AI, no infrastructure |
+| `gyoyuk` (ko) | **The topic page exists and holds 0 repositories.** GitHub's own wording: "hasn't been used on any public repositories, yet". **This is the cleanest negative in the table — not a thin result, an empty one** |
+| `shiksha` (hi) | **3 repos, ceiling 3 ★.** `arhaanb/shiksha` (3 ★, last touched 2022-04-07), `shiksha-platform/documentation` (1 ★, 2022-01-20, no description) and an **archived** `.shiksha` domain-name extract. No AI, and the two real ones have been untouched for four years |
+| `taleem` (ar/ur) | **1 repo, 1 ★** — an Urdu-language Islamic blog of 370+ articles on static HTML. **Not education infrastructure, and the slug does not answer the Arabic question** — see the slug finding below |
 
 **Two conclusions, and the second is the commercial one.**
 
@@ -249,6 +257,79 @@ author-applied, so an unlabelled repository is invisible to this method; and onl
 five languages were swept. **"Not found in the topics swept" is the finding. "Does not exist" is
 not.** Untested and worth a pass: Arabic, Hindi, Japanese, Korean, French and Indonesian topic
 tags, and the `wirlernenonline` organisation, whose GitHub org page could not be read this pass.
+
+## Pass 321: the p319 to-do list, executed — and the Germany claim it corrects
+
+Pass 319 ended its sweep section with a named to-do: *"Untested and worth a pass: Arabic, Hindi,
+Japanese, Korean, French and Indonesian topic tags, and the `wirlernenonline` organisation, whose
+GitHub org page could not be read this pass."* **All seven were attempted at p321.** Six are
+negatives and are in the table above, written down rather than left as silence. The seventh is the
+find of the pass.
+
+### 1. The correction: Germany *does* have a competency-metadata layer, and this file said it did not
+
+Pass 319 concluded, from the `bildung` and `oer` sweeps, that **"Spanish-speaking LATAM, India,
+Germany and the Netherlands do not have an equivalent"** to Brazil's `bncc-dev` curriculum stack,
+and that the `oer` topic held "nothing describing curriculum or competency metadata." **For Germany
+that is now wrong, and the artefact is better licensed than the Brazilian one.**
+
+`openeduhub/oeh-metadata-vocabs` is **CC0-1.0** with **938 commits** and carries SKOS vocabularies
+for educational context, level, discipline and school type, rights and copyright restriction, cost
+and price, machine-readable quality criteria, and the **DigCompEdu, ESCO and EQF/DQR competence
+frameworks** — published under a stable `w3id.org` namespace with a browsable SkoHub front end.
+That is a competency-metadata layer by any reading.
+
+**Why p319 missed it, and the lesson is about method rather than luck.** The repository is tagged
+for neither `bildung` nor `oer`; it lives in an organisation p319 looked for **under the wrong
+name**. `github.com/wirlernenonline` is **404**. The account is `openeduhub`, and the only way this
+pass reached it was by searching the *project* name and reading the owners off the results. **A
+topic sweep cannot see an untagged repository, and an org sweep cannot see an org whose GitHub
+handle differs from its public brand.** Both failure modes are now demonstrated, not hypothesised.
+
+### 2. The slug finding — why "sweep the topic in the region's language" needs one more rule
+
+`https://github.com/topics/教育` returns **404**. GitHub topic slugs are ASCII-normalised, so a CJK
+term cannot be typed in as a topic even when it is the word the region actually uses. The sweeps
+that worked were the **transliterations** — `kyoiku`, `gyoyuk` — and one of those turned out to hold
+zero repositories. So p319's standing method gains a clause: **sweep the region's language, and for
+non-Latin scripts sweep the romanisation, because the topic namespace will not accept the script.**
+Pass 319 could not have discharged "Japanese, Korean" by typing the obvious thing.
+
+### 3. What `openeduhub` is, and why a 0 ★ org is worth a section
+
+**67 public repositories.** The org profile describes itself as the account behind
+WirLernenOnline.de: *"This OER-Infrastructure makes (O)ER findable and usable in connected
+platforms,"* based on **edu-sharing**, WordPress and others — i.e. Germany's publicly funded open
+educational resources portal, with its plumbing on GitHub. Four repositories were read first-hand
+this pass:
+
+| Repo | Licence | ★ | Commits | What it is |
+|---|---|---|---|---|
+| `oeh-metadata-vocabs` | **CC0-1.0** | 2 | **938** | SKOS/Turtle vocabularies incl. DigCompEdu, ESCO, EQF/DQR — see the row above |
+| `oeh-search-etl` | 🔴 **none** | 8 | **1,397** | Scrapy → Postgres → Elasticsearch harvester — see the row above |
+| `tutor-chatbot` | **Apache-2.0** | 0 | 10 | RAG tutor over the WLO API with Bloom-taxonomy analytics — `agents/top.md` |
+| `ki-prompt-benchmark` | **Apache-2.0** | 0 | 3 | LLM-as-judge prompt bench, exports `mds.xml` — `agents/top.md` evaluation table |
+
+Also present and unread at p321, named here so p322 does not re-discover them: `metalookup`
+(5 ★, Python, domain metadata including licensing), `oeh-search-frontend` (5 ★, TS),
+`edu-sharing-python-client` (0 ★), `lernpfadeditor` (learning-path editor with differentiation and
+content assignment), `wlo-quellenliste`, `metadata-browser-plugin-fuerAPI`. **57 of the 67 were not
+listed on the first page and remain unenumerated.**
+
+**The star counts are 0, 0, 2 and 8, and that is this KB's Ed-Fi lesson repeating in a second
+jurisdiction.** The Ed-Fi section below makes the argument from 12 ★ and 6 ★ of US state-adopted
+infrastructure. `openeduhub` makes it again from a German federal-state-funded portal with a
+1,397-commit harvester at 8 ★. **A star-ranked search cannot see publicly funded education
+infrastructure in any region, and two independent instances is no longer a coincidence.**
+
+### 4. The licence split inside one org, which is the practical warning
+
+The same organisation ships **CC0-1.0**, **Apache-2.0** and **no licence at all**, and the
+unlicensed repository is the one with the most commits. **Do not infer an org-level licence
+posture from one repository.** On this evidence the rule for `openeduhub` is: take
+`oeh-metadata-vocabs` (CC0) and the two Apache-2.0 tools freely; treat `oeh-search-etl` as
+documentation of a harvesting design and **write your own**, or open an issue asking for a licence
+before any engagement depends on it.
 
 ## The Ed-Fi finding — the gap this KB declared three passes running, closed in p316
 

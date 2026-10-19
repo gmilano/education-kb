@@ -32,6 +32,77 @@ recipes, and that belongs in the SOW.
 
 ---
 
+## P21 — The EU public-sector OER tutor: integrate the copyleft platform, own the permissive edges
+
+**When to propose it.** A European public-sector or publicly funded education buyer — ministry,
+federal state, national OER portal, university consortium — that already runs a content repository
+and wants an AI tutor over it, under AI Act scrutiny and, increasingly, with a stated preference
+for inference that stays in national or academic infrastructure.
+
+**Why this recipe and not a fork.** Everything in the reference stack was read first-hand at p321,
+and the licences do not permit the obvious move. The two layers with real engineering are
+**`edu-sharing` (GPL-3.0, 16,110 commits)** and **`oeh-search-etl` (no licence file, 1,397
+commits)**. The three permissive artefacts are a **dataset** and two **prototypes**. So the
+architecture is forced, and that is a feature: it keeps Globant's deliverable on the permissive side
+of the line.
+
+**The wiring, named repo by named repo.**
+
+1. **Leave the repository platform alone and talk to it over HTTP.**
+   `edu-sharing/edu-sharing-community-repository` (**GPL-3.0**) stays a deployed service — either the
+   client's existing instance or a stock install. **Do not link its code.** `openeduhub/tutor-chatbot`
+   demonstrates the integration surface: the edu-sharing / WLO REST API, in its case
+   `https://www.wirlernenonline.de/api/v1`. This is the same posture this KB takes on Moodle and
+   OpenOLAT, so the copyleft question never reaches the deliverable.
+
+2. **Take the competency model as data, from `openeduhub/oeh-metadata-vocabs` (CC0-1.0, 938
+   commits).** SKOS/Turtle at `w3id.org/openeduhub/vocabs`: educational context, level, discipline,
+   school type, rights and cost, machine-readable quality criteria, and **DigCompEdu, ESCO skills
+   and EQF/DQR**. CC0 means no attribution condition — load it and move on. **This replaces the
+   bespoke skill-taxonomy work that otherwise opens every one of these engagements**, and because
+   the vocabularies are the ones the platform already annotates against, your tutor's skill graph
+   and the client's content metadata share a vocabulary by construction rather than by mapping.
+
+3. **Put the deterministic pedagogy in `tutor-mcp` (MIT), not in the prompt.** Skill graph, BKT,
+   FSRS, prerequisite rules and narrative memory behind MCP, keyed to the vocabulary URIs from
+   step 2. The vocabulary supplies the node identities; `tutor-mcp` supplies the mastery state and
+   the decision about what to teach next. `agents/top.md` carries the row.
+
+4. **Ground answers in the client's own content, not the open web.** `HKUDS/LightRAG` (MIT) over the
+   material the platform returns for the learner's current objective. `tutor-chatbot`'s pattern is
+   worth copying exactly here: **extract the learning metadata from the learner's question first,
+   query the repository API with it, then attach the retrieved materials to the answer as direct
+   links filtered by subject, content type and source** — so every claim carries a provenance link
+   back into the client's repository. That is what makes the output defensible to an inspector.
+
+5. **Make the inference provider pluggable from day one.** `tutor-chatbot` offers **OpenAI or GWDG**;
+   `ki-prompt-benchmark` adds **AcademicCloud**. Build the same seam. For a publicly funded EU buyer
+   this is no longer a nice-to-have — see the p321 trend in `intel/trends.md`.
+
+6. **Ship the evaluation harness as part of the deliverable, modelled on
+   `openeduhub/ki-prompt-benchmark` (Apache-2.0).** Judge-scored comparison of the current prompt
+   against a candidate on **five criteria, 1–10, with a named winner and a written rationale**, plus
+   generation time and token cost per provider, feedback accumulated across runs into a regenerated
+   prompt per field. **It is three commits — take the design and build it properly.** Pair it with
+   `AITutor-EvalKit` (MIT) if the buyer wants a teaching-quality measure rather than a
+   metadata-quality one.
+
+7. **Add `pylti1.3` (MIT) only if the tutor must appear inside an LMS**, and keep the AI Act posture
+   from `intel/market.md`: Article 50 transparency has applied since `2026-08-02`, so the tutor
+   discloses that it is an AI in the learner-facing surface, and anything touching admissions,
+   assessment or learning-path steering is Annex III high-risk from `2027-12-02`.
+
+**What the client ends up owning.** A permissively licensed tutor, a permissively licensed
+evaluation harness, a CC0 competency model, and an HTTP integration against a GPL-3.0 platform they
+already run. **Nothing in the deliverable is copyleft and nothing depends on an unlicensed
+repository** — which is the whole reason the recipe is shaped this way.
+
+**The honest caveat.** Steps 1, 2 and 7 rest on artefacts with 16,110, 938 and 178 commits. Steps 5
+and 6 rest on prototypes of 10 and 3 commits, and step 6's reference exports to a schema
+(`mds.xml` v10.0) that is specific to edu-sharing. **Budget real engineering for the pluggable
+provider and the evaluation harness** — this recipe tells you the shape and the licence position,
+not that the code exists.
+
 ## P1 — Curriculum-grounded lifelong tutor
 
 **For:** any institution that wants a tutor answering from *its* material, with a learner model that

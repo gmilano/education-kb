@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 321 — a CC0 competency vocabulary with 938 commits, and a 1,397-commit harvester with no licence
+
+**Seventh pass of 2026-10-19.** Two rows added to `repos/foundations.md`, bringing it to
+twenty-three, and **one of them corrects a claim this file's sweep section has carried since p319.**
+Both were read first-hand off github.com; non-GitHub origins fail at DNS from this sandbox
+(`www.multistate.us` → `getaddrinfo ENOTFOUND` this pass), and two scanning probes were refused by
+the sandbox classifier and not worked around.
+
+### `openeduhub/oeh-metadata-vocabs` — CC0-1.0, 2 ★, 938 commits, 7 forks
+
+All SKOS vocabulary files for OpenEduHub / WirLernenOnline, as **Turtle** under the stable namespace
+`w3id.org/openeduhub/vocabs`, with a browsable SkoHub-Vocabs front end at `vocabs.openeduhub.de`.
+It covers learning-resource type (including a LOM-based `lom_*` set), educational context, level,
+discipline and school type, rights and copyright restriction, cost and price, **machine-readable
+quality criteria** (`quality_*`: data privacy, didactics, language) and the **DigCompEdu, ESCO
+skills and EQF/DQR** competence frameworks.
+
+**Why it matters more than its two stars.** p319 concluded that "Spanish-speaking LATAM, India,
+Germany and the Netherlands do not have an equivalent" to Brazil's `bncc-dev` curriculum stack, and
+that the `oer` topic contained "nothing describing curriculum or competency metadata." **For Germany
+that is now corrected, and by an artefact licensed better than the Brazilian one** — CC0-1.0 is the
+most permissive tier recorded anywhere in this KB, with no attribution condition at all.
+
+**Why it was missed, which is the transferable part.** It is tagged neither `bildung` nor `oer`, and
+it sits in an org p319 searched for as `wirlernenonline` — **a 404**. Two distinct blind spots, both
+now demonstrated: a topic sweep cannot see an untagged repository, and an org sweep cannot see an
+org whose GitHub handle differs from its public brand.
+
+### `openeduhub/oeh-search-etl` — 🔴 no licence file, 8 ★, 1,397 commits
+
+The harvester behind WirLernenOnline: **Scrapy → Postgres → Elasticsearch**, Python 3.13 under
+Poetry, with Splash and Playwright containers for sources that need rendering. **1,397 commits on
+`master` makes it the most heavily maintained artefact in the org** — and **no LICENSE file was
+present at the repository root when it was read this pass, and the page states no licence.**
+
+**It is in the table as a 🔴 row precisely because it is tempting.** This is the most complete open
+harvesting design the sector has, and there is no grant attached to it. Read it as documentation,
+write your own, or open an issue asking for a licence before anything bills against it. The README
+does not enumerate `converter/spiders/`, **so this KB has no source count** and will not estimate one.
+
+### The licence split inside a single organisation
+
+`openeduhub` ships **CC0-1.0**, **Apache-2.0** and **nothing at all**, and the unlicensed repository
+is the one with the most commits. **Do not infer an org-level licence posture from one repository** —
+on this org the per-repo check is not optional.
+
+### Also present, unread, named so p322 does not re-discover them
+
+`metalookup` (5 ★, Python, domain metadata including licensing), `oeh-search-frontend` (5 ★, TS),
+`lernpfadeditor` (learning-path editor with differentiation and content assignment),
+`edu-sharing-python-client`, `wlo-quellenliste`, `metadata-browser-plugin-fuerAPI`. **57 of the 67
+repositories were not on the first page and remain unenumerated.**
+
 ## 2026-10-19 — Pass 320 — the first OSI-licensed artefact at the grade-passback seam, and it is GPL
 
 **Sixth pass of 2026-10-19.** One row added to `repos/foundations.md`, bringing it to twenty-one.

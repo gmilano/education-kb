@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 321 — `wirlernenonline` is a 404; the organisation is `openeduhub`, and it has 67 repositories
+
+**Seventh pass of 2026-10-19.** One row added to `agents/top.md`, one to its evaluation table, two to
+`repos/foundations.md`, six measured negatives to that file's sweep table. **The pass had an agenda
+set by p319 rather than by a search ranking**, and that is the only reason it found anything.
+
+**Method, re-tested not inherited.** The fetch tool reaches **github.com** and non-GitHub origins
+fail at DNS — `www.multistate.us` → `getaddrinfo ENOTFOUND` on a direct attempt this pass. A
+`curl -sI` probe and a proxy-status probe were **both refused by the sandbox classifier as "Exfil
+Scouting" and were not worked around**; reachability was therefore measured by fetching real pages,
+not by scanning. Every repository claim here is first-hand off github.com.
+
+**`make hooks` was run, and it was RED on arrival.** 20 of 22 gates green, with `recount` and
+`gate-permissive-arm` red. **Both were confirmed red at pristine `HEAD`** by stashing this pass's
+work and re-running them, so they are **inherited from p320, not caused here**: `recount` reports
+`STALE=0 NO-ANCHOR=5 of 5` — every registered claim's anchor sentence is missing from its shelf —
+and `gate-permissive-arm` fails one control of 32,
+`test_the_defect_was_not_at_the_top_of_the_cell_queue`. **The count is unchanged on departure:
+20/22, the same two gates.** `gate-tables` — the control enforcing the rule that no data row may
+render as a table header — is **green across all 10 shelves** with this pass's additions in place.
+
+🔴 **p322, this is the cheapest red in the KB to clear.** `recount` names its own remedy
+(*"restore the sentence or re-point the anchor; do not ignore it"*) and all five claims are
+NO-ANCHOR rather than STALE, so the numbers are not in dispute — only the sentences the gate reads
+them from. It has now been red for at least two passes. **p321 neither fixed it nor masked it**,
+because the edits this pass made were additive and re-pointing another pass's claim registry is not
+a research task; but it should not survive a third pass.
+
+### The prescribed searches are exhausted for this industry, and that is a finding
+
+All eight mandated queries were run — four global, four regional. **The global four returned
+aggregator and SEO pages**: `toolradar`, `fungies.io`, `oosmetrics`, a sponsored OpenEduCat
+comparison set, and market-research vendor blogs. **The regional four returned real facts that this
+KB already holds at higher precision**: the EU AI Act Annex III deferral, `H.R. 8747`, the
+134-bills/31-states count, Canada's *AI for All*, the NYC moratorium, Korea's `2026-01-22`
+commencement, India's Class 3 mandate, Brazil's Bill 2338 and the ANPD sandbox. `intel/` already
+carries every one of those **with OJ numbers, in-force dates and the tracker-count caveat the
+snippets lacked** — `open-gaps.md` records a prior pass reaching the identical verdict.
+
+**So the budget went to the one live channel.** Not a complaint about the search battery: a
+statement that for this industry, at this maturity, the marginal finding is on github.com.
+
+### The find: an organisation p319 looked for under the wrong name
+
+`github.com/wirlernenonline` returns **404.** The account behind Germany's publicly funded OER
+portal is **`openeduhub`** — **67 public repositories**, profile: *"This OER-Infrastructure makes
+(O)ER findable and usable in connected platforms,"* on edu-sharing and WordPress. It was reached by
+searching the **project** name and reading owners off the results, which is the only method that
+would have worked.
+
+**`openeduhub/tutor-chatbot` — Apache-2.0, 0 ★, 10 commits** — is the new `agents/top.md` row. It
+blends a curated QA dataset with LLM answers, extracts learning metadata from the learner's
+question, queries the **WLO / edu-sharing API** for matching materials and attaches them to the
+answer as direct links filtered by subject, content type and source, and reports **Bloom-taxonomy
+learning analytics**. Its provider is **OpenAI or GWDG** — German academic compute.
+
+**It is a 10-commit prototype and the row says so.** What makes it worth a row at 0 ★ is that it is
+the **only Apache-2.0 public-sector tutor in this KB and the only one anywhere in it with a
+sovereign-inference path.** Read it for the architecture.
+
+**`openeduhub/ki-prompt-benchmark` — Apache-2.0, 0 ★, 3 commits** goes to the evaluation table. A
+**public OER operator publishing its own LLM-as-judge harness**: it pits the prompts live in
+edu-sharing's `mds.xml` v10.0 against an optimised set, scores both on five criteria 1–10 with a
+judge model that names a winner and a rationale, measures generation time and token usage across
+OpenAI / B-API / **AcademicCloud**, accumulates judge feedback into a regenerated prompt per field,
+and exports back to `mds.xml`. **p319 opened the evaluation layer with academic benchmarks; this is
+the first operator-grade instance of it.**
+
+### Six negatives, recorded because silence looks like coverage
+
+`gyoyuk` (ko) — **topic exists, zero repositories.** `kyoiku` (ja) — one repo, 0 ★, no AI.
+`shiksha` (hi) — three repos, ceiling 3 ★, two untouched since 2022. `taleem` (ar/ur) — one repo,
+an Urdu Islamic blog, not education infrastructure. `enseignement` (fr) — 40 repos, zero AI, and
+its one platform artefact (`Gadia`, MPL-2.0) was **archived 2025-10-28**. `pendidikan` (id) — 42
+repos, one AI artefact (`EduPintarIPAS`, MIT, 20 ★, **1 commit**, Azure QA on the official `SD`
+curriculum, aimed at **3T** regions). Full detail and the row-level caveats are in
+`repos/foundations.md`.
+
+### A slug rule p319 could not have known it needed
+
+`https://github.com/topics/教育` is **404** — GitHub topic slugs are ASCII-normalised. The Japanese
+and Korean sweeps only ran as **romanisations**, and one of those holds nothing. p319's "sweep the
+topic in the region's own language" now carries: **for non-Latin scripts, sweep the romanisation,
+because the topic namespace will not take the script.**
+
 ## 2026-10-19 — Pass 320 — five candidates, five rejections, and a star count this KB had been reasoning from
 
 **Sixth pass of 2026-10-19.** **No rows were added to `agents/top.md` and that is the result, not a
