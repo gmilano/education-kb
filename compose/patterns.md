@@ -6,11 +6,17 @@ updated: 2026-10-19
 
 # Compose patterns — education
 
-**Pass 317 · 2026-10-19.** Eight recipes. Every repo named below is in `agents/top.md`,
+**Pass 318 · 2026-10-19.** Nine recipes. Every repo named below is in `agents/top.md`,
 `repos/foundations.md` or `verticals/solutions.md`, with the pass in which it was read first-hand
 recorded there. Timings are engagement estimates, not measurements.
 
-Changes this pass: **P8 is new** — the permissive-LMS build on OpenOLAT (Apache-2.0), the first
+**Changes this pass: P9 is new** — the COPPA disclosure-boundary remediation, driven by a federal
+rule that has been in force since 2026-04-22 and that most deployed K-12 AI products appear to
+violate. It is the shortest-cycle, most clearly budgeted pattern in this file. **P2's LTI risk note
+now names concrete library alternatives** (`repos/foundations.md` maps them across seven
+languages), and the region table gains a row.
+
+Carried from pass 317: **P8** — the permissive-LMS build on OpenOLAT (Apache-2.0), the first
 pattern in this KB that does *not* require an LTI boundary. **P1 gains a FERPA-filtered retrieval
 step.** **P4 gains the 2026-12-02 watermarking date and ports to South Korea**, whose Framework Act
 on AI has been in force since 2026-01-22. **Every pattern now carries the `pylti1.3` concentration
@@ -351,6 +357,88 @@ and its testing disappear.
 
 ---
 
+## P9 — The COPPA disclosure boundary (North America K-12) — NEW
+
+**Time**: 3–5 weeks for the audit, 6–10 weeks for remediation | **Licences**: all permissive
+**Trigger**: the amended COPPA Rule, full compliance required since **2026-04-22**
+
+**Why this is the shortest-cycle pattern in this file.** It does not ask the district to buy a new
+capability. It tells them something they already own is out of compliance with a federal rule that
+took effect six months ago, and then fixes it. The budget line exists before the conversation does.
+
+**The legal mechanic, stated precisely because the whole pattern turns on it.** Amended
+§312.5(a)(2) requires **separate verifiable parental consent before a child's personal information
+is disclosed to a third party**, and the exception covers disclosures *integral* to the service,
+not merely useful or convenient. A parent may consent to the product and refuse the disclosure.
+The Rule also adds **retention limits**, a **written, published retention policy**, and
+**biometric identifiers** to the definition of personal information.
+
+**In a typical 2025-vintage K-12 tutor, the pupil's prompt goes to OpenAI, Anthropic or Google.
+That is a disclosure to a third party.** If it was covered by a single blanket consent at
+sign-up — which is the normal implementation — the deployment is non-compliant.
+
+### Stage 1 — the posture audit (3–5 weeks, sellable on its own)
+
+Inventory, for every AI feature the district runs:
+
+1. **Egress**: which fields leave the district boundary, to which processor, under what contract.
+   Prompts are the obvious one; transcript history, assignment text, IEP-adjacent notes and voice
+   audio are the ones that get missed. Voice adds biometrics, which are now PII by definition.
+2. **Consent structure**: is there one consent or two? If the parent cannot accept the product and
+   decline third-party model disclosure *independently*, there is a finding.
+3. **Retention**: is there a written, published retention policy, and does the system actually
+   enforce it — including on the processor's side, where the contract usually says 30 days and
+   nobody has checked.
+4. **Integrality argument**: for each disclosure you intend to keep, write the sentence explaining
+   why it is integral to the service the parent asked for. If that sentence is hard to write, the
+   disclosure fails the exception.
+
+Deliverable: a findings register mapped clause-by-clause, with each finding marked
+*remediate-in-place* or *remove-the-disclosure*.
+
+### Stage 2 — remediation, and there are only two real answers
+
+**Answer A — separate the consent and keep the disclosure.** Split the consent flow in two, gate
+model calls on the second grant, and degrade gracefully for pupils whose parents granted only the
+first: the product must still work, teacher-facing or with local-only features. Add retention
+enforcement as a scheduled job with an audit record per deletion, reusing the hash-chained audit
+shape the governance layer in **P3** already builds. This is the cheaper path and it leaves the
+district's existing vendor relationships intact.
+
+**Answer B — remove the disclosure entirely.** If the model call never leaves the district
+boundary, §312.5(a)(2) is not engaged for that call. Two routes, both already in this KB:
+
+- **On-premise inference behind the LMS the district already runs.** Moodle's core AI subsystem
+  takes an **Ollama** provider directly, and its **OpenAI-compatible** provider accepts a
+  self-hosted **LiteLLM** or **LocalAI** gateway (`verticals/solutions.md`). The pupil's prompt
+  reaches a model the district operates. No third party, no second consent, no retention exposure
+  at a processor.
+- **Offline-first delivery** where connectivity or policy makes even on-premise inference
+  impractical — **Kolibri** (MIT) plus the local tutor shell in **P5**, with
+  `zijinz456/OpenTutor` (MIT, 10+ providers incl. local) as the agent shell.
+
+**Pair B with the deterministic pedagogy engine and the compliance story gets better, not worse.**
+`tutor-mcp` (MIT) runs BKT, FSRS and prerequisite gating **locally against SQLite** — the mastery
+model, which is the most sensitive longitudinal record in the system, never needs to leave the
+building at all. The LLM is then only a language surface over a local decision engine, and the
+smallest possible share of pupil data crosses any boundary. **This is the strongest commercial
+argument in this KB for the architecture it has advocated for four passes, and it now has a
+federal rule behind it rather than an aesthetic preference.**
+
+### What not to build
+
+**Do not build a COPPA compliance engine.** `repos/foundations.md` records about a dozen
+FERPA/COPPA governance repos, every one at 8 stars or fewer and nearly all started in the two
+months after the April deadline. The market is forming; none has won; and a client's compliance
+posture should not sit behind a 1-star dependency. Build the audit as a method and the remediation
+as architecture, reuse **P3**'s audit-logging layer, and keep the legal determination with the
+district's counsel — the engagement is the disclosure-boundary redesign, not a legal opinion.
+
+**Scope boundary to state in the SOW:** Globant determines where data flows and makes it match what
+the district's counsel says the Rule requires. Globant does not certify COPPA compliance.
+
+---
+
 ## The cross-cutting risk this pass added to every pattern
 
 **Seven of these eight patterns cross the LMS boundary through `dmitry-viskov/pylti1.3`: one MIT
@@ -361,8 +449,15 @@ pass 317 is the first pass to say so out loud.
 It is good software — it covers the whole LTI Advantage surface (Deep Linking, AGS, Names and Roles,
 Course Groups, Submission Review, Data Privacy Launch), which is why every pattern leans on it. The
 risk is not quality, it is concentration. **Name it in the risk section of any SOW that depends on
-it**, and know the fallbacks: 1EdTech members maintain reference implementations in other languages,
-`ltijs` (Node) is the route `blamb/lti-tutor` took, and **P8 avoids the dependency entirely.**
+it**, and know the fallbacks — which pass 318 made specific. `1EdTech/ltibootcamp` indexes LTI 1.3
+implementations across seven languages: **`ltijs` and Atomic LTI Worker (Node)**, **OAT's core /
+Deep Linking / Names & Roles libraries and a Symfony bundle (PHP)**, **UOC's library and Spring
+Boot library (Java)**, **`LtiAdvantagePlatform` (.NET)**, **Atomic Jolt's starter app (Ruby)**,
+**Atomic Forge (Rust)**, and `django-lti` alongside `pylti1.3` itself (Python). `ltijs` is the
+route `blamb/lti-tutor` took to working deep linking and AGS passback against Moodle.
+**Caveat before you scope on any of them:** that index carries no LICENSE file, its newest content
+folder is `europe_tech_2020`, and its own README says the entries "have not been vetted" — verify
+each against its repository. And **P8 avoids the dependency entirely.**
 
 ---
 
@@ -371,7 +466,7 @@ it**, and know the fallbacks: 1EdTech members maintain reference implementations
 | Region | Lead with | Why |
 |---|---|---|
 | Greenfield / no incumbent LMS (any region) | **P8** | Apache-2.0 OpenOLAT removes the LTI boundary; one deployable, 2–3 weeks less build |
-| North America | **P3 + P6**, then P7 where restricted, then P1/P2 | Dated legal requirements (Ohio 2026-07-01, Idaho SB 1227, 134 bills/31 states); governance is the budgeted line and the roster spine is now open source |
+| North America | **P9 first**, then **P3 + P6**, then P7 where restricted, then P1/P2 | **P9 leads because the amended COPPA Rule has been in force since 2026-04-22 and most deployed K-12 AI is likely non-compliant** — it sells into the installed base rather than competing with a frontier-model seat licence. Then the dated policy requirements (Ohio 2026-07-01, NC model policy 2026-12-31, Idaho SB 1227, 134 bills/31 states); governance is the budgeted line and the roster spine is now open source |
 | EMEA | **P4**, with **P8** where sovereignty decides the deal | Provider-side conformity under Annex III; Article 50 live, watermarking and new prohibitions both land 2026-12-02, 2027-12-02 the real deadline. OpenOLAT is the only permissive, EMEA-authored, EMEA-maintained LMS in this KB |
 | EMEA — Gulf | **P1/P2 with Arabic-first localisation** | UAE ~28% of GCC edtech, National AI Strategy 2031; incumbents (Alef, Classera, Abwaab) are proprietary and buying integration, not platforms |
 | EMEA — Africa | **P5** | Strongest low-resource evidence base in the world (Edo State, EIDU); DigiSchool tablets are installed hardware needing content |
@@ -380,7 +475,7 @@ it**, and know the fallbacks: 1EdTech members maintain reference implementations
 | LATAM | **P2 grounded in Latam-GPT**, with P4's artefacts ported | The 92%-usage / 30%-satisfaction gap is a delivery problem, which P2 answers; Brazil's PL 2338 is risk-based, so the EU conformity file transfers |
 
 **No pattern here is LATAM-only or North-America-only.** P1 and P2 are the portable core; P3, P4,
-P5, P6 and P7 are the regional wrappers that make them biddable. **P8, new this pass, is the only
+P5, P6, P7 and P9 are the regional wrappers that make them biddable. **P8, new this pass, is the only
 one selected by the client's starting position rather than by region** — it applies wherever there
 is no incumbent LMS, and it is strongest in EMEA because sovereignty and a permissive European
 platform happen to answer the same objection.

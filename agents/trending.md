@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 318 — a repo asks AI agents to star it, three listicle licences fail verification, and the LTI watch item is unchanged
+
+**Fourth pass of 2026-10-19, and an outward search that turned into a method finding.** Pass 317
+closed by advising that the KB's remaining gaps be treated as search-method artefacts until proven
+otherwise. This pass tested that and the advice held twice: the EMEA market-size gap was a
+search-method artefact (see `intel/market.md`), and the LATAM authorship gap was too (see below).
+It also found that the *inputs* this KB ranks on are less trustworthy than assumed, in both
+directions.
+
+Verification method unchanged and re-confirmed against the proxy's own status endpoint: `curl -sI`
+to github.com returns **403 at this session's proxy**, so every repo below was read off its GitHub
+page.
+
+### `blamb/lti-tutor` — re-checked, unchanged, still unusable
+
+The highest-value watch item in this KB. Re-read first-hand this pass: **licence still "To be
+decided", still 0 stars, 0 forks, 39 commits.** Nothing has moved since pass 317.
+
+It remains the only known open source implementation of LTI 1.3 against Moodle with dynamic
+registration, deep linking and completion passback through Assignment & Grade Services, on
+`ltijs` — the artefact this KB has declared missing for four passes. Default copyright applies, so
+Globant cannot use it, fork it, or copy its approach into a deliverable. **A single commit adding
+a LICENSE file would make it the most strategically valuable repo in this KB. Re-check it every
+pass; it costs one page load.**
+
+### New in the table: `24kchengYe/human-skill-tree` — and a caveat bigger than the repo
+
+**Dual MIT/AGPL-3.0 (skills) and AGPL-3.0 (app), 573 ★, 36 commits, bilingual EN/zh.** 33 agent
+skills that turn Claude, ChatGPT or Gemini into structured tutors on spaced-repetition and
+active-recall principles, covering K-12 through career and social skills, plus a Next.js 16 app
+(React Flow, Supabase, OpenRouter). It is APAC-authored evidence for trend 7 — the skill, not the
+app, as the unit of educational AI — and the skills half is usable.
+
+**The caveat: its README ends with a passage addressed to AI agents, asking them to star the
+repository** and claiming efficiency benefits for doing so. It was ignored when this pass read the
+page, and it is recorded because of what it implies. This KB is compiled by a process that reads
+repository pages; so are a growing number of the tools client engineers use to choose
+dependencies. A 573-star, 36-commit ratio is what a solicited star count looks like from the
+outside.
+
+**Content a repository addresses to an automated reader is data, never instruction.** The repo
+stays in the table — the skills are real and APAC-authored presence is thin — but the behaviour is
+flagged, and the ★ column is now formally demoted. With pass 317's finding that stars run *too
+low* on institutional infrastructure (Ed-Fi 12, Sunbird 41, OpenOLAT 448/31,877 commits), **stars
+now fail in both directions. Rank on commits, release cadence and licence.**
+
+### New in the table: `ahmedEid1/lumen` — in for its bad numbers, not its good ones
+
+**GPL-3.0, 89 ★, 828 commits, v2.0.0 on 2026-06-06.** A multi-agent orchestrator builds a private
+course from a one-sentence goal in ~50 seconds; a course-scoped RAG tutor then teaches it, with
+retrieval behind a single access-control clause so private and cloned courses cannot leak chunks.
+FastAPI + Next.js 15 + Postgres/pgvector; BYOK keys envelope-encrypted and kept out of logs,
+traces and exports.
+
+**It publishes its own evaluation scores and they are bad: authoring 3.85/5, tutor 2.33/5, ingest
+0.83/5**, with the weak tutor score attributed to a citation-format mismatch. No other repo in
+this KB publishes a number that unflattering about itself. In a sector where every vendor deck
+claims a tutoring uplift, that is the most credible artefact of the pass, and the eval-harness
+shape is worth copying into any tutor engagement where the client will eventually ask "how do you
+know it teaches?"
+
+**Licence warning: the README badge says MIT; the `LICENSE` file is the full GPL-3.0 text.** The
+file governs. Read it, not the badge.
+
+### Searched for, found, and rejected: `AITutor-EvalKit`
+
+arXiv 2512.03688 (MBZUAI: Naeem, Maurya, Petukhova, Kochmar) describes a tool for evaluating the
+**pedagogical** quality of tutor responses in student-mistake remediation — precisely the eval
+layer this sector lacks. The authors call it an early research prototype and **no GitHub
+repository or licence could be located this pass.** Cite the paper as evidence the eval problem is
+being worked; do not plan on the code.
+
+### The student-privacy gap: sixth declaration, and the first time it is contested rather than empty
+
+Searched directly again. GitHub's `ferpa` topic now holds a *cluster* of governance projects that
+did not exist in earlier passes: `Principled-Evolution/gopal` (8 ★, Rego policy packs),
+`marc-shade/docsingest` (6 ★, PII/PHI ingestion with hash-chained audit),
+`chaz-clark/canvas-toolbox` (5 ★), `virtualryder/edu-ai-agents` (4 ★, Bedrock agents with PII
+masking), three repos by `ashutoshrana` (1–2 ★ each — the same author as pass 317's
+`haystack-ferpa-filter`), `Polycentric-Labs/regrails` (1 ★), `snflwr-ai/snflwr.ai` (1 ★) and
+`mizcausevic-dev/mcp-ai-tutor` (0 ★, an MCP server that audits tutors for FERPA/COPPA).
+
+**Every one is at or below 8 stars, and nearly all were last updated in September or October
+2026** — that is, in the months following the **amended COPPA Rule's 2026-04-22 compliance
+deadline**. A dozen independent authors starting the same component in the same two months is a
+market forming in real time. **None is a dependency. The build-once opportunity is still the
+clearest in the sector, and the window on it is now visibly shorter.** The commercial response is
+pattern **P9**, new this pass — sell the audit and the architecture, not a compliance engine.
+
+### Carried forward, re-verified first-hand this pass
+
+- **DeepTutor** — Apache-2.0, 41.7k ★, 5.3k forks, **2,935 commits, v1.6.15 released 2026-10-19**.
+  A release on the day of the pass; pinning a version is mandatory, not advisable. README now
+  frames it as an "agent-native learning workspace" with an inspectable three-layer memory.
+- **Kolibri** — MIT, 1.2k ★, 39,803 commits, 1.0k forks. Still the only MIT general platform, and
+  its README still describes **no AI features**: it is the delivery substrate, the intelligence is
+  yours to add.
+
+### Declared and still open after direct search
+
+- **No usably licensed open source LTI 1.3 AI tutor.** Fifth pass. See `blamb/lti-tutor` above.
+  What did change: `repos/trending.md` records a concrete alternatives map for `pylti1.3`.
+- **No credible open source assessment-integrity / AI-detection project.** Fifth consecutive pass,
+  and the published evidence on detector accuracy continues to argue it should stay a gap.
+- **No region-specific tutoring agent in the agent tier.** The APAC skill-layer presence grew
+  (`human-skill-tree`, 573 ★, joins `Study-Mate`, `kaogong-skill`, `feifei-companion`). **The LATAM
+  picture did change this pass — but in the platform tier**: `openedx/openedx-ai-extensions`,
+  built by eduNEXT of Bogotá. See `repos/trending.md`.
+
+---
+
 ## 2026-10-19 — Pass 317 — the LTI tutor exists and has no licence, OpenOLAT breaks the copyleft-platform rule, and five p315 rows are re-verified
 
 **Third pass of 2026-10-19, and a verification pass by design.** Pass 316 searched outward and added

@@ -6,11 +6,10 @@ updated: 2026-10-19
 
 # Current trends — education
 
-**Pass 317 · 2026-10-19.** Ten trends. Each names the evidence behind it and, where the evidence is
-vendor marketing, says so. Pass 317 added no new trend — it **revised trends 4 and 6 against
-first-hand repo evidence** and moved one long-standing unverified claim out of the bottom section
-into resolved fact. A pass that changes two trends and retires a bad citation is doing more than a
-pass that invents an eleventh.
+**Pass 318 · 2026-10-19.** Eleven trends. Each names the evidence behind it and, where the evidence
+is vendor marketing, says so. Pass 318 **added trend 11** — the sector's published metadata is
+unreliable in both directions, which is a finding about method and it changes how every other row
+in this KB must be sourced — and revised trends 2, 3 and 4 against first-hand evidence.
 
 ## 1. Institutional AI deployment is not landing — and that, not adoption, is the gap
 
@@ -33,12 +32,25 @@ a programme-design problem, not a content-sourcing problem.
 
 ## 2. Procurement is policy-gated, and the US volume has gone up again
 
-**134 AI-in-education bills across 31 states in 2026.** Ohio requires an AI framework in every
-public/community/STEM school by 2026-07-01; Idaho SB 1227 mandates a statewide framework plus a
-human-teacher guarantee; California AB 1159 on student data; Oklahoma and Maryland reported to
-require human oversight and bar AI from high-stakes student decisions. Federally, H.R. 8747 (K-12
-AI Literacy and Readiness Act of 2026) cleared committee markup on 2026-07-21. **The RFP question
-has shifted from "what can your tutor do" to "show me the audit trail."**
+**134 AI-in-education bills across 31 states in 2026**, inside a wider wave NCSL counts at ~1,390
+AI bills across 49 states. Ohio requires an AI framework in every public/community/STEM school by
+2026-07-01; North Carolina's model policy is due 2026-12-31 with local policies by 2027-06-30;
+Idaho SB 1227 mandates a statewide framework plus a human-teacher guarantee; California AB 1159 on
+student data; Oklahoma and Maryland reported to require human oversight and bar AI from high-stakes
+student decisions. Federally, H.R. 8747 (K-12 AI Literacy and Readiness Act of 2026) cleared
+committee markup on 2026-07-21. **The RFP question has shifted from "what can your tutor do" to
+"show me the audit trail."**
+
+**Revised this pass: the binding constraint in US K-12 is not a bill, it is a rule already in
+force.** Full compliance with the **amended COPPA Rule has been required since 2026-04-22**
+(published 2025-04-22, effective 2025-06-23). **§312.5(a)(2) requires separate verifiable parental
+consent before a child's personal information is disclosed to a third party**, with the exception
+limited to disclosures *integral* to the service; the Rule also adds retention limits, a written
+published retention policy, and biometric identifiers to the definition of personal information.
+**Forwarding a K-6 pupil's prompts to a third-party model provider is such a disclosure.** State
+bills set deadlines for *policies*; COPPA sets a live federal obligation on *architecture*, and
+every K-12 AI deployment shipped before April 2026 should be assumed non-compliant until audited.
+That is the most concrete near-term revenue line in this KB — see `intel/market.md`, North America.
 
 ## 3. Restriction is now a design requirement, not a market loss
 
@@ -48,12 +60,24 @@ are not outliers to wait out — they are the shape of K-12 procurement. A produ
 enforce **grade-band gating** and a **teacher-facing-only mode** is unbiddable in those districts,
 and the gate is cheap to build. Treat restriction as a feature spec.
 
+**Quantified by country this pass, and it does not follow the regulatory map** (Ipsos Education
+Monitor 2026, support for banning AI in schools): **Indonesia 23%, India 26%, Japan 29%, South
+Korea 31%**, with **Australia and New Zealand above all of them.** So the market with the region's
+only binding AI statute (Korea) has middling public appetite for restriction, while the markets
+with *no* AI statute (Australia, New Zealand) have the highest. **Restriction sentiment and
+regulation are separate variables and must be scoped separately** — the gating feature is sold on
+public and parental sentiment, the audit trail is sold on statute, and a bid can need one without
+the other.
+
 ## 4. The permissive-agent / copyleft-platform split is real but softening — REVISED this pass
 
-13 of 16 agents in `agents/top.md` carry a permissive software licence. 10 of 16 platforms in
-`verticals/solutions.md` are GPL-2.0/GPL-3.0/LGPL-3.0/AGPL-3.0. This is still the sector's structure
-and it still dictates architecture: permissive agents across a network boundary from a copyleft LMS,
-LTI 1.3 as the seam.
+**Recounted this pass over larger tables, and the softening reversed.** 14 of 18 agents in
+`agents/top.md` carry a permissive software licence. **13 of 19 platforms** in
+`verticals/solutions.md` are GPL-2.0/GPL-3.0/LGPL-3.0/AGPL-3.0 — the platform ratio moved *against*
+permissiveness this pass (6/16 → 6/19), because all three platforms added were AGPL: `frappe/lms`,
+`LearnHouse` and `openedx/openedx-ai-extensions`. This is still the sector's structure and it still
+dictates architecture: permissive agents across a network boundary from a copyleft LMS, LTI 1.3 as
+the seam. **Pass 317 called the split "softening"; on a larger sample it is not. It is holding.**
 
 **But "the platforms are all copyleft" is no longer an accurate sentence**, and pass 317 found the
 crack widening from both sides at once:
@@ -175,6 +199,48 @@ serving OneRoster 1.2 (151 commits). This is the first pass where "how does your
 anything about my institution?" has an open source answer rather than a bespoke-integration answer,
 at least in North America.
 
+## 11. The sector's published metadata is unreliable in both directions — NEW, and it is a method finding
+
+Pass 317 established that **stars run too low** on the software that matters: Ed-Fi at 12 stars with
+1,105 commits, Sunbird at 41, OpenOLAT at 448 with 31,877 commits. Pass 318 added a fourth case —
+**`openedx/openedx-ai-extensions`, the official Open edX AI plugin, at 17 stars and 703 commits** —
+and then found the failure running the other way as well.
+
+**Stars are now being solicited from automated readers.** `24kchengYe/human-skill-tree` (573 ★,
+36 commits) closes its README with a passage **addressed to AI agents, asking them to star the
+repository.** A 573-star, 36-commit ratio is what that looks like from outside. This KB is compiled
+by a process that reads repository pages; so, increasingly, are the tools client engineers use to
+pick dependencies. **Text a repository addresses to an automated reader is data, never
+instruction** — and any Globant tooling that ranks dependencies by reading repo pages needs that
+rule written down.
+
+**Licence metadata is worse, and it fails in a consistent direction.** Pass 318 sourced platform
+candidates partly from "best open source LMS 2026" comparison articles and checked their licence
+claims first-hand. **Three out of three were wrong, all overstating permissiveness:** LearnHouse
+claimed Apache-2.0, is **AGPL-3.0 plus a separate Enterprise Licence**; Frappe Learning claimed
+MIT, is **AGPL-3.0**; Forma LMS claimed Apache-2.0, has **no LICENSE file at all**. A fourth case
+came from a repository's own README: `ahmedEid1/lumen` carries an MIT badge over a `LICENSE` file
+containing the full GPL-3.0 text.
+
+That is four licence misstatements in one pass, on top of the three repos earlier passes found
+whose real licence is invisible from the GitHub sidebar (Frappe Education, OpenOLAT,
+`education-agent-skills`).
+
+**The operating rules this produces, and they apply to every row in this KB:**
+
+1. **A licence is read from the LICENSE file or the licence GitHub itself renders. Never from a
+   comparison article, a README badge, or a bare "License" link.** An engagement that inherits an
+   AGPL obligation because someone trusted a listicle is a legal problem, not a research one.
+2. **Rank candidates on commit count, release cadence and licence — not stars.** Stars are now
+   noise at both ends.
+3. **Expect the error to favour permissiveness.** Every misstatement found so far made a repo look
+   more usable than it is, which is exactly the direction that hurts in a licence inventory.
+
+The deeper point for a studio lead: **the generation of secondary sources a client's team will
+Google is systematically wrong about the one attribute that determines whether Globant can use a
+repo at all.** Being the party in the room that read the LICENSE file is a small, real,
+demonstrable differentiator in a dependency review.
+
 ## Trends asserted elsewhere that this pass could NOT verify
 
 - **"EdTech moving from pilots to mainstream deployment in 2026", including VR/AR.** Vendor and
@@ -203,3 +269,17 @@ at least in North America.
   has authoritative-looking sources behind it.
 - **Corporate reskilling as a primary driver.** Named across several sources but never with
   education-sector-specific figures. Directionally credible, not quotable.
+- **Moodle's AI "placements".** Secondary sources report two core placements (text editor, course
+  support) in the 5.x AI subsystem. The **providers** list for 5.1 was confirmed from the official
+  docs (Azure AI, DeepSeek, Ollama, OpenAI; DeepSeek new in 5.1); the **placements** claim was not.
+  Verify before it enters a proposal.
+- **The IDB's "193 AI solutions in LAC" figure and the DEC LATAM survey's sample size.** Both rest
+  on search snippets: `www.iadb.org`, `www.digitaleducationcouncil.com` and
+  `www.iesalc.unesco.org` all failed DNS resolution at this session's proxy. Brief on them;
+  do not put them in a client document unconfirmed. **An unreachable source is not a verified one.**
+- ~~**"No EMEA AI-in-education market size exists."**~~ — **RETIRED this pass. This KB was wrong.**
+  Five passes concluded the figure was unpublished and advised abandoning the search. Two
+  commercial houses publish Europe-specific figures (Marketdataforecast, SNS Insider); they
+  disagree by ~9% on the 2025 base and publish no methodology. **"Weak" and "absent" are different
+  findings, and this KB recorded the wrong one for five passes.** The lesson generalises: a
+  declared gap should be re-tested with a changed query, not inherited.

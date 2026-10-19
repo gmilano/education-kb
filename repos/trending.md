@@ -4,6 +4,152 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 318 — the LATAM authorship gap closes in Bogotá, three comparison-article licences fail verification, and the pylti1.3 risk gets a mitigation map
+
+**Fourth pass of 2026-10-19.** Pass 317 closed by advising that the remaining declared gaps be
+treated as search-method artefacts until proven otherwise. **Two of them were**, and the bigger of
+the two had been declared for six passes.
+
+Verification method unchanged and re-confirmed against the proxy's own status endpoint: `curl -sI`
+to github.com returns **403 at this session's proxy**, so every repo below was read off its GitHub
+page.
+
+### The find of the pass: `openedx/openedx-ai-extensions` — LATAM-authored, and 17 stars
+
+**AGPL-3.0 · 17 ★ · 11 forks · 703 commits · docs v2.6.0 dated 2026-09-01** (1.0.0 was
+2025-12-24).
+
+Six passes of this KB have declared: *no LATAM-authored open source education infrastructure.*
+That sentence is now wrong, and it was wrong in the least star-visible place available.
+
+This is the **official Open edX AI plugin** — an `edx-platform` plugin housing tools and helpers
+for working with AI. It sits under the **`openedx` GitHub organisation**, is covered by the Open
+edX maintainers programme, and its README states it was **"developed by edunext as part of
+FC-111"**, an Open edX funded-contribution project. It provides Learning and Authoring MFE
+integration, content summarisation, configuration-driven workflows and XBlock AI service
+registration, with **multi-provider model access through LiteLLM** (OpenAI, Anthropic, Gemini,
+local models). It installs through Tutor. Its architecture decision records cover dynamic workflow
+configuration, LLM caching strategy and XBlock AI service registration.
+
+**eduNEXT is headquartered in Bogotá, Colombia**, and its co-founders Felipe Montoya and Juan
+Camilo Montoya have been Open edX core committers since at least the 2021 Core Contributor pledge.
+*(Provenance caveat: the Bogotá headquarters is sourced from a vendor-profile directory and the
+co-founder's regional LinkedIn profile; eduNEXT's own corporate page could not be retrieved this
+session. The core-committer relationship is documented in the Open edX wiki. Well-supported, not
+primary-sourced.)*
+
+**Three things to hold at once:**
+
+1. **The gap is closed in the sense that mattered.** A Colombian company is the named author of
+   the official AI extension layer for one of the world's two largest open source LMS platforms.
+   For a LATAM engagement that is a credibility asset before it is a technical one.
+2. **It is not usable.** The README says: *"This plugin is in active development and should not be
+   used in production environments."* Labelled Experimental throughout, self-described as a
+   proof-of-concept. It is therefore **not** in `repos/foundations.md` — nothing experimental and
+   copyleft belongs under a client product.
+3. **It is AGPL-3.0**, like the platform it extends, so it changes nothing about the architectural
+   boundary.
+
+**What to do with it now:** treat it as the reference for *how Open edX intends AI to be
+extended*. Building against the platform's own shapes — XBlock AI service registration, the
+LiteLLM provider abstraction — is cheaper than inventing a parallel one the platform later
+contradicts. **Track its releases.** The day it drops "experimental", every Open edX engagement's
+AI integration estimate changes.
+
+**And it is the fourth confirmation of pass 317's star lesson:** 17 stars, 703 commits, official
+status. A star-ranked search cannot see this sector's institutional infrastructure. Ed-Fi (12),
+Sunbird (41), OpenOLAT (448 / 31,877 commits) and now this.
+
+### Three new platform rows, all AGPL — the licence split moved *against* permissiveness
+
+| Repo | Licence | ★ | Commits | Note |
+|---|---|---|---|---|
+| https://github.com/frappe/lms | AGPL-3.0 | 3.3k | 7,837 | "Easy to use, open source, Learning Management System" on the Frappe framework. Courses/chapters/lessons, batches with Zoom live classes, quizzes, PDF assignments, certificates. **No AI features at all** — a clean, well-adopted substrate for an external agent. Distinct from `frappe/education` (GPL-3.0, 669 ★) already in this KB |
+| https://github.com/learnhouse/learnhouse | **AGPL-3.0 + separate Enterprise Licence** | 2.4k | 2,804 | AI-native: context-aware AI for learning and teaching, AI-generated playgrounds and simulations, code execution with auto-grading in 30+ languages. Gemini + LlamaIndex in the stack; Next.js/Tiptap over FastAPI/Postgres/Redis. **Open-core: payments and SSO are Enterprise-only** |
+| https://github.com/openedx/openedx-ai-extensions | AGPL-3.0 | 17 | 703 | Above |
+
+Because all three are AGPL, the platform tier went from **6 of 16 permissive to 6 of 19**. Pass
+317 described the permissive/copyleft split as "softening"; on a larger sample **it is not. It is
+holding.**
+
+### Three comparison-article licence claims checked first-hand. Three were wrong.
+
+Platform candidates this pass came partly from "best open source LMS 2026" comparison articles.
+Every permissive licence claim in them failed verification, **all in the same direction**:
+
+| Claimed | Actual, read off the repo | Delta |
+|---|---|---|
+| LearnHouse — "Apache-2.0" | **AGPL-3.0** + separate Enterprise Licence | permissive → strong copyleft + open-core |
+| Frappe Learning — "MIT licence with self-hosted data ownership" | **AGPL-3.0** (`frappe/lms`) | permissive → strong copyleft |
+| Forma LMS — "Apache 2.0" | **No LICENSE file in the repo at all** (37 ★, 7,494 commits, self-described "mirror repository") | permissive → unlicensed, default copyright |
+
+Add `ahmedEid1/lumen` — MIT badge in the README, GPL-3.0 in the `LICENSE` file — and that is
+**four licence misstatements verified in one pass**, on top of the three repos earlier passes
+found whose real licence is invisible from the GitHub sidebar (Frappe Education, OpenOLAT,
+`education-agent-skills`).
+
+**The rule, now stated explicitly: a licence is read from the LICENSE file or the licence GitHub
+itself renders. Never from a comparison article, a README badge, or a bare "License" sidebar
+link.** Inheriting an AGPL obligation because someone trusted a listicle is a legal problem, not a
+research one. **`formalms/formalms` is rejected outright**, not merely unverified.
+
+### `1EdTech/ltibootcamp` — a mitigation map for this KB's biggest concentration risk
+
+**No LICENSE file · 127 ★ · 47 commits.**
+
+Pass 317 named the risk correctly: every pattern in this KB crosses the LMS boundary through
+`pylti1.3` — one MIT library, 138 stars, 178 commits, single maintainer, 39 open issues, no
+visible release cadence. The mitigation was previously a hand-wave. It now has specifics.
+
+This repository, under the **1EdTech GitHub organisation**, indexes LTI 1.3 implementations across
+seven languages: **Python** (PyLTI 1.3, `django-lti`, a UCF Flask starter, Robotest/FastAPI, Open
+Learning's Django platform), **Node** (`ltijs`, Blackboard's tool provider, Atomic LTI Worker),
+**PHP** (IMS 1.3 library and demo tool, TAO test platform, OAT's core / Deep Linking / Names &
+Roles libraries and a Symfony bundle), **Java** (Unicon's Spring Boot demo, UOC's library, Spring
+Boot library and provider example), **.NET** (`LtiAdvantagePlatform`), **Ruby** (Atomic Jolt's
+starter app), **Rust** (Atomic Forge), plus an AWS LTI shim.
+
+**Three caveats and none is small:** it has **no LICENSE file** (so it is an index, not a
+dependency, and is not in `repos/foundations.md`); it is **stale** — its only content folders are
+`barcelona_2019` and `europe_tech_2020`; and its own README states the entries *"have not been
+vetted."* It sits under the 1EdTech org but reads as a community list open to PRs. **Verify every
+entry against its own repository before scoping.** `ltijs` is the one with independent
+confirmation: it is the library `blamb/lti-tutor` used for working deep linking and AGS passback
+against Moodle.
+
+### Moodle ships its own AI subsystem — check before proposing a custom tutor
+
+Moodle's core **AI subsystem** (4.5 onward) is in the platform, not a plugin a client must find.
+In **Moodle 5.1** the documented providers are **Azure AI, DeepSeek, Ollama API and OpenAI API**,
+with **DeepSeek new in 5.1**. Because the OpenAI API shape is the de facto standard, self-hosted
+**LiteLLM** or **LocalAI** gateways wire in through the OpenAI provider — **which is the practical
+route to a Moodle deployment with zero third-party data egress, and under the amended COPPA Rule
+that is a compliance route, not a preference** (see pattern **P9**).
+
+*Unverified:* secondary sources report two core placements (text editor, course support); the
+official placements page was not read this pass. The 5.3 docs are marked work-in-progress targeted
+at 2026-10-05, so cite a version-specific page, never "Moodle docs".
+
+### Re-verified first-hand this pass
+
+- **`learningequality/kolibri`** — MIT, 1.2k ★, 1.0k forks, 39,803 commits on `develop`. Unchanged.
+  README describes no AI features; it is the offline delivery substrate.
+- **`HKUDS/DeepTutor`** — Apache-2.0, 41.7k ★, 5.3k forks, 2,935 commits, **v1.6.15 released
+  2026-10-19**.
+
+### Still open after direct search
+
+- **No EMEA- or APAC-equivalent of Ed-Fi.** Searched again; nothing comparable for European or
+  Asian rostering standards. Ed-Fi closes North America only.
+- **No MENA- or Africa-originated open source platform.** Every named regional player (Alef,
+  Classera, Abwaab, EIDU) is proprietary — and the **UAE was first in the world with a nationwide
+  mandatory K-12 AI curriculum (May 2025)**, so the demand is statutory and the supply is closed.
+- **No LATAM-originated *platform*.** This pass found a LATAM-authored *extension layer* for a
+  North-American-origin platform. Real change, not the same thing.
+- **`LightRAG`'s reading is from p316 and is due a first-hand re-read next pass.**
+
+---
+
 ## 2026-10-19 — Pass 317 — the LTI tutor exists and has no licence, OpenOLAT breaks the copyleft-platform rule, and five p315 rows are re-verified
 
 **Third pass of 2026-10-19, and a verification pass by design.** Pass 316 searched outward and added
