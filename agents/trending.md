@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 📈 2026-10-19 · Pass 311 — THE WEEK'S SIGNAL IS A `4 468`-REPOSITORY AXIS THIS BASE HAD NEVER READ, AND IT IS `62 %` COPYLEFT — THE EXACT INVERSE OF LAST PASS'S TIER
+
+⏱️ **Pass 311 of `2026-10-19`, following `p310` of `2026-10-19`.** Evidence:
+[`p311-language-learning-axis.2026-10-19-p311.tsv`](../evidence/p311-language-learning-axis.2026-10-19-p311.tsv) ·
+[`p311-axis-carried-census.2026-10-19-p311.tsv`](../evidence/p311-axis-carried-census.2026-10-19-p311.tsv) ·
+[`p311-regional-token-census.2026-10-19-p311.tsv`](../evidence/p311-regional-token-census.2026-10-19-p311.tsv).
+
+### 🟢 `13` of `15` new — and the axis is `40×` the one `p310` read
+
+| axis | repos | leader ★ |
+|---|---|---|
+| 🟢 [`language-learning`](https://github.com/topics/language-learning) *(p311, first reading)* | **4 468** | 🟢 **≈10.1k** |
+| [`learning-analytics`](https://github.com/topics/learning-analytics) *(p310)* | 378 | — |
+| [`academic-integrity`](https://github.com/topics/academic-integrity) *(p310)* | 111 | 350 (`dolos`) |
+
+🔴 **The `P311` duplicate gate stopped 2 of 15** (`echo-loop/Echo-Loop`, `kantord/LibreLingo`);
+**13 are new**, every licence probed first-hand at HTTP 200 with byte length and `sha256_12`.
+
+| Repo | Licence *(payload, first-hand)* | ★ *(rendered)* | Signal |
+|---|---|---|---|
+| 🆕 [mengxi-ream/read-frog](https://github.com/mengxi-ream/read-frog) | 🔴 **GPL-3.0** `35 149` B · `3972dc9744f6` | **≈10.1k** | In-page AI translation, explanation and flashcard capture. 🔴 **Axis leader, and copyleft** |
+| 🆕 [qingjian-team/qingjian](https://github.com/qingjian-team/qingjian) | 🔴 **GPL-3.0** `35 149` B · `3972dc9744f6` | ≈6.9k | Rust Pinyin IME showing target-language glosses. 🔵 Learning inside a tool used all day |
+| 🆕 [umlx5h/LLPlayer](https://github.com/umlx5h/LLPlayer) | 🔴 **GPL-3.0** `35 149` B · `3972dc9744f6` | ≈4.4k | Dual + AI-generated subtitles, live translation |
+| 🆕 [lingdojo/kana-dojo](https://github.com/lingdojo/kana-dojo) | 🔴 **AGPL-3.0** `34 273` B · `db52e3daad92` | ≈3.7k | Japanese drilling, Next.js. 🔴 **AGPL + network-served.** 🟡 `34 273` B sits 250 B outside the carried AGPL range |
+| 🆕 [5mdld/anki-jlpt-decks](https://github.com/5mdld/anki-jlpt-decks) | 🔴 **CC-BY-NC-4.0** `19 346` B · `3711f963c05d` | ≈3.1k | ~10 000 JLPT cards + audio. 🔴 **NONCOMMERCIAL — cannot ship** |
+| 🆕 [yomidevs/yomitan](https://github.com/yomidevs/yomitan) | 🔴 **GPL-3.0** `35 147` B · `8ceb4b9ee5ad` | ≈2.9k | Pop-up dictionary, Yomichan successor. 🟡 `2` B short of canonical, different digest — recorded, not explained |
+| 🆕 [hahahumble/speechgpt](https://github.com/hahahumble/speechgpt) | 🟢 **MIT** `1 066` B · `c46c617ea9ce` | ≈2.7k | STT → LLM → TTS in the browser. 🟢 **Highest-starred permissive row on the axis** |
+| 🆕 [typedgrammar/typed-japanese](https://github.com/typedgrammar/typed-japanese) | 🟢 **MIT** `1 086` B · `53a8d8541918` | ≈2k | Grammar as TypeScript types. 🟢 **Also the payload that proved MIT has a SECOND template** (constant `1 047`) |
+| 🆕 [Chuloo/mural](https://github.com/Chuloo/mural) | 🟢 **MIT** `1 066` B · `799b6a8be997` | ≈1.7k | Conversation-first mobile client. 🟡 Holder is `Hackmamba`, a content agency — treat as reference |
+| 🆕 [LuteOrg/lute-v3](https://github.com/LuteOrg/lute-v3) | 🟢 **MIT** `1 068` B · `28f65679a154` | ≈1.6k | Term-state model over real texts. 🟢 **The schema is the reusable asset** |
+| 🆕 [asbplayer/asbplayer](https://github.com/asbplayer/asbplayer) | 🔴 **AGPL-3.0** `34 523` B · `8486a10c4393` | ≈1.5k | Subtitle sentence mining. 🟢 Length matches the carried AGPL value exactly |
+| 🆕 [simjanos-dev/LinguaCafe](https://github.com/simjanos-dev/LinguaCafe) | 🔴 **GPL-3.0** `32 423` B · `d1bfc7a74995` | ≈1.5k | Self-hosted reading. 🟢 **A STRICT BYTE PREFIX of canonical, delta `2 726` B — the appendix. Grant intact; NOT a defect** |
+| 🆕 [ripose-jp/Memento](https://github.com/ripose-jp/Memento) | 🔴 **GPL-2.0** `18 097` B · `a99d7b0625a0` | ≈1.5k | mpv player for Japanese. 🔵 First `GPL-2.0` payload this base has touched |
+
+🔴 **Profile: `4` MIT (`31 %`) · `5` GPL-3.0 · `2` AGPL-3.0 · `1` GPL-2.0 (`62 %` copyleft) ·
+`1` CC-BY-NC (`8 %`).** 🔵 **The exact inverse of `p310`'s `100 %`-permissive integrity tier**, and
+the generalisation is that licence profile tracks **artefact shape** — libraries are permissive,
+end-user applications are copyleft. 🔴 **The axis's #1 by stars is GPL-3.0 and its #4 is
+noncommercial, so ranking by adoption ranks AWAY from what a studio can ship** — the second axis
+in two passes to show that inversion.
+
+### 🔴 `ACTION p310-R` item 6 listed five "unread" axes. Three were already read.
+
+| axis | cited as an axis on the shelves | verdict |
+|---|---|---|
+| [`proctoring`](https://github.com/topics/proctoring) · **148** | 🔴 **7×** — this file's own history names `CloakBox` *"the second-largest row on `topic:proctoring`"* | **ALREADY READ** |
+| [`student-information-system`](https://github.com/topics/student-information-system) · **183** | 🔴 **10×** | **ALREADY READ** |
+| `open-educational-resources` | 🔴 **21×** | **ALREADY READ** |
+| `accessibility` | 🟡 **1×** | left open |
+| 🟢 `language-learning` · **4 468** | 🟢 **0×** | 🟢 **GENUINELY UNREAD** |
+
+🟢 **`make carried` over the top-starred rows of the two it called unread: `10` of `11` ALREADY
+CARRIED (`91 %`)**, one new (`narender-rk10/MyProctor.ai`, 236★). 🔵 **`p310`'s headline error was
+reading `CARRIED` and publishing *"never enumerated"* anyway; the remedy it wrote then asserted
+three absences without running that same index.** → **`P311-A`: an action item that asserts an
+absence is a claim, and the gate that governs published absences governs it too.**
+
+### 🟢 The week's other signal: the proctoring posture flipped on one HTTP request
+
+[SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) is
+🟢 **MPL-2.0** (`16 726` B · `fab3dd6bdab2`), **355★**, ETH Zürich, Moodle- and Open edX-integrated.
+🔴 **`p310` published *"no permissively licensed, maintained option on this axis"* for proctoring
+having measured four camera/keystroke prototypes.** 🔵 **The nil was true of the sub-tier measured
+and false of the tier named** — see [`verticals/solutions.md`](../verticals/solutions.md). 🟢 **The
+surviving nil, narrowed: no permissively licensed, maintained CAMERA/KEYSTROKE monitoring option
+exists.**
+
+### 🔴 Nil declared: the regional web channel, `16` of `16` already carried
+
+Four fresh regional sweeps (NA · EMEA · APAC · LATAM), **16 substantive tokens, `0` new** —
+third independent measurement of a ceiling that keeps rising (`p309` `82 %`, `p310` `80 %`,
+`p311` **`100 %`**), and `T186`'s *"spend the pass on trees"* obeyed. 🟡 **Narrow claim: an
+UNDIRECTED regional sweep on this industry now returns this base's own inventory** — not that no
+regional fact remains. 🟢 **The four generic listicle queries were re-run and returned the same
+non-education generalist supply** (OpenClaw, Hermes, opencode): **the standing nil reproduces,
+and is not published as a finding.**
+
+### 🔵 Registered, not claimed
+
+🟡 **Star figures are the topic page as rendered; per `P349` the `k` band carries two significant
+figures, so NO drift statement is made** — no prior measurement of these rows exists to drift
+from. 🔴 **`4 453` of `4 468` rows are unread**; this is the most-starred end only. 🔴 **No
+benchmark was run on any row.**
+
 ## 📈 2026-10-19 · Pass 310 — THE WEEK'S SIGNAL IS A TOPIC AXIS THIS BASE HAD NEVER READ AND A POST-LLM INTEGRITY SUB-TIER IT DID NOT HAVE — AND THE SECOND-MOST-STARRED ROW ON IT IS NONCOMMERCIAL
 
 ⏱️ **Pass 310 of `2026-10-19`.** Evidence:

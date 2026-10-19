@@ -69,6 +69,73 @@ TOKENS = [
     ("Unlicense",       r"\bUnlicense\b"),
     ("PolyForm-Noncommercial-1.0.0", r"PolyForm[\s-]?Noncommercial"),
     ("proprietary",     r"\bproprietary\b|all[\s-]rights[\s-]reserved"),
+    # 🔴 ADDED AT p311, AND THE REASON IS THE WHOLE POINT OF THIS FILE.
+    # `P310` says the families a gate owes a payload to *"are not a matter of
+    # taste — they are the ones the shelves publish"*, and that this module
+    # DERIVES that set. It derives it through the grammar above, so what it
+    # actually derives is **the set of families the grammar can spell**. Every
+    # token below names a family this base publishes WITH FIRST-HAND EVIDENCE
+    # and for which no token existed, so a perfectly good licence cell was
+    # invisible to the denominator:
+    #   EUPL      Finland's national education stack (`koski`), read at
+    #             EUPL-1.1-or-later with 9 placed addresses across two versions
+    #   BUSL-1.1  `sdv-dev/SDV`, `twentyhq/twenty` — source-available, NOT OSI
+    #   Elastic   a cell carrying a probed `4 102` B payload
+    #   SSPL      published on this base's own shelves
+    #   LGPL-2.1  a vendored PHPMailer in a school SIS; the base records that
+    #             its obligations DIFFER from LGPL-3.0's and that it could not
+    #             tell them apart
+    #   OSL, OFL  published, unbucketed
+    # 🔵 Both ends of the risk spectrum were missing at once: the EU's own
+    # public-sector licence, and the source-available family a studio must not
+    # build on. → `P311-D`.
+    ("EUPL-1.2",        r"EUPL[\s-]?1\.2"),
+    ("EUPL-1.1",        r"EUPL[\s-]?1\.1"),
+    ("BUSL-1.1",        r"BUSL[\s-]?1\.1|Business[\s-]Source[\s-]License"),
+    ("Elastic-2.0",     r"Elastic[\s-]?License(?:[\s-]?2\.0)?"),
+    ("SSPL-1.0",        r"\bSSPL\b"),
+    ("LGPL-2.1",        r"LGPL[\s-]?2\.1"),
+    ("OSL-3.0",         r"OSL[\s-]?3\.0"),
+    ("OFL-1.1",         r"\bOFL\b|SIL[\s-]Open[\s-]Font"),
+    # 🟡 A bare `BSD` is not BSD-2, BSD-3 or 0BSD, and it is how `p310` shelved
+    # `TUBAF-IFI-DiPiT/github2pandas` — whose payload's own title line reads
+    # `BSD 2-Clause License`. Ordered AFTER the specific BSD tokens so
+    # longest-first still owns a versioned span. It is a real spelling carrying
+    # real rows, so it gets a bucket rather than silence — and the bucket's name
+    # says what is wrong with it.
+    # 🔴 The first spelling of this token was a bare `\bBSD\b`, and it DOUBLE-
+    # COUNTED: the suppression rule above skips a shorter family only when one
+    # name contains the other, and neither `BSD-3-Clause` nor `BSD-UNVERSIONED`
+    # contains the other, so every versioned BSD line was counted twice and this
+    # bucket reported 575 cells — more than BSD-3-Clause and BSD-2-Clause
+    # combined, which is what gave it away. 🔵 The family is *BSD with no
+    # version*, so the version must be excluded in the PATTERN, not hoped for
+    # from the loop. `0BSD` is already safe: the digit kills the leading \b.
+    ("BSD-UNVERSIONED", r"\bBSD\b(?![\s-]*[0-9])"),
+]
+
+# 🔵 Licence-shaped spellings that STILL have no family token. This is a
+# blind-spot report, not a roster: the point is that the list above is written by
+# hand and therefore has an edge, and the only honest thing to do with an edge is
+# measure it. 🔴 Counted in LINES THE GRAMMAR CLAIMS NOTHING FOR, which is an
+# UPPER BOUND on cells — prose mentions are counted too, and this module does not
+# distinguish a licence cell from a sentence about a licence.
+UNBUCKETED_PROBES = [
+    ("GPL unversioned",     r"(?<![AL])\bGPL\b(?![\s-]?[0-9])"),
+    ("AGPL unversioned",    r"\bAGPL\b(?![\s-]?[0-9])"),
+    ("LGPL unversioned",    r"\bLGPL\b(?![\s-]?[0-9])"),
+    ("Apache unversioned",  r"\bApache\b(?![\s-]?(?:License[\s-]?)?[0-9])"),
+    ("CC-BY unversioned",   r"\bCC[\s-]?BY\b(?![\s-]?[0-9A-Z])"),
+    ("CC-BY-SA unversioned", r"\bCC[\s-]?BY[\s-]?SA\b(?![\s-]?[0-9])"),
+    ("MPL unversioned",     r"\bMPL\b(?![\s-]?[0-9])"),
+    ("EPL unversioned",     r"\bEPL\b(?![\s-]?[0-9])"),
+    ("ECL unversioned",     r"\bECL\b(?![\s-]?[0-9])"),
+    ("Sustainable Use",     r"Sustainable[\s-]?Use"),
+    ("Prosperity",          r"\bProsperity[\s-]?Public"),
+    ("CDDL",                r"\bCDDL\b"),
+    ("zlib",                r"\bzlib[\s-]?license\b"),
+    ("WTFPL",               r"\bWTFPL\b"),
+    ("CeCILL",              r"\bCeCILL\b"),
 ]
 
 # 🔴 `MIT` matches inside `LIMITED` and `ISC` inside `DISCLAIMED` — `p124`'s
@@ -130,7 +197,62 @@ def corpus_families():
     if p309 is not None:
         for prefix, (fam, _n, _sha) in _p309_pins(p309).items():
             fams.setdefault(fam, ("p309-affero-rung-census", prefix))
+    # 🟢 p311 discharged `ACTION p310-R` item 1 — MIT and Apache-2.0, the two
+    # most-published families on this base (7 893 cells between them), finally
+    # hold pinned payloads. They are imported here for the same reason p309's
+    # are: a family covered by a sibling instrument and NOT reflected in the
+    # census makes the census UNDERSTATE coverage, which is the mirror of the
+    # overstatement `P310` exists to stop.
+    for fam, prefix in _p311_pins().items():
+        fams.setdefault(fam, ("p311-template-identity", prefix))
     return fams
+
+
+def _p311_pins():
+    """{family: template label} from p311's DERIVED template registry."""
+    import importlib.util
+    path = os.path.normpath(os.path.join(HERE, "..", "p311-template-identity",
+                                         "template_identity.py"))
+    if not os.path.exists(path):
+        return {}
+    spec = importlib.util.spec_from_file_location("p311_template_identity", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    # 🔵 Report the FIXTURE, not the template label: this column answers
+    # "which pinned payload backs this family?", and a label answers a
+    # different question.
+    out = {}
+    for name in mod.fixture_names():
+        out.setdefault(mod._family_of(name), mod.stem_of(name))
+    return out
+
+
+def unbucketed(root):
+    """{probe: lines} for licence-shaped spellings no family token claims.
+
+    🔴 The unit is LINES THE GRAMMAR CLAIMED NOTHING FOR — an upper bound on
+    cells, stated as one. A line of prose about the GPL counts here exactly like
+    a GPL licence cell, because this module cannot tell them apart. 🔵 The number
+    is therefore evidence that the grammar HAS an edge, not a measurement of how
+    many rows sit past it.
+    """
+    compiled = [(fam, re.compile(rx, re.I)) for fam, rx in TOKENS]
+    probes = [(name, re.compile(rx, re.I)) for name, rx in UNBUCKETED_PROBES]
+    hits = {}
+    for rel in SHELVES:
+        path = os.path.join(root, rel)
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8") as fh:
+            for line in fh:
+                if NOT_A_CELL.search(line):
+                    line = NOT_A_CELL.sub(" ", line)
+                if any(rx.search(line) for _fam, rx in compiled):
+                    continue
+                for name, rx in probes:
+                    if rx.search(line):
+                        hits[name] = hits.get(name, 0) + 1
+    return hits
 
 
 def _p309_pins(p309):
@@ -182,7 +304,24 @@ def main():
     print("#    says nothing about it either way. `p309` reported `11/11 CORRECT`")
     print("#    at %.0f%% coverage (3 of %d families) and the CC rungs were broken"
           % ((100.0 * 3 / total if total else 0), total))
-    print("#    at the time. This pass takes it to %.0f%%." % (100.0 * covered / total))
+    print("#    at the time.")
+    print("#")
+    print("# 🔴 p311 — AND THIS RATIO'S OWN DENOMINATOR IS NOT SAFE. The family set")
+    print("#    above is derived through a HAND-WRITTEN grammar (`TOKENS`), so what")
+    print("#    it derives is the set of families the grammar can SPELL. p311 added")
+    print("#    9 tokens for families this base publishes with first-hand evidence")
+    print("#    and had no bucket for at all — EUPL-1.1/1.2, BUSL-1.1, Elastic-2.0,")
+    print("#    SSPL-1.0, LGPL-2.1, OSL-3.0, OFL-1.1, BSD-UNVERSIONED. → `P311-D`.")
+    blind = unbucketed(root)
+    if blind:
+        print("#")
+        print("# 🟡 licence-shaped spellings STILL unclaimed by any token, in LINES")
+        print("#    (an UPPER BOUND on cells: prose is counted too):")
+        for name, n in sorted(blind.items(), key=lambda kv: -kv[1]):
+            print("#      %5d  %s" % (n, name))
+        print("#    🔵 The edge is measured rather than denied. A coverage ratio")
+        print("#       whose denominator comes from a restated grammar is as")
+        print("#       unbounded as the `DEFECT=0` that `P310` was written to bound.")
     return 0
 
 

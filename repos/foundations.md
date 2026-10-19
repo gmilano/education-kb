@@ -4,6 +4,167 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 311 — THE TWO MOST-PUBLISHED LICENCE FAMILIES ON THIS BASE ARE CLEAN, AND THE BAND THAT MEASURED ONE OF THEM COULD NEVER HAVE CLOSED
+
+⏱️ **Pass 311 of `2026-10-19`.** Evidence:
+[`p311-template-identity.2026-10-19-p311.tsv`](../evidence/p311-template-identity.2026-10-19-p311.tsv) ·
+[`p311-permissive-core-classifiers.2026-10-19-p311.tsv`](../evidence/p311-permissive-core-classifiers.2026-10-19-p311.tsv) ·
+[`p311-language-learning-axis.2026-10-19-p311.tsv`](../evidence/p311-language-learning-axis.2026-10-19-p311.tsv) ·
+[`p311-grammar-blindspot.2026-10-19-p311.tsv`](../evidence/p311-grammar-blindspot.2026-10-19-p311.tsv) ·
+[`p311-digest-provenance.2026-10-19-p311.tsv`](../evidence/p311-digest-provenance.2026-10-19-p311.tsv).
+
+### 🟢 New foundational rows — the base layer of the `language-learning` axis
+
+🔵 **A foundational row is a BASE, not a product.** Of the 13 rows read off
+[`language-learning`](https://github.com/topics/language-learning) (4 468 repos — see
+[`agents/top.md`](../agents/top.md)), four are permissive and only these are shelved as
+foundations; the rest are tabled there as products with their copyleft stated.
+
+| Repo | Licence *(payload, first-hand)* | ★ | Why it is a BASE, not a product |
+|------|---------|-----|---|
+| [LuteOrg/lute-v3](https://github.com/LuteOrg/lute-v3) | 🟢 **MIT** `1 068` B · `28f65679a154` | ≈1.6k | **A term-state data model over an arbitrary corpus** — every word in a real text carries a known/learning/unknown state that advances as the learner reads. 🔵 The schema is the reusable asset; the Flask UI above it is replaceable. 🟢 Self-hosted, MIT, no model dependency |
+| [hahahumble/speechgpt](https://github.com/hahahumble/speechgpt) | 🟢 **MIT** `1 066` B · `c46c617ea9ce` | ≈2.7k | **A browser STT → LLM → TTS loop with the provider left open.** 🔵 The spoken-practice primitive, with no pedagogy baked in — which is what makes it a base. 🔴 It holds no learner model, so anything adaptive is yours to add |
+| [typedgrammar/typed-japanese](https://github.com/typedgrammar/typed-japanese) | 🟢 **MIT** `1 086` B · `53a8d8541918` | ≈2k | **Grammar as TYPES**: conjugation and agreement expressed so a compiler decides them. 🔵 The only row on this axis that can produce a grammar verdict a client can audit instead of a model's opinion. 🟡 Japanese only; the *method* is the transferable part |
+| [Chuloo/mural](https://github.com/Chuloo/mural) | 🟢 **MIT** `1 066` B · `799b6a8be997` | ≈1.7k | Conversation-first mobile client. 🔴 **Tabled with a caveat: the holder line reads `Hackmamba`, a content agency** — treat as a reference implementation, not a maintained dependency |
+
+### 🔴 The MIT byte band was not wrong. It was UNCLOSABLE — and that is a different repair.
+
+[`intel/open-gaps.md`](../intel/open-gaps.md) carries *"Measured: … MIT `1 062`–`1 074`"* as a
+**DISCHARGED** falsifier, and `T184` corrected three such bands with the note that *"every
+correction makes the test WORSE."* 🟢 **`T184` was right and did not say why.**
+
+> 🟢 **MIT's payload length is `constant(template) + len(copyright line)`.**
+
+The copyright line holds a **free variable** — the holder's name — so the band measures *whose*
+repositories were sampled. Measured over **eight** first-hand payloads, eight unrelated
+repositories, five countries, 2020–2026:
+
+| payload | bytes | `sha256_12` | `bytes − len(declaration)` |
+|---|---|---|---|
+| [AmirhosseinHonardoust/Academic-Instability-Early-Warning-System](https://github.com/AmirhosseinHonardoust/Academic-Instability-Early-Warning-System) | 🔴 **1 061** *(below the band)* | `0c410e37b86b` | 🟢 **1 038** |
+| [Imalwayshere/Open-Detector](https://github.com/Imalwayshere/Open-Detector) | 1 066 | `2e7c69b15c38` | 🟢 **1 038** |
+| [Chuloo/mural](https://github.com/Chuloo/mural) | 1 066 | `799b6a8be997` | 🟢 **1 038** |
+| [hahahumble/speechgpt](https://github.com/hahahumble/speechgpt) | 1 066 | `c46c617ea9ce` | 🟢 **1 038** |
+| [LuteOrg/lute-v3](https://github.com/LuteOrg/lute-v3) | 1 068 | `28f65679a154` | 🟢 **1 038** |
+| [rpatrik96/hallmark](https://github.com/rpatrik96/hallmark) | 1 073 | `bafef485d0aa` | 🟢 **1 038** |
+| [cmkumar87/NUS-MOOC-Transacts-Corpus](https://github.com/cmkumar87/NUS-MOOC-Transacts-Corpus) | 🔴 **1 083** *(above the band)* | `2d8f95296606` | 🟢 **1 038** |
+| [typedgrammar/typed-japanese](https://github.com/typedgrammar/typed-japanese) | 🔴 **1 086** *(above)* | `53a8d8541918` | 🟡 **1 047** |
+
+🟢 **Normalise the declaration line and hash: the first seven collapse to ONE digest**
+(`16d6b7b5799875f6`). 🟢 **The eighth is a SECOND TEMPLATE, not a defect** — its title line reads
+`The MIT License (MIT)` rather than `MIT License`, and its own constant is exactly **`1 047`**.
+🔵 **Two templates cover 8 of 8.** So the family's shape is a small discrete set of templates,
+each with an exact constant — and the instrument that matches them returns `UNKNOWN-TEMPLATE`
+for anything unseen, where **a band always answers and at the edges answers wrongly and
+silently.** → **`P311-T`**, and
+[`compose/code/p311-template-identity/`](../compose/code/p311-template-identity/) (61 controls).
+
+### 🟢 Apache-2.0 and GPL-3.0 are BIMODAL BY SECTION, and the relation is a PREFIX
+
+`T184` recorded Apache-2.0 as bimodal — `10 173` B without the *"APPENDIX: How to apply"*
+section, ~`11.3`–`11.4` KB with it — against a published band of `11 357`–`11 358`.
+🟢 **Measured first-hand at `p311`, the relation is exact and it is not a range:**
+
+| pair | relation | delta |
+|---|---|---|
+| [Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) `10 173` B `a6cba85bc92e` → [constructorfabric/reference-audit](https://github.com/constructorfabric/reference-audit) `11 357` B `c71d239df917` | 🟢 **STRICT BYTE PREFIX** | 🟢 **exactly `1 184` B** — the `APPENDIX: How to apply the Apache License to your work.` block |
+| [simjanos-dev/LinguaCafe](https://github.com/simjanos-dev/LinguaCafe) `32 423` B `d1bfc7a74995` → canonical GPL-3.0 `35 149` B `3972dc9744f6` | 🟢 **STRICT BYTE PREFIX** | 🟢 **exactly `2 726` B** — `END OF TERMS AND CONDITIONS` + *"How to Apply These Terms"* |
+
+🔵 **So appendix-bimodality is not an Apache quirk: it is a property of fixed-document licences
+that ship an instructional appendix, now measured on TWO families by prefix rather than by
+interval.** 🟢 **That is why `T184`'s bands kept getting worse — an interval was being fitted to
+a discrete bimodal set.** 🔴 **Operational consequence, and it is the part a client engagement
+touches: a `32 423` B GPL-3.0 or a `10 173` B Apache-2.0 is NOT a truncated or defective grant.**
+The operative text through §17 is intact in both; only the how-to-apply instructions are absent.
+**Do not flag either as a licence defect.**
+
+🟢 **And `p310`'s open fork-signal note is CLOSED:**
+[NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine)'s `11 358` B payload is
+**byte-exactly `b"\n"` + the `11 357` B payload**. One leading newline. Not a fork, not a
+variant.
+
+### 🔴 Why both Apache modes are holder-BLIND — and they are blind for DIFFERENT reasons
+
+`p310` measured the holder channel as *fill-in slot → 13 of 13, fixed document → 0 of 6* and
+attributed the blindness to the **form**. 🟢 **Correct, and the mechanism splits:**
+
+| payload | declaration lines | verdict | why |
+|---|---|---|---|
+| Apache `10 173` B | **0** | `NO-DECLARATION` | the appendix is absent, so there is no slot at all |
+| Apache `11 357`/`11 358` B | **1** | `PLACEHOLDER-DECLARATION` | `Copyright [yyyy] [name of copyright owner]` — a literal instruction, never filled |
+
+🔴 **A holder-reader that tests only for the presence of a declaration line extracts
+`[name of copyright owner]` as the holder from the with-appendix mode.** 🔵 **So the appendix
+choice decides whether a naive holder channel finds a line to MISREAD** — a latent false-holder
+defect that exists on one mode of the family and not the other. Guarded here by
+`is_placeholder()`; **no such extraction has been published by this base**, checked.
+
+### 🟢 `p310`'s "irreconcilable" digest — RESOLVED, and it names a defect class no digest check can catch
+
+`p310` registered this and left it open: `p97` published `Open-Detector`'s `LICENSE` at
+`1 066` B — confirmed exactly — with digest **`62cc0b4655b5f3`**, which matches no truncation of
+the payload's `sha256`, `sha1` or `md5`.
+
+| step | channel | result |
+|---|---|---|
+| exhaustive hash search over the exact `1 066` B payload | **19 algorithms × 7 normalisations** | 🔴 **no match** — `p310`'s finding, independently widened |
+| the full 40-hex value, found in the tree | [`p107-git-lane-census/result.2026-10-10.tsv:36`](../compose/code/p107-git-lane-census/result.2026-10-10.tsv) · [`p109-freshness/result.2026-10-10.tsv:36`](../compose/code/p109-freshness/result.2026-10-10.tsv) | `62cc0b4655b5f361388f493649bbd5c612dbf9a4` — **40 hex = a SHA-1**, sitting beside commit dates |
+| the transposition | [`p989-sha-identity-fork/results.2026-10-10.tsv:15`](../compose/code/p989-sha-identity-fork/results.2026-10-10.tsv) | the same value, **truncated to 14 chars, in the LICENCE-digest column** |
+| 🟢 **the answer** | `git ls-remote` (first-hand, `p311`) | 🟢 **`62cc0b4655b5f361388f493649bbd5c612dbf9a4  refs/heads/main`** |
+
+🟢 **The cell is the repository's HEAD COMMIT SHA, published where a payload digest belongs.**
+🔵 **The class, and it is the durable part: a cell carrying CORRECT data from the WRONG CHANNEL.**
+🔴 **No digest-versus-digest comparison can detect it** — both values are valid hex of plausible
+length, and the byte length in the same row was right, which is precisely what made the row look
+sound for 214 passes. The only test that finds it asks *"is this value the answer to a DIFFERENT
+question this base also asked?"* → **`P311-C`**, and a gate for it is `ACTION p311-R` item 3.
+
+### 🔴 The coverage ratio's own denominator was not safe — `22` families became `31`
+
+`P310` says the families a gate owes a payload to *"are not a matter of taste — they are the ones
+the shelves publish"*, and that `family_coverage.py` **derives** that set. 🔴 **It derives it
+through a hand-written grammar, so what it derives is the set of families the grammar can SPELL.**
+
+🔴 **Nine families this base publishes WITH FIRST-HAND EVIDENCE had no token at all:**
+
+| family | why it matters | where it is published |
+|---|---|---|
+| 🔴 **EUPL-1.2 / EUPL-1.1** | **45 + 35 cells.** The EU's own public-sector licence — Finland's national education stack (`koski`) is read at `EUPL-1.1-or-later` with **9 placed addresses across two versions** | an EMEA engagement's most likely licence, invisible to the denominator |
+| 🔴 **BUSL-1.1** | **33 cells.** `sdv-dev/SDV`, `twentyhq/twenty` — source-available, **not OSI** | the family a studio must NOT build on |
+| 🔴 **Elastic-2.0** | **20 cells**, one carrying a probed `4 102` B payload | ditto |
+| 🔴 **SSPL-1.0** · **OSL-3.0** · **OFL-1.1** | 7 · 8 · 5 cells | published, unbucketed |
+| 🔴 **LGPL-2.1** | **46 cells.** The base records that its obligations **differ** from LGPL-3.0's and that it **could not tell them apart** | a vendored PHPMailer in a school SIS |
+| 🟡 **BSD-UNVERSIONED** | **192 cells** — and it is how `p310` shelved [TUBAF-IFI-DiPiT/github2pandas](https://github.com/TUBAF-IFI-DiPiT/github2pandas), whose payload's own title line reads **`BSD 2-Clause License`** | the shelf cell is less precise than the payload |
+
+🔵 **Both ends of the risk spectrum were missing at once — the EU's public-sector licence and the
+source-available families — which is what makes this a hole rather than an omission.**
+
+🟢 **The corrected census: `31` published families, `11` with a pinned payload, coverage `35 %`.**
+🔴 **`p310` reported `36 %` at `22` families. Coverage went DOWN while three families were ADDED,
+because the denominator grew faster than the numerator** — and `p309`'s retrospective coverage
+falls from `14 %` to **`10 %`**. 🔵 **That is `P310` applied one level up: a coverage ratio whose
+denominator comes from a restated grammar is as unbounded as the `DEFECT=0` it was built to
+bound.** → **`P311-D`**, with the residual edge now **measured and printed** by
+`family_coverage.unbucketed()` (GPL unversioned 301 lines, AGPL 271, Apache 151, LGPL 139 …),
+🟡 **in LINES THE GRAMMAR CLAIMS NOTHING FOR, which is an UPPER BOUND on cells: prose is counted
+too, and this instrument cannot tell a licence cell from a sentence about a licence.**
+
+### 🔵 Registered, not claimed
+
+- 🔴 **`GPL-2.0` (443 cells), `BSD-3-Clause` (298), `LGPL-3.0` (289), `ECL-2.0` (223),
+  `BSD-UNVERSIONED` (192), `MPL-2.0` (161), `ISC` (159) and `CC-BY-NC-SA-4.0` (128) still have no
+  pinned payload.** `ripose-jp/Memento` is the first `GPL-2.0` payload this base has touched and
+  it was **not** pinned as a fixture this pass — the next cheapest hour available.
+- 🟡 **`BSD-2-Clause`'s template constant is `1 290` on ONE sample.** Recorded; **not** claimed to
+  generalise.
+- 🟡 **`yomidevs/yomitan`'s GPL-3.0 at `35 147` B is 2 B short of the canonical `35 149` B with a
+  different digest.** Recorded, **not** explained; it is not a prefix of the canonical payload.
+- 🔴 **No commercial-use verdict is asserted by the new instrument.** It answers identity only.
+  `P250`'s second column still has no importable oracle — `ACTION p310-R` item 2, **not done**.
+- 🔴 **Every market and regulatory figure on this base remains search-snippet grade.** `p310`
+  confirmed on two transports that no primary legal, government or market host is reachable;
+  `p311` did **not** re-test it.
+
 ## 🟢 Pass 310 — THE POST-LLM INTEGRITY LAYER HAS A FOUNDATIONAL TIER AND IT IS `100 %` PERMISSIVE, AGAINST THE ASSESSMENT LAYER'S `4`-TO-`1` COPYLEFT — AND TWO OF ITS ROWS WERE ALREADY HERE
 
 ⏱️ **Pass 310 of `2026-10-19`.** Evidence:

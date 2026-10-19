@@ -216,8 +216,20 @@ check("coverage: every p310 fixture family is in the corpus map",
       all(f in corpus for _n, f, _c, _w in FX.DECLARED), True)
 check("coverage: p309's three families are IMPORTED, not restated",
       all(f in corpus for f in ("GPL-3.0", "AGPL-3.0", "CC-BY-SA-4.0")), True)
-check("coverage: the uncovered remainder is non-empty and MIT is in it",
-      "MIT" not in corpus, True)
+# 🔴 THIS CONTROL USED TO READ `"MIT" not in corpus` — a pin asserting the exact
+# value `ACTION p310-R` item 1 existed to change, which is the shape item 5 of
+# that same action asked the next pass to go hunting for. 🔵 It would have gone
+# RED the moment the action was discharged, and a pass reading a red gate under
+# time pressure is a pass tempted to discharge it by reverting the fix. p309's
+# CC-pointer control had to be turned red before item 2 could be closed; this
+# one is rewritten instead, and what it now pins is the INVARIANT rather than
+# the open state: coverage is partial, and whatever is uncovered is REPORTED.
+check("coverage: MIT and Apache-2.0 are now covered — `ACTION p310-R` item 1, "
+      "discharged by p311-template-identity",
+      "MIT" in corpus and "Apache-2.0" in corpus, True)
+check("coverage: the uncovered remainder is still non-empty, so the census "
+      "keeps reporting exposure rather than declaring completion",
+      any(f not in corpus for f in counts), True)
 
 # ------------------------------------------------------------------- report
 for line in passed:

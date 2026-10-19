@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 311 — THE SUPPLY-SIDE TREND THIS BASE HAD NOT SEEN: THE BIGGEST EDUCATION-ADJACENT AXIS ON GITHUB IS `62 %` COPYLEFT, WHICH INVERTS THE TIER PUBLISHED ONE PASS EARLIER
+
+⏱️ **Pass 311 of `2026-10-19`.** Evidence:
+[`p311-language-learning-axis.2026-10-19-p311.tsv`](../evidence/p311-language-learning-axis.2026-10-19-p311.tsv) ·
+[`p311-regional-token-census.2026-10-19-p311.tsv`](../evidence/p311-regional-token-census.2026-10-19-p311.tsv) ·
+[`p311-template-identity.2026-10-19-p311.tsv`](../evidence/p311-template-identity.2026-10-19-p311.tsv).
+
+🔴 **No new DEMAND-side trend is published this pass.** Four fresh regional sweeps returned
+**16 of 16 tokens already carried** — see [`intel/market.md`](market.md). 🔵 **Every trend below
+is measured off trees, first-hand, which is where `T186` told this base to spend the pass.**
+
+### 🟢 `T311-1` — licence profile is an AXIS property, and it varies enough to decide an engagement
+
+Two axes, read one pass apart, by the same method, with the same instrument:
+
+| | `academic-integrity` foundational tier (`p310`) | `language-learning` (`p311`) |
+|---|---|---|
+| repos on the axis | 111 | 🟢 **4 468** |
+| axis leader | `dolos` **350★** | 🟢 **≈10.1k★** |
+| permissive | 🟢 **100 %** | 🔴 **`31 %`** (4 of 13, all MIT) |
+| copyleft | 0 | 🔴 **`62 %`** — GPL-3.0 ×5, AGPL-3.0 ×2, GPL-2.0 ×1 |
+| noncommercial | 0 | 🔴 **`8 %`** |
+
+🔵 **The generalisation, and it is the trend worth carrying: licence profile tracks the ARTEFACT
+SHAPE, not the industry.** Integrity produces **detectors, engines and benchmarks** — library-
+shaped things, which their authors license permissively because they are meant to be embedded.
+Language learning produces **browser extensions, media players, input methods and self-hosted
+apps** — end-user applications, which their authors license copyleft to keep forks open.
+🔴 **So "open source in education" has no single licence posture, and a studio that quotes one
+will be wrong on a 4 468-repo axis.** 🟢 **Operational form: read the axis's licence profile
+before scoping, because it decides whether the engagement is *embed and extend* or *integrate
+and keep separate*.**
+
+### 🟢 `T311-2` — the deployable artefact on the largest axis is a COMPONENT, not a platform
+
+Fifteen rows read; **exactly one is a platform** (`LibreLingo`, AGPL-3.0, already carried).
+🔵 **Same shape `p310` found on `academic-integrity` — many components, zero platforms — reached
+independently on an axis 40× larger, and for the same structural reason:** language learning
+attaches to the media, the browser, the input method or the text the learner **already has**.
+🟢 **Two axes, two orders of magnitude apart in size, both component-shaped.** → the
+platform-shaped engagement is the exception in this industry, not the default.
+
+### 🟢 `T311-3` — a star filter and a licence filter disagree at the TOP of an axis, again
+
+`p310` found this on `academic-integrity` (the **second**-most-starred row was PolyForm
+Noncommercial). 🔴 **It reproduces here, harder:** the axis's **#1** row by stars
+(`read-frog`, ≈10.1k) is **GPL-3.0**, and the **4th** (`anki-jlpt-decks`, ≈3.1k) is
+**CC-BY-NC-4.0 — noncommercial**. 🟢 **Of the four MIT rows, the highest sits at ≈2.7k, below
+five copyleft rows.** 🔵 **Two independent axes now show the same inversion: on an education
+axis, ranking by stars ranks AWAY from what a studio can ship.** → **`P311-F`: a supply table
+ordered by adoption must carry the licence column beside it, or it is a recommendation to build
+on what cannot be shipped.**
+
+### 🟢 `T311-4` — a licence family's byte length is not a family property, and two families prove it differently
+
+🟢 Measured over **nine** first-hand MIT payloads from nine unrelated repositories across
+**three** topic axes: **eight share ONE normalised template digest and `bytes − len(copyright
+line)` is `1 038` exactly**; the ninth is a second template at `1 047`. Observed lengths
+`1 061`–`1 094`, against a published band of `1 062`–`1 074`.
+🔵 **MIT's length is `constant(template) + len(holder)`, so a band measures whose repositories
+were sampled.** 🟢 **Apache-2.0 and GPL-3.0 are the other case — fixed documents, bimodal by
+SECTION, where the short form is a STRICT BYTE PREFIX of the long one** (Apache delta exactly
+`1 184` B, GPL-3.0 delta exactly `2 726` B — the instructional appendix in both).
+🔴 **And GPL-2.0 refutes the universal form of that rule**: three payloads, three lengths, **no
+prefix relation at all**, because the FSF boilerplate address differs (`51 Franklin St,` versus
+`51 Franklin Street,`) **before the appendix is ever reached**. 🔵 **Recorded as the boundary of
+this pass's own rule rather than left as an unbounded claim** → `P311-T`, and
+[`compose/code/p311-template-identity/`](../compose/code/p311-template-identity/) (80 controls).
+
+### 🟢 `T311-5` — a coverage ratio is only as sound as the grammar that built its denominator
+
+🔴 **`p310` reported fixture coverage at `36 %` over `22` published families. The family list was
+derived through a hand-written grammar, so it was the set of families the grammar could SPELL** —
+and **nine** families this base publishes with first-hand evidence had no token at all:
+`EUPL-1.2`, `EUPL-1.1`, `BUSL-1.1`, `Elastic-2.0`, `SSPL-1.0`, `LGPL-2.1`, `OSL-3.0`, `OFL-1.1`
+and a bare `BSD`. 🟢 **Corrected: `31` published families, `13` with a pinned payload, `42 %`.**
+🔴 **Coverage first went DOWN — `36 %` → `35 %` — while three families were ADDED, because the
+denominator grew faster than the numerator**, and `p309`'s retrospective coverage fell from
+`14 %` to `10 %`. 🔵 **`P310` one level up: a ratio whose denominator comes from a restated
+grammar is as unbounded as the `DEFECT=0` it was written to bound.** → `P311-D`.
+🔵 **Both ends of the risk spectrum were missing simultaneously** — the EU's own public-sector
+licence (`EUPL`, the single most likely requirement in an EMEA public-education procurement) and
+the source-available families a studio must **not** build on (`BUSL`, `Elastic`, `SSPL`).
+
+### 🟢 `T311-6` — a cell can carry CORRECT data from the WRONG CHANNEL, and no digest check finds it
+
+`p310` registered `Open-Detector`'s digest discrepancy as *irreconcilable* and left it open.
+🟢 **Resolved at `p311`:** `62cc0b4655b5f3` is the first 14 characters of
+`62cc0b4655b5f361388f493649bbd5c612dbf9a4`, which `git ls-remote` confirms first-hand is the
+repository's **HEAD commit SHA** on `refs/heads/main`. It sits in that full form in two
+`2026-10-10` census ledgers and was published truncated in the **licence-digest** column.
+🔴 **The class is durable and it is undetectable by comparison:** both values are valid hex of
+plausible length, and the byte length in the same row was **right**, which is what kept the row
+looking sound for 214 passes. 🔵 **The only test that finds it asks whether a value is the answer
+to a DIFFERENT question this base also asked.** → **`P311-C`**.
+
+### 🟢 `T311-7` — the undirected regional web channel now returns this base's own inventory
+
+**Third independent measurement, and the ceiling is rising**: `p309` 18/22 (`82 %`), `p310` 20/25
+(`80 %`), `p311` 🔴 **16/16 (`100 %`)** — including `Apply AI Alliance`, which `T186` recorded as
+the single new item its own sweep produced. 🔵 **The claim is narrow and exact: an UNDIRECTED
+regional sweep on this industry is now worth approximately nothing. It is not a claim that no
+regional fact remains to be found.** 🟢 **The one thing the sweep earned was independent
+corroboration, on a third channel, of the EU date `p310` flagged as unconfirmed** — stand-alone
+high-risk `2027-12-02`, embedded `2028-08-02`. **Grade unchanged: search-snippet.** → `P311-S`.
+
+### 🟢 `T311-8` — the proctoring posture flips, and the measurement that flipped it was one HTTP request
+
+`p310`'s vertical shelf published *"no permissively licensed, maintained option on this axis"*
+for proctoring, on the strength of four camera/keystroke prototypes.
+🟢 **[SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring)
+is `MPL-2.0` (`16 726` B, `fab3dd6bdab2`), 355★, ETH Zürich, and integrates with Moodle and
+Open edX.** 🔵 **The nil was true of the sub-tier measured and false of the tier named** — the
+correction is a narrowing, not a reversal: *environment lockdown* and *behavioural monitoring*
+answer different questions. 🔴 **The surviving nil: no permissively licensed, maintained
+open-source CAMERA/KEYSTROKE monitoring option exists.** 🟢 **Trend consequence for EMEA: the
+Annex III clock does not have to be met by buying a proprietary stack**, which is where `p310`
+sent it.
+
+### 🔵 Registered, not claimed
+
+- 🔴 **No demand-side trend is new this pass.** The adoption, regulation and market statements on
+  these shelves are unchanged and remain **search-snippet grade**.
+- 🔴 **`4 453` of `4 468` `language-learning` rows are unread.** Every profile figure above is
+  **15 rows, the most-starred end**, and is stated as a sample, not as the axis.
+- 🟡 **`accessibility` was never enumerated**, so no trend is offered for it.
+- 🟡 **No benchmark was run on any detector, tutor or language model** here or at any prior pass.
+
 ## 🔴 Pass 310 — THE INDUSTRY'S BIGGEST AI-IN-EDUCATION PROBLEM IS PHRASED AS A PROBLEM *ABOUT* AI, AND THAT IS WHY A KEYWORD SET BUILT FROM SOLUTIONS COULD NOT SEE IT
 
 ⏱️ **Pass 310 of `2026-10-19`.**

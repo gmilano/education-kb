@@ -487,9 +487,10 @@ compose/code/p308-phrase-anchor-sweep/window_probe.sh	licence	CASE-UNVARIED	no-u
 compose/code/p308-shelf-consistency/shelf_consistency.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENCE LICENSE.md licence license
 compose/code/p308-shelf-consistency/shelf_consistency.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README.md
 compose/code/p309-affero-rung-census/rung_census.py	licence	TREE-ENUMERATED	no-upper-ext	STANDING	LICENSE LICENSE.md
-compose/code/p310-family-coverage/family_coverage.py	readme	SINGLE-SPELLING	no-upper-ext	STANDING	README.md
-compose/code/p310-family-coverage/fixtures.py	licence	SINGLE-SPELLING	no-upper-ext	STANDING	LICENSE
+compose/code/p310-family-coverage/family_coverage.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README README.md
+compose/code/p310-family-coverage/fixtures.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p310-family-coverage/run_families.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	licence license
+compose/code/p311-template-identity/template_identity.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p317-data-license-layer/corpus_axis.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p317-data-license-layer/corpus_axis.py	readme	TREE-ENUMERATED	no-upper-ext	HISTORICAL	README README.md
 compose/code/p317-data-license-layer/sweep_corpus.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt

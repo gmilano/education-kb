@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-19
 ---
 
+## Pass 311 — 2026-10-19 — **THE HIGHEST-VALUE EXPOSURE ON THIS BASE WAS CLEAN, AND THE HOUR BOUGHT AN INSTRUMENT INSTEAD OF A VERDICT: MIT'S BYTE BAND COULD NEVER HAVE CLOSED — AND THE REMEDY `p310` WROTE FOR ITS OWN HEADLINE ERROR COMMITTED THAT ERROR THREE TIMES**
+
+**One-line summary:** 🟢 **`ACTION p310-R` item 1 discharged — MIT (`5 558` cells) and
+Apache-2.0 (`2 335`), never run through any dynamic arm, graded on eleven first-hand payloads
+against all nine declared classifiers: `36` CORRECT, `6` COARSE, `6` ABSTAIN, `6` out-of-domain,
+🟢 `0` DEFECT.** 🟢 **And the measurement produced a rule rather than a verdict: MIT's length is
+`constant(template) + len(copyright line)`, so the published band `1 062`–`1 074` was not merely
+wrong but UNCLOSABLE — eight of nine payloads across three topic axes share ONE normalised
+template digest at a constant of exactly `1 038`.** 🔴 **`ACTION p310-R` item 6 named five
+"unread" topic axes; three had already been read and the shelves say so in their own words, and
+`make carried` stopped `10` of `11` top-starred rows on two of them.** 🟢 **The one genuinely
+unread axis is the biggest: [`language-learning`](https://github.com/topics/language-learning),
+`4 468` repositories, `13` of `15` new, and `62 %` copyleft — the exact inverse of the tier
+`p310` published a pass earlier.** 🟢 **`p310`'s "irreconcilable" digest RESOLVED: it is the
+repository's HEAD commit SHA.** 🟢 **5 families gained a first pinned payload, `8 520` cells came
+under coverage; 80 new controls; `20/20` gates green at publication.**
+
+### 🟢 `ACTION p310-R` — disposition, item by item
+
+| # | item | disposition |
+|---|---|---|
+| 1 | **Pin a payload for MIT and Apache-2.0 and run the arm** | 🟢 **DONE, and it was the right call.** `0` defects on `54` gradings. 🟢 **It also produced `P311-T`, the template-identity rule, and five families now hold a pinned payload: MIT, Apache-2.0, GPL-2.0, MPL-2.0, BSD-2-Clause** |
+| 2 | Promote `P250`'s commercial-use rule to an importable module | 🔴 **NOT DONE.** Re-registered, third pass. 🔵 Its absence was felt directly: `p311-template-identity` answers identity and **could not** return the second column because there is still nothing to import |
+| 3 | Build the universal-AFFIRMATIVE gate | 🔴 **NOT DONE as a gate.** 🟡 **But the pass applied the discipline to itself**: `P311-T` asserts that fixed-document lengths relate by prefix, and GPL-2.0 **refutes the universal form** — three payloads, three lengths, no prefix relation — so the rule ships with its measured boundary and a live counter-example control rather than as an unbounded claim |
+| 4 | **Make `make carried` BLOCK the headline, not just inform it** | 🔴 **NOT DONE as a gate — and this pass is the evidence it is needed.** 🟢 **It was obeyed by hand**: the gate was run before any supply row was written and stopped `10` of `11`. 🔴 **`p310`'s own item 6 asserted three absences without running it.** → `P311-A` |
+| 5 | Audit standing controls for a pin on a value an open ACTION exists to change | 🟡 **PARTLY, with one worked instance.** `p310`'s control `"MIT" not in corpus` pinned the exact value item 1 existed to change; it is **rewritten to pin the invariant** (coverage is partial and the remainder is reported) rather than reverted. 🔴 **The systematic grep over the suites was NOT run** |
+| 6 | Widen sampling to PROBLEM-class topics | 🟢 **DONE, and the item's own premise was refuted.** 🔴 **`proctoring` (cited 7×), `student-information-system` (10×) and `open-educational-resources` (21×) had already been read as axes.** 🟢 **`language-learning` was genuinely unread — `4 468` repos, the largest axis this base has enumerated** |
+| 7 | Re-key repository identity on the root commit; run the 8 backlog ladders | 🔴 **NOT DONE.** Re-registered |
+| 8 | Read the remaining 91 `academic-integrity` rows | 🔴 **NOT DONE.** The axis budget went to `language-learning` instead, on item 6's instruction |
+| 9 | Do NOT re-litigate the listed items | 🟢 **OBEYED.** `gitlab.com`, Frappe Learning, the ERP/CRM nil, the three saturated tutor axes, `learning-analytics`, the seven CC0 rows and *"no primary source"* were **not** re-run. 🟡 **Two deliberate exceptions, stated as such:** the four listicle queries **were** re-run because the standing prompt mandates them — they returned the same non-education generalist supply and **reproduce the nil without being published as findings**; and Chile's `21.719` is carried forward unchanged with its contradictory public reading, as required |
+
+### 🟢 What was found
+
+| finding | verdict |
+|---|---|
+| 🟢 **the exposure was clean, with a denominator** | MIT + Apache-2.0 = **`7 893` cells** *(measured BEFORE this pass edited anything — see the drift note below)*, never touched by a dynamic arm. **`54` gradings, `0` DEFECT.** 🔵 **A measured negative result on the single highest-value item the prior pass could name** |
+| 🟢 **the band could never have closed — and that is the durable finding** | **MIT length = `constant(template) + len(copyright line)`.** Nine payloads, nine repos, three topic axes, 2020–2026: 🟢 **eight collapse to ONE normalised digest at `bytes − len(declaration) = 1 038` exactly**; the ninth is a **second template** (`The MIT License (MIT)`, `1 047`). Observed `1 061`–`1 094` vs published `1 062`–`1 074`. 🔵 **A band around a free variable cannot be corrected, only replaced** → **`P311-T`** |
+| 🟢 **fixed documents are bimodal by SECTION, and the relation is a PREFIX** | Apache-2.0 `10 173` B is a **strict byte prefix** of `11 357` B, delta **exactly `1 184` B** = the `APPENDIX: How to apply` block. GPL-3.0 `32 423` B is a strict prefix of `35 149` B, delta **exactly `2 726` B**. 🔴 **Operational: neither short payload is a defective grant and neither should be flagged** |
+| 🟢 **and the rule's boundary is measured, not assumed** | 🔴 **GPL-2.0 REFUTES the universal form**: three payloads (`15 214` · `18 092` · `18 097`), **no prefix relation**, because the FSF address differs (`51 Franklin St,` vs `51 Franklin Street,`) **before the appendix is reached**. 🟢 Kept as a live counter-example control |
+| 🟢 **`p310`'s fork-signal note CLOSED** | `noplag-engine`'s `11 358` B is **byte-exactly `b"\n"` + the `11 357` B payload**. One leading newline |
+| 🟢 **`p310`'s "irreconcilable" digest RESOLVED** | `62cc0b4655b5f3` is the first 14 chars of `62cc0b4655b5f361388f493649bbd5c612dbf9a4`, confirmed by `git ls-remote` as `Open-Detector`'s **HEAD commit** on `refs/heads/main`. Published in the **licence-digest** column by `p989-sha-identity-fork`. 🔴 **The class: a cell carrying CORRECT data from the WRONG CHANNEL — undetectable by digest comparison**, since both are valid hex of plausible length and the byte length in the same row was right → **`P311-C`** |
+| 🔴 **the coverage ratio's own denominator was not safe** | `P310` says the family set is **derived**; it is derived **through a hand-written grammar**, so it is the set of families the grammar can SPELL. 🔴 **Nine families published with first-hand evidence had no token**: `EUPL-1.2`/`1.1` (80 cells — **Finland's national education stack**, 9 placed addresses), `LGPL-2.1` (46), `BUSL-1.1` (33), `Elastic-2.0` (20), `OSL-3.0`, `SSPL-1.0`, `OFL-1.1`, bare `BSD` (**192**). 🟢 **`22` → `31` families; coverage `36 %` → **`35 %`** on correction, then **`42 %`** with five new pins. Coverage went DOWN while families were ADDED** → **`P311-D`** |
+| 🔴 **the remedy repeated the error it was written for** | `p310`'s headline error was reading `CARRIED` and publishing *"never enumerated"*. 🔴 **Its `ACTION p310-R` item 6 then named three already-read axes as unread**, and `make carried` stopped **`10` of `11`** top-starred rows on two of them (`91 %`). 🔵 **An action item that asserts an absence is a claim** → **`P311-A`** |
+| 🟢 **the one real axis, and it is the biggest** | [`language-learning`](https://github.com/topics/language-learning): **`4 468`** repos — **11.8×** `learning-analytics`, **40×** `academic-integrity` — leader at **≈10.1k★** against the integrity axis's 350★. **`13` of `15` new** after the `P311` gate |
+| 🔴 **its licence profile INVERTS the prior pass's tier** | **`4` MIT (`31 %`) · `8` GPL/AGPL (`62 %`) · `1` CC-BY-NC (`8 %`)**, against `p310`'s `100 %`-permissive integrity tier. 🔵 **Licence profile tracks ARTEFACT SHAPE**: libraries are permissive, end-user applications are copyleft. 🔴 **So the largest education-adjacent axis on GitHub is the one a studio can LEAST build proprietary product on** |
+| 🔴 **a star filter ranks AWAY from what can be shipped — second axis running** | The axis's **#1** by stars is GPL-3.0; its **#4** is **CC-BY-NC-4.0**. The highest-starred MIT row sits 6th → **`P311-F`** |
+| 🟢 **`p310`'s proctoring nil was too broad as published** | [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) is 🟢 **MPL-2.0** (`16 726` B · `fab3dd6bdab2`), **355★**, ETH Zürich. 🔵 **The nil was true of the camera/keystroke tier measured and false of the tier named** — a narrowing, not a reversal. 🟢 **Surviving nil: no permissively licensed, maintained CAMERA/KEYSTROKE option exists** |
+| 🟢 **an MIT system of record, which these shelves did not have** | [academico-sis/academico](https://github.com/academico-sis/academico) 🟢 **MIT** `1 094` B, **406★** — and the **9th** MIT payload, confirming the `1 038` constant from a **third** topic axis |
+| 🔴 **a `345★` SIS serves no grant on any probed path** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic): 5 paths × 2 branches, all miss. 🟡 **Stated as a probe nil, not a licence verdict** |
+| 🔴 **the regional web channel returns this base's own inventory** | **`16` of `16` tokens already carried (`100 %`)** across four fresh sweeps — third measurement of a rising ceiling (`82 %` → `80 %` → `100 %`), **including `Apply AI Alliance`**, which `T186` recorded as the one new item of its own sweep. 🟢 **`T186`'s *"spend the pass on trees"* obeyed, and every finding above came from trees** → **`P311-S`** |
+| 🟢 **one thing the sweep earned** | **Independent corroboration on a third channel** of the EU date `p310` flagged as unconfirmed — stand-alone high-risk `2027-12-02`, embedded `2028-08-02`. 🔵 **Grade unchanged: search-snippet. Recorded as corroboration, not as a finding** |
+| 🔴 **three wrong rungs, in this pass's own instrument** | The declaration test took three builds: `copyright` matched **anywhere** (marker-for-position, `p124`); a bare `\(c\)` admitted (Apache enumerates `(a)`,`(b)`,`(c)`); and 🔴 **`re.I` on a position test, which re-created defect 1 after it was fixed** because Apache **wraps** prose onto lines beginning with a lowercase `copyright`. 🟢 **All three kept as live negative controls** |
+| 🔴 **and `gate-ladder-case` caught this module breaking the convention it quotes** | `STANDING:SINGLE-SPELLING` rose **17 → 18** and named `template_identity.py`: `GRANT_SUFFIX = "." + "LICENSE"`. 🔵 **`p310-family-coverage/fixtures.py` documents this exact hazard and remedy; this module restated the hazard in a comment and committed it in code three lines later.** 🟢 **The rung was removed and the ceiling left at 17** — the ratchet's own note says bumping it is what eight passes were trained to do |
+
+### 🔴 What this pass could not establish
+
+🔴 **No primary legal, market or government source was reached.** Every regulatory and market
+figure in [`intel/`](intel/) remains **search-snippet grade**; `p310` confirmed the boundary on
+two transports and `p311` did **not** re-test it.
+🔴 **`ACTION p310-R` items 2, 3 (as a gate), 4 (as a gate), 7 and 8 were not performed** and are
+re-registered below. Item 5 is partly done.
+🔴 **`18` of `31` published families still have no pinned payload** — `BSD-3-Clause` (298 cells),
+`LGPL-3.0` (289), `ECL-2.0` (223), `BSD-UNVERSIONED` (192) and `ISC` (159) first among them.
+🔴 **`4 453` of the `4 468` `language-learning` rows are unread.** Every profile figure is a
+15-row, most-starred sample and is stated as one.
+🟡 **`accessibility` was never enumerated** — the one item-6 axis whose status remains genuinely
+undetermined.
+🟡 **`yomidevs/yomitan`'s GPL-3.0 at `35 147` B** is 2 B short of canonical with a different
+digest, and is **not** a prefix of it. Recorded, not explained.
+🟡 **`kantord/LibreLingo`'s AGPL at `34 524` B** differs from `asbplayer`'s `34 523` at byte
+offset `33 212`. Recorded, not explained.
+🟡 **`BSD-2-Clause`'s template constant `1 290` rests on ONE sample** and is not claimed to
+generalise.
+🔴 **No benchmark was run on any detector, tutor or language model**, here or at any prior pass.
+🔴 **A tooling hazard, found by walking into it:** `make ladder-audit FAMILY=x` writes its
+`--out` ledger **filtered**, to the same unfiltered path. A diagnostic
+`make ladder-audit FAMILY=grant` (which matches nothing) therefore **overwrote
+`evidence/ladder-case-audit-2026-10-19.tsv` with a header-only file, destroying 645 rows.**
+🟢 Caught before commit and regenerated unfiltered (647 rows, `STANDING:SINGLE-SPELLING` back at
+its ceiling of `17`). 🔵 **A header row written as the whole file is `p277`'s own subject arriving
+through the recipe that audits for it**, and the recipe should either refuse `--out` when
+`FAMILY` is set or name the file after the family. Registered, not fixed.
+🟡 **LATAM is a NIL on the code channel for the second pass running:** of 18 payloads probed
+first-hand, **zero** are placed in LATAM.
+🟡 **Every cell count in this pass is the PRE-PUBLICATION measurement, and it drifts — stated
+rather than hidden.** `family_coverage.py` counts licence tokens on the live shelves, so this
+pass's own prose adds cells to the families it writes about: MIT reads **`5 558`** before
+publication and **`5 578`** after, Apache-2.0 **`2 335`** → **`2 340`**. 🔵 **The published
+figures are the pre-publication ones, because those are the numbers the pass measured and acted
+on** — `p274`'s `T43` (*"a count incremented by reading is a count that drifts"*) and `p310`'s
+same finding on `carried_index.py` (*"it reads the shelves, so it is only meaningful BEFORE
+publication"*). 🔴 **The drift is visible across this base's own history — MIT has been published
+at `5 501`, `5 525` and `5 578` — so no pass's cell count should be compared to another's without
+asking when it was taken.**
+
+### 🟢 `ACTION p311-R` — ranked for `p312`
+
+1. 🔴 **Pin `EUPL-1.2` and run the arm.** 🔵 **The highest-value hour available, and it is a
+   commercial argument rather than a hygiene one**: EUPL is the likeliest licence requirement in
+   an EU public-sector education procurement, this base publishes **80 EUPL cells** including
+   Finland's national stack with 9 placed addresses, and **until this pass the census could not
+   even see the family.** No classifier has ever read its payload.
+2. 🔴 **Build the two gates this pass needed and worked around by hand.**
+   (a) **`make carried` must BLOCK a supply headline** (`p310-R` item 4, now with **two** worked
+   instances: `p310`'s own headline and `p310-R` item 6's premise). 🟢 Cheap first cut: when a
+   section claims a tier or an axis is new, require every slug **and every axis name** in it to
+   have been checked, and fail on an unmarked `CARRIED`.
+   (b) **`P311-C`: no published digest may equal a value this base recorded as a COMMIT SHA.**
+   🟢 Mechanical and cheap — scan the evidence store and shelves for a licence-digest cell that
+   appears as a commit identity elsewhere. It would have caught `Open-Detector` in one run.
+3. 🔴 **Promote `P250`'s commercial-use rule to an importable module** (`p310-R` item 2, third
+   pass). 🔵 Every "can ship" judgement in [`compose/patterns.md`](compose/patterns.md) is
+   currently a human reading of the family, with no oracle behind it.
+4. 🟡 **Run the systematic arm of `p310-R` item 5** — grep the suites for `still`, `not yet`,
+   `open`, `unresolved` in test names and comments and require each hit to name its action item.
+   🔵 One worked instance was found by accident this pass; the sweep was not run.
+5. 🟡 **Pin the remaining high-cell families in descending order:** `BSD-3-Clause` (298),
+   `LGPL-3.0` (289), `ECL-2.0` (223), `ISC` (159). 🟢 `family_coverage.py` prints the queue, and
+   `rosariosis`/`devkit`/`Memento` are already pinned so `GPL-2.0` is done.
+6. 🟡 **Read deeper into `language-learning`** — `4 453` rows unread, and `p303`'s lesson is that
+   the tail is where the non-US supply lives. 🔵 **Screen for relevance on the way in**: 5 of the
+   first 20 rows on this axis were not language learning at all.
+7. 🟡 **Enumerate `accessibility`** — the one axis whose status this base still cannot state, and
+   the one with the clearest regulatory pull (EAA in EMEA, Section 508 in NA).
+8. 🟡 **Re-key repository identity on the root commit** and **run the 8 backlog ladders**
+   (`p310-R` item 7, unchanged, still data entry with a denominator).
+9. 🔵 **Do NOT re-litigate**: the four listicle queries (**re-run at `p311`, same non-education
+   generalist supply, nil reproduced**), the undirected regional web sweep (**`16/16` carried at
+   `p311`; `T186` and `P311-S` both say budget against it**), `gitlab.com`, Frappe Learning's
+   AGPL-3.0, the education ERP/CRM nil, the `ai-tutor` / `intelligent-tutoring-system` /
+   `grading` axes, `learning-analytics`, the seven CC0 rows, `Open-Detector`'s digest
+   (**RESOLVED at `p311` — it is the HEAD commit SHA; do not reopen**), the Apache `11 358` B
+   anomaly (**RESOLVED — a leading newline**), Chile's `Ley 21.719` (**binds `2026-12-01` unless
+   `18.623-07` is enacted — brief the contradictory public reading alongside it**), and
+   *"no primary source"* — **true on TWO transports for legal, government and market hosts and
+   `huggingface.co`; FALSE for `github.com`, `raw.githubusercontent.com`, the blobless clone
+   channel, `git ls-remote`, GitLab, PyPI, npm, Packagist, RubyGems, Maven Central and Docker
+   Hub.** 🔵 **Say which, every time.**
+
 ## Pass 310 — 2026-10-19 — **`p309` REPAIRED THE RUNG AND NOT THE MECHANISM: FIVE LINES BELOW ITS FIX, THE SAME LADDER GRADED A NONCOMMERCIAL GRANT AS PUBLIC DOMAIN — AND THEN THIS PASS HAD TO REFUTE ITS OWN SUPPLY HEADLINE AGAINST ITS OWN SHELVES**
 
 **One-line summary:** 🔴 **`p306-licence-probe` graded [`aclascollege/aegis-graph`](https://github.com/aclascollege/aegis-graph)
