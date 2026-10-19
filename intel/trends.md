@@ -6,6 +6,16 @@ updated: 2026-10-19
 
 # Current trends — education
 
+**Pass 327 · 2026-10-19 (thirteenth pass of this date). Two trends added, one corrected, and the
+correction is to this file's own method.** The pass found no new sector trend on the prescribed
+channels — **all eight queries returned already-held material** — and found instead that ten
+region-placed artefacts had been discovered, licence-read, graded and addressed to this KB's shelf
+files at p296 and **never written**. **The declared-gap discount, which p324 measured and p325 and
+p326 each refined, is corrected a third time and the new form is the narrowest: before a gap is a
+statement about the query or the filter, it is a statement about the write.** The second new trend
+is a licensing one with a name: **the licence is becoming a row-level data field rather than a
+repository attribute**, and this file's licence column cannot represent that.
+
 **Pass 326 · 2026-10-19 (twelfth pass of this date). Three trends added, one corrected.** The
 pass's finding is a 6.1 ★k curriculum dataset that eleven prior sweeps could not see, and it
 touches this file three times: as a **method** trend (the sweeps were agent-shaped and the asset
@@ -59,6 +69,97 @@ the metric this sector reports is unsound, which forces a correction to pass 318
 `lumen`. **Trend 11 is extended twice**: star solicitation has been productised with a unit test
 and a CI job, and the licences themselves — not just the descriptions of them — are drifting out
 of open source at the popular end of the market.
+
+## The declared-gap discount, third mechanism — the WRITE, not the query or the filter — NEW in p327
+
+🔴 **Measured, with one command.** `evidence/p296-promotion-gap.2026-10-18-p296.tsv` carries ten
+adjudicated verdicts — four `PROMOTE-to-agents-top`, four `PROMOTE-to-foundations`, one
+`PROMOTE-to-foundations-with-grade-note`, one `PROMOTE-reference-only`. **Grepping each slug
+against `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` and
+`compose/patterns.md` returns 0 of 10 present.** Thirty passes elapsed, twelve of them on
+2026-10-19 alone.
+
+🔵 **Why this supersedes rather than joins the previous two readings.** p325 found six FUN-MOOC
+repositories that were "a promotion, not a discovery" and read it as a carry-forward lapse. p326
+found a 6.1 ★k dataset with no description, no topics and no detected language, and read it as a
+**query-shape** defect — agent-shaped queries cannot see a data layer. **Both explanations are
+about *finding*. Neither applies to a row that was found, graded, region-placed and addressed.**
+`anthropics/k12-teacher-skills` was marked `PROMOTE-to-agents-top` with region `North America` and
+the note "Claude for Teachers, co-developed with Learning Commons." **No query needed reshaping.
+No index needed fixing. The write did not happen.**
+
+🟢 **The two failures were wearing the same clothes, and separating them is the trend.** Of the
+three Learning Commons repositories promoted this pass, **`agent-skills` has no description and no
+topics — p326's signature exactly — while `knowledge-graph` carries eight topics including
+`education`, `edtech` and `ai-in-education`, and `evaluators` carries nine including `education`
+and `evaluation`.** The latter two were perfectly indexed, had been on this KB's trending channel
+since **p119–p120**, had their licences read **byte-for-byte** into evidence files, and still never
+reached a shelf file. 🔵 **An index hole and an unexecuted write produce the same observable — an
+absent row — and only one of them is fixed by changing how you search.**
+
+🟡 **The generalisation, and it is uncomfortable because it is about process rather than supply.**
+A knowledge base that discovers, grades and addresses an asset and then does not cut the row has a
+**high discovery rate and a zero delivery rate on that asset** — and delivery is the only number an
+engagement can spend. 🟢 **The audit is cheap, deterministic and repeatable: re-grep every
+`PROMOTE-*` verdict in `evidence/` against the four shelf files, and run it *before* the sweep
+rather than after.** This pass promoted all ten, re-reading every licence first-hand rather than
+carrying p296's reads — **nine of the ten are MIT or Apache-2.0, so the backlog was never blocked
+on licensing.**
+
+🔵 **One corollary for the sweep itself.** Four consecutive passes of eight prescribed queries —
+four global, four regional — have added nothing to this KB. **The queries are not broken; they
+return correct, relevant, already-held material. They are exhausted for this industry.** The two
+channels that returned anything this pass were **an audit of this KB's own evidence directory**
+(ten artefacts) and **reading the GitHub organisation behind a repository already held** (four
+artefacts, one HTTP request). **Neither is a query.**
+
+## The licence is becoming a row-level data field, not a repository attribute — NEW in p327
+
+🔴 **Three artefacts read first-hand this pass cannot be represented by this KB's licence column,
+and the reason is structural rather than sloppy.** `learning-commons-org/knowledge-graph` publishes
+**MIT code and data licensed per dataset *and in some cases per download***, across three access
+types — **Open** (typically CC BY 4.0, some CC0), **Open + Gated**, **Gated**. Its `CHANGELOG.md`
+for **v1.10.0** records that for ELA Learning Components, *"License and attribution statement
+values have been updated for each individual row."* 🔵 **The licence is a field in the data, not a
+property of the repository — and GitHub agrees, because its sidebar names no licence at all and
+its Languages panel is empty.**
+
+🟢 **The clause that makes this a procurement issue rather than a curiosity, quoted from
+`LICENSE.md`:** compiling datasets into your own build means you *"take on the licensing and
+attribution obligations of every dataset and download you include,"* and the distributor's role
+*"doesn't consolidate those into a single license for your build."* **Attribution travels to each
+original source, not to the distributor.** 🔴 **So the obvious move — export the full graph, call
+the result CC BY 4.0 — is precisely the one the licence forbids.**
+
+🔵 **This is the third distinct shape of the same trend and the shapes are converging.** p322 and
+p323 recorded *permissive at the edges, restricted at the core.* p326 recorded ODbL's
+**derivative-database / produced-work** split, where share-alike binds the database and not the
+product. **p327 records the finest grain yet: a four-way split inside a single 1,615-byte licence
+file** — `learning-commons-org/evaluators` licenses **code MIT, prompts and settings CC BY 4.0, and
+the Annotated CLEAR and PERSUADE 2.0 corpora CC BY-NC-SA 4.0.** 🟢 **Read together, these three
+passes describe a sector that has learned to license *layers* rather than repositories — and the
+layer boundary is almost always drawn between the machinery and the expert-authored content.**
+
+🟡 **The operating rule this yields, and it is directly billable.** In every one of these artefacts
+the **permissive part is the part that runs** and the **restricted part is the part that was
+expensive to author** — the curriculum text, the publisher's materials, the expert annotations.
+🟢 **Which means the reusable asset is the architecture and the harness, and the client-specific
+work is re-authoring the restricted layer against their own content.** That is the correct shape
+for a studio engagement: take the MIT evaluator, re-annotate on client data, and ship. 🔴 **It is
+also why "is this repo MIT?" has stopped being a sufficient licence question, and this KB should
+stop asking it as if it were.**
+
+## 🟡 Correction to trend 12 — the commercially usable curriculum-artefact count goes from two to three, and the third is American
+
+**p326 corrected this trend's headline from one to two: `bncc-dev` (Brazil, CC BY 4.0) and
+`withmarbleapp/os-taxonomy` (ODbL + CC BY-SA, multi-national).** 🟢 **Add
+`learning-commons-org/knowledge-graph`: US academic standards at state granularity with state↔CCSS
+crosswalks, Open-tier datasets typically CC BY 4.0, v1.15.0 released 2026-10-14, and a published
+erratum stream.** 🔵 **The moat argument this trend has made for eight passes is intact — curriculum
+data is the durable asset — but the scarcity claim is now wrong in three jurisdictions rather than
+one.** 🔴 **What remains scarce, and the next pass should test it rather than assume it, is
+**EMEA**: this KB still has no commercially usable national-curriculum graph for any European
+state, and the Learning Commons data tier is CCSS-shaped and does not port.**
 
 ## The data layer under the agents has never been swept, and it is where the sector's largest open assets are — NEW in p326
 

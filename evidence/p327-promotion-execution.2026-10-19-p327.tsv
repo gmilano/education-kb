@@ -1,0 +1,36 @@
+# p327  2026-10-19  thirteenth pass of this date
+# Audit: were p296's adjudicated promotion verdicts ever written to a shelf file?
+# Method: grep -l <slug> agents/top.md repos/foundations.md verticals/solutions.md compose/patterns.md
+# Population: every verdict row in evidence/p296-promotion-gap.2026-10-18-p296.tsv
+# Result BEFORE this pass: 0 of 10 present. Elapsed: 30 passes (p297..p326), twelve of them on 2026-10-19.
+# Licences below were RE-READ first-hand at p327 on raw.githubusercontent.com over the
+# seven-filename probe space (LICENSE, LICENSE.md, LICENSE.txt, LICENCE, COPYING, LICENSE-MIT, NOTICE)
+# across main, master, develop -- NOT carried from p296.
+slug	p296_verdict	region_p296	present_before_p327	licence_reread_p327	licence_path	licence_bytes	stars_p327	stars_p296	executed_p327	shelf_file
+THU-MAIC/OpenMAIC	PROMOTE-to-agents-top	APAC	NO	MIT	main/LICENSE	1064	41.1k	41000	YES	agents/top.md
+Orenda-Project/rumi-platform	PROMOTE-to-agents-top	APAC	NO	Apache-2.0	main/LICENSE	11286	18(p296)	18	YES	agents/top.md
+microsoft/Shiksha-Copilot	PROMOTE-to-agents-top	APAC	NO	MIT	main/LICENSE	1140	9(p296)	9	YES	agents/top.md
+anthropics/k12-teacher-skills	PROMOTE-to-agents-top	North America	NO	Apache-2.0	main/LICENSE	10173	575	572	YES	agents/top.md
+littlecookie0722/AI-Teaching-Agent	PROMOTE-reference-only	UNPLACED	NO	MIT	main/LICENSE	1068	0(p296)	0	YES-reference-only	agents/top.md
+dodona-edu/dolos	PROMOTE-to-foundations	EMEA	NO	MIT	main/LICENSE	1083	352(p296)	352	YES	repos/foundations.md
+autolab/Autolab	PROMOTE-to-foundations-with-grade-note	North America	NO	Apache-2.0	master/LICENSE	11323	808(p296)	808	YES	repos/foundations.md
+datakind/student-success-tool	PROMOTE-to-foundations	North America	NO	MIT	main/LICENSE.md	1080	8(p296)	8	YES	repos/foundations.md
+open-edge-platform/education-ai-suite	PROMOTE-to-foundations	Global	NO	Apache-2.0	main/LICENSE	11350	0(p296)	0	YES	repos/foundations.md
+AI-for-Education/pedagogy-benchmark	PROMOTE-to-foundations	LATAM	NO	MIT	main/LICENSE	1063	12	12	YES	repos/foundations.md
+#
+# SECOND CHANNEL: the organisation page behind a repo already held. One HTTP request.
+# github.com/orgs/learning-commons-org/repositories -> 5 repos, 3 substantive, 0 ever on a shelf file.
+learning-commons-org/knowledge-graph	none-ever-issued	North America	NO	MIT(code)+per-dataset-data	main/LICENSE.md	5789	161	n/a	YES	repos/foundations.md
+learning-commons-org/evaluators	none-ever-issued	North America	NO	MIT(code)+CC-BY-4.0(prompts)+CC-BY-NC-SA-4.0(corpora)	main/LICENSE.md	1615	86	n/a	YES	agents/top.md
+learning-commons-org/agent-skills	none-ever-issued	North America	NO	Apache-2.0	main/LICENSE	10173	40	35(trending)	YES	agents/top.md
+#
+# THIRD CHANNEL: genuinely new this pass.
+devissaputra/curriculum_knowledge_graph	NEW-p327	UNPLACED	NO	MIT	main/LICENSE	1076	0	n/a	YES	agents/top.md
+oseducation/knowledge-graph	NEW-p327-REJECTED	UNPLACED	NO	NO-LICENCE-FILE	7-names-x-3-branches-all-404	0	n/m	n/a	NO-no-grant	none
+#
+# VERIFICATION SURFACE: network policy answered 403 to CONNECT for every non-GitHub host attempted.
+# Denied: arxiv.org www.nature.com www.sciencedirect.com www.oecd-ilibrary.org www.iesalc.unesco.org
+#         huggingface.co www.semanticscholar.org ar5iv.org docs.learningcommons.org platform.learningcommons.org
+# api.github.com returns a session-scope denial; curl -sI over github.com returns 403 (as at p296).
+# Carried the pass: raw.githubusercontent.com + the rendered github.com page.
+# CONSEQUENCE: no Knowledge Graph dataset download was fetched; no record count is asserted anywhere in p327.

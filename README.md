@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-19
 ---
 
+## Pass 327 — 2026-10-19 — **TEN REGION-PLACED ARTEFACTS WERE FOUND, LICENCE-READ, GRADED AND ADDRESSED TO THESE SHELVES THIRTY PASSES AGO AND NEVER WRITTEN; THE PRESCRIBED EIGHT-QUERY SWEEP ADDED NOTHING FOR A FOURTH PASS; AND THE CHEAPEST SUPPLY CHANNEL IN THIS KB IS AN ORGANISATION PAGE**
+
+**One-line summary:** 🔴 **`evidence/p296-promotion-gap.2026-10-18-p296.tsv` carries ten
+adjudicated promotion verdicts — four `PROMOTE-to-agents-top`, five to `repos/foundations.md`, one
+reference-only — and a grep of all four shelf files found 0 of 10 present.** p296 did the hard
+part: found them, read the licences, placed them by region. **The rows were never cut.** 🔵 **This
+corrects the declared-gap discount a third time, and the new form is the narrowest of the three:
+p325 read it as a carry-forward lapse, p326 as a query-shape defect — *agent-shaped queries cannot
+see a data layer* — but neither explanation touches a row that was already found, graded and
+addressed. Before a gap is a statement about the query or the filter, it is a statement about the
+write.** 🟢 **All ten are promoted in this pass with every licence re-read first-hand rather than
+carried — nine of the ten are MIT or Apache-2.0, so the backlog was never blocked on licensing —
+and their regional spread is the part that should sting: APAC 3, North America 3, EMEA 1, LATAM 1,
+Global 1, unplaced 1. This KB's regional-balance problem was already solved on disk and
+undelivered.** 🟢 **Second finding, and it is the cheapest channel this KB has found: read the
+GitHub *organisation* behind a repository you already hold.** One request against
+`learning-commons-org` returned three substantive repositories — **`knowledge-graph` (161 ★, MIT
+code, US state standards with CCSS crosswalks), `evaluators` (86 ★, 289 commits, 19
+learning-science evaluators) and `agent-skills` (40 ★, Apache-2.0, `NOTICE` naming Anthropic,
+PBC)** — **none of which had ever reached a shelf file**, plus the named companion
+`anthropics/k12-teacher-skills` (Apache-2.0, 575 ★). **The exact three tiers `compose/patterns.md`
+has assembled by hand for 326 passes, pre-wired, from one vendor, shipping inside Claude for
+Teachers.** They become **P14**. 🔵 **Third, and it separates two failures that were wearing the
+same clothes: `agent-skills` has no description and no topics — p326's invisibility signature
+exactly — while `knowledge-graph` and `evaluators` carry `education`, `edtech` and `ai-in-education`
+as topics, have been on this KB's trending channel since p119–p120, had their licences read
+byte-for-byte into evidence files, and were missed anyway. An index hole and an unexecuted write
+produce the same observable, and only one is fixed by changing how you search.** 🟡 **Fourth: the
+licence is becoming a row-level data field rather than a repository attribute.**
+`knowledge-graph` licenses data **per dataset and in some cases per download** across three access
+tiers (Open / Open + Gated / Gated), its changelog records licence values *"updated for each
+individual row"*, GitHub's sidebar names no licence at all, and `LICENSE.md` states the
+distributor's role **"doesn't consolidate those into a single license for your build"** — so
+*"is this repo MIT?"* has stopped being a sufficient licence question. 🟢 **Fifth: two genuinely
+new artefacts — `devissaputra/curriculum_knowledge_graph` (MIT, the curriculum-graph *schema and
+validator*, invalid edges rejected, 36 passing tests, all bundled data synthetic and labelled so)
+and `AI-for-Education/pedagogy-benchmark` (MIT, 1,143 questions from Chile's teacher-qualification
+exams — the first artefact here that tests whether a model knows *pedagogy*, sourced from a LATAM
+ministry's own licensing exam).** 🔴 **Sixth, recorded because it bounds every claim in the pass:
+the verification surface was GitHub and nothing else.** The network policy answered **403 to
+CONNECT** for `arxiv.org`, `nature.com`, `sciencedirect.com`, `oecd-ilibrary.org`,
+`iesalc.unesco.org`, `huggingface.co`, `semanticscholar.org`, `ar5iv.org` **and both of the
+vendor's own hosts** — so **no dataset download was fetched and no record count is asserted
+anywhere in this pass**, and every policy figure that could not be checked at source is labelled
+search-channel-only in `intel/market.md`. 🟡 **Seventh: all eight prescribed queries ran — four
+global, four regional — and all eight returned correct, relevant, already-held material. Zero
+additions, recorded per region rather than hidden. The queries are not broken; they are exhausted
+for this industry, and the next pass should run the `PROMOTE-*` audit first and the sweep second.**
+
 ## Pass 324 — 2026-10-19 — **A GAP THIS KB DECLARED FOR SEVEN PASSES WAS A PROPERTY OF ITS OWN QUERY; THE LICENCE FILE IS NOT THE GRANT IN EITHER DIRECTION; AND THE GITHUB API CHANNEL IS OPEN FOR THE FIRST TIME**
 
 **One-line summary:** 🟢 **`intel/trends.md` trend 9's premise — *"there is still no credible open

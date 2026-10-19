@@ -6,6 +6,42 @@ updated: 2026-10-19
 
 # Market intelligence — education
 
+**Pass 327 · 2026-10-19 (thirteenth pass of this date).** 🔴 **No market-size figure moved, no
+regulation was added, and all four prescribed regional queries returned material this file already
+holds.** That is the pass's market finding and it is recorded per region under *Declared regional
+gaps* below rather than left as silence. **One new market actor, one new citable source, and one
+structural read that changes the North America opportunity.**
+
+🟢 **The new actor is a supply-side consolidation, not a statistic.** A single US vendor —
+**Learning Commons** — now publishes the **curriculum-standards spine, the teacher-workflow agent
+skills and the pedagogy evaluation layer** as three separate repositories with permissive code,
+**co-developing the skills tier with Anthropic** (`NOTICE`: *Copyright 2026 Anthropic, PBC* /
+*Copyright 2026 Learning Commons*, "under a collaboration agreement") and shipping it into
+**Claude for Teachers** with a Knowledge Graph connector claiming **academic standards across all
+50 states**. 🔵 **Read it against this file's own *Key players* section: the three layers Globant
+has been proposing to assemble per engagement are now available pre-wired from one vendor, under
+MIT and Apache-2.0 on the code. That raises the floor on a North America K-12 bid and lowers the
+billable hours in it — see *Opportunities by region → North America*.**
+
+🟡 **The new citable source is the OECD *Digital Education Outlook 2026*** (published January 2026,
+247 pages, DOI `10.1787/062a7394-en`). It argues generative AI aids learning **only under explicit
+pedagogical design**, warns that general-purpose tools without such design risk **reduced
+cognitive effort and loss of teacher autonomy**, and reports from **TALIS that 37% of
+lower-secondary teachers said they used AI in their work in 2024**. 🔵 **It is an
+intergovernmental source for a position this file has so far sourced to vendor blogs and
+`intel/trends.md` inference — which makes it usable in a bid.** 🔴 **Flagged as
+search-channel-only: `www.oecd-ilibrary.org` answered 403 to CONNECT, so the DOI, page count and
+the 37% figure are from search-result text and are not verified at source.** The next pass with a
+reachable host should confirm them before they are quoted to a client.
+
+🔴 **Verification surface of this pass, because it bounds everything above.** GitHub was reachable;
+`arxiv.org`, `www.nature.com`, `www.sciencedirect.com`, `www.oecd-ilibrary.org`,
+`www.iesalc.unesco.org`, `huggingface.co`, `www.semanticscholar.org`, `ar5iv.org`,
+`docs.learningcommons.org` and `platform.learningcommons.org` **all answered 403 to CONNECT**.
+🔵 **Every repository claim in this pass is first-hand from the `raw` channel or the rendered
+GitHub page. Every policy and market claim that could not be checked at source is labelled above
+and below as search-channel-only. Nothing from a denied host has been promoted to data.**
+
 **Pass 326 · 2026-10-19 (twelfth pass of this date).** **One regional regulatory addition, one
 promotion out of the policy matrix into prose, one new market actor, and one claim rejected
 before it reached this file.** No market-size figure moved. The supply finding of this pass is in
@@ -190,6 +226,36 @@ tested range from 88% down to 3%. **This is first-hand, reproducible and regiona
 it is the answer to "why not just use ChatGPT?" in one line.**
 
 ## Key players — who the client is already talking to
+### 🟢 Learning Commons — the US standards-data vendor behind Claude for Teachers (added p327)
+
+**A player this file has never named, and the client is already talking to it whether or not they
+know the name.** Learning Commons publishes three repositories with permissive code — all licences
+read first-hand at p327:
+
+| artefact | licence | ★ | what the client sees |
+|---|---|---|---|
+| `learning-commons-org/knowledge-graph` | MIT code; data **per dataset and per download** (Open / Open + Gated / Gated) | 161 | US academic standards by state, state↔CCSS crosswalks with `jaccard` scores, Math + ELA learning components, Math Coherence Map, WIDA ELD, XQ Competencies, Carnegie Skills Progressions (Carnegie Foundation + ETS), Eedi Misconceptions Graph, IM® v.360, OpenSciEd |
+| `learning-commons-org/agent-skills` | **Apache-2.0** | 40 | Four K-12 teacher skills over MCP |
+| `learning-commons-org/evaluators` | MIT code · CC BY 4.0 prompts · **CC BY-NC-SA 4.0 corpora** | 86 | 19 learning-science evaluators, Python + TypeScript SDKs |
+| `anthropics/k12-teacher-skills` | **Apache-2.0**, co-developed | **575** | The same four skills shipped inside **Claude for Teachers** |
+
+🔵 **Why it belongs in this section rather than in the repo files alone.** p326 observed that the
+sector's largest open curriculum dataset is published by a **venture-funded consumer edtech, not a
+ministry or a university**. **This is the second and stronger instance of the same market
+structure, and it goes further: the vendor is distributing through a frontier-model provider's
+teacher product.** 🟢 **The distribution channel, not the dataset, is the competitive fact.** A US
+district that adopts Claude for Teachers inherits this standards spine by default — so a Globant
+proposal that assumes the client needs a standards layer built is proposing something the client
+may already have, and a proposal that *integrates* it starts further up the value chain.
+
+🔴 **And the commercial boundary, because it is where a bid gets stuck:** the code is permissive
+throughout, but **IM® v.360 instructional and assessment materials and the whole OpenSciEd dataset
+are Gated** — publisher approval and a separate agreement — and the **expert-annotated CLEAR and
+PERSUADE 2.0 corpora that validate the evaluators are CC BY-NC-SA 4.0**, so they cannot be
+redistributed in a paid deliverable or used to validate a commercial model release. **Build on the
+Open tier; price the Gated tier as a publisher negotiation.** Details in
+`verticals/solutions.md`.
+
 
 **New actor, new category — the curriculum-data publisher (p326).** **Generative Spark, Inc.
 (Marble)** — a consumer learning app — published the **Marble Skill Taxonomy** on 2026-07-08 as
@@ -630,6 +696,36 @@ anything about my institution?" that is not a bespoke integration — and becaus
 > should be sold the evidence chain instead.
 
 ### North America
+### 🟢 The standards spine is now a commodity here — move the bid up a layer (added p327)
+
+🔴 **What changed: a US client can get the curriculum-standards layer for free, and may already
+have it.** `learning-commons-org/knowledge-graph` (MIT code, Open datasets typically CC BY 4.0,
+161 ★, v1.15.0 of 2026-10-14) publishes **US academic standards by state with state↔CCSS
+crosswalks**, and the companion skills ship inside **Claude for Teachers** with a connector
+claiming **all 50 states**. 🔵 **Any North America proposal whose first phase is "build a standards
+and curriculum data model" is now quoting for something available under CC BY 4.0 with an MCP
+server in front of it.**
+
+🟢 **Where the money moved to, in order of defensibility:**
+
+1. **Evaluation and acceptance criteria.** `learning-commons-org/evaluators` (MIT code, 19
+   evaluators, 289 commits) gives a district a *measurable* definition of acceptable AI output —
+   grade-level appropriateness, revision actionability, **withholding answers**, tone. 🟢 **Sell
+   the acceptance-gate design, not the generator.** 🔴 **The annotated corpora are CC BY-NC-SA
+   4.0: re-annotate against the client's own materials, which is billable and defensible.**
+2. **Gated-content negotiation and integration.** IM® v.360 instructional + assessment materials
+   and OpenSciEd are **Gated**. 🔵 **A client who wants curriculum-aligned generation against the
+   curriculum they actually bought needs a publisher agreement and an integration — that is the
+   scope item, and it is not an open-source task.**
+3. **The policy-gating layer, unchanged and still the hard requirement.** P3, P7 and P9 already
+   carry parent consent as state, grade-band gating, teacher-only mode and the COPPA disclosure
+   boundary. **The free spine does not touch any of it.**
+4. **Retention and completion evidence.** `datakind/student-success-tool` (MIT, 3,015 commits,
+   John Jay College CUSP, funded by Google.org) and `autolab/Autolab` (Apache-2.0, CMU, 2,179
+   commits) are the two US-institution-deployed artefacts promoted at p327. 🔵 **Buyers are asking
+   for evidence of persistence gains; these are the starting points with a named campus behind
+   them.**
+
 
 #### Illinois HB 316 — promoted out of `intel/policy-matrix.tsv` into this file (p326)
 
@@ -740,6 +836,31 @@ upper-secondary extension is scope, and should be priced as scope.
    falling (17% student confidence, intent down 9 points), credibility is the product.
 
 ### EMEA
+### 🟢 The integrity layer has a maintaining university behind it — and it is a procurement answer, not a feature (added p327)
+
+🟢 **`dodona-edu/dolos` — MIT, 1,083 B licence read first-hand at p327, 352 ★, 48 forks, 3,838
+commits, Ghent University / Team Dodona.** The deepest commit history of any artefact promoted this
+pass. 🔵 **This KB already holds `JPlag` and `jieplag`; `dolos` is the one with a European
+university maintaining it, which is the difference between a tool and a citation in a tender
+response.** Wire it into **P11** (the academic-integrity evidence chain — sell the audit trail,
+never the verdict).
+
+🟡 **The OECD *Digital Education Outlook 2026* is the EMEA-usable version of a position this KB has
+been arguing from inference.** It states that generative AI supports learning **only under explicit
+pedagogical design** and warns of **reduced cognitive effort and loss of teacher autonomy** from
+general-purpose tools — and it reports **37% of lower-secondary teachers using AI (TALIS, 2024)**.
+🔵 **Against an AI Act high-risk classification for admissions and assessment, an OECD citation
+does work in a bid that a vendor blog cannot: it supports a purpose-built, pedagogy-designed system
+over a general chatbot as a *compliance* argument, not a taste argument.** 🔴 **Search-channel
+only — `www.oecd-ilibrary.org` answered 403 to CONNECT. Confirm at source before quoting.**
+
+🔵 **Fully permissive EMEA stack, now assemblable with no copyleft seam:** OpenOLAT (Apache-2.0)
++ `learning-commons-org/agent-skills` (Apache-2.0) + `evaluators` (MIT code) + `dolos` (MIT). **The
+only non-permissive element is the standards data, and in EMEA the standards are national rather
+than CCSS — so the Learning Commons data tier does *not* port, while its agent and evaluation tiers
+do.** State that distinction in any EMEA proposal that reuses a North America reference
+architecture.
+
 
 > **Pass 323 — the AI Act timeline was re-verified against an independent search channel and this
 > file is correct.** Recorded because the deferral is the single most quoted and most misquoted fact
@@ -879,6 +1000,35 @@ the *metadata* workload, not just the tutor demo.
    looking for content.
 
 ### APAC
+### 🟢 Three region-placed agents were already graded for promotion and never delivered — they are live now (added p327)
+
+🔴 **p296 placed three APAC artefacts, marked all three `PROMOTE-to-agents-top`, and none reached a
+shelf file until this pass.** Licences re-read first-hand at p327:
+
+| artefact | licence | ★ | placing evidence |
+|---|---|---|---|
+| `THU-MAIC/OpenMAIC` | 🟢 **MIT** (1,064 B) | **41.1k** | Tsinghua (THU-MAIC) — *Open Multi-Agent Interactive Classroom*. 6.4k forks, 733 commits |
+| `microsoft/Shiksha-Copilot` | 🟢 **MIT** (1,140 B) | 9 | README names **Microsoft Research India** + **Sikshana Foundation** |
+| `Orenda-Project/rumi-platform` | 🟢 **Apache-2.0** (11,286 B) | 18 | README names **Pakistan** and the **Taleemabad** national-curriculum library. 847 commits |
+
+🟢 **`OpenMAIC` is the largest permissive education agent in this KB by an order of magnitude and it
+is a Chinese university release** — it ships `skills/`, `eval/`, `e2e/` and a `render-service`,
+which means the multi-agent classroom shell, its eval harness and its rendering layer are all in
+one Apache-free MIT tree. 🔵 **For an APAC engagement that wants a demonstrable multi-agent
+classroom in weeks rather than quarters, this is the starting point, and the 41.1k stars are a
+procurement argument on their own.**
+
+🔵 **`Shiksha-Copilot` and `rumi-platform` are the two artefacts in this KB with a *named
+ministry-adjacent deployment* in South Asia** — MSR India with Sikshana in Karnataka, and
+Taleemabad's national-curriculum library in Pakistan. **India's 2026-27 mandate (P10 Variant B)
+has been described in this KB as arriving without an artefact; `Shiksha-Copilot` is the closest
+thing to one, and it is MIT.** 🔴 **Both are small-star repositories — 9 and 18 — so cite the
+institution, never the star count.**
+
+🟢 **`open-edge-platform/education-ai-suite` (Apache-2.0, Intel, OpenVINO, CPU/iGPU/NPU) is the
+offline/on-device answer for the region's low-connectivity deployments** and pairs with Kolibri
+(MIT) in **P5**. 0 stars, 450 commits — a vendor release, not a community one.
+
 
 > **Pass 323 — the region's finding this pass is not a policy, it is an artefact, and it changes the
 > competitive read.** `haolpku/K12-KGraph` (`repos/foundations.md`) is **China's PEP K-12 curriculum
@@ -980,6 +1130,33 @@ price it as greenfield, because there is nothing to fork.
    automation, with the fewest regulatory blockers of any major market in this KB.
 
 ### LATAM
+### 🟢 The region finally has a pedagogy benchmark, it is MIT, and the exams behind it are Chilean (added p327)
+
+🟢 **`AI-for-Education/pedagogy-benchmark` — MIT, 1,063 B licence read first-hand at p327, 12 ★,
+5 commits.** **1,143 questions drawn from real teacher-qualification examinations: 920 in the CDPK
+benchmark and 223 in SEND** (Special Educational Needs and Disabilities) — counts read from the
+README this pass. **The README acknowledges Chile's Ministry of Education — Agencia de la Calidad
+de Educación — and CPEIP for developing and sharing the exams.** Scores live on external
+leaderboards; p296 records arXiv:2506.18710.
+
+🔵 **Why this is the most useful LATAM addition in several passes.** This KB's LATAM position has
+rested on `bncc-dev` (Brazil's curriculum spine, P10 Variant A) and on policy coverage. **Neither
+answers the question a client actually asks first — "which model should we use, in Spanish, for
+teachers?"** 🟢 **A benchmark built from a LATAM ministry's own licensing exam answers it with a
+number instead of a vendor claim, and it is MIT, so the harness can go into a deliverable.**
+
+🟢 **The pairing to sell, and it is concrete:** run `pedagogy-benchmark` as the **model-selection
+gate** and `learning-commons-org/evaluators` (MIT code) as the **output-acceptance gate** — the
+first picks the model, the second polices what it emits. 🔴 **Two boundaries to respect: the
+evaluators' annotated CLEAR and PERSUADE 2.0 corpora are CC BY-NC-SA 4.0 and cannot ride into a
+paid deliverable, and the evaluator rubrics are English-language and ELA-centric, so a Spanish
+deployment needs them re-annotated — which is billable scope, not a blocker.**
+
+🔵 **`bncc-dev` remains the curriculum spine for Brazil; the Learning Commons data tier is US state
+standards and does not port to LATAM.** **What ports is the architecture, not the data** — spine +
+skills + evaluators — and in LATAM the spine is national. Nothing in this pass changes P10
+Variant A.
+
 
 ### 🟢 Chile's Ley 21.719 is the region's nearest dated compliance deadline — and it is six weeks out (added p326)
 
@@ -1178,6 +1355,25 @@ require a sovereign model.
 
 ## Declared regional gaps — what was searched this pass and not found
 
+
+### Pass 327 — what was searched per region, and what came back
+
+🔴 **All four regional queries returned relevant, correct, already-held material. Zero additions.
+Recorded per region because an informed gap is information and silence is not.**
+
+| region | query run | what came back | verdict |
+|---|---|---|---|
+| **North America** | `AI education North America 2026 adoption regulation players` | H.R. 8747 (K-12 AI Literacy and Readiness Act), California AB 1159 and AB 2876, Katy ISD's K-6 chatbot ban, NYC's moratorium, Canada's June 2026 *AI for All* strategy, the 134-bills-across-31-states count, Oklahoma and Maryland human-oversight rules | 🔴 **0 new — every item already in this file.** The 2025 Executive Order and the *Pledge to America's Youth* are the only items not separately carried, and both are already represented by the policy positions they produced |
+| **EMEA** | `AI education EMEA 2026 adoption regulation players` | AI Act (Reg. (EU) 2024/1689) with admissions screening as high-risk, enforcement from **2026-08-02**, June 2026 amendments in force **2026-07-27**, the **Digital Omnibus**, the Commission's ethical guidelines for educators, Erasmus+ 2026 calls, UNESCO GenAI guidance | 🟡 **0 new regulation.** One new citable source: **OECD *Digital Education Outlook 2026*** — recorded above, search-channel only. The "$2.64 B European market" and "10% of institutions have formal guidelines" figures are **vendor roundups with unclear provenance and are deliberately NOT recorded as data** |
+| **APAC** | `AI education APAC 2026 adoption regulation players` | **Vietnam Decision 33/2026/QD-TTg** naming education a high-risk sector (already in `intel/policy-matrix.tsv`), South Korea's AI Basic Act and its 2026 grace period, China's content-labelling measures, Singapore's agentic-AI guidance, Japan's AI Promotion Act, India's February 2026 intermediary amendments | 🔴 **0 new.** 🟡 **One unresolved conflict carried forward: sources disagree on Vietnam's effective date (2026-03-01 vs. the 2026-07-02 issuance). The matrix should record both until a primary source settles it** |
+| **LATAM** | `AI education LATAM 2026 adoption regulation players` | **UNESCO IESALC**: 200 institutions, 19 countries, **87%** using AI in ≥1 area, **74%** in teaching and learning, only **26%** with a formal AI strategy — **all five figures already in this file.** The **UNESCO Observatory on AI in Education for LAC** (launched 2026-04-14 at ECLAC, Santiago) and its partners **CAF, CENIA, Cetic.br, CEIBAL, Fundación Santillana, Tecnológico de Monterrey, ProFuturo** — all already named here. Uruguay's Council of Europe Framework Convention signature, Peru's sandbox, Colombia's CONPES 4144, Mexico's stalled Senate bill | 🔴 **0 new.** Only **IRCAI** was absent from this file, and a partner-organisation name is not a market finding |
+
+🔵 **The method conclusion, and it should change the next pass's plan rather than its queries.**
+**Four consecutive passes of region-by-region sweeping have added nothing.** The eight prescribed
+queries are not broken — they return correct, relevant material — **they are exhausted for this
+industry.** 🟢 **The channel that returned ten region-placed artefacts this pass was an audit of
+this KB's own `evidence/` directory against its four shelf files, at a cost of one command. The
+next pass should run that audit first and the sweep second.**
 
 ### Pass 326 — what was searched per region, and what came back
 

@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 327 — the sweep returned nothing and the backlog returned ten
+
+**Thirteenth pass of 2026-10-19.** 🔵 **This file is APPEND-ONLY. Everything below this section is
+prior history and stays.**
+
+**Eight prescribed queries run: four global, four regional. Novelty on the agent channel: 0.**
+Novelty on the market channel: **0**. 🔴 **Novelty on an audit of this KB's own evidence
+directory: 10.**
+
+### The prescribed sweep, channel by channel
+
+| channel | query | result |
+|---|---|---|
+| agents | `top open source AI agents education 2026 github MIT` | 🔴 **Nothing education-specific.** Returned general agent roundups — OpenHands, CrewAI, LangGraph, Hermes, OpenClaw — plus `microsoft/ai-agents-for-beginners` (**already held**, and a course, not an agent) and `ashishpatel26/500-AI-Agents-Projects`. **0 new education agents** |
+| trending | `github trending education AI 2026` | 🔴 **Returned `withmarbleapp/os-taxonomy`** — which p326 added six hours earlier — **and `rohitg00/ai-engineering-from-scratch`, already held.** 🔵 **The one education repo the trending channel can see is the one this KB just wrote down. 0 new** |
+| verticals | `open source platform education ERP CRM MIT Apache` | 🔴 **Fifth consecutive pass with no new row.** Returned OpenEduCat's own glossary pages almost exclusively, and confirmed against them that **OpenEduCat is LGPLv3, not MIT or Apache** — consistent with this KB's existing grade. **0 new** |
+| trends | `AI education industry trends 2026` | 🟡 **Converges on readings this file already carries** (governance over experimentation; purpose-built platforms over generic chatbots; demand for evidence of learning gain). One genuinely new citable source — **OECD *Digital Education Outlook 2026***. **0 new agents** |
+| **North America** | `AI education North America 2026 adoption regulation players` | 🔴 **Every item already held**: H.R. 8747, California AB 1159, AB 2876, Katy ISD, Canada's *AI for All*, the 134-bills-across-31-states count. **0 new** |
+| **EMEA** | `AI education EMEA 2026 adoption regulation players` | 🟡 **AI Act enforcement from 2026-08-02 and the Digital Omnibus both already held.** New only as a citation: **OECD DEO 2026** and its TALIS figure. **0 new** |
+| **APAC** | `AI education APAC 2026 adoption regulation players` | 🔴 **Vietnam Decision 33/2026/QD-TTg already in the policy matrix; South Korea, China labelling, Singapore, Japan, India all held. 0 new** |
+| **LATAM** | `AI education LATAM 2026 adoption regulation players` | 🔴 **UNESCO IESALC's 200 institutions / 19 countries / 87% / 74% / 26% are all already in `intel/market.md`, as are CENIA, Cetic.br, CEIBAL, ProFuturo, Santillana, Tec de Monterrey and CAF.** Only `IRCAI` was absent, and a partner name is not a finding. **0 new** |
+
+🔵 **Recorded as a measured result, not as silence — and it is the fourth region-by-region sweep
+in a row to return nothing. The prescribed query set is exhausted for this industry.** Each region
+above returned relevant, correct, *already-held* material, which is a different and better outcome
+than an empty result: **the regional coverage is real, and re-walking it costs eight queries a pass
+and returns nothing.**
+
+### The channel that did return: this KB's own `evidence/` directory
+
+🔴 **`evidence/p296-promotion-gap.2026-10-18-p296.tsv` contains ten adjudicated promotion verdicts.
+Zero were executed.** Audited this pass by grepping each slug against the four shelf files:
+
+| slug | p296 verdict | region p296 placed it in | present in shelf files |
+|---|---|---|---|
+| `THU-MAIC/OpenMAIC` | `PROMOTE-to-agents-top` | APAC | 🔴 **NO** |
+| `Orenda-Project/rumi-platform` | `PROMOTE-to-agents-top` | APAC | 🔴 **NO** |
+| `microsoft/Shiksha-Copilot` | `PROMOTE-to-agents-top` | APAC | 🔴 **NO** |
+| `anthropics/k12-teacher-skills` | `PROMOTE-to-agents-top` | North America | 🔴 **NO** |
+| `littlecookie0722/AI-Teaching-Agent` | `PROMOTE-reference-only` | unplaced | 🔴 **NO** |
+| `dodona-edu/dolos` | `PROMOTE-to-foundations` | EMEA | 🔴 **NO** |
+| `autolab/Autolab` | `PROMOTE-to-foundations-with-grade-note` | North America | 🔴 **NO** |
+| `datakind/student-success-tool` | `PROMOTE-to-foundations` | North America | 🔴 **NO** |
+| `open-edge-platform/education-ai-suite` | `PROMOTE-to-foundations` | Global | 🔴 **NO** |
+| `AI-for-Education/pedagogy-benchmark` | `PROMOTE-to-foundations` | LATAM | 🔴 **NO** |
+
+🟢 **All ten promoted this pass, with every licence re-read first-hand rather than carried.** Four
+to `agents/top.md`, five to `repos/foundations.md`, one reference-only. **Nine of the ten are MIT
+or Apache-2.0** — the backlog was not blocked on licensing.
+
+### The second channel that returned: the organisation page
+
+🟢 **One HTTP request against the org behind a repo this KB already held returned three
+repositories, none of which has ever reached a shelf file.** `learning-commons-org` has five
+repositories; three are substantive:
+
+| repo | licence (read first-hand) | ★ | forks | commits | status before this pass |
+|---|---|---|---|---|---|
+| `learning-commons-org/knowledge-graph` | MIT code + per-dataset data licences | **161** | 23 | 44 | measured on this channel since **p120**, evidence file written, never promoted |
+| `learning-commons-org/evaluators` | MIT code · CC BY 4.0 prompts · **CC BY-NC-SA 4.0 corpora** | **86** | 17 | **289** | **four-way grant licence-read byte-for-byte at p119/p120**, never promoted |
+| `learning-commons-org/agent-skills` | **Apache-2.0**, `NOTICE` names **Anthropic, PBC** | **40** | 5 | 42 | seen on this channel at **35 ★**, never promoted |
+
+🔴 **And the sharpest detail in the pass: `agent-skills` is an Apache-2.0 repository with the word
+"agent" in its name, in the education sector, and twelve passes of agent-shaped queries never
+returned it.** It has **no description and no topics** — the exact invisibility signature p326
+diagnosed on the Marble dataset. 🔵 **So p326's rule is confirmed on `agent-skills` and refuted on
+`knowledge-graph` and `evaluators`, which carry `education`, `edtech` and `ai-in-education` as
+topics and were missed anyway. Two different failures were wearing the same clothes: one is an
+index hole, the other is a write that never happened. Only the second one is this KB's to fix.**
+
+### New, verified first-hand this pass
+
+🟢 **`devissaputra/curriculum_knowledge_graph` — MIT, 1,076 B, *Copyright (c) 2026 Devis Wawan
+Saputra*, 0 ★, 27 commits, 14 topics.** A typed, provenance-aware curriculum graph: 8 entity types,
+7 relation types, **invalid relations rejected** (`LearningOutcome ──TEACHES→ Course` is refused),
+cycle and assessment-coverage-gap detection, 36 passing unit tests. 🟡 **All bundled data is
+synthetic and the repository says so.** Full read in `agents/top.md`.
+
+🔴 **`oseducation/knowledge-graph` (Vitsi AI) — no licence file at seven filenames across `main`,
+`master` and `develop`; `README.md` resolves 200, so the repo exists and the omission is real.
+Unusable. Recorded so no future pass spends a probe on it.**
+
+### 🔴 Verification surface, recorded because it bounds the pass
+
+**GitHub only.** The network policy answered **403 to CONNECT** for `arxiv.org`, `www.nature.com`,
+`www.sciencedirect.com`, `www.oecd-ilibrary.org`, `www.iesalc.unesco.org`, `huggingface.co`,
+`www.semanticscholar.org`, `ar5iv.org`, **`docs.learningcommons.org` and
+`platform.learningcommons.org`**. `api.github.com` returns a session-scope denial and `curl -sI`
+over `github.com` returns 403, as at p296 — the `raw` channel and the rendered page carried the
+whole pass. 🔵 **Every licence, byte count and count above was read. Nothing from a denied host has
+been written as data; where a search result could not be checked at source it is labelled as such
+in `intel/market.md`.**
+
 ## 2026-10-19 — Pass 326 — the agent channel returned 0% novelty and the data channel returned 100%
 
 **Twelfth pass of 2026-10-19.** 🔵 **This file is APPEND-ONLY. Everything below this section is

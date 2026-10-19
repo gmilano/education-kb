@@ -6,6 +6,22 @@ updated: 2026-10-19
 
 # Compose patterns — education
 
+**Pass 327 · 2026-10-19.** **Eleven recipes. P14 is new and it is the first pattern in this file
+whose three layers all come from one vendor** — the pre-wired K-12 stack (standards data over MCP +
+Apache-2.0 teacher skills + MIT evaluators), with the Gated/Open boundary drawn as an architecture
+decision rather than a licence footnote. **Every repo it names had its licence read first-hand at
+p327.**
+
+**P11 gains `dodona-edu/dolos`** (MIT, Ghent University, 3,838 commits) as the integrity engine
+with a maintaining university behind it — previously this pattern named only `JPlag` and `jieplag`.
+**P10 Variant A gains a model-selection gate**: `AI-for-Education/pedagogy-benchmark` (MIT, 1,143
+questions from Chile's teacher-qualification exams, 920 CDPK + 223 SEND) answers "which model, in
+Spanish, for teachers" with a number. **P5 gains `open-edge-platform/education-ai-suite`**
+(Apache-2.0, Intel, OpenVINO, CPU/iGPU/NPU) as the on-device inference layer beside Kolibri.
+**P3 and P6 gain `autolab/Autolab`** (Apache-2.0, CMU, 2,179 commits) and
+`datakind/student-success-tool` (MIT, John Jay College CUSP, Google.org, 3,015 commits) as the two
+US-institution-deployed artefacts for autograding and retention evidence.
+
 **Pass 319 · 2026-10-19.** Ten recipes. Every repo named below is in `agents/top.md`,
 `repos/foundations.md` or `verticals/solutions.md`, with the pass in which it was read first-hand
 recorded there. Timings are engagement estimates, not measurements.
@@ -31,6 +47,145 @@ risk explicitly** — one 138-star, single-maintainer MIT library is the seam in
 recipes, and that belongs in the SOW.
 
 ---
+
+## P14 — The pre-wired K-12 stack: one vendor, three layers, and the Gated boundary as an architecture decision — NEW in p327
+
+**Region: North America** (the data tier is US state standards). **Ports to any region for the
+agent and evaluation tiers only — see *Portability* below.**
+
+🔵 **Why this pattern exists.** Every pattern in this file from P1 onward assembles three layers by
+hand: a curriculum spine, an agent that acts on it, and something that judges the output. **P14 is
+the first time all three ship from one vendor with permissive code**, which changes the engagement
+from *build the stack* to *integrate it and own the boundary*. 🔴 **That makes the licence boundary
+the deliverable, because it is the only part the vendor has not already solved.**
+
+### The three layers, each licence read first-hand at p327
+
+| layer | artefact | licence | what it contributes |
+|---|---|---|---|
+| **Data** | `learning-commons-org/knowledge-graph` (161 ★, v1.15.0 of 2026-10-14) | 🟡 **MIT code; data per dataset *and per download*** — Open (CC BY 4.0 / CC0), Open + Gated, Gated | US academic standards by state · **state↔CCSS crosswalks with a `jaccard` score** · Math + ELA learning components · Math Coherence Map · **Eedi Misconceptions Graph** · WIDA ELD · XQ Competencies · Carnegie Skills Progressions |
+| **Agent** | `learning-commons-org/agent-skills` (40 ★) and `anthropics/k12-teacher-skills` (575 ★) | 🟢 **Apache-2.0** both; `NOTICE` names **Anthropic, PBC** and **Learning Commons** | Four teacher workflows: lesson-plan creation · lesson differentiation (below / at / above proficiency) · lesson prep · **check for understanding, with distractors drawn from documented misconceptions** |
+| **Evaluation** | `learning-commons-org/evaluators` (86 ★, 289 commits) | 🟡 **Code MIT · prompts + settings CC BY 4.0 · annotated corpora CC BY-NC-SA 4.0** | **19 evaluators**: text complexity (8), feedback (7, incl. **withholding answers**), graphics (2, early access), math standards alignment, critical thinking. Python + TypeScript SDKs |
+
+### How to wire it
+
+**1 — Stand up the data tier, pinned.** Take the **Open** datasets only. Two access routes, and
+pick deliberately:
+
+```shell
+# MCP, for an agent runtime
+claude mcp add --transport http learning-commons-kg \
+  https://kg.mcp.learningcommons.org/mcp \
+  --header "Authorization: Bearer $LC_API_KEY"
+```
+
+🔴 **Pin the version.** The repo tags releases and ships `.release-please-manifest.json`
+(`{".": "1.15.0"}` at the time of this pass). **The vendor publishes its own regressions and they
+are the silent kind:** v1.10.1 restored Texas↔CCSS math crosswalks *"incorrectly removed in
+v1.9.0"* and told consumers to re-download; v1.13.1 restored a `jaccard` property *"unintentionally
+removed in v1.12.0"*; v1.14.0 fixed four states' standards whose `inLanguage` claimed Spanish for
+English text. 🟢 **Build against a pinned tag, diff the `CHANGELOG.md` before bumping, and treat a
+spine bump as a release gate — not a dependency update.**
+
+🔴 **And the trap that is documented but easy to miss:** v1.12.0 states that newly added standards
+frameworks are **not yet aligned to learning components**, so *every* learning-component→standard
+alignment still points at the superseded framework. **If your tutor resolves a standard to its
+components, assert `isCurrent` on the framework and fail loudly rather than silently serving a
+deprecated alignment.**
+
+**2 — Install the skills, then fork them.** `npx skills add learning-commons-org/agent-skills`, or
+the plugin route for the Anthropic companion:
+
+```shell
+git clone https://github.com/anthropics/k12-teacher-skills
+claude plugin marketplace add ./k12-teacher-skills
+claude plugin install k12-education@k12-teacher-skills
+```
+
+🟢 **Apache-2.0 on both, so forking is clean and patent-granted.** 🔵 **Fork rather than consume:
+the four skills are written against the vendor's connector, and a client engagement almost always
+needs a fifth skill and a different curriculum binding.** Keep the `NOTICE` attribution — Apache-2.0
+requires it and the co-development credit is the part a client's counsel will check.
+
+**3 — Make the evaluators the acceptance gate, not a report.** Install
+`pip install learning-commons-evaluators` (or the npm package) and run the relevant family on every
+generated artefact **before a teacher sees it**. 🟢 **The pairing that makes this defensible: the
+skills ship their own `evals/` rubrics for pedagogy, rigor, formatting and model scaffolding, and
+`evaluators` supplies the learning-science dimensions. Run both — the vendor's rubric for
+"did the skill do its job" and the evaluator for "is this fit for a child of this grade."**
+
+🔴 **The hard stop, and it is the whole reason this stage needs engineering.** The **expert-annotated
+CLEAR and PERSUADE 2.0 corpora are CC BY-NC-SA 4.0.** You may ship the evaluators and their
+prompts in a paid product; you may **not** ship those corpora, and you may not use them to validate
+a commercial model release. 🟢 **So the billable, defensible work is re-annotating against the
+client's own materials** — which also produces a better gate, because the thresholds end up
+calibrated to the district's actual reading levels rather than to a research corpus.
+
+**4 — Draw the Gated line before scoping, not during delivery.** Classify every content
+requirement in the statement of work:
+
+| requirement | tier | what it costs |
+|---|---|---|
+| Standards, crosswalks, learning components, misconceptions, progressions | 🟢 **Open** (CC BY 4.0 / CC0) | Attribution only — **to each original source, not to the distributor** |
+| IM® v.360 **scope and sequence** | 🟢 **Open** | Attribution |
+| IM® v.360 **instructional** or **assessment materials** | 🔴 **Gated** | **Publisher approval + separate agreement.** A line item and a lead time |
+| **OpenSciEd** curriculum | 🔴 **Gated** | Same |
+| **Learner Variability Navigator** (math / literacy models) | 🔴 **Gated** | Same |
+
+🔴 **The clause to put in front of counsel, quoted from `LICENSE.md`:** compiling datasets into your
+own build means you *"take on the licensing and attribution obligations of every dataset and
+download you include,"* and the distributor's role *"doesn't consolidate those into a single license
+for your build."* 🟢 **Never export the whole graph and label the result CC BY 4.0. Carry per-source
+attribution, and keep an Open-only build target in CI so a Gated dataset cannot leak into a
+deliverable by accident.**
+
+**5 — Add the layers the vendor does not ship.** 🔴 **None of the three repositories touches
+compliance, and in North America K-12 that is the bid-qualifying part.** Bring in, unchanged:
+**P7** (grade-band gating, teacher-only mode, parent consent as state with an approval queue and a
+decision log), **P9** (the COPPA disclosure boundary), **P3** (the policy-gated deployment layer).
+🔵 **Add `autolab/Autolab`** (Apache-2.0, CMU) **where the engagement needs assessment *execution***
+— so the agent advises and a deterministic grader adjudicates, which is the only arrangement that
+survives a "did AI grade my child" question.
+
+### What to sell, in order
+
+1. **The Open/Gated classification of the client's content requirements** — a two-week audit that
+   de-risks the whole programme and is sellable on its own.
+2. **The pinned-spine release gate** — version pinning, `CHANGELOG` diffing, `isCurrent` assertion
+   and a loud failure on deprecated alignments. 🟢 **Sold as correctness engineering, which it is.**
+3. **Re-annotation of the evaluation corpus against client materials** — the lawful route to a
+   commercial-grade acceptance gate.
+4. **The fifth skill** — whatever workflow the client has that the four shipped skills do not.
+5. **The compliance layer** (P7 + P9 + P3), which the vendor stack leaves entirely open.
+
+### Portability
+
+🟢 **The architecture ports everywhere. The data tier does not.** `agent-skills`, the Anthropic
+companion and `evaluators` are jurisdiction-neutral — Apache-2.0 and MIT code, rebindable to any
+spine. 🔴 **The Knowledge Graph data tier is US state standards and CCSS crosswalks: it does not
+port to EMEA, APAC or LATAM.** Substitute the regional spine and keep the other two layers:
+
+- **LATAM** → `bncc-dev` for Brazil (**P10 Variant A**), with
+  `AI-for-Education/pedagogy-benchmark` as the model-selection gate. 🔴 **Re-annotate the
+  evaluators for Spanish/Portuguese — the shipped rubrics are English and ELA-centric.**
+- **EMEA** → 🔴 **no commercially usable national-curriculum graph exists in this KB for any
+  European state.** Use `withmarbleapp/os-taxonomy` (ODbL + CC BY-SA, UK NC 2013 in full under OGL
+  v3) via **P13**, and pair with OpenOLAT (Apache-2.0) for a **fully permissive** stack with no
+  copyleft seam. Add `dodona-edu/dolos` (MIT, Ghent) for integrity per **P11**.
+- **APAC** → `THU-MAIC/OpenMAIC` (MIT, 41.1k ★) for the multi-agent classroom shell, or
+  `microsoft/Shiksha-Copilot` (MIT, MSR India + Sikshana) and `Orenda-Project/rumi-platform`
+  (Apache-2.0, Taleemabad, Pakistan) where a named national deployment is the requirement.
+  Add `open-edge-platform/education-ai-suite` (Apache-2.0, Intel/OpenVINO) for on-device per **P5**.
+
+### 🔴 What was not verified, stated plainly
+
+**The per-dataset licence labels and access tiers above are read from the repository's own
+`README.md` and `LICENSE.md` at p327.** The authoritative download-level terms live on
+`docs.learningcommons.org` and `platform.learningcommons.org`, and **the network policy answered
+403 to CONNECT for both**, so **no dataset record count is asserted here and no download was
+fetched.** 🔵 **Before this pattern enters a signed scope, pin the download-level terms from the
+catalog pages — the Open/Gated split is the commercial hinge of the whole pattern and it deserves a
+first-hand read.**
 
 ## P13 — The share-alike data boundary: shipping a proprietary product on an ODbL dataset — NEW in p326
 

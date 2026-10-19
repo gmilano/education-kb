@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 327 — the org page is a supply channel and this KB had never swept it
+
+**Thirteenth pass of 2026-10-19.** 🔵 **This file is APPEND-ONLY. Everything below this section is
+prior history and stays.**
+
+🟢 **Four repositories recorded below. Every licence was read first-hand on the `raw` channel this
+pass over the seven-filename probe space across `main`, `master` and `develop`.**
+
+| repo | licence | ★ | forks | commits | what it is |
+|---|---|---|---|---|---|
+| https://github.com/learning-commons-org/knowledge-graph | **MIT (code) + per-dataset, per-download data licences** — `LICENSE.md` 5,789 B. Open → CC BY 4.0 / CC0 · Open + Gated · Gated. 🔴 **Sidebar names no licence; Languages panel empty** | **161** | 23 | 44 | *"The data layer for smarter educational AI."* **US academic standards at state granularity**, state↔CCSS crosswalks with `jaccard` scores, Math + ELA learning components, Math Coherence Map, WIDA ELD, XQ Competencies, Carnegie Skills Progressions, Eedi Misconceptions Graph, IM® v.360, OpenSciEd. **v1.15.0, 2026-10-14.** Ships no data — REST API, JSONL export and an **MCP server** |
+| https://github.com/learning-commons-org/evaluators | **Four-way split, 1,615 B:** code **MIT** · prompts + settings **CC BY 4.0** · Annotated CLEAR Corpus **CC BY-NC-SA 4.0** · Annotated PERSUADE 2.0 **CC BY-NC-SA 4.0** | **86** | 17 | **289** | **19 evaluators in five families** scoring LLM output against learning-science rubrics — text complexity (8), feedback (7, incl. *withholding answers*), graphics (2, early access), math standards alignment (1), critical thinking (1). Python + TypeScript SDKs on PyPI and npm |
+| https://github.com/learning-commons-org/agent-skills | 🟢 **Apache-2.0** — `LICENSE` 10,173 B; `NOTICE` 268 B naming **Anthropic, PBC** and **Learning Commons** | **40** | 5 | 42 | Four K-12 teacher skills grounded in the Knowledge Graph over MCP; `npx skills add`. Ships `evals/` rubrics for pedagogy, rigor, formatting, model scaffolding. 🔴 **No description, no topics** |
+| https://github.com/devissaputra/curriculum_knowledge_graph | 🟢 **MIT** — `main/LICENSE`, 1,076 B, *Copyright (c) 2026 Devis Wawan Saputra* | **0** | 0 | 27 | Typed, provenance-aware curriculum graph: 8 entity types, 7 relation types, **invalid edges rejected**, cycle and coverage-gap detection, 36 passing tests. 🟡 **Bundled data entirely synthetic, stated by the author** |
+
+🔴 **The trend this file exists to record, and it is a different one from p326's.** p326 found a
+6.1 ★k repository with no description, no topics and no language, and concluded that
+trending-by-topic has a structural hole shaped like a data release. **That is true, and it is not
+what happened here.** `knowledge-graph` carries eight topics including `education`, `edtech` and
+`ai-in-education`; `evaluators` carries nine including `education` and `evaluation`. **Both are
+perfectly indexed, both have been on this channel since p119–p120, and neither ever reached a
+shelf file.** Only `agent-skills` — no description, no topics — matches p326's signature.
+
+🔵 **So the supply channel this pass adds is the cheapest one available and it is not a query at
+all: when a repository earns a row, read its organisation.** One request against
+`learning-commons-org` returned three substantive repositories spanning the data layer, the agent
+layer and the evaluation layer — **the exact three tiers `compose/patterns.md` has been assembling
+by hand for 326 passes** — plus a named companion, `anthropics/k12-teacher-skills` (Apache-2.0,
+**575 ★**, up from 572 at p296). **Four artefacts, one HTTP request, zero new queries.**
+
+🟡 **One freshness note worth keeping, because it is the second instance of the drift p326 flagged
+on Marble.** This vendor publishes a **dated erratum stream** in `CHANGELOG.md`, and the errata are
+the kind that break a tutor silently: **v1.10.1 restored Texas↔CCSS math crosswalks "incorrectly
+removed in v1.9.0"** and told consumers to re-download or re-query; **v1.13.1 restored a `jaccard`
+property "unintentionally removed in v1.12.0"**; **v1.14.0 fixed Indiana Science, South Carolina
+Social Studies, Illinois Science and Indiana Social Studies standards whose `inLanguage` said
+Spanish when the standards were English**; and **v1.12.0 states that newly added standards
+frameworks are not yet aligned to learning components, so every alignment still points at the
+superseded frameworks.** 🟢 **A vendor that publishes its own regressions against a curriculum
+spine is more trustworthy than one that does not — and it is also an argument for pinning a
+version, which this one supports via tags and `.release-please-manifest.json` (`{".": "1.15.0"}`).**
+
+🔴 **`oseducation/knowledge-graph` (Vitsi AI): no licence file at seven filenames across three
+branches, `README.md` 200. Exists, unusable, recorded to save a future probe.**
+
 ## 2026-10-19 — Pass 326 — a 6.1 ★k education repository with no description, no topics and no language
 
 **Twelfth pass of 2026-10-19.** 🔵 **This file is APPEND-ONLY. Everything below this section is

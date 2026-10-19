@@ -6,6 +6,68 @@ updated: 2026-10-19
 
 # Vertical platforms — education
 
+## Pass 327 — the platform tier did not move for a fifth pass, and the tier that did move is a *vendor stack*, not a platform
+
+🔴 **The prescribed `open source platform education ERP CRM MIT Apache` query returned nothing new
+for the fifth consecutive pass.** It returned OpenEduCat's own glossary pages almost exclusively.
+🟢 **One useful confirmation came out of it: those pages state OpenEduCat is LGPLv3** — weak
+copyleft, built on Odoo — **which agrees with this KB's existing grade and refutes nothing.** 🔵
+**Record it as a measured result: the permissive education-platform shelf is enumerated, and this
+file has now re-walked it five times without adding a row.**
+
+🟢 **What arrived instead is a tier this file has had to assemble by hand: a single vendor shipping
+the data spine, the agent layer and the evaluation layer as three separate permissive-code
+repositories.** `learning-commons-org` — **`knowledge-graph` (161 ★), `agent-skills` (40 ★,
+Apache-2.0, `NOTICE` naming Anthropic, PBC), `evaluators` (86 ★)** — plus the named companion
+`anthropics/k12-teacher-skills` (Apache-2.0, 575 ★). **All four licences read first-hand this
+pass; full reads in `agents/top.md` and `repos/foundations.md`.**
+
+🔵 **It is not a platform and does not replace one. It is what each platform below expects the
+institution to supply, and what p326 said Moodle, Open edX, Canvas and Chamilo each leave empty —
+except that this time the standards are *United States, state by state*, and the agent and
+evaluation tiers come with it.**
+
+| platform | licence | what it already has | what the Learning Commons stack adds on top of it |
+|---|---|---|---|
+| **Moodle** | GPL-3.0 | Competency frameworks and learning plans, **empty on install**; its own AI subsystem since 2026 | US state standards with **state↔CCSS crosswalks carrying a `jaccard` score** — so a Moodle competency can be mapped to another state's framework instead of re-authored |
+| **Open edX** | AGPL-3.0 | Course structure, no cross-course skill model | The **Math Coherence Map** as a real learning-progression layer, plus the Eedi **misconceptions** graph for item generation |
+| **Canvas** | AGPL-3.0 | Outcomes and rubrics, institution-authored | **19 evaluators** to score generated outcomes and feedback before a teacher sees them — the thing no LMS ships |
+| **OpenOLAT** | Apache-2.0 | The permissive LMS; no LTI boundary needed (P8) | 🟢 **The only fully permissive pairing in this table: Apache-2.0 platform + Apache-2.0 skills + MIT evaluator code.** Build the whole stack with no copyleft seam |
+| **`openfun/ralph`** | 🟢 MIT | xAPI learning records | A stable standards ID to key statements to, and an evaluator to judge the generated feedback those records trigger |
+
+### 🔴 The procurement caveat, and it is in the data tier, not the code
+
+**The code is permissive throughout. The data is not uniform, and the vendor says so in three
+places.** `knowledge-graph` labels every dataset — and in some cases every *download* within a
+dataset — **Open**, **Open + Gated** or **Gated**:
+
+| access type | terms | examples read from the repo this pass |
+|---|---|---|
+| **Open** | Typically **CC BY 4.0**; a smaller number **CC0** | US academic standards (Math · ELA · Social Studies · Science), crosswalks, WIDA ELD Standards Framework, XQ Competencies, Carnegie Skills Progressions, Math + ELA learning components, Eedi Misconceptions Graph, Math Coherence Map, English Learners Success Forum guidelines |
+| **Open + Gated** | Split **within one dataset, at the download level** | 🟡 **IM® v.360** — *Scope and sequence* is **Open**; *Instructional materials* and *Assessment materials* are **Gated** |
+| **Gated** | 🔴 **No open licence. Publisher approval and a separate agreement** | **OpenSciEd**; **Learner Variability Navigator** (math and literacy models) |
+
+🔴 **And the clause to put in front of counsel, quoted from `LICENSE.md`: compiling datasets into
+your own build means you "take on the licensing and attribution obligations of every dataset and
+download you include," and Learning Commons' "role as distributor doesn't consolidate those into a
+single license for your build."** 🔵 **So the one thing you must not do is the obvious thing —
+export the whole graph and call the result CC BY 4.0.** Attribution travels to each original
+source, not to the distributor.
+
+🟢 **The practical consequence for a bid is clean and worth stating plainly: build on the Open
+tier and the whole stack is shippable; the moment a scope item needs IM® instructional materials
+or OpenSciEd, it stops being an open-source integration and becomes a publisher negotiation —
+and that is a line item, not a surprise.** The `agent-skills` README says the same thing in one
+sentence: *"Knowledge Graph datasets carry varying licenses. Some datasets aren't readily
+accessible by default due to license requirements."*
+
+🔴 **Unverifiable this pass, stated as such:** the per-dataset licence labels above are read from
+the repository's `README.md` and `LICENSE.md`. **The dataset catalog pages that carry the
+authoritative download-level terms are on `docs.learningcommons.org` and
+`platform.learningcommons.org`, and the network policy answered 403 to CONNECT for both.** No
+record count is asserted. **A pass with reachable vendor docs should pin the download-level terms
+before this stack enters a signed scope.**
+
 ## Pass 326 — the platform tier did not move, and the layer that did move goes *underneath* it
 
 🔴 **The prescribed `open source platform education ERP CRM MIT Apache` query returned nothing new
