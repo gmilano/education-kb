@@ -4,6 +4,149 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 319 — the evaluation layer arrives and says the sector's metric is broken; star solicitation ships with a CI job
+
+**Fifth pass of 2026-10-19.** Eight rows added to `agents/top.md`, and the two findings worth a
+studio lead's attention are both corrections to this KB rather than discoveries about the market.
+
+**Method, stated precisely because it bounds everything below.** `curl -sI` to github.com returns
+**403** at this session's proxy and the session's fetch tool reaches **github.com and nothing
+else** — `arxiv.org`, `unesco.org`, `education.ec.europa.eu`, `koreaherald.com`, `k12dive.com`,
+`multistate.us` and `iadb.org` were all refused at connect time. **Every repository below was read
+first-hand off its GitHub page; every non-GitHub claim in this pass is snippet-sourced and labelled
+as such in `intel/market.md`.**
+
+### The find of the pass: the evaluation layer exists, and it contradicts how this sector reports quality
+
+Four passes of this KB declared there was no credible open source way to measure whether a tutor
+teaches. **There is, in four pieces, three of them MIT:**
+
+- **`eth-lre/mathtutorbench`** — 45 ★, 25 commits, EMNLP 2025 main conference, **oral**. Three
+  teacher skills, seven tasks, nine configs: problem solving, socratic questioning, solution
+  correctness, mistake location, mistake correction, plus four pedagogy win-rate tasks. **Pedagogy
+  is scored by a ~1.5B scaffolding reward model against ground-truth teacher utterances — not by an
+  LLM judge.** Macina, Daheim, Hakimi, Kapur, Gurevych, Sachan; arXiv 2502.18940. **Licence is
+  self-contradictory: CC BY 4.0 badge, CC BY-SA 4.0 footer.** Fifth licence inconsistency this KB
+  has verified, first one in the eval layer.
+- **`kaushal0494/AITutor-EvalKit`** — **MIT**, 3 ★, 8 commits, v1.0.0 dated 1 Dec 2025, MBZUAI
+  EduNLP Lab (Naeem, Maurya, Petukhova, Kochmar), arXiv 2512.03688. LoRA-finetuned evaluator, an
+  open judge path (`prometheus-eval/prometheus-7b-v2.0`) and a GPT-5 judge path; ships a 10-example
+  sample, you bring the dataset. **Pass 318 searched for this repository and recorded "no
+  repository located". That was wrong.**
+- **`bydeng01/conv-vs-ped-tutor`** — **MIT**, 3 ★, 12 commits, arXiv 2607.28128. A **pre-registered
+  audit** of whether an LLM helpfulness judge **rewards answer leakage that reduces the student's
+  later independent work.** Two tutors wrap the same frozen base model, differing only in policy
+  structure (one LangGraph node vs a multi-node state machine), against a no-tutoring cold baseline,
+  in algebra. Per-turn, per-session and per-replicate tables committed; ~100 MB of transcripts
+  released separately under SHA-256 manifests.
+- **`bydeng01/ability-levels-audit`** — **MIT**, 4 ★, 8 commits, arXiv 2608.27309, NewInML @
+  NeurIPS 2026. Pre-registered, hash-verified frozen data, 990 judge ratings, a complete 55 × 3 × 2
+  grid checked before analysis runs, registered diagnostics separated from labelled post-hoc work,
+  and the pre-registration, amendments and decisions log in `protocol/`. **Finding:
+  difference-in-differences on a censored rating scale can manufacture an effect that is not
+  there.**
+
+**What they jointly say:** LLM-judged "helpfulness" is not a pedagogy signal, and the standard
+before/after presentation of it can invent results. A study found at AIME-Con 2026 reaches the same
+conclusion from the judge-validation side *(snippet-sourced)*.
+
+**The correction this forces on pass 318.** Pass 318 called `ahmedEid1/lumen` "the most credible
+artefact of the pass" for publishing authoring 3.85/5, tutor 2.33/5, ingest 0.83/5 about itself.
+**The habit is still admirable; the numbers are judged scores, which is the instrument now in
+question.** Credit the transparency, stop quoting the values. P1 gains a "prove it teaches" stage
+built on these four artefacts instead.
+
+### Star solicitation has been productised — with a unit test and a dedicated CI workflow
+
+**`karanb192/algo-sensei` — MIT, 293 ★, 63 forks, 9 commits.** A LeetCode/DSA mentor skill with
+tutor, hint, review, interview and pattern-mapper modes, hint-first by design. In `scripts/` there
+is exactly one file: **`star_invitation.py`**, with `tests/test_star_invitation.py` beside it and
+`.github/workflows/invitation-tests.yml` running it.
+
+Read first-hand, the script is a once-per-machine gate: exclusive creation of
+`star-invitation.json` under `$XDG_CACHE_HOME` or `~/.cache/algo-sensei`, printing `offer` on first
+creation and `skip` on anything else — existing marker, concurrent run, or any path or filesystem
+error. Its comment: *"Exclusive creation prevents simultaneous or later sessions from asking
+again."*
+
+**In fairness, this is the polite version** — ask once per machine, ever, no text aimed at an
+automated reader, nothing deceptive. **And it is still star acquisition with CI behind it in a
+repository with nine commits and 293 stars.** Pass 318 found a README asking agents for stars; this
+is the engineered successor. When the distribution unit is a skill bundle, the moment of use *is*
+the distribution channel. **The ★ column in this KB is now decorative — rank on commits, forks,
+release cadence and licence.**
+
+### Six more rows, and the licence story in this tier finally improved
+
+- **`Miaotofu01/Study-Mate` — MIT, 1.1k ★, 723 commits.** Maths/CS study partner as a skill bundle;
+  five roles; **progress stored as files in a local workspace with a shared cross-subject memory of
+  skill level and effective explanation styles**; packaged for DeepSeek Harness, Google Antigravity
+  and Codex/ChatGPT Work; zh + en.
+- **`DaRL-GenAI/instructional_agents` — MIT, 488 ★, 106 forks, 95 commits.** ADDIE-model multi-agent
+  instructional design producing syllabus, slides, scripts and assessments, with catalog and copilot
+  modes and LaTeX/PDF, HTML and PPTX output; web UI, CLI and REST API. arXiv 2508.19611, **accepted
+  to EACL 2026 Main.** A public fork of `Hyan-Yao/instructional_agents` — pin the one you read.
+- **`JuneYaooo/lineage-skill` — Apache-2.0, 459 ★, 50 commits.** Distils videos, audio, books, PDFs
+  and transcripts into a **source-backed** teaching skill: micro-lessons with ASCII/SVG diagrams,
+  two formative questions per topic, practice and error tracking, references kept on key claims.
+  **The first permissively licensed skill bundle at scale.**
+- **`ZeKaiNie/universal-examprep-skill` — MIT, 309 ★, 183 commits.** Teaches chapter by chapter with
+  page citations, crops figures from the learner's own slides, quizzes from their past papers,
+  tracks mistakes, builds a cheat sheet; **state local, no vector database**; installs across 40+
+  agent hosts via `npx skills add`.
+- **`assafkip/claudemy` — MIT, 317 ★, 20 commits.** Researches a topic and builds ~12 two-minute
+  audio lessons with cited sources, each with a summary card, one practice task and a playbook rule.
+- **`SirhanMacx/Claw-ED` — MIT, 62 ★, 778 commits, v9.18.2026.1 (Beta).** Local-first teacher
+  assistant: imports PDF/DOCX/PPTX/TXT/MD and drafts teacher DOCX, student DOCX, PPTX slides,
+  multi-week units and assessments **for human review**; local dashboard and API, MCP server,
+  Telegram bot, Drive integration; Anthropic/OpenAI/Gemini/Ollama/OpenRouter. **Its README is the
+  model for honest local-first language**: local storage does not mean local processing, and it says
+  so.
+- **`brownplt/LTLTutor` — GPL-3.0, 12 ★, 320 commits.** Misconception-driven adaptive tutor from
+  Brown PLT; **CAV 2025 Distinguished Paper**. Read for the decision rule — model the specific wrong
+  belief, target practice at it — not for the licence.
+
+**Trend 7's legal claim has flipped.** This KB has been saying skill bundles arrive under content
+licences with ShareAlike obligations attached. `education-agent-skills` (CC BY-SA 4.0) still does —
+but `lineage-skill` is Apache-2.0 and Study-Mate, universal-examprep-skill, claudemy, algo-sensei
+and `virgiliojr94/book-to-skill` (MIT, **35.3k ★**, 228 commits) are MIT. **`book-to-skill` draws
+the line that actually matters: its MIT licence covers the converter and explicitly not the books
+you process with it.** That is the rights conversation on day one of any "turn our textbooks into a
+tutor" engagement.
+
+### Rejected after verification, and the rejections are the market signal
+
+- **`CaviraOSS/PageLM` — 2.0k ★, 234 commits, NOT open source.** The most capable new feature set
+  this pass (chat over PDF/DOCX/MD/TXT, Cornell SmartNotes, spaced-repetition flashcards, quizzes,
+  AI podcasts, exam simulation, debate practice; Ollama for fully local operation; Docker Compose)
+  under a bespoke **"CaviraOSS Community Licence"**: free for personal and educational use,
+  **commercial use or resale requires prior written permission.**
+- **`xiaoyang111222/cn-math-taxonomy` — CC BY-NC 4.0, 780 ★, 11 commits.** Exactly the artefact
+  pattern P2 wants — 531 knowledge points, **909 prerequisite edges (788 hard, 121 soft)**, 2,271
+  items, 230 curriculum-standard entries, aligned to China's 2022 compulsory-education mathematics
+  standards and the PEP textbook sequence. **NonCommercial, and its author states it is an
+  AI-generated draft not reviewed by teachers.** Take the hard/soft edge distinction; leave the
+  data.
+- **`JaimeArriagadaRosas/Plugin-Feedback-Canvas` — NO LICENCE, 0 ★, 160 commits.** LTI 1.3 + Canvas
+  + AI-generated academic feedback **behind mandatory instructor approval**, Spanish docs. The
+  **third** unlicensed artefact this KB has had to reject at the institutional-integration seam, and
+  the one that implements the human-review control US statute now requires. **Ask the author for a
+  licence.**
+- **`aaryansamanta/ai-ethos` — NO LICENCE, 499 ★.** Website source for a Cupertino 501(c)(3)
+  tutoring low-income, rural, multilingual and neurodiverse students across "7 languages". Cite the
+  programme, not the repo.
+- **`jinanshm/ncert-mcp` — NO LICENCE, 1 ★, 2 commits.** 13 MCP tools over NCERT textbooks and the
+  right shape entirely — but **no data ships and the ingest pipeline LLM-tags its chunks with no
+  human verification.** See the India gap in `repos/foundations.md`.
+
+### Watch item, unchanged for a second pass
+
+**`blamb/lti-tutor`: licence still "To be decided", still 0 ★, 0 forks, 39 commits.** The only known
+open source LTI 1.3 implementation against Moodle with dynamic registration, deep linking and
+completion passback through AGS, on `ltijs`. **One commit adding a LICENSE file would make it the
+most strategically valuable repository in this KB.** Re-check every pass; it costs one page load.
+
+
 ## 2026-10-19 — Pass 318 — a repo asks AI agents to star it, three listicle licences fail verification, and the LTI watch item is unchanged
 
 **Fourth pass of 2026-10-19, and an outward search that turned into a method finding.** Pass 317

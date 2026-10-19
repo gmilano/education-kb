@@ -6,10 +6,16 @@ updated: 2026-10-19
 
 # Current trends — education
 
-**Pass 318 · 2026-10-19.** Eleven trends. Each names the evidence behind it and, where the evidence
-is vendor marketing, says so. Pass 318 **added trend 11** — the sector's published metadata is
-unreliable in both directions, which is a finding about method and it changes how every other row
-in this KB must be sourced — and revised trends 2, 3 and 4 against first-hand evidence.
+**Pass 319 · 2026-10-19.** Twelve trends. Each names the evidence behind it and, where the evidence
+is vendor marketing, says so.
+
+**Pass 319 adds trend 12 — curriculum-standard data is the moat, and exactly one country has built
+it** — and rewrites two others against first-hand evidence. **Trend 9's four-pass "no evaluation
+layer" verdict is retired**: the layer exists, it is mostly MIT, and its convergent finding is that
+the metric this sector reports is unsound, which forces a correction to pass 318's own reading of
+`lumen`. **Trend 11 is extended twice**: star solicitation has been productised with a unit test
+and a CI job, and the licences themselves — not just the descriptions of them — are drifting out
+of open source at the popular end of the market.
 
 ## 1. Institutional AI deployment is not landing — and that, not adoption, is the gap
 
@@ -23,6 +29,19 @@ across 35 countries**) supports a sharper reading:
   how they learn.**
 - **Only 29% think their instructors are equipped to guide them — 17% in the US and Canada.**
 - **64% of faculty have had AI literacy training; 31% feel involved in shaping AI policy.**
+
+**Pass 319 adds the hard case, and it is a national one.** South Korea mandated AI digital
+textbooks, then retreated to voluntary adoption after teacher and parent resistance, and on
+**2025-08-04** the National Assembly removed them from the statutory definition of a textbook
+altogether, withdrawing funding with it. Usage had already decayed inside a single year: **~37% of
+eligible classes in the first semester of 2025 to 19% in the second; schools from ~4,190 to
+2,095**; overall adoption roughly 30% of schools, ranging from 98% in Daegu to 8% in Sejong.
+*(Snippet-sourced; the primary reports were unreachable this pass. Note the date — this KB was
+carrying it as August 2026, which was wrong.)*
+
+**That is this trend's thesis at national scale**: the technology was available, the mandate was
+real, the money was spent, and the deployment did not land — because preparation, teacher
+capability and consent were treated as rollout details rather than as the project.
 
 Adoption is solved. Institutional deployment is near-absent, and where present it is judged
 worthless by 95% of the students exposed to it. **Implication:** the sellable work is not
@@ -38,7 +57,16 @@ AI bills across 49 states. Ohio requires an AI framework in every public/communi
 Idaho SB 1227 mandates a statewide framework plus a human-teacher guarantee; California AB 1159 on
 student data; Oklahoma and Maryland reported to require human oversight and bar AI from high-stakes
 student decisions. Federally, H.R. 8747 (K-12 AI Literacy and Readiness Act of 2026) cleared
-committee markup on 2026-07-21. **The RFP question has shifted from "what can your tutor do" to
+committee markup on 2026-07-21. **Pass 319: four states now have *enacted* education-specific AI statutes** — **Idaho, Maryland,
+Oklahoma and Virginia** — each requiring state-department guidance **and** aligned local school
+board policies, with Oklahoma adding educator supervision, human review, a bar on high-stakes
+AI decisions and parent disclosure. **Guidance coverage is now ~33–35 states plus Puerto Rico**,
+and curriculum mandates have started arriving alongside the guardrails (Georgia and Mississippi CS
+credits including AI; **Alabama requires an approved CS course with AI instruction to graduate**).
+Bill counts across trackers disagree — one source found this pass says "around 100" bills in the
+2026 session against this KB's 134 across 31 states — **so cite the tracker and the date.**
+
+**The RFP question has shifted from "what can your tutor do" to
 "show me the audit trail."**
 
 **Revised this pass: the binding constraint in US K-12 is not a bill, it is a rule already in
@@ -60,6 +88,15 @@ are not outliers to wait out — they are the shape of K-12 procurement. A produ
 enforce **grade-band gating** and a **teacher-facing-only mode** is unbiddable in those districts,
 and the gate is cheap to build. Treat restriction as a feature spec.
 
+**Pass 319 adds the enforceable version of this, and it is a statutory feature rather than a
+sentiment.** Per one tracker, Oklahoma's 2026 law gives **parents an opt-out from student-facing
+AI tools together with a duty to provide alternative access to core instruction** *(single-tracker
+claim, not read against the statute — verify, but build for it)*. That turns restriction from a
+market-sizing question into three concrete components: **a per-pupil opt-out flag that degrades
+gracefully**, an **approval queue** so nothing AI-written reaches a student or a record without a
+named educator signing it, and a **decision log** proving no high-stakes determination was AI-made.
+All three are cheap; all three are now bid-qualifying in parts of the US. See pattern P7.
+
 **Quantified by country this pass, and it does not follow the regulatory map** (Ipsos Education
 Monitor 2026, support for banning AI in schools): **Indonesia 23%, India 26%, Japan 29%, South
 Korea 31%**, with **Australia and New Zealand above all of them.** So the market with the region's
@@ -69,15 +106,24 @@ regulation are separate variables and must be scoped separately** — the gating
 public and parental sentiment, the audit trail is sold on statute, and a bid can need one without
 the other.
 
-## 4. The permissive-agent / copyleft-platform split is real but softening — REVISED this pass
+## 4. The permissive-agent / copyleft-platform split is holding — recounted again in p319
 
-**Recounted this pass over larger tables, and the softening reversed.** 14 of 18 agents in
-`agents/top.md` carry a permissive software licence. **13 of 19 platforms** in
-`verticals/solutions.md` are GPL-2.0/GPL-3.0/LGPL-3.0/AGPL-3.0 — the platform ratio moved *against*
-permissiveness this pass (6/16 → 6/19), because all three platforms added were AGPL: `frappe/lms`,
-`LearnHouse` and `openedx/openedx-ai-extensions`. This is still the sector's structure and it still
-dictates architecture: permissive agents across a network boundary from a copyleft LMS, LTI 1.3 as
-the seam. **Pass 317 called the split "softening"; on a larger sample it is not. It is holding.**
+**Recounted in pass 319 over 26 agents and 27 platforms, and the split is holding.** **22 of 26
+agents** carry a permissive software licence — the pass added six MIT rows and one Apache-2.0 —
+while **15 of 27 platforms** are GPL-2.0/GPL-3.0/LGPL-3.0/AGPL-3.0, with the AGPL count rising
+from 7 to 8 (`ClassroomIO`). **Two qualifications pass 319 forces, and both matter more than the
+ratio:**
+
+- **The two permissive platforms added this pass are dead code.** `menthorlabs/menthor`
+  (Apache-2.0, 582 ★) was archived on 2024-12-12; `edrys-org/edrys` (MPL-2.0, 334 ★) states it is
+  no longer under active development. The *usable* permissive platform set has not grown.
+- **A fourth category now exists and it is not copyleft at all.** `PageLM` (bespoke Community
+  Licence) and `advisingapp` (Elastic 2.0) are **source-available, not open source**, and
+  `i-diario` and `ipti/br.tag` could not be resolved from their pages. **"Permissive vs copyleft"
+  no longer describes this market; "shippable vs readable-only" does.**
+
+The architecture advice is unchanged and now covers more cases: permissive agents across a network
+boundary from a platform you do not modify — copyleft, source-available or unresolved alike.
 
 **But "the platforms are all copyleft" is no longer an accurate sentence**, and pass 317 found the
 crack widening from both sides at once:
@@ -114,7 +160,7 @@ The argument has moved from position to implementation. **A 2026 tutor needs a l
 persists across sessions and a non-LLM component that decides what comes next** — and that is now
 something to integrate rather than build.
 
-## 6. MCP, not LTI, is where agent integration is actually happening — NEW
+## 6. MCP, not LTI, is where agent integration is actually happening (added p317, revised p319)
 
 Every integration artefact found this pass speaks **MCP**: `tutor-mcp` (an entire ITS as an MCP
 server), `ankimcp/anki-mcp-server` (520 ★, spaced repetition exposed to any LLM client), Canvas
@@ -124,8 +170,23 @@ This is a genuine fork in the road. MCP gets an agent to *tools*; LTI gets an ag
 *institution* — launch context, roster, identity, gradebook passback. **A tutor that is MCP-native
 and LTI-absent works beautifully for an individual learner and cannot be deployed by a university.**
 
-**Revised this pass, and the revision is sharp: the LTI-native tutor does exist, and it has no
-licence.** `blamb/lti-tutor` implements LTI 1.3 against Moodle with dynamic registration, deep
+**Revised in pass 319: a third unlicensed artefact at the same seam, and the first real library
+alternative.** `JaimeArriagadaRosas/Plugin-Feedback-Canvas` (0 ★, **160 commits**, Spanish docs) is
+a full-stack **LTI 1.3 plugin for Canvas** in which AI-generated academic feedback must be reviewed
+and approved by the instructor before it reaches the student — the human-in-the-loop control US
+district policy now demands, built and working, **with no LICENSE file.** Three for three: the work
+closest to institutional integration is written by instructors and university staff solving their
+own course, and it is the least likely work in the sector to carry a licence.
+
+**What did change is the library floor.** `tsugiproject/tsugi` — **Apache-2.0, 376 ★, 266 forks,
+4,011 commits, Apereo Incubating**, maintained around the co-author of the LTI specification — is
+an order of magnitude larger than `pylti1.3` (178 commits, 39 open issues, no published release,
+re-verified p319). It is PHP, and **its page does not state which LTI versions it implements**, so
+the Advantage-surface question is open and is pass 320's highest-value one-page-load check. Add
+`jcputney/scorm-again` (MIT, 356 ★, 1,229 commits, SCORM 1.2 and 2004) and the integration tier is
+no longer a single 138-star dependency.
+
+**Carried from pass 318 and still true: the LTI-native tutor exists and has no licence.** `blamb/lti-tutor` implements LTI 1.3 against Moodle with dynamic registration, deep
 linking (each tutorial placed as its own External tool activity) and completion passback through
 Assignment & Grade Services, on `ltijs`. **Its README states the licence as "To be decided." 0 ★,
 39 commits.** Default copyright therefore applies and Globant cannot use it.
@@ -144,7 +205,7 @@ tool outside" stays the integration shape to standardise on**, with one caveat n
 pattern in this KB crosses the LMS boundary through that single 138-star, single-maintainer library.
 That concentration belongs in the risk section of any SOW.
 
-## 7. The skill, not the app, is becoming the unit of educational AI — NEW
+## 7. The skill, not the app, is becoming the unit of educational AI (added p317, measured p319)
 
 Among the highest-starred repos under GitHub's `ai-tutor` topic, a striking share are **agent
 skills rather than applications**: `GarethManning/education-agent-skills` (878 ★, 165
@@ -153,12 +214,27 @@ evidence-grounded teaching skills), `ZeKaiNie/universal-examprep-skill` (309 ★
 `flysheep-ai/education-skills` (116 ★). `Li-Evan/Bloom` (MIT, 289 ★) ships **both** a skill bundle
 and a self-hostable web app.
 
-Two consequences. **Commercially:** the distribution unit is shrinking, and a client's "AI tutor"
-may arrive as a prompt bundle their faculty installed, below procurement's line of sight — a
-shadow-IT problem that governance work (trend 2) has to cover. **Legally:** skill bundles are
-published under *content* licences. `education-agent-skills` is **CC BY-SA 4.0** — ShareAlike
-obligations attach to derivative teaching material. That is a licence conversation nobody is having
-yet, and it will land in a client deliverable.
+**Pass 319 measured this trend and it is bigger than the `ai-tutor` topic suggested.**
+`virgiliojr94/book-to-skill` — a converter that turns a technical book into a structured agent
+skill — has **35.3k stars and 3.7k forks on 228 commits**, which makes it one of the largest
+education-adjacent repositories in this KB. `Miaotofu01/Study-Mate` is **MIT, 1.1k ★, 723
+commits**, shipped as plugin packages for three different agent hosts. `JuneYaooo/lineage-skill`
+(Apache-2.0, 459 ★) distils videos, PDFs and transcripts into a **source-backed** teaching skill.
+`ZeKaiNie/universal-examprep-skill` (MIT, 309 ★, 183 commits) installs across **40+ agent hosts**
+through one command and keeps all state local with no vector database.
+
+Two consequences, and the legal one has flipped. **Commercially:** the distribution unit is
+shrinking, and a client's "AI tutor" may arrive as a prompt bundle their faculty installed below
+procurement's line of sight — a shadow-IT problem that governance work (trend 2) has to cover. It
+now arrives through `npx skills add` across dozens of hosts, so there is no single gate to watch.
+**Legally: the "skill bundles come under content licences" claim is no longer generally true.**
+`education-agent-skills` is still **CC BY-SA 4.0** and the ShareAlike obligation on derivative
+teaching material is still a live constraint — but **`lineage-skill` is Apache-2.0,
+`universal-examprep-skill`, `Study-Mate`, `claudemy`, `algo-sensei` and `book-to-skill` are MIT**,
+and `book-to-skill` draws the right line explicitly: **its MIT licence covers the converter and
+pointedly not the books processed with it.** That distinction — permissive tooling over
+third-party content whose rights you must clear separately — is the real licence conversation in
+this tier, and it lands on day one of any "turn our textbooks into a tutor" engagement.
 
 ## 8. Retrieval-grounded tutoring is table stakes — and the incumbent is shipping it free
 
@@ -166,10 +242,18 @@ LightRAG (MIT, 40.2k ★) alongside DeepTutor from the same lab made curriculum-
 the default architecture. **Instructure's Project Athena, announced 2026-07-22, is course-context
 grounding built natively into Canvas**, positioned as coaching "toward mastery, not answers".
 
+**Pass 319 put a number on it, and the number argues for data over models.**
+`bncc-dev/bncc-benchmark` measured curriculum hallucination on Brazil's BNCC across 8 models and
+300 items: **31.9% with no source, 0.2% with the curriculum pasted into the prompt, 2.3% querying
+the verified dataset over MCP** — a 30.6-point average drop — while **faithful-text rates across
+the models tested ranged from 88% down to 3%.** Model selection cannot close a 30-point grounding
+gap, and the MCP route costs about two points against pasting the data in. See trend 12.
+
 **Grounding in the client's own material is no longer a differentiator against Canvas.** What
-remains defensible: the deterministic pedagogy layer (trend 5), the governance and audit layer a US
-district must buy anyway (trend 2), and anything on-premise or offline (trend 9). Price and pitch
-accordingly.
+remains defensible: the **verified** data layer underneath the grounding (trend 12 — the thing
+Canvas cannot ship for a jurisdiction it does not own), the deterministic pedagogy layer (trend 5),
+the governance and audit layer a US district must buy anyway (trend 2), a defensible efficacy
+measurement (trend 9), and anything on-premise or offline. Price and pitch accordingly.
 
 ## 9. Assessment integrity has settled on process evidence, and the detection gap is now a decision
 
@@ -181,11 +265,43 @@ Searched again this pass: there is still **no credible open source AI-detection 
 integrity project.** What exists is student-project proctoring (YOLO/OpenCV/MTCNN pipelines,
 Electron kiosk browsers), much of it stale or unlicensed, plus MOSS-style code-plagiarism
 detectors. Published work finds AI-text detectors inaccurate and unreliable, and the surveillance
-posture carries privacy and fairness exposure. **Fourth consecutive pass declaring this gap — and
+posture carries privacy and fairness exposure. **Fifth consecutive pass declaring this gap — and
 the correct reading is that it should stay a gap.** The open source that *is* available (nbgrader,
 otter-grader, JupyterHub provenance) captures process. Sell that.
 
-## 10. Interoperability standards are becoming the AI story — NEW
+**The adjacent gap, however, is closed — and this is the substantive change in pass 319.** For four
+passes this KB said there was no credible open source way to measure whether a tutor *teaches*.
+There now is, in four pieces (detail and licences in `agents/top.md`):
+
+- **`eth-lre/mathtutorbench`** — EMNLP 2025 main-conference benchmark, 3 teacher skills and 7
+  tasks, **scoring pedagogy with a ~1.5B scaffolding reward model against ground-truth teacher
+  utterances rather than an LLM judge.** Its licence is self-contradictory (CC BY 4.0 badge, CC
+  BY-SA 4.0 footer) — the fifth licence inconsistency this KB has verified and the first in the
+  eval layer.
+- **`kaushal0494/AITutor-EvalKit`** — MIT, MBZUAI EduNLP Lab, v1.0.0. **Pass 318 searched for this
+  and concluded "no repository located". It exists.**
+- **`bydeng01/conv-vs-ped-tutor`** — MIT, pre-registered audit of whether an LLM helpfulness judge
+  **rewards answer leakage that reduces the student's later independent work**, with two tutors
+  wrapping the same frozen base model and differing only in policy structure.
+- **`bydeng01/ability-levels-audit`** — MIT, pre-registered, hash-verified frozen data, 990 judge
+  ratings, finding that **difference-in-differences on a censored rating scale can manufacture an
+  effect that is not there.**
+
+**The convergent finding is the trend: LLM-judged "helpfulness" is not a pedagogy signal, and the
+standard before/after presentation of it can invent results.** A study found at AIME-Con 2026
+reaches the same place from the judge-validation side — human oversight remains necessary for
+nuanced instructional assessment *(snippet-sourced)*. **This forces a correction to pass 318**,
+which called `ahmedEid1/lumen` the most credible artefact of its pass for publishing authoring
+3.85/5, tutor 2.33/5 and ingest 0.83/5 about itself. The *habit* is still admirable; **the numbers
+are judged scores, which is the instrument now in question.** Credit the transparency, do not quote
+the values.
+
+**What to sell:** process evidence for integrity, and a **pre-registered, frozen-data,
+decisions-logged evaluation** for efficacy. Every competitor's uplift claim rests on the instrument
+these audits discredit; being the party that measures properly is a differentiator that costs a
+fortnight of engineering.
+
+## 10. Interoperability standards are becoming the AI story (added p318)
 
 **1EdTech's 2026 position is that interoperability is the precondition for AI**, naming **CASE,
 Edu-API and OneRoster** as the standards that give an AI system shared institutional context, with
@@ -199,7 +315,7 @@ serving OneRoster 1.2 (151 commits). This is the first pass where "how does your
 anything about my institution?" has an open source answer rather than a bespoke-integration answer,
 at least in North America.
 
-## 11. The sector's published metadata is unreliable in both directions — NEW, and it is a method finding
+## 11. The sector's published metadata is unreliable in both directions (added p318, extended twice in p319) — a method finding
 
 Pass 317 established that **stars run too low** on the software that matters: Ed-Fi at 12 stars with
 1,105 commits, Sunbird at 41, OpenOLAT at 448 with 31,877 commits. Pass 318 added a fourth case —
@@ -241,8 +357,132 @@ Google is systematically wrong about the one attribute that determines whether G
 repo at all.** Being the party in the room that read the LICENSE file is a small, real,
 demonstrable differentiator in a dependency review.
 
+### Pass 319, extension 1: star solicitation now ships with a unit test and a CI job
+
+Pass 318 found a README asking AI agents to star a repository. Pass 319 found the engineered
+version. **`karanb192/algo-sensei` (MIT, 293 ★, 63 forks, 9 commits)** ships exactly one file in
+`scripts/` — **`star_invitation.py`** — plus `tests/test_star_invitation.py` and a dedicated
+workflow, `.github/workflows/invitation-tests.yml`. Read first-hand, the script is a
+once-per-machine gate: exclusive creation of a marker file under `$XDG_CACHE_HOME` or
+`~/.cache/algo-sensei`, printing `offer` on first run and `skip` on every subsequent run, concurrent
+run or error, with the comment *"Exclusive creation prevents simultaneous or later sessions from
+asking again."*
+
+**In fairness: this is the polite version** — ask once per machine, ever, with no text aimed at an
+automated reader and no deception. **And it is still star acquisition with CI behind it in a
+repository with nine commits and 293 stars.** When the distribution unit is a skill bundle
+(trend 7), the moment of use *is* the distribution channel, and asking there is cheap and scales.
+**Treat the ★ column as decorative.** It fails low on institutional infrastructure — Ed-Fi 12,
+Sunbird 41, OpenOLAT 448 with 31,877 commits, the whole `bncc-dev` curriculum stack at 22/9/9 — and
+it is solicitable at the top.
+
+A smaller datapoint in the same direction: the German-language `bildung` topic carries **a
+13-repository, single-author cluster of near-identical "tech evangelism" pages at one star each.**
+**Topic pages can be padded**, so a topic sweep needs reading, not counting.
+
+### Pass 319, extension 2: the licences themselves are leaving open source
+
+Pass 318's finding was that *descriptions* of licences are wrong. Pass 319's is worse: among the
+projects read first-hand this pass, **the three highest-starred new ones are outside open source**
+— `CaviraOSS/PageLM` (2.0k ★, bespoke **"CaviraOSS Community Licence"**, commercial use by written
+permission only), `xiaoyang111222/cn-math-taxonomy` (780 ★, **CC BY-NC 4.0**) and
+`canyongbs/advisingapp` (340 ★, **Elastic Licence 2.0**, source-available, Gates-Foundation
+supported). Add the open-core structures — LearnHouse's separate Enterprise Licence, ClassroomIO's
+`LICENSE_KEY`-gated SSO and no-tracking — and five of the most capable systems in this KB are
+commercially unavailable or partially withheld. **Two more were simply unresolvable from the page:
+`portabilis/i-diario` shows no licence name, and `ipti/br.tag` claims BSD-3-Clause in its README
+while its sidebar links GPL-2.0.**
+
+**The rule to add: "open source" in this sector is a claim to check, not a category to filter on.**
+Keep a two-column inventory per engagement — *what we can ship* and *what we may only read* — and
+expect the second column to hold the best material. That is not a complaint; a reading list of
+PageLM's feature set, cn-math-taxonomy's prerequisite graph, advisingapp's student-success data
+model, lumen's eval harness and LTLTutor's misconception modelling is genuinely valuable. It is
+just not a bill of materials.
+
+## 12. Curriculum-standard data is the real moat — and exactly one country has built it — NEW in p319
+
+Every pattern in this KB grounds a tutor in "the client's curriculum" and quietly assumes the
+curriculum is available as data. **Pass 319 checked that assumption across five languages of
+GitHub topics and it is false almost everywhere.**
+
+**Where it is true: Brazil.** The `bncc-dev` organisation (Profy Tecnologias Educacionais) publishes
+the **BNCC — Brazil's national curriculum — as 1,721 verified learnings** in JSON, SQLite, SQL and
+CSV under JSON Schema, **MIT for the pipeline and CC BY 4.0 for the data**, with the 1,580 BNCC-2018
+texts checked **character by character against the homologated PDF**, 30 contract checks in CI, a
+decisions log for every source inconsistency, **an MCP server with seven tools and a hosted keyless
+endpoint**, and a **published benchmark** of what grounding on it is worth:
+
+| Condition | Curriculum hallucination |
+|---|---|
+| No source | **31.9%** |
+| Data pasted into the prompt | **0.2%** |
+| Model queries the MCP server | **2.3%** |
+
+**That is the first quantified grounding claim in this KB**, and it reframes the economics. The
+model matters less than the data layer: faithful-text rates across the models the benchmark tested
+range from **88% down to 3%**, so no model choice closes a 30-point grounding gap.
+
+**Where it is not true: everywhere else swept.** India has the sector's hardest curriculum mandate —
+AI and Computational Thinking compulsory for **Classes 3–8 from 2026-27 across 32,900 CBSE
+schools** — and the `ncert` and `cbse` topics (180 repositories between them) hold **no verified
+curriculum dataset at all**: the one MCP server is unlicensed and **LLM-tags its chunks with no
+human verification described**, the tutors are one- and three-commit projects, and the only
+substantial data asset is a **2018** school scrape. Germany's attempt was **archived in 2021**. The
+Dutch and Spanish-language topics produced course materials, not data. The English `oer` topic —
+419 repositories — produced textbooks and **nothing describing curriculum or competency metadata.**
+Ed-Fi (`repos/foundations.md`) covers North American **rostering**, which is a different artefact.
+
+**Three implications, in order of how soon they bite:**
+
+1. **Stop promising curriculum grounding as a configuration step.** Outside Brazil it is a data
+   engineering project with a verification burden, and the verification is what makes it worth
+   anything — an unverified, LLM-tagged curriculum index is a hallucination source with a schema.
+2. **The build-once opportunity has a template and a deadline.** Port the `bncc-dev` pattern to
+   NCERT/CBSE: verified extraction against the official source, schema, contract checks in CI,
+   permissive code with attribution-licensed data, an MCP server. Named buyers: a board, a
+   ministry, a national edtech. Pattern **P10**.
+3. **It is a procurement moat, not a technical one.** Whoever holds the verified curriculum layer
+   for a jurisdiction is in every bid in that jurisdiction, because the alternative is each vendor
+   re-deriving it badly. At 22 stars, nobody is competing for this yet.
+
+**The method behind the trend, worth copying on its own:** this was found by sweeping GitHub topics
+**in the region's own language** (`educacao`, `educacion`, `bildung`, `onderwijs`, plus `ncert` and
+`cbse`). Every regional absence this KB has declared was declared from English-language searches.
+One Portuguese topic page produced a verified national curriculum, an MCP server, a published
+benchmark and a 34,948-commit school-management system. **Before declaring a regional gap, sweep
+the topic in the region's language — and record which languages you swept.** Untested: Arabic,
+Hindi, Japanese, Korean, French, Indonesian.
+
 ## Trends asserted elsewhere that this pass could NOT verify
 
+- **"Nearly two-thirds of European education systems have an AI strategy, guidance or policy
+  framework."** Searched directly this pass against Commission sources and **not found.** The two
+  Commission reports of 22–23 September 2026 are real and their conclusions are well attested; this
+  fraction is not. **Do not quote it.**
+- **A November 2026 date for the European Commission's education package.** Commission texts say
+  "later this year" and name a **2030 Roadmap on the Future of Digital Education and Skills** as
+  its content. The month came from a secondary summary. Likewise the **AI Literacy Framework
+  (AILit)** and the **2026 ethical-use guidelines for educators** exist in search results, but
+  their status — draft or final, voluntary or expected — could not be read because
+  `education.ec.europa.eu` was unreachable.
+- **A Q3 2026 edtech-specific venture funding figure.** Not found. Crunchbase's **$159B Q3 2026**
+  is **all sectors** — repurposing it for edtech would be a serious error. Also rejected: a
+  circulating "EdTech funding fell 89%" headline and an undated "$410M invested in 2026" figure,
+  both inconsistent with HolonIQ's ~$1B H1 2026 (−26% YoY) and Crunchbase's just-under-$1.8B for
+  the same period.
+- **"South Korea spent $850M on AI textbooks."** Low-quality blog source; the de-officialisation
+  (2025-08-04), the adoption decay and the funding withdrawal are well attested across multiple
+  independent summaries, **the dollar figure is not.** One EU-based source attributes part of the
+  unwinding to the Korean privacy regulator — also unverified.
+- **Two 2026 pedagogical benchmarks seen only in snippets**, not counted in trend 9 until a public
+  repository and licence are confirmed: **EduClaw-Bench** (arXiv 2608.03206; 30-day simulated
+  learner, three-judge cross-family panel; code behind an anonymous review link) and
+  **EduFair-Bench** (arXiv 2609.12949; pedagogical fairness across student demographics, judged by
+  `gpt-oss-120b`).
+- **Oklahoma's parent opt-out and alternative-access duty.** Reported by one tracker, not read
+  against the statute. **Scope for it anyway** — the feature is cheap and the downside of missing it
+  is a disqualified bid — but do not cite the statute until someone has read it.
 - **"EdTech moving from pilots to mainstream deployment in 2026", including VR/AR.** Vendor and
   consultancy marketing. The DEC survey's 43%-no-integration figure argues directly against it.
   Do not put it in a client deck as fact.

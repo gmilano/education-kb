@@ -4,6 +4,148 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 319 — a verified national curriculum with a published grounding number, found by searching GitHub in Portuguese
+
+**Fifth pass of 2026-10-19**, and the largest single addition `repos/foundations.md` has had: nine
+new rows, a real alternative to the KB's most load-bearing dependency, and a method change that
+produced most of it.
+
+**Method, stated precisely.** The session's fetch tool reached **github.com and nothing else**;
+`arxiv.org`, `unesco.org`, both `ec.europa.eu` subdomains, `koreaherald.com`, `k12dive.com`,
+`multistate.us` and `iadb.org` were refused at connect time. **Everything below was read first-hand
+off GitHub.** And the search itself changed: **GitHub topics were swept in Portuguese, Spanish,
+German and Dutch, plus the two Indian curriculum tags.** That single change produced the find of the
+pass.
+
+### The find: `bncc-dev` — Brazil's national curriculum as verified, licence-clean infrastructure
+
+Three repositories under one organisation, maintained by **Profy Tecnologias Educacionais Ltda**:
+
+**`bncc-dados` — MIT (pipeline) / CC BY 4.0 (data), 22 ★, 40 commits.** The BNCC as **1,721
+learnings**: 1,580 across the three stages of basic education (Educação Infantil 93 objectives,
+Ensino Fundamental 1,304 skills, Ensino Médio 183 skills) plus the **141-item Computing complement**
+from Parecer CNE/CEB 2/2022, with 20 legal milestones and 5 reference profiles. JSON canonical;
+SQLite, SQL dump and CSV generated; JSON Schema draft 2020-12. Content version `dados-2026.08`,
+schema v1.1.0, declared stable.
+
+**The verification discipline is what makes it worth something**, and it is all in the repository:
+the 1,580 BNCC-2018 texts checked **character by character against the homologated PDF**; the
+Computing texts against the Parecer's annex; a code sweep for missing and extra codes; `validar.py`
+running **30 contract and completeness checks**; a reproducible pipeline where **CI fails on
+divergence**; and `DECISOES.md` recording every decision taken about an inconsistency in the source.
+The licence split is deliberate and well reasoned — **MIT for the pipeline, CC BY 4.0 for the
+data**, because the compilation and curation are Profy's work while the normative texts are official
+acts.
+
+**`bncc-pacotes` — MIT (code) / CC BY 4.0 (embedded data), 9 ★, 103 commits.** npm `@bncc/dados`
+0.7.0, **npm `@bncc/mcp` 0.6.0 — an MCP server with seven tools** (`bncc_lookup`, `bncc_buscar`,
+`bncc_listar`, `bncc_decodificar`, `bncc_estatisticas`, `bncc_estrutura`, `bncc_progressao_ei`),
+PyPI `bncc` 0.5.0, and a **hosted MCP endpoint at `mcp.bncc.dev` on Cloudflare Workers needing no
+API key**. Embedded data syncs from a pinned `bncc-dados` commit with version and checksum records.
+A well-formed code that does not exist returns an explanatory error rather than `null` — the small
+decision that stops a tutor inventing a standard.
+
+**`bncc-benchmark` — MIT (code) / CC BY 4.0 (items, results, methodology), 9 ★, 82 commits. This is
+the number.** Four tasks — direct lookup, **existence (which tests acceptance of plausible fake
+codes)**, open generation, reverse lookup — scored across five dimensions against the verified
+dataset. Official round `oficial-seca-2026-09`; a held-out item set is never published so
+memorisation stays detectable; v0.3.0 moved to direct provider APIs and corrected the judge rubric,
+so it is not comparable with v0.2.0.
+
+Its grounding study (**8 models, 300 items**):
+
+| Condition | Curriculum hallucination |
+|---|---|
+| No source available | **31.9%** |
+| Curriculum data pasted into the prompt | **0.2%** |
+| Model queries the `bncc.dev` MCP server | **2.3%** |
+
+**An average drop of 30.6 points, and faithful-text rates across the models tested ranging from 88%
+down to 3%.** This is the first quantified grounding claim in this KB. It also settles an argument:
+**no model choice closes a 30-point data gap.**
+
+**Three caveats, all from the repository itself.** The maintainer **discloses a conflict of
+interest** (Profy ships commercial LLM products on the BNCC). The page's totals disagree — the
+README says 19 models × 900 responses with 17,100 raw responses published, the About line says
+15,300 responses from 17 models — so **cite the round identifier and the design, not the total**.
+And the published leaderboard (GPT-6 Astra 94.7, Claude Fable 5.1 81.8, Muse Spark 1.3 79.4,
+Gemini 3.1 Pro 78.0, Claude Opus 5 76.8, with the benchmark's own model labels) will be stale within
+a quarter; the 88%-to-3% spread will not be.
+
+**Why it matters beyond Brazil:** this is the artefact every pattern in this KB has assumed a client
+would supply. Pattern **P10** is built on it, with a Variant B for the jurisdictions that do not
+have one — which, on this pass's evidence, is all of them.
+
+### The `pylti1.3` concentration risk finally has an alternative, not an index
+
+**`tsugiproject/tsugi` — Apache-2.0, 376 ★, 266 forks, 4,011 commits, 43 watchers, Apereo
+Incubating.** "A multi-tenant scalable LTI library and tool hosting environment", doubling as an
+administration/management/developer console, implementing an **IMS ContentItem app store**, sharing
+low-level IMS libraries with Sakai, maintained around **Dr Chuck — Charles Severance, co-author of
+the LTI specification**. Per-PHP-version branches and production servers pulling updates every 30
+minutes.
+
+Against `pylti1.3` (re-verified this pass: **138 ★, 84 forks, 178 commits, 39 open issues, still no
+published release**) that is a different class of dependency. **Two caveats: it is PHP, and its
+GitHub page does not state which LTI versions or Advantage services it implements.** Verifying the
+Advantage surface is pass 320's highest-value single page load.
+
+Also added for integration breadth: **`jcputney/scorm-again` — MIT, 356 ★, 1,229 commits**, a tested
+JavaScript runtime for **SCORM 1.2 and SCORM 2004**, LMS-agnostic. **AICC was removed in v3.0.0;
+cmi5 and xAPI are roadmap "potential" only.**
+
+### EMEA gets an institution-built autograder, and it is Apache-2.0 at 24 stars
+
+**`thm-mni-ii/feedbacksystem` — Apache-2.0 © Technische Hochschule Mittelhessen, 24 ★, 9 forks,
+2,248 commits on `dev`, 147 issues, 94 PRs.** An intelligent tutoring system that checks student
+submissions automatically, returns the mistake with suggestions, and **aggregates common errors so
+lecturers can address them in class.** Java 11/Gradle, Scala, MySQL, Docker Compose, Kubernetes with
+Helm for production. No LMS or LTI integration described.
+
+**24 stars against 2,248 commits is the same signature as Ed-Fi (12 ★), Sunbird (41 ★) and OpenOLAT
+(448 ★ / 31,877 commits)**: institutional software adopted through procurement, invisible to a
+star-ranked search. With `smashburger-dev/argmin` (**MIT code / CC BY 4.0 content, 6 ★, 343
+commits** — a German-language AI course, 50 lessons and 280+ exercises, Python in the browser via
+Pyodide, **works offline after first load**, self-hostable), an EMEA engagement can now be built
+from EMEA-authored permissive components: **OpenOLAT + feedbacksystem + argmin + a Globant agent.**
+
+### Also added
+
+- **`virgiliojr94/book-to-skill` — MIT, 35.3k ★, 3.7k forks, 228 commits.** Converts a technical
+  book or document set into a structured agent skill. **Its MIT licence covers the converter and
+  explicitly not the books processed with it** — the rights question every "turn our textbooks into
+  a tutor" engagement starts with. Read first-hand: no agent-directed star solicitation.
+- **`elimu-ai/webapp` — MIT, 41 ★, 68 forks, 8,075 commits.** Per-language content hosting pushing
+  to Android devices for out-of-school children; production deployments in **Hindi, Tagalog, Thai,
+  Vietnamese and English**; the org publishes 92 repos including MIT ML components for reading-level
+  prediction and storybook/video recommendation. **Its page gives its location as "Worldwide" and
+  names no region — it does not close this KB's MENA/Africa supply gap**, and its documented
+  deployments are APAC-language-first.
+- **`HKUDS/LightRAG` re-verified** — MIT, 40.2k ★, 5.7k forks, 10,873 commits. The p316 reading was
+  flagged as due; it is now current and unchanged.
+
+### The language-native topic sweep, and what each language returned
+
+| Topic | Result |
+|---|---|
+| `educacao` (pt) | **Infrastructure**: `portabilis/i-educar` (720 ★, **34,948 commits**), `portabilis/i-diario` (117 ★, 15,834 commits), `ipti/br.tag` (20 ★, 3,959 commits, **sync for schools without internet**), and the whole `bncc-dev` stack |
+| `educacion` (es) | **Teaching materials only.** 370 repos; JavaScript and Python course guides, a Moodle–SENCE attendance plugin, vocational course material, a Uruguayan school finder. No AI infrastructure, no curriculum data |
+| `ncert` + `cbse` (India) | **Hobby scale.** 180 repos; nothing above 15 ★ that is infrastructure; the one MCP server unlicensed and LLM-tagged; best data asset a **2018** scrape of ~20,000 schools |
+| `bildung` (de) | `argmin` (above) and `lernplattform` (GPL-3.0, **archived 2021-01-01**, superseded by "wir lernen online"). Plus **a 13-repository single-author cluster of near-identical pages at 1 ★ each** — topic pages can be padded |
+| `onderwijs` (nl) | **Rostering glue, no AI.** `sikkepitje/TeamSync` (9 ★, Magister → Microsoft School Data Sync) and two open course repos |
+| `oer` (en, control) | 419 repos of **textbooks and course material**; nothing on curriculum or competency metadata; no AI |
+
+**Adopt this as standing method.** Every regional gap this KB has declared was declared from
+English-language searches, and one Portuguese topic page produced a verified national curriculum, an
+MCP server, a published benchmark and a 34,948-commit SIS. **Record which languages were swept, so
+the next pass knows what was actually tested.** Untested: Arabic, Hindi, Japanese, Korean, French,
+Indonesian — and the `wirlernenonline` organisation page, which could not be read this pass.
+
+**Limits:** these were topic-page sweeps of roughly the first 20 repositories per topic, and GitHub
+topics are author-applied, so unlabelled repositories are invisible to the method. **"Not found in
+the topics swept" is the finding; "does not exist" is not.**
+
+
 ## 2026-10-19 — Pass 318 — the LATAM authorship gap closes in Bogotá, three comparison-article licences fail verification, and the pylti1.3 risk gets a mitigation map
 
 **Fourth pass of 2026-10-19.** Pass 317 closed by advising that the remaining declared gaps be
