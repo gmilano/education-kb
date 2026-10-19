@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 316 — tutor-mcp ships the deterministic-pedagogy engine, the skill overtakes the app, and three repos fail verification
+
+**Second pass of 2026-10-19.** Pass 315 read the existing tier first-hand this morning; this pass
+searched outward and found a layer the KB had not been looking at. Verification method unchanged:
+`curl -sI` to github.com still returns **403 at this session's proxy**, so every repo below was
+checked by loading its page and reading the licence label, star count and commit count GitHub
+renders.
+
+### 🆕 The find of the window
+
+- 🆕 **`ArnaudGuiovanna/tutor-mcp` — MIT, 52 ★, 467 commits.** An MCP server that turns any LLM into
+  an intelligent tutoring system: skill graph, **Bayesian Knowledge Tracing, FSRS spaced
+  repetition**, prerequisite rules, assessment evidence, and a narrative memory layer across
+  sessions. SQLite over stdio locally; PostgreSQL + HTTPS + OAuth in its institutional profile.
+  Its README states the principle as **"Generative teaching. Deterministic pedagogy."** — which is
+  the architecture this KB has argued for across three passes, now shipped by someone else.
+  **No LTI, SCORM or xAPI**; MCP only. `compose/patterns.md` P2 was rebuilt around it.
+
+### 🆕 New to the table
+
+- 🆕 **`iblai/os` — MIT, 821 ★, 3,518 commits.** Agent platform (Next.js → web/desktop/mobile).
+  **Open-core, and the README says so:** *"ibl.ai/os requires the ibl.ai backend platform for
+  authentication, AI agent APIs, and data services. The backend is not included in this
+  repository."* Vendor material describing ibl.ai as MIT is true of the client and not of the
+  product. Recorded so a client who has heard the claim can be corrected.
+- 🆕 **`ankimcp/anki-mcp-server` — MIT, 520 ★, 258 commits.** Anki exposed to any LLM client over
+  MCP. The cheapest route to a real spaced-repetition store behind an agent.
+- 🆕 **`Li-Evan/Bloom` — MIT, 289 ★, 76 commits.** Socratic adaptive tutor shipped as **both** a
+  portable agent-skill bundle and a self-hostable React/FastAPI app. The clearest worked example of
+  the dual delivery shape.
+- 🆕 **`zijinz456/OpenTutor` — MIT, 145 ★, 194 commits.** Local-first block-based adaptive
+  workspace, 10+ LLM providers. Added to `compose/patterns.md` P5 as the on-device tutor surface.
+- 🆕 **`GeminiLight/gen-mentor` — CC0-1.0, 135 ★, 91 commits.** LLM multi-agent framework for
+  goal-oriented learning in an ITS; **WWW '25 oral**, arXiv 2501.15749. Cite the architecture;
+  do not take the dependency.
+- 🆕 **`GarethManning/education-agent-skills` — CC BY-SA 4.0, 878 ★, 149 commits.** 165
+  evidence-grounded teaching skills. The sidebar does not name a licence; `LICENSE` reads
+  **Creative Commons Attribution-ShareAlike 4.0 International**. A *content* licence with
+  ShareAlike obligations on derivative teaching material — a live constraint on client
+  deliverables, and not a code licence.
+
+### 🔻 Dropped
+
+- 🔻 **`Ebimsv/AITutorAgent` — MIT, 15 ★, 4 commits. Removed from `agents/top.md`.** It held a row
+  in pass 315 as a "reference shape only" for the LangGraph tutorial → Q&A → evaluation loop.
+  `tutor-mcp` is the same shape with 467 commits and a running server. A 4-commit repo in a table
+  a client might read is risk with no remaining upside.
+
+### ⚠️ Failed verification — recorded so the next pass does not re-find them
+
+- ⚠️ **`luffycodes/Tutorbot-Spock` — NO LICENCE FILE.** 56 ★, 8 commits, and genuinely good work
+  behind it (CLASS, EMNLP 2023, arXiv 2305.13272; Pedagogical Alignment of LLMs, EMNLP 2024,
+  arXiv 2402.05000). With no licence, default copyright applies: **Globant cannot use it.** Read
+  the papers, not the repo.
+- ⚠️ **`artcc/freelingo` — AGPL-3.0, 188 ★, 1,168 commits.** A real, complete self-hosted AI
+  language-learning platform — but AGPL puts it on the copyleft side of this KB's line. Moved to
+  `verticals/solutions.md` as a platform rather than kept as an agent.
+
+### ➡️ Re-read this pass, unchanged
+
+- ➡️ **`HKUDS/DeepTutor` — Apache-2.0, 41.7k ★, 2,935 commits, v1.6.15 (2026-10-19).** Identical to
+  the morning's reading. **New fact:** the README cites a paper, **arXiv 2604.26962** — no pass had
+  recorded that.
+- ➡️ **`HKUDS/LightRAG` — MIT, 40.2k ★, 10,873 commits.** Unchanged.
+- ➡️ **`learningequality/kolibri` — MIT, 1.2k ★, 39,803 commits on `develop`.** Unchanged.
+
+### The pattern underneath this window: the skill is overtaking the app
+
+Sorting GitHub's `ai-tutor` topic by stars returns, below DeepTutor, a tier that is mostly **agent
+skills rather than applications**: `Miaotofu01/Study-Mate` (1.1k ★), `24kchengYe/human-skill-tree`
+(572 ★), `ZeKaiNie/universal-examprep-skill` (309 ★),
+`SenmuuuuW/universal-diagnostic-tutor-skill` (247 ★), `KeWang0622/kaogong-skill` (189 ★),
+`flysheep-ai/education-skills` (116 ★), `SimonsTang/feifei-companion` (108 ★). Bloom ships both.
+
+Two things follow. The distribution unit for educational AI is shrinking below procurement's line
+of sight — faculty install a skill bundle and the institution has an AI tutor nobody bought.
+And skill bundles carry **content licences** (`education-agent-skills` is CC BY-SA 4.0), which is a
+licence conversation this sector has not started having.
+
+**Region note, and it finally cuts the other way:** several of those high-star skill repos are
+Chinese-language (`Study-Mate`, `kaogong-skill`, `feifei-companion`, `education-skills`). Every
+previous pass declared "no APAC-authored agent found". That was an artefact of searching in
+English for applications. **APAC authorship in this sector is real and it is concentrated at the
+skill layer.** Still nothing EMEA- or LATAM-authored at the agent tier — searched again, not found.
+
+
 ## 2026-10-19 — Pass 315 — DeepTutor ships v1.6.15 the same day, and two star counts this KB was carrying turn out to be wrong
 
 **What moved, verified first-hand this pass.**

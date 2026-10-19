@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 316 — Ed-Fi closes a three-pass gap, Canvas finally verified, and the star-ranked search is exposed as the reason both were missed
+
+**Second pass of 2026-10-19.** Verification unchanged: `curl -sI` to github.com returns **403 at
+this session's proxy**, so each repo below was read off its GitHub page (licence label, star count,
+commit count).
+
+### Repos verified first-hand this window
+
+| Repo | Licence | ★ | Commits | Movement / note |
+|---|---|---|---|---|
+| https://github.com/instructure/canvas-lms | AGPL-3.0 | 6.9k | 78,765 | 🆕 **verified at last.** Pass 315 deliberately left Canvas out rather than carry it on trust; it is now in `verticals/solutions.md` |
+| https://github.com/francoisjacquet/rosariosis | GPL-2.0 | 647 | 8,034 | 🆕 K-12 SIS (PHP + PostgreSQL/MySQL). **GPL-2.0** — the only v2 licence in this KB, and not GPL-3.0-compatible in one direction |
+| https://github.com/frappe/education | GPL-3.0 | 669 | 1,095 | 🆕 School management on the Frappe/ERPNext framework. **Sidebar names no licence**; `license.txt` reads "License: GNU GPL V3". Scope from the file, not the page |
+| https://github.com/Selleo/mentingo | MIT | 96 | 1,348 | 🆕 **MIT AI-native LMS** — the first counter-example to this KB's permissive-agents/copyleft-platforms thesis |
+| https://github.com/artcc/freelingo | AGPL-3.0 | 188 | 1,168 | 🆕 self-hosted AI language-learning platform: CEFR plans, AI tutor, voice, FSRS, local or cloud LLMs |
+| https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service | Apache-2.0 | 12 | 1,105 | 🆕 **closes a three-pass declared gap** — the Ed-Fi API platform, successor to the ODS/API platform. No GitHub releases: pin to a commit |
+| https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster | Apache-2.0 | 6 | 151 | 🆕 serves a **OneRoster 1.2** API from an Ed-Fi ODS. No releases either |
+| https://github.com/HKUDS/LightRAG | MIT | 40.2k | 10,873 | ➡️ unchanged from this morning |
+| https://github.com/learningequality/kolibri | MIT | 1.2k | 39,803 | ➡️ unchanged; `develop` branch |
+| https://github.com/HKUDS/DeepTutor | Apache-2.0 | 41.7k | 2,935 | ➡️ unchanged; v1.6.15 (2026-10-19). New fact: README cites **arXiv 2604.26962** |
+
+### The methodological finding, which matters more than any single row
+
+Passes 313, 314 and 315 all recorded the same declared gap: *"no open source OneRoster / Ed-Fi
+reference implementation found at a usable maturity"*, and concluded SIS sync is vendor-specific
+integration work in every engagement. **That conclusion was wrong.** The Ed-Fi Alliance publishes
+its platform as **Apache-2.0** under `Ed-Fi-Alliance-OSS`, with 1,105 commits on the
+Data-Management-Service and a working OneRoster 1.2 server beside it.
+
+**It was missed because it has 12 stars.**
+
+This KB's search strategy has been star-ranked, and standards-body infrastructure does not
+accumulate stars — it is adopted through state education agencies and SIS vendors. Sunbird (41 ★,
+the stack behind India's national digital education infrastructure) is the same phenomenon and was
+nearly missed the same way. **A star-ranked search systematically cannot see public-sector
+education infrastructure, which is the segment of this sector with budget.** Recording it here so
+later passes search by standard, consortium and government programme, not only by stars.
+
+Same lesson in a smaller key: **`frappe/education` shows no licence in its GitHub sidebar.** Anyone
+scoping from the repo page records it as unlicensed. It is GPL-3.0, stated in `license.txt`.
+
+### The structural reading this window
+
+Agent tier (`agents/top.md`): **13 of 15 permissive**. Platform tier (`verticals/solutions.md`):
+**10 of 15 copyleft** — GPL-2.0, GPL-3.0, LGPL-3.0, AGPL-3.0 — against four MIT (Kolibri, Richie,
+mentingo, Sunbird) and one ECL-2.0 (Sakai). The sector's shape is unchanged and the architectural
+consequence is unchanged: permissive agents, copyleft platform, a network boundary between them.
+
+**The one crack is `Selleo/mentingo`** — MIT, AI-native, 1,348 commits. At 96 ★ against Canvas's
+6.9k it changes no engagement today. It is the first MIT LMS in this KB that an agent could be
+linked straight into, and it is worth watching.
+
+### Not found this window, searched for explicitly
+
+- **No open source academic-integrity or AI-detection project at usable maturity.** What GitHub has
+  is student-project proctoring (YOLO/OpenCV/MTCNN, Electron kiosk browsers), much of it stale or
+  unlicensed, plus MOSS-style code-plagiarism detectors. Fourth consecutive pass; see trend 9 in
+  `intel/trends.md` for why this one should stay a gap.
+- **No EMEA- or APAC-equivalent of Ed-Fi.** Ed-Fi is a North American standard in practice. Outside
+  North America, rostering is still bespoke.
+- **No MENA- or Africa-originated open source education platform**, despite this pass finding the
+  region's clearest named players yet (Alef Education, Classera, Abwaab, EIDU, FlexiSAF). **All
+  proprietary.** In MEA the open source story is deployment of global platforms; the AI layer is
+  commercial.
+
+
 ## 2026-10-19 — Pass 315 — the platform tier read first-hand: a renamed Open edX, an ECL-2.0 outlier, and the MIT/copyleft split confirmed at 9-vs-6
 
 **Repos verified first-hand this window** (licence label and star count read off the GitHub
