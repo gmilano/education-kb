@@ -86,6 +86,15 @@ HISTORY = [
     ("CC-BY-SA-4.0", "p309", 0), ("proprietary", "p310", 0),
     ("CC-BY-4.0", "p310", 1), ("CC0-1.0", "p310", 1),
     ("CC-BY-NC-4.0", "p310", 1), ("PolyForm-Noncommercial-1.0.0", "p310", 1),
+    # 🟢 p312 pinned a `BSD-2-Clause` payload — `TUBAF-IFI-DiPiT/github2pandas`,
+    # whose title line reads `BSD 2-Clause License` and which `p310` had shelved
+    # as a bare `BSD`, a spelling the family grammar had no bucket for at all.
+    # 🔴 `0` defects, but the weakest family measured: of 9 classifiers only
+    # **2 answer exactly**, 2 are coarse and **4 abstain**. 🔵 An abstention is a
+    # reported risk rather than a realised one (`P250`), so it is not counted as
+    # a defect here — and the count is why this row matters to the flatness
+    # reading below rather than to the defect rate.
+    ("BSD-2-Clause", "p312", 0),
 ]
 
 

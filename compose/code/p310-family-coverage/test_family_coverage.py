@@ -242,6 +242,17 @@ check("coverage: the uncovered remainder is DERIVED, non-empty, and disjoint "
 check("coverage: at least two published families still have no payload",
       len(set(counts) - set(corpus)) >= 2, True)
 
+# 🟢 p312: and the positive side of the same fact, pinned in the direction that
+# can only become MORE true.  The corpus map only ever grows, so a control
+# asserting a family IS covered cannot be turned red by discharging a later
+# action — which is precisely what made the deleted `"MIT" not in corpus`
+# dangerous and makes this safe.  `ACTION p310-R` item 1 was discharged twice
+# over, independently: `p311-permissive-family-arm` and
+# `p312-template-identity` both pin MIT and Apache-2.0 payloads.
+check("coverage: MIT and Apache-2.0 hold a pinned payload — `ACTION p310-R` "
+      "item 1, discharged",
+      "MIT" in corpus and "Apache-2.0" in corpus, True)
+
 # ------------------------------------------------------------------- report
 for line in passed:
     print("  🟢 %s" % line)

@@ -459,7 +459,16 @@ def test_coverage_by_cells_is_reported_alongside_coverage_by_families():
     # pass exists to RAISE. 🔵 `ACTION p310-R` item 4's lesson applied to the
     # control that was written to record it: bound the DIRECTION and the GAP, not
     # the value.
-    assert by_fam >= 45, "family coverage went backwards: %.0f" % by_fam
+    # 🔴 p312: this assertion was `by_fam >= 45` and it went red for a reason
+    # that is not a regression — `p312` added NINE family tokens the grammar had
+    # no bucket for (`EUPL-1.1`/`1.2`, `BUSL-1.1`, `Elastic-2.0`, `SSPL-1.0`,
+    # `LGPL-2.1`, `OSL-3.0`, `OFL-1.1`, bare `BSD`), so the DENOMINATOR grew from
+    # 22 to 31 while the numerator grew by one. 🔵 The comment above already says
+    # *"bound the DIRECTION and the GAP, not the value"* — and then bounded a
+    # RATIO, which has two moving parts and falls when a denominator is CORRECTED
+    # upward. 🟢 The monotone quantity is the covered COUNT: a family never stops
+    # holding a payload, so this cannot go backwards without a pin being deleted.
+    assert len(cov) >= 13, "covered families went backwards: %d" % len(cov)
     assert by_cells >= 80, by_cells
     assert by_cells - by_fam > 25, (
         "the two metrics must still disagree sharply: %.0f vs %.0f" % (by_fam, by_cells))

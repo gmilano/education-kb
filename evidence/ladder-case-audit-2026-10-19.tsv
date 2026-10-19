@@ -1,47 +1,111 @@
 instrument	family	verdict	upper_ext	standing	spellings
+compose/code/aiact-50-2-pack/pack_marking.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
 compose/code/dependency-licence-closure/dep_licence.py	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENSE license
+compose/code/dependency-licence-closure/dep_licence.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/description-drift-audit/audit_drift.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/fork-lineage-audit/audit_lineage.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/gitlab-api-channel/gitlab_channel.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE licence license
+compose/code/gitlab-api-channel/gitlab_channel.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
+compose/code/grading-draft-gate/gate.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/grant-ladder/grant_ladder.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.txt
 compose/code/grant-ladder/grant_ladder.sh	licence	CASE-UNVARIED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.MIT LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/grant-ladder-v2/ladder.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/grant-ladder-v2/ladder.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/grant-ladder-v2/ladder.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/grant-ladder-v3/ladder.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.md COPYING.txt
 compose/code/grant-ladder-v3/ladder.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.markdown LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/grant-ladder-v3/ladder.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/grant-ladder-v3/ladder.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/grant-ladder-v4/ladder.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.md COPYING.txt
 compose/code/grant-ladder-v4/ladder.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.markdown LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/grant-ladder-v4/ladder.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/grant-ladder-v4/ladder.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
+compose/code/lib/dist_payload.sh	copying	SINGLE-SPELLING	no-upper-ext	STANDING	copying
 compose/code/lib/dist_payload.sh	licence	SINGLE-SPELLING	no-upper-ext	STANDING	LICENSE license
+compose/code/lib/dist_payload.sh	notice	STEM-ONLY	no-upper-ext	STANDING	NOTICE notice
+compose/code/lib/licence_identity.py	copying	FOLD-ON-PATH	no-upper-ext	STANDING	COPYING
 compose/code/lib/licence_identity.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENSE
+compose/code/lib/licence_identity.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README.md
 compose/code/lib/licence_path.sh	licence	COMMENT-ONLY	UPPER-EXT	STANDING	LICENSE LICENSE.TXT license
+compose/code/lib/license_family.sh	copying	COMMENT-ONLY	no-upper-ext	STANDING	COPYING
 compose/code/lib/license_family.sh	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENSE LICENSE.md LICENSE.txt
+compose/code/lib/license_family.sh	readme	COMMENT-ONLY	no-upper-ext	STANDING	README README.md
+compose/code/lib/payload_measure.sh	readme	COMMENT-ONLY	no-upper-ext	STANDING	README.md
+compose/code/lib/probe_payload.sh	copying	CASE-CLOSED	UPPER-EXT	STANDING	COPYING COPYING.TXT COPYING.txt
 compose/code/lib/probe_payload.sh	licence	CASE-UNVARIED	no-upper-ext	STANDING	LICENCE LICENSE LICENSE.md LICENSE.txt
+compose/code/lib/probe_payload.sh	readme	FOLD-ON-PATH	no-upper-ext	STANDING	README README.md
+compose/code/licence-grant-gate/grant_gate.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt
 compose/code/licence-grant-gate/grant_gate.py	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.TXT LICENSE.md LICENSE.rst LICENSE.txt License.md License.txt license
+compose/code/licence-grant-gate/grant_gate.py	readme	CASE-UNVARIED	no-upper-ext	HISTORICAL	README README.md README.rst README.txt
+compose/code/market-triple-check/scope_enum.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
 compose/code/market-triple-check/scope_enum.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	license
+compose/code/mcp-allowlist-gateway/gateway.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
+compose/code/mcp-allowlist-gateway/policy.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
+compose/code/npm-surface-probe/probe.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
 compose/code/npm-surface-probe/probe.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE license
 compose/code/p1029-lost-address-recovery/classify.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p1029-lost-address-recovery/probe.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p1029-lost-address-recovery/probe.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p1029-lost-address-recovery/probe.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
 compose/code/p1035-regrant-holder-ecl/classify.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p1035-regrant-holder-ecl/ecl.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p1035-regrant-holder-ecl/holder.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENSE LICENSE.md LICENSE.txt
+compose/code/p1035-regrant-holder-ecl/holder.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p1035-regrant-holder-ecl/holder.sh	readme	FOLD-ON-PATH	UPPER-EXT	HISTORICAL	README README.MD README.md
+compose/code/p1035-regrant-holder-ecl/regrant.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p1035-regrant-holder-ecl/regrant.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p1035-regrant-holder-ecl/regrant.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
 compose/code/p1040-ecl-corpus-census/calibrate.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	licence
+compose/code/p1040-ecl-corpus-census/census.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p1040-ecl-corpus-census/census.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p1040-ecl-corpus-census/census.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README README.md
 compose/code/p1040-ecl-corpus-census/classify.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENCE LICENSE
+compose/code/p1040-ecl-corpus-census/holder.sh	copying	SINGLE-SPELLING	no-upper-ext	HISTORICAL	COPYING
 compose/code/p1040-ecl-corpus-census/holder.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENSE LICENSE.md
+compose/code/p1040-ecl-corpus-census/holder.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p1040-ecl-corpus-census/holder.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README README.md
 compose/code/p1040-ecl-corpus-census/manifest.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE license
 compose/code/p1040-ecl-corpus-census/packagist.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE license
 compose/code/p1040-ecl-corpus-census/retry.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE license
 compose/code/p1040-ecl-corpus-census/tally.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	licence
+compose/code/p1049-bare-token-grant/bare_token_grant.py	copying	COMMENT-ONLY	no-upper-ext	HISTORICAL	COPYING
 compose/code/p1049-bare-token-grant/bare_token_grant.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p1049-bare-token-grant/bare_token_grant.py	readme	FOLD-ON-PATH	UPPER-EXT	HISTORICAL	README README.MD README.md README.rst README.txt readme readme.md
+compose/code/p1049-bare-token-grant/whole_readme_scan.py	readme	CASE-CLOSED	UPPER-EXT	HISTORICAL	README README.MD README.md README.rst README.txt README.zh readme.md
+compose/code/p1052-stale-absence/stale_absence.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p1052-stale-absence/stale_absence.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt License License.md licence license license.md
 compose/code/p1054-mit-plus-clause/mit_plus.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE LICENSE.md
+compose/code/p1054-mit-plus-clause/mit_plus.py	notice	COMMENT-ONLY	no-upper-ext	STANDING	NOTICE
 compose/code/p1056-split-scope-licence/split_scope.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p1056-split-scope-licence/split_scope.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p1057-licence-path-case/path_case.py	copying	GENERATED-CASE-VARIED	no-upper-ext	HISTORICAL	COPYING copying
 compose/code/p1057-licence-path-case/path_case.py	licence	GENERATED-CASE-VARIED	UPPER-EXT	HISTORICAL	LICENSE LICENSE.TXT LICENSE.md LICENSE.txt licence license
+compose/code/p1057-licence-path-case/path_case.py	notice	GENERATED-CASE-VARIED	no-upper-ext	HISTORICAL	NOTICE notice
 compose/code/p1058-empty-payload-gate/empty_payload_gate.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
+compose/code/p1058-empty-payload-gate/empty_payload_gate.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
+compose/code/p113-provider-binding/bind.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p114-license-column/scan_altnames.SUPERSEDED-2026-10-03.sh	copying	CASE-UNVARIED	no-upper-ext	SUPERSEDED	COPYING.md COPYING.txt
 compose/code/p114-license-column/scan_altnames.SUPERSEDED-2026-10-03.sh	licence	STEM-ONLY	no-upper-ext	SUPERSEDED	LICENCE LICENCE.md LICENSE LICENSE.rst License License.md license license.md
+compose/code/p114-license-column/scan_altnames.SUPERSEDED-2026-10-03.sh	notice	SINGLE-SPELLING	no-upper-ext	SUPERSEDED	NOTICE
+compose/code/p114-license-column/scan_license.SUPERSEDED-2026-10-03.sh	copying	SINGLE-SPELLING	no-upper-ext	SUPERSEDED	COPYING
 compose/code/p114-license-column/scan_license.SUPERSEDED-2026-10-03.sh	licence	CASE-UNVARIED	no-upper-ext	SUPERSEDED	LICENSE LICENSE.md LICENSE.txt
+compose/code/p114-license-column/scan_license.SUPERSEDED-2026-10-03.sh	readme	CASE-UNVARIED	no-upper-ext	SUPERSEDED	README.md README.rst
+compose/code/p115-region-evidence/controls.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	readme
+compose/code/p115-region-evidence/crosstab.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README
+compose/code/p115-region-evidence/emit_placements.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p115-region-evidence/region.sh	readme	TREE-ENUMERATED	no-upper-ext	HISTORICAL	README readme
+compose/code/p117-second-channel/fetch.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p117-second-channel/licence.sh	copying	SINGLE-SPELLING	no-upper-ext	HISTORICAL	COPYING
 compose/code/p117-second-channel/licence.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENSE LICENSE.md LICENSE.txt
+compose/code/p117-second-channel/title.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p117-second-channel/title.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENSE LICENSE.md LICENSE.txt
 compose/code/p118-licence-column-sweep/classify2.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENCE LICENSE
 compose/code/p118-licence-column-sweep/classify2.v1.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p118-licence-column-sweep/extract.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENCE
 compose/code/p118-licence-column-sweep/extract.v1.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENCE
+compose/code/p118-licence-column-sweep/measure.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p118-licence-column-sweep/measure.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.txt LICENSE LICENSE.md LICENSE.txt
+compose/code/p118-licence-column-sweep/measure2.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p118-licence-column-sweep/measure2.sh	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENCE.txt LICENSE LICENSE.md LICENSE.txt license.txt
 compose/code/p118-licence-column-sweep/verdict.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENCE
 compose/code/p118-licence-column-sweep/verdict2.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENCE
@@ -52,234 +116,534 @@ compose/code/p119-carried-column-audit/verdict-h.sh	licence	SINGLE-SPELLING	no-u
 compose/code/p120-unread-grant-resolution/classify3.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENCE LICENSE
 compose/code/p120-unread-grant-resolution/depth.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENCE
 compose/code/p120-unread-grant-resolution/extract-k.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENCE
+compose/code/p120-unread-grant-resolution/probe.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p120-unread-grant-resolution/probe.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p120-unread-grant-resolution/probe.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p120-unread-grant-resolution/probe.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
 compose/code/p120-unread-grant-resolution/probe2.sh	licence	CASE-UNVARIED	UPPER-EXT	HISTORICAL	LICENSE LICENSE.TXT LICENSE.md
+compose/code/p120-unread-grant-resolution/probe2.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p120-unread-grant-resolution/repair.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p120-unread-grant-resolution/resolve.sh	copying	SINGLE-SPELLING	no-upper-ext	HISTORICAL	COPYING
 compose/code/p120-unread-grant-resolution/resolve.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.txt
+compose/code/p120-unread-grant-resolution/resolve.sh	readme	FOLD-ON-PATH	no-upper-ext	HISTORICAL	README README.md
+compose/code/p120-unread-grant-resolution/score.py	copying	COMMENT-ONLY	no-upper-ext	HISTORICAL	COPYING
 compose/code/p120-unread-grant-resolution/score.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p120-unread-grant-resolution/score_after.py	copying	COMMENT-ONLY	no-upper-ext	HISTORICAL	COPYING
 compose/code/p120-unread-grant-resolution/score_after.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p121-stale-token-crosspage/manifest_q.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE licence license
+compose/code/p121-stale-token-crosspage/probe-n.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p121-stale-token-crosspage/probe-n.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p121-stale-token-crosspage/probe-n.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p121-stale-token-crosspage/probe-n.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README README.md
+compose/code/p121-stale-token-crosspage/probe.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p121-stale-token-crosspage/probe.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p122-prose-licence-census/check_consistency.py	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.md readme
 compose/code/p122-prose-licence-census/classify_licence.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p122-prose-licence-census/extract_claims.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p122-prose-licence-census/scan_licences.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p122-prose-licence-census/scan_licences.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p123-grant-set-calibration/calibrate.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p123-grant-set-calibration/calibrate.py	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt license.txt
 compose/code/p123-grant-set-calibration/classify_licence.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p123-grant-set-calibration/extract_claims.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p123-grant-set-calibration/grant_set.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.txt
 compose/code/p123-grant-set-calibration/grant_set.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.md LICENSE.rst LICENSE.txt
 compose/code/p123-grant-set-calibration/join_grant_set.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p124-correction-form-marker/cc_version.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p124-correction-form-marker/classify_licence.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p124-correction-form-marker/correction_form.py	copying	COMMENT-ONLY	no-upper-ext	HISTORICAL	COPYING.txt
 compose/code/p124-correction-form-marker/correction_form.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENCE
+compose/code/p124-correction-form-marker/grant_set.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.txt
 compose/code/p124-correction-form-marker/grant_set.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.md LICENSE.rst LICENSE.txt
 compose/code/p124-correction-form-marker/repair_search.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENCE
 compose/code/p124-correction-form-marker/split_shape.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENSE LICENSE.txt
 compose/code/p125-retraction-cue/correction_form.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENCE
+compose/code/p125-retraction-cue/false_permissive.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p125-retraction-cue/false_permissive.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.md LICENSE.rst LICENSE.txt
 compose/code/p125-retraction-cue/mark_forms.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENCE
 compose/code/p125-retraction-cue/permissiveness.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p125-retraction-cue/scope_gate.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENCE
+compose/code/p126-address-binding/probe_paths.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.txt
 compose/code/p126-address-binding/probe_paths.sh	licence	CASE-UNVARIED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.APACHE LICENSE.BSD LICENSE.GPL LICENSE.LGPL LICENSE.MPL LICENSE.md LICENSE.txt
+compose/code/p126-address-binding/probe_paths.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.txt
+compose/code/p129-transcription-audit/bind_tags.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
 compose/code/p129-transcription-audit/holder.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p129-transcription-audit/holder.py	notice	COMMENT-ONLY	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p129-transcription-audit/repair_tags.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p135-licence-sha-identity/fetch_licences.sh	copying	SINGLE-SPELLING	no-upper-ext	HISTORICAL	COPYING
 compose/code/p135-licence-sha-identity/fetch_licences.sh	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.txt license
+compose/code/p135-licence-sha-identity/licence_sha.py	copying	COMMENT-ONLY	no-upper-ext	HISTORICAL	COPYING
 compose/code/p135-licence-sha-identity/licence_sha.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p136-lineage-verdict/lineage.py	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER
 compose/code/p136-lineage-verdict/lineage.py	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.txt license
+compose/code/p136-lineage-verdict/lineage.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README
+compose/code/p137-foreign-holder-tree/foreign_holder.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
 compose/code/p137-foreign-holder-tree/foreign_holder.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p137-foreign-holder-tree/foreign_holder.py	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	notice
+compose/code/p137-foreign-holder-tree/probe.sh	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	copying
+compose/code/p137-foreign-holder-tree/probe.sh	notice	TREE-ENUMERATED	no-upper-ext	HISTORICAL	notice
+compose/code/p138-npm-payload-licence/scan_npm_payload.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
 compose/code/p138-npm-payload-licence/scan_npm_payload.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	license
+compose/code/p138-npm-payload-licence/scan_npm_payload.sh	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	notice
 compose/code/p139-pypi-maven-payload/pom_license.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	license
+compose/code/p139-pypi-maven-payload/scan_maven_payload.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
 compose/code/p139-pypi-maven-payload/scan_maven_payload.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE LICENSE.txt
+compose/code/p139-pypi-maven-payload/scan_maven_payload.sh	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	notice
+compose/code/p139-pypi-maven-payload/scan_pypi_payload.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
 compose/code/p139-pypi-maven-payload/scan_pypi_payload.sh	licence	STEM-ONLY	no-upper-ext	HISTORICAL	License license
+compose/code/p139-pypi-maven-payload/scan_pypi_payload.sh	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	notice
 compose/code/p139-source-header-grant/headers.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	license
+compose/code/p139-source-header-grant/scan_headers.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
 compose/code/p139-source-header-grant/scan_headers.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	license
+compose/code/p139-source-header-grant/scan_headers.sh	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	notice
+compose/code/p139-source-header-holder/header_holder.py	notice	TREE-ENUMERATED	no-upper-ext	HISTORICAL	notice
+compose/code/p139-source-header-holder/scan_headers.py	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	copying
+compose/code/p139-source-header-holder/scan_headers.py	notice	TREE-ENUMERATED	no-upper-ext	HISTORICAL	notice
+compose/code/p139-tool-count-drift/count_tools.py	readme	CASE-CLOSED	UPPER-EXT	HISTORICAL	README README.MD README.md Readme.md readme readme.md
+compose/code/p140-agent-tier-pii/agent_tier.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p140-origin-evidence/origin_evidence.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p140-rootonly-header-reach/rootonly_reach.py	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	COPYING
 compose/code/p140-rootonly-header-reach/rootonly_reach.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENCE LICENSE
+compose/code/p140-rootonly-header-reach/rootonly_reach.py	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	NOTICE notice
+compose/code/p141-package-grant-layer/grant_layer.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
+compose/code/p141-package-grant-layer/grant_layer.py	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p142-dead-repo-recovery/recover.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p145-licence-census/licence_census.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
 compose/code/p145-licence-census/licence_census.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE licence license
+compose/code/p145-licence-census/licence_census.py	readme	FOLD-ON-PATH	no-upper-ext	HISTORICAL	README readme
+compose/code/p147-licence-language/licence_language.py	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	COPYING
 compose/code/p147-licence-language/licence_language.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE licence license
+compose/code/p147-licence-language/licence_language.py	readme	TREE-ENUMERATED	no-upper-ext	HISTORICAL	README readme
+compose/code/p147-npm-region/npm_region.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p149-common-title-licence/common_title.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	licence
+compose/code/p149-common-title-licence/common_title.py	readme	FOLD-ON-PATH	no-upper-ext	HISTORICAL	README README.md readme
+compose/code/p150-gpl-affero-discrimination/gpl_affero.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
 compose/code/p150-gpl-affero-discrimination/gpl_affero.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p150-grant-ladder-order/ladder_order.py	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	COPYING
 compose/code/p150-grant-ladder-order/ladder_order.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE licence license
+compose/code/p150-grant-ladder-order/ladder_order.py	readme	TREE-ENUMERATED	no-upper-ext	HISTORICAL	README readme
 compose/code/p150-grant-ladder-order/run_ladder_order.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	licence
+compose/code/p151-election-surface/election.py	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	COPYING
 compose/code/p151-election-surface/election.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE License
 compose/code/p151-gnu-population-reach/population.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p151-identifier-spaces/identifier_spaces.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README README.md
+compose/code/p152-vertical-election/election_verticals.py	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	COPYING
 compose/code/p152-vertical-election/election_verticals.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p152-vertical-election/election_verticals.py	notice	COMMENT-ONLY	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p153-declaration-surfaces/surfaces.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt
 compose/code/p153-declaration-surfaces/surfaces.py	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.md LICENSE.txt licence license
+compose/code/p153-declaration-surfaces/surfaces.py	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.md README.rst README.txt readme.md
+compose/code/p170-headref-license-sweep/sweep_headref.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p170-headref-license-sweep/sweep_headref.sh	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt license license.md license.txt
+compose/code/p170-headref-license-sweep/sweep_headref.sh	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.markdown README.md README.rst readme.md
+compose/code/p170-newest-block-gate/check_action_labels.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
+compose/code/p171-inner-grant-classify/classify.py	copying	COMMENT-ONLY	no-upper-ext	HISTORICAL	COPYING.txt
 compose/code/p171-inner-grant-classify/classify.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p172-manifest-attribution/detect_nonopen.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p172-payload-license-sweep/sweep_payload.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	license
+compose/code/p172-payload-license-sweep/sweep_payload.sh	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.markdown README.md README.rst readme.md
 compose/code/p174-clone-path-gate/fixtures/scratch_tmp_only.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p176-grant-path-vocabulary/grant_paths.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt
 compose/code/p176-grant-path-vocabulary/grant_paths.py	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.md LICENSE.txt License License.md license license.md
+compose/code/p176-grant-path-vocabulary/grant_paths.py	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p176-grant-path-vocabulary/probe_spellings.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt
 compose/code/p176-grant-path-vocabulary/probe_spellings.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.md LICENSE.txt
+compose/code/p176-grant-path-vocabulary/probe_spellings.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p176-grant-path-vocabulary/probe_spellings.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p176-suite-exit-sweep/suite_sweep.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p178-byte-channel-census/two_channels.sh	copying	SINGLE-SPELLING	no-upper-ext	HISTORICAL	COPYING
 compose/code/p178-byte-channel-census/two_channels.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.md LICENSE.txt
+compose/code/p178-byte-channel-census/two_channels.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p181-identity-census/identity_probe.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p181-identity-census/identity_probe.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENSE LICENSE.md LICENSE.txt
+compose/code/p183-nongithub-denominator/npm-first.NEGATIVE-CONTROL-2026-10-03.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
 compose/code/p183-nongithub-denominator/npm-first.NEGATIVE-CONTROL-2026-10-03.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE License license
+compose/code/p183-nongithub-denominator/npm-first.NEGATIVE-CONTROL-2026-10-03.sh	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	notice
+compose/code/p183-nongithub-denominator/sweep_registry.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
 compose/code/p183-nongithub-denominator/sweep_registry.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE License license
+compose/code/p183-nongithub-denominator/sweep_registry.sh	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	notice
+compose/code/p184-holder-mismatch/extract_holder.py	copying	COMMENT-ONLY	no-upper-ext	HISTORICAL	COPYING
 compose/code/p184-holder-mismatch/extract_holder.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE LICENSE.md
+compose/code/p184-holder-mismatch/extract_holder.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p184-holder-mismatch/unscoped.NEGATIVE-CONTROL-2026-10-03.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE.md
+compose/code/p184-holder-mismatch/unscoped.NEGATIVE-CONTROL-2026-10-03.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p190-affect-inference-scan/affect_scan.py	licence	COMMENT-ONLY	UPPER-EXT	HISTORICAL	LICENSE LICENSE.TXT
+compose/code/p190-holder-package-layer/sweep_pkg_holder.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
 compose/code/p190-holder-package-layer/sweep_pkg_holder.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p191-chamilo-agent-surface/surface.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p191-licence-case-full-depth/column_full_depth.py	licence	COMMENT-ONLY	UPPER-EXT	HISTORICAL	LICENSE LICENSE.GPL LICENSE.MPL LICENSE.code
+compose/code/p191-licence-case-full-depth/column_full_depth.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p191-licence-case-full-depth/published_rows.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
 compose/code/p191-spec-license-sweep/classify_spec.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p191-spec-license-sweep/sweep_spec.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p191-spec-license-sweep/sweep_spec.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p195-shelf-licence-census/continue_ladder.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p195-shelf-licence-census/continue_ladder.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p195-shelf-licence-census/continue_ladder.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
 compose/code/p195-shelf-licence-census/delivery_verdict.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE.md
+compose/code/p195-shelf-licence-census/shelf_licence_census.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p195-shelf-licence-census/shelf_licence_census.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p195-shelf-licence-census/shelf_licence_census.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p195-shelf-licence-census/shelf_licence_census.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
+compose/code/p196-none-tree-reach/tree_reach.sh	copying	COMMENT-ONLY	no-upper-ext	HISTORICAL	COPYING.txt
 compose/code/p196-none-tree-reach/tree_reach.sh	licence	COMMENT-ONLY	UPPER-EXT	HISTORICAL	LICENSE LICENSE.TXT license
+compose/code/p197-census-vs-pages/compare.py	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README Readme readme
 compose/code/p197-grant-read/read_grants.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p197-grant-read/read_headers.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p197-grant-read/read_headers.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p198-identity-sweep/holder_of.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
 compose/code/p198-identity-sweep/holder_of.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p198-identity-sweep/holder_of.sh	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	notice
+compose/code/p198-identity-sweep/resolve_repo.sh	copying	SINGLE-SPELLING	no-upper-ext	HISTORICAL	COPYING
 compose/code/p198-identity-sweep/resolve_repo.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENSE LICENSE.md LICENSE.txt
+compose/code/p198-identity-sweep/resolve_repo.sh	readme	CASE-UNVARIED	no-upper-ext	HISTORICAL	README README.md README.rst README.txt
+compose/code/p198-identity-sweep/sweep_identity.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
 compose/code/p198-identity-sweep/sweep_identity.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p198-identity-sweep/sweep_identity.sh	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	notice
+compose/code/p198-identity-sweep/sweep_identity.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
+compose/code/p198-root-licence-sweep/probe_root.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt
 compose/code/p198-root-licence-sweep/probe_root.sh	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.GPL LICENSE.TXT LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p198-root-licence-sweep/probe_root.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
 compose/code/p199-perfile-license/perfile.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p201-licence-channel/probe_licence_blob.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.txt
 compose/code/p201-licence-channel/probe_licence_blob.sh	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.txt LICENSE LICENSE.TXT LICENSE.md LICENSE.txt
 compose/code/p203-grant-blob-reader/classify.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE.md
+compose/code/p203-grant-blob-reader/read_grant.sh	copying	SINGLE-SPELLING	no-upper-ext	HISTORICAL	COPYING
 compose/code/p203-grant-blob-reader/read_grant.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.txt
+compose/code/p204-writesurface-axis/sweep_payload_license.UNGATED-SUPERSEDED-2026-10-04.sh	copying	SINGLE-SPELLING	no-upper-ext	SUPERSEDED	COPYING
 compose/code/p204-writesurface-axis/sweep_payload_license.UNGATED-SUPERSEDED-2026-10-04.sh	licence	CASE-UNVARIED	no-upper-ext	SUPERSEDED	LICENCE LICENSE LICENSE.md LICENSE.txt
+compose/code/p204-writesurface-axis/sweep_payload_license.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p204-writesurface-axis/sweep_payload_license.sh	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENSE LICENSE.md LICENSE.txt license license.md license.txt
+compose/code/p204-writesurface-axis/sweep_payload_license.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p206-classifier-language-shape/classify.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p206-classifier-language-shape/classify.sh	notice	COMMENT-ONLY	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p206-classifier-language-shape/classify.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
 compose/code/p206-erp-layer-license/sweep_erp.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p206-erp-layer-license/sweep_erp.sh	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.markdown README.md README.rst readme.md
 compose/code/p207-permissive-half-audit/classify.sh	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
+compose/code/p207-permissive-half-audit/classify.sh	notice	COMMENT-ONLY	no-upper-ext	STANDING	NOTICE
+compose/code/p207-permissive-half-audit/classify.sh	readme	COMMENT-ONLY	no-upper-ext	STANDING	README.md
+compose/code/p207-permissive-half-audit/locate.sh	copying	GENERATED-CASE-VARIED	no-upper-ext	STANDING	COPYING Copying copying
 compose/code/p207-permissive-half-audit/locate.sh	licence	GENERATED-CASE-VARIED	UPPER-EXT	STANDING	LICENCE LICENSE LICENSE.TXT LICENSE.md LICENSE.txt Licence License licence license
+compose/code/p208-seeded-error-audit/audit_percell.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
+compose/code/p208-seeded-error-audit/audit_persite.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
+compose/code/p211-case-retro-sweep/sweep_retro.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p211-case-retro-sweep/sweep_retro.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p211-case-retro-sweep/sweep_retro.sh	readme	CASE-CLOSED	UPPER-EXT	HISTORICAL	README README.MD README.markdown README.md README.rst readme.md
 compose/code/p211-full-column-grant-audit/classify.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p211-full-column-grant-audit/extract_rows.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	readme
+compose/code/p211-full-column-grant-audit/fetch_one.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.txt
 compose/code/p211-full-column-grant-audit/fetch_one.sh	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.TXT LICENSE.code LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p212-actor-binding/bind_axis.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README README.md
+compose/code/p213-grant-resolver/fetch_grants.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.txt
 compose/code/p213-grant-resolver/fetch_grants.sh	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.TXT LICENSE.code LICENSE.markdown LICENSE.md LICENSE.rst LICENSE.txt
 compose/code/p215-disclosure-axis/classify_disclosure.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	license
+compose/code/p215-lstree-grant-recovery/qd_sweep.sh	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	copying
+compose/code/p215-lstree-grant-recovery/qd_sweep.sh	notice	TREE-ENUMERATED	no-upper-ext	HISTORICAL	notice
 compose/code/p215-lstree-grant-recovery/qg_gate2.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p215-lstree-grant-recovery/read_grants.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	license
+compose/code/p216-ecl-sweep/adjudicate_scope.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p216-ecl-sweep/ecl_sweep.py	copying	STEM-ONLY	no-upper-ext	HISTORICAL	COPYING copying.txt
 compose/code/p216-ecl-sweep/ecl_sweep.py	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENSE LICENSE.md LICENSE.txt License License.txt licence.txt license.txt
+compose/code/p216-ecl-sweep/ecl_sweep.py	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
 compose/code/p216-ecl-sweep/qg_gate3.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p216-ecl-sweep/qg_gate3.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p216-person-claims-sweep/sweep.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README README.md
 compose/code/p216-root-license-reprobe/reprobe.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p217-bilingual-gate/tokens.py	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	licence license
+compose/code/p217-bilingual-gate/tokens.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
 compose/code/p217-grant-state/grant_state.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE License licence license
+compose/code/p217-grant-state/grant_state.py	readme	TREE-ENUMERATED	no-upper-ext	HISTORICAL	README readme
 compose/code/p219-upstream-channel/upstream_channel.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p219-upstream-channel/upstream_channel.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README readme.txt
+compose/code/p220-file-level-grant/file_grant.py	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README.md readme.txt
 compose/code/p221-licence-version-range/version_range.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENSE
+compose/code/p221-licence-version-range/version_range.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p222-ecosystem-bound-grammar/bound_grammar.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	license
 compose/code/p224-grammar-attribution/grammar_attribution.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p224-grammar-attribution/grammar_attribution.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README
 compose/code/p224-grammar-attribution/run_census.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	license
+compose/code/p224-grammar-attribution/run_census.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README
 compose/code/p227-direction-gate/direction_gate.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p227-direction-gate/validate_real_bodies.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p228-shelf-gate/classify_grant.py	licence	CASE-UNVARIED	no-upper-ext	STANDING	LICENCE LICENSE
+compose/code/p228-shelf-gate/fetch_grants.sh	copying	CASE-CLOSED	UPPER-EXT	STANDING	COPYING COPYING.TXT COPYING.txt
 compose/code/p228-shelf-gate/fetch_grants.sh	licence	STEM-ONLY	no-upper-ext	STANDING	LICENCE LICENSE LICENSE.md LICENSE.txt license.txt
 compose/code/p228-shelf-gate/gate.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p228-shelf-gate/harvest_cells.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENCE
+compose/code/p229-grant-ladder-reach/ladder.sh	copying	CASE-CLOSED	UPPER-EXT	STANDING	COPYING COPYING.LESSER COPYING.TXT COPYING.md COPYING.txt
 compose/code/p229-grant-ladder-reach/ladder.sh	licence	CASE-CLOSED	UPPER-EXT	STANDING	LICENCE LICENCE.txt LICENSE LICENSE.TXT LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p229-grant-ladder-reach/ladder.sh	notice	CASE-CLOSED	UPPER-EXT	STANDING	NOTICE NOTICE.TXT NOTICE.txt
 compose/code/p229-grant-ladder-reach/manifest_grant.py	licence	CASE-UNVARIED	no-upper-ext	STANDING	licence license
+compose/code/p230-prose-path-ladder/harvest.py	copying	FOLD-ON-PATH	no-upper-ext	STANDING	COPYING COPYING.txt Copying copying
 compose/code/p230-prose-path-ladder/harvest.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
+compose/code/p230-prose-path-ladder/harvest.py	notice	FOLD-ON-PATH	no-upper-ext	STANDING	NOTICE Notice notice
 compose/code/p230-prose-path-ladder/lazy_lint.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENCE
+compose/code/p230-rostering-layer-axis/measure.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p230-rostering-layer-axis/measure.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.txt
+compose/code/p230-rostering-layer-axis/measure.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p230-rostering-layer-axis/measure.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p234-dead-license-closeout/sweep_dead.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p234-dead-license-closeout/sweep_dead.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.txt
+compose/code/p234-dead-license-closeout/sweep_dead.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p235-carried-index/carried_index.py	readme	SINGLE-SPELLING	no-upper-ext	STANDING	README.md
+compose/code/p235-xapi-layer-axis/classify_title.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p235-xapi-layer-axis/classify_title.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.txt
+compose/code/p235-xapi-layer-axis/classify_title.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p235-xapi-layer-axis/measure.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p235-xapi-layer-axis/measure.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENSE LICENSE.md LICENSE.txt
+compose/code/p235-xapi-layer-axis/measure.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p235-xapi-layer-axis/measure.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p235-xapi-layer-axis/negative-control.2026-10-03.sh	copying	CASE-UNVARIED	no-upper-ext	SUPERSEDED	COPYING COPYING.txt
 compose/code/p235-xapi-layer-axis/negative-control.2026-10-03.sh	licence	CASE-UNVARIED	no-upper-ext	SUPERSEDED	LICENSE LICENSE.md
 compose/code/p238-lure-signature/lure_signature.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
+compose/code/p238-lure-signature/lure_signature.py	readme	SINGLE-SPELLING	no-upper-ext	STANDING	README
 compose/code/p240-grant-language/grant_language.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p242-grant-delta/grant_delta.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
+compose/code/p243-frontmatter-coverage/check_frontmatter.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p244-absence-states/absence_states.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE LICENSE.md
+compose/code/p244-absence-states/absence_states.py	readme	SINGLE-SPELLING	no-upper-ext	STANDING	README
 compose/code/p245-apache-canonical/apache_canonical.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
+compose/code/p245-apache-canonical/apache_canonical.py	notice	FOLD-ON-PATH	no-upper-ext	STANDING	NOTICE
 compose/code/p246-payload-integrity/payload_integrity.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p247-keyed-grant/keyed_grant.py	licence	SINGLE-SPELLING	no-upper-ext	STANDING	LICENCE LICENSE
+compose/code/p247-keyed-grant/keyed_grant.py	notice	FOLD-ON-PATH	no-upper-ext	STANDING	NOTICE
+compose/code/p247-mit-tier-sweep/sweep.sh	copying	CASE-CLOSED	UPPER-EXT	STANDING	COPYING COPYING.TXT COPYING.txt
 compose/code/p247-mit-tier-sweep/sweep.sh	licence	CASE-UNVARIED	no-upper-ext	STANDING	LICENCE LICENSE LICENSE.md LICENSE.txt
 compose/code/p247-path-class/path_class.sh	licence	SINGLE-SPELLING	no-upper-ext	STANDING	LICENCE LICENSE
+compose/code/p247-path-class/path_class.sh	notice	SINGLE-SPELLING	no-upper-ext	STANDING	NOTICE
+compose/code/p250-commercial-use-axis/sweep_commercial.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p250-commercial-use-axis/sweep_commercial.sh	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt license license.md license.txt
+compose/code/p250-commercial-use-axis/sweep_commercial.sh	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.markdown README.md README.rst readme.md
+compose/code/p250-slug-repair-sweep/probe.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.md COPYING.txt
 compose/code/p250-slug-repair-sweep/probe.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.txt LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p250-slug-repair-sweep/probe.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
 compose/code/p251-cohort-lineage/lineage.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p251-cohort-lineage/sweep_lineage.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p251-cohort-lineage/sweep_lineage.sh	readme	FOLD-ON-PATH	no-upper-ext	HISTORICAL	README.md
 compose/code/p251-gate-exit-reach/gate_reach.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENCE
 compose/code/p251-prefix-collision/prefix_collision.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE LICENSE.md
 compose/code/p253-gate-propagation/gate_propagation.py	licence	SINGLE-SPELLING	no-upper-ext	STANDING	LICENCE
+compose/code/p253-settled-fact-regression/settled_fact.py	readme	SINGLE-SPELLING	no-upper-ext	STANDING	README.md
 compose/code/p254-exit-status-reach/exit_reach.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENCE
 compose/code/p257-provider-binding/sweep_binding.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p268-capability-surface/surface.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README
+compose/code/p269-provider-release-matrix/sweep_matrix.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p272-platform-ref-verdict/sweep_platform_ref.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README README.rst
+compose/code/p273-platform-provider-dir/sweep_provider_dir.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p276-two-channel-enumeration/enum.sh	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	copying
+compose/code/p276-two-channel-enumeration/enum.sh	notice	TREE-ENUMERATED	no-upper-ext	HISTORICAL	notice
+compose/code/p276-two-channel-enumeration/queue.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
+compose/code/p276-two-channel-enumeration/queue.py	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	notice
+compose/code/p277-table-structure/table_structure.py	readme	SINGLE-SPELLING	no-upper-ext	STANDING	README.md
+compose/code/p278-channel-conflict/readme_column.py	readme	COMMENT-ONLY	UPPER-EXT	STANDING	README README.MD
+compose/code/p278-channel-conflict/sweep.sh	copying	CASE-CLOSED	UPPER-EXT	STANDING	COPYING COPYING.TXT COPYING.txt
 compose/code/p278-channel-conflict/sweep.sh	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.txt License license
+compose/code/p278-channel-conflict/sweep.sh	readme	TREE-ENUMERATED	UPPER-EXT	STANDING	README README.MD
 compose/code/p279-absence-claims/absence_claims.py	licence	CASE-UNVARIED	no-upper-ext	STANDING	licence license
+compose/code/p279-absence-claims/absence_claims.py	readme	CASE-UNVARIED	no-upper-ext	STANDING	README README.md
+compose/code/p280-manifest-ownership/license_probe.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p280-manifest-ownership/license_probe.py	licence	STEM-ONLY	UPPER-EXT	HISTORICAL	LICENCE LICENCE.txt LICENSE LICENSE.TXT LICENSE.md LICENSE.txt license license.txt
+compose/code/p280-manifest-ownership/sweep.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p280-manifest-ownership/sweep.sh	licence	FOLD-ON-PATH	UPPER-EXT	HISTORICAL	LICENCE LICENCE.txt LICENSE LICENSE.TXT LICENSE.md LICENSE.txt license
+compose/code/p280-manifest-ownership/sweep.sh	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.md README.rst README.txt readme.md
+compose/code/p283-ladder-case-audit/ladder_case.py	copying	GENERATED-CASE-VARIED	no-upper-ext	STANDING	COPYING COPYING.txt Copying copying
 compose/code/p283-ladder-case-audit/ladder_case.py	licence	GENERATED-CASE-VARIED	UPPER-EXT	STANDING	LICENCE LICENSE LICENSE.TXT Licence License licence license
+compose/code/p283-ladder-case-audit/ladder_case.py	notice	GENERATED-CASE-VARIED	UPPER-EXT	STANDING	NOTICE NOTICE.MD NOTICE.TXT notice
+compose/code/p283-ladder-case-audit/ladder_case.py	readme	GENERATED-CASE-VARIED	UPPER-EXT	STANDING	README README.MD readme
 compose/code/p283-manifest-named-license/manifest_license.py	licence	SINGLE-SPELLING	UPPER-EXT	HISTORICAL	LICENSE LICENSE.TXT license
+compose/code/p283-manifest-named-license/sweep_named.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.md COPYING.txt
 compose/code/p283-manifest-named-license/sweep_named.sh	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.TXT LICENSE.html LICENSE.md LICENSE.rst LICENSE.txt license
+compose/code/p283-manifest-named-license/sweep_named.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p283-manifest-named-license/sweep_named.sh	readme	CASE-UNVARIED	no-upper-ext	HISTORICAL	README README.md README.rst README.txt
+compose/code/p286-regional-intake/intake.sh	copying	TREE-ENUMERATED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.TXT COPYING.md COPYING.txt copying
 compose/code/p286-regional-intake/intake.sh	licence	FOLD-ON-PATH	UPPER-EXT	HISTORICAL	LICENCE LICENCE.txt LICENSE LICENSE.TXT LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p286-regional-intake/intake.sh	notice	TREE-ENUMERATED	UPPER-EXT	HISTORICAL	NOTICE NOTICE.TXT NOTICE.txt notice
+compose/code/p288-readme-channel/probe.sh	readme	IMPORTED-LADDER	no-upper-ext	STANDING	README
 compose/code/p288-readme-channel/readme_claim.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
+compose/code/p288-readme-channel/readme_claim.py	readme	CASE-CLOSED	UPPER-EXT	STANDING	README README.MD README.RST README.TXT README.markdown README.md README.rst README.txt Readme.md readme readme.MD readme.md readme.txt
 compose/code/p289-maven-manifest/maven_license.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	license
+compose/code/p289-restatement-authority/probe.sh	copying	GENERATED-CASE-VARIED	no-upper-ext	STANDING	COPYING Copying copying
 compose/code/p289-restatement-authority/probe.sh	licence	GENERATED-CASE-VARIED	no-upper-ext	STANDING	LICENCE LICENCE.md LICENSE LICENSE.md Licence License licence license
+compose/code/p289-restatement-authority/probe.sh	readme	COMMENT-ONLY	no-upper-ext	STANDING	README.md
 compose/code/p289-restatement-authority/restatement.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	licence
+compose/code/p291-submodule-pin-grant/pin_grant.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
+compose/code/p292-decision-evidence-store/decision_store.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
 compose/code/p306-licence-probe/check_p306.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	license
+compose/code/p306-licence-probe/check_p306.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p306-licence-probe/licence_probe.py	copying	SINGLE-SPELLING	no-upper-ext	HISTORICAL	COPYING
 compose/code/p306-licence-probe/licence_probe.py	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENSE LICENSE.md LICENSE.txt license.txt
+compose/code/p307-payload-pin/probe_p307.py	copying	TREE-ENUMERATED	no-upper-ext	STANDING	COPYING copying
 compose/code/p307-payload-pin/probe_p307.py	licence	TREE-ENUMERATED	UPPER-EXT	STANDING	LICENCE LICENSE LICENSE.TXT LICENSE.txt
+compose/code/p307-payload-pin/probe_p307.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
 compose/code/p308-phrase-anchor-sweep/anchor_form.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p308-phrase-anchor-sweep/field_check.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p308-phrase-anchor-sweep/field_check.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENSE LICENSE.txt
 compose/code/p308-phrase-anchor-sweep/license_family.PRE-P308-CONTROL-2026-10-04.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE LICENSE.txt
+compose/code/p308-phrase-anchor-sweep/license_family.PRE-P308-CONTROL-2026-10-04.sh	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p308-phrase-anchor-sweep/reflow.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE LICENSE.md
+compose/code/p308-phrase-anchor-sweep/window_probe.sh	copying	SINGLE-SPELLING	no-upper-ext	HISTORICAL	COPYING.txt
 compose/code/p308-phrase-anchor-sweep/window_probe.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENSE LICENSE.txt
 compose/code/p308-shelf-consistency/shelf_consistency.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENCE LICENSE.md licence license
+compose/code/p308-shelf-consistency/shelf_consistency.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README.md
 compose/code/p309-affero-rung-census/rung_census.py	licence	TREE-ENUMERATED	no-upper-ext	STANDING	LICENSE LICENSE.md
+compose/code/p310-family-coverage/family_coverage.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README README.md
 compose/code/p310-family-coverage/fixtures.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p310-family-coverage/run_families.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	licence license
-compose/code/p311-permissive-family-arm/fixtures.py	licence	SINGLE-SPELLING	no-upper-ext	STANDING	LICENSE
 compose/code/p311-permissive-family-arm/payload_identity.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENCE
+compose/code/p311-permissive-family-arm/payload_identity.py	notice	COMMENT-ONLY	no-upper-ext	STANDING	NOTICE
+compose/code/p312-template-identity/template_identity.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENSE
 compose/code/p317-data-license-layer/corpus_axis.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p317-data-license-layer/corpus_axis.py	readme	TREE-ENUMERATED	no-upper-ext	HISTORICAL	README README.md
+compose/code/p317-data-license-layer/sweep_corpus.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p317-data-license-layer/sweep_corpus.sh	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENSE LICENSE.TXT LICENSE.md LICENSE.txt
+compose/code/p317-data-license-layer/sweep_corpus.sh	readme	CASE-UNVARIED	no-upper-ext	HISTORICAL	README README.md
 compose/code/p322-content-item-license/classify_item.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	license
+compose/code/p322-content-item-license/classify_item.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p324-corpus-upstream-cession/resolve_upstream.sh	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	COPYING
 compose/code/p324-corpus-upstream-cession/resolve_upstream.sh	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENSE LICENSE.TXT LICENSE.md LICENSE.txt license.txt
 compose/code/p326-titleholder-book-license/census_items.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	license
+compose/code/p326-titleholder-book-license/census_items.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README
 compose/code/p326-titleholder-book-license/controls.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p326-titleholder-book-license/edition_control.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	license
 compose/code/p326-titleholder-book-license/sweep_titleholder.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p326-titleholder-book-license/verdict.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	license
 compose/code/p328-cession-narrowing/census.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	license
+compose/code/p328-cession-narrowing/sweep_norm.py	copying	SINGLE-SPELLING	no-upper-ext	HISTORICAL	COPYING
 compose/code/p328-cession-narrowing/sweep_norm.py	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENSE LICENSE.md LICENSE.txt License license
+compose/code/p328-cession-narrowing/sweep_norm.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p328-cession-narrowing/sweep_osbooks.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
 compose/code/p332-figure-layer/measure.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	license
 compose/code/p332-figure-layer/remeasure_family.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p342-license-claim-vs-file/sweep_p340.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p342-license-claim-vs-file/sweep_p340.sh	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.TXT LICENSE.md LICENSE.txt
+compose/code/p342-license-claim-vs-file/sweep_p340.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
 compose/code/p344-claim-class-denominator/detect_claim.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE License
+compose/code/p344-claim-class-denominator/detect_claim.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p344-claim-class-denominator/enumerate_trees.sh	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	copying
+compose/code/p344-claim-class-denominator/enumerate_trees.sh	notice	TREE-ENUMERATED	no-upper-ext	HISTORICAL	notice
+compose/code/p344-claim-class-denominator/sweep_claim.MARKDOWN-ONLY-SUPERSEDED-2026-10-05.sh	copying	CASE-UNVARIED	no-upper-ext	SUPERSEDED	COPYING COPYING.md
 compose/code/p344-claim-class-denominator/sweep_claim.MARKDOWN-ONLY-SUPERSEDED-2026-10-05.sh	licence	CASE-CLOSED	UPPER-EXT	SUPERSEDED	LICENCE LICENCE.md LICENSE LICENSE.TXT LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p344-claim-class-denominator/sweep_claim.MARKDOWN-ONLY-SUPERSEDED-2026-10-05.sh	readme	CASE-CLOSED	UPPER-EXT	SUPERSEDED	README README.MD README.md
+compose/code/p344-claim-class-denominator/sweep_claim.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.md
 compose/code/p344-claim-class-denominator/sweep_claim.py	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.TXT LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p344-claim-class-denominator/sweep_claim.py	readme	CASE-CLOSED	UPPER-EXT	HISTORICAL	README README.MD README.md Readme.md readme.md
 compose/code/p345-oer-four-forms/censo_oer.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	license
 compose/code/p345-oer-four-forms/entregabilidad.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	license
 compose/code/p345-oer-four-forms/materialize.sh	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	license
 compose/code/p348-figure-weight-bias/sesgo.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	license
+compose/code/p350-contact-surface/superficie.py	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.md README.rst readme.md
+compose/code/p356-citation-origin/origin.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p357-hint-layer-cession/hint_layer.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	license
+compose/code/p370-gap-gate/gap_gate.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p385-binding-interval/binding_interval.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
 compose/code/p385-binding-interval/binding_interval.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p386-pristine-dedup-gate/dedup_gate.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p391-structured-binding/structured_binding.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
 compose/code/p391-structured-binding/structured_binding.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p394-holder-absent-census/holder_census.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
 compose/code/p394-holder-absent-census/holder_census.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p399-census-order-gate/census_order.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
 compose/code/p399-census-order-gate/census_order.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p411-cession-identity-gate/barrido_pase123.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENSE LICENSE.md
+compose/code/p411-cession-identity-gate/gate_cesion.py	copying	COMMENT-ONLY	no-upper-ext	HISTORICAL	COPYING
 compose/code/p411-cession-identity-gate/gate_cesion.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE LICENSE.md
 compose/code/p419-copyleft-identity/identidad_copyleft.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p432-fromscratch-fixture-gate/probe.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p432-fromscratch-fixture-gate/probe.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.md LICENSE.rst LICENSE.txt licence license license.md license.txt
+compose/code/p432-fromscratch-fixture-gate/probe.py	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p436-fork-hypothesis/fixtures/ucfopen-pylti1.3-setup.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.rst
+compose/code/p436-fork-hypothesis/sweep_payload.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p436-fork-hypothesis/sweep_payload.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt license license.md license.txt
+compose/code/p436-fork-hypothesis/sweep_payload.py	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.markdown README.md README.rst readme.md
+compose/code/p438-depth2-closure/depth2.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p439-case-collision-gate/case_gate.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README.md
+compose/code/p440-unlicensed-registry-grant/grant.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p440-unlicensed-registry-grant/grant.py	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt license license.md license.txt
+compose/code/p440-unlicensed-registry-grant/widen.py	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING.LESSER COPYING.LIB COPYING.md COPYING.txt
 compose/code/p440-unlicensed-registry-grant/widen.py	licence	STEM-ONLY	UPPER-EXT	HISTORICAL	LICENCE LICENCE.txt LICENSE LICENSE.AGPL LICENSE.APACHE LICENSE.BSD LICENSE.EPL LICENSE.GPL LICENSE.ISC LICENSE.LGPL LICENSE.MIT LICENSE.MPL LICENSE.code LICENSE.docs LICENSE.globant LICENSE.html LICENSE.markdown LICENSE.md LICENSE.txt license.rst
+compose/code/p440-unlicensed-registry-grant/widen.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p441-tree-licence-enumeration/enumerate_licence.py	copying	COMMENT-ONLY	UPPER-EXT	HISTORICAL	COPYING.LESSER
 compose/code/p441-tree-licence-enumeration/enumerate_licence.py	licence	COMMENT-ONLY	UPPER-EXT	HISTORICAL	LICENSE LICENSE.GPL LICENSE.MPL LICENSE.TXT LICENSE.rtf
+compose/code/p441-tree-licence-enumeration/enumerate_licence.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
 compose/code/p442-depth2-pinned/depth2_pinned.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENCE
+compose/code/p443-canonical-spelling/canonical.py	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.md README.rst readme.md
 compose/code/p444-root-vs-tree-family/root_vs_tree.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p444-root-vs-tree-family/root_vs_tree.py	notice	COMMENT-ONLY	no-upper-ext	HISTORICAL	NOTICE
 compose/code/p445-classifier-divergence/divergence.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p447-deep-grant-divergence/divergence.py	licence	COMMENT-ONLY	UPPER-EXT	HISTORICAL	LICENSE LICENSE.TXT LICENSE.rtf
+compose/code/p447-deep-grant-divergence/divergence.py	notice	TREE-ENUMERATED	no-upper-ext	HISTORICAL	NOTICE notice
+compose/code/p448-crossref-oracle/crossref.py	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.markdown README.md README.rst README.txt readme.md
+compose/code/p449-prose-tsv-reconciliation/reconcile.py	copying	COMMENT-ONLY	no-upper-ext	HISTORICAL	COPYING
 compose/code/p449-prose-tsv-reconciliation/reconcile.py	licence	COMMENT-ONLY	UPPER-EXT	HISTORICAL	LICENCE.TXT LICENSE
 compose/code/p459-unified-verdict/unified.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE LICENSE.rtf
+compose/code/p471-gap-gate-language/gap_language.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/p473-probe-commercial-gate/discover_probe.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt
 compose/code/p473-probe-commercial-gate/discover_probe.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p473-probe-commercial-gate/discover_probe.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/p473-probe-commercial-gate/discover_probe.sh	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.md README.rst README.txt Readme.md readme.md
+compose/code/p550-duplicate-definition-sweep/oracle_inversion.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING
 compose/code/p550-duplicate-definition-sweep/oracle_inversion.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p560-epl-mpl-version-read/sweep_versions.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p571-cession-family-delegation/medir.py	copying	TREE-ENUMERATED	no-upper-ext	HISTORICAL	COPYING.txt
 compose/code/p571-cession-family-delegation/medir.py	licence	TREE-ENUMERATED	no-upper-ext	HISTORICAL	LICENSE
 compose/code/p598-register-freshness-gate/freshness_gate.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p598-register-freshness-gate/freshness_gate.py	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README
 compose/code/p620-licence-header-window/probe_window.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENSE.md
+compose/code/p627-multi-grant-repo/grant_shape.py	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	copying
 compose/code/p627-multi-grant-repo/grant_shape.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p725-readme-payload-sweep/readme_vs_payload.sh	copying	STEM-ONLY	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt copying.txt
 compose/code/p725-readme-payload-sweep/readme_vs_payload.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.txt LICENSE LICENSE.html LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p725-readme-payload-sweep/readme_vs_payload.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README README.md
+compose/code/p742-grant-body-vs-reference/grant_body.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.md COPYING.txt
 compose/code/p742-grant-body-vs-reference/grant_body.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.html LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p742-grant-body-vs-reference/grant_body.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
 compose/code/p752-prose-vs-committed-results/check_claim.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p752-prose-vs-committed-results/check_claim.sh	readme	FOLD-ON-PATH	no-upper-ext	HISTORICAL	README README.md
+compose/code/p759-four-layer-grant-probe/probe.sh	copying	FOLD-ON-PATH	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.txt
 compose/code/p759-four-layer-grant-probe/probe.sh	licence	FOLD-ON-PATH	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.code LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p759-four-layer-grant-probe/probe.sh	notice	FOLD-ON-PATH	no-upper-ext	HISTORICAL	NOTICE
 compose/code/p782-policy-gate/gate.sh	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENCE
+compose/code/p784-licence-scope-map/probe.sh	copying	CASE-UNVARIED	UPPER-EXT	HISTORICAL	COPYING COPYING.LESSER COPYING.txt
 compose/code/p784-licence-scope-map/probe.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.code LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/p784-licence-scope-map/probe.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README
 compose/code/p786-scope-verdict-agreement/agree.py	licence	COMMENT-ONLY	no-upper-ext	HISTORICAL	LICENSE.txt
+compose/code/p786-scope-verdict-agreement/agree.py	readme	TREE-ENUMERATED	no-upper-ext	HISTORICAL	README
+compose/code/p791-registry-id-provenance/sweep_composer.sh	copying	SINGLE-SPELLING	no-upper-ext	HISTORICAL	COPYING.txt
 compose/code/p791-registry-id-provenance/sweep_composer.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	license
 compose/code/p963-shelf-licence-agreement/agree.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENCE
+compose/code/p963-shelf-licence-agreement/agree.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/p987-census-sha-currency/probe_reach_control.sh	readme	STEM-ONLY	no-upper-ext	HISTORICAL	README README.markdown README.md README.rst readme.md
+compose/code/pass256-ladder-closure/ladder_closure.py	copying	COMMENT-ONLY	no-upper-ext	STANDING	COPYING
 compose/code/pass256-ladder-closure/ladder_closure.py	licence	CASE-CLOSED	UPPER-EXT	STANDING	LICENSE LICENSE.TXT LICENSE.md LICENSE.rst LICENSE.txt licence.txt
 compose/code/pass257-restriction-scan/restriction_scan.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENCE LICENSE LICENSE.md
 compose/code/pass258-content-licence-family/content_licence.py	licence	SINGLE-SPELLING	no-upper-ext	STANDING	LICENCE LICENSE.md
+compose/code/pass258-content-licence-family/content_licence.py	readme	SINGLE-SPELLING	no-upper-ext	STANDING	README.md
+compose/code/pass259-grant-location-class/grant_location.py	copying	SINGLE-SPELLING	no-upper-ext	STANDING	copying
 compose/code/pass259-grant-location-class/grant_location.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENCE licence license
+compose/code/pass259-grant-location-class/grant_location.py	notice	FOLD-ON-PATH	no-upper-ext	STANDING	NOTICE notice
 compose/code/pass260-ecosystem-manifest-tier/manifest_tier.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENCE LICENSE license
+compose/code/pass260-ecosystem-manifest-tier/manifest_tier.py	readme	SINGLE-SPELLING	no-upper-ext	STANDING	readme.txt
 compose/code/pass261-current-state-tier-run/current_state.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENCE LICENSE license
 compose/code/pass262-scoped-reservation-audit/reservation_audit.py	licence	COMMENT-ONLY	no-upper-ext	STANDING	LICENCE LICENSE
+compose/code/pass262-scoped-reservation-audit/reservation_audit.py	readme	SINGLE-SPELLING	no-upper-ext	STANDING	README
+compose/code/pass262-scoped-reservation-audit/sweep.py	readme	STEM-ONLY	no-upper-ext	STANDING	README README.md README.rst README.txt readme.md
+compose/code/pass275-grant-enumeration/enumerate.sh	copying	TREE-ENUMERATED	no-upper-ext	STANDING	copying
+compose/code/pass275-grant-enumeration/enumerate.sh	notice	TREE-ENUMERATED	no-upper-ext	STANDING	notice
+compose/code/pass275-grant-enumeration/enumeration_gate.py	copying	TREE-ENUMERATED	no-upper-ext	STANDING	copying
 compose/code/pass275-grant-enumeration/enumeration_gate.py	licence	CASE-UNVARIED	no-upper-ext	STANDING	LICENSE LICENSE.md LICENSE.rtf license
+compose/code/pass275-grant-enumeration/enumeration_gate.py	notice	TREE-ENUMERATED	no-upper-ext	STANDING	notice
+compose/code/pass275-grant-enumeration/enumeration_gate.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
 compose/code/pass280-package-provenance/invented_payload_census.py	licence	TREE-ENUMERATED	no-upper-ext	STANDING	license
 compose/code/pass280-package-provenance/provenance.py	licence	SINGLE-SPELLING	no-upper-ext	STANDING	license
+compose/code/patterns-figure-audit/extract_figures.py	readme	TREE-ENUMERATED	no-upper-ext	HISTORICAL	README
+compose/code/registry-license-remeasure/measure_candidate.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt copying
 compose/code/registry-license-remeasure/measure_candidate.sh	licence	STEM-ONLY	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt license
+compose/code/registry-license-remeasure/measure_candidate.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/registry-license-remeasure/measure_candidate.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md
+compose/code/registry-license-remeasure/remeasure.sh	copying	FOLD-ON-PATH	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt copying
 compose/code/registry-license-remeasure/remeasure.sh	licence	CASE-UNVARIED	no-upper-ext	HISTORICAL	LICENCE LICENCE.md LICENSE LICENSE.md LICENSE.rst LICENSE.txt
+compose/code/registry-license-remeasure/remeasure.sh	notice	SINGLE-SPELLING	no-upper-ext	HISTORICAL	NOTICE
+compose/code/registry-license-remeasure/remeasure.sh	readme	CASE-UNVARIED	no-upper-ext	HISTORICAL	README.md README.rst
+compose/code/registry-recency-channel/registry_recency.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
+compose/code/sebserver-mcp-gate/extract_surface.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README

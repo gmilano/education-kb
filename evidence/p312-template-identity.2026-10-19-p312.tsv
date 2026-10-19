@@ -1,0 +1,13 @@
+slug	fixture	bytes	sha256_12	family	form	why	slot_constant	template_digest_16	title_line
+Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard	apache-2.0-edfi-data-standard-10173	10173	a6cba85bc92e	Apache-2.0	FIXED-DOCUMENT	NO-DECLARATION	-	a6cba85bc92e0cff	Apache License
+NoplagLabs/noplag-engine	apache-2.0-noplag-engine-11358	11358	cfc7749b96f6	Apache-2.0	FIXED-DOCUMENT	PLACEHOLDER-DECLARATION	-	cfc7749b96f63bd3	
+constructorfabric/reference-audit	apache-2.0-reference-audit-11357	11357	c71d239df917	Apache-2.0	FIXED-DOCUMENT	PLACEHOLDER-DECLARATION	-	c71d239df91726fc	Apache License
+TUBAF-IFI-DiPiT/github2pandas	bsd-2-clause-github2pandas-1340	1340	9564f738acee	BSD-2-Clause	FILL-IN	HOLDER	1290	6719ae876481e136	BSD 2-Clause License
+AmirhosseinHonardoust/Academic-Instability-Early-Warning-System	mit-academic-instability-1061	1061	0c410e37b86b	MIT	FILL-IN	HOLDER	1038	16d6b7b5799875f6	MIT License
+rpatrik96/hallmark	mit-hallmark-1073	1073	bafef485d0aa	MIT	FILL-IN	HOLDER	1038	16d6b7b5799875f6	MIT License
+LuteOrg/lute-v3	mit-lute-v3-1068	1068	28f65679a154	MIT	FILL-IN	HOLDER	1038	16d6b7b5799875f6	MIT License
+Chuloo/mural	mit-mural-1066	1066	799b6a8be997	MIT	FILL-IN	HOLDER	1038	16d6b7b5799875f6	MIT License
+cmkumar87/NUS-MOOC-Transacts-Corpus	mit-nus-mooc-corpus-1083	1083	2d8f95296606	MIT	FILL-IN	HOLDER	1038	16d6b7b5799875f6	MIT License
+Imalwayshere/Open-Detector	mit-open-detector-1066	1066	2e7c69b15c38	MIT	FILL-IN	HOLDER	1038	16d6b7b5799875f6	MIT License
+hahahumble/speechgpt	mit-speechgpt-1066	1066	c46c617ea9ce	MIT	FILL-IN	HOLDER	1038	16d6b7b5799875f6	MIT License
+typedgrammar/typed-japanese	mitparen-typed-japanese-1086	1086	53a8d8541918	MIT	FILL-IN	HOLDER	1047	d936246a542832f3	The MIT License (MIT)

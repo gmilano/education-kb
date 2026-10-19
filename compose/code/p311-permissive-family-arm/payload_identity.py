@@ -115,6 +115,21 @@ def canonical_identity(text, family=None):
     body = text.lstrip("\ufeff")
     body = body.strip()
     body = body.replace("\r\n", "\n").replace("\r", "\n")
+    # \ud83d\udd34 Step 0b, added at `p312`, and it is step 0's own lesson one position
+    # further in. `p311` wrote that *"nothing in the first build noticed the
+    # difference between 'invisible' and 'whitespace'"* and repaired the case
+    # where the invisible byte is a PREFIX. \ud83d\udd34 It is not always a prefix. Two
+    # `MPL-2.0` payloads on this base \u2014 `aesophor/hacklympics` (`16 725` B
+    # `1f256ecad192`) and `SafeExamBrowser/seb-win-refactoring` (`16 726` B
+    # `fab3dd6bdab2`) \u2014 carry the SAME grant and differ by **one trailing space
+    # before a newline at offset 1 282**: `"...with other material, in \n"`
+    # against `"...with other material, in\n"`. \ud83d\udd35 `strip()` cannot reach it
+    # because it is INTERIOR, so `same_grant()` returned **False** for a single
+    # document \u2014 a FALSE NEGATIVE on grant identity, which inflates a family's
+    # apparent variability and is exactly what feeds the byte-band confusion
+    # `P312-T` is about. \ud83d\udfe2 Trailing whitespace on a line is never part of a
+    # grant, and hand-editing a licence file is how it gets there.
+    body = "\n".join(line.rstrip() for line in body.split("\n"))
     if family in FILL_IN_SLOT:
         body = _HOLDER.sub("copyright <HOLDER>", body)
     raw = body.encode("utf-8")

@@ -4,10 +4,10 @@ region: Global
 updated: 2026-10-19
 ---
 
-## 🔴 Pass 312 — EVERY VERTICAL PLATFORM THIS PASS READ FIRST-HAND IS COPYLEFT, AND THE TWO LATAM SIS ROWS ARE `GPL-2.0`, THE HEAVIEST GRANT ON THIS SHELF TO COMPOSE WITH
+## 🔴 Pass 313 — EVERY VERTICAL PLATFORM THIS PASS READ FIRST-HAND IS COPYLEFT, AND THE TWO LATAM SIS ROWS ARE `GPL-2.0`, THE HEAVIEST GRANT ON THIS SHELF TO COMPOSE WITH
 
-⏱️ **Pass 312 of `2026-10-19`.** Evidence:
-[`p312-payload-pins.2026-10-19-p312.tsv`](../evidence/p312-payload-pins.2026-10-19-p312.tsv).
+⏱️ **Pass 313 of `2026-10-19`.** Evidence:
+[`p313-payload-pins.2026-10-19-p313.tsv`](../evidence/p313-payload-pins.2026-10-19-p313.tsv).
 
 🔴 **Code channel not run** (`make` refused in this environment); every cell below is a payload
 read over `curl`, not a classifier output.
@@ -23,8 +23,8 @@ from the repository today, not carried:
 | **Open edX learner frontend** | LMS UI (MFE) | [`openedx/frontend-app-learning`](https://github.com/openedx/frontend-app-learning) · `master` | 🔴 `AGPL-3.0` | `34 523` · `8486a10c4393` | 🔴 same, and this is the layer a studio most often customises |
 | **Chamilo** | LMS, lightweight, strong 🌍 FR/ES/LATAM install base | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) · `master` | 🔴 `GPL-3.0` | `35 147` · `8ceb4b9ee5ad` | 🟡 **lighter than AGPL: no network clause.** A hosted deployment triggers no distribution |
 | **H5P** | interactive-content authoring, embeds into every LMS here | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) · `master` · `LICENSE.txt` | 🔴 `GPL-3.0` | `35 146` · `c53a65c2fd56` | 🟡 same posture; the integration layer is the question, not the library |
-| **i-educar** 🇧🇷 | **SIS** — Brazilian municipal school administration | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) · `master` | 🔴 **`GPL-2.0`** *(«Version 2, June 1991», read in the payload)* | `18 092` · `8177f9751321` | 🔴 **no patent grant, no §13, NOT combinable with `GPL-3.0` code.** The heaviest composition constraint on this shelf |
-| **RosarioSIS** | **SIS** — K-12, widely deployed in 🌎 Spanish-speaking deployments | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) · `master` | 🔴 **`GPL-2.0`** *(same version line)* | `15 214` · `d954e14e5c75` | 🔴 same |
+| **i-educar** 🇧🇷 | **SIS** — Brazilian municipal school administration | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) · `master` | 🔴 **`GPL-2.0`** *(«Version 2, June 1991», read in the payload)* · 🟢 **replicated by `p312` at the same bytes** | `18 092` · `8177f9751321` | 🔴 **no patent grant, no §13, NOT combinable with `GPL-3.0` code.** The heaviest composition constraint on this shelf |
+| **RosarioSIS** | **SIS** — K-12, widely deployed in 🌎 Spanish-speaking deployments | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) · `master` | 🔴 **`GPL-2.0`** *(same version line)* · 🟢 **replicated by `p312`** | `15 214` · `d954e14e5c75` | 🔴 same |
 | **OpenStax CMS** | **OER** — the open-textbook delivery layer | [`openstax/openstax-cms`](https://github.com/openstax/openstax-cms) · `main` | 🔴 `AGPL-3.0` | `34 541` · `6179a3052bab` | 🔴 hosted delivery is the whole point of the product, so §13 is live |
 | **Kiwix** | **OER offline delivery** — the low-connectivity channel | [`kiwix/kiwix-tools`](https://github.com/kiwix/kiwix-tools) · `main` · `COPYING` | 🔴 `GPL-3.0` | `35 068` · `fc82ca8b6fdb` | 🟡 offline distribution **is** distribution: the GPL obligation attaches at the device |
 | **JupyterHub** | multi-user notebook infrastructure for teaching | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) · `main` | 🟢 **`BSD-3-Clause`** | `1 475` · `7069c7e8d60e` | 🟢 **the one row on this shelf a studio can build on without a copyleft obligation** — and 🔴 **no automated channel here can read it** (no title line, zero `BSD` tokens) |
@@ -64,6 +64,92 @@ session. 🔴 **For the other three this pass makes no claim that the repository
 The slug oracle needs `api.github.com/repos/*`; `raw` can confirm a slug **positively** and never
 refute one, so `404` on every probe leaves the question **open**, not answered.
 
+
+## 🟢 Pass 312 — `p310`'s PROCTORING NIL WAS TOO BROAD AS PUBLISHED: THE DE-FACTO EUROPEAN STANDARD IS `MPL-2.0`, MAINTAINED, AND `355★` — AND A `345★` SIS SERVES NO GRANT AT ALL
+
+⏱️ **Pass 312 of `2026-10-19`.** Evidence:
+[`p312-axis-carried-census.2026-10-19-p312.tsv`](../evidence/p312-axis-carried-census.2026-10-19-p312.tsv) ·
+[`p312-template-identity.2026-10-19-p312.tsv`](../evidence/p312-template-identity.2026-10-19-p312.tsv) ·
+[`p312-language-learning-axis.2026-10-19-p312.tsv`](../evidence/p312-language-learning-axis.2026-10-19-p312.tsv).
+
+### 🔴 The correction, stated at its real size
+
+`p310` wrote, on the vertical shelf: *"if a client asks for open-source proctoring, the honest
+answer today is that there is no permissively licensed, maintained option on this axis."*
+🔴 **That sentence is wider than the measurement under it.** `p310` had read **four
+camera/keystroke prototypes** and generalised to *proctoring*. 🟢 **Probed first-hand at `p312`:**
+
+| Platform | Repo | Licence *(payload, first-hand)* | ★ | Read honestly |
+|---|---|---|---|---|
+| **Safe Exam Browser** | [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟢 **MPL-2.0** `16 726` B · `fab3dd6bdab2` | **355** | **A lockdown exam browser from ETH Zürich** — the de-facto standard in European universities, integrated with Moodle, Open edX and commercial LMSs. 🟢 **MPL-2.0 is OSI-approved weak copyleft at FILE level: a studio can build and ship around it, with reciprocity only on MPL files it modifies.** 🔵 **This is a deployable, maintained, institution-grade option and it existed the whole time** |
+
+🔵 **So the precise correction: the nil holds for the CAMERA/KEYSTROKE tier and does not hold for
+PROCTORING.** The two are different sub-verticals answering different questions —
+*"is the student being watched?"* versus *"is the exam environment locked?"* — and `p310`
+measured the first while publishing about both. 🟢 **The surviving nil, narrowed and still
+true:** *no permissively licensed, maintained open-source **camera/keystroke behavioural
+monitoring** option exists on this axis* — four prototypes, each unusable for a different reason
+(a zero-byte `LICENSE`, a proprietary notice, two with no grant at any probed path).
+
+🔵 **And the narrowing changes the engagement.** `p310` sent a proctoring client to *"a
+conformity screen over the commercial stack they already bought."* 🟢 **With SEB on the shelf the
+honest first move is the opposite: lock the environment with MPL-2.0 software the institution
+can own, and treat behavioural monitoring as the part that must be bought or declined** — which
+is also the part Annex III and Art 5(1)(f) make expensive (see
+[`intel/market.md`](../intel/market.md)).
+
+### 🟢 The SIS tier, probed — and one row is a licence nil at `345★`
+
+| Platform | Repo | Licence *(payload, first-hand)* | ★ | Read honestly |
+|---|---|---|---|---|
+| **Academico** | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** `1 094` B · `6051a15f4d44` | **406** | Laravel + Filament school platform for small and mid-sized institutions: enrolment, courses, grades, billing. 🟢 **The only MIT-licensed school system of record on this base's shelves.** 🔵 **For a studio this is the highest-value row on the vertical shelf**: a permissive system of record is the one thing AI features can be hung off without a reciprocity question. 🟡 Holder line reads `Thomas Debay and project contributors` — a small team, so check release cadence before committing a client |
+| **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** `15 214` B · `d954e14e5c75` | **647** | Mature PHP student information system. 🔴 **GPL-2.0, and its payload is the appendix-less variant** (see [`repos/foundations.md`](../repos/foundations.md)) — the grant is intact, the obligation is real |
+| **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🟢 **GPL-2.0** `17 286` B *(read by `p311`, not by this pass)* | **345** | Multi-institution SIS. 🔴 **THIS PASS GOT THIS ROW WRONG AND `p311` REFUTED IT.** `p312` probed `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `LICENCE` on `main` and `master` — ten misses — and wrote **“no grant at any probed path.”** 🟢 **`p311`'s `gate-enumeration` walked the tree and named two grants under `docs/`.** 🔵 **A five-rung ladder is not the tree, and *“not at the paths I tried”* is not *“no grant”*** — `p275`'s rule, and this pass needed it applied to its own row. 🔴 **And the payload is the one that carried `p311`'s second defect: it begins `ef bb bf`, a UTF-8 BOM, which made `p150.title_licence()` return `None` and dropped `p191` onto its own body ladder** |
+| **LibreLingo** | [kantord/LibreLingo](https://github.com/kantord/LibreLingo) | 🔴 **AGPL-3.0** `34 524` B · `e9df4c4e4e64` | *(carried)* | Community-owned Duolingo alternative — the one genuine **platform** on the `language-learning` axis. 🔴 **AGPL-3.0 and network-served: hosting a modified LibreLingo for a client triggers source release to its users.** 🟡 Its `34 524` B differs from `asbplayer`'s `34 523` at byte offset `33 212` — recorded, not explained |
+| **OAT devkit LTI 1.3** | [oat-sa/devkit-lti1p3](https://github.com/oat-sa/devkit-lti1p3) | 🔴 **GPL-2.0** `18 092` B · `8177f9751321` | **20** | LTI 1.3 platform/tool development kit from Open Assessment Technologies. 🔵 **Not a platform — the INTEROP HARNESS.** Anything built for an LMS has to speak LTI 1.3, and this is the only row on these shelves that lets a studio test both sides of that handshake |
+
+### 🔴 The `language-learning` axis has 4 468 repositories and almost no platforms
+
+**Fifteen rows read off the axis; exactly one is a platform** (`LibreLingo`, AGPL-3.0, already
+carried). 🔵 **That is the same shape `p310` found on `academic-integrity` — many components,
+no platform — and for the same structural reason: language learning attaches to media, a
+browser, an input method or a text the learner already has.** The axis's own leaders say so:
+`read-frog` is a browser extension, `qingjian` is an input method, `LLPlayer` and `Memento` are
+media players, `yomitan` is a dictionary overlay, `asbplayer` is a subtitle miner.
+
+🟢 **Stated as the positive it is, because it is an engagement shape rather than a gap:** on this
+vertical the deployable artefact is a **component inside software the learner already uses**, not
+a platform they must be moved onto. 🔴 **And the licence profile makes that expensive** — 8 of 13
+rows are GPL/AGPL, and a browser extension or player shipped to a client is distribution.
+
+### 🟢 The deployable language-learning layer, by what a studio may actually ship
+
+| Component | Repo | Licence | Ships to a client? |
+|---|---|---|---|
+| Spoken-practice loop | [hahahumble/speechgpt](https://github.com/hahahumble/speechgpt) | 🟢 **MIT** | 🟢 **Yes** — STT → LLM → TTS, provider open |
+| Term-state model over a corpus | [LuteOrg/lute-v3](https://github.com/LuteOrg/lute-v3) | 🟢 **MIT** | 🟢 **Yes** — self-hosted, the schema is the asset |
+| Auditable grammar verdicts | [typedgrammar/typed-japanese](https://github.com/typedgrammar/typed-japanese) | 🟢 **MIT** | 🟢 **Yes**, as a method — Japanese only today |
+| System of record to hang it on | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** | 🟢 **Yes** |
+| In-page AI reading support | [mengxi-ream/read-frog](https://github.com/mengxi-ream/read-frog) | 🔴 GPL-3.0 | 🔴 **Not proprietarily** — best software on the axis, copyleft binds on distribution |
+| Subtitle mining / media | [asbplayer](https://github.com/asbplayer/asbplayer) · [LLPlayer](https://github.com/umlx5h/LLPlayer) · [Memento](https://github.com/ripose-jp/Memento) | 🔴 AGPL-3.0 / GPL-3.0 / GPL-2.0 | 🔴 **No** |
+| ~10 000 JLPT cards | [5mdld/anki-jlpt-decks](https://github.com/5mdld/anki-jlpt-decks) | 🔴 **CC-BY-NC-4.0** | 🔴 **No — noncommercial** |
+
+🔵 **Four MIT rows are the entire buildable surface of a 4 468-repo axis**, and two of the four
+are a tutorial artefact and a single-language formalisation. **Lead a language-learning
+engagement with the MIT component set plus the client's own content; never with a fork of the
+axis's best software.**
+
+### 🔵 Registered, not claimed
+
+- 🔴 **`openSIS-Classic`'s licence is a PROBE NIL, not a licence verdict.** Five paths, two
+  branches, all miss. The project may well state a grant in materials this base has not read.
+- 🟡 **No benchmark, uptime or deployment count is asserted for any platform above.** SEB's
+  standing in European universities is read from secondary sources and is **search-snippet
+  grade**, like everything in [`intel/`](../intel/).
+- 🟡 **`MPL-2.0`'s file-level reciprocity is stated as the licence reads**, not as legal advice;
+  a client engagement still needs counsel on which files a given fork modifies.
+- 🔴 **The `accessibility` axis was not enumerated** — the one vertical sub-axis whose supply
+  this base still cannot describe.
 
 ## 🟢 Pass 311 — THE SIS LAYER IS A REAL VERTICAL AND ITS MOST-STARRED PERMISSIVE ROW IS `MIT` AT `406`★; A `345`★ PROJECT ON THE SAME AXIS SERVES NO GRANT AT ALL
 

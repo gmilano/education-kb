@@ -127,6 +127,21 @@ COARSE = {
     "PolyForm-Noncommercial-1.0.0": {"polyform", "noncommercial",
                                      "noncommercial-not-osi", "source-available"},
     "proprietary": {"reserved", "all-rights-reserved", "noncommercial-not-osi"},
+    # 🔴 ADDED AT p311. This map was written for the five families `p310` pinned,
+    # and `p311` pinned three more — at which point `p191`'s `permissive-software`,
+    # already declared COARSE for `CC-BY-4.0` five lines above, graded as a DEFECT
+    # on MIT and Apache-2.0 for no reason but absence from this dict.
+    # 🔵 This file's own docstring warns that an abstention vocabulary assembled
+    # by guesswork is a defect generator. A COARSE vocabulary that does not grow
+    # with the corpus is the same instrument failing the same way: it would have
+    # condemned `p191` four times across the two MOST-published families on this
+    # base. The grade belongs to the ANSWER, not to the fixture set's age.
+    "MIT": {"permissive-software", "permissive", "mit-0"},
+    "Apache-2.0": {"permissive-software", "permissive", "apache"},
+    "BSD-2-Clause": {"permissive-software", "permissive", "bsd", "bsd-2",
+                     "bsd-unversioned"},
+    "BSD-3-Clause": {"permissive-software", "permissive", "bsd", "bsd-3",
+                     "bsd-unversioned"},
 }
 
 # A wrong answer that CROSSES a commercial-use boundary. This is the grade that

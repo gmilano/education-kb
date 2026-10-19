@@ -4,7 +4,7 @@ region: Global
 updated: 2026-10-19
 ---
 
-## 🟢 Pass 312 — two recipes, both composed only of rows whose grant this pass read first-hand
+## 🟢 Pass 313 — two recipes, both composed only of rows whose grant this pass read first-hand
 
 ### `P101` — The AGPL-safe education platform build *(all regions, 6–9 weeks)*
 
@@ -17,7 +17,7 @@ architecture: keep the AGPL core unmodified and put every billable change in sep
 services around it.**
 
 **The rows, each with its grant read first-hand this pass
-([ledger](../evidence/p312-payload-pins.2026-10-19-p312.tsv)):**
+([ledger](../evidence/p313-payload-pins.2026-10-19-p313.tsv)):**
 
 | role | repo | grant · bytes · sha | 🔵 why this row |
 |---|---|---|---|
@@ -81,6 +81,118 @@ to govern the whole architecture.
 5. 🔴 **No benchmark, no deployment, no named client.** The two SIS grants were read today; the
    rest is reasoning from them.
 
+
+## 🟢 Pass 312 — THREE RECIPES, EACH BUILT ONLY FROM ROWS WHOSE LICENCE THIS PASS READ FIRST-HAND
+
+⏱️ **Pass 312 of `2026-10-19`.** Evidence:
+[`p312-template-identity.2026-10-19-p312.tsv`](../evidence/p312-template-identity.2026-10-19-p312.tsv) ·
+[`p312-language-learning-axis.2026-10-19-p312.tsv`](../evidence/p312-language-learning-axis.2026-10-19-p312.tsv) ·
+[`p312-permissive-core-classifiers.2026-10-19-p312.tsv`](../evidence/p312-permissive-core-classifiers.2026-10-19-p312.tsv).
+
+🔵 **Rule applied to all three: no component enters a recipe unless its `LICENSE` payload was
+fetched at `p312`, returned HTTP 200, and its byte length and `sha256_12` are recorded.** Every
+copyleft row is named with the obligation it carries, and no recipe hides one.
+
+### 🟢 `P311-R1` — Permissive language-practice stack *(the only shippable composition on a 4 468-repo axis)*
+
+**Problem.** A client wants conversational language practice they can own and resell.
+🔴 **The best software on [`topic:language-learning`](https://github.com/topics/language-learning)
+is GPL/AGPL (8 of 13 rows), and the #1 row by stars is GPL-3.0.** A fork of it cannot ship
+proprietarily.
+
+**Wiring — four MIT rows and nothing else:**
+
+| step | component | licence *(first-hand)* | what it contributes |
+|---|---|---|---|
+| 1 | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** `1 094` B · `6051a15f4d44` | the **system of record** — learners, cohorts, enrolment, billing. Laravel + Filament |
+| 2 | [LuteOrg/lute-v3](https://github.com/LuteOrg/lute-v3) | 🟢 **MIT** `1 068` B · `28f65679a154` | the **learner model**: per-term known/learning/unknown state over the client's own texts. 🔵 Take the schema, not the UI |
+| 3 | [hahahumble/speechgpt](https://github.com/hahahumble/speechgpt) | 🟢 **MIT** `1 066` B · `c46c617ea9ce` | the **spoken-practice loop** — STT → LLM → TTS, provider left open |
+| 4 | [typedgrammar/typed-japanese](https://github.com/typedgrammar/typed-japanese) | 🟢 **MIT** `1 086` B · `53a8d8541918` | **auditable grammar verdicts** from a type checker, not a model opinion. 🟡 Japanese only — port the method per language |
+
+**How they join.** `lute-v3`'s term states select what step 3 drills: pull the learner's
+`learning`-state terms, hand them to `speechgpt` as the turn's target vocabulary, and write the
+outcome back as a state transition. `academico` owns identity and cohort so steps 2–3 stay
+stateless per learner. Step 4 gates generated practice sentences **before** they reach the
+learner — the one place in the stack that produces a verdict a client can audit.
+
+🔴 **What this recipe does NOT give you**, stated so nobody discovers it in week six: no
+spaced-repetition scheduler (`lute-v3` tracks state, it does not schedule), no content library
+(🔴 **`anki-jlpt-decks`' ~10 000 cards are `CC-BY-NC-4.0` and cannot be used**), no speech
+*scoring* — `speechgpt` transcribes and replies, it does not assess pronunciation.
+🟢 **Estimate: 8–10 weeks** to a pilot, of which the scheduler and content are the real cost.
+🔵 **Do not substitute `read-frog` or `LLPlayer` for step 3 to save time** — they are better
+software and GPL-3.0, and an extension or player shipped to a client is distribution.
+
+### 🟢 `P311-R2` — EMEA exam integrity you can OWN, against the `2027-12-02` clock
+
+**Problem.** An EU institution needs defensible assessment before Annex III duties bind on
+`2027-12-02`. 🔴 **`p310` sent this engagement to *"a conformity screen over the commercial stack
+they already bought"*. That was too pessimistic and this pass measured why.**
+
+| layer | component | licence *(first-hand)* | obligation to brief |
+|---|---|---|---|
+| **environment lockdown** | [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟢 **MPL-2.0** `16 726` B · `fab3dd6bdab2` · 355★ | 🟢 **File-level reciprocity only**: release changes to MPL files you modify; your surrounding code stays yours |
+| **assessment redesign** | [sam-illingworth/Integrity-Debt-Audit](https://github.com/sam-illingworth/Integrity-Debt-Audit) | 🟢 MIT *(carried, `p310`)* | none |
+| **similarity** | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | 🟢 MIT *(carried, 350★, Ghent)* | none |
+| **citation verification** | [constructorfabric/reference-audit](https://github.com/constructorfabric/reference-audit) | 🟢 **Apache-2.0** `11 357` B · `c71d239df917` | patent grant — the clause procurement asks for |
+| **AI-text signal** | [Imalwayshere/Open-Detector](https://github.com/Imalwayshere/Open-Detector) | 🟢 **MIT** `1 066` B · `2e7c69b15c38` | 🔴 **accuracy unreplicated — never sold as a determination** |
+| **interop** | [oat-sa/devkit-lti1p3](https://github.com/oat-sa/devkit-lti1p3) | 🔴 **GPL-2.0** `18 092` B · `8177f9751321` | 🔵 **Use as a DEV/TEST harness, not a shipped dependency** — then the obligation never attaches |
+
+**Order of work, and it is the opposite of the instinct.** Lead with **assessment redesign**;
+attach lockdown; attach similarity; attach citation verification. 🔴 **Attach the AI-text signal
+last and never as a determination** — Annex III makes an automated academic-integrity decision
+high-risk, and `Open-Detector`'s accuracy is the author's own unreplicated claim.
+🔴 **Do NOT add camera or keystroke behavioural monitoring.** `p310` established there is no
+usable open-source option (four prototypes, four different licence failures) and that
+`ExamShield`'s roadmap plans heart-rate and stress detection — **prohibited outright in education
+under Art 5(1)(f) if built.** 🟢 **Estimate: 10–12 weeks.**
+🔵 **Brief `EUPL-1.2` explicitly if the buyer is public-sector** — it is the likeliest licence
+requirement in EU public education, and until `p312` this base's own family census had no bucket
+for it.
+
+### 🟢 `P311-R3` — The licence-identity gate every one of the above depends on
+
+**Problem.** Each recipe asserts a licence. 🔴 **This base has published a MIT byte band four
+times, corrected it three times, and the band could never have closed** — because MIT's length is
+`constant(template) + len(copyright line)` and the holder is a free variable.
+
+**Wiring — all in-tree, all offline, all standing:**
+
+| step | instrument | what it answers |
+|---|---|---|
+| 1 | [`p312-template-identity/template_identity.py`](code/p312-template-identity/template_identity.py) | `form_of()` → **FILL-IN** or **FIXED-DOCUMENT** *(with the reason: `NO-DECLARATION`, `PLACEHOLDER-DECLARATION`, `MULTIPLE-DECLARATIONS`)*. 🔵 **Decide the form BEFORE comparing any length** |
+| 2 | same, `identify()` | match the **normalised template digest** → exact family regardless of holder; `UNKNOWN-TEMPLATE` otherwise. 🔵 **Never a nearest match** |
+| 3 | same, `appendix_prefix_of()` | for a fixed document, state the relation between two lengths as a **prefix + delta**, not a range |
+| 4 | [`p306-licence-probe`](code/p306-licence-probe/) + the 8 sibling classifiers | the family from the payload, graded by [`p310-family-coverage/run_families.py`](code/p310-family-coverage/run_families.py) |
+| 5 | `make family-coverage` | which published families still have **no pinned payload** — and the **unbucketed** report, so the denominator's own edge is printed |
+| 6 | `make carried SLUG=owner/repo` | 🔴 **is this row already on the shelves?** Run it **before** writing any supply headline |
+
+**Run it as:** `make gate-template-identity` *(80 controls, offline)* → `make family-coverage`
+→ `make hooks` *(**21/21 gates green** at `p312`)*.
+
+🟢 **What step 1 buys in practice, with the numbers:** a `10 173` B Apache-2.0 and a `32 423` B
+GPL-3.0 are **strict byte prefixes** of their canonical payloads — deltas exactly `1 184` B and
+`2 726` B, both the instructional appendix — so **neither is a defective grant and neither should
+be flagged.** 🔴 **And the rule has a measured boundary: GPL-2.0 shows three lengths across three
+real education repos with NO prefix relation**, because the FSF address differs
+(`51 Franklin St,` vs `51 Franklin Street,`) before the appendix is reached. 🔵 **Use the
+appendix count and the declaration count to discriminate, never the byte span** — which for
+GPL-2.0 is `2 883` B wide and conflates two orthogonal axes of variation.
+
+🔴 **And step 6 is in this recipe because `p310` skipped it.** It read `CARRIED` for two rows and
+published *"had never been enumerated"* anyway; its remedy then named three already-read topic
+axes as unread. 🟢 **At `p312` the same gate stopped 10 of 11 rows on two axes before a single one
+was written.**
+
+### 🔵 Registered, not claimed
+
+- 🔴 **No recipe above has been built or run end to end.** The components are licence-verified
+  and the joins are described; the week estimates are judgement, not measurement.
+- 🟡 **`MPL-2.0`'s file-level reciprocity is stated as the licence reads**, not as legal advice.
+- 🔴 **`P250`'s commercial-use column is still not importable**, so every "can ship" judgement
+  above is a human reading of the family, not an oracle's verdict — `ACTION p310-R` item 2,
+  **still open**.
+- 🟡 **`R1` step 4 is Japanese-only today.** The method transfers; the artefact does not.
 
 ## 🟢 Pass 311 — two recipes, both composed only of rows this pass read first-hand
 

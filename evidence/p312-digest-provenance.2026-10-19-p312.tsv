@@ -1,0 +1,9 @@
+claim	channel	value	verdict
+p97 published Open-Detector LICENSE digest	agents/trending.md:14544	62cc0b4655b5f3	REFUTED as a payload digest
+payload sha256 read first-hand at p311	raw.githubusercontent.com	2e7c69b15c38	CONFIRMED (1066 B, matches p310)
+exhaustive hash search over the 1066 B payload	19 algorithms x 7 normalisations	no match for 62cc0b4655b5f3	NOT A HASH OF THIS PAYLOAD
+full 40-hex value in p107-git-lane-census result	compose/code/p107-git-lane-census/result.2026-10-10.tsv:36	62cc0b4655b5f361388f493649bbd5c612dbf9a4	found
+same value in p109-freshness result, beside commit dates	compose/code/p109-freshness/result.2026-10-10.tsv:36	62cc0b4655b5f361388f493649bbd5c612dbf9a4	found
+same value truncated in the LICENCE-digest column	compose/code/p989-sha-identity-fork/results.2026-10-10.tsv:15	62cc0b4655b5f3	the transposition
+repository HEAD commit	git ls-remote (first-hand, p311)	62cc0b4655b5f361388f493649bbd5c612dbf9a4	CONFIRMED — refs/heads/main
+RESOLUTION	-	the cell is the HEAD COMMIT SHA, not a payload digest	p310's open item CLOSED
