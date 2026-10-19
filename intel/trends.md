@@ -6,6 +6,15 @@ updated: 2026-10-19
 
 # Current trends — education
 
+**Pass 326 · 2026-10-19 (twelfth pass of this date). Three trends added, one corrected.** The
+pass's finding is a 6.1 ★k curriculum dataset that eleven prior sweeps could not see, and it
+touches this file three times: as a **method** trend (the sweeps were agent-shaped and the asset
+is a data layer), as a **licensing** trend (ODbL's derivative-database / produced-work split makes
+share-alike data commercially usable, and the boundary is architectural), and as a **provenance**
+trend (the sector's best rights documentation came from a consumer app, not a ministry).
+**Trend 12's headline is corrected a second time** — the commercially usable curriculum artefact
+count goes from one to two, and the second one is multi-national.
+
 **Pass 320 · 2026-10-19 (sixth pass of this date). One trend reading is reinforced and one is
 newly separable.**
 
@@ -50,6 +59,91 @@ the metric this sector reports is unsound, which forces a correction to pass 318
 `lumen`. **Trend 11 is extended twice**: star solicitation has been productised with a unit test
 and a CI job, and the licences themselves — not just the descriptions of them — are drifting out
 of open source at the popular end of the market.
+
+## The data layer under the agents has never been swept, and it is where the sector's largest open assets are — NEW in p326
+
+🔴 **This is a method trend and it is the third consecutive refinement of the same defect, so the
+sequence is the finding.** p324: *a declared gap is a statement about the query.* p325: *a gap
+declared behind a star or recency filter is a statement about the filter.* **p326: a gap declared
+by an agent-shaped query is a statement about the shape of the query — and every education query
+this KB has ever run has been agent-shaped.**
+
+**The evidence is a single repository.** `withmarbleapp/os-taxonomy` — **6.1 ★k, 998 forks, public
+since 2026-07-08** — is larger by stars than every artefact in `agents/top.md` except `DeepTutor`,
+and **eleven passes of sweeps across three instruments never returned it.** The reason is
+mechanical rather than mysterious: the repository has **no GitHub description, no topics and no
+detected language.** GitHub renders *"No description, website, or topics provided"* and an empty
+Languages panel. **It is a directory of JSON.** Keyword sweeps on `agent`, `tutor`, `MCP`,
+`skill` and `assistant` cannot reach it; topic sweeps cannot reach it; a language filter removes
+it. **At 6.1 ★k.**
+
+🟢 **Why this is a trend about the sector and not only about this KB's hygiene.** The assets that
+survive a model generation in education are **not** the agents. An MCP tutor written this quarter
+is replaced next quarter. **A verified prerequisite graph over a national curriculum is replaced
+when the curriculum changes — which is a decade.** This KB has been arguing that in trend 12 since
+p319 while searching exclusively on the axis that *cannot see it*. 🔵 **The practical rule for
+every industry KB, not just this one: sweep the agent axis and the data axis separately, with
+different vocabulary — `dataset`, `taxonomy`, `graph`, `standards`, `corpus`, `benchmark`, `JSON`
+— and never let a language or topic filter near the second.**
+
+🟡 **And the counterpart risk, which this pass can state because it measured both channels in one
+run.** Novelty on the agent channel this pass was **0 of 7**. Novelty on the data channel was
+**1 of 1, first query**. **Neither number is stable enough to forecast from** — one pass is one
+pass — but the asymmetry is large enough to change where the next pass spends its budget.
+
+## The share-alike dataset is a commercial asset, and the boundary is architectural — NEW in p326
+
+**This KB has treated share-alike as a near-synonym for unusable, and on code that is roughly
+right.** `cn-math-taxonomy` is CC BY-NC and cannot enter a deliverable at all; K12-KGraph's data
+is CC BY-NC-SA; the LMS tier's GPL and AGPL drive the integration boundary that pattern P8 exists
+to manage. 🟢 **ODbL is a different instrument and the difference is worth money.**
+
+**ODbL distinguishes a *derivative database* from a *produced work*.** Modify the dataset and your
+modified dataset must be published under ODbL. **Use the dataset inside a product, a model or an
+application and the product is yours.** So a commercial tutor built on an ODbL curriculum graph
+**does not open-source itself** — it owes back only improvements to the graph.
+
+🔵 **Which makes the obligation an architecture question rather than a legal one, and
+`tbh-23/Homestead` (MIT, 15 ★) has already answered it.** It **fetches the taxonomy from upstream
+at runtime, caches it outside the repository, instructs that it must never be committed, and
+notifies when upstream topics are added or removed.** The ODbL database is therefore never inside
+the MIT product — **the licence boundary is enforced by the build, not by a policy document.**
+Client-specific extensions belong in an overlay keyed by topic ID, not in edits to the graph.
+That is **P13**.
+
+🟢 **The commercial reading for a public-sector buyer inverts the usual objection.** Share-alike on
+a client's jurisdiction extension means **the client's curriculum work becomes a public asset with
+their name on it** — which is what a ministry wants and what a procurement officer can defend.
+**Lead with it in public-sector bids; design around it in private edtech ones.**
+
+## Public-sector provenance is not the predictor of data quality either — NEW in p326
+
+**p325 retired the idea that public funding predicts a licence posture, and found the operator's
+engineering maturity predicted it instead. This pass extends the same correction to data
+quality.** The best-documented rights provenance this KB has seen in the sector was published by
+**a venture-backed consumer app**, not by a ministry or a university.
+
+`os-taxonomy`'s `PROVENANCE.md` does per-source licence analysis across seven curricula, ships
+**codes-only** for the four it cannot redistribute, and enforces that mechanically: the export
+**omits any passage matching eight or more consecutive words of a codes-only framework's stored
+text**, case- and punctuation-insensitive, **marks every omission inline with the curriculum code
+and logs it by JSON path** in `publicationNotes.omittedCurriculumText`. It then states, unasked,
+that the pass *"is not comprehensive rights clearance"* and that shorter excerpts may remain.
+
+🟢 **Two more things this KB has asked of every curriculum artefact and received from none until
+now:** **SHA-256 per shipped file in a manifest** — `topics.json` verified against its published
+hash this pass — and **a dataset that enumerates its own holes**, naming the **540 of 1,591
+topics** with no teaching research and breaking the absence down by subject rather than leaving it
+to be discovered. 🔵 **Trend 11 has recorded unreliable metadata in both directions for eight
+passes. This is its first clean positive instance, and the discipline — codes-only export, logged
+omissions, per-file checksums, declared coverage — is a checklist to put to every other data
+supplier in this sector.**
+
+🔴 **Keep the limits in the same breath, because the same README states them.** The teaching
+research is **agent-authored**, its sources **were not re-verified for this release**, and its
+activities are **"research-informed proposals, not empirically validated interventions."** Good
+provenance on rights is not evidence of instructional effect, and this file should not let the
+first be read as the second.
 
 ## Public funding does not predict a licence posture — the operator's engineering maturity does — NEW in p325
 
@@ -832,7 +926,38 @@ PageLM's feature set, cn-math-taxonomy's prerequisite graph, advisingapp's stude
 model, lumen's eval harness and LTLTutor's misconception modelling is genuinely valuable. It is
 just not a bill of materials.
 
-## 12. Curriculum-standard data is the real moat — two countries have built it, and exactly one licensed it for commercial use — NEW in p319, **headline corrected in p323**
+## 12. Curriculum-standard data is the real moat — it has now been built three times, licensed for commercial use twice, and the moat has moved from the graph to the evidence — NEW in p319, **headline corrected in p323 and again in p326**
+
+> **🟢 SECOND CORRECTION, pass 326 — the count goes to two, and the new one is not a country.**
+> This trend has counted *national* curricula and asked which of them Globant can ship.
+> `withmarbleapp/os-taxonomy` **does not fit the question**, which is why eleven passes of sweeps
+> shaped by the question never returned it. It is **one dataset spanning seven curricula across
+> three jurisdictions** — UK National Curriculum 2013, Common Core ELA and Math, NGSS K-5 and MS,
+> C3 Social Studies, IB PYP PSPE — **1,591 micro-topics, 3,225 prerequisite edges (2,030 hard /
+> 1,195 soft, every one carrying a prose reason), ages 4–15, 2,189 topic→standard links**, under
+> **ODbL-1.0 + CC BY-SA 4.0 at 6.1 ★k.** Full read in `repos/foundations.md`; licence reasoning in
+> *"The share-alike dataset is a commercial asset"* above.
+>
+> **So the sentence changes again: the artefact has now been built three times and licensed for
+> commercial use twice** — Brazil's `bncc-dev` (MIT pipeline, CC BY 4.0 data, one country) and
+> Marble's taxonomy (ODbL + CC BY-SA, seven curricula, share-alike). K12-KGraph's CC BY-NC-SA data
+> still cannot enter client work.
+>
+> 🔵 **And the moat claim survives in a changed form, which is the part to carry into a bid.** The
+> graph is now free, so **nobody can sell a client a curriculum spine any more.** What is still
+> scarce — and what `os-taxonomy` explicitly does *not* provide — is **evidence that teaching it in
+> this order works.** Its own teaching-research layer is agent-authored, unverified for this
+> release, covers **1,051 of 1,591 topics** and is, in its own words, *"research-informed
+> proposals, not empirically validated interventions."* **The moat moved from the graph to the
+> evidence**, which is exactly where trend 9 and the evaluation tier in `agents/top.md` have been
+> pointing, and where this KB's one measured classroom outcome (Panama, pattern P12) sits.
+>
+> 🔴 **Two limits before quoting it in a jurisdiction bid.** The age band stops at **11** while the
+> literacy mandates it serves — Illinois HB 316 at grades 6–12 among them — run higher. And
+> **four of the seven curricula ship codes only** (NGSS K-5, NGSS MS, C3, IB PYP PSPE) because
+> their upstream terms forbid redistribution; **Common Core ships in full but stays under the
+> purpose-limited CCSS Public License rather than ODbL.** The topic→standard links are intact
+> throughout, so alignment claims survive everywhere; verbatim standard text does not.
 
 > **🔴 CORRECTION, pass 323.** This trend's headline read *"exactly one country has built it"* for
 > four passes. **It was wrong, and the artefact that disproves it has 420 stars and a NeurIPS 2026

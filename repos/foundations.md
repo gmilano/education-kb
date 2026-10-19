@@ -6,6 +6,59 @@ updated: 2026-10-19
 
 # Foundational repos — education
 
+## Pass 326 · 2026-10-19 (twelfth pass of this date) — fifty-eight rows, and the first of them is not code
+
+**Two rows added — fifty-eight total. Both licences read first-hand on the `raw` channel over the
+seven-filename probe space across both candidate branch names.** 🟢 **The headline row is the
+largest open artefact this KB has found in the education sector that is not a model or a
+framework: `withmarbleapp/os-taxonomy`, 6.1 ★k, 998 forks, 23 commits — a curriculum prerequisite
+graph with no code in it at all.**
+
+🔵 **It is in *this* file rather than only in `agents/top.md` because it is the layer everything
+else in this KB sits on top of.** Every pattern in `compose/patterns.md` from P1 onward assumes a
+client supplies a curriculum spine. **P10 was written because exactly one existed and it covered
+one country.** This one covers **seven curricula across the UK, the US and the IB**, and unlike
+`cn-math-taxonomy` (CC BY-NC) it can enter a commercial deliverable.
+
+### What was measured, and how
+
+**Licence, first-hand:** `main/LICENSE` and `master/LICENSE` both return 200; the file is **25,289
+bytes of genuine Open Data Commons ODbL 1.0 text** (`LICENSE.md`, `LICENSE.txt`, `COPYING` all
+404 on both branches — the seven-name probe space is still not optional). The README declares the
+split: **ODbL-1.0 for the database** (collection, structure, IDs, relationships) and **CC BY-SA
+4.0 for Marble-authored text** (names, descriptions, evidence, prompts, dependency reasons,
+cluster summaries). The GitHub sidebar agrees: *"ODbL-1.0, CC-BY-SA-4.0 licenses found."*
+
+**Integrity, first-hand:** `data/manifest.json` carries a SHA-256 per shipped file.
+`topics.json` fetched this pass hashes to
+`5aa40906ed0095c8af49c8bc2827fa3f10e214892563ea4156c6cde32f9b7e9d` — **the manifest's exact
+value.** 🟢 **This is the first dataset in this KB whose contents can be verified against its own
+published checksums, and it is the single cheapest thing to ask of every other curriculum
+artefact here.**
+
+**Freshness, first-hand, and it corrects every secondary description of this repo in circulation:**
+`manifest.generatedAt` is **`2026-10-19T17:32:15.492Z`** — regenerated today. Every roundup and
+mirror describing this dataset reports **1,590 topics and 3,221 edges** from the July v1
+announcement. **The file as shipped today is 1,591 and 3,225.** 🔵 **Small drift, but it is the
+reason this KB pins releases and records checksums rather than quoting a blog: a curriculum that
+moves silently under a tutor is a correctness incident, and this one moves.**
+
+### The rows
+
+| Repo | Licence | ★ | Checked | Layer | Why it is foundational |
+|---|---|---|---|---|---|
+| https://github.com/withmarbleapp/os-taxonomy | 🟢 **ODbL-1.0 (database) + CC BY-SA 4.0 (text)** — `LICENSE` read first-hand on both branches, 25,289 bytes of genuine ODbL text; sidebar agrees. 🔵 **Share-alike, and still commercial**: ODbL binds a *derivative database*, not a *produced work*, so a product built on the graph stays yours. 🔴 `data/curriculum-standards.json` is **not Marble's to relicense** — per-source terms in `PROVENANCE.md` | 6.1k | p326 | **Curriculum data — the spine every pattern in this KB assumed a client would supply** | **1,591 micro-topics, 3,225 prerequisite edges (2,030 hard / 1,195 soft, 100% carrying a prose reason), ages 4–15, eight subjects, 2,189 links into 3,261 standards from seven curricula** (UK NC 2013, CCSS ELA, CCSS Math, NGSS K-5, NGSS MS, C3 Social Studies, IB PYP PSPE). Every topic carries an `assessmentPrompt`; 1,556 carry observable `evidence` descriptors. Ships SHA-256 per file. Separate 23.5 MB `teaching-research.json` covering 1,051 topics — **and naming the 540 it does not cover.** 998 forks, 23 commits, v1 public since 2026-07-08 · **Use it for:** the prerequisite ordering, the age banding and the mastery checks under any tutor; and as the **AI-literacy curriculum** — the entire `Computing` subject is 21 AI topics for ages 5–11 |
+| https://github.com/tbh-23/Homestead | 🟢 **MIT** — `LICENSE` read first-hand, *MIT License, `Copyright (c) 2026 Homestead`*, 1,573 bytes. Curriculum data stays under its own ODbL/CC BY-SA terms and is **not vendored** | 15 | p326 | **Reference consumer — the licence boundary, implemented** | **The worked example of how to build a proprietary product on a share-alike dataset.** Fetches `os-taxonomy` from upstream at runtime, caches it outside the repository, and **notifies on upstream topic additions and removals**; the README instructs that the dataset must not be committed. 90%+ mastery gate, independently re-solved mastery tests, Leitner spaced repetition, spaced retry, AI coach grounded in learner progress. 41 commits, 2 forks · **Use it for:** **P13** — and read its attribution string, which is the one ODbL and CC BY-SA actually require |
+
+🔴 **The one thing to check before quoting standard text in a bid.** Four of the seven curricula
+ship **codes only** — `ngss-k5`, `ngss-ms`, `c3-social-studies`, `ib-pyp-pspe` — because their
+upstream terms do not permit redistribution. **UK NC 2013 ships in full under OGL v3**
+(commercial, no share-alike, fixed attribution notice). **Common Core ships in full but remains
+under the purpose-limited CCSS Public License**, which does not clearly grant derivative or
+sublicensing rights — **so the CCSS records are not ODbL even though they sit in an ODbL
+database.** **NGSS is a registered WestEd trademark and commercial use carries a sample-approval
+requirement.** The topic→standard links are unaffected throughout.
+
 ## Pass 325 · 2026-10-19 (eleventh pass of this date) — fifty-six rows, and the eight that were here all along
 
 **Eight rows added — fifty-six total. Every licence below was read first-hand on the `raw` channel

@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 326 — the agent channel returned 0% novelty and the data channel returned 100%
+
+**Twelfth pass of 2026-10-19.** 🔵 **This file is APPEND-ONLY. Everything below this section is
+prior history and stays.**
+
+**Eight queries run: four global, four regional.** The agent-shaped channel returned seven
+repositories and **this KB already held all seven.** The one new artefact of the pass came from a
+channel this base had never swept.
+
+### The agent channel — seven finds, seven already here
+
+| returned | status |
+|---|---|
+| `kvnloo/tutor-mcp` | already held — and still the **second** repo publishing `ArnaudGuiovanna/tutor-mcp`'s exact tagline verbatim |
+| `mizcausevic-dev/mcp-ai-tutor` | already held — AI Tutor Card disclosures, FERPA/COPPA procurement audit |
+| `nirholas/ai-tutor-mcp` | already held |
+| `mohaneesh-03/mcp-tutor` | already held |
+| `GarethManning/education-agent-skills` | already held — 165 skills; **note its hosted MCP endpoint now requires an auth token**, which it did not when this KB first read it |
+| `zijinz456/OpenTutor` | already held |
+| `rohitg00/ai-engineering-from-scratch` | already held — a course, not an agent |
+
+🔵 **Novelty on this channel: 0 of 7.** p325 measured 36% novelty on a broad sweep and called
+discovery saturated. **One pass later the agent axis returns nothing at all.** Reading the two
+measurements together: **the saturation is real and it is axis-specific.**
+
+### The data channel — never swept before, and the first query hit
+
+🟢 **`withmarbleapp/os-taxonomy` — ODbL-1.0 + CC BY-SA 4.0, 6.1 ★k, 998 forks, 23 commits, public
+since 2026-07-08.** The **Marble Skill Taxonomy**: 1,591 micro-topics, 3,225 prerequisite edges
+(2,030 hard / 1,195 soft, **every one carrying a prose reason**), ages 4–15, eight subjects,
+2,189 links into 3,261 standards from **seven national curricula**. Every topic ships an
+`assessmentPrompt`; 1,556 ship observable `evidence` descriptors. **SHA-256 per file in
+`data/manifest.json`, and the `topics.json` fetched this pass matches its published hash.** Full
+read in `repos/foundations.md`.
+
+🔴 **Why eleven passes missed a 6.1 ★k repository: it has no description, no topics and no
+detected language.** GitHub renders *"No description, website, or topics provided"* and an empty
+Languages panel. **It is JSON.** Every education query this KB has ever run has been shaped like
+an agent. 🔵 **The rule, and it is the third refinement of the declared-gap discount in three
+passes — p324: a declared gap is a statement about the query; p325: about the filter; p326: about
+the *shape* of the query. An agent-shaped sweep cannot see the data layer the agents stand on.**
+
+🟢 **`tbh-23/Homestead` — MIT (`LICENSE` read first-hand, 1,573 bytes), 15 ★, 41 commits, 2
+forks.** The taxonomy's reference consumer and the reason this is an agents finding and not only a
+data one: a mastery platform for ages 5–13 that **fetches the dataset at runtime and refuses to
+vendor it**, keeping the ODbL database outside the MIT product. 90%+ mastery gate, mastery-test
+answers independently re-solved, Leitner spaced repetition, AI coach grounded in learner progress.
+Promoted to the table in `agents/top.md`; the architecture is **P13**.
+
+- **`simgue/harrington` — MIT (Homestead's own LICENSE file, read first-hand), 0 ★, 211 commits.**
+  A one-family fork of Homestead: no chat, lesson generation off by default, Ollama documented as
+  the local endpoint, **learner names replaced before prompts are built.** Recorded below the
+  listing bar — it is evidence of downstream uptake, which at 998 forks was otherwise unmeasured.
+
+### Regional reading of this pass's sweep
+
+- **North America** — `Illinois HB 316` (AI literacy, grades 6–12, effective **2026-08-01**) was
+  in `intel/policy-matrix.tsv` and **never in the market prose**; promoted this pass. No new
+  supply.
+- **EMEA** — the AI Act timeline re-confirmed against this KB's existing record and **unchanged**:
+  Regulation (EU) 2026/1744, Annex III education → **2027-12-02**, Article 50 live since
+  **2026-08-02**. **No new EMEA supply, and the three-pass declared gap — no named EMEA
+  education-AI vendor list, no primary-source national school AI policy — stands.**
+- **APAC** — nothing new. India's Class-3 AI mandate for AY 2026–27 and the UAE K-12 curriculum
+  are already carried. 🔴 **Declared gap: no APAC-authored curriculum dataset at any licence was
+  found on the data channel this pass**, which is notable now that the channel is known to work.
+- **LATAM** — **no new supply.** One regulatory addition, in `intel/market.md`: **Chile's Ley
+  21.719.** 🔴 **And one claim rejected: "Ley Nahui" surfaced in the LATAM sweep as a Mexican AI
+  bill and a direct verification search found no bill, author or document of that name.** Not
+  written to any file. Mexico's real position is unchanged — no general AI law, the Senate's
+  *Ley Nacional para Regular el Uso de la Inteligencia Artificial* stalled in committee.
+
 ## 2026-10-19 — Pass 325 — twenty of twenty-five finds were already here, and the nine-pass LTI gap became a diagnosis
 
 **Eleventh pass of 2026-10-19.** 🔵 **This file is APPEND-ONLY. Everything below this section is

@@ -6,6 +6,21 @@ updated: 2026-10-19
 
 # Market intelligence — education
 
+**Pass 326 · 2026-10-19 (twelfth pass of this date).** **One regional regulatory addition, one
+promotion out of the policy matrix into prose, one new market actor, and one claim rejected
+before it reached this file.** No market-size figure moved. The supply finding of this pass is in
+`repos/foundations.md` and it has a market reading: **the sector's largest open curriculum
+dataset is published by a venture-funded consumer edtech, not by a ministry or a university** —
+see *Key players* below.
+
+🔴 **Rejected before writing: "Ley Nahui."** The LATAM sweep returned it as a Mexican AI bill. A
+direct verification search found **no bill, no author and no document of that name** in the
+Gaceta Parlamentaria results or anywhere else. **It is not in this file and the next pass should
+not re-find it.** Mexico's actual position is unchanged and already carried here: no general AI
+law published in the DOF; the Senate's *Ley Nacional para Regular el Uso de la Inteligencia
+Artificial* (Sen. Karina Isabel Ruíz Ruíz, MORENA) **stalled in committee**; a PRI general-law
+bill received by the Permanent Commission in June 2026; sectoral rules advancing instead.
+
 **Pass 320 · 2026-10-19 (sixth pass of this date).** This pass adds **regional regulation only** —
 no market-size figure moved and no new player was found. Four additions and one reconciliation:
 **Taiwan** enters this file for the first time (AI Basic Act, December 2025; implementing committee,
@@ -175,6 +190,19 @@ tested range from 88% down to 3%. **This is first-hand, reproducible and regiona
 it is the answer to "why not just use ChatGPT?" in one line.**
 
 ## Key players — who the client is already talking to
+
+**New actor, new category — the curriculum-data publisher (p326).** **Generative Spark, Inc.
+(Marble)** — a consumer learning app — published the **Marble Skill Taxonomy** on 2026-07-08 as
+`withmarbleapp/os-taxonomy`: **1,591 micro-topics, 3,225 prerequisite edges, seven national
+curricula, ODbL-1.0 + CC BY-SA 4.0, 6.1 ★k, 998 forks.** 🔵 **The market reading is the publisher,
+not the dataset.** This KB's trend 12 has assumed curriculum-standard data comes from ministries
+(Brazil's BNCC), national operators (France's FUN, Germany's `openeduhub`) or universities. **This
+one came from a venture-backed consumer edtech that gave away the asset its own product is built
+on**, under a share-alike licence that keeps improvements flowing back to it. 🟢 **That is a
+commons-as-moat play and it is the first in this sector this KB has recorded.** For a studio it
+cuts both ways: **the spine is free, so nobody can sell the client a curriculum graph any more** —
+and the differentiation moves to what the client's own jurisdiction, assessment evidence and
+delivery add on top of it.
 
 **Global / model layer:** Anthropic (Claude for Education, Socratic "Learning Mode", institutional
 deals) · Google (free Gemini for college students through 2026 — the volume play) · OpenAI ($50M to
@@ -603,6 +631,23 @@ anything about my institution?" that is not a bespoke integration — and becaus
 
 ### North America
 
+#### Illinois HB 316 — promoted out of `intel/policy-matrix.tsv` into this file (p326)
+
+**It has been in this KB's policy matrix and never in the market prose, which is where a studio
+lead actually reads.** **HB 316 requires AI literacy instruction for grades 6–12 statewide and
+takes effect 2026-08-01** — reported to have become law without the governor's signature. 🟡
+**Single-source and secondary**; the matrix row carries the same caveat. Verify against the
+Illinois General Assembly before quoting it in a bid.
+
+🟢 **Why it is worth promoting now rather than at re-verification:** it is the **fourth** US
+jurisdiction in this file on the *literacy* motion — with **California AB 2876**, **Utah H.B.
+273** and the Georgia/Mississippi CS-credit route — and p320 separated that motion from the
+*guardrail* motion precisely because they land with different budget holders. **As of this pass
+the literacy motion has a sequenced, commercially licensable, age-banded curriculum asset behind
+it** (`withmarbleapp/os-taxonomy`, 21 AI topics, ages 5–11, ODbL + CC BY-SA). 🔴 **Mind the gap
+in the gap: HB 316 is grades 6–12 and the open asset stops at age 11.** The spine is real; the
+upper-secondary extension is scope, and should be priced as scope.
+
 > **Pass 323 — the regional search produced new primary-ish detail on the statute layer, and it
 > sharpens P3 rather than changing it.** Three items are new to this file and one existing item is
 > now dated precisely:
@@ -936,6 +981,49 @@ price it as greenfield, because there is nothing to fork.
 
 ### LATAM
 
+### 🟢 Chile's Ley 21.719 is the region's nearest dated compliance deadline — and it is six weeks out (added p326)
+
+**New to this file.** Chile's **Ley 21.719** on the protection of personal data was **published
+2024-12-13** and its first transitional article sets entry into force at **the first day of the
+twenty-fourth month after publication — 2026-12-01.** 🔵 **That is the closest hard date in this
+KB's whole LATAM record, and no education engagement scoped in Chile this quarter can ignore it.**
+
+**What it does to an education deal, concretely:**
+- It is a **GDPR-shaped regime** — lawful basis, data-subject rights, breach notification, a new
+  supervisory **Agencia de Protección de Datos Personales** — landing on a sector whose data is
+  **minors' data by default.**
+- **Penalties** are cited at up to **20,000 UTM**, rising to up to **4% of annual revenue** for
+  repeated violations.
+- If the 2026 date holds, the Agency may issue **written warnings instead of fines to smaller
+  entities for the first twelve months** — a grace period, not an exemption.
+
+🔴 **Two caveats, and both change how you should advise.** **(1) A delay bill is live.** The
+government filed **boletín 18.623-07 on 2026-09-01** to push entry into force to **2027-12-01**;
+as of **2026-10-11** it was in first reading in the Constitution Committee with no report and no
+vote, with *suma urgencia* renewed **2026-10-06**. **The legal default remains 2026-12-01 until
+that bill passes and is published.** **(2) The Agency does not exist yet.** The Senate rejected
+the President's nominees for its council in **May 2026** and the June deadline to seat the first
+council passed unmet. 🔵 **Advise to the statute, not to the forecast:** build the consent,
+minimisation and breach-notification surface now — it is required under either date — and treat
+the Agency's absence as a reason the enforcement ramp is uncertain, never as a reason the
+obligation is.
+
+🟢 **The architecture this KB already holds is the answer to it, and it is LATAM-authored.**
+`JustinoLM/STI-matematicas` (Panama) keeps **no student data**, hashes with **Argon2**, scopes
+teachers to their own groups, and **substitutes anonymous placeholders server-side so prompts
+never carry student names.** **That is a Ley 21.719–shaped design built before the law bites, by
+a graduating student in a public school.** It carries no licence, so copy the design, not the
+code — pattern **P12**.
+
+🟡 **Regional frame, unchanged and worth restating against this date.** Brazil and Peru have the
+more consolidated frameworks; Chile and Argentina advance through ethical and institutional
+guidance; Mexico and Ecuador are early. A 2026 survey finding already carried in spirit here now
+has a figure attached: **~70% of institutions in Europe and North America have or are developing
+AI guidance, against ~45% in Latin America and the Caribbean.** 🔴 **Secondary source, directional
+only.** **Higher education across the region has no unified AI framework** — though a México /
+Colombia / Chile comparison found all three require students to **declare when and why they used
+AI**, which is a disclosure obligation a product can be built to satisfy.
+
 ### 🟢 The region's first measured classroom outcome — Panama, and it belongs in this file (added p325)
 
 **This KB has held `JustinoLM/STI-matematicas` since an earlier pass and this file never carried its
@@ -1090,6 +1178,40 @@ require a sovereign model.
 
 ## Declared regional gaps — what was searched this pass and not found
 
+
+### Pass 326 — what was searched per region, and what came back
+
+**Four regional queries, run as prescribed. Reported as findings, including the empty ones, because
+silence and coverage look identical in a file like this.**
+
+- **North America — one promotion, no new intelligence.** The sweep returned US *state* policy only
+  and **nothing on Canada or Mexico at the federal level**, which is now the **second consecutive
+  pass** with no Canadian education-AI policy from this channel. Every state item returned (Ohio's
+  2026-07-01 board-policy deadline, Maryland SB 720's AI coordinator, Idaho SB 1227, Oklahoma's
+  parent opt-out, Georgia, Mississippi) **was already carried here.** Only **Illinois HB 316** was
+  new to the prose, and it was already in the policy matrix. 🔴 **Declared gap, new: no
+  primary-source Canadian provincial or federal AI-in-education policy anywhere in this file.**
+- **EMEA — fully re-confirmed, nothing added.** The AI Act dates this file already carries were
+  returned independently and **matched on every value**: Regulation (EU) 2026/1744, Annex III
+  education deferred to **2027-12-02**, Article 50 transparency live since **2026-08-02**, the
+  emotion-recognition ban in educational institutions live since Feb 2025. 🔴 **The
+  three-pass declared gap is now four passes old and unchanged: this KB still has no named EMEA
+  education-AI vendor list and no primary-source national school AI policy for any single European
+  country.** The channel keeps returning the Act and never the countries.
+- **APAC — nothing new from either channel.** India's AI and computational-thinking mandate **from
+  Class 3 in AY 2026–27** and the **UAE** national K-12 AI curriculum are already carried. New but
+  secondary and not written as fact elsewhere in this file: Microsoft Q2-2026 usage figures of
+  **17.5%** of working-age people in China and **24.7%** in Japan (**34.5%** of Japanese firms on
+  generative AI), and Ipsos support for **banning AI in schools** at **26% India / 29% Japan / 31%
+  South Korea**, higher in Australia and New Zealand. 🔴 **Declared gap, new and now specific: the
+  data channel that found this pass's largest artefact returned no APAC-authored curriculum dataset
+  at any licence.** The channel is known to work; the absence is therefore informative.
+- **LATAM — one real addition, one rejection.** Added: **Chile's Ley 21.719**, above. Rejected:
+  **"Ley Nahui"**, which does not appear to exist. 🔴 **Declared gap, unchanged: no classroom
+  adoption figures — teacher or student usage rates — for any LATAM country.** The regional
+  channel returns regulation and forecasts; it has never returned usage. The only measured
+  classroom numbers in this file remain Panama's, and they came from a repository, not from a
+  survey.
 
 **Pass 325 — the battery ran in full for the FIFTH consecutive saturated pass, it produced exactly
 one new figure, and that figure is worse news than the gap it fills.** Recorded in full, because an

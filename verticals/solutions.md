@@ -6,6 +6,59 @@ updated: 2026-10-19
 
 # Vertical platforms — education
 
+## Pass 326 — the platform tier did not move, and the layer that did move goes *underneath* it
+
+🔴 **The prescribed `open source platform education ERP CRM MIT Apache` query returned nothing new
+for the fourth consecutive pass.** It surfaced OpenOLAT, Frappe LMS, Sakai, OpenEduCat, Moodle,
+Open edX, Canvas, RosarioSIS and Gibbon — **every one already in this KB or its gap list.** 🔵
+**Record it as a measured result, not as silence: the permissive education-platform shelf is
+enumerated, and this file has now re-walked it four times without adding a row.**
+
+🟢 **What did arrive is a tier this file has never had — the curriculum data that plugs under all
+of them.** `withmarbleapp/os-taxonomy` (**ODbL-1.0 + CC BY-SA 4.0**, 6.1 ★k, read first-hand this
+pass — see `repos/foundations.md`) is **1,591 micro-topics and 3,225 prerequisite edges across
+seven national curricula.** It is not a platform and does not compete with one. **It is the thing
+Moodle, Open edX, Canvas and Chamilo each expect the institution to supply and none of them
+ships.**
+
+| platform | licence | what it already has | what the taxonomy adds underneath it |
+|---|---|---|---|
+| **Moodle** | GPL-3.0 | Competency frameworks and learning plans, **empty on install** | A populated competency framework with **prerequisite ordering and age bands** — the part an institution normally pays a consultancy to author |
+| **Open edX** | AGPL-3.0 | Course structure, no cross-course skill model | A skill graph spanning courses, so prerequisite gaps are detectable across a programme rather than within a unit |
+| **Canvas** | AGPL-3.0 | Outcomes and rubrics, institution-authored | 1,591 outcomes with **1,591 ready assessment prompts** and 1,556 observable `evidence` descriptors |
+| **`openfun/joanie`** (MIT) | 🟢 MIT | Headless enrolment, orders, certification | The *content* model Joanie deliberately does not own — it stays headless, the taxonomy stays the spine |
+| **`openfun/ralph`** (MIT) | 🟢 MIT | xAPI learning records | A stable topic ID to key every xAPI statement to, which is what makes mastery computable rather than merely logged |
+
+🔵 **The deployment note that matters for a platform integration, and it is not the usual
+copyleft warning.** The ODbL obligation attaches to the **database**, not to the application.
+Loading the taxonomy into a Moodle competency framework and running a tutor against it is a
+*produced work* and triggers nothing; **extending the graph — adding topics, adding edges,
+re-banding ages for a client's jurisdiction — produces a derivative database and that must be
+published under ODbL.** 🟢 **For a public-sector or ministry client that is usually a selling
+point rather than an objection:** the client's curriculum extension becomes a public asset with
+their name on it. **For a private edtech it is a boundary to design for** — keep client-specific
+extensions in a separate overlay table keyed by topic ID, rather than editing the graph in place.
+`tbh-23/Homestead` (MIT, 15 ★) implements exactly this boundary and is worth reading before
+wiring it into any platform; see **P13**.
+
+### Two licences re-read first-hand this pass, because the roundups disagreed
+
+- 🟢 **Sakai is ECL-2.0, and this KB was already right.** A 2026 comparison listed it as "Apache
+  2.0" and another as "ECL v2" in the same breath. `master/LICENSE` read first-hand: *"Educational
+  Community License, Version 2.0 (ECL-2.0) … consists of the Apache 2.0 license, modified to change
+  the scope of the patent grant in section 3 to be specific to the needs of the education
+  communities using this license."* **Both descriptions are reaching for the same fact and only
+  one is correct.** The distinction is not cosmetic — **the patent grant is narrower than Apache
+  2.0's** — and it is the kind of thing a client's counsel will find after the proposal has gone
+  out. This file's row stands unchanged.
+- 🟢 **Gibbon is GPL-3.0 specifically**, not the unversioned "GPL" the comparisons print.
+  `GibbonEdu/core` `master/LICENSE` and `main/LICENSE` both return 200; the file is **35,121 bytes
+  of GNU GPL v3 text.** An all-in-one K-12 school-management platform (admissions, timetabling,
+  attendance, behaviour, markbook) — **the LMS/SIS hybrid the OpenEduCat row describes, at a
+  different licence.** 🔴 **Recorded here rather than added as a row: it has no AI surface of its
+  own, so it belongs on the far side of the integration boundary like Moodle and i-Educar** — the
+  agent sits beside it, never inside it.
+
 ## Pass 325 — the permissive education ERP exists, it is headless, and it was in this KB's history for 198 passes
 
 🔴 **The prescribed `open source platform education ERP CRM MIT Apache` query returned nothing new

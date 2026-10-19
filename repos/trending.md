@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 326 — a 6.1 ★k education repository with no description, no topics and no language
+
+**Twelfth pass of 2026-10-19.** 🔵 **This file is APPEND-ONLY. Everything below this section is
+prior history and stays.**
+
+🟢 **One new repository, and it is larger than all but one row in this KB's agent table.**
+
+| repo | licence | ★ | forks | commits | what it is |
+|---|---|---|---|---|---|
+| https://github.com/withmarbleapp/os-taxonomy | **ODbL-1.0 + CC BY-SA 4.0** (`LICENSE` read first-hand, 25,289 bytes of genuine ODbL text) | **6.1k** | 998 | 23 | **Marble Skill Taxonomy v1** — 1,591 micro-topics, 3,225 prerequisite edges, ages 4–15, 2,189 links into 3,261 standards from seven curricula. No code. |
+| https://github.com/tbh-23/Homestead | **MIT** (`LICENSE` read first-hand, 1,573 bytes, *Copyright (c) 2026 Homestead*) | 15 | 2 | 41 | Mastery platform for ages 5–13 built on the taxonomy; **fetches it at runtime, never vendors it** |
+| https://github.com/simgue/harrington | **MIT** (Homestead's LICENSE, read first-hand) | 0 | 0 | 211 | One-family fork of Homestead; no chat, Ollama-documented local inference, learner names stripped before prompts |
+
+🔴 **The trend worth recording in this file specifically: GitHub's own discovery surface does not
+index this repository as education.** No description, no topics, no detected language, empty
+Languages panel — **a 6.1 ★k, 998-fork artefact that is invisible to every topic-based and
+keyword-based sweep in this KB's method.** 🔵 **Trending-by-topic is a supply channel with a
+structural hole in it, and the hole is exactly the shape of a data release.** Any future
+"trending education" count that does not also sweep the data axis is measuring the index, not the
+sector.
+
+🟡 **Secondary descriptions of this repo are already stale and the drift is measurable.** Every
+mirror and roundup reports **1,590 topics / 3,221 edges** from the July v1 announcement. The
+shipped files as of `manifest.generatedAt` **`2026-10-19T17:32:15Z`** are **1,591 / 3,225**. The
+manifest publishes SHA-256 per file and `topics.json` verified against it this pass. **Pin a
+commit and record the hash; do not quote the blog.**
+
+**Already held, returned again by the trending channel this pass and not re-listed:**
+`kvnloo/tutor-mcp`, `mizcausevic-dev/mcp-ai-tutor`, `nirholas/ai-tutor-mcp`,
+`mohaneesh-03/mcp-tutor`, `GarethManning/education-agent-skills`, `zijinz456/OpenTutor`,
+`rohitg00/ai-engineering-from-scratch`.
+
 ## 2026-10-19 — Pass 325 — six rows were in this file for 198 passes and never became usable, and the French public stack is uniformly MIT
 
 **Eleventh pass of 2026-10-19.** 🔵 **This file is APPEND-ONLY. Everything below this section is

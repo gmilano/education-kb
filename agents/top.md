@@ -5,6 +5,130 @@ updated: 2026-10-19
 ---
 # Top open source AI agents — education
 
+## Pass 326 · 2026-10-19 (twelfth pass of this date) — the largest artefact in this sector is a data repo, and twelve passes of agent-shaped queries could not see it
+
+🟢 **The pass's finding is a 6.1 ★k repository this KB has never held, and the reason it was missed
+is a method defect, not a supply gap.** `withmarbleapp/os-taxonomy` — the **Marble Skill
+Taxonomy** — is **1,591 micro-topics and 3,225 prerequisite edges across eight subjects, ages
+4–15, linked to 3,261 standards from seven national curricula, under ODbL-1.0 + CC BY-SA 4.0.**
+Every count in that sentence was **read out of the shipped JSON this pass**, not out of the README.
+It has been public since **2026-07-08**, carries **998 forks**, and is **larger by stars than every
+row in this file except `DeepTutor`.**
+
+🔴 **Why eleven prior sweeps missed it, stated precisely, because the rule generalises.** The
+repository has **no GitHub description, no topics and no detected language** — GitHub's own
+sidebar renders *"No description, website, or topics provided"* and an empty Languages section.
+It is a repository of JSON. **Every query this KB has run in this industry has been shaped like an
+agent** — `agent`, `tutor`, `MCP`, `skill`, `assistant` — and **a pure data layer matches none of
+them, at any star count.** 🔵 **p324 said a declared gap is a statement about the query; p325
+narrowed it to the filter. This pass narrows it again and the new form is the sharpest of the
+three: a gap declared by an agent-shaped query is blind to the data layer underneath the agents,
+and the data layer is where this sector's durable assets are.** This file's own trend 12 has
+argued for seven passes that curriculum data is the moat. **The largest piece of it on GitHub was
+sitting outside every query this KB knows how to write.**
+
+🟢 **The licence is the part that makes it a Globant asset, and it is unusual enough to state
+carefully.** ODbL is share-alike, which reads like a problem and is not one here. **ODbL
+distinguishes a *derivative database* from a *produced work*:** extend or modify the taxonomy and
+your modified taxonomy must stay open; **use it inside a product, model or application and the
+product stays yours.** The repository says so in its own README. 🔵 **So a commercial tutor built
+on this graph does not open-source itself — it owes back only improvements to the graph.** That is
+a materially different answer to a procurement question than the KB's existing curriculum rows:
+`cn-math-taxonomy` is **CC BY-NC** and cannot enter a deliverable at all, and `bncc-dev` is CC BY
+4.0 but covers **one country**. **This is the first multi-national curriculum graph in this KB that
+a client can ship on.**
+
+🔴 **One real constraint, and it is in `curriculum-standards.json`, not in the licence.** Marble
+does not own the upstream frameworks and says so. **Four sources ship codes-only** — `ngss-k5`,
+`ngss-ms`, `c3-social-studies`, `ib-pyp-pspe` — with the verbatim standard text withheld; **UK
+National Curriculum ships in full under OGL v3** (commercial use, no share-alike); **Common Core
+ships in full but stays under the purpose-limited CCSS Public License, not ODbL.** The
+topic→standard *links* are intact for all of them, so *"this topic maps to standard X"* survives
+everywhere; what you cannot redistribute is NGSS or IB prose. **NGSS is a WestEd trademark and
+commercial use carries a sample-approval requirement.** Read `PROVENANCE.md` before any bid that
+quotes standard text.
+
+🟢 **And the rights engineering in that file is the best this KB has seen in the sector — it is
+worth copying regardless of whether a client ever uses the data.** The publication export
+**omits any passage matching eight or more consecutive words of a codes-only framework's stored
+text**, case- and punctuation-insensitive, **marks each omission inline with the curriculum code
+and logs it by JSON path** in `publicationNotes.omittedCurriculumText`. The same transformation is
+applied to citation claims and activity source claims. **The repository then states, unprompted,
+that this mechanical pass "is not comprehensive rights clearance"** and that shorter excerpts may
+remain. 🔵 **A machine-checkable redistribution boundary, with its own audit log and its own
+stated limit, is exactly the artefact an education buyer's counsel asks for and never gets.**
+
+### Verified first-hand, against the shipped bytes
+
+`data/manifest.json` publishes SHA-256 per file. **`topics.json` downloaded this pass hashes to
+`5aa40906…b7e9d`, which is the manifest's value** — so the dataset is byte-verifiable end to end.
+🔵 **No other curriculum artefact in this KB ships checksums.** Counts re-derived from the files
+rather than the prose:
+
+| measured | value | note |
+|---|---|---|
+| topics | **1,591** | `Science 547 · Mathematics 504 · English 286 · History 90 · PSD 88 · Life Skills 37 · Computing 21 · Learning to Learn 18` |
+| prerequisite edges | **3,225** | **2,030 `hard` / 1,195 `soft`** |
+| edges carrying a prose `reason` | **3,225 / 3,225 — 100%** | e.g. *"Must understand vibrations make sound before finding volume patterns"* |
+| topics with an `assessmentPrompt` | **1,591 / 1,591 — 100%** | natural-language mastery check, `{{name}}` placeholder to substitute or strip |
+| topics with `evidence` descriptors | **1,556 / 1,591** | observable can-do statements, typically three |
+| topics with ≥ 1 standard link | **1,013 / 1,591**; **2,189 links** | `uk-nc-2013` 1,069 · `ccss-ela` 584 · `ccss-math` 323 · `ngss-k5` 85 · `ib-pyp-pspe` 70 · `ngss-ms` 58 |
+| teaching-research records | **1,051**, 23.5 MB | **540 topics have none, and the file says which** |
+| age span | **4 – 15** | |
+
+🔴 **Two honest limits, both self-declared.** The teaching research is **agent-authored, its sources
+were not re-verified for this release, and the activities are its own words *"research-informed
+proposals, not empirically validated interventions."*** And the research layer covers **only
+Science and Mathematics** — **English, History, Computing, Life Skills, PSD and Learning to Learn
+have zero records**, which the coverage block states per subject rather than leaving to be
+discovered. 🔵 **A dataset that enumerates its own 540 holes is behaving better than most of this
+sector's metadata, and trend 11 should record a positive instance for once.**
+
+🟢 **The row a North American or EMEA literacy-mandate conversation should open with.** The whole
+**`Computing` subject is AI literacy — all 21 topics, one domain, `Artificial Intelligence`,
+ages 5–11**: *Smart Versus Not-Smart Devices*, *Voice Assistants and How They Work*, *AI Mistakes
+and Limitations*, *Recommendation Systems and Filter Bubbles*, *Bias in AI Systems*, *AI Data
+Collection and Privacy*, *Deepfakes and AI-Generated Content*, *Designing Fair AI Rules*, *AI and
+the Future of Work*, *AI and the Environment*. **Each carries an age band, an assessment prompt and
+its place in the prerequisite graph.** 🔵 **p320 separated the "AI literacy mandate" from the "AI
+guardrail mandate" and noted the literacy motion had thin permissive assets. It now has a
+sequenced, commercially licensable, age-banded spine** — against **California AB 2876**, **Utah
+H.B. 273**, **Illinois HB 316** (literacy instruction for grades 6–12, effective 2026-08-01) and
+the EU AI Act **Article 4** staff-literacy duty. The age band stops at 11 and the mandates reach
+higher; say so, and scope the extension.
+
+### Added to the table
+
+- **`tbh-23/Homestead` — MIT, 15 ★, 41 commits.** The taxonomy's **reference consumer**, and the
+  reason this pass adds an agent row and not only a data row. A mastery-based platform for ages
+  5–13 that **fetches the taxonomy from upstream at runtime and notifies the user when topics are
+  added or removed** — a **90%+ mastery gate** before advancement, **mastery tests whose answers
+  are independently re-solved to verify them**, Leitner spaced repetition, spaced retry of missed
+  questions, and an AI coach grounded in the child's own progress. 🟢 **Its architecture is the
+  finding: by never committing the dataset it keeps the ODbL database outside the MIT product, so
+  the derivative-database/produced-work boundary is enforced by the build rather than by a
+  promise.** That is pattern **P13**, new in `compose/patterns.md` this pass.
+
+### Recorded below the listing bar
+
+- **`simgue/harrington` — MIT (`LICENSE` read first-hand; the file is Homestead's, *Copyright (c)
+  2026 Homestead*), 0 ★, 211 commits.** A family-specific fork of Homestead, **no chat**, lesson
+  generation off by default behind a user-configured OpenAI-compatible endpoint with **Ollama as
+  the documented example**, and **learner names replaced before prompts are built** — the same
+  name-stripping boundary this KB praised in `JustinoLM/STI-matematicas`. **Recorded, not listed:
+  it is one family's fork at zero stars.** It matters as evidence that the taxonomy has downstream
+  consumers at all, which at 103 days old and 998 forks is otherwise unmeasured.
+
+### The supply sweep, and what it says about this industry
+
+**Four global queries and four regional queries were run.** Beyond the Marble layer, the
+agent-shaped channel returned **`kvnloo/tutor-mcp`, `mizcausevic-dev/mcp-ai-tutor`,
+`nirholas/ai-tutor-mcp`, `mohaneesh-03/mcp-tutor`, `GarethManning/education-agent-skills`,
+`zijinz456/OpenTutor`, `rohitg00/ai-engineering-from-scratch`** — **every one of them already in
+this KB.** 🔵 **Novelty on the agent channel this pass was 0%. Novelty on the data channel was
+100%, first try.** p325 said discovery was no longer where the margin is; this pass refines that:
+**discovery on the agent axis is exhausted; the data axis had never been swept.**
+
 ## Pass 325 · 2026-10-19 (eleventh pass of this date) — the sweep measured this KB's own coverage, and the nine-pass LTI gap stopped being an absence
 
 **Twenty-five repositories were put through a three-axis supply sweep. Twenty were already held.**
@@ -397,6 +521,7 @@ commit count, release cadence and licence.**
 
 | Agent | Repo | Licence | ★ | Checked | What it does | Use it for |
 |---|---|---|---|---|---|---|
+| Homestead | https://github.com/tbh-23/Homestead | MIT (`LICENSE` read first-hand — *MIT License, Copyright (c) 2026 Homestead*, 1,573 bytes) | 15 | p326 | **Mastery-based learning platform for ages 5–13 built directly on the Marble Skill Taxonomy** — fetches `withmarbleapp/os-taxonomy` at runtime rather than vendoring it, and flags topics added or removed upstream. 90%+ mastery gate before advancement; mastery-test answers independently re-solved to verify them; Leitner spaced repetition; spaced retry of missed questions; parent-approved difficulty increases; "Homestead Helper" AI coach grounded in the child's own progress. Static front end (HTML/CSS/vanilla ES modules, Tailwind via CDN) on a Puter.js backend, PWA; 41 commits, 2 forks. Per-parent data isolation; the Commune feature shares only the day's approved topics. | **The reference implementation of the ODbL boundary** — copy its runtime-fetch architecture whenever an ODbL or CC BY-SA dataset sits under a product you intend to keep proprietary. Also the clearest worked mastery ladder in this file. See P13. |
 | claude-study-agent | https://github.com/dymchenkko/claude-study-agent | MIT (`LICENSE` read first-hand — *MIT License, Copyright (c) 2026 dymchenkko*) | 2 | p325 | **A local-first study agent over the learner's own course material, including the lectures.** Ingests slides, PDFs and **lecture recordings** — Whisper for the audio, OCR for scanned pages — then builds a semantic index and runs a study loop over it: spaced-repetition quizzing, mistake tracking and **generated mock exams**. Built on Claude Code; topics declare `local-first`, `rag`, `anki-alternative` and `notebooklm-alternative`. Created 2026-10-10, pushed 2026-10-19, 0 forks | **The lecture-recording leg no other artefact in this file has.** Where `universal-examprep-skill` assumes the learner owns slides and past papers, this one assumes they also own the *recording* of the class — the single richest unexploited corpus in formal education, and the one most likely to carry a consent question. Read it for the ingest chain; treat the recording as personal data from the first line of the proposal |
 | aegis-integrity | https://github.com/sunilgentyala/aegis-integrity | MIT (sidebar + `LICENSE`, Copyright (c) 2026 Sunil Gentyala) | 17 | p324 | **Local-first academic-integrity reviewer exposed as an MCP server** — *"Free, local-first academic integrity checker and MCP server"*. **Seven MCP tools**: `aegis_analyze_paper`, `aegis_check_citations`, `aegis_check_guidelines`, `aegis_compare_papers`, `aegis_index_add`, `aegis_index_summary`, `aegis_status`. Five signal families: **citation-hallucination resolution against Crossref** with verdicts `VALID`/`MISMATCH`/`HALLUCINATED`/`UNRESOLVABLE`/`NO_DOI`; AI-text via **GPT-2 perplexity, burstiness, a stylometric ensemble and lexical-tell density** plus a semantic-coherence analyser; plagiarism via **n-gram MinHash + SBERT/FAISS against a corpus you supply**; ghostwriting via **Burrows' Delta**; and an experimental keyless watermark heuristic that *"never affects the overall integrity risk score"*. Self-plagiarism, essay-mill batch analysis, citation-network analysis and **venue-guideline checks for IEEE, ACM and Elsevier**. `pip install "aegis-integrity[ml]"` + `aegis ui` for a local web app; Claude Code plugin; Claude Desktop `.mcpb`; `docker compose`; GHCR image; `install.bat` on Windows. Crossref/OpenAlex/DataCite are called with **reference metadata only, never the document**, and there is an explicit `offline=true`. 68 commits, 5 forks, changelog at v3.3.2 | **The artefact this KB declared absent for seven passes — and the reason to use it is what it refuses to claim.** It publishes **no accuracy figure for itself**, cites third-party studies instead, and states *"Results are a supporting signal for human review, not a determination of misconduct"* and, on ESL bias, *"Do not treat AEGIS as having solved ESL false positives; keep a human in the loop."* 🔴 **Read its own tension before quoting it:** the marketing section says per-language calibration *"reduce[s] this bias"* while the ESL section says the non-English multipliers *"rarely fire"*, and the changelog records an earlier ESL multiplier that was **inverted** and fixed. Deploy it as the **citation and process-evidence** layer of an integrity review (`compose/patterns.md` **P11**); do not deploy its AI-text score as a finding |
 | civil-ai | https://github.com/zhangl1001/civil-ai | MIT (sidebar + LICENSE) | 41 | p323 | **A reusable, local-first foundation for adaptive education agents on iOS and Web** — its own words: *"Civil AI is a reusable, local-first foundation for building adaptive education Agents on iOS and Web"*, with the Chinese civil-service-exam package as *"the current end-to-end reference adapter"* that *"does not define the scope of the foundation."* Vue 3 + TypeScript, Capacitor iOS shell; **SQLite on iOS and IndexedDB on Web behind repository ports**, with migrations; Anthropic and OpenAI-compatible provider gateway with providers as replaceable adapters; agent runtime with tools, skills, **checkpoints, leases, cancellation and recovery**; an *"evidence-based capability model"* with mastery projection and review priority, and spaced review in the reference app (no algorithm named). English README with a Chinese positioning section; 100 commits, 7 forks; docs reference a v1.2.0 upgrade guide, Releases empty | **The highest-starred education agent pushed since 2026-10-01, and the only artefact in this KB that separates an education-agent runtime from its exam adapter on purpose.** Read it for the ports-and-adapters shape when a client wants one tutor engine across several subjects — and read its own caveat first: **it states that domain portability is unvalidated because both bundled packages are exam-style, question-driven study** |

@@ -32,6 +32,68 @@ recipes, and that belongs in the SOW.
 
 ---
 
+## P13 — The share-alike data boundary: shipping a proprietary product on an ODbL dataset — NEW in p326
+
+**For:** every engagement in which the most valuable asset is **someone else's data under a
+share-alike licence** — ODbL, CC BY-SA, ODC-BY — and the client intends to keep their product
+proprietary. In this industry that is now the default case, not the exception: the sector's
+largest open curriculum graph is **ODbL-1.0 + CC BY-SA 4.0**, and the usual reflex — *"share-alike,
+so we can't use it"* — **is wrong and costs the client the best asset on the shelf.**
+
+**The legal fact the whole pattern rests on.** ODbL binds a **derivative database**, not a
+**produced work**. Modify the dataset → your modified dataset must be published under ODbL. Use
+the dataset inside a product, a model or an application → **the product is yours.** CC BY-SA
+covers the authored *text* in the same release on the same logic. **So the obligation is not
+"open-source your tutor." It is "if you improve the graph, publish the improved graph."**
+
+**Which turns a legal question into an architecture question — and it has a reference
+implementation.** `tbh-23/Homestead` (**MIT**, 15 ★, 41 commits) ships this boundary:
+
+**Wiring**
+1. **Never vendor the dataset.** No copy in the repository, no copy in the container image, no
+   copy in the deployment artefact. Homestead's README says so explicitly and its server enforces
+   it. **A dataset committed into your tree is the single fact that makes the boundary arguable.**
+2. **Fetch it at runtime from upstream, into a cache outside the repository**, pinned to a commit.
+   Homestead caches under a private path and serves it to the browser from there.
+3. **Verify on fetch.** Check the published SHA-256 per file; if the dataset ships no checksums,
+   compute and store your own at pin time. A silent curriculum change is a correctness incident.
+4. **Diff on refresh and surface the delta.** Homestead **notifies the user when topics are added
+   or removed upstream** rather than absorbing the change invisibly. Do the same: an operator must
+   see a curriculum move.
+5. **Keep client-specific work in an overlay, keyed by the upstream ID — never as an edit to the
+   graph.** Extra topics, re-banded ages, jurisdiction mappings, proprietary difficulty estimates
+   all live in your own table joined on `topicId`. 🔵 **This is the commercial hinge of the whole
+   pattern:** an overlay is a produced work and stays the client's; an in-place edit produces a
+   derivative database and must be published.
+6. **Carry the attribution, exactly as specified.** ODbL and CC BY-SA both require it and the
+   upstream release gives the string to use. Put it in the product's about screen and in the data
+   documentation — not only in a source file nobody renders.
+7. **Audit the third-party layer separately.** A share-alike dataset can legitimately contain
+   material the publisher could not relicense. In `os-taxonomy` four of seven curricula ship
+   **codes only** and Common Core stays under its own purpose-limited licence. **Your product's
+   rights posture is the union of the licences inside the dataset, not the licence on the
+   dataset.**
+
+**What to tell the client, in one sentence each.**
+- **Private edtech:** *"We can build on it, you keep your product, and the only thing you owe back
+  is changes to the public graph — which is why we are putting your changes in an overlay."*
+- **Public sector or ministry:** *"Your jurisdiction extension becomes a public asset published
+  under your name."* 🟢 **Lead with this; it is usually the thing they wanted anyway and could not
+  justify paying for.**
+- **Either:** *"The dataset ships checksums and we pin them. Your curriculum cannot change under
+  your tutor without someone being told."*
+
+**What this pattern does not do.** It does not clear **trademark** (NGSS is a WestEd mark with a
+sample-approval requirement for commercial use), it does not clear **purpose-limited** upstream
+licences (the CCSS Public License), and it does not make an **NC** dataset usable — `cn-math-
+taxonomy` (CC BY-NC) and K12-KGraph's data (CC BY-NC-SA) stay out of client work no matter how
+the code is arranged. **Share-alike is an architecture problem. NonCommercial is a wall.**
+
+**Estimate:** 3–5 days of engineering inside any pattern that consumes external data, and it has
+to be designed in at the start — **retrofitting a vendored dataset out of a shipped product is a
+much worse week.**
+
+---
 ## P12 — The measured-outcome public-school pilot: buy the evidence design, not the code — NEW in p325
 
 **The problem this solves.** Every education bid ends at the same question — *does it actually
@@ -846,7 +908,7 @@ the district's counsel says the Rule requires. Globant does not certify COPPA co
 
 ---
 
-## P10 — The verified curriculum spine (LATAM now; APAC as a build) — NEW
+## P10 — The verified curriculum spine (LATAM now; APAC as a build; **cross-national and licensed, from p326**) — NEW
 
 **For:** any engagement where the client is accountable to a **national or state curriculum
 standard** — a ministry, a public school network, a board, a national edtech, a university serving
@@ -1028,6 +1090,83 @@ client's corpus, stand up the verification protocol and acceptance criteria) bef
 volume is processed; the per-subject build then prices as Variant B. **The first deliverable is the
 acceptance criteria, and it is sellable on its own.**
 
+### Variant D — the cross-national spine, available today, for a client with no jurisdiction mandate — NEW in p326
+
+**For:** the engagement Variants A and B do not cover — an international school network, a
+consumer or B2C learning product, a corporate foundation's K-6 programme, a pilot that has to run
+before a ministry conversation exists, or **any client in a jurisdiction this KB has no curriculum
+artefact for.** Variants A and B both start from a national mandate. **This one starts from the
+absence of one.**
+
+**Stack**
+- `withmarbleapp/os-taxonomy` (**ODbL-1.0 database / CC BY-SA 4.0 text**, 6.1 ★k) — **1,591
+  micro-topics, 3,225 prerequisite edges, ages 4–15, eight subjects, 2,189 links into 3,261
+  standards across UK NC 2013, CCSS ELA, CCSS Math, NGSS K-5, NGSS MS, C3 and IB PYP PSPE.**
+  Ships `assessmentPrompt` on **all 1,591** topics and `evidence` descriptors on 1,556
+- `tbh-23/Homestead` (**MIT**, 15 ★) — **read it before you write anything**: the runtime-fetch
+  boundary, the 90% mastery gate and the independently re-solved mastery tests are already built
+- `ArnaudGuiovanna/tutor-mcp` (MIT) — BKT mastery state and prerequisite rules over MCP, keyed to
+  the taxonomy's topic IDs
+- `open-spaced-repetition/fsrs4anki` (MIT) — retention scheduling once a topic is mastered
+- `openfun/ralph` (MIT) — xAPI learning records, **one statement per topic ID**
+- `HKUDS/LightRAG` (MIT) — retrieval over the client's own material, chunks linked to topic IDs
+
+**Wiring**
+1. **Pin a commit and record the SHA-256s from `data/manifest.json`.** The dataset moves: every
+   secondary description in circulation says 1,590 topics / 3,221 edges, and the file shipped on
+   2026-10-19 is **1,591 / 3,225**. Verify the hash on every refresh and diff the topic set —
+   Homestead does exactly this and surfaces added and removed topics to the user.
+2. **Do not vendor the data. Fetch it at runtime into a cache outside your repository.** This is
+   P13 and it is what keeps the ODbL database out of your product.
+3. **Load `dependencies.json` as the ordering authority, and respect `strength`.** 2,030 edges are
+   `hard` — gate on these. 1,195 are `soft` — surface them as *"this will be easier if…"*, never
+   as a block. **Every edge carries a prose `reason`; show it to the learner or the parent.** It
+   is the cheapest explainability win in the whole pattern and it was authored, not generated at
+   request time.
+4. **Use `assessmentPrompt` as the mastery check, not a model-generated question.** One per topic,
+   all 1,591, with a `{{name}}` placeholder to substitute or strip. **Substitute server-side, as
+   P12's Panama design does** — the prompt sent to the model should not carry the learner's name.
+5. **Use `evidence` as the rubric.** Three observable can-do statements per topic on 1,556 of
+   them; they are what a teacher or parent signs off against, and what an LLM judge should be
+   scored on reproducing — not helpfulness. See the *"prove it teaches"* stage.
+6. **Join the client's own material to topic IDs with LightRAG**, exactly as in Variant A. The
+   topic ID is the join key between the spine and everything the client already owns.
+7. **Write client-jurisdiction extensions into an overlay table keyed by topic ID — never into the
+   graph.** This is the commercial decision in the whole pattern; see P13.
+
+**What to promise, and what not to.** Promise **sequencing, age banding, standards alignment and
+assessment coverage on day one** — those are shipped data, verifiable against published checksums,
+and they are normally six weeks of authoring. 🔴 **Do not promise instructional effect.** The
+dataset's own teaching-research layer is **agent-authored, unverified for this release, covers
+1,051 of 1,591 topics** and describes itself as *"research-informed proposals, not empirically
+validated interventions."* **English, History, Computing, Life Skills, PSD and Learning to Learn
+have zero research records**, and the file says so per subject. Quote the coverage table; it is a
+better slide than a claim.
+
+🟢 **The one-slide pitch this variant unlocks, for North America and EMEA literacy mandates.**
+The entire **`Computing` subject is AI literacy — 21 topics, ages 5–11**, sequenced, age-banded
+and assessment-ready: *Smart Versus Not-Smart Devices*, *Voice Assistants and How They Work*, *AI
+Mistakes and Limitations*, *Recommendation Systems and Filter Bubbles*, *Bias in AI Systems*, *AI
+Data Collection and Privacy*, *Deepfakes and AI-Generated Content*, *Designing Fair AI Rules*,
+*AI and the Future of Work*, *AI and the Environment*. **Against California AB 2876, Utah H.B.
+273, Illinois HB 316 and the EU AI Act Article 4 staff-literacy duty**, that is a curriculum a
+district can adopt rather than commission. 🔴 **It stops at age 11 and HB 316 is grades 6–12 —
+scope and price the upper-secondary extension explicitly rather than letting it be assumed.**
+
+🔴 **The licence check to run before the proposal goes out.** Four curricula ship **codes only**
+(NGSS K-5, NGSS MS, C3 Social Studies, IB PYP PSPE) and **Common Core ships in full but under the
+purpose-limited CCSS Public License, not ODbL.** **NGSS is a WestEd trademark with a
+sample-approval requirement for commercial use.** The topic→standard *links* are unaffected, so
+*"this lesson aligns to NGSS 1-ESS1-1"* is fine everywhere; **rendering the text of 1-ESS1-1 is
+not.** Read `PROVENANCE.md`, and if the client needs verbatim text, clear it upstream — the
+dataset's export tool takes a per-source switch for exactly that case.
+
+**Estimate:** 3–4 weeks to a working mastery tutor on top of P1 or P2 — the shortest curriculum
+path in this file, because **the spine is the part that is already built.** Most of the time goes
+into step 6.
+
+---
+
 ---
 
 ## The cross-cutting risk, re-stated in pass 319 — and now with a real alternative
@@ -1120,6 +1259,9 @@ the one with the clearest external references.
 | APAC — Australia / NZ | **P7**, then P1 | Ipsos 2026 finds ANZ public support for banning AI in schools *higher* than in Asian markets — closer to the US restriction posture than to the rest of APAC |
 | LATAM — Brazil | **P10 Variant A**, then P2, with P4's artefacts ported | **The only jurisdiction with a verified open curriculum dataset, an MCP server over it and a published grounding measurement (31.9% → 2.3%)**, plus a 34,948-commit municipally originated SIS with no AI in it. Brazil's June 2026 AI/tech agreement with the EU means the conformity file transfers, and PL 2338 is risk-based |
 | LATAM — Spanish-speaking | **P2**, with P4's artefacts ported, and P10 as a build | No equivalent curriculum data layer was found in the Spanish-language topic sweep, so P10 here is Variant B work. The 92%-usage / 30%-satisfaction gap and the 50/19 feedback gap are delivery problems, which P2 answers |
+| Any region, no jurisdiction mandate — international schools, B2C, corporate foundations, pre-ministry pilots | **P10 Variant D + P13** | **New in p326.** The cross-national spine (`os-taxonomy`: 1,591 topics, 3,225 edges, seven curricula, ODbL + CC BY-SA) ships sequencing, age banding and 1,591 assessment prompts on day one, so the curriculum build that gates Variants A–C disappears. **P13 is not optional beside it** — it is what keeps the share-alike database outside a proprietary product. Strongest where a *literacy* mandate is the buying motion (Illinois HB 316, California AB 2876, Utah H.B. 273, EU AI Act Art. 4): the entire Computing subject is 21 AI-literacy topics, ages 5–11. **Age band stops at 11 — price the upper-secondary extension.** |
+
+**P13, new in p326, is the second pattern selected by a *requirement* rather than a region, and the requirement is a licence.** It applies wherever the asset the client most wants is published under share-alike terms — which, since the sector's largest open curriculum graph is ODbL-1.0, is now the common case rather than the awkward one. 🔵 **Read it before quoting any engagement that consumes external data: it is three to five days designed in at the start and a bad week retrofitted.**
 
 **P11, new in p324, is the first pattern in this file that is selected by a *requirement* rather
 than by a region or a starting position** — it applies wherever assessment integrity is a stated
