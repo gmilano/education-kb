@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 315 — the platform tier read first-hand: a renamed Open edX, an ECL-2.0 outlier, and the MIT/copyleft split confirmed at 9-vs-6
+
+**Repos verified first-hand this window** (licence label and star count read off the GitHub
+sidebar, 2026-10-19):
+
+| Repo | Licence | ★ | Movement / note |
+|---|---|---|---|
+| https://github.com/openedx/openedx-platform | AGPL-3.0 | 8.2k | 🆕 **renamed** from `openedx/edx-platform`; 68,820 commits on master |
+| https://github.com/moodle/moodle | GPL-3.0 | 7.5k | ➡️ Releases section empty on the repo; versioning lives off-GitHub |
+| https://github.com/bigbluebutton/bigbluebutton | LGPL-3.0 | 9.2k | ➡️ active on `v4.0.x-develop`, 50,449 commits |
+| https://github.com/jupyterhub/jupyterhub | BSD-3-Clause | 8.4k | ➡️ steady; the compute substrate for pattern P3 |
+| https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | 🆕 **ECL-2.0**, not Apache-2.0 — Educational Community License v2.0, an Apache derivative. The most permissive LMS *core* in this KB and the one most often mislabelled |
+| https://github.com/overhangio/tutor | AGPL-3.0 | 1.1k | ➡️ the practical way to deploy Open edX |
+| https://github.com/learningequality/kolibri | MIT | 1.2k | ➡️ still the only MIT platform; the APAC/offline pattern P5 depends on it |
+| https://github.com/openeducat/openeducat_erp | LGPL-3.0 | 889 | ➡️ Odoo-based education ERP; **LGPL-3.0**, confirmed from the README and badge |
+| https://github.com/openfun/richie | MIT | 316 | ➡️ EMEA-authored (France Université Numérique), MIT |
+| https://github.com/h5p/h5p-php-library | GPL-3.0 | 151 | ⚠️ repo has **no description, website or topics**; GPL-3.0 |
+| https://github.com/dmitry-viskov/pylti1.3 | MIT | 138 | ➡️ "LTI 1.3 Advantage Tool" — small, and load-bearing for every pattern in this KB |
+| https://github.com/Sunbird-Ed/SunbirdEd-portal | MIT | 41 | ➡️ India's national education stack; 41 ★ is an adoption-channel artefact, not a quality signal |
+| https://github.com/open-spaced-repetition/fsrs-rs | BSD-3-Clause | 447 | ➡️ Rust FSRS optimiser + scheduler, embeddable |
+
+**The structural reading this window.** Across the agent tier (`agents/top.md`) and the platform
+tier (`verticals/solutions.md`): **9/9 agents permissive, 6/10 platforms copyleft.** That is the
+sector's shape, and it is stable across every pass this KB has recorded. It is also the single fact
+that determines engagement architecture — permissive agents, copyleft platform, LTI 1.3 across the
+boundary.
+
+**Two corrections to the historical record below:**
+1. `openedx/edx-platform` → **`openedx/openedx-platform`**. Earlier entries use the stale path.
+2. Sakai is **ECL-2.0**, not "Apache-2.0" as a cycle-3 entry recorded it. ECL-2.0 is Apache-derived
+   but adds academic-attribution terms; it is not interchangeable in a licence inventory.
+
+**Not verified this pass, deliberately:** Canvas LMS (Instructure). It is a major platform and it
+is *absent* from `verticals/solutions.md` rather than carried forward on trust from an earlier
+pass. It goes back in when read first-hand.
+
+**Gap declared this window:** no LATAM-authored repo found at either the foundation or platform tier,
+after searching specifically for Brazilian and Mexican open source education infrastructure. LATAM's
+2026 open source story in this sector is **Latam-GPT** (a model, launched 2026-02-10 by CENIA) and
+Kolibri *deployments* — not locally authored platform code.
+
+**Method note:** `curl -sI` to github.com returns 403 at this session's proxy for every repo tried,
+so verification was done by loading each repository page and reading the licence and star count
+GitHub renders.
+
+---
+
+
 ## 2026-10-19 — Pass 314 — the LMS tier read first-hand: three new `AGPL-3.0` platforms, one on a non-default branch, one on a lowercase rung
 
 🟢 **APPEND-ONLY shelf. Everything below this section is history and is not rewritten.**

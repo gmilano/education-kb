@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 2026-10-19 — Pass 315 — DeepTutor ships v1.6.15 the same day, and two star counts this KB was carrying turn out to be wrong
+
+**What moved, verified first-hand this pass.**
+
+- 🔼 **`HKUDS/DeepTutor` — Apache-2.0, 41.7k ★, release `v1.6.15` dated 2026-10-19.** A release on
+  the day of the pass. This KB's earlier passes recorded DeepTutor at "~22k ★" (cycle 2) and
+  "~24k ★" (cycle 3); it is **41.7k** today. Whether that is real growth or earlier mis-reading,
+  the number to carry forward is 41.7k read off the sidebar. 2,935 commits.
+- 🔻 **`satvik314/educhain` — MIT, 387 ★. CORRECTION.** Earlier passes of this KB recorded "~9k ★"
+  then "~12k ★". The sidebar reads **387**. The README's own version history stops at v0.3.13 and
+  the Releases section is empty. Educhain is a small, slow-moving content-generation package — a
+  useful one, but it was being presented as a major project and it is not.
+- 🆕 **`openedx/edx-platform` is now `openedx/openedx-platform`.** The old path still resolves but
+  the canonical repo name has changed. AGPL-3.0, 8.2k ★, 68,820 commits on master. Anything citing
+  `edx-platform` in this KB's history is a stale path.
+- 🆕 **`Open-TutorAi/open-tutor-ai-CE` has an academic paper**: arXiv 2602.07176 (Feb 2026),
+  "Open TutorAI: An Open-source Platform for Personalized and Immersive Learning with Generative
+  AI". BSD-3-Clause, 111 ★. Note the canonical casing — `Open-TutorAi`, `-CE` uppercase.
+- 🔼 **`microsoft/ai-agents-for-beginners` — MIT, 77.5k ★, and now 18 lessons** (it was a 12-lesson
+  course in the sources earlier passes used). The largest MIT-licensed teaching asset in this
+  sector.
+- 🔼 **`HKUDS/LightRAG` — MIT, 40.2k ★** (EMNLP 2025), 10,873 commits. With DeepTutor that is
+  **~82k ★ of permissive, same-lab tutoring infrastructure** — the pairing is the most consequential
+  thing in this sector's open source right now.
+- ➡️ **`huggingface/smolagents` — Apache-2.0, 29.9k ★.** Steady.
+- 🔻 **`Ebimsv/AITutorAgent` — MIT, 15 ★, 4 commits.** Added to `agents/top.md` this pass *as a
+  reference shape only*, flagged in the table itself. Recording it here so nobody later mistakes it
+  for a dependency.
+
+**Gap declared this window:** searched specifically for a trending education agent authored in EMEA,
+APAC or LATAM. None found. Every agent in the tier is US- or EU-authored or unplaced; the regionally
+placed open source in this sector is all platform-tier (Sunbird, Richie, Kolibri). An informed gap,
+not coverage.
+
+**Method note for this pass:** `curl -sI` to github.com returns **403 at this session's proxy** for
+every repo tried, so URL verification was done by loading each repository page and reading the
+licence label and star count GitHub renders. The `curl -sI` check prescribed by the runbook is not
+available here; the substitute is stronger, since it reads the licence rather than just the status
+code.
+
+---
+
+
 ## 2026-10-19 — Pass 314 — three untitled permissive grants in one hour, and the code channel open to measure them
 
 🟢 **APPEND-ONLY shelf. Everything below this section is history and is not rewritten.**
