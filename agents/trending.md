@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 📈 2026-10-19 · Pass 310 — THE WEEK'S REAL SIGNAL IS A WHOLE AXIS THIS BASE HAD NEVER READ, AND ITS SECOND-MOST-STARRED ROW IS NONCOMMERCIAL
+
+⏱️ **Pass 310 of `2026-10-19`.** Evidence:
+[`p310-supply-census.2026-10-19-p310.tsv`](../evidence/p310-supply-census.2026-10-19-p310.tsv) ·
+[`p310-licence-probe.2026-10-19-p310.tsv`](../evidence/p310-licence-probe.2026-10-19-p310.tsv) ·
+[`p310-art5-screen.2026-10-19-p310.tsv`](../evidence/p310-art5-screen.2026-10-19-p310.tsv).
+
+### 🟢 `18` of `20` new on one axis, after three passes of `0`, `0` and `5`
+
+`p309` read `40` tutor-axis candidates and found `40` already carried. 🔵 **That was a fact
+about the `ai-tutor` topic, and this pass shows it was not a fact about the supply.** The
+[`academic-integrity`](https://github.com/topics/academic-integrity) topic — **111 public
+repositories** — returns **18 new rows in its first 20**.
+
+| Row | Licence | ★ | Signal |
+|---|---|---|---|
+| 🆕 [`Imalwayshere/Open-Detector`](https://github.com/Imalwayshere/Open-Detector) | 🟢 MIT | **249** | **The axis leader.** BERT detection of AI-generated academic text |
+| 🆕 [`NoplagLabs/noplag-engine`](https://github.com/NoplagLabs/noplag-engine) | 🟢 Apache-2.0 | 86 | Self-hostable plagiarism engine — the shape an institution can actually deploy |
+| 🆕 [`cabbage2000-lab/paper-tutor-skills`](https://github.com/cabbage2000-lab/paper-tutor-skills) | 🔴 **PolyForm Noncommercial 1.0.0** | 46 | 🔴 **Second-most-starred on the axis and a studio may not bill on it.** Agent SKILLS, Chinese-language, research workflow end to end |
+| 🆕 [`peopleworks/SignsofAI`](https://github.com/peopleworks/SignsofAI) | 🟢 MIT | 27 | Privacy-first desktop AI-writing signals, C# |
+| 🆕 [`sunilgentyala/aegis-integrity`](https://github.com/sunilgentyala/aegis-integrity) | 🟢 MIT | 17 | Local-first integrity checker **with an MCP server** |
+| 🆕 [`rpatrik96/hallmark`](https://github.com/rpatrik96/hallmark) | 🟢 MIT | 13 | Citation-hallucination benchmark |
+| 🆕 [`BridgeSuite/GradeBridge-Student-Submission`](https://github.com/BridgeSuite/GradeBridge-Student-Submission) | 🟢 MIT | 7 | 🟢 Holder `The Regents of the University of California` — **first-hand NORTH AMERICA** |
+| 🆕 [`constructorfabric/reference-audit`](https://github.com/constructorfabric/reference-audit) | 🟢 Apache-2.0 | 3 | Verifies `.bib`/`.pdf` citations point at real papers |
+| 🆕 [`SOHAM-3T/LMS`](https://github.com/SOHAM-3T/LMS) | 🟢 MIT | 3 | Quiz LMS with plagiarism detection + percentile scoring |
+| 🆕 [`sam-illingworth/Integrity-Debt-Audit`](https://github.com/sam-illingworth/Integrity-Debt-Audit) | 🟢 MIT | 2 | Audits an **assessment's** resilience, not a student's conduct |
+| 🆕 [`HoneyMeta/geng-skills`](https://github.com/HoneyMeta/geng-skills) | 🟢 MIT | 2 | Research-integrity agent **skills** |
+| 🆕 [`MORSHEDMDMONOARUL/ExamShield`](https://github.com/MORSHEDMDMONOARUL/ExamShield) | 🟢 MIT | 2 | 🟢 Holder `Sejong University` — **first-hand APAC**. ⚠️ roadmap caveat below |
+| 🆕 [`aclascollege/aegis-graph`](https://github.com/aclascollege/aegis-graph) | 🔴 **CC BY-NC 4.0** | 2 | GraphRAG degree verification — **noncommercial** |
+| 🆕 [`SiddharthGarkoti/algomind`](https://github.com/SiddharthGarkoti/algomind) | 🔴 proprietary | 2 | Proctored competitive-programming IDE |
+| 🆕 [`danialtranz/sentinel-agent-proctoring`](https://github.com/danialtranz/sentinel-agent-proctoring) | 🔴 **zero-byte `LICENSE`** | 2 | Gaze + object + audio proctoring |
+| 🆕 [`Vic-Nas/EditorWatch`](https://github.com/Vic-Nas/EditorWatch) · [`mikuuuuuuk/ai-behavior-forensics`](https://github.com/mikuuuuuuk/ai-behavior-forensics) · [`SaiHarsha9992/Plagarism-Check`](https://github.com/SaiHarsha9992/Plagarism-Check) | 🔴 no grant | 2 each | All three EXIST; none serves a licence |
+
+### 🔴 The licence shape of this axis is the week's commercial finding
+
+**`3` of the top `4` rows by stars are usable; the 2nd is not.** Across the whole read:
+**10 permissive · 2 noncommercial · 1 proprietary · 1 empty-file · 4 no-grant.** 🔵 **The
+noncommercial rows are not at the bottom of the star ranking — they are near the top**, which
+is why a star filter is not a licence filter and why this pass spent itself on the prober.
+
+### 🟢 The form factor keeps moving — `p309`'s finding, confirmed on a NEW axis
+
+`p309` found that 5 of the top 20 `ai-tutor` rows and the `877`★ ITS leader ship as **agent
+skills, not applications**. 🟢 **Two of this axis's rows are skills too**
+(`cabbage2000-lab/paper-tutor-skills` at 46★, `HoneyMeta/geng-skills`), and the more-adopted of
+them is the **noncommercial** one. 🔵 **The skills form factor is arriving with a licence
+profile this base is not yet equipped to read on sight** — which is exactly what
+`gate-family-coverage` now measures.
+
+### ⚠️ One row carries a dated procurement caveat
+
+[`MORSHEDMDMONOARUL/ExamShield`](https://github.com/MORSHEDMDMONOARUL/ExamShield) is MIT,
+university-held and clean in its shipped code. Its `FUTURE_ROADMAP.md` lines 174–175 plan
+**`Heart rate monitoring (via camera)`** and **`Stress level detection`** under
+`### Advanced Biometrics`. In an exam context those infer a student's emotional state, which
+**EU AI Act Art 5(1)(f) prohibits outright in education**. 🟢 **Usable at the commit read this
+pass — pin it.**
+
 ## 📈 2026-10-19 · Pass 309 — TWO NEW AGENT ROWS, AND THE WEEK'S REAL SIGNAL IS THAT THE TUTOR AXIS RETURNED `40` CANDIDATES AND `40` OF THEM WERE ALREADY HERE
 
 ⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:

@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 310 — THE INTEGRITY LAYER HAS A FOUNDATIONAL TIER AND IT IS PERMISSIVE: `4` OF `4` NEW BASE ROWS ARE MIT OR APACHE-2.0, AGAINST THE ASSESSMENT LAYER'S `4`-TO-`1` COPYLEFT
+
+⏱️ **Pass 310 of `2026-10-19`.** Evidence:
+[`p310-licence-probe.2026-10-19-p310.tsv`](../evidence/p310-licence-probe.2026-10-19-p310.tsv) ·
+[`p310-supply-census.2026-10-19-p310.tsv`](../evidence/p310-supply-census.2026-10-19-p310.tsv).
+
+### 🟢 New foundational rows
+
+| Repo | Licence *(payload)* | ★ | Why it is a BASE, not a product |
+|------|---------|-----|---|
+| [Imalwayshere/Open-Detector](https://github.com/Imalwayshere/Open-Detector) | 🟢 **MIT** `1 066` · `2e7c69b15c38` | **249** | A BERT **model + training path** for AI-text detection. You fine-tune it on the institution's own corpus; you do not ship it as sold |
+| [NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine) | 🟢 **Apache-2.0** `11 358` · `cfc7749b96f6` | 86 | A **matching engine** (verbatim + near-verbatim), self-hostable. The index and the UI are yours to build. Apache-2.0 carries the patent grant a procurement team asks for |
+| [constructorfabric/reference-audit](https://github.com/constructorfabric/reference-audit) | 🟢 **Apache-2.0** `11 357` · `c71d239df917` | 3 | Citation→real-paper resolution over `.bib`/`.pdf`. The narrowest reusable primitive on the axis: one verifiable fact per citation |
+| [rpatrik96/hallmark](https://github.com/rpatrik96/hallmark) | 🟢 **MIT** `1 073` · `bafef485d0aa` | 13 | The **benchmark**, not the product. 🔵 An integrity claim a studio makes to a client needs a number, and this is the only row on the axis that produces one |
+| [ai-for-edu/time-series-analysis-for-education](https://github.com/ai-for-edu/time-series-analysis-for-education) | 🟢 **Apache-2.0** `11 357` · `c71d239df917` | 22 | Papers + methods for time-series over education data — the method layer under dropout and early-warning work |
+| [AmirhosseinHonardoust/Academic-Instability-Early-Warning-System](https://github.com/AmirhosseinHonardoust/Academic-Instability-Early-Warning-System) | 🟢 **MIT** `1 061` · `0c410e37b86b` | 19 | Interpretable early-warning from attendance, engagement and study load. **Interpretable** is the word that matters for an Annex III deployment |
+| [cmkumar87/NUS-MOOC-Transacts-Corpus](https://github.com/cmkumar87/NUS-MOOC-Transacts-Corpus) | 🟢 **MIT** `1 083` · `2d8f95296606` | 10 | Annotated MOOC forum corpus (NUS). A labelled dataset, which this base has very few of |
+| [TUBAF-IFI-DiPiT/github2pandas](https://github.com/TUBAF-IFI-DiPiT/github2pandas) | 🟢 **BSD** `1 340` · `9564f738acee` | 7 | GitHub activity → DataFrames. **TU Bergakademie Freiberg** — the instrumentation layer for assessing *programming* coursework by process rather than product |
+
+### 🔴 The learning-analytics layer was already complete, and that is the correction
+
+🔴 **This pass went looking for an LRS/analytics tier and found this base already carries every
+usable row on it.** [`learning-analytics`](https://github.com/topics/learning-analytics) (378
+repos) returned **12 of 20 carried**, and the 12 are precisely the deliverables —
+`Apereo-Learning-Analytics-Initiative/OpenLRW`, [`openfun/ralph`](https://github.com/openfun/ralph),
+`tl-its-umich-edu/my-learning-analytics`, `PlaypowerLabs/EdOptimize`,
+`vanderbilt-data-science/knowledge-spaces`, `terracotta-education/terracotta`, `sonsoleslp/tna`,
+`juno-hwang/juno-dkt`, `kltn-moolde/moodle-adaptive-learning-plugin`, `theaiagent/SynthEd`,
+`Schlaflied/Plot-Ark`. 🟢 **The `8` uncarried rows are a paper-notes blog, two workshops, a
+syllabus, a corpus, a study tracker and a metrics tool.** 🔵 **State that as an axis that is
+saturated on KIND**, not as "no new repos": the two sentences lead to different next passes.
+
+### 🔵 Registered, not claimed
+
+- **No benchmark was run on `Open-Detector`.** AI-text detection accuracy is contested and this
+  base tables the row on adoption and licence only.
+- `ai-for-edu/time-series-analysis-for-education` and `constructorfabric/reference-audit` serve
+  **byte-identical** Apache-2.0 payloads (`11 357` · `c71d239df917`), which is the pristine
+  Apache length — expected, and noted so a later pass does not read it as a fork signal.
+- **The holder channel is blind on all three Apache-2.0 rows above** by construction: Apache's
+  text has no fill-in holder slot. None of them is regionally placed.
+
 ## 🔴 Pass 309 — THE ASSESSMENT LAYER IS THE UNWORKED AXIS, AND ITS LICENCE PROFILE IS THE OPPOSITE OF THE TUTOR LAYER'S: `4` OF `5` NEW ROWS ARE COPYLEFT
 
 ⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:

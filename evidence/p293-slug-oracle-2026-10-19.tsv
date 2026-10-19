@@ -1,0 +1,12 @@
+# p293 slug-existence oracle — calibrated against the control pair above.
+# ABSENT-OR-PRIVATE does NOT mean absent: this channel cannot separate
+# a missing repository from a private one.
+slug	url	verdict	head_sha	detail
+Vic-Nas/EditorWatch	https://github.com/Vic-Nas/EditorWatch	EXISTS-PUBLIC	af5b2d32f79360f1d5df02f7799517eb9cfe8b34	1 ref line(s), symref refs/heads/main
+mikuuuuuuk/ai-behavior-forensics	https://github.com/mikuuuuuuk/ai-behavior-forensics	EXISTS-PUBLIC	4b3e3e3b5b14cfc78cd6cdad0f40c25440b2d52f	1 ref line(s), symref refs/heads/main
+danialtranz/sentinel-agent-proctoring	https://github.com/danialtranz/sentinel-agent-proctoring	EXISTS-PUBLIC	9625da1a9c67a15072a77cdf1992b3794e68970a	1 ref line(s), symref refs/heads/main
+SaiHarsha9992/Plagarism-Check	https://github.com/SaiHarsha9992/Plagarism-Check	EXISTS-PUBLIC	dba52cb82b1d71a8758c1326f6dc6c6e729ef13a	1 ref line(s), symref refs/heads/main
+Yva1nne/ZJU_Course	https://github.com/Yva1nne/ZJU_Course	EXISTS-PUBLIC	168eddcf51fd9dd309804ea6a54999219b3f0903	1 ref line(s), symref refs/heads/main
+laser-institute/aera-workshop	https://github.com/laser-institute/aera-workshop	EXISTS-PUBLIC	f72afa633f27e63434cdfe7f406607de3a3bd8d6	1 ref line(s), symref refs/heads/main
+laser-institute/text-mining	https://github.com/laser-institute/text-mining	EXISTS-PUBLIC	914aac2988e2f6433960980b5c2986c9a333a6c7	1 ref line(s), symref refs/heads/main
+la-process-and-theory/syllabus	https://github.com/la-process-and-theory/syllabus	EXISTS-PUBLIC	25fd80f37a4770eb6e3594b3986e2564488b56a1	1 ref line(s), symref refs/heads/master

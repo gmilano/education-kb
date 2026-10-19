@@ -267,14 +267,28 @@ class ProberComposesFamilyAndVersion(unittest.TestCase):
         self.assertEqual(classify(read(FX.GPL3))[1], "GPL-3.0")
         self.assertEqual(classify(read(FX.AGPL3))[1], "AGPL-3.0")
 
-    def test_the_cc_content_payload_is_still_unresolved_and_says_so(self):
-        # 🟡 `GarethManning/education-agent-skills`, 877★, 1 230 B: a CC BY-SA 4.0
-        # grant by reference.  The prober returns NO-GRANT-CLAUSE, which is
-        # `ACTION p306-R` item 2's POINTER class, still open.  Pinned here so the
-        # gap cannot be mistaken for a reserved grant.
+    def test_the_cc_content_payload_resolves_to_a_pointer(self):
+        # 🟢 `GarethManning/education-agent-skills`, 877★, 1 230 B: a CC BY-SA 4.0
+        # grant BY REFERENCE, and at p310 the prober says so — `POINTER`, with the
+        # family resolved. `ACTION p306-R` item 2 / `ACTION p309-R` item 2,
+        # DISCHARGED after four passes open.
+        #
+        # 🔴 WHAT THIS CONTROL ASSERTED UNTIL p310, and why it is worth recording.
+        # It read `assertEqual(verdict, "NO-GRANT-CLAUSE")`, under the name
+        # `..._is_still_unresolved_and_says_so`, with a comment stating that
+        # `ACTION p306-R` item 2 was *still open*. 🔵 A standing gate therefore
+        # held its own instrument's KNOWN WRONG ANSWER as the expected one, and
+        # discharging the action item meant turning this control red first. The
+        # control was written so the gap *could not be mistaken for* a reserved
+        # grant — and `NO-GRANT-CLAUSE` vs `RESERVED-NO-GRANT` is exactly the
+        # distinction a consumer cannot make, which is why the POINTER class was
+        # registered in the first place. 🔵 A pin on a value a standing ACTION
+        # exists to CHANGE must name that action, or the gate quietly becomes the
+        # reason the action stays open.
         classify = self.load("p306-licence-probe/licence_probe.py", "classify")
         verdict, fam = classify(read(FX.CC_POINTER))
-        self.assertEqual(verdict, "NO-GRANT-CLAUSE")
+        self.assertEqual(verdict, "POINTER")
+        self.assertEqual(fam, "CC-BY-SA-4.0")
         self.assertIn("Attribution-ShareAlike",
                       read(FX.CC_POINTER))
 

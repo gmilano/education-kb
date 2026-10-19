@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 📈 2026-10-19 · Pass 310 — EIGHT NEW FOUNDATIONAL ROWS, AND THE AXIS THEY CAME OFF IS `100 %` PERMISSIVE AGAINST LAST PASS'S `4`-TO-`1` COPYLEFT
+
+⏱️ **Pass 310 of `2026-10-19`.** Evidence:
+[`p310-licence-probe.2026-10-19-p310.tsv`](../evidence/p310-licence-probe.2026-10-19-p310.tsv) ·
+[`p310-supply-census.2026-10-19-p310.tsv`](../evidence/p310-supply-census.2026-10-19-p310.tsv) ·
+[`p310-cc0-reaudit.2026-10-19-p310.tsv`](../evidence/p310-cc0-reaudit.2026-10-19-p310.tsv).
+
+| Repo | Licence | ★ | Signal |
+|---|---|---|---|
+| 🆕 [Imalwayshere/Open-Detector](https://github.com/Imalwayshere/Open-Detector) | 🟢 MIT | **249** | Axis leader; BERT AI-text detection |
+| 🆕 [NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine) | 🟢 Apache-2.0 | 86 | Self-hostable matching engine |
+| 🆕 [AmirhosseinHonardoust/AI-Personal-Study-Tracker](https://github.com/AmirhosseinHonardoust/AI-Personal-Study-Tracker) | 🟢 MIT | 32 | Random-forest study-productivity prediction |
+| 🆕 [ai-for-edu/time-series-analysis-for-education](https://github.com/ai-for-edu/time-series-analysis-for-education) | 🟢 Apache-2.0 | 22 | Time-series methods over education data |
+| 🆕 [AmirhosseinHonardoust/Academic-Instability-Early-Warning-System](https://github.com/AmirhosseinHonardoust/Academic-Instability-Early-Warning-System) | 🟢 MIT | 19 | Interpretable early warning |
+| 🆕 [rpatrik96/hallmark](https://github.com/rpatrik96/hallmark) | 🟢 MIT | 13 | Citation-hallucination benchmark |
+| 🆕 [cmkumar87/NUS-MOOC-Transacts-Corpus](https://github.com/cmkumar87/NUS-MOOC-Transacts-Corpus) | 🟢 MIT | 10 | Annotated MOOC forum corpus (NUS) |
+| 🆕 [TUBAF-IFI-DiPiT/github2pandas](https://github.com/TUBAF-IFI-DiPiT/github2pandas) | 🟢 BSD | 7 | GitHub activity → DataFrames (TU Freiberg) |
+| 🆕 [constructorfabric/reference-audit](https://github.com/constructorfabric/reference-audit) | 🟢 Apache-2.0 | 3 | `.bib`/`.pdf` citation verification |
+
+### 🔴 The licence-channel correction this pass had to publish before it could publish the rows
+
+🔴 **This base's own licence prober graded a `CC-BY-NC-4.0` payload as `CC0-1.0`** — a
+NonCommercial grant reported as a public-domain dedication, the one error direction that puts
+unusable supply **into** a deliverable. The rung read `"cc0" in low` over the whole body, and
+**every CC 4.0 legalcode names `CC0` once in its own boilerplate**, so no CC 4.0 file could ever
+reach its own rung.
+
+🟢 **Realised loss on these shelves: ZERO, and it was MEASURED, not argued.** All **seven**
+published CC0 rows were re-probed first-hand
+([ledger](../evidence/p310-cc0-reaudit.2026-10-19-p310.tsv)) — `gen-mentor`,
+`crpf-mitadt/Indian-AI-for-Education`, `O0000-code/awesome-academic-skills`,
+`chrisliu298/awesome-rubric-rewards`, `Lendarixon/awesome-ai-detection`,
+`open-spaced-repetition/awesome-fsrs`, `caramaschiHG/awesome-ai-agents-2026` — and **all seven
+are genuinely CC0**, six at the legalcode's exact `7 048` B. 🔴 **Four of them had no byte
+length anywhere in the evidence store before this audit**, so the "no loss" claim could not have
+been made without running it.
+
+🔵 **And the audit that proved no loss found a second defect**: all seven first came back
+`POINTER`, because the prober's CC0 grant clause was `"has waived all copyright"` — the wording
+of the CC0 **deed summary**, which appears **zero times** in the **legalcode** those repos
+actually serve. Both are now fixed and both are pinned as controls.
+
 ## 📈 2026-10-19 · Pass 309 — THREE NEW FOUNDATIONAL ROWS, ALL FROM THE `grading` AXIS, AND THE AXIS IS `4`-TO-`1` COPYLEFT AGAINST A TUTOR AXIS THAT IS MIT-DOMINATED
 
 ⏱️ **Pass 309 of `2026-10-19`.** Evidence:

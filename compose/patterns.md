@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 310 — two recipes, both composed only of rows this pass read first-hand
+
+### `P97` — The EU conformity screen for proctoring a client already bought *(EMEA, 4–6 weeks)*
+
+🔵 **Why this and not a build.** Every EU institution running proctoring is operating an **Annex
+III(3)** high-risk system, and **Art 5(1)(f)** prohibits emotion inference in education outright.
+This pass established that the distinction is decidable **from code in an afternoon** — and that
+the vendor roadmaps are walking toward the prohibited side
+([ledger](../evidence/p310-art5-screen.2026-10-19-p310.tsv)). Nobody in the procurement chain can
+currently read that.
+
+**Wiring.**
+
+1. **Enumerate the system's inputs from its own tree**, not from its datasheet. Blobless clone
+   (`git clone --filter=blob:none --no-checkout`), then full checkout; the four systems read this
+   pass were 4–287 files each. 🔵 `p310`'s read took one pass over `src/detection/`.
+2. **Classify every computed quantity as GEOMETRIC or AFFECTIVE.** Eye Aspect Ratio, gaze pixel
+   offset, mouth-movement frame counts, face presence, audio energy, zero-crossing rate →
+   **geometric**, Art 5(1)(f) not triggered. Any emotion label, affect score, stress level,
+   engagement score or camera-derived heart rate → **affective, PROHIBITED in education**.
+3. **Read the ROADMAP as well as the code**, and read it with `p124`'s question — *what does the
+   verb govern?* `ExamShield` line 175 `Stress level detection` is a **product feature**
+   (prohibited if built); line 253 `Student stress impact analysis` is a **research question
+   about** the proctoring (not a finding). Conflating them produces a false positive on an
+   otherwise clean MIT row.
+4. **Grade the grant on the same pass**, with [`p306-licence-probe`](code/p306-licence-probe/)
+   as repaired at `p310`: it now separates `GRANT` · `GRANT-NONCOMMERCIAL` · `POINTER` ·
+   `RESERVED-NO-GRANT` · `EMPTY-GRANT-FILE`. 🔴 **Run this step first** — on this pass's four
+   proctoring rows it disqualified all four before any regulatory question was reached.
+5. **Deliver** a per-system sheet: inputs enumerated, Art 5(1)(f) verdict with the code lines
+   that decide it, Annex III obligations that attach, grant verdict with byte length and sha,
+   and a **contractual exclusion list** for roadmap items that would flip the verdict.
+
+**Stack:** the blobless clone channel · `p306-licence-probe` · `p310-family-coverage`'s
+`run_families.py` for the licence family · the client's own proctoring vendor as the subject.
+
+**What this is NOT:** a build, a certification, or legal advice. It is an engineering screen that
+tells counsel **where to look**, grounded in the vendor's own source.
+
+---
+
+### `P98` — Assessment-first integrity, attached to the LMS the institution already runs *(all regions, 8–10 weeks)*
+
+🔵 **The framing is the deliverable.** `62 %` of students use AI for homework; `18 %` of teachers
+have any guidance. Detection-first programmes police that gap; this one closes it. All five
+components below are **MIT or Apache-2.0, payload-verified at `p310`**.
+
+**Wiring, in the order it should be sold.**
+
+1. **Diagnose the assessments, before any tooling.**
+   [`sam-illingworth/Integrity-Debt-Audit`](https://github.com/sam-illingworth/Integrity-Debt-Audit)
+   (MIT) scores how exposed each assessment design is. Output: a ranked list of the assessments
+   that actually need defending — usually a minority, which is what makes the rest affordable.
+2. **Attach to the system of record through the doorway this base already tables.** Canvas →
+   [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) (MIT), whose **opt-in
+   FERPA mode pseudonymises student names before tool output reaches the model**. Moodle →
+   [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) (MIT; ⚠️ the `local_`
+   plugin makes the **combination GPL-3.0**). 🔴 Scope the OAuth consent to the tools enabled and
+   say so in the SOW.
+3. **Verify the checkable things first, because they are cheap and uncontested.**
+   [`constructorfabric/reference-audit`](https://github.com/constructorfabric/reference-audit)
+   (Apache-2.0) resolves every citation in a `.bib`/`.pdf` to a real paper. 🔵 **A fabricated
+   citation is a fact; AI-authorship is an inference.** Ship the fact-based check first — it
+   earns the trust the inference-based one will need.
+4. **Then similarity, self-hosted.** [`NoplagLabs/noplag-engine`](https://github.com/NoplagLabs/noplag-engine)
+   (Apache-2.0) indexes the institution's own corpus **inside its own estate**, which answers the
+   data-residency objection before it is raised — the same argument `Numbas` carries for
+   in-browser assessment.
+5. **Only then, AI-text signal, and label it as a signal.**
+   [`Imalwayshere/Open-Detector`](https://github.com/Imalwayshere/Open-Detector) (MIT, 249★),
+   fine-tuned on the institution's own submissions. 🔴 **This base takes no position on detector
+   accuracy and ran no benchmark.** Contract it as *one input to a human decision*, never as a
+   verdict, and hold it to a number using
+   [`rpatrik96/hallmark`](https://github.com/rpatrik96/hallmark) (MIT) for the citation-claim arm.
+6. **Give the marker an agent, not a dashboard.**
+   [`sunilgentyala/aegis-integrity`](https://github.com/sunilgentyala/aegis-integrity) (MIT) is
+   local-first and exposes an **MCP server**, so the three signals above arrive inside the
+   assistant the marker already uses rather than in a seventh browser tab.
+
+**Regional adjustment, one line each.**
+**EMEA** — steps 2 and 5 are Annex III; run `P97` over them and document human oversight.
+**North America** — step 2's FERPA mode is the pilot's headline; the state policy patchwork means
+the deliverable is a per-district **configuration** of steps 1 and 5.
+**APAC** — lead with step 1 as teacher-capacity relief (Korea has capped AI enrolment over faculty
+shortages); `Sejong University`'s MIT `ExamShield` is a local reference artefact.
+**LATAM** — the buyer is the **university**, not the ministry; package steps 1–3 as the
+institutional AI-governance framework each of 190+ Mexican universities is currently building
+alone, and pin Chile's **Ley 21.719** data obligations from `2026-12-01`.
+
+🔴 **What would make this pattern wrong:** if the client's goal is to *catch* students rather than
+to make assessments robust. Step 1 would then be dropped, steps 5 and 4 would lead, and the
+programme becomes an arms race against a detector this base will not vouch for. **Decline that
+shape or re-scope it.**
+
 ## 🟢 Pass 309 — two recipes, both from this pass's own measurements
 
 ### 🟢 `P95` — the AI assessment layer on a copyleft host, with the licence boundary drawn on purpose

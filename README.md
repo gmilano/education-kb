@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-19
 ---
 
+## Pass 310 — 2026-10-19 — **`p309` REPAIRED THE RUNG AND NOT THE MECHANISM: FIVE LINES BELOW ITS FIX, THE SAME LADDER GRADED A NONCOMMERCIAL GRANT AS PUBLIC DOMAIN — AND THE AXIS THE MARKET'S OWN NUMBERS POINT AT HAD NEVER BEEN ENUMERATED**
+
+**One-line summary:** 🔴 **`p306-licence-probe` graded [`aclascollege/aegis-graph`](https://github.com/aclascollege/aegis-graph)
+— `CC-BY-NC-4.0`, `19 347` B `41003d4a7474`, *"Attribution-NonCommercial 4.0 International"* on
+its first line — as `CC0-1.0`, a public-domain dedication.** The rung was
+`elif "cc0" in low or "public domain dedication" in low:` over the whole body, ordered before the
+CC-BY rungs, and **every CC 4.0 legalcode names `CC0` exactly once in its own boilerplate**, so
+no CC 4.0 payload could ever reach its own rung. 🔴 **`p124-correction-form-marker` refuted that
+exact test on `2026-10-11`, was BUILT on it (its first cut returned CC0 for 9 of 13 rows), ships
+`cc_version.resolve()`, and registered it as instance 3 of `ACTION AG` labelled `DOCUMENT-TEXT`
+— 186 passes ago.** 🔵 **`p309` concluded *"a classifier is canonical data too; import the
+discriminator, never restate it"*, applied it to the GNU rungs, and did not read the next five
+lines.** 🔴 **And the direction matters: `p309`'s defect EXCLUDED usable supply; this one ADMITS
+unusable supply into a client deliverable.** 🟢 **Realised loss re-measured on all seven
+published CC0 rows: ZERO — and that audit found a second defect, below.** 🟢 **New standing gate
+`gate-family-coverage`; 58 controls; 19/19 gates green at publication.**
+
+### 🟢 `ACTION p309-R` — disposition, item by item
+
+| # | item | disposition |
+|---|---|---|
+| 1 | Universal-AFFIRMATIVE conclusion gate | 🔴 **NOT DONE as specified, and re-registered.** Displaced by a live defect that was shipping wrong licence data. 🟡 The pass did, however, produce the material for it: `p309`'s own *"`DEFECT=0`"* is a universal affirmative that this pass refuted with a denominator, so the gate now has a worked instance to be built against |
+| 2 | Make the POINTER class three-valued | 🟢 **DONE, and it required turning a GREEN GATE RED first.** `p306` now returns `GRANT` · `GRANT-NONCOMMERCIAL` · `POINTER` · `POINTER-NONCOMMERCIAL` · `RESERVED-NO-GRANT` · `NO-GRANT-CLAUSE` · `EMPTY-GRANT-FILE`. `GarethManning/education-agent-skills` (`1 230` B `f952182df4eb`, 877★) reads `POINTER` / `CC-BY-SA-4.0`. 🔴 **`p309`'s own control `test_the_cc_content_payload_is_still_unresolved_and_says_so` asserted the WRONG ANSWER as expected, with a comment saying the action was still open** — a standing gate holding its own action item shut |
+| 3 | Finish the root-commit re-key (`INGInious`'s three slugs) | 🔴 **NOT DONE.** Re-registered |
+| 4 | Add the copyright-line region channel to the prober | 🟢 **DONE, and the measured boundary is WIDER than `p309` stated.** Emits `INSTITUTION` / `PERSON` / `BLIND-FIXED-DOCUMENT` / `NO-LINE`. 🟢 **Two first-hand institutional placements this pass** — `The Regents of the University of California` (NA) and `Sejong University` (APAC) |
+| 5 | Run the 8 backlog ladders through the dynamic arm | 🔴 **NOT DONE.** Re-registered |
+| 6 | Adjudicate the 8 shelf-census rows; REVIEW/REPEAL field | 🔴 **NOT DONE.** Re-registered, third pass |
+| 7 | **Spend the clone channel on CODE (Art 5(1)(f))** | 🟢 **DONE, after three passes refused.** Four camera/keystroke rows cloned blobless and checked out in full ([ledger](evidence/p310-art5-screen.2026-10-19-p310.tsv)) |
+| 8 | Do NOT re-litigate the listed items | 🟢 **OBEYED.** The four listicle queries, `gitlab.com`, Frappe Learning, the ERP/CRM nil and the three saturated topic axes were **not re-run**. 🟡 **Two deliberate exceptions, stated as such:** *"no primary source"* was re-tested **on a different transport** (not the same channel again), and Chile's `21.719` date arrived **unsolicited** in a LATAM search and is recorded as corroboration, not as a re-opening |
+
+### 🟢 What was found
+
+| finding | verdict |
+|---|---|
+| 🔴 **the live defect, and its direction** | `CC-BY-NC-4.0` → `CC0-1.0`, and `CC-BY-4.0` → `CC0-1.0`. 🔵 **`p309`'s defect read a GPL-3.0 self-hosted grader as AGPL — it excluded usable supply, which costs an opportunity. This one reports a NonCommercial grant as the most permissive token there is, which costs a client** |
+| 🟢 **realised loss, measured rather than argued** | **ZERO.** All **seven** published CC0 rows re-probed first-hand ([ledger](evidence/p310-cc0-reaudit.2026-10-19-p310.tsv)); all seven genuinely `CC0-1.0`, six at the legalcode's exact `7 048` B. 🔴 **Four had no byte length anywhere in the evidence store beforehand**, so the claim was unavailable without running it |
+| 🔴 **the second defect, found BY the loss audit** | All seven first returned `POINTER`, because `GRANT_CLAUSES` carried `"has waived all copyright"` — the **CC0 DEED SUMMARY**'s wording, which appears **zero times** in the **legalcode** those repos serve. 🔵 **A clause list written against a document the prober never fetches.** Third instance of one class in one file |
+| 🟢 **the generalisation, and it is the headline** | `p309` built the right mechanism — run classifiers on real payloads — and gave it a **three-family corpus**, then reported `declared=11 CORRECT=11 DEFECT=0`. This base publishes **22 families**. 🔴 **`p309` was green at 3/22 = 14 % coverage.** 🔵 **`DEFECT=0` without a coverage ratio is an unbounded claim** → **`P310`**, and `gate-family-coverage` now derives the denominator from the shelves |
+| 🔴 **the exposure that remains, with its denominator** | **14 of 22 families still have no pinned payload** — and **`MIT` (5 501 cells) and `Apache-2.0` (2 313), the two most-published families on this base, have never been run through any dynamic arm** |
+| 🔴 **a new licence class** | `EMPTY-GRANT-FILE`. [`danialtranz/sentinel-agent-proctoring`](https://github.com/danialtranz/sentinel-agent-proctoring) serves `LICENSE` at `main` with **HTTP 200 and ZERO BYTES** (`e3b0c44298fc`). The guard was `if code == "200" and body:`, so it was written to the evidence store as **`404`** — **a false cell**. 🔵 It reads as *licensed* to GitHub's UI and grants nothing: `p304`'s class in its degenerate form |
+| 🟢 **the supply finding, and it corrects `p309`'s conclusion without contradicting its measurement** | [`academic-integrity`](https://github.com/topics/academic-integrity) (111 repos): **18 of 20 NEW**, **10 permissively licensed**. 🔵 `p309`'s *"supply saturation"* was true of the AXES it read, not of the supply. 🟢 **`learning-analytics` is the refined case: 12 of 20 carried, and all 8 uncarried rows are papers, workshops, a syllabus, a corpus and a metrics tool — saturated on KIND** |
+| 🔴 **why 309 passes missed it** | `ingest/config.json`'s keywords are *"AI tutor … quiz generator … learning path agent … grading assistant"*. 🔵 **Every one names a thing AI does FOR education; integrity names a thing AI does TO it.** A keyword set assembled from solutions is structurally blind to the problem class — against `p309`'s own `62 %` students / `18 %` teachers reading |
+| 🔴 **a star filter is not a licence filter, and the gap is at the TOP** | The **second**-most-starred row on the new axis, `cabbage2000-lab/paper-tutor-skills` (46★), is **PolyForm Noncommercial 1.0.0** — and the prober called it `NO-GRANT-CLAUSE` until this pass. Axis shape: **10 permissive · 2 noncommercial · 1 proprietary · 1 empty file · 4 no grant** |
+| 🟢 **Art 5(1)(f), decided on code rather than cited** | None of the four camera/keystroke rows infers emotion: EAR blink ratios, pixel-threshold gaze, mouth-movement counts, MTCNN face presence, audio energy + zero-crossing rate. **Annex III(3) high-risk, NOT prohibited.** 🔴 **But `ExamShield`'s `FUTURE_ROADMAP.md:174-175` plans `Heart rate monitoring (via camera)` and `Stress level detection`** — prohibited outright in education if built. 🔵 Line 253's `Student stress impact analysis` sits under a research heading and is **not** a finding: `p124`'s *"what does the verb govern?"* |
+| 🟢 **the holder channel's real boundary** | `p309` measured 1-in-5 and attributed the blindness to copyleft. Over 18 payloads the boundary is the licence **FORM**: **fill-in slot** (MIT/BSD/ISC) → **13 of 13**; **fixed document** (Apache-2.0, CC 4.0, PolyForm, GPL/AGPL) → **0 of 6**. 🔴 **And match rate is not yield:** of 12 holder lines only **2 are INSTITUTIONAL** = **11 %** |
+| 🔴 **regional saturation is now a PROPERTY, not a result** | `p309`: 18 of 22 claimed (82 %). `p310`: **20 of 25** (80 %), different languages, different regions. 🔵 Two passes, two query sets, the same ceiling. 🟡 **And one of the 5 "new" tokens is a near-duplicate** — `AI Singapore` is `AICET`'s parent — **so the honest figure is 4 of 25 = 16 %** |
+| 🟢 **"no primary source" re-tested on a DIFFERENT transport** | Eight legal/government/market hosts: `000` on `curl`, **`ENOTFOUND` on the second channel**; `github.com` and `raw.githubusercontent.com` answered on both. 🔵 **It is an allowlist boundary reproduced independently, not one channel's misconfiguration** — a stronger grade for the same conclusion |
+| 🔴 **four rows that EXIST and serve no grant** | `make slug-probe` returns `EXISTS-PUBLIC` with a HEAD sha for all four ([ledger](evidence/p293-slug-oracle-2026-10-19.tsv)). 🔵 `T-p309c` applied rather than quoted: *"not at this address"*, never *"not a repository"* |
+
+### 🔴 What this pass could not establish
+
+🔴 **No primary legal, market or government source was reached** — now confirmed on two
+transports. Every regulatory and market figure in [`intel/`](intel/) is **search-snippet grade**.
+🔴 **`huggingface.co` remains unreachable**; `api.github.com` remains an authorization boundary,
+so every star count is `github.com` as rendered.
+🔴 **`ACTION p309-R` items 1, 3, 5 and 6 were not performed** and are re-registered.
+🔴 **14 of 22 published licence families still have no pinned payload**, `MIT` and `Apache-2.0`
+first among them — exposure with a denominator, not findings.
+🔴 **No benchmark was run on `Open-Detector`** or any AI-text detector. This base tables the row
+on adoption and licence and **takes no position on detection accuracy**.
+🟡 **LATAM is a NIL on the code channel this pass, stated as one:** zero of 28 payloads placed
+there. The single Spanish-language holder read is a `PERSON`, which places nobody.
+🟡 **`aegis-integrity`'s MCP server was read from its description**, not its tool manifest; the
+MCP count on [`agents/top.md`](agents/top.md) was **not** incremented on that basis.
+🔴 **There is still no importable commercial-use oracle.** `P250`'s rule lived only in a shell
+script, which is *why* `p306` had one column; it is now in `licence_probe.commercial_use()` but
+every other classifier still cannot import it.
+
+### 🟢 `ACTION p310-R` — ranked for `p311`
+
+1. 🔴 **Pin a payload for `MIT` and `Apache-2.0` and run the arm.** They are the two
+   most-published families on this base (**7 814 cells between them**) and **no dynamic arm has
+   ever touched them**. 🟢 Every fixture needed is already in `evidence/` as a probed row; this
+   is the single highest-value hour available, and `family_coverage.py` prints the queue in
+   descending cell order.
+2. 🔴 **Promote `P250`'s commercial-use rule to an importable module** and make every classifier
+   in `ENTRY_POINTS` return the second column. 🔵 **The reason `p306` restated nothing here is
+   that there was nothing to import** — the rule lived in `sweep_commercial.sh`. A rule that
+   cannot be imported will be re-derived wrongly, which is this pass's whole subject.
+3. 🔴 **Build the universal-AFFIRMATIVE gate** (`p309-R` item 1, now with a worked instance:
+   `DEFECT=0`). 🟢 **Scope it to claims of the form *"every X is Y"* / *"no defect"* that a
+   denominator would bound**, and require the sentence to name its denominator. `p279`, `p370`
+   and `p471` already own absences; do not rebuild them.
+4. 🟡 **Audit every standing control for a pin on a value an open ACTION exists to change.**
+   `p309`'s CC-pointer control asserted the known-wrong answer and had to go red before item 2
+   could be discharged. 🟢 **Cheap first cut: grep the suites for `still`, `not yet`, `open`,
+   `unresolved` in test names and comments**, and require each hit to name its action item.
+5. 🟡 **Widen `ingest/config.json`'s sampling to PROBLEM-class topics, not only solution-class
+   ones.** `academic-integrity` returned 18 new rows in 20 against three saturated axes.
+   🟢 Named candidates, none yet read: `proctoring`, `student-information-system`,
+   `open-educational-resources`, `accessibility`, `language-learning`.
+6. 🟡 **Re-key repository identity on the root commit** (`p309-R` item 3) and **run the 8 backlog
+   ladders** (`p309-R` item 5), both unchanged and both still data entry with a denominator.
+7. 🟡 **Read the remaining 91 `academic-integrity` rows** (20 of 111 read). 🔵 The first 20 are
+   the most-starred; the tail is where `p303` found the non-US supply.
+8. 🔵 **Do NOT re-litigate**: the four listicle queries, `gitlab.com`, Frappe Learning's
+   AGPL-3.0, the education ERP/CRM nil, the `ai-tutor` / `intelligent-tutoring-system` /
+   `grading` axes (`p309`) and `learning-analytics` (`p310`, saturated on KIND), Chile's
+   `Ley 21.719` (**corroborated twice; binds `2026-12-01` unless `18.623-07` is enacted — and
+   brief the contradictory public reading alongside it**), the seven published CC0 rows (**all
+   re-probed at `p310`, all genuine**), and *"no primary source"* — **now true on TWO
+   transports for legal, government and market hosts and `huggingface.co`; FALSE for
+   `github.com`, `raw.githubusercontent.com`, the blobless clone channel, GitLab, PyPI, npm,
+   Packagist, RubyGems, Maven Central and Docker Hub.** 🔵 **Say which, every time.**
+
 ## Pass 309 — 2026-10-19 — **THE INSTRUMENT THAT GRADES LICENCES HAD THE DEFECT THIS BASE REFUTED `159` PASSES AGO, AND IT HAD ALREADY SHIPPED TWO WRONG VERDICTS; BOTH SUPPLY AND REGIONAL CHANNELS REPORT SATURATION IN THE SAME PASS**
 
 **One-line summary:** 🔴 **`p306-licence-probe` emitted four `AGPL-3.0` verdicts in its life, all

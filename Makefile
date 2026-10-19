@@ -29,8 +29,9 @@ ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
 AFFERO_LOG ?= /tmp/education-kb-gate-affero-rung.log
+FAMILY_LOG ?= /tmp/education-kb-gate-family-coverage.log
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung affero-rung-census
+.PHONY: gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung affero-rung-census
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -52,7 +53,32 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-absence gate-dates gate-provenance gate-identity gate-ladder-case \
              gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
              gate-slug-oracle gate-payload-pin gate-shelf-consistency \
-             gate-affero-rung
+             gate-affero-rung gate-family-coverage
+
+# 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
+# REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
+# lines BELOW the rung p309 repaired — graded `aclascollege/aegis-graph`
+# (CC-BY-NC-4.0, 19 347 B `41003d4a7474`) as `CC0-1.0`: a NonCommercial grant read as
+# a public-domain dedication, which is the ONE error direction that puts unusable
+# supply INTO a client deliverable.  p309's own defect ran the other way.
+#
+# 🔵 Both facts are true and the missing term is a DENOMINATOR.  A dynamic gate is a
+# statement about the FAMILIES IN ITS CORPUS, and `DEFECT=0` reads as a statement
+# about the classifier.  `family_coverage.py` derives the published family set from
+# the shelves (22 families) and reports the uncovered remainder as exposure:
+# p309 was green at 3/22 = 14 % coverage, and MIT (5 131 cells) and Apache-2.0
+# (2 115) have STILL never been run through any arm.
+#
+# 🔴 And the remedy existed at `p124`, 186 passes earlier: `cc_version.resolve()` was
+# BUILT on this exact defect and `ACTION AG` registered it as instance 3, labelled
+# `DOCUMENT-TEXT`.  p309 concluded "import the discriminator, never restate it" and
+# applied it to the family it was found in rather than to the mechanism.
+gate-family-coverage: ## ACTION p309-R (items 1-2) — fixture coverage with a denominator, and no classifier may cross a commercial-use boundary
+	@cd compose/code/p310-family-coverage && { $(PY) test_family_coverage.py > $(FAMILY_LOG) 2>&1 || { echo "🔴 p310-family-coverage FAILED — the suite's own report follows:" ; sed "s/^/   /" $(FAMILY_LOG) ; false ; } ; } && echo "── p310-family-coverage (51 controls: the refuted CC0 rung as a live negative control, p124's oracle, P250's two columns and its safe half, the three-valued POINTER class, and the four false positives this grader itself produced)" && echo "   PASS" || exit 1
+	@cd compose/code/p310-family-coverage && $(PY) -I run_families.py || exit 1
+
+family-coverage: ## p310 — the coverage census alone: which published families have no pinned payload
+	@cd compose/code/p310-family-coverage && $(PY) -I family_coverage.py ../../.. || true
 
 hooks: ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm, plus p293's calibrated slug-existence oracle, and p300's no-masking runner
 	@rc=0; red=""; green=0; \

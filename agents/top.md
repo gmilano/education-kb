@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 310 — THE AXIS THE MARKET'S OWN NUMBERS POINT AT HAD NEVER BEEN ENUMERATED: `18` OF `20` `academic-integrity` ROWS ARE NEW, AND `10` CARRY A GRANT A STUDIO CAN BILL ON
+
+⏱️ **Pass 310 of `2026-10-19`, following `p309` of `2026-10-19`.** Evidence:
+[`p310-licence-probe.2026-10-19-p310.tsv`](../evidence/p310-licence-probe.2026-10-19-p310.tsv) ·
+[`p310-licence-probe-PRE-FIX.2026-10-19-p310.tsv`](../evidence/p310-licence-probe-PRE-FIX.2026-10-19-p310.tsv) ·
+[`p310-supply-census.2026-10-19-p310.tsv`](../evidence/p310-supply-census.2026-10-19-p310.tsv) ·
+[`p310-art5-screen.2026-10-19-p310.tsv`](../evidence/p310-art5-screen.2026-10-19-p310.tsv) ·
+[`p310-holder-channel.2026-10-19-p310.tsv`](../evidence/p310-holder-channel.2026-10-19-p310.tsv).
+
+### 🟢 The supply census, with a denominator, and what it corrects
+
+`p309` measured three axes at `40/40` and `15/20` carried and concluded **supply saturation**.
+🔴 **That conclusion was about the AXES, not about the supply, and this pass separates them.**
+
+| axis | repos on the topic | read | already carried | 🟢 NEW |
+|---|---|---|---|---|
+| [`academic-integrity`](https://github.com/topics/academic-integrity) | **111** | 20 | **2** | 🟢 **18 of 20** |
+| [`learning-analytics`](https://github.com/topics/learning-analytics) | 378 | 20 | 🔴 **12** | 8 |
+| `ai-tutor` · `intelligent-tutoring-system` · `grading` | — | — | — | **not re-run** (`ACTION p309-R` item 8, obeyed) |
+
+🔵 **And `learning-analytics` is the sharper of the two results, because its `8` new rows are
+not deliverables.** They are a paper-notes blog, two workshop repos, a course syllabus, a MOOC
+corpus, a study tracker and a generic GitHub-metrics tool. **Every one of the twelve rows on
+that axis a studio could actually build on — `OpenLRW`, `openfun/ralph`, `my-learning-analytics`,
+`EdOptimize`, `knowledge-spaces`, `terracotta`, `tna`, `juno-dkt`,
+`moodle-adaptive-learning-plugin`, `SynthEd`, `Plot-Ark` — was already here.** That axis is
+saturated on KIND, not merely on count.
+
+🔴 **`academic-integrity` is not, and the reason this base never reached it is worth naming.**
+This KB's `ingest/config.json` declares its topics as `edtech`, `learning-management`,
+`educational-ai`, `tutoring`, `e-learning` and its agent keywords as *"AI tutor … quiz
+generator … learning path agent … grading assistant"*. 🔵 **Integrity is the one education-AI
+problem phrased as a problem ABOUT AI rather than a problem SOLVED BY AI, so a keyword set
+built from solutions could not see it** — while `p309`'s own regional read recorded that
+**`62 %`** of students used AI for homework by `2025-12` against **`18 %`** of teachers with any
+formal guidance.
+
+### 🟢 The new rows a studio can bill on — `10` of `18`, graded at the payload
+
+| Agent | Repo | Licence *(payload, bytes · sha)* | ★ | What it is |
+|--------|------|----------|---|-------------|
+| **Open-Detector** | [Imalwayshere/Open-Detector](https://github.com/Imalwayshere/Open-Detector) | 🟢 **MIT** `1 066` · `2e7c69b15c38` | **249** | BERT classifier for AI-generated academic text. **The leader of the axis** and the only row on it above 100★ |
+| **noplag-engine** | [NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine) | 🟢 **Apache-2.0** `11 358` · `cfc7749b96f6` | 86 | **Self-hostable** plagiarism engine, verbatim + near-verbatim. 🔵 Apache-2.0 **and** self-hosted answers the data-residency objection in the same row |
+| **aegis-integrity** | [sunilgentyala/aegis-integrity](https://github.com/sunilgentyala/aegis-integrity) | 🟢 **MIT** `1 071` · `c297118f3322` | 17 | Local-first integrity checker **that ships an MCP server** — citation, AI-text and plagiarism signals. 🟢 **A 22nd MCP slug on this file, and the first that is not an LMS doorway** |
+| **SignsofAI** | [peopleworks/SignsofAI](https://github.com/peopleworks/SignsofAI) | 🟢 **MIT** `1 089` · `8f63b2b12529` | 27 | Privacy-first **desktop** tool that flags AI-writing signals and suggests fixes. C#. Nothing leaves the machine |
+| **hallmark** | [rpatrik96/hallmark](https://github.com/rpatrik96/hallmark) | 🟢 **MIT** `1 073` · `bafef485d0aa` | 13 | Benchmark for **citation hallucination** in ML papers. The eval, not the product |
+| **reference-audit** | [constructorfabric/reference-audit](https://github.com/constructorfabric/reference-audit) | 🟢 **Apache-2.0** `11 357` · `c71d239df917` | 3 | Checks whether citations in `.bib` or `.pdf` refer to **real papers**. The narrowest, most shippable integrity check on the axis |
+| **Integrity-Debt-Audit** | [sam-illingworth/Integrity-Debt-Audit](https://github.com/sam-illingworth/Integrity-Debt-Audit) | 🟢 **MIT** `1 072` · `a03b60a3840c` | 2 | Diagnoses the **resilience of an assessment design** rather than policing a student. 🔵 The only row on the axis that treats the `62 %`/`18 %` gap as an assessment-design problem |
+| **geng-skills** | [HoneyMeta/geng-skills](https://github.com/HoneyMeta/geng-skills) | 🟢 **MIT** `1 081` · `756c3af4d96c` | 2 | Pre-submission research-integrity **agent skills** — data fabrication, image tampering, PDF report |
+| **GradeBridge submission** | [BridgeSuite/GradeBridge-Student-Submission](https://github.com/BridgeSuite/GradeBridge-Student-Submission) | 🟢 **MIT** `1 100` · `6203d12e65d7` | 7 | Browser-based student submission front end. 🟢 **Holder: `The Regents of the University of California` — first-hand NORTH AMERICA placement** |
+| **ExamShield** | [MORSHEDMDMONOARUL/ExamShield](https://github.com/MORSHEDMDMONOARUL/ExamShield) | 🟢 **MIT** `1 108` · `6176918ccd77` | 2 | YOLOv8 + ESP32 edge proctoring. 🟢 **Holder: `Sejong University` — first-hand APAC placement.** ⚠️ **Pin the commit — see the Art 5(1)(f) screen below** |
+
+### 🔴 The `8` rows a studio may NOT use, and each one for a different reason
+
+🔵 **This is the half of the axis that matters most commercially, because every one of these
+would pass a "does it have a licence?" screen or a star filter.**
+
+| Repo | Why not |
+|---|---|
+| [`cabbage2000-lab/paper-tutor-skills`](https://github.com/cabbage2000-lab/paper-tutor-skills) **46★** | 🔴 **PolyForm Noncommercial 1.0.0** (`4 563` B · `ffcca38841ad`). A real grant that excludes the only use a studio has. 🔴 **The second-most-starred row on the axis** — and the prober reported it `NO-GRANT-CLAUSE` until this pass |
+| [`aclascollege/aegis-graph`](https://github.com/aclascollege/aegis-graph) | 🔴 **CC BY-NC 4.0** (`19 347` B · `41003d4a7474`). 🔴 **This base's own prober called it `CC0-1.0` — a public-domain dedication — until this pass.** See the pass note in [`compose/code/p310-family-coverage/`](../compose/code/p310-family-coverage/README.md) |
+| [`SiddharthGarkoti/algomind`](https://github.com/SiddharthGarkoti/algomind) | 🔴 **Proprietary** (`831` B · `b2496e89aa4d`) — *"published for reference, portfolio evaluation, and demonstration purposes only"* |
+| [`danialtranz/sentinel-agent-proctoring`](https://github.com/danialtranz/sentinel-agent-proctoring) | 🔴 **`LICENSE` serves HTTP 200 and ZERO BYTES** (`e3b0c44298fc`). 🔵 A new class on this base: it reads as *licensed* to GitHub's UI and to any file-presence check, and grants nothing |
+| [`Vic-Nas/EditorWatch`](https://github.com/Vic-Nas/EditorWatch) · [`mikuuuuuuk/ai-behavior-forensics`](https://github.com/mikuuuuuuk/ai-behavior-forensics) · [`SaiHarsha9992/Plagarism-Check`](https://github.com/SaiHarsha9992/Plagarism-Check) · [`Yva1nne/ZJU_Course`](https://github.com/Yva1nne/ZJU_Course) | 🔴 **No grant at any probed path.** 🟢 **All four EXIST** — `make slug-probe` returns `EXISTS-PUBLIC` with a HEAD sha for each ([ledger](../evidence/p293-slug-oracle-2026-10-19.tsv)). 🔵 `T-p309c` applied rather than quoted: *"not at this address"*, never *"not a repository"* |
+
+### 🔴 The Art 5(1)(f) screen — `ACTION p309-R` item 7, refused three passes, RUN
+
+The clone channel was spent on **code** this pass. Four camera- or keystroke-touching rows were
+cloned blobless and checked out in full ([ledger](../evidence/p310-art5-screen.2026-10-19-p310.tsv)).
+
+🟢 **No shipped code in any of the four infers emotion.**
+[`sentinel-agent-proctoring`](https://github.com/danialtranz/sentinel-agent-proctoring)'s six
+detectors compute **Eye Aspect Ratio** for blinks, a pixel-threshold gaze direction, mouth-movement
+frame counts, MTCNN face presence/absence, and audio **energy + zero-crossing rate** — geometric
+and signal quantities, no affect label anywhere in the tree. **So EU AI Act Art 5(1)(f) does not
+fire, and the honest verdict for all four is Annex III(3) HIGH-RISK, not prohibited.**
+
+🔴 **But `ExamShield`'s `FUTURE_ROADMAP.md` lines 174–175, under the heading
+`### Advanced Biometrics`, plan `Heart rate monitoring (via camera)` and
+`Stress level detection`.** Implemented in an exam context those infer a student's
+physiological and emotional state, which **Art 5(1)(f) prohibits outright in education — not
+high-risk, prohibited**, and has done since 2 February 2025. 🟢 **The row is MIT and usable at
+the commit read this pass; pin the commit and exclude that roadmap item contractually.**
+🔵 **Distinguish it from line 253, `Student stress impact analysis`, which sits under a research
+heading and is a study OF the proctoring's effect — a different subject for the same noun, and
+`p124`'s *"what does the verb govern?"* is why that line is not a finding.**
+
+### 🔵 Registered, not claimed
+
+- **`Open-Detector` is a detector, and detectors of AI text are contested.** This base tables it
+  as the axis leader by adoption and takes **no position on its accuracy**; no benchmark was run.
+- **Eleven of the twelve holder lines read this pass name a PERSON**, which places nobody. Only
+  the two institutional holders above are regional evidence.
+- **`aegis-integrity`'s MCP server was read from its description, not from its tool manifest.**
+  The 21-slug MCP count below is NOT incremented by hand on that basis; `make recount` governs it.
+
 ## 🔴 Pass 309 — THE `ai-tutor` AXIS IS SATURATED: `25` OF `30` CANDIDATES WERE ALREADY CARRIED, AND ALL `5` NEW ROWS CAME OFF A DIFFERENT AXIS WHERE `4` OF `5` ARE COPYLEFT
 
 ⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:

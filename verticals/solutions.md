@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 310 — INTEGRITY IS NOT A VERTICAL PLATFORM AND NOBODY SHOULD SELL IT AS ONE: `111` REPOSITORIES, `0` PLATFORMS, AND THE INSTITUTION ALREADY OWNS THE SYSTEM OF RECORD
+
+⏱️ **Pass 310 of `2026-10-19`.** Evidence:
+[`p310-licence-probe.2026-10-19-p310.tsv`](../evidence/p310-licence-probe.2026-10-19-p310.tsv) ·
+[`p310-supply-census.2026-10-19-p310.tsv`](../evidence/p310-supply-census.2026-10-19-p310.tsv).
+
+### 🔴 A declared nil, with its denominator
+
+**Twenty rows read off the `academic-integrity` axis; not one is a platform.** They are
+detectors, engines, benchmarks, skills, a browser front end and four proctoring prototypes. 🔵
+**That is the correct shape for this problem and not a gap to fill**: integrity attaches to the
+LMS, the SIS and the assessment tool an institution **already runs**, and this base already
+tables the doorways to six of them (Canvas, Moodle, Google Classroom/Workspace, Brightspace/D2L,
+Blackboard Ultra, Open edX — see [`agents/top.md`](../agents/top.md)).
+
+🔴 **Stated as the negative it is:** *no open-source integrity PLATFORM exists on this axis*,
+measured over 20 of 111 repositories, **and this base is not recommending one be built.**
+
+### 🟢 The one row with a platform shape, and why it is a reference rather than a base
+
+| Platform | Repo | Licence | Stack | Read honestly |
+|---|---|---|---|---|
+| **SOHAM-3T/LMS** | [SOHAM-3T/LMS](https://github.com/SOHAM-3T/LMS) | 🟢 **MIT** `1 070` · `2c087a8a4bf5` | TypeScript, full-stack | A quiz LMS with auth, plagiarism detection and percentile scoring, **3★**. 🔵 Table it as a **reference implementation of the integrity-inside-the-LMS pattern**, not as a platform to deploy. At 3★ nobody is maintaining it for you |
+
+### 🟢 The deployable integrity layer is a COMPONENT over the platform the client has
+
+| Component | Repo | Licence | Attaches to |
+|---|---|---|---|
+| Matching engine | [NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine) | 🟢 Apache-2.0 | **Self-hosted** — the submission store of any LMS |
+| AI-text signal | [Imalwayshere/Open-Detector](https://github.com/Imalwayshere/Open-Detector) | 🟢 MIT | A model you fine-tune on the institution's corpus |
+| Citation verification | [constructorfabric/reference-audit](https://github.com/constructorfabric/reference-audit) | 🟢 Apache-2.0 | `.bib`/`.pdf` in the submission pipeline |
+| Agent-side integrity | [sunilgentyala/aegis-integrity](https://github.com/sunilgentyala/aegis-integrity) | 🟢 MIT | **MCP** — the assistant the student or marker already uses |
+| Assessment diagnosis | [sam-illingworth/Integrity-Debt-Audit](https://github.com/sam-illingworth/Integrity-Debt-Audit) | 🟢 MIT | The assessment design itself, before any tooling |
+
+🔵 **Read the last row against the other four.** Four of them inspect the *submission*; one
+inspects the *assessment*. With `62 %` of students using AI and `18 %` of teachers holding any
+guidance, the submission-side tools are policing a gap that the assessment-side tool is designed
+to close. **Lead an integrity pitch with assessment redesign and attach detection to it** —
+never the reverse.
+
+### 🔴 The proctoring sub-vertical: four prototypes, zero deployable
+
+**None of the four camera/keystroke rows can be used**, and for four *different* reasons —
+a zero-byte `LICENSE`, a proprietary notice, and two with no grant at any probed path. 🔵
+**Every one of them would survive a "has a licence file / has stars / is active" screen**, which
+is why the vertical shelf states it here: **if a client asks for open-source proctoring, the
+honest answer today is that there is no permissively licensed, maintained option on this axis**,
+and the engagement is a conformity screen over the commercial stack they already bought (see
+[`intel/market.md`](../intel/market.md), EMEA).
+
 ## 🟡 Pass 309 — THE ASSESSMENT VERTICAL WAS ALREADY ON THESE SHELVES; WHAT WAS MISSING IS THAT ITS THREE PLATFORM ROWS ARE ALL COPYLEFT AND NONE OF THEM IS AI-NATIVE
 
 ⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:

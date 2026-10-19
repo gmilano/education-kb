@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 310 — THE INDUSTRY'S BIGGEST AI-IN-EDUCATION PROBLEM IS PHRASED AS A PROBLEM *ABOUT* AI, AND THAT IS WHY A KEYWORD SET BUILT FROM SOLUTIONS COULD NOT SEE IT
+
+⏱️ **Pass 310 of `2026-10-19`.**
+
+### T1 — Integrity is the live engagement, and this base had no supply tier for it until today
+
+`p309` measured **`62 %`** of middle-school and college students using AI for homework by
+`2025-12` (from `48 %` seven months earlier) against **`18 %`** of teachers reporting any formal
+guidance, and concluded *"the engagement is teacher capacity, not a platform."* 🟢 **This pass
+found the supply tier that sits under that conclusion:
+[`academic-integrity`](https://github.com/topics/academic-integrity), 111 repositories, `18` of
+`20` new to this base, `10` of them permissively licensed.**
+
+🔴 **Why 309 passes missed it.** `ingest/config.json` declares topics `edtech`,
+`learning-management`, `educational-ai`, `tutoring`, `e-learning` and agent keywords
+*"AI tutor … quiz generator … learning path agent … grading assistant"*. 🔵 **Every one of
+those names a thing AI DOES FOR education. Integrity names a thing AI DOES TO it** — so a
+keyword set assembled from solutions is structurally blind to the problem class, however many
+passes it runs. **That is a finding about how this base samples, not about the week.**
+
+### T2 — A star filter is not a licence filter, and on this axis the gap is at the TOP
+
+Of the top four rows on the integrity axis by stars, the **second** —
+[`cabbage2000-lab/paper-tutor-skills`](https://github.com/cabbage2000-lab/paper-tutor-skills),
+46★ — is **PolyForm Noncommercial 1.0.0**. The whole-axis shape: **10 permissive · 2
+noncommercial · 1 proprietary · 1 zero-byte licence file · 4 no grant.** 🔵 **The unusable rows
+are not the obscure ones.** On the tutor axis a studio could sort by stars and be roughly safe;
+here that heuristic fails on the second row it touches.
+
+### T3 — 🔴 The emotion-recognition line is a PROHIBITION, not a risk tier, and the roadmaps are walking toward it
+
+EU AI Act **Art 5(1)(f)** prohibits inferring emotions of natural persons **in education** —
+outright, since 2 February 2025 — while **Annex III(3)** merely makes admission, evaluation and
+exam-monitoring systems *high-risk*. 🟢 **Screened on code this pass, four proctoring/forensics
+rows infer nothing of the kind**: Eye Aspect Ratio, pixel-threshold gaze, mouth-movement counts,
+face presence, audio energy and zero-crossing rate
+([ledger](../evidence/p310-art5-screen.2026-10-19-p310.tsv)).
+
+🔴 **The trend is in the roadmaps.** `ExamShield`'s `FUTURE_ROADMAP.md` lists, under
+`### Advanced Biometrics`: keystroke dynamics, mouse movement patterns, **`Heart rate monitoring
+(via camera)`** and **`Stress level detection`**. 🔵 **Camera-based physiological inference is
+where proctoring is heading because the hardware is already pointed at the student** — and the
+step from "gaze direction" to "stress level" crosses from *high-risk-with-obligations* to
+*prohibited*. **For an EMEA engagement that is not a compliance cost, it is a hard stop**, and
+it is invisible to any screen that reads licences and stars.
+
+### T4 — Saturation is a property of the AXIS, and conflating it with the supply costs a pass
+
+`p309` read `40` tutor-axis candidates, found `40` carried, and recorded supply saturation. This
+pass read a different axis and found `18` of `20` new. 🔵 **Both measurements are correct.** The
+durable statement is: **`ai-tutor`, `intelligent-tutoring-system`, `grading` and
+`learning-analytics` are enumerated; the domain is not.** 🟢 And `learning-analytics` shows the
+refined test — it returned `8` uncarried rows, and **all eight are papers, workshops, a syllabus,
+a corpus and a metrics tool**, so it is saturated on **kind**. **"Carried / new" is the wrong
+denominator; "deliverable / not" is the right one.**
+
+### T5 — Agent SKILLS keep arriving, and they arrive with unread licences
+
+`p309` found 5 of the top 20 `ai-tutor` rows and the ITS axis's `877`★ leader shipping as
+**skills, not applications**, and flagged that a skill has no runtime to grade. 🟢 **Confirmed on
+a second, unrelated axis**: two integrity rows are skills, and **the more adopted of the two is
+the noncommercial one**. 🔵 A skill's deliverable is *content*, so the question is the **content
+licence** — and content licences (CC 4.0, PolyForm, CC0) are precisely the families this base's
+own classifiers were weakest on, which is what `gate-family-coverage` now measures and bounds.
+
+### T6 — 🔴 APAC mandates curriculum; EMEA mandates conformity; North America mandates policy; LATAM mandates nothing yet
+
+A one-line regional read that the 2026 instruments now support: **China and India legislate what
+must be TAUGHT** (compulsory AI subjects, teacher qualification exams, Classes 3–8 from 2026–27).
+**The EU legislates what may be DEPLOYED** (Annex III, Art 5(1)(f)). **US states legislate what
+schools must have a POLICY about** (≈100 bills; Maryland SB 720, Idaho SB 1227, Arizona HB 4040).
+**LATAM legislates almost nothing at national level** — Mexico has no general AI law, Brazil's PL
+2338/2023 is stalled in the Chamber — **so its universities legislate for themselves.** 🔵 **The
+same product is a curriculum deal in APAC, a conformity deal in EMEA, a configuration deal in
+North America and a governance-framework deal in LATAM.**
+
+### 🔵 Grade, stated once
+
+Every regulatory and market figure above is **search-snippet grade**. Eight primary legal,
+government and market hosts were probed this pass on **two independent transports** and refused
+on both (`000` and `ENOTFOUND`); `github.com` and `raw.githubusercontent.com` answered on both.
+🟢 **Every code, licence, byte-length and roadmap claim above is first-hand.**
+
 ## 🟢 Pass 309 — THE FORM FACTOR CHANGED UNDER THIS BASE: A QUARTER OF THE TOP `ai-tutor` REPOSITORIES ARE NOT APPLICATIONS, THEY ARE AGENT **SKILLS**
 
 ⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:

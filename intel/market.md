@@ -4,6 +4,152 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 310 — TWO PASSES, TWO INDEPENDENT QUERY SETS, THE SAME `~80 %` ALREADY-CLAIMED RATE: THE REGIONAL CHANNEL HAS A MEASURED CEILING, NOT A BAD DAY
+
+⏱️ **Pass 310 of `2026-10-19`.** Five fresh regional searches (North America, EMEA, APAC,
+LATAM ×2, one of them Spanish-language), **25 tokens run through `make claims` before
+publication**.
+
+### 🔴 The ceiling, with both denominators side by side
+
+| pass | tokens tested | already claimed | new | rate |
+|---|---|---|---|---|
+| `p309` | 22 | 18 | 4 | **82 %** |
+| `p310` | 25 | **20** | **5** | **80 %** |
+
+🔵 **`p309` could report this as a result; `p310` can report it as a PROPERTY.** Two passes,
+different query languages, different regions emphasised, and the marginal yield is **4–5 new
+tokens either way**. The regional channel at search-snippet grade is not having an off day — it
+is **enumerated**, and a third pass of the same searches would be expected to return the same
+handful. 🔴 **Where it has to go next is primary sources, and those are refused** (below).
+
+🟢 **The `5` genuinely new tokens:** `AI Singapore` · `30 billion won` · `Índice Latinoamericano
+de IA` · `ConectIA` · `190 universidades`. 🔵 **And one of the five is a near-duplicate stated
+as such:** `AI Singapore` is the parent of `AICET`, which was **already claimed**. **So the
+honest count is 4 of 25 = 16 %**, not 20 %.
+
+### 🔴 "No primary source" — confirmed on a SECOND, INDEPENDENT channel
+
+`ACTION p309-R` item 8 says not to re-litigate this, and it is not re-litigated: **the same
+hosts were tested through a channel no previous pass had.** A page-fetch channel distinct from
+`curl` was available this pass and was put against eight primary hosts.
+
+| host | `curl` | the second channel |
+|---|---|---|
+| `bcn.cl` (Chile, Ley 21.719) · `congress.gov` · `eur-lex.europa.eu` · `artificialintelligenceact.eu` · `education.gov.in` · `moe.go.kr` · `unesco.org` · `huggingface.co` | 🔴 **`000` on all eight** | 🔴 **`ENOTFOUND`** |
+| `github.com` · `raw.githubusercontent.com` | 🟢 200 | 🟢 200 |
+
+🔵 **That changes the grade of the finding, not its direction.** *"No primary legal, market or
+government source"* is no longer one channel's behaviour that a better `curl` might fix — it is
+an **allowlist boundary reproduced on two independent transports**. 🟢 **Every regulatory and
+market figure in this file is therefore SEARCH-SNIPPET GRADE, stated once here so it need not be
+restated per cell.**
+
+### 🟢 One standing conclusion independently corroborated, and the corroboration is NOT a re-litigation
+
+A Spanish-language LATAM search returned Chile's **Ley 21.719** with its entry into force at
+**`2026-12-01`** — and *also* returned a source asserting it has been in force since December
+2024. 🟢 **`p309` settled this: the date binds `2026-12-01` unless `18.623-07` is enacted.**
+🔵 **The new fact is not the date — it is that the contradictory reading is live in the public
+record and will be quoted at a Globant team by a client's own counsel.** Brief the date **and
+the contradiction**, or the correction will arrive from the other side of the table.
+
+## Opportunities by region
+
+🔵 Each row below is an opportunity **this pass's own measurements** support, not a restatement
+of the market sizing above. Grades are stated: `CODE` = first-hand payload; `SNIPPET` = search
+summary.
+
+### North America
+
+- 🟢 **`CODE` — the first first-hand NA placement this base has from a licence payload.**
+  [`BridgeSuite/GradeBridge-Student-Submission`](https://github.com/BridgeSuite/GradeBridge-Student-Submission)
+  is MIT and held by **`The Regents of the University of California`**. 🔵 A UC-held MIT
+  submission front end is a credible reference artefact in any US public-university pitch.
+- 🟡 **`SNIPPET` — the policy surface is STATE-level and it is moving.** Nearly **100 state
+  bills** tracked this session touching student AI use; **over half of US states** have issued
+  K-12 AI guidance; named instruments include **Maryland SB 720** (state guidance + mandatory
+  local policies), **Idaho SB 1227** (AI may not replace human teachers) and **Arizona HB 4040**
+  (K-12 *and* public universities must adopt student-AI-use policies). Federal **H.R. 8747**
+  (K-12 AI Literacy and Readiness Act of 2026) has advanced through committee and **is not law**.
+- 🟢 **The engagement shape this implies is POLICY-TO-PRODUCT, not a platform.** Fifty
+  jurisdictions writing incompatible student-AI-use rules is a **configuration** problem.
+  Pair `sam-illingworth/Integrity-Debt-Audit` (assessment resilience) with
+  `bruchris/canvas-lms-mcp`'s FERPA pseudonymisation mode — both MIT, both already on these
+  shelves — and the deliverable is a per-district policy configuration, not a build.
+- 🔴 **Do not pitch detection as the answer.** The axis leader `Open-Detector` is MIT and
+  adopted, and this base **takes no position on its accuracy**; US institutions are visibly
+  split on AI-text detectors. Sell assessment redesign, and offer detection as an input.
+
+### EMEA
+
+- 🔴 **`SNIPPET` + 🟢 `CODE` — the hardest finding of the pass is here.** Under the EU AI Act,
+  education systems used for **admission, evaluation and exam scoring** are **Annex III
+  high-risk**, and **Art 5(1)(f) PROHIBITS inferring emotions in education outright**. 🟢 **This
+  pass ran the screen on code rather than citing the article**: four camera/keystroke rows were
+  cloned and read, and **none infers emotion today**
+  ([ledger](../evidence/p310-art5-screen.2026-10-19-p310.tsv)).
+- 🔴 **But `ExamShield`'s roadmap (`FUTURE_ROADMAP.md:174-175`) plans `Heart rate monitoring
+  (via camera)` and `Stress level detection`.** 🔵 **The EMEA opportunity is exactly that gap:
+  an Art 5(1)(f) + Annex III conformity screen delivered as a reusable instrument over whatever
+  proctoring stack the institution already bought.** Every EU institution running proctoring
+  needs this and almost none of them can read the code.
+- 🟢 **`CODE` — EMEA-origin foundational supply exists and is permissive:**
+  [`TUBAF-IFI-DiPiT/github2pandas`](https://github.com/TUBAF-IFI-DiPiT/github2pandas) (BSD, TU
+  Bergakademie Freiberg) and the already-carried [`openfun/ralph`](https://github.com/openfun/ralph)
+  LRS (France Université Numérique).
+- 🟡 **`SNIPPET` — the governance vacuum is the lead.** A UNESCO survey puts **fewer than 10 %**
+  of schools and universities with an institutional generative-AI policy. EdTech venture funding
+  was **$1B in H1 2026, down 26 %** year on year (HolonIQ), so **buyers are consolidating** —
+  which favours integration over new platforms.
+
+### APAC
+
+- 🟢 **`CODE` — the second first-hand institutional placement, and it is APAC:**
+  [`MORSHEDMDMONOARUL/ExamShield`](https://github.com/MORSHEDMDMONOARUL/ExamShield), MIT, held by
+  **`Sejong University`** (Seoul). 🔵 **`p309` recorded that its APAC region query named ZERO
+  education vendors, ministries or universities. The licence payload named one.** The holder
+  channel is now a *regional* instrument, not only a provenance one.
+- 🟡 **`SNIPPET` — APAC is the mandate region, and the mandates are curricular.** China: a
+  Ministry of Education action plan weaving AI through every stage of schooling **and into
+  teacher qualification exams**, targeting comprehensive AI-literacy infrastructure by **2030**;
+  AI reported compulsory in primary/secondary from **September 2025**, ≥ 8 hours a year. India:
+  **AI and Computational Thinking mandatory for Classes 3–8 from the 2026–27 academic year**,
+  with teacher training through **NISHTHA**. Korea: **30 billion won (≈ $22.24M)** into AI
+  colleges at three national universities, applications to AI departments **+16 %**, and
+  enrolment in advanced-tech fields **capped at 434 extra seats for 2027** over faculty and
+  facility shortages. Singapore: **AICET**, hosted by **AI Singapore**, pilots tools **with** the
+  Ministry of Education *before* classroom release.
+- 🟢 **The opportunity is TEACHER CAPACITY, and Korea's own numbers prove it.** A government that
+  caps enrolment because it lacks faculty has stated the bottleneck. The sellable thing is
+  **instructor-multiplying infrastructure** — `Instructional Agents` (MIT) for course materials,
+  `pykt-toolkit` for adaptive sequencing — not another student-facing tutor.
+- 🟡 **`SNIPPET` — Japan remains the light-touch outlier:** 2023 guidelines, a set of pilot
+  schools, and no mandate. Price Japan as a different regulatory regime from China/Korea/India.
+
+### LATAM
+
+- 🔴 **`CODE` — the region is a NIL this pass, and it is stated as one.** **Zero** of the 28
+  payloads probed placed to LATAM: no LATAM copyright holder, no LATAM institutional handle, no
+  Spanish or Portuguese licence text. 🔵 The one Spanish-language name read
+  (`Pedro Hernández — PeopleWorks`, `peopleworks/SignsofAI`) is a **`PERSON`**, which places
+  nobody — the row could as easily be Spain. **An informed nil, not silence.**
+- 🟡 **`SNIPPET` — the regulatory map is the clearest it has been.** **Mexico** has no general AI
+  law and legislates in sectoral patches — but the **State of Mexico amended its Education Law in
+  April 2026** to promote graduated, responsible classroom AI use, reported as **the first
+  sub-national instrument in the region to legislate AI in the classroom**. **Brazil**: PL
+  2338/2023 passed the Senate in December 2024 and is **still pending in the Chamber of
+  Deputies**. **Chile**: National AI Policy since 2021, AI bill still in passage, and Ley 21.719
+  binding **2026-12-01** (above).
+- 🟢 **The buying centre in LATAM is the UNIVERSITY, not the ministry, and that is actionable.**
+  More than **190 Mexican universities** run AI-linked programmes while the country has no
+  national law; Tecnológico de Monterrey, UNAM and UDEM have each issued **their own**
+  guidelines; Chile's PUC ran **ConectIA** with Microsoft toward institutional integration by
+  2026. 🔵 **Sell the institutional AI-governance framework itself** — policy, traceability,
+  assessment redesign — **because each university is currently building one alone.**
+- 🟡 **Chile leads on governance readiness** (Índice Latinoamericano de IA 2024, 73.07) and is
+  therefore the reference account for a framework the rest of the region will copy.
+
 ## 🔴 Pass 309 — THE REGIONAL CHANNEL IS SATURATED TOO: `18` OF `22` NEW TOKENS WERE ALREADY ON THESE SHELVES, AND CHILE'S "CONTESTED" DATE IS THE ONE CONCLUSION THAT HAS TO INVERT
 
 ⏱️ **Pass 309 of `2026-10-19`, following `p308` of `2026-10-19`.** Evidence:
