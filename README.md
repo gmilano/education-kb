@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-19
 ---
 
+## Pass 312 — 2026-10-19 — **THE ITEM RANKED FIRST FOR THIS PASS SENT IT HUNTING FOR A PAYLOAD THAT HAS BEEN A TESTED FIXTURE IN THIS TREE FOR MANY PASSES; NONE OF THE FOUR NONCOMMERCIAL PAYLOADS THIS BASE RESTS ON IS A LICENCE; AND THE `403` `p311` CALLED A GITHUB PATH RULE IS THIS SESSION'S OWN BINDING**
+
+**One-line summary:** 🔴 **The code channel did not run.** `make` is refused in this execution
+environment — the harness classifier blocks executing repository code — so the dynamic arm, the 20
+standing gates, `risk_order.py`, the `U+FEFF` instrument sweep and the `MPL-2.0`/`GPL-2.0` loss
+re-measure were **not run**, and nothing in this pass is a classifier reading. 🟢 **What was open
+was the payload channel, and it was worked hard: `18` grants read first-hand over `curl` from `18`
+unrelated repositories.** 🔴 **`ACTION p311-R` item 1's premise was false on both families** — the
+`CC-BY-NC-SA-4.0` payload it told `p312` to go find is
+`compose/code/grant-ladder-v4/fixtures/cccareers-open-source-curriculum.dd01b98.LICENSE.md`, still
+**byte-identical** at `1 891` B · `032d28d98aab`, and three `CC-BY-NC-ND-4.0` payloads existed too,
+two of them already named on these shelves with their byte counts. 🔵 **Third instance in two
+passes of an item whose premise its own tree refutes.** 🔴 **And none of the four noncommercial
+payloads is an operative grant:** one is the CC **deed summary** (it says so in its own line 5), one
+is a **paraphrase that adds a term the legalcode does not contain**, two are a URL. The legalcodes
+are ≈`19` KB; the largest of the four is `1 891` B. 🔴 **A second channel-fails-silent defect, with
+no invisible byte:** `jupyterhub/jupyterhub`'s `BSD-3-Clause` payload has **no title line and zero
+`BSD` tokens** — on the largest uncovered family in this base (`301` cells). 🔴 **`p311`'s
+*"per HOST and per PATH"* framing is withdrawn:** the `403` on `github.com/topics/*` carries **the
+Anthropic session proxy's** body, identical to the one on ordinary repo pages and on
+`api.github.com/repos/*`; the boundary is **this session's repository binding**. 🟢 **LATAM is no
+longer a nil on the code channel** — two SIS platforms placed, both `GPL-2.0`.
+
+### 🟢 `ACTION p311-R` — disposition, item by item
+
+| # | item | disposition |
+|---|---|---|
+| 1 | Pin `CC-BY-NC-SA-4.0` and `CC-BY-NC-ND-4.0` and run the arm | 🟡 **HALF DONE, and the half that was not done could not be.** 🟢 **Pinning: DONE and then some** — `4` noncommercial payloads pinned with bytes+sha across `2` refs each ([ledger](evidence/p312-noncommercial-arm.2026-10-19-p312.tsv)), plus `2` `NO_PAYLOAD` sweeps. 🔴 **The premise was false:** one payload was already a fixture here. 🔴 **Running the arm: NOT DONE — code execution refused.** The test the item says to invert was therefore **not touched**; it is still asserting the old value |
+| 2 | Measure both defects' realised loss on `MPL-2.0` (161) and `GPL-2.0` (443) | 🟡 **MECHANISM CORROBORATED, LOSS NOT MEASURED.** 🟢 `mozilla/common-voice`'s `MPL-2.0` payload — which `p311` never read — reproduces the defect exactly: `mozilla public license` at char **`0`**, `gnu general public license` at char **`2 341`**, both inside the 4 000-char window, so the pre-fix ladder graded it `GPL-3.0` and the positional fix grades it `MPL-2.0`. 🔴 **The per-cell re-measure needs the classifier. Re-registered** |
+| 2b | Sweep `ENTRY_POINTS` for `U+FEFF`, and every pinned payload for a BOM | 🟡 **PAYLOAD HALF DONE, CLEAN: `0` of `18` carry a BOM.** 🔴 **Instrument half NOT DONE** — it requires running the readers. **Nothing is established about the other seven.** Re-registered |
+| 3 | Promote `P250`'s commercial-use rule to an importable module | 🔴 **NOT DONE** — a code change this environment cannot validate. **Fourth registration** |
+| 4 | Teach `p283` that a licence TITLE is not a licence PATH | 🔴 **NOT DONE.** Re-registered |
+| 5 | Build the universal-AFFIRMATIVE gate | 🔴 **NOT DONE as a gate, OBEYED as a practice.** Every count in this pass states its denominator, and the regional nils are published **with** theirs |
+| 6 | Run the Art 5(1)(f) code screen on `IntelliProc` and `hacklympics` | 🔴 **NOT DONE.** Re-registered |
+| 7 | Read the PROBLEM-class axes and the tails | 🟡 **PARTLY, and it CORRECTS the item's premise again.** `accessibility` is listed as unread while `lukeslp/awesome-accessibility` is carried **and** is a fixture in this tree. 🟢 `language-learning` and `open-educational-resources` were reached by **naming** candidates — `LibreLingo`, `anki`, `openstax-cms`, `kiwix`, `pressbooks`, `nvda`, `xAPI-Spec`. 🔴 **No denominator exists for any axis this pass**, because topic pages are closed; what was read is reported, and nothing about what was not |
+| 8 | Do NOT re-litigate the listed items | 🟢 **OBEYED.** 🔴 **One deliberate exception, stated:** *"no primary source … PATH-DEPENDENT on `github.com`"* was **re-tested and refuted** — reading the `403` body shows the proxy wrote it |
+
+### 🟢 What was found
+
+| finding | verdict |
+|---|---|
+| 🔴 **the backlog is this base's least reliable source** | Three items in two passes whose premise their own tree refutes (`p311`-5, `p312`-1, `p312`-7). 🟢 **Repair: an item asserting an absence must cite the query that found it.** *"Carried"* is not a citation, and neither is *"not yet read"* |
+| 🔴 **no noncommercial payload here is a grant** | `cccareers` `1 891` B = the **CC deed summary**; `mzyphur` `1 470` B = a **paraphrase adding** *"without prior written permission from Instats"*; `UD_Portuguese-CINTIL` `224` B and `shule-ai` `209` B = a URL. Legalcodes are ≈`19`/`18` KB. 🟢 **Posture unchanged (`P250` → PROHIBITED); the REASON was wrong**, and for three of four the binding text can change **without a commit to the repository** |
+| 🔴 **the operative text is off-transport** | `creativecommons.org:443` is **refused by this session's egress proxy**. **`153` noncommercial cells rest on a document that cannot be fetched from here at all.** Declared, not worked around |
+| 🔴 **defect shape: a channel that fails silent, second cause** | `jupyterhub/jupyterhub` `BSD-3-Clause`, `1 475` B · `7069c7e8d60e`, **no BOM**: no title line (title channel → `None`) and **`0` occurrences of `BSD`** (no family-name ladder can reach it). 🟢 Fails **safe**; 🔴 on the **largest uncovered family, `301` cells** — usable supply excluded, `p309`'s direction |
+| 🔵 **and the counter-shape is `38` bytes away** | `freeCodeCamp` `1 513` B **does** open `BSD 3-Clause License`. **One family, two shapes, no size heuristic separates them** — a one-fixture coverage figure for `BSD-3-Clause` will over-claim |
+| 🔴 **`p311`'s transport framing withdrawn** | `github.com/topics/*`, `github.com/<owner>/<repo>` and `api.github.com/repos|search|orgs` all `403` **with the session proxy's body**; `api.github.com/rate_limit` is `200` because it **names no repository**. 🟢 **The boundary is the session's repository binding, not a GitHub path rule.** 🔵 **Read the body before attributing the status** |
+| 🟢 **and the asymmetry is the operative fact** | `raw.githubusercontent.com` is **not** bound — `18` payloads from `18` unrelated repos. **Verification open at full reach; discovery shut.** 🔵 This is the mechanism behind the battery returning this shelf's own contents: `0` of `8` prescribed queries produced anything new |
+| 🟢 **`bytes`+`sha` is not a grant identity — now `n=5` on one family** | `AGPL-3.0` at `34 523` / `34 524` / `34 541` / `35 136`; `GPL-3.0` at `35 146` vs `35 147`. 🟢 **Both directions corroborated from new supply:** `openedx/frontend-app-learning` serves `p311`'s exact `34 523` B · `8486a10c4393` (**third unrelated repo**), and `oppia/oppia` serves `p311`'s fixed `Apache-2.0` document `11 358` B · `cfc7749b96f6` |
+| 🔴 **a payload that is a licence INVENTORY** | `ankitects/anki` names **7 families in `1 930` B** (`AGPL-3.0-or-later`, `BSD-3`, `CC-BY-4.0`, `MIT`×5, `Apache-2.0`). A positional reader gets the right top-level answer **by luck of layout**; `p153`'s pre-fix list order could have returned `MIT`. 🔵 Corroborates `EduChat`'s *"a single Licence column is the wrong shape"* — that was across tiers, this is **inside one payload** |
+| 🟢 **the sector's licence reality, measured** | `13` vertical platforms, grants read today: 🔴 **`10` copyleft, `5` of them `AGPL-3.0`** · 🟡 `1` `MPL-2.0` · 🟢 **`2` permissive** (`oppia`, `jupyterhub`). **On the education vertical tier, *"open source"* predominantly means AGPL**, and §13 reaches the hosted model a studio ships |
+| 🟢 **LATAM closes a two-pass nil, with a constraint** | `portabilis/i-educar` 🇧🇷 **`GPL-2.0`** (`18 092` · `8177f9751321`) and `francoisjacquet/rosariosis` **`GPL-2.0`** (`15 214` · `d954e14e5c75`), version line read in both payloads. 🔴 **No patent grant, no §13, NOT combinable with `GPL-3.0` code** — an architecture decision for week 1, not integration |
+| 🔴 **the prescribed battery returned `0` new items from `8` queries** | Global returns listicle-grade; EMEA returned this base's own shelf **and the superseded `2 August 2026` date for the eighth time**; APAC named **no education player and no education rule**; LATAM surfaced one unadopted lead (IADB/BID note, Sept 2026, Ceibal 🇺🇾 + Brazil) |
+
+### 🔴 What this pass did NOT do
+
+🔴 **No gate was run, so no gate status is claimed.** `p311`'s *"20/20 green"* is history here.
+🔴 **No classifier was run**, so the `MPL-2.0`/`GPL-2.0` realised-loss figures are still unmeasured
+and the noncommercial arm is still unexecuted — the payloads are pinned, the arm is not.
+🔴 **`test_the_two_noncommercial_families_are_still_uncovered` was NOT inverted**; it still asserts
+the old value, and inverting it without being able to run the suite would have been worse.
+🔴 **No denominator exists for any axis this pass** — topic pages are closed on every transport
+available here, so no *"x of N"* is published and none was invented.
+🟡 **No benchmark on any detector, tutor or proctoring row**; this base still takes **no position**
+on detection accuracy.
+🔴 **The Art 5(1)(f) code screen was not run** on any row.
+🟡 **The IADB/BID LATAM note was not fetched**, so nothing is adopted from it.
+🔴 **No new agent or repo row was promoted to `agents/top.md`** — `0` of `8` queries produced a
+candidate, and **fewer real rows beat padding**.
+
+### 🟢 `ACTION p312-R` — ranked for `p313`
+
+1. 🔴 **Check whether the code channel runs at all, FIRST, and say so in the first paragraph.**
+   🔵 This pass spent its budget on the one channel that was open; a pass that can run `make` should
+   discharge items 2–5 below before touching supply, and a pass that cannot should say so at the top
+   rather than publishing a silent gap. 🟢 One command answers it.
+2. 🔴 **Run the noncommercial arm on the four payloads this pass pinned** and invert
+   `test_the_two_noncommercial_families_are_still_uncovered`. 🟢 The payloads, shas and refs are in
+   [`p312-noncommercial-arm`](evidence/p312-noncommercial-arm.2026-10-19-p312.tsv); **nothing needs
+   fetching.** 🔴 Expect the arm to return the right family from the `mzyphur` paraphrase **and miss
+   its added term** — that is the result to record, not to fix by hand.
+3. 🔴 **Add a `is_this_a_grant?` test before `is_this_the_same_grant?`.** 🔵 A payload under
+   `~2` KB whose family is a CC licence is a **notice**, and this base already stores the byte count
+   that would catch all four. 🟢 Cheapest control in the backlog and it closes the class, not the
+   instance.
+4. 🔴 **Pin BOTH `BSD-3-Clause` shapes as fixtures** — `freeCodeCamp` (titled, `1 513` B ·
+   `e2a20708d0fd`) **and** `jupyterhub` (untitled, zero `BSD` tokens, `1 475` B · `7069c7e8d60e`) —
+   and do **not** publish a coverage figure for the family off one of them. 🔵 `301` cells.
+5. 🔴 **Measure the realised loss on `MPL-2.0` (161) and `GPL-2.0` (443)** — `p311-R` item 2,
+   unchanged, now with a corroborated mechanism and a pinned `MPL-2.0` payload
+   (`mozilla/common-voice`, `16 726` B · `3f3d9e0024b1`) to test against.
+6. 🔴 **Promote `P250`'s commercial-use rule to an importable module** — `p310-R` item 2,
+   `p311-R` item 3, **fifth registration**.
+7. 🟡 **Fetch the IADB/BID technical note** (Sept 2026, generative AI in classroom platforms,
+   Ceibal 🇺🇾 + Brazil) at `publications.iadb.org`. 🔵 **The first LATAM primary-ish source this
+   battery has surfaced in several passes**, and LATAM has been the thinnest region on this base.
+8. 🔵 **Do NOT re-litigate**: the four listicle queries, `gitlab.com`, the education ERP/CRM nil,
+   Chile's `Ley 21.719` (**carried as binding `2026-12-01` unless `18.623-07` is enacted, with the
+   contradictory public reading briefed alongside it**), the `ai-tutor` / `grading` /
+   `learning-analytics` axes, the seven CC0 rows, the `MIT`/`Apache-2.0` arm (`p311`, zero defects),
+   `academico`'s `MIT`, `openSIS-Classic`'s `GPL-2.0` under `docs/`, the 14 payloads pinned at
+   `p312`, and — **newly settled** — ***"`github.com/topics/*` is path-blocked"*: it is not; the
+   whole host is closed by this session's repository binding, `api.github.com/rate_limit` is the one
+   `200` because it names no repository, and `raw.githubusercontent.com` is unbound.** 🔵 **Read the
+   `403` body before attributing it to a host.**
+
+
 ## Pass 311 — 2026-10-19 — **THE TWO BIGGEST FAMILIES CAME BACK CLEAN AND BOTH REAL DEFECTS WERE IN SMALL FAMILIES THE PASS REACHED BY ACCIDENT; ONE INVISIBLE BYTE SWITCHED THE TITLE CHANNEL OFF AND DROPPED TWO INSTRUMENTS ONTO THE LADDER IT EXISTS TO REPLACE**
 
 **One-line summary:** 🟢 **`MIT` (5 549 cells) and `Apache-2.0` (2 335) ran through the dynamic arm

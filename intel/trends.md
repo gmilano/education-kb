@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 312 — THE DEFECT THIS BASE KEEPS FINDING IS NOT IN ITS LADDERS, IT IS IN ITS ACTION ITEMS: THREE CONSECUTIVE PASSES HAVE HAD AN ITEM'S PREMISE REFUTED BY THEIR OWN TREE
+
+⏱️ **Pass 312 of `2026-10-19`.** Evidence:
+[`p312-noncommercial-arm.2026-10-19-p312.tsv`](../evidence/p312-noncommercial-arm.2026-10-19-p312.tsv) ·
+[`p312-payload-pins.2026-10-19-p312.tsv`](../evidence/p312-payload-pins.2026-10-19-p312.tsv) ·
+[`p312-transport-boundary.2026-10-19-p312.tsv`](../evidence/p312-transport-boundary.2026-10-19-p312.tsv).
+
+### 🔴 Trend 1 — the base's own backlog is its least reliable source
+
+| pass | item | 🔴 what the tree said |
+|---|---|---|
+| `p311` item 5 | *"`proctoring` and `student-information-system`: none yet read"* | 🔴 **every top-3-by-stars row on both was already carried** |
+| `p312` item 1 | *"pin a payload for `CC-BY-NC-SA-4.0`"* | 🔴 **the payload has been a tested fixture in `compose/code/grant-ladder-v4/fixtures/` for many passes, and is still byte-current** (`1 891` B · `032d28d98aab`, re-fetched today) |
+| `p312` item 7 | *"`accessibility` … not read"* | 🔴 [`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) is **carried on `repos/trending.md` as `CC0-1.0`, `6 464` B — and is a fixture in the same directory** |
+
+🔵 **Three instances in two passes is a mechanism, not a coincidence.** `ACTION` items here are
+written from **the narrative of the pass that is ending**, not from a query against the tree. 🟢
+**The repair is procedural and cheap: an item that asserts an absence must cite the query that
+found the absence.** *"Carried"* is not a citation — `p311` already established that about shelf
+cells; it applies to the backlog with the same force.
+
+🟡 **This does not make the items worthless.** `p312` item 1 was pointed at the right families for
+the right reason — **cost, not volume** — and following it produced the pass's two best findings.
+🔴 **It made the pass spend its first hour looking for something it already owned.**
+
+### 🔴 Trend 2 — the base pins payloads and has never asked whether a payload is a licence
+
+`p311` spent a pass proving that `bytes` + `sha` cannot answer *"is this the same grant?"*. 🔴 **It
+did not reach the weaker question underneath: «is this a grant at all?»**
+
+All four noncommercial payloads this base rests on are **notices, not grants**:
+
+| payload | bytes | what it is |
+|---|---|---|
+| `cccareers/open-source-curriculum` | `1 891` | 🔴 the **CC deed summary**, which says so in its own line 5: *"a human-readable summary of (and not a substitute for) the full license"* |
+| `mzyphur/responsible-ai-in-research-training` | `1 470` | 🔴 a **paraphrase with an added term** — *"without prior written permission from Instats"*, which the CC legalcode does not contain |
+| `UD_Portuguese-CINTIL` | `224` | 🔴 one sentence and a URL |
+| `gabrielmahia/shule-ai` | `209` | 🔴 title, holder, URL |
+
+🔴 **The two legalcodes are ≈`19` KB and ≈`18` KB. The largest of the four is `1 891` B.** 🟢 **A
+size test would catch all four for the cost of one comparison**, and this base already stores the
+byte count it would need. 🔵 **The posture does not change — `P250` maps `UNDETERMINED` to
+`PROHIBITED` and a studio may ship none of them — but the *reason* does**, and a reason that is
+wrong survives until the next time it is load-bearing.
+
+🔴 **The `mzyphur` row is the one with teeth.** A title-channel reader returns
+`CC-BY-NC-ND-4.0` and stops; the prior-written-permission gate is invisible to it. Direction: the
+base **understates** the restriction. 🟢 Realised loss here is **zero**, because both readings land
+on PROHIBITED. 🔴 **The same shape on a permissive title would be a shipped defect**, and nothing
+in this base would catch it.
+
+### 🔴 Trend 3 — the channel that fails SILENT has a second cause, and it is not exotic
+
+`p311` called a channel that returns `None` *"a different and worse shape: the instrument did not
+answer wrongly, it did not answer"*, and attributed it to a `U+FEFF` byte.
+
+🔴 **This pass found the same outcome with no invisible byte.**
+[`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub)'s `BSD-3-Clause` payload
+(`1 475` B · `7069c7e8d60e`, **no BOM**) **has no title line** — it opens with the copyright
+holder — **and contains the string `BSD` zero times**. Title channel → `None`; every
+family-name body ladder → nothing. 🟢 Fails safe. 🔴 **On the largest uncovered family in this
+base (`301` cells).**
+
+🔵 **The generalisation: `p311` fixed a cause (`strip_bom`) where the trend is a class.** Any
+payload whose family is identifiable only by **structure** defeats every instrument here, and the
+BOM was one way to get there. 🟢 **Both `BSD-3-Clause` shapes are now pinned, `38` B apart** —
+whoever builds that fixture should use **both**, because a single-fixture coverage figure for this
+family will over-claim.
+
+### 🟢 Trend 4 — the sector's licence reality, measured rather than asserted
+
+`13` education vertical platforms, grants read from the repository today: 🔴 **`10` copyleft, `5`
+of them `AGPL-3.0`**; 🟢 **`2` permissive** (`oppia` `Apache-2.0`, `jupyterhub` `BSD-3-Clause`);
+🟡 **`1` weak-copyleft** (`common-voice` `MPL-2.0`).
+
+🔵 **This is the trend with the largest commercial consequence in this file and it is the least
+discussed anywhere else:** on the education vertical tier, *"open source"* predominantly means
+**AGPL**, whose §13 reaches the hosted delivery model a studio actually ships. 🔴 And the two
+LATAM SIS platforms are **`GPL-2.0`** — **not combinable with `GPL-3.0` code at all**, a constraint
+that lands in week 1 of an architecture or never.
+
+### 🔴 Trend 5 — the discovery channel is closed and the battery cannot see it
+
+`0` of `8` prescribed queries returned anything this base did not hold. 🟢 **The cause is now
+established rather than suspected:** `github.com` and every repository-scoped `api.github.com`
+path return `403` **with the session proxy's body**, closing discovery, while
+`raw.githubusercontent.com` stays open, keeping **verification** at full reach.
+🔴 **`p311` read the same `403` as a GitHub path rule** and told this pass to repeat that framing;
+reading the response body refutes it. 🔵 **A `403` whose body names your own proxy is a fact about
+your session, not about the host.**
+
+
 ## 🔴 Pass 311 — THREE PASSES, THREE DEFECTS, AND NOT ONE OF THEM WAS IN THE FAMILY AT THE TOP OF THE QUEUE: THE SECTOR'S BIGGEST LICENCE RISK IS WHERE ITS SMALLEST NUMBERS ARE
 
 ⏱️ **Pass 311 of `2026-10-19`.** Evidence:

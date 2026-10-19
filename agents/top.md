@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 312 — THE ITEM RANKED FIRST FOR THIS PASS ASKED IT TO GO FIND A PAYLOAD THAT HAS BEEN A TESTED FIXTURE IN THIS TREE FOR MANY PASSES; AND NOT ONE OF THE FOUR NONCOMMERCIAL PAYLOADS THIS BASE RESTS ON IS A LICENCE
+
+⏱️ **Pass 312 of `2026-10-19`, following `p311` of `2026-10-19`.** Evidence:
+[`p312-noncommercial-arm.2026-10-19-p312.tsv`](../evidence/p312-noncommercial-arm.2026-10-19-p312.tsv) ·
+[`p312-payload-pins.2026-10-19-p312.tsv`](../evidence/p312-payload-pins.2026-10-19-p312.tsv) ·
+[`p312-transport-boundary.2026-10-19-p312.tsv`](../evidence/p312-transport-boundary.2026-10-19-p312.tsv).
+
+🔴 **Read this first: the code channel did not run this pass.** `make` is refused in this
+execution environment — the harness classifier blocks executing repository code — so the dynamic
+arm, the 20 standing gates, `risk_order.py`, the `U+FEFF` instrument sweep and the
+`MPL-2.0`/`GPL-2.0` loss re-measure **were not run**. 🔵 Nothing below is a classifier reading.
+Everything below is a **payload read first-hand over `curl`**, which is the one channel this
+session has at full reach. `p311`'s *"20/20 gates green"* is restated here as **history, not as a
+current measurement**.
+
+### 🔴 `ACTION p311-R` item 1 — its premise was false on both families
+
+The item told `p312` to *"pin `CC-BY-NC-SA-4.0` (128 cells) and `CC-BY-NC-ND-4.0` (14) and run the
+arm"*, on the reasoning that the two families a studio **may not ship at all** are the two the
+battery has never read.
+
+| family | what the item assumed | 🔴 what the tree actually holds |
+|---|---|---|
+| `CC-BY-NC-SA-4.0` | no payload pinned | 🔴 **a payload has been a tested fixture in this repository for many passes** — `compose/code/grant-ladder-v4/fixtures/cccareers-open-source-curriculum.dd01b98.LICENSE.md`. 🟢 Re-fetched first-hand today: **`1 891` B · `032d28d98aab`**, on **both** `main` and `master`, **byte-identical to the stored fixture**. Nothing needed finding; **the arm needed pointing** |
+| `CC-BY-NC-ND-4.0` | no payload pinned | 🔴 **three payloads existed and two were already named on these shelves with their byte counts.** All three read first-hand today: `UD_Portuguese-CINTIL` **`224` B · `73c169eb6bbf`**, `mzyphur/responsible-ai-in-research-training` **`1 470` B · `39b4d330a934`** (never pinned at all), `gabrielmahia/shule-ai` **`209` B · `9dd285c3704d`** |
+
+🔵 **Second consecutive pass in which an `ACTION` item's premise is refuted by this base's own
+tree.** `p311` item 5 was told *"none yet read"* about two axes whose every top-3 row was already
+carried. 🔴 A third instance sits in `p311-R` item 7, which lists `accessibility` as unread while
+[`lukeslp/awesome-accessibility`](https://github.com/lukeslp/awesome-accessibility) is carried at
+`repos/trending.md` as `CC0-1.0`, `6 464` B, **and is a fixture in the same directory**.
+🟢 **The pattern is now nameable: this base's action items are written from the narrative of the
+previous pass rather than from a query against the tree.** The repair is a query, not a resolution.
+
+### 🔴 The finding the item could not have anticipated: none of the four is an operative grant
+
+| repo | rung | bytes | sha256 | 🔴 what the payload actually is |
+|---|---|---|---|---|
+| [`cccareers/open-source-curriculum`](https://github.com/cccareers/open-source-curriculum) | `LICENSE.md` (`main` **and** `master`) | `1 891` | `032d28d98aab` | 🔴 **the Creative Commons DEED SUMMARY.** Its own line 5 reads, verbatim: *"This is a human-readable summary of (and not a substitute for) the full license."* |
+| [`mzyphur/responsible-ai-in-research-training`](https://github.com/mzyphur/responsible-ai-in-research-training) | `LICENSE` (`main` **and** `master`) | `1 470` | `39b4d330a934` | 🔴 **a hand-written paraphrase that is NOT CC BY-NC-ND 4.0.** It adds *"without prior written permission from Instats"* to NonCommercial and a mandatory citation form. **The CC legalcode contains neither** |
+| [`UniversalDependencies/UD_Portuguese-CINTIL`](https://github.com/UniversalDependencies/UD_Portuguese-CINTIL) | `LICENSE.txt` (`master`) | `224` | `73c169eb6bbf` | 🔴 one sentence naming the family, then *"The complete license text is available at:"* and a URL |
+| [`gabrielmahia/shule-ai`](https://github.com/gabrielmahia/shule-ai) | `LICENSE` (`main` **and** `master`) | `209` | `9dd285c3704d` | 🔴 title line, holder, URL. Nothing else |
+
+🔴 **The `CC-BY-NC-SA-4.0` legalcode is ≈`19` KB and the `CC-BY-NC-ND-4.0` legalcode ≈`18` KB. The
+largest of these four payloads is `1 891` B — an order of magnitude short.** 🔵 A payload-pin
+records `bytes` and `sha`; **no control in this base asks whether those bytes are the grant**, and
+`p311` spent a whole pass establishing that `bytes`+`sha` cannot answer *"is this the same grant?"*
+without noticing the weaker question underneath it: *"is this a grant at all?"*
+
+🟡 **What this does NOT change: the client posture.** Under `P250`, `UNDETERMINED` is
+indistinguishable from `PROHIBITED`, and a deed-only or paraphrase-only grant is at best an
+incompletely perfected NonCommercial grant. **A studio still may not ship any of these four.**
+🔴 **What it does change is the direction of the residual risk.** The operative terms sit at a URL,
+so for three of the four the **binding text can change without a commit to the repository** — and a
+payload-pin on the notice would not move.
+
+🔴 **And the operative text is off-transport.** `creativecommons.org:443` is **refused by this
+session's egress proxy** (`connect_rejected`) on both legalcode URLs
+([ledger](../evidence/p312-transport-boundary.2026-10-19-p312.tsv)). **The `153` noncommercial
+cells this base publishes rest on a document it cannot fetch from here at all.** Declared, not
+worked around.
+
+### 🔴 A `BSD-3-Clause` payload with no title and zero `BSD` tokens — `p311`'s worst shape, from a new cause
+
+`p311`'s second defect was a channel that **failed closed and silent**: a `U+FEFF` byte made
+`p150.title_licence()` return `None`, and the importer fell through to the ladder the title channel
+exists to replace. 🔴 **This pass found the same outcome with no invisible byte involved.**
+
+[`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) serves `LICENSE` at `main`,
+**`1 475` B · `7069c7e8d60e` · no BOM** — a complete, ordinary `BSD-3-Clause` grant that
+
+- 🔴 **has no title line.** It opens `Copyright 2014-, Jupyter Development Team`, then the three
+  numbered conditions. Every title pattern in `p150` anchors at position `0` → **`None`**;
+- 🔴 **contains the string `BSD` exactly `0` times.** Checked, not assumed. So **no body ladder
+  keyed on a family name can reach it either** — the family is identifiable only from *structure*
+  (three numbered conditions plus the no-endorsement clause), and **no instrument in this base
+  reads structure**.
+
+🟢 **Direction: it fails SAFE.** Both channels abstain, `P250` maps `UNDETERMINED` →
+`PROHIBITED`, and nothing unusable gets shipped. 🔴 **Cost: `BSD-3-Clause` is the LARGEST
+uncovered family in this base at `301` cells**, and the loss is the one `p309` and `p311` both
+named — **usable supply excluded**, an opportunity cost, not a client cost.
+
+🔵 **The counter-example is `38` bytes away.**
+[`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) serves `LICENSE.md` at
+`1 513` B · `e2a20708d0fd` and **does** open `BSD 3-Clause License`. 🔴 **One family, two payload
+shapes, `38` B apart: no size heuristic can separate them, and the titled one is the minority
+shape in this sample.**
+
+### 🔴 A payload that is a licence INVENTORY, not a licence
+
+[`ankitects/anki`](https://github.com/ankitects/anki) serves `LICENSE` at `1 930` B ·
+`bde7d05790a0`. In those `1 930` bytes it names **seven families**: `AGPL-3.0-or-later` (the work),
+`BSD-3` (user contributions), `CC-BY-4.0`, `MIT` (×5), `Apache-2.0`.
+
+🟢 **A positional reader gets the right top-level answer** — *"GNU Affero General Public License"*
+is the first family name in document order. 🔴 **It gets it by luck of layout**, and `p153`'s
+pre-`p311` list-ordered shape could have returned `MIT` or `Apache-2.0` from the same file.
+🔵 **This corroborates a finding this base already holds from the other side:** `EduChat`'s
+three-way split (`Apache-2.0` code / `AGPL-3.0` model / `CC-BY-NC-4.0` data) is recorded here as
+*"a single Licence column is the wrong shape"* — that was **across tiers**; this is the same defect
+**inside one payload**. 🔴 For a studio the binding obligation is the aggregate: **`AGPL-3.0`
+network copyleft**, which is not what any single-value column would carry.
+
+🔵 **No new agents are promoted to the table below this pass.** The supply channel is closed in
+this session (see `repos/trending.md` for the transport finding) and **fewer real rows beat
+padding**. The 14 payloads read first-hand are recorded as licence evidence, not as agent rows.
+
+
 ## 🟢 Pass 311 — THE `7 884`-CELL TOP OF THE QUEUE CAME BACK CLEAN AND BOTH REAL DEFECTS WERE IN SMALL FAMILIES THE PASS REACHED BY ACCIDENT; ONE INVISIBLE BYTE CAUSED THE SECOND
 
 ⏱️ **Pass 311 of `2026-10-19`, following `p310` of `2026-10-19`.** Evidence:

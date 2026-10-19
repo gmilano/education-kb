@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 312 — THE FOUNDATIONAL LAYER'S LICENCE EVIDENCE IS SOUND AND ITS COVERAGE CLAIM IS NOT: `11` OF THIS PASS'S `14` PAYLOADS ARE COPYLEFT, AND THE ONE PERMISSIVE FAMILY WITH `301` CELLS HAS A SHAPE NO CHANNEL HERE CAN READ
+
+⏱️ **Pass 312 of `2026-10-19`.** Evidence:
+[`p312-payload-pins.2026-10-19-p312.tsv`](../evidence/p312-payload-pins.2026-10-19-p312.tsv) ·
+[`p312-noncommercial-arm.2026-10-19-p312.tsv`](../evidence/p312-noncommercial-arm.2026-10-19-p312.tsv).
+
+🔴 **The code channel did not run** (`make` refused in this environment). No gate reading, no
+classifier reading, no coverage percentage is claimed this pass. `p311`'s `90 %`-of-cells figure is
+**history**, not a current measurement.
+
+### 🔴 What the foundational tier looks like when every grant is read first-hand
+
+`14` payloads, `14` unrelated repositories, all read over `raw.githubusercontent.com` this pass:
+
+| posture for a studio | payloads | families |
+|---|---|---|
+| 🟢 **permissive — buildable on, the thing this base exists to find** | **3** | `Apache-2.0` (1), `BSD-3-Clause` (2) |
+| 🟡 **file-level / weak copyleft — usable with discipline** | **1** | `MPL-2.0` |
+| 🔴 **strong copyleft — `GPL`/`AGPL`, and `AGPL` reaches hosted delivery** | **10** | `AGPL-3.0` (5), `GPL-3.0` (3), `GPL-2.0` (2) |
+
+🔴 **`10` of `14`, and `5` of those are `AGPL-3.0`.** 🔵 **This is the fact that should govern an
+education engagement estimate and it is not what a licence-badge screen shows.** The education
+foundation layer — `edx-platform`, `frontend-app-learning`, `openstax-cms`, `LibreLingo`, `anki` —
+is **AGPL**, whose §13 reaches a *hosted* deliverable, which is how a studio ships. 🟡 A
+`GPL-3.0` LMS (`chamilo`, `h5p`) is a lighter obligation than the AGPL tier precisely because it
+does **not** reach network use. 🔴 **The two `GPL-2.0` rows (`i-educar` 🇧🇷, `rosariosis`) are the
+heaviest of all to compose with: no patent grant, no §13, and not combinable with `GPL-3.0` code.**
+
+### 🔴 The largest uncovered family has a payload shape this base cannot read
+
+`BSD-3-Clause` is `301` published cells, the biggest family with no payload coverage. Both of this
+pass's `BSD-3-Clause` payloads are real, complete grants, and **they do not look alike**:
+
+| repo | bytes · sha | title line | occurrences of `BSD` |
+|---|---|---|---|
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | `1 513` · `e2a20708d0fd` | 🟢 `BSD 3-Clause License` | ≥1 |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | `1 475` · `7069c7e8d60e` | 🔴 **none** — opens `Copyright 2014-, Jupyter Development Team` | 🔴 **`0`** |
+
+🔴 **The title channel returns `None` on the second and every body ladder keyed on a family name
+returns nothing**, because the token is not in the file. 🟢 It fails **safe** —
+`UNDETERMINED` → `PROHIBITED` under `P250` — so the cost is **usable supply excluded**, the same
+direction as `p309`'s and `p311`'s `MPL-2.0` defect. 🔵 **Two of the three permissive payloads
+this pass read are `BSD-3-Clause`, and half of them are unreadable by every channel this base
+owns.** Any coverage figure for `BSD-3-Clause` computed from a single pinned fixture will be an
+over-claim, and the fixture to pin is **both shapes**, not one.
+
+### 🟢 `bytes` + `sha` corroborated in both directions, from new supply
+
+🟢 **Same grant, same bytes, unrelated projects:**
+[`openedx/frontend-app-learning`](https://github.com/openedx/frontend-app-learning) serves `LICENSE`
+at `master` as **`34 523` B · `8486a10c4393`** — `p311`'s exact `AGPL-3.0` pin, previously seen on
+`MeetPlanBackend` and `koakademy`. **Third unrelated repository, third filename context.**
+🟢 [`oppia/oppia`](https://github.com/oppia/oppia) serves **`11 358` B · `cfc7749b96f6`** — `p311`'s
+*fixed document* for `Apache-2.0`, the one that differs from `c71d239df917` by a single leading
+newline. **`p311` had this observation on `AGPL-3.0` only; it now holds on `Apache-2.0` too.**
+
+🔴 **Same grant, different bytes:** `AGPL-3.0` at `34 523` / `34 524` / `34 541` / `35 136` —
+**four lengths, one grant**. `GPL-3.0` at `35 146` / `35 147` — **one byte apart**. 🔵 `p311`'s
+rule is confirmed at `n=5` on one family: *byte length and sha answer «is this the same FILE?»
+and never «is this the same GRANT?»*.
+
+### 🟢 A BOM sweep over payloads — clean, and scoped honestly
+
+`ACTION p311-R` item 2b asks for a `U+FEFF` sweep over **instruments** and over **pinned
+payloads**. 🟢 **The payload half was run:** all `14` payloads this pass pinned, plus the `4`
+noncommercial ones, were checked byte-for-byte at offset `0`. **`0` of `18` carry a BOM.**
+🔴 **The instrument half was NOT run** — it requires executing the readers in `ENTRY_POINTS`, and
+code execution is refused in this environment. 🔵 **Nothing is established about the other seven
+readers' `U+FEFF` blindness.** The item stays open.
+
+
 ## 🟢 Pass 311 — THE FOUNDATIONAL LAYER GAINED A PAYLOAD-IDENTITY ORACLE, BECAUSE `bytes` + `sha` HAD BEEN ANSWERING A QUESTION IT CANNOT ANSWER
 
 ⏱️ **Pass 311 of `2026-10-19`.** Evidence:

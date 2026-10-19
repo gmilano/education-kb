@@ -1,0 +1,11 @@
+url	http	body_author	verdict
+https://api.github.com/rate_limit	200	GitHub	NAMES NO REPOSITORY -> allowed
+https://api.github.com/search/repositories?q=...	403	Anthropic session proxy	"sessions are bound to their configured repositories"
+https://api.github.com/orgs/moodle	403	Anthropic session proxy	same message
+https://api.github.com/repos/moodle/moodle	403	Anthropic session proxy	"GitHub access to this repository is not enabled for this session"
+https://api.github.com/repos/openedx/edx-platform	403	Anthropic session proxy	same message
+https://github.com/topics/accessibility	403	Anthropic session proxy	SAME message -> NOT a GitHub path rule
+https://github.com/openedx/edx-platform	403	Anthropic session proxy	an ordinary repo page, same 403 -> the whole host is bound
+https://raw.githubusercontent.com/<any>/<ref>/<rung>	200	GitHub	NOT bound: 14 payloads from 14 unrelated repos read first-hand
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.txt	000	egress proxy	connect_rejected — host not allowed for this session
+https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.txt	000	egress proxy	connect_rejected — host not allowed for this session

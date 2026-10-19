@@ -1,0 +1,10 @@
+repo	ref	rung	bytes	sha256_12	bom	family	payload_class	is_operative_grant	status_before_p312
+cccareers/open-source-curriculum	main	LICENSE.md	1891	032d28d98aab	none	CC-BY-NC-SA-4.0	CC deed summary — says so in its own line 5	NO	already a fixture in compose/code/grant-ladder-v4/fixtures (byte-identical)
+cccareers/open-source-curriculum	master	LICENSE.md	1891	032d28d98aab	none	CC-BY-NC-SA-4.0	same payload at a second ref	NO	same
+mzyphur/responsible-ai-in-research-training	main	LICENSE	1470	39b4d330a934	none	CC-BY-NC-ND-4.0 + ADDED TERM	hand-written paraphrase; adds prior-written-permission gate	NO	family named on shelf, payload NEVER pinned
+mzyphur/responsible-ai-in-research-training	master	LICENSE	1470	39b4d330a934	none	CC-BY-NC-ND-4.0 + ADDED TERM	same payload at a second ref	NO	same
+UniversalDependencies/UD_Portuguese-CINTIL	master	LICENSE.txt	224	73c169eb6bbf	none	CC-BY-NC-ND-4.0	one-sentence reference to a URL	NO	224 B recorded on shelf; sha NEVER pinned
+gabrielmahia/shule-ai	main	LICENSE	209	9dd285c3704d	none	CC-BY-NC-ND-4.0	title + holder + URL	NO	209 B recorded on shelf; sha NEVER pinned
+gabrielmahia/shule-ai	master	LICENSE	209	9dd285c3704d	none	CC-BY-NC-ND-4.0	same payload at a second ref	NO	same
+datawhalechina/ai-edu-for-kids	main	LICENSE/LICENSE.md/LICENSE.txt/COPYING	0	-	-	CC-BY-NC-SA-4.0 (README prose)	NO_PAYLOAD at 4 probed rungs	n/a	corroborates p269 — NOT an absence (T-p309c)
+xiaolai/the-craft-of-selfteaching	main+master	LICENSE/LICENSE.md/LICENSE.txt/COPYING	0	-	-	CC-BY-NC-ND-3.0 (README prose)	NO_PAYLOAD at 8 probed rungs	n/a	corroborates the earlier ten-filename sweep

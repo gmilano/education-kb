@@ -4,6 +4,138 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 📈 2026-10-19 · Pass 312 — THE `403` `p311` CALLED A GITHUB PATH RULE IS THIS SESSION'S OWN REPOSITORY BINDING, AND IT EXPLAINS WHY THE PRESCRIBED SUPPLY BATTERY KEEPS SATURATING
+
+**Append-only. Added above `p311`'s section; nothing below is rewritten.**
+
+### 🔴 The refutation: the boundary is the session, not the host, and not the path
+
+`p311` recorded, and told `p312` to say *"which host AND which path, every time"*:
+
+> 🔴 **`curl` now returns `403` on `github.com/topics/*`** although `raw.githubusercontent.com`
+> answers on `curl`: the reachability statement is **per host AND per path**.
+
+🔴 **The `403` is real and the attribution is wrong.** `p311` never read the response body. This
+pass did ([ledger](../evidence/p312-transport-boundary.2026-10-19-p312.tsv)):
+
+| url | HTTP | 🔴 who wrote the body |
+|---|---|---|
+| `github.com/topics/accessibility` | `403` | 🔴 **the Anthropic session proxy** — *"GitHub access to this repository is not enabled for this session. Use `add_repo` to request access."* |
+| `github.com/openedx/edx-platform` | `403` | 🔴 **the same message** — and this is an **ordinary repository page**, not `/topics/*` |
+| `api.github.com/repos/moodle/moodle` | `403` | 🔴 the same message |
+| `api.github.com/search/repositories?q=…` | `403` | 🔴 *"sessions are bound to their configured repositories. Use repository-scoped endpoints"* |
+| `api.github.com/orgs/moodle` | `403` | 🔴 the same message |
+| `api.github.com/rate_limit` | 🟢 **`200`** | 🟢 **GitHub.** The one allowed path is the one that **names no repository** |
+
+🔴 **So it is not `/topics/*`.** The whole of `github.com`, and every repository-scoped
+`api.github.com` path, is closed **by this session's repository binding** — which is set to
+`gmilano/globant-kb` and nothing else. 🔵 **A `403` whose body is written by the proxy is a fact
+about the session, not about the host**, and `p311` generalised it into a claim about GitHub's URL
+space that eight passes of *"say which host AND which path"* would have carried forward as true.
+🟢 **The corrected rule: read the body before attributing the status.**
+
+### 🟢 And the asymmetry is the operative fact for every future pass
+
+| channel | reach | 🔵 what it means |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **NOT bound.** `14` payloads from `14` unrelated repositories read first-hand this pass | 🟢 **VERIFICATION is open at full reach.** Any repo that can be *named* can have its grant read, byte-for-byte |
+| `github.com` · `api.github.com/repos|search|orgs` | 🔴 closed by session binding | 🔴 **DISCOVERY is shut.** No topic page, no search, no star count, no default-branch lookup |
+
+🔴 **This is the mechanism behind a finding this base has recorded for several passes without a
+cause: the prescribed query battery keeps returning this shelf's own contents.** It is not that
+the sector has stopped producing. It is that **the only discovery channel left is web search, whose
+education returns are listicle-grade**, while the channel that would find new repositories is
+closed. 🟢 **Actionable consequence: a pass can still enlarge the base by *naming* candidates from
+outside GitHub and verifying them on `raw`** — which is what this pass did, and it is how the 14
+rows below arrived.
+
+### 🟢 This pass's trending read, with the denominator stated honestly
+
+| axis | how candidates were reached | slugs probed | 🟢 payload read | ⚪ nothing at the probed rungs |
+|---|---|---|---|---|
+| `language-learning` (`p311-R` item 7) | 🔴 **named, not discovered** — topic pages closed | 3 | 3 | 0 |
+| `accessibility` (`p311-R` item 7) | 🔴 named, not discovered | 1 | 0 | 1 |
+| `open-educational-resources` (`p311-R` item 7) | 🔴 named, not discovered | 4 | 2 | 2 |
+| LMS / SIS / authoring / learning infrastructure *(carried axes, currency re-probe)* | named | 10 | 9 | 1 |
+| **total** | | **18** | **🟢 14** | **⚪ 4** |
+
+🔵 **Axis assignment is this pass's judgement, not a topic-page label** — the topic pages that
+would assign them are closed. `mozilla/common-voice` is counted under `language-learning` as a
+speech-corpus platform; `freeCodeCamp` under learning infrastructure. **The per-axis split is
+soft; the `18` / `14` / `4` totals are not.**
+
+🔴 **Denominator honesty: there is no `N` for any of these axes this pass.** `p311` could write
+*"148 repos on `proctoring`, 17 read"* because the topic page answered on a second transport. This
+pass has **no topic page on any transport**, so it reports **what it read and nothing about what it
+did not** — there is no *"3 of 148"* available, and inventing one would be worse than the gap.
+
+### 🟢 New payloads pinned this pass
+
+| repo | ref · rung | family *(read first-hand)* | bytes · sha | 🔵 note |
+|---|---|---|---|---|
+| [`mozilla/common-voice`](https://github.com/mozilla/common-voice) | `main` · `LICENSE` | 🟡 `MPL-2.0` | `16 726` · `3f3d9e0024b1` | 🟢 **`p311`'s `MPL-2.0` defect mechanism reproduced first-hand on a payload `p311` never read** — see below |
+| [`LibreLingo/LibreLingo`](https://github.com/LibreLingo/LibreLingo) | `main` · `LICENSE` | 🔴 `AGPL-3.0` | `34 524` · `e9df4c4e4e64` | `language-learning`. **One byte off `p311`'s pin** |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | `main` · `LICENSE` | 🔴 `AGPL-3.0-or-later` *(aggregate)* | `1 930` · `bde7d05790a0` | 🔴 **names 7 families in one payload** |
+| [`openstax/openstax-cms`](https://github.com/openstax/openstax-cms) | `main` · `LICENSE` | 🔴 `AGPL-3.0` | `34 541` · `6179a3052bab` | `open-educational-resources` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` · `LICENSE` | 🔴 `AGPL-3.0` | `35 136` · `e12d78569742` | 🔵 `LICENSE.txt` at `master` is `404`; `LICENSE` answers. **A `404` is not an absence** (`T-p309c`) |
+| [`openedx/frontend-app-learning`](https://github.com/openedx/frontend-app-learning) | `master` · `LICENSE` | 🔴 `AGPL-3.0` | `34 523` · `8486a10c4393` | 🟢 **byte-identical to `p311`'s pin** — a THIRD unrelated repo on it |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `master` · `LICENSE` | 🟢 `Apache-2.0` | `11 358` · `cfc7749b96f6` | 🟢 **byte-identical to `p311`'s fixed `Apache-2.0` document** |
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | `main` · `LICENSE.md` | 🟢 `BSD-3-Clause` | `1 513` · `e2a20708d0fd` | 🟢 **first payload for the largest uncovered family (`301` cells)**. TITLED |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | `main` · `LICENSE` | 🟢 `BSD-3-Clause` | `1 475` · `7069c7e8d60e` | 🔴 **no title line, zero `BSD` tokens** — see `agents/top.md` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` · `LICENSE` | 🔴 `GPL-3.0` | `35 147` · `8ceb4b9ee5ad` | LMS |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` · `LICENSE.txt` | 🔴 `GPL-3.0` | `35 146` · `c53a65c2fd56` | 🔴 **one byte off `chamilo`, different sha** |
+| [`kiwix/kiwix-tools`](https://github.com/kiwix/kiwix-tools) | `main` · `COPYING` | 🔴 `GPL-3.0` | `35 068` · `fc82ca8b6fdb` | offline OER delivery |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `master` · `LICENSE` | 🔴 **`GPL-2.0`** *(«Version 2, June 1991», read)* | `18 092` · `8177f9751321` | 🇧🇷 **LATAM** SIS. 🟢 **no BOM** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `master` · `LICENSE` | 🔴 **`GPL-2.0`** *(same version line)* | `15 214` · `d954e14e5c75` | SIS. 🟢 **no BOM** |
+
+⚪ **Declared at the probed rungs — and `NO_PAYLOAD` is never `NOT-A-REPOSITORY`**
+(`T-p309c`), so the two are separated here:
+🟢 [`nvaccess/nvda`](https://github.com/nvaccess/nvda) — **repository confirmed** (`readme.md`
+at `master`), **no payload at 10 rungs** across `main`+`master`. A genuine `NO_PAYLOAD`.
+🔴 `pressbooks/pressbooks` (10 rungs), `ADL-OpenSource/xAPI-Spec` (12 rungs, +`develop`) and
+`Ceibal/ceibal-app` 🇺🇾 (12 rungs) returned nothing **and their slugs could not be established
+either** — 6 README probes each, all `404`. 🔵 **The slug oracle needs `api.github.com/repos/*`,
+which is closed to this session, and `raw` can confirm a slug positively but never refute one.**
+This pass therefore makes **no claim that these three repositories exist**, and does not reach even
+the weaker `NO_PAYLOAD` claim about them.
+
+### 🟢 `p311`'s `MPL-2.0` mechanism, reproduced on a payload it never saw
+
+`p311` fixed `p153/classify_body`, which graded **every** `MPL-2.0` payload `GPL-3.0` because
+MPL §1.12 names the GNU licences in its *«Secondary License»* definition and the loop took the
+first marker **anywhere** in 4 000 characters. 🟢 **Marker positions in `mozilla/common-voice`'s
+`16 726` B payload, measured this pass:**
+
+| marker | first occurrence |
+|---|---|
+| `mozilla public license` | 🟢 char **`0`** |
+| `secondary license` | char `775` |
+| `gnu general public license` | 🔴 char **`2 341`** |
+| `affero` | 🔴 char `2 446` |
+
+🔴 **Both GNU markers fall inside the 4 000-character window**, so the pre-`p311` ladder would have
+graded this payload `GPL-3.0`. 🟢 **`p311`'s positional fix grades it `MPL-2.0`** — Mozilla at char
+`0` wins on position. 🔵 **This is corroboration from supply `p311` did not have**, and it is the
+closest this pass can come to `ACTION p311-R` item 2: **the mechanism is confirmed; the realised
+loss across the `161` published `MPL-2.0` cells is still NOT measured, because that needs the
+classifier, and the classifier could not be run.**
+
+### 🔴 `bytes` + `sha` is not a grant identity — `n` is now 5 on one family
+
+`p311` established this on a pair. One family, five payloads, read first-hand today:
+
+| `AGPL-3.0` payload | bytes |
+|---|---|
+| `openedx/frontend-app-learning` *(= `p311`'s pin, `MeetPlanBackend`, `koakademy`)* | `34 523` |
+| `LibreLingo/LibreLingo` | `34 524` |
+| `openstax/openstax-cms` | `34 541` |
+| `openedx/edx-platform` | `35 136` |
+
+🔴 **Four byte-lengths, one grant, no two shas shared outside `p311`'s pair.** 🟢 And the same
+shape on `GPL-3.0`: `chamilo` `35 147` vs `h5p-php-library` `35 146` — **one byte, different
+shas, identical grant.** 🔵 `p311`'s thesis holds and is no longer a two-point line.
+
+
 ## 📈 2026-10-19 · Pass 311 — TWO REPOSITORIES, TWO FILENAMES, ONE BYTE-IDENTICAL GRANT: THE WEEK'S TRENDING READ CORROBORATED THE PASS'S IDENTITY FINDING BY ACCIDENT
 
 **Append-only. Added above `p310`'s section; nothing below is rewritten.**

@@ -4,6 +4,153 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 312 — THE SECTOR'S SIZING SPREAD IS UNCHANGED AND THE SUPPLY-SIDE NUMBER THAT MATTERS IS NEW: `10` OF `13` VERTICAL PLATFORMS ARE COPYLEFT AND `5` ARE `AGPL`
+
+⏱️ **Pass 312 of `2026-10-19`.** Evidence:
+[`p312-payload-pins.2026-10-19-p312.tsv`](../evidence/p312-payload-pins.2026-10-19-p312.tsv) ·
+[`p312-transport-boundary.2026-10-19-p312.tsv`](../evidence/p312-transport-boundary.2026-10-19-p312.tsv).
+
+🔴 **Transport status, restated because it governs every figure in this file — and CORRECTED.**
+No primary legal, government or market source was reached this pass. 🔴 **`p311`'s framing of the
+GitHub boundary as *"per HOST and per PATH"* is wrong and is withdrawn here:** the `403` on
+`github.com/topics/*` carries **the Anthropic session proxy's** body, not GitHub's, and the
+identical body comes back from ordinary repository pages and from `api.github.com/repos/*`. 🟢 The
+boundary is **this session's repository binding**; the single `200` (`api.github.com/rate_limit`)
+is the one path that names no repository. 🟢 `raw.githubusercontent.com` is **not** bound.
+🔵 **The honest rule is now: read the body before attributing the status.**
+
+🔴 **`creativecommons.org` is refused outright by this session's egress proxy**, so the legalcode
+that every CC row on this base incorporates by reference is unreadable from here.
+
+### 🔴 Sizing — the factor-of-7 spread is intact, on fresh returns
+
+| source | 2026 | terminal | CAGR |
+|---|---|---|---|
+| IMARC | `$9.0 B` | `$79.6 B` by 2034 | `31.35 %` |
+| The Business Research Company | `$10.6 B` | — | `40.9 %` |
+| Technavio | — | `$3.37 B` *incremental* 2025–30 | `~45 %` |
+| unattributed aggregator | `$8.3 B` (2025) | `$57.2 B` by 2033 | `25.9 %` |
+| unattributed aggregator | `$11.1 B` (2025) | `$89.06 B` by 2034 | `26.02 %` |
+
+🔴 **Terminal estimates differ by `$31.9 B` and CAGRs by `19` points.** 🟢 **No figure in this
+table is adopted as this base's view.** 🔵 They are recorded so a proposal that quotes one can be
+told, in the same breath, what the others say. The spread itself is the finding and it has
+survived three passes.
+
+### 🟢 The supply-side number, which this base CAN measure first-hand
+
+`13` vertical education platforms, grants read from the repository today
+([`verticals/solutions.md`](../verticals/solutions.md)):
+
+| posture | count | rows |
+|---|---|---|
+| 🔴 `AGPL-3.0` *(§13 reaches hosted delivery)* | **5** | Open edX platform + learner MFE, OpenStax CMS, LibreLingo, Anki |
+| 🔴 `GPL-3.0` | 3 | Chamilo, H5P, Kiwix |
+| 🔴 `GPL-2.0` *(no patent grant, no §13, not `GPL-3.0`-combinable)* | 2 | i-educar 🇧🇷, RosarioSIS |
+| 🟡 `MPL-2.0` *(file-level)* | 1 | Common Voice |
+| 🟢 **permissive** | **2** | Oppia (`Apache-2.0`), JupyterHub (`BSD-3-Clause`) |
+
+🔵 **This is the market fact a sizing table cannot give you: on the education vertical tier,
+*"open source"* predominantly means AGPL.** An engagement that assumes a permissive base is
+mispricing its obligations in `10` cases out of `13`.
+
+## Opportunities by region
+
+🔵 **Placement discipline, stated because this base has been wrong about it before:** a row is
+placed in a region only where a *reached* source places it. Where nothing was reached, the region
+reads **NIL with its denominator**, which is information; silence is not.
+
+### North America
+
+🟡 **Demand signal, snippet-grade.** Market returns give the region `36–41.7 %` of global share and
+the largest absolute base, with `$951 M` (2024) → `$2.3 B` (2029) at `15.9 %` on one firm's
+scope — 🔴 **a CAGR less than half the global figures in the table above, from the same query**,
+which is itself a reason to distrust both.
+🟢 **Regulatory shape: fragmented and sub-federal.** There is no FDA-equivalent for education
+technology; adoption sits with districts and institutions, with state-level requirements
+(Colorado, Texas named) rather than a national rule.
+🟢 **The opportunity this base can evidence:** the region's foundation layer is the AGPL tier —
+Open edX and OpenStax are both North American and both `AGPL-3.0`, read first-hand this pass. 🔵 **A
+US district or university engagement that modifies and hosts either one has a §13 publication
+obligation**, and the studio service with a market is *the compliance-clean customisation*: build
+the modifications as separable `Apache-2.0`/`BSD-3-Clause` services around the AGPL core
+(`oppia`, `jupyterhub`, `common-voice` are the rows that compose this way).
+🔴 **Claim NOT made:** no named North American buyer, budget or procurement cycle was reached.
+
+### EMEA
+
+🟢 **The one region where this base holds a dated, decision-grade rule** — and it was re-served by
+this pass's query rather than extended:
+`Regulation (EU) 2024/1689` (the AI Act) puts education in **Annex III point 3**; the Digital
+Omnibus (`Regulation (EU) 2026/1744`) defers the high-risk obligations to **`2027-12-02`**;
+Art. 50 transparency applies **`2026-08-02`**; Art. 4 AI-literacy has applied since
+**`2025-02-02`** and is **not** deferred; emotion recognition in schools is **prohibited since
+Feb 2025**. 🔴 **A source in this pass's returns served the superseded *"2 August 2026"* high-risk
+date again — the eighth recorded re-service.**
+🟢 **The opportunity:** `2027-12-02` is **~14 months out**, which is exactly the window in which
+conformity work is bought rather than deferred. 🔵 **Schools are *deployers*, vendors are
+*providers*** — so a studio building an education AI system for an EU client is taking on the
+**provider** duties, which is the billable scope.
+🔴 **Claim NOT made:** `eur-lex.europa.eu` is unreachable on every transport here, so none of the
+above was read from the instrument this pass. It is carried from this base's own prior verification.
+
+### APAC
+
+🔴 **NIL on the education channel, with its denominator.** The prescribed query
+(`AI education APAC 2026 adoption regulation players`) returned **no education player, no education
+ministry and no education-specific rule**. What came back was general enterprise AI governance:
+fragmented national regimes with no APAC-wide framework, Singapore on mature responsible-AI
+guidance, China on algorithmic conduct, India applying existing law, the ASEAN governance guide
+early-stage; `56 %` of APAC businesses with a deployed assistant; `57 %` of Asian organisations
+with AI in at least one function.
+🟢 **The one APAC-placeable row this pass can evidence first-hand is a repository, not a market
+fact:** [`oppia/oppia`](https://github.com/oppia/oppia), `Apache-2.0`, `11 358` B · `cfc7749b96f6`,
+with a substantial 🇮🇳 India deployment history — and it is **the cleanest permissive platform on
+the whole vertical shelf**.
+🔵 **Opportunity, stated as a hypothesis rather than a finding:** a region described as the
+fastest-growing with **no shared regulatory framework** is one where a permissive, forkable platform
+beats a compliance-heavy one. 🔴 **This base has not tested that and does not assert it.**
+
+### LATAM
+
+🟢 **No longer a nil on the code channel.** `p311` recorded LATAM as a two-pass nil. This pass
+places **two platforms with grants read first-hand today**:
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) 🇧🇷, the Brazilian municipal SIS —
+**`GPL-2.0`**, `18 092` B · `8177f9751321`, version line *«Version 2, June 1991»* read in the
+payload, **no BOM** — and [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis),
+**`GPL-2.0`**, `15 214` B · `d954e14e5c75`. 🟡 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms)
+(`GPL-3.0`) has a large Spanish-language install base but is governed from Europe, so it is **not**
+placed here.
+🔴 **The regional finding is a constraint, not an opportunity, and it is specific:** the two SIS
+platforms a LATAM public-sector education engagement would actually start from are **`GPL-2.0`** —
+**no patent grant, no network clause, and not combinable with `GPL-3.0` code**. 🔵 **An AI layer
+built onto i-educar cannot link `GPL-3.0` components**, which rules out a large part of the
+contemporary Python/PHP tooling by default. That is a design decision that must be made at week 1,
+not discovered at integration.
+🟡 **Regulatory shape:** no LATAM country has a national AI law in force; Chile leads with a 2021
+national AI policy and a bill in discussion; Brazil and Colombia have national strategies without
+education-sector rules; Mexico's SEP/ANUIES guidance is **non-binding**. 🔵 This base continues to
+carry Chile's `Ley 21.719` as binding **`2026-12-01`** unless `18.623-07` is enacted, with the
+contradictory public reading briefed alongside it.
+🟡 **One unadopted lead, named so the next pass can take it:** an **IADB/BID technical note of
+September 2026** on generative AI in classroom platforms, covering **Ceibal 🇺🇾** and Brazil's
+edtech policy, at `publications.iadb.org`. 🔴 **Not fetched, nothing adopted.** It is the first
+LATAM *primary-ish* source this battery has surfaced in several passes and it is worth a pass's
+transport budget.
+
+### Global
+
+🔴 **The discovery channel is shut, and that is a global finding about this base rather than about
+the sector.** `0` of `8` prescribed queries returned a repository, agent or instrument not already
+carried. The cause is now established: `github.com` and every repository-scoped `api.github.com`
+path are closed by this session's binding, leaving web search — whose education returns are
+listicles — as the only discovery transport, while `raw.githubusercontent.com` keeps
+**verification** open at full reach.
+🟢 **The operating consequence for every following pass:** enlarge the base by **naming** candidates
+from outside GitHub and **verifying** them on `raw`. That is how all `14` payloads in this pass
+arrived, and it is the only channel that currently works.
+
+
 ## 🔴 Pass 311 — THE MARKET NUMBERS FOR THIS SECTOR DISAGREE BY A FACTOR OF `7` ON THE SAME YEAR, AND EVERY ONE OF THEM IS STILL SNIPPET-GRADE
 
 ⏱️ **Pass 311 of `2026-10-19`.** 🔴 **Transport status, restated because it governs every figure

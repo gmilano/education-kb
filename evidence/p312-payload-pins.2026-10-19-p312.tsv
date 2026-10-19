@@ -1,0 +1,15 @@
+repo	ref	rung	bytes	sha256_12	bom	first_nonblank_line	family_read_first_hand	payload_class
+LibreLingo/LibreLingo	main	LICENSE	34524	e9df4c4e4e64	none	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0	full legalcode
+ankitects/anki	main	LICENSE	1930	bde7d05790a0	none	Anki is licensed under the GNU Affero General Public License, version 	AGPL-3.0-or-later (aggregate)	inventory naming 7 families
+chamilo/chamilo-lms	master	LICENSE	35147	8ceb4b9ee5ad	none	GNU GENERAL PUBLIC LICENSE	GPL-3.0	full legalcode
+francoisjacquet/rosariosis	master	LICENSE	15214	d954e14e5c75	none	GNU GENERAL PUBLIC LICENSE	GPL-2.0	full legalcode
+freeCodeCamp/freeCodeCamp	main	LICENSE.md	1513	e2a20708d0fd	none	BSD 3-Clause License	BSD-3-Clause	full text, TITLED
+h5p/h5p-php-library	master	LICENSE.txt	35146	c53a65c2fd56	none	GNU GENERAL PUBLIC LICENSE	GPL-3.0	full legalcode
+jupyterhub/jupyterhub	main	LICENSE	1475	7069c7e8d60e	none	Copyright 2014-, Jupyter Development Team	BSD-3-Clause	full text, NO TITLE, zero BSD tokens
+kiwix/kiwix-tools	main	COPYING	35068	fc82ca8b6fdb	none	GNU GENERAL PUBLIC LICENSE	GPL-3.0	full legalcode
+mozilla/common-voice	main	LICENSE	16726	3f3d9e0024b1	none	Mozilla Public License Version 2.0	MPL-2.0	full legalcode
+openedx/edx-platform	master	LICENSE	35136	e12d78569742	none	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0	full legalcode
+openedx/frontend-app-learning	master	LICENSE	34523	8486a10c4393	none	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0	full legalcode
+openstax/openstax-cms	main	LICENSE	34541	6179a3052bab	none	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0	full legalcode
+oppia/oppia	master	LICENSE	11358	cfc7749b96f6	none	Apache License	Apache-2.0	full legalcode
+portabilis/i-educar	master	LICENSE	18092	8177f9751321	none	GNU GENERAL PUBLIC LICENSE	GPL-2.0	full legalcode

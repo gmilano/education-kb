@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 312 — two recipes, both composed only of rows whose grant this pass read first-hand
+
+### `P101` — The AGPL-safe education platform build *(all regions, 6–9 weeks)*
+
+🔵 **Why this exists.** `10` of the `13` education vertical platforms this pass re-probed are
+copyleft and **`5` are `AGPL-3.0`** — Open edX and its learner MFE, OpenStax CMS, LibreLingo, Anki.
+🔴 **AGPL §13 reaches *hosted* delivery, which is how a studio ships**, so a modified, client-hosted
+Open edX obliges publication of the modifications to its users. The reflex answer — *"avoid
+AGPL"* — throws away the sector's entire foundation layer. 🟢 **The correct answer is an
+architecture: keep the AGPL core unmodified and put every billable change in separable permissive
+services around it.**
+
+**The rows, each with its grant read first-hand this pass
+([ledger](../evidence/p312-payload-pins.2026-10-19-p312.tsv)):**
+
+| role | repo | grant · bytes · sha | 🔵 why this row |
+|---|---|---|---|
+| LMS core, **unmodified** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) `master` | 🔴 `AGPL-3.0` · `35 136` · `e12d78569742` | deploy stock; **every change goes elsewhere** |
+| learner UI | [`openedx/frontend-app-learning`](https://github.com/openedx/frontend-app-learning) `master` | 🔴 `AGPL-3.0` · `34 523` · `8486a10c4393` | 🔴 **the layer clients most want changed, and the one §13 bites hardest.** Fork only if publication is accepted |
+| interactive content | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) `master` | 🔴 `GPL-3.0` · `35 146` · `c53a65c2fd56` | 🟡 **no network clause**: a hosted deployment triggers no distribution |
+| **the AI tier** | [`oppia/oppia`](https://github.com/oppia/oppia) `master` | 🟢 **`Apache-2.0`** · `11 358` · `cfc7749b96f6` | 🟢 **permissive, express patent grant** — put the adaptive-lesson logic here, not in the LMS |
+| notebooks / lab work | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) `main` | 🟢 **`BSD-3-Clause`** · `1 475` · `7069c7e8d60e` | 🟢 permissive multi-user infrastructure. 🔴 **Its payload has no title line and zero `BSD` tokens — any automated screen will abstain; grade it by hand** |
+| voice / accessibility | [`mozilla/common-voice`](https://github.com/mozilla/common-voice) `main` | 🟡 `MPL-2.0` · `16 726` · `3f3d9e0024b1` | 🟢 **file-level copyleft**: proprietary code sits alongside; only modified MPL files publish |
+| offline delivery | [`kiwix/kiwix-tools`](https://github.com/kiwix/kiwix-tools) `main` | 🔴 `GPL-3.0` · `35 068` · `fc82ca8b6fdb` | 🟡 **offline distribution IS distribution** — the obligation attaches at the device |
+
+**Wiring.**
+1. Open edX stock, in a container the studio does not patch. All integration through **LTI 1.3** and
+   the **XBlock** boundary — an XBlock that calls out over HTTP is a separable work; one that
+   patches `edx-platform` is not.
+2. The AI tier runs as its own `Apache-2.0` service (Oppia's lesson model as the state machine),
+   reached from the XBlock. **Billable logic lives here.**
+3. JupyterHub for practical work, behind the same LTI boundary.
+4. H5P for authoring; Kiwix for the offline channel where connectivity is the constraint.
+5. 🔴 **Week 1 deliverable, before any code: the §13 line.** Write down which components are
+   modified AGPL and will therefore publish, and get the client to sign it. 🔵 This is `P99`'s
+   licence-diligence gate applied to the architecture rather than to the shortlist.
+
+🔴 **What this recipe does NOT claim.** No benchmark was run on any row. No deployment was
+performed. The grants are read first-hand; **the architecture is reasoning from those grants**, and
+the §13 analysis is this base's reading, not legal advice.
+
+### `P102` — The LATAM public-sector SIS + AI layer, with the `GPL-2.0` constraint at the front *(LATAM, 8–12 weeks)*
+
+🔵 **Why this exists.** `p311` recorded LATAM as a **two-pass nil on the code channel**. This pass
+closes that nil with two platforms read first-hand — and what it found is a constraint sharp enough
+to govern the whole architecture.
+
+| role | repo | grant · bytes · sha |
+|---|---|---|
+| SIS, 🇧🇷 municipal | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) `master` | 🔴 **`GPL-2.0`** *(«Version 2, June 1991» read in the payload)* · `18 092` · `8177f9751321` |
+| SIS, K-12 🌎 Spanish-language | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) `master` | 🔴 **`GPL-2.0`** · `15 214` · `d954e14e5c75` |
+| LMS alongside | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) `master` | 🔴 `GPL-3.0` · `35 147` · `8ceb4b9ee5ad` |
+| the AI tier | [`oppia/oppia`](https://github.com/oppia/oppia) `master` | 🟢 `Apache-2.0` · `11 358` · `cfc7749b96f6` |
+
+🔴 **The constraint, stated first because it eliminates options rather than ranking them:**
+`GPL-2.0` has **no patent grant**, **no §13**, and is **not combinable with `GPL-3.0` code**. So:
+
+- 🔴 **You may not link `GPL-3.0` or `AGPL-3.0` components into i-educar or RosarioSIS.** That rules
+  out a large share of current PHP/Python tooling *inside the SIS process*.
+- 🔴 **Chamilo (`GPL-3.0`) and i-educar (`GPL-2.0`) cannot be combined into one work** — they may
+  run side by side and talk over a network boundary, and nothing more.
+- 🟢 **Therefore the only sound shape is process separation**: the SIS stays stock; everything the
+  studio builds sits behind an HTTP boundary, under `Apache-2.0`.
+
+**Wiring.**
+1. i-educar (🇧🇷) or RosarioSIS (🌎) deployed stock. No in-process extensions.
+2. A read-only replica or an export job feeds the AI tier — **no shared process, no linking**.
+3. The AI tier (`Apache-2.0`, Oppia's model as the substrate) serves early-warning and
+   adaptive-path endpoints back to the SIS UI as links, not as embedded code.
+4. 🟡 **Regulatory note for the proposal, with its uncertainty attached:** no LATAM country has a
+   national AI law in force; Chile's `Ley 21.719` is carried by this base as binding
+   **`2026-12-01`** unless `18.623-07` is enacted, **with the contradictory public reading briefed
+   alongside it**; Mexico's SEP/ANUIES guidance is non-binding; Brazil and Colombia have national
+   strategies without education-sector rules.
+5. 🔴 **No benchmark, no deployment, no named client.** The two SIS grants were read today; the
+   rest is reasoning from them.
+
+
 ## 🟢 Pass 311 — two recipes, both composed only of rows this pass read first-hand
 
 ### `P99` — The licence-diligence gate, run BEFORE the estimate is written *(all regions, 1–2 weeks)*

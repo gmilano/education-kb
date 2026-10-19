@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 312 — EVERY VERTICAL PLATFORM THIS PASS READ FIRST-HAND IS COPYLEFT, AND THE TWO LATAM SIS ROWS ARE `GPL-2.0`, THE HEAVIEST GRANT ON THIS SHELF TO COMPOSE WITH
+
+⏱️ **Pass 312 of `2026-10-19`.** Evidence:
+[`p312-payload-pins.2026-10-19-p312.tsv`](../evidence/p312-payload-pins.2026-10-19-p312.tsv).
+
+🔴 **Code channel not run** (`make` refused in this environment); every cell below is a payload
+read over `curl`, not a classifier output.
+
+### 🟢 The vertical shelf, re-probed first-hand this pass
+
+These are real, customisable systems — the `Odoo`/`OpenMRS`/`Moodle` class — with the grant read
+from the repository today, not carried:
+
+| platform | layer | repo · ref · rung | grant *(read first-hand)* | bytes · sha | 🔵 what a studio may do with it |
+|---|---|---|---|---|---|
+| **Open edX** | LMS, the sector's reference platform | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) · `master` · `LICENSE` | 🔴 `AGPL-3.0` | `35 136` · `e12d78569742` | 🔴 **§13 reaches hosted delivery.** A client-hosted Open edX with studio modifications **publishes those modifications to its users** |
+| **Open edX learner frontend** | LMS UI (MFE) | [`openedx/frontend-app-learning`](https://github.com/openedx/frontend-app-learning) · `master` | 🔴 `AGPL-3.0` | `34 523` · `8486a10c4393` | 🔴 same, and this is the layer a studio most often customises |
+| **Chamilo** | LMS, lightweight, strong 🌍 FR/ES/LATAM install base | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) · `master` | 🔴 `GPL-3.0` | `35 147` · `8ceb4b9ee5ad` | 🟡 **lighter than AGPL: no network clause.** A hosted deployment triggers no distribution |
+| **H5P** | interactive-content authoring, embeds into every LMS here | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) · `master` · `LICENSE.txt` | 🔴 `GPL-3.0` | `35 146` · `c53a65c2fd56` | 🟡 same posture; the integration layer is the question, not the library |
+| **i-educar** 🇧🇷 | **SIS** — Brazilian municipal school administration | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) · `master` | 🔴 **`GPL-2.0`** *(«Version 2, June 1991», read in the payload)* | `18 092` · `8177f9751321` | 🔴 **no patent grant, no §13, NOT combinable with `GPL-3.0` code.** The heaviest composition constraint on this shelf |
+| **RosarioSIS** | **SIS** — K-12, widely deployed in 🌎 Spanish-speaking deployments | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) · `master` | 🔴 **`GPL-2.0`** *(same version line)* | `15 214` · `d954e14e5c75` | 🔴 same |
+| **OpenStax CMS** | **OER** — the open-textbook delivery layer | [`openstax/openstax-cms`](https://github.com/openstax/openstax-cms) · `main` | 🔴 `AGPL-3.0` | `34 541` · `6179a3052bab` | 🔴 hosted delivery is the whole point of the product, so §13 is live |
+| **Kiwix** | **OER offline delivery** — the low-connectivity channel | [`kiwix/kiwix-tools`](https://github.com/kiwix/kiwix-tools) · `main` · `COPYING` | 🔴 `GPL-3.0` | `35 068` · `fc82ca8b6fdb` | 🟡 offline distribution **is** distribution: the GPL obligation attaches at the device |
+| **JupyterHub** | multi-user notebook infrastructure for teaching | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) · `main` | 🟢 **`BSD-3-Clause`** | `1 475` · `7069c7e8d60e` | 🟢 **the one row on this shelf a studio can build on without a copyleft obligation** — and 🔴 **no automated channel here can read it** (no title line, zero `BSD` tokens) |
+| **Anki** | spaced-repetition engine, the standard study-tool substrate | [`ankitects/anki`](https://github.com/ankitects/anki) · `main` | 🔴 `AGPL-3.0-or-later` *(aggregate)* | `1 930` · `bde7d05790a0` | 🔴 **the payload names 7 families**; the binding one for a studio is the AGPL aggregate |
+| **LibreLingo** | language-learning course platform | [`LibreLingo/LibreLingo`](https://github.com/LibreLingo/LibreLingo) · `main` | 🔴 `AGPL-3.0` | `34 524` · `e9df4c4e4e64` | 🔴 §13 reaches hosted delivery |
+| **Common Voice** | speech-corpus platform, the voice-interface substrate | [`mozilla/common-voice`](https://github.com/mozilla/common-voice) · `main` | 🟡 **`MPL-2.0`** | `16 726` · `3f3d9e0024b1` | 🟢 **file-level copyleft: proprietary code may sit alongside it**, modified MPL files must be published |
+| **Oppia** | interactive-lesson platform, strong 🌏 India / 🌍 Sub-Saharan deployments | [`oppia/oppia`](https://github.com/oppia/oppia) · `master` | 🟢 **`Apache-2.0`** | `11 358` · `cfc7749b96f6` | 🟢 **permissive, with an express patent grant** — the cleanest platform row on this shelf |
+
+### 🔴 The number that should go in front of a client, stated plainly
+
+🔴 **`10` of the `13` vertical platforms re-probed this pass are copyleft, and `5` of those are
+`AGPL-3.0`.** 🟢 **Exactly two are permissive: `oppia/oppia` (`Apache-2.0`) and
+`jupyterhub/jupyterhub` (`BSD-3-Clause`); one is weak-copyleft (`mozilla/common-voice`,
+`MPL-2.0`).**
+
+🔵 **This is not an argument against using them.** It is the statement that *"open source"* on the
+education vertical tier **predominantly means AGPL**, and an engagement that plans a hosted,
+modified deployment has a §13 obligation it must price — or it must sit on the `Apache-2.0` /
+`BSD-3-Clause` / `MPL-2.0` rows, of which this shelf now has three, read first-hand.
+
+### ⚪ Declared absences on this shelf
+
+⚪ **Separated by what could actually be established, because a `404` on `raw` answers a
+different question than the one these rows pose:**
+
+| slug probed | repository confirmed to exist? | grant at the probed rungs |
+|---|---|---|
+| [`nvaccess/nvda`](https://github.com/nvaccess/nvda) *(accessibility)* | 🟢 **yes** — `readme.md` served at `master` | ⚪ **`NO_PAYLOAD` at 10 rungs** across `main`/`master` |
+| `pressbooks/pressbooks` *(OER authoring)* | 🔴 **NOT established** — 6 README probes, all `404` | ⚪ nothing at 10 rungs |
+| `ADL-OpenSource/xAPI-Spec` *(learning-record interoperability)* | 🔴 **NOT established** — 6 README probes, all `404` | ⚪ nothing at 12 rungs |
+| `Ceibal/ceibal-app` 🇺🇾 | 🔴 **NOT established** — 6 README probes, all `404` | ⚪ nothing at 12 rungs |
+
+🔵 **For `nvaccess/nvda` this is a real `NO_PAYLOAD`:** the repository is confirmed and serves no
+grant at the rungs probed — which is **not** an absence of a licence (`T-p309c`), because the
+channel that would enumerate the rest of the tree (`api.github.com/repos/*`) is closed to this
+session. 🔴 **For the other three this pass makes no claim that the repository exists at all.**
+The slug oracle needs `api.github.com/repos/*`; `raw` can confirm a slug **positively** and never
+refute one, so `404` on every probe leaves the question **open**, not answered.
+
+
 ## 🟢 Pass 311 — THE SIS LAYER IS A REAL VERTICAL AND ITS MOST-STARRED PERMISSIVE ROW IS `MIT` AT `406`★; A `345`★ PROJECT ON THE SAME AXIS SERVES NO GRANT AT ALL
 
 ⏱️ **Pass 311 of `2026-10-19`.** Evidence:

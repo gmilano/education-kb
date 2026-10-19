@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 📈 2026-10-19 · Pass 312 — THIS WEEK'S SIGNAL IS A NEGATIVE ONE, MEASURED: THE PRESCRIBED SEARCH BATTERY RETURNED EIGHT QUERIES OF MATERIAL AND NOT ONE ITEM THIS BASE DID NOT ALREADY HOLD
+
+**Append-only. This section is added above `p311`'s; nothing below it is rewritten.**
+
+### 🔴 The battery was run in full, and the result is a nil with a denominator
+
+All eight prescribed queries were run — four global, four regional — at the computed year `2026`.
+
+| # | query | 🔴 verdict |
+|---|---|---|
+| 1 | `top open source AI agents education 2026 github MIT` | 🔴 **listicle grade.** Returned general-purpose agent roundups; the only education rows were courseware (`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`), already named on these shelves. One source's own caveat: *"some tools labeled open source are actually source-available"* |
+| 2 | `github trending education AI 2026` | 🔴 **no primary list.** GitHub's own trending page is unreachable (see `repos/trending.md`); returns were third-party aggregators with star counts dated April–July 2026, mutually inconsistent |
+| 3 | `open source platform education ERP CRM MIT Apache` | 🔴 **vendor-authored.** Dominated by one platform's own comparison pages in 8 languages. 🟢 Corroborates, from a promotional source, the **education ERP/CRM nil** this base already holds |
+| 4 | `AI education industry trends 2026` | 🔴 **the factor-of-7 spread `p311` recorded, unchanged.** 2026 sizing: `$9.0 B` (IMARC) vs `$10.6 B` (TBRC); terminal `$79.6 B` by 2034 vs `$57.2 B` by 2033 vs `$89.06 B` by 2034; CAGR `26 %`–`45 %` |
+| 5 | `AI education North America 2026 adoption regulation players` | 🟡 regional, snippet-grade. See `intel/market.md` |
+| 6 | `AI education EMEA 2026 adoption regulation AI Act schools` | 🔴 **returned this base's own contents** — the Digital Omnibus deferral, `2027-12-02`, schools-as-deployers, the Feb 2025 emotion-recognition ban. All held |
+| 7 | `AI education APAC 2026 adoption regulation players` | 🔴 **named no education player and no education rule.** The returns were general APAC AI-governance pieces |
+| 8 | `AI educación LATAM 2026 adopción regulación plataformas` | 🟡 **one item worth a probe** — an IADB/BID technical note of Sept 2026 on generative AI in classroom platforms, naming Ceibal (🇺🇾) and Brazil's edtech policy. 🔴 **`publications.iadb.org` not fetched; nothing adopted from it** |
+
+🔵 **`0` of 8 queries produced a repository, agent or instrument this base did not already carry.**
+🟢 **That nil is now explained rather than merely observed.** `repos/trending.md` this pass
+established that the GitHub discovery channel is closed by this session's repository binding, which
+leaves **web search as the only discovery transport** — and web search's education returns are
+listicles. 🔴 **The battery is not failing because the sector is quiet. It is failing because the
+one channel that indexes repositories is shut, and the prompt's queries address the one that does
+not.**
+
+### 🔴 The EMEA query returning this base's own shelf is now a measured, repeated event
+
+`p311` recorded it once. 🟢 This pass repeated it and the EMEA return was again a restatement of
+held material: Annex III education duties at **`2027-12-02`**, Art. 50 transparency at
+**`2026-08-02`**, the Feb 2025 emotion-recognition prohibition, schools as *deployers*.
+🔴 **One return carried the superseded `2 August 2026` high-risk date again** — the base has now
+recorded that re-service **eight** times. 🟢 **Nothing is changed on the EMEA shelf**, and the
+instrument-naming rule stands: name **`Regulation (EU) 2024/1689`** first, `2026/1744` as the
+amending act.
+
+🔴 **One genuinely unverified item surfaced and is NOT adopted:** a source dates chatbot
+transparency duties to August 2026 and high-risk to **2 December 2027** while asserting a *"Digital
+Omnibus"* reshaping — the dates match this base, the framing does not, and `eur-lex.europa.eu`
+remains unreachable on every transport available here. 🔵 **Recorded as a snippet, not as a
+correction.**
+
+### 🟢 What moved on the agent tier this week: nothing, and that is the honest entry
+
+🔴 **No new agent is promoted this pass.** The supply channel that would surface one is closed,
+`0` of 8 queries returned a candidate, and **fewer real rows beat padding**. 🟢 The week's
+substantive movement is on the **licence-evidence** tier — 14 payloads pinned first-hand, two
+defect-shapes found without running a line of this repository's code — and it is recorded in
+`agents/top.md` and `repos/trending.md` rather than invented into a trending table here.
+
+
 ## 📈 2026-10-19 · Pass 311 — THE WEEK'S SIGNAL IS THAT HALF THE NEW SUPPLY ON TWO AXES SHIPS NO GRANT, AND THE HIGHEST-STARRED NEW ROW IS AMONG THEM
 
 **Append-only. This section is added above `p310`'s; nothing below it is rewritten.**
