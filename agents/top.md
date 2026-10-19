@@ -4,7 +4,7 @@ region: Global
 updated: 2026-10-19
 ---
 
-## 🟢 Pass 310 — THE AXIS THE MARKET'S OWN NUMBERS POINT AT HAD NEVER BEEN ENUMERATED: `18` OF `20` `academic-integrity` ROWS ARE NEW, AND `10` CARRY A GRANT A STUDIO CAN BILL ON
+## 🟢 Pass 310 — THE `academic-integrity` TOPIC AXIS HAD NEVER BEEN READ: `18` OF `20` ROWS ARE NEW AND `10` ARE BILLABLE — AND THE FIRST HEADLINE THIS SECTION PUBLISHED FOR THAT WAS REFUTED BY ITS OWN SHELVES
 
 ⏱️ **Pass 310 of `2026-10-19`, following `p309` of `2026-10-19`.** Evidence:
 [`p310-licence-probe.2026-10-19-p310.tsv`](../evidence/p310-licence-probe.2026-10-19-p310.tsv) ·
@@ -20,33 +20,93 @@ updated: 2026-10-19
 
 | axis | repos on the topic | read | already carried | 🟢 NEW |
 |---|---|---|---|---|
-| [`academic-integrity`](https://github.com/topics/academic-integrity) | **111** | 20 | **2** | 🟢 **18 of 20** |
-| [`learning-analytics`](https://github.com/topics/learning-analytics) | 378 | 20 | 🔴 **12** | 8 |
+| [`academic-integrity`](https://github.com/topics/academic-integrity) | **111** | 20 | **2** *(`Open-Detector`, `noplag-engine` — both already here)* | 🟢 **18 of 20** |
+| [`learning-analytics`](https://github.com/topics/learning-analytics) | 378 | 20 | 🔴 **11** | **9** |
 | `ai-tutor` · `intelligent-tutoring-system` · `grading` | — | — | — | **not re-run** (`ACTION p309-R` item 8, obeyed) |
 
-🔵 **And `learning-analytics` is the sharper of the two results, because its `8` new rows are
-not deliverables.** They are a paper-notes blog, two workshop repos, a course syllabus, a MOOC
-corpus, a study tracker and a generic GitHub-metrics tool. **Every one of the twelve rows on
-that axis a studio could actually build on — `OpenLRW`, `openfun/ralph`, `my-learning-analytics`,
-`EdOptimize`, `knowledge-spaces`, `terracotta`, `tna`, `juno-dkt`,
-`moodle-adaptive-learning-plugin`, `SynthEd`, `Plot-Ark` — was already here.** That axis is
-saturated on KIND, not merely on count.
+🔴 **`p310` SELF-CORRECTION, made before this pass was pushed.** This section first published
+`learning-analytics` as **12 carried / 8 new** and said *"all 8 uncarried rows are papers,
+workshops, a syllabus, a corpus and a metrics tool."* **Both halves were wrong.** Re-derived with
+`carried_index.py` over the same 20 slugs **as they stood before this pass edited anything**:
+🟢 **11 carried / 9 new.** And of the 9 new, **5 were shelved by this very pass** as foundational
+rows — so *"all 8 are non-deliverables"* was contradicted by this pass's own
+[`repos/foundations.md`](../repos/foundations.md) edit. 🔵 **Two lessons, both this base's own:**
+a count incremented by reading is a count that drifts (`p274`'s `T43`), and **the carried index
+reads the shelves, so it is only meaningful BEFORE publication** — run after, it returns
+**16 / 4**, having counted this pass's own new rows as carried.
 
-🔴 **`academic-integrity` is not, and the reason this base never reached it is worth naming.**
+🟢 **The corrected statement is sharper than the wrong one.** The split is not
+deliverable-vs-junk, it is **layer**:
+
+| layer | rows | status |
+|---|---|---|
+| **application / platform** — LRS, dashboards, LMS plugins, simulators | `OpenLRW` · [`openfun/ralph`](https://github.com/openfun/ralph) · `my-learning-analytics` · `EdOptimize` · `knowledge-spaces` · `terracotta` · `tna` · `juno-dkt` · `moodle-adaptive-learning-plugin` · `SynthEd` · `Plot-Ark` | 🔴 **11 of 11 ALREADY CARRIED** |
+| **model / method / dataset** | [`AI-Personal-Study-Tracker`](https://github.com/AmirhosseinHonardoust/AI-Personal-Study-Tracker) 32★ · [`time-series-analysis-for-education`](https://github.com/ai-for-edu/time-series-analysis-for-education) 22★ · [`Academic-Instability-Early-Warning-System`](https://github.com/AmirhosseinHonardoust/Academic-Instability-Early-Warning-System) 19★ · [`NUS-MOOC-Transacts-Corpus`](https://github.com/cmkumar87/NUS-MOOC-Transacts-Corpus) 10★ · [`github2pandas`](https://github.com/TUBAF-IFI-DiPiT/github2pandas) 7★ | 🟢 **5 NEW, all shelved this pass** |
+| **not a deliverable** | `paper_notes` · `aera-workshop` · `text-mining` · `la-process-and-theory/syllabus` | 🟡 **4 new, tabled nowhere** |
+
+🔵 **So the axis is saturated at the APPLICATION layer and was NOT saturated at the method
+layer** — `5` usable new rows sat under it the whole time. **That is a different instruction for
+`p311` than "this axis is done".**
+
+🔴 **`academic-integrity` is not, and the reason this base never reached it AS AN AXIS is worth
+naming** — narrowed, because its similarity half did arrive here by another route (see the
+self-refutation below).
 This KB's `ingest/config.json` declares its topics as `edtech`, `learning-management`,
 `educational-ai`, `tutoring`, `e-learning` and its agent keywords as *"AI tutor … quiz
 generator … learning path agent … grading assistant"*. 🔵 **Integrity is the one education-AI
 problem phrased as a problem ABOUT AI rather than a problem SOLVED BY AI, so a keyword set
-built from solutions could not see it** — while `p309`'s own regional read recorded that
+built from solutions could not see the POST-LLM half of it** — detection, citation verification,
+assessment resilience, proctoring — **while it did reach the pre-LLM SIMILARITY half**, which
+answers a different question entirely. All of this against `p309`'s own reading that
 **`62 %`** of students used AI for homework by `2025-12` against **`18 %`** of teachers with any
 formal guidance.
+
+### 🔴 `p310` SELF-REFUTATION, written before the pass was pushed — THIS SECTION'S FIRST HEADLINE WAS CONTRADICTED BY THIS FILE'S OWN SHELVES
+
+🔴 **It read: *"the axis the market's own numbers point at had never been enumerated."* That is
+false, and the rows that refute it were already here.** An earlier pass added an academic-integrity
+tier of **8 rows, 7 of them permissive**, through a *different* channel and recorded it in exactly
+those terms — *"Academic integrity is a whole tier this shelf did not have, and it is 7 of 8
+permissive"*: [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (MIT, **350★**, Ghent
+University), [`fyrestone/pycode_similar`](https://github.com/fyrestone/pycode_similar) (MIT, 191★),
+[`automoss/automoss`](https://github.com/automoss/automoss) (MIT, 157★),
+[`NoplagLabs/noplag-engine`](https://github.com/NoplagLabs/noplag-engine) (Apache-2.0, 86★),
+[`Wazzabeee/copy-spotter`](https://github.com/Wazzabeee/copy-spotter) (MIT, 58★),
+[`thu-cs-lab/jieplag`](https://github.com/thu-cs-lab/jieplag) (MIT, 54★, Tsinghua),
+[`josemmo/plagpatrol`](https://github.com/josemmo/plagpatrol) (MIT, 42★). **All seven re-checked
+`CARRIED` this pass.** And [`Imalwayshere/Open-Detector`](https://github.com/Imalwayshere/Open-Detector)
+has been on [`agents/trending.md`](trending.md) since **`p97`**.
+
+🔵 **This is `p274`'s headline recurring — *"the gap this file declared was contradicted by a row
+in this file"* — and it is the error this pass spent itself criticising in `p309`.** `make carried`
+reported `Open-Detector` and `noplag-engine` as **`CARRIED`** in the very run that produced the
+`18 of 20` figure. **The count was read correctly and the headline was written past it.**
+
+### 🟢 What survives, stated at its real size
+
+| claim | verdict |
+|---|---|
+| *"the `academic-integrity` tier did not exist here"* | 🔴 **RETRACTED.** At least **9** integrity rows were carried before `p310` |
+| *"the `academic-integrity` GitHub TOPIC AXIS had never been read as an axis"* | 🟢 **HOLDS.** `18` of its first `20` rows are new, and `2` are the carried pair above |
+| *"`Open-Detector` is the leader of the axis"* | 🔴 **RETRACTED.** `dodona-edu/dolos` at **350★** outranks it at 249★ and was already here. `Open-Detector` is the leader *of the AI-text-detection sub-tier* |
+| 🟢 **the distinction that IS new, and it is a real one** | **The carried tier is `SIMILARITY`** — `dolos`, `pycode_similar`, `jieplag`, `copy-spotter`, `plagpatrol`, `automoss`, `noplag-engine` all answer *"does this match something else?"*. 🟢 **Every row `p310` adds answers a post-LLM question instead:** *was this written by a model* (`Open-Detector`, `SignsofAI`), *do its citations exist* (`reference-audit`, `hallmark`), *is the assessment itself defensible* (`Integrity-Debt-Audit`), *can the marker's own agent check it* (`aegis-integrity`), *is the student in the room* (the four proctoring rows). 🔵 **Similarity detection does not answer any of them**, which is why the tier being present did not make the engagement covered |
+| *"309 passes missed it because the ingest keywords name solutions"* | 🟡 **NARROWED, and still true of the sub-tier.** The similarity tier arrived through a channel that was not the topic axis; **the AI-era sub-tier is what the keyword set could not reach** |
+
+🔴 **One digest discrepancy, recorded rather than overwritten.** `p97` published
+`Open-Detector`'s `LICENSE` as **`1 066` B** — which this pass confirms exactly — with digest
+`62cc0b4655b5f3`. 🔴 **Read first-hand at `p310` the payload's `sha256` is
+`2e7c69b15c3866a3118e4d8966e12392c8901754bbfa57f8bb64782a96fd5dcd`, and `62cc0b4655b5f3` matches
+no truncation of its `sha256`, `sha1` or `md5`.** 🔵 Same length, irreconcilable digest: either
+the `p97` cell is not a digest of this file, or it is a hash this base no longer uses. **The
+byte length agrees, so this is a provenance-cell defect, not a content change** — registered for
+`p311`, not resolved here.
 
 ### 🟢 The new rows a studio can bill on — `10` of `18`, graded at the payload
 
 | Agent | Repo | Licence *(payload, bytes · sha)* | ★ | What it is |
 |--------|------|----------|---|-------------|
-| **Open-Detector** | [Imalwayshere/Open-Detector](https://github.com/Imalwayshere/Open-Detector) | 🟢 **MIT** `1 066` · `2e7c69b15c38` | **249** | BERT classifier for AI-generated academic text. **The leader of the axis** and the only row on it above 100★ |
-| **noplag-engine** | [NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine) | 🟢 **Apache-2.0** `11 358` · `cfc7749b96f6` | 86 | **Self-hostable** plagiarism engine, verbatim + near-verbatim. 🔵 Apache-2.0 **and** self-hosted answers the data-residency objection in the same row |
+| **Open-Detector** *(🔵 CARRIED since `p97`; licence re-read at `p310`)* | [Imalwayshere/Open-Detector](https://github.com/Imalwayshere/Open-Detector) | 🟢 **MIT** `1 066` B · `sha256` **`2e7c69b15c38`** *(🔴 `p97` published `62cc0b4655b5f3` at the same length — see the digest discrepancy above)* | **249** | BERT classifier for AI-generated academic text. **Leader of the AI-text-detection SUB-TIER** — 🔴 **not of the axis: `dodona-edu/dolos` is 350★ and was already carried.** 🔴 `p97`'s caveat stands: the *99.57 %* accuracy is the author's own unreplicated claim and the README concedes the method is stylometric only |
+| **noplag-engine** *(🔵 CARRIED in the similarity tier; payload re-read at `p310`)* | [NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine) | 🟢 **Apache-2.0** `11 358` · `cfc7749b96f6` | 86 | **Self-hostable** plagiarism engine, verbatim + near-verbatim. 🔵 Apache-2.0 **and** self-hosted answers the data-residency objection in the same row |
 | **aegis-integrity** | [sunilgentyala/aegis-integrity](https://github.com/sunilgentyala/aegis-integrity) | 🟢 **MIT** `1 071` · `c297118f3322` | 17 | Local-first integrity checker **that ships an MCP server** — citation, AI-text and plagiarism signals. 🟢 **A 22nd MCP slug on this file, and the first that is not an LMS doorway** |
 | **SignsofAI** | [peopleworks/SignsofAI](https://github.com/peopleworks/SignsofAI) | 🟢 **MIT** `1 089` · `8f63b2b12529` | 27 | Privacy-first **desktop** tool that flags AI-writing signals and suggests fixes. C#. Nothing leaves the machine |
 | **hallmark** | [rpatrik96/hallmark](https://github.com/rpatrik96/hallmark) | 🟢 **MIT** `1 073` · `bafef485d0aa` | 13 | Benchmark for **citation hallucination** in ML papers. The eval, not the product |

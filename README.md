@@ -4,7 +4,7 @@ region: Global
 updated: 2026-10-19
 ---
 
-## Pass 310 — 2026-10-19 — **`p309` REPAIRED THE RUNG AND NOT THE MECHANISM: FIVE LINES BELOW ITS FIX, THE SAME LADDER GRADED A NONCOMMERCIAL GRANT AS PUBLIC DOMAIN — AND THE AXIS THE MARKET'S OWN NUMBERS POINT AT HAD NEVER BEEN ENUMERATED**
+## Pass 310 — 2026-10-19 — **`p309` REPAIRED THE RUNG AND NOT THE MECHANISM: FIVE LINES BELOW ITS FIX, THE SAME LADDER GRADED A NONCOMMERCIAL GRANT AS PUBLIC DOMAIN — AND THEN THIS PASS HAD TO REFUTE ITS OWN SUPPLY HEADLINE AGAINST ITS OWN SHELVES**
 
 **One-line summary:** 🔴 **`p306-licence-probe` graded [`aclascollege/aegis-graph`](https://github.com/aclascollege/aegis-graph)
 — `CC-BY-NC-4.0`, `19 347` B `41003d4a7474`, *"Attribution-NonCommercial 4.0 International"* on
@@ -44,7 +44,8 @@ published CC0 rows: ZERO — and that audit found a second defect, below.** 🟢
 | 🟢 **the generalisation, and it is the headline** | `p309` built the right mechanism — run classifiers on real payloads — and gave it a **three-family corpus**, then reported `declared=11 CORRECT=11 DEFECT=0`. This base publishes **22 families**. 🔴 **`p309` was green at 3/22 = 14 % coverage.** 🔵 **`DEFECT=0` without a coverage ratio is an unbounded claim** → **`P310`**, and `gate-family-coverage` now derives the denominator from the shelves |
 | 🔴 **the exposure that remains, with its denominator** | **14 of 22 families still have no pinned payload** — and **`MIT` (5 501 cells) and `Apache-2.0` (2 313), the two most-published families on this base, have never been run through any dynamic arm** |
 | 🔴 **a new licence class** | `EMPTY-GRANT-FILE`. [`danialtranz/sentinel-agent-proctoring`](https://github.com/danialtranz/sentinel-agent-proctoring) serves `LICENSE` at `main` with **HTTP 200 and ZERO BYTES** (`e3b0c44298fc`). The guard was `if code == "200" and body:`, so it was written to the evidence store as **`404`** — **a false cell**. 🔵 It reads as *licensed* to GitHub's UI and grants nothing: `p304`'s class in its degenerate form |
-| 🟢 **the supply finding, and it corrects `p309`'s conclusion without contradicting its measurement** | [`academic-integrity`](https://github.com/topics/academic-integrity) (111 repos): **18 of 20 NEW**, **10 permissively licensed**. 🔵 `p309`'s *"supply saturation"* was true of the AXES it read, not of the supply. 🟢 **`learning-analytics` is the refined case: 12 of 20 carried, and all 8 uncarried rows are papers, workshops, a syllabus, a corpus and a metrics tool — saturated on KIND** |
+| 🔴 **THIS PASS'S OWN HEADLINE, REFUTED BY THIS BASE'S OWN ROWS** | It read *"the axis the market's own numbers point at had never been enumerated."* 🔴 **False.** This base already carried **8** integrity rows, **7 permissive** — [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (MIT, **350★**, Ghent), `pycode_similar` (191★), `automoss` (157★), `noplag-engine` (86★), `copy-spotter` (58★), `jieplag` (54★, Tsinghua), `plagpatrol` (42★) — plus `Open-Detector` since **`p97`**. 🔴 **`make carried` reported two of them `CARRIED` in the very run that produced the `18 of 20` figure: the count was read correctly and the headline was written past it.** 🔵 **`p274`'s headline recurring — *"the gap this file declared was contradicted by a row in this file"* — inside the pass that spent itself criticising `p309` for the same shape.** 🟢 **What survives, at its real size:** the carried tier answers **SIMILARITY** (*does this match something else?*); every row `p310` adds answers a **post-LLM** question — *was this model-written*, *do its citations exist*, *is the assessment defensible*, *is the student in the room*. 🔵 **A matcher finds nothing when the text is original and machine-written**, which is why the tier's presence did not make the engagement covered. 🔴 **And `Open-Detector` is NOT the axis leader** — `dolos` outranks it 350★ to 249★ |
+| 🟢 **the supply finding, at its corrected size** | [`academic-integrity`](https://github.com/topics/academic-integrity) (111 repos): **18 of 20 NEW**, **10 permissively licensed**, and the **TOPIC AXIS** had genuinely never been read. 🔵 `p309`'s *"supply saturation"* was true of the AXES it read, not of the supply. 🟢 **`learning-analytics` is the refined case: 11 of 20 carried, and the 11 are its ENTIRE APPLICATION LAYER while its model/method/dataset layer was untouched — 5 usable new rows sat under it.** 🔴 **Published first as `12 / 8` with all eight uncarried rows called non-deliverables; both wrong, corrected before push** — and the second claim was contradicted by this same commit's own `repos/foundations.md` edit. 🔵 **Two of this base's own lessons: a count incremented by reading drifts (`p274`'s `T43`), and `carried_index.py` READS THE SHELVES, so it is only meaningful BEFORE publication — run after, it returns `16 / 4`** |
 | 🔴 **why 309 passes missed it** | `ingest/config.json`'s keywords are *"AI tutor … quiz generator … learning path agent … grading assistant"*. 🔵 **Every one names a thing AI does FOR education; integrity names a thing AI does TO it.** A keyword set assembled from solutions is structurally blind to the problem class — against `p309`'s own `62 %` students / `18 %` teachers reading |
 | 🔴 **a star filter is not a licence filter, and the gap is at the TOP** | The **second**-most-starred row on the new axis, `cabbage2000-lab/paper-tutor-skills` (46★), is **PolyForm Noncommercial 1.0.0** — and the prober called it `NO-GRANT-CLAUSE` until this pass. Axis shape: **10 permissive · 2 noncommercial · 1 proprietary · 1 empty file · 4 no grant** |
 | 🟢 **Art 5(1)(f), decided on code rather than cited** | None of the four camera/keystroke rows infers emotion: EAR blink ratios, pixel-threshold gaze, mouth-movement counts, MTCNN face presence, audio energy + zero-crossing rate. **Annex III(3) high-risk, NOT prohibited.** 🔴 **But `ExamShield`'s `FUTURE_ROADMAP.md:174-175` plans `Heart rate monitoring (via camera)` and `Stress level detection`** — prohibited outright in education if built. 🔵 Line 253's `Student stress impact analysis` sits under a research heading and is **not** a finding: `p124`'s *"what does the verb govern?"* |
@@ -68,6 +69,12 @@ on adoption and licence and **takes no position on detection accuracy**.
 there. The single Spanish-language holder read is a `PERSON`, which places nobody.
 🟡 **`aegis-integrity`'s MCP server was read from its description**, not its tool manifest; the
 MCP count on [`agents/top.md`](agents/top.md) was **not** incremented on that basis.
+🔴 **One digest cell is irreconcilable and is left open.** `p97` published `Open-Detector`'s
+`LICENSE` at `1 066` B — which this pass confirms exactly — with digest `62cc0b4655b5f3`. Read
+first-hand at `p310` the payload's `sha256` is
+`2e7c69b15c3866a3118e4d8966e12392c8901754bbfa57f8bb64782a96fd5dcd`, and `62cc0b4655b5f3` matches
+**no** truncation of its `sha256`, `sha1` or `md5`. **The length agrees, so this is a
+provenance-cell defect rather than a content change.** Registered, not resolved.
 🔴 **There is still no importable commercial-use oracle.** `P250`'s rule lived only in a shell
 script, which is *why* `p306` had one column; it is now in `licence_probe.commercial_use()` but
 every other classifier still cannot import it.
@@ -87,19 +94,25 @@ every other classifier still cannot import it.
    `DEFECT=0`). 🟢 **Scope it to claims of the form *"every X is Y"* / *"no defect"* that a
    denominator would bound**, and require the sentence to name its denominator. `p279`, `p370`
    and `p471` already own absences; do not rebuild them.
-4. 🟡 **Audit every standing control for a pin on a value an open ACTION exists to change.**
+4. 🔴 **Make `make carried`'s output BLOCK the headline, not just inform it.** This pass read
+   `CARRIED` for `Open-Detector` and `noplag-engine` and wrote *"had never been enumerated"*
+   anyway. 🟢 **Cheap first cut: when a pass's supply section claims a tier is new, require every
+   slug in its own table to have been checked, and fail if any came back `CARRIED` without being
+   marked as carried in the cell.** 🔵 The instrument already exists and already answered
+   correctly; nothing read its answer.
+5. 🟡 **Audit every standing control for a pin on a value an open ACTION exists to change.**
    `p309`'s CC-pointer control asserted the known-wrong answer and had to go red before item 2
    could be discharged. 🟢 **Cheap first cut: grep the suites for `still`, `not yet`, `open`,
    `unresolved` in test names and comments**, and require each hit to name its action item.
-5. 🟡 **Widen `ingest/config.json`'s sampling to PROBLEM-class topics, not only solution-class
+6. 🟡 **Widen `ingest/config.json`'s sampling to PROBLEM-class topics, not only solution-class
    ones.** `academic-integrity` returned 18 new rows in 20 against three saturated axes.
    🟢 Named candidates, none yet read: `proctoring`, `student-information-system`,
    `open-educational-resources`, `accessibility`, `language-learning`.
-6. 🟡 **Re-key repository identity on the root commit** (`p309-R` item 3) and **run the 8 backlog
+7. 🟡 **Re-key repository identity on the root commit** (`p309-R` item 3) and **run the 8 backlog
    ladders** (`p309-R` item 5), both unchanged and both still data entry with a denominator.
-7. 🟡 **Read the remaining 91 `academic-integrity` rows** (20 of 111 read). 🔵 The first 20 are
+8. 🟡 **Read the remaining 91 `academic-integrity` rows** (20 of 111 read). 🔵 The first 20 are
    the most-starred; the tail is where `p303` found the non-US supply.
-8. 🔵 **Do NOT re-litigate**: the four listicle queries, `gitlab.com`, Frappe Learning's
+9. 🔵 **Do NOT re-litigate**: the four listicle queries, `gitlab.com`, Frappe Learning's
    AGPL-3.0, the education ERP/CRM nil, the `ai-tutor` / `intelligent-tutoring-system` /
    `grading` axes (`p309`) and `learning-analytics` (`p310`, saturated on KIND), Chile's
    `Ley 21.719` (**corroborated twice; binds `2026-12-01` unless `18.623-07` is enacted — and

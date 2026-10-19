@@ -21,6 +21,11 @@ Blackboard Ultra, Open edX — see [`agents/top.md`](../agents/top.md)).
 
 🔴 **Stated as the negative it is:** *no open-source integrity PLATFORM exists on this axis*,
 measured over 20 of 111 repositories, **and this base is not recommending one be built.**
+🔵 **The same holds for the similarity tier this base already carried** —
+[`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (MIT, 350★, Ghent), `pycode_similar`,
+`automoss`, `jieplag`, `copy-spotter`, `plagpatrol`: every one is an engine or a checker, **none
+is a platform either.** Two independent channels, **zero platforms.** That is the shape of this
+problem, not a gap in the shelf.
 
 ### 🟢 The one row with a platform shape, and why it is a reference rather than a base
 

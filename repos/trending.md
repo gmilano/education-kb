@@ -4,7 +4,7 @@ region: Global
 updated: 2026-10-19
 ---
 
-## 📈 2026-10-19 · Pass 310 — EIGHT NEW FOUNDATIONAL ROWS, AND THE AXIS THEY CAME OFF IS `100 %` PERMISSIVE AGAINST LAST PASS'S `4`-TO-`1` COPYLEFT
+## 📈 2026-10-19 · Pass 310 — SEVEN NEW FOUNDATIONAL ROWS PLUS TWO CARRIED ROWS RE-GRADED, AND THE AXIS THEY CAME OFF IS `100 %` PERMISSIVE AGAINST LAST PASS'S `4`-TO-`1` COPYLEFT
 
 ⏱️ **Pass 310 of `2026-10-19`.** Evidence:
 [`p310-licence-probe.2026-10-19-p310.tsv`](../evidence/p310-licence-probe.2026-10-19-p310.tsv) ·
@@ -13,8 +13,8 @@ updated: 2026-10-19
 
 | Repo | Licence | ★ | Signal |
 |---|---|---|---|
-| 🆕 [Imalwayshere/Open-Detector](https://github.com/Imalwayshere/Open-Detector) | 🟢 MIT | **249** | Axis leader; BERT AI-text detection |
-| 🆕 [NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine) | 🟢 Apache-2.0 | 86 | Self-hostable matching engine |
+| 🔵 **CARRIED since `p97`** [Imalwayshere/Open-Detector](https://github.com/Imalwayshere/Open-Detector) | 🟢 MIT | **249** | BERT AI-text detection. 🔴 **Not the axis leader** — `dodona-edu/dolos` (350★) was already carried. Licence re-read at `p310` |
+| 🔵 **CARRIED** [NoplagLabs/noplag-engine](https://github.com/NoplagLabs/noplag-engine) | 🟢 Apache-2.0 | 86 | Self-hostable matching engine; already in the similarity tier. Payload re-read at `p310` |
 | 🆕 [AmirhosseinHonardoust/AI-Personal-Study-Tracker](https://github.com/AmirhosseinHonardoust/AI-Personal-Study-Tracker) | 🟢 MIT | 32 | Random-forest study-productivity prediction |
 | 🆕 [ai-for-edu/time-series-analysis-for-education](https://github.com/ai-for-edu/time-series-analysis-for-education) | 🟢 Apache-2.0 | 22 | Time-series methods over education data |
 | 🆕 [AmirhosseinHonardoust/Academic-Instability-Early-Warning-System](https://github.com/AmirhosseinHonardoust/Academic-Instability-Early-Warning-System) | 🟢 MIT | 19 | Interpretable early warning |

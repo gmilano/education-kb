@@ -8,21 +8,34 @@ updated: 2026-10-19
 
 ⏱️ **Pass 310 of `2026-10-19`.**
 
-### T1 — Integrity is the live engagement, and this base had no supply tier for it until today
+### T1 — Integrity is the live engagement, and the half of its supply tier that answers the POST-LLM question was missing
 
 `p309` measured **`62 %`** of middle-school and college students using AI for homework by
 `2025-12` (from `48 %` seven months earlier) against **`18 %`** of teachers reporting any formal
 guidance, and concluded *"the engagement is teacher capacity, not a platform."* 🟢 **This pass
-found the supply tier that sits under that conclusion:
-[`academic-integrity`](https://github.com/topics/academic-integrity), 111 repositories, `18` of
-`20` new to this base, `10` of them permissively licensed.**
+read the topic axis under that conclusion:**
+[`academic-integrity`](https://github.com/topics/academic-integrity), 111 repositories, **`18` of
+`20` new to this base, `10` permissively licensed.**
 
-🔴 **Why 309 passes missed it.** `ingest/config.json` declares topics `edtech`,
+🔴 **And it had to retract its own first framing to say what is actually new.** This base already
+carried **8 integrity rows, 7 permissive** — [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos)
+(MIT, **350★**, Ghent University), `pycode_similar` (191★), `automoss` (157★), `noplag-engine`
+(86★), `copy-spotter` (58★), `jieplag` (54★, Tsinghua), `plagpatrol` (42★) — plus `Open-Detector`
+since **`p97`**. 🟢 **Every one of them answers SIMILARITY: *does this match something else?***
+🟢 **Every row `p310` adds answers something similarity cannot:** *was this written by a model*,
+*do its citations exist*, *is the assessment itself defensible*, *is the student in the room*.
+🔵 **The LLM did not make plagiarism bigger — it made plagiarism the wrong question.** A matcher
+finds nothing when the text is original and machine-written, which is exactly why having the tier
+did not make the engagement covered.
+
+🔴 **Why 309 passes missed the post-LLM half.** `ingest/config.json` declares topics `edtech`,
 `learning-management`, `educational-ai`, `tutoring`, `e-learning` and agent keywords
 *"AI tutor … quiz generator … learning path agent … grading assistant"*. 🔵 **Every one of
 those names a thing AI DOES FOR education. Integrity names a thing AI DOES TO it** — so a
 keyword set assembled from solutions is structurally blind to the problem class, however many
-passes it runs. **That is a finding about how this base samples, not about the week.**
+passes it runs. 🟡 **Narrowed honestly: the SIMILARITY half still arrived**, through a channel that
+was not the topic axis — which is why the retraction above was necessary. **The finding is about
+how this base samples, not about the week.**
 
 ### T2 — A star filter is not a licence filter, and on this axis the gap is at the TOP
 
@@ -56,9 +69,13 @@ it is invisible to any screen that reads licences and stars.
 pass read a different axis and found `18` of `20` new. 🔵 **Both measurements are correct.** The
 durable statement is: **`ai-tutor`, `intelligent-tutoring-system`, `grading` and
 `learning-analytics` are enumerated; the domain is not.** 🟢 And `learning-analytics` shows the
-refined test — it returned `8` uncarried rows, and **all eight are papers, workshops, a syllabus,
-a corpus and a metrics tool**, so it is saturated on **kind**. **"Carried / new" is the wrong
-denominator; "deliverable / not" is the right one.**
+refined test: **11 of 20 carried, and the 11 are the entire APPLICATION layer** — LRS,
+dashboards, LMS plugins, simulators. Its **model/method/dataset** layer was *not* carried, and
+five usable rows were sitting there. 🔴 **This section first published that as `12 / 8` with all
+eight uncarried rows dismissed as non-deliverables; both figures were wrong and are corrected in
+[`agents/top.md`](../agents/top.md).** 🔵 **The durable denominator is neither "carried / new"
+nor "deliverable / not" — it is LAYER.** An axis can be exhausted at one layer and untouched at
+the one below it, and only the layered count tells you which.
 
 ### T5 — Agent SKILLS keep arriving, and they arrive with unread licences
 

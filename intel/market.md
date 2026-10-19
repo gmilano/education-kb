@@ -77,9 +77,11 @@ summary.
   Pair `sam-illingworth/Integrity-Debt-Audit` (assessment resilience) with
   `bruchris/canvas-lms-mcp`'s FERPA pseudonymisation mode — both MIT, both already on these
   shelves — and the deliverable is a per-district policy configuration, not a build.
-- 🔴 **Do not pitch detection as the answer.** The axis leader `Open-Detector` is MIT and
-  adopted, and this base **takes no position on its accuracy**; US institutions are visibly
-  split on AI-text detectors. Sell assessment redesign, and offer detection as an input.
+- 🔴 **Do not pitch detection as the answer.** `Open-Detector` (MIT, 249★, carried since `p97`)
+  leads the **AI-text-detection sub-tier** — not the axis, where `dodona-edu/dolos` sits at 350★
+  — and this base **takes no position on its accuracy**: `p97` recorded that its *99.57 %* figure
+  is the author's own unreplicated claim. US institutions are visibly split on AI-text detectors.
+  **Sell assessment redesign, and offer detection as an input.**
 
 ### EMEA
 

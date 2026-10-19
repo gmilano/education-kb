@@ -4,7 +4,7 @@ region: Global
 updated: 2026-10-19
 ---
 
-## 📈 2026-10-19 · Pass 310 — THE WEEK'S REAL SIGNAL IS A WHOLE AXIS THIS BASE HAD NEVER READ, AND ITS SECOND-MOST-STARRED ROW IS NONCOMMERCIAL
+## 📈 2026-10-19 · Pass 310 — THE WEEK'S SIGNAL IS A TOPIC AXIS THIS BASE HAD NEVER READ AND A POST-LLM INTEGRITY SUB-TIER IT DID NOT HAVE — AND THE SECOND-MOST-STARRED ROW ON IT IS NONCOMMERCIAL
 
 ⏱️ **Pass 310 of `2026-10-19`.** Evidence:
 [`p310-supply-census.2026-10-19-p310.tsv`](../evidence/p310-supply-census.2026-10-19-p310.tsv) ·
@@ -18,10 +18,20 @@ about the `ai-tutor` topic, and this pass shows it was not a fact about the supp
 [`academic-integrity`](https://github.com/topics/academic-integrity) topic — **111 public
 repositories** — returns **18 new rows in its first 20**.
 
+🔴 **Stated at its real size, after this pass refuted its own first headline.** This base
+already carried an integrity tier of **8 rows, 7 permissive** — `dodona-edu/dolos` (MIT, **350★**,
+Ghent), `pycode_similar` (191★), `automoss` (157★), `noplag-engine` (86★), `copy-spotter` (58★),
+`jieplag` (54★, Tsinghua), `plagpatrol` (42★) — plus `Open-Detector` since **`p97`**. 🟢 **All of
+them answer SIMILARITY: *does this match something else?*** 🟢 **Every row below answers a
+post-LLM question instead** — *was this written by a model*, *do its citations exist*, *is the
+assessment defensible*, *is the student in the room*. 🔵 **The tier was here; the sub-tier was
+not, and similarity detection answers none of the new questions.** Full derivation in
+[`top.md`](top.md).
+
 | Row | Licence | ★ | Signal |
 |---|---|---|---|
-| 🆕 [`Imalwayshere/Open-Detector`](https://github.com/Imalwayshere/Open-Detector) | 🟢 MIT | **249** | **The axis leader.** BERT detection of AI-generated academic text |
-| 🆕 [`NoplagLabs/noplag-engine`](https://github.com/NoplagLabs/noplag-engine) | 🟢 Apache-2.0 | 86 | Self-hostable plagiarism engine — the shape an institution can actually deploy |
+| 🔵 **CARRIED since `p97`** [`Imalwayshere/Open-Detector`](https://github.com/Imalwayshere/Open-Detector) | 🟢 MIT | **249** | Leader of the **AI-text-detection sub-tier**, 🔴 **not of the axis** (`dolos`, 350★, was already here). Licence re-read; 🔴 `p97`'s digest cell disagrees at the same byte length |
+| 🔵 **CARRIED** [`NoplagLabs/noplag-engine`](https://github.com/NoplagLabs/noplag-engine) | 🟢 Apache-2.0 | 86 | Self-hostable plagiarism engine — the shape an institution can actually deploy. Part of the pre-existing **similarity** tier; payload re-read at `p310` |
 | 🆕 [`cabbage2000-lab/paper-tutor-skills`](https://github.com/cabbage2000-lab/paper-tutor-skills) | 🔴 **PolyForm Noncommercial 1.0.0** | 46 | 🔴 **Second-most-starred on the axis and a studio may not bill on it.** Agent SKILLS, Chinese-language, research workflow end to end |
 | 🆕 [`peopleworks/SignsofAI`](https://github.com/peopleworks/SignsofAI) | 🟢 MIT | 27 | Privacy-first desktop AI-writing signals, C# |
 | 🆕 [`sunilgentyala/aegis-integrity`](https://github.com/sunilgentyala/aegis-integrity) | 🟢 MIT | 17 | Local-first integrity checker **with an MCP server** |
