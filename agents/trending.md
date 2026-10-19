@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 📈 2026-10-19 · Pass 308 — ZERO NEW AGENT ROWS, AND THE WEEK'S REAL SIGNAL IS THAT ONE "NEW" CANDIDATE WAS A MIRROR OF A CARRIED ROW AND ANOTHER WAS CARRIED 68 TIMES OVER
+
+⏱️ **Pass 308 of `2026-10-19`, following `p307` of `2026-10-19`.** Evidence:
+[`p308-identity.2026-10-19-p308.tsv`](../evidence/p308-identity.2026-10-19-p308.tsv) ·
+[`p308-payload-pin.2026-10-19-p308.tsv`](../evidence/p308-payload-pin.2026-10-19-p308.tsv) ·
+[`p308-channel-map.2026-10-19-p308.tsv`](../evidence/p308-channel-map.2026-10-19-p308.tsv).
+
+### 🔴 Refused this week, with the reason, because a refusal is a finding
+
+| candidate | payload | why it is not a row |
+|---|---|---|
+| [`lkh081231/OpenTutor`](https://github.com/lkh081231/OpenTutor) | MIT `1 068 B` `5352b4967982` | 🔴 **A MIRROR of the carried [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor)** — identical root commit `483feed58f96`, **188 of 188 commits shared**, byte-identical payload, word-for-word identical description. 🔴 **`make carried` said `NEW`, and `p283`'s `HEAD`-equality rule agrees with it, because both test the wrong end of the history** → `T-p308c` |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | MIT `1 062 B` `ceb97717de1f` | 🔴 **CARRIED — `make claims` returns `68` mentions in this file alone.** 🟢 **The supply test worked.** 🔵 What it refutes is a standing CONCLUSION, not a gap → [`verticals/solutions.md`](../verticals/solutions.md), `T-p308b` |
+| [`plastic-labs/bloom`](https://github.com/plastic-labs/bloom) | 🔴 **`NO-SLUG`** | Named in search results as a self-hostable tutor built on a Claude Code skill. 🔴 The clone channel returns a credential prompt, which this base's calibrated oracle reads as **absent-or-private**, never as a repository |
+| `Study-Mate` (≈1.1k★, JS) | not probed | 🔴 **Already carried.** Surfaced by the `ai-tutor` topic axis; no new information |
+| `Hermes Agent` · `OpenHands` · `CrewAI` | not probed | 🔴 **Out of domain.** General-purpose agent frameworks returned by an education-scoped query — the listicle channel's standing failure mode |
+
+### 🟢 Re-pinned by TITLE this week (`ACTION p307-R` item 2), and every live cell held
+
+| slug | payload | title line | family |
+|---|---|---|---|
+| [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | `LICENSE.txt` **35 148 B** `8b1ba204bb69` | `GNU GENERAL PUBLIC LICENSE` | 🟢 **GPL-3.0** *(`nsha12` `3743f7a4ab51`)* |
+| [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | `LICENSE` **35 149 B** `3972dc9744f6`, branch 🔴 **`master`** | `GNU GENERAL PUBLIC LICENSE` | 🟢 **GPL-3.0** *(`3743f7a4ab51`)* |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | `LICENSE` **35 149 B** `3972dc9744f6` | `GNU GENERAL PUBLIC LICENSE` | 🟢 **GPL-3.0** *(`3743f7a4ab51`)* |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `LICENSE` **11 408 B** `cd2f54e1e506` | `Apache License, Version 2.0` | 🟡 **Apache-2.0, NOT stock** — see below |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | `LICENSE` **7 048 B** `a2010f343487` | CC0 | 🟢 **CC0-1.0** — agrees with this shelf byte-for-byte |
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | `LICENSE` **1 067 B** `ae280df5a726` | — | 🟢 **MIT** — 🔴 **one stale `Apache-2.0` cell CORRECTED at `p308`** |
+| [`gego-k12/gegok12`](https://github.com/gego-k12/gegok12) | `LICENSE` **1 150 B** `b8694396d7dc` | — | 🟢 **MIT** |
+| [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | `LICENSE` **1 065 B** `f27341a8425b` | — | 🟢 **MIT** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `LICENSE` **1 065 B** `ba2525637432` | — | 🟢 **MIT** |
+| [`BruChris/canvas-lms-mcp`](https://github.com/BruChris/canvas-lms-mcp) | `LICENSE` **1 070 B** `c29329c5ef3b` | — | 🟢 **MIT** |
+| [`ShuyunYuan/talentcoach`](https://github.com/ShuyunYuan/talentcoach) | `LICENSE` **842 B** `904cc3bf2b17` | — | 🟢 **RESERVED** — confirmed, and the `MIT` beside it on another shelf is `` `MIT`'s `` text *negated* |
+
+🟡 **`HKUDS/DeepTutor` is Apache-2.0 but NOT the stock payload.** The stock family is
+`11 357` / `11 358` / `11 359 B`, all normalising to `283ea6cc2997` (confirmed independently this
+pass via [`openedx/XBlock`](https://github.com/openedx/XBlock)'s `LICENSE.TXT`). 🔴 **DeepTutor's
+is ~50 B longer and normalises to `bfa9c88794c6`** — its appendix is filled in. 🔵 **A filled
+appendix is a copyright line, not an added condition**, but the row must not be read as *"stock,
+no added clause."*
+
+### 🟢 `gitlab.com` searched for the first time by any pass — and it is empty in this domain
+
+🟢 **7 queries, up to 100 results each, `HTTP 200` throughout.** 🔴 **Zero AI-education agents.**
+In-domain rows, all four European and **three already carried**: `saxionnl/42/lms42` (`10`★, NL),
+`olatorg/openolat-starter` (`3`★, CH), `moodlenet/moodlenet` (`9`★, last activity `2023-07-07`),
+and 🟢 **`Openki/Openki` (`35`★, CH) — NOT carried, and NOT an AI project** (course organisation).
+
+🔴 **The channel lesson: on `gitlab.com`, `search=tutor` ranks TUTORIAL repositories first** —
+`youtube-tutorial-series` (`296`★), `vgpu-proxmox` (`185`★), `xavki-tutorials-index` (`124`★).
+🔵 **A stemming collision between this domain's core noun and the internet's most common content
+word.** 🔴 **100 confident irrelevant rows read exactly like coverage.** 🟡 **GitLab's API returns
+`license: None` for all four in-domain projects, so it offers no triage field at all.**
+
+### 🔵 What this week's channel map says
+
+🟢 **Reachable and used:** the blobless clone channel (`rc=0`, ~1.1 s, used **37** times this
+pass), `raw.githubusercontent.com` (`200`), `api.github.com/rate_limit` (`200`, authenticated),
+and **new: `gitlab.com` + its API** (`200`). 🔴 **Still refused:** `huggingface.co` (`000`), every
+out-of-scope `api.github.com` repository endpoint (`403`, an AUTHORIZATION boundary), and every
+legal/government host tried. 🔵 **So: no star integer from an API, and every regional figure this
+pass is search-snippet grade.** 🟢 **`96★ / 30 forks` for `mentingo` is as `github.com` renders it.**
+
+---
+
 ## 2026-10-19 — Pass 307: FOUR NEW AGENT-LAYER ROWS, AND THE MOST IMPORTANT ONE IS A LICENCE CORRECTION THAT MOVES THREE TUTORS FROM "STUDY IT" TO "DEPLOYABLE"
 
 🔵 **This window's leg was `ACTION p306-R` item 1 — read this base's own sidebar/README backlog as

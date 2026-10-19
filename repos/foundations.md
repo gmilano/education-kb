@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 308 — THE INSTRUMENT THIS BASE WAS MISSING IS NOT A CHANNEL, IT IS A MIRROR: FIFTEEN GATES GRADED THIS BASE AGAINST THE WORLD AND NONE GRADED IT AGAINST ITSELF
+
+⏱️ **Pass 308 of `2026-10-19`.** Evidence:
+[`p308-shelf-consistency.2026-10-19-p308.tsv`](../evidence/p308-shelf-consistency.2026-10-19-p308.tsv) ·
+[`p308-shelf-census.2026-10-19-p308.tsv`](../evidence/p308-shelf-census.2026-10-19-p308.tsv) ·
+[`p308-payload-pin.2026-10-19-p308.tsv`](../evidence/p308-payload-pin.2026-10-19-p308.tsv) ·
+[`p308-channel-map.2026-10-19-p308.tsv`](../evidence/p308-channel-map.2026-10-19-p308.tsv).
+
+### 🟢 A new foundational instrument: [`compose/code/p308-shelf-consistency/`](../compose/code/p308-shelf-consistency/README.md)
+
+🟢 **`ACTION p307-R` item 1, built and wired standing** as `gate-shelf-consistency` in
+`make hooks` — **52 offline controls plus a live arm**, `17/17` gates green at publication.
+
+> 🔵 **For every slug carried on two or more shelves, compare the licence cells and fail on
+> disagreement.** `LIVE` shelves fail; the root index and the two append-only `trending.md`
+> files are **censused, never failed**, because a dated section is a record of what a pass
+> believed and not a live claim.
+
+🟢 **The verdict rule is the INTERSECTION over locations.** Each location asserts a SET; the
+claims agree if some licence is in every set. 🔴 **The first draft flagged a slug whenever two
+licence names appeared against it anywhere, and fifteen of its sixty-five flags were that one
+bug** — `{MIT}` against `{MIT, Apache-2.0}` is a dual grant, and
+[`ankitects/anki`](https://github.com/ankitects/anki) is **AGPL-3.0 code with CC-BY-SA-4.0
+decks**, which is two licences and no contradiction.
+
+### 🟢 The shelf list is IMPORTED, and the reason is a ratchet this file should record
+
+🟢 **The gate does not restate the shelf list; it imports `SHELVES` from
+[`p235-carried-index`](../compose/code/p235-carried-index/).** 🔵 **Two copies of the canonical
+list would be a second thing to keep in step — which is precisely the disease the instrument
+was built to detect, reproduced inside the detector.**
+
+🔴 **And a restated list broke a standing gate on the first run.** `p283`'s ladder ratchet went
+`STANDING:SINGLE-SPELLING` **17 → 18** and `gate-ladder-case` went RED, because a literal
+`"README.md"` in a Python list is **indistinguishable from a one-rung path ladder** when read
+from outside. 🟢 **`p283` was right to flag it.** 🟢 **The remedy is the one
+[`p289`](../compose/code/p289-restatement-authority/) and
+[`p291`](../compose/code/p291-submodule-pin-grant/) both used — say it in words that are not a
+filename:** the root index is now identified **structurally**, as the only shelf with no `/` in
+its path. 🟢 **Ratchet back to 17, gate green, and the list has one owner.**
+
+### 🟢 `ACTION p307-R` item 3 DECIDED — the row window, and `intel/open-gaps.md` STAYS in scope
+
+🔴 **`p307` left two measured problems on `p253-settled-fact-regression` and ordered a decision,
+not a drift.** 🟢 **Decided, implemented and pinned by five new controls (23/23 passing):**
+
+**(a) The scope is narrowed to a ROW WINDOW.** `ACTION XT` had made a contiguous run of `|`
+lines ONE scope, reasoning that *"a hedge in a table row is argued by its neighbouring rows."*
+🟢 **That is right about the CITATION and wrong about the SUBJECT.** All four findings the gate
+carried at `p307` are cross-row collisions — `openedx-canonical-name` matched a row about
+`StudentStore`'s `pub fn` writes because the word *"unresolved"* sat eighteen rows away.
+🟢 **So the subject and the hedge must now meet in ONE ROW, while the authority may be cited
+anywhere in the table** — `XT`'s intent kept, its scope narrowed. 🟢 **Header rows are excluded:
+a column title is structure, not a claim.**
+
+**(b) `intel/open-gaps.md` is NOT dropped from `SHELVES`, and the answer to item 3(b) is that
+refusal.** 🔴 **That file is where `p251`'s regression was recorded in the first place.** 🔵 **A
+gate that cannot see the scene of the original defect is not a cheaper gate, it is a blind one.**
+
+| measurement | before | after |
+|---|---|---|
+| `--all` findings, base-wide | 🔴 **20** | 🟢 **12** |
+| of those, on [`intel/open-gaps.md`](../intel/open-gaps.md) | 🔴 **13** | 🟢 **7** |
+| `--verify` on the current pass sections | 🟢 OK | 🟢 OK |
+| the suite's own controls | 17/17 | 🟢 **23/23** |
+
+🟡 **The residue of 12 is now mostly GENUINE** — rows that hedge the Annex III date without
+citing `Regulation (EU) 2026/1744`. 🔵 **Measured and left standing, not patched: a gate's
+backlog is a reading list, and `p307`'s own rule against redesigning a control in the hour you
+first run it applies to the hour you first narrow it too.**
+
+### 🟢 Foundational rows re-pinned by title, and one new default-branch spelling
+
+🟢 **`ACTION p307-R` item 2 ran over the shelves' copyleft labels.** 🟢 **Every live cell held.**
+The ones worth recording here:
+
+| slug | payload | branch | family |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `COPYING.txt` **35 147 B** `c3bc1fd94148` | `main` | 🟢 **GPL-3.0** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `LICENSE` **35 121 B** `93178a43d6d3` | 🔴 **`v31.0.00`** | 🟢 **GPL-3.0** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `LICENSE` **18 092 B** `1be990a929b5` | 🔴 **`2.12`** | 🟢 **GPL-2.0** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | `LICENSE` **18 025 B** `a01259a1b522` | `develop` | 🟢 **GPL-2.0** |
+| [`hpi-schul-cloud/schulcloud-server`](https://github.com/hpi-schul-cloud/schulcloud-server) | `LICENSE` **34 520 B** `e7ae8b5da177` | `main` | 🟢 **AGPL-3.0** |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | `LICENSE.md` **34 143 B** `9c0cb21c26d8` | `main` | 🟢 **AGPL-3.0** |
+| [`schroedinger-hat/certo`](https://github.com/schroedinger-hat/certo) | `LICENSE` **33 820 B** `895609d3e304` | `main` | 🟢 **AGPL-3.0** |
+| [`fwu-de/ais-chat`](https://github.com/fwu-de/ais-chat) | `LICENSE` **34 523 B** `8486a10c4393` | `main` | 🟢 **AGPL-3.0** |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `LICENSE.TXT` **11 358 B** → `283ea6cc2997` | `master` | 🟢 **Apache-2.0** |
+
+🟢 **[`GibbonEdu/core`](https://github.com/GibbonEdu/core) defaults to `v31.0.00`** — a **fourth**
+version-named default branch, after `p307`'s `php-xapi/*` (`0.7`, `3.x`) and `i-educar`'s `2.12`.
+🔵 **No filename or branch ladder would ever guess `v31.0.00`.** 🟢 **It is one more confirmation
+of `T-p307a`: enumerate, never ask.**
+
+🟢 **And `openedx/XBlock`'s normalised value lands on `283ea6cc2997`** — exactly the collapsed
+stock-Apache value `p307` computed. 🔵 **`p307`'s hash-normalisation finding is confirmed by an
+independent read.** 🔴 **`ACTION p307-R` item 5 (normalise the WHOLE base's hash column) is NOT
+discharged** — 37 payloads carry an `nsha12` this pass, which is a sample, not the census.
+
 ## 🟢 Pass 307 — THE FILENAME LADDER IS RETIRED, NOT EXTENDED: A BLOBLESS CLONE READS THE ROOT TREE, AND THE CHANNEL THAT MAKES IT POSSIBLE WAS CARRIED AS "REFUSED" FOR TWO PASSES
 
 ⏱️ **Pass 307 of `2026-10-19`.** Evidence:

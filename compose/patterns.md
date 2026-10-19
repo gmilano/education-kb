@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🟢 Pass 308 — THREE NEW RECIPES (`P92`-`P94`), AND ALL THREE ARE BOUGHT BY A REGULATION RATHER THAN WANTED BY A USER
+
+⏱️ **Pass 308 of `2026-10-19`.** Evidence:
+[`p308-regional.2026-10-19-p308.tsv`](../evidence/p308-regional.2026-10-19-p308.tsv) ·
+[`p308-payload-pin.2026-10-19-p308.tsv`](../evidence/p308-payload-pin.2026-10-19-p308.tsv) ·
+[`p308-identity.2026-10-19-p308.tsv`](../evidence/p308-identity.2026-10-19-p308.tsv).
+
+🔵 **Every component named below is payload-pinned this pass or carried from a pinned row: byte
+length and `sha256₁₂` are on the evidence TSV, the branch was read from the remote, and the
+filename came out of an enumerated root tree.**
+
+### 🟢 `P92` — The US district AI-policy compliance engagement (North America)
+
+🔴 **The problem:** **Ohio** districts were required to have adopted a formal AI policy by
+**`2026-07-01`** — a date that has **already passed**. **North Carolina**'s state model is due
+**`2026-12-31`** and district policies **`2027-06-30`**. **Maryland**'s `SB 720` starts a
+**120-day** clock on a guidance release. 🔵 **These are not frameworks; they are deadlines with a
+named non-compliant party.**
+
+**Components, all permissive:**
+
+| role | component | licence |
+|---|---|---|
+| policy + evidence store | [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** `1 074 B` `7df20dcdf919` |
+| tool inventory + evaluation harness | [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) | 🟢 **MIT** `1 081 B` `c593c2afc813` |
+| pedagogy regression gate | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** `1 064 B` `4cdfd8894a13` |
+| LMS boundary | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** `11 361 B` `d5fcb264ff39` |
+
+**Wiring:** 🟢 **Lead with the ARTEFACT the mandate names, not with a platform.** The deliverable
+is (1) a written AI policy matching the state model, (2) an **inventory of AI tools already in
+use** across the district — which is the part nobody has and the part that sells the next phase,
+(3) a data-protection position per tool. 🟢 **Instrument it:** run `inspect_ai` over
+`pedagogy-benchmark` as the standing evaluation the policy promises, and put
+`agent-governance-toolkit` in front of every tool the inventory finds, so the policy has an
+enforcement point rather than a paragraph. 🟢 **Cross the LMS boundary with `ltijs`** (LTI 1.3)
+rather than importing rosters — the district's system of record is very often AGPL
+(`instructure/canvas-lms`, `34 520 B`), and LTI keeps it on the far side of a network boundary.
+
+🔴 **Do not quote Ohio's model policy text from this base — it was not read.** Every US fact in
+`P92` is **search-snippet grade**; `ohio.gov` and the other state agency hosts were not
+reachable. 🟢 **Verify the deadline against the state agency before it goes in a statement of
+work** — and the deadline is the whole pitch, so verify it first.
+
+**Time:** 4-6 wk for the policy + inventory phase; 8-10 wk with the enforcement point.
+
+### 🔴 `P93` — The opt-out-safe delivery architecture (North America, and it is a REQUIREMENT not a feature)
+
+🔴 **The problem:** **Oklahoma's `S.B. 1734` preserves a parental right to opt a student out of
+student-facing AI tools *with no academic penalty*.** 🔵 **Read as architecture rather than as
+policy, that sentence says: the platform must deliver the same course, assessed the same way,
+with the AI path disabled for an individual learner.** 🔴 **No platform row on
+[`verticals/solutions.md`](../verticals/solutions.md) declares a per-learner AI opt-out — `0` of
+them, an informed gap with an exact denominator.**
+
+**Components:**
+
+| role | component | licence |
+|---|---|---|
+| delivery of the opt-out-safe path | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) — **SCORM 1.2 runtime, bidirectional** | 🟢 **MIT** `1 062 B` `ceb97717de1f` |
+| the AI path, gated by role | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) — **RBAC + human-in-the-loop review** | 🟢 **BSD-3-Clause** `1 531 B` `fa56a9650ca4` |
+| standards boundary between them | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** `11 361 B` |
+| policy enforcement point | [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** `1 074 B` |
+
+**Wiring:** 🟢 **The trick is that the ASSESSMENT must not know whether AI was used.** Author the
+course once and ship it as a **SCORM 1.2 package** through `mentingo`'s generator and runtime
+player: a SCORM package is scored identically whether or not an agent helped author or tutor
+alongside it, which makes it the cleanest opt-out-safe assessment path this base carries.
+🟢 **Put the tutoring layer beside it, not inside it** — `open-tutor-ai-CE` behind LTI 1.3, with
+its **RBAC** carrying the opt-out flag, so disabling AI for one learner is a role change rather
+than a content fork. 🟢 **`agent-governance-toolkit` records, per learner, that the AI path was
+not invoked** — which is the evidence a district needs when a parent asks.
+
+🔴 **The honest caveat, and it must be in the proposal:** `mentingo` implements **SCORM 1.2** and
+🔴 **does NOT implement `xAPI` or `LTI`** — a retraction this base already published at
+`p179`/`p180`. 🟢 **So the LTI boundary is `ltijs`'s job, not `mentingo`'s.** 🔴 **And
+`mentingo` is `96★ / 30 forks` with **no named adopters**: permissive and self-hosted, with a
+thin community.
+
+**Time:** 10-12 wk. 🔵 **Priced as compliance, not as innovation.**
+
+### 🟢 `P94` — Building INSIDE a ministry platform (APAC / Singapore)
+
+🔴 **The problem:** Singapore's MOE runs AI tools for **Primary 4 inside its own Student Learning
+Space, teacher-supervised** and explicitly **not on open platforms**, with the Education Minister
+naming **"cognitive offloading"** as the risk to avoid. 🔵 **An engagement here integrates with
+SLS or it does not happen, and a proposal that leads with a self-hosted platform is dead on
+arrival.**
+
+**Components:**
+
+| role | component | licence |
+|---|---|---|
+| the integration contract | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (LTI 1.3 tool, SLS as platform) | 🟢 **Apache-2.0** `11 361 B` |
+| teacher-in-the-loop generation | [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | 🟢 **MIT** `1 067 B` `ae280df5a726` |
+| the anti-offloading gate | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) + [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) | 🟢 **MIT** / **MIT** |
+| supervision + audit | [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** `1 074 B` |
+
+**Wiring:** 🟢 **Ship a TOOL, not a platform.** `ltijs` makes the deliverable an LTI 1.3 tool that
+SLS launches, so the ministry's platform stays the system of record and the studio's surface is
+one well-defined contract. 🟢 **Point the generation at TEACHERS, not students** —
+`instructional_agents` produces syllabus → slides → assessments for a teacher to approve, which
+is supervision by construction and sidesteps the cognitive-offloading objection entirely rather
+than arguing with it. 🟢 **Make the anti-offloading claim MEASURABLE:** run `inspect_ai` over
+`pedagogy-benchmark` on every model or prompt change and hand the ministry the regression report
+— 🔵 **the objection is pedagogical, so the evidence must be pedagogical, and a latency or
+accuracy dashboard will not answer it.**
+
+🟢 **Reusable beyond Singapore, with the same shape and a different reason each time:** Japan's
+pilot-school framing, Baden-Württemberg's ban on AI **awarding grades** (`§ 6 DUVO`), and
+Oklahoma's opt-out all reward **a teacher-facing tool behind a review gate** over a
+student-facing autonomous tutor. 🔵 **And it is what the `2026-07` scoping review of `474`
+studies actually supports — the strongest deployments are narrow and instructor-controlled, as
+PUC Chile's `194` instructor-configured agents over ~`100` courses measured.**
+
+**Time:** 8-10 wk for the LTI tool; add 4 wk for the evaluation harness as a standing gate.
+
+### 🔴 A correction to every recipe in this file that names `OpenTutor`
+
+🔴 **[`lkh081231/OpenTutor`](https://github.com/lkh081231/OpenTutor) and
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) are ONE project** — identical
+root commit `483feed58f96`, `188` of `188` commits shared, byte-identical MIT payloads.
+🟢 **`zijinz456/OpenTutor` is the live address** (the superset, current to `2026-10-18`);
+`lkh081231` is a stale mirror stopping at `2026-10-06`. 🔵 **No recipe here should cite both, and
+a recipe citing `lkh081231` is citing a mirror six commits behind.** → `T-p308c`.
+
 ## 🟢 Pass 307 — THREE NEW RECIPES (`P89`-`P91`), AND TWO OF THEM ONLY BECAME BUILDABLE BECAUSE A LICENCE LABEL WAS WRONG
 
 ⏱️ **Pass 307 of `2026-10-19`.** Evidence:

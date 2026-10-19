@@ -1,0 +1,21 @@
+slug	dated_says	live_says	dated_at	line	kind	adjudication
+open-tutorai/open-tutor-ai-ce	RESERVED	BSD-3-Clause	README.md	4486	prose	🟡 UNADJUDICATED — backlog for p309
+classroomio/classroomio	AGPL-3.0	ISC,MIT	README.md	5745	prose	🟡 UNADJUDICATED — backlog for p309
+yuanjiusheng/cloud-learning-ce	MIT	RESERVED	README.md	14780	prose	🟡 UNADJUDICATED — backlog for p309
+gego-k12/gegok12	LGPL-3.0	MIT	agents/trending.md	2211	table	payload MIT 1150 B b8694396d7dc — LIVE right, history superseded
+marcosnahuel/moodle-mcp	GPL-3.0	MIT	agents/trending.md	2212	table	payload MIT 1065 B f27341a8425b — LIVE right, history superseded
+thu-maic/openmaic	AGPL-3.0	MIT	agents/trending.md	4621	prose	payload MIT 1065 B ba2525637432 — LIVE right, history superseded
+bruchris/canvas-lms-mcp	AGPL-3.0	MIT	agents/trending.md	4655	table	payload MIT 1070 B c29329c5ef3b — LIVE right, history superseded
+gibbonedu/core	AGPL-3.0	GPL-3.0	agents/trending.md	5255	table	payload GPL-3.0 35121 B 93178a43d6d3 on branch `v31.0.00` — LIVE right
+juneyaooo/lineage-skill	MIT	Apache-2.0	agents/trending.md	5266	table	🟡 UNADJUDICATED — backlog for p309
+wwrwbs/ai_awe	MIT	Apache-2.0	agents/trending.md	5391	prose	🟡 UNADJUDICATED — backlog for p309
+oat-sa/tao-core	LGPL-3.0	GPL-2.0	agents/trending.md	14949	table	payload GPL-2.0 18025 B — LIVE right, history is the arrow-correction row
+portabilis/i-educar	LGPL-3.0	GPL-2.0	agents/trending.md	14950	table	payload GPL-2.0 18092 B on `2.12` — LIVE right, history is the arrow-correction row
+formalms/formalms	GPL-2.0	Apache-2.0	agents/trending.md	18750	prose	payload NO-PAYLOAD on master; p214 established GPL-2.0 (ACTION QG). The Apache-2.0 is a third-party review claim this shelf REFUTES — census artifact
+tsugiproject/tsugi	POINTER	Apache-2.0	repos/trending.md	87	prose	🟡 UNADJUDICATED — backlog for p309
+frappe/lms	MIT	AGPL-3.0	repos/trending.md	5766	table	settled AGPL-3.0 (p306 bytes, p307 title x2) — LIVE right; NOT re-litigated per ACTION p307-R item 7
+schroedinger-hat/certo	GPL-3.0	AGPL-3.0	repos/trending.md	7247	table	payload AGPL-3.0 33820 B 895609d3e304 — LIVE right
+xiaochong0302/course-tencent-cloud	MIT	GPL-2.0	repos/trending.md	11693	prose	🟡 UNADJUDICATED — backlog for p309
+fwu-de/ais-chat	Apache-2.0,MIT	AGPL-3.0	repos/trending.md	11740	table	payload AGPL-3.0 34523 B 8486a10c4393 — LIVE right
+hkuds/deeptutor	MIT	Apache-2.0	repos/trending.md	11917	prose	payload Apache-2.0 11408 B cd2f54e1e506 — LIVE right. 🔴 NOT stock Apache (11357/11358/11359 is the stock family)
+pie-framework/pie-qti	ISC	MIT	repos/trending.md	20483	table	🟡 UNADJUDICATED — backlog for p309

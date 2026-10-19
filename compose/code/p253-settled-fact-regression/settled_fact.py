@@ -122,14 +122,56 @@ def hedges_in(scope):
     return [h for h in HEDGES if h in low]
 
 
-def grade_scope(scope, subject, authority):
-    """REGRESSION, ANNOTATED or CLEAR for one scope against one pinned fact."""
+def graded_units(scope):
+    """-> [(unit, context)] — what gets matched, and where a citation may live.
+
+    `p308`, deciding `ACTION p307-R` item 3(a).  `ACTION XT` made a contiguous
+    run of `|` lines ONE scope, on the reasoning that *"a hedge in a table row
+    is argued by its neighbouring rows"*.  🟢 **That is right about the
+    CITATION and wrong about the SUBJECT.**  All four findings this gate
+    carried at `p307` are cross-row collisions: `openedx-canonical-name`
+    matched a row about `StudentStore`'s `pub fn` writes because the word
+    *"unresolved"* appeared eighteen rows away, and `eu-annexiii-date` matched
+    a `learnmcp-xapi` row the same way.  A subject in row 3 and a hedge in row
+    17 are not one claim.
+
+    🔵 Independent evidence from the same pass: `p308`'s own shelf-consistency
+    gate had table-wide reading as its single largest false-positive source,
+    and per-ROW discipline is what fixed it.
+
+    So: the subject and the hedge must meet in ONE ROW; the authority may be
+    cited anywhere in the table.  `ACTION XT`'s intent is kept, its scope is
+    narrowed, and `intel/open-gaps.md` STAYS in `SHELVES` — item 3(b) is
+    answered by NOT dropping it.  That file is where `p251`'s regression was
+    recorded in the first place; a gate that cannot see the scene of the
+    original defect is not a cheaper gate, it is a blind one.
+    """
+    lines = [l for l in scope.splitlines() if l.strip()]
+    if lines and all(l.strip().startswith("|") for l in lines):
+        sep = r"^\|[\s:|-]+\|?$"
+        # The row ABOVE the `|---|` separator is the header: structure, not a
+        # claim.  Grading it is how a column title like "status" or
+        # "unresolved?" becomes a regression finding about nothing.
+        head = next((i for i, l in enumerate(lines)
+                     if re.match(sep, l.strip())), None)
+        skip = {head, head - 1} if head else set()
+        return [(row, scope) for i, row in enumerate(lines) if i not in skip
+                and not re.match(sep, row.strip())]
+    return [(scope, scope)]
+
+
+def grade_scope(scope, subject, authority, context=None):
+    """REGRESSION, ANNOTATED or CLEAR for one scope against one pinned fact.
+
+    `context` is where an authority citation counts; it defaults to the scope
+    itself and is the whole table when `scope` is one row of one.
+    """
     if not re.search(subject, scope, re.I):
         return "CLEAR", []
     hits = hedges_in(scope)
     if not hits:
         return "CLEAR", []
-    if re.search(authority, scope, re.I):
+    if re.search(authority, context if context is not None else scope, re.I):
         return "ANNOTATED", hits
     return "REGRESSION", hits
 
@@ -173,11 +215,13 @@ def scan(repo=None, pins=_UNSET, current_only=True):
             text = fh.read()
         body = current_section(text) if current_only else text
         for sc in scopes(body):
-            for fact in pins:
-                v, hits = grade_scope(sc, fact["subject"], fact["authority"])
-                if v == "REGRESSION":
-                    found.append({"shelf": shelf, "fact": fact["key"], "verdict": v,
-                                  "hedges": hits, "scope": sc[:240]})
+            for unit, context in graded_units(sc):
+                for fact in pins:
+                    v, hits = grade_scope(unit, fact["subject"], fact["authority"],
+                                          context)
+                    if v == "REGRESSION":
+                        found.append({"shelf": shelf, "fact": fact["key"], "verdict": v,
+                                      "hedges": hits, "scope": unit[:240]})
     return found
 
 

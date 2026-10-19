@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 308 — THIS SHELF CARRIES ONE PROJECT UNDER TWO ROWS, AND `p283`'s IDENTITY RULE SAYS THEY ARE TWO REPOSITORIES BECAUSE IT TESTS THE WRONG END OF THE HISTORY
+
+⏱️ **Pass 308 of `2026-10-19`, following `p307` of `2026-10-19`.** Evidence:
+[`p308-identity.2026-10-19-p308.tsv`](../evidence/p308-identity.2026-10-19-p308.tsv) ·
+[`p308-payload-pin.2026-10-19-p308.tsv`](../evidence/p308-payload-pin.2026-10-19-p308.tsv) ·
+[`p308-shelf-consistency.2026-10-19-p308.tsv`](../evidence/p308-shelf-consistency.2026-10-19-p308.tsv) ·
+[`p308-channel-map.2026-10-19-p308.tsv`](../evidence/p308-channel-map.2026-10-19-p308.tsv).
+
+🟢 **`ACTION p307-R` items 1, 2, 3 and 6 were worked. Items 4 and 5 are refused with reasons
+and re-registered.** 🔵 **Per-item disposition is on [`README.md`](../README.md).**
+
+### 🔴 The defect of the pass — `OpenTutor` is ONE project, and this base was one `make carried` away from shelving it twice
+
+🟢 **`p307` added [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) *"carried
+mainly as a NAME-COLLISION guard."*** 🔴 **The guard was pointed at the wrong axis.** A
+web search this pass returned a **second** `OpenTutor` — [`lkh081231/OpenTutor`](https://github.com/lkh081231/OpenTutor)
+— with a **word-for-word identical description**, and `make carried` reported it `NEW`.
+
+🟢 **It is not new. It is the same repository's history.**
+
+| slug | `HEAD` | root commit | commits | payload |
+|---|---|---|---|---|
+| [`lkh081231/OpenTutor`](https://github.com/lkh081231/OpenTutor) | `5fea390a49be` | 🟢 **`483feed58f96`** | **188** | MIT `1 068 B` `5352b4967982` |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | `c75453f41946` | 🟢 **`483feed58f96`** | **194** | MIT `1 068 B` `5352b4967982` |
+
+🔴 **Same root commit. `188` of `188` commits shared.** One is six commits behind the other —
+`lkh081231` stops at `2026-10-06`, `zijinz456` runs to `2026-10-18`.
+
+🔴 **And `p283`'s identity rule, read literally, gets this WRONG.** That rule is *"ls-remote
+every address; equal `HEAD` == one repository."* 🟢 **Equal `HEAD` is a sufficient condition for
+identity.** 🔴 **Its converse is false, and this base has been relying on the converse** — two
+addresses with different `HEAD`s have been read as two repositories ever since. A fork that is
+one commit behind defeats it. **A fork that is six commits behind, with an identical README,
+defeats it while looking exactly like new supply.**
+
+> 🟢 **The identity key is the ROOT COMMIT, not `HEAD`.** `HEAD` answers *"are these the same
+> SNAPSHOT"*; the root commit answers *"are these the same PROJECT."* The shelf question is
+> always the second one. 🔵 Containment settles the direction: where one history is a strict
+> subset of the other, the superset is the live address and the subset is a stale mirror.
+> → `T-p308c`, and `ACTION p308-R` item 2.
+
+🟢 **Action taken on this shelf: NO second row.** `zijinz456/OpenTutor` stays as the single
+carried address, because it is the superset and the current one. 🔴 **`lkh081231/OpenTutor` is
+recorded here as a known mirror so no later pass promotes it**, which is the job `p307`'s
+collision guard was meant to do and could not.
+
+### 🟢 `ACTION p307-R` item 1 — the shelf-consistency gate, and its premise was wrong
+
+🟢 **Built, wired into `make hooks`, 52 offline controls, `17/17` gates green at publication.**
+See [`compose/code/p308-shelf-consistency/`](../compose/code/p308-shelf-consistency/README.md).
+
+🔴 **Item 1 predicted a base riddled with shelf-to-shelf licence contradictions** — *"this
+pass's headline defect lived in five places against three correct ones."* 🟢 **It is not.**
+
+| measurement | value |
+|---|---|
+| live licence claims extracted | **1 132** |
+| distinct slugs carrying a live claim | **344** |
+| slugs flagged by the first draft | 🔴 **65** |
+| slugs flagged after nine instrument fixes | 🟢 **1** |
+| **real stale cells on the live shelves** | 🟢 **1** |
+
+🔴 **The one real defect:**
+[`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) is
+🟢 **MIT** — 🔴 **CORRECTED `p308` from `Apache-2.0`** at [`intel/market.md`](../intel/market.md)
+line 1834. Payload `LICENSE`, **1 067 B**, `ae280df5a726`; **thirteen other cells agreed with
+the payload**, and 🔴 **[`intel/trends.md`](../intel/trends.md) line 2815 already said so in
+writing: *"`instructional_agents` is MIT, not Apache-2.0."***
+
+🟡 **This paragraph's FIRST draft tripped the new gate**, by writing *"line 1834 carried … as
+`Apache-2.0`"* — a retraction the instrument read as a live claim, because its retraction
+vocabulary matches `carried as` adjacently and that sentence put the slug between the two
+words. 🟢 **Cleared by stating the correction in the base's standing form** (`CORRECTED pNNN
+from X`) rather than by widening the suppressor — 🔵 **a gate that fires on the pass reporting
+it, on live text, is the behaviour `ACTION p307-R` item 1 asked to buy.** → `T-p308g`.
+
+🔵 **The shape of that defect is the finding, not its size.** It is a cell that a correction
+made ELSEWHERE in the same base never reached. 🔴 **And this base already has a rule against
+exactly that:** `intel/open-gaps.md:3807` carries **`ACTION QG`** — *"every pass that corrects
+a cell must sweep that repository's every current-state cell in the same pass"* — marked
+**DISCHARGED**, with `263` grant-claim lines adjudicated over `25` repos and `23` stale cells
+found **by hand**. 🟢 **`QG` ran once, found the same comparator false-positive class this
+instrument re-derived from scratch, and was never made standing.** 🔵 **`23` stale cells then
+against `1` now is the good news; that it took ninety passes to instrument is not.**
+
+### 🟢 Three agent rows re-pinned by TITLE, and `p307`'s own copyleft trio holds
+
+🟢 **`ACTION p307-R` item 2 asked for every long copyleft payload to be re-read by title.** Done
+for the trio `p307` corrected, and **all three confirm**:
+
+| slug | payload | title line, read at `p308` | family |
+|---|---|---|---|
+| [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | `LICENSE.txt` **35 148 B** `8b1ba204bb69` | `GNU GENERAL PUBLIC LICENSE` | 🟢 **GPL-3.0** |
+| [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | `LICENSE` **35 149 B** `3972dc9744f6`, branch 🔴 **`master`** | `GNU GENERAL PUBLIC LICENSE` | 🟢 **GPL-3.0** |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | `LICENSE` **35 149 B** `3972dc9744f6` | `GNU GENERAL PUBLIC LICENSE` | 🟢 **GPL-3.0** |
+
+🟢 **`p307`'s normalisation claim is confirmed exactly: all three give `nsha12` `3743f7a4ab51`.**
+🔵 **`logicits` and `tutor-gpt` are byte-identical** — same `sha12`, same length. 🟡 **This pass
+first suspected a copy-paste between the two rows and was wrong**: enumerated separately, on
+different branches, they really do serve the same stock text. 🔴 **Which is its own rule: a
+payload `sha12` is not a repository identity key either.**
+
+### 🔴 `p307` named the wrong mechanism for its own headline defect, and the right one was on this base
+
+🟢 **`p307` published that the AGPL/GPL conflation came from *"a byte-LENGTH SERIES."*** 🔴 **The
+base already held the real mechanism, in writing, in this file's own trending companion.**
+
+🟢 **[`agents/trending.md`](trending.md) line 15867:** *"`brownplt/LTLTutor` — **GPL-3.0**,
+35 148 B. `P171` live-confirmed: its **§13 names Affero at line 552**, so a `grep Affero`
+misreads it as AGPL. It is GPL-3.0."*
+
+🟢 **Verified first-hand this pass.** GPL-3.0's **section 13 is titled *"Use with the GNU Affero
+General Public License"***, and the string `Affero` appears at lines **552, 556 and 559** of the
+payload. 🔵 **Any instrument that greps the BODY for `Affero` grades every GPL-3.0 as AGPL-3.0.**
+
+🔴 **And [`agents/trending.md`](trending.md) line 3876 records `GPL-3.0 @ p212`.** 🟢 **So this
+base read `LTLTutor` correctly at `p212`, drifted to `AGPL-3.0`, and `p307` restored the right
+answer while describing it as a discovery.** 🔵 **It was a REGRESSION, and the difference
+matters: a discovery needs a new instrument, a regression needs the old reading honoured.**
+→ `T-p308a`.
+
+### 🟡 No new agent row this pass, and here is exactly what was searched
+
+🔴 **Zero new in-domain agents cleared the bar.** 🔵 **Written down, because an empty section and
+a section that was never run look identical from the outside:**
+
+- 🟢 `top open source AI agents education 2026 github MIT license tutoring` — returned general-purpose
+  agent listicles (`Hermes Agent`, `OpenHands`, `CrewAI`) and two education rows, **both already
+  carried**: [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) and `Study-Mate`.
+- 🟢 **`gitlab.com` searched for the first time by any pass** — 7 queries, up to 100 results each,
+  **zero AI-education projects**. → `repos/trending.md`, `T-p308d`.
+- 🔴 **`Selleo/mentingo` looked like the find of the pass and is CARRIED** — `make claims` returned
+  **68 mentions** in [`agents/trending.md`](trending.md) alone. 🔵 **The supply test did its job;**
+  see [`verticals/solutions.md`](../verticals/solutions.md), where what it refutes is the finding.
+- 🔴 [`plastic-labs/bloom`](https://github.com/plastic-labs/bloom), named in search results as a
+  self-hostable tutor, is **`NO-SLUG`** — the clone channel gets a credential prompt, which this
+  base's calibrated oracle reads as **absent-or-private**, not as a repository.
+- 🟢 **Re-pinned anyway, because the gate's census asked:** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)
+  is **Apache-2.0**, `LICENSE`, **11 408 B**, `cd2f54e1e506`. 🔴 **That is NOT the stock Apache
+  payload** — the stock family is `11 357` / `11 358` / `11 359 B`, all normalising to
+  `283ea6cc2997`. **DeepTutor's is ~50 B longer and normalises to `bfa9c88794c6`**, so its
+  appendix is filled in. 🔵 **A filled appendix is a copyright line, not a condition** — but it
+  is a MODIFIED payload and the row should not be read as *"stock, no added clause."*
+
 ## 🔴 Pass 307 — THIS SHELF HAS CARRIED TWO TUTORS AS `AGPL-3.0` FOR TWO PASSES AND BOTH ARE `GPL-3.0`; THE BASE HELD THE RIGHT ANSWER IN TWO OTHER FILES THE WHOLE TIME, AND THE INSTRUMENT THAT GOT IT WRONG WAS A BYTE-LENGTH SERIES
 
 ⏱️ **Pass 307 of `2026-10-19`, following `p306` of `2026-10-19`.** Evidence:

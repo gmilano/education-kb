@@ -82,6 +82,36 @@ chk("and the table-block hedge is therefore caught",
 chk("a paragraph and the table after it are DIFFERENT scopes",
     len(sf.scopes("prose about Annex III\n| a |\n| still a disjunction |\n")), 2)
 
+# ── p308: the row window (`ACTION p307-R` item 3a) ─────────────────────────────────────
+# `ACTION XT` is right about the CITATION and wrong about the SUBJECT.  A subject in one
+# row and a hedge in another are not one claim; all four findings this gate carried at
+# `p307` were that collision.
+COLLIDE = ("| row | note |\n|---|---|\n"
+           "| a row about Annex III and nothing else | 🟢 fine |\n"
+           "| an unrelated row about `StudentStore` | 🔴 **unresolved** |\n")
+chk("a table is still ONE scope (ACTION XT is kept)", len(sf.scopes(COLLIDE)), 1)
+chk("but it grades as one unit PER ROW, header excluded",
+    len(sf.graded_units(sf.scopes(COLLIDE)[0])), 2)
+chk("so a subject in row 1 and a hedge in row 2 is NOT a regression",
+    [sf.grade_scope(u, FACT["subject"], FACT["authority"], c)[0]
+     for u, c in sf.graded_units(sf.scopes(COLLIDE)[0])],
+    ["CLEAR", "CLEAR"])
+TOGETHER = ("| row | note |\n|---|---|\n"
+            "| Annex III | 🔴 **still a disjunction** |\n")
+chk("a subject and a hedge in the SAME row is still caught",
+    [sf.grade_scope(u, FACT["subject"], FACT["authority"], c)[0]
+     for u, c in sf.graded_units(sf.scopes(TOGETHER)[0])],
+    ["REGRESSION"])
+CITED = ("| row | note |\n|---|---|\n"
+         "| Annex III | 🔴 **still a disjunction** |\n"
+         "| the authority | settled by `Regulation (EU) 2026/1744` |\n")
+chk("an authority cited in ANOTHER row of the same table still annotates (XT's intent)",
+    [sf.grade_scope(u, FACT["subject"], FACT["authority"], c)[0]
+     for u, c in sf.graded_units(sf.scopes(CITED)[0])][0],
+    "ANNOTATED")
+chk("item 3b is answered by NOT dropping open-gaps.md from SHELVES",
+    "intel/open-gaps.md" in sf.SHELVES, True)
+
 # ── the root path, which silently broke this gate on its first run ──────────────────────
 chk("REPO resolves to the repository root, not to compose/",
     os.path.exists(os.path.join(sf.REPO, "agents", "top.md")), True)

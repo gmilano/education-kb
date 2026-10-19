@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 📈 2026-10-19 · Pass 308 — THE FIRST `gitlab.com` SWEEP IN THIS BASE'S HISTORY, AND THE PREDICTION `p307` REGISTERED IN ADVANCE IS REFUTED
+
+⏱️ **Pass 308 of `2026-10-19`.** Evidence:
+[`p308-channel-map.2026-10-19-p308.tsv`](../evidence/p308-channel-map.2026-10-19-p308.tsv) ·
+[`p308-payload-pin.2026-10-19-p308.tsv`](../evidence/p308-payload-pin.2026-10-19-p308.tsv) ·
+[`p308-shelf-census.2026-10-19-p308.tsv`](../evidence/p308-shelf-census.2026-10-19-p308.tsv).
+
+### 🟢 `ACTION p307-R` item 6 — scored, because the prediction was registered before the search
+
+> 🔵 **`p307` wrote:** *"Search `gitlab.com`. It is reachable, no pass has touched it, and the
+> EMEA sovereignty thesis predicts European education projects host there rather than on GitHub.
+> 🔴 Prediction registered in advance so it can be scored."*
+
+| arm of the prediction | verdict |
+|---|---|
+| AI-education **supply** exists on `gitlab.com` | 🔴 **REFUTED.** 7 queries, up to 100 results each, **zero** AI-education projects |
+| what is there is **European** | 🟡 **WEAKLY HELD.** All four in-domain rows are European |
+| it would be **new to this base** | 🔴 **REFUTED.** `3` of `4` are already carried |
+
+🟢 **Method, so the nil is auditable:** `GET /api/v4/projects?search={term}&per_page=100&order_by=star_count&sort=desc&archived=false`,
+`HTTP 200` throughout, terms `ai+tutor` · `intelligent+tutoring` · `learning+management` ·
+`moodle` · `education+ai` · `adaptive+learning` · `elearning`.
+
+| row | stars / forks | host | carried? | what it is |
+|---|---|---|---|---|
+| [`saxionnl/42/lms42`](https://gitlab.com/saxionnl/42/lms42) | `10`★ / `74` forks | 🟢 gitlab.com | 🔴 **CARRIED** | LMS for an Associate-degree software programme. 🟢 **NL — Saxion University of Applied Sciences.** 🟡 Forks far exceed stars: coursework, not adoption |
+| [`Openki/Openki`](https://gitlab.com/Openki/Openki) | `35`★ / `48` forks | 🟢 gitlab.com | 🟢 **NOT carried** | Course-organisation platform, 🟢 **CH**. 🔴 **NOT an AI project** — recorded as a gitlab-hosted education row, not as supply for this vertical |
+| [`olatorg/openolat-starter`](https://gitlab.com/olatorg/openolat-starter) | `3`★ / `0` forks | 🟢 gitlab.com | 🔴 **CARRIED** | Extension to OpenOlat, 🟢 **CH**. Last activity `2026-10-15` |
+| [`moodlenet/moodlenet`](https://gitlab.com/moodlenet/moodlenet) | `9`★ / `4` forks | 🟢 gitlab.com | 🔴 **CARRIED** | 🔴 Last activity **`2023-07-07`** — dormant three years |
+
+🔴 **The channel defect, and it generalises past GitLab: `search=tutor` ranks TUTORIAL
+repositories first.** The top four hits are `nanuchi/youtube-tutorial-series` (`296`★),
+`polloloco/vgpu-proxmox` (`185`★), `xavki/xavki-tutorials-index` (`124`★) and
+`xavki/tutorials-ansible` (`93`★). 🔵 **A stemming collision between this domain's core noun and
+the internet's most common content word** — and `100` confident, irrelevant, well-starred rows
+read exactly like coverage to anyone who does not check. → `T-p308d`.
+
+🟡 **And GitLab's API has no licence field worth reading: `license` is `None` for all four
+in-domain projects.** 🟢 **Enumerate the tree and read the payload — the route this base already
+uses — or get nothing.**
+
+### 🟢 `github trending education AI` — NOT re-run, by instruction
+
+🔵 **`ACTION p307-R` item 7 lists it among the things not to re-litigate**, together with Frappe
+Learning (**AGPL-3.0**, title-confirmed twice), the education ERP/CRM nil,
+`concentricsky/badgr-server` (all three addresses dead) and *"no primary source"*. 🟢 **None was
+re-run.** 🔵 **`frappe/lms` appears in this pass's evidence only as a by-product of the
+consistency gate's census, where the `MIT` beside it turns out to be a **third-party claim this
+base refutes in writing** — not a re-opening.
+
+### 🟢 A fourth version-named default branch, and the ladder stays retired
+
+| slug | default branch |
+|---|---|
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **`v31.0.00`** — **new this pass** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 `2.12` |
+| `php-xapi/*` | 🔴 `0.7` · `3.x` *(`p307`)* |
+| [`IgorFonck/logicits`](https://github.com/IgorFonck/logicits) | 🟡 `master` *(not `main`)* |
+| [`tanzania-ai-community/twiga`](https://github.com/tanzania-ai-community/twiga) | 🟡 `development` |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) · [`LearnPress/learnpress`](https://github.com/LearnPress/learnpress) | 🟡 `develop` |
+
+🔵 **No filename or branch ladder would ever guess `v31.0.00`.** 🟢 **One more confirmation of
+`T-p307a`: enumerate the root tree, never ask it for a name.**
+
+### 🟡 The shelf census — 20 slugs where the DATED history disagrees with the live answer
+
+🟢 **New instrument this pass: `make shelf-census`.** 🔵 **A backlog, never a failure** — a dated
+section recording what `p91` or `p212` believed is a record, not a live claim.
+
+🟢 **12 of the 20 adjudicated by payload, and the LIVE shelf is right in all 12.** The
+commercially dangerous direction — history says copyleft, the live shelf says permissive, so a
+studio would quote MIT for an AGPL repo — was checked first and **came back clean**:
+`gego-k12/gegok12`, `MarcosNahuel/moodle-mcp`, `THU-MAIC/OpenMAIC` and `BruChris/canvas-lms-mcp`
+are all **MIT** by payload, and `GibbonEdu/core` (**GPL-3.0**), `schroedinger-hat/certo` and
+`fwu-de/ais-chat` (**AGPL-3.0**) all match their live cells.
+
+🔴 **8 remain UNADJUDICATED and are `p309`'s reading list**, with an exact denominator rather
+than a shrug.
+
+---
+
 ## 2026-10-19 — Pass 307: 70 PAYLOADS, A RETIRED FILENAME LADDER, AND A CASE-SENSITIVE 404 THAT TWO INDEPENDENT CHANNELS AGREED WAS AN ABSENCE
 
 🟢 **Channel, and it supersedes `p306`'s:** `git clone --depth 1 --filter=blob:none` works on third-party

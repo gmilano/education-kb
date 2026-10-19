@@ -4,6 +4,157 @@ region: Global
 updated: 2026-10-19
 ---
 
+## Pass 308 — 2026-10-19 — **THE GATE `p307` ORDERED FOUND THE SHELVES ALMOST PERFECTLY CONSISTENT (1 STALE CELL IN 1 132 CLAIMS) AND THE PASS'S REAL DEFECTS SOMEWHERE ELSE: `p307` NAMED THE WRONG MECHANISM FOR ITS OWN HEADLINE, `p283`'s IDENTITY RULE IS RELIED ON BACKWARDS, AND THE VERTICAL'S STANDING CONCLUSION WAS REFUTED BY A ROW ON THIS BASE'S OWN SHELF**
+
+**One-line summary:** 🟢 **`ACTION p307-R` item 1 BUILT and wired standing** — `gate-shelf-consistency`,
+**52 offline controls** plus a live arm, `17/17` gates green at publication. 🔴 **Its PREMISE is
+refuted: `1 132` live licence claims over `344` slugs yield exactly `1` stale cell**
+([`intel/market.md:1834`](intel/market.md), `DaRL-GenAI/instructional_agents` carried
+`Apache-2.0`, payload **MIT** `1 067 B` `ae280df5a726`) — **and
+[`intel/trends.md:2815`](intel/trends.md) already said so in writing.** 🔵 **The other `64` first-run
+flags were all the INSTRUMENT's, in nine false-positive classes, each now a named control.**
+🔴 **Headline defect of the pass: `p307` named the wrong mechanism for its own headline.** It
+blamed *"a byte-LENGTH SERIES"*; the real one was on this base — [`agents/trending.md:15867`](agents/trending.md)
+records that **GPL-3.0's §13 is titled *"Use with the GNU Affero General Public License"*** (verified:
+`Affero` at lines **552/556/559** of the 35 148 B payload), so **any `grep Affero` grades GPL-3.0
+as AGPL** — and [`agents/trending.md:3876`](agents/trending.md) records `GPL-3.0 @ p212`. 🔵 **So
+`p307` restored a reading this base had lost: a REGRESSION, not a discovery, and the two need
+opposite responses** → `T-p308a`. 🔴 **`p283`'s identity rule is relied on backwards:**
+[`lkh081231/OpenTutor`](https://github.com/lkh081231/OpenTutor) and
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) have **different `HEAD`s** but an
+**identical root commit `483feed58f96` and 188/188 shared commits** — one project, and
+`make carried` called the mirror `NEW`. 🟢 **The identity key is the ROOT COMMIT** → `T-p308c`.
+🔴 **And the vertical's standing *"forced architecture"* was refuted by its own shelf:**
+[`Selleo/mentingo`](https://github.com/Selleo/mentingo) is **MIT**, an AI-native self-hosted LMS,
+`96★ / 1 348` commits, carried for ~`140` passes and described at
+[`agents/trending.md:6587`](agents/trending.md) as *"a permissive LMS exit"* — while `p305` wrote
+the rule, `p306` called the nil *"a property of the LMS LAYER"*, and `p307` went looking for the
+break at the tutoring layer → `T-p308b`. 🟢 **`ACTION p307-R` item 6 SCORED and REFUTED:
+`gitlab.com` enumerated for the first time by any pass — 7 queries, up to 100 results each,
+**zero** AI-education supply; the four in-domain rows are all European and three already
+carried** → `T-p308d`. 🟢 **Item 3 DECIDED and implemented: `p253`'s scope narrowed to a ROW
+WINDOW, `intel/open-gaps.md` KEPT in `SHELVES`; `--all` goes `20 → 12` base-wide and `13 → 7` on
+that file, suite `17/17 → 23/23`.** 🟢 **Item 2 ran over the copyleft tier: every live cell held,
+and `p307`'s normalisation claim is confirmed exactly (`3743f7a4ab51` for all three tutors).**
+🟢 **APAC's two-pass declared silence is CLOSED with five jurisdictions, and the headline is a
+REVERSAL — South Korea's National Assembly stripped AI textbooks of official status in `2026-08`**
+→ `T-p308f`. 🟢 **The US is now the most actionable region in this base: nine jurisdictions, and
+Ohio's district AI-policy deadline `2026-07-01` has ALREADY PASSED** → `T-p308e`, `P92`.
+🟢 **Three new patterns (`P92`-`P94`), seven new trends (`T-p308a`-`g`), one new standing gate.**
+
+⏱️ **Dating note:** `p304` through `p308` all carry `2026-10-19` — **dated by evidence, not by
+commit**, the base's standing rule.
+
+### 🟢 `ACTION p307-R` — disposition, item by item
+
+| # | item | disposition |
+|---|---|---|
+| 1 | Build the SHELF-CONSISTENCY gate | 🟢 **DISCHARGED — the leg of the pass.** Built, 52 controls, wired into `make hooks`. 🔴 **Premise refuted: 1 real defect in 1 132 claims over 344 slugs**; 64 of 65 first-run flags were the instrument's, in 9 classes now pinned |
+| 2 | Re-pin every long copyleft payload by TITLE | 🟢 **DONE on the copyleft tier.** Every live cell held. `LTLTutor`/`logicits`/`tutor-gpt` all title-read `GNU GENERAL PUBLIC LICENSE` and all normalise to `3743f7a4ab51`. 🟡 Bounded to the shelves' copyleft labels, not the whole base |
+| 3 | Decide `p253`'s two measured problems | 🟢 **DECIDED, IMPLEMENTED, PINNED.** (a) scope narrowed to a ROW WINDOW, authority still citable table-wide, header rows excluded. (b) `intel/open-gaps.md` **KEPT** — it is where `p251`'s regression was recorded. `20 → 12`, `23/23` controls |
+| 4 | Spend the clone channel on CODE | 🔴 **NOT DONE. Refused for scope, not capability.** The channel ran **37** times this pass, all of it on licence payloads. Re-registered |
+| 5 | Normalise the whole base's hash column | 🔴 **NOT DONE — partial only.** 37 payloads carry an `nsha12` this pass, and `openedx/XBlock` independently confirms `p307`'s collapsed stock-Apache value `283ea6cc2997`. 🟡 A sample, not the census. Re-registered |
+| 6 | Search `gitlab.com` | 🟢 **DISCHARGED and the registered prediction is SCORED: REFUTED on supply, weakly held on provenance, refuted on novelty** |
+| 7 | Do NOT re-litigate Frappe Learning, the ERP/CRM nil, `github trending education AI`, `badgr-server`, "no primary source" | 🟢 **OBEYED.** None was re-run. `frappe/lms` appears only as a census by-product, where the `MIT` beside it is a **third-party claim this base refutes in writing** |
+
+### 🟢 What was found
+
+| finding | verdict |
+|---|---|
+| 🟢 **the gate, and the number that matters** | **1 132** live claims · **344** slugs · 🔴 **65** flagged by the first draft · 🟢 **1** real stale cell. 🔵 Nine instrument fixes between those two numbers, each a named control |
+| 🔴 **the one real defect, and its shape** | [`intel/market.md:1834`](intel/market.md) carried `DaRL-GenAI/instructional_agents` as `Apache-2.0`. Payload **MIT** `1 067 B` `ae280df5a726`; **13** other cells agreed with the payload; [`intel/trends.md:2815`](intel/trends.md) said *"is MIT, not Apache-2.0"*. 🔵 **A cell a correction made elsewhere never reached** |
+| 🔴 **this base already had the rule** | [`intel/open-gaps.md:3807`](intel/open-gaps.md) carries **`ACTION QG`** — *"every pass that corrects a cell must sweep that repository's every current-state cell in the same pass"* — **DISCHARGED** at ~`p214` with `263` lines adjudicated, `23` stale cells found **by hand**, and **`4` comparator false positives** recorded. 🔴 **Never made standing.** 🟢 `23` then vs `1` now is the hygiene; ninety passes to instrument it is not |
+| 🔴 **`p307` named the wrong mechanism** | Not a length series: **GPL-3.0 §13 is titled *"Use with the GNU Affero General Public License"***, `Affero` at lines 552/556/559 — a body-wide `grep Affero` grades every GPL-3.0 as AGPL. 🟢 Written on this base at [`agents/trending.md:15867`](agents/trending.md), with `GPL-3.0 @ p212` at line 3876 → `T-p308a` |
+| 🔴 **the identity rule is relied on backwards** | `OpenTutor` ×2: different `HEAD`s, **identical root commit `483feed58f96`**, **188/188** shared commits, byte-identical MIT payloads, identical descriptions. 🟢 **Root commit is the identity key; `HEAD` answers a different question** → `T-p308c` |
+| 🟡 **and a payload hash is not an identity key either** | `logicits` and `tutor-gpt` are **byte-identical** (`35 149 B`, `3972dc9744f6`) on different branches. 🟡 This pass suspected a copy-paste between two rows and **was wrong** — they really do serve the same stock text |
+| 🔴 **the standing conclusion refuted by its own shelf** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) **MIT**, AI-native self-hosted LMS, `96★ / 30` forks, `1 348` commits, SCORM 1.2 bidirectional. 🟢 `make claims` → **68** mentions. 🔴 `p305`/`p306`/`p307` wrote, refined and partly retracted the *"forced architecture"* without ever running it against the shelves → `T-p308b` |
+| 🔵 **and it REFINES the mechanism** | `p307`: *"open-core picks permissive because the moat is the EE."* 🔴 **`mentingo` has NO proprietary edition** — it sells managed hosting, SLA and implementation, with an AWS listing that charges nothing for the software. 🟢 **A vendor picks permissive when its moat is anything that is NOT the code** |
+| 🟡 **but the rule was not simply wrong** | `p305` conflated **SCOPE** with **SCALE**. `mentingo` is a full system of record (scope) at `96★` (inside `p305`'s own 1★–135★ component band). 🔵 **Honest pitch: *"permissive and self-hosted, with a thin community"*, never *"the open Moodle"*** |
+| 🟢 **`gitlab.com`, first contact** | 7 queries, `HTTP 200` throughout, **zero** AI-education supply. In-domain: `saxionnl/42/lms42` (NL), `olatorg/openolat-starter` (CH), `moodlenet/moodlenet` (dormant since `2023-07-07`), `Openki/Openki` (CH, **not carried**, **not AI**). 🔴 3 of 4 already carried |
+| 🔴 **a search channel that reads like coverage** | On `gitlab.com`, `search=tutor` ranks **TUTORIAL** repos first (`296`★, `185`★, `124`★). 🔵 A stemming collision between this domain's core noun and the internet's commonest content word. 🟡 GitLab's API gives `license: None` for all four in-domain rows |
+| 🟢 **APAC closed, and it is a reversal** | 🔴 **South Korea: the National Assembly stripped AI textbooks of official status, `2026-08`** (adoption <`30%` by March). 🟢 **Singapore: AI for Primary 4 runs INSIDE the ministry's Student Learning Space, teacher-supervised** — integrate with SLS or do not bid → `P94`. 🟢 **India: AI compulsory from Class 3, `2026-27`.** 🟡 Japan *"AI last, not first"*. 🔴 **AU `52%` / NZ `47%` support BANNING AI in schools** (Ipsos 2026) vs `23`–`31%` elsewhere in APAC |
+| 🟢 **North America — the best procurement surface in this base** | ~`33`–`35` states + PR have guidance. 🟢 **Ohio's district mandate lapsed `2026-07-01`**; NC `2026-12-31` → `2027-06-30`; MD `SB 720` = 120 days from release; OK `S.B. 1734` before `2027-28` with a **parental opt-out, no academic penalty**; IL guidance duty `2026-07-01`; MI guidance `2026-05-12`. 🔴 **VA CONFLICTED (enacted vs pending); TX/PA nil as of `2026-09`, ~6 weeks stale** → `T-p308e`, `P92` |
+| 🔴 **a regulation that is an ARCHITECTURE** | Oklahoma's opt-out means the platform must deliver the same course, assessed the same way, with AI disabled per learner. 🔴 **`0` of this base's platform rows declare a per-learner AI opt-out** — informed gap with an exact denominator → `P93` |
+| 🟡 **EMEA gains one hard number and a declared nil** | OECD Digital Education Outlook `2026-01`: teacher agreement that AI helps lesson planning runs **`18%` (France) to `91%` (Viet Nam)**; **1 teacher in 10** reports their school PROHIBITS AI. 🔴 **France is the OECD floor AND is building a state sovereign AI — competitor territory.** 🔴 No education-specific national AI instrument found for DE/FR/ES/NL |
+| 🟢 **LATAM has the world's best reference deployment** | **PUC Chile: `194` INSTRUCTOR-CONFIGURED agents, ~`100` courses, `4 600`+ students, >`60%` of surveyed students said they helped.** 🔵 The load-bearing word is *instructor-configured*; the `2026-07` review of `474` studies supports narrow, instructor-controlled deployments only |
+| 🟡 **LATAM ministries still absent** | Colombia: `CONPES 4144` (`2025-02`) + MinCiencias roadmap — 🔴 **neither from the education ministry**; science minister left `2026-08`. Mexico: no unified national rule, 🟢 **but `190`+ universities with AI programmes and a named entry point (UNESCO LAC Observatory pilot with CONALEP + DGETI)**. 🔴 **Competitor on the ground: AI Week LATAM 2026 (`2026-09-29`–`10-03`), SoftServe + NVIDIA, `4 000`+ trained** |
+| 🟢 **a fourth version-named default branch** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) → 🔴 **`v31.0.00`**, after `i-educar`'s `2.12` and `php-xapi`'s `0.7`/`3.x`. 🔵 No ladder would guess it; `T-p307a` holds |
+| 🟡 **`DeepTutor` is Apache-2.0 but NOT stock** | `LICENSE` **11 408 B** `cd2f54e1e506` → `nsha12` `bfa9c88794c6`, against the stock family `11 357/11 358/11 359` → `283ea6cc2997`. 🔵 A filled appendix is a copyright line, not a condition — but the row must not read *"stock, no added clause"* |
+| 🟢 **the census the gate makes cheap** | `make shelf-census`: **20** slugs where the DATED history disagrees with the live answer. 🟢 **12 adjudicated by payload, LIVE shelf right in all 12**, including all four of the commercially dangerous direction (history-copyleft / live-permissive). 🔴 **8 unadjudicated — `p309`'s reading list, with a denominator** |
+| 🟡 **the gate fired on this pass's own prose** | The first draft of the item-1 write-up said *"line 1834 carried … as `Apache-2.0`"* — a retraction read as a claim. 🟢 **Cleared by rewriting the sentence into the standing `CORRECTED pNNN from X` form, not by widening the suppressor** → `T-p308g` |
+| 🟢 **a restated list broke a standing gate, and the fix was a de-duplication** | `p283`'s ladder ratchet went `17 → 18` and `gate-ladder-case` RED, because a literal `"README.md"` in a Python list is indistinguishable from a one-rung path ladder. 🟢 **The gate now IMPORTS `SHELVES` from `p235-carried-index` and identifies the root index structurally.** Ratchet back to `17`, and the canonical list has one owner |
+
+### 🔴 What this pass could not establish
+
+🔴 **No primary legal, market or government source is reachable.** Refused this pass and at
+`p306`/`p307`, listed per `T-p306a`: `eur-lex.europa.eu`, `ec.europa.eu`,
+`gesetze-im-internet.de`, `ontario.ca`, `unesdoc.unesco.org`, `oecd.org` — all `000` on `curl`.
+**Every regulatory and market figure in `intel/` this pass is search-snippet grade**, including
+all nine US jurisdictions. 🟢 **Primary source IS reachable for CODE** — the blobless clone
+channel (used **37** times), `raw.githubusercontent.com`, `api.github.com/rate_limit`, PyPI, npm,
+Packagist, RubyGems, Maven Central, Docker Hub, and now `gitlab.com` and its API. 🔵 **Say which,
+every time.**
+🔴 **`huggingface.co` is still NOT reachable (`000`)** — every education model and dataset
+published there remains outside this base's reach.
+🔴 **`api.github.com` remains an AUTHORIZATION boundary, not a network one**: `/rate_limit` is
+`200` and authenticated, every out-of-scope repository endpoint is `403`. **No star integer from
+an API.** `mentingo`'s `96★ / 30 forks` is as `github.com` renders it.
+🔴 **No code, commit history or test suite was read in any repository for its CONTENT.** Commit
+GRAPHS were read for the first time, and that is what settled the `OpenTutor` identity question —
+🔵 **a cheaper use of the clone channel than `ACTION p306-R` item 5's code read, and not a
+substitute for it.**
+🔴 **`ACTION p307-R` items 4 and 5 were not performed** and are re-registered below.
+🔴 **`8` of the `20` shelf-census rows are unadjudicated.**
+🔴 **Chile's `Ley 21.719` was NOT re-searched** and is carried IN DOUBT from `p307`, **~6 weeks
+before it binds**. 🔴 **Canada and Brazil were not re-searched either** — carried unchanged, by
+design, so the effort could go to APAC's declared gap.
+🔴 **Texas and Pennsylvania's nil is ~6 weeks stale**, and **Virginia and Idaho are CONFLICTED
+between two secondary sources each.** Flagged, not carried as fact.
+🟡 **`Openki/Openki` is new to this base and was NOT payload-pinned** — it is not an AI project,
+so it earned a census line rather than a probe.
+🟡 **The gate compares licence LABELS only.** `T-p308b`'s class — a standing prose CONCLUSION
+contradicted by the shelves it generalises over — is **uncovered**, and is item 1 below rather
+than an implied capability.
+
+### 🟢 `ACTION p308-R` — ranked for `p309`
+
+1. 🔴 **Extend the consistency idea from CELLS to CONCLUSIONS.** `p308` found the licence cells
+   almost perfectly consistent and the standing *conclusions* refuted by their own shelves,
+   twice in one pass (`T-p308a`, `T-p308b`). 🟢 **Cheap first cut: for every sentence of the form
+   *"every X is Y"* / *"no X is Y"* / *"the only X"* in a live shelf's current section, extract
+   the class and run `make claims` on its counter-term before publication.** 🔵 **This is the
+   highest-value instrument left, by the same argument item 1 used last pass — and that argument
+   has now been validated once.**
+2. 🔴 **Re-key repository identity on the ROOT COMMIT.** `gate-identity` and `make carried` both
+   test `HEAD` or the slug string; both called a 188/188-shared-history mirror `NEW`. 🟢 **Bounded
+   and mechanical: for every pair of slugs sharing a payload `sha12` or a description, compare
+   root commits via the clone channel.** 🔵 **Start with the pair this pass named.**
+3. 🟡 **Adjudicate the remaining `8` shelf-census rows**, and decide for each whether the dated
+   row is a superseded record (leave it) or a reading the live shelf LOST (restore it, and find
+   what overwrote it — `T-p308a`'s question).
+4. 🟡 **Give every carried regulatory instrument a REVIEW/REPEAL field.** South Korea's AI
+   textbooks were unwound by a legislature and nothing in this base would have noticed
+   (`T-p308f`). 🔵 **Begin with the instruments whose dates have already passed** — Ohio
+   (`2026-07-01`), Illinois (`2026-07-01`) — and ask whether they were met, not just whether they
+   exist.
+5. 🔴 **Chile, and this is now urgent rather than interesting.** `Ley 21.719` binds in ~6 weeks,
+   the delay bill is live, the enforcing Agency is not constituted, and this base has not
+   re-read it for two passes. 🔵 **It is the only carried LATAM date a client could act on
+   wrongly this quarter.**
+6. 🟡 **Spend the clone channel on CODE** — `ACTION p306-R` item 5 and `p307-R` item 4, now
+   refused twice for scope. 🟢 **The Art 5(1)(f) screen on camera-touching rows is still the
+   highest-value first read**, and `p308` demonstrated the channel is cheap (~1.1 s, 37 uses).
+7. 🟡 **Finish the hash normalisation** (`p307-R` item 5): recompute `nsha12` for every pinned
+   payload base-wide and collapse the duplicate "distinct payload" counts. 🟢 Two independent
+   confirmations of `283ea6cc2997` now exist; the census does not.
+8. 🔵 **Do NOT re-litigate**: Frappe Learning (**AGPL-3.0**, title-confirmed twice, and the `MIT`
+   beside it is a third-party claim this base refutes), the education ERP/CRM nil,
+   `github trending education AI`, `concentricsky/badgr-server`, `gitlab.com` as a supply channel
+   (**enumerated and empty at `p308` — 7 queries, auditable method on the evidence TSV**), and
+   *"no primary source"* — **true for legal, market and government hosts and `huggingface.co`;
+   FALSE for GitHub, GitLab, PyPI, npm, Packagist, RubyGems, Maven Central and Docker Hub.**
+   🔵 **Say which, every time.**
+
 ## Pass 307 — 2026-10-19 — **THE BACKLOG PIN `p306` ORDERED FOUND THE SHELVES HONEST (56/56) AND THE INSTRUMENTS WRONG: TWO TUTORS CARRIED AS AGPL ARE GPL-3.0, A CASE-SENSITIVE 404 WAS AGREED ON BY TWO CHANNELS, AND `make hooks` RUNS**
 
 **One-line summary:** 🟢 **`ACTION p306-R` item 1 discharged — 59 sidebar/README-pinned slugs plus 11

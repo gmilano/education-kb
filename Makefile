@@ -27,8 +27,9 @@ STORE_LOG ?= /tmp/education-kb-gate-evidence-store.log
 README_LOG := $(shell mktemp)
 ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
+SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
 
-.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin
+.PHONY: hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -49,7 +50,7 @@ PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-absence gate-dates gate-provenance gate-identity gate-ladder-case \
              gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
-             gate-slug-oracle gate-payload-pin
+             gate-slug-oracle gate-payload-pin gate-shelf-consistency
 
 hooks: ## the standing check: every licence instrument's OFFLINE controls, T37's re-count, p275's enumeration gate, p277's table-structure gate, p278's channel-conflict gate, p279's absence-claims gate, p223's date gate made standing, plus p280's package-provenance channel, plus p283's per-pair identity check and its ladder-case audit, plus p288's README third channel, plus p289's restatement-vs-authority grade on the curriculum layer, plus p291's submodule pin-grant axis, plus p292's decision-evidence-store controls and its recipe-citation arm, plus p293's calibrated slug-existence oracle, and p300's no-masking runner
 	@rc=0; red=""; green=0; \
@@ -247,6 +248,13 @@ gate-slug-oracle: ## ACTION p293 — a credential prompt is a MEASUREMENT, not a
 # grant that closes with MIT's warranty paragraph, and p306's two pointer classes.
 gate-payload-pin: ## p307 — the three-valued grant classifier (GRANT / POINTER / RESERVED), 9 offline controls
 	@cd compose/code/p307-payload-pin && { $(PY) test_probe_p307.py > $(PAYLOAD_LOG) 2>&1 || { echo "🔴 p307-payload-pin FAILED — the suite's own report follows:" ; sed "s/^/   /" $(PAYLOAD_LOG) ; false ; } ; } && echo "── p307-payload-pin (9 controls: the wrapped Apache clause, GPL-2.0-not-LGPL, GPL-3.0-not-AGPL-3.0, BSD-3-not-BSD-2, p305's reserved grant, p306's two pointer classes)" && echo "   PASS" || exit 1
+
+gate-shelf-consistency: ## p308 — ACTION p307-R item 1: no slug may carry disagreeing licence cells across the live shelves
+	@cd compose/code/p308-shelf-consistency && { $(PY) -I test_shelf_consistency.py > $(SHELF_LOG) 2>&1 || { echo "🔴 p308-shelf-consistency/controls FAILED — the suite's own report follows:" ; sed "s/^/   /" $(SHELF_LOG) ; false ; } ; } && echo "── p308-shelf-consistency (52 controls: AGPL≠GPL, correction tables, retractions, comparators, possessives, quoted claims, dual grants, paired rows, scoped absences)" && echo "   PASS" || exit 1
+	@{ $(PY) -I compose/code/p308-shelf-consistency/shelf_consistency.py . > $(SHELF_LOG) 2>&1 || { echo "🔴 p308-shelf-consistency/live FAILED — the disagreeing cells follow:" ; sed "s/^/   /" $(SHELF_LOG) ; false ; } ; } && echo "── p308-shelf-consistency (the live shelves, compared to EACH OTHER)" && echo "   PASS" || exit 1
+
+shelf-census: ## p308 — where the DATED shelves disagree with the live answer.  A backlog, never a failure.
+	@$(PY) -I compose/code/p308-shelf-consistency/shelf_consistency.py . --census || true
 
 # 🔴 ONLINE half — one `git ls-remote` per slug, and it CALIBRATES FIRST.  OUT of `hooks`.
 # An uncalibrated read of this channel is exactly what produced p292's "inconclusive" row, so

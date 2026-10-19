@@ -4,6 +4,148 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔵 Pass 308 — SEVEN TRENDS, AND THE FIRST THREE ARE ALL THE SAME DISEASE: THIS BASE KEEPS DISCOVERING THINGS IT ALREADY WROTE DOWN
+
+⏱️ **Pass 308 of `2026-10-19`.** Evidence:
+[`p308-shelf-consistency.2026-10-19-p308.tsv`](../evidence/p308-shelf-consistency.2026-10-19-p308.tsv) ·
+[`p308-shelf-census.2026-10-19-p308.tsv`](../evidence/p308-shelf-census.2026-10-19-p308.tsv) ·
+[`p308-identity.2026-10-19-p308.tsv`](../evidence/p308-identity.2026-10-19-p308.tsv) ·
+[`p308-regional.2026-10-19-p308.tsv`](../evidence/p308-regional.2026-10-19-p308.tsv) ·
+[`p308-channel-map.2026-10-19-p308.tsv`](../evidence/p308-channel-map.2026-10-19-p308.tsv).
+
+### 🔴 `T-p308a` — A regression and a discovery need opposite responses, and this base cannot currently tell them apart
+
+🟢 **`p307`'s headline was that `brownplt/LTLTutor` and `IgorFonck/logicits` had been carried as
+`AGPL-3.0` for two passes and are `GPL-3.0`.** 🟢 **True.** 🔴 **Its post-mortem — *"a byte-LENGTH
+SERIES was used to name a licence family"* — is not the mechanism, and the real one was already
+written on this base.**
+
+🟢 **[`agents/trending.md`](../agents/trending.md) line 15867:** *"`P171` live-confirmed: its
+**§13 names Affero at line 552**, so a `grep Affero` misreads it as AGPL."* 🟢 **Verified
+first-hand at `p308`: GPL-3.0 section 13 is titled *"Use with the GNU Affero General Public
+License"*, and `Affero` occurs at lines 552, 556 and 559 of the 35 148 B payload.**
+🔴 **[`agents/trending.md`](../agents/trending.md) line 3876 records the verdict `GPL-3.0 @ p212`.**
+
+🔵 **So the sequence is: read correctly at `p212`, drifted to AGPL, restored at `p307` and
+described as a discovery.** 🟢 **The distinction is operational, not semantic:**
+
+> 🔴 **A discovery means the base lacked an instrument and must build one.** 🟢 **A regression
+> means the base HAD the reading and lost it, and the fix is to find out what overwrote it.**
+> 🔵 **`p307` built an instrument for a problem it already had solved, and never asked what had
+> un-solved it.** 🟢 **The cheap detector: before writing *"this base was wrong for N passes"*,
+> run `make claims` on the slug and read the oldest verdict you find.**
+
+### 🔴 `T-p308b` — A standing CONCLUSION is never checked against the shelves it generalises over
+
+🟢 **`p305` recorded a *"forced architecture"*: every permissive education row is a component,
+every platform-scale system of record is copyleft.** 🟢 **`p306` refined it — the nil is *"a
+property of the LMS LAYER"*.** 🟢 **`p307` broke it at the tutoring layer.**
+
+🔴 **It was broken at the LMS layer the whole time, by
+[`Selleo/mentingo`](https://github.com/Selleo/mentingo) — MIT, an AI-native self-hosted LMS,
+`96★`, `1 348` commits — carried on this base for roughly `140` passes, and described at
+[`agents/trending.md`](../agents/trending.md) line 6587 in exactly the words that refute the
+conclusion: *"a permissive LMS exit."*** 🟢 **`make claims TOKEN=mentingo` returns `68` mentions.**
+
+🔵 **`T-p307e` said *"no instrument compares shelf to shelf."*** 🟢 **`p308` built that instrument
+for licence CELLS and it works.** 🔴 **The disease's larger form is in PROSE CONCLUSIONS, and the
+new gate does not see it** — a conclusion is not tabular, and its subject is a class of rows
+rather than a slug. 🔵 **Named as uncovered rather than implied to be covered** →
+`ACTION p308-R` item 1.
+
+🟢 **The substantive refinement, for the record:** `p307` concluded the mechanism behind a
+permissive platform is **open-core — a proprietary Enterprise Edition to sell.** 🔴 **`mentingo`
+has no proprietary edition**; it sells **managed hosting, SLA and implementation**, with an AWS
+Marketplace listing that charges nothing for the software. 🟢 **The general rule: a vendor picks
+permissive when its moat is anything that is NOT the code. An EE is one such moat; OPERATION is
+another.** 🔴 **A commons-defending system of record still picks copyleft.**
+
+### 🔴 `T-p308c` — `HEAD` equality proves identity; `HEAD` INEQUALITY proves nothing, and this base has been reading the converse
+
+🟢 **`p283`'s rule is *"ls-remote every address; equal `HEAD` == one repository."*** 🟢 **Sound as
+stated.** 🔴 **Its converse is false and has been relied on.**
+
+[`lkh081231/OpenTutor`](https://github.com/lkh081231/OpenTutor) and
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) have **different `HEAD`s**
+(`5fea390a49be` / `c75453f41946`), **identical root commits** (`483feed58f96`), **`188` of `188`
+commits shared**, **byte-identical MIT payloads** (`1 068 B`, `5352b4967982`) and word-for-word
+identical descriptions. 🔴 **`make carried` reported the second one `NEW`.**
+
+> 🟢 **The identity key is the ROOT COMMIT.** 🔵 **`HEAD` answers *"the same SNAPSHOT?"*; the root
+> commit answers *"the same PROJECT?"* — and the shelf question is always the second.**
+> 🟢 **History containment settles direction: the superset is the live address, the subset is a
+> stale mirror.** 🔴 **A fork one commit behind defeats the `HEAD` test; a fork six commits
+> behind with a copied README defeats it while looking exactly like new supply.**
+
+### 🟢 `T-p308d` — `gitlab.com` is reachable, enumerable, and EMPTY in this domain; the prediction `p307` registered is REFUTED
+
+🟢 **`ACTION p307-R` item 6 registered a prediction in advance so it could be scored: *"the EMEA
+sovereignty thesis predicts European education projects host there rather than on GitHub."***
+🟢 **Scored.**
+
+| arm | verdict |
+|---|---|
+| 🔴 **AI-education SUPPLY on `gitlab.com`** | **REFUTED.** 7 queries, up to 100 results each, **zero** AI-education projects |
+| 🟡 European PROVENANCE of what is there | **WEAKLY HELD.** All four in-domain rows are European — `saxionnl/42/lms42` (NL), `olatorg/openolat-starter` (CH), `Openki/Openki` (CH), `moodlenet/moodlenet` |
+| 🔴 Novelty | **REFUTED.** `3` of the `4` are **already carried** on these shelves |
+
+🟢 **And an instrument lesson for every search channel, not just this one: on `gitlab.com`,
+`search=tutor` ranks TUTORIAL repositories first** — `youtube-tutorial-series` (296★),
+`vgpu-proxmox` (185★), `xavki-tutorials-index` (124★). 🔵 **A stemming collision between the
+domain's core noun and the internet's most common content word.** 🔴 **A channel that returns
+100 confident, irrelevant rows reads as coverage.**
+
+🔴 **Also recorded: GitLab's API returns `license: None` for all four in-domain projects**, so
+unlike GitHub it offers no licence triage field at all. 🟢 **Enumeration + payload read is the
+only route there, which is the route this base already uses.**
+
+### 🟢 `T-p308e` — The regulatory signal worth selling is a DATED DISTRICT OBLIGATION, and the US has nine of them
+
+🔵 **This base has spent many passes on frameworks, guidance and advisory memoranda.** 🟢 **The
+finding that converts is narrower: an obligation with a DATE, a BUDGET and a named party who is
+out of compliance without it.**
+
+🟢 **Ohio's district AI-policy mandate lapsed on `2026-07-01`.** 🟢 **North Carolina's state model
+is due `2026-12-31` and district policies `2027-06-30`.** 🟢 **Maryland's `SB 720` starts a
+120-day clock on a guidance release.** 🟢 **Oklahoma's `S.B. 1734` binds before `2027-28`.**
+🔵 **Same shape as `p307`'s Ontario PA-day finding, at roughly fifty times the scale, and in the
+one jurisdiction where districts hold their own budgets.**
+
+🔴 **Counter-signal in the same breath, because this trend is about dated obligations and not
+about enthusiasm:** Texas and Pennsylvania reportedly had **no** statewide guidance as of
+`2026-09`, and Virginia's bills are **CONFLICTED** between *enacted* and *pending* across two
+secondary sources. 🟡 **Both readings are ~6 weeks old and were not re-verified.**
+
+### 🔴 `T-p308f` — A national programme can be UNWOUND, and this base has no instrument that notices
+
+🟢 **South Korea's AI textbooks were stripped of official status by the National Assembly in
+`2026-08`**, after adoption below `30%` and union pressure that the pace had outrun preparation.
+
+🔵 **Every regional instrument this base carries is recorded with a date it STARTS binding.**
+🔴 **None is recorded with a review, sunset or repeal risk, and this base has no gate that
+re-reads a carried instrument to ask whether it still exists.** 🟢 **The Korean case is the
+proof: a programme this vertical would have cited as its flagship reference is now a cautionary
+tale, and nothing in the pipeline would have surfaced that.** → `ACTION p308-R` item 4.
+
+🔵 **The demand-side mirror: `52%` of Australians and `47%` of New Zealanders support BANNING AI
+in schools** (Ipsos Education Monitor 2026), against `23%`–`31%` elsewhere in APAC. 🔴 **Public
+opinion is a repeal risk, and it is highest in the region's English-speaking markets.**
+
+### 🟡 `T-p308g` — A gate that fires on the pass that reports it is working, and the fix belongs in the prose
+
+🟢 **`p308`'s own write-up tripped `p308`'s own gate on its first run.** The sentence *"line 1834
+carried `DaRL-GenAI/instructional_agents` as `Apache-2.0`"* is a retraction, and the instrument
+read it as a live claim, because its retraction vocabulary matches `carried as` adjacently and
+that sentence put the slug between the two words.
+
+🟢 **Cleared by restating the correction in this base's standing form — `CORRECTED pNNN from X`
+— rather than by widening the suppressor.** 🔵 **The general rule, and `p307` demonstrated the
+same thing with `gate-offline`: when a gate fires on correct prose, prefer changing the prose.**
+🔴 **Every widened suppressor is permanent and silent; a rephrasing costs one sentence and
+leaves the instrument as sharp as it was.** 🟢 **Nine suppression classes were added to this gate
+on the strength of payload adjudication, and this one was refused on the strength of a rewrite —
+the difference is that the nine were wrong READINGS and this was a sloppy SENTENCE.**
+
 ## 🔵 Pass 307 — SEVEN TRENDS, AND FOUR OF THEM ARE ABOUT HOW THIS BASE KNOWS THINGS RATHER THAN ABOUT THE MARKET
 
 ⏱️ **Pass 307 of `2026-10-19`.** Evidence:

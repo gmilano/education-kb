@@ -1,0 +1,14 @@
+channel	address	result	note
+gitlab.com	https://gitlab.com	301	reachable; redirects to https. FIRST pass to touch this host.
+gitlab API	/api/v4/projects?search=ai+tutor&per_page=100	200	100 results, ZERO in-domain. Top hits are TUTORIAL repos — `tutor` matches `tutorial`.
+gitlab API	/api/v4/projects?search=intelligent+tutoring	200	4 results, zero in-domain.
+gitlab API	/api/v4/projects?search=learning+management	200	100 results, 2 in-domain: saxionnl/42/lms42 (10*, NL), olatorg/openolat-starter (3*, CH).
+gitlab API	/api/v4/projects?search=moodle	200	100 results, in-domain are Moodle plugins/scripts; moodlenet/moodlenet (9*, last activity 2023-07-07).
+gitlab API	/api/v4/projects?search=education+ai	200	100 results, zero AI-education. Openki/Openki (35*, CH) is course organisation, not AI.
+gitlab API	/api/v4/projects?search=adaptive+learning	200	55 results, zero in-domain.
+gitlab API	/api/v4/projects?search=elearning	200	100 results, zero in-domain.
+gitlab API	/api/v4/projects/:id (per-project)	200	licence field is `None` for ALL FOUR in-domain rows — GitLab's API does not populate it the way GitHub's does.
+huggingface.co	https://huggingface.co	000	NOT reachable — carried from p307, re-confirmed.
+raw.githubusercontent.com	/openedx/XBlock/master/LICENSE.TXT	200	carried from p306/p307, re-confirmed byte-exact.
+git clone --filter=blob:none	https://github.com/{slug}	rc=0	~1.1 s on openedx/XBlock. p307's channel, re-confirmed and used 37 times this pass.
+api.github.com	/rate_limit	200	reachable+authenticated; every out-of-scope repo endpoint still 403. No star integer from an API.

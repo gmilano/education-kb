@@ -1,0 +1,22 @@
+slug	first_flagged	flag	suppression_class	adjudicated_by	verdict
+aimclub/ai-competency-model	run1	Apache-2.0 vs BSD-3 vs MIT (one line)	DUAL/SPLIT-IN-ONE-CELL	intersection rule	ARTIFACT
+ankitects/anki	run1	AGPL-3.0 vs CC-BY-SA-4.0 (one line)	CODE-AND-CONTENT LICENCE	intersection rule	ARTIFACT
+chamilo/chamilo-lms	run1	GPL-2.0 vs GPL-3.0 (one line)	DUAL/SPLIT-IN-ONE-CELL	intersection rule	ARTIFACT
+classroomio/classroomio	run1	ISC vs MIT	CLAUSE-FAMILY NOTE (`clause=MIT/ISC`)	scrub()	ARTIFACT
+vishalsachdev/canvas-mcp	run1	ISC vs MIT	CLAUSE-FAMILY NOTE (`clause=MIT/ISC`)	scrub()	ARTIFACT
+dfe-digital/apply-for-teacher-training	run2	MIT vs Unlicense	"""unlicensed"" ≠ the Unlicense"	payload MIT 1094 B d960e4f99436	ARTIFACT
+learningequality/kolibri-design-system	run2	MIT vs Unlicense	"""unlicensed"" ≠ the Unlicense"	payload NO-PAYLOAD; shelf says manifest-only	ARTIFACT
+tanzania-ai-community/twiga	run2	MIT vs Unlicense	"""unlicensed"" ≠ the Unlicense"	payload MIT 1073 B 4515ea542996	ARTIFACT
+moodle/moodle	run2	Apache-2.0 vs GPL-3.0 vs MIT	SIBLING IN PROSE	payload GPL-3.0 COPYING.txt 35147 B	ARTIFACT
+feyst/qti3-validator	run2	Apache-2.0 vs MIT	SIBLING IN PROSE (across a line wrap)	payload MIT 1076 B fa7f1c9ff4a6	ARTIFACT
+meyerjp3/psychometrics	run2	Apache-2.0 vs NO-PAYLOAD	SCOPED ABSENCE (manifest-granted, not payload-pinned)	payload NO-PAYLOAD on master; shelf cell is exact	ARTIFACT
+openedx/xblock	run2	Apache-2.0 vs NO-PAYLOAD	NARRATIVE ABOUT A REFUTED ABSENCE	payload Apache-2.0 LICENSE.TXT 11358 B 283ea6cc2997	ARTIFACT
+learnpress/learnpress	run2	GPL-3.0 vs ISC vs MIT vs NO-PAYLOAD	MULTI-GRANT (3 manifests, declared)	shelf row declares all three on purpose	ARTIFACT
+cccareers/open-source-curriculum	run3	MIT vs Unlicense	MANIFEST/PAYLOAD SPLIT + first-draft narrative	payload POINTER 1891 B; row declares MIT(pkg)/CC-BY-NC-SA(payload)	ARTIFACT
+geminilight/gen-mentor	run3	CC0-1.0 vs MIT	"COMPARATOR (""more permissive than MIT"")"	payload CC0-1.0 7048 B a2010f343487	ARTIFACT
+oat-sa/tao-core	run3	GPL-2.0 vs LGPL-3.0	ARROW CORRECTION ROW, no correction header	payload GPL-2.0 18025 B a01259a1b522	ARTIFACT
+portabilis/i-educar	run3	AGPL-3.0 vs GPL-2.0 vs LGPL-3.0	PAIRED ROW (i-educar · i-diario) + arrow row + bare-name sibling	payload GPL-2.0 18092 B on branch `2.12`	ARTIFACT
+frappe/lms	run4	AGPL-3.0 vs MIT	"QUOTED third-party claim (""as *\""MIT\""*"")"	settled AGPL-3.0 at p306/p307; not re-litigated	ARTIFACT
+shuyunyuan/talentcoach	run4	MIT vs RESERVED	POSSESSIVE (`MIT`'s verb list negated)	payload RESERVED 842 B 904cc3bf2b17	ARTIFACT
+codelitdev/courselit	run2	AGPL-3.0 vs MIT	MANIFEST/PAYLOAD SPLIT, declared in the row	payload AGPL-3.0 34143 B 9c0cb21c26d8	ARTIFACT
+darl-genai/instructional_agents	run1	Apache-2.0 (intel/market.md:1834) vs MIT (x13 elsewhere)	—	payload MIT 1067 B ae280df5a726	🔴 REAL — STALE CELL, CORRECTED p308

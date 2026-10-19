@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-19
 ---
 
+## 🔴 Pass 308 — THE "FORCED ARCHITECTURE" WAS ALREADY REFUTED AT THE LMS LAYER BY A ROW ON THIS BASE'S OWN SHELF, AND THREE PASSES WENT LOOKING FOR THE BREAK SOMEWHERE ELSE
+
+⏱️ **Pass 308 of `2026-10-19`.** Evidence:
+[`p308-payload-pin.2026-10-19-p308.tsv`](../evidence/p308-payload-pin.2026-10-19-p308.tsv) ·
+[`p308-shelf-census.2026-10-19-p308.tsv`](../evidence/p308-shelf-census.2026-10-19-p308.tsv) ·
+[`p308-regional.2026-10-19-p308.tsv`](../evidence/p308-regional.2026-10-19-p308.tsv).
+
+### 🔴 The finding of the pass for this file, and it cost nothing but a `grep`
+
+🟢 **`p305` recorded a FORCED ARCHITECTURE:** *"every permissive row is a COMPONENT (1★–135★);
+every platform-scale system of record is AGPL or GPL."* 🟢 **`p306` refined it at the
+credentialing layer and concluded the nil was *"a property of the LMS LAYER, not of
+education."*** 🟢 **`p307` broke it at the TUTORING layer with
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+(BSD-3-Clause).**
+
+🔴 **It was already broken at the LMS layer, by a row this base has carried for roughly a
+hundred and forty passes.**
+
+| row | licence, read as bytes | scale | what it is |
+|---|---|---|---|
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** — payload `LICENSE`, **1 062 B**, `sha256₁₂` `ceb97717de1f`, `© 2024 Selleo` | **96★ / 30 forks**, **1 348 commits**, TypeScript | 🟢 **A self-hosted, AI-native LMS.** Built-in **AI Mentor**; corporate L&D, onboarding and compliance training; **SCORM 1.2 real and bidirectional**; white-label; k6 performance suite; AWS Marketplace CloudFormation listing with **no software charge** |
+
+🔴 **This base's own words, at [`agents/trending.md`](../agents/trending.md) line 6587:**
+*"**AI-native LMS, SCORM + xAPI, white-label, MIT** — positioned explicitly against
+Moodle/Docebo/Open edX. **A permissive LMS exit** that did not…"* 🔴 **And line 5972: *"**AI-native
+LMS under MIT**."*** 🔴 **And line 3894 names it as the one exception to a star-count rule in so
+many words: *"the only exception is `Selleo/mentingo` at `96`★, already carried."***
+
+🔵 **So the sentence that refutes the standing conclusion was on the shelf while the conclusion
+was being written, refined, and partially retracted across three passes.** 🟢 **`make claims
+TOKEN=mentingo` returns **68 mentions** in that one file.** 🔴 **No pass ran it against its own
+conclusion.** → `T-p308b`, and `ACTION p308-R` item 1.
+
+### 🔵 What the row actually changes, stated carefully, because the rule was not simply wrong
+
+🟡 **`p305`'s rule conflated two axes, and `mentingo` separates them:**
+
+| axis | `mentingo` |
+|---|---|
+| **SCOPE** — is it a system of record? | 🟢 **Yes.** A full LMS: enrolment, courses, SCORM runtime, reporting |
+| **SCALE** — is it adopted at platform scale? | 🔴 **No.** `96★ / 30 forks` sits inside `p305`'s own component band (1★–135★) |
+
+🟢 **So `p305`'s rule is true as stated about STARS and false as understood about ARCHITECTURE.**
+🔵 **A studio cannot tell a client *"the only permissive option is a component"* — there is a
+permissive system of record. 🔴 **It can and must tell them the adoption base is small:** `96★`
+against Moodle's install count is not a like-for-like alternative, and the honest pitch is
+*"permissive and self-hosted, with a thin community"*, not *"the open Moodle."*
+
+### 🟢 And the monetisation mechanism REFINES `T-p307f` rather than confirming it
+
+🟢 **`p307` concluded from `open-tutor-ai-CE` that the mechanism is OPEN-CORE: *"open-core picks
+permissive because the moat is the EE"* — a proprietary Enterprise Edition to sell.**
+
+🔴 **`mentingo` has no proprietary edition.** Its README sells **managed hosting** (*"We run
+Mentingo for you,"* flat tiered subscription), **commercial support** (7-day go-live, custom
+builds, a two-week trial sprint), and an **AWS Marketplace listing that charges nothing for the
+software**. 🟢 **The code is MIT all the way down.**
+
+> 🟢 **The generalisation: a vendor picks a permissive licence when its moat is anything that is
+> NOT the code.** 🔵 **An Enterprise Edition is one such moat; OPERATION — hosting, SLA,
+> implementation — is another, and it is the one that leaves nothing behind a paywall.**
+> 🔴 **A commons-defending system of record still picks copyleft** (`frappe/lms`,
+> `instructure/canvas-lms`, `codelitdev/courselit`, `hpi-schul-cloud/schulcloud-server` — all
+> AGPL-3.0, all re-pinned this pass). → `T-p308b`.
+
+🔴 **What goes in the proposal, not discovered later:** 🟡 **`30 forks against 96 stars`** is a
+normal ratio, unlike `open-tutor-ai-CE`'s inverted `193/111`. 🔴 **Named adopters: none.** The
+page gives no user, learner or deployment count — only a k6 suite for sizing. 🔵 **`p179`/`p180`
+of this base already retracted an `xAPI`/`LTI` claim for this repo: `SCORM 1.2` is real and
+bidirectional, `xAPI` and `LTI` are NOT implemented.** 🟢 **Quote SCORM; do not quote xAPI.**
+
+### 🟢 The copyleft systems of record, all re-pinned by TITLE this pass
+
+🔵 **`ACTION p307-R` item 2 over this file's platform tier. Every cell held.**
+
+| platform | payload | family |
+|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | `license.txt` **33 893 B** | 🟢 **AGPL-3.0** — settled by bytes at `p306` and by title twice at `p307`; 🔵 **not re-litigated, per `ACTION p307-R` item 7** |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | `LICENSE.md` **34 143 B** `9c0cb21c26d8` | 🟢 **AGPL-3.0** |
+| [`hpi-schul-cloud/schulcloud-server`](https://github.com/hpi-schul-cloud/schulcloud-server) | `LICENSE` **34 520 B** `e7ae8b5da177` | 🟢 **AGPL-3.0** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `LICENSE` **18 092 B** on 🔴 **`2.12`** | 🟢 **GPL-2.0** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `COPYING.txt` **35 147 B** `c3bc1fd94148` | 🟢 **GPL-3.0** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `LICENSE` **35 121 B** on 🔴 **`v31.0.00`** | 🟢 **GPL-3.0** |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 **NO-PAYLOAD** — root tree enumerated, 21 entries, no licence-named blob | 🟡 **GPL-2.0 established at `p214`.** 🔴 **A 2026 open-source-LMS review calls it Apache-2.0; this file REFUSES that claim and the refusal stands** |
+
+🟢 **One platform-tier row to flag for the gate's census:** `formalms`' Apache-2.0 reading is a
+**third-party review's claim that this shelf refutes**, and the new consistency gate's DATED
+census surfaces it as a disagreement. 🔵 **It is not one — it is a correctly recorded refusal —
+and it is the clearest example of why that census is a reading list and not a defect list.**
+
+### 🔴 A vertical platform the regions now demand, and no row serves it
+
+🔴 **Oklahoma's `S.B. 1734` requires a parental OPT-OUT from student-facing AI tools *with no
+academic penalty*,** before the 2027-28 school year
+([`p308-regional`](../evidence/p308-regional.2026-10-19-p308.tsv)). 🔵 **That is not a policy
+line, it is an architectural requirement: the platform must deliver the SAME course, assessed
+the same way, with the AI path disabled per student.**
+
+🔴 **No platform row on this shelf declares a per-learner AI opt-out.** 🟢 **The nearest
+mechanism is `open-tutor-ai-CE`'s RBAC plus its human-in-the-loop review step, and `mentingo`'s
+SCORM runtime** — a SCORM package is assessed identically whether or not an agent helped author
+it, which is the cleanest opt-out-safe delivery path this base carries. → `P93`.
+🟡 **Declared as an informed gap, with an exact denominator: `0` of this file's platform rows.**
+
 ## 🟢 Pass 307 — THE "FORCED ARCHITECTURE" BREAKS AT THE TUTORING LAYER: A BSD-3-CLAUSE, SELF-HOSTABLE TUTORING PLATFORM AT 111★ / 193 FORKS, AND THE MECHANISM IS OPEN-CORE RATHER THAN GEOGRAPHY
 
 ⏱️ **Pass 307 of `2026-10-19`.** Evidence:

@@ -1,0 +1,38 @@
+slug	branch	found	file	bytes	sha12	nsha12	verdict	family	note
+asthetech/mewcp-google-classroom	main	LICENSE.md	LICENSE.md	6489	df6edfe0375d	df6edfe0375d	RESERVED	—	explicit 'all rights reserved'
+brownplt/LTLTutor	main	LICENSE.txt	LICENSE.txt	35148	8b1ba204bb69	3743f7a4ab51	GRANT	GPL-3.0	title line `GNU GENERAL PUBLIC LICENSE`; Affero named at lines 552/556/559 = GPL-3.0 §13
+BruChris/canvas-lms-mcp	main	LICENSE	LICENSE	1070	c29329c5ef3b		GRANT	MIT	clause=MIT/ISC
+cccareers/open-source-curriculum	main	LICENSE.md	LICENSE.md	1891	032d28d98aab	eb941cdccedf	POINTER	—	url=https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+codelitdev/courselit	main	LICENSE.md	LICENSE.md	34143	281e174e4d5f	9c0cb21c26d8	GRANT	AGPL-3.0	clause=GPL-family
+darl-genai/instructional_agents	main	LICENSE	LICENSE	1067	4e085d826a64	ae280df5a726	GRANT	MIT	clause=MIT/ISC
+dfe-digital/apply-for-teacher-training	main	LICENCE	LICENCE	1094	1018ba112e86	d960e4f99436	GRANT	MIT	clause=MIT/ISC
+feyst/qti3-validator	main	LICENSE	LICENSE	1076	ee880329bd9d	fa7f1c9ff4a6	GRANT	MIT	clause=MIT/ISC
+formalms/formalms	master	—	—	—	—	—	NO-PAYLOAD	—	root tree enumerated (21 entries), no licence-named blob
+fwu-de/ais-chat	main	LICENSE	LICENSE	34523	8486a10c4393		GRANT	AGPL-3.0	clause=GPL-family
+garethmanning/education-agent-skills	main	LICENSE	LICENSE	1230	f952182df4eb	40db9b472090	POINTER	—	url=https://creativecommons.org/licenses/by-sa/4.0/legalcode
+gego-k12/gegok12	main	LICENSE	LICENSE	1150	b8694396d7dc		GRANT	MIT	clause=MIT/ISC
+GeminiLight/gen-mentor	main	LICENSE	LICENSE	7048	a2010f343487		GRANT	CC0-1.0	clause=CC; shelf cell agrees byte-for-byte
+GibbonEdu/core	v31.0.00	LICENSE	LICENSE	35121	93178a43d6d3		GRANT	GPL-3.0	clause=GPL-family; 4th version-named default branch
+HKUDS/DeepTutor	main	LICENSE	LICENSE	11408	cd2f54e1e506	bfa9c88794c6	GRANT	Apache-2.0	clause=Apache/MPL
+hpi-schul-cloud/schulcloud-server	main	LICENSE	LICENSE	34520	76a97c878c9c	e7ae8b5da177	GRANT	AGPL-3.0	clause=GPL-family
+IgorFonck/logicits	master	LICENSE	LICENSE	35149	3972dc9744f6	3743f7a4ab51	GRANT	GPL-3.0	clause=GPL-family
+learningequality/kolibri-design-system	develop	—	—	—	—	—	NO-PAYLOAD	—	root tree enumerated (22 entries), no licence-named blob
+learnpress/learnpress	develop	—	—	—	—	—	NO-PAYLOAD	—	root tree enumerated (32 entries), no licence-named blob
+lkh081231/OpenTutor	main	LICENSE	LICENSE	1068	5352b4967982	72c03c50ecf0	GRANT	MIT	clause=MIT/ISC
+MarcosNahuel/moodle-mcp	main	LICENSE	LICENSE	1065	f27341a8425b		GRANT	MIT	clause=MIT/ISC
+meyerjp3/psychometrics	master	—	—	—	—	—	NO-PAYLOAD	—	root tree enumerated (11 entries), no licence-named blob
+moodle/moodle	main	COPYING.txt	COPYING.txt	35147	8ceb4b9ee5ad	c3bc1fd94148	GRANT	GPL-3.0	clause=GPL-family
+oat-sa/tao-core	develop	LICENSE	LICENSE	18025	a01259a1b522	a01259a1b522	GRANT	GPL-2.0	clause=GPL-family
+open-edge-platform/education-ai-suite	main	LICENSE	LICENSE	11351	3f17cff4210f	7dceb1ccba07	GRANT	Apache-2.0	clause=Apache/MPL
+openedx/xblock	master	LICENSE.TXT	LICENSE.TXT	11358	cfc7749b96f6	283ea6cc2997	GRANT	Apache-2.0	clause=Apache/MPL
+plastic-labs/bloom	—	—	—	—	—	—	NO-SLUG	—	clone: fatal: could not read Username for 'https://github.com': terminal prompts disabled
+portabilis/i-educar	2.12	LICENSE	LICENSE	18092	8177f9751321	1be990a929b5	GRANT	GPL-2.0	clause=GPL-family
+raccoongang/edx_xblock_scorm	master	LICENSE	LICENSE	11342	db0b3d91913a	1a841bfc4e4c	GRANT	Apache-2.0	clause=Apache/MPL
+schroedinger-hat/certo	main	LICENSE	LICENSE	33820	895609d3e304		GRANT	AGPL-3.0	clause=GPL-family
+Selleo/mentingo	main	LICENSE+licenses.comment.md+licenses.config.yaml	LICENSE	1062	ceb97717de1f	ceb97717de1f	GRANT	MIT	clause=MIT/ISC ⚠ 3 licence blobs at root; this is the pick
+shuyunyuan/talentcoach	main	LICENSE	LICENSE	842	76d0b7213617	904cc3bf2b17	RESERVED	—	explicit 'all rights reserved'
+sonyccd/qti-playground	main	LICENSE	LICENSE	1070	3a9fde8de919	b406f858b7a7	GRANT	MIT	clause=MIT/ISC
+tanzania-ai-community/twiga	development	LICENSE	LICENSE	1073	a82547dd166b	4515ea542996	GRANT	MIT	clause=MIT/ISC
+THU-MAIC/OpenMAIC	main	LICENSE	LICENSE	1065	ba2525637432		GRANT	MIT	clause=MIT/ISC
+touretzkyds/ai4k12	master	—	—	—	—	—	NO-PAYLOAD	—	root tree enumerated (6 entries), no licence-named blob
+zijinz456/OpenTutor	main	LICENSE	LICENSE	1068	5352b4967982	72c03c50ecf0	GRANT	MIT	clause=MIT/ISC
