@@ -1,0 +1,7 @@
+slug	bytes	phrase_present	canonical_position	pass257_verdict	only_effective_hit	shelf_tier
+jupyter/nbgrader	1512	yes	yes	FAMILY-PLUS-RESTRICTION:needs-a-human	all rights reserved	agents
+ucbds-infra/otter-grader	1560	yes	yes	FAMILY-PLUS-RESTRICTION:needs-a-human	all rights reserved	agents
+freecodecamp/curriculum-helpers	1524	yes	yes	FAMILY-PLUS-RESTRICTION:needs-a-human	all rights reserved	agents
+open-tutorai/open-tutor-ai-ce	1531	yes	yes	FAMILY-PLUS-RESTRICTION:needs-a-human	all rights reserved	foundations
+jupyterhub/jupyterhub	1475	no	n/a	PERMISSIVE	-	foundations
+open-spaced-repetition/fsrs-rs	1509	no	n/a	PERMISSIVE	-	agents

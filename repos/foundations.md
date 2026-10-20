@@ -4,6 +4,19 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 341 · 2026-10-20 — the foundation tier held under a second independent read, and p340's three correct abstentions turn out to split two ways: two are a vocabulary gap, one is a different licence entirely
+
+🟢 **p340 re-read all 17 foundation grants and found 17 of 17 correct. p341 re-read them again as part of a 208-payload census over all four live decision shelves, through a different loop (`lib/probe_payload.sh` + `pass257`), and reaches the same verdict: no cell on this shelf is wrong.** Evidence: [`p341-bespoke-instrument-census`](../evidence/p341-bespoke-instrument-census.2026-10-20-p341.tsv).
+
+🔵 **p340 recorded three `UNRECOGNISED` abstentions here — `sakaiproject/sakai`, `opencast/opencast`, `withmarbleapp/os-taxonomy` — and called all three correct. They are. But they are not one phenomenon, and p341 can now separate them:**
+
+- 🔴 **`sakai` and `opencast` are a VOCABULARY GAP, not an inherent limit.** Both are `ECL-2.0`. `pass257.TITLE_ANCHORS` carries `eclipse public license → EPL` and **no rung for the Educational Community License** — so it abstains. 🟢 **But `lib/license_family.sh` returns `ECL-2.0` for both, first try.** The family is *knowable* and one of this base's two classifiers already knows it; the 17 `ECL-2.0` cells on this shelf and in `verticals/solutions.md` are right because `probe_repo` uses that one. **Two instruments in one `lib`, disagreeing on the licence family named for this industry** (`intel/trends.md` **T32**, `p278`'s class).
+- 🟢 **`os-taxonomy` is the genuine abstention.** Its payload is the **ODbL**, a *database* licence with share-alike reach over derived databases. No code-licence vocabulary can or should name it, and abstaining is the correct behaviour rather than a gap to close.
+
+🟡 **A measured cost on this shelf, stated with its denominator and NOT acted on.** `open-tutorai/open-tutor-ai-ce` (**BSD-3-Clause**, 1 531 B, foundation tier) is graded `FAMILY-PLUS-RESTRICTION:needs-a-human` by the shared restriction scanner on a **single** hit: `all rights reserved` — the canonical second line of every stock BSD text. **4 of the 6 BSD-family payloads across the live shelves are in that state** ([`p341-bsd-boilerplate-cost`](../evidence/p341-bsd-boilerplate-cost.2026-10-20-p341.tsv)). 🔴 **This pass drafted the one-line exemption, applied it, and `pass257`'s suite went 127/129: its controls pin that verdict deliberately** — *"a real BSD grant says that phrase benignly, so the verdict must name a human rather than either publishing it as permissive or burying the hit."* **The patch was reverted.** 🟢 **The row is permissive and adoptable; what is recorded here is that a studio's own scanner, configured conservatively, may tell it otherwise — and that the honest repair is positional, not an exemption.**
+
+🔵 **Nothing in the tables below changed this pass.** `OpenOLAT/OpenOLAT` stays under the permissive arm where p340 moved it, and the **6 permissive / 2 ECL** arithmetic stands.
+
 ## Pass 340 · 2026-10-20 — all 17 foundation grants re-read independently: 17 of 17 agree with their cells, and one row was filed under the wrong arm
 
 🟢 **p340 re-probed every row on this shelf from scratch** — `git ls-remote` for existence and default branch, blobless clone plus `git ls-tree -r HEAD` for the licence path, `raw.githubusercontent.com` to read the payload — rather than carrying p339's reading forward. **Every one of the 17 licence cells is correct.** 🔴 **One row was in the wrong section:** `OpenOLAT/OpenOLAT`, Apache-2.0, had been tabled under the **ECL-2.0** heading, so this shelf's own prose counted **5 permissive / 3 ECL** where the payloads say **6 / 2**. Both are fixed below.

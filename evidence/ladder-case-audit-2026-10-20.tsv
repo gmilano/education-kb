@@ -31,9 +31,9 @@ compose/code/lib/license_family.sh	copying	COMMENT-ONLY	no-upper-ext	STANDING	CO
 compose/code/lib/license_family.sh	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENSE LICENSE.md LICENSE.txt
 compose/code/lib/license_family.sh	readme	COMMENT-ONLY	no-upper-ext	STANDING	README README.md
 compose/code/lib/payload_measure.sh	readme	COMMENT-ONLY	no-upper-ext	STANDING	README.md
-compose/code/lib/probe_payload.sh	copying	CASE-CLOSED	UPPER-EXT	STANDING	COPYING COPYING.TXT COPYING.txt
-compose/code/lib/probe_payload.sh	licence	CASE-UNVARIED	no-upper-ext	STANDING	LICENCE LICENSE LICENSE.md LICENSE.txt
-compose/code/lib/probe_payload.sh	readme	FOLD-ON-PATH	no-upper-ext	STANDING	README README.md
+compose/code/lib/probe_payload.sh	copying	GENERATED-CASE-VARIED	UPPER-EXT	STANDING	COPYING COPYING.TXT COPYING.txt
+compose/code/lib/probe_payload.sh	licence	GENERATED-CASE-VARIED	no-upper-ext	STANDING	LICENCE LICENSE LICENSE.md LICENSE.txt
+compose/code/lib/probe_payload.sh	readme	GENERATED-CASE-VARIED	no-upper-ext	STANDING	README README.md
 compose/code/licence-grant-gate/grant_gate.py	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.md COPYING.txt
 compose/code/licence-grant-gate/grant_gate.py	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.TXT LICENSE.md LICENSE.rst LICENSE.txt License.md License.txt license
 compose/code/licence-grant-gate/grant_gate.py	readme	CASE-UNVARIED	no-upper-ext	HISTORICAL	README README.md README.rst README.txt
@@ -519,12 +519,14 @@ compose/code/p329-grant-link-resolution/grant_link.py	licence	COMMENT-ONLY	no-up
 compose/code/p329-grant-link-resolution/grant_link.py	notice	TREE-ENUMERATED	no-upper-ext	STANDING	NOTICE notice
 compose/code/p329-grant-link-resolution/grant_link.py	readme	COMMENT-ONLY	no-upper-ext	STANDING	README
 compose/code/p331-two-channel-liveness/two_channel.py	readme	COMMENT-ONLY	no-upper-ext	HISTORICAL	README
-compose/code/p332-delivery-audit/delivery_audit.py	copying	SINGLE-SPELLING	no-upper-ext	STANDING	copying
-compose/code/p332-delivery-audit/delivery_audit.py	licence	CASE-UNVARIED	no-upper-ext	STANDING	LICENSE licence licence.md licence.txt license license.md license.txt
-compose/code/p332-delivery-audit/delivery_audit.py	notice	SINGLE-SPELLING	no-upper-ext	STANDING	notice
-compose/code/p332-delivery-audit/delivery_audit.py	readme	SINGLE-SPELLING	no-upper-ext	STANDING	readme.md
+compose/code/p332-delivery-audit/delivery_audit.py	copying	FOLD-ON-PATH	no-upper-ext	STANDING	copying
+compose/code/p332-delivery-audit/delivery_audit.py	licence	FOLD-ON-PATH	UPPER-EXT	STANDING	LICENSE LICENSE.TXT licence licence.md licence.txt license license.md license.txt
+compose/code/p332-delivery-audit/delivery_audit.py	notice	FOLD-ON-PATH	no-upper-ext	STANDING	notice
+compose/code/p332-delivery-audit/delivery_audit.py	readme	FOLD-ON-PATH	no-upper-ext	STANDING	readme.md
 compose/code/p332-figure-layer/measure.py	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	license
 compose/code/p332-figure-layer/remeasure_family.sh	licence	SINGLE-SPELLING	no-upper-ext	HISTORICAL	LICENSE
+compose/code/p341-bespoke-instrument-census/bespoke_census.py	licence	FOLD-ON-PATH	no-upper-ext	STANDING	LICENSE licence license
+compose/code/p341-bespoke-instrument-census/probe.sh	readme	SINGLE-SPELLING	no-upper-ext	STANDING	README
 compose/code/p342-license-claim-vs-file/sweep_p340.sh	copying	CASE-UNVARIED	no-upper-ext	HISTORICAL	COPYING COPYING.txt
 compose/code/p342-license-claim-vs-file/sweep_p340.sh	licence	CASE-CLOSED	UPPER-EXT	HISTORICAL	LICENCE LICENCE.md LICENCE.txt LICENSE LICENSE.TXT LICENSE.md LICENSE.txt
 compose/code/p342-license-claim-vs-file/sweep_p340.sh	readme	SINGLE-SPELLING	no-upper-ext	HISTORICAL	README.md

@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 341 · 2026-10-20 — two trends, both measured on a 208-payload first-hand census, and both about a licence review that answers in English
+
+### 🔴 T31 — NEW: in this vertical, licence legibility is language-dependent, and the region where that bites is LATAM
+
+**Measured, with a denominator.** All 208 licence payloads on the four live decision shelves were read first-hand and typed at `p341` ([`p341-bespoke-instrument-census`](../evidence/p341-bespoke-instrument-census.2026-10-20-p341.tsv)). **3 of 208 (1.4%) are not in English. All three are Portuguese. All three are Brazilian.** And all three return **no family at all** from `pass257.family_of`.
+
+🔴 **The sharpest instance is a row these shelves carried unresolved since p319.** `portabilis/i-diario` — the teacher portal of the dominant Brazilian municipal school stack, 15 834 commits — carried *"a LICENSE file exists but the page does not name the licence."* Its payload is **35 326 B** and opens **`LICENÇA PÚBLICA GERAL AFFERO GNU · Versão 3, 19 de novembro de 2007`**. **It is `AGPL-3.0`** ([`p341-nonenglish-payload-blindness`](../evidence/p341-nonenglish-payload-blindness.2026-10-20-p341.tsv)).
+
+🔵 **Mechanism, and it is not carelessness.** The restriction vocabulary in this base covers **eleven languages** (`de en es fr id it ja ko pt vi zh`) — `p240`/`p241` paid for that — and `language_of` types this payload `pt` with `vocabulary_covers_language=True`. **The FAMILY vocabulary beside it is English-only.** So the multilingual work reached one axis and never reached the one next to it. 🔴 **And the verdict the pair produces, `UNCLASSIFIED:no-family-no-restriction`, fails UNSAFE** — it reads as *nothing found* on the strongest copyleft in the corpus, because AGPL restricts by **reciprocity**, not by commercial field-of-use, so the restriction axis is silent by construction. The quiet is a property of the instrument, not of the licence.
+
+🟢 **Why this is a trend and not a bug report.** Any generic SPDX-era licence scanner a studio brings to a LATAM engagement is built on the same assumption, and the failure is silent and in the permissive direction. 🔴 **It also revises what this base has said about LATAM five passes running.** p340's conclusion — *"LATAM institutions run these platforms and connectors to them are not being published"* — holds for the **connector** tier. For the **platform** tier the constraint measured here is the opposite shape: **the supply exists, it is large and long-lived, and this base could not read its licences.** An informed gap, not an absent one.
+
+🟢 **Actionable form:** on a Brazilian public-sector engagement, read the payload, not the sidebar, and expect the two halves of the stack to differ — `i-educar` (SIS core) is **GPL-2.0**, `i-diario` (teacher-facing portal) is **AGPL-3.0**, and §13 attaches to the half that is actually served over a network, which is the half an agent attaches to.
+
+🟡 **Bound: 3 payloads of 208, one language. Falsifier, cheap and named:** probe the Spanish-language and Chinese-language platform tiers — if their payloads resolve on the family axis, the defect is narrower than "non-English" and is specifically Portuguese.
+
+### 🔴 T32 — NEW: the one licence family named for this industry is invisible to generic SPDX tooling
+
+`ECL-2.0` — the **Educational Community License**, an Apache-2.0 derivative with a patent carve-out written for universities — is the grant Sakai and the Apereo stack ship under, and it carries **17 cells** across `repos/foundations.md` and `verticals/solutions.md`.
+
+🔴 **Measured at `p341`: `pass257.family_of` returns `None` for `opencast/opencast` (11 340 B) and `sakaiproject/sakai` (11 120 B).** Its title vocabulary holds `eclipse public license → EPL` and **no rung for the Educational Community License** — two licences whose names differ by one word, one of which is in the table and one of which is this industry's own. `lib/license_family.sh` returns **`ECL-2.0`** correctly for both.
+
+🟢 **These shelves are right, and they are right for a reason worth stating: `probe_repo` fills its family column from the classifier that knows the family.** `p278`'s channel-conflict class, between two classifiers inside one `lib`.
+
+🔵 **Why a studio should care beyond this repo.** A licence-review pass over an education estate that types `ECL-2.0` as *unknown* will either stall the row or clear it by omission, and ECL-2.0 is **permissive** — so the likely outcome is a usable, university-grade platform declined or escalated for no reason. 🟡 **Bound: 2 payloads, one family, one classifier. This is a vocabulary gap with a named fix, not a measured industry-wide claim** — what is measured industry-wide is that the family is in heavy use in this vertical.
+
 ## Pass 339 · 2026-10-20 — eight trends, each tied to a dated fact measured this pass
 
 ### T1 — The regulatory clock in education just slipped 16 months, and nothing else slipped with it

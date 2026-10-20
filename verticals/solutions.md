@@ -4,6 +4,23 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 341 · 2026-10-20 — one platform row resolved after 22 passes, and the two halves of the Brazilian municipal stack turn out to carry different copyleft
+
+🟢 **`i-Diário`'s licence cell is filled in below.** It has read *"licence not shown on the repository page — verify"* since **p319**, with the note *"a LICENSE file exists but the page does not name the licence — read the file before any use."* 🟢 **p341 read the file:** branch `1.6`, `LICENSE`, **35 326 B**, opening **`LICENÇA PÚBLICA GERAL AFFERO GNU · Versão 3, 19 de novembro de 2007`**, eight lines naming Affero, FSF copyright on the licence text. **It is `AGPL-3.0`.**
+
+🔴 **Why it took 22 passes, and it is not neglect.** Both of this base's shared family classifiers return nothing on that payload — `pass257.family_of` → `None`, `lib/license_family.sh` → `UNCLASSIFIED` — because **their family vocabulary is English-only**, while the restriction vocabulary beside them covers eleven languages. 🔴 **The verdict they emit, `UNCLASSIFIED:no-family-no-restriction`, fails UNSAFE:** it reads as *nothing found* on the strongest copyleft in this corpus, because AGPL restricts by **reciprocity** rather than by commercial field-of-use, so the restriction axis is silent by construction. Population: **3 of 208 payloads, all Portuguese, all Brazilian** (`intel/trends.md` **T31**, [`p341-nonenglish-payload-blindness`](../evidence/p341-nonenglish-payload-blindness.2026-10-20-p341.tsv)).
+
+🔴 **The consequence is a scoping decision, not a bookkeeping fix.** The Brazilian municipal stack's two halves now carry **different** copyleft:
+
+| component | role | grant | network reach |
+|---|---|---|---|
+| `portabilis/i-educar` | SIS core — enrolment, records, 34 948 commits | **GPL-2.0** (18 092 B, English) | none |
+| `portabilis/i-diario` | **teacher-facing portal** — daily register, grades, attendance, 15 834 commits | **AGPL-3.0** (35 326 B, Portuguese) | **§13 applies** |
+
+🔵 **The half with network copyleft is the teacher-FACING half — which is the half an agent attaches to.** Any Brazilian public-sector engagement must price §13 before choosing its attachment point, and no shelf in this KB could have told it so before this pass. **Pattern `P8`** in `compose/patterns.md` is the recipe this produced.
+
+🟢 **Everything else on this shelf re-read and agreed.** The 208-payload census covered every address on this file; `ECL-2.0` stands on `sakaiproject/sakai` and `opencast/opencast` (both correct, and correct *because* `probe_repo` uses the classifier that knows the family — `intel/trends.md` **T32**), and `canyongbs/advisingapp` stands as **Elastic Licence 2.0, source-available, not OSI**. **No other cell on this shelf changed.**
+
 ## Pass 340 · 2026-10-20 — the integration seam of every Tier-1 platform, measured rather than asserted
 
 🟢 **p339's thesis on this shelf was that the integration seam decides whether an engagement is a fork or a plug-in. p340 measured that seam across the whole platform list** — **93 distinct connector repositories probed first-hand**, every grant read from the file and every absence established from a whole tree ([`p340-connector-licence-census`](../evidence/p340-connector-licence-census.2026-10-20-p340.tsv)).
@@ -742,7 +759,7 @@ source** at the popular end of this market. Detail at the end of this file.
 | Richie | https://github.com/openfun/richie | MIT | 316 | p315 | Education-portal CMS (France Université Numérique) | MIT front end over an AGPL Open edX back end — the licence-safe catalogue/portal layer |
 | freelingo | https://github.com/artcc/freelingo | AGPL-3.0 | 188 | p316 | Self-hosted AI language-learning platform: CEFR study plans, AI tutor, voice, flashcards, spaced repetition; 1,168 commits | A complete AI-native vertical to study or fork — AGPL, so fork consciously |
 | H5P | https://github.com/h5p/h5p-php-library | GPL-3.0 | 151 | p315 | Interactive content types embedded in Moodle/Open edX/Canvas | Generate H5P content JSON with an agent; the renderer stays untouched, so GPL stays contained |
-| i-Diário | https://github.com/portabilis/i-diario | **licence not shown on the repository page — verify** | 117 | p319 | Teacher portal integrated with i-Educar ("Portal do professor integrado com o software livre i-Educar"); **15,834 commits** on the 1.6 branch, 62 forks; Ruby on Rails with Node/Yarn, RSpec, Playwright, Docker; tagged `software-publico` | No AI features described. **A LICENSE file exists but the page does not name the licence — read the file before any use.** The teacher-facing half of the Brazilian stack, and therefore where a teacher-facing agent would attach |
+| i-Diário | https://github.com/portabilis/i-diario | **AGPL-3.0** (read first-hand at p341) | 117 | p341 | Teacher portal integrated with i-Educar ("Portal do professor integrado com o software livre i-Educar"); **15,834 commits** on the 1.6 branch, 62 forks; Ruby on Rails with Node/Yarn, RSpec, Playwright, Docker; tagged `software-publico` | No AI features described. 🟢 **p341 read the file: `1.6/LICENSE`, 35 326 B, `LICENÇA PÚBLICA GERAL AFFERO GNU · Versão 3` — `AGPL-3.0`.** The row sat unresolved since p319 because both shared family classifiers are English-only and returned `UNCLASSIFIED` (T31). 🔴 **Network copyleft, and this is the teacher-FACING half of the Brazilian stack — the half served over a network — so §13 attaches exactly where an agent would. `i-educar` beside it is `GPL-2.0`: the two halves differ.** |
 | mentingo | https://github.com/Selleo/mentingo | MIT | 96 | p316 | Open-source AI-native LMS with an AI mentor and role-play, self-hostable; 1,348 commits | The first MIT AI-native LMS in this KB — small, but licence-clean |
 | Sunbird | https://github.com/Sunbird-Ed/SunbirdEd-portal | MIT | 41 | p315 | Portal of India's national digital-education stack | The base for an APAC public-sector engagement; see the caveat in `repos/foundations.md` |
 | ipti/br.tag | https://github.com/ipti/br.tag | **conflicting: README says BSD-3-Clause, sidebar links GPL-2.0 — unresolved** | 20 | p319 | TAG (Tecnologia de Apoio à Gestão), free school-management software built as a social technology for basic education and **especially rural schools**, with **data sync for schools without internet**; 3,959 commits; PHP/Yii; IPTI (Instituto de Pesquisas em Tecnologia e Inovação) with the Prefeitura Municipal de Santa Luzia do Itanhy/SE | No AI features. **Two licences claimed in one repository — resolve before use.** The offline-sync design is directly relevant to pattern P5, and it is Brazilian rather than imported |
@@ -829,7 +846,7 @@ thing."* **Pass 319 found the platforms.** Three of them, all Brazilian, all sub
 | System | Commits | What it is | Licence |
 |---|---|---|---|
 | `portabilis/i-educar` | **34,948** | School management: enrolment, records, staff, reporting, an Educacenso module for the national school census | GPL-2.0 |
-| `portabilis/i-diario` | **15,834** | The teacher portal that integrates with i-Educar — the daily register, grades, attendance | **not named on the page; read the file** |
+| `portabilis/i-diario` | **15,834** | The teacher portal that integrates with i-Educar — the daily register, grades, attendance | **AGPL-3.0** (p341, Portuguese payload) |
 | `ipti/br.tag` | **3,959** | "TAG", school management as a social technology for basic and **rural** education, with **data sync for schools without internet** | **conflicting — README BSD-3-Clause, sidebar GPL-2.0** |
 
 **Provenance is the part that matters commercially.** i-Educar was originally developed by the

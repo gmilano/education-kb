@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 341 · 2026-10-20 — the demand legs are saturated for the seventh consecutive measurement, and the regional news is again supply-side: the LATAM platform tier was never missing, it was unreadable
+
+### The four prescribed regional demand legs, recorded leg by leg rather than as a silence
+
+🟡 **Seventh consecutive measurement of saturation.** All four legs re-run verbatim this pass (`AI education {region} 2026 adoption regulation players`). **Every fact returned is already held on this shelf**, and the four legs are recorded individually because an aggregate "nothing new" is indistinguishable from not having looked:
+
+| leg | what it returned | disposition |
+|---|---|---|
+| North America | $951M (2024) → $2.3B (2029) at 15.9% CAGR; 86% student use across 16 countries; 10% of institutions with formal AI guidance; 71% of US teachers untrained; federal regulation absent, Colorado and Texas acting at state level | 🟡 **all held** — the governance-gap inversion is already `intel/trends.md` T-p338 and the state-level patchwork is on the carried shelf |
+| EMEA | returned **no education-specific material at all** — enterprise AI adoption and EU AI Act commentary only | 🔴 **informed zero.** The leg is answerable only at country/ministry granularity; the AI Act dates this shelf carries are already primary-sourced and firmer than anything the leg offered |
+| APAC | returned **no education-specific material at all** — enterprise AI, data-sovereignty and Singapore financial-sector consultations | 🔴 **informed zero.** Same shape as EMEA: the regional query resolves to enterprise IT, not education |
+| LATAM | UNESCO IESALC/UNU-IAS working paper (200 HEIs, 19 countries); Baker McKenzie on fragmented regulation; CENIA/ECLAC on public AI investment ~6× below the global average; Ednova (Chile) | 🟡 **all four already held** — IESALC, UNU-IAS, CENIA, ECLAC and Ednova each already appear on these shelves |
+
+🔵 **The conclusion this base has drawn three times and never enforced, stated once more with the cost attached:** two of the four legs now return *zero education content*, not merely zero *new* education content. **That is a property of the query, not of the regions** — `p329` proved the same thing by deleting one word from a query, and `p324` before it. 🔴 **Nothing in this repository stops the next pass re-buying these four legs, and this is the seventh time that sentence has been written.**
+
+### 🟢 What is new and regional this pass: a platform tier that was present all along and could not be read
+
+The regional movement this pass is **supply-side and LATAM**, and it inverts the shape of the gap this base has declared five passes running (`intel/trends.md` **T31**).
+
+### Opportunities by region
+
+#### North America
+
+- **Unchanged this pass, and re-verified rather than restated.** The Canvas seam remains the region's dominant integration surface at **100% permissive** across the probed lanes, and `skhdemo/uoft-quercus-mcp` (**MIT**) remains the worked Canadian precedent.
+- 🟢 **New, from the 208-payload census:** the **build-on tier's licence cells are now confirmed correct row by row**, including the four US-origin BSD-3-Clause rows (`jupyter/nbgrader`, `ucbds-infra/otter-grader`, `freecodecamp/curriculum-helpers`, `jupyterhub/jupyterhub`). 🟡 Four of them trip a conservative scanner rule on their own boilerplate — see the carried note on `p341-bsd-boilerplate-cost`; **they are permissive and adoptable, and a studio's own scanner may say otherwise.**
+- 🔴 **The constraint remains grant ABSENCE, not copyleft**, unchanged from p340.
+
+#### EMEA
+
+- **The demand leg returned nothing education-specific; the compliance runway is unchanged and remains the clearest "why now" on this shelf** — Annex III education duties at **2027-12-02**, Article 50 transparency live since **2026-08-02**, Article 4 literacy in force.
+- 🟢 **`pablopc05/mcp-usc` (MIT, Universidade de Santiago de Compostela) remains the European Moodle precedent and the fork candidate for any Spanish-language tenancy.**
+- 🟡 **New and relevant to a European licence review:** `ECL-2.0` — the Apache-derived **Educational Community License** behind Sakai and the Apereo stack, heavily used by European universities — **is invisible to generic SPDX-style family detection** (`intel/trends.md` T32). It is **permissive**; a review that types it *unknown* will stall or wrongly escalate a usable platform.
+
+#### APAC
+
+- **The demand leg returned nothing education-specific.** The supply picture is unchanged from p340: `psychquant/che-ntucool-mcp` (NTU COOL) and `sonaiengine/ku-portal-mcp` (Korea University KUPID), both **MIT**, both institution-placed.
+- 🟢 **The Article 14-shaped control still ships as MIT source** — `che-ntucool-mcp` gates grade and announcement writes behind explicit human confirmation, which is what both Vietnam's high-risk classification and Korea's Basic Act ask for.
+- 🟡 **Open falsifier that lands here:** T31's defect is measured only on Portuguese. **Probing the Chinese- and Korean-language platform tiers is the cheap test** of whether this is a non-English problem or a Portuguese one.
+
+#### LATAM
+
+- 🔴 **The fifth-consecutive connector gap STANDS and is not revised.** p340's probes hold: `idavi/usp-mcp` does not exist; `DaviPac/Classroom-mcp` has no licence path and two non-human commits. **Connectors to LATAM institutions are not being published.**
+- 🟢 **But the PLATFORM tier is a different and better story, and this pass changed it.** `portabilis/i-diario` — the teacher portal of the dominant Brazilian municipal stack, **15 834 commits** — carried *"licence not shown; read the file"* on these shelves since **p319**. **It is `AGPL-3.0`**, read first-hand this pass from a **35 326 B** Portuguese payload (`LICENÇA PÚBLICA GERAL AFFERO GNU`). 🔵 **The row was not neglected: it was unreadable, because both of this base's family classifiers answer only in English** (`intel/trends.md` T31).
+- 🔵 **So the informed form of the LATAM gap now has two halves that point in opposite directions, and conflating them has cost this base five passes:** on the **connector** tier the supply genuinely is not published → **build, by forking `mcp-usc`**. On the **platform** tier the supply is large, long-lived and public → **adopt, but read the payload yourself**.
+- 🔴 **Scoping consequence, concrete:** `i-educar` (SIS core) is **GPL-2.0** and `i-diario` (teacher-facing portal) is **AGPL-3.0**. **§13's network reach attaches to the teacher-facing half — which is the half an agent attaches to.** Any Brazilian municipal engagement must price that before it picks an attachment point, and no shelf in this KB could have told it so before this pass.
+- 🟡 **The demand side remains the strongest-evidenced on this shelf and is unchanged** (IESALC: 200 institutions, 19 countries; teaching 73.5% against administration 34.1% — the back office is still the widest whitespace here).
+
+#### Global
+
+- 🟢 **The licence cells on the four live decision shelves are now measured, not asserted: 208 payloads read first-hand, 181 stock texts, 16 carrying an instrument a human must read — and all 16 already labelled correctly.** A census that corrects no cell is worth its denominator and nothing more, which is why it is stated that way.
+- 🔴 **The two global cautions from p340 both stand and neither was softened:** **23 of 93 connectors carry no licence at all**, and `AStheTECH/mewcp-google-classroom`'s bespoke "community licence" forbids commercial use, SaaS and white-labelling while passing every naive check. 🔴 **p341 found a SECOND instance of that exact shape** — `caviraoss/pagelm`, the **"PageLM Community License"**, whose body recites MIT word for word and then restricts commercial use and SaaS. **These shelves already label it correctly; a generic scanner reports it MIT.**
+- 🟡 **The durable rule, now with two dated carriers:** in this vertical a "Community License" is a signal to read the file, not a permissive grant. `agents/top.md`'s build-on tier is the only place a grant has been read from the payload.
+
 ## Pass 340 · 2026-10-20 — the four regional demand legs returned zero new facts for the sixth consecutive measurement, and the regional intelligence that DID move this pass is supply-side
 
 🟢 **The four prescribed regional legs were run verbatim, per region, and every fact they returned is already held on this shelf.** Reported leg by leg, because an unnamed saturation is indistinguishable from an unrun query:
@@ -206,6 +259,7 @@ The region with the most initiative density relative to spend, and the one where
 - 🟢 **Administration at 34.1% against teaching at 73.5% is the clearest whitespace on this shelf**: the back office is barely touched while the classroom is saturated. **Enrolment, retention prediction, financial aid and SIS workflow** — and `rosariosis`/`openSIS-Classic` are the open SIS platforms, both GPL-2.0, both with the boundary pattern already written in `verticals/solutions.md`.
 - 🟢 **Real local supply, placed on the commit channel, not inferred:** `SidneyBissoli/uis-mcp-server` (**MIT**, 1 088 B — UNESCO education statistics over MCP) and `Cvmcosta/ltijs` (Brazil, `-0300` on 513 of 575 commits). 🔵 **Two unrelated maintainers, two instruments, one region — a measurement with a denominator, not an anecdote.**
 - 🟡 **`digitaleducationcouncil.com` could not be reached from this environment** (`ENOTFOUND`). The figures above are **attributed to the survey, not asserted by this base**, and the primary PDF is the first thing a future pass should fetch from a network that can reach it.
+- 🔴 **Added at p341, and it revises how this subsection's "gap" should be read:** the regional **platform** supply was never absent, it was **unreadable** — `portabilis/i-diario` sat on these shelves for 22 passes as *"licence not shown"* because both shared family classifiers are English-only, and its Portuguese payload is **`AGPL-3.0`** (`intel/trends.md` **T31**). **Read the payload on a LATAM engagement; do not trust the sidebar or a scanner.**
 
 ### Global
 

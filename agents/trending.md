@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 341 — the prescribed legs fail for the twelfth consecutive pass, and the hour bought a census instead: every licence payload on the live shelves read first-hand, and the one row this base could not resolve turned out to be written in Portuguese
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**Evidence:** [`p341-bespoke-instrument-census`](../evidence/p341-bespoke-instrument-census.2026-10-20-p341.tsv) · [`p341-payload-locate`](../evidence/p341-payload-locate.2026-10-20-p341.tsv) · [`p341-nonenglish-payload-blindness`](../evidence/p341-nonenglish-payload-blindness.2026-10-20-p341.tsv) · [`p341-bsd-boilerplate-cost`](../evidence/p341-bsd-boilerplate-cost.2026-10-20-p341.tsv).
+
+**Inherited gate state, measured on p340's HEAD before this pass changed a byte** — reported first because p333 made that mandatory. 🟢 `make hooks`: **23/23 gates green, exit 0.** 🟢 `make gate-offline`: green. 🟢 `make recount`: **MATCH on all five registered claims, STALE=0 NO-ANCHOR=0.** **Second consecutive clean inheritance.** Published state at the end: 🟢 **24/24 green, exit 0**, the new gate being `gate-bespoke-title`.
+
+**The four prescribed global supply legs, run verbatim:**
+
+| leg | returned | new to this corpus |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, CrewAI, AutoGen, LangGraph, Aider, Cline | **0** — `ms-ai-agents` and `crewai` are pinned *fixtures* in this base's own licence suites |
+| `github trending education AI 2026` | `rohitg00/ai-engineering-from-scratch`, AI Engineering Hub, D2L, Karpathy's course | **0** — general AI-learning content, not education-vertical software |
+| `open source platform education ERP CRM MIT Apache` | OpenEduCat, ERPNext, Twenty (BSL-1.1) | **0** — all held; OpenEduCat's `LGPL-3.0` was corrected at p336 |
+| `AI education industry trends 2026` | market-size ranges, 92% student usage, AI tutors mainstreaming | **0** — and the figures disagree between firms by a factor of two, which this shelf already records as unresolvable to one number |
+
+🔴 **Twelfth consecutive zero. The eighth time a pass has written that sentence without anything in this repository preventing the ninth.**
+
+🟢 **So the hour went to the question `p340` left written down as unmeasured** — *"how many `LICENSE*` payloads on these shelves are bespoke instruments rather than stock texts?"*
+
+### 🟢 The census: 208 payloads, read first-hand, typed by title
+
+Population: every GitHub address on the four live decision shelves (`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md`) — **239 raw, 237 after lower-casing, 208 with a payload located.**
+
+| title form | n | share | what it means |
+|---|---|---|---|
+| `SPDX-TITLED` | 183 | 88.0 % | the title names a family in the shared vocabulary |
+| `UNTITLED` | 15 | 7.2 % | no instrument-naming title — `p314`'s class, and often a verbatim stock grant |
+| `BESPOKE-TITLED` | 10 | 4.8 % | the title calls itself a licence and names no family |
+
+**181 of 208 (87.0 %) stock · 16 of 208 (7.7 %) carrying an instrument a human must read.**
+
+🟢 **All 16 are already labelled correctly on these shelves.** 🔵 **The bespoke class was never an unmeasured exposure — it was measured row by row, in prose, by earlier passes, and never counted. This census corrects no published cell.** What it adds is the denominator, the named population, and a standing gate.
+
+🔴 **A SECOND instance of T29's shape, and it is the sharpest row in 208:** `caviraoss/pagelm`, **8 563 B**, titled **"PageLM Community License"** — its body recites MIT **word for word** and then restricts commercial use, SaaS and resale. **A family-column read returns `MIT`.** This shelf already reads *"CaviraOSS Community Licence" — NOT open source*, which is the system working; a generic scanner would have shipped it.
+
+### 🔴 The row that resolved, and why it took 22 passes
+
+`portabilis/i-diario` has carried *"a LICENSE file exists but the page does not name the licence — read the file before any use"* since **p319**. Read this pass: branch `1.6`, `LICENSE`, **35 326 B**, opening **`LICENÇA PÚBLICA GERAL AFFERO GNU · Versão 3, 19 de novembro de 2007`** — eight lines naming Affero. **`AGPL-3.0`.**
+
+🔴 **It was not neglected. It was unresolvable with this base's instruments:** `pass257.family_of` → `None`; `lib/license_family.sh` → `UNCLASSIFIED`. Both family vocabularies are **English-only**, while the restriction vocabulary beside them covers **eleven languages**. 🔴 **And the verdict they emit — `UNCLASSIFIED:no-family-no-restriction` — fails UNSAFE on the strongest copyleft in this corpus.** Population: **3 of 208, all Portuguese, all Brazilian.** Became **T31**.
+
+### 🟡 The finding this pass withdrew — recorded because the withdrawal IS the finding
+
+The census flags **4 of 6 BSD-family payloads** `needs-a-human` on a single hit: `all rights reserved`, the canonical second line of every stock BSD text. One (`open-tutorai/open-tutor-ai-ce`) is foundation-tier.
+
+🔴 **This pass wrote the one-line fix, applied it, and `pass257`'s own suite went 127/129.** The two failing controls pin that behaviour **deliberately**: *"A real BSD grant says that phrase benignly, so the verdict must name a human rather than either publishing it as permissive or burying the hit."* 🟢 **`p257` knew. It chose. The patch was reverted and `pass257` is byte-identical to `HEAD`.**
+
+🔵 **`p340` counted five instances of "a capability was present and nearly re-derived as news." This is one degree worse: a DECISION was present, documented in the suite that guards it, and nearly overturned as a defect. Running the suite caught it; reading it would not have.** 🟢 What survives is the price tag nobody had measured — **4 of 208 (1.9 %)** — plus a **positional** repair that preserves p257's safety property, clears all 4 with **0 false clears** in this corpus, and carries a named falsifier.
+
+### 🟢 Two incidental confirmations, neither prompted
+
+- **The case-varied ladder `p336`/`p337` bought paid out again:** **6 of 208** payloads sit at spellings an all-uppercase ladder would have missed — `license.txt` ×3, `license.md`, `LICENCE.md`, `docs/License.txt`.
+- **p340's slug-identity finding reproduced on a population it did not cover:** **2 of 239** shelf addresses collapsed under lower-casing.
+
+🔴 **And a new channel disagreement:** `pass257.TITLE_ANCHORS` holds `eclipse public license → EPL` and **no rung for the Educational Community License**, so `opencast/opencast` and `sakaiproject/sakai` return `family=None` where `lib/license_family.sh` returns `ECL-2.0`. **17 `ECL-2.0` cells on these shelves are right because `probe_repo` uses the classifier that knows the family.** Became **T32**.
+
 ## 2026-10-20 — Pass 340 — the prescribed legs fail for the eleventh consecutive pass, and the shelf grew anyway: T25's named falsifier was run to completion, and the MCP tier went from three platforms to six plus four regions
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

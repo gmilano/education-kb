@@ -20,6 +20,7 @@ PY ?= python3
 # That report used to be redirected to /dev/null, so the gate could prove a failure
 # and could not name it.  It is captured here and printed on failure instead.
 GATE_LOG ?= /tmp/education-kb-gate-enumeration.log
+BESPOKE_LOG ?= /tmp/education-kb-gate-bespoke-title.log
 TABLE_LOG ?= /tmp/education-kb-gate-tables.log
 IDENTITY_LOG ?= /tmp/education-kb-gate-identity.log
 LADDER_LOG ?= /tmp/education-kb-gate-ladder.log
@@ -35,7 +36,7 @@ PERMISSIVE_LOG ?= /tmp/education-kb-gate-permissive-arm.log
 TEMPLATE_LOG ?= /tmp/education-kb-gate-template-identity.log
 UNTITLED_LOG ?= /tmp/education-kb-gate-untitled-payload.log
 
-.PHONY: gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census
+.PHONY: gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -58,7 +59,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
              gate-slug-oracle gate-payload-pin gate-shelf-consistency \
              gate-affero-rung gate-family-coverage gate-permissive-arm \
-             gate-template-identity gate-untitled-payload gate-region-headings
+             gate-template-identity gate-untitled-payload gate-region-headings \
+             gate-bespoke-title
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -219,6 +221,18 @@ DATES_LOG ?= /tmp/education-kb-gate-dates.log
 gate-region-headings: ## p338 — ACTION ZP: p383's region-heading contract, WIRED.  The gate existed with a passing suite from p383 to p337 and was in no target, so `make hooks` never judged this file's region structure at all.
 	@cd compose/code/p383-region-heading-gate && { $(PY) test_check_headings.py > $(REGION_LOG) 2>&1 || { echo "🔴 p383-region-heading-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(REGION_LOG) ; false ; } ; } && echo "── p383-region-heading-gate (11 controls: MULTIPLE-BLOCKS, OUT-OF-VOCAB, MISSING-REGION, LATAM-ONLY, P541 no-input refusal)" && echo "   PASS" || exit 1
 	@$(PY) -I compose/code/p383-region-heading-gate/check_headings.py intel/market.md || exit 1
+
+# 🟢 p341 — ACTION T29: the bespoke-instrument census, WIRED.  `p340` recorded the
+# question as unmeasured; the answer is 10 of 208 BESPOKE-TITLED, 16 of 208 needing a
+# human, and every one already labelled correctly on the shelves.  The gate exists to
+# keep the two classes `p314` paid to separate — UNTITLED (a stock grant with no title)
+# and BESPOKE-TITLED (an instrument naming itself) — from fusing in a later pass, and to
+# pin that `p312`'s UNKNOWN-TEMPLATE must never be read as "bespoke".  No network.
+gate-bespoke-title: ## p341 — ACTION T29: a bespoke instrument is not a stock text, and UNKNOWN-TEMPLATE is not bespoke
+	@cd compose/code/p341-bespoke-instrument-census && { $(PY) -I test_bespoke_census.py > $(BESPOKE_LOG) 2>&1 || { echo "🔴 p341-bespoke-instrument-census FAILED — the suite's own report follows:" ; sed "s/^/   /" $(BESPOKE_LOG) ; false ; } ; } && echo "── p341-bespoke-instrument-census (34 controls: title-form totality, the UNTITLED/BESPOKE separation, the p312 non-detector, the title-shape repair)" && echo "   PASS" || exit 1
+
+bespoke-census: ## p341 — grade payload files offline: make bespoke-census PAYLOADS="a b"
+	@$(PY) -I compose/code/p341-bespoke-instrument-census/bespoke_census.py $(PAYLOADS)
 
 gate-dates: ## ACTION p279 — the KB may not ASSERT a date it has already refuted
 	@cd compose/code/p223-selfclaim-date-gate && { $(PY) -I gate.py --self-test > $(DATES_LOG) 2>&1 || { echo "🔴 p223-selfclaim-date-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(DATES_LOG) ; false ; } ; } && echo "── p223-selfclaim-date-gate (15 controls: ASSERTED / ATTRIBUTED / QUOTED / CORRECTED)" && echo "   PASS" || exit 1

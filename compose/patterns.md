@@ -4,9 +4,11 @@ region: Global
 updated: 2026-10-20
 ---
 
-## Pass 340 · 2026-10-20 — seven recipes, each named down to the slug, each with its licence posture stated and its regional trigger
+## Pass 341 · 2026-10-20 — eight recipes, each named down to the slug, each with its licence posture stated and its regional trigger
 
-🟢 **New at p340: P7, the institutional LMS seam** — the first recipe on this shelf whose components are *regionally placed*, built on the completed connector census. The six below are p339's and are unchanged.
+🟢 **New at p341: P8, the grant-legibility pass** — the recipe the 208-payload census turned into a deliverable, and the first on this shelf whose output is a decision record rather than a running system. 🔵 It exists because this pass found that a row can sit on a shelf for 22 passes reading *"licence not shown"* when the licence is plainly stated in a language the tooling does not read (`intel/trends.md` **T31**).
+
+🟢 **P7, the institutional LMS seam** — the first recipe whose components are *regionally placed*, built on p340's completed connector census. P1–P6 are p339's and are unchanged.
 
 Every repository named below was existence- and grant-verified first-hand this pass (`git ls-remote` + `raw.githubusercontent.com`; see `agents/top.md` for the channel table). **The licence posture line is not decoration** — six of eight Tier-1 platforms are GPL/AGPL, so each recipe states explicitly where the client's proprietary logic lives.
 
@@ -469,6 +471,31 @@ Moodle / Canvas / Open edX          ← NEVER FORKED. Reached only across the LT
 ---
 
 **Pass 332 · 2026-10-20.** **One new recipe, `P27`, and it is the first pattern in this file that puts a studio's own code INSIDE the content layer rather than beside it.** 🟢 **It exists because p332 measured something the H5P row on these shelves had been understating: the content types are MIT while the renderer is GPL-3.0, so the fork boundary is a tier lower than this file has been drawing it.**
+
+### P8 — The grant-legibility pass: read the payload yourself before you scope the attachment point (LATAM public sector first, then any non-English estate) — NEW at p341
+
+**Trigger:** an engagement over an estate whose repositories are **not** US/UK-origin — a Brazilian or Spanish-speaking municipal or ministry stack, a Japanese or Korean university platform — or any estate where a licence scanner has returned `unknown`, `no license found`, or a family that disagrees with the repository's own sidebar. 🔴 **Measured basis: of 208 payloads on these shelves, 3 are non-English and ALL THREE return no family from the shared scanner; one of them is `AGPL-3.0` and read as `no-family-no-restriction`.**
+
+**Why it is a pattern and not a checklist item.** A scanner's silence on a licence is indistinguishable from a permissive grant *in the direction that costs money*, and the two findings that justify this recipe are both silent failures: a **Portuguese AGPL-3.0** read as unclassified, and a **"Community License"** whose body recites MIT verbatim read as MIT.
+
+**Wiring:**
+1. **Enumerate the tree, not a path ladder.** `git clone --depth 1 --filter=blob:none --no-checkout` then `git ls-tree -r HEAD`. 🔴 One grant in 208 on these shelves lives at **`docs/License.txt`**, and a root-only ladder publishes that repository as ungranted — it has been wrongly refused twice in this base's history.
+2. **Resolve the default branch; never assume `main`.** `git ls-remote --symref`. 🔴 Measured here: `frappe/education`'s payload is on **`develop`**, `portabilis/i-diario`'s on **`1.6`**, `portabilis/i-educar`'s on **`2.12`**. A `curl` of `main/LICENSE` returns 404 on all three.
+3. **Vary the path by case.** 6 of 208 grants sit at `license.txt`, `license.md`, `LICENCE.md` or `docs/License.txt`. Reuse `lib/probe_payload.sh` — it generates the ladder; do not retype it.
+4. **Read the TITLE LINE as its own channel, separately from the body.** This is the step that catches the expensive class. `caviraoss/pagelm` → title **"PageLM Community License"**, body **MIT word for word**, plus commercial-use and SaaS restrictions. 🟢 `make bespoke-census PAYLOADS="..."` types each payload `SPDX-TITLED` / `BESPOKE-TITLED` / `UNTITLED` and flags the rows a human must read.
+5. **Do not treat a non-English payload as unlicensed.** Match the licence's own title in the local language — `LICENÇA PÚBLICA GERAL AFFERO GNU` is AGPL-3.0; `LICENCIA PÚBLICA GENERAL` is GPL. 🔴 This step has no instrument in this KB yet and is the open half of T31; do it by hand and record the reading.
+6. **Record the CHANNEL of the grant, not only its value** (`ACTION ZD`, p335). A family read from a 19-byte `License: GNU GPL V3` declaration is a *pointer*, not a grant text — right answer, weaker evidence — and a client's legal review will ask which it was.
+7. **Price the halves of a stack separately.** 🔴 The worked instance: `portabilis/i-educar` (SIS core) is **GPL-2.0** and `portabilis/i-diario` (teacher-facing portal) is **AGPL-3.0**. **§13's network reach attaches to the teacher-facing half — the half an agent attaches to.** Pick the attachment point *after* this step, not before.
+
+**Components (all read first-hand at p341):**
+- `lib/probe_payload.sh` + `lib/fetch_payload_to_file.sh` — the located-payload loop, byte-exact sizing, symref branch resolution
+- `compose/code/p341-bespoke-instrument-census` — the title-form classifier and `gate-bespoke-title` (34 offline controls)
+- `compose/code/pass257-restriction-scan` — the unscoped restriction vocabulary, 11 languages on the restriction axis
+- `compose/code/lib/license_family.sh` — the family classifier that **does** know `ECL-2.0` and `CC-BY-4.0`
+
+**Deliverable:** a per-repository row carrying *family · path · branch · bytes · title form · grant channel*, plus a named list of the rows a human read and what they concluded. 🟢 **On this corpus that list was 16 of 208 (7.7 %) — small enough to be read by a person in an afternoon, and that is the point of measuring it rather than escalating everything.**
+
+**Honest limits.** A payload answers the **copyright** question only; whether a system may be *called* lives in its Terms of Use and is invisible to every step above (`P26`). 🟡 And step 5 is manual: this KB has no multilingual family vocabulary, which is exactly the gap T31 names.
 
 ## P27 — A custom interactive content type, forked under MIT, generated by an agent, delivered through the client's existing copyleft LMS
 
@@ -1872,8 +1899,10 @@ machine-readable infrastructure **and publishes what it is worth.**
 - `bncc-dev/bncc-benchmark` (**MIT code / CC BY 4.0 items and results**, 9 ★, 82 commits) — the
   acceptance test
 - `HKUDS/LightRAG` (MIT) + `HKUDS/DeepTutor` (Apache-2.0) — retrieval and tutoring, as in P1
-- `portabilis/i-educar` (GPL-2.0, **34,948 commits**) and `portabilis/i-diario` (**licence not shown
-  — read the file**) — the records layer a Brazilian public client is already running
+- `portabilis/i-educar` (GPL-2.0, **34,948 commits**) and `portabilis/i-diario` (**AGPL-3.0**,
+  read first-hand at p341) — the records layer a Brazilian public client is already running.
+  🔴 **The two halves differ and it matters here:** `i-diario` is network copyleft and is the
+  teacher-FACING half, so §13 attaches to the surface this pattern attaches to
 - `dmitry-viskov/pylti1.3` (MIT) or `tsugiproject/tsugi` (Apache-2.0) — the boundary
 
 **Wiring**

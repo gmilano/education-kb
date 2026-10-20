@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 341 — the trending channel is blind to this vertical for the twelfth pass, and the repos it keeps recommending were re-read instead: 208 payloads, 6 of them at a path spelling an uppercase ladder cannot reach
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**Evidence:** [`p341-payload-locate`](../evidence/p341-payload-locate.2026-10-20-p341.tsv) (237 probe rows) · [`p341-bespoke-instrument-census`](../evidence/p341-bespoke-instrument-census.2026-10-20-p341.tsv) (208 graded rows).
+
+**Inherited gate state, before a byte changed:** 🟢 `make hooks` **23/23, exit 0** · `make gate-offline` green · `make recount` MATCH on all five claims. Published: 🟢 **24/24**.
+
+**The trending leg, run verbatim** (`github trending education AI 2026`): returned `rohitg00/ai-engineering-from-scratch` (#1 on GitHub Trending, 24 May 2026), AI Engineering Hub, D2L, Karpathy's course, and `MadsLorentzen/ai-job-search`. 🔴 **Zero education-vertical software. Twelfth consecutive pass.** 🔵 **The diagnosis is unchanged and still correct: trending ranks general AI-learning content, and this vertical's software does not trend — it is institutional, slow and often published to a package registry rather than to a repository front page** (`ACTION TJ`'s channel, p335).
+
+### 🟢 What the hour bought instead: the located-payload census
+
+Every GitHub address on the four live decision shelves was probed through `lib/probe_payload.sh` — **237 slugs, 208 payloads located, 26 with no payload, 2 dangling README links, 1 unresolved ref.**
+
+**Where the grants actually live** — and this is the part a roundup never records:
+
+| path | n |
+|---|---|
+| `LICENSE` | 183 |
+| `LICENSE.md` | 13 |
+| `LICENSE.txt` | 5 |
+| `license.txt` | 3 |
+| `license.md` | 1 |
+| `LICENCE.md` | 1 |
+| `docs/License.txt` | 1 |
+| `COPYING.txt` | 1 |
+
+🟢 **6 of 208 sit at a spelling an all-uppercase ladder cannot reach.** `p336` bought one rung of the case-varied ladder by hand after `kitschpatrol/yanki` was wrongly published as ungranted, and `p337` generalised it against a header that still carried the refuted "0 payouts in 98 repos" prior. **This pass is the independent confirmation, unprompted and on a different population: the rung keeps paying.**
+
+🔴 **And `docs/License.txt` is `p275`'s lesson still standing** — one grant in this population is not at the root at all, so a root-only ladder would publish it as ungranted. That row (`OS4ED/openSIS-Classic`, GPL-2.0) has already been wrongly refused twice in this base's history, at p311 and again in p339's first draft.
+
+### 🔴 The repos whose licences a roundup would get wrong
+
+| slug | bytes | what a family-column read returns | what the payload says |
+|---|---|---|---|
+| `caviraoss/pagelm` | 8 563 | **`MIT`** | **"PageLM Community License"** — MIT's body verbatim, then commercial-use, SaaS and resale restrictions |
+| `asthetech/mewcp-google-classroom` | 6 489 | nothing | **"AStheTECH Community License"** — revocable, non-commercial, forbids SaaS and white-labelling |
+| `portabilis/i-diario` | 35 326 | **`UNCLASSIFIED`** | **`AGPL-3.0`** — in Portuguese (`LICENÇA PÚBLICA GERAL AFFERO GNU`) |
+| `canyongbs/advisingapp` | 3 860 | nothing | **Elastic License 2.0** — source-available, not OSI |
+| `opencast/opencast` | 11 340 | nothing *(from `pass257`)* | **`ECL-2.0`** — permissive, and correctly read by `lib/license_family.sh` |
+| `sakaiproject/sakai` | 11 120 | nothing *(from `pass257`)* | **`ECL-2.0`** — permissive |
+| `frappe/education` | 19 | nothing | a **19-byte pointer** reading `License: GNU GPL V3` — a declaration, not a grant |
+
+🟢 **Every one of these is already labelled correctly on these shelves.** 🔵 **That is the result worth recording: the risk in this table is not to this KB, it is to anyone adopting these repos from a trending list or a scanner output.** `pagelm` in particular is MIT to every tool that reads the body and proprietary to anyone who reads the title.
+
+🟡 **`frappe/education`'s 19-byte payload is `p307`'s POINTER class with a new minimum.** The shelf cell `GPL-3.0` is right, but it rests on a **declaration**, not on a grant text — `p307` measured a 682-byte Apache pointer being published as a grant by the shelf gate, and **19 bytes is the smallest instance this base has seen.** 🟢 The probe already types it `GPL-3.0 (declaracion)` and refuses a holder for it under `P179`, so the shelf is right for the right reason.
+
+🟢 **And that one row needed BOTH of this base's hard-won probe repairs at once:** its grant is at **`license.txt` — lowercase** (the rung `p336`/`p337` bought) on branch **`develop` — not `main`** (the `ls-remote --symref` resolution `lib/probe_payload.sh`'s Trap 1 exists for). **A hand-rolled `curl` of `main/LICENSE` returns 404 and writes the row down as ungranted.** Two independent defects, one row, both already closed — which is the clearest argument in this file for sourcing the shared loop instead of rewriting it.
+
 ## 2026-10-20 — Pass 340 — the trending channel is blind to this vertical for the eleventh pass, and a quarter of the connector layer it keeps recommending has no licence at all
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
