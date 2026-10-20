@@ -6,6 +6,31 @@ updated: 2026-10-20
 
 # Market intelligence — education
 
+**Pass 329 · 2026-10-20 (second pass of this date).** 🟢 **The gap this file declared for four consecutive passes is
+closed: it can now place a ROUTE TO MARKET in every region, and it was closed by deleting one word from a query.**
+🔴 **The four-pass finding was *"this file can place regulation by region and cannot place vendors by region"* (line 1447 below),
+and p328 prescribed the fix: drop `players` and query the procurement surface instead.** 🔵 **The deeper reason it had failed is
+that the vendor map was the WRONG OBJECT.** Four passes asked *who are the players in region X* and got market-research SEO and
+law-firm explainers, because that is what the word *players* ranks. **A studio does not sell to a region; it sells THROUGH A VEHICLE** —
+and unlike a vendor list, a procurement vehicle is nameable, dated, and has an eligibility rule you can read. 🟢 **Four vehicles
+or mechanisms are now named that this file had never recorded: GEANT OCRE (EMEA), cooperative purchasing via Sourcewell / OMNIA
+Partners / NASPO ValuePoint (North America), ChileCompra Directive 44/2026 (LATAM), and provincial-level buying under China's AI Plus
+Education plan (APAC).** They are placed under *Opportunities by region* below, one `###` block per region.
+
+🔴 **AND THE WHOLE LAYER CARRIES ONE CAVEAT, STATED ONCE HERE AND REPEATED IN EVERY BLOCK: IT IS SEARCH-CHANNEL-ONLY.**
+**Sixteen non-GitHub hosts were tested this pass and all sixteen answered `403` at CONNECT or `000`** — `find-tender.service.gov.uk`,
+`geant.org`, `ocre-project.eu`, `nwupc.ac.uk`, `crescentpurchasing.co.uk`, `irishtimes.com`, `aasa.org`, `stotles.com`,
+`marketbrief.edweek.org`, `govtech.com`, `791coop.org`, `createyourrfp.com`, `govspend.com`, `oecd.ai`, `unu.edu`, `cenia.cl`.
+**So no notice number, contract value, date or eligibility rule in this pass is verified at source.** 🔵 **Every notice ID is
+recorded precisely so that confirming it costs one lookup on the buyer's own portal rather than one search** — which is the correct
+form for a lead, and this layer is leads, not facts. 🟡 **Two regions also carry an INFORMED GAP rather than silence: no
+2026 state-education-agency AI-tutoring RFP in North America, and no procurement vehicle of any kind in APAC.**
+
+🔴 **One market-size note, because the prescribed trends query produced nothing usable:** three research firms put the 2025 AI-in-education
+base at **$6.4B**, **$8.3B** and **$7.52B**, and 2034 at **$79.6B** — mutually inconsistent by roughly a factor of eight.
+**No figure from that query is carried into this file.** The maturity reading is the only directional item worth keeping and it matches
+what this file already says: most institutions remain in pilot mode.
+
 **Pass 327 · 2026-10-19 (thirteenth pass of this date).** 🔴 **No market-size figure moved, no
 regulation was added, and all four prescribed regional queries returned material this file already
 holds.** That is the pass's market finding and it is recorded per region under *Declared regional
@@ -708,6 +733,29 @@ anything about my institution?" that is not a bespoke integration — and becaus
 > should be sold the evidence chain instead.
 
 ### North America
+
+### 🟢 The procurement route, named for the first time: cooperative purchasing — win once, become buyable by every member district (added p329)
+
+🔴 **Read the confidence line before quoting any of this: every source below is SEARCH-CHANNEL-ONLY.** Not one procurement host is
+reachable from this session — `marketbrief.edweek.org`, `govtech.com`, `791coop.org`, `createyourrfp.com`, `govspend.com` and
+`aasa.org` all answer **403 at CONNECT**. **No notice number, value or date below is verified at source.** Each is recorded precisely
+enough that confirming it is one lookup on the buyer's own portal, not one search.
+
+🟢 **The mechanism, and it is the finding this region was missing.** A **purchasing cooperative** runs **one** competitive
+solicitation, awards a contract, and its member agencies then buy off that contract **without each running their own RFP**.
+🔵 **This inverts the sales motion: you do not win 13,000 districts, you win one cooperative solicitation and become buyable by all of
+its members.** **Named vehicles: `Sourcewell`, `OMNIA Partners`, `NASPO ValuePoint`** — none of which this file had ever recorded.
+
+| vehicle | detail | why it matters |
+|---|---|---|
+| **791 Purchasing Cooperative** | **RFP `791202603005`, "AI Services and Solutions for Government"**, led by the Central Texas Council of Governments; scope includes school districts | A live, named, **AI-scoped** cooperative solicitation that reaches districts |
+| **California Ed Tech Joint Powers Authority** | **RFP No. 25/26-01** for AI platforms. 🔴 **Dated 2025-07-28 — 2025, not 2026.** Builds a **portfolio of pre-vetted vendors rather than picking one winner**; scope includes tutoring | 🟢 **The model to design a bid around: not winner-take-all, so a specialist studio can get onto the list rather than having to beat Google** |
+| **ESC Region 19 / Allied States Cooperative** | 2026 consulting and instructional-resources award, includes an AI vendor | Another buy-off-it vehicle |
+| **Digital Promise** | USD **8M** RFP for AI tutoring solutions. 🔴 **Nonprofit, not a state agency; single secondary source, blog-dated 2026-06-04** | 🔴 **The weakest row here. A lead, not a vehicle** |
+
+🔴 **An informed gap, written down because silence would look like coverage: there is no 2026 state-education-agency AI-tutoring RFP in
+these results.** SEA buying concentrates on **assessment, data systems, licensure platforms and programme evaluation**, and those
+contracts post to the **state central procurement portal, not the agency's own site** — which is where the next pass should look.
 ### 🟢 The binding district mandate arrived, it is dated, and the first deadline has already passed (added p328)
 
 🔴 **This region crossed from guidance into enforceable obligation during 2026, and one deadline is already behind us.** From the p328 sweep:
@@ -866,6 +914,27 @@ upper-secondary extension is scope, and should be priced as scope.
    falling (17% student confidence, intent down 9 points), credibility is the product.
 
 ### EMEA
+
+### 🟢 GÉANT OCRE is the route into European universities, and a cancelled €160M Irish framework is a near-term opening (added p329)
+
+🔴 **Confidence, first: every source below is SEARCH-CHANNEL-ONLY.** `find-tender.service.gov.uk`, `geant.org`, `ocre-project.eu`,
+`nwupc.ac.uk`, `crescentpurchasing.co.uk` and `irishtimes.com` all answer **403 at CONNECT / 000**. **Nothing below is verified at
+source.** Notice IDs are recorded so confirmation costs one lookup.
+
+| vehicle | detail | why it matters |
+|---|---|---|
+| 🟢 **GÉANT OCRE 2024 framework** | Pan-European framework for **IaaS / PaaS / SaaS** to research and education institutions. Began **2025-02-03**, runs to **2030-02**. **39 participating countries.** Routes: **direct award**, mini-competition, desktop mini-competition | 🟢 **The single most useful procurement fact for an EMEA education engagement. An eligible institution can DIRECT-AWARD off this framework — no new tender.** This is the EMEA analogue of North America's cooperative purchasing, and this file had never recorded it |
+| **UK DfE — "AI Tutoring Tools for Education"** | **Preliminary market engagement** notice (pre-tender), Department for Education (England). **~£1.5M ex VAT**; estimated contract **2026-06 → 2028-05**, possible extension. Find a Tender notices **014992-2026** and **013464-2026** | 🟢 **A named national buyer shaping an AI-tutoring specification BEFORE tender** — the window in which a studio influences requirements rather than responding to them. Schools and academy trusts then buy via **DfE-reviewed frameworks**, so the framework is the real gate |
+| **Crescent Purchasing Consortium** | Open framework, education professional services, published **2026-02**. Its **SEND advisory lot explicitly covers AI in education systems** — adaptive testing, feedback tools | An **already-open** UK vehicle whose published scope names AI adaptive testing |
+| 🟢 **Ireland — €160M FET framework, CANCELLED** | Multi-supplier framework for further education and training services **collapsed before award over process "anomalies"** (reported **2026-03-05**). ETBs may run **interim local arrangements** until a new national framework exists | 🟢 **A cancelled national framework is an OPENING, not a closure: interim local buying, smaller lots, less competition — and a national re-run to position for** |
+| **NWUPC** | North Western Universities Purchasing Consortium (UK HE). **Its listed frameworks are not AI-specific and the frameworks page does not mention AI** | 🔵 **Recorded as a NEGATIVE deliberately.** A named consortium with no AI vehicle is a gap a studio can point at — and a reason the OCRE route matters more |
+
+🟡 **One genuinely new regulatory date, and it is the only thing the prescribed EMEA sweep added.** **EU AI Act Art. 57 national
+regulatory sandboxes are deferred to `2027-08-02`** by the Digital Omnibus. 🔵 **Everything else the sweep returned, this file already
+holds with better precision than the snippets had**: Annex III → `2027-12-02`, Annex I → `2028-08-02`, Regulation (EU) **2026/1744**,
+OJ **2026-07-24**, in force **2026-07-27**, Parliament **2026-06-16**, Council **2026-06-29**, Article 50 and Article 4 live now.
+🟢 **A third-party source independently reached this file's own framing** — *"December 2027 is not a snooze button"* — which is
+corroboration of the sales argument at line 989, not new information.
 ### 🟢 The region's reference implementation is now MIT, it was funded multilaterally, and it ships the consent layer (added p328)
 
 🟢 **`eai6/ai-tutor` — MIT, 1,090 B grant read first-hand, *"Copyright (c) 2026 World Bank Group and contributors"*, seeded with a Seychelles curriculum (7 geography + 8 mathematics units).** It is the find of p328 and it is placed in this region.
@@ -1043,6 +1112,23 @@ the *metadata* workload, not just the tutor demo.
    looking for content.
 
 ### APAC
+
+### 🟡 China's "AI Plus Education" buying happens at provincial level, not ministry level — and no APAC vehicle surfaced (added p329)
+
+🔴 **Confidence: SEARCH-CHANNEL-ONLY. `oecd.ai` and every other non-GitHub host tested answer 403 at CONNECT.**
+
+🟢 **The plan itself this file already holds** (`README.md` lines 1361 and 4190: announced **2026-04-10**, running to **2030**, with
+teacher AI-literacy in qualification exams and the per-grade hour floors). 🔵 **What p329 adds is the procurement read, and it changes
+who the addressable buyer is: provincial and municipal education bureaus are expected to begin AI procurement in 2026–2027.**
+🔴 **So the buyer is a province, not the ministry** — which also means the deal count is high and the deal size is provincial.
+🟡 **Stated as an expectation, not a confirmed tender: no notice, portal or value was found.**
+
+🔴 **An informed gap, and it is the honest headline for this region: no APAC framework agreement or consortium vehicle surfaced at
+all.** The prescribed regional query returned enterprise-AI commentary and two **commercial training alliances** —
+**TCS + Pearson** (multi-year AI learning alliance aimed at employer skills gaps) and **LearnUpon** (new Sydney HQ, AI course
+authoring) — which are **competitor signals, not procurement vehicles**, and are recorded as such. 🔵 **APAC is therefore the one
+region where this pass closed nothing, and the next pass should go at it per-country (`MOE Singapore`, `MEXT Japan`, `AusTender`,
+`GeM India`) rather than as "APAC", which is not a procurement jurisdiction.**
 ### 🟢 Korea's AI Basic Act is in force with education named high-impact, and India's Class-3 mandate starts this school year (added p328)
 
 | jurisdiction | instrument / move | date | what it means for a bid |
@@ -1188,6 +1274,22 @@ price it as greenfield, because there is nothing to fork.
    automation, with the fewest regulatory blockers of any major market in this KB.
 
 ### LATAM
+
+### 🟢 ChileCompra Directive 44/2026 is the rulebook for selling AI to a Chilean public buyer, and Mexico cannot be monitored federally (added p329)
+
+🔴 **Confidence: SEARCH-CHANNEL-ONLY. `cenia.cl`, `unu.edu` and `oecd.ai` all answer 000 / 403 at CONNECT; no primary text was read.**
+
+| finding | detail | why it matters |
+|---|---|---|
+| 🟢 **ChileCompra Directive No. 44/2026** | Official guidance to Chilean public entities on **how to buy data-science and AI projects** through **Mercado Público**. The 2023 version was **updated 2026-03**, reflecting the reform of **Law No. 19,886** and its new regulation | 🟢 **The most actionable LATAM procurement artefact this KB has found. It is not a market forecast — it is the RULEBOOK the buyer must follow, so reading it tells a studio the shape of the bid before the bid exists** |
+| **Brazil — PBIA, with its buyers named** | National AI plan, goals to **2028**, including **AI literacy in primary and secondary education**. Watch **MCTI**, **MEC**, **federal universities** and the **SENAI / SENAC** networks | 🟢 **This file already held PBIA as policy. Naming the institutional buyers is the step that was missing** — policy becomes a pipeline only once you know who signs |
+| 🔴 **Portal coverage, with its defect named** | **PNCP** (Brazil), **Mercado Público** (Chile), **CompraNet** (Mexico) — 🔴 **CompraNet federal data is reported FROZEN AT 2022, with only Nuevo León live** | 🔴 **A named data defect beats a portal list: Mexico cannot be monitored federally at all, so Mexican coverage must be state-level or it is fiction.** Any "we track LATAM tenders" claim that includes federal Mexico is wrong |
+| **UNESCO LAC Observatory** | Roadmap **2026–2029**; partners include **CENIA**, **CETIC.br**, **Tec de Monterrey** (this file also holds **Ceibal**) | 🔵 **ALREADY HELD** (lines 323, 641, 704) — recorded as held so the pass does not double-count it as new |
+
+🔵 **And the one thing the prescribed LATAM query returned that this file already holds better:** the **UNESCO IESALC / UNU-IAS**
+higher-education survey. The snippet gave "200 institutions, 19 countries"; **this file already carries 200 institutions, 19 countries,
+87% using AI in ≥1 area, 74% in teaching and learning, and only 26% with governance** — so the regional query confirmed a held row at
+lower precision, which is the fifth consecutive pass it has done that.
 ### 🟢 UNESCO put a regional AI-in-education observatory in Chile, and the adoption-versus-governance gap is now a number (added p328)
 
 | finding (p328 sweep) | detail |

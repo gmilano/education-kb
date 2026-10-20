@@ -503,6 +503,9 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── p254-scoped-grant-reference (P1065: a POINTER to a licence is not a GRANT)"; \
 	cd compose/code/p254-scoped-grant-reference && bash test_scoped_reference.sh >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \
+	echo "── p329-grant-link-resolution (p329: a claim that points at its OWN missing grant)"; \
+	cd compose/code/p329-grant-link-resolution && $(PY) -I test_grant_link.py >/dev/null && echo "   PASS" || exit 1; \
+	cd - >/dev/null; \
 	echo "── p254-exit-status-reach (ACTION XZ: a contracted recipe line must be able to fail)"; \
 	cd compose/code/p254-exit-status-reach && $(PY) -I test_exit_reach.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \

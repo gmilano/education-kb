@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 329 — five new repositories, none shelf-grade, and the channel that re-graded two rows promoted yesterday
+
+**Second pass of 2026-10-20.** 🔵 **This file is APPEND-ONLY. Everything below this section is
+prior history and stays.**
+
+🟢 **Novelty on the agent channel: 5 repositories genuinely new to this KB. Promoted to `agents/top.md`: 0.** Recorded as a measured
+result rather than as silence, because a zero with its reason attached is information and a zero alone is not.
+
+| repo | grant, read first-hand p329 | activity, first-hand p329 | region | verdict |
+|---|---|---|---|---|
+| https://github.com/DanielG0798/CourseGuide-AI | 🟢 **MIT** — `main/LICENSE` **and** `master/LICENSE`, 1,068 B, *Copyright (c) 2026 **instruct.ai*** | 9 commits · 2 authors · 2026-09-16→2026-09-21 · 45 files | **North America** (Florida Gulf Coast University) | 🟡 **Course project** — CEN 4930 *AI Agent Studio*, Fall 2026. Not shelf-grade; **one reusable idea**, carried into **P23** |
+| https://github.com/KayvanShah1/VirtuTA | 🟢 **MIT** — 1,068 B, *Copyright (c) 2024 Kayvan Shah* | 73 commits · 2 authors · 2024-04-02→**2026-03-03** · 37 files | **North America** (University of Southern California) | 🟡 **Course project** — DSCI 560 practicum. 🟢 **PLACED this pass**: it was measured on this channel in an earlier pass as *"MIT, 🔴 sin región"* and never region-placed. Still the only piece here that answers in a **course forum (Piazza)** rather than an LMS |
+| https://github.com/bhakthan/AI_Agent_School | 🟡 MIT — 1,060 B, but the copyright line is the **unedited GitHub template default: *"Copyright GitHub, Inc."*** | 348 commits · **1 author** · **all inside 2025-06-25→2025-08-01** · 330 files | — | 🔴 **REJECTED, two independent grounds**: **dead 14 months**, and **wrong category** — an interactive platform teaching *about* agents (A2A, MCP, ACP, AutoGen), not an agent for education |
+| https://github.com/Naresh1401/education-tutor-agent | 🔴 **NO GRANT** — absence proved by full tree enumeration, not a path ladder | 5 commits · 2026-03-26→2026-10-11 · 22 files · 2 branches | — | 🔴 **NOT USABLE.** Ships `src/agents/{socratic_tutor,concept_explainer,quiz_generator,learning_path_planner,progress_tracker}.py`, a FastAPI app, a dashboard, Docker and CI — **and no licence.** The search channel asserted *"MIT licensed"* |
+| https://github.com/techpivot25/Educate-AI | 🔴 **NO GRANT** — same proof | 8 commits · 1 author · **2026-10-12→2026-10-15** · 42 files | — | 🔴 **NOT USABLE.** Four days of commits; `package.json` has **no `license` field** and its `name` is still the unedited scaffold value **`react-example`** |
+
+### 🔴 The finding: a repository that links to its own missing licence
+
+**Both unlicensed repos above declare MIT three times over, and all three declarations are inside the repository:**
+a **shields.io badge** reading *License: MIT*, a `## License` section stating *"This project is licensed under the MIT License"*,
+and in `Educate-AI`'s case an explicit markdown link — `[MIT License](LICENSE)`. 🔴 **The linked path 404s. The grant was never committed.**
+
+🔵 **Why this is a new case and not p328 restated.** p328's rule — earned, and correct — reads: *"a licence asserted by anything other
+than the repository's own grant file is a **lead**, not a fact."* **It sends the reader to the repository's own grant file. Here the
+repository's own README is in the repository and does point at its own grant file; the file simply does not exist.** A reader obeying
+p328's rule follows the README's link, receives a 404, and may read a 404 as a transient fetch failure rather than as an **absent grant**.
+🟢 **One word changes in the rule: the test is not whether the claim is *in* the repository. The test is whether the claim *is the grant*.**
+
+🔴 **And the badge cannot rescue you, by construction.** `img.shields.io/badge/License-MIT-yellow.svg` is a **static image URL** — a
+string the author typed, not a licence lookup. **It renders a green *License: MIT* forever, including for a repository with no licence at
+all.** Both repos above carry one. Prior cases on this ladder, so the novelty claim is auditable: **p322** (README says X, shipped LICENSE
+says Y — two files present, disagreeing), **p314** (a complete MIT grant that never says "MIT"), **p324** (the licence file is not the
+grant in either direction), **p328** (a third-party blog asserts a grant the repo does not ship).
+
+🟢 **Absence proved to this base's own standard.** P275/P278 are explicit that a path ladder cannot sustain an absence — *"a count of
+ZERO over a path that does not exist in that ref measures the PATH, not the content"*. So in addition to **18 path probes each** (6
+filenames × `main`/`master`/`develop`), each absence is a **full tree enumeration over every branch**:
+`git clone --filter=blob:none --no-checkout` then `git ls-tree -r --name-only HEAD | grep -iE 'licen[cs]e|copying|notice'` →
+**22 files, 0 matches** and **42 files, 0 matches**. Evidence: `evidence/p329-dead-link-grant.2026-10-20-p329.tsv`.
+
+### 🟡 The topic-index channel's defect is tier, not precision
+
+**All five repositories above are genuinely education repositories — the filter is not leaking.** 🔵 **But a topic index ranks what
+carries education keywords in a description, and what carries those keywords is coursework and learning material.** Two of five are
+university course projects, one is a platform *about* agents, two are unlicensed prototypes. 🟢 **Keep the channel for supply; stop
+expecting shelf rows from it. The organisation-page channel (p327) is still the only channel that has produced a shelf row cold.**
+
+🔴 **Category rule, now by rule rather than re-adjudicated each pass: *"learning about AI"* ≠ *"AI for education"*.**
+`bhakthan/AI_Agent_School`, `ed-donner/agents` and `rohitg00/ai-engineering-from-scratch` are AI-engineering curricula. They rank first
+on every education-shaped agent query and they belong to a different industry KB.
+
+### The prescribed queries, reported per channel including the empty ones
+
+| query (as prescribed) | result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **Nothing education-specific, sixth consecutive pass.** Returned general-purpose agent roundups (Hermes, Aider, Cline, CrewAI, AutoGen, LangGraph) and three AI-engineering courses. **p328 moved to retire this query; p329 confirms the verdict and the retirement should now be executed** |
+| `github trending education AI 2026` | 🔴 **Aggregator and blog pages only** (trendshift, gittrend, substack, LinkedIn). Returned `rohitg00/ai-engineering-from-scratch` — already held, and a curriculum, not an agent. `trendshift.io` is **000 from here**, so the trending channel cannot be read at source either |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **Nothing new.** OpenEduCat (held), Apache OFBiz (not education), and **CK-ERP, a 2010 SourceForge project** — the query is now reaching 16-year-old material. See `verticals/solutions.md` |
+| `AI education industry trends 2026` | 🔴 **Paid-report SEO**, and the figures are mutually inconsistent by a factor of eight (2025 base quoted at $6.4B, $8.3B and $7.52B by three firms; 2034 at $79.6B). Nothing citable. See `intel/market.md` |
 ## 2026-10-20 — Pass 328 — the sweep returned four real agents after four passes of zero, and the channel that found them was the one that died
 
 **First pass of 2026-10-20.** 🔵 **This file is APPEND-ONLY. Everything below this section is

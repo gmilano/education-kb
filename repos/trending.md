@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 329 — the activity channel was open since p229 and this shelf used it only to ask whether an address resolves
+
+**Second pass of 2026-10-20.** 🔵 **This file is APPEND-ONLY. Everything below this section is
+prior history and stays.**
+
+🟢 **13 repositories re-measured first-hand: commit count, author count, first and last commit date, full tree size.**
+Channel: `git clone --filter=blob:none --no-checkout` + `git log` / `git ls-tree` on third-party public repositories.
+**Evidence: `evidence/p329-git-activity-channel.2026-10-20-p329.tsv`.**
+
+🔴 **Credit where it is due, and it is the finding.** **This channel is not new to this base.** `p229` established that
+`git ls-remote` returns 200 through this proxy while other paths do not; **line 1717 of this very file** records
+`git clone --depth 1 --filter=blob:none` working on third-party repos and supersedes `p306`; and this shelf has run
+`git ls-remote --symref` as standard practice for many passes — *"138 of 138 resolved"*, *"153 trees"*, *"all five resolved to `main`"*.
+🔴 **Every one of those uses asks the same question: does the address resolve.** **None of them asks whether anyone is still there.**
+🟢 **`git log` was one flag away the entire time.**
+
+🔵 **And `agents/top.md` had already written the instruction.** p319, five lines above that file's canonical table:
+*"the ★ column is a rough size signal and nothing more. **Rank on commit count, release cadence and licence.**"*
+🔴 **Ten passes later the column was still `★`, and p328 — with `github.com` at 403 — filled it with `🔴 n/v` for every row it cut.**
+**Capability present, instruction already written, not exercised.** That is the same shape as p327's ten found-and-never-written rows,
+two passes apart.
+
+### 🟢 Why the recovered signal is better than the lost one, in this base's own terms
+
+**This file's trend 11 has argued for passes that published metadata is unreliable in both directions.** The star evidence is this
+base's own: **p318** found a README asking AI agents to star a repo; **p319** found that pressure *productised* —
+`karanb192/algo-sensei` shipping `scripts/star_invitation.py` with a once-per-machine gate, a unit test and a dedicated CI workflow;
+**p317** found stars running far too *low* on institutional infrastructure. 🟢 **A star is a number strangers can be asked to inflate.
+A commit history is the project's own record.** **So the 403 did not cost this KB its attention signal and leave nothing — it cost a
+gameable signal and forced the recovery of a better, first-hand one.**
+
+### 🔴 The naive fix is wrong, and one pair of rows proves it before it ships
+
+| repo | commits | authors | last commit | fact |
+|---|---|---|---|---|
+| `anthropics/k12-teacher-skills` | **4** | **3** | **2026-10-13** | 🟢 **Small by design and tended** — a four-skill bundle is a small artefact |
+| `Jellypod-Inc/school-skills` | **4** | **1** | **2026-04-14** | 🔴 **Single-sitting dump** — all four commits on one day, silent since |
+
+🟢 **Identical on commit count, opposite in fact. The signal is the triple `(commits, authors, last_commit)`, never the scalar.**
+p319 half-knew this — it said *"commit count, **release cadence** and licence"* — and **cadence is exactly the term that separates
+these two rows.** 🔴 **A scalar column would have condemned a live Anthropic / Learning Commons artefact and spared an abandoned one.**
+
+### The measurement
+
+| repo | commits | authors | first → last commit | tree files | what the triple says |
+|---|---|---|---|---|---|
+| `HKUDS/DeepTutor` | **2,935** | **273** | 2025-12-28 → **2026-10-19** | 3,875 | 🟢 Largest and live |
+| `Orenda-Project/rumi-platform` | **847** | 11 | 2026-01-27 → 2026-10-05 | 2,558 | 🟢 Live. **The carried prose figure *"847 commits on 18 stars"* is now first-hand exact** |
+| `eai6/ai-tutor` | **787** | **4** | 2026-02-01 → **2026-08-20** | 979 | 🟡 Substantial, **2 months stale**; the World Bank attribution rests on **4 committers** |
+| `THU-MAIC/OpenMAIC` | **733** | **127** | 2026-03-12 → **2026-10-19** | 3,617 | 🟢 Live; **127 authors corroborates the multi-institution claim first-hand** |
+| `bhakthan/AI_Agent_School` | 348 | **1** | 2025-06-25 → **2025-08-01** | 330 | 🔴 **Dead 14 months** — and the wrong category |
+| `HugeCatLab/ChatTutor` | 193 | 11 | 2025-11-05 → **2026-01-09** | 351 | 🔴 **AGPL-3.0 and 9 months stale** |
+| `microsoft/Shiksha-Copilot` | **149** | 6 | 2025-03-18 → 2026-09-15 | 977 | 🟢 **The 9-★ cell understated it badly** — p317's finding, confirmed |
+| `KayvanShah1/VirtuTA` | 73 | 2 | 2024-04-02 → **2026-03-03** | 37 | 🟡 Course project, **touched in 2026** — less dormant than its 2024 copyright suggests |
+| `learning-commons-org/agent-skills` | 42 | 6 | 2026-06-25 → 2026-10-06 | 62 | 🟢 Live, small by design |
+| `DanielG0798/CourseGuide-AI` | 9 | 2 | 2026-09-16 → 2026-09-21 | 45 | 🟡 Course project, 5 days of commits |
+| `anthropics/k12-teacher-skills` | 4 | 3 | 2026-07-13 → **2026-10-13** | 71 | 🟢 Small by design, tended |
+| `Jellypod-Inc/school-skills` | 4 | **1** | **2026-04-14 → 2026-04-14** | 88 | 🔴 **RE-GRADE** |
+| `afri-bit/revibe` | 4 | 2 | 2026-05-01 → **2026-05-02** | 32 | 🔴 **RE-GRADE** |
+
+🔵 **Two of these re-grades land on rows p328 cut into `agents/top.md` yesterday.** 🟢 **p328 did nothing wrong: their grants are MIT
+and byte-verified, and the grant was the only axis it could measure.** 🔴 **But the table put a four-commit abandoned skill dump beside
+a 733-commit, 127-author live project with no way to tell them apart.** The `★ / activity` column in `agents/top.md` now carries the
+triple for all ten rows measured this pass.
+
+### 🔴 Verification surface, and one newly-responding host
+
+| host | p329 | note |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** | grants, bytes, code, READMEs |
+| **git smart-HTTP** | 🟢 **200 — OPEN** | **commits, authors, dates, full tree enumeration** |
+| `github.com` rendered · `api.github.com` | 🔴 **403** | no stars, forks, topics, descriptions |
+| `gitlab.com` | 🟡 **301 — responds** | **not tested as a supply channel by this KB. p328 recorded `codeberg.org` at 000; GitLab is not the same answer. Sweep it next pass** |
+| 16 non-GitHub hosts tested | 🔴 **403 at CONNECT / 000** | `find-tender.service.gov.uk`, `geant.org`, `ocre-project.eu`, `nwupc.ac.uk`, `crescentpurchasing.co.uk`, `irishtimes.com`, `aasa.org`, `stotles.com`, `marketbrief.edweek.org`, `govtech.com`, `791coop.org`, `createyourrfp.com`, `govspend.com`, `oecd.ai`, `unu.edu`, `cenia.cl` |
 ## 2026-10-20 — Pass 328 — four repos off the GitHub topic indexes, and two secondary-source licence claims falsified
 
 **First pass of 2026-10-20.** 🔵 **This file is APPEND-ONLY. Everything below this section is

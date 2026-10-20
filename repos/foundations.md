@@ -6,6 +6,50 @@ updated: 2026-10-20
 
 # Foundational repos — education
 
+## Pass 329 · 2026-10-20 (second pass of this date) — no new foundation for a second pass, and the activity channel re-grades three rows this file already holds
+
+🔴 **No new foundational repository. Second consecutive pass, and stated as a measured result rather than as silence.** The prescribed
+foundations query (`open source platform education ERP CRM MIT Apache`) returned **OpenEduCat** (held), **Apache OFBiz** (not education)
+and **CK-ERP, a 2010 SourceForge project** — the query is now reaching 16-year-old material. 🟢 **The pass's value to this file is
+therefore not supply. It is that every row this file holds could be re-graded on an axis it has never carried**, using a channel that
+was open the whole time (see `repos/trending.md` p329 for the channel's provenance and the credit it owes to p229 and p319).
+
+### 🟢 The refinement that has to come first, because without it this measurement would damage three good rows
+
+**The crude rule — "rank on commit count" — is wrong, and this file is where it would have done the damage.**
+
+| repo | commits | the crude rule would say | what it actually is |
+|---|---|---|---|
+| `AI-for-Education/pedagogy-benchmark` | **5** | abandoned | 🟢 **A benchmark dataset.** 1,143 questions from Chile's teacher-qualification exams. **A finished dataset does not accrue commits**; that is what finished means |
+| `learning-commons-org/knowledge-graph` | **44** | marginal | 🟢 **A curated standards corpus**, 6 authors, last touched 2026-10-14 |
+| `anthropics/k12-teacher-skills` (in `agents/top.md`) | **4** | abandoned | 🟢 **A four-skill bundle**, 3 authors, last touched 2026-10-13 |
+
+🟢 **So the rule, in its mature form: compare a repository's activity against its ARTEFACT KIND, never against the shelf's maximum.**
+A **platform** with 40 commits is dying; a **benchmark** with 5 is done; a **skills bundle** with 4 is a skills bundle.
+🔵 **The triple `(commits, authors, last_commit)` is the measurement; the artefact kind is the denominator.** Without the denominator
+this channel is a machine for deleting good rows, and this file would have been its first casualty.
+
+### The rows
+
+| repo | grant (as held, re-read pass noted) | commits · authors · first → last, **first-hand p329** | artefact kind | region | p329 verdict |
+|---|---|---|---|---|---|
+| https://github.com/dodona-edu/dolos | 🟢 **MIT** (1,083 B, p328) | **3,859 · 25 ·** 2019-06-23 → **2026-10-19** | Platform (plagiarism/similarity) | **EMEA** (KU Leuven) | 🟢 **The strongest foundation in this file on every axis: seven years, 25 authors, a commit yesterday.** This settles the premise p324 retracted — *"there is still no credible open source academic-integrity project"* — not as an argument but as a measurement |
+| https://github.com/learning-commons-org/evaluators | 🟡 Four-way split (code **MIT**; prompts + settings **CC BY 4.0**; *CLEAR* and *PERSUADE 2.0* corpora **CC BY-NC-SA 4.0**) | **289 · 13 ·** 2025-09-22 → **2026-10-19** | Library | **North America** | 🟢 **LIVE, commit yesterday.** 🔵 **And p328's carried figure of "289 commits" is now confirmed FIRST-HAND, exactly.** The commercial boundary is unchanged and still in the data, not the code |
+| https://github.com/open-edge-platform/education-ai-suite | 🟢 **Apache-2.0** (11,350 B, p328) | **453 · 33 ·** 2025-09-29 → **2026-10-19** | Platform (Intel) | **Global** | 🟢 **LIVE**, 33 authors, commit yesterday |
+| https://github.com/learning-commons-org/knowledge-graph | 🟡 **Licensed per dataset and in some cases per download**, across three access tiers (Open / Open + Gated / Gated); no licence in the sidebar; `LICENSE.md` states the distributor *"doesn't consolidate those into a single license for your build"* | **44 · 6 ·** 2025-09-17 → 2026-10-14 | Curated standards corpus | **North America** | 🟢 **LIVE.** 🔴 **The licence remains a ROW-LEVEL field, not a repository attribute — re-read this pass and unchanged. *"Is this repo MIT?"* is still not a sufficient question here** |
+| https://github.com/autolab/Autolab | 🟢 **Apache-2.0** (11,323 B, p328) | **2,179 · 84 ·** 2014-10-25 → **2025-10-20** | Platform (CMU) | **North America** | 🔴 **STALE BY EXACTLY ONE YEAR TODAY.** 84 authors and 11 years of history, and the last commit is 2025-10-20. **A mature, widely-deployed autograder that went quiet — carry it as a proven design to read, not as a dependency to adopt without a maintenance plan** |
+| https://github.com/datakind/student-success-tool | 🟢 **MIT** (1,080 B, p328) | **3,015 · 25 ·** 2024-10-10 → **2025-09-08** | Analytics toolkit | **North America** | 🔴 **STALE 13 MONTHS.** 3,015 commits of real work, then silence. **Same caveat: read it, plan to own it** |
+| https://github.com/AI-for-Education/pedagogy-benchmark | 🟢 **MIT** (1,063 B, p328) | **5 · 1 ·** 2025-06-24 → 2025-10-15 | **Benchmark dataset** | **LATAM** | 🟢 **HELD AT FULL VALUE — see the refinement above.** A finished benchmark does not accrue commits. Still the only artefact in this KB that tests whether a model knows *pedagogy*, sourced from a LATAM ministry's own licensing exam |
+| https://github.com/devissaputra/curriculum_knowledge_graph | 🟢 **MIT** (p327) | **27 · 1 ·** 2026-09-25 → **2026-09-26** | Schema + validator | 🔴 **UNPLACED** | 🟡 **Two days of commits by one author.** The schema and its 36 passing tests are real and small enough to read in an afternoon — **adopt the design, vendor the code; do not depend on the repository** |
+
+### 🔵 One more thing the measurement settled, and it cuts in this base's favour
+
+**Two commit figures this base had been carrying in prose turned out to be exactly right:** `Orenda-Project/rumi-platform`'s
+*"847 commits on 18 stars — the commit count is the signal"* measured **847**, and p328's *"289 commits"* for `evaluators` measured
+**289**. 🟢 **So when this KB wrote down a commit count it wrote down a true one.** 🔴 **The figures that drifted were the star counts**
+— solicited, inflated, and the subject of this base's trend 11. **The channel that died was the unreliable one. That is the whole
+story of the last two passes in one line.**
+
 ## Pass 328 · 2026-10-20 (first pass of this date) — this file passed the shelf audit, one row that never arrived, and the grant channel is all that is left
 
 🟢 **The audit first, because it is the pass's headline and this file is the half that works.** p327 prescribed re-grepping every `PROMOTE-*` verdict in `evidence/` against the shelf files. **Run against the *shelf region* rather than the filename, this file passes and `agents/top.md` failed**: all five p296 foundations promotions sit inside a `### The rows` ledger, and **this file's convention is that the per-pass ledger *is* the shelf**, so a row cut into a pass section is a row a reader finds. 🔵 **`agents/top.md` carries a single canonical `## The table` instead, and p327's rows landed in the commentary above it — invisible to anyone reading the table.** p328 cut them in. **The lesson for this file is to keep its convention and say so in the open, which is what this paragraph is for.**

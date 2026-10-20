@@ -6,6 +6,99 @@ updated: 2026-10-20
 
 # Current trends — education
 
+**Pass 329 · 2026-10-20 (second pass of this date). Four trends added, one of them a sector signal this KB could not
+previously see, and one method rule corrected before it shipped.** The pass ran the prescribed eight-query sweep **and** the two
+corrected query shapes p328 prescribed. 🟢 **The procurement shape worked and closed a four-pass gap; the topic-index shape produced
+five real repositories and zero shelf rows.** 🔴 **And the pass's own headline is an indictment: the activity channel it used to
+re-grade thirteen repositories has been open, known-open and documented-open in this KB's files since p229, and p319 had already
+written the instruction to use it.**
+
+## 🟢 Trend 13 — NEW: the unit of market access in public education is the procurement vehicle, not the vendor
+
+🔴 **This file and `intel/market.md` spent four passes asking the wrong question.** The declared gap read *"this file can place
+regulation by region and cannot place vendors by region"*, and four regional sweeps for `players` returned market-research SEO and
+law-firm explainers. 🟢 **The object was wrong, not the region.** **A studio does not sell into a region; it sells through a named
+vehicle with an eligibility rule.** Once the query asked for frameworks, tenders and consortium contracts instead of players, every
+region produced one:
+
+- **EMEA — `GÉANT OCRE 2024`.** Live **2025-02-03 → 2030-02**, **39 countries**, IaaS/PaaS/SaaS, and **direct award is one of its
+  routes**. An eligible university can buy without a new tender.
+- **North America — cooperative purchasing.** One solicitation, awarded once, and every member district buys off it.
+  **`Sourcewell`, `OMNIA Partners`, `NASPO ValuePoint`.** 🟢 **This inverts the motion: win one cooperative, become buyable by
+  thousands.**
+- **LATAM — `ChileCompra Directive No. 44/2026`.** Not a forecast: the **rulebook** a Chilean public buyer must follow when buying
+  AI, updated **2026-03** for the Law 19,886 reform.
+- **APAC — provincial, not national.** China's *AI Plus Education* buying is expected at **provincial and municipal bureau** level,
+  so the addressable buyer is a province.
+
+🔵 **How this relates to trend 2, which is adjacent but not the same.** Trend 2 (*"procurement is policy-gated"*) measures the
+**preconditions** a buyer must satisfy before it may buy — frameworks, human-oversight statutes, disclosure duties. **Trend 13 measures
+the CONTRACTUAL MECHANISM by which the money actually moves.** 🟢 **A studio needs both and they fail differently: satisfy the policy
+gate with no vehicle and you are compliant and unbuyable; find the vehicle and miss the gate and you are disqualified on review.**
+
+🔵 **Why this is a trend and not a list: the vehicle is durable where a vendor list rots.** A competitor ranking is stale in a quarter;
+**OCRE runs to 2030 and Directive 44 is standing law.** 🔴 **The whole layer is SEARCH-CHANNEL-ONLY — all sixteen non-GitHub hosts
+tested answered `403` at CONNECT or `000`, so not one notice number is verified at source.** **It is a map of leads, each precise
+enough to confirm in one lookup.**
+
+## 🟢 Trend 14 — NEW: activity has replaced attention as the measurable signal, and the replacement is an upgrade
+
+🔴 **The star channel is gone — `github.com` and `api.github.com` are both 403 — and this file should stop mourning it.**
+**This base's own evidence says stars were never trustworthy:** p318 found a README **asking AI agents to star a repo**; p319 found
+that pressure **productised** (`karanb192/algo-sensei` shipping `scripts/star_invitation.py` with a once-per-machine gate, a unit test
+and a CI workflow); p317 found stars running far **too low** on institutional infrastructure — `microsoft/Shiksha-Copilot` at **9 ★**
+and **149 commits across 6 authors**. 🟢 **A star is a number strangers can be solicited to inflate. A commit history is the
+project's own record of whether anyone is still there.** Measured first-hand this pass across 13 repositories via
+`git clone --filter=blob:none` + `git log`.
+
+🔴 **The correction this trend makes to itself, before anyone builds on it.** The crude form — *rank on commit count* — is **wrong**,
+and one pair of rows proves it: `anthropics/k12-teacher-skills` and `Jellypod-Inc/school-skills` **both have exactly 4 commits** and are
+**opposite in fact** (3 authors / last commit 7 days ago, versus 1 author / all four commits on one day / silent 6 months).
+🟢 **So: the measurement is the triple `(commits, authors, last_commit)`, and the ARTEFACT KIND is its denominator.** A **platform**
+with 40 commits is dying; a **benchmark** with 5 is finished; a **skills bundle** with 4 is a skills bundle. 🔵 **Without the
+denominator this signal is a machine for deleting good rows** — it would have condemned `AI-for-Education/pedagogy-benchmark` (a
+finished dataset of 1,143 questions from Chile's teacher-qualification exams) and a live Anthropic / Learning Commons artefact.
+
+🟢 **One thing the measurement settled in this base's favour: every commit figure this KB had carried in prose was exact.**
+`rumi-platform`'s *"847 commits"* measured **847**; `evaluators`' *"289 commits"* measured **289**. **The figures that drifted were
+the star counts.** The channel that died was the unreliable one.
+
+## 🟡 Trend 15 — NEW, and it is a sector signal: the foundations tier is aging while the agent tier is live
+
+🔴 **Measured, not inferred, and it is the first time this KB has been able to see it at all.** Sorting this KB's shelves by
+**last commit** splits them cleanly by **tier**:
+
+| tier | repo | commits | last commit |
+|---|---|---|---|
+| **Agents — LIVE** | `HKUDS/DeepTutor` · `THU-MAIC/OpenMAIC` · `learning-commons-org/evaluators` · `open-edge-platform/education-ai-suite` · `dodona-edu/dolos` | 2,935 · 733 · 289 · 453 · 3,859 | **2026-10-19 (yesterday), all five** |
+| **Platform / analytics — STALE** | `datakind/student-success-tool` | **3,015** | **2025-09-08 — 13 months** |
+| **Platform / analytics — STALE** | `autolab/Autolab` | **2,179** | **2025-10-20 — exactly one year today** |
+
+🔵 **Two of the largest, most mature, most widely-deployed artefacts in this KB — 3,015 and 2,179 commits, 25 and 84 authors, an
+autograder with eleven years of history — have both gone quiet, while every agent-tier and evaluation-tier repository committed
+yesterday.** 🟡 **The honest reading, and it is a reading, not a measurement: engineering attention in open education has moved from
+the student-information and analytics tier to the agent and evaluation tier.** 🟢 **The commercial consequence is concrete and it is
+good news for a studio: the mature tier is where the proven designs are and where nobody is maintaining them.** **Read `Autolab` for
+its autograder design; do not adopt it without a maintenance plan, and price that plan into the engagement.** 🔴 **Two passes of this
+would be a trend; this is one. The next pass should re-measure the same set and check whether the stale rows moved.**
+
+## 🔴 Trend 16 — NEW: the licence declaration can point at a grant that was never committed, and the badge cannot tell you
+
+**The newest case on this base's licence ladder, and it is new because it SURVIVES p328's own rule.** Two of the five repositories the
+topic-index sweep returned — `Naresh1401/education-tutor-agent` and `techpivot25/Educate-AI` — declare **MIT** three times over, and
+**all three declarations sit inside the repository**: a shields.io badge reading *License: MIT*, a `## License` section stating
+*"licensed under the MIT License"*, and an explicit markdown link `[MIT License](LICENSE)`. 🔴 **The linked path 404s. The grant was
+never committed.** Absence proved to this base's P275/P278 standard — **full tree enumeration over every branch, 22 files and 42 files,
+zero licence-shaped paths** — not a path ladder.
+
+🔵 **p328's rule said: *"a licence asserted by anything other than the repository's own grant file is a LEAD, not a fact"*, and it
+sends the reader to the repository's own grant file. That is exactly where these two READMEs send you, and the file is not there.**
+🟢 **One word changes: the test is not whether a claim is IN the repository — it is whether the claim IS THE GRANT.**
+🔴 **And the badge is structurally incapable of helping: `img.shields.io/badge/License-MIT-yellow.svg` is a STATIC IMAGE URL — a string
+the author typed, not a licence lookup — so it renders a green *License: MIT* forever, including for a repository with no licence at
+all.** **Practical consequence for sourcing: a 404 on a README's own licence link is not a fetch error. It is an absent grant, and an
+absent grant is all-rights-reserved.**
+
 **Pass 328 · 2026-10-20 (first pass of this date). Three trends added, two corrected, and one of
 this file's own conclusions retracted outright.** The pass set out to execute p327's prescribed
 audit and found that p327's fix had been written into the wrong region of the right file — so the

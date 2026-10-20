@@ -1,0 +1,25 @@
+# p329 activity re-measurement. The channel is `git clone --filter=blob:none --no-checkout` + `git log`/`git ls-tree` on third-party public repos.
+# CHANNEL CREDIT: this channel is NOT new to this base. p229 established `git ls-remote` is 200 through this proxy; repos/trending.md:1717 records
+#   `git clone --depth 1 --filter=blob:none` working on third-party repos and supersedes p306. p319 (agents/top.md, directly above `## The table`)
+#   already wrote the instruction: "the star column is a rough size signal and nothing more. Rank on commit count, release cadence and licence."
+# WHAT p329 ADDS: the channel was exercised for REF RESOLUTION (does the slug resolve) and never for PROJECT LIVENESS (is anyone still there).
+#   p328 recorded `n/v` for every new row's quantitative cell while this channel was open, known-open and documented-open in this KB's own files.
+# Verification surface p329: raw.githubusercontent.com=200 ; github.com=403 ; api.github.com=403 ; git smart-HTTP=200 (OPEN)
+#   all non-GitHub hosts tested = 403 CONNECT / 000 (find-tender.service.gov.uk, geant.org, ocre-project.eu, irishtimes.com, aasa.org,
+#   stotles.com, crescentpurchasing.co.uk, nwupc.ac.uk, marketbrief.edweek.org, govtech.com, 791coop.org, govspend.com, oecd.ai, unu.edu, cenia.cl)
+# NUANCE THAT BLOCKS THE NAIVE FIX: commit count alone is NOT the discriminator. k12-teacher-skills and school-skills both have 4 commits and are
+#   opposite in fact. The signal is the TRIPLE (commits, authors, last_commit) -- see the `verdict` column.
+slug	commits	authors	first_commit	last_commit	tree_files	shelf_star_cell_before_p329	verdict
+HKUDS/DeepTutor	2935	273	2025-12-28	2026-10-19	3875	41.8k (p320)	LIVE -- largest education agent on this shelf by every measure
+Orenda-Project/rumi-platform	847	11	2026-01-27	2026-10-05	2558	18 (carried p327)	LIVE -- and the prose figure "847 commits on 18 stars" is now FIRST-HAND EXACT
+eai6/ai-tutor	787	4	2026-02-01	2026-08-20	979	n/v (p328)	SUBSTANTIAL but 2 MONTHS STALE -- a qualifier p328 could not see
+THU-MAIC/OpenMAIC	733	127	2026-03-12	2026-10-19	3617	41.1k (carried p327)	LIVE -- 127 authors corroborates the multi-institution claim first-hand
+HugeCatLab/ChatTutor	193	11	2025-11-05	2026-01-09	351	~1.2k (third-party)	AGPL-3.0 AND 9 MONTHS STALE -- do not embed, and nobody is maintaining it either
+microsoft/Shiksha-Copilot	149	6	2025-03-18	2026-09-15	977	9 (carried p327)	LIVE-ish -- 1 month quiet; the 9-star cell always understated this repo badly
+KayvanShah1/VirtuTA	73	2	2024-04-02	2026-03-03	37	MIT, no region (trending only)	COURSE PROJECT (USC DSCI 560) -- touched 2026-03, less dormant than its 2024 copyright suggests
+learning-commons-org/agent-skills	42	6	2026-06-25	2026-10-06	62	40 (carried p327)	LIVE -- small by design (a skills bundle), 6 authors, 2 weeks quiet
+DanielG0798/CourseGuide-AI	9	2	2026-09-16	2026-09-21	45	NEW p329	COURSE PROJECT (FGCU CEN 4930, Fall 2026) -- 5 days of commits, honest README
+anthropics/k12-teacher-skills	4	3	2026-07-13	2026-10-13	71	575 (carried p327)	LIVE -- 4 commits but 3 authors and 7 days quiet. SMALL BY DESIGN, NOT ABANDONED
+Jellypod-Inc/school-skills	4	1	2026-04-14	2026-04-14	88	n/v (p328)	SINGLE-SITTING DUMP -- all 4 commits on ONE DAY, 1 author, silent 6 months. RE-GRADE
+afri-bit/revibe	4	2	2026-05-01	2026-05-02	32	n/v (p328)	TWO-DAY DUMP -- silent 5 months. RE-GRADE
+bhakthan/AI_Agent_School	348	1	2025-06-25	2025-08-01	330	NEW p329 (rejected)	DEAD 14 MONTHS + WRONG CATEGORY (teaches ABOUT agents). REJECTED, two independent reasons

@@ -48,6 +48,87 @@ recipes, and that belongs in the SOW.
 
 ---
 
+## P23 — The enforceable help-level contract: instructor-set policy, tutor-side enforcement, and an evaluator that proves it held — NEW in p329
+
+**The problem this solves, and it is the one that actually blocks faculty sign-off.** Every academic-integrity conversation ends at the
+same question: *"how do I know it gave a hint and not the answer?"* 🔴 **Every tutor in this KB answers that with a promise in a
+README.** `eai6/ai-tutor` hardcodes a **three-level hint ladder** and states the tutor never gives direct answers; the claim is
+credible and **unverifiable**. 🟢 **p329 found the two missing halves — a way to make the help level *configurable by the instructor*,
+and a way to *measure* whether it was respected — and all three layers are permissive.**
+
+### The stack, with grants read first-hand and activity measured first-hand (p329)
+
+| layer | repo | grant | activity (p329) | role, and why this one |
+|---|---|---|---|---|
+| **Chassis** | `eai6/ai-tutor` | 🟢 **MIT**, 1,090 B | **787 commits · 4 authors · last 2026-08-20** | The production-shaped Django tutor: **5E phase tag on every `LessonStep`**, five step types, skill-graph with **prerequisite mastery gating**, 35-MCQ bank (10 sampled, 8/10 to pass), and `apps/safety/` shipping **`ConsentRecord` (incl. `parental`, `withdrawn_at`)** + **`SafetyAuditLog`** with pseudonymised `user_hash`. 🔴 **Two months stale — fork it, own it** |
+| **Policy surface** | `DanielG0798/CourseGuide-AI` | 🟢 **MIT**, 1,068 B | **9 commits · 2 authors · 2026-09-16→21** | 🟡 **A 9-commit course prototype — VENDOR THE DESIGN, NOT THE DEPENDENCY.** What to take: an **instructor-defined policy** (*allowed help levels, approved sources, style constraints*), an **assistance-kind classifier** (*concept · hint · setup check · next step · analogy*), a **progressively limited** response, an MCP server over stdio, and `tests/m2/test_cases.yaml` as the shape of the fixture set |
+| **Proof** | `learning-commons-org/evaluators` | 🟡 **Code MIT** · prompts CC BY 4.0 · 🔴 **CLEAR + PERSUADE 2.0 corpora CC BY-NC-SA 4.0** | **289 commits · 13 authors · last 2026-10-19** | 🟢 **The closing piece, and it is almost too neat: one of its seven Feedback evaluators is literally *"withholding answers"*.** Also *revision actionability*, *student-response specificity*, *tone appropriateness*, plus 8 Text Complexity evaluators for grade-level fit. `pip install learning-commons-evaluators` / `npm install @learning-commons/evaluators` |
+| **Authoring** | `anthropics/k12-teacher-skills` **or** `learning-commons-org/agent-skills` | 🟢 **Apache-2.0**, 10,173 B | **4 commits · 3 authors · last 2026-10-13** / **42 · 6 · 2026-10-06** | Teacher-facing authoring of the policy. 🔵 **Take `agent-skills` when the policy must be tied to a curriculum spine over MCP; take `k12-teacher-skills` when it rides a prompt** |
+| **Integrity evidence** | `dodona-edu/dolos` | 🟢 **MIT**, 1,083 B | 🟢 **3,859 commits · 25 authors · last 2026-10-19** | Similarity evidence for a human reviewer, per **P11** — never a verdict. **The most alive foundation in this KB** |
+
+### The wiring, concretely
+
+1. **Declare the contract as data, not as a prompt.** One policy document per course or assignment: `allowed_help_levels`,
+   `approved_sources`, `style_constraints`. **Store it beside `ai-tutor`'s `LessonStep`, keyed to the same `course`/`assignment`
+   identifier**, so the policy is versioned with the curriculum rather than living in a system prompt.
+2. **Enforce it where the hint ladder already is.** `ai-tutor`'s three-level ladder becomes the *mechanism*; the policy becomes its
+   *bound*. Classify the incoming request by assistance kind (CourseGuide-AI's five categories), then **clamp the ladder to the level
+   the policy permits** and let mastery gating stay as it is.
+3. 🟢 **Score every response that ships, with the evaluator the contract names.** Run `evaluators`' **withholding answers** over
+   sampled tutor turns in CI, with **Text Complexity** for grade-level fit. **This converts "it gives hints, we promise" into a
+   per-release number**, and the number is the artefact a faculty senate signs off on.
+4. **Keep the corpora out of the deliverable.** 🔴 **Ship the evaluators and their prompts; do NOT ship *CLEAR* or
+   *PERSUADE 2.0* (CC BY-NC-SA 4.0) and do not use them to validate a commercial release.** Re-annotate against client data, or
+   validate in-house and keep the corpus out of what you hand over.
+5. **Attach the consent and audit layer that already exists.** `ai-tutor`'s `ConsentRecord` / `SafetyAuditLog` satisfy the P4 and P9
+   procurement questions; **consent withdrawal is already modelled as a first-class timestamped event with `parental` as its own type.**
+
+### What this is worth, and where it sells
+
+🟢 **The deliverable is not a tutor — it is a *tutor plus a measured guarantee about what it refuses to do*, and the guarantee is the
+thing nobody else bids.** **EMEA:** the measurement is directly reusable as Annex III evidence of human-oversight design ahead of
+**2027-12-02**, and it is procurable through **GÉANT OCRE** by direct award (p329). **North America:** *human oversight* and *no
+high-stakes AI decisions* are already statute in Oklahoma, Maryland, Idaho and Virginia — a per-release withholding score is
+compliance evidence, and cooperative purchasing (**Sourcewell / OMNIA / NASPO ValuePoint**) makes one win orderable by every member
+district. **LATAM:** pair with `AI-for-Education/pedagogy-benchmark` (MIT, 1,143 questions from Chile's teacher-qualification exams)
+and scope the bid to **ChileCompra Directive No. 44/2026**.
+
+🔴 **Build estimate and the honest risks.** **8–10 weeks.** Two of the five layers are prototypes or stale: **CourseGuide-AI is 9
+commits — reimplement its design rather than importing it**, and **`ai-tutor` has not moved since 2026-08-20, so forking means
+owning it**. 🟡 **The classifier is the technical risk** — CourseGuide-AI's own README says its classification *"uses a simple keyword
+tool; nuanced prompts may be mislabeled"* — **so the assistance-kind classifier is the component to rebuild properly and the one to
+put the fixture suite around.**
+
+## P24 — Vehicle-first engagement shaping: find the contract route before designing the solution — NEW in p329
+
+🔴 **The failure this prevents is the most expensive one in public-sector education work: a technically excellent proposal with no
+contractual route to being bought.** 🟢 **p329 established that the unit of market access is the procurement vehicle, not the vendor
+landscape** (`intel/trends.md` trend 13). **This pattern is the operational form of that finding: establish the vehicle in week one,
+and let it constrain the architecture — not the reverse.**
+
+| region | the route | what it constrains in the build |
+|---|---|---|
+| **EMEA** | 🟢 **GÉANT OCRE 2024** — **2025-02-03 → 2030-02**, 39 countries, IaaS/PaaS/SaaS, **direct award** available | **Package the work as a SERVICE an eligible institution can direct-award**, not as a product needing its own tender. Favours hosted/managed shapes over licence sales |
+| **EMEA (UK)** | **DfE "AI Tutoring Tools for Education"** — ~£1.5M ex VAT, contract **2026-06 → 2028-05**, Find a Tender **014992-2026** / **013464-2026**; plus **Crescent Purchasing Consortium** (2026-02, SEND lot naming AI adaptive testing) | **Pre-tender market engagement is the window to influence the spec.** Build the **curriculum-alignment** and **safeguarding** evidence early — those are what a DfE-reviewed framework screens on |
+| **North America** | **Cooperative purchasing** — `Sourcewell`, `OMNIA Partners`, `NASPO ValuePoint`; also **791 Purchasing Cooperative RFP `791202603005`**; **California Ed Tech JPA RFP 25/26-01** (pre-vetted **portfolio**, not winner-take-all) | 🟢 **Design for ONE solicitation and many orderers:** per-district configuration without per-district engineering. **Multi-tenancy is a procurement requirement here, not an architecture preference** |
+| **LATAM** | **ChileCompra Directive No. 44/2026** via **Mercado Público**; **Brazil PBIA** buyers = **MCTI, MEC, federal universities, SENAI/SENAC**; portals **PNCP** / **Mercado Público** / 🔴 **CompraNet frozen at 2022, only Nuevo León live** | **Score against the Directive's own criteria.** 🔴 **Do not promise federal Mexican tender monitoring — the data does not exist.** Mexico is state-level or it is fiction |
+| **APAC** | 🔴 **No vehicle found.** China's *AI Plus Education* buying is expected at **provincial / municipal bureau** level, 2026–2027 | **Target a province, not a ministry.** 🟡 **Go per-country next (`MOE Singapore`, `MEXT`, `AusTender`, `GeM India`) — "APAC" is not a procurement jurisdiction** |
+
+### The procedure, and the one rule that matters
+
+1. **Week one: name the vehicle, its dates and its eligibility rule.** If you cannot name it, the engagement has no route and that is
+   the first finding to deliver, not a detail to resolve later.
+2. **Confirm it at source before it enters a bid.** 🔴 **Every vehicle above is SEARCH-CHANNEL-ONLY in this KB — all sixteen
+   procurement hosts tested in p329 answered `403` at CONNECT or `000`.** **Each row carries a notice ID precisely so confirmation is
+   one lookup on the buyer's own portal.**
+3. **Let the vehicle pick the shape.** Direct-award framework → sell a service. Cooperative → sell configurable multi-tenancy.
+   Directive-governed tender → sell against the published scoring criteria.
+4. **Then pick the stack**, from **P23** for tutoring with an enforceable help contract, **P11** for integrity evidence, **P4** for the
+   EU AI Act provider package.
+5. 🔵 **Check the policy gate separately, and do not confuse the two.** Trend 2 (*procurement is policy-gated*) and trend 13 (*the
+   vehicle*) **fail differently: clear the policy gate with no vehicle and you are compliant and unbuyable; find the vehicle and miss
+   the gate and you are disqualified on review.**
+
 ## P15 — The ministry tutor you fork instead of build: MIT reference implementation + standards spine + pedagogy benchmark — NEW in p328
 
 🟢 **What changed at p328, and it is the reason this pattern replaces most of P1's build phase.** `eai6/ai-tutor` is **MIT** (`main/LICENSE` and `master/LICENSE`, both 1,090 B, *"Copyright (c) 2026 World Bank Group and contributors"*) and it already ships, **in code read first-hand this pass**, the four things every tutor engagement in this KB has quoted as build work: **5E-structured lesson steps, prerequisite mastery gating over an auto-built skill graph, a specified exit-ticket assessment, and a GDPR consent + audit layer.** 🔵 **This pattern is therefore a *fork, localise and prove* engagement, not a greenfield one — which is a materially different proposal to put in front of a ministry.**

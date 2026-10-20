@@ -1,0 +1,24 @@
+# p329: the self-referential dead-link grant. A NEW sub-case of this base's licence-channel work, and it is new because it SURVIVES p328's own rule.
+#
+# The ladder of cases this base has recorded, in order, so the novelty claim is auditable:
+#   p322 -- README declares X, the shipped LICENSE file says Y. Two files present, they disagree. (Four times inside one org.)
+#   p314 -- a complete MIT grant that never says "MIT"; and one repo declaring a different licence on every channel it has.
+#   p324 -- the licence file is not the grant in either direction.
+#   p328 -- a third-party COMPARISON BLOG asserts a licence; the repo ships no grant at all (`foradian/fedena`). p328's rule:
+#           "a licence asserted by anything other than the repository's own grant file is a LEAD, not a fact."
+#   p329 -- THE REPOSITORY'S OWN README declares MIT, links to its OWN `LICENSE` by relative path, and THAT PATH DOES NOT EXIST.
+#
+# Why p329 is not p328 restated: p328's rule sends the reader to "the repository's own grant file". Here the repository's own README IS in the
+# repository and it DOES point at its own grant file -- the file was simply never committed. A reader obeying p328's rule clicks the README's
+# own link, gets a 404, and may read a 404 as a transient fetch error rather than as an ABSENT GRANT. The rule needs one word changed:
+#   the test is not "is the claim IN the repository". The test is "is the claim THE GRANT".
+#
+# And the badge cannot save you: `img.shields.io/badge/License-MIT-yellow.svg` is a STATIC IMAGE URL. It is a string the author typed, not a
+# licence lookup. It renders a green "License: MIT" forever, including for a repo that has no licence at all. Both repos below carry one.
+#
+# ABSENCE PROVED TO THIS BASE'S OWN STANDARD (P275/P278): a path ladder cannot sustain an absence -- "a count of ZERO over a path that does not
+# exist in that ref measures the PATH, not the content". So the absence below is a FULL TREE ENUMERATION over every branch, not a probe list.
+# Method: git clone --filter=blob:none --no-checkout, then `git ls-tree -r --name-only HEAD` grepped for licen[cs]e|copying|notice.
+slug	readme_badge	readme_license_section	badge/link_target	target_http	path_probes_18	tree_files	licence_shaped_paths_in_FULL_TREE	branches	commits	authors	first_commit	last_commit	verdict
+Naresh1401/education-tutor-agent	shields.io static "License: MIT"	"## License -- This project is licensed under the MIT License."	LICENSE (relative, from the badge)	404	0/18 resolved (6 filenames x main/master/develop)	22	0	2	5	2 spellings of one name	2026-03-26	2026-10-11	NO GRANT. All-rights-reserved by default. NOT USABLE BY GLOBANT. Search channel asserted "MIT licensed".
+techpivot25/Educate-AI	shields.io static "License: MIT"	"## License -- This project is licensed under the [MIT License](LICENSE)."	LICENSE (relative, explicit markdown link)	404	0/18 resolved (6 filenames x main/master/develop)	42	0	1	8	1 (TechPivot Technologies & Consulting)	2026-10-12	2026-10-15	NO GRANT. Also: package.json has NO `license` field and its `name` is still the unedited scaffold value "react-example". Four days of commits.

@@ -1,8 +1,121 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-19
+updated: 2026-10-20
 ---
+
+## Pass 329 — 2026-10-20 — **THE FOUR-PASS REGIONAL GAP CLOSED BY DELETING ONE WORD FROM A QUERY; AND THE CHANNEL THAT RE-GRADED THIRTEEN REPOSITORIES HAS BEEN OPEN, KNOWN-OPEN AND DOCUMENTED-OPEN IN THIS KB SINCE `p229`**
+
+**One-line summary:** 🟢 **`intel/market.md`'s declared gap — *"this file can place regulation by
+region and cannot place vendors by region"*, stated for four consecutive passes — is CLOSED, and
+p328's prescribed fix was right: drop `players` and query the procurement surface.** The deeper
+reason four passes failed is that **the vendor map was the wrong OBJECT.** *Players* ranks
+market-research SEO and law-firm explainers; **a studio does not sell to a region, it sells through
+a VEHICLE** — and a vehicle is nameable, dated, and has an eligibility rule you can read. **Four
+routes are now recorded that this KB had never held: GÉANT OCRE 2024 (EMEA — 39 countries,
+2025-02-03→2030-02, direct award available), cooperative purchasing via Sourcewell / OMNIA Partners
+/ NASPO ValuePoint (North America — win one solicitation, become orderable by every member
+district), ChileCompra Directive No. 44/2026 (LATAM — the rulebook, not a forecast), and
+provincial-level buying under China's AI Plus Education plan (APAC).** Placed under the single
+`## Opportunities by region` heading, one `###` block per region. 🔴 **The entire layer is
+SEARCH-CHANNEL-ONLY and says so in every block: sixteen non-GitHub hosts were tested and all
+sixteen answered `403` at CONNECT or `000`, so no notice number, value or date is verified at
+source — each carries its notice ID precisely so confirmation costs one lookup, not one search.**
+🔴 **Second finding, and it is an indictment of this pass's own predecessors: `agents/top.md`'s only
+quantitative column is `★` — the one channel that is 403 — and `p319` wrote the instruction to stop
+using it FIVE LINES ABOVE THE TABLE: *"the ★ column is a rough size signal and nothing more. Rank on
+commit count, release cadence and licence."*** Ten passes later the column was still `★` and **p328
+filled it with `🔴 n/v` for every row it cut**, while `git clone --filter=blob:none` + `git log` on
+third-party repos returned **200** the whole time — **a channel this KB has recorded as open since
+`p229`** (`repos/trending.md:1717`). 🟢 **This is the fifth narrowing in a week-long sequence and the
+same shape as the fourth: p324/p325 the QUERY, p326 the FILTER, p327 the WRITE, p328 the write's
+TARGET, p329 a channel already held and not exercised.** **Capability present, instruction already
+written, not exercised — twice in three passes.** 🟢 **Thirteen repositories re-measured first-hand
+(commits · authors · first→last commit · tree size), and the measurement RE-GRADES TWO ROWS p328
+promoted yesterday**: `Jellypod-Inc/school-skills` is **4 commits, all on one day, 1 author, silent
+6 months** and `afri-bit/revibe` is **4 commits over 2 days, silent 5 months** — while
+`THU-MAIC/OpenMAIC` is **733 commits / 127 authors / committed yesterday** and `HKUDS/DeepTutor` is
+**2,935 / 273 / yesterday**. The table had been presenting these side by side with no way to tell
+them apart; the column is now `★ / activity` and carries the triple for all ten rows measured.
+🔴 **Third, and it is the control that stopped this pass shipping a wrong rule: commit count alone
+re-grades NOTHING.** `anthropics/k12-teacher-skills` and `Jellypod-Inc/school-skills` **both have
+exactly 4 commits and are opposite in fact** (3 authors / last commit 7 days ago versus 1 author /
+one day / silent 6 months). 🟢 **The measurement is the triple `(commits, authors, last_commit)` and
+the ARTEFACT KIND is its denominator** — a platform with 40 commits is dying, a benchmark with 5 is
+finished, a skills bundle with 4 is a skills bundle. **Without the denominator this channel is a
+machine for deleting good rows, and `repos/foundations.md` would have been its first casualty**
+(`AI-for-Education/pedagogy-benchmark`, 5 commits, is a finished 1,143-question dataset). 🟡 **Fourth
+— a genuine SECTOR signal this KB could not previously see, now trend 15: the foundations tier is
+aging while the agent tier is live.** `datakind/student-success-tool` (**3,015 commits**) is stale
+**13 months**; `autolab/Autolab` (**2,179 commits, 84 authors, 11 years**) is stale **by exactly one
+year today**; meanwhile `dolos`, `OpenMAIC`, `DeepTutor`, `evaluators` and `education-ai-suite` all
+committed **yesterday**. **Commercially this is an opportunity with an honest price: read the mature
+tier for its proven designs, adopt only with a maintenance plan, and put the plan in the estimate.**
+🔴 **Fifth, the newest case on this base's licence ladder, and it is new because it SURVIVES p328's
+own rule: a repository that links to its own missing grant.** `Naresh1401/education-tutor-agent` and
+`techpivot25/Educate-AI` each declare **MIT** three times — a shields.io badge, a `## License`
+section, and (in one) an explicit `[MIT License](LICENSE)` — **and the linked path 404s on every
+branch.** p328's rule sends the reader to *"the repository's own grant file"*, which is precisely
+where these READMEs point — at nothing. 🟢 **One word changes: the test is not whether a claim is IN
+the repository, but whether the claim IS THE GRANT.** And **the badge cannot help by construction:
+`img.shields.io/badge/License-MIT-yellow.svg` is a static image URL, a string the author typed, so
+it renders green forever including for a repo with no licence at all.** **Absence proved to this
+base's P275/P278 standard — full tree enumeration over every branch, 22 and 42 files, zero
+licence-shaped paths — not a path ladder.** Shipped as a tested instrument,
+`compose/code/p329-grant-link-resolution/` (**33 assertions pass**, `capture.sh` verified
+end-to-end on live data). 🟡 **Sixth: the topic-index channel's defect is TIER, not precision.** It
+returned **five repositories genuinely new to this KB and zero shelf-grade ones** — two university
+course projects, one platform *about* agents, two unlicensed prototypes. **Every one is genuinely an
+education repo, so the filter is not leaking; a topic index simply ranks what carries education
+keywords in a description, and that is coursework.** **Keep it for supply; the organisation-page
+channel (p327) is still the only one that has produced a shelf row cold.** 🔴 **A category rule is
+now recorded rather than re-adjudicated each pass: *"learning about AI"* ≠ *"AI for education"* —
+`bhakthan/AI_Agent_School`, `ed-donner/agents` and `rohitg00/ai-engineering-from-scratch` are
+AI-engineering curricula and belong to a different industry KB.** 🟢 **Seventh: two placements and
+two new patterns.** `KayvanShah1/VirtuTA` (MIT) was measured on the trending channel in an earlier
+pass as *"MIT, sin región"* and is **placed North America (USC) this pass**; `DanielG0798/CourseGuide-AI`
+(MIT) is **placed North America (Florida Gulf Coast University)**. **P23** wires the one reusable
+idea out of that 9-commit prototype — *permitted help level as instructor-configurable policy
+rather than a constant in the tutor* — onto the `ai-tutor` chassis and closes the loop with
+`learning-commons-org/evaluators`, **one of whose seven Feedback evaluators is literally
+*"withholding answers"***: the policy declares the help level, the tutor enforces it, and the
+evaluator proves it held. **P24** is the operational form of trend 13: establish the contract route
+in week one and let it constrain the architecture. 🟡 **Eighth, reported rather than hidden: all
+eight prescribed queries ran and the four GLOBAL ones added nothing** — the bare agent query
+returned general-purpose roundups for a **sixth** consecutive pass, the vertical query is now
+reaching a **2010 SourceForge project** (`CK-ERP`), and the trends query returned paid-report SEO
+whose 2025 figures disagree by a factor of eight ($6.4B / $8.3B / $7.52B). **Both of those queries
+should now be retired, for the same reason: they rank affiliate blogs and historical projects,
+permanently.** 🟢 **Ninth, and it is the next pass's cheapest lead: `gitlab.com` answers `301` — it
+responds.** p328 recorded `codeberg.org` at `000` and GitLab was never tested; **it is an entirely
+unswept supply channel for this KB.** Also outstanding: **no APAC procurement vehicle of any kind
+was found** (go per-country — `MOE Singapore`, `MEXT`, `AusTender`, `GeM India`; *"APAC"* is not a
+procurement jurisdiction), and **no 2026 state-education-agency AI-tutoring RFP in North America**
+(SEA contracts post to the **state central** portal, not the agency site). 🟢 **Tenth, and it is the part of this pass worth copying: this base's own ratchets caught this
+pass's new instrument TWICE, and both times the fix was the cause rather than the number.**
+`p252-ungated-floors` went red because a new suite arrived **ungated** (`ungated AND explicit-exit`
+rose 110→111); the fix was to **gate it in `make hooks`**, which is this base's stated convention
+(*"+1 file and +1 gated — written and gated in one pass... the `ungated` figure does NOT move"*).
+`p283-ladder-case-audit` then went red because gating it moved it into the **STANDING** population,
+where it was graded `CASE-UNVARIED` (ceiling 7 → 8) — **twice: first for a private
+`licen[cs]e|copying` regex in `grant_link.py`, then for a hand-spelled readme filename in
+`capture.sh`.** 🔴 **Both were real P441 violations** (*a PATH predicate is not rewritten as a name
+list*), and **neither ceiling was bumped**: the licence question now imports
+`lib/licence_identity.LICENCE_NAMES` (P237 — asked once), and the readme is **looked up in the
+enumerated tree** instead of guessed, which also removed a genuine false negative (any other readme
+spelling would previously have returned `UNKNOWN_NO_README` over a repository that ships one).
+🔵 **The ratchet's own comment says a ceiling over the wrong population is what *"trained eight
+passes to bump a number"* — so the value of this episode is that the gate was allowed to win.**
+🟡 **`make hooks` finishes at 20/22 with the two reds this KB already declares at `README.md:193`
+and `README.md:207`** (`recount`'s 5/5 `NO-ANCHOR` claims and `gate-permissive-arm`'s stale
+magnitude pin) — **both verified failing on pristine `HEAD` before this pass touched anything, and
+neither is this pass's to fix silently.** `gate-tables`, `gate-offline`, `gate-ladder-case` and
+`gate-enumeration` are green, and the new suite's **33 assertions run inside `make hooks`**.
+
+🔵 **One thing the
+measurement settled in this base's favour: every commit figure this KB carried in prose was EXACT —
+`rumi-platform`'s *"847 commits"* measured 847, `evaluators`' *"289"* measured 289. The figures that
+drifted were the star counts.** **The channel that died was the unreliable one.**
 
 ## Pass 327 — 2026-10-19 — **TEN REGION-PLACED ARTEFACTS WERE FOUND, LICENCE-READ, GRADED AND ADDRESSED TO THESE SHELVES THIRTY PASSES AGO AND NEVER WRITTEN; THE PRESCRIBED EIGHT-QUERY SWEEP ADDED NOTHING FOR A FOURTH PASS; AND THE CHEAPEST SUPPLY CHANNEL IN THIS KB IS AN ORGANISATION PAGE**
 

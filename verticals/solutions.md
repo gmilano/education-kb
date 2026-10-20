@@ -6,6 +6,41 @@ updated: 2026-10-20
 
 # Vertical platforms — education
 
+## Pass 329 — the platform tier did not move for a seventh pass, and the pass instead found how a self-hosted platform actually gets BOUGHT
+
+🔴 **No new platform row. Seventh consecutive pass, and the query is now reaching 16-year-old material.** The prescribed vertical query
+(`open source platform education ERP CRM MIT Apache`) returned **OpenEduCat** (held, LGPL-3.0 ERP on Odoo), **Apache OFBiz** (a general
+ERP, not education, and reviewed as *"better suited to VARs than SMEs"* in a dated InfoWorld piece), and 🔴 **`CK-ERP` — a
+SourceForge-era project whose most recent announcement on the Drupal lists is from July 2010.** 🔵 **Stated as a measurement and not as
+silence: the permissive education-platform supply is exhausted on this query shape, and has been for seven passes.** **The prescribed
+query should be retired alongside the bare agent query, for the same reason: it ranks affiliate comparison blogs and historical
+projects, permanently.**
+
+### 🟢 What this file did learn this pass, and it is upstream of the platform choice
+
+**The procurement work in `intel/market.md` p329 answers a question this file has never asked: how does a self-hosted platform get
+bought by a public institution?** 🔵 **The answer is that it is usually not bought at all — the INTEGRATION is bought — and the vehicle
+that pays for it already exists.**
+
+| region | the vehicle | what it means for a platform engagement |
+|---|---|---|
+| **EMEA** | 🟢 **GÉANT OCRE 2024** — runs **2025-02-03 → 2030-02**, **39 countries**, covers **IaaS / PaaS / SaaS**, and **direct award is one of its routes** | 🟢 **This is how a Moodle / Open edX / OpenOlat deployment plus AI integration gets funded in Europe without a new tender.** The platform is free; the hosting, integration and support are the billable line items, and OCRE is the instrument they are billed through |
+| **North America** | **Cooperative purchasing** — `Sourcewell`, `OMNIA Partners`, `NASPO ValuePoint`; one solicitation, then every member district buys off it | **A self-hosted platform integration sold once into a cooperative becomes orderable by every member district** |
+| **LATAM** | **ChileCompra Directive No. 44/2026** (updated 2026-03) governing AI and data-science buying via Mercado Público | **The rulebook that decides whether a self-hosted, sovereignty-preserving platform bid is even scoreable** |
+
+🔴 **Caveat, and it applies to every cell above: SEARCH-CHANNEL-ONLY.** `geant.org`, `ocre-project.eu`, `nwupc.ac.uk`,
+`crescentpurchasing.co.uk` and every other procurement host tested answered **403 at CONNECT / 000**. **Confirm on the buyer's own
+portal before any of it enters a bid.**
+
+### 🟡 One platform-tier re-grade from the activity channel, and it is a warning about the mature tier
+
+🔴 **`autolab/Autolab` (Apache-2.0, CMU) — 2,179 commits, 84 authors, 11 years of history, and its last commit is `2025-10-20`: stale
+by exactly one year today.** **`datakind/student-success-tool` (MIT) — 3,015 commits, 25 authors, last commit `2025-09-08`: stale 13
+months.** 🟢 **Meanwhile every agent- and evaluation-tier repository in this KB committed yesterday.** 🔵 **The platform tier of open
+education software is where the proven designs are and where the maintenance has stopped** — see `intel/trends.md` **trend 15**.
+🟢 **Commercially this is an opportunity with an honest price attached: read these systems for their design, adopt them only with a
+maintenance plan, and put that plan in the estimate rather than discovering it in month four.**
+
 ## Pass 328 — the platform tier did not move for a sixth pass, and the news is that two blog-asserted licences were false in the permissive direction
 
 🔴 **No new platform row. Sixth consecutive pass.** The prescribed vertical query —
