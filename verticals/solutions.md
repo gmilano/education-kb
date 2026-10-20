@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 343 · 2026-10-20 — one platform promoted with the deepest bench this shelf has added in a month, and the LATAM-connector sentence on this shelf gets a boundary rather than a refutation
+
+**Evidence:** [`p343-action-zc-placement`](../evidence/p343-action-zc-placement.2026-10-20-p343.tsv).
+
+🔴 **`make hooks` was not run** — the session's tool policy refuses to execute this repository's own `compose/code/` instruments. Every cell below is from plain `git` and `curl`.
+
+### 🟢 Promoted to the platform tier: an AI-native LMS with a real engineering bench
+
+| Platform | Repo | Grant, read first-hand | What it unblocks | Region of origin |
+|---|---|---|---|---|
+| **Mentingo** | https://github.com/Selleo/mentingo | 🟢 **MIT**, `main/LICENSE`, **1 062 B** (*Copyright (c) 2024 Selleo*) | 🟢 **An LMS that is AI-native in its core rather than AI-connected at its edge** — an AI mentor is a first-class object in the product, not a plugin bolted to a 2003 data model. **This is the first row on this shelf that an engagement can fork instead of integrate**: Moodle, Open edX, Canvas and Sakai are all pre-LLM platforms this base reaches through connectors (`falkenslab/moodle-mcp` and the Canvas rungs), and every one of them costs an adapter. MIT means no AGPL reach over the studio's own layer — the constraint that `Canvas` (AGPL-3.0) and `Open edX` (AGPL-3.0) impose and that this shelf has tabulated for passes | 🟢 **EMEA — Poland.** `selleo.com(223)` corporate, offsets `+0200(839) +0100(506)`, and **290 of 1 348 commits fall outside Mar–Nov**, which is what confirms a genuine CET/CEST shift rather than a single-season artefact |
+
+🟢 **The bench is the reason this is a platform row and not an agent row: 1 348 commits · 48 authors · 2024-08-01 → 2026-10-16, with 439 commits in 2026.** 🔵 **48 authors is more contributors than any row this shelf has promoted since the H5P cluster**, and the history predates the current agent wave by two years — so the AI-native framing is not a 2026 rebrand of a 2026 repository. 🟡 **96 ★.** Stated plainly because it is the same lesson as `bncc.dev` on `repos/foundations.md` this pass: **on this shelf star count has now failed twice in one hour as a proxy for depth**, in both directions.
+
+### 🔵 A boundary for this shelf's LATAM-connector sentence, not a refutation of it
+
+🟢 This shelf records, from the connector census: *"no published LATAM connector survived probing"* — and that sentence **stands**. 🔵 **But it is narrower than it reads, and `p343` can now say where its edge is.** `bncc-dev/bncc-pacotes` ships **`@bncc/mcp` (npm v0.6.0) plus a hosted MCP server at `mcp.bncc.dev` — streamable HTTP, no API key — with seven tools over the 1 721 learning objectives of the Brazilian BNCC**, placed **LATAM — Brazil** on both channels (`-0300` on 103 of 103; `profy.com.br(100)`). See `repos/foundations.md` this pass.
+
+🟢 **So the precise state of this shelf's LATAM coverage, in two sentences that must not be collapsed into one:**
+
+- 🔴 **There is still no LATAM-origin *LMS or SIS connector*** — nothing that reaches Moodle, Canvas, Open edX or a Brazilian SIS from an agent. The census result is intact, and `portabilis/i-diario` (AGPL-3.0, Brazilian SIS) remains a platform with **no** agent seam of its own.
+- 🟢 **There IS a LATAM-origin, production-hosted education MCP server**, and it serves the *curriculum-standards* layer rather than the platform layer.
+
+🔵 **The two facts compose, and that is the opportunity.** An engagement that needs *"grade this Brazilian student's work against the BNCC"* already has the standards half hosted and keyless from Brazil, and still has to build the platform half. 🟢 **`ACTION ZZ-e`: this shelf's connector census must record the LAYER a connector reaches (platform, standards, assessment, identity), because a per-region "none" that does not name its layer is the same defect `ACTION ZC` was registered for — a silence that looks like coverage.**
+
 ## Pass 342 · 2026-10-20 — the Spanish-language platform tier re-read first-hand and cleared, and `i-Diário`'s licence cell now rests on an instrument rather than on one pass's human read
 
 **Evidence:** [`p342-nonenglish-title-falsifier`](../evidence/p342-nonenglish-title-falsifier.2026-10-20-p342.tsv) · [`p342-channel-disagreement`](../evidence/p342-channel-disagreement.2026-10-20-p342.tsv).

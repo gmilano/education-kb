@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 343 — the prescribed legs fail for the fourteenth consecutive pass, and the hour went to the inventory instead: fourteen held rows placed, one new rung, and a fork URL that three recipes had been shipping
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**Evidence:** [`p343-action-zc-placement`](../evidence/p343-action-zc-placement.2026-10-20-p343.tsv) · [`p343-agent-authored-commits`](../evidence/p343-agent-authored-commits.2026-10-20-p343.tsv).
+
+🔴 **`make hooks` was not run** — the session's tool policy refuses to execute this repository's own `compose/code/` instruments (`Code from External`). No instrument-derived cell is written this pass; every figure below is from plain `git`/`curl` or is attributed to a search channel.
+
+### The prescribed discovery legs, run verbatim
+
+| Leg | What came back |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **Fourteenth consecutive failure.** General agent round-ups with no education ranking — OpenHands, OpenClaw, opencode, CrewAI, LangGraph, Hermes. The one education-adjacent hit was `ashishpatel26/500-AI-Agents-Projects`, a curated use-case list, **already held**. One source's own caveat is worth carrying: **AgentGPT was archived 2026-01-28** — do not let it back onto a deck. |
+| `github trending education AI 2026` | 🟡 **One education-specific hit, and this base added it at p326**: `withmarbleapp/os-taxonomy` (6.6k ★). Everything else was infrastructure. 🟢 **What was new was not the slug but its `PROVENANCE.md`** — see below. |
+| `open source AI tutoring agent repo github 2026 curriculum grading LMS MCP` | 🟢 **The productive leg this pass**, and the only one that returned anything placeable. It surfaced the `ai-tutor` topic page, which is where the hour actually went. |
+
+### 🟢 `github.com/topics/ai-tutor` read directly — 759 results, top 20 taken, every licence read first-hand
+
+🔴 **Nineteen of the twenty were already held.** 🟢 **One was not: `nichochar/ari`** (MIT, 1 073 B, 158 ★) — promoted to `agents/top.md` this pass as a **design reference only**. Handwriting-in-the-loop tutoring: a camera over a sheet of paper, the model sees work done **by hand**, personalisation is files (`TUTOR.md`, `USER.md`, `memories/`). 🔴 **11 commits, one author, two days old, macOS-only camera bridge, and the LLM path is a ChatGPT-account Codex login that sends submitted work to OpenAI.**
+
+🟡 **Two corrections to what the search channel said, both from first-hand payloads:**
+
+| Repo | The channel claimed | The payload says |
+|---|---|---|
+| `nirholas/ai-tutor-mcp` | *"license is listed as proprietary, so it is not open source"* | 🟢 **Apache-2.0**, 11 338 B stock text, `main/LICENSE`. 🔴 **But the channel's description was stale in the other direction too — it is not a tutor at all.** Its README describes a **tutoring billing ledger**: `load_session` reads an itemised tab, `close_session` seals it into an attested invoice with a SHA-256 attestation. **7 ★, 2 commits. Refused — not an agent row** |
+| `kvnloo/tutor-mcp` presented as the original, `ArnaudGuiovanna/tutor-mcp` as *"forked from"* it | 🔴 **Reversed.** Both payloads are byte-identical at **1 073 B** reading *Copyright (c) 2026 **Arnaud Guiovanna***; `ArnaudGuiovanna/tutor-mcp` carries **no fork notice**, 467 c · 5 a · head **2026-10-16**, against the fork's 452 c at 2026-10-02. 🟢 **This base proved the lineage at p139 and then shipped the fork's URL in its canonical table and three recipes for six passes. Corrected this pass** |
+
+### 🟢 `ACTION ZC` executed — the placement sweep, 14 rows
+
+🟢 **13 of 14 placed. EMEA 5 · APAC 6 · North America 2 · LATAM 0 · NOT RESOLVED 1.** Full distributions in the evidence TSV; the reasoning is on `agents/top.md`. 🔴 **`KeWang0622/kaogong-skill` is NOT RESOLVED and earns a standing rule (`ACTION ZZ-b`): its SUBJECT is China civil-service exams, its AUTHORSHIP channel reads `-0700/-0500` on five commits, and a row may not borrow one region for the other.**
+
+🔵 **The trend this sweep exposed, now `intel/trends.md` T35: six of the twenty rows are host-agent SKILL packages rather than applications, and all six are MIT.** Excluding the one 41.9k-★ incumbent (`HKUDS/DeepTutor`), **that tier is 1 731 of the remaining 4 784 stars — 36%.** 🟢 **It is also the first tier on these shelves with no copyleft in it anywhere**, and it explains why the discovery legs keep failing: they are tuned to applications, and the growth is not shaped like one.
+
+🔴 **And the finding nobody went looking for, now T36:** `zijinz456/OpenTutor` has **52 of 194 commits authored by `noreply@anthropic.com`, every one a `chore:`** — weekly build-in-public content, repo health reports, community post drafts, on a schedule since March. `ArnaudGuiovanna/tutor-mcp` has **30 of 467 from the same address, every one a `fix:`/`test:`** — migrations, store exceptions, a stabilization audit. 🟢 **Same channel, opposite meaning. `git log --format='%ae%x09%s'` before quoting any row's bench.**
+
+---
+
+
 ## 2026-10-20 — Pass 342 — the prescribed legs fail for the thirteenth consecutive pass, two new discovery legs in Spanish and Chinese fail too, and the hour bought T31's falsifier instead
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

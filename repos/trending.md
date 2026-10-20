@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 343 — the trending channel is blind to this vertical for the fourteenth pass, and the repository it keeps recommending turned out to have a licence file nobody had read
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**Evidence:** [`p343-action-zc-placement`](../evidence/p343-action-zc-placement.2026-10-20-p343.tsv).
+
+🔴 **`make hooks` was not run** — the session's tool policy refuses to execute this repository's own `compose/code/` instruments. Every figure below is from plain `git`/`curl`, or attributed.
+
+### The prescribed legs
+
+| Leg | Result |
+|---|---|
+| `github trending education AI 2026` | 🔴 **No live GitHub Trending page reachable for the tenth consecutive pass.** Third-party roundups only. Their single education-specific recommendation for October is `withmarbleapp/os-taxonomy` — **held since p326** |
+| `open source platform education LMS SIS MIT Apache 2026` | 🟡 **Re-confirms the standing finding and adds nothing: there is still no mainstream MIT-licensed LMS or SIS.** Moodle GPL-3.0, Chamilo GPL-3.0, Open edX AGPL-3.0, Canvas AGPL-3.0, OpenEduCat LGPL-3.0, Sakai ECL-2.0, **OpenOLAT Apache-2.0** the lone permissive platform. 🔴 One aggregator asserted an MIT option and could name none |
+
+### 🔴 The thing that was actually new, and it was inside a repo this base has held for 17 passes
+
+🟢 **`withmarbleapp/os-taxonomy`'s `PROVENANCE.md` (8 685 B) read first-hand for the first time.** The repository's headline grant — **ODbL-1.0** (database) + **CC BY-SA-4.0** (authored text) — **does not cover the standards.** The file says so plainly: *"those standards are extracted from external curriculum frameworks that Marble does **not** own and **cannot** relicense. You can only receive from us the rights the upstream holders grant."*
+
+🔴 **Eight sources, four commercial postures** — full tier list on `repos/foundations.md`, the trend reading as `intel/trends.md` **T37**:
+
+| Tier | Source | Posture |
+|---|---|---|
+| 🟢 | UK National Curriculum (**OGL v3.0**, full text) | commercial, adaptable, **no share-alike** |
+| 🟢 | Australian Curriculum v9 (**CC BY 4.0**, 620 descriptions) | clean, with ACARA's mandatory **non-endorsement** notice |
+| 🟡 | Common Core (**CCSS Public License**, full text) | **purpose-limited**; *"does not clearly grant derivative-work or sublicensing rights"* |
+| 🔴 | NGSS, NCSS, IB | **codes only**; NGSS commercial reuse needs **WestEd** approval + trademark disclaimer |
+
+🔵 **The structural reading: coverage and usability are inverted by region.** The repository is **EMEA-authored** (placed this pass: `withpebble.com(7)`, `+0100(43)` across Jul–Oct), its cleanest tiers are **EMEA and APAC**, and its **North American** tiers are its worst. 🟢 **Topic→standard LINKS survive at every tier; the standard's PROSE does not.**
+
+### 🟢 Promoted to foundations: the LATAM standards stack this base has walked past for six passes
+
+🔴 **Not one of `os-taxonomy`'s eight sources is Latin American.** 🟢 **And the missing layer was already on `repos/foundations.md`, unplaced, cited only as a specimen of classifier disagreement:**
+
+| Repo | Grant, read first-hand | Activity | Placed |
+|---|---|---|---|
+| `bncc-dev/bncc-dados` | **CC BY 4.0** (data) + MIT (code) | 40 c · 3 a · 2026-07-09 → 2026-10-15 | 🟢 **LATAM — Brazil** (`-0300` 40/40, `profy.com.br(32)`) |
+| `bncc-dev/bncc-pacotes` | **MIT** (code) + **CC BY 4.0** (data, synced from a pinned `bncc-dados` commit) | 103 c · 3 a · 2026-07-09 → 2026-10-15 | 🟢 **LATAM — Brazil** (`-0300` 103/103, `profy.com.br(100)`) |
+| `bncc-dev/bncc-benchmark` | **MIT** (`harness/`, `test/`) + **CC BY 4.0** (`itens/`, `resultados/`) | 82 c · 2 a · 2026-07-12 → 2026-09-19 | 🟢 **LATAM — Brazil** (`-0300` 82/82, `profy.com.br(79)`) |
+
+🟢 **`@bncc/dados` (npm v0.7.0), `bncc` (PyPI v0.5.0), `@bncc/mcp` (npm v0.6.0) — plus a HOSTED MCP server at `mcp.bncc.dev`: streamable HTTP, NO API KEY, seven tools over 1 721 learning objectives of Brazilian basic education,** which the README states are *"verificadas contra os documentos oficiais do MEC/CNE"*. **225 commits, all `-0300`, `.br` corporate domain on 211 — the least ambiguous regional placement on these shelves.**
+
+🔴 **Nine stars.** 🔵 **That is the entire explanation for six passes of declared LATAM emptiness, and it indicts the channel, not the region.** 🟢 **`ACTION ZZ-d`: the LATAM supply leg must query the package registries and the national framework NAMES — `BNCC`, `SEP`, `Aprende`, `MEC` — not a star-ranked search.** This base already recorded the principle as `ACTION TJ` (*"the registry is strong on a named standard and weak on a concept"*); **a national curriculum is a named standard.**
+
+### 🟢 Also promoted: a platform row with the deepest bench added in a month
+
+**`Selleo/mentingo`** — **MIT**, 1 062 B, **1 348 commits · 48 authors · 2024-08-01 → 2026-10-16 (439 in 2026)**, placed 🟢 **EMEA — Poland** (`selleo.com(223)`, `+0200(839) +0100(506)`, **290 commits outside Mar–Nov confirming the CET/CEST shift**). 🟢 **An AI-native LMS an engagement can FORK rather than integrate — the first on these shelves.** 🟡 **96 ★**, which with `bncc.dev`'s nine makes two rows in one hour where star count failed as a proxy for depth.
+
+---
+
+
 ## 2026-10-20 — Pass 342 — the trending channel is blind to this vertical for the thirteenth pass, and the repositories it keeps recommending were read again instead: 21 payloads, 4 channels, 1 instrument repaired
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

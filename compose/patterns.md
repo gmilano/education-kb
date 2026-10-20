@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 343 · 2026-10-20 — two new recipes and one correction that had been sitting in three of them: every `tutor-mcp` step on this shelf pointed at the FORK
+
+**Evidence:** [`p343-action-zc-placement`](../evidence/p343-action-zc-placement.2026-10-20-p343.tsv).
+
+🔴 **`make hooks` was not run this pass** — the session's tool policy refuses to execute this repository's own `compose/code/` instruments. Every component grant below was read first-hand with `curl`; every activity figure with `git`.
+
+### 🔴 Correction applied to P1, P6 and P7 — three recipes shipped a fork's URL while this base's own instrument had already proved it was one
+
+🟢 **`compose/code/p139-duplicate-lineage/` established at p139 that `kvnloo/tutor-mcp` is a fork of `ArnaudGuiovanna/tutor-mcp`, seven commits behind, with a byte-identical description and a `LICENSE` reading `Copyright (c) 2026 Arnaud Guiovanna`.** `agents/top.md` flags it as *"🟡 A fork."* 🔴 **And three recipes on this shelf — plus the canonical agent-table row — still named the fork as the component to build on.**
+
+🟢 **Re-measured this pass, and the gap has widened:** upstream `ArnaudGuiovanna/tutor-mcp` is at **467 commits · 5 authors · head 2026-10-16**; the fork was last measured at **452 c · 2026-10-02**. **Fifteen commits and two weeks behind, and drifting.** 🟢 **All four citations now point upstream**, with the fork retained only where this base discusses lineage.
+
+🔵 **The class, because it is the fourth sighting in two days and the cheapest one yet:** *capability present, instrument already built and already run, verdict never propagated to the shelf that spends it.* **p139 produced the right answer and nobody edited the recipe.** 🟢 **`ACTION ZZ-f`: when a lineage, licence or placement verdict lands in `evidence/` or `compose/code/`, grep the four decision shelves AND `compose/patterns.md` for the slug in the same pass. A verdict that does not reach a recipe has a 0% delivery rate, which is `p327`'s rule applied to this file.**
+
+---
+
+### P9 — A Brazilian national-curriculum agent, where the standards layer is already hosted and the budget goes to the platform half — NEW at p343
+
+**Trigger:** 🟢 **LATAM — Brazil.** Any engagement that must answer *"does this student's work meet the BNCC, and which habilidade does it hit?"* — public-sector delivery, a Brazilian edtech, or a global platform localising for Brazil. 🔵 **The trigger that makes it urgent:** Brazil's **PL 2338/2023** (Senate-passed 2024, awaiting the Chamber of Deputies) would classify student selection as high-risk with fines to **BRL 50M or 2% of turnover** — so the curriculum-alignment audit trail is cheapest to build now, before the bill lands.
+
+**Why this recipe exists, stated honestly:** 🔴 **Five passes of this base recorded that the LATAM supply side returned nothing placeable.** 🟢 **It was wrong, and the asset is nine stars deep:** every discovery leg here is star- or trending-ranked, and the Brazilian curriculum stack is invisible to all of them (`intel/trends.md` **T37**, `ACTION ZZ-d`).
+
+**Wiring:**
+1. 🟢 **`bncc-dev/bncc-pacotes`** (**MIT** code + **CC BY 4.0** data, `main/LICENSE` is a Portuguese `# Licenças` splitter) — **the standards layer, and it is already a product.** Three ways in, pick by stack: `@bncc/dados` (npm **v0.7.0**, typed TS API — `porCodigo`, `habilidadesEF`, `buscar`, `decodificar`), `bncc` (PyPI **v0.5.0**, the same API in snake_case), or **`@bncc/mcp` (npm v0.6.0)**. 🟢 **Fastest path: the hosted MCP at `mcp.bncc.dev` — streamable HTTP, NO API KEY, seven tools** (`bncc_lookup`, `bncc_buscar`, `bncc_listar`, `bncc_decodificar`, `bncc_estatisticas`, `bncc_estrutura`, `bncc_progressao_ei`). **A day-one agent demo needs no infrastructure at all.** 🟡 Pin `@bncc/dados` for production rather than depending on the hosted endpoint, and note the packages are **0.x** — the README ties `1.0.0` to the `dados-v1.0.0` release of `bncc-dados`.
+2. 🟢 **`bncc-dev/bncc-dados`** (**CC BY 4.0**) — the dataset itself, **1 721 learning objectives of Brazilian basic education**, which the README states are *"verificadas contra os documentos oficiais do MEC/CNE"*. Vendor this, pinned by commit, if the engagement cannot call out.
+3. 🟢 **`bncc-dev/bncc-benchmark`** (**MIT** harness + **CC BY 4.0** items/results) — **the evaluation half, in the same licence shape.** 🔵 **This is the step that makes the deliverable defensible rather than demo-able:** an item bank and a published methodology for scoring a model against the national curriculum. Use it as the acceptance gate, not as a marketing number.
+4. 🟢 **`ArnaudGuiovanna/tutor-mcp`** (**MIT**, 1 073 B, 467 c · 5 a · head 2026-10-16) — the **deterministic pedagogy** engine: BKT for mastery, FSRS for review timing, prerequisite rules, mastery routing at 0.85, narrative memory for session context. 🔵 **Feed its skill graph from the BNCC codes** so progression is expressed in the national framework's own vocabulary rather than a bespoke taxonomy. SQLite for a pilot, PostgreSQL for the institution profile.
+5. 🟡 **`portabilis/i-diario`** (**AGPL-3.0**, 35 326 B — read first-hand at p341/p342) if the engagement must touch a Brazilian SIS. 🔴 **It has no agent seam of its own**, so this is a build, and the AGPL stays on the far side of it.
+6. 🟢 **`Cvmcosta/ltijs`** (Apache-2.0, placed **LATAM — Brazil** at p342) as the LMS seam — Brazilian-maintained, which matters in a public-sector bid.
+
+**Licence posture:** 🟢 **The cleanest LATAM recipe on this shelf.** Steps 1–4 and 6 are MIT/Apache-2.0 code with CC BY 4.0 data — **no copyleft anywhere in the client's own layer**, and attribution is the only obligation on the data. 🔴 **Two things to get right:** the **`bncc.dev` name and visual identity are explicitly NOT licensed** (*"o código é livre; a marca não"*), so a derivative must not present itself as bncc.dev; and if step 5 is in scope, the AGPL-3.0 SIS must sit behind a service boundary. **Timeline:** 6–8 weeks for the alignment agent (steps 1–4), 12–14 with the SIS integration.
+
+---
+
+### P10 — Deterministic pedagogy behind a generative tutor, for a buyer who has to defend the progression decision — NEW at p343
+
+**Trigger:** 🟢 **EMEA first, then North America.** The EU AI Act classifies admissions, student evaluation and exam scoring as **high-risk** — risk management, data governance, human oversight and conformity assessment *before* deployment. 🟢 **Also North America, where the obligation now has the same shape from a different direction:** **New York City** places **grading and discipline** in a *prohibited* tier, and **Oklahoma SB 1734** bars AI as the primary basis for grading or discipline. 🔵 **Both regimes ask the same question — *what decided this?* — and a prompt cannot answer it.**
+
+**Why this recipe exists:** 🔴 **Every tutor on these shelves whose progression logic lives in a prompt fails this question by construction.** There is no artefact to audit, no threshold to show, and no way to replay the decision. 🟢 **The 2026 answer is a split architecture, and it now exists as off-the-shelf MIT parts:** the model generates and explains; a deterministic engine decides what comes next.
+
+**Wiring:**
+1. 🟢 **`ArnaudGuiovanna/tutor-mcp`** (**MIT**, 1 073 B) — **the decision engine, and the reason this recipe is buildable rather than aspirational.** Its own framing is *"Generative teaching. Deterministic pedagogy"*: **BKT** knowledge estimates, **FSRS** review scheduling, prerequisite rules, assessment evidence, a mastery routing threshold of **0.85**, and two MCP tools that carry the contract — `get_next_activity` (the client asks what to do) and `record_interaction` (the client reports what happened). 🟢 **Because progression is a function of stored state and a published threshold, the answer to *"why was this learner advanced?"* is a query, not a narrative.** Transports: local stdio, or remote HTTPS with **OAuth** — the Institution profile on PostgreSQL. 🟡 **Alpha, v0.6.1** — pin it, and budget for reading its migrations.
+2. 🟢 **`CAHLR/OATutor`** (**MIT**, UC Berkeley CAHLR) — the **second, independent** BKT implementation on these shelves, and the one with academic provenance. 🔵 **Use it as the cross-check, not as a duplicate:** two mastery estimates that disagree on a cohort is exactly the finding a conformity assessment wants documented, and it costs one evaluation run.
+3. 🟢 **`ankimcp/anki-mcp-server`** (**MIT**, 521 ★, placed **EMEA**) — the retention layer over real Anki decks, so spaced repetition runs in a tool the learner already owns and the review schedule is inspectable outside the vendor's database. 🔵 **A client-owned review store is a data-residency answer as much as a pedagogical one.**
+4. 🟢 **`Selleo/mentingo`** (**MIT**, 1 062 B, **1 348 c · 48 a**, placed **EMEA — Poland**) — **the delivery surface, and the step that changes this recipe's economics.** It is the first AI-native LMS on these shelves an engagement can **fork** rather than integrate; every other platform here (Moodle GPL-3.0, Open edX AGPL-3.0, Canvas AGPL-3.0) costs an adapter and imposes copyleft on the hosting question. 🟢 **MIT means the client's own layer stays closed.**
+5. 🟡 **`withmarbleapp/os-taxonomy`** (ODbL-1.0 + CC BY-SA-4.0, 6.6k ★, placed **EMEA**) for the prerequisite graph — **1 591 micro-topics, 3 225 prerequisite edges.** 🔴 **Read `intel/trends.md` T37 before this step.** Use the **graph and the standard CODES**, keep the client's enrichment in a **separate** database so no Derivative Database is created, and do not ship Common Core or NGSS **prose**: CCSS is purpose-limited and NGSS is codes-only pending WestEd approval. 🟢 **For a UK engagement this step is clean** (OGL v3.0, full text, no share-alike); **for Australia it is clean with ACARA's notice**; **for Brazil, swap in P9's step 1–2.**
+6. 🟢 **`falkenslab/moodle-mcp`** (**MIT**) if the client will not leave Moodle — ~230 tools under the teacher's own login, students anonymised to the model. 🔵 **The anonymisation is not a nicety here; it is the data-minimisation argument the AI Act asks for, already implemented.**
+
+**Licence posture:** 🟢 **Steps 1–4 and 6 are MIT end to end — the first recipe on this shelf with no copyleft and no purpose-limited content in its core path.** 🔴 **Step 5 is the only licence decision, and it is a CONTENT decision, not a code one.** **Timeline:** 8–10 weeks for steps 1–4; add 3–4 for the conformity technical file, which is the deliverable the EMEA buyer is actually purchasing.
+
+🔵 **What P10 deliberately does not contain:** a claim that BKT or FSRS is pedagogically better than a well-prompted model. 🟢 **The argument is narrower and it is the one the regulation makes: the decision must be inspectable.** An auditable threshold that is slightly worse on a benchmark beats an excellent prompt that cannot be examined, in both of the jurisdictions above.
+
 ## Pass 342 · 2026-10-20 — eight recipes, unchanged in structure; P8's step 5 is no longer a manual step, and P8 gains the check that stops the opposite error
 
 **Evidence:** [`p342-nonenglish-title-falsifier`](../evidence/p342-nonenglish-title-falsifier.2026-10-20-p342.tsv) · [`p342-channel-disagreement`](../evidence/p342-channel-disagreement.2026-10-20-p342.tsv).
@@ -39,7 +91,7 @@ Every repository named below was existence- and grant-verified first-hand this p
 **Wiring:**
 1. **`Cvmcosta/ltijs`** (Apache-2.0) — stand up the tutor as a certified **LTI 1.3 / LTI Advantage** tool. This is the seam: it installs into Moodle, Canvas, Open edX, Sakai, Blackboard and D2L unchanged.
 2. **`CAHLR/OATutor`** (MIT) — take its **Bayesian Knowledge Tracing** mastery model as the learner-state engine. BKT gives you a defensible, inspectable mastery estimate; an LLM alone does not.
-3. **`kvnloo/tutor-mcp`** (MIT) — skill-graph construction with prerequisites, plus review scheduling, exposed over MCP so any model can drive it.
+3. **`ArnaudGuiovanna/tutor-mcp`** (MIT — 🔴 **upstream; `kvnloo/tutor-mcp` is a fork 15 commits behind, corrected at p343**) — skill-graph construction with prerequisites, plus review scheduling, exposed over MCP so any model can drive it.
 4. **`satvik314/educhain`** (MIT) — generate the MCQs and lesson scaffolds the tutor serves, across its 8 pedagogical approaches.
 5. Grades and roster flow back through LTI Advantage **AGS/NRPS**, so the LMS stays the system of record.
 
@@ -116,7 +168,7 @@ Every repository named below was existence- and grant-verified first-hand this p
 
 **Wiring:**
 1. **`GeminiLight/gen-mentor`** (CC0-1.0) — the goal-oriented ITS from the WWW 2025 paper: refine the target role, measure the gap against the learner's background, schedule sessions, generate each session's reading and quiz, rebuild the learner profile from behaviour. **Goal-to-gap-to-path is precisely the employability loop.** 🟡 CC0 is a public-domain dedication, not a software licence — no patent grant, no warranty disclaimer; have counsel look before it enters a deliverable.
-2. **`kvnloo/tutor-mcp`** (MIT) — hold the role's skill graph with prerequisites, and version it as the target role changes.
+2. **`ArnaudGuiovanna/tutor-mcp`** (MIT — 🔴 **upstream, corrected at p343; the fork was cited here for six passes**) — hold the role's skill graph with prerequisites, and version it as the target role changes.
 3. **`frappe/education`** (GPL-3.0) for enrolment and administration, or **`frappe/lms`** (AGPL-3.0) for delivery. 🟡 **The two halves of the Frappe stack sit on different rungs** — Education is GPL, LMS is AGPL. Choose deliberately; the AGPL half is the network-facing one.
 4. **`GibbonEdu/core`** (GPL-3.0) if a school-management/SIS layer is needed; **`OS4ED/openSIS-Classic`** (**GPL-2.0**, `master/docs/License.txt`) is the other real option. 🔴 **Declared gap: no permissively licensed SIS of scale exists** — all three candidates (Gibbon GPL-3.0, Frappe Education GPL-3.0, openSIS GPL-2.0) are copyleft. If the client needs closed SIS extensions, build a bespoke SIS service over LTI 1.3 instead of forking a GPL one. 🔵 Credentialing note: Open Badges is implementable, but `1EdTech/openbadges-specification` carries the **IMS Global Specification Document License**, not an OSI grant — implement the spec, do not vendor the document.
 5. **`Cvmcosta/ltijs`** (Apache-2.0) as the seam, again.
@@ -143,7 +195,7 @@ Every repository named below was existence- and grant-verified first-hand this p
 1. **Pick the regional precedent, not the generic lane.** **`pablopc05/mcp-usc`** (MIT, `main/LICENSE`) for a **European Moodle** tenancy — Spanish-language, CI, acts under the student's own permissions. **`psychquant/che-ntucool-mcp`** (MIT) for an **APAC Canvas** tenancy. **`skhdemo/uoft-quercus-mcp`** (MIT) for a **North American Canvas** tenancy with a personal-access-token model. **`sonaiengine/ku-portal-mcp`** (MIT, on PyPI) where the seam is a **student portal** rather than an LMS.
 2. **Lift the write gate before writing any feature.** `che-ntucool-mcp` gates **grade and announcement writes behind an explicit human confirmation** and leaves reads unguarded. 🟢 **Port that boundary first** — it is the EU AI Act Article 14 human-oversight control, and it satisfies Korea's high-impact and Vietnam's high-risk education provisions at the same time.
 3. **Swap the platform client, keep the tool surface.** All four are thin API clients around a documented LMS API behind an MCP tool surface. Re-pointing the base URL and auth strategy to the client's tenancy is the actual work; the tool definitions, the pagination and the error handling carry over.
-4. **Add the mastery model, not just the chat.** **`CAHLR/OATutor`** (MIT) for inspectable **Bayesian Knowledge Tracing**, or **`kvnloo/tutor-mcp`** (MIT) for the skill graph and review scheduling, so learner state is defensible rather than a prompt.
+4. **Add the mastery model, not just the chat.** **`CAHLR/OATutor`** (MIT) for inspectable **Bayesian Knowledge Tracing**, or **`ArnaudGuiovanna/tutor-mcp` (upstream, corrected at p343)** (MIT) for the skill graph and review scheduling, so learner state is defensible rather than a prompt.
 5. **Generate into the platform, not beside it.** **`satvik314/educhain`** (MIT) for MCQs and lesson scaffolds; write them back through the connector so the LMS stays the system of record.
 6. **If the platform is Open edX, stop and use LTI 1.3 instead.** Both Open edX MCP lanes are **AGPL-3.0** and one is a Tutor plugin. 🔴 **MCP is the wrong seam on that one platform.**
 

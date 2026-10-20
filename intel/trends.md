@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 343 · 2026-10-20 — three new trends, each measured on a channel this base already had: the distribution unit of an education agent has changed, the commit log now reports what an agent was *used for*, and the binding constraint on a curriculum product is a licence tier list rather than a model
+
+**Evidence:** [`p343-action-zc-placement`](../evidence/p343-action-zc-placement.2026-10-20-p343.tsv) · [`p343-agent-authored-commits`](../evidence/p343-agent-authored-commits.2026-10-20-p343.tsv).
+
+🔴 **`make hooks` was not run this pass** — the session's tool policy refuses to execute this repository's own `compose/code/` instruments. Everything below was measured with plain `git` and `curl`, or is attributed to a search channel.
+
+### T35 — The education agent's unit of distribution is now a **skill on a host agent**, not an application, and the whole tier is MIT
+
+🟢 **Measured, not asserted.** On `github.com/topics/ai-tutor` (759 results; top 20 read this pass), **six of the twenty rows are host-agent skill packages rather than applications**: `ZeKaiNie/universal-examprep-skill` (310 ★), `Li-Evan/Bloom` (289 ★, *"Claude Code skill and self-hostable app"*), `SenmuuuuW/universal-diagnostic-tutor-skill` (249 ★), `KeWang0622/kaogong-skill` (192 ★), `flysheep-ai/education-skills` (116 ★, *"collection of Claude Code skills"*), and `24kchengYe/human-skill-tree` (575 ★, 33 agent skills). 🟢 **All six are MIT, every grant read first-hand this pass.** The shelves also already hold `anthropics/k12-teacher-skills` (Apache-2.0) in the same shape.
+
+🔵 **The share is the finding.** `HKUDS/DeepTutor` alone holds 41.9k of the top 20's ~46.7k stars; **excluding that one outlier, the skill-package tier is 1 731 of the remaining 4 784 stars — 36%.** 🟢 **A third of the attention in this topic, outside one incumbent, is going to artefacts that are not programs.**
+
+🟢 **Three consequences an engagement can act on:**
+- 🟢 **Licensing gets easier, and this is the first tier on these shelves with no copyleft in it at all.** A skill is prompt text and a manifest; there is no linking question, no §13 network trigger, no derivative-work argument. **Every row above is MIT.** Compare the platform tier, where this base has repeatedly measured that **the only permissive LMS options are `OpenOLAT` and `JupyterHub`.**
+- 🔴 **Due diligence gets harder, and in a way a licence scan will not catch.** The asset *is* the pedagogy, expressed as instructions. There is no test suite to run, no API to probe, and a 1 073-byte MIT file tells you nothing about whether the teaching is sound. 🔵 **The only instrument that reaches it is a review of the prompts themselves — which is a pedagogue's job, not a scanner's.** This base has no instrument for it and should not pretend otherwise.
+- 🟡 **The dependency risk inverts.** A skill runs inside someone else's host agent, so **the host's model, pricing and policy are now in the delivery path.** `nichochar/ari` is the sharp case (`agents/top.md` this pass): MIT code whose tutoring path is a **ChatGPT-account Codex login**, with work and learner context sent to OpenAI. 🔴 **For an EU engagement that is a high-risk-system data path before a line is written.**
+
+🔵 **T35 also explains the star counts this base keeps flagging as too low** (`bncc.dev` at 9 ★, `Selleo/mentingo` at 96 ★, `ArnaudGuiovanna/tutor-mcp` at 53 ★): **the discovery legs are tuned to applications, and the tier that is growing is not shaped like one.**
+
+### T36 — The commit channel reports **what an agent was used for**, and engineering and promotion are not the same signal
+
+🟢 **Two held rows, same channel, opposite meaning** ([`p343-agent-authored-commits`](../evidence/p343-agent-authored-commits.2026-10-20-p343.tsv)):
+
+- 🔴 **`zijinz456/OpenTutor` — 52 of 194 commits (26.8%) authored by `noreply@anthropic.com`, and every sampled subject is a `chore:`:** *weekly build-in-public content*, *weekly repo health report*, *community post drafts*. **Running since 2026-03-26.** A quarter of this repository's history is **scheduled self-promotion**.
+- 🟢 **`ArnaudGuiovanna/tutor-mcp` — 30 of 467 (6.4%) from the same address, every sampled subject a `fix:` or `test:`:** *scan retired migration columns once, without regexps*; *record the reviewed `GetLearnerDomainByID` store exception*; *close P2 robustness and abuse findings from the stabilization audit*. **That is maintenance discipline, and it is evidence FOR the row.**
+
+🔴 **So "commits" and "stars" are not comparable units across these two rows, and the difference is invisible in both numbers.** 🟢 **The axis is not human-vs-agent — it is engineering-vs-promotion, and only the subject lines carry it.** One command settles it and needs no README and no judgement:
+
+```
+git log --format='%ae%x09%s' | grep -i anthropic
+```
+
+🔵 **T36 is the commit-channel sibling of the star-solicitation caveat this base recorded at p318/p319 for `24kchengYe/human-skill-tree`** — whose README addresses itself to AI readers asking for stars. 🟢 **Same phenomenon, two surfaces: attention is being manufactured, and in 2026 it is being manufactured on a schedule by an agent.** `ACTION ZZ-c` makes the split mandatory before any row's bench is quoted to a client.
+
+### T37 — The binding constraint on a curriculum-AI product is a **per-source licence tier list**, and it is regionally inverted
+
+🟢 **Read first-hand from `withmarbleapp/os-taxonomy`'s `PROVENANCE.md` (8 685 B) — the file that decides whether the most-cited education repository of this month can ship.** The repository's headline grant (ODbL-1.0 for the database, CC BY-SA 4.0 for authored text) **does not cover the standards**: *"those standards are extracted from external curriculum frameworks that Marble does **not** own and **cannot** relicense."*
+
+🔴 **Eight sources, four distinct commercial postures, and the good ones are not where a US-centric team would expect:**
+
+| Tier | Sources | Posture |
+|---|---|---|
+| 🟢 Clean | **UK National Curriculum** (OGL v3.0 — commercial, adaptable, **no share-alike**) | ship it |
+| 🟢 Clean with attribution | **Australian Curriculum v9** (CC BY 4.0 + mandatory ACARA **non-endorsement** notice) | ship it, reproduce the notice |
+| 🟡 Purpose-limited | **Common Core** (CCSS Public License — *"does not clearly grant derivative-work or sublicensing rights"*) | **an open question, not a permission** |
+| 🔴 Codes only | **NGSS** (text omitted; commercial reuse needs **WestEd** approval + trademark disclaimer), **NCSS**, **IB** | plan on codes, or licence the text directly |
+
+🔵 **The inversion is the trend, and it is the opposite of this industry's usual regional story:** the repository is **EMEA-authored**, its **cleanest** tiers are the **EMEA and APAC** ones, and its **North American** tiers are its **worst** — the US standards are either purpose-limited or stripped to bare codes. 🟢 **An engagement that reads *"3 881 standards from 8 sources"* as a single asset will plan a US K-12 product around a payload that is codes-only and trademark-encumbered.** The topic→standard **links** survive at every tier, so *"this topic maps to `1-ESS1-1`"* is always available — **it is the standard's prose that is not.**
+
+🔴 **And the eight sources contain no Latin American framework at all.** 🟢 **The missing spine exists separately, under a cleaner grant than that graph's own US tiers:** `bncc-dev/bncc-dados` + `bncc-pacotes` — **MIT code, CC BY 4.0 data**, 1 721 Brazilian learning objectives *"verificadas contra os documentos oficiais do MEC/CNE"*, with a **hosted keyless MCP server at `mcp.bncc.dev`**, placed **LATAM — Brazil** (`-0300` on 225 of 225 commits; `profy.com.br` on 211). See `repos/foundations.md` and `compose/patterns.md` **P9** this pass.
+
+🟢 **T37's practical form, and it belongs in every education deck this studio writes: licence the CONTENT before you choose the MODEL.** A curriculum product's hardest constraint is not inference cost and not the platform's copyleft — **it is whether the standard's text may be redistributed commercially, and that answer is per-source, per-jurisdiction, and not in the repository's licence badge.**
+
 ## Pass 342 · 2026-10-20 — T31's falsifier run: the defect is Portuguese, its population is 1 and not 3, and the same blindness is in two more instruments
 
 **Evidence:** [`p342-nonenglish-title-falsifier`](../evidence/p342-nonenglish-title-falsifier.2026-10-20-p342.tsv) (21 payloads, 4 channels each) · [`p342-channel-disagreement`](../evidence/p342-channel-disagreement.2026-10-20-p342.tsv) (12 graded channel answers).

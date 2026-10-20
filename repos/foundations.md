@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 343 · 2026-10-20 — `os-taxonomy`'s licence is not one licence, it is a **per-source tier list**, and reading it places the gap it leaves: there is no Latin American curriculum framework among its eight sources, and the layer it is missing is already on this shelf, unplaced
+
+**Evidence:** [`p343-action-zc-placement`](../evidence/p343-action-zc-placement.2026-10-20-p343.tsv).
+
+🔴 **`make hooks` was not run this pass** — the session's tool policy refuses to execute this repository's own `compose/code/` instruments. Every cell below was measured with plain `git` and `curl`, and no instrument-derived value is written.
+
+### 🟢 `withmarbleapp/os-taxonomy` — placed, and the grant restated correctly
+
+🔵 `p341` was right to call the ODbL abstention correct behaviour, and `p342` was right that no code-licence vocabulary can name it. 🟢 **What no pass has done is read `PROVENANCE.md`, and it is the file that decides whether an engagement can ship this.** Read first-hand this pass (8 685 B, `main/PROVENANCE.md`).
+
+🟢 **Placed: EMEA.** `withpebble.com(7)` corporate alongside `gmail.com(41)`, offsets `+0100(43) +0200(4) +0300(1)` across Jul–Oct 2026 — the UK summer window. 48 commits, 3 authors, head **2026-10-20**.
+
+🔴 **The repository's own headline grant — ODbL-1.0 for the database, CC BY-SA 4.0 for Marble's authored text — does NOT cover the standards.** `PROVENANCE.md` states it outright: *"`data/curriculum-standards.json` is different. Those standards are extracted from external curriculum frameworks that Marble does **not** own and **cannot** relicense. You can only receive from us the rights the upstream holders grant."*
+
+🟢 **So the asset is tiered, and the tiers decide the engagement. Eight sources, graded as the file itself grades them:**
+
+| Source | Framework | Upstream grant | What ships | Commercial reading |
+|---|---|---|---|---|
+| `uk-nc-2013` | National Curriculum in England, KS1–2 | 🟢 **Open Government Licence v3.0** | **full text** | 🟢 **The clean tier.** Commercial use, adaptation and redistribution permitted, **no share-alike**. Requires the notice *"Contains public sector information licensed under the Open Government Licence v3.0."* |
+| `acara-v9` | Australian Curriculum v9, Foundation–Year 6 | 🟢 **CC BY 4.0** (ACARA terms) | **full text**, 620 content descriptions | 🟢 **Clean with a long attribution.** ACARA's notice must be reproduced *and* carries a mandatory **non-endorsement** sentence. Excludes Arts, Languages, elaborations and achievement standards |
+| `ccss-ela`, `ccss-math` | Common Core State Standards | 🟡 **CCSS Public License — purpose-limited** | **full text**, under CCSS PL | 🔴 The grant is *"for purposes that support the Common Core State Standards Initiative"* and, in the file's own words, *"does **not** clearly grant derivative-work or sublicensing rights"*. These records are **not** ODbL. **A commercial derivative is an open question, not a permission** |
+| `ngss-k5`, `ngss-ms` | Next Generation Science Standards | 🔴 **Codes only — verbatim text omitted** | standard code + key only | 🔴 **The hardest tier.** Non-commercial entities may copy and adapt freely; **commercial entities must submit samples for approval** and carry a trademark disclaimer. *"NGSS"* is a **registered trademark of WestEd**. Not relicensable |
+| NCSS | Social studies framework | 🔴 Permission-based | codes only | 🔴 Redistribution of framework text requires NCSS permission |
+| IB | International Baccalaureate | 🔴 Most restrictive of the eight | codes only | 🔴 Redistribution requires explicit IB permission |
+
+🔵 **The structural reading, and it is the one worth carrying off this shelf: coverage and usability are different maps, and they are inverted by region.** The repository is **EMEA-authored**, and its **cleanest** tier is the EMEA one (OGL v3.0, full text, no share-alike) with APAC close behind (CC BY 4.0). 🔴 **Its North American tiers are its worst**: Common Core ships in full under a purpose-limited grant that may not reach a commercial derivative, and NGSS ships as **bare codes** because the text cannot be redistributed commercially without WestEd's approval. 🟢 **An engagement that reads "3 881 standards from 8 sources" as one asset will plan a US K-12 product around a payload that is codes-only and trademark-encumbered.** The topic→standard *links* survive in `topics.json` at every tier, so *"this topic maps to `1-ESS1-1`"* is always available — **it is the standard's prose that is not.**
+
+### 🔴 The gap this reading places, and it is the LATAM one these shelves have been circling for six passes
+
+🟢 **Not one of the eight sources is Latin American.** No BNCC, no Mexican framework, no Chilean or Argentine one. 🔵 **This is a materially stronger LATAM finding than the five search silences `p342` struck out**, because it does not rest on a query returning nothing — it rests on **the asset's own source list, read first-hand**, and the absence is enumerable.
+
+🔴 **And the missing layer has been on THIS SHELF since before this pass, unplaced and absent from `intel/market.md` entirely.** `p342` cited `bncc-dev/bncc-benchmark` and `bncc-dev/bncc-pacotes` only as *specimens of classifier disagreement* — payloads whose Portuguese `# Licenças` title defeated three channels. **Their content was never read as supply.** Read and placed this pass:
+
+| Repo | Grant — read first-hand | Activity, first-hand | Placed | Why it is a foundation |
+|---|---|---|---|---|
+| https://github.com/bncc-dev/bncc-dados | 🟢 **CC BY 4.0** (data), `main/LICENSE` is a Portuguese **`# Licenças`** splitter, 1 299 B equivalent · code **MIT** | 🟢 **40 c · 3 a · 2026-07-09 → 2026-10-15** | 🟢 **LATAM — Brazil** (`-0300` on **40 of 40**; `profy.com.br(32)`) | **The canonical dataset of the Brazilian BNCC**, the layer `os-taxonomy` has no source for |
+| https://github.com/bncc-dev/bncc-pacotes | 🟢 **MIT** (code: `packages/*/src/`, `python/bncc/*.py`, `mcp-worker/src/`, `scripts/`, tests) + **CC BY 4.0** (embedded JSON, synced from a **pinned commit** of `bncc-dados`) | 🟢 **103 c · 3 a · 2026-07-09 → 2026-10-15** | 🟢 **LATAM — Brazil** (`-0300` on **103 of 103**; `profy.com.br(100)`) | 🟢 **The consumable seam: `@bncc/dados` (npm v0.7.0, typed TS API), `bncc` (PyPI v0.5.0), `@bncc/mcp` (npm v0.6.0) — and a HOSTED MCP server at `mcp.bncc.dev`, streamable HTTP, NO API KEY.** Seven tools: `bncc_lookup`, `bncc_buscar`, `bncc_listar`, `bncc_decodificar`, `bncc_estatisticas`, `bncc_estrutura`, `bncc_progressao_ei`. **1 721 learning objectives of Brazilian basic education**, which the README states are *"verificadas contra os documentos oficiais do MEC/CNE"*. TS and Python answer identically, checked by golden queries **on every commit** |
+| https://github.com/bncc-dev/bncc-benchmark | 🟢 **MIT** (`harness/`, `test/`) + **CC BY 4.0** (`itens/`, `resultados/`, `METODOLOGIA.md`) | 🟢 **82 c · 2 a · 2026-07-12 → 2026-09-19** | 🟢 **LATAM — Brazil** (`-0300` on **82 of 82**; `profy.com.br(79)`) | **An LLM item-bank benchmark against a national curriculum** — the evaluation half, in the same licence shape |
+
+🟢 **This is the first placement of the bncc.dev stack on any shelf in this base.** `profy.com.br` had **zero** occurrences across all seven decision and intel shelves before this pass, which is the measurable form of *held but never placed*. **225 commits across the three repositories, all `-0300`, all 2026, with a `.br` corporate domain on 211 of them — the least ambiguous regional placement on these shelves**, stronger than `p342`'s `ltijs` (429/575 and 513/575).
+
+🔴 **Nine stars.** 🔵 **That is the whole explanation for six passes of declared LATAM emptiness, and it indicts the channel rather than the region: every discovery leg this base runs is star-ranked or trending-ranked, and a nine-star repository with a hosted keyless MCP server over a national curriculum is invisible to all of them.** 🟢 **`ACTION ZZ-d`: the LATAM supply leg must include a registry query (`npm`/PyPI) and a national-framework-name query (`BNCC`, `SEP`, `Aprende`, `MEC`), not a star-ranked search — this is `ACTION TJ`'s bound, which this shelf already recorded as *"the registry is strong on a named standard and weak on a concept."* A national curriculum is a named standard.**
+
 ## Pass 342 · 2026-10-20 — the foundation tier is untouched, and the two instruments that grade it now disagree in a way this shelf has to name
 
 **Evidence:** [`p342-nonenglish-title-falsifier`](../evidence/p342-nonenglish-title-falsifier.2026-10-20-p342.tsv) · [`p342-channel-disagreement`](../evidence/p342-channel-disagreement.2026-10-20-p342.tsv).
