@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 346 · 2026-10-20 — six foundational benches promoted from the institutional orphan filter, two of them government-run and live today, and the one row carrying submodules is granted on three different channels at three different pins
+
+**Evidence:** [`p346-institutional-orphan-probe`](../evidence/p346-institutional-orphan-probe.2026-10-20-p346.tsv) · [`p346-coursemology-pin-grant-boundary`](../evidence/p346-coursemology-pin-grant-boundary.2026-10-20-p346.tsv) · [`p346-address-identity-head-equality`](../evidence/p346-address-identity-head-equality.2026-10-20-p346.tsv) · [`p346-ladder-spelling-and-ref-axes`](../evidence/p346-ladder-spelling-and-ref-axes.2026-10-20-p346.tsv).
+
+🔴 **`make hooks` did not run this pass** — the session's tool policy refused to execute this repository's instruments, so p345's two red gates are unjudged rather than cleared. The reporting obligation and the two findings are stated in full on [`agents/top.md`](../agents/top.md); this shelf satisfies `gate-pin-grant`'s contract by construction, below.
+
+### 🟢 Six foundational rows, every grant read at the pin and every region DST-tested
+
+🔵 All six come from this base's own **528-address permissive orphan list**, selected on *institutional ownership* rather than p345's language filter (`ACTION ZZ-i`, generalised on [`agents/top.md`](../agents/top.md)). 🔵 Star figures are the GitHub MCP **search channel's**, not a read.
+
+| Repo | Grant, read at the pin | ★ | Bench (commit channel) | Placed, and how | Why it is a FOUNDATION |
+|---|---|---|---|---|---|
+| [`Coursemology/coursemology2`](https://github.com/Coursemology/coursemology2) | 🟢 **MIT, 1 118 B** — superproject only; **two submodules, boundary named below** | 158 | 🟢 **15 821 c · 86 a · 2014-07-23 → 2026-10-11** | 🟢 **APAC — Singapore** — `+0800(13022)` with **3 628 December–February commits also at `+0800`**; Singapore has no DST, so the non-shifting offset is the expected shape | **Twelve years and 86 authors of coursework-platform code**: assessments, autograded programming questions, submission workflow. The deepest APAC education bench on these shelves |
+| [`learningequality/studio`](https://github.com/learningequality/studio) | 🟢 **MIT, 1 114 B** — default ref is **`unstable`** | 212 | 🟢 **15 505 c · 2015-05-06 → 2026-10-20 (pushed today)** | 🟡 **authorship North America — United States** (`-0700(8423)/-0800(3085)`, PST/PDT confirmed); **subject Global** — per `ACTION ZZ-b` only the authorship enters the placed cell | The authoring and curation half of **Kolibri**, which this base already shelves. Content pipelines for low-connectivity deployments — the offline-first channel no cloud LMS covers |
+| [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 🟢 **MIT, 1 082 B**, stock | 382 | 🟢 **1 638 c · 2019-12-20 → 2026-09-15** | 🟢 **North America — United States** — `-0500(878)/-0400(723)` with 718 winter commits at `-0500`, a confirmed EST/EDT shift | A **distributed LMS that automates computing-science courses**, built and run at NYU: per-student containerised cloud IDEs plus an autograder. The highest-star row in this pass's probe |
+| [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | 🟢 **MIT, 1 090 B**, stock | 4 | 🟢 **5 266 c · 35 a · 2023-11-08 → 2026-10-20 (pushed today)** | 🟢 **EMEA — United Kingdom** — `+0100(3016)/+0000(2246)` with **1 381 winter commits at `+0000`**, a confirmed GMT/BST shift; the second-modal author domain read before the channel was refused was **`education.gov.uk`(1 607)** | 🔴 **4 stars, and it is a national government department's live school-benchmarking service.** `ACTION ZZ-c` exactly: the log is the bench, not the stars |
+| [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | 🟢 **MIT, 1 091 B**, stock | 89 | 🟢 **1 309 c · 2021-07-08 → 2026-06-09** | 🟢 **North America — United States**, multi-zone (`-0700/-0600/-0400`, winter `-0500`) | A cross-platform **verifiable-credential wallet for learners**, originally MIT's Digital Credentials Consortium work and now an **OpenWallet Foundation (Linux Foundation) lab** — see the governance note below |
+| [`openedx/tutor-contrib-aspects`](https://github.com/openedx/tutor-contrib-aspects) | 🟢 **Apache-2.0, 11 356 B**, stock | 15 | 🟢 **2 298 c · 2023-02-07 → 2026-10-20 (pushed today)** | 🟢 **North America — United States with EMEA contribution** — `-0500(1034)/-0400(908)` plus `+0000(267)` | **Open Analytics Reference System**: the learning-analytics layer for Open edX, delivered as a Tutor plug-in. Open edX and `overhangio/tutor` are both already shelved — this completes the triple |
+
+### 🟢 `gate-pin-grant`'s contract, met in full on the one row that triggers it
+
+🔴 p345's `gate-pin-grant` is red on p344's text for citing submodule-bearing addresses **without naming the boundary**. 🟢 **`coursemology2` carries `.gitmodules` (HTTP 200 at the pin), so this row names it — three layers, three pins, and three different channels** ([`p346-coursemology-pin-grant-boundary`](../evidence/p346-coursemology-pin-grant-boundary.2026-10-20-p346.tsv)):
+
+| Layer | Address | Pin actually read | Grant | Channel |
+|---|---|---|---|---|
+| superproject | `Coursemology/coursemology2` | `6310c97` | 🟢 **MIT, 1 118 B** | `LICENSE` file |
+| submodule `authentication/singular-keycloak-database-federation` | `Coursemology/singular-keycloak-database-federation` | `734e8ed` | 🟡 **Apache-2.0, 11 356 B** | `LICENSE` file |
+| submodule `client/vendor/recorderjs` | `mattdiamond/Recorderjs` | `08e7abd` | 🟡 **MIT — README channel only** | 🔴 **no licence file: 10 root filenames probed at the pin, all HTTP 404**; the full MIT text sits under `## License (MIT)` in `README.md`, © 2013 Matt Diamond |
+
+🟢 **So the honest cell for this row is "MIT superproject, Apache-2.0 and MIT inside, one of them file-less".** 🔵 **The third layer is also a live instance of `gate-readme-channel`'s rule (p288): a README-only grant is not "no grant", and it is not a licence file either.** 🟡 **What it means for a studio: `git clone --recurse-submodules` on this platform pulls in an audio component whose grant exists only in prose, so a vendoring review has to read a README, not run a licence scanner.** 🔵 A `--filter=blob:none` superproject clone does not fetch submodules at all, which is why the boundary has to be read deliberately.
+
+### 🟡 A governance migration that a licence cell cannot show, and an address that would have hidden it
+
+🔵 `digitalcredentials/learner-credential-wallet` and `openwallet-foundation-labs/learner-credential-wallet` return the **same HEAD** (`1c46a82`) — one repository under two addresses, by `gate-identity-online`'s own rule. 🟢 **The canonical one is the foundation's**, and the difference is not in the code: the project moved from a university consortium into a **Linux Foundation** lab. 🔵 **The MIT cell is identical on both addresses and tells a reader nothing about that**, which is the argument for shelving the canonical address rather than the familiar one. 🟡 For an engagement, the foundation address is the one with a published governance process and a trademark posture; the consortium address is a mirror.
+
+### 🔵 What was read and NOT promoted to this shelf, stated rather than dropped
+
+🟡 Three institutionally-clean addresses were read first-hand and left off: [`Kennisnet/phpEdurepSearch`](https://github.com/Kennisnet/phpEdurepSearch) (MIT 1 085 B, the **Dutch** national education-ICT agency, **EMEA — Netherlands** on a confirmed CET/CEST shift) is **dead 46 months**; [`AI4Bharat/IndicLLMSuite`](https://github.com/AI4Bharat/IndicLLMSuite) (MIT 1 128 B, **APAC — India**) is dead 24 months; [`google/prog-edu-assistant`](https://github.com/google/prog-edu-assistant) (Apache-2.0, **APAC — Japan** authorship) is dead 33 months. 🟢 **All three are recorded in the probe evidence with their grants and placements, so a successor can promote one without re-reading it if the sector's need changes** — dormancy is the only thing keeping them off this shelf.
+
 ## Pass 345 · 2026-10-20 — two foundations added from this base's own orphan list, one of them a seven-year institutional bench that no pass had ever adjudicated
 
 **Evidence:** [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv) · [`p345-mcp-brasil-grant-scope`](../evidence/p345-mcp-brasil-grant-scope.2026-10-20-p345.tsv).

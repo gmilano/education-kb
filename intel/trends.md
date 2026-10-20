@@ -4,6 +4,30 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 346 · 2026-10-20 — three trends registered: the sector's real licence risk is the corpus rather than the code, a region's "policy gap" is usually an altitude error, and education's permissive supply is government-shaped
+
+**Evidence:** [`p346-curriculum-data-carveout`](../evidence/p346-curriculum-data-carveout.2026-10-20-p346.tsv) · [`p346-institutional-orphan-probe`](../evidence/p346-institutional-orphan-probe.2026-10-20-p346.tsv) · [`p346-address-identity-head-equality`](../evidence/p346-address-identity-head-equality.2026-10-20-p346.tsv).
+
+🔴 **`make hooks` did not run this pass**; p345's two red gates are unjudged rather than cleared — stated in full on [`agents/top.md`](../agents/top.md).
+
+### T44 — In education AI the licence is increasingly clean and the CORPUS is increasingly carved out, and only one of those two is scannable
+
+🟢 **Measured, not predicted: two passes running, the most substantial new education-data row carried a permissive code grant and an explicit withholding of the data.** `Mcp-Brasil/mcp-brasil` (p345) grants MIT on code and excludes third-party API data and Brazilian public institutions' marks across a `NOTICE`, an `ACCEPTABLE_USE.md` and a 61-section `SOURCES.md`. `DECK6/korean-elementary-learning-map` (p346) grants MIT on code, validators, dataset and ontology, and grants **no rights to the Republic of Korea's official curriculum documents** — in a paragraph **prepended inside the licence file**, which makes the GitHub classifier report **`NOASSERTION`** on a payload whose body is verbatim MIT.
+
+🔵 **Why this is a trend and not two coincidences:** education AI's inputs are public-sector curricula, assessment items and institutional marks, and those are exactly the assets a ministry or exam board will not relicense. 🔴 **The operational consequence is that the industry's standard tooling looks in the wrong place.** An SPDX scanner reads `LICENSE` and returns MIT or `NOASSERTION`; neither answer tells you that rendering the curriculum text is unlicensed. 🟢 **The forecast this base will hold itself to: the next substantial public-curriculum row on these shelves will also carry a data carve-out, and the carve-out will again live outside the SPDX-readable channel.** 🟡 For a studio the deliverable follows directly — a **data-rights register** alongside the licence review, per source, because both instances already ship one.
+
+### T45 — A region's "policy gap" is usually an ALTITUDE error, and this base just made one and corrected it
+
+🔴 p345 recorded APAC as policy-empty on the strength of finding **zero school-level rules** for China, India and Singapore. 🟢 **Two binding national statutes naming education existed at that moment and were dated:** Korea's **AI Basic Act**, in force **2026-01-22**, and Vietnam's AI law, in force **2026-03-01**, which classifies **education as high-risk** with compliance due **2027-03-01** and a six-month grace for systems operating before **2026-08-15**.
+
+🔵 **No education deployment in either country is governed by a school-level rule; it is governed by the statute.** 🟢 **So the generalisation: a policy verdict must name the LAYER it was measured at — statute, regulator guidance, ministry circular, school rule — because the layer that binds a deployer differs by jurisdiction.** The US is the inverse case: its binding education-AI constraints are substantially **sub-national**, which is why a federal-layer search there returns "zero binding curriculum standards" and the real surface is ~34 states plus mandates in Maryland, Idaho, Oklahoma, Virginia and Ohio. 🟡 **`ACTION ZZ-k` split supply from policy; T45 splits policy by altitude**, and both splits exist because a single honest-looking sentence was answering two questions.
+
+### T46 — Education's permissive open-source supply is disproportionately GOVERNMENT- and UNIVERSITY-shaped, which inverts the usual star-count instinct
+
+🟢 **Of this pass's six promoted foundational and platform rows, four are run by a public institution:** the **UK Department for Education** (`DFE-Digital/education-benchmarking-and-insights`, **4 ★**, 5 266 commits, 35 authors, pushed today), **Oak National Academy** (`oaknational/oak-open-curriculum-ecosystem`, **8 ★**, 6 832 commits), **NYU** (`AnubisLMS/Anubis`, 382 ★) and **ETH Zurich** (`SafeExamBrowser/seb-win-refactoring`, 355 ★); **NUS**-originated `Coursemology/coursemology2` carries 15 821 commits at 158 ★.
+
+🔴 **The two deepest benches in the set carry 4 and 8 stars.** 🔵 **The reason is structural rather than anecdotal: a government service team ships to a statutory duty and a citizen audience, and never runs a developer-marketing campaign** — so the signal that ranks consumer repos is absent by construction, not by neglect. 🟢 **The trading rule, which is `ACTION ZZ-c` turned into a sector claim: in education, rank candidate repositories by commit channel and institutional domain, and treat star count as the weakest available signal.** 🟡 **And the corollary for sourcing:** the richest unexploited channel this base has found is not GitHub trending but **public-institution organisations** — education ministries, national academies, universities and now foundations — which is where `ACTION ZZ-s` sends the next pass.
+
 ## Pass 345 · 2026-10-20 — three trends registered, and the first one is about this base rather than the sector
 
 **Evidence:** [`p345-region-policy-supply-asymmetry`](../evidence/p345-region-policy-supply-asymmetry.2026-10-20-p345.tsv) · [`p345-eu-omnibus-date-resolution`](../evidence/p345-eu-omnibus-date-resolution.2026-10-20-p345.tsv) · [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv).

@@ -1,0 +1,18 @@
+slug	default_ref	licence_path	licence_bytes	family_by_template	commits	authors	first_commit	last_commit	offsets_top3	dec_feb_offsets	region_placed	verdict
+oaknational/oak-open-curriculum-ecosystem	main	LICENCE	1084	MIT (stock, titled)	6832	15	2025-07-28	2026-10-19	+0100(6066) +0000(763) +0200(3)	+0000(12)	EMEA - United Kingdom	PROMOTED
+DFE-Digital/education-benchmarking-and-insights	main	LICENSE	1090	MIT (stock, titled)	5266	35	2023-11-08	2026-10-20	+0100(3016) +0000(2246) -0700(4)	+0000(1381)	EMEA - United Kingdom	PROMOTED
+Coursemology/coursemology2	master	LICENSE	1118	MIT (stock, titled)	15821	86	2014-07-23	2026-10-11	+0800(13022) +0000(2674) +0700(47)	+0800(3628)	APAC - Singapore	PROMOTED with submodule boundary named
+AnubisLMS/Anubis	main	LICENSE	1082	MIT (stock, titled)	1638	n/r	2019-12-20	2026-09-15	-0500(878) -0400(723) +0400(15)	-0500(718)	North America - United States	PROMOTED
+learningequality/studio	unstable	LICENSE	1114	MIT (stock, titled)	15505	n/r	2015-05-06	2026-10-20	-0700(8423) -0800(3085) -0500(809)	-0800(2271)	authorship North America - US / subject Global	PROMOTED
+EduNLP/edu-convokit	main	LICENSE	1068	MIT (stock, titled)	72	2	2023-12-27	2025-04-18	-0800(62) -0700(9) +0100(1)	-0800(62)	North America - United States	PROMOTED as canonical address
+openwallet-foundation-labs/learner-credential-wallet	main	LICENSE	1091	MIT (stock, titled)	1309	n/r	2021-07-08	2026-06-09	-0700(423) -0600(336) -0400(199)	-0500(120) -0700(93)	North America - United States	PROMOTED as canonical address
+KonstantinosPetrakis/esco-skill-extractor	master	LICENSE	1068	MIT (UNTITLED body, curly quotes)	29	n/r	2024-08-29	2025-06-12	+0200(15) +0300(14)	+0200(4)	EMEA - Greece	PROMOTED with bench stated
+DECK6/korean-elementary-learning-map	main	LICENSE	1543	MIT + prepended data carve-out	17	n/r	2026-07-10	2026-09-07	+0900(17)	NONE	APAC - South Korea	PROMOTED as split cell
+openedx/tutor-contrib-aspects	main	LICENSE	11356	Apache-2.0 (stock)	2298	n/r	2023-02-07	2026-10-20	-0500(1034) -0400(908) +0000(267)	-0500(251)	North America - US with EMEA contribution	PROMOTED
+SafeExamBrowser/seb-win-refactoring	master	LICENSE.txt	16725	MPL-2.0	1545	n/r	2017-07-05	2026-10-09	+0200(890) +0100(645) +0000(4)	+0100(365)	EMEA - Switzerland	PROMOTED to platform tier, grant flagged non-permissive
+google/prog-edu-assistant	main	LICENSE	11357	Apache-2.0 (stock)	165	n/r	2019-02-13	2024-01-16	+0900(159) -0800(4) +0000(2)	+0900(26)	APAC - Japan (authorship)	NOT PROMOTED - dormant 33 months
+AI4Bharat/IndicLLMSuite	master	LICENSE	1128	MIT (stock, titled)	22	3	2024-03-06	2024-10-07	+0530(22)	NONE	APAC - India	NOT PROMOTED - dormant 24 months
+Kennisnet/phpEdurepSearch	master	LICENSE	1085	MIT (stock, titled)	119	n/r	2012-07-06	2022-12-19	+0200(81) +0100(34) -0700(4)	+0100(17)	EMEA - Netherlands	NOT PROMOTED - dormant 46 months
+unb-mds/2025-2-InfoSchool	main	LICENSE	1059	MIT (stock, titled)	415	n/r	2025-08-22	2025-12-02	-0300(415)	-0300(36)	LATAM - Brazil	NOT PROMOTED - term-bounded bench, see ACTION ZZ-p
+eduagarcia/lm-evaluation-harness-pt	main	LICENSE.md	1066	MIT (stock, titled)	3279	n/r	2020-08-27	2025-08-30	+0000(927) -0400(570) -0700(312)	-0700(210) -0500(186)	NOT PLACEABLE AS LATAM	NOT PROMOTED - ACTION ZZ-h replicated
+project-sunbird/sunbird-lms-service	master	LICENSE	1071	MIT (stock, titled)	1937	64	2017-07-03	2025-12-23	+0530(1892) +0000(39) -0700(4)	+0530(436)	APAC - India	NOT PROMOTED - non-canonical address, diverged from Sunbird-Lern/lms-service

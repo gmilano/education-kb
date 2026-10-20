@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 346 · 2026-10-20 — twelfth consecutive zero on the prescribed legs, and this week's actual movement is four institutional repositories that pushed within 24 hours of this pass
+
+**Evidence:** [`p346-institutional-orphan-probe`](../evidence/p346-institutional-orphan-probe.2026-10-20-p346.tsv) · [`p346-address-identity-head-equality`](../evidence/p346-address-identity-head-equality.2026-10-20-p346.tsv) · [`p346-ladder-spelling-and-ref-axes`](../evidence/p346-ladder-spelling-and-ref-axes.2026-10-20-p346.tsv).
+
+🔴 **`make hooks` did not run this pass** — the session's tool policy refused to execute this repository's instruments, so p345's `gate-absence` and `gate-pin-grant` findings (the latter at `agents/trending.md:4099`, in p344's section below) are **unjudged, not cleared**. 🟢 This section is a successor rather than a rewrite: the shelf's history stays where it is, and the pin-grant boundary this pass needed is named in full on [`repos/foundations.md`](../repos/foundations.md). Statement in full on [`agents/top.md`](../agents/top.md).
+
+### 🔴 The four prescribed legs, measured for the twelfth time, with the same result
+
+🔵 `top open source AI agents education 2026 github MIT` and `github trending education AI 2026` again returned **general-purpose agent listicles and courseware**, not education agents: OpenClaw, OpenHands, CrewAI, LangGraph, `microsoft/ai-agents-for-beginners`, `ashishpatel26/500-AI-Agents-Projects`, `karpathy/nanochat`. 🔴 **Every one of those is either already on these shelves or not an education agent, and the sources disagree with each other on star counts for the same repository** — one leg reported OpenHands at 86.9k and another at 83.3k in the same result set. 🟡 **Recorded as a zero, not as an absence of supply:** the supply exists and these legs do not reach it, which is now a twelve-pass measurement rather than an opinion.
+
+🟡 **One trending claim is worth carrying with its channel named and no more:** a third-party blog reports [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) — already on these shelves — **past 5 900 ★** in October 2026, as a 1 590-topic curriculum graph with 3 221 prerequisite edges. 🔴 **Not asserted:** this base did not read that count. 🟢 **What this pass DID read first-hand is better than a star count, and it corroborates the row's standing**: the licence file of a brand-new Korean curriculum ontology, [`DECK6/korean-elementary-learning-map`](https://github.com/DECK6/korean-elementary-learning-map), states in its own grant text that it was *"inspired by, but does not copy content or data from, the Marble Skill Taxonomy."* 🔵 **A competitor's licence naming your project as prior art is a stronger signal of influence than any trending page.**
+
+### 🟢 This week's real movement: the freshness of the institutional channel, measured by push date
+
+🔵 Nineteen addresses from this base's own 528-address permissive orphan list were read first-hand this pass (`ACTION ZZ-i` generalised to an **institutional** filter — see [`agents/top.md`](../agents/top.md)). 🟢 **Six of them are live on a trending shelf's own definition of live:**
+
+| Repo | Last commit read | Grant | Bench | Placed |
+|---|---|---|---|---|
+| [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | 🟢 **2026-10-20 — today** | MIT, 1 090 B | 5 266 c · 35 a | EMEA — United Kingdom |
+| [`learningequality/studio`](https://github.com/learningequality/studio) | 🟢 **2026-10-20 — today** | MIT, 1 114 B (ref `unstable`) | 15 505 c | authorship North America — US · subject Global |
+| [`openedx/tutor-contrib-aspects`](https://github.com/openedx/tutor-contrib-aspects) | 🟢 **2026-10-20 — today** | Apache-2.0, 11 356 B | 2 298 c | North America — US with EMEA contribution |
+| [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **2026-10-19 — yesterday** | MIT, 1 084 B at **`LICENCE`** | 6 832 c · 15 a | EMEA — United Kingdom |
+| [`Coursemology/coursemology2`](https://github.com/Coursemology/coursemology2) | 🟢 2026-10-11 | MIT, 1 118 B + 2 submodules | 15 821 c · 86 a | APAC — Singapore |
+| [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟢 2026-10-09 | **MPL-2.0**, 16 725 B | 1 545 c | EMEA — Switzerland |
+
+🔴 **Four of the six carry fewer than 220 stars and two carry fewer than 10**, which is why a trending page has never shown them and a star-ranked leg never will (`T46` on [`intel/trends.md`](../intel/trends.md)). 🟢 **The trading rule this shelf should adopt: "trending" in education means pushed-this-week on an institutional bench, not starred-this-week on a listicle.**
+
+### 🔵 Two addresses that would have entered this shelf as new rows and are not new at all
+
+🟢 `stanfordnlp/edu-convokit` and [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) return the **same HEAD** `d845ffd`; `digitalcredentials/learner-credential-wallet` and [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) return the **same HEAD** `1c46a82`. 🔴 **One repository each, two addresses each** — and a trending shelf is exactly where that duplication would have been introduced, because the famous-org address is the one a human reaches for. 🟢 **Both are shelved once, under the canonical address** (`ACTION ZZ-n`). 🟡 `project-sunbird/sunbird-lms-service` vs `Sunbird-Lern/lms-service` is the third case and the opposite answer: **HEADs differ** (`48c79a8` vs `628b36f`), the two have diverged, and neither is promoted this pass.
+
 ## Pass 345 · 2026-10-20 — the eleventh consecutive zero on the four prescribed supply legs, and the first non-zero week in ten passes came from the inventory instead
 
 **Evidence:** [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv) · [`p345-name-and-fork-channel-traps`](../evidence/p345-name-and-fork-channel-traps.2026-10-20-p345.tsv).

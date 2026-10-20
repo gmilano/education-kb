@@ -1,0 +1,10 @@
+slug	main_LICENSE_http	master_LICENSE_http	naive_ladder_outcome	actual_licence_path	actual_default_ref	axis_that_defeats_the_ladder	grant_bytes_once_found
+oaknational/oak-open-curriculum-ecosystem	404	404	READS GRANTLESS	LICENCE	main	SPELLING - British -CE	1084
+SafeExamBrowser/seb-win-refactoring	404	404	READS GRANTLESS	LICENSE.txt	master	EXTENSION	16725
+eduagarcia/lm-evaluation-harness-pt	404	404	READS GRANTLESS	LICENSE.md	main	EXTENSION	1066
+learningequality/studio	404	200	RECOVERED by master fallback	LICENSE	unstable	none - but default ref is neither main nor master	1114
+Coursemology/coursemology2	404	200	RECOVERED by master fallback	LICENSE	master	none	1118
+Kennisnet/phpEdurepSearch	404	200	RECOVERED by master fallback	LICENSE	master	none	1085
+KonstantinosPetrakis/esco-skill-extractor	404	200	RECOVERED by master fallback	LICENSE	master	none	1068
+AI4Bharat/IndicLLMSuite	404	200	RECOVERED by master fallback	LICENSE	master	none	1128
+project-sunbird/sunbird-lms-service	404	200	RECOVERED by master fallback	LICENSE	master	none	1071

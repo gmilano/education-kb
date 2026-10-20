@@ -1,0 +1,4 @@
+layer	address	pin_read	grant	bytes	channel	note
+superproject	Coursemology/coursemology2	6310c973a303b433543377d3f6a69bed7b3d7408	MIT	1118	LICENSE file at pin	covers the superproject tree only
+submodule authentication/singular-keycloak-database-federation	Coursemology/singular-keycloak-database-federation	734e8ed94722d47f0b20000d11c3141104fe4ca8	Apache-2.0	11356	LICENSE file	same org as the superproject, different family from the superproject
+submodule client/vendor/recorderjs	mattdiamond/Recorderjs	08e7abd99739be6946f19f6806ccb368138f2dd3	MIT	n/a - no licence file	README.md section "## License (MIT)" at the pin	10 root licence filenames probed at the pin, all HTTP 404; grant exists ONLY on the README channel, copyright 2013 Matt Diamond

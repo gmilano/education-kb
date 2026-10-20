@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 346 · 2026-10-20 — the platform tier gains a twelve-year coursework system, a university autograding LMS, an exam-delivery client from ETH Zurich and a government benchmarking service; one of them is MPL-2.0 and that changes how it may be used
+
+**Evidence:** [`p346-institutional-orphan-probe`](../evidence/p346-institutional-orphan-probe.2026-10-20-p346.tsv) · [`p346-coursemology-pin-grant-boundary`](../evidence/p346-coursemology-pin-grant-boundary.2026-10-20-p346.tsv).
+
+🔴 **`make hooks` did not run this pass** — the session's tool policy refused to execute this repository's instruments, so p345's two red gates are unjudged rather than cleared; the statement in full is on [`agents/top.md`](../agents/top.md).
+
+### 🟢 Four new platform rows, each a system a studio can customise rather than a library it must assemble
+
+🔵 All four were read first-hand at their pinned HEADs and placed on the commit channel; all four come from this base's own 528-address permissive orphan list, selected on institutional ownership.
+
+| Platform | Grant, at the pin | What it actually IS | Bench | Placed | How a studio uses it |
+|---|---|---|---|---|---|
+| [`Coursemology/coursemology2`](https://github.com/Coursemology/coursemology2) | 🟢 **MIT, 1 118 B** (superproject) 🔴 **+ two submodules, one Apache-2.0 and one README-only** | A full **coursework platform**: assessments, autograded programming questions, submission and grading workflow, course staff roles | 🟢 **15 821 c · 86 a · 2014 → live** | **APAC — Singapore** | 🟢 The strongest answer to a **sovereignty-led** APAC procurement: self-hostable, permissive, twelve years maintained. 🔴 Vendoring review must read the submodule boundary — a scanner over the superproject will not see it |
+| [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 🟢 **MIT, 1 082 B** | A **distributed LMS for computing-science courses**: per-student containerised cloud IDEs, autograder, submission pipeline — built and operated at NYU | 🟢 **1 638 c · 2019 → 2026-09-15** | **North America — United States** | 🟢 Drop-in for a CS-department engagement where the ask is *"grade 400 students' code"*; the cloud-IDE layer is the part nobody wants to build twice |
+| [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟡 **MPL-2.0, 16 725 B** — **not** MIT/Apache; file-level reciprocity | The Windows **Safe Exam Browser** client — lockdown kiosk for high-stakes assessment, integrates with Moodle, Open edX and commercial LMSs | 🟢 **1 545 c · 2017 → 2026-10-09 (live)** | **EMEA — Switzerland** (ETH Zurich) | 🟡 The proctoring answer that is **not** a webcam-surveillance product — relevant where the EU AI Act's affect-recognition prohibition rules out emotion-based proctoring entirely. 🔴 **Grant discipline:** changes to ITS files must be published; a separate work around it need not be |
+| [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | 🟢 **MIT, 1 090 B** | A live **government service** letting a school compare its metrics against similar schools — the full service, not a sample | 🟢 **5 266 c · 35 a · pushed today** | **EMEA — United Kingdom** | 🟢 A reference implementation of **school-comparison analytics with a real data model**, published by the department that runs it. For any ministry-facing engagement this is the cheapest credible starting point |
+
+### 🟡 The MPL-2.0 row is the one to brief a client about, because it is the first of its family on this shelf
+
+🔵 This base's platform tier is otherwise GPL/AGPL (Moodle, Open edX, Canvas, Chamilo), Apache-2.0 (OpenOLAT, Sakai) or LGPL (OpenEduCat). 🟢 **MPL-2.0 sits between them in a way that matters commercially: reciprocity is per-FILE.** Modify Safe Exam Browser's own source files and those modifications must be published; build a separate product that uses it and your code stays yours. 🔵 **In practice that makes it usable in a closed-IP engagement** — unlike AGPL, which reaches a hosted service — **provided the team knows not to patch its files casually.** 🟡 Recorded here so no later pass has to infer the posture from the byte count.
+
+### 🟢 The authoring and credential layers now have permissive platform rows too
+
+🔵 [`learningequality/studio`](https://github.com/learningequality/studio) (**MIT**, 15 505 c, pushed today, default ref **`unstable`**) is the content curation and authoring platform behind **Kolibri**, already on this shelf — so the offline-first stack is now complete on these shelves from authoring through delivery. 🔵 [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) (**MIT**, 1 309 c, iOS + Android) is the verifiable-credential wallet that **moved into a Linux Foundation lab**; the address this base would have reached for, `digitalcredentials/learner-credential-wallet`, returns the **same HEAD** and is the mirror. 🟡 **Both belong on a platform shelf rather than an agent shelf: they are systems to deploy and configure, and the AI goes on top.**
+
 ## Pass 345 · 2026-10-20 — the platform tier gains the layer every AI-tutoring pilot needs and no pilot wants to build: consent, randomisation and export filtering, inside the LMS
 
 **Evidence:** [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv) · [`p345-mcp-brasil-grant-scope`](../evidence/p345-mcp-brasil-grant-scope.2026-10-20-p345.tsv).

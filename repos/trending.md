@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 346 · 2026-10-20 — the prescribed trending leg returns listicles for the twelfth pass; the week's real repository news is a British spelling that hides a 6 832-commit national-curriculum grant
+
+**Evidence:** [`p346-ladder-spelling-and-ref-axes`](../evidence/p346-ladder-spelling-and-ref-axes.2026-10-20-p346.tsv) · [`p346-institutional-orphan-probe`](../evidence/p346-institutional-orphan-probe.2026-10-20-p346.tsv) · [`p346-coursemology-pin-grant-boundary`](../evidence/p346-coursemology-pin-grant-boundary.2026-10-20-p346.tsv).
+
+🔴 **`make hooks` did not run this pass**; p345's two red gates are unjudged rather than cleared — in full on [`agents/top.md`](../agents/top.md). 🟢 This is a successor section; the shelf's history below is untouched.
+
+### 🔴 `github trending education AI 2026`, twelfth consecutive pass, same layer
+
+🔵 The leg returned blog roundups of October 2026 GitHub trending — a 139K-star diffusion engine, a 76K-star context compressor, 102K-star agent skills, Ghostty-based terminals — **none of which is an education repository**. 🟡 The only education-adjacent items were `karpathy/nanochat` and `developer-roadmap` as *learning material* (both already known here) and a **GitHub Copilot for Students** change (200 monthly AI credits from June 1, unlimited completions retained) which is a **vendor entitlement, not a repository**. 🔴 **Recorded as a zero for the twelfth time**, with the same caveat as always: this is a statement about the leg, not about the sector's supply.
+
+### 🟢 The repository finding of the week, and it is a one-character spelling difference
+
+🔴 [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) publishes its grant at **`LICENCE`** — the British spelling — and returns **HTTP 404 at both `main/LICENSE` and `master/LICENSE`**. 🟢 **Behind that 404 sits MIT (1 084 B), 6 832 commits, 15 authors, a push yesterday, and an API + SDK + MCP surface over the UK's Oak Open Curriculum data.** 🔵 **This base has already repaired its licence ladders on case, depth and ref; orthography is the fourth axis** (`ACTION ZZ-m`), and it was measured across the probe set rather than asserted: of nine addresses whose default ref is not plain `main`, a `main`-then-`master` ladder keyed to `LICENSE` **recovers six** and fails on three — `oak` on **spelling**, `SafeExamBrowser/seb-win-refactoring` and `eduagarcia/lm-evaluation-harness-pt` on **extension** (`LICENSE.txt`, `LICENSE.md`). 🟡 **So a `master` fallback already absorbs the ref problem, and what survives it is the FILENAME.** `learningequality/studio` makes the point from the other side: its default ref is **`unstable`** and `master/LICENSE` still answers 200.
+
+### 🟢 Repos promoted to a decision shelf this pass, every grant read at the pin
+
+| Repo | ★ (search channel) | Grant | Bench | Shelf |
+|---|---|---|---|---|
+| [`Coursemology/coursemology2`](https://github.com/Coursemology/coursemology2) | 158 | MIT 1 118 B **+ submodule boundary** | 15 821 c · 86 a · 12 years · live | `repos/foundations.md` + `verticals/solutions.md` |
+| [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 382 | MIT 1 082 B | 1 638 c · 2019 → 2026-09-15 | `repos/foundations.md` + `verticals/solutions.md` |
+| [`learningequality/studio`](https://github.com/learningequality/studio) | 212 | MIT 1 114 B | 15 505 c · pushed today | `repos/foundations.md` |
+| [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | 4 | MIT 1 090 B | 5 266 c · 35 a · pushed today | `repos/foundations.md` + `verticals/solutions.md` |
+| [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | 89 | MIT 1 091 B | 1 309 c | `repos/foundations.md` |
+| [`openedx/tutor-contrib-aspects`](https://github.com/openedx/tutor-contrib-aspects) | 15 | Apache-2.0 11 356 B | 2 298 c · pushed today | `repos/foundations.md` |
+| [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | 355 | **MPL-2.0** 16 725 B | 1 545 c · live | `verticals/solutions.md` |
+
+🔴 **The two deepest benches in that table carry 4 and 8 stars** (`DFE-Digital`, and `oak` on the agent shelf). 🟢 **This is the measurement behind `T46`: in education, permissive supply is government- and university-shaped, and a public-service team never runs a developer-marketing campaign, so the ranking signal is absent by construction.**
+
+### 🟡 One repository claim carried with its channel named, and one lineage read first-hand
+
+🔵 A third-party blog reports [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) — already shelved — **past 5 900 ★** in October 2026 (1 590 topics, 3 221 prerequisite edges). 🔴 **This base did not read that count and does not assert it.** 🟢 **What it did read is the licence file of [`DECK6/korean-elementary-learning-map`](https://github.com/DECK6/korean-elementary-learning-map), which names the Marble Skill Taxonomy as the work it was inspired by and explicitly does not copy** — a lineage link between two curriculum-ontology rows, read from a grant rather than from a trending page. 🔵 The Korean row also shows why this shelf cannot take a licence from an API: its payload is **1 543 B of verbatim MIT plus a prepended data carve-out**, and the GitHub classifier reports **`NOASSERTION`**.
+
 ## Pass 345 · 2026-10-20 — a 4 696-star education repo has been on this shelf without ever reaching a decision shelf, and this pass measures the promotion queue instead of lengthening it
 
 **Evidence:** [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv) · [`p345-region-policy-supply-asymmetry`](../evidence/p345-region-policy-supply-asymmetry.2026-10-20-p345.tsv).
