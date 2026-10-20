@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 330 — the activity channel turned on the integration tier, and it also answers the placement question this KB kept declaring open
+
+🔵 **p329 opened the git smart-HTTP channel to measure *activity*. The same clone carries three more answers this KB has been paying other channels for — and in two cases failing to get at all.** What one `git clone --filter=blob:none --no-checkout` pays, demonstrated this pass over 16 repositories:
+
+| question | how the clone answers it | what it replaces |
+|---|---|---|
+| **is it alive?** | `rev-list --count`, `log -1 --date=short` | ★ from `api.github.com` — 🔴 403 since p37 |
+| **is it alive on *any* branch?** | `for-each-ref --sort=-committerdate` | 🔴 **nothing — this KB had no way to ask it.** It is how `pylti1.3` was confirmed dead on tags as well as `master` |
+| **what does it implement?** | `ls-tree -r --name-only HEAD` | the README — 🔴 **which produced a false negative on Tsugi that stood for seven passes** |
+| **where is it from?** | author email domain; commit UTC offset | 🔴 **inference from READMEs and namespaces** — the method `compose/code/gitlab-api-channel/` declared limit 5 about |
+
+### 🟢 Placement from the commit record — two 🔴 UNPLACED rows closed, and one new row placed institutionally
+
+**Two signals, in strict priority. 🟢 Author email domain is a *declaration* of affiliation. 🟡 Commit UTC offset locates the keyboard, never the person, and only when every commit agrees.**
+
+| row | evidence, first-hand p330 | placement |
+|---|---|---|
+| `Jellypod-Inc/school-skills` | `pierson@jellypod.ai`; all four commits `-0700` | 🟢 **North America** — 🔴 UNPLACED since p328 |
+| `afri-bit/revibe` | `afribit.tech@gmail.com`; all four commits `+0200` (CEST) | 🟢 **EMEA** — 🔴 UNPLACED since p328. 🟡 The author's name is Indonesian; this places the work |
+| `Gchism94/jupyterquest` | 🟢 **`gchism@arizona.edu`, 124 of 249 commits** | 🟢 **North America — University of Arizona, institutionally attributed** |
+
+🔴 **The declared limit, because this is easy to over-read: a GitHub web-editor commit carries the browser's offset and any local `git config` can be wrong. One commit's offset establishes nothing; a unanimous offset in a small repository is evidence, and still weaker than a domain.**
+
+### The integration tier, measured on every ref
+
+| repo | grant | commits | authors | last, **any ref** | state |
+|---|---|---|---|---|---|
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | Apache-2.0 | **4,012** | **47** | 🟢 **2026-10-19** | 🟢 **ALIVE** — 486 commits in 2026 (🟡 from 3 authors) |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | MIT | **1,243** | 14 | 🟢 **2026-10-20 — today** | 🟢 **ALIVE** |
+| [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | 1,045 | **27** | 🟢 2026-10-16 | 🟢 **ALIVE** — the healthiest contributor base in the pedagogy tier |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | 467 | 5 | 🟢 2026-10-16 | 🟢 **ALIVE** |
+| [sunilgentyala/aegis-integrity](https://github.com/sunilgentyala/aegis-integrity) | MIT | 68 | 2 | 🟢 2026-10-16 | 🟢 **ALIVE** — p324's integrity find, confirmed |
+| [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | — | 23 | 3 | 🟢 2026-10-19 | 🟢 **ALIVE, small by design** — the taxonomy under `Homestead` |
+| [zhangl1001/civil-ai](https://github.com/zhangl1001/civil-ai) | MIT | 100 | 2 | 🟡 **2026-08-23** (8 newer refs, all `dependabot/`) | 🟡 **QUIET** — see the correction in `repos/foundations.md` |
+| [Liberate-Labs/ltikit-sdk](https://github.com/Liberate-Labs/ltikit-sdk) | 🟢 **MIT** | 38 | **1** | 🟡 2026-07-10 | 🟡 **NEW, between owners** |
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | MIT | 178 | **16** | 🔴 **2022-11-21** | 🔴 **DEAD — 47 months** |
+| [openfun/django-lti-toolbox](https://github.com/openfun/django-lti-toolbox) | MIT | 34 | 6 | 🔴 **2024-11-14** | 🔴 **DEAD** |
+
+🔵 **The shape: every agent-tier and pedagogy-tier row measured this pass is alive; both dead rows are integration libraries, and both are Python.** 🟢 **This is `intel/trends.md` trend 15 — the foundations tier aging while the agent tier runs — and it now has a named layer: the aging is concentrated in LMS integration, not spread across the base.**
+
+### 🔴 Channel note — a sweep that was not needed, and one that was
+
+**p329's closing line: `gitlab.com` — *"responds — an untested supply channel; next pass should sweep it"*.** 🟢 **`compose/code/gitlab-api-channel/` has instrumented exactly that channel since 2026-10-06**: 7,558-byte client, 10,287-byte suite, **32/32 offline and 35/35 live**, `data/` holding **534 projects** from 25 English terms and **141** from 16 Spanish/Portuguese terms, and three named findings (`P-GL-1` the forge's licence classifier is wrong twice in 22; `P-GL-2` `license=true` is silently ignored by the search endpoint; `P-GL-3` a name-anywhere classifier finds every licence in every licence). **Re-run this pass: 32/32.**
+
+🟢 **The sweep that *was* owed — pass 23's pre-registered action B, self-hosted forges — was executed and closed negative.** Thirteen hosts, `GET /api/v4/projects?per_page=1`: `code.europa.eu`, `gitlab.opencode.de`, `gitlab.gwdg.de`, `git.rwth-aachen.de`, `gitlab.inria.fr`, `salsa.debian.org`, `forge.apps.education.fr`, `gitlab.bsz-bw.de`, `gitlab.tuwien.ac.at`, `codeberg.org`, `git.sr.ht`, `framagit.org`, `gitlab.freedesktop.org` — 🔴 **`000` on all thirteen.**
+
+🔵 **The precise reading matters: `gitlab.com/api/v4` answers 200 and `gitlab.gwdg.de/api/v4` answers nothing. Same software, same endpoint, same request — so the reachable surface is a host allowlist, not a property of the protocol or the forge.** 🔴 **Standing consequence, recorded once rather than rediscovered: French, German and EU-institutional education code on sovereign forges is invisible from here, and that is a large share of what EMEA public-sector buyers run. Every EMEA count in this KB is a floor, biased toward European projects that also mirror to GitHub.**
+
+
 ## 2026-10-20 — Pass 329 — the activity channel was open since p229 and this shelf used it only to ask whether an address resolves
 
 **Second pass of 2026-10-20.** 🔵 **This file is APPEND-ONLY. Everything below this section is

@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 330 — four usable grants, one dead library behind a standing recommendation, and a repository the search channel invented
+
+🔵 **The signal of this pass is not a repository. It is that `agents/top.md` and `repos/foundations.md` have told clients for eleven passes to build their LMS integration on a library that stopped moving in November 2022.** Measured first-hand on the git channel, across every ref.
+
+### 🟢 New and usable
+
+| repo | grant, first-hand | activity, first-hand | signal |
+|---|---|---|---|
+| [Liberate-Labs/ltikit-sdk](https://github.com/Liberate-Labs/ltikit-sdk) | 🟢 **MIT**, `main/LICENSE` 1,063 B, *© 2026 alasim* | 38 commits · **1 author** · 2026-07-04 → **2026-07-10** | 🟢 **The first permissive LTI 1.3 Advantage implementation this KB has found outside Python.** `ags.ts`, `nrps.ts`, `deep-linking.ts` — each with its own `.test.ts`, 16 test files. Serverless/edge; adapters for memory, Prisma, Redis, Supabase. 1.0-rc with **Dynamic Registration** and **cookieless launches**. 🔴 Last three commits on `main` are an **ownership handover**; seven `dependabot/` branches run to 2026-10-07 **unmerged** |
+| [Gchism94/jupyterquest](https://github.com/Gchism94/jupyterquest) | 🟢 **MIT**, 1,070 B, *© 2024 Greg T. Chism* | 249 commits · 3 authors · **2026-05-07** | 🟢 **`.ipynb` autograder with a Zenodo DOI, Codecov and CI** — the LLM-era member of the `nbgrader`/`otter-grader` cluster. 🟢 **North America, institutionally attributed first-hand: `gchism@arizona.edu`** (124 of 249 commits). 🟡 Five months quiet |
+| [ictinnovations/ictexam-mcp](https://github.com/ictinnovations/ictexam-mcp) | 🟢 **MIT**, 1,114 B, *© 2026 Tahir Almas, ICT Innovations* | 5 commits · 1 author · 2026-09-08 | 🟡 **Too small to shelf; its *pairing* is the finding.** MCP server over an exam platform — exams, gradebooks, per-question item analysis; writes off by default |
+| [ictinnovations/moodle-mod_ictexam](https://github.com/ictinnovations/moodle-mod_ictexam) | 🔴 **GPL-3.0**, 35,149 B (obligatory — Moodle plugin) | 4 commits · 2 authors · 2026-09-07 | 🟡 The other half: **LTI 1.3 launch**, and the mark returns over a **Moodle web service**, not AGS — on a site where AGS is required to be enabled. See the trend note below |
+
+### 🟡 Real, substantial, and not embeddable
+
+| repo | grant, first-hand | activity, first-hand | signal |
+|---|---|---|---|
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0**, 34,514 B | 🟢 **1,168 commits · 7 authors · 2026-10-16** | 🟢 **The largest *live* AGPL education artefact this KB has measured** — against `ChatTutor`'s 193 commits and nine months of silence. CEFR A1–C2 ladder, LLM level placement, generated study plan, voice practice; **Ollama / OpenAI / Anthropic / DeepSeek**; Next.js 16, Python 3.14, v1.10.40. 🔴 The team also runs a paid hosted tier — **AGPL §13 is the mechanism protecting it, not an oversight**. **EMEA** 🟡 *(inferred: a Spanish personal name on 1,064 of 1,168 commits; no institution declared)* |
+
+### 🔴 Rejected, and why — recorded so the next pass does not re-find them
+
+| repo | reason |
+|---|---|
+| [projectremedy-ai/remedy-canvas-lti](https://github.com/projectremedy-ai/remedy-canvas-lti) | 🔴 **DOES NOT EXIST** — `raw` 404, clone failed. The search channel returned it with a full capability description (*"Canvas LTI 1.3 tool that scans entire courses for WCAG 2.2 AA accessibility issues and remediates them in-place"*). **Third invented repository in three passes** |
+| [sumitchopkar2005/Agentic_AI_LMS](https://github.com/sumitchopkar2005/Agentic_AI_LMS) | 🔴 **NO GRANT** — main and master, four filenames. A 28,267-byte README claiming Canvas/Moodle-class LTI 1.3 over an unlicensed tree |
+| [BlackyDrum/ai-tutor](https://github.com/BlackyDrum/ai-tutor) | 🔴 **MIT but two years silent** — 818 commits · 3 authors · last **2024-10-19**. Laravel/Vue/Postgres; substantial and abandoned |
+| [Gchism94/ai-tutor](https://github.com/Gchism94/ai-tutor) | 🔴 **SUPERSEDED by its own README** — *"in the process of being consolidated into jupyterquest"*, self-labelled *"not yet production-ready"*. Take `jupyterquest` |
+
+### 🔴 The re-grade that matters more than any of the new rows
+
+| repo | what this KB published | what the git channel says, p330 |
+|---|---|---|
+| `dmitry-viskov/pylti1.3` | *"the repo that gets your agent into the client's existing LMS"*; caveat *"still no published release — pin a commit"* | 🔴 **178 commits · 16 authors · last commit `2022-11-21` on EVERY ref**, newest tag `2.0.0` the same day. Final substantive commit: *"Support Python 3.11"* |
+| `openfun/django-lti-toolbox` | *"last pushed 2024-11-14"* (p325) | 🔴 **Confirmed to the day: 34 commits · 6 authors · 2024-11-14** |
+| `tsugiproject/tsugi` | p323: *"an LTI integration cannot be scoped from Tsugi's README"* — closed **negative** | 🟢 **RETRACTED. 4,012 commits · 47 authors · 2026-10-19 · 486 commits in 2026.** The tree carries `LTI13.php`, AGS, NRPS and Deep Linking **with unit tests**. 🟡 Three authors in 2026 |
+| `zhangl1001/civil-ai` | p323: *"the highest-starred education agent pushed since 2026-10-01"* | 🟡 **Default branch last commit `2026-08-23`.** Eight newer refs, **all `dependabot/`.** The recency claim was reading bot pushes |
+
+🔵 **Read together, these four say the LTI layer is not dying — it is *bifurcated*. PHP is alive (Tsugi, 47 authors, committed yesterday). Python is dead on both options. JS/TS is new, complete and single-author.** 🔴 **If a client requires LTI and the stack is Python, there is no maintained permissive library to point at.**
+
+### 🟢 Trend note — LTI and MCP in one vendor's shipping code
+
+**ICT Innovations ships both protocols and licenses them by layer: MIT on the MCP server that carries the *teacher's agent* to the gradebook, GPL-3.0 (obligatory) on the Moodle plugin that carries the *student* into the exam over LTI 1.3.** 🔴 **And the score does not come back over AGS** — the README requires AGS and NRPS to be enabled on the LTI preset, then writes the mark through `classes/external/set_grade.php`, a vendor web service, storing raw marks rather than percentages. **A team enabling the standard passback path and then not using it is the sharpest evidence trend 6 has had.**
+
+### Channel note
+
+🔴 **p329 recorded `gitlab.com` as *"an untested supply channel"*. `compose/code/gitlab-api-channel/` has instrumented it since 2026-10-06 — 32/32 offline, 35/35 live, 534 projects in `data/`, three named findings. The suite was re-run this pass: 32/32.** 🟢 **Thirteen self-hosted and alternative forges were swept instead, closing pass 23's pre-registered action B: `000` on all thirteen. The reachable surface is a host allowlist, not a protocol property — `gitlab.com/api/v4` answers 200 and `gitlab.gwdg.de/api/v4` answers nothing.**
+
+
 ## 2026-10-20 — Pass 329 — five new repositories, none shelf-grade, and the channel that re-graded two rows promoted yesterday
 
 **Second pass of 2026-10-20.** 🔵 **This file is APPEND-ONLY. Everything below this section is

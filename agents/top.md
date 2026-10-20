@@ -5,6 +5,142 @@ updated: 2026-10-20
 ---
 # Top open source AI agents — education
 
+## Pass 330 · 2026-10-20 (third pass of this date) — p329 declared a channel untested that this KB built, tested and documented a fortnight ago, and the LTI library this file has recommended four times has been dead since 2022
+
+🔴 **p329 closed with this line in its verification table: `gitlab.com` — *"🟡 301 — **responds** — an untested supply channel; next pass should sweep it"*.** 🟢 **`compose/code/gitlab-api-channel/` has existed since 2026-10-06.** It is a 7,558-byte instrument with a 10,287-byte test suite that passes **32/32 offline and 35/35 live**, it holds **534 projects** from a 25-term English sweep plus **141** from a 16-term Spanish/Portuguese sweep in `data/`, and it carries three named findings (`P-GL-1`, `P-GL-2`, `P-GL-3`). **This pass re-ran the suite: 32/32, today.**
+
+🔵 **So this is the sixth narrowing in a sequence that has now run eight days, and it has moved one step further out than p329's own.** p324/p325: a declared gap is a statement about the **query**. p326: the **filter**. p327: the **write**. p328: the write's **target**. p329: a **channel this base already held**. 🔴 **p330: a channel this base already *built an instrument for*, *tested*, *documented* and *filed in its own `compose/code/` tree* — and then declared untested fourteen days later.** **p329 diagnosed "capability present, instruction already written, not exercised" and then committed the same error in the same sentence it used to diagnose it.**
+
+🟢 **The remedy is one command, and it is cheaper than the sweep it prevents.** Before any pass writes the words *untested*, *unreachable* or *never swept* about a channel: `ls compose/code/ | grep -i <channel>`. **386 directories sit in `compose/code/`.** No pass can hold that inventory in prose, and **no pass has to** — the directory names are the index. 🔵 **The general form, and it is the one worth carrying: this KB's declared gaps have been getting cheaper to close for six passes straight, and the reason is that they keep turning out to be statements about the KB rather than about the world. A gap about the world costs a sweep. A gap about your own `ls` costs nothing.**
+
+### 🔴 The finding that changes a recommendation: `pylti1.3` has been dead for forty-seven months
+
+**This file and `repos/foundations.md` have carried `dmitry-viskov/pylti1.3` since p319 as — their words — *"the repo that gets your agent into the client's existing LMS"*, re-verified at p319, with the caveat *"still no published release — pin a commit".* 🔴 **The caveat was the wrong one.** Measured first-hand this pass on the git channel, across **every ref, not just the default branch**:
+
+| measure | value, first-hand p330 |
+|---|---|
+| commits | 178 |
+| authors | **16** — it had a community |
+| last commit, `master` | 🔴 **2022-11-21** |
+| newest ref of **any** kind | 🔴 **tag `2.0.0`, also 2022-11-21** |
+| last substantive commit | 🔴 *"Support Python 3.11 (#106)"* |
+
+🔵 **"No published release" reads as a young project. "Sixteen authors, 178 commits, and nothing on any branch or tag in forty-seven months" reads as an abandoned one, and they are opposite procurement facts.** 🔴 **Its last feature was support for Python 3.11; `artcc/freelingo`, a row added below in this same pass, ships on Python 3.14.** **A library whose newest supported runtime is three releases behind the artefacts that would depend on it is not a dependency, it is a fork.** 🟢 **This is `intel/trends.md` trend 15 — the foundations tier aging while the agent tier is live — landing on the single row this KB told clients to build their LMS integration on.**
+
+### 🟢 And the correction cuts the other way too: the Tsugi question, closed negative at p323, is answered positively — by the code
+
+**p322 asked which LTI versions `tsugiproject/tsugi` implements. p323 answered: *"An LTI integration cannot be scoped from Tsugi's README"*, recording that none of LTI 1.1, LTI 1.3, Advantage, Deep Linking or NRPS is named anywhere in it.** 🔴 **That was a code question answered from documentation, and it produced a false negative that this KB has carried for seven passes.** The tree, enumerated first-hand this pass:
+
+| capability | the files that implement it |
+|---|---|
+| **LTI 1.3** | `lib/src/Util/LTI13.php`, `lib/src/Services/Outbound/Lti13TestLaunch.php` |
+| **AGS** (Assignment & Grade Services) | `ims/ags/route.php`, `lib/src/Controllers/Ims/Ags.php`, `lti/ags.php` |
+| **NRPS** (Names and Role Provisioning) | `ims/nrps/route.php`, `lib/src/Controllers/Ims/Nrps.php` |
+| **Deep Linking** | `lib/src/Util/DeepLinkRequest.php`, `lib/src/Util/DeepLinkResponse.php`, `lib/src/Core/DeepLinkResponse.php` |
+| 🟢 **and it is tested** | `lib/tests/Util/LTI13Test.php`, `lib/tests/Services/Outbound/Lti13TestLaunchTest.php` |
+| **LTI 1.1 as well** | its own commit, 2026-10-18: *"Note that upward is set from an LTI 1.1 result."* |
+
+**Activity, first-hand: 4,012 commits · 47 authors lifetime · last commit 2026-10-19 · 486 commits in 2026.** 🟡 **One qualifier that belongs in the same breath: those 486 commits in 2026 come from *three* authors, and the overwhelming majority from Charles Severance himself.** **Apache-2.0, alive, complete on the Advantage surface, and a bus factor of roughly one.**
+
+🔵 **Put the three readings together and the LTI picture this KB has published is wrong in its shape, not just its details. It has been reporting a dying integration layer. What the code shows is a *bifurcated* one:**
+
+| ecosystem | artefact | grant | state, first-hand p330 |
+|---|---|---|---|
+| **PHP** | `tsugiproject/tsugi` | Apache-2.0 | 🟢 **Alive** — 4,012 commits, 47 authors, yesterday. Full Advantage surface, tested |
+| **Python / Django** | `dmitry-viskov/pylti1.3` | MIT | 🔴 **Dead** — nothing on any ref since 2022-11-21 |
+| **Python / Django** | `openfun/django-lti-toolbox` | MIT | 🔴 **Dead** — 34 commits, 6 authors, last 2024-11-14 (p325's figure, confirmed exactly) |
+| **JS / TS** | `Liberate-Labs/ltikit-sdk` | 🟢 **MIT** | 🟡 **New, complete, and quiet since an ownership transfer** — below |
+
+🔴 **The consequence for a bid is direct, and it reverses this KB's standing advice: if the integration must be LTI and the stack is Python, there is no maintained permissive library to point at.** **Tsugi is the one living, complete, permissive LTI implementation in this KB, and it is PHP.**
+
+### 🟢 The new row: a second permissive LTI 1.3 Advantage implementation exists, and it is not Python
+
+| field | value, read first-hand from shipped bytes this pass |
+|---|---|
+| repo | https://github.com/Liberate-Labs/ltikit-sdk |
+| grant | 🟢 **MIT** — `main/LICENSE`, **1,063 B**, *Copyright (c) 2026 alasim* |
+| activity | **38 commits · 1 author** (`hasanmahmud@liberate-labs.com`, all 38) · **2026-07-04 → 2026-07-10** · 212 files |
+| the surface, **from the tree, not the README** | `packages/core/src/ags.ts`, `nrps.ts`, `deep-linking.ts` — 🟢 **each with its own `.test.ts` beside it**; 16 test files in all |
+| shape | monorepo: `core` + framework packages `next`, `hono` + **four storage adapters** — `memory`, `prisma`, `redis`, `supabase` |
+| claims | README: *"Verified live against **Canvas** and **MoodleCloud**: SSO, deep linking, grade passback (AGS), and roster (NRPS)"*; 1.0-rc with **Dynamic Registration** and **cookieless launches (Platform Storage)** |
+| region | 🔴 **UNPLACED** — `liberate-labs.com` carries no country signal and no commit offset was decisive |
+
+🔵 **Why it matters: it is the first permissive LTI 1.3 Advantage implementation this KB has found outside Python, it targets serverless and edge rather than a long-running server, and it was verified against live Canvas and MoodleCloud by its author.** 🔴 **Why it does not relieve the concentration risk this KB has flagged for four passes:**
+
+1. **One author, every commit.** The risk was never "only one library" — it was "only one maintainer". **Swapping a dead single-maintainer library for a live single-maintainer library does not change the shape, it changes the date.**
+2. 🔴 **The last three commits on `main` are an ownership handover, not code** — *"update package metadata and version numbers across multiple packages to reflect **new ownership**"*, *"update repository links and author information"*, *"update sitemap URL ... to reflect new domain"*, all on **2026-07-10**. The last functional commit is `1.0.0-rc.4` on 2026-07-08.
+3. 🟡 **The automation is alive and nobody is landing it.** Seven `dependabot/` branches run forward to **2026-10-07** — `hono`, `next`, `astro`, `vitest`, `sharp`, `mermaid`, `next-auth` — and **not one is merged into `main`.** **A repository whose bots are three months ahead of its humans is a repository between owners.**
+
+🟢 **Use it, and budget for it: it is the right starting point for a JS/TS LTI tool and the only permissive one, and it should be forked and pinned rather than depended on.**
+
+### 🟢 The placement method the activity channel also pays, and it closes both of this file's 🔴 UNPLACED rows
+
+🔵 **p329 opened the git channel for *activity* and stopped there. The same clone carries author identity and commit offset, and this KB has rows sitting at 🔴 UNPLACED whose placement evidence was inside the object it already fetched.** Two signals, in strict priority:
+
+1. 🟢 **Author email domain — institutional, strongest.** An `.edu`, `.ac.uk` or ministry domain is a *declaration* of affiliation, not an inference.
+2. 🟡 **Commit UTC offset — locates the keyboard, not the person.** Usable only when every commit agrees, and it is evidence of *where the work was done*, never of nationality.
+
+| row | evidence, first-hand p330 | placement |
+|---|---|---|
+| `Jellypod-Inc/school-skills` | `pierson@jellypod.ai`; **all four commits at `-0700`** (US Pacific) | 🟢 **North America** — was 🔴 UNPLACED since p328 |
+| `afri-bit/revibe` | `afribit.tech@gmail.com`; **all four commits at `+0200`** (Central European Summer Time) | 🟢 **EMEA** — was 🔴 UNPLACED since p328. 🟡 **Read the signal honestly: the author's name is Indonesian and the keyboard was in a UTC+2 locale. This places the work, not the person** |
+| `Gchism94/jupyterquest` (new below) | 🟢 **`gchism@arizona.edu`, 124 of 249 commits** | 🟢 **North America — institutionally attributed, first-hand.** University of Arizona |
+
+🔴 **The declared limit, because this signal is easy to over-read:** a commit made through the GitHub web editor carries the browser's offset, and any local `git config` can be wrong or set to UTC. **One commit's offset establishes nothing. A unanimous offset across every commit in a small repository is evidence; it is still weaker than a domain.**
+
+### The sweep: four usable grants, three rejections, and one asserted repository that does not exist
+
+| repo | grant, read first-hand p330 | activity, first-hand p330 | verdict |
+|---|---|---|---|
+| `Liberate-Labs/ltikit-sdk` | 🟢 **MIT** (1,063 B) | 38 · 1 author · 2026-07-10 | 🟢 **SHELF** — above, and cut into `## The table` |
+| `Gchism94/jupyterquest` | 🟢 **MIT** (1,070 B, *© 2024 Greg T. Chism*) | 249 · 3 authors · **2026-05-07** | 🟢 **SHELF** — `.ipynb` autograder, Zenodo DOI, Codecov, CI. 🟡 Five months quiet |
+| `ictinnovations/ictexam-mcp` | 🟢 **MIT** (1,114 B, *© 2026 Tahir Almas, ICT Innovations*) | 5 · 1 author · 2026-09-08 | 🟡 **RECORDED, not shelf** — five commits. Its *pairing* is the finding, below |
+| `artcc/freelingo` | 🔴 **AGPL-3.0** (34,514 B) | **1,168 · 7 authors · 2026-10-16** | 🟡 **READ, DO NOT EMBED** — below |
+| `Gchism94/ai-tutor` | 🟢 MIT (1,070 B) | — | 🔴 **SUPERSEDED by its own README** — *"in the process of being consolidated into jupyterquest"*, and self-labelled *"not yet production-ready"* |
+| `BlackyDrum/ai-tutor` | 🟢 MIT (1,067 B, *© 2024*) | 818 · 3 authors · 🔴 **2024-10-19** | 🔴 **REJECTED — two years silent.** Laravel/Vue/Postgres; substantial and abandoned |
+| `sumitchopkar2005/Agentic_AI_LMS` | 🔴 **NO GRANT** (main+master, four filenames) | — | 🔴 **NOT USABLE.** A 28,267-byte README claiming Canvas/Moodle-class LTI 1.3 over an unlicensed tree |
+| `projectremedy-ai/remedy-canvas-lti` | 🔴 — | 🔴 **clone failed; `raw` 404** | 🔴 **DOES NOT EXIST.** The search channel returned it with a full capability description: *"Canvas LTI 1.3 tool that scans entire courses for WCAG 2.2 AA accessibility issues and remediates them in-place"* |
+
+🔴 **That last row is the third time in three passes the search channel has asserted a repository that the byte channel cannot find** (p329: `Naresh1401/education-tutor-agent` and `techpivot25/Educate-AI` asserted as *"MIT licensed"* with no grant in either). 🔵 **The pattern is now specific enough to name: the search channel's *descriptions* are fluent and its *existence claims* are not load-bearing.** **Nothing from it enters this KB until a 200 from `raw.githubusercontent.com` or a successful clone.** 🟡 **And note what was lost with this one: WCAG 2.2 AA remediation inside an LMS would have been a new category here and a direct answer to the European Accessibility Act and Section 508. The gap is real; the artefact was not.**
+
+### 🟡 `freelingo` — the largest live AGPL education artefact this KB has measured, and the licence is the whole decision
+
+**MIT is not available here and the project is not trying to offer it.** `artcc/freelingo`: **AGPL-3.0, 34,514 B, 1,168 commits, 7 authors, last commit 2026-10-16** — against `ChatTutor`'s 193 commits and nine months of silence, this is what a *living* AGPL education project looks like. Self-hosted AI language learning: **CEFR A1–C2** curriculum organised into units, LLM-assessed level placement, generated study plan, listening and reading exercises, voice practice; **Ollama, OpenAI, Anthropic or DeepSeek**; Next.js 16, Python 3.14; v1.10.40. **Region: EMEA** 🟡 *(inferred — `Arturo Carretero Calvo` authored 1,064 of 1,168 commits; a Spanish personal name, no institution and no country declared anywhere in the repository)*.
+
+🔴 **The architecture of its business model is the thing to read, and it is why the licence is deliberate.** The README states it plainly: self-hosting is free under AGPL-3.0, and a **hosted service** with paid subscriptions is operated by the same team. 🔵 **AGPL §13 is not an accident in that design — it is the mechanism that makes the hosted tier defensible, because it is exactly what stops a competitor from running the code as a service without reciprocating.** **Read it for the CEFR ladder and the multi-provider speech path; do not put it in a client deliverable you intend to host.**
+
+### 🟢 LTI and MCP in one vendor's shipping code — the cleanest evidence trend 6 has had
+
+**`ICT Innovations` ships both halves and licenses them differently, and the split is by layer, not by preference:**
+
+| layer | artefact | grant, first-hand | protocol |
+|---|---|---|---|
+| **teacher's agent → exam platform** | `ictinnovations/ictexam-mcp` | 🟢 **MIT**, 1,114 B | **MCP** — read exams, gradebooks, per-question item analysis; write mode off by default |
+| **student → exam, inside the LMS** | `ictinnovations/moodle-mod_ictexam` | 🔴 **GPL-3.0**, 35,149 B (**obligatory** — it is a Moodle plugin) | **LTI 1.3** launch, embedded in the course page |
+
+🔴 **And the detail that only the tree shows: the score does not come back over AGS.** The plugin's README requires the backend to be registered *"as an LTI 1.3 tool, with IMS LTI Assignment and Grade Services and IMS LTI Names and Role Provisioning enabled"* — and the grade is then written by **`classes/external/set_grade.php`, a Moodle web service (`mod_ictexam_set_grade`)**, with raw marks stored rather than percentages. 🔵 **So the shipping answer to "how does the score get back" is: LTI carries the student *in*, and a vendor-specific web service carries the mark *out*, on a site where AGS is switched on and unused.** 🟢 **This is the second artefact in this KB (after `LTIPlugin`) to show the passback path concretely, and the first to show a team choosing not to use the standard one they had already enabled.** **Quote it when a client assumes LTI Advantage conformance means the gradebook path is the standard path.** 🟡 Both repositories are small — 5 and 4 commits — and `classes/privacy/provider.php` is present, so the GDPR privacy API is implemented. **Recorded as an architecture exhibit, not a dependency.**
+
+### 🔴 The self-hosted forge question, pre-registered as action B at pass 23, executed and closed with a negative
+
+**`compose/code/gitlab-api-channel/` declared limit 6: *"`gitlab.com` is one instance. Every self-hosted GitLab — which is where the European public sector actually runs this software — is invisible to this channel. Pre-registered as action B of pass 23."*** 🟢 **Executed this pass. Thirteen hosts, `GET /api/v4/projects?per_page=1`:**
+
+`code.europa.eu` · `gitlab.opencode.de` · `gitlab.gwdg.de` · `git.rwth-aachen.de` · `gitlab.inria.fr` · `salsa.debian.org` · `forge.apps.education.fr` · `gitlab.bsz-bw.de` · `gitlab.tuwien.ac.at` · `codeberg.org` · `git.sr.ht` · `framagit.org` · `gitlab.freedesktop.org`
+
+🔴 **All thirteen: `000` — no connection established.** 🔵 **The result is cleaner than "blocked", and it is worth stating precisely: the reachable surface is an allowlist of specific hosts, not a property of the protocol.** `gitlab.com/api/v4` answers **200** and `gitlab.gwdg.de/api/v4` answers nothing — **same software, same endpoint, same request.** 🟢 **So action B is closed as unreachable-by-environment rather than left open as untried, and the standing consequence is recorded once instead of rediscovered: French, German and EU-institutional education code hosted on sovereign forges — which is a large share of what EMEA public-sector buyers actually run — cannot be measured from here at all.** 🔴 **This KB's EMEA coverage is therefore structurally biased toward whatever European projects also mirror to GitHub.** **That is a property of the instrument, and every EMEA count in this base should be read as a floor.**
+
+### The verification surface, p330
+
+| host / channel | p329 | p330 | consequence |
+|---|---|---|---|
+| `raw.githubusercontent.com` | 200 | 🟢 **200** | grants, bytes, READMEs first-hand |
+| **git smart-HTTP** (`clone --filter=blob:none`) | 🟢 200 | 🟢 **200** | commits, authors, dates, **all refs**, tree enumeration, **author domains and commit offsets** |
+| `gitlab.com/api/v4` | 🟡 "301, untested" | 🟢 **200 — and instrumented since 2026-10-06** | ★, forks, topics, `last_activity_at`, licence key, file payloads |
+| `github.com` (rendered) | 403 | 🔴 **403** | no stars, forks, topics |
+| `api.github.com` | 403 | 🔴 **403** | same |
+| **13 self-hosted / alternative forges** | not tested | 🔴 **000 × 13** | **closed negative — see above** |
+| `arxiv.org`, `huggingface.co` | 403/000 | 🔴 **000** | no scholarly corroboration |
+
+
 ## Pass 329 · 2026-10-20 (second pass of this date) — the quantitative column in the table below measures the one channel that is 403, and this file told itself to stop ten passes ago
 
 🔴 **p319 wrote the instruction five lines above `## The table`, in this file, and this file never obeyed it:** *"the ★ column is a rough size signal and nothing more. **Rank on commit count, release cadence and licence.**"* 🔴 **Ten passes later the table's only quantitative column is still `★`, and p328 — unable to reach `github.com` — filled that column with `🔴 n/v` for every row it cut.** 🟢 **The commit channel was open the whole time.** `git clone --filter=blob:none --no-checkout` on third-party public repositories returns **200** through this proxy while `github.com` and `api.github.com` both return **403**, and **this KB has known that since p229** (`repos/trending.md:1717` records it superseding p306).
@@ -695,14 +831,17 @@ commit count, release cadence and licence.**
 
 | Agent | Repo | Licence | ★ / activity | Checked | What it does | Use it for |
 |---|---|---|---|---|---|---|
+| **LTIkit** | https://github.com/Liberate-Labs/ltikit-sdk | 🟢 **MIT** (`main/LICENSE`, **1,063 B**, read first-hand p330 — *Copyright (c) 2026 alasim*) | **38 commits · 1 author · last 2026-07-10** (p330) · ★ n/v | **p330** | **LTI 1.3 Advantage toolkit for JS/TS, runtime- and storage-agnostic.** `packages/core/src/{ags,nrps,deep-linking}.ts`, 🟢 **each with its own `.test.ts`** (16 test files); framework packages `next` + `hono`; four storage adapters (`memory`, `prisma`, `redis`, `supabase`). 1.0-rc adds **Dynamic Registration** and **cookieless launches (Platform Storage)**. README: live-verified against **Canvas** and **MoodleCloud** | 🟢 **The only maintained permissive LTI 1.3 Advantage library outside PHP — take it when the integration must be LTI and the stack is JS/TS.** 🔴 **Fork and pin, do not depend:** every commit is one author's, the last three are an **ownership handover** (2026-07-10), and **seven dependabot branches run to 2026-10-07 unmerged.** 🔴 **UNPLACED** — no country signal |
+| **jupyterquest** | https://github.com/Gchism94/jupyterquest | 🟢 **MIT** (`main/LICENSE`, 1,070 B, read first-hand p330 — *Copyright (c) 2024 Greg T. Chism*) | **249 commits · 3 authors · last 2026-05-07** (p330) · ★ n/v | **p330** | **`.ipynb` autograder** — the LLM-era member of the `nbgrader` / `otter-grader` cluster. Ships CI (`python-tests.yml`), **Codecov** coverage, a **Zenodo DOI** (`10.5281/zenodo.10784348`) and a PyPI package. Supersedes the same author's `Gchism94/ai-tutor`, which says so in its own README | Notebook-based course autograding where the deliverable must be citable — the DOI is what a university research office asks for. 🟡 **Five months quiet.** 🟢 **North America — institutionally attributed first-hand: `gchism@arizona.edu`, 124 of 249 commits (University of Arizona)** |
+| **FreeLingo** | https://github.com/artcc/freelingo | 🔴 **AGPL-3.0** (`main/LICENSE`, **34,514 B**, read first-hand p330) | 🟢 **1,168 commits · 7 authors · last 2026-10-16** (p330) · ★ ~167 (third-party, carried) | **p330** | **Self-hosted AI language-learning platform.** LLM-assessed **CEFR** placement, generated study plan over a **CEFR A1–C2** curriculum in units, grammar/vocabulary/reading/writing lessons, AI-generated listening exercises, voice practice. **Ollama, OpenAI, Anthropic or DeepSeek**; Next.js 16, Python 3.14; v1.10.40 | 🔴 **Read it, do not embed it — and the licence is deliberate, not incidental:** the same team runs a paid hosted tier, and **AGPL §13 is the mechanism that protects it.** 🟢 **The largest *live* AGPL education artefact in this KB** (against `ChatTutor`'s 193 commits and nine months of silence) — read the CEFR ladder and the multi-provider speech path. **EMEA** 🟡 *(inferred from a Spanish personal name on 1,064 of 1,168 commits; no institution or country declared)* |
 | **ai-tutor** (World Bank) | https://github.com/eai6/ai-tutor | 🟢 **MIT** (`main/LICENSE` **and** `master/LICENSE` read first-hand p328, 1,090 B — *Copyright (c) 2026 World Bank Group and contributors*) | **787 commits · 4 authors · last 2026-08-20** (p329) · ★ n/v | **p328** | **Production-shaped curriculum tutor, Django 6.0.2, seven apps.** 5E phase tags on every `LessonStep`; Socratic with a 3-level hint ladder; auto skill-graph + **prerequisite mastery gating**; exit tickets (35-MCQ bank, 10 sampled, 8/10 to pass); curriculum PDF/DOCX → lesson steps; multi-tenant; Claude/GPT/Gemini/Azure/**local Ollama**. `apps/safety/`: `ConsentRecord` (incl. **parental**, `withdrawn_at`), `SafetyAuditLog` (pseudonymised `user_hash`, consent events, severity), `export_user_data` / `delete_user_data` | 🟢 **The reference build for a ministry or district tutor — and the only permissive row in this KB that ships the consent/audit layer P4 and P9 require.** EMEA (Seychelles). 🔴 Affiliation self-declared; personal namespace |
 | **OpenMAIC** | https://github.com/THU-MAIC/OpenMAIC | 🟢 **MIT** (`main/LICENSE`, 1,064 B, re-read p327) | **733 commits · 127 authors · last 2026-10-19** (p329) · ★ 41.1k (carried p327) | p327 → **shelf p328** | *Open Multi-Agent Interactive Classroom* — **Tsinghua (THU-MAIC)**. Ships `skills/`, `eval/`, `e2e/` and a `render-service` | 🟢 **The multi-agent classroom shell: roles, turn-taking and an eval harness already wired. The largest permissive education agent in this KB.** APAC |
 | **k12-teacher-skills** | https://github.com/anthropics/k12-teacher-skills | 🟢 **Apache-2.0** (`LICENSE` 10,173 B; `NOTICE` names *Anthropic, PBC* and *Learning Commons* under a collaboration agreement) | **4 commits · 3 authors · last 2026-10-13** (p329 — small by design, tended) · ★ 575 (carried p327) | p327 → **shelf p328** | The four skills behind *Claude for Teachers*: `k12-lesson-plan-creation`, `k12-lesson-differentiation`, `k12-lesson-prep`, `k12-check-for-understanding`. Ships `plugin/`, `evals/`, `CLA.md`, `CODEOWNERS`, `SECURITY.md` | The teacher-workflow layer, installable as a plugin. North America |
 | **agent-skills** (Learning Commons) | https://github.com/learning-commons-org/agent-skills | 🟢 **Apache-2.0** (`LICENSE` 10,173 B; `NOTICE` 268 B naming **Anthropic, PBC** + **Learning Commons**) | **42 commits · 6 authors · last 2026-10-06** (p329) · ★ 40 (carried p327) | p327 → **shelf p328** | The same four K-12 teacher skills **grounded in the Knowledge Graph over MCP**; installs via `npx skills add learning-commons-org/agent-skills`. Ships `evals/` rubrics for **pedagogy, rigor, formatting and model scaffolding**, runnable as LLM-as-judge | 🟢 **The standards-grounded variant — take this one when the client needs the skill tied to a curriculum spine rather than to a prompt.** North America |
 | **Shiksha Copilot** | https://github.com/microsoft/Shiksha-Copilot | 🟢 **MIT** (`main/LICENSE`, 1,140 B, re-read p327) | **149 commits · 6 authors · last 2026-09-15** (p329) · ★ 9 (carried p327) | p327 → **shelf p328** | **Microsoft Research India + Sikshana Foundation** | The India reference implementation — a named ministry-adjacent NGO deployment, which is what a public-sector bid asks for. APAC |
 | **Rumi Platform** | https://github.com/Orenda-Project/rumi-platform | 🟢 **Apache-2.0** (`main/LICENSE`, 11,286 B, re-read p327) | **847 commits · 11 authors · last 2026-10-05** (p329 — the carried figure, now exact) · ★ 18 (carried p327) | p327 → **shelf p328** | README names **Pakistan** and the **Taleemabad** national-curriculum library; 847 commits on 18 stars — the commit count is the signal | A low-resource, national-curriculum-bound deployment pattern. APAC |
-| **school-skills** | https://github.com/Jellypod-Inc/school-skills | 🟢 **MIT** (`main/LICENSE`, 1,065 B, read first-hand p328 — *Copyright (c) 2026 Jellypod*) | 🔴 **4 commits, ALL on 2026-04-14 · 1 author · silent 6 months** (p329) · ★ n/v | **p328** | **Seven Claude Code classroom skills shipping, six declared** (self-labelled **alpha**): `lesson-plan`, `socratic-tutor`, `circle-time`, `rubric` (Bloom's-aligned, md + CSV), `arts-crafts`, `lecture-to-study-guide`, `concept-map` (Mermaid/Graphviz/Markmap). Planned incl. `language-drill` (**CEFR, 11 languages**), Anki `.apkg` export | The breadth-first teacher skill bundle when the ask is classroom admin, not tutoring. 🔴 **UNPLACED** |
-| **revibe** | https://github.com/afri-bit/revibe | 🟢 **MIT** (`main/LICENSE`, 1,074 B, read first-hand p328) | 🔴 **4 commits over 2 days · 2 authors · last 2026-05-02** (p329) · ★ n/v | **p328** | **A programming mentor that refuses to write the code.** No server, no account: markdown files that teach an existing coding agent to teach, slash commands, learner state in `MEMORY.md`. Targets Copilot among others | Trend 7 at its limit — the pedagogical contract as portable markdown. Cheap as a component, unsellable as a product. 🔴 **UNPLACED** |
+| **school-skills** | https://github.com/Jellypod-Inc/school-skills | 🟢 **MIT** (`main/LICENSE`, 1,065 B, read first-hand p328 — *Copyright (c) 2026 Jellypod*) | 🔴 **4 commits, ALL on 2026-04-14 · 1 author · silent 6 months** (p329) · ★ n/v | **p328** | **Seven Claude Code classroom skills shipping, six declared** (self-labelled **alpha**): `lesson-plan`, `socratic-tutor`, `circle-time`, `rubric` (Bloom's-aligned, md + CSV), `arts-crafts`, `lecture-to-study-guide`, `concept-map` (Mermaid/Graphviz/Markmap). Planned incl. `language-drill` (**CEFR, 11 languages**), Anki `.apkg` export | The breadth-first teacher skill bundle when the ask is classroom admin, not tutoring. 🟢 **North America** — placed p330 from the commit record: `pierson@jellypod.ai`, all four commits at `-0700` |
+| **revibe** | https://github.com/afri-bit/revibe | 🟢 **MIT** (`main/LICENSE`, 1,074 B, read first-hand p328) | 🔴 **4 commits over 2 days · 2 authors · last 2026-05-02** (p329) · ★ n/v | **p328** | **A programming mentor that refuses to write the code.** No server, no account: markdown files that teach an existing coding agent to teach, slash commands, learner state in `MEMORY.md`. Targets Copilot among others | Trend 7 at its limit — the pedagogical contract as portable markdown. Cheap as a component, unsellable as a product. 🟢 **EMEA** — placed p330 from the commit record: all four commits at `+0200` (CEST). 🟡 Places the keyboard, not the person — the author's name is Indonesian |
 | **ChatTutor** | https://github.com/HugeCatLab/ChatTutor | 🔴 **AGPL-3.0** (`main/LICENSE`, **34,522 B**, read first-hand p328 — the search channel reported no licence) | 🔴 **193 commits · 11 authors · last 2026-01-09 (9 months stale)** (p329) · ★ ~1.2k (third-party, carried) | **p328** | Visual, interactive tutor. pnpm monorepo (`@chat-tutor/{client,web,db}`), Vitest. `README.md` + `README_CN.md` | 🔴 **Read it, do not embed it: AGPL §13 reaches the users of a hosted service.** 🟡 **APAC on a language signal only** — no country or institution named |
 | Homestead | https://github.com/tbh-23/Homestead | MIT (`LICENSE` read first-hand — *MIT License, Copyright (c) 2026 Homestead*, 1,573 bytes) | 15 | p326 | **Mastery-based learning platform for ages 5–13 built directly on the Marble Skill Taxonomy** — fetches `withmarbleapp/os-taxonomy` at runtime rather than vendoring it, and flags topics added or removed upstream. 90%+ mastery gate before advancement; mastery-test answers independently re-solved to verify them; Leitner spaced repetition; spaced retry of missed questions; parent-approved difficulty increases; "Homestead Helper" AI coach grounded in the child's own progress. Static front end (HTML/CSS/vanilla ES modules, Tailwind via CDN) on a Puter.js backend, PWA; 41 commits, 2 forks. Per-parent data isolation; the Commune feature shares only the day's approved topics. | **The reference implementation of the ODbL boundary** — copy its runtime-fetch architecture whenever an ODbL or CC BY-SA dataset sits under a product you intend to keep proprietary. Also the clearest worked mastery ladder in this file. See P13. |
 | claude-study-agent | https://github.com/dymchenkko/claude-study-agent | MIT (`LICENSE` read first-hand — *MIT License, Copyright (c) 2026 dymchenkko*) | 2 | p325 | **A local-first study agent over the learner's own course material, including the lectures.** Ingests slides, PDFs and **lecture recordings** — Whisper for the audio, OCR for scanned pages — then builds a semantic index and runs a study loop over it: spaced-repetition quizzing, mistake tracking and **generated mock exams**. Built on Claude Code; topics declare `local-first`, `rag`, `anki-alternative` and `notebooklm-alternative`. Created 2026-10-10, pushed 2026-10-19, 0 forks | **The lecture-recording leg no other artefact in this file has.** Where `universal-examprep-skill` assumes the learner owns slides and past papers, this one assumes they also own the *recording* of the class — the single richest unexploited corpus in formal education, and the one most likely to carry a consent question. Read it for the ingest chain; treat the recording as personal data from the first line of the proposal |

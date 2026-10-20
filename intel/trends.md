@@ -13,6 +13,71 @@ five real repositories and zero shelf rows.** 🔴 **And the pass's own headline
 re-grade thirteen repositories has been open, known-open and documented-open in this KB's files since p229, and p319 had already
 written the instruction to use it.**
 
+## 🔴 Trend 17 — NEW: open education software is aging in exactly one layer, and the layer is LMS integration — not the base, and not evenly across languages
+
+**Trend 15 said the foundations tier is aging while the agent tier is live. That was right and too coarse.** 🟢 **Measured first-hand at p330 on the git channel across sixteen repositories, every ref rather than the default branch, the aging is not spread across the foundations — it is concentrated in one layer and, inside that layer, in one language ecosystem.**
+
+| layer | measured p330 | state |
+|---|---|---|
+| agents / tutors | DeepTutor (2026-10-19) · OpenMAIC (2026-10-19) · tutor-mcp (2026-10-16) · aegis-integrity (2026-10-16) | 🟢 **all live** |
+| pedagogy / data | OATutor (2026-10-16, **27 authors**) · os-taxonomy (2026-10-19) | 🟢 **all live** |
+| platforms | Openki (2026-10-19, **19 authors in 2026**) · RosarioSIS (2026-10-17) · Tsugi (2026-10-19) · scorm-again (**2026-10-20**) | 🟢 **all live** |
+| **LMS integration, Python** | `pylti1.3` 🔴 **2022-11-21** · `django-lti-toolbox` 🔴 **2024-11-14** | 🔴 **both dead** |
+
+🔵 **Every dead row this pass measured is an LTI library, and both are Python.** **The same layer in PHP is one of the most active projects in this KB (Tsugi: 4,012 commits, 47 authors, 486 commits in 2026).** 🔴 **So the sector-level claim "the open education base is aging" is false as stated; the true claim is narrower and far more actionable: *there is no maintained permissive LTI 1.3 library for Python, and there has not been one since November 2022.***
+
+**What it means for a bid.** When a client requires LTI and the delivery stack is Python — which is most agent stacks in this KB — the options are to port, to fork, or to put the LTI boundary in a PHP (`tsugi`) or TS (`ltikit-sdk`) service and keep Python behind it. 🟢 **Say it in week one. It is a two-week architectural fact and a six-week surprise.**
+
+🔵 **And the second-order reading, which is the more interesting one: the agent tier went to MCP and the integration tier was left where it was.** The Python LTI libraries did not fail — they were **finished and then abandoned in place** while the same community's attention moved to protocols that did not require an LMS to cooperate. **That is trend 6's LTI-versus-MCP argument showing up as a commit date rather than as an opinion.**
+
+## 🟢 Trend 18 — NEW: the declared-gap discount, fifth mechanism — the gap is now a statement about the KB's own inventory
+
+**Five passes, five mechanisms, each one step closer to home.** p324/p325: a declared gap is a statement about the **query**. p326: the **filter**. p327: the **write**. p328: the write's **target**. p329: **a channel this base already held**. 🔴 **p330: a channel this base had already built an instrument for, tested to 32/32, documented, and filed in its own tree — and then declared untested fourteen days later.**
+
+**The specific instance.** p329's verification table closed with `gitlab.com` — *"🟡 301 — responds — an untested supply channel; next pass should sweep it"*. 🟢 **`compose/code/gitlab-api-channel/` has existed since 2026-10-06**: a 7,558-byte client, a 10,287-byte suite at **32/32 offline and 35/35 live**, `data/` holding **534 projects** from 25 English terms and **141** from 16 Spanish/Portuguese terms, and three named findings. **Re-run at p330: 32/32.**
+
+🔵 **Why this is a trend and not an anecdote: the mechanism is structural and it scales with the KB.** `compose/code/` now holds **386 directories**. No pass can carry that inventory in prose, every pass writes a verification table, and a verification table is exactly where a confident "untested" gets written. 🔴 **The failure is not carelessness. It is that the cost of checking the inventory was never put in the path of the claim.**
+
+🟢 **The remedy, and it is one command: before any pass writes *untested*, *unreachable* or *never swept* about a channel, run `ls compose/code/ | grep -i <channel>`.** **The directory names are the index.** 🔵 **The general lesson for a KB that compounds: a declared gap costs a sweep when it is about the world and costs nothing when it is about your own `ls` — and six passes running, it has been about the `ls`.**
+
+## 🟢 Extension to trend 14 — the activity channel answers three questions, not one, and it does not care which forge it points at
+
+**Trend 14 recorded that activity has replaced attention as the measurable signal. p330 found the channel pays considerably more than activity, from the same single fetch.**
+
+| question | how the clone answers it | what it replaces |
+|---|---|---|
+| is it alive? | `rev-list --count`, `log -1` | ★ from `api.github.com` — 🔴 403 since p37 |
+| alive on **any** ref? | `for-each-ref --sort=-committerdate` | 🔴 **nothing** — it is how `pylti1.3` was confirmed dead on its tags, not just `master`, and how `civil-ai`'s eight newer refs were shown to be **all `dependabot/`** |
+| **what does it implement?** | `ls-tree -r --name-only HEAD` | the README — 🔴 **which produced a false negative on Tsugi that this KB carried for seven passes** |
+| **where is it from?** | author email domain; commit UTC offset | 🔴 inference from READMEs and namespaces |
+
+🟢 **Three consequences, all demonstrated at p330.**
+
+1. 🔴 **A capability question answered from documentation is a coin flip.** p323 read Tsugi's README, found no LTI version named, and published *"an LTI integration cannot be scoped from Tsugi's README"* as a closed negative. The tree carries `lib/src/Util/LTI13.php`, AGS, NRPS and Deep Linking **with unit tests**. **The rule: a capability question is answered from `ls-tree`, and it is the same fetch that produces the activity triple.**
+2. 🟢 **Placement is in the commit record.** `gchism@arizona.edu` is a *declaration* of affiliation; a unanimous commit offset locates the keyboard. Two rows marked 🔴 UNPLACED since p328 were closed this pass without a single search. 🟡 **Priority matters: domain first, offset second, and an offset never establishes nationality** — `afri-bit/revibe` is an Indonesian author's work committed in a UTC+2 locale.
+3. 🟢 **The channel is forge-agnostic.** `git clone --filter=blob:none` returns **200 against `gitlab.com`** as well as GitHub, which is how Openki (**12,988 commits, 88 authors, 19 of them in 2026**) and RosarioSIS (**8,034 commits, 332 in 2026**) were measured for the first time. **Platforms that are GitLab-primary had only ever been seen through `last_activity_at`, a timestamp a bot bumps.**
+
+🔴 **One limit, recorded with the method: thirteen self-hosted and alternative forges answered `000` — the reachable surface is a host allowlist, not a protocol property.**
+
+## 🟡 Extension to trend 4 — copyleft in education is a business model now, not a philosophy, and `freelingo` makes the mechanism explicit
+
+**p328 recorded copyleft reaching the agent tier as a counter-instance to trend 4's permissive-agent split. p330 adds the reason it is happening, in the project's own words.**
+
+**`artcc/freelingo` — AGPL-3.0, 34,514 B, 1,168 commits, 7 authors, last commit 2026-10-16** — is the largest *live* AGPL education artefact this KB has measured, against `ChatTutor`'s 193 commits and nine months of silence. Its README states the arrangement directly: **self-hosting is free and open source under AGPL-3.0, and the same team operates a paid hosted service.**
+
+🔵 **AGPL §13 is the load-bearing component of that model, not a licensing preference.** It is precisely what prevents a competitor from running the code as a service without reciprocating, which is what makes a hosted tier defensible beside a free self-hostable one. 🔴 **The consequence for this KB is that the copyleft rows are not going to drift permissive over time — the licence is doing commercial work for its authors, and the ones that pick it are the ones with a revenue model.** 🟢 **Read it as a signal of seriousness rather than of ideology: an AGPL education project with a hosted tier is more likely to still exist in two years than an MIT one with a single author.** **It is still not embeddable in a hosted client deliverable, and that judgement is unchanged.**
+
+## 🔴 Correction to trend 11 — the unreliable-metadata finding now has a third mode: the search channel asserts repositories that do not exist
+
+**Trend 11 has argued for eleven passes that this sector's published metadata is unreliable in both directions — stars solicited, licences misdeclared in badges. p330 adds a mode that is categorically worse, because the other two at least describe something real.**
+
+**`projectremedy-ai/remedy-canvas-lti` was returned by the search channel with a full capability description: *"Canvas LTI 1.3 tool that scans entire courses for WCAG 2.2 AA accessibility issues and remediates them in-place"*, with a named stack (FastAPI backend, AI client).** 🔴 **`raw.githubusercontent.com` returns 404 and the clone fails. The repository does not exist.**
+
+🔴 **It is the third in three passes** — p329 recorded `Naresh1401/education-tutor-agent` and `techpivot25/Educate-AI`, both asserted as *"MIT licensed"*, neither carrying a grant. 🔵 **The pattern is now specific enough to state as a rule about the channel rather than about any one result: the search channel's *descriptions* are fluent and well-formed, and its *existence and licence claims* are not load-bearing.** 🟢 **Nothing enters this KB on a search result. A 200 from `raw.githubusercontent.com` or a successful clone is the entry condition, and it costs one request.**
+
+🟡 **Worth recording what the invented row would have been, because the gap it pointed at is real: WCAG 2.2 AA remediation inside an LMS is a direct answer to the European Accessibility Act and to Section 508, and this KB holds no artefact in that category.** **A named absence, not a silence.**
+
+
 ## 🟢 Trend 13 — NEW: the unit of market access in public education is the procurement vehicle, not the vendor
 
 🔴 **This file and `intel/market.md` spent four passes asking the wrong question.** The declared gap read *"this file can place

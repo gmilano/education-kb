@@ -48,6 +48,61 @@ recipes, and that belongs in the SOW.
 
 ---
 
+## P25 — The LTI boundary as its own service: shipping a Python agent into a Canvas or Moodle tenancy now that the Python LTI library is dead — NEW in p330
+
+**The problem this solves, and it was invisible until this pass measured it.** Every tutor, grader and classroom agent in this KB is Python or TypeScript, and every North American district engagement ends at the same sentence: *"it has to launch from Canvas and write to the gradebook."* 🔴 **This KB has answered that for eleven passes by pointing at `dmitry-viskov/pylti1.3`.** 🔴 **Measured first-hand at p330 across every ref: 178 commits, 16 authors, and no commit on any branch or tag since `2022-11-21`. Its last substantive commit is *"Support Python 3.11"*. The other permissive Python option, `openfun/django-lti-toolbox`, died `2024-11-14`.** 🟢 **The fix is not to find a third Python library — there isn't one. It is to stop putting the LTI boundary in the agent's language.**
+
+### The stack, with grants read first-hand and activity measured first-hand (p330)
+
+| layer | repo | grant | activity (p330) | role, and why this one |
+|---|---|---|---|---|
+| **LTI boundary — PHP route** | `tsugiproject/tsugi` | 🟢 **Apache-2.0** | 🟢 **4,012 commits · 47 authors · last 2026-10-19 · 486 commits in 2026** | The launch, the AGS writeback, the NRPS roster and Deep Linking. 🟢 **Verified from the tree, not the README** (`lib/src/Util/LTI13.php`, `ims/ags/route.php`, `lib/src/Controllers/Ims/Nrps.php`, `DeepLinkRequest.php`) **with unit tests** (`lib/tests/Util/LTI13Test.php`). Handles **LTI 1.1 as well** — its own commit of 2026-10-18. 🟡 Three authors in 2026 |
+| **LTI boundary — TS route** | `Liberate-Labs/ltikit-sdk` | 🟢 **MIT**, `main/LICENSE` 1,063 B | 🟡 **38 commits · 1 author · last 2026-07-10** | Same surface, serverless/edge: `packages/core/src/{ags,nrps,deep-linking}.ts`, **each with its own `.test.ts`**; Dynamic Registration; **cookieless launches (Platform Storage)**; adapters for memory, Prisma, Redis, Supabase. 🔴 **Fork and pin** — last three `main` commits are an ownership handover, seven dependabot branches unmerged |
+| **The agent** | `ArnaudGuiovanna/tutor-mcp` | 🟢 **MIT** | 🟢 **467 commits · 5 authors · last 2026-10-16** | The deterministic pedagogy engine: skill graph, BKT, FSRS, prerequisite rules. Speaks **MCP**, knows nothing about LTI |
+| **or the chassis** | `eai6/ai-tutor` | 🟢 **MIT**, 1,090 B | **787 commits · 4 authors · 2026-08-20** | When the engagement needs the whole Django tutor — 5E phases, mastery gating, `apps/safety/` consent and audit |
+| **Autograding (optional)** | `Gchism94/jupyterquest` | 🟢 **MIT**, 1,070 B | 🟡 **249 commits · 3 authors · 2026-05-07** | `.ipynb` autograding where the mark must be defensible: CI, Codecov, **Zenodo DOI `10.5281/zenodo.10784348`**. **North America** (`gchism@arizona.edu`) |
+| **Legacy courseware (optional)** | `jcputney/scorm-again` | 🟢 **MIT** | 🟢 **1,243 commits · 14 authors · last 2026-10-20** | The SCORM 1.2 / 2004 route into installed courseware that LTI does not reach |
+
+### The wiring, concretely
+
+```
+Canvas / Moodle tenancy
+        │  LTI 1.3 launch (OIDC, platform JWKS, state+nonce)
+        ▼
+┌─────────────────────────────────────────────┐
+│  BOUNDARY SERVICE  — tsugi (PHP) or ltikit (TS)  │
+│   · validates the launch, resolves the user      │
+│   · NRPS → roster                                │
+│   · Deep Linking → placement                     │
+│   · AGS → writes the score back                  │
+│   · mints a short-lived internal token           │
+└───────────────┬─────────────────────────────┘
+                │  internal HTTP + MCP — NO LTI beyond this line
+                ▼
+        tutor-mcp  /  eai6-ai-tutor  /  jupyterquest
+        (Python, knows only: user id, course id, role, callback)
+```
+
+**Four rules make this work, and each one is the answer to a mistake this KB has seen in a real repository:**
+
+1. 🟢 **The boundary speaks LTI and nothing else speaks LTI.** The agent receives a resolved identity (user, course, role, grade callback) over internal HTTP. **This is what makes the dead-library problem survivable: when the boundary library rots, you replace one service, not the product.**
+2. 🔴 **Write the grade over AGS, from the boundary.** `ictinnovations/moodle-mod_ictexam` (🔴 GPL-3.0, read first-hand p330) is the cautionary case: its README *requires* AGS and NRPS to be enabled on the LTI preset, and then returns the mark through **`classes/external/set_grade.php`, a vendor-specific Moodle web service**. 🔵 **That works and it is not portable** — it binds the product to Moodle at the one point LTI exists to keep portable. **Use the standard path you already enabled.**
+3. 🟡 **Pin the boundary by commit, and budget maintenance for it.** Neither option is a dependency you can forget: Tsugi is 486 commits a year from **three** people; LTIkit is **one** author and is between owners. **Price six to ten days a year against the boundary service in the bid; it is still an order of magnitude cheaper than owning an LTI implementation.**
+4. 🔴 **Do not put copyleft inside the boundary.** `adamzammit/LTIPlugin` (GPL-3.0) and `artcc/freelingo` (AGPL-3.0, §13 reaching hosted users) are readable references, **not components of a hosted deliverable.**
+
+### What this is worth, and where it sells
+
+🟢 **North America, highest value.** This is the region where the LMS *is* the integration point and where **cooperative purchasing** (p329) makes the integration the reusable asset — win one district, become buyable by every member, and the boundary service is what carries across. 🔵 **A proposal that names the library, shows the 2022 commit date, and prices the boundary explicitly is doing diligence the incumbent vendor has not.**
+
+🟡 **EMEA, second.** Universities buying through **GÉANT OCRE** (p329) ask the sustainability question directly, and a boundary service with 47 contributors behind it answers it better than a library with none. 🔴 **Declare the accessibility gap in the same breath** — nothing in this KB remediates *course content* for WCAG 2.2 AA inside an LMS, and the European Accessibility Act makes that the buyer's liability, not the vendor's.
+
+🔴 **APAC, usually not.** The region's strongest artefacts — OpenMAIC, DeepTutor, Rumi, Shiksha Copilot — deploy *beside* institutional systems or as national programmes, not inside a Canvas tenancy. **Reach for P15 or P14 there and skip this boundary entirely; the integration debt is the thing APAC engagements do not have.**
+
+### 🔴 What was not verified, stated plainly
+
+**Neither boundary option was run against a live LMS by this pass.** Tsugi's LTI 1.3 surface is established **from the shipped tree and its unit tests**; LTIkit's is established from its tree plus **its author's claim** of live verification against Canvas and MoodleCloud, which this environment cannot corroborate — `github.com`, `api.github.com` and every non-allowlisted host are unreachable. 🟢 **Both grants are byte-verified and both activity triples are first-hand.** 🔴 **Budget a spike against the client's actual tenancy before committing to either route in a fixed-price scope: platform quirks in Canvas and Moodle are the part no repository can tell you about.**
+
+
 ## P23 — The enforceable help-level contract: instructor-set policy, tutor-side enforcement, and an evaluator that proves it held — NEW in p329
 
 **The problem this solves, and it is the one that actually blocks faculty sign-off.** Every academic-integrity conversation ends at the

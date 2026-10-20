@@ -6,6 +6,42 @@ updated: 2026-10-20
 
 # Vertical platforms — education
 
+## Pass 330 — the platform tier is measurable for the first time, because the activity channel turns out not to care which forge it points at
+
+🔴 **The platform tier has not moved for an eighth pass. What changed this pass is that it can finally be *measured*.** 🟢 **`git clone --filter=blob:none --no-checkout` answers **200 against `gitlab.com`**, not only GitHub.** **The activity channel p329 opened is forge-agnostic**, and the platform tier is precisely where this matters, because the two most interesting open platforms in this file's orbit are GitLab-primary and have therefore only ever been seen through `last_activity_at` — a single timestamp that a bot, a wiki edit or a label change will bump.
+
+### 🟢 Two platform-tier rows measured first-hand, and one of them has the healthiest contributor base in this KB
+
+| platform | forge | grant | commits | authors | last | **2026 commits / 2026 authors** |
+|---|---|---|---|---|---|---|
+| **Openki** | gitlab.com/Openki/Openki | 🔴 **AGPL-3.0** | **12,988** | 🟢 **88** | 2026-10-19 | 🟢 **1,580 / 19** |
+| **RosarioSIS** | gitlab.com/francoisjacquet/rosariosis | 🔴 **GPL-2.0** (payload; see below) | **8,034** | 13 | 2026-10-17 | 🟡 **332 / 3** |
+
+🔵 **Nineteen distinct people committed to Openki in 2026.** For comparison, everything else this KB measured this pass: Tsugi **3** authors in 2026 on 486 commits, RosarioSIS **3** on 332, DeepTutor 273 lifetime, OpenMAIC 127 lifetime. 🟢 **Openki is the only artefact in this base with a contributor base that would survive losing its lead maintainer** — and this KB has never carried it as a platform row, because a single `last_activity_at` timestamp does not distinguish 19 contributors from one.
+
+**Placement, first-hand from the commit record:** 🟢 **Openki → EMEA, Switzerland** — `cis.ch` is the third-largest author domain (1,759 commits) and 2026 offsets are overwhelmingly `+0200`/`+0100`. 🟢 **RosarioSIS → EMEA** — `rosariosis.org` on the maintainer's commits, 2026 offsets `+0200`/`+0100`, French maintainer name. **Neither was placed from a README.**
+
+🟡 **What Openki is, and the honest limit on it:** a **course-organisation platform** — *"a tool to build up and collaboratively organize local communities – open education for real"* — peer-to-peer and non-profit, Meteor-based, topics `education`, `p2p`, `peer`, `calendar`, `self-organisation`. 🔴 **It is not an LMS and it is not a SIS.** It organises *who teaches what to whom, where and when*; it does not hold a gradebook, a curriculum or a roster of record. 🔴 **AGPL-3.0, so §13 reaches the users of a hosted service** — the same boundary as `ChatTutor` and `freelingo`. **Propose it as the community-learning and course-scheduling surface, read it for an engagement model that actually sustained 88 contributors, and do not fold it into a proprietary deliverable.**
+
+### 🔴 One hygiene finding the clone exposed, and it bears on every "who built this" question in a bid
+
+**RosarioSIS: 7,001 of 8,034 commits carry `users.noreply.github.com`, and 1,019 carry `example.com`.** 🔵 **The first confirms what `compose/code/gitlab-api-channel/` finding `P-GL-1` implied and could not show — this GitLab repository's history was imported from GitHub, and the two listings (644★ on GitHub, 65★ on GitLab) are one project, not two.** 🔴 **The second is a placeholder address on an eighth of the history.** **Both matter when a procurement question asks who maintains a platform: the commit identities in a migrated repository describe the forge it came from, not the team that works on it now.** **Answer that question from the 2026 slice — 332 commits, 3 authors — not from the lifetime totals.**
+
+### 🟡 The licence correction this file should carry forward, restated because it is a platform-tier row
+
+**`compose/code/gitlab-api-channel/` finding `P-GL-1` established that the forge's own licence field is wrong on this row: GitLab's classifier returns `agpl-1.0`, and the payload is the plain **GNU GPL v2, 15,214 B**, byte-identical to this KB's reading of the same file on GitHub.** 🔴 **Re-confirmed live this pass: the API still answers `agpl-1.0 / "Affero General Public License v1.0"`.** 🟢 **The second detector error from the same finding also still stands — `olatorg/openolat-starter` is served as `ecl-2.0` and its payload is verbatim **Apache-2.0**, with zero occurrences of "Educational Community".** **A forge licence field is a classifier output. Quote the payload.**
+
+### 🔴 The sovereign-forge question, closed — and it bounds this file's EMEA coverage permanently
+
+**`gitlab-api-channel` declared limit 6 pre-registered this as action B of pass 23: *"every self-hosted GitLab — which is where the European public sector actually runs this software — is invisible to this channel."*** 🟢 **Executed: thirteen hosts, `GET /api/v4/projects?per_page=1`** — `code.europa.eu`, `gitlab.opencode.de`, `gitlab.gwdg.de`, `git.rwth-aachen.de`, `gitlab.inria.fr`, `salsa.debian.org`, `forge.apps.education.fr`, `gitlab.bsz-bw.de`, `gitlab.tuwien.ac.at`, `codeberg.org`, `git.sr.ht`, `framagit.org`, `gitlab.freedesktop.org`. 🔴 **All thirteen: `000`.**
+
+🔵 **This is not "GitLab is blocked" — `gitlab.com/api/v4` answers 200 in the same session.** **It is a host allowlist.** 🔴 **The standing consequence for this file specifically: `forge.apps.education.fr` is the French Ministry of Education's own forge and `gitlab.opencode.de` is Germany's public-sector code platform. The platform-tier artefacts an EMEA public-sector buyer is most likely to already be running are, structurally, the ones this KB cannot see.** **Every EMEA platform count here is a floor, biased toward whatever European projects also mirror to GitHub or gitlab.com. Say so in an EMEA bid rather than implying the search was exhaustive.**
+
+### What did not move, stated plainly
+
+🔴 **No new platform-tier entrant.** The SIS gap p328 measured is unchanged: **RosarioSIS (GPL-2.0) and OpenSIS (GPL-2.0) remain the serious open SIS options and both are copyleft**; no MIT/Apache/BSD student information system surfaced in this pass's sweeps, and the GitLab corpus — 372 unique projects over 20 English terms this pass, against the instrument's standing 534 — returned none either. 🟡 **OpenEduCat (LGPL-3.0) remains the nearest permissive-ish education ERP, and LGPL-3.0 is still not in the MIT/Apache/BSD band this KB builds on.** **An informed gap: the permissive SIS does not exist, across two forges and four sweeps.**
+
+
 ## Pass 329 — the platform tier did not move for a seventh pass, and the pass instead found how a self-hosted platform actually gets BOUGHT
 
 🔴 **No new platform row. Seventh consecutive pass, and the query is now reaching 16-year-old material.** The prescribed vertical query

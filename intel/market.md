@@ -734,6 +734,26 @@ anything about my institution?" that is not a bespoke integration — and becaus
 
 ### North America
 
+### 🔴 The Python LTI dependency under every district integration is dead, and that is a risk line in your bid (added p330)
+
+**Measured first-hand at p330 on the git channel: `dmitry-viskov/pylti1.3` — the MIT LTI 1.3 Advantage library this KB has recommended since p319 as *"the repo that gets your agent into the client's existing LMS"* — has no commit on any branch or tag since `2022-11-21`.** 178 commits, 16 authors, newest tag `2.0.0` the same day, final substantive commit *"Support Python 3.11"*. `openfun/django-lti-toolbox`, the other permissive Python option, is dead since `2024-11-14`.
+
+🔴 **Why this is a North America opportunity note and not just an engineering one.** This is the region where the LMS is the integration point: Canvas, Schoology and PowerSchool sit between a district and anything a studio ships, and **cooperative purchasing (p329) makes the integration the reusable asset** — win one district, become buyable by every member, and the LTI layer is what carries across. 🔴 **A proposal that names an abandoned library as the integration path is a proposal whose maintenance cost lands on the studio in year two.**
+
+🟢 **The three honest options, to state in the bid rather than discover in week six:**
+
+| option | when it fits | cost |
+|---|---|---|
+| **Put the LTI boundary in PHP** — `tsugiproject/tsugi`, Apache-2.0, 4,012 commits, **47 authors**, committed 2026-10-19, with `LTI13.php`, AGS, NRPS and Deep Linking **under unit test** | the client already runs PHP, or the boundary can be a thin separate service | 🟢 lowest — the only living, complete, permissive LTI implementation in this KB. 🟡 three authors in 2026; bus factor near one |
+| **Put it in TS** — `Liberate-Labs/ltikit-sdk`, 🟢 **MIT** (1,063 B, read first-hand p330), `ags.ts`/`nrps.ts`/`deep-linking.ts` each with tests, Dynamic Registration, cookieless launches, serverless/edge | the stack is JS/TS, or the deployment target is edge | 🟡 **fork and pin.** 38 commits, **one author**, last `main` commit 2026-07-10 and it is an **ownership handover**; seven dependabot branches unmerged |
+| **Fork `pylti1.3`** | Python is non-negotiable and the client will fund maintenance | 🔴 highest — you now own an LTI implementation |
+
+🔵 **And the procurement framing that makes this sellable rather than alarming: the client's incumbent vendor has the same problem and has not told them.** **A bid that prices the integration layer honestly, names the library, and shows the commit date is doing diligence the incumbent did not.**
+
+🟢 **One artefact added this region this pass:** `Gchism94/jupyterquest` — **MIT**, a `.ipynb` autograder with CI, Codecov and a **Zenodo DOI**, placed **North America institutionally from the commit record** (`gchism@arizona.edu`, University of Arizona). 🔵 **The DOI is the detail that matters in a US higher-ed bid: it is what a research office and an IRB ask for, and almost nothing in this KB has one.** 🟡 Five months quiet (last commit 2026-05-07).
+
+🔵 **It also fits the region's binding constraint directly.** California **AB 1159** bars using student data to train AI models, and Oklahoma and Maryland require human oversight with no AI decision-making on high-stakes outcomes. **An autograder that runs locally over notebooks the institution already holds, with a citable method, is the shape that clears all three without an architecture argument.**
+
 ### 🟢 The procurement route, named for the first time: cooperative purchasing — win once, become buyable by every member district (added p329)
 
 🔴 **Read the confidence line before quoting any of this: every source below is SEARCH-CHANNEL-ONLY.** Not one procurement host is
@@ -914,6 +934,20 @@ upper-secondary extension is scope, and should be priced as scope.
    falling (17% student confidence, intent down 9 points), credibility is the product.
 
 ### EMEA
+
+### 🟢 Switzerland's Openki is the healthiest open education codebase in this KB, and the accessibility gap here has a name and no artefact (added p330)
+
+**Two EMEA findings this pass, both first-hand, and neither came from the regional query set.**
+
+🟢 **One: `Openki/Openki` — measured for the first time, because `git clone --filter=blob:none` turns out to answer 200 against `gitlab.com` as well as GitHub.** **12,988 commits · 88 authors lifetime · 1,580 commits in 2026 from 19 distinct authors · last commit 2026-10-19.** **Placed EMEA/Switzerland first-hand** — `cis.ch` is the third-largest author domain at 1,759 commits, and 2026 commit offsets are overwhelmingly `+0200`/`+0100`.
+
+🔵 **Nineteen people committing in one year is without parallel in this base.** Tsugi: 3 authors in 2026 on 486 commits. RosarioSIS: 3 on 332. **Openki is the only artefact here whose contributor base would survive losing its lead maintainer** — which is the single question a European public buyer asks about open source and the one this KB has had no good answer to. 🔴 **Two limits, both load-bearing: it is AGPL-3.0, so §13 reaches the users of a hosted service, and it is a course-organisation platform — who teaches what to whom, where and when — not an LMS and not a SIS.** 🟢 **Propose it as the community-learning and scheduling surface, and cite its contributor base as the sustainability evidence in a bid that has to argue open source is not a single-vendor risk.**
+
+🔴 **Two: the accessibility gap is now named, and the artefact that would have filled it does not exist.** The search channel returned `projectremedy-ai/remedy-canvas-lti` with a full description — *"Canvas LTI 1.3 tool that scans entire courses for WCAG 2.2 AA accessibility issues and remediates them in-place"* — and **`raw` 404s and the clone fails.** 🟡 **The gap behind the invention is real and is an EMEA buying trigger specifically: the European Accessibility Act applies to services in the member states, and public-sector bodies are already under the Web Accessibility Directive.** 🔵 **This KB's earlier WCAG sweep found permissive accessibility agents, and they remediate *software* — they review code for a developer.** 🔴 **Nothing here remediates *course content* inside an LMS**, which is what a university's accessibility office is actually liable for. **A named absence, carried as a build opportunity rather than a shelf row.**
+
+🟡 **Two further EMEA placements from the commit record, recorded for completeness:** `francoisjacquet/rosariosis` (**EMEA**, `rosariosis.org`, `+0200`/`+0100` — 8,034 commits, 332 in 2026, GPL-2.0 by payload) and `afri-bit/revibe` (**EMEA**, all commits `+0200`; 🟡 the author's name is Indonesian, so this places the work and not the person). **`artcc/freelingo` is placed EMEA on the weakest evidence in this file — a Spanish personal name on 1,064 of 1,168 commits, no institution declared — and is labelled inferred everywhere it appears.**
+
+🔴 **The caveat that bounds this whole region, new this pass and permanent until the environment changes.** `forge.apps.education.fr` — the French Ministry of Education's own forge — and `gitlab.opencode.de`, Germany's public-sector code platform, both answer **`000`**, along with eleven other self-hosted instances, while `gitlab.com/api/v4` answers **200** in the same session. **This is a host allowlist, not a protocol limit.** 🔵 **The European public sector runs its education code on sovereign forges by policy, so the artefacts an EMEA buyer most likely already operates are precisely the ones invisible here.** **Every EMEA count in this file is a floor. State that in an EMEA bid instead of implying the search was exhaustive — the buyer knows their forge exists and will notice if your map does not.**
 
 ### 🟢 GÉANT OCRE is the route into European universities, and a cancelled €160M Irish framework is a near-term opening (added p329)
 
@@ -1113,6 +1147,18 @@ the *metadata* workload, not just the tutor demo.
 
 ### APAC
 
+### 🟡 The region's artefacts are the strongest in this KB and the LTI finding does not reach them — which is itself the opening (added p330)
+
+🔴 **The APAC regional query returned nothing new for a fourth pass** — Korea's AI Basic Act, Vietnam's risk-tiered law, Japan's penalty-free principles act and China's provincial buying are all held, and the vendor-named player list (Google, Microsoft, IBM, Pearson, Byju's) is not carried.
+
+🟢 **What did move is the measurement, and it favours this region.** Every APAC-placed agent this KB holds was re-measured on the activity channel across p329–p330 and all of them are live: **`THU-MAIC/OpenMAIC`** (733 commits, **127 authors**, 2026-10-19), **`HKUDS/DeepTutor`** (2,935 commits, **273 authors**, 2026-10-19), **`Orenda-Project/rumi-platform`** (847 commits, 2026-10-05), **`microsoft/Shiksha-Copilot`** (149 commits, 2026-09-15). 🔵 **127 authors on OpenMAIC corroborates its multi-institution claim first-hand, and 273 on DeepTutor makes it the largest education agent in this base by every measure that is not a star count.**
+
+🟢 **And the LTI collapse this pass found does not bite here in the same way, which is a commercial fact worth naming.** **The APAC artefacts are tutors and classroom shells, not LMS plugins** — they are deployed *beside* an institution's systems or as national programmes, not *inside* a Canvas tenancy. 🔵 **Where North America's integration risk is "the LTI library is dead", APAC's equivalent question is the ministry or provincial procurement route, which this file already treats under China's provincial "AI Plus Education" buying and India's Class-3 mandate.** 🟢 **So an APAC engagement can start from the strongest open artefacts in this KB with the least integration debt — and a studio should say that explicitly when comparing a regional pilot against a North American one.**
+
+🟡 **One row re-graded against this region this pass.** `zhangl1001/civil-ai` — the APAC ports-and-adapters education runtime — was recorded at p323 as *"the highest-starred education agent pushed since 2026-10-01"*. 🔴 **Its default branch's last commit is 2026-08-23; eight newer refs exist and every one is a `dependabot/` branch.** **The architecture finding stands; the recency claim was reading bot pushes and is withdrawn.**
+
+🔴 **A declared regional gap, restated because it did not close:** `ictinnovations/ictexam-mcp` (🟢 **MIT**, read first-hand p330) and its Moodle companion are plausibly APAC on a Pakistan/Gulf vendor signal, **and nothing in either repository declares a country.** **Left unplaced rather than guessed** — the commit record gave one author and one gmail address, which is not evidence.
+
 ### 🟡 China's "AI Plus Education" buying happens at provincial level, not ministry level — and no APAC vehicle surfaced (added p329)
 
 🔴 **Confidence: SEARCH-CHANNEL-ONLY. `oecd.ai` and every other non-GitHub host tested answer 403 at CONNECT.**
@@ -1274,6 +1320,20 @@ price it as greenfield, because there is nothing to fork.
    automation, with the fewest regulatory blockers of any major market in this KB.
 
 ### LATAM
+
+### 🔴 The region's measurement problem is now specific: LATAM is invisible to the instrument, not absent from the sector (added p330)
+
+🔴 **The LATAM regional query returned nothing this file does not already hold** — the UNESCO IESALC 87%/26% split, the Observatory at ECLAC Santiago with CAF, CENIA, CETIC.br, Santillana, Tec de Monterrey, ProFuturo and Ceibal, the CONALEP/DGETI Mexico pilot, the Digital Education Council survey, Uruguay's Council of Europe signature, Peru's sandboxes and Colombia's CONPES 4144 are all carried.
+
+🟢 **What this pass adds is a precise account of *why* the artefact side of this region stays empty, and it is an instrument property rather than a fact about Latin American software.**
+
+1. 🔴 **The Spanish/Portuguese sweep was run and it works.** `compose/code/gitlab-api-channel/data/discovery-es-pt.json` holds **141 projects from 16 Spanish and Portuguese terms, 140 of them invisible to the 25-term English sweep.** 🔵 **The language barrier is real, it was measured, and it was crossed.**
+2. 🔴 **And not one of the three real LATAM education projects it found declares a licence** (`latam-candidates.json`). **An unlicensed repository is not a finding this KB can ship** — it is legally unusable in a client deliverable regardless of its quality.
+3. 🔴 **The new structural limit found this pass compounds it.** Thirteen self-hosted forges answer `000`. **Latin American ministries and universities that host their own GitLab are as invisible as European ones** — and this region has a stronger institutional-hosting pattern than North America, not a weaker one.
+
+🔵 **Put together, the honest statement for a LATAM engagement is not "there are no open education artefacts in the region". It is: across two forges, four sweeps and two languages, the artefacts this instrument can see from the region are unlicensed, and the ones most likely to be licensed are on infrastructure it cannot reach.** 🟢 **That is a far better sentence to bring to a client than silence, and it changes the engagement shape: in LATAM the studio should expect to *originate* the open artefact — and the existing regional assets this file already holds, the Chilean pedagogy benchmark and the Brazilian BNCC curriculum stack, are the two counter-examples proving it can be done.**
+
+🟡 **One concrete action for the next pass, pre-registered so it is not re-derived:** the three unlicensed LATAM candidates in `latam-candidates.json` should be re-probed for a licence file, because **an unlicensed repository that adds one later becomes shippable overnight** and this KB has no watch on them. **Cost: three `raw` requests.**
 
 ### 🟢 ChileCompra Directive 44/2026 is the rulebook for selling AI to a Chilean public buyer, and Mexico cannot be monitored federally (added p329)
 
@@ -1534,6 +1594,33 @@ require a sovereign model.
    same offer as pattern P3 with the compliance driver replaced by an evidence driver.
 
 ## Declared regional gaps — what was searched this pass and not found
+
+### Pass 330 — what was searched per region, and what came back
+
+🔴 **Fifth consecutive pass in which all four regional queries returned relevant, correct, and already-held material. Zero regulatory or market additions.** 🔵 **Recorded per region, in full, because an informed gap is information and silence looks exactly like coverage.**
+
+| region | query run | what came back | verdict |
+|---|---|---|---|
+| **North America** | `AI education North America 2026 adoption regulation players` | **134 AI-in-education bills across 31 states in 2026**; California **AB 1159** (bars using student data to train AI models); Oklahoma and Maryland requiring human oversight and barring AI from high-stakes decisions about students; the **K-12 AI Literacy and Readiness Act of 2026** advanced by the House Education and Workforce Committee in July; Canada's June 2026 **"AI for All"** strategy; Mexico's bills with no enforcement regulator; NA at **36% / $3.68B** of the 2026 market; **60%** of US K-12 teachers using AI in 2024–25 | 🔴 **Nothing new.** `AB 1159`, `AI for All`, the Literacy Act and the 134-bill figure are all already held. 🟡 The 36% / $3.68B figure is single-source vendor-aggregator and is **not** carried into this file's market table |
+| **EMEA** | `AI education EMEA 2026 adoption regulation players` | EU AI Act with education access and assessment as **high-risk**; the **"AI omnibus"** adopted June 2026, in force 2026-07-27; the Commission's updated ethical guidelines for educators; **$2.64B** European market 2026; **Finland, Estonia and the Netherlands** leading K-12 integration; a **£4M** UK investment in lesson-planning and marking tools; *"only 10% of 450+ institutions have formal AI guidelines"* | 🔴 **Nothing new, and one figure rejected.** The omnibus and the high-risk classification are held, including **this file's own p328 correction to the high-risk date — which the search channel still does not reflect.** 🔴 The *"10% of 450+ institutions"* claim is **cross-region, not EMEA**, and is not carried |
+| **APAC** | `AI education APAC 2026 adoption regulation players` | South Korea's **AI Basic Act** in force 2026-01-22; **Vietnam's** AI law in force 2026-03-01 with risk-tier classification; China's comprehensive framework; Japan's **AI Promotion Act** as a principles law with no penalties; Singapore voluntary; *"Google, Microsoft, IBM, Pearson and Byju's"* named as key APAC players; China, India and Japan dominant | 🔴 **Nothing new.** Korea, Vietnam, Japan and China are all held — Vietnam in `intel/policy-matrix.tsv` with a **date conflict this file has already declared open**. 🟡 The player list is a vendor research summary naming four global incumbents and one company in financial distress; **not carried** |
+| **LATAM** | `AI education LATAM 2026 adoption regulation players` | **UNESCO IESALC**: 200 institutions, 19 countries, **87%** using AI in ≥1 area, only **26%** with a formal AI strategy; the **UNESCO Observatory** launched 2026-04-14 at ECLAC Santiago with CAF, CENIA, CETIC.br, Fundación Santillana, Tec de Monterrey, ProFuturo and Fundación Ceibal; the **CONALEP / DGETI** Mexico pilot; **Digital Education Council** 2026 LATAM survey (30,000+ responses, 29 institutions); Uruguay first in the region to sign the Council of Europe AI convention; Peru's sandboxes; Colombia's **CONPES 4144**; Mexico's stalled federal bill | 🔴 **Nothing new.** Every one of these — the 87/26 split, the Observatory and its partner list, CONALEP/DGETI, the DEC survey, Ceibal — is already held in this file |
+
+🟢 **The method conclusion, and it is the same one p327 reached by a different route: the prescribed regional queries are saturated for this industry, and the regional intelligence this pass actually produced came from somewhere else entirely — the commit record.**
+
+**Six artefacts were region-placed this pass without a single search**, from author email domains and commit UTC offsets inside clones the activity channel was already fetching:
+
+| artefact | evidence | region |
+|---|---|---|
+| `Gchism94/jupyterquest` | 🟢 `gchism@arizona.edu`, 124 of 249 commits | **North America** — University of Arizona |
+| `Jellypod-Inc/school-skills` | `pierson@jellypod.ai`; all commits `-0700` | **North America** — was 🔴 UNPLACED since p328 |
+| `Openki/Openki` | `cis.ch`, 1,759 commits; 2026 offsets `+0200`/`+0100` | **EMEA** — Switzerland |
+| `francoisjacquet/rosariosis` | `rosariosis.org`; 2026 offsets `+0200`/`+0100` | **EMEA** |
+| `artcc/freelingo` | 🟡 Spanish personal name on 1,064 of 1,168 commits; no institution declared | **EMEA** *(inferred — weakest evidence here, labelled as such)* |
+| `afri-bit/revibe` | all commits `+0200` (CEST) | **EMEA** — was 🔴 UNPLACED since p328. 🟡 Places the keyboard, not the person |
+
+🔵 **The next pass should spend its regional budget on the commit record and not on the query set.** 🔴 **One structural caveat that belongs with every regional count in this file, and it is new this pass:** thirteen self-hosted and alternative forges — including **`forge.apps.education.fr`** (the French Ministry of Education's own) and **`gitlab.opencode.de`** (Germany's public-sector platform) — answered **`000`** to a plain API probe, while `gitlab.com/api/v4` answers **200** in the same session. **The reachable surface is a host allowlist. European public-sector education code hosted on sovereign forges cannot be seen from here at all, so every EMEA count in this file is a floor, structurally biased toward European projects that also mirror to GitHub or gitlab.com.**
+
 
 ### Pass 328 — what was searched per region, and what came back
 

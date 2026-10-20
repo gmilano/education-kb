@@ -1,0 +1,39 @@
+# p330: the integration tier measured on the git channel across EVERY ref, plus the channel audit.
+# Channel: `git clone --filter=blob:none --no-checkout` -> 200 on github.com AND gitlab.com. github.com (rendered) and api.github.com -> 403.
+# Grants: read from raw.githubusercontent.com (200) as shipped bytes. No star count in this file is verified; stars are omitted rather than carried.
+# Columns: repo, forge, grant, grant_bytes, commits, authors, first_commit, last_commit_any_ref, commits_2026, authors_2026, region, region_evidence, verdict
+repo	forge	grant	grant_bytes	commits	authors	first_commit	last_commit_any_ref	commits_2026	authors_2026	region	region_evidence	verdict
+tsugiproject/tsugi	github	Apache-2.0	n/r	4012	47	2013-09-15	2026-10-19	486	3	unplaced	-	ALIVE; LTI 1.3 + AGS + NRPS + DeepLinking confirmed FROM TREE with unit tests; p323 negative RETRACTED
+jcputney/scorm-again	github	MIT	n/r	1243	14	2019-11-10	2026-10-20	n/m	n/m	unplaced	-	ALIVE; committed today
+CAHLR/OATutor	github	MIT	n/r	1045	27	2019-12-18	2026-10-16	n/m	n/m	North America	prior pass (UC Berkeley CAHLR)	ALIVE
+ArnaudGuiovanna/tutor-mcp	github	MIT	n/r	467	5	2026-04-05	2026-10-16	n/m	n/m	unplaced	-	ALIVE
+sunilgentyala/aegis-integrity	github	MIT	n/r	68	2	2026-06-15	2026-10-16	n/m	n/m	unplaced	-	ALIVE
+withmarbleapp/os-taxonomy	github	n/r	n/r	23	3	2026-07-08	2026-10-19	n/m	n/m	unplaced	-	ALIVE; small by design
+zhangl1001/civil-ai	github	MIT	n/r	100	2	2026-07-06	2026-08-23	n/m	n/m	APAC	prior pass	QUIET; 8 newer refs ALL dependabot -- p323 "pushed since 2026-10-01" WITHDRAWN
+Liberate-Labs/ltikit-sdk	github	MIT	1063	38	1	2026-07-04	2026-07-10	38	1	unplaced	liberate-labs.com carries no country signal	NEW SHELF; LTI 1.3 Advantage in TS; ags/nrps/deep-linking .ts each with .test.ts; 16 test files; ownership handover 2026-07-10; 7 dependabot branches to 2026-10-07 unmerged
+Gchism94/jupyterquest	github	MIT	1070	249	3	2024-01-27	2026-05-07	n/m	n/m	North America	gchism@arizona.edu on 124 of 249 commits (institutional)	NEW SHELF; .ipynb autograder; Zenodo DOI 10.5281/zenodo.10784348
+artcc/freelingo	github	AGPL-3.0	34514	1168	7	2026-04-30	2026-10-16	n/m	n/m	EMEA	INFERRED - Spanish personal name on 1064 of 1168 commits; no institution declared	READ DO NOT EMBED; largest LIVE AGPL education artefact measured; paid hosted tier beside it
+ictinnovations/ictexam-mcp	github	MIT	1114	5	1	2026-09-01	2026-09-08	5	1	unplaced	one author, one gmail address -- not evidence	RECORDED not shelf; MCP over exam platform
+ictinnovations/moodle-mod_ictexam	github	GPL-3.0	35149	4	2	2026-08-25	2026-09-07	4	2	unplaced	-	ARCHITECTURE EXHIBIT; LTI 1.3 launch, score returns over Moodle web service set_grade, NOT AGS
+dmitry-viskov/pylti1.3	github	MIT	n/r	178	16	2019-08-01	2022-11-21	0	0	unplaced	-	DEAD 47 months; newest ref is tag 2.0.0 same date; RECOMMENDATION WITHDRAWN
+openfun/django-lti-toolbox	github	MIT	n/r	34	6	2020-06-04	2024-11-14	0	0	EMEA	prior pass (France Universite Numerique)	DEAD; p325 date confirmed to the day
+BlackyDrum/ai-tutor	github	MIT	1067	818	3	2024-02-05	2024-10-19	0	0	unplaced	-	REJECTED; two years silent
+Gchism94/ai-tutor	github	MIT	1070	n/m	n/m	n/m	n/m	n/m	n/m	North America	same author as jupyterquest	SUPERSEDED by its own README -> jupyterquest
+sumitchopkar2005/Agentic_AI_LMS	github	NONE	0	n/m	n/m	n/m	n/m	n/m	n/m	unplaced	-	NOT USABLE; no grant on main or master, 4 filenames tried
+projectremedy-ai/remedy-canvas-lti	github	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	n/a	-	DOES NOT EXIST; raw 404 + clone failed; search channel asserted it with full capability description
+Jellypod-Inc/school-skills	github	MIT	1065	4	1	2026-04-14	2026-04-14	4	1	North America	pierson@jellypod.ai; all 4 commits at -0700	PLACED p330; was UNPLACED since p328
+afri-bit/revibe	github	MIT	1074	4	2	2026-05-01	2026-05-02	4	2	EMEA	all 4 commits at +0200 (CEST); places the keyboard not the person (author name is Indonesian)	PLACED p330; was UNPLACED since p328
+Openki/Openki	gitlab	AGPL-3.0	n/r	12988	88	2013-06-27	2026-10-19	1580	19	EMEA	cis.ch = 3rd largest author domain (1759 commits); 2026 offsets +0200/+0100	PLATFORM TIER; healthiest contributor base in this KB; course-organisation platform, NOT an LMS or SIS
+francoisjacquet/rosariosis	gitlab	GPL-2.0 (payload; forge classifier says agpl-1.0 -- WRONG, see P-GL-1)	15214	8034	13	2013-07-02	2026-10-17	332	3	EMEA	rosariosis.org; 2026 offsets +0200/+0100	PLATFORM TIER; 7001 of 8034 commits carry users.noreply.github.com = history imported from GitHub; 1019 carry example.com
+#
+# SELF-HOSTED / ALTERNATIVE FORGE SWEEP -- closes action B pre-registered at pass 23 of 2026-10-06.
+# GET /api/v4/projects?per_page=1 ; all thirteen returned 000 (no connection established).
+# code.europa.eu gitlab.opencode.de gitlab.gwdg.de git.rwth-aachen.de gitlab.inria.fr salsa.debian.org
+# forge.apps.education.fr gitlab.bsz-bw.de gitlab.tuwien.ac.at codeberg.org git.sr.ht framagit.org gitlab.freedesktop.org
+# gitlab.com/api/v4 answered 200 in the same session => the reachable surface is a HOST ALLOWLIST, not a protocol property.
+# Consequence: EMEA counts in this KB are a FLOOR, biased toward European projects that also mirror to GitHub or gitlab.com.
+#
+# CHANNEL AUDIT: p329 recorded gitlab.com as "an untested supply channel; next pass should sweep it".
+# compose/code/gitlab-api-channel/ has instrumented it since 2026-10-06: 32/32 offline, 35/35 live,
+# data/ holds 534 projects (25 English terms) + 141 (16 Spanish/Portuguese terms), 3 named findings.
+# Re-run at p330: 32/32 passed. An independent 20-term sweep this pass returned 372 unique projects, consistent and smaller.
