@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 347 · 2026-10-20 — the prescribed trending leg returns listicles for the thirteenth pass; the week's real repository news is that `LICENSE` can be a DIRECTORY, and the row it hid has 3 839 stars
+
+**Evidence:** [`p347-grant-channel-recovery`](../evidence/p347-grant-channel-recovery.2026-10-20-p347.tsv) · [`p347-institutional-orphan-probe`](../evidence/p347-institutional-orphan-probe.2026-10-20-p347.tsv) · [`p347-shelfwide-head-equality`](../evidence/p347-shelfwide-head-equality.2026-10-20-p347.tsv).
+
+🟢 **`make hooks` ran — 24/24 green**, and p345's two red gates are cleared against p346's text (`ABSENCE-REFUTED=0`, `GRANTED-AT-PIN=7`). The reading is in [`agents/top.md`](../agents/top.md). 🟢 This is a successor section; the shelf's history stands below it unchanged.
+
+### 🔴 The prescribed leg, thirteenth measurement
+
+🔵 `github trending education AI 2026` returned **no live GitHub Trending page** — the same structural result as the twelve passes before it — only third-party snapshots (Trendshift, GitTrend) and social posts whose star figures disagree with each other. 🔴 **Zero new placeable repository slugs from the leg.** 🟡 The three addresses it did surface (`rohitg00/ai-engineering-from-scratch`, `MadsLorentzen/ai-job-search`, `xbtlin/ai-berkshire`) are AI-engineering learning material rather than education-sector software, which is this leg's standing failure mode rather than news.
+
+### 🟢 The week's repository news, from the inventory channel
+
+🔴 **The headline is a filesystem fact.** [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) — **3 839 ★ · 326 forks · 736 commits · 42 authors · live 2026-10-04** — publishes its grants inside a **directory named `LICENSE`**, so every root ladder this base owns requests `LICENSE` as a file and receives **404**. 🟢 Read at pin `0d5ee4e`, the directory holds a deliberate three-way split: **University of Illinois/NCSA** for the code, **CC-BY-3.0** for the remixed wikibook content it descends from, **CC-BY-4.0** for the PDF and Markdown builds, each in its own file and all four explained in `LICENSE/README.md`. 🔵 **It is also an alias row:** `illinois-cs241/coursebook` returns the **same HEAD**, the org having been renamed, and the NCSA file still names the old address.
+
+| Repo | Why it is this week's repository news | Grant | Bench |
+|---|---|---|---|
+| [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) | **3 839 ★** and invisible to this base's licence channel until this pass | 🟡 NCSA + CC-BY-3.0 + CC-BY-4.0, split by artefact | 736 c · 42 a · live |
+| [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) | **19 717 commits** and a push on the day of this pass — a national government education service in the open | 🟢 MIT, 1 092 B | 122 a · 2017 → today |
+| [`DFE-Digital/publish-teacher-training`](https://github.com/DFE-Digital/publish-teacher-training) | **17 549 commits, 142 authors**, pushed today; the supply side of the row above | 🟢 MIT, 1 091 B | 2018 → today |
+| [`kit-sdq/autograder`](https://github.com/kit-sdq/autograder) | Pushed today, 93 open issues — a live teaching instrument at KIT | 🟢 MIT at **`LICENSE.md`** | 1 502 c · 12 a |
+| [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) | TUM's sandbox for untrusted student code; **GitHub's classifier calls its MIT `NOASSERTION`** | 🟡 MIT, 1 345 B, five copyright lines | 1 309 c · 21 a · live |
+| [`learningequality/morango`](https://github.com/learningequality/morango) | Kolibri's offline sync engine, which this base had never shelved; default ref **`release-v0.9.x`** | 🟢 MIT, 1 074 B | 948 c · 21 a · live |
+| [`learningequality/le-utils`](https://github.com/learningequality/le-utils) | **37 forks on 7 stars** — integration, not audience | 🟢 MIT at `LICENSE.txt` | 602 c · 42 a · live |
+| [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) | Pushed today; the canonical upstream of the Harvard-named fork | 🟢 MIT, 1 098 B | 264 c · 6 a |
+| [`IndoNLP/nusa-crowd`](https://github.com/IndoNLP/nusa-crowd) | **293 ★, 60 authors** — the largest APAC-origin artefact in this base's orphan list; recorded, not promoted (dormant since 2024-06) | 🟢 Apache-2.0, 11 357 B | 992 c |
+
+### 🟡 The trend inside the trend: five of nine rows above were unreadable for a filename reason
+
+🔵 `LICENSE.md` · `LICENSE.txt` · `license.md` · `license.txt` · `LICENCE` · a `LICENSE` **directory** · a path at `packages/<x>/` · a BOM before the title. 🔴 **Eight distinct ways a real grant hides from a root ladder, and this base has now met every one of them on a live, permissively-licensed education repository.** 🟢 The conclusion `ACTION ZZ-z` draws from it is not a longer ladder: **pin the HEAD sha, enumerate the tree, then grade each path by scope.** 🔵 Pinning removes the ref axis; enumeration removes the filename and depth axes; **the grading is what keeps a vendored third-party licence from being published as the repository's own** — which is the mistake `likr/canvas-lms-agent` would have produced, since its first licence path in sort order is `.agents/skills/skill-creator/LICENSE.txt`.
+
+
 ## Pass 346 · 2026-10-20 — the prescribed trending leg returns listicles for the twelfth pass; the week's real repository news is a British spelling that hides a 6 832-commit national-curriculum grant
 
 **Evidence:** [`p346-ladder-spelling-and-ref-axes`](../evidence/p346-ladder-spelling-and-ref-axes.2026-10-20-p346.tsv) · [`p346-institutional-orphan-probe`](../evidence/p346-institutional-orphan-probe.2026-10-20-p346.tsv) · [`p346-coursemology-pin-grant-boundary`](../evidence/p346-coursemology-pin-grant-boundary.2026-10-20-p346.tsv).

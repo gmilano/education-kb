@@ -1,0 +1,35 @@
+# p347 — ACTION ZZ-s executed on the INSTITUTIONAL filter, over the ~100 education-token
+# orphans of `compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt` that
+# p345 and p346 had not read.  23 addresses selected for institutional ownership — national
+# departments, universities, foundations, labs — and every one read first-hand.
+# METHOD: `git ls-remote --symref` (existence, default ref, HEAD) · 12-rung root ladder over
+# raw.githubusercontent.com AT THE PINNED SHA (licence path, bytes, title line) · bare
+# `--filter=blob:none` clone for the commit channel (count, distinct author addresses,
+# first/last commit, top-3 UTC offsets, Dec-Feb offsets for the DST test) · author e-mail
+# aggregated to DOMAINS ONLY, never addresses.
+# ★ figures come from the GitHub MCP repository-search channel and are labelled as that
+# channel's, never as a read: api.github.com and github.com both return HTTP 403 here.
+slug	ref	sha	licence_path	bytes	first_line	tree_paths	commits	authors	first	last	offsets_top3	decfeb	domains_top3
+DFE-Digital/publish-teacher-training	refs/heads/main	d55fba55da89b81652b382c5c3533691a775a2e6	LICENSE	1091	MIT License	LICENSE 	17549	142	2018-12-19	2026-10-20	+0100(9754) +0000(7739) +0400(41) 	+0000(4033) +0400(9) 	users.noreply.github.com(4495) education.gov.uk(2375) gmail.com(2315) 
+DFE-Digital/teaching-vacancies	refs/heads/main	0a4990512fefc88da0da574fbd8f21d7cd1b1429	LICENSE	1092	MIT License	LICENSE 	19717	122	2017-08-22	2026-10-20	+0100(10632) +0000(8700) +0200(282) 	+0000(3972) +0100(94) 	gmail.com(6152) users.noreply.github.com(4923) digital.education.gov.uk(1690) 
+UOC/java-lti-1.3-provider-example	refs/heads/master	e935b75541a36a440e89d4e0f3666139713c4ae9	LICENSE	1060	MIT License	LICENSE 	171	4	2018-05-17	2022-11-18	+0100(133) +0200(30) +0000(8) 	+0100(30) +0000(3) 	uoc.edu(166) users.noreply.github.com(4) uva.nl(1) 
+Kennisnet/py-eduterm-client	refs/heads/master	a618d81bcf869c984807c069480e271272884521	LICENSE	1066	MIT License	LICENSE 	7	1	2018-06-23	2020-05-23	+0200(4) +0100(3) 	+0100(2) 	gmail.com(7) 
+kit-sdq/autograder	refs/heads/main	42263e59a99f274c07b8c06cb78f56ee43314b8e	LICENSE.md	1068	MIT License	LICENSE.md 	1502	12	2021-07-27	2026-10-20	+0200(843) +0000(348) +0100(298) 	+0100(240) +0000(95) 	users.noreply.github.com(1169) web.de(268) pallo.de(17) 
+ls1intum/Ares2	refs/heads/main	b5c2595128de52ab19f7cead115d94a567a522bb	LICENSE	1345	MIT License	LICENSE 	1309	21	2024-04-18	2026-10-14	+0200(1065) +0100(207) +0000(37) 	+0100(82) 	in.tum.de(526) users.noreply.github.com(337) gmail.com(264) 
+AI-for-Education/fabdata-llm	refs/heads/main	a0f85c3354988dda23a821c8535a31a6f7168f07	LICENSE	1065	MIT License	LICENSE 	175	9	2023-05-10	2026-06-09	+0000(98) +0100(59) +0700(7) 	+0000(41) -0500(5) 	glasgow.ac.uk(113) gmail.com(51) users.noreply.github.com(7) 
+fh-yarbouh/oak-curriculum-ontology	NO-ANSWER	-	-	-	-	-	-	-	-	-	-	-	-
+Harvard-University-iCommons/django-lti	refs/heads/main	e5dcc15c1a1feed5cf9893beeac9582b0bb84d90	LICENSE	1098	MIT License	LICENSE 	157	6	2021-11-19	2025-08-27	-0400(67) -0500(56) +0000(34) 	-0500(38) +0000(15) 	umich.edu(123) users.noreply.github.com(26) gnu.org(3) 
+academic-innovation/django-lti	refs/heads/main	1ac0b569f42258b81bce82d78540519e8c7048e7	LICENSE	1098	MIT License	LICENSE 	264	6	2021-11-19	2026-10-20	-0400(131) -0500(67) +0000(66) 	-0500(46) +0000(17) 	umich.edu(197) users.noreply.github.com(58) gmail.com(4) 
+cs341-illinois/coursebook	refs/heads/master	0d5ee4e7bd40d1cf0ca88520fbb2e1b7c7f96c7f	NONE	-	-	LICENSE/LICENSE.code LICENSE/LICENSE.original LICENSE/LICENSE.output LICENSE/README.md 	736	42	2018-01-26	2026-10-04	-0500(482) -0600(181) +0530(29) 	-0600(117) -0800(5) 	gmail.com(533) users.noreply.github.com(98) illinois.edu(94) 
+learningequality/morango	refs/heads/release-v0.9.x	c8679ab951749e7c7244dbeb7f5e383e176dff3b	LICENSE	1074	MIT License	LICENSE 	948	21	2016-09-13	2026-10-19	-0700(667) -0800(226) +0000(13) 	-0800(151) +0100(12) 	gmail.com(796) learningequality.org(119) users.noreply.github.com(17) 
+learningequality/le-utils	refs/heads/main	14c5493a47a576590c78e29c38e8962847ccbfbf	LICENSE.txt	1084	The MIT License (MIT)	LICENSE.txt le_utils/constants/licenses.py le_utils/resources/licenselookup.json 	602	42	2013-06-29	2026-10-02	-0700(307) -0800(116) -0400(46) 	-0800(68) +0300(30) 	gmail.com(257) learningequality.org(222) ucsd.edu(59) 
+jupyterhub/jupyterhub-deploy-teaching	refs/heads/master	609b0eb2e7f1a2c5d025a40e64ef281a304ae249	LICENSE	1528	BSD 3-Clause License	LICENSE 	266	13	2015-11-26	2024-06-11	-0700(94) -0800(88) +0200(56) 	-0800(82) -0700(36) 	gmail.com(173) willingconsulting.com(71) andreazonca.com(21) 
+locuslab/open-unlearning	refs/heads/main	b29929067732c40ee4ca58d5cc1d3c11fcf37de1	LICENSE	1069	MIT License	LICENSE 	91	19	2024-01-10	2026-10-17	-0500(28) -0400(25) -0600(9) 	-0500(25) -0600(9) 	users.noreply.github.com(63) gmail.com(21) andrew.cmu.edu(6) 
+jacquard-autograder/jacquard	refs/heads/main	8fbf8ea40e4362207b015305e679bf81b6369f51	LICENSE	11357	                                 Apache License	LICENSE 	220	2	2023-05-13	2025-07-18	-0700(175) -0800(45) 	-0800(18) 	gmail.com(195) users.noreply.github.com(25) 
+project-sunbird/sunbird-lms-mw	refs/heads/master	fc470e0bec498bb929b22a2af3fa4048976aa64f	LICENSE	1072	MIT License	LICENSE 	5458	53	2017-07-03	2020-05-05	+0530(5347) -0700(84) +0000(21) 	+0530(1309) -0800(4) 	gmail.com(2055) tarento.com(1256) users.noreply.github.com(764) 
+IndoNLP/nusa-crowd	refs/heads/master	edf9f19c28dbbcfb7c9afbd6f5d726f69d1ee059	LICENSE	11357	                                 Apache License	LICENSE 	992	60	2022-04-10	2024-06-03	+0800(455) +0700(295) +0000(111) 	+0800(19) +0700(10) 	gmail.com(558) connect.ust.hk(219) indonlp.com(65) 
+moon0825/jbnu-lms-student	refs/heads/main	b0059c8a90353b73ac492e2ce62b807d80bba386	LICENSE	1082	MIT License	LICENSE 	7	1	2026-09-04	2026-09-08	+0900(7) 	none	example.invalid(7) 
+zaikaman/SGU-Academic-MCP	refs/heads/main	d5209305d13e0242db9c74fb6fa3e9996b67dccc	LICENSE	1068	﻿MIT License	LICENSE 	116	3	2026-09-14	2026-10-16	+0700(116) 	none	users.noreply.github.com(70) gmail.com(46) 
+CaioCastro1/usp-mcp	refs/heads/main	488e27149a53b48d2a5f0d93f27be23d67428f58	LICENSE	1107	MIT License	LICENSE 	378	3	2026-08-31	2026-10-19	-0300(378) 	none	users.noreply.github.com(224) gmail.com(153) lastro.co(1) 
+agn3si/ResultadosUNAM---data	refs/heads/main	c58b370dcf796c5c420c4b9c58f3af1a10a11dac	LICENSE	1063	MIT License	LICENSE LICENSE-DATA.md 	13	2	2026-07-18	2026-08-12	-0600(7) -0700(6) 	none	gmail.com(7) astro.unam.mx(6) 
+thiagoluzin/pemara-edu-mira	refs/heads/main	b146de7bf13486ae527d002c7873138c0d1ebd14	LICENSE	1068	MIT License	LICENSE 	1	1	2026-09-27	2026-09-27	-0300(1) 	none	gmail.com(1) 

@@ -1,0 +1,56 @@
+# p347 — ACTION ZZ-q executed.  ZZ-q asked whether extending every licence ladder to the
+# ORTHOGRAPHY and EXTENSION axes recovers any grant this base currently publishes as absent.
+# It does, and the pass found a cheaper fix than more rungs: PIN THE HEAD SHA and enumerate
+# the TREE.  Pinning dissolves the REF axis entirely (no main/master/develop ladder is needed
+# at all); enumeration dissolves the FILENAME axis (case, spelling, extension) AND the DEPTH
+# axis in one read.
+# METHOD, per address: (1) `git ls-remote --symref` for existence, default ref and HEAD sha;
+# (2) `git clone --bare --filter=blob:none --depth 1` then `git ls-tree -r --name-only HEAD`
+# filtered on licen[cs]e|copying|notice; (3) a 12-rung ROOT ladder fetched over
+# raw.githubusercontent.com AT THE PINNED SHA, for comparison with (2).
+# recovered_by: LADDER = an extended root ladder at the pin finds it.  TREE-ONLY = only
+# enumeration finds it (the path is at depth, or LICENSE is a directory).  NEITHER = no
+# licence-shaped path exists at the pin, which CONFIRMS this base's published no-grant cell.
+# 🔴 TREE-ONLY is NOT the same as "the repository is licensed" — see ACTION ZZ-v: a grant at
+# `packages/x/LICENSE` licenses that package, not the root.
+slug	ref	sha	tree_licence_paths	ladder_hits	first_path_bytes	first_line	recovered_by
+openeduhub/its-prep	refs/heads/main	df2a28642584ebf22b4a566315a429cfac347b10	NONE	NONE	-	-	NEITHER
+openeduhub/its-data	refs/heads/main	3d484af48e6d0118991e6be710a6def4f3105d21	NONE	NONE	-	-	NEITHER
+openeduhub/topic-statistics	refs/heads/main	4eed448303ce13b9ad06e0a2a2ad782d661ad317	NONE	NONE	-	-	NEITHER
+openeduhub/oeh-search-frontend	refs/heads/develop	beb576fe5c37e7d7c9ee8af2ef78fe23b31e31f1	NONE	NONE	-	-	NEITHER
+openeduhub/python-kidra	refs/heads/main	86c758bd7e5c205be2dbee0a6eca28db9cb76cae	NONE	NONE	-	-	NEITHER
+openeduhub/its-jointprobability	refs/heads/main	c060f9ec9bc1b825bfa844e776f5682d35ef36a9	NONE	NONE	-	-	NEITHER
+openeduhub/text-extraction	refs/heads/main	c3be80750d34882e1c5fd75c4502f06d8405e8ad	NONE	NONE	-	-	NEITHER
+openeduhub/z-api-runner	refs/heads/master	0a6181fa9c3715924569bf1fee60a2d2c208c526	NONE	NONE	-	-	NEITHER
+openeduhub/its-qna	refs/heads/main	407f20d0519ccb76b89bea804978f634929a40cc	NONE	NONE	-	-	NEITHER
+openeduhub/oeh-search-etl	refs/heads/master	6cc20fb759dfe8c9c7dda3fa4eb694d54b96e1b8	converter/util/license_mapper.py edu_sharing_openapi/docs/License.md edu_sharing_openapi/docs/LicenseAgreement.md edu_sharing_openapi/docs/LicenseAgreementNode.md edu_sharing_openapi/docs/Licenses.md edu_sharing_openapi/edu_sharing_client/models/license.py edu_sharing_openapi/edu_sharing_client/models/license_agreement.py edu_sharing_openapi/edu_sharing_client/models/license_agreement_node.py edu_sharing_openapi/edu_sharing_client/models/licenses.py 	NONE	-	-	TREE-ONLY
+openeduhub/metadata-agent-api	refs/heads/main	e9f16537b57058909f34c4ff46759391f8f42e6a	NONE	NONE	-	-	NEITHER
+razi-03/NCERT-CKG	refs/heads/main	c7621497f7b06ca83efaa9e7f89547c32f35ead1	NONE	NONE	-	-	NEITHER
+oseducation/knowledge-graph	refs/heads/main	92d8f31c217d2fa5eace80c4207d902036bb78ee	license.md 	NONE	-	-	TREE-ONLY
+Kyyota-Wang/cloverailab	refs/heads/main	f905b996310f9f6476336e863dd781c5b874a517	NONE	NONE	-	-	NEITHER
+YL1N/EduGuardBench	refs/heads/master	432e8da2ea33fa63aaa0aa4298723d3e222ed2ae	NONE	NONE	-	-	NEITHER
+PerryLink/dsh-essay-rubric-check	refs/heads/main	98172fde5ea09ac3a0ca692250f2f00f09d3e698	LICENSE 	LICENSE(682) 	LICENSE:682	                                 Apache License	LADDER
+likr/canvas-lms-agent	refs/heads/master	458c1a4ed988ee936de4fd6ca07b8d6278ec25e6	.agents/skills/skill-creator/LICENSE.txt canvas-lms-mcp/LICENSE 	NONE	-	-	TREE-ONLY
+studiolxd/xapi	refs/heads/main	c5a7a702c6e5c895d054e175ad9618921cf2eccc	example/LICENSE packages/xapi/LICENSE 	NONE	-	-	TREE-ONLY
+risnake/canvas-mcp-server	refs/heads/main	8f284f5f263c866fc95f48aa86e8d11bce7ae1b9	NONE	NONE	-	-	NEITHER
+dmontgomery40/mcp-canvas-lms	refs/heads/main	c0646ba10ac207d45cc2122d80b3b98e12b497d0	NONE	NONE	-	-	NEITHER
+eth-lre/mathtutorbench	refs/heads/main	6faed173ec2bef55cb899b2a3e0f93982f9cb176	NONE	NONE	-	-	NEITHER
+mthatipamula/educational-assessment-ai-agent-platform	refs/heads/main	aa957a8ca2943d3b7be5a5c86c7bdc56d5a096b6	NONE	NONE	-	-	NEITHER
+010Ankushsharma/AdaptaLearn	refs/heads/master	5144ead14c9e4e80b5a16df07d9473b09e964337	NONE	NONE	-	-	NEITHER
+Willie-Liao/lesson-library	refs/heads/main	8297297cc5148ff008ca308eae64b4dc9188a4ca	NONE	NONE	-	-	NEITHER
+emmanuel-johnson/launch-point-backend	refs/heads/main	cf2c397b6e26983e3c63a56e6a2a0d7022985f8a	NONE	NONE	-	-	NEITHER
+kitschpatrol/yanki	refs/heads/main	31c4bf58e9c0d99585470fff4fddf741a98a4b1b	license.txt 	license.txt(1071) 	license.txt:1071	MIT License	LADDER
+#
+# 🔴 WHEN THE TWO DEPTH-RECOVERED GRANTS WERE ADDED, read from each repository's own
+# `git log --diff-filter=A -- '*LICENSE*'` this pass.  This settles whether the earlier
+# depth probes on these shelves missed them or predated them:
+# likr/canvas-lms-agent   canvas-lms-mcp/LICENSE   added 2026-07-04  (68e8daf / de7d151)
+# studiolxd/xapi          packages/xapi/LICENSE    added 2026-07-23  (81165ae)
+# Both predate the shelf's own commit reads of those repositories (heads 2026-07-10 and
+# 2026-09-20) and both predate the "depth axis, 80 paths" and "24 case-varied rungs"
+# re-probes that recorded `no nested grant` / `absent on all 24 rungs`.
+# 🟢 So 80 composed paths at depth is still a LADDER: it must GUESS the directory name.
+# `ls-tree -r HEAD` guesses nothing and returns `canvas-lms-mcp/` and `packages/xapi/`.
+# Re-read benches for the two re-graded rows (bare blobless clone, this pass):
+# likr/canvas-lms-agent   68 c · likr-lab.com(68) · +0900(68) · head 2026-07-10 ⇒ APAC - Japan (no DST, non-shifting offset expected)
+# studiolxd/xapi          12 c · studiolxd.com(12) · +0200(12) · head 2026-09-20 ⇒ EMEA, offset UNTESTABLE (all 12 commits inside Mar-Nov)

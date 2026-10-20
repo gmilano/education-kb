@@ -1,0 +1,28 @@
+# p347 — the POLICY channel, measured rather than assumed.  p345 recorded that every EU
+# domain returns HTTP 000 and labelled its AI Act date resolution a CONVERGENCE OF SECONDARY
+# SOURCES that may not be cited as a verified read.  This pass tested whether a SECOND,
+# independent fetch channel reaches any of them.  It does not.
+# 🔴 So the uncertainty is STRUCTURAL, not a channel choice: curl fails at the TLS/proxy layer
+# (HTTP 000) and the WebFetch channel fails at DNS (getaddrinfo ENOTFOUND) on the same hosts.
+# 🟢 The consequence for this base: every regulatory date on these shelves stays labelled as
+# search-channel convergence, and `gate-dates` remains the only thing standing between a
+# stale date and an EMEA client.  Its pinned values are the ones to keep quoting:
+# Annex III education duties 2027-12-02; Article 50 transparency live 2026-08-02.
+host	curl (HTTPS via agent proxy)	WebFetch channel	usable as PRIMARY?
+eur-lex.europa.eu	000	n/t	no
+digital-strategy.ec.europa.eu	000	n/t	no
+artificialintelligenceact.eu	000	getaddrinfo ENOTFOUND	no
+www.iesalc.unesco.org	000	getaddrinfo ENOTFOUND	no
+unesco.org	000	n/t	no
+www.oecd.org	000	n/t	no
+www.congress.gov	000	n/t	no
+www.multistate.us	000	n/t	no
+www.lw.com	000	n/t	no
+www.ipsos.com	000	n/t	no
+www.digitaleducationcouncil.com	000	n/t	no
+dig.watch	000	n/t	no
+indicelatam.cl	000	n/t	no
+raw.githubusercontent.com	200	n/t	YES — the licence channel, and the only first-hand read this environment has
+www.apache.org	200 (11358 B at /licenses/LICENSE-2.0.txt)	n/t	YES — which is what makes an Apache-2.0 notice-by-reference checkable here
+github.com (HTML)	403	n/t	no — the search channel (GitHub MCP) substitutes, and its figures are labelled as that channel's
+api.github.com	403	n/t	no

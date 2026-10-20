@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 347 · 2026-10-20 — thirteenth consecutive zero on the prescribed legs, and the week's real agent news is two university MCP servers in the two regions this base has least of, one of them hidden behind a byte-order mark
+
+**Evidence:** [`p347-institutional-orphan-probe`](../evidence/p347-institutional-orphan-probe.2026-10-20-p347.tsv) · [`p347-grant-channel-recovery`](../evidence/p347-grant-channel-recovery.2026-10-20-p347.tsv) · [`p347-shelfwide-head-equality`](../evidence/p347-shelfwide-head-equality.2026-10-20-p347.tsv).
+
+🟢 **`make hooks` RAN this pass — 24/24 gates green**, and p345's two inherited findings are cleared against p346's text: `gate-absence` reports `ABSENCE-REFUTED=0` and `gate-pin-grant` reports `GRANTED-AT-PIN=7`. 🔵 This is the first pass since p342 that can report a gate state from execution rather than from refusal; the full reading is in [`agents/top.md`](../agents/top.md) under `ACTION ZZ-t`. 🟡 **No claim in this section cites a submodule-bearing superproject**, so `gate-pin-grant` has nothing to judge here; the rows below are single-repository addresses read at their own pinned HEAD.
+
+### 🔴 The four prescribed legs, measured for the thirteenth time, with the same result
+
+| Leg, run this pass | What came back | Verdict |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | Roundup and listicle pages: `microsoft/ai-agents-for-beginners` (already shelved), `pguso/agents-from-scratch`, one vendor page asserting a 180 000-star "Hermes Agent" that no other source corroborates | 🔴 **Zero new placeable education-agent slugs**, thirteenth consecutive measurement |
+| `github trending education AI 2026` | Third-party trackers only (Trendshift, GitTrend) plus LinkedIn and Substack posts; `rohitg00/ai-engineering-from-scratch`, `MadsLorentzen/ai-job-search`, `xbtlin/ai-berkshire` — AI-engineering learning material, not education-sector agents | 🔴 **Zero**, and the leg's failure mode is stable: it returns *learning about AI*, not *AI for learning* |
+| `open source platform education LMS SIS MIT Apache 2026` | A single vendor's localised comparison pages (OpenEduCat ×8), naming Moodle, Open edX, Sakai, ILIAS, Canvas, Chamilo — **every one already shelved in `verticals/solutions.md`** | 🔴 **Zero new**, and the result is now a measurement of search-result concentration rather than of supply |
+| `AI education industry trends 2026` | Market-research and vendor pages with figures that disagree by a factor of ten | 🔴 **Zero supply**; the demand reading is in [`intel/market.md`](../intel/market.md) |
+
+🟢 **Thirteen measurements is past the point where the legs are a discovery channel.** 🔵 Every agent row promoted in the last three passes came from **this base's own orphan inventory**, and the legs' remaining value is as a negative control: they tell a successor that nothing has entered the English-language public roundups, which is a real and reportable fact about the supply side rather than a silence.
+
+### 🟢 What actually moved on the agent layer this week
+
+| Repo | Grant, read at the pin | ★ (search channel) | Bench | Region | What it is |
+|---|---|---|---|---|---|
+| [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) | 🟢 **MIT, 1 107 B** | **18** | 🟢 **378 c · 3 a · 2026-08-31 → 2026-10-19** | 🟢 **LATAM — Brazil** (`-0300` on all 378; no DST since 2019) | MCP servers over **Universidade de São Paulo**'s student systems — refectory menus, e-Disciplinas deadlines and materials, JupiterWeb's course catalogue. 🟡 **Self-declared unofficial**, so the MIT grant covers the client and not USP's data |
+| [`zaikaman/SGU-Academic-MCP`](https://github.com/zaikaman/SGU-Academic-MCP) | 🟡 **MIT, 1 068 B — with a UTF-8 BOM before the title line** | 0 | 🟡 **116 c · 3 a · 2026-09-14 → 2026-10-16** | 🟢 **APAC — Vietnam** (`+0700` on all 116; no DST) | MCP server over **Đại học Sài Gòn**'s training portal: timetable, grades, tuition, live GPA simulation |
+| [`likr/canvas-lms-agent`](https://github.com/likr/canvas-lms-agent) | 🟡 **MIT at `canvas-lms-mcp/LICENSE`** — a package-scoped grant, root still ungranted | n/r | 🟡 **68 c · head 2026-07-10**, re-read this pass | 🟢 **APAC — Japan** — `likr-lab.com` on all 68 commits, `+0900` on all 68; Japan has no DST, so a non-shifting offset is the expected shape | 🔄 **RE-GRADED, not new.** This shelf has carried it as `REFUSED-UNGRANTED` since p335 |
+| [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`** — package-scoped, root ungranted | n/r | 🔴 **12 c · head 2026-09-20**, re-read this pass | 🟡 **EMEA** — `studiolxd.com` on all 12, `+0200` on all 12, and **every commit falls inside Mar–Nov, so the offset cannot be DST-tested**: the region is the earlier placement, carried with its limit stated | 🔄 **RE-GRADED.** `packages/xapi/package.json` declares MIT and the licence file sits beside it |
+
+🔵 **The two new rows are the thirteenth and fourteenth university-system MCP servers on these shelves** — after NTU COOL, Korea University KUPID, Santiago de Compostela, Toronto Quercus and the Canvas/Brightspace/Blackboard families. 🟢 **The class is now the most reliably-growing education-agent category this base measures, and it grows in the regions the prescribed legs never reach**, because each server is written in the language of the university it serves: a leg phrased in English finds the roundups, and a probe of the inventory finds Vietnamese and Portuguese.
+
+### 🟡 One byte of this week's news is a byte
+
+🔴 `zaikaman/SGU-Academic-MCP`'s `LICENSE` opens `EF BB BF` — a **UTF-8 byte-order mark** — then *MIT License*, verbatim stock body, 1 068 B. 🟢 **A detector anchored on `^MIT License` reads the title as absent and the grant as UNTITLED**, and `p314` measured what that costs: an abstention on MIT is this base's single largest usable-supply-excluded surface. 🟡 **A BOM is the fifth axis on the title-line family**, after case, depth, ref and orthography — and like every one before it, the fix is one line and the cost of missing it is a whole row.
+
+
 ## Pass 346 · 2026-10-20 — twelfth consecutive zero on the prescribed legs, and this week's actual movement is four institutional repositories that pushed within 24 hours of this pass
 
 **Evidence:** [`p346-institutional-orphan-probe`](../evidence/p346-institutional-orphan-probe.2026-10-20-p346.tsv) · [`p346-address-identity-head-equality`](../evidence/p346-address-identity-head-equality.2026-10-20-p346.tsv) · [`p346-ladder-spelling-and-ref-axes`](../evidence/p346-ladder-spelling-and-ref-axes.2026-10-20-p346.tsv).

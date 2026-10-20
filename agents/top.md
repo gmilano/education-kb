@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 347 · 2026-10-20 — the licence ladder has no last axis, and this pass stopped adding rungs: pinning the HEAD and enumerating the tree recovered five grants this base publishes as absent, one of them a 3 839-star textbook whose `LICENSE` is a DIRECTORY
+
+**Evidence:** [`p347-grant-channel-recovery`](../evidence/p347-grant-channel-recovery.2026-10-20-p347.tsv) · [`p347-institutional-orphan-probe`](../evidence/p347-institutional-orphan-probe.2026-10-20-p347.tsv) · [`p347-shelfwide-head-equality`](../evidence/p347-shelfwide-head-equality.2026-10-20-p347.tsv) · [`p347-policy-channel-reachability`](../evidence/p347-policy-channel-reachability.2026-10-20-p347.tsv).
+
+### 🟢 `ACTION ZZ-t` discharged FIRST, because it was the inherited instruction: `make hooks` ran, and p345's two red gates are GREEN against p346's text
+
+🟢 **`make hooks` executed in this session — 24/24 gates green.** p343, p344 and p346 each opened by recording that the session's tool policy refused to run this repository's own instruments; this one did not refuse, and `ACTION ZZ-t` asked for the gate state to be reported before anything else.
+
+| Gate p345 left RED | p345's finding | State on p346's text, read this pass |
+|---|---|---|
+| `gate-absence` | `ABSENCE-REFUTED=3` against p343's live README section | 🟢 **PASS — `ABSENCE-REFUTED=0 ABSENCE-QUEUED=0 ABSENCE-QUOTED=0`** over the live pass section (29 lines) |
+| `gate-pin-grant` | 2 findings, both at `agents/trending.md:4099` | 🟢 **PASS — `GRANTED-AT-PIN=7`, 7 segment rows, every declared submodule carrying a row** |
+
+🔵 **What cleared them is worth more than the fact that they cleared.** p346 could not run either instrument and chose to **satisfy both contracts by construction** — no bare regional absence, and the submodule boundary named at the pin. 🟢 **That worked: an append-only shelf cannot be repaired backwards, so writing the successor claim correctly is the only move that ever clears an inherited finding.** 🟡 `ACTION ZZ-l` also held: p346 wrote its `README.md` section, so the gate judged current text rather than two-pass-old text.
+
+### 🔴 `ACTION ZZ-q` CONFIRMED, and the answer is not more rungs — it is a different channel
+
+🔵 ZZ-q asked whether extending every ladder to the **orthography** and **extension** axes recovers a grant that currently reads as absent. 🟢 **It does. 26 addresses this base publishes as grantless were re-probed first-hand, and five carry a reachable grant** ([`p347-grant-channel-recovery`](../evidence/p347-grant-channel-recovery.2026-10-20-p347.tsv)). 🔴 **But the axis list is not closed, and this pass hit two axes ZZ-q did not name** — depth, and `LICENSE` existing as a **directory**. 🟢 **So the fix is structural: pin the HEAD sha from `ls-remote` and enumerate the tree.** Pinning dissolves the **ref** axis (no `main`-then-`master` ladder is needed at all, and `learningequality/morango`'s default ref is `release-v0.9.x` — the version-numbered-branch class this file has warned about since p296 — read correctly this pass without any ref logic). Enumeration dissolves **case, spelling, extension and depth** in one read.
+
+| Address this base publishes as grantless | What it actually carries, read at the pin | Found by | The axis that hid it |
+|---|---|---|---|
+| [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) **3 839 ★** | 🟢 **A three-way split grant**: code **University of Illinois/NCSA** (`LICENSE/LICENSE.code`), remixed wikibook content **CC-BY-3.0** (`LICENSE/LICENSE.original`), PDF/Markdown builds **CC-BY-4.0** (`LICENSE/LICENSE.output`), all documented in `LICENSE/README.md` | 🟢 TREE | 🔴 **`LICENSE` is a DIRECTORY.** Every rung of every ladder requests it as a file and gets **404** |
+| [`oseducation/knowledge-graph`](https://github.com/oseducation/knowledge-graph) | 🟢 **MIT**, *Copyright (c) 2023 oseducation*, at **`license.md`** | 🟢 TREE | 🔴 **Case AND extension together.** This file's row says *"all seven filenames 404 on `main`, `master` and `develop`"* and concludes *"Unusable: no grant, so no rights. Recorded so no future pass spends a probe on it"* |
+| [`kitschpatrol/yanki`](https://github.com/kitschpatrol/yanki) | 🟢 **MIT, 1 071 B**, *Copyright (c) 2024-2026 Eric Mika*, at **`license.txt`** | 🟢 LADDER (lowercase rung) | 🔴 **Case.** Logged at p335 as `REFUSED-UNGRANTED` — *"no licence file on 6 paths"* — and the **ninth** instance of the DECLARED-ONLY class |
+| [`likr/canvas-lms-agent`](https://github.com/likr/canvas-lms-agent) | 🟡 **MIT at `canvas-lms-mcp/LICENSE`**, *Copyright (c) 2026 likr-sandbox* — the directory that holds `@likr/canvas-lms-mcp` | 🟢 TREE | 🔴 **Depth.** Published here as *"no licence file on 12 paths; npm declares MIT and the repo does not"* |
+| [`studiolxd/xapi`](https://github.com/studiolxd/xapi) | 🟡 **MIT at `packages/xapi/LICENSE`**, *Copyright (c) 2026 Studio LXD*, beside `packages/xapi/package.json` carrying `"license": "MIT"` | 🟢 TREE | 🔴 **Depth.** Published here and in `verticals/solutions.md` as *"npm says MIT, repo has no payload"* |
+| [`PerryLink/dsh-essay-rubric-check`](https://github.com/PerryLink/dsh-essay-rubric-check) | 🟡 **Apache-2.0 by its own boilerplate notice, 682 B**, authority **reachable** (`apache.org/licenses/LICENSE-2.0.txt` answers **200, 11 358 B** from here) — **no copyright holder named, full text not shipped** | 🟢 LADDER | 🟡 **Not a filename axis at all** — the file was found and graded `POINTER, not a grant` |
+
+🟢 **And the twenty rows that came back `NEITHER` are the other half of the result: a tree enumeration at the pin found no licence-shaped path on any of them, which CONFIRMS this base's published no-grant cells** — including all ten `openeduhub` rows and `emmanuel-johnson/launch-point-backend`. 🔵 The channel was wrong about five addresses out of twenty-six; it was right about twenty.
+
+### 🔴 `ACTION ZZ-u` — a grant AT DEPTH licenses its PACKAGE, not the repository, and enumeration fails in the OPPOSITE direction from the ladder
+
+🟡 **This is the correction that has to ship beside ZZ-q, or ZZ-q's own recoveries become a worse defect than the one they fix.** 🔴 The ladder's failure direction is **lost supply**: it reads a licensed project as grantless, and `P250` makes that indistinguishable from prohibited. 🔴 **Enumeration's failure direction is the reverse — an OVER-GRANT** — and this pass has the specimen: `likr/canvas-lms-agent` carries **two** licence files, and the first one in path order is **`.agents/skills/skill-creator/LICENSE.txt`, an Apache-2.0 text belonging to a vendored third-party skill**. 🟢 **A dot-prefixed path sorts first, so "enumerate the tree and take the first licence" publishes somebody else's grant as this repository's.** 🟢 **The rule: an enumerated path must be graded by SCOPE before it is published** — root grants the repository, `packages/<x>/` grants `<x>`, a vendored directory grants nothing at all — and on both `likr/canvas-lms-agent` and `studiolxd/xapi` **the root remains ungranted**, so each is shelved as a split cell naming the licensed subtree, never as an MIT repository.
+
+🟢 **What the same two rows settle in the other direction:** this base's `p280` provenance class *"the manifest declares MIT and the repository does not"* has a **false-positive mode**, and both instances of it on these shelves are it. 🔵 In a monorepo the manifest and the grant sit **in the same package directory**, and a root-only ladder sees only the manifest. 🟡 **Two instances in one probe makes it a class, and the test is free: before recording a manifest-vs-repo conflict, enumerate the tree.**
+
+🔴 **And this base had already probed the depth axis on both of them, which is the part that should change an instrument rather than a cell.** A p338-era section on this file re-probed its eleven published absences across a *"depth axis, 80 paths"* and recorded **🟢 `no nested grant`** for `likr/canvas-lms-agent`, `studiolxd/xapi`, `dmontgomery40/mcp-canvas-lms` and `risnake/canvas-mcp-server`; a later section re-ran four of them over **24 case-varied rungs** and found them *"absent on all 24 rungs"*. 🟢 **Both readings were honest and both were wrong on two rows, because 80 composed paths at depth is still a LADDER: it has to GUESS the directory name.** 🔵 **The grants are older than the probes that missed them** — `canvas-lms-mcp/LICENSE` was added **2026-07-04** and `packages/xapi/LICENSE` on **2026-07-23**, read from each repository's own `--diff-filter=A` log this pass, while the shelf's own commit reads put their heads at 2026-07-10 and 2026-09-20. 🟡 **So the distinction that matters is not root-versus-depth, it is COMPOSED versus ENUMERATED:** `ls-tree -r HEAD` needs no guess and returns `canvas-lms-mcp/` and `packages/xapi/` whether or not anyone thought of those names.
+
+### 🔴 `ACTION ZZ-v` — `LICENSE` can be a DIRECTORY, and the row it hides is the largest single asset this pass found
+
+🔵 `cs341-illinois/coursebook` is the University of Illinois' open-source introductory systems-programming textbook: **3 839 ★ · 326 forks · 736 commits · 42 distinct author addresses · 2018-01-26 → 2026-10-04**, `illinois.edu(94)` in the domain channel, `-0500(482)/-0600(181)` with **117 Dec–Feb commits at `-0600`** — a confirmed CST/CDT shift ⇒ **North America — United States**. 🔴 **Its `LICENSE` is a directory of four files, so every ladder rung this base owns returns 404 and the row reads grantless.** 🟢 **And the structure inside is exactly the shape an education KB should want to publish**, because it separates what a studio may do with the code from what it may do with the content:
+
+| Artefact | Grant, read at pin `0d5ee4e` | What it permits |
+|---|---|---|
+| Software contributions | 🟢 **University of Illinois/NCSA Open Source License** (`LICENSE/LICENSE.code`) | OSI-approved, permissive, MIT+BSD-shaped — **build on it** |
+| The remixed wikibook content | 🟡 **CC-BY-3.0** (`LICENSE/LICENSE.original`), attribution via the root `AUTHORS` file | reuse with attribution — **not a software grant** |
+| The PDF / Markdown builds | 🟡 **CC-BY-4.0** (`LICENSE/LICENSE.output`) | redistribute the compiled book with attribution |
+
+🟡 **`NCSA` also needs to enter this base's licence vocabulary rather than be inferred**: a generic SPDX-style family detector that knows MIT, BSD and Apache will type it `UNKNOWN-TEMPLATE`, and `P250` then fails it SAFE — which is the same **usable-supply-excluded** cost `intel/trends.md` T32 already records for `ECL-2.0` on the Sakai/Apereo stack. 🔵 Two permissive, education-specific families invisible to generic detection is a pattern, not a coincidence: **education's licences were written by universities.**
+
+### 🟢 `ACTION ZZ-r` CONFIRMED — the HEAD-equality test, run shelf-wide, finds three alias pairs and one dead address
+
+🔵 ZZ-r asked for `ACTION ZZ-n`'s test over **every** shelf address. 🟢 **257 addresses were extracted from the five live shelf files and every one resolved with `git ls-remote --symref`** ([`p347-shelfwide-head-equality`](../evidence/p347-shelfwide-head-equality.2026-10-20-p347.tsv)).
+
+| Pair, by equal HEAD | HEAD | What the pair actually is |
+|---|---|---|
+| `openedx/edx-platform` · `openedx/openedx-platform` | 🟢 **EQUAL** `2b84871` | **One repository, two addresses** — the Open edX platform under its old and new names |
+| `OpenOLAT/OpenOLAT` · `OpenOLAT/OpenOlat` | 🟢 **EQUAL** `5495d1f` | **One repository** — the slug differs only in the case of one letter |
+| `RohanMuppa/brightspace-mcp-server` · `rohanmuppa/brightspace-mcp-server` | 🟢 **EQUAL** `d4dbf14` | **One repository** — the OWNER differs only in case |
+| `illinois-cs241/coursebook` · `cs341-illinois/coursebook` | 🟢 **EQUAL** `0d5ee4e` | **One repository, and the org was RENAMED** — found off-shelf, and the NCSA file still names the old address |
+| `Creaditor/frontend` | 🔴 **NO-ANSWER** | `ls-remote` returns nothing: deleted, renamed or made private since it was shelved |
+
+🔴 **The gate-coverage finding is the real one.** All three on-shelf pairs are invisible to a **case-sensitive string comparison of slugs**, which is what `gate-identity` (offline, p283) can do — and `gate-identity-online`, the instrument that would catch every one of them in a single run, **is not in the `hooks` target because it needs egress.** 🟢 **So this base has owned the right instrument since p283 and has never run it over the whole shelf set.** That is the Makefile header's own recurring class — *a working gate that stayed a one-off because it could not be invoked from the place a hook runs* — and it is now measured rather than suspected. 🟡 **ZZ-x below asks for the cheap half of the fix, which needs no egress: fold the slugs before comparing them.**
+
+### 🟢 The new agent-layer rows, read first-hand and placed on the instrument channel
+
+🔵 `ACTION ZZ-s` sent this pass back into this base's own orphan list — **100 education-token addresses of the 528 that p345 and p346 had not read** — filtered for **institutional ownership**. 🟢 **23 were read first-hand, and the two that belong on this shelf are both university MCP servers, in the two regions this base has least of.**
+
+| Repo | Grant, read at the pin | ★ (search channel) | Bench (commit channel) | Placed, and how | Verdict |
+|---|---|---|---|---|---|
+| [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) | 🟢 **MIT, 1 107 B** at `LICENSE`, stock body | **18** | 🟢 **378 c · 3 a · 2026-08-31 → 2026-10-19 (live)** | 🟢 **LATAM — Brazil** — `-0300` on **all 378**; Brazil has had no DST since 2019, so a non-shifting `-0300` is the expected shape. Portuguese-language README, USP's own systems as the subject | 🟢 **PROMOTED as a split cell** — see the data boundary below |
+| [`zaikaman/SGU-Academic-MCP`](https://github.com/zaikaman/SGU-Academic-MCP) | 🟡 **MIT, 1 068 B** at `LICENSE` — **title line carries a UTF-8 BOM**, see `ACTION ZZ-w` | 0 | 🟡 **116 c · 3 a · 2026-09-14 → 2026-10-16 (new, five weeks old)** | 🟢 **APAC — Vietnam** — `+0700` on **all 116**; Vietnam has no DST, so a non-shifting `+0700` is the expected shape. Vietnamese-language description, Đại học Sài Gòn's training portal as the subject | 🟡 **PROMOTED with its bench stated** |
+
+🟡 **`usp-mcp` is the third instance in three passes of the public-institution DATA boundary, and that makes it a rule rather than a shape.** p345 read `Mcp-Brasil/mcp-brasil` (MIT code, a `NOTICE` excluding third-party API data and public institutions' marks); p346 read `DECK6/korean-elementary-learning-map` (MIT code and dataset, the Republic of Korea's official curriculum documents explicitly not granted); **this one states in its own README — in Portuguese — that it is `Projeto não-oficial, sem nenhum vínculo com a Universidade de São Paulo`.** 🟢 **The MIT grant covers the client; the answers come out of USP's systems at query time and are not licensed by it.** 🔵 Three instances, three continents, three different mechanisms (a NOTICE, a prepended carve-out, an affiliation disclaimer): **the normal shape of an education data grant is MIT-on-the-code plus an unlicensed institutional data source**, and a studio pattern that caches those answers is making a decision, not a copy.
+
+🔵 **Two independent USP MCP servers exist** — this one and `iDavi/usp-mcp` (5 ★, same subject, Moodle + JupiterWeb) — which is a demand signal rather than a duplicate: the search channel returns **29** addresses on the slug. 🟡 Only the 18-star one is shelved, and the pair is recorded here so the identity gate has the distinction in text: they are **different repositories**, not an alias pair.
+
+### 🟡 `ACTION ZZ-w` — a BYTE-ORDER MARK is a fifth axis on the title-line family, and a MULTI-HOLDER MIT defeats GitHub's own classifier
+
+🔵 `p198` built this base's title-line family and `p314` separated UNTITLED from BESPOKE-TITLED. 🔴 **`zaikaman/SGU-Academic-MCP`'s `LICENSE` is stock MIT whose first bytes are `EF BB BF` followed by `MIT License`** — so a classifier anchored on `^MIT License` reads the title line as absent and the grant as UNTITLED, and `p314`'s own measurement says an abstention on MIT is this base's **largest usable-supply-excluded surface**. 🟢 One character, 1 068 B, and the fix is one `.lstrip('﻿')`.
+
+🔴 **The adjacent instance is louder, because the classifier that fails is GitHub's.** [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) ships **MIT at 1 345 B** — stock body, verbatim, with **five copyright lines** (TUM's School of Computation, Information and Technology; its Research Group of **Applied Education Technologies**; three named students; and a 2019 holder carried from Ares 1). 🟢 **The 275 B delta is attribution, not a modified grant.** 🔴 **The GitHub licence API reports `NOASSERTION` / "Other"** — the same verdict p346 read on the Korean curriculum repository, now with a second and completely different cause. 🟡 **So `NOASSERTION` from that channel means "my classifier abstained", never "the grant is non-standard"**, and a byte band keyed to MIT's ~1 060–1 110 B window rejects this file too; **only the template test (p312) gets it right.**
+
+🟢 **And the licence file turned out to be a PLACEMENT channel.** p346 lost the author-domain channel mid-pass to a `PII Data Handling` refusal and fell back to timezone offsets alone. 🟢 **`Ares2`'s copyright block names the Technical University of Munich in the licence text itself** — public, aggregate, in no sense personal data — and it agrees with both the domain channel (`in.tum.de(526)`) and the offset channel (`+0200`/`+0100` with 82 Dec–Feb commits at `+0100`, a confirmed CET/CEST shift). 🟡 **`ACTION ZZ-y`: read the copyright holder line before reaching for author addresses.** It is the cheapest institutional channel this base has found and it survives a refusal that takes the other one away.
+
+### 🔴 `ACTION ZZ-h` replicated a THIRD time, and this instance is institutional rather than regional
+
+🔵 p345 registered that a fork's commit channel measures the **upstream's** bench; p346 hit it again on `eduagarcia/lm-evaluation-harness-pt`. 🟢 **This pass hit it without looking, on a row whose name is the most quotable thing about it:** [`Harvard-University-iCommons/django-lti`](https://github.com/Harvard-University-iCommons/django-lti) is MIT (1 098 B), 157 commits, first commit **2021-11-19**. 🔴 **Its modal author domain is `umich.edu(123)`.** 🟢 **The upstream is [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) — the University of Michigan's Center for Academic Innovation — MIT, the same 1 098 B, the same first-commit date, 264 commits, live 2026-10-20, `umich.edu(197)`.** 🟡 **The HEADs are UNEQUAL (`e5dcc15` vs `1ac0b56`), so this is not an alias pair: it is a fork that stopped tracking in August 2025.** 🔴 **A pass that promoted the Harvard address would have published Michigan's bench, Michigan's maintenance and Michigan's institutional credit under Harvard's name** — `ACTION ZZ-g`'s rule (the name is not a channel) one layer up from region, at the level of the institution. 🟢 **Michigan's is shelved in `repos/foundations.md` this pass; Harvard's is recorded here and not promoted.**
+
+### 🟡 The token channel that found all of this has a measured false-positive rate, and the word is `learn`
+
+🔵 `ACTION ZZ-s` selects orphans by education token. 🔴 **Six of the 100 unread education-token orphans are machine-UNLEARNING repositories** — `locuslab/open-unlearning` (CMU, MIT, live), `OPTML-Group/Unlearn-Saliency`, `tamlhp/awesome-machine-unlearning`, `chrisliu298/awesome-llm-unlearning`, `OngWinKent/MachineUnlearning`, `Harry24k/machine-unlearning-pytorch` — **matched because `learn` is a substring of `unlearning`.** 🟢 **6 % of the queue, measured rather than estimated**, and the same substring class `make hooks` reports on its own payload names (`mit` matching inside `LIMITED`). 🟡 **The filter is still worth running — it produced every row above — but its yield should be quoted against 94, not 100.** 🔵 `locuslab/open-unlearning` is a genuinely good artefact and it is **out of domain for an education KB**, which is a cleaner verdict than a weak promotion.
+
+### 🟢 Registered for the successor pass
+
+🟢 **`ACTION ZZ-x`** — give `gate-identity` a **case-folded** slug comparison (and an alias table for renames), so the three pairs above fail offline, inside `hooks`, without egress; then wire `gate-identity-online` into a target that a pass with egress is expected to run. 🔴 *Refuted if case-folding the live shelf slugs reproduces none of the three pairs this pass measured.*
+
+🟢 **`ACTION ZZ-y`** — add the **copyright-holder line** to the placement channels, ranked above author addresses, and re-place every row this base holds whose region rests on offsets alone. 🔴 *Refuted if no shelved row's copyright line names an institution its placement does not already carry.*
+
+🟢 **`ACTION ZZ-z`** — replace the root ladder with **pin + tree enumeration + scope grading** in every licence instrument, and keep the ladder only as a fast path. The grading is the deliverable, not the enumeration: root ⇒ repository, `packages/<x>/` ⇒ that package, vendored path ⇒ nothing. 🔴 *Refuted if re-running it over this base's published addresses changes no cell.*
+
+🟢 **`ACTION ZZ-aa`** — probe the remaining **~77** education-token orphans on the institutional filter, quoting yield against 94 rather than 100. 🔴 *Refuted if fewer than two promotable live benches come out of them.*
+
+🟢 **`ACTION ZZ-ab`** — teach the family detector `NCSA` and re-check `ECL-2.0`, then re-grade every `UNKNOWN-TEMPLATE` cell on these shelves. 🔴 *Refuted if no cell changes.*
+
+
 ## Pass 346 · 2026-10-20 — the orphan channel generalises past Iberian tokens and returns five live institutional benches; two addresses this base holds resolve to repositories it already holds; and a British spelling reads a national curriculum as grantless
 
 **Evidence:** [`p346-institutional-orphan-probe`](../evidence/p346-institutional-orphan-probe.2026-10-20-p346.tsv) · [`p346-address-identity-head-equality`](../evidence/p346-address-identity-head-equality.2026-10-20-p346.tsv) · [`p346-ladder-spelling-and-ref-axes`](../evidence/p346-ladder-spelling-and-ref-axes.2026-10-20-p346.tsv) · [`p346-curriculum-data-carveout`](../evidence/p346-curriculum-data-carveout.2026-10-20-p346.tsv).

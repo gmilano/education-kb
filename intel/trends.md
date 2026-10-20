@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 347 · 2026-10-20 — three trends registered: the licence channel's axis list has no end and the fix is a different channel, the regions the English legs cannot reach are reachable in the local language, and a classifier that abstains is this sector's real licence risk
+
+**Evidence:** [`p347-grant-channel-recovery`](../evidence/p347-grant-channel-recovery.2026-10-20-p347.tsv) · [`p347-institutional-orphan-probe`](../evidence/p347-institutional-orphan-probe.2026-10-20-p347.tsv) · [`p347-shelfwide-head-equality`](../evidence/p347-shelfwide-head-equality.2026-10-20-p347.tsv) · [`p347-policy-channel-reachability`](../evidence/p347-policy-channel-reachability.2026-10-20-p347.tsv).
+
+### T47 — A root licence ladder has no last axis, and the instinct to add one more rung is the defect
+
+🔵 This base has repaired its ladders on **case** (p283), **depth-class** (p119), **ref** (p345), **orthography** (p346 — `LICENCE`) and **extension** (p346 — `LICENSE.txt`, `LICENSE.md`). 🔴 **p347 added two more from a single probe of 26 published-grantless addresses: a licence path at `packages/<x>/LICENSE`, and `LICENSE` existing as a DIRECTORY of four files.** Counting the live, permissively-licensed education repositories on which this base has now met each one: **`LICENCE` · `LICENSE.txt` · `LICENSE.md` · `license.txt` · `license.md` · a `LICENSE` directory · a path at depth · a UTF-8 BOM before the title line — eight distinct shapes, every one real, every one on a repository a studio could legally build on.**
+
+🟢 **The trend is not "ladders need more rungs". It is that a ladder is the wrong instrument, and two cheap reads replace it:**
+
+| Step | What it dissolves | Cost |
+|---|---|---|
+| `git ls-remote --symref` → pin the **HEAD sha** | 🟢 **The whole ref axis.** No `main`-then-`master`-then-`develop` logic is needed, and the version-numbered-default-branch class (`learningequality/morango` defaults to **`release-v0.9.x`**) stops being a hazard | one network round-trip |
+| `clone --bare --filter=blob:none --depth 1` → `ls-tree -r HEAD` | 🟢 **Case, spelling, extension and depth, in one read** | one shallow, blobless clone |
+| 🔴 **Grade each path by SCOPE** | 🔴 **The over-grant that enumeration introduces** | pure logic, no network |
+
+🔴 **The third step is not optional and it is the half a successor will be tempted to skip.** The ladder's failure direction is *lost supply* — a licensed project read as grantless, which `P250` makes indistinguishable from prohibited. **Enumeration's failure direction is the opposite: it over-grants.** `likr/canvas-lms-agent` carries two licence files and the first in path order is `.agents/skills/skill-creator/LICENSE.txt`, an **Apache-2.0 text belonging to a vendored third-party skill** — so "take the first licence you find" publishes someone else's grant as the repository's. 🟢 **Root grants the repository; `packages/<x>/` grants that package; a vendored directory grants nothing.** 🔵 And the same grading dissolves a conflict class this base has recorded twice (*"the manifest declares MIT and the repository does not"*): in a monorepo the manifest and the grant sit in the **same** directory, and only a root-only ladder could ever see one without the other.
+
+### T48 — The regions a search leg cannot reach are reachable in the LOCAL LANGUAGE, because the supply is written for one institution at a time
+
+🔵 Thirteen consecutive measurements of the four prescribed discovery legs have returned **zero** new placeable education-agent slugs, and the legs are not broken — they are **English-language roundups of global tools**. 🟢 **Meanwhile the fastest-growing education-agent category this base measures has reached fourteen rows and every single one is parochial by construction:** NTU COOL (Taiwan), Korea University KUPID, Santiago de Compostela, Toronto Quercus, Saigon University, Universidade de São Paulo, and the Canvas, Brightspace, Blackboard, Moodle and Google Classroom families. 🔴 **A university-system MCP server is written in the language of the university it serves** — `usp-mcp`'s README is Portuguese, `SGU-Academic-MCP`'s description is Vietnamese — **so an English-language query is structurally blind to the supply, no matter how it is phrased.**
+
+🟡 **What this predicts, and it is testable:** the APAC and LATAM "supply gaps" this base recorded for nine passes were an artefact of query language, not of regional capacity. 🟢 Three passes of reading an inventory instead of a search engine took the instrument-placed LATAM count from **one to four** and placed APAC rows in Taiwan, Korea and Vietnam. 🔵 **For an engagement this inverts the usual research order:** do not ask what the best education agent is, ask **which systems the client's own institutions run** — the integration already exists, under MIT, written by a student there.
+
+### T49 — The sector's real licence risk is a classifier that ABSTAINS, and education's own licences are the ones it abstains on
+
+🔴 **`NOASSERTION` from GitHub's licence API means *my classifier abstained*. It never means *the grant is non-standard*.** 🟢 Two instances, two passes, two completely different causes: p346 read `DECK6/korean-elementary-learning-map` (verbatim MIT body with a prepended data carve-out) as `NOASSERTION`; p347 read [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2) — **stock MIT body, 1 345 B, five copyright lines naming TUM and four individuals** — as `NOASSERTION` too. 🔵 A byte band keyed to MIT's ~1 060–1 110 B window rejects the second as well; **only a template test reads either one correctly.**
+
+🟡 **And the families education actually uses are the families generic detection does not know**, which is a sector fact rather than an accident — **education's licences were written by universities:**
+
+| Family | Where it appears on these shelves | What a generic detector does |
+|---|---|---|
+| **University of Illinois/NCSA** | `cs341-illinois/coursebook` (**3 839 ★**) | 🔴 `UNKNOWN-TEMPLATE` — and `P250` then fails it SAFE, excluding a permissive, OSI-approved grant |
+| **ECL-2.0** (Educational Community License) | Sakai and the Apereo stack, heavily deployed in European universities (T32) | 🔴 types it *unknown*; a review stalls or wrongly escalates a usable platform |
+| **MIT with a BOM** | `zaikaman/SGU-Academic-MCP` | 🔴 reads the title line as absent ⇒ UNTITLED ⇒ abstain, which p314 measured as this base's **largest usable-supply-excluded surface** |
+| **Multi-holder MIT** | `ls1intum/Ares2` | 🔴 `NOASSERTION` on GitHub's channel, out-of-band on a byte band |
+| **Apache-2.0 by notice-by-reference** | `PerryLink/dsh-essay-rubric-check`, 682 B | 🟡 graded `POINTER, not a grant` — defensible, and worth separating from a dead pointer: the authority at `apache.org/licenses/LICENSE-2.0.txt` answers **200, 11 358 B** from here, so the reference resolves |
+
+🟢 **The direction of every one of these errors is the same, and it is the expensive one: usable supply excluded.** 🔵 This base has recorded no instance of the opposite error — a copyleft obligation missed — in any of the passes that measured it. 🟡 **So when a studio's scanner stalls on an education repository, the prior should be "the scanner abstained", not "the project is risky"** — and the cheapest resolution is the template test plus a human read of one file.
+
+
 ## Pass 346 · 2026-10-20 — three trends registered: the sector's real licence risk is the corpus rather than the code, a region's "policy gap" is usually an altitude error, and education's permissive supply is government-shaped
 
 **Evidence:** [`p346-curriculum-data-carveout`](../evidence/p346-curriculum-data-carveout.2026-10-20-p346.tsv) · [`p346-institutional-orphan-probe`](../evidence/p346-institutional-orphan-probe.2026-10-20-p346.tsv) · [`p346-address-identity-head-equality`](../evidence/p346-address-identity-head-equality.2026-10-20-p346.tsv).
