@@ -1,9 +1,43 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 
+## Pass 332 — gaps opened, closed and measured
+
+**Evidence:** [`p332-delivery-audit`](../evidence/p332-delivery-audit.2026-10-20-p332.tsv) · [`p332-defect-probe`](../evidence/p332-defect-probe.2026-10-20-p332.tsv) · [`p332-prefix-pair-probe`](../evidence/p332-prefix-pair-probe.2026-10-20-p332.tsv) · [`p332-h5p-grant-channels`](../evidence/p332-h5p-grant-channels.2026-10-20-p332.tsv).
+🔴 **Note that p325 through p331 did not write a section in this file.** This one therefore also disposes of what p324 left standing.
+
+**Closed this pass.**
+
+- ✅ 🟢 **p327's prescribed delivery audit — named at p327, recorded as unrun at p331, BUILT.** [`compose/code/p332-delivery-audit/`](../compose/code/p332-delivery-audit/), **40 offline controls, in `make gate-offline`**, runnable as `make delivery-audit`. It imports p235's shelf index rather than rebuilding it. **3,761 slugs measured into `evidence/`, 2,968 delivered — 78.9%.**
+- ✅ 🔴 **p331's "discovery 100% / delivery 0%" — REFUTED as a general claim, and its single case stands.** `lti-tool` was a real miss. The corpus-wide rate is **78.9%**, the explicitly-deferred class is **33 rows**, and the deferred-permissive class is **16**. **Twelve probed first-hand: one genuine miss, three already carried by name, eight dead/dormant/below bar.**
+- ✅ 🟢 **`make gate-offline` — RED SINCE p331, now GREEN (49 checks, exit 0).** p331 added `p331-two-channel-liveness/test_two_channel.py` ungated and pinned nothing; `p252-ungated-floors --verify` reported `UNPINNED` and its 46 controls failed `70 != 71`. **Measured on a clean checkout of p331's commit: red before p332 changed a byte.** Fixed by `--pin` (floor **11**) and moving p252's four population literals to 71, with the reasoning in the source.
+- ✅ 🟢 **`ACTION XN`'s unrun falsifier (p250) — PROBED, eighty passes late, and the falsifier FIRES.** 27 prefix pairs: **22 truncations, 3 with neither spelling resolving, 2 DISTINCT LIVE REPOSITORIES** (`TouchRefletz/maia`, `autolab/autolab`). **The prefix rule would have struck two live repos off these shelves.** Both exceptions recorded in `PREFIX_BUT_DISTINCT` with two controls asserting the rule does not fire.
+- ✅ 🟢 **"How many truncations are still on these shelves" (open since p250, `repos/trending.md`).** Of the 22 confirmed truncations, **exactly 1 appears in the shelf URL index** — `jushbjj/mr`, and it is inside `intel/open-gaps.md`'s own **quotation** of the historical stump. The 14 live rows all read `JushBJJ/Mr.-Ranedeer-AI-Tutor` correctly. **The class is real, measured, and confined to the evidence tier.**
+- ✅ 🟢 **`h5p/h5p-interactive-video`'s grant — RESOLVED and the row PROMOTED.** MIT: `package.json` **and** the full MIT text in the README. **2,447 c · 115 a · head 2026-10-02 · 37 c in 2026** — the largest contributor bench on these shelves. Unplaced across 15 sightings since p195 because the file channel 404s.
+
+**Opened this pass — measured, not assumed.**
+
+- 🔴 **`ACTION ZA` — THE ONE THIS PASS EARNED: eight rows in the defect class are dead, dormant or below bar, and NOT ONE of them says so in `evidence/`.** That is the real defect the delivery audit found. **The shelves were right to leave them off; the refusal was never written down**, so every pass re-discovers and re-probes the same corpses. 🟢 **This needs a disposition ledger, not a promotion pipeline** — one line per measured-and-refused slug, with the pass and the reason, so `silent` stops being 717 rows wide. **Build it as a sibling of the delivery audit and gate it.**
+- 🔴 **The audit's `silent` class is 717 rows and nobody has looked at it.** 33 rows carry an explicit deferral; **717 were measured and never disposed of either way**, 327 of them permissively granted. 🟡 **This pass probed the 12 most-sighted `pending` rows, which is 12 of 750.** **The sampling is thin and the conclusion ("the shelves were mostly right") rests on it.** Next pass should probe a random sample of the `silent` class, not the top of it — ranking by sightings selects for rows that were already interesting.
+- 🔴 **p332's own existence probe is a screen, not a proof of absence, and it was used on 27 rows.** 404 on all ten paths is strong but a repository with a non-standard default branch and none of `LICENSE`/`README.md`/`.gitignore`/`package.json`/`LICENSE.md` would also 404. 🟢 **`p293-slug-existence-oracle` is the calibrated instrument** (credential-prompt discrimination, controls). **The three "neither spelling resolves" rows should be re-probed with it before any of them is called nonexistent.**
+- 🔴 **`h5p/h5p-core` has NO GRANT on any of the three channels and its README is 14 bytes.** It sits in the dependency neighbourhood of a pattern this KB now recommends (`P27`). **Open an issue on the H5P org and record the answer.**
+- 🔴 **The MIT-in-README-only tier is unquantified outside H5P.** Three H5P content types state MIT in the README body and nowhere else. 🟡 **This KB has no idea how common that is in this sector** — and it is the channel its grant ladder tries last. **Census it: how many shelf rows would change grade if the README body were read?**
+- 🔴 **The APAC channel is returning enterprise press instead of education policy, and that is a QUERY defect.** The leg returned nothing on K-12 or HE policy, while this base already holds **Korea's AI Basic Act (in force January 2026)**, **Vietnam's Decision 33/2026/QĐ-TTg (2026-08-15)** and **China's content-labeling rules (September 2025)**. 🟢 **Query the instruments by name, not the region by topic.**
+- 🟡 **`123xiaojun/student-management-system`'s licence payload is 4,568 B and is not an SPDX stock text.** Unrecognised by the family classifier. **Read it before the row is ever quoted** — an unrecognised 4.5 KB payload is either a translated licence or an added-restriction variant, and `p1054-mit-plus-clause` exists for exactly the second case.
+
+**Standing, and still unrun — carried because `intel/trends.md` Trend 21 now makes carrying them a named defect.**
+
+- 🔴 **`ZhijieXiong/pyedmine`'s licence contradiction** (MIT `LICENSE` under an unrelated holder vs a README restricting use to academic purposes). **p324 prescribed opening an issue and recording the maintainer's answer. Eight passes; no issue.** Still the highest-value single action available: the answer either returns the broadest EDM library in this sector to the usable set or confirms the first scanner-invisible restriction on these shelves.
+- 🔴 **`aegis-integrity`'s ESL false-positive behaviour, measured by nobody including its author.** Its marketing section and its ESL section contradict each other, and the changelog records an earlier multiplier that was **inverted**.
+- 🔴 **`noplag-engine` below the README** — 6 commits against 86 ★ / 76 forks, winnowing parameters unstated. **Read `docs/api.md` and the fingerprinting module before `P11` is quoted to a client.**
+- 🔴 **`jplag/JPlag`'s per-language maturity table**, still uncaptured.
+- 🔴 **`WEIWEI0614/math-bank`'s content provenance** — 12,030 past-paper items against named commercial qualifications (CIE 9709, Edexcel IAL, TMUA, ESAT, BMO, UKMT), unaddressed by the repository.
+- 🔴 **The `ACTION XR` backlog is 71 ungated silent-zero suites — one WORSE than p294 left it**, because p331 added one. Pinning is not gating.
+
+---
 
 ## Pass 324 — gaps opened, closed and measured
 

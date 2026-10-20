@@ -1,0 +1,31 @@
+# p332 — 2026-10-20. The H5P ORG GRANT CENSUS across THREE channels, every cell first-hand.
+# WHY it was run: the delivery audit put `h5p/h5p-interactive-video` at the top of its defect
+# class — permissive, deferred, 15 sightings since p195 (2026-10-14), never on a shelf. The
+# cause turned out to be the CHANNEL, not the write: its grant does not exist as a file.
+# Channels, in the order this KB's grant ladder tries them:
+#   1 FILE     raw.githubusercontent.com/<slug>/HEAD/{LICENSE,LICENSE.txt,LICENSE.md,COPYING}
+#   2 MANIFEST package.json / composer.json "license" key
+#   3 README   the licence text carried in the README body
+# 🔴 THE RESULT: 8 of 10 repositories have NO LICENCE FILE. Seven of the eight grants found are
+# invisible to channel 1. A ladder that leads with the file channel and does not fall through
+# reads this org as almost entirely ungranted. It is not.
+slug	channel_1_file	channel_2_manifest	channel_3_readme	grant_p332	tier
+h5p/h5p-interactive-video	404	package.json "MIT"	full MIT text under "## License"	🟢 MIT	content type
+h5p/h5p-course-presentation	404	package.json "MIT"	-	🟢 MIT	content type
+h5p/h5p-drag-question	404	package.json "MIT"	-	🟢 MIT	content type
+h5p/h5p-accordion	🟢 LICENSE.txt 1073 B — "The MIT License (MIT)", Copyright (c) 2015 Joubel	-	-	🟢 MIT	content type
+h5p/h5p-question-set	404	no license key	"The MIT License"	🟡 MIT — README channel only	content type
+h5p/h5p-multi-choice	404	no license key	"The MIT License"	🟡 MIT — README channel only	content type
+h5p/h5p-blanks	404	no license key	"The MIT License"	🟡 MIT — README channel only	content type
+h5p/h5p-php-library	🔴 LICENSE.txt present	composer.json "GPL-3.0"	-	🔴 GPL-3.0	PHP core / renderer
+h5p/h5p-editor-php-library	404	composer.json "GPL-3.0"; package.json "SEE LICENSE IN README.md"	-	🔴 GPL-3.0	PHP core / editor
+h5p/h5p-core	404	no manifest	README is 14 bytes — no licence	🔴 NO GRANT FOUND on any of the three channels	unclear
+#
+# 🟢 THE SPLIT IS REAL AND IT FOLLOWS THE RENDERER/CONTENT BOUNDARY: the PHP core that renders
+# H5P is GPL-3.0; the content types are MIT. This is STRICTLY MORE than this KB's shelves have
+# recorded. verticals/solutions.md has said a studio may author "H5P content JSON with an agent;
+# the renderer stays untouched, so GPL stays contained" — true, and it understates the surface.
+# A studio may FORK AND MODIFY A CONTENT TYPE under MIT, which is a code surface, not a data one.
+# 🟡 Caveat to carry to a client: the grant is PER REPOSITORY and the org is not uniform. Three
+# content types state MIT only in the README body, and `h5p-core` states nothing anywhere. Read
+# the specific content type you intend to fork; do not generalise from the four clean rows.

@@ -1,0 +1,39 @@
+# p332 — 2026-10-20. The PREFIX-PAIR probe: p250's `ACTION XN` asked for a rule that refuses a
+# harvested slug which is a strict prefix of another, and named its own falsifier —
+# `TouchRefletz/maia` vs `maia.edu`. p332 probed all 27 pairs first-hand. THE FALSIFIER FIRES:
+# two pairs are distinct live repositories, so the prefix rule is NOT a refusal rule. It is a
+# question, and only an existence probe answers it. Both exceptions are now recorded in
+# delivery_audit.py:PREFIX_BUT_DISTINCT so no later pass re-spends the probe.
+# Probe: raw.githubusercontent.com/<slug>/<ref>/<path>, ref in {main,master}, path in
+# {LICENSE,README.md,.gitignore,package.json,LICENSE.md}. 200 on any = resolves.
+# LIMIT, stated: 404 on all ten is strong but not absolute — a repo with a non-standard default
+# branch AND none of those five files would also 404. p293-slug-existence-oracle is the
+# calibrated instrument for a hard negative; this is a screen, not a proof of absence.
+bare_slug	on_shelf	bare_probe	longer_slug	longer_probe	verdict_p332
+autolab/autolab	SHELF	200 master/LICENSE	autolab/autolab.github.io	200 master/LICENSE	🟡 DISTINCT — both resolve; ACTION XN's falsifier fires, the prefix rule must NOT refuse
+dkavargy/escoplus2	-	404 none-of-10	dkavargy/escoplus2.0	200 main/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+dmitry-viskov/pylti1	-	404 none-of-10	dmitry-viskov/pylti1.3	200 master/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+eclipse/paho	-	404 none-of-10	eclipse/paho.mqtt.java	200 master/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+eecs-autograder/autograder	-	404 none-of-10	eecs-autograder/autograder.io	200 master/README.md	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+fga-eps-mds/2017	-	404 none-of-10	fga-eps-mds/2017.2-merendamais	200 master/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+gener8v/gener8v	-	404 none-of-10	gener8v/gener8v.tools.pii-scanner	200 main/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+ics-tools/ics	-	404 none-of-10	ics-tools/ics.tools	200 master/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+ipti/br	-	404 none-of-10	ipti/br.tag	200 main/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+jdolny/oneroster	-	404 none-of-10	jdolny/oneroster.js	404 none-of-10	🟡 NEITHER spelling resolves on this channel — not a truncation question; both are unreachable
+jp-cos/jp-cos	-	404 none-of-10	jp-cos/jp-cos.github.io	200 main/README.md	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+juliapluto/pluto	-	404 none-of-10	juliapluto/pluto.jl	200 main/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+jushbjj/mr	SHELF	404 none-of-10	jushbjj/mr.-ranedeer-ai-tutor	200 main/README.md	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+lamethods/lamethods	-	404 none-of-10	lamethods/lamethods.github.io	200 master/README.md	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+lawrence-public-schools/oneroster-1	-	404 none-of-10	lawrence-public-schools/oneroster-1.1-powerqueries	200 master/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+nakafaai/nakafa	-	404 none-of-10	nakafaai/nakafa.com	200 main/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+paurushrai/lti-1	-	404 none-of-10	paurushrai/lti-1.3	404 none-of-10	🟡 NEITHER spelling resolves on this channel — not a truncation question; both are unreachable
+processing/p5	-	404 none-of-10	processing/p5.js	200 main/README.md	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+ramsrigouthamg/questgen	-	404 none-of-10	ramsrigouthamg/questgen.ai	200 master/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+schild-report/schild	-	404 none-of-10	schild-report/schild.report	200 master/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+scrosseye/persuade_corpus_2	-	404 none-of-10	scrosseye/persuade_corpus_2.0	200 main/README.md	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+snflwr-ai/snflwr	-	404 none-of-10	snflwr-ai/snflwr.ai	200 main/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+theopenem/oneroster	-	404 none-of-10	theopenem/oneroster.net	200 master/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+touchrefletz/maia	-	200 main/LICENSE	touchrefletz/maia.edu	200 master/LICENSE	🟡 DISTINCT — both resolve; ACTION XN's falsifier fires, the prefix rule must NOT refuse
+uoc/java-lti-1	-	404 none-of-10	uoc/java-lti-1.3	200 master/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does
+voodoo2man/iobroker	-	404 none-of-10	voodoo2man/iobroker.vis	404 none-of-10	🟡 NEITHER spelling resolves on this channel — not a truncation question; both are unreachable
+wort-schule/wort	-	404 none-of-10	wort-schule/wort.schule	200 main/LICENSE	🔴 TRUNCATION — the bare spelling does not resolve, the longer one does

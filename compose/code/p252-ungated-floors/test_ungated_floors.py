@@ -223,7 +223,22 @@ chk("p280 a DIRECTORY alone still does not gate (p251, preserved)",
 # suite silently leaving the backlog without being gated would read as progress.
 # 🔴 What this does NOT mean: the XR defect is no less latent in the remaining 70.  One
 # suite gated is one suite, not a trend.
-chk("ungated AND silent-zero (the XR population)", len(POP), 70)
+# 🔴 p332: 70 -> 71, and the movement is a REGRESSION, not growth. p331 added
+# `p331-two-channel-liveness/test_two_channel.py` — an UNGATED, silent-zero suite — and
+# pinned nothing. So `--verify` reported it `UNPINNED` and `make gate-offline` has been
+# RED since p331, through a pass that published nothing about it. The census caught it on
+# the first run of p332, which is the fourteenth consecutive pass where this pin went red
+# before the prose did.
+# 🟢 p332 ran `--pin` (the row lands at floor 11) and moved these four literals 70 -> 71.
+# 🔵 Why bumping the literal is the correct fix here and not the error the README warns
+# about: the README's warning is against editing a floor DOWN to match a suite that broke.
+# Nothing broke. The POPULATION grew, by exactly the door p294 documented in reverse — a
+# suite arriving ungated — and the literal is a census of the population, so it must track
+# it. The floor itself was measured by `--pin`, not chosen.
+# 🔴 What this does NOT mean: p331's suite is now covered. It is PINNED, which only means
+# a future edit that drops its asserts below 11 will fail the gate. It is still ungated.
+# The XR backlog is 71, one worse than p294 left it.
+chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",
     sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]), 110)
 chk("the partition closes: silent-zero + explicit == ungated",
@@ -242,7 +257,7 @@ chk("the pin file holds no row outside the population",
     sorted(set(FLOORS) - {r["relpath"] for r in POP}), [])
 chk("no floor is zero (a zero floor pins nothing)",
     sorted(k for k, v in FLOORS.items() if v < 1), [])
-chk("floors.tsv is the pinned count of the population", len(FLOORS), 70)
+chk("floors.tsv is the pinned count of the population", len(FLOORS), 71)
 
 # ── verdict_for: the grading, and its precedence ──
 chk("a count at the floor is OK",
@@ -287,11 +302,11 @@ chk("and it names the suite", [r for r, _ in _fails], [_victim])
 
 _fails_nopin, _ = uf.verify(floors={}, rows=POP)
 chk("a MISSING pin file fails as UNPINNED, it does not read as clean",
-    len(_fails_nopin), 70)
+    len(_fails_nopin), 71)
 
 _clean, _table = uf.verify(floors=FLOORS, rows=POP)
 chk("the real population verifies clean", _clean, [])
-chk("the table has one row per member", len(_table), 70)
+chk("the table has one row per member", len(_table), 71)
 
 chk("read_floors on a missing path returns empty, not an exception",
     uf.read_floors(os.path.join(uf.HERE, "no-such-file.tsv")), {})

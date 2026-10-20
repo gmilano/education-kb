@@ -1,0 +1,27 @@
+# p332 — 2026-10-20. FIRST-HAND probe of the ten most-sighted rows in the delivery audit's
+# defect class (permissive grant + `pending` disposition + never on a shelf).
+# WHY: p331 generalised from ONE case (`lti-tool`, a real miss) to "discovery 100% / delivery 0%"
+# as a systemic indictment. This probe tests that generalisation against the backlog itself.
+#
+# CHANNELS, and the refusals measured before any negative was believed:
+#   github.com HTML            403  (proxy)      -> unusable
+#   api.github.com             403  (since p37)  -> unusable
+#   codeload.github.com        403               -> unusable
+#   raw.githubusercontent.com  200/404           -> USED for licence payload (p250's HEAD path)
+#   git clone --bare --filter=blob:none  OK      -> USED for commits/authors/head date
+# Activity = full commit graph, blobless. Licence = first file of
+# LICENSE/LICENSE.md/LICENSE.txt/COPYING/LICENCE returning 200 on HEAD.
+#
+slug	licence_file	bytes	family	copyright_line	commits	authors	head	commits_2026	verdict_p332
+h5p/h5p-interactive-video	NONE on file channel; package.json "license": "MIT"	-	MIT (manifest channel)	-	2447	115	2026-10-02	37	🟢 PROMOTE — the one genuine miss. Alive, broadly authored, H5P org. Deferred since p195 because the FILE channel 404s and no pass fell through to the manifest
+davemckain/qtiworks	LICENSE.txt	2057	BSD	Copyright (c) 2014, University of Edinburgh	2073	3	2023-01-04	0	🔴 DEAD BY MAINTAINER DECLARATION — README line 1: "This project is no longer supported and is going to be closed in early 2023." Substantial (2073 c) and unusable. Already named on 2 shelves in prose
+sagorbrur/bnlp	LICENSE	1068	MIT	Copyright (c) 2019 Sagor Sarker	541	10	2026-04-01	19	🟡 ALIVE, and ALREADY carried in prose on 3 shelves. Bengali NLP substrate, not an education agent — APAC placement, foundations tier at most
+zanichellieditore/learningrecordstore-xapi	LICENSE	1081	MIT	Copyright (c) 2019 Zanichelli Editore s.p.a.	30	6	2020-03-18	0	🔴 DEAD — 6 years. The only INSTITUTIONALLY-held row in the backlog (Zanichelli Editore, Italian education publisher, EMEA) and it is dead. Record the holder, not the code
+ramsrigouthamg/questgen.ai	LICENSE	1076	MIT	Copyright (c) 2020 Ramsri Goutham Golla	122	7	2023-11-15	0	🔴 DORMANT — 3 years. Question generation, India (APAC)
+xcesaralejandro/lti1p3	LICENSE	1081	MIT	Copyright (c) 2021 César Alejandro Mora Cid	97	3	2025-01-03	0	🟡 QUIET — 21 months, 3 authors. Spanish-language author (LATAM candidate). Watch only
+paurushrai/lti-1p3-nextjs-starter	LICENSE	1067	MIT	Copyright (c) 2026 Paurush Rai	17	1	2026-06-17	17	🟡 WATCH — current but 1 author / 17 commits. A starter, not a library
+esegrave/edfi	LICENSE	11356	Apache-2.0	no copyright line	52	2	2022-03-04	0	🔴 DORMANT — 4 years. Ed-Fi (North America data standard)
+roncuevas/ipn_saes_utils	LICENSE	1079	MIT	Copyright (c) 2026 Aarón Martínez Cuevas	2	1	2026-02-09	2	🔴 BELOW BAR — 2 commits. IPN/SAES, Mexico (LATAM): the student-system seam is real, this code is not
+ridencww/uniroster-server	LICENSE	1066	MIT	Copyright (c) 2016 Ralph Iden	3	1	2016-10-17	0	🔴 BELOW BAR — 3 commits, 10 years. Already named on 1 shelf in prose
+123xiaojun/student-management-system	LICENSE	4568	UNRECOGNISED by the family classifier — 4568 B is not an SPDX stock text	no copyright line	5	2	2026-10-06	5	🔴 BELOW BAR — 5 commits. China (APAC). The licence payload needs a read before any use
+gaurav-pande/aes_dl	NONE — no file, and no license key in package.json/setup.py	-	UNGRANTED	-	-	-	-	-	🔴 UNGRANTED on both channels. Automated essay scoring. Default copyright reserves all rights

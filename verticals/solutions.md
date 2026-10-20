@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 332 — the platform tier still has not moved, and this file has been understating the ONE permissive surface inside it by a whole tier
+
+🔴 **Tenth consecutive pass with no new platform.** `Moodle`, `Open edX`, `Canvas`, `Kolibri`, `OpenEduCat`, `Sakai`, `BigBlueButton`, `H5P`, `Openki` and `RosarioSIS` are unchanged from p331, licences as this file already records them. 🟢 **The nil return is re-confirmed on a fresh leg this pass** (`open source platform education LMS SIS MIT Apache 2026`): one vendor glossary, **Moodle GPLv3, Open edX AGPLv3**, and no MIT- or Apache-licensed education LMS, SIS or ERP. **There is still no permissive education LMS or SIS, and there has not been one in ten passes of looking.**
+
+### 🟢 But the H5P row was wrong in a way that costs a studio code it is allowed to write
+
+**This file has said — correctly, and incompletely — that a studio may generate *"H5P content JSON with an agent; the renderer stays untouched, so GPL stays contained."*** 🔴 **That describes a DATA surface and stops there. p332's census of the H5P org across three licence channels shows the content types are MIT, and that is a CODE surface.** Every cell first-hand: [`evidence/p332-h5p-grant-channels.2026-10-20-p332.tsv`](../evidence/p332-h5p-grant-channels.2026-10-20-p332.tsv).
+
+| H5P tier | repos measured p332 | grant | what a studio may do |
+|---|---|---|---|
+| PHP core / renderer | `h5p-php-library`, `h5p-editor-php-library` | 🔴 **GPL-3.0** (`LICENSE.txt` + `composer.json`) | Deploy and call it. **Do not modify** — containment is the whole strategy |
+| content types | `h5p-interactive-video` · `h5p-course-presentation` · `h5p-drag-question` · `h5p-accordion` | 🟢 **MIT** | 🟢 **Fork and modify.** New question types, new interaction logic, client branding **in code** |
+| content types, README channel only | `h5p-question-set` · `h5p-multi-choice` · `h5p-blanks` | 🟡 **MIT**, stated in the README and nowhere else | Fork, and **put the README text in the engagement's licence file** — the grant is real but not where an audit tool looks |
+| unclear | `h5p-core` | 🔴 **no grant on any channel** (its README is 14 bytes) | 🔴 **Do not touch** until the holder answers |
+
+🟢 **`h5p-accordion` settles that the MIT tier is intent rather than metadata drift:** a real `LICENSE.txt`, **1,073 B**, *Copyright (c) 2015 **Joubel*** — the Norwegian house behind H5P. 🔴 **The file channel is nearly blind here: 8 of 10 repositories have no licence file at all**, and seven of the eight grants found are invisible to it. **This is why `h5p/h5p-interactive-video` — 2,447 commits, 115 authors, head 2026-10-02 — sat in `evidence/` unplaced across 15 sightings since p195.**
+
+🟡 **The caveat belongs in the proposal, not in a footnote: H5P's grant is per repository and the org is not uniform.** Read the content type you intend to fork. Do not write "H5P is MIT" or "H5P is GPL" in a client document; both are false of the org as a whole.
+
+### 🟢 The platform shelf, with the H5P row restated
+
+| Platform | Repo | Licence | Layer | AI seam |
+|---|---|---|---|---|
+| **Moodle** | https://github.com/moodle/moodle | 🔴 GPL-3.0 | LMS — the deployed base in most engagements | Plugin + LTI 1.3 tool; keep agent code **out of process** |
+| **Open edX** | https://github.com/openedx/edx-platform | 🔴 AGPL-3.0 | MOOC / corporate | XBlock; **AGPL reaches network use — the seam must be a separate service** |
+| **Canvas LMS** | https://github.com/instructure/canvas-lms | 🔴 AGPL-3.0 | HE, strong in North America | LTI 1.3 + its own API |
+| **H5P** | https://github.com/h5p/h5p-php-library | 🔴 **GPL-3.0 core** / 🟢 **MIT content types** (p332) | Interactive content | 🟢 **Generate content JSON *and* fork a content type under MIT** |
+| **Kolibri** | https://github.com/learningequality/kolibri | 🟡 MIT (app) | Offline-first K-12 | 🟢 The **LATAM / low-connectivity** base: MIT, offline by design |
+| **Sakai** | https://github.com/sakaiproject/sakai | 🔴 ECL-2.0 | HE collaboration | LTI; `longsight.com` is in this ecosystem **and in `lti-tool`'s commit record** (p331) |
+| **BigBlueButton** | https://github.com/bigbluebutton/bigbluebutton | 🔴 LGPL-3.0 | Virtual classroom | Recording + transcript pipeline |
+| **OpenEduCat** | https://github.com/openeducat/openeducat_erp | 🔴 LGPL-3.0 (Odoo-based) | **Education ERP / SIS** | The nearest thing to an SIS, and **not permissive** |
+| **RosarioSIS** | https://gitlab.com/francoisjacquet/rosariosis | 🔴 GPL-2.0 | SIS, strong Spanish/French support | 🟡 LATAM-relevant; GPL-2.0 constrains redistribution |
+| **Openki** | https://gitlab.com/Openki/Openki | 🔴 AGPL-3.0 (p331) | Peer-to-peer course organising | Non-formal / community learning |
+
+🔵 **One address note, measured this pass rather than assumed.** p331 cites Openki at `gitlab.com/Openki/Openki` and an earlier cell in this file carries a `github.com/openki/openki` spelling. 🟢 **Both resolve** — GitLab on `main` (not `master`), GitHub on `HEAD`. **p331's address is kept as the citing one**; the GitHub spelling is a live second address, not an error, and is recorded here so no later pass treats the disagreement as a truncation or a dead link.
+
+### 🔴 One procurement datum from the delivery audit, and it is about a holder rather than a repo
+
+🔴 **`zanichellieditore/learningrecordstore-xapi` — MIT, 1,081 B, *© 2019 Zanichelli Editore s.p.a.* — is dead: 30 commits, 6 authors, head 2020-03-18.** 🔵 **Record the holder, not the code.** Zanichelli is a major Italian education publisher, and it published a permissive xAPI learning-record store and then stopped. **For an EMEA engagement that is a conversation, not a dependency:** a publisher that has already open-sourced its LRS once is a different negotiating partner from one that never has. **The code is six years stale; the precedent is not.**
+
+---
+
 ## Pass 331 — the platform tier did not move, and the layer that connects an agent TO a platform did; both halves of that sentence are measured
 
 🔴 **Ninth consecutive pass with no new platform.** `Moodle`, `Open edX`, `Canvas`, `Kolibri`, `OpenEduCat`, `Sakai`, `BigBlueButton`, `H5P`, `Openki` and `RosarioSIS` are unchanged from p330 — **licences as this file already records them; only `Openki` (AGPL-3.0) and `RosarioSIS` (GPL-2.0) were read first-hand, at p330**, and this pass's `open source platform education ERP CRM MIT Apache` leg returned **nothing new** — its entire first page was **OpenEduCat's own glossary**, a vendor site, in six languages.

@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 332 — `make gate-offline` has been RED since p331, and the pass that prescribed the hook tier was the pass that broke it
+
+🔵 **This pass's signal is not a repository. It is that the gate p331 told the next pass to build into was already failing when p331 wrote the sentence.**
+
+🔴 **p331 closed with:** *"The prescription was right; nothing executes it. **It belongs in the hook tier, not in prose.**"* 🟢 **The diagnosis is correct and this pass acted on it.** 🔴 **But p331 had itself added `compose/code/p331-two-channel-liveness/test_two_channel.py` — an UNGATED, silent-zero suite — and pinned nothing.** `p252-ungated-floors` exists precisely to catch that: its `--verify` reported the suite `UNPINNED`, its 46 controls failed `70 != 71`, and **`make gate-offline` exited 2.**
+
+🟢 **Measured, not inferred: the gate fails identically on a clean checkout of p331's own commit.** The first thing p332 ran was the gate, and it was red before this pass had changed a byte.
+
+🔵 **So the narrowing sequence that has now run nine days takes one more step, and it is the sharpest yet.** p324/p325: a declared gap is a statement about the **query**. p326: the **filter**. p327: the **write**. p328: the write's **target**. p329: a **channel this base already held**. p330: a channel this base had **built an instrument for**. p331: a row this base had **measured and never delivered**. 🔴 **p332: the GATE that catches all of the above, left red by the pass that named it as the remedy.** **A prescription to move work into the hook tier, written in prose, by a pass that had just broken the hook tier.**
+
+🟢 **The remedy is the same shape as p330's and p331's, and cheaper than both:** before a pass ends, `make gate-offline`. It is the only command that answers *"did I leave this base working?"*, and it takes less time than the sweep any one of these passes spent on search.
+
+### 🟢 Fixed this pass, both halves, with the reasoning recorded in the source
+
+| what | how |
+|---|---|
+| `p331-two-channel-liveness/test_two_channel.py` unpinned | 🟢 `python3 -I ungated_floors.py --pin` — the row lands at **floor 11**, measured, not chosen |
+| `p252`'s four population literals read `70` | 🟢 Moved to **71**, with a p332 note in `test_ungated_floors.py` in the form p294 established |
+| `make gate-offline` | 🟢 **GREEN — 49 checks PASS, exit 0** |
+
+🔵 **Why bumping that literal is the correct fix and not the error `p252`'s own README warns against.** The README warns: *"a floor nobody can regenerate is a floor that gets edited to match a broken suite."* 🟢 **Nothing broke.** The **population** grew, through exactly the door p294 documented in reverse — a suite arriving ungated — and the literal is a census **of** the population, so it must track it. The floor itself came from `--pin`. 🔴 **What this does NOT mean: p331's suite is now covered.** It is **pinned**, which only means a future edit dropping its asserts below 11 will fail the gate. **It is still ungated. The `ACTION XR` backlog is 71 — one worse than p294 left it.**
+
+### 🟢 The instrument this pass was actually asked for
+
+🟢 **[`compose/code/p332-delivery-audit/`](../compose/code/p332-delivery-audit/) — `delivery_audit.py` + `test_delivery_audit.py`, 40 offline controls, in `make gate-offline` and runnable as `make delivery-audit`.** It answers the one question `p235-carried-index` deliberately refuses: *this KB measured a row first-hand — did it ever reach a shelf?*
+
+🟢 **It imports p235's `harvest()` rather than rebuilding it**, so the two directions can never disagree about what *carried* means. Headline: **3,761 slugs measured into `evidence/`, 2,968 delivered — 78.9%**, 33 explicitly deferred, **16 deferred and permissive.** 🔴 **That last number refutes p331's "delivery rate 0%" as a general claim**; the full accounting, and the twelve first-hand probes behind it, are in `agents/top.md` p332.
+
+🔵 **Two controls in the suite are worth naming because each encodes an error this pass nearly published:** `DecoyLex/ltix` — `p208`'s seeded decoy — was the **highest-sighting row in the first run at 25 sightings**, and a measured-not-delivered metric that does not subtract its own controls reports planted negatives as failures. And the `mixed` grant branch was **unreachable** until a control failed on it, which would have filed every MIT-code-plus-share-alike-corpus row as plain copyleft — the `os-taxonomy` shape, live on the agent shelf.
+
+### 🔴 Supply this window: nothing. Eight searches, zero net-new artefacts
+
+**Run as prescribed — four global legs and one per region — and the honest yield is nil. It is recorded so the next pass does not re-spend it:**
+
+| leg | yield |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 Nil. General-purpose agent listicles (OpenClaw, OpenHands, CrewAI, LangGraph); **no education-specific permissive agent** |
+| `github trending education AI 2026` | 🔴 Nil. Third-party trackers and learning-roadmap repos, no live trending list |
+| `open source platform education LMS SIS MIT Apache 2026` | 🔴 Nil, and it **re-confirms the nine-pass finding**: one vendor glossary, Moodle GPLv3, Open edX AGPLv3, **no MIT/Apache LMS or SIS** |
+| `AI education industry trends 2026` | 🟡 Market forecasts only, spread **$6.4B–$11.4B for 2025/26** across three houses — vendor research, carried to `intel/market.md` with that spread stated |
+| per-region × 4 (NA, EMEA, APAC, LATAM) | 🔴 **Zero net-new artefacts.** Every substantive source returned was **already held**: IESALC/UNU in **8 shelf files and 79 evidence files**, ILIA in **10 and 102** |
+
+🔵 **Stated plainly, because an informed gap is information and silence is not: the English-language search channel is saturated for this industry.** This KB has now run that channel for 332 passes, and p332 is a further data point in the pattern p328 and p329 recorded — **the channel returns what this base already holds.** 🟢 **The yield this pass came entirely from reading this repository and probing the registries and git channels directly**, which is `P1004`'s rule (*when the instrument is refused, prefer the question whose corpus is the repository*) applied to a channel that is not refused, merely exhausted.
+
+---
+
 ## 2026-10-20 — Pass 331 — the live MIT LTI library was measured fourteen passes ago, filed in `evidence/`, and never told to a client
 
 🔵 **This pass's signal is not a repository. It is that p330's headline claim was false, and the file that falsifies it is in this repo.** p330 wrote that `Liberate-Labs/ltikit-sdk` is *"the first permissive LTI 1.3 Advantage implementation this KB has found outside Python"* — and left the dead `pylti1.3` standing as the recommendation beside it.

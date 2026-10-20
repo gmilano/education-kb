@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 332 · 2026-10-20 (fifth pass of this date) — the audit p327 prescribed and p331 called unrun now exists, and the first thing it did was refute p331's own generalisation
+
+🔵 **p331's closing finding was right about its case and wrong about its scope.** It measured `lti-tool/lti-tool` — recorded in `evidence/` at p232, absent from every shelf through p330 — and generalised: *"This KB's discovery rate on `lti-tool` was 100% at p232 and its delivery rate was 0% through p330 — the exact failure p327 named and prescribed an audit for, still unrun. The prescription was right; nothing executes it. It belongs in the hook tier, not in prose."*
+
+🟢 **The first half is now discharged. [`compose/code/p332-delivery-audit/`](../compose/code/p332-delivery-audit/) is that instrument, 40 offline controls, wired into `make gate-offline`** — so it is in the hook tier, where p331 said it belonged, and not in prose. 🔴 **The second half does not survive it.** Measured across the whole corpus rather than one case:
+
+| measure, p332 | value |
+|---|---|
+| slugs carried on the ten shelves | **2,420** |
+| slugs measured into `evidence/` | **3,761** |
+| of those, delivered to a shelf | 🟢 **2,968 — 78.9%** |
+| never on a shelf | 793 |
+| …of which a pass explicitly **deferred** (`unplaced`, `unread`) | **33** |
+| …of which deferred **and** permissively granted | 🔴 **16** |
+
+🔴 **So the defect class is 16 rows, not a systemic 0%.** A delivery rate of 78.9% is not the failure p331 described, and the difference matters because the two diagnoses prescribe opposite actions: a 0% rate says build a promotion pipeline, a 78.9% rate with 16 deferred rows says *read the 16.*
+
+### 🔴 Two measurement errors found inside the audit itself, both of which would have inflated the gap
+
+🔵 **These are recorded because the KB nearly published both, and the second is the more interesting.**
+
+1. 🔴 **p235's index reads URLs, not names — and the gap it reports is ~1.6× too large.** `carried_index.py` harvests `github.com/<slug>` and nothing else. Three rows in the first defect list (`qtiworks`, `bnlp`, `uniroster-server`) are **discussed on these shelves by name with no URL beside them**, so a URL-only index calls all three undelivered. 🟢 **Adding the name channel moved the measured delivery rate from 62.6% to 78.9% and cut the deferred-permissive class from 38 rows to 16.** The audit now tries both channels before reporting a miss.
+2. 🔴 **`evidence/` contains seeded decoys, so "measured but not delivered" is not a defect predicate until the controls are subtracted.** The single highest-sighting row in the first run, at **25 sightings**, was `DecoyLex/ltix` — which is `p208-seeded-error-audit/seed.sh`'s one invented slug, planted so the audit can be asked whether it finds a wrong cell. 🟢 **It must never reach a shelf; counting it as a delivery failure is the audit reporting a planted control as a defect.** It is excluded by name, with the reason in the source.
+
+### 🟢 Twelve of them probed first-hand — and the honest verdict is that the shelves were mostly right
+
+🔵 **Scope stated precisely, because the conclusion rests on it: these twelve are the MOST-SIGHTED rows of the defect class as the audit FIRST reported it — 38 rows, before the name channel cut the class to 16.** Three of the twelve (`qtiworks`, `bnlp`, `uniroster-server`) are the rows that fall out when the name channel is added, and they are kept in the table because their verdicts are what proved the channel was missing. 🔴 **Twelve of thirty-eight is a thin sample and it is ranked by sightings, which selects for rows that were already interesting** — the correction is a standing action in `intel/open-gaps.md`.
+
+**Every figure below is first-hand p332: licence from `raw.githubusercontent.com/<slug>/HEAD/<path>`, activity from `git clone --bare --filter=blob:none` and the full commit graph. `github.com` HTML, `api.github.com` and `codeload` all return 403 in this environment — the channel table is in [`evidence/p332-defect-probe.2026-10-20-p332.tsv`](../evidence/p332-defect-probe.2026-10-20-p332.tsv).**
+
+| row | grant, first-hand | activity, first-hand | verdict |
+|---|---|---|---|
+| `h5p/h5p-interactive-video` | 🟢 **MIT** — *no licence file*; `package.json` + full MIT text in README | 🟢 **2,447 c · 115 a · head 2026-10-02 · 37 c in 2026** | 🟢 **THE ONE GENUINE MISS — promoted this pass** |
+| `davemckain/qtiworks` | BSD, 2,057 B, *© 2014 University of Edinburgh* | 2,073 c · 3 a · head 2023-01-04 | 🔴 **DEAD BY DECLARATION** — README line 1: *"no longer supported and is going to be closed in early 2023"* |
+| `sagorbrur/bnlp` | 🟢 MIT, 1,068 B | 541 c · 10 a · head 2026-04-01 · 19 c in 2026 | 🟡 Alive, **already named on 3 shelves**. Bengali NLP substrate, not an education agent |
+| `zanichellieditore/learningrecordstore-xapi` | 🟢 MIT, 1,081 B, *© 2019 **Zanichelli Editore s.p.a.*** | 🔴 30 c · 6 a · head **2020-03-18** | 🔴 **DEAD — six years.** The only institutionally-held row in the class, and dead |
+| `ramsrigouthamg/questgen.ai` | 🟢 MIT, 1,076 B | 122 c · 7 a · head 2023-11-15 | 🔴 Dormant three years |
+| `xcesaralejandro/lti1p3` | 🟢 MIT, 1,081 B, *© 2021 César Alejandro Mora Cid* | 97 c · 3 a · head 2025-01-03 | 🟡 Quiet 21 months. Watch |
+| `paurushrai/lti-1p3-nextjs-starter` | 🟢 MIT, 1,067 B, *© 2026* | 17 c · **1 a** · head 2026-06-17 | 🟡 A starter, not a library |
+| `esegrave/edfi` | 🟢 Apache-2.0, 11,356 B | 52 c · 2 a · head 2022-03-04 | 🔴 Dormant four years |
+| `roncuevas/ipn_saes_utils` | 🟢 MIT, 1,079 B, *© 2026* | 🔴 **2 c** · 1 a | 🔴 Below bar. IPN/SAES Mexico — the seam is real, this code is not |
+| `ridencww/uniroster-server` | 🟢 MIT, 1,066 B | 🔴 **3 c** · 1 a · head **2016-10-17** | 🔴 Below bar, ten years. Already named on 1 shelf |
+| `123xiaojun/student-management-system` | 🟡 4,568 B — **not an SPDX stock text**, unrecognised | 🔴 5 c · 2 a | 🔴 Below bar. Read the payload before any use |
+| `gaurav-pande/aes_dl` | 🔴 **NO GRANT** — no file, no `license` key on either manifest | — | 🔴 Default copyright reserves all rights |
+
+🔵 **So: of twelve rows probed, one is a genuine miss, three were already carried by name, and eight are dead, dormant or below bar.** 🟢 **The shelves were right to leave them off.** 🔴 **What was wrong is that the refusal was never written down** — eight rows sat in `evidence/` with no disposition, so every pass re-discovers and re-probes them. **That is the real defect, and it is a bookkeeping defect, not a delivery one.** The remedy is a disposition ledger, not a promotion spree, and it is now the standing action in `intel/open-gaps.md`.
+
+### 🟢 The shelf as it stands after this pass
+
+**No new AGENT qualified this pass, and that is stated rather than padded.** The promotion this pass earned is a content-type library, not an agent; it lands in `repos/foundations.md` and `verticals/solutions.md`, where it belongs. The agent shelf is carried forward from p331 unchanged, every figure still first-hand with its measuring pass named:
+
+| Agent / tool | Repo | Grant | Activity, first-hand | Layer |
+|---|---|---|---|---|
+| **lti-tool** | https://github.com/lti-tool/lti-tool | 🟢 **MIT** (1,077 B, p331) | 346 c · 6 a · 2026-10-19 · release 2026-10-20 (p331) | 🟢 LMS integration — the way in |
+| **ltijs** | https://github.com/Cvmcosta/ltijs | 🟢 **Apache-2.0** (11,361 B, p331) | 575 c · 17 a · 2026-10-13 (p331) | 🟡 LMS integration, mature, narrow bench |
+| **DeepTutor** | https://github.com/HKUDS/DeepTutor | 🟢 **Apache-2.0** | head 2026-10-19 (p330) | 🟢 Agent-native tutor |
+| **tutor-mcp** | https://github.com/ArnaudGuiovanna/tutor-mcp | 🟢 **MIT** (1,073 B, p331) | 467 c · 5 a · 2026-10-16 (p330) | 🟢 ITS state + review scheduling over MCP |
+| **OATutor** | https://github.com/CAHLR/OATutor | 🟢 **MIT** | 1,045 c · 27 a · 2026-10-16 (p330) | 🟢 Pedagogy — BKT, UC Berkeley |
+| **Agent Skills** | https://github.com/learning-commons-org/agent-skills | 🟢 **Apache-2.0** (10,173 B, p327) | 42 c (p327) | 🟢 K-12 teacher skills over MCP |
+| **Evaluators** | https://github.com/learning-commons-org/evaluators | 🟡 **MIT code**; corpora **CC BY-NC-SA 4.0** (p327) | 289 c (p327) | 🟢 Pedagogy-aware evaluation |
+| **os-taxonomy** | https://github.com/withmarbleapp/os-taxonomy | 🟡 **ODbL-1.0 + CC BY-SA 4.0** (25,289 B, p331) | 23 c · 3 a · 2026-10-19 (p331) | 🟢 Curriculum spine (data, not code) |
+
+🔵 **One control worth naming, because this pass's own test suite caught it.** The audit classifies a row carrying MIT code beside a share-alike corpus as `mixed`. Ordering the single verdicts before the compound one made `mixed` **unreachable** — and the `os-taxonomy` row in the table above is exactly that shape, so it would have been filed as plain copyleft. 🟢 **The control failed, the ordering was fixed, and 40/40 now pass.** A classifier whose compound branch is dead code is a classifier that reads every mixed grant as its stricter half.
+
+---
+
 ## Pass 331 · 2026-10-20 (fourth pass of this date) — the integration row this file has needed since p319 was already in `evidence/`, and p330's claim about it was false
 
 🔴 **p330 closed the LTI question with two sentences that cannot both be true of this repository.** It declared `pylti1.3` dead — correct, and now confirmed on a second channel — and then named `Liberate-Labs/ltikit-sdk` *"the first permissive LTI 1.3 Advantage implementation this KB has found outside Python."*

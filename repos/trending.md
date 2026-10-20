@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 332 — `ACTION XN` named its own falsifier at p250 and nobody fired the probe; p332 did, and the falsifier fires
+
+🔵 **This pass closes a question that has been answerable with 27 HTTP requests since p250 and was instead carried as prose for eighty passes.**
+
+**p250 asked for a rule that refuses a harvested slug which is a strict prefix of another, and — to its credit — named the case that would break it:** *"falsified if the rule does not trip `TouchRefletz/maia` vs `maia.edu`."* 🔴 **`ACTION XN` was then marked DISCHARGED, and `README.md` records that its own prescription was *"refuted by the shelf text."* What was never done is the measurement: is the bare spelling a truncation, or a different repository?**
+
+🟢 **p332 probed all 27 prefix pairs in this corpus first-hand.** Channel: `raw.githubusercontent.com/<slug>/<ref>/<path>`, `ref` in `{main, master}`, `path` in `{LICENSE, README.md, .gitignore, package.json, LICENSE.md}` — ten requests per slug, 200 on any one means it resolves. Full table: [`evidence/p332-prefix-pair-probe.2026-10-20-p332.tsv`](../evidence/p332-prefix-pair-probe.2026-10-20-p332.tsv).
+
+| verdict | pairs | meaning |
+|---|---|---|
+| 🔴 **TRUNCATION** — bare 404, longer 200 | **22** | the extension was dropped and the bare spelling does not exist |
+| 🟡 **DISTINCT** — both resolve | **2** | `touchrefletz/maia` + `maia.edu`, and `autolab/autolab` + `autolab.github.io` |
+| 🟡 **NEITHER** resolves | 3 | `jdolny/oneroster.js`, `paurushrai/lti-1.3`, `voodoo2man/iobroker.vis` — not a truncation question at all; both spellings are unreachable |
+
+🟢 **THE FALSIFIER FIRES, EXACTLY AS p250 PREDICTED IT WOULD.** `TouchRefletz/maia` is a real repository beside `TouchRefletz/maia.edu`, and so is `autolab/autolab` beside `autolab/autolab.github.io`. 🔴 **So the prefix rule is not a refusal rule. It is a QUESTION, and only an existence probe answers it** — a rule that refuses every prefix would have struck two live repositories off these shelves. 🟢 **Both exceptions are now recorded in `delivery_audit.py:PREFIX_BUT_DISTINCT` with the measurement beside them, and two controls in the suite assert the rule does not fire on either — so no later pass re-spends the probe or re-derives the wrong rule.**
+
+🔵 **The general form, and it is the one worth carrying: p250 did the hard half.** It identified the defect, found the three code sites that caused it (`p228-shelf-gate/harvest_cells.py:17`, `p129-transcription-audit/bind_tags.py:9`, and the `lazy_lint.py` that detected both and returned `0` anyway), fixed all three, and **wrote down the experiment that would settle the remaining question.** 🔴 **What did not happen for eighty passes is the twenty-seven requests.** **A named falsifier with no probe behind it is a hypothesis, and this base carried it as a finding.**
+
+### 🟢 A second spelling class, separated this pass — and it is NOT a truncation
+
+🔴 **Seven of the original 35 prefix pairs were `.git` clone-URL spellings:** `Cvmcosta/ltijs.git`, `dmontgomery40/mcp-canvas-lms.git`, `examplary/qti.git`, `felipedias-ie/blackboard-mcp.git`, `bruchris/canvas-lms-mcp.git`, `trilogy-group/oneroster-ts.git`, `ucfopen/pylti1.3.git`. 🟢 **Here the LONGER spelling is the artefact and the bare one is correct** — the opposite direction from the truncation class, and a rule that treated prefix-plus-dot as truncation would have "repaired" seven correct slugs into clone URLs. 🟢 **Normalised away at harvest, with a control.**
+
+### 🔴 What this leaves open, measured
+
+🟡 **`dmitry-viskov/pylti1` is still carried in `evidence/` 21 times beside `dmitry-viskov/pylti1.3` 39 times, and `uoc/java-lti-1` 19 times beside `uoc/java-lti-1.3`.** p250 fixed the three sites that *produce* truncations; it did not rewrite the ones already written down. **These are historical measurement rows, not live recommendations — `pylti1.3` was withdrawn at p330 as dead since 2022 — so the cost is a false "undelivered" reading in the delivery audit, not a dead link to a client.** 🟢 **Of the 22 confirmed truncations, the number that appear on a shelf as a live link is ZERO:** the one shelf hit, `jushbjj/mr`, is inside `intel/open-gaps.md`'s own **quotation** of the historical stump it was recording — the live rows all read `JushBJJ/Mr.-Ranedeer-AI-Tutor` correctly, 14 of them. **The class is real, it is measured, and it is confined to the evidence tier.**
+
+### 🟢 Trending supply this window: nil, and the regional legs are recorded as gaps rather than omitted
+
+**`github trending education AI 2026` returned no live trending list — third-party trackers (GitTrend, Trendshift) and learning-roadmap repositories only.** The four regional legs returned **zero net-new artefacts**; every substantive source was already held on these shelves. The leg-by-leg yield table is in `agents/trending.md` p332 and is not duplicated here. 🔵 **Ninth consecutive window with no new permissive LMS or SIS, and the supply finding is now stable enough to quote to a client as a fact about the sector rather than a limit of the sweep.**
+
+---
+
 ## 2026-10-20 — Pass 331 — the liveness verdict p329 installed has a false-negative class, and it has already mis-graded a row this KB recommends
 
 🔵 **p329 opened the `git` channel and p330 built the `(commits, authors, last_commit)` triple on it. The triple is the right instrument for a *repository*. It is the wrong one for a *library*, and this pass measures the difference on the same repositories on the same day.**

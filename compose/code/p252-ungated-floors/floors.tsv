@@ -48,6 +48,7 @@ p226-inbound-gate/test_inbound_gate.py	UNITTEST-MAIN	18
 p239-table-integrity/test_check_tables.py	UNITTEST-MAIN	23
 p275-tree-enumeration/test_layout.py	UNITTEST-MAIN	12
 p276-provider-allowlist/test_allowlist.py	UNITTEST-MAIN	12
+p331-two-channel-liveness/test_two_channel.py	UNITTEST-MAIN	11
 p332-figure-layer/test_p332.py	UNITTEST-MAIN	27
 p336-figure-contradiction-delta/test_p336.py	UNITTEST-MAIN	26
 p342-license-claim-vs-file/test_p342.py	UNITTEST-MAIN	32

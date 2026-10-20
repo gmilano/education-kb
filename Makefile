@@ -34,7 +34,7 @@ PERMISSIVE_LOG ?= /tmp/education-kb-gate-permissive-arm.log
 TEMPLATE_LOG ?= /tmp/education-kb-gate-template-identity.log
 UNTITLED_LOG ?= /tmp/education-kb-gate-untitled-payload.log
 
-.PHONY: gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung affero-rung-census
+.PHONY: gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -410,6 +410,9 @@ sweep: ## ACTION p274 — classify every market cell PASS / ROUNDING / WINDOW_FI
 # p251/p252 both recorded `make` as not runnable from their session, so neither ran it.
 # 🟢 Every step therefore carries an explicit `|| exit 1`, and the banner is unreachable
 # unless all of them pass.  `compose/code/p253-gate-propagation/` pins this.
+delivery-audit: ## p332 — which rows did evidence/ measure that no shelf ever offered?
+	@$(PY) -I compose/code/p332-delivery-audit/delivery_audit.py || true
+
 gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without egress
 	@set -e; \
 	echo "── lib/license_family.sh  (the shared classifier, P237)"; \
@@ -436,6 +439,8 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	cd - >/dev/null; \
 	echo "── p235-carried-index    (ACTION UG/UH: the index, fold, claims — 23 controls)"; \
 	$(PY) -I compose/code/p235-carried-index/test_carried_index.py >/dev/null && echo "   PASS" || exit 1; \
+	echo "── p332-delivery-audit   (evidence -> shelf delivery, 40 controls)"; \
+	$(PY) -I compose/code/p332-delivery-audit/test_delivery_audit.py >/dev/null && echo "   PASS" || exit 1; \
 	echo "── p238-lure-signature   (the provenance gate: 66 controls, ACTION VE + p240 loopback)"; \
 	cd compose/code/p238-lure-signature && $(PY) test_lure_signature.py >/dev/null && echo "   PASS" || exit 1; \
 	cd - >/dev/null; \

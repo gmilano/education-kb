@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+"""p332 controls — offline, no network, safe in a hook.
+
+Every case below was a real false positive or a real false negative measured against this
+repository's own corpus during p332, not an invented example. The comment on each names it.
+"""
+import importlib.util
+import os
+import sys
+import tempfile
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+spec = importlib.util.spec_from_file_location("da", os.path.join(HERE, "delivery_audit.py"))
+da = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(da)
+
+N = 0
+FAIL = []
+
+
+def ok(cond, label):
+    global N
+    N += 1
+    if not cond:
+        FAIL.append(label)
+
+
+# ---- slug_fields: the harvester's precision ------------------------------------------------
+ok(da.slug_fields("lti-tool/lti-tool\tMIT") == ["lti-tool/lti-tool"],
+   "a real slug in field 1 is harvested")
+ok(da.slug_fields("JuliaPluto/Pluto.jl\tMIT") == ["JuliaPluto/Pluto.jl"],
+   "a dot-extension repo name survives intact — the p250 truncation class")
+# measured: `repos/trending.md` was harvested 175 times as a slug before DENY_FIRST grew
+ok(da.slug_fields("repos/trending.md\tx") == [], "a shelf path is not a slug")
+ok(da.slug_fields("agents/top.md\tx") == [], "agents/top.md is not a slug")
+ok(da.slug_fields("compose/patterns.md\tx") == [], "compose/patterns.md is not a slug")
+# measured: `n/a` was the single highest-sighting 'slug' in the corpus at 205 sightings
+ok(da.slug_fields("n/a\tMIT") == [], "the empty-cell spelling n/a is not a slug")
+ok(da.slug_fields("s/n\tMIT") == [], "the empty-cell spelling s/n is not a slug")
+ok(da.slug_fields("main/LICENSE\tx") == [], "a ref/path pair is not a slug")
+ok(da.slug_fields("schemas/lti13/ags\tx") == [], "a three-segment path is not a slug")
+ok(da.slug_fields("raw.githubusercontent.com/a\tx") == [], "a hostname is not an owner")
+ok(da.slug_fields("npm/core\tx") == [], "a registry name is not an owner")
+ok(da.slug_fields("a/b\tx") == [], "one-character segments are below the slug floor")
+# .git is a clone-URL spelling of the SAME repository, not a different row
+ok(da.slug_fields("Cvmcosta/ltijs.git\tx") == ["Cvmcosta/ltijs"],
+   "a .git clone spelling normalises onto the repository")
+ok(da.slug_fields("owner/repo\tMIT\tother/thing") == ["owner/repo", "other/thing"],
+   "every slug-shaped field is harvested, not just the first")
+
+# ---- fold ---------------------------------------------------------------------------------
+ok(da.fold("OpenOLAT/OpenOLAT") == "openolat/openolat", "fold lowercases")
+ok(da.fold("owner/repo)") == "owner/repo", "fold strips trailing prose punctuation")
+
+# ---- grant classification -----------------------------------------------------------------
+ok(da.classify_grant("x\tMIT\tfoo") == "permissive", "MIT is permissive")
+ok(da.classify_grant("x\tApache-2.0") == "permissive", "Apache is permissive")
+ok(da.classify_grant("x\tAGPL-3.0") == "copyleft", "AGPL is copyleft")
+ok(da.classify_grant("x\tODbL-1.0") == "copyleft", "ODbL is copyleft")
+ok(da.classify_grant("x\tMIT code; corpora CC BY-SA 4.0") == "mixed",
+   "MIT code beside a share-alike corpus is mixed — the os-taxonomy shape")
+ok(da.classify_grant("x\tno licence file") == "ungranted", "a stated absence is ungranted")
+ok(da.classify_grant("x\tsomething else") == "unknown", "silence is not a grant")
+
+# ---- disposition --------------------------------------------------------------------------
+ok(da.classify_disposition("x\tunplaced\ty") == "pending",
+   "`unplaced` is the deferral marker — the lti-tool cell p331 found")
+ok(da.classify_disposition("x\tDEAD — seven years") == "refused", "dead is a recorded refusal")
+ok(da.classify_disposition("x\tbelow bar") == "refused", "below bar is a recorded refusal")
+ok(da.classify_disposition("x\tMIT\t1066") == "silent", "no marker is silence, not refusal")
+ok(da.classify_disposition("x\tunplaced\tdead") == "pending",
+   "pending outranks refused: a cell carrying both is still deferred")
+
+# ---- truncation predicate -----------------------------------------------------------------
+tr = da.truncations({"dmitry-viskov/pylti1", "dmitry-viskov/pylti1.3"})
+ok(tr == {"dmitry-viskov/pylti1": ["dmitry-viskov/pylti1.3"]},
+   "a bare prefix of a dot-extension slug is flagged")
+# p250's ACTION XN named its own falsifier and p332 measured it: BOTH of these resolve
+ok(da.truncations({"touchrefletz/maia", "touchrefletz/maia.edu"}) == {},
+   "ACTION XN's falsifier: TouchRefletz/maia is real, so the prefix rule must not fire")
+ok(da.truncations({"autolab/autolab", "autolab/autolab.github.io"}) == {},
+   "autolab/autolab is real beside its .github.io — measured p332")
+ok(da.truncations({"a/b", "c/d"}) == {}, "unrelated slugs are not flagged")
+
+# ---- harvest_evidence ---------------------------------------------------------------------
+with tempfile.TemporaryDirectory() as td:
+    ev = os.path.join(td, "evidence")
+    os.makedirs(ev)
+    with open(os.path.join(ev, "x.2026-01-01-p1.tsv"), "w") as fh:
+        fh.write("# owner/comment-slug is prose about the pass, not a measurement\n")
+        fh.write("\n")
+        fh.write("real/row\tMIT\tunplaced\n")
+    got = da.harvest_evidence(td)
+    ok("real/row" in got, "a measurement row is harvested")
+    ok("owner/comment-slug" not in got, "a # header line is prose, not a measurement")
+    ok(got["real/row"][0][2] == "permissive", "the grant travels with the sighting")
+    ok(got["real/row"][0][3] == "pending", "the disposition travels with the sighting")
+    ok(da.harvest_evidence(os.path.join(td, "nope")) == {},
+       "a missing evidence dir is empty, not fatal — this must run from a partial checkout")
+
+# ---- the control exclusion ----------------------------------------------------------------
+ok("decoylex/ltix" in da.CONTROLS,
+   "p208's seeded decoy is excluded: it was the top 'defect' at 25 sightings")
+
+# ---- rank ---------------------------------------------------------------------------------
+rows = [
+    {"slug": "r/refused", "grant": "permissive", "disposition": "refused", "sightings": 9},
+    {"slug": "p/pending", "grant": "permissive", "disposition": "pending", "sightings": 1},
+    {"slug": "s/silent", "grant": "permissive", "disposition": "silent", "sightings": 9},
+]
+ok([r["slug"] for r in da.rank(rows)] == ["p/pending", "s/silent", "r/refused"],
+   "a recorded refusal ranks last: it is the audit working, not a defect")
+ok(da.rank([
+    {"slug": "a/copyleft", "grant": "copyleft", "disposition": "pending", "sightings": 1},
+    {"slug": "b/perm", "grant": "permissive", "disposition": "pending", "sightings": 1},
+])[0]["slug"] == "b/perm", "within a disposition, a permissive grant ranks first")
+
+print(f"p332-delivery-audit: {N - len(FAIL)}/{N} controls pass")
+for f in FAIL:
+    print(f"  FAIL: {f}")
+sys.exit(1 if FAIL else 0)

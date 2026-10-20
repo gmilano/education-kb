@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-20
 ---
 
+**Pass 332 · 2026-10-20 (fifth pass of this date).** 🔴 **The regional sweep was run as prescribed — four global legs and one per region — and it returned ZERO net-new artefacts. That is this pass's market finding, and it is recorded as a measured gap rather than left as silence.**
+
+🔵 **The honest yield, leg by leg, so the next pass does not re-spend it:**
+
+| leg | yield | status |
+|---|---|---|
+| `AI education industry trends 2026` | Market forecasts only, from three houses that **do not agree** | 🟡 carried below, with the spread stated |
+| `AI education North America 2026 adoption regulation players` | Market-report summaries + one newsletter digest | 🟡 **state-level items unverified at source — flagged, not promoted** |
+| `AI education EMEA 2026 adoption regulation players` | One primary EU document (EESC policy note, March 2026) | 🟢 **the single new citation this pass** |
+| `AI education APAC 2026 adoption regulation players` | Enterprise-AI coverage, **nothing on K-12 or HE policy** | 🔴 **explicit gap — see below** |
+| `AI education LATAM 2026 adoption regulation players` | IESALC/UNU working paper, ILIA 2025 | 🔴 **both already held: IESALC in 8 shelf files / 79 evidence files; ILIA in 10 / 102** |
+
+🔴 **The market-size spread is the finding, not any one number.** Three houses, three answers for the same year: **IMARC ~$6.4B (2025) → $79.6B (2034)**; **Grand View–linked $8.3B (2025), $11.4B (2026) → $57.2B (2033)**; **The Business Research Company $7.52B (2025) → $10.6B (2026)**. 🟡 **A 78% spread between the lowest and highest 2026 figure means the methodologies disagree about what counts as "AI in education," and all three are vendor research.** 🟢 **Use the direction, never the number: quote a range with the houses named, or quote nothing.** A single figure in a client deck invites exactly the question it cannot survive.
+
+🟡 **One adoption datum worth carrying with its caveat attached:** student AI use reported as **66% (2024) → 92% (2025)**. The population is not specified in any source that repeats it. 🔴 **Do not put it in a deck without the primary citation**; it is the most-repeated and least-sourced number in this sector.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The seam: a fragmented state-level rulebook is a compliance-engineering market.** There is no federal framework; governance is state-by-state, and reported items this pass include **Maryland and Oklahoma** restricting AI from high-stakes decisions without human oversight, **Colorado and Texas** piecemeal requirements, and **Boston** making AI fluency a graduation requirement from **September 2026**. 🔴 **Flagged, not promoted: these came from a single newsletter digest and were NOT verified at the primary source this pass.** Verify before any one of them appears in a proposal.
+
+🟢 **What is solid and what to build:** the human-approval hop is the recurring requirement across every version of these rules, and this KB already has the pattern for it — **`P26` in `compose/patterns.md`**, whose compliance argument holds in four jurisdictions. 🟢 **Ed-Fi is the North American data standard and its open surface is dormant:** `esegrave/edfi` (Apache-2.0, head 2022-03-04) and `xmarcosx/edfi-via-kubernetes` are both stale, measured p332. **A current, permissive Ed-Fi integration is an unoccupied position** — the standard is live, the open tooling is not.
+
+### EMEA
+
+🟢 **The one new primary citation this pass: the EESC AI policy note, March 2026**, carrying Eurostat 2025 enterprise AI adoption — **~5% (Romania) to ~42% (Denmark)** — and, for enterprises that considered AI and did not adopt, the barriers in their own ranking: **lack of expertise 70.89%, uncertainty about legal consequences 52.52%, data-protection concerns 48.83%**.
+
+🔵 **Read those three numbers together and the EMEA engagement shape follows from them.** 🟢 **The top barrier is skills, not law** — 70.89% against 52.52% — which means the sellable unit is capability transfer, not a platform licence. 🟢 **And the 37-point adoption spread inside one regulatory bloc kills the single-EMEA-motion assumption:** Denmark and Romania are the same rulebook and different engagements.
+
+🟢 **The build:** the EU AI Act's Annex III pt 3 puts education in the high-risk tier, and `P26` is already written against it (Art. 14 human oversight, 2027-12-02). 🟡 **Procurement datum from p332:** `zanichellieditore/learningrecordstore-xapi` — **MIT, © 2019 Zanichelli Editore s.p.a., dead since 2020-03-18**. A major Italian education publisher open-sourced its LRS and stopped. **The code is stale; the precedent is a conversation.**
+
+### APAC
+
+🔴 **DECLARED GAP, and it is the honest result rather than an omission: the APAC leg returned NOTHING on K-12 or higher-education AI policy.** What came back was enterprise-AI coverage — Singapore's financial-institution consultations, Australia tightening AI governance and copyright, Forrester expecting data sovereignty to drive infrastructure choice for ~half of APAC firms, and **49% of APAC businesses citing insufficient real-time data infrastructure** (Omdia, 5 markets, 1,100+ decision-makers). 🔴 **None of that is education policy.** Education surfaced only as vendor activity: **TCS + Pearson**'s multi-year AI learning alliance on employer skills gaps, **LearnUpon**'s Sydney HQ and AI course authoring, **Alteryx Academy**'s relaunch.
+
+🟢 **What this base already holds that the leg did not return, and which is the better ground:** **Korea's AI Basic Act (in force January 2026)**, **Vietnam's Decision 33/2026/QĐ-TTg (effective 2026-08-15)** — both already cited in `intel/trends.md` and `P26` — and **China's content-labeling rules (September 2025)**. 🔵 **So the gap is in the CHANNEL, not the jurisdiction.** The next APAC leg should query the instruments by name rather than the region by topic; the topic query returns enterprise press.
+
+🟢 **The build:** sovereignty-constrained deployment. If half the region's firms let data residency drive infrastructure, the education stack has to be self-hostable — which points at **Kolibri (MIT)** and local inference, not a hosted tutor. 🟡 **`sagorbrur/bnlp` (MIT, 541 c · 10 a · head 2026-04-01, measured p332)** is live low-resource-language groundwork for Bengali — relevant to any South Asian engagement where the content language is not English.
+
+### LATAM
+
+🟢 **The region remains the best-documented on these shelves, and this pass added nothing — because everything the leg returned was already held.** **IESALC/UNU** (200 institutions, 19 countries, fielded August–October 2025) is in **8 shelf files and 79 evidence files**; **ILIA 2025** in **10 and 102**. 🔵 **Recording that as a nil result is the point: the LATAM channel is saturated, which is a statement about this KB's coverage and not about the region.**
+
+🟢 **Standing position, unchanged and still the strongest in this file:** **Kolibri (MIT, offline-first)** is the base for low-connectivity deployment; **RosarioSIS (GPL-2.0)** has the Spanish/French SIS surface with its redistribution constraint stated; **Latam-GPT** (CENIA, 60+ institutions, 15 countries) is the regional model story. **Brazil's Marco Legal da IA**, **Chile**, **Uruguay** — the only LATAM entries in the global top 50 on the ILIA governance axis — and **Mexico with no AI law** are the four-way split any regional proposal has to address separately.
+
+🟡 **p332's LATAM datum is a negative, and it is useful:** `roncuevas/ipn_saes_utils` (MIT, © 2026) addresses the **IPN/SAES student-system seam in Mexico** and is **2 commits**. 🔵 **The seam is real and nobody has built it.** A permissive integration against Mexican public-university student systems is an open position, and the evidence it is wanted is that someone started one.
+
+### Global
+
+🔴 **Tenth consecutive pass with no permissive education LMS, SIS or ERP** (`verticals/solutions.md` p332). Moodle GPLv3, Open edX AGPLv3, Canvas AGPL-3.0, OpenEduCat LGPL-3.0. 🟢 **The permissive surface in this sector is the LAYERS — integration (`lti-tool`, MIT), content types (H5P content tier, MIT, p332), pedagogy (`OATutor`, MIT) — never the platform.** **Any proposal that assumes a permissive base platform is mispriced; one that puts permissive layers on a copyleft base deployed as-is is not.**
+
+---
+
 **Pass 331 · 2026-10-20 (fourth pass of this date).** 🟢 **One genuinely new regulatory instrument, one date correction to this file's own EU row, and a LATAM finding that answers the measurement complaint p330 closed with.** 🔴 **And one thing this pass did NOT find, said first because the silence would otherwise read as coverage: the North America news leg returned nothing this file does not already hold — for the fourth consecutive pass.**
 
 🔵 **The regional sweep was run globally and once per region, as prescribed. Here is the honest yield, leg by leg:**

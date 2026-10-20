@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 332 · 2026-10-20 (fifth pass of this date) — one promotion, and it was invisible for fifteen sightings because this file's grant ladder leads with the channel its subject does not use
+
+🟢 **`h5p/h5p-interactive-video` is promoted to this file.** It is the one genuine miss in the delivery audit's defect class (see `agents/top.md` p332), and the reason it sat unplaced since **p195, 2026-10-14, across 15 sightings**, is worth more than the row itself.
+
+| | measured first-hand p332 |
+|---|---|
+| repo | https://github.com/h5p/h5p-interactive-video |
+| grant | 🟢 **MIT** — and there is **no licence file**. `package.json` carries `"license": "MIT"`, and the README carries the **full MIT text** under `## License` |
+| activity | 🟢 **2,447 commits · 115 authors · head 2026-10-02 · 37 commits in 2026** |
+| version | `1.25.0` (`package.json`, read p332) |
+| what it is | The Interactive Video content type for H5P: in-video questions, branching, bookmarks, summaries. The most active and most broadly authored repository in the H5P org |
+| layer | 🟢 **Interactive content — the authoring surface an agent generates INTO** |
+
+🔴 **115 authors is the largest contributor bench on these shelves.** For comparison, the agent shelf's widest row is `OATutor` at 27, and `lti-tool` — p331's promotion — has 6.
+
+### 🔴 Why fifteen sightings were not enough: the ladder stops at channel 1
+
+**This KB's grant ladder tries the licence FILE first. For the H5P org that channel is nearly blind.** p332 censused ten H5P repositories across three channels, every cell first-hand — [`evidence/p332-h5p-grant-channels.2026-10-20-p332.tsv`](../evidence/p332-h5p-grant-channels.2026-10-20-p332.tsv):
+
+| channel | repos where it answered |
+|---|---|
+| 1 — licence **file** (`LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING`) | 🔴 **2 of 10** |
+| 2 — **manifest** (`package.json` / `composer.json` `"license"`) | 5 of 10 |
+| 3 — **README body** (licence text carried in prose) | 4 of 10 |
+
+🔴 **Eight of ten H5P repositories have no licence file, and seven of the eight grants found are invisible to channel 1.** A ladder that leads with the file channel and does not fall through reads this org as almost entirely ungranted. **It is not ungranted; it is differently published.** 🟢 **This is the same class as p322's `oeh-search-frontend` finding (no file, and no `license` key either) — but the opposite outcome, and that is the point: the absence of a file is not evidence of an absent grant. It is evidence that the file channel was the wrong question.**
+
+### 🟢 And the census found something the shelves have been understating
+
+🔴 **H5P is not one licence. The split follows the renderer/content boundary exactly:**
+
+| tier | repos | grant |
+|---|---|---|
+| PHP core / renderer | `h5p-php-library`, `h5p-editor-php-library` | 🔴 **GPL-3.0** |
+| content types | `h5p-interactive-video`, `h5p-course-presentation`, `h5p-drag-question`, `h5p-accordion` | 🟢 **MIT** |
+| content types, README channel only | `h5p-question-set`, `h5p-multi-choice`, `h5p-blanks` | 🟡 **MIT**, stated in the README and nowhere else |
+| unclear | `h5p-core` | 🔴 **no grant on any of the three channels** — its README is 14 bytes |
+
+🟢 **`h5p-accordion` carries a real MIT `LICENSE.txt`, 1,073 B, *Copyright (c) 2015 Joubel*** — so the MIT tier is not an artefact of manifest metadata; it is the holder's stated intent, published inconsistently.
+
+🟢 **What this changes for a studio, concretely:** `verticals/solutions.md` has said a studio may author *"H5P content JSON with an agent; the renderer stays untouched, so GPL stays contained."* **That is true and it understates the surface by a tier.** A studio may **fork and modify a content type under MIT** — a code surface, not a data one — while leaving the GPL-3.0 renderer alone. 🟡 **The caveat to carry to a client: the grant is per repository and the org is not uniform.** Read the content type you intend to fork. Three state MIT only in the README, and `h5p-core` states nothing anywhere.
+
+### 🟡 Measured this pass and honestly below the bar — recorded so no future pass re-spends the probe
+
+**These are the rest of the delivery audit's defect class. Full figures in [`evidence/p332-defect-probe.2026-10-20-p332.tsv`](../evidence/p332-defect-probe.2026-10-20-p332.tsv); the verdicts are in `agents/top.md` p332 and are not repeated here.** 🔴 **`davemckain/qtiworks` deserves the one line it gets:** BSD, *© 2014 University of Edinburgh*, **2,073 commits** — the most substantial QTI engine this KB has measured — and its README's first line reads *"This project is no longer supported and is going to be closed in early 2023."* **Substantial and unusable. Size is not liveness, and a maintainer's own README outranks a commit count.**
+
+🔵 **`sagorbrur/bnlp` (MIT, 541 c · 10 a · head 2026-04-01) is alive and was already named on three shelves.** It is a Bengali NLP substrate rather than an education tool; its place here, if any, is as low-resource-language groundwork for an **APAC** engagement, and it is not promoted to a row on that basis.
+
+---
+
 ## Pass 331 · 2026-10-20 (fourth pass of this date) — this file's liveness column is measured on the wrong channel for half its rows, and a replacement for its dead recommendation was in `evidence/` all along
 
 🔴 **p330 fixed this file's worst defect and introduced a subtler one.** It replaced the bare commit count with the triple `(commits, authors, last_commit)` — correct, and it is how `pylti1.3` was caught. 🔴 **But the triple reads the *citing* channel, and more than half the rows in this file are **libraries**, whose liveness event is a **release**, not a commit.**

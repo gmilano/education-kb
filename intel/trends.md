@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-20
 ---
 
+**Pass 332 · 2026-10-20 (fifth pass of this date). Two trends added. Trend 20 is a licensing fact about this sector that this KB has been measuring on the wrong channel for 332 passes; Trend 21 is a method law with a measured cost.**
+
+## 🟢 Trend 20 — NEW: in education open source, the licence is increasingly NOT in a licence file, and a file-first audit reads the sector as more closed than it is
+
+**Trend 18 (p330) held that this sector's permissive surface is thin. p332 measured one organisation across three licence channels and the thinness is partly an artefact of where this KB looks.**
+
+🔴 **The H5P org, 10 repositories, every cell first-hand p332** ([`evidence/p332-h5p-grant-channels.2026-10-20-p332.tsv`](../evidence/p332-h5p-grant-channels.2026-10-20-p332.tsv)):
+
+| channel | repositories where it answered |
+|---|---|
+| licence **file** (`LICENSE`, `LICENSE.txt`, `LICENSE.md`, `COPYING`) | 🔴 **2 of 10** |
+| **manifest** (`package.json` / `composer.json` `"license"`) | 5 of 10 |
+| **README body** (licence text in prose) | 4 of 10 |
+
+🔴 **Eight of ten repositories carry no licence file. Seven of the eight grants found are invisible to the file channel.** A ladder that leads with the file and does not fall through reads H5P as almost entirely ungranted — and the consequence is measured, not hypothetical: **`h5p/h5p-interactive-video` (MIT, 2,447 commits, 115 authors, head 2026-10-02) sat in `evidence/` marked unplaced across 15 sightings from p195 to p331.**
+
+🟢 **The underlying fact is better than the correction.** H5P's grant splits cleanly on the renderer/content boundary: **PHP core GPL-3.0, content types MIT**. **A studio may fork and modify a content type under MIT** — strictly more surface than this KB's shelves recorded, which had the containment story (generate content JSON, leave the renderer alone) and stopped at the data layer.
+
+🔵 **Why this is a trend and not one org's filing habit.** It converges with three findings already on these shelves, and the pattern is consistent across all four: **p322's `oeh-search-frontend`** — no licence file *and* no manifest key, genuinely ungranted; **`withmarbleapp/os-taxonomy`** — code and corpus under different grants in one repository; **p331's `lti-tool`** — the grant in a published npm package rather than a repository badge. 🟢 **The direction is the same each time: the grant is moving into the DISTRIBUTION artefact (manifest, package, README) and away from the repository file.** 🔴 **A scanner that reads `LICENSE` and stops is now measuring the wrong thing in this sector.**
+
+🟢 **The recommendation, and it is cheap:** before recording any repository as ungranted, try all three channels and record which one answered. For a client audit, state the channel beside the grant — *"MIT, per `package.json`; no licence file"* is a materially different risk statement from *"MIT, per `LICENSE`"*, and the second is the one a procurement reviewer will look for and fail to find.
+
+## 🔴 Trend 21 — NEW: a named falsifier with no probe behind it is a hypothesis, and this base has carried three of them as findings
+
+**This is a method law, and p332 earned it by discharging one of the three.**
+
+🔵 **p250 did the hard half of its own work and then stopped one step short, and the step it stopped short of was the cheap one.** It identified the slug-truncation defect, found the three code sites producing it, fixed all three, and **wrote down the experiment that would settle what remained**: *"falsified if the rule does not trip `TouchRefletz/maia` vs `maia.edu`."* 🔴 **That probe — 27 HTTP requests — went unrun for eighty passes while `ACTION XN` was marked DISCHARGED.**
+
+🟢 **p332 ran it. The falsifier fires:** of 27 prefix pairs, **22 are real truncations, 3 have neither spelling resolving, and 2 are DISTINCT LIVE REPOSITORIES** — `TouchRefletz/maia` beside `maia.edu`, and `autolab/autolab` beside `autolab.github.io`. 🔴 **So the prefix rule p250 proposed would have struck two live repositories off these shelves.** The rule is not a refusal rule; it is a question only an existence probe answers.
+
+🔵 **The same shape, three times on these shelves, and the sequence is getting more pointed each pass:** p324/p325 (a declared gap is a claim about the **query**), p330 (a channel this base had **already built an instrument for**, declared untested), p331 (a row **measured and never delivered**), and now 🔴 **p332: an experiment this base DESIGNED, NAMED and did not run, while recording the question as closed.**
+
+🟢 **The law, stated so it can be checked rather than admired: if a pass writes down a falsifier, the next pass runs it or says why it cannot.** A discharged action whose own test never executed is an undischarged action with better paperwork. 🔵 **And the cost asymmetry is the argument: p250's probe was 27 requests. The prose carrying its unresolved conclusion has been re-read by eighty passes.**
+
+🔴 **Two more of these are open right now, and they are named here so this trend has teeth:** `pyedmine`'s licence contradiction (MIT `LICENSE` under an unrelated holder vs a README restricting use to academic purposes) — **p324 prescribed opening an issue and recording the maintainer's answer; no pass has**; and `aegis-integrity`'s ESL false-positive behaviour, which **p324 recorded as measured by nobody, including its author.** 🟢 **Both are experiments this base has already designed. Neither needs a new idea — only the request.**
+
+---
+
 **Pass 331 · 2026-10-20 (fourth pass of this date). Two trends added. One is a method law with a measured false-negative behind it; the other is the first cross-regional convergence this KB can name, and it collapses four jurisdictions onto one architecture.** 🔴 **And the pass's own indictment, stated before its findings: the instrument that falsifies p330's liveness method has been in `compose/code/` since pass 24, and the artefact that falsifies p330's LTI claim has been in `evidence/` since pass 232.** **Neither needed a search. Both needed a `grep`.**
 
 ## 🔴 Trend 19 — NEW: liveness is a two-channel property, and single-channel grading has already mis-graded this sector's integration layer
