@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 340 — the trending channel is blind to this vertical for the eleventh pass, and a quarter of the connector layer it keeps recommending has no licence at all
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**Evidence:** [`p340-connector-licence-census`](../evidence/p340-connector-licence-census.2026-10-20-p340.tsv) · [`p340-connector-slug-identity`](../evidence/p340-connector-slug-identity.2026-10-20-p340.tsv).
+
+**The trending leg, run verbatim (`github trending education AI 2026`): 🔴 0 new education repositories — eleventh consecutive pass.** The cause is structural, not seasonal: **GitHub Trending has no education category.** What the leg returns is AI courseware (teaching *about* AI, which this shelf does not hold), trend aggregators (`aneelv75/github-trending`, two `awesome-ai-agents-2026` lists), a job board (`speedyapply/2026-AI-College-Jobs`), and a Japanese roundup noting **nine of ten** entries in GitHub's February 2026 monthly ranking were AI-related — true, and about AI in general.
+
+🔵 **The supply this pass added came from finishing this base's own backlog** — T25's named falsifier, written up in full on `agents/trending.md`: **93 distinct repositories probed first-hand, every grant read from a tree.** The repository-level findings that belong on this shelf:
+
+### 🔴 A quarter of the connector layer carries no grant — measured by tree, not by ladder
+
+**23 of 93 distinct repositories (25%) have no licence path anywhere in their tree.** Established with `git clone --depth 1 --filter=blob:none --no-checkout` + `git ls-tree -r HEAD --name-only` filtered for `licen[cs]e|copying|notice|unlicen[cs]e` — **the whole tree, so this is a measurement and not the false absence a path ladder produces** (`p275`, and p339's own retracted claim on `OS4ED/openSIS-Classic`).
+
+| platform | no licence path in tree | of repos probed |
+|---|---|---|
+| Canvas | 7 | 40 |
+| Moodle | 5 | 21 |
+| Google Classroom | 5 | 15 |
+| Blackboard | 4 | 7 |
+| Brightspace / D2L | 2 | 7 |
+| Open edX | 0 | 2 |
+
+🔵 **Why this is a repos-shelf finding and not a licence footnote.** These are the repositories a roundup links to, a client's engineer finds first, and a dependency scanner reports as "no license found" — which teams routinely read as *permissive by omission*. It is the opposite: **no grant means no permission at all.** 🔴 **Blackboard is the worst-served platform in this vertical: 4 of its 7 connectors are ungranted**, leaving two usable MIT lanes for a platform with a large institutional install base. 🟢 **All 23 are named in the census file so the next pass neither re-probes them nor quietly recommends one.**
+
+### 🔴 Six carried slugs do not exist
+
+`git ls-remote` returns **no refs** for `EastArctica/canvas-mcp`, `a-ariff/canvas-instant-mcp`, `xmike04/canvas-student-mcp`, `NiccoloSalvini/mcp-moodle-staff`, `NiccoloSalvini/mcp-moodle-teacher` and **`idavi/usp-mcp`**. All six were shelved from roundups; all six are now deleted, renamed or private. 🟡 **This is the decay rate of a roundup-sourced shelf, measured for the second time** (p332 found 22 truncated slugs, of which exactly one had reached a live row). **Named, not dropped**, so they are not re-probed.
+
+🔴 **`idavi/usp-mcp` is the expensive one.** A slug reading `usp` — Universidade de São Paulo — was the most promising LATAM-shaped supply signal in the instrument's whole population, and this base has carried it while declaring the LATAM supply side empty. **It does not exist.** 🔵 **An informed gap: LATAM's absence in this layer is not an absence of LATAM institutions but an absence of *published* connectors to them. EMEA and APAC each yielded a real, MIT-licensed, institution-specific connector this pass** (`pablopc05/mcp-usc`, Universidade de Santiago de Compostela; `psychquant/che-ntucool-mcp`, National Taiwan University; `sonaiengine/ku-portal-mcp`, Korea University) **and LATAM yielded one dead slug and one AI-authored stub with no licence.**
+
+### 🟡 A dormant Apache-2.0 repository, recorded because its absence from the live tier needs a reason
+
+**`pranav-vijayananth/brightspace-mcp-server`** — **Apache-2.0**, read first-hand, the full 11,356-byte stock text. 🔴 **Head `2025-10-14`; zero commits in 2026.** It is the only non-MIT permissive grant in the entire 93-repository census, so a reader looking for Apache-2.0 in this layer would otherwise conclude none exists. **It exists and it is asleep.**
+
+### 🟡 Eight shelf rows are a repository this base already holds, under a second spelling
+
+Confirmed by **equal `HEAD` on `ls-remote`** after normalising all 90 slugs to lower case: seven **case** pairs (`CarlSvejstrup`/`carlsvejstrup` `dtu-learn-mcp`, `RohanMuppa`/`rohanmuppa` `brightspace-mcp-server`, `AStheTECH`/`asthetech` `mewcp-google-classroom`, `DaviPac`/`davipac` `Classroom-mcp`, `BruChris`/`bruchris` `canvas-lms-mcp`, `DMontgomery40`/`dmontgomery40` `mcp-canvas-lms`, `MarcosNahuel`/`marcosnahuel` `moodle-mcp`) and one **`.git` suffix** (`felipedias-ie/blackboard-mcp.git`).
+
+🟢 **This corrects no published count, and that is the finding.** `compose/code/p274-quantity-recount` already lower-cases every slug and already strips a trailing `.git`, with a source comment recording that `ahmedEid1/Lumen` and `ahmedEid1/lumen` were proven first-hand to share a HEAD. 🔵 **A capability was present, documented, and nearly re-derived as news — the fifth instance of the class p333 named, and the fifth argument for the instrument-capability index that still does not exist.** 🟡 **What is real: the append-only log shows a human reader the same repository twice, and one row carries a `.git` that renders as a URL but is not a slug.**
+
 ## 2026-10-20 — Pass 339 — the trending channel is still structurally blind to this vertical, and two slugs this base has carried from roundups do not exist at all
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

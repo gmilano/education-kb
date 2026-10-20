@@ -20,7 +20,7 @@ Market research names assessment and grading the fastest-growing category, drive
 
 ### T4 — MCP has become education's integration layer, and it routes around copyleft
 
-**17 distinct education MCP server slugs are shelved** on `agents/top.md` once its carried history is counted, and **6 of them carry a grant read first-hand in this pass's live MCP tier**: `falkenslab/moodle-mcp` (~230 Moodle tools under the teacher's own login), two independent MIT Canvas servers (`vishalsachdev/canvas-mcp`, `r-huijts/canvas-mcp`), `blend-ed/openedx-mcp` (AGPL-3.0, the one copyleft row in the tier), `ankimcp/anki-mcp-server`, and `kvnloo/tutor-mcp`. Across both agent shelves, **MCP reaches **6 distinct LMS platforms**** — Canvas, Moodle, Google Classroom, Brightspace/D2L, Blackboard and Open edX — and the long tail behind them is large: this base's own census counts **32 Canvas, 17 Moodle, 11 Google Classroom, 7 Blackboard, 4 Brightspace/D2L and 2 Open edX** server slugs.
+**28 distinct education MCP server slugs are shelved** on `agents/top.md` once its carried history is counted, and 🟢 **19 of them carry a grant read first-hand in the live MCP tier after p340** — up from 6 at p339. Across both agent shelves, **MCP reaches **6 distinct LMS platforms**** — Canvas, Moodle, Google Classroom, Brightspace/D2L, Blackboard and Open edX — and 🟢 **all six are now reachable with a permissive grant read from the file**, which only three were at p339. The long tail behind them is no longer counted but **measured**: p340 probed **93 distinct connector repositories first-hand** — Canvas 40, Moodle 21, Google Classroom 15, Blackboard 7, Brightspace/D2L 7, Open edX 2, Anki 1 — returning **59 permissive, 4 copyleft, 23 with no licence path anywhere in their tree, 6 that no longer resolve and 1 proprietary** ([`p340-connector-licence-census`](../evidence/p340-connector-licence-census.2026-10-20-p340.tsv)).
 
 This is not fashion. Six of eight Tier-1 learning platforms are GPL or AGPL; **an MCP server is a separate program talking a documented protocol, so it carries none of the platform's copyleft.** MCP is doing for the AI layer what LTI 1.3 did for the tool layer, and for the same licensing reason. 🔵 **A Canvas rung reached `agents/top.md` for the first time this pass** — prior passes carried Canvas servers only on the trending shelf because none had a grant read first-hand, and the row this base *had* carried (`dmontgomery40/mcp-canvas-lms`) turns out to have **no licence anywhere in its tree** and is demoted.
 
@@ -212,6 +212,36 @@ Three independent pressures point the same way: EMEA sovereignty and Article 5(1
 
 ## Pass 334 · 2026-10-20 — three trends, and the two re-pointed pins the `recount` hook has been asking three passes for
 
+### 🔴 T29 — NEW: a `LICENSE.md` is not a grant, and the bespoke "community licence" is how proprietary code enters an open-source census
+
+🔴 **p340 found a repository in this sector whose `LICENSE.md` forbids exactly what a consultancy does.** `AStheTECH/mewcp-google-classroom`, a Google Classroom MCP server carried on these shelves, ships a 6,489-byte **"AStheTECH Community License (ACL)"**: a *"limited, non-exclusive, non-transferable, non-sublicensable, and **revocable**"* grant for *"personal, educational, or internal business purposes"*, **non-commercial redistribution only**, and express prohibitions — absent written authorisation — on sublicensing, *"any hosted service, SaaS platform, API service, or similar commercial offering"*, white-labelling, and anything *"substantially similar to or competitive with AStheTech's offerings"*.
+
+🔵 **Why this is a trend and not a single bad row.** It is **1 of 93** in p340's census, so the base rate is low — but it is the *only* row in those 93 that **passes every naive licence check and fails a legal review.** A dependency scanner looks for a licence *file*; a `LICENSE.md` exists, so the repository is reported as licensed. 🔴 **The failure mode is the opposite of the ungranted class (23 of 93): an ungranted repository announces its problem by having no file, while this one conceals its problem by having one.**
+
+🟢 **What caught it: abstention, not detection.** p340's family reader returned `UNRECOGNISED` rather than guessing a family from a keyword, which under `P250` fails safe (`UNDETERMINED` is treated as `PROHIBITED`). 🔵 **This vindicates the design choice `p309`/`p311`/`p314` recorded as a *cost* — the untitled-grant abstentions that "exclude usable supply". The same abstention that excludes usable supply is what stopped unusable supply reaching a deliverable.** The cost and the benefit are the same mechanism, and this is the first dated instance of the benefit.
+
+🟡 **The durable rule for this KB, and it is cheap:** a grant is a **family read from the payload**, never a filename. **`licence_present == True` is not a finding.** The three-valued classifier (`GRANT` / `POINTER` / `RESERVED`, `gate-payload-pin`) already encodes this; T29 is its first real-world carrier in the connector layer.
+
+### 🟢 T30 — NEW: the institution a connector points at is a harder regional placement than anything this base has inferred from a commit footprint
+
+🔴 **This base has struggled with regional placement for six passes.** p334 recorded that supply arrives with no region attached; p334 and p340 both refused a LATAM candidate on **commit-timezone** evidence (`affromero/Sotto`'s two-offset footprint; `DaviPac/Classroom-mcp`, whose only two commits are authored `Claude <noreply@anthropic.com>` at `+0000`). 🟡 **The timezone method is weak by construction: it measures where a committer's laptop was, and it returns nothing at all for an AI-authored or CI-authored history.**
+
+🟢 **p340's census surfaced a class that needs no inference. An institution-specific connector names its own geography:**
+
+| connector | institution | region | platform |
+|---|---|---|---|
+| `pablopc05/mcp-usc` | Universidade de Santiago de Compostela | 🟢 **EMEA** (Spain) | Moodle |
+| `psychquant/che-ntucool-mcp` | National Taiwan University (NTU COOL) | 🟢 **APAC** (Taiwan) | Canvas |
+| `sonaiengine/ku-portal-mcp` | Korea University (KUPID) | 🟢 **APAC** (South Korea) | portal |
+| `skhdemo/uoft-quercus-mcp` | University of Toronto (Quercus) | 🟢 **North America** (Canada) | Canvas |
+| `kimmahone/edu-workspace-mcp` | Korean-language Workspace reader | 🟢 **APAC** (South Korea) | Google Workspace |
+
+🔵 **A university's LMS tenancy is a fact about geography, not a signal to be weighed.** All five are **MIT**, read first-hand. 🟢 **For an engagement this is the most directly reusable thing in the census: an EMEA bid on a Moodle tenancy, or an APAC bid on a Canvas tenancy, now has a worked, permissively-licensed precedent for the exact institutional seam — including, in `che-ntucool-mcp`, a human-confirmation gate on writes that an assessment-adjacent deployment needs anyway.**
+
+🔴 **And it sharpens the LATAM gap rather than closing it.** The same class that placed EMEA and APAC produced, for LATAM, **one slug that does not exist** (`idavi/usp-mcp`, Universidade de São Paulo by its name) **and one ungranted AI-authored stub** referencing **SIGAA**, the academic system of Brazilian federal universities. 🟡 **The informed form of the gap, and it is a different claim from "we found nothing": LATAM institutions run these platforms, and connectors to them are not being published. Fifth consecutive measurement.**
+
+🟢 **Method note worth carrying: this class was invisible to p340's own extractor and visible to this base's existing instrument.** `compose/code/p274-quantity-recount` attributes a platform from the slug **or the row text**, so it held `mcp-usc`, `ku-portal-mcp` and `che-ntucool-mcp` — whose slugs name an institution, not a platform — while a slug-only sweep dropped all three. **Eleven repositories sat only in the instrument's population, and they contained every regionally-placed row above.**
+
 ### 🔴 Trend 24 — RE-POINTED: the MCP inventory, which this base lost from its curated shelf and kept in its append-only one
 
 🟢 **13 distinct education MCP server slugs are shelved** on `agents/top.md` after p334 restored the section the p315/p316 rewrites deleted — **7 of them permissive and live, 5 refused with the reason recorded, 1 carried from p330.** Across both agent shelves together, **MCP reaches **6 distinct LMS platforms**** — Canvas, Moodle, Google Classroom / Workspace for Education, Blackboard, Brightspace / D2L and Open edX — plus **Anki**, which is not an LMS and is excluded from that count by the instrument.
@@ -222,19 +252,30 @@ Three independent pressures point the same way: EMEA sovereignty and Article 5(1
 
 🔵 **And two of this pass's own drafting errors are worth recording, because they are this file's own documented failure classes caught by its own gate:** (1) the first draft wrote the literal string `## Build-on-this tier` **inside a sentence**, and `_tier_rows` splits on the first occurrence — so the prose stole the structural boundary and the tier measured **15** rows instead of 8; (2) the restored heading was written as `### 🟢 Agents over the systems`, and the instrument matches a **line prefix**, so the emoji made the section invisible and it measured **0**. 🟢 **Both were found by running the gate before publishing, which is the discipline p332 prescribed and p333 wrote about.**
 
-### 🔴 Trend 25 — NEW: in LMS connectors the licence runs OPPOSITE to the platform — permissive connectors into proprietary platforms, copyleft into open-source ones
+### 🟢 Trend 25 — CENSUS COMPLETE at p340: copyleft in this layer appears ONLY on open-source platforms, but open-source platforms are mostly permissive anyway
 
-🟢 **Measured first-hand p334 across one or two lanes per platform:**
+🔴 **p334 stated this trend as a biconditional and it is a one-way implication.** The falsifier p334 wrote into the trend — *"probe the remaining 62 platform-attributed slugs"* — **was run to completion at p340: 93 distinct connector repositories, every grant read from the file, every absence established from a whole tree** ([`p340-connector-licence-census`](../evidence/p340-connector-licence-census.2026-10-20-p340.tsv)).
 
-| platform's own licence | platform | its MCP connector's grant |
-|---|---|---|
-| 🔴 proprietary | Canvas, Brightspace / D2L, Blackboard, Google Classroom | 🟢 **MIT in all four lanes** — 1,071 B · 1,068 B · 1,084 B · 1,071 B |
-| 🟢 **open source** | Moodle (GPL-3.0) | 🔴 **GPL-3.0** connector, 35,148 B (and dormant) |
-| 🟢 **open source** | Open edX (AGPL-3.0) | 🔴 **AGPL-3.0** connector, 34,524 B — **the only lane found** |
+| platform | own licence | connectors probed | permissive | copyleft | permissive share |
+|---|---|---|---|---|---|
+| Canvas | 🔴 proprietary | 40 | 30 | 0 | **100%** |
+| Google Classroom | 🔴 proprietary | 15 | 9 | 0 | **100%** |
+| Blackboard | 🔴 proprietary | 7 | 3 | 0 | **100%** |
+| Brightspace / D2L | 🔴 proprietary | 7 | 5 | 0 | **100%** |
+| Moodle | 🟢 GPL-3.0 | 21 | 11 | **2** | **85%** |
+| Open edX | 🟢 AGPL-3.0 | 2 | 0 | **2** | **0%** |
 
-🔵 **The mechanism, and it is not ideological.** A connector to a proprietary platform is a thin API client — nothing inherits, so its author has no reason to pick anything but MIT. A connector to a copyleft platform is written from inside that platform's ecosystem and licensed the way the platform is. 🔴 **The consequence inverts the intuition a studio brings to an engagement: the seam into a client's PROPRIETARY LMS is the one you may own outright, and the seam into their OPEN-SOURCE LMS is the one that reaches your deliverable.**
+🟢 **What survives, and it is strong: all 4 copyleft connectors in this layer sit on an open-source platform, and the proprietary platforms are 48-for-48 permissive with zero copyleft.** The mechanism p334 proposed holds and is not ideological — a connector to a proprietary platform is a thin API client that inherits nothing, so its author picks MIT; a connector written from inside a copyleft ecosystem tends to be licensed the way that ecosystem is.
 
-🟡 **Bound: 12 rows probed against a platform-attributed population of 74. Real in every lane measured; not a census.** 🟢 **The falsifier is cheap and named: probe the remaining 62 platform-attributed slugs. If the permissive share on Moodle and Open edX rises above the proprietary platforms', this trend is sampling bias and must be withdrawn.** `falkenslab/moodle-mcp` (MIT, one author, 12 days old) is already one such counter-instance and is recorded as one.
+🔴 **What must be withdrawn: "copyleft platform ⇒ copyleft connector."** Moodle carries **11 permissive lanes against 2 copyleft** — p334 measured the one GPL-3.0 Moodle lane it happened to draw and generalised from a sample of one. 🟢 **p340 adds a second independent permissive Moodle counter-instance beyond `falkenslab/moodle-mcp`: `pablopc05/mcp-usc` (MIT), the Campus Virtual connector of the Universidade de Santiago de Compostela.**
+
+🔵 **Restated so an engagement can act on it — this is the form to quote:**
+
+- **On Moodle, the copyleft risk is avoidable by selection.** 11 of 13 granted lanes are permissive. Pick one; do not assume the platform's GPL reaches your connector.
+- **On Open edX, it is not avoidable through MCP.** Both lanes that exist are **AGPL-3.0**, and one of them is a Tutor plugin. 🟢 **Take the LTI 1.3 seam instead**, which carries no such obligation, and keep MCP for the surfaces where a permissive lane exists.
+- **On Canvas, Google Classroom, Blackboard and Brightspace/D2L, the seam is yours outright** — 48 permissive lanes, no copyleft found anywhere in the census.
+
+🔴 **The real constraint in this layer is not copyleft at all — it is the 23 of 93 repositories (25%) with no licence path anywhere in their tree**, and on Blackboard that is 4 of 7. **An ungranted connector is a harder blocker than an AGPL one**, because AGPL at least tells you the price. 🟡 **Bound now stated honestly: this is a census of the connectors these shelves carry, not of every connector that exists; a repository never shelved here was never probed.**
 
 ### 🔴 Trend 26 — NEW: "the channel is saturated" was a property of four standing queries, not of the channel
 

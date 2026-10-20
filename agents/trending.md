@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 340 — the prescribed legs fail for the eleventh consecutive pass, and the shelf grew anyway: T25's named falsifier was run to completion, and the MCP tier went from three platforms to six plus four regions
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**Evidence:** [`p340-connector-licence-census`](../evidence/p340-connector-licence-census.2026-10-20-p340.tsv) · [`p340-connector-slug-identity`](../evidence/p340-connector-slug-identity.2026-10-20-p340.tsv) · [`p340-promotion-substance`](../evidence/p340-promotion-substance.2026-10-20-p340.tsv).
+
+**Inherited gate state, measured on p339's HEAD before this pass changed a byte** — reported first because p333 made that mandatory. 🟢 `make hooks`: **23/23 gates green, exit 0.** 🟢 `make gate-offline`: green. **The first clean base this pass sequence has inherited since p330.**
+
+**The two prescribed supply legs, run verbatim:**
+
+| leg | result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new education agents — eleventh consecutive pass.** Returned general-purpose agents (OpenClaw, opencode, OpenHands, CrewAI, LangGraph) and `ashishpatel26/500-AI-Agents-Projects`, already carried and still a use-case catalogue rather than an agent |
+| `github trending education AI 2026` | 🔴 **0 new.** AI courseware again — `rohitg00/ai-engineering-from-scratch`, `microsoft/generative-ai-for-beginners`, `huggingface/agents-course`, Karpathy's material — plus aggregators and a job board. **GitHub Trending has no education category**, so an unfiltered leg structurally cannot surface this vertical |
+
+🔵 **p339 found movement by reading incumbents' release feeds; this pass found more of it by finishing a census this base had already costed as cheap.** The discovery channel is not where this KB's supply comes from any more. Its own backlog is.
+
+### T25's falsifier, run to completion
+
+`intel/trends.md` T25 has stood since p334 on **12 probed lanes**, with its own falsifier written into it: *"probe the remaining 62."* 🟢 **Done. 93 distinct repositories probed first-hand this pass** — the union of two populations that turn out not to be the same one: the 90 shelf rows whose **slug** carries both an MCP marker and a platform name (across all eight shelves), and the **77** that `compose/code/p274-quantity-recount` attributes by slug *or* row text across the two agent shelves. 🔴 **Eleven repositories sat only in the instrument's population and would have been missed by this pass's own extractor** — including every one of the regionally-placed institutional lanes below, which is the most valuable class the census found.
+
+Method, per repository: `git ls-remote --symref` for existence and default branch → `git clone --depth 1 --filter=blob:none --no-checkout` + `git ls-tree -r HEAD --name-only` for **the whole tree** → `raw.githubusercontent.com` to read the payload that tree names. `api.github.com` and `github.com` HTML are **403** for every slug in this session, as at p339, so **no star count appears in this section.**
+
+🟢 **Calibrated before use, because a prober that disagrees with an established row is wrong until proven otherwise.** Against four already-resolved rows it reproduced all four: `falkenslab/moodle-mcp` MIT 1,066 B · `blend-ed/openedx-mcp` AGPL-3.0 34,522 B · `vishalsachdev/canvas-mcp` MIT 1,070 B · and p339's demotion of `DMontgomery40/mcp-canvas-lms`, no licence path in a 36-file tree.
+
+**The census, 93 repositories, every cell measured:**
+
+| platform | repos | permissive | copyleft | no grant in tree | no refs | unreadable |
+|---|---|---|---|---|---|---|
+| Canvas | 40 | 30 | 0 | 7 | 3 | 0 |
+| Moodle | 21 | 11 | **2** | 5 | 3 | 0 |
+| Google Classroom | 15 | 9 | 0 | 5 | 0 | 1 |
+| Blackboard | 7 | 3 | 0 | 4 | 0 | 0 |
+| Brightspace / D2L | 7 | 5 | 0 | 2 | 0 | 0 |
+| Open edX | 2 | 0 | **2** | 0 | 0 | 0 |
+| Anki | 1 | 1 | 0 | 0 | 0 | 0 |
+| **total** | **93** | **59** | **4** | **23** | **6** | **1** |
+
+🟢 **T25 survives on direction and is CORRECTED on strength — the correction is the useful part.** Proprietary platforms: **48 permissive, 0 copyleft, 100%.** Open-source platforms: **11 permissive, 4 copyleft, 73% permissive.** 🔴 **p334's table read as a biconditional — copyleft platform *implies* copyleft connector — and at 12 lanes it looked like one. It is a one-way implication: all 4 copyleft connectors in this layer sit on an open-source platform, but open-source platforms are mostly permissive anyway.** 🔵 **Restated so an engagement can act on it: Moodle carries 11 permissive lanes against 2 copyleft, so on Moodle you simply pick a permissive one. Open edX carries 2 lanes and both are AGPL-3.0, so there the copyleft reach is unavoidable through MCP and the LTI seam is the way round it.** The full restatement is in `intel/trends.md` T25.
+
+### 🟢 13 rows promoted — three new platforms, and four regions placed by institution
+
+Grants read from the file the repository's own tree names. Substance is commits / distinct author emails / head date from a real clone.
+
+| Server | Repo | Licence | Grant read at | Substance | Reach |
+|---|---|---|---|---|---|
+| brightspace-mcp-server | https://github.com/RohanMuppa/brightspace-mcp-server | MIT | `main/LICENSE` | 415 c · **17 a** · head **2026-10-20** | **Brightspace / D2L.** Largest contributor bench in the census; read-only by design — "it never submits, edits, or deletes anything"; npm + CI |
+| brightspace-mcp | https://github.com/JhostinAleck/brightspace-mcp | MIT | `main/LICENSE` | 450 c · 2 a · head 2026-09-28 | **Brightspace / D2L.** Multi-strategy auth with **full MFA**, published docs site, non-interactive `init` for CI. 🔵 The enterprise-shaped lane |
+| brightspace-d2l-mcp | https://github.com/AnonymousOnyx22/brightspace-d2l-mcp | MIT | `main/LICENSE` | 36 c · 3 a · head **2026-10-20** | **Brightspace / D2L.** Third independent MIT lane, active today |
+| blackboard-mcp | https://github.com/felipedias-ie/blackboard-mcp | MIT | `main/LICENSE` | 21 c · 3 a · head 2026-10-14 | **Blackboard Learn (Ultra).** 🔴 Read the flag below before quoting it |
+| mcp-blackboard-ucsc | https://github.com/NiccoloSalvini/mcp-blackboard-ucsc | MIT | `main/LICENSE` | 24 c · 2 a · head 2026-09-21 | **Blackboard.** Second independent MIT lane |
+| google-classroom-mcp | https://github.com/pengusto/google-classroom-mcp | MIT | `master/LICENSE` | 3 c · 1 a · head 2026-09-21 | **Google Classroom**, **teacher-side**: prepares materials and assignments, 21 MCP tools, CI. 🟡 Note the branch — `master` |
+| classroom-mcp | https://github.com/OmarNiazi/classroom-mcp | MIT | `main/LICENSE` | 7 c · 1 a · head 2026-10-07 | **Google Classroom**, **student-side**, explicitly read-only |
+| mcp-usc | https://github.com/pablopc05/mcp-usc | MIT | `main/LICENSE` | 130-file tree | 🟢 **EMEA — Spain.** Campus Virtual **Moodle** of the Universidade de Santiago de Compostela, Spanish-language, CI, acts only with the student's own permissions. **A permissive Moodle lane, so also a T25 counter-instance** |
+| che-ntucool-mcp | https://github.com/psychquant/che-ntucool-mcp | MIT | `main/LICENSE` | 62-file tree | 🟢 **APAC — Taiwan.** **NTU COOL**, National Taiwan University's **Canvas** deployment. 🔵 Every endpoint curl-tested against a real course before code was written; grade and announcement **writes gated behind an explicit human confirmation** |
+| ku-portal-mcp | https://github.com/sonaiengine/ku-portal-mcp | MIT | `main/LICENSE` | 35-file tree | 🟢 **APAC — South Korea.** Korea University **KUPID** portal, Korean-language, published to **PyPI** |
+| uoft-quercus-mcp | https://github.com/skhdemo/uoft-quercus-mcp | MIT | `main/LICENSE` | 65-file tree | 🟢 **North America — Canada.** University of Toronto **Quercus (Canvas)** plus the public Timetable Builder. 🟡 States plainly that it is unaffiliated with U of T and may be rate-limited or blocked |
+| google-classroom-mcp (Aaradhya) | https://github.com/Aaradhya-Dev-Tamrakar/google-classroom-mcp | MIT | `main/LICENSE` | — | **Google Classroom.** Third MIT lane, Node ESM, aimed at autonomous agent fleets; grant read first-hand, substance not clocked this pass |
+
+🔵 **The institutional lane is the find, and no prescribed leg could have produced it.** p334 recorded that this KB's supply arrives with no region attached, and that LATAM-shaped queries kept returning nothing placeable. **These four are placed by something far stronger than a timezone offset: the institution they connect to.** A university's LMS tenancy is a fact about geography, not an inference from a commit footprint. 🟢 **For an engagement it means an EMEA, APAC or North America education bid now has a worked, MIT-licensed precedent for the exact institutional seam** — `mcp-usc` for a European Moodle tenancy, `che-ntucool-mcp` for an APAC Canvas tenancy with a human-confirmation gate already designed in.
+
+🟡 **The thirteenth, promoted on honest terms: `sandraschi/classroom-mcp`** (MIT, `main/LICENSE`, 28 c · 3 a · head 2026-10-13) — 45 MCP tools plus a REST API for students, classes, assignments, courseware, teaching-agent roles and **framework-aware curriculum generation (CEFR, HSK, DELF, DELE, Goethe, JLPT)**. 🔴 **It reaches no external platform: it is a self-contained SIS, and this base's own instrument files it under Google Classroom** because `platform_of` matches the bare slug `\bclassroom-mcp\b`. **One false attribution in 15 on that platform.** 🟡 Its own README states test coverage beyond two regression tests is thin. **The instrument defect is recorded in `intel/open-gaps.md` and deliberately not patched blind** — it carries pinned controls, and re-cutting its ladder is its own piece of work, which is the lesson p334 recorded about `delivery_audit.py`.
+
+### 🔴 The find this pass did not go looking for: a `LICENSE.md` that is not a licence
+
+**`AStheTECH/mewcp-google-classroom`** carries a 6,489-byte `LICENSE.md`. It is the **"AStheTECH Community License (ACL)"**, read in full this pass, and it is **proprietary**:
+
+- a *"limited, non-exclusive, non-transferable, non-sublicensable, and **revocable**"* grant, for *"personal, educational, or internal business purposes"* only;
+- redistribution **non-commercial only**;
+- forbidden without written authorisation: selling or sublicensing, *"any hosted service, SaaS platform, API service, or similar commercial offering"*, white-labelling, and anything *"substantially similar to or competitive with AStheTech's offerings"*;
+- *"Any use of the software for commercial purposes … is strictly prohibited unless authorized under a separate written agreement."*
+
+🔴 **For a consultancy this is unusable in the exact shape that matters: a client deliverable is commercial, and hosting it for a client is the named prohibition.** 🟢 **The abstain-safe family reader is what caught it** — it returned `UNRECOGNISED` rather than guessing, which under `P250` fails safe, and `UNRECOGNISED` is the only non-grant verdict in all 93 rows. 🔵 **The transferable lesson, and it is the sharpest on these shelves: a repository with a `LICENSE.md` passes every naive "is it licensed?" check ever written, and this one prohibits the only thing a studio would do with it.**
+
+### Refused, with the reason recorded
+
+🔴 **`DaviPac/Classroom-mcp` — a LATAM placement REFUSED on its own evidence, and the refusal is the finding.** Portuguese README, written from the student's perspective (*"na perspectiva de aluno, não de professor"*), referencing **SIGAA**, the academic system of Brazilian federal universities — three signals pointing at Brazil, and the strongest LATAM-shaped supply signal in five passes. 🔴 **Not placed.** Its entire history is **2 commits, both authored `Claude <noreply@anthropic.com>` at `+0000`**: the timezone method that refused `affromero/Sotto` at p334 finds no human offset here because there is no human commit. **It also has no licence path anywhere in its tree.**
+
+🔴 **`idavi/usp-mcp` — the other LATAM lead, and it does not exist.** Carried on these shelves and attributed to Moodle; `git ls-remote` returns **no refs**. A slug reading `usp` (Universidade de São Paulo) was the most promising LATAM signal in the instrument's population. 🟡 **So the LATAM supply gap stands — fifth consecutive measurement — and this pass states it with two named, probed near-misses rather than with silence.** 🔵 **Worth recording for the regional method: LATAM's absence here is not an absence of LATAM institutions, it is an absence of *published* connectors to them. EMEA and APAC both produced placeable institutional lanes this pass and LATAM produced one dead slug and one AI-authored stub.**
+
+🟡 **`pranav-vijayananth/brightspace-mcp-server` — Apache-2.0, read first-hand (11,356 B, full stock text), NOT promoted: head `2025-10-14`, zero commits in 2026.** The only non-MIT permissive grant in the census, recorded because a reader looking for Apache-2.0 on this platform should know it exists and is asleep.
+
+🔴 **Six carried slugs do not resolve at all** — no refs on `ls-remote`: `EastArctica/canvas-mcp`, `a-ariff/canvas-instant-mcp`, `xmike04/canvas-student-mcp`, `NiccoloSalvini/mcp-moodle-staff`, `NiccoloSalvini/mcp-moodle-teacher`, `idavi/usp-mcp`. **Named rather than dropped, so the next pass does not re-probe them.**
+
+🔴 **23 of 93 repositories (25%) carry no licence path anywhere in their tree** — established by tree, not ladder, so this is a measurement and not a false absence. **A quarter of this vertical's integration layer is unusable for a deliverable, and it is unusable silently**, because an unlicensed repository looks exactly like a licensed one until someone reads the tree.
+
+### 🟡 Eight shelf rows are a repository this base already holds, under a second spelling
+
+Confirmed by **equal `HEAD` on `ls-remote`** — `gate-identity-online`'s own oracle — after normalising all 90 slugs to lower case and grouping: `CarlSvejstrup`/`carlsvejstrup` `dtu-learn-mcp`, `RohanMuppa`/`rohanmuppa` `brightspace-mcp-server`, `AStheTECH`/`asthetech` `mewcp-google-classroom`, `DaviPac`/`davipac` `Classroom-mcp`, `BruChris`/`bruchris` `canvas-lms-mcp`, `DMontgomery40`/`dmontgomery40` `mcp-canvas-lms`, `MarcosNahuel`/`marcosnahuel` `moodle-mcp`, and `felipedias-ie/blackboard-mcp` against **`felipedias-ie/blackboard-mcp.git`**.
+
+🟢 **This corrects NO published count, and that is the point worth recording.** `p274`'s counting instrument already lower-cases every slug and already strips a trailing `.git`, with a comment recording that `ahmedEid1/Lumen` and `ahmedEid1/lumen` were proven to share a HEAD. 🔵 **So a capability was present, documented, and this pass nearly re-derived it as a "finding" — the fourth instance of the defect class p333 named (p329 the clone channel, p331 the `evidence/` grep, p333 the `grant_gate` guard). The instrument-capability index p333 asked for still does not exist, and this pass is its fifth justification.** 🟡 **What remains real: the append-only log presents the same repository under two spellings to a human reader, and one row carries a literal `.git` that renders as a URL but is not a slug.** A reader's defect, not a counter's.
+
 ## 2026-10-20 — Pass 339 — tenth consecutive pass with no promotable agent from the discovery channels, and the first pass that found real movement anyway by reading the incumbents' release feeds
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

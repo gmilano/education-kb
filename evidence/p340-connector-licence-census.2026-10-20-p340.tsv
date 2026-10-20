@@ -1,0 +1,91 @@
+platform	slug	family	grant_path	bytes	tree_files	manifests
+Anki	ankimcp/anki-mcp-server	MIT	LICENSE	1073	271	package.json;
+Blackboard	NiccoloSalvini/mcp-blackboard-ucsc	MIT	LICENSE	1072	27	pyproject.toml;
+Blackboard	P1ckle3/blackboard-mcp	NO-LICENCE-PATH-IN-TREE			24	pyproject.toml;
+Blackboard	RD2100/blackboard-mcp	MIT	LICENSE	1058	13	package.json;
+Blackboard	felipedias-ie/blackboard-mcp	MIT	LICENSE	1083	55	package.json;
+Blackboard	felipedias-ie/blackboard-mcp.git	FETCH-FAIL	LICENSE		55	package.json;
+Blackboard	karkarkins/BlackboardAssistantMCP	NO-LICENCE-PATH-IN-TREE			12	
+Blackboard	yoyoconnor/BlackboardMCP	NO-LICENCE-PATH-IN-TREE			9	pyproject.toml;
+Brightspace / D2L	AnonymousOnyx22/brightspace-d2l-mcp	MIT	LICENSE	1199	141	package.json;
+Brightspace / D2L	CarlSvejstrup/dtu-learn-mcp	MIT	LICENSE	1078	43	pyproject.toml;
+Brightspace / D2L	Exhabition/brightspace-mcp-rs	NO-LICENCE-PATH-IN-TREE			12	Cargo.toml;package.json;
+Brightspace / D2L	JhostinAleck/brightspace-mcp	MIT	LICENSE	1069	548	package.json;
+Brightspace / D2L	RohanMuppa/brightspace-mcp-server	MIT	LICENSE	1067	304	package.json;
+Brightspace / D2L	carlsvejstrup/dtu-learn-mcp	MIT	LICENSE	1078	43	pyproject.toml;
+Brightspace / D2L	joshuasoup/d2l-mcp	NO-LICENCE-PATH-IN-TREE			54	package.json;
+Brightspace / D2L	pranav-vijayananth/brightspace-mcp-server	Apache-2.0	LICENSE	11356	12	setup.py;
+Brightspace / D2L	rohanmuppa/brightspace-mcp-server	MIT	LICENSE	1067	304	package.json;
+Canvas	AmirF194/canvas-mcp	MIT	LICENSE	1070	256	package.json;pyproject.toml;
+Canvas	BartMassey-upstream/canvas-mcp	MIT	LICENSE	1070	490	package.json;pyproject.toml;
+Canvas	BruChris/canvas-lms-mcp	MIT	LICENSE	1069	475	package.json;
+Canvas	CharlieCardenasToledo/mcp-canvas-server	MIT	LICENSE	1080	79	package.json;
+Canvas	CreveXTech/canvas-lms-mcp	NO-LICENCE-PATH-IN-TREE			31	package.json;
+Canvas	DMontgomery40/mcp-canvas-lms	NO-LICENCE-PATH-IN-TREE			36	package.json;
+Canvas	EastArctica/canvas-mcp	NO-REFS				
+Canvas	JohannsenLum/canvas-api-mcp	MIT	LICENSE	1069	72	pyproject.toml;
+Canvas	MisterCommand/mcp-canvas-lms	MIT	node_modules/@modelcontextprotocol/sdk/LICENSE	1070	1871	package.json;
+Canvas	YeetingWaterbottle/canvas-mcp	MIT	LICENSE	1070	434	package.json;pyproject.toml;
+Canvas	a-ariff/canvas-instant-mcp	NO-REFS				
+Canvas	abr-Projects/canvas-mcp	MIT	LICENSE	1070	274	package.json;pyproject.toml;
+Canvas	admin978/canvas-mcp	MIT	LICENSE	1071	19	pyproject.toml;
+Canvas	ahnopologetic/canvas-lms-mcp	MIT	LICENSE	1091	17	pyproject.toml;
+Canvas	ait0u5hi/canvas-scholar-mcp	MIT	LICENSE	1064	46	package.json;
+Canvas	algorithm0r/canvas-lms-mcp	MIT	LICENSE	1069	415	package.json;
+Canvas	aryankeluskar/canvas-mcp	ISC	LICENSE	745	29	package.json;
+Canvas	bruchris/canvas-lms-mcp	MIT	LICENSE	1069	475	package.json;
+Canvas	caleb-media-studio/canvas-mcp	MIT	LICENSE	1065	35	package.json;
+Canvas	chiptoe-svg/canvas-lms-mcp	MIT	LICENSE	1069	357	package.json;
+Canvas	dmontgomery40/mcp-canvas-lms	NO-LICENCE-PATH-IN-TREE			36	package.json;
+Canvas	fdis111/canvas-mcp	MIT	LICENSE	1070	177	package.json;pyproject.toml;
+Canvas	harrywang/canvas-mcp	MIT	LICENSE	1070	279	package.json;pyproject.toml;
+Canvas	jsrodr/canvas-mcp	MIT	LICENSE	1070	249	package.json;pyproject.toml;
+Canvas	lindsay-cheng/canvas-mcp	MIT	LICENSE	1070	410	package.json;pyproject.toml;
+Canvas	lucanardinocchi/canvas-mcp	NO-LICENCE-PATH-IN-TREE			15	package.json;
+Canvas	mdweaver/canvas-mcp	MIT	LICENSE	1064	35	package.json;
+Canvas	mtgibbs/canvas-lms-mcp	MIT	LICENSE	1063	115	
+Canvas	plyght/canvas-mcp	NO-LICENCE-PATH-IN-TREE			17	package.json;
+Canvas	r-huijts/canvas-mcp	MIT	LICENSE	1064	31	package.json;
+Canvas	r1ckyIn/canvas-ed-mcp	MIT	LICENSE	1055	7	
+Canvas	risnake/canvas-mcp-server	NO-LICENCE-PATH-IN-TREE			20	package.json;
+Canvas	sirdanielm/canvas-mcp	MIT	LICENSE	1070	562	package.json;pyproject.toml;
+Canvas	vishalsachdev/canvas-mcp	MIT	LICENSE	1070	474	package.json;pyproject.toml;
+Canvas	vkumar04/canvas-mcp-lite	NO-LICENCE-PATH-IN-TREE			51	pyproject.toml;
+Canvas	xmike04/canvas-student-mcp	NO-REFS				
+Canvas	zhenghh04/canvas-mcp	MIT	LICENSE	1068	43	pyproject.toml;
+Google Classroom	AStheTECH/mewcp-google-classroom	UNRECOGNISED	LICENSE.md	6489	14	
+Google Classroom	Aaradhya-Dev-Tamrakar/google-classroom-mcp	MIT	LICENSE	1077	14	package.json;
+Google Classroom	DaviPac/Classroom-mcp	NO-LICENCE-PATH-IN-TREE			10	package.json;
+Google Classroom	OmarNiazi/classroom-mcp	MIT	LICENSE	1066	43	pyproject.toml;
+Google Classroom	adriasantacreu/google-classroom-mcp	NO-LICENCE-PATH-IN-TREE			15	package.json;
+Google Classroom	alanmagno1/google-classroom-mcp	MIT	LICENSE	1066	9	pyproject.toml;
+Google Classroom	asthetech/mewcp-google-classroom	UNRECOGNISED	LICENSE.md	6489	14	
+Google Classroom	davipac/classroom-mcp	NO-LICENCE-PATH-IN-TREE			10	package.json;
+Google Classroom	faizan45640/google-classroom-mcp-server	MIT	LICENSE	1062	8	package.json;
+Google Classroom	pengusto/google-classroom-mcp	MIT	LICENSE	1144	32	package.json;
+Google Classroom	pnp-v/bo-google-classroom-mcp-server	NO-LICENCE-PATH-IN-TREE			7	package.json;
+Google Classroom	praisethefacts/google-classroom-mcp	MIT	LICENSE	1063	13	pyproject.toml;
+Google Classroom	sandraschi/classroom-mcp	MIT	LICENSE	1070	70	pyproject.toml;
+Google Classroom	sevenc-nanashi/google-classroom-mcp-server	MIT	LICENSE	1062	12	package.json;
+Google Classroom	shimahikojin/google-classroom-mcp	NO-LICENCE-PATH-IN-TREE			7	package.json;
+Moodle	1alexandrer/moodle-mcp	MIT	LICENSE	1073	36	package.json;
+Moodle	G36maid/moodle-mcp	MIT	LICENSE	1063	103	Cargo.toml;
+Moodle	Jawadh-Salih/moodle-mcp-server	MIT	LICENSE	1062	37	
+Moodle	MarcosNahuel/moodle-mcp	MIT	LICENSE	1064	139	package.json;
+Moodle	NiccoloSalvini/mcp-moodle-staff	NO-REFS				
+Moodle	NiccoloSalvini/mcp-moodle-teacher	NO-REFS				
+Moodle	SaadRahman01/moodle-mcp	MIT	LICENSE	1067	30	pyproject.toml;
+Moodle	Snaw80/moodle-mcp	MIT	LICENSE	1071	10	pyproject.toml;
+Moodle	a2br/moodle-mcp	MIT	LICENSE	1072	22	pyproject.toml;
+Moodle	csmediapro/moodle-mcp-server	AGPL-3.0	LICENSE	34522	107	package.json;
+Moodle	falkenslab/moodle-mcp	MIT	LICENSE	1066	592	package.json;
+Moodle	ink-waffle/moodle-mcp	NO-LICENCE-PATH-IN-TREE			30	package.json;
+Moodle	linomck/moodle-mcp	NO-LICENCE-PATH-IN-TREE			12	package.json;
+Moodle	lmscloud-io/moodle-mcp-server	GPL-3.0	LICENSE	35148	11	pyproject.toml;
+Moodle	loyaniu/moodle-mcp	NO-LICENCE-PATH-IN-TREE			13	pyproject.toml;
+Moodle	marcosnahuel/moodle-mcp	MIT	LICENSE	1064	139	package.json;
+Moodle	onbirdev/moodle-webservice_mcp	NO-LICENCE-PATH-IN-TREE			20	
+Moodle	peancor/moodle-mcp-server	MIT	LICENSE	1063	7	package.json;
+Moodle	toshieji/moodle-grading-mcp	MIT	LICENSE	1119	11	pyproject.toml;
+Open edX	blend-ed/openedx-mcp	AGPL-3.0	LICENSE	34522	63	setup.py;
+Open edX	blend-ed/tutor-contrib-openedxmcp	AGPL-3.0	LICENSE	34522	32	pyproject.toml;

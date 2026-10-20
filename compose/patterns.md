@@ -4,7 +4,9 @@ region: Global
 updated: 2026-10-20
 ---
 
-## Pass 339 · 2026-10-20 — six recipes, each named down to the slug, each with its licence posture stated and its regional trigger
+## Pass 340 · 2026-10-20 — seven recipes, each named down to the slug, each with its licence posture stated and its regional trigger
+
+🟢 **New at p340: P7, the institutional LMS seam** — the first recipe on this shelf whose components are *regionally placed*, built on the completed connector census. The six below are p339's and are unchanged.
 
 Every repository named below was existence- and grant-verified first-hand this pass (`git ls-remote` + `raw.githubusercontent.com`; see `agents/top.md` for the channel table). **The licence posture line is not decoration** — six of eight Tier-1 platforms are GPL/AGPL, so each recipe states explicitly where the client's proprietary logic lives.
 
@@ -113,7 +115,27 @@ Every repository named below was existence- and grant-verified first-hand this p
 
 ---
 
-## ⏷ Carried history — everything below this line predates Pass 339 and was NOT rewritten
+### P7 — The institutional LMS seam, forked rather than built (EMEA, APAC, North America — and the LATAM build) — NEW at p340
+
+**Trigger:** a client is one institution (a university, a ministry pilot, a school network) running a *tenancy* of Canvas, Moodle, Brightspace or Blackboard, and wants an agent over it in weeks rather than quarters. 🔵 **This is the pattern p340's census made possible: a connector to a specific institution's tenancy already exists, under MIT, for four institutions on three continents, and forking one is strictly cheaper than writing the API client again.**
+
+**Wiring:**
+1. **Pick the regional precedent, not the generic lane.** **`pablopc05/mcp-usc`** (MIT, `main/LICENSE`) for a **European Moodle** tenancy — Spanish-language, CI, acts under the student's own permissions. **`psychquant/che-ntucool-mcp`** (MIT) for an **APAC Canvas** tenancy. **`skhdemo/uoft-quercus-mcp`** (MIT) for a **North American Canvas** tenancy with a personal-access-token model. **`sonaiengine/ku-portal-mcp`** (MIT, on PyPI) where the seam is a **student portal** rather than an LMS.
+2. **Lift the write gate before writing any feature.** `che-ntucool-mcp` gates **grade and announcement writes behind an explicit human confirmation** and leaves reads unguarded. 🟢 **Port that boundary first** — it is the EU AI Act Article 14 human-oversight control, and it satisfies Korea's high-impact and Vietnam's high-risk education provisions at the same time.
+3. **Swap the platform client, keep the tool surface.** All four are thin API clients around a documented LMS API behind an MCP tool surface. Re-pointing the base URL and auth strategy to the client's tenancy is the actual work; the tool definitions, the pagination and the error handling carry over.
+4. **Add the mastery model, not just the chat.** **`CAHLR/OATutor`** (MIT) for inspectable **Bayesian Knowledge Tracing**, or **`kvnloo/tutor-mcp`** (MIT) for the skill graph and review scheduling, so learner state is defensible rather than a prompt.
+5. **Generate into the platform, not beside it.** **`satvik314/educhain`** (MIT) for MCQs and lesson scaffolds; write them back through the connector so the LMS stays the system of record.
+6. **If the platform is Open edX, stop and use LTI 1.3 instead.** Both Open edX MCP lanes are **AGPL-3.0** and one is a Tutor plugin. 🔴 **MCP is the wrong seam on that one platform.**
+
+**Licence posture:** 🟢 **Entirely permissive — every component above is MIT, each grant read from the file at p340.** Nothing touches the platform's GPL/AGPL tree, so client logic stays closed. 🔴 **Two traps the census named, and both are in repositories a roundup will recommend:** verify the connector's grant **from its tree, not its badge** — **23 of 93 (25%) have no licence at all**, and on **Blackboard that is 4 of 7** — and never adopt **`AStheTECH/mewcp-google-classroom`**, whose `LICENSE.md` is a proprietary licence forbidding commercial use and SaaS hosting (`intel/trends.md` T29).
+
+**Timeline:** **2–4 weeks** to a working agent over the client's own tenancy when a regional precedent exists and is forked; **6–8 weeks** where one does not and the API client is written from scratch.
+
+🔴 **Regional note, stated as a gap rather than a claim:** **there is no LATAM precedent to fork.** p340 probed the two candidates these shelves carried — `idavi/usp-mcp` (Universidade de São Paulo by its name) **does not exist**, and `DaviPac/Classroom-mcp` (Portuguese, referencing **SIGAA**) has **no licence and two AI-authored commits**. 🟢 **So in LATAM this pattern inverts into a build — and the cheapest build is a fork of `mcp-usc`, which is already Spanish-language and already Moodle.** Fifth consecutive pass at which the LATAM supply side returned nothing adoptable.
+
+---
+
+## ⏷ Carried history — everything below this line predates Pass 340 and was NOT rewritten
 
 🟢 **Pass 339 prepends; it does not replace.** An earlier draft of this pass replaced these shelves outright and `gate-permissive-arm` caught the cost: the corpus lost ~1.2 MB of first-hand-verified rows and the `MIT`+`Apache-2.0` cell count fell from 7 000+ to 6 597. 🔵 **Deleting verified rows is not curation** — the live section above carries this pass's findings, and every prior pass's verified shelf stands underneath it.
 

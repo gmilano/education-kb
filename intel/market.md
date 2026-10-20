@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 340 · 2026-10-20 — the four regional demand legs returned zero new facts for the sixth consecutive measurement, and the regional intelligence that DID move this pass is supply-side
+
+🟢 **The four prescribed regional legs were run verbatim, per region, and every fact they returned is already held on this shelf.** Reported leg by leg, because an unnamed saturation is indistinguishable from an unrun query:
+
+| leg | what it returned | status |
+|---|---|---|
+| `AI education North America 2026 adoption regulation players` | **134 bills / 31 states**, CA **AB 1159**, Idaho **SB 1227**, Oklahoma + Maryland human-oversight statutes, Maryland's **AI Ready Schools Act** 120-day district clock, **H.R. 8747** out of committee 2026-07-21, Canada **"AI for All"** (June 2026), Mexico — bills pending with no enforcing regulator, NA share ~36% / $3.68 B | 🔴 **Nothing new.** All held; this file's own line 476 already recorded the same result |
+| `AI education EMEA Europe 2026 adoption regulation players` | **Regulation (EU) 2026/1744** (Digital Omnibus, published 2026-07-24, in force +3 days), Annex III education obligations moved **2026-08-02 → 2027-12-02**, Annex I → 2028-08-02, **Article 50 transparency unmoved (2026-08-02)**, **Article 4** literacy duty in force since 2025-02, EC+OECD **AI Literacy Framework** presented **2026-06-18** | 🔴 **Nothing new.** All held, including the framework's date |
+| `AI education APAC 2026 adoption regulation players` | Vietnam **Decision 33/2026/QD-TTg** (education among six high-risk sectors; comply by **2027-03-01**, +6 months for systems live before 2026-08-15), Korea **AI Basic Act** in force **2026-01-22** with 2026 as a de facto pilot year, China's binding labelling regime, Singapore and Japan on guidance, **Malaysia's** AI Governance Bill consultation (2026-07-10, proposed Central AI Authority) | 🔴 **Nothing new.** All held. 🟡 The Vietnam date conflict this file has flagged for three passes (`intel/policy-matrix.tsv:149`) **was reproduced again and remains unresolved** — secondary sources still disagree on the core law's commencement |
+| `AI education LATAM Latin America 2026 adoption regulation players` | UNESCO **IESALC**: 200 institutions / 19 countries, **87% using AI in ≥1 area, 26% with a formal AI strategy**; UNESCO **Observatory** (Santiago, 2026-04-14); Uruguay first in LATAM to sign the CoE Framework Convention; Peru's phased law + sandboxes; Colombia **CONPES 4144**; Mexico's Senate bill | 🔴 **Nothing new.** All held |
+
+🔵 **The honest conclusion, and it is a budgeting instruction rather than a complaint.** This is the **sixth consecutive measurement** that the standing demand-side legs return only carried facts. 🟢 **T26's rule is confirmed once more — a country or an instrument's own name returns material; a region name plus generic terms does not** — and the corollary this pass adds is that **the demand-side intelligence on this shelf is now ahead of the public secondary channel.** The marginal hour is better spent on supply, which is where this pass spent it and where it paid.
+
+### 🟢 What is new and regional this pass: the integration seam, placed
+
+p340's completed connector census ([`p340-connector-licence-census`](../evidence/p340-connector-licence-census.2026-10-20-p340.tsv), 93 repositories probed first-hand) produced the first **regionally placed supply** this base has held — placed by the **institution a connector points at**, which is a fact about geography rather than an inference from a commit footprint (`intel/trends.md` T30).
+
+### Opportunities by region
+
+#### North America
+
+- **The connector seam is permissive and locally precedented.** `skhdemo/uoft-quercus-mcp` (**MIT**, grant read first-hand) connects **University of Toronto Quercus**, a Canvas tenancy, via a personal access token — a worked Canadian precedent, and the first Canada-placed artefact of any kind on these shelves, against a canonical block that has declared Canada an informed gap. 🟡 It states plainly that it is unaffiliated with the university and may be rate-limited.
+- **Canvas is the region's dominant seam and it is 100% permissive**: 30 permissive lanes of 40 probed, **zero copyleft found**. For a US or Canadian engagement, the LMS integration layer carries no licence obligation into the deliverable.
+- 🔴 **The constraint is grant absence, not copyleft:** 7 of 40 Canvas connectors have **no licence path anywhere in their tree**, including `DMontgomery40/mcp-canvas-lms`, which roundups still recommend. Verify before adopting.
+
+#### EMEA
+
+- **A European Moodle tenancy now has a permissive precedent.** `pablopc05/mcp-usc` (**MIT**) connects the **Campus Virtual Moodle of the Universidade de Santiago de Compostela**, Spanish-language, with CI, acting only under the student's own account permissions. 🟢 **It is also the evidence that corrected T25:** Moodle's connector layer is **85% permissive** (11 of 13 granted lanes), so the platform's GPL-3.0 does **not** force a copyleft connector.
+- **The compliance runway is unchanged and still the clearest "why now" in this KB** — Annex III education obligations at **2027-12-02**, Article 50 transparency live since **2026-08-02**, Article 4 literacy in force. An engagement starting now is design; one starting in 2027 is remediation.
+- 🔴 **Architecture note that follows from the census:** `psychquant/che-ntucool-mcp` ships **human confirmation gating on writes** (grades, announcements). **That is the Article 14 human-oversight control, already implemented in an MIT codebase** — cheaper to adopt than to specify from scratch in a conformity file.
+
+#### APAC
+
+- **Two institution-placed permissive lanes, both MIT and both read first-hand.** `psychquant/che-ntucool-mcp` connects **NTU COOL**, National Taiwan University's Canvas deployment — and notably **every endpoint was curl-tested against a real course before any code was written**, plus the write-confirmation gate above. `sonaiengine/ku-portal-mcp` connects **Korea University's KUPID** portal and is published to **PyPI**. `kimmahone/edu-workspace-mcp` (MIT) is a Korean-language read-only Google Workspace reader.
+- **The regulatory fit is good and the clock is real.** Vietnam classes education AI as high-risk with automated assessment named explicitly; Korea's Basic Act puts education in its high-impact class. 🟢 **A connector that gates writes behind human confirmation is the control both regimes ask for**, and it exists here as MIT source rather than as a requirement to be built.
+- **Mandated-curriculum delivery remains the volume opportunity** (China from age six, India from Class 3), unchanged this pass.
+
+#### LATAM
+
+- 🔴 **The supply gap stands, and p340 probed two candidates in order to say so rather than leave it silent — fifth consecutive measurement.** `idavi/usp-mcp`, whose slug names **Universidade de São Paulo** and which these shelves have carried, **does not exist**: `git ls-remote` returns no refs. `DaviPac/Classroom-mcp` has a **Portuguese** README written from the student's perspective and references **SIGAA**, the academic system of Brazilian federal universities — then turns out to have **no licence path in its tree and two commits, both authored `Claude <noreply@anthropic.com>` at `+0000`**.
+- 🔵 **The informed form of the gap, and it is a different and more useful claim than "we found nothing": LATAM institutions run these platforms, and connectors to them are not being published.** EMEA and APAC each produced a real, MIT-licensed, institution-specific connector this pass; LATAM produced one dead slug and one ungranted stub.
+- 🟢 **Which makes it a build opportunity rather than an adoption one, and the parts are already permissive and regionally adopted.** The demand side is the strongest-evidenced on this shelf (**87% of 200 institutions across 19 countries using AI, 26% with a strategy**). The toolchain favours the region: **`chamilo/chamilo-lms`** has a disproportionate regional install base, **`falkenslab/moodle-mcp`** ships Spanish documentation, **`pablopc05/mcp-usc`** is a Spanish-language Moodle connector that can be forked rather than written, and **`learningequality/kolibri`** (MIT) is the offline-first answer for low-connectivity deployments. **A LATAM institutional connector is a two-week fork of an EMEA one, not a greenfield build.**
+
+#### Global
+
+- **All six MCP-reachable LMS platforms now have a permissive lane with a grant read from the file** — Canvas, Moodle, Google Classroom, Brightspace/D2L, Blackboard and Open edX were three such platforms at p339 and are six at p340. **The LMS seam is no longer the open question in scoping an education engagement.**
+- 🔴 **Two global cautions from the census, both of which cost money if missed.** **23 of 93 connectors (25%) carry no licence at all** — on Blackboard, 4 of 7 — and an unlicensed repository is a harder blocker than a copyleft one because it states no price. And **one repository's `LICENSE.md` is a bespoke proprietary licence** (`AStheTECH/mewcp-google-classroom`, the "AStheTECH Community License") that forbids commercial use, SaaS hosting and white-labelling: **it passes every naive licence check and fails a legal review** (`intel/trends.md` T29).
+- **On Open edX specifically, prefer LTI 1.3 over MCP.** Both MCP lanes that exist are **AGPL-3.0**; the LTI seam carries no such reach.
+
 ## Pass 339 · 2026-10-20 — the headline number is unresolvable to one figure, and the regulatory clock in EMEA just moved 16 months; both change how an engagement should be scoped
 
 ### Market size — a range, not a number

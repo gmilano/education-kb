@@ -4,6 +4,30 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 340 · 2026-10-20 — the integration seam of every Tier-1 platform, measured rather than asserted
+
+🟢 **p339's thesis on this shelf was that the integration seam decides whether an engagement is a fork or a plug-in. p340 measured that seam across the whole platform list** — **93 distinct connector repositories probed first-hand**, every grant read from the file and every absence established from a whole tree ([`p340-connector-licence-census`](../evidence/p340-connector-licence-census.2026-10-20-p340.tsv)).
+
+**Read this table before quoting an integration estimate.** "Permissive lanes" counts connectors with a permissive grant **read from the payload**, not a licence badge or a filename.
+
+| Tier-1 platform | platform's own grant | connectors probed | permissive lanes | copyleft lanes | ungranted | the seam to take |
+|---|---|---|---|---|---|---|
+| Canvas | AGPL-3.0 | 40 | **30** | 0 | 7 | 🟢 **MCP or LTI 1.3 — both clean.** Widest permissive supply in the sector |
+| Moodle | GPL-3.0 | 21 | **11** | 2 | 5 | 🟢 **MCP, selecting a permissive lane.** The platform's GPL does **not** reach a separate-program connector, and 11 of 13 granted lanes are permissive |
+| Google Classroom | 🔴 proprietary | 15 | **9** | 0 | 5 | 🟢 **MCP.** Teacher-side (`pengusto`) and student-side (`OmarNiazi`) lanes both MIT |
+| Brightspace / D2L | 🔴 proprietary | 7 | **5** | 0 | 2 | 🟢 **MCP.** `RohanMuppa` for the widest bench (17 authors), `JhostinAleck` for MFA and CI |
+| Blackboard | 🔴 proprietary | 7 | **3** | 0 | **4** | 🟡 **MCP, with care** — the worst-served platform here: more than half its connectors are ungranted, and the most capable lane rides an **undocumented internal API** |
+| Open edX | AGPL-3.0 | 2 | **0** | **2** | 0 | 🔴 **LTI 1.3, not MCP.** Both MCP lanes that exist are AGPL-3.0; the LTI seam carries no such reach |
+| Sakai · OpenOLAT · Chamilo · ILIAS · Kolibri | ECL-2.0 / Apache-2.0 / GPL-3.0 / GPL-3.0 / MIT | 0 | 0 | 0 | 0 | 🟡 **No MCP connector exists for any of them.** Use LTI 1.3, or the native plugin API where the platform's grant is permissive (**OpenOLAT**, **Kolibri**) |
+
+🔵 **The three findings that change an estimate.**
+
+1. 🔴 **The binding constraint is grant ABSENCE, not copyleft.** **23 of 93 connectors (25%) have no licence path anywhere in their tree** — against **4** copyleft connectors in the entire census. An AGPL connector states its price; an unlicensed one grants nothing at all and is the harder blocker. **These are the repositories roundups link to and scanners report as "no license found", which teams routinely misread as permissive by omission.**
+2. 🔴 **A licence *file* is not a grant.** `AStheTECH/mewcp-google-classroom` ships a 6,489-byte `LICENSE.md` that is a bespoke proprietary licence — non-commercial redistribution only, **SaaS hosting and white-labelling expressly forbidden**, grant revocable. **It passes every naive licence check and fails a legal review** (`intel/trends.md` T29).
+3. 🟢 **Five connectors are institution-specific and therefore regionally placed**, and they are the most directly reusable artefacts in the census: **`pablopc05/mcp-usc`** (EMEA — Universidade de Santiago de Compostela, Moodle), **`psychquant/che-ntucool-mcp`** (APAC — National Taiwan University, Canvas), **`sonaiengine/ku-portal-mcp`** (APAC — Korea University), **`skhdemo/uoft-quercus-mcp`** (North America — University of Toronto, Canvas), **`kimmahone/edu-workspace-mcp`** (APAC — Korean-language Google Workspace reader). All **MIT**. 🔵 **A new institutional connector is a fork of one of these, not a greenfield build** — which is the whole LATAM opportunity on this shelf, since no published LATAM connector survived probing.
+
+🟢 **One architectural control worth lifting wholesale:** `psychquant/che-ntucool-mcp` gates **grade and announcement writes behind an explicit human confirmation**, with reads unguarded. That is the human-oversight requirement of the EU AI Act's high-risk regime and of Korea's and Vietnam's education provisions, **already implemented in an MIT codebase** — cheaper to adopt than to specify.
+
 ## Pass 339 · 2026-10-20 — the real platforms an AI layer can sit on, and the integration seam that decides whether the engagement is a fork or a plug-in
 
 Education's analogue of Odoo-for-ERP is not one system; it is **four tiers**, and an engagement goes wrong when a client's "AI tutor" request is answered at the wrong tier. All grants below were read first-hand this pass (see `repos/foundations.md` for the ladder).
