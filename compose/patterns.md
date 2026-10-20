@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-20
 ---
 
+**Pass 331 · 2026-10-20.** **One new recipe, P26, and two amendments to standing patterns.** 🟢 **P26 is the first pattern in this file whose compliance argument is the same in four jurisdictions on three continents** — it is the architectural form of Trend 20 — **and every component in it was measured alive on two channels on 2026-10-20.** 🔴 **The amendments correct a dependency this file has named since p319 and that is dead on both channels.**
+
+## P26 — Graded assessment that writes to the client's gradebook, with the human-approval hop in the protocol
+
+🟢 **The problem it solves is regulatory and architectural at once.** Four jurisdictions — **Vietnam (Decision 33/2026/QĐ-TTg, effective 2026-08-15), Oklahoma and Maryland, the EU (Annex III pt 3 + Art. 14, 2027-12-02) and Korea (AI Basic Act, in force 2026-01-22)** — all draw their high-risk line at **automated assessment whose output stands alone without meaningful human review.** 🟢 **So build the review hop into the protocol rather than into a policy document, and the same deployment is compliant in all four.**
+
+### The stack — every row MIT, Apache-2.0 or BSD-3, every row measured alive p331
+
+| layer | repo / package | grant, first-hand | liveness, first-hand p331 |
+|---|---|---|---|
+| **LMS integration** | [lti-tool/lti-tool](https://github.com/lti-tool/lti-tool) · `@lti-tool/core` | 🟢 **MIT**, 1,077 B | 346 c · 6 a · 2026-10-19 · 🟢 **release 1.3.1, 2026-10-20** |
+| **autograder (notebooks)** | `nbgrader` | 🟢 **BSD-3-Clause** | 🟢 **0.9.6 — 2026-09-30** |
+| **autograder (alt.)** | `otter-grader` | 🟢 **BSD-3-Clause** | 🟢 **7.0.0 — 2026-07-27** |
+| **integrity / plagiarism** | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) · `@dodona/dolos` | 🟢 **MIT** | 🟢 **2.10.0 — 2026-10-19** |
+| **tutor / hint state** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT**, 1,073 B | 467 c · 5 a · 2026-10-16 |
+| **pedagogy evaluation** | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | 🟡 **MIT code**; corpora **CC BY-NC-SA 4.0** | 289 c (p327) |
+
+### The wiring, concretely
+
+1. **Launch.** The tool is an `@lti-tool/core` LTI 1.3 tool. Register it against the client's Moodle / Canvas / Open edX with **Dynamic Registration** (`services/dynamicRegistration.service.ts`) rather than by hand — it is the difference between a one-click install and a ticket to the LMS admin. Pick the storage adapter from `packages/`: **`postgresql`** or **`mysql`** on-premise, **`dynamodb`** or **`d1` + `hono`** if the client wants it at the edge.
+2. **Roster.** Read the cohort from **NRPS** (`services/nrps.service.ts`, `schemas/lti13/nrps/contextMembership.schema.ts`). 🟢 **Never ask the institution to export a CSV of students** — NRPS is the answer to the data-protection question before it is asked, and under **California AB 1159** it matters that the roster is read, used and not retained for training.
+3. **Collect and grade.** Submissions run through **`nbgrader`** or **`otter-grader`** in a sandbox. 🔴 **This is the step that is high-risk in all four jurisdictions, and it stays out of the high-risk class only because of step 5.**
+4. **Integrity.** **`@dodona/dolos`** runs similarity over the submission set. 🟢 **Report it as evidence to a human, never as a verdict** — an automated plagiarism finding that stands alone is the clearest example of the thing every one of the four instruments prohibits.
+5. 🟢 **The human hop — this is the pattern.** The machine score and the Dolos signal land in a **review queue**, not in the gradebook. An instructor approves, overrides or returns each one. **Only on approval does the tool call AGS** (`schemas/lti13/ags/scoreSubmission.schema.ts`) to write the score. 🟢 **The approval identity and timestamp are logged beside the submission.**
+6. **Feedback.** Hints and next-step guidance come from **`tutor-mcp`**, which holds learner state and review scheduling. Grade the *feedback* with **`learning-commons-org/evaluators`** — its Feedback family scores revision actionability, student-response specificity and 🟢 **withholding answers**, which is the property a tutor must have and an LLM does not have by default.
+
+### Why the compliance argument is one argument and not four
+
+| jurisdiction | what it asks | where P26 answers it |
+|---|---|---|
+| 🟢 **Vietnam** — Decision 33 entry 2 | Is the AI output the **sole basis** for the official outcome? | **No — step 5.** The official outcome is the instructor's approval |
+| 🟢 **Oklahoma / Maryland** | Human oversight; no AI decision on high-stakes outcomes | **Step 5**, with an audit record |
+| 🟢 **EU** — Annex III pt 3, Art. 14 | Effective human oversight of a high-risk system | **Step 5**; the AGS call is the documented control point |
+| 🟡 **Korea** — AI Basic Act | Human-oversight duties on high-impact education AI | **Step 5** |
+| 🟢 **California AB 1159** | Student data must not train models | **Step 2 + 3.** Roster read via NRPS, nothing retained for training |
+| 🟢 **NYC** — K-8 student-facing moratorium | No student-facing AI through grade 8 | 🟢 **Deploy teacher-facing only: steps 1–5 need no student surface** |
+
+🔵 **The reusable insight: the oversight hop is not a compliance tax, it is a protocol feature that already exists.** **LTI AGS was designed so that a tool writes a score deliberately. Putting a human in front of that call costs one queue and turns four regulatory regimes into one architecture.**
+
+🔴 **Cost honestly stated: the review queue is the whole build.** Steps 1–4 and 6 are integration of maintained libraries; step 5 is UI, state and an audit log, and it is where the estimate goes. 🔴 **And `Gap 316(i)` — the real wiring cost of the agent-to-LTI hop — remains the highest-value unmeasured number on this shelf.** **P26 does not close it. It names the place it should be measured once.**
+
+## Amendments to standing patterns (p331)
+
+🔴 **Every pattern in this file that reaches an LMS through `pylti1.3` must be re-cut.** `pylti1.3` is **dead on both channels — last commit 2022-11-21, last PyPI release `PyLTI1p3` 2.0.0 on 2022-11-20.** 🟢 **Substitute `@lti-tool/core` (MIT) for new builds, or `ltijs` (Apache-2.0, `ltijs` 7.0.7 of 2026-10-06) where a longer track record is required.** 🟡 **If the client's stack is Python and must stay Python, that is now an open problem this KB cannot solve with a maintained permissive library — say so in the bid rather than pinning a 2022 commit.**
+
+🟡 **P4 (EU) — the date metadata, not the conclusion.** The Annex III education deadline stands at **2027-12-02**. 🟡 **But this pass's sources give Reg. (EU) 2026/1744 an OJ publication of 2026-07-24 and entry into force of 2026-07-27, against the 2026-07-08 recorded in `intel/policy-matrix.tsv`.** 🔴 **Two new Art. 5 prohibitions phase in 2026-12-02 — six weeks out — and emotion inference in educational settings is the limb this sector touches.** **P4 should lead with that date, not with 2027.**
+
+---
+
+
 # Compose patterns — education
 
 **Pass 327 · 2026-10-19.** **Eleven recipes. P14 is new and it is the first pattern in this file

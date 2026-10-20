@@ -1,0 +1,13 @@
+leg	query	mode	yield	status
+global-agents	top open source AI agents education 2026 github MIT	extended	no education-specific ranked list; generic agent roundups only	NIL - 4th consecutive pass
+global-trending	github trending education AI 2026	extended	os-taxonomy (HELD since p326); no new education repo	NIL-new
+global-verticals	open source platform education ERP CRM MIT Apache	standard	entire first page = OpenEduCat vendor glossary in 6 languages; confirms no MIT/Apache education ERP exists	NIL - 9th consecutive pass, now a stable finding
+global-trends	AI education industry trends 2026	extended	experiments-to-operations, governance, agents, teacher-first, credentials; all vendor blogs	HELD
+north-america	AI education North America 2026 adoption regulation players	extended	134 bills/31 states, AB 1159, SB 1227, HR 8747, NYC K-8 moratorium, Canada AI for All 2026-06-04, FL HB 1361	ALL HELD - 4th consecutive nil; query saturated, apply p329 procurement-vehicle surgery
+emea	AI education EMEA 2026 adoption regulation players	extended	EU AI Act high-risk for education; omnibus; EC ethical guidelines; UK light-touch	HELD + date refinement
+apac	AI education APAC 2026 adoption regulation players	extended	Vietnam high-risk list incl education; Korea AI Basic Act 2026-01-22; China registration/labelling; Japan/Singapore voluntary; India platform-layer	LEAD -> targeted leg below
+latam	AI education LATAM 2026 adoption regulation players	extended	UNESCO IESALC 87/74/26 (200 inst, 19 countries); TALIS BR56/CL55/CO53/CR52 vs OECD 36; Observatory 2026-04-14 ECLAC; DEC survey 30k; ILIA 3rd ed; private non-profit 84/public 68/for-profit 52	MOSTLY HELD; TALIS country figures new
+targeted-lti	open source LTI 1.3 Advantage library 2026 maintained typescript node alternative pylti1.3	extended	ltijs (Apache-2.0, cert claim), lti-tool (MIT, TS-native), Godmartinz (dead), version conflict 5.9.9 vs 7.0.6	PRODUCTIVE - led to the pass headline
+targeted-eu	EU AI Act omnibus high-risk obligations delayed December 2027 education Annex III	extended	Reg (EU) 2026/1744; Annex III -> 2027-12-02; OJ 2026-07-24; in force 2026-07-27; Annex I -> 2028-08-02; 2 new Art.5 prohibitions 2026-12-02; Art.4 relaxed	PRODUCTIVE
+targeted-agents	open source AI tutor agent github 2026 MCP server education grading	extended	AI-Teaching-Agent, educational-assessment-ai-agent-platform, mcp-ai-tutor, Smart-Study-Agent, kvnloo/tutor-mcp	PRODUCTIVE - 2 MIT watch rows, 1 no-licence negative, 1 fork
+targeted-vn	Vietnam Decision 33/2026/QD-TTg high-risk AI list education automated assessment	extended	signed 2026-06-30, eff 2026-08-15, 46 systems/6 sectors, 3 education entries, legacy 2027-09-01, 2 conformity pathways, alongside Decree 142	PRODUCTIVE - closed the p269 reconciliation

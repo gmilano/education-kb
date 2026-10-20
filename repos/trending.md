@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 331 — the liveness verdict p329 installed has a false-negative class, and it has already mis-graded a row this KB recommends
+
+🔵 **p329 opened the `git` channel and p330 built the `(commits, authors, last_commit)` triple on it. The triple is the right instrument for a *repository*. It is the wrong one for a *library*, and this pass measures the difference on the same repositories on the same day.**
+
+🔴 **This KB built the fix at pass 24 and then stopped using it.** `compose/code/registry-recency-channel/README.md`, dated 2026-10-07, states the rule in its own words: *"citing tier → head commit date → any commit, including a typo fix in a README; installed tier → latest release upload → a deliberate publication. ⚠️ The two numbers are not interchangeable, and no claim may treat them as one series."* 🔴 **p329 and p330 re-graded the entire shelf for aliveness on the citing channel alone.**
+
+### 🔴 The dissociation, measured on both channels on 2026-10-20
+
+| repo | `git`: newest tag / head | registry: latest release | git-only verdict | true verdict |
+|---|---|---|---|---|
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🔴 **newest tag `v5.9.5`, 2024-05-01** · head 2026-10-13 | 🟢 **`ltijs` 7.0.7, 2026-10-06** (Apache-2.0) | 🔴 **"no release in 2.4 years"** | 🟢 **ALIVE — released two weeks ago** |
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | 2022-11-21, tag `2.0.0` same day | 🔴 **`PyLTI1p3` 2.0.0, 2022-11-20** | DEAD | 🟢 **DEAD — p330 CONFIRMED on a second channel** |
+| [openfun/django-lti-toolbox](https://github.com/openfun/django-lti-toolbox) | 🔴 2024-11-14 | 🔴 **2.0.0, 2024-07-15** | DEAD | 🟢 **DEAD — both channels agree** |
+| [Liberate-Labs/ltikit-sdk](https://github.com/Liberate-Labs/ltikit-sdk) | 2026-07-10 · newest ref a dependabot branch 2026-10-07 | 🔴 **does not resolve on npm — NO PACKAGE** | "alive-ish" | 🔴 **UNPUBLISHED — registry-only finding** |
+
+🔵 **Read the first two rows together, because that is the whole lesson.** 🔴 **A single method — tags and commits — called `ltijs` abandoned and called `pylti1.3` abandoned. One verdict was wrong by two and a half years and the other was right to the day.** 🟢 **The git channel cannot tell them apart; the registry channel separates them in one call each.** 🔴 **And `ltikit-sdk` runs the other way: alive on the git channel, nonexistent on the registry — which is the axis a client's build actually sits on.**
+
+🟢 **The rule, and it is cheap enough that no pass has an excuse:** **a repository that ships a package is graded on two channels or it is not graded.** One `curl registry.npmjs.org/<pkg>` or `pypi.org/pypi/<pkg>/json`. **Tags are a convention; a release is an event.** 🔵 **`ltijs` is the proof that a maintainer can stop honouring the convention without stopping the work.**
+
+### 🟢 The rest of the tier, re-measured on the registry channel this pass
+
+| package | latest release | grant, from the registry | state |
+|---|---|---|---|
+| `@lti-tool/core` | 🟢 **1.3.1 — 2026-10-20, today** | 🟢 **MIT** | 🟢 **ALIVE.** 31 releases since 2025-10-02; promoted to the shelf this pass |
+| `@dodona/dolos` | 🟢 **2.10.0 — 2026-10-19** | 🟢 **MIT** | 🟢 **ALIVE.** P11's integrity engine, released yesterday |
+| `scorm-again` | 🟢 **3.4.6 — 2026-10-08** | 🟢 **MIT** | 🟢 **ALIVE on both channels** — p330 had the head at 2026-10-20 |
+| `ltijs` | 🟢 **7.0.7 — 2026-10-06** | 🟢 **Apache-2.0** | 🟢 **ALIVE** — see the dissociation above |
+| `nbgrader` | 🟢 **0.9.6 — 2026-09-30** | 🟢 **BSD-3-Clause** (full text in the metadata field) | 🟢 **ALIVE.** The `.ipynb` autograding incumbent |
+| `otter-grader` | 🟢 **7.0.0 — 2026-07-27** | 🟢 **BSD-3-Clause** | 🟢 **ALIVE.** Major version this year |
+| `django-lti-toolbox` | 🔴 **2.0.0 — 2024-07-15** | MIT | 🔴 **DEAD** |
+
+🟢 **Control: `bogus-control-pkg-p331-zz` → NO-RESOLVE on npm.** The registry channel discriminates; a 200 from it means something.
+
+### 🟢 `ltijs` PLACED, and the placement carries a risk this KB had not recorded
+
+🟢 **LATAM — Brazil, from the commit record: 429 of 575 commits come from a single `yahoo.com.br` address.** 🔵 **The most widely used open LTI library in the world is maintained from Brazil** — a fact worth holding in a region where Globant is strong and where this KB's procurement layer is thinnest.
+
+🔴 **And the same record carries the concentration risk.** The second author domain is **`ltiaas.com`, 90 commits — the maintainer's commercial hosted LTI product.** Measured this pass: **51 commits in 2026 but only 2 distinct authors in 2026**, against **17 lifetime**, and the current head is a dependabot merge (`#293`, `shell-quote`). 🟡 **So: actively released, narrowly maintained, with a commercial successor in the same hands.** **That qualifies the 🟢 *Recommended* grade in `intel/open-gaps.md` without overturning it — and it is exactly why `@lti-tool/core`, with 6 authors and 235 commits in 2026, now sits beside it rather than behind it.**
+
+### 🔴 One row killed on the git channel
+
+🔴 **`Godmartinz/Node-LTI-1.3-library` — DEAD.** 125 commits, 6 authors, **default branch last touched 2019-08-02**, and the newest ref of any kind is a **2022-12-30 dependabot branch**. The search channel offered it as an LTI candidate this pass. **It is seven years stale on its default branch.**
+
+---
+
 ## 2026-10-20 — Pass 330 — the activity channel turned on the integration tier, and it also answers the placement question this KB kept declaring open
 
 🔵 **p329 opened the git smart-HTTP channel to measure *activity*. The same clone carries three more answers this KB has been paying other channels for — and in two cases failing to get at all.** What one `git clone --filter=blob:none --no-checkout` pays, demonstrated this pass over 16 repositories:

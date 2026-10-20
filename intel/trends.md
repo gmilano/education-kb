@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-20
 ---
 
+**Pass 331 · 2026-10-20 (fourth pass of this date). Two trends added. One is a method law with a measured false-negative behind it; the other is the first cross-regional convergence this KB can name, and it collapses four jurisdictions onto one architecture.** 🔴 **And the pass's own indictment, stated before its findings: the instrument that falsifies p330's liveness method has been in `compose/code/` since pass 24, and the artefact that falsifies p330's LTI claim has been in `evidence/` since pass 232.** **Neither needed a search. Both needed a `grep`.**
+
+## 🔴 Trend 19 — NEW: liveness is a two-channel property, and single-channel grading has already mis-graded this sector's integration layer
+
+**Trend 17 (p329) said open education software is aging in exactly one layer — LMS integration. That was right about the layer and wrong about one of the rows in it, and the error was caused by the instrument, not the evidence.**
+
+🟢 **Measured first-hand at p331, both channels, same day, same repositories:**
+
+| repo | `git`: newest tag / head | registry: latest release | single-channel verdict | two-channel verdict |
+|---|---|---|---|---|
+| `Cvmcosta/ltijs` | 🔴 tag **`v5.9.5`, 2024-05-01** · head 2026-10-13 | 🟢 **`ltijs` 7.0.7, 2026-10-06** | 🔴 *"abandoned 2.4 years"* | 🟢 **ALIVE** |
+| `dmitry-viskov/pylti1.3` | 2022-11-21, tag `2.0.0` | 🔴 **`PyLTI1p3` 2.0.0, 2022-11-20** | DEAD | 🟢 **DEAD — confirmed** |
+| `openfun/django-lti-toolbox` | 🔴 2024-11-14 | 🔴 **2.0.0, 2024-07-15** | DEAD | 🟢 **DEAD — confirmed** |
+| `Liberate-Labs/ltikit-sdk` | 2026-07-10 · dependabot ref 2026-10-07 | 🔴 **NO PACKAGE on npm** | "alive-ish" | 🔴 **UNPUBLISHED** |
+
+🔴 **The first two rows are the trend.** **One method — tags and commits — called both repositories abandoned. It was wrong about `ltijs` by two and a half years and right about `pylti1.3` to the day, and it could not distinguish the cases.** 🟢 **The registry channel separates them in one call each.** 🔴 **`ltikit-sdk` fails in the opposite direction — alive on git, nonexistent on the registry, which is the axis a client's build actually sits on.**
+
+🔵 **Why this is a trend about the sector and not only about this KB.** **Education integration libraries are exactly the artefact class where the two channels diverge**: they are small, they are depended on rather than read, their maintainers ship from CI, and **a maintainer who stops tagging has not stopped working.** `ltijs` published **31 releases without a matching tag since 2024-05-01** while its maintainer's effort visibly migrated toward a commercial product in the same namespace (`ltiaas.com`, 90 commits). **A studio that graded it on tags would have ripped out a live dependency; one that graded it on commits alone would have missed that only 2 people touched it in 2026.**
+
+🟢 **The law, and it is cheap enough that no pass has an excuse: a repository that ships a package is graded on two channels or it is not graded.** One `curl registry.npmjs.org/<pkg>` or `pypi.org/pypi/<pkg>/json`. **Tags are a convention; a release is an event; a commit is neither.** 🟢 **The triple p330 installed becomes a quintuple: `(commits, authors, last_commit, latest_release, release_date)`** — and the two halves answer different questions. **This KB wrote that distinction down at pass 24 and then re-graded its whole shelf without it.**
+
+## 🟢 Trend 20 — NEW: four jurisdictions on three continents are converging on the same regulatory trigger, and one architecture clears all of them
+
+🟢 **This is the first cross-regional convergence this KB can state from named instruments rather than from commentary, and it is commercially the most useful thing in this pass.** The trigger is not *"AI in education"*. **It is automated decision-making without meaningful human review**, and four jurisdictions now draw their line in nearly the same place:
+
+| jurisdiction | instrument | the trigger, as written |
+|---|---|---|
+| 🟢 **APAC — Vietnam** | **Decision 33/2026/QĐ-TTg**, effective 2026-08-15 (held since p269; **entry wording new this pass**) | Automated testing and ranking of learners **where the result counts as the official outcome** — high-risk where AI output is the **sole basis without meaningful human review** |
+| 🟢 **North America — Oklahoma, Maryland** | state law (held) | **Human oversight required; AI may not make high-stakes decisions about students** |
+| 🟢 **EMEA — EU** | AI Act Annex III pt 3 + Art. 14, obligations 2027-12-02 (held) | High-risk where the system **determines access, admission or an educational path** — Art. 14 requires effective human oversight |
+| 🟡 **APAC — Korea** | AI Basic Act, in force 2026-01-22 (held) | Education named **high-impact**, with human-oversight duties |
+
+🟢 **So the same design decision is the compliance answer in all four: the model proposes, a named human disposes, and the hop is logged.** 🔵 **This is not a compliance cost — it is a product specification that happens to be free, because it is also the pedagogically defensible design.** 🟢 **And it is mechanically expressible in the layer this pass promoted: `@lti-tool/core`'s AGS `scoreSubmission.schema.ts` is where the human-approved score crosses into the gradebook, which makes the oversight hop auditable in code rather than asserted in a policy document.**
+
+🔴 **The caveat that keeps this honest: Vietnam's per-entry wording comes from secondary summaries and a truncated official text, and the EU's and Korea's limbs are held from earlier passes' search-channel sweeps.** **The convergence is strong enough to design against and not yet strong enough to warrant in a contract.** 🟢 **One lookup per jurisdiction on the primary text closes it, and `intel/policy-matrix.tsv` now carries the instrument numbers so that each costs a lookup rather than a sweep.**
+
+🔵 **The corollary worth carrying into every engagement: stop asking a client "is AI allowed here?" and start asking "does the AI output stand alone?"** **The first question has twelve different answers across this KB's four regions. The second has one, and it is architectural.**
+
+---
+
+
 # Current trends — education
 
 **Pass 329 · 2026-10-20 (second pass of this date). Four trends added, one of them a sector signal this KB could not

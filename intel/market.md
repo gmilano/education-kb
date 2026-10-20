@@ -4,6 +4,26 @@ region: Global
 updated: 2026-10-20
 ---
 
+**Pass 331 · 2026-10-20 (fourth pass of this date).** 🟢 **One genuinely new regulatory instrument, one date correction to this file's own EU row, and a LATAM finding that answers the measurement complaint p330 closed with.** 🔴 **And one thing this pass did NOT find, said first because the silence would otherwise read as coverage: the North America news leg returned nothing this file does not already hold — for the fourth consecutive pass.**
+
+🔵 **The regional sweep was run globally and once per region, as prescribed. Here is the honest yield, leg by leg:**
+
+| leg | yield | status |
+|---|---|---|
+| **APAC** | 🟢 **The Vietnam two-instrument conflict open since p269 is CLOSED — Decree 142 and Decision 33 compose, and the "two dates" were one date and its grace period** | 🟢 **The instrument was already held (line 149). What is new: the reconciliation, the third education entry, the two conformity pathways, and 2027-09-01 confirmed directly** |
+| **EMEA** | 🟡 **Reg. (EU) 2026/1744 — OJ publication 2026-07-24, entry into force 2026-07-27** | 🟡 **Refines a date this file carries as 2026-07-08. The 2027-12-02 deadline agrees on both readings** |
+| **LATAM** | 🟢 **The most-deployed open LTI library in the world is maintained from Brazil — first-hand from the commit record** | 🟢 **NEW, and it is an artefact finding rather than a statistic** |
+| **North America** | 🔴 **Nothing new.** 134 bills / 31 states, AB 1159, SB 1227, H.R. 8747, NYC K-8 moratorium, Canada "AI for All" — **all already held** | 🔴 **DECLARED GAP, and it is the fourth consecutive pass the NA leg has returned held material.** See the method note below |
+| **Global** | 🟡 Reproduced the trend layer; the one artefact it surfaced (`os-taxonomy`) is held and its licence re-read identically | 🟡 Held |
+
+🔴 **The NA leg's repeated nil return is now a statement about the query, not the region, and this file should stop paying for it in its current form.** `evidence/p271-websearch.2026-10-17-p271.tsv` recorded the same outcome three passes ago with the same query string, and named the one datum that was new then (**AFT National Academy for AI Instruction**, with Microsoft, OpenAI and Anthropic). 🟢 **The standing query `AI education North America 2026 adoption regulation players` has been saturated for four passes. p329 already proved the fix on this very file by deleting the word *players* and asking about the procurement vehicle instead.** **Apply the same surgery to the NA leg: ask about the named district or state contract, not the region.**
+
+🟢 **What did move North America this pass came from the repository channel, not the news channel** — the dead-LTI risk line p330 wrote into the NA block now has a live, MIT, US-institution-backed answer. **It is under `### North America` below.**
+
+---
+
+
+
 # Market intelligence — education
 
 **Pass 329 · 2026-10-20 (second pass of this date).** 🟢 **The gap this file declared for four consecutive passes is
@@ -734,6 +754,27 @@ anything about my institution?" that is not a bespoke integration — and becaus
 
 ### North America
 
+### 🟢 The dead-LTI risk line p330 put in your bid now has a named, live, US-backed answer (added p331)
+
+🔴 **p330 wrote the risk honestly: every district integration in this region sits on `pylti1.3`, and it has not been touched since 2022-11-21.** This pass **confirmed that on a second channel** — `PyLTI1p3` 2.0.0 was uploaded to PyPI on **2022-11-20**, one day before the last commit. **The library is dead on both the commit record and the release record. The risk line stands.**
+
+🟢 **What changes is that the migration target is now named, measured and placed in this region.** `lti-tool/lti-tool` — 🟢 **MIT** (1,077 B, read first-hand p331), **346 commits · 6 authors · head 2026-10-19**, with **235 of those commits in 2026 by 6 authors**, and `@lti-tool/core` **v1.3.1 published 2026-10-20 — the day of this pass**. Complete LTI 1.3 Advantage surface confirmed in code: launch, **AGS**, **NRPS**, Deep Linking, **Dynamic Registration**, JWKS.
+
+🟢 **It is placed in North America institutionally, not by inference.** 161 of 346 commits at `-0400` and 62 more at `-0500`, and the third author domain is **`longsight.com` — 28 commits — Longsight Inc., a US Sakai/Tsugi hosting firm.** 🔵 **This KB already holds `LongsightGroup/qti3` (MIT).** **An LMS-hosting company in this region commits to this library. That is the sentence that de-risks the migration in a bid.**
+
+🟢 **And its shape clears this region's three binding constraints without an architecture argument** — which is the actual commercial point:
+
+| constraint, already held in this file | why `@lti-tool/core` clears it |
+|---|---|
+| **California AB 1159** — student data may not train AI models | 🟢 The library is an **integration layer, not a model**. Nothing in `zod` + `jose` trains on anything |
+| **Oklahoma / Maryland** — human oversight required, no AI decisions on high-stakes outcomes | 🟢 **AGS writes the score the human approves.** The gradebook hop is explicit and auditable in `scoreSubmission.schema.ts` |
+| **NYC** — one-year moratorium on student-facing AI through grade 8 | 🟢 **Teacher-facing deployment needs the same LTI launch and no student surface.** The integration is sellable inside the moratorium |
+
+🟢 **The bid, concretely:** quote the `pylti1.3` → `@lti-tool/core` migration as a **named, dated de-risking line item** with a two-package dependency surface (`zod`, `jose`) against the 10-package closure this KB payload-verified for `ltijs`. 🔵 **A district CIO can be shown two release dates — 2022-11-20 and 2026-10-20 — and needs no further argument.**
+
+🔴 **Gap, declared rather than left silent: no procurement vehicle or contract notice was found for this region this pass.** The news leg returned only material this file already holds (134 bills / 31 states, AB 1159, Idaho SB 1227, H.R. 8747, the NYC moratorium, Canada's "AI for All" of 2026-06-04). **The cooperative-purchasing route p329 named — Sourcewell, OMNIA Partners, NASPO ValuePoint — remains this region's only recorded vehicle and remains unverified at source, because every procurement host tested at p329 answered 403 at CONNECT.**
+
+
 ### 🔴 The Python LTI dependency under every district integration is dead, and that is a risk line in your bid (added p330)
 
 **Measured first-hand at p330 on the git channel: `dmitry-viskov/pylti1.3` — the MIT LTI 1.3 Advantage library this KB has recommended since p319 as *"the repo that gets your agent into the client's existing LMS"* — has no commit on any branch or tag since `2022-11-21`.** 178 commits, 16 authors, newest tag `2.0.0` the same day, final substantive commit *"Support Python 3.11"*. `openfun/django-lti-toolbox`, the other permissive Python option, is dead since `2024-11-14`.
@@ -934,6 +975,31 @@ upper-secondary extension is scope, and should be priced as scope.
    falling (17% student confidence, intent down 9 points), credibility is the product.
 
 ### EMEA
+
+### 🟡 The EU deferral is confirmed on a third sweep, and this file's publication date for it is off by sixteen days (added p331)
+
+🟢 **The substance is unchanged and now corroborated a third time, independently: Annex III stand-alone education obligations bite on 2027-12-02, not 2026-08-02.** p328 caught the move, p331's EMEA leg reproduces it from a fresh set of sources, and **every source this pass agrees on the deadline**.
+
+🟡 **The correction is narrow and it is to this file's own metadata, not its conclusion.** `intel/policy-matrix.tsv` records *"published as Reg. (EU) 2026/1744 of 2026-07-08."* **This pass's sources give the Official Journal publication as 2026-07-24 and entry into force as 2026-07-27.**
+
+| datum | this file carried | p331 sources | status |
+|---|---|---|---|
+| instrument | Reg. (EU) 2026/1744 | Reg. (EU) 2026/1744 | 🟢 agrees |
+| Annex III education deadline | **2027-12-02** | **2027-12-02** | 🟢 agrees — three independent sweeps |
+| Annex I embedded deadline | 2028-08-02 | 2028-08-02 | 🟢 agrees |
+| OJ publication | **2026-07-08** | 🟡 **2026-07-24** | 🟡 **CONFLICT — 16 days** |
+| entry into force | not recorded | 🟡 **2026-07-27** | 🟡 **new, unverified at source** |
+
+🔴 **Neither date is verified at source, and the reason is recorded: no EU host in this session's reach answers.** **Both are search-channel figures.** 🟢 **The resolution costs one lookup on EUR-Lex by CELEX number and should be spent before any client-facing compliance date is quoted** — the deadline is safe to quote today, the publication date is not.
+
+🟢 **Three things in the same instrument that are NOT deferred, and they are the near-term sales surface:**
+
+- **Art. 50 transparency** — unmoved, in application. **This file already records a source disagreement on its exact date (2026-08-02 vs 2026-11-02); that disagreement is still unresolved and is still recorded rather than resolved.** Either way it is **already live**.
+- 🔴 **Two new Art. 5 prohibitions phase in on 2026-12-02** — **six weeks out.** New this pass; this file had not recorded them. **Education-relevant because emotion inference in educational settings is the Art. 5 limb this sector touches.**
+- 🟡 **Art. 4 AI-literacy duty relaxed** — from a hard obligation to *"take measures"* for staff. **Softer, not gone, and it is the cheapest compliance deliverable in the region: a staff AI-literacy programme is now a measure you can evidence rather than a bar you must clear.**
+
+🟢 **The commercial read: a ~14-month build window on assessment and admissions products, and two compliance deliverables sellable this quarter** — an Art. 50 transparency review and an Art. 4 staff-literacy programme — **while Annex III conformity work is scoped against 2027-12-02.** 🔵 **Lead with the near dates. The deferral is a planning fact, not a reprieve, and a client who hears only "2027" will under-scope the December 2026 prohibitions.**
+
 
 ### 🟢 Switzerland's Openki is the healthiest open education codebase in this KB, and the accessibility gap here has a name and no artefact (added p330)
 
@@ -1147,6 +1213,46 @@ the *metadata* workload, not just the tutor demo.
 
 ### APAC
 
+### 🟢 The Vietnam reconciliation open since p269 can now be CLOSED, and the two instruments were never in conflict (added p331)
+
+🔴 **This file's APAC row has carried an explicit standing warning for three passes:** `intel/policy-matrix.tsv` line 149 — *"TWO instruments, two dates, same jurisdiction and function, never reconciled on any shelf. Do NOT brief either date alone and do NOT collapse them."* **Decree 142/2026/NĐ-CP (GATED, eff. 2026-04-30) against Decision No. 33/2026/QĐ-TTg (compliance 2027-03-01, +6 months for education systems already operating before 2026-08-15).**
+
+🟢 **This pass's APAC leg resolves it, and the resolution is that the premise of the conflict was wrong: the two instruments do not compete, they compose.** Reported consistently across this pass's sources: **Decision 33/2026/QĐ-TTg operates *alongside* Decree 142/2026/NĐ-CP.**
+
+| instrument | what it actually does | date |
+|---|---|---|
+| **Decree 142/2026/NĐ-CP** | 🟢 **The framework** — risk tiers, and the duty on providers to **self-classify** before deployment | effective **2026-04-30** |
+| **Decision 33/2026/QĐ-TTg** | 🟢 **The LIST the framework refers to** — promulgates **46 high-risk AI systems across 6 sectors** | signed **2026-06-30**, effective **2026-08-15** |
+
+🔵 **A framework decree and a promulgated list are the normal two-instrument shape of Vietnamese regulation. There was never a question of "which governs" — the Decree governs, and the Decision tells you whether you are in scope.** 🟢 **So both dates brief together: self-classification has been a live duty since 2026-04-30, and since 2026-08-15 there is a published list to classify against.**
+
+🟢 **And the two compliance dates reconcile arithmetically, which is the part that should have been caught earlier.** This file carried *"compliance 2027-03-01 and a further six-month grace for education systems already operating before 2026-08-15."* 🟢 **2027-03-01 + six months = 2027-09-01 — and two independent sources in this pass's sweep state the deadline for already-operating healthcare, education and finance systems as exactly 2027-09-01.** 🔵 **The "two dates" were one date and its own grace period.**
+
+| date | what it is | confidence |
+|---|---|---|
+| **2026-04-30** | Decree 142 in force — self-classification duty live | 🟢 held, two passes |
+| **2026-08-15** | Decision 33 in force — the list applies | 🟢 **corroborated this pass** |
+| **2027-03-01** | general compliance date | 🟢 held (p269, p271) |
+| 🟢 **2027-09-01** | **already-operating education systems — the one to put in a plan** | 🟢 **2027-03-01 + 6 months, and stated directly by two sources this pass** |
+
+### 🟢 New this pass: the three education entries, by name
+
+🟢 **Education is one of the six sectors, and it carries three entries.** This file has had *"automated assessment and behavioural monitoring named"* since p269; **the third entry and the conditions are new:**
+
+| # | the education entry, as reported | what it reaches in a studio deliverable |
+|---|---|---|
+| 1 | 🟢 **NEW — large-scale self-study content generation built on uncontrolled data** | 🔴 A RAG tutor over an unvetted corpus. **Curating and declaring the corpus is the mitigation** |
+| 2 | **Automated testing and ranking of learners where the result counts as the official outcome** | 🔴 Autograding of record. 🟢 **The condition is the escape hatch — below** |
+| 3 | **Biometric or emotion monitoring of learners** | 🔴 Proctoring and attention tracking. **Keep out of scope** |
+
+🟢 **Also new: conformity has two pathways, and Decision 33 specifies which applies per system** — mandatory **third-party certification** before deployment, **or** provider **self-assessment** (optionally via an approved body). 🔵 **Which pathway each education entry draws is now the highest-value unknown in this block: it is the difference between a certification line item and a documentation one.**
+
+🟢 **The architectural lever, now attached to a named list entry rather than to a decree in general.** Entry 2 reaches automated assessment **only where the AI output is the sole basis for the decision without meaningful human review.** 🟢 **A human-in-the-loop grading design keeps the product out of the high-risk class entirely** — the same shape Oklahoma's and Maryland's human-oversight rules reward and the EU's Art. 14 requires. **One architecture, four jurisdictions: see Trend 20 and `compose/patterns.md` P26.**
+
+🔴 **Caveat inherited by anything built on this block: the per-entry wording above comes from secondary summaries plus a truncated reading of the official text.** Primary sources are the Vietnamese texts on `thuvienphapluat.vn` and `english.luatvietnam.vn`. 🟢 **The instrument number, the signing date (2026-06-30), the effective date (2026-08-15), the 46-systems/6-sectors count and the 2027-09-01 transition are each carried by two or more independent sources this pass. The per-entry wording and the per-entry conformity pathway are not.**
+
+🟡 **The rest of the region is held, not new:** Korea's AI Basic Act in force 2026-01-22, China's registration-and-labelling regime, Singapore and Japan at the voluntary end (Japan's AI Promotion Act a principles law with no penalties), India regulating at the platform layer via amended IT rules on AI-content labelling. 🔴 **And p329's gap stands: no APAC procurement vehicle surfaced this pass either.** China's "AI Plus Education" buying remains recorded as provincial-level, with no named vehicle.
+
 ### 🟡 The region's artefacts are the strongest in this KB and the LTI finding does not reach them — which is itself the opening (added p330)
 
 🔴 **The APAC regional query returned nothing new for a fourth pass** — Korea's AI Basic Act, Vietnam's risk-tiered law, Japan's penalty-free principles act and China's provincial buying are all held, and the vendor-named player list (Google, Microsoft, IBM, Pearson, Byju's) is not carried.
@@ -1320,6 +1426,33 @@ price it as greenfield, because there is nothing to fork.
    automation, with the fewest regulatory blockers of any major market in this KB.
 
 ### LATAM
+
+### 🟢 The most-deployed open LTI library in the world is maintained from Brazil — measured, not inferred (added p331)
+
+🔴 **p330 closed this block with a complaint: *"LATAM is invisible to the instrument, not absent from the sector."* 🟢 This pass pointed the instrument at the global LTI stack and found a LATAM artefact at the centre of it.**
+
+🟢 **`Cvmcosta/ltijs` — Apache-2.0 (11,361 B, read first-hand p331) — is maintained from Brazil.** From the commit record, first-hand: **429 of 575 commits come from a single `yahoo.com.br` address.** It is **575 commits, 17 authors lifetime, head 2026-10-13**, and `ltijs` **7.0.7 was released on 2026-10-06**. 🔵 **This is the LTI library the open education ecosystem actually installs, and this KB has recommended it since p232 without ever noticing where it comes from.**
+
+🔴 **And the same record carries the risk, which is what makes this an opportunity rather than a trophy.** Measured this pass: **51 commits in 2026 by only 2 distinct authors**, against 17 lifetime. The current head is a dependabot merge. And the second author domain is 🔴 **`ltiaas.com` — 90 commits — the maintainer's own commercial hosted LTI product.**
+
+🟢 **So the opening is maintenance capacity, and it is unusually cheap to occupy.** **A studio that puts two engineers on `ltijs` becomes the second name on the most-deployed open LTI library in the sector** — in the region where this KB's procurement layer is thinnest and where a credible open-source credential is worth more than a case study. 🔵 **Contrast the alternative route into the same layer: `@lti-tool/core` is MIT, healthier (235 commits in 2026 by 6 authors) and North American. 🟢 Propose `lti-tool` for a new build; propose *contributing to* `ltijs` as the regional capability play.**
+
+🟢 **This pass's new quantitative detail for the region — teacher-level AI use, from OECD TALIS 2024:**
+
+| country | secondary teachers who used AI in the previous year |
+|---|---|
+| 🟢 **Brazil** | **56%** |
+| 🟢 **Chile** | **55%** |
+| 🟢 **Colombia** | **53%** |
+| 🟢 **Costa Rica** | **52%** |
+| OECD average | **36%** |
+
+🔵 **Four LATAM countries run 16–20 points above the OECD average on teacher AI use.** 🟢 **Read against the institutional figures this file already holds — UNESCO IESALC: 87% of 200 institutions across 19 countries using AI somewhere, 74% in teaching and learning, and only 26% with a formal AI strategy — the region's profile is unambiguous: the highest practitioner adoption in the world sitting on the thinnest governance layer.**
+
+🟢 **The engagement that fits, and it now has a local artefact to point at:** a governance-and-integration package — an institutional AI strategy (the 26% gap), delivered on an LTI integration into the LMS the institution already runs, **built on or contributed to a library maintained in the region**. 🔵 **The 84% / 68% / 52% split this file already holds — private non-profit, public, private for-profit — says to lead with private non-profit universities, which are both the most adopted and the most able to buy.**
+
+🔴 **Held, not new, and restated so the figures are not re-sourced next pass:** the UNESCO LAC Observatory on AI in Education (launched 2026-04-14 at ECLAC, Santiago), the ILIA third edition, the Digital Education Council's 2026 LATAM survey (30,000+ responses, 29 institutions), and ChileCompra Directive 44/2026 as the region's one named procurement vehicle.
+
 
 ### 🔴 The region's measurement problem is now specific: LATAM is invisible to the instrument, not absent from the sector (added p330)
 

@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 331 — the platform tier did not move, and the layer that connects an agent TO a platform did; both halves of that sentence are measured
+
+🔴 **Ninth consecutive pass with no new platform.** `Moodle`, `Open edX`, `Canvas`, `Kolibri`, `OpenEduCat`, `Sakai`, `BigBlueButton`, `H5P`, `Openki` and `RosarioSIS` are unchanged from p330 — **licences as this file already records them; only `Openki` (AGPL-3.0) and `RosarioSIS` (GPL-2.0) were read first-hand, at p330**, and this pass's `open source platform education ERP CRM MIT Apache` leg returned **nothing new** — its entire first page was **OpenEduCat's own glossary**, a vendor site, in six languages.
+
+🟢 **That nil return is itself a stable, useful finding, and it is worth stating once in the terms a studio can use.** **There is no MIT or Apache-2.0 education ERP, SIS or LMS, and there has not been one in nine passes of looking.** The vendor glossary this pass surfaced states the reason from the inside: **OpenEduCat is built on Odoo and is therefore LGPL-3.0, because that is what the framework underneath it requires.** 🔵 **The platform tier of this sector is copyleft by construction, not by accident — every mature option inherits its licence from a framework or a predecessor.**
+
+### 🟢 The consequence, and it is the most actionable thing this file can say
+
+🟢 **If the platform layer is permanently copyleft, then the permissive layer a studio can actually own is the INTEGRATION layer — and that layer is now healthy, which it was not at p330.**
+
+| layer | licence reality | what Globant can own |
+|---|---|---|
+| **platform** (LMS, SIS, ERP) | 🔴 **Copyleft across the tier — GPL / AGPL / LGPL — for nine passes of looking** | 🔴 **Nothing proprietary.** Configure, extend under the same grant, host |
+| 🟢 **integration** (LTI, SCORM, QTI, OneRoster) | 🟢 **MIT and Apache-2.0** | 🟢 **A proprietary deliverable that talks to any of them** |
+| **agent / tutor** | 🟢 MIT / Apache-2.0 | 🟢 Proprietary |
+
+🟢 **Measured first-hand this pass, the integration row that makes this strategy real:** `lti-tool/lti-tool` — **MIT** (1,077 B), **346 commits · 6 authors · head 2026-10-19**, `@lti-tool/core` **v1.3.1 released 2026-10-20**, complete LTI 1.3 Advantage surface in code (launch · AGS · NRPS · Deep Linking · Dynamic Registration · JWKS), **two dependencies**, and storage adapters for `postgresql` · `mysql` · `dynamodb` · `d1` · `hono`. 🟢 **`Cvmcosta/ltijs`** — Apache-2.0, `ltijs` **7.0.7 of 2026-10-06** — is the mature alternative. **Both are permissive. Neither is copyleft. Both speak to every platform in the tier above.**
+
+🔵 **So the architecture this file has been circling for nine passes now has a name: do not fork the platform, sit beside it.** **An MIT LTI tool launched from a GPL Moodle keeps the deliverable yours and the client's LMS untouched** — and it is the only shape in this sector that is simultaneously licence-clean, upgrade-safe and sellable.
+
+### 🔴 The platform-tier boundary restated, because the integration finding does not soften it
+
+🔴 **`Openki` (AGPL-3.0) and `RosarioSIS` (GPL-2.0) stay where p330 put them** — Openki still the healthiest contributor base in this KB (**88 authors, 19 of them in 2026**, gitlab.com, EMEA/Switzerland), still **not an LMS and not a SIS**, and still **AGPL §13, which reaches the users of a hosted service.** **Read Openki for the engagement model; do not fold it into a proprietary deliverable.**
+
+🟡 **One row qualified on the licence axis, not the activity axis:** `withmarbleapp/os-taxonomy` is **ODbL-1.0 + CC BY-SA 4.0** — re-read blind this pass at **25,289 bytes**, byte-identical to p326's figure. 🟢 **The reproduction is the point: the licence channel is stable across five days and two passes.** **ODbL leaves a *produced work* yours while the database stays share-alike — the boundary P13 draws, unchanged.**
+
+---
+
+
 # Vertical platforms — education
 
 ## Pass 330 — the platform tier is measurable for the first time, because the activity channel turns out not to care which forge it points at

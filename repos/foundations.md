@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 331 · 2026-10-20 (fourth pass of this date) — this file's liveness column is measured on the wrong channel for half its rows, and a replacement for its dead recommendation was in `evidence/` all along
+
+🔴 **p330 fixed this file's worst defect and introduced a subtler one.** It replaced the bare commit count with the triple `(commits, authors, last_commit)` — correct, and it is how `pylti1.3` was caught. 🔴 **But the triple reads the *citing* channel, and more than half the rows in this file are **libraries**, whose liveness event is a **release**, not a commit.**
+
+🟢 **This KB built the right instrument at pass 24 and has not pointed it at this file since.** `compose/code/registry-recency-channel/README.md`, 2026-10-07, in its own words: *"citing tier → head commit date → any commit, including a typo fix in a README; installed tier → latest release upload → a **deliberate publication**. ⚠️ The two numbers are not interchangeable."*
+
+### 🔴 The two-channel measurement, run this pass — and the row it exonerates
+
+| repo | `git`: newest tag / head | registry: latest release | single-channel verdict | 🟢 **two-channel verdict** |
+|---|---|---|---|---|
+| https://github.com/Cvmcosta/ltijs | 🔴 newest tag **`v5.9.5`, 2024-05-01** · head 2026-10-13 | 🟢 **`ltijs` 7.0.7, 2026-10-06** | 🔴 *"abandoned 2.4 years"* | 🟢 **ALIVE — released two weeks ago** |
+| https://github.com/dmitry-viskov/pylti1.3 | 2022-11-21 | 🔴 **`PyLTI1p3` 2.0.0, 2022-11-20** | DEAD | 🟢 **DEAD — p330 confirmed, to the day, on a second channel** |
+| https://github.com/openfun/django-lti-toolbox | 🔴 2024-11-14 | 🔴 **2.0.0, 2024-07-15** | DEAD | 🟢 **DEAD — both channels agree** |
+| https://github.com/Liberate-Labs/ltikit-sdk | 2026-07-10 · newest ref dependabot 2026-10-07 | 🔴 **NO PACKAGE — does not resolve on npm** | "alive-ish" | 🔴 **UNPUBLISHED** |
+
+🔵 **The first two rows are the whole argument.** 🔴 **One method called both repositories abandoned. It was wrong about `ltijs` by two and a half years and right about `pylti1.3` to the day — and it had no way to tell which was which.** 🟢 **The registry channel separates them in one call each.** 🔴 **`ltikit-sdk` fails the other way: alive on the git channel, nonexistent on the registry — which is the axis a client's build sits on.**
+
+🟢 **Rule now standing for this file: a row that ships a package carries BOTH dates, or it carries no liveness verdict at all.** **Tags are a convention a maintainer can silently stop honouring; a release is an event.**
+
+### 🟢 The integration tier, re-cut — and the replacement this file has needed since p319
+
+🔴 **This file recommended `pylti1.3` four times as *"the repo that gets your agent into the client's existing LMS."* p330 withdrew it. 🔴 It then named `ltikit-sdk` the first permissive non-Python option — which `evidence/p232-new-rows.2026-10-16-p232.tsv` line 17 had already disproved on 2026-10-16.**
+
+| repo | grant, first-hand p331 | git, first-hand p331 | registry, first-hand p331 | verdict |
+|---|---|---|---|---|
+| **https://github.com/lti-tool/lti-tool** | 🟢 **MIT**, 1,077 B, *© 2025-present James Joplin* | **346 c · 6 a · 2026-10-19** · 🟢 **235 c in 2026 by 6 a** | 🟢 **`@lti-tool/core` 1.3.1 — 2026-10-20, today.** 31 releases since 2025-10-02 | 🟢 **RECOMMENDED — the integration row this file was missing.** Complete LTI 1.3 Advantage surface read in code: launch · AGS · NRPS · Deep Linking · Dynamic Registration · JWKS. 49 core src files, 14 test files. 🟢 **Two dependencies: `zod`, `jose`.** Pluggable storage: `memory`/`postgresql`/`mysql`/`dynamodb`/`d1`/`hono` — conventional **and** edge. 🟢 **North America, institutionally — 161 of 346 commits at `-0400`, 62 at `-0500`, and `longsight.com` (28 c) is Longsight Inc., a US Sakai/Tsugi host this KB already holds as `LongsightGroup/qti3`** |
+| https://github.com/Cvmcosta/ltijs | 🟢 **Apache-2.0**, 11,361 B | 575 c · 17 a · 2026-10-13 | 🟢 **`ltijs` 7.0.7 — 2026-10-06** | 🟡 **ALTERNATIVE, with the risk stated.** The mature choice. 🔴 **51 c in 2026 by only 2 authors**; head is a dependabot merge; **90 commits from `ltiaas.com`, the maintainer's commercial hosted product.** 🟢 **LATAM — Brazil: 429 of 575 commits from one `yahoo.com.br` address** |
+| https://github.com/tsugiproject/tsugi | Apache-2.0 | **4,012 c · 47 a · 2026-10-19** (p330) | — (PHP, no npm/PyPI row) | 🟢 **ALIVE.** The LTI *platform* side, 486 commits in 2026 |
+| https://github.com/jcputney/scorm-again | MIT | 1,243 c · 14 a · 2026-10-20 (p330) | 🟢 **`scorm-again` 3.4.6 — 2026-10-08** | 🟢 **ALIVE on both channels.** The SCORM route into legacy courseware |
+| https://github.com/dmitry-viskov/pylti1.3 | MIT | 🔴 2022-11-21 | 🔴 **2022-11-20** | 🔴 **DEAD — 47 months, two channels. Do not propose it** |
+| https://github.com/openfun/django-lti-toolbox | MIT | 🔴 2024-11-14 | 🔴 **2024-07-15** | 🔴 **DEAD — two channels** |
+| https://github.com/Liberate-Labs/ltikit-sdk | 🟢 MIT, 1,063 B | 38 c · **1 a** · 2026-07-10 | 🔴 **UNPUBLISHED** | 🟡 **Watch list only.** Vendored-source dependency; ownership handover unresolved |
+| https://github.com/Godmartinz/Node-LTI-1.3-library | — | 🔴 125 c · 6 a · default **2019-08-02** | — | 🔴 **DEAD — seven years.** Offered by the search channel this pass; recorded so it is not offered again |
+
+### 🟢 The pedagogy and integrity tier, dated on the registry channel this pass
+
+| repo / package | grant | latest release, first-hand p331 | why it is a foundation |
+|---|---|---|---|
+| `@dodona/dolos` — https://github.com/dodona-edu/dolos | 🟢 **MIT** | 🟢 **2.10.0 — 2026-10-19** | **P11's integrity engine with a maintaining university behind it** (Ghent). Released yesterday |
+| `nbgrader` | 🟢 **BSD-3-Clause** | 🟢 **0.9.6 — 2026-09-30** | The `.ipynb` autograding incumbent; the tier `jupyterquest` joins |
+| `otter-grader` | 🟢 **BSD-3-Clause** | 🟢 **7.0.0 — 2026-07-27** | A major version this year; the Berkeley-lineage autograder |
+| https://github.com/CAHLR/OATutor | 🟢 **MIT** | — (not packaged) | 1,045 c · **27 a** · 2026-10-16 (p330) — the healthiest contributor base in this file's pedagogy tier |
+
+🟢 **Control, stated because a channel that cannot fail proves nothing:** `bogus-control-pkg-p331-zz` → **NO-RESOLVE** on npm; `bogus-control-p331/not-a-real-repo-zz` → **NO-REF** on git. **Both channels discriminate.**
+
+🔵 **What is still not measurable here, stated plainly rather than left silent:** 🔴 **star counts and fork counts.** `api.github.com` has been 403 since p37, and this session's `mcp__github__*` tools — new, and the first time this KB has had them — **refuse every repository not attached to the session** (*"Allowed repositories: gmilano/globant-kb, gmilano/education-kb"*). 🔵 **Those are two different refusals with two different causes, and no future pass should record them as one blocked channel.** **Popularity remains unmeasurable; liveness and grant are now both measurable twice over.**
+
+---
+
 # Foundational repos — education
 
 ## Pass 330 · 2026-10-20 (third pass of this date) — the integration tier re-measured on the git channel, and this file's standing LTI recommendation is dead

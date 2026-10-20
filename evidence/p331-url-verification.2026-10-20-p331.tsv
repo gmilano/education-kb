@@ -1,0 +1,22 @@
+url_slug	curl_sI_github_com	git_ls_remote_sha	verdict
+ArnaudGuiovanna/tutor-mcp	403	05c56616	RESOLVES
+CAHLR/OATutor	403	a1df9d67	RESOLVES
+Cvmcosta/ltijs	403	41f150c0	RESOLVES
+Godmartinz/Node-LTI-1.3-library	403	9799cc00	RESOLVES
+HKUDS/DeepTutor	403	a31d8262	RESOLVES
+HumphreySun98/Smart-Study-Agent	403	1f0ab5c1	RESOLVES
+Liberate-Labs/ltikit-sdk	403	5a8f55da	RESOLVES
+dmitry-viskov/pylti1.3	403	d8fa43e1	RESOLVES
+dodona-edu/dolos	403	5da69ed7	RESOLVES
+jcputney/scorm-again	403	84043e80	RESOLVES
+learning-commons-org/agent-skills	403	5894a3c9	RESOLVES
+learning-commons-org/evaluators	403	aa681d70	RESOLVES
+littlecookie0722/AI-Teaching-Agent	403	b90bd88a	RESOLVES
+lti-tool/lti-tool	403	dc747615	RESOLVES
+mizcausevic-dev/mcp-ai-tutor	403	317be012	RESOLVES
+openfun/django-lti-toolbox	403	22c6f2f4	RESOLVES
+rohit-dev45/programming-tutor-agent	403	737470fd	RESOLVES
+tsugiproject/tsugi	403	967d06cf	RESOLVES
+withmarbleapp/os-taxonomy	403	ff985330	RESOLVES
+CONTROL bogus-control-p331/zz-not-real	-	NO-REF	CONTROL PASSED
+CONTROL learning-commons-org/does-not-exist-p331	-	NO-REF	CONTROL PASSED - real org, fake repo

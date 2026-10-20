@@ -3,6 +3,64 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+
+## Pass 331 · 2026-10-20 (fourth pass of this date) — the integration row this file has needed since p319 was already in `evidence/`, and p330's claim about it was false
+
+🔴 **p330 closed the LTI question with two sentences that cannot both be true of this repository.** It declared `pylti1.3` dead — correct, and now confirmed on a second channel — and then named `Liberate-Labs/ltikit-sdk` *"the first permissive LTI 1.3 Advantage implementation this KB has found outside Python."*
+
+🔴 **`evidence/p232-new-rows.2026-10-16-p232.tsv`, line 17, recorded on 2026-10-16:** `lti-tool/lti-tool` · `npm:@lti-tool/core +6 siblings` · 30 versions · latest 1.3.0 · **MIT**, 1,076 B, *© 2025-present James Joplin* · `unplaced`. **Measured fourteen passes before the claim that denies it.**
+
+🔵 **So p330's lesson repeats one tier over.** p330: before writing *untested* about a channel, `ls compose/code/`. 🟢 **p331: before writing *first*, *only* or *none found* about an artefact, `grep -ril <thing> evidence/`.** 🔴 **This KB's discovery rate on `lti-tool` was 100% at p232 and its delivery rate was 0% through p330** — the exact failure p327 named and prescribed an audit for, still unrun. **The prescription was right; nothing executes it. It belongs in the hook tier, not in prose.**
+
+### 🟢 The row, promoted — every figure first-hand p331, on both channels
+
+| Agent / tool | Repo | Licence (read first-hand p331) | Activity (first-hand p331) | What it is |
+|---|---|---|---|---|
+| **lti-tool** | https://github.com/lti-tool/lti-tool | 🟢 **MIT** — `main/LICENSE` 1,077 B, *Copyright (c) 2025-present James Joplin* | **346 commits · 6 authors · head 2026-10-19** · 🟢 **235 commits in 2026 by 6 authors** · `@lti-tool/core` 🟢 **v1.3.1 published 2026-10-20, today** · 31 releases since 2025-10-02 | 🟢 **The complete LTI 1.3 Advantage surface in TypeScript, confirmed in code rather than from a README.** 49 core source files, 14 test files. `services/nrps.service.ts` · `schemas/lti13/ags/{lineItem,result,scoreSubmission}` · `schemas/lti13/deepLinking/contentItem` · `services/dynamicRegistration.service.ts` with `openIDConfiguration`, `registrationRequest`, `registrationResponse` · `token.service.ts` · `session.service.ts` · JWKS · five claim families, all Zod-schema'd. **Launch, AGS, NRPS, Deep Linking and Dynamic Registration are each present as code.** 🟢 **Dependency surface is two packages — `zod` and `jose`** (this KB payload-verified a **10-package** closure for `ltijs`). 🟢 **Storage is pluggable:** `packages/{memory,postgresql,mysql,dynamodb,d1,hono}` — Postgres/MySQL for a conventional deployment, **DynamoDB and Cloudflare D1 + Hono for an edge one** |
+
+🟢 **PLACED — North America, institutionally, and p232's `unplaced` is closed.** From the commit record: **161 of 346 commits at `-0400`, 62 more at `-0500`**, and the third author domain is 🟢 **`longsight.com`, 28 commits — Longsight Inc., a US Sakai/Tsugi hosting firm.** 🔵 **This KB already holds `LongsightGroup/qti3` (MIT, 1,072 B, `evidence/full-column-grant-census.2026-10-15-p211.tsv`).** **The same house is in both rows: this is not a lone-author library, an LMS-hosting company commits to it.**
+
+### 🔴 What this does to the two rows it replaces
+
+| row | standing grade | measured p331 |
+|---|---|---|
+| `dmitry-viskov/pylti1.3` | 🔴 DEAD (p330, git channel) | 🟢 **CONFIRMED on a second channel — `PyLTI1p3` 2.0.0 uploaded 2022-11-20**, one day before the final commit. **p330 was right, and the recommendation it withdrew stays withdrawn** |
+| `Liberate-Labs/ltikit-sdk` | 🟡 "complete surface, single author, quiet" | 🔴 **Worse than recorded: it does not resolve on npm at all.** 38 commits, **1 author**, **no published package.** An unpublished SDK is a vendored-source dependency — the client pins a git SHA and inherits the ownership handover. **Watch list only** |
+
+🟢 **Recommend `@lti-tool/core` for new LMS integration work, with `Cvmcosta/ltijs` (Apache-2.0, `ltijs` 7.0.7 of 2026-10-06) as the mature alternative where a client needs a longer track record.** 🟡 **State the `ltijs` risk when you propose it:** 51 commits in 2026 but **only 2 distinct authors in 2026** against 17 lifetime, the current head is a dependabot merge, and 90 of its commits come from **`ltiaas.com` — the maintainer's commercial hosted product**. **Actively released, narrowly maintained, commercial successor in the same hands.**
+
+### 🟢 The shelf as it stands after this pass — the rows a studio can start from
+
+**Every figure below is first-hand, with the pass that measured it named. No star counts: `api.github.com` has returned 403 since p37, and this session's GitHub MCP tools are scope-bound (see `agents/trending.md`).**
+
+| Agent / tool | Repo | Grant | Activity, first-hand | Layer |
+|---|---|---|---|---|
+| **lti-tool** | https://github.com/lti-tool/lti-tool | 🟢 **MIT** (1,077 B, p331) | 346 c · 6 a · 2026-10-19 · release **today** (p331) | 🟢 **LMS integration — the way in** |
+| **ltijs** | https://github.com/Cvmcosta/ltijs | 🟢 **Apache-2.0** (11,361 B, p331) | 575 c · 17 a · 2026-10-13 · `ltijs` 7.0.7 (p331) | 🟡 LMS integration, mature, narrow bench |
+| **DeepTutor** | https://github.com/HKUDS/DeepTutor | 🟢 **Apache-2.0** | head 2026-10-19 (p330) · ref resolves p331 | 🟢 Agent-native tutor |
+| **tutor-mcp** | https://github.com/ArnaudGuiovanna/tutor-mcp | 🟢 **MIT** (1,073 B, p331) | 467 c · 5 a · 2026-10-16 (p330) | 🟢 ITS state + review scheduling over MCP |
+| **OATutor** | https://github.com/CAHLR/OATutor | 🟢 **MIT** | 1,045 c · **27 a** · 2026-10-16 (p330) | 🟢 Pedagogy — BKT, UC Berkeley |
+| **Agent Skills** | https://github.com/learning-commons-org/agent-skills | 🟢 **Apache-2.0** (10,173 B, p327) | 42 c (p327) | 🟢 K-12 teacher skills over MCP |
+| **Evaluators** | https://github.com/learning-commons-org/evaluators | 🟡 **MIT code**; corpora **CC BY-NC-SA 4.0** (p327) | 289 c (p327) | 🟢 Pedagogy-aware evaluation |
+| **os-taxonomy** | https://github.com/withmarbleapp/os-taxonomy | 🟡 **ODbL-1.0 + CC BY-SA 4.0** (25,289 B — re-read p331, reproduces p326 exactly) | 23 c · 3 a · 2026-10-19 (p331) | 🟢 Curriculum spine (data, not code) |
+
+🔵 **One note on the last row, because reproducibility is worth a line.** This pass re-read `os-taxonomy`'s `LICENSE` blind and measured **25,289 bytes of genuine ODbL text** — byte-identical to p326's figure. 🟢 **The licence channel is stable across five days and two passes. No correction needed; the row was right.**
+
+### 🟡 Measured this pass and honestly below the bar — recorded so no future pass re-spends the probe
+
+| repo | grant, first-hand p331 | activity, first-hand p331 | verdict |
+|---|---|---|---|
+| `littlecookie0722/AI-Teaching-Agent` | 🟢 MIT, 1,069 B, *© 2026 littlecookie* | 30 c · 2 a · 2026-08-23 | 🟡 **Watch.** Labs/exams/grading DSLs, CLI + MCP; its README freezes automatic grading |
+| `HumphreySun98/Smart-Study-Agent` | 🟢 MIT, 1,067 B, *© 2026 Haofei Sun* | 28 c · 3 a · 2026-08-16 | 🟡 **Watch** for the Anki-export + local-Ollama limb only |
+| `mizcausevic-dev/mcp-ai-tutor` | 🔴 **AGPL-3.0**, 34,523 B | 10 c · 2 a · 2026-08-05 | 🔴 Not embeddable and too small. The **FERPA/COPPA procurement-audit idea** is the only takeaway |
+| `mthatipamula/educational-assessment-ai-agent-platform` | 🔴 **NO LICENCE** — `LICENSE`, `LICENSE.md`, `LICENSE.txt` all fail to resolve on `main` and `master` | **3 c** · 2 a · 2026-10-13 | 🔴 **Unusable.** The most complete K-12 assessment-agent *design* the search channel produced this pass, and **three commits with no grant.** Default copyright reserves all rights |
+| `rohit-dev45/programming-tutor-agent` | — | 19 c · **1 a** · 2026-09-15 | 🔴 Below bar |
+| `kvnloo/tutor-mcp` | 🟡 MIT 1,073 B — *© 2026 **Arnaud Guiovanna*** | 452 c · 5 a · 2026-10-02 | 🟡 **A fork.** Same holder and licence byte-length as the canonical `ArnaudGuiovanna/tutor-mcp` (467 c, 2026-10-16). **No change to the shelf** |
+| `Godmartinz/Node-LTI-1.3-library` | — | 125 c · 6 a · default **2019-08-02**, newest ref 2022-12-30 | 🔴 **DEAD — seven years** |
+
+🔵 **The fork rule, since the search channel will do this again: when two slugs share a LICENSE byte-length and copyright holder, the one with fewer commits and an older head is downstream.** **One `curl` of each `LICENSE` settles it without a star count.**
+
+---
 # Top open source AI agents — education
 
 ## Pass 330 · 2026-10-20 (third pass of this date) — p329 declared a channel untested that this KB built, tested and documented a fortnight ago, and the LTI library this file has recommended four times has been dead since 2022

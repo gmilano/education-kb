@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 331 — the live MIT LTI library was measured fourteen passes ago, filed in `evidence/`, and never told to a client
+
+🔵 **This pass's signal is not a repository. It is that p330's headline claim was false, and the file that falsifies it is in this repo.** p330 wrote that `Liberate-Labs/ltikit-sdk` is *"the first permissive LTI 1.3 Advantage implementation this KB has found outside Python"* — and left the dead `pylti1.3` standing as the recommendation beside it.
+
+🔴 **`evidence/p232-new-rows.2026-10-16-p232.tsv` line 17 already held `lti-tool/lti-tool`:** npm `@lti-tool/core` + 6 siblings, 30 versions, latest 1.3.0 of 2026-10-09, **MIT**, 1,076 B, *© 2025-present James Joplin*, marked `unplaced`. **Measured 2026-10-16. Fourteen passes before p330 made the claim that cannot be true if that row exists.**
+
+🟢 **The remedy generalises p330's own rule one tier further.** p330: before writing *untested* about a channel, `ls compose/code/ | grep -i <channel>`. **p331: before writing *first* or *none found* about an artefact, `grep -ril <thing> evidence/`.** The evidence tier is where this KB's measurements land; the prose tier is where they become recommendations; **nothing in the pipeline moves a row from the first to the second, and the gap is now measured at fourteen passes.**
+
+### 🟢 Promoted to the shelf this pass — measured first-hand, p331, on both channels
+
+| repo | grant, first-hand | git channel, first-hand | registry channel, first-hand | signal |
+|---|---|---|---|---|
+| [lti-tool/lti-tool](https://github.com/lti-tool/lti-tool) | 🟢 **MIT**, `main/LICENSE` 1,077 B, *© 2025-present James Joplin* | **346 commits · 6 authors · 2026-10-19** — 🟢 **235 of those commits are in 2026, by 6 authors** | `@lti-tool/core` 🟢 **v1.3.1, published 2026-10-20 — today.** 31 releases since 2025-10-02 | 🟢 **The complete LTI 1.3 Advantage surface, confirmed in code, not from a README** |
+
+🟢 **Surface read from `ls-tree`, 49 core source files and 14 test files:** `services/nrps.service.ts`, `schemas/lti13/ags/{lineItem,result,scoreSubmission}`, `schemas/lti13/deepLinking/contentItem`, `services/dynamicRegistration.service.ts` with `openIDConfiguration`/`registrationRequest`/`registrationResponse`, `token.service.ts`, `session.service.ts`, JWKS and the five claim families. **Launch, AGS, NRPS, Deep Linking and Dynamic Registration are all present as code.**
+
+🟢 **Its dependency surface is two packages — `zod` and `jose`.** For comparison, this KB payload-verified a **10-package** closure for `ltijs`. 🟢 **A two-dependency core is the cheapest LTI integration risk this base has recorded.**
+
+🟢 **Storage is pluggable, and the adapters are the reason this matters for a studio:** `packages/{memory,postgresql,mysql,dynamodb,d1,hono}` — Postgres and MySQL for a conventional deployment, **DynamoDB and Cloudflare D1 + Hono for an edge one**. The same library serves a hosted LMS integration and a serverless one.
+
+🟢 **PLACED — North America, and institutionally.** p232 recorded it `unplaced`; this pass closes that from the commit record. **161 of 346 commits at `-0400` and 62 more at `-0500`**, and the third author domain is 🟢 **`longsight.com` with 28 commits — Longsight Inc., a US Sakai/Tsugi hosting firm.** 🔵 **This KB already holds `LongsightGroup/qti3` (MIT, 1,072 B).** The same house is in both rows: **lti-tool is not a lone-author project, it has an LMS-hosting company committing to it.**
+
+### 🔴 The claim p330 should have made instead, and the row it mis-graded
+
+| p330 wrote | measured p331 |
+|---|---|
+| `ltikit-sdk` is *"the first permissive LTI 1.3 Advantage implementation outside Python"* | 🔴 **False.** `lti-tool` is MIT, TypeScript, complete, and was in this repo's `evidence/` tier at p232 |
+| `ltikit-sdk` — *"complete surface, single author, quiet since an ownership handover"* | 🟡 **Understated.** 🔴 **`ltikit-sdk` does not resolve on npm at all.** 38 commits, **1 author**, and **no published package** |
+
+🔴 **An unpublished SDK is a vendored-source dependency, not an installable one** — the client's build pins a git SHA and inherits the handover risk. 🟢 **`@lti-tool/core` installs from npm and shipped a release today.** **Recommend `lti-tool`; keep `ltikit-sdk` on the watch list only.**
+
+### 🟡 Real, small, and honestly below the shelf bar
+
+| repo | grant, first-hand | git channel, first-hand | verdict |
+|---|---|---|---|
+| [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 **MIT**, 1,069 B, *© 2026 littlecookie* | 30 commits · 2 authors · 2026-08-23 | 🟡 **Labs/exams/grading DSLs with CLI + MCP tools.** Its own README freezes automatic grading. Two months quiet. **Watch** |
+| [HumphreySun98/Smart-Study-Agent](https://github.com/HumphreySun98/Smart-Study-Agent) | 🟢 **MIT**, 1,067 B, *© 2026 Haofei Sun* | 28 commits · 3 authors · 2026-08-16 | 🟡 **Study agent with MCP server, Anki export, local Ollama path.** The offline/Ollama limb is the interesting part. **Watch** |
+| [mizcausevic-dev/mcp-ai-tutor](https://github.com/mizcausevic-dev/mcp-ai-tutor) | 🔴 **AGPL-3.0**, 34,523 B | 10 commits · 2 authors · 2026-08-05 | 🔴 **Not embeddable, and too small regardless.** FERPA/COPPA procurement auditing of AI tutors — the *idea* is worth noting, the artefact is not |
+| [rohit-dev45/programming-tutor-agent](https://github.com/rohit-dev45/programming-tutor-agent) | — | 19 commits · **1 author** · 2026-09-15 | 🔴 **Below bar.** LangChain + Gemini + MCP demo |
+
+### 🔴 Two negative findings worth more than a weak row
+
+🔴 **`mthatipamula/educational-assessment-ai-agent-platform` carries NO LICENSE — on `main` or `master`, neither `LICENSE`, `LICENSE.md` nor `LICENSE.txt` returns 200.** Its README is the most complete K-12 assessment-agent *design* the search channel produced this pass: standards-aligned item authoring with RAG, rubric scoring with human review, sandboxed code grading, guardrails, evals, Bedrock. 🔴 **It is 3 commits by 2 authors.** **An elaborate README with no grant and no code is the clearest example this KB holds of the failure mode it must not reward: ungranted work is unusable regardless of how well it is described.** Default copyright means all rights reserved.
+
+🟡 **`kvnloo/tutor-mcp` is a fork, and the search channel presented it as a second finding.** Its `LICENSE` is **1,073 B and names *© 2026 Arnaud Guiovanna*** — byte-identical in size and holder to `ArnaudGuiovanna/tutor-mcp`, which this KB has carried since p317. **452 commits and head 2026-10-02, against the canonical 467 and 2026-10-16.** 🟢 **The KB's existing row is the right one; no change.** 🔵 **The general rule: when two slugs share a LICENSE byte-length and copyright holder, the one with fewer commits and an older head is downstream.**
+
+### Channel state, p331 — one channel newly characterised
+
+| channel | state, first-hand p331 | control |
+|---|---|---|
+| `git` smart-HTTP, blobless | 🟢 **OPEN** — 12 slugs measured | 🟢 `bogus-control-p331/not-a-real-repo-zz` → **NO-REF** |
+| `registry.npmjs.org` / `pypi.org` | 🟢 **OPEN** — 11 packages measured | 🟢 `bogus-control-pkg-p331-zz` → **NO-RESOLVE** |
+| **GitHub MCP tools** (`mcp__github__*`) | 🔴 **PRESENT IN SESSION, SCOPE-BOUND** — see below | — |
+
+🔴 **And one method correction that applies to every pass's quality gate: `curl -sI` against `github.com` is NOT a URL check here.** Run this pass over all 19 GitHub URLs written into these files: 🔴 **every one returned `403`** — including `lti-tool/lti-tool`, `tsugiproject/tsugi` and `CAHLR/OATutor`, all of which exist. 🔵 **A channel that returns the same code for a live repository and a dead one carries no information, and a 403-for-everything gate would have rejected this entire pass.** 🟢 **The check that works is the one this KB already owns:** `git ls-remote <url> HEAD`. **All 19 resolved to a real SHA this pass**, and two controls — `bogus-control-p331/zz-not-real` **and** `learning-commons-org/does-not-exist-p331`, **a fake repository under a real organisation** — both returned **NO-REF**. 🟢 **That second control is the one worth keeping: it proves the channel discriminates on the repository, not merely on the namespace.**
+
+🔴 **The GitHub MCP tool channel is new to this session and it is not a verification channel.** Probed once, first-hand, on `withmarbleapp/os-taxonomy`: `Access denied: repository "withmarbleapp/os-taxonomy" is not configured for this session. Allowed repositories: gmilano/globant-kb, gmilano/education-kb.` 🔵 **This is a materially different refusal from the `api.github.com` 403 this KB has recorded since p37: that one is the network, this one is session policy, and neither is fixable by retrying.** 🟢 **So the star count remains unavailable and the `git` + registry pair remains the whole measurement surface.** **No future pass should record "GitHub API" as one blocked channel — there are two, with different causes.**
+
+---
+
 ## 2026-10-20 — Pass 330 — four usable grants, one dead library behind a standing recommendation, and a repository the search channel invented
 
 🔵 **The signal of this pass is not a repository. It is that `agents/top.md` and `repos/foundations.md` have told clients for eleven passes to build their LMS integration on a library that stopped moving in November 2022.** Measured first-hand on the git channel, across every ref.
