@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 338 — ninth consecutive pass with no promotable agent, and the licence question registered as open one pass ago had been answered 72 passes earlier
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**What moved this week, in supply terms: nothing, and it is the ninth consecutive measurement.** All four prescribed legs plus one extra leg bought deliberately, run verbatim:
+
+| leg | result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new.** The only education rows are courseware — `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch` — 🟢 **all three already named here** (232 · 160 · 230 corpus mentions). All three *teach AI*; none *teaches with AI*, which is the distinction a prior pass fixed as the shelf boundary |
+| `github trending education AI 2026` | 🔴 **0 new.** GitHub Trending has no education category; hits are AI-courseware repos, all carried |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new**, and the vendor-SEO shape recurs: **5 of 9 results were `openeducat.org` glossary pages in 5 languages**. 🟢 Re-confirmed **OpenEduCat is LGPL-3.0** — the leg presumes an MIT/Apache education ERP that does not exist |
+| `AI education industry trends 2026` | 🟡 **0 repositories**; three publishers, three irreconcilable market sizes. Third consecutive pass with this exact failure |
+| 🔵 **extra leg** · `new open source education AI agent MCP server October 2026 Moodle Canvas grading` | 🔴 **0 new.** `vishalsachdev/canvas-mcp`, `csmediapro/moodle-mcp-server`, `peancor/moodle-mcp-server` — 🟢 **3 of 3 `CARRIED`.** Buying a leg outside the prescribed four did **not** break the saturation |
+
+🔵 **Nine passes at zero is now a property of the channel, not of the passes.** Saturation, not silence — and an extra leg confirming it is worth more than a padded row.
+
+🟢 **One third-party claim CONFIRMED by the byte channel — the rarer direction:**
+
+| row | the claim | measured first-hand this pass | verdict |
+|---|---|---|---|
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | a directory listing asserted **AGPL-3.0** | 🟢 `main/LICENSE`, **34 523 B**, *GNU AFFERO GENERAL PUBLIC LICENSE* | 🟢 **CONFIRMED** — agrees with the directory **and** with this base's own cell. 🔵 34 523 B is byte-identical to `overhangio/tutor`'s AGPL-3.0, an independent cross-check on the canonical text |
+
+---
+
+**The week's real movement is in the instruments, and it closed a question this file's sibling had reopened.**
+
+🔴 **`intel/market.md`, one pass old, registered *"Forma LMS: Apache-2.0 vs GPL-v2 — unresolved, the next licence question for this tier."* It was resolved at `p265` and reproduced at `p276`.** Re-measured first-hand today:
+
+| channel | measurement |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves · branch **`master`** · `HEAD 446a77a9b9cbb20dacf008a2d53b2658fb5f5634` |
+| `raw.githubusercontent.com` | 🟢 **200** at **`html/license.txt`** · **18 346 B** · GPL-2.0 title line · `sha256`₁₆ **`4e63feff285d9215`** — 🟢 **the hash already on the shelf** |
+
+🔴 **And the reason it looked open is an instrument gap on an axis two passes never touched.** `probe_payload.sh` has exactly two channels and `formalms` defeats both: the 42-rung ladder is **root-only** (every rung a bare filename — case variation cannot reach a path with a `/`), and the README fallback needs the README to say *licence*, which this **6 198 B** README never does — **zero occurrences of the word**, not zero links. 🔵 **p336 and p337 widened the CASE axis 7 → 24 → 42 rungs; the specimen that actually defeats the ladder was on `verticals/solutions.md` the whole time, defeating it on DEPTH.**
+
+🟢 **The depth audit, with its negative control — and the honest result is that nothing was caught:**
+
+| what was probed | result |
+|---|---|
+| 🟢 positive controls | `formalms` → **18 346 B** hit · `OS4ED/openSIS-Classic` → **17 286 B** hit — both the byte counts on the shelf |
+| 🔴 negative control | `gmilano/definitely-not-a-real-repo-p338` → 🟢 **`UNRESOLVED`**, so the instrument discriminates |
+| **11 published absence rows**, 80 paths each | 🟢 **11 of 11 survive. ZERO false absences** |
+| 🔴 the forward exposure | the README mitigation can fire on only **3 of those 11**; for **8 of 11**, depth coverage rested on a channel that *cannot* fire |
+
+🟢 **`ACTION ZN`: no absence may be published from the root ladder plus README alone — depth must be excluded by tree enumeration or the measured prefix ladder. `ZL` governs case; `ZN` governs depth; neither implies the other.**
+🟢 **`ACTION ZO`: a pass may not register a licence question as OPEN without first grepping the corpus for the slug.** An open question is a claim about *this base*, falsifiable offline in one command.
+🟢 **`ACTION ZP`: an instrument is not a gate until a target invokes it.** 🔴 `p383-region-heading-gate` had a passing 11-control suite and appeared in **no** Makefile target from p383 to p337 — so `make hooks` 22/22 had never judged the region contract. **Wired this pass: 22 gates → 23**, and the live shelf brought to 0 findings.
+
+🟡 **The agent tier was re-read first-hand and did not move:** 9 rows, every byte count identical to the shelf (1 088 · 1 066 · 1 069 · 1 073 · 11 357 · 1 067 · 1 073 · 1 071 · 1 105). 🔵 **A re-read that finds no drift is the only thing that licenses a shelf to stand unchanged**, so it is recorded as a measurement rather than omitted as a non-event.
+
+
 ## 2026-10-20 — Pass 337 — the probe library every pass sources could not reach a lowercase grant, so `ACTION ZL` forbade a verdict only that library could deliver
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

@@ -3,6 +3,90 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+
+## Pass 338 · 2026-10-20 — the regional legs returned real material for the first time in four passes, and the gate that polices this file's own region contract had never been run
+
+🟢 **The supply side is unchanged and saturated for a ninth consecutive pass** (see `agents/top.md`). 🔵 **The demand side is where this pass moved**, and the shape is the same in every region that answered: **usage is near-universal, governance is scarce, and the gap is the engagement.**
+
+| leg, run verbatim 2026-10-20 | what came back |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new.** Listicles; the only education rows are courseware already carried |
+| `github trending education AI 2026` | 🔴 **0 new.** GitHub Trending has no education category |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new**, and **5 of 9 results were one vendor's glossary in 5 languages** (`openeducat.org`). 🟢 Re-confirmed: **OpenEduCat is LGPL-3.0**; the leg presumes an MIT/Apache education ERP that does not exist |
+| `AI education industry trends 2026` | 🟡 **Market sizes irreconcilable across three publishers** — third consecutive pass. Recorded as a conflict, never as a number (`intel/trends.md` T-338.2) |
+
+🔴 **The structural finding of this pass belongs to this file.** The engagement contract fixes this file's shape — *"opportunities go under a single `## Opportunities by region` heading with one `###` subsection per region"* — and an instrument for it exists (`compose/code/p383-region-heading-gate`) with its own passing test suite. 🔴 **It was wired into no Makefile target and had therefore never judged this file.** Run for the first time this pass: **5 canonical blocks**, 2 missing `Global` children, 14 out-of-vocabulary `###` headings adopted as regions.
+
+🟢 **Fixed in this pass, both halves:** `p383` now runs in the `hooks` tier (22 gates → **23**), and this file now carries **one** canonical block with exactly the **five** closed-vocabulary children. The four earlier blocks are **relabelled, not deleted** — their content stands as history, and only the live block claims the canonical heading. 🔵 **The two append-only files were not touched by the restructure.**
+
+🟢 **One licence question CLOSED, and it was closed from this base's own shelves.** This file registered *"Forma LMS: Apache-2.0 vs GPL-v2, unresolved"* one pass ago. 🔴 **It was resolved 72 passes ago at `p265` and reproduced at `p276`.** Re-measured first-hand today: `formalms/formalms`, `master`, **`html/license.txt`**, **18 346 B**, GPL-2.0, `sha256`₁₆ **`4e63feff285d9215`** — the hash on the shelf. 🟡 **For a bid, this matters in one direction: a permissive reading of Forma LMS is wrong, and a root-only SPDX scan will report the platform as unlicensed rather than GPL-2.0.**
+
+---
+
+### 🟢 Key players and market map, as this pass's channels named them
+
+🔵 **Named by the regional legs, recorded with the channel and not promoted to a ranking** — this base has no instrument that ranks vendors, and a listicle's order is not one.
+
+| layer | who the channel named | region of the naming |
+|---|---|---|
+| hyperscale / platform | IBM · Microsoft · Google — a market the report itself calls *"highly fragmented"* | North America |
+| courseware capital | Carnegie Mellon + Gates Foundation, **$55M** into AI courseware | North America |
+| national programmes | OpenAI country-level education programme with national partners, **Q1 2026** | 🟡 stated as global; placed by the source, not by this base |
+| corporate L&D (a **different market** from schools) | Pearson + TCS multi-year AI learning alliance · LearnUpon (Sydney HQ, Create+ authoring) · Alteryx academy | APAC |
+| research / measurement bodies | Digital Education Council · UNESCO IESALC · UNU-IAS · CEPAL/IDB (**ILIA 2025** index, 19 countries) · Tecnológico de Monterrey IFE | LATAM |
+| ministries and sector bodies | SEP · ANUIES · Observatorio IA (all **non-binding** proposals) | LATAM |
+| 🟢 open-source platform tier | **OpenOLAT** (Apache-2.0) · Moodle · Open edX · Chamilo · RosarioSIS · openSIS · Forma LMS — all re-read first-hand this pass | 🟡 Global, EMEA-maintained |
+
+---
+
+## Opportunities by region
+
+### North America
+
+🔴 **The sellable gap is governance, and it is ~56 points wide.** ChatGPT used by **66%** of students; **only 10%** of institutions have formal AI guidelines; **71%** of US teachers report no AI training *(search channel, vendor roundup — attributed, not asserted)*.
+
+- 🟢 **AI acceptable-use and assessment-redesign engagements.** No model ships this. The deliverable is policy + training + an audit trail, and the buyer already has the usage problem.
+- 🟡 **The regulatory surface is a state patchwork, not a federal rule** — Colorado and Texas have introduced piecemeal requirements; there is no single rulebook. 🔵 **Sell per-state compliance mapping, not "AI Act readiness."**
+- 🔴 **Any NA vendor selling into Europe inherits the EU AI Act's high-risk classification for education.** That is a cross-border design constraint on a US-built product, and it is cheapest to honour at architecture time.
+- 🟢 **Build-on tier for closed IP:** `OpenOLAT` (Apache-2.0, 10 982 B) and `JupyterHub` (BSD, 1 475 B) — the two platforms whose grant does not reach your layer.
+
+### EMEA
+
+🔴 **This region returned NOTHING education-specific on the prescribed leg, and that is written down rather than left as apparent coverage.** Every result was enterprise AI or general EU AI Act commentary; one of two substantive sources is a **2023** study. No edtech vendor, no ministry of education, no school-level rule, no student-data material.
+
+- 🟡 **What stands, because it is the one named binding instrument:** the **EU AI Act classifies education AI as high-risk.** EMEA is the only region where **regulation leads adoption** — the inverse of everywhere else.
+- 🟢 **That inversion is itself the opportunity:** conformity-by-construction. Documented data lineage, human-in-the-loop on anything affecting grades or progression, and a technical file that exists before the audit does.
+- 🟢 **The supply side here is genuinely strong and already on these shelves** — H5P (Norway), `openpatch/hyperbook`, `otacke/h5p-theme-picker` (Germany), OpenOLAT (Zurich). **EMEA is this KB's deepest permissive authoring stack**, which makes the thin policy reading the more frustrating.
+- 🔵 **`ACTION ZR` applies here first:** re-run this region with political names (*"AI in schools Europe regulation 2026"*, *"EU AI Act education high-risk"*), because `EMEA` is a vendor sales region and no ministry describes itself with the word.
+
+### APAC
+
+🔴 **Also returned nothing education-specific.** The education-adjacent hits are **corporate L&D** (Pearson/TCS, LearnUpon, Alteryx) — a different buyer from schools and universities. **No national education-ministry AI policy surfaced.**
+
+- 🟡 **The governing posture that did surface is *"sovereign-by-design"***: 2026 is described as the year APAC moves from pilots to production with data residency and sovereignty as the design constraint.
+- 🟢 **Read commercially, that favours the self-hostable stack this KB already curates** — Moodle/OpenOLAT/JupyterHub on client infrastructure beats a hosted SaaS tutor in any sovereignty-led procurement. 🔵 **The AGPL §13 trap is the thing to get right**: hosting a *modified* Open edX for a client triggers the source offer, so the boundary is unmodified core + XBlock/LTI.
+- 🟡 **A measured adoption constraint, for enterprises rather than schools:** **49%** of APAC businesses cite insufficient real-time data infrastructure.
+- 🔴 **Named rows already on these shelves place real APAC supply** — `PerryLink/dsh-essay-rubric-check` (China, `+0800`), `likr/canvas-lms-agent` (Japan, `+0900`), `corsairdev/corsair` (India, `+0530`) — **so the region is not empty of builders; the policy channel is empty of answers.** Those are different gaps and must not be merged.
+
+### LATAM
+
+🟢 **The richest region this pass, and the only one with a figure carrying a real denominator.** Digital Education Council **LATAM survey 2026**: **>30 000 responses across 29 institutions** — **92%** of students and **79%** of faculty actively engaging with AI. UNESCO IESALC, separately: **200 higher-education institutions across 19 countries** — teaching and learning **73.5%**, research **57.0%**, administration **34.1%**, community engagement **20.0%**.
+
+- 🔴 **The gap is the widest measured anywhere: ~62 points.** **92%** usage against **~30%** of LATAM universities having published AI policies (Tecnológico de Monterrey, in the same survey).
+- 🟡 **Policy is heterogeneous and mostly non-binding.** **Chile** is furthest along — National AI Policy since 2021, a law under discussion. In **Mexico**, SEP, ANUIES and Observatorio IA have produced **recommendations with no binding force**. 🔵 **CEPAL/IDB's ILIA 2025 index covers readiness, adoption and governance across 19 countries** and is the instrument to cite in a regional bid.
+- 🟢 **Administration at 34.1% against teaching at 73.5% is the clearest whitespace on this shelf**: the back office is barely touched while the classroom is saturated. **Enrolment, retention prediction, financial aid and SIS workflow** — and `rosariosis`/`openSIS-Classic` are the open SIS platforms, both GPL-2.0, both with the boundary pattern already written in `verticals/solutions.md`.
+- 🟢 **Real local supply, placed on the commit channel, not inferred:** `SidneyBissoli/uis-mcp-server` (**MIT**, 1 088 B — UNESCO education statistics over MCP) and `Cvmcosta/ltijs` (Brazil, `-0300` on 513 of 575 commits). 🔵 **Two unrelated maintainers, two instruments, one region — a measurement with a denominator, not an anecdote.**
+- 🟡 **`digitaleducationcouncil.com` could not be reached from this environment** (`ENOTFOUND`). The figures above are **attributed to the survey, not asserted by this base**, and the primary PDF is the first thing a future pass should fetch from a network that can reach it.
+
+### Global
+
+🟢 **What holds in every region, and is therefore the reusable part of a bid.**
+
+- 🔴 **Usage leads permission everywhere it was measured.** 66/10 in North America, 92/30 in LATAM. The scarce good is **not capability**; it is **an auditable boundary**. That is one offer, sellable in four regions, and it is what `compose/patterns.md` R-338.1 builds.
+- 🔴 **Licence risk sits in two places a standard review misses**, and both are now measured on these shelves: **CONTENT** (curriculum graphs and standards frameworks under ODbL / CC BY-SA / OGL / purpose-limited public licences — p337's T-337.1) and **PATH DEPTH** (a grant at `docs/License.txt` or `html/license.txt` that a root-only SPDX scan reports as *no licence*). 🟢 **Enumerate the tree; never trust a badge.**
+- 🟢 **The permissive platform tier is exactly two deep, re-verified this pass:** `OpenOLAT` (Apache-2.0) and `JupyterHub` (BSD). **Everything else in the LMS/SIS tier is copyleft**, and the same architectural boundary answers all seven of them: unmodified core, your logic in a separate service, integrate over LTI or web services.
+- 🟡 **Do not quote a market size for education AI.** Three publishers, three irreconcilable figures, three passes running (`ACTION ZQ`). **Quote the surveys with denominators instead** — they are what a client can check.
+
 ## Pass 337 · 2026-10-20 — eighth consecutive pass with no new supply from the prescribed legs, and the first one where the reason is measured as SATURATION
 
 🔴 **The four prescribed global legs were run verbatim and returned 0 new promotable repository slugs. Eighth consecutive measurement.** What is new this pass is the *reason*, which is not the same as the previous seven:
@@ -20,7 +104,7 @@ updated: 2026-10-20
 
 ---
 
-## Opportunities by region
+## Opportunities by region — superseded, Pass 337 (kept for history; the canonical block is at the top of this file)
 
 ### North America
 
@@ -74,7 +158,7 @@ updated: 2026-10-20
 
 🟢 **What IS in force from 2 August 2026**, and therefore the only EMEA compliance work that is live today: **transparency duties** — people must be told when they are dealing with an AI system, and **deepfake / synthetic content must be disclosed**. The **AI-literacy duty** remains but is the lighter form: organisations must *support* literacy, not guarantee a level. 🟡 Several vendor pages still print the August 2026 high-risk date; check publication dates. 🔵 The December 2027 date should be confirmed against the Official Journal before it goes into a client deck.
 
-## Opportunities by region
+## Opportunities by region — superseded, Pass 336 (kept for history; the canonical block is at the top of this file)
 
 ### North America
 
@@ -147,7 +231,7 @@ updated: 2026-10-20
 
 The EMEA leg returned the **Annex III** education deferral to **2027-12-02** via **Regulation (EU) 2026/1744** once more. 🟢 **This file has held it since p328 with better precision than the channel serves it** — including the `2028-08-02` embedded-product date, the unmoved **Art. 50** transparency duty, the **Art. 4** literacy duty live since 2025-02-02, and the **Art. 5(1)(f)** emotion-inference prohibition that is not a high-risk duty at all. 🔴 **Two sources in this sweep still print the superseded `2026-08-02` high-risk date.** 🟢 **No change. Recorded as corroboration so the next pass does not re-litigate it.**
 
-## Opportunities by region
+## Opportunities by region — superseded, Pass 336 (kept for history; the canonical block is at the top of this file)
 
 ### North America
 
@@ -262,7 +346,7 @@ The EMEA leg returned the **Annex III** education deferral to **2027-12-02** via
 
 🟡 **One adoption datum worth carrying with its caveat attached:** student AI use reported as **66% (2024) → 92% (2025)**. The population is not specified in any source that repeats it. 🔴 **Do not put it in a deck without the primary citation**; it is the most-repeated and least-sourced number in this sector.
 
-## Opportunities by region
+## Opportunities by region — superseded, Pass 336 (kept for history; the canonical block is at the top of this file)
 
 ### North America
 
@@ -1012,7 +1096,7 @@ anything about my institution?" that is not a bespoke integration — and becaus
   `Bimbi-Dev/OpenTeacher` (Peru, Hackathon AIdea Lima 2026, no licence, core agent logic unwritten) —
   see `agents/top.md`. **The LATAM supply gap and the LATAM market-size gap both stand.**
 
-## Opportunities by region
+## Opportunities by region — superseded, Pass 336 (kept for history; the canonical block is at the top of this file)
 
 > **Pass 324 — one new opportunity, and it is cross-regional, so it is placed in all four rather
 > than written as a section of its own.** The academic-integrity evidence chain is now buildable

@@ -3,6 +3,57 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+
+## Pass 338 · 2026-10-20 — the adoption gap in education AI has inverted: usage is near-universal and GOVERNANCE is the scarce good, and that is a sellable engagement
+
+### 🟢 T-338.1 — Across all four regions the binding constraint is no longer adoption. It is policy, and the numbers are not close
+
+🔵 **Measured across this pass's four regional legs, every figure labelled with its channel per `ACTION ZD`.** The shape repeats in all four regions and it is the most consistent cross-regional signal this base has recorded:
+
+| region | usage, reported | governance, reported | 🔴 the gap |
+|---|---|---|---|
+| North America | 🟡 ChatGPT used by **66%** of students; NA holds ~**36%** of the market *(search channel, vendor roundup)* | 🔴 **only 10%** of institutions have formal AI guidelines; **71%** of US teachers report no AI training *(same channel)* | 🔴 **~56 points** |
+| LATAM | 🟢 **92%** of students and **79%** of faculty actively engaging with AI *(Digital Education Council LATAM survey 2026, >30 000 responses, 29 institutions)* | 🔴 **only ~30%** of LATAM universities have published AI policies *(Tecnológico de Monterrey, in the same survey)* | 🔴 **~62 points** |
+| EMEA | 🟡 broad enterprise uptake, education-specific usage **not reported by this channel** | 🟡 the **EU AI Act** classifies education AI as **high-risk** — the only region with a binding, named instrument | 🟡 **regulation leads adoption here, which is the inverse of everywhere else** |
+| APAC | 🟡 **not reported for education** by this channel; enterprise AI moving from pilots to production | 🟡 **"sovereign-by-design"** is the stated 2026 posture; no education-specific rule found | 🟡 **unquantified — see T-338.3** |
+
+🔴 **Read the two hard pairs together: 66% usage against 10% policy, and 92% usage against 30% policy.** Students and faculty are already using these systems at scale, in both hemispheres, inside institutions that have **not** decided what is allowed. 🟢 **That is not a technology gap and no model ships a fix for it.** It is an **AI-governance-and-enablement** engagement: acceptable-use policy, assessment redesign, disclosure and provenance, audit trail, staff training.
+
+🔵 **Why it is a trend and not a snapshot.** p337's trend shelf established that education's licence risk is migrating from **code** to **content**. This is the demand-side twin of the same movement: the scarce good is moving from **capability** to **permission**. 🟢 **Both point the studio at the same deliverable — an auditable boundary — and that is why `compose/patterns.md` R-338.1 is a governance recipe rather than a model recipe.**
+
+🟡 **The honest bound on every figure in that table: all four rows are search-channel, all are vendor or association reporting, and none was read from a primary PDF this pass.** 🔴 **The LATAM primary source was attempted and could not be reached from this environment** — `digitaleducationcouncil.com` returns `ENOTFOUND` here, which is a **network measurement, not a refutation of the figure**. It is carried as attributed, never as asserted.
+
+---
+
+### 🔴 T-338.2 — The market-size channel has now failed the same way three passes running, and it should stop being asked
+
+🟡 **The prescribed `AI education industry trends 2026` leg returned, in one pass, from three publishers:**
+
+| source | 2025/2026 base | horizon |
+|---|---|---|
+| IMARC-derived summary | **$6.4B** (2025) | **$79.6B** by 2034 |
+| The Business Research Company | **$7.52B** (2025) → **$10.6B** (2026) | — |
+| New Market Pitch | — | **~28%** CAGR to 2036 |
+
+🔴 **A 2034 figure of $79.6B and a 2026 figure of $10.6B cannot both describe the same market.** p337 recorded this conflict; p336 recorded it; this pass makes it **three consecutive passes** where the same leg returns irreconcilable numbers from vendor-marketing pages.
+
+🟢 **The conclusion is about the instrument, not the market: this base should stop quoting a market size for education AI, and say why.** 🔵 **What IS quotable from the same channel is the stuff with a stated denominator** — >30 000 survey responses across 29 institutions, 200 higher-education institutions across 19 countries (UNESCO IESALC), *n*-based adoption percentages. 🟢 **`ACTION ZQ`: a market-size figure enters this KB only with a named publisher, a base year and a method; a growth rate with none of the three is recorded as a conflict and never as a number.**
+
+---
+
+### 🟡 T-338.3 — Two of four regions returned NO education-specific signal on the prescribed leg, and that is written down rather than left to look like coverage
+
+🔴 **Per the engagement contract — *"if a region returns nothing relevant, WRITE THAT DOWN explicitly — an informed gap is information, while silence looks exactly like coverage"* — here is what each regional leg actually returned:**
+
+| region | leg | education-specific result? |
+|---|---|---|
+| LATAM | `AI education LATAM 2026 adoption regulation players` | 🟢 **RICH.** A survey with a real denominator, named institutions, named ministries (SEP, ANUIES), UNESCO IESALC, CEPAL/IDB ILIA index, Chile's National AI Policy |
+| North America | `AI education North America 2026 adoption regulation players` | 🟢 **ADEQUATE.** Adoption and policy-gap percentages, the state-level patchwork (Colorado, Texas), named players, the Carnegie Mellon / Gates $55M courseware item |
+| EMEA | `AI education EMEA 2026 adoption regulation players` | 🔴 **NOTHING EDUCATION-SPECIFIC.** Every result was enterprise AI adoption or general EU AI Act commentary; one of the two substantive sources is a **2023** Workday study. 🔴 **No edtech vendor, no ministry of education, no school-level rule, no GDPR-and-student-data material.** The query term `EMEA` is a vendor sales region, not a term ministries of education use about themselves |
+| APAC | `AI education APAC 2026 adoption regulation players` | 🔴 **NOTHING EDUCATION-SPECIFIC.** Enterprise AI and sovereignty commentary. The only education-adjacent items are **corporate L&D** vendors (Pearson/TCS skills alliance, LearnUpon, Alteryx academy), which is a different market from schools and universities. **No national education-ministry AI policy surfaced** |
+
+🔵 **The diagnosis is the query language, and this base has priced that before** — p222 and p328 both recorded a mandated query returning whoever bought the search terms. 🟢 **`ACTION ZR`: the regional legs for EMEA and APAC are to be run with POLITICAL rather than COMMERCIAL region names** — *"AI in schools Europe regulation 2026"*, *"EU AI Act education high-risk classification"*, *"Singapore / Australia / India ministry of education AI policy 2026"*. 🔴 **Until that is run, EMEA and APAC education policy on this shelf rests on the EU AI Act's high-risk classification and nothing else, and no pass should read the silence as coverage.**
+
 ## Pass 337 · 2026-10-20 — education's licence risk is moving from CODE to CONTENT, and the standard SPDX review does not look there
 
 ### 🔴 T-337.1 — A curriculum platform inherits obligations from its DATA, and the software licence review will not find them

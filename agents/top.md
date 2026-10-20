@@ -3,6 +3,160 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+
+## Pass 338 · 2026-10-20 (eleventh pass of this date) — two passes were spent repairing the ladder's CASE axis, and the grant that actually defeats the ladder was already on these shelves, defeating it on DEPTH
+
+🟢 **`ACTION ZF` closed first, before a byte was written.** Both suites were run, not inherited.
+
+| suite | 🟢 at pass open | 🟢 at pass close |
+|---|---|---|
+| `make hooks` | 🟢 **22/22 — all green** (p337's repair holds) | 🟢 **23/23** — one gate ADDED to the tier, below |
+| `make gate-offline` | 🟢 all pass · `lazy-quantifier lint: 0` | 🟢 all pass · `lazy-quantifier lint: 0` |
+| `p383` region-heading gate | 🔴 **NEVER RUN — not wired into any target** | 🟢 **wired, and the live shelf brought to green** |
+
+---
+
+### 🔴 FINDING 0 — the licence question p337 registered as *"the next licence question for this tier"* was answered on this base's own shelves 72 passes earlier, and the hash matches
+
+🔴 **`intel/market.md`, written one pass ago, carries this:** *"two separate comparison pages list **Forma LMS** as Apache-2.0 and as GPL-v2 respectively. 🟡 Unresolved — not probed this pass, and not published as either. Registered as the next licence question for this tier."*
+
+🟢 **Measured first-hand this pass, on the two channels `ACTION ZM` names:**
+
+| channel | measurement |
+|---|---|
+| `git ls-remote --symref` | 🟢 resolves · default branch **`master`** · `HEAD 446a77a9b9cbb20dacf008a2d53b2658fb5f5634` |
+| `raw.githubusercontent.com` | 🟢 **HTTP 200** at **`html/license.txt`** · **18 346 B** · title line *GNU GENERAL PUBLIC LICENSE, Version 2, June 1991* · `sha256`₁₆ **`4e63feff285d9215`** |
+
+🔴 **This base has carried exactly that value since `p265`, and `p276` reproduced it independently by tree enumeration — same path, same 18 346 B, and the hash I measured today is the hash on the shelf.** The question was not open. **It was answered, twice, and re-registered as open anyway.**
+
+🔵 **Why this is a class and not a slip.** p334 named it, p337 logged the fifth instance, and this is the sixth: **the capability exists, the answer is already written down, and nothing in the pass path reads the base before declaring a question open.** 🟡 `gate-absence` (`ACTION p279`) exists precisely to stop this — but it governs **absence** claims (*"X has no grant"*), and p337 did not publish an absence. It published an **open question**, which no gate types. 🟢 **`ACTION ZO` registers the missing shape: a pass may not register a licence question as OPEN without first grepping the corpus for the slug. An unresolved question is a claim about THIS BASE, and it is falsifiable from the base alone, offline, in one command.**
+
+---
+
+### 🔴 FINDING 1 — the reason the question LOOKED open: the sanctioned instrument cannot reach that grant, and the axis it cannot reach is DEPTH
+
+🟢 **`compose/code/lib/probe_payload.sh` has exactly two channels, and `formalms/formalms` defeats BOTH:**
+
+| channel | why it fails on this specimen | measured |
+|---|---|---|
+| the 42-rung case-varied ladder (`ACTION ZL`) | 🔴 **every rung is a BARE FILENAME.** `probe_ladder()` emits `license`, `LICENSE`, `License.txt`, `COPYING` … — **root-level, all of them.** No amount of case variation reaches a path with a `/` in it | 🔴 `LICENSE`, `LICENSE.txt`, `license.txt`, `COPYING` all **HTTP 404** on `master` |
+| the README-link fallback (`_readme_license_path`, the library's own depth mitigation) | 🔴 requires the README to **name** the licence; it greps `licen[sc]e\|copying` over the README's markdown links | 🔴 the README is **6 198 B** and contains **ZERO** occurrences of `licen[sc]e` — *not* zero links, **zero occurrences of the word** |
+
+🔴 **So the only sanctioned instrument returns an ABSENCE for a repository whose 18 346 B GPL-2.0 grant answers HTTP 200.** p336 and p337 spent two consecutive passes widening the ladder's **case** axis — 7 rungs → 24 → 42 — and the specimen that actually defeats it was sitting on `verticals/solutions.md` the whole time, defeating it on **path depth**, where the ladder has no rung at all and never had one.
+
+🟡 **The library's own header already knew.** Note 2, written at Pass 15 on 2026-10-06: *"THE LICENCE CAN LIVE IN A SUBDIRECTORY, MIXED-CASE. Measured: `OS4ED/openSIS-Classic` keeps GPL-2.0 at `docs/License.txt` … So the README link is tried BEFORE the long ladder."* 🔴 **The mitigation was written down and its PRECONDITION was never measured.** Measured now, on the only two depth specimens this corpus holds:
+
+| depth specimen | grant, re-read this pass | README names a licence? | 🔴 does the mitigation fire? |
+|---|---|---|---|
+| `OS4ED/openSIS-Classic` | 🟢 **GPL-2.0** · `master/`**`docs/License.txt`** · **17 286 B** | 🟢 **yes — 2 occurrences** | 🟢 **fires.** This is the specimen it was built for |
+| `formalms/formalms` | 🟢 **GPL-2.0** · `master/`**`html/license.txt`** · **18 346 B** | 🔴 **no — 0 occurrences** | 🔴 **cannot fire.** Depth coverage is 0 here |
+
+🟢 **1 of 2.** The depth channel is conditional on prose a maintainer had no obligation to write, and on this corpus's own specimens it covers half of them.
+
+🟢 **`ACTION ZN`: an absence verdict may not be published from the root ladder and the README link alone. Depth must be excluded — by tree enumeration (`ACTION p275`, `make enumerate`, which is how `p276` got both rows right), or by the prefix ladder this pass measured. `ACTION ZL` governs CASE; `ZN` governs DEPTH; neither implies the other.**
+
+---
+
+### 🟢 FINDING 2 — the audit the new action demands, run over every published absence, WITH its negative control: no published absence is false
+
+🟢 **Every row this base currently publishes as having no grant was re-probed on the depth axis** — 10 prefixes × 8 stems = **80 paths per repository**, plus the README word-count channel. 🔵 **The prefixes are the shapes THIS CORPUS has measured** (`docs/`, `html/`, `licenses/`, `legal/`, `src/`, `lib/`, `app/`, `web/`, `LICENSES/`) plus the GitHub convention `.github/` — not a combinatorial set bought for its own sake.
+
+| 🟢 positive control | expected | measured this pass |
+|---|---|---|
+| `formalms/formalms` | `html/license.txt`, 18 346 B | 🟢 **hit, 18 346 B, GPL-2.0** — the byte count on the shelf |
+| `OS4ED/openSIS-Classic` | `docs/License.txt`, 17 286 B | 🟢 **hit, 17 286 B, GPL-2.0** — the byte count on the shelf |
+| 🔴 `gmilano/definitely-not-a-real-repo-p338` (invented) | must not resolve | 🟢 **`UNRESOLVED`** — the instrument discriminates |
+
+🟢 **The eleven published absences, re-probed:**
+
+| row published as ungranted | default branch | depth axis, 80 paths | README names a licence? |
+|---|---|---|---|
+| https://github.com/dmontgomery40/mcp-canvas-lms | `main` | 🟢 **no nested grant** | 🟡 **2** — the `DECLARED-ONLY` specimen; points at a `LICENSE` it does not ship |
+| https://github.com/likr/canvas-lms-agent | `master` | 🟢 **no nested grant** | 🔴 **0** |
+| https://github.com/studiolxd/xapi | `main` | 🟢 **no nested grant** | 🟡 **1** |
+| https://github.com/risnake/canvas-mcp-server | `main` | 🟢 **no nested grant** | 🔴 **0** |
+| https://github.com/mthatipamula/educational-assessment-ai-agent-platform | `main` | 🟢 **no nested grant** | 🔴 **0** |
+| https://github.com/oseducation/knowledge-graph | `main` | 🟢 **no nested grant** | 🔴 **0** |
+| https://github.com/Kyyota-Wang/cloverailab | `main` | 🟢 **no nested grant** | 🔴 **0** |
+| https://github.com/010Ankushsharma/AdaptaLearn | `master` | 🟢 **no nested grant** | 🔴 **0** |
+| https://github.com/YL1N/EduGuardBench | `master` | 🟢 **no nested grant** | 🔴 **0** |
+| https://github.com/razi-03/NCERT-CKG | `main` | 🟢 **no nested grant** | 🔴 **0** |
+| https://github.com/Willie-Liao/lesson-library | `main` | 🟢 **no nested grant** | 🟡 **1** |
+
+🟢 **11 of 11 survive. ZERO false absences.** The hole `FINDING 1` proves is real, and **it has not yet cost this base a single published row** — which is a measurement worth exactly as much as a catch would have been, and is stated here instead of a catch because it is what the instrument returned.
+
+🔴 **But read the last column, because it prices the exposure going forward.** The README mitigation can fire on **3 of these 11**; for **8 of 11**, depth coverage rested entirely on a channel that *cannot* fire. 🔵 **The two rows that WERE at depth are right only because `p276` reached them with a different instrument — tree enumeration — which has never been in the path that publishes an absence.** That is the gap `ACTION ZN` closes.
+
+---
+
+### 🔴 FINDING 3 — the gate that enforces the task contract's own region rule has a 100%-passing test suite and has NEVER been wired into a target
+
+🔴 **The engagement contract says, verbatim:** *"In `intel/market.md`, opportunities go under a single `## Opportunities by region` heading with one `###` subsection per region. Never write a LATAM-only section."*
+
+🟢 **An instrument for exactly that exists: `compose/code/p383-region-heading-gate/check_headings.py`**, with four typed findings (`P383-MULTIPLE-BLOCKS`, `P383-OUT-OF-VOCAB`, `P383-MISSING-REGION`, `P383-LATAM-ONLY`), a `P541` no-input refusal, and its own passing suite. 🔴 **`grep -n p383 Makefile` returns NOTHING.** It is in no target — not `hooks`, not `gate-offline`. **`make hooks` 22/22 green has never said one word about region headings.**
+
+🔴 **Run against the live shelf for the first time, it fails immediately:**
+
+| finding | count | what it is |
+|---|---|---|
+| `P383-MULTIPLE-BLOCKS` | 🔴 **4** | **5 canonical blocks** in `intel/market.md` (lines 23, 77, 150, 265, 1015) — one per pass that wrote one. The contract asks for **1** |
+| `P383-MISSING-REGION` | 🔴 **2** | `Global` absent from the blocks at lines 23 and 77 — and `Global` is in the closed vocabulary |
+| `P383-OUT-OF-VOCAB` | 🔴 **14** | prose `###` headings adopted as region children because they follow a canonical `##` |
+
+🔵 **This is `P471` wearing a third hat, and this base has named it twice already** — *"a gate that passes all its checks without judging anything."* p115 caught five Python gates that could not run under `python3 -I`; p541 caught this very gate printing `total 0` on no input. 🔴 **Neither noticed that the gate is not invoked at all.** A suite that passes proves the instrument works; it proves nothing about whether anything calls it.
+
+🟢 **Both halves fixed in this pass, and the fix is wiring plus structure, not research:**
+1. `p383` is now a **first-class member of the `hooks` tier** — 22 gates → **23**, so a future pass cannot reintroduce a second canonical block without going red.
+2. `intel/market.md` now carries **ONE** canonical `## Opportunities by region` block with exactly the **five** closed-vocabulary children. The four historical blocks are **relabelled, not deleted** — `## Opportunities by region — p337 (superseded)` and so on — so the history stays readable while only the live block claims the canonical heading. 🔵 **`intel/market.md` is not one of the two append-only files**; the two that are (`agents/trending.md`, `repos/trending.md`) were not touched by this restructure.
+
+🟢 **`ACTION ZP`: an instrument is not a gate until a target invokes it. Any pass adding a gate adds it to a target in the same pass, and `grep -c '<gate-dir>' Makefile` is the check.**
+
+🔵 **One regression of my own, caught by this base's gates inside the pass and recorded rather than quietly fixed:**
+
+| what I did | which gate caught it | 🟢 resolution |
+|---|---|---|
+| wired `p383` into `HOOK_GATES` and wrote the prose, without touching the coverage census that counts which suites are gated | 🔴 **`p252-ungated-floors`** — `make gate-offline` went RED: *"ungated AND explicit-exit (immune by construction) … got: 109"*, expected 110 | 🟢 **The census was RIGHT, and the pin moved 110 → 109 with the reason recorded in the file.** `p383`'s suite was ungated **and** explicit-exit, never silent-zero, so it leaves the *immune* half: `ungated` 181 → 180, explicit-exit 110 → 109, 🟢 **and the XR silent-zero backlog stays at 71** — no better, no worse than p332 left it |
+
+🔵 **This is the second instance of the door `p294` documented** — *"it left the population by the only door that was ever supposed to exist: it became gated"* — and the **fifteenth consecutive pass** in which this census went red before the prose did. 🟢 **It is also p294's shape run forwards:** p294 proved the pin catches a suite *leaving* the backlog, which is the direction a coverage census must never miss, because **a suite leaving silently would read as progress.** Here it left legitimately, and the census still made the pass prove it.
+
+---
+
+### 🟢 The tier re-read first-hand this pass — 9 agent rows, every grant re-measured on both axes, zero drift
+
+🟢 **Grant read on `raw.githubusercontent.com` at a branch resolved by `git ls-remote --symref`.** Per `ACTION ZD` the channel is recorded, not just the value. 🔵 **The `axis` column is new this pass**: it says whether the grant was found at the repository root or at depth — the distinction `FINDING 1` shows the old instrument could not make.
+
+| Agent / tool | Repo | Grant, re-read this pass | Bytes · branch · path | Axis | What it is |
+|---|---|---|---|---|---|
+| **uis-mcp-server** | https://github.com/SidneyBissoli/uis-mcp-server | 🟢 **MIT** | 1 088 · `main` · `LICENSE.md` | 🟢 root | UNESCO Institute for Statistics education data over MCP; the LATAM supply row placed at p337 |
+| **h5p-cli** | https://github.com/h5p/h5p-cli | 🟢 **MIT** | 1 066 · `master` · `LICENSE` | 🟢 root | Command-line tooling for H5P interactive content — the authoring spine of the EMEA stack |
+| **hyperbook** | https://github.com/openpatch/hyperbook | 🟢 **MIT** | 1 069 · `main` · `LICENSE.md` | 🟢 root | Markdown→interactive-courseware generator; H5P-aware, static output |
+| **h5p-offline-player** | https://github.com/missing-elements/h5p-offline-player | 🟢 **MIT** | 1 073 · `main` · `LICENSE` | 🟢 root | Plays H5P content with no server — the low-connectivity deployment answer |
+| **zenbrain** | https://github.com/zensation-ai/zenbrain | 🟢 **Apache-2.0** | 11 357 · `main` · `LICENSE` | 🟢 root | Spaced-repetition / learning-algorithm library; canonical Apache payload, `GRANT` on `p307` |
+| **moodle-driver** | https://github.com/falkenslab/moodle-driver | 🟢 **MIT** | 1 067 · `main` · `LICENSE` | 🟢 root | Programmatic Moodle driver; 🟡 shelved amber — 320 commits in nine days, one author |
+| **h5p-theme-picker** | https://github.com/otacke/h5p-theme-picker | 🟢 **MIT** | 1 073 · `master` · `LICENSE` | 🟢 root | H5P theming; title line reads `The MIT License` |
+| **yanki** | https://github.com/kitschpatrol/yanki | 🟢 **MIT** | 1 071 · `main` · `license.txt` | 🟢 root, **lowercase** | Markdown→Anki flashcard sync; the p336/p337 case casualty, and still the only lowercase grant in the tier |
+| **OATutor** | https://github.com/CAHLR/OATutor | 🟢 **MIT** | 1 105 · `main` · `LICENSE` | 🟢 root | Berkeley CAHL intelligent tutor; **BKT is explainable**, which is what a school board can audit |
+
+🟢 **Nine of nine re-read, and every byte count is the one already on the shelf** (1 088 · 1 066 · 1 069 · 1 073 · 11 357 · 1 067 · 1 073 · 1 071 · 1 105). 🔵 **No drift in the agent tier this pass** — stated as a measurement, because a re-read that finds nothing is the only thing that licenses the shelf to stand unchanged.
+
+---
+
+### 🟡 Discovery: 0 new promotable rows — the NINTH consecutive such measurement, and saturation again, not silence
+
+🟢 **All four prescribed global legs run verbatim, plus one extra leg bought deliberately because the prescribed four are saturated:**
+
+| leg, run verbatim 2026-10-20 | result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new.** General-agent listicles. The only education rows are courseware: `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch` — 🟢 **all three already named on these shelves** (232 · 160 · 230 corpus mentions). One source's own caveat repeats: *"some projects marketed as open source are actually source-available."* |
+| `github trending education AI 2026` | 🔴 **0 new.** No education category exists on GitHub Trending; the hits are AI-courseware repos, all carried |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new**, and the vendor-SEO shape p222 and p328 both recorded recurs: **5 of 9 results were `openeducat.org` glossary pages in 5 languages.** 🟢 Re-confirmed: **OpenEduCat is LGPL-3.0**, not MIT or Apache — the leg's own phrasing presumes a platform that does not exist |
+| `AI education industry trends 2026` | 🟡 **Market sizes conflict irreconcilably across publishers** — $6.4B (2025)→$79.6B (2034) vs $7.52B (2025)→$10.6B (2026) vs ~28% CAGR to 2036. 🔴 **Not publishable as a figure; recorded as a conflict**, which is what p337 did with the same leg |
+| 🔵 **extra leg** · `new open source education AI agent MCP server October 2026 Moodle Canvas grading` | 🔴 **0 new.** Returned `vishalsachdev/canvas-mcp`, `csmediapro/moodle-mcp-server`, `peancor/moodle-mcp-server` — 🟢 **3 of 3 already `CARRIED`**. Buying a leg outside the prescribed four did not break the saturation |
+
+🔵 **Nine consecutive passes at zero is now a property of the channel, not of the passes.** The honest reading stays p337's: this is a channel whose education-agent supply this base has absorbed. **Fewer real rows beat padding, and an informed gap is information.**
+
+🟢 **One third-party claim CONFIRMED by the byte channel — the rarer direction, and worth recording because this base usually records the opposite.** A directory listing asserted `csmediapro/moodle-mcp-server` is AGPL-3.0. Re-read first-hand: `main/LICENSE`, **34 523 B**, *GNU AFFERO GENERAL PUBLIC LICENSE* — 🟢 agreeing with the directory **and** with this base's own cell. 🔵 And 34 523 B is byte-identical to `overhangio/tutor`'s AGPL-3.0 payload on `repos/foundations.md`, which is an independent cross-check on the canonical AGPL-3.0 text.
+
 ## Pass 337 · 2026-10-20 (tenth pass of this date) — the gate that has been red since p331 was never a number: it was `p332` wiring a case-blind instrument into the hook tier, and it had made every absence claim on these shelves unpublishable
 
 🟢 **`ACTION ZF` closed first, before a byte was written.** Both suites were run, not inherited.

@@ -28,6 +28,7 @@ README_LOG := $(shell mktemp)
 ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
+REGION_LOG ?= /tmp/education-kb-gate-region-headings.log
 AFFERO_LOG ?= /tmp/education-kb-gate-affero-rung.log
 FAMILY_LOG ?= /tmp/education-kb-gate-family-coverage.log
 PERMISSIVE_LOG ?= /tmp/education-kb-gate-permissive-arm.log
@@ -57,7 +58,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
              gate-slug-oracle gate-payload-pin gate-shelf-consistency \
              gate-affero-rung gate-family-coverage gate-permissive-arm \
-             gate-template-identity gate-untitled-payload
+             gate-template-identity gate-untitled-payload gate-region-headings
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -214,6 +215,10 @@ absence-census: ## ACTION p279 — the whole-corpus arm: a measurement, never a 
 # they are bound now.  Annex III point 3 applies `2027-12-02`; `2026-08-02` is Article 50
 # transparency and IS live.  No network.
 DATES_LOG ?= /tmp/education-kb-gate-dates.log
+
+gate-region-headings: ## p338 — ACTION ZP: p383's region-heading contract, WIRED.  The gate existed with a passing suite from p383 to p337 and was in no target, so `make hooks` never judged this file's region structure at all.
+	@cd compose/code/p383-region-heading-gate && { $(PY) test_check_headings.py > $(REGION_LOG) 2>&1 || { echo "🔴 p383-region-heading-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(REGION_LOG) ; false ; } ; } && echo "── p383-region-heading-gate (11 controls: MULTIPLE-BLOCKS, OUT-OF-VOCAB, MISSING-REGION, LATAM-ONLY, P541 no-input refusal)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p383-region-heading-gate/check_headings.py intel/market.md || exit 1
 
 gate-dates: ## ACTION p279 — the KB may not ASSERT a date it has already refuted
 	@cd compose/code/p223-selfclaim-date-gate && { $(PY) -I gate.py --self-test > $(DATES_LOG) 2>&1 || { echo "🔴 p223-selfclaim-date-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(DATES_LOG) ; false ; } ; } && echo "── p223-selfclaim-date-gate (15 controls: ASSERTED / ATTRIBUTED / QUOTED / CORRECTED)" && echo "   PASS" || exit 1

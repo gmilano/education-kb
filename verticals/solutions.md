@@ -3,6 +3,43 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+
+## Pass 338 · 2026-10-20 — the platform tier gains a second Docebo-lineage LMS with a MEASURED grant, and the licence-review lesson is that the grant may not be where your scanner looks
+
+🟢 **Every grant below re-read first-hand this pass** at a branch resolved by `git ls-remote --symref`, payload from `raw.githubusercontent.com`, bytes counted where the file landed. These are the real, customisable systems an education engagement starts from — the Odoo / OpenMRS / Moodle tier. 🔵 **The column that matters is still not the SPDX name; it is what the grant does to the layer you add on top.**
+
+| Platform | What it is | Grant, measured | Bytes · branch · path | 🔴 What it does to YOUR layer |
+|---|---|---|---|---|
+| https://github.com/moodle/moodle | The LMS incumbent; plugin API, hundreds of plugin types | 🟡 **GPL-3.0** | 35 147 · `main` · 🟡 **`COPYING.txt`** | 🔴 **A Moodle plugin is a derivative work.** Ship it GPL-3.0, or keep your logic in an external service the plugin calls. **The service stays yours; the plugin does not.** |
+| https://github.com/openedx/edx-platform | MOOC-scale platform; the Open edX community distribution | 🔴 **AGPL-3.0** | 35 136 · 🟡 `master` · `LICENSE` | 🔴 **§13: network users must be offered the source.** Hosting a modified Open edX for a client triggers it. The clean pattern is **unmodified core + XBlock/LTI boundary** |
+| https://github.com/overhangio/tutor | The de-facto Open edX installer/distro (Docker) | 🔴 **AGPL-3.0** | 34 523 · 🔴 **`release`** · 🟡 **`LICENSE.txt`** | 🔴 Same §13 reach as the platform it deploys. 🟡 **Note the branch:** a `main`-pinned probe calls this repo ungranted |
+| https://github.com/chamilo/chamilo-lms | LMS with a strong LATAM/EMEA public-sector install base | 🟡 **GPL-3.0** | 35 147 · 🟡 `master` · `LICENSE` | 🔴 Same as Moodle: in-tree customisation is GPL-3.0. Integrate over web services |
+| https://github.com/OpenOLAT/OpenOLAT | University-grade LMS; assessment + competence management | 🟢 **Apache-2.0** | 10 982 · 🟡 `master` · `LICENSE` | 🟢 **The permissive platform in this tier.** Patent grant, notice obligation only — a proprietary AI layer may be linked **and** shipped. 🔵 **Reach for this one first when the client needs closed IP** |
+| https://github.com/francoisjacquet/rosariosis | Student Information System (SIS), not an LMS | 🟡 **GPL-2.0** | 15 214 · 🔴 **`mobile`** · `LICENSE` | 🟡 GPL-2.0 — **no patent grant**, no §13. Module code is derivative; an external AI service is not. 🔴 **Default branch is `mobile`**, the sharpest probe trap in this tier |
+| https://github.com/OS4ED/openSIS-Classic | SIS with a long public-sector install base | 🟡 **GPL-2.0** | 17 286 · 🟡 `master` · 🔴 **`docs/License.txt`** | 🟡 GPL-2.0, same boundary as RosarioSIS. 🔴 **The grant is at DEPTH** — an SPDX scan that walks the repo root reports this platform as unlicensed |
+| https://github.com/formalms/formalms | 🆕 LMS of the **Docebo** open-source lineage; corporate/extended-enterprise training | 🟡 **GPL-2.0** | 18 346 · 🟡 `master` · 🔴 **`html/license.txt`** | 🟡 GPL-2.0 — in-tree customisation is derivative. 🔴 **The grant is at DEPTH *and* the README never says the word *licence***, so both the root ladder and a README-link fallback miss it |
+| https://github.com/jupyterhub/jupyterhub | Multi-user notebook infrastructure; the teaching-lab backbone | 🟢 **BSD** | 1 475 · `main` · `LICENSE` | 🟢 **Most permissive here.** Attribution only. Authenticators and spawners can be closed |
+
+🟢 **Recommendable set for closed-IP work, unchanged and re-verified: `OpenOLAT` (Apache-2.0) and `JupyterHub` (BSD).**
+🟡 **Recommendable with an architectural boundary: all seven copyleft rows** — and the boundary is the same shape in every case (**unmodified core, your logic in a separate service, integrate over LTI / web services / the plugin API**). That is the difference between an obligation on your deliverable and no obligation at all.
+
+---
+
+### 🔴 The licence-review lesson this tier now carries, and it is a procurement risk, not a pedantry
+
+🔴 **Two of the nine platforms above keep their grant in a subdirectory**, and one of those two does not mention a licence anywhere in its README:
+
+| platform | where a scanner looks | where the grant actually is | what a root-only scan reports |
+|---|---|---|---|
+| https://github.com/OS4ED/openSIS-Classic | `/LICENSE`, `/LICENSE.txt`, `/COPYING` | 🔴 **`docs/License.txt`** · 17 286 B · GPL-2.0 | 🔴 **"no licence — all rights reserved"** |
+| https://github.com/formalms/formalms | `/LICENSE`, `/LICENSE.txt`, `/COPYING` | 🔴 **`html/license.txt`** · 18 346 B · GPL-2.0 | 🔴 **"no licence — all rights reserved"** |
+
+🔵 **Both directions of that error are expensive, and they fail in opposite directions:**
+- **Reported unlicensed when it is GPL-2.0** → the studio refuses a usable platform, or worse, treats it as public-domain-ish because "there's no licence file" and ships derivative code with **no** compliance plan.
+- 🟡 **And the reverse shape is already on this base's record for this very platform:** secondary comparison pages have asserted **Forma LMS is Apache-2.0**. 🔴 **It is GPL-2.0, measured at 18 346 B with `sha256`₁₆ `4e63feff285d9215`.** A bid priced on a permissive reading of this platform is priced wrong.
+
+🟢 **The instruction that follows for an engagement, and it is one line:** on this tier, **never accept a licence verdict from a badge, a comparison page, or a root-only SPDX scan — enumerate the tree.** `make enumerate` is the instrument; `p276` is the precedent; both nested rows above are correct on this shelf only because somebody ran it.
+
 ## Pass 337 · 2026-10-20 — the platform tier re-read at the integration boundary: which of these can carry a proprietary AI layer, measured from the grant and not from the badge
 
 🟢 **Every licence below was re-read first-hand this pass** (42-rung ladder, branch resolved by `ls-remote --symref`, payload from `raw`). These are the real, customisable systems an education engagement starts from — the Odoo/OpenMRS/Moodle tier — and the column that matters is **not** the SPDX name, it is **what the grant does to the layer you add on top**.

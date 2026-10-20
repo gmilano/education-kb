@@ -3,6 +3,80 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+
+## Pass 338 · 2026-10-20 — three recipes, every component's grant re-read first-hand this pass, and the first one sells the gap this pass measured in four regions
+
+🔵 Every component below carries a grant measured on `raw.githubusercontent.com` **this pass**, at a branch resolved by `git ls-remote --symref`. Byte counts are from where the file landed. 🔴 **New in these recipes: each component records the AXIS of its grant** (root or nested), because `agents/top.md` FINDING 1 shows a root-only scan silently mis-grades the platform tier.
+
+---
+
+### 🟢 R-338.1 — The AI-governance boundary: sell the 56-point gap, not a model
+
+**The problem it solves.** The measurement this pass made in two hemispheres: **66%** of North American students use ChatGPT while **10%** of institutions have formal AI guidelines; **92%** of LATAM students and **79%** of faculty engage with AI while **~30%** of universities have published a policy. 🔴 **No model ships a fix for that, and a tutor deployment makes it worse** — more usage inside an institution that still has not decided what is allowed.
+
+| role | component | grant, re-read this pass | axis | why this one |
+|---|---|---|---|---|
+| delivery platform | https://github.com/OpenOLAT/OpenOLAT | 🟢 **Apache-2.0**, `master/LICENSE`, **10 982 B** | 🟢 root | 🟢 the only permissive platform in the LMS tier — the governance layer you build stays yours |
+| mastery model | https://github.com/CAHLR/OATutor | 🟢 **MIT**, `main/LICENSE`, **1 105 B** | 🟢 root | 🟢 **BKT is explainable.** A school board can be shown *why* a learner was advanced; a transformer's logits cannot be |
+| teaching-lab runtime | https://github.com/jupyterhub/jupyterhub | 🟢 **BSD**, `main/LICENSE`, **1 475 B** | 🟢 root | 🟢 attribution only; authenticators and spawners may be closed. Per-user isolation is the audit unit |
+| authoring | https://github.com/openpatch/hyperbook | 🟢 **MIT**, `main/LICENSE.md`, **1 069 B** | 🟢 root | static, reviewable courseware output — a diff is the audit trail |
+
+**How to wire it.**
+1. **OpenOLAT as the system of record**, unmodified, deployed on client infrastructure (this is also the APAC sovereignty answer).
+2. **Your governance service sits outside it** and is the deliverable: an acceptable-use policy engine, a disclosure register (which learner interaction used which model, when), and a human-in-the-loop checkpoint on anything touching grades or progression.
+3. **Integrate over LTI 1.3 / web services only.** 🔴 Never as an in-tree plugin — see the licence note below.
+4. **OATutor supplies the mastery estimate**, and because BKT is auditable, the disclosure register can state the reason for every advancement decision.
+5. **Hyperbook authors the content** so that every change to what a learner is told is a reviewable commit.
+
+🟢 **Why the boundary is also the licence answer.** OpenOLAT is Apache-2.0, so in principle in-tree work is safe — **but build the LTI boundary anyway**, because it is what makes the same governance service sellable on Moodle (GPL-3.0), Chamilo (GPL-3.0) and Open edX (AGPL-3.0) without relicensing a line. 🔵 **One service, four platforms, zero copyleft reach into the deliverable.**
+
+🟡 **The honest bound:** the percentages above are search-channel and attributed, and the LATAM primary source was unreachable from this environment (`ENOTFOUND`). **Use them to size an offer, not to price a contract.**
+
+---
+
+### 🟢 R-338.2 — A licence-verification step that does not mis-grade the platform tier
+
+**The problem it solves.** 🔴 **A root-only SPDX scan gets the grant wrong on 8 of the 11 foundation rows measured this pass**, and it fails in both directions: it reports GPL-2.0 platforms as *unlicensed*, and secondary comparison pages report one of them as *Apache-2.0* when it is GPL-2.0. **Either error mis-prices a bid.**
+
+| role | component | grant, re-read this pass | axis | the trap it demonstrates |
+|---|---|---|---|---|
+| nested-grant specimen | https://github.com/formalms/formalms | 🟡 **GPL-2.0**, `master/`**`html/license.txt`**, **18 346 B** | 🔴 **NESTED** | 🔴 grant at depth **and** a 6 198 B README that never says *licence* — both standard channels miss it |
+| nested-grant specimen | https://github.com/OS4ED/openSIS-Classic | 🟡 **GPL-2.0**, `master/`**`docs/License.txt`**, **17 286 B** | 🔴 **NESTED** | 🟡 grant at depth, but the README names it — a README-link fallback does fire here |
+| off-branch specimen | https://github.com/overhangio/tutor | 🔴 **AGPL-3.0**, `release/`**`LICENSE.txt`**, **34 523 B** | 🟢 root | 🔴 default branch is **`release`** — a `main`-pinned probe calls it ungranted |
+| off-branch specimen | https://github.com/francoisjacquet/rosariosis | 🟡 **GPL-2.0**, `mobile/LICENSE`, **15 214 B** | 🟢 root | 🔴 default branch is **`mobile`** |
+| off-name specimen | https://github.com/moodle/moodle | 🟡 **GPL-3.0**, `main/`**`COPYING.txt`**, **35 147 B** | 🟢 root | 🟡 the grant is not named `LICENSE` at all |
+
+**How to wire it — four steps, in this order, and the order is the point.**
+1. **Resolve the branch first:** `git ls-remote --symref https://github.com/<slug> HEAD`. 🔴 **Never assume `main`** — 7 of 11 foundation rows are not on it.
+2. **Walk a case-varied root ladder** on *that* branch: both spellings (`licen[sc]e`), three casings, the extension set `{∅, .md, .txt, .MD, .TXT}`, plus `COPYING`/`UNLICENSE`/`MIT-LICENSE`. That is `ACTION ZL`'s 42 rungs.
+3. **Before writing down an absence, exclude DEPTH** (`ACTION ZN`). Cheap version: prefixes `{docs, html, licenses, LICENSES, legal, src, lib, app, web, .github}` × stems `{LICENSE, LICENSE.txt, LICENSE.md, License.txt, license.txt, licence.txt, COPYING, COPYING.txt}`. Authoritative version: **enumerate the tree** (`make enumerate`).
+4. **Read the TITLE LINE of the payload, not a badge.** 🔴 Byte bands are not identities — but they are a useful cross-check: a canonical AGPL-3.0 is **34 523 B** here on two unrelated repositories, GPL-3.0 is **35 147 B** on two more.
+
+🔴 **The negative control is part of the recipe, not an optional extra.** Run the same probe against an invented slug (`<org>/definitely-not-a-real-repo`): it must come back `UNRESOLVED`. 🔵 **A `github.com` HTML `HEAD` returns 403 for everything in this environment, including repositories that do not exist** — it carries zero bits and must never be used as existence evidence (`ACTION ZM`). **Existence is `ls-remote`; grant is `raw`.**
+
+---
+
+### 🟢 R-338.3 — LATAM back-office automation, aimed at the one number that is not saturated
+
+**The problem it solves.** UNESCO IESALC, 200 institutions across 19 countries: teaching and learning **73.5%**, research **57.0%**, 🟢 **administration 34.1%**, community engagement **20.0%**. 🔵 **The classroom is saturated and the back office is barely touched** — that is the widest whitespace on this shelf, and it is the half of a university that owns enrolment, retention and financial aid.
+
+| role | component | grant, re-read this pass | axis | why this one |
+|---|---|---|---|---|
+| student information system | https://github.com/francoisjacquet/rosariosis | 🟡 **GPL-2.0**, `mobile/LICENSE`, **15 214 B** | 🟢 root | a real SIS, not an LMS: enrolment, scheduling, grades, the records the back office actually runs on |
+| student information system | https://github.com/OS4ED/openSIS-Classic | 🟡 **GPL-2.0**, `master/`**`docs/License.txt`**, **17 286 B** | 🔴 **NESTED** | the alternative SIS, long public-sector install base |
+| education statistics over MCP | https://github.com/SidneyBissoli/uis-mcp-server | 🟢 **MIT**, `main/LICENSE.md`, **1 088 B** | 🟢 root | 🟢 **UNESCO Institute for Statistics data as an agent tool**, and a **LATAM-placed** maintainer — regional benchmarking without building an ingest |
+| LMS integration | https://github.com/Cvmcosta/ltijs | 🟢 **Apache-2.0**, `master/LICENSE`, **11 361 B** — re-read this pass, matching the p331 cell | 🟢 root | the LTI 1.3 boundary itself; 🟢 **LATAM-placed at p335** — root commit 2019-05-30, `-0300` on 513 of 575 commits |
+| mastery model | https://github.com/CAHLR/OATutor | 🟢 **MIT**, `main/LICENSE`, **1 105 B** | 🟢 root | explainable retention signals — a bursar will not act on an unexplained score |
+
+**How to wire it.**
+1. **SIS stays unmodified** (`rosariosis` or `openSIS-Classic`). 🔴 Both are **GPL-2.0**, so in-tree modules are derivative: your logic lives in an external service that reads the SIS over its web API.
+2. **Retention and financial-aid prioritisation in that external service**, with OATutor's BKT supplying an explainable mastery signal rather than an opaque risk score.
+3. **`uis-mcp-server` supplies national benchmarks** so a single institution's numbers can be placed against its country's, which is the comparison a rector asks for first.
+4. **`ltijs` carries the learning-side integration** when the SIS work expands into the LMS.
+5. 🔴 **Honour `rosariosis`'s default branch (`mobile`) and `openSIS-Classic`'s nested grant (`docs/License.txt`) in your own dependency audit**, or your compliance report will declare two GPL-2.0 platforms unlicensed.
+
+🟡 **The bound to state in the deck:** administration at **34.1%** is from the UNESCO IESALC survey of 200 institutions; the 92%/79% usage figures are from the Digital Education Council's LATAM 2026 survey (>30 000 responses, 29 institutions). 🔴 **Both are attributed, neither was read from a primary PDF this pass** — `digitaleducationcouncil.com` is `ENOTFOUND` from this environment.
+
 ## Pass 337 · 2026-10-20 — three recipes, every component's grant re-read first-hand this pass, and the first one is the ODbL boundary with a named family behind it
 
 🔵 Every component below carries a grant measured on `raw.githubusercontent.com` **this pass**, at a branch resolved by `git ls-remote --symref` — not restated from a badge. Byte counts are from the repaired 42-rung ladder. Where a component is 🟡 or 🔴, the recipe says what the obligation is and what to do instead.

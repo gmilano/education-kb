@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 338 — the GitHub trending channel has no education category, and 8 of 11 foundation repos would be mis-graded by the most natural probe anyone would write
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**The trending channel, run verbatim (`github trending education AI 2026`), returned no education repository this base does not already hold — and the reason is structural, not seasonal.** 🔴 **GitHub Trending has no education category.** What the leg returns instead is AI *courseware*: `rohitg00/ai-engineering-from-scratch` (reported #1 on 2026-05-24), `microsoft/ai-agents-for-beginners`, Karpathy's *Zero to Hero*, D2L, `AI Engineering Hub`. 🟢 **Every one is already named on these shelves, and every one teaches AI rather than teaching with it** — the boundary a prior pass fixed for this tier. One adjacent datum worth keeping: a February 2026 monthly trend report states **9 of the top 10** on GitHub's monthly ranking were AI-related, which is why an unfiltered trending leg cannot find a vertical.
+
+🟡 **Star counts, again, could not be verified.** Every figure the channel offered this pass was third-party (a LinkedIn post, a trending aggregator, a content farm). 🔴 **The GitHub HTML channel is 403 here for everything, including repositories that do not exist** (`ACTION ZM`), so no star count enters this file.
+
+---
+
+**Re-verified first-hand this pass — the foundation tier, on BOTH axes for the first time:**
+
+| the shape | count, of 11 | which |
+|---|---|---|
+| 🔴 grant reachable **only at depth** | **2** | `OS4ED/openSIS-Classic` → **`docs/License.txt`** (17 286 B) · `formalms/formalms` → **`html/license.txt`** (18 346 B) |
+| 🔴 default branch is **not** `main` | **7** | `master` ×5 (`edx-platform`, `chamilo-lms`, `OpenOLAT`, `openSIS-Classic`, `formalms`) · 🔴 **`release`** (`tutor`) · 🔴 **`mobile`** (`rosariosis`) |
+| 🔴 grant path is **not** `LICENSE` | **4** | `moodle` → `COPYING.txt` · `tutor` → `LICENSE.txt` · plus the two nested rows above |
+| 🟢 permissive (MIT / Apache-2.0 / BSD) | **4** | `OpenOLAT` · `jupyterhub` · `DeepTutor` · `educhain` |
+| 🟡 copyleft platform tier | **7** | AGPL-3.0 ×2 · GPL-3.0 ×2 · GPL-2.0 ×3 |
+
+🔴 **The number that matters for anyone auditing this tier: a probe pinned to `main/LICENSE` — the single most natural thing to write — is WRONG on 8 of these 11 rows and right on 3** (`jupyterhub`, `DeepTutor`, `educhain`). It calls four copyleft platforms *unlicensed* and cannot even reach `tutor` or `rosariosis`, whose default branches are `release` and `mobile`.
+
+🟢 **Zero drift.** All 11 byte counts are identical to the values already on `repos/foundations.md` (35 147 · 35 136 · 34 523 · 35 147 · 15 214 · 10 982 · 1 475 · 11 408 · 1 092 · 17 286 · 18 346). 🔵 A re-read that finds nothing is what licenses the shelf to stand.
+
+🔵 **Two independent byte-band cross-checks fell out of the re-read, and they are useful as a sanity check but never as an identity:** the canonical **AGPL-3.0** payload is **34 523 B** on two unrelated repositories (`overhangio/tutor` and `csmediapro/moodle-mcp-server`), and **GPL-3.0** is **35 147 B** on two more (`moodle/moodle` and `chamilo/chamilo-lms`). 🔴 **A byte band is not an identity** — `p312` settled that families are identified by template — but two unrelated repos agreeing to the byte is a real signal that neither payload has been edited.
+
+---
+
+🟢 **The structural finding this pass, and it belongs to the repo tier as much as to the shelves:** the gate that enforces the engagement contract's region-heading rule (`compose/code/p383-region-heading-gate`, 11 passing controls) **was in no Makefile target** from its creation at `p383` through `p337`. Run for the first time against `intel/market.md`: **5 canonical blocks where the contract asks for 1**, 2 missing `Global` children, 14 out-of-vocabulary `###` headings. 🟢 **Wired into the `hooks` tier this pass (22 gates → 23) and the shelf brought to 0 findings.** 🔵 **`ACTION ZP`: an instrument is not a gate until a target invokes it; `grep -c '<gate-dir>' Makefile` is the check, and it costs nothing.**
+
+
 ## 2026-10-20 — Pass 337 — five of fifteen foundation repos do not default to `main`, and a 25 KB grant on a carried row had no family at all
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

@@ -238,9 +238,24 @@ chk("p280 a DIRECTORY alone still does not gate (p251, preserved)",
 # 🔴 What this does NOT mean: p331's suite is now covered. It is PINNED, which only means
 # a future edit that drops its asserts below 11 will fail the gate. It is still ungated.
 # The XR backlog is 71, one worse than p294 left it.
+# 🟢 p338: explicit-exit 110 -> 109, and it is the SECOND instance of p294's door —
+# the only door out of this population that was ever supposed to exist.
+# `p383-region-heading-gate/test_check_headings.py` had a passing 11-control suite and sat
+# in NO Makefile target from p383 through p337, so `make hooks` 22/22 had never judged the
+# region-heading contract the engagement fixes. p338 wired it as `gate-region-headings`
+# (HOOK_GATES 22 -> 23) and it became gated in the same change, exactly as p294 prescribes.
+# 🔵 It was ungated AND explicit-exit, never silent-zero, so it leaves the IMMUNE half:
+# `ungated` 181 -> 180, explicit-exit 110 -> 109, and the XR silent-zero population stays
+# at 71 — the backlog is no better and no worse than p332 left it.
+# 🔴 Why this is p294's fix and not the error the README warns about: the README forbids
+# editing a floor DOWN to match a suite that broke. Nothing broke. The POPULATION shrank by
+# the legitimate door, and this literal is a census of the population, so it must track it.
+# 🔵 FIFTEENTH consecutive pass in which this census went red before the prose did — and
+# this one is the shape p294 called the direction a coverage census must never miss, run
+# forwards: a suite leaving the backlog BY BEING GATED reads as progress, and here it is.
 chk("ungated AND silent-zero (the XR population)", len(POP), 71)
 chk("ungated AND explicit-exit (immune by construction)",
-    sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]), 110)
+    sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]), 109)
 chk("the partition closes: silent-zero + explicit == ungated",
     len(POP) + sum(1 for r in ROWS if not r["gated"] and not r["silent_zero"]),
     sum(1 for r in ROWS if not r["gated"]))

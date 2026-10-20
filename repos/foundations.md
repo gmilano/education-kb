@@ -3,6 +3,45 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+
+## Pass 338 · 2026-10-20 — the foundation tier re-read on BOTH axes for the first time, and two platform-tier grants are reachable only at depth
+
+🟢 **Every row re-probed first-hand this pass** — branch resolved by `git ls-remote --symref`, payload served by `raw.githubusercontent.com`, byte count measured where the file landed. 🔵 **The `axis` column is new (`ACTION ZN`)**: it records whether the grant lives at the repository **root** or at **depth**, because the sanctioned probe ladder has no rung with a `/` in it and therefore cannot see the second kind at all (see `agents/top.md` FINDING 1).
+
+| # | Repo | Grant, read first-hand | Bytes | Branch | Grant path | Axis |
+|---|---|---|---|---|---|---|
+| 1 | https://github.com/moodle/moodle | 🟡 **GPL-3.0** | 35 147 | `main` | 🟡 **`COPYING.txt`** — not `LICENSE` | 🟢 root |
+| 2 | https://github.com/openedx/edx-platform | 🔴 **AGPL-3.0** | 35 136 | 🟡 `master` | `LICENSE` | 🟢 root |
+| 3 | https://github.com/overhangio/tutor | 🔴 **AGPL-3.0** | 34 523 | 🔴 **`release`** | 🟡 **`LICENSE.txt`** | 🟢 root |
+| 4 | https://github.com/chamilo/chamilo-lms | 🟡 **GPL-3.0** | 35 147 | 🟡 `master` | `LICENSE` | 🟢 root |
+| 5 | https://github.com/francoisjacquet/rosariosis | 🟡 **GPL-2.0** | 15 214 | 🔴 **`mobile`** | `LICENSE` | 🟢 root |
+| 6 | https://github.com/OpenOLAT/OpenOLAT | 🟢 **Apache-2.0** | 10 982 | 🟡 `master` | `LICENSE` | 🟢 root |
+| 7 | https://github.com/jupyterhub/jupyterhub | 🟢 **BSD** | 1 475 | `main` | `LICENSE` | 🟢 root |
+| 8 | https://github.com/HKUDS/DeepTutor | 🟢 **Apache-2.0** | 11 408 | `main` | `LICENSE` | 🟢 root |
+| 9 | https://github.com/satvik314/educhain | 🟢 **MIT** | 1 092 | `main` | `LICENSE` | 🟢 root |
+| 10 | https://github.com/OS4ED/openSIS-Classic | 🟡 **GPL-2.0** | 17 286 | 🟡 `master` | 🔴 **`docs/License.txt`** | 🔴 **NESTED** |
+| 11 | https://github.com/formalms/formalms | 🟡 **GPL-2.0** | 18 346 | 🟡 `master` | 🔴 **`html/license.txt`** | 🔴 **NESTED** |
+
+🟢 **Eleven of eleven re-read, and every byte count is the one already on the shelf.** 🔵 Stated as a measurement: a re-read that finds no drift is the only thing that licenses these rows to stand unchanged for another pass.
+
+---
+
+### 🔴 What the two NESTED rows cost, and why they are listed here rather than in a footnote
+
+| the shape | count, of 11 | which |
+|---|---|---|
+| 🔴 grant reachable **only at depth** | **2** | `openSIS-Classic` → `docs/License.txt` · `formalms` → `html/license.txt` |
+| 🔴 default branch is **not** `main` | **7** | `master` ×5 (`edx-platform`, `chamilo-lms`, `OpenOLAT`, `openSIS-Classic`, `formalms`) + 🔴 **`release`** (`tutor`) + 🔴 **`mobile`** (`rosariosis`) |
+| 🔴 grant path is **not** `LICENSE` | **4** | `moodle` → `COPYING.txt` · `tutor` → `LICENSE.txt` · `openSIS-Classic` → `docs/License.txt` · `formalms` → `html/license.txt`. 🔵 The agent tier adds a fifth shape, `kitschpatrol/yanki` → `license.txt` |
+| 🟢 permissive (MIT / Apache-2.0 / BSD) | **4** | `OpenOLAT` · `jupyterhub` · `DeepTutor` · `educhain` |
+| 🟡 copyleft platform tier | **7** | AGPL-3.0 ×2 · GPL-3.0 ×2 · GPL-2.0 ×3 |
+
+🔴 **A probe pinned to `main/LICENSE` — the single most natural thing to write — gets the grant wrong on 8 of these 11 rows, and right on only 3** (`jupyterhub`, `DeepTutor`, `educhain`). It calls `moodle`, `tutor`, `openSIS-Classic` and `formalms` **ungranted** while all four ship a copyleft grant, and it cannot even reach `rosariosis` or `tutor` because their default branches are `mobile` and `release`.
+
+🔵 **The sharpest of the four is `formalms`, and it is sharp for a reason no case-varied ladder can fix:** the grant is at `html/license.txt`, and the repository's **6 198 B README never uses the word *licence* or *license* at all** — so the library's README-link fallback, its only depth mitigation, has nothing to match. 🟢 **Both NESTED rows are correct on this shelf only because `p276` reached them by tree enumeration**, never by the ladder that publishes absences.
+
+🟢 **`ACTION ZN` applies to this tier directly: no foundation row may be graded ungranted without a depth exclusion** — `make enumerate` for the authoritative answer, or the 10-prefix × 8-stem ladder measured this pass for a cheap one.
+
 ## Pass 337 · 2026-10-20 — the foundation tier re-read byte-for-byte on the repaired ladder, and three of fifteen do not live on `main`
 
 🟢 **Every row below was re-probed first-hand this pass through `lib/probe_payload.sh`** — the shared library, repaired in this same pass (see `agents/top.md` FINDING 1) so it walks 42 case-varied rungs instead of 7 uppercase ones. Grant family, **byte count** and **default branch** are measured, never restated. `git ls-remote --symref` resolves the branch; `raw.githubusercontent.com` serves the payload.
