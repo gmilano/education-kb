@@ -4,6 +4,24 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 342 — the prescribed legs fail for the thirteenth consecutive pass, two new discovery legs in Spanish and Chinese fail too, and the hour bought T31's falsifier instead
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**Evidence:** [`p342-nonenglish-title-falsifier`](../evidence/p342-nonenglish-title-falsifier.2026-10-20-p342.tsv) · [`p342-channel-disagreement`](../evidence/p342-channel-disagreement.2026-10-20-p342.tsv).
+
+**The four global legs, ninth consecutive measurement of zero new slugs.** Four named candidates returned; `make carried` reports **four CARRIED**: `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `microsoft/ai-agents-for-beginners`, `avinash201199/free-ai-agents-resources`. 🔵 The agent leg returned mostly aggregator pages with mutually inconsistent star counts and one unverifiable 180 000-star claim; **none of it is written to a shelf**.
+
+🟢 **NEW this pass, and recorded as a miss rather than dropped: two discovery legs in the languages T31 implicated.** `plataforma educativa código abierto … LICENCIA` returned **OpenEduCat** (held) and *Proyecto Alba* (named only in a 2010 note). `开源 教育 教学平台 … 许可证 2026` returned **no project list at all**. 🔴 **The web channel is blind to this vertical in Spanish and Chinese as well as in English.**
+
+**What the hour bought instead — T31's falsifier, run to completion.** 25 addresses probed, **21 payloads read first-hand**, each graded through four channels:
+
+- 🟢 **The falsifier's prediction HELD.** All **15** Spanish- and Chinese-tier payloads type `en` and resolve a family. **Translated licence payloads are a Brazilian phenomenon in this vertical, not a non-English one.**
+- 🔴 **T31's population is 1, not 3.** The two `bncc-dev` payloads are **dual-licence index documents**, blind for a language-independent reason.
+- 🔴 **`portabilis` ships both languages** — `i-educar` in English (GPL-2.0), `i-diario` in Portuguese (AGPL-3.0). **The payload's language is a per-repository fact.**
+- 🟢 **Fixed in the instrument:** `pass257.family_of` keyed by language + `UNREADABLE-TITLE`; **185/185 controls**, `make hooks` **24/24**.
+- 🔴 **Three more instruments carry the same or an adjacent defect** — `lib/license_family.sh` answering `MIT` on a CC BY-NC-SA payload is the worst of them. Named, with falsifiers, in `intel/open-gaps.md`; none patched.
+
 ## 2026-10-20 — Pass 341 — the prescribed legs fail for the twelfth consecutive pass, and the hour bought a census instead: every licence payload on the live shelves read first-hand, and the one row this base could not resolve turned out to be written in Portuguese
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

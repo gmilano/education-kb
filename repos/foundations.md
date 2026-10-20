@@ -4,6 +4,27 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 342 · 2026-10-20 — the foundation tier is untouched, and the two instruments that grade it now disagree in a way this shelf has to name
+
+**Evidence:** [`p342-nonenglish-title-falsifier`](../evidence/p342-nonenglish-title-falsifier.2026-10-20-p342.tsv) · [`p342-channel-disagreement`](../evidence/p342-channel-disagreement.2026-10-20-p342.tsv).
+
+🟢 **No foundation row changes and no foundation cell is corrected.** The 17 grants were re-read from scratch at `p340` (17 of 17 correct) and re-read again at `p341` through a different loop (same verdict). `p342` did not re-probe them; it probed the **non-English and Spanish/Chinese platform tiers** instead, which is where `p341` placed the open risk.
+
+🟢 **What moved is the classifier this shelf depends on.** `pass257.family_of`'s title vocabulary is now keyed by language, and the family axis has its own admission verdict (`UNREADABLE-TITLE`) instead of falling through to *nothing found*. **No English payload's answer moved, and that is asserted field-by-field rather than claimed**: `scan(x, {"en"})` reproduces the p341 vocabulary and the suite compares every field of both results across all eight pre-existing fixtures (control 11c), with `P171`'s collision measurement re-run over every one of them (11f). **185/185.**
+
+🔴 **The disagreement this shelf must carry: `pass257` and `lib/license_family.sh` are not interchangeable, and `p341`'s own evidence file treated them as if the second were a fallback for the first.** Measured this pass on four payloads:
+
+| Payload | `pass257` | `lib/license_family.sh` | `p307` | True state, read first-hand |
+|---------|-----------|-------------------------|--------|------------------------------|
+| `portabilis/i-diario` | **`AGPL`** (p342) | `UNCLASSIFIED` | `POINTER url=https://fsf.org/` | **AGPL-3.0**, complete operative grant, 35 326 B |
+| `haolpku/k12-kgraph` | `RESTRICTED` (no family) | **`MIT`** 🔴 | `POINTER` | **CC BY-NC-SA 4.0** (data) + MIT (code, sibling file) |
+| `bncc-dev/bncc-benchmark` | `UNREADABLE-TITLE` | `CC-BY-4.0` | **`RESERVED`** 🔴 | **MIT (code) + CC BY 4.0 (data)**, both in sibling files |
+| `bncc-dev/bncc-pacotes` | `UNREADABLE-TITLE` | `CC-BY-4.0` | `POINTER` (a sibling **project** URL) | **MIT (code) + CC BY 4.0 (data)** |
+
+🔵 **Two of those three channels are wrong in the UNSAFE direction on a row the other two get right**, which is `p278`'s channel-conflict class with three channels instead of two. Neither is patched this pass, both are named with a falsifier in `intel/open-gaps.md`.
+
+🟡 **Foundation supply this pass: zero new repos, ninth consecutive measurement.** The ERP/CRM leg returned OpenEduCat (held, LGPL-3.0) and *Proyecto Alba*, named only in a 2010 blog note and not probed; the trending leg returned no live GitHub Trending page for the ninth consecutive pass.
+
 ## Pass 341 · 2026-10-20 — the foundation tier held under a second independent read, and p340's three correct abstentions turn out to split two ways: two are a vocabulary gap, one is a different licence entirely
 
 🟢 **p340 re-read all 17 foundation grants and found 17 of 17 correct. p341 re-read them again as part of a 208-payload census over all four live decision shelves, through a different loop (`lib/probe_payload.sh` + `pass257`), and reaches the same verdict: no cell on this shelf is wrong.** Evidence: [`p341-bespoke-instrument-census`](../evidence/p341-bespoke-instrument-census.2026-10-20-p341.tsv).

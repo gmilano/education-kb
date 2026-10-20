@@ -4,6 +4,24 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 342 · 2026-10-20 — eight recipes, unchanged in structure; P8's step 5 is no longer a manual step, and P8 gains the check that stops the opposite error
+
+**Evidence:** [`p342-nonenglish-title-falsifier`](../evidence/p342-nonenglish-title-falsifier.2026-10-20-p342.tsv) · [`p342-channel-disagreement`](../evidence/p342-channel-disagreement.2026-10-20-p342.tsv).
+
+🟢 **P1–P7 are unchanged.** 🟢 **P8, the grant-legibility pass, is the only recipe this pass touches, and the change is that one of its steps became tooling.**
+
+### P8 — amended at `p342`
+
+🔴 **What `p341` wrote when it created P8:** *"No instrument exists for step 5 of `P8`; it is manual and said to be manual."* Step 5 was: *when the family classifiers return nothing, read the payload by hand and determine whether the licence is simply stated in a language the tooling does not read.*
+
+🟢 **Step 5 is now instrumented for the detection half.** `pass257.scan()` returns a **distinct verdict** for exactly that case — `UNREADABLE-TITLE:no-family-vocabulary-for-this-language` — so *"a language the tooling does not read"* is now a value the pipeline emits rather than a hypothesis a human forms. **Wire step 5 as: route every `UNREADABLE-TITLE` row to a human, and nothing else.** Portuguese AGPL titles resolve without a human at all.
+
+🔴 **Step 5b, NEW, and it is the error that step 5 as written would have made.** A row returning no family is **not** necessarily a language problem. Measured this pass: of three payloads with no family, **one** was a translated grant and **two** were **dual-licence index documents** where the correct answer is *two* families and no single-family classifier can be right. **Before concluding "unreadable language", check whether the payload is an index pointing at sibling files.** The tell is cheap: a short payload (< 2 KB) whose text names two or more families and contains no operative grant clause.
+
+🔴 **Step 5c, NEW — the opposite failure, and the more dangerous one.** A payload can resolve **confidently and wrongly**. `lib/license_family.sh::family_of` answers `MIT` on `haolpku/k12-kgraph`, whose operative grant is **CC BY-NC-SA 4.0**, by reading the payload's cross-reference to a sibling `LICENSE-CODE` file as its own grant. **So P8 must never promote a row on `family_of` alone:** require `pass257.scan()` (which returns `RESTRICTED:added-restriction` on that payload) and, for any dataset or content row, `pass258.content_verdict()` (which returns not-usable with `noncommercial` and `sharealike` both named). 🔵 **Two channels, always, and `p262`'s rule as the reason: a row's state is not what it QUOTES.**
+
+**Licence posture of P8, restated:** the recipe produces a **decision record**, not a running system, and every component it names is already on these shelves. **Regional trigger:** any engagement whose supply includes Brazilian municipal or curriculum repositories — where this pass measured 3 of 6 Portuguese payloads returning no family on the first channel.
+
 ## Pass 341 · 2026-10-20 — eight recipes, each named down to the slug, each with its licence posture stated and its regional trigger
 
 🟢 **New at p341: P8, the grant-legibility pass** — the recipe the 208-payload census turned into a deliverable, and the first on this shelf whose output is a decision record rather than a running system. 🔵 It exists because this pass found that a row can sit on a shelf for 22 passes reading *"licence not shown"* when the licence is plainly stated in a language the tooling does not read (`intel/trends.md` **T31**).

@@ -4,6 +4,27 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 342 — the trending channel is blind to this vertical for the thirteenth pass, and the repositories it keeps recommending were read again instead: 21 payloads, 4 channels, 1 instrument repaired
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**Evidence:** [`p342-nonenglish-title-falsifier`](../evidence/p342-nonenglish-title-falsifier.2026-10-20-p342.tsv) · [`p342-channel-disagreement`](../evidence/p342-channel-disagreement.2026-10-20-p342.tsv).
+
+**GitHub trending, ninth consecutive zero.** `github trending education AI 2026` returned **no live GitHub Trending page** — third-party aggregator snapshots from mid-2026, a Japanese post reporting that nine of ten February 2026 monthly trending projects were AI-related, and recommendation lists. The three repository names in it (`rohitg00/ai-engineering-from-scratch`, Karpathy's *Zero to Hero*, `microsoft/ai-agents-for-beginners`) are **carried**.
+
+**The ERP/CRM leg.** OpenEduCat (held, LGPL-3.0, Odoo-based) and *Proyecto Alba* — a PHP school-management system named only in a **2010** blog note. 🟡 **Not probed and not tabled**: a 16-year-old secondary reference is not a finding, and this base does not publish a row it has not read.
+
+**What was read first-hand instead — 21 payloads across the Spanish, Chinese and Portuguese tiers:**
+
+| Tier | Addresses | Payloads | All resolve a family? |
+|------|-----------|----------|------------------------|
+| Spanish-language platforms | 6 | 6 | 🟢 **Yes** — all stock **English** text (`chamilo` GPL-3.0 35 147 B, `rosariosis` GPL-2.0, `openSIS-Classic` GPL-2.0 with a BOM) |
+| Chinese/Japanese-language | 9 | 9 | 🟢 **Yes** — all stock **English** MIT/AGPL text |
+| Portuguese-language | 6 | 6 | 🔴 **No** — 3 of 6 return no family; 1 is a translated grant, 2 are dual-licence index documents |
+| Unresolved / no payload | 4 | 0 | `openeducat/openeducat` UNRESOLVED; `adriasantacreu/google-classroom-mcp`, `loyaniu/moodle-mcp`, `davipac/classroom-mcp` carry **no payload** |
+
+🔵 **The last row is a standing-gap datum, not a trending one:** three carried addresses with no licence payload at all, which is the class `p341`'s probe found 26 of and nothing re-checks.
+
 ## 2026-10-20 — Pass 341 — the trending channel is blind to this vertical for the twelfth pass, and the repos it keeps recommending were re-read instead: 208 payloads, 6 of them at a path spelling an uppercase ladder cannot reach
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

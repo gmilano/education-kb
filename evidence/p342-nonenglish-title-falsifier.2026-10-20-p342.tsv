@@ -1,0 +1,22 @@
+slug	tier_probed	bytes	payload_language	p342_family	p341_family	p342_verdict	p341_vocabulary_verdict	licence_family_sh	p307_class	pass258_content_verdict	title_line
+24kchengye/human-skill-tree	zh	1134	en	AGPL	AGPL	COPYLEFT	COPYLEFT	AGPL-3.0	GRANT	NOT-A-CONTENT-LICENCE	GNU AFFERO GENERAL PUBLIC LICENSE
+bncc-dev/bncc-benchmark	pt	911	pt	None	None	UNREADABLE-TITLE:no-family-vocabulary-for-this-language	UNREADABLE-TITLE:no-family-vocabulary-for-this-language	CC-BY-4.0	RESERVED	NOT-A-CONTENT-LICENCE	# Licenças
+bncc-dev/bncc-dados	pt	1092	en	MIT	MIT	PERMISSIVE	PERMISSIVE	MIT	GRANT	NOT-A-CONTENT-LICENCE	MIT License
+bncc-dev/bncc-pacotes	pt	1299	pt	None	None	UNREADABLE-TITLE:no-family-vocabulary-for-this-language	UNREADABLE-TITLE:no-family-vocabulary-for-this-language	CC-BY-4.0	POINTER	CONTENT-POINTER:not-a-grant	# Licenças
+chamilo/chamilo-lms	es	35147	en	GPL	GPL	COPYLEFT	COPYLEFT	GPL-3.0	GRANT	NOT-A-CONTENT-LICENCE	GNU GENERAL PUBLIC LICENSE
+charliecardenastoledo/mcp-canvas-server	es	1081	en	MIT	MIT	PERMISSIVE	PERMISSIVE	MIT	GRANT	NOT-A-CONTENT-LICENCE	MIT License
+francoisjacquet/rosariosis	es	15214	en	GPL	GPL	COPYLEFT	COPYLEFT	GPL-2.0	GRANT	NOT-A-CONTENT-LICENCE	GNU GENERAL PUBLIC LICENSE
+g36maid/moodle-mcp	zh	1064	en	MIT	MIT	PERMISSIVE	PERMISSIVE	MIT	GRANT	NOT-A-CONTENT-LICENCE	MIT License
+haolpku/k12-kgraph	zh	2244	en	None	None	RESTRICTED:added-restriction	RESTRICTED:added-restriction	MIT	POINTER	CONTENT-POINTER:not-a-grant	Attribution-NonCommercial-ShareAlike 4.0 International (CC
+haozhe-xing/agent_learning	zh	1068	en	MIT	MIT	PERMISSIVE	PERMISSIVE	MIT	GRANT	NOT-A-CONTENT-LICENCE	MIT License
+idavi/usp-mcp	pt	35149	en	GPL	GPL	COPYLEFT	COPYLEFT	GPL-3.0	GRANT	NOT-A-CONTENT-LICENCE	GNU GENERAL PUBLIC LICENSE
+marcosnahuel/moodle-mcp	es	1065	en	MIT	MIT	PERMISSIVE	PERMISSIVE	MIT	GRANT	NOT-A-CONTENT-LICENCE	MIT License
+os4ed/opensis-classic	es	17286	en	GPL	GPL	COPYLEFT	COPYLEFT	GPL-2.0	GRANT	NOT-A-CONTENT-LICENCE	﻿GNU GENERAL PUBLIC LICENSE
+pablopc05/mcp-usc	es	1066	en	MIT	MIT	PERMISSIVE	PERMISSIVE	MIT	GRANT	NOT-A-CONTENT-LICENCE	MIT License
+portabilis/i-diario	pt	35326	pt	AGPL	None	COPYLEFT	UNREADABLE-TITLE:no-family-vocabulary-for-this-language	UNCLASSIFIED	POINTER	NOT-A-CONTENT-LICENCE	LICENÇA PÚBLICA GERAL AFFERO GNU
+portabilis/i-educar	pt	18092	en	GPL	GPL	COPYLEFT	COPYLEFT	GPL-2.0	GRANT	NOT-A-CONTENT-LICENCE	GNU GENERAL PUBLIC LICENSE
+psychquant/che-ntucool-mcp	zh	1066	en	MIT	MIT	PERMISSIVE	PERMISSIVE	MIT	GRANT	NOT-A-CONTENT-LICENCE	MIT License
+toshieji/moodle-grading-mcp	ja	1120	en	MIT	MIT	PERMISSIVE	PERMISSIVE	MIT	GRANT	NOT-A-CONTENT-LICENCE	MIT License
+zhangl1001/civil-ai	zh	1067	en	MIT	MIT	PERMISSIVE	PERMISSIVE	MIT	GRANT	NOT-A-CONTENT-LICENCE	MIT License
+zhenghh04/canvas-mcp	zh	1069	en	MIT	MIT	PERMISSIVE	PERMISSIVE	MIT	GRANT	NOT-A-CONTENT-LICENCE	MIT License
+zhijiexiong/pyedmine	zh	1085	en	MIT	MIT	PERMISSIVE	PERMISSIVE	MIT	GRANT	NOT-A-CONTENT-LICENCE	MIT License

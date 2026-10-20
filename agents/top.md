@@ -4,6 +4,18 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 342 · 2026-10-20 — no agent row changes, and the reason is worth more than a row would be: the classifier behind every licence cell on this shelf now reads a title in a second language
+
+**Evidence:** [`p342-nonenglish-title-falsifier`](../evidence/p342-nonenglish-title-falsifier.2026-10-20-p342.tsv) · [`p342-channel-disagreement`](../evidence/p342-channel-disagreement.2026-10-20-p342.tsv).
+
+🟢 **This shelf's rows are unchanged and no cell is corrected. That is the honest headline for the second consecutive pass.** `p341`'s census found all 16 bespoke instruments already labelled correctly; `p342` re-read 21 payloads through four channels and found **no published cell on this shelf wrong**. 🔵 **What changed is the capability underneath them**, and it is the thing that cost 22 passes last time.
+
+🟢 **`pass257.family_of` — which decides the licence cell on this shelf, `repos/foundations.md`, `verticals/solutions.md` and `compose/patterns.md` — now keys its TITLE vocabulary by language** (`TITLE_ANCHORS_BY_LANGUAGE`) and carries a new verdict, `UNREADABLE-TITLE:no-family-vocabulary-for-this-language`. **185/185 controls, offline, already in `make hooks` (24/24).** Before this pass a Portuguese AGPL-3.0 grant came out of it as *nothing found*; see `intel/trends.md` **T31**.
+
+🔴 **The one thing a reader of this shelf must change in their own habits.** `haolpku/k12-kgraph`'s row here correctly splits *MIT (code) / CC BY-NC-SA 4.0 (data)* — **and `lib/license_family.sh::family_of` answers a bare `MIT` on that payload**, by reading its cross-reference to a sibling `LICENSE-CODE` file as the payload's own grant. 🟢 `pass257` returns `RESTRICTED:added-restriction` and `pass258` returns not-usable with `noncommercial` and `sharealike` both named, **so a two-channel read is safe and a one-channel read ships an NC dataset as permissive.** **Never promote a dataset row on `family_of` alone** (**T33**). 🟢 **Both halves of that row are now read first-hand** — `LICENSE-CODE` is verbatim MIT (1 075 B), the root payload is CC BY-NC-SA 4.0 — **so this shelf's split cell is confirmed, not inferred** ([`p342-sibling-grant-reads`](../evidence/p342-sibling-grant-reads.2026-10-20-p342.tsv)).
+
+🟡 **Agent supply this pass: zero new rows, ninth consecutive measurement.** The four prescribed global legs returned four named candidates — `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `microsoft/ai-agents-for-beginners`, `avinash201199/free-ai-agents-resources` — and `make carried` reports **four CARRIED**. Two discovery legs added in Spanish and Chinese returned no project list at all. Recorded in `intel/market.md`.
+
 ## Pass 341 · 2026-10-20 — every licence payload on the live shelves re-read and typed by TITLE: 10 of 208 are bespoke instruments, all 10 already labelled correctly, and the one row this base could not resolve was unreadable because its licence is in Portuguese
 
 🟢 **What changed at Pass 341, in one place.** `p340` closed T25's falsifier and left one question written down as unmeasured: *"how many `LICENSE*` payloads on these shelves are bespoke instruments rather than stock texts?"* **It is now measured over 208 payloads read first-hand from the four live decision shelves** ([`p341-bespoke-instrument-census`](../evidence/p341-bespoke-instrument-census.2026-10-20-p341.tsv)): **183 `SPDX-TITLED` · 15 `UNTITLED` · 10 `BESPOKE-TITLED`; 181 stock (87.0%), 16 (7.7%) carrying an instrument a human must read.**

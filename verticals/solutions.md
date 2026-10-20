@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 342 · 2026-10-20 — the Spanish-language platform tier re-read first-hand and cleared, and `i-Diário`'s licence cell now rests on an instrument rather than on one pass's human read
+
+**Evidence:** [`p342-nonenglish-title-falsifier`](../evidence/p342-nonenglish-title-falsifier.2026-10-20-p342.tsv) · [`p342-channel-disagreement`](../evidence/p342-channel-disagreement.2026-10-20-p342.tsv).
+
+🟢 **`portabilis/i-diario`'s `AGPL-3.0` cell is unchanged and is now REPRODUCIBLE.** `p341` filled it by reading the file by hand after it had read *"licence not shown — verify"* for 22 passes. **At `p342` `pass257.family_of` returns `AGPL` from the payload directly**, because the title vocabulary is keyed by language and carries the Portuguese AGPL title form read off that very payload. 🔵 **The cell did not need correcting; the pipeline behind it did.** Next Portuguese payload: minutes.
+
+🔴 **And the generalisation an engagement would reach for is refuted by the owner of this very row.** `portabilis` ships **`i-educar`'s grant in English** (GPL-2.0, 18 092 B, branch `2.12`) and **`i-diario`'s in Portuguese** (AGPL-3.0, 35 326 B, branch `1.6`). Same owner, same municipal stack, same probe run. **You cannot predict which rows need a non-English read from the project's country, region or owner** — see `intel/trends.md` **T31**.
+
+🟢 **The Spanish-language platform tier: 6 addresses, 6 payloads, all CLEARED on this axis.**
+
+| Platform | Branch | Payload | Bytes | Payload language | Family |
+|----------|--------|---------|-------|------------------|--------|
+| `chamilo/chamilo-lms` | `master` | `LICENSE` | 35 147 | **`en`** | `GPL-3.0` |
+| `francoisjacquet/rosariosis` | `mobile` | `LICENSE` | 15 214 | **`en`** | `GPL-2.0` |
+| `OS4ED/openSIS-Classic` | `master` | `docs/License.txt` | 17 286 | **`en`** | `GPL-2.0` (BOM) |
+| `pablopc05/mcp-usc` | `main` | `LICENSE` | 1 066 | **`en`** | `MIT` |
+| `charliecardenastoledo/mcp-canvas-server` | `main` | `LICENSE` | 1 081 | **`en`** | `MIT` |
+| `marcosnahuel/moodle-mcp` | `main` | `LICENSE` | 1 065 | **`en`** | `MIT` |
+
+🔵 **Two of those rows needed a probe repair to find at all**, which is why the shared probe is sourced and never rewritten: `rosariosis`'s default branch is `mobile`, and `openSIS-Classic` keeps its grant at **`docs/License.txt`**, mixed-case, in a subdirectory.
+
+🟡 **`openeducat/openeducat` is UNRESOLVED on this run** — `ls-remote` returned no usable ref for that address. OpenEduCat is held on this shelf as **LGPL-3.0** from an earlier read; **this pass neither confirms nor refutes that cell**, and the address needs re-checking against the project's current canonical org. Recorded in `intel/open-gaps.md`.
+
+🔴 **The two `bncc-dev` curriculum rows are DUAL-LICENCE and no single-family cell can state them.** Both payloads are index documents — *"Este repositório usa duas licenças"* — granting **MIT for code** and **CC BY 4.0 for data**, each full text in a sibling file by relative path. 🔴 **`p307` types `bncc-benchmark` as `RESERVED` — a dual-permissive repository as rights-reserved.** Any cell for these rows must name **both** grants and which artefact each covers (**T33**). 🟢 **Both halves of both rows were read first-hand this pass** ([`p342-sibling-grant-reads`](../evidence/p342-sibling-grant-reads.2026-10-20-p342.tsv)): `LICENSE-CODIGO.md` is **real MIT** (1 286 B / 1 107 B, English) and `LICENSE-DADOS.md` is a **scoped Portuguese data grant** titled `# Licença dos dados: CC BY 4.0` (577 B / 1 108 B). 🔵 **So the code half of each repository is genuinely MIT and usable, and `p307`'s `RESERVED` verdict on `bncc-benchmark` is confirmed wrong in the direction that would have cost the studio a usable component.**
+
 ## Pass 341 · 2026-10-20 — one platform row resolved after 22 passes, and the two halves of the Brazilian municipal stack turn out to carry different copyleft
 
 🟢 **`i-Diário`'s licence cell is filled in below.** It has read *"licence not shown on the repository page — verify"* since **p319**, with the note *"a LICENSE file exists but the page does not name the licence — read the file before any use."* 🟢 **p341 read the file:** branch `1.6`, `LICENSE`, **35 326 B**, opening **`LICENÇA PÚBLICA GERAL AFFERO GNU · Versão 3, 19 de novembro de 2007`**, eight lines naming Affero, FSF copyright on the licence text. **It is `AGPL-3.0`.**

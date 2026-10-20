@@ -1,0 +1,6 @@
+slug	branch	sibling_payload	bytes	payload_language	title_line	pass257_family	pass257_verdict	pass258_content_verdict	what_it_establishes
+haolpku/k12-kgraph	main	LICENSE-CODE	1075	en	MIT License	MIT	PERMISSIVE	NOT-A-CONTENT-LICENCE	the code grant IS verbatim MIT - the shelf cell "MIT (code) / CC BY-NC-SA 4.0 (data)" is confirmed on BOTH files read first-hand
+bncc-dev/bncc-benchmark	main	LICENSE-CODIGO.md	1286	en	# Licença do código: MIT	MIT	PERMISSIVE	NOT-A-CONTENT-LICENCE	the code grant IS real MIT, so p307's RESERVED verdict on the root index is confirmed wrong in the UNSAFE direction
+bncc-dev/bncc-benchmark	main	LICENSE-DADOS.md	577	pt	# Licença dos dados: CC BY 4.0	None	UNREADABLE-TITLE:no-family-vocabulary-for-this-language	CONTENT-POINTER:not-a-grant	a FOURTH Portuguese payload, and p342's new verdict routes it to a human instead of calling it nothing-found
+bncc-dev/bncc-pacotes	main	LICENSE-CODIGO.md	1107	en	# Licença do código: MIT	MIT	PERMISSIVE	NOT-A-CONTENT-LICENCE	same split, same spelling, confirmed independently
+bncc-dev/bncc-pacotes	main	LICENSE-DADOS.md	1108	pt	# Licença dos dados: CC BY 4.0	None	UNREADABLE-TITLE:no-family-vocabulary-for-this-language	CONTENT-POINTER:not-a-grant	a FIFTH Portuguese payload - the pt population grows 3 to 5 on one five-file read

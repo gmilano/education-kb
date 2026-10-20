@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 342 · 2026-10-20 — the demand legs are saturated for the eighth consecutive measurement, the global legs for the ninth, and the regional news is again supply-side
+
+**Evidence:** [`p342-nonenglish-title-falsifier`](../evidence/p342-nonenglish-title-falsifier.2026-10-20-p342.tsv) · [`p342-channel-disagreement`](../evidence/p342-channel-disagreement.2026-10-20-p342.tsv).
+
+### The four prescribed regional demand legs, recorded leg by leg rather than as a silence
+
+🟡 **Eighth consecutive measurement of saturation.** All four legs re-run verbatim this pass (`AI {region} 2026 adoption regulation players`, with `education` as the vertical). **Every fact returned is already held on this shelf.** They are recorded individually because an aggregate "nothing new" is indistinguishable from not having looked (**T26**):
+
+| Leg | What came back | Already held? |
+|-----|----------------|---------------|
+| **North America** | `$951M` (2024) → `$2.3B` (2029) at 15.9% CAGR; 36% regional share; **10%** of institutions with formal AI guidelines; **71%** of US teachers untrained; the **$169M** responsible-AI-in-higher-ed commitment; the OpenAI country-level programme with 8 national partners; Carnegie Mellon + Gates **$55M** courseware | 🔴 **All held.** Every figure appears on this shelf already |
+| **EMEA** | **NO EDUCATION CONTENT AT ALL.** The leg resolved to enterprise IT: CompTIA's EMEA IT-strategy outlook, a 2023 Workday adoption study, generic EU AI Act framing | 🔴 **Second consecutive pass with zero education content on this leg** |
+| **APAC** | **Almost no education content.** Enterprise AI priorities, data-sovereignty forecasts, a Singapore financial-institutions consultation. Education-adjacent only: a TCS–Pearson workforce-skills alliance, LearnUpon's Sydney expansion, NIIT MTS | 🔴 **Second consecutive pass resolving to enterprise IT.** The two named vendors are already held |
+| **LATAM** | The **Digital Education Council LATAM Survey 2026** (92% students / 79% faculty, 30 000+ responses, 29 institutions, with Tec de Monterrey); **~30%** of universities with a published AI policy; UNESCO **IESALC** (200 HEIs, 19 countries: teaching and learning 73.5%, research 57.0%); the **IDB** regulatory framework; CEPAL's **ILIA** index; Chile's 2021 policy, Brazil/Colombia strategies with no education rule, Mexico explicitly non-binding | 🔴 **All held.** This is the richest leg and it returned the same instrument this shelf already names |
+
+🔴 **Nothing in this repository prevents the ninth re-buy of these four legs, and that is now an eight-pass-old standing cost.**
+
+### The four prescribed global supply legs — ninth consecutive measurement of zero new slugs
+
+🟡 Run verbatim (`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry trends 2026`). **Four named candidates returned, all four already carried**: `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `microsoft/ai-agents-for-beginners`, `avinash201199/free-ai-agents-resources` — checked with `make carried`, four CARRIED. 🔵 The ERP/CRM leg returned **OpenEduCat** (held, LGPL-3.0) and *Proyecto Alba*, a 2010-era PHP system named only in a 2010 blog note; the trending leg returned third-party aggregator snapshots and no live GitHub Trending page. **Ninth consecutive pass in which the trending channel is blind to this vertical.**
+
+🟢 **Two discovery legs ADDED this pass, in the regions T31 placed the exposure, and both are recorded as misses rather than dropped:** `plataforma educativa código abierto … LICENCIA` (Spanish) returned OpenEduCat and Proyecto Alba, nothing new; `开源 教育 教学平台 … 许可证 2026` (Chinese) returned **no project list at all** — GitHub-as-a-teaching-tool papers and GitHub's own licensing docs. 🔴 **So the web channel is blind in Spanish and Chinese too, and the supply this pass actually used came from the shelves, probed first-hand.**
+
+### The regional news this pass, and it is supply-side again
+
+🟢 **LATAM — the Brazilian platform tier's licence legibility, measured and now instrumented.** `portabilis/i-diario`'s `AGPL-3.0` was resolved by a human read at `p341` after 22 passes; **at `p342` the instrument resolves it** (`pass257.family_of`, `pt` title arm), so the next Portuguese payload costs minutes, not passes. 🔴 **And the method that looked obvious does not work:** `portabilis` ships `i-educar`'s grant in **English** (GPL-2.0, 18 092 B) and `i-diario`'s in **Portuguese** (AGPL-3.0, 35 326 B) — **same owner, same stack** — so an engagement cannot predict which Brazilian rows need the non-English read from the country, the owner or the region. See `intel/trends.md` **T31**.
+
+🟢 **EMEA and APAC — the supply tier is CLEARED on this axis, which is a finding and not a silence.** 15 Spanish- and Chinese-tier payloads read first-hand all ship the stock **English** licence text: `chamilo/chamilo-lms` (GPL-3.0, 35 147 B, Spain/Belgium), `francoisjacquet/rosariosis` (GPL-2.0), `OS4ED/openSIS-Classic` (GPL-2.0, with a BOM), and nine CJK-owned MIT payloads including `psychquant/che-ntucool-mcp` (Taiwan), `g36maid/moodle-mcp` (Taiwan) and `toshieji/moodle-grading-mcp` (Japan, WACA). **An EMEA or APAC engagement inherits no licence-legibility risk from language on these rows.**
+
 ## Pass 341 · 2026-10-20 — the demand legs are saturated for the seventh consecutive measurement, and the regional news is again supply-side: the LATAM platform tier was never missing, it was unreadable
 
 ### The four prescribed regional demand legs, recorded leg by leg rather than as a silence
@@ -56,6 +85,14 @@ The regional movement this pass is **supply-side and LATAM**, and it inverts the
 - 🟢 **The licence cells on the four live decision shelves are now measured, not asserted: 208 payloads read first-hand, 181 stock texts, 16 carrying an instrument a human must read — and all 16 already labelled correctly.** A census that corrects no cell is worth its denominator and nothing more, which is why it is stated that way.
 - 🔴 **The two global cautions from p340 both stand and neither was softened:** **23 of 93 connectors carry no licence at all**, and `AStheTECH/mewcp-google-classroom`'s bespoke "community licence" forbids commercial use, SaaS and white-labelling while passing every naive check. 🔴 **p341 found a SECOND instance of that exact shape** — `caviraoss/pagelm`, the **"PageLM Community License"**, whose body recites MIT word for word and then restricts commercial use and SaaS. **These shelves already label it correctly; a generic scanner reports it MIT.**
 - 🟡 **The durable rule, now with two dated carriers:** in this vertical a "Community License" is a signal to read the file, not a permissive grant. `agents/top.md`'s build-on tier is the only place a grant has been read from the payload.
+
+- 🟢 **`p342`: no licence-legibility risk from language on the NA rows** — every NA-placed payload re-read this pass types `en` and resolves a family. 🔴 **But the cross-reference trap is language-independent and lands here:** `lib/license_family.sh` answers `MIT` on `haolpku/k12-kgraph`, whose operative grant is CC BY-NC-SA 4.0. **Read two channels before shipping any dataset row** (`intel/trends.md` T33).
+
+- 🟢 **`p342`: the Spanish-language platform tier is CLEARED on the licence-language axis.** `chamilo/chamilo-lms` (GPL-3.0, 35 147 B), `francoisjacquet/rosariosis` (GPL-2.0) and `OS4ED/openSIS-Classic` (GPL-2.0, BOM) all ship the **stock English text**, read first-hand. **An EMEA engagement inherits no translated-payload risk from these rows.** 🔴 The EMEA demand leg returned **no education content for the second consecutive pass** — that is a channel gap, not an absence of EMEA demand, and it is written down as one.
+
+- 🟢 **`p342`: the Chinese- and Japanese-language tiers are CLEARED on the same axis.** Nine CJK-owned payloads read first-hand — `psychquant/che-ntucool-mcp` (Taiwan), `g36maid/moodle-mcp` (Taiwan), `toshieji/moodle-grading-mcp` (Japan, WACA), `zhijiexiong/pyedmine`, `24kchengye/human-skill-tree` and four more — **all stock English MIT or AGPL text**. 🔴 APAC's demand leg also resolved to enterprise IT for the second consecutive pass.
+
+- 🟢 **`p342`: the Brazilian tier's licence legibility is now INSTRUMENTED, not manual.** `portabilis/i-diario` resolves `AGPL-3.0` from `pass257.family_of` directly; `p341` needed a human read and 22 passes. 🔴 **And the shortcut an engagement would reach for is refuted:** `portabilis` ships `i-educar` in **English** (GPL-2.0) and `i-diario` in **Portuguese** (AGPL-3.0) — same owner, same stack — so the payload's language cannot be predicted from country, owner or region. **Type every payload; do not flag by geography.** 🟡 The two `bncc-dev` rows are **dual-licence index documents** (MIT code + CC BY 4.0 data, each in a sibling file): a single-family answer on either is a coin-flip, and `p307` reads one of them as **rights-reserved**.
 
 ## Pass 340 · 2026-10-20 — the four regional demand legs returned zero new facts for the sixth consecutive measurement, and the regional intelligence that DID move this pass is supply-side
 

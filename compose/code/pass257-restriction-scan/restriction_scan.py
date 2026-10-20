@@ -227,17 +227,85 @@ COVERED_LANGUAGES = frozenset(RESTRICTION_TERMS_BY_LANGUAGE)
 # licence states what it is.  Ordering within this tuple becomes a tiebreaker
 # rather than load-bearing, and that is the point — the fix removes the dependence
 # on order instead of getting the order right.
-TITLE_ANCHORS = (
-    ("apache license", "Apache-2.0"),
-    ("gnu affero general public license", "AGPL"),
-    ("gnu lesser general public license", "LGPL"),
-    ("gnu general public license", "GPL"),
-    ("eclipse public license", "EPL"),
-    ("mozilla public license", "MPL"),
-    ("isc license", "ISC"),
-    ("mit license", "MIT"),
-    ("bsd", "BSD"),
+# 🟢 NEW at `p342`.  THE TITLE VOCABULARY, KEYED BY LANGUAGE — and the keying is
+# `p287`'s own reasoning, applied to THE AXIS BESIDE THE ONE IT FIXED.
+#
+# 🔴 What `p341` measured and `p342` diagnosed: `p287` keyed the RESTRICTION
+# vocabulary by language and left this one English-only, so the two axes of one
+# instrument disagree about which languages it can read.  `portabilis/i-diario`'s
+# payload (35 326 B, branch `1.6`, read first-hand) opens
+# `LICENÇA PÚBLICA GERAL AFFERO GNU` — a complete, operative AGPL-3.0 grant.
+# `language_of` types it `pt` CORRECTLY and `pt` IS a covered restriction
+# language, so `UNREADABLE-BODY` could not fire, and the payload came out as
+# `UNCLASSIFIED:no-family-no-restriction` — *nothing found* — on the strongest
+# copyleft in this corpus.  🔴 That direction is UNSAFE, and unlike `p314`'s
+# abstention class it does not announce itself: the multilingual work reached one
+# axis and never reached the one beside it.
+#
+# 🔴 THE ARMS ARE NOT SYMMETRIC AND MUST NOT BE READ AS IF THEY WERE.  The `en`
+# arm is COMPLETE over the families this base publishes.  The `pt` arm carries
+# exactly what one payload read first-hand establishes — ONE family — so a `pt`
+# payload that matches nothing here has NOT been ruled out, it has not been read.
+# `FAMILY_TITLE_VOCABULARY_COMPLETE` below is what keeps that distinction, and it
+# is `P241`'s rule on a third axis: never read the absence of one's own
+# vocabulary as an answer.
+#
+# 🔵 Both accented and unaccented spellings, for `p287`'s reason on the
+# restriction arms: the anchors are plain substring tests over lowercased text, so
+# `licenca` and `licença` are different strings and a payload may carry either.
+TITLE_ANCHORS_BY_LANGUAGE = {
+    # `p257`'s arm, MOVED AND NOT REWRITTEN, so no English verdict in this base's
+    # history changes.  Asserted field-by-field in the suite rather than claimed.
+    "en": (
+        ("apache license", "Apache-2.0"),
+        ("gnu affero general public license", "AGPL"),
+        ("gnu lesser general public license", "LGPL"),
+        ("gnu general public license", "GPL"),
+        ("eclipse public license", "EPL"),
+        ("mozilla public license", "MPL"),
+        ("isc license", "ISC"),
+        ("mit license", "MIT"),
+        ("bsd", "BSD"),
+    ),
+    # 🟢 Backed by a payload, never by reasoning — the rule this base learned from
+    # the `LICENCE` spelling.  Source: `portabilis/i-diario`, branch `1.6`,
+    # `LICENSE`, 35 326 B, title line `LICENÇA PÚBLICA GERAL AFFERO GNU`.
+    #
+    # 🔴 Measured before adding, because an AGPL title and a GPL title stand in a
+    # substring relation in English and the Portuguese pair had to be checked
+    # rather than assumed: `licença pública geral gnu` is NOT a substring of
+    # `licença pública geral affero gnu` — `affero` sits between `geral` and
+    # `gnu` — so no ordering trap exists here and the GPL rung this arm does NOT
+    # have could be added later without reordering.
+    "pt": (
+        ("licença pública geral affero gnu", "AGPL"),
+        ("licenca publica geral affero gnu", "AGPL"),
+    ),
+}
+
+# `p257`'s name and contents, preserved EXACTLY.  `p341`'s census reads this to
+# decide `SPDX-TITLED` vs `BESPOKE-TITLED` and that question is about the SPDX
+# title forms, which are English by construction — so the alias is the English arm
+# and not the union.  🔵 Changing it to the union would retype a `pt`-titled
+# payload as `SPDX-TITLED` on a shelf whose vocabulary says otherwise.
+TITLE_ANCHORS = TITLE_ANCHORS_BY_LANGUAGE["en"]
+
+# The order the arms are consulted in: English first, then the rest by name, so
+# the answer is deterministic and does not depend on dict insertion order.
+TITLE_LANGUAGE_ORDER = ("en",) + tuple(
+    sorted(k for k in TITLE_ANCHORS_BY_LANGUAGE if k != "en")
 )
+
+# 🔴 THE SET OF LANGUAGES IN WHICH "NO FAMILY" IS A MEASUREMENT.  Outside it,
+# "no family" is an ADMISSION and `UNREADABLE-TITLE` says so.
+#
+# 🟢 `pt` is deliberately NOT a member although it now HAS anchors.  Having one
+# family's title in a language is not coverage of that language: a Portuguese
+# GPL-2.0 payload would match nothing in the `pt` arm, and calling that
+# `UNCLASSIFIED` would reproduce, for GPL, exactly the defect this pass fixed for
+# AGPL.  A language joins this set when its arm is complete over the families this
+# base publishes — which needs payloads, not translations of this comment.
+FAMILY_TITLE_VOCABULARY_COMPLETE = frozenset({"en"})
 
 # Stage two, consulted ONLY when the title line names nothing: a BSD or ISC grant
 # is routinely shipped with a bare copyright line first, so its operative clause is
@@ -306,6 +374,17 @@ VERDICT_UNCLASSIFIED = "UNCLASSIFIED:no-family-no-restriction"
 # this one is an ADMISSION, and a reader who cannot tell them apart ships the
 # `rapkumer` payload as unrestricted.
 VERDICT_UNREADABLE = "UNREADABLE-BODY:no-vocabulary-for-this-language"
+# 🟢 NEW at `p342`, and it is the verdict `portabilis/i-diario` needed for 22
+# passes.  The two admissions are NOT the same admission and the names say which
+# axis fell over:
+#   `UNREADABLE-BODY`   the RESTRICTION vocabulary has no arm for this language,
+#                       so a restriction could not have been found.
+#   `UNREADABLE-TITLE`  the restriction vocabulary DID cover this language and
+#                       found nothing — but the FAMILY vocabulary has no complete
+#                       arm for it, so the family was never looked for.
+# 🔴 Before this verdict existed the second case fell through to `UNCLASSIFIED`,
+# which asserts that both axes ran.  One of them had not.
+VERDICT_UNREADABLE_TITLE = "UNREADABLE-TITLE:no-family-vocabulary-for-this-language"
 
 ALL_VERDICTS = (
     VERDICT_RESTRICTED,
@@ -314,6 +393,7 @@ ALL_VERDICTS = (
     VERDICT_COPYLEFT,
     VERDICT_UNCLASSIFIED,
     VERDICT_UNREADABLE,
+    VERDICT_UNREADABLE_TITLE,
 )
 
 # 🔴 The consuming arm as a CLOSED allow-list, for `p248`'s reason: a verdict added
@@ -430,8 +510,13 @@ def language_of(text):
     return best
 
 
-def family_of(text):
+def family_of(text, title_languages=None):
     """The licence family the payload NAMES ITSELF, or None.
+
+    `title_languages` scopes which arms of `TITLE_ANCHORS_BY_LANGUAGE` are
+    consulted; the default is all of them.  🟢 It exists so the suite can
+    reproduce the PRE-`p342` answer exactly — `family_of(x, {"en"})` — and assert
+    field by field that no English payload's answer moved, instead of claiming it.
 
     Two stages, and the order between them is the whole correctness argument:
     the title line first, because that is where a licence states its identity;
@@ -444,13 +529,16 @@ def family_of(text):
     """
     raw = text if isinstance(text, str) else text.decode("utf-8", "replace")
     low = raw.lower()
+    langs = (TITLE_LANGUAGE_ORDER if title_languages is None
+             else tuple(l for l in TITLE_LANGUAGE_ORDER if l in title_languages))
 
     head = "\n".join(
         [ln for ln in low.splitlines() if ln.strip()][:TITLE_LINES]
     )
-    for anchor, fam in TITLE_ANCHORS:
-        if anchor in head:
-            return fam
+    for lang in langs:
+        for anchor, fam in TITLE_ANCHORS_BY_LANGUAGE[lang]:
+            if anchor in head:
+                return fam
 
     for anchor, fam in BODY_ANCHORS:
         if anchor in low:
@@ -458,8 +546,12 @@ def family_of(text):
     return None
 
 
-def scan(text):
+def scan(text, title_languages=None):
     """Scan ANY licence payload.  `hits` is populated unconditionally.
+
+    `title_languages` is passed straight to `family_of` and additionally narrows
+    which languages count as COMPLETE for the family axis, so
+    `scan(x, {"en"})` is this instrument as `p341` shipped it.
 
     The contract that distinguishes this from `p1054.classify`: there is no shape
     gate in front of the vocabulary.  A payload that mentions a restriction gets a
@@ -469,11 +561,13 @@ def scan(text):
     low = raw.lower()
     nbytes = len(raw.encode("utf-8"))
 
-    fam = family_of(raw)
+    fam = family_of(raw, title_languages)
     hits = tuple(t for t in RESTRICTION_TERMS if t in low)
     benign = BENIGN_FAMILY_HITS.get(fam, frozenset())
     effective = tuple(t for t in hits if t not in benign)
     lang = language_of(raw)
+    complete = (FAMILY_TITLE_VOCABULARY_COMPLETE if title_languages is None
+                else FAMILY_TITLE_VOCABULARY_COMPLETE & set(title_languages))
 
     if effective:
         verdict = VERDICT_RESTRICTED if fam is None else VERDICT_FAMILY_PLUS
@@ -486,6 +580,15 @@ def scan(text):
         # hit.  Saying `UNCLASSIFIED` here is the claim that nothing was found;
         # the truth is that nothing was looked for.
         verdict = VERDICT_UNREADABLE
+    elif (lang is not None
+          and lang not in complete
+          and nbytes >= UNREADABLE_MIN_BYTES):
+        # 🔴 `p342`.  Ordered AFTER `UNREADABLE-BODY` deliberately: that verdict is
+        # the stronger admission — neither axis could read the payload — and this
+        # one is the narrower case where the restriction axis DID read it and the
+        # family axis has no complete arm.  A payload that reaches here has a
+        # readable body, no restriction in it, and a title nobody looked at.
+        verdict = VERDICT_UNREADABLE_TITLE
     else:
         verdict = VERDICT_UNCLASSIFIED
 
@@ -500,6 +603,9 @@ def scan(text):
         # `UNREADABLE-BODY` row names what it could not read.
         "language": lang,
         "vocabulary_covers_language": lang in COVERED_LANGUAGES,
+        # 🟢 `p342`.  The companion field, and the reason the two admissions can be
+        # told apart downstream without parsing the verdict string.
+        "family_vocabulary_covers_language": lang in complete,
     }
 
 

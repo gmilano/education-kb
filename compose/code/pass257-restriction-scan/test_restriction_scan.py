@@ -337,6 +337,15 @@ truthy("UNREADABLE-BODY is not in the usable arm",
 # 🟡 The direction was conservative — never published as permissive — so it cost no
 # wrong claim; it cost a real usable grant read as unclassifiable.
 MIT_UNTITLED = load("mit-untitled-1057.txt")
+
+# 🟢 `p342`'s two payloads, both read first-hand from `raw.githubusercontent.com`
+# this pass and cached byte-exact.  They are the only two Portuguese licence
+# payloads this base has found in 342 passes, and they are opposite cases:
+#   `i-diario`        a COMPLETE operative AGPL-3.0 grant with a Portuguese title
+#   `bncc-benchmark`  a dual-licence INDEX naming MIT (code) and CC BY 4.0 (data),
+#                     each in a sibling file, with no operative clause of its own
+IDIARIO = load("i-diario-pt-35326.txt")
+BNCC = load("bncc-benchmark-pt-911.txt")
 mu = rs.scan(MIT_UNTITLED)
 check("mit_untitled.bytes", mu["bytes"], 1057)
 truthy("the payload really has no title line",
@@ -364,6 +373,9 @@ reached = {
     rs.scan(NOTFOUND)["verdict"],
     rs.scan(pagelm_shape)["verdict"],
     rs.scan(THAI_BODY)["verdict"],
+    # 🟢 `p342` — reached by a REAL payload in the DEFAULT configuration, which is
+    # what this control is for: `bncc-dev/bncc-benchmark`, 911 B, `pt`.
+    rs.scan(BNCC)["verdict"],
 }
 check("all verdicts reachable", sorted(reached), sorted(rs.ALL_VERDICTS))
 truthy("usable arm is closed", rs.USABLE_VERDICTS == frozenset({rs.VERDICT_PERMISSIVE}))
@@ -375,6 +387,88 @@ for v in rs.ALL_VERDICTS:
 truthy("usc header is non-ascii", any(ord(c) > 127 for c in USC))
 check("usc utf8 byte count", usc["bytes"], len(USC.encode("utf-8")))
 truthy("usc bytes exceed char count", usc["bytes"] > len(USC))
+
+# ── 11. `p342` — THE FAMILY AXIS'S OWN READABILITY ───────────────────────────────
+#
+# What `p341` left open, verbatim: *"`TITLE_ANCHORS` and `BODY_ANCHORS` have no
+# non-English rung at all.  So the multilingual work reached one axis and never
+# reached the one beside it.  Direction: UNSAFE."*  These controls pin the fix and,
+# more importantly, pin the two things the fix must NOT do.
+
+# 11a. The payload the defect was measured on.  `portabilis/i-diario`, branch `1.6`,
+#      35 326 B, title `LICENÇA PÚBLICA GERAL AFFERO GNU` — a complete operative
+#      AGPL-3.0 grant that this instrument read as `UNCLASSIFIED` for 22 passes.
+check("i-diario.bytes", rs.scan(IDIARIO)["bytes"], 35326)
+check("i-diario.language", rs.scan(IDIARIO)["language"], "pt")
+check("i-diario.family", rs.scan(IDIARIO)["family"], "AGPL")
+check("i-diario.verdict", rs.scan(IDIARIO)["verdict"], rs.VERDICT_COPYLEFT)
+check("i-diario is not usable", rs.is_usable_permissive(IDIARIO), False)
+
+# 11b. 🔴 THE REGRESSION THE FIX COULD HAVE INTRODUCED, AND THE REASON `pt` IS NOT
+#      IN `FAMILY_TITLE_VOCABULARY_COMPLETE`.  The `pt` arm carries ONE family.  A
+#      Portuguese payload that matches nothing in it must come out as an ADMISSION,
+#      never as `UNCLASSIFIED` — otherwise the pass that fixed the AGPL case
+#      reintroduced it for every other family in the same language.
+truthy("pt has title anchors", "pt" in rs.TITLE_ANCHORS_BY_LANGUAGE)
+truthy("pt is NOT claimed complete",
+       "pt" not in rs.FAMILY_TITLE_VOCABULARY_COMPLETE)
+check("en is the only complete arm",
+      sorted(rs.FAMILY_TITLE_VOCABULARY_COMPLETE), ["en"])
+bn = rs.scan(BNCC)
+check("bncc.language", bn["language"], "pt")
+check("bncc.family", bn["family"], None)
+check("bncc.verdict", bn["verdict"], rs.VERDICT_UNREADABLE_TITLE)
+check("bncc.effective_hits", bn["effective_hits"], ())
+check("bncc is not usable", rs.is_usable_permissive(BNCC), False)
+truthy("bncc family coverage is reported False",
+       bn["family_vocabulary_covers_language"] is False)
+
+# 11c. 🔴 THE OTHER THING THE FIX MUST NOT DO: move an English answer.  The 129
+#      controls above already pin every English verdict, so this asserts the
+#      stronger form — scoping the vocabulary to `{"en"}` changes NO FIELD of ANY
+#      English payload's result, field by field rather than verdict-only.
+for nm, body in (("usc", USC), ("apache", APACHE), ("gpl", GPL), ("mit", MIT),
+                 ("mit_untitled", MIT_UNTITLED), ("notfound", NOTFOUND),
+                 ("rapkumer", RAPKUMER), ("gaokao", GAOKAO)):
+    check(f"p342 moves no field of {nm}", rs.scan(body), rs.scan(body, {"en"}))
+    check(f"p342 moves no family of {nm}",
+          rs.family_of(body), rs.family_of(body, {"en"}))
+
+# 11d. The two admissions are DISTINCT and neither is usable.  `UNREADABLE-BODY`
+#      says the restriction axis had no arm; `UNREADABLE-TITLE` says it had one,
+#      found nothing, and the family axis had no complete arm.  A reader who fuses
+#      them cannot tell "no restriction here" from "nobody looked".
+truthy("the two admissions differ", rs.VERDICT_UNREADABLE != rs.VERDICT_UNREADABLE_TITLE)
+check("thai reaches UNREADABLE-BODY", rs.scan(THAI_BODY)["verdict"], rs.VERDICT_UNREADABLE)
+truthy("thai body language is unknown", rs.scan(THAI_BODY)["language"] is None)
+truthy("UNREADABLE-TITLE is not usable",
+       rs.VERDICT_UNREADABLE_TITLE not in rs.USABLE_VERDICTS)
+truthy("bncc covered on the restriction axis, not the family axis",
+       bn["vocabulary_covers_language"] and not bn["family_vocabulary_covers_language"])
+
+# 11e. 🔴 THE ORDERING TRAP, MEASURED AND NOT ASSUMED.  In English, `gnu general
+#      public license` is a substring of nothing and `gnu affero…` had to be
+#      ordered first for `P171`'s reason.  The Portuguese pair does not stand in
+#      that relation — `affero` sits between `geral` and `gnu` — so this asserts
+#      the property rather than the ordering, and a later GPL-pt rung cannot
+#      silently depend on where it is inserted.
+truthy("pt AGPL title does not contain a bare pt GPL title",
+       "licença pública geral gnu" not in "licença pública geral affero gnu")
+truthy("the alias is the English arm, not the union",
+       rs.TITLE_ANCHORS == rs.TITLE_ANCHORS_BY_LANGUAGE["en"])
+check("English arm is unchanged in length", len(rs.TITLE_ANCHORS), 9)
+truthy("English is consulted first",
+       rs.TITLE_LANGUAGE_ORDER[0] == "en")
+
+# 11f. 🔴 COLLISION MEASUREMENT, the rule `P171` exists for: a Portuguese anchor
+#      must not fire inside ANOTHER family's text.  Run over every fixture, which
+#      includes the 35 146 B English GPL-3.0 whose own section 13 names the Affero
+#      GPL — the payload that forced the title-line anchoring in the first place.
+for nm, body in (("usc", USC), ("apache", APACHE), ("gpl", GPL), ("mit", MIT),
+                 ("mit_untitled", MIT_UNTITLED), ("rapkumer", RAPKUMER),
+                 ("gaokao", GAOKAO), ("bncc", BNCC)):
+    for anchor, _fam in rs.TITLE_ANCHORS_BY_LANGUAGE["pt"]:
+        truthy(f"pt anchor absent from {nm}", anchor not in body.lower())
 
 print(f"{PASS}/{PASS + FAIL} controls pass")
 sys.exit(1 if FAIL else 0)
