@@ -4,6 +4,35 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 333 — the external channel is SATURATED and the signal this week is internal: a licence classifier that reads the maintainer's first name as a grant
+
+🔵 **Stated first because it is the honest headline for a trending file: this pass ran eight search legs — four global, four regional — and the global legs returned NOTHING this KB does not already hold.**
+
+| global leg | top candidates returned | already carried? |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | general-purpose agents (OpenClaw, opencode, OpenHands, CrewAI, LangGraph) + two MS/HF courses | 🟢 all — and none is an education agent |
+| `github trending education AI 2026 ...` | `HKUDS/DeepTutor`, `Open-TutorAi/open-tutor-ai-CE`, `plastic-labs/tutor-gpt`, `Li-Evan/Bloom`, `Study-Mate`, `stevenko2002/agents-radar` | 🟢 **6 of 6 already on these shelves** |
+| `open source platform education ERP SIS MIT Apache 2026` | OpenEduCat, Frappe/ERPNext, openSIS, RosarioSIS, Gibbon, Chamilo, OpenOLAT, Fedena, AlekSIS | 🟢 **9 of 9 already carried** |
+| `AI education industry trends 2026 ...` | Technavio / Mordor / Grand View sizing, Inside Higher Ed agentic-university | 🟢 held; sizing disagreements already documented |
+
+🟢 **Four external items in the whole sweep are new to this KB** — Illinois **SB720**, the **EDSAFE AI Alliance**, a reported **424-district policy-quality study**, and the **UNESCO Observatory on AI in Education for LAC**. 🔴 **All four are search-channel-only and NONE is verified at source: five non-GitHub hosts were tested this pass and all five returned `000` at CONNECT, and `WebFetch` returns `ENOTFOUND`.** They are in `intel/market.md` as leads, labelled as leads.
+
+🔵 **This is the third pass in a row to measure supply saturation on the English-language channel (p309, p323, p333), and it should now change behaviour rather than be re-reported:** **the generic global legs are no longer worth their cost on this industry, and the budget belongs on the regional legs and the internal defect classes** — which is where everything below came from.
+
+### 🔴 The actual finding this week: `"mit" in row`
+
+🔵 **Full account in [`agents/top.md`](top.md).** In one paragraph: this KB's grant classifier tested licence family names as bare substrings against whole rows, so **610 rows across 259 evidence files were graded permissive on a licence name sitting inside an ordinary word** — d**isc**overy, com**mit**s, com**mit**tee, per**mit**ted — and **`dmitry-viskov` graded a repository MIT by the maintainer's first name**.
+
+🔴 **Twelve rows flipped off permissive; seven were read first-hand and are plain copyleft, `tooljet/tooljet` (AGPL-3.0) among them.** 🔴 **And the largest single carrier was the previous pass's own output file, re-ingested as evidence — 109 of the 610 rows.**
+
+🟢 **Fixed, 32 new controls built from the real carriers (40 → 72), `make gate-offline` green.** 🟢 **Measured A/B on an identical corpus: the delivery rate is UNCHANGED at 79.2% — the defect is in the grant column, not the delivery measure — and the permissive `silent` class shrinks 370 → 306.**
+
+### 🟢 The random sample p332 asked for, and what it says about every pass before it
+
+**p332 probed the top of its defect class by sightings and flagged the bias itself.** 🟢 **p333 drew `random.Random(333).sample(silent, 24)` over all 711 rows and probed every one first-hand.** **24 of 24 resolve. 3 are genuine misses (12.5%, wide interval on n=24). 18 are correctly refused. 2 are reference material, 1 unread.** 🟢 **Promoted: `google/licenseclassifier`, `yetanalytics/pedestal-oidc`, `yetanalytics/re-oidc` — all Apache-2.0, all verified.** Ledger: [`evidence/p333-disposition-ledger`](../evidence/p333-disposition-ledger.2026-10-20-p333.tsv).
+
+---
+
 ## 2026-10-20 — Pass 332 — `make gate-offline` has been RED since p331, and the pass that prescribed the hook tier was the pass that broke it
 
 🔵 **This pass's signal is not a repository. It is that the gate p331 told the next pass to build into was already failing when p331 wrote the sentence.**

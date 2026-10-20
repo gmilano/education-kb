@@ -1,0 +1,33 @@
+# p333 — 2026-10-20 (sixth pass of this date). SEEDED RANDOM sample of the `silent` class,
+# probed first-hand. p332 probed the TOP of the defect class by sightings and said so:
+# "ranking by sightings selects for rows that were already interesting". This is the
+# unbiased draw it prescribed: random.Random(333).sample(silent, 24) over all 711 rows.
+# Channels: grant = raw.githubusercontent.com/<slug>/HEAD/<path> (7-path ladder);
+# activity = git ls-remote + git clone --bare --filter=blob:none + full commit graph.
+# github.com HTML, api.github.com and every non-GitHub host return 403/000 in this
+# environment — re-confirmed p333 on 5 hosts, and WebFetch returns ENOTFOUND.
+slug	exists	grant_path	grant_bytes	grant_first_line	commits	authors	first_commit	last_commit	commits_2026
+asherfn/acadex-ai-google-deepmind	yes	-	-	-	8	2	2025-12-12	2026-10-13	5
+cstar0521/ai-voice-agent	yes	-	-	-	30	1	2025-10-24	2026-04-10	1
+emmanuel-johnson/launch-point-backend	yes	-	-	-	201	1	2026-08-02	2026-10-19	201
+glromero/educative-lab	yes	LICENSE	1086	MIT License Copyright (c) 2025 DeepRat (Gonzalo Luis Romero) 	37	1	2025-11-06	2025-11-07	0
+google/licenseclassifier	yes	LICENSE	11358	 Apache License Version 2.0, January 2004 	249	30	2017-04-09	2026-02-18	1
+hammadshakeelai/prompt-mastery-app	yes	-	-	-	10	1	2026-09-25	2026-09-25	10
+haoyanzhang123/sproutask	yes	LICENSE	1071	MIT License Copyright (c) 2026 HaoyanZhang123 	17	1	2026-09-24	2026-09-27	17
+ironcountyschooldistrict/ps-plugin-boilerplate	yes	LICENSE	1057	MIT License Copyright (c) 2018 	22	2	2018-04-17	2018-07-10	0
+ishanvyas22/awesome-open-source-systems	yes	LICENSE	488	 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE Version 2, November 2021 	150	14	2020-09-19	2026-06-04	4
+kaijiyuan/dr.kevin	yes	-	-	-	31	3	2026-06-13	2026-09-08	31
+learningequality/vue-intl	yes	LICENSE	1084	The MIT License (MIT) Copyright (c) 2016 Learning Equality 	52	6	2016-05-04	2021-01-08	0
+lowellran/study_via_ai	yes	LICENSE	1066	MIT License Copyright (c) 2026 lowellran 	20	1	2026-08-31	2026-09-14	20
+maikelheijen/socrates	yes	LICENSE	1070	MIT License Copyright (c) 2026 Maikel Heijen 	36	3	2026-08-17	2026-08-19	36
+mandrasch/oer-hoernchen	yes	LICENSE	7197	CREATIVE COMMONS 1.0 UNIVERSAL The source code of this project is lice	151	4	2017-09-26	2018-06-17	0
+mercedesbenzforlyx/complete-anatomy	yes	LICENSE	1075	MIT License Copyright (c) 2026 mercedesbenzforlyx 	330	2	2026-09-17	2026-10-20	330
+openedx/openedx-proposals	yes	LICENSE	15998	Creative Commons Attribution-ShareAlike 4.0 International Public Licen	1154	123	2016-03-31	2026-10-16	80
+pdfmathtranslate/pdfmathtranslate	yes	LICENSE	34523	 GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 	2803	66	2024-09-06	2026-10-20	1722
+trf0/llm-edu-classifier	yes	LICENSE	1083	MIT License Copyright (c) 2026 Thiago Rodrigues Fernandes 	3	2	2026-07-27	2026-07-28	3
+unstabledesign/prototypingsmarttextiles	yes	LICENSE	7048	Creative Commons Legal Code CC0 1.0 Universal 	154	8	2020-07-13	2022-10-04	0
+viralkariya-vk/eaal-platform	yes	-	-	-	48	1	2026-09-25	2026-10-19	48
+weecology/forecasting-course	yes	LICENSE.md	25315	# Licenses 1. [Written Materials And Video (CC-BY)](#written-materials	488	8	2020-07-22	2026-10-18	41
+willie-conway/dw-master	yes	LICENSE	1071	MIT License Copyright (c) 2026 Willie Conway 	11	2	2026-03-06	2026-03-06	11
+yetanalytics/pedestal-oidc	yes	LICENSE	11357	 Apache License Version 2.0, January 2004 http://www.apache.org/licens	123	5	2022-01-11	2026-10-16	4
+yetanalytics/re-oidc	yes	LICENSE	11357	 Apache License Version 2.0, January 2004 http://www.apache.org/licens	70	4	2022-01-31	2026-10-16	4

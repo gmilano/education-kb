@@ -1,0 +1,33 @@
+# p333 — 2026-10-20. ACTION ZA, FIRST INSTALMENT. p332's finding was that eight probed rows
+# were dead, dormant or below bar and NOT ONE said so anywhere, so every pass re-discovers and
+# re-probes the same corpses. This is the ledger it prescribed: one line per measured-and-
+# refused slug, with the pass, the first-hand figures and the REASON. A row listed here has
+# been looked at; a later pass that re-probes it is repeating work, not discovering anything.
+# Scope of this instalment: the 24-row seeded random sample of the `silent` class
+# (random.Random(333), drawn over all 711 rows). Full figures in
+# evidence/p333-silent-random-probe.2026-10-20-p333.tsv.
+slug	pass	grant_first_hand	activity_first_hand	disposition	reason
+google/licenseclassifier	p333	Apache-2.0 (11,358 B)	249 c · 30 a · 2017-04-09→2026-02-18	PROMOTED	Licence-text classifier as a library. Directly answers the defect this same pass found in this KB's own grant grading. repos/foundations.md
+yetanalytics/pedestal-oidc	p333	Apache-2.0 (11,357 B)	123 c · 5 a · 2022-01-11→2026-10-16	PROMOTED	OIDC relying-party for Clojure Pedestal. LTI 1.3 launch is an OIDC flow; adjacency to p331's lti-tool. repos/foundations.md
+yetanalytics/re-oidc	p333	Apache-2.0 (11,357 B)	70 c · 4 a · 2022-01-31→2026-10-16	PROMOTED	OIDC for re-frame front ends. Same house as yetanalytics/lrsql (Apache-2.0, verified p333). repos/foundations.md
+openedx/openedx-proposals	p333	CC BY-SA 4.0 (15,998 B)	1,154 c · 123 a · 2016-03-31→2026-10-16	NAMED-NOT-CODE	The Open edX OEP process. Governance reference, content-licensed share-alike; cite it, do not vendor it
+weecology/forecasting-course	p333	mixed: CC-BY materials + MIT code (25,315 B)	488 c · 8 a · 2020-07-22→2026-10-18	NAMED-NOT-CODE	Live course materials, share-alike on the prose. Reference for course-generation evaluation, not a component
+mercedesbenzforlyx/complete-anatomy	p333	MIT (1,075 B)	330 c · 2 a · 2026-09-17→2026-10-20	UNREAD-WATCH	Active today, 330 commits in five weeks, but the owner name does not match the subject and nothing was read below the manifest. Read before it is ever quoted
+pdfmathtranslate/pdfmathtranslate	p333	AGPL-3.0 (34,523 B)	2,803 c · 66 a · 1,722 c in 2026	REFUSED-COPYLEFT	Strong project, wrong grant for embedding. THIS IS THE ROW THAT EXPOSED THE SUBSTRING DEFECT: recorded correctly AGPL-3.0 by p154, read back permissive at p332
+learningequality/vue-intl	p333	MIT (1,084 B)	52 c · 6 a · 2016-05-04→2021-01-08	REFUSED-DORMANT	Dormant 5 years. The ORG (Learning Equality / Kolibri) stays interesting; this repository does not
+mandrasch/oer-hoernchen	p333	CC0-1.0 (7,197 B)	151 c · 4 a · 2017-09-26→2018-06-17	REFUSED-DORMANT	German OER tooling, dormant 8 years
+unstabledesign/prototypingsmarttextiles	p333	CC0-1.0 (7,048 B)	154 c · 8 a · 2020-07-13→2022-10-04	REFUSED-DORMANT	Course content, dormant 4 years
+ironcountyschooldistrict/ps-plugin-boilerplate	p333	MIT (1,057 B)	22 c · 2 a · 2018-04-17→2018-07-10	REFUSED-DORMANT	Dormant 8 years. Worth one line as a SIGNAL — a US school district publishing PowerSchool plugin scaffolding — not as code
+ishanvyas22/awesome-open-source-systems	p333	WTFPL (488 B)	150 c · 14 a · 2020-09-19→2026-06-04	REFUSED-NOT-A-COMPONENT	A curated list. Also WTFPL: permissive in intent, not an OSI-recommended grant for client delivery
+glromero/educative-lab	p333	MIT (1,086 B)	37 c · 1 a · 2025-11-06→2025-11-07	REFUSED-BELOW-BAR	One author, two days, silent 11 months
+haoyanzhang123/sproutask	p333	MIT (1,071 B)	17 c · 1 a · 2026-09-24→2026-09-27	REFUSED-BELOW-BAR	One author, three days
+maikelheijen/socrates	p333	MIT (1,070 B)	36 c · 3 a · 2026-08-17→2026-08-19	REFUSED-BELOW-BAR	Three days, then silence
+lowellran/study_via_ai	p333	MIT (1,066 B)	20 c · 1 a · 2026-08-31→2026-09-14	REFUSED-BELOW-BAR	One author, two weeks
+trf0/llm-edu-classifier	p333	MIT (1,083 B)	3 c · 2 a · 2026-07-27→2026-07-28	REFUSED-BELOW-BAR	Three commits
+willie-conway/dw-master	p333	MIT (1,071 B)	11 c · 2 a · 2026-03-06 only	REFUSED-BELOW-BAR	One day
+asherfn/acadex-ai-google-deepmind	p333	NO GRANT on a 7-path ladder	8 c · 2 a · 2025-12-12→2026-10-13	REFUSED-UNGRANTED	Default copyright reserves all rights
+cstar0521/ai-voice-agent	p333	NO GRANT on a 7-path ladder	30 c · 1 a · 2025-10-24→2026-04-10	REFUSED-UNGRANTED	Default copyright reserves all rights
+hammadshakeelai/prompt-mastery-app	p333	NO GRANT on a 7-path ladder	10 c · 1 a · 2026-09-25 only	REFUSED-UNGRANTED	Default copyright reserves all rights; one day
+kaijiyuan/dr.kevin	p333	NO GRANT on a 7-path ladder	31 c · 3 a · 2026-06-13→2026-09-08	REFUSED-UNGRANTED	Default copyright reserves all rights
+viralkariya-vk/eaal-platform	p333	NO GRANT on a 7-path ladder	48 c · 1 a · 2026-09-25→2026-10-19	REFUSED-UNGRANTED	Active, one author, no grant. Ask the author before anything else
+emmanuel-johnson/launch-point-backend	p333	NO GRANT on a 7-path ladder	201 c · 1 a · 2026-08-02→2026-10-19	REFUSED-UNGRANTED	201 commits in 2026 and no grant at all — the most active ungranted row in the sample

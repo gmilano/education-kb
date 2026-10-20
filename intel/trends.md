@@ -4,6 +4,28 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 333 · 2026-10-20 — two trends, one of them about this KB's own instruments and therefore about everyone else's
+
+### 🔴 Trend 22 — the licence data the whole sector runs on is produced by substring matching, and this pass has a measured failure rate for it
+
+🔵 **This KB graded licences with `"mit" in row` for 332 passes. Measured this pass over its own corpus: 610 rows across 259 evidence files — 5.7% of every row matching a permissive token — were graded permissive on a licence name embedded inside an unrelated word.** The carriers are ordinary English: d**isc**overy, d**isc**harged, com**mit**s, com**mit**tee, per**mit**ted, rate_li**mit** — and the maintainer name **d**mit**ry-viskov**.
+
+🔴 **The commercially relevant part is the direction of the error. Twelve rows flipped off permissive; seven were then read first-hand and confirmed as plain copyleft, including `tooljet/tooljet` (AGPL-3.0, 34,503 B) — a widely-deployed low-code platform that this corpus was presenting as safe to embed.**
+
+🟢 **Why this is a SECTOR trend and not a bug report.** 🔵 **Substring matching on licence names is the default implementation everywhere it is cheap to write — in SBOM scripts, in procurement spreadsheets, in dependency dashboards, and in the automated "licence check" step of a great many CI pipelines.** **This pass is a measurement of how often that default is wrong on a real corpus: about 1 row in 18 of those it grades permissive.** 🟢 **For a studio this is sellable work with a number attached:** *your licence inventory was probably built this way; here is the measured error rate and here is the boundary-aware re-grade.*
+
+🟢 **The honest counterweight, which is also the sellable detail:** the right fix is not a stricter regex either. **A boundary rule that refuses any trailing letter discards `GPLv3` and `MPL-2.0`, both real spellings** — the rule that works allows exactly one. 🔵 **And the properly engineered answer already exists and is permissive: [`google/licenseclassifier`](https://github.com/google/licenseclassifier) (Apache-2.0), which compares text against an archive of known licence TEXTS rather than grepping for a family NAME.** **This KB found it in its own backlog, measured 3 times and never delivered.**
+
+### 🔴 Trend 23 — derived artefacts are being re-ingested as evidence, and the failure is silent by construction
+
+🔵 **The single largest carrier of the defect above was not an old research file. It was the previous pass's own OUTPUT** — `p332-delivery-audit...tsv`, 109 of the 610 rows — because the audit writes into `evidence/` and then reads every file in `evidence/`.
+
+🔴 **The mechanism generalises well beyond this repository, and it is the one to watch as agentic pipelines start writing into the stores they read.** A derived artefact looks exactly like a measurement: same directory, same format, same schema. **p154 measured `pdfmathtranslate` CORRECTLY as AGPL-3.0; p332's output cited the filename that measurement lived in; and the filename contained `isc`. A correct measurement was destroyed by the NAME OF THE FILE THAT HELD IT, one generation later.**
+
+🟢 **The control is cheap and belongs in any pipeline where an agent writes into its own corpus: mark derived output and refuse to re-ingest it.** 🔵 **The expensive part is noticing**, because the loop degrades quality monotonically and produces no error — each generation is slightly more confident and slightly less correct. 🟡 **This KB ran one generation of it and caught the second. A pipeline running hourly, unattended, would not have.**
+
+---
+
 **Pass 332 · 2026-10-20 (fifth pass of this date). Two trends added. Trend 20 is a licensing fact about this sector that this KB has been measuring on the wrong channel for 332 passes; Trend 21 is a method law with a measured cost.**
 
 ## 🟢 Trend 20 — NEW: in education open source, the licence is increasingly NOT in a licence file, and a file-first audit reads the sector as more closed than it is

@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 333 · 2026-10-20 (sixth pass of this date) — the column every row on this shelf is graded by was matching licence names inside other words, and the word it matched most was `commits`
+
+🔴 **The grant column is produced by a classifier that, until this pass, tested `"mit" in row`.** A licence family name is three letters long and English is full of them. Measured over this repository's own `evidence/` at p333: 🔴 **610 rows across 259 evidence files — 5.7% of every row that matched a permissive token — were graded permissive on a substring embedded in a longer word and nothing else.** [`evidence/p333-substring-grant-census`](../evidence/p333-substring-grant-census.2026-10-20-p333.tsv).
+
+| what the classifier read as a grant | what the word actually was | spurious matches |
+|---|---|---|
+| `isc` | d**isc**overy, d**isc**harged, d**isc**losure | 265 |
+| `mit` | com**mit**s, com**mit**ted, com**mit**tee, per**mit**ted, rate_li**mit** | 328 |
+| `mit` | 🔴 **d**mit**ry-viskov** — the maintainer's first name | 32 sightings of that slug |
+| `cc0` | inside hashes and paths | 24 |
+
+🔴 **Two of those carriers are this KB's own vocabulary, and that is the part worth stopping on.** **`commits` and `committed` are the ACTIVITY triple p329 introduced to these very tables** — so the measurement p329 added to make this shelf honest silently re-graded the grant column one pass later. And a repository is graded MIT because its maintainer is called **Dmitry**.
+
+### 🔴 The dangerous direction is real, and it was found in the wild
+
+🔵 **A grading error only matters if it errs toward "you may build on this".** It did. **Twelve rows flipped off permissive once the boundary rule was applied; seven of them are plain copyleft, and all seven were then read first-hand on `raw.githubusercontent.com` to confirm the correction rather than trust the classifier in either direction:**
+
+| row | graded by p332 | read first-hand p333 | bytes |
+|---|---|---|---|
+| `tooljet/tooljet` | 🔴 permissive | 🟢 **AGPL-3.0** | 34,503 |
+| `pdfmathtranslate/pdfmathtranslate` | 🔴 permissive | 🟢 **AGPL-3.0** | 34,523 |
+| `sage-is/ai-ui` | 🔴 permissive | 🟢 **AGPL-3.0** | 33,895 |
+| `schemaspy/schemaspy` | 🔴 permissive | 🟢 **GPL-3.0** (`COPYING`) | 35,148 |
+| `sansan0/trendradar` | 🔴 permissive | 🟢 **GPL-3.0** | 35,149 |
+| `dvjvp/lut-to-ue4-clut` | 🔴 permissive | 🟢 **GPL-3.0** | 35,141 |
+| `thecyberbrick/fits-rating-tool` | 🔴 permissive | 🟢 **GPL-3.0** (`COPYING`) | 35,148 |
+
+🟢 **7 of 7 confirmed. The correction is right in every case, and `tooljet/tooljet` is the one that would have cost money** — a widely-adopted low-code platform, AGPL-3.0, sitting in this corpus marked as something a studio may embed in a client deliverable.
+
+🔵 **`pdfmathtranslate` is also the row that exposed the whole defect, and the mechanism is worth naming exactly.** p154 recorded it **correctly** as AGPL-3.0. p332 read it back as *permissive* — because the row cites the evidence **filename** it came from, `api-di`**`sc`**`overy-overlap.2026-10-12-p154.tsv`. 🔴 **A correct measurement was destroyed by the name of the file that held it.**
+
+### 🔴 And the loop was closing: the audit was eating its own output
+
+🔵 **The single largest carrier of the defect is not an old research file. It is `p332-delivery-audit.2026-10-20-p332.tsv` — 109 of the 610 rows.** The delivery audit writes its results into `evidence/`, and `harvest_evidence()` reads every `.tsv` in `evidence/`. 🔴 **So one pass's grade became the next pass's evidence, and every row in that output cites a filename, which is exactly where the spurious tokens live.** 🟢 **Derived output is now excluded by name (`DERIVED_EVIDENCE`), so the loop cannot close.**
+
+### 🔵 This KB already held the guard
+
+🔴 **`compose/code/licence-grant-gate/grant_gate.py:112` declares `AMBIGUOUS_WORDS = ("apache", "nginx", "mit", "bsd")`** and reasons at length about a licence family name that is also the name of something else. **It was never applied to the audit.** 🟢 **That is p329's shape for the third time in five passes: capability present, instruction already written, not exercised.**
+
+### 🟢 Fixed, controlled and gated
+
+**The rule: a token counts when it is not preceded by an alphanumeric and not followed by two or more letters.** 🔵 **The one-letter right-hand allowance is load-bearing and has its own controls** — `GPLv3` and `MPL-2.0` are real spellings a stricter boundary would silently discard, while `apachecon`, `mitigation` and `discovery` are not grants. 🟢 **32 new controls, every one built from a carrier measured in this corpus rather than invented: 40 → 72, and `make gate-offline` is green (exit 0).**
+
+🟢 **What this does NOT change, stated because the opposite would be the easy claim:** the delivery rate is untouched. Measured A/B on an identical corpus — 3,770 slugs measured, 786 undelivered, **79.2% both before and after.** 🔴 **The defect is in the GRANT column, not the delivery measure**, and the honest headline is narrower than "the audit was wrong": **the permissive `silent` class shrinks 370 → 306, so 64 rows this KB believed it could build on were never permissive at all.**
+
+🟢 **None of the twelve is on a live shelf** — they are all in the undelivered set by construction. **The defect is contained to the evidence tier, as `pdfmathtranslate` was at p332.** The shelf below is unaffected in its grants and is carried forward with every figure still first-hand.
+
+### 🔴 One inherited state this pass is reporting because the last one did not
+
+**`make hooks` was already RED at p332's HEAD.** Measured on a clean checkout before p333 changed a byte, and again after: **identical — 20/22 gates green, `recount` red with 7 `NO-ANCHOR` claims, `gate-ladder-case` red on its C14 ratchet.** 🟢 **p333 neither caused nor worsened either, and `make gate-offline` is green.** 🔴 **p332 caught p331 leaving `gate-offline` red and then shipped with `hooks` red itself, silently. Third pass in a row.** 🔵 **The fix is not another gate — it is that a pass must state the gate state it INHERITED, which is what this paragraph is.**
+
+### 🟢 The agent shelf — carried from p332, unchanged
+
+**No new AGENT qualified this pass, and that is stated rather than padded.** The three promotions this pass earned are substrate and instrument, not agents; they land in [`repos/foundations.md`](../repos/foundations.md).
+
+| Agent / tool | Repo | Grant | Activity, first-hand | Layer |
+|---|---|---|---|---|
+| **lti-tool** | https://github.com/lti-tool/lti-tool | 🟢 **MIT** (1,077 B, p331) | 346 c · 6 a · 2026-10-19 · release 2026-10-20 (p331) | 🟢 LMS integration — the way in |
+| **ltijs** | https://github.com/Cvmcosta/ltijs | 🟢 **Apache-2.0** (11,361 B, p331) | 575 c · 17 a · 2026-10-13 (p331) | 🟡 LMS integration, mature, narrow bench |
+| **DeepTutor** | https://github.com/HKUDS/DeepTutor | 🟢 **Apache-2.0** | head 2026-10-19 (p330) | 🟢 Agent-native tutor |
+| **tutor-mcp** | https://github.com/ArnaudGuiovanna/tutor-mcp | 🟢 **MIT** (1,073 B, p331) | 467 c · 5 a · 2026-10-16 (p330) | 🟢 ITS state + review scheduling over MCP |
+| **OATutor** | https://github.com/CAHLR/OATutor | 🟢 **MIT** | 1,045 c · 27 a · 2026-10-16 (p330) | 🟢 Pedagogy — BKT, UC Berkeley |
+| **Agent Skills** | https://github.com/learning-commons-org/agent-skills | 🟢 **Apache-2.0** (10,173 B, p327) | 42 c (p327) | 🟢 K-12 teacher skills over MCP |
+| **Evaluators** | https://github.com/learning-commons-org/evaluators | 🟡 **MIT code**; corpora **CC BY-NC-SA 4.0** (p327) | 289 c (p327) | 🟢 Pedagogy-aware evaluation |
+| **os-taxonomy** | https://github.com/withmarbleapp/os-taxonomy | 🟡 **ODbL-1.0 + CC BY-SA 4.0** (25,289 B, p331) | 23 c · 3 a · 2026-10-19 (p331) | 🟢 Curriculum spine (data, not code) |
+
+🔵 **One control that had to be preserved while fixing the matcher:** p332's `mixed` branch — MIT code beside a share-alike corpus — is the shape of the `os-taxonomy` row above. **The boundary rule is applied to both token families, so `mixed` stays reachable; there is a control asserting exactly that row's shape.**
+
+---
+
 ## Pass 332 · 2026-10-20 (fifth pass of this date) — the audit p327 prescribed and p331 called unrun now exists, and the first thing it did was refute p331's own generalisation
 
 🔵 **p331's closing finding was right about its case and wrong about its scope.** It measured `lti-tool/lti-tool` — recorded in `evidence/` at p232, absent from every shelf through p330 — and generalised: *"This KB's discovery rate on `lti-tool` was 100% at p232 and its delivery rate was 0% through p330 — the exact failure p327 named and prescribed an audit for, still unrun. The prescription was right; nothing executes it. It belongs in the hook tier, not in prose."*

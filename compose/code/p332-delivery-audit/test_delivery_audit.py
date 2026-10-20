@@ -115,6 +115,73 @@ ok(da.rank([
     {"slug": "b/perm", "grant": "permissive", "disposition": "pending", "sightings": 1},
 ])[0]["slug"] == "b/perm", "within a disposition, a permissive grant ranks first")
 
+
+# ---------------------------------------------------------------- p333: token boundaries
+# Every case below is a REAL carrier measured in this repository's `evidence/` at p333, not an
+# invented example. The counts in delivery_audit.py's comment block come from the same sweep.
+
+# The wild case that proved the defect: p154 recorded this row's grant CORRECTLY as AGPL-3.0,
+# and the bare-substring test read it back as permissive because the evidence FILENAME it
+# cites contains `isc` inside `api-di(sc)overy-overlap`.
+ok(da.classify_grant(
+    "pdfmathtranslate/pdfmathtranslate\tAGPL-3.0\tapi-discovery-overlap.2026-10-12-p154.tsv")
+   == "copyleft",
+   "an AGPL row citing api-discovery-overlap is copyleft, not permissive (`isc` in `discovery`)")
+
+# p329's activity vocabulary. `commits` and `committed` entered these shelves as a MEASUREMENT
+# and silently re-graded the grant column one pass later.
+for carrier in ("2,935 commits", "committed yesterday", "733 commits / 127 authors",
+                "last commit 2026-10-19"):
+    ok(da.classify_grant("x/y\t" + carrier) == "unknown",
+       f"p329's activity vocabulary is not a grant: {carrier!r}")
+
+# The owner name. `dmitry-viskov/pylti1.3` is measured 32 times in this corpus.
+ok(da.classify_grant("dmitry-viskov/pylti1.3\tno grant read") != "permissive",
+   "a maintainer's first name is not a licence (`mit` in `dmitry`)")
+
+# The remaining measured carriers, each an English word that is not a grant.
+for carrier in ("discharged", "disclosure", "committee", "permitted", "rate_limit",
+                "rick-254/moodle-quizsmith", "mitigation", "apachecon"):
+    ok(da.classify_grant("x/y\t" + carrier) == "unknown",
+       f"{carrier!r} contains a licence token and is not a licence claim")
+
+# The other direction matters just as much: the boundary rule must not discard real spellings.
+# The one-letter right-hand allowance exists for exactly these two.
+ok(da.classify_grant("x/y\tGPLv3") == "copyleft", "GPLv3 is a real spelling and must survive")
+ok(da.classify_grant("x/y\tMPL-2.0") == "permissive", "MPL-2.0 must survive the boundary rule")
+for spelling, want in (("MIT License", "permissive"), ("Apache License 2.0", "permissive"),
+                       ("BSD-3-Clause", "permissive"), ("CC0-1.0", "permissive"),
+                       ("ISC License", "permissive"), ("AGPL-3.0", "copyleft"),
+                       ("LGPL-2.1", "copyleft"), ("CC BY-SA 4.0", "copyleft"),
+                       ("apache2", "permissive"), ("mit-license", "permissive")):
+    ok(da.classify_grant("x/y\t" + spelling) == want,
+       f"{spelling} still grades {want}")
+
+# p332's own control must still hold: MIT code beside a share-alike corpus is `mixed`, and the
+# compound branch must be reachable through the new matcher too.
+ok(da.classify_grant("withmarbleapp/os-taxonomy\tMIT code; corpora CC BY-SA 4.0") == "mixed",
+   "the mixed branch survives the boundary rule (p332's os-taxonomy shape)")
+
+# UNGRANTED is still tested first, so `unlicensed` never reads as the Unlicense.
+ok(da.classify_grant("x/y\tunlicensed") == "ungranted",
+   "`unlicensed` is an absence, not the Unlicense")
+
+# The self-ingestion guard. The audit's own output is derived, not measured.
+ok(any(d in "p332-delivery-audit.2026-10-20-p332.tsv" for d in da.DERIVED_EVIDENCE),
+   "the audit's own output is named as derived evidence")
+ok(not any(d in "api-discovery-overlap.2026-10-12-p154.tsv" for d in da.DERIVED_EVIDENCE),
+   "a real measurement file is not excluded as derived")
+
+_tmp = tempfile.mkdtemp()
+os.makedirs(os.path.join(_tmp, "evidence"))
+with open(os.path.join(_tmp, "evidence", "real-census.2026-01-01-p1.tsv"), "w") as fh:
+    fh.write("owner/kept\tMIT\n")
+with open(os.path.join(_tmp, "evidence", "p999-delivery-audit.2026-01-01-p999.tsv"), "w") as fh:
+    fh.write("owner/derived\tMIT\n")
+_h = da.harvest_evidence(_tmp)
+ok("owner/kept" in _h, "a measurement file is harvested")
+ok("owner/derived" not in _h, "the audit does not re-ingest its own output")
+
 print(f"p332-delivery-audit: {N - len(FAIL)}/{N} controls pass")
 for f in FAIL:
     print(f"  FAIL: {f}")

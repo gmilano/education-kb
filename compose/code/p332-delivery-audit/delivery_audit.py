@@ -66,6 +66,51 @@ COPYLEFT = ("gpl", "agpl", "lgpl", "odbl", "cc by-sa", "cc-by-sa", "eupl", "osl"
 UNGRANTED = ("no licence", "no license", "unlicensed", "no grant", "none found",
              "no licence file", "no license file", "sin licencia")
 
+# p333 — THE DEFECT THIS BLOCK EXISTS TO STOP. Until p333 every token above was tested with
+# a bare `tok in row`, against the WHOLE row. A licence family name is three letters long and
+# English is full of them, so the test graded rows on words that are not grants:
+#
+#   `isc` inside d-ISC-overy, d-ISC-harged, d-ISC-losure   (326 spurious matches)
+#   `mit` inside com-MIT-s, com-MIT-tee, per-MIT-ted,      (403 spurious matches)
+#         rate_li-MIT, and the owner name d-MIT-ry-viskov
+#
+# Measured over this repository's own `evidence/` at p333: 610 rows across 259 evidence files
+# — 5.7% of every row that matched any permissive token — were graded permissive on an
+# embedded substring and nothing else (`evidence/p333-substring-grant-census...tsv`). Two carriers deserve naming. `commits`/`committed` is the ACTIVITY vocabulary p329
+# introduced to these shelves, so the measurement added at p329 silently re-graded the grant
+# column at p332; and `dmitry-viskov` grades a repository MIT by the maintainer's first name.
+# The dangerous direction is real and was found in the wild: the AGPL-3.0 row
+# `pdfmathtranslate/pdfmathtranslate`, recorded CORRECTLY as AGPL-3.0 by p154, read back as
+# `permissive` because the filename it cites — `api-di(sc)overy-overlap...` — contains `isc`.
+#
+# 🔵 This KB already held the guard. `compose/code/licence-grant-gate/grant_gate.py:112`
+# declares `AMBIGUOUS_WORDS = ("apache", "nginx", "mit", "bsd")` and reasons about exactly this
+# ambiguity. It was never applied here — p329's shape again: capability present, not exercised.
+#
+# The rule: a token counts when it is not preceded by an alphanumeric and not followed by two
+# or more letters. The right-hand allowance of ONE letter is deliberate and load-bearing —
+# `GPLv3` and `MPL-2.0` are real spellings a stricter boundary would discard, while
+# `apachecon`, `mitigation` and `discovery` are not grants.
+_TOKEN_RE = {}
+
+
+def token_present(tok, low):
+    """Is `tok` a licence mention in `low`, or a substring of a longer word?"""
+    rx = _TOKEN_RE.get(tok)
+    if rx is None:
+        rx = re.compile(r"(?<![a-z0-9])" + re.escape(tok) + r"(?![a-z]{2})")
+        _TOKEN_RE[tok] = rx
+    return rx.search(low) is not None
+
+
+# p333 — the audit's OWN OUTPUT is a derived artefact, not a measurement, and re-reading it is
+# how one pass's grade becomes the next pass's evidence. It is also the single largest carrier
+# of the substring defect above: 109 of the 610 flipped rows live in
+# `p332-delivery-audit.2026-10-20-p332.tsv`, because every row in it cites the evidence
+# filename it came from and those filenames carry `disc`, `commit` and friends. Excluded by
+# name so the loop cannot close.
+DERIVED_EVIDENCE = ("delivery-audit",)
+
 # Dispositions that mean a pass LOOKED and SAID NO. An undelivered row carrying one of these
 # is not a delivery failure — it is a recorded refusal, and re-promoting it would be the bug.
 REFUSED = ("dead", "archived", "below bar", "below the bar", "not embeddable", "unusable",
@@ -117,8 +162,8 @@ def classify_grant(row):
     low = row.lower()
     if any(t in low for t in UNGRANTED):
         return "ungranted"
-    perm = any(t in low for t in PERMISSIVE)
-    copy = any(t in low for t in COPYLEFT)
+    perm = any(token_present(t, low) for t in PERMISSIVE)
+    copy = any(token_present(t, low) for t in COPYLEFT)
     # Both present is `mixed`, and it must be tested BEFORE either single verdict. p332's own
     # control suite caught this: ordering the single verdicts first made `mixed` unreachable,
     # and the shelf's `withmarbleapp/os-taxonomy` row — MIT code, CC BY-SA corpora — is
@@ -151,6 +196,8 @@ def harvest_evidence(root=None, evidence_dir="evidence"):
         return found
     for name in sorted(os.listdir(base)):
         if not name.endswith((".tsv", ".csv")):
+            continue
+        if any(d in name for d in DERIVED_EVIDENCE):   # p333 — see DERIVED_EVIDENCE
             continue
         with open(os.path.join(base, name), encoding="utf-8", errors="replace") as fh:
             for n, row in enumerate(fh, 1):

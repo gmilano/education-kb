@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 333 — gaps opened, closed and measured
+
+**Evidence:** [`p333-substring-grant-census`](../evidence/p333-substring-grant-census.2026-10-20-p333.tsv) · [`p333-silent-random-probe`](../evidence/p333-silent-random-probe.2026-10-20-p333.tsv) · [`p333-disposition-ledger`](../evidence/p333-disposition-ledger.2026-10-20-p333.tsv).
+
+**Closed this pass.**
+
+- ✅ 🔴 **NEW AND NOT PRESCRIBED BY ANYONE: the grant classifier matched licence names as bare substrings.** 610 rows / 259 evidence files graded permissive on a token inside an unrelated word (`discovery`, `commits`, `committee`, `permitted`, `rate_limit`, `dmitry-viskov`). **12 rows flipped off permissive; 7 confirmed copyleft first-hand, including `tooljet/tooljet` (AGPL-3.0).** 🟢 Fixed with a boundary rule that still admits `GPLv3` and `MPL-2.0`; **32 new controls built from real carriers (40 → 72); `make gate-offline` green.** 🟢 **A/B on an identical corpus: delivery rate UNCHANGED at 79.2% — the defect was in the grant column, not the delivery measure.** Permissive `silent` class 370 → **306**.
+- ✅ 🔴 **The audit was re-ingesting its own output.** `p332-delivery-audit...tsv` is the single largest carrier of the defect above (**109 of 610 rows**), because the audit writes into `evidence/` and reads every `.tsv` in `evidence/`. 🟢 `DERIVED_EVIDENCE` excludes derived output by name, with two controls.
+- ✅ 🟢 **p332's prescribed RANDOM sample of the `silent` class — DRAWN AND PROBED.** `random.Random(333).sample(silent, 24)` over all 711 rows, all 24 probed on both channels. **24/24 resolve. 3 genuine misses (12.5%), 18 correctly refused, 2 reference-only, 1 unread.** The "shelves were mostly right" conclusion **survives an unbiased draw**, which it had not previously been tested against.
+- ✅ 🟢 **Three rows promoted:** `google/licenseclassifier`, `yetanalytics/pedestal-oidc`, `yetanalytics/re-oidc` — all Apache-2.0, all read first-hand. `yetanalytics/lrsql` verified Apache-2.0. New pattern **P28**.
+- ✅ 🔴 **p332's APAC prescription — EXECUTED AND REFUTED.** p332 said the APAC leg was a QUERY defect and prescribed naming the instruments. **The instruments were named in the query string and the channel still returned enterprise AI-regulation press.** 🟢 One genuine confirmation (**Korea's AI Basic Act in force 2026-01-22, education explicitly inside its high-impact class**); 🔴 nothing on China's AI Plus education plan, nothing from MEXT. **The corrected diagnosis is that the English-language secondary channel does not carry APAC education policy at all.**
+
+**Opened this pass — measured, not assumed.**
+
+- 🔴 **`make hooks` HAS BEEN RED SINCE p332 SHIPPED, and p332 did not say so.** Measured this pass on a clean checkout of p332's own commit, then again with p333 applied — **identical both times: 20/22 gates green, `recount` red with 7 `NO-ANCHOR` claims, `gate-ladder-case` red on C14 (`STANDING:CASE-UNVARIED` 8 > ceiling 7, `STANDING:SINGLE-SPELLING` 20 > ceiling 17).** 🟢 **p333 neither caused nor worsened either**, and `make gate-offline` is green. 🔴 **But this is the THIRD CONSECUTIVE PASS to ship with a red standing gate while writing about gating discipline** — p331 left `gate-offline` red and p332 caught it; p332 left `hooks` red and said nothing. **The lesson p332 drew ("run the gate before you change a byte") was right and was not itself institutionalised: nothing makes a pass report the gate state it INHERITED.**
+- 🔴 **The 7 `NO-ANCHOR` claims are a real backlog, not noise: each names a sentence a registered claim checks that is GONE from the shelf.** Nobody has read them. **Either restore the sentences or re-point the anchors.**
+
+- 🔴 **`ACTION ZA` is PARTIAL, not closed, and this pass is the one that must say so.** p332 asked for a disposition ledger built *as a gated sibling of the delivery audit*. **p333 delivered the schema and 24 rows of data; it did NOT deliver the gate.** 🟡 **24 of ~750 rows.** The next pass should gate it — a slug carrying a `REFUSED-*` disposition must not be re-probed, and that rule is only worth anything if something enforces it.
+- 🔴 **The substring defect was measured on PERMISSIVE tokens; the COPYLEFT side was fixed in the same change and never measured.** The boundary rule is applied to both families, but only the permissive census exists. **A row wrongly graded copyleft is a row this KB refused for no reason** — the quieter, cheaper error, and nobody has counted it.
+- 🔴 **`compose/code/p220-file-level-grant/file_grant.py:100` carries the same bare tuple** (`'mit','apache','bsd','isc','cc0','unlicense','zlib'`). 🟡 **Checked this pass and NOT fixed, deliberately: its input is an SPDX identifier, not a free-text row, so `discovery` cannot reach it.** **That reasoning is an argument, not a measurement — nobody has confirmed every caller passes an SPDX id.**
+- 🔴 **`compose/code/licence-grant-gate/grant_gate.py:112` had the guard all along** (`AMBIGUOUS_WORDS = ("apache","nginx","mit","bsd")`). **Third time in five passes that a capability was present, documented, and not exercised** (p329 the clone channel, p331 the `evidence/` grep, p333 this). 🟡 **The pattern is now frequent enough to be a process defect rather than three coincidences, and no instrument detects it.** **An index of what the instruments can already do, checked before a pass writes "no channel" or rolls its own, is the obvious artefact and does not exist.**
+- 🟡 **`mercedesbenzforlyx/complete-anatomy` — 330 commits, 2 authors, head 2026-10-20 (today), MIT (1,075 B), and the owner name does not match the subject.** Nothing below the manifest was read. **`UNREAD-WATCH` in the ledger; read it before it is ever quoted.**
+- 🔴 **Six of 24 sampled rows are ACTIVE AND UNGRANTED**, the most active being `emmanuel-johnson/launch-point-backend` (201 commits in 2026, one author, no grant on seven paths). 🟢 **Cheap, unexercised action across all six: open an issue asking for a licence.** This KB has prescribed that move before (`pyedmine`, `h5p-core`) and has never once done it.
+- 🔴 **The EMEA sovereignty leg returned NOTHING** when queried explicitly for data residency and non-EU vendor procurement in education. **Declared as an informed gap** — this KB cannot place European data-residency requirements for education AI.
+- 🟡 **The generic global search legs are saturated — third consecutive measurement (p309, p323, p333)** — and the budget should move to regional legs and internal defect classes. **Nothing enforces that; the next pass will re-run the same four queries unless the instruction is written where a pass reads it.**
+
+**Standing, and still unrun — carried, with the count rising.**
+
+- 🔴 **`ZhijieXiong/pyedmine`'s licence contradiction. NINE passes; no issue opened.**
+- 🔴 **`h5p/h5p-core` has no grant on any of three channels. Issue prescribed at p332; not opened.**
+- 🔴 **The MIT-in-README-only tier is still unquantified outside H5P** (p332).
+- 🔴 **`aegis-integrity`'s ESL false-positive behaviour**, measured by nobody including its author.
+- 🔴 **`noplag-engine` below the README**; **`jplag/JPlag`'s per-language maturity table**; **`WEIWEI0614/math-bank`'s content provenance** — all uncaptured.
+- 🔴 **The `ACTION XR` backlog is 71 ungated silent-zero suites.** p333 added **no** new suite (the 32 new controls went into an existing, gated one), so the count is unchanged for the first time in four passes.
+
+---
+
 ## Pass 332 — gaps opened, closed and measured
 
 **Evidence:** [`p332-delivery-audit`](../evidence/p332-delivery-audit.2026-10-20-p332.tsv) · [`p332-defect-probe`](../evidence/p332-defect-probe.2026-10-20-p332.tsv) · [`p332-prefix-pair-probe`](../evidence/p332-prefix-pair-probe.2026-10-20-p332.tsv) · [`p332-h5p-grant-channels`](../evidence/p332-h5p-grant-channels.2026-10-20-p332.tsv).

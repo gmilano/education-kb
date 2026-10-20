@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 333 · 2026-10-20 (sixth pass of this date) — three rows promoted out of a RANDOM sample of the silent class, and one of them is the instrument this KB has been hand-rolling for a hundred passes
+
+🔵 **p332 probed the twelve most-sighted rows of its defect class and said plainly what was wrong with that: *"ranking by sightings selects for rows that were already interesting"*.** 🟢 **This pass drew the unbiased sample it prescribed** — `random.Random(333).sample(silent, 24)` over all **711** rows of the `silent` class — and probed all 24 first-hand. [`evidence/p333-silent-random-probe`](../evidence/p333-silent-random-probe.2026-10-20-p333.tsv).
+
+🟢 **First result, and it is a good one: 24 of 24 resolve on `git ls-remote`.** The silent class is not padded with phantom slugs. 🔴 **Second: three rows are genuine misses — 3/24, 12.5%.** 🟡 **Scaled to the 711-row class that is roughly 89 rows, but the honest interval on a sample of 24 is wide (about 3–32%, so ~20–230 rows) and the estimate should be read as "tens, not hundreds, and not zero".**
+
+### 🟢 Promoted — every figure first-hand p333
+
+| Repo | Grant, read first-hand | Activity, first-hand | Why it belongs here |
+|---|---|---|---|
+| **[google/licenseclassifier](https://github.com/google/licenseclassifier)** | 🟢 **Apache-2.0** — `LICENSE`, 11,358 B | **249 c · 30 a · 2017-04-09 → 2026-02-18** | 🟢 **A licence-text classifier as a library: it compares text against an archive of known licence texts instead of grepping for a family name.** This is precisely the instrument this KB keeps rebuilding by hand — and precisely the defect `agents/top.md` records this pass, where `"mit" in row` graded a repository by its maintainer's first name. **Measured into `evidence/` 3 times and never delivered.** |
+| **[yetanalytics/pedestal-oidc](https://github.com/yetanalytics/pedestal-oidc)** | 🟢 **Apache-2.0** — `LICENSE`, 11,357 B | **123 c · 5 a · 2022-01-11 → 2026-10-16** | 🟢 **OIDC relying-party middleware.** 🔵 **LTI 1.3 launch IS an OpenID Connect flow** — p331 promoted `lti-tool` for exactly that surface, and this is the auth substrate under it. |
+| **[yetanalytics/re-oidc](https://github.com/yetanalytics/re-oidc)** | 🟢 **Apache-2.0** — `LICENSE`, 11,357 B | **70 c · 4 a · 2022-01-31 → 2026-10-16** | 🟢 **OIDC for the front end (re-frame).** The browser half of the same flow. |
+
+🟢 **PLACED, and the placement is the same argument p331 made for `lti-tool`: look at the house, not the row.** **`yetanalytics` is the Yet Analytics xAPI house** — `yetanalytics/lrsql`, its SQL Learning Record Store, was verified this pass as 🟢 **Apache-2.0, 11,357 B, resolving on `git ls-remote`**. 🔵 **So the KB now holds, under one permissively-licensed roof, the LRS and both halves of the OIDC flow that an LTI 1.3 launch needs** — North America, and an org that ships rather than a lone author.
+
+### 🟡 Named, not vendored — two rows that are reference material and are licensed as such
+
+| Repo | Grant, first-hand | Activity | Disposition |
+|---|---|---|---|
+| [`openedx/openedx-proposals`](https://github.com/openedx/openedx-proposals) | 🟡 **CC BY-SA 4.0**, 15,998 B | **1,154 c · 123 a · head 2026-10-16** | The Open edX **OEP** process — how that community actually decides things. 🔴 **Share-alike on the prose: cite it, never vendor it.** |
+| [`weecology/forecasting-course`](https://github.com/weecology/forecasting-course) | 🟡 **mixed** — CC-BY materials + MIT code, 25,315 B | **488 c · 8 a · head 2026-10-18** | A live university course, maintained. 🟢 **A real reference corpus for evaluating generated course material** against something a department actually teaches. |
+
+### 🟢 ACTION ZA discharged in its first instalment — the disposition ledger exists
+
+🔵 **p332's closing finding was that the shelves were mostly RIGHT to leave these rows off, and that the defect was that the refusal was never written down** — *"eight rows sat in `evidence/` with no disposition, so every pass re-discovers and re-probes them."*
+
+🟢 **[`evidence/p333-disposition-ledger`](../evidence/p333-disposition-ledger.2026-10-20-p333.tsv) is that ledger**, one line per slug with the pass, the first-hand figures and the reason:
+
+| disposition | rows | what it means for a later pass |
+|---|---|---|
+| 🟢 `PROMOTED` | 3 | on a shelf now |
+| 🟡 `NAMED-NOT-CODE` | 2 | cite it, do not vendor it |
+| 🟡 `UNREAD-WATCH` | 1 | `mercedesbenzforlyx/complete-anatomy` — **330 c · 2 a · head today**, and the owner name does not match the subject. **Read it before quoting it** |
+| 🔴 `REFUSED-UNGRANTED` | 6 | no grant on a 7-path ladder — default copyright reserves all rights |
+| 🔴 `REFUSED-BELOW-BAR` | 6 | one author, days of history |
+| 🔴 `REFUSED-DORMANT` | 4 | 4–8 years silent |
+| 🔴 `REFUSED-COPYLEFT` | 1 | `pdfmathtranslate` — strong project, wrong grant to embed |
+| 🔴 `REFUSED-NOT-A-COMPONENT` | 1 | a curated list |
+
+🔴 **24 of ~750 rows. The ledger is started, not finished, and it is NOT yet gated** — p332 asked for a gated sibling of the delivery audit and this pass delivered the data and the schema, not the gate. **Carried as `ACTION ZA` in [`intel/open-gaps.md`](../intel/open-gaps.md), stated as partial rather than closed.**
+
+### 🔴 The most active ungranted row in the sample, recorded because it is a recurring shape
+
+**[`emmanuel-johnson/launch-point-backend`](https://github.com/emmanuel-johnson/launch-point-backend) — 201 commits, all in 2026, one author, head 2026-10-19, and NO grant on any of seven candidate paths.** 🔵 **Six of 24 sampled rows are in this state: genuinely active, genuinely unusable.** **Default copyright reserves all rights, so activity is not availability** — and for a studio the cheap move is an issue asking the author to add a licence, not a fork.
+
+---
+
 ## Pass 332 · 2026-10-20 (fifth pass of this date) — one promotion, and it was invisible for fifteen sightings because this file's grant ladder leads with the channel its subject does not use
 
 🟢 **`h5p/h5p-interactive-video` is promoted to this file.** It is the one genuine miss in the delivery audit's defect class (see `agents/top.md` p332), and the reason it sat unplaced since **p195, 2026-10-14, across 15 sightings**, is worth more than the row itself.

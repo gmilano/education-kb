@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 333 — a random draw beats a ranked one: 24 silent rows probed, 3 promoted, and the sample says the class holds tens of misses rather than hundreds or none
+
+🔵 **p332 ranked its probe by sightings and said what was wrong with that in its own write-up:** *"ranking by sightings selects for rows that were already interesting... Next pass should probe a random sample of the `silent` class, not the top of it."* 🟢 **Done, with a seed so it reproduces: `random.Random(333).sample(silent, 24)` over all 711 rows.** Full figures: [`evidence/p333-silent-random-probe`](../evidence/p333-silent-random-probe.2026-10-20-p333.tsv).
+
+🟢 **24 of 24 resolve on `git ls-remote`.** The silent class is not padded with phantom slugs — worth knowing, because the cheap assumption was that a long-ignored backlog is mostly dead links.
+
+### 🟢 Promoted — three rows, every figure first-hand
+
+| Repo | Grant (bytes, read first-hand) | Activity, first-hand | Signal |
+|---|---|---|---|
+| [`google/licenseclassifier`](https://github.com/google/licenseclassifier) | 🟢 **Apache-2.0**, 11,358 B | **249 c · 30 a · 2017-04-09 → 2026-02-18** | 🔴 **Found in this KB's own backlog on the same day this KB measured a 5.7% error rate in its hand-rolled substring licence check.** Compares against licence TEXTS, not family names. Sighted 3×, delivered 0×, until now |
+| [`yetanalytics/pedestal-oidc`](https://github.com/yetanalytics/pedestal-oidc) | 🟢 **Apache-2.0**, 11,357 B | **123 c · 5 a · head 2026-10-16** | 🟢 OIDC relying party — the auth substrate under an LTI 1.3 launch |
+| [`yetanalytics/re-oidc`](https://github.com/yetanalytics/re-oidc) | 🟢 **Apache-2.0**, 11,357 B | **70 c · 4 a · head 2026-10-16** | 🟢 The browser half of the same flow |
+
+🟢 **The adjacency is the point.** **`yetanalytics/lrsql` (xAPI Learning Record Store) was verified this pass as Apache-2.0** — so one permissively-licensed house now supplies the record store and both halves of the OIDC flow that `lti-tool` (MIT, promoted p331) launches through. **New pattern `P28` in [`compose/patterns.md`](../compose/patterns.md) wires the whole seam.**
+
+### 🔴 Corrected, and these are the rows that would have cost money
+
+**Seven repositories this corpus graded PERMISSIVE are copyleft, each re-read first-hand this pass:**
+
+| repo | corpus said | `raw.githubusercontent.com` says | bytes |
+|---|---|---|---|
+| [`tooljet/tooljet`](https://github.com/tooljet/tooljet) | 🔴 permissive | 🟢 **AGPL-3.0** | 34,503 |
+| [`pdfmathtranslate/pdfmathtranslate`](https://github.com/pdfmathtranslate/pdfmathtranslate) | 🔴 permissive | 🟢 **AGPL-3.0** | 34,523 |
+| [`sage-is/ai-ui`](https://github.com/sage-is/ai-ui) | 🔴 permissive | 🟢 **AGPL-3.0** | 33,895 |
+| [`schemaspy/schemaspy`](https://github.com/schemaspy/schemaspy) | 🔴 permissive | 🟢 **GPL-3.0** (`COPYING`) | 35,148 |
+| [`sansan0/trendradar`](https://github.com/sansan0/trendradar) | 🔴 permissive | 🟢 **GPL-3.0** | 35,149 |
+| [`dvjvp/lut-to-ue4-clut`](https://github.com/dvjvp/lut-to-ue4-clut) | 🔴 permissive | 🟢 **GPL-3.0** | 35,141 |
+| [`thecyberbrick/fits-rating-tool`](https://github.com/thecyberbrick/fits-rating-tool) | 🔴 permissive | 🟢 **GPL-3.0** (`COPYING`) | 35,148 |
+
+🟢 **7 of 7 confirmed — the re-grade is right in every case, and none of the seven is on a live shelf.** **The cause — licence names matched as bare substrings inside words like `discovery` and `commits` — is in [`agents/top.md`](../agents/top.md), the census in [`evidence/p333-substring-grant-census`](../evidence/p333-substring-grant-census.2026-10-20-p333.tsv).**
+
+### 🔴 The shape to carry forward: active, and still unusable
+
+**[`emmanuel-johnson/launch-point-backend`](https://github.com/emmanuel-johnson/launch-point-backend) — 201 commits, all in 2026, head 2026-10-19, one author, and NO grant on a seven-path ladder.** 🔵 **Six of 24 sampled rows are in exactly this state.** **Activity is not availability**: default copyright reserves all rights, and the cheap move on a row like this is an issue asking for a licence, not a fork.
+
+---
+
 ## 2026-10-20 — Pass 332 — `ACTION XN` named its own falsifier at p250 and nobody fired the probe; p332 did, and the falsifier fires
 
 🔵 **This pass closes a question that has been answerable with 27 HTTP requests since p250 and was instead carried as prose for eighty passes.**

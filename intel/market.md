@@ -808,6 +808,16 @@ anything about my institution?" that is not a bespoke integration — and becaus
 
 ### North America
 
+### 🟢 The OIDC half of every district LTI integration now has a permissive, maintained answer — and it is the same house as the record store (added p333)
+
+🔵 **p330 recorded the dead-Python-LTI risk, p331 answered the launch surface with `lti-tool` (MIT). The auth substrate under both was still unnamed.** 🟢 **It is named now, verified first-hand p333, and it is North American:** [`yetanalytics/pedestal-oidc`](https://github.com/yetanalytics/pedestal-oidc) (**Apache-2.0**, 11,357 B · 123 c · 5 a · head **2026-10-16**) and [`yetanalytics/re-oidc`](https://github.com/yetanalytics/re-oidc) (**Apache-2.0**, 11,357 B · 70 c · 4 a · head **2026-10-16**) — server side and browser side of the same flow. **LTI 1.3 launch is an OpenID Connect flow, so this is not an adjacent nicety; it is the layer the launch sits on.**
+
+🟢 **Commercially the point is the house, not the rows.** Yet Analytics is the **xAPI / Learning Record Store** vendor, and `yetanalytics/lrsql` was verified this pass as **Apache-2.0**. 🔵 **A district engagement can therefore be quoted end-to-end on permissive, maintained, US-maintained components: LTI 1.3 launch (`lti-tool`, MIT) → OIDC both halves (Apache-2.0) → xAPI record store (`lrsql`, Apache-2.0)** — with the LMS itself (Moodle GPL-3.0, Canvas commercial) left where it is, unforked.
+
+🔴 **Still unoccupied, and now a two-pass-old finding: Ed-Fi.** The North American data standard is live and its open tooling is stale (`esegrave/edfi`, Apache-2.0, head 2022-03-04). **Nothing changed this pass.**
+
+🟡 **Three NA items surfaced on the search channel this pass that this KB does NOT already hold, recorded as UNVERIFIED leads rather than findings:** **Illinois SB720** (reported to align district AI procurement with state guidance), the **EDSAFE AI Alliance** (a US framework body this corpus has never mentioned), and a reported **424-district study finding that AI-policy quality tracks district wealth** — a procurement-inequality argument with obvious relevance to a studio selling to districts. 🔴 **All three are search-channel-only: `ilga.gov`, `edsafeai.org` and `future-ed.org` each returned `000` at CONNECT from this environment this pass, and `WebFetch` returns `ENOTFOUND`.** **Confirm at source before any of the three enters a proposal.**
+
 ### 🟢 The dead-LTI risk line p330 put in your bid now has a named, live, US-backed answer (added p331)
 
 🔴 **p330 wrote the risk honestly: every district integration in this region sits on `pylti1.3`, and it has not been touched since 2022-11-21.** This pass **confirmed that on a second channel** — `PyLTI1p3` 2.0.0 was uploaded to PyPI on **2022-11-20**, one day before the last commit. **The library is dead on both the commit record and the release record. The risk line stands.**
@@ -1029,6 +1039,14 @@ upper-secondary extension is scope, and should be priced as scope.
    falling (17% student confidence, intent down 9 points), credibility is the product.
 
 ### EMEA
+
+### 🟡 The EU deferral is confirmed on a fourth sweep — and this pass adds nothing to it, which is the point (added p333)
+
+🔵 **The search leg for EMEA returned, again, Regulation (EU) 2026/1744 moving Annex III high-risk education systems from 2026-08-02 to 2027-12-02, the AI-literacy duty live since 2025-02-02, Article 50 transparency from 2026-08-02, and emotion recognition in education prohibited.** 🟢 **This KB already holds every one of those** — `2026/1744` appears 10 times in this file, `2027-12-02` 14 times, `Annex III` 15 times, and the correction that fixed the date is p328's. **Fourth independent sweep, no new fact.**
+
+🟢 **Recorded as a measurement rather than a shrug: the EMEA regulatory leg is SATURATED for this KB, and a saturated leg is a reason to change the query, not to re-run it.** 🔵 **The next EMEA question is not "what does the AI Act say" — it is answered — but "which national transposition or framework is a nameable buying VEHICLE", which is the shape p329 proved worked (GÉANT OCRE 2024, 39 countries, direct award available).** **That is the query the next pass should run here.**
+
+🔴 **The sovereignty leg returned nothing at all.** Queried explicitly for EU-hosted infrastructure, data residency and the procurement of non-EU AI vendors for schools, the channel returned only AI Act commentary. 🟡 **This is an INFORMED GAP, written down so it is not mistaken for coverage:** this KB cannot currently place European data-residency requirements for education AI, and the sovereignty argument that EMEA buyers reportedly care about is the one it has least evidence for.
 
 ### 🟡 The EU deferral is confirmed on a third sweep, and this file's publication date for it is off by sixteen days (added p331)
 
@@ -1267,6 +1285,19 @@ the *metadata* workload, not just the tutor demo.
 
 ### APAC
 
+### 🔴 p332 prescribed naming the instruments; it was done, and the channel STILL returns enterprise press — so the defect is the channel, not the query (added p333)
+
+🔵 **p332 diagnosed this leg precisely: *"The APAC channel is returning enterprise press instead of education policy, and that is a QUERY defect. Query the instruments by name, not the region by topic."*** 🟢 **The prescription was followed exactly.** The leg named **Korea's AI Basic Act**, **China's AI Plus education plan** and **Japan's MEXT guidelines** in the query string itself.
+
+🔴 **It did not work, and the result is worth recording because it REFUTES p332's diagnosis.** What came back:
+- 🟢 **Korea — the one genuine confirmation.** The **AI Basic Act took effect 2026-01-22**, with a grace period of at least a year before fines, and **education is explicitly inside its "high-impact AI" class** alongside healthcare, finance and employment. 🔵 **That is the commercially useful sentence: a tutoring or assessment system sold into Korea is high-impact by statute, not by interpretation.**
+- 🔴 **China — nothing on the AI Plus education plan.** The channel returned the general regime (algorithm, deep-synthesis and generative-AI rules; the amended Cybersecurity Law in force 2026-01-01) and **no school-specific provision whatsoever**.
+- 🔴 **Japan — no binding education instrument.** A second **AI Basic Plan** approved by Cabinet on **July 14** revising the December 2025 original, and the AI Promotion Act, which is promotional rather than restrictive. **No MEXT education guidance surfaced.**
+
+🟢 **The corrected diagnosis: naming the instrument fixes the SEARCH, but the English-language secondary channel does not carry APAC education policy at all.** 🔴 **It carries APAC *enterprise* AI regulation, written for multinationals, and education appears in it only as one item in a list of high-impact sectors.** **Two passes have now spent their APAC leg on this; the next one should either query the ministries in their own languages (MOE Korea, 教育部, MEXT) or declare the leg closed to this channel and say so in the client-facing text.**
+
+🟡 **Written down as an informed gap, per this KB's own rule that silence looks exactly like coverage: APAC education-AI policy below the national-framework level is NOT covered by this KB, for China and Japan specifically, and two passes of effort have failed to close it.**
+
 ### 🟢 The Vietnam reconciliation open since p269 can now be CLOSED, and the two instruments were never in conflict (added p331)
 
 🔴 **This file's APAC row has carried an explicit standing warning for three passes:** `intel/policy-matrix.tsv` line 149 — *"TWO instruments, two dates, same jurisdiction and function, never reconciled on any shelf. Do NOT brief either date alone and do NOT collapse them."* **Decree 142/2026/NĐ-CP (GATED, eff. 2026-04-30) against Decision No. 33/2026/QĐ-TTg (compliance 2027-03-01, +6 months for education systems already operating before 2026-08-15).**
@@ -1480,6 +1511,16 @@ price it as greenfield, because there is nothing to fork.
    automation, with the fewest regulatory blockers of any major market in this KB.
 
 ### LATAM
+
+### 🟡 One new LATAM vehicle on the search channel, and the regional picture is otherwise unchanged (added p333)
+
+🟢 **New to this KB: the UNESCO Observatory on Artificial Intelligence in Education for Latin America and the Caribbean.** 🔵 **Why it matters commercially and not just institutionally: an observatory is a convening and standard-setting surface, which is how a studio gets into a regional conversation before a tender exists** — the same logic that made GÉANT OCRE (EMEA) and cooperative purchasing (North America) worth naming at p329. 🔴 **Search-channel-only: `unesco.org` returned `000` at CONNECT this pass and `WebFetch` returned `ENOTFOUND`. Name, no notice number, no date verified at source. Confirmation costs one lookup from a connected machine.**
+
+🟢 **Confirmed and already held — re-reported by the channel, no change:** Brazil's **PL 2.338/2023** as the region's most developed framework (Senate-approved December 2024), Chile's bill (**Boletín 16821-19**) in its first constitutional stage, and Mexico with **no federal AI law passed**. 🔵 **p329's `ChileCompra Directive No. 44/2026` remains the only LATAM instrument in this KB that is a buying RULEBOOK rather than a forecast, and it is still the strongest single LATAM asset on this shelf.**
+
+🔴 **The adoption gap this file should keep quoting, because it is the actual sales argument:** reportedly **more than 50% of teachers in Chile and Brazil already use these tools while fewer than 10% of institutions in the region have formal guidelines** (UNESCO), and **13 of 19 LAC countries studied do not teach early AI adoption in schools** (CENIA). 🟢 **Classroom use is running ahead of institutional readiness, which is precisely a governance-and-enablement engagement rather than a model engagement** — and it is the one region where this KB can state the mismatch with numbers.
+
+🟡 **Honest limit, unchanged from the LATAM leg's standing problem: none of these figures is verified at source from this environment.** The non-GitHub channel is closed here and has been since p294.
 
 ### 🟢 The most-deployed open LTI library in the world is maintained from Brazil — measured, not inferred (added p331)
 

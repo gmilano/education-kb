@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 333 · 2026-10-20 (sixth pass of this date) — a platform this corpus had marked permissive is AGPL-3.0, and that is the kind of error this shelf exists to prevent
+
+🔴 **[`tooljet/tooljet`](https://github.com/tooljet/tooljet) — read first-hand on `raw.githubusercontent.com` this pass: `LICENSE`, 34,503 B, GNU AFFERO GENERAL PUBLIC LICENSE Version 3.** It sat in this KB's `evidence/` graded **permissive**, because the grant classifier tested licence names as bare substrings and the rows carrying it contain words like `commits` and `discovery`. The full account is in [`agents/top.md`](../agents/top.md); the consequence belongs here.
+
+🔵 **ToolJet is a low-code internal-tool builder — exactly the shape of thing a studio reaches for when a client needs an admin console over a student information system in six weeks.** 🔴 **Under AGPL-3.0 that choice reaches the client's hosted deployment, because AGPL's network clause triggers on serving users over a network, not on distributing a binary.** **It is a legitimate tool and a legitimate choice — but it is a choice with a disclosure obligation attached, and the corpus was saying the opposite.**
+
+🟢 **Six more rows were corrected the same way and confirmed first-hand** (`pdfmathtranslate`, `sage-is/ai-ui` — AGPL-3.0; `schemaspy`, `sansan0/trendradar`, `dvjvp/lut-to-ue4-clut`, `thecyberbrick/fits-rating-tool` — GPL-3.0). **7 of 7 verified, none of them on a live shelf.**
+
+### 🟢 What this shelf should take from it — a rule, not an anecdote
+
+🔵 **The vertical platforms this file recommends are the largest single licence risk in the KB**, because they are the rows most likely to be deployed for a client rather than read for ideas. The ERP/LMS/SIS tier is dominated by reciprocal grants and always has been — **Moodle GPL-3.0, Chamilo GPL-2.0, Gibbon GPL-3.0, ILIAS GPL-3.0, OpenEduCat LGPL-3.0, openSIS GPL-2.0** — so a *permissive* reading of anything in this tier is the surprising claim and should be the one that gets re-read.
+
+🟢 **The rule, now enforced in code:** a platform's grant is quoted on this shelf only from a **payload read first-hand** at `raw.githubusercontent.com/<slug>/HEAD/<path>`, with the **byte count** beside it. 🔴 **A family name appearing somewhere in a row is not a grant** — it is now, demonstrably, often just the word *commits*.
+
+### 🟢 The permissively-licensed integration layer, which is where a studio actually adds value
+
+🔵 **The honest shape of this sector: the PLATFORM tier is copyleft and the INTEGRATION tier is permissive.** You do not need to fork Moodle to sell work around Moodle. The permissive seam, all verified first-hand and now complete enough to name as a layer:
+
+| Layer | Component | Grant |
+|---|---|---|
+| LMS launch (LTI 1.3 Advantage) | [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool) | 🟢 MIT (1,077 B, p331) |
+| LMS launch, mature alternative | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 (11,361 B, p331) |
+| 🆕 OIDC, server side | [`yetanalytics/pedestal-oidc`](https://github.com/yetanalytics/pedestal-oidc) | 🟢 Apache-2.0 (11,357 B, p333) |
+| 🆕 OIDC, browser side | [`yetanalytics/re-oidc`](https://github.com/yetanalytics/re-oidc) | 🟢 Apache-2.0 (11,357 B, p333) |
+| Learning record store (xAPI) | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 (11,357 B, verified p333) |
+| 🆕 Licence hygiene in the pipeline | [`google/licenseclassifier`](https://github.com/google/licenseclassifier) | 🟢 Apache-2.0 (11,358 B, p333) |
+
+🟢 **Every row above is permissive, first-hand, and sits BESIDE a copyleft platform rather than inside it.** **That is the commercially correct place to stand in this sector, and this pass is the first time the KB can draw the whole seam — launch, auth on both sides, record store — from verified rows.**
+
+---
+
 ## Pass 332 — the platform tier still has not moved, and this file has been understating the ONE permissive surface inside it by a whole tier
 
 🔴 **Tenth consecutive pass with no new platform.** `Moodle`, `Open edX`, `Canvas`, `Kolibri`, `OpenEduCat`, `Sakai`, `BigBlueButton`, `H5P`, `Openki` and `RosarioSIS` are unchanged from p331, licences as this file already records them. 🟢 **The nil return is re-confirmed on a fresh leg this pass** (`open source platform education LMS SIS MIT Apache 2026`): one vendor glossary, **Moodle GPLv3, Open edX AGPLv3**, and no MIT- or Apache-licensed education LMS, SIS or ERP. **There is still no permissive education LMS or SIS, and there has not been one in ten passes of looking.**
