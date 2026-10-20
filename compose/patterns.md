@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 335 · 2026-10-20 — P30: the Brightspace front end a deliverable can own outright, and the two-channel licence gate that keeps it ownable
+
+🔵 **T26 (this pass) says the proprietary vendor is the permissive one. P30 is what that buys.** On **D2L Brightspace** the whole UI layer — components, i18n, test reporting — is **Apache-2.0 from the vendor**, so a studio can build a client-facing front end with **no copyleft in the build chain and a patent grant on the way in**. 🔴 **On Open edX the same build is AGPL-3.0 and this pattern does not apply; use P28's LTI seam instead.**
+
+### 🟢 P30 — A Brightspace-native assistant front end, all-permissive, vendor-benched
+
+| Role | Component | Grant, read first-hand | Activity, bare clone | Placed |
+|---|---|---|---|---|
+| UI component system | [`BrightspaceUI/core`](https://github.com/BrightspaceUI/core) | 🟢 **Apache-2.0**, 10,421 B | 🟢 **9,598 c · 180 a · 1,020 c in 2026 · head 2026-10-19** | 🟢 NA, `d2l.com(2,748)` |
+| i18n / formatting | [`BrightspaceUI/intl`](https://github.com/BrightspaceUI/intl) | 🟢 **Apache-2.0**, 10,421 B | 115 npm versions · head 2026-09-23 | 🟢 NA |
+| Experimental components | [`BrightspaceUI/labs`](https://github.com/BrightspaceUI/labs) | 🟢 **Apache-2.0**, 10,421 B | published through 2026-10-19 | 🟢 NA |
+| Test evidence for the UI | [`Brightspace/test-reporting-node`](https://github.com/Brightspace/test-reporting-node) | 🟢 **Apache-2.0**, 10,421 B | 🟢 **1,129 c · 13 a · 358 c in 2026** | 🟢 NA |
+| MCP seam into the LMS | [`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server) | 🟢 **MIT**, 1,068 B | 414 c · 17 a · head 2026-10-20 (p334) | 🟢 NA |
+| Standards seam, if the client is multi-LMS | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0**, 11,361 B | 575 c · 17 a · 51 c in 2026 | 🟢 **LATAM — Brazil** |
+| Grade write-back with the approval hop | P26 | — | — | — |
+| Licence gate in CI | [`google/licenseclassifier`](https://github.com/google/licenseclassifier) | 🟢 **Apache-2.0**, 11,358 B | 249 c · 30 a (p333) | — |
+
+### 🟢 The wiring, concretely
+
+1. **Build the front end on `@brightspace-ui/core`, not on a generic design system.** The client's users already know these components, and **accessibility is the vendor's problem, already solved** — that is the single largest hidden cost in an education UI engagement.
+2. **Pin `@brightspace-ui/core` to an exact version.** 🔴 **2,121 published versions and 1,020 commits in 2026**: this moves fast enough that a floating range will break a demo. Renovate it on a schedule, not on `^`.
+3. **The assistant talks to the LMS only through `brightspace-mcp-server`** — the same protocol boundary as P29, for the same reason: it is MIT, so the adapter is a deliverable the client owns.
+4. **If the client runs more than one LMS, put `ltijs` in front instead** and keep the Brightspace components as the UI layer only. 🔵 The seam and the skin are separable, and **only the seam is portable**.
+5. **Grade write-back goes through P26's approval hop** — unchanged, and it is what keeps the build outside the EU's Annex III high-risk class and inside Vietnam's entry-2 carve-out.
+6. **Run the two-channel licence gate below in CI from day one.**
+
+### 🔴 The two-channel licence gate — new this pass, and it is what T27 costs if you skip it
+
+**A single-channel check passes this stack and still ships copyleft.** The gate has to read **both**:
+
+1. 🟢 **Read the repository licence PAYLOAD, not the registry field.** `@groton/canvas-api` declares **no licence on npm** and its tree is **GPL-3.0, 35,149 B**. A registry-only gate sees an empty field and most implementations treat that as "unknown, continue".
+2. 🟢 **Treat a registry grant with no payload as WEAK, not as absent and not as equal.** **8 of 27 packages measured this pass are declared-only** (7 MIT, 1 ISC). They are usually fine; they are not the same claim as a payload, and the row must say which channel it came from.
+3. 🔴 **Never infer the holder from a long-form payload.** Apache-2.0 returns `owner or entity authorized by` and GPL/AGPL returns `Free Software Foundation, Inc.` — **boilerplate that reads like an institutional holder.** Read `NOTICE` for Apache, and otherwise fall through to the commit channel.
+4. 🟢 **Fail the build on payload-copyleft, warn on declared-only, and record the channel in the SBOM row.** `licenseclassifier` does step 1 correctly; steps 2–4 are the wrapper this base now specifies.
+
+🟡 **Honest limit on P30: it is a FRONT-END pattern.** It gets a studio an ownable, accessible, vendor-native UI with a clean licence story. **It does not make the LMS replaceable**, and on Open edX none of it transfers — the vendor's own tooling is AGPL-3.0 there, which is T26.
+
+---
+
+
 ## Pass 334 · 2026-10-20 — P29: the MCP seam into a proprietary LMS, with a citing tutor behind it
 
 🔵 **P28 (p333) wired the LTI 1.3 seam. P29 is the other seam, and it exists because of what p334 measured:** on a **proprietary** LMS the MCP connector is MIT, so the studio owns the whole integration outright. **Every row below was read first-hand at p334** — grant on `raw.githubusercontent.com`, activity from a bare `--filter=blob:none` clone.

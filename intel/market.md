@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-20
 ---
 
+**Pass 335 · 2026-10-20 (eighth pass of this date).** 🟢 **The LATAM supply gap this file has declared for five consecutive passes is CLOSED, and it closed on a row this base already recommended:** `Cvmcosta/ltijs`, the canonical LTI 1.3 Node library, on the build tier since p331, is **Brazilian** — root commit `cvmcosta@yahoo.com.br` 2019-05-30, `yahoo.com.br` on **429 of 575** commits, `-0300` on **513 of 575** ([`evidence/p335-ltijs-latam-placement`](../evidence/p335-ltijs-latam-placement.2026-10-20-p335.tsv)). 🔴 **The gap was an artefact of asking only the discovery channel; the placement instrument was never run over the inventory.** 🟡 **Every policy row in this file remains search-channel-attributed and none is read first-hand: `moe.gov.cn`, `mext.go.jp`, `eur-lex.europa.eu` are all `000` — no connect — from this environment, re-tested this pass. The repository rows ARE first-hand; the policy tier is still the least-verified tier here.**
+
+### 🔵 EU AI Act — corroborated a fifth time, zero new fact
+
+The EMEA leg returned the **Annex III** education deferral to **2027-12-02** via **Regulation (EU) 2026/1744** once more. 🟢 **This file has held it since p328 with better precision than the channel serves it** — including the `2028-08-02` embedded-product date, the unmoved **Art. 50** transparency duty, the **Art. 4** literacy duty live since 2025-02-02, and the **Art. 5(1)(f)** emotion-inference prohibition that is not a high-risk duty at all. 🔴 **Two sources in this sweep still print the superseded `2026-08-02` high-risk date.** 🟢 **No change. Recorded as corroboration so the next pass does not re-litigate it.**
+
+## Opportunities by region
+
+### North America
+
+🟢 **Supply is deep and newly measurable.** `@brightspace-ui/core` — **Apache-2.0, 9,598 commits, 180 authors, 1,020 commits in 2026, `d2l.com` on 2,748** — is the deepest bench on these shelves and belongs to a **proprietary** LMS vendor. `chrischall/gogcli-mcp` (MIT, 498 c all in 2026) puts Google Classroom behind MCP. `harvard-edtech/caccl` (MIT, © Harvard University) is an eight-year Canvas+LTI scaffold.
+
+🟢 **The opportunity:** a **D2L or Canvas front-end engagement can be built almost entirely on permissive, vendor-maintained components** — which compresses the build and removes the licence conversation from the contract. 🔴 **The constraint is institutional, not technical:** the search channel reports **only ~10% of institutions hold formal AI guidelines** and **71% of US teachers lack AI training** (vendor roundup, provenance unclear, **not carried as data**). 🔵 **Read commercially: the governance deliverable sells before the model deliverable.**
+
+🟡 **Market figures, directional only, from the search channel:** North America ≈ **$951M (2024) → $2.3B (2029), CAGR 15.9%** (MarketsandMarkets), ~**36%** of global share. **Methodologies differ by a factor of two across firms; not reconciled.**
+
+### EMEA
+
+🟢 **Two placed supply rows added this pass** — `christophblessing/quiz-recap` (MIT, **Germany**, `hpi.de`, npm scope `@openhpi` = Hasso-Plattner-Institut Potsdam) and `studiolxd/xapi` (**EMEA** by offset, but ungranted and single-author). 🔵 Together with p334's `CogitoNTNU/TutorAI` (Norway) and `r-huijts/canvas-mcp` (Netherlands), **the EMEA supply side is now seven placed permissive rows** and is no longer regulation-only.
+
+🟢 **The commercial shape is unchanged and now well-evidenced:** a **~14-month build window** before Annex III bites on 2027-12-02, with **two deliverables sellable this quarter** — an **Art. 50 transparency review** and an **Art. 4 staff-literacy programme**, neither of which moved. 🔵 **Lead with the near dates; a client who hears only "2027" will under-scope the live prohibitions.** Sovereignty is argued on **architecture**, citing Council conclusions **9003/26** (p334), because **no education-specific data-residency rule exists.**
+
+🔴 **The gap that survives, sixth consecutive pass: zero named EMEA vendors, zero national adoption statistics for the UK, Germany or France.** The EMEA competitive map here is still regulation plus supply-side repositories, with no demand-side map.
+
+### APAC
+
+🟢 **New this pass, and it is a first: the APAC SUPPLY side is placed.** Every prior APAC row in this file was a policy instrument. Three producing repositories now carry a commit-channel placement — **Japan** (`likr/canvas-lms-agent`, `likr-lab.com`, `+0900`), **India** (`scormflow/scorm-engine-client`, MIT, `+0530`, 45 commits all in 2026), **Vietnam** (`DamPhuQuy/Agent-as-a-tutor`, MIT, `+0700`). 🟡 **Two of the three are below this base's bench bar and one is ungranted** — recorded as placement evidence, not as recommendations.
+
+🟢 **Policy, carried and corroborated:** Japan's **MEXT** GenAI guideline **Ver. 2.0** with the FY2026 pilot at **149 municipalities / 478 schools** (*under 2% of schools nationwide* — the figure that keeps the pilot in proportion); **Korea's AI Basic Act** in force **2026-01-22** with education inside its high-impact class; **Vietnam's Decision 33/2026/QĐ-TTg** (46 high-risk systems, 6 sectors, effective **2026-08-15**), whose entry 2 reaches automated assessment **only where the AI output is the sole basis for the decision without meaningful human review**.
+
+🟢 **The architectural lever, and it is one design across four jurisdictions:** a **human-in-the-loop grading design keeps the product out of the high-risk class entirely** — Vietnam's entry 2, the EU's Art. 14, and the Oklahoma and Maryland human-oversight rules all reward the same shape. 🔵 **Build it once; sell it in four places.**
+
+🔴 **Gap: China's 《"人工智能+教育"行动计划》 and MEXT's own text remain unread first-hand** — both hosts answer `000` from this environment, as they did at p334.
+
+### LATAM
+
+🟢 **The supply gap is closed, and the answer is a production dependency rather than a demo.** `Cvmcosta/ltijs` — **Apache-2.0, 575 commits, 17 authors, 51 in 2026** — is the LTI 1.3 library a large share of the world's LMS integrations run on, and it is maintained from Brazil with a commercial sponsor behind it (`ltiaas.com`, 90 commits). 🔵 **A LATAM engagement can be pitched on regional authorship of the integration layer itself**, which is a stronger position than regional adoption statistics.
+
+🟡 **The bound, stated plainly: this places a maintainer, not a market.** It says the region produces the seam; it does not say LATAM institutions are buying.
+
+🔴 **The DISCOVERY channel is still empty for LATAM — sixth consecutive measurement.** A targeted sweep (`plataforma educativa código abierto IA`, Brazil/Chile/Argentina, 2026) returned **zero open-source AI education repositories**. 🟢 **Two new citable non-repository facts, search-channel only:** **HolonIQ's 2026 Latin America EdTech 100** (Brazil's **Teachy**, AI lesson preparation, has expanded beyond the region into Asia; Argentina's **Cboard**, accessibility) and **Google.org with the Raspberry Pi Foundation committing $4.6M** to extend *Experience AI* across **Argentina, Brazil and Chile** among others. **Both are commercial or philanthropic, neither is an open-source platform.**
+
+🟢 **Demand-side, carried from p333 and still the strongest LATAM datum this file holds:** **UNESCO IESALC across 200 institutions in 19 countries — 87% use AI in at least one area, 26% have any formal framework**, teaching and learning leading at **73.5%**, research **57.0%**, administration **34.1%**. 🔵 **A 61-point gap between use and governance is the engagement.** The Digital Education Council's **LATAM 2026** survey (**92% of students, 79% of faculty** actively engaging) points the same way from the other side.
+
+### Global
+
+🔴 **The prescribed global search legs returned nothing new for the sixth consecutive pass.** Market sizing remains irreconcilable across firms — 2025 estimates spread **$6.4B–$8.3B**, CAGRs **25.9%–42.8%** — and this file continues to carry the spread rather than pick a number.
+
+---
+
+
 **Pass 334 · 2026-10-20 (seventh pass of this date).** 🟢 **The APAC leg finally returned, and it returned because the query was run per country instead of per region — the instruction `compose/patterns.md` has carried since p330.** 🔴 **p333 declared the opposite ("the English-language secondary channel does not carry APAC education policy at all") and the `gate-absence` hook refuted it on p333's own shelves.** 🟡 **Every policy row below is ATTRIBUTED to the search channel and none was read first-hand: `moe.gov.cn`, `mext.go.jp`, `consilium.europa.eu` and `cset.georgetown.edu` are all `000` — no connect — from this environment ([`evidence/p334-channel-reachability`](../evidence/p334-channel-reachability.2026-10-20-p334.tsv)).**
 
 ## 🟢 The four national instruments the per-country query found — three of them APAC

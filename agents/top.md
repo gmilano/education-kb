@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 335 · 2026-10-20 (eighth pass of this date) — the LATAM supply side was never empty: the library on this shelf's own build tier is Brazilian, and five passes declared the region barren while recommending it
+
+🔴 **`intel/market.md` and the last five trending sweeps have recorded the same sentence — *"the LATAM supply side returned nothing placeable"* (p328, p330, p331, p333, p334).** 🟢 **It is false, and the refutation was already on this shelf.** **`Cvmcosta/ltijs`** has sat on the **Build-on-this tier since p331** as *"LMS integration, mature, narrow bench"*, **unplaced**. Probed first-hand this pass on the bare-clone channel: **root commit `eec0a6b1`, 2019-05-30, `cvmcosta@yahoo.com.br`; 429 of 575 commits from `yahoo.com.br`; offset `-0300` on 513 of 575.** 🟢 **LATAM — Brazil**, on exactly the instrument `ACTION TL` specifies.
+
+🔵 **The defect is not that the region is empty. It is that the region question was only ever asked of the DISCOVERY channel.** Five passes ran `education AI github Brazil Mexico Argentina` against a search engine and recorded a gap; **no pass ran the placement instrument over the rows this shelf already held.** 🔴 **Fifth instance in seven passes of the class p334 named: capability present, instrument already built, nothing executes it over the existing inventory.** 🟢 **`ACTION ZC` registers the sweep: place every unplaced row already on these shelves before declaring any region a gap.**
+
+🟡 **The honest bound: this places the maintainer, not a market.** A Brazilian author maintaining the canonical LTI 1.3 Node library is a **supply-side** datum — it says the region produces the integration layer an engagement is built on, not that LATAM institutions are buying. 🔵 **`ltiaas.com` carries 90 commits**, so the library has a commercial sponsor behind it.
+
+### 🟢 Promoted this pass — every grant read on `raw.githubusercontent.com`, every activity figure from a bare `--filter=blob:none` clone, today
+
+| Agent / tool | Repo | Grant, read first-hand | Activity, first-hand (clone channel) | Placed, and how |
+|---|---|---|---|---|
+| 🆕 **gogcli-mcp (Classroom)** | https://github.com/chrischall/gogcli-mcp | 🟢 **MIT** — `main/LICENSE`, **1,067 B**, © Chris Hall | 🟢 **498 c · 5 a · all 498 in 2026 · 2026-04-12 → 2026-10-19** | 🟢 **North America** — `-0400(373) -0600(12)` |
+| 🆕 **caccl** | https://github.com/harvard-edtech/caccl | 🟢 **MIT** — `main/LICENSE.md`, **1,075 B**, © **Harvard University** | 🟡 **655 c · 3 a · 2018-11-02 → 2026-09-30 · only 27 c in 2026** | 🟢 **North America** — `harvard.edu` in the grant **and** on 3 commits; `-0400(351) -0500(290)` |
+| 🆕 **@scormflow/player** | https://github.com/scormflow/scorm-engine-client | 🟢 **MIT** — `main/LICENSE`, **1,079 B**, © ScormFlow contributors | 🟢 **45 c · 2 a · all 45 in 2026 · head 2026-10-12** | 🟢 **APAC — India**, `+0530(45)` |
+| 🆕 **@openhpi/quiz-recap** | https://github.com/christophblessing/quiz-recap | 🟢 **MIT** — `main/LICENSE`, **1,075 B**, © Christoph Blessing | 🟡 **288 c · 5 a · 19 c in 2026 · head 2026-09-11** | 🟢 **EMEA — Germany**, `hpi.de` **1 commit**, `+0100(95) +0200(92)`; npm scope `@openhpi` = Hasso-Plattner-Institut, Potsdam |
+
+🟡 **`caccl` is a restoration, not a discovery.** It was a promoted 🆕 row in [`archive/2026-10-17-pre-rewrite/agents-top.md`](../archive/2026-10-17-pre-rewrite/agents-top.md) and is **absent from this shelf** — the same class of loss p334 found when `### Agents over the systems` had been deleted by the p315/p316 rewrites. 🔵 **Re-verified from scratch rather than pasted.** 🔴 **One verified instance; this pass does NOT generalise it to a count** — the archives carry census tables as well as shelf rows, and a naive diff reports 1,915 "dropped" slugs, which is an artefact of that mixing, not a measurement.
+
+### 🔴 Refused in the same probe, with the reason recorded so the next pass does not re-probe them
+
+| Repo | Why refused | Measured first-hand |
+|---|---|---|
+| https://github.com/groton-school/canvas-cli | 🔴 **REFUSED-COPYLEFT — and it is the dangerous one.** **GPL-3.0**, 35,149 B, while npm `@groton/canvas-api` declares **no licence at all** | 787 c · 3 a · **324 c in 2026** · head 2026-10-14 · 🟢 **North America**, `groton.org(737)` |
+| https://github.com/openedx/frontend-base | 🔴 **REFUSED-COPYLEFT** — **AGPL-3.0**, 34,523 B | 3,341 c · 161 a · 125 c in 2026 · head 2026-09-22 · 🟢 **NA**, `edx.org(553)` |
+| https://github.com/openedx/frontend-platform | 🔴 **REFUSED-COPYLEFT** — **AGPL-3.0**, 34,520 B | 1,151 c · 92 a · 46 c in 2026 · head 2026-10-18 · 🟢 **NA**, `edx.org(360)` |
+| https://github.com/likr/canvas-lms-agent | 🔴 **REFUSED-UNGRANTED** — no licence file on 12 paths; npm `@likr/canvas-lms-mcp` declares MIT and the repo does not | 68 c · 2 a · all 2026 · head 2026-07-10 · 🟢 **APAC — Japan**, `likr-lab.com(68)`, `+0900(68)` |
+| https://github.com/DamPhuQuy/Agent-as-a-tutor | 🔴 **REFUSED-BELOW-BAR** — MIT, 1,070 B, but **21 commits over seven days** | 21 c · 2 a · 2026-10-12 → 2026-10-19 · 🟢 **APAC — Vietnam**, `+0700(12)` |
+| https://github.com/studiolxd/xapi | 🔴 **REFUSED-UNGRANTED + BELOW-BAR** — npm declares MIT, repo has no payload; 12 commits, 1 author | 12 c · 1 a · head 2026-09-20 · 🟢 **EMEA**, `studiolxd.com(12)`, `+0200` |
+| https://github.com/risnake/canvas-mcp-server | 🔴 **REFUSED-UNGRANTED + BELOW-BAR** — npm declares **ISC**, repo has no payload; **4 commits in one day** | 4 c · 1 a · 2026-03-22 · `-0500` |
+| https://github.com/VienDinhCom/supermemo | 🔴 **REFUSED-DORMANT** — MIT, 1,065 B, but **zero commits in 2026** | 58 c · 4 a · head **2025-03-28** · `+0700` |
+| https://github.com/Annoto/ims-lti | 🔴 **REFUSED-DORMANT** — MIT, 1,094 B, **zero commits in 2026** | 177 c · 16 a · head **2025-06-16** · `omsmith.ca(70)` |
+| https://github.com/molecule-dev/molecule | 🔴 **REFUSED-SINGLE-AUTHOR** — Apache-2.0, 11,358 B, `NOTICE` © Molecule Dev, Inc.; **3,172 commits all in 2026 but 3,168 from one address** | 3,172 c · 3 a · head 2026-10-20 · 🟢 **EMEA**, `vialoh.me(3168)`, `+0300(2977)` |
+| https://github.com/LongsightGroup/lti-tool | 🔴 **REFUSED-ALIAS** — **the same project as the `lti-tool/lti-tool` row already on the build tier**: identical root commit `e02ba195`, **301 shared commits**. Promoting it would have created a duplicate entity | 414 c · 5 a · head **2026-09-02** (the shelf row's head is 2026-10-19 — the shelf already carries the live side) |
+
+🔵 **Three npm packages in this sweep have a LIVE registry listing and an UNREACHABLE repository** — `Mckaroff/GraphLMS`, `virtualarkansas/n8n-nodes-genius-sis`, `brainjamworks/liverpool-dental-theme` all `CLONE-FAIL`. **Registry metadata outlives the source tree**, which is a reason to treat an npm grant as a claim about a package, not about a repository.
+
+### 🔴 The grant column disagrees with itself, and this pass measured the disagreement in both directions
+
+**29 slugs probed on two channels — the npm `license` field and the repository licence payload.**
+
+- 🔴 **8 of 27 resolvable packages (29.6%) are DECLARED-ONLY**: npm carries a permissive grant, the repository carries **no licence file at all**. 7 declare MIT, 1 declares ISC. **Every MCP connector discovered this pass falls in this class.**
+- 🔴 **2 run the other way, and that is the direction that costs money**: `@groton/canvas-api` declares **nothing** on npm while the repository is **GPL-3.0 (35,149 B)**, and `canvas-lms-api` is silent on both. **A studio reading only the registry sees an absent licence field and may read it as unencumbered; the tree is copyleft.** 🔵 **Same shape as p333's ToolJet — a widely-installed artefact mis-graded in the permissive direction.**
+- 🟢 **0 genuine value mismatches** where both channels carry a grant. **When both speak, they agree; the whole error is in the silences.**
+
+🟢 **The rule this pass adds: a shelf row must record the CHANNEL of its grant, not only the value.** *"MIT (npm)"* and *"MIT (payload, 1,075 B)"* are different claims with different strength, and p333's correction made the second one the house standard without ever saying what to do when it does not exist. 🟢 **`ACTION ZD` registers the column.**
+
+---
+
+
 ## Pass 334 · 2026-10-20 (seventh pass of this date) — p333 reported two red gates and there were three, and the third one fires on p333's own sentence
 
 🔴 **Inherited state, measured on p333's HEAD before this pass changed a byte.** `make gate-offline` 🟢 **green (exit 0)**. `make hooks` 🔴 **red on THREE gates, not two**: `recount` (Makefile:397), 🔴 **`gate-absence` (Makefile:202)** and `gate-ladder-case` (Makefile:360). **p333 published "20/22 gates green, `recount` red … `gate-ladder-case` red on its C14 ratchet" and did not name `gate-absence`.** 🟢 **Left at 21/22: `recount` and `gate-absence` are green at the end of this pass, `gate-ladder-case` is still red and its cause is pinned in [`evidence/p334-ladder-standing-census`](../evidence/p334-ladder-standing-census.2026-10-20-p334.tsv).** 🔵 p333 was the pass that institutionalised *stating the gate state you inherited*; this is that paragraph doing its job one pass later, against p333.
@@ -78,18 +128,23 @@ updated: 2026-10-20
 
 ## Build-on-this tier
 
-🟢 **8 permissive rows — MIT, Apache-2.0 or BSD only.** A row whose code grant is permissive but whose **data or corpus** is share-alike is NOT in this tier; `learning-commons-org/evaluators` (MIT code, **CC BY-NC-SA 4.0** corpora) and `withmarbleapp/os-taxonomy` (**ODbL-1.0 + CC BY-SA 4.0**) are carried in the p333 shelf below and deliberately excluded here, because this tier's one job is to answer *may I embed this in a client deliverable*.
+🟢 **13 permissive rows — MIT, Apache-2.0 or BSD only** *(8 at p334, +5 promoted p335; `ltijs` re-placed, not added).* A row whose code grant is permissive but whose **data or corpus** is share-alike is NOT in this tier; `learning-commons-org/evaluators` (MIT code, **CC BY-NC-SA 4.0** corpora) and `withmarbleapp/os-taxonomy` (**ODbL-1.0 + CC BY-SA 4.0**) are carried in the p333 shelf below and deliberately excluded here, because this tier's one job is to answer *may I embed this in a client deliverable*.
 
 | Agent / tool | Repo | Grant | Activity, first-hand | Layer |
 |---|---|---|---|---|
 | **lti-tool** | https://github.com/lti-tool/lti-tool | 🟢 **MIT** (1,077 B, p331) | 346 c · 6 a · 2026-10-19 · release 2026-10-20 (p331) | LMS integration — the way in |
-| **ltijs** | https://github.com/Cvmcosta/ltijs | 🟢 **Apache-2.0** (11,361 B, p331) | 575 c · 17 a · 2026-10-13 (p331) | LMS integration, mature, narrow bench |
+| **ltijs** | https://github.com/Cvmcosta/ltijs | 🟢 **Apache-2.0** (11,361 B, p331) | 575 c · 17 a · **51 c in 2026** · head 2026-10-13 (re-probed p335) | LMS integration, mature, narrow bench — 🟢 **LATAM — Brazil** *(p335: root `eec0a6b1` `cvmcosta@yahoo.com.br`; `yahoo.com.br` 429/575; `-0300` 513/575)* |
 | **DeepTutor** | https://github.com/HKUDS/DeepTutor | 🟢 **Apache-2.0** | head 2026-10-19 (p330) | Agent-native tutor |
 | 🆕 **TutorAI** | https://github.com/CogitoNTNU/TutorAI | 🟢 **MIT** (1,140 B, p334) | 1,140 c · 19 a · head 2026-10-07 · 111 c in 2026 (p334) | RAG tutor that cites the curriculum — 🟢 **EMEA** |
 | **tutor-mcp** | https://github.com/ArnaudGuiovanna/tutor-mcp | 🟢 **MIT** (1,073 B, p331) | 467 c · 5 a · 2026-10-16 (p330) | ITS state + review scheduling over MCP |
 | **OATutor** | https://github.com/CAHLR/OATutor | 🟢 **MIT** | 1,045 c · 27 a · 2026-10-16 (p330, re-confirmed p334: **1,045 c · head 2026-10-16**) | Pedagogy — BKT, UC Berkeley |
 | **Agent Skills** | https://github.com/learning-commons-org/agent-skills | 🟢 **Apache-2.0** (10,173 B, p327) | 42 c (p327) | K-12 teacher skills over MCP |
 | 🆕 **canvas-mcp** | https://github.com/vishalsachdev/canvas-mcp | 🟢 **MIT** (1,071 B, p334) | 1,041 c · 30 a · 927 c in 2026 · head 2026-10-19 (p334) | The widest-bench connector on these shelves — 🟢 **North America** |
+| 🆕 **@brightspace-ui/core** | https://github.com/BrightspaceUI/core | 🟢 **Apache-2.0** (10,421 B, p335) | 🟢 **9,598 c · 180 a · 1,020 c in 2026 · head 2026-10-19** (p335) | Accessible web components from a **proprietary** LMS vendor — the deepest bench on these shelves — 🟢 **North America**, `d2l.com(2,748)` |
+| 🆕 **gogcli-mcp (Classroom)** | https://github.com/chrischall/gogcli-mcp | 🟢 **MIT** (1,067 B, p335) | 🟢 **498 c · 5 a · all 498 in 2026 · head 2026-10-19** (p335) | Google Classroom over MCP — 🟢 **North America** |
+| 🆕 **caccl** | https://github.com/harvard-edtech/caccl | 🟢 **MIT** (1,075 B, © **Harvard University**, p335) | 🟡 **655 c · 3 a · 27 c in 2026** · head 2026-09-30 (p335) | Canvas + LTI scaffold, eight years continuous — 🟢 **North America** |
+| 🆕 **d2l-test-reporting** | https://github.com/Brightspace/test-reporting-node | 🟢 **Apache-2.0** (10,421 B, p335) | 🟢 **1,129 c · 13 a · 358 c in 2026 · head 2026-10-19** (p335) | Test-evidence reporting for LMS front ends — 🟢 **North America** |
+| 🆕 **@scormflow/player** | https://github.com/scormflow/scorm-engine-client | 🟢 **MIT** (1,079 B, p335) | 🟢 **45 c · 2 a · all 45 in 2026 · head 2026-10-12** (p335) | SCORM runtime bridge in the browser — 🟢 **APAC — India** |
 
 ---
 

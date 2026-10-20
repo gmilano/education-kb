@@ -1,0 +1,28 @@
+slug	ls-remote	head-sha
+Annoto/ims-lti	OK	c9cf836e7e8f
+Brightspace/test-reporting-node	OK	f56efe16c715
+BrightspaceUI/core	OK	1dc72896d625
+BrightspaceUI/intl	OK	81c438411180
+BrightspaceUI/labs	OK	ae61ef8f1a08
+Cvmcosta/ltijs	OK	41f150c0693b
+DamPhuQuy/Agent-as-a-tutor	OK	ce6dd022be15
+LongsightGroup/lti-tool	OK	662212069bdd
+VienDinhCom/supermemo	OK	8093cde2b80d
+chrischall/gogcli-mcp	OK	92ebb4b7f0f8
+christophblessing/quiz-recap	OK	0927b556d2e4
+freeCodeCamp/curriculum-helpers	OK	f968c337b7b6
+google/licenseclassifier	OK	3cfbab2d0e0d
+groton-school/canvas-cli	OK	2c117e611104
+harvard-edtech/caccl	OK	0541ad3a1fa2
+likr/canvas-lms-agent	OK	458c1a4ed988
+lti-tool/lti-tool	OK	dc747615b2e7
+molecule-dev/molecule	OK	0c07206871a3
+openedx/frontend-base	OK	83a17527ad25
+openedx/frontend-platform	OK	174880055acf
+risnake/canvas-mcp-server	OK	8f284f5f263c
+rohanmuppa/brightspace-mcp-server	OK	d221e6e135d1
+scormflow/scorm-engine-client	OK	b68c148fa698
+studiolxd/xapi	OK	c5a7a702c6e5
+Mckaroff/GraphLMS	UNREACHABLE	
+virtualarkansas/n8n-nodes-genius-sis	UNREACHABLE	
+brainjamworks/liverpool-dental-theme	UNREACHABLE	

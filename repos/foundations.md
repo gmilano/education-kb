@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 335 · 2026-10-20 (eighth pass of this date) — five foundational rows from the package-registry channel, and the placement instrument this file uses is broken on every Apache and GPL row it touches
+
+### 🟢 Promoted — permissive, placed, and active, every figure first-hand
+
+| Repo | Grant, payload read first-hand | Activity, bare `--filter=blob:none` clone | Placed, and how | Layer |
+|---|---|---|---|---|
+| https://github.com/BrightspaceUI/core | 🟢 **Apache-2.0**, 10,421 B | 🟢 **9,598 c · 180 a · 1,020 in 2026 · 2019-03-06 → 2026-10-19** | 🟢 **North America** — `d2l.com(2,748)`, `-0400(4,432) -0500(1,612)` | Accessible component library for LMS front ends |
+| https://github.com/Brightspace/test-reporting-node | 🟢 **Apache-2.0**, 10,421 B | 🟢 **1,129 c · 13 a · 358 in 2026 · head 2026-10-19** | 🟢 **North America** — `D2L.com(246)` | Test-evidence reporting |
+| https://github.com/harvard-edtech/caccl | 🟢 **MIT**, 1,075 B, © **Harvard University** | 🟡 **655 c · 3 a · 27 in 2026 · 2018-11-02 → 2026-09-30** | 🟢 **North America** — institution named **in the grant** and on 3 commits | Canvas + LTI scaffold |
+| https://github.com/freeCodeCamp/curriculum-helpers | 🟢 **BSD-3-Clause**, 1,524 B, © freeCodeCamp.org | 🟡 **578 c · 15 a · 23 in 2026 · head 2026-10-19** | 🔴 **UNPLACED** — `users.noreply.github.com(374)` dominates; offsets split `+0000(315) +0200(146) +0100(99)` | Challenge-testing helpers for a curriculum |
+| https://github.com/christophblessing/quiz-recap | 🟢 **MIT**, 1,075 B | 🟡 **288 c · 5 a · 19 in 2026 · head 2026-09-11** | 🟢 **EMEA — Germany** — `hpi.de(1)`, `+0100(95) +0200(92)`; npm scope `@openhpi` | Quiz recapitulation component |
+
+🟡 **`caccl` and `freeCodeCamp/curriculum-helpers` are carried with their bench stated, not hidden.** 27 and 23 commits in 2026 respectively: **maintained, not developed.** 🔵 For `caccl` that is the correct reading of an eight-year-old integration library against a stable API — **271 npm versions over eight years is continuity a star count does not show.**
+
+### 🔴 The placement instrument is broken, and it fails by returning something that looks like an answer
+
+**`ACTION TL` specifies: place a repository by the copyright HOLDER named in its licence payload, never by a maintainer's surname.** 🟢 **Correct, and this pass used it.** 🔴 **Measured over 29 payloads, it mis-fires on every long-form licence:**
+
+| licence family | payload size | what the holder instrument returns | correct? |
+|---|---|---|---|
+| MIT / BSD-3 / ISC (short form) | 1,065 – 1,524 B | `Harvard University`, `freeCodeCamp.org`, `Christoph Blessing`, `Chris Hall`, `Vien Dinh` … | 🟢 **10 of 10** |
+| **Apache-2.0** | 10,421 – 11,361 B | 🔴 **`owner or entity authorized by`** — a fragment of Apache's *definition of "Legal Entity"*. **Not a holder at all** | 🔴 **0 of 7** |
+| **GPL-3.0 / AGPL-3.0** | 34,520 – 35,149 B | 🔴 **`Free Software Foundation, Inc. <https://fsf.org/>`** — the FSF's copyright on **the licence text**, not the project's | 🔴 **0 of 4** |
+
+🔴 **The GPL case is the dangerous one: `Free Software Foundation, Inc.` reads exactly like a real institutional holder, and it would place every GPL row in this base in North America on the strength of the FSF's Boston address.** 🟢 **Nothing on these shelves is currently mis-placed that way** — the Apache and GPL rows this pass touched were placed on the commit channel instead — **but the instrument would have done it, and it is documented as the house method.**
+
+🟢 **The repair, measured rather than proposed — a three-rung ladder:**
+
+1. 🟢 **Short-form payload (< ~2.5 KB): read the copyright holder.** 10/10 this pass.
+2. 🟡 **Apache-2.0: read `NOTICE`, not `LICENSE`** — that is where the Apache convention puts the holder. **Resolved 1 of 9** (`molecule-dev/molecule` → *"Molecule Dev, Inc."*). **Thin, and stated as thin.**
+3. 🟢 **Otherwise fall through to the commit channel** (`%ae` domains + offsets), which resolved **8 of the remaining 8** and is already this base's strongest instrument.
+
+🔴 **And the rule that matters more than the ladder: NEVER read a holder out of a long-form licence payload.** A long-form payload names the licence's steward, and the instrument cannot tell that from the project's owner. 🟢 **`ACTION ZE` registers a gate: any placement claim whose cited payload exceeds 2.5 KB is a defect unless it cites `NOTICE` or the commit channel.**
+
+---
+
+
 ## Pass 334 · 2026-10-20 (seventh pass of this date) — two curriculum artefacts, one of them APAC-placed and shipping its own eval harness, and the licence that makes them usable is not the code licence
 
 🔵 **This shelf's standing question about curriculum material is not "is it good" but "may a studio bill for a derivative of it".** `intel/trends.md` T12 has tracked a *commercially usable curriculum-artefact count* since p328 and the count has only ever moved by one. 🟢 **Two rows this pass, both read first-hand, and the interesting one is a content licence rather than a code licence.**

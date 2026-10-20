@@ -1,0 +1,363 @@
+pkg	slug	last_publish	query_leg	novel_to_kb	desc
+@lti-tool/core	lti-tool/lti-tool	2026-10-20	lti 1.3 advantage	HELD	LTI 1.3 implementation for Node.js
+@ai-matrx/records	AI-Matrix-Engine/aidream	2026-10-20	xapi learning record store	NOVEL	The headless client of the AI Matrx record store: the Table / Field / Rule / Record / Relation / Hom
+@ai-sdk/perplexity	vercel/ai	2026-10-20	ai tutor agent	NOVEL	The **[Perplexity provider](https://ai-sdk.dev/providers/ai-sdk-providers/perplexity)** for the [AI 
+@ai-sdk/harness	vercel/ai	2026-10-20	ai tutor agent	NOVEL	_This package is **experimental**._
+@ai-sdk/harness-claude-code	vercel/ai	2026-10-20	ai tutor agent	NOVEL	`HarnessV1` adapter backed by [`@anthropic-ai/claude-agent-sdk`](https://www.npmjs.com/package/@anth
+pi-mcp-adapter	nicobailon/pi-mcp-adapter	2026-10-20	education mcp server	NOVEL	MCP (Model Context Protocol) adapter extension for Pi coding agent
+hostinger-api-mcp	hostinger/api-mcp-server	2026-10-20	education mcp server	NOVEL	MCP server for Hostinger API
+@ai-sdk/mcp	vercel/ai	2026-10-20	education mcp server	NOVEL	The **Model Context Protocol (MCP) client** for the [AI SDK](https://ai-sdk.dev/docs) lets you conne
+@corsair-dev/blackbaud	corsairdev/corsair	2026-10-20	onreoster oneroster	NOVEL	Blackbaud plugin for Corsair
+@ai-sdk/otel	vercel/ai	2026-10-20	curriculum generator ai	NOVEL	The **OpenTelemetry integration** for the [AI SDK](https://ai-sdk.dev/docs) collects tracing spans f
+@openapitools/openapi-generator-cli	OpenAPITools/openapi-generator-cli	2026-10-20	curriculum generator ai	NOVEL	A npm package wrapper for OpenAPI Generator (https://github.com/OpenAPITools/openapi-generator), gen
+@ai-sdk/provider	vercel/ai	2026-10-20	curriculum generator ai	NOVEL	
+ai	vercel/ai	2026-10-20	curriculum generator ai	NOVEL	AI SDK by Vercel - build apps like ChatGPT, Claude, Gemini, and more with a single interface for any
+brightspace-mcp-server	RohanMuppa/brightspace-mcp-server	2026-10-20	brightspace d2l api	HELD	MCP server for Brightspace (D2L). Check grades, due dates, assignments, announcements, syllabus, ros
+canvas-lms-mcp	bruchris/canvas-lms-mcp	2026-10-19	canvas lms api	HELD	TypeScript MCP 1.x server for Canvas LMS — 177 tools across Canvas courses, assignments, grades, gra
+@remotion/player		2026-10-19	scorm player	NO-SLUG	React component for embedding a Remotion preview into your app
+@mossbear/eval-core	mossbear-io/mossbear	2026-10-19	gradebook grading	NOVEL	Portable pieces of Mossbear's evaluation path — command redaction, the LLM adapter seam, and guide n
+@anthropic-ai/claude-agent-sdk	anthropics/claude-agent-sdk-typescript	2026-10-19	ai tutor agent	NOVEL	SDK for building AI agents with Claude Code's capabilities. Programmatically interact with Claude to
+agent-as-a-tutor	DamPhuQuy/Agent-as-a-tutor	2026-10-19	ai tutor agent	NOVEL	Strict Socratic Tutor enforcing the 5-Step Understanding Framework, Anti-Cargo-Culting rules, and Ev
+@anthropic-ai/claude-agent-sdk-linux-x64		2026-10-19	ai tutor agent	NO-SLUG	Native CLI binary for @anthropic-ai/claude-agent-sdk on linux-x64
+@anthropic-ai/claude-agent-sdk-linux-x64-musl		2026-10-19	ai tutor agent	NO-SLUG	Native CLI binary for @anthropic-ai/claude-agent-sdk on linux-x64-musl
+icoa-cli		2026-10-19	ai tutor agent	NO-SLUG	ICOA CLI — AI-native competition runtime of the International Cyber Olympiad in AI: learn, practise,
+@posthog/ai	PostHog/posthog-js	2026-10-19	ai tutor agent	NOVEL	PostHog Node.js AI integrations
+@anthropic-ai/claude-agent-sdk-darwin-arm64		2026-10-19	ai tutor agent	NO-SLUG	Native CLI binary for @anthropic-ai/claude-agent-sdk on darwin-arm64
+@azure/ai-projects	Azure/azure-sdk-for-js	2026-10-19	ai tutor agent	NOVEL	Azure AI Projects client library.
+@anthropic-ai/claude-agent-sdk-linux-arm64		2026-10-19	ai tutor agent	NO-SLUG	Native CLI binary for @anthropic-ai/claude-agent-sdk on linux-arm64
+@better-auth/mcp	better-auth/better-auth	2026-10-19	education mcp server	NOVEL	Model Context Protocol (MCP) plugin for Better Auth
+@pie-qti/to-pie	pie-framework/pie-qti	2026-10-19	qti assessment	HELD	QTI to PIE transformation plugin
+@react-native-firebase/analytics	invertase/react-native-firebase	2026-10-19	caliper analytics	NOVEL	React Native Firebase - The analytics module provides out of the box support with Google Analytics f
+swagger-ui-dist	swagger-api/swagger-ui	2026-10-19	caliper analytics	NOVEL	[![NPM version](https://badge.fury.io/js/swagger-ui-dist.svg)](http://badge.fury.io/js/swagger-ui-di
+@rudderstack/analytics-js	rudderlabs/rudder-sdk-js	2026-10-19	caliper analytics	NOVEL	RudderStack JavaScript SDK
+systeminformation	sebhildebrandt/systeminformation	2026-10-19	student information system	NOVEL	Advanced, lightweight system and OS information library
+@aws-sdk/client-lambda	aws/aws-sdk-js-v3	2026-10-19	student information system	NOVEL	AWS SDK for JavaScript Lambda Client for Node.js, Browser and React Native
+@maxim_mazurok/gapi.client.classroom-v1	Maxim-Mazurok/google-api-typings-generator	2026-10-19	classroom google api	NOVEL	TypeScript typings for Google Classroom API v1
+@capgo/capacitor-pdf-generator	Cap-go/capacitor-pdf-generator	2026-10-19	curriculum generator ai	NOVEL	Generate PDF files from HTML strings or URLs on iOS and Android.
+@graphql-tools/load	ardatan/graphql-tools	2026-10-19	blackboard learn api	NOVEL	A set of utils for faster development of GraphQL tools
+@graphql-tools/merge	ardatan/graphql-tools	2026-10-19	blackboard learn api	NOVEL	A set of utils for faster development of GraphQL tools
+@graphql-tools/schema	ardatan/graphql-tools	2026-10-19	blackboard learn api	NOVEL	A set of utils for faster development of GraphQL tools
+@graphql-tools/graphql-tag-pluck	ardatan/graphql-tools	2026-10-19	blackboard learn api	NOVEL	Pluck graphql-tag template literals
+@graphql-tools/import	ardatan/graphql-tools	2026-10-19	blackboard learn api	NOVEL	A set of utils for faster development of GraphQL tools
+@graphql-tools/relay-operation-optimizer	ardatan/graphql-tools	2026-10-19	blackboard learn api	NOVEL	Package for optimizing your GraphQL operations relay style.
+@graphql-tools/mock	ardatan/graphql-tools	2026-10-19	blackboard learn api	NOVEL	A set of utils for faster development of GraphQL tools
+@brightspace-ui/core	BrightspaceUI/core	2026-10-19	brightspace d2l api	NOVEL	A collection of accessible, free, open-source web components for building Brightspace applications
+@brightspace-ui/labs	BrightspaceUI/labs	2026-10-19	brightspace d2l api	NOVEL	A collection of experimental web components and tools for building Brightspace applications.
+@brightspace-ui/testing	BrightspaceUI/testing	2026-10-19	brightspace d2l api	NOVEL	Utilities for testing front-end components and applications
+@libp2p/peer-record	libp2p/js-libp2p	2026-10-18	xapi learning record store	NOVEL	Used to transfer signed peer data across the network
+@molecule/app-locales-gradebook	molecule-dev/molecule	2026-10-18	gradebook grading	NOVEL	Translations for @molecule/app-gradebook-react in 79 languages
+@wrongstack/bench	WrongStack/WrongStack	2026-10-18	gradebook grading	NOVEL	Model-independent agentic benchmark harness for WrongStack (bundled smoke suite, Aider polyglot, SWE
+@nodetool-ai/image-nodes	nodetool-ai/nodetool	2026-10-18	gradebook grading	NOVEL	NodeTool image nodes — sharp-based + WebGPU shader pool (image, lib-image-*, lib-shader-utils, lib-g
+yeoman-generator	yeoman/generator	2026-10-18	curriculum generator ai	NOVEL	Rails-inspired generator system that provides scaffolding for your apps
+vouchington-tooling	vouchington/vouchington-tooling	2026-10-18	blackboard learn api	NOVEL	Vouchington CLI and extractable tooling libraries.
+agent-blackboard	jonathanong/agent-blackboard	2026-10-17	blackboard learn api	NOVEL	Client library, CLI, and MCP server for Agent Blackboard session entries.
+@scalar/api-client	scalar/scalar	2026-10-16	moodle api client	NOVEL	the open source API testing client
+@openedx/paragon	openedx/paragon	2026-10-16	open edx api	HELD	Accessible, responsive UI component library based on Bootstrap.
+deepagents	langchain-ai/deepagentsjs	2026-10-16	ai tutor agent	NOVEL	Deep Agents - a library for building controllable AI agents with LangGraph
+uis-mcp-server	SidneyBissoli/uis-mcp-server	2026-10-16	education mcp server	HELD	UNESCO UIS education statistics MCP server — remote, for the UNESCO Institute for Statistics (UIS): 
+@memberjunction/actions-bizapps-lms	MemberJunction/MJ	2026-10-16	lms mcp	NOVEL	LMS system integration actions for MemberJunction
+@microsoft/teams.cards	microsoft/teams.ts	2026-10-16	adaptive learning spaced repetition	NOVEL	<p>     <a href="https://www.npmjs.com/package/@microsoft/teams.cards" target="_blank">         <img
+gogcli-mcp-classroom	chrischall/gogcli-mcp	2026-10-16	classroom google api	NOVEL	Extended Google Classroom MCP server via gogcli — auth + full Classroom support
+@metaharness/darwin	ruvnet/metaharness	2026-10-16	quiz generator llm	NOVEL	Freeze the model, evolve the harness. Two measured applications: (1) SWE-bench code-repair — conform
+@scalar/openapi-to-markdown	scalar/scalar	2026-10-16	quiz generator llm	NOVEL	Create plain Markdown from OpenAPI documents (for LLMs)
+langchain	langchain-ai/langchainjs	2026-10-16	quiz generator llm	NOVEL	Typescript bindings for langchain
+google-auth-library	googleapis/google-cloud-node	2026-10-15	moodle api client	NOVEL	Google APIs Authentication Client Library for Node.js
+@skill-harness/core	mojomanyana/skill-harness	2026-10-15	gradebook grading	NOVEL	skill-harness engine — spec, discover, run, LLM-judge grade, score, results (internal API)
+@google/genai	googleapis/js-genai	2026-10-15	ai tutor agent	NOVEL	[![NPM Downloads](https://img.shields.io/npm/dw/%40google%2Fgenai)](https://www.npmjs.com/package/@g
+@earendil-works/pi-agent-core	earendil-works/pi	2026-10-15	ai tutor agent	NOVEL	General-purpose agent with transport abstraction, state management, and attachment support
+@mastra/core	mastra-ai/mastra	2026-10-15	ai tutor agent	NOVEL	Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack
+agent-device	callstack/agent-device	2026-10-15	ai tutor agent	NOVEL	Mobile app automation and verification for AI coding agents. CLI, MCP server, and typed Node.js API 
+@citolab/qti-convert-cli	Citolab/qti-convert	2026-10-15	qti assessment	HELD	QTI converter - Command Line Tools
+@citolab/qti-convert-export	Citolab/qti-convert	2026-10-15	qti assessment	HELD	Export QTI 3 packages to paper-friendly Word and PDF documents
+@amplitude/analytics-browser	amplitude/Amplitude-TypeScript	2026-10-15	caliper analytics	NOVEL	Official Amplitude SDK for Web
+@angular/build	angular/angular-cli	2026-10-15	student information system	NOVEL	Official build system for Angular
+gaxios	googleapis/google-cloud-node	2026-10-15	classroom google api	NOVEL	A simple common HTTP client specifically for Google APIs and services.
+d2l-test-reporting	Brightspace/test-reporting-node	2026-10-15	brightspace d2l api	NOVEL	Helper package for generating reports for use with the D2L test reporting framework
+@brightspace-ui-labs/facet-filter-sort	BrightspaceUILabs/facet-filter-sort	2026-10-15	brightspace d2l api	NOVEL	Collection of (search) facet, filter and sort elements
+googleapis	googleapis/google-api-nodejs-client	2026-10-14	moodle api client	NOVEL	Google APIs Client Library for Node.js
+@wistia/wistia-player		2026-10-14	scorm player	NO-SLUG	An embeddable wistia-player web component and React wrapper to add responsive, lightweight, and SEO-
+mcp-proxy	punkpeye/mcp-proxy	2026-10-14	education mcp server	NOVEL	A TypeScript SSE proxy for MCP servers that use stdio transport.
+firebase-tools	firebase/firebase-tools	2026-10-14	education mcp server	NOVEL	Command-Line Interface for Firebase
+@pgpmjs/server-utils	constructive-io/constructive	2026-10-14	education mcp server	NOVEL	PGPM server utils
+mcp-remote	punkpeye/mcp-remote	2026-10-14	education mcp server	NOVEL	Remote proxy for Model Context Protocol, allowing local-only clients to connect to remote servers us
+@pie-qti/assessment-player	pie-framework/pie-qti	2026-10-14	qti assessment	HELD	QTI Assessment Player supporting QTI 2.2 and 3.0 - Multi-item test player with navigation, sections,
+@pie-qti/assessment-toolkit	pie-framework/pie-qti	2026-10-14	qti assessment	HELD	Pure TypeScript helpers for composing QTI assessment player shared section context
+@pie-qti/qti-common	pie-framework/pie-qti	2026-10-14	qti assessment	HELD	Shared utilities and abstractions for QTI 2.x and QTI 3.0 support
+@pie-qti/player-elements	pie-framework/pie-qti	2026-10-14	qti assessment	HELD	QTI (2.x and 3.0) player web components (custom elements) for framework-agnostic embedding
+@pie-qti/item-player	pie-framework/pie-qti	2026-10-14	qti assessment	HELD	Modern QTI player supporting QTI 2.2 and 3.0 - Client-side with optional backend hooks
+@pie-qti/web-component-loaders	pie-framework/pie-qti	2026-10-14	qti assessment	HELD	Shared, idempotent client-side loaders for QTI-related web components used across apps
+@pie-qti/typeset-katex	pie-framework/pie-qti	2026-10-14	qti assessment	HELD	KaTeX-based math typesetting adapter for PIE QTI players (supports QTI 2.2 and 3.0) (host-provided `
+@pie-qti/theme-daisyui	pie-framework/pie-qti	2026-10-14	qti assessment	HELD	DaisyUI token bridge for PIE QTI theme variables
+@googleapis/sqladmin	googleapis/google-api-nodejs-client	2026-10-14	classroom google api	NOVEL	sqladmin
+rolldown	rolldown/rolldown	2026-10-14	blackboard learn api	NOVEL	Fast JavaScript/TypeScript bundler in Rust with Rollup-compatible API.
+@ggui-ai/protocol-conformance	ggui-ai/ggui	2026-10-13	gradebook grading	NOVEL	Conformance test kit for the GGUI protocol. Drives a behavioral fixture catalog against a live imple
+@vercel/detect-agent	vercel/vercel	2026-10-13	ai tutor agent	NOVEL	Detect if code is running in an AI agent or automated development environment
+@google-cloud/pubsub	googleapis/google-cloud-node	2026-10-12	moodle api client	NOVEL	Cloud Pub/Sub Client Library for Node.js
+@google-cloud/firestore-api	googleapis/google-cloud-node	2026-10-12	moodle api client	NOVEL	Cloud Firestore API client for Node.js
+@google-cloud/tasks	googleapis/google-cloud-node	2026-10-12	moodle api client	NOVEL	Cloud Tasks API client for Node.js
+@google-cloud/bigquery	googleapis/google-cloud-node	2026-10-12	moodle api client	NOVEL	Google BigQuery Client Library for Node.js
+video.js	videojs/video.js	2026-10-12	scorm player	NOVEL	Points Video.js installs to @videojs/html and @videojs/react, and throws coded errors for Video.js 8
+@storybook/mcp	storybookjs/storybook	2026-10-12	education mcp server	NOVEL	MCP server that serves knowledge about your components based on your Storybook stories and documenta
+@storybook/addon-mcp	storybookjs/storybook	2026-10-12	education mcp server	NOVEL	Help agents automatically write and test stories for your UI components
+@examplary/qti	examplary/qti	2026-10-12	qti assessment	HELD	Utilities to generate and parse QTI 3.0 and 2.1 assessment packages.
+@google-analytics/data	googleapis/google-cloud-node	2026-10-12	caliper analytics	NOVEL	Data client for Node.js
+google-logging-utils	googleapis/google-cloud-node	2026-10-12	student information system	NOVEL	A debug logger package for other Google libraries
+@google-cloud/secret-manager	googleapis/google-cloud-node	2026-10-12	classroom google api	NOVEL	Secrets client for Node.js
+@storybook/react-dom-shim	storybookjs/storybook	2026-10-12	blackboard learn api	NOVEL	
+brightspace-d2l-mcp	AnonymousOnyx22/brightspace-d2l-mcp	2026-10-12	brightspace d2l api	HELD	MCP server for D2L Brightspace: connect Brightspace to Claude, ChatGPT, Cursor, Copilot and any AI a
+@scormflow/player	scormflow/scorm-engine-client	2026-10-11	scorm player	NOVEL	Iframe-based SCORM player and runtime bridge for the browser. Clean-room implementation of the SCORM
+@jakerains/scormplayer	jakerains/scormplayer	2026-10-11	scorm player	HELD	Open any SCORM package in your browser, click through it like an LMS would, and leave pinned notes y
+@napi-rs/canvas	Brooooooklyn/canvas	2026-10-10	canvas lms api	NOVEL	Canvas for Node.js with skia backend
+msw	mswjs/msw	2026-10-10	blackboard learn api	NOVEL	The industry standard for API mocking in JavaScript.
+@google-cloud/storage	googleapis/google-cloud-node	2026-10-09	moodle api client	NOVEL	Cloud Storage Client Library for Node.js
+@longsightgroup/qti3-player	LongsightGroup/qti3	2026-10-09	qti assessment	HELD	Style-neutral web component player for rendering and scoring QTI 3 assessment items.
+@longsightgroup/qti3-transcoder	LongsightGroup/qti3	2026-10-09	qti assessment	HELD	Framework-neutral, profile-driven QTI 3 to QTI 1.2 and QTI 2.x transcoding.
+@longsightgroup/qti3-writer	LongsightGroup/qti3	2026-10-09	qti assessment	HELD	Framework-neutral QTI 3 assessment item XML writer for authoring applications.
+@mui/system	mui/material-ui	2026-10-09	student information system	NOVEL	MUI System is a set of CSS utilities to help you build custom designs more efficiently. It makes it 
+@thanh01.pmt/curriculum-kit		2026-10-09	curriculum generator ai	NO-SLUG	A high-fidelity AI curriculum & content generation engine powered by Vercel AI SDK, Zod, and Bloom-a
+@graphql-codegen/cli	dotansimha/graphql-code-generator	2026-10-09	curriculum generator ai	NOVEL	<p align="center">     <img src="https://github.com/dotansimha/graphql-code-generator/blob/master/lo
+scorm-again	jcputney/scorm-again	2026-10-08	scorm player	HELD	A modern SCORM JavaScript run-time library for SCORM 1.2 and SCORM 2004
+mcp-kinetic-gain	mizcausevic-dev/mcp-kinetic-gain	2026-10-08	ai tutor agent	NOVEL	MCP server and CLI for all twelve Kinetic Gain Protocol Suite specs + DefenseTech 6-pack semantics (
+@graphql-tools/wrap	graphql-hive/gateway	2026-10-08	blackboard learn api	NOVEL	A set of utils for faster development of GraphQL tools
+@graphql-tools/delegate	graphql-hive/gateway	2026-10-08	blackboard learn api	NOVEL	A set of utils for faster development of GraphQL tools
+vite	vitejs/vite	2026-10-08	blackboard learn api	NOVEL	Native-ESM powered web dev build tool
+mcp-handler	vercel-labs/mcp-handler	2026-10-07	education mcp server	NOVEL	Framework-agnostic HTTP adapter for Model Context Protocol servers
+@universis/one-roster		2026-10-07	onreoster oneroster	NO-SLUG	Universis project OneRoster middleware
+@carbon/utilities	carbon-design-system/carbon	2026-10-07	student information system	NOVEL	Utilities and helpers to drive consistency across software products using the Carbon Design System
+@graphql-codegen/core	dotansimha/graphql-code-generator	2026-10-07	curriculum generator ai	NOVEL	<p align="center">     <img src="https://github.com/dotansimha/graphql-code-generator/blob/master/lo
+ltijs	Cvmcosta/ltijs	2026-10-06	lti 1.3 advantage	HELD	Easily turn your web application into a LTI 1.3 Learning Tool.
+@moodlehq/design-system	moodlehq/design-system	2026-10-05	moodle api client	HELD	The Moodle Design System
+@mux/mux-player	muxinc/elements	2026-10-05	scorm player	NOVEL	An open source Mux player web component that Just Works™
+@mux/mux-player-react	muxinc/elements	2026-10-05	scorm player	NOVEL	An open source Mux player for React that Just Works™
+@modelcontextprotocol/sdk	modelcontextprotocol/typescript-sdk	2026-10-05	education mcp server	NOVEL	Model Context Protocol implementation for TypeScript
+@modelcontextprotocol/server	modelcontextprotocol/typescript-sdk	2026-10-05	education mcp server	NOVEL	Model Context Protocol implementation for TypeScript - Server package
+@modelcontextprotocol/client	modelcontextprotocol/typescript-sdk	2026-10-05	lms mcp	NOVEL	Model Context Protocol implementation for TypeScript - Client package
+nanoid	ai/nanoid	2026-10-05	curriculum generator ai	NOVEL	A tiny (117 bytes), secure URL-friendly unique string ID generator
+@tldraw/tlschema	tldraw/tldraw	2026-10-02	xapi learning record store	NOVEL	tldraw infinite canvas SDK (schema).
+@rrweb/record	rrweb-io/rrweb	2026-10-02	xapi learning record store	NOVEL	This package contains all the record related code in rrweb and is designed to be published in a fron
+@modelcontextprotocol/node	modelcontextprotocol/typescript-sdk	2026-10-02	education mcp server	NOVEL	Model Context Protocol implementation for TypeScript - Node.js middleware
+moodle-mcp-server-aql	csmediapro/moodle-mcp-server	2026-10-01	moodle api client	HELD	Open-source MCP server for querying Moodle LMS data through natural language. Attach your agent to y
+@imazhar101/mcp-canvas-server		2026-10-01	lms mcp	NO-SLUG	Canvas LMS MCP Server - Provides tools for interacting with Canvas API
+@exhabition/brightspace-mcp	Exhabition/brightspace-mcp-rs	2026-10-01	brightspace d2l api	HELD	Read-only MCP server for D2L Brightspace
+caccl	harvard-edtech/caccl	2026-09-30	lti 1.3 advantage	HELD	Canvas App Complete Connection Library: an all-in-one library for connecting your app to Canvas, han
+caccl-lti	gabeabrams/lti-launch-validator	2026-09-30	lti 1.3 advantage	NOVEL	LTI launch validator for IMS-LTI standard launches.
+@slack/web-api	slackapi/node-slack-sdk	2026-09-30	moodle api client	NOVEL	Official library for using the Slack Platform's Web API
+campus-cli	alejooroncoy/campus-cli	2026-09-30	blackboard learn api	HELD	Conecta Blackboard UPC con ChatGPT y Claude vía MCP, o úsalo desde la terminal — CLI/MCP no oficial 
+@ueu/ueu-canvas	Unity-Environmental-University/ueu_canvas	2026-09-29	canvas lms api	NOVEL	This is the source code for the [`@ueu/ueu-canvas`](https://www.npmjs.com/package/@ueu/ueu-canvas) n
+add-mcp	neon-solutions/add-mcp	2026-09-29	education mcp server	NOVEL	Add MCP servers to your favorite coding agents with a single command.
+memfs	streamich/memfs	2026-09-29	student information system	NOVEL	In-memory file-system with Node's fs API.
+ical-generator	sebbo2002/ical-generator	2026-09-28	quiz generator llm	NOVEL	ical-generator is a small piece of code which generates ical calendar files
+brightspace-mcp	JhostinAleck/brightspace-mcp	2026-09-28	brightspace d2l api	HELD	MCP server for D2L Brightspace (multi-auth, opt-in writes, session cache)
+@timeback/qti		2026-09-25	qti assessment	NO-SLUG	
+@timeback/oneroster		2026-09-25	onreoster oneroster	NO-SLUG	
+timeback		2026-09-25	onreoster oneroster	NO-SLUG	Timeback SDK for frontend and backend integration
+@timeback/core		2026-09-25	onreoster oneroster	NO-SLUG	
+@timeback/edubridge		2026-09-25	onreoster oneroster	NO-SLUG	
+@timeback/caliper		2026-09-25	caliper analytics	NO-SLUG	Caliper Analytics client SDK for Timeback
+moodle-core-cli	gafapa/moodle-core-cli	2026-09-24	moodle api client	HELD	Friendly Node.js client and CLI for Moodle 4.5+ core web services.
+@datadog/datadog-api-client	DataDog/datadog-api-client-typescript	2026-09-24	moodle api client	NOVEL	OpenAPI client for Datadog APIs
+@amplitude/rrweb-record	amplitude/rrweb	2026-09-24	xapi learning record store	NOVEL	This package contains all the record related code in rrweb. See the [guide](../../guide.md) for more
+@googleapis/classroom	googleapis/google-api-nodejs-client	2026-09-24	classroom google api	NOVEL	classroom
+@brightspace-ui/intl	BrightspaceUI/intl	2026-09-23	brightspace d2l api	NOVEL	Internationalization APIs for number, date, time and file size formatting and parsing in D2L Brights
+@brightspace-ui/localize-behavior	BrightspaceUI/localize-behavior	2026-09-23	brightspace d2l api	NOVEL	Polymer mixin for localization of D2L components
+@brainjam/liverpool-dental-theme	brainjamworks/liverpool-dental-theme	2026-09-22	gradebook grading	NOVEL	Liverpool Dental Learning Hub CSS theme for OpenEdX MFEs
+@googlemaps/js-api-loader	googlemaps/js-api-loader	2026-09-22	classroom google api	NOVEL	Wrapper for the loading of Google Maps JavaScript API script in the browser
+@n35da/brightspace-mcp		2026-09-22	brightspace d2l api	NO-SLUG	Read-only MCP server for Brightspace (D2L) courses at any institution — talks to D2L's own JSON API 
+@vis.gl/react-google-maps	visgl/react-google-maps	2026-09-21	classroom google api	NOVEL	React components and hooks for the Google Maps JavaScript API
+@molecule/app-gradebook-react	molecule-dev/molecule	2026-09-20	gradebook grading	NOVEL	Gradebook UI — table of grades (course / assignment / letter / numeric / weight / contribution-to-GP
+@molecule/api-quiz-grading	molecule-dev/molecule	2026-09-20	gradebook grading	NOVEL	Multi-question-type grading engine: multi-choice, true-false, type-answer, fill-blank, numeric, matc
+@notionhq/notion-mcp-server	makenotion/notion-mcp-server	2026-09-20	education mcp server	NOVEL	Official MCP server for Notion API
+@molecule/api-spaced-repetition	molecule-dev/molecule	2026-09-20	adaptive learning spaced repetition	NOVEL	SM-2 algorithm + opinionated review_log helpers.
+@babel/generator	babel/babel	2026-09-18	curriculum generator ai	NOVEL	Turns an AST into code.
+@babel/plugin-transform-async-generator-functions	babel/babel	2026-09-18	curriculum generator ai	NOVEL	Turn async generator functions into ES2015 generators
+grading-widget		2026-09-17	gradebook grading	NO-SLUG	Что нужно знать для использования библиотеки в своем проекте 1. Для установки: npm i grading-widget
+@citolab/qti-json-schemas	Citolab/qti-json-schemas	2026-09-17	qti assessment	HELD	Generated TypeScript models for the QTI JSON schema project
+@ink-waffle/sisu-mcp		2026-09-17	student information system	NO-SLUG	MCP server for any Sisu (Funidata) student information system: attainments, study rights, enrolments
+@temporalio/client	temporalio/sdk-typescript	2026-09-15	moodle api client	NOVEL	Temporal.io SDK Client sub-package
+open	sindresorhus/open	2026-09-14	open edx api	NOVEL	Open stuff like URLs, files, executables. Cross-platform.
+@comunica/actor-rdf-update-quads-rdfjs-store	comunica/comunica	2026-09-14	xapi learning record store	NOVEL	A rdfjs-store rdf-update-quads actor
+@lti-tool/memory	lti-tool/lti-tool	2026-09-13	lti 1.3 advantage	HELD	Memory storage for LTI 1.3 @lti-tool
+@lti-tool/postgresql	lti-tool/lti-tool	2026-09-13	lti 1.3 advantage	HELD	PostgreSQL storage for LTI 1.3 @lti-tool
+@firebase/analytics	firebase/firebase-js-sdk	2026-09-09	caliper analytics	NOVEL	A analytics package for new firebase packages
+@firebase/analytics-compat	firebase/firebase-js-sdk	2026-09-09	caliper analytics	NOVEL	This is the compatibility layer for the Firebase Analytics component of the Firebase JS SDK.
+node-os-utils	SunilWang/node-os-utils	2026-09-09	student information system	NOVEL	Advanced cross-platform operating system monitoring utilities with TypeScript support
+@openedx/frontend-build	openedx/frontend-build	2026-09-08	open edx api	NOVEL	Build tools, setup and config for frontend apps
+ng-scorm-player		2026-09-08	scorm player	NO-SLUG	Lecteur SCORM 1.2 et SCORM 2004 pour Angular : joue un paquet SCORM et remonte progression, score, t
+jbnu-lms-mcp	moon0825/jbnu-lms-student	2026-09-08	lms mcp	HELD	전북대학교 LMS 학생용 조회·학업지원·피드백 MCP 서버 (Windows/macOS 로컬 STDIO)
+@graphql-tools/batch-execute	graphql-hive/gateway	2026-09-08	blackboard learn api	NOVEL	A set of utils for faster development of GraphQL tools
+openid-client	panva/openid-client	2026-09-05	moodle api client	NOVEL	OAuth 2 / OpenID Connect Client API for JavaScript Runtimes
+@drizzle-team/brocli	drizzle-team/brocli	2026-09-04	blackboard learn api	NOVEL	Modern type-safe way of building CLIs
+@longsightgroup/lti-tool	LongsightGroup/lti-tool	2026-09-02	lti 1.3 advantage	NOVEL	LTI 1.3 implementation for Node.js with framework and storage adapters
+ts-fsrs	open-spaced-repetition/ts-fsrs	2026-09-01	adaptive learning spaced repetition	HELD	ts-fsrs is a versatile package written in TypeScript that supports ES modules, CommonJS, and UMD. It
+@deepseek-ai/dsh-session-projection-cache	deepseek-ai/deepseek-harness	2026-08-10	xapi learning record store	NOVEL	Persisted projection cache (ctx.sessionProjectionCache): durable per-session projection checkpoints 
+@conform-ed/contracts	conform-ed/conform-ed	2026-07-27	onreoster oneroster	HELD	
+emnapi	toyobayashi/emnapi	2026-07-25	blackboard learn api	NOVEL	Node-API implementation for Emscripten
+tar	isaacs/node-tar	2026-07-24	student information system	NOVEL	tar for node
+@studiolxd/xapi	studiolxd/xapi	2026-07-23	xapi learning record store	NOVEL	Framework-agnostic xAPI (Experience API / Tin Can) client for browsers, Node and any LRS, with thin 
+@openhpi/quiz-recap	christophblessing/quiz-recap	2026-07-23	adaptive learning spaced repetition	NOVEL	Component for quiz recapitulation in education.
+serverless-domain-manager	amplify-education/serverless-domain-manager	2026-07-21	education mcp server	NOVEL	Serverless plugin for managing custom domains with API Gateways.
+claude-cup	Itaib24/Claude-	2026-07-19	education mcp server	NOVEL	Claude Cup — worldwide building contest. Track your Value/Token Ratio, climb the real-time leaderboa
+@timeback/types		2026-07-18	qti assessment	NO-SLUG	Shared TypeScript types and Zod schemas for Timeback platform protocols
+@ruvector/sona	ruvnet/ruvector	2026-07-17	xapi learning record store	NOVEL	Self-Optimizing Neural Architecture (SONA) - Runtime-adaptive learning with LoRA, EWC++, and Reasoni
+@longsightgroup/oneroster	LongsightGroup/oneroster	2026-07-15	onreoster oneroster	HELD	Faithful OneRoster 1.2 for TypeScript — CSV and portable REST contracts, consumers, and provider hel
+@clerk/mcp-tools	clerk/mcp-tools	2026-07-14	education mcp server	NOVEL	Tools for writing MCP clients and servers without pain
+@eduware/oneroster	Eduware-Inc/eduware-oneroster	2026-07-10	onreoster oneroster	HELD	A TypeScript/JavaScript SDK for the OneRoster API standard - manage students, teachers, classes, enr
+@likr/canvas-lms-mcp	likr/canvas-lms-agent	2026-07-09	lms mcp	NOVEL	Model Context Protocol (MCP) Server for Canvas LMS
+@openedx/frontend-base	openedx/frontend-base	2026-07-08	open edx api	NOVEL	Build tools, setup and config for frontend apps
+@instructure/grading-utils		2026-07-07	gradebook grading	NO-SLUG	Grading utilities for Instructure apps.
+@edx/frontend-platform	openedx/frontend-platform	2026-07-01	open edx api	NOVEL	Foundational application framework for Open edX micro-frontend applications.
+asciinema-player	asciinema/asciinema-player	2026-06-30	scorm player	NOVEL	Web player for terminal session recordings.
+@pm2/js-api	keymetrics/km.js	2026-06-29	moodle api client	NOVEL	PM2.io API Client for Javascript
+am-i-vibing	ascorbic/am-i-vibing	2026-06-23	ai tutor agent	NOVEL	Detect agentic coding environments and AI assistant tools
+@agentv/core	EntityProcess/agentv	2026-06-19	gradebook grading	NOVEL	Primitive runtime components for AgentV
+@atomicjolt/lti-types		2026-06-18	lti 1.3 advantage	NO-SLUG	LTI Typescript definitions.
+@atomicjolt/lti-client		2026-06-18	lti 1.3 advantage	NO-SLUG	Client Javascript libraries to handle LTI.
+@atomicjolt/lti-server		2026-06-18	lti 1.3 advantage	NO-SLUG	Server side Javascript libraries to handle LTI
+eslint-config-brightspace	Brightspace/eslint-config-brightspace	2026-06-18	brightspace d2l api	NOVEL	Common Brightspace eslint configs.
+@babel/helper-remap-async-to-generator	babel/babel	2026-06-17	curriculum generator ai	NOVEL	Helper function to remap async functions to generators
+@babel/plugin-transform-async-to-generator	babel/babel	2026-06-17	curriculum generator ai	NOVEL	Turn async functions into ES2015 generators
+@open-spaced-repetition/binding	open-spaced-repetition/ts-fsrs	2026-06-06	adaptive learning spaced repetition	HELD	Node.js bindings for the FSRS Optimizer implemented in Rust and compiled to WASI.
+@open-spaced-repetition/binding-linux-x64-gnu	open-spaced-repetition/ts-fsrs	2026-06-06	adaptive learning spaced repetition	HELD	Node.js bindings for the FSRS Optimizer implemented in Rust and compiled to WASI.
+@open-spaced-repetition/binding-linux-x64-musl	open-spaced-repetition/ts-fsrs	2026-06-06	adaptive learning spaced repetition	HELD	Node.js bindings for the FSRS Optimizer implemented in Rust and compiled to WASI.
+@open-spaced-repetition/binding-linux-arm64-gnu	open-spaced-repetition/ts-fsrs	2026-06-06	adaptive learning spaced repetition	HELD	Node.js bindings for the FSRS Optimizer implemented in Rust and compiled to WASI.
+@open-spaced-repetition/binding-wasm32-wasi	open-spaced-repetition/ts-fsrs	2026-06-06	adaptive learning spaced repetition	HELD	Node.js bindings for the FSRS Optimizer implemented in Rust and compiled to WASI.
+@open-spaced-repetition/binding-win32-x64-msvc	open-spaced-repetition/ts-fsrs	2026-06-06	adaptive learning spaced repetition	HELD	Node.js bindings for the FSRS Optimizer implemented in Rust and compiled to WASI.
+@open-spaced-repetition/binding-darwin-arm64	open-spaced-repetition/ts-fsrs	2026-06-06	adaptive learning spaced repetition	HELD	Node.js bindings for the FSRS Optimizer implemented in Rust and compiled to WASI.
+@open-spaced-repetition/binding-linux-arm64-musl	open-spaced-repetition/ts-fsrs	2026-06-06	adaptive learning spaced repetition	HELD	Node.js bindings for the FSRS Optimizer implemented in Rust and compiled to WASI.
+@open-spaced-repetition/binding-android-arm64	open-spaced-repetition/ts-fsrs	2026-06-06	adaptive learning spaced repetition	HELD	The aarch64-linux-android native binary for @open-spaced-repetition/binding
+@open-spaced-repetition/binding-win32-arm64-msvc	open-spaced-repetition/ts-fsrs	2026-06-06	adaptive learning spaced repetition	HELD	Node.js bindings for the FSRS Optimizer implemented in Rust and compiled to WASI.
+@open-spaced-repetition/binding-darwin-x64	open-spaced-repetition/ts-fsrs	2026-06-06	adaptive learning spaced repetition	HELD	Node.js bindings for the FSRS Optimizer implemented in Rust and compiled to WASI.
+property-information	wooorm/property-information	2026-06-01	student information system	NOVEL	Info on the properties and attributes of the web platform
+@freecodecamp/curriculum-helpers	freeCodeCamp/curriculum-helpers	2026-05-28	curriculum generator ai	NOVEL	Helper functions to test challenges in freeCodecamp's curriculum
+universal-analytics	peaksandpies/universal-analytics	2026-05-12	caliper analytics	NOVEL	A node module for Google's Universal Analytics tracking
+@semantic-release/release-notes-generator	semantic-release/release-notes-generator	2026-05-08	curriculum generator ai	NOVEL	semantic-release plugin to generate changelog content with conventional-changelog
+workbox-google-analytics	googlechrome/workbox	2026-05-04	caliper analytics	NOVEL	Queues failed requests and uses the Background Sync API to replay them when the network is available
+rhizome-lms-mcp	Mckaroff/GraphLMS	2026-05-03	lms mcp	NOVEL	MCP server for Rhizome LMS — list, create and edit knowledge-graph projects (course / wiki / tracker
+@openedx/brand-openedx	openedx/brand-openedx	2026-04-30	open edx api	NOVEL	The default branding and SASS theme package containing for Open edX applications. This package is de
+@vimeo/player	vimeo/player.js	2026-04-29	scorm player	NOVEL	Interact with and control an embedded Vimeo Player.
+@segment/analytics-core	segmentio/analytics-next	2026-04-29	caliper analytics	NOVEL	This package represents core 'shared' functionality that is shared by analytics packages. This is no
+@xapi/xapi	xapijs/xapi	2026-04-27	xapi learning record store	HELD	Communicate over xAPI using JavaScript.
+graphql-zeus-core	graphql-editor/graphql-zeus	2026-04-08	quiz generator llm	NOVEL	Strongly Typed GraphQL from the team at [GraphQL Editor](https://graphqleditor.com/)
+graphql-zeus	graphql-editor/graphql-zeus	2026-04-08	quiz generator llm	NOVEL	Generate Client Library for GraphQL Schema
+adaptivecards	microsoft/AdaptiveCards	2026-04-07	adaptive learning spaced repetition	NOVEL	Adaptive Cards Javascript library for HTML Clients
+@groton/canvas-api	groton-school/canvas-cli	2026-04-06	canvas lms api	NOVEL	Typed access to Canvas LMS API with embedded documentation
+scorm-player	shmelevsergei/scorm-player-2004	2026-03-30	scorm player	NOVEL	SCORM 2004 player, unpacker and manifest parser for Node.js / Next.js with storage adapters and Reac
+@opentelemetry/api	open-telemetry/opentelemetry-js	2026-03-25	open edx api	NOVEL	Public API for OpenTelemetry
+@rishblob/canvas-mcp-server	risnake/canvas-mcp-server	2026-03-22	canvas lms api	NOVEL	MCP server for Canvas LMS API
+@vercel/analytics	vercel/analytics	2026-03-12	caliper analytics	NOVEL	Gain real-time traffic insights with Vercel Web Analytics
+react-h5-audio-player	lhz516/react-h5-audio-player	2026-03-07	scorm player	NOVEL	A customizable React audio player. Written in TypeScript. Mobile compatible. Keyboard friendly
+@heroui/system	heroui-inc/heroui	2026-03-07	student information system	NOVEL	HeroUI system primitives
+n8n-nodes-genius-sis	virtualarkansas/n8n-nodes-genius-sis	2026-03-04	student information system	NOVEL	n8n community nodes for Genius SiS (Student Information System)
+@owen-x-tech/canvas-mcp	owentaylor/canvas-mcp	2026-02-23	lms mcp	HELD	Canvas LMS MCP Server - Comprehensive integration with Canvas via Claude
+@mtgibbs/canvas-lms-mcp	mtgibbs/canvas-lms-mcp	2026-02-13	lms mcp	HELD	Canvas LMS MCP (Model Context Protocol) server for AI assistants. Query student grades, assignments,
+react-render-utils	devmohitagarwal/react-render-utils	2026-02-07	gradebook grading	NOVEL	![npm_version](https://img.shields.io/npm/v/react-render-utils) ![license](https://img.shields.io/np
+@hubroeducation/ltijs	dmolin/ltijs	2026-01-30	lti 1.3 advantage	NOVEL	Easily turn your web application into a LTI 1.3 Learning Tool.
+canvas-lms-api	beardon/canvas-lms-api	2026-01-29	canvas lms api	NOVEL	Promise-driven accessor for the Canvas LMS API
+@edx/browserslist-config	openedx/browserslist-config	2026-01-27	open edx api	NOVEL	Shared browserslist config for Open edX
+timeback-cli		2026-01-14	onreoster oneroster	NO-SLUG	
+@amplitude/analytics-types	amplitude/Amplitude-TypeScript	2026-01-14	caliper analytics	NOVEL	Shared types used for Ampilitude Analytics Typescript packages
+@react-google-maps/infobox	JustFly1984/react-google-maps-api	2026-01-11	classroom google api	NOVEL	InfoBox for React.js Google Maps API
+@react-google-maps/marker-clusterer	JustFly1984/react-google-maps-api	2026-01-11	classroom google api	NOVEL	Marker Clusterer for React.js Google Maps API
+@react-google-maps/api	JustFly1984/react-google-maps-api	2025-12-16	classroom google api	NOVEL	React.js Google Maps API integration
+@lssm/modules.learning-journey		2025-12-06	adaptive learning spaced repetition	NO-SLUG	Comprehensive learning journey engine - onboarding, LMS, flashcards, gamification, and AI personaliz
+envinfo	tabrindle/envinfo	2025-11-27	student information system	NOVEL	Info about your dev environment for debugging purposes
+@brightspace-ui/browserslist-config	BrightspaceUI/browserslist-config	2025-11-27	brightspace d2l api	NOVEL	Shareable browserslist configuration for D2L applications
+react-player	cookpete/react-player	2025-11-13	scorm player	NOVEL	A React component for playing a variety of URLs, including file paths, Mux, YouTube, Vimeo, and Wist
+mochawesome-report-generator	adamgruber/mochawesome-report-generator	2025-11-05	quiz generator llm	NOVEL	Generates gorgeous HTML reports from mochawesome reporter.
+octokit	octokit/octokit.js	2025-10-31	moodle api client	NOVEL	The all-batteries-included GitHub SDK for Browsers, Node.js, and Deno
+@playcademy/timeback-dashboard		2025-10-21	onreoster oneroster	NO-SLUG	Development dashboard for visualizing TimeBack data (Phase 1: real API).
+@atomicjolt/lti-endpoints		2025-10-08	lti 1.3 advantage	NO-SLUG	A library of endpoints that can be added to a hono app to handle an LTI launch
+is-generator-function	inspect-js/is-generator-function	2025-09-30	curriculum generator ai	NOVEL	Determine if a function is a native generator function.
+generator-function	TimothyGu/generator-function	2025-09-30	curriculum generator ai	NOVEL	A function that returns the normally hidden `GeneratorFunction` constructor
+@edx/frontend-component-cookie-policy-banner	openedx/frontend-component-cookie-policy-banner	2025-09-25	open edx api	NOVEL	The edX cookie policy banner component implemented in React.
+@alipeople/n8n-nodes-sendon	alipeople/n8n-nodes-sendon	2025-08-26	lms mcp	NOVEL	Sendon node and tool package for n8n
+ssh2	mscdex/ssh2	2025-08-20	moodle api client	NOVEL	SSH2 client and server modules written in pure JavaScript for node.js
+@edx/eslint-config	openedx/eslint-config	2025-08-13	open edx api	NOVEL	ESLint configuration for edX JavaScript code.
+@analytics/core	DavidWells/analytics	2025-08-09	caliper analytics	NOVEL	Lightweight analytics library for tracking events, page views, & identifying users. Works with any t
+analytics	DavidWells/analytics	2025-08-09	caliper analytics	NOVEL	Lightweight analytics library for tracking events, page views, & identifying users. Works with any t
+gl-matrix	toji/gl-matrix	2025-08-08	blackboard learn api	NOVEL	Javascript Matrix and Vector library for High Performance WebGL apps
+analytics-utils	DavidWells/analytics	2025-08-07	caliper analytics	NOVEL	Analytics utility functions used by 'analytics' module
+html-aria	drwpow/html-aria	2025-07-27	lti 1.3 advantage	NOVEL	Utilities for creating accessible HTML based on the latest ARIA 1.3 specs. Lightweight, performant, 
+@iota-big3/sdk-education-sis		2025-07-27	student information system	NO-SLUG	Student Information System SDK for IOTA Big3
+canvas-mcp-server	DMontgomery40/mcp-canvas-lms	2025-06-27	lms mcp	HELD	A comprehensive Model Context Protocol (MCP) server for Canvas LMS with full student functionality a
+@superbuilders/oneroster	trilogy-group/oneroster-ts	2025-06-27	onreoster oneroster	HELD	Developer-friendly & type-safe Typescript SDK specifically catered to leverage *oneroster* API.
+@superbuilders/powerpath	trilogy-group/powerpath-ts	2025-06-27	onreoster oneroster	NOVEL	Developer-friendly & type-safe Typescript SDK specifically catered to leverage *@superbuilders/power
+@edly-io/indigo-brand-openedx	edly-io/brand-openedx	2025-06-25	open edx api	NOVEL	The default branding and SASS theme package containing for Open edX applications. This package is de
+@annoto/ims-lti	Annoto/ims-lti	2025-06-16	lti 1.3 advantage	NOVEL	Module for building an LTI Tool Provider and accept LTI launch requests
+@mwhepworth/canvas-lms-core		2025-05-28	canvas lms api	NO-SLUG	Core Canvas LMS API client and utilities
+@atomicjolt/canvas-api-client		2025-05-19	canvas lms api	NO-SLUG	A TypeScript client for the Canvas LMS API.
+qti3-item-player		2025-05-14	qti assessment	NO-SLUG	QTI 3 Item Player
+qti3-item-player-vue3		2025-05-14	qti assessment	NO-SLUG	QTI 3 Item Player implemented with Vue 3
+n8n-nodes-canvas	BYUI-Information-Technology/canvas-n8n-node	2025-05-10	canvas lms api	NOVEL	n8n node to interact with Canvas LMS API for courses, assignments, modules, users, and more
+mcp-canvas-lms		2025-04-11	lms mcp	NO-SLUG	Canvas LMS MCP server
+lms-mcp		2025-04-05	lms mcp	NO-SLUG	MCP Server For LMS
+supermemo	VienDinhCom/supermemo	2025-03-20	adaptive learning spaced repetition	NOVEL	A JavaScript/TypeScript implementation of the SuperMemo 2 (SM2) algorithm for spaced based repetitio
+@edx/frontend-enterprise-hotjar	openedx/frontend-enterprise	2025-02-25	open edx api	NOVEL	Utils for Hotjar.
+@escolalms/scorm-player		2025-02-18	scorm player	NO-SLUG	A React SCORM preview component with a SCORM-loading service worker
+shortid	dylang/shortid	2025-01-23	lti 1.3 advantage	NOVEL	Amazingly short non-sequential url-friendly unique id generator.
+ci_moodleclient		2025-01-17	moodle api client	NO-SLUG	moodle API client
+@nextui-org/system	nextui-org/nextui	2025-01-05	student information system	NOVEL	NextUI system primitives
+edx-ui-toolkit	openedx/edx-ui-toolkit	2024-12-02	open edx api	NOVEL	A JavaScript toolkit for building edX user interfaces
+jwk-to-pem	Brightspace/node-jwk-to-pem	2024-11-25	brightspace d2l api	NOVEL	Convert a JSON Web Key to a PEM
+d2l-fetch-dedupe		2024-11-25	brightspace d2l api	NO-SLUG	Provides a middleware function for de-duplicating fetch requests for the same url+auth combination
+@lottiefiles/lottie-player	LottieFiles/lottie-player	2024-11-04	scorm player	NOVEL	Lottie animation and Telegram Sticker player web components.
+node-canvas-api	ubc/node-canvas-api	2024-10-30	canvas lms api	NOVEL	Canvas LMS API for Node
+@xapi/cmi5	xapijs/cmi5	2024-10-06	xapi learning record store	HELD	Communicate over the xAPI cmi5 profile using JavaScript.
+@edx/typescript-config	openedx/typescript-config	2024-08-08	open edx api	NOVEL	TypeScript configuration for edX JavaScript code.
+@alexcdot/googleapis-classroom	googleapis/google-api-nodejs-client	2024-08-07	classroom google api	NOVEL	classroom
+lti-1p3-ags	Tyru5/1EdTech-LTI-1-3	2024-07-20	lti 1.3 advantage	HELD	Node.js implementation for the LTI 1.3 Assignment Grading Services specification. Handles lineitem C
+@upstash/core-analytics		2024-07-19	caliper analytics	NO-SLUG	<div align="center">     <h1 align="center">@upstash/core-analytics</h1>     <h5>Serverless Analytic
+@gradebook/time	gradebook/utils	2024-07-16	gradebook grading	NOVEL	Make time-based work fun again
+ssr-student-information-system06		2024-05-23	student information system	NO-SLUG	"# ssr-student-information-system"
+tincants		2024-04-24	xapi learning record store	NO-SLUG	A typed version of TinCanJs
+videojs-record	collab-project/videojs-record	2024-04-05	xapi learning record store	NOVEL	A video.js plugin for recording audio/video/image files.
+natusdolorem	CandelarioStracke/natusdolorem	2024-04-03	canvas lms api	NOVEL	Strongly typed canvas lms api
+quidemquasi	GisselleLuettgen/quidemquasi	2024-04-03	canvas lms api	NOVEL	Strongly typed canvas lms api
+temporaquaerat	AnyaWalsh/temporaquaerat	2024-04-02	canvas lms api	NOVEL	Strongly typed canvas lms api
+velrepellendus	SadyeSpinka/velrepellendus	2024-04-02	canvas lms api	NOVEL	Strongly typed canvas lms api
+arch	feross/arch	2024-02-12	student information system	NOVEL	Better `os.arch()` for node and the browser -- detect OS architecture
+@gradebook/release-utils	gradebook/utils	2024-01-10	gradebook grading	NOVEL	Utilities to make CI-based releases painless
+@edx/frontend-build	openedx/frontend-build	2023-12-15	open edx api	NOVEL	Build tools, setup and config for frontend apps
+@types/jwk-to-pem	DefinitelyTyped/DefinitelyTyped	2023-11-07	brightspace d2l api	NOVEL	TypeScript definitions for jwk-to-pem
+image-compare-viewer	kylewetton/image-compare-viewer	2023-10-30	gradebook grading	NOVEL	A fully responsive slider to compare before and after images for grading, retouching and all else. M
+@edx/stylelint-config-edx	openedx/stylelint-config-edx	2023-10-25	open edx api	NOVEL	Stylelint configs for edX Sass files.
+@edx/paragon	openedx/paragon	2023-10-24	open edx api	HELD	Accessible, responsive UI component library based on Bootstrap.
+@edx/brand-openedx	openedx/brand-openedx	2023-10-19	open edx api	NOVEL	The default branding and SASS theme package containing for Open edX applications. This package is de
+aspen-api		2023-06-15	student information system	NO-SLUG	An API client library for interacting with Aspen, a Student Information System (SIS) created by Foll
+@artevelde-uas/canvas-lms-api	artevelde-uas/canvas-lms-api	2023-04-18	canvas lms api	NOVEL	Canvas LMS API for use in the browser
+@learninglocker/xapi-service	LearningLocker/xapi-service	2023-03-24	xapi learning record store	NOVEL	A service for the xAPI
+@learninglocker/xapi-validation	LearningLocker/xapi-validation	2023-02-17	xapi learning record store	NOVEL	Validation library for the xAPI.
+youtube-player	gajus/youtube-player	2023-02-13	scorm player	NOVEL	YouTube IFrame Player API abstraction.
+@alumnio/canvas-client		2023-01-25	canvas lms api	NO-SLUG	Node.JS Client for connecting to the Open Canvas LMS API
+frontend-component-header-vi	openedx/frontend-component-header	2022-12-22	open edx api	NOVEL	The standard header for Open edX
+adaptivecards-templating	microsoft/AdaptiveCards	2022-09-20	adaptive learning spaced repetition	NOVEL	Adaptive Card data binding and templating engine for JavaScript
+@universis/percentile-ranking		2022-08-22	student information system	NO-SLUG	Percentile ranking is a vital part of any student information system. It indicates how well a studen
+@maxim_mazurok/gapi.client.classroom	Maxim-Mazurok/google-api-typings-generator	2022-08-11	classroom google api	NOVEL	TypeScript typings for Google Classroom API v1
+analytics-node	segmentio/analytics-node	2022-08-02	caliper analytics	NOVEL	The hassle-free way to integrate analytics into any Node.js application
+react-ga	react-ga/react-ga	2022-06-16	caliper analytics	NOVEL	React Google Analytics Module
+simple-scorm-packager	lmihaidaniel/simple-scorm-packager	2022-05-27	scorm player	NOVEL	Simple way to package your scorm projects
+is-generator-fn	sindresorhus/is-generator-fn	2021-08-11	curriculum generator ai	NOVEL	Check if something is a generator function
+vue-scorm-player		2021-07-31	scorm player	NO-SLUG	```bash npm install scorm-player ```
+ltijs-sequelize	Cvmcosta/ltijs-sequelize	2021-06-11	lti 1.3 advantage	HELD	Ltijs Sequelize Database Plugin
+onerostermicroservice		2021-06-07	onreoster oneroster	NO-SLUG	## Running tests
+uoft-canvas-api	goelbenj/uoft-canvas-api	2021-02-19	canvas lms api	NOVEL	Canvas LMS API for Node
+@gradebook/fast-pluralize	gradebook/utils	2020-09-21	gradebook grading	NOVEL	Singularize and pluralize words
+canvas-api-ts		2020-08-25	canvas lms api	NO-SLUG	Strongly typed canvas lms api
+lti-node-library	SanDiegoCodeSchool/lti-node-library	2019-08-05	lti 1.3 advantage	HELD	This is a published npm package for implementing an IMS-Global LTI v1.3 conformant Tool Provider.
+@learninglocker/xapi-statements	LearningLocker/xapi-statements	2019-07-26	xapi learning record store	NOVEL	A service for xAPI statements
+d2l-intl	Brightspace/intl	2019-05-03	brightspace d2l api	NOVEL	D2L internationalization APIs for number, date and time formatting and parsing.
+@lrnwebcomponents/lrn-gradebook	elmsln/lrnwebcomponents	2019-04-29	gradebook grading	NOVEL	Makings of a gradebook
+ecdsa-sig-formatter	Brightspace/node-ecdsa-sig-formatter	2019-01-25	brightspace d2l api	NOVEL	Translate ECDSA signatures between ASN.1/DER and JOSE-style concatenation
+@edx/gradebook	edx/gradebook	2019-01-23	gradebook grading	NOVEL	edx editable gradebook-ui to manipulate grade overrides on subsections
+superagent-d2l-session-auth	Brightspace/superagent-d2l-session-auth	2018-12-17	brightspace d2l api	NOVEL	A superagent plugin that adds D2L auth headers
+moodle-client	mudrd8mz/node-moodle-client	2018-09-23	moodle api client	NOVEL	Node.js client for Moodle web services API
+eslint-config-edx	edx/eslint-config-edx	2018-07-05	open edx api	NOVEL	ESLint config for edX JavaScript ES2015+ code.
+canvas-api	neurotech/canvas-api	2018-05-02	canvas lms api	NOVEL	A Promise-based collection of helper methods for the Canvas LMS API.
+xapi-agents	LearningLocker/xapi-agents	2018-01-05	xapi learning record store	HELD	A server for xAPI agents
+xapi-statements	LearningLocker/xapi-statements	2017-12-21	xapi learning record store	NOVEL	A service for xAPI statements
+learning_locker	LearningLocker/learninglocker	2017-11-22	xapi learning record store	HELD	An open source learning record store
+xapi-validation	LearningLocker/xapi-validation	2017-11-06	xapi learning record store	NOVEL	Validation library for the xAPI.
+passport-lti	civitaslearning/passport-lti	2016-08-12	lti 1.3 advantage	NOVEL	Passport-based LTI authorization
+pipwerks-scorm-api-wrapper	allanhortle/pipwerks-scorm-api-wrapper	2016-02-23	scorm player	NOVEL	Module wrapper for the Pipwerks SCORM API Wrapper
+node-canvas-lms	cs10/node-canvas-lms	2016-01-23	canvas lms api	NOVEL	A simple callback based Canvas LMS API
+ims-lti	omsmith/ims-lti	2015-10-27	lti 1.3 advantage	HELD	Module for building an LTI Tool Provider and accept LTI launch requests

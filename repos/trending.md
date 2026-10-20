@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 335 — a platform's own satellite packages carry the platform's licence, and the PROPRIETARY vendor is the permissive one
+
+🔵 **p334's T25 measured MCP connectors and found the permissive ones pointing at proprietary LMSs. p335 measures the tier above it — the packages a platform publishes about ITSELF — and the inversion is sharper there.**
+
+| platform | nature of the platform | its own published packages | grant, payload read first-hand |
+|---|---|---|---|
+| **Open edX** | 🟢 open source (AGPL-3.0) | `@openedx/frontend-base`, `@openedx/frontend-build`, `@edx/frontend-platform` | 🔴 **AGPL-3.0** — 34,523 / 34,523 / 34,520 B |
+| **D2L Brightspace** | 🔴 **proprietary** | `@brightspace-ui/core`, `@brightspace-ui/labs`, `@brightspace-ui/intl`, `d2l-test-reporting` | 🟢 **Apache-2.0** — **10,421 B, byte-identical across all four lanes** |
+
+🟢 **T26, and it is a build-time fact, not a philosophical one.** A studio building an **Open edX** front end on the vendor's **own build tooling** pulls **AGPL-3.0** into the build chain. A studio building a **D2L** front end on the vendor's **own component library** gets **Apache-2.0 — with a patent grant**. 🔴 **The open-source platform is the constrained one. The proprietary vendor's open components are the ones a client deliverable can absorb.**
+
+🔵 **The mechanism, same as T25's: a first-party satellite inherits the parent's licence by default, so an AGPL platform emits AGPL tooling. A proprietary vendor has no copyleft parent to inherit from and picks the licence that maximises adoption of its design system.** 🟡 **Bound: 7 package lanes across 2 platforms, read on the payload channel. A measured pattern, not a census — and the falsifier is named: a copyleft platform publishing permissive satellites, or a proprietary vendor publishing copyleft ones.**
+
+### 🟢 `@brightspace-ui/core` is the deepest bench these shelves have measured
+
+**9,598 commits · 180 distinct authors · 1,020 commits in 2026 · 2,121 published npm versions · head 2026-10-19 · `d2l.com` on 2,748 commits.** 🟢 **Apache-2.0, 10,421 B.** 🔵 **It is an accessibility-first component library maintained by a vendor whose LMS a studio will meet in a real engagement**, and nothing on these shelves comes close to it on bench depth. 🟡 **It is UI infrastructure, not an agent** — recorded in `repos/foundations.md`, and on the agent shelf only as a build-on row.
+
+### 🔴 The copyleft rows from the same sweep, recorded so they are not re-probed
+
+| repo | grant, first-hand | why it matters anyway |
+|---|---|---|
+| `groton-school/canvas-cli` | 🔴 **GPL-3.0, 35,149 B** — and npm `@groton/canvas-api` declares **no licence at all** | **324 commits in 2026** from a school district's own IT shop (`groton.org`, 737 c) — a real institutional Canvas client, unusable in a deliverable |
+| `openedx/frontend-base` | 🔴 AGPL-3.0, 34,523 B | 3,341 c · 161 a — the Open edX front-end future; **read it, do not embed it** |
+| `openedx/frontend-platform` | 🔴 AGPL-3.0, 34,520 B | 1,151 c · 92 a · head 2026-10-18 |
+
+---
+
+
 ## 2026-10-20 — Pass 334 — the MCP connector shelf was deleted from the curated file and survived here, which is the clearest case this base has made for its own append-only rule
 
 🔵 **This file exists because a trending record rewritten every pass destroys the trend it records.** 🟢 **p334 is the pass where that rule paid for itself in data rather than in principle.**

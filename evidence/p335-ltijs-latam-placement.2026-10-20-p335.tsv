@@ -1,0 +1,5 @@
+slug	commits	authors	c2026	first_commit	head	root_commit_author	top_offset	top_domain	placement	instrument
+Cvmcosta/ltijs	575	17	51	2019-05-30	2026-10-13	cvmcosta@yahoo.com.br	-0300(513/575)	yahoo.com.br(429)	LATAM — Brazil	commit-email + offset, first-hand bare clone
+dmolin/ltijs	484	11	3	2019-05-30	2026-08-17	cvmcosta@yahoo.com.br	-0300(425/484)	yahoo.com.br(425)	LATAM — Brazil (fork)	same root commit as canonical
+lti-tool/lti-tool	346	6	235	2025-10-02	2026-10-19	thejayjay@gmail.com	-0400(158)	users.noreply.github.com(161)	North America	commit-email + offset
+LongsightGroup/lti-tool	414	5	303	2025-10-02	2026-09-02	thejayjay@gmail.com	-0400(235)	longsight.com(140)	ALIAS of lti-tool/lti-tool	identical root e02ba195; 301 shared commits

@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 335 — the discovery channel that worked was the package registry, not the search engine; and the region the last five passes called empty was sitting on this base's own build tier
+
+🔵 **p334 refuted p333's "the external channel is saturated" by changing query GRANULARITY. p335 refutes the remaining half by changing the CHANNEL.** 🔴 **The four prescribed global search legs returned 0 new slugs — sixth consecutive measurement.** 🟢 **One `npm` registry sweep returned 362 packages, 314 with a GitHub slug, of which 44 were education-relevant and never seen in this corpus. 29 were probed on both channels; 7 cleared the bar.**
+
+### 🔴 The prescribed global legs, sixth consecutive zero
+
+| leg | query | never-seen slugs |
+|---|---|---|
+| global — agents | `top open source AI agents education 2026 github MIT` | 🔴 **0** — returns `microsoft/ai-agents-for-beginners` and general-agent listicles; one result is a content farm recommending a repo by star count it attributes to a LinkedIn post |
+| global — trending | `github trending education AI 2026` | 🔴 **0** — `github.com/trending` itself answers **403** from this environment; the trackers that proxy it return AI-engineering curricula, not education software |
+| global — verticals | `open source platform education SIS ERP MIT Apache` | 🔴 **0 new** — OpenEduCat (LGPL-3.0), Kuali, openSIS, Compiere: all carried, and **none is MIT or Apache**, which the leg's own phrasing presumes |
+| global — trends | `AI education industry trends 2026` | 🔴 **0 new repos**; market spread $6.4B–$8.3B (2025) reconciles to what `intel/market.md` already records |
+
+### 🟢 The leg that worked — `registry.npmjs.org/-/v1/search`, 20 query shapes
+
+🟢 **This is `ACTION TJ`'s channel, independently re-derived.** `README.md:6624` already records it as *"the richest single harvest these shelves have had"* and already states the reason: **"the registry carries the release history and the last publish date, and a trending list carries neither."** 🔴 **Sixth instance of the p334 class — the instrument was built, documented, and not re-run.** Full sweep: [`evidence/p335-npm-sweep-candidates`](../evidence/p335-npm-sweep-candidates.2026-10-20-p335.tsv).
+
+🟡 **Its honest cost: signal-to-noise is poor.** 362 packages for 44 education-relevant hits — the word `canvas` alone drags in `@napi-rs/canvas`, `canvas-confetti` and `node-canvas`, and `classroom` drags in Google API typings. **The registry is a good channel for a named standard (`LTI`, `xAPI`, `SCORM`, `QTI`, `OneRoster`) and a poor one for a concept (`AI tutor`).**
+
+### 🟢 Nine never-before-seen slugs, every figure first-hand
+
+| slug | grant (payload) | activity, bare clone | placed |
+|---|---|---|---|
+| `BrightspaceUI/core` | 🟢 Apache-2.0, 10,421 B | 🟢 **9,598 c · 180 a · 1,020 in 2026 · head 2026-10-19** | 🟢 **NA**, `d2l.com(2,748)` |
+| `openedx/frontend-base` | 🔴 AGPL-3.0, 34,523 B | 3,341 c · 161 a · 125 in 2026 | 🟢 **NA**, `edx.org(553)` |
+| `Brightspace/test-reporting-node` | 🟢 Apache-2.0, 10,421 B | 🟢 1,129 c · 13 a · 358 in 2026 | 🟢 **NA**, `D2L.com(246)` |
+| `chrischall/gogcli-mcp` | 🟢 MIT, 1,067 B | 🟢 498 c · 5 a · all in 2026 | 🟢 **NA**, `-0400(373)` |
+| `groton-school/canvas-cli` | 🔴 **GPL-3.0, 35,149 B** | 787 c · 3 a · **324 in 2026** | 🟢 **NA**, `groton.org(737)` |
+| `harvard-edtech/caccl` | 🟢 MIT, 1,075 B © Harvard University | 🟡 655 c · 3 a · 27 in 2026 | 🟢 **NA**, `harvard.edu(3)` |
+| `christophblessing/quiz-recap` | 🟢 MIT, 1,075 B | 🟡 288 c · 5 a · 19 in 2026 | 🟢 **EMEA — Germany**, `hpi.de(1)` |
+| `scormflow/scorm-engine-client` | 🟢 MIT, 1,079 B | 🟢 45 c · 2 a · all in 2026 | 🟢 **APAC — India**, `+0530(45)` |
+| `likr/canvas-lms-agent` | 🔴 **none in repo** (npm says MIT) | 68 c · 2 a · all in 2026 | 🟢 **APAC — Japan**, `likr-lab.com(68)` |
+
+🟢 **The APAC SUPPLY side is placed for the first time.** Every prior APAC row on these shelves was a **policy** instrument — MEXT, Korea's AI Basic Act, Vietnam's Decision 33/2026. 🟢 **Three producing repositories now carry an APAC placement on the commit channel: Japan (`+0900`), India (`+0530`), Vietnam (`+0700`).** 🔵 **An APAC engagement can now cite regional supply, not only regional regulation.**
+
+### 🔴 And the finding that makes the last five "LATAM is empty" entries wrong
+
+🟢 **`Cvmcosta/ltijs` — on this base's build tier since p331 — is Brazilian.** Root commit `cvmcosta@yahoo.com.br` 2019-05-30; `yahoo.com.br` **429 of 575** commits; `-0300` on **513 of 575**. [`evidence/p335-ltijs-latam-placement`](../evidence/p335-ltijs-latam-placement.2026-10-20-p335.tsv) 🔴 **Five passes ran a LATAM DISCOVERY query and recorded a gap. None ran the PLACEMENT instrument over the rows already held.**
+
+### 🔵 An alias caught before it became a duplicate entity
+
+🟢 **`LongsightGroup/lti-tool` and `lti-tool/lti-tool` are the same project** — identical root commit `e02ba195`, **301 shared commits**. The build tier carries `lti-tool/lti-tool`, and **that is the live side** (head `2026-10-19` vs `2026-09-02`). 🟢 **Recorded here so the registry channel does not re-promote the fork next pass.**
+
+### 🟡 Three live npm packages whose repositories cannot be cloned
+
+`Mckaroff/GraphLMS`, `virtualarkansas/n8n-nodes-genius-sis`, `brainjamworks/liverpool-dental-theme` — **all `CLONE-FAIL`, all with current registry listings.** 🔵 **Registry metadata outlives the source tree.** An npm grant is a claim about a published tarball, not about a repository that still exists.
+
+---
+
+
 ## 2026-10-20 — Pass 334 — the external channel is NOT saturated, it was being queried at the wrong granularity; eight search legs, nine never-before-seen slugs, two promoted
 
 🔵 **p333's headline was "the external channel is SATURATED" and p333's own gap file concluded "the English-language secondary channel does not carry APAC education policy at all".** 🔴 **Both are refuted this pass, by the same channel, with one change: the query names the country and the instrument instead of the region.** The instruction to do that has been sitting on `compose/patterns.md:338` since **p330**.

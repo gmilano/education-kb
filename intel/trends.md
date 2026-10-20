@@ -4,6 +4,31 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 335 · 2026-10-20 — three trends, one of them a correction to this base's own five-pass reading of a region
+
+### 🟢 T26 — a platform's own satellite packages carry the platform's licence, and the proprietary vendor is the permissive one
+
+**Measured, payload-first-hand, 7 package lanes across 2 platforms.** Open edX (**AGPL-3.0** platform) publishes `@openedx/frontend-base`, `@openedx/frontend-build` and `@edx/frontend-platform` under **AGPL-3.0** (34,523 / 34,523 / 34,520 B). D2L Brightspace (**proprietary** platform) publishes `@brightspace-ui/core`, `labs`, `intl` and `d2l-test-reporting` under **Apache-2.0** (**10,421 B, byte-identical across all four**).
+
+🔵 **Mechanism:** a first-party satellite inherits its parent's licence by default, so a copyleft platform emits copyleft tooling; a proprietary vendor has no copyleft parent and picks the licence that maximises adoption of its design system. 🔴 **Consequence, and it inverts the intuition a studio brings to an LMS engagement: the OPEN-SOURCE platform constrains the deliverable and the PROPRIETARY vendor does not.** 🟡 **Bound: 7 lanes, 2 platforms — a measured pattern, not a census. Falsifier: a copyleft platform shipping permissive satellites, or a proprietary vendor shipping copyleft ones.** 🟢 **Extends T25 (p334) from the third-party connector tier to the vendor-published tier, where the effect is larger.**
+
+### 🔴 T27 — the licence grant is a two-channel claim, and the two channels disagree only by going silent
+
+**29 slugs probed on both the npm `license` field and the repository licence payload.** 🔴 **8 of 27 resolvable packages (29.6%) are DECLARED-ONLY** — a permissive grant in registry metadata, **no licence file in the repository at all** (7 MIT, 1 ISC). 🔴 **2 run the other way:** `@groton/canvas-api` declares **nothing** on npm while its tree is **GPL-3.0 (35,149 B)**. 🟢 **0 genuine value mismatches where both channels speak.**
+
+🔵 **The whole error is in the silences, and it is asymmetric in cost.** A declared-only MIT is a weak grant a studio can usually live with. **An npm package with no licence field whose tree is GPL-3.0 is the ToolJet shape from p333** — a widely-installable artefact that a registry-only reading grades as unencumbered. 🟢 **Rule adopted: a shelf row records the CHANNEL of its grant, not only the value.** *"MIT (npm)"* ≠ *"MIT (payload, 1,075 B)"*.
+
+🟡 **Related and recorded:** **three packages in this sweep have live registry listings and unreachable repositories.** Registry metadata outlives the source tree, so an npm grant is a claim about a published tarball, not about a repository that still exists.
+
+### 🔴 T28 — this base's regional gaps have been discovery-channel artefacts, and the LATAM one was the expensive instance
+
+🟢 **`Cvmcosta/ltijs` is Brazilian** — root commit `cvmcosta@yahoo.com.br`, `yahoo.com.br` 429/575, `-0300` 513/575 — **and it has been on this base's build tier, unplaced, since p331** while five consecutive passes wrote *"the LATAM supply side returned nothing placeable"*.
+
+🔵 **The generalisation, which is the actually useful part:** this base has two ways to attach a region to a row — **ask the discovery channel for repositories from a region**, or **run the placement instrument over rows it already holds.** 🔴 **Every regional gap it has declared was produced by the first method alone.** 🟢 **A gap is only real once the second has been run over the whole inventory**, and that sweep has never been run. 🟡 **The APAC supply side fell to the same instrument in the same pass** — three placed rows (Japan, India, Vietnam) where every prior APAC row was a policy instrument. 🔵 **Sixth instance in seven passes of the p334 class: capability present, instrument built, never executed over the existing inventory.**
+
+---
+
+
 ## Pass 334 · 2026-10-20 — three trends, and the two re-pointed pins the `recount` hook has been asking three passes for
 
 ### 🔴 Trend 24 — RE-POINTED: the MCP inventory, which this base lost from its curated shelf and kept in its append-only one

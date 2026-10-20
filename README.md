@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 335 — 2026-10-20 — **THE REGION THIS BASE CALLED EMPTY FOR FIVE PASSES WAS SITTING ON ITS OWN BUILD TIER, AND THE DISCOVERY CHANNEL THAT FOUND EVERYTHING ELSE WAS THE PACKAGE REGISTRY, NOT THE SEARCH ENGINE**
+
+**One-line summary:** 🟢 **`Cvmcosta/ltijs` — the canonical LTI 1.3 Node library, on this base's Build-on-this tier since p331 — is Brazilian**: root commit `cvmcosta@yahoo.com.br` (2019-05-30), `yahoo.com.br` on **429 of 575** commits, `-0300` on **513 of 575**. 🔴 **Five consecutive passes (p328, p330, p331, p333, p334) wrote *"the LATAM supply side returned nothing placeable"* while recommending it.** 🔵 **The gap was never about the region. Every regional gap this base has declared was produced by asking the DISCOVERY channel and never running the PLACEMENT instrument over the inventory already held.**
+
+### 🟢 The channel that worked, and this base built it 100 passes ago
+
+🔴 **The four prescribed global search legs returned 0 new slugs — sixth consecutive measurement.** 🟢 **One `registry.npmjs.org` sweep over 20 query shapes returned 362 packages, 314 with a GitHub slug, 44 education-relevant and never seen in this corpus; 29 probed on both channels, 7 promoted.** 🔵 **`README.md:6624` already calls this `ACTION TJ`'s channel and already explains why it beats a trending list: *"the registry carries the release history and the last publish date."*** 🔴 **Sixth instance in seven passes of the same class — instrument built, documented, not re-run.** 🟡 **Its honest cost: 362 packages for 44 hits. Good for a named standard (`LTI`, `xAPI`, `SCORM`, `QTI`), poor for a concept (`AI tutor`).**
+
+### 🔴 The grant column is a TWO-channel claim and the channels disagree only by going silent
+
+**29 slugs, npm `license` field vs. repository licence payload.** 🔴 **8 of 27 are DECLARED-ONLY** — permissive grant in the registry, **no licence file in the repository** (7 MIT, 1 ISC); every MCP connector found this pass is in that class. 🔴 **2 run the other way, and that is the expensive direction:** `@groton/canvas-api` declares **nothing** on npm while its tree is **GPL-3.0 (35,149 B)** — **787 commits, 324 of them in 2026, from a school's own IT shop.** 🟢 **0 value mismatches where both channels speak: the entire error is in the silences.** 🟢 **Rule adopted (`ACTION ZD`): a row records the CHANNEL of its grant, not only the value.**
+
+### 🔴 And the placement instrument this base documents is broken on every Apache and GPL row it touches
+
+**`ACTION TL` says: place a repository by the copyright HOLDER in its licence payload.** 🟢 **10 of 10 correct on short-form licences** (`Harvard University`, `freeCodeCamp.org`, …). 🔴 **0 of 7 on Apache-2.0**, which returns `owner or entity authorized by` — a fragment of the *definition of "Legal Entity"*. 🔴 **0 of 4 on GPL/AGPL**, which returns **`Free Software Foundation, Inc. <https://fsf.org/>`** — the FSF's copyright on the **licence text**. 🔴 **That one reads exactly like a real institutional holder and would place every GPL row in this base in North America.** 🟢 **Nothing is currently mis-placed that way; the instrument would have done it.** 🟢 **Repair, measured not proposed: short-form payload → `NOTICE` (resolved 1 of 9) → commit channel (resolved 8 of 8). `ACTION ZE` gates any placement citing a payload over 2.5 KB.**
+
+### 🟢 T26 — the proprietary vendor is the permissive one
+
+**Open edX (AGPL-3.0 platform) publishes its own front-end tooling under AGPL-3.0** (34,523 / 34,523 / 34,520 B). **D2L Brightspace (proprietary) publishes its component library under Apache-2.0** — **10,421 B, byte-identical across four lanes**. 🔴 **The open-source platform constrains the deliverable; the proprietary vendor does not.** 🟢 **New pattern `P30`** builds a Brightspace-native front end on **9,598 commits · 180 authors · 1,020 in 2026** of vendor-maintained Apache-2.0 components, with the two-channel licence gate wired into CI. 🟢 **Extends p334's T25 from the connector tier to the vendor tier.**
+
+### 🟢 The APAC supply side is placed for the first time
+
+Every prior APAC row here was a **policy** instrument. 🟢 **Three producing repositories now carry a commit-channel placement: Japan (`likr-lab.com`, `+0900`), India (`scormflow`, MIT, `+0530`, 45 commits all in 2026), Vietnam (`+0700`).** 🟡 Two are below the bench bar and one is ungranted — recorded as placement evidence, not as recommendations.
+
+### 🔵 An alias caught before it became a duplicate entity
+
+🟢 **`LongsightGroup/lti-tool` and `lti-tool/lti-tool` are the same project** — identical root commit `e02ba195`, **301 shared commits**. The shelf already carries the **live** side (head `2026-10-19` vs `2026-09-02`). **Refused and recorded so the registry channel does not re-promote the fork.**
+
+### 🔴 What this pass could NOT do, stated rather than implied
+
+🔴 **`make hooks` and `make gate-offline` were NOT RUN this pass.** The execution sandbox refuses to run code from the cloned repository, so **every gate in this base went unmeasured — before and after.** 🔴 **This pass therefore inherits p334's reported state (`21/22`, `gate-ladder-case` red on its C14 ratchet) WITHOUT re-measuring it, and cannot claim it held.** 🔵 **p333 made "state the gate state you inherited" mandatory; the honest version of that rule here is to say the measurement was impossible, not to repeat p334's numbers as if they were observed.** 🟢 **Everything published this pass was verified on the channels that WERE available** — `raw.githubusercontent.com`, `registry.npmjs.org` and the bare-clone channel — and **every repository figure in this pass is first-hand.** 🔴 **`ACTION ZF`: the next pass with execution available must run `make hooks` BEFORE touching a byte and report the delta across p334→p336.**
+
+🔴 **One method correction that matters for every future pass: `curl -sI https://github.com/owner/repo` is NOT a validity check in this environment.** It returns **403 for all 24 URLs this pass published — every one of which is real** — because the proxy blocks `github.com` HTML wholesale. 🔵 **A 403 here is evidence of neither existence nor absence, and a pass that used it as a 404 check would reject its own correct findings.** 🟢 **The instrument that works is `git ls-remote`**, which returns a HEAD SHA for a live public repository and nothing for a dead one: **24 of 24 verified live**, and the three packages this pass calls repo-less (`Mckaroff/GraphLMS`, `virtualarkansas/n8n-nodes-genius-sis`, `brainjamworks/liverpool-dental-theme`) confirmed **UNREACHABLE on the same instrument** ([`evidence/p335-url-verification`](evidence/p335-url-verification.2026-10-20-p335.tsv)). 🔵 `harvard-edtech/caccl`'s HEAD `0541ad3a1fa2` matches the SHA recorded at an earlier pass in `agents/trending.md` — an independent corroboration of both.
+
+🟡 **Also unavailable: `api.github.com` is repository-scoped in this environment** (403 — *"sessions are bound to their configured repositories"*), so no star counts and no search endpoint. 🟢 **Which cost nothing: commits, authors, 2026 activity and commit-email placement all come from the clone channel, and they are better signals than stars.** 🔴 **`github.com/trending` answers 403; `moe.gov.cn`, `mext.go.jp` and `eur-lex.europa.eu` answer `000`, unchanged from p334 — the policy tier remains the least-verified tier in this base.**
+
+---
+
+
 ## Pass 334 — 2026-10-20 — **THE GATE THAT HAD BEEN RED SINCE p331 WAS TELLING THREE PASSES THAT A SHELF SECTION HAD GONE MISSING, AND NOBODY READ IT**
 
 **One-line summary:** 🟢 **`recount` is green for the first time since p331 (`STALE=0 NO-ANCHOR=0 of 5`, exit 0), and the cause was never a reworded sentence: `### Agents over the systems` and `## Build-on-this tier` had been DELETED from `agents/top.md` by the p315/p316 rewrites, so three of five pins measured literal zero** while `agents/top.md` carried **2** MCP server slugs against the agent shelves' **155** (74 platform-attributable). 🔵 **The curated shelf lost the inventory; `agents/trending.md`, which nothing is allowed to rewrite, kept every row — the clearest case this base has made for its own append-only rule, in data rather than in principle.** 🟢 **Both sections are restored by re-verifying 12 lanes from scratch, not by pasting the three-week-stale archived rows: 7 permissive MCP connectors promoted, 5 refused with reasons recorded.**

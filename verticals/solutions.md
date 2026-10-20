@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 335 · 2026-10-20 (eighth pass of this date) — the vendor-published tier: what each platform ships about ITSELF, and which of those a deliverable can absorb
+
+🔵 **p334 mapped the third-party connector into each platform. This pass maps the layer underneath it — the packages the platform's own vendor publishes — because that is what a front-end engagement actually builds on.** 🔴 **Kept in a table of its own: p334's own regression was putting a platform's licence and a connector's slug in one row, and `gate-shelf-consistency` read it as two disagreeing claims.**
+
+### 🟢 Platform core — unchanged this pass, carried
+
+| Platform | Core licence | Nature |
+|---|---|---|
+| **Moodle** | 🔴 GPL-3.0 | open source |
+| **Open edX** | 🔴 AGPL-3.0 | open source |
+| **Canvas LMS** | 🟡 AGPL-3.0 core, commercial cloud | open core |
+| **D2L Brightspace** | 🔴 **proprietary** | closed |
+| **Blackboard Learn** | 🔴 **proprietary** | closed |
+| **Google Classroom** | 🔴 **proprietary** | closed |
+
+### 🟢 Vendor-published satellite packages — new this pass, every grant read first-hand
+
+| Platform | Package the vendor itself publishes | Grant, payload | Bench, bare clone | May a client deliverable absorb it? |
+|---|---|---|---|---|
+| **D2L Brightspace** | `@brightspace-ui/core` | 🟢 **Apache-2.0**, 10,421 B | 🟢 9,598 c · 180 a · 1,020 in 2026 | 🟢 **Yes — with a patent grant** |
+| **D2L Brightspace** | `@brightspace-ui/labs` | 🟢 **Apache-2.0**, 10,421 B | published through 2026-10-19 | 🟢 Yes, but it is the experimental tier |
+| **D2L Brightspace** | `@brightspace-ui/intl` | 🟢 **Apache-2.0**, 10,421 B | 115 npm versions | 🟢 Yes |
+| **D2L Brightspace** | `d2l-test-reporting` | 🟢 **Apache-2.0**, 10,421 B | 🟢 1,129 c · 13 a · 358 in 2026 | 🟢 Yes |
+| **Open edX** | `@openedx/frontend-base` | 🔴 **AGPL-3.0**, 34,523 B | 3,341 c · 161 a | 🔴 **No** |
+| **Open edX** | `@openedx/frontend-build` | 🔴 **AGPL-3.0**, 34,523 B | — | 🔴 **No** |
+| **Open edX** | `@edx/frontend-platform` | 🔴 **AGPL-3.0**, 34,520 B | 1,151 c · 92 a · head 2026-10-18 | 🔴 **No** |
+
+🔴 **The consequence a studio has to plan around, and it inverts the intuition:** **the OPEN-SOURCE platform is the one whose own tooling constrains the deliverable, and the PROPRIETARY vendor is the one shipping permissively.** 🟢 **On Open edX, keep the studio's code on the far side of a standards seam — LTI 1.3 or xAPI — and never import `@openedx/*` into billable code.** That is pattern **P28** (the permissive LTI 1.3 seam, p333) and **P30** below. 🟢 **On Brightspace, the opposite: `@brightspace-ui/core` is the fastest honest route to a UI a D2L client recognises, and it is Apache-2.0.**
+
+### 🟡 The standards tier — where a permissive seam actually exists, re-measured
+
+| Standard | Permissive implementation | Grant, payload | Bench | Placed |
+|---|---|---|---|---|
+| **LTI 1.3** | https://github.com/Cvmcosta/ltijs | 🟢 Apache-2.0, 11,361 B | 575 c · 17 a · 51 in 2026 | 🟢 **LATAM — Brazil** |
+| **LTI 1.3** | https://github.com/lti-tool/lti-tool | 🟢 MIT, 1,077 B | 346 c · 6 a · 235 in 2026 · head 2026-10-19 | 🟢 North America |
+| **Canvas + LTI** | https://github.com/harvard-edtech/caccl | 🟢 MIT, 1,075 B | 655 c · 3 a · 27 in 2026 | 🟢 North America |
+| **SCORM** | https://github.com/scormflow/scorm-engine-client | 🟢 MIT, 1,079 B | 45 c · 2 a · all in 2026 | 🟢 **APAC — India** |
+| **xAPI** | https://github.com/studiolxd/xapi | 🔴 **no payload** (npm says MIT) | 12 c · 1 a | 🟢 EMEA |
+
+🔴 **The xAPI lane is the weakest seam on this shelf.** The only registry-discoverable permissive client found this pass has **no licence file, one author and twelve commits**, and p333's `yetanalytics/lrsql` row remains the serious xAPI option. 🟢 **Declared gap, not papered over: there is no well-benched, payload-granted, standalone xAPI client in this sweep.**
+
+---
+
+
 ## Pass 334 · 2026-10-20 (seventh pass of this date) — the permissive connectors point at the PROPRIETARY platforms, and both copyleft ones point at the open-source platforms
 
 🔵 **This shelf's whole premise is that a studio customises a platform it does not fork, through a seam it may own.** p333 recorded the seam (LTI 1.3, OIDC, xAPI). 🟢 **This pass measured the OTHER seam — MCP — one lane per platform, and the grant split runs the opposite way to the one this shelf would predict.**

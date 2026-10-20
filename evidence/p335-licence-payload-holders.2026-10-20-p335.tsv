@@ -1,0 +1,30 @@
+slug	spdx	bytes	path	copyright_holder
+LongsightGroup/lti-tool	MIT	1077	main/LICENSE	present James Joplin
+likr/canvas-lms-agent	NO-LICENCE-FILE	0		
+risnake/canvas-mcp-server	NO-LICENCE-FILE	0		
+Mckaroff/GraphLMS	NO-LICENCE-FILE	0		
+chrischall/gogcli-mcp	MIT	1067	main/LICENSE	Chris Hall
+DamPhuQuy/Agent-as-a-tutor	MIT	1070	main/LICENSE	[2026] [DamPhuQuy]
+scormflow/scorm-engine-client	MIT	1079	main/LICENSE	ScormFlow contributors
+shmelevsergei/scorm-player-2004	NO-LICENCE-FILE	0		
+studiolxd/xapi	NO-LICENCE-FILE	0		
+harvard-edtech/caccl	MIT	1075	main/LICENSE.md	Harvard University
+gabeabrams/lti-launch-validator	MIT	1071	main/LICENSE	Gabriel Abrams
+christophblessing/quiz-recap	MIT	1075	main/LICENSE	Christoph Blessing
+freeCodeCamp/curriculum-helpers	BSD-3-Clause	1524	main/LICENSE	freeCodeCamp.org
+groton-school/canvas-cli	GPL-3.0	35149	main/LICENSE	Free Software Foundation, Inc. <https://fsf.org/>
+VienDinhCom/supermemo	MIT	1065	master/LICENSE	Vien Dinh
+BrightspaceUI/core	Apache-2.0	10421	main/LICENSE	owner or entity authorized by
+BrightspaceUI/labs	Apache-2.0	10421	main/LICENSE	owner or entity authorized by
+BrightspaceUI/intl	Apache-2.0	10421	main/LICENSE	owner or entity authorized by
+Brightspace/test-reporting-node	Apache-2.0	10421	main/LICENSE	owner or entity authorized by
+virtualarkansas/n8n-nodes-genius-sis	NO-LICENCE-FILE	0		
+BYUI-Information-Technology/canvas-n8n-node	NO-LICENCE-FILE	0		
+brainjamworks/liverpool-dental-theme	NO-LICENCE-FILE	0		
+openedx/frontend-base	AGPL-3.0	34523	main/LICENSE	Free Software Foundation, Inc. <https://fsf.org/>
+openedx/frontend-build	AGPL-3.0	34523	master/LICENSE	Free Software Foundation, Inc. <https://fsf.org/>
+openedx/frontend-platform	AGPL-3.0	34520	master/LICENSE	Free Software Foundation, Inc. <http://fsf.org/>
+Annoto/ims-lti	MIT	1094	master/LICENSE	Owen Smith
+beardon/canvas-lms-api	NO-LICENCE-FILE	0		
+dmolin/ltijs	Apache-2.0	11361	master/LICENSE	owner or entity authorized by
+molecule-dev/molecule	Apache-2.0	11358	main/LICENSE	owner or entity authorized by
