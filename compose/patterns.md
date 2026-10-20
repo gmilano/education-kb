@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 345 · 2026-10-20 — two recipes, each wiring a row this pass verified first-hand to rows already on these shelves
+
+**Evidence:** [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv) · [`p345-mcp-brasil-grant-scope`](../evidence/p345-mcp-brasil-grant-scope.2026-10-20-p345.tsv).
+
+### P31 — "Does our AI tutor actually work?" — a randomised trial inside the client's own LMS, with the ethics layer in code
+
+🔴 **The question that kills AI-tutoring pilots** is not whether the tutor is good; it is that nobody can show it worked, because the pilot had no control arm and no consent story, so the result cannot be published or defended to a board.
+
+**Components, every grant read first-hand:**
+
+| Role | Component | Grant | Note |
+|---|---|---|---|
+| Randomisation, treatment arms, consent, export filtering | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 Apache-2.0, 11 323 B, read at **`development/LICENSE`** | ⚠️ ships a binding **`NOTICE`** (239 B) under §4(d) — carry it forward |
+| The tutoring arm | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | already on the build tier; **Bayesian Knowledge Tracing**, so mastery is an inspectable model rather than a prompt, and it ships LTI middleware |
+| The control arm | the client's existing coursework | — | no build |
+| Content for both arms | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 MIT | generates the item bank so both arms draw from one pool |
+| Integration seam | **LTI 1.3** | — | Terracotta and OATutor both speak it; one integration serves both arms |
+
+**Wiring.** Stand Terracotta up as the LMS plug-in and define two treatment conditions on a single assignment sequence. Arm A renders the OATutor activity (its LTI middleware is the hand-off); arm B renders the existing coursework. Generate the item bank once with Educhain and feed both arms so content is held constant and only the *tutoring* varies. Let Terracotta collect consent **in the form the instructor cannot see**, randomise assignment, and filter non-consenting students out of the export. OATutor's BKT traces per-skill mastery inside arm A, which gives a process measure to put beside the outcome measure.
+
+🟢 **What this buys:** a result with a control arm, a consent record, and de-identified exports — i.e. one a university ethics board will accept and a client can publish. 🟡 **Cost and limits:** Terracotta is Java and presumes an LMS (Canvas is its reference target); budget the LTI 1.3 registration dance, which is the real schedule risk. **6–9 weeks** for a single-course trial. 🔴 **Do not** substitute a star-count judgement here: Terracotta carries 21 ★ and a 2 815-commit, 18-author, seven-year log — per `ACTION ZZ-c` the log is the bench.
+
+### P32 — A Brazilian education-data agent that is defensible under LGPD on day one
+
+🔴 **The LATAM engagement shape this base could not serve until this pass.** A ministry, state secretariat or edtech client asks for an agent over national assessment data. The data is real, public and radioactive: INEP pulled ENEM microdata from public access in 2022 under LGPD pressure and resumed in anonymised form in 2024.
+
+**Components, every grant read first-hand:**
+
+| Role | Component | Grant | Note |
+|---|---|---|---|
+| Systems-of-record access | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | 🟡 **MIT (1 072 B) for the CODE only** | `SOURCES.md` §4 `Educação — RISCO ALTO`: `inep`, `inep_enem`, `inep_censo_escolar`, plus `FNDE` at §4.2 |
+| The compliance boundary | the same repo's `NOTICE` (3 135 B), `ACCEPTABLE_USE.md` (8 109 B), `SOURCES.md` (19 286 B) | 🟡 asserted conditions | **read all three before writing a line** |
+| Agent orchestration | any MCP-speaking client on these shelves | — | it is an MCP server; no adapter to write |
+| Curriculum/outcome framing | [`satvik314/educhain`](https://github.com/satvik314/educhain) · [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | 🟢 MIT | turn a measured gap into material rather than a dashboard |
+
+**Wiring.** Point an MCP client at `mcp-brasil` and keep the server's **default PII masking on**. Work only through the whitelisted aggregate columns — `COLUNAS_DISTINCT_PERMITIDAS` in `datasets/inep_enem/constants.py` permits state, sex, age band, race and school and withholds `NU_INSCRICAO`, name and CPF. Use the Censo Escolar for the denominator and ENEM for the outcome, then hand the identified gap to Educhain or `instructional_agents` to produce targeted material.
+
+🔴 **The four hard rules, taken from the project's own documents rather than invented here.** (1) **Never** set `MCP_BRASIL_LGPD_ALLOW_PII` without a documented legal basis under LGPD art. 7 or 11 — the project's own text states that enabling it **transfers controller responsibility to you**. (2) Re-identification by cross-referencing other bases is **VEDADO** under LGPD art. 12. (3) Formal research on non-anonymised microdata belongs in INEP's **SEDAP** protected-access service, **not** in this server. (4) Attribute **INEP** per `SOURCES.md`, and carry the `NOTICE` forward.
+
+🟡 **The residual risk, which the project publishes as an open item and so should you:** validating one sample of the 2023 archive and enumerating every column to confirm no direct re-identification key survives. 🟢 **Close it in week one** — it is a day of work and it converts the project's open item into your evidence. **6–8 weeks** to a defensible pilot. 🔵 Note for the client conversation: the server is explicitly **not** an official government service, and its own `NOTICE` says so.
+
 ## Pass 344 · 2026-10-20 — two recipes this pass can state concretely because it read the grants first-hand, and one pre-flight check that belongs in front of every recipe on this shelf
 
 **Evidence:** [`p344-payload-absence-enumerated`](../evidence/p344-payload-absence-enumerated.2026-10-20-p344.tsv) · [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-region-placement`](../evidence/p344-region-placement.2026-10-20-p344.tsv) · [`p344-agent-runtime-region`](../evidence/p344-agent-runtime-region.2026-10-20-p344.tsv).

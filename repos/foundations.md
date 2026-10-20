@@ -4,6 +4,25 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 345 · 2026-10-20 — two foundations added from this base's own orphan list, one of them a seven-year institutional bench that no pass had ever adjudicated
+
+**Evidence:** [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv) · [`p345-mcp-brasil-grant-scope`](../evidence/p345-mcp-brasil-grant-scope.2026-10-20-p345.tsv).
+
+🟢 Both rows below were taken from [`promotion-gap-permissive-orphans.txt`](../compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt) — **528 permissively-licensed addresses this base had measured and never offered** — and both were verified first-hand this pass: `git ls-remote` for existence, bare `--filter=blob:none` clone plus `git ls-tree -r` for payload enumeration, and `curl` over `raw.githubusercontent.com` **at the pinned HEAD** for every byte quoted.
+
+| Repo | Grant, read first-hand | Bytes | Read at | Bench | Placed | What it gives a studio |
+|---|---|---|---|---|---|---|
+| [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 **Apache-2.0** (stock, full text) | **11 323** | `development/LICENSE` | **2 815 c · 18 a · 2019-01-18 → 2026-10-19** | 🟢 **North America — US** — `unicon.net(1673)`, `iu.edu(216)`, `calpoly.edu(145)`; `-0400(1560) -0700(781) -0500(472)` | Randomised controlled trials **inside real coursework**, delivered as an LMS plug-in over LTI 1.3. Differentiates assignment content per treatment arm, randomises assignment, and carries the ethics plumbing: informed consent **hidden from the instructor**, non-consenting participants filtered out of result summaries and exports, identifiers stripped from exports |
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | 🟡 **MIT** (stock) for the code — **plus `NOTICE` (3 135 B), `ACCEPTABLE_USE.md` (8 109 B) and `SOURCES.md` (19 286 B) scoping it** | **1 072** | `main/LICENSE` | 246 c · 7 a · 2026-03-22 → **pushed 2026-10-20** | 🟢 **LATAM — Brazil** — `jonatassoares.com(238)`, `jusbrasil.com.br(1)`; **`-0300` on all 246** | An MCP server over ~70 Brazilian public APIs. `SOURCES.md` **§4 `Educação — RISCO ALTO`** exposes **INEP** — ENEM microdata and the national school census — behind a documented PII column whitelist (`COLUNAS_DISTINCT_PERMITIDAS`), with re-identification marked **VEDADO** under LGPD art. 12 and formal microdata research routed out to INEP's SEDAP service |
+
+### 🔴 The default branch is not `main`, and a path ladder keyed to `main` would have missed this grant
+
+🟢 **`terracotta`'s default ref is `development`.** This base has spent passes repairing path ladders on CASE (`p337`, `p338`) and on DEPTH (`p338`), and this is the third axis: **the REF.** 🔵 A probe that composes `raw.githubusercontent.com/<slug>/main/LICENSE` returns 404 here and the row looks grantless — which is exactly the shape that put four addresses into *"no payload"* at `p342` before enumeration refuted two of them. 🟢 **The method that got it right needed no guessing: resolve the default ref from the clone (`git symbolic-ref --short HEAD`), then enumerate the tree.** `ACTION ZZ-j` records it: **a grant is read at the repository's OWN default ref, never at a hard-coded branch name.**
+
+### 🟡 Why a 21-star repository is on a foundations shelf
+
+🔴 `terracotta` carries **21 ★**. 🟢 **It also carries 2 815 commits across 18 authors over seven years, `0` of them agent-authored, from a company whose business is LMS integration and two universities.** `ACTION ZZ-c` was written for the inverse case — a 148-★ row whose commits were 26.8% automated self-promotion — and this row is the reason that action cuts both ways: **stars measure attention, the log measures whether anyone will answer a bug report in 2027.** 🔵 For a research-grade deliverable with consent obligations, the log is the only one of the two that matters.
+
 ## Pass 344 · 2026-10-20 — two foundational addresses on these shelves were wrong, both in a way no ladder on this base can see, and a web claim of "Apache 2.0" was refuted by the payload
 
 **Evidence:** [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-payload-absence-enumerated`](../evidence/p344-payload-absence-enumerated.2026-10-20-p344.tsv).

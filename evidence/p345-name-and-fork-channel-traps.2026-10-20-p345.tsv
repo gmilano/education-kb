@@ -1,0 +1,11 @@
+# p345 — two NEW misplacement classes, each measured on a row this base already held.
+# Both are variants of ACTION ZZ-b (subject region is not authorship region), but neither is
+# the subject channel: one is the repository's NAME, the other is a FORK's inherited history.
+trap	specimen	the misleading signal	what the commit channel measures	why it matters
+ACTION ZZ-g — repository or organisation NAME in a regional language	EscolaLMS/LRS	"Escola" is school in Portuguese; a reader scanning slugs for LATAM supply stops here	wojczal.com(8) + qunabu.com(7) corporate, +0100(15)/+0200(11) with 13 commits OUTSIDE Mar-Nov at +0100 confirming a CET/CEST shift ⇒ EMEA — Poland	A pass hunting LATAM by slug language would have published a Polish vendor as a Brazilian row.  The name is not a channel.  (EscolaLMS is a Polish LMS vendor; Escola is also a Polish company name.)
+ACTION ZZ-h — a FORK's commit channel measures the UPSTREAM's bench	latam-gpt/lm-evaluation-harness	the owning ORG is Latam-GPT (CENIA, Chile); the repo is the obvious "LATAM evaluation harness" row	3886 commits / 388 authors, modal domains users.noreply.github.com(1246), sutawika.com(755), eleuther.ai(385); offsets +0000(1003) -0400(677) -0700(347).  Only 11 of 3886 commits carry a uc.cl or latam address.  HEAD author is milan.weibel@uc.cl, 2025-12-15	Placing this row by its log would publish EleutherAI's North-American/global bench as LATAM supply.  A fork is placed by its LOCAL commits only, and the fraction (11/3886 = 0.28%) must be stated.
+# --- corroboration that the fork is a fork, without api.github.com (000 from this environment) ---
+check	result
+GitHub MCP search "user:latam-gpt"	returns total_count=7 and lm-evaluation-harness is NOT among them — GitHub repository search excludes forks by default, which is itself the evidence
+org inventory actually owned by latam-gpt (non-fork), by stars	llm-data-eval(16) toxicity-classifier(5) language_identifier(3) training-estimations(2) anonymization-filter(1) data-deduplication(0) fasttext-classifiers(0)
+consequence for the LATAM supply claim	the Latam-GPT ORG's own non-fork inventory peaks at 16 stars and is data-pipeline tooling, not education agents.  The education-relevant LATAM row this pass promotes came from elsewhere entirely (Mcp-Brasil).

@@ -1,0 +1,48 @@
+# p345 — ACTION ZZ-i executed: every slug below was taken from this base's OWN orphan list
+# (compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt, 528 rows), not from a
+# discovery leg.  Measured first-hand with git ls-remote / bare --filter=blob:none clone / git ls-tree -r
+# and curl over raw.githubusercontent.com at the pinned HEAD.  api.github.com is 000 from this
+# environment (proxy), so star counts come from the GitHub MCP search channel and are labelled as such.
+slug	head	payload_path	payload_bytes	family_read_first_hand	stars_mcp_channel	commits	authors	span	modal_domain	offsets	agent_authored	region_placed	placement_channel	verdict
+Mcp-Brasil/mcp-brasil	2efb258370b125bbf190884283ae10f209b9d335	LICENSE	1072	MIT (stock)	1817	246	7	2026-03-22..2026-08-18	jonatassoares.com(238)	-0300(246/246)	0/246	LATAM — Brazil	corporate domain + non-shifting -0300 (Brazil has no DST since 2019)	PROMOTED — MCP tier, split cell
+Mcp-Brasil/mcp-brasil	2efb258370b125bbf190884283ae10f209b9d335	NOTICE	3135	bespoke, Portuguese — scopes the MIT grant	1817	246	7	2026-03-22..2026-08-18	jonatassoares.com(238)	-0300(246/246)	0/246	LATAM — Brazil	same	SPLIT CELL — see p345-mcp-brasil-grant-scope
+terracotta-education/terracotta	00fc046c181e58988550a87320cb453061c859ff	LICENSE	11323	Apache-2.0 (stock, full text)	21	2815	18	2019-01-18..2026-10-19	unicon.net(1673)	-0400(1560) -0700(781) -0500(472)	0/2815	North America — US	corporate unicon.net + institutional iu.edu(216) calpoly.edu(145)	PROMOTED — verticals + foundations
+terracotta-education/terracotta	00fc046c181e58988550a87320cb453061c859ff	NOTICE	239	Apache-2.0 NOTICE — binding under section 4(d)	21	2815	18	2019-01-18..2026-10-19	unicon.net(1673)	same	0/2815	North America — US	same	MUST BE PRESERVED ON REDISTRIBUTION
+AI-for-Education/pedagogy-benchmark	21a43a395ab48e3a2867fe6edd6f0a38833959b2	LICENSE	1064	MIT (stock)	13	5	1	2025-06-24..2025-10-15	glasgow.ac.uk(5/5)	+0100(5/5)	0/5	EMEA — UK (Glasgow)	institutional domain, 5/5	PROMOTED — evaluation tier, thin bench stated
+latam-gpt/anonymization-filter	f6f7ddfdbc028652bb800c20b68e73e047bd3672	LICENSE	1072	MIT (stock)	1	6	2	2025-05-07..2025-05-18	uc.cl(5/6)	-0400(6/6)	0/6	LATAM — Chile	institutional uc.cl (P. Universidad Catolica de Chile) + -0400	NOT PROMOTED — placement strong, bench negligible, dormant 17 months
+AI-for-Education/voice-ai-evaluation-framework	f25f12830a8afca10dbc0b40b93df115e7c8218e	LICENSE	1074	MIT (stock)	1	61	4	2025-10-16..2026-09-23	gmail.com(58)	+0200(30) +0300(23) +0000(8)	0/61	NOT RESOLVED	offset-only, no corporate domain, ZERO commits outside Mar-Nov so the +0200/+0300 pair cannot be DST-tested	NOT PROMOTED — region void
+latam-gpt/lm-evaluation-harness	(fork of EleutherAI/lm-evaluation-harness)	LICENSE.md	present	MIT (upstream)	n/a — absent from the org's 7-repo listing because GitHub search excludes forks	3886	388	2020-08-27..2025-12-15	users.noreply.github.com(1246) sutawika.com(755) eleuther.ai(385)	+0000(1003) -0400(677) -0700(347)	0/3886	NOT PLACEABLE AS LATAM	only 11/3886 commits carry a uc.cl/latam address; HEAD author milan.weibel@uc.cl	NOT PROMOTED — see ACTION ZZ-h
+EscolaLMS/LRS	b1ad9a4ab1a185d34ff3c43613d57d60f5159ef1	LICENSE	present	read, see note	n/a	27	6	2021-12-13..2024-07-10	wojczal.com(8) qunabu.com(7)	+0100(15) +0200(11)	0/27	EMEA — Poland	corporate qunabu.com/wojczal.com + CET/CEST pair confirmed by 13 commits OUTSIDE Mar-Nov at +0100	NOT PROMOTED — dead since 2024-07-10; see ACTION ZZ-g
+AI-for-Education/gpf-alignment	a33e05e09440	(none at root LICENSE)	404	NO GRANT	1	n/m	n/m	n/m	n/m	n/m	n/m	subject: Global South	Global Proficiency Framework alignment	NOT PROMOTED — no grant
+AI-for-Education/luganda-linguistic-benchmarks	d4f3a687e25c	(none at root LICENSE)	404	NO GRANT	0	n/m	n/m	n/m	n/m	n/m	n/m	subject: Uganda (Sub-Saharan Africa)	-	NOT PROMOTED — no grant
+AI-for-Education/lesson-plan-parse-mbsse	470ae45c7a8d	LICENSE	1065	MIT (stock)	1	n/m	n/m	n/m	n/m	n/m	n/m	subject: Sierra Leone (MBSSE)	ministry-of-education subject, EMEA-UK authorship org	NOT PROMOTED — 1 star, dormant since 2024-12
+AI-for-Education/edu-qurating	e007badc4e66	LICENSE	1063	MIT (stock)	3	n/m	n/m	n/m	n/m	n/m	n/m	subject: Global South curation	-	NOT PROMOTED — 3 stars
+#
+# --- URL VERIFICATION of every github.com address this pass publishes (17 addresses) ---
+# 🔴 HTTP status is NOT a usable existence oracle in this environment: `curl -L` over
+# github.com HTML returns 403 for ALL 17 addresses uniformly, including the two this pass
+# promoted and read licence bytes from.  That is the proxy refusing HTML browsing, not a
+# statement about any repository, and a pass that read it as 404-ish would have discarded
+# every row it had just verified.  This is ACTION p293's rule on a new channel: a blanket
+# refusal is a MEASUREMENT OF THE CHANNEL, never an inconclusive result about the subject.
+# 🟢 The oracle that works is `git ls-remote`, and raw.githubusercontent.com serves payloads
+# normally, which is how every licence byte in this file was read.
+address	ls_remote_head	status
+122-syf-wcy/PhysicsOS	a25c6ee26583	RESOLVES
+CAHLR/OATutor	a1df9d67bc7b	RESOLVES
+DaRL-GenAI/instructional_agents	f835eb45f508	RESOLVES
+HumphreySun98/Smart-Study-Agent	1f0ab5c160f1	RESOLVES
+Li-Evan/Bloom	68788b5e7d34	RESOLVES
+Mcp-Brasil/mcp-brasil	2efb258370b1	RESOLVES — equals the pin every licence byte above was read at
+Zenglian990/AI_Tutor_Release	60f336c49907	RESOLVES
+brycewang-stanford/Auto-Empirical-Research-Skills	7a2437b8fc97	RESOLVES
+dmoshehun-prog/learn-from-materials	f8849746d85c	RESOLVES
+helixnow/deep-student	635216503c0b	RESOLVES
+minicoohei/ai-agent-camp	048ba4cfff8e	RESOLVES
+satvik314/educhain	38adb1e9459d	RESOLVES
+sitor-ai/frametell	63b9478bdb92	RESOLVES
+terracotta-education/terracotta	00fc046c181e	RESOLVES — equals the pin the Apache-2.0 and NOTICE bytes were read at
+wenflow-org/wenflow	1c86890946a3	RESOLVES
+ystemsrx/sql_to_ER	0ced3ee7974a	RESOLVES
+zhangl1001/civil-ai	37ba5e28532d	RESOLVES
+# 17/17 resolve.  0 published addresses are phantom.

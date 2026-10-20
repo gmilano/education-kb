@@ -4,6 +4,28 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 345 · 2026-10-20 — three trends registered, and the first one is about this base rather than the sector
+
+**Evidence:** [`p345-region-policy-supply-asymmetry`](../evidence/p345-region-policy-supply-asymmetry.2026-10-20-p345.tsv) · [`p345-eu-omnibus-date-resolution`](../evidence/p345-eu-omnibus-date-resolution.2026-10-20-p345.tsv) · [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv).
+
+### T41 — The bottleneck in an education KB stopped being discovery and became **promotion**, and it is measurable
+
+🟢 **Measured, two ways, on two independent inventories.** This base holds **528 permissively-licensed addresses** in [`promotion-gap-permissive-orphans.txt`](../compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt) that `evidence/` measured and **no shelf ever offered**; and of the **12 live rows** a single GitHub topic query returned this pass, **9 had been sitting on a trending shelf without ever being adjudicated** — one of them (`brycewang-stanford/Auto-Empirical-Research-Skills`) at **4 696 ★**.
+
+🔴 **Meanwhile the four prescribed discovery legs returned zero new education agents for the eleventh consecutive pass.** 🔵 **Those two facts together are the trend:** in a vertical with a thin trending channel, the marginal value of another search is approximately zero and the marginal value of adjudicating a row you already have is high. 🟡 **The generalisation for any studio running a KB:** a curation pipeline that measures *intake* and not *delivery* will report saturation while sitting on an unread backlog. `ACTION ZZ-i` is the remedy on these shelves; the `delivery-audit` target already existed and was the thing nobody ran.
+
+### T42 — Regional "gaps" in this sector are two different gaps, and they point in opposite directions
+
+🟢 **Split the region question into supply and policy and the picture inverts between regions.** **APAC** is this base's richest supply channel (12 live rows from one query) and its thinnest policy channel (zero retrievable school-level rules for China, India or Singapore). **Europe** is the exact opposite: the clearest rules in the world and a 5-commit bench on its best-placed new row. **The Middle East and Africa** returns zero authorship-placed rows *and* zero retrievable rules, while being the **subject** of a Glasgow-benched portfolio whose two most Africa-specific repositories carry **no licence payload at all**.
+
+🔵 **So the engagement response differs by region and by axis.** In APAC the open question is governance, which a studio must supply. In Europe the open question is a buildable bench, which a studio must import. In Africa the open question is a **grant** — and a licence request is cheaper than any of the above. 🔴 **A single "regional gap" column cannot carry this, which is why `ACTION ZZ-k` retires it.**
+
+### T43 — The EU deferred the education deadline and did **not** defer the two things already biting
+
+🟡 **Secondary-source convergence, primary unreachable, recorded as such** (every EU host returns HTTP 000 from this session). Regulation (EU) **2026/1744**, the *Digital Omnibus on AI*, moves **Annex III** stand-alone high-risk — which is where education lives — from **2026-08-02** to **2027-12-02**, and Annex I to 2028-08-02.
+
+🔴 **Two obligations did not move, and they are the ones an education product trips over first.** **Emotion recognition in education and the workplace has been prohibited since 2025-02-02** under Article 5 — so engagement-detection, attention-scoring and affect-aware tutoring are out of scope in the EU regardless of the deferral. And **Article 50 transparency** is reported to apply from **2026-08-02**, which includes disclosing synthetic media in teaching material. 🟢 **The deferral buys documentation runway for admission scoring, placement and outcome evaluation; it buys nothing for affect detection.** 🔵 The practical trend is therefore a **re-ordering, not a relaxation**: EU education roadmaps should move the Annex III paperwork later and the affect-feature deletion earlier.
+
 ## Pass 344 · 2026-10-20 — three new trends, and the one that matters most is that a repository's commit channel can now describe a datacenter
 
 **Evidence:** [`p344-agent-runtime-region`](../evidence/p344-agent-runtime-region.2026-10-20-p344.tsv) · [`p344-dst-window-inconclusive`](../evidence/p344-dst-window-inconclusive.2026-10-20-p344.tsv) · [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-payload-absence-enumerated`](../evidence/p344-payload-absence-enumerated.2026-10-20-p344.tsv).

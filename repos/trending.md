@@ -4,6 +4,23 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 345 · 2026-10-20 — a 4 696-star education repo has been on this shelf without ever reaching a decision shelf, and this pass measures the promotion queue instead of lengthening it
+
+**Evidence:** [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv) · [`p345-region-policy-supply-asymmetry`](../evidence/p345-region-policy-supply-asymmetry.2026-10-20-p345.tsv).
+
+🔵 The prescribed trending leg (`github trending education AI 2026`) returned the same listicle layer it has returned for ten passes. 🟢 **A GitHub topic query run directly returned 12 live rows**, tabulated with their promotion state on `agents/trending.md` this pass. 🔴 **Nine of the twelve have never been adjudicated onto a decision shelf**, `brycewang-stanford/Auto-Empirical-Research-Skills` at **4 696 ★** among them.
+
+### 🟢 Repos promoted to `repos/foundations.md` this pass, both verified first-hand
+
+| Repo | Grant, read at pin | Bench | Placed | Why it is a foundation rather than a trend |
+|---|---|---|---|---|
+| [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | **Apache-2.0, 11 323 B** + `NOTICE` 239 B | **2 815 c · 18 a · 2019-01-18 → 2026-10-19** | 🟢 **North America — US** | Seven years of continuous commits from an LMS-integration house (`unicon.net`) with two universities on the log. It is the consent-and-randomisation layer that an AI-tutoring experiment needs and nobody wants to write |
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | **MIT, 1 072 B** + `NOTICE` 3 135 B + `ACCEPTABLE_USE.md` 8 109 B + `SOURCES.md` 19 286 B | 246 c · 7 a · live 2026-10-20 | 🟢 **LATAM — Brazil** | A per-source licence register across 61 headed sections is infrastructure, not a demo. Its education section is the only agent-reachable path to INEP assessment data this base has found |
+
+### 🔵 The `NOTICE` on the Apache row is not decoration
+
+🟢 `terracotta`'s `NOTICE` is **239 bytes** and credits **Oxford University** for the Tomcat valve that makes its LTI cookies work, pointing at `oxctl/spring-security-lti13-demo`. 🟡 **Under Apache-2.0 §4(d) a `NOTICE` travels with every redistribution**, so a studio shipping a Terracotta-derived deliverable carries that attribution forward. 🔵 It is a one-line obligation and it is cheap — but it is an obligation, and this base records grants at the byte level precisely so a reader never discovers one late.
+
 ## Pass 344 · 2026-10-20 — the trending channel produced one education row, two disagreeing star counts for it, and no new grant
 
 **Evidence:** [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-region-placement`](../evidence/p344-region-placement.2026-10-20-p344.tsv).

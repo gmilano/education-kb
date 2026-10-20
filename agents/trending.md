@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 345 · 2026-10-20 — the eleventh consecutive zero on the four prescribed supply legs, and the first non-zero week in ten passes came from the inventory instead
+
+**Evidence:** [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv) · [`p345-name-and-fork-channel-traps`](../evidence/p345-name-and-fork-channel-traps.2026-10-20-p345.tsv).
+
+🔴 **The four prescribed global legs returned zero new education agents for the eleventh consecutive measurement.** `top open source AI agents education 2026 github MIT` returned general-purpose agents and listicles (OpenClaw, opencode, OpenHands, CrewAI, LangGraph, Hermes Agent, plus `microsoft/ai-agents-for-beginners` and `ashishpatel26/500-AI-Agents-Projects` as courseware). 🟡 Every source in that leg is a blog roundup, and two of them disagree with each other on star counts for the same repository.
+
+🟢 **What did work this pass was a channel the prescribed legs do not contain: a GitHub topic query, run directly rather than through a search engine.** `topic:education topic:ai-agent stars:>40 pushed:>2026-07-01` returned **12 live rows in one call**, and they are the rows a trending shelf is for:
+
+| Repo | ★ | Language | What it is | Already on these shelves? |
+|---|---|---|---|---|
+| [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | **4 696** | Stata | 23 000+ agent skills for empirical research across 8 social-science disciplines (Stanford REAP / CoPaper.AI) | 🟡 trending only — **never promoted, at 4 696 ★** |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | **1 078** | Python | Turns PDFs, books and papers into interactive, traceable, quizzable learning pages | 🟡 trending only |
+| [`minicoohei/ai-agent-camp`](https://github.com/minicoohei/ai-agent-camp) | 346 | Python | Non-engineer AI-agent training curriculum: lessons, skills, commands, hooks | 🟡 trending only |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 342 | TypeScript | Local-first explainer-video generation with a director agent; storyboard + TTS | 🟡 trending only |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 289 | JavaScript | Socratic private tutor on Bloom's 2-sigma framing; self-hostable | 🟢 placed **APAC — China** at p343 |
+| [`helixnow/deep-student`](https://github.com/helixnow/deep-student) | 286 | TypeScript | Local-first learning workbench: Anki/FSRS spaced repetition, mindmaps, RAG | 🟡 trending only |
+| [`122-syf-wcy/PhysicsOS`](https://github.com/122-syf-wcy/PhysicsOS) | 251 | TypeScript | K-12 physics agent that drives a real physics engine so a problem becomes an interactive, verifiable scene | 🟡 trending only |
+| [`ystemsrx/sql_to_ER`](https://github.com/ystemsrx/sql_to_ER) | 192 | JavaScript | SQL/DBML to ER-diagram converter, shipped as an agent skill | 🟡 trending only |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 67 | JavaScript | RAG tutor for grades 1-9 (LanceDB) | 🟡 trending only |
+| [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | 57 | JavaScript | RL picks the action, FSRS picks the timing, the model only writes the quizzes; Anki export + MCP server | 🟢 on `agents/top.md` |
+| [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) | 56 | TypeScript | Problem-first learning-path prototype with forgetting-curve review and load tracking | 🟡 trending only |
+| [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 41 | TypeScript | Local-first adaptive tutoring reference implementation, iOS + web | 🟢 on `agents/top.md` |
+
+🔴 **The finding is the right-hand column: 9 of these 12 have been on a trending shelf and have never reached a decision shelf — one of them at 4 696 ★.** 🟢 **That is the same defect `ACTION ZZ-i` names on the orphan list, measured on a second, independent inventory.** This base's bottleneck stopped being discovery a long time ago; it is **promotion**, and a trending row that is never adjudicated is a row this base paid for and did not deliver.
+
+🔵 **This shelf does not promote them here** — promotion needs the first-hand grant read and the commit-channel placement that `agents/top.md` requires, and this pass spent that budget on the thirteen orphan-list addresses instead. 🟢 **What it does instead is state the queue, in star order, so the next pass has no discovery work to do at all.**
+
+### 🟢 New this week and verified: two addresses, both placed, neither from a trending feed
+
+- 🟢 **[`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) — MIT (1 072 B, read at pin), 1 817 ★, 301 forks, 246 commits, pushed 2026-10-20.** An MCP server over ~70 Brazilian public APIs whose `SOURCES.md` **§4 `Educação — RISCO ALTO`** exposes INEP's ENEM microdata and the national school census behind a documented PII column whitelist. 🟢 **LATAM — Brazil** (`-0300` on all 246). Promoted to the MCP tier this pass.
+- 🟢 **[`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) — Apache-2.0 (11 323 B) + `NOTICE` (239 B), 2 815 commits, 18 authors, live to 2026-10-19.** An LMS plug-in for **randomised controlled trials inside real coursework**, with consent hidden from the instructor and non-consenting students filtered out of exports. 🟢 **North America — US** (`unicon.net`, `iu.edu`, `calpoly.edu`). Promoted to `verticals/solutions.md` and `repos/foundations.md`.
+
 ## Pass 344 · 2026-10-20 — the tenth consecutive zero on the supply legs, and the one new slug has no grant
 
 **Evidence:** [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-agent-runtime-region`](../evidence/p344-agent-runtime-region.2026-10-20-p344.tsv).

@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 345 · 2026-10-20 — the platform tier gains the layer every AI-tutoring pilot needs and no pilot wants to build: consent, randomisation and export filtering, inside the LMS
+
+**Evidence:** [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv) · [`p345-mcp-brasil-grant-scope`](../evidence/p345-mcp-brasil-grant-scope.2026-10-20-p345.tsv).
+
+### 🟢 New platform row — `terracotta`, an LTI 1.3 plug-in for randomised controlled trials in live coursework
+
+| Field | Value, read first-hand |
+|---|---|
+| Repo | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) |
+| Grant | 🟢 **Apache-2.0**, 11 323 B, read at `development/LICENSE` (the default ref is **`development`**, not `main`) |
+| Extra obligation | 🟡 **`NOTICE`, 239 B** — credits Oxford University for the Tomcat valve behind its LTI cookie handling (`oxctl/spring-security-lti13-demo`). Binding under Apache-2.0 **§4(d)** on every redistribution |
+| Bench | **2 815 commits · 18 authors · 2019-01-18 → 2026-10-19**, `0` agent-authored |
+| Placed | 🟢 **North America — US** — `unicon.net(1673)` corporate, `iu.edu(216)` and `calpoly.edu(145)` institutional |
+| Stack | Java, deployed as an LMS plug-in over **LTI 1.3** |
+
+🟢 **What it actually does, and why it is a platform rather than a tool.** The name is a portmanteau — *Tool for Education Research with RAndomized COnTrolled TriAls*. It lets the contents of an online assignment be **differentiated per experimental treatment**, assigns students to arms **at random**, and then handles the part that sinks most pilots: **informed consent collected in a form the instructor cannot see**, non-consenting participants **filtered out of result summaries and data exports**, and student identifiers **removed from those exports**. Its stated goal is to lower the technical and methodological barrier to *responsible* education research.
+
+🔵 **The composition value for a studio is specific.** A client asking *"does our AI tutor actually improve outcomes?"* is asking for a randomised trial inside a live course, which is an ethics-review question before it is an engineering one. 🟢 **Terracotta is the only row on these shelves that answers the ethics half in code**, and it sits on the same LTI seam that `OATutor`'s middleware already uses — so an AI tutoring arm and a control arm can be delivered through one integration. See `compose/patterns.md` **`P31`** this pass.
+
+🟡 **The limits, stated.** 21 ★, Java, and the default-ref trap above. It is a research instrument, not a commercial LMS replacement, and it presumes an LMS is already in place (Canvas is its reference target).
+
+### 🟢 New data-platform row — `mcp-brasil`, agent-reachable national education data under a documented LGPD design
+
+| Field | Value, read first-hand |
+|---|---|
+| Repo | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) |
+| Grant | 🟡 **MIT**, 1 072 B, `main/LICENSE` — **code only**; `NOTICE` (3 135 B), `ACCEPTABLE_USE.md` (8 109 B) and `SOURCES.md` (19 286 B) scope the rest |
+| Bench | 246 commits · 7 authors · **pushed 2026-10-20**; 1 817 ★, 301 forks (MCP search channel) |
+| Placed | 🟢 **LATAM — Brazil** — `jonatassoares.com(238)`, `jusbrasil.com.br(1)`, **`-0300` on all 246** |
+| Education surface | `SOURCES.md` **§4 `Educação — RISCO ALTO`**: `inep` plus the datasets `inep_enem` and `inep_censo_escolar` — ENEM microdata and the national school census, 2023 snapshot. `FNDE` (education development fund) at §4.2 |
+
+🟢 **Why it belongs beside Odoo and Moodle on this shelf rather than in a civic-data list.** A customisable platform earns its place here when a studio can put AI on top of it and ship something a client already recognises. **This is the systems-of-record layer for Brazilian education data**, and it arrives with the compliance reasoning already written: a PII column whitelist in code, re-identification marked **VEDADO** under LGPD art. 12, an environment variable (`MCP_BRASIL_LGPD_ALLOW_PII`) whose own documentation states that enabling it **transfers controller responsibility** to the operator, and formal microdata research routed out to INEP's **SEDAP** protected-access service.
+
+🔴 **The one thing to take to counsel before shipping.** The payload is **stock MIT** — unconditional on its own terms — while the `NOTICE` asserts redistribution conditions (keep the `NOTICE`, keep the reference to `SOURCES.md`, respect `ACCEPTABLE_USE.md`). 🟢 This base publishes both channels rather than collapsing them, per **`T33`**. 🟡 The conservative reading, which costs a studio nothing: **treat the code as MIT, the data as separately licensed per source, and the acceptable-use document as a client-risk artefact to honour.**
+
 ## Pass 344 · 2026-10-20 — the ERP/CRM leg's only permissive hits are not education systems, and its one education hit was mislicensed by the source
 
 **Evidence:** [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-payload-absence-enumerated`](../evidence/p344-payload-absence-enumerated.2026-10-20-p344.tsv) · [`p344-region-placement`](../evidence/p344-region-placement.2026-10-20-p344.tsv).

@@ -1,0 +1,18 @@
+# p345 — the four legal documents of Mcp-Brasil/mcp-brasil, each read first-hand at pin
+# 2efb258370b125bbf190884283ae10f209b9d335 over raw.githubusercontent.com.
+# The code grant is STOCK MIT.  Three further documents scope what the MIT grant does NOT cover.
+# This is the k12-kgraph split-cell shape (p342 / T33), on a project 1817 stars wide.
+document	bytes	http	language	what it does	binds a redistributor?
+LICENSE	1072	200	en	Stock MIT, copyright "MCP Brasil e contribuidores" 2025-2026	YES — the code grant, unconditional on its own terms
+NOTICE	3135	200	pt-BR	Declares the MIT licence covers EXCLUSIVELY the source code; names three exclusions: (1) DATA returned by third-party APIs, each source carrying its own terms; (2) MARKS/LOGOS/NAMES of Brazilian public institutions; (3) abusive or illegal use, deferring to ACCEPTABLE_USE.md for "vedacoes vinculantes" (binding prohibitions) derived from LGPD, electoral law and freedom-of-information law.  Also disclaims officiality: NOT a Brazilian government service.	ASSERTS SO — "Mantenha este NOTICE, o LICENSE e a referencia a SOURCES.md"; "Respeite ACCEPTABLE_USE.md"
+ACCEPTABLE_USE.md	8109	200	pt-BR	Politica de Uso Aceitavel.  Section 2 "Vedacoes Especificas" prohibits named uses per domain: 2.1 health (LGPD art. 11 para 4), 2.2 electoral (Lei 9.504/97 + TSE resolutions), 2.3 judicial (CNJ Res. 446/2022), 2.4 disabling default PII masking without documented legal basis under LGPD art. 7 or 11 — the env var MCP_BRASIL_LGPD_ALLOW_PII exists for legitimate cases and activating it TRANSFERS CONTROLLER RESPONSIBILITY to the operator, 2.5 presenting AI-generated output as official data	ASSERTS SO via NOTICE
+SOURCES.md	19286	200	pt-BR	Per-source licence and notice register across 61 headed sections covering ~70 Brazilian public APIs.  Section 4 is "Educacao — RISCO ALTO" and is the reason this row belongs on an EDUCATION shelf.	YES — attribution obligations are per source, not per project
+# --- Section 4, Educacao, read first-hand: what an education engagement actually gets ---
+education_asset	detail
+inep (REST) + datasets inep_enem, inep_censo_escolar	Instituto Nacional de Estudos e Pesquisas Educacionais Anisio Teixeira — ENEM microdata and the Censo Escolar (national school census), 2023 snapshot
+provenance of the snapshot	INEP removed microdata from public access in 2022 under LGPD pressure and resumed publication in anonymised post-LGPD form in 2024; the project's 2023 snapshot is stated to be compatible with the post-LGPD resumption
+code-level safeguard	the constant COLUNAS_DISTINCT_PERMITIDAS in datasets/inep_enem/constants.py whitelists only aggregate categories (UF, sex, age band, race, school) and does NOT expose PII columns (NU_INSCRICAO, name, CPF)
+binding prohibition	re-identification of individuals by cross-referencing other bases is VEDADO (LGPD art. 12, sole paragraph).  Attribution: INEP
+escalation path named by the project	formal research on non-anonymised microdata (e.g. longitudinal tracking per candidate) must use INEP's SEDAP protected-data access service — explicitly out of scope for this server
+self-declared residual risk	the project's own open item is to validate one sample of the 2023 ZIP and list every CSV column to confirm absence of direct re-identification keys.  It is published as an open item, not as a clearance
+other education source	FNDE (Fundo Nacional de Desenvolvimento da Educacao), section 4.2

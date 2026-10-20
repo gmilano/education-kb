@@ -1,0 +1,24 @@
+# p345 — p344 published the EU AI Act education-enforcement date as a CONFLICT (2026-08-02 vs
+# 2026-07-27) and refused to pick one.  That was the right call, and this pass can explain the
+# conflict: BOTH dates are real and they belong to DIFFERENT instruments.
+# 🔴 PRIMARY AUTHORITY IS UNREACHABLE FROM THIS ENVIRONMENT.  Every EU domain tried returns
+# HTTP 000 (DNS/network policy): eur-lex.europa.eu, digital-strategy.ec.europa.eu,
+# artificialintelligenceact.eu, europa.eu.  What follows is therefore a CONVERGENCE OF SECONDARY
+# SOURCES, labelled as such, and it may NOT be cited as a verified date.
+date	instrument	what it actually is	status in this base
+2026-07-24	Regulation (EU) 2026/1744 ("Digital Omnibus on AI")	publication in the Official Journal	secondary convergence, majority of sources
+2026-07-27	Regulation (EU) 2026/1744	entry into force (publication + 3 days)	secondary convergence — THIS is the date p344 saw and could not attribute
+2026-08-02	Regulation (EU) 2024/1689 as ADOPTED	the ORIGINAL application date for Annex III stand-alone high-risk systems, education among them	superseded for Annex III per the sources below
+2026-08-02	Regulation (EU) 2024/1689 Article 50	transparency duties — reported NOT moved by the Omnibus	still live; this is the date that still binds an education deployer in 2026
+2027-12-02	Annex III high-risk, per Art. 6(2) — INCLUDING EDUCATION	Chapter III Sections 1-3 application deferred from 2026-08-02	secondary convergence; ~16 months of additional runway
+2028-08-02	Annex I high-risk (AI embedded in regulated products)	deferred	secondary convergence
+2026-12-02	two new Article 5 prohibitions added by the Omnibus; grace period for marking content from systems already on the market	one source (beresol.eu) only	SINGLE SOURCE — not adopted by this base
+2025-02-02	Article 5 prohibition on emotion recognition in education and the workplace	already in force, NOT affected by the Omnibus	the one unambiguous hard rule for an education engagement
+# --- what remains binding on an EU education deployer TODAY, 2026-10-20 ---
+item	note
+emotion recognition in schools and universities	PROHIBITED since 2025-02-02.  Not deferred.  Any affect-detection or engagement-scoring feature is out, full stop.
+Article 50 transparency	reported in force from 2026-08-02; a deployer must disclose synthetic media, including deepfaked video of real people in teaching material
+Article 4 AI literacy	relaxed by the Omnibus but NOT eliminated — staff AI-literacy duty persists
+Annex III documentation, human oversight, logging	the WORK does not change, only the deadline.  Annex III names: determining access or admission, assigning people to institutions, evaluating learning outcomes where those outcomes steer the learning process, and monitoring prohibited behaviour during tests
+# --- sources (secondary; all independent of each other, none is the Official Journal) ---
+nicfab.eu (cites the OJ text directly) | actuia.com | aiacto.eu | acompli.ie | warrant.build | govern365.ai | beresol.eu | cruxdigits.nl | usercentrics.com (OUTLIER: gives a signature date of 2026-07-08 and no publication date)

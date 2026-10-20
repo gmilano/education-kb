@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 345 · 2026-10-20 — the two questions this shelf has been merging are separated and measured: a region can be supply-rich and policy-empty, and the two gaps need opposite responses
+
+**Evidence:** [`p345-region-policy-supply-asymmetry`](../evidence/p345-region-policy-supply-asymmetry.2026-10-20-p345.tsv) · [`p345-eu-omnibus-date-resolution`](../evidence/p345-eu-omnibus-date-resolution.2026-10-20-p345.tsv) · [`p345-orphan-promotion-probe`](../evidence/p345-orphan-promotion-probe.2026-10-20-p345.tsv).
+
+### 🔴 The defect this pass inherited, and it was this shelf's
+
+🟢 `make hooks` ran for the first time in three passes and `gate-absence` came back **RED with `ABSENCE-REFUTED=3`**, firing on the live `README.md` section — which is **p343's**, because p344 never wrote one — and its claim that the EMEA leg had returned *"nothing on the Middle East or Africa"* while naming its own counter-example in the same sentence. 🔵 **The gate was right and the sentence was not wrong — which is the whole lesson.** It was answering *two* questions with *one* sentence: **is anyone BUILDING here** and **can this base RETRIEVE a rule from here**. 🔴 **Merging them is what made six passes of silence look like coverage.** (And the sentence stayed live for two further passes because p344 shipped no README section — see `ACTION ZZ-l` on `agents/top.md`.) `ACTION ZZ-k` separates them permanently: **every regional leg now reports a supply verdict and a policy verdict, and a region is a "gap" only with respect to one of them, named.**
+
+### 🟢 The four prescribed regional legs, each split into the two verdicts
+
+| Region | Supply | Policy | The asymmetry |
+|---|---|---|---|
+| **LATAM** | 🟢 **RICH, and it was never read** — `Mcp-Brasil/mcp-brasil`, MIT, **1 817 ★**, 246 commits, `-0300` on every one, pushed **today**; plus `latam-gpt/anonymization-filter` placed institutionally to `uc.cl` | 🟢 **RETRIEVABLE** — Latam-GPT launched **2026-02-10** by **CENIA** (Chile) with 65 institutions across 15 countries; a **UNESCO–CENIA** partnership signed 2026-03 stands up a **Regional Observatory on AI in Education** serving Ministries of Education | 🔴 **Both verdicts are positive and this shelf published a gap for six passes.** The row was in this base's own 528-address orphan list the whole time |
+| **North America** | 🟢 PRESENT — `terracotta-education/terracotta`, Apache-2.0, 2 815 commits, 18 authors, live | 🟢 **RICHEST of the four, and fragmented** — the United States federal layer reports **zero binding AI curriculum standards** as of 2026-05; ~34 states plus DC and Puerto Rico have issued guidance | 🟡 The policy work is per-state, so a national engagement is 50 compliance surfaces, not one |
+| **EMEA** | 🟡 **THIN** — `AI-for-Education/pedagogy-benchmark` places to `glasgow.ac.uk` (5/5) on a **5-commit** bench; `EscolaLMS/LRS` places to Poland and died 2024-07 | 🟢 **STRONGEST policy channel this pass** — the education high-risk deadline **moved**, see below | 🟡 Europe is where the rules are legible and the open-source education bench is weakest |
+| **EMEA — Middle East and Africa** | 🔴 **ZERO authorship-placed rows** — but the bare form of that claim is refuted below | 🔴 **ZERO retrievable sources this pass** | 🟢 **This is the split that matters**: the building is happening *about* Africa *from* Europe, and the grants are mostly missing |
+| **APAC** | 🟢 **RICHEST supply channel** — one topic query returned 12 live rows (`PhysicsOS` 251 ★, `Bloom` 289 ★, `Study-Mate`, `AI_Tutor_Release`, `civil-ai`) | 🔴 **THIN** — the leg returned **zero** school-level rules for China, India or Singapore; Japan shows movement toward official digital textbooks with no AI-specific rule attached | 🔴 **The exact inverse of MEA**, and it needs the opposite response: in APAC this base must buy policy, in MEA it must buy supply |
+
+### 🟢 The Middle East and Africa claim, restated so it is true
+
+🔵 `AI-for-Education` is a **Glasgow-benched** organisation whose portfolio is **aimed at Sub-Saharan Africa**: `luganda-linguistic-benchmarks` (Uganda), `lesson-plan-parse-mbsse` (Sierra Leone's Ministry of Basic and Senior Secondary Education), `gpf-alignment` and `global-proficiency-framework`. 🔴 **`gpf-alignment` and `luganda-linguistic-benchmarks` return HTTP 404 on `LICENSE` — no grant at the root name**, so they are readable and not buildable. 🟡 `lesson-plan-parse-mbsse` (MIT, 1 065 B) and `edu-qurating` (MIT, 1 063 B) carry one, at 1 ★ and 3 ★.
+
+🟢 **So the honest sentence is three sentences.** The work exists. The grants largely do not. The authorship is European and the subject is African — and per `ACTION ZZ-b` only the authorship may enter a `Placed` cell. 🔵 **For an engagement in the region, the actionable half is that the curriculum artefacts** — the Global Proficiency Framework digitisation especially — **are the assets, and a one-email licence request is the cheapest unblocking move on these shelves.**
+
+### 🟢 The EU date this base published as a conflict is now explained — and still not verified
+
+🔵 p344 published the EU AI Act education-enforcement date as **contested (2026-08-02 vs 2026-07-27)** and refused to pick one. 🟢 **That was correct, and both dates are real: they belong to different instruments.**
+
+| Date | Instrument | What it is |
+|---|---|---|
+| 2026-07-24 | **Regulation (EU) 2026/1744** — the *Digital Omnibus on AI* | publication in the Official Journal |
+| **2026-07-27** | same | **entry into force** — the date p344 saw and could not attribute |
+| **2026-08-02** | Regulation (EU) 2024/1689 **as adopted** | the **original** application date for Annex III stand-alone high-risk systems, education among them |
+| 2026-08-02 | 2024/1689 **Article 50** | transparency duties — reported **not** moved; **this is the date that still binds an education deployer today** |
+| **2027-12-02** | Annex III via Art. 6(2), **including education** | application **deferred**, roughly 16 further months |
+| 2028-08-02 | Annex I (AI embedded in regulated products) | deferred |
+| **2025-02-02** | Article 5 prohibition | **emotion recognition in education and the workplace — already prohibited, not deferred** |
+
+🔴 **This base does NOT hold these dates as verified, and the reason is environmental, not editorial.** Every primary host was tried and every one returns **HTTP 000** from this session: `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu`, `europa.eu`. 🟢 **What is recorded is a convergence of nine mutually independent secondary sources, one of which (`nicfab.eu`) quotes the Official Journal table directly** — and one outlier (`usercentrics.com`) which gives a signature date of 2026-07-08 and no publication date, recorded so the disagreement is visible. 🟡 **Per `gate-dates` this stays a claim with its channel named until a primary read is possible. No engagement should take a compliance date from this shelf; it should take the QUESTION from this shelf and the date from counsel.**
+
+🟢 **The engagement consequence is the opposite of relaxing.** The deadline moved; **the two things already binding did not.** Emotion recognition in a classroom product is prohibited **now**, and Article 50 transparency applies **now**. 🔵 The deferral buys documentation time for admission scoring, placement and outcome evaluation — the Annex III uses — and buys nothing at all for affect detection.
+
+### 🟡 Market sizing remains unusable, and the reason is worth keeping
+
+🔴 Two sources attribute **incompatible 2026 figures to the same analyst** (HolonIQ): roughly **USD 23 bn at ~42% CAGR**, and **USD 12.3 bn**. 🟢 Published as a conflict, never as a number. 🔵 The adoption percentages in this channel come from vendor and content-marketing pages with self-reported surveys and are directional at best — with one exception worth citing because it is counter-intuitive: the **Digital Education Council Global Survey 2026** reports APAC faculty the **most enthusiastic** (57% excited) while faculty **intent** to use AI fell from **76% (2025) to 67% (2026)**, the lowest of any region. 🟡 **Enthusiasm and intent are moving in opposite directions in this base's richest supply region.**
+
 ## Pass 344 · 2026-10-20 — the eight-pass demand saturation BREAKS: all four regional legs returned education-specific regulation, and one returned the first hard adoption denominator this base has held for LATAM
 
 **Evidence:** [`p344-region-placement`](../evidence/p344-region-placement.2026-10-20-p344.tsv) · [`p344-dst-window-inconclusive`](../evidence/p344-dst-window-inconclusive.2026-10-20-p344.tsv) · [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv).
@@ -328,6 +374,8 @@ The region with the most initiative density relative to spend, and the one where
 
 ### North America
 
+- 🟢 **Added p345 — the responsible-experiment seam, and it is a differentiator rather than a feature.** `terracotta-education/terracotta` (**Apache-2.0**, 2 815 commits, 18 authors, live 2026-10-19, `unicon.net` + `iu.edu` + `calpoly.edu`) delivers randomised controlled trials **inside live coursework** over LTI 1.3, with consent collected in a form the instructor cannot see and non-consenting students filtered out of exports. 🔵 **The opportunity:** every US district and university buying an AI tutor this year is being asked by a board or an IRB to show it worked. ~34 states plus DC and Puerto Rico have issued AI guidance and the federal layer reports **zero** binding curriculum standards, so the burden of proof is institutional — and an engagement that ships the evidence layer with the tutor wins the renewal. See `compose/patterns.md` **`P31`**. 🟡 **Named statutes to design against:** Idaho SB 1227 (signed 2026-03-19, effective 2026-07-01), Ohio (district AI policy due 2026-07-01), Oklahoma SB 1734 (policy before 2027-28), SUNY AI literacy in general education from Fall 2026.
+
 🔴 **The sellable gap is governance, and it is ~56 points wide.** ChatGPT used by **66%** of students; **only 10%** of institutions have formal AI guidelines; **71%** of US teachers report no AI training *(search channel, vendor roundup — attributed, not asserted)*.
 
 - 🟢 **AI acceptable-use and assessment-redesign engagements.** No model ships this. The deliverable is policy + training + an audit trail, and the buyer already has the usage problem.
@@ -343,6 +391,8 @@ The region with the most initiative density relative to spend, and the one where
 - 🔴 **Added p344 — the sharpest grant-absence specimen yet is US-placed.** `loyaniu/moodle-mcp` is institutionally benched (`calvin.edu`, with a genuine `rwth-aachen.de` EMEA co-contribution) and ships **no licence payload and no manifest declaration** ⇒ all rights reserved. **The most credible-looking connector in the region is the one that cannot be built on.**
 
 ### EMEA
+
+- 🟢 **Added p345 — sell the re-ordering, not the reprieve.** Regulation (EU) **2026/1744** defers **Annex III** education high-risk from 2026-08-02 to **2027-12-02** (secondary-source convergence; **every EU primary host returns HTTP 000 from this environment**, so the date travels as a claim with its channel named). 🔴 **Two obligations did not move:** emotion recognition in education has been **prohibited since 2025-02-02**, and Article 50 transparency applies from 2026-08-02. 🔵 **The engagement, concretely:** an affect-feature audit billable **now** (attention scoring, engagement detection and affect-aware tutoring are out, deferral or not), and an Annex III documentation programme that can be scheduled across 2027 instead of crashed. 🟡 **The supply-side caveat for delivery:** this region's best-placed new row is a **5-commit** bench (`AI-for-Education/pedagogy-benchmark`, MIT, `glasgow.ac.uk`), so European engagements should expect to import their implementation bench and keep the local contribution in governance and evaluation.
 
 🔴 **This region returned NOTHING education-specific on the prescribed leg, and that is written down rather than left as apparent coverage.** Every result was enterprise AI or general EU AI Act commentary; one of two substantive sources is a **2023** study. No edtech vendor, no ministry of education, no school-level rule, no student-data material.
 
@@ -361,6 +411,8 @@ The region with the most initiative density relative to spend, and the one where
 
 ### APAC
 
+- 🟢 **Added p345 — the richest supply channel on these shelves, and the thinnest governance one.** One GitHub topic query returned **12 live rows**, among them `122-syf-wcy/PhysicsOS` (251 ★, a K-12 physics agent driving a real physics engine so a problem becomes an inspectable scene), `Li-Evan/Bloom` (289 ★, placed APAC — China at p343), `Miaotofu01/Study-Mate`, `Zenglian990/AI_Tutor_Release` and `zhangl1001/civil-ai`. 🔴 **The policy leg returned zero school-level rules for China, India or Singapore**; Japan shows movement toward official digital textbooks with no AI-specific rule attached. 🔵 **So the opportunity is inverted here: the buildable material is local and abundant, and the governance is what a studio supplies.** 🟡 **One counter-intuitive datum worth quoting to a client** (Digital Education Council Global Survey 2026): APAC faculty are the **most enthusiastic** (57% excited) while faculty **intent** to use AI fell **76% → 67%**, the lowest of any region — enthusiasm and intent are diverging, which is a change-management engagement, not a licensing one.
+
 🔴 **Also returned nothing education-specific.** The education-adjacent hits are **corporate L&D** (Pearson/TCS, LearnUpon, Alteryx) — a different buyer from schools and universities. **No national education-ministry AI policy surfaced.**
 
 - 🟡 **The governing posture that did surface is *"sovereign-by-design"***: 2026 is described as the year APAC moves from pilots to production with data residency and sovereignty as the design constraint.
@@ -376,6 +428,8 @@ The region with the most initiative density relative to spend, and the one where
 - 🟢 **Added p344 — the region's supply is the strongest on these shelves and it just gained the vertical's only live full education ERP.** `openeducat/openeducat_erp` — 🟡 **LGPL-3.0** (read first-hand, `19.0/LICENSE`, 8 241 B), **India**, **1 711 commits · 97 authors, live 2026-10-13**, placed on `techreceptives.com`/`openeducat.com` with `+0530` on 1 493/1 711. 🔴 **Architect it at arm's length: agents outside the ERP, over its API — an Odoo-style addon that subclasses a core model is a modification under the LGPL, not a link.**
 
 ### LATAM
+
+- 🟢 **Added p345 — the region this shelf called barren for six passes produced the single largest new row of the pass, and it was in this base's own orphan list.** `Mcp-Brasil/mcp-brasil` (**MIT code grant, 1 072 B stock**, **1 817 ★**, 301 forks, 246 commits, `-0300` on all of them, pushed 2026-10-20) exposes **INEP** — ENEM microdata and the national school census — plus `FNDE`, through an MCP server over ~70 Brazilian public APIs, with a **PII column whitelist in code**, re-identification **VEDADO** under LGPD art. 12, and formal microdata research routed out to INEP's **SEDAP** service. 🔴 **Its grant is a split cell:** MIT covers the code; `NOTICE` (3 135 B), `ACCEPTABLE_USE.md` (8 109 B) and `SOURCES.md` (19 286 B, 61 headed sections) scope the data, the institutional marks and the permitted uses. 🔵 **The demand side matches:** Latam-GPT launched **2026-02-10** (CENIA, Chile — 65 institutions across 15 countries) and a **UNESCO–CENIA** partnership signed 2026-03 stands up a **Regional Observatory on AI in Education** serving Ministries of Education. 🟢 **The engagement is `compose/patterns.md` `P32`: a defensible-on-day-one agent over national assessment data, 6–8 weeks**, with the four hard rules taken from the project's own documents. 🟡 Also placed this pass but **not** recommended as a bench: `latam-gpt/anonymization-filter` (MIT, `uc.cl`, Chile) — 6 commits, dormant 17 months.
 
 🟢 **The richest region this pass, and the only one with a figure carrying a real denominator.** Digital Education Council **LATAM survey 2026**: **>30 000 responses across 29 institutions** — **92%** of students and **79%** of faculty actively engaging with AI. UNESCO IESALC, separately: **200 higher-education institutions across 19 countries** — teaching and learning **73.5%**, research **57.0%**, administration **34.1%**, community engagement **20.0%**.
 
@@ -396,6 +450,8 @@ The region with the most initiative density relative to spend, and the one where
 - 🔴 **Added p344 — the supply count, stated as a count for the second consecutive pass: ONE instrument-placed LATAM row** (`Cvmcosta/ltijs`, Brazil). 🟢 **Plus the largest cross-region bench measured on these shelves — 216 commits at `-0300` by a single author inside `formalms`** — 🟡 **whose country is NOT resolvable from the available evidence: every sampled month falls inside the southern DST window, so Chile and Brazil are indistinguishable (`ACTION ZZ-d`). The band is LATAM; the country may not be written, and this creates no LATAM row.**
 
 ### Global
+
+- 🟢 **Added p345 — two cross-cutting facts a studio can use in any region.** 🔴 **Market sizing from this channel is unusable:** two sources attribute incompatible 2026 figures to the *same* analyst (≈ **USD 23 bn at ~42% CAGR** and **USD 12.3 bn**), so it is published as a conflict and never as a number; the adoption percentages in the same channel come from vendor pages with self-reported surveys. 🟢 **What IS reusable is the promotion discipline:** of 12 live rows a single topic query returned, **9 had sat on a trending shelf without ever being adjudicated** — one at **4 696 ★** — and this base held **528** permissively-licensed addresses it had measured and never offered. 🔵 **For a client running their own radar the lesson transfers directly: measure delivery, not intake, or you will report saturation while sitting on an unread backlog** (`intel/trends.md` **`T41`**). 🟡 **And two placement traps that cost nothing to avoid:** a repository or organisation NAME in a regional language is not a region signal (`ACTION ZZ-g`), and a FORK's commit log measures its upstream's bench (`ACTION ZZ-h`).
 
 🟢 **What holds in every region, and is therefore the reusable part of a bid.**
 
