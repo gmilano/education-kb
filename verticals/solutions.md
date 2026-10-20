@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 344 · 2026-10-20 — the ERP/CRM leg's only permissive hits are not education systems, and its one education hit was mislicensed by the source
+
+**Evidence:** [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-payload-absence-enumerated`](../evidence/p344-payload-absence-enumerated.2026-10-20-p344.tsv) · [`p344-region-placement`](../evidence/p344-region-placement.2026-10-20-p344.tsv).
+
+🔴 **`make hooks` could not be run (tool policy, `Code from External`) — second consecutive pass.** `ACTION ZZ-a` satisfied; every grant below was read with `curl` from the payload at the repository's **actual default ref**.
+
+### 🟢 `OpenEduCat` — the row is correct, the address was not, and it is the vertical's live education ERP
+
+🟡 **Cell: `LGPL-3.0`, CONFIRMED first-hand after five passes carried as unresolved.** Canonical address **`openeducat/openeducat_erp`**, default ref **`19.0`**, payload `LICENSE` **8 241 B**. 🟢 **It covers the whole vertical footprint** — SIS, LMS, admissions, finance, library, hostel — as an **Odoo-derived** application suite, which is also why its default branch is a release number.
+
+🟢 **Bench:** 1 711 commits · 97 authors · 2012-10-17 → **2026-10-13 (live)**, placed 🟢 **APAC — India** (`techreceptives.com` 637 + `openeducat.com` 263 corporate, `+0530` 1 493/1 711). **0% agent-authored.**
+
+🔴 **What `LGPL-3.0` means for an engagement, stated plainly because the vendor's own marketing does not.** The LGPL's weak-copyleft boundary is the *module*: Globant may **link** proprietary services against it and keep those separate, but **modifications to OpenEduCat's own modules carry back**, and an Odoo-style addon that subclasses a core model is a modification, not a link. 🟢 **So the safe architecture is explicit: AI agents live outside the ERP and speak to it over its API; they do not ship as patched addons.** 🔵 That is the same seam this shelf already prescribes for Moodle and Open edX, and it survives the licence difference.
+
+### 🔴 Forma LMS — a refuted inbound claim, and the specimen `ACTION SH` exists for
+
+🔵 The prescribed leg `open source platform {industry} ERP CRM MIT Apache` returned **"Forma LMS is Apache 2.0 licensed"**. 🔴 **Refuted on both the address and the grant:**
+
+- `forma-lms/formalms` (the printed slug) — 🔴 **credential prompt: does not exist.** Canonical: **`formalms/formalms`**.
+- Payload at `master/html/license.txt`, **18 346 B**: 🔴 **`GNU GENERAL PUBLIC LICENSE Version 2, June 1991`.** **GPL-2.0, not Apache-2.0.**
+
+🟢 **No cell was written from the claim.** 🔴 **Had it been, a copyleft corporate-training LMS would sit on this shelf in the permissive tier** — and this shelf is the one an engagement reads first when choosing a platform to customise. 🟡 **Its honest placement:** 🟢 **EMEA — Italy** (7 494 c · 59 a, `joint-tech.it`/`grifomultimedia.it` bench, CET/CEST pair), **three months stale**, and useful only where copyleft is already accepted. **See `repos/foundations.md` for the ladder defect that made the payload hard to find at all (`ACTION ZZ-e`).**
+
+### 🔴 The leg's structural result: the permissive hits are not education systems
+
+🟢 **This is the finding, and it is a repeat with a sharper edge.** The leg asked for **MIT/Apache** platforms in **education**, and what it returned splits cleanly:
+
+| Returned | Licence | Education? | Usable as an education vertical base? |
+|---|---|---|---|
+| `apache/ofbiz` | 🟢 Apache-2.0 | 🔴 no — general ERP | 🟡 carried; a generic ERP, no education domain model |
+| Atomic CRM (`marmelab/atomic-crm`) | 🟢 MIT | 🔴 no — CRM | 🔴 not an education system; **not promoted** |
+| Krayin | 🟢 MIT | 🔴 no — CRM (Laravel) | 🔴 **not promoted** |
+| Forma LMS | 🔴 **GPL-2.0** (source said Apache-2.0) | 🟢 yes — corporate LMS | 🟡 copyleft only |
+| OpenEduCat | 🟡 LGPL-3.0 | 🟢 yes — education ERP | 🟢 **yes, at arm's length over its API** |
+| `moodle/moodle` · Canvas LMS CE · Chamilo · ERPNext · Dolibarr · Twenty · EspoCRM | 🔴 GPL-3.0 / AGPL-3.0 / GPL-2.0 / GPL / AGPL | 🟢/🔴 mixed | 🟡 carried, all copyleft |
+
+🔴 **Eleven platforms, and the intersection of "permissive" and "education domain model" is EMPTY — again.** 🟢 **This is now a stable structural fact about the vertical rather than a gap in the query, and it should be said to a client in one sentence: the education platform tier is copyleft, and the permissive tier is where the AI layer goes.** 🔵 **The Apereo/`ECL-2.0` stack (Sakai, Opencast) remains the one genuinely permissive education-specific family on these shelves** — Apache-derived, heavily European-university-deployed — **and `intel/trends.md` T32 still records that generic SPDX-style detection cannot see it**, which means a studio's own licence scanner will stall on the one permissive option it has.
+
+### 🟡 The MCP connector tier: two declarations without text, and one that cannot be used at all
+
+🟢 **Re-probed, enumerated, and split** (detail and the agent-runtime rule in `agents/top.md`):
+
+- 🟡 `adriasantacreu/google-classroom-mcp` — **MIT in `package.json`, no licence text in the tree.** 🟢 Placed **EMEA** (offset-only), dormant 7 months.
+- 🟡 `davipac/classroom-mcp` — **MIT in `package.json`, no licence text.** 🔴 **NOT RESOLVED** for region: 2/2 commits agent-authored (`ACTION ZZ-f`).
+- 🔴 `loyaniu/moodle-mcp` — **no payload and no manifest declaration ⇒ all rights reserved. NOT USABLE.** 🟢 Placed **North America — US** on institutional `calvin.edu`, with a genuine EMEA co-contribution (`rwth-aachen.de`).
+
+🔴 **The practical warning for this shelf: the best-benched of the three connectors is the one that cannot legally be built on**, and the two that are plainly *intended* to be MIT ship no text to say so. 🟢 **For an engagement this is a one-email fix on two of them and a blocker on the third** — and `pablopc05/mcp-usc` (**MIT**, Universidade de Santiago de Compostela) remains the Moodle connector this shelf actually recommends.
+
 ## Pass 343 · 2026-10-20 — one platform promoted with the deepest bench this shelf has added in a month, and the LATAM-connector sentence on this shelf gets a boundary rather than a refutation
 
 **Evidence:** [`p343-action-zc-placement`](../evidence/p343-action-zc-placement.2026-10-20-p343.tsv).

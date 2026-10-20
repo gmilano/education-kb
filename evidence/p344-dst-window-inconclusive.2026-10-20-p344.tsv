@@ -1,0 +1,10 @@
+# p344 — ACTION ZZ-d: the non-shifting-zone test (p343, applied to ahmedEid1/lumen) is only VALID when the commit sample straddles the DST boundary. This is the case that proves it.
+cohort	commits	author_count	author_name_resolved	domain	offsets_observed	months_covered	inside_southern_DST_window	verdict
+formalms/formalms -0300 secondary	216	1	Eduardo Mozart de Oliveira	users.noreply.github.com (GitHub privacy proxy — no geography)	-0300 on all 216	2024-01 2024-09 2024-10 2024-11 2025-03	ALL FIVE	LATAM at BAND level; COUNTRY NOT RESOLVABLE
+# Why it is inconclusive: a Chilean author (-0400 winter / -0300 summer) and a Brazilian author (non-shifting -0300, DST abolished 2019)
+# produce an IDENTICAL sample when every sampled month falls inside the southern DST window. There is no Apr-Aug commit to discriminate on.
+# p343's test on ahmedEid1/lumen was valid precisely because it had 39 commits OUTSIDE Mar-Nov.
+# Falsifier, cheap and dated: re-measure when any Apr-Aug commit from this author appears.
+# Consequence for the ledger: this does NOT create a LATAM row. formalms is placed EMEA — Italy on its modal bench.
+# It IS the largest cross-region secondary bench measured on these shelves (216 commits), third specimen of p343's class.
+# The instrument-placed LATAM row count stays at 1 (Cvmcosta/ltijs, p342).

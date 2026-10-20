@@ -1,0 +1,12 @@
+# p344 — ACTION p275: an absence is only publishable when an enumeration refutes a payload. Trees enumerated with `git ls-tree -r` over a --filter=blob:none bare clone; manifests read with `git show`.
+slug	ref	root_payload	full_tree_word_anchored_payload	manifest	manifest_declares	legal_state
+formalms/formalms	master	NONE	html/license.txt (18346 B, GNU GENERAL PUBLIC LICENSE Version 2, June 1991)	none in root	-	GPL-2.0 — GRANT PRESENT, NOT IN ROOT
+formalms/formalms	master	-	vendor/symfony/polyfill-ctype/LICENSE	(dependency)	-	NOT the project grant — a bundled dependency's
+formalms/formalms	master	-	vendor/twig/twig/LICENSE	(dependency)	-	NOT the project grant
+formalms/formalms	master	-	html/addons/jquery/malihu-custom-scrollbar-plugin/LICENSE.txt	(dependency)	-	NOT the project grant
+openeducat/openeducat_erp	19.0	LICENSE (8241 B)	LICENSE	-	-	LGPL-3.0 — confirms the carried cell, read first-hand
+adriasantacreu/google-classroom-mcp	master	NONE	NONE	package.json	"license": "MIT"	DECLARATION WITHOUT TEXT
+davipac/classroom-mcp	claude/publish-classroom-aluno-mcp-9g61ee	NONE	NONE	package.json	"license": "MIT"	DECLARATION WITHOUT TEXT
+loyaniu/moodle-mcp	main	NONE	NONE	pyproject.toml	(no license key)	NO GRANT AND NO DECLARATION — all rights reserved by default; NOT USABLE
+Noor-ul-Eman28/AI-Tutor-MCP-Toolkit	main	NONE (LICENSE/LICENSE.md/LICENSE.txt all 404)	not enumerated	-	-	NO GRANT — not promoted to any shelf
+# substring specimen (p333 class): grepping the root tree for `mit` matched `smithery.yaml` in google-classroom-mcp. A word-anchored pattern is required.

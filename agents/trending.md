@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 344 · 2026-10-20 — the tenth consecutive zero on the supply legs, and the one new slug has no grant
+
+**Evidence:** [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-agent-runtime-region`](../evidence/p344-agent-runtime-region.2026-10-20-p344.tsv).
+
+🔴 **`make hooks` could not be run (tool policy, `Code from External`) — second consecutive pass.** `ACTION ZZ-a` satisfied; every number below is plain `git` or `curl`.
+
+### 🔴 Supply: TENTH consecutive measurement of zero new placeable slugs
+
+Six legs run — the four prescribed global ones plus two targeted at this vertical's own idiom (`education MCP server`, `AI tutoring agent October 2026`). **What came back:**
+
+- 🔵 **Carried, every one of them:** `withmarbleapp/os-taxonomy` (placed **EMEA** at p343) · `microsoft/ai-agents-for-beginners` · `rohitg00/ai-engineering-from-scratch` · `rasbt/LLMs-from-scratch` · `kamranahmedse/developer-roadmap` · `ashishpatel26/500-AI-Agents-Projects` · `ARUNAGIRINATHAN-K/awesome-ai-agents-2026` · `caramaschiHG/awesome-ai-agents-2026` · `HKUDS/DeepTutor` · `moarshy/mcp-tutor` · `ArnaudGuiovanna/tutor-mcp` · `kvnloo/tutor-mcp`.
+- 🟢 **One genuinely new slug: `Noor-ul-Eman28/AI-Tutor-MCP-Toolkit`.** It resolves (`refs/heads/main`). 🔴 **`LICENSE`, `LICENSE.md` and `LICENSE.txt` all return 404.** No grant ⇒ **not promoted**, and the measurement is recorded instead of the row.
+- 🔴 **The general-purpose contamination is now the dominant failure mode of these legs.** The prescribed query `top open source AI agents education 2026 github MIT` returned **OpenClaw, OpenHands, CrewAI, LangGraph and Hermes Agent** — five general-purpose agent frameworks and not one education-specific project. 🟡 **That is the tenth consecutive pass in which the education qualifier was effectively ignored by the web channel.**
+
+### 🟡 What the trending channel *did* report, and why two of the three are not news
+
+- 🟡 **`withmarbleapp/os-taxonomy` is the only education row on any October 2026 trending list this pass found** — a **1 590-topic curriculum graph with 3 221 prerequisite edges**. 🔴 **Star counts disagree across the two secondary posts carrying it (5 900+ vs 6 262)**, and these shelves hold it at **6.6k** read first-hand at p343. 🟢 **The first-hand number stands; the blogs are not a channel.** Its grant is **ODbL-1.0 (database) + CC-BY-SA-4.0 (text)** — *not* a code licence, which is the thing a studio must notice before planning on it.
+- 🔵 **`HKUDS/DeepTutor` shows a last-update of 2026-10-18** — live, and already the most-cited row on this shelf. **No new release, no MCP surface reported.** Not a signal, a heartbeat.
+- 🔵 **`ArnaudGuiovanna/tutor-mcp` now has a divergent fork**, `kvnloo/tutor-mcp`, advertising itself as *"50 years of cognitive science, MIT licensed"*. 🟡 **Different HEADs ⇒ two repositories**, so this is a fork gaining independent visibility, not a second project. 🟢 **The upstream is the row to track** — `p343` measured its bench at 467 commits with a named stabilization audit, which is the better of the two signals.
+
+### 🔴 The agent-authorship signal is now a trend in its own right, three passes running
+
+🟢 **This is worth recording on the trending shelf and not only in the rule, because the direction is one-way:**
+
+| Pass | Row | Agent-authored | What it meant |
+|---|---|---|---|
+| p342 | `davipac/classroom-mcp` | (default branch) | A carried row whose **default branch is an agent working branch** |
+| p343 | `zijinz456/OpenTutor` | **52 / 194 = 26.8%** | 🔴 Weekly automated **self-promotion** since March — build-in-public posts, repo health reports, community drafts |
+| p343 | `ArnaudGuiovanna/tutor-mcp` | 30 / 467 = 6.4% | 🟢 **Engineering** — migrations, store exceptions, a named stabilization audit |
+| **p344** | **`davipac/classroom-mcp`** | **2 / 2 = 100%** | 🔴 **The whole repository is the agent's output**, and its region channel is therefore **void** (`ACTION ZZ-f`) |
+
+🔵 **The practical consequence for anyone reading a star count on this shelf:** a repository can now be authored, promoted and defaulted-to by an agent, and **none of star count, commit count or timezone offset will say so.** 🟢 **The cheap test remains `git log --format='%ae%x09%s' | grep -i anthropic`** — no README reading, no judgement — **and this pass is the first time it returned the whole log.**
+
 ## 2026-10-20 — Pass 343 — the prescribed legs fail for the fourteenth consecutive pass, and the hour went to the inventory instead: fourteen held rows placed, one new rung, and a fork URL that three recipes had been shipping
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

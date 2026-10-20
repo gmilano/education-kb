@@ -1,0 +1,17 @@
+# p344 — address resolution via plain `git ls-remote --symref`. A credential prompt is a MEASUREMENT (ACTION p293), not an inconclusive result.
+probed_address	ls_remote_result	default_ref	verdict	consequence
+openeducat/openeducat	credential prompt	-	DOES-NOT-EXIST	the address carried since p342 as UNRESOLVED is not a repository
+openeducat/openeducat_erp	ref: refs/heads/19.0	19.0	RESOLVED	canonical address; default branch is a RELEASE NUMBER, not main/master
+OpenEduCat/openeducat	credential prompt	-	DOES-NOT-EXIST	case-varied owner is not the answer
+OpenEduCat/OpenEduCat	credential prompt	-	DOES-NOT-EXIST	-
+openeducat/OpenEduCat-ERP	credential prompt	-	DOES-NOT-EXIST	-
+forma-lms/formalms	credential prompt	-	DOES-NOT-EXIST	the address the web channel prints is not a repository
+formalms/formalms	ref: refs/heads/master	master	RESOLVED	canonical address for Forma LMS
+forma-lms/forma.lms	credential prompt	-	DOES-NOT-EXIST	-
+formalms/forma.lms	credential prompt	-	DOES-NOT-EXIST	-
+adriasantacreu/google-classroom-mcp	ref: refs/heads/master	master	RESOLVED	exists; p342 recorded "no payload", not "no repository"
+loyaniu/moodle-mcp	ref: refs/heads/main	main	RESOLVED	exists
+davipac/classroom-mcp	ref: refs/heads/claude/publish-classroom-aluno-mcp-9g61ee	claude/publish-classroom-aluno-mcp-9g61ee	RESOLVED	default ref is an UNMERGED AGENT WORKING BRANCH
+kvnloo/tutor-mcp	HEAD 3d11705c0dc92461a51820dedecf638513bfcd8e	main	RESOLVED	divergent fork
+ArnaudGuiovanna/tutor-mcp	HEAD 05c56616ee24f55d9712f34105262383acb328d8	main	RESOLVED	upstream; HEADs DIFFER => two repositories, gate-identity not tripped
+Noor-ul-Eman28/AI-Tutor-MCP-Toolkit	ref: refs/heads/main	main	RESOLVED	only genuinely new slug this pass; no licence payload (see absence file)

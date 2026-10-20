@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 344 · 2026-10-20 — two recipes this pass can state concretely because it read the grants first-hand, and one pre-flight check that belongs in front of every recipe on this shelf
+
+**Evidence:** [`p344-payload-absence-enumerated`](../evidence/p344-payload-absence-enumerated.2026-10-20-p344.tsv) · [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-region-placement`](../evidence/p344-region-placement.2026-10-20-p344.tsv) · [`p344-agent-runtime-region`](../evidence/p344-agent-runtime-region.2026-10-20-p344.tsv).
+
+🔴 **`make hooks` could not be run (tool policy, `Code from External`) — second consecutive pass.** `ACTION ZZ-a` satisfied; **no recipe below cites an instrument verdict.** Every licence named was read from its payload with `curl` at the repository's **actual default ref**.
+
+### 🔴 Pattern 0 — the pre-flight that goes in front of every other recipe on this shelf
+
+🟢 **Three of the four addresses this pass touched would have broken a recipe written from a search result.** This is four commands, it needs no instrument, and `ACTION ZZ-e` is the reason it exists:
+
+```bash
+# 1. Does the address exist, and what is its REAL default branch?
+#    A credential prompt is a MEASUREMENT (ACTION p293): the address is not a repository.
+git ls-remote --symref https://github.com/OWNER/REPO HEAD
+
+# 2. Enumerate the tree at THAT ref — never assume main/master, never assume root.
+git clone --bare --filter=blob:none https://github.com/OWNER/REPO r.git
+git -C r.git ls-tree -r --name-only HEAD \
+  | grep -iE '(^|/)(licen[cs]e|copying|notice)([.-][a-z]+)?$' \
+  | grep -vE '(^|/)(vendor|node_modules|third_party|addons)/'   # drop dependency decoys
+
+# 3. Read the payload. A manifest declaration is NOT a grant (ACTION p280).
+git -C r.git show HEAD:PATH/TO/LICENSE | head -5
+
+# 4. Who wrote it? (ACTION ZZ-c / ZZ-f) — at a high agent share the region channel is void.
+git -C r.git log --format='%ae%x09%s' | grep -i anthropic
+```
+
+🔴 **What each step caught this pass.** Step 1: `openeducat/openeducat` and `forma-lms/formalms` **do not exist**, and the real OpenEduCat default branch is **`19.0`**, not `main`. Step 2: Forma LMS's grant is at **`html/license.txt`**, with **four dependency decoys above it** — a first-match ladder answers Symfony's MIT on a GPL-2.0 project. Step 3: two MCP connectors declare `"license": "MIT"` and **ship no licence text at all**. Step 4: `davipac/classroom-mcp` is **2 of 2 commits agent-authored**, so its `+0000` offset describes a datacenter.
+
+### 🟢 Pattern A — education ERP with an agent layer that the LGPL cannot reach (APAC-first, portable)
+
+🔵 **Why it is stateable now:** OpenEduCat was carried as an unresolved address for five passes. 🟢 **Resolved and read first-hand this pass: `openeducat/openeducat_erp`, default ref `19.0`, `LICENSE` 8 241 B, `LGPL-3.0`** — 1 711 commits · 97 authors, **live 2026-10-13**, placed **APAC — India** (`techreceptives.com` 637 + `openeducat.com` 263, `+0530` 1 493/1 711).
+
+**Wiring, and the licence boundary is the architecture:**
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| system of record | **`openeducat/openeducat_erp`** `@19.0` | 🟡 LGPL-3.0 | the vertical's **only live full education ERP** — SIS, LMS, admissions, finance, library |
+| integration seam | its **Odoo XML-RPC / JSON-RPC API** — *not* a custom addon | — | 🔴 **the whole point: see below** |
+| agent orchestration | **`langgraph`** (MIT) or **`crewai`** (MIT), running **outside** the ERP process | 🟢 MIT | permissive, so Globant's agent logic stays Globant's |
+| human-confirmation gate | the pattern from **`psychquant/che-ntucool-mcp`** (MIT) | 🟢 MIT | gates grade/announcement writes behind explicit confirmation |
+| model serving | **`ollama`** (MIT) or **`vllm`** (Apache-2.0), self-hosted | 🟢 MIT / Apache-2.0 | keeps student data inside the institution |
+
+🔴 **The boundary, stated precisely, because the vendor's marketing does not.** The LGPL's weak-copyleft unit is the **module**. Globant may *link* proprietary services against OpenEduCat and keep them separate — **but a modification to an OpenEduCat module carries back, and an Odoo-style addon that subclasses a core model is a modification, not a link.** 🟢 **So the agents live in a separate process and speak over the API. Nothing proprietary is ever an addon.** 🔵 **This is the same seam this shelf prescribes for Moodle and Open edX, which is why the recipe survives the licence difference and ports to any of the three.**
+
+🟢 **Where it lands first:** **Vietnam** — education is named high-risk (automated assessment, behavioural monitoring), compliance **2027-03-01** with grace for systems live before **2026-08-15**, so the human-confirmation gate is a *requirement* rather than a nicety; and **Korea**, in force since **2026-01-22**, 🔴 **where the local-representative requirement must reach the proposal before the architecture does.**
+
+### 🟡 Pattern B — the LATAM governance engagement, which is NOT a build
+
+🔵 **This pass gave the region its first hard denominator and it changes what the recipe is.** **UNESCO IESALC/UNU-IAS: 200 institutions, 19 countries — 87% use AI, 26% have a formal AI strategy.** 🔴 **A 61-point gap, with adoption driven by individual faculty and students rather than institutional policy.**
+
+🔴 **So the deliverable is not a tutor.** The buyer is a rector or provost who **has already lost control of the surface**, and the first engagement is to map it:
+
+1. 🟢 **Inventory** — enumerate AI already in use across teaching, assessment, admissions and administration. There is no model in this step; it is interviews plus log analysis, and it is the step that produces the client's first honest number.
+2. 🟢 **Policy and acceptable-use** — modelled on the governance shape the binding regimes already specify, so the institution is not re-deciding from scratch: **a human decision between model and record** (NYC's prohibition, EU Article 14), and **transparency disclosure** (EU Article 50, live since 2026-08-02).
+3. 🟢 **Oversight instrumentation** — the audit trail, built on permissive parts: **`langgraph`** (MIT) for the decision path, **`grafana`**-style dashboards for the record. 🔴 **Not on the platform tier, which is copyleft.**
+4. 🟡 **Only then** a build, and `Cvmcosta/ltijs` (**LTI 1.3**, the one instrument-placed LATAM row on these shelves, Brazil) is the integration route into whatever LMS the institution already runs.
+
+🟢 **Align, do not compete:** **UNESCO's Observatory on AI in Education for LAC** (launched **2026-04-14**) with **CAF, CENIA, ECLAC, Santillana, Tec de Monterrey, ProFuturo, Fundación Ceibal**, and the Mexico pilot with **CONALEP and DGETI**. 🔴 **And the pitch is the inverse of EMEA's and APAC's: there is no education-specific compliance deadline in the region, so this is sold on the adoption gap and institutional risk. Do not copy a deadline-driven deck into LATAM.**
+
+### 🔴 What NOT to wire, measured this pass
+
+- 🔴 **`loyaniu/moodle-mcp` — do not use.** **No licence payload anywhere in its tree and no `license` key in `pyproject.toml`** ⇒ all rights reserved by default. 🟡 **It is the best-benched of the three connectors probed** (institutional `calvin.edu`, plus a genuine `rwth-aachen.de` EMEA co-contribution), **which is exactly the trap.** 🟢 **Use `pablopc05/mcp-usc` (MIT, Universidade de Santiago de Compostela) instead** — the Moodle connector this shelf recommends and the fork candidate for a Spanish-language tenancy.
+- 🟡 **`adriasantacreu/google-classroom-mcp` and `davipac/classroom-mcp` — do not wire yet.** Both declare `"license": "MIT"` in `package.json` with **no licence text**. 🟢 **Intent is unambiguous and it is a one-email fix** — ask for a `LICENSE` file before building. 🔴 Also: `google-classroom-mcp` is **11 commits over 3 days, dormant 7 months**, and `classroom-mcp`'s default branch is **an unmerged agent working branch**.
+- 🔴 **`formalms/formalms` — not a permissive foundation, whatever a secondary source says.** Claimed Apache-2.0 by a 2026 LMS comparison; **the payload is GPL-2.0.** 🟡 Real Italian vendor bench, 7 494 commits, **three months stale** — usable only where copyleft is already accepted.
+- 🔴 **`withmarbleapp/os-taxonomy` — read the grant before planning on it.** A 1 590-topic / 3 221-edge curriculum graph, but **`ODbL-1.0` (database) + `CC-BY-SA-4.0` (text) and no code licence**: reusable **as share-alike data**, not as a component.
+- 🔴 **`Noor-ul-Eman28/AI-Tutor-MCP-Toolkit` — the one new slug the supply legs returned, and it has no grant** at any standard root name. Not promoted, not wired.
+
 ## Pass 343 · 2026-10-20 — two new recipes and one correction that had been sitting in three of them: every `tutor-mcp` step on this shelf pointed at the FORK
 
 **Evidence:** [`p343-action-zc-placement`](../evidence/p343-action-zc-placement.2026-10-20-p343.tsv).

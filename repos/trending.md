@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 344 · 2026-10-20 — the trending channel produced one education row, two disagreeing star counts for it, and no new grant
+
+**Evidence:** [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-region-placement`](../evidence/p344-region-placement.2026-10-20-p344.tsv).
+
+🔴 **`make hooks` could not be run (tool policy, `Code from External`) — second consecutive pass.** `ACTION ZZ-a` satisfied.
+
+### 🟡 What the `github trending {industry} AI {year}` leg actually returned
+
+🔴 **Not one live GitHub trending page.** Every result was a secondary blog summarising one — four of nine from a single aggregator (`coddykit.com`) publishing one post per repository. 🟢 **Recorded because it is the measurement:** this leg has not reached a primary source in this vertical for ten consecutive passes.
+
+| Repo | Status on these shelves | Star count reported | First-hand number |
+|---|---|---|---|
+| `withmarbleapp/os-taxonomy` | 🔵 carried, placed **EMEA** at p343 | **5 900+** *and* **6 262** — two posts, same week, disagreeing | 🟢 **6.6k** (p343, read first-hand) |
+| `kamranahmedse/developer-roadmap` | 🔵 carried | not stated | — |
+| `rohitg00/ai-engineering-from-scratch` | 🔵 carried (p342) | not stated | — |
+| `caramaschiHG/awesome-ai-agents-2026` | 🔵 carried | 🔴 "trending" badge refers to **February 2026** | — |
+
+🔴 **The only education-specific row on any October 2026 trending list this pass found is one this base already holds and already placed.** 🟢 **And its grant is the thing a reader must not skip: `ODbL-1.0` (database) + `CC-BY-SA-4.0` (text) — there is no code licence**, so a 1 590-topic / 3 221-edge curriculum graph is reusable *as data under share-alike*, not as a component.
+
+🟡 **A note on the two star counts.** They differ by ~360 in the same week, and neither matches the first-hand read. 🟢 **The rule these shelves already run is sufficient and is restated because this pass is a clean specimen: a star count from a blog is not a channel.** 🔵 **And per `ACTION ZZ-c` it is now worth less than it was** — a star count cannot distinguish a repository whose commits are weekly automated self-promotion (`zijinz456/OpenTutor`, 26.8%, p343) from one whose agent closes robustness audits (`ArnaudGuiovanna/tutor-mcp`, 6.4%, p343).
+
+### 🟢 The repositories this pass actually measured, and none came from the trending leg
+
+🔵 **All four arrived from the carried backlog, not from discovery** — which is `ACTION ZC`'s lesson holding for a second pass:
+
+| Repo | Grant, first-hand | Bench | Placed |
+|---|---|---|---|
+| `openeducat/openeducat_erp` | 🟡 LGPL-3.0, 8 241 B, `19.0/LICENSE` | 1 711 c · 97 a · **live 2026-10-13** | 🟢 **APAC — India** |
+| `formalms/formalms` | 🟡 GPL-2.0, 18 346 B, `html/license.txt` | 7 494 c · 59 a · 2026-07-17 | 🟢 **EMEA — Italy** |
+| `loyaniu/moodle-mcp` | 🔴 **no grant, no declaration** | 17 c · 6 a · 2026-06-28 | 🟢 **North America — US** (+ 🔵 EMEA co-contribution) |
+| `davipac/classroom-mcp` | 🟡 MIT declared, no text | **2 c · 2 agent-authored** | 🔴 **NOT RESOLVED** (`ACTION ZZ-f`) |
+
+🟢 **Two addresses that the web channel and these shelves both carried were found not to exist** — `openeducat/openeducat` and `forma-lms/formalms`, both credential prompts. 🔵 Per `ACTION p293` a credential prompt is a **measurement**, and in both cases the real address was one slug away and carried a different default branch than any ladder assumes (`19.0`, and a payload at `html/license.txt`). **See `repos/foundations.md` for `ACTION ZZ-e`.**
+
 ## 2026-10-20 — Pass 343 — the trending channel is blind to this vertical for the fourteenth pass, and the repository it keeps recommending turned out to have a licence file nobody had read
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

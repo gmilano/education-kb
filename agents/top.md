@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 344 · 2026-10-20 — the two addresses this base could not resolve were both wrong in the same new way, and one row turns out to be unplaceable *because of how it was written*
+
+**Evidence:** [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-payload-absence-enumerated`](../evidence/p344-payload-absence-enumerated.2026-10-20-p344.tsv) · [`p344-region-placement`](../evidence/p344-region-placement.2026-10-20-p344.tsv) · [`p344-agent-runtime-region`](../evidence/p344-agent-runtime-region.2026-10-20-p344.tsv).
+
+🔴 **Inherited gate state is NOT reported this pass, and the reason is an environment limit rather than a finding — SECOND CONSECUTIVE PASS.** `make hooks` could not be run: this session's tool policy refuses to execute the repository's own `compose/code/` instruments (classifier verdict `Code from External`). 🟢 **No instrument was invoked and none was modified.** Every measurement below was taken with plain `git` and `curl` issued directly, which is why each row carries its raw distribution rather than an instrument verdict. **`ACTION ZZ-a` is satisfied in this position; the consequence is that `gate-shelf-consistency` has now not judged a published cell for two passes.**
+
+### 🟢 `ACTION ZZ-c` executed over this pass's five rows, and the 100% case is a new blindness class
+
+🔵 `p343` registered `ZZ-c` — *before citing any row's commit count as a bench, split the log by author domain and read the subject lines of the automated half.* Run over the five rows this pass touched, **four are 0.0% agent-authored and one is 100%**:
+
+| Repo | Grant, read first-hand | Commits · authors · span | Agent-authored | Placed, and how |
+|---|---|---|---|---|
+| `formalms/formalms` | 🟡 GPL-2.0, 18 346 B, **`master/html/license.txt`** — not in root | 7 494 c · 59 a · 2013-07-08 → **2026-07-17 (3 months stale)** | 0 / 7 494 | 🟢 **EMEA — Italy** — `joint-tech.it(1603)` `giuseppenucifora.com(1585)` `grifomultimedia.it(837)` `email.it(626)` + `+0200(3415) +0100(2547)` CET/CEST pair |
+| `openeducat/openeducat_erp` | 🟡 LGPL-3.0, 8 241 B, **`19.0/LICENSE`** | 1 711 c · 97 a · 2012-10-17 → **2026-10-13 (live, 7 days)** | 0 / 1 711 | 🟢 **APAC — India** — `techreceptives.com(637)` + `openeducat.com(263)` corporate + `+0530(1493/1711)` IST |
+| `loyaniu/moodle-mcp` | 🔴 **none — no payload and no manifest declaration** | 17 c · 6 a · 2025-04-03 → 2026-06-28 | 0 / 17 | 🟢 **North America — US** — institutional `calvin.edu(4)` + `-0400(12)` modal; 🔵 `rwth-aachen.de(3)` is a **genuine EMEA co-contribution** |
+| `adriasantacreu/google-classroom-mcp` | 🟡 **MIT declared in `package.json`, no licence text anywhere in the tree** | 11 c · 1 a · 2026-03-18 → 2026-03-21 | 0 / 11 | 🟡 **EMEA** — `+0100` on all 11; **offset-only**, `gmail.com` only, **dormant 7 months** |
+| `davipac/classroom-mcp` | 🟡 **MIT declared in `package.json`, no licence text** | **2 c · 1 a · 2026-09-07 — both authored `noreply@anthropic.com`** | **2 / 2 = 100%** | 🔴 **NOT RESOLVED** — see the rule below |
+
+### 🔴 `ACTION ZZ-f`: on a fully agent-authored repository the commit channel measures the AGENT'S RUNTIME, not a human geography
+
+`davipac/classroom-mcp` is **2 of 2 commits authored by `noreply@anthropic.com`**, offset `+0000`, and its default ref is `claude/publish-classroom-aluno-mcp-9g61ee` — **an unmerged agent working branch serving as the repository's default branch.**
+
+🔴 **Both of the channels `ACTION ZH` reads are properties of a datacenter.** `anthropic.com` is not a corporate domain in the sense `ZH` means it, and `+0000` is not a timezone anyone lives in. 🟢 **The instrument does not return a *wrong* answer here — it returns the runtime's answer, which is worse, because it looks exactly like a placement.** A pass that read `+0000` as a channel would have published EMEA on a row with no human geography in it at all.
+
+🔵 **The one channel that does carry a human signal is the natural language of the subject lines**, and they are Portuguese: `adiciona helper temporario de bootstrap OAuth (sem maquina local)` · `servidor MCP do Google Classroom para aluno`. 🔴 **Per `ACTION ZZ-b` that is a prompt-language signal, not an authorship measurement, and it may not enter the `Placed` cell.** So the row stays **NOT RESOLVED** — and it is **the first row on these shelves that is unplaceable because of how it was written rather than because of what it omits.**
+
+🟢 **`ACTION ZZ-f` registers two things.** First, the general rule: **a row's agent-authored share is a confidence discount on its region placement, and at 100% the region channel is void and must be reported as void, never as an offset.** Second, the quantitative refinement of `ZZ-c`: that action graded *bench quality* (engineering vs promotion); this one grades *placeability*, and the two are different axes on the same split. 🟡 **This class will grow**: these shelves have now found an agent-authored default branch (`p342`), 26.8% agent-authored self-promotion (`p343`, `zijinz456/OpenTutor`), 6.4% agent-authored engineering (`p343`, `ArnaudGuiovanna/tutor-mcp`) and a 100% agent-authored repository (this pass) in three consecutive passes.
+
+### 🟢 Legal state: the three carried MCP rows were one open item and are actually two different answers
+
+🔵 `p342` carried all three as *"returned NO PAYLOAD at all this pass"*. 🟢 **All three were re-probed, all three exist, and the absence is now refuted-or-confirmed by tree enumeration rather than by a ladder** (`ACTION p275`): `git ls-tree -r` over a `--filter=blob:none` bare clone, with a **word-anchored** pattern. They split:
+
+- 🟡 **`adriasantacreu/google-classroom-mcp` and `davipac/classroom-mcp` — declaration without text.** Both declare `"license": "MIT"` in `package.json`; **neither ships a licence file anywhere in its tree.** Per `ACTION p280` a manifest is identified by what it *declares*, and a declaration is **not a grant**. 🟡 For an engagement this is a one-email fix and worth making, because the intent is unambiguous.
+- 🔴 **`loyaniu/moodle-mcp` — no payload AND no declaration.** `pyproject.toml` carries **no `license` key at all**. 🔴 **This is the only one of the three that is unambiguously not usable**: with no grant and no declaration, the default is all rights reserved. 🟢 **It is also the best-placed of the three** (institutional `calvin.edu` + `rwth-aachen.de`), which is precisely the trap: **the row that looks most credible on its bench is the one that cannot be built on.**
+
+🟢 **Promoted to the table this pass: none.** 🔵 **The supply legs returned one genuinely new slug** — `Noor-ul-Eman28/AI-Tutor-MCP-Toolkit`, which exists and ships **no licence payload at any standard root name**. It is not promoted, and the reason is recorded rather than the row.
+
+🔵 **`gate-identity`, incidentally:** `kvnloo/tutor-mcp` and `ArnaudGuiovanna/tutor-mcp` return **different HEADs** (`3d11705` vs `05c5661`) ⇒ **two repositories, not one**, so `ACTION p283`'s gate is not tripped. 🟡 But `kvnloo` is a **divergent fork** of the row `p343` placed EMEA, and both addresses sit on these shelves — a reader comparing them is comparing a fork to its upstream, not two projects.
+
 ## Pass 343 · 2026-10-20 — `ACTION ZC` is executed over fourteen held rows: thirteen place, one resolves to NOT RESOLVED for a reason worth a rule, and the commit channel turns out to report **what an agent was used for**
 
 **Evidence:** [`p343-action-zc-placement`](../evidence/p343-action-zc-placement.2026-10-20-p343.tsv) · [`p343-agent-authored-commits`](../evidence/p343-agent-authored-commits.2026-10-20-p343.tsv).

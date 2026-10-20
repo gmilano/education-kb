@@ -4,6 +4,44 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 344 · 2026-10-20 — two foundational addresses on these shelves were wrong, both in a way no ladder on this base can see, and a web claim of "Apache 2.0" was refuted by the payload
+
+**Evidence:** [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-payload-absence-enumerated`](../evidence/p344-payload-absence-enumerated.2026-10-20-p344.tsv).
+
+🔴 **`make hooks` could not be run (tool policy, `Code from External`) — second consecutive pass.** `ACTION ZZ-a` satisfied; no instrument-derived cell is written below. Payloads were read with `curl` and trees enumerated with `git ls-tree` over `--filter=blob:none` bare clones.
+
+### 🟢 `openeducat/openeducat` — UNRESOLVED since p342, RESOLVED, and the cause is a new ladder-blindness class
+
+🔵 `p342` opened it as *"`ls-remote` returned no usable ref … the address needs re-checking against the project's current canonical organisation before the row is relied on."* 🟢 **It was not an organisation change and not a dead project. The address is wrong and the branch is wronger.**
+
+| Probed | Result | Verdict |
+|---|---|---|
+| `openeducat/openeducat` | credential prompt | 🔴 **does not exist** |
+| `OpenEduCat/openeducat` · `OpenEduCat/OpenEduCat` · `openeducat/OpenEduCat-ERP` | credential prompt | 🔴 case-varied owners are not the answer |
+| **`openeducat/openeducat_erp`** | `ref: refs/heads/19.0` | 🟢 **canonical** |
+
+🟢 **Grant read first-hand and the carried cell is CONFIRMED: `LGPL-3.0`**, `19.0/LICENSE`, **8 241 B**, opening *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"*. 🟢 **The bench is live and large:** 1 711 commits · 97 authors · 2012-10-17 → **2026-10-13**, placed **APAC — India** on `techreceptives.com(637)` + `openeducat.com(263)` with `+0530` on 1 493 of 1 711.
+
+🔴 **`ACTION ZZ-e`, item 1 — the default branch is a RELEASE NUMBER, and every payload ladder on this base probes `main` and `master`.** `19.0` is not a typo and not a tag; it is the default ref. 🔴 **A repository whose default branch is a version number is invisible to all of them, and the failure is silent: the ladder reports "no payload", which is indistinguishable from an unlicensed repository.** 🟢 **That is exactly the UNSAFE direction** — it turns a plainly-licensed 14-year-old platform into an absence. 🟡 **Falsifier, cheap:** re-probe every address on these shelves that a ladder reported as no-payload, reading its default ref from `ls-remote --symref` instead of assuming one. **The Odoo-derived ecosystem versions its branches this way as a convention, so this will not be one row.**
+
+### 🔴 `ACTION ZZ-e`, item 2 — a grant that is present but NOT IN ROOT, with four decoys above it
+
+🔵 The vertical-platform leg returned **"Forma LMS is Apache 2.0 licensed"** (a 2026 LMS comparison). 🟢 **Both halves of that are wrong, and this base caught it before writing a cell.**
+
+- 🔴 **The address is wrong.** `forma-lms/formalms` — the slug the web channel prints — **returns a credential prompt: it does not exist.** The canonical address is **`formalms/formalms`** (`refs/heads/master`).
+- 🔴 **The licence is wrong, and in the UNSAFE direction.** First-hand payload: **`master/html/license.txt`, 18 346 B, `GNU GENERAL PUBLIC LICENSE Version 2, June 1991`.** 🔴 **GPL-2.0, not Apache-2.0.** Had the inbound claim been taken, **a copyleft LMS would have shipped on these shelves as permissive** — the single most expensive cell this base can publish.
+- 🔴 **And the payload is not in root.** `ls-tree` on the root returns **no licence file at all**. The project's own grant sits one directory down at `html/license.txt`, and **above it in the tree sit four decoys that belong to bundled dependencies**: `vendor/symfony/polyfill-ctype/LICENSE`, `vendor/twig/twig/LICENSE`, `vendor/composer/LICENSE`, `html/addons/jquery/malihu-custom-scrollbar-plugin/LICENSE.txt`. 🔴 **A root-only ladder answers "no licence"; a first-match-wins ladder answers Symfony's MIT.** Both are wrong and **the second is wrong permissively.**
+
+🟢 **`ACTION ZZ-e` registers the pair as one piece of work, because they are the same defect on two axes:** *the ladder assumes where a payload lives (`main`/`master`, root) and reports its own assumption as a fact about the repository.* 🟢 **The fix is to read the default ref, enumerate the tree, and prefer a root-or-named-project path over any `vendor/`, `addons/`, `node_modules/` or `third_party/` match** — with its own controls, and with `p262`'s rule beside it: *a row's state is not what it quotes.*
+
+### 🟡 Is Forma LMS a row? Stated with its limits, because they decide the answer
+
+🟢 **Measured, not assumed:** 7 494 commits · 59 authors · 2013-07-08 → **2026-07-17**, placed 🟢 **EMEA — Italy** on `joint-tech.it(1603)` `giuseppenucifora.com(1585)` `grifomultimedia.it(837)` `email.it(626)` with the `+0200(3415) / +0100(2547)` CET/CEST pair. **0 of 7 494 commits agent-authored.**
+
+🟡 **It is a real, long-lived corporate-training LMS with a genuine Italian bench — and it is GPL-2.0 and three months stale.** 🔴 **It is not a permissive foundation and must not be filed as one.** 🟢 **Where it earns its place is narrow and worth naming:** for an EMEA corporate-training engagement already committed to copyleft, it is a 13-year PHP codebase with an identifiable vendor bench; for anything Globant intends to build on and relicense, **`moodle/moodle` (GPL-3.0) and the Apereo/`ECL-2.0` stack remain the better-understood copyleft options, and the permissive tier is unchanged by this pass.**
+
+🔵 **One substring specimen for the record (`p333`'s class, live):** grepping the root tree of `adriasantacreu/google-classroom-mcp` for `mit` matched **`smithery.yaml`**. 🟢 **The word-anchored pattern `(^|/)(licen[cs]e|copying|notice)([.-][a-z]+)?$` is what every enumeration above used**, and it is the only reason these four trees produced clean answers.
+
 ## Pass 343 · 2026-10-20 — `os-taxonomy`'s licence is not one licence, it is a **per-source tier list**, and reading it places the gap it leaves: there is no Latin American curriculum framework among its eight sources, and the layer it is missing is already on this shelf, unplaced
 
 **Evidence:** [`p343-action-zc-placement`](../evidence/p343-action-zc-placement.2026-10-20-p343.tsv).

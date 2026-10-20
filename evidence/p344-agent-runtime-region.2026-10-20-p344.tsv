@@ -1,0 +1,10 @@
+# p344 — ACTION ZZ-c executed (split the log by author domain, read the subject lines of the automated half) and ACTION ZZ-f opened (at a high agent share the region channel measures the runtime).
+slug	total_commits	agent_authored	share	subject_lines_sampled_first_hand	what_the_agent_was_used_for	region_channel_status
+formalms/formalms	7494	0	0.0%	-	-	VALID — human bench, 59 authors
+openeducat/openeducat_erp	1711	0	0.0%	-	-	VALID — human bench, 97 authors
+loyaniu/moodle-mcp	17	0	0.0%	-	-	VALID — institutional domains carry it
+adriasantacreu/google-classroom-mcp	11	0	0.0%	-	-	VALID but offset-only
+davipac/classroom-mcp	2	2	100.0%	"adiciona helper temporario de bootstrap OAuth (sem maquina local)" ; "servidor MCP do Google Classroom para aluno"	authoring the project itself — the whole repository is the agent's output	VOID — anthropic.com(2) + +0000(2) are the runtime's, not the author's
+# The only channel carrying a human signal on davipac/classroom-mcp is the NATURAL LANGUAGE of the subject lines, which is Portuguese.
+# Per ACTION ZZ-b that is a prompt-language signal and may NOT enter the Placed cell. The row stays NOT RESOLVED.
+# Refinement of ZZ-c registered this pass: the agent-authored share is also a CONFIDENCE DISCOUNT on the region placement, and at 100% the region channel is void.

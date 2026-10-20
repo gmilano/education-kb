@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 344 · 2026-10-20 — three new trends, and the one that matters most is that a repository's commit channel can now describe a datacenter
+
+**Evidence:** [`p344-agent-runtime-region`](../evidence/p344-agent-runtime-region.2026-10-20-p344.tsv) · [`p344-dst-window-inconclusive`](../evidence/p344-dst-window-inconclusive.2026-10-20-p344.tsv) · [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-payload-absence-enumerated`](../evidence/p344-payload-absence-enumerated.2026-10-20-p344.tsv).
+
+🔴 **`make hooks` could not be run (tool policy, `Code from External`) — second consecutive pass.** `ACTION ZZ-a` satisfied; every number below is plain `git` or `curl`.
+
+### 🔴 **T38 — a fully agent-authored repository's commit channel measures the AGENT RUNTIME, and it does not fail loudly**
+
+🟢 **Measured, on a real row.** `davipac/classroom-mcp`: **2 of 2 commits authored `noreply@anthropic.com`**, offset `+0000`, default ref `claude/publish-classroom-aluno-mcp-9g61ee` — **an unmerged agent working branch serving as the repository's default branch.**
+
+🔴 **Both channels `ACTION ZH` reads are properties of infrastructure.** `anthropic.com` is not a corporate domain in the sense `ZH` means it; `+0000` is not a timezone a contributor lives in. 🔴 **The instrument does not return a *wrong* answer — it returns the runtime's answer, which is more dangerous, because it is shaped exactly like a placement.** A pass reading `+0000` as a channel publishes EMEA on a row containing no human geography at all.
+
+🟢 **The only channel carrying a human signal here is the natural language of the subject lines** — Portuguese: `adiciona helper temporario de bootstrap OAuth (sem maquina local)` · `servidor MCP do Google Classroom para aluno`. 🔴 **Per `ACTION ZZ-b` that is a prompt-language signal, not an authorship measurement, and it may not enter a `Placed` cell.**
+
+🟡 **Why this is a trend and not a row.** Three consecutive passes found the same phenomenon at rising intensity: an agent-authored default branch (p342), **26.8%** agent-authored weekly self-promotion (`zijinz456/OpenTutor`, p343), **6.4%** agent-authored engineering (`ArnaudGuiovanna/tutor-mcp`, p343), and now **100%** (this pass). 🔴 **The direction is one-way and the shelves' two oldest quantitative signals — star count and commit count — are both blind to it.** 🟢 **`ACTION ZZ-f` registers the rule: the agent-authored share is a confidence discount on the region placement, and at 100% the region channel must be reported VOID, never as an offset.**
+
+### 🔴 **T39 — every payload ladder on this base assumes WHERE a grant lives, and reports its own assumption as a fact about the repository**
+
+🟢 **Two independent specimens, both found in one pass, both in the UNSAFE direction.**
+
+| Assumption | Specimen | What the ladder returns | Truth |
+|---|---|---|---|
+| the default branch is `main` or `master` | `openeducat/openeducat_erp` — default ref is **`19.0`** | 🔴 "no payload" | 🟢 **LGPL-3.0**, `19.0/LICENSE`, 8 241 B |
+| the payload is in the repository root | `formalms/formalms` — grant at **`html/license.txt`** | 🔴 root-only ladder: "no licence"; 🔴 first-match ladder: **Symfony's MIT** from `vendor/` | 🟢 **GPL-2.0**, 18 346 B |
+
+🔴 **The first failure is silent and turns a plainly-licensed 14-year-old platform into an absence** — indistinguishable from an unlicensed repository. 🔴 **The second is worse: a first-match-wins ladder answers MIT on a GPL-2.0 project**, because four bundled-dependency payloads (`vendor/symfony/polyfill-ctype`, `vendor/twig/twig`, `vendor/composer`, `html/addons/jquery/malihu-custom-scrollbar-plugin`) sort above the project's own.
+
+🟢 **`ACTION ZZ-e` registers both as one piece of work, because they are one defect on two axes.** 🟢 **The fix: read the default ref from `ls-remote --symref`, enumerate the tree, and prefer a root-or-named-project path over any `vendor/`, `addons/`, `node_modules/` or `third_party/` match** — with its own controls, and with `p262`'s rule beside it: *a row's state is not what it quotes.* 🟡 **Falsifier, cheap and high-yield:** re-probe every address these shelves recorded as no-payload, reading its real default ref. **The Odoo-derived ecosystem versions branches this way by convention, so `19.0` will not be one row.**
+
+### 🟡 **T40 — the non-shifting-zone test is only valid when the commit sample straddles the DST boundary**
+
+🔵 `p343` placed `ahmedEid1/lumen` as **EMEA** by a genuinely strong argument: `+0200` on **all 828** commits *including 39 outside Mar–Nov* ⇒ a non-shifting UTC+2 zone, the Africa/Middle East band rather than CEST. 🟢 **That reasoning is sound and this pass does not disturb it.**
+
+🔴 **But the test can be SILENTLY inconclusive, and this pass found the case.** `formalms`'s `-0300(216)` secondary cohort is **one author**, `users.noreply.github.com`, 2024-01-16 → 2025-03-20. **Months covered: 2024-01, 2024-09, 2024-10, 2024-11, 2025-03 — every one inside the southern-hemisphere DST window.** 🔴 **A Chilean author (`-0400` winter / `-0300` summer) and a Brazilian author (non-shifting `-0300`, DST abolished 2019) produce an identical sample.** `lumen` was decidable only because it had commits on both sides of the boundary; **nothing in the test says so, so a later pass would have read a country off it.**
+
+🟢 **`ACTION ZZ-d`: the non-shifting-zone argument requires evidence on BOTH sides of the DST boundary, and a pass must state the month coverage whenever it uses one.** 🟢 **Here: the band is LATAM, the region is safe, the country may not be written.** 🟡 **Falsifier, dated: re-measure when any Apr–Aug commit from this author appears.**
+
+### 🟢 **P14 — a pass that cannot EXECUTE a gate is not excused from the contract the gate encodes**
+
+🔴 **This pass published a `P383-MULTIPLE-BLOCKS` regression into `intel/market.md` — a second canonical `## Opportunities by region` block — and caught it before the commit without running the instrument.** `ACTION ZZ-a` forbids invoking `compose/code/`, so the checker's contract was **re-derived by reading `check_headings.py`** and re-implemented in a throwaway script outside the repository; it reported `canonical H2 blocks: 2`. 🟢 **The duplicate was removed and this pass's regional findings merged into the existing canonical block as `Added p344` entries under each of the five regions.**
+
+🔵 **The draft claim that preceded it was also wrong and the correction belongs here:** this pass first wrote that the region gate had been *passing vacuously*, on the belief that no canonical H2 block existed. 🔴 **It does, maintained through p343, with all five regions.** The gate is live and has been; the error came from reading the file's structure through a truncated listing. 🟢 **`ACTION ZZ-g` records the capability this produced** — re-derivation as a substitute for execution — **and prescribes the same treatment for `gate-tables` and `gate-dates` before any further pass lands without `make hooks`.** 🔴 **Two passes without the gate would otherwise have shipped a failing gate in the third.**
+
+### 🔵 Demand-side trend movement, and the saturation ends
+
+🟢 **All four prescribed regional legs returned education-specific substance — the first time since p334, after eight consecutive saturations.** The substance is **dates**, and they are the trend:
+
+- 🔴 **EMEA:** Annex III education duties → **2027-12-02** (Regulation (EU) 2026/1744); **Article 50 transparency live and enforced since 2026-08-02**; schools are **deployers**.
+- 🔴 **APAC:** Korea's Framework Act **in force 2026-01-22** with a **local-representative requirement**; **Vietnam names education high-risk** (automated assessment, behavioural monitoring), compliance **2027-03-01**, grace for systems live before **2026-08-15**.
+- 🔴 **North America:** **134 bills / 31 states**; MD, ID, OK, VA mandate district policies; **Ohio deadline 2026-07-01 passed**; NYC **bars AI from grading, discipline and placement**; **COPPA amendments binding since 2026-04-22**.
+- 🟢 **LATAM:** the region's first hard denominator — **87% of 200 institutions across 19 countries use AI, 26% have a strategy** (UNESCO IESALC/UNU-IAS); **Observatory for LAC launched 2026-04-14**.
+
+🔴 **Supply, by contrast: TENTH consecutive measurement of zero new placeable slugs**, and the prescribed `…education 2026 github MIT` leg returned **five general-purpose frameworks and no education project**. 🟡 **Nothing in this repository prevents the eleventh re-buy** — second consecutive pass in those words.
+
 ## Pass 343 · 2026-10-20 — three new trends, each measured on a channel this base already had: the distribution unit of an education agent has changed, the commit log now reports what an agent was *used for*, and the binding constraint on a curriculum product is a licence tier list rather than a model
 
 **Evidence:** [`p343-action-zc-placement`](../evidence/p343-action-zc-placement.2026-10-20-p343.tsv) · [`p343-agent-authored-commits`](../evidence/p343-agent-authored-commits.2026-10-20-p343.tsv).
