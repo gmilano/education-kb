@@ -3,6 +3,58 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+## Pass 336 · 2026-10-20 — five rows this base refused as `GPL-3.0` are **LGPL-3.0**, which is linkable; the rung below `gate-affero-rung` was never built
+
+🔴 **This base built `gate-affero-rung` so that no classifier may read `GPL-3.0` as `AGPL-3.0`. The adjacent rung — `GPL-3.0` vs `LGPL-3.0` — has no gate, and five rows are wrong on it.** All five re-read first-hand this pass on `raw.githubusercontent.com`; the verdict is the payload's own **title line**, not a byte band:
+
+| slug | shelf cell | payload re-read this pass | 🟢 true family | what it is |
+|---|---|---|---|---|
+| `bigbluebutton/bigbluebutton` | `GPL-3.0`, 7 652 B | `v4.0.x-develop/LICENSE`, **7 652 B**, line 1 = **`GNU LESSER GENERAL PUBLIC LICENSE`** | 🟢 **LGPL-3.0** | the open-source web-conferencing stack behind Moodle / Canvas / Open edX virtual classrooms |
+| `celtic-project/LTI-PHP` | `GPL-3.0`, 7 651 B | `master/LICENSE`, **7 651 B**, line 1 = **`GNU LESSER GENERAL PUBLIC LICENSE`** | 🟢 **LGPL-3.0** | the canonical **PHP LTI 1.3 / Advantage** library |
+| `FenixEdu/fenixedu-academic` | `GPL-3.0`, 7 652 B | `master/LICENSE`, **7 652 B**, line 1 = **`GNU LESSER GENERAL PUBLIC LICENSE`** | 🟢 **LGPL-3.0** | a complete **university academic SIS** (IST Lisbon) — 🟢 **EMEA — Portugal** |
+| `luisgf/openbadgeslib` | `GPL-3.0`, 7 650 B | `master/LICENSE.txt`, **7 650 B**, line 1 = **`GNU LESSER GENERAL PUBLIC LICENSE`** | 🟢 **LGPL-3.0** | Open Badges signing / verification |
+| `openeducat/openeducat_erp` | `GPL-3.0`, 8 240 / 8 241 B | `19.0/LICENSE`, **8 241 B**, line 1 = *"For copyright information, please see the COPYRIGHT file."*; line 2 = **`OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE`** | 🟢 **LGPL-3.0** | **education ERP** on Odoo — admissions, SIS, gradebook, finance |
+
+🔴 **The commercial direction is the opposite of the AGPL error, and that is why it went unnoticed for so long.** Misreading `GPL-3.0` as `AGPL-3.0` *over*-restricts and shows up as a complaint. Misreading **`LGPL-3.0` as `GPL-3.0`** *also* over-restricts — so it never shows up at all. It just silently removes rows from the recommendable set: under this base's own bar, `GPL-3.0` is **REFUSED-COPYLEFT**, while **`LGPL-3.0` is linkable** — a proprietary layer may link an LGPL library, which is precisely how Globant delivers on top of a vertical.
+
+🟢 **So this pass does not merely correct a cell. It returns BigBlueButton, LTI-PHP, FenixEdu, Open Badges and OpenEduCat to the usable set** — and the first and last of those are platform-tier, not library-tier. See `verticals/solutions.md` for what that changes.
+
+🟢 **`ACTION ZJ`: a `gate-lesser-rung`, built as `gate-affero-rung`'s sibling — no classifier may read `LGPL-3.0` as `GPL-3.0`.** 🔵 Note the shape the existing ladder already warned about: `p307`'s own comment records that `brownplt/LTLTutor` and `IgorFonck/logicits` were carried as AGPL-3.0 for two passes *"on the strength of a byte LENGTH SERIES"*. The same trap, one rung down — **7 650 / 7 651 / 7 652 B is the LGPL-3.0 canonical band**, and three of the five rows above sit in it.
+
+---
+
+### 🔴 FINDING — this corpus writes byte counts in three thousands-separator conventions, and every single-convention parser understates them
+
+Measured over the live shelves: **565 adjacent grant cells** (a family name with its payload byte count within 60 characters).
+
+| separator as written | cells | example | what a `[\d,]+` parser returns |
+|---|---|---|---|
+| no-break / thin space | **316** | `34 523 B` | 🔴 **523 B** |
+| comma | **187** | `1,067 B` | 🟢 1 067 B |
+| period (Spanish convention) | **57** | `11.357 B` | 🔴 **357 B** |
+| none | 5 | `682 B` | 🟢 682 B |
+
+🔴 **The failure is never random and never upward: the parser keeps the final group, so it always understates — `34 523 B` → 523 B is a 65× understatement.** The corpus is partly English and partly Spanish, so no single convention covers it.
+
+🔴 **This bit four times inside this one pass.** Screening the shelves for FINDING 1's hollow class returned, in order: **374 → 375 → 56 → 12**. The first three runs were my own instrument misreading the separator, and every one of them *manufactured* hollow payloads out of perfectly canonical grants. Only the fourth — normalising comma, period, no-break space and thin space — gave the true residue of **12 distinct cells out of 565**.
+
+🟡 **Had the first number been published, this pass would have reported a 374-row licence emergency that does not exist.** That is the same error class `p333` named when the grant column matched licence names inside other words — an instrument confidently measuring its own parsing bug.
+
+🟢 **`ACTION ZK`: every instrument that reads a byte count from these shelves normalises `[,.    ]` first, and `gate-offline` gains a control that asserts `34 523 B`, `11.357 B` and `1,067 B` all parse to their true values.**
+
+🟢 **And the residue vindicates the shelves.** Of the 12, five are the LGPL rows above (a *family* error, not a hollow payload), two are FINDING 1's genuine hollow pair, and one — `frappe/education`, `license.txt` at **19 B** reading *"License: GNU GPL V3"* — the shelves had **already** typed correctly as 🟡 *"declaration, not payload"* with the `P255` axis named. 🟢 **Where this base has looked at this class, it got it right.**
+
+---
+
+### 🟢 Added to the foundations tier this pass
+
+| Repo | Grant — both channels | Activity, first-hand | Placed | Why it is a foundation |
+|---|---|---|---|---|
+| https://github.com/h5p/h5p-cli | 🟢 **MIT**, `master/LICENSE`, **1 066 B** · npm `h5p-cli` **MIT** | 🟢 **730 c · 39 a · 2013-11-22 → 2026-10-20 · 60 c in 2026** | 🟢 **EMEA — Norway** (`+0200(451) +0100(137)`) | 🟢 **The official H5P content-type development toolchain.** These shelves already carry `h5p/h5p-php-library` as a platform; the CLI is the piece that lets an engagement *build and test its own interactive content types* rather than only host the stock ones. 13 years, 39 authors |
+| https://github.com/openpatch/hyperbook | 🟢 **MIT**, `main/LICENSE.md`, **1 069 B** · npm `@hyperbook/markdown` **MIT** | 🟢 **2 087 c · 10 a · 2022-03-08 → 2026-10-19 · 456 c in 2026** | 🟢 **EMEA — Germany** (`barkmin.eu` 1 079 c) | 🟢 Markdown → interactive courseware with an H5P-compatible element set. The widest real bench of any row promoted this pass, and the only new one with a multi-year history |
+| https://github.com/missing-elements/h5p-offline-player | 🟢 **MIT**, `main/LICENSE`, **1 073 B** · npm **MIT** | 🟢 **288 c · 5 a · all 288 in 2026 · head 2026-10-19** | 🟢 **EMEA** (`+0300(280)`) | 🟡 Plays H5P in the browser **with no H5P server**. Narrow and young, but it is the only row on these shelves that removes the server requirement — the constraint that decides rural and low-connectivity deployments |
+
+🔵 **An H5P cluster appeared on one channel in one pass** — `h5p/h5p-cli`, `otacke/h5p-theme-picker` and `missing-elements/h5p-offline-player`, all MIT, all new to a 3 031-slug corpus. 🟡 The honest reading: H5P tooling is **under-indexed by the search legs and well-indexed by the package registry**, because H5P ships as npm packages and its content types are not what a "top AI agents" list returns. This is `ACTION TJ`'s bound stated from the other side — the registry is strong on a **named standard** (`LTI`, `xAPI`, `SCORM`, `QTI`, `H5P`) and weak on a concept.
 
 ## Pass 335 · 2026-10-20 (eighth pass of this date) — five foundational rows from the package-registry channel, and the placement instrument this file uses is broken on every Apache and GPL row it touches
 

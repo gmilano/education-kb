@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 336 — the licence band this base trusted for `GPL-3.0` is the **LGPL-3.0** canonical, and five shelved rows were refused on it
+
+🔵 **p335 found the proprietary vendor publishing the permissive packages. p336 finds this base refusing supply it was always allowed to use.**
+
+### 🔴 Five rows re-read first-hand: `GPL-3.0` on the shelf, `GNU LESSER GENERAL PUBLIC LICENSE` on line 1
+
+| slug | shelf said | payload re-read 2026-10-20 | 🟢 true family |
+|---|---|---|---|
+| `bigbluebutton/bigbluebutton` | `GPL-3.0` | `v4.0.x-develop/LICENSE`, **7 652 B**, line 1 `GNU LESSER GENERAL PUBLIC LICENSE` | 🟢 **LGPL-3.0** |
+| `celtic-project/LTI-PHP` | `GPL-3.0` | `master/LICENSE`, **7 651 B**, same title line | 🟢 **LGPL-3.0** |
+| `FenixEdu/fenixedu-academic` | `GPL-3.0` | `master/LICENSE`, **7 652 B**, same title line | 🟢 **LGPL-3.0** |
+| `luisgf/openbadgeslib` | `GPL-3.0` | `master/LICENSE.txt`, **7 650 B**, same title line | 🟢 **LGPL-3.0** |
+| `openeducat/openeducat_erp` | `GPL-3.0` | `19.0/LICENSE`, **8 241 B** — *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE"* | 🟢 **LGPL-3.0** |
+
+🔴 **`7 650 / 7 651 / 7 652 B` is the LGPL-3.0 canonical band.** `p307`'s own source already warns about this exact trap one rung up: two repos were carried as AGPL-3.0 for two passes *"on the strength of a byte LENGTH SERIES."* 🔴 **`gate-affero-rung` exists for `GPL-3.0` vs `AGPL-3.0`. The `LGPL-3.0` rung below it was never built.**
+
+🔴 **Why it hid:** the error **over**-restricts, so it generates no complaint — it just removes rows from the recommendable set. Under this base's bar `GPL-3.0` is REFUSED-COPYLEFT; 🟢 **`LGPL-3.0` is linkable**, which is exactly how a proprietary delivery layer is built on a vertical. 🟢 **BigBlueButton, OpenEduCat, FenixEdu, LTI-PHP and Open Badges return to the usable set — two of them platform-tier.** 🟢 `ACTION ZJ`: build `gate-lesser-rung`.
+🟡 **Bound:** linking is granted; **modifying the component is not free.** Link and extend from outside; a fork with patched internals must ship LGPL.
+
+### 🔴 This corpus writes byte counts three ways, and every single-convention parser understates
+
+Measured over **565 adjacent grant cells** on the live shelves:
+
+| separator | cells | example | what a `[\d,]+` parser returns |
+|---|---|---|---|
+| no-break / thin space | **316** | `34 523 B` | 🔴 **523 B** |
+| comma | **187** | `1,067 B` | 🟢 1 067 B |
+| period (Spanish) | **57** | `11.357 B` | 🔴 **357 B** |
+| none | 5 | `682 B` | 🟢 682 B |
+
+🔴 **The failure is always downward** — the parser keeps the last group. 🔴 **It bit four times in this one pass:** screening for the hollow class returned **374 → 375 → 56 → 12**, and only the fourth run normalised all four separators. 🟡 **Publishing the first would have reported a 374-row licence emergency that does not exist** — `p333`'s class exactly: an instrument confidently measuring its own parsing bug. 🟢 `ACTION ZK`: normalise `[,.    ]` before reading any byte count; add the three-convention control to `gate-offline`.
+
+🟢 **The true residue of 12 vindicates the shelves**: 5 are the LGPL family error above, 2 are genuine hollow payloads, and `frappe/education` (`license.txt`, **19 B**, *"License: GNU GPL V3"*) was **already** typed 🟡 *"declaration, not payload"* with the `P255` axis named.
+
+### 🟢 Added to the foundations tier
+
+| Repo | Grant — two channels | Activity, first-hand | Placed |
+|---|---|---|---|
+| https://github.com/h5p/h5p-cli | 🟢 **MIT** 1 066 B · npm **MIT** | 🟢 730 c · 39 a · **13 years** · head **2026-10-20** · 60 c in 2026 | 🟢 **EMEA — Norway** |
+| https://github.com/openpatch/hyperbook | 🟢 **MIT** 1 069 B · npm **MIT** | 🟢 2 087 c · 10 a · 2022-03-08 → 2026-10-19 · 456 c in 2026 | 🟢 **EMEA — Germany** |
+| https://github.com/missing-elements/h5p-offline-player | 🟢 **MIT** 1 073 B · npm **MIT** | 🟡 288 c · 5 a · all 2026 | 🟢 **EMEA** `+0300(280)` |
+
+🔵 `h5p/h5p-cli` is the official H5P **content-type development** toolchain. These shelves already carried `h5p/h5p-php-library` as a platform; the CLI is the piece that lets an engagement build the client's *own* interaction types rather than only host the stock ones.
+
 ## 2026-10-20 — Pass 335 — a platform's own satellite packages carry the platform's licence, and the PROPRIETARY vendor is the permissive one
 
 🔵 **p334's T25 measured MCP connectors and found the permissive ones pointing at proprietary LMSs. p335 measures the tier above it — the packages a platform publishes about ITSELF — and the inversion is sharper there.**

@@ -3,6 +3,75 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+## Pass 336 · 2026-10-20 — four recipes, each wired only from rows this base has read first-hand
+
+🔵 Every component below carries a grant read on `raw.githubusercontent.com` **and** an activity figure from the bare-clone channel. Where a component is 🟡, the recipe says what the risk is and what to do instead.
+
+### 🟢 P336-A — The virtual classroom an institution already has a licence to extend
+
+**Unblocked by this pass**: BigBlueButton is **LGPL-3.0**, not `GPL-3.0`. It is linkable, so a proprietary layer may drive it.
+
+```
+BigBlueButton  (LGPL-3.0, 7 652 B — virtual classroom, recording, breakouts)
+  └── its own API / webhooks           ← link from OUTSIDE; do not patch internals
+       ├── celtic-project/LTI-PHP      (LGPL-3.0, 7 651 B)  → PHP-side LMS launch
+       │   └── or lti-tool/lti-tool    (MIT, 1 077 B)       → Node-side launch
+       │   └── or Cvmcosta/ltijs       (Apache-2.0)         → Node, 🟢 LATAM-maintained
+       ├── session recording  ──►  transcript  ──►  tutor-side learner model
+       └── OATutor (MIT) BKT state     ← pedagogy, already on these shelves
+```
+🟢 **Why it holds:** the LMS integration is an LTI launch, not a fork; BigBlueButton stays unmodified behind its API, which keeps the LGPL boundary clean. **6–8 weeks** to a working lecture-capture-to-learner-model loop.
+🔴 **The one rule:** no patches to BigBlueButton's source. A change to its own files must ship LGPL. Everything above goes in your layer.
+
+### 🟢 P336-B — Custom interactive content, authored by subject experts, graded by an agent
+
+```
+openpatch/hyperbook      (MIT, 1 069 B · 2 087 c · 10 a · 456 c in 2026)
+  └── Markdown → interactive courseware          ← subject experts author in Markdown
+h5p/h5p-cli              (MIT, 1 066 B · 730 c · 39 a · 13 years)
+  └── build + test CUSTOM H5P content types      ← the client's own interaction types
+       └── drops into Moodle · Canvas · Open edX · Drupal unchanged
+missing-elements/h5p-offline-player (MIT, 1 073 B)   🟡 288 c, 5 a, all 2026
+  └── H5P playback with NO H5P server             ← rural / low-connectivity delivery
+intellectif/learning-kit (MIT, 1 072 B · 275 c · 5 a)  🟡 region unresolved (L1)
+  └── framework-free scoring, rubric + deferred grading, weighted assessment
+```
+🟢 **Why this is the strongest new recipe:** it replaces the assessment engine this shelf's patterns keep hand-rolling, and `h5p-cli` means the client's *own* interaction types — a lab simulation, a music-notation drill — become first-class LMS content instead of an iframe. **8–10 weeks.**
+🟡 **Two stated risks:** the offline player is young (288 commits, one author-cluster) — treat as the low-connectivity *option*, not the default path; and `learning-kit`'s region is unresolved, which matters for data-residency, not for code.
+
+### 🟢 P336-C — Moodle without web services, which is how Moodle actually arrives
+
+🔴 **The recurring blocker:** institutional Moodle has web services **off**, and the sysadmin will not enable them for a pilot.
+
+```
+falkenslab/moodle-driver (MIT, 1 067 B)   🟡 320 c in NINE days, ONE author
+  └── drives Moodle as any user, from code/CLI, with that user's own login
+       └── no web-service enablement, no admin ticket, no procurement cycle
+falkenslab/moodle-mcp    (MIT, 1 067 B)   🟡 169 c / 12 d / 1 a  (same maintainer)
+  └── the same surface over MCP, for an agent
+       ├── OATutor (MIT) BKT              → learner model from gradebook history
+       └── uis-mcp-server (MIT, 🟢 LATAM) → UNESCO baselines for the cohort
+```
+🟢 **Use it to kill the procurement cycle on a pilot:** a two-week demonstrator against the real Moodle, on a real account, with no change to the institution's configuration.
+🔴 **Do not stake a delivery date on it.** One author, nine days, 🟡 on this base's bar. The moment the pilot is approved, migrate to the web-services path or to `moodle-mcp` with a maintained fork you control. 🔵 Both halves share one maintainer — a single-point dependency on both legs of the same stack.
+
+### 🟢 P336-D — The ministry conversation, which opens before any system exists
+
+```
+uis-mcp-server (MIT, 1 088 B · 100 c · 🟢 LATAM — Brazil · official MCP Registry)
+  └── UNESCO Institute for Statistics indicators over MCP
+       enrolment · completion · out-of-school rate · spend per student, by country
+  └── agent reads the country's own baseline BEFORE the first workshop
+Principled-Evolution/gopal (Apache-2.0, 11 357 B canonical — on these shelves)
+  └── Rego policy packs: EU AI Act · GDPR · NIST AI RMF · FERPA
+       └── per-jurisdiction gate:  what may be processed · logged · automated
+            ├── 🔴 California AB 1159   → student data may NOT train models
+            ├── 🔴 Oklahoma / Maryland  → human oversight; no high-stakes autonomy
+            ├── 🟢 Vietnam              → human review exits the high-risk class
+            └── 🟢 EMEA                 → transparency NOW; high-risk 2027-12-02
+```
+🟢 **Why it wins the room:** every other recipe needs the client to already own a system. This one answers *"how is our country actually doing"* from UNESCO's own numbers in the first meeting, then shows the governance layer that 74 % of LATAM institutions lack and 31 US states are legislating. **4–6 weeks** to a defensible baseline-plus-policy deliverable.
+🔵 **This is the 87/26 engagement**: take the AI an institution already runs informally and give it a strategy, a data boundary and an audit trail.
 
 ## Pass 335 · 2026-10-20 — P30: the Brightspace front end a deliverable can own outright, and the two-channel licence gate that keeps it ownable
 

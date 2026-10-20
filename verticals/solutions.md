@@ -3,6 +3,31 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+## Pass 336 · 2026-10-20 — two platform-tier verticals come back onto the recommendable set, because they were never `GPL-3.0`
+
+🟢 **`repos/foundations.md` re-read five payloads first-hand this pass and found `LGPL-3.0` where the shelves said `GPL-3.0`.** Two of the five are not libraries — they are **platforms**, and this base's own bar had them as `REFUSED-COPYLEFT`. `LGPL-3.0` is **linkable**: a proprietary layer may link an LGPL component and need not adopt its licence. That is the delivery model this shelf exists to serve.
+
+| Platform | Repo | Grant, re-read 2026-10-20 | What it unblocks | Region of origin |
+|---|---|---|---|---|
+| **BigBlueButton** | https://github.com/bigbluebutton/bigbluebutton | 🟢 **LGPL-3.0** — `v4.0.x-develop/LICENSE`, **7 652 B**, title line `GNU LESSER GENERAL PUBLIC LICENSE` (shelf said `GPL-3.0`) | 🟢 **The virtual-classroom layer.** Native integrations already exist for Moodle, Canvas, Open edX and Sakai; it carries whiteboard, breakout rooms, polling and the session recording that every assessment-integrity and lecture-capture requirement lands on | 🟢 **North America** (Blindside Networks, Ottawa) |
+| **OpenEduCat** | https://github.com/openeducat/openeducat_erp | 🟢 **LGPL-3.0** — `19.0/LICENSE`, **8 241 B**: *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE"* (shelf said `GPL-3.0`) | 🟢 **The education ERP layer** on Odoo: admissions, SIS, gradebook, attendance, fees, library. The administrative half of an institution, which an LMS does not cover | 🟢 **APAC — India** (Tech Receptives) |
+| **FenixEdu** | https://github.com/FenixEdu/fenixedu-academic | 🟢 **LGPL-3.0** — `master/LICENSE`, **7 652 B**, title line `GNU LESSER GENERAL PUBLIC LICENSE` | 🟡 A complete **university academic SIS** in production at a real university — degree structures, curricular plans, enrolment, theses. Heavy, Java/Spring, small community | 🟢 **EMEA — Portugal** (IST Lisbon) |
+| **celtic-project/LTI-PHP** | https://github.com/celtic-project/LTI-PHP | 🟢 **LGPL-3.0** — `master/LICENSE`, **7 651 B** | 🟢 The canonical **PHP LTI 1.3 / Advantage** library — the way into any PHP-side LMS tool integration. The Node-side equivalents on these shelves are `lti-tool/lti-tool` (MIT) and `Cvmcosta/ltijs` (Apache-2.0, 🟢 LATAM — Brazil, p335) | 🟢 **EMEA — United Kingdom** |
+
+🟡 **The honest bound on LGPL-3.0, stated so nobody over-reads this.** Linking is permitted; **modifying the component itself is not free** — changes to BigBlueButton's or OpenEduCat's own source must be released under the LGPL. The usable pattern is therefore *link and extend from outside*: an agent layer that drives BigBlueButton over its API, or an Odoo module that sits beside OpenEduCat's, is clean. A fork with patched internals is not. 🔵 For Odoo specifically, the module boundary is the licence boundary, which is why the OpenEduCat pattern below stays in a separate module.
+
+---
+
+### 🟢 New vertical-adjacent rows this pass
+
+| Component | Repo | Grant — both channels | Where it sits in a stack | Placed |
+|---|---|---|---|---|
+| **h5p-cli** | https://github.com/h5p/h5p-cli | 🟢 **MIT**, 1 066 B · npm **MIT** | 🟢 Build and test **custom H5P content types** — the interactive-content layer that drops into Moodle, Canvas, Open edX and Drupal alike | 🟢 **EMEA — Norway** |
+| **hyperbook** | https://github.com/openpatch/hyperbook | 🟢 **MIT**, 1 069 B · npm **MIT** | 🟢 Markdown → interactive courseware. The authoring front end when an institution will not take a full LMS | 🟢 **EMEA — Germany** |
+| **h5p-offline-player** | https://github.com/missing-elements/h5p-offline-player | 🟢 **MIT**, 1 073 B · npm **MIT** | 🟡 H5P playback **with no H5P server** — the only row here that removes the server requirement | 🟢 **EMEA** |
+| **uis-mcp-server** | https://github.com/SidneyBissoli/uis-mcp-server | 🟢 **MIT**, 1 088 B · npm **MIT** | 🟢 **UNESCO Institute for Statistics** education indicators over MCP — the baseline-data layer for any ministry or multilateral engagement | 🟢 **LATAM — Brazil** |
+
+🔵 **`uis-mcp-server` closes a gap this shelf has carried for a while.** Every MCP connector on these shelves reaches into *one institution's* LMS — Canvas, Moodle, Brightspace, Blackboard, Classroom. This one reaches **national education statistics for every country UNESCO publishes**, which is the layer a ministry conversation actually opens on: enrolment, completion, out-of-school rates, spend per student. It is the first row here that is useful *before* a client has a system to connect to.
 
 ## Pass 335 · 2026-10-20 (eighth pass of this date) — the vendor-published tier: what each platform ships about ITSELF, and which of those a deliverable can absorb
 

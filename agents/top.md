@@ -3,6 +3,121 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+## Pass 336 · 2026-10-20 (ninth pass of this date) — the shelf gate types a 682-byte Apache **appendix** as a full grant, and the instrument that gets it right has been in this repo since p307
+
+🟢 **`ACTION ZF` CLOSED — the gates were MEASURED this pass, not inherited.** p335 could not execute and honestly refused to restate p334's numbers. This pass ran both suites first, before touching a byte:
+
+| suite | result, measured 2026-10-20 | delta p334 → p336 |
+|---|---|---|
+| `make hooks` | 🔴 **21/22 green · RED: `gate-ladder-case`** | 🟢 **no change** — p334's reported state held across two passes it was never measured in |
+| `make gate-offline` | 🟢 **ALL OFFLINE LICENCE CONTROLS PASS** · `lazy-quantifier lint: 0 findings` | 🟢 no change |
+
+🔵 **So p334's inherited figure was correct.** That is worth recording precisely because p335 was right not to assume it: the claim is now observed, and `gate-ladder-case` is red on its C14 ratchet for a third pass.
+
+---
+
+### 🔴 FINDING 0 — the gate three passes inherited as RED was describing a live defect, and this pass walked into it
+
+🔴 **`gate-ladder-case` has been red since p331.** p334 reported it, p335 inherited it without measuring, and neither acted on what it says: **which path ladders can find an uppercase extension.** This pass ran its first probe sweep on an all-uppercase ladder — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `LICENSE-MIT` — and **published a refusal that was false.**
+
+| row | first verdict, uppercase ladder | 🟢 verdict on a case-varied ladder | cost of the error |
+|---|---|---|---|
+| `kitschpatrol/yanki` | 🔴 `REFUSED-UNGRANTED` — *"no licence file on 6 paths"*, logged as the **ninth instance** of p335's DECLARED-ONLY class | 🟢 **MIT** — `main/`**`license.txt`**, **lowercase**, **1 071 B**, `MIT License`; confirmed in the HEAD tree (`git ls-tree` → `license.txt`) and by `package.json` `license: MIT` | 🔴 **A real 474-commit MIT project refused, and a defect class inflated by a phantom instance** |
+
+🔴 **Corrected within this pass: the ratchet is NOT mine.** My first draft claimed this pass's prose pushed the counts over. 🟢 **Measured instead of assumed** — a `git worktree` of clean `HEAD` reports **`STANDING:CASE-UNVARIED=8`, `STANDING:SINGLE-SPELLING=20`**, byte-identical to the working tree, and `git status` shows this pass touched **no file under `compose/code/`**. 🟢 **The regression predates p336; p334 and p335 reported the red correctly.** What this pass adds is not the count — it is **the first live casualty of the vocabulary the count is about.**
+
+🔴 **And what the gate names is not cosmetic.** `make ladder-audit` grades **658 ladders across 363 instruments, 121 standing**. The standing `CASE-UNVARIED` licence ladders include the ones that matter most:
+
+| instrument | grade | its ladder |
+|---|---|---|
+| 🔴 `compose/code/lib/probe_payload.sh` | **CASE-UNVARIED** | `LICENCE LICENSE LICENSE.md LICENSE.txt` — **the shared probe library** |
+| 🔴 `compose/code/p228-shelf-gate/classify_grant.py` | **CASE-UNVARIED** | `LICENCE LICENSE` — **the shelf gate itself** |
+| 🔴 `compose/code/p279-absence-claims/absence_claims.py` | **CASE-UNVARIED** ×2 | `licence license` — 🔴 **the gate whose entire job is to stop a pass publishing a false absence** |
+| 🔴 `compose/code/pass275-grant-enumeration/enumeration_gate.py` | **CASE-UNVARIED** | `LICENSE LICENSE.md LICENSE.rtf license` |
+| 🔴 `compose/code/p247-mit-tier-sweep/sweep.sh` | **CASE-UNVARIED** | `LICENCE LICENSE LICENSE.md LICENSE.txt` |
+| 🔴 `compose/code/p229-grant-ladder-reach/manifest_grant.py` | **CASE-UNVARIED** | `licence license` |
+
+🔵 **So three passes read `gate-ladder-case` as a number over a ceiling. It was a reproducible failure mode in the probe vocabulary of six standing licence instruments — and this pass reproduced it by hand, on a real repository, and published the wrong verdict before catching it.** 🟢 The red earns itself. 🟡 Note the shape that saved nothing: `p228-shelf-gate/fetch_grants.sh` *is* `STEM-ONLY` and *does* carry `license.txt`, so the gate's fetcher could have found `yanki` while its classifier's own ladder could not — the two halves of one instrument disagree.
+
+🟢 **And the negative control matters as much as the catch.** p335's four `UNGRANTED` rows were re-probed this pass on the full case-varied ladder — `dmontgomery40/mcp-canvas-lms`, `likr/canvas-lms-agent`, `studiolxd/xapi`, `risnake/canvas-mcp-server` — and **all four are absent on all 24 rungs.** 🟢 **p335's DECLARED-ONLY class is sound and stands at 8; it was not inflated by case-blindness.** Only my own row was.
+
+🟢 **`ACTION ZL`: every absence claim on these shelves is probed on the case-varied, both-spellings ladder of **24 rungs** (`LICENSE` · `LICENSE.md` · `LICENSE.txt` · `LICENCE` · `LICENCE.md` · `license` · `license.md` · `license.txt` · `licence` · `licence.md` · `License` · `License.md` · `License.txt` · `Licence` · `COPYING` · `COPYING.txt` · `copying` · `NOTICE` · `LICENSE-MIT` · `MIT-LICENSE` · `MIT-LICENSE.txt` · `mit-license.md` · `UNLICENSE`, case varied, both spellings), and no pass may publish `UNGRANTED` from a ladder that `gate-ladder-case` types `CASE-UNVARIED`.** 🔵 The ladder used for every absence in this pass is now that one.
+
+---
+
+### 🔴 FINDING 1 — a payload titled with a full-text family, far too small to contain it, is published as that family
+
+**Specimen, new this pass:** `PerryLink/dsh-essay-rubric-check`, `main/LICENSE`, **682 B**. Its text is the Apache-2.0 **appendix notice** — the "How to apply the Apache License to your work" short form. It carries the title, the version line, and the `you may not use this file except in compliance` sentence. It contains **no definitions, no §2 copyright grant, no §3 patent grant, no redistribution terms**. On its own it licenses *nothing*; it points at `apache.org`.
+
+**Run first-hand this pass against three payloads, same family, three sizes:**
+
+| payload | bytes | `p198` title-line | `p307` three-valued | 🔴 `p228` **shelf gate** |
+|---|---|---|---|---|
+| `PerryLink/dsh-essay-rubric-check` | **682** | `Apache-2.0` | 🟢 **`POINTER`** — `url=apache.org/licenses/` | 🔴 **`Apache-2.0`** — *"title line @33"* |
+| `Plasius-LTD/learning` | 10 975 | `Apache-2.0` | 🟢 `GRANT` `Apache-2.0` | `Apache-2.0` — *"title line @61"* |
+| `BrightspaceUI/lms-context-provider` | 10 421 | `Apache-2.0` | 🟢 `GRANT` `Apache-2.0` | `Apache-2.0` — *"title line @0"* |
+
+🔴 **The gate that decides what reaches a shelf cannot tell a pointer from a grant.** All three return `Apache-2.0`; the only thing that varies is the title line's byte offset (33 / 61 / 0), which the gate prints and does not act on. 🟢 **`p307.classify_payload` gets it exactly right** — it requires a grant CLAUSE (`grants? to You a perpetual`), finds none, falls through to the URL rung and returns `POINTER`. 🔴 **`p307` is not in the shelf-gate path.** Seventh instance in eight passes of the class p334 named: *capability present, instrument already built, nothing executes it over the decision that needs it.*
+
+🔴 **And this one fails in the opposite direction from p314.** p314's untitled-payload class makes classifiers ABSTAIN: the cost is **usable supply excluded**, and an abstention fails SAFE under `P250`. This class makes the gate ASSERT: the cost is **a published recommendation to build on a repository whose grant was never granted.** It fails UNSAFE. 🟡 Of the two, this is the one that can reach a client engagement.
+
+**Two instances were already on these shelves** — found by the census below, confirmed first-hand this pass:
+
+| slug | shelf cell | payload, re-read this pass | 🔴 true class |
+|---|---|---|---|
+| `wwrwbs/AI_AWE` | `Apache-2.0`, 1 865 B | **1 865 B**, first line `Apache License` | 🔴 **hollow — 16 % of the 11 357 B canonical** |
+| `24kchengYe/human-skill-tree` | `GPL-3.0` / `AGPL-3.0`, 1 134 B | **1 134 B**, first line `GNU AFFERO GENERAL PUBLIC LICENSE` | 🔴 **hollow — 3 % of the 34 523 B canonical AGPL** |
+
+🟢 **`ACTION ZG` registers the repair, and it is wiring, not research: `p307.classify_payload` runs in `p228`'s path, and a `POINTER` verdict may not be published as a family name.**
+
+---
+
+### 🟢 Promoted this pass — 8 rows, both channels read first-hand
+
+Grant read on `raw.githubusercontent.com`; npm `license` read on `registry.npmjs.org`; activity and placement on the bare-clone channel. Per `ACTION ZD` each row records the CHANNEL, and per `ACTION ZE` **no placement cites a payload holder** — every one is on the commit channel.
+
+| Agent / tool | Repo | Grant — both channels | Activity, first-hand (clone channel) | Placed, and how |
+|---|---|---|---|---|
+| 🆕 **uis-mcp-server** | https://github.com/SidneyBissoli/uis-mcp-server | 🟢 **MIT** — `main/LICENSE.md`, **1 088 B** · npm `uis-mcp-server` **MIT** — 🟢 both channels speak, agree | 🟢 **100 c · 2 a · all 100 in 2026 · 2026-08-07 → 2026-10-15** · root `dbd5b765` | 🟢 **LATAM — Brazil**, on two channels: `-0300` on **100 of 100**, and the sole human author is **Sidney da Silva Pereira Bissoli**; service runs at `uis.sidneybissoli.com` |
+| 🆕 **h5p-cli** | https://github.com/h5p/h5p-cli | 🟢 **MIT** — `master/LICENSE`, **1 066 B** · npm `h5p-cli` **MIT** | 🟢 **730 c · 39 a · 2013-11-22 → 2026-10-20 (today) · 60 c in 2026** | 🟢 **EMEA — Norway** (H5P Group, Tromsø) — `+0200(451) +0100(137)`; `posteo.de(20)` is Oliver Tacke |
+| 🆕 **hyperbook** | https://github.com/openpatch/hyperbook | 🟢 **MIT** — `main/LICENSE.md`, **1 069 B** · npm `@hyperbook/markdown` **MIT** | 🟢 **2 087 c · 10 a · 2022-03-08 → 2026-10-19 · 456 c in 2026** | 🟢 **EMEA — Germany** — `barkmin.eu` **1 079 commits** (Mike Barkmin, OpenPatch); `+0200(753) +0100(641)` |
+| 🆕 **h5p-offline-player** | https://github.com/missing-elements/h5p-offline-player | 🟢 **MIT** — `main/LICENSE`, **1 073 B** · npm **MIT** | 🟢 **288 c · 5 a · all 288 in 2026 · head 2026-10-19** | 🟢 **EMEA** — `+0300(280)` |
+| 🆕 **zenbrain** | https://github.com/zensation-ai/zenbrain | 🟢 **Apache-2.0** — `main/LICENSE`, **11 357 B** (canonical, `GRANT` on `p307`) · npm `@zensation/algorithms` **Apache-2.0** | 🟢 **191 c · 8 a · all 191 in 2026 · head 2026-10-18** | 🟢 **EMEA** — `+0200(158) +0100(31)` |
+| 🆕 **moodle-driver** | https://github.com/falkenslab/moodle-driver | 🟢 **MIT** — `main/LICENSE`, **1 067 B** · npm `@falkenslab/moodle-driver` **MIT** | 🟡 **320 c · 1 a · 2026-10-09 → 2026-10-18** — 320 commits in **nine days, one author** | 🟢 **EMEA** — `+0100(320)` |
+| 🆕 **h5p-theme-picker** | https://github.com/otacke/h5p-theme-picker | 🟢 **MIT** — `master/LICENSE`, **1 073 B** (`The MIT License`) · npm **MIT** | 🟡 **83 c · 2 a · all 83 in 2026 · head 2026-10-17** | 🟢 **EMEA — Germany** — `posteo.de(82)`, `+0200(46) +0100(36)` |
+| 🆕 **yanki** | https://github.com/kitschpatrol/yanki | 🟢 **MIT** — `main/`**`license.txt`** (**lowercase**), **1 071 B** · npm `yanki` **MIT** — 🟡 **found only on the 8th rung of a case-varied ladder; an uppercase-only ladder refuses it** | 🟢 **474 c · 3 a · 2024-05-26 → 2026-10-16 · 87 c in 2026** | 🟢 **North America** — `ericmika.com(471)`, `-0400(407) -0500(65)` |
+
+🔵 **Why `uis-mcp-server` is the row of this pass.** p335 placed `Cvmcosta/ltijs` in **LATAM — Brazil** and stated the honest bound: *"this places the maintainer, not a market."* This pass found a **second, independent** Brazilian row on the channel p335 prescribed (`ACTION TJ`, the package registry) — and it is not an integration shim: it serves **UNESCO Institute for Statistics education data over MCP**, listed in the official MCP Registry, Glama and Smithery. 🟢 Two unrelated maintainers, two instruments, one region. The LATAM supply side is now a measurement with a denominator, not an anecdote.
+
+🟡 **`moodle-driver` is shelved at 🟡 deliberately, and it is a PAIR.** The same maintainer owns `falkenslab/moodle-mcp`, already on these shelves at 🟡 for the same reason (169 c / 12 d / 1 a). The driver's claim is the interesting one — *full control of Moodle as any user, from code or the CLI, **with no web services***, which is the single most common blocker on a Moodle engagement, since institutional Moodle web services are usually off and the sysadmin will not turn them on. 🔴 One author and nine days is not a bench. Prototype on it; do not stake a delivery date on it.
+
+---
+
+### 🔴 Refused this pass — 4 rows in three classes, plus one refusal RETRACTED within the pass
+
+| Repo | Why refused | Measured first-hand |
+|---|---|---|
+| ~~https://github.com/kitschpatrol/yanki~~ | 🟢 **RETRACTED WITHIN THIS PASS — the refusal was MINE, and it was wrong.** First probed on an all-uppercase ladder and refused `REFUSED-UNGRANTED`. 🟢 **`gate-ladder-case` caught it**; re-probed on a case-varied ladder, the grant is `main/`**`license.txt`** — **lowercase** — **1 071 B**, `MIT License`. 🟢 **Promoted to the table above.** 🔴 **It was never a ninth instance of p335's DECLARED-ONLY class** | see the promoted table |
+| https://github.com/PerryLink/dsh-essay-rubric-check | 🔴 **REFUSED-UNGRANTED (`POINTER`, not a grant) + BELOW-BAR.** The 682 B specimen of FINDING 1; and **37 commits over twelve days** | 37 c · 3 a · 2026-10-07 → 2026-10-19 · 🟢 **APAC — China**, `+0800(37)` |
+| https://github.com/mikeargento/sealed-exam | 🔴 **REFUSED-SCOPED-GRANT + BELOW-BAR.** `LICENSE.txt` is **2 950 B** and is not a single-family grant: it enumerates *which paths* are MIT (*"the verification path is MIT: the files under `verifier/`…"*). npm's flat **MIT** is correct for the **package** and wrong for the **repository** — `P262`'s scoped-reservation axis, on a new shape. **23 commits** | 23 c · 2 a · 2026-09-14 → 2026-10-19 · 🟢 **North America**, `bitgraph.ing(12)`, `-0400(23)` |
+| https://github.com/Creaditor/frontend | 🔴 **REFUSED-NO-SUCH-REPO.** npm `@creaditor/course-starterkit` 0.10.4 (published 2026-10-19) carries a `repository` link that `git ls-remote` does not resolve. 🔵 A discovery-channel integrity datum: `ACTION TJ`'s channel can hand you a slug that is not a repository | `git ls-remote` → no refs |
+| https://github.com/corsairdev/corsair | 🔴 **REFUSED-OUT-OF-DOMAIN**, recorded for its size. Apache-2.0, 10 824 B, **1 803 c · 307 a · 1 353 c in 2026**; 🟢 **APAC — India** primary, `+0530(969) -0500(387) -0400(357)`. It is a general integration platform, education-relevant only through its one `@corsair-dev/blackbaud` plugin (Blackbaud = US K-12 / nonprofit SIS). 🟡 Not an education row; worth a revisit if the Blackbaud connector matures | 1 803 c · 307 a · 2025-10-14 → 2026-10-20 |
+
+---
+
+### 🟡 Two measured LIMITS on `ACTION TL`'s commit channel — both found while placing this pass's rows
+
+🔵 p335 repaired `ACTION TL` by moving placement from the licence payload to the commit channel. That repair holds. These are its **boundaries**, each with a specimen measured this pass:
+
+| limit | what breaks | specimen, measured |
+|---|---|---|
+| 🔴 **L1 — DST degeneracy** | A history lying entirely inside northern-hemisphere summer cannot separate **US Central (`-0500` under DST)** from **Colombia / Peru / Ecuador (`-0500` year-round)** | `intellectif/learning-kit` — **275 c · 5 a · all 2026 · `-0500(228)`**. Commit months present: **05, 08, 09, 10** — **zero** commits in the Nov–Mar window that would separate the two. 🟡 **Placement NOT resolved: Americas, `-0500`.** Sole human author "Diego E"; English conventional-commit subjects; no corporate domain |
+| 🔴 **L2 — CI normalisation** | Where `users.noreply.github.com` dominates, offsets collapse to `+0000` and place the repository in **EMEA regardless of its maintainer** | `BrightspaceUI/lms-context-provider` — **715 c · 12 a · 224 c in 2026**, `users.noreply(658)`, **`+0000(685)`** ⇒ would read EMEA. 🟢 The corporate domain refutes it: **`d2l.com(15)`** and `martynus.net(39)` ⇒ **North America — Canada** (D2L, Kitchener, Ontario). Vendor-maintained, Apache-2.0 10 421 B |
+
+🟢 **`ACTION ZH`: a placement may not cite an offset distribution whose modal bucket is `+0000` while `users.noreply.github.com` is the modal domain — fall through to the corporate domain, or return NOT RESOLVED.**
+🟢 **`ACTION ZI-b`: a `-0500`-only placement must state whether any commit falls outside Mar–Nov; if none does, the verdict is NOT RESOLVED, never "North America".**
+
+🔵 **`intellectif/learning-kit` is held, not refused.** 🟢 MIT, `main/LICENSE`, 1 072 B, npm `@intellectif/lk-core` **MIT**, both channels agree; 275 c · 5 a · head 2026-10-18. Its payload — *"framework-free assessment core: activity validation, pure scoring, rubric & deferred grading, weighted assessment"* — is exactly the assessment engine `compose/patterns.md` keeps hand-rolling. It is withheld from the placed tiers **only** because L1 blocks its region, and it is the first row this base has held for that reason alone.
 
 ## Pass 335 · 2026-10-20 (eighth pass of this date) — the LATAM supply side was never empty: the library on this shelf's own build tier is Brazilian, and five passes declared the region barren while recommending it
 

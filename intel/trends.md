@@ -3,6 +3,49 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+## Pass 336 · 2026-10-20 — the compliance cliff this shelf has been pricing moved sixteen months, and pedagogy's own algorithms are leaving education
+
+### 🔴 T-336.1 — The EU AI Act high-risk deadline for education is **2027-12-02**, not 2026-08-02
+
+🔴 **Corrected this pass.** The European Parliament and Council approved the postponement in June 2026 (Digital Omnibus). High-risk obligations — which catch **admissions, assessment, proctoring, AI-detection used in assessment, and personalised learning systems that steer a learning path** — apply from **2 December 2027**; high-risk AI embedded in regulated products from **2 August 2028**.
+
+🟢 **What is in force from 2026-08-02** and is therefore the only live EMEA obligation: **transparency** — disclose that a system is AI, and disclose deepfakes/synthetic content. The **AI-literacy duty** survives in its lighter form: organisations must *support* literacy, not guarantee a level.
+
+🔴 **Why this matters more than a date correction.** This lineage has carried August 2026 as the cliff, and an engagement priced on it is wrong twice: it overstates urgency to a buyer with sixteen months of runway, and it hides the transparency duties that bind **now**. 🟡 Confirm the December 2027 date against the Official Journal before it reaches a client deck — several vendor pages still print the old one.
+
+### 🟢 T-336.2 — Governance, not capability, is the sold artefact — and LATAM has the number that proves it
+
+🟢 **87 % of LATAM higher-education institutions use AI; 26 % have a formal AI strategy** (UNESCO IESALC / UNU-IAS, 200 institutions, 19 countries). Adoption is **bottom-up** — individual academics, researchers and students, not institutional programmes.
+
+🔵 **A sixty-one-point gap between use and mandate is not an adoption problem.** The same shape appears in every region this pass: North America's 134 bills across 31 states, EMEA's Utrecht model (risk register + tool pre-approval + named compliance officers per faculty), APAC's human-review carve-outs. 🟢 **The deliverable converging in all four: a reviewable decision boundary with an auditable human step.** Vietnam's "sole basis without meaningful human review", Japan's "the final judgement and the responsibility are human", and Oklahoma/Maryland's human-oversight statutes are the same architecture under four legal systems.
+
+### 🟢 T-336.3 — Spaced repetition is migrating out of education and into agent memory
+
+🟢 **`zensation-ai/zenbrain`** (Apache-2.0, 11 357 B canonical, 191 c · 8 a all in 2026, 🟢 EMEA) ships **FSRS spaced repetition, Hebbian learning and Ebbinghaus forgetting curves as memory for LLM agents** — not as a study tool.
+
+🔵 **The direction of travel is new and worth watching.** For years this shelf recorded general AI arriving *in* education — tutors, graders, content generators. This is education's own retention science arriving *in* general agent infrastructure: the forgetting curve as an eviction policy. 🟢 **The practical consequence for this base is immediate**: an agent memory layer that already implements FSRS is, by construction, the right substrate for a tutoring agent's learner model — the same algorithm the pedagogy needs, maintained by people solving a different problem.
+🟡 The honest bound: 191 commits and seven months. A signal, not a dependency.
+
+### 🟢 T-336.4 — The package registry is a better discovery channel than the search engine, and the asymmetry is now stable
+
+🔴 **Seventh consecutive pass in which the four prescribed global search legs returned 0 new repository slugs.** 🟢 **The registry channel returned 733 slugs new to a 3 031-slug corpus; 15 education-domain, 8 promoted, 4 refused with typed reasons, and 1 refusal retracted within the pass by `gate-ladder-case`.**
+
+🔵 **The mechanism, stated so the channel is used for what it is good at.** A registry carries **release history and last-publish date**, so recency is a field rather than an inference; and education's integration surface is a set of **named standards** — LTI, xAPI, SCORM, QTI, OneRoster, H5P — which are package names. 🔴 **It is poor on concepts:** "ai tutor agent", "education mcp server" and "rubric grading" returned general agent infrastructure (Vercel AI SDK, LangGraph, fastmcp, Firecrawl), not education. 🟢 Query the standard, never the concept.
+
+🟢 **Observed consequence this pass:** an entire **H5P tooling cluster** — `h5p/h5p-cli` (official, 13 years, 39 authors), `otacke/h5p-theme-picker`, `missing-elements/h5p-offline-player` — all MIT, all absent from a 3 031-slug corpus, because H5P ships as npm packages and never appears in a "top AI agents" list.
+
+### 🟡 T-336.5 — The licence-reading failures this base keeps finding are now mostly in the SILENCES and the SEPARATORS, not in the values
+
+🟢 **Where both channels speak, they agree.** This pass read 15 repository payloads against their npm `license` fields: **zero value conflicts.** Every error was an absence or a format:
+
+- 🟡 **DECLARED-ONLY** (npm grants, repository is silent) — **stands at 8, and this pass added none.** `kitschpatrol/yanki` was refused into this class on an all-uppercase ladder and **retracted within the pass**: its grant is `main/license.txt`, **lowercase**, 1 071 B MIT. 🟢 p335's four rows survive a 24-rung case-varied re-probe, so the class itself is sound — see `agents/top.md` FINDING 0.
+- 🔴 **POINTER published as GRANT** — a 682 B Apache *appendix* typed `Apache-2.0` by the shelf gate. See `agents/top.md` FINDING 1.
+- 🔴 **Family rung** — **five** rows carrying `GPL-3.0` whose payload title line reads `GNU LESSER GENERAL PUBLIC LICENSE`. See `repos/foundations.md`.
+- 🔴 **Separator** — byte counts written in three thousands-separator conventions across one corpus (space 316, comma 187, period 57, bare 5 of 565 cells); a single-convention parser **always understates**.
+- 🔴 **Scoped grant** — `mikeargento/sealed-exam`, a `LICENSE.txt` that grants MIT **per path**, where npm declares flat MIT. Correct for the package, wrong for the repository.
+- 🔴 **Dead slug** — `Creaditor/frontend`: a published npm package whose `repository` link resolves to no repository.
+
+🔵 **The pattern across all six: the value was never the problem.** 🟡 And the direction is not symmetric — the family rung and the separator both **understate** permission and quietly shrink usable supply, while the pointer class **overstates** it and can reach a client. Of the six, that one is the only emergency.
 
 ## Pass 335 · 2026-10-20 — three trends, one of them a correction to this base's own five-pass reading of a region
 

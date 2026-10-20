@@ -3,6 +3,86 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+## Pass 336 · 2026-10-20 — the four prescribed search legs returned no supply for a seventh pass, and the strongest demand-side intelligence of the quarter
+
+🔴 **Seventh consecutive measurement: the four global search legs returned 0 new repository slugs.** Run verbatim this pass — `top open source AI agents education 2026 github MIT`, `github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`, `AI education industry trends 2026`. The first two returned general agent round-ups with no education ranking at all; the third returned ERP vendor pages (GegoK12, OpenEduCat, Frappe Education, RosarioSIS) already on these shelves; the fourth returned vendor trend blogs. 🟢 **The `ACTION TJ` registry channel returned 733 slugs new to a 3 031-slug corpus, 15 of them education-domain, 8 promoted.** The split between the two channels is now a stable, reproducible property of this base, not a bad week.
+
+🟢 **But the REGION legs are a different story, and this pass they carried the most substantive demand-side intelligence in several passes.** All four returned placeable material. Recorded per region below.
+
+### 🔴 One correction that outranks everything else on this shelf
+
+🔴 **The EU AI Act's high-risk obligations for education do NOT apply from 2 August 2026. They were postponed to 2 December 2027.** The European Parliament and Council approved the delay in June 2026 (the Digital Omnibus); high-risk AI embedded in regulated products moves to **2 August 2028**.
+
+🔴 **This base's own `intel/trends.md` lineage has carried `2 agosto 2026` as the compliance cliff for education AI**, and the earlier `globant-kb` education shelf states it outright: *"2 agosto 2026: auditoría, explicabilidad, supervisión humana requeridos."* 🟢 **That date is now wrong by sixteen months, and the error is commercially expensive in BOTH directions** — it overstates urgency to an EMEA buyer who has until December 2027, and it understates what *is* already in force.
+
+🟢 **What IS in force from 2 August 2026**, and therefore the only EMEA compliance work that is live today: **transparency duties** — people must be told when they are dealing with an AI system, and **deepfake / synthetic content must be disclosed**. The **AI-literacy duty** remains but is the lighter form: organisations must *support* literacy, not guarantee a level. 🟡 Several vendor pages still print the August 2026 high-risk date; check publication dates. 🔵 The December 2027 date should be confirmed against the Official Journal before it goes into a client deck.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The largest regional share of the AI-in-education market — 36 %.** Teacher-side adoption is already majority: **60 % of US K-12 teachers** used AI tools in the 2024-25 school year, **32 % at least weekly**.
+
+🔴 **Regulation is state-level and fragmenting fast: 134 AI-in-education bills across 31 states** in the 2026 session, concentrated on student-data privacy, classroom-use restrictions and curriculum.
+
+| instrument | jurisdiction | what it does |
+|---|---|---|
+| **AB 1159** | California | 🔴 bars using **student data to train AI models** |
+| **SB 1227** | Idaho | requires privacy protections for AI tools in schools |
+| state statutes | Oklahoma, Maryland | 🔴 require **human oversight**; bar AI from high-stakes decisions about students |
+| **H.R. 8747** — K-12 AI Literacy and Readiness Act of 2026 | US federal | advanced out of the House Education and Workforce Committee **2026-07-21**; would let schools spend federal funds on AI literacy. 🟡 Advanced, not enacted, and largely along party lines |
+| National AI Strategy | 🟢 **Canada**, launched **2026-06-04** | national AI-literacy push, watermarking of AI-generated content, a **Canada Trusted AI Certification** programme. 🟡 A strategy, not a statute |
+| one-year moratorium | New York City | 🔴 **no student-facing AI through eighth grade** |
+| K-12 implementation guidance | North Carolina DPI | detailed district-level guidance |
+
+🟢 **The opportunity: compliance-shaped delivery, not model work.** Fifty jurisdictions with divergent rules means the buyable artefact is a **policy-enforcement layer** — per-state configuration of what may be processed, logged and automated, with human-in-the-loop where Oklahoma and Maryland require it. 🔵 The row for this is already on these shelves: `Principled-Evolution/gopal`, Rego policies covering EU AI Act, GDPR, NIST AI RMF **and FERPA**.
+🟡 **The counter-signal to price in:** NYC's through-eighth-grade moratorium and the University of Chicago Law School's device-free 1L pilot (from autumn 2026) say the K-8 and assessment-integrity segments are *narrowing*, not opening. Sell teacher-side and administrative automation there, not student-facing tutors.
+
+### EMEA
+
+🟢 **Sixteen extra months of runway, and a governance market that is already buying.** With high-risk duties at **2026-12-02 → 2027-12-02**, the EMEA engagement in the next four quarters is **readiness**, not remediation — and the institutions are building the apparatus now rather than waiting.
+
+🟢 **The reference implementation to cite is Utrecht University**: AI systems classified **by EU AI Act risk level**, an **AI Veritas** system that pre-approves tools before use, and **Certified AI Compliance Officers appointed across faculties**. Edinburgh is cited in the same report as a governance model. 🔵 That is a replicable three-part pattern — a risk register, a tool-approval gate, named accountable officers per faculty — and it is a deliverable, not a philosophy.
+
+🟢 **Policy direction is explicit and recent**: the European Commission's updated **ethical AI guidelines for education (May 2026)** and the **EU Council conclusions of 11 May 2026** on a human-centred approach to AI in education both push human oversight.
+
+🟡 **What EMEA is actually deploying is administration and teacher support, not grading.** Parent-communication chatbots are treated as low-risk routine tools; **auto-grading summative exams without teacher review is advised against** under current guidance. 🔴 Sell the administrative layer and the teacher-facing layer; do not sell autonomous summative assessment into EMEA before December 2027.
+
+🟢 **The supply side here is unusually strong this pass, and it is European-built**: `openpatch/hyperbook` (Germany), `h5p/h5p-cli` (Norway), `otacke/h5p-theme-picker` (Germany), `missing-elements/h5p-offline-player`, `zensation-ai/zenbrain`, `falkenslab/moodle-driver`, plus `FenixEdu` (Portugal) and `celtic-project/LTI-PHP` (UK) recovered as LGPL-3.0. 🟢 **Six of the seven rows promoted this pass are EMEA** — an EMEA engagement can now be staffed almost entirely from components whose maintainers sit in the same time zones as the client.
+
+### APAC
+
+🔴 **The most binding education-specific AI rules in the world are here, and they are not uniform.**
+
+| jurisdiction | instrument | status | what it means for an engagement |
+|---|---|---|---|
+| 🔴 **Vietnam** | July 2026 decision naming **education** — specifically **automated assessment and behavioural monitoring** — a high-risk area | compliance by **2027-03-01**; systems already operating before **2026-08-15** get a further **six-month grace** | 🟢 The sharpest education-specific rule in APAC. 🔵 Crucially, many listed systems are high-risk **only where AI output is the sole basis for a decision without meaningful human review** — so a human-in-the-loop design exits the high-risk class by construction |
+| 🟡 **South Korea** | **AI Framework Act**, in force **2026-01-22** | MSIT running 2026 as a de facto pilot; **one-year grace on penalties** | Build now, under the Act, while enforcement is soft |
+| 🔴 **China** | full-lifecycle binding requirements; and the **《"人工智能+教育"行动计划》 AI+Education Action Plan** (MOE + four agencies, **2026-04-10**) — a five-year plan to 2030 with a **partly central-budget-funded national AI-education pilot base** | in force | 🟡 Demand is state-driven and the compliance surface is the heaviest anywhere |
+| 🟢 **India** | **CT & AI** curriculum (MoE / CBSE, Classes **3–8**), launched 2026-04-01, **mandatory from the 2026-27 session**; plus platform-level labelling of AI-generated audio/image/video | in force | 🟢 A **mandatory national curriculum** with a free teacher handbook — teacher-enablement and content-localisation at national scale |
+| 🟡 **Japan** | **MEXT** generative-AI guideline **Ver. 2.0**; AI Promotion Act is a principles law with **no penalties** | pilot figures dated 2026-04-30: **149 municipalities / 478 schools** | 🟢 Permissive, and the stated principle — *the final judgement and the responsibility are human* — is a design brief |
+| 🟡 **Singapore** | agentic-AI framework | best-practice guidance, not law | Light-touch |
+
+🟢 **The opportunity: the same product, gated by jurisdiction.** Vietnam's "sole basis without meaningful human review" carve-out, Japan's human-responsibility principle and Oklahoma/Maryland's human-oversight statutes all point at **one** architecture — a reviewable decision boundary with an auditable human step — which is sellable in five jurisdictions from one build. 🟡 Named commercial incumbents in APAC AI-education are Google, Microsoft, IBM, Pearson and Byju's, per a market report whose rankings should be treated with caution.
+
+### LATAM
+
+🟢 **The demand side is now measured, and the number that matters is the gap between use and governance.** The **UNESCO IESALC / UNU-IAS** study — **200 institutions across 19 countries**, launched at Digital Learning Week 2026, UNESCO Paris — found **87 % of institutions use AI somewhere, and only 26 % have a formal AI strategy.** Adoption is **bottom-up**, driven by individual academics, researchers and students rather than institutional programmes. A separate **Digital Education Council** survey covers **30 000+ responses across 29 LATAM higher-education institutions**.
+
+🟢 **That 87 / 26 split is the single most actionable figure on this shelf.** It is not an adoption problem and it is not a technology problem — it is a **governance and consolidation** problem, and it is exactly the engagement LATAM institutions can be sold: take the shadow AI that 87 % already run and give it a strategy, a data boundary, a procurement path and an audit trail. 🔵 Sixty-one points of institutions are using AI with no mandate covering it.
+
+🟢 **The regional institutional anchor is new and well-funded**: the **UNESCO Observatory on AI in Education for Latin America and the Caribbean**, launched **2026-04-14 in Santiago**, with **CAF, CENIA (Chile), CETIC.br (Brazil), ECLAC, Fundación Santillana, Tecnológico de Monterrey, ProFuturo, Fundación Ceibal (Uruguay) and IRCAI** as partners. 🔵 That partner list is a ready-made route to ministries in Chile, Brazil, Mexico and Uruguay.
+
+| jurisdiction | instrument | status |
+|---|---|---|
+| 🟢 **Uruguay** | first LATAM signatory of the **Council of Europe Framework Convention on AI and Human Rights, Democracy and the Rule of Law** (2025) | signed |
+| 🟢 **Peru** | risk-based classification + **regulatory sandboxes**, tied to INDECOPI and the data-protection authority | adopted |
+| 🟡 **Colombia** | policy-first: **CONPES 4144** national AI policy (Feb 2025) | policy, not statute |
+| 🟡 **Mexico** | federal AI bill (2024) with an oversight authority | 🔴 bills without an enforcing regulator yet |
+| 🟡 **Brazil, Chile** | AI bill / framework | moving at different speeds |
+
+🟢 **And the LATAM SUPPLY side is confirmed, for a second pass and by a second independent instrument.** p335 placed `Cvmcosta/ltijs` (Apache-2.0, the canonical Node LTI 1.3 library) in **Brazil** off its commit channel. This pass placed **`SidneyBissoli/uis-mcp-server`** (MIT, 100 c, `-0300` on 100 of 100, sole human author **Sidney da Silva Pereira Bissoli**) in **Brazil** — a UNESCO-statistics MCP server listed in the official MCP Registry. 🟢 **Two unrelated maintainers, two different layers, same region, both found on the registry channel.** The five passes that recorded *"the LATAM supply side returned nothing placeable"* were measuring the search engine, not the region. 🟡 The bound p335 stated still holds for both rows: this places **maintainers**, not purchasing.
+🔴 **The honest gap, stated so silence is not read as coverage:** this pass found **no LATAM-built AI *tutor* or *assessment* agent** — the two Brazilian rows are both **infrastructure** (LTI integration, statistics access). The region is producing the layer an engagement is built *on*, not the pedagogy on top of it. That gap has now been measured twice on two different channels and is a real feature of the supply, not a search failure.
 
 **Pass 335 · 2026-10-20 (eighth pass of this date).** 🟢 **The LATAM supply gap this file has declared for five consecutive passes is CLOSED, and it closed on a row this base already recommended:** `Cvmcosta/ltijs`, the canonical LTI 1.3 Node library, on the build tier since p331, is **Brazilian** — root commit `cvmcosta@yahoo.com.br` 2019-05-30, `yahoo.com.br` on **429 of 575** commits, `-0300` on **513 of 575** ([`evidence/p335-ltijs-latam-placement`](../evidence/p335-ltijs-latam-placement.2026-10-20-p335.tsv)). 🔴 **The gap was an artefact of asking only the discovery channel; the placement instrument was never run over the inventory.** 🟡 **Every policy row in this file remains search-channel-attributed and none is read first-hand: `moe.gov.cn`, `mext.go.jp`, `eur-lex.europa.eu` are all `000` — no connect — from this environment, re-tested this pass. The repository rows ARE first-hand; the policy tier is still the least-verified tier here.**
 

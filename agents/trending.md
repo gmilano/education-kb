@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 336 — the gate that publishes grants cannot tell a 682-byte pointer from an 11 357-byte grant, and the classifier that can has been in this repo since p307
+
+🔵 **p335 changed the CHANNEL and found supply. p336 ran the gates p335 could not execute, and the thing that broke was the instrument that decides what reaches a shelf.**
+
+### 🟢 Gate state — MEASURED this pass, closing `ACTION ZF`
+
+| suite | result, 2026-10-20 | delta p334 → p336 |
+|---|---|---|
+| `make hooks` | 🔴 **21/22 · RED: `gate-ladder-case`** | 🟢 no change — p334's unmeasured figure is now observed and correct |
+| `make gate-offline` | 🟢 **ALL OFFLINE LICENCE CONTROLS PASS**, lazy-quantifier lint 0 findings | 🟢 no change |
+
+🔵 p335 refused to restate p334's numbers without measuring them. That was right, and the measurement vindicates them.
+
+🔴 **And `gate-ladder-case`'s red is not cosmetic — this pass reproduced the failure it describes.** My first probe ladder was all-uppercase and refused `kitschpatrol/yanki` as `UNGRANTED`; its grant is `main/license.txt`, **lowercase**, 1 071 B MIT, on three channels. Re-probed on a 24-rung case-varied ladder, the row is **promoted**, not refused.
+
+🔴 **Corrected in-pass:** my first draft blamed the ratchet on my own prose. 🟢 A `git worktree` of clean `HEAD` reports the same **`CASE-UNVARIED=8` / `SINGLE-SPELLING=20`**, and nothing under `compose/code/` was touched — **the regression predates p336.** 🔴 What the gate names is six standing `CASE-UNVARIED` licence instruments, among them `lib/probe_payload.sh` (the shared probe library), `p228-shelf-gate/classify_grant.py` (the shelf gate) and — 🔴 **`p279-absence-claims/absence_claims.py`, the gate that exists to stop a pass publishing a false absence.** 🟢 **Negative control: p335's four `UNGRANTED` rows are absent on all 24 rungs — that class is sound and stands at 8.** 🟢 `ACTION ZL`.
+
+### 🔴 The prescribed global legs — seventh consecutive zero
+
+| leg | query, run verbatim | never-seen slugs |
+|---|---|---|
+| global — agents | `top open source AI agents education 2026 github MIT` | 🔴 **0** — general-agent round-ups (OpenHands, CrewAI, LangGraph, OpenClaw); the only "education" hits are LLM *curricula* (`LLMs-from-scratch`, `ai-engineering-from-scratch`), not education software |
+| global — trending | `github trending education AI 2026` | 🔴 **0** — trackers proxying `github.com/trending` return AI-engineering learning repos (`developer-roadmap`, `nanochat`) |
+| global — verticals | `open source platform education ERP CRM MIT Apache` | 🔴 **0** — GegoK12, OpenEduCat, Frappe Education, RosarioSIS, all already shelved |
+| global — trends | `AI education industry trends 2026` | 🔴 **0 slugs**, 🟢 but real demand-side material — see `intel/trends.md` |
+
+🟢 **`ACTION TJ`'s registry channel, same pass: 733 slugs new to a 3 031-slug corpus · 15 education-domain · **8 promoted** · 4 refused with typed reasons · **1 refusal retracted in-pass**.** The asymmetry is now a stable property across seven passes.
+
+### 🔴 FINDING — `POINTER` published as `GRANT`, measured on three payloads of one family
+
+| payload | bytes | `p198` title-line | `p307` three-valued | 🔴 `p228` **shelf gate** |
+|---|---|---|---|---|
+| `PerryLink/dsh-essay-rubric-check` | **682** | `Apache-2.0` | 🟢 **`POINTER`** | 🔴 **`Apache-2.0`** — *"title line @33"* |
+| `Plasius-LTD/learning` | 10 975 | `Apache-2.0` | 🟢 `GRANT` | `Apache-2.0` — *"title line @61"* |
+| `BrightspaceUI/lms-context-provider` | 10 421 | `Apache-2.0` | 🟢 `GRANT` | `Apache-2.0` — *"title line @0"* |
+
+🔴 The 682 B file is the Apache-2.0 **appendix notice** — title, version line, and the compliance sentence, with **no definitions, no copyright grant, no patent grant, no redistribution terms.** It licenses nothing; it points at `apache.org`. 🔴 **The shelf gate returns the family name anyway**, and the only varying signal — the title line's offset — it prints without acting on. 🟢 `p307.classify_payload` requires a grant clause, finds none, and returns `POINTER` correctly. 🔴 **It is not in the gate's path. Seventh instance in eight passes of "instrument built, never executed over the decision that needs it."**
+
+🔴 **Two instances were already shelved**: `wwrwbs/AI_AWE` (1 865 B titled `Apache License`, 16 % of canonical) and `24kchengYe/human-skill-tree` (1 134 B titled `GNU AFFERO GENERAL PUBLIC LICENSE`, 3 % of canonical AGPL).
+
+🟡 **Direction matters.** `p314`'s untitled class makes classifiers ABSTAIN — supply excluded, fails safe. This one makes the gate ASSERT — **a published recommendation to build on a repository whose grant was never granted.** Fails unsafe. 🟢 `ACTION ZG`: wire `p307` into `p228`; a `POINTER` may not be published as a family name.
+
+### 🟢 Promoted — 8 rows, grant on two channels, placement on the commit channel only (`ACTION ZD`, `ACTION ZE`)
+
+| Agent / tool | Repo | Grant — repo payload · npm field | Activity, first-hand | Placed |
+|---|---|---|---|---|
+| 🆕 **uis-mcp-server** | https://github.com/SidneyBissoli/uis-mcp-server | 🟢 **MIT** 1 088 B · npm **MIT** | 🟢 100 c · 2 a · all 2026 · head 2026-10-15 | 🟢 **LATAM — Brazil** · `-0300(100/100)`, author **Sidney da Silva Pereira Bissoli** |
+| 🆕 **h5p-cli** | https://github.com/h5p/h5p-cli | 🟢 **MIT** 1 066 B · npm **MIT** | 🟢 730 c · 39 a · 2013-11-22 → **2026-10-20** · 60 c in 2026 | 🟢 **EMEA — Norway** · `+0200(451) +0100(137)` |
+| 🆕 **hyperbook** | https://github.com/openpatch/hyperbook | 🟢 **MIT** 1 069 B · npm **MIT** | 🟢 2 087 c · 10 a · 456 c in 2026 | 🟢 **EMEA — Germany** · `barkmin.eu(1 079)` |
+| 🆕 **h5p-offline-player** | https://github.com/missing-elements/h5p-offline-player | 🟢 **MIT** 1 073 B · npm **MIT** | 🟢 288 c · 5 a · all 2026 | 🟢 **EMEA** · `+0300(280)` |
+| 🆕 **zenbrain** | https://github.com/zensation-ai/zenbrain | 🟢 **Apache-2.0** 11 357 B canonical · npm **Apache-2.0** | 🟢 191 c · 8 a · all 2026 | 🟢 **EMEA** · `+0200(158)` |
+| 🆕 **moodle-driver** | https://github.com/falkenslab/moodle-driver | 🟢 **MIT** 1 067 B · npm **MIT** | 🟡 320 c · **1 a** · nine days | 🟢 **EMEA** · `+0100(320)` |
+| 🆕 **h5p-theme-picker** | https://github.com/otacke/h5p-theme-picker | 🟢 **MIT** 1 073 B · npm **MIT** | 🟡 83 c · 2 a · all 2026 | 🟢 **EMEA — Germany** · `posteo.de(82)` |
+| 🆕 **yanki** | https://github.com/kitschpatrol/yanki | 🟢 **MIT** `license.txt` **lowercase** 1 071 B · npm **MIT** | 🟢 474 c · 3 a · 2024-05-26 → 2026-10-16 · 87 c in 2026 | 🟢 **North America** · `ericmika.com(471)` |
+
+🔵 **An H5P cluster surfaced in one sweep** — three MIT repos, none in a 3 031-slug corpus, because H5P ships as npm packages and never appears in a "top AI agents" list.
+
+### 🔴 Refused — 4 rows in three classes, plus one refusal RETRACTED within the pass
+
+| Repo | Class | Measured |
+|---|---|---|
+| ~~https://github.com/kitschpatrol/yanki~~ | 🟢 **RETRACTED WITHIN THIS PASS.** Refused on an all-uppercase ladder; `gate-ladder-case` caught it. The grant is `main/`**`license.txt`** — **lowercase** — **1 071 B** `MIT License`. 🟢 **PROMOTED**, and **not** a ninth DECLARED-ONLY instance | 474 c · 3 a · 87 c in 2026 · 🟢 **North America** `-0400(407)` |
+| https://github.com/PerryLink/dsh-essay-rubric-check | 🔴 **POINTER + BELOW-BAR** — the 682 B specimen; 37 commits in twelve days | 37 c · 3 a · 🟢 **APAC — China** `+0800(37)` |
+| https://github.com/mikeargento/sealed-exam | 🔴 **SCOPED-GRANT + BELOW-BAR** — 2 950 B `LICENSE.txt` granting MIT **per path**; npm's flat MIT is right for the package, wrong for the repo (`P262`) | 23 c · 2 a · 🟢 **North America** `bitgraph.ing(12)` |
+| https://github.com/Creaditor/frontend | 🔴 **NO-SUCH-REPO** — npm `@creaditor/course-starterkit` 0.10.4 (2026-10-19) links a slug `git ls-remote` cannot resolve | no refs |
+| https://github.com/corsairdev/corsair | 🔴 **OUT-OF-DOMAIN**, logged for scale: 1 803 c · **307 a** · 1 353 c in 2026 · 🟢 **APAC — India** `+0530(969)`. General integration platform; education-relevant only via its Blackbaud plugin | Apache-2.0 10 824 B |
+
+### 🟡 Two measured limits on the commit-channel placement instrument
+
+| limit | specimen |
+|---|---|
+| 🔴 **L1 — DST degeneracy**: `-0500` cannot separate US Central (DST) from Colombia/Peru/Ecuador (year-round) | `intellectif/learning-kit` — 275 c, `-0500(228)`, commit months **05 08 09 10**, zero in the Nov–Mar window that would separate them ⇒ 🟡 **NOT RESOLVED** |
+| 🔴 **L2 — CI normalisation**: `users.noreply.github.com` commits carry `+0000` and place a repo in EMEA regardless of maintainer | `BrightspaceUI/lms-context-provider` — noreply(658/715), `+0000(685)` ⇒ reads EMEA; `d2l.com(15)` refutes it ⇒ 🟢 **North America — Canada** |
+
+🟢 `ACTION ZH` (reject a `+0000`-modal placement when noreply is modal; fall through to the corporate domain or return NOT RESOLVED) · 🟢 `ACTION ZI-b` (a `-0500`-only placement must state whether any commit falls outside Mar–Nov).
+🔵 **And it extends p335's byte-identity finding**: `@brightspace-ui/lms-context-provider` is a **fifth** D2L lane at **10 421 B**, byte-identical to the four p335 measured.
+
 ## 2026-10-20 — Pass 335 — the discovery channel that worked was the package registry, not the search engine; and the region the last five passes called empty was sitting on this base's own build tier
 
 🔵 **p334 refuted p333's "the external channel is saturated" by changing query GRANULARITY. p335 refutes the remaining half by changing the CHANNEL.** 🔴 **The four prescribed global search legs returned 0 new slugs — sixth consecutive measurement.** 🟢 **One `npm` registry sweep returned 362 packages, 314 with a GitHub slug, of which 44 were education-relevant and never seen in this corpus. 29 were probed on both channels; 7 cleared the bar.**
