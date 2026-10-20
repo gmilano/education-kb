@@ -176,21 +176,59 @@ def code_only(text):
 # was still graded on its literals.  Same defect, one language across.
 _SH_FOR_LIST = re.compile(r"for\s+\w+\s+in\s+([^;\n]*)", re.I)
 
+# 🟢 p337 — THE FOURTH INSTANCE OF p284's GENERATOR FINDING, and the one that had been
+# left open the longest.  p284 taught this audit to grade a PYTHON cross product on what
+# it generates (`_STEM_VARY`: `_casings(`, `stem.upper()`, …); p286 did the same for a
+# shell `for` LIST; p288 for a ladder read by REFERENCE.  All three close the gap for a
+# generator whose variants are LITERAL somewhere.  🔴 A shell generator that DERIVES its
+# stem casings — `tr 'a-z' 'A-Z'`, `${v^^}` — has no literal to read for the stem half,
+# so `stem_varies` stayed False and the instrument graded `CASE-UNVARIED` while provably
+# walking a case-varied ladder.  Measured on this base: `lib/probe_payload.sh`, the
+# SHARED PROBE every pass sources, walks 42 rungs across both spellings and three
+# casings, and this audit typed it `CASE-UNVARIED` — which under `ACTION ZL` (p336)
+# forbids publishing ANY absence from it.  The gap was not cosmetic: it made the one
+# instrument ZL depends on permanently unusable for the verdict ZL governs.
+#
+# 🔵 Kept exactly as narrow as the Python arm.  The idiom alone proves nothing — any
+# script may fold a string — so it counts only when it sits beside the CASE-VARIED
+# EXTENSION LIST that is already required.  Proximity, not presence, is the predicate, for
+# the reason `_near`'s docstring records.  C33 is the positive control and C34/C35 the
+# negative arms: a bare `tr` with no case-varied extension list, and a case-varied
+# extension list with no stem derivation, must both stay ungraded.
+_SH_STEM_VARY = re.compile(
+    r"tr\s+'?\[?:?a-z:?\]?'?\s+'?\[?:?A-Z:?\]?'?"      # tr a-z A-Z / tr '[:lower:]' '[:upper:]'
+    r"|tr\s+'\[:lower:\]'\s+'\[:upper:\]'"
+    r"|\$\{\w+\^\^?\}"                                  # ${v^} / ${v^^}
+)
+
 
 def shell_generates_case_variants(text, fam_spellings):
     """True when a shell `for` list varies EXTENSION case and the stems vary case too.
 
     Both halves are required, exactly as in `generates_case_variants`: an extension list
     alone could belong to another family's loop, and stem variants alone are `STEM-ONLY`.
+    The stem half is satisfied either by LITERAL case variation among the spellings or —
+    p337 — by a casing DERIVED next to the case-varied extension list.
     """
     exts = set()
+    ext_lines = []
+    lines = text.splitlines()
     for m in _SH_FOR_LIST.finditer(text):
-        for tok in m.group(1).replace('"', " ").replace("'", " ").split():
-            if re.fullmatch(r"\.[A-Za-z]+", tok):
-                exts.add(tok)
+        toks = [t for t in m.group(1).replace('"', " ").replace("'", " ").split()
+                if re.fullmatch(r"\.[A-Za-z]+", t)]
+        if toks:
+            exts.update(toks)
+            ext_lines.append(text[:m.start()].count("\n"))
     ext_varies = len({e.lower() for e in exts}) < len(exts)
     stems = {sp.partition(".")[0] for sp in fam_spellings}
     stem_varies = len({s.lower() for s in stems}) < len(stems)
+    if not stem_varies and ext_varies:
+        # p337: the stem casings are DERIVED, so there is no literal to compare.  Require
+        # the derivation within 8 lines of the case-varied extension list it feeds.
+        for i in ext_lines:
+            if _SH_STEM_VARY.search("\n".join(lines[max(0, i - 8): i + 9])):
+                stem_varies = True
+                break
     return ext_varies and stem_varies
 
 

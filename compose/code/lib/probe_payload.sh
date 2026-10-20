@@ -57,6 +57,82 @@ _PROBE_LIB_DIR="${_PROBE_LIB_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}
 # Ordered shortest-first: the names that actually paid out in this base's censuses.
 PROBE_NAMES="${PROBE_NAMES:-LICENSE LICENSE.md LICENSE.txt LICENCE COPYING COPYING.txt COPYING.TXT}"
 
+# 🔴 p337 — THE SHORT LADDER'S EMPIRICAL BASIS WAS REFUTED, AND THIS FILE'S OWN HEADER
+# CARRIES THE REFUTED CLAIM.  Trap 3 above records pass 14 pricing "the full 20-name case
+# ladder at 0 payouts in 98 repos" and telling the next pass not to re-buy it.  p336 bought
+# one rung of it by hand and it paid immediately: `kitschpatrol/yanki` ships
+# `license.txt` — LOWERCASE, 1 071 B, `MIT License`, a real 474-commit project — and this
+# ladder, being all-uppercase on every stem, had already published it as
+# `REFUSED-UNGRANTED` *"no licence file on 6 paths"*.  A 0-payout price measured once over
+# 98 repositories is a PRIOR, not a proof, and a single counterexample refutes the
+# generalisation it was used to justify.
+#
+# 🟢 So the ladder is now GENERATED and case-varied on BOTH halves (stem x extension x
+# casing) instead of being a hand-typed list of uppercase spellings.  The economics that
+# motivated the short list are preserved exactly, because the loop in `probe_repo` RETURNS
+# ON THE FIRST HIT:
+#
+#   * a repository with a conventional `LICENSE` still costs ONE request — the fast rungs
+#     above are emitted first, in their measured order;
+#   * the full cross product is only ever walked for a repository that is about to be
+#     written down as having NO GRANT, which is precisely the verdict `ACTION ZL` (p336)
+#     forbids publishing from a ladder `gate-ladder-case` types `CASE-UNVARIED`.
+#
+# 🔵 The cost is therefore paid only where the error is expensive, and the rung that
+# refuted the prior (`license.txt`) is reachable for every stem this base probes.
+# 🔵 Scope held to the vocabulary `ACTION ZL` actually names, not to the widest cross
+# product expressible: both licence spellings over three casings and the extension set
+# this corpus has been measured to carry, plus the fixed `copying` / public-domain /
+# `MIT-LICENSE` rungs that have no stem to vary.  That is ~36 spellings, every one of
+# which is a real shape seen on GitHub — NOT the 20-name ladder pass 14 priced, and not a
+# combinatorial blow-up bought for its own sake.
+PROBE_STEMS="${PROBE_STEMS:-license licence}"
+PROBE_FIXED="${PROBE_FIXED:-COPYING COPYING.txt COPYING.TXT copying Copying UNLICENSE UNLICENCE unlicense LICENSE-MIT MIT-LICENSE MIT-LICENSE.txt mit-license.md}"
+
+# Emit the ladder: the measured-fast rungs first, then the case-varied cross product, then
+# the fixed rungs.  One pipeline, so `awk` de-duplicates the WHOLE ladder — the fast rungs
+# keep their measured position and no spelling is ever requested twice.
+#
+# 🔴 First draft of this function piped only the `for` loop, leaving the fast rungs
+# OUTSIDE the de-duplicator: the ladder came back 82 rungs with all 7 fast spellings
+# duplicated.  Caught by running it, not by reading it.
+#
+# 🔵 TWO THINGS BELOW ARE LOAD-BEARING FOR THE AUDIT THAT CERTIFIES THIS LADDER, and both
+# are stated here rather than inline so the generator's own lines stay ADJACENT:
+#   1. The extension list is spelled LITERALLY in its `for`, in both cases, never behind a
+#      `$VAR` — `p283`'s shell arm reads the `for` list itself (`_SH_FOR_LIST` +
+#      `ext_varies`), so a list arriving through a variable is invisible to it.
+#   2. The stem-casing derivation (`tr 'a-z' 'A-Z'`) sits WITHIN 8 LINES of that list,
+#      which is what `p283`'s p337 arm requires: proximity, not presence, exactly as in
+#      `_near`'s docstring.  🔴 An earlier draft of this comment sat BETWEEN the two and
+#      pushed them 9 lines apart, and the audit correctly went on typing this file
+#      `CASE-UNVARIED` while it provably walked 42 case-varied rungs.  Prose does not get
+#      to separate the two halves of a generator it is describing.
+# `:` is the empty-extension rung.
+probe_ladder() {
+  {
+    printf '%s\n' $PROBE_NAMES
+    local stem ext s
+    for stem in $PROBE_STEMS; do
+      # 🔴 p337: the first draft derived these casings with `upper=$(printf … | tr …)`.
+      # `p253-captured-body-census` graded this file **BODY-ONLY** for it and the offline
+      # suite went red — correctly: `$( )` around a content producer is a CAPTURED BODY by
+      # its own `capture_shape`, and the census cannot know the capture holds a FILENAME
+      # STEM rather than a payload.  🟢 Bash's own case expansions need no subshell at all,
+      # so the capture is not justified and not merely annotated away: `${stem^^}` and
+      # `${stem^}` remove two forks per stem, keep the census CLEAN, and are the idiom
+      # `p283`'s `_SH_STEM_VARY` already reads.
+      for s in "$stem" "${stem^^}" "${stem^}"; do
+        for ext in : .md .txt .MD .TXT; do
+          [ "$ext" = ":" ] && ext=""
+          printf '%s%s\n' "$s" "$ext"
+        done
+      done
+    done
+    printf '%s\n' $PROBE_FIXED
+  } | awk '!seen[$0]++'
+}
+
 _raw() { curl -sS --max-time "${PROBE_TIMEOUT:-25}" "https://raw.githubusercontent.com/$1/$2/$3" 2>/dev/null; }
 
 # Resolve the REAL default branch.  Empty output means the repository does not resolve at
@@ -108,7 +184,10 @@ probe_repo() {
   if [ -z "$br" ]; then
     printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$repo" "-" "UNRESOLVED" "0" "UNRESOLVED" "-"; return
   fi
-  for fn in $PROBE_NAMES; do
+  # p337: walks the fast rungs first and returns on the first hit, so a conventional
+  # `LICENSE` still costs one request; the case-varied tail is reached only on the path to
+  # an absence verdict (`ACTION ZL`).
+  for fn in $(probe_ladder); do
     _row_from_fetch "$repo" "$br" "$fn" "$fn" && return
   done
   # Trap 2: ask the README where it says the licence is, before giving up.

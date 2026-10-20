@@ -760,6 +760,56 @@ osi_family_of() {
   # El ancla se ata a la VERSION (`CC0 1.0`), no a la sigla suelta, para que no robe un payload
   # CC-BY que mencione CC0 de paso: es el mismo criterio de P312 sobre la sigla CC.
   printf '%s' "$t" | grep -qiE 'CC0 1\.0|CC0-1\.0|Creative Commons Zero' && { echo "CC0-1.0"; return; }
+  # -------------------------------------------------------------------------
+  # P1337 (pase 337).  LA FAMILIA DE LICENCIAS DE DATOS NO EXISTIA EN ESTE
+  # CLASIFICADOR, Y LA CAPA `compose/` DE ESTA KB YA ESTA CONSTRUIDA SOBRE ELLA.
+  #
+  # Medido de primera mano: `withmarbleapp/os-taxonomy` --fila YA CARGADA en las
+  # estanterias, y a la que `compose/patterns.md` llama «the reference
+  # implementation of the ODbL boundary»-- trae `main/LICENSE` de 25.289 B cuyo
+  # bloque de titulo dice «Open Data Commons Open Database License (ODbL)».
+  # Este clasificador contestaba `UNCLASSIFIED` sobre 25 KB de concesion, y
+  # `odbl`/`open database` aparecian CERO veces en todo el archivo.
+  #
+  # 🔴 Por la via UNCLASSIFIED, `commercial_use_ok` cae al TOKEN-MATCH y devuelve
+  # ALLOWED.  El permiso es CORRECTO --ODbL si permite uso comercial-- pero se
+  # obtiene POR SUERTE, no por construccion: el mismo «acierto por la via
+  # equivocada» que la rama BSD de este archivo ya tiene anotado.  Lo que se
+  # pierde no es el permiso, es la OBLIGACION: ODbL §4.4 («Share alike», medida
+  # en el payload real, lineas 283/306/316) exige que toda Base de Datos
+  # Derivada se ofrezca bajo la MISMA licencia, y una familia `UNCLASSIFIED` no
+  # transporta esa obligacion a ningun consumidor aguas abajo.
+  # 🔵 Direccion del costo, dicha con precision: al contrario que las
+  # abstenciones de MPL de P309/P311 --que EXCLUYEN suministro utilizable-- esta
+  # ADMITE suministro con una obligacion no marcada.  Es la direccion que cuesta.
+  #
+  # El ancla va al BLOQUE DE TITULO (P171), no a la sigla suelta.  Medido en el
+  # payload real: «Creative Commons» y «CC BY» aparecen CERO veces, asi que no
+  # hay colision con la rama CC de abajo, y la sigla `ODbL` aparece 7 veces.
+  #
+  # 🔴 Y la VERSION no se lee del cuerpo.  Este payload no la declara en el
+  # titulo, y su linea 41 es «### 1.0 Definitions of Capitalised Words»: un
+  # NUMERO DE SECCION que cualquier ancla de version suelta leeria como la
+  # version de la licencia.  `grep` es orientado a LINEA y eso es lo que salva
+  # aqui --la sigla y el «1.0» viven en lineas distintas-- pero la proteccion se
+  # declara, no se hereda por suerte: la version solo se emite cuando viaja EN LA
+  # MISMA LINEA que la sigla.  Si no viaja, se contesta `ODbL-UNVERSIONED`, que es
+  # la convencion ya establecida por P551/P560/P561.  El segundo canal
+  # (`PROVENANCE.md`: «ODbL 1.0 + CC BY-SA 4.0») es el que fija el 1.0, y vive
+  # fuera de este archivo por construccion.
+  if printf '%s' "$t" | grep -qiE 'Open Database License|\bODbL\b'; then
+    printf '%s' "$t" | grep -qiE '(ODbL|Open Database License)[^a-z0-9]{0,12}(v|version )?1\.0' \
+      && { echo "ODbL-1.0"; return; }
+    echo "ODbL-UNVERSIONED"; return
+  fi
+  # Las otras dos de Open Data Commons, por el mismo bloque de titulo: `ODC-By`
+  # (atribucion, SIN share-alike) y `PDDL` (dedicacion al dominio publico).  Van
+  # DESPUES del ancla de CC0 de arriba, para que un payload CC0 --cuyo titulo es
+  # «CC0 1.0 Universal Public Domain Dedication», sin «and License»-- no caiga aqui.
+  printf '%s' "$t" | grep -qiE 'Open Data Commons Attribution License|\bODC-?By\b' \
+    && { echo "ODC-By-1.0"; return; }
+  printf '%s' "$t" | grep -qiE 'Public Domain Dedication and Licen[sc]e|\bPDDL\b' \
+    && { echo "PDDL-1.0"; return; }
   if printf '%s' "$t" | grep -qi 'Creative Commons\|creativecommons.org\|CC BY\|CC-BY'; then
     printf '%s' "$t" | grep -qi 'CC0\|Public Domain Dedication' && { echo "CC0-1.0"; return; }
     local nc="" sa="" nd=""
@@ -1102,7 +1152,17 @@ commercial_use_ok() {
     # `__source_available_names` entra por aca sin tocar esta linea.  Listar 14 cadenas de
     # proveedor en vez del prefijo habria dejado que la nro. 15 se escape al brazo default.
     NAMED-PROPRIETARY*)    return 1 ;;
-    CC-*|UNCLASSIFIED)     : ;;
+    # P1337 (pase 337).  Las tres familias de Open Data Commons entran por ESTE brazo, el
+    # mismo que la rama CC, y por la misma razon: son NO-OSI y no traen restriccion de uso
+    # no comercial, asi que la premisa de la compuerta no las cubre y el token-match SI es
+    # el lector correcto.  🔴 Medido en el pase 337, y es el motivo de que esta linea se
+    # toque: al nombrar `ODbL` en `osi_family_of` --que antes contestaba `UNCLASSIFIED`
+    # sobre los 25.289 B de `withmarbleapp/os-taxonomy`-- la fila dejo de caer en el
+    # comodin `UNCLASSIFIED` de esta misma linea y paso al brazo `*)`, que niega: un
+    # ALLOWED correcto-por-suerte se convirtio en un BLOCKED incorrecto, que es P250 otra
+    # vez y en la direccion que EXCLUYE suministro utilizable.  Nombrar la familia sin
+    # nombrarla AQUI no es media mejora, es una regresion.
+    CC-*|ODbL-*|ODC-By-*|PDDL-*|UNCLASSIFIED)     : ;;
     # -----------------------------------------------------------------------
     # P1063 (pase 248).  EL BRAZO POR DEFECTO PERMITIA, Y ESO ES LO QUE HACIA INSEGURO
     # NOMBRAR UNA FAMILIA NUEVA.  Es la limb 2 de `ACTION XE`, y esta MEDIDA, no supuesta:

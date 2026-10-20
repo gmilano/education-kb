@@ -4,6 +4,27 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 337 — the probe library every pass sources could not reach a lowercase grant, so `ACTION ZL` forbade a verdict only that library could deliver
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**What moved this week, in supply terms: nothing new was promotable, and the reason is measured.** The one prescribed search leg that returns education-specific repositories at all gave 8 candidate slugs. **Six were already `CARRIED`** (`csmediapro/moodle-mcp-server`, `G36maid/moodle-mcp`, `bruchris/canvas-lms-mcp`, `vishalsachdev/canvas-mcp`, `CharlieCardenasToledo/mcp-canvas-server`, `peancor/moodle-mcp-server`, and `EduBase/MCP`, `withmarbleapp/os-taxonomy`). **Two were new and both refused on activity:**
+
+| row, new this week | grant, first-hand | activity | region | verdict |
+|---|---|---|---|---|
+| `aicoder2009/khanacademyMCP` | 🟢 MIT, `main/LICENSE`, 1 086 B | 🔴 10 c · 1 a · last commit **2026-07-07** | 🟢 North America (`-0700`) | 🔴 REFUSED-BELOW-BAR + stale |
+| `Mattlo0546/canvas-mcp` | 🟢 MIT, `main/LICENSE`, 1 067 B | 🔴 2 c · 2 a · both **2026-10-19** | 🟢 EMEA (`+0100`) | 🔴 REFUSED-BELOW-BAR |
+
+🔵 **Eighth consecutive pass with 0 new promotable rows from the prescribed legs.** The signal this week is **6-of-8-already-carried**, which is saturation rather than silence — a different fact from a dry channel, and worth recording as such.
+
+**The week's real movement is in the instruments, and it unblocked a verdict class:**
+
+- 🟢 **`gate-ladder-case` is GREEN for the first time since p331** — `make hooks` **22/22**. Cause, found with a `git worktree` of `b5f081b^`: pre-p332 standing counts were **exactly 7 and 17**, the ceilings themselves. p332 wired `delivery-audit` into `make hooks`, moving one instrument with four case-blind ladders into the STANDING population. **+1 and +3. Nothing regressed; a gate acquired a subject.**
+- 🟢 **`lib/probe_payload.sh` walks 42 case-varied rungs**, generated from stem × casing × extension, fast rungs first. A conventional `LICENSE` still costs **one** request; the full ladder is walked only on the path to an absence verdict. `kitschpatrol/yanki`'s lowercase `license.txt` (MIT, 1 071 B) is reachable for the first time.
+- 🔴 **Pass 14's "0 payouts in 98 repos" price on a case ladder is REFUTED** and should not be re-cited: one counterexample retires the generalisation it justified.
+- 🟢 **New licence family: ODbL / ODC-By / PDDL.** `lib/license_family.sh` had **0** occurrences of `odbl` and typed a 25 289 B ODbL grant `UNCLASSIFIED` — on a row these shelves already carry and `compose/` already calls *"the reference implementation of the ODbL boundary"*.
+- 🔴 **`curl -sI https://github.com/<slug>` returns 403 for an INVENTED slug too.** The channel carries zero bits here. Existence is `git ls-remote`; grant is `raw.githubusercontent.com`.
+
 ## 2026-10-20 — Pass 336 — the gate that publishes grants cannot tell a 682-byte pointer from an 11 357-byte grant, and the classifier that can has been in this repo since p307
 
 🔵 **p335 changed the CHANNEL and found supply. p336 ran the gates p335 could not execute, and the thing that broke was the instrument that decides what reaches a shelf.**

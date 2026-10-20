@@ -3,6 +3,104 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+## Pass 337 · 2026-10-20 (tenth pass of this date) — the gate that has been red since p331 was never a number: it was `p332` wiring a case-blind instrument into the hook tier, and it had made every absence claim on these shelves unpublishable
+
+🟢 **`ACTION ZF` closed first, before a byte was written.** Both suites were run, not inherited.
+
+| suite | at pass open | 🟢 at pass close |
+|---|---|---|
+| `make hooks` | 🔴 **21/22 · RED `gate-ladder-case`** (sixth pass) | 🟢 **22/22 — ALL GREEN** |
+| `make gate-offline` | 🟢 all pass · `lazy-quantifier lint: 0` | 🟢 all pass · `lazy-quantifier lint: 0` |
+| `p283` controls | 25/25 | 🟢 **28/28** (three new arms, below) |
+
+---
+
+### 🟢 FINDING 0 — the red gate is CLOSED, and its cause was a one-line hook wiring six passes ago
+
+🔴 **p334, p335 and p336 all read `gate-ladder-case` as a ratchet breach — `STANDING:CASE-UNVARIED` 8 over ceiling 7, `STANDING:SINGLE-SPELLING` 20 over ceiling 17 — and none of them asked WHICH instrument moved.** p336 went further and proved the counts were not its own prose. 🟢 **Measured this pass, decisively, with a `git worktree` of `b5f081b^` — the commit before p332:**
+
+| population, measured on a clean worktree | `STANDING:CASE-UNVARIED` | `STANDING:SINGLE-SPELLING` |
+|---|---|---|
+| `b5f081b^` — immediately **before** p332 | 🟢 **7** | 🟢 **17** |
+| ratchet ceilings in `ratchet.tsv` | **MAX 7** | **MAX 17** |
+| `HEAD` at this pass's open | 🔴 **8** | 🔴 **20** |
+
+🟢 **The pre-p332 counts are not near the ceilings — they ARE the ceilings.** The whole breach is `+1` and `+3`, and `compose/code/p332-delivery-audit/delivery_audit.py` carries **exactly** four ladders: `licence` **CASE-UNVARIED**, and `copying` / `notice` / `readme` **SINGLE-SPELLING**. 🔴 **Cause: commit `b5f081b` (p332) wired `delivery-audit` into `make hooks`, and in doing so moved a case-blind instrument into the STANDING population.** Nothing regressed; a gate acquired a new subject.
+
+🔵 **And the ratchet's own header predicted this shape and still missed it.** `ratchet.tsv` says a ceiling over the ALL population *"goes red when an instrument is ADDED, which is the p252 defect again"*, and scopes ceilings to `STANDING:` to avoid it. 🔴 **Adding an instrument to `make hooks` does the same thing to the STANDING population.** The ceiling moved risk by zero and spent six passes of attention.
+
+**🔴 Why it was never just bookkeeping.** All four ladders come from ONE `DENY_SECOND` set, and every comparison against it ALREADY folded its input — `second.lower() in DENY_SECOND`, about a hundred lines below the literals. The match was case-insensitive **in fact**. `p283`'s screen is deliberately blind to a distant fold (`_near`, window=2; its **C5** control asserts exactly that a distant `.lower()` confers no immunity). 🟢 **Fix: fold at the point of DEFINITION** — `DENY_SECOND = {w.lower() for w in (…)}`. The set is **byte-identical** (18 entries, asserted against the pre-fix literal set), behaviour is unchanged, and the invariant is now stated where the words are, so a later pass may add `LICENSE.TXT` without creating a rung the comparison would miss. All four ladders regrade **FOLD-ON-PATH**: `CASE-UNVARIED` **8 → 7**, `SINGLE-SPELLING` **20 → 17**. 🟢 **No ceiling was touched.**
+
+---
+
+### 🔴 FINDING 1 — `ACTION ZL` was unsatisfiable as written: the shared probe every pass sources was typed `CASE-UNVARIED`, so NO absence could lawfully be published from it
+
+🟢 p336 wrote `ACTION ZL`: *no pass may publish `UNGRANTED` from a ladder `gate-ladder-case` types `CASE-UNVARIED`.* 🔴 **`compose/code/lib/probe_payload.sh` — THE shared probe library, the one `lib/README.md` forbids rewriting — was typed exactly that.** Its ladder was `LICENSE LICENSE.md LICENSE.txt LICENCE COPYING COPYING.txt COPYING.TXT`: **uppercase on every stem.** So ZL forbade the verdict and the only sanctioned instrument for reaching it could not satisfy ZL. **The action was a dead letter on arrival.**
+
+🔴 **And this file's own header carried the refuted claim that put it there.** Trap 3 records pass 14 pricing *"the full 20-name case ladder at 0 payouts in 98 repos"* and telling the next pass not to re-buy it. 🟢 **p336 bought one rung by hand and it paid immediately** — `kitschpatrol/yanki` ships **lowercase `license.txt`**, 1 071 B, `MIT License`, a real 474-commit project the uppercase ladder had refused. **A 0-payout price measured once is a prior, not a proof, and one counterexample refutes the generalisation it was used to justify.**
+
+🟢 **The ladder is now GENERATED and case-varied on both halves** — 42 unique rungs, stem × casing × extension, with the measured-fast rungs emitted FIRST. **The economics that justified the short list are preserved exactly, because `probe_repo` returns on the first hit:**
+
+| repository shape | requests paid |
+|---|---|
+| conventional `LICENSE` | 🟢 **1** — unchanged |
+| lowercase `license.txt` (the p336 casualty) | 🟢 **8** — reachable at all, for the first time |
+| about to be written down as **having no grant** | up to **42** — the full ladder, which is precisely the verdict `ACTION ZL` governs |
+
+🟢 **The cost is paid only where the error is expensive.** Re-probed first-hand: `kitschpatrol/yanki` → `main/license.txt`, **1 071 B**, **MIT**, © Eric Mika. 🟢 `probe_payload.sh` now grades **GENERATED-CASE-VARIED** on all three families, and `STANDING:CASE-UNVARIED` falls to **6**, one below ceiling.
+
+🔵 **Two of my own regressions, caught by this base's gates inside the pass and recorded rather than quietly fixed:**
+
+| # | what I wrote | which gate caught it | 🟢 resolution |
+|---|---|---|---|
+| 1 | piped only the `for` loop to `awk`, leaving the 7 fast rungs **outside** the de-duplicator | 🟢 running it — ladder came back **82 rungs, all 7 duplicated** | one pipeline; 42 unique, fast rungs keep their measured order |
+| 2 | derived casings with `upper=$(printf … \| tr …)` | 🔴 **`p253-captured-body-census`** graded the file **BODY-ONLY** and `gate-offline` went **RED** | 🟢 `${stem^^}` / `${stem^}` — **no subshell at all**: two fewer forks per stem, census CLEAN, and the idiom `p283` already reads |
+| 3 | a 7-line comment I put **between** the `tr` and the extension list it feeds | 🟢 `p283` kept typing the file `CASE-UNVARIED` while it provably walked 42 case-varied rungs | comment hoisted above the function — **prose does not get to separate the two halves of a generator it describes** |
+| 4 | wrote *"Harvard/MIT origin"* in the `edx-platform` row of `verticals/solutions.md` | 🔴 **`gate-shelf-consistency`** — `openedx/edx-platform: AGPL-3.0 (repos/foundations.md:13) vs MIT (verticals/solutions.md:13)` | 🟢 token removed. **`MIT` the university is `MIT` the licence to any shelf reader, and a word-boundary guard does not help — `Harvard/MIT` passes one.** The only fix is not writing the token in a row |
+
+🟢 **Regression 2 is the sharper one: the census was RIGHT.** `$( )` around a content producer is a captured body by its own `capture_shape`, and the census cannot know my capture held a filename stem rather than a payload. The fix was not to annotate the exception — it was to stop needing one.
+
+---
+
+### 🟢 FINDING 2 — the fourth instance of p284's generator finding, and the arm that had been open longest
+
+🔴 `p283` could not see a shell generator that **derives** its stem casings. p284 closed this for a Python cross product (`_STEM_VARY`: `_casings(`, `stem.upper()`), p286 for a shell `for` **list**, p288 for a ladder read by **reference** — all three cover a generator whose variants are literal somewhere. **A `tr`-derived casing has no literal to read**, so `stem_varies` stayed False forever. 🟢 **New arm `_SH_STEM_VARY`, kept exactly as narrow as the Python one: the idiom counts only when it sits within 8 lines of the case-varied extension list already required. Proximity, not presence.** Guarded by three new controls:
+
+| control | arm | asserts |
+|---|---|---|
+| **C33** | positive | a `tr`-derived stem × case-varied ext list is `GENERATED-CASE-VARIED` |
+| **C34** | 🔴 negative | a **bare** `tr` with no case-varied ext list is **not** a generator |
+| **C35** | 🔴 negative | a **distant** `tr` does not generate the stems — C5's rule, on the new axis |
+
+🟢 **28/28.** Corpus effect, measured: `probe_payload.sh` promoted on 3 families; `STANDING:CASE-CLOSED` **9 → 8** and `ALL:CASE-CLOSED` **25 → 24**, because the `copying` ladder was promoted OUT of `CASE-CLOSED` into the stronger `GENERATED-CASE-VARIED`. 🟡 **Both land exactly on their `MIN` floors (8 and 24).** The ratchet counts a promotion to a stronger grade as a loss on the weaker one — a real wrinkle, recorded and NOT papered over by moving a floor. A later pass that promotes one more closed ladder will go red on a floor for a good reason, and should read this paragraph before touching `ratchet.tsv`.
+
+---
+
+### 🔴 FINDING 3 — the prescribed `curl -sI` verification is INVALID in this environment, and reads as a 404 to anyone who does not run the negative control
+
+The task contract says *"verify every URL before writing it (`curl -sI`). A 404 is not a finding."* 🔴 **Measured this pass, with the negative control that decides it:**
+
+| slug | `curl -sI https://github.com/…` | 🟢 `git ls-remote` |
+|---|---|---|
+| `moodle/moodle` (exists, 35 147 B grant) | 🔴 **403** | 🟢 **RESOLVES** |
+| `kitschpatrol/yanki` (exists, MIT) | 🔴 **403** | 🟢 **RESOLVES** |
+| `gmilano/definitely-not-a-real-repo-p337` (**invented**) | 🔴 **403** | 🟢 **NO-REFS** |
+
+🔴 **The HTML HEAD channel returns 403 for everything, including a slug that does not exist. It carries ZERO bits.** A pass that follows the instruction literally would refuse the entire corpus. 🟢 **`git ls-remote` discriminates perfectly, and `raw.githubusercontent.com` returns 200/404 correctly — those are the two channels every verdict on this shelf is read through, and `p798-proxy-refusal-ledger` is where this class already lives.** 🟢 `ACTION ZM`: **no pass may treat a `github.com` HTML status as existence evidence; existence is `ls-remote`, grant is `raw`.**
+
+---
+
+### 🟡 Discovery: 0 promotable rows — the eighth consecutive such measurement, and this time the reason is SATURATION, not silence
+
+🟢 The one prescribed leg that returned education-specific repositories at all (`open source AI tutor agent github 2026 MCP server Moodle Canvas LMS`) yielded 8 candidate slugs. 🔴 **Six were already `CARRIED`** — `csmediapro/moodle-mcp-server`, `G36maid/moodle-mcp`, `bruchris/canvas-lms-mcp`, `vishalsachdev/canvas-mcp`, `CharlieCardenasToledo/mcp-canvas-server`, `peancor/moodle-mcp-server`, plus `EduBase/MCP` and `withmarbleapp/os-taxonomy`. 🟡 **Two were new, both grant-verified first-hand, and both refused on activity:**
+
+| row | grant, read first-hand | activity, bare-clone channel | region, placed | 🔴 verdict |
+|---|---|---|---|---|
+| `aicoder2009/khanacademyMCP` | 🟢 **MIT** — `main/LICENSE`, **1 086 B**, © *Khan Academy MCP Contributors* | 🔴 **10 c · 1 a · 2026-03-11 → 2026-07-07** — nothing for **three months** | 🟢 **North America** — `-0700(10)`, US Pacific | 🔴 **REFUSED-BELOW-BAR** (10 commits) + stale |
+| `Mattlo0546/canvas-mcp` | 🟢 **MIT** — `main/LICENSE`, **1 067 B**, © 2026 Mattlo0546 | 🔴 **2 c · 2 a · both on 2026-10-19** — one day old | 🟢 **EMEA** — `+0100(2)` | 🔴 **REFUSED-BELOW-BAR** (2 commits) |
+
+🔵 **Read precisely: this is not a dry channel, it is a channel whose education-agent supply this base has already absorbed.** 6 of 8 carried is the opposite signal from 0 of 8 found, and it is worth more than a padded row. **Fewer real rows beat padding, and an informed gap is information.**
+
 ## Pass 336 · 2026-10-20 (ninth pass of this date) — the shelf gate types a 682-byte Apache **appendix** as a full grant, and the instrument that gets it right has been in this repo since p307
 
 🟢 **`ACTION ZF` CLOSED — the gates were MEASURED this pass, not inherited.** p335 could not execute and honestly refused to restate p334's numbers. This pass ran both suites first, before touching a byte:

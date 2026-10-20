@@ -3,6 +3,62 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+## Pass 337 · 2026-10-20 — three recipes, every component's grant re-read first-hand this pass, and the first one is the ODbL boundary with a named family behind it
+
+🔵 Every component below carries a grant measured on `raw.githubusercontent.com` **this pass**, at a branch resolved by `git ls-remote --symref` — not restated from a badge. Byte counts are from the repaired 42-rung ladder. Where a component is 🟡 or 🔴, the recipe says what the obligation is and what to do instead.
+
+---
+
+### 🟢 R-337.1 — Curriculum-graph tutoring that never creates a Derivative Database
+
+**The problem it solves.** A client wants AI tutoring aligned to a real curriculum with prerequisites, and wants to keep its own IP. The curriculum data is **ODbL share-alike**; vendoring it creates a Derivative Database and drags the share-alike obligation onto the client's dataset.
+
+| role | component | grant, re-read this pass | why this one |
+|---|---|---|---|
+| curriculum graph | `withmarbleapp/os-taxonomy` | 🔴 **ODbL-UNVERSIONED**, `main/LICENSE`, **25 289 B** (`ODbL 1.0 + CC BY-SA 4.0` per `PROVENANCE.md`) | 1 590 topics, 3 221 prerequisite edges — the only open prerequisite graph on these shelves |
+| mastery model | `CAHLR/OATutor` | 🟢 **MIT**, `main/LICENSE`, **1 105 B**, © Z. A. Pardos / CAHL | 🟢 **BKT is explainable** — auditable to a school board, which the US oversight statutes require |
+| delivery platform | `OpenOLAT/OpenOLAT` | 🟢 **Apache-2.0**, `master/LICENSE`, **10 982 B** | 🟢 the only permissive platform in the LMS tier — your layer may stay closed |
+| agent orchestration | `huggingface/smolagents` | 🟢 **Apache-2.0**, `main/LICENSE`, **11 357 B** | small, auditable loop; no framework lock-in |
+
+**Wiring, and the one rule that carries the licence.** 🟢 **Fetch `os-taxonomy` at runtime from its own distribution; never vendor it into the repo and never write its records into your database.** Hold topic IDs and prerequisite edges in memory per session, key your own progress records by **topic ID only**, and persist nothing of the graph itself. `OATutor`'s BKT consumes the topic ID and the learner's response history — **both yours** — and emits a mastery probability. `smolagents` wraps the tutoring loop; `OpenOLAT` carries delivery, identity and gradebook over LTI.
+
+🔴 **What breaks it:** an ETL job that materialises the graph into a client table. That is a Derivative Database and ODbL §4.4 then requires it be offered under ODbL. 🟡 **And `data/curriculum-standards.json` is a separate question entirely** — UK National Curriculum records are **OGL v3.0** (ship the required notice verbatim), Common Core records are **purpose-limited CCSS Public License** with no clear derivative grant. 🔴 **Do not treat the repository as one licence; it is three.**
+
+---
+
+### 🟢 R-337.2 — An LMS-native teacher-workflow agent for a copyleft platform, with the client's logic staying proprietary
+
+**The problem it solves.** The LATAM and EMEA public-sector install base runs **Moodle (GPL-3.0)** and **Chamilo (GPL-3.0)**. Teacher-facing AI is the demand (OECD TALIS: Brazil 56%, Chile 55% teacher AI use; Uruguay 75%), but in-tree plugin code is derivative and would have to ship GPL-3.0.
+
+| role | component | grant, re-read this pass | boundary role |
+|---|---|---|---|
+| LMS core | `moodle/moodle` | 🟡 **GPL-3.0**, `main/`**`COPYING.txt`**, **35 147 B** | 🟢 **run UNMODIFIED** — no obligation attaches |
+| LMS core, LATAM public sector | `chamilo/chamilo-lms` | 🟡 **GPL-3.0**, `master/LICENSE`, **35 147 B** | 🟢 same: unmodified core |
+| LMS bridge | `csmediapro/moodle-mcp-server` (carried) | 🟢 MIT | 🟢 speaks Moodle **Web Services** — **no plugin installed on the LMS** |
+| agent runtime | `huggingface/smolagents` | 🟢 **Apache-2.0**, **11 357 B** | your prompts, policy and tools — 🟢 **stays closed** |
+
+**Wiring.** The agent runs **outside** the LMS as a service. It reaches Moodle over **Web Services** via the MCP bridge; it never links Moodle code, so the GPL boundary is never crossed. 🔴 **The compliance envelope is not optional here: the agent DRAFTS and a teacher DISPOSES.** DC bars AI from grading, discipline, IEP decisions and teacher evaluation; Oklahoma and Maryland bar high-stakes student decisions; the EU puts assessment in Annex III high-risk from **2027-12-02**. 🟢 So the deliverable is a **draft queue with an explicit human approval step and an audit record of who approved what** — which is also the artefact that sells.
+
+🟡 **If the client insists on in-LMS UI**, the plugin must be GPL-3.0 — so keep the plugin a **thin view** (render, submit, approve) and leave every model call, prompt and policy in the external service. **Thin plugin, fat service.**
+
+---
+
+### 🟢 R-337.3 — A licence-and-branch preflight for any education component, before it reaches a client deck
+
+**The problem it solves.** This pass measured three ways a component gets written down wrongly, each on real rows. The recipe is the base's own instruments, run in order, and it is cheap.
+
+| step | instrument, in this repo | what it catches — each measured on a real row this pass |
+|---|---|---|
+| 1. does it exist? | `git ls-remote` | 🔴 **`curl -sI https://github.com/…` returns 403 for an INVENTED slug too** — the HTML channel carries **zero bits** here. `ls-remote` returns `RESOLVES` / `NO-REFS`. |
+| 2. which branch? | `ls-remote --symref` | 🔴 **5 of 15** foundation repos do not default to `main` — `master` ×4 and **`release`** (`overhangio/tutor`); `rosariosis` defaults to **`mobile`** |
+| 3. where is the grant? | `lib/probe_payload.sh`, 42 case-varied rungs | 🔴 **2 of 15** do not keep it at `LICENSE` (Moodle → `COPYING.txt`, tutor → `LICENSE.txt`); and a **lowercase `license.txt`** is a real shape (`kitschpatrol/yanki`, MIT, 1 071 B) that an uppercase ladder refuses |
+| 4. is it a grant or a pointer? | `p307.classify_payload` | 🔴 a **682 B** Apache *appendix* is a `POINTER`, not a grant (p336's specimen) — size alone decides nothing, but 682 B cannot hold §2 and §3 |
+| 5. which family, really? | `lib/license_family.sh` | 🔴 a **25 289 B** ODbL grant typed `UNCLASSIFIED` until this pass; **GPL-3.0 vs LGPL-3.0** is a linkability question (p336's five rows) |
+| 6. is it alive? | bare-clone channel | 🔴 both new slugs this pass refused on it: **10 commits, last 2026-07-07**; **2 commits, one day old** |
+| 7. where is it from? | `p115-region-evidence` | 🟢 timezone offsets + author domains place a row — `-0700` ⇒ North America, `+0100` ⇒ EMEA |
+
+🔵 **Run it in this order because each step can invalidate the next.** A 403 read as a 404 refuses a real repository (step 1); a `main`-pinned probe invents an absence on `tutor` (step 2); an uppercase-only ladder invents one on `yanki` (step 3); and a named family that is not also named in the permission gate turns a correct ALLOWED into a wrong BLOCKED (step 5, caught on itself this pass). 🟢 **Steps 1-3 are one `ls-remote` and a handful of `raw` requests — the cheapest part of any engagement, and the part that decides whether the rest of the table is true.**
+
 ## Pass 336 · 2026-10-20 — four recipes, each wired only from rows this base has read first-hand
 
 🔵 Every component below carries a grant read on `raw.githubusercontent.com` **and** an activity figure from the bare-clone channel. Where a component is 🟡, the recipe says what the risk is and what to do instead.

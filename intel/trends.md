@@ -3,6 +3,44 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+## Pass 337 · 2026-10-20 — education's licence risk is moving from CODE to CONTENT, and the standard SPDX review does not look there
+
+### 🔴 T-337.1 — A curriculum platform inherits obligations from its DATA, and the software licence review will not find them
+
+🟢 **Measured, not argued, on a row these shelves already carry.** `withmarbleapp/os-taxonomy` — a 1 590-topic curriculum graph with 3 221 prerequisite edges — carries **three different grants in one repository**:
+
+| layer | grant | what it demands |
+|---|---|---|
+| micro-topics, prerequisite graph, authored text | 🟡 **ODbL-1.0 + CC BY-SA 4.0** | 🔴 **Share-alike on a *Derivative Database*** (ODbL §4.4). Commercial use **is** permitted. |
+| UK National Curriculum records | 🟢 **OGL v3.0** | Attribution notice, verbatim: *"Contains public sector information licensed under the Open Government Licence v3.0."* 🟢 **No share-alike.** |
+| Common Core records | 🔴 **CCSS Public License** | 🔴 **Purpose-limited** — a licence to copy/publish/display *"for purposes that support the Common Core State Standards Initiative"*, with **no clear derivative-work or sublicensing grant**. Explicitly **not** ODbL. |
+
+🔴 **No software-only SPDX scan surfaces any of this**, and this base's own classifier typed the 25 289 B top-level grant **`UNCLASSIFIED`** until this pass — while `compose/patterns.md` was already calling this repository *"the reference implementation of the ODbL boundary"*. **The pattern layer had the concept; the instrument had no name for it.** 🟢 Both now exist: `ODbL`, `ODC-By` and `PDDL` are typed from the title block, and the data families route to the same permission arm as `CC-*`.
+
+🔵 **Why this is a trend and not a one-off.** Education AI consumes **standards frameworks, question banks, rubrics and curricula** — content whose rights holders are ministries, testing consortia and publishers, **not** software projects. The licences that govern them (**ODbL, CC BY-SA, OGL, purpose-limited public licences**) are share-alike or purpose-limited far more often than permissive, and they bind the **derived dataset**, which in an AI engagement is the **model's training or retrieval corpus**. 🟢 **The architectural answer is the one this base already had and can now justify by family: fetch the corpus at runtime rather than vendoring it, so a Derivative Database is never created.**
+
+### 🟢 T-337.2 — The EU AI Act education deadline, corroborated a sixth time, with the distinction that keeps being collapsed
+
+🟢 **p336's correction (T-336.1) holds and is independently corroborated this pass.** The two facts and the reason they are confused:
+
+| in force **2026-08-02** | applies **2027-12-02** |
+|---|---|
+| 🟢 Enforcement machinery begins — the **AI Office and national authorities** start enforcing | 🔴 **High-risk obligations for education**: admissions, assessment, proctoring, AI-detection in assessment, path-steering personalisation |
+| 🟢 **Transparency**: disclose that a system is AI; disclose synthetic content | risk management, data governance, human oversight, conformity assessment |
+| 🟢 **AI-literacy duty** in its lighter form — *support* literacy, not guarantee a level | high-risk AI in regulated products: **2028-08-02** |
+
+🔴 **Search results conflate these routinely** — the phrasing *"from 2 August 2026 enforcement started"* is accurate about the machinery and is read as the education compliance cliff. 🟡 **Pricing an engagement on August 2026 is wrong in both directions at once:** it overstates urgency to a buyer with ~14 months of runway, and it hides the transparency duties that bind **now**. Confirm 2027-12-02 against the Official Journal before client use; vendor pages still print the old date.
+
+### 🟢 T-337.3 — Adoption has outrun governance everywhere measured, and the gap is the product
+
+🔵 **The same shape in three regions, from three independent instruments:** LATAM higher education at **87% use / 26% formal strategy** (UNESCO IESALC, 200 institutions, 19 countries); North America's legislative wave delivering **oversight mandates and prohibitions** rather than adoption mandates (DC barring AI from grading, discipline, IEP decisions and teacher evaluation; Oklahoma and Maryland barring high-stakes student decisions); APAC splitting into **binding law, promotion, and de-facto-binding guidance** with no common model.
+
+🟢 **The consistent read across all three: capability is not the constraint and has not been for some time.** What is bought is **the governed workflow** — inventory, policy, a human decision point, an audit trail, and disclosure. 🔴 **This also sets the ceiling on autonomy that an education deliverable can carry:** the US statutes explicitly forbid autonomous high-stakes decisions and the EU's Annex III classification puts assessment in the high-risk tier, so **"agent drafts, human disposes" is not a conservative design choice in this industry — it is the compliance envelope.**
+
+### 🟡 T-337.4 — Market sizing for education AI remains unusable, and this is now a standing caveat rather than a gap to close
+
+🔴 **Four passes of search legs have produced four incompatible figures**: ~$6B (2024) → $32B (2030); $12.3B by 2026; Europe alone $2.64B (2026) → $8.0B (2030) at 31.9% CAGR. 🟡 **All vendor- or aggregator-sourced; none traced to a primary methodology.** 🟢 **Recorded as a conflict, not averaged into a false consensus.** For a client deck, use the **adoption** numbers, which come from identifiable instruments with stated samples (UNESCO IESALC: 200 institutions / 19 countries; OECD TALIS 2024: Brazil 56%, Chile 55%, OECD avg 36%; Ipsos May 2026 on ban attitudes), and leave market size to the client's own analysts.
+
 ## Pass 336 · 2026-10-20 — the compliance cliff this shelf has been pricing moved sixteen months, and pedagogy's own algorithms are leaving education
 
 ### 🔴 T-336.1 — The EU AI Act high-risk deadline for education is **2027-12-02**, not 2026-08-02

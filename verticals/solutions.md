@@ -3,6 +3,26 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+## Pass 337 · 2026-10-20 — the platform tier re-read at the integration boundary: which of these can carry a proprietary AI layer, measured from the grant and not from the badge
+
+🟢 **Every licence below was re-read first-hand this pass** (42-rung ladder, branch resolved by `ls-remote --symref`, payload from `raw`). These are the real, customisable systems an education engagement starts from — the Odoo/OpenMRS/Moodle tier — and the column that matters is **not** the SPDX name, it is **what the grant does to the layer you add on top**.
+
+| Platform | What it is | Grant, measured | Bytes · branch · path | 🔴 What it does to YOUR layer |
+|---|---|---|---|---|
+| https://github.com/moodle/moodle | The LMS incumbent; plugin API, ~hundreds of plugin types | 🟡 **GPL-3.0** | 35 147 · `main` · 🟡 **`COPYING.txt`** | 🔴 **A Moodle PLUGIN is a derivative work.** Ship it GPL-3.0 or keep your logic in an external service the plugin calls. **The service stays yours; the plugin does not.** |
+| https://github.com/openedx/edx-platform | MOOC-scale platform; the Open edX community distribution, university-founded | 🔴 **AGPL-3.0** | 35 136 · 🟡 `master` · `LICENSE` | 🔴 **§13: network users must be offered the source.** Hosting a modified Open edX for a client triggers it. The clean pattern is **unmodified core + XBlock/LTI boundary**. |
+| https://github.com/overhangio/tutor | The de-facto Open edX installer/distro (Docker) | 🔴 **AGPL-3.0** | 34 523 · 🔴 **`release`** · 🟡 **`LICENSE.txt`** | 🔴 Same §13 reach as the platform it deploys. 🟡 **Note the branch:** a `main`-pinned probe calls this repo ungranted. |
+| https://github.com/chamilo/chamilo-lms | LMS with strong LATAM/EMEA public-sector install base | 🟡 **GPL-3.0** | 35 147 · 🟡 `master` · `LICENSE` | 🔴 Same as Moodle: in-tree customisation is GPL-3.0. Integrate over web services. |
+| https://github.com/OpenOLAT/OpenOLAT | University-grade LMS, assessment + competence management | 🟢 **Apache-2.0** | 10 982 · 🟡 `master` · `LICENSE` | 🟢 **The permissive platform in this tier.** Patent grant, notice obligation only — a proprietary AI layer may be linked AND shipped. 🔵 **This is the one to reach for first when the client needs closed IP.** |
+| https://github.com/francoisjacquet/rosariosis | Student Information System (SIS), not an LMS | 🟡 **GPL-2.0** | 15 214 · 🔴 **`mobile`** · `LICENSE` | 🟡 GPL-2.0 — **no patent grant** and no §13. Module code is derivative; an external AI service is not. 🔴 **Default branch is `mobile`**, the single sharpest probe trap in this tier. |
+| https://github.com/jupyterhub/jupyterhub | Multi-user notebook infrastructure; the teaching-lab backbone | 🟢 **BSD** | 1 475 · `main` · `LICENSE` | 🟢 **Most permissive here.** Attribution only. Authenticators/spawners can be closed. |
+
+🟢 **Recommendable set for closed-IP work: `OpenOLAT` (Apache-2.0) and `JupyterHub` (BSD).** 🟡 **Recommendable with an architectural boundary: all five copyleft rows** — the boundary is the same shape in every case (**unmodified core, your logic in a separate service, integrate over LTI / web services / plugin API**), and it is the difference between an obligation on your deliverable and no obligation at all.
+
+🔴 **The AGPL §13 distinction is the one that gets mispriced**, because GPL and AGPL look adjacent on a badge and are not adjacent in a hosted engagement: GPL-3.0 is triggered by **distribution**, AGPL-3.0 additionally by **network interaction**. A client-hosted modified Open edX obliges source disclosure to its own students. **Two of the seven rows here are AGPL, and both are the Open edX stack.**
+
+🔵 **Content and data, which is where education verticals differ from ERP and where this base just gained a vocabulary:** `withmarbleapp/os-taxonomy` is **ODbL** (share-alike on a *Derivative Database*, commercial use permitted) — newly typed this pass, having been `UNCLASSIFIED` on 25 289 bytes — and its `data/curriculum-standards.json` is **a different grant again** (UK National Curriculum under **OGL v3.0**, no share-alike, notice required; Common Core records under the **purpose-limited CCSS Public License**, explicitly not ODbL). 🔴 **A curriculum platform acquires licence obligations from its CONTENT, not only from its code**, and no software-only SPDX review will surface them.
+
 ## Pass 336 · 2026-10-20 — two platform-tier verticals come back onto the recommendable set, because they were never `GPL-3.0`
 
 🟢 **`repos/foundations.md` re-read five payloads first-hand this pass and found `LGPL-3.0` where the shelves said `GPL-3.0`.** Two of the five are not libraries — they are **platforms**, and this base's own bar had them as `REFUSED-COPYLEFT`. `LGPL-3.0` is **linkable**: a proprietary layer may link an LGPL component and need not adopt its licence. That is the delivery model this shelf exists to serve.

@@ -4,6 +4,24 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 337 — five of fifteen foundation repos do not default to `main`, and a 25 KB grant on a carried row had no family at all
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**The GitHub trending channel, run verbatim (`github trending education AI 2026`), returned no education repository this base does not already hold.** The nearest hit was `withmarbleapp/os-taxonomy` — a 1 590-topic curriculum graph with 3 221 prerequisite edges, reported past ~5 900 stars in mid-October 2026 by a trending-aggregator blog. 🟡 **The star figure is third-party and unverified; the GitHub HTML channel is 403 here.** The repository itself was already on these shelves, added at p326, so the trending channel's one education-relevant result is again **a row this KB wrote down first**.
+
+**Re-verified first-hand this pass, through the repaired 42-rung ladder — the foundation tier's branches and grant paths:**
+
+| the shape | count, of 15 | which |
+|---|---|---|
+| 🔴 default branch is **not** `main` | **5** | `master` ×4 (`edx-platform`, `chamilo-lms`, `OpenOLAT`, `nanochat`) + 🔴 **`release`** (`overhangio/tutor`) |
+| 🔴 grant path is **not** `LICENSE` | **2** | `moodle` → **`COPYING.txt`** · `tutor` → **`LICENSE.txt`** |
+| 🟢 permissive (MIT / Apache-2.0 / BSD) | **9** | buildable without copyleft obligation |
+| 🟡 copyleft platform tier | **5** | AGPL-3.0 ×2 · GPL-3.0 ×2 · GPL-2.0 ×1 |
+| 🔴 **data licence, newly typed this pass** | **1** | `os-taxonomy` → **ODbL-UNVERSIONED**, 25 289 B |
+
+🔵 **Why this belongs in a trending file rather than a static table:** the branch names are the part that drifts. A probe pinned to `main/LICENSE` writes `tutor` (`release`) and `rosariosis` (`mobile`) down as ungranted and misses Moodle's grant completely — three false absences out of fifteen rows, from one hardcoded assumption. **Byte counts and branches re-measured this pass, not restated.**
+
 ## 2026-10-20 — Pass 336 — the licence band this base trusted for `GPL-3.0` is the **LGPL-3.0** canonical, and five shelved rows were refused on it
 
 🔵 **p335 found the proprietary vendor publishing the permissive packages. p336 finds this base refusing supply it was always allowed to use.**

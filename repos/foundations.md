@@ -3,6 +3,55 @@ industry: education
 region: Global
 updated: 2026-10-20
 ---
+## Pass 337 · 2026-10-20 — the foundation tier re-read byte-for-byte on the repaired ladder, and three of fifteen do not live on `main`
+
+🟢 **Every row below was re-probed first-hand this pass through `lib/probe_payload.sh`** — the shared library, repaired in this same pass (see `agents/top.md` FINDING 1) so it walks 42 case-varied rungs instead of 7 uppercase ones. Grant family, **byte count** and **default branch** are measured, never restated. `git ls-remote --symref` resolves the branch; `raw.githubusercontent.com` serves the payload.
+
+| # | Repo | Grant, read first-hand | Bytes | Default branch | Grant path |
+|---|---|---|---|---|---|
+| 1 | https://github.com/moodle/moodle | 🟢 **GPL-3.0** | 35 147 | `main` | 🟡 **`COPYING.txt`** — not `LICENSE` |
+| 2 | https://github.com/openedx/edx-platform | 🟡 **AGPL-3.0** | 35 136 | 🟡 **`master`** | `LICENSE` |
+| 3 | https://github.com/overhangio/tutor | 🟡 **AGPL-3.0** | 34 523 | 🔴 **`release`** | 🟡 **`LICENSE.txt`** |
+| 4 | https://github.com/chamilo/chamilo-lms | 🟡 **GPL-3.0** | 35 147 | 🟡 **`master`** | `LICENSE` |
+| 5 | https://github.com/francoisjacquet/rosariosis | 🟡 **GPL-2.0** | 15 214 | 🔴 **`mobile`** | `LICENSE` |
+| 6 | https://github.com/OpenOLAT/OpenOLAT | 🟢 **Apache-2.0** | 10 982 | 🟡 **`master`** | `LICENSE` |
+| 7 | https://github.com/jupyterhub/jupyterhub | 🟢 **BSD** | 1 475 | `main` | `LICENSE` · © *Jupyter Development Team* |
+| 8 | https://github.com/HKUDS/DeepTutor | 🟢 **Apache-2.0** | 11 408 | `main` | `LICENSE` |
+| 9 | https://github.com/satvik314/educhain | 🟢 **MIT** | 1 092 | `main` | `LICENSE` · © *Educhain* |
+| 10 | https://github.com/CAHLR/OATutor | 🟢 **MIT** | 1 105 | `main` | `LICENSE` · © *Zachary A. Pardos, CAHL research lab* |
+| 11 | https://github.com/microsoft/ai-agents-for-beginners | 🟢 **MIT** | 1 141 | `main` | `LICENSE` · © *Microsoft Corporation* |
+| 12 | https://github.com/panaversity/learn-agentic-ai | 🟢 **MIT** | 1 068 | `main` | `LICENSE` · © *Panaversity* |
+| 13 | https://github.com/huggingface/smolagents | 🟢 **Apache-2.0** | 11 357 | `main` | `LICENSE` |
+| 14 | https://github.com/karpathy/nanochat | 🟢 **MIT** | 1 072 | 🟡 **`master`** | `LICENSE` · © *Andrej Karpathy* |
+| 15 | https://github.com/withmarbleapp/os-taxonomy | 🔴 **ODbL-UNVERSIONED** — see FINDING 4 | 25 289 | `main` | `LICENSE` |
+
+🔴 **Five of fifteen do not default to `main`** — `master` ×4 and **`release`** ×1 — and **two of fifteen do not keep the grant at `LICENSE`** (`COPYING.txt`, `LICENSE.txt`). 🟢 This is exactly Trap 1 and Trap 2 in `probe_payload.sh`'s own header, still paying out: a hardcoded `main/LICENSE` probe writes `tutor` and `rosariosis` down as ungranted and misses Moodle's grant entirely. **No row here was taken on trust; the branch was resolved before the payload was fetched.**
+
+🔵 **Permissive, buildable supply in this tier: 9 of 15** — Apache-2.0 ×4 (`DeepTutor`, `OpenOLAT`, `smolagents`, and `smolagents`' 11 357 B canonical confirms the band), MIT ×5, BSD ×1. 🟡 **Copyleft platform tier: 5** (AGPL ×2, GPL-3.0 ×2, GPL-2.0 ×1) — see `verticals/solutions.md` for what each permits at the integration boundary.
+
+---
+
+### 🔴 FINDING 4 — a CARRIED row's licence family was invisible to the standing classifier, on 25 289 bytes, and `compose/` is already built on that family
+
+**Specimen: `withmarbleapp/os-taxonomy`, `main/LICENSE`, 25 289 B.** Title block: *"## Open Data Commons Open Database License (ODbL)"*. **§4.4 "Share alike"** is present and measured at payload lines **283 / 306 / 316**.
+
+| channel | before this pass | 🟢 after |
+|---|---|---|
+| `osi_family_of` | 🔴 **`UNCLASSIFIED`** | 🟢 **`ODbL-UNVERSIONED`** |
+| `holder_of` | 🔴 *"copyright, and therefore this document licenses these rights. Some"* — **a preamble sentence fragment published as a copyright holder** | unchanged shape, but no longer reached by an unidentified family |
+| `commercial_use_ok` | 🟡 **ALLOWED — by TOKEN-MATCH, on an unidentified family** | 🟢 **ALLOWED — by NAMED family** |
+| `odbl` / `open database` in `lib/license_family.sh` | 🔴 **0 occurrences** | 🟢 anchored on the title block |
+
+🔴 **`lib/license_family.sh` knows 20+ families, including fine-grained `CC-BY-NC-SA` attribute decomposition, and did not know ODbL at all** — while this KB's own `compose/patterns.md` calls this very repository *"the reference implementation of the ODbL boundary"*. **The pattern layer was built on a family the classifier could not name.**
+
+🟡 **The commercial verdict was never wrong — it was right by the wrong route**, the same *"acierto por la vía equivocada"* this file's BSD branch already records. **What was lost is not the permission, it is the OBLIGATION:** ODbL §4.4 requires a Derivative Database to be offered under the same licence, and an `UNCLASSIFIED` family transports that to no downstream consumer. 🔵 **Direction of the cost, stated precisely:** unlike p309/p311's MPL abstentions, which **exclude usable supply**, this one **admits supply with an unflagged obligation**. That is the direction that costs a deliverable.
+
+🟢 **Fix, with the trap recorded:** the anchor is the **title block** (P171), never the loose sigil — measured, the payload names *"Creative Commons"* and *"CC BY"* **zero** times, so there is no collision with the CC branch, and `ODbL` appears 7 times. 🔴 **The version is NOT read from the body:** this payload's line 41 is *"### 1.0 Definitions of Capitalised Words"* — a **section number** any loose version anchor would publish as the licence version. `grep`'s line-orientation is what saves it here, but the protection is now **declared, not inherited by luck**: a version is emitted only when it travels on the SAME LINE as the sigil, otherwise `ODbL-UNVERSIONED`, per the `*-UNVERSIONED` convention of P551/P560/P561. 🟢 **Second channel fixes the version where it belongs:** `PROVENANCE.md` states *"ODbL 1.0 + CC BY-SA 4.0"*. `ODC-By-1.0` and `PDDL-1.0` were added on the same title-block rung, ordered **after** the CC0 anchor so a CC0 payload (titled *"Public Domain Dedication"*, without *"and License"*) cannot fall through to them.
+
+🔴 **And naming the family was HALF a fix, which this pass caught on itself.** Once `osi_family_of` answered `ODbL-UNVERSIONED`, the row stopped falling into the `UNCLASSIFIED` wildcard of `commercial_use_ok` and hit the `*)` deny arm: **a correct-by-luck ALLOWED became an incorrect BLOCKED** — P250 again, in the direction that **excludes usable supply**. 🟢 The three Open Data Commons families are therefore named in the same arm as `CC-*`, which is where the gate's own premise puts a non-OSI family with no non-commercial restriction. **Verified both ways after the fix; the GPL/AGPL/MIT/Apache negative controls are byte-unmoved.**
+
+🟡 **What this means for an engagement.** `os-taxonomy`'s curriculum graph is **usable commercially** and **not** a software grant: ODbL share-alike binds a *Derivative Database*, and `data/curriculum-standards.json` is a **different** licence again — `PROVENANCE.md` ships UK National Curriculum under **OGL v3.0** (no share-alike, notice required) and holds Common Core records under the **purpose-limited CCSS Public License**, explicitly **not** ODbL. **Three licences in one repository.** The `compose/` recipe that fetches it at runtime rather than vendoring it is the right shape, and now it has a named family behind it.
+
 ## Pass 336 · 2026-10-20 — five rows this base refused as `GPL-3.0` are **LGPL-3.0**, which is linkable; the rung below `gate-affero-rung` was never built
 
 🔴 **This base built `gate-affero-rung` so that no classifier may read `GPL-3.0` as `AGPL-3.0`. The adjacent rung — `GPL-3.0` vs `LGPL-3.0` — has no gate, and five rows are wrong on it.** All five re-read first-hand this pass on `raw.githubusercontent.com`; the verdict is the payload's own **title line**, not a byte band:

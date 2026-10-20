@@ -35,11 +35,27 @@ SLUG_FIELD = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
 
 # Field-shaped things that are not repositories. Measured against this corpus, not guessed:
 # every entry below was a false positive in a real evidence row before it was excluded.
-DENY_SECOND = {
+#
+# 🟢 p337 — THE FOLD NOW LIVES BESIDE THE VOCABULARY IT PROTECTS.  Every comparison against
+# this set already folded its input (`second.lower() in DENY_SECOND`, below), so the match
+# was case-insensitive IN FACT — but the fold sat ~100 lines away from the literals, and
+# `p283`'s proximity screen is deliberately blind to a distant one (`_near`, window=2:
+# "the fold must sit beside the path vocabulary it is supposed to protect", and its C5
+# control asserts exactly that a distant `.lower()` confers no immunity).  So this one set
+# graded as FOUR case-blind ladders — `licence` CASE-UNVARIED, `copying` / `notice` /
+# `readme` SINGLE-SPELLING — and when p332 wired this audit into the hook tier those four
+# rungs entered the STANDING population and breached the two ceilings that had held since
+# p286.  Folding AT THE POINT OF DEFINITION states the invariant where the words are and
+# keeps it true rather than incidental: a later pass may add `LICENSE.TXT` or `Copying` to
+# this list without creating a rung the comparison would silently miss.
+# 🔵 Behaviour is unchanged — every entry is already lowercase, so the folded set is
+#    byte-identical to the literal one.  What changes is that the immunity is now LOCAL
+#    and readable, by `p283` and by the next reader.
+DENY_SECOND = {w.lower() for w in (
     "license", "licence", "license.md", "licence.md", "license.txt", "licence.txt",
     "licenses", "readme.md", "package.json", "setup.py", "pyproject.toml", "copying",
     "notice", "unlicense", "composer.json", "pom.xml", "cargo.toml", "go.mod",
-}
+)}
 DENY_FIRST = {
     "main", "master", "blob", "tree", "raw", "refs", "heads", "tags", "http", "https",
     "npm", "pypi", "maven", "crates", "packagist", "rubygems", "nuget", "docs", "src",

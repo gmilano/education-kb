@@ -204,6 +204,41 @@ run("C31 a foreign identifier does not grade this family",
 run("C32 a local assignment is not an imported ladder",
     ["README"], 'README_PATHS = ["README"]\nprint("NO-README")', "SINGLE-SPELLING")
 
+# C33 — p337: a SHELL generator that DERIVES its stem casings with `tr` has no literal to
+# read for the stem half.  Graded on literals it is `CASE-UNVARIED`; graded on what it
+# walks it is a cross product.  This is `lib/probe_payload.sh`'s real shape.
+run("C33 a shell tr-derived stem x case-varied ext list is GENERATED-CASE-VARIED",
+    ["LICENSE", "LICENSE.md", "LICENSE.txt", "LICENCE"],
+    'PROBE_NAMES="LICENSE LICENSE.md LICENSE.txt LICENCE"\n'
+    'for stem in license licence; do\n'
+    '  upper=$(printf "%s" "$stem" | tr \'a-z\' \'A-Z\')\n'
+    '  for s in "$stem" "$upper"; do\n'
+    '    for ext in : .md .txt .MD .TXT; do\n'
+    '      printf "%s%s\\n" "$s" "$ext"\n'
+    '    done\n'
+    '  done\n'
+    'done\n',
+    "GENERATED-CASE-VARIED")
+
+# C34 — NEGATIVE ARM: the `tr` idiom ALONE proves nothing.  Any script may fold a string;
+# without the case-varied extension list beside it the ladder is still unvaried.
+run("C34 NEGATIVE ARM: a bare tr with no case-varied ext list is not a generator",
+    ["LICENSE", "LICENSE.md", "LICENSE.txt", "LICENCE"],
+    'p="LICENSE LICENSE.md LICENSE.txt LICENCE"\n'
+    'slug=$(printf "%s" "$1" | tr \'a-z\' \'A-Z\')\n'
+    'for f in $p; do fetch "$f"; done\n',
+    "CASE-UNVARIED")
+
+# C35 — NEGATIVE ARM: and the DISTANCE matters, exactly as in C5.  A `tr` twelve lines
+# past the extension list it is supposed to feed is not that list's stem generator.
+run("C35 NEGATIVE ARM: a distant tr does not generate the stems",
+    ["LICENSE", "LICENSE.md", "LICENSE.txt", "LICENCE"],
+    'p="LICENSE LICENSE.md LICENSE.txt LICENCE"\n'
+    'for ext in : .md .txt .MD .TXT; do probe "$ext"; done\n'
+    + "# filler\n" * 14 +
+    'banner=$(printf "%s" "$title" | tr \'a-z\' \'A-Z\')\n',
+    "CASE-UNVARIED")
+
 import ladder_case as _lc  # noqa: E402
 
 _rows = _lc.audit(str(pathlib.Path(__file__).resolve().parents[3]))
@@ -247,5 +282,5 @@ else:
     else:
         print(f"  ok   C14 the ladder ratchet holds ({len(_BOUNDS)} bounds)")
 
-print(f"\n{25 - len(FAILED)}/25 controls pass")
+print(f"\n{28 - len(FAILED)}/28 controls pass")
 sys.exit(1 if FAILED else 0)
