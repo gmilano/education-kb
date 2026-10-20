@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-20
 ---
 
+**Pass 334 · 2026-10-20 (seventh pass of this date).** 🟢 **The APAC leg finally returned, and it returned because the query was run per country instead of per region — the instruction `compose/patterns.md` has carried since p330.** 🔴 **p333 declared the opposite ("the English-language secondary channel does not carry APAC education policy at all") and the `gate-absence` hook refuted it on p333's own shelves.** 🟡 **Every policy row below is ATTRIBUTED to the search channel and none was read first-hand: `moe.gov.cn`, `mext.go.jp`, `consilium.europa.eu` and `cset.georgetown.edu` are all `000` — no connect — from this environment ([`evidence/p334-channel-reachability`](../evidence/p334-channel-reachability.2026-10-20-p334.tsv)).**
+
+## 🟢 The four national instruments the per-country query found — three of them APAC
+
+| jurisdiction | instrument | date | the operative content |
+|---|---|---|---|
+| 🟢 **APAC — China** | 《"人工智能+教育"行动计划》 **AI+Education Action Plan** — MOE **plus four other agencies** | **2026-04-10** | Five-year plan to **2030**: K-12, universities, vocational, lifelong learning. A **national AI (education) application pilot base**, partly **central-budget** funded. 🟡 Provincial/municipal bureaus **expected** to issue implementing rules and begin buying **2026–2027** — expectation, not a published schedule |
+| 🟢 **APAC — India** | **CT & AI** (Computational Thinking & Artificial Intelligence), MoE / **CBSE**, Classes **3–8** | announced late **2025**; launched **2026-04-01**; mandatory from the **2026-27** session | Curriculum framework + **teacher handbook** + learning material, **free on the CBSE site**. Committee chaired by **Prof. Karthik Raman, IIT Madras**; aligned to **NEP 2020**. **Internal assessment, no separate exam** for 3–8. 🟡 Classes 9–12 timelines are reported inconsistently (2027-28 modules; board subject 2029) — unresolved |
+| 🟢 **APAC — Japan** | **MEXT** *Guideline for the Use of Generative AI in Elementary and Secondary Education* **Ver. 2.0** | Ver. 2.0 **Dec 2024**; pilot scale in a MEXT document dated **2026-04-30** | **149 municipalities / 478 schools**, split **10 classroom use · 100 teacher administrative use · 51 courseware trial**. Core principle: **the final judgement and the responsibility remain human** |
+| 🟢 **EMEA — EU** | **Council conclusions on teachers in the era of AI**, doc **9003/26**, adopted at **EYCS** | **2026-05-11** (draft 8262/26, 2026-04-24, agreed by all delegations in the Education Committee) | Calls on member states to build teachers' AI skills and promote **education-specific** AI tools, with teachers involved in **designing and evaluating** them ("digital humanism"). 🟢 **Names digital sovereignty and strategic autonomy as essential, and says reducing dependence on AI tools developed outside Europe, including in education, is critical** |
+
+### 🟢 p333's declared EMEA sovereignty gap — now answered, and the answer is that the thing it looked for does not exist
+
+🔴 **p333 declared:** *"The EMEA sovereignty leg returned NOTHING when queried explicitly for data residency and non-EU vendor procurement in education. Declared as an informed gap — this KB cannot place European data-residency requirements for education AI."*
+
+🟢 **Measured this pass: there is no education-specific data-residency rule to find.** The sovereignty lever in European education AI is **political and horizontal**, in two pieces:
+
+1. 🟢 **Education-specific but non-binding** — Council conclusions **9003/26** (above). Conclusions are a political instrument: they direct member states and the Commission, they do not bind a vendor.
+2. 🟢 **Binding-shaped but horizontal** — the Commission's **tech-sovereignty package**, which sets criteria against which **cloud and AI services demonstrate a level of sovereignty**, explicitly including **infrastructure location, software supply-chain control and cyber security**. 🔴 **It is general public-sector policy; the sources do not place edtech inside its scope.**
+
+🔵 **For an engagement this is a better answer than a rule would have been:** there is nothing to certify against, so **sovereignty in an EMEA education bid is won on architecture, not on paperwork** — self-hostable models, EU-located inference, and a named supply chain. 🟢 That is exactly what pattern **P24** (sovereign stack) already builds, and the Council text is now the thing to cite in the bid.
+
+## 🟢 Opportunities by region
+
+🔵 **Scope stated: these are read off the instruments and figures in this file, and every policy citation is search-channel attested, not read first-hand.**
+
+### North America
+
+🟢 **The buying signal is teacher-facing and oversight-shaped, and the connector tier is already permissive and American.** State policy keeps converging on human-in-the-loop rather than prohibition: **Idaho SB 1227 enacted** (statewide K-12 framework, data-privacy rules, AI may not replace teachers); **Oklahoma and Maryland** require human oversight and bar AI from high-stakes decisions about students; **California AB 1159** (proposed) would forbid training models on student data absent direct school benefit. **~40 states plus Puerto Rico** have official guidance — a single-directory figure, worth re-checking. Federal: **H.R. 8747**, the K-12 AI Literacy and Readiness Act of 2026, **advanced out of committee and is not enacted**; there are **no binding federal AI curriculum standards**.
+
+🟢 **The concrete opening:** the two widest-bench permissive MCP connectors measured this pass are both North American — **`vishalsachdev/canvas-mcp`** (MIT, 1,041 c · 30 a · 927 in 2026) and **`rohanmuppa/brightspace-mcp-server`** (MIT, 414 c · 17 a, head today). **Both point at the LMSs US districts and universities actually run.** Sell **pattern P26**: graded assessment with the approval hop in the protocol, which answers Oklahoma, Maryland and AB 1159 in one design.
+
+### EMEA
+
+🟢 **Two dates, and they are the whole shape of an EMEA engagement.** **2026-08-02**: the AI Act is generally applicable and **Article 50 transparency duties apply now** — a learner must be told they are talking to an AI. **2027-12-02**: Annex III point 3 high-risk obligations for stand-alone education systems, **postponed from 2026-08-02 by Regulation (EU) 2026/1744**. 🔴 **Not postponed and not a high-risk duty at all: Article 5(1)(f) prohibits AI that infers emotions in education institutions outright**, except for medical or safety purposes.
+
+🟢 **The opening is the 18-month window plus sovereignty.** Annex III covers systems determining **access or admission**, assigning learners to institutions, and **evaluating learning outcomes where the outcome steers the learning**. Build inside the window so the human-oversight control (Art. 14) is already the architecture, and cite **9003/26** for the sovereignty half. 🟢 **The EMEA supply side is real and measurable:** `CogitoNTNU/TutorAI` (MIT, Norway, `stud.ntnu.no`), `r-huijts/canvas-mcp` (MIT, `fontys.nl`), `ankimcp/anki-mcp-server`, `falkenslab/moodle-mcp`, `felipedias-ie/blackboard-mcp`, `kaveheng/GenAi-in-education` (CC BY 4.0) — **six EMEA-placed permissive rows, all placed on the commit channel.**
+
+### APAC
+
+🟢 **This is now the best-documented region on this shelf, and it is three separate markets, not one.** **China**: a funded five-year national plan dated 2026-04-10, bought at **provincial and municipal bureau** level — target a province, not a ministry. **India**: a **mandated** curriculum for Classes 3–8 from the 2026-27 session, with the framework, teacher handbook and materials **already published free** — so the gap is not content, it is **teacher capability and delivery at scale**. **Japan**: a pilot measured at **478 schools** with a human-responsibility principle written into the guideline, and a 2030 AI-literacy target in draft. **Korea**: the **AI Basic Act in force 2026-01-22**, education inside its **high-impact** class with human-oversight duties. 🟡 **Singapore returned only a broad Smart Nation goal to train teachers at all levels on AI in education by 2026 — no MOE curriculum document surfaced; declared as a partial.**
+
+🟢 **The concrete opening:** India's mandate is a **teacher-enablement** engagement, not a content engagement — and `Haozhe-Xing/agent_learning` (MIT, APAC-placed, 11 authors in 2026) ships a curriculum **and** an eval harness that a training programme can be measured against. For Japan and Korea, lead with **P26**'s approval hop, which both jurisdictions' human-oversight duties ask for in almost the same words.
+
+### LATAM
+
+🟢 **The money here is multilateral and philanthropic, and it is already committed.** **UNESCO** launched a regional **AI-in-education observatory** for Latin America and the Caribbean in **April 2026**, with a pilot in **Mexico** with **CONALEP and DGETI** on centres of excellence. **Google.org** committed **$4.6M** across **nine countries** including Brazil and Mexico, targeting **1.25M students by 2028**. The **IDB**'s review of **193** initiatives found **59% use generative AI**. **HolonIQ's 2026 Latin America EdTech 100** reports AI-native positioning rising sharply and concentrated in **teacher-facing** tools rather than consumer tutoring, with **Brazil at the centre**. Market research puts regional edtech growth at **~11.8% a year, 2026–2034** — an estimate, not a measurement.
+
+🔴 **Regulation is the gap, stated as one.** **Brazil's LGPD** gives a right to review decisions made solely by automated processing — directly relevant to automated grading — and **Mexico** has its private-sector data law; **both countries' comprehensive AI bills are proposals whose enacted status this pass could not confirm.** 🟡 **And the supply side stayed empty for the fourth consecutive measurement: a repository-level search for LATAM-origin education AI projects (Brazil, Mexico, Argentina, universities, government) returned no placeable repository.** 🔵 **One near-miss, recorded honestly rather than claimed:** `affromero/Sotto` carries **1,243 commits at `-0500`** and a `.co` domain beside **2,571 at `+0100`** — **a two-offset footprint this pass refused to place**, and it is **AGPL-3.0** in any case.
+
+🟢 **The concrete opening:** sell into the **committed** money, not the projected market. The IDB's 59%-generative figure and the UNESCO observatory mean the region's buyers are mid-pilot and need **evaluation and teacher-facing delivery**, which is where `learning-commons-org/evaluators` and **P26** fit — with LGPD Article 20 review as the design constraint rather than an afterthought.
+
+---
+
 **Pass 332 · 2026-10-20 (fifth pass of this date).** 🔴 **The regional sweep was run as prescribed — four global legs and one per region — and it returned ZERO net-new artefacts. That is this pass's market finding, and it is recorded as a measured gap rather than left as silence.**
 
 🔵 **The honest yield, leg by leg, so the next pass does not re-spend it:**

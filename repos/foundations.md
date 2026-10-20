@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 334 · 2026-10-20 (seventh pass of this date) — two curriculum artefacts, one of them APAC-placed and shipping its own eval harness, and the licence that makes them usable is not the code licence
+
+🔵 **This shelf's standing question about curriculum material is not "is it good" but "may a studio bill for a derivative of it".** `intel/trends.md` T12 has tracked a *commercially usable curriculum-artefact count* since p328 and the count has only ever moved by one. 🟢 **Two rows this pass, both read first-hand, and the interesting one is a content licence rather than a code licence.**
+
+### 🟢 Promoted — every figure first-hand p334 (grant on `raw.githubusercontent.com`, activity from a bare `--filter=blob:none` clone)
+
+| Repo | Grant, read first-hand | Activity, first-hand | Placed | Why it belongs here |
+|---|---|---|---|---|
+| **[Haozhe-Xing/agent_learning](https://github.com/Haozhe-Xing/agent_learning)** | 🟢 **MIT** — `main/LICENSE`, **1,068 B**, © 2025 Haozhe Xing | 🟢 **175 c · 11 a · 2026-03-13 → 2026-10-17 · all 175 commits in 2026 · 11 distinct authors in 2026** | 🟢 **APAC — China.** `qq.com(88) tencent.com(42)`; offsets `+0800(173)` | 🟢 **It is not only prose, which is what makes it a foundation rather than a reading list.** Read from the tree: `book.toml` **and** `book-en.toml` (bilingual mdBook), **plus `reference-agent/` with `src/reference_agent/evaluation/harness.py` and `data/eval_samples.jsonl`** — a runnable reference agent and an eval harness beside the curriculum. Covers LLM agents, RAG, tool use, memory, multi-agent, LangChain/LangGraph, **MCP** and agentic RL. 🟡 **21 commits carry `example.com` addresses** — placeholder authorship, recorded rather than smoothed over |
+| **[kaveheng/GenAi-in-education](https://github.com/kaveheng/GenAi-in-education)** | 🟢 **CC BY 4.0** — `main/LICENSE`, **442 B**, © 2026 Kaveh Amouzgar and Omid Mirmotahari | 🟡 **12 c · 1 a · 2026-09-25 → 2026-09-26** | 🟢 **EMEA** — offsets `+0200(12)` | 🟢 **Open materials from real course implementations of generative AI in teaching and assessment, organised by year.** 🟢 **CC BY 4.0 is attribution-only — no share-alike** — which makes it the **first curriculum corpus on these shelves a studio may adapt into a client deliverable without the licence reaching the derivative.** 🔴 Compare the rows already here: `os-taxonomy` (**ODbL-1.0 + CC BY-SA 4.0**), `openedx-proposals` (**CC BY-SA 4.0**), `evaluators`' corpora (**CC BY-NC-SA 4.0** — the `NC` alone disqualifies it from paid work). 🟡 **Twelve commits over two days by one author: a small, new corpus. Cite the grant, bound the claim** |
+
+### 🔵 The distinction this shelf should keep, because three of its own rows turn on it
+
+🟢 **A permissive CODE licence and a permissive CONTENT licence are different questions, and curriculum work is decided by the second one.** Measured across the curriculum-artefact rows now on this shelf:
+
+| row | code grant | content grant | may a studio adapt it into billable client material? |
+|---|---|---|---|
+| 🆕 `kaveheng/GenAi-in-education` | — (materials) | 🟢 **CC BY 4.0** | 🟢 **Yes — attribute** |
+| 🆕 `Haozhe-Xing/agent_learning` | 🟢 **MIT**, 1,068 B | 🟢 MIT covers the book sources too | 🟢 **Yes** |
+| `weecology/forecasting-course` | 🟢 MIT (code) | 🟡 **CC-BY** (materials) | 🟢 Yes — attribute, and keep the two halves separate |
+| `withmarbleapp/os-taxonomy` | — (data) | 🔴 **ODbL-1.0 + CC BY-SA 4.0** | 🔴 **No — share-alike reaches the derived taxonomy** |
+| `openedx/openedx-proposals` | — (prose) | 🔴 **CC BY-SA 4.0** | 🔴 **Cite, never vendor** |
+| `learning-commons-org/evaluators` | 🟢 MIT | 🔴 **CC BY-NC-SA 4.0** | 🔴 **No — `NC` forbids the engagement itself** |
+
+🟢 **The count T12 tracks therefore moves 3 → 5, and for the first time one of them is APAC-placed.** 🔵 Both new rows were placed on the **commit channel** — author email domain and UTC offset — not on the search channel, which is the only regional channel that has worked reliably on this base.
+
+---
+
 ## Pass 333 · 2026-10-20 (sixth pass of this date) — three rows promoted out of a RANDOM sample of the silent class, and one of them is the instrument this KB has been hand-rolling for a hundred passes
 
 🔵 **p332 probed the twelve most-sighted rows of its defect class and said plainly what was wrong with that: *"ranking by sightings selects for rows that were already interesting"*.** 🟢 **This pass drew the unbiased sample it prescribed** — `random.Random(333).sample(silent, 24)` over all **711** rows of the `silent` class — and probed all 24 first-hand. [`evidence/p333-silent-random-probe`](../evidence/p333-silent-random-probe.2026-10-20-p333.tsv).

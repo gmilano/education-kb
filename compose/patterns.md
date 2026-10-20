@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 334 · 2026-10-20 — P29: the MCP seam into a proprietary LMS, with a citing tutor behind it
+
+🔵 **P28 (p333) wired the LTI 1.3 seam. P29 is the other seam, and it exists because of what p334 measured:** on a **proprietary** LMS the MCP connector is MIT, so the studio owns the whole integration outright. **Every row below was read first-hand at p334** — grant on `raw.githubusercontent.com`, activity from a bare `--filter=blob:none` clone.
+
+### 🟢 P29 — Teacher-facing tutoring and course assistance over MCP, on an all-permissive stack
+
+| Role | Component | Grant, first-hand | Activity, first-hand | Placed |
+|---|---|---|---|---|
+| MCP seam into the client's LMS — **Canvas** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT**, 1,071 B | **1,041 c · 30 a · 927 c in 2026 · head 2026-10-19** | 🟢 North America |
+| …or **Brightspace / D2L** | [`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server) | 🟢 **MIT**, 1,068 B | **414 c · 17 a · head 2026-10-20** | 🟢 North America |
+| …or **Blackboard** | [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | 🟢 **MIT**, 1,084 B | 🟡 21 c · 3 a · head 2026-10-14 | 🟢 EMEA |
+| …or **Google Classroom** | [`sandraschi/classroom-mcp`](https://github.com/sandraschi/classroom-mcp) | 🟢 **MIT**, 1,071 B (`master`) | 🟡 28 c · 3 a · head 2026-10-13 | 🟢 EMEA |
+| The tutor, and it **cites the curriculum** | [`CogitoNTNU/TutorAI`](https://github.com/CogitoNTNU/TutorAI) | 🟢 **MIT**, 1,140 B | **1,140 c · 19 a · 111 c in 2026 · head 2026-10-07** | 🟢 EMEA — Norway |
+| Pedagogy / mastery state | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT**, 1,073 B | 467 c · 5 a · 2026-10-16 (p330) | — |
+| Mastery model (BKT) | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | **1,045 c · head 2026-10-16** — re-confirmed first-hand p334 | North America |
+| Teacher skills over MCP | [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | 🟢 **Apache-2.0**, 10,173 B | 42 c (p327) | — |
+| Licence gate in CI | [`google/licenseclassifier`](https://github.com/google/licenseclassifier) | 🟢 **Apache-2.0**, 11,358 B | 249 c · 30 a (p333) | — |
+| Curriculum + eval corpus | [`Haozhe-Xing/agent_learning`](https://github.com/Haozhe-Xing/agent_learning) | 🟢 **MIT**, 1,068 B | **175 c · 11 a in 2026 · head 2026-10-17** | 🟢 APAC — China |
+
+### 🟢 The wiring, concretely
+
+1. **Stand up the platform's MCP server as its own process**, pinned to a commit, configured with a **service account scoped to the courses in the engagement** — not an instructor's token. On Canvas this is `vishalsachdev/canvas-mcp`; the lane is chosen by which LMS the client runs, and nothing else in the stack changes.
+2. **The agent never calls the LMS API.** It calls MCP tools. 🔵 That is the whole point of this pattern: the seam is a protocol boundary you can log, replay and refuse at, and it is MIT, so the adapter is a client deliverable.
+3. **`tutor-mcp` holds pedagogy state** — skill graph, BKT, FSRS review scheduling — and knows nothing about the LMS. **`OATutor`'s BKT** is the mastery model when the engagement needs a published, citable one (UC Berkeley, 1,045 commits).
+4. **`TutorAI` is the retrieval half**: ingest the course's own textbook and **require the answer to cite it**. Its `backend/flashcards/knowledge_base/{embeddings,db_interface,llm,factory}.py` is a swappable retrieval layer and a swappable model factory, which is what lets the same deployment run a hosted model in North America and a self-hosted one in the EU.
+5. **Write-back stays teacher-facing in v1.** Read rosters, read submissions, draft feedback — **and stop.** A grade is written by the instructor approving a draft, which is P26's step 5 and the reason this pattern passes the same four jurisdictions.
+6. **`licenseclassifier` runs in CI over the whole dependency tree** — and p333's defect is why: a grant classifier that greps for a family name grades a repository by its maintainer's first name.
+
+### 🔴 What will go wrong, named in advance
+
+- 🔴 **`sandraschi/classroom-mcp` and `felipedias-ie/blackboard-mcp` are 21–28 commits and 3 authors each.** **Fork and pin.** Do not take an upstream bump mid-engagement on a connector this young.
+- 🔴 **`falkenslab/moodle-mcp` is 169 commits by ONE author in 12 days.** Live, fast, and a single point of failure. 🟢 **On Moodle, prefer the LTI seam** (`lti-tool`, `tsugi`) and treat MCP as an accelerator you own a fork of.
+- 🔴 **On Open edX there is no permissive MCP lane at all** — `blend-ed/openedx-mcp` is **AGPL-3.0**. **Use LTI 1.3 and P28 instead**; do not reach for MCP and then discover the grant.
+- 🔴 **`TutorAI` has 19 authors historically and 2 in 2026.** A student organisation's bench rotates. **Fork, pin, and budget for maintaining the retrieval layer yourself** — do not sell it as vendor-backed.
+- 🟡 **`anthropic.com` appears on 171 of `canvas-mcp`'s commits.** That is tool-written authorship, not a vendor relationship, and it is not a support channel. **Read the bench as 30 authors with heavy agent assistance.**
+- 🔴 **The service account is the security boundary and clients will push back on it.** An MCP server with an instructor's own token inherits everything that instructor can see across every course they teach. **Scope it per engagement or the first incident is a FERPA conversation.**
+
+### 🟢 Where it sells, by region
+
+- 🟢 **North America** — both widest-bench connectors are NA-placed and point at Canvas and Brightspace. **Oklahoma / Maryland / Idaho SB 1227** all ask for human oversight; step 5 *is* the oversight, with an audit record. **California AB 1159**: nothing in this stack trains on student data.
+- 🟢 **EMEA** — ship inside the window to **2027-12-02** so Art. 14 oversight is the architecture rather than a retrofit; **Art. 50 transparency applies today**, so the tutor announces itself. 🔴 **Do not add affect detection to this pattern in Europe: Art. 5(1)(f) prohibits emotion inference in education outright.** Cite Council conclusions **9003/26** for the sovereignty half and run inference on an EU-located model via `TutorAI`'s factory.
+- 🟢 **APAC** — **India's CT & AI mandate (Classes 3–8, from 2026-27)** makes this a **teacher-enablement** sale: `agent-skills` plus `agent_learning`'s eval harness, measured against the CBSE framework. **Japan and Korea** both ask for human responsibility in writing; step 5 answers both.
+- 🟡 **LATAM** — the fit is the **UNESCO observatory** and **IDB** pilot estate (59% already using generative AI) and **teacher-facing** delivery, which is what HolonIQ measures the region's edtech actually building. **Design to LGPD Art. 20** (review of solely-automated decisions) from the start — which step 5 satisfies by construction.
+
+---
+
 ## Pass 333 · 2026-10-20 — P28: the permissive LTI 1.3 seam, end to end, beside an LMS you never fork
 
 ### 🟢 P28 — District/university LMS integration on an all-permissive stack

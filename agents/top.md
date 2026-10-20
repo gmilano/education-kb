@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 334 · 2026-10-20 (seventh pass of this date) — p333 reported two red gates and there were three, and the third one fires on p333's own sentence
+
+🔴 **Inherited state, measured on p333's HEAD before this pass changed a byte.** `make gate-offline` 🟢 **green (exit 0)**. `make hooks` 🔴 **red on THREE gates, not two**: `recount` (Makefile:397), 🔴 **`gate-absence` (Makefile:202)** and `gate-ladder-case` (Makefile:360). **p333 published "20/22 gates green, `recount` red … `gate-ladder-case` red on its C14 ratchet" and did not name `gate-absence`.** 🟢 **Left at 21/22: `recount` and `gate-absence` are green at the end of this pass, `gate-ladder-case` is still red and its cause is pinned in [`evidence/p334-ladder-standing-census`](../evidence/p334-ladder-standing-census.2026-10-20-p334.tsv).** 🔵 p333 was the pass that institutionalised *stating the gate state you inherited*; this is that paragraph doing its job one pass later, against p333.
+
+### 🔴 The third gate fires on p333's own prose, and it is right to
+
+**`gate-absence` exists to stop a pass publishing an absence whose subject the shelves already claim.** p333 wrote, in `intel/open-gaps.md`: *"nothing on China's AI Plus education plan, nothing from MEXT"*, and concluded **"the English-language secondary channel does not carry APAC education policy at all."** The gate answered with the count of cells that already name the subject:
+
+| subject | phrase | `mext` cells the shelves already carry |
+|---|---|---|
+| `mext` | `'nothing on'` | `intel/open-gaps.md` **29** · `agents/trending.md` **10** · `repos/trending.md` **9** · `intel/market.md` **4** · `compose/patterns.md` **1** |
+
+🟢 **Counted first-hand this pass with `grep -oi mext | wc -l` on each file: 29 · 10 · 9 · 4 · 1. The gate's numbers are correct.**
+
+### 🟢 So this pass executed the prescription instead of re-declaring the gap — and the diagnosis was wrong about the channel
+
+🔵 **`compose/patterns.md:338` has carried the instruction since p330:** *"Go per-country next (`MOE Singapore`, `MEXT`, `AusTender`, `GeM India`) — 'APAC' is not a procurement jurisdiction."* 🔴 **Four passes later nobody had run it, and p333 instead generalised from the regional query's failure to a claim about the whole channel.** Run per country, with each instrument's own name, the same channel returns **four dated national instruments**:
+
+| jurisdiction | instrument | date | what it does |
+|---|---|---|---|
+| 🟢 **China** | 《"人工智能+教育"行动计划》 — **AI+Education Action Plan**, MOE **+ four other agencies** | **2026-04-10** | Five-year plan to 2030 across K-12, universities, vocational and lifelong learning; a **national AI (education) application pilot base**, partly central-budget funded |
+| 🟢 **India** | **CT & AI** — Computational Thinking & Artificial Intelligence, MoE / CBSE, Classes **3–8** | **launched 2026-04-01**, mandatory from the **2026-27** session | Curriculum framework + **teacher handbook** + learning material, free on the CBSE site; committee chaired by **Prof. Karthik Raman, IIT Madras**; internal assessment, no separate exam |
+| 🟢 **Japan** | **MEXT**, *Guideline for the Use of Generative AI in Elementary and Secondary Education* **Ver. 2.0** | **Ver.2.0 Dec 2024**; pilot figures in a MEXT document dated **2026-04-30** | **149 municipalities / 478 schools** (10 classroom use · 100 teacher administrative use · 51 courseware trial). Principle: **the final judgement and the responsibility are human** |
+| 🟡 **Japan, draft** | high-school AI / data-science expansion | draft **Jun 2026** | Every high-school graduate AI- and data-literate **by 2030**. 🟡 Draft stage; content may change |
+
+🔴 **The corrected diagnosis, which replaces p333's:** the channel carries APAC education policy. **What failed was the granularity of the query, not the channel** — and the shelf had already said so at p330. 🔵 **This is the fourth instance in six passes of the shape p333 named: the capability was present, the instruction was already written down, and nothing executed it.**
+
+🟡 **Stated because the opposite would be the easy claim: none of the four was read first-hand.** `moe.gov.cn`, `mext.go.jp`, `consilium.europa.eu` and `cset.georgetown.edu` are all 🔴 **`000` — no connect** from this environment, on `curl` and on the fetch channel alike ([`evidence/p334-channel-reachability`](../evidence/p334-channel-reachability.2026-10-20-p334.tsv)). **These four rows are ATTRIBUTED to the search channel, not read.** 🟢 `raw.githubusercontent.com`, `registry.npmjs.org`, `pypi.org` and the **git clone channel** are readable, which is why every repository row below *is* first-hand and no policy row is.
+
+### 🟢 One agent promoted, and it is the first EMEA-placed multi-author tutor on this shelf
+
+| Agent | Repo | Grant, read first-hand | Activity, first-hand (clone channel) | Placed, and how |
+|---|---|---|---|---|
+| **TutorAI** | https://github.com/CogitoNTNU/TutorAI | 🟢 **MIT** — `main/LICENSE`, **1,140 B**, © 2023 Olav Selnes Lorentzen, Kristoffer Nohr Olaisen, Simon Sandvik Lee, Sverre Nystad | **1,140 c · 19 a · 2023-11-25 → 2026-10-07 · 111 c in 2026** | 🟢 **EMEA — Norway.** `stud.ntnu.no` **224 commits**; offsets `+0000(504) +0200(385) +0100(251)` |
+
+🟢 **Read from the tree, not the README** — `backend/flashcards/knowledge_base/{embeddings,db_interface,llm,factory}.py` beside `backend/flashcards/flashcard_service.py`: a real retrieval layer with a swappable LLM factory, and CI that runs (`codeql`, `django`, `node.js`, `automerge_dependabot`). **It ingests a textbook and cites the curriculum back** — the one thing `intel/trends.md` T21's citation requirement asks of a tutor.
+
+🟡 **The honest limit, and it is the same shape as `ltijs`:** 19 authors is the *historical* bench. **Only 2 distinct authors committed in 2026**, and the head is 2026-10-07 — thirteen days. 🔵 A student organisation's bench turns over by construction, so read this as *maintained by a rotating team*, not as five-year vendor continuity.
+
+### Agents over the systems — 🟢 the MCP connector shelf, restored and re-verified rather than copied
+
+🔴 **This section had been deleted from this shelf.** The `recount` gate has been red since p331 on five pins, and the reason is structural, not cosmetic: **the two headings it measures — this one and the build-on tier's own heading — were removed by the p315/p316 rewrites, so three of its five claims measured literal zero while `agents/trending.md`, which is append-only, still carried every row.** 🔵 **That is the clearest argument this base has produced for its own append-only rule: the data survived in the file nobody is allowed to rewrite.**
+
+🟢 **Restored by re-verifying from scratch, not by pasting the archived rows.** **7 rows in the table below**, one per lane, every grant read on `raw.githubusercontent.com` and every activity figure from a bare `--filter=blob:none` clone, today. **6 platforms** are reachable by an MCP server named anywhere on this shelf — **5 of them through a permissive row**, the sixth (Open edX) only through an AGPL-3.0 one. [`evidence/p334-first-hand-probe`](../evidence/p334-first-hand-probe.2026-10-20-p334.tsv)
+
+| Platform | MCP server | Grant, first-hand | Activity, first-hand | Placed |
+|---|---|---|---|---|
+| **Canvas** | https://github.com/vishalsachdev/canvas-mcp | 🟢 **MIT**, 1,071 B | 🟢 **1,041 c · 30 a · 927 c in 2026 · head 2026-10-19** | 🟢 **North America** — `-0500(552) -0600(133)` |
+| **Canvas**, institutional | https://github.com/r-huijts/canvas-mcp | 🟢 **MIT**, 1,065 B | **60 c · 3 a · head 2026-09-21** | 🟢 **EMEA — Netherlands**, `fontys.nl` **52 commits** |
+| **Brightspace / D2L** | https://github.com/rohanmuppa/brightspace-mcp-server | 🟢 **MIT**, 1,068 B | 🟢 **414 c · 17 a · all 414 in 2026 · head 2026-10-20 (today)** | 🟢 **North America** — `-0400(246) -0500(161)` |
+| **Moodle** | https://github.com/falkenslab/moodle-mcp | 🟢 **MIT**, 1,067 B | 🟡 **169 c · 1 a · head 2026-10-19** — 169 commits in 12 days, one author | 🟢 **EMEA** — `+0100(169)` |
+| **Blackboard** | https://github.com/felipedias-ie/blackboard-mcp | 🟢 **MIT**, 1,084 B | 🟡 **21 c · 3 a · head 2026-10-14** | 🟢 **EMEA** — `+0200(21)` |
+| **Google Classroom** | https://github.com/sandraschi/classroom-mcp | 🟢 **MIT**, 1,071 B (`master`) | 🟡 **28 c · 3 a · head 2026-10-13** | 🟢 **EMEA** — `+0200(28)`. 🔴 9 commits carry `example.com` addresses |
+| **Anki** (not an LMS) | https://github.com/ankimcp/anki-mcp-server | 🟢 **MIT**, 1,074 B | 🟢 **258 c · 6 a · 176 c in 2026 · head 2026-10-11** | 🟢 **EMEA** — `+0300(190) +0200(68)`, one `tcd.ie` |
+
+🔵 **`vishalsachdev/canvas-mcp` carries `anthropic.com` on 171 commits and `r-huijts/canvas-mcp` on 8.** Those are **tool-written authorship addresses, not institutions** — p142 corrected exactly this column — so neither row is placed on them. **Both regions above are booked on commit offsets alone.**
+
+### 🔴 Refused in the same probe, with the reason recorded so the next pass does not re-probe them
+
+| Repo | Why refused | Measured |
+|---|---|---|
+| https://github.com/dmontgomery40/mcp-canvas-lms | 🔴 **REFUSED-UNGRANTED** — no licence on **12 paths** (6 filenames × 2 branches) | 16 c · 4 a · head **2026-05-31** |
+| https://github.com/blend-ed/openedx-mcp | 🔴 **REFUSED-COPYLEFT** — **AGPL-3.0**, 34,524 B | 9 c · 1 a · head 2026-10-17 · `blend-ed.com` |
+| https://github.com/lmscloud-io/moodle-mcp-server | 🔴 **REFUSED-COPYLEFT** — **GPL-3.0**, 35,148 B — **and** dormant | 10 c · 2 a · head **2026-05-08** |
+| https://github.com/faizan45640/google-classroom-mcp-server | 🔴 **REFUSED-DORMANT** — MIT, but **zero commits in 2026** | 9 c · 4 a · head **2025-07-28** |
+| https://github.com/carlsvejstrup/dtu-learn-mcp | 🔴 **REFUSED-BELOW-BAR** — MIT, 1,079 B, but **5 commits, 1 author** | head 2026-10-07 · `+0200` |
+| https://github.com/Marid5/ai-tutor | 🔴 **REFUSED-BELOW-BAR** — MIT, 1,076 B, © 2026 Alexander Zhuravlev; **44 commits over two days**, silent 12 days | 44 c · 2 a · 2026-10-07 → **2026-10-08** · `+0300` |
+| https://github.com/SiddharthG1210/RAG-AI-TUTOR | 🔴 **REFUSED-COPYLEFT** — **AGPL-3.0**, 34,523 B | 40 c · 2 a · head 2026-10-19 · 🟢 **APAC — India**, `+0530(40)` |
+| https://github.com/affromero/Sotto | 🔴 **REFUSED-COPYLEFT** — **AGPL-3.0**, 34,523 B. 🔵 Recorded anyway for its velocity: **4,109 commits in eight months**, `.claude/hooks/` committed — an agent-built codebase | 4,109 c · 6 a · 2026-02-08 → 2026-10-19 · 🟡 **two-offset footprint `+0100(2,571)` and `-0500(1,243)`; placement NOT resolved** |
+
+🟢 **The one finding this sample is worth more than its rows:** the permissive MCP connectors point at **proprietary** LMSs — Canvas, Brightspace, Blackboard, Google Classroom — while **both** copyleft rows point at the **open-source** ones, Moodle (GPL-3.0) and Open edX (AGPL-3.0). 🟡 **Measured on a 12-row sample, not on the census** — the agent shelves carry **155 distinct MCP server slugs**, of which **74** are attributable to a named platform. Recorded in `intel/trends.md` as T25 with that bound stated.
+
+## Build-on-this tier
+
+🟢 **8 permissive rows — MIT, Apache-2.0 or BSD only.** A row whose code grant is permissive but whose **data or corpus** is share-alike is NOT in this tier; `learning-commons-org/evaluators` (MIT code, **CC BY-NC-SA 4.0** corpora) and `withmarbleapp/os-taxonomy` (**ODbL-1.0 + CC BY-SA 4.0**) are carried in the p333 shelf below and deliberately excluded here, because this tier's one job is to answer *may I embed this in a client deliverable*.
+
+| Agent / tool | Repo | Grant | Activity, first-hand | Layer |
+|---|---|---|---|---|
+| **lti-tool** | https://github.com/lti-tool/lti-tool | 🟢 **MIT** (1,077 B, p331) | 346 c · 6 a · 2026-10-19 · release 2026-10-20 (p331) | LMS integration — the way in |
+| **ltijs** | https://github.com/Cvmcosta/ltijs | 🟢 **Apache-2.0** (11,361 B, p331) | 575 c · 17 a · 2026-10-13 (p331) | LMS integration, mature, narrow bench |
+| **DeepTutor** | https://github.com/HKUDS/DeepTutor | 🟢 **Apache-2.0** | head 2026-10-19 (p330) | Agent-native tutor |
+| 🆕 **TutorAI** | https://github.com/CogitoNTNU/TutorAI | 🟢 **MIT** (1,140 B, p334) | 1,140 c · 19 a · head 2026-10-07 · 111 c in 2026 (p334) | RAG tutor that cites the curriculum — 🟢 **EMEA** |
+| **tutor-mcp** | https://github.com/ArnaudGuiovanna/tutor-mcp | 🟢 **MIT** (1,073 B, p331) | 467 c · 5 a · 2026-10-16 (p330) | ITS state + review scheduling over MCP |
+| **OATutor** | https://github.com/CAHLR/OATutor | 🟢 **MIT** | 1,045 c · 27 a · 2026-10-16 (p330, re-confirmed p334: **1,045 c · head 2026-10-16**) | Pedagogy — BKT, UC Berkeley |
+| **Agent Skills** | https://github.com/learning-commons-org/agent-skills | 🟢 **Apache-2.0** (10,173 B, p327) | 42 c (p327) | K-12 teacher skills over MCP |
+| 🆕 **canvas-mcp** | https://github.com/vishalsachdev/canvas-mcp | 🟢 **MIT** (1,071 B, p334) | 1,041 c · 30 a · 927 c in 2026 · head 2026-10-19 (p334) | The widest-bench connector on these shelves — 🟢 **North America** |
+
+---
+
 ## Pass 333 · 2026-10-20 (sixth pass of this date) — the column every row on this shelf is graded by was matching licence names inside other words, and the word it matched most was `commits`
 
 🔴 **The grant column is produced by a classifier that, until this pass, tested `"mit" in row`.** A licence family name is three letters long and English is full of them. Measured over this repository's own `evidence/` at p333: 🔴 **610 rows across 259 evidence files — 5.7% of every row that matched a permissive token — were graded permissive on a substring embedded in a longer word and nothing else.** [`evidence/p333-substring-grant-census`](../evidence/p333-substring-grant-census.2026-10-20-p333.tsv).

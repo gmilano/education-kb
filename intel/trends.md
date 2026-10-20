@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 334 · 2026-10-20 — three trends, and the two re-pointed pins the `recount` hook has been asking three passes for
+
+### 🔴 Trend 24 — RE-POINTED: the MCP inventory, which this base lost from its curated shelf and kept in its append-only one
+
+🟢 **13 distinct education MCP server slugs are shelved** on `agents/top.md` after p334 restored the section the p315/p316 rewrites deleted — **7 of them permissive and live, 5 refused with the reason recorded, 1 carried from p330.** Across both agent shelves together, **MCP reaches **6 distinct LMS platforms**** — Canvas, Moodle, Google Classroom / Workspace for Education, Blackboard, Brightspace / D2L and Open edX — plus **Anki**, which is not an LMS and is excluded from that count by the instrument.
+
+🔵 **The inventory behind those two numbers: 155 distinct MCP server slugs across `agents/top.md` and `agents/trending.md`, of which 74 are attributable to a named platform** — Canvas **32**, Moodle **17**, Google Classroom **11**, Blackboard **7**, Brightspace / D2L **4**, Open edX **2**, Anki **1**. 🟢 **Derived from the rows by `compose/code/p274-quantity-recount`, not copied from the sentence that last stated it.**
+
+🔴 **Why these two pins read `NO-ANCHOR` for three passes, and it was never noise.** The hook was reporting that a *shelf section had gone missing*, not that a sentence had been reworded. **Measured at p333's HEAD: three of the five pins measured literal `0`** — the MCP section's row count, the platform count, and the permissive-row count — **because `### Agents over the systems` and `## Build-on-this tier` had both been removed from `agents/top.md`.** 🟢 **p334 restored both headings, re-verified every row first-hand rather than pasting the archived ones, and `recount` now reports `STALE=0`.**
+
+🔵 **And two of this pass's own drafting errors are worth recording, because they are this file's own documented failure classes caught by its own gate:** (1) the first draft wrote the literal string `## Build-on-this tier` **inside a sentence**, and `_tier_rows` splits on the first occurrence — so the prose stole the structural boundary and the tier measured **15** rows instead of 8; (2) the restored heading was written as `### 🟢 Agents over the systems`, and the instrument matches a **line prefix**, so the emoji made the section invisible and it measured **0**. 🟢 **Both were found by running the gate before publishing, which is the discipline p332 prescribed and p333 wrote about.**
+
+### 🔴 Trend 25 — NEW: in LMS connectors the licence runs OPPOSITE to the platform — permissive connectors into proprietary platforms, copyleft into open-source ones
+
+🟢 **Measured first-hand p334 across one or two lanes per platform:**
+
+| platform's own licence | platform | its MCP connector's grant |
+|---|---|---|
+| 🔴 proprietary | Canvas, Brightspace / D2L, Blackboard, Google Classroom | 🟢 **MIT in all four lanes** — 1,071 B · 1,068 B · 1,084 B · 1,071 B |
+| 🟢 **open source** | Moodle (GPL-3.0) | 🔴 **GPL-3.0** connector, 35,148 B (and dormant) |
+| 🟢 **open source** | Open edX (AGPL-3.0) | 🔴 **AGPL-3.0** connector, 34,524 B — **the only lane found** |
+
+🔵 **The mechanism, and it is not ideological.** A connector to a proprietary platform is a thin API client — nothing inherits, so its author has no reason to pick anything but MIT. A connector to a copyleft platform is written from inside that platform's ecosystem and licensed the way the platform is. 🔴 **The consequence inverts the intuition a studio brings to an engagement: the seam into a client's PROPRIETARY LMS is the one you may own outright, and the seam into their OPEN-SOURCE LMS is the one that reaches your deliverable.**
+
+🟡 **Bound: 12 rows probed against a platform-attributed population of 74. Real in every lane measured; not a census.** 🟢 **The falsifier is cheap and named: probe the remaining 62 platform-attributed slugs. If the permissive share on Moodle and Open edX rises above the proprietary platforms', this trend is sampling bias and must be withdrawn.** `falkenslab/moodle-mcp` (MIT, one author, 12 days old) is already one such counter-instance and is recorded as one.
+
+### 🔴 Trend 26 — NEW: "the channel is saturated" was a property of four standing queries, not of the channel
+
+🟢 **p333 measured the four prescribed global legs as saturated for the third consecutive pass and generalised to the channel: *"the English-language secondary channel does not carry APAC education policy at all."*** 🔴 **Refuted this pass on the same channel.** Eight legs: the four global ones returned **zero** never-seen slugs — **fifth consecutive measurement, and that part stands** — while **every narrow leg returned something**:
+
+| leg shape | new to this corpus |
+|---|---|
+| region name + generic terms (`AI education APAC 2026 adoption regulation players`) | 🔴 **0** |
+| **country + the instrument's own name** (`文部科学省 生成AI ガイドライン`, `人工智能+教育`, `CBSE AI curriculum`) | 🟢 **4 national instruments**, 3 APAC |
+| **capability instead of category** (`RAG textbook citation spaced repetition MIT`) | 🟢 **6 repositories**, 4 never seen |
+| **the document number** (`EU Council education AI sovereignty ST 9003`) | 🟢 **Council conclusions 9003/26, EYCS 2026-05-11** |
+
+🔵 **So the durable rule is about granularity, not budget: "APAC" is not a jurisdiction and "education AI" is not a capability.** 🔴 **This base had already written that down — `compose/patterns.md:338`, since p330: *"Go per-country next … 'APAC' is not a procurement jurisdiction."*** **Four passes passed and nothing executed it.** 🟢 **That makes four instances in six passes of the same process defect: capability present, instruction already written, not exercised** — p329 the clone channel, p331 the `evidence/` grep, p333 the `AMBIGUOUS_WORDS` guard, p334 the per-country query.
+
+🟡 **And the honest cost of this correction: nothing here was read first-hand.** `moe.gov.cn`, `mext.go.jp`, `consilium.europa.eu` and `cset.georgetown.edu` are all 🔴 **`000` — no connect** on both channels. **Every policy row this pass is ATTRIBUTED to the search channel; every repository row is first-hand.** The distinction is written into the cells themselves, not into a footnote.
+
+### 🟢 Extension to trend 12 — the commercially usable curriculum-artefact count moves 3 → 5, and one is finally APAC
+
+🟢 **`kaveheng/GenAi-in-education` — CC BY 4.0, 442 B, read first-hand** — is the first curriculum corpus on these shelves whose grant is **attribution-only**, so a studio may adapt it into billable client material without the licence reaching the derivative. 🟢 **`Haozhe-Xing/agent_learning` — MIT, 1,068 B, 11 authors in 2026, APAC-placed** — is the second, and it ships a **reference agent and an eval harness** (`reference-agent/src/reference_agent/evaluation/harness.py`, `data/eval_samples.jsonl`) beside the book. 🔴 **The three already here all carry share-alike or non-commercial terms on the content** — `os-taxonomy` (ODbL-1.0 + CC BY-SA 4.0), `openedx-proposals` (CC BY-SA 4.0), `evaluators`' corpora (**CC BY-NC-SA 4.0**, where `NC` forbids the engagement itself). 🔵 **The lesson this extension adds: for curriculum work the decisive licence is the CONTENT licence, and a permissive code grant on the same repository says nothing about it.**
+
+---
+
 ## Pass 333 · 2026-10-20 — two trends, one of them about this KB's own instruments and therefore about everyone else's
 
 ### 🔴 Trend 22 — the licence data the whole sector runs on is produced by substring matching, and this pass has a measured failure rate for it

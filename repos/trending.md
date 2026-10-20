@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 334 — the MCP connector shelf was deleted from the curated file and survived here, which is the clearest case this base has made for its own append-only rule
+
+🔵 **This file exists because a trending record rewritten every pass destroys the trend it records.** 🟢 **p334 is the pass where that rule paid for itself in data rather than in principle.**
+
+### 🔴 What happened, measured
+
+**The `recount` hook has been red since p331 on five registered pins.** p333 reported it as *"7 `NO-ANCHOR` claims"* and left them. 🟢 **Measured first-hand this pass: it is 5 of 5 — every registered claim, not seven of a larger set — and the cause is structural, not a broken sentence.**
+
+| pin | measured at p333's HEAD | why |
+|---|---|---|
+| MCP server slugs in the MCP section of `agents/top.md` | 🔴 **0** | the heading `### Agents over the systems` **no longer existed** in that file |
+| LMS platforms reachable, `agents/top.md` | 🔴 **0** | same section |
+| permissive rows in the build-on tier | 🔴 **0** | the heading `## Build-on-this tier` **no longer existed** |
+
+🔴 **The p315/p316 rewrites removed both headings and the rows under them. Three pins therefore measured literal zero while reading as broken anchors** — and `agents/top.md` carried **2** MCP slugs where the agent shelves as a whole carry **155**, of which **74** are attributable to a named platform. 🟢 **Every one of those rows was still here, in this file, because nothing is allowed to rewrite it.** 🔵 **The curated shelf lost the inventory; the append-only log kept it.**
+
+### 🟢 Restored, and restored by re-verification rather than by paste
+
+🔴 **The archived rows were NOT copied back.** `archive/2026-10-17-pre-rewrite/agents-top.md` holds 723 MCP mentions and every figure in them is up to three weeks stale. 🟢 **12 lanes were re-probed from scratch at p334 — grant on `raw.githubusercontent.com`, activity from a bare `--filter=blob:none` clone — and 7 qualified:**
+
+| Platform | MCP server | Grant, first-hand p334 | Activity, first-hand p334 |
+|---|---|---|---|
+| Canvas | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT**, 1,071 B | 🟢 **1,041 c · 30 a · 927 c in 2026 · head 2026-10-19** |
+| Canvas, institutional | [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) | 🟢 **MIT**, 1,065 B | 60 c · 3 a · head 2026-09-21 · `fontys.nl(52)` |
+| Brightspace / D2L | [`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server) | 🟢 **MIT**, 1,068 B | 🟢 **414 c · 17 a · head 2026-10-20 (today)** |
+| Moodle | [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | 🟢 **MIT**, 1,067 B | 🟡 169 c · **1 a** · head 2026-10-19 |
+| Blackboard | [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | 🟢 **MIT**, 1,084 B | 🟡 21 c · 3 a · head 2026-10-14 |
+| Google Classroom | [`sandraschi/classroom-mcp`](https://github.com/sandraschi/classroom-mcp) | 🟢 **MIT**, 1,071 B | 🟡 28 c · 3 a · head 2026-10-13 |
+| Anki | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT**, 1,074 B | 🟢 258 c · 6 a · 176 c in 2026 · head 2026-10-11 |
+
+🔴 **Five refused in the same probe:** `dmontgomery40/mcp-canvas-lms` (no licence on **12 paths**; dormant since 2026-05-31) · `blend-ed/openedx-mcp` (**AGPL-3.0**, 34,524 B) · `lmscloud-io/moodle-mcp-server` (**GPL-3.0**, 35,148 B, dormant since 2026-05-08) · `faizan45640/google-classroom-mcp-server` (MIT but **0 commits in 2026**) · `carlsvejstrup/dtu-learn-mcp` (MIT, **5 commits**).
+
+🟢 **`recount` now reports 3 of 5 pins MATCH where it reported 0, and the two remaining anchors are re-pointed in `intel/trends.md` this pass.** 🔵 **The gate was never noise: it was telling three passes in a row that a shelf section had gone missing, and nobody read it.**
+
+### 🟢 New non-MCP repositories this week — first-hand
+
+| Repo | Grant, first-hand | Activity, first-hand | Placed | Disposition |
+|---|---|---|---|---|
+| [`CogitoNTNU/TutorAI`](https://github.com/CogitoNTNU/TutorAI) | 🟢 **MIT**, 1,140 B | **1,140 c · 19 a · 111 c in 2026 · head 2026-10-07** | 🟢 **EMEA — Norway** | 🟢 **PROMOTED** → `agents/top.md` |
+| [`Haozhe-Xing/agent_learning`](https://github.com/Haozhe-Xing/agent_learning) | 🟢 **MIT**, 1,068 B | **175 c · 11 a · all in 2026 · head 2026-10-17** | 🟢 **APAC — China** | 🟢 **PROMOTED** → `repos/foundations.md` |
+| [`kaveheng/GenAi-in-education`](https://github.com/kaveheng/GenAi-in-education) | 🟢 **CC BY 4.0**, 442 B | 🟡 12 c · 1 a · head 2026-09-26 | 🟢 **EMEA** | 🟢 **PROMOTED** → `repos/foundations.md` (content, attribution-only) |
+| [`Marid5/ai-tutor`](https://github.com/Marid5/ai-tutor) | 🟢 MIT, 1,076 B | 🔴 44 c · 2 a · **2026-10-07 → 2026-10-08** | `+0300` | 🔴 **REFUSED-BELOW-BAR** |
+| [`SiddharthG1210/RAG-AI-TUTOR`](https://github.com/SiddharthG1210/RAG-AI-TUTOR) | 🔴 **AGPL-3.0**, 34,523 B | 40 c · 2 a · head 2026-10-19 | 🟢 **APAC — India**, `+0530` | 🔴 **REFUSED-COPYLEFT** |
+| [`affromero/Sotto`](https://github.com/affromero/Sotto) | 🔴 **AGPL-3.0**, 34,523 B | 🟢 **4,109 c · 6 a · 2026-02-08 → 2026-10-19** | 🟡 **two offsets, `+0100(2,571)` / `-0500(1,243)` — NOT placed** | 🔴 **REFUSED-COPYLEFT** |
+
+🔵 **`affromero/Sotto` is worth one more sentence than a refusal normally gets.** **4,109 commits in eight months from a six-address bench**, with `.claude/hooks/typecheck-after-edit.sh` and `.claude/settings.json` committed into the repository, and CI covering gitleaks, CodeQL, dead-code and desktop releases. 🟢 **This is what an agent-built education codebase looks like from the outside, and the velocity signal is new on these shelves.** 🔴 **It is still AGPL-3.0, so it is intelligence, not a component.**
+
+---
+
 ## 2026-10-20 — Pass 333 — a random draw beats a ranked one: 24 silent rows probed, 3 promoted, and the sample says the class holds tens of misses rather than hundreds or none
 
 🔵 **p332 ranked its probe by sightings and said what was wrong with that in its own write-up:** *"ranking by sightings selects for rows that were already interesting... Next pass should probe a random sample of the `silent` class, not the top of it."* 🟢 **Done, with a seed so it reproduces: `random.Random(333).sample(silent, 24)` over all 711 rows.** Full figures: [`evidence/p333-silent-random-probe`](../evidence/p333-silent-random-probe.2026-10-20-p333.tsv).

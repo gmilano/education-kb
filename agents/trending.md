@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 334 — the external channel is NOT saturated, it was being queried at the wrong granularity; eight search legs, nine never-before-seen slugs, two promoted
+
+🔵 **p333's headline was "the external channel is SATURATED" and p333's own gap file concluded "the English-language secondary channel does not carry APAC education policy at all".** 🔴 **Both are refuted this pass, by the same channel, with one change: the query names the country and the instrument instead of the region.** The instruction to do that has been sitting on `compose/patterns.md:338` since **p330**.
+
+### 🟢 The eight legs, and what each returned that this corpus had never seen
+
+| leg | query shape | never-seen-before slugs returned |
+|---|---|---|
+| global — agents | `top open source AI agents education 2026 github MIT` | 🔴 **0** — returns general-purpose agent lists (OpenClaw, OpenHands, opencode); **saturated, fifth consecutive measurement** |
+| global — trending | `github trending education AI 2026 … tutoring agent` | 🔴 **0 new** — DeepTutor, Study-Mate, Bloom, Claw-ED, book-learning: all already carried |
+| global — verticals | `open source LMS Apache MIT self-hosted 2026 Moodle alternative` | 🔴 **0 new** — Moodle, Open edX, Canvas, Chamilo, ILIAS, Frappe, LearnHouse: all carried, and p328 already corrected the Frappe licence claim |
+| global — trends | `AI education industry trends 2026 market size adoption` | 🔴 **0 new repos**; market figures reconcile to within the spread already recorded |
+| 🟢 **narrow — tutors** | `AI tutor … RAG textbook citation spaced repetition MIT` | 🟢 **6 new**: `Marid5/ai-tutor`, `CogitoNTNU/TutorAI`, `SiddharthG1210/RAG-AI-TUTOR`, `affromero/Sotto`, plus `zijinz456/OpenTutor` and `shakyanaitik0-bot/Agentic_AI_Tutor` (both already carried) |
+| 🟢 **narrow — LATAM repos** | `education AI github Brazil Mexico Argentina universidad` | 🟡 **2 new** — `kaveheng/GenAi-in-education`, `Haozhe-Xing/agent_learning` — 🔴 **and neither is LATAM.** The LATAM supply side returned **nothing placeable for the fourth consecutive measurement** |
+| 🟢 **narrow — per-country policy** | `MEXT 文部科学省 生成AI ガイドライン`; `人工智能+教育 MOE`; `CBSE AI curriculum`; `MOE Singapore` | 🟢 **4 national instruments**, 3 of them APAC — see `intel/market.md` |
+| 🟢 **narrow — EMEA sovereignty** | `EU Council education AI digital sovereignty data residency ST 9003` | 🟢 **Council conclusions 9003/26, adopted EYCS 2026-05-11** — p333's declared EMEA gap, answered |
+
+🟢 **The lesson is about query SHAPE, not about the channel.** The four prescribed global legs are genuinely exhausted — five measurements say so. **Every leg that returned something new this pass was narrow: a capability ("cites the textbook"), a country, or an instrument's own name.** 🔵 **"Saturated" was a property of the four standing queries, not of the web.**
+
+### 🟢 New this week — first-hand, both channels, all nine rows
+
+🟢 **Promoted:** `CogitoNTNU/TutorAI` (MIT 1,140 B · 1,140 c · 19 a · 111 c in 2026 · 🟢 **EMEA, Norway**, `stud.ntnu.no`) → `agents/top.md`. `Haozhe-Xing/agent_learning` (MIT 1,068 B · 175 c · 11 a in 2026 · 🟢 **APAC, China**) and `kaveheng/GenAi-in-education` (🟢 **CC BY 4.0**, 442 B · 🟢 **EMEA**) → `repos/foundations.md`.
+
+🟢 **The MCP connector lane, re-verified from scratch** because the curated section had been deleted from `agents/top.md` by the p315/p316 rewrites while **this append-only file kept every row** — 7 permissive rows promoted, 5 refused. See `agents/top.md` p334 and `verticals/solutions.md` p334 for the inversion they measure.
+
+🔴 **Refused, with the reason recorded so nobody re-probes them:** `Marid5/ai-tutor` (MIT, **44 commits over two days**, silent since 2026-10-08) · `SiddharthG1210/RAG-AI-TUTOR` (**AGPL-3.0**, 34,523 B, 🟢 APAC/India `+0530`) · `affromero/Sotto` (**AGPL-3.0**, but **4,109 commits in eight months** and `.claude/hooks/` committed — an agent-built codebase; 🟡 two-offset footprint `+0100`/`-0500`, **not placed**) · `dmontgomery40/mcp-canvas-lms` (**no licence on 12 paths**) · `blend-ed/openedx-mcp` (**AGPL-3.0**) · `lmscloud-io/moodle-mcp-server` (**GPL-3.0**, dormant) · `faizan45640/google-classroom-mcp-server` (MIT, **zero commits in 2026**) · `carlsvejstrup/dtu-learn-mcp` (MIT, 5 commits).
+
+[`evidence/p334-first-hand-probe`](../evidence/p334-first-hand-probe.2026-10-20-p334.tsv) · [`evidence/p334-channel-reachability`](../evidence/p334-channel-reachability.2026-10-20-p334.tsv)
+
+### 🔴 The channel narrowed again, and this time it narrowed on POLICY rather than on repositories
+
+| host | p328 | 🔴 **p334** |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 200 | 🟢 **200 — every grant below is read here** |
+| git clone (bare, `--filter=blob:none`), arbitrary public repo | — | 🟢 **works — every activity figure comes from here** |
+| `registry.npmjs.org`, `pypi.org` | — | 🟢 **200 — the second liveness channel (T19) is intact** |
+| `github.com` rendered page | 🔴 403 | 🔴 **403** |
+| `api.github.com` (per repo) | 🔴 403 | 🔴 **403** |
+| 🔴 `consilium.europa.eu`, `moe.gov.cn`, `mext.go.jp`, `cset.georgetown.edu` | not measured | 🔴 **`000` — no connect, on curl AND on the fetch channel** |
+
+🔴 **So every repository row this pass is first-hand and every policy row is not.** 🟢 **Stated in the cells themselves rather than in a footnote**, because the opposite — a policy date that looks as solid as a licence byte count — is the error this base has corrected most often.
+
+---
+
 ## 2026-10-20 — Pass 333 — the external channel is SATURATED and the signal this week is internal: a licence classifier that reads the maintainer's first name as a grant
 
 🔵 **Stated first because it is the honest headline for a trending file: this pass ran eight search legs — four global, four regional — and the global legs returned NOTHING this KB does not already hold.**

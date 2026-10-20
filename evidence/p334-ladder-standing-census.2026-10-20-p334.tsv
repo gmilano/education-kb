@@ -1,0 +1,14 @@
+compose/code/lib/dist_payload.sh	notice	STEM-ONLY	no-upper-ext	STANDING	NOTICE notice
+compose/code/lib/probe_payload.sh	licence	CASE-UNVARIED	no-upper-ext	STANDING	LICENCE LICENSE LICENSE.md LICENSE.txt
+compose/code/p228-shelf-gate/classify_grant.py	licence	CASE-UNVARIED	no-upper-ext	STANDING	LICENCE LICENSE
+compose/code/p228-shelf-gate/fetch_grants.sh	licence	STEM-ONLY	no-upper-ext	STANDING	LICENCE LICENSE LICENSE.md LICENSE.txt license.txt
+compose/code/p229-grant-ladder-reach/manifest_grant.py	licence	CASE-UNVARIED	no-upper-ext	STANDING	licence license
+compose/code/p247-mit-tier-sweep/sweep.sh	licence	CASE-UNVARIED	no-upper-ext	STANDING	LICENCE LICENSE LICENSE.md LICENSE.txt
+compose/code/p279-absence-claims/absence_claims.py	licence	CASE-UNVARIED	no-upper-ext	STANDING	licence license
+compose/code/p279-absence-claims/absence_claims.py	readme	CASE-UNVARIED	no-upper-ext	STANDING	README README.md
+compose/code/p332-delivery-audit/delivery_audit.py	licence	CASE-UNVARIED	no-upper-ext	STANDING	LICENSE licence licence.md licence.txt license license.md license.txt
+compose/code/pass262-scoped-reservation-audit/sweep.py	readme	STEM-ONLY	no-upper-ext	STANDING	README README.md README.rst README.txt readme.md
+compose/code/pass275-grant-enumeration/enumeration_gate.py	licence	CASE-UNVARIED	no-upper-ext	STANDING	LICENSE LICENSE.md LICENSE.rtf license
+# ALL       CASE-CLOSED=25  CASE-UNVARIED=120  COMMENT-ONLY=160  FOLD-ON-PATH=107  GENERATED-CASE-VARIED=11  IMPORTED-LADDER=1  SINGLE-SPELLING=146  STEM-ONLY=38  TREE-ENUMERATED=50
+# STANDING  CASE-CLOSED=9  CASE-UNVARIED=8  COMMENT-ONLY=44  FOLD-ON-PATH=17  GENERATED-CASE-VARIED=8  IMPORTED-LADDER=1  SINGLE-SPELLING=20  STEM-ONLY=3  TREE-ENUMERATED=11
+# ladders=658 instruments=363 standing=121

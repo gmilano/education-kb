@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 334 · 2026-10-20 (seventh pass of this date) — the permissive connectors point at the PROPRIETARY platforms, and both copyleft ones point at the open-source platforms
+
+🔵 **This shelf's whole premise is that a studio customises a platform it does not fork, through a seam it may own.** p333 recorded the seam (LTI 1.3, OIDC, xAPI). 🟢 **This pass measured the OTHER seam — MCP — one lane per platform, and the grant split runs the opposite way to the one this shelf would predict.**
+
+### 🔴 The inversion, measured first-hand p334
+
+🔵 **Deliberately two tables and not one.** A row that carries a platform's own licence beside a connector's slug reads as a claim about the connector — `p308-shelf-consistency` rejected exactly that shape when this section was first drafted, and it was right to: the first draft put `AGPL-3.0` in the same row as `vishalsachdev/canvas-mcp`, which is MIT.
+
+**The platforms, and what each one is licensed as:**
+
+| Platform | The platform's own licence |
+|---|---|
+| Canvas (Instructure) | 🔴 proprietary SaaS; a community edition exists under a strong copyleft grant |
+| Brightspace / D2L | 🔴 **proprietary** |
+| Blackboard (Anthology) | 🔴 **proprietary** |
+| Google Classroom | 🔴 **proprietary** |
+| Moodle | 🟢 **open source, strong copyleft** |
+| Open edX | 🟢 **open source, network copyleft** |
+
+**The MCP connectors into them, grants read first-hand on `raw.githubusercontent.com` at p334:**
+
+| Connector | Grant, first-hand | Lane |
+|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT**, 1,071 B | Canvas — a proprietary platform |
+| [`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server) | 🟢 **MIT**, 1,068 B | Brightspace / D2L — a proprietary platform |
+| [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | 🟢 **MIT**, 1,084 B | Blackboard — a proprietary platform |
+| [`sandraschi/classroom-mcp`](https://github.com/sandraschi/classroom-mcp) | 🟢 **MIT**, 1,071 B | Google Classroom — a proprietary platform |
+| [`lmscloud-io/moodle-mcp-server`](https://github.com/lmscloud-io/moodle-mcp-server) | 🔴 **GPL-3.0**, 35,148 B — **and dormant since 2026-05-08** | Moodle — an open-source platform |
+| [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | 🟢 **MIT**, 1,067 B — 🟡 169 commits, one author, 12 days old | Moodle — an open-source platform. 🟢 **The live counter-instance to this trend, recorded as one** |
+| [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | 🔴 **AGPL-3.0**, 34,524 B | Open edX — an open-source platform. **The only Open edX lane found** |
+
+🟢 **Read it as a procurement fact, not a paradox.** A connector to a **proprietary** platform is a thin API client: nothing in it inherits, so its author has no reason not to pick MIT. A connector to a **copyleft** platform is written by people inside that platform's ecosystem, who license the way the platform does. 🔴 **The consequence for an engagement is counter-intuitive and worth saying out loud: the MCP seam into a client's PROPRIETARY LMS is the one a studio may own outright, and the seam into their OPEN-SOURCE LMS is the one that constrains the deliverable.**
+
+🟡 **The bound on this claim, stated because it is a sample and not a census:** 12 rows probed, one or two lanes per platform, chosen by platform coverage. **The agent shelves carry 155 distinct MCP server slugs, of which 74 are attributable to one of these platforms** — and this pass graded 12 of them. **The inversion is real in every lane measured; it is not yet a census.**
+
+### 🟢 What to do about the Open edX lane, concretely
+
+🔴 **There is no permissive MCP route into Open edX on these shelves.** 🟢 **There are two permissive routes that are not MCP**: `tsugiproject/tsugi` (Apache-2.0) and `lti-tool/lti-tool` (MIT, 1,077 B) both speak **LTI 1.3 Advantage**, which Open edX serves as a platform. 🔵 **So on Open edX, take the LTI seam and skip MCP** — the thing a studio owns is the tool, launched by the platform, and the AGPL stays on the other side of the launch boundary.
+
+### 🟢 The permissively-licensed integration layer — carried from p333, extended with the MCP lane
+
+| Layer | Component | Grant |
+|---|---|---|
+| LMS launch (LTI 1.3 Advantage) | [`lti-tool/lti-tool`](https://github.com/lti-tool/lti-tool) | 🟢 MIT (1,077 B, p331) |
+| LMS launch, mature alternative | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 (11,361 B, p331) |
+| LMS launch, PHP | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 Apache-2.0 (p330) |
+| OIDC, server side | [`yetanalytics/pedestal-oidc`](https://github.com/yetanalytics/pedestal-oidc) | 🟢 Apache-2.0 (11,357 B, p333) |
+| OIDC, browser side | [`yetanalytics/re-oidc`](https://github.com/yetanalytics/re-oidc) | 🟢 Apache-2.0 (11,357 B, p333) |
+| Learning record store (xAPI) | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 (11,357 B, p333) |
+| Licence hygiene in the pipeline | [`google/licenseclassifier`](https://github.com/google/licenseclassifier) | 🟢 Apache-2.0 (11,358 B, p333) |
+| 🆕 **MCP seam — Canvas** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** (1,071 B, p334) |
+| 🆕 **MCP seam — Brightspace / D2L** | [`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server) | 🟢 **MIT** (1,068 B, p334) |
+| 🆕 **MCP seam — Blackboard** | [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | 🟢 **MIT** (1,084 B, p334) |
+| 🆕 **MCP seam — Google Classroom** | [`sandraschi/classroom-mcp`](https://github.com/sandraschi/classroom-mcp) | 🟢 **MIT** (1,071 B, p334) |
+| 🆕 **MCP seam — Moodle** | [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | 🟢 **MIT** (1,067 B, p334) — 🟡 one author |
+| 🔴 **MCP seam — Open edX** | [`blend-ed/openedx-mcp`](https://github.com/blend-ed/openedx-mcp) | 🔴 **AGPL-3.0** (34,524 B, p334) — **use the LTI seam instead** |
+
+---
+
 ## Pass 333 · 2026-10-20 (sixth pass of this date) — a platform this corpus had marked permissive is AGPL-3.0, and that is the kind of error this shelf exists to prevent
 
 🔴 **[`tooljet/tooljet`](https://github.com/tooljet/tooljet) — read first-hand on `raw.githubusercontent.com` this pass: `LICENSE`, 34,503 B, GNU AFFERO GENERAL PUBLIC LICENSE Version 3.** It sat in this KB's `evidence/` graded **permissive**, because the grant classifier tested licence names as bare substrings and the rows carrying it contain words like `commits` and `discovery`. The full account is in [`agents/top.md`](../agents/top.md); the consequence belongs here.
