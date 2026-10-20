@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 339 · 2026-10-20 — eight trends, each tied to a dated fact measured this pass
+
+### T1 — The regulatory clock in education just slipped 16 months, and nothing else slipped with it
+
+Regulation (EU) 2026/1744 moved Annex III stand-alone high-risk duties — grading, admissions triage, proctoring — from **2 Aug 2026 to 2 Dec 2027**. But the **Article 4 AI-literacy duty has been in force since 2 Feb 2025**, **Article 50 transparency applies from 2 Aug 2026**, and **Article 5(1)(f)'s ban on emotion inference in schools was never a deadline at all** — it is a standing prohibition. The trend is a **decoupling**: the heavyweight conformity work has a runway while the duties that touch every classroom deployment are already live. Read as one deadline, this produces exactly the wrong plan.
+
+### T2 — Assessment is simultaneously the fastest-growing segment and the most regulated one
+
+Market research names assessment and grading the fastest-growing category, driven by academic-integrity pressure. The EU names automated marking and exam proctoring as high-risk; Vietnam's new law names automated assessment and behavioural monitoring the same way. **Demand and regulatory scrutiny are converging on the identical feature.** The commercial consequence: assessment AI cannot be sold as a model capability, only as an auditable system with human oversight in the loop. The architectural consequence is in `compose/patterns.md` — the grader is a second pass over a deterministic autograder, never a replacement for it.
+
+### T3 — Agent supply in education is flat; the incumbents are where the movement is
+
+**Tenth consecutive pass** at which the two prescribed supply legs returned no new education agent. The structural cause is recorded: **GitHub Trending has no education category**, so an unfiltered trending leg cannot surface a vertical, and what it returns instead is AI *courseware* — repos that teach AI rather than teach with it. Yet real movement happened this pass: **DeepTutor v1.6.15 (2026-10-19)** and **OpenMAIC v1.2.1 (2026-10-18)**, both found by reading known rows' release feeds directly. The trend: in a vertical with no trending category, **supply news arrives through incumbents' releases, not through discovery channels.**
+
+### T4 — MCP has become education's integration layer, and it routes around copyleft
+
+**17 distinct education MCP server slugs are shelved** on `agents/top.md` once its carried history is counted, and **6 of them carry a grant read first-hand in this pass's live MCP tier**: `falkenslab/moodle-mcp` (~230 Moodle tools under the teacher's own login), two independent MIT Canvas servers (`vishalsachdev/canvas-mcp`, `r-huijts/canvas-mcp`), `blend-ed/openedx-mcp` (AGPL-3.0, the one copyleft row in the tier), `ankimcp/anki-mcp-server`, and `kvnloo/tutor-mcp`. Across both agent shelves, **MCP reaches **6 distinct LMS platforms**** — Canvas, Moodle, Google Classroom, Brightspace/D2L, Blackboard and Open edX — and the long tail behind them is large: this base's own census counts **32 Canvas, 17 Moodle, 11 Google Classroom, 7 Blackboard, 4 Brightspace/D2L and 2 Open edX** server slugs.
+
+This is not fashion. Six of eight Tier-1 learning platforms are GPL or AGPL; **an MCP server is a separate program talking a documented protocol, so it carries none of the platform's copyleft.** MCP is doing for the AI layer what LTI 1.3 did for the tool layer, and for the same licensing reason. 🔵 **A Canvas rung reached `agents/top.md` for the first time this pass** — prior passes carried Canvas servers only on the trending shelf because none had a grant read first-hand, and the row this base *had* carried (`dmontgomery40/mcp-canvas-lms`) turns out to have **no licence anywhere in its tree** and is demoted.
+
+### T5 — The permissive/copyleft split runs along the agent/platform line
+
+Measured across both shelves this pass: the **agent** layer is almost entirely MIT/Apache/BSD (**13 of 15 rows** — the exceptions are `blend-ed/openedx-mcp` at AGPL-3.0 and `GeminiLight/gen-mentor` at CC0-1.0, which is a public-domain dedication rather than a software licence), while the **foundation** layer is majority copyleft (**8 of 17 GPL/AGPL**, 3 ECL-2.0, 5 permissive, 1 ODbL). Education's incumbents are twenty-year-old public-sector projects licensed accordingly. The practical rule: **innovate in the permissive layer, integrate with the copyleft layer, never fork it.**
+
+### T6 — National curriculum mandates have become the largest single demand source
+
+China: AI compulsory **from age six since September 2025**. India: AI and computational thinking mandatory **from Class 3 in 2026-27**, backed by a ₹500 crore centre of excellence and the ₹10,372 crore India AI Mission. US: Purdue's board-approved AI competency for all undergraduates **from Fall 2026**, Ohio State's AI Fluency for the Class of 2029 onward, Georgia and Mississippi adding CS/AI graduation credits. These are state-procured build-outs at national volume, and they buy **teacher enablement and assessment infrastructure** far more than they buy models.
+
+### T7 — Teacher enablement is the named bottleneck in every region, and it is now open source
+
+EMEA sources name teacher training as the binding constraint on scale; UNESCO says the same of APAC; CENIA's finding that 13 of 19 LATAM countries do not teach early AI is the same constraint measured as an outcome. Meanwhile the supply side moved: **Anthropic's Claude for Teachers** (July 2026, free for verified US K-12 educators through at least 30 June 2027) ships its skills as **`anthropics/k12-teacher-skills` (Apache-2.0)** — lesson-plan creation, differentiation into tiered versions, lesson prep, grading support. **The highest-leverage layer in education AI is now permissively licensed and forkable**, which is a change from a year ago.
+
+### T8 — Offline-first and data-residency requirements are pulling the stack back on-premises
+
+Three independent pressures point the same way: EMEA sovereignty and Article 5(1)(f) constraints on what may run over student data; LATAM's connectivity gap, where **`learningequality/kolibri` (MIT)** is the standard answer and a cloud tutor cannot run at all; and APAC data rules requiring pre-launch filing. 🔵 Note the reciprocal risk: **OpenMAIC** defaults its web-search providers to Kimi and DeepSeek — an APAC-native stack that is a data-residency question in an EMEA review, exactly as a US-hosted model is in a Chinese one. Residency is now bidirectional.
+
+### Declared gaps in this trend reading
+
+- 🔴 **No usable star or adoption telemetry this pass.** `api.github.com` and `github.com` HTML are both 403 for every slug; every star figure the search channel offered was third-party. Momentum claims above rest on **dated releases and dated policy**, which are verifiable, rather than on stars, which are not.
+- 🟡 **Market figures diverge by an order of magnitude at the 2035 horizon** and several sources are vendor or aggregator pages. Treated as a range in `intel/market.md`, never blended into one number.
+- 🟡 **Canada and Mexico went uncovered** by the North America leg; the channel returned US-only material. Mexico appears in the LATAM leg instead, which is a reasonable placement but not the same as coverage.
+- 🔴 **Primary-source verification of Regulation (EU) 2026/1744 was not possible** from this session's channels. Multiple independent secondary sources agree on the dates and the regulation number; the Official Journal text remains unread here and should be read before the date enters a contract.
+
+---
+
+## ⏷ Carried history — everything below this line predates Pass 339 and was NOT rewritten
+
+🟢 **Pass 339 prepends; it does not replace.** An earlier draft of this pass replaced these shelves outright and `gate-permissive-arm` caught the cost: the corpus lost ~1.2 MB of first-hand-verified rows and the `MIT`+`Apache-2.0` cell count fell from 7 000+ to 6 597. 🔵 **Deleting verified rows is not curation** — the live section above carries this pass's findings, and every prior pass's verified shelf stands underneath it.
+
 ## Pass 338 · 2026-10-20 — the adoption gap in education AI has inverted: usage is near-universal and GOVERNANCE is the scarce good, and that is a sellable engagement
 
 ### 🟢 T-338.1 — Across all four regions the binding constraint is no longer adoption. It is policy, and the numbers are not close

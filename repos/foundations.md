@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 339 · 2026-10-20 — 17 foundation rows, every grant read from the file; the copyleft split is the finding, and it decides what Globant can ship
+
+**Why this shelf looks different from `agents/top.md`.** The agent layer in education is overwhelmingly permissive (MIT/Apache). The *foundation* layer — the systems of record that actually hold students, enrolments, grades and content — is overwhelmingly **copyleft**. Of the 17 rows below, **5 are permissive** (MIT, Apache-2.0, BSD-3-Clause), **3 are ECL-2.0** (an Apache-2.0 derivative written for universities), **8 are GPL/AGPL**, and **1 is a database licence**. That ratio is the single most important procurement fact on this shelf and it is not a defect of the ecosystem — education's incumbents are twenty-year-old public-sector projects, and they were licensed accordingly.
+
+**Channels.** `api.github.com` and `github.com` HTML are both **403** this pass; existence came from `git ls-remote`, every grant from `raw.githubusercontent.com`. **No star counts** — see `agents/top.md` for why. Path/case variation mattered again: three grants below sit at `LICENSE.txt` or lowercase `license.txt`.
+
+### The permissive arm — what Globant can build on and relicense freely
+
+| Repo | Licence | Grant read at | Role |
+|---|---|---|---|
+| https://github.com/oppia/oppia | Apache-2.0 | `master/LICENSE` | Online learning platform built around interactive "explorations" with built-in misconception feedback. The most permissively licensed full learning platform of real scale on this shelf |
+| https://github.com/learningequality/kolibri | MIT | `master/LICENSE` | Offline-first learning platform for low- or no-connectivity settings, with a curated content channel ecosystem. 🔵 **The most strategically useful MIT row here** — it is the standard answer for rural and low-bandwidth deployments, which is a live LATAM, Sub-Saharan and South/Southeast Asian requirement |
+| https://github.com/Cvmcosta/ltijs | Apache-2.0 | `master/LICENSE` | Certified LTI 1.3 / LTI Advantage tool-provider library for Node. 🔵 **The integration keystone of this entire shelf**: LTI is how anything new gets into Moodle, Canvas, Open edX, Sakai, Blackboard or D2L without forking them |
+| https://github.com/jupyter/nbgrader | BSD-3-Clause | `main/LICENSE` | Assignment creation, release, collection and autograding for Jupyter notebooks. The de-facto standard for programming-course assessment in higher ed |
+| https://github.com/jupyterhub/jupyterhub | BSD-3-Clause | `main/LICENSE` | Multi-user notebook server — the runtime under almost every university data-science course, and the host nbgrader assumes |
+
+### The ECL-2.0 arm — Apache-2.0 semantics, written by and for universities
+
+| Repo | Licence | Grant read at | Role |
+|---|---|---|---|
+| https://github.com/sakaiproject/sakai | ECL-2.0 | `master/LICENSE` | Full academic LMS built by a university consortium; strong gradebook, assessment and research-collaboration surface |
+| https://github.com/opencast/opencast | ECL-2.0 | `master/LICENSE` | Lecture-capture and video-management system: scheduling, ingest, encoding, distribution. The natural attachment point for transcription, captioning and video-to-notes agents |
+| https://github.com/OpenOLAT/OpenOLAT | Apache-2.0 | `master/LICENSE` | Web LMS for teaching, assessment and communication, descended from University of Zurich's OLAT. 🔵 **Verified Apache-2.0**, which makes it the most permissive *institutional* LMS available — and a correction worth holding: it is routinely miscatalogued. 🟡 Note the slug: `OpenOLAT/OpenOLAT`, **not** `frentix/OpenOLAT`, which does not exist (probed, `exists=NO`) |
+
+> 🔵 **ECL-2.0 in one line, because it decides deals:** the Educational Community License 2.0 is Apache-2.0 with the patent grant narrowed to the contributor's own institutional context. It is OSI-approved and permissive — commercial use, modification and closed redistribution are all allowed. For Globant's purposes it behaves like Apache-2.0; the difference is the reduced breadth of the patent peace, which is a counsel question and not a blocker.
+
+### The copyleft arm — deployable and customisable, but derivative work must stay open
+
+| Repo | Licence | Grant read at | Role |
+|---|---|---|---|
+| https://github.com/moodle/moodle | GPL-3.0 | `main/COPYING.txt` | The world's most-deployed LMS; deepest plugin catalogue in the category, PHP, continuous since 2002. 🟡 Grant is at **`COPYING.txt`** — the `LICENSE` ladder returns nothing, which is exactly the shape that makes a naive probe report "ungranted" |
+| https://github.com/openedx/edx-platform | AGPL-3.0 | `master/LICENSE` | Open edX core, originating from MIT/Harvard. The reference platform for MOOC-scale and corporate-academy deployments |
+| https://github.com/overhangio/tutor | AGPL-3.0 | `main/LICENSE.txt` | The official Docker-based Open edX installer and plugin framework. 🔵 In practice **nobody should deploy Open edX without it** — it is the difference between a two-week install and a two-hour one. Grant at `LICENSE.txt` |
+| https://github.com/openedx/frontend-app-learning | AGPL-3.0 | `master/LICENSE` | Open edX's micro-frontend learner experience — the surface you actually modify when a client wants a bespoke learning UI |
+| https://github.com/instructure/canvas-lms | AGPL-3.0 | `master/LICENSE` | Canvas, the dominant LMS in North American higher education, Ruby on Rails. Open-source edition is AGPL; Instructure's hosted product is the commercial path |
+| https://github.com/chamilo/chamilo-lms | GPL-3.0 | `master/LICENSE` | LMS with notably strong adoption across Latin America and Francophone Africa — relevant precisely where Moodle and Canvas are weaker |
+| https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | `master/LICENSE` | Long-established LMS with deep roots in German-speaking Europe and strong SCORM/assessment support; frequent answer to EU public-sector tenders |
+| https://github.com/h5p/h5p-php-library | GPL-3.0 | `master/LICENSE.txt` | H5P interactive content types (branching scenarios, interactive video, drag-and-drop) embeddable in Moodle, Canvas, Open edX and WordPress. 🔵 The fastest route to *interactive* content without building a player; grant at `LICENSE.txt` |
+
+> 🔴 **The AGPL rung is the one that ends engagements late.** AGPL-3.0 extends copyleft across the network boundary: host a modified Open edX or Canvas as a service and the modified source is owed to its users. Four rows above are AGPL. That is survivable — thousands of integrators ship Open edX commercially — but it must be decided at architecture time, not at delivery. The clean pattern is to keep client-proprietary logic in a **separate service the platform talks to over LTI 1.3 or MCP**, rather than patched into the AGPL tree. `ltijs` is in the permissive arm for exactly this reason.
+
+### The data arm
+
+| Repo | Licence | Grant read at | Role |
+|---|---|---|---|
+| https://github.com/withmarbleapp/os-taxonomy | ODbL | `main/LICENSE` | Structured taxonomy of what children learn in primary/elementary years: ~1 590 micro-topics as a connected graph. Reported ~5 900 stars in an October 2026 trending roundup. 🔴 **ODbL is a database licence with share-alike reach over derived databases** — it is *not* an MIT-style code grant, and a curriculum-alignment feature built on it may owe its derived database back. Valuable; needs counsel before it lands in a product |
+
+### Declared gaps on this shelf
+
+- 🔵 **`OS4ED/openSIS-Classic` — GPL-2.0, and this pass re-learned why a ladder is not a tree.** My first draft published "exists, no grant found" off a root-only ladder. `make gate-enumeration` **refuted it in-pass**: the grant is at **`master/docs/License.txt`** (17 286 B, GNU GPL **v2**), with a second copy at `docs/LICENSE.rtf` and 20 further vendored grants (ckeditor, PhpSpreadsheet, htmlpurifier). 🔴 **This base had already resolved this row at `p311` and I repeated the retracted claim** — the gate, not my probe, caught it. A real SIS, deployable, copyleft.
+- 🟢 **`1EdTech/openbadges-specification` — RESOLVED this pass, and it is not an open-source grant.** This base carried the row as *"no payload on either org — unresolved, not ungranted"*. A blobless-clone tree enumeration found **`ob_v3p0/license.md`** (plus `proposals/OBv3p0/license.md`), which is the **IMS Global Learning Consortium Specification Document License**. 🔴 **Not OSI, not a code grant:** it licenses *reading and implementing the specification document* for interoperability, arbitrates compliance designations solely through IMS, and is a different instrument class from everything else on this shelf. Open Badges remains implementable for credentialing; the document is not open source and must not be shelved as if it were.
+- 🟡 **Two slugs commonly cited in roundups do not exist:** `frentix/OpenOLAT` and `apereo/opencast` both returned `exists=NO`. The live slugs are `OpenOLAT/OpenOLAT` and `opencast/opencast`. Recorded so a future pass does not re-import the broken pair.
+- 🔵 **Student information systems are the thinnest layer in open-source education.** `GibbonEdu/core` (**GPL-3.0**, `main/LICENSE`, verified) and `frappe/education` (**GPL-3.0**, `master/license.txt`, verified) are real and deployable, but there is no permissively licensed SIS of scale. For a client needing an open SIS with proprietary extensions, this is a genuine gap, not a search failure — and the `frappe/lms` sibling is **AGPL-3.0** (`main/license.txt`, verified), so the whole Frappe education stack sits on the copyleft side.
+
+---
+
+## ⏷ Carried history — everything below this line predates Pass 339 and was NOT rewritten
+
+🟢 **Pass 339 prepends; it does not replace.** An earlier draft of this pass replaced these shelves outright and `gate-permissive-arm` caught the cost: the corpus lost ~1.2 MB of first-hand-verified rows and the `MIT`+`Apache-2.0` cell count fell from 7 000+ to 6 597. 🔵 **Deleting verified rows is not curation** — the live section above carries this pass's findings, and every prior pass's verified shelf stands underneath it.
+
 ## Pass 338 · 2026-10-20 — the foundation tier re-read on BOTH axes for the first time, and two platform-tier grants are reachable only at depth
 
 🟢 **Every row re-probed first-hand this pass** — branch resolved by `git ls-remote --symref`, payload served by `raw.githubusercontent.com`, byte count measured where the file landed. 🔵 **The `axis` column is new (`ACTION ZN`)**: it records whether the grant lives at the repository **root** or at **depth**, because the sanctioned probe ladder has no rung with a `/` in it and therefore cannot see the second kind at all (see `agents/top.md` FINDING 1).

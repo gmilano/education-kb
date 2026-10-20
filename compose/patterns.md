@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 339 · 2026-10-20 — six recipes, each named down to the slug, each with its licence posture stated and its regional trigger
+
+Every repository named below was existence- and grant-verified first-hand this pass (`git ls-remote` + `raw.githubusercontent.com`; see `agents/top.md` for the channel table). **The licence posture line is not decoration** — six of eight Tier-1 platforms are GPL/AGPL, so each recipe states explicitly where the client's proprietary logic lives.
+
+---
+
+### P1 — The copyleft-safe AI tutor inside an existing LMS
+
+**Trigger:** client already runs Moodle, Canvas or Open edX and wants an AI tutor without forking it. The most common engagement in this KB.
+
+**Wiring:**
+1. **`Cvmcosta/ltijs`** (Apache-2.0) — stand up the tutor as a certified **LTI 1.3 / LTI Advantage** tool. This is the seam: it installs into Moodle, Canvas, Open edX, Sakai, Blackboard and D2L unchanged.
+2. **`CAHLR/OATutor`** (MIT) — take its **Bayesian Knowledge Tracing** mastery model as the learner-state engine. BKT gives you a defensible, inspectable mastery estimate; an LLM alone does not.
+3. **`kvnloo/tutor-mcp`** (MIT) — skill-graph construction with prerequisites, plus review scheduling, exposed over MCP so any model can drive it.
+4. **`satvik314/educhain`** (MIT) — generate the MCQs and lesson scaffolds the tutor serves, across its 8 pedagogical approaches.
+5. Grades and roster flow back through LTI Advantage **AGS/NRPS**, so the LMS stays the system of record.
+
+**Licence posture:** 🟢 **Entirely permissive.** Nothing touches the AGPL/GPL platform tree; client logic stays closed. **Timeline:** 6–8 weeks to a piloted tool in one course.
+
+---
+
+### P2 — Auditable assessment AI built for the EU conformity runway
+
+**Trigger:** EMEA client with grading or admissions AI. **Why now:** Regulation (EU) 2026/1744 moved Annex III education duties to **2 Dec 2027** — a 16-month design window before remediation pricing applies.
+
+**Wiring:**
+1. **`jupyter/nbgrader`** (BSD-3-Clause) on **`jupyterhub/jupyterhub`** (BSD-3-Clause) — the **deterministic autograder runs first and owns the grade**. Non-negotiable: it makes the scoring reproducible, which is what a conformity file needs.
+2. **`anthropics/k12-teacher-skills`** (Apache-2.0) — its grading-support and differentiation skills as the **second-pass reviewer** over the autograder's output: narrative feedback, not score authority.
+3. **`Cvmcosta/ltijs`** (Apache-2.0) — deliver into the LMS and return grades via AGS, so every write is attributable.
+4. Human-oversight gate: no AI-only grade is ever released. Log the model version, prompt, inputs and the reviewing human per decision — this *is* the Article 14 evidence.
+5. **`opencast/opencast`** (ECL-2.0) only if lecture-capture evidence is in scope.
+
+**Licence posture:** 🟢 Permissive + ECL-2.0; no copyleft exposure.
+🔴 **Hard constraint:** ship **no** emotion, attention or engagement inference. **Article 5(1)(f) prohibits emotion inference in educational institutions outright** — it is not a high-risk category you can document your way into. **Timeline:** 10–12 weeks for the conformity-ready pipeline.
+
+---
+
+### P3 — Teacher-workload reduction over Moodle, no platform changes at all
+
+**Trigger:** teacher enablement is the named bottleneck in **every** region measured this pass. Fastest visible win in the KB.
+
+**Wiring:**
+1. **`falkenslab/moodle-mcp`** (MIT) — ~230 Moodle tools under the **teacher's own login**, with students anonymised to the model. Ships Spanish and English docs.
+2. **`anthropics/k12-teacher-skills`** (Apache-2.0) — lesson-plan creation, tiered differentiation (below / at / above proficiency), lesson prep.
+3. **`DaRL-GenAI/instructional_agents`** (MIT) — ADDIE-model multi-agent course design for whole-unit builds rather than single lessons.
+4. **`littlecookie0722/AI-Teaching-Agent`** (MIT) — Markdown source → reviewable Lab + Exam package. 🟡 Use the **CLI** path; its README states MCP/agent expansion is frozen.
+5. **`h5p/h5p-php-library`** (GPL-3.0) — emit interactive content types into Moodle. 🟡 Consume H5P as a **packaging target**, don't link client code into the library.
+
+**Licence posture:** 🟢 Permissive agents against an unmodified GPL platform — the MCP server is a separate program, so no copyleft reaches the client's code. **Timeline:** 3–4 weeks to a pilot cohort; the shortest path to a demonstrable result.
+
+---
+
+### P4 — Offline-first deployment for the LATAM and low-connectivity curriculum gap
+
+**Trigger:** CENIA found **13 of 19** LATAM countries do not teach early AI; Google.org's USD 4.6 M targets 1.25 M students across 9 countries by 2028. Much of that footprint has no reliable connectivity, where a cloud tutor cannot run at all.
+
+**Wiring:**
+1. **`learningequality/kolibri`** (MIT) — offline-first platform and content channels. The only MIT Tier-1 platform; it is the whole reason this pattern is viable.
+2. **`chamilo/chamilo-lms`** (GPL-3.0) — where an institutional LMS is required, Chamilo's LATAM and Francophone-Africa installed base beats importing a US default.
+3. Local inference on a school server for the tutor loop, with **`satvik314/educhain`** (MIT) used **ahead of time** to batch-generate quizzes and lesson plans into Kolibri channels — content is pre-built, not generated per request.
+4. **`withmarbleapp/os-taxonomy`** (ODbL) for curriculum alignment of the generated content. 🔴 **ODbL has share-alike reach over derived databases** — counsel must clear it before a derived alignment database ships.
+5. **`ankimcp/anki-mcp-server`** (MIT) / **`ankitects/anki`** (AGPL-3.0) for offline spaced-repetition retention. 🟡 Anki core is AGPL — drive it through its API, never patch its tree.
+6. Spanish/Portuguese first, English second. **`moodle-mcp`**'s Spanish docs make it the teacher-facing default if the client is on Moodle.
+
+**Licence posture:** 🟡 Mixed. MIT core; GPL and AGPL components consumed as **unmodified deployed systems**; ODbL needs a counsel sign-off. **Timeline:** 8–10 weeks including offline content pre-generation.
+
+---
+
+### P5 — National-curriculum delivery at mandate scale
+
+**Trigger:** China's compulsory AI from age six (Sept 2025); India's mandatory AI and computational thinking from **Class 3 in 2026-27** behind the ₹10,372 crore India AI Mission; US state CS/AI graduation credits. State-procured, national volume.
+
+**Wiring:**
+1. **`openedx/edx-platform`** (AGPL-3.0) deployed via **`overhangio/tutor`** (AGPL-3.0) — the MOOC-scale backbone. 🔵 Do not attempt Open edX without Tutor.
+2. **`openedx/frontend-app-learning`** (AGPL-3.0) for the bespoke learner UI the ministry will demand.
+3. **`THU-MAIC/OpenMAIC`** (MIT, v1.2.1 2026-10-18) — multi-agent classroom with AI teacher plus AI classmates; generates slides, quizzes, simulations and project work. Server-first generation survives closed tabs, which matters on shared school hardware. 🔵 APAC-native: its default search providers are Kimi and DeepSeek — an asset here, a residency question in EMEA.
+4. **`HKUDS/DeepTutor`** (Apache-2.0, v1.6.15 2026-10-19) — bounded tutoring memory and learning-path review for the personalised layer across a multi-year cohort.
+5. **`Cvmcosta/ltijs`** (Apache-2.0) — keep every proprietary extension outside the AGPL tree.
+
+**Licence posture:** 🔴 **AGPL-3.0 at the core — decide this at architecture time.** Hosting a *modified* Open edX as a service owes modified source to its users. Keep differentiating logic in LTI/MCP services; deploy Tutor's plugin framework rather than patching the platform.
+🔴 **Compliance gate is pre-launch in China** (security assessment + algorithm filing before public launch, content labelling since Sept 2025) and **platform-layer in India** (amended IT Rules effective 20 Feb 2026: labelling and due diligence on AI-generated content). Scope it into the delivery timeline, not after UAT. **Timeline:** 14–18 weeks for a national pilot.
+
+---
+
+### P6 — Employability-linked skilling, the LATAM commercial pattern
+
+**Trigger:** HolonIQ's 2026 LATAM EdTech 100 shows the market shifting from course delivery to **job-outcome-linked** training — Ginia (MX), Vetto (BR), Teachy (BR), Mattilda (MX). This is where regional money actually is.
+
+**Wiring:**
+1. **`GeminiLight/gen-mentor`** (CC0-1.0) — the goal-oriented ITS from the WWW 2025 paper: refine the target role, measure the gap against the learner's background, schedule sessions, generate each session's reading and quiz, rebuild the learner profile from behaviour. **Goal-to-gap-to-path is precisely the employability loop.** 🟡 CC0 is a public-domain dedication, not a software licence — no patent grant, no warranty disclaimer; have counsel look before it enters a deliverable.
+2. **`kvnloo/tutor-mcp`** (MIT) — hold the role's skill graph with prerequisites, and version it as the target role changes.
+3. **`frappe/education`** (GPL-3.0) for enrolment and administration, or **`frappe/lms`** (AGPL-3.0) for delivery. 🟡 **The two halves of the Frappe stack sit on different rungs** — Education is GPL, LMS is AGPL. Choose deliberately; the AGPL half is the network-facing one.
+4. **`GibbonEdu/core`** (GPL-3.0) if a school-management/SIS layer is needed; **`OS4ED/openSIS-Classic`** (**GPL-2.0**, `master/docs/License.txt`) is the other real option. 🔴 **Declared gap: no permissively licensed SIS of scale exists** — all three candidates (Gibbon GPL-3.0, Frappe Education GPL-3.0, openSIS GPL-2.0) are copyleft. If the client needs closed SIS extensions, build a bespoke SIS service over LTI 1.3 instead of forking a GPL one. 🔵 Credentialing note: Open Badges is implementable, but `1EdTech/openbadges-specification` carries the **IMS Global Specification Document License**, not an OSI grant — implement the spec, do not vendor the document.
+5. **`Cvmcosta/ltijs`** (Apache-2.0) as the seam, again.
+6. 🟡 Brazil's **Bill 2.338/2023** would make student selection high-risk with fines to **BRL 50 M or 2 % of turnover**; it has passed the Senate and sits in the Chamber. Build the audit trail now — and re-check the bill's status against Chamber records before quoting it.
+
+**Licence posture:** 🟡 Mixed; CC0 and the GPL/AGPL Frappe split are the two items needing a decision before build. **Timeline:** 8–10 weeks.
+
+---
+
+### What these recipes deliberately do not contain
+
+- 🔴 **No emotion, attention or engagement inference anywhere.** Prohibited outright in EU educational settings under Article 5(1)(f). Excluded from all six patterns by design, including the APAC and LATAM ones, so that a pattern is never region-locked by a feature that cannot cross into EMEA.
+- 🔴 **No AI-only grade release in any pattern.** Demand is highest in assessment and so is scrutiny (EU Annex III; Vietnam's high-risk classification). Every grading path runs a deterministic autograder first and a human gate last.
+- 🔴 **`eth-lre/mathtutorbench` is not wired into P1 or P2** despite being the natural tutoring benchmark. It **serves no licence file on a 10-path ladder** — unlicensed, therefore not usable in a client deliverable. Named rather than silently omitted, so a future pass re-probes it instead of re-discovering it.
+- 🟡 **No star-count-based ranking.** Both channels that serve stars are 403 here. Ordering above reflects **licence safety and dated evidence**, not popularity.
+
+---
+
+## ⏷ Carried history — everything below this line predates Pass 339 and was NOT rewritten
+
+🟢 **Pass 339 prepends; it does not replace.** An earlier draft of this pass replaced these shelves outright and `gate-permissive-arm` caught the cost: the corpus lost ~1.2 MB of first-hand-verified rows and the `MIT`+`Apache-2.0` cell count fell from 7 000+ to 6 597. 🔵 **Deleting verified rows is not curation** — the live section above carries this pass's findings, and every prior pass's verified shelf stands underneath it.
+
 ## Pass 338 · 2026-10-20 — three recipes, every component's grant re-read first-hand this pass, and the first one sells the gap this pass measured in four regions
 
 🔵 Every component below carries a grant measured on `raw.githubusercontent.com` **this pass**, at a branch resolved by `git ls-remote --symref`. Byte counts are from where the file landed. 🔴 **New in these recipes: each component records the AXIS of its grant** (root or nested), because `agents/top.md` FINDING 1 shows a root-only scan silently mis-grades the platform tier.

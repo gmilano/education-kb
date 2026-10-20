@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 339 · 2026-10-20 — the headline number is unresolvable to one figure, and the regulatory clock in EMEA just moved 16 months; both change how an engagement should be scoped
+
+### Market size — a range, not a number
+
+The four firms measured this pass do not agree, and the spread is wide enough that quoting a single figure to a client would be misleading. Recorded as a range with each source's own framing:
+
+| Source | 2026 figure | Forward projection | CAGR |
+|---|---|---|---|
+| Precedence Research | USD 9.58 B | USD 136.79 B by 2035 | 34.52 % |
+| Grand View Research | USD 11.4 B (2025: USD 8.3 B) | — | 25.9 % (2026–2033) |
+| Aggregator (newmarketpitch) | USD 10.4 B | USD 32.27 B by 2030 | — |
+| Higher-education segment only | USD 4.09 B | — | — |
+
+🔵 **Usable reading: AI-in-education is a USD 9–11 B market in 2026 growing in the mid-20s to mid-30s percent.** The 2035 figures diverge by an order of magnitude because the firms disagree on whether "AI in education" means AI-native products or all education software with AI features. 🔴 **Several of these are vendor or aggregator pages, not primary research**; the methodology spread is the finding, and any client-facing figure should be attributed to one named report rather than blended.
+
+**Regional share, from the same channel:** North America holds the largest share at ~36 %; APAC is the fastest-growing at ~35.3 % CAGR. Assessment and grading is called out as the fastest-growing segment, driven by academic-integrity pressure — which is a demand signal pointing at exactly the layer the EU just reclassified as high-risk.
+
+### The structural market map
+
+Education AI splits into four buyers who do not share budgets, and conflating them is the most common scoping error:
+
+1. **K-12 public systems** — budget is political, procurement is slow, data protection is the gate. Buys district-wide, needs teacher training more than models.
+2. **Higher education** — devolved budgets, faculty are the real buyers, academic integrity and assessment dominate the agenda. Open-source-friendly by culture.
+3. **Corporate academies / workforce** — fastest decisions, clearest ROI story, increasingly the same buyer as HR tech. Where Open edX and Frappe LMS land.
+4. **Consumer / supplemental** — app-store dynamics, high churn; in APAC and LATAM this tier is where the venture money and the local champions are.
+
+**Key named players observed this pass.** Anthropic launched **Claude for Teachers** (July 2026), giving verified US K-12 educators free premium access through at least 30 June 2027, and open-sourced the underlying skills as `anthropics/k12-teacher-skills` (Apache-2.0, verified). ByteDance's **Gauth** ranks among top US education apps. **TAL** pivoted to AI learning hardware after China's tutoring crackdown. **PhysicsWallah** listed at ~USD 5 B and shipped its own AI tutor; **BYJU'S** collapsed into insolvency — the two facts together are the clearest statement of how the Indian market re-rated. **Teachy** (Brazil) exports AI lesson-prep from LATAM into Asia.
+
+### Opportunities by region
+
+#### North America
+
+Largest market by share (~36 %) and the most legislatively active, but **regulation is state-level guidance rather than binding federal law** — more than half of state education departments have issued AI guidance, with no binding federal AI curriculum standards as of May 2026. Federal direction comes from an April 2025 executive order on AI education for youth. The PIE Network tracked **nearly 100 state bills** this session touching student AI use; Idaho's SB 1227 is the template to read (statewide K-12 framework, AI literacy standards, educator training, data-privacy requirements, and an explicit prohibition on AI replacing human teachers).
+
+- **The opportunity is compliance-shaped, not model-shaped.** Fifty divergent state regimes mean districts need policy-configurable deployments: the same tutor with per-state guardrails, audit logs and human-oversight attestations. That is integration and governance work, which is Globant's shape.
+- **Higher-ed AI-competency mandates are a curriculum build.** Purdue is reported as the first US university with a board-approved AI competency requirement for all undergraduates effective Fall 2026; Ohio State's AI Fluency covers the Class of 2029 onward. Every such mandate needs courseware, assessment and faculty enablement at institutional scale.
+- **Age-scaffolded access is becoming a product requirement.** NYC's March 2026 "Traffic Light Framework" and Katy ISD's K-6 chatbot ban with scaffolded access through grade 12 (2026-27) both describe the same feature: grade-band-aware capability gating. Few vendors ship it.
+- 🟡 **Canada and Mexico were not covered** by the North America leg this pass — the channel returned US-only material. An informed gap, not coverage.
+
+#### EMEA
+
+🔴 **The single most consequential finding of this pass.** Regulation (EU) 2026/1744 — the Digital Omnibus, published 24 July 2026, in force 27 July 2026 — **moved stand-alone Annex III high-risk obligations, which include education, from 2 August 2026 to 2 December 2027.** Education examples explicitly covered: automated marking, admissions triage, exam proctoring. AI embedded in regulated products (Annex I) moves to 2 August 2028. Confirmed across multiple secondary sources; 🟡 every one is commentary, so the Official Journal text should be read before this goes in a client contract.
+
+What was **not** delayed, and is therefore live now:
+- **Article 4 AI-literacy duty** — in force since 2 February 2025, applying to staff of both providers and deploying institutions.
+- **Article 50 transparency obligations** — apply from 2 August 2026.
+- **Article 5(1)(f)** — emotion inference in educational institutions is an outright **prohibition**, not a high-risk category, exempt only for medical or safety reasons.
+
+- **The opportunity is a 16-month conformity runway, and it is perishable.** Clients get until December 2027 to build Annex III conformity — technical documentation, risk management, human oversight, post-market monitoring — for grading and admissions AI. Engagements that start in 2027 will be remediation; engagements that start now are design. This is the clearest "why now" in the KB.
+- **AI literacy is billable today.** Schools are reported to be requiring AI-literacy certification from vendors as part of tendering. Article 4 is already in force, and teacher training is repeatedly named as the binding constraint on scale.
+- **Build the emotion-inference prohibition into reference architectures.** Any engagement-detection or attention-monitoring feature is banned in EU educational settings. Catching that at design time is cheap; catching it at audit is not.
+- The European Commission, with the OECD and G7 endorsement, has introduced a draft **AI Literacy Framework** for primary and secondary education — a curriculum anchor worth tracking, though education policy stays national.
+
+#### APAC
+
+Fastest-growing region (~35.3 % CAGR) and the most fragmented regulatory picture — a patchwork of three broad models.
+
+- **China has the most developed binding regime** in the region: algorithm registry, deep-synthesis rules and generative-AI measures requiring security assessment and algorithm filing before public launch, with mandatory AI content labelling since September 2025. It is also furthest on curriculum — AI reported as a **compulsory subject from age six as of September 2025**, with ethics, privacy and equitable access lagging the rollout.
+- **India moved at the platform layer and the curriculum layer at once.** Amended IT Rules took effect **20 February 2026**, imposing labelling and due-diligence duties on intermediaries handling AI-generated content. AI and computational thinking become **mandatory from Class 3 in 2026-27** across government and private schools, backed by a ₹500 crore centre of excellence and the ₹10,372 crore India AI Mission.
+- **Vietnam's new law classes AI in education as high-risk**, explicitly covering automated assessment and behavioural monitoring — the same category the EU just deferred, arriving on a different clock.
+- **The opportunity is mandated-curriculum delivery at national scale.** China from age six and India from Class 3 are both state-mandated build-outs: teacher enablement, content localisation and assessment infrastructure, procured nationally. Nothing else in this KB has that volume.
+- **The compliance opportunity is pre-launch, not post-market.** Where the EU demands conformity files, China demands filing and assessment *before* a service goes public. Same work, different gate, and it must be scoped into the delivery timeline rather than bolted on.
+- **The post-crackdown market has re-formed around non-academic STEM, coding and AI tutoring**, plus AI learning hardware (TAL). UNESCO notes readiness varies widely; infrastructure and teacher training matter as much as policy.
+
+#### LATAM
+
+The region with the most initiative density relative to spend, and the one where the regulatory frame is still being written.
+
+- **Adoption is real and measurable.** The IDB counts **193 AI education initiatives** across the region, of which **59 % use generative AI** and 27 % use language models. 🔴 But CENIA (Chile) found **13 of 19 countries studied do not teach early AI in schools** — the gap between pilot activity and curriculum is the defining feature of this market.
+- **Regulation is in motion, not settled.** Brazil's **Bill 2.338/2023** has passed the Senate and sits in the Chamber of Deputies; it would classify education uses such as student selection as high-risk, with fines to **BRL 50 M or 2 % of turnover**. LGPD already governs personal data in AI systems. Mexico has a proposed ethical-AI framework criticised for copying the EU risk model; Argentina's submitted bill is explicitly deregulatory. 🟡 Brazil's bill status should be re-checked against Chamber records before it is quoted.
+- **Funded demand exists and is dated.** **Google.org committed USD 4.6 M** across Argentina, Brazil, Chile, Colombia, the Dominican Republic, El Salvador, Mexico, Peru and Uruguay, targeting **1.25 M students by 2028**. **UNESCO launched its Observatory on AI in Education for Latin America and the Caribbean in April 2026**, with a Mexico pilot alongside CONALEP and DGETI to build centres of excellence.
+- **The strongest commercial signal is employability, not courseware.** The HolonIQ 2026 LATAM EdTech 100 shows a shift from course delivery to job-outcome-linked training: **Ginia** (Mexico, AI-driven employability), **Vetto** (Brazil, newly funded on the same thesis), **Teachy** (Brazil, AI lesson prep, now exporting to Asia), **Mattilda** (Mexico, school billing and collections, USD 50 M plus an acquisition).
+- **The opportunity is Spanish/Portuguese-first delivery into the curriculum gap**, and the toolchain already favours it: **`chamilo/chamilo-lms`** has a disproportionate regional installed base, **`moodle-mcp`** ships Spanish documentation, and **`learningequality/kolibri`** (MIT) is the offline-first answer for low-connectivity deployments. A regional engagement can be assembled from permissive and regionally-adopted parts rather than from US defaults.
+
+---
+
+## ⏷ Carried history — everything below this line predates Pass 339 and was NOT rewritten
+
+🟢 **Pass 339 prepends; it does not replace.** An earlier draft of this pass replaced these shelves outright and `gate-permissive-arm` caught the cost: the corpus lost ~1.2 MB of first-hand-verified rows and the `MIT`+`Apache-2.0` cell count fell from 7 000+ to 6 597. 🔵 **Deleting verified rows is not curation** — the live section above carries this pass's findings, and every prior pass's verified shelf stands underneath it.
+
 ## Pass 338 · 2026-10-20 — the regional legs returned real material for the first time in four passes, and the gate that polices this file's own region contract had never been run
 
 🟢 **The supply side is unchanged and saturated for a ninth consecutive pass** (see `agents/top.md`). 🔵 **The demand side is where this pass moved**, and the shape is the same in every region that answered: **usage is near-universal, governance is scarce, and the gap is the engagement.**

@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 339 · 2026-10-20 — the real platforms an AI layer can sit on, and the integration seam that decides whether the engagement is a fork or a plug-in
+
+Education's analogue of Odoo-for-ERP is not one system; it is **four tiers**, and an engagement goes wrong when a client's "AI tutor" request is answered at the wrong tier. All grants below were read first-hand this pass (see `repos/foundations.md` for the ladder).
+
+### Tier 1 — Learning platforms (the system of record for courses)
+
+| Platform | Repo | Licence | Customise with AI on top by… |
+|---|---|---|---|
+| Moodle | https://github.com/moodle/moodle | GPL-3.0 | Plugin API (deepest catalogue in the category) or, without touching the tree, **`falkenslab/moodle-mcp`** — ~230 Moodle tools exposed to an agent under the teacher's own login |
+| Open edX | https://github.com/openedx/edx-platform | AGPL-3.0 | Deploy via **`overhangio/tutor`** (AGPL-3.0) and extend with its plugin framework; modify the learner UI through `frontend-app-learning` |
+| Canvas | https://github.com/instructure/canvas-lms | AGPL-3.0 | LTI 1.3 external tools — the standard path, and the one that keeps proprietary logic outside the AGPL tree |
+| Sakai | https://github.com/sakaiproject/sakai | ECL-2.0 | Native tool development under a permissive grant; strongest when the client is a research university |
+| OpenOLAT | https://github.com/OpenOLAT/OpenOLAT | Apache-2.0 | 🔵 The most permissive institutional LMS — the right default when a client needs to keep extensions closed |
+| Chamilo | https://github.com/chamilo/chamilo-lms | GPL-3.0 | 🔵 Disproportionate installed base in **LATAM** and Francophone Africa; the pragmatic choice where Moodle/Canvas have no local partner ecosystem |
+| ILIAS | https://github.com/ILIAS-eLearning/ILIAS | GPL-3.0 | 🔵 Deep roots in German-speaking **EMEA**; strong SCORM and assessment surface, frequent fit for EU public-sector tenders |
+| Kolibri | https://github.com/learningequality/kolibri | MIT | 🔵 Offline-first. The only MIT platform here, and the answer for low-connectivity deployments where a cloud tutor cannot run at all |
+
+### Tier 2 — Content and assessment engines (what the AI actually produces into)
+
+| Platform | Repo | Licence | Customise with AI on top by… |
+|---|---|---|---|
+| H5P | https://github.com/h5p/h5p-php-library | GPL-3.0 | Generate interactive content types (branching scenarios, interactive video) as H5P packages and embed them in any Tier-1 platform. Fastest route to interactive output without writing a player |
+| nbgrader | https://github.com/jupyter/nbgrader | BSD-3-Clause | Autograding pipeline for notebook assignments — attach an LLM reviewer as a second pass over the autograder's output, never as a replacement for it |
+| JupyterHub | https://github.com/jupyterhub/jupyterhub | BSD-3-Clause | The multi-user runtime nbgrader assumes; permissive, so client-specific graders can stay closed |
+| Opencast | https://github.com/opencast/opencast | ECL-2.0 | Lecture capture with scheduled ingest and encoding — the natural hook for transcription, captioning and video-to-notes agents |
+| Anki | https://github.com/ankitects/anki | AGPL-3.0 | Spaced-repetition store; drive it agentically via **`ankimcp/anki-mcp-server`** (MIT) or its in-Anki addon. 🟡 Anki core is AGPL — build against its API, not into its tree |
+| os-taxonomy | https://github.com/withmarbleapp/os-taxonomy | ODbL | ~1 590 primary/elementary micro-topics as a graph, for curriculum alignment. 🔴 Database licence with share-alike over derived databases — counsel before productising |
+
+### Tier 3 — Administrative systems (SIS, billing, operations)
+
+| Platform | Repo | Licence | Notes |
+|---|---|---|---|
+| Gibbon | https://github.com/GibbonEdu/core | GPL-3.0 | School management / SIS: enrolment, timetabling, attendance, reporting |
+| Frappe Education | https://github.com/frappe/education | GPL-3.0 | Education module on the Frappe/ERPNext stack — the closest thing here to "Odoo for schools", and the natural fit when a client already runs ERPNext |
+| Frappe LMS | https://github.com/frappe/lms | AGPL-3.0 | Course delivery on the same stack; 🟡 AGPL while its Education sibling is GPL — the two halves of one stack sit on different rungs |
+
+🔴 **Declared gap at this tier: there is no permissively licensed student information system of scale.** The three real options are all copyleft — `GibbonEdu/core` **GPL-3.0**, `frappe/education` **GPL-3.0**, and `OS4ED/openSIS-Classic` **GPL-2.0** (grant at `master/docs/License.txt`, 17 286 B, as this base resolved at `p311`). A client who needs an open SIS *with closed extensions* has no clean answer today — the honest recommendation is Tier-1 LMS + a bespoke SIS service over LTI 1.3, not a fork of a GPL SIS.
+
+### Tier 4 — The integration seam (and the most important row on this page)
+
+| Component | Repo | Licence | Why it decides the engagement |
+|---|---|---|---|
+| ltijs | https://github.com/Cvmcosta/ltijs | Apache-2.0 | Certified **LTI 1.3 / LTI Advantage** tool provider for Node. Every Tier-1 platform above speaks LTI. Building the AI layer as an LTI tool means it installs into Moodle, Canvas, Open edX, Sakai, Blackboard and D2L **without forking any of them, and without inheriting their copyleft** |
+
+> 🔵 **The architectural rule this shelf exists to state.** Six of the eight Tier-1 platforms are GPL or AGPL. Patch an AI feature into one of those trees and the client's differentiating logic becomes distributable source — across the network boundary, in the AGPL cases. Build the same feature as an **LTI 1.3 tool (`ltijs`, Apache-2.0)** or an **MCP server (`moodle-mcp`, MIT, as the worked example)** and it stays a separate program under whatever licence the client wants, talking to the platform over a documented protocol. The seam is the deliverable. Choose it on day one.
+
+---
+
+## ⏷ Carried history — everything below this line predates Pass 339 and was NOT rewritten
+
+🟢 **Pass 339 prepends; it does not replace.** An earlier draft of this pass replaced these shelves outright and `gate-permissive-arm` caught the cost: the corpus lost ~1.2 MB of first-hand-verified rows and the `MIT`+`Apache-2.0` cell count fell from 7 000+ to 6 597. 🔵 **Deleting verified rows is not curation** — the live section above carries this pass's findings, and every prior pass's verified shelf stands underneath it.
+
 ## Pass 338 · 2026-10-20 — the platform tier gains a second Docebo-lineage LMS with a MEASURED grant, and the licence-review lesson is that the grant may not be where your scanner looks
 
 🟢 **Every grant below re-read first-hand this pass** at a branch resolved by `git ls-remote --symref`, payload from `raw.githubusercontent.com`, bytes counted where the file landed. These are the real, customisable systems an education engagement starts from — the Odoo / OpenMRS / Moodle tier. 🔵 **The column that matters is still not the SPDX name; it is what the grant does to the layer you add on top.**

@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 339 · 2026-10-20 — 15 agent rows re-verified first-hand, one absence claim refuted in-pass by this repo's own gate, and the MCP tier re-established with a Canvas rung for the first time
+
+**Verification channels available this pass.** `api.github.com` → **403** for every slug (session scope), `github.com` HTML → **403 for every slug, including ones that do not exist**, so it is useless even as an existence oracle. Three channels do work:
+
+| channel | what it establishes | result |
+|---|---|---|
+| `git ls-remote --exit-code -h https://github.com/<slug>` | the repository exists and serves refs | ran on every row; all promoted rows `exists=YES` |
+| `raw.githubusercontent.com/<slug>/<branch>/<path>` | the grant, read from the file itself | every grant below read first-hand |
+| `git clone --depth 1 --filter=blob:none --no-checkout` + `git ls-tree -r HEAD` | **the whole tree**, so an absence claim rests on a tree and not a ladder | used on all four refusals |
+
+🔴 **One absence claim in this pass's first draft was wrong, and `make gate-enumeration` refuted it before anything was committed.** I published `OS4ED/openSIS-Classic` as ungranted off a root-only ladder; its grant is **GPL-2.0** at `docs/License.txt`. This base had already resolved that row at `p311`, so I restated a retracted claim. 🔵 **`p275`'s standing lesson — a ladder is not a tree — now has a second dated casualty, and every refusal below was consequently re-run against a full tree.**
+
+**No star count appears in this file.** The only channels that serve stars are 403 here, and every star figure the search channel offered was third-party. An earlier cycle of this rotation recorded star counts a later pass had to retract as inflated; writing none is the correction holding.
+
+**The licence ladder was varied by case and by path on every row**, because grants on these shelves sit at `license.txt`, `LICENSE.txt`, `COPYING.txt` and `docs/License.txt` as often as at `LICENSE`.
+
+## Build-on-this tier
+
+**8 permissive rows** — every grant MIT, Apache-2.0 or BSD-3-Clause, read from the file. These are the rows a studio can build on and relicense into a client deliverable without a copyleft question.
+
+| Agent | Repo | Licence | Grant read at | What it does |
+|---|---|---|---|---|
+| DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | `main/LICENSE` | Lifelong personalised tutoring with bounded tutoring memory, learning-path review, grouped assessments and an agent-native CLI; ships an `EduHub` skills ecosystem. **v1.6.15 dated 2026-10-19 — the freshest release on this shelf, one day old at measurement** |
+| OpenMAIC | https://github.com/THU-MAIC/OpenMAIC | MIT | `main/LICENSE` | Open Multi-Agent Interactive Classroom (Tsinghua MAIC): builds a classroom from a topic or document with an AI teacher and AI classmates; generates slides, quizzes, simulations and project work. **v1.2.1 dated 2026-10-18**; server-first generation survives closed tabs and restarts |
+| OATutor | https://github.com/CAHLR/OATutor | MIT | `main/LICENSE` | Open-source Adaptive Tutoring System from UC Berkeley CAHLR. **Bayesian Knowledge Tracing** for skill-mastery estimation, React, deployable to static pages with no backend; LTI middleware for LMS integration. 🔵 The only row here with an inspectable, defensible mastery model rather than a prompt |
+| Educhain | https://github.com/satvik314/educhain | MIT | `main/LICENSE` | Python package for generative educational content — MCQs, lesson plans across 8 pedagogical approaches. The most direct library-level dependency on this shelf |
+| Instructional Agents | https://github.com/DaRL-GenAI/instructional_agents | MIT | `main/LICENSE` | Multi-agent instructional design on the **ADDIE model** for automated course creation and evaluation; aimed explicitly at reducing teaching-faculty workload |
+| K-12 Teacher Skills | https://github.com/anthropics/k12-teacher-skills | Apache-2.0 | `main/LICENSE` | The four agent skills shipped with Claude for Teachers plus their evaluation framework: lesson-plan creation, differentiation into tiered versions (below / at / above proficiency), lesson prep, grading support. Source and evals, not a product |
+| Open TutorAI CE | https://github.com/Open-TutorAi/open-tutor-ai-CE | BSD-3-Clause | `main/LICENSE` | Educational AI platform, Community Edition. 🟡 **Open-core:** its own README states CE is "the foundation for a proprietary Enterprise Edition". The BSD grant on CE is real and was read first-hand; the EE boundary is a commercial question, not a licence one |
+| AI Teaching Agent | https://github.com/littlecookie0722/AI-Teaching-Agent | MIT | `main/LICENSE` | Turns one Markdown teaching source into a reviewable Lab + Exam package and an optional 5–8 slide deck, with structured DSLs, human review and sandboxed evaluation. 🟡 Its README states MCP/agent expansion and automatic-grading productisation are **frozen** — the CLI is the live path |
+
+## MCP tier — agents over the systems of record
+
+### Agents over the systems of record
+
+**6 rows in the table below**, reaching three platforms — Moodle, Canvas and Open edX (Anki is a retention store, not a platform). Counting this shelf whole, carried history included, **6 platforms** are reachable: those three plus Google Classroom, Brightspace/D2L and Blackboard. 🔵 **A Canvas rung appears on this shelf for the first time this pass** — previous passes carried Canvas MCP servers only on `agents/trending.md` because none had a grant read first-hand.
+
+| Server | Repo | Licence | Grant read at | Platform reached |
+|---|---|---|---|---|
+| moodle-mcp | https://github.com/falkenslab/moodle-mcp | MIT | `main/LICENSE` | **Moodle.** ~230 Moodle tools under the **teacher's own login**, students anonymised to the model: grade with your rubrics, build a quiz from your question bank, answer the forum, see what is due. Docs in English **and Spanish** |
+| canvas-mcp (vishalsachdev) | https://github.com/vishalsachdev/canvas-mcp | MIT | `main/LICENSE` | **Canvas.** Grant established by tree enumeration this pass |
+| canvas-mcp (r-huijts) | https://github.com/r-huijts/canvas-mcp | MIT | `main/LICENSE` | **Canvas.** Second independent MIT Canvas rung, verified the same way |
+| openedx-mcp | https://github.com/blend-ed/openedx-mcp | AGPL-3.0 | `master/LICENSE` | **Open edX.** 🔴 **AGPL-3.0 — the one copyleft row in this tier.** An MCP server is a separate program, but this one's own source is AGPL, so hosting a *modified* copy as a service owes that source. Deploy unmodified, or budget for the obligation |
+| anki-mcp-server | https://github.com/ankimcp/anki-mcp-server | MIT | `main/LICENSE` | **Anki** spaced-repetition store, so an agent can author and schedule retention material. 🔵 Its README now points most setups at the companion **addon** (`ankimcp/anki-mcp-server-addon`), which runs the server inside Anki with no Node.js or AnkiConnect |
+| tutor-mcp | https://github.com/kvnloo/tutor-mcp | MIT | `main/LICENSE` | **No external platform** — a self-contained ITS engine. Maps a subject into a versioned skill graph with concepts, prerequisites and goals, then tracks learner state and review scheduling. The LLM generates; Tutor MCP remembers and recommends |
+
+🔵 **Why this tier exists, and why it keeps growing while the agent tier does not.** Six of eight Tier-1 learning platforms are GPL or AGPL (see `repos/foundations.md`). An MCP server is a **separate program speaking a documented protocol**, so it carries none of the host platform's copyleft — which is why education's integration layer is consolidating on MCP rather than on plugins. The long tail is far larger than this table: this repo's own census counts **32 Canvas, 17 Moodle, 11 Google Classroom, 7 Blackboard, 4 Brightspace/D2L and 2 Open edX** MCP server slugs across both agent shelves. The six above are the ones whose grants are read first-hand.
+
+## Flagged-grant tier
+
+One row that is useful and is **not** cleanly licensed for a client deliverable.
+
+| Agent | Repo | Instrument | Read at | Why it is flagged |
+|---|---|---|---|---|
+| GenMentor | https://github.com/GeminiLight/gen-mentor | **CC0-1.0** | `main/LICENSE` | Reference implementation of the WWW 2025 Industry-Track paper on goal-oriented learning in an ITS: coordinated agents refine the goal, measure the gap to the learner's background, schedule sessions, write each session's reading and quiz, and rebuild the learner profile from behaviour. 🟡 **CC0-1.0 on a code repository is a public-domain dedication, not a software licence** — no patent grant and no warranty disclaimer, which is a different risk shape from MIT. Technically the best fit for the employability pattern (`compose/patterns.md` P6); have counsel clear it before it ships |
+
+## Declared refusals and gaps — probed, and not promoted
+
+🔴 **`eth-lre/mathtutorbench` — exists, no grant anywhere in its tree.** A 10-path ladder returned 404 on all ten, and because a ladder is weaker evidence than a tree (`p275`), the claim was re-established by blobless clone + `git ls-tree -r HEAD --name-only` filtered for `licen[cs]e|copying|notice`: **zero candidate paths in the entire repository.** A credible ETH Zurich tutoring benchmark, *not* licensed for reuse until a grant appears. Named deliberately: dropping it silently would make an unlicensed repo look un-searched rather than unusable.
+
+🔴 **`YL1N/EduGuardBench` — exists, no grant anywhere in its tree.** Same method, same result: zero candidate paths. An education-safety benchmark would be directly useful to this KB, which is why its absence is recorded rather than quietly skipped.
+
+🔴 **`dmontgomery40/mcp-canvas-lms` — exists, no grant anywhere in its tree.** Carried on these shelves for many passes as a Canvas MCP row. Tree enumeration this pass returns no licence path at all, so it is **demoted** and the two MIT Canvas rungs above replace it.
+
+🟡 **`withmarbleapp/os-taxonomy` is not an agent and not code.** Reported ~5 900 stars in an October 2026 trending roundup (third-party figure, recorded as such) for mapping ~1 590 micro-topics of primary/elementary learning as a connected graph. Its grant, read first-hand, is the **Open Data Commons Open Database License (ODbL)** — a *database* licence with share-alike reach over derived databases. It belongs in `repos/foundations.md` as a data asset and must not be treated as an MIT-style code dependency.
+
+🔴 **The two prescribed supply legs returned no new education agent.** `top open source AI agents education 2026 github MIT` and `github trending education AI 2026` both returned general-purpose agents (OpenClaw, opencode, OpenHands, CrewAI, LangGraph, Hermes Agent) and AI *courseware* (`microsoft/generative-ai-for-beginners` MIT, `huggingface/agents-course` Apache-2.0, `karpathy/nanochat` MIT at `master/LICENSE`, `rohitg00/ai-engineering-from-scratch`). All of these **teach AI**; none **teaches with AI**, which is the boundary this shelf holds. This is the **tenth consecutive pass** at that result, and the structural cause is recorded in `repos/trending.md`: **GitHub Trending has no education category**, so an unfiltered leg cannot surface a vertical.
+
+🔵 **What did move came from narrower legs.** The dated releases on DeepTutor (2026-10-19) and OpenMAIC (2026-10-18), and the two MIT Canvas rungs, were found by probing known rows' release feeds and enumerating candidate trees directly — not by the trending channel. **In a vertical with no trending category, supply news arrives through incumbents' release feeds.**
+
+### Regional note on this shelf
+
+Every row above is **Global** in reach; none is region-locked by licence or hosting. Two carry a regional accent worth recording: **moodle-mcp** ships Spanish-language documentation alongside English, which matters for LATAM and Iberian deployments, and **OpenMAIC** is a Tsinghua project whose web-search providers default to Kimi and DeepSeek — an APAC-native stack, and a data-residency question in an EMEA review exactly as a US-hosted model is in a Chinese one. Residency now cuts both ways.
+
+---
+
+## ⏷ Carried history — everything below this line predates Pass 339 and was NOT rewritten
+
+🟢 **Pass 339 prepends; it does not replace.** An earlier draft of this pass replaced these shelves outright and `gate-permissive-arm` caught the cost: the corpus lost ~1.2 MB of first-hand-verified rows and the `MIT`+`Apache-2.0` cell count fell from 7 000+ to 6 597. 🔵 **Deleting verified rows is not curation** — the live section above carries this pass's findings, and every prior pass's verified shelf stands underneath it.
+
 ## Pass 338 · 2026-10-20 (eleventh pass of this date) — two passes were spent repairing the ladder's CASE axis, and the grant that actually defeats the ladder was already on these shelves, defeating it on DEPTH
 
 🟢 **`ACTION ZF` closed first, before a byte was written.** Both suites were run, not inherited.

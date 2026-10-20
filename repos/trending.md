@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 339 — the trending channel is still structurally blind to this vertical, and two slugs this base has carried from roundups do not exist at all
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**The trending leg, run verbatim (`github trending education AI 2026`): 🔴 0 new education repositories.** The cause remains structural rather than seasonal — **GitHub Trending has no education category**. What the leg returns is AI courseware, every item of which teaches AI rather than teaching with it: `microsoft/generative-ai-for-beginners` (**MIT**, `main/LICENSE`, verified this pass), `huggingface/agents-course` (**Apache-2.0**, `main/LICENSE`, verified), `karpathy/nanochat` (**MIT**, `master/LICENSE`, verified — note the branch), `rohitg00/ai-engineering-from-scratch`, plus aggregator lists (`caramaschiHG/awesome-ai-agents-2026`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`).
+
+🔵 **One genuine education repo did surface through the trending channel**, and it is not code:
+
+| slug | grant | path | disposition |
+|---|---|---|---|
+| `withmarbleapp/os-taxonomy` | 🔴 **ODbL** (Open Data Commons Open Database License) | `main/LICENSE` | 🟡 **Promoted to `repos/foundations.md` as a DATA asset, not a code dependency.** ~1 590 primary/elementary micro-topics as a connected learning graph; reported ~5 900 stars by an October 2026 roundup (third-party figure, recorded as such). **ODbL carries share-alike reach over derived databases** — a curriculum-alignment feature built on it may owe its derived database back. This is exactly the row a licence-blind pipeline would have filed as "MIT-ish open data" |
+
+### 🔴 Two carried slugs do not exist — recorded so a future pass stops re-importing them
+
+| slug as commonly cited | `git ls-remote` | the live slug |
+|---|---|---|
+| `frentix/OpenOLAT` | 🔴 `exists=NO` | **`OpenOLAT/OpenOLAT`** — verified **Apache-2.0**, `master/LICENSE` |
+| `apereo/opencast` | 🔴 `exists=NO` | **`opencast/opencast`** — verified **ECL-2.0**, `master/LICENSE` |
+
+Both broken forms come from third-party roundups that name the historical steward rather than the current GitHub organisation. 🟢 Both live slugs are now on the foundations shelf with grants read from the file.
+
+### Foundation-shelf grants re-read first-hand this pass — 17 rows, and the copyleft split is the finding
+
+🟢 **Permissive (5):** `oppia/oppia` Apache-2.0 · `learningequality/kolibri` **MIT** · `Cvmcosta/ltijs` Apache-2.0 · `jupyter/nbgrader` **BSD-3-Clause** · `jupyterhub/jupyterhub` **BSD-3-Clause**
+🟢 **ECL-2.0, Apache-derived (3):** `sakaiproject/sakai` · `opencast/opencast` · and `OpenOLAT/OpenOLAT` which is straight **Apache-2.0**
+🔴 **Copyleft (8):** `moodle/moodle` GPL-3.0 · `openedx/edx-platform` AGPL-3.0 · `overhangio/tutor` AGPL-3.0 · `openedx/frontend-app-learning` AGPL-3.0 · `instructure/canvas-lms` AGPL-3.0 · `chamilo/chamilo-lms` GPL-3.0 · `ILIAS-eLearning/ILIAS` GPL-3.0 · `h5p/h5p-php-library` GPL-3.0
+🟡 **Data (1):** `withmarbleapp/os-taxonomy` ODbL
+
+🔵 **The ratio is the intelligence.** The agent layer is **13-of-15** permissive; the foundation layer is majority copyleft (**8 of 17** GPL/AGPL). Education's systems of record are twenty-year-old public-sector projects licensed accordingly. The operational rule now carried into `compose/patterns.md`: **innovate in the permissive layer, integrate with the copyleft layer over LTI 1.3 or MCP, never fork it.**
+
+### 🟡 Three grants were only reachable off the obvious path — the case/path ladder earned its keep again
+
+| slug | obvious probe | where the grant actually is |
+|---|---|---|
+| `moodle/moodle` | `LICENSE` → nothing | **`main/COPYING.txt`** |
+| `overhangio/tutor` | `LICENSE` → nothing | **`main/LICENSE.txt`** |
+| `frappe/lms`, `frappe/education` | `LICENSE` → nothing | **lowercase `license.txt`** (AGPL-3.0 and GPL-3.0 respectively) |
+
+🔴 A single-spelling, single-case probe would have refused Moodle — the most-deployed LMS in the world — as ungranted. Four of sixteen rows sit off the naive path.
+
+### Declared gaps and refusals
+
+- 🔴 **`OS4ED/openSIS-Classic` — my absence claim was WRONG and `gate-enumeration` refuted it in-pass.** I published "no grant on the probed paths" off a root-only ladder; the grant is **GPL-2.0** at **`master/docs/License.txt`** (17 286 B), plus `docs/LICENSE.rtf` and 20 vendored grants. 🔴 **This base resolved this exact row at `p311` and I restated the retracted version** — see `p275`: *a ladder is not a tree*. The standing lesson now has a second, dated casualty.
+- 🟢 **`1EdTech/openbadges-specification` — RESOLVED, closing a row this base carried as "unresolved, not ungranted".** Blobless-clone tree enumeration found **`ob_v3p0/license.md`**: the **IMS Global Specification Document License**. 🔴 Not OSI and not a code grant — it licenses implementing the spec, with IMS as sole arbiter of compliance. The row moves from *unresolved* to *granted, non-open-source*.
+- 🟢 **`YL1N/EduGuardBench` and `eth-lre/mathtutorbench` — absence now established on a TREE, not a ladder.** Blobless clones of both, `git ls-tree -r HEAD --name-only` filtered for `licen[cs]e|copying|notice`: **zero candidate paths anywhere in either tree.** These two refusals survive the method that overturned openSIS, which is the only reason they are published as refusals.
+- 🔴 **No permissively licensed SIS of scale exists.** `GibbonEdu/core` is GPL-3.0 and `frappe/education` is GPL-3.0; both verified. This is a real market gap, not a search failure, and `compose/patterns.md` P6 now routes around it.
+- 🟡 **No star counts in this file.** `api.github.com` → 403 for every slug; `github.com` HTML → **403 for every slug, including non-existent ones**, so it is useless even as an existence oracle. `git ls-remote` is this base's only existence channel and `raw.githubusercontent.com` its only grant channel. Both were used on all 17 rows.
+
+---
+
+
 ## 2026-10-20 — Pass 338 — the GitHub trending channel has no education category, and 8 of 11 foundation repos would be mis-graded by the most natural probe anyone would write
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**

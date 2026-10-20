@@ -4,6 +4,46 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 — Pass 339 — tenth consecutive pass with no promotable agent from the discovery channels, and the first pass that found real movement anyway by reading the incumbents' release feeds
+
+🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
+
+**The two prescribed supply legs, run verbatim:**
+
+| leg | result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 new education agents.** Returned general-purpose agents (OpenClaw, opencode, OpenHands, CrewAI, LangGraph, Hermes Agent) plus `ashishpatel26/500-AI-Agents-Projects` (MIT, a use-case catalogue with an education category, not an agent). All teach AI or are domain-agnostic |
+| `github trending education AI 2026` | 🔴 **0 new.** Returned AI courseware — `microsoft/generative-ai-for-beginners` (MIT, verified), `huggingface/agents-course` (Apache-2.0, verified), `karpathy/nanochat` (MIT, verified, `master/LICENSE`), `rohitg00/ai-engineering-from-scratch`. 🟢 The structural reason is unchanged and worth restating: **GitHub Trending has no education category**, so an unfiltered leg cannot surface a vertical |
+
+🔵 **What changed this pass is the method, not the result.** A third leg — `open source AI tutor agent github October 2026 new release education MCP` — plus direct reads of known rows' release notes **did** return dated movement that the prescribed legs structurally cannot see:
+
+| row | release | dated | what shipped |
+|---|---|---|---|
+| **HKUDS/DeepTutor** (Apache-2.0) | v1.6.15 | **2026-10-19** | Reviewed learning-path changes, grouped assessments, bounded tutoring memory, reliable chat recovery, sturdier parsing, retrieval comparison. **Freshest release on this shelf — one day old at measurement** |
+| **THU-MAIC/OpenMAIC** (MIT) | v1.2.1 | **2026-10-18** | Web research: Kimi, DeepSeek and Firecrawl as search providers, new `webFetch` slot |
+| **THU-MAIC/OpenMAIC** (MIT) | v1.2.0 | **2026-10-16** | Server-first generation is stable — survives closed tabs and restarts; models configured once in `openmaic.yml` |
+
+🟢 **Lesson to carry forward:** in a vertical with no trending category, supply news arrives through **incumbents' release feeds**, not discovery channels. The prescribed legs should keep running as a measurement of the discovery channel, but a release-feed sweep of the standing roster is what actually detects movement. Nine prior passes read "no movement" when at least some of it was visible at this depth.
+
+**New rows probed this pass and their grants, all read first-hand from `raw.githubusercontent.com`:**
+
+| slug | grant | path | disposition |
+|---|---|---|---|
+| `kvnloo/tutor-mcp` | MIT | `main/LICENSE` | 🟢 **Promoted** to `agents/top.md` — MCP ITS engine, skill graph with prerequisites, review scheduling |
+| `littlecookie0722/AI-Teaching-Agent` | MIT | `main/LICENSE` | 🟢 **Promoted** — Markdown source to reviewable Lab/Exam package. 🟡 MCP expansion frozen per its own README; CLI is the live path |
+| `ArnaudGuiovanna/tutor-mcp` | MIT | `main/LICENSE` | ⚪ Fork of `kvnloo/tutor-mcp` (v0.5.0, alpha). Carried, not promoted — the upstream is the row |
+| `eth-lre/mathtutorbench` | 🔴 **none in tree** | **full tree enumerated** | 🔴 **Refused — exists, ungranted.** 10-path ladder all 404, then re-established by blobless clone + `git ls-tree -r HEAD`: **zero `licen[cs]e\|copying\|notice` paths anywhere.** Credible ETH tutoring benchmark, not licensed for reuse |
+| `YL1N/EduGuardBench` | 🔴 **none in tree** | **full tree enumerated** | 🔴 Refused — same method, zero candidate paths anywhere in the repository |
+
+🔴 **One absence claim in this pass's first draft was wrong, and the repo's own gate caught it.** `OS4ED/openSIS-Classic` was published as ungranted off a root-only ladder; `make gate-enumeration` refuted it in-pass (**GPL-2.0** at `docs/License.txt`), and this base had already resolved that row at `p311`. 🟢 **Consequence for this file:** every refusal above was re-run against a full tree rather than a ladder, which is the method `p275` named and the one that separates a real refusal from a missed path.
+
+🟡 **Star counts, again, could not be verified — and this pass measured why precisely.** `api.github.com` returns **403** for every slug, and `github.com` HTML returns **403 for every slug including ones that do not exist** (so it cannot even be used as an existence oracle). Every star figure the search channel offered was third-party: aggregators, content farms, one LinkedIn post. 🔴 **No star count enters this file.** The one third-party figure recorded as third-party: `withmarbleapp/os-taxonomy` at ~5 900 stars per an October 2026 roundup — and that row is **ODbL**, a database licence, so it belongs in `repos/foundations.md`, not here.
+
+🔵 **Regional note.** `moodle-mcp` ships Spanish-language documentation alongside English — a LATAM/Iberian asset recorded here because the supply legs never surface localisation. `OpenMAIC` defaults to Kimi and DeepSeek for web search, which is APAC-native and an EMEA data-residency question. Residency now cuts both ways.
+
+---
+
+
 ## 2026-10-20 — Pass 338 — ninth consecutive pass with no promotable agent, and the licence question registered as open one pass ago had been answered 72 passes earlier
 
 🟢 **APPEND-ONLY. Nothing below this section was rewritten.**
