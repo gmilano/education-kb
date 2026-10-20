@@ -1,10 +1,32 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 
 # Foundational repos — education
+
+## Pass 328 · 2026-10-20 (first pass of this date) — this file passed the shelf audit, one row that never arrived, and the grant channel is all that is left
+
+🟢 **The audit first, because it is the pass's headline and this file is the half that works.** p327 prescribed re-grepping every `PROMOTE-*` verdict in `evidence/` against the shelf files. **Run against the *shelf region* rather than the filename, this file passes and `agents/top.md` failed**: all five p296 foundations promotions sit inside a `### The rows` ledger, and **this file's convention is that the per-pass ledger *is* the shelf**, so a row cut into a pass section is a row a reader finds. 🔵 **`agents/top.md` carries a single canonical `## The table` instead, and p327's rows landed in the commentary above it — invisible to anyone reading the table.** p328 cut them in. **The lesson for this file is to keep its convention and say so in the open, which is what this paragraph is for.**
+
+🔴 **One row was graded for this file and still never arrived — and it is the most load-bearing one outstanding.** `learning-commons-org/evaluators` has been on this KB's trending channel since **p119**, was licence-read byte-for-byte twice, was written up at length in `agents/top.md` at p327 — **and has never been a foundations row**, which is where an evaluation layer belongs. It is cut below.
+
+### The rows
+
+| Repo | Licence | ★ | Checked | Region | Layer | Why it is foundational |
+|---|---|---|---|---|---|---|
+| https://github.com/learning-commons-org/evaluators | 🟡 **Four-way split, 1,615 B, re-read p328: code **MIT** · prompts + settings **CC BY 4.0** · *Annotated CLEAR Corpus* **CC BY-NC-SA 4.0** · *Annotated PERSUADE 2.0* **CC BY-NC-SA 4.0** | 86 (carried p327) | **p328** | **North America** | 🟢 **Evaluation — pedagogical quality, as a library** | **19 evaluators in five families, scoring model output "through the lens of learning science":** **Text Complexity** (8 — grade-level appropriateness, background-knowledge demands, vocabulary complexity, sentence structure, meaning directness, purpose clarity, organizational structure, reference-knowledge demands) · **Feedback** (7 — strength acknowledgment, revision actionability, student-response specificity, revision accuracy, revision manageability, **withholding answers**, tone appropriateness) · **Graphics** (2, early access) · **Academic Standards Alignment** (1, math) · **Durable Skills** (1, critical thinking). Python **and** TypeScript SDKs: `pip install learning-commons-evaluators`, `npm install @learning-commons/evaluators`. 🟢 **This file's own p319 finding was that the sector's quality metric — LLM-judged helpfulness — is not a pedagogy signal. This is the first library that measures the thing instead, and the code is MIT.** 🔴 **The commercial boundary is in the data, not the code: the expert-annotated CLEAR and PERSUADE 2.0 corpora are CC BY-NC-SA 4.0. Ship the evaluators and their prompts in a paid product; do NOT ship those corpora and do NOT use them to validate a commercial model release. Re-annotate against client data, or validate in-house and keep the corpus out of the deliverable** |
+
+### 🟢 One platform-tier grant confirmed, filed in `verticals/solutions.md`
+
+**`OpenOLAT/OpenOlat` is Apache-2.0, read first-hand this pass** — `master/LICENSE`, 10,982 B. This file has carried OpenOLAT for passes as *"the crack in the copyleft-platform rule"* on secondary evidence; **the grant is now byte-verified, and it resolves on `master`, not `main`** — the same branch hazard p296 attached to `autolab/Autolab`. 🔵 **Second instance of that hazard in this KB, so it is a probe rule now, not an anecdote: always probe `master` before concluding a platform has no licence file.**
+
+### 🔴 The verification surface of this pass, recorded because it bounds every claim above
+
+**This pass could read shipped bytes and nothing else.** `raw.githubusercontent.com` → **200**. 🔴 **`github.com` (rendered repo page) → 403. `api.github.com` → 403.** `arxiv.org`, `huggingface.co`, `unesco.org`, `codeberg.org` → **no connect at all**.
+
+🔵 **p327 read licences off the rendered GitHub sidebar; p328 cannot see the sidebar.** So: **grants, byte counts, file paths, code and README text above are first-hand; stars, forks, commit counts, topics and descriptions are unobtainable**, and every star figure above is marked `carried` with the pass that measured it. 🟢 **The channel that survived is the one the rights analysis runs on — which is the only analysis in this file a client can be billed for.**
 
 ## Pass 327 · 2026-10-19 (thirteenth pass of this date) — sixty-four rows, and six of them were graded for this file a day ago
 

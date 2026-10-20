@@ -1,0 +1,10 @@
+# p328 new supply: grants read first-hand on raw.githubusercontent.com over 6 filenames x 3 branches.
+# stars: NOT OBTAINABLE this pass (github.com + api.github.com both 403). n/v = not verified.
+repo	grant	grant_path	grant_bytes	copyright_line	stars	region	region_evidence	shelf	verdict
+eai6/ai-tutor	MIT	main/LICENSE + master/LICENSE	1090	Copyright (c) 2026 World Bank Group and contributors	n/v	EMEA	README: Seychelles secondary schools; seed_seychelles ships 7 geo + 8 math units	agents/top.md	ADDED-to-table
+Jellypod-Inc/school-skills	MIT	main/LICENSE	1065	Copyright (c) 2026 Jellypod	n/v	UNPLACED	no country/district/institution named in README	agents/top.md	ADDED-to-table
+afri-bit/revibe	MIT	main/LICENSE	1074	Copyright (c) 2026 - present afri-bit	n/v	UNPLACED	no country/institution named in README	agents/top.md	ADDED-to-table
+HugeCatLab/ChatTutor	AGPL-3.0	main/LICENSE	34522	GNU AGPL v3 (FSF text)	~1.2k-third-party-carried	APAC-language-signal-only	README_CN.md present; NO country or institution named	agents/top.md	ADDED-to-table-DO-NOT-EMBED
+OpenOLAT/OpenOlat	Apache-2.0	master/LICENSE	10982	Apache License 2.0	n/v	EMEA	Apereo/CH ecosystem (carried)	verticals/solutions.md	CONFIRMED-blog-claim-true
+frappe/lms	AGPL-3.0	main+master+develop/license.txt	33893	GNU AGPL v3 (FSF text)	n/v	Global	n/a	verticals/solutions.md	BLOG-CLAIM-FALSIFIED-asserted-MIT
+foradian/fedena	NONE	6 filenames x 3 branches all 404	0	n/a	n/v	n/a	n/a	verticals/solutions.md	REJECTED-no-grant-no-rights

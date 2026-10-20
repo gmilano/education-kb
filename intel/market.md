@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 
 # Market intelligence — education
@@ -374,6 +374,18 @@ anything about my institution?" that is not a bespoke integration — and becaus
 
 ## Regulation by region — the real buying trigger
 
+### 🔴 CORRECTION (p328) — the EU AI Act high-risk date this file has been quoting has moved by sixteen months
+
+**This file and `compose/patterns.md` P4 have both been built on Annex III education obligations biting on 2026-08-02.** The p328 EMEA sweep reports that date **superseded**: high-risk obligations for **stand-alone** education AI systems move to **2027-12-02**, and for high-risk AI **embedded in regulated products** to **2028-08-02**, via **Regulation (EU) 2026/1744**.
+
+🟢 **What does NOT move, and this is the part that keeps the EMEA bid alive:**
+- **Art. 4 AI literacy** — applicable since **2025-02**, already binding on institutions today.
+- **Art. 50 transparency** — unmoved. Sources in this sweep disagree on the exact date (**2026-08-02** vs **2026-11-02**); **the disagreement is recorded rather than resolved**, and either way it is *this quarter or next*, i.e. **before** the high-risk regime.
+
+🟡 **Confidence, stated plainly: this is a single-sweep finding from secondary legal-commentary sources, and one of them notes the Council had not formally adopted the text at the time of writing.** `eur-lex.europa.eu` and every institutional host were unreachable this pass (see the gap note), **so the Regulation number above is NOT first-hand.** 🔵 **Verify against EUR-Lex before it goes in a client deck.**
+
+🔵 **The commercial read, and it is a sharpening rather than a loss.** The EMEA pitch has been *"the compliance deadline is weeks away."* It is not, and a client who checks will find that out. **The honest and still-urgent pitch is the inversion: the binding duties that remain on the near calendar are literacy and transparency — documentation, disclosure, training — which is the cheap half of the Art. 50 package and sells as a 6–8 week engagement. The expensive half (conformity assessment, the Annex IV technical file) now has eighteen months of runway, which makes it a 2027 pipeline item, not a 2026 emergency.** 🔴 **A studio that keeps quoting August 2026 will be corrected by the client's counsel.**
+
 - **North America: four states now have *enacted* education-specific AI statutes, and one of them
   contains a product requirement nobody in this KB has been scoping — a parent opt-out.** New this
   pass: **Idaho, Maryland, Oklahoma and Virginia** each passed 2026 measures requiring the state
@@ -696,6 +708,24 @@ anything about my institution?" that is not a bespoke integration — and becaus
 > should be sold the evidence chain instead.
 
 ### North America
+### 🟢 The binding district mandate arrived, it is dated, and the first deadline has already passed (added p328)
+
+🔴 **This region crossed from guidance into enforceable obligation during 2026, and one deadline is already behind us.** From the p328 sweep:
+
+| instrument | what it binds | date |
+|---|---|---|
+| **Ohio** — district AI-use policy mandate | **every district must have adopted an AI use policy** | 🔴 **2026-07-01 — already past** |
+| **Idaho S.B. 1227** | district policies **+ AI literacy standards** | signed **2026-03** |
+| **Oklahoma S.B. 1734** | **parent opt-out rights** + **teacher review of AI output** | 2026 session |
+| **Maryland S.B. 720** | state guidance, **teacher professional development**, district tool-evaluation support | 🟡 **status contested** — one source reports signed and effective 2026-06-01, another reports it only passed one chamber |
+| **California A.B. 1159** | would **bar using student data to train AI models** unless it directly benefits the school | proposed |
+
+**Coverage: roughly 33–35 states plus Puerto Rico now issue official AI-in-education guidance, up from about 28 in early 2025.**
+
+🟢 **The opportunity, and it is a different sale from the one this file has been describing.** A mandate to *have a policy* is not a mandate to have a *good* one, and the sweep's own finding is that **most current proposals do not require vendors to disclose how outputs are generated, or to show that a tool was tested for bias or accuracy.** 🔵 **So the districts that met the Ohio deadline bought a document, and nobody checked whether their tools comply with it.** That is a **conformance-gap engagement**: take the district's adopted policy as the specification, audit the deployed AI estate against it, and produce the evidence the policy implies but did not require. **It is sellable to a client who believes they are already done, which is the easiest procurement conversation in this region.**
+
+🟢 **And the artefact to build it on is now permissive.** `eai6/ai-tutor` (**MIT**, p328) ships `ConsentRecord` with a **`parental` consent type and a `withdrawn_at` timestamp**, plus `export_user_data` / `delete_user_data` commands — **exactly the mechanics Oklahoma's opt-out and California's data-use restriction ask for**, and the first time this KB has held them under a licence that can enter a deliverable. 🔵 **Pair it with `anthropics/k12-teacher-skills` and `learning-commons-org/agent-skills` (both Apache-2.0, both now on the `agents/top.md` shelf) for the teacher-workflow layer.**
+
 ### 🟢 The standards spine is now a commodity here — move the bid up a layer (added p327)
 
 🔴 **What changed: a US client can get the curriculum-standards layer for free, and may already
@@ -836,6 +866,19 @@ upper-secondary extension is scope, and should be priced as scope.
    falling (17% student confidence, intent down 9 points), credibility is the product.
 
 ### EMEA
+### 🟢 The region's reference implementation is now MIT, it was funded multilaterally, and it ships the consent layer (added p328)
+
+🟢 **`eai6/ai-tutor` — MIT, 1,090 B grant read first-hand, *"Copyright (c) 2026 World Bank Group and contributors"*, seeded with a Seychelles curriculum (7 geography + 8 mathematics units).** It is the find of p328 and it is placed in this region.
+
+**Why it changes the EMEA conversation specifically:**
+- 🟢 **It is the first permissive artefact in this KB that ships a GDPR layer as code rather than as documentation.** `apps/safety/models.py`: `ConsentRecord` with a **`parental`** type and a `withdrawn_at` timestamp, `unique_together` on (user, consent_type); `SafetyAuditLog` with a **pseudonymised 16-char `user_hash`**, `consent_given` / `consent_withdrawn` event types and a `severity` field; management commands `export_user_data`, `delete_user_data`, `safety_cleanup`. 🔵 **Consent withdrawal as a first-class timestamped event, and pseudonymisation at the log layer, are the two things a DPO asks for and an edtech pilot never has.**
+- 🟢 **It answers the sovereignty question without a port.** `local Ollama` is a first-class provider alongside Claude, GPT, Gemini and Azure OpenAI, **so "no student data leaves the jurisdiction" is a configuration change.** Combine with `open-edge-platform/education-ai-suite` (Apache-2.0, Intel, OpenVINO) for the no-GPU variant.
+- 🟡 **It is an Africa-placed artefact in a region this KB has mostly covered through the EU.** Seychelles is a **small island developing state**, and the repo's `seed_seychelles` command plus its *"local context"* pedagogy principle (examples adapted to Seychelles geography and culture) make it **a localisation template, not just a codebase** — which is the shape of a ministry engagement across the African Union's education ministries.
+
+🔴 **Two caveats that must travel with this row into any bid.** (1) **The World Bank affiliation is self-declared** — copyright line and contributors list name the World Bank Education Team, but the repository sits in a **personal namespace**, and `github.com`, `api.github.com` and `worldbank.org` were all unreachable this pass, **so the institutional link is uncorroborated.** Say *"MIT, with the World Bank Group on the copyright line"*; do not say *"a World Bank project."* (2) **The announced Seychelles national programme appears to be a different stack** — a World Bank 2026 Annual Meetings transcript has a Seychelles minister describing a rollout built on a **proprietary Grok tutor**. 🔵 **That gap — open artefact here, proprietary procurement there — is the sale, not an objection to it: the open stack is what a ministry can be shown, audited and handed.**
+
+🔴 **And the date correction above is an EMEA correction: the Annex III high-risk deadline is reported moved to 2027-12-02. Re-scope the EMEA compliance pitch to Art. 4 literacy and Art. 50 transparency, which have not moved.**
+
 ### 🟢 The integrity layer has a maintaining university behind it — and it is a procurement answer, not a feature (added p327)
 
 🟢 **`dodona-edu/dolos` — MIT, 1,083 B licence read first-hand at p327, 352 ★, 48 forks, 3,838
@@ -1000,6 +1043,21 @@ the *metadata* workload, not just the tutor demo.
    looking for content.
 
 ### APAC
+### 🟢 Korea's AI Basic Act is in force with education named high-impact, and India's Class-3 mandate starts this school year (added p328)
+
+| jurisdiction | instrument / move | date | what it means for a bid |
+|---|---|---|---|
+| **South Korea** | **AI Basic Act in force**, education named among **high-impact** sectors | 🔴 **2026-01-22**, with a **grace period of at least one year before fines** | 🟢 **The highest-quality APAC trigger in this file: a binding obligation already in force, with a penalty cliff ~12 months out.** The grace period is the engagement window — remediate before fines, not after |
+| **South Korea** | **AI-textbook programme stripped of official status** by the National Assembly; adoption **under 30%** | 2025-08 | 🔴 **The cautionary case, and it is the most useful single data point in this region.** A national top-down content mandate failed on adoption, not on technology. **Lead with teacher workflow and measured outcomes; do not lead with content volume** |
+| **India** | **AI + computational thinking mandatory from Class 3**, government *and* private schools | **2026–27 school year** | 🟢 **The largest dated demand signal in the sector.** Reference implementation already on the shelf: `microsoft/Shiksha-Copilot` (**MIT**, Microsoft Research India + **Sikshana Foundation**) — a named ministry-adjacent NGO deployment, which is what a public-sector bid asks for |
+| **China** | reported as one of only **two** nations (with the **UAE**) running a **compulsory national AI curriculum** since the **2025-26** school year; binding rules on algorithms, deep synthesis and generative AI | in force | 🟡 Curriculum demand is real; **the data boundary is the constraint** — see trend 12 and `compose/patterns.md` P10 Variant C, where the Chinese curriculum artefact is **CC BY-NC** and cannot enter a deliverable |
+| **Japan** | **AI Basic Plan** adopted under the AI Promotion Act | **2026-07-14** | 🟡 Promotion without penalties. **No compliance trigger — sell capability, not compliance** |
+| **India** | still **no dedicated AI statute**; MEITY content-rule amendments (2026-02) target platforms, not education | — | 🔵 **So the India sale is the curriculum mandate, not regulation.** Do not build an India pitch on a compliance deadline that does not exist |
+
+🟢 **Three APAC agents reached the `agents/top.md` shelf this pass** (graded at p296, written into p327's commentary, cut into the canonical table at p328): **`THU-MAIC/OpenMAIC`** (MIT, Tsinghua, the largest permissive education agent in this KB — multi-agent classroom shell with `skills/`, `eval/`, `e2e/` already wired), **`microsoft/Shiksha-Copilot`** (MIT, India), **`Orenda-Project/rumi-platform`** (Apache-2.0, **Pakistan**, Taleemabad national-curriculum library, 847 commits). 🔵 **For the first time this region's shelf is not thinner than EMEA's.**
+
+🟡 **One new APAC-adjacent agent is copyleft and should not be embedded:** `HugeCatLab/ChatTutor` is **AGPL-3.0** (34,522 B grant read first-hand) and placed here **on a `README_CN.md` language signal only** — no country or institution is named. **Read it; do not ship it in a proprietary deliverable.**
+
 ### 🟢 Three region-placed agents were already graded for promotion and never delivered — they are live now (added p327)
 
 🔴 **p296 placed three APAC artefacts, marked all three `PROMOTE-to-agents-top`, and none reached a
@@ -1130,6 +1188,26 @@ price it as greenfield, because there is nothing to fork.
    automation, with the fewest regulatory blockers of any major market in this KB.
 
 ### LATAM
+### 🟢 UNESCO put a regional AI-in-education observatory in Chile, and the adoption-versus-governance gap is now a number (added p328)
+
+| finding (p328 sweep) | detail |
+|---|---|
+| 🟢 **UNESCO launched the Observatory of Artificial Intelligence in Education for Latin America and the Caribbean** | announced **2026-04**, **based in Chile** |
+| 🔴 **The gap, quantified** | **more than 50% of teachers in Chile and Brazil already use these tools**, against **fewer than 10% of institutions in the region holding any formal guidance** |
+| 🔴 **Chile — Ley 21.719 (personal data)** | **in force 2026-12-01** — **the region's nearest dated compliance deadline, now about six weeks out.** A dedicated AI bill remains in the Senate |
+| 🟡 **Brazil — PL 2338/2023** | passed the **Senate** in late 2024; **still pending in the Câmara dos Deputados.** Not yet an obligation |
+| 🟡 **Brazil / Mexico — education specifically** | **orientative guidance or open consultations, not duties.** Universities largely operating in a regulatory vacuum |
+| 🟢 **Institutional demand signal** | **Tecnológico de Monterrey** signed an agreement with UNESCO on educational AI and plans AI integration across **44+ programmes by 2026** |
+
+🟢 **The opportunity this creates is unusually clean, because the two numbers point opposite ways.** **Teacher adoption above 50% with institutional governance below 10% is not a technology gap — it is a liability gap that has already opened.** The tools are in the classroom; the policy, consent basis and audit trail are not. 🔵 **And unlike EMEA, where the expensive obligation just slid to 2027, LATAM has a hard date: Chile's Ley 21.719 on 2026-12-01.** **A Chilean institution with majority teacher AI use and no formal guidance is six weeks from processing student personal data under a new statute with no documented lawful basis.**
+
+🟢 **What to build it on, all permissive and all already on this KB's shelves:**
+- **`AI-for-Education/pedagogy-benchmark`** (**MIT**, foundations row since p327) — **1,143 questions from real teacher-qualification examinations (920 CDPK + 223 SEND)**, acknowledging **Chile's MINEDUC Agencia de la Calidad de la Educación and CPEIP**. 🟢 **The region's own pedagogy benchmark, and the exams behind it are Chilean — so "prove it teaches" is answerable in-region with a licence that can ship.**
+- **`eai6/ai-tutor`** (**MIT**, p328) for the consent and audit layer: `ConsentRecord` (incl. **parental**, `withdrawn_at`), pseudonymised audit log, `export_user_data` / `delete_user_data`. 🔵 **Ley 21.719 compliance work needs exactly these mechanics, and this is the first time this KB can point a LATAM client at them under MIT.**
+- **`bncc-dev`** (CC BY 4.0) for the Brazilian curriculum spine, and **`withmarbleapp/os-taxonomy`** (ODbL-1.0) for the cross-national one — see `compose/patterns.md` P10 Variant D.
+
+🔴 **Not carried, and recorded so it does not creep in later.** One source asserts Chile approved a *"Marco Nacional de IA Educativa"* in 2025 under **Ley 21.640**, citing IDB data. **No other source in the sweep supports it and no official record was reachable. It is excluded from this file.**
+
 ### 🟢 The region finally has a pedagogy benchmark, it is MIT, and the exams behind it are Chilean (added p327)
 
 🟢 **`AI-for-Education/pedagogy-benchmark` — MIT, 1,063 B licence read first-hand at p327, 12 ★,
@@ -1354,6 +1432,19 @@ require a sovereign model.
    same offer as pattern P3 with the compliance driver replaced by an evidence driver.
 
 ## Declared regional gaps — what was searched this pass and not found
+
+### Pass 328 — what was searched per region, and what came back
+
+🔵 **Four regional queries run, one per region, in the region's own idiom where that mattered. An informed gap is recorded as a finding; silence is not.**
+
+| region | query | outcome |
+|---|---|---|
+| **North America** | `AI education North America 2026 adoption state policy K-12 districts regulation` | 🟢 **New and material**: Ohio's 2026-07-01 district deadline, Idaho S.B. 1227, Oklahoma S.B. 1734, Maryland S.B. 720 (**status contested**), California A.B. 1159, 33–35 states + PR issuing guidance. 🔴 **Gap: nothing on Canada or Mexico.** Every result was US-only. **This region's "North America" coverage is in practice US coverage, and that should be said in a bid rather than papered over** |
+| **EMEA** | `AI education EMEA Europe 2026 adoption EU AI Act high-risk schools players` | 🟢 **New and material**: the Annex III high-risk postponement to **2027-12-02** / **2028-08-02** (Reg. (EU) 2026/1744 — **not first-hand**). 🔴 **Gap, and it is the same one as p327: zero named EMEA vendors, zero market-share figures, zero national adoption statistics for the UK, Germany or France.** Nine results, all of them AI-Act explainers. **The EMEA competitive map in this file remains regulation-only, and four consecutive passes have failed to populate it — the query shape is the suspect, per this pass's own retraction of "the query set is exhausted"** |
+| **APAC** | `AI education APAC 2026 adoption regulation India China Japan Korea players` | 🟢 **New and material**: Korea's AI Basic Act in force 2026-01-22 with education high-impact + ≥1yr grace; India's Class-3 mandate for 2026–27; China/UAE as the only compulsory national AI curricula; Japan's AI Basic Plan 2026-07-14. 🟡 **Caveat recorded: the education-specific claims trace to a single outlet and could not be corroborated** — government curriculum notices were unreachable. 🔴 **Gap: no named APAC vendors or market sizes** |
+| **LATAM** | `AI educación LATAM 2026 adopción regulación Brasil México Chile edtech` | 🟢 **New and material**: UNESCO's LAC observatory (Chile, 2026-04); >50% teacher use in Chile/Brazil vs <10% institutional guidance; Chile Ley 21.719 in force 2026-12-01; Brazil PL 2338/2023 pending in the Câmara; Tec de Monterrey + UNESCO, 44+ programmes. 🔴 **Gap: no edtech market-size figures for Brazil, Mexico or Chile — asked for directly, not returned.** 🔴 **One unsupported claim actively excluded** (the "Ley 21.640 Marco Nacional") |
+
+🔴 **The gap that spans all four regions, and it is the same one for the fourth pass running: this file can place *regulation* by region and cannot place *vendors* by region.** Every regional query returns policy and returns no competitive map. 🔵 **p328's own retraction applies here: four passes of the same bare query shape returning the same nothing is evidence about the query, not about the market. The next pass should drop `players` — which ranks legal explainers — and query the procurement surface instead: national framework agreements, ministry tender portals, and university consortium contracts.**
 
 
 ### Pass 327 — what was searched per region, and what came back

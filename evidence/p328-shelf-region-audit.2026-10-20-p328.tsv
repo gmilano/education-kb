@@ -1,0 +1,17 @@
+# p328 shelf-region audit: re-grep of every PROMOTE-* verdict against the SHELF REGION, not the filename.
+# Command for agents/top.md: sed -n '/^## The table/,/^## /p' agents/top.md | grep -c <slug>
+# Command for repos/foundations.md: grep -c <slug> (this file's convention is one `### The rows` ledger per pass = the shelf)
+# Verification channel p328: raw.githubusercontent.com=200 ; github.com=403 ; api.github.com=403 ; arxiv/hf/unesco/codeberg=000
+slug	verdict_source	graded	in_file_p327	in_SHELF_REGION_p327	action_p328	in_SHELF_REGION_p328	grant_reread_p328	grant_bytes	region
+THU-MAIC/OpenMAIC	p296	PROMOTE-to-agents-top	YES	NO	CUT-to-table	YES	MIT	1064	APAC
+anthropics/k12-teacher-skills	p296	PROMOTE-to-agents-top	YES	NO	CUT-to-table	YES	Apache-2.0	10173	North America
+microsoft/Shiksha-Copilot	p296	PROMOTE-to-agents-top	YES	NO	CUT-to-table	YES	MIT	1140	APAC
+Orenda-Project/rumi-platform	p296	PROMOTE-to-agents-top	YES	NO	CUT-to-table	YES	Apache-2.0	11286	APAC
+learning-commons-org/agent-skills	p119	measured-never-promoted	YES	NO	CUT-to-table	YES	Apache-2.0	10173	North America
+learning-commons-org/evaluators	p119	measured-never-promoted	YES	NO	CUT-to-foundations	YES	MIT-code/CC-BY-NC-SA-corpora	1615	North America
+dodona-edu/dolos	p296	PROMOTE-to-foundations	YES	YES-ledger-convention	none-needed	YES	MIT	1083	EMEA
+autolab/Autolab	p296	PROMOTE-to-foundations-with-grade-note	YES	YES-ledger-convention	none-needed	YES	Apache-2.0	11323	North America
+datakind/student-success-tool	p296	PROMOTE-to-foundations	YES	YES-ledger-convention	none-needed	YES	MIT	1080	North America
+open-edge-platform/education-ai-suite	p296	PROMOTE-to-foundations	YES	YES-ledger-convention	none-needed	YES	Apache-2.0	11350	Global
+AI-for-Education/pedagogy-benchmark	p296	PROMOTE-to-foundations	YES	YES-ledger-convention	none-needed	YES	MIT	1063	LATAM
+littlecookie0722/AI-Teaching-Agent	p296	PROMOTE-reference-only	YES	n/a-reference-only	held-reference-only	n/a	MIT	1068	UNPLACED

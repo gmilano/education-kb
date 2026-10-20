@@ -1,10 +1,22 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 
 # Current trends — education
+
+**Pass 328 · 2026-10-20 (first pass of this date). Three trends added, two corrected, and one of
+this file's own conclusions retracted outright.** The pass set out to execute p327's prescribed
+audit and found that p327's fix had been written into the wrong region of the right file — so the
+declared-gap discount is refined a **fourth** time, and the new form is about the write's *target*
+rather than the write. 🔴 **p327's conclusion that "the prescribed query set is exhausted for this
+industry" is RETRACTED**: the same channel, with four extra words, returned four new agents, three
+of them MIT. The two new sector trends are that **multilateral development finance has started
+producing permissively licensed, production-shaped education software** — which qualifies p325's
+reading of public funding — and that **copyleft has appeared at the top of the *agent* tier**,
+which is the first real counter-instance to trend 4's permissive-agent / copyleft-platform split.
+
 
 **Pass 327 · 2026-10-19 (thirteenth pass of this date). Two trends added, one corrected, and the
 correction is to this file's own method.** The pass found no new sector trend on the prescribed
@@ -69,6 +81,71 @@ the metric this sector reports is unsound, which forces a correction to pass 318
 `lumen`. **Trend 11 is extended twice**: star solicitation has been productised with a unit test
 and a CI job, and the licences themselves — not just the descriptions of them — are drifting out
 of open source at the popular end of the market.
+
+## The declared-gap discount, fourth mechanism — the write's TARGET, not the write — NEW in p328
+
+🔴 **Measured, with one command, and the command is the point.** p327 prescribed: *"re-grep every `PROMOTE-*` verdict in `evidence/` against the four shelf files."* Run literally — `grep -c <slug> agents/top.md` — **it passes: all ten p296 promotions are present.** Run against the **shelf region** — `sed -n '/^## The table/,/^## /p' agents/top.md | grep -c <slug>` — **it returns 0 for every one of them.** The rows were written into p327's own narrative commentary at lines 12–33, **above** the file's single canonical `## The table`.
+
+🔵 **So the sequence now has four terms, and each one is narrower than the last.** p324/p325: a declared gap is a statement about the **query**. p326: about the **filter**. p327: about the **write**. **p328: about the write's *target*.** 🟢 **And the fourth term is the only one that is a defect in the KB's *structure* rather than in its *behaviour*, which is why it survived a pass that was explicitly looking for it.**
+
+🔴 **The structural cause, stated so it generalises past this KB.** Two shelf files, two incompatible conventions. `repos/foundations.md` keeps **one `### The rows` ledger per pass** — so a row cut into a pass section *is* on the shelf, and that file passed this audit. `agents/top.md` keeps **a single canonical table plus running commentary above it** — so a row cut into a pass section is invisible to anyone reading the table. 🟡 **A per-file-name audit cannot distinguish these two cases, and the file with the weaker convention is the one that silently drops rows.** **The largest permissive education agent this KB has ever recorded — `OpenMAIC`, MIT, 41.1k ★ — was absent from the table for a full day after being found, graded and region-placed.**
+
+🟢 **The rule, and it is one line of shell.** **An audit must name the shelf *region*, not the file.** A KB that mixes ledger-per-pass and single-canonical-table conventions must either normalise them or audit each by its own shape. **This pass cut nine rows into `## The table` and verified the cut with the region-scoped command above** — which is the first time in four passes that a prescribed fix was checked by the instrument that would have caught it failing.
+
+## 🔴 RETRACTION — "the prescribed query set is exhausted for this industry" (asserted p327) is false, and the error class is this file's own
+
+**p327 ran four global and four regional queries, got zero novelty, and concluded the query set was exhausted for education.** 🟢 **p328 ran the same eight channels. The agent channel returned four new repositories — `eai6/ai-tutor`, `Jellypod-Inc/school-skills`, `afri-bit/revibe`, `HugeCatLab/ChatTutor` — three MIT and one AGPL-3.0, none previously held.**
+
+🔵 **The difference was four words.** `github trending education AI 2026` ranks SEO roundup blogs, which recycle the same twenty general-purpose agents every month. `github trending education AI 2026 **new repository tutor curriculum**` ranks **GitHub's own topic indexes** — `ai-tutor`, `education-ai`, `ai-in-education`, `study-assistant`, `programming-tutor` — **which are the actual supply surface.**
+
+🔴 **Why this is worse than an ordinary wrong call: it is the exact error this file had already named, one level up.** p324 through p327 each established that a declared gap is a statement about the instrument rather than about the world. **p327 then declared a gap across an entire industry and attributed it to supply.** 🟢 **The generalised rule, which now has two independent confirmations: when a query channel returns nothing across several passes, change the query's *landing surface* before concluding anything about the market.** Roundup prose and index pages are different surfaces, and only one of them contains repositories that nobody has blogged about yet.
+
+🟡 **The honest residue of p327's claim.** The *bare* `top open source AI agents {industry} {year} github MIT` query has now returned nothing education-specific for **five consecutive passes**, and that is a real finding about *that query* — it ranks general-purpose agent roundups, permanently. **It should be retired from the prescribed set and replaced with a topic-index sweep.**
+
+## Multilateral development finance is now producing permissively licensed, production-shaped education software — NEW in p328
+
+🟢 **The instance, with the grant read first-hand:** `eai6/ai-tutor` — **MIT**, `main/LICENSE` and `master/LICENSE` both 1,090 B, *"Copyright (c) 2026 **World Bank Group** and contributors"*, README contributors naming the **World Bank Education Team**. Django 6.0.2, seven apps all resolving as real files, `config/settings.py` 17,064 B.
+
+🔵 **Why it is a trend rather than an anecdote: it is the first artefact in this KB where the *funder* is a development bank and the *output* is permissive and complete at once.** This sector's publicly funded code has a long record in this file of being **permissive at the edges and unlicensed or restricted at the core** (trend: p322, extended p323). **This one is MIT all the way through, and the core is the part a client needs most** — the consent and audit models, the skill graph, the mastery gating.
+
+🟡 **It qualifies p325's trend rather than overturning it.** p325 concluded: *public funding does not predict a licence posture — the operator's engineering maturity does.* **That still holds, and this instance is consistent with it:** the repository shows dated engineering decisions left in the source (*"chromadb removed 2026-05-24 — vectors now in Postgres via pgvector"*), a CI/CD workflow, a fork-and-deploy walkthrough, and a seven-app separation of concerns. 🟢 **The refinement is that development-bank-funded work has started clearing that maturity bar, which it previously did not — and when it does, the licence has been permissive.** **Two more instances would make it a reliable sourcing channel; one makes it a channel worth sweeping, which no pass of this KB has ever done.**
+
+🔴 **The caveat that must travel with the trend.** The institutional attribution is **self-declared**: the repository sits in a **personal namespace**, and `github.com`, `api.github.com` and `worldbank.org` were all unreachable this pass, so **the affiliation is uncorroborated**. 🔵 **And the announced national programme in the same country appears to run on a different, proprietary stack** — a World Bank 2026 Annual Meetings transcript has a Seychelles minister describing a **Grok**-based national tutor. **The gap between the open artefact and the procured stack is this trend's most commercially interesting feature, and this pass does not resolve it.**
+
+## Copyleft has reached the agent tier — trend 4's permissive-agent split has its first real counter-instance — NEW in p328
+
+🔴 **`HugeCatLab/ChatTutor` is AGPL-3.0**, read first-hand: `main/LICENSE`, **34,522 B**, *GNU Affero General Public License Version 3*. A third-party roundup puts it near **1.2k ★** (carried; unverifiable this pass). It is a **visual interactive tutor** — an agent-tier artefact, not a platform — on a pnpm monorepo with Vitest.
+
+🔵 **Trend 4 of this file has held for ten passes: agents are permissive, platforms are copyleft.** The split was never a coincidence — platforms inherit the installed base's licence (Moodle GPL-3.0, Open edX AGPL-3.0, Canvas AGPL-3.0), while agents and skills are new code written by people who want adoption. 🔴 **An AGPL tutor near the top of the attention distribution breaks the second half of that explanation**, and the practical consequence is sharper than the taxonomy: **AGPL §13 reaches the users of a hosted service, so an AGPL *tutor* is a licence event for exactly the deployment shape this sector uses — a web app students log into.**
+
+🟡 **Two passes of this is a trend; one is a warning.** Recorded now so the next pass checks whether it is the start of a pattern or an outlier. 🟢 **What is already actionable: the agent tier can no longer be treated as permissive-by-default during sourcing.** Every agent row in `agents/top.md` carries a first-hand grant read for this reason, and **this is the first time that discipline has caught something at the top of the distribution rather than in the tail.**
+
+## 🟡 Correction to trend 11 — the unreliable-metadata finding now extends to secondary sources, and it skews permissive
+
+**Trend 11 has held since p318: this sector's published metadata is unreliable in both directions — stars solicited, licences misdeclared in README badges.** p322 logged the README-versus-LICENSE hazard **four times inside one organisation**.
+
+🔴 **p328 extends it one layer out, to the third-party comparison blogs a studio lead actually reads.** Three platform licence claims from 2026 comparison articles, probed against the repositories' own grant files:
+
+| platform | blog claim | **first-hand p328** |
+|---|---|---|
+| `frappe/lms` | *"MIT licence with self-hosted data ownership"* | 🔴 **AGPL-3.0** — `license.txt`, 33,893 B, on all three branches |
+| `foradian/fedena` | *Apache 2.0* | 🔴 **No licence file at all** — six filenames × three branches, all 404 |
+| `OpenOLAT/OpenOlat` | *Apache 2.0* | 🟢 **Apache-2.0 confirmed** — `master/LICENSE`, 10,982 B |
+
+🔵 **Both errors ran in the permissive direction, which is the dangerous one.** A copyleft platform mislabelled MIT is how an AGPL obligation enters a deliverable without anyone deciding to accept it. 🟢 **The probe that settles it is one HTTP request against the repository's own grant file. This pass ran eighteen of them, and the two falsifications cost about ninety seconds.**
+
+## 🔴 The verification channel narrowed this pass, and which layer it narrowed on is itself the finding — NEW in p328
+
+| host | p327 | p328 |
+|---|---|---|
+| `raw.githubusercontent.com` | 200 | 🟢 **200** |
+| `github.com` (rendered repo page) | **200 — p327 read licences off the sidebar** | 🔴 **403** |
+| `api.github.com` | blocked | 🔴 **403** |
+| `arxiv.org`, `huggingface.co`, `unesco.org`, `codeberg.org` | 403 | 🔴 **000 — no connect** |
+
+🔵 **The channel that died is the *attention* channel; the channel that held is the *grant* channel.** Stars, forks, commit counts, topics and descriptions were unobtainable this pass; licences, byte counts, file paths, code and README text were all first-hand.
+
+🟢 **And by this file's own trend 11, that is the better of the two losses by a wide margin.** Star counts in this sector are **solicited** — p319 recorded a repository shipping star solicitation with a unit test and a CI job — and README licence badges are **wrong often enough to have been logged four times inside one organisation.** 🔵 **So a pass that can read grants but not stars can still do the rights analysis a client pays for, and cannot do the popularity analysis that was never reliable.** 🟡 **The operational rule: a KB in this sector should state claims in grant-verifiable terms wherever it has the choice, because the grant channel is the one that survives environment changes.** Every star figure written this pass is marked `carried` with its source pass, or **`n/v`** — never presented as verified today.
 
 ## The declared-gap discount, third mechanism — the WRITE, not the query or the filter — NEW in p327
 

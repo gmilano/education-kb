@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 
 # Compose patterns — education
@@ -47,6 +47,67 @@ risk explicitly** — one 138-star, single-maintainer MIT library is the seam in
 recipes, and that belongs in the SOW.
 
 ---
+
+## P15 — The ministry tutor you fork instead of build: MIT reference implementation + standards spine + pedagogy benchmark — NEW in p328
+
+🟢 **What changed at p328, and it is the reason this pattern replaces most of P1's build phase.** `eai6/ai-tutor` is **MIT** (`main/LICENSE` and `master/LICENSE`, both 1,090 B, *"Copyright (c) 2026 World Bank Group and contributors"*) and it already ships, **in code read first-hand this pass**, the four things every tutor engagement in this KB has quoted as build work: **5E-structured lesson steps, prerequisite mastery gating over an auto-built skill graph, a specified exit-ticket assessment, and a GDPR consent + audit layer.** 🔵 **This pattern is therefore a *fork, localise and prove* engagement, not a greenfield one — which is a materially different proposal to put in front of a ministry.**
+
+**Fits:** a national or sub-national ministry, a district consortium, or a development-finance-funded programme. **Region:** written for **EMEA** (the reference deployment is Seychelles) with **LATAM** and **APAC** variants below. **Shape:** 10–14 weeks to a provable pilot.
+
+### The components, each with its grant read first-hand at p328
+
+| layer | component | grant | why this one |
+|---|---|---|---|
+| **tutor core** | `eai6/ai-tutor` | 🟢 **MIT**, 1,090 B | Django 6.0.2, seven apps. **The fork base.** `apps/{accounts,curriculum,tutoring,dashboard,llm,media_library,safety}` all verified as real files |
+| **curriculum spine** | `withmarbleapp/os-taxonomy` | **ODbL-1.0** + CC BY-SA 4.0 | **1,591 topics, 3,225 prerequisite edges, 3,261 standards from seven national curricula.** 🟢 ODbL: a *produced work* stays yours — see P13 for the boundary |
+| **spine, national variant** | `bncc-dev` (Brazil, CC BY 4.0) · `cn-math-taxonomy` (🔴 **CC BY-NC — cannot ship**) | per-row | Use when the client's mandate names a national framework |
+| **curriculum validator** | `devissaputra/curriculum_knowledge_graph` | 🟢 **MIT**, 1,076 B | 8 entity types, 7 relation types, **invalid edges rejected**, cycle and coverage-gap detection, 36 passing tests. 🔴 **Take the validator, not its synthetic data** |
+| **teacher workflow** | `learning-commons-org/agent-skills` (preferred) or `anthropics/k12-teacher-skills` | 🟢 **Apache-2.0**, 10,173 B | Four K-12 skills; the Learning Commons build is **grounded in the Knowledge Graph over MCP**, so it ties to the spine rather than to a prompt |
+| **pedagogy evaluation** | `learning-commons-org/evaluators` | 🟡 code **MIT**; corpora **CC BY-NC-SA 4.0** | **19 evaluators in five families.** 🔴 **Ship the evaluators; never ship the CLEAR / PERSUADE 2.0 corpora** |
+| **outcome benchmark** | `AI-for-Education/pedagogy-benchmark` | 🟢 **MIT**, 1,063 B | **1,143 real teacher-qualification-exam questions** (920 CDPK + 223 SEND). Chilean source exams → **the LATAM variant's native instrument** |
+| **sovereign inference** | local **Ollama** (first-class in the fork) + `open-edge-platform/education-ai-suite` | 🟢 **Apache-2.0**, 11,350 B | Intel CPU/iGPU/NPU via OpenVINO. **"No student data leaves the building" is a config change, not a port** |
+| **integrity, if assessed work counts** | `dodona-edu/dolos` | 🟢 **MIT**, 1,083 B | Ghent University. Wire per **P11** — sell the audit trail, never the verdict |
+
+### How to wire it
+
+**1. Fork and stand up the reference, unmodified (week 1).** `seed_seychelles` ships 7 geography + 8 mathematics units; **run it first and demo it before touching anything.** The README carries a *fork & deploy to your own Azure* walkthrough and a CI/CD workflow; the Docker path is there if the client is not on Azure. 🔵 **A working tutor in week 1 is what buys the other thirteen weeks.**
+
+**2. Repoint the spine from the seed to the client's curriculum (weeks 2–4).** The ingest path is already the one a ministry has: **upload a curriculum PDF/DOCX → generated lesson steps, media, exit tickets and a skill map.** Then:
+- Run the generated skill graph through **`curriculum_knowledge_graph`'s validator** before anyone teaches from it — it **rejects invalid relation semantics** (`LearningOutcome ──TEACHES→ Course` is refused) and detects **cycles, bottlenecks, disconnected entities and assessment-coverage gaps**. 🔴 **An auto-extracted prerequisite graph with a cycle in it will lock students out of lessons, and `ai-tutor` gates on exactly that graph.**
+- Map topics to the client's standards via **`os-taxonomy`** where the national framework is one of its seven, or **`bncc-dev`** for Brazil.
+- 🔴 **Before quoting standard text in anything, read `os-taxonomy`'s `PROVENANCE.md`:** four frameworks ship **codes-only** (`ngss-k5`, `ngss-ms`, `c3-social-studies`, `ib-pyp-pspe`), UK NC ships in full under **OGL v3**, Common Core ships in full under the **purpose-limited CCSS Public License**. **Topic→standard links survive everywhere; NGSS and IB prose cannot be redistributed.**
+
+**3. Keep the pedagogy structural — do not let it collapse into a prompt (weeks 2–6).** The fork's value is that **5E is a phase tag on every `LessonStep`** and step types are a closed set (`teach`, `worked_example`, `practice`, `quiz`, `summary`). 🔵 **Localise the content inside that structure; resist the request to "just let the model freestyle in the client's language."** Keep the three-level hint ladder, the Socratic no-direct-answers constraint, the interleaved retrieval practice, and **remediation routed before an exit-ticket retake**. Tune the exit-ticket parameters (shipped: **35-MCQ bank, 10 sampled, 8/10 to pass**) with the client's assessment people, in writing.
+
+**4. Wire the consent and audit layer to the client's actual legal basis (weeks 3–6). This is the stage that wins the procurement.** `apps/safety/models.py` already ships:
+- `ConsentRecord` — `ConsentType` includes **`parental`**; `withdrawn_at` timestamp; `unique_together = ['user', 'consent_type']`, so consent state is unambiguous per user per purpose.
+- `SafetyAuditLog` — **pseudonymised 16-char `user_hash`** (not the user id), `consent_given` / `consent_withdrawn` / content-flagging / rate-limiting / age-verification event types, a `severity` field, three composite indexes.
+- Management commands **`export_user_data`**, **`delete_user_data`**, **`safety_cleanup`**.
+
+🟢 **Map these to the instrument by region, and the mapping is the deliverable, not the code:** **EMEA** → GDPR Art. 6 lawful basis per `ConsentType`, Art. 15 access via `export_user_data`, Art. 17 erasure via `delete_user_data`; **plus EU AI Act Art. 4 (literacy) and Art. 50 (transparency)**, which 🔴 **are the obligations still on the near calendar — the Annex III high-risk regime is reported moved to 2027-12-02, so do not sell this as beating an August 2026 deadline** (see `intel/market.md`). **LATAM** → **Chile Ley 21.719, in force 2026-12-01**, roughly six weeks out. **North America** → Oklahoma **S.B. 1734** parent opt-out maps to `ConsentType.PARENTAL`; California **A.B. 1159**'s bar on training against student data is a model-config and DPA question, not a code one; Ohio's district policy mandate (deadline **2026-07-01, already past**) means the client's own adopted policy is your specification. **APAC** → **Korea's AI Basic Act**, in force 2026-01-22, education named high-impact, **grace period ≈12 months** — the remediation window.
+
+**5. Prove it teaches, with two instruments, before scale (weeks 6–12). Non-negotiable.**
+- **`evaluators`** on the tutor's output: the **Text Complexity** family for grade-level appropriateness, and the **Feedback** family — including the **withholding-answers** evaluator, which **directly measures the fork's own Socratic constraint.** 🟢 **That alignment is the strongest reason to pick this evaluator set over an LLM-as-judge rubric.**
+- **`pedagogy-benchmark`** on the model stack: **1,143 real teacher-qualification-exam questions.** Report CDPK and **SEND** separately — **a tutor that scores well overall and badly on special educational needs is a tutor a ministry cannot deploy**, and this is the only instrument in the KB that separates them.
+- 🔴 **Keep the CC BY-NC-SA corpora out of the deliverable.** Validate in-house, or re-annotate against client data. **The report may cite the scores; the package may not contain the annotated CLEAR or PERSUADE 2.0 corpora.**
+
+**6. Sovereignty variant, if data cannot leave (any time).** Switch the `llm` app's per-purpose model config to **local Ollama** — already a first-class provider — and add **`education-ai-suite`** for Intel CPU/iGPU/NPU inference via OpenVINO. 🔵 **This is the only step in the pattern that is a configuration change rather than engineering work, and it is usually the step the client assumes is the hardest.**
+
+### What to sell, in order
+
+1. **Weeks 1–2 — the working demo on the client's own curriculum sample.** Flat fee. It is a fork, so this is real and cheap, and it reframes every later conversation.
+2. **Weeks 2–6 — curriculum spine + validated skill graph.** The validator output (cycles, bottlenecks, assessment-coverage gaps) **is itself a finding the client has never had about their own curriculum** and is sellable even if the tutor is never deployed.
+3. **Weeks 3–6 — the compliance package**, mapped to the client's named instrument. 🟢 **Highest margin, lowest build.**
+4. **Weeks 6–12 — the measurement report** from `evaluators` + `pedagogy-benchmark`. **This is the renewal.**
+5. **Then, and only then — scale and localisation.**
+
+### 🔴 What was not verified, stated plainly
+
+- **The World Bank affiliation is self-declared.** The copyright line and contributors list name the World Bank Group and its Education Team; **the repository sits in a personal namespace**, and `github.com`, `api.github.com` and `worldbank.org` were all unreachable this pass. **In a bid, say "MIT, with the World Bank Group on the copyright line." Do not say "a World Bank project."**
+- **Stars, forks and commit counts are unobtainable** — the metadata channel answered 403 throughout. **Maturity here is argued from the shipped code and the README, both read first-hand, not from attention.**
+- **The README's staging URL does not answer** (`000`). Evidence of intent to deploy, not of a live service.
+- 🟡 **The announced Seychelles national programme appears to be a different stack** — a World Bank 2026 Annual Meetings transcript describes a **proprietary Grok** tutor. 🔵 **Treat that as the opening, not the objection: an MIT stack the ministry can audit, host and keep is the argument against a single-vendor proprietary tutor, and it is the argument this pattern exists to make.** 🔴 **The transcript's "5,000 schools / one million students" figure is not carried — Seychelles' population is under 150,000, so it belongs to another country in the same session.**
+- **The EU AI Act postponement (Reg. (EU) 2026/1744) is from secondary legal commentary and is NOT first-hand.** **Verify on EUR-Lex before step 4's EMEA mapping goes into a client document.**
 
 ## P14 — The pre-wired K-12 stack: one vendor, three layers, and the Gated boundary as an architecture decision — NEW in p327
 

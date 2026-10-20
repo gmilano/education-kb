@@ -1,10 +1,51 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 
 # Vertical platforms — education
+
+## Pass 328 — the platform tier did not move for a sixth pass, and the news is that two blog-asserted licences were false in the permissive direction
+
+🔴 **No new platform row. Sixth consecutive pass.** The prescribed vertical query —
+`open source platform education LMS SIS MIT Apache 2026 self-hosted` — returned **nine results,
+all of them vendor or affiliate comparison blogs**, and nothing that is not already in this file.
+🔵 **Stated as a measured result and not as silence: the permissive education-platform supply has
+not changed in six passes, and the reason is structural, not seasonal — the installed base
+(Moodle GPL-3.0, Open edX AGPL-3.0, Canvas AGPL-3.0, OpenEduCat LGPL-3.0, Sakai ECL-2.0) is
+copyleft, and nobody is greenfielding an LMS in 2026.**
+
+🟢 **What the pass did produce is more useful than a row: three licence claims from those blogs,
+probed against the repositories' own grant files.** Two were wrong, **and both were wrong in the
+permissive direction**, which is the direction that puts an unnoticed copyleft obligation into a
+deliverable.
+
+| platform | asserted by a 2026 comparison blog | **read first-hand p328, on `raw`** | verdict |
+|---|---|---|---|
+| **OpenOLAT** · https://github.com/OpenOLAT/OpenOlat | Apache-2.0 | 🟢 **Apache-2.0** — `master/LICENSE`, **10,982 B**, genuine Apache text. Resolves on **`master`, not `main`**; mirror slug `openolat/openolat` serves the identical file | 🟢 **CONFIRMED.** This file has called OpenOLAT *"the crack in the copyleft-platform rule"* for several passes on secondary evidence. **The grant is now byte-verified.** It remains the only mature, permissively licensed LMS in this file |
+| **Frappe Learning** · https://github.com/frappe/lms | *"MIT licence with self-hosted data ownership"* | 🔴 **AGPL-3.0** — `license.txt`, **33,893 B**, identical on `main`, `master` **and** `develop` | 🔴 **FALSE.** Not MIT. **AGPL-3.0 is the strongest copyleft in this file** — §13 reaches the users of a hosted service, so a Frappe-based client portal propagates the obligation to every student who loads it. **Do not let this one into an architecture diagram on the blog's word** |
+| **Fedena** (school SIS) · https://github.com/foradian/fedena | Apache-2.0 | 🔴 **No licence file.** All six filenames (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license.txt`, `COPYING`, `LICENCE`) 404 on `main`, `master` **and** `develop` | 🔴 **UNUSABLE.** No grant means no rights, whatever a blog says. **Recorded so no future pass spends a probe on it** |
+
+🔵 **Why this belongs in this file rather than in a method note.** This file's standing finding —
+*"licence drift: at the popular end, this market is leaving open source"* — has always been
+measured against repositories. **This pass shows the drift is also being *mis-reported*, and
+mis-reported optimistically.** p322 logged the README-versus-LICENSE hazard four times inside a
+single organisation. **At p328 the same hazard is in the secondary literature, which is what
+a studio lead reads when they are not reading this KB.** 🟢 **The probe that settles it is one HTTP
+request against the repository's own grant file, and this pass ran eighteen of them.**
+
+### 🟡 The SIS gap is now a measured gap, not an unexamined one
+
+**There is still no permissively licensed open-source student information system in this file.**
+What the sweep confirmed: **OpenEduCat (LGPL-3.0) remains the only platform combining LMS + SIS +
+fees + parent app on one database**; the headline permissive candidate for SIS (**Fedena**) has
+**no grant at all**; and the permissive LMS candidates (**OpenOLAT**, Apache-2.0) **do not carry an
+SIS**. 🔵 **So the honest architecture statement for a bid is: permissive LMS *or* integrated SIS,
+not both — and the KB's existing answer, `openfun/joanie` (MIT, headless education ERP, promoted
+at p325), covers enrolment and orders rather than a full SIS.** 🔴 **Nothing found this pass closes
+that gap; it is restated here because six passes of "no new row" should not be allowed to read as
+"nothing was looked for."**
 
 ## Pass 327 — the platform tier did not move for a fifth pass, and the tier that did move is a *vendor stack*, not a platform
 

@@ -1,8 +1,65 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-19
+updated: 2026-10-20
 ---
+
+## 2026-10-20 — Pass 328 — the sweep returned four real agents after four passes of zero, and the channel that found them was the one that died
+
+**First pass of 2026-10-20.** 🔵 **This file is APPEND-ONLY. Everything below this section is
+prior history and stays.**
+
+**Eight prescribed queries run: four global, four regional. Novelty on the agent channel: 4** —
+three MIT, one AGPL-3.0. 🔵 **p327 concluded "the prescribed query set is exhausted for this
+industry." That conclusion is retracted here, and the reason it was wrong is specific and
+reusable.**
+
+### The prescribed sweep, channel by channel
+
+| channel | query | result |
+|---|---|---|
+| agents | `top open source AI agents education 2026 github MIT` | 🔴 **Nothing education-specific, for the fifth consecutive pass.** General agent roundups — OpenHands, CrewAI, LangGraph, OpenClaw, opencode, Hermes — plus `ashishpatel26/500-AI-Agents-Projects` and `microsoft/ai-agents-for-beginners` as curated lists. **Confirms p327's reading of THIS query, and only this query** |
+| trending | `github trending education AI 2026 new repository tutor curriculum` | 🟢 **Four new agents, all verified below.** `eai6/ai-tutor`, `Jellypod-Inc/school-skills`, `HugeCatLab/ChatTutor`, `afri-bit/revibe`. 🔵 **The query that worked added four words — `new repository tutor curriculum` — and routed into GitHub *topic* pages (`ai-tutor`, `education-ai`, `ai-in-education`, `study-assistant`, `programming-tutor`) rather than into roundup blogs** |
+| verticals | `open source platform education LMS SIS MIT Apache 2026 self-hosted` | 🟡 **No new platform — sixth consecutive pass — but two licence corrections.** `frappe/lms` asserted MIT by a comparison blog, **verified AGPL-3.0**; `foradian/fedena` asserted Apache-2.0, **no licence file at all**; `OpenOLAT/OpenOlat` asserted Apache-2.0 and **confirmed Apache-2.0 first-hand** |
+| trends | `AI education industry trends 2026 adoption regulation market` | 🟡 **Market figures still mutually inconsistent** ($9.58B / $10.6B / ~$23B for 2026). New as citations: **RAND's K-12 teacher generative-AI use doubling 25% → 53% in one year**, and **UNESCO's <10% of institutions with formal generative-AI guidance** |
+| **North America** | `AI education North America 2026 adoption state policy K-12 districts regulation` | 🟢 **The binding-mandate layer has moved and is now dated.** Ohio district AI-policy deadline **2026-07-01**; Idaho **S.B. 1227** (Mar 2026); Oklahoma **S.B. 1734** (parent opt-out + teacher review of AI output); Maryland **S.B. 720**; California **A.B. 1159** (bar on training on student data). ~33–35 states + Puerto Rico now issue guidance, up from ~28 in early 2025. 🔴 **Sources conflict on Maryland S.B. 720's status** — recorded as contested |
+| **EMEA** | `AI education EMEA Europe 2026 adoption EU AI Act high-risk schools players` | 🔴 **The high-risk date this KB has carried is wrong, and the correction is large.** Annex III education obligations reported **moved from 2026-08-02 to 2027-12-02** (stand-alone) and **2028-08-02** (embedded in regulated products), via **Regulation (EU) 2026/1744**. **Art. 50 transparency and Art. 4 AI literacy are unmoved.** 🟡 Final adoption not confirmable here — see the gap note |
+| **APAC** | `AI education APAC 2026 adoption regulation India China Japan Korea players` | 🟢 **Korea's AI Basic Act is in force (2026-01-22) with education named a high-impact sector** and a ≥1-year grace period before fines. **India: AI + computational thinking mandatory from Class 3, 2026–27.** **China and the UAE reported as the only compulsory national AI curricula since the 2025-26 school year.** 🔴 **Korea's AI-textbook programme lost official status** — adoption under 30% |
+| **LATAM** | `AI educación LATAM 2026 adopción regulación Brasil México Chile edtech` | 🟢 **UNESCO launched the Observatory of AI in Education for Latin America and the Caribbean, in Chile, April 2026.** Chile **Ley 21.719** in force **2026-12-01**; Brazil **PL 2338/2023** passed the Senate, **still pending in the Câmara**. **>50% of teachers in Chile and Brazil already using these tools against <10% of institutions holding formal guidance.** 🔴 **One source's "Chilean Marco Nacional de IA Educativa under Ley 21.640" is unsupported by every other source and is NOT carried** |
+
+### 🔵 Why p327's "the query set is exhausted" was wrong, stated so it generalises
+
+**p327 ran `github trending education AI 2026` and got two already-held repositories. This pass ran
+the same channel with four extra words and got four new agents.** 🟢 **The difference is where the
+query lands: the bare form ranks SEO roundups, which recycle the same twenty general-purpose
+agents every month; the extended form ranks GitHub's own topic indexes, which are the actual
+supply.** 🔴 **So "the query set is exhausted" was a claim about the *phrasing*, presented as a
+claim about the *sector*.** That is the same error class p324→p327 kept finding, one level up:
+**a declared gap had been attributed to supply when it belonged to the query — again — and this
+time the KB had itself written the rule and then not applied it.**
+
+### The four, with grants read first-hand on `raw` this pass
+
+| repo | grant (read p328) | region | what it is |
+|---|---|---|---|
+| https://github.com/eai6/ai-tutor | 🟢 **MIT**, 1,090 B, *Copyright (c) 2026 **World Bank Group** and contributors*; identical on `main` and `master` | **EMEA** (Seychelles) | 🟢 **The pass's find.** Django 6.0.2, seven apps all resolving as real files. 5E phase tags per `LessonStep`; Socratic + 3-level hint ladder; skill graph with **prerequisite mastery gating**; 35-MCQ exit-ticket bank, 10 sampled, 8/10 to pass; curriculum PDF/DOCX ingest; multi-tenant; **local Ollama** first-class. `apps/safety/models.py` ships `ConsentRecord` (parental type, `withdrawn_at`) + `SafetyAuditLog` (pseudonymised `user_hash`) + `export_user_data` / `delete_user_data` |
+| https://github.com/Jellypod-Inc/school-skills | 🟢 **MIT**, 1,065 B, *Copyright (c) 2026 Jellypod* | 🔴 **UNPLACED** | Seven Claude Code classroom skills shipping, six declared; **alpha** by its own label. Bloom's-aligned rubric generator, Mermaid/Graphviz/Markmap concept maps, planned CEFR drills in 11 languages |
+| https://github.com/afri-bit/revibe | 🟢 **MIT**, 1,074 B | 🔴 **UNPLACED** | A programming mentor **whose design constraint is refusing to write the code**. No server, no account — markdown that teaches an existing agent to teach; progress in `MEMORY.md` |
+| https://github.com/HugeCatLab/ChatTutor | 🔴 **AGPL-3.0**, **34,522 B** — **the search channel reported no licence at all** | 🟡 **APAC on a language signal only** (`README_CN.md`); no country or institution named | Visual interactive tutor; pnpm monorepo, Vitest. 🔴 **A copyleft agent near the top of the attention distribution — a counter-instance to this KB's permissive-agent / copyleft-platform split** |
+
+### 🔴 The metadata channel is gone, and this section exists so no later pass misreads the blanks
+
+`github.com` (rendered page) and `api.github.com` both answer **403** this pass; p327 read licences
+and star counts straight off the rendered sidebar. `arxiv.org`, `huggingface.co`, `unesco.org` and
+`codeberg.org` do not connect at all. **`raw.githubusercontent.com` answers 200.**
+
+🔵 **Consequence, and it is mild in exactly the way that matters:** grants, byte counts, file paths,
+code and READMEs are first-hand this pass; **stars, forks, commits, topics and descriptions are
+not obtainable at all.** Every star count written this pass is marked `carried` with its source
+pass, or **`n/v`**. 🟢 **Trend 11 of `intel/trends.md` has argued for ten passes that this sector's
+published metadata is unreliable in both directions — solicited stars, misdeclared README badges.
+The channel this pass lost is the unreliable one; the channel it kept is the one the rights
+analysis runs on.**
 
 ## 2026-10-19 — Pass 327 — the sweep returned nothing and the backlog returned ten
 

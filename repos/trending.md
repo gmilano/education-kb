@@ -1,8 +1,43 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-19
+updated: 2026-10-20
 ---
+
+## 2026-10-20 — Pass 328 — four repos off the GitHub topic indexes, and two secondary-source licence claims falsified
+
+**First pass of 2026-10-20.** 🔵 **This file is APPEND-ONLY. Everything below this section is
+prior history and stays.**
+
+🟢 **Four repositories recorded. Every grant below was read first-hand on the `raw` channel this
+pass, over a six-filename probe space (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license.txt`,
+`COPYING`, `LICENCE`) across `main`, `master` and `develop`.** 🔴 **Star counts are absent by
+force, not by choice: `github.com` and `api.github.com` are both 403 this pass.**
+
+| repo | grant (read p328) | what it is | region |
+|---|---|---|---|
+| https://github.com/eai6/ai-tutor | 🟢 **MIT** — 1,090 B on **both** `main/LICENSE` and `master/LICENSE`, *"Copyright (c) 2026 **World Bank Group** and contributors"* | **Curriculum tutor, in code and not in prose:** `manage.py` (662 B), `requirements.txt` (4,562 B), `config/settings.py` (17,064 B) and **all seven** `apps/{accounts,curriculum,tutoring,dashboard,llm,media_library,safety}/models.py` resolve 200. Django 6.0.2, `anthropic==0.79.0`, `openai==2.20.0`, `google-genai==1.65.0`, DRF + SimpleJWT, pgvector-on-Postgres (a dated comment records chromadb being dropped 2026-05-24) | **EMEA** |
+| https://github.com/Jellypod-Inc/school-skills | 🟢 **MIT** — 1,065 B, *Copyright (c) 2026 Jellypod* | Seven shipping Claude Code classroom skills + six declared; **self-labelled alpha preview** | 🔴 **UNPLACED** |
+| https://github.com/afri-bit/revibe | 🟢 **MIT** — 1,074 B, *Copyright (c) 2026 - present afri-bit* | Markdown-only programming mentor riding an existing coding agent; learner state in `MEMORY.md`; CI runs markdown lint + link checks | 🔴 **UNPLACED** |
+| https://github.com/HugeCatLab/ChatTutor | 🔴 **AGPL-3.0** — **34,522 B** | pnpm monorepo (`@chat-tutor/{client,web,db}`), Vitest, Drizzle-style db scripts; bilingual `README.md` + `README_CN.md` | 🟡 **APAC, language signal only** |
+
+### 🔴 Two secondary-source licence claims falsified, and one confirmed
+
+**The trend this file exists to record is now operating one layer out from the repositories.** p322
+logged the README-versus-LICENSE hazard **four times inside a single org**. This pass finds the same
+hazard in **third-party comparison blogs**, which is worse, because those are what a studio lead
+reads when they are not reading this KB:
+
+| candidate | asserted by a comparison blog | **read first-hand p328** |
+|---|---|---|
+| `frappe/lms` | *"MIT licence with self-hosted data ownership"* | 🔴 **AGPL-3.0** — `license.txt`, **33,893 B**, on `main`, `master` **and** `develop`. **Not MIT. Not close.** |
+| `foradian/fedena` (school SIS) | *Apache 2.0* | 🔴 **No licence file on any branch across all six filenames.** No grant, therefore no rights, therefore not a row |
+| `OpenOLAT/OpenOlat` | *Apache 2.0* | 🟢 **Confirmed Apache-2.0** — `master/LICENSE`, 10,982 B. 🔵 Resolves on **`master`, not `main`**, and the mirror slug `openolat/openolat` serves the identical file |
+
+🔵 **The rule, and it is cheap:** a licence asserted by anything other than the repository's own
+grant file is a **lead**, not a fact — and the probe that settles it costs one HTTP request. **Two
+of the three claims above were wrong in the permissive direction**, which is the dangerous one: a
+copyleft platform mislabelled MIT is how an AGPL obligation enters a deliverable unnoticed.
 
 ## 2026-10-19 — Pass 327 — the org page is a supply channel and this KB had never swept it
 
