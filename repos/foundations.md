@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 348 · 2026-10-20 — the foundation tier was re-read AT THE PIN with a new instrument, and the news is not a row: `LICENSE` at the root is the only place a grant covers the repository, and this base had no way to say so until this pass
+
+**Evidence:** [`p348-institutional-orphan-probe`](../evidence/p348-institutional-orphan-probe.2026-10-20-p348.tsv) · [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-holder-channel-defect`](../evidence/p348-holder-channel-defect.2026-10-20-p348.tsv) · [`p348-author-key-spread`](../evidence/p348-author-key-spread.2026-10-20-p348.tsv) · gate: `make gate-grant-scope`
+
+### 🟢 `ACTION ZZ-z` discharged: pin → tree → SCOPE → PROVENANCE → family, and the scope half is what `p441` was missing
+
+🟡 ZZ-z asked for the root ladder to be replaced by **pin + tree enumeration + scope grading**, keeping the ladder only as a fast path. 🟢 `p441` already enumerates the tree. 🔴 **What no instrument here could do was say what a grant at DEPTH governs**, and `ACTION ZZ-u` priced it. [`likr/canvas-lms-agent`](https://github.com/likr/canvas-lms-agent) is **MIT** — that grant sits at `canvas-lms-mcp/LICENSE`, beside the package it licenses, as p347 established. 🔴 But the repository carries **two** licence files, and the first in path order is `.agents/skills/skill-creator/LICENSE.txt`, which is **a skill-creator tool's own grant vendored into the tree** — a third party's, not this project's. 🔴 So *"take the first licence you find"* publishes somebody else's grant as the repository's, and the family it would have published (Apache-2.0, carried by that vendored file) is not this repository's family at all.
+
+🔴 **`p441`'s answer to that class is a directory blacklist (`node_modules`, `vendor`, `third_party`, `.corepack`) and `.agents/skills/` is not in it.** It could be added. The next one would not be. 🔵 **That is the defect `p441`'s own docstring names in its first paragraph — *widening a list cannot fix a list* — and the fix is to stop deciding from the PATH:**
+
+| verdict | what it means | decided by |
+|---|---|---|
+| `REPOSITORY-GRANT` | an own-holder licence text at the ROOT | position |
+| `PACKAGE-GRANT-ONLY` | own-holder grants exist, all in subtrees: they license those components and the repository is still ungranted | position + holder |
+| `FOREIGN-GRANT-ONLY` | every licence text in the tree names another holder — the ZZ-u class | **the holder line, not the directory** |
+| `ABSENCE-ENUMERATED` | no licence-shaped path in the complete tree at the pin | the tree |
+
+🟢 **Run over 39 addresses this pass, the trichotomy fired on real trees and not on fixtures:** `safytech/ulearn`'s `…/tinymce/jscripts/tiny_mce/license.txt` graded **FOREIGN/LGPL** beside an own **MIT** root; `AcademicsToday/academicstoday-django`'s `bower_components/bootstrap/LICENSE` graded **FOREIGN** beside an own **Apache-2.0** root; `examplary/qti`'s `tests/stubs/LICENSE.md` graded **NOT-A-GRANT-TEXT**; `course-code-framework/coursecode`'s `schemas/license.txt` graded **CC-BY-1.0 / HOLDER-ABSENT at depth** — a content grant beside a code grant, which is the `cs341-illinois/coursebook` shape at a smaller scale.
+
+🟡 **`dodona-edu/dolos` is the clean positive control**: `LICENSE` at the root plus `cli/LICENSE`, `core/LICENSE` and `lib/LICENSE`, all four **MIT**, all four holder `Team Dolos` — **own-holder subtree grants**, exactly the case a blacklist cannot distinguish from vendored code and a holder comparison settles in one read.
+
+### 🔴 `ACTION ZZ-ab` discharged, and it found the UNSAFE failure direction: this base was publishing the NCSA grant as **MIT**
+
+🟡 p347 recorded the risk as *"generic SPDX-style detection **abstains** on them"*, and under `P250` an abstention fails safe — `UNDETERMINED` is indistinguishable from `PROHIBITED`, so the cost is usable supply excluded. 🔴 **The first-hand read refutes that, and the truth is worse.** The real payload at [`cs341-illinois/coursebook`](https://github.com/cs341-illinois/coursebook) → `LICENSE/LICENSE.code` (**1 698 B, HTTP 200, read at the pin**) is graded **`MIT`** by this base's canonical `p436.family_of` — not BSD, and not UNKNOWN.
+
+🔵 **Why: NCSA's permission clause is MIT-PHRASED.** It opens *"Permission is hereby granted, free of charge, to any person obtaining a copy"*, which is the MIT rung's own trigger, and that rung sits **above** the BSD rung that would otherwise have caught the three-clause body below it. 🔴 **NCSA carries a BSD-style no-endorsement clause naming the University of Illinois and NCSA; MIT carries only the notice. So the published cell UNDERSTATED what a client owes** — the opposite direction from an abstention, and the first unsafe reading this base has found in a family detector.
+
+🟢 **Fixed in both detectors, probed before MIT and therefore before BSD, with the ordering pinned by controls in both directions** — NCSA reads NCSA, MIT still reads MIT, BSD still reads BSD.
+
+🟡 **And the ECL half of the same action found nothing, which is worth recording.** The expectation was that an `ECL-2.0` payload names Apache by title and so must be probed before `Apache-2.0`. [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)'s actual **11 120-byte** `LICENSE` names *"apache license"* **zero times**, so the canonical detector grades it correctly where it already sits. 🔵 **Two legs of one action on one axis, one a real defect and one a false alarm — which is the argument for reading the payload rather than reasoning about the licence.** The orderings this base already paid for stand: **`EUPL` / `MPL` / `EPL` before the GNU family.** 🟡 **Education's licences were written by universities**, and a generic detector meets more of them on this shelf than on any other.
+
+🟢 `ACTION ZZ-w` ships in the same function: a **byte-order mark** is stripped before the title line is read, so `zaikaman/SGU-Academic-MCP`'s `EF BB BF` + *MIT License* no longer grades UNTITLED.
+
+### 🟢 Foundation-tier rows re-verified at the pin today, with the substance a client inherits
+
+| Row | Grant at the pin | ★ | commits · author NAMES | first → last | Region, by instrument |
+|---|---|---|---|---|---|
+| [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | 🟢 **MIT**, ROOT, holder absent | **2 300** | 1 117 · **139** | 2018-05-14 → **2026-10-20** | North America — `−0400`/`−0500`/`−0700` |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT**, ROOT + 3 own-holder subtrees | 353 | 3 859 · 25 | 2019-06-23 → 2026-10-19 | **EMEA — Belgium**: holder `Team Dolos <dolos@ugent.be>`, `2080×+0200`, owner `dodona-edu` — **three channels agreeing** |
+| [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | 🟢 **MIT**, ROOT, holder **`Department for Education - Digital`** | 4 | **5 266** · 30 | 2023-11-08 → **2026-10-20** | **EMEA — United Kingdom**: the holder line NAMES the ministry + `3016×+0100` |
+| [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 **Apache-2.0**, ROOT | 21 | 2 815 · **14** (this base publishes 18 — see below) | 2019-01-18 → 2026-10-19 | North America — `1560×−0400` |
+| [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) | 🟢 **MIT** at `LICENSE.md`, ROOT, holder `DataKind` | 8 | 3 015 · 25 | 2024-10-10 → 2025-09-08 | North America — `−0400`/`−0500` under a `+0000` CI majority |
+| [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT**, ROOT, holder `Digital Credentials Consortium` — the institution channel fires | 89 | 1 309 · 33 | 2021-07-08 → 2026-06-09 | North America. 🔴 **Same HEAD as [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet)** |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0**, ROOT | 1 | 457 · 33 | 2025-09-29 → **2026-10-20** | **APAC** — `196×+0800` + `179×+0530` = 82 % of the stream |
+| [`AI-for-Education/fabdata-llm`](https://github.com/AI-for-Education/fabdata-llm) | 🟢 **MIT**, ROOT, holder `Fab Data` | — | 175 · 10 | 2023-05-10 → 2026-06-09 | **EMEA** — `+0000`/`+0100` |
+
+### 🔴 The number this table could not publish honestly, and it is this base's own
+
+🟡 `terracotta-education/terracotta` is shelved here as **"2 815 commits, 18 authors"**. The commit count re-derives **exactly** at the pin. The author count does not re-derive **at all** under the obvious key — `%an` gives **14**, `%ae` gives **18**, `%an|%ae` gives **20** — and over eight rows the names→identities spread is **1 to 9, non-zero on 8 of 8**, with `open-edge-platform/education-ai-suite` carrying **more names (33) than addresses (32)**.
+
+🔵 **Three correct answers to three different questions, and no shelf cell says which was asked.** 🔴 **T37's `recount` therefore cannot judge an author cell at all** — it has no key — and p346's PII refusal guarantees a successor will reach for `%an` and read every published author figure as inflated. 🟢 `ACTION ZZ-ac`: one word per author cell. Until then this shelf publishes **author NAMES**, labelled.
+
+### 🔴 Declined, and the reasons are the calibration
+
+🔴 [`DaviPac/Classroom-mcp`](https://github.com/DaviPac/Classroom-mcp) — **ABSENCE-ENUMERATED at the pin**: no licence-shaped path in the complete tree ⇒ no grant, so no rights (`P250`). 🔴 [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) — MIT with **3 886 commits and 375 authors**, and the holder line reads **`EleutherAI`**: the org is LATAM, the code is upstream US research. 🔴 [`0xnavarro/IA-PARA-TODOS`](https://github.com/0xnavarro/IA-PARA-TODOS) — Apache-2.0, 207 commits, 14 authors, and **channels disagree**: a Spanish name, a `−0500`/`−0600` plurality and `+0530` in second place. **NOT PLACED**, dormant 21 months. 🟡 [`blackboard/BBDN-lti-1p3-tool-example`](https://github.com/blackboard/BBDN-lti-1p3-tool-example) — Apache-2.0, dead 40 months: a vendor REFERENCE for LTI 1.3 message flow, **cite it, do not build on it**. 🟡 [`AI-for-Education/fabdata-parsedoc`](https://github.com/AI-for-Education/fabdata-parsedoc) (4 commits, dead 26 months), [`AI-for-Education/lesson-plan-parse-mbsse`](https://github.com/AI-for-Education/lesson-plan-parse-mbsse) (11 commits, dead 22 months) and [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) (**5 commits**) — a published benchmark and two finished pilots, not build bases. 🟡 [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) — MIT, 289 commits, 20 authors, cleanly EMEA, **dormant 30 months**: the only open client for the timetable system much of DACH schooling runs on, which makes its dormancy a risk to state rather than a reason to omit it.
+
+---
+*Pass 348 — every grant cell above read first-hand at the pin; every count re-derived from the blobless clone's own `git log`, with the key named.*
+
 ## Pass 347 · 2026-10-20 — the institutional tier this base was looking for was in its own orphan list: two live UK government services, two German university autograders, Kolibri's sync engine, and a 3 839-star Illinois textbook the licence channel could not see
 
 **Evidence:** [`p347-institutional-orphan-probe`](../evidence/p347-institutional-orphan-probe.2026-10-20-p347.tsv) · [`p347-grant-channel-recovery`](../evidence/p347-grant-channel-recovery.2026-10-20-p347.tsv) · [`p347-shelfwide-head-equality`](../evidence/p347-shelfwide-head-equality.2026-10-20-p347.tsv).

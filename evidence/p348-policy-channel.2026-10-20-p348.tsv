@@ -1,0 +1,36 @@
+# p348 — the four prescribed regional legs, and a CORRECTION to how this base describes its own
+# channel limits.
+#
+# p347 wrote that "a second, independent fetch channel was tested this pass and fails on the same
+# hosts at the DNS layer".  This pass found that the two channels are NOT equivalent — and then
+# that they are equivalent in the only place it matters:
+#
+#   github.com HTML        curl → 403        fetch channel → 200   ⇒ A PER-TOOL BLOCK, routable
+#                                                                    around; this is how every star
+#                                                                    count in p348-placement-and-
+#                                                                    metadata was read
+#   api.github.com         curl → 403        (not retried)        ⇒ per-tool block
+#   eur-lex.europa.eu      curl → 000        fetch → ENOTFOUND    ⇒ NAME RESOLUTION, not a block
+#   education.ec.europa.eu curl → 000        fetch → ENOTFOUND    ⇒ NAME RESOLUTION
+#   www.future-ed.org      curl → 000        fetch → ENOTFOUND    ⇒ NAME RESOLUTION
+#   www.unesco.org         curl → 000                             ⇒ NAME RESOLUTION
+#   www.oecd.org           curl → 000                             ⇒ NAME RESOLUTION
+#   raw.githubusercontent.com curl → 301/200                      ⇒ every licence cell here is first-hand
+#   www.apache.org         curl → 200                             ⇒ a notice-by-reference is checkable
+#
+# 🔵 The distinction is worth keeping because it tells a successor pass what to RETRY.  A 403 is a
+# tool or credential boundary and a different channel may cross it — which is exactly what happened
+# to the star column this pass, after two passes recorded stars as unreadable.  An ENOTFOUND is the
+# absence of a route and no tool choice fixes it.  So: EVERY REGULATORY DATE ON THESE SHELVES STAYS
+# LABELLED search-channel convergence, and every LICENCE and STAR cell is first-hand.
+#
+# 🔴 All four legs below are therefore ATTRIBUTED, never asserted.  The sources are secondary
+# trackers and news pages reached through the search channel; where trackers disagree, the spread is
+# published rather than a single number.
+region	leg	finding	channel / caveat
+North America	AI education 2026 adoption regulation state bills players	Trackers DISAGREE on volume and the spread is the datum: 134 bills / 31 states, 77 bills / 27 states, and 52 bills / 25 states for Q1.  Themes are consistent across all three: student-data privacy (California AB 1159 barring student data from model training), human-in-the-loop (Oklahoma SB 1734 barring AI as the main basis for grading or discipline, with a parental opt-out), AI literacy in statute (Alabama HB 329 making an AI-inclusive CS course a graduation requirement), governance capacity (Maryland SB 720 requiring district AI policies and AI coordinators).  Two opposite poles: New York A.9190 would prohibit classroom AI below grade 9; Utah SB 322 establishes a red-team SANDBOX.  Ohio set a hard deadline — every K-12 district to adopt a formal AI policy by July 1.	search-channel convergence; three trackers, three counts.  Bill texts NOT read: congress.gov and the state legislature hosts do not resolve from here
+EMEA	AI education 2026 adoption EU AI Act AI literacy players	The AILit framework (European Commission + OECD) was presented 2026-06-17/18 and defines AI literacy for primary and secondary schooling in FOUR domains and NINETEEN competences, built with CodeAI (formerly Code.org) from a consultation of 2 000+ contributors.  It is NON-BINDING and will inform PISA 2029.  It sits on top of the Article 4 AI-literacy duty, binding on every organisation using AI systems — therefore every school — since 2025-02-02.  Annex III high-risk duties for education are reported at 2027-12-02, deferred from 2026-08-02 by the Digital Omnibus.  An EACEA call (deadline 2026-09-20) is recruiting a squad to map AI literacy across Member States' schools and teacher education, running 2026-10 → 2027-01.  🔴 Sources CONFLICT on whether the Omnibus altered Article 4: one reads it as replaced by a duty to "support the development of" AI literacy, another says Article 4 is unchanged.  This base publishes NEITHER reading.	search-channel convergence.  eur-lex.europa.eu and education.ec.europa.eu do not resolve on either channel, so the Official Journal text was not read
+APAC	AI education 2026 adoption regulation players	Education is in STATUTE here rather than in guidance: South Korea's AI Basic Act in force since 2026-01-22 is the region's first comprehensive mandatory AI law, and Vietnam's took effect 2026-03-01.  China has no general AI law but enforceable specifics — AI-content labelling, and model filing covering 988 services as of 2026-06-30.  India has no dedicated AI statute and governs through its data-protection rules, phasing to May 2027, while making AI and computational thinking COMPULSORY from Class 3 in the 2026-27 academic year under the IndiaAI Mission.  China is reported to have made AI compulsory from age six.  Japan's AI Promotion Act carries no fines and no prohibitions.  Ipsos Education Monitor 2026: Asian markets show LOWER support for banning AI in schools than for restricting children's social media, while Australia and New Zealand show higher support for a ban.	search-channel convergence.  The curriculum mandate and the statute dates come from secondary trackers; no ministry host was reached
+LATAM	AI education 2026 adoption regulation universities	The strongest adoption numbers this base holds for any region, and they are DEMAND rather than supply: UNESCO reports NINE IN TEN 15-year-olds across the 13 regional countries in PISA 2025 have already used AI chatbots for schoolwork, and TALIS 2024 puts secondary teachers' AI use at 56 % in Brazil and 55 % in Chile against an OECD average of 36 %.  Regulation is still prospective everywhere: Brazil's PL 2338/2023 is in process and its high-risk category EXPLICITLY INCLUDES education, which would bring mandatory impact assessments to schools and universities; Chile's bill is pending and principles-based; Mexico's 2026 changes cover deepfakes, performers' rights and enforcement — NOT education — and sources disagree whether they amount to a general AI law.  Tec de Monterrey is redesigning 44+ degree programmes to integrate AI.	search-channel convergence.  unesco.org and the regional observatory hosts do not resolve; the PISA and TALIS figures are quoted from UNESCO's summary page as relayed by the search channel, not read at source
+Global	market sizing	UNUSABLE for a client number, and the spread is the reason: AI-in-education 2026 is put at USD 9.58B, 10.6B and 11.4B by three firms with 2030/2035 endpoints of 42.48B and 136.79B; the narrower AI-TUTORS segment is 2.7B (2026 → 17.7B by 2033) from one firm and 6.6B (2025 → 80.4B by 2034) from another — an order of magnitude apart on the same object.	search-channel convergence; `ACTION ZQ` holds — ATTRIBUTE OR OMIT.  Do not quote a single figure
+#	legs run	5	4 regional + 1 global, all four regional legs returned education-specific policy

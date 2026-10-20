@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 348 · 2026-10-20 — four trends, and the first two are about MEASUREMENT: an efficacy layer now exists in open source, and a fairness layer now has a name — while the industry's two loudest numbers (stars, market size) remain the two least usable
+
+**Evidence:** [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-policy-channel`](../evidence/p348-policy-channel.2026-10-20-p348.tsv) · [`p348-author-key-spread`](../evidence/p348-author-key-spread.2026-10-20-p348.tsv) · [`p348-shelf-fold-identity`](../evidence/p348-shelf-fold-identity.2026-10-20-p348.tsv)
+
+### T40 · 🟢 The efficacy question moved from rhetoric to a component, and the component is Apache-2.0
+
+🔵 Every AI-in-education proposal of 2026 contains an efficacy claim. 🔴 **Almost none contain a design that could test one** — the sector's standard evidence is a pilot with no control group and a satisfaction survey. 🟢 [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) (**Apache-2.0**, 2 815 commits, 14 author names, pushed 2026-10-19) does randomised assignment of assignment content to student groups **inside live LMS courses over LTI**, with privacy protections for participants. 🟡 **The trend is not the repository; it is that "prove it" is becoming a procurement requirement and the instrument for answering it is now free.** 🔵 A studio that pre-registers an experiment design alongside its tutoring build is selling something categorically different from a studio that does not — and the difference costs an LTI integration, not a research department.
+
+### T41 · 🔴 EMEA's high-risk duty needs FAIRNESS EVIDENCE, and this base described the duty for six passes without naming the library
+
+🟡 EU Annex III puts admissions, assessment and proctoring in the high-risk tier from **2027-12-02** (search-channel convergence; no EU host resolves from here). 🔴 The duty that bites hardest there is **demonstrated non-discrimination across protected groups**, and a technical file that asserts it without measuring it is a technical file that fails an audit. 🟢 [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) — **MIT, 2 300 ★, 528 forks, 1 117 commits, 139 author names, pushed on the day of this pass** — produces exactly that measurement: group-fairness metrics and mitigation, in Python, on any model.
+
+🔵 **Why it took 348 passes to name it:** it is not an education repository. 🟡 It carries no education token, so **every education-token filter this base has ever run is blind to it** — and the same is true of the whole compliance tier (privacy, bias, audit logging, synthetic data). 🟢 **The lesson is a filter lesson: an industry KB that selects on industry vocabulary will systematically miss the HORIZONTAL components that industry's regulation demands.** `ACTION ZZ-ae`.
+
+### T42 · 🔴 The three loudest numbers in this industry are the three least usable, and this pass can rank them
+
+| number | spread this pass measured | usable? |
+|---|---|---|
+| **market size** | AI-in-education 2026 at **USD 9.58B / 10.6B / 11.4B** from three firms, with 2030–2035 endpoints of **42.48B** and **136.79B**; the narrower AI-TUTORS segment at **2.7B → 17.7B (2033)** from one firm and **6.6B → 80.4B (2034)** from another — **an order of magnitude apart on the same object** | 🔴 **No.** `ACTION ZQ` holds: attribute or omit |
+| **GitHub stars** | **4 ★** on a live national service with 5 266 commits; **1 ★** on an Intel reference suite pushed today; **21 ★** on a seven-year university research platform; **2 300 ★** on the row with fewer commits than any of them | 🔴 **No**, as a ranking. 🟢 Yes, as a measure of attention — which is a different question |
+| **"authors"** | `%an` **14** / `%ae` **18** / `%an\|%ae` **20** on one repository at one pin; spread **1–9 and non-zero on 8 of 8** rows measured; one row with **more names than addresses** | 🔴 **Not without its key.** 🟢 Three correct answers to three different questions |
+
+🔵 **The common failure is the same one:** a single scalar standing in for a definition nobody wrote down. 🟢 **The usable numbers this pass holds are all compound and all first-hand** — *commits · author names · first commit · last push · timezone distribution · grant at the pin* — and that is six fields, because the thing a client inherits does not compress to one.
+
+### T43 · 🟡 Adoption has outrun governance everywhere, and the size of the gap is now the regional signature
+
+| region | adoption | governance | the gap as a sentence |
+|---|---|---|---|
+| **LATAM** | **9 in 10** 15-year-olds across 13 PISA 2025 countries already use AI chatbots for schoolwork; teacher use **56 % Brazil / 55 % Chile** vs an OECD average of 36 % | every framework still prospective — Brazil's PL 2338/2023 in process (education EXPLICITLY high-risk), Chile's pending, Mexico's 2026 changes not about education | 🔴 **The widest gap and the most ready buyer.** An adoption-and-governance engagement on global supply |
+| **North America** | district and state usage broad and uneven | **134 / 77 / 52 bills** depending on the tracker, across 31 / 27 / 25 states, with opposite poles enacted in the same year (New York A.9190 would ban classroom AI below grade 9; Utah SB 322 builds a red-team sandbox) | 🟡 **Sell per-state compliance mapping, never "AI Act readiness"** |
+| **EMEA** | lagging adoption, leading regulation | Article 4 AI-literacy duty binding since **2025-02-02**; the **AILit** framework (Commission + OECD, 2026-06-17, 4 domains, 19 competences, non-binding, feeding **PISA 2029**); Annex III **2027-12-02** | 🟢 **The inversion is the opportunity: conformity by construction** |
+| **APAC** | highest-scale mandates | education named in STATUTE — Korea's Framework Act in force **2026-01-22**, Vietnam's **2026-03-01**, India making AI compulsory from **Class 3** in 2026-27, China reported compulsory from age six | 🔴 **Curriculum delivery at national scale, under a hard date** |
+
+🔵 **One cross-cutting read:** in three of four regions the binding instrument is **not** an AI law but a **student-data** law, and the control it demands is the same everywhere — a human decision between the model and the consequence, with an audit trail. 🟢 That control is a component, it exists, it is MIT, and this base has shelved it since p344: [`psychquant/che-ntucool-mcp`](https://github.com/psychquant/che-ntucool-mcp) gates grade and announcement writes behind explicit human confirmation.
+
+---
+
 ## Pass 347 · 2026-10-20 — three trends registered: the licence channel's axis list has no end and the fix is a different channel, the regions the English legs cannot reach are reachable in the local language, and a classifier that abstains is this sector's real licence risk
 
 **Evidence:** [`p347-grant-channel-recovery`](../evidence/p347-grant-channel-recovery.2026-10-20-p347.tsv) · [`p347-institutional-orphan-probe`](../evidence/p347-institutional-orphan-probe.2026-10-20-p347.tsv) · [`p347-shelfwide-head-equality`](../evidence/p347-shelfwide-head-equality.2026-10-20-p347.tsv) · [`p347-policy-channel-reachability`](../evidence/p347-policy-channel-reachability.2026-10-20-p347.tsv).

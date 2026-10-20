@@ -35,8 +35,11 @@ FAMILY_LOG ?= /tmp/education-kb-gate-family-coverage.log
 PERMISSIVE_LOG ?= /tmp/education-kb-gate-permissive-arm.log
 TEMPLATE_LOG ?= /tmp/education-kb-gate-template-identity.log
 UNTITLED_LOG ?= /tmp/education-kb-gate-untitled-payload.log
+SHELF_FILES ?= agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md compose/patterns.md
+FOLD_LOG ?= /tmp/education-kb-gate-fold-identity.log
+SCOPE_LOG ?= /tmp/education-kb-gate-grant-scope.log
 
-.PHONY: gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census
+.PHONY: hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -60,7 +63,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-slug-oracle gate-payload-pin gate-shelf-consistency \
              gate-affero-rung gate-family-coverage gate-permissive-arm \
              gate-template-identity gate-untitled-payload gate-region-headings \
-             gate-bespoke-title
+             gate-bespoke-title gate-fold-identity gate-grant-scope
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -571,6 +574,89 @@ gate-offline: ## no network — safe in a hook, in CI, and in a sandbox without 
 	echo "── lazy-quantifier lint over every instrument (ACTION TB)"; \
 	$(PY) -I compose/code/p230-prose-path-ladder/lazy_lint.py compose/code || exit 1; \
 	echo "ALL OFFLINE LICENCE CONTROLS PASS"
+
+# 🟢 p348 — ACTION ZZ-x, both halves.  p347 registered *"case-folded slug comparison
+# plus an alias table in `gate-identity`"* and the folding half is wired HERE rather
+# than inside `gate-identity`, because the two instruments answer different questions
+# over different denominators and fusing them would hide which one spoke.
+#
+# 🔴 The denominator was the finding.  p347's shelf-wide HEAD-equality run declared 257
+# addresses from **five** live shelf files; the complete nine-shelf set carries **2 531**
+# casings / 2 462 folded addresses, **2 091 of them only on the two APPEND-ONLY shelves**.
+# So the run covered 17.4 % of this base's published addresses and its verdict column
+# reads "unique HEAD across the shelf set" — true of the set, false of the shelves.  The
+# specimen: `openwallet-foundation-labs/learner-credential-wallet` was graded unique while
+# `digitalcredentials/learner-credential-wallet` sat on `agents/trending.md` at the SAME
+# HEAD `1c46a82ba384`.
+#
+# 🟢 Folding is wired as a GATE because its precision was measured, not assumed: all 65
+# folded-collision groups were resolved first-hand with `git ls-remote --symref`, 64
+# answered and **all 64 are SAME-HEAD** — one repository under two or three casings, zero
+# different-HEAD groups, so no false positive anywhere on this corpus.
+#
+# 🟡 It judges the LIVE PASS SECTION only.  An append-only shelf cannot be repaired
+# backwards (p347), so a gate failing on all 65 inherited groups would be permanently red
+# and would teach nothing; the inherited groups are a CENSUS instead — the p308
+# `shelf-census` / `gate-shelf-consistency` split, on the identity axis.  No network.
+gate-fold-identity: ## p348 — ACTION ZZ-x: no pass may publish a SECOND CASING of an address these shelves already carry
+	@cd compose/code/p348-fold-identity && { $(PY) -I test_fold_identity.py > $(FOLD_LOG) 2>&1 || { echo "🔴 p348-fold-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(FOLD_LOG) ; false ; } ; } && echo "── p348-fold-identity (21 controls: the blob-URL decision, the backticked label, the OWNER/REPO template, the three-variant group, the org transfer folding CANNOT see, P541 no-input refusal)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p348-fold-identity/fold_identity.py gate $(SHELF_FILES) || exit 1
+
+fold-census: ## p348 — the inherited collision backlog with a denominator.  A measurement, never a failure.
+	@$(PY) -I compose/code/p348-fold-identity/fold_identity.py census $(SHELF_FILES)
+
+# 🟢 p348 — ACTIONs ZZ-z, ZZ-u, ZZ-y, ZZ-ab and ZZ-w in one instrument.  ZZ-z asked for
+# the root ladder to be replaced by pin + tree enumeration + SCOPE GRADING.  `p441`
+# already enumerates the tree; what it could not do is say what a grant at depth
+# GOVERNS, and ZZ-u is the cost — `likr/canvas-lms-agent`'s first licence in path order
+# is a vendored third party's Apache-2.0 at `.agents/skills/skill-creator/LICENSE.txt`.
+#
+# 🔴 `p441`'s answer to that class is a directory blacklist, and `.agents/skills/` is not
+# in it.  It could be added; the next one would not be.  That is the defect `p441`'s own
+# docstring names in its first paragraph: **widening a list cannot fix a list.**  So this
+# instrument decides provenance from the PAYLOAD — root grants the repository, a subtree
+# grants itself, and a vendored grant is foreign BY ITS HOLDER whatever directory it was
+# dropped into.
+#
+# 🔴 And the holder channel's FIRST BUILD, this pass, was wrong in a measurable way: it
+# read every line containing the word `copyright`, which in an MIT payload means "The
+# above copyright notice…" and "…OR COPYRIGHT HOLDERS BE LIABLE…", so every MIT grant on
+# GitHub carried the same seven boilerplate tokens and any two of them "agreed".  It
+# graded Twitter's vendored Bootstrap grant as `AcademicsToday/academicstoday-django`'s
+# own.  Two conditions fix it: the line must BEGIN with Copyright, and it must carry a
+# four-digit year.  Both are controls here.  No network.
+#
+# 🔴 ACTION ZZ-ab's NCSA leg found the UNSAFE failure direction: the canonical
+# `p436.family_of` graded the real University of Illinois/NCSA payload at
+# `cs341-illinois/coursebook` as **MIT**, because NCSA's permission clause is
+# MIT-phrased.  p347 expected an ABSTENTION, which fails safe; a wrong family with
+# weaker notice requirements understates what a client owes.  NCSA is now probed
+# before MIT in BOTH detectors.
+gate-grant-scope: ## p348 — ACTION ZZ-z/ZZ-u/ZZ-y/ZZ-ab/ZZ-w: a grant has a SCOPE and a PROVENANCE, and NCSA is in the vocabulary
+	@cd compose/code/p348-scope-provenance && { $(PY) -I test_scope_provenance.py > $(SCOPE_LOG) 2>&1 || { echo "🔴 p348-scope-provenance FAILED — the suite's own report follows:" ; sed "s/^/   /" $(SCOPE_LOG) ; false ; } ; } && echo "── p348-scope-provenance (28 controls: NCSA before MIT — measured, not assumed — the ECL re-check, the BOM axis, the MIT-boilerplate holder defect, the blacklist-free vendored verdict, the LICENSE directory)" && echo "   PASS" || exit 1
+
+# 🟢 p348 — ACTION ZZ-x's SECOND half: *"wire `gate-identity-online` into a target a pass
+# with egress is expected to run."*  It has existed since p283 and had never been run
+# shelf-wide before p347, because it sits in no target.  It is here and not in `hooks`
+# because `hooks` must stay runnable with no network — but a pass that HAS egress now has
+# one sentence to run, and the README's pass contract names it.
+#
+# 🔴 Read the ordering as a claim about coverage: the offline gate catches the casing
+# class with 64/64 measured precision and is BLIND to an owner transfer; the online gate
+# catches both and needs the network.  Neither catches the third class — one payload
+# published under two repositories with different HEADs, which this pass found between
+# `anthropics/k12-teacher-skills` and `learning-commons-org/agent-skills` (`SKILL.md`
+# sha256 `152e3272fbd108fe`, byte-identical) — and that is `ACTION ZZ-ad`.
+hooks-online: ## p348 — the egress half of the standing check.  NEEDS NETWORK; never in `hooks`.
+	@rc=0; red=""; green=0; \
+	for g in gate-identity-online gate-online gate-mit-tier; do \
+	  if $(MAKE) --no-print-directory $$g; then green=$$((green+1)); \
+	  else rc=1; red="$$red $$g"; echo "🔴 $$g FAILED — continuing (p300)"; fi; \
+	done; \
+	echo ""; echo "── p348 hooks-online runner — the three egress instruments"; \
+	if [ $$rc -eq 0 ]; then echo "🟢 PASS — $$green/3 online gates green."; \
+	else echo "🔴 FAIL — $$green/3 green; RED:$$red"; fi; \
+	exit $$rc
 
 exists: ## ACTION TC — one `git ls-remote` per slug: existence, default branch, HEAD
 	@$(PY) -I compose/code/p230-prose-path-ladder/harvest.py . slugs > /tmp/p230-slugs.tsv

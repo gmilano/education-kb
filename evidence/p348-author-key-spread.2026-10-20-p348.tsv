@@ -1,0 +1,30 @@
+# p348 — "authors" is a THREE-VALUED quantity and these shelves do not say which key they used.
+#
+# Found while re-verifying `terracotta-education/terracotta` at the pin: this base publishes
+# "2 815 commits, 18 authors"; the commit count re-derives EXACTLY, and the author count does not
+# re-derive at all under the obvious key.  At one pin, on one repository:
+#
+#   distinct %an (names)        14
+#   distinct %ae (addresses)     18   <- the published figure
+#   distinct %an|%ae (identities) 20
+#
+# An exact commit match beside a four-off author count is the signature of a DEFINITION difference,
+# not of drift.  All three numbers are correct answers to different questions and none of them is
+# labelled, so `recount` (T37, "re-derive every registered quantity from the rows") cannot judge an
+# author cell at all: it has no key.
+#
+# It matters more than a bookkeeping nit for one reason: p346 lost the author-DOMAIN channel to a
+# PII refusal, so a successor pass computing author counts will reach for %an — the key that needs
+# no addresses — and will read every published author cell as too high.  The drift would look like
+# repositories losing contributors.
+#
+# 🟢 The fix is one word per cell.  This file measures the spread so the next pass knows its size.
+slug	commits	names_an	addresses_ae	identities_an_ae	spread
+terracotta-education/terracotta	2815	14	18	20	6
+dodona-edu/dolos	3859	25	28	31	6
+fairlearn/fairlearn	1117	139	144	148	9
+DFE-Digital/education-benchmarking-and-insights	5266	30	35	38	8
+datakind/student-success-tool	3015	25	28	29	4
+digitalcredentials/learner-credential-wallet	1309	33	33	38	5
+open-edge-platform/education-ai-suite	457	33	32	34	1
+learning-commons-org/agent-skills	43	7	8	8	1

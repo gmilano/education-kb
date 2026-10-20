@@ -1,0 +1,33 @@
+# p348 — ACTION ZZ-y's channel, and the defect its FIRST BUILD shipped in this same pass.
+#
+# ZZ-y: "add the copyright-holder line to the placement channels, ranked above author addresses."
+# The motivation was p347's read of `ls1intum/Ares2`, whose LICENSE names TUM in public, aggregate
+# text and therefore survives the PII refusal that took author e-mail domains away from p346.
+#
+# Build 1 took every line CONTAINING the word `copyright`.  In an MIT payload that is three lines,
+# and two of them are boilerplate present in every MIT grant on GitHub:
+#
+#   Copyright (c) 2011-2015 Twitter, Inc                                      ← the holder
+#   The above copyright notice and this permission notice shall be included…  ← boilerplate
+#   …AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER…  ← boilerplate
+#
+# so the token set of EVERY MIT payload contained {notice, permission, shall, holders, liable,
+# claim, damages} and any two MIT files "agreed" on their holder.  Measured consequence, from this
+# pass's own first run: Twitter's vendored Bootstrap grant inside
+# `AcademicsToday/academicstoday-django` was graded OWN — the repository's own licence — which is
+# precisely the ACTION ZZ-u over-grant the instrument was built to prevent.
+#
+# Build 2 adds two conditions.  The line must BEGIN with `Copyright` (after an optional comment
+# marker), which drops both boilerplate sentences; and it must carry a FOUR-DIGIT YEAR, which drops
+# Apache-2.0's appendix template `Copyright [yyyy] [name of copyright owner]` — a FORM, not a holder.
+#
+# 🔵 The transferable part is not the regex.  A channel that reads licence PROSE measures the
+# licence, never the subject — the same error as reading a README badge as a grant (P342) and as
+# reading a manifest's declaration as a payload.  This is that error's third surface, and the first
+# where the KB wrote the detector itself.
+payload	build 1 holders	build 2 holders	build 1 provenance	build 2 provenance
+MIT, holder `Twitter, Inc` (vendored Bootstrap in AcademicsToday/academicstoday-django)	Twitter, Inc + "notice and this permission notice shall be included in" + "HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER"	Twitter, Inc	OWN — WRONG, and it is the over-grant direction	FOREIGN — correct
+Apache-2.0 root text (appendix template only)	[yyyy] [name of copyright owner] → rejected by the bracket rule	(none)	HOLDER-ABSENT	HOLDER-ABSENT — and at the ROOT that is still the repository's grant, because position carries it
+MIT with a BOM, holder `Saigon University` (ACTION ZZ-w)	Saigon University	Saigon University	OWN	OWN — the BOM strip holds on both the family and the holder channel
+MIT, five holder lines (the ls1intum/Ares2 shape)	5 + boilerplate	3 real holder lines	-	all three kept; `institution_of` fires on the two naming a university
+#	controls	26	compose/code/p348-scope-provenance/test_scope_provenance.py	`make gate-grant-scope`

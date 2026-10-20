@@ -1,0 +1,13 @@
+latam-gpt/anonymization-filter
+latam-gpt/lm-evaluation-harness
+AI-for-Education/pedagogy-benchmark
+AI-for-Education/fabdata-llm
+AI-for-Education/lesson-plan-parse-mbsse
+AI-for-Education/edu-qurating
+AI-for-Education/voice-ai-evaluation-framework
+DFE-Digital/education-benchmarking-and-insights
+terracotta-education/terracotta
+dodona-edu/dodona
+0xnavarro/IA-PARA-TODOS
+DaviPac/Classroom-mcp
+Jeanikt/tutor-ai-agent

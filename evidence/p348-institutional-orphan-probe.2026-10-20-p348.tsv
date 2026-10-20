@@ -1,0 +1,66 @@
+# p348 — ACTION ZZ-aa executed on the institutional filter, and ACTION ZZ-z's instrument is
+# the one that read it.  Source population: the 528-row
+# `compose/code/p989-sha-identity-fork/promotion-gap-permissive-orphans.txt`.  127 rows carry an
+# education token; p345/p346/p347 had read 40 of them; 87 were unread.  ZZ-aa asked for the
+# remainder on the institutional filter and for the yield to be quoted against 94 rather than 100,
+# because `learn` is a substring of `unlearning` — five machine-UNLEARNING repositories are in the
+# 87 (Harry24k, OPTML-Group, OngWinKent, chrisliu298, tamlhp) plus `rasbt/machine-learning-book`,
+# so the education denominator of the unread set is 81, not 87.
+#
+# 24 organisation-owned addresses were selected from those 81, plus 2 adjacency probes
+# (`dodona-edu/dodona`, `digitalcredentials/sign-and-verify`) and a second batch of 13 chosen for
+# REGIONAL token content (Spanish/Portuguese names, `latam-gpt`, `AI-for-Education`, `DFE-Digital`),
+# because p345 and p347 both recorded LATAM supply as this base's thinnest column.
+#
+# Instrument: compose/code/p348-scope-provenance/scope_provenance.py — `git ls-remote --symref` for
+# the pin, a blobless `--no-checkout` clone + `git ls-tree -r HEAD` for the COMPLETE tree, then each
+# licence-shaped path read at the pin over raw.githubusercontent.com.  Columns:
+#   verdict      REPOSITORY-GRANT | PACKAGE-GRANT-ONLY | FOREIGN-GRANT-ONLY | ABSENCE-ENUMERATED | UNRESOLVED
+#   holder       the copyright HOLDER LINE of the governing payload (ACTION ZZ-y), read first-hand
+#   institution  that holder line's institutional name, when it carries one — a PLACEMENT channel
+#   detail       every licence-shaped path in the tree as path[SCOPE/PROVENANCE/FAMILY]
+#
+# 🔴 Declared: api.github.com answers 403 from here and github.com over `curl` answers 403 too, so
+# this file reports NO star counts.  Stars for the promoted rows were read on a third channel and
+# are recorded in p348-placement-and-metadata; commits/authors/timezones here and there come from
+# the blobless clone's own `git log`, which is first-hand.
+slug	verdict	family	sha	ref	n_paths	holder	institution	detail
+AI-for-Education/fabdata-parsedoc	REPOSITORY-GRANT	MIT	926e1d100d07	refs/heads/main	33	Fab Data	-	LICENSE[ROOT/OWN/MIT]
+AcademicsToday/academicstoday-django	REPOSITORY-GRANT	Apache-2.0	1f5048a27401	refs/heads/master	1221	-	-	LICENSE.md[ROOT/HOLDER-ABSENT/Apache-2.0] | academicstoday_project/static/bower_components/bootstrap/LICENSE[SUBTREE/FOREIGN/MIT] | academicstoday_project/static/bower_components/datatables/license.txt[SUBTREE/FOREIGN/MIT] | academicstoday_project/static/bower_components/flot/LICENSE.txt[SUBTREE/FOREIGN/MIT] | academicstoday_project/static/bower_components/metisMenu/LICENSE[SUBTREE/FOREIGN/MIT] | academicstoday_project/static/bower_components/mocha/LICENSE[SUBTREE/FOREIGN/MIT] | academicstoday_project/static/bower_components/raphael/license.txt[SUBTREE/FOREIGN/MIT] | academicstoday_project/static/js/jquery-te/1.4.0/license/AUTHOR.txt[SUBTREE/NOT-A-GRANT-TEXT/UNKNOWN] | academicstoday_project/static/js/jquery-te/1.4.0/license/MIT-LICENSE.txt[SUBTREE/FOREIGN/MIT]
+BridgeSuite/GradeBridge-AI	REPOSITORY-GRANT	MIT	8b94519460c2	refs/heads/main	18	VeriQAi	-	LICENSE[ROOT/OWN/MIT]
+EduBase/mcp	REPOSITORY-GRANT	MIT	d912a6211d84	refs/heads/main	71	EduBase	-	LICENSE[ROOT/OWN/MIT]
+EduNLP/EduCoder	REPOSITORY-GRANT	MIT	1066e7e07a8b	refs/heads/main	135	EduNLP Lab	-	LICENSE[ROOT/OWN/MIT]
+LEARNableLabs/opentutor	REPOSITORY-GRANT	MIT	a75c49cfa7d4	refs/heads/main	2035	OpenTutor Contributors	-	LICENSE[ROOT/OWN/MIT]
+Lilly-Tech-Collab/ai-school-mcp	REPOSITORY-GRANT	MIT	1ba9238b09eb	refs/heads/main	9	Lilly Tech Systems	-	LICENSE[ROOT/OWN/MIT]
+SchoolUtils/WebUntis	REPOSITORY-GRANT	MIT	51576aaeda7a	refs/heads/master	81	Nils Bergmann	-	License[ROOT/OWN/MIT]
+anthropics/k12-teacher-skills	REPOSITORY-GRANT	Apache-2.0	31fd6dbb0c07	refs/heads/main	71	-	-	LICENSE[ROOT/HOLDER-ABSENT/Apache-2.0] | plugin/skills/k12-check-for-understanding/LICENSE[SUBTREE/HOLDER-ABSENT/Apache-2.0] | plugin/skills/k12-lesson-differentiation/LICENSE[SUBTREE/HOLDER-ABSENT/Apache-2.0] | plugin/skills/k12-lesson-plan-creation/LICENSE[SUBTREE/HOLDER-ABSENT/Apache-2.0] | plugin/skills/k12-lesson-prep/LICENSE[SUBTREE/HOLDER-ABSENT/Apache-2.0]
+blackboard/BBDN-lti-1p3-tool-example	REPOSITORY-GRANT	Apache-2.0	5b82aefccbc8	refs/heads/main	104	-	-	LICENSE[ROOT/HOLDER-ABSENT/Apache-2.0]
+course-code-framework/coursecode	REPOSITORY-GRANT	MIT	f912226c2464	refs/heads/main	531	Seth Vincent	-	LICENSE[ROOT/OWN/MIT] | schemas/license.txt[SUBTREE/HOLDER-ABSENT/CC-BY-1.0]
+datakind/student-success-tool	REPOSITORY-GRANT	MIT	e35c41af1dc1	refs/heads/develop	237	DataKind	-	LICENSE.md[ROOT/OWN/MIT]
+digitalcredentials/learner-credential-wallet	REPOSITORY-GRANT	MIT	1c46a82ba384	refs/heads/main	391	Digital Credentials Consortium	Digital Credentials Consortium	LICENSE[ROOT/OWN/MIT]
+dodona-edu/dolos	REPOSITORY-GRANT	MIT	5da69ed7faa6	refs/heads/main	513	Team Dolos <dolos@ugent.be>	-	LICENSE[ROOT/OWN/MIT] | cli/LICENSE[SUBTREE/OWN/MIT] | core/LICENSE[SUBTREE/OWN/MIT] | lib/LICENSE[SUBTREE/OWN/MIT]
+eloompty/Eloom-LMS-International	REPOSITORY-GRANT	MIT	dc3abd49f9ca	refs/heads/main	5251	Eloom	-	LICENSE[ROOT/OWN/MIT] | public/themes/AdminLTE/plugins/fullcalendar/LICENSE.txt[SUBTREE/FOREIGN/MIT] | public/themes/AdminLTE/plugins/icheck-bootstrap/LICENSE[SUBTREE/FOREIGN/MIT] | public/themes/AdminLTE/plugins/ion-rangeslider/License.md[SUBTREE/FOREIGN/MIT] | public/themes/AdminLTE/plugins/jquery-mousewheel/LICENSE.txt[SUBTREE/HOLDER-ABSENT/MIT] | public/themes/AdminLTE/plugins/jquery-ui/LICENSE.txt[SUBTREE/HOLDER-ABSENT/MIT] | public/themes/AdminLTE/plugins/raphael/license.txt[SUBTREE/FOREIGN/MIT]
+examplary/qti	REPOSITORY-GRANT	MIT	85ba6c845192	refs/heads/main	69	Examplary AI	-	LICENSE[ROOT/OWN/MIT] | tests/stubs/LICENSE.md[SUBTREE/NOT-A-GRANT-TEXT/UNKNOWN]
+fairlearn/fairlearn	REPOSITORY-GRANT	MIT	a40efdbe0bef	refs/heads/main	341	-	-	LICENSE[ROOT/HOLDER-ABSENT/MIT]
+geli-lms/geli	REPOSITORY-GRANT	Apache-2.0	02ae52087e74	refs/heads/develop	956	-	-	LICENSE[ROOT/HOLDER-ABSENT/Apache-2.0] | .var/LicenseCalculator.xlsx[SUBTREE/NOT-A-GRANT-TEXT/UNKNOWN] | app/webFrontend/src/app/about/licenses/licenses.component.html[SUBTREE/NOT-A-GRANT-TEXT/UNKNOWN]
+learning-commons-org/agent-skills	REPOSITORY-GRANT	Apache-2.0	8b0599c24469	refs/heads/main	69	-	-	LICENSE[ROOT/HOLDER-ABSENT/Apache-2.0] | skills/k12-check-for-understanding/LICENSE[SUBTREE/HOLDER-ABSENT/Apache-2.0] | skills/k12-lesson-differentiation/LICENSE[SUBTREE/HOLDER-ABSENT/Apache-2.0] | skills/k12-lesson-plan-creation/LICENSE[SUBTREE/HOLDER-ABSENT/Apache-2.0] | skills/k12-lesson-prep/LICENSE[SUBTREE/HOLDER-ABSENT/Apache-2.0]
+motiolabs-space/open-academic	REPOSITORY-GRANT	MIT	3f2f79b5dbea	refs/heads/main	841	PT Motiolabs Digital Indonesia	-	LICENSE[ROOT/OWN/MIT]
+open-edge-platform/education-ai-suite	REPOSITORY-GRANT	Apache-2.0	6909dd989928	refs/heads/main	1449	-	-	LICENSE[ROOT/HOLDER-ABSENT/Apache-2.0]
+safytech/ulearn	REPOSITORY-GRANT	MIT	fcc4460b75b1	refs/heads/master	1808	ulearnpro	-	LICENSE[ROOT/OWN/MIT] | public/backend/curriculum/js/plugins/tinymce/jscripts/tiny_mce/license.txt[SUBTREE/FOREIGN/LGPL]
+stanfordnlp/edu-convokit	REPOSITORY-GRANT	MIT	d845ffdafda3	refs/heads/main	181	Rose E. Wang	-	LICENSE[ROOT/OWN/MIT]
+aion-context/aion-edu	REPOSITORY-GRANT	Apache-2.0	252aec3421cf	refs/heads/main	166	-	-	LICENSE[ROOT/HOLDER-ABSENT/Apache-2.0]
+dodona-edu/dodona	UNRESOLVED	-	-	-	-	-	-	-
+digitalcredentials/sign-and-verify	REPOSITORY-GRANT	MIT	6be5b41815b7	refs/heads/main	42	digitalcredentials	-	LICENSE[ROOT/OWN/MIT]
+latam-gpt/anonymization-filter	REPOSITORY-GRANT	MIT	f6f7ddfdbc02	refs/heads/main	8	GonzaloFuentes1	-	LICENSE[ROOT/OWN/MIT]
+latam-gpt/lm-evaluation-harness	REPOSITORY-GRANT	MIT	9fa381a92534	refs/heads/main	14793	EleutherAI	-	LICENSE.md[ROOT/OWN/MIT]
+AI-for-Education/pedagogy-benchmark	REPOSITORY-GRANT	MIT	21a43a395ab4	refs/heads/main	62	Fab Inc	-	LICENSE[ROOT/OWN/MIT]
+AI-for-Education/fabdata-llm	REPOSITORY-GRANT	MIT	a0f85c335498	refs/heads/main	63	Fab Data	-	LICENSE[ROOT/OWN/MIT]
+AI-for-Education/lesson-plan-parse-mbsse	REPOSITORY-GRANT	MIT	470ae45c7a8d	refs/heads/main	15	Fab Data	-	LICENSE[ROOT/OWN/MIT]
+AI-for-Education/edu-qurating	REPOSITORY-GRANT	MIT	e007badc4e66	refs/heads/main	1088	Fab AI	-	LICENSE[ROOT/OWN/MIT] | upstream/eval/lm-evaluation-harness/LICENSE.md[SUBTREE/FOREIGN/MIT]
+AI-for-Education/voice-ai-evaluation-framework	REPOSITORY-GRANT	MIT	f25f12830a8a	refs/heads/main	56	Fab AI Foundation	Fab AI Foundation	LICENSE[ROOT/OWN/MIT]
+DFE-Digital/education-benchmarking-and-insights	REPOSITORY-GRANT	MIT	185113884930	refs/heads/main	4832	Department for Education - Digital	-	LICENSE[ROOT/OWN/MIT]
+terracotta-education/terracotta	REPOSITORY-GRANT	Apache-2.0	00fc046c181e	refs/heads/development	1859	-	-	LICENSE[ROOT/HOLDER-ABSENT/Apache-2.0] | LICENSE_HEADER[ROOT/HOLDER-ABSENT/Apache-2.0]
+dodona-edu/dodona	UNRESOLVED	-	-	-	-	-	-	-
+0xnavarro/IA-PARA-TODOS	REPOSITORY-GRANT	Apache-2.0	61986292ab28	refs/heads/main	168	-	-	LICENSE[ROOT/HOLDER-ABSENT/Apache-2.0]
+DaviPac/Classroom-mcp	ABSENCE-ENUMERATED	-	fac5ea8ddae9	refs/heads/claude/publish-classroom-aluno-mcp-9g61ee	10	-	-	-
+Jeanikt/tutor-ai-agent	REPOSITORY-GRANT	MIT	987f3106ef6a	refs/heads/main	53	Jean Oliveira; LiveKit, Inc	-	LICENSE[ROOT/OWN/MIT]

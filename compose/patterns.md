@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 348 · 2026-10-20 — two recipes, and both are things a studio does BEFORE it builds: produce the fairness evidence Annex III will ask for, and dedupe your own supply list so the option count you quote is true
+
+**Evidence:** [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-payload-identity-cross-repo`](../evidence/p348-payload-identity-cross-repo.2026-10-20-p348.tsv) · [`p348-shelf-fold-identity`](../evidence/p348-shelf-fold-identity.2026-10-20-p348.tsv) · [`p348-institutional-orphan-probe`](../evidence/p348-institutional-orphan-probe.2026-10-20-p348.tsv)
+
+### P37 — "Prove it isn't discriminating" — the Annex III evidence pack for an assessment, admissions or proctoring model (EMEA first, and anywhere a regulator asks the question second)
+
+🔵 **The client problem.** The client has or wants a model that touches admissions, assessment, placement or proctoring. From **2027-12-02** that is EU Annex III high-risk (search-channel convergence — no EU host resolves from this environment, so the date travels as a claim), and the duty that bites is not accuracy, it is **demonstrated non-discrimination across protected groups, in a technical file that exists before the audit does.** 🔴 **This base has written that sentence for six passes and never named a component that produces the evidence.** Here it is.
+
+| Layer | Component | Grant, read at the pin this pass | What it does here |
+|---|---|---|---|
+| **Fairness metrics + mitigation** | [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | 🟢 **MIT** at ROOT, holder line absent · 2 300 ★ · 1 117 c · **139 author names** · pushed 2026-10-20 | The measurement itself: group-fairness metrics (selection rate, TPR/FPR parity, equalised odds) and mitigation, on any sklearn-shaped model. 🟢 **139 authors over seven years is the denominator a conformity argument leans on** |
+| **Test cohorts without touching student records** | [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) | 🟢 Already shelved here | Synthetic cohorts with controlled group composition, so the fairness suite runs on data the client may legally share with an auditor |
+| **The human decision the law wants** | [`psychquant/che-ntucool-mcp`](https://github.com/psychquant/che-ntucool-mcp) | 🟢 **MIT**, shelved p344 | Gates grade and announcement writes behind explicit human confirmation. 🔵 **The same component answers New York's prohibition, Korea's Act and Oklahoma SB 1734** — the control is identical in three regions |
+| **Integrity input, so "the student didn't write it" is not a model guess** | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT** at ROOT + three own-holder subtree grants · Ghent University · 3 859 c | Source-code similarity as a *reported signal to a human*, never an automatic verdict. 🔴 Wiring `dolos` straight to a sanction is the Annex III failure in one line |
+| **Did the intervention help, and for whom** | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 **Apache-2.0** at ROOT · 2 815 c · 14 author names | Randomised assignment inside live courses. 🟢 **Subgroup efficacy is the other half of the fairness file**: a model can be metric-fair and still only help one group |
+| **Service-standard reference** | [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | 🟢 **MIT**, holder `Department for Education - Digital` · **5 266 c** · 30 authors · pushed 2026-10-20 | What a public education service's data boundary, notification architecture and pipeline look like when a ministry has to defend them |
+
+🟢 **How to wire it.** (1) Define the protected attributes with the client's counsel, **in writing, before any code** — in education they are usually SEN/disability status, free-school-meal or low-income flags, migration or language background, and sex; (2) generate synthetic cohorts with `SDV` that span those groups at controlled rates, and keep the real data out of the audit artefact; (3) run `fairlearn`'s metric frame per group on the client's model, store the output as a dated artefact in the repo, **not as a notebook cell**; (4) put `che-ntucool-mcp`'s confirmation gate on every write that reaches a student record, so the human decision is in the log rather than in the policy document; (5) if an integrity signal is in scope, `dolos` produces it as a *finding a human adjudicates*, with an appeal path; (6) run the intervention as a `terracotta` experiment and report the fairness metrics **per arm**.
+
+🔴 **What this recipe refuses to do.** It does not claim the model is compliant. 🟢 **It produces the artefacts a regulator asks for and leaves the verdict to the client's counsel** — which is the only honest shape for a compliance deliverable, and `P250` is why: an undetermined verdict and a prohibited one are indistinguishable, so a studio that asserts compliance has taken the client's risk onto its own balance sheet.
+
+🟡 **Why nobody had assembled this before, and it is a lesson rather than an excuse.** Not one of `fairlearn`, `SDV` or the privacy tier carries an education token, so **every education-token discovery filter this base has run is structurally blind to the compliance half of its own market.** `ACTION ZZ-ae`.
+
+### P38 — "How many open options are there, actually?" — the supply-dedup check to run before you quote an option count (any region; 30 minutes)
+
+🔵 **The client problem.** A studio says *"there are five open-source options for this layer"* in a deck. 🔴 **This base just measured how wrong that sentence can be on its own shelves**: 65 folded-collision groups, a fourth alias pair whose two owners share no characters, and two repositories shipping byte-identical payloads. 🟡 **Every one of those inflates an option count, and the inflation is invisible to reading the list.**
+
+| Check | Command | What it catches | Measured here |
+|---|---|---|---|
+| **1 · fold the slug** | `make fold-census` (offline) | the same address published under different casings | **65** collision groups; **63** invisible to the case-sensitive `gate-identity` |
+| **2 · pin the HEAD** | `git ls-remote --symref https://github.com/<slug> HEAD` | two addresses, one repository — a rename, an org transfer, a vanity fork | **4** on-shelf alias pairs. 🔴 The newest, [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) ≡ [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) at `1c46a82ba384`, is **invisible to step 1** |
+| **3 · digest the payload** | `curl -s raw.githubusercontent.com/<slug>/HEAD/<file> \| sha256sum` | two repositories, one body of work | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) and [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) ship `SKILL.md` at **sha256 `152e3272fbd108fe…`** — identical, and **invisible to steps 1 and 2** |
+| **4 · read the holder line** | `make gate-grant-scope`'s channel | the org is regional, the CODE is upstream | [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) holder reads **`EleutherAI`**; [`AI-for-Education/edu-qurating`](https://github.com/AI-for-Education/edu-qurating) is a QuRating fork |
+| **5 · enumerate the tree at the pin** | `git ls-tree -r --name-only HEAD` + read each hit | "no licence" that is really "a licence you did not look for"; and a vendored grant published as the project's | [`DaviPac/Classroom-mcp`](https://github.com/DaviPac/Classroom-mcp) is a genuine **ABSENCE-ENUMERATED**; `safytech/ulearn`'s TinyMCE **LGPL** and `AcademicsToday/academicstoday-django`'s **Twitter** Bootstrap grant both grade **FOREIGN** beside correct own-holder roots |
+| **6 · date the stream** | `git log -1 --date=short` + `rev-list --count` + the `%z` histogram | a finished pilot sold as a platform; an unplaceable row | [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) dormant **30 months**; [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) is **5 commits**; [`EduNLP/EduCoder`](https://github.com/EduNLP/EduCoder) has a Chinese-lab name and a **US Pacific** commit stream on all 49 |
+
+🟢 **The deliverable is one table per layer**: address, pin, grant at the pin with its scope and holder, commits, author NAMES (say the key), first and last commit, timezone majority, and **which of the other rows it is the same thing as.** 🔵 **An option count after this check is usually smaller and always defensible** — and the honest version of the deck line is *"there are three distinct options and two of them are the same project under different stewardship."*
+
+🔴 **Do not skip step 3 because steps 1 and 2 passed.** The three checks catch three disjoint classes; this base owned instruments for two of them and had run the cheaper one over **17.4 %** of its own addresses.
+
+---
+
 ## Pass 347 · 2026-10-20 — two recipes built on rows this pass read at a pin, and both answer a question this base could not answer yesterday: who contains the student's code, and what a national education service actually looks like underneath
 
 🟢 **Both recipes below are built only from components whose grants were read first-hand at a pinned HEAD sha — this pass or a named earlier one — and every address is on these shelves.** 🔵 Where a grant is **package-scoped** rather than repository-scoped, the step says so, because that is the difference between a dependency a studio may ship and one it may not.

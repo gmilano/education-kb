@@ -1,0 +1,103 @@
+# p348 — ACTION ZZ-x executed, both halves, and the denominator is the finding.
+#
+# p347 ran the HEAD-equality test and declared it done "over EVERY address on these shelves":
+# 257 distinct addresses extracted from THE FIVE LIVE SHELF FILES.  Re-harvested here over ALL
+# NINE published shelves:
+#
+#   p347's declared set (5 live shelf files, as its own header states)      440 casings
+#   addresses appearing ONLY on the two APPEND-ONLY shelves               2 091 casings
+#   the COMPLETE shelf set                                                2 531 casings
+#                                                                         2 462 folded addresses
+#
+# So the shelf-wide run covered 440 of 2 531 = 17.4 %, and its verdict column reads "unique HEAD
+# across the shelf set" — a true statement about the set it measured and a false one about the
+# shelves.  `agents/trending.md` and `repos/trending.md` hold 74 076 of this base's 122 217 shelf
+# lines; they were excluded because they are append-only HISTORY, and the addresses on them are
+# the addresses a reader copies.
+#
+# THE SPECIMEN, and folding cannot see it:
+#   digitalcredentials/learner-credential-wallet          HEAD 1c46a82ba384   on agents/trending.md
+#   openwallet-foundation-labs/learner-credential-wallet  HEAD 1c46a82ba384   in p347's set, graded
+#                                                                            "unique HEAD across the shelf set"
+# ONE repository, published twice, under owners sharing no characters: the MIT Digital Credentials
+# Consortium moved the project to the OpenWallet Foundation.  A case fold is blind to it; only
+# HEAD equality sees it.  This is a FOURTH on-shelf alias pair, after p347's three.
+#
+# THE OFFLINE HALF, measured rather than assumed: 65 folded-collision groups on the complete set
+# (the OWNER/REPO command template dropped).  Every member resolved first-hand with
+# `git ls-remote --symref`.  64 groups answered and ALL 64 ARE SAME-HEAD — one repository under two
+# or three casings.  ZERO groups came back with different HEADs, so folding produced no false
+# positive anywhere on this corpus, which is the warrant for wiring it as `gate-fold-identity`.
+# One group does not answer under either casing: gegok12/gegok12 / GegoK12/gegok12.
+#
+# Two of the 65 were already reported by p347 (OpenOLAT, RohanMuppa); the other 63 are new, and 63
+# of them were invisible to `gate-identity` because it compares slugs case-sensitively.
+folded_slug	variants	verdict_at_the_pin	as_published
+1edtech/caliper-spec	2	SAME-HEAD 1849e118b47acb24a6d97f976fe72fc2f5182570	1EdTech/caliper-spec 1edtech/caliper-spec
+ahmedeid1/lumen	2	SAME-HEAD 07635d3c81ad4f2ddd51b13266b7317285d75e37	ahmedEid1/Lumen ahmedEid1/lumen
+apereo-learning-analytics-initiative/opendashboard-legacy	2	SAME-HEAD 3a6e8787c09ef999722e4ded78133ac7451cca53	Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy apereo-learning-analytics-initiative/opendashboard-legacy
+asthetech/mewcp-google-classroom	2	SAME-HEAD dfb0366ba3ea10890208b7d6d633b2d1e53a9bbe	AStheTECH/mewcp-google-classroom asthetech/mewcp-google-classroom
+bruchris/canvas-lms-mcp	2	SAME-HEAD 3997e3eb03a547d7a8dc6d0fdcbc593bbe1abfea	BruChris/canvas-lms-mcp bruchris/canvas-lms-mcp
+cahlr/oatutor	2	SAME-HEAD a1df9d67bc7b90157bcbbaf38ac3f04b42e139f0	CAHLR/OATutor cahlr/OATutor
+carlsvejstrup/dtu-learn-mcp	2	SAME-HEAD 9444a1fd51999d4a0d27d4067d8df2a9a3ea7716	CarlSvejstrup/dtu-learn-mcp carlsvejstrup/dtu-learn-mcp
+classroomio/classroomio	2	SAME-HEAD 0b52029733d92cd856b557196cd1778e93379b63	ClassroomIO/ClassroomIO classroomio/classroomio
+crosstalk-solutions/project-nomad	2	SAME-HEAD 54ee30a44902e5c252b477f8685c26ec3064ab72	Crosstalk-Solutions/Project-NOMAD Crosstalk-Solutions/project-nomad
+csr2017/edfi-oneroster	2	SAME-HEAD 937248be66de54ef25fd9c0286877816f79e494c	CSR2017/edfi-oneroster csr2017/edfi-oneroster
+davidlms/learnmcp-xapi	2	SAME-HEAD fbf609142c3c39abf86620df10a6f81b829beff4	DavidLMS/learnmcp-xapi davidlms/learnmcp-xapi
+davipac/classroom-mcp	2	SAME-HEAD fac5ea8ddae93e5a2cee528bbd1b5dbaf97c0677	DaviPac/Classroom-mcp davipac/classroom-mcp
+dmontgomery40/mcp-canvas-lms	2	SAME-HEAD c0646ba10ac207d45cc2122d80b3b98e12b497d0	DMontgomery40/mcp-canvas-lms dmontgomery40/mcp-canvas-lms
+ed-fi-alliance-oss/ed-fi-data-standard	2	SAME-HEAD 3d24df6675c55d80ac7e6b163b71a328cad3555a	Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard ed-fi-alliance-oss/Ed-Fi-Data-Standard
+ed-fi-alliance-oss/ed-fi-ods	2	SAME-HEAD 7fcefbdaccab498893098068cb07f2b80fbc222e	Ed-Fi-Alliance-OSS/Ed-Fi-ODS ed-fi-alliance-oss/Ed-Fi-ODS
+edubase/mcp	2	SAME-HEAD d912a6211d847a19a496299d1e1318c5e9bbf0ae	EduBase/MCP EduBase/mcp
+elgg/elgg	2	SAME-HEAD 3c51e7aef18fcfe200a147fc186a31e35fd9ae80	Elgg/Elgg elgg/elgg
+emorynlp/llm-grading	2	SAME-HEAD b37150e0191a8b7e686f9703693503644bdcff89	emorynlp/LLM-Grading emorynlp/llm-grading
+eth-lre/mathtutorbench	2	SAME-HEAD 6faed173ec2bef55cb899b2a3e0f93982f9cb176	eth-lre/MathTutorBench eth-lre/mathtutorbench
+fwu-de/ais-chat	2	SAME-HEAD 426f8de8cf10c57e18469fb7f8742274913f4f65	FWU-DE/ais-chat fwu-de/ais-chat
+fwu-de/fwu-kc-extensions	2	SAME-HEAD 2dbc80c9eebfd8f24f0943a5560772872a429eb9	FWU-DE/fwu-kc-extensions fwu-de/fwu-kc-extensions
+fwu-de/mem-mcp	2	SAME-HEAD 68e637900c715be61df02f2503435698379dbd34	FWU-DE/mem-mcp fwu-de/mem-mcp
+gego-k12/gegok12	2	SAME-HEAD 99da145f55a17d26ac2d67ae258a4f9beb385874	Gego-K12/gegok12 gego-k12/gegok12
+gegok12/gegok12	2	UNRESOLVED-ALL — neither casing answers	GegoK12/gegok12 gegok12/gegok12
+gibbonedu/core	2	SAME-HEAD 65f86bf061fa6e5d6d748b00df51b134a5b32cc0	GibbonEdu/core gibbonedu/core
+hesham0-0nasser/tutor-lms-mcp	2	SAME-HEAD c92e5b9b4add474bc0d3fbdf622280095d7c6da0	Hesham0-0Nasser/tutor-lms-mcp hesham0-0nasser/tutor-lms-mcp
+idiap/coqui-ai-tts	2	SAME-HEAD 03339e5b790b5e16ea8867a142e8bb26ec646d94	idiap/coqui-ai-TTS idiap/coqui-ai-tts
+juliapluto/pluto.jl	2	SAME-HEAD 90dc3cfe6bdaaf9ae3ff9a96e785ea70762c11d7	JuliaPluto/Pluto.jl juliapluto/Pluto.jl
+juneyaooo/lineage-skill	2	SAME-HEAD 7e2cbc5dc317139f39c86f47c60aba4e34ac7838	JuneYaooo/lineage-skill juneyaooo/lineage-skill
+khan/tutoring-accuracy-dataset	2	SAME-HEAD fbbeff86b5c1a689161b8f6092a6be7d0532a6dd	Khan/tutoring-accuracy-dataset khan/tutoring-accuracy-dataset
+kualico/rice	2	SAME-HEAD 35e73ebb4b17f138cc82172d772a460424d67fcf	KualiCo/rice kualico/rice
+limekiller/moodle-block_openai_chat	2	SAME-HEAD 4a4c348d1f9990f5115a711828aa7aa2b4e3e740	Limekiller/moodle-block_openai_chat limekiller/moodle-block_openai_chat
+longsightgroup/oneroster	2	SAME-HEAD 8c14777e44efaf7cc32135c3eceeaa2ab12f69a4	LongsightGroup/oneroster longsightgroup/oneroster
+longsightgroup/qti3	2	SAME-HEAD 902996d89729a4a2a242f8f222eea4bbe281cff7	LongsightGroup/qti3 longsightgroup/qti3
+marcosnahuel/moodle-mcp	2	SAME-HEAD d5ca68e8cd1b0ebc861a3f35916cfe9fb5ff7fdd	MarcosNahuel/moodle-mcp marcosnahuel/moodle-mcp
+microsoft/shiksha-copilot	2	SAME-HEAD cf2a2e24c3d44ee027756c6d16cb1de28ba1b22e	microsoft/Shiksha-Copilot microsoft/shiksha-copilot
+minouza/mathcrew	2	SAME-HEAD 309357e91ad88dd30bc6c82c2466710dc92b8c59	minouza/MathCrew minouza/mathcrew
+ocrmypdf/ocrmypdf	2	SAME-HEAD cf0df3da06aef04fe9a5bf91c6feff36370bb3eb	ocrmypdf/OCRmyPDF ocrmypdf/ocrmypdf
+open-tutorai/open-tutor-ai-ce	2	SAME-HEAD 196c547291da5df57b68165691e47ca7ffdbb137	Open-TutorAi/open-tutor-ai-CE open-tutorai/open-tutor-ai-ce
+openeducat/openeducat_erp	2	SAME-HEAD 46a5d7d400820d471b67b8c019997bfa5d3c873e	OpenEduCat/openeducat_erp openeducat/openeducat_erp
+openemis/core	2	SAME-HEAD 14550b589f42fc85833b20a7194211e2d1a20977	OpenEMIS/core openemis/core
+openolat/openolat	3	SAME-HEAD 5495d1f7640cb6099124559bf7da905e2bb9940e	OpenOLAT/OpenOLAT OpenOLAT/OpenOlat openolat/OpenOLAT
+opetushallitus/ataru	2	SAME-HEAD 0bb13175714fe5fabe5e95f72b59205e1eafe748	Opetushallitus/ataru opetushallitus/ataru
+opetushallitus/ehoks	2	SAME-HEAD 849c359ed20a123335e3bc985815607015dfa03b	Opetushallitus/ehoks opetushallitus/ehoks
+opetushallitus/eperusteet	2	SAME-HEAD a329ae9d642896c252b8173d0baadc20c1c73f82	Opetushallitus/eperusteet opetushallitus/eperusteet
+opetushallitus/koski	2	SAME-HEAD b03de6b225394d55cdda85959f102ffd5e0a1563	Opetushallitus/koski opetushallitus/koski
+opetushallitus/oppijanumerorekisteri	2	SAME-HEAD 91ab978424770e1364ae3390fb39475d803c782c	Opetushallitus/oppijanumerorekisteri opetushallitus/oppijanumerorekisteri
+opetushallitus/organisaatio	2	SAME-HEAD d8367a490634204c3d1e1b4346f456f3abe7dd1d	Opetushallitus/organisaatio opetushallitus/organisaatio
+opetushallitus/suorituspalvelu	2	SAME-HEAD 820f7a55c58553d50b4fe751593880a843738ed0	Opetushallitus/suorituspalvelu opetushallitus/suorituspalvelu
+opetushallitus/valtionavustus	2	SAME-HEAD e9347dbe6177104ba4fbd53beffa1a9a2a1eaaac	Opetushallitus/valtionavustus opetushallitus/valtionavustus
+os4ed/opensis-classic	2	SAME-HEAD 5d546f20117e12e42b528f9ca91c7f6bd21fb21e	OS4ED/openSIS-Classic os4ed/openSIS-Classic
+pablopc05/mcp-usc	2	SAME-HEAD 5ddcf4014e39d802a6720eb4f6ca8b5a97760605	PabloPC05/mcp-usc pablopc05/mcp-usc
+psychquant/che-ntucool-mcp	2	SAME-HEAD 998d0960254bf7d996e8f9ced497b4178eda98a6	PsychQuant/che-ntucool-mcp psychquant/che-ntucool-mcp
+rohanmuppa/brightspace-mcp-server	2	SAME-HEAD d4dbf149863cc40ba7fe960c091e22f85d28205b	RohanMuppa/brightspace-mcp-server rohanmuppa/brightspace-mcp-server
+schroedinger-hat/certo	3	SAME-HEAD 6fd0a11fe2ff616d49da2a935b3e9d2cb88e1ffe	Schroedinger-Hat/certo schroedinger-Hat/certo schroedinger-hat/certo
+sdv-dev/sdv	2	SAME-HEAD 2eae2d53816b12105b3603347767cdecc5336e91	sdv-dev/SDV sdv-dev/sdv
+shuyunyuan/talentcoach	2	SAME-HEAD b450118a7e8a935bb0dfda6e025918bd72b4436b	ShuyunYuan/talentcoach shuyunyuan/talentcoach
+skolverket/dnp-ss12000-reference-api	2	SAME-HEAD a3187df2baf07bc996e579745a7f635f1e7fbc73	Skolverket/dnp-ss12000-reference-api skolverket/dnp-ss12000-reference-api
+sonaiengine/ku-portal-mcp	2	SAME-HEAD b15886080faa0c721b57859ff0d9baa81c42d4e8	SonAIengine/ku-portal-mcp sonaiengine/ku-portal-mcp
+tadreeb-lms/tadreeblms	2	SAME-HEAD ada7e04a0638aa9c119c0d62f360b04507827097	Tadreeb-LMS/tadreeblms tadreeb-lms/tadreeblms
+tanzania-ai-community/twiga	2	SAME-HEAD 33e7e95410e5d35d2e6681c5b28646ebf15e8568	Tanzania-AI-Community/twiga tanzania-ai-community/twiga
+theopenem/oneroster.net	2	SAME-HEAD 4f96365d3108364aea5407eedd274d5f213faf3f	theopenem/OneRoster.NET theopenem/oneroster.net
+unicon/tool13demo	2	SAME-HEAD a9b53dec6a76b338065e01610498af81eee53a28	Unicon/tool13demo unicon/tool13demo
+uoc/java-lti-1.3	2	SAME-HEAD e6736166d415f8ab3ce12e92226e3b3e06e6ffe9	UOC/java-lti-1.3 uoc/java-lti-1.3
+xgabrielcv/auto-matricula-sigaa-unb	2	SAME-HEAD 588d8975d4edeb0e176afa70b30d63eaf9365c1c	xGabrielCv/Auto-Matricula-SIGAA-UnB xgabrielcv/auto-matricula-sigaa-unb
+#	collision_groups	65	OWNER/REPO template excluded
+#	same_head_groups	64	100 % of the groups that resolved
+#	different_head_groups	0	no false positive from folding anywhere on this corpus

@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 348 · 2026-10-20 — the prescribed trending leg returns listicles for the fourteenth consecutive pass, and this time the leg itself is the datum: the global "trending education AI" channel has no education in it
+
+**Evidence:** [`p348-policy-channel`](../evidence/p348-policy-channel.2026-10-20-p348.tsv) · [`p348-institutional-orphan-probe`](../evidence/p348-institutional-orphan-probe.2026-10-20-p348.tsv) · [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-shelf-fold-identity`](../evidence/p348-shelf-fold-identity.2026-10-20-p348.tsv)
+
+### 🔴 What the two prescribed discovery legs actually returned, written down rather than left as apparent coverage
+
+| leg, run verbatim as prescribed | what came back |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **No ranking of education agents exists on this channel.** Every result was a general-purpose agent roundup — Hermes Agent, OpenClaw, OpenHands, CrewAI, LangGraph — plus one curated index (`ashishpatel26/500-AI-Agents-Projects`, MIT) that lists *"Virtual AI Tutor"* as a use case rather than a repository. Sources also **conflict on licence and status**, and star counts differ several-fold between them |
+| `github trending education AI 2026` | 🔴 **The word "education" in this channel means LEARNING TO BUILD AI, not AI for schools.** The strongest matches are `rohitg00/ai-engineering-from-scratch`, `microsoft/generative-ai-for-beginners`, `nanochat`, `developer-roadmap` — developer curricula, not education technology. No tracker reproduced GitHub's own Trending page |
+
+🔵 **Fourteen passes is long past the point where this is noise.** 🟢 **The transferable reading: "education" is a polysemous token in the discovery channel, and the sense that dominates is the one aimed at engineers.** This base's placeable supply has come from its own inventory for **four consecutive passes** and from the institutional filter for **three** — which is not a workaround, it is the measurement telling you where the supply is.
+
+### 🟢 `ACTION ZZ-aa` executed: the institutional filter, run to the end of the education-token orphans
+
+The population is this base's own **528-row** permissive-orphan inventory. **127 rows carry an education token**; p345/p346/p347 had read **40**; **87 were unread.** 🟡 ZZ-aa asked for the yield to be quoted against **94 rather than 100** because `learn` is a substring of `unlearning` — and on the unread set the correction is larger: **five machine-UNLEARNING repositories** plus `rasbt/machine-learning-book` are in the 87, so **the education denominator of the unread set is 81, not 87.**
+
+**39 addresses were read first-hand at the pin this pass** — 24 selected for organisation ownership, 2 adjacency probes, and **13 selected for REGIONAL token content**, because p345 and p347 both recorded LATAM as this base's thinnest column.
+
+| verdict | n | of 39 |
+|---|---|---|
+| `REPOSITORY-GRANT` — an own-holder grant at the root | **36** | 92 % |
+| `ABSENCE-ENUMERATED` — no licence-shaped path in the complete tree | 1 | `DaviPac/Classroom-mcp` |
+| `UNRESOLVED` — the address does not answer | 1 | `dodona-edu/dodona` |
+| not placed, channels disagree | 2 | `EduNLP/EduCoder`, `0xnavarro/IA-PARA-TODOS` |
+
+🔵 **A 92 % grant rate on an "orphan" list is itself the finding, for the fourth pass running:** these addresses were never ungranted, they were unread. 🟡 **The filter that keeps paying is institutional ownership** — a ministry, a university, a consortium or a foundation in the owner field — and this pass adds the sharper version: **the holder LINE inside the licence payload**, which named the UK Department for Education, the Digital Credentials Consortium, Ghent's Dolos team and an Indonesian company without a single external lookup.
+
+### 🟢 Trending by substance rather than by stars — the rows that moved on the day of this pass
+
+| Repo | Licence at the pin | Signal | Why it matters |
+|---|---|---|---|
+| [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | **MIT** | **5 266 commits · 30 authors · pushed 2026-10-20 · 4 ★** | 🟢 A **third** live UK national education service, after the two p347 promoted. *"Compare school metrics against similar schools"* — the benchmarking service a ministry actually runs. **The most citable answer this base holds to "what does a compliant national education service cost to build"** |
+| [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | **MIT** | **2 300 ★ · 528 forks · 139 author names · pushed 2026-10-20** | 🟢 The fairness-evidence library the Annex III technical file needs, which this base has described in prose for six passes without naming |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | **Apache-2.0** | **457 commits · 33 authors · pushed 2026-10-20 · `+0800`/`+0530` = 82 %** | 🟡 Smart Classroom + Teaching Assistant on OpenVINO. **APAC-engineered under a US vendor's org.** 🔴 Its README says reference and demonstration, **not production** |
+| [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | **Apache-2.0** | **40 ★ · 43 commits · 7 authors · pushed 2026-10-20** | 🔴 Byte-identical skill payloads with [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) (`SKILL.md` sha256 `152e3272fbd108fe`). **Choose on the Knowledge-Graph MCP server, not on the skills — the skills are the same bytes** |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | **MIT** | **353 ★ · 3 859 commits · 25 authors · pushed 2026-10-19** | 🟢 Source-code plagiarism detection from Ghent University. **Three placement channels agree** (holder `dolos@ugent.be`, `2080×+0200`, owner) — the strongest-placed EMEA row on these shelves |
+| [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | **Apache-2.0** | **2 815 commits · 14 author names · pushed 2026-10-19 · 21 ★** | 🟢 Randomised controlled trials inside live LMS courses. 🔴 And the row whose published author count **cannot be re-derived** — see `ACTION ZZ-ac` |
+
+### 🟡 Emerging, placed, and small enough that the size is part of the finding
+
+| Repo | Licence | Size | Placement |
+|---|---|---|---|
+| [`motiolabs-space/open-academic`](https://github.com/motiolabs-space/open-academic) | **MIT** | 75 commits, **1 author**, 16 days of work, dormant since 2026-08-23 | **APAC — Indonesia**: holder `PT Motiolabs Digital Indonesia` + `+0700` on **all 75** |
+| [`examplary/qti`](https://github.com/examplary/qti) | **MIT** | 39 commits, 2 authors, live 2026-10-12 | **EMEA**: `+0100` on **all 39**. A QTI parser — the assessment-interoperability layer every exam migration needs |
+| [`latam-gpt/anonymization-filter`](https://github.com/latam-gpt/anonymization-filter) | **MIT** | **6 commits**, 1 author, dormant 17 months | **LATAM**: `−0400` on **all 6**, from the CENIA/LatamGPT org. 🟡 Tiny — but it is a PII-stripping filter, and §LATAM below is a student-data engagement |
+| [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) | **MIT** | **3 commits**, 2 authors, 2026-09-25 → 2026-10-07 | **LATAM — Brazil**: `−0300` on **all 3**. 🔴 Second holder line reads `LiveKit, Inc` — a voice-agent template derivative, which is what three commits buys |
+| [`AI-for-Education/voice-ai-evaluation-framework`](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | **MIT** | 61 commits, 4 authors, live 2026-09-23 | **EMEA**: holder `Fab AI Foundation`, `+0200`/`+0300`. 🟢 Evaluates ASR for **early-grade reading assessment in Kiswahili child speech** — the only low-resource-language education evaluation harness on these shelves |
+
+### 🔴 The LATAM column, stated honestly for the fourth pass
+
+🟢 **This pass adds two instrument-placed LATAM rows and both are tiny**: 6 commits and 3 commits. 🔴 **An informed gap, not coverage:** the regional token sweep over the whole 528-row inventory returned **14 candidate addresses**, of which exactly **two** are LATAM-authored code, one is a **Polish vendor**, one is an **EleutherAI fork**, and the rest are UK or US. 🟡 **LATAM's signal in this industry is on the DEMAND side and it is the strongest of any region** (nine in ten 15-year-olds already using AI chatbots for schoolwork; 56 % of Brazilian and 55 % of Chilean secondary teachers against an OECD average of 36 %) — **so a LATAM engagement is an adoption-and-governance engagement built on global supply, and this base should stop expecting a LATAM platform tier to appear.**
+
+---
+
 ## Pass 347 · 2026-10-20 — the prescribed trending leg returns listicles for the thirteenth pass; the week's real repository news is that `LICENSE` can be a DIRECTORY, and the row it hid has 3 839 stars
 
 **Evidence:** [`p347-grant-channel-recovery`](../evidence/p347-grant-channel-recovery.2026-10-20-p347.tsv) · [`p347-institutional-orphan-probe`](../evidence/p347-institutional-orphan-probe.2026-10-20-p347.tsv) · [`p347-shelfwide-head-equality`](../evidence/p347-shelfwide-head-equality.2026-10-20-p347.tsv).

@@ -1,0 +1,31 @@
+# p348 — a THIRD identity class, which neither of this base's two identity instruments can see.
+#
+# `gate-identity` (p283, offline) asks: do two shelf rows name the same ADDRESS?
+# `gate-identity-online` (p283, egress) asks: do two addresses resolve to the same HEAD?
+# Neither asks: do two DIFFERENT repositories ship the same PAYLOAD?
+#
+# They do, and the specimen was found while grading this pass's own promotion candidates — two
+# addresses that the scope instrument reported with the same licence family and overlapping file
+# names.  The skill bodies are byte-identical:
+#
+#   anthropics/k12-teacher-skills          plugin/skills/k12-check-for-understanding/SKILL.md
+#   learning-commons-org/agent-skills      skills/k12-check-for-understanding/SKILL.md
+#
+# read at HEAD over raw.githubusercontent.com, both sha256 152e3272fbd108fe…  Different owners,
+# different repositories, different HEADs, different directory layouts, SAME CONTENT.  Both are
+# Apache-2.0 at the root, so there is no licence conflict — the cost is a DENOMINATOR error: a
+# shelf that offers both as distinct assets double-counts the supply, and a client told "there are
+# two open K-12 teacher skill packs" has been told something false.
+#
+# learning-commons-org's README names the relationship without claiming derivation: it points to
+# "a companion K-12 teacher skills repository from Anthropic" that "accompanies this work", and
+# says each skill carries its own attribution in a NOTICE file.  So this is a published pair, not
+# a silent copy — which is exactly why an identity instrument has to measure the payload: the
+# relationship is discoverable in prose and invisible to both gates.
+#
+# The ALIAS pair below is the other half of the coverage finding, and it is the one a case fold
+# cannot reach: ONE repository under two owner strings with no characters in common.
+check	a	b	measured	verdict
+payload digest	anthropics/k12-teacher-skills @ plugin/skills/k12-check-for-understanding/SKILL.md	learning-commons-org/agent-skills @ skills/k12-check-for-understanding/SKILL.md	sha256 152e3272fbd108fe (both)	IDENTICAL PAYLOAD, two repositories — invisible to gate-identity AND gate-identity-online
+HEAD equality	digitalcredentials/learner-credential-wallet	openwallet-foundation-labs/learner-credential-wallet	HEAD 1c46a82ba38447f164998903e88944b67fc2a2e6 (both), default ref refs/heads/main (both)	ONE repository, two owners — invisible to a case fold; p347 graded the second "unique HEAD across the shelf set" because the first sits on an append-only shelf outside its extraction
+#	identity classes this base can now name	3	folded casing / equal HEAD / equal payload	instruments in `hooks`: 2 (gate-identity, gate-fold-identity).  gate-identity-online is in `hooks-online` as of this pass.  The payload-digest class has NO instrument — ACTION ZZ-ad.

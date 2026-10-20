@@ -1,0 +1,14 @@
+slug	verdict	family	sha	ref	n_paths	holder	institution	detail
+latam-gpt/anonymization-filter	REPOSITORY-GRANT	MIT	f6f7ddfdbc02	refs/heads/main	8	GonzaloFuentes1	-	LICENSE[ROOT/OWN/MIT]
+latam-gpt/lm-evaluation-harness	REPOSITORY-GRANT	MIT	9fa381a92534	refs/heads/main	14793	EleutherAI	-	LICENSE.md[ROOT/OWN/MIT]
+AI-for-Education/pedagogy-benchmark	REPOSITORY-GRANT	MIT	21a43a395ab4	refs/heads/main	62	Fab Inc	-	LICENSE[ROOT/OWN/MIT]
+AI-for-Education/fabdata-llm	REPOSITORY-GRANT	MIT	a0f85c335498	refs/heads/main	63	Fab Data	-	LICENSE[ROOT/OWN/MIT]
+AI-for-Education/lesson-plan-parse-mbsse	REPOSITORY-GRANT	MIT	470ae45c7a8d	refs/heads/main	15	Fab Data	-	LICENSE[ROOT/OWN/MIT]
+AI-for-Education/edu-qurating	REPOSITORY-GRANT	MIT	e007badc4e66	refs/heads/main	1088	Fab AI	-	LICENSE[ROOT/OWN/MIT] | upstream/eval/lm-evaluation-harness/LICENSE.md[SUBTREE/FOREIGN/MIT]
+AI-for-Education/voice-ai-evaluation-framework	REPOSITORY-GRANT	MIT	f25f12830a8a	refs/heads/main	56	Fab AI Foundation	Fab AI Foundation	LICENSE[ROOT/OWN/MIT]
+DFE-Digital/education-benchmarking-and-insights	REPOSITORY-GRANT	MIT	185113884930	refs/heads/main	4832	Department for Education - Digital	-	LICENSE[ROOT/OWN/MIT]
+terracotta-education/terracotta	REPOSITORY-GRANT	Apache-2.0	00fc046c181e	refs/heads/development	1859	-	-	LICENSE[ROOT/HOLDER-ABSENT/Apache-2.0] | LICENSE_HEADER[ROOT/HOLDER-ABSENT/Apache-2.0]
+dodona-edu/dodona	UNRESOLVED	-	-	-	-	-	-	-
+0xnavarro/IA-PARA-TODOS	REPOSITORY-GRANT	Apache-2.0	61986292ab28	refs/heads/main	168	-	-	LICENSE[ROOT/HOLDER-ABSENT/Apache-2.0]
+DaviPac/Classroom-mcp	ABSENCE-ENUMERATED	-	fac5ea8ddae9	refs/heads/claude/publish-classroom-aluno-mcp-9g61ee	10	-	-	-
+Jeanikt/tutor-ai-agent	REPOSITORY-GRANT	MIT	987f3106ef6a	refs/heads/main	53	Jean Oliveira; LiveKit, Inc	-	LICENSE[ROOT/OWN/MIT]

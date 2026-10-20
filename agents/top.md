@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 348 · 2026-10-20 — the agent shelf gained an INSTRUMENT rather than a row: two repositories here ship byte-identical skill payloads, which neither of this base's two identity gates can see, and the holder channel built this pass was WRONG on its first run in the direction it existed to prevent
+
+**Evidence:** [`p348-payload-identity-cross-repo`](../evidence/p348-payload-identity-cross-repo.2026-10-20-p348.tsv) · [`p348-holder-channel-defect`](../evidence/p348-holder-channel-defect.2026-10-20-p348.tsv) · [`p348-institutional-orphan-probe`](../evidence/p348-institutional-orphan-probe.2026-10-20-p348.tsv) · [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-author-key-spread`](../evidence/p348-author-key-spread.2026-10-20-p348.tsv) · gates: `make gate-grant-scope` (26 controls), `make gate-fold-identity` (21 controls)
+
+### 🔴 Two agent rows on this shelf are the SAME PAYLOAD, and that is a third identity class
+
+🟡 [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) and [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) are both Apache-2.0 at the root, both placed North America, and both offered here as K-12 teacher skill packs. 🔴 **Their skill bodies are byte-identical** — `plugin/skills/k12-check-for-understanding/SKILL.md` and `skills/k12-check-for-understanding/SKILL.md`, read at HEAD over `raw.githubusercontent.com`, both **sha256 `152e3272fbd108fe…`**.
+
+| Identity question | Instrument this base owns | Catches the wallet alias? | Catches this pair? |
+|---|---|---|---|
+| do two rows name the same ADDRESS, case-folded? | `gate-fold-identity` (new this pass, offline, in `hooks`) | 🔴 no — the owners share no characters | 🔴 no |
+| do two addresses resolve to the same HEAD? | `gate-identity-online` (p283, egress, in `hooks-online` as of this pass) | 🟢 yes | 🔴 no — different HEADs, different trees |
+| do two repositories ship the same PAYLOAD? | 🔴 **none** | — | 🟢 would |
+
+🟢 **There is no licence conflict and no misconduct here** — `learning-commons-org`'s README names *"a companion K-12 teacher skills repository from Anthropic"* that *"accompanies this work"*, and says each skill carries its own `NOTICE` attribution. 🔵 **The cost is a DENOMINATOR error, and it lands on the client.** A studio told *"there are two open K-12 teacher skill packs"* has been told something false; what exists is one pack with two distributions, one of which (`learning-commons-org`, **40 ★ · 43 commits · 7 authors · pushed on the day of this pass**) adds a Learning Commons Knowledge Graph MCP server the other does not. 🟡 **Pick on the SERVER, not on the skills** — the skills are the same bytes. `ACTION ZZ-ad` asks for the payload-digest instrument.
+
+### 🔴 The holder channel `ACTION ZZ-y` asked for was built this pass and its FIRST RUN over-granted, in exactly the direction `ACTION ZZ-u` exists to prevent
+
+🟡 ZZ-y asked for the copyright-holder line to join the placement channels, ranked above author addresses, because p347 read TUM's name out of [`ls1intum/Ares2`](https://github.com/ls1intum/Ares2)'s `LICENSE` in public, aggregate text that survives the PII refusal. 🟢 It also turns out to be the right way to decide whether a grant at depth is the project's: a vendored grant is foreign **by its holder**, whatever directory it was dropped into — which replaces the directory blacklist that let `.agents/skills/skill-creator/LICENSE.txt` through in [`likr/canvas-lms-agent`](https://github.com/likr/canvas-lms-agent).
+
+🔴 **Build 1 read every line CONTAINING the word `copyright`.** In an MIT payload that is three lines and two are boilerplate:
+
+```
+Copyright (c) 2011-2015 Twitter, Inc                                      ← the holder
+The above copyright notice and this permission notice shall be included…  ← boilerplate
+…AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER…  ← boilerplate
+```
+
+🔴 So **every MIT grant on GitHub carried the same seven boilerplate tokens and any two of them "agreed" on their holder** — and the first run graded **Twitter's vendored Bootstrap `LICENSE` as `AcademicsToday/academicstoday-django`'s own grant.** 🟢 Two conditions fix it and both are controls now: the line must **begin** with `Copyright`, and it must carry a **four-digit year** (which drops Apache-2.0's appendix form `Copyright [yyyy] [name of copyright owner]` — a FORM, not a holder).
+
+🔵 **The transferable part is not the regex.** A channel that reads licence PROSE measures the licence, never its subject. That is the same error as reading a README badge as a grant and a manifest's declaration as a payload — **third surface, and the first one this base built itself.**
+
+### 🟢 Agent-layer rows re-read AT THE PIN this pass, with what the read changed
+
+| Row | Grant, read at the pin | Substance, first-hand today | Region, by instrument |
+|---|---|---|---|
+| [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | 🟢 **Apache-2.0**, `LICENSE` at ROOT, plus a per-skill `LICENSE` in each `skills/<x>/` — **own-holder subtree grants, not vendored** | 40 ★ · 5 forks · 43 c · 7 authors (names) · 2026-06-25 → **2026-10-20** | North America — `−0700`/`−0400` only |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0** at ROOT + per-skill grants | 4 c · 3 authors · 2026-07-13 → 2026-10-13 | North America — `−0700`/`−0400` only |
+| [`stanfordnlp/edu-convokit`](https://github.com/stanfordnlp/edu-convokit) | 🟢 **MIT** at ROOT; holder line is a **PERSON** (`Rose E. Wang`), which is the declared LIMIT of the holder channel — placement falls back to the owner and the timezone | 117 ★ · 16 forks · 72 c · 3 authors · **dormant since 2025-04-18 (18 months)** | North America — `62×−0800` |
+| [`motiolabs-space/open-academic`](https://github.com/motiolabs-space/open-academic) | 🟢 **MIT** at ROOT, holder `PT Motiolabs Digital Indonesia` — **the holder line names the country** | 75 c · **1 author** · 2026-08-08 → 2026-08-23 | **APAC — Indonesia**, `+0700` on **all 75** commits |
+| [`examplary/qti`](https://github.com/examplary/qti) | 🟢 **MIT** at ROOT. `tests/stubs/LICENSE.md` reads `NOT-A-GRANT-TEXT` — a stub, correctly not counted as a second grant | 39 c · 2 authors · 2026-04-22 → 2026-10-12 | **EMEA** — `+0100` on **all 39** |
+| [`DaviPac/Classroom-mcp`](https://github.com/DaviPac/Classroom-mcp) | 🔴 **ABSENCE-ENUMERATED at the pin** — no licence-shaped path anywhere in the complete tree | 2 c · 1 author · single day | 🔴 **Unusable under `P250`**: no grant, so no rights. Recorded so no later pass spends a probe |
+| [`EduNLP/EduCoder`](https://github.com/EduNLP/EduCoder) | 🟢 **MIT** at ROOT, holder `EduNLP Lab` | 49 c · 2 authors · 2026-01-24 → 2026-05-25 | 🔴 **NOT PLACED — channels disagree.** The org name reads as a Chinese NLP lab; the commit stream is **US Pacific on all 49** |
+
+🟡 **`EduNLP/EduCoder` is `ACTION ZZ-h`'s fourth instance and the cleanest yet**: the misleading channel is the ORGANISATION NAME, after a region (p344), a fork (p345) and an institution (p347). 🟢 **The rule that keeps surviving: a name is not a placement channel.**
+
+### 🔴 An author count on these shelves cannot be re-derived, because nobody said which key it used
+
+🟡 Re-verifying [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) at the pin: this base publishes **"2 815 commits, 18 authors"**. 🟢 The commit count re-derives **exactly**. 🔴 The author count does not re-derive at all under the obvious key:
+
+| key | `terracotta-education/terracotta` |
+|---|---|
+| distinct `%an` — author NAMES | **14** |
+| distinct `%ae` — author ADDRESSES | **18** ← the published figure |
+| distinct `%an\|%ae` — identities | **20** |
+
+🔵 **An exact commit match beside a four-off author count is the signature of a DEFINITION difference, not of drift.** Measured over eight rows, the names→identities spread is **1 to 9, and non-zero on 8 of 8**; on `open-edge-platform/education-ai-suite` there are **more names (33) than addresses (32)**, so the keys are not even consistently ordered. 🔴 **And it is about to bite**: p346 lost the author-DOMAIN channel to a PII refusal, so a successor reaching for `%an` — the key that needs no addresses — will read every published author cell as too high and the drift will look like repositories losing contributors. 🟢 `recount` (T37) cannot judge an author cell today because it has no key; `ACTION ZZ-ac` is one word per cell.
+
+---
+*Pass 348 — every licence cell above read first-hand at the pin with `git ls-tree -r HEAD` + `raw.githubusercontent.com`; every count above re-derived from the blobless clone's own `git log`. `api.github.com` answers 403 here.*
+
 ## Pass 347 · 2026-10-20 — the licence ladder has no last axis, and this pass stopped adding rungs: pinning the HEAD and enumerating the tree recovered five grants this base publishes as absent, one of them a 3 839-star textbook whose `LICENSE` is a DIRECTORY
 
 **Evidence:** [`p347-grant-channel-recovery`](../evidence/p347-grant-channel-recovery.2026-10-20-p347.tsv) · [`p347-institutional-orphan-probe`](../evidence/p347-institutional-orphan-probe.2026-10-20-p347.tsv) · [`p347-shelfwide-head-equality`](../evidence/p347-shelfwide-head-equality.2026-10-20-p347.tsv) · [`p347-policy-channel-reachability`](../evidence/p347-policy-channel-reachability.2026-10-20-p347.tsv).

@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 · Pass 348 — the week's signal is a measurement, not a release: this base's own identity gate has a 17 % denominator, and the star channel that two passes recorded as unreadable answers on a different tool
+
+**Evidence:** [`p348-shelf-fold-identity`](../evidence/p348-shelf-fold-identity.2026-10-20-p348.tsv) · [`p348-payload-identity-cross-repo`](../evidence/p348-payload-identity-cross-repo.2026-10-20-p348.tsv) · [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-policy-channel`](../evidence/p348-policy-channel.2026-10-20-p348.tsv)
+
+### 1. 🔴 `ACTION ZZ-x` CONFIRMED, and the denominator was the finding — p347's "shelf-wide" run read 17.4 % of this base's addresses
+
+p347 ran the HEAD-equality test and declared it done *"over EVERY address on these shelves"*: **257 distinct addresses extracted from the five LIVE shelf files.** Re-harvested over all **nine** published shelves:
+
+| set | distinct addresses |
+|---|---|
+| p347's declared set (5 live shelf files) | **440** casings |
+| appearing ONLY on `agents/trending.md` + `repos/trending.md` | **2 091** casings |
+| the COMPLETE shelf set | **2 531** casings / 2 462 folded |
+
+🔴 **So the shelf-wide run covered 440 of 2 531 = 17.4 %, and its verdict column reads *"unique HEAD across the shelf set"*** — true of the set it measured, false of the shelves. 🟡 **The two excluded files hold 74 076 of this base's 122 217 shelf lines.** They were excluded because they are append-only HISTORY; the addresses on them are the addresses a reader copies.
+
+### 2. 🔴 A FOURTH on-shelf alias pair, and a case fold cannot see this one: `digitalcredentials` ≡ `openwallet-foundation-labs`
+
+[`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) and [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) both resolve to **HEAD `1c46a82ba384`** on `refs/heads/main`. 🟢 **One repository, published twice, under owners that share no characters** — the MIT **Digital Credentials Consortium** having moved the project to the **OpenWallet Foundation**, which its own README states (*"last release as the Digital Credentials Consortium at MIT"*). 🔴 p347 graded the second address *"unique HEAD across the shelf set"* because the first sits on `agents/trending.md`, outside its extraction.
+
+🔵 **Read it as a governance signal, not only as a bookkeeping error.** The reference open-source learner-credential wallet (**89 ★ · 50 forks · 1 309 commits · 33 authors**) has changed stewards from a university consortium to a foundation. **For a credentials engagement that is the question to ask before the licence question:** who will be maintaining this in two years.
+
+### 3. 🟢 Folding was measured before it was wired: 64 of 64 resolved groups are ONE repository
+
+All **65** folded-collision groups on the complete shelf set (the `OWNER/REPO` command template dropped) were resolved first-hand with `git ls-remote --symref`. **64 answered and all 64 are SAME-HEAD.** **Zero** came back with different HEADs, so folding produced **no false positive anywhere on this corpus** — which is the warrant for making it a gate rather than a census. One group answers under neither casing (`gegok12/gegok12` / `GegoK12/gegok12`).
+
+🟡 Two of the 65 were already reported by p347 (`OpenOLAT/OpenOLAT`, `RohanMuppa/brightspace-mcp-server`); **63 are new, and 63 were invisible to `gate-identity` because it compares slugs case-sensitively.** 🟢 `gate-fold-identity` judges the **live pass section only** — an append-only shelf cannot be repaired backwards, so the inherited 65 are a census and a NEW second casing is the failure.
+
+### 4. 🟢 The star channel is reachable after all, and its first lesson is that it is not the denominator
+
+`api.github.com` answers **403** here and `github.com` over `curl` answers **403** too — which two passes recorded as "stars unreadable". 🟢 **A different fetch channel answers 200 on the same pages**, so every star count in this pass is first-hand. 🔴 **And it immediately argues against itself:**
+
+| row | stars | commits | authors (names) | last push |
+|---|---|---|---|---|
+| [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | **4 ★** | **5 266** | 30 | **2026-10-20** |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | **1 ★** | 457 | 33 | **2026-10-20** |
+| [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | **21 ★** | 2 815 | 14 | 2026-10-19 |
+| [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | **2 300 ★** | 1 117 | **139** | **2026-10-20** |
+
+🔵 **A live national service, an Intel reference suite and a seven-year university research platform carry 4, 1 and 21 stars between them.** Stars measure attention; commits and authors measure what a client inherits. 🟡 **The one row with 2 300 ★ has fewer commits than any of the three** — and it is still the most valuable of the four for an EMEA engagement, for a reason that has nothing to do with either number (§5).
+
+### 5. 🟢 `fairlearn/fairlearn` is the Annex III answer this base has been describing in prose for six passes without naming a component
+
+**MIT · 2 300 ★ · 528 forks · 1 117 commits · 139 author names · 2018-05-14 → pushed on the day of this pass.** Holder line absent at the root, so placement is the timezone channel alone: **North America**, `−0400`/`−0500`/`−0700`.
+
+🔴 **Why it belongs on an education shelf:** EU Annex III puts admissions, assessment and proctoring in the high-risk tier from **2027-12-02**, and the duty that bites hardest there is **demonstrated non-discrimination across protected groups**. 🟢 This base has repeatedly written *"human-in-the-loop on anything affecting grades or progression"* and *"a technical file that exists before the audit does"* — and never named the library that produces the fairness evidence that technical file has to contain. 🟡 **139 author names over seven years is the kind of denominator a conformity argument can lean on**, which is the opposite of what 2 300 stars tells you.
+
+### 6. 🔴 Two of this pass's regional candidates are FORKS of US research code, and the holder line caught both
+
+| address | looks like | the holder line says | verdict |
+|---|---|---|---|
+| [`latam-gpt/lm-evaluation-harness`](https://github.com/latam-gpt/lm-evaluation-harness) | LATAM supply, 3 886 commits, 375 authors | 🔴 **`EleutherAI`** | **DECLINED** — the org is LATAM, the code is upstream |
+| [`AI-for-Education/edu-qurating`](https://github.com/AI-for-Education/edu-qurating) | EMEA supply, 277 commits, 9 authors | 🟡 `Fab AI`, and its README opens *"a fork of the QuRating project"* | kept, labelled **FORK** |
+
+🔵 **Regional ownership of an ADDRESS is not regional authorship of the CODE** — and the cheapest detector for it is the one line in the licence payload that names who owns the copyright. p345 met this class on `latam-gpt` and called it a trap; this pass has the instrument that reports it automatically.
+
+### 7. 🟢 The one new APAC bench is Intel's, it is engineered in APAC, and its README disqualifies it from production
+
+[`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) — **Apache-2.0 · 1 ★ · 11 forks · 457 commits · 33 author names · 2025-09-29 → 2026-10-20.** 🟢 **Smart Classroom** (multimodal session processing, analysis and summarisation) and **Teaching Assistant** (voice-first self-directed study), on OpenVINO, targeting Intel CPU / iGPU / NPU. 🟡 **Placement: `196×+0800` and `179×+0530` — 82 % of the commit stream — so this is an APAC-ENGINEERED suite under a US vendor's org**, which is the inverse of §6's trap and the same lesson: read the stream, not the name. 🔴 **Its own README says the applications are for reference and demonstration, NOT production.** Quote that to a client before the hardware conversation starts, not after.
+
+### 8. 🟡 `dodona-edu/dodona` does not answer on either channel, while `dodona-edu/dolos` answers on both
+
+`git ls-remote` twice, and **HTTP 404** on the fetch channel, for the platform; **353 ★ · 48 forks · 3 859 commits · 25 author names · pushed 2026-10-19** for its sibling [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos). 🔵 **Two independent channels agreeing on an address is this base's standard for a dead address**, so it is recorded as *does not answer* rather than as *deleted* — and `dolos` is unaffected, which is the part that matters for the integrity layer of an EMEA engagement.
+
+### 9. 🔴 The policy channel, and a correction to how this base describes its own limits
+
+p347 wrote that the second fetch channel *"fails on the same hosts at the DNS layer"*. 🟡 **The two channels are not equivalent, and the difference is instructive:**
+
+| host | `curl` | fetch channel | what it means |
+|---|---|---|---|
+| `github.com` HTML | 🔴 403 | 🟢 **200** | a PER-TOOL block — routable around, which is how §4 happened |
+| `eur-lex.europa.eu`, `education.ec.europa.eu`, `www.future-ed.org`, `unesco.org`, `oecd.org` | 🔴 000 | 🔴 **ENOTFOUND** | **NAME RESOLUTION** — no tool choice fixes it |
+| `raw.githubusercontent.com`, `www.apache.org` | 🟢 200 | — | why every licence cell here is first-hand |
+
+🟢 **So: a 403 is worth retrying on another channel; an ENOTFOUND is not.** Every regulatory date on these shelves stays labelled **search-channel convergence** — Annex III education duties **2027-12-02**, Article 4 AI literacy binding since **2025-02-02**, Korea's Framework Act in force **2026-01-22**, Vietnam's **2026-03-01** — and every licence and star cell is first-hand.
+
+---
+
 ## Pass 347 · 2026-10-20 — thirteenth consecutive zero on the prescribed legs, and the week's real agent news is two university MCP servers in the two regions this base has least of, one of them hidden behind a byte-order mark
 
 **Evidence:** [`p347-institutional-orphan-probe`](../evidence/p347-institutional-orphan-probe.2026-10-20-p347.tsv) · [`p347-grant-channel-recovery`](../evidence/p347-grant-channel-recovery.2026-10-20-p347.tsv) · [`p347-shelfwide-head-equality`](../evidence/p347-shelfwide-head-equality.2026-10-20-p347.tsv).

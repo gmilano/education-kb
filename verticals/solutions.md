@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 348 · 2026-10-20 — the platform shelf gains the two layers it never had: the integrity layer and the EVIDENCE layer, both MIT, both institutionally maintained, both already in this base's own inventory
+
+**Evidence:** [`p348-institutional-orphan-probe`](../evidence/p348-institutional-orphan-probe.2026-10-20-p348.tsv) · [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-payload-identity-cross-repo`](../evidence/p348-payload-identity-cross-repo.2026-10-20-p348.tsv)
+
+### 🟢 The customisable-platform question this shelf exists to answer, and the two answers it was missing
+
+🔵 This shelf's job is the Odoo question: **which real systems can a studio customise with AI on top.** It has carried the LMS tier (Moodle, Open edX, Chamilo, OpenOLAT, Canvas), the SIS/ERP tier (OpenEduCat, openSIS, RosarioSIS, OpenEMIS) and the authoring tier (H5P) for many passes. 🔴 **Two layers were never on it, and both are the layers an AI engagement gets stopped by:**
+
+| layer | the component | grant at the pin | what it answers |
+|---|---|---|---|
+| **academic integrity** | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) — Ghent University | 🟢 **MIT** at ROOT + `cli/`, `core/`, `lib/` own-holder subtree grants · **353 ★ · 3 859 commits · 25 author names · pushed 2026-10-19** | 🟢 *"How do we know this submission is the student's?"* — the first question any assessment-AI proposal gets from a faculty board, and the one no tutoring agent answers |
+| **educational EVIDENCE** | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) — *Tool for Education Research with RAndomized COnTrolled TriAls* | 🟢 **Apache-2.0** at ROOT · **2 815 commits · 14 author names · pushed 2026-10-19 · 21 ★** | 🟢 *"Did the AI actually help?"* — an LMS plug-in that randomly assigns assignment content to student groups, with privacy protections for participants, **inside live courses over LTI** |
+
+🟡 **`dolos` is placed by three independent channels agreeing** — the holder line `Team Dolos <dolos@ugent.be>`, `2080×+0200` CET/CEST on the commit stream, and the owner `dodona-edu`. 🔵 **That is the strongest placement any row on these shelves carries**, and it matters commercially: in an EMEA higher-ed procurement, *"maintained by a Belgian university"* is an answer and *"maintained by a GitHub account"* is not.
+
+🔴 **`terracotta` is the one that changes what a studio can PROMISE.** Every AI-in-education pitch contains an efficacy claim; almost none contain a design that could test it. 🟢 A platform that does randomised assignment inside the client's own LMS turns *"we think this tutor helps"* into a pre-registered experiment with a control group — **and it is Apache-2.0, so the experiment design ships with the engagement.**
+
+### 🟢 The credentials layer, and the governance signal attached to it
+
+[`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) — 🟢 **MIT** at ROOT, holder **`Digital Credentials Consortium`**, **89 ★ · 50 forks · 1 309 commits · 33 authors**, cross-platform iOS/Android wallet for verifiable learner credentials.
+
+🔴 **Read the stewardship before the licence.** The same repository answers at [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) — **identical HEAD `1c46a82ba384`** — and its README describes the latest release as the *"last release as the Digital Credentials Consortium at MIT"*, with the project now *"part of the OpenWallet Foundation"*. 🟡 **A university consortium has handed the reference wallet to a foundation.** 🟢 For a credentials engagement the licence was never the risk; **the maintainer transition is**, and this base can now see it because two addresses with the same HEAD is a measurement rather than a rumour.
+
+### 🟡 The platform-adjacent rows this pass read and would NOT put under a client
+
+🔴 [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) — **MIT**, 289 commits, 20 authors, cleanly **EMEA** (`164×+0200`), and **dormant since 2024-04-06 (30 months)**. 🟡 It is the only open client for the timetable system much of DACH schooling runs on, so it is kept here **with the dormancy as the headline, not the footnote**: a scheduling-agent engagement in Austria or Germany will meet WebUntis, and will be integrating against an unmaintained client.
+🔴 [`blackboard/BBDN-lti-1p3-tool-example`](https://github.com/blackboard/BBDN-lti-1p3-tool-example) — **Apache-2.0**, dead 40 months. 🟢 **A reference for the LTI 1.3 message flow, which is exactly what it is good for**: read it to learn the handshake, do not fork it.
+🔴 [`AcademicsToday/academicstoday-django`](https://github.com/AcademicsToday/academicstoday-django), [`eloompty/Eloom-LMS-International`](https://github.com/eloompty/Eloom-LMS-International), [`safytech/ulearn`](https://github.com/safytech/ulearn), [`geli-lms/geli`](https://github.com/geli-lms/geli), [`LEARNableLabs/opentutor`](https://github.com/LEARNableLabs/opentutor) — all five carry a clean own-holder grant at the root (**Apache-2.0, MIT, MIT, Apache-2.0, MIT**) and all five are **whole-LMS rewrites**. 🔵 **The existing LMS tier is not short of options; it is short of REASONS to leave Moodle.** None of these five supplies one, and all five are now graded so no later pass re-reads them.
+
+🟢 **The vendored-grant trap lives on this shelf more than any other**, because a whole-platform repository bundles front-end libraries by the dozen: `safytech/ulearn` ships TinyMCE's **LGPL** `license.txt` and `AcademicsToday/academicstoday-django` ships **Twitter's** Bootstrap `LICENSE`. 🔴 Both would be the *first licence in path order* for an instrument that takes the first one it finds. 🟢 **Both grade `FOREIGN` on the holder channel** (`make gate-grant-scope`), beside a correct own-holder root grant — which is what a platform row needs, since the thing a client asks is *"what licence is the PLATFORM"*, not *"what licence is in the tree"*.
+
+---
+
 ## Pass 347 · 2026-10-20 — a national government is a platform tier, and this shelf had none: two UK Department for Education services in production, plus the containment layer every autograding pattern on this shelf has been missing
 
 **Evidence:** [`p347-institutional-orphan-probe`](../evidence/p347-institutional-orphan-probe.2026-10-20-p347.tsv) · [`p347-grant-channel-recovery`](../evidence/p347-grant-channel-recovery.2026-10-20-p347.tsv).

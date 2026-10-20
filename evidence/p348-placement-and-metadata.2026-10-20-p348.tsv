@@ -1,0 +1,45 @@
+# p348 — the substance behind every row this pass publishes, measured on the three channels that
+# answer from this environment.
+#
+#   commits / authors / first / last / top3_tz   the blobless clone's own `git log` — FIRST-HAND
+#   stars / forks                                a third fetch channel.  api.github.com is 403 here
+#                                                and github.com over `curl` is 403 too; the fetch
+#                                                channel answers.  So stars ARE readable this pass,
+#                                                by a channel neither p345 nor p347 used.
+#   holder / institution                         the copyright HOLDER LINE at the pin (ACTION ZZ-y)
+#
+# 🔴 The star channel's first lesson is that it is not the denominator.  The three largest commit
+# counts in this table carry 4 ★, 1 ★ and 21 ★ — a live national service, an Intel reference suite
+# and a seven-year university research platform — while the row with 2 300 ★ has fewer commits than
+# any of them.  Stars measure attention; commits and authors measure what a client inherits.
+#
+# 🟡 `region` is this base's INSTRUMENT-PLACED verdict, never a guess from a name.  Where the
+# channels disagree the row says so and is NOT placed.
+slug	stars	forks	commits	authors	first	last	top3_tz	region	placement channels that agree
+dodona-edu/dolos	353	48	3859	25	2019-06-23	2026-10-19	2080×+0200 1162×+0000 601×+0100	EMEA — Belgium	holder line `Team Dolos <dolos@ugent.be>` + CET/CEST majority + owner `dodona-edu`
+fairlearn/fairlearn	2300	528	1117	139	2018-05-14	2026-10-20	432×-0400 173×-0500 161×-0700	North America	US Eastern/Pacific majority; holder line absent at root (Apache-style blank), so timezone alone
+terracotta-education/terracotta	21	9	2815	14	2019-01-18	2026-10-19	1560×-0400 781×-0700 472×-0500	North America	US Eastern majority; already shelved at p345 with `unicon.net`/`iu.edu`/`calpoly.edu`
+DFE-Digital/education-benchmarking-and-insights	4	4	5266	30	2023-11-08	2026-10-20	3016×+0100 2246×+0000	EMEA — United Kingdom	holder line `Department for Education - Digital` NAMES the ministry + UK/UTC majority
+datakind/student-success-tool	8	2	3015	25	2024-10-10	2025-09-08	1471×+0000 753×-0400 435×-0500	North America	holder `DataKind` + US Eastern/Central under a +0000 CI majority
+digitalcredentials/learner-credential-wallet	89	50	1309	33	2021-07-08	2026-06-09	423×-0700 336×-0600 199×-0400	North America	holder `Digital Credentials Consortium` (institution channel fires) + US majority
+stanfordnlp/edu-convokit	117	16	72	3	2023-12-27	2025-04-18	62×-0800 9×-0700	North America	owner `stanfordnlp` + Pacific majority.  Holder line is a PERSON (`Rose E. Wang`) — the declared limit of the holder channel
+open-edge-platform/education-ai-suite	1	11	457	33	2025-09-29	2026-10-20	196×+0800 179×+0530 56×+0200	APAC	+0800 and +0530 are 82 % of the stream; this is an APAC-ENGINEERED suite under a US vendor's org
+motiolabs-space/open-academic	-	-	75	1	2026-08-08	2026-08-23	75×+0700	APAC — Indonesia	holder `PT Motiolabs Digital Indonesia` names the country + +0700 on ALL 75 commits
+AI-for-Education/voice-ai-evaluation-framework	1	0	61	4	2025-10-16	2026-09-23	30×+0200 23×+0300 8×+0000	EMEA	holder `Fab AI Foundation` + CEST/EAT majority; subject is Kiswahili child speech
+AI-for-Education/edu-qurating	3	0	277	9	2024-02-05	2026-09-11	213×+0000 38×+0100 14×-0500	EMEA	holder `Fab AI` + UK/UTC majority — but the CODE is a fork of QuRating (see the fork column below)
+learning-commons-org/agent-skills	40	5	43	7	2026-06-25	2026-10-20	32×-0700 11×-0400	North America	US Pacific/Eastern only
+anthropics/k12-teacher-skills	-	-	4	3	2026-07-13	2026-10-13	2×-0700 2×-0400	North America	US Pacific/Eastern only
+latam-gpt/anonymization-filter	-	-	6	1	2025-05-07	2025-05-18	6×-0400	LATAM	-0400 on ALL 6 commits + the `latam-gpt` org (CENIA, Chile).  TINY and dormant 17 months
+Jeanikt/tutor-ai-agent	-	-	3	2	2026-09-25	2026-10-07	3×-0300	LATAM — Brazil	-0300 on ALL 3 commits.  TINY; second holder line is `LiveKit, Inc` — a template derivative
+examplary/qti	-	-	39	2	2026-04-22	2026-10-12	39×+0100	EMEA	+0100 on ALL 39 commits + holder `Examplary AI`
+SchoolUtils/WebUntis	-	-	289	20	2017-09-11	2024-04-06	164×+0200 64×+0000 59×+0100	EMEA	CEST majority; WebUntis is the Austrian/German timetable system.  DORMANT 30 months
+latam-gpt/lm-evaluation-harness	-	-	3886	375	2020-08-27	2025-12-15	1003×+0000 677×-0400 347×-0700	NOT PLACED — declined	holder line reads `EleutherAI`: the org is LATAM, the CODE is upstream US research
+0xnavarro/IA-PARA-TODOS	-	-	207	14	2024-04-29	2025-01-08	74×-0500 65×+0530 56×-0600	NOT PLACED — channels disagree	a Spanish name, a −0500/−0600 plurality AND a +0530 second place.  Dormant 21 months
+AI-for-Education/fabdata-llm	-	-	175	10	2023-05-10	2026-06-09	98×+0000 59×+0100 7×+0700	EMEA	holder `Fab Data` + UK/UTC majority
+AI-for-Education/pedagogy-benchmark	-	-	5	1	2025-06-24	2025-10-15	5×+0100	EMEA	+0100 on all 5.  FIVE COMMITS — a published benchmark, not a build base
+AI-for-Education/lesson-plan-parse-mbsse	-	-	11	1	2024-09-26	2024-12-19	8×+0100 2×+0000	EMEA	Sierra Leone's Ministry of Basic and Senior Secondary Education is the subject.  DEAD 22 months
+AI-for-Education/fabdata-parsedoc	-	-	4	1	2023-11-11	2024-08-23	3×+0000 1×+0100	EMEA	FOUR commits, dead 26 months — declined
+blackboard/BBDN-lti-1p3-tool-example	-	-	47	4	2022-07-01	2023-06-20	40×-0400 7×-0500	North America	a vendor REFERENCE example, dead 40 months — cite it, do not build on it
+EduNLP/EduCoder	-	-	49	2	2026-01-24	2026-05-25	32×-0800 17×-0700	NOT PLACED — channels disagree	the org name reads as a Chinese NLP lab; the commit stream is US Pacific on all 49
+dodona-edu/dodona	-	-	UNRESOLVED	-	-	-	-	-	does not answer on EITHER channel: `git ls-remote` twice, and HTTP 404 on the fetch channel, while its sibling `dolos` answers on both
+DaviPac/Classroom-mcp	-	-	2	1	2026-09-07	2026-09-07	2×+0000	-	ABSENCE-ENUMERATED at the pin: no licence-shaped path in the complete tree ⇒ all rights reserved (P250)

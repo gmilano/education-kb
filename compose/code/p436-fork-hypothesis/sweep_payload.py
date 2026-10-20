@@ -118,6 +118,27 @@ def family_of(text):
         return "Apache-2.0"
     if "educational community license" in t:
         return "ECL-2.0"
+    # 🔴 p348 (ACTION ZZ-ab) -- NCSA MUST be probed before MIT, and the reason is a
+    # measurement, not a precaution.  Read first-hand at the pin, the real payload at
+    # `cs341-illinois/coursebook` -> `LICENSE/LICENSE.code` (1 698 B, HTTP 200,
+    # "University of Illinois/NCSA Open Source License") was graded **MIT** by this
+    # function, because NCSA's permission clause is MIT-PHRASED -- it opens "Permission
+    # is hereby granted, free of charge, to any person obtaining a copy" -- and the MIT
+    # rung sits above the BSD rung that would otherwise have caught the three-clause
+    # body below it.
+    #
+    # 🔴 That is the UNSAFE failure direction and the first one this base has found in a
+    # family detector.  p347 recorded the risk as "generic SPDX-style detection ABSTAINS
+    # on them", and an abstention fails safe under `P250`.  This does not abstain: it
+    # answers a family whose notice requirements are strictly WEAKER.  NCSA carries the
+    # BSD-style no-endorsement clause naming the University of Illinois and NCSA; MIT
+    # carries only the notice.  Publishing NCSA as MIT UNDERSTATES what a client owes.
+    #
+    # Ordered before MIT (the phrasing collision) and therefore also before BSD (NCSA is
+    # the three-clause body with an Illinois preamble).
+    if ("university of illinois" in t and "ncsa" in t) or \
+       "ncsa open source license" in t or "university of illinois/ncsa" in t:
+        return "NCSA"
     if "mit license" in head or "permission is hereby granted, free of charge" in t:
         return "MIT"
     if "redistribution and use in source and binary forms" in t:
