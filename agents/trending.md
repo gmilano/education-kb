@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 364 — 🔴 **the grant of a shelved platform does not govern the components it makes you install: 60 READMEs read, 91 companion edges, 72 of them absent from 2 550 addresses — and the pass's best finding is that a grant read at a BRANCH can be wrong about the version a client ships**
+
+🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`
+**OPEN** · 🔴 `api.github.com/*` **403** by `curl` — unchanged from `p363`. 🔵 This pass
+needed no index call: its population came from **payloads this base already pointed at**,
+which is the leg `p362` prescribed when it recorded the search legs as exhausted.
+
+**Evidence:** [`companion-population`](../evidence/companion-population.2026-10-21-p364.tsv) ·
+[`companion-grants`](../evidence/companion-grants.2026-10-21-p364.tsv) ·
+[`version-axis-grant`](../evidence/version-axis-grant.2026-10-21-p364.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p364.tsv)
+
+### 🔴 No new AGENT rows this pass, and the reason is a measurement rather than a shrug
+
+🔴 **`p364` added 69 repositories to this base's reach and NOT ONE of them is an agent.**
+They are spawners, authenticators, deploy scripts, XBlocks, language packs, API clients and
+a process isolator — the **deployment tier** of platforms this base already shelved. They
+are written up in `repos/foundations.md`, not here, because shelving a Kubernetes spawner
+as an "AI agent" is the padding this base's own quality bar forbids.
+
+🔴 **The prescribed agent leg ran and returned nothing in domain for the twentieth
+consecutive pass.** The literal `top open source AI agents education 2026 github MIT`
+returns general-purpose and coding agents — OpenClaw, OpenHands, SWE-agent, CrewAI,
+browser-use — every one of them already carried, none of them education-specific. 🟢 Stated
+with its denominator rather than passed over, because an informed null is the only thing
+that distinguishes saturation from a leg nobody ran.
+
+### 🔴 What the tutoring shelf should take from this pass anyway
+
+🔵 **The finding generalises to agents, and it is worth stating here even though no row
+moved.** Every agent row on `agents/top.md` carries a licence cell read from **one
+repository at one branch**. 🔴 An agent that ships a model, a dataset, a prompt pack or a
+vendored sandbox is exposed to exactly the defect `p364` measured on platforms:
+
+- **the component axis** — `p362` measured it (`OnlineJudge`: MIT headline, SATA execution);
+  `p364` measured its frequency (**19 of 69** companions carry copyleft or worse, **12**
+  carry no grant at all);
+- 🆕 **the version axis** — `davidjbradshaw/iframe-resizer` reads **GPL-3.0-or-commercial**
+  at `master` and **MIT** at `v3.5.13`. **The same address, two families, decided by a
+  pin.** `gate-grant-path` parses **299 grant claims** on these shelves and **every one
+  asserts a branch; none asserts a tag.**
+
+🔵 **For a tutoring engagement the version axis is the sharper of the two**, because an
+agent's dependency set is upgraded routinely and its licence cell is not re-read when it is.
+
 ## 2026-10-21 · Pass 363 — 🟢 **this base has 2 550 addresses and does not contain ETH Zürich's NLP-for-Education group or Brazil's largest dev-education community.** Twelve new live addresses, and **3 of 12 are usable in paid work**: two MIT, one Apache-2.0, one CC-BY-NC behind GitHub's `NOASSERTION`, two real CC grants declared only in README prose, and six with no grant at all
 
 🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`

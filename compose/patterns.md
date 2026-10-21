@@ -6,7 +6,9 @@ updated: 2026-10-21
 
 # Education — composition patterns
 
-**Pass 362 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
+**Pass 364 · 2026-10-21.** Concrete recipes. 🆕 **Patterns 23 and 24 are `p364`'s**: the
+first is the only stack on these shelves that is permissive *through the deployment* and
+not merely at the core; the second turns `p364`'s own instrument into a deliverable. Each names the specific repos, the licence
 boundary that makes the composition safe, and what the engagement actually delivers.
 Every repo referenced is verified live with its grant read from payload on
 **2026-10-21** — see `agents/top.md` and `repos/foundations.md`.
@@ -966,3 +968,93 @@ cannot evidence anything. Pattern 22 is the smallest concrete deliverable that t
 🔵 **APAC — add labelling before shipping generated turns into China**, per §33: AI-content
 labelling is a product feature there, and Vietnam's Law on AI (2026-03-01) reaches foreign
 vendors directly.
+
+---
+
+## 🆕 Pattern 23 — A cohort-scale notebook teaching cluster that stays permissive through the DEPLOYMENT
+
+🔵 **Why this pattern is new when JupyterHub has been on these shelves for passes.** Every
+earlier recipe that reached JupyterHub cited **the core**, which is BSD-3-Clause. 🔴 **But
+nobody deploys the core alone** — a teaching cluster is the hub **plus a spawner** (how a
+student's process is started) **plus an authenticator** (how the institution signs them
+in), and until `p364` read them, **none of those 11 components was in this base** and their
+grants were unknown. 🟢 All eleven read **BSD** from payload on **2026-10-21**, so this is
+the one stack here where *"fork into a closed client deliverable"* survives contact with
+the deployment.
+
+**The stack, every grant read first-hand:**
+
+| layer | component | grant | why this one |
+|---|---|---|---|
+| hub | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 **BSD-3-Clause** | multi-user notebook server |
+| spawner (cohort scale) | [`jupyterhub/kubespawner`](https://github.com/jupyterhub/kubespawner) | 🟢 **BSD** (`main/LICENSE`, 1 528 B) | one pod per student; the only spawner that survives a 500-seat course |
+| spawner (single host) | [`jupyterhub/dockerspawner`](https://github.com/jupyterhub/dockerspawner) | 🟢 **BSD** (1 528 B) | the cheap classroom, when there is no cluster |
+| spawner (university HPC) | [`jupyterhub/batchspawner`](https://github.com/jupyterhub/batchspawner) | 🟢 **BSD** (1 528 B) | submits to Slurm/PBS — reaches an existing research allocation instead of buying compute |
+| identity (cloud IdP) | [`jupyterhub/oauthenticator`](https://github.com/jupyterhub/oauthenticator) | 🟢 **BSD** (1 528 B) | Google/Azure/GitHub — what most institutions actually have |
+| identity (on-premise) | [`jupyterhub/ldapauthenticator`](https://github.com/jupyterhub/ldapauthenticator) | 🟢 **BSD** (1 528 B) | the directory a school runs when there is no cloud IdP |
+| **LMS SSO** | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** (`main/LICENSE`) | **LTI 1.3 launch from Moodle/Canvas/Open edX — the boundary that keeps the LMS's GPL on its own side** |
+| autograding | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** (`master/LICENSE`) | grades Python **and R** notebooks, containerised, with LMS export |
+| integrity | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT** | source-code similarity — the layer that matters now students submit agent-assisted code |
+
+**How it wires together.** The LMS launches the hub over **LTI 1.3** via
+`ltiauthenticator`, so the student never sees a second login and **the LMS stays on the far
+side of a protocol boundary** — which is what keeps Moodle's GPL or Open edX's AGPL off the
+client's own code. `kubespawner` gives each student an isolated pod from a course image
+the studio builds. `otter-grader` runs inside that image and writes grades back to the LMS
+gradebook. `dolos` runs over the collected submissions out of band.
+
+🟢 **What the studio may keep closed:** everything it writes — the course image, the AI
+feedback layer, the dashboards, the grading policy. **Every grant in the table is
+permissive, so there is no copyleft reach into the deliverable at all** — this is the
+*only* pattern on these shelves that can say that about a full deployment.
+
+🔴 **The one trap, and it is `§36`'s:** every grant above was read at a **branch**
+(`main`/`master`), not at a **tag**. Pin the versions in the course image and re-read the
+grants **at those pins** before the deliverable ships — see Pattern 24.
+
+🔵 **Where the AI goes.** The feedback agent sits beside `otter-grader`, reading the
+notebook and the grader's output, never inside the grader. Agents from `agents/top.md`
+apply unchanged; nothing in this stack constrains the model choice.
+
+---
+
+## 🆕 Pattern 24 — A grant-closure audit, sold as a deliverable, because the client's licence register is a list of front pages
+
+🔴 **The problem, measured rather than asserted.** `p364` read the README of **60**
+education platforms, graded the **69** components they name that this base did not hold, and
+found: **19 carry copyleft or source-restricted grants**, **12 carry no grant at any probed
+path**, and the single most dangerous row was a platform published as **MIT** whose own
+organisation's component is **AGPL-3.0** (`openfun/marsha` →
+`openfun/xblock-configurable-lti-consumer`). 🔴 **A client's licence register, which is
+almost always a list of top-level repositories, is blind to all of it.**
+
+**The deliverable, in four steps, each of which this base has an instrument for:**
+
+1. **Enumerate the closure.** For every platform in the client's estate, resolve the
+   default ref (`git ls-remote --symref`), fetch the README over a **case- and
+   extension-closed** ladder, and extract every GitHub address it names, tagged
+   `SAME-OWNER` / `THIRD-PARTY`.
+   → `compose/code/p364-companion-closure/` (16 offline controls, in `make hooks`).
+2. **Grade every grant from PAYLOAD, never from a badge or a classifier.**
+   → `compose/code/lib/probe_payload.sh`, which walks ~36 real filename spellings and
+   returns family + holder + byte count. 🔴 It exists because this base twice re-wrote a
+   classifier from scratch and twice re-imported the GPL-3.0-§13-reads-as-AGPL defect.
+3. 🆕 **Re-read each grant AT THE PIN, not at the branch.** Take the versions from the
+   client's lockfile and read the `LICENSE` at *that tag*. 🔴 This step is the one nobody
+   does and it is where the money is: `iframe-resizer` is **GPL-3.0-or-commercial** at
+   `master` and **MIT** at `v3.5.13`.
+4. **Separate dependency from dependent before reporting anything.** 🔴 `judge0/judge0`'s
+   README names **20** third-party repositories and **19 are adopters, not components**. A
+   report that lists them as the client's exposure is noise, and noise is how a licence
+   report gets ignored. **The manifest settles it, not the README.**
+
+🟢 **What the client gets:** a per-component table of *address · pinned version · grant at
+that pin · grant at HEAD · divergence*, plus a named list of ungranted components to either
+replace or write to upstream. 🔵 **The `grant at HEAD` column is the forward-looking half**
+— it is the upgrade that will relicense under them, and it is the reason the audit has to
+be re-run rather than filed.
+
+🔵 **Scoping note, honestly stated:** `p364` measured **41.7 %** of platform rows as naming
+at least one companion. So roughly **three in five** platforms will produce a short report,
+and the audit's value is concentrated in the other two — which is why step 1 is cheap and
+automated and step 3 is where the hours go.

@@ -1,0 +1,73 @@
+host	component	relation	host_published_licence	component_licence	grant_path	bytes	verdict
+Batlez/CloakBox	batlez/hiddenvm	SAME-OWNER	?	NO-PAYLOAD	NO-PAYLOAD	0	
+DMOJ/judge-server	dmoj/runtimes-docker	SAME-OWNER	?	AGPL-3.0	LICENSE	34523	
+EccentricIvan/AI-CONNECT-AFRICA	malinzijeremiah01-lab/otic-studio	THIRD-PARTY	MIT	NO-PAYLOAD	NO-PAYLOAD	0	MORE-RESTRICTIVE
+INGInious/INGInious	inginious/demo-tasks	SAME-OWNER	AGPL-3.0	AGPL-3.0	LICENSE	34520	same-tier
+Moha-abshir/SMS	moha-abshir/school-management-system	SAME-OWNER	MIT	MIT	LICENSE	1071	same-tier
+academico-sis/academico	all-contributors/all-contributors	THIRD-PARTY	MIT	MIT	LICENSE	1096	same-tier
+bigbluebutton/bigbluebutton	bigbluebutton/bbb-install	SAME-OWNER	LGPL-3.0	LGPL-3.0	LICENSE	7651	same-tier
+chamilo/chamilo-lms	activities/contributing-to-open-source	THIRD-PARTY	GPL-3.0	UNRESOLVED	UNRESOLVED	0	MORE-RESTRICTIVE
+classroomio/classroomio	nvm-sh/nvm	THIRD-PARTY	AGPL-3.0	MIT	LICENSE.md	1113	more-permissive
+frappe/erpnext	en/get-started	THIRD-PARTY	GPL-3.0	UNRESOLVED	UNRESOLVED	0	MORE-RESTRICTIVE
+frappe/erpnext	frappe/bench	SAME-OWNER	GPL-3.0	GPL-3.0	LICENSE	35121	same-tier
+frappe/erpnext	frappe/frappe-ui	SAME-OWNER	GPL-3.0	MIT	license.md	1101	more-permissive
+frappe/erpnext	frappe/frappe_docker	SAME-OWNER	GPL-3.0	MIT	LICENSE	1086	more-permissive
+frappe/erpnext	frappe/press	SAME-OWNER	GPL-3.0	AGPL-3.0	license.txt	34523	MORE-RESTRICTIVE
+frappe/lms	frappe/frappe-ui	SAME-OWNER	AGPL-3.0	MIT	license.md	1101	more-permissive
+frappe/lms	frappe/payments	SAME-OWNER	AGPL-3.0	MIT	license.txt	1118	more-permissive
+frappe/lms	frappe/press	SAME-OWNER	AGPL-3.0	AGPL-3.0	license.txt	34523	same-tier
+hydro-dev/Hydro	ryanhanwu/how-to-ask-questions-the-smart-way	THIRD-PARTY	AGPL-3.0	MIT	LICENSE	1074	more-permissive
+hydro-dev/Hydro	vijos/vj4	THIRD-PARTY	AGPL-3.0	AGPL-3.0	LICENSE	34520	same-tier
+jcputney/scorm-again	jcputney/elearning-module-parser	SAME-OWNER	MIT	Apache-2.0	LICENSE	11314	same-tier
+judge0/judge0	amirdesh07/miniproject07	THIRD-PARTY	GPL-3.0	NO-PAYLOAD	NO-PAYLOAD	0	MORE-RESTRICTIVE
+judge0/judge0	anchal-dev/codeorbit	THIRD-PARTY	GPL-3.0	NO-PAYLOAD	NO-PAYLOAD	0	MORE-RESTRICTIVE
+judge0/judge0	arize-ai/phoenix	THIRD-PARTY	GPL-3.0	Elastic	LICENSE	3794	MORE-RESTRICTIVE
+judge0/judge0	bharattpawar/judge0vps	THIRD-PARTY	GPL-3.0	NO-PAYLOAD	NO-PAYLOAD	0	MORE-RESTRICTIVE
+judge0/judge0	codechefvit/cookoff-9.0-backend	THIRD-PARTY	GPL-3.0	MIT	LICENSE	1069	more-permissive
+judge0/judge0	dalmia/sensai-frontend	THIRD-PARTY	GPL-3.0	AGPL-3.0	LICENSE	34516	MORE-RESTRICTIVE
+judge0/judge0	elipcs/ataljudge	THIRD-PARTY	GPL-3.0	NO-PAYLOAD	NO-PAYLOAD	0	MORE-RESTRICTIVE
+judge0/judge0	heshannethmina/syncr	THIRD-PARTY	GPL-3.0	Apache-2.0	LICENSE	11345	more-permissive
+judge0/judge0	ioi/isolate	THIRD-PARTY	GPL-3.0	GPL-2.0	LICENSE	583	same-tier
+judge0/judge0	judge0/judge0-js	SAME-OWNER	GPL-3.0	MIT	LICENSE	1070	more-permissive
+judge0/judge0	judge0/judge0-python	SAME-OWNER	GPL-3.0	MIT	LICENSE	1063	more-permissive
+judge0/judge0	kdj309/leetcode-clone	THIRD-PARTY	GPL-3.0	NO-PAYLOAD	NO-PAYLOAD	0	MORE-RESTRICTIVE
+judge0/judge0	leondape/librechat-code-interpreter-judge0-bridge	THIRD-PARTY	GPL-3.0	UNRESOLVED	UNRESOLVED	0	MORE-RESTRICTIVE
+judge0/judge0	maanassehgal/codeforces-lite	THIRD-PARTY	GPL-3.0	MIT	LICENCE	1074	more-permissive
+judge0/judge0	mellob1989/judge0.k8s	THIRD-PARTY	GPL-3.0	NO-PAYLOAD	NO-PAYLOAD	0	MORE-RESTRICTIVE
+judge0/judge0	open-craft/xblock-ai-evaluation	THIRD-PARTY	GPL-3.0	Apache-2.0	LICENSE	10256	more-permissive
+judge0/judge0	phero20/slavecode	THIRD-PARTY	GPL-3.0	NO-PAYLOAD	NO-PAYLOAD	0	MORE-RESTRICTIVE
+judge0/judge0	rails/rails	THIRD-PARTY	GPL-3.0	MIT	MIT-LICENSE	1063	more-permissive
+judge0/judge0	roslovets-inc/judge0-client	THIRD-PARTY	GPL-3.0	MIT	LICENSE	1072	more-permissive
+judge0/judge0	vcra/judge0api	THIRD-PARTY	GPL-3.0	MIT	LICENSE	1078	more-permissive
+judge0/judge0	warun7/deadlock	THIRD-PARTY	GPL-3.0	NO-PAYLOAD	NO-PAYLOAD	0	MORE-RESTRICTIVE
+judge0/judge0	xefreh/judge0-php-client	THIRD-PARTY	GPL-3.0	MIT	LICENSE	1063	more-permissive
+jupyterhub/jupyterhub	jupyterhub/batchspawner	SAME-OWNER	BSD-3-Clause	BSD	LICENSE	1528	same-tier
+jupyterhub/jupyterhub	jupyterhub/dockerspawner	SAME-OWNER	BSD-3-Clause	BSD	LICENSE	1528	same-tier
+jupyterhub/jupyterhub	jupyterhub/jupyterhub-tutorial	SAME-OWNER	BSD-3-Clause	BSD	LICENSE	1528	same-tier
+jupyterhub/jupyterhub	jupyterhub/kerberosauthenticator	SAME-OWNER	BSD-3-Clause	BSD	LICENSE	1492	same-tier
+jupyterhub/jupyterhub	jupyterhub/kubespawner	SAME-OWNER	BSD-3-Clause	BSD	LICENSE	1528	same-tier
+jupyterhub/jupyterhub	jupyterhub/ldapauthenticator	SAME-OWNER	BSD-3-Clause	BSD	LICENSE	1528	same-tier
+jupyterhub/jupyterhub	jupyterhub/oauthenticator	SAME-OWNER	BSD-3-Clause	BSD	LICENSE	1528	same-tier
+jupyterhub/jupyterhub	jupyterhub/sudospawner	SAME-OWNER	BSD-3-Clause	BSD	LICENSE	1528	same-tier
+jupyterhub/jupyterhub	jupyterhub/systemdspawner	SAME-OWNER	BSD-3-Clause	BSD	LICENSE	1528	same-tier
+jupyterhub/jupyterhub	jupyterhub/wrapspawner	SAME-OWNER	BSD-3-Clause	BSD	LICENSE	1557	same-tier
+jupyterhub/jupyterhub	jupyterhub/yarnspawner	SAME-OWNER	BSD-3-Clause	BSD	LICENSE	1492	same-tier
+openedx/openedx-platform	openedx/.github	SAME-OWNER	AGPL-3.0	Apache-2.0	LICENSE.txt	11359	more-permissive
+openedx/openedx-platform	openedx/frontend-app-authoring	SAME-OWNER	AGPL-3.0	AGPL-3.0	LICENSE	34523	same-tier
+openedx/openedx-platform	openedx/frontend-app-learner-dashboard	SAME-OWNER	AGPL-3.0	AGPL-3.0	LICENSE	34523	same-tier
+openfun/marsha	davidjbradshaw/iframe-resizer	THIRD-PARTY	MIT	GPL-3.0	LICENSE	32210	MORE-RESTRICTIVE
+openfun/marsha	openfun/xblock-configurable-lti-consumer	SAME-OWNER	MIT	AGPL-3.0	LICENSE	34520	MORE-RESTRICTIVE
+openwallet-foundation-labs/learner-credential-wallet	user-attachments/assets	THIRD-PARTY	MIT	UNRESOLVED	UNRESOLVED	0	MORE-RESTRICTIVE
+overhangio/tutor	overhangio/indigo	SAME-OWNER	?	AGPL-3.0	LICENSE.txt	34523	
+overhangio/tutor	overhangio/openedx-scorm-xblock	SAME-OWNER	?	AGPL-3.0	LICENSE.txt	34523	
+overhangio/tutor	overhangio/tutor-android	SAME-OWNER	?	AGPL-3.0	LICENSE.txt	34523	
+sakaiproject/sakai	sakaicontrib/legacy-language-packs	THIRD-PARTY	?	NO-PAYLOAD	NO-PAYLOAD	0	
+xiaoyang111222/cn-math-taxonomy	luw2007/os-taxonomy-beijing	THIRD-PARTY	CC-BY-NC-4.0	ODbL-UNVERSIONED	LICENSE	25289	
+zhblue/hustoj	azure99/hustoj-reborn	THIRD-PARTY	GPL-2.0	Apache-2.0	LICENSE	11358	more-permissive
+zhblue/hustoj	azure99/winhustoj	THIRD-PARTY	GPL-2.0	MIT	LICENSE	1062	more-permissive
+zhblue/hustoj	muzea/hustoj-benchmark	THIRD-PARTY	GPL-2.0	NO-PAYLOAD	NO-PAYLOAD	0	MORE-RESTRICTIVE
+zhblue/hustoj	royqh1979/redpanda-cpp	THIRD-PARTY	GPL-2.0	GPL-3.0	LICENSE	35149	same-tier
+zhblue/hustoj	sempr/hustoj-go	THIRD-PARTY	GPL-2.0	Apache-2.0	LICENSE	565	more-permissive
+zhblue/hustoj	user-attachments/assets	THIRD-PARTY	GPL-2.0	UNRESOLVED	UNRESOLVED	0	MORE-RESTRICTIVE
+zhblue/hustoj	vnoi-admin/scratch-run	THIRD-PARTY	GPL-2.0	AGPL-3.0	LICENSE	34523	MORE-RESTRICTIVE
+zhblue/hustoj	zhblue/freeproblemset	SAME-OWNER	GPL-2.0	LGPL-3.0	LICENSE	7652	more-permissive

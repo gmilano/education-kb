@@ -6,8 +6,10 @@ updated: 2026-10-21
 
 # Education — foundational repos
 
-**Pass 362 · 2026-10-21.** The systems an education engagement starts *from*, rather
-than the agents it adds on top. Every row verified first-hand **2026-10-21**: liveness
+**Pass 364 · 2026-10-21.** The systems an education engagement starts *from*, rather
+than the agents it adds on top. 🆕 **`p364` adds the tier below them** — the components a
+platform's own README tells you to install, graded by payload, in
+*"`p364`: the DEPLOYMENT tier"* below. Every row verified first-hand **2026-10-21**: liveness
 and default branch via `git ls-remote --symref`, licence **read from the payload**.
 
 🔴 **`p362` corrects two grants in the code-execution tier, and both corrections change
@@ -494,6 +496,82 @@ wrong **family** — `Judger` as MIT when the payload is SATA, `Sharif-Judge` as
 when the payload is the plain GPLv3 text (*"GNU GENERAL PUBLIC LICENSE, Version 3, 29
 June 2007"*, 35 146 B, identical at `master`). 🔴 **So finding the grant is not reading
 it**, and a path column that says `200` says nothing about the family in the bytes.
+
+## 🆕 `p364`: the DEPLOYMENT tier — components named by a platform's own README, graded by payload
+
+🔴 **Every other tier on this shelf grades a platform. This one grades what a platform
+makes you install.** `ACTION ZZ-bo` (opened `p362` on the `QingdaoU/OnlineJudge` specimen)
+asked a question no instrument here had asked: *does the headline grant govern the
+components?* `p364` read the README of all **60** addresses on `verticals/solutions.md`,
+extracted the **91** GitHub addresses they name, and graded the **69** this base did not
+hold. Full population in
+[`companion-population`](../evidence/companion-population.2026-10-21-p364.tsv); grants and
+the per-row verdict against the host's published cell in
+[`companion-grants`](../evidence/companion-grants.2026-10-21-p364.tsv).
+
+### 🟢 JupyterHub's spawner and authenticator tier — 11 components, all BSD, none previously held
+
+🟢 **A class cluster is never just `jupyterhub`.** It is the core plus a **spawner** (how a
+student's notebook process is started) plus an **authenticator** (how the LMS signs them
+in). All eleven are permissive, which makes this the one platform family on these shelves
+where a closed client deliverable survives the deployment and not just the core.
+
+| Component | Repo | Licence (payload, `2026-10-21`) | Default ref | What it decides |
+|---|---|---|---|---|
+| **kubespawner** | [jupyterhub/kubespawner](https://github.com/jupyterhub/kubespawner) | 🟢 **BSD** (`LICENSE`, 1 528 B) | `main` | one Kubernetes pod per student — the shape of every cohort-scale teaching cluster |
+| **dockerspawner** | [jupyterhub/dockerspawner](https://github.com/jupyterhub/dockerspawner) | 🟢 **BSD** (`LICENSE`, 1 528 B) | `main` | one container per student on a single host; the cheap classroom |
+| **systemdspawner** | [jupyterhub/systemdspawner](https://github.com/jupyterhub/systemdspawner) | 🟢 **BSD** (`LICENSE`, 1 528 B) | `main` | per-student resource limits with no container runtime at all |
+| **batchspawner** | [jupyterhub/batchspawner](https://github.com/jupyterhub/batchspawner) | 🟢 **BSD** (`LICENSE`, 1 528 B) | `main` | submits to Slurm/PBS — the route onto a university HPC allocation |
+| **yarnspawner** | [jupyterhub/yarnspawner](https://github.com/jupyterhub/yarnspawner) | 🟢 **BSD** (`LICENSE`, 1 492 B) | `master` | Hadoop/YARN clusters; data-engineering curricula |
+| **sudospawner** | [jupyterhub/sudospawner](https://github.com/jupyterhub/sudospawner) | 🟢 **BSD** (`LICENSE`, 1 528 B) | `main` | privilege separation without running the hub as root |
+| **wrapspawner** | [jupyterhub/wrapspawner](https://github.com/jupyterhub/wrapspawner) | 🟢 **BSD** (`LICENSE`, 1 557 B) | `master` | lets a student *choose* a profile at launch |
+| **oauthenticator** | [jupyterhub/oauthenticator](https://github.com/jupyterhub/oauthenticator) | 🟢 **BSD** (`LICENSE`, 1 528 B) | `main` | Google/Azure/GitHub sign-in — the usual institutional identity route |
+| **ldapauthenticator** | [jupyterhub/ldapauthenticator](https://github.com/jupyterhub/ldapauthenticator) | 🟢 **BSD** (`LICENSE`, 1 528 B) | `main` | the on-premise directory most schools actually run |
+| **kerberosauthenticator** | [jupyterhub/kerberosauthenticator](https://github.com/jupyterhub/kerberosauthenticator) | 🟢 **BSD** (`LICENSE`, 1 492 B) | `main` | Kerberos estates, common in HPC and older universities |
+| **jupyterhub-tutorial** | [jupyterhub/jupyterhub-tutorial](https://github.com/jupyterhub/jupyterhub-tutorial) | 🟢 **BSD** (`LICENSE`, 1 528 B) | `master` | 🟡 teaching material, not a component — shelved for completeness of the README's population |
+
+🔵 **A payload-identity observation, free from the measurement:** **7 of these 11 ship a
+byte-identical 1 528 B payload**, with the remaining four at 1 492/1 557 B. That is
+`gate-payload-digest`'s axis (`ACTION ZZ-ad`) answering in the affirmative on a tier nobody
+pointed it at — one organisation-wide grant, reproduced, rather than eleven decisions.
+🟡 **The classifier returns the family UNVERSIONED (`BSD`, not `BSD-3-Clause`)** and this
+shelf publishes what was read; the core row on `verticals/solutions.md` carries
+`BSD-3-Clause` from an earlier pass, so the version is asserted there and not here.
+
+### 🟡 Permissive components under a copyleft platform — the direction that is safe
+
+🟢 **Worth stating because it is the opposite of the Marsha finding and equally useful:** a
+copyleft platform can ship permissive pieces, and those pieces are reachable on their own.
+
+| Component | Repo | Licence (payload) | Host platform (published grant) | Why it matters alone |
+|---|---|---|---|---|
+| **frappe-ui** | [frappe/frappe-ui](https://github.com/frappe/frappe-ui) | 🟢 **MIT** (`license.md`, 1 101 B) | `frappe/lms` **AGPL-3.0**, `frappe/erpnext` **GPL-3.0** | the Vue component library — usable in a closed front end against either platform's REST API |
+| **payments** | [frappe/payments](https://github.com/frappe/payments) | 🟢 **MIT** (`license.txt`, 1 118 B) | `frappe/lms` **AGPL-3.0** | course-fee collection, detachable from the AGPL core |
+| **frappe_docker** | [frappe/frappe_docker](https://github.com/frappe/frappe_docker) | 🟢 **MIT** (`LICENSE`, 1 086 B) | `frappe/erpnext` **GPL-3.0** | the supported deployment path, permissively granted |
+| **judge0-js / judge0-python** | [judge0/judge0-js](https://github.com/judge0/judge0-js) · [judge0/judge0-python](https://github.com/judge0/judge0-python) | 🟢 **MIT** (1 070 B / 1 063 B) | `judge0/judge0` **GPL-3.0** | 🟢 the official clients are MIT, so the *API boundary* this base already recommends for Judge0 is now granted on both sides rather than only on the server's |
+| **elearning-module-parser** | [jcputney/elearning-module-parser](https://github.com/jcputney/elearning-module-parser) | 🟢 **Apache-2.0** (`LICENSE`, 11 314 B) | `jcputney/scorm-again` **MIT** | parses SCORM/AICC/cmi5 packages on the server; pairs with the MIT browser runtime |
+| **openedx/.github** | [openedx/.github](https://github.com/openedx/.github) | 🟢 **Apache-2.0** (`LICENSE.txt`, 11 359 B) | `openedx/openedx-platform` **AGPL-3.0** | 🟡 org metadata, not code — shelved so the AGPL tier's population is complete |
+
+🔴 **And the ones that run the other way,** each verified from payload:
+`frappe/press` **AGPL-3.0** (`develop/license.txt`, 34 523 B) under a **GPL-3.0** platform —
+it is the hosting control plane, so a studio *operating* ERPNext as a service is the exact
+case AGPL is written for; `openfun/xblock-configurable-lti-consumer` **AGPL-3.0** under an
+**MIT** platform (the Marsha correction, in `verticals/solutions.md`);
+`dmoj/runtimes-docker` **AGPL-3.0**; `inginious/demo-tasks` **AGPL-3.0**;
+`overhangio/indigo`, `overhangio/openedx-scorm-xblock`, `overhangio/tutor-android` all
+**AGPL-3.0** at `LICENSE.txt`, consistent with Tutor's own grant.
+
+### 🔴 `ioi/isolate` — the sandbox under the sandbox, GPL-2.0, 583 B
+
+🔴 **Judge0's README names 20 third-party repositories and 19 of them are adopters, not
+dependencies.** The twentieth is [`ioi/isolate`](https://github.com/ioi/isolate) —
+**GPL-2.0**, `master/LICENSE`, **583 B** — the IOI's process isolator and the thing that
+actually confines student code underneath Judge0. 🔵 It does not change this base's Judge0
+advice (reach it as a service over HTTP and the boundary holds) but it does extend it: the
+boundary has **two** copyleft layers behind it, and a studio that chooses to *vendor* the
+execution tier rather than call it inherits GPL-3.0 **and** GPL-2.0.
+
+---
 
 ## Content authoring, media and delivery
 

@@ -1,0 +1,9 @@
+address	channel	ref_or_tag	path	family	bytes_or_note	measured
+davidjbradshaw/iframe-resizer	raw	master (default branch)	LICENSE	GPL-3.0-or-commercial	"Iframe Resizer Version 5 ... dual-licensed, either under GPL V3, or a commercial license"	2026-10-21
+davidjbradshaw/iframe-resizer	raw	v3.5.13 (the line marsha pins)	LICENSE	MIT	"The MIT License (MIT) Copyright (c) 2013-2015 David J. Bradshaw"	2026-10-21
+davidjbradshaw/iframe-resizer	raw	v3.6.6	LICENSE	MIT	"The MIT License (MIT) Copyright (c) 2013-2019 David J. Bradshaw"	2026-10-21
+openfun/marsha	raw	master	src/frontend/packages/lib_video/package.json	n/a	declares @types/iframe-resizer 3.5.13 (DefinitelyTyped, types only)	2026-10-21
+openfun/marsha	raw	master	src/frontend/packages/lib_components/package.json	n/a	declares @types/iframe-resizer 3.5.13	2026-10-21
+openfun/marsha	raw	master	src/frontend/package.json	n/a	NO iframe-resizer runtime dependency declared	2026-10-21
+openfun/marsha	raw	master	README.md L61-L68	n/a	"yarn copy-iframe-resizer"; host-side JS to be included IN THE LMS PAGES	2026-10-21
+openfun/xblock-configurable-lti-consumer	raw	master	LICENSE	AGPL-3.0	34520	2026-10-21

@@ -6,8 +6,12 @@ updated: 2026-10-21
 
 # Education — current trends
 
-**Pass 362 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
-across external sources. 🆕 **Trends 30–32 are `p362`'s**, and all three come from
+**Pass 364 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
+across external sources. 🆕 **Trends 36–38 are `p364`'s.** §36 is the one a successor
+should read first — it says a licence family on these shelves is a function of a **pin**
+and every cell here was read at a **branch** — and §37 gives the frequency behind §30's
+single specimen, now measured over 69 repositories. §38 is a coverage finding: the layer
+a platform *deploys* with is a different licensing population from the platform. 🆕 **Trends 30–32 are `p362`'s**, and all three come from
 pointing an instrument this base already owned at a column it had stopped checking: §30 is
 a *component-level* licensing finding with an engagement cost attached, §31 is the sweep
 that found it and two more like it, and §32 is a measured property of the search index
@@ -939,3 +943,92 @@ repository, a licence request here has someone to send it to and a citable reaso
 grant it. 🔵 **Record the ask, not just the gap**: a studio that wants the pedagogy layer
 should be opening those conversations now, because the alternative is re-collecting
 teacher–student dialogue data at research cost.
+
+## 36. 🔴 🆕 A licence family is a function of the PIN, and every grant claim on this base asserts a branch
+
+🔴 **The measurement.** [`davidjbradshaw/iframe-resizer`](https://github.com/davidjbradshaw/iframe-resizer),
+read first-hand on **2026-10-21**:
+
+| ref | payload | family |
+|---|---|---|
+| `master` (default branch) | *"Iframe Resizer Version 5 … dual-licensed, either under GPL V3, or a commercial license"* | 🔴 **GPL-3.0-or-commercial** |
+| `v3.5.13` | *"The MIT License (MIT) Copyright (c) 2013-2015"* | 🟢 **MIT** |
+| `v3.6.6` | *"The MIT License (MIT) Copyright (c) 2013-2019"* | 🟢 **MIT** |
+
+🔴 **One address, two families, and nothing but the pin decides which one a client
+ships.** This is not an edge case discovered by construction — it was found while grading
+the components of `openfun/marsha`, an **MIT** row on this base's platform shelf, whose
+documented build copies this library's host-side JS **into the customer's LMS pages**.
+
+🔴 **The scope, stated against this base's own instrument:** `gate-grant-path` parses
+**299 grant claims** across these shelves and reports the branch distribution itself —
+`main` 209, `master` 71, `develop` 6, `dev` 5, and single rows on `19.0`, `newnew`,
+`mobile`, `release`, `Version-1`, `development`, `v4.0.x-develop`. 🔴 **Not one of the 299
+asserts a TAG.** Every licence cell here is therefore a reading of a *moving* ref, and a
+relicensing upstream changes what a client may do without any instrument on this base
+going red.
+
+🟢 **Why this is tractable rather than merely alarming.** The failure mode is directional:
+a project relicenses **forward**, so the hazard is an *upgrade*, and the question to ask of
+a client's estate is *"what is in your lockfile?"* rather than *"what does the repository
+say today?"* 🔵 The first draft of the Marsha row said *"pulls in GPL-3.0"* — **false**, by
+one tag read — and it was the manifest that settled it: Marsha declares only
+`@types/iframe-resizer` `3.5.13` (DefinitelyTyped, **types only**) and **no `iframe-resizer`
+runtime dependency in any of its five manifests**.
+
+🔵 **It also fires `ACTION VU`'s payload shape on a second row.** VU (opened on
+`snflwr-ai/snflwr.ai`, AGPL-3.0 → proprietary on 2026-09-18) asked for *a `LICENSE` payload
+naming two licences and a date*, and noted *"no instrument here looks for that shape."*
+`iframe-resizer`'s payload names **two licences and a version**, found by a sweep that was
+not looking for it.
+
+## 37. 🔴 🆕 §30's component defect has a frequency now, and it is not rare
+
+🔴 **`p362` found one specimen** — `QingdaoU/OnlineJudge`, MIT headline, SATA execution,
+ungranted deploy repo — and `§30` generalised it as a *claim*. 🟢 **`p364` measured it over
+a population:** the **60** addresses of the platform shelf, their **91** named companion
+edges, and the **69** distinct repositories this base did not already hold.
+
+| the component population, `2026-10-21` | value |
+|---|---:|
+| platform rows naming at least one companion | **25 / 60 (41.7 %)** |
+| companions absent from **2 550** held addresses | 🔴 **72 / 91 edges (79 %)** |
+| 🟢 permissive (MIT 16 · BSD 11 · Apache-2.0 6) | **33 / 69** |
+| 🔴 copyleft or source-restricted (AGPL 12 · GPL-3.0 3 · GPL-2.0 1 · LGPL 2 · Elastic 1) | **19 / 69** |
+| 🔴 **no grant at any probed path** | 🔴 **12 / 69** |
+
+🔴 **The engagement reading: a platform's licence cell is roughly a coin-flip as a
+predictor of its deployment's licence.** Nineteen copyleft components and twelve ungranted
+ones sit behind rows this base publishes with a single family token. 🔵 **And the direction
+matters more than the count** — a copyleft platform shipping MIT pieces (`frappe/frappe-ui`,
+`frappe/payments`, `judge0/judge0-js`) is a *gift*, because the permissive piece is usable
+alone; a **permissive platform reaching an AGPL-3.0 component** (`openfun/marsha` →
+`openfun/xblock-configurable-lti-consumer`) is the one that costs money, because it is the
+row a studio forks into a closed deliverable without a second look.
+
+🟡 **One honest limit on the instrument.** *Named in a README* is a syntactic relation that
+over-collects: `judge0/judge0`'s README names 20 third-party repositories and **19 are
+adopters, not dependencies**. The `SAME-OWNER` / `THIRD-PARTY` column keeps them apart well
+enough to refuse promotion, but the edge has **no direction**, and only the manifest
+settles it.
+
+## 38. 🟢 🆕 The deployment tier is its own licensing population, and for JupyterHub it is uniformly permissive
+
+🟢 **A platform's components are not a sample of the platform.** Measured on the one family
+where the whole tier was readable at once: **all 11** same-owner components named by
+`jupyterhub/jupyterhub` read **BSD** from payload — the spawners (`kubespawner`,
+`dockerspawner`, `systemdspawner`, `batchspawner`, `yarnspawner`, `sudospawner`,
+`wrapspawner`) and the authenticators (`oauthenticator`, `ldapauthenticator`,
+`kerberosauthenticator`). **None was among this base's 2 550 addresses.**
+
+🔵 **Why this is the useful half of §37.** A spawner and an authenticator are not optional
+extras — they *are* how a cohort-scale teaching cluster is built (one pod per student via
+`kubespawner`; institutional sign-in via `oauthenticator` or the LDAP directory a school
+actually runs). 🟢 So JupyterHub is, as far as this base can now measure, **the only
+platform family on these shelves where "fork freely into a closed client deliverable"
+survives contact with the deployment** and not merely with the core.
+
+🔵 **A free corroboration from the same bytes:** **7 of the 11 ship a byte-identical
+1 528 B payload**. That is one organisation-wide grant reproduced eleven times, not eleven
+decisions — and it is `gate-payload-digest`'s axis (`ACTION ZZ-ad`) answering in the
+affirmative on a tier nobody had pointed it at.

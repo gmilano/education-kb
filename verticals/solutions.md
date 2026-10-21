@@ -6,8 +6,30 @@ updated: 2026-10-21
 
 # Education — vertical platforms to customise with AI
 
-**Pass 362 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
+**Pass 364 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
 sense that Odoo is extensible for ERP or OpenMRS for healthcare.
+
+🔴 **`p364` generalises `p362`'s OnlineJudge finding across this whole shelf, and it is no
+longer one platform's problem.** `p362` found that a platform's headline grant does not
+govern the components that execute. `p364` read the README of **all 60 addresses on this
+shelf**, extracted every GitHub address they name, and graded the grant of each one that
+this base did not already hold.
+
+| the question `ACTION ZZ-bo` asked | the answer, measured `2026-10-21` |
+|---|---:|
+| how many of this shelf's rows name a companion repository? | **25 of 60 (41.7 %)** — 60 live, 60 with a README, 0 unresolved |
+| how many companion edges is that? | **91** — 46 `SAME-OWNER`, 45 `THIRD-PARTY` |
+| how many were absent from a **2 550-address** corpus? | 🔴 **72 of 91 (79 %)**, i.e. **69 distinct repositories** |
+| how many of those 69 are permissive? | **33** (16 MIT, 11 BSD, 6 Apache-2.0) |
+| how many carry copyleft or worse? | **19** (12 AGPL-3.0, 3 GPL-3.0, 1 GPL-2.0, 2 LGPL-3.0, 1 Elastic) |
+| how many carry **no grant at all**? | 🔴 **12** |
+
+🔵 **The headline correction is `Marsha`, below** — published on this shelf as **MIT**
+with copyleft reach **None**, and that cell is right about `openfun/marsha`'s own bytes and
+incomplete about what a deployment of it reaches. **Evidence:**
+[`companion-population`](../evidence/companion-population.2026-10-21-p364.tsv) ·
+[`companion-grants`](../evidence/companion-grants.2026-10-21-p364.tsv) ·
+[`version-axis-grant`](../evidence/version-axis-grant.2026-10-21-p364.tsv).
 
 🔴 **`p362` changes this shelf's code-execution recommendation.** The judge tier's
 permissive pick, `QingdaoU OnlineJudge`, **is still MIT** — but the components that
@@ -20,6 +42,92 @@ from payload). 🟢 Every address on this shelf was part of a **277-address corp
 sweep: 277 live, 0 dead** — and, for the first time since `p355`, a **star
 re-derivation**: the GitHub index is open through the session's MCP search tool, though
 `api.github.com` still answers 403 by `curl`. See `agents/top.md`.
+
+## 🔴 `p364`: the permissive headline with the copyleft deployment — and the version axis nobody here was reading
+
+### The correction: `openfun/marsha`
+
+🔴 **This shelf published `Marsha` as MIT with copyleft reach `None`.** The grant is real —
+`openfun/marsha` is MIT in its own bytes. 🔴 **But its own organisation ships the piece that
+makes it work inside Open edX, and that piece is AGPL-3.0:**
+
+| component | relation | grant, read from payload `2026-10-21` | what it does |
+|---|---|---|---|
+| [`openfun/xblock-configurable-lti-consumer`](https://github.com/openfun/xblock-configurable-lti-consumer) | 🔴 `SAME-OWNER` | **AGPL-3.0** — `master/LICENSE`, **34 520 B** | the XBlock that injects Marsha's host-side JS into Open edX. Marsha's own README names it as the thing that "already does this" |
+| [`davidjbradshaw/iframe-resizer`](https://github.com/davidjbradshaw/iframe-resizer) | `THIRD-PARTY` | 🔴 **GPL-3.0-or-commercial** at the default branch · 🟢 **MIT** at `v3.5.13` | resizes the LTI `<iframe>`; its host-side JS is copied into **the client's LMS pages** |
+
+🔵 **This is `p362`'s class on a permissive headline, which is the direction that costs
+more.** A GPL platform with a GPL component surprises nobody; **an MIT platform whose
+documented deployment reaches AGPL-3.0 is exactly the row a studio forks into a closed
+client deliverable.** The reach cell is corrected above; `openfun/marsha` itself is
+unchanged and still MIT.
+
+### 🆕 The new defect class: a grant is a function of the PIN, and every instrument here reads the BRANCH
+
+🔴 **`p364`'s first draft of the row above was wrong, and the way it was wrong is the
+finding.** Reading `iframe-resizer`'s default branch returns **GPL-3.0-or-commercial**
+(*"Iframe Resizer Version 5 … dual-licensed, either under GPL V3, or a commercial
+license"*). Published as-is, that asserts a GPL exposure in a client's LMS pages. 🟢 **It
+is not true of the version Marsha uses.** Measured at the tag:
+
+- `v3.5.13` → **MIT** (*"Copyright (c) 2013-2015"*) · `v3.6.6` → **MIT** (*"2013-2019"*)
+- Marsha declares only **`@types/iframe-resizer` `3.5.13`** — DefinitelyTyped, **types
+  only** — in `lib_video` and `lib_components`; **no `iframe-resizer` runtime dependency is
+  declared in any of its five manifests.**
+
+🔴 **So the real exposure is an UPGRADE, not a current breach**, and it is sharper than a
+licence cell: the library relicensed **MIT → GPL-3.0-or-commercial at v5**, and the thing
+that crosses into the client's estate is JS *injected into their LMS pages*. A studio that
+runs `yarn copy-iframe-resizer` against a modern lockfile ships GPL-3.0 to a customer and
+the platform's MIT cell will still read `None`.
+
+🔴 **The general statement, and it applies to this entire base:** `gate-grant-path` parses
+**299 grant claims** across these shelves and **every one of them asserts a BRANCH and a
+file** — `main`, `master`, `develop`, `19.0`. 🔴 **Not one asserts a TAG.** A grant read at
+a moving ref is a grant that can change under a client without any instrument here
+noticing. 🟢 This fires **`ACTION VU`**'s payload shape — a `LICENSE` naming *two licences
+and a date* — on a **second** row (the first was `snflwr-ai/snflwr.ai`, AGPL-3.0 →
+proprietary on 2026-09-18), and VU's own note that *"no instrument here looks for that
+shape"* still holds. Registered as `ACTION ZZ-br`.
+
+### 🟢 The coverage this bought: JupyterHub's deployment tier, 11 components, all BSD
+
+🟢 **The cheapest good news on this shelf.** JupyterHub is the platform a CS or
+data-science engagement actually stands up, and **a class cluster is never just
+`jupyterhub`** — it is a spawner plus an authenticator. All **11** named same-owner
+components read **BSD** from payload, **none** was in this base's 2 550 addresses, and they
+are now shelved in `repos/foundations.md`. 🔵 A BSD core with a BSD deployment tier is the
+only row on this shelf where *"fork freely into a closed client deliverable"* survives
+contact with the deployment.
+
+### 🔴 The ungranted tier: 12 of 69 companions carry no grant at any probed path
+
+🔴 **`p362`'s `OnlineJudgeDeploy` was not a one-off.** The same shape — the repository that
+*deploys* or *localises* a platform, ungranted — recurs:
+
+| companion | named by | what it is | grant |
+|---|---|---|---|
+| [`sakaicontrib/legacy-language-packs`](https://github.com/sakaicontrib/legacy-language-packs) | `sakaiproject/sakai` | Sakai's own language packs — **content a deployment ships** | 🔴 **no payload** |
+| [`batlez/hiddenvm`](https://github.com/batlez/hiddenvm) | `Batlez/CloakBox` | same-owner companion of a shelf row | 🔴 **no payload** |
+| [`muzea/hustoj-benchmark`](https://github.com/muzea/hustoj-benchmark) | `zhblue/hustoj` | benchmark harness for the judge | 🔴 **no payload** |
+
+🔵 **`bigbluebutton/bbb-install` is the counter-example that makes the point fair:** it is
+the deploy repository of an LGPL-3.0 platform and it **is** granted, **LGPL-3.0**, read
+from payload. The ungranted-deploy shape is common, not universal, and it has to be
+measured per row rather than assumed either way.
+
+### 🟡 What the relation column cannot tell you yet
+
+🔴 **`judge0/judge0`'s README names 20 third-party repositories and almost none of them is
+a component** — they are an **adopter showcase**, projects that *use* Judge0. The
+`THIRD-PARTY` relation correctly refused to promote any of them to a component, which is
+what it is for. 🔴 **But the edge has no DIRECTION**, so a dependency and a dependent look
+identical to this instrument, and the one genuine dependency hiding in that list is
+[`ioi/isolate`](https://github.com/ioi/isolate) — **GPL-2.0**, Judge0's actual sandbox.
+🟡 Registered as `ACTION ZZ-bs`; the cheap first cut is the manifest, which is how the
+`iframe-resizer` reading above was settled.
+
+---
 
 ## 🟢 `p361`: this shelf's most expensive finding is now properly qualified, not cracked
 
@@ -217,9 +325,9 @@ of a gap:
 | **H5P** | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) · [h5p/h5p-cli](https://github.com/h5p/h5p-cli) | GPL-3.0 core / 🟢 **MIT** CLI | 🟢 Tooling on the **CLI** is unencumbered; code linked into the library is GPL | ~50 interactive content types that embed in Moodle, Canvas and Open edX. The fastest route to AI-generated interactive exercises inside an existing LMS |
 | **Opencast** | [opencast/opencast](https://github.com/opencast/opencast) | **ECL-2.0** (branch `develop`) | 🟢 **Permissive** | Lecture capture, video pipeline, scheduled recording. The ingestion point for transcript- and video-based AI |
 | **BigBlueButton** | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 (branch `v4.0.x-develop`) | 🟡 LGPL | Virtual classroom with whiteboard, breakouts, recording. Integrates with Moodle and Canvas |
-| **Marsha** | [openfun/marsha](https://github.com/openfun/marsha) | 🟢 **MIT** | 🟢 **None** | LTI learning-content management system from France Université Numérique — drop-in video/content provider for any LTI host |
+| 🔴 **Marsha** | [openfun/marsha](https://github.com/openfun/marsha) | 🟢 **MIT** (own bytes) | 🔴 **NOT "None" — see `p364` below.** Its own `openfun/xblock-configurable-lti-consumer` is **AGPL-3.0** (`master/LICENSE`, 34 520 B), and the documented build injects `iframe-resizer` JS **into the host LMS pages** | LTI learning-content management system from France Université Numérique — drop-in video/content provider for any LTI host |
 | **Hyperbook** | [openpatch/hyperbook](https://github.com/openpatch/hyperbook) | 🟢 **MIT** | 🟢 **None** | Interactive teaching books from markdown. Good fit for AI-generated courseware that must stay editable by teachers |
-| **JupyterHub** | [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | 🟢 **BSD-3-Clause** | 🟢 **None** | Multi-user notebooks for CS/data-science teaching. Pair with [ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) for LMS single sign-on |
+| 🆕 **JupyterHub** | [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | 🟢 **BSD-3-Clause** | 🟢 **None — and `p364` is the first pass that can say so about the DEPLOYMENT and not just the core.** All **11** of its named same-owner components read **BSD** from payload | Multi-user notebooks for CS/data-science teaching. Pair with [ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) for LMS single sign-on. 🟢 The spawner/authenticator tier is now shelved in `repos/foundations.md` |
 
 ## Assessment and integrity
 

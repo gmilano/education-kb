@@ -29,6 +29,7 @@ README_LOG := $(shell mktemp)
 ORACLE_LOG ?= /tmp/education-kb-gate-slug-oracle.log
 PAYLOAD_LOG ?= /tmp/education-kb-gate-payload-pin.log
 SHELF_LOG ?= /tmp/education-kb-gate-shelf-consistency.log
+COMPANION_LOG ?= /tmp/education-kb-gate-companion-closure.log
 REGION_LOG ?= /tmp/education-kb-gate-region-headings.log
 AFFERO_LOG ?= /tmp/education-kb-gate-affero-rung.log
 FAMILY_LOG ?= /tmp/education-kb-gate-family-coverage.log
@@ -76,7 +77,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-template-identity gate-untitled-payload gate-region-headings \
              gate-bespoke-title gate-fold-identity gate-grant-scope \
              gate-alias-canonical gate-author-key gate-payload-digest \
-             gate-address-shape gate-census-currency gate-grant-path
+             gate-address-shape gate-census-currency gate-grant-path \
+             gate-companion-closure
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -426,6 +428,16 @@ gate-grant-path-online: ## p354 — ACTION ZZ-au, the 200-check itself.  NEEDS E
 slug-probe: ## ACTION p293 — is it a repository?  make slug-probe SLUGS="owner/a owner/b"
 	@test -n "$(SLUGS)" || { echo 'usage: make slug-probe SLUGS="owner/name owner/other"'; exit 2; }
 	@$(PY) -I compose/code/p293-slug-existence-oracle/slug_oracle.py --online $(SLUGS) --out evidence/p293-slug-oracle-$$(date +%F).tsv
+
+# 🔴 p364 — `ACTION ZZ-bo` (p362): EVERY GRANT INSTRUMENT ON THIS BASE TAKES ONE
+# REPOSITORY'S BYTES, and p362 proved with `QingdaoU/OnlineJudge` that a platform's headline
+# grant does not govern the components that execute.  This gate pins the extractor that
+# builds the companion population — including the two NAV namespaces p364 found p351's shape
+# filter PASSING (`user-attachments`, `activities`) and the locale-path hole it deliberately
+# left open.  🟢 Offline by construction: the controls are payload shapes, not requests, so
+# the gate is runnable where there is no egress.  The online half is `probe_companions.sh`.
+gate-companion-closure: ## p364 — ACTION ZZ-bo: a platform's named companions, and the NAV holes that sweep found
+	@cd compose/code/p364-companion-closure && { $(PY) -I test_companion_closure.py > $(COMPANION_LOG) 2>&1 || { echo "🔴 p364-companion-closure FAILED — the suite's own report follows:" ; sed "s/^/   /" $(COMPANION_LOG) ; false ; } ; } && echo "── p364-companion-closure (20 controls: self-exclusion on case and sub-path, .git and badge folding, p364's two new NAV rungs, the p362 OnlineJudge specimen, the locale-path hole PINNED rather than guessed, and the CASE-CLOSED README ladder p283's audit demanded)" && echo "   PASS" || exit 1
 
 gate-identity: ## ACTION p283 — no shelf may recommend one repository under two live rows
 	@cd compose/code/p283-repo-identity && { $(PY) test_identity_gate.py > $(IDENTITY_LOG) 2>&1 || { echo "🔴 p283-repo-identity FAILED — the suite's own report follows:" ; sed "s/^/   /" $(IDENTITY_LOG) ; false ; } ; } && echo "── p283-repo-identity (17 controls: withdrawn-in-place, the cross-table index, both halves in one cell, plus p300's subject scope — the description-cell false positive, the cell-1 overfit guard and the preserved alias arm)" && echo "   PASS" || exit 1

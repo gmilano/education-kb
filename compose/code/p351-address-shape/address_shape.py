@@ -74,7 +74,23 @@ NAV_NAMESPACES = frozenset("""
 topics orgs repos trending search collections sponsors users features about pricing
 settings notifications explore marketplace apps login join new stars watching issues
 pulls dashboard codespaces enterprise security sitemap contact site organizations
+user-attachments activities
 """.split())
+# 🆕 p364 (`ACTION ZZ-bo`): `user-attachments` and `activities` were added after this
+# filter PASSED them as addresses while sweeping 60 platform READMEs.  Both are
+# github.com's own paths — `user-attachments/assets/<uuid>` is the attachment CDN every
+# modern README embeds images through, and `github.com/activities/...` is a site page.
+# 🔴 Neither is hypothetical: `user-attachments/assets` reached p364's companion
+# population TWICE (`zhblue/hustoj`, `openwallet-foundation-labs/learner-credential-wallet`)
+# and `activities/...` once (`chamilo/chamilo-lms`), and all three were caught only by
+# `ls-remote` answering NO-REF — i.e. by the ONLINE channel, downstream of the filter whose
+# entire job is to reject non-addresses offline.
+# 🟡 A third hole found in the same sweep is deliberately NOT closed here:
+# `github.com/en/get-started` is a locale-prefixed docs path, and a two-letter first
+# segment cannot be told from a short legitimate owner BY SHAPE.  Pinned as a fixture in
+# `p364-companion-closure/test_companion_closure.py` control 15 instead of guessed at.
+# 🟢 Neither addition moves this base's census: both strings occur ZERO times in the nine
+# SHELF_FILES, measured before the edit, so `gate-census-currency`'s triple is untouched.
 
 # Legal shapes that are nonetheless not repositories: a human placeholder.  Kept
 # deliberately short — the template-variable class above is why this list is not the

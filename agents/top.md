@@ -6,6 +6,22 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
+**Pass 364 · 2026-10-21.** 🔴 **`p364` added 69 repositories to this base and moved no row
+on this shelf, deliberately:** every one of them is a platform *component* — spawners,
+authenticators, deploy scripts, XBlocks, API clients, a process isolator — and none is an
+agent. They are shelved in `repos/foundations.md`. 🔵 What `p364` leaves *here* is a
+warning that applies to every row below: **each licence cell on this shelf was read from
+one repository at one branch**, and `p364` measured both axes on which that is not enough —
+the **component** axis (19 of 69 companions carry copyleft or worse; 12 carry no grant) and
+the **version** axis (`iframe-resizer` is **GPL-3.0-or-commercial** at `master` and **MIT**
+at `v3.5.13` — the same address, two families, decided by a pin). Detail in
+`agents/trending.md` and `verticals/solutions.md`.
+
+🟢 **`p364` evidence:** [`companion-population`](../evidence/companion-population.2026-10-21-p364.tsv) ·
+[`companion-grants`](../evidence/companion-grants.2026-10-21-p364.tsv) ·
+[`version-axis-grant`](../evidence/version-axis-grant.2026-10-21-p364.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p364.tsv)
+
 **Pass 363 · 2026-10-21.** Every row below was checked first-hand: liveness and default
 branch via `git ls-remote --symref`, and the licence **read from the payload** at
 `raw.githubusercontent.com` — never from a badge, a README claim or GitHub's own

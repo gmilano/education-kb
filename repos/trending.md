@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 364 · 2026-10-21 — 🔴 **69 repositories entered this base's reach without a single index call, because they were named in READMEs this base had already fetched — and 12 of them carry no grant at all**
+
+🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`
+**OPEN** · 🔴 `api.github.com/*` **403** by `curl`. 🔵 **No GitHub index call was spent this
+pass.** The population came from the platform shelf's own READMEs — `p362`'s prescription
+for a base whose search legs are saturated.
+
+**Evidence:** [`companion-population`](../evidence/companion-population.2026-10-21-p364.tsv) ·
+[`companion-grants`](../evidence/companion-grants.2026-10-21-p364.tsv) ·
+[`version-axis-grant`](../evidence/version-axis-grant.2026-10-21-p364.tsv)
+
+### 🔴 The population, with every denominator stated
+
+| measured over `verticals/solutions.md`, `2026-10-21` | value |
+|---|---:|
+| addresses on the platform shelf | **60** |
+| resolved to a default ref (`ls-remote --symref`) | 🟢 **60 / 60** |
+| README found on the case- and extension-closed ladder | 🟢 **60 / 60** |
+| rows naming **at least one** companion | **25 (41.7 %)** |
+| companion edges extracted | **91** — 46 `SAME-OWNER`, 45 `THIRD-PARTY` |
+| edges already in this base's **2 550** addresses | **19 (21 %)** |
+| 🔴 edges **absent** | 🔴 **72 (79 %)** → **69 distinct repositories** |
+
+🔵 **The 41.7 % is `ACTION ZZ-bo`'s unmeasured scope, now measured.** `p362` opened it with
+*"how many of this corpus's platform rows name companions is not known."*
+
+### 🔴 The grant distribution of the 69, read from payload
+
+| family | count | note |
+|---|---:|---|
+| 🟢 MIT | **16** | includes `frappe/frappe-ui` at **`license.md`** — the lowercase rung `p337` added after a one-counterexample refutation |
+| 🟢 BSD (unversioned by the classifier) | **11** | **all** of JupyterHub's spawner/authenticator tier |
+| 🟢 Apache-2.0 | **6** | |
+| 🔴 AGPL-3.0 | **12** | `frappe/press`, `openfun/xblock-configurable-lti-consumer`, `dmoj/runtimes-docker`, the three `overhangio` plugins, two Open edX MFEs, … |
+| 🔴 GPL-3.0 | **3** | |
+| 🔴 GPL-2.0 | **1** | [`ioi/isolate`](https://github.com/ioi/isolate), 583 B — the isolator under Judge0 |
+| 🟡 LGPL-3.0 | **2** | `bigbluebutton/bbb-install`, `zhblue/freeproblemset` |
+| 🔴 Elastic | **1** | `arize-ai/phoenix`, named by Judge0 as an adopter |
+| 🟡 ODbL | **1** | a taxonomy dataset, not code |
+| 🔴 **no payload at any probed path** | 🔴 **12** | the `OnlineJudgeDeploy` class, recurring |
+| 🔴 `UNRESOLVED` by `ls-remote` | **4** | **3 are not addresses at all** — see below |
+
+### 🔴 Three non-addresses survived a filter whose entire job is rejecting non-addresses
+
+🔴 **`p351-address-shape` PASSED three GitHub *site* paths as repositories**, and they were
+caught only by `ls-remote` answering `NO-REF` — i.e. by the **online** channel, downstream
+of the offline filter:
+
+| string | where it came from | what it actually is |
+|---|---|---|
+| `user-attachments/assets` | `zhblue/hustoj`, `openwallet-foundation-labs/learner-credential-wallet` | GitHub's **attachment CDN**, how every modern README embeds an image |
+| `activities/contributing-to-open-source` | `chamilo/chamilo-lms` | a **github.com page** |
+| `en/get-started` | `frappe/erpnext` | a **locale-prefixed docs path** |
+
+🟢 **The first two are CLOSED** — added to `NAV_NAMESPACES` and pinned by controls 7 and 8
+of the new `gate-companion-closure` (16 controls, wired into `HOOK_GATES`). 🟡 **The third
+is deliberately NOT closed and is pinned as a fixture instead** (control 15): a two-letter
+first segment cannot be told from a short legitimate owner **by shape**, so rejecting `en`
+would reject a real owner called `en`. 🟢 **Neither addition moves the census** — both
+strings occur **zero** times in the nine `SHELF_FILES`, measured before the edit, and
+`gate-census-currency` still derives **2 583 → 33 → 2 550**.
+
+🔵 **The fourth `UNRESOLVED` is a different class and is kept separate:**
+`leondape/librechat-code-interpreter-judge0-bridge` is a well-formed address that does not
+resolve — a dead or private link in a live README, not a filter defect.
+
+### 🟢 The 11 new permissive rows worth an engagement's attention
+
+🟢 Shelved in `repos/foundations.md` under *"the DEPLOYMENT tier"*: JupyterHub's
+**kubespawner · dockerspawner · systemdspawner · batchspawner · yarnspawner · sudospawner ·
+wrapspawner · oauthenticator · ldapauthenticator · kerberosauthenticator** (all **BSD**,
+7 of them a byte-identical 1 528 B payload), plus `frappe/frappe-ui` (**MIT**),
+`frappe/payments` (**MIT**), `frappe/frappe_docker` (**MIT**), `judge0/judge0-js` and
+`judge0/judge0-python` (**MIT**, which grants *both* sides of the API boundary this base
+already recommends for Judge0) and `jcputney/elearning-module-parser` (**Apache-2.0**).
+
 ## Pass 363 · 2026-10-21 — 🟢 **the index had a publisher-shaped hole: a named university education-NLP lab and a national developer-education community, neither of them in 2 550 addresses.** Twelve live addresses added, six of them with no grant, one real grant that GitHub reports as absent, and a probe this pass had to throw away and rebuild
 
 🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`

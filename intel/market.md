@@ -6,9 +6,18 @@ updated: 2026-10-21
 
 # Education — market map and regional intelligence
 
-**Pass 362 · 2026-10-21.** Researched **2026-10-21**. Figures are attributed; where a
+**Pass 364 · 2026-10-21.** Researched **2026-10-21**. Figures are attributed; where a
 number comes from a vendor blog or a commercial research summary rather than a primary
-source, it says so. The
+source, it says so.
+
+🔴 **`p364` ran all four prescribed regional legs plus the market leg, and the result is
+the ninth consecutive near-nil: 3 of 5 returned a figure new to these shelves, 2 returned
+nothing this file did not already carry, and NONE returned a new address.** Per-leg
+detail, with the query shape and the carried-or-new verdict for each, is in
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p364.tsv). 🟢 **Recorded rather
+than passed over in silence, because an informed null is the only thing that distinguishes
+saturation from a leg nobody ran** — and because this base's own register has now said so
+for nine passes while the legs stay prescribed. The
 regional sections below are deliberately symmetric: a North America or EMEA
 engagement should be as well served by this file as a LATAM one.
 
@@ -172,6 +181,22 @@ it is **auditability, curriculum alignment and an evidence story**.
 ## Opportunities by region
 
 ### North America
+
+**`p364` leg result: PARTIAL — one new instrument, no new addresses.** 🟢 **New on these
+shelves:** the **AFT**, **UFT** and **Microsoft** announced a *national AI safety and
+privacy standard for schools* — a union-backed standard is a different kind of lever from
+the state bills this file already tracks (**134 bills / 31 states**, `H.R. 8747`, the NYC
+moratorium), because it binds through **collective agreements** rather than statute, and it
+arrives in the same districts. 🟡 Source is a policy-tracker summary, not a primary
+document; the standard's text was not read. 🟢 **Also new, and the sharper engagement
+signal:** multiple universities — **Vanderbilt, UCLA, Yale, Northwestern** — have **turned
+off Turnitin's AI-detection tool**, citing false positives. 🔵 **That is an assessment-
+redesign mandate, not a procurement gap:** an institution that has abandoned detection has
+to move integrity upstream into task design, oral defence, draft-history review and
+process evidence — which is billable design work this base can already source
+(`dodona-edu/dolos`, **MIT**, on the programming side). 🔴 **Nothing else was new:** the
+state-bill counts, the federal grant-priority rule of 13 Apr 2026 and the district policies
+were each checked against this file before being written up and each was already carried.
 
 **Added `p362`.** 🟢 **The region's special-education asset is far larger than this file
 said.** [`The-Burnes-Center/a-iep`](https://github.com/The-Burnes-Center/a-iep)
@@ -376,6 +401,21 @@ literacy push with **no legislation date set** — an opening for literacy progr
 without a compliance burden attached.
 
 ### EMEA
+
+**`p364` leg result: NIL, and the null is itself the finding.** 🔴 **The leg returned the
+Annex III deferral to `2027-12-02` under the Digital Omnibus — which this base has held as
+SETTLED since `p233`** (OJ dates) and `p241` (superseded-date count). 🟢 **This is now the
+ninth independent secondary channel to reproduce it, and it re-opens nothing.** 🔴 **The
+standing caveat stands unchanged and must travel with every quotation of it: every EU
+primary legal host on this base is `connect_rejected`** — `eur-lex.europa.eu`,
+`digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu` — so **the regulation
+number `2026/1744` is itself secondary-sourced**, and no engagement should quote a statutory
+date off this shelf until the Official Journal has been read. 🔵 The one thing worth
+re-stating for a client calendar: what binds an education provider **today** is not the
+high-risk regime but the **prohibitions** (emotion inference in education, since
+`2025-02-02`), the **AI-literacy duty** (Art. 4) and **Art. 50 transparency**, whose
+content-marking grace for systems already on the market falls **`2026-12-02` — six weeks
+out**.
 
 **Added `p362`.** 🟢 **Two supply-side entries, both placed by a vendor's own commit
 channel rather than by prose.**
@@ -665,6 +705,21 @@ with no grant at all. 🟢 **A licence request to a named lab is the cheapest un
 available in this region.**
 
 ### APAC
+
+**`p364` leg result: NIL on the sector, and the gap is now in its eleventh pass.** 🔴 **The
+leg returned general AI regulation and attitudinal data, not education-sector
+intelligence.** The **Ipsos Education Monitor** ban-support spread is already carried
+(support for banning AI in schools runs **23 % Indonesia → 31 % South Korea**, with India
+26 %, Thailand 25 %, Singapore 28 %, Japan and Malaysia 29 %); so are **Korea's AI Basic
+Act**, **Vietnam's Decision 33/2026** and the education sector's place in Vietnam's
+high-risk tier. 🔴 **What is STILL missing, stated explicitly for the eleventh consecutive
+pass: the education-sector PLAYERS — the edtech companies, the ministry programmes and the
+education-specific rules — of individual APAC jurisdictions.** 🔵 **This is an informed
+gap, not silence:** the prescribed region-shaped query returns pan-regional regulatory
+trackers every time, and the register's standing prescription (`p275`: *"query the
+instrument, not the region"*) has **not** been retried per-jurisdiction here. A successor
+should ask for *Vietnam MOET AI pilot*, *Korea AI Basic Act education decree* or *Singapore
+MOE adaptive learning* by name, never for "APAC education AI".
 
 **Added `p362`.** 🔴 **A region-specific licence hazard, measured rather than inferred,
 and it sits on infrastructure this base recommends.** The components that execute student
@@ -1091,6 +1146,27 @@ the grant is what is missing.** Licensing advisory is a real line item in LATAM
 engagements, not a footnote.
 
 ### Global
+
+**`p364` adds one funding instrument and one engagement question.** 🟢 **The instrument:
+the Gates Foundation pledged at least US$1 billion over two years for equitable AI
+access**, announced **14–15 September 2026** with its 10th Goalkeepers Report (*"Make This
+Matter: AI, Equity, and the Choice We Can't Delay"*), aimed at getting AI tools to
+**educators, healthcare workers and farmers**, with most spending expected in the world's
+poorest countries and three named priorities — **language coverage, local context, access
+and skills**. 🔴 **A widely-repeated 40 %-to-education split is NOT confirmed** — it
+appears in a single blog and could not be traced to the foundation's own release, so it is
+recorded here as unverified. 🔵 **Why this is placed Global and not North America:** the
+money is a US foundation's but the *delivery* is to low- and middle-income countries, which
+makes it an instrument for LATAM, Africa and parts of APAC — filing it under the funder's
+home region would have put it in exactly the wrong bucket for anyone filtering this file.
+🟢 **Language coverage as a named priority is the part a studio can act on**, and it lines
+up with the multilingual gap this base already carries.
+
+🔴 **The engagement question `p364` adds, and it applies in every region:** *"what is in
+your lockfile?"* — because `intel/trends.md` §36 measures a component on this base's own
+platform shelf that reads **GPL-3.0-or-commercial** at its default branch and **MIT** at
+the tag the platform actually pins. 🔵 A licence answer given from a repository's front
+page is not an answer about a client's deployed estate.
 
 **Added `p362`.** 🔴 **A sector-wide licensing shape with a direct engagement cost: in
 education infrastructure the grant is a property of a repository, and the dangerous work

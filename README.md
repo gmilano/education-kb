@@ -4,6 +4,161 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 364 — 2026-10-21 — **THIS BASE PUBLISHED 60 EDUCATION PLATFORMS AND HAD NEVER READ WHAT THEY MAKE YOU INSTALL. `p364` READ ALL 60 READMEs: 91 COMPANION EDGES, 72 OF THEM ABSENT FROM 2 550 ADDRESSES, 69 DISTINCT REPOSITORIES GRADED FROM PAYLOAD — 19 COPYLEFT-OR-WORSE, 12 WITH NO GRANT AT ALL, AND ONE PLATFORM PUBLISHED HERE AS *MIT, REACH NONE* WHOSE OWN ORGANISATION'S COMPONENT IS AGPL-3.0. 🔴 AND THE PASS'S BEST FINDING IS A DEFECT IN ITS OWN FIRST DRAFT: A GRANT IS A FUNCTION OF THE **PIN**, AND ALL 299 GRANT CLAIMS ON THIS BASE ASSERT A **BRANCH**.**
+
+🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
+evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by
+commit.
+
+**Evidence:** [`companion-population`](evidence/companion-population.2026-10-21-p364.tsv) ·
+[`companion-grants`](evidence/companion-grants.2026-10-21-p364.tsv) ·
+[`version-axis-grant`](evidence/version-axis-grant.2026-10-21-p364.tsv) ·
+[`regional-legs`](evidence/regional-legs.2026-10-21-p364.tsv)
+
+### 🟢 The pass in one table
+
+`ACTION ZZ-bo` was opened by `p362` with its scope recorded as **unmeasured**. It is now measured.
+
+| the question | the answer, `2026-10-21` |
+|---|---:|
+| platform rows read (`verticals/solutions.md`) | **60** — 60 resolved a default ref, 60 had a README, 0 failed |
+| rows naming at least one companion repository | **25 (41.7 %)** |
+| companion edges extracted | **91** — 46 `SAME-OWNER`, 45 `THIRD-PARTY` |
+| 🔴 edges absent from this base's **2 550** addresses | 🔴 **72 (79 %)** → **69 distinct repositories** |
+| 🟢 of those 69: permissive | **33** — MIT 16, BSD 11, Apache-2.0 6 |
+| 🔴 of those 69: copyleft or source-restricted | **19** — AGPL-3.0 12, GPL-3.0 3, GPL-2.0 1, LGPL-3.0 2, Elastic 1 |
+| 🔴 of those 69: **no grant at any probed path** | 🔴 **12** |
+| 🔴 of those 69: not addresses at all | **3** — GitHub *site* paths that `p351`'s shape filter passed |
+
+### 🔴 The shelf correction: a permissive headline with a copyleft deployment
+
+🔴 **`openfun/marsha` was published on this base as 🟢 MIT with copyleft reach 🟢 None.**
+The grant is real — Marsha's own bytes are MIT. 🔴 **But its own organisation ships the
+piece that makes it work inside Open edX, and that piece is AGPL-3.0:**
+[`openfun/xblock-configurable-lti-consumer`](https://github.com/openfun/xblock-configurable-lti-consumer),
+`master/LICENSE`, **34 520 B**, read from payload.
+
+🔵 **This is `p362`'s `OnlineJudge` class in the direction that costs more.** A GPL platform
+with a GPL component surprises nobody. **An MIT platform whose documented deployment
+reaches AGPL-3.0 is precisely the row a studio forks into a closed client deliverable
+without a second look.** The reach cell is corrected; the platform's own grant is unchanged.
+
+### 🔴 The new defect class — and this pass earned it by being wrong first
+
+🔴 **`p364`'s first draft wrote *"marsha pulls in GPL-3.0"*. That is false, and one read at
+a tag refutes it.**
+
+| [`davidjbradshaw/iframe-resizer`](https://github.com/davidjbradshaw/iframe-resizer) | payload | family |
+|---|---|---|
+| `master` (default branch) | *"Iframe Resizer Version 5 … dual-licensed, either under GPL V3, or a commercial license"* | 🔴 **GPL-3.0-or-commercial** |
+| `v3.5.13` | *"The MIT License (MIT) Copyright (c) 2013-2015"* | 🟢 **MIT** |
+| `v3.6.6` | *"The MIT License (MIT) Copyright (c) 2013-2019"* | 🟢 **MIT** |
+
+🟢 **What settled it was the manifest, not the repository front page:** Marsha declares only
+`@types/iframe-resizer` `3.5.13` — DefinitelyTyped, **types only** — and **no
+`iframe-resizer` runtime dependency in any of its five manifests**. 🟢 So the published row
+says the truer and sharper thing: the exposure is an **upgrade**, the library relicensed
+**MIT → GPL-3.0-or-commercial at v5**, and what crosses into the customer's estate is JS
+copied **into their LMS pages** by Marsha's own build step (`yarn copy-iframe-resizer`).
+
+🔴 **The general statement, against this base's own instrument.** `gate-grant-path` parses
+**299 grant claims** on these shelves and prints their branch distribution: `main` 209,
+`master` 71, `develop` 6, `dev` 5, and one row each on `19.0`, `newnew`, `mobile`,
+`release`, `Version-1`, `development`, `v4.0.x-develop`. 🔴 **Not one of the 299 asserts a
+TAG.** Every licence cell here is a reading of a *moving* ref. Registered as
+**`ACTION ZZ-br`**; it also fires **`ACTION VU`**'s payload shape (*a `LICENSE` naming two
+licences and a date*) on its **second** row.
+
+### 🟢 What the pass bought the shelves: 11 permissive deployment components
+
+🟢 **The cheapest good news here.** A JupyterHub teaching cluster is never just
+`jupyterhub` — it is the hub **plus a spawner plus an authenticator** — and **all 11**
+same-owner components it names read **BSD** from payload, **none** of which this base held.
+They are shelved in `repos/foundations.md` and composed into **Pattern 23**, which is the
+only stack on these shelves that is permissive *through the deployment* and not merely at
+the core. 🔵 **A free corroboration from the same bytes:** 7 of the 11 ship a
+**byte-identical 1 528 B** payload — one organisation-wide grant reproduced, which is
+`gate-payload-digest`'s axis answering on a tier nobody had pointed it at.
+
+🟡 **Also new and useful in the other direction:** copyleft platforms shipping permissive
+pieces — `frappe/frappe-ui` (**MIT**, at the lowercase `license.md` rung `p337` added),
+`frappe/payments` (**MIT**), `frappe/frappe_docker` (**MIT**), and `judge0/judge0-js` /
+`judge0/judge0-python` (**MIT**), which means the API boundary this base already recommends
+for Judge0 is now granted on **both** sides. 🔴 And the sandbox under the sandbox:
+[`ioi/isolate`](https://github.com/ioi/isolate), **GPL-2.0**, 583 B.
+
+### 🟢 An instrument defect closed, and one deliberately left open
+
+🔴 **`p351-address-shape` passed three GitHub *site* paths as repositories** —
+`user-attachments/assets` (the attachment CDN, reached twice), `activities/…`, and
+`en/get-started` — caught only by `ls-remote`, i.e. **downstream of the offline filter whose
+entire job is to reject non-addresses.** 🟢 **The first two are CLOSED** and pinned by
+controls 7–8 of the new `gate-companion-closure`. 🟡 **The third is pinned as a fixture
+rather than closed** (control 15): a two-letter first segment cannot be told from a short
+legitimate owner **by shape**, so rejecting `en` would reject a real owner called `en`.
+🟢 **Neither addition moves the census** — both strings occur **zero** times in the nine
+`SHELF_FILES`, measured before the edit.
+
+### 🔵 The prescribed legs, with the null stated
+
+🔴 **Ninth consecutive near-nil; the agent leg's twentieth.** 4 global + 4 regional legs
+ran and returned **0 new addresses**. 🟡 **3 of 8 returned a figure new to these shelves:**
+the **AFT/UFT/Microsoft** school AI standard and the US universities (**Vanderbilt, UCLA,
+Yale, Northwestern**) that have **turned off Turnitin's AI detection** — North America; the
+**Gates Foundation's ≥US$1 bn** of 14–15 Sep 2026 — filed **Global**, because the delivery
+is to low- and middle-income countries and filing it under the funder's home region would
+be the wrong bucket (🔴 the widely-repeated *40 % to education* split is **unverified** and
+is recorded as such); and **Brazil 76 % / Mexico 70 %** general AI adoption — LATAM, 🔴 and
+explicitly **not** shelved as an education figure. 🔴 **EMEA and APAC returned nothing
+new** — the Annex III deferral to `2027-12-02` is SETTLED here since `p233` and this is its
+ninth secondary channel; APAC's per-jurisdiction education-sector players are nil for the
+**eleventh** pass, and `intel/market.md` now says what to ask for instead.
+
+🔴 **One inbound false claim, of a shape this base has already named** (`Gap 467`): a
+listicle offered *"Open edX … MIT ties"*, where the MIT is the **university** (dotLRN, at
+the Massachusetts Institute of Technology). 🟢 **No cell was written from it**, and both
+payloads were read to be sure: `openedx/openedx-platform` **AGPL-3.0** (35 136 B),
+`OpenOLAT/OpenOLAT` **Apache-2.0** (10 982 B) — **both confirming the carried cells.**
+
+### 🔵 The address-shape census, re-derived as the LAST act before this commit
+
+🟢 **Re-derived over the nine `SHELF_FILES` of the tree this pass commits: **2 608**
+harvested shapes → **33** are not addresses → **2 575 addresses** (1.27 % inflation).**
+🔵 `p363`'s triple (**2 583 → 33 → 2 550**) was correct against `p363`'s tree and is
+falsified by this pass's **25** new shelf addresses. 🟢 **Per the gate's own instruction the
+`p363` sentence below is left standing — history is dated by measurement and is not
+retro-edited — and the current triple is restated here instead.** 🔵 The rejected count is
+unchanged at **33** and the `NAV-NAMESPACE` class at **26**, which is the predicted result
+of this pass's two new rungs: they are real GitHub paths that appear in companion READMEs
+and **nowhere in these shelves**.
+
+### 🟢 Gate state — and a gate that accused this pass's own instrument, correctly
+
+🟢 **`make hooks`: 32/32 green on arrival, 33/33 green on exit** after this pass added
+`gate-companion-closure` (**20 controls**). 🔴 **Via one RED in between, and it is worth the
+score:** wiring the new gate in turned **`gate-ladder-case`** RED —
+`STANDING:SINGLE-SPELLING` rose **17 → 18**, the eighteenth row being
+`compose/code/p364-companion-closure/companion_closure.py`, graded on the single spelling
+`README`.
+
+🔴 **The available excuse was that the file has no path ladder at all — it is handed a path
+by its shell driver — and that excuse is wrong on the merits**, which is exactly what
+`p352` concluded when the same gate accused *its* new instrument. An instrument that cannot
+resolve a README itself cannot be run against a checkout, and a one-spelling anchor cannot
+prove an absence: hand it a project whose anchor is `Readme.md` and it reports no README
+where one is sitting. 🟢 **So the ladder was CLOSED rather than the gate excepted** —
+`README_LADDER` varies stem case and extension case over 16 rungs, walked first-hit-wins,
+with `None` as a real absence, re-audited **`FOLD-ON-PATH`** and `SINGLE-SPELLING` back at
+its ceiling of **17**. Controls 17–20 exercise it rather than merely declare it.
+
+🔵 **Two of this pass's three defects were its own**, and that is the honest tally: the
+`iframe-resizer` first draft (above), control 19's precedence assertion (it claimed
+`README.txt` outranks `Readme.md`; the ladder puts markdown first, deliberately, and the
+*control* was corrected rather than the ladder), and `p351-address-shape`'s NAV vocabulary.
+🔴 **A base that always concludes its own instruments were right has stopped measuring.**
+
+---
+
 ## Pass 363 — 2026-10-21 — **THIS BASE HOLDS 2 550 ADDRESSES AND DOES NOT CONTAIN ETH ZÜRICH'S NLP-FOR-EDUCATION GROUP OR BRAZIL'S LARGEST DEVELOPER-EDUCATION COMMUNITY. `p363` STOPPED SWEEPING COLUMNS AND ASKED WHO IS MISSING FROM THE INDEX: TWELVE NEW LIVE ADDRESSES, AND **3 OF 12 ARE USABLE IN PAID WORK** — TWO MIT, ONE APACHE-2.0, ONE `CC-BY-NC-4.0` HIDING BEHIND GITHUB'S `NOASSERTION`, TWO REAL CC GRANTS DECLARED ONLY IN README PROSE, AND SIX WITH NO GRANT AT 11 PROBED PATHS EACH. THE CLASSIFIER'S ERRORS RUN BOTH WAYS FOR THE FIRST TIME ON THIS BASE. ONE PROBE WAS THROWN AWAY AND REBUILT MID-PASS**
 
 🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
