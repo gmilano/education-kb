@@ -1324,3 +1324,81 @@ were ~50 s for 823 addresses at 6-way parallelism and ~160 s for 2 628.
 `raw.githubusercontent.com` for payload. 🔵 Both answered in this environment where **0 of 16
 other hosts did**, so this pattern is runnable in restricted networks where a web-research
 pattern is not — which is a genuine reason to prefer it as the first deliverable.
+
+## 🆕 Pattern 28 — A Brazilian municipal education deliverable whose three layers are each licence-read
+
+🔵 **The engagement.** A Brazilian municipal *secretaria de educação* runs, or is replacing,
+a school-management system, must report against the **BNCC** national curriculum, and wants
+adaptive practice for students. Until `p369` this base could not name a stack for it whose
+layers had each been graded.
+
+**The stack, all three rows promoted off the trending backlog this pass:**
+
+| Layer | Repository | Licence (payload) | ★ | Role |
+| --- | --- | ---: | --- | --- |
+| Administration / SIS | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟡 **LGPL** | 720 | Enrolment, attendance, grades, *software público*, already familiar to Brazilian municipalities |
+| Curriculum | [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟡 **CC** (data) | 9 | BNCC competences as an npm/PyPI package **and an MCP server** |
+| Psychometrics | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** | 153 | IRT item selection, ability estimation, stopping rules |
+| Mastery | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 **MIT** | 288 | Bayesian Knowledge Tracing over practice attempts |
+| Tutor surface | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | 148 | Local-first adaptive workspace, 10+ LLM providers |
+
+**Wiring.**
+1. Stand `i-educar` up as the system of record. 🔴 **Do not fork it into the deliverable** —
+   LGPL reaches a modified library, so integrate over its interfaces and keep Globant code in
+   a separate service.
+2. Mount `bncc-pacotes`' **MCP server** next to the tutor. Curriculum alignment becomes a tool
+   call — `competência` → `habilidade` → objective — instead of a scraping project, and the
+   alignment claim in the proposal becomes checkable against a dataset the client can read.
+3. Run `pyBKT` over practice attempts for *what the student knows*, `catsim` for *what to ask
+   next*. 🟢 Both are peer-reviewed algorithms with citations: the adaptivity claim survives a
+   procurement question that "the model decides" does not.
+4. Put `OpenTutor` (MIT, local-first) in front. Its provider abstraction is what lets the
+   municipality run a local model where connectivity or data residency demands it.
+
+🔴 **Licence discipline, stated once.** Only `catsim`, `pyBKT` and `OpenTutor` may be
+*vendored*. `i-educar` is integrated-with, never forked into the product. `bncc-pacotes` is
+CC: the **curriculum data** is usable under its terms, the **server code** around it should be
+treated as unlicensed until the repository files a grant — 🔵 so re-implement the handful of
+MCP tool wrappers rather than vendoring them, and use the package only as a data source.
+
+**Shape:** 8–10 weeks. Weeks 1–2 `i-educar` stand-up and data model; 3–4 BNCC MCP + alignment
+tests; 5–7 `pyBKT`/`catsim` loop against real attempt data; 8–10 tutor surface and
+teacher-facing evidence views.
+
+🟡 **Honest risk.** `bncc-pacotes` is at **9 ★** and created 2026-07-09 — small, and the
+single point of fragility in this stack. Mitigation is cheap because the dependency is *data*:
+pin the dataset version and cache it locally, and the pattern survives the package being
+abandoned.
+
+## 🆕 Pattern 29 — The watchlist sweep: sell the client the pass this base just ran on itself
+
+🔵 **The engagement.** A client — an innovation group, a platform team, a CTO office — has
+been *collecting* open-source candidates for two years in a wiki, a Notion board or a
+Slack channel. They have hundreds of addresses and no decision. They ask for more research.
+
+🔴 **They do not need more research.** `intel/trends.md` §46: when this base measured its own
+collection, **89.9 %** of the addresses it had recorded were on no shelf, and one pass of
+grading the most-cited **66** produced **43** usable rows while the outward discovery legs
+returned **zero**.
+
+**The deliverable, fixed scope.**
+1. **Extract** every repository address from the client's own history (wiki, tickets, chat
+   exports). One regex; expect noise — drop `search/`, `topics/` and other non-repository
+   paths explicitly.
+2. **Rank by citation count**, not by recency. Repeated mention is the client's own revealed
+   interest, already paid for.
+3. **Grade the top N from payload.** For each: `raw.githubusercontent.com/{slug}/{branch}/{file}`
+   across `main`, `master`, the default branch from the API, and the release branch, crossed
+   with `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `license.txt`. 🔴 §47:
+   a one-path probe scores a **21 %** false-absence rate.
+4. **Separate three verdicts** and never merge them: *granted* (a licence file), *declared*
+   (a manifest field or README sentence — fixable with one upstream issue), *absent*.
+5. **Return a decision per row**, not a summary: adopt / integrate-with / reference-only /
+   excluded, with the copyleft reach spelled out for each AGPL and GPL row.
+
+🟢 **Why it closes.** The output is a decision table against a list the client assembled
+themselves, so there is no argument about relevance, and the cost is roughly one HTTP request
+per repository. 🔵 **Prerequisite:** egress to `raw.githubusercontent.com`. Measured in this
+environment at **200 for 66 of 66** on a proxy where `github.com` answered **403 to every
+probe** — so the pattern runs inside restricted client networks where a web-research
+engagement cannot.

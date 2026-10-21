@@ -21,6 +21,8 @@ and the tier tables; the audit sections are for whoever questions a licence cell
 | Mastery estimation that survives a review | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | 268 | North America (UC Berkeley) |
 | Source material → quizzes, flashcards, study guide | [`SYuan03/Skill-Anything`](https://github.com/SYuan03/Skill-Anything) | **MIT** | 339 | APAC |
 | Course generation from existing content | [`satvik314/educhain`](https://github.com/satvik314/educhain) | **MIT** | 387 | APAC (India) |
+| Tutor the client must self-host end to end, no SaaS | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **MIT** | 148 | Not placed |
+| Automated feedback inside a real university course | [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | **MIT** | **820** | EMEA (TUM) |
 | Reach a client LMS without writing a connector | the MCP tier → `## LMS-connected agents` | mostly MIT | — | mixed |
 
 🔵 **Reading the rest of the file.** `## Tutoring and learning agents` is the main shelf.
@@ -35,6 +37,109 @@ looking it (non-commercial + revenue share), and
 [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) is **ODbL-1.0**,
 whose share-alike binds a derivative *database*. Neither is a blocker if you know before
 you build; both are if you find out at delivery.
+
+## 🟢 🆕 `p369`: `p368`'s promotion leak, measured end-to-end instead of sampled — **2 311 addresses are in this base's trending files and on no shelf**, and the 66 most-cited were licence-read from payload this pass
+
+🔵 **`p368` found three unshelved repositories by reading its own trending files by hand and
+called the mechanism a leak. `p369` counted it.** Both trending files were parsed for every
+`github.com/owner/repo` address; the six shelf files were parsed the same way; the two sets
+were differenced.
+
+| Measurement, 2026-10-21 | Count |
+| --- | ---: |
+| Distinct addresses in `agents/trending.md` + `repos/trending.md` | **2 570** |
+| Distinct addresses on the six shelf files | **383** |
+| 🔴 In trending, on **no** shelf | **2 311** (89.9 %) |
+| Of those, cited **≥ 8 times** across the trending history | **66** |
+| Of those 66, licence read **from payload** this pass | **66 / 66** |
+| 🟢 Shelved by this pass | **43** |
+
+🟡 **The 2 311 figure is an upper bound on the leak, not the leak.** Most of those addresses
+are one-off mentions in prose — general-purpose agents, unrelated infrastructure, SEO
+aggregator links. 🟢 **The ≥ 8-citation cut is the defensible population**: an address this
+base has written down eight or more times is one its own research kept returning to, and
+every one of the 66 turned out to resolve. Two entries in the raw extraction were artefacts
+of the regex, not repositories — `github.com/search/repositories` and
+`github.com/topics/ai-tutor` — and were dropped before the licence pass.
+
+## 🟢 🆕 `p369`: the payload channel is **OPEN**, and `p368`'s channel note was wrong about which host was blocked
+
+🔴 **`p368` recorded that `raw.githubusercontent.com` was "not reachable this pass" and fell
+back to licence *detection* from the API.** 🟢 **It is reachable.** Measured this pass, same
+proxy, same session:
+
+| Host | Transport | Result |
+| --- | --- | --- |
+| `github.com` | `curl -sSI` | 🔴 **403 at the proxy** |
+| `raw.githubusercontent.com` | `curl -sS` | 🟢 **200**, for 66 of 66 repositories probed |
+| GitHub repository search | authenticated API | 🟢 open (metadata, stars, default branch) |
+
+🔵 **This is §42 of `intel/trends.md` — "one host, two transports, two answers" — arriving a
+second time**, and it is the reason every licence cell below is a **payload read** and not a
+detection. 🟡 **The probe matters as much as the finding**: a single `main/LICENSE` fetch
+answers for roughly two-thirds of repositories; the rest needed `master`, `develop`, a
+release branch (`v31.0.00`, `release_11`), or a non-standard filename (`license.txt`,
+`LICENSE.md`). A probe that tries one path and records 404 as "no licence" **manufactures
+absence** — §41 again, and this pass nearly repeated it on `frappe/education`, which answers
+on `develop/license.txt` and nowhere else.
+
+### 🆕 Tutoring agents promoted from trending, graded by payload
+
+Licence = read from the file named in the last column. ★ = GitHub API, 2026-10-21.
+
+| Agent | Licence (payload) | ★ | Region | What it is | Grant path |
+| --- | --- | ---: | --- | --- | --- |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0** | **1 313** | 🟡 APAC (inferred) | Visual, interactive STEM tutor (Vue) | `main/LICENSE` |
+| [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 🔴 **GPL-3.0** | **931** | North America | Tutor built on explicit theory-of-mind reasoning about the learner | `main/LICENSE` |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT** | 148 | Not placed | Block-based adaptive workspace, **local-first**, 10+ LLM providers, KG + spaced repetition | `main/LICENSE` |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 🔴 **Creative Commons** | 135 | 🟡 APAC (inferred) | GenMentor — goal-oriented multi-agent ITS, WWW '25 Industry Track oral | `main/LICENSE` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟡 **BSD-3-Clause** | 111 | 🟡 EMEA (inferred) | Avatar + RAG tutoring platform, community edition | `main/LICENSE` |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 **MIT** | 67 | APAC (China) | EduAgent — RAG tutor built for grades 1–9, LanceDB, Socratic prompting | `main/LICENSE` |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** | 62 | Not placed | Local-first teaching assistant: lesson drafts, student materials, slides from the client's own curriculum | `main/LICENSE` |
+| [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🟢 **MIT** | 41 | 🟡 APAC (inferred) | Local-first adaptive tutoring **reference implementation** (iOS + web) with a civil-service-exam application on top | `main/LICENSE` |
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 **Apache-2.0** | 33 | Not placed | LangGraph agentic-RAG tutor, FastAPI + Next.js, grounded in a curated corpus | `main/LICENSE` |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0** | 24 | EMEA (THM, Germany) | Personalised automated feedback, run by a university department since 2018 | `main/LICENSE` |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT** | 15 | Not placed | LangGraph tutor: structured tutorial → Q&A → knowledge evaluation | `main/LICENSE` |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | 🟢 **MIT** | **0** | Not placed | Labs, exams, grading workflows as structured DSLs, with human review, sandboxed evaluation and CLI/MCP tools | `main/LICENSE` |
+
+🔵 **Why a 0 ★ row is on a shelf.** `AI-Teaching-Agent` is listed for its *shape*, not its
+traction: DSL-structured assessment artefacts plus a sandboxed evaluator plus an MCP surface
+is the architecture Patterns 9 and 12 describe, and it is MIT. 🟡 **Last pushed 2026-08-23 —
+treat it as a reference to read, not a dependency to adopt.**
+
+🔴 **Two large rows here are copyleft, and they are the two largest.** `ChatTutor` (AGPL-3.0)
+and `tutor-gpt` (GPL-3.0) together hold **2 244 ★** — more than every permissive row in this
+table combined. 🟢 **The engagement consequence is specific:** AGPL reaches a client's hosted
+deployment, so `ChatTutor` is a *reference* for a Globant build, not a base for one, unless
+the client accepts source release. This is `intel/trends.md` §10 showing up in the promotion
+backlog rather than in new discovery.
+
+### 🆕 The LMS-MCP rows that were never shelved — and the grant hole in the Canvas pair
+
+| MCP server | Licence (payload) | ★ | Reaches | Grant path |
+| --- | --- | ---: | --- | --- |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🟡 **MIT *declared*, never filed** | 104 | Canvas LMS, 54 tools (courses, assignments, enrolments, grades) | 🔴 **no `LICENSE` file** — `"license": "MIT"` in `main/package.json` only |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** | 44 | Moodle web services | `main/LICENSE` |
+| [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | 🟢 **MIT** | 2 | **Blackboard Learn** REST, with RBAC middleware | `main/LICENSE` |
+| [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | 🟢 **MIT** | 1 | Moodle, with **idempotent** content publishing | `main/LICENSE` |
+| [`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) | 🔴 **no grant found** | — | Canvas LMS | 🔴 none on `main`/`master`/`develop`; not returned by the repository index |
+
+🔴 **Both Canvas MCP servers fail the grant test, in two different ways**, and Canvas is the
+LMS a North America engagement is most likely to meet. A `package.json` field is a
+*statement of intent*, not a licence grant — nothing in it grants copyright permission, and
+it is not what a client's legal review will accept. 🟢 **The practical answer for a Canvas
+engagement is `nitsuah/bb-mcp`'s shape, not its target**: the only properly-granted
+LMS-MCP rows this base holds reach Moodle and Blackboard. 🔵 `ACTION`: raise an issue asking
+`DMontgomery40/mcp-canvas-lms` to add the file its own manifest already claims — it is a
+one-commit fix and it unblocks a tier.
+
+🟡 **One index artefact, recorded so the next pass does not re-measure it.**
+[`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) **has an MIT payload at
+`main/LICENSE`** but is not returned by a non-fork repository query — `p361`'s fork-exclusion
+mechanism, §28, for the third pass running.
+
+🟢 **Evidence for §`p369`:** [`promotion-gap`](../evidence/promotion-gap.2026-10-21-p369.tsv) — all 66 cited-but-unshelved addresses with citation count, payload licence, the exact branch/file the grant was read from, and stars · [`unshelved-addresses`](../evidence/unshelved-addresses.2026-10-21-p369.txt) — the full 2 311-address backlog.
+
 ## 🔴 `p368`: the leak is not discovery, it is **promotion** — a 41 208 ★ MIT repository has been in this base's own trending files for passes and never reached a shelf
 
 🔵 **`p367` measured what this base has never *seen*. `p368` measured what it has seen and

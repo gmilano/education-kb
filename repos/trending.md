@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 369 · 2026-10-21 — 🟢 **`raw.githubusercontent.com` answered 200 for 66 of 66 while `github.com` stayed 403: the payload standard was met for every row, and the infrastructure half of the backlog was shelved**
+
+🔵 **This pass did not search outward.** The prescribed trending leg returned the usual
+curriculum repositories — `rasbt/LLMs-from-scratch`, `mlabonne/llm-course`,
+`rohitg00/ai-engineering-from-scratch`, `microsoft/ai-agents-for-beginners` — all of which
+are **learning material about AI**, not education infrastructure, and none of which belongs
+on an industry shelf. 🟢 The budget went instead to the **2 311 addresses** this base has
+recorded in its own trending files and never graded (`intel/trends.md` §46).
+
+**New to `repos/foundations.md` this pass** — components, not products; licence from payload,
+★ from the GitHub API on 2026-10-21:
+
+| Component | Licence | ★ | Layer |
+| --- | --- | ---: | --- |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 🔴 GPL-3.0 | 585 | xAPI Learning Record Store |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🔴 **unresolved — 404 on every path probed** | 471 | Open edX component framework |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 MIT | 288 | Bayesian Knowledge Tracing |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 BSD-3-Clause | 153 | Computerised adaptive testing / IRT |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🟡 Apache-2.0 (README only) | 99 | SCORM → xAPI bridge. 🔴 **archived** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 LGPL | 64 | QTI item banking |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** | 51 | LRS + analytics pipeline — 🟢 **the first permissive LRS on this shelf** |
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 🟡 CC (README only) | 45 | Pedagogical-capability benchmark, EMNLP 2025 |
+| [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | 🟡 LGPL | 37 | LTI 1.3 / Advantage, PHP |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟡 CC | 9 | **BNCC** curriculum as npm/PyPI **+ MCP server** |
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 Apache-2.0 | 6 | OneRoster 1.2 over an Ed-Fi ODS |
+| [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | 🟢 MIT | 6 | OneRoster client, .NET |
+| [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 MIT | 5 | QTI 3 reference implementation, TypeScript |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 🟡 MIT (README only) | 3 | Tutor pedagogy evaluation |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | 🟢 Apache-2.0 | 1 | Intel reference apps + hardware benchmarking, created 2026-09-30 |
+
+**New to `verticals/solutions.md` this pass** — sixteen platforms, led by
+[`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) (🟢 MIT, **12 097 ★**),
+[`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) (🔴 AGPL-3.0, 2 407 ★),
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) (🟢 **MIT**, 820 ★, TUM),
+[`Submitty/Submitty`](https://github.com/Submitty/Submitty) (🟢 BSD-3-Clause, 804 ★, RPI),
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) (🟡 LGPL, 720 ★, Brazil),
+[`frappe/education`](https://github.com/frappe/education) (🔴 GPL-3.0, 672 ★, India),
+[`GibbonEdu/core`](https://github.com/GibbonEdu/core) (🔴 GPL-3.0, 638 ★),
+[`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) (🔴 AGPL-3.0, 526 ★, UIUC),
+[`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) (🔴 GPL-3.0, 504 ★),
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (🟢 **Apache-2.0**, 448 ★),
+[`UniTime/unitime`](https://github.com/UniTime/unitime) (🟢 Apache-2.0, 354 ★),
+[`openfun/richie`](https://github.com/openfun/richie) (🟢 MIT, 316 ★),
+[`numbas/Numbas`](https://github.com/numbas/Numbas) (🟢 Apache-2.0, 215 ★, Newcastle),
+[`learningequality/studio`](https://github.com/learningequality/studio) (🟢 MIT, 212 ★),
+[`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) (🔴 GPL-3.0, 98 ★, ETH Zurich) and
+[`Selleo/mentingo`](https://github.com/Selleo/mentingo) (🟢 MIT, 96 ★, AI-native LMS).
+
+🟢 **The two rows that change the shelf's advice:** `Artemis` and `OpenOLAT` are the first
+*full* learning platforms this base can offer under a permissive grant — everything in the
+core LMS tier before today was GPL, AGPL or LGPL.
+
+🔴 **One honest non-result:** `openedx/XBlock` (471 ★) returned **404 on every branch and
+filename probed**. Open edX documents XBlock as Apache-2.0, but a documentation page is not
+a payload, and §14 applies. Shelved with the grant marked unresolved; next transport to try
+is the PyPI sdist.
+
+🟡 **`packbackbooks/lti-1-3-php-library`** (cited 10× in this base's history) was **not
+returned by the repository index** at all this pass — not shelved, and flagged for a
+`fork:true` re-query next pass under `p361`'s recovery rule.
+
 ## Pass 368 · 2026-10-21 — 🔴 **`curl` to github.com was 403 at the proxy all pass, so no payload was read; the authenticated GitHub API substituted for it and found three repositories this base had trending-listed and never shelved**
 
 🟡 **Channel note, stated first because it bounds everything below.** Unlike `p367`, this

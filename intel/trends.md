@@ -1409,3 +1409,53 @@ name-to-name. `ACTION ZZ-bw`.
 [`slug-identity-head`](../evidence/slug-identity-head.2026-10-21-p366.tsv) ·
 [`double-cited-identity`](../evidence/double-cited-identity.2026-10-21-p366.tsv) ·
 [`grant-corrections`](../evidence/grant-corrections.2026-10-21-p366.tsv)
+
+## 46. 🔴 🆕 A knowledge base's largest unread asset is its own append-only history — 89.9 % of the addresses this base has recorded are on no shelf
+
+🔵 **`p368` found three unshelved repositories by hand. `p369` counted the population.**
+Parsing every `github.com/owner/repo` address out of both trending files and differencing
+against the six shelf files gives **2 570 known addresses, 383 shelved, 2 311 unshelved —
+89.9 %.** Restricted to addresses this base has written down **eight or more times**, the
+backlog is **66**, and a single pass graded all 66 from payload and shelved **43** of them.
+
+🟡 **The 89.9 % is not 89.9 % of a *loss*.** Most unshelved addresses are one-off mentions:
+general-purpose agents, unrelated infrastructure, aggregator links. 🟢 **The citation count is
+what turns the pile into a queue** — an address recorded eight times is one the base's own
+research kept re-finding, and in this pass that filter had a hit rate above **65 %**
+(43 shelved of 66 graded). Discovery legs over the same window returned **zero** new
+addresses.
+
+🔴 **The mechanism is structural, and every long-lived KB will have it.** An append-only
+trending file is *correct* to record everything it sees, and a shelf is *correct* to hold
+only what has been graded. Nothing connects the two unless a pass is spent connecting them,
+and a pass spent searching outward always feels more productive than a pass spent reading
+inward. 🔵 **Consequence for an engagement:** when a client says they have "been tracking
+open source in this space for years", the deliverable is almost never more tracking — it is
+one graded sweep of what they already collected. §47 gives the cost. `ACTION ZZ-bx`:
+re-run the differencing every pass and report the backlog count as a standing metric.
+
+## 47. 🟢 🆕 Grading a backlog costs about one request per repository — the expensive part is knowing which path to probe
+
+🔵 **Sixty-six repositories were licence-read from payload in one pass**, on a proxy where
+`github.com` returned **403** to every probe. The cost was not bandwidth; it was path
+enumeration.
+
+| Where the grant actually was | Share of the 66 |
+| --- | ---: |
+| `main/LICENSE` | ~⅔ |
+| `master/LICENSE` | most of the rest |
+| Non-default branch (`develop`, `v31.0.00`, `release_11`) or odd filename (`license.txt`, `LICENSE.md`) | **9** |
+| 🔴 Not a `LICENSE` file at all — `package.json`, or a README sentence | **5** |
+| 🔴 No grant found anywhere probed | **4** |
+
+🔴 **A one-path probe would have scored 9 false "no licence" verdicts and missed the 5 weak
+grants entirely** — §41's manufactured absence, at a measurable rate of **14 of 66 (21 %)**.
+🟢 **The rule that falls out:** a grant probe must enumerate *branch × filename*, and the
+default branch from the API is a hint, not the answer — `frappe/education` answers only on
+`develop/license.txt`, `GibbonEdu/core` only under a release branch.
+
+🟡 **And the five weak grants are a distinct class worth naming**: a licence *declared* in a
+manifest or a README but never filed. `DMontgomery40/mcp-canvas-lms` says `"license": "MIT"`
+in `package.json` and ships no `LICENSE`. That is evidence of intent and **not** a grant a
+client's counsel will accept — but unlike a true absence it is fixable with one upstream
+issue, which makes it the cheapest category of blocker this base tracks.

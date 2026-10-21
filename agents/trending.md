@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 369 — 🟢 **the payload channel `p368` recorded as closed is OPEN, 66 backlog repositories were licence-read through it, and 43 reached a shelf the same day**
+
+🔴 **Channel correction first, because every figure below depends on it.** `p368` recorded
+that `raw.githubusercontent.com` was not reachable and fell back to GitHub's licence
+*detection*. Measured this pass on the same proxy: **`github.com` → 403**, 
+**`raw.githubusercontent.com` → 200 for 66 of 66 repositories probed**, authenticated
+repository search → open. 🟢 **Every licence in this entry is a payload read**, which is the
+standard `p362` set after detection was proved wrong on `CaviraOSS/PageLM`. This is
+`intel/trends.md` §42 — one host, two transports, two answers — recurring.
+
+🔴 **The prescribed agent leg (`top open source AI agents education 2026 github MIT`)
+returned nothing new for the twenty-fifth consecutive pass.** Hermes, OpenClaw, OpenHands,
+CrewAI, MetaGPT and a row of SEO aggregators. The search tool's own summary again conceded
+it had "turned up few education-specific MIT-licensed agent projects". 🟢 **Treat this leg
+as dead** and spend the budget inward, which is what this pass did.
+
+🟢 **What replaced it: the backlog measurement.** Both trending files were parsed for every
+`github.com/owner/repo` address and differenced against the six shelf files.
+
+| Measurement | Count |
+| --- | ---: |
+| Distinct addresses in the two trending files | **2 570** |
+| Distinct addresses on the six shelf files | **383** |
+| 🔴 Trending, never shelved | **2 311** (89.9 %) |
+| Cited **≥ 8×** in trending history | **66** |
+| Licence read from payload this pass | **66 / 66** |
+| 🟢 Shelved by this pass | **43** |
+
+**New to the shelves this pass — agents** (★ GitHub API 2026-10-21; licence from payload):
+[`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) 🔴 AGPL-3.0, **1 313 ★** ·
+[`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) 🔴 GPL-3.0, **931 ★** ·
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) 🟢 MIT, 148 ★ ·
+[`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) 🔴 **Creative Commons**, 135 ★ ·
+[`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) 🟡 BSD-3-Clause, 111 ★ ·
+[`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) 🟢 MIT, 67 ★ ·
+[`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) 🟢 MIT, 62 ★ ·
+[`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) 🟢 MIT, 41 ★ ·
+[`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) 🟢 Apache-2.0, 33 ★ ·
+[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) 🟢 Apache-2.0, 24 ★ ·
+[`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) 🟢 MIT, 15 ★ ·
+[`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) 🟢 MIT, 0 ★.
+
+**MCP tier:** [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms)
+🟡 MIT **declared in `package.json`, no `LICENSE` file**, 104 ★ ·
+[`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) 🟢 MIT, 44 ★ ·
+[`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) 🟢 MIT, 2 ★ (Blackboard Learn + RBAC) ·
+[`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) 🟢 MIT, 1 ★ ·
+[`CreveXTech/canvas-lms-mcp`](https://github.com/CreveXTech/canvas-lms-mcp) 🔴 **no grant found anywhere probed**.
+
+🔴 **Both Canvas connectors fail the grant test, in two different ways** — and Canvas is the
+LMS a North America engagement is most likely to meet.
+
+🟡 **Index artefact, recorded once:**
+[`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) has an **MIT payload** but is
+absent from non-fork repository search — `p361`'s fork-exclusion mechanism again.
+
+🔵 **Probe note for successors.** Roughly a third of the 66 did **not** answer on
+`main/LICENSE`: `frappe/education` answers only on `develop/license.txt`, `GibbonEdu/core`
+only under `v31.0.00`, `ILIAS` only under `release_11`. A one-path probe would have recorded
+**9 false absences and missed 5 declared-but-unfiled grants** — 21 % of the population. See
+`intel/trends.md` §47.
+
 ## 2026-10-21 · Pass 368 — 🔴 **the agent leg returns nothing for the twenty-fourth consecutive pass, and the reason the shelf still grew is that `p368` stopped searching outward and swept *this base's own trending files* — where a 41 208 ★ MIT repository had been sitting unshelved**
 
 🟡 **Channel note.** `git ls-remote` and `raw.githubusercontent.com` were **not** reachable

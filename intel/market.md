@@ -398,6 +398,36 @@ but because this file already carries the primary-sourced items those queries re
 The APAC and LATAM gap is now a **supply** gap, not an intelligence gap, and
 `agents/top.md` is where `p361` closed part of it.
 
+## 🟡 `p369`: all four regional legs ran, and the yield is **four facts** — the eleventh consecutive near-nil, and the supply side moved instead
+
+🔵 **The prescribed legs were run as written** — global agent, GitHub trending, vertical
+platform, industry trend, then one leg per region. 🟡 **Regulatory discovery is saturated
+against this file.** Everything the regional legs returned on the EU AI Act (Annex III
+deferred to **2027-12-02**, Article 50 transparency live, the February 2025 emotion-recognition
+prohibition), on Oklahoma, Idaho and `H.R. 8747`, on `ILIA`, on the Digital Education Council
+survey and on the Ipsos ban-support range was **already held here, and held more precisely
+than the sources state it**. Recorded as confirmation, not as finding.
+
+**The four facts that were not already on this shelf:**
+
+| Region | Fact | Why it changes an engagement | Confidence |
+| --- | --- | --- | --- |
+| **North America** | **North Carolina** has published a *sequenced* AI mandate: state model policy by **2026-12-31**, local school-unit policies by **2027-06-30**, specified educator professional development by **2028-06-30** | 🟢 First US state this file has seen put **teacher training on a statutory clock**. A district deliverable in NC has a PD component with a deadline, which is billable scope, not a nicety | 🟡 Secondary (state-policy tracker); statute not read |
+| **North America** | The FTC's **amended COPPA rule** reached its general compliance date on **2026-04-22** | 🔴 Any tutoring agent reaching under-13s in the US now sits under the amended rule, **independently of** the state AI patchwork this file tracks. It binds the product, not the district | 🟡 Secondary; Federal Register text not read |
+| **APAC** | **Singapore** leads the region on AI diffusion among working-age adults at **60.9 %** | 🟢 Changes the pitch: in Singapore the barrier is governance and procurement, not literacy — the opposite of the framing the trade press uses for APAC as a whole | 🟡 Secondary (regional ecosystem report) |
+| **LATAM** | **Chile tops ILIA 2026** regionally while only **13.5 %** of its population reports using AI | 🔴 **The sharpest single number in this pass.** Regional *index* leadership and actual *adoption* have come apart — a client citing ILIA rank as evidence of readiness is citing institutional capacity, not usage | 🟡 Secondary (regional press on ILIA 2026) |
+
+🔵 **The honest headline for this pass is not regulatory.** Eleven passes of near-nil on the
+regional demand legs, against **43 addresses shelved from this base's own trending backlog**
+on the same day, says the research channel that still pays is **internal**, not external. See
+`agents/top.md` §`p369`.
+
+🔴 **Where the regional legs returned *nothing* usable, that is written down here rather than
+left as silence:** no EMEA-wide adoption statistic and no EMEA key-player list surfaced in
+this pass's EMEA leg at all — the entire EMEA return was EU AI Act compliance commentary, and
+all of it was already held. **EMEA demand-side intelligence is a standing gap in this file's
+sourcing, not a quiet success.**
+
 ## Market size
 
 | Scope | Figure | Source quality |
@@ -708,6 +738,18 @@ about **32% at least weekly**.
 🔵 **Canada is strategy-only.** The 2026 *"AI for All"* strategy commits to a national AI
 literacy push with **no legislation date set** — an opening for literacy programme work
 without a compliance burden attached.
+
+**🆕 `p369` — two clocks a North America proposal can be priced against.** North Carolina's
+sequencing (state model policy **2026-12-31** → local policies **2027-06-30** → educator PD
+**2028-06-30**) makes *professional development* a dated deliverable, not a goodwill item;
+and the amended **COPPA** rule's general compliance date of **2026-04-22** binds any
+under-13 tutoring product regardless of which state it ships into. 🟢 **The supply answer
+shelved this pass is domestic:** `Submitty` (BSD-3-Clause, RPI), `PrairieLearn` (AGPL-3.0,
+UIUC), `CAHLR/pyBKT` (MIT, UC Berkeley) and `Ed-Fi-Alliance-OSS/edfi-oneroster`
+(Apache-2.0) — a US district stack whose rostering, mastery and assessment layers are all
+US-origin and all readable. 🔴 **The gap is the connector:** both Canvas MCP servers this
+base knows of lack a filed grant (`agents/top.md` §`p369`), and Canvas is the LMS most of
+these districts run.
 
 ### EMEA
 
@@ -1027,6 +1069,17 @@ Zürich, four peer-reviewed venues, two CC grants declared only in README prose 
 with no grant at all. 🟢 **A licence request to a named lab is the cheapest unblock
 available in this region.**
 
+**🆕 `p369` — the supply gap on this shelf closed before the demand gap did.** The EMEA leg
+returned no adoption statistic and no player list this pass (recorded as a sourcing gap, not
+as coverage). 🟢 **The supply side moved sharply:** `ls1intum/Artemis` (**MIT**, 820 ★, TUM)
+and `OpenOLAT/OpenOLAT` (**Apache-2.0**, 448 ★) are the first *full* permissive learning
+platforms this base has shelved, `openfun/ralph` (**MIT**) is the first permissive LRS, and
+`Selleo/mentingo` (**MIT**, Poland) is an AI-native LMS positioned directly against Moodle
+and Open edX. 🔵 **Why this matters for the AI Act specifically:** a client who must keep a
+conformity-relevant modification private cannot do that on an AGPL platform. Until this pass
+every LMS on these shelves was GPL, AGPL or LGPL — the EMEA engagement that needs a closed
+modification now has two bases that permit one.
+
 ### APAC
 
 **`p364` leg result: NIL on the sector, and the gap is now in its eleventh pass.** 🔴 **The
@@ -1246,6 +1299,15 @@ not.
 2025 Findings) — permissive, and the only move-level tutoring verifier on this base.
 🔴 [`THU-MAIC/Awesome-AI-Era-Edu`](https://github.com/THU-MAIC/Awesome-AI-Era-Edu)
 carries **no grant**.
+
+**🆕 `p369` — the region's barrier is not literacy.** Singapore's **60.9 %** AI diffusion
+among working-age adults is the highest in the region and inverts the standard "APAC needs
+enablement" pitch: there the sale is governance, assurance and procurement. 🟢 **Supply
+placed in-region this pass:** `Zenglian990/AI_Tutor_Release` (EduAgent — MIT, a RAG tutor
+built specifically for grades 1–9), `frappe/education` (GPL-3.0, India, school ERP on
+ERPNext) and `thm-mni-ii/feedbacksystem`'s counterpart role in EMEA. 🔴 **And the region's
+largest unshelved asset is still copyleft:** `HugeCatLab/ChatTutor` at **1 313 ★** is
+AGPL-3.0, so it is a reference architecture for a Globant build, not a base for one.
 
 ### LATAM
 
@@ -1468,6 +1530,19 @@ withholds solutions — and DIO's **5 993 ★** agents course both carry **no gr
 the grant is what is missing.** Licensing advisory is a real line item in LATAM
 engagements, not a footnote.
 
+**🆕 `p369` — index leadership is not adoption, and the Brazilian stack is now shelved.**
+Chile tops **ILIA 2026** in the region while only **13.5 %** of its population reports using
+AI: a client citing ILIA rank is citing institutional capacity, and the engagement that
+follows is a *diffusion* engagement, not a readiness one. 🟢 **Three LATAM-origin rows were
+promoted off the trending backlog this pass:** `portabilis/i-educar` (**LGPL**, 720 ★ — the
+largest free school-management system in Brazil, *software público*, the realistic base for
+a municipal deliverable), `bncc-dev/bncc-pacotes` (**CC** — the BNCC national curriculum as
+an npm/PyPI package *and* an MCP server, which makes curriculum alignment a one-line
+dependency rather than a scraping project) and `douglasrizzo/catsim` (**BSD-3-Clause** —
+computerised adaptive testing with IRT). 🔵 Together they are the first time this file can
+name a Brazilian engagement stack whose administration, curriculum and psychometrics layers
+are each a real, licence-read repository. Pattern 28 wires them.
+
 ### Global
 
 **`p364` adds one funding instrument and one engagement question.** 🟢 **The instrument:
@@ -1568,6 +1643,15 @@ four localisations of a project — and the two rows this base verified this pas
 already embody it (`canvas-lms-student-mcp`'s read-only capability ceiling,
 `gradescope-mcp`'s `confirm_write` protocol) are both **MIT**. 🟢 The compliance story and
 the licence story point the same way for once.
+
+**🆕 `p369` — the cheapest opportunity this pass found is not a market, it is a backlog.**
+**2 311** repository addresses sit in this base's own trending files and on no shelf; the
+**66** most-cited were licence-read from payload in a single pass and **43** were shelf-worthy.
+🟢 The same asymmetry will hold inside a client: the organisation that has been *collecting*
+candidate open-source components for two years has almost certainly never graded them, and a
+grant-and-fitness sweep over an existing watchlist is a **days-long, fixed-scope deliverable**
+that returns a decision, not a survey. 🔵 It is Pattern 24's audit pointed at the client's
+own radar rather than at their dependency tree.
 
 ## 🆕 Regional supply placement — `p359`, from the commit channel
 

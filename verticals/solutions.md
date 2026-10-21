@@ -350,6 +350,61 @@ recommended for Moodle plugins — **as a plugin inside the client's existing GP
 never vendored into a studio deliverable. The AI layer Globant builds stays on the
 permissive side of the boundary and talks to the ERP over its API.
 
+## 🟢 🆕 `p369`: sixteen platforms this base had trending-listed and never shelved — every licence read from payload
+
+🔵 **Source is not the open web; it is this base's own history.** `agents/top.md` §`p369`
+records the measurement: **2 311** addresses sit in the trending files and on no shelf. Of
+the 66 most-cited, these sixteen are *platforms* — systems a client already runs or could
+run, which is what this file is for. 🟢 **Licence = payload read** on
+`raw.githubusercontent.com` (200 for all 66; `github.com` was 403 all pass). ★ = GitHub API,
+2026-10-21.
+
+| Platform | Licence (payload) | ★ | Region | What a client uses it for |
+| --- | --- | ---: | --- | --- |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** | **12 097** | Not placed | Laravel/Filament ERP — the **permissive** administrative substrate the ERP tier has been missing. No education module; that is the build |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 **AGPL-3.0** | **2 407** | Not placed | Headless, API-first learning platform (Python + React) |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | 🟢 **MIT** | **820** | EMEA (TUM, Germany) | Interactive learning with **automated feedback**: programming, modelling and text exercises, integrated exam mode. 🟢 **The strongest permissive platform on this shelf** |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** | **804** | North America (RPI) | Homework submission, autograding and TA grading, in production at universities |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟡 **LGPL** | **720** | **LATAM (Brazil)** | Municipal school management — *software público*, the largest free education system in Brazil |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0** | **672** | APAC (India) | School ERP on the Frappe/ERPNext stack: admissions, fees, attendance, assessment |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0** | **638** | Not placed | Whole-school management: timetable, markbook, behaviour, parent portal |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 🔴 **AGPL-3.0** | **526** | North America (UIUC) | Problem-driven assessment with **generative question variants** and autograders |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **GPL-3.0** | **504** | EMEA (Germany) | Full LMS, heavily used by German public institutions and the Bundeswehr |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | **448** | 🟡 EMEA (Switzerland, inferred) | Full LMS with QTI, SCORM, curriculum management and assessment. 🟢 **Permissive, and the only full LMS on this shelf that is** |
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** | **354** | Not placed (Apereo) | University course timetabling, exam scheduling, student scheduling — a constraint-solver problem, and a natural agent target |
+| [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **MIT** | **316** | EMEA (France Université Numérique) | Django CMS for building an education **portal/catalogue** in front of Moodle or Open edX |
+| [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | **215** | EMEA (Newcastle University, UK) | Browser-based e-assessment with a computer-algebra core — maths marking that does not need a model |
+| [`learningequality/studio`](https://github.com/learningequality/studio) | 🟢 **MIT** | **212** | Not placed | **Kolibri Studio** — the authoring and curation half of the offline-first Kolibri stack this base already shelves |
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🔴 **GPL-3.0** | **98** | EMEA (ETH Zurich, Switzerland) | Central configuration and live monitoring of Safe Exam Browser clients during e-assessment |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | **96** | 🟡 EMEA (Poland, inferred) | **AI-native LMS**: AI mentor and role-play built in, SCORM + xAPI, white-label. Positions itself against Moodle, Open edX, Docebo and TalentLMS |
+
+🟢 **The two rows that change what this shelf can recommend.** `Artemis` (MIT, 820 ★) and
+`OpenOLAT` (Apache-2.0, 448 ★) are the first *full* learning platforms this shelf can offer
+under a permissive grant — every LMS it previously listed in the core tier is GPL, AGPL or
+LGPL. 🔵 For an engagement that must ship a modified platform without releasing source,
+that distinction is the whole decision, and it has been sitting in `repos/trending.md`
+unread.
+
+🟡 **`Selleo/mentingo` is the row to reach for when the client wants "Moodle, but
+AI-native".** MIT, actively maintained, and the AI mentor is a first-class feature rather
+than a plugin — but at 96 ★ and 105 open issues it is early. 🔵 Honest framing for a
+proposal: a credible **starting codebase**, not a product you inherit support for.
+
+🔴 **Three copyleft rows that will be met anyway, so they are shelved with the flag
+attached.** `PrairieLearn` and `learnhouse` are **AGPL-3.0** — network use triggers source
+obligations, so a hosted Globant deliverable built on either must release its modifications.
+`ILIAS`, `Gibbon`, `frappe/education` and `seb-server` are **GPL-3.0**: fine to deploy and
+integrate with, a build-and-close decision if forked. 🟡 `i-educar` is **LGPL**, which is the
+mildest of the four and the reason it is the realistic base for a Brazilian municipal
+engagement — see Pattern 28.
+
+🔵 **Attribution honesty.** Cells marked 🟡 are inferred from the owner organisation, not read
+from a commit channel. `Artemis` (`ls1intum` = Technical University of Munich), `Numbas`
+(topic `newcastle-university`), `PrairieLearn` (UIUC), `Submitty` (RPI), `seb-server`
+(ETH Zurich) and the two `openfun` rows (France Université Numérique) are documented in the
+repository itself. **Not placed** means exactly that — no signal was read, and it is not a
+claim that the project is American.
+
 ## Core platforms
 
 | Platform | Repo | Licence | Licence reach for AI built on top | Where it fits |

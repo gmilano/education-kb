@@ -311,6 +311,65 @@ correctly-licensed repository as grantless. That has happened on this base befor
 spells its grant **`LICENCE`**, and `LICENSE` 404s (see `agents/top.md`).
 ---
 
+## 🟢 🆕 `p369`: the infrastructure half of the promotion backlog — fifteen components, every licence read from payload
+
+🔵 **Same instrument as `agents/top.md` §`p369`.** Of the 66 most-cited addresses this base
+had never shelved, these fifteen are **components**, not products: the measurement,
+interoperability and records layers a tutoring or grading deliverable sits on. 🟢 Licence =
+payload read on `raw.githubusercontent.com`; ★ = GitHub API, 2026-10-21.
+
+| Component | Licence (payload) | ★ | Region | Layer it serves |
+| --- | --- | ---: | --- | --- |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 🔴 **GPL-3.0** | **585** | 🟡 EMEA (UK, inferred) | Learning Record Store — the original xAPI LRS, since 2014 |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🔴 **unresolved** | **471** | North America (Open edX) | Component framework for custom learning objects inside Open edX |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 **MIT** | **288** | North America (UC Berkeley) | **Bayesian Knowledge Tracing** — mastery estimation, C++ core with a Python API |
+| [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** | **153** | 🟡 LATAM (Brazilian author, inferred) | **Computerised adaptive testing** simulator: IRT item selection, ability estimation, stopping rules |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🟡 **Apache-2.0 (README only)** | **99** | North America (ADL) | Emits xAPI statements from legacy SCORM content. 🔴 **ARCHIVED** — read it, do not depend on it |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | 🟡 **LGPL** | **64** | EMEA (OAT, Luxembourg) | TAO assessment platform core — QTI item banking and delivery |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** | **51** | EMEA (France Université Numérique) | **LRS and learning-analytics pipeline** (FastAPI, pydantic, xAPI). 🟢 The only permissively-licensed LRS on this shelf |
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 🟡 **Creative Commons (README only)** | **45** | EMEA (ETH Zurich) | Benchmark for **open-ended pedagogical capability** of LLM tutors, EMNLP 2025 oral |
+| [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) | 🟡 **LGPL** | **37** | EMEA (OAT, Luxembourg) | LTI 1.3 / LTI Advantage, as platform **and** as tool, in PHP |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟡 **Creative Commons** | **9** | **LATAM (Brazil)** | The **BNCC** national curriculum as an npm/PyPI package **and an MCP server** — one line to make a tutor curriculum-aligned |
+| [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | 🟢 **Apache-2.0** | **6** | North America (Ed-Fi Alliance) | Serves a **OneRoster 1.2** API from an Ed-Fi ODS — the US district rostering bridge |
+| [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | 🟢 **MIT** | **6** | Not placed | OneRoster API client for .NET estates |
+| [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | 🟢 **MIT** | **5** | Not placed | Dependency-light, framework-neutral **QTI 3** reference implementation in TypeScript |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | 🟡 **MIT (README only)** | **3** | Not placed | Evaluation framework for the **pedagogical** effectiveness of LLM tutors in maths |
+| [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0** | **1** | North America (Intel) | Reference apps, microservices and **hardware benchmarking** for education AI workloads. Created 2026-09-30 |
+
+🟢 **The row that closes a standing gap: `openfun/ralph`.** This shelf has carried
+`LearningLocker` as the LRS answer in trending for passes without shelving it — and it is
+**GPL-3.0**. `Ralph` is **MIT**, maintained by France Université Numérique, and speaks xAPI
+over a FastAPI pipeline. 🔵 For any engagement where learning records must be collected and
+the deliverable must stay closed, Ralph is the row; Learning Locker is the one to quote when
+the client already runs it.
+
+🟢 **`CAHLR/pyBKT` + `douglasrizzo/catsim` are the measurement pair this base kept
+describing and never shelved.** Between them they cover both halves of adaptive assessment —
+*what does the learner know* (BKT) and *what should we ask next* (IRT / CAT) — under MIT and
+BSD-3-Clause respectively. 🔵 Neither is an LLM project, which is precisely why they are the
+defensible part of an adaptive-learning claim: the mastery estimate comes from a
+peer-reviewed algorithm with a citation, not from a prompt.
+
+🔴 **`openedx/XBlock` is shelved with its grant unresolved, and that is the honest cell.**
+Four branch/filename combinations were probed on `master` (`LICENSE`, `LICENSE.txt`,
+`LICENCE`, `COPYING`) and all returned 404. Open edX publishes XBlock as Apache-2.0 in its
+documentation, but **this base did not read that grant from the repository**, and §14 ("a
+badge is not a grant") applies to a doc page as much as to a shield. 🔵 `ACTION`: resolve it
+from the PyPI sdist metadata next pass — a transport this base has not yet enumerated.
+
+🟡 **Three rows carry a grant that exists only in a README** — `SCORM-to-xAPI-Wrapper`,
+`mathtutorbench`, `AITutor-EvalKit`. 🔵 That is weaker than a `LICENSE` file and stronger than
+nothing: it is evidence of intent that a client's counsel can ask the maintainer to
+formalise. All three are *reference* material — a wrapper to read, two benchmarks to run —
+so none of them needs to be redistributed, which is what makes the weak grant tolerable
+here and would not elsewhere.
+
+🔴 **`bncc-dev/bncc-pacotes` is Creative Commons, and for curriculum data that is normal
+rather than alarming.** CC is a *content* licence; the BNCC text is a government curriculum
+document, and the package is a distribution of it. 🟢 The engagement reading: the **data** can
+be used under its CC terms, the **MCP server** around it should be treated as unlicensed code
+until the repository says otherwise. See Pattern 28.
+
 ## Learning platforms (LMS / VLE)
 
 | Platform | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
