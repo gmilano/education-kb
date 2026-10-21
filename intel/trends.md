@@ -6,10 +6,12 @@ updated: 2026-10-21
 
 # Education — current trends
 
-**Pass 359 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
-across external sources. 🆕 **Trends 22–23 are `p359`'s**, and §22 **reframes §19
-without refuting it** — the licence-hygiene rate `p358` measured is real and was
-attributed to the wrong variable. Trends 19–21 are `p358`'s; 16–18 are `p357`'s.
+**Pass 360 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
+across external sources. 🆕 **Trends 24–26 are `p360`'s**: §24 **refutes**
+the regional reading of §19 and §22 by designed test, §25 gives the cheap proxy that
+replaces it — and the obvious proxy that fails — and §26 names the platform layer this
+base had never held. Trends 22–23 are `p359`'s, and §22 reframed §19 without refuting
+it; §24 is the test that refutes it. Trends 19–21 are `p358`'s; 16–18 are `p357`'s.
 Trends **7–15** are **first-hand observations from this base's own repository
 measurements** — they are not in the trade press, which is precisely why they are
 worth holding.
@@ -587,3 +589,99 @@ AI Act names education assessment by type), and §17's disclosure duty for AI ma
 source is a durable market condition, not a gap waiting to close** — and it is the
 clearest build-rather-than-adopt case on these shelves. 🆕 **Pattern 16** on
 `compose/patterns.md` is the build.
+
+## 24. 🟢 🆕 `ACTION ZZ-bf` discharged: the regional licensing reading is refuted by designed test, not merely reframed
+
+🟢 **§19 measured it, §22 reframed it, and §24 tested it.** The distinction matters.
+`p358` measured LATAM education AI at **23 %** permissive against **74 %** elsewhere and
+read it regionally. `p359` got **31 %** from eight legs drawn *without reference to
+geography* and concluded the variable is who publishes — a reframing from a sample that
+could not isolate region. 🟢 **`p360` held region as the variable deliberately**, running
+`p358`'s exact method — web search aimed at `github.com`, vernacular **function words**,
+no prose — in two languages belonging to two different regions.
+
+| Leg | Language | Region | Live | Grant read from payload | Grant rate |
+|---|---|---|---:|---:|---:|
+| `p360` | 🇫🇷 French | **EMEA** | 19 | 6 | 🔴 **31 %** |
+| `p360` | 🇮🇩 Indonesian | **APAC** | 20 | 3 | 🔴 **15 %** |
+| `p358` | 🇪🇸🇵🇹 Spanish / Portuguese | **LATAM** | 13 | 3 | 🔴 23 % |
+| `p358` | 🇬🇧 English | mixed | 19 | 14 | 🟢 **74 %** |
+
+🔴 **LATAM sits in the middle of three non-English populations, not at the bottom.** Four
+languages, three regions, three independent collections: **15 %, 23 %, 31 %** against a
+single English outlier at **74 %**. 🟢 **Nothing about Latin America was ever being
+measured**, and this base came within one registered action of publishing that it was.
+
+🟢 **What is actually being measured is project kind.** The vernacular legs return
+single-author apps built against one country's curriculum — a *rapor* generator for
+Kurikulum Merdeka, a *cahier de textes*, a Saber Pro item bank. The English legs return
+frameworks, libraries and MCP servers published by organisations. 🔵 **Language and region
+were riding along with publisher type the whole way**, which is why two passes that never
+controlled for it both found the same number.
+
+🟢 **The engagement consequence is unchanged in substance and much stronger in standing.**
+For any region, assume the nationally-specific supply is unlicensed until the payload says
+otherwise, and treat **"ask the author"** as a first-class option — the fix is one file and
+it costs an email. 🔴 What must stop is the inference that a regional development culture
+is careless. It was never in the data.
+
+## 25. 🟢 🆕 A cheap proxy for licence hygiene — and the obvious proxy fails
+
+🟢 **Both candidate proxies cost one `ls-remote` and neither needs the GitHub index**,
+which has now been **403** for five consecutive passes. Measured across the **39 live**
+addresses of §24's two legs:
+
+| Proxy | Bucket | n | With a grant | Rate |
+|---|---|---:|---:|---:|
+| 🟢 **≥ 1 git tag** | tagged | **7** | **4** | 🟢 **57 %** |
+| 🟢 **0 git tags** | untagged | **32** | **5** | 🔴 **15 %** |
+| 🔴 Branch count | 1 | 22 | 5 | 22 % |
+| 🔴 Branch count | 2–4 | 10 | 1 | 🔴 **10 %** |
+| 🔴 Branch count | 5+ | 7 | 3 | 42 % |
+
+🟢 **Tag presence separates by 3.7×.** Cutting a release and writing a licence are the same
+habit — the moment someone intends another person to *use* the thing, both appear.
+🔴 **Branch count does not separate at all**: it is non-monotonic and the middle bucket is
+the worst of the three.
+
+🔵 **Published as a pair on purpose.** Branch count is the proxy anyone would reach for
+first, and it is useless here; the tag channel is incidental and it works. That is only
+visible because both were measured rather than one being assumed — and it is the reusable
+lesson, not the ratio. 🟡 **n = 39, so this is a signal to re-test, not a law** —
+`ACTION ZZ-bi` re-measures it on the next vernacular leg and is 🔴 *refuted if the tagged
+bucket does not beat the untagged one by at least 2×*.
+
+## 26. 🔴 🆕 The national school *portal* is the unclaimed layer, and education's interchange layer is not
+
+🟢 **This base's own shelves make the asymmetry visible.** The interchange layer is
+richly supplied and largely permissive: LTI 1.3, SCORM, xAPI, Caliper, LRS
+implementations, OneRoster. The **platform** layer is a row of LMSes. 🔴 **The layer in
+between — the thing a region actually procures for every school in it — had no row on this
+base for 359 passes.**
+
+🟢 **There is exactly one substantial open implementation and `p360` shelved it.** France's
+**ENT** (*Espace Numérique de Travail*), standardised by the Ministry of Education and the
+Caisse des dépôts since **2003**, procured per *région*, with `edificeio/entcore` as its
+modular kernel: **AGPL-3.0**, 21 authors, a commit on **2026-10-20**.
+
+🔴 **Three structural facts make this a trend and not a repository note.**
+
+1. 🔴 **The scale is procurement scale, not project scale.** One French region's
+   deployment reports **2.7 M users across 5 790 institutions**. The incumbent comparison
+   is not a GitHub project; it is Pronote and a public tender.
+2. 🔴 **Coverage is incomplete and officially criticised.** The IGÉSR inspectorate (15 Jul
+   2025) puts ENT in **62 %** of French public primary schools and records that one family
+   can face **three different solutions** across école, collège and lycée, recommending
+   harmonisation. 🟢 **An inspectorate asking for harmonisation is a migration market.**
+3. 🔴 **The licence sets the architecture before anyone chooses one.** The whole tier is
+   **AGPL-3.0**, so network copyleft reaches a fork but not a separate service over its
+   HTTP API. 🟢 Every viable pattern here is a service beside the portal.
+
+🔵 **The generalisable point for other regions.** The portal layer is where statutory
+data lives — the lesson log, attendance, the competency record — and statutory data is
+what an AI feature needs and what an institution will not let leave. 🟢 **The layer is
+under-supplied in open source everywhere, and in the one place it exists it is copyleft.**
+That combination is a build-and-integrate market rather than a customise-a-platform one,
+and it is the opposite of the `Moodle` or `Open edX` engagement shape this base is
+otherwise organised around.
+

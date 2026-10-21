@@ -1,0 +1,17 @@
+gate_revision	accused_slug	accused_cell	real_defect	cause
+1	likr/canvas-lms-agent	canvas-lms-mcp/LICENSE	no	grant-at-depth split on first slash (ACTION ZZ-u shape)
+1	likr/canvas-lms-agent	master/canvas-lms-mcp/LICENSE	no	grant-at-depth split on first slash
+1	reneverland/CBIT-AiExam-plus	docs/LICENSE	no	absence assertion parsed as a claim
+1	sumry-app/SUMRY	app/LICENSE	no	absence assertion parsed as a claim
+1	dmitry-viskov/pylti1.3	master/LICENSE	no	trailing-dot stripping truncated the slug to a dead address
+2	JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant	LICENSE	no	row asserts "no grant file - README prose only"
+2	reneverland/CBIT-AiExam-plus	LICENSE	no	row asserts the README MIT badge links to a LICENSE that 404s
+2	kitschpatrol/yanki	LICENSE	no	row asserts MIT declared only in package.json
+2	foradian/fedena	LICENSE	no	row asserts no grant and no tree
+2	blackboard/BBDN-LTI-Tool-Provider-Node	LICENSE	no	row asserts no grant at any probed path
+2	sumry-app/SUMRY	LICENSE	no	row asserts there is no LICENSE file
+2	philchalmers/mirt	LICENSE	no	row asserts grant is License: GPL (>= 3) in DESCRIPTION
+3	JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant	LICENSE	no	absence phrased as "one Chinese prose sentence in README.md" - not matched by the absence filter
+3	foradian/fedena	LICENSE	no	absence phrased as "all 404" - not matched by the absence filter
+4	JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant	LICENSE	no	positive SPDX token required by rev4 sits inside the REFUTED claim (本项目采用 MIT License)
+4	foradian/fedena	LICENSE	no	positive SPDX token required by rev4 sits inside the REFUTED claim (Apache-2.0, Ruby on Rails)

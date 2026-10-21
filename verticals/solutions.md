@@ -6,7 +6,7 @@ updated: 2026-10-21
 
 # Education — vertical platforms to customise with AI
 
-**Pass 359 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
+**Pass 360 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
 sense that Odoo is extensible for ERP or OpenMRS for healthcare. All verified first-hand
 **2026-10-21** (liveness + default branch via `git ls-remote --symref`, licence read
 from payload). 🔴 `p359` ran without an authenticated GitHub index (fourth consecutive
@@ -24,6 +24,13 @@ that ends a search — behind which there are **four commits**. 🟢 **So this p
 second column to the judgement this shelf exists to support: a permissive grant with no
 software behind it is not a platform**, and `verticals/solutions.md` is precisely where
 that mistake would be made. See the proctoring note below.
+
+🟢 **`p360` adds a platform family with procurement behind it, which is this shelf's
+scarcest kind of row.** France's **ENT** — an AGPL-3.0 school portal serving millions of
+pupils per *région*, with a commit the day before this pass — is shelved below. 🔵 It also
+sharpens the `p359` caution above: the ENT rows are the opposite shape to a permissive
+grant with four commits behind it, and holding both on one shelf is what makes the
+**licence reach** column decidable.
 
 The column that decides engagement shape is **Licence reach**: whether AI added on
 top can stay in a closed client deliverable, or whether the copyleft of the host
@@ -46,6 +53,44 @@ platform reaches it.
 | **ClassroomIO** | [classroomio/classroomio](https://github.com/classroomio/classroomio) | AGPL-3.0 | 🔴 AGPL | Customer/partner training academies for SaaS companies — the corporate-learning vertical |
 | **ELMS Learning Network** | [elmsln/elmsln](https://github.com/elmsln/elmsln) | GPL-3.0 (`LICENSE.md`) | 🟡 Plugin = derivative | Distributed course-delivery ecosystem (Penn State origin) |
 | **Moodle App** | [moodlehq/moodleapp](https://github.com/moodlehq/moodleapp) | 🟢 **Apache-2.0** (`COPYING.txt`) | 🟢 **None** | The official mobile client — **permissive while core is GPL-3.0**. White-labelled branded learner apps are a clean, licence-safe deliverable |
+
+## 🆕 National school portals — the ENT tier, `p360`
+
+🟢 **This shelf's premise is Odoo-for-ERP or OpenMRS-for-healthcare: a real, deployed
+system an engagement extends rather than builds.** France's **ENT** (*Espace Numérique de
+Travail*) is that, for school administration and the parent/pupil/teacher portal, and it
+had no row here for 359 passes.
+
+| Platform | Repo | Licence | Licence reach | Where it fits |
+| --- | --- | --- | --- | --- |
+| **entcore** — ENT kernel | [edificeio/entcore](https://github.com/edificeio/entcore) | 🟡 **AGPL-3.0** (`master/LICENSE`, © Édifice) | 🔴 **Network copyleft reaches a fork.** 🟢 Does **not** reach a separate service that talks to its HTTP API | A **régional** school portal: identity, messaging, timetable, the statutory *cahier de textes*, attendance, the competency record. Both *premier* and *second degré* from one core |
+| Cahier de textes module | [OPEN-ENT-NG/cahier-de-textes](https://github.com/OPEN-ENT-NG/cahier-de-textes) | 🟡 AGPL-3.0 (`dev/LICENSE`) | 🔴 as above | The statutory lesson log — per-session lessons, homework, attachments, annual archival |
+| Présences module | [OPEN-ENT-NG/presences](https://github.com/OPEN-ENT-NG/presences) | 🟡 AGPL-3.0 (🔴 `dev/LICENCE`) | 🔴 as above | Attendance and absence workflow |
+| Compétences module | [OPEN-ENT-NG/competences](https://github.com/OPEN-ENT-NG/competences) | 🟡 AGPL-3.0 (🔴 `dev/LICENCE`) | 🔴 as above | Competency-based assessment — the *livret scolaire* data model |
+| Exercizer module | [open-ent/exercizer](https://github.com/open-ent/exercizer) | 🟡 AGPL-3.0 (🔴 `master/LICENCE`) | 🔴 as above | Interactive exercises — MCQ, cloze, ordering; auto- and/or hand-marked |
+
+🟢 **Deployment evidence, which is what this shelf exists to require.** Unlike the single-
+author rows this shelf has had to warn about, the ENT stack has procurement behind it:
+
+| Claim | Figure | Source quality |
+|---|---|---|
+| **ONE & NEO**, Hauts-de-France (Édifice) | **2.7 M users**, **5 790 institutions**, **>1 M daily connections**; contract renewed 2023 for four years | 🟡 Vendor self-reported (Édifice reference page) |
+| **OpenENT** (CGI's ENT build) | **2 M pupils and students**, **1 700+ schools** | 🟡 Vendor self-reported, undated page (c. 2020) |
+| ENT coverage, French public **primary** schools | 🔴 **62 %** | 🟢 IGÉSR inspectorate report, 15 Jul 2025, via Banque des Territoires |
+| Fragmentation | 🔴 a family with children in école, collège and lycée can face **three different ENT solutions**; the report recommends territorial harmonisation and ÉduConnect | 🟢 Same IGÉSR report |
+
+🟢 **That last pair is the engagement thesis, and it is an EMEA one.** A platform with
+millions of users per région, a statutory data model, **62 % primary coverage** and a
+government inspectorate asking for harmonisation is an integration and migration market,
+not a greenfield one. 🔴 **It is also AGPL-3.0**, so the shape is a service beside the
+portal, not a fork of it — see `compose/patterns.md`.
+
+🟡 **Two cautions this shelf is the right place for.** The `entcore` README specifies
+**JSE 7** and a clone URL on a decommissioned host while the code took a commit on
+**2026-10-20** — price discovery from the tree, not the docs. And of four `entcore`
+addresses, 🟢 `edificeio/entcore` is canonical, `opendigitaleducation/entcore` is **the
+same repository** (identical 158-ref list), `OPEN-ENT-NG/entcore` is a single-branch
+mirror one commit behind, and 🔴 `open-ent/entcore` is **five months stale**.
 
 ## Administration — SIS and ERP
 

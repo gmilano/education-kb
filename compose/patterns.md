@@ -6,7 +6,7 @@ updated: 2026-10-21
 
 # Education — composition patterns
 
-**Pass 359 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
+**Pass 360 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
 boundary that makes the composition safe, and what the engagement actually delivers.
 Every repo referenced is verified live with its grant read from payload on
 **2026-10-21** — see `agents/top.md` and `repos/foundations.md`.
@@ -591,6 +591,127 @@ point.
   student-privacy statutes in the US (California **AB 1159** restricts using student data
   to train models at all), and LGPD Art. 11 in Brazil. Settle the lawful basis and the
   training-data position **before** the architecture, not after.
+
+## 🆕 Pattern 17 — An AI layer on a French ENT, built beside the portal because AGPL reaches a fork
+
+**Client shape.** A French *région*, *département* or académie — or the integrator holding
+its contract — running an **ENT** (*Espace Numérique de Travail*) for every school in its
+territory. One regional deployment reports **2.7 M users across 5 790 institutions**. They
+want AI on top of data that already exists in the portal — the *cahier de textes*, the
+competency record, attendance — and the deliverable must stay the integrator's property.
+
+**Why this pattern did not exist one pass ago.** This base held the *interchange* layer
+(LTI, SCORM, xAPI, Caliper, OneRoster) and a row of LMSes, and had **no row for a national
+school portal**. `p360`'s French function legs shelved the ENT stack.
+
+**The licence boundary, decided before anything else.** The entire ENT tier is
+**AGPL-3.0**. 🔴 Forking `entcore` or any module carries network copyleft into whatever the
+client deploys. 🟢 `entcore` is *a modular kernel with its own HTTP API and a module
+boundary* — that boundary is the pattern.
+
+**The stack, every grant read from the payload on 2026-10-21:**
+
+1. **The portal, left alone.** [`edificeio/entcore`](https://github.com/edificeio/entcore)
+   (🟡 **AGPL-3.0**, `master/LICENSE`, default ref 🔴 `master`). 🟢 **Deploy or extend it as
+   a module, and keep your own service out of its process.** Use this address: 🔴
+   `open-ent/entcore` is five months stale, `OPEN-ENT-NG/entcore` is a single-branch mirror
+   one commit behind, and `opendigitaleducation/entcore` is the *same repository* under the
+   vendor's former name.
+2. **The statutory data you are reasoning over.**
+   [`OPEN-ENT-NG/cahier-de-textes`](https://github.com/OPEN-ENT-NG/cahier-de-textes)
+   (AGPL-3.0, `dev/LICENSE`) is the lesson log — per-session lessons, homework,
+   attachments. [`OPEN-ENT-NG/competences`](https://github.com/OPEN-ENT-NG/competences)
+   (AGPL-3.0, 🔴 `dev/LICENCE`) carries the *livret scolaire* competency model, which is
+   the mastery signal this build needs and the reason not to invent one.
+   [`OPEN-ENT-NG/presences`](https://github.com/OPEN-ENT-NG/presences) (AGPL-3.0, 🔴
+   `dev/LICENCE`) is attendance.
+3. **Read them over the API, from your own service.** The AI service is a separate process
+   that authenticates to `entcore` and reads those modules' endpoints. 🟢 **This is the
+   whole licence argument**: AGPL-3.0's network clause binds the portal's own source, which
+   is already published, and does not reach a separate program that talks to it.
+4. **Mastery estimates that survive a *conseil de classe*.**
+   [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (🟢 **MIT**) for Bayesian Knowledge
+   Tracing over the competency records — a defensible per-competency estimate rather than a
+   model's opinion, which is what a French teachers' council will actually interrogate.
+5. **Exercises, if the client wants them inside the portal.**
+   [`open-ent/exercizer`](https://github.com/open-ent/exercizer) (AGPL-3.0, 🔴
+   `master/LICENCE`) already does MCQ, cloze and ordering with auto- and hand-marking.
+   🟢 Extend it as an ENT module and the copyleft stays on the portal side where it already
+   is; 🔴 do **not** lift its code into the closed service.
+6. **Paper, because French assessment is still largely paper.**
+   [`ajjalti/EvalStudio`](https://github.com/ajjalti/EvalStudio) (🔴 **AGPL-3.0**) does
+   computer-vision marking of **scanned copies**. 🔴 Run it as its own service behind a
+   queue — not linked into the deliverable — or reimplement the step; it is the one
+   component here whose licence would otherwise reach the client's code.
+7. **Disclosure, because this is the EU.** The EU AI Act treats education uses as
+   high-risk and its obligations bite from **2 Aug 2026**. Wrap the whole thing in
+   **Pattern 3**'s conformity layer; the competency record makes this an assessment system,
+   not a chatbot.
+
+**What the engagement delivers.** A closed AI service beside an AGPL portal the client
+already owns, reading statutory data in place, with per-competency mastery estimates and an
+Act-ready disclosure and oversight record.
+
+🟡 **Price discovery from the source tree, not the documentation.** `entcore`'s README
+still specifies **JSE 7** and a clone URL on a decommissioned host, while the code took a
+commit on **2026-10-20** from 21 authors. 🔴 An estimate built by reading that README will
+be wrong in the expensive direction.
+
+🟢 **The market note that makes this a migration pattern rather than a greenfield one.**
+The IGÉSR inspectorate (15 Jul 2025) puts ENT in **62 %** of French public primary schools
+and records that one family can face **three different ENT solutions** across école,
+collège and lycée, recommending territorial harmonisation and ÉduConnect. 🔵 Harmonisation
+work is the near-term budget; the AI layer is what makes it worth doing twice.
+
+## 🆕 Pattern 18 — Curriculum-bound exam generation for a national curriculum, with the generator swapped out
+
+**Client shape.** A ministry, publisher, school group or teacher co-operative in a country
+with a prescribed national curriculum, where teachers hand-write assessments. The
+Indonesian case is measured: **4–8 hours a week** per teacher producing exams in a word
+processor.
+
+**Why the obvious build is wrong.** The tempting move is a prompt plus a PDF template.
+🔴 It fails on the thing that actually matters, which is **curriculum binding** — an item
+that does not map to a declared learning objective is unusable to the teacher who has to
+justify the paper, and a model will produce plausible items that map to nothing.
+
+**The reference implementation to start from, and the part to replace.**
+
+1. **The orchestration** — [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam)
+   (🟢 **MIT**, `main/LICENSE`, © *Naufaldi Rafif*; **435 commits, 4 authors**, live
+   deployment). One sentence in, an A4 print-ready paper out: mixed item types, answer key,
+   and a teacher-facing *pembahasan* per item, bound to **Kurikulum Merdeka** CP/TP by an
+   explicit review step. 🟢 **MIT, so fork it into the deliverable.**
+2. 🔴 **The part that must be replaced.** Its core generation calls a **hosted proprietary
+   model**. For a ministry deployment that is usually the blocker — data residency,
+   procurement, or simply cost per paper. 🟢 **The curriculum binding and the print
+   pipeline are the valuable, reusable parts**; the generator is a swap.
+3. **Swap in an item bank with a review workflow** —
+   [`gygy-open/question-bank`](https://github.com/gygy-open/question-bank) (🔴 AGPL-3.0,
+   run as its own service) or [`QingdaoU/OnlineJudge`](https://github.com/QingdaoU/OnlineJudge)
+   (🟢 MIT) where the subject is programming. 🟢 **Generate once, review, then reuse** —
+   which converts a per-paper model cost into a one-off authoring cost and is what makes
+   the economics work at ministry scale.
+4. **Keep a human gate on free text, and say so.**
+   [`nvaes/CEB`](https://github.com/nvaes/CEB) (🟢 MIT, 🇧🇪) is the posture to copy: it
+   auto-marks **only** the checkbox items and states that automatic marking of free text
+   would be unreliable. 🔵 That sentence in a ministry proposal is worth more than a
+   benchmark.
+5. **Paper in, paper out.** [`ajjalti/EvalStudio`](https://github.com/ajjalti/EvalStudio)
+   (🔴 AGPL-3.0, own service) marks the scanned copies back. 🟢 The loop closes without the
+   school needing a device per pupil, which is the constraint in most of the countries this
+   pattern is for.
+6. **Report into whatever the school runs**, over LTI or the portal's API — Pattern 14 for
+   the LMS case, Pattern 17 where the client runs a national portal.
+
+🔴 **The licensing warning this pattern exists to carry.** Of **20** live Indonesian
+addresses `p360` probed, **one** carries a usable, author-attributed permissive grant over
+actual software. The best-built one — `sira313/rapkumer`, **203 commits** — is under a
+bespoke licence whose §3 prohibits commercial use *in any form*, explicitly including paid
+installation, configuration or support. 🟢 **Read the payload before the README, and in
+this market expect to ask the author.** Three other grant files in that leg did not survive
+scrutiny: one is a marketing site, one names a **framework vendor** as copyright holder,
+and one is the non-commercial licence above.
 
 ## Boundary cheat-sheet
 

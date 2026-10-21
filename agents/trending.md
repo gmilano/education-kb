@@ -3,6 +3,220 @@ industry: education
 region: Global
 updated: 2026-10-21
 ---
+## 2026-10-21 · Pass 360 — **`ACTION ZZ-bf` discharged and the regional reading is REFUTED.** Licence hygiene is not a LATAM property: two new languages land at 31 % and 15 %, and the English comparator is the outlier
+
+🔴 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`
+**OPEN** · 🟢 `git log` over a `--filter=blob:none --depth=200` clone **OPEN** ·
+🟢 **`git ls-remote -h` / `-t` promoted to instruments this pass** (see the alias test and
+the tag correlation below) · 🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*`
+**403** · 🔴 `api.github.com/search/*` **403 — fifth consecutive pass without the index**
+· 🔴 `codeload` **403**. 🟢 **No star was measured; every `p360` row reads
+`not re-derived`.**
+
+🟢 **Two gates ran before this pass wrote.**
+
+| Gate | Result |
+|---|---|
+| Whole-corpus liveness (`ls-remote`, 14-way parallel) | 🟢 **264 of 264 addresses live, 0 dead** |
+| Grant-path currency (`branch/FILE` vs live default branch, then `raw` 200) | 🟢 **263 of 263 genuine claims agree** |
+
+🔴 **And the currency gate accused 12 distinct cells across its first two revisions — and
+ultimately 16 times across four. Every one was correct; every accusation was a defect in
+the instrument** — reported in full below, because an instrument that cries wolf four
+times is the finding.
+
+### 🟢 `ACTION ZZ-bf` discharged — and it refutes the inference it was registered to guard
+
+`p358` measured a **23 %** grant rate on sixteen LATAM addresses against **74 %** on its
+English legs, and — 🟢 **to its credit** — refused to call that a regional property,
+registering `ZZ-bf` to *"run the same function-word legs in a third language before anyone
+treats licence hygiene as a regional property."*
+
+🟢 **`p360` ran a third *and* a fourth language.** Same method as `p358`: web search aimed
+at `github.com`, vernacular **function words**, no prose. French —
+`banque de questions`, `correction automatique`, `cahier de textes`, `livret scolaire`.
+Indonesian — `bank soal`, `ujian sekolah`, `kurikulum merdeka`, `rapor digital`,
+`penilaian siswa`.
+
+| Leg | Language | Region | Probed | Live | Grant read from payload | Grant rate |
+|---|---|---|---:|---:|---:|---:|
+| `p360` function legs | 🇫🇷 French | EMEA | 20 | **19** | **6** | 🔴 **31 %** |
+| `p360` function legs | 🇮🇩 Indonesian | APAC | 20 | **20** | **3** | 🔴 **15 %** |
+| `p358` function legs | 🇪🇸🇵🇹 Spanish / Portuguese | LATAM | 16 | 13 | 3 | 🔴 23 % |
+| `p358` function legs | 🇬🇧 English | mixed | — | 19 | 14 | 🟢 74 % |
+
+🔴 **The LATAM reading is refuted.** Three independent non-English populations cluster at
+**15 %–31 %**, and LATAM sits in the *middle* of them, not at the bottom. The 74 % English
+figure is the outlier, not the baseline. 🟢 **Nothing about Latin America was ever being
+measured** — and three passes of this base's own prose came within one registered action
+of saying otherwise.
+
+🟢 **What the variable actually is, and this corroborates `p359` on an independent
+sample.** `p359` concluded the no-grant shape is organised by **who publishes**, not by
+where. `p360`'s vernacular legs return single-author, national-curriculum apps; the English
+legs that scored 74 % returned frameworks, libraries and MCP servers published by
+organisations. 🔵 **Two passes, two disjoint samples, four languages, same conclusion:
+the channel is publisher type and project kind. Language and region are confounds that
+rode along with it.**
+
+### 🟢 A cheap new proxy for publisher type — and a negative result on the obvious one
+
+Neither branch count nor tag count needs the index. Both are one `ls-remote`. Measured
+across all **39 live** addresses from this pass's two legs:
+
+| Proxy | Bucket | n | With a grant | Rate |
+|---|---|---:|---:|---:|
+| 🟢 **Git tags** | ≥ 1 tag | **7** | **4** | 🟢 **57 %** |
+| 🟢 **Git tags** | 0 tags | **32** | **5** | 🔴 **15 %** |
+| 🔴 Branch count | 1 branch | 22 | 5 | 22 % |
+| 🔴 Branch count | 2–4 branches | 10 | 1 | 🔴 **10 %** |
+| 🔴 Branch count | 5+ branches | 7 | 3 | 42 % |
+
+🟢 **Tag presence separates by 3.7×**: somebody who cuts a release tends to have added a
+licence. 🔴 **Branch count does not separate at all** — it is non-monotonic, and the
+middle bucket is the *worst*. 🔵 Published as a pair deliberately: the plausible proxy
+failed and the incidental one worked, which is only visible because both were measured
+instead of one being assumed. 🟡 **n = 39. This is a signal to test on the next
+vernacular leg, not a law** — registered as **`ACTION ZZ-bi`**: re-measure the tag
+correlation on the next function leg in a fifth language, and 🔴 *refuted if the tagged
+bucket does not beat the untagged one by at least 2×.*
+
+### 🟢 New rows this pass
+
+- 🟢 **EMEA gains a national platform family this base has never held: France's ENT.**
+  `edificeio/entcore` (AGPL-3.0) is the modular **ENT kernel** — *Espace Numérique de
+  Travail*, the French school portal standard — actively developed (last commit
+  **2026-10-20**, 21 authors, modal commit domain `edifice.io`) behind a **stale README**
+  that still names JSE 7 and a `code.web-education.net` clone URL. Full treatment on
+  `repos/foundations.md` and `verticals/solutions.md`.
+- 🟢 **APAC assessment-generation row with a real bench:** 🆕
+  [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam) ("Ujian Sekolah",
+  MIT, `main/LICENSE`, © *Naufaldi Rafif*) — one sentence (*"PPKn kelas 5, sumatif tengah
+  semester, sila ke-3, 20 soal"*) to an A4 print-ready exam with mixed item types, answer
+  key and a teacher-facing *pembahasan* per question, against **Kurikulum Merdeka** CP/TP.
+  **435 commits, 4 authors**, live deployment, React 19 + Effect-TS. 🔴 **Flagged: core
+  generation runs on a proprietary hosted model**, so the pipeline is not self-hostable
+  end to end — the orchestration is reusable, the generator is not.
+- 🟢 **EMEA assessment rows:** 🆕 [`ajjalti/EvalStudio`](https://github.com/ajjalti/EvalStudio)
+  (AGPL-3.0) — exam design plus **computer-vision grading of scanned paper copies**, the
+  tier this base reaches almost entirely through digital-first tools · 🆕
+  [`guillaume-behr/open-quiz`](https://github.com/guillaume-behr/open-quiz) (MIT, 240
+  commits, 🔵 **9 commits from `anthropic.com`** — agent-assisted, and it is the first row
+  this base has placed where the agent channel is visible in the bench) · 🆕
+  [`nvaes/CEB`](https://github.com/nvaes/CEB) (MIT, 🇧🇪 **Belgium** on the `nvaestech.be`
+  commit domain — a ccTLD is the strongest placement channel this pass used) — splits
+  official **CEB** past papers into items, and 🟢 **refuses to auto-grade free text on the
+  stated grounds that it would be unreliable**, which is a better integrity posture than
+  several better-funded rows here.
+
+### 🔴 A second species of the `p359` licensor anomaly, and this one has no upstream at all
+
+`p359` opened the class *"the grant is valid, the licensor is somebody else"* with copies
+naming an upstream's holder. 🔴 **`p360` found the other shape:** 🆕
+[`kinoarizu/ThisRaport`](https://github.com/kinoarizu/ThisRaport) is an Indonesian
+school-report app, live on `master`, carrying a clean MIT at `master/license.txt` whose
+holder line reads **`Copyright (c) 2014 - 2019, British Columbia Institute of
+Technology`** — 🔴 **that is CodeIgniter's licence file.** There is no upstream
+relationship; the author shipped a *framework dependency's* grant as the repository's own.
+
+🔴 **Why this is worse than the `p359` shape.** A stale copy at least shares code with the
+holder named in its licence. Here the named licensor wrote none of the application, so the
+author's own work is arguably **unlicensed** while every automated check — path present,
+title line clean, OSI family — returns green. 🟢 Only the **holder line** catches it, which
+is exactly the field `ACTION ZZ-be` asks to be keyed on. 🔵 Registered as
+**`ACTION ZZ-bj`**: when a holder line names a known framework vendor (BCIT/CodeIgniter,
+the FSF, the Apache Software Foundation) rather than any plausible author of the
+repository, grade the row **grant-unresolved**, not permissive.
+
+### 🔴 `ACTION ZZ-be`'s channel is worse than registered: on GPL-family rows it names the FSF
+
+🟡 `p359` registered `ZZ-be` noting the holder comparison is **blind** to Apache-2.0 rows,
+whose boilerplate carries no holder. 🔴 **`p360` found the GPL-family case, and it does not
+go blind — it goes *wrong*.** Six AGPL-3.0 rows this pass returned the holder line
+**`Free Software Foundation, Inc. <http://fsf.org/>`**, because the GPL text carries the
+FSF's own copyright on the licence document before any project notice.
+
+🔴 **A holder comparison keyed naively on that string would report every AGPL row in this
+corpus as a copy of every other one** — a false-positive generator across the single
+largest licence family on these shelves. 🟢 **The fix is to skip the licence document's own
+copyright line**, which on GPL-family texts precedes the grant body, and read the project
+notice instead (`README`, source headers, or a `COPYRIGHT` file). Folded into
+`ACTION ZZ-be` rather than registered separately; it is the same instrument.
+
+### 🔴 Two revisions of this pass's own currency gate, 12 false accusations, zero real defects
+
+🟢 **Published in full because the corpus was clean both times and the instrument was not.**
+
+| Revision | Accused | Real defects | Cause |
+|---|---:|---:|---|
+| 1 | **5** | **0** | split the grant cell on its first slash, so `master/canvas-lms-mcp/LICENSE` — a grant **at depth**, `ACTION ZZ-u`'s case — became branch `master/canvas-lms-mcp`; and trailing-dot stripping truncated `dmitry-viskov/pylti1.3` into the dead address `pylti1` |
+| 2 | **7** | **0** | matched the token `` `LICENSE` `` inside rows **asserting an absence** — *"no grant file"*, *"the README's MIT badge links to a `LICENSE` that 404s"*, *"there is no LICENSE file"* |
+
+🔴 **Revision 2 is the instructive one.** A gate that cannot tell *"the grant is at
+`main/LICENSE`"* from *"there is no `LICENSE`"* is not measuring grant currency; it is
+matching a filename. This corpus carries **14** rows that assert an absence — a shelf-wide
+census separating them from the **266** positive claims is how the real figure
+(**263 of 263**) was recovered. 🔵 Registered as **`ACTION ZZ-bk`** — and then
+**discharged inside the same pass, after two further revisions that both failed**, which is
+why its final form is worth more than its first.
+
+| Revision | Rule | Accused | Real defects |
+|---|---|---:|---:|
+| 3 | exclude rows whose prose asserts an absence | **2** | **0** 🔴 an absence can be phrased without limit — *"all 404"*, *"one Chinese prose sentence in `README.md`"* — and two new wordings slipped the filter |
+| 4 | require a **positive** SPDX token in the row | **2** | **0** 🔴 same two rows: the token sits inside the **refuted claim** (*"本项目采用 MIT License"*, *"Apache-2.0, Ruby on Rails"*) |
+| 5 | 🟢 **structural**: a grant path is `` `branch/FILE` ``, always with a slash | 🟢 **0** | **0** |
+
+🟢 **The established rule, and it needs no keyword list at all.** Neither a negative nor a
+positive keyword test can separate a grant verdict from a *refuted grant claim*, because
+both carry the same tokens. 🟢 **The separator is structural**: this base writes a real
+grant as `` `branch/FILE` ``; a bare backticked `` `LICENSE` `` is always prose — a path
+asked for, or a path probed and 404. On that rule: 🟢 **215 of 215 canonical
+`branch/FILE` cells agree with the live default branch and serve 200, with zero false
+accusations** — and the wider population of **263** non-absence cells all resolve to a
+live grant too. 🔵 **Five revisions; 16 false accusations across the four that failed,
+over 12 distinct cells and 9 distinct repositories; zero corpus defects.** The reusable
+half is that three gates keyed on **vocabulary** were wrong and the one keyed on **shape**
+was right the first time.
+
+### 🟢 An independent re-read that agreed with this base, recorded because agreement is also data
+
+🟢 `sira313/rapkumer` was re-read cold this pass by an instrument that had never seen
+`p257`/`p286`/`p287`. It returned **`UNCLASSIFIED`** — refusing to guess — and the manual
+read then confirmed, line for line, what this base already holds: a bespoke
+**`RAPKUMER LICENSE`**, §3 `LARANGAN PENGGUNAAN KOMERSIAL` prohibiting commercial use *in
+any form* (explicitly including paid installation, configuration or support with the
+software as the main product), §5 enumerating covered paths file by file, §6 carving out
+Feather Icons under MIT. 🟢 **203 commits and a sustained bench** — the best-built
+Indonesian row this pass found is the one an engagement legally cannot use.
+
+🔵 **The instrument lesson is the reusable half:** a classifier that returns
+`UNCLASSIFIED` instead of inferring from the presence of a `LICENSE` file and a
+`Copyright (c)` line is what kept this out of the 15 %. Three of this pass's four
+Indonesian "grant files" survive scrutiny as grants; **one of twenty** is a usable,
+author-attributed permissive grant over actual software.
+
+### 🔴 The eight prescribed legs, for the record
+
+| Leg | Returned | New to this base |
+|---|---|---:|
+| `top open source AI agents education 2026 github MIT` | general-agent listicles (Hermes, AutoGPT, CrewAI); `pguso/agents-from-scratch`, `500 AI Agents Projects` | **0** — both are *courseware about AI*, not AI for education; the separation `p359` drew holds |
+| `github trending education AI 2026` | `rohitg00/ai-engineering-from-scratch`, `MadsLorentzen/ai-job-search`, roadmap repos | **0** 🔴 **twentieth consecutive pass with no education ranking from this leg** |
+| `open source platform education ERP CRM MIT Apache` | OpenEduCat / Odoo vendor glossary pages, one vendor's own domain in 10 of 10 results | **0** — carried; and `p359`'s refutation of the Fedena Apache-2.0 claim stands |
+| `AI education industry trends 2026` | pilots→mainstream, AI tutors, conversational tutors, cloud share, K-12 share | **0 trends**, 🟢 **2 market figures** (below) |
+| `AI education North America 2026 …` | M&M regional sizing, Canada's **AIDA**, state-level fragmentation | 🟢 **2** → `intel/market.md` |
+| `AI education EMEA 2026 …` | 🔴 **zero education facts** — returned enterprise-AI adoption surveys and an IT-skills piece | **0** 🔴 see the gap note below |
+| `AI education APAC 2026 …` | Pearson×TCS alliance, LearnUpon Sydney HQ, OneTrust 87 %/47 % governance gap | 🟢 **3** → `intel/market.md` |
+| `AI education LATAM 2026 …` | LATAM captured **$8.2 B of $190 B** global private AI investment 2025; CENIA/ECLAC public investment **6× below** global average; UNESCO IESALC/UNU-IAS method (200 institutions, 19 countries) | 🟢 **3** → `intel/market.md` |
+
+🔴 **The EMEA prose leg returned nothing about education and is logged as an informed
+gap** — stated rather than passed over, because silence from a regional leg is
+indistinguishable from coverage. 🟢 **And the contrast is this pass's methodological
+result:** the same region's richest finding in 360 passes — the ENT platform family —
+came from a **vernacular function leg aimed at code hosting**, not from the prescribed
+regional prose leg. 🔵 The prose legs are saturated; the function legs are not.
+
+---
+
 ## 2026-10-21 · Pass 359 — **a function leg found a tier this base never had, and 1 of its 7 addresses carries a usable grant.** The no-grant shape is organised by WHO PUBLISHES, not by where
 
 🔴 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`

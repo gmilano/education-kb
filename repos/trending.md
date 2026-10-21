@@ -3,6 +3,123 @@ industry: education
 region: Global
 updated: 2026-10-21
 ---
+## Pass 360 · 2026-10-21 — **a national school-portal platform family, 360 passes in**, and the ref-list digest beats HEAD equality at telling an alias from a fork
+
+🔴 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`
+**OPEN** · 🟢 **`git ls-remote -h` and `-t` promoted to instruments** · 🟢 `git log` over a
+blobless `--depth=200` clone **OPEN** · 🔴 `github.com` **403** ·
+🔴 `api.github.com/repos/*` and `/search/*` **403 — fifth consecutive pass.**
+🟢 **No stars measured.**
+
+🟢 **Gates before writing:** whole-corpus liveness **264 / 264 live, 0 dead**;
+grant-path currency **263 / 263 genuine claims agree** (🔴 and 12 false accusations across
+two gate revisions — see `agents/trending.md`).
+
+### 🔴 The prescribed trending leg, for the twentieth time
+
+🔴 **`github trending education AI 2026` returned no education ranking** — this time
+`rohitg00/ai-engineering-from-scratch` (#1 on GitHub Trending, May 2026),
+`MadsLorentzen/ai-job-search` (#1, 7 Jul 2026) and assorted roadmap lists. 🟢 **None is
+education software**; all are courseware *about* AI, the separation this base keeps
+deliberately and `p359` restated. 🔵 Twentieth consecutive pass. The leg is logged and is
+not treated as a discovery channel.
+
+### 🟢 The tier this pass found: France's ENT, an AGPL-3.0 national school-portal kernel
+
+🟢 **This base has carried LTI, SCORM, xAPI, Caliper, LRS and OneRoster — the
+*interchange* layer — and had no row for a national school *portal*.** ENT (*Espace
+Numérique de Travail*) is the French standard: a per-région integrated portal for pupils,
+teachers and parents, launched by the Ministry of Education and the Caisse des dépôts
+in 2003 and procured regionally ever since.
+
+| Address | Default ref | Grant | Commits (≤200 window) | Last commit | Authors | Modal commit domains |
+|---|---|---|---:|---|---:|---|
+| [`edificeio/entcore`](https://github.com/edificeio/entcore) 🟢 **canonical** | `master` | 🟡 **AGPL-3.0** at `master/LICENSE` | **276** | **2026-10-20** | **21** | `edifice.io` (128) · `web-education.net` (29) |
+| [`opendigitaleducation/entcore`](https://github.com/opendigitaleducation/entcore) | `master` | 🟡 AGPL-3.0 | 276 | 2026-10-20 | 21 | identical — 🟢 **same repository, see below** |
+| [`OPEN-ENT-NG/entcore`](https://github.com/OPEN-ENT-NG/entcore) | `master` | 🟡 AGPL-3.0 | 275 | 2026-10-20 | 21 | 🟡 **single-branch mirror, 1 commit behind** |
+| [`open-ent/entcore`](https://github.com/open-ent/entcore) | `master` | 🟡 AGPL-3.0 | 216 | 🔴 **2026-06-01** | 23 | 🔴 **stale by ~5 months** |
+
+🟢 **The module tier, all AGPL-3.0, all read from payload:**
+
+| Address | Default ref | Grant path | What it is |
+|---|---|---|---|
+| [`OPEN-ENT-NG/cahier-de-textes`](https://github.com/OPEN-ENT-NG/cahier-de-textes) | `dev` | 🟡 `dev/LICENSE` | the statutory *cahier de textes* — per-session lesson log, homework, attachments, annual archival |
+| [`OPEN-ENT-NG/presences`](https://github.com/OPEN-ENT-NG/presences) | `dev` | 🟡 **`dev/LICENCE`** | attendance and absence management |
+| [`OPEN-ENT-NG/competences`](https://github.com/OPEN-ENT-NG/competences) | `dev` | 🟡 **`dev/LICENCE`** | competency-based assessment — the *livret scolaire* data model |
+| [`open-ent/exercizer`](https://github.com/open-ent/exercizer) | `master` | 🟡 **`master/LICENCE`** | interactive exercises: MCQ, cloze, ordering, auto- and/or hand-marked |
+| [`edificeio/blog`](https://github.com/edificeio/blog) | `develop` | 🟡 `develop/LICENSE` | the blog module; **205 commits, 11 authors, last 2026-10-16** |
+| [`OPEN-ENT-NG/mindmap`](https://github.com/OPEN-ENT-NG/mindmap) | `develop` | 🟡 `develop/LICENSE` | concept-mapping module |
+
+🔴 **Read the default-ref column, again.** Across this tier: `master`, `dev`, `develop` —
+**not one `main`.** 🔴 **And three of six grants are spelled `LICENCE`**, the British
+orthography. 🟢 A tool keyed on `main/LICENSE` would report this entire national platform
+family as unlicensed; `ACTION ZZ-q`'s orthography axis earns its keep on exactly this tier.
+
+🟡 **The documentation trap, named because it decides a build estimate.** `entcore`'s
+README specifies **JSE 7** and tells you to clone from `code.web-education.net`. The
+commit log says **21 authors and a commit yesterday**. 🟢 The code is alive and the
+documentation is roughly a decade stale — so an engagement must price discovery from the
+source tree, not from the README, and 🔴 any estimate built by reading the README will be
+wrong in the expensive direction.
+
+### 🟢 The instrument upgrade: a full ref-list digest tells an alias from a synchronised fork; HEAD equality does not
+
+`ACTION ZZ-r` gave this base the HEAD-equality test for alias pairs. 🔴 **On this tier it
+would have drawn the wrong map.**
+
+| Test | `edificeio` vs `opendigitaleducation` | `OPEN-ENT-NG` vs canonical |
+|---|---|---|
+| HEAD sha | 🟢 identical (`ab47f0640659`) | 🔴 differs (`52af4a66091f`) |
+| Branch count (`ls-remote -h`) | **158 vs 158** | 🔴 **1** |
+| Full ref-list md5 | 🟢 **identical** | differs |
+| Verdict | 🟢 **one repository under two names** | 🟡 **a single-branch mirror, 1 commit behind** |
+
+🟢 **Identical HEAD plus an identical 158-ref list is proof of a single underlying
+repository**, not of two forks that happen to agree today. 🔴 **And the converse matters
+more:** `OPEN-ENT-NG/entcore` differs at HEAD, which the `ZZ-r` test grades as a diverged
+fork — but it serves **one branch**, was updated **yesterday**, and shares the bench and
+author set. It is a narrow live mirror, and "diverged fork" would have been the wrong
+thing to tell a client. 🔵 Registered as **`ACTION ZZ-bl`**: extend the alias test from
+the HEAD sha to the **full ref-list digest plus ref count**, and grade three outcomes —
+*alias*, *mirror*, *diverged fork* — instead of two. 🔴 *Refuted if no further pair on
+these shelves separates under the digest that did not already separate under HEAD.*
+
+### 🟢 Vernacular rows promoted to the shelves this pass
+
+| Address | Region | Grant | Bench | Note |
+|---|---|---|---:|---|
+| [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam) | APAC | 🟢 **MIT** `main/LICENSE` | **435 commits · 4 authors · 2026-10-14** | Kurikulum Merdeka exam generation; 🔴 generator is a hosted proprietary model |
+| [`guillaume-behr/open-quiz`](https://github.com/guillaume-behr/open-quiz) | EMEA | 🟢 **MIT** `master/LICENSE` | **240 commits · 5 authors · 2026-10-07** | 🔵 9 commits from `anthropic.com` |
+| [`ajjalti/EvalStudio`](https://github.com/ajjalti/EvalStudio) | EMEA | 🟡 **AGPL-3.0** `main/LICENSE` | 31 commits · 3 authors · 2026-10-14 | CV grading of **scanned paper** copies |
+| [`nvaes/CEB`](https://github.com/nvaes/CEB) | EMEA | 🟢 **MIT** `main/LICENSE` | 5 commits · 1 author · 2026-10-18 | 🇧🇪 Belgian CEB item bank; placed on the `nvaestech.be` ccTLD |
+| [`diego-costanzo/tournesol-scolaire`](https://github.com/diego-costanzo/tournesol-scolaire) | EMEA | 🟢 **MIT** `main/LICENSE` | 🔴 8 commits · 1 author · 2026-09-25 | zero-cloud *cahier de textes*; 🟡 placement from curriculum vocabulary only (author email is anonymised) |
+
+🔴 **Twelve live addresses from this pass's two legs carry no grant at all** and are
+recorded on `agents/top.md` rather than shelved: `olibertrand/questionnapp`,
+`EDUQUEST2026-2027/EDUQUEST`, `ProfFranco/check-app`, `quizbankorg/quizbank`,
+`Bendjou-art/Correct-QCM`, `Solemntumult/EcoGes`, `NZOKOS06/gestion_school`,
+`Emmanuel26-code/cahier-texte-numerique`, `kbma/gestion-scolaire`, `mael12854/preau`,
+`twakew/e-rapor`, `nwmustofa/e-rts`. 🟢 Named individually because the fix is one file and
+it is not Globant's to make: for a specific one of these, asking costs an email.
+
+🔴 **One address was dead:** `alpinevibe/quizpulse`, returned live in the search snippet
+and refusing `ls-remote`. 🟢 **Two carry an agent session branch as their default ref** —
+`agnesmuthia/agnes_SKB2027` on `claude/skb-physics-teacher-app-dxd1m3` and
+`Dirmankhan/latihan` on `claude/admiring-galileo-1x383z`. 🔵 A new shape for the
+default-ref warning on `repos/foundations.md`: the default ref is not a stale convention
+here, it is **an agent session that was never merged**, and that is also a maturity signal
+worth reading as one.
+
+### 🔴 Not promoted, and why
+
+🔴 [`logicusacademy/logicusacademy.github.io`](https://github.com/logicusacademy/logicusacademy.github.io)
+carries MIT at `main/LICENSE` and would have counted toward the Indonesian grant rate. 🟢 Its
+`README.md` **is a `<!DOCTYPE html>` document** — a tutoring company's marketing page, not
+education software. Excluded under the same separation that keeps AI courseware off these
+shelves, and the Indonesian usable-grant count falls to **1 of 20** because of it.
+
+---
+
 ## Pass 359 · 2026-10-21 — **the learning-records tier is complete, permissive and eight years stale**, and `github trending education AI 2026` returned the same stale listicle for the nineteenth consecutive pass
 
 🔴 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`

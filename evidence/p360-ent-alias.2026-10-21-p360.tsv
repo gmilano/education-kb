@@ -1,0 +1,5 @@
+slug	head_sha12	branch_count	ref_list_md5	commits_depth200	last_commit	authors	verdict
+edificeio/entcore	ab47f0640659	158	21add9200763bc148b6cca10bc4b8ff7	276	2026-10-20	21	canonical
+opendigitaleducation/entcore	ab47f0640659	158	21add9200763bc148b6cca10bc4b8ff7	276	2026-10-20	21	alias-same-repository
+OPEN-ENT-NG/entcore	52af4a66091f	1	b757209b34535f4eb01bdb6cfa7361b1	275	2026-10-20	21	single-branch-mirror-1-behind
+open-ent/entcore	3cf788bea42b	-	-	216	2026-06-01	23	stale-5-months

@@ -6,7 +6,7 @@ updated: 2026-10-21
 
 # Education — market map and regional intelligence
 
-**Pass 359 · 2026-10-21.** Researched **2026-10-21**. Figures are attributed; where a
+**Pass 360 · 2026-10-21.** Researched **2026-10-21**. Figures are attributed; where a
 number comes from a vendor blog or a commercial research summary rather than a primary
 source, it says so. The
 regional sections below are deliberately symmetric: a North America or EMEA
@@ -53,6 +53,8 @@ the same year**, collected in one pass:
 | Research and Markets | **$10.6 B** | $42.48 B by 2030 | 41.5 % |
 | Grand View Research | **$11.4 B** | $57.2 B by 2033 | 25.9 % |
 | Technavio | — *(+$3.37 B increment)* | 2025–2030 | **45 %** |
+| 🆕 **IMARC** (`p360`) | $6.4 B *(2025)* | **$79.6 B by 2034** | — |
+| 🆕 **The Business Research Company** (`p360`) | **$10.6 B** (from $7.52 B in 2025) | — | ~**41 %** implied year-on-year |
 
 🔴 **The 2026 base figures differ by roughly 6×, and the CAGRs by 19 percentage
 points.** 🔵 Precedence states the cause plainly in its own summary: the figure depends on
@@ -68,6 +70,18 @@ growing fast, nobody agrees what it contains, and **the client's own addressable
 the only number worth modelling.** 🔵 This base carries `$9.58 B → $42.48 B` as its
 framing figure and now carries the spread beside it, so the framing figure is never
 mistaken for a measurement.
+
+🟢 **`p360` ran the same leg and the spread widened rather than converged** — IMARC at a
+**$6.4 B** 2025 base reaching **$79.6 B by 2034**, and The Business Research Company
+moving **$7.52 B (2025) → $10.6 B (2026)**. 🔴 **Eight estimates now, and the 2026 bases
+still span roughly 6×.** 🔵 Recorded because the obvious expectation — that another pass
+would narrow it — is wrong, and a spread that is stable across two independent collections
+is a property of the category, not of one bad report.
+
+🟢 **`p360` also found the first *segment* figure in this file**, which is more useful than
+another whole-market number: the **AI tutors** segment at **$1.63 B (2024) → $7.99 B by
+2030**. 🟡 Secondary/commercial source. 🔵 It matters because a tutoring engagement can be
+sized against it, where the whole-market figure cannot be sized against anything.
 
 ## The structural shift of 2026
 
@@ -102,6 +116,34 @@ it is **auditability, curriculum alignment and an evidence story**.
 ## Opportunities by region
 
 ### North America
+
+#### 🆕 `p360` — the regional figure is an order of magnitude below the global one, and that gap is the finding
+
+🟡 **MarketsandMarkets sizes North America AI-in-education at $951 M (2024) → $2 303.2 M
+by 2029, CAGR 15.9 %.** 🔴 **Read that against the spread above.** The global 2026 bases
+run **$1.94 B–$11.4 B** with CAGRs of **25.9 %–45 %**; this regional figure implies North
+America at well under a billion in 2024 growing at **15.9 %** — roughly *half* the slowest
+global CAGR, for the region every one of those reports names as the largest market.
+🔵 **Both cannot be true.** The reconciliation is the boundary question already recorded
+above: the regional figure counts standalone AI-education products, the global figures
+count embedded AI revenue too. 🟢 **The engagement use is blunt — if a client's own
+forecast quotes a regional number and a global CAGR in the same slide, it is double
+counting, and this is the pair that shows it.**
+
+🟢 **Canada's statute, named precisely.** This file carried *AI for All*; `p360` adds the
+legislative instrument: the **Artificial Intelligence and Data Act (AIDA)**, a *proposed*
+framework for responsible AI design, development and deployment. 🔴 **Proposed, not in
+force** — stated because a Canadian engagement cannot be scoped against AIDA as though it
+were binding, and the EU AI Act's 2 Aug 2026 date (EMEA, below) is a genuine deadline where
+this is not.
+
+🟡 **Two adoption figures found this pass and both are aggregator-sourced**, so they are
+recorded with that attached rather than used: student AI usage **66 % (2024) → 92 %
+(2025)**; **only 10 %** of institutions have formal AI guidelines and **71 %** of US
+teachers lack AI training. 🔵 The 10 %/71 % pair, if it survives a primary check, is the
+sharpest governance-gap number for a North American pitch — registered as
+**`ACTION ZZ-bm`**: trace both to the primary survey before either is quoted to a client.
+
 
 **Regulatory and adoption state.** Regulation is **state-level and fragmented**:
 **134 AI-in-education bills across 31 states** in the 2026 session, focused on student
@@ -224,6 +266,38 @@ America is cited at **~36 % of the global AI-in-education market, ≈ $3.68 bn i
 a commercial-aggregator figure, not a primary source.
 
 ### EMEA
+
+#### 🔴 🆕 `p360` — the prescribed EMEA leg returned zero education facts, and a vernacular code leg returned the region's biggest finding in 360 passes
+
+🔴 **The informed gap first, because silence is indistinguishable from coverage.** The
+prescribed leg `AI education EMEA 2026 adoption regulation players` returned **enterprise**
+AI material only: a Workday adoption study (2023), a CompTIA piece on AI fluency in IT
+teams, a Bandwidth/Cavell compliance-barriers report. 🔴 **No ministry, no school or
+university adoption figure, no education vendor, no education-specific regulation.** The
+EU AI Act's high-risk classification of education uses — this file's own anchor — did not
+appear in its own region's leg.
+
+🟢 **And the contrast is the methodological result of the pass.** The same region's richest
+supply finding in 360 passes came from a **French-language function-word leg aimed at code
+hosting**: France's **ENT** platform family, AGPL-3.0, now on `repos/foundations.md` and
+`verticals/solutions.md`. 🔵 The prose legs are saturated; the vernacular function legs are
+not. That is a change in where to spend a research budget, not a note about one leg.
+
+🟢 **The ENT market, placed here because it is an EMEA engagement thesis:**
+
+| Claim | Figure | Source quality |
+|---|---|---|
+| ONE & NEO, Hauts-de-France | **2.7 M users**, **5 790 institutions**, **>1 M daily connections**; renewed 2023 for 4 years | 🟡 Vendor (Édifice) |
+| OpenENT (CGI build) | **2 M pupils**, **1 700+ schools** | 🟡 Vendor, undated (c. 2020) |
+| ENT coverage, French public **primary** schools | 🔴 **62 %** | 🟢 IGÉSR report, 15 Jul 2025 |
+| Fragmentation | 🔴 one family across école / collège / lycée can face three different ENT solutions; harmonisation and ÉduConnect recommended | 🟢 Same IGÉSR report |
+
+🟢 **Why this is an opportunity rather than a market note.** A statutory platform at
+millions of users per *région*, **62 %** primary coverage, and a government inspectorate
+asking for harmonisation describes **integration and migration work**, which is what an AI
+Studios engagement sells. 🔴 **AGPL-3.0 sets its shape**: a service beside the portal over
+its HTTP API, never a fork.
+
 
 **Regulatory and adoption state.** The **EU AI Act is the binding frame, and education
 is squarely in scope**: AI used for **admissions, student evaluation and exam scoring
@@ -411,6 +485,38 @@ Swahili, Arabic, French and Portuguese, which no pass has done. Registered on
 
 ### APAC
 
+#### 🆕 `p360` — three player and governance facts, and the governance gap is the quotable one
+
+🟢 **Players, named from this pass's leg:** **Pearson × TCS** announced a multi-year AI
+learning alliance aimed at employer skills gaps — 🔵 corporate training, not the school
+sector, and worth distinguishing because the two are procured by different buyers.
+**LearnUpon** opened an APAC headquarters in **Sydney** with *Create+* AI course authoring.
+**Alteryx** relaunched its Academy with personalised AI learning paths and credentials.
+🟡 All three are vendor announcements.
+
+🔴 **The governance gap, and it is the figure to quote.** OneTrust's 2026 survey:
+**87 % of organisations encourage the use of AI agents and only 47 % have established
+governance, oversight and controls.** 🔵 Cross-industry rather than education-specific, so
+it is framing rather than evidence — but it is the same **40-point** gap this file's
+§"structural shift" describes in education, measured independently, and an education client
+will recognise itself in it.
+
+🟡 **Regulatory direction.** Singapore is consulting on AI use in financial institutions
+(transparency, accountability, risk oversight) — 🔵 not education, but it is how Singapore
+sequences: finance first, then the pattern propagates. OpenAI appointed an ANZ policy lead
+as Australia tightens AI governance and copyright rules. 🔴 **No APAC education-specific
+regulation surfaced this pass** beyond what this file already holds (Vietnam's Decision
+33/2026, Korea's AI Basic Act of 2026-01-22) — logged as an informed gap, not coverage.
+
+🟢 **Supply note from `p360`'s Indonesian function leg.** Twenty Indonesian addresses
+probed, **20 live**, and 🔴 **exactly one** carries a usable, author-attributed permissive
+grant over actual software: [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam)
+(MIT), a **Kurikulum Merdeka** exam generator with 435 commits and a live deployment.
+🔴 The best-built row in the leg — `sira313/rapkumer`, 203 commits — is under a bespoke
+**non-commercial** licence and cannot be used in paid work. 🔵 **An Indonesian engagement's
+constraint is therefore licensing, not supply.**
+
+
 **Regulatory and adoption state.** The region is **diverging rather than converging**.
 **South Korea's AI Framework Act took effect 22 January 2026** — the region's most
 comprehensive statute, combining a policy framework with adoption support (public data
@@ -533,6 +639,36 @@ and the Vietnam window is the first time a *regulatory* date, rather than supply
 reason to lead with the region.
 
 ### LATAM
+
+#### 🆕 `p360` — the investment asymmetry, quantified, and it is the number this section was missing
+
+🟢 **Three figures, and together they size the gap rather than assert it:**
+
+| Claim | Figure | Source quality |
+|---|---|---|
+| LATAM share of global private AI investment, 2025 | 🔴 **$8.2 B of $190 B** — **4.3 %** | 🟡 Secondary (regional press summary) |
+| Public AI investment, regional average vs global | 🔴 **~6× below** the global average | 🟡 CENIA / ECLAC report, via secondary |
+| Regulatory state | 🔴 **no harmonised AI law**; privacy, consumer-protection, labour, cybersecurity and IP regimes already govern deployments | 🟢 Baker McKenzie |
+
+🔵 **Why the 4.3 % figure belongs in this file rather than a trend note.** This base has
+recorded a LATAM *supply* gap, then a *tooling* gap, then — correctly, at `p358` — a
+**licensing** gap. 🟢 **`p360` adds the upstream cause and it is capital**, not
+capability: 4.3 % of global private AI investment and public investment six times below
+average is exactly what produces single-author, unlicensed, nationally-specific
+repositories. 🔴 **And `p360` also refutes the regional reading of that licensing gap** —
+French addresses score **31 %** and Indonesian **15 %** against LATAM's **23 %**, so
+licence hygiene is a property of who publishes, not of where. See `intel/trends.md` §24.
+
+🟢 **Method, added to the UNESCO figures this file already carries.** The IESALC /
+UNU-IAS working paper behind the **87 % / 74 %** pair surveyed **200 institutions across
+19 countries, August–October 2025**, over five dimensions — teaching, research,
+administration, governance and infrastructure. 🔵 Recorded because this file quotes the
+pair in client material and the sample size is what makes it defensible.
+
+🟡 **One named edtech player** from this pass's leg: **Ednova** (Chile). 🔴 The leg returned
+no other education-specific vendor, and no national AI-in-education policy for Brazil,
+Mexico or Chile — an informed gap, and the obvious target for the next LATAM leg.
+
 
 **Regulatory and adoption state.** Adoption is **high and ungoverned** — the clearest
 opportunity-shaped gap in any region. The **UNESCO IESALC study** (with UNU-IAS) across

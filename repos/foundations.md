@@ -6,7 +6,7 @@ updated: 2026-10-21
 
 # Education — foundational repos
 
-**Pass 359 · 2026-10-21.** The systems an education engagement starts *from*, rather
+**Pass 360 · 2026-10-21.** The systems an education engagement starts *from*, rather
 than the agents it adds on top. Every row verified first-hand **2026-10-21**: liveness
 and default branch via `git ls-remote --symref`, licence **read from the payload**.
 🔴 `p359` had **no authenticated GitHub index** either — fourth consecutive pass, same
@@ -19,6 +19,14 @@ swept on `ls-remote` as part of a **236-address whole-corpus pass: 236 live, 0 d
 and every `branch/FILE` grant path on it was re-checked against the live default branch:
 **240 of 240 agree.** 🔵 Which means the warning four paragraphs down is not a
 hypothetical; it is the gate that enforces it.
+
+🟢 **`p360` adds the tier that was missing beside the LMS rows: national school portals.**
+This shelf held the interchange layer in depth and every platform row on it was an LMS.
+France's **ENT** — an AGPL-3.0, vendor-maintained, regionally procured school portal with a
+commit yesterday — is now shelved below, and 🔴 **not one address in it defaults to `main`
+while three of seven grants are spelled `LICENCE`.** `p360`'s gates: **264 of 264**
+addresses live, **263 of 263** genuine grant-path claims agree. 🔴 `p360` had **no
+authenticated GitHub index** either — fifth consecutive pass — so it measured no stars.
 
 🟢 **`p359` went deep on the tier `p358`'s LTI work pointed at and did not reach: where
 the records land.** The shelf carried LTI, SCORM, xAPI and Caliper and had **no row for
@@ -56,6 +64,57 @@ correctly-licensed repository as grantless. That has happened on this base befor
 embedded in a closed client deliverable without copyleft reach. And
 `moodlehq/moodleapp` is **Apache-2.0 while Moodle core is GPL-3.0** — the mobile
 client can be forked into proprietary work where the server cannot.
+
+## 🆕 National school portals — the ENT tier, and the first platform family placed in EMEA by its own vendor's commit channel
+
+🟢 **What this shelf was missing.** It carried the *interchange* layer in depth — LTI,
+SCORM, xAPI, Caliper, LRS, OneRoster — and every platform row above is an LMS. A **school
+portal** is a different system: identity, messaging, timetable, attendance, the statutory
+lesson log and the competency record, procured by a region for every school in it. France
+has standardised on one since 2003 and it is open source.
+
+**ENT** — *Espace Numérique de Travail* — was launched by the Ministry of Education with
+the Caisse des dépôts in 2003 and is procured per *région* and per *département*.
+`entcore` is its modular kernel, and it implements both *premier degré* (primary) and
+*second degré* (secondary) from the same core.
+
+| System | Repo | Licence (read from payload) | Grant read at | Default ref | Region |
+| --- | --- | --- | --- | --- | --- |
+| **entcore** — ENT kernel | [edificeio/entcore](https://github.com/edificeio/entcore) | 🟡 **AGPL-3.0** | `master/LICENSE` | `master` | EMEA |
+| Cahier de textes | [OPEN-ENT-NG/cahier-de-textes](https://github.com/OPEN-ENT-NG/cahier-de-textes) | 🟡 **AGPL-3.0** | `dev/LICENSE` | 🔴 `dev` | EMEA |
+| Présences (attendance) | [OPEN-ENT-NG/presences](https://github.com/OPEN-ENT-NG/presences) | 🟡 **AGPL-3.0** | 🔴 `dev/LICENCE` | 🔴 `dev` | EMEA |
+| Compétences (competency record) | [OPEN-ENT-NG/competences](https://github.com/OPEN-ENT-NG/competences) | 🟡 **AGPL-3.0** | 🔴 `dev/LICENCE` | 🔴 `dev` | EMEA |
+| Exercizer (interactive exercises) | [open-ent/exercizer](https://github.com/open-ent/exercizer) | 🟡 **AGPL-3.0** | 🔴 `master/LICENCE` | `master` | EMEA |
+| Blog module | [edificeio/blog](https://github.com/edificeio/blog) | 🟡 **AGPL-3.0** | `develop/LICENSE` | 🔴 `develop` | EMEA |
+| Mindmap module | [OPEN-ENT-NG/mindmap](https://github.com/OPEN-ENT-NG/mindmap) | 🟡 **AGPL-3.0** | `develop/LICENSE` | 🔴 `develop` | EMEA |
+
+🔴 **Not one row in this tier defaults to `main`**, and **three of seven grants are spelled
+`LICENCE`.** 🟢 This is the single strongest case on this shelf for the warning three
+paragraphs up and for `ACTION ZZ-q`'s orthography axis: a tool keyed on `main/LICENSE`
+reports an entire national platform family, currently serving millions of pupils, as
+unlicensed.
+
+🟢 **It is alive, and the evidence is the commit log rather than a badge.** `entcore` at
+**2026-10-20** — the day before this pass — with **21 distinct authors** in a 200-commit
+window and modal commit domains `edifice.io` (128) and `web-education.net` (29). Édifice is
+the vendor's current brand; Open Digital Education and `web-education.net` are its former
+ones, which is why all three appear in one author set.
+
+🟡 **Three addresses, two repositories, and one is stale.** `edificeio/entcore` and
+`opendigitaleducation/entcore` serve an **identical 158-ref list** — one repository under
+two names. `OPEN-ENT-NG/entcore` is a **single-branch live mirror**, one commit behind.
+🔴 `open-ent/entcore` last moved **2026-06-01** and should not be cloned. 🟢 **Use
+`edificeio/entcore`.**
+
+🔴 **The documentation hazard, stated because it changes an estimate.** The `entcore`
+README specifies **JSE 7** and a clone URL at `code.web-education.net`. The code is current;
+the README is roughly a decade old. 🟢 Price discovery from the source tree. 🔴 An estimate
+built by reading the README will be wrong in the expensive direction.
+
+🟡 **Licence reach is the architectural constraint.** The whole tier is **AGPL-3.0**, so
+a fork carries network-copyleft into whatever a client deploys. 🟢 `entcore` is a *modular
+kernel with its own HTTP API and module boundary*, which is the boundary to build on — see
+`compose/patterns.md` for the ENT pattern. 🔴 Forking a module is the expensive mistake here.
 
 ## Interoperability — LTI, SCORM, xAPI, Caliper
 

@@ -1,0 +1,5 @@
+leg	language	region	probed	live	dead	grant_read_from_payload	grant_rate_pct	measured_at
+p360	French	EMEA	20	19	1	6	31	2026-10-21
+p360	Indonesian	APAC	20	20	0	3	15	2026-10-21
+p358	Spanish/Portuguese	LATAM	16	13	3	3	23	2026-10-21
+p358	English	mixed	-	19	-	14	74	2026-10-21

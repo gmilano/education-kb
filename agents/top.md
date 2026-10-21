@@ -6,28 +6,51 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
-**Pass 359 · 2026-10-21.** Every row below was checked first-hand on two
+**Pass 360 · 2026-10-21.** Every row below was checked first-hand on two
 channels: liveness and default branch via `git ls-remote --symref`, and the licence
 **read from the payload** at `raw.githubusercontent.com` — never from a badge, a
 README claim or GitHub's own classifier. Where the classifier or a search snippet
 disagreed with the payload, the payload wins and the disagreement is recorded.
 
 **Channel state this pass:** 🟢 `git ls-remote --symref` OPEN · 🟢 `raw.githubusercontent.com`
-OPEN · 🟢 **`git log` on a shallow clone OPEN — and `p359` used it as a placement
-instrument** · 🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*` **403** ·
-🔴 `api.github.com/search/*` **403 — fourth consecutive pass without the index**.
-🔵 `p359` runs under a credential scoped to `gmilano/globant-kb`; attaching
+OPEN · 🟢 **`git log` on a blobless `--depth=200` clone OPEN** · 🟢 **`git ls-remote -h`
+and `-t` promoted to instruments at `p360`** — the full ref-list digest separates an alias
+from a synchronised fork, and tag presence turns out to predict licence hygiene ·
+🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*` **403** · 🔴 `codeload` **403** ·
+🔴 `api.github.com/search/*` **403 — fifth consecutive pass without the index**.
+🔵 `p360` runs under a credential scoped to `gmilano/globant-kb`; attaching
 `gmilano/education-kb` to the session opened the **push** channel, and opened nothing
 else. 🔴 **Stated plainly because it is the obvious wrong inference: a write credential
 for this repository is not a read credential for anybody else's, so the API stayed shut
-and `p359` measured no stars.** Every `p359` row reads `not re-derived`.
+and `p360` measured no stars.** Every `p360` row reads `not re-derived`.
 
-🟢 **Two gates ran before this pass wrote, and both came back clean.** The whole
-published corpus of `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`,
-`compose/patterns.md`, `intel/market.md` and `intel/trends.md` — **236 distinct
-addresses** — was swept on `ls-remote`: **236 of 236 live, zero dead.** And every
-grant-path cell was re-checked against the live default branch: **240 of 240 agree.**
-🔵 `p353`'s one branch-name regression is gone and nothing has replaced it.
+🟢 **Two gates ran before this pass wrote, and the corpus came back clean on both.** The
+whole published corpus of `agents/top.md`, `repos/foundations.md`,
+`verticals/solutions.md`, `compose/patterns.md`, `intel/market.md` and `intel/trends.md`
+— **264 distinct addresses** — was swept on `ls-remote`: 🟢 **264 of 264 live, zero
+dead.** And every positive grant-path cell was re-checked against the live default branch
+and then served from `raw`: 🟢 **263 of 263 agree.**
+
+🔴 **The gate itself was the defective part, twice, and that is `p360`'s most reusable
+result.** Revision 1 accused **5** cells; revision 2 accused **7**; 🟢 **all 12 were
+correct.** Revision 1 split a grant cell on its first slash, so `master/canvas-lms-mcp/LICENSE`
+— a grant **at depth**, `ACTION ZZ-u`'s case — parsed as a branch named
+`master/canvas-lms-mcp`, and trailing-dot stripping truncated `dmitry-viskov/pylti1.3` into
+a dead address. Revision 2 matched the token `` `LICENSE` `` inside the **14** rows on
+these shelves that *assert an absence* — *"no grant file"*, *"a `LICENSE` that 404s"*,
+*"there is no LICENSE file"*. 🔴 **A gate that cannot tell a grant from the statement that
+there is none is matching a filename, not measuring currency.** Separating the 14
+absence rows from the **266** positive claims is what recovered the real figure.
+
+🟢 **`ACTION ZZ-bk` was registered and then discharged inside this pass, at revision 5.**
+Revisions 3 and 4 — exclude absence wordings, then require a positive SPDX token — each
+still accused **2** correct rows, because the licence token sits inside the *refuted
+claim* in both. 🟢 **The rule that works is structural, not lexical:** a grant path at this
+base is `` `branch/FILE` ``, always with a slash, and a bare backticked `` `LICENSE` `` is
+always prose. On that rule the gate reports 🟢 **215 of 215 canonical cells agreeing, with
+zero false accusations.** 🔵 **16 false accusations across the four revisions that failed,
+over 12 distinct cells and 9 distinct repositories, and zero corpus defects** — a gate
+keyed on *shape* was right the first time where three keyed on vocabulary were not.
 
 🔴 **The eight prescribed legs returned nothing this base did not already hold, and
 that is the pass's first finding.** Run globally and once per region, they returned:
@@ -245,6 +268,69 @@ it. Retention is the outcome a client measures. [`py-fsrs`](https://github.com/o
 (MIT) is a few hundred lines with a published algorithm behind it, and it drops into an
 existing tutor without touching its content pipeline — see `compose/patterns.md`
 Pattern 10.
+
+## 🆕 Vernacular assessment agents — the EMEA and APAC analogue of the LATAM tier above
+
+🟢 **New tier, `p360`, and it is the LATAM tier's method applied to two more languages.**
+`p358` built the section above from Spanish and Portuguese **function words** aimed at
+`github.com`. `p360` ran the same method in **French** and **Indonesian** to discharge
+`ACTION ZZ-bf`. 🔴 **The headline is on `agents/trending.md` and it is a refutation**: the
+grant rates come out at **31 %** (French) and **15 %** (Indonesian) against LATAM's 23 %,
+so licence hygiene is **not** a regional property. These are the rows that carry a grant.
+
+| Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
+| --- | --- | --- | --- | ---: | --- | --- |
+| 🆕 Ujian Sekolah | [naufaldi/teacher-exam](https://github.com/naufaldi/teacher-exam) | 🟢 **MIT** (holder *Naufaldi Rafif*) | `main/LICENSE` | not re-derived | **APAC** (Indonesia) | 🟢 **The best-benched row this pass: 435 commits, 4 authors, last 2026-10-14, live deployment.** One sentence — *"PPKn kelas 5, sumatif tengah semester, sila ke-3, 20 soal"* — becomes an **A4 print-ready exam**: mixed item types, answer key, and a teacher-facing *pembahasan* for every question, bound to **Kurikulum Merdeka** CP/TP by a "Penjaga Kurikulum" review step. React 19 + Effect-TS + Effect HttpApi. 🔴 **Core generation calls a hosted proprietary model** — the orchestration and the curriculum binding are reusable, the generator is not self-hostable |
+| 🆕 EvalStudio | [ajjalti/EvalStudio](https://github.com/ajjalti/EvalStudio) | 🟡 **AGPL-3.0** | `main/LICENSE` | not re-derived | **EMEA** (French-language) | Exam authoring plus **computer-vision marking of scanned paper copies** — the half of assessment this base otherwise reaches only through digital-first tools, and the half most of the world's classrooms actually run on. 31 commits, 3 authors. 🔴 Network copyleft |
+| 🆕 Open Quiz | [guillaume-behr/open-quiz](https://github.com/guillaume-behr/open-quiz) | 🟢 **MIT** (holders *Guillaume Behr · Théo Willem*) | `master/LICENSE` | not re-derived | **EMEA** (French-language) | Self-hostable quiz platform: teachers author, students sit, MCQ auto-marked and written answers routed to a human, with re-runnable practice banks. 240 commits, 5 authors. 🔵 **9 commits from `anthropic.com`** — the first row this base has shelved where the agent-assisted bench is visible in the commit channel |
+| 🆕 Révision CEB | [nvaes/CEB](https://github.com/nvaes/CEB) | 🟢 **MIT** (holder *Nicolas Vaes*) | `main/LICENSE` | not re-derived | **EMEA** (🇧🇪 Belgium) | Splits the **official CEB** past papers — *Certificat d'Études de Base*, the Belgian end-of-primary examination — into individual items. 🟢 **Auto-marks only the checkbox items and says so, on the stated grounds that automatic marking of free text would be unreliable** — a more honest integrity posture than several better-funded rows on this shelf. 🟡 Thin bench: 5 commits, 1 author. 🟢 Placed on the `nvaestech.be` commit domain — a **ccTLD is the strongest placement channel used this pass** |
+| 🆕 Tournesol scolaire | [diego-costanzo/tournesol-scolaire](https://github.com/diego-costanzo/tournesol-scolaire) | 🟢 **MIT** (holder *Diego Costanzo*) | `main/LICENSE` | not re-derived | **EMEA** (French / Italian curriculum) | *Cahier de textes* plus timetable and active revision, **zero-cloud and local-only by design** — the privacy posture a European school procurement asks for, from CM1 to the *Maturità*. 🔴 Thin: 8 commits, 1 author, last 2026-09-25. 🟡 **Placed from curriculum vocabulary alone** — the author's commit email is anonymised, so this is the weakest placement on the tier and is marked as such |
+
+🔴 **Twelve live addresses from the same two legs carry no grant at all.** Named rather
+than counted, because the fix is one file and it is not Globant's to make — for any one of
+these, asking costs an email: `olibertrand/questionnapp`, `EDUQUEST2026-2027/EDUQUEST`,
+`ProfFranco/check-app`, `quizbankorg/quizbank`, `Bendjou-art/Correct-QCM`,
+`Solemntumult/EcoGes`, `NZOKOS06/gestion_school`,
+`Emmanuel26-code/cahier-texte-numerique` (🔴 and its own description claims *"IA
+intégrée"* — an AI-integrated lesson log with no licence), `kbma/gestion-scolaire`,
+`mael12854/preau`, `twakew/e-rapor`, `nwmustofa/e-rts`.
+
+🟢 **Two carry an agent session branch as their default ref** — `agnesmuthia/agnes_SKB2027`
+on `claude/skb-physics-teacher-app-dxd1m3` and `Dirmankhan/latihan` on
+`claude/admiring-galileo-1x383z`. 🔵 Read as a maturity signal, that is an agent session
+nobody merged; read as a tooling hazard, it is the default-ref trap in a new shape.
+
+### 🔴 The licensor anomaly, second species: the holder is a framework vendor and there is no upstream at all
+
+🟢 **`p359` opened this class** with copies whose MIT names an upstream's holder —
+`NelsonSpencer/canvas-mcp` naming Vishal Sachdev. 🔴 **`p360` found the shape that has no
+upstream relationship whatsoever.**
+
+| Address | Grant | Holder line | Verdict |
+|---|---|---|---|
+| 🆕 [`kinoarizu/ThisRaport`](https://github.com/kinoarizu/ThisRaport) | clean **MIT**, `master/license.txt` | 🔴 `Copyright (c) 2014 - 2019, British Columbia Institute of Technology` | 🔴 **grant-unresolved** — that is **CodeIgniter's** licence file |
+
+🔴 **Every automated check returns green**: the path exists, the title line reads *The MIT
+License (MIT)*, the family is OSI-permissive. 🔴 **And the named licensor wrote none of the
+application** — a *framework dependency's* grant was shipped as the repository's own, so
+the author's own code is arguably unlicensed. 🟢 Only the **holder line** catches it, the
+field `ACTION ZZ-be` exists to key on.
+
+🔵 Registered as **`ACTION ZZ-bj`**: when a holder line names a known framework or
+foundation (BCIT/CodeIgniter, the Free Software Foundation, the Apache Software
+Foundation) rather than any plausible author of the repository, grade the row
+**grant-unresolved** rather than permissive. 🔴 *Refuted if no further row on these
+shelves changes grade under that rule.*
+
+🔴 **And the same channel has a worse failure on GPL-family rows.** `p359` recorded that
+the holder comparison goes **blind** on Apache-2.0, whose boilerplate carries no holder.
+🔴 **On AGPL-3.0 it does not go blind, it goes wrong:** six rows this pass returned
+`Free Software Foundation, Inc. <http://fsf.org/>`, because the GPL text carries the FSF's
+copyright on the *licence document* ahead of any project notice. 🔴 A comparison keyed
+naively on that string reports **every AGPL row in this corpus as a copy of every other
+one** — across the largest licence family on these shelves. 🟢 The fix is to skip the
+licence document's own copyright line and read the project notice instead; folded into
+`ACTION ZZ-be`, because it is the same instrument.
 
 ## 🆕 Item banks and rubric-bound grading
 
