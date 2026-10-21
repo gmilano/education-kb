@@ -3,6 +3,197 @@ industry: education
 region: Global
 updated: 2026-10-21
 ---
+## 2026-10-21 · Pass 359 — **a function leg found a tier this base never had, and 1 of its 7 addresses carries a usable grant.** The no-grant shape is organised by WHO PUBLISHES, not by where
+
+🔴 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`
+**OPEN** · 🟢 **`git log` over a `--filter=blob:none --depth=80` clone OPEN, and `p359`
+promoted it to a placement instrument** · 🔴 `github.com` HTML **403** ·
+🔴 `api.github.com/repos/*` **403** · 🔴 **`api.github.com/search/*` 403 — fourth
+consecutive pass without the index.** 🔵 **One channel changed and it is not the one that
+would help:** attaching `gmilano/education-kb` to this session opened the **push**
+channel. It opened nothing for reading anyone else's repository, so the API stayed shut
+and **no star was measured.** Every `p359` row reads `not re-derived`.
+
+🟢 **Two gates ran before this pass wrote.** Whole-corpus liveness: **236 of 236
+addresses live, zero dead** — [`address-liveness.2026-10-21-p359`](../evidence/address-liveness.2026-10-21-p359.tsv).
+Grant-path currency: **240 of 240 published `branch/FILE` cells agree with the live
+default branch.** 🔵 `p353`'s single branch regression is gone and nothing replaced it.
+
+🔵 **Every new row's licence, commit channel and region placement is in
+[`p359-new-addresses.2026-10-21-p359`](../evidence/p359-new-addresses.2026-10-21-p359.tsv)**
+— 16 rows, one per address, so each figure below can be re-derived without re-probing.
+
+### 🔴 The eight prescribed legs returned zero new facts, and this is the eighteenth pass to say so
+
+| Leg | Returned | New to this base |
+|---|---|---:|
+| `top open source AI agents education 2026 github MIT` | general-purpose agent listicles (OpenClaw, MetaGPT, CrewAI); no education ranking | **0** |
+| `github trending education AI 2026` | `withmarbleapp/os-taxonomy` at *1,590 topics / 3,221 edges* | **0** 🔴 and **stale** — payload reads **1 616 / 3 317**, measured at `p351` |
+| `open source platform education LMS SIS MIT Apache` | Fedena, OLAT, OpenEduCat, Open edX, dotLRN | **0** — all carried; the Fedena Apache-2.0 claim was **already refuted** at this base |
+| `AI education industry trends 2026` | pilots→infrastructure, governance, evidence gates, agentic, teacher-first, credentials | **0** — §§1,2,3,4,6 of `intel/trends.md` |
+| `AI education North America 2026 …` | 134 bills / 31 states, AB 1159, SB 1227, H.R. 8747, NYC moratorium, Canada *AI for All* | **0** — `intel/market.md` §North America |
+| `AI education EMEA 2026 …` | AI Act high-risk from 2 Aug 2026, omnibus 27 Jul 2026, UK £4 m, FI/EE/NL leaders, €2.64 B | **0** — `intel/market.md` §EMEA |
+| `AI education APAC 2026 …` | Vietnam Decision 33/2026, Korea AI Basic Act 2026-01-22, China/SG/JP spectrum | **0** — already in the policy matrix |
+| `AI education LATAM 2026 …` | UNESCO IESALC 87 % / 74 %, LAC Observatory Apr 2026, TALIS BR 56 / CL 55 / CO 53 / CR 52 | **0** — `intel/market.md` §LATAM |
+
+🟢 **One prescribed leg produced something usable, and it is not a fact — it is a
+spread.** The market-size leg returned **six** commercial estimates for the *same* year:
+**$1.94 B · $5.21 B *(2025)* · $9.58 B · $10.6 B · $11.4 B** for 2026, with CAGRs from
+**25.9 %** to **45 %**. 🔵 **A ~6× spread between research firms on a single year is
+better intelligence than any one of the six figures**, because it is the thing a client
+deck must not hide. Promoted to `intel/market.md` §Market size.
+
+### 🟢 The function legs: 40 probed, 39 live, 15 new
+
+🟢 Aimed at `github.com` with function words — `OneRoster`, `xAPI`, `LRS`, `IEP`,
+`individualized education program`, `item response theory`, `formative assessment`,
+`SCORM`, `LTI tool`, `proctoring`, `bncc`, `banco de dados educacionais`.
+
+| Leg | Addresses | Live | New to the published shelves |
+|---|---:|---:|---:|
+| `OneRoster` / `xAPI` / `LRS` + MCP | 7 | 7 | **1** |
+| `IEP` / `individualized education program` | 7 | 7 | **7** |
+| `item response theory` / `formative assessment` + autograder | 7 | 7 | **3** |
+| `proctoring` / `SCORM` / `LTI tool` | 5 | 5 | **2** |
+| Moodle / Open edX AI plugin | 5 | 4 🔴 | **2** |
+| `bncc` + Brazilian education data | 6 | 6 | **2** |
+| curriculum knowledge graph + standards | 3 | 3 | **0** |
+| **total** | **40** | **39** | **16** |
+
+🔵 **"New to the published shelves" is the honest scope, and it is not the same as "new
+to this repository."** Fifteen of the sixteen occur nowhere in this repository. The
+sixteenth, `shaheeranser/exam-proctor`, was read as **source** by `p190`'s
+affect-inference scan and deliberately left unshelved; `p359` publishes its **grant**
+(Apache-2.0) for the first time and shelves it with `p190`'s tripwire in the row.
+
+### 🔴 The headline: special education is a tier, and it is the worst-licensed one this base has measured
+
+| Repo | Licence read from payload | Region (commit channel) |
+|---|---|---|
+| [`dg13788/iep-system`](https://github.com/dg13788/iep-system) | 🟢 **MIT** (`main/LICENSE`) | **APAC** — `+0800`×38 of 38 |
+| [`The-Burnes-Center/a-iep`](https://github.com/The-Burnes-Center/a-iep) | 🔴 **CC-BY-NC-4.0** | **North America** — `-0400`×657 |
+| [`boktoday/iep-agent-hermes-agent`](https://github.com/boktoday/iep-agent-hermes-agent) | 🔴 **PolyForm Noncommercial 1.0.0** | **APAC** — `+1100`×60 of 60 |
+| [`sumry-app/SUMRY`](https://github.com/sumry-app/SUMRY) | 🔴 **no grant — 5 paths 404, README badge says MIT** | 🟡 unplaceable — `+0000`×38 / `-0600`×26 |
+| [`omerpanay/special-education-rag`](https://github.com/omerpanay/special-education-rag) | 🔴 **no grant** | **EMEA** — `+0300`×19 of 19 |
+| [`JeabtiE/jump-hackathon-demo`](https://github.com/JeabtiE/jump-hackathon-demo) | 🔴 **no grant** | **APAC** — `+0700`×108 of 108 |
+| [`Pragmatic-Works/Rapid-IEP`](https://github.com/Pragmatic-Works/Rapid-IEP) | 🔴 **no grant** | **North America** — `-0400`, 🔴 dead since 2023-06-16 |
+
+🔴 **One of seven.** And the two best-maintained addresses on the tier —
+`a-iep` at 836 commits and `boktoday` at 60 in a day — are **both noncommercial by
+construction.** 🔵 An IEP is a statutory document under IDEA and its analogues bind in
+most jurisdictions on `intel/market.md`: this is the tier where a licence error surfaces
+at contract review, not at build time.
+
+🟢 **Scoped honestly, and the scope is narrower than it looks.** These are the seven
+addresses `p359` measured, and `T-p288b`'s *"zero permissive for special education"*
+claim remains **CORRECTED** — 🔴 **but by one row, not two.**
+[`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) is MIT and ships a
+`special-education-agent`. 🔴 **`eakarsu/ai-special-education-iep-compliance`, held on
+these shelves and the closest match to an IEP compliance surface, has no grant in 21
+files — re-confirmed first-hand at `p359`.** 🟢 So the whole permissive
+special-education supply on this base is **two addresses**: `iblai/k-12-agents` and
+`p359`'s `dg13788/iep-system`. `p359` does not revive `T-p288b`, and it does not let the
+correction read as more coverage than it is.
+
+### 🔴 The real pattern: a `LICENSE` file is a distribution habit
+
+🟢 **12 of the 16 new addresses, and 1 of the 5 permissive grants, came from three
+legs: special education, psychometrics, regional curriculum data.** What they share is
+not a region.
+
+| Producer type | New addresses | Permissive |
+|---|---:|---:|
+| Teacher / parent / hackathon / civic lab | 7 | **1** |
+| University research lab *(AAAI oral, MaiNLP, CRAN)* | 3 | **0** |
+| Volunteer regional data publisher | 2 | **0** |
+| 🟢 Vendor or org shipping tooling for others to deploy | 4 | **4** |
+
+🔵 **The fourth row is the control, and it is not a coincidence that it is clean.** Its
+members are `Neutralmilkzzz/moodle-cli-hku`, `OpenProct/openproct`, `jeffyding/OpenLRW`
+and `shaheeranser/exam-proctor` — a CLI, a self-host platform, a warehouse and an LTI
+tool. 🔴 **Three of the four are also stale or near-empty**, which is the separate
+finding: shipping *for others* produces a `LICENSE` file reliably, and produces
+maintenance no more reliably than anything else does.
+
+🟢 **The control case is inside one country and one month.** `bncc-dev` publishes
+Brazilian curriculum data under **MIT code + CC BY 4.0 data** with per-record
+provenance; [`pedrosoale/tempo-docente`](https://github.com/pedrosoale/tempo-docente)
+(BNCC/SAEB/SARESP, 51 commits, `-0300`) and
+[`SayvaBR/assistente-ped`](https://github.com/SayvaBR/assistente-ped) publish the same
+kind of Brazilian data with **no grant at all.** 🔵 **Same region, same subject, opposite
+licensing — because one is a company and two are not.** 🟢 **So `p358`'s LATAM figure
+(23 % vs 74 %) was correctly measured and wrongly *named*:** LATAM's supply is weighted
+toward non-distributor producers, and the gap travels with the producer, not the region.
+Promoted to §22 of `intel/trends.md`.
+
+### 🔴 Three channel findings, each one a surface that lied
+
+1. 🔴 **A GitHub *topic page* "updated" date is not a commit date.**
+   [`jeffyding/OpenLRW`](https://github.com/jeffyding/OpenLRW) — the only OneRoster +
+   Caliper + xAPI warehouse found, and genuinely **ECL-2.0** — was surfaced by a topic
+   page reporting *"updated September 2025"*. 🟢 Commit channel: **92 commits,
+   2016-10-17 → 2018-01-16.** Eight years stale. **First time this base has caught that
+   surface.**
+2. 🔴 **An MIT badge plus "See LICENSE file" plus no LICENSE file.**
+   [`sumry-app/SUMRY`](https://github.com/sumry-app/SUMRY) badges MIT *and* instructs the
+   reader to read a file that 404s at all five probed paths. 🔵 Sharper than
+   `reneverland/CBIT-AiExam-plus`, which only badged it.
+3. 🟡 **Permissive and empty is a category this base lacked.**
+   [`OpenProct/openproct`](https://github.com/OpenProct/openproct) is stock MIT under an
+   **organisation** account — the exact shape that ends a search — and is **4 commits, 2
+   authors, all on 2025-10-26**, nothing since. Filed on the licence-flag table for want
+   of anywhere better, because the omission is how a successor recommends it.
+
+### 🔴 And one row `p359` nearly published as a clean win, which `p190` had already disqualified
+
+🔴 **[`shaheeranser/exam-proctor`](https://github.com/shaheeranser/exam-proctor) is
+Apache-2.0** — read from `main/LICENSE` this pass, never published here before — **and it
+is the only proctoring address on this base that is an LTI 1.3 tool**, so it reaches a
+GPL-3.0 Moodle across the protocol boundary. 🟢 A real addition, and the write-up that
+stopped there would have been wrong.
+
+🟢 **This base had already read its source.** `p190`'s affect-inference scan found head
+pose (yaw/pitch), iris deviation and a `face-api` **identity consistency** check:
+🔴 **GDPR Art. 9 special-category processing**, and clear of the **EU AI Act
+Art. 5(1)(f)** prohibition **only because MediaPipe's `outputFaceBlendshapes` is unset
+and defaults to `false`** — one line from a live prohibition at **EUR 35 M or 7 % of
+worldwide turnover**. 🔴 Both face models are fetched at runtime from
+`cdn.jsdelivr.net` and `storage.googleapis.com`, so the model can change without the
+repository changing.
+
+🔵 **Why `p359` shelves it anyway, and how.** Leaving a verified Apache-2.0 LTI
+proctoring tool invisible costs the next engagement the one architecture on this tier
+that respects the copyleft boundary. 🟢 **It is published as a reference architecture
+with the tripwire inside the row**, on `agents/top.md` and `verticals/solutions.md`.
+🔵 **And the lesson for a successor is about *this* repository, not that one: a slug
+absent from the eight shelves may still have been read at depth by an earlier pass, and
+`compose/code/` is where that reading lives.** `p359` found this only because it checked.
+
+🔵 **Two re-confirmations, claimed as nothing more.** `kamlendras/OpenProctor`'s
+README-says-MIT / payload-says-AGPL-3.0 conflict reproduced exactly — 🟢 **already found
+at `P725a`**, and `p359` adds only a second independent read. And
+`jmolpea/moodle-block_openaiagent` is **dead on `ls-remote` too** — a sixth channel
+agreeing with `ACTION RN`, which already stopped naming it. 🔵 Recorded because the
+cheaper write-up would have presented both as discoveries.
+
+### 🔴 What `p359` searched for and did not find
+
+- 🔴 **No OneRoster MCP server exists.** Seven addresses on the rostering leg; the only
+  MCP servers were the two `learnmcp-xapi` siblings already held. **Rostering is the one
+  interoperability standard on these shelves with no agent connector at all** — and it is
+  the one that answers *"who is in this class"*.
+- 🔴 **No SCORM result at all**, from a leg that named SCORM explicitly. Nine addresses,
+  none touching it.
+- 🔴 **No permissive IRT-calibrated LLM grader.** Three 2026 papers pair IRT with LLM
+  short-answer grading; the nearest code has no grant. The permissive IRT libraries
+  (`joakimwallmark/irtorch`, MIT, live as of 2026-10-19; `eribean/girth`, MIT but stale
+since 2022) have no grading layer.
+  🟢 **The join is unbuilt — a build opportunity, not an adoption one.**
+- 🟡 **EMEA produced supply and no new policy.** Türkiye, Germany, a `+0200` Moodle
+  plugin; every EMEA regulatory fact was already on `intel/market.md`.
+
+---
+
 ## 2026-10-21 · Pass 358 — **the LATAM gap is a LICENSING gap, measured at 23 % against 74 %.** `ACTION ZZ-bc` discharged without the index it was registered against, and a second stale copy found by its copyright holder
 
 🔴 **Channel note, unchanged and still a downgrade.** `git ls-remote` **OPEN** ·

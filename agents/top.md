@@ -6,38 +6,63 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
-**Pass 358 · 2026-10-21.** Every row below was checked first-hand on two
+**Pass 359 · 2026-10-21.** Every row below was checked first-hand on two
 channels: liveness and default branch via `git ls-remote --symref`, and the licence
 **read from the payload** at `raw.githubusercontent.com` — never from a badge, a
 README claim or GitHub's own classifier. Where the classifier or a search snippet
 disagreed with the payload, the payload wins and the disagreement is recorded.
 
-**Channel state this pass:** 🟢 `git ls-remote` OPEN · 🟢 `raw.githubusercontent.com`
-OPEN · 🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*` **403** ·
-🔴 `codeload` archive endpoint **403** · 🔴 **authenticated search index CLOSED for the
-third consecutive pass** — `p358` runs under a credential scoped to one unrelated
-repository (`gmilano/globant-kb`), so the GitHub index was never available to it.
+**Channel state this pass:** 🟢 `git ls-remote --symref` OPEN · 🟢 `raw.githubusercontent.com`
+OPEN · 🟢 **`git log` on a shallow clone OPEN — and `p359` used it as a placement
+instrument** · 🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*` **403** ·
+🔴 `api.github.com/search/*` **403 — fourth consecutive pass without the index**.
+🔵 `p359` runs under a credential scoped to `gmilano/globant-kb`; attaching
+`gmilano/education-kb` to the session opened the **push** channel, and opened nothing
+else. 🔴 **Stated plainly because it is the obvious wrong inference: a write credential
+for this repository is not a read credential for anybody else's, so the API stayed shut
+and `p359` measured no stars.** Every `p359` row reads `not re-derived`.
 
-🔵 **What that changes, stated before any row is read.** `p358`'s discovery channel was
-**web search**, and its verification channel was the same `ls-remote` + payload pair
-every pass uses. 🟢 That is a *weaker* discovery instrument and an *identical*
-verification one: this pass can prove a row is live and correctly licensed, and
-**cannot measure a single star.** Every `p358` row reads `not re-derived`.
+🟢 **Two gates ran before this pass wrote, and both came back clean.** The whole
+published corpus of `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`,
+`compose/patterns.md`, `intel/market.md` and `intel/trends.md` — **236 distinct
+addresses** — was swept on `ls-remote`: **236 of 236 live, zero dead.** And every
+grant-path cell was re-checked against the live default branch: **240 of 240 agree.**
+🔵 `p353`'s one branch-name regression is gone and nothing has replaced it.
 
-🟢 **`p358` found a way to make the weak channel do real work.** `p355` established that
-on an index, a **topic intersection** is a channel and a prose phrase is not. The
-analogue without an index is to aim web search **at `github.com` itself** with
-**function words** instead of prose — `banco de preguntas`, `correção automática`,
-`LTI 1.3 deep linking`, `rubric grading MCP`. 🟢 Prose legs returned listicles again, as
-they have since `p343`; the domain-restricted function legs returned **35 addresses, 32
-of them live**, and the tier below that this base had never shelved.
+🔴 **The eight prescribed legs returned nothing this base did not already hold, and
+that is the pass's first finding.** Run globally and once per region, they returned:
+`os-taxonomy` at *1,590 topics / 3,221 edges* (this base read **1 616 / 3 317** from the
+payload at `p351`); the BNCC benchmark at *"15,300 answers from 17 models"* (the README
+says **19 × 900**, and `p358` already published the disagreement); Vietnam's Decision
+33/2026, Korea's AI Basic Act, the **134 bills across 31 states**, `H.R. 8747`, the NYC
+moratorium, Canada's *AI for All*, the UNESCO IESALC **87 % / 74 %** pair and the TALIS
+figures — **every one already on `intel/market.md`, most of them better sourced there
+than in the leg that returned them.** 🔵 Eighteen passes have now recorded that the
+prose legs return aggregators. `p359` is the eighteenth, and it stops treating that as
+news.
 
-🔴 **And the payload channel beat the search index on a figure this base publishes.**
-A snippet in this pass's leg gives `vishalsachdev/canvas-mcp` as *"up to 102 tools"*;
-`p357` published **126** from the index. Read first-hand from the README payload today,
-it is **"up to 126"** — 🟢 `p357`'s number is correct and **the search index is the
-stale channel**, not this base. Recorded because the opposite conclusion was the
-cheaper one to reach.
+🟢 **So `p359` spent its budget on the function legs, and they paid.** Aimed at
+`github.com` with function words — `OneRoster`, `xAPI`, `LRS`, `IEP`, `individualized
+education program`, `item response theory`, `formative assessment`, `SCORM`,
+`LTI tool`, `proctoring` — they returned **40 addresses probed first-hand, 39 live, and
+16 carrying no occurrence anywhere on the eight published shelves**. 🔵 Of those 16,
+**15 are absent from this repository entirely**; the sixteenth,
+`shaheeranser/exam-proctor`, was read as *source* by `p190` and never shelved, and
+`p359` publishes its grant for the first time. 🟢 **And one of the sixteen is a tier
+this base has never had as a tier: special education.**
+
+🔴 **The headline is a licence measurement, and it is the worst this base has taken.**
+Of the 16 new addresses, **5 carry a permissive grant, 1 is copyleft, 2 are explicitly
+noncommercial, and 8 carry no grant at any probed path.** 🔴 **31 % permissive**,
+against the 43-row permissive shelf this base already publishes. The concentration is
+not regional — it is by **function**, and the function is the highest-stakes one on the
+shelf: see §*Special education* below, and `intel/trends.md` §22.
+
+🟢 **Every one of the 16 is placed in a region, and only one reads "unplaceable."**
+`p359` used the commit channel — `git log --format='%ci'` over a `--filter=blob:none
+--depth=80` clone — which needs neither the API nor a star count. 🔵 **APAC 7, EMEA 3,
+North America 3, LATAM 2, one unplaceable on a split stream.** APAC leading the supply
+is the fourth independent corroboration of §15 of `intel/trends.md`.
 
 ---
 
@@ -98,6 +123,8 @@ defensible scopes give different answers. The whole-file figure is on
 | 🆕 gradescope-mcp | [Yuanpeng-Li/gradescope-mcp](https://github.com/Yuanpeng-Li/gradescope-mcp) | MIT (`LICENSE`, holder *Yuanpeng Li*, 2026) | `main/LICENSE` | not re-derived | Not placed | **Gradescope** — 34 tools: course management, batch grading, rubric CRUD. 🟢 **Every write tool is preview-first** and refuses to mutate without `confirm_write=True`. The first grading-capable row on this base whose safety argument is a *protocol*, not a ceiling |
 | 🆕 elimu-mcp | [gabrielmahia/elimu-mcp](https://github.com/gabrielmahia/elimu-mcp) | MIT (`LICENSE`, holder *Gabriel Mahia*, 2026) | `main/LICENSE` | not re-derived | **EMEA** (Kenya) | Kenya's education system — school registry, KCSE/KCPE results, HELB loans, TVET programmes. 5 tools, on PyPI. 🔴 Read the two caveats below before quoting it to a client |
 | 🆕 Canvas-Agent | [hughsibbele/Canvas-Agent](https://github.com/hughsibbele/Canvas-Agent) | MIT (`LICENSE`, holder *Hugh Koeze*, 2026) | `main/LICENSE` | not re-derived | Not placed | Canvas. A sixth independent Canvas address — the platform is now **over-supplied** on this tier, which is itself the finding |
+| 🆕 moodle-cli-hku | [Neutralmilkzzz/moodle-cli-hku](https://github.com/Neutralmilkzzz/moodle-cli-hku) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | not re-derived | **APAC** | Moodle. **A fourth Moodle row, and the most maintained one on this tier: 344 commits, 4 authors, 2026-03 → 2026-10.** Gives an agent deadlines, grades, course files and forum search. 🟡 **Read-only for remote use** by the author's own statement — the capability ceiling is the safety argument, as with `canvas-lms-student-mcp` |
+| 🆕 moodle-ai-assistant | [microsoft/moodle-ai-assistant](https://github.com/microsoft/moodle-ai-assistant) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | not re-derived | Not placed | Moodle. An **accelerator** for deploying an AI agent on Moodle, published in the **`microsoft`** organisation; its `local_aichat` component is `0.1.0`, **self-described alpha**. 🔵 Already carried on these shelves; re-verified first-hand at `p359` |
 
 ### 🟢 The Moodle connector gap closed this pass, and the row that looks like it closed it is the one to avoid
 
@@ -153,6 +180,7 @@ would ever have surfaced it: only reading the payload does.
 | k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | not re-derived | North America | K-12 teacher skill pack |
 | agent-skills | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | not re-derived | North America | Education agent skills from Learning Commons |
 | evaluators | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | **MIT for code**, stated in `LICENSE.md` prose | `main/LICENSE.md` | not re-derived | North America | Evaluators for educational AI output. 🟡 Split grant — the file is a licensing *statement*, not a stock licence |
+| 🆕 OpenLRW | [jeffyding/OpenLRW](https://github.com/jeffyding/OpenLRW) | 🟢 **ECL-2.0** — Educational Community License v2.0 (`LICENSE`), Apache-2.0 with a narrowed §3 patent grant | `master/LICENSE` | not re-derived | **North America** | **The only address found that carries OneRoster *and* Caliper *and* xAPI in one learning-records warehouse.** 🔴 **92 commits, 2016-10 → 2018-01 — eight years stale**, and the GitHub topic page that surfaced it reports *"updated September 2025"*, which the commit channel refutes. 🔵 Shelved as a **schema reference**, not a dependency |
 
 ## 🆕 LATAM-origin agents — this base's first shelvable tier from the region
 
@@ -258,12 +286,105 @@ yield, and a successor running the same leg will see the same thing.
 | exampro | [lebmatter/exampro](https://github.com/lebmatter/exampro) | 🟡 **MIT, unfilled template** (`license.txt`) | 🔴 `main/license.txt` | **72** | Not placed | Proctored exams for the Frappe framework — pairs with `frappe/lms` |
 | edx-proctoring | [openedx/edx-proctoring](https://github.com/openedx/edx-proctoring) | **AGPL-3.0** | `master/LICENSE.txt` | **69** | North America | First-party Open edX proctoring subsystem |
 | moodle quizaccess_proctoring | [eLearning-BS23/moodle-quizaccess_proctoring](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring) | **AGPL-3.0** | `master/LICENSE.md` | **30** | APAC | Moodle quiz-access proctoring plugin (Brain Station 23) |
+| 🆕 exam-proctor | [shaheeranser/exam-proctor](https://github.com/shaheeranser/exam-proctor) | 🟢 **Apache-2.0** (`LICENSE`) — grant published here for the first time at `p359` | `main/LICENSE` | not re-derived | **APAC** — `+0800`/`+0500` | 🟢 **The only proctoring address on this base that is an LTI 1.3 tool** — launches from inside Moodle, authors quizzes, passes grades back over AGS. 🔴 25 commits, **1 author**. 🔴 **Reference architecture only:** `p190` read its source — head pose, iris deviation, `face-api` identity → **GDPR Art. 9**, and clear of the **Art. 5(1)(f)** prohibition *by one unset MediaPipe default*. See `verticals/solutions.md` |
+| 🆕 openproct | [OpenProct/openproct](https://github.com/OpenProct/openproct) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | not re-derived | **APAC** | Self-hosted, privacy-first proctoring. 🔴 **4 commits, nothing since 2025-10-26** — read the maintenance note below before planning on it |
 
 🔵 **The usable integrity story is not in this table.** Of five rows, one has no grant,
 one has no identified licensor, and two are AGPL plugins to AGPL hosts. The row a
 studio can actually ship on is [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos)
 (MIT) on the shelf above — detect what the submission *is*, rather than surveil the
 student taking it. That is a defensible recommendation and it is now evidence-backed.
+
+#### 🟡 `p359`: the integration gap closed, the maturity gap did not, and one row looks like the answer
+
+🔵 **There is no grant hole on this tier — `Gap 344` claimed one and `P131-D` refuted it
+with four MIT rows, leaving a *maturity* gap. `p359` does not revive the licence claim.**
+
+🟢 **What `p359` adds that is genuinely new is a grant and an integration shape.**
+`shaheeranser/exam-proctor` — read as *source* by `p190` and never shelved — is
+**Apache-2.0**, published here for the first time, **and an LTI 1.3 tool**, so it reaches
+a GPL host across the protocol boundary, which none of `P131-D`'s standalone MIT web apps
+can do. 🔴 **It is also one author and 25 commits**, so the maturity gap stands exactly
+where `P131-D` left it: every permissive proctoring address on this base is one person's
+project.
+
+🔴 **And its licence is not its binding constraint, which is why `p190` left it off the
+shelf.** Head pose, iris deviation and a `face-api` identity check mean **GDPR Art. 9**,
+and it clears the **Art. 5(1)(f)** prohibition only because MediaPipe's
+`outputFaceBlendshapes` is unset and defaults to `false` — **one line from a live
+prohibition at EUR 35 M or 7 % of turnover.** 🟢 `p359` shelves it as a **reference
+architecture with that tripwire in the row**, rather than leaving a verified Apache-2.0
+LTI proctoring tool invisible to the next engagement. Full note on
+`verticals/solutions.md`.
+
+🟡 **And the second new row is a trap worth naming.** `OpenProct/openproct` looks like
+the institution-backed answer the maturity gap is waiting for — stock MIT at
+`main/LICENSE`, under an organisation account, positioned in its own README as a
+self-hosted privacy-first alternative to the commercial proctoring vendors. 🔴 **And the
+commit channel says it is a shell:** **4 commits, 2 authors, every one of them on
+2025-10-26**, streams `+0530` and `+0000`. 🔴 **Nothing in the year since** — so the
+secondary post that reported its activity as *"last recorded October 2025"* was right,
+and the inference a reader draws from an org account plus a 2025 date is wrong.
+
+🔵 **Both halves have to be published together.** A successor searching this tier for a
+permissive row will find this one and stop, because MIT under an org account is exactly
+the shape that ends a search. 🟢 **The recommendation does not change:** `dolos` (MIT)
+for what the submission *is*, and `p359`'s addition to the exclusion list is not a
+licence — it is a repository with four commits wearing an organisation's name.
+
+## 🔴 🆕 Special education and IEP — a whole tier, and the worst-licensed one this base has measured
+
+🟢 **This is a tier, not a row.** Two function legs — `IEP special education agent` and
+`individualized education program open source` — returned **seven addresses, all seven
+live, all seven absent from this corpus**. 🔵 That matters because the base has been
+here before and got it wrong in the other direction: the claim this base files as
+`T-p288b` was *"zero permissive for special education"*, and these shelves already
+record it **CORRECTED** by **one row**: [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents)
+is MIT and ships a `special-education-agent` among twelve specialists. 🔴 **The other
+special-education row this base holds,
+`eakarsu/ai-special-education-iep-compliance`, carries no grant in 21 files — re-confirmed
+at `p359`** — so the corrected claim rests on a single permissive address, and `p359`'s
+seven findings add exactly one more. 🟢 **So the claim below is
+scoped to the seven addresses `p359` measured, not to the tier as a whole** — the base
+already holds permissive special-education rows and they still stand.
+
+| Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
+| --- | --- | --- | --- | ---: | --- | --- |
+| 🆕 iep-system | [dg13788/iep-system](https://github.com/dg13788/iep-system) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | not re-derived | **APAC** | **The only permissive row on this tier.** Chinese-language IEP management for special-education schools: student records, assessments, a five-step IEP wizard, e-signatures. React / PHP / MySQL. 38 commits, 4 authors, `+0800` on all 38 |
+| 🆕 a-iep | [The-Burnes-Center/a-iep](https://github.com/The-Burnes-Center/a-iep) | 🔴 **CC-BY-NC-4.0 — NonCommercial** (`LICENSE`) | `main/LICENSE` | not re-derived | **North America** | Serverless app that helps **parents** understand their child's IEP: OCR, multilingual translation, plain-language simplification. 836 commits, 7 authors, 2025-05 → 2026-10 — 🟢 **by far the most maintained row on this tier** and 🔴 the one a paid engagement cannot touch |
+| 🆕 special-education-rag (EduRAG) | [omerpanay/special-education-rag](https://github.com/omerpanay/special-education-rag) | 🔴 **no grant** — nothing at 7 probed paths | `main/` — none found | not re-derived | **EMEA** | Agentic teacher assistant with **IEP draft generation** over a RAG pipeline. 19 commits, 1 author, `+0300` on all 19 (Türkiye) |
+| 🆕 IEP Ally | [boktoday/iep-agent-hermes-agent](https://github.com/boktoday/iep-agent-hermes-agent) | 🔴 **PolyForm Noncommercial 1.0.0** (`LICENSE`) | `main/LICENSE` | not re-derived | **APAC** | Local-first IEP **planning agent for parents**, built on Hermes Agent. 60 commits in a single day, `+1100` (Australia). 🔴 Second PolyForm row on this base after `mrgutierrezmario/lecture-note-app` |
+| 🆕 SUMRY | [sumry-app/SUMRY](https://github.com/sumry-app/SUMRY) | 🔴 **no grant — and the README carries an MIT badge** (see flags) | 🔴 `main/` — none found | not re-derived | 🟡 Unplaceable | AI-assisted IEP platform: goal tracking, progress data. React / Supabase. 66 commits, 2 authors; stream splits `+0000`×38 / `-0600`×26, so the commit channel **cannot** place it |
+| 🆕 IEP GEN | [JeabtiE/jump-hackathon-demo](https://github.com/JeabtiE/jump-hackathon-demo) | 🔴 **no grant** — nothing at 7 probed paths | `main/` — none found | not re-derived | **APAC** | Generates IEP goals and a materials list against the Thai A-B (ก-ฮ) curriculum, exports to an official document. JUMP THAILAND Hackathon 2026. 108 commits, `+0700` on all 108 — 🟢 the commit channel corroborates the README's country |
+| 🆕 Rapid-IEP | [Pragmatic-Works/Rapid-IEP](https://github.com/Pragmatic-Works/Rapid-IEP) | 🔴 **no grant** — nothing at 7 probed paths | `main/` — none found | not re-derived | **North America** | Power Apps IEP paperwork workflow for a district or state agency. 🔴 **15 commits, all inside four days in June 2023 — dead for three years.** Named so no successor promotes it |
+
+### 🔴 The measurement, and why this tier is the one to quote it on
+
+🔴 **One of seven carries a grant a Globant engagement can build on.** Two are
+explicitly noncommercial — not "unclear", but *written down as noncommercial* — and
+four have no licence file at any of seven probed paths, which under default copyright
+means all rights reserved.
+
+🔵 **Why this tier and not another.** Special education is the highest-stakes,
+highest-compliance, most clearly underserved function in the whole industry: an IEP is
+a **statutory document** in the United States under IDEA, and its analogues carry force
+of law in most of the jurisdictions on `intel/market.md`. 🟢 **The demand is not in
+doubt and the supply exists** — `a-iep` has 836 commits and seven authors behind it.
+🔴 **What does not exist is a grant.** The two best-maintained addresses on the tier are
+the two that are noncommercial by construction, and a studio that finds them, reads
+"open source", and plans a deliverable around either one has a problem that surfaces at
+contract review rather than at build time.
+
+🟢 **The usable recommendation is therefore a build, not an adoption** — and it is
+specific, because `dg13788/iep-system` is MIT and covers exactly the records-and-wizard
+half. See 🆕 **Pattern 16** on `compose/patterns.md`, which wires it to the permissive
+parts this base already holds rather than to anything on this tier.
+
+🔵 **One address deliberately not shelved.** The leg also returned
+`The-Burnes-Center/a-iep`'s nearest commercial analogues and a Wikipedia article; and it
+returned `eakarsu/ai-special-education-iep-compliance`, which this base **already
+holds**. Recorded so the yield figure above is not read as a seven-row tier where a
+successor expects nine.
 
 ## Curriculum and knowledge layers (what the agents reason over)
 
@@ -439,6 +560,17 @@ that turned out to be usable.
 | 🆕 [mthatipamula/educational-assessment-ai-agent-platform](https://github.com/mthatipamula/educational-assessment-ai-agent-platform) | the most complete K-12 assessment architecture in this pass's legs — standards-aligned item authoring with RAG and self-review, rubric scoring with human review, tutoring agent with persistent memory, sandboxed code grading, evals and observability | 🔴 **no grant** — live on `main`, nothing at any probed path | **All rights reserved.** 🔵 Named because its *architecture* is worth reading as a reference even where its code cannot be used — it is the shape `compose/patterns.md` already recommends, published by someone else and unusable |
 | 🆕 [adriasantacreu/google-classroom-mcp](https://github.com/adriasantacreu/google-classroom-mcp) | a Google Classroom MCP server covering assignment creation, rosters and grading | 🔴 **no grant** — live on `master`, nothing at any probed path | **All rights reserved.** 🔴 Keeps the Google Classroom tier at exactly one usable row (`sandraschi/classroom-mcp`, MIT) despite two addresses existing |
 | 🆕 [Samkarya/online-exam-questions](https://github.com/Samkarya/online-exam-questions) | an open JSON item bank with a schema, LaTeX and Markdown support | 🟡 **stock MIT text whose copyright line appends a contradiction**: `Copyright (c) 2025-2026 Samkarya. All rights reserved.` | 🟡 **Read the grant, not the slogan.** MIT's operative text grants the permissions regardless of the reserved-rights phrase, and the contradiction is almost certainly boilerplate drift — but it is the author's own sentence against the author's own licence, and a client's counsel will ask. Cheap to get clarified before use |
+| 🆕 **`p359`** [sumry-app/SUMRY](https://github.com/sumry-app/SUMRY) | an MIT **shields.io badge** at the top of the README, and a `## License` section reading *"MIT License - See LICENSE file"* | 🔴 **there is no LICENSE file** — `LICENSE`, `LICENSE.md`, `license.txt`, `app/LICENSE` and `docs/LICENSE` all **404** | **All rights reserved.** 🔵 The sharpest instance yet of §14 of `intel/trends.md`: this row does not merely *badge* a missing grant, it **instructs the reader to go and read a file that does not exist**. Second occurrence of the shape after `reneverland/CBIT-AiExam-plus`, and on an **IEP** platform |
+| 🆕 **`p359`** [The-Burnes-Center/a-iep](https://github.com/The-Burnes-Center/a-iep) | a public-interest IEP tool from a university civic-innovation centre, 836 commits, 7 authors | 🔴 **CC-BY-NC-4.0 — NonCommercial** (`main/LICENSE`) | **Not usable in paid work.** 🔵 Provenance is not a grant: a civic-tech lab optimising for public benefit has every reason to pick NonCommercial, and that reason is exactly what excludes it from a studio engagement |
+| 🆕 **`p359`** [boktoday/iep-agent-hermes-agent](https://github.com/boktoday/iep-agent-hermes-agent) | *"a free, local-first IEP planning agent for parents"* | 🔴 **PolyForm Noncommercial 1.0.0** (`main/LICENSE`) | **Not OSI open source.** *Free* in the README means free of charge, not freely licensed. 🔴 **Second PolyForm row on this base**, which makes §18's "noncommercial source-available build" a class rather than an instance |
+| 🆕 **`p359`** [philchalmers/mirt](https://github.com/philchalmers/mirt) | the standard multidimensional IRT package in R, cited across the psychometrics literature | 🔴 **no `LICENSE` file at root; the grant is `License: GPL (>= 3)` in `DESCRIPTION`** | 🟢 **Usable, and copyleft.** 🔵 Two separate hazards in one row: the grant lives in a **language-ecosystem manifest** (the CRAN shape this base recorded at `ACTION RS`), and when found it is **GPL-3.0-or-later** — fine for analysis run beside a deliverable, wrong for anything linked into one |
+| 🆕 **`p359`** [Joe-Hall-Lee/PSN-IRT](https://github.com/Joe-Hall-Lee/PSN-IRT) | **AAAI 2026 Oral** — IRT applied to LLM benchmarking | 🔴 **no grant** — nothing at 7 probed paths, `main`, 4 commits | **All rights reserved.** 🔵 Third instance on this base of peer-reviewed provenance without a grant, after `naiayti/TeachingKG` |
+| 🆕 **`p359`** [mainlp/llm-psychometrics](https://github.com/mainlp/llm-psychometrics) | code for *"Do LLMs Give Psychometrically Plausible Responses in Educational Assessments?"*, from a named university NLP lab (MaiNLP, `+0200`) | 🔴 **no grant** — nothing at 7 probed paths, `main`, 4 commits | **All rights reserved.** 🔴 **With `PSN-IRT` and `mirt`, that is three of three psychometrics addresses `p359` probed carrying no usable permissive grant** — and psychometrics is the measurement layer every assessment claim on these shelves ultimately rests on |
+| 🆕 **`p359`** [pedrosoale/tempo-docente](https://github.com/pedrosoale/tempo-docente) | Brazilian education data — BNCC, SAEB, SARESP — *"com fonte oficial"*, 51 commits, `-0300` on all 51 | 🔴 **no grant** — nothing at 7 probed paths | **All rights reserved.** 🔵 Published as the counter-example to its own neighbourhood: `bncc-dev` ships the same kind of Brazilian curriculum data under **MIT code + CC BY 4.0 data** with per-record provenance. 🟢 **The LATAM licensing gap `p358` measured is not a regional norm — it is a long tail beside one well-governed publisher** |
+| 🆕 **`p359`** [SayvaBR/assistente-ped](https://github.com/SayvaBR/assistente-ped) | a Brazilian pedagogical assistant whose issue tracker is working on BNCC Computação provenance | 🔴 **no grant** — nothing at 7 probed paths, 6 commits on one day, `-0300` | **All rights reserved.** 🔵 Named because its **issue #24** is a public, dated record of a Brazilian team adopting `bncc-dev`'s provenance model — useful intelligence about the BNCC stack's uptake even though the repository itself is unusable |
+| 🆕 **`p359`** [HernanDiaz/moodle-local_aigrader](https://github.com/HernanDiaz/moodle-local_aigrader) | *"AI Grader Pro"* — AI-assisted Moodle assignment grading, human always in the loop, 74 commits, `+0200` | 🟢 **GPL-3.0-or-later** (`main/LICENSE`) — the grant text, not a badge; the file also enumerates bundled third-party licences under `thirdparty/vendor/` | 🟢 **Correctly licensed and correctly excluded from the permissive tiers.** A Moodle plugin under GPL-3.0-or-later is the *expected* answer — Moodle itself is GPL-3.0 — so this row is here as a **recommendation shape**, not a warning: reach it as a plugin inside the client's GPL estate, never vendored into a studio deliverable |
+| 🆕 **`p359`** [OpenProct/openproct](https://github.com/OpenProct/openproct) | stock **MIT** under an **organisation** account; a self-hosted privacy-first proctoring alternative | 🟢 **MIT is real** (`main/LICENSE`) — 🔴 **and the repository is 4 commits, 2 authors, all on 2025-10-26 — nothing in the year since** | 🟡 **Not a licence flag — a maintenance flag, filed here because it will be mistaken for one of these rows' opposite.** The grant is clean; there is no software behind it yet. 🔵 This base has no other category for *"permissive and empty"*, and the omission is how a successor ends up recommending it |
+| 🆕 **`p359`** [jeffyding/OpenLRW](https://github.com/jeffyding/OpenLRW) | the one OneRoster + Caliper + xAPI warehouse found; a GitHub **topic page** reports it *"updated September 2025"* | 🟢 **ECL-2.0** (`master/LICENSE`) — permissive, Apache-2.0 with a narrowed patent grant — 🔴 **and the commit channel reads 2016-10-17 → 2018-01-16** | 🟡 **Grant fine, currency not.** 🔴 **The finding is the channel:** a topic page's "updated" date is not a commit date, and `p359` is the first pass on this base to catch that surface lying. Use the schema; do not deploy the code |
 
 ## 🔴 🆕 A new anomaly class: the grant is valid, the *licensor* is somebody else
 
@@ -542,6 +674,89 @@ first-hand this pass, it is **a plugin for AI coding tools that maps a codebase 
 document set into an interactive graph** — a developer comprehension tool. It is not
 an education agent, and its star count has been inflating this shelf's apparent
 education supply. Recorded here as a correction rather than deleted silently.
+
+## 🟢 What changed on `p359` — a function leg found a whole tier, and the tier has no licences
+
+🔵 **`p359` had no GitHub index either** (fourth consecutive pass). Discovery ran on web
+search aimed at `github.com` with **function words**; verification ran on the usual
+`ls-remote` + payload pair; placement ran on a **third** channel this pass added, `git
+log` over a blobless shallow clone. 🟢 **Forty addresses probed first-hand, not one star
+measured, and every new row placed in a region.**
+
+| What | Count |
+|---|---:|
+| addresses probed first-hand | **40** |
+| 🟢 live on `git ls-remote --symref` | **39** |
+| 🔴 dead — published as a refutation, not a row | **1** |
+| 🟢 absent from all eight published shelves | **16** |
+| 🔵 of those, absent from this repository entirely | **15** |
+| 🔵 of those, read as source by `p190` and never shelved | **1** |
+| 🟢 new rows placed in a region by the commit channel | **15 of 16** |
+| 🔴 of the 16: **no grant at any probed path** | **8** |
+| 🔴 of the 16: explicitly **noncommercial** | **2** |
+| 🟡 of the 16: **copyleft** | **1** |
+| 🟢 of the 16: **permissive** | **5 — 31 %** |
+| 🟢 corpus liveness gate: addresses swept / live | **236 / 236** |
+| 🟢 grant-path gate: cells checked / agreeing with live default branch | **240 / 240** |
+
+### 🔴 The finding: the no-grant shape is organised by FUNCTION, not by region
+
+🟢 **`p358` measured the LATAM licensing gap at 23 % permissive against 74 % elsewhere
+and called it regional.** `p359` ran legs aimed at *functions* rather than places, and
+the permissive rate came back at **31 % — within a few points of the LATAM figure, from
+legs that never mentioned a region.**
+
+| Function leg | New addresses | Permissive | No grant at all |
+|---|---:|---:|---:|
+| Special education / IEP | **7** | **1** | 4 *(+2 noncommercial)* |
+| Psychometrics / IRT | **3** | **0** | 2 *(+1 GPL in a manifest)* |
+| LATAM education data | **2** | **0** | **2** |
+| Proctoring | **2** | 2 🟡 *(one 4 commits, one Art. 5 tripwire)* | 0 |
+| Moodle AI layer | **2** | 1 | 0 *(1 GPL-3.0-or-later)* |
+| Learning-records warehouse | **1** | 1 *(ECL-2.0, 8 yrs stale)* | 0 |
+
+🔵 **Read the first three rows together.** Special education, psychometrics and
+regional curriculum data are **12 of the 16 addresses and 1 of the 5 permissive
+grants.** 🟢 **What they share is not a region — it is that each is produced by somebody
+who is not shipping software for a living:** a special-education teacher, a university
+NLP lab, a researcher with an AAAI oral, a civic-innovation centre, a ministry-adjacent
+data volunteer. 🔴 **A `LICENSE` file is a distribution habit, and these producers are
+not distributors.** The three legs that *did* return permissive grants — proctoring,
+Moodle plugins, learning-records infrastructure — are the three aimed at **tooling
+built to be deployed by somebody else.**
+
+🟢 **This supersedes nothing `p358` measured and reframes what it means.** The LATAM
+number was real; it was not *regional*. LATAM's supply is weighted toward exactly these
+producer types, and `p359` has the control case inside the same region: `bncc-dev`
+publishes Brazilian curriculum data under **MIT + CC BY 4.0 with per-record
+provenance**, while `pedrosoale/tempo-docente` and `SayvaBR/assistente-ped` publish the
+same kind of Brazilian data with **no grant at all**. 🔵 Same country, same month, same
+subject matter, opposite licensing — because one is a company and two are not.
+Promoted to §22 of `intel/trends.md`.
+
+### 🔴 What `p359` searched and did not find
+
+🟢 **An informed gap, stated so silence is not mistaken for coverage.**
+
+- 🔴 **No OneRoster MCP server exists.** The `OneRoster` leg returned six learning-record
+  addresses and a pull request; the only MCP servers on it were the two `learnmcp-xapi`
+  siblings this base already holds. **Rostering is the one interoperability standard
+  with no agent connector at all.**
+- 🔴 **No SCORM result of any kind**, across a leg that named it explicitly alongside
+  `LTI tool` and `proctoring`. The leg returned nine addresses and not one touched
+  SCORM. 🔵 `compose/patterns.md` Pattern 6 targets legacy SCORM estates; it still rests
+  on the carried inventory, and `p359` adds nothing to it and found nothing against it.
+- 🔴 **No open-source IRT-calibrated LLM grader.** Three papers pair IRT with LLM short-answer
+  grading; the code for the closest one has no licence, and the IRT libraries that *are*
+  permissive (`joakimwallmark/irtorch`, MIT, committed 2026-10-19; `eribean/girth`, MIT but
+  untouched since 2022-01-30 — both already held)
+  contain no grading layer. **The join is unbuilt, and it is a genuine build
+  opportunity rather than an adoption one.**
+- 🟡 **EMEA returned three addresses and no policy.** Every EMEA regulatory fact the
+  prescribed leg produced — the 2 Aug 2026 high-risk enforcement date, the AI omnibus
+  in effect 27 Jul 2026, the UK £4 m lesson-planning programme, the Finland/Estonia/
+  Netherlands leaders — is already on `intel/market.md`. The region's `p359` yield is
+  supply only: Türkiye, Germany and a `+0200` Moodle plugin.
 
 ## 🟢 What changed on `p358` — the LATAM gap is a **licensing** gap, and it is now measured
 

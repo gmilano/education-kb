@@ -3,6 +3,121 @@ industry: education
 region: Global
 updated: 2026-10-21
 ---
+## Pass 359 · 2026-10-21 — **the learning-records tier is complete, permissive and eight years stale**, and `github trending education AI 2026` returned the same stale listicle for the nineteenth consecutive pass
+
+🔴 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`
+**OPEN** · 🟢 **`git log` over a blobless `--depth=80` clone OPEN — new placement
+instrument this pass** · 🔴 `github.com` **403** · 🔴 `api.github.com/repos/*` **403** ·
+🔴 `api.github.com/search/*` **403, fourth consecutive pass.** 🟢 **No stars measured.**
+
+🟢 **Gates before writing:** whole-corpus liveness **236 / 236 live**; grant-path
+currency **240 / 240 cells agree with the live default branch.**
+
+### 🔴 The prescribed trending leg, for the nineteenth time
+
+🔴 **`github trending education AI 2026` returned aggregator posts, not a ranking** —
+and its one education hit was `withmarbleapp/os-taxonomy`, **already shelved since
+`p326`**, quoted again at *"5,900 stars · 1,590 micro-topics · 3,221 prerequisite
+edges."* 🟢 **This base read the payload at `p351`: 1 616 topics, 3 317 edges**, and
+holds the star count first-hand at **6 683** from `p343`. 🔵 **Nineteen passes, same leg,
+same stale numbers. The leg is logged and no longer treated as a discovery channel.**
+
+🟡 **The one non-education trending claim worth a line, with its channel named:** a
+secondary roundup reports `rohitg00/ai-engineering-from-scratch` and Microsoft's
+`GenAI for Beginners` as learning-oriented repos trending in October 2026. 🔴 **Not
+asserted and not shelved** — neither is education *software*; both are courseware about
+AI, which is a different shelf than AI for education, and this base keeps them apart
+deliberately.
+
+### 🟢 The tier this pass went deep on: learning records and rostering
+
+🔵 **Why this tier.** `repos/foundations.md` §Interoperability carries LTI, SCORM, xAPI
+and Caliper, and `p358` made LTI 1.3 a four-way decision. 🔴 **The shelf had no row for
+where the records actually land** — an LRS — and none for **OneRoster**, the standard
+that answers *"who is in this class."*
+
+| Repo | Licence read from payload | Grant at | Substance |
+|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | `main/LICENSE` | SQL-backed xAPI LRS (SQLite, Postgres). Copyright notice runs to 2026. **Already held; re-verified** |
+| [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | 🟢 **Apache-2.0** | `main/LICENSE` | xAPI 1.0.3 **and 2.0** conformant, Hono + Postgres, admin UI, OpenTelemetry. **Already held; re-verified** |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | 🟢 **Apache-2.0** | `master/LICENSE` | ADL's reference LRS, updated to **xAPI 2.0 / IEEE 9274.1.1**. 🟡 Its own README scopes it to proof-of-concept use with few users. **Already held** |
+| [`Apereo-Learning-Analytics-Initiative/Larissa`](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) | 🟢 **Apache-2.0** | `master/LICENSE` | Apereo LRS. 🟡 README states no OAuth and no attachment support. **Already held** |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** | `main/LICENSE` | **The MCP bridge**: agents record and retrieve learning activity as xAPI statements. **Already held** |
+| 🆕 [`jeffyding/OpenLRW`](https://github.com/jeffyding/OpenLRW) | 🟢 **ECL-2.0** | `master/LICENSE` | **OneRoster + IMS Caliper + xAPI in one warehouse — the only such address found** |
+
+🟢 **So the tier is complete and permissive: five Apache/MIT rows plus one ECL-2.0, and
+every grant read first-hand.** 🔴 **And the one row that carries rostering is eight years
+dead.**
+
+#### 🔴 The channel finding: a topic page's "updated" date is not a commit date
+
+🔴 **`jeffyding/OpenLRW` was surfaced by a GitHub *topic* page reporting it
+*"last updated September 2025."*** 🟢 **Commit channel, first-hand: 92 commits, 7
+authors, 2016-10-17 → 2018-01-16.** Streams `-0400`×39 / `+0100`×24 / `-0500`×23 →
+**North America**.
+
+🔵 **Why this is worth a heading.** This base has recorded badges lying, READMEs lying,
+classifiers lying and listicles going stale. **A topic page's "updated" column is a
+different surface and it had not been caught before** — and it is a *particularly*
+convincing one, because it reads as GitHub's own metadata rather than a third party's
+claim. 🟢 **Rule added: a date that is not a commit date is not a maintenance signal.**
+
+🟢 **The consequence for the shelf is mild and specific.** `OpenLRW` is shelved as a
+**schema reference** — its OneRoster↔Caliper↔xAPI mapping is the artefact worth reading
+— and explicitly **not** as a dependency. 🔴 **The rostering connector gap stands:** no
+OneRoster MCP server exists, and an engagement that needs rostering writes it.
+
+### 🟢 ECL-2.0 is now a four-row family on these shelves, and it behaves like Apache-2.0
+
+🔵 `agents/top.md` already counts **ECL-2.0** among its permissive grants, and
+`opencast/opencast`, `sakaiproject/sakai` and `jeffyding/OpenLRW` now carry it. 🟢 **Read
+first-hand from the payload this pass:** ECL-2.0 is *"the Apache 2.0 license, modified to
+change the scope of the patent grant in section 3 to be specific to the needs of the
+education communities."* 🟢 **Everything else — §4 redistribution, §5 contributions, the
+NOTICE requirement — is Apache-2.0 verbatim.**
+
+🔵 **Consequence a studio can act on:** ECL-2.0 is **safe to treat as Apache-2.0 for
+redistribution**, and the only place it differs is the **patent** grant, which narrows
+to education use. 🔴 **So the one engagement shape where the distinction bites is a
+deliverable built on an ECL-2.0 row and then sold *outside* education** — at which point
+the patent peace does not travel. Recorded because `17 ECL-2.0 cells` on these shelves
+have never had that sentence written next to them.
+
+### 🔴 Moodle AI plugin leg: five addresses, four live, two new
+
+| Repo | Licence read from payload | Note |
+|---|---|---|
+| 🆕 [`HernanDiaz/moodle-local_aigrader`](https://github.com/HernanDiaz/moodle-local_aigrader) | 🟢 **GPL-3.0-or-later** (`main/LICENSE`) | *AI Grader Pro*, Moodle 4.5 LTS. **Human always in the loop — the AI proposes, the teacher publishes.** 74 commits, `+0200`×74 → **EMEA**. The grant also enumerates bundled `thirdparty/vendor/` licences. 🟢 **Correct licence for a Moodle plugin; wrong licence to vendor into a deliverable** |
+| 🆕 [`Neutralmilkzzz/moodle-cli-hku`](https://github.com/Neutralmilkzzz/moodle-cli-hku) | 🟢 **MIT** (`main/LICENSE`) | Agent-facing Moodle CLI — deadlines, grades, course files, forum search. **344 commits, 4 authors, 2026-03 → 2026-10**; `+1000`×262 / `+0800`×72 → **APAC** (HKU). 🟡 Read-only for remote use by the author's own statement |
+| [`microsoft/moodle-ai-assistant`](https://github.com/microsoft/moodle-ai-assistant) | 🟢 **MIT** (`main/LICENSE`) | Microsoft's Moodle AI-agent accelerator; `local_aichat` at **0.1.0, self-described alpha**. Already held; re-verified |
+| [`moocupv/lti-ai-grader`](https://github.com/moocupv/lti-ai-grader) | 🟢 **Apache-2.0** (`main/LICENSE`) | LTI AI grader with configurable prompt and LLM, tested on **Open edX and Moodle**. Already held; re-verified |
+| 🔴 [`jmolpea/moodle-block_openaiagent`](https://github.com/jmolpea/moodle-block_openaiagent) | — | 🔴 **DEAD on `ls-remote` — a sixth channel agreeing with `ACTION RN`**, which already stopped naming it. Listed once, as a refutation |
+
+🟢 **The Moodle AI layer now has four live rows and a clean split:** two MIT agent-side
+connectors a studio can ship, one Apache-2.0 LTI grader that works across both major
+platforms, and one GPL-3.0-or-later plugin that belongs **inside** the client's GPL
+estate. 🔵 That is the boundary `compose/patterns.md` has been recommending for several
+passes, and it is now populated on both sides of the line.
+
+### 🔴 Psychometrics: three addresses, zero usable grants
+
+| Repo | Licence read from payload |
+|---|---|
+| 🆕 [`philchalmers/mirt`](https://github.com/philchalmers/mirt) | 🔴 **no root `LICENSE`** — grant is `License: GPL (>= 3)` in `DESCRIPTION` (the CRAN shape, `ACTION RS`) |
+| 🆕 [`Joe-Hall-Lee/PSN-IRT`](https://github.com/Joe-Hall-Lee/PSN-IRT) | 🔴 **no grant**, 7 paths probed. **AAAI 2026 Oral** |
+| 🆕 [`mainlp/llm-psychometrics`](https://github.com/mainlp/llm-psychometrics) | 🔴 **no grant**, 7 paths probed. LMU Munich NLP lab, `+0200` |
+
+🟢 **The permissive psychometrics rows this base already holds are the two that matter**
+— `joakimwallmark/irtorch` (MIT, 🟢 **last commit 2026-10-19**) and `eribean/girth`
+(MIT, 🔴 **last commit 2022-01-30**), both re-verified live this pass. 🔵 `p359` promotes
+both to `repos/foundations.md` and corrects which one a build should start from. 🔴 **Neither contains a grading layer**, and the three 2026 papers that pair IRT
+calibration with LLM short-answer grading have no licensed implementation between them.
+🟢 **Recorded as a build opportunity:** the join of a permissive IRT library to an LLM
+grader is **unbuilt**, and it is the measurement layer every assessment claim on these
+shelves rests on.
+
+---
+
 ## Pass 358 · 2026-10-21 — **LTI 1.3 went from a seven-row convenience to a four-way engineering decision**, and the two most capable addresses in the leg are both unusable
 
 🔴 **Channel note.** `git ls-remote` **OPEN** · `raw.githubusercontent.com` **OPEN** ·

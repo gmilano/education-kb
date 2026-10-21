@@ -1,0 +1,17 @@
+address	licence (read from payload)	grant path	commits	authors	first commit	last commit	timezone distribution	region placement	verdict
+https://github.com/dg13788/iep-system	MIT	main/LICENSE	38c	4a	2026-09-06	2026-10-19	+0800×38	APAC	PERMISSIVE
+https://github.com/The-Burnes-Center/a-iep	CC-BY-NC-4.0	main/LICENSE	836c	7a	2025-05-07	2026-10-14	-0400×657 -0500×158 +0530×14	North America	NON-OSI noncommercial
+https://github.com/boktoday/iep-agent-hermes-agent	PolyForm-NC	main/LICENSE	60c	1a	2026-10-17	2026-10-17	+1100×60	APAC	NON-OSI noncommercial
+https://github.com/sumry-app/SUMRY	NO_GRANT_AT_ROOT	-	66c	2a	2025-10-30	2026-08-17	+0000×38 -0600×26 -0500×2	UNPLACEABLE (split stream)	NO GRANT - all rights reserved
+https://github.com/omerpanay/special-education-rag	NO_GRANT_AT_ROOT	-	19c	1a	2026-04-26	2026-10-16	+0300×19	EMEA	NO GRANT - all rights reserved
+https://github.com/JeabtiE/jump-hackathon-demo	NO_GRANT_AT_ROOT	-	108c	3a	2026-07-23	2026-09-14	+0700×108	APAC	NO GRANT - all rights reserved
+https://github.com/Pragmatic-Works/Rapid-IEP	NO_GRANT_AT_ROOT	-	15c	1a	2023-06-12	2023-06-16	-0400×15	North America	NO GRANT - all rights reserved
+https://github.com/jeffyding/OpenLRW	ECL-2.0 (Apache-2.0, narrowed patent grant)	master/LICENSE	92c	7a	2016-10-17	2018-01-16	-0400×39 +0100×24 -0500×23	North America	PERMISSIVE (but dead since 2018-01)
+https://github.com/OpenProct/openproct	MIT	main/LICENSE	4c	2a	2025-10-26	2025-10-26	+0530×2 +0000×2	APAC	PERMISSIVE
+https://github.com/HernanDiaz/moodle-local_aigrader	GPL-3.0-or-later	main/LICENSE	74c	2a	2026-05-14	2026-10-08	+0200×74	EMEA	NOT PERMISSIVE
+https://github.com/Neutralmilkzzz/moodle-cli-hku	MIT	main/LICENSE	344c	4a	2026-03-11	2026-10-08	+1000×262 +0800×72 +0000×9	APAC	PERMISSIVE
+https://github.com/Joe-Hall-Lee/PSN-IRT	NO_GRANT_AT_ROOT	-	4c	1a	2025-05-17	2026-01-16	+0800×4	APAC	NO GRANT - all rights reserved
+https://github.com/mainlp/llm-psychometrics	NO_GRANT_AT_ROOT	-	4c	1a	2025-04-18	2025-07-25	+0200×4	EMEA	NO GRANT - all rights reserved
+https://github.com/pedrosoale/tempo-docente	NO_GRANT_AT_ROOT	-	51c	1a	2026-08-08	2026-09-29	-0300×51	LATAM	NO GRANT - all rights reserved
+https://github.com/SayvaBR/assistente-ped	NO_GRANT_AT_ROOT	-	6c	1a	2026-09-12	2026-09-12	-0300×6	LATAM	NO GRANT - all rights reserved
+https://github.com/shaheeranser/exam-proctor	Apache-2.0	main/LICENSE	25c	1a	2026-07-05	2026-10-11	+0800x13 +0500x12	APAC	PERMISSIVE

@@ -6,18 +6,26 @@ updated: 2026-10-21
 
 # Education — foundational repos
 
-**Pass 358 · 2026-10-21.** The systems an education engagement starts *from*, rather
+**Pass 359 · 2026-10-21.** The systems an education engagement starts *from*, rather
 than the agents it adds on top. Every row verified first-hand **2026-10-21**: liveness
 and default branch via `git ls-remote --symref`, licence **read from the payload**.
-🔴 `p358` had **no authenticated GitHub index** either — third consecutive pass, same
+🔴 `p359` had **no authenticated GitHub index** either — fourth consecutive pass, same
 cause (a credential scoped to one unrelated repository) — so it measured no stars and
 discovered by web search aimed at `github.com` with **function words**. Liveness and
 grant verification are unchanged. See `agents/top.md` for the channel state.
 
-🟢 **`p358` went deep on one tier: LTI 1.3.** It is the tier this shelf calls "the
-cheapest place to start", and it had seven rows against a standard with four distinct
-services. Eight more addresses were probed; **four are promoted, three are flagged, and
-one is dead weight that looks alive.**
+🟢 **This shelf was gated before it was written.** Every address published on it was
+swept on `ls-remote` as part of a **236-address whole-corpus pass: 236 live, 0 dead** —
+and every `branch/FILE` grant path on it was re-checked against the live default branch:
+**240 of 240 agree.** 🔵 Which means the warning four paragraphs down is not a
+hypothetical; it is the gate that enforces it.
+
+🟢 **`p359` went deep on the tier `p358`'s LTI work pointed at and did not reach: where
+the records land.** The shelf carried LTI, SCORM, xAPI and Caliper and had **no row for
+an LRS** and **none for OneRoster**. Six learning-record addresses were probed; **five
+were already held and are re-verified, one is new, and the tier turns out to be complete,
+permissive and — in the one row that carries rostering — eight years dead.** `p359` also
+promotes a tier this base had found and never shelved: **psychometrics.**
 
 **Read the default-branch column.** Education infrastructure is old software. Of the
 grants on this shelf, a large share live on `master`, `develop`, `release` or a
@@ -116,6 +124,124 @@ appear in another licence's prose.
 boilerplate carries no holder field, so the `ZZ-bc` holder test cannot separate fork from
 upstream here — 🔵 a measured limit of that test, not a result: **the divergent-holder
 check works on MIT and BSD rows and is blind to Apache ones.** Use `Cvmcosta/ltijs`.
+
+## 🆕 Learning records and rostering — where the data lands
+
+🔵 **The gap this fills.** The tier above lets an agent *reach* a client's LMS. It said
+nothing about where learning events are **stored**, which is what an analytics,
+adaptivity or evidence-of-impact deliverable actually reads from — and §2 of
+`intel/trends.md` records evidence becoming a procurement gate. 🟢 **Every row below is
+permissive and every grant was read from the payload this pass.**
+
+| Component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
+| --- | --- | --- | --- | ---: | --- |
+| lrsql (SQL xAPI LRS) | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | Apache-2.0 | `main/LICENSE` | not re-derived | North America |
+| xapi-lrs (xAPI 1.0.3 **and 2.0**) | [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) | Apache-2.0 | `main/LICENSE` | not re-derived | Not placed |
+| ADL_LRS (reference LRS) | [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | Apache-2.0 | `master/LICENSE` | not re-derived | North America |
+| Larissa (Apereo LRS) | [Apereo-Learning-Analytics-Initiative/Larissa](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) | Apache-2.0 | `master/LICENSE` | not re-derived | North America |
+| learnmcp-xapi (the MCP bridge) | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | `main/LICENSE` | not re-derived | Not placed |
+| 🆕 OpenLRW (**OneRoster** + Caliper + xAPI) | [jeffyding/OpenLRW](https://github.com/jeffyding/OpenLRW) | 🟢 **ECL-2.0** | `master/LICENSE` | not re-derived | North America |
+
+### 🟡 Pick by conformance and maturity, because the licences do not separate these rows
+
+🟢 **`pelotech/xapi-lrs` is the one to start from** — it is the only row whose README
+claims conformance to **both xAPI 1.0.3 and xAPI 2.0**, it ships an admin UI and
+OpenTelemetry metrics, and it is Apache-2.0 on `main`. 🟢 **`yetanalytics/lrsql` is the
+safer choice where the client wants a boring datastore**: SQLite or Postgres, and its
+copyright notice runs to 2026.
+
+🔴 **Two rows carry their own disqualifiers in their own READMEs, and a successor should
+not re-discover them.** `adlnet/ADL_LRS` — the *reference* implementation, updated to
+**xAPI 2.0 / IEEE 9274.1.1** — scopes itself to proof-of-concept use with few users.
+`Larissa` states it has **no OAuth and no attachment support**. 🔵 Both are correct
+things to read a standard against and wrong things to put under a client's traffic.
+
+### 🔴 OneRoster has exactly one address and it has not moved since January 2018
+
+🟢 **[`jeffyding/OpenLRW`](https://github.com/jeffyding/OpenLRW) is the only address
+found that carries OneRoster, IMS Caliper and xAPI in a single warehouse**, and its
+grant is clean: **ECL-2.0**, read from `master/LICENSE` — Apache-2.0 with §3's patent
+grant narrowed to education use, which for redistribution purposes behaves as
+Apache-2.0.
+
+🔴 **It is eight years stale, and the surface that surfaced it says otherwise.** A
+GitHub **topic page** reports it *"updated September 2025"*. 🟢 **Commit channel,
+first-hand: 92 commits, 7 authors, 2016-10-17 → 2018-01-16.** 🔵 **A date that is not a
+commit date is not a maintenance signal** — a rule this shelf did not have, because
+badges, READMEs and classifiers had all lied before and a topic page's "updated" column
+had not.
+
+🟢 **So the shelf gains a schema and not a dependency.** The OneRoster↔Caliper↔xAPI
+mapping in that tree is the artefact worth reading. 🔴 **And the connector gap is
+real and stated:** **no OneRoster MCP server exists** — `p359` probed the rostering leg
+and found none — so an engagement that needs *"who is in this class"* writes that
+connector. 🔵 It is the one interoperability standard on these shelves with no agent
+connector at all, and it is the one every roster-aware deliverable needs first.
+
+## 🆕 Psychometrics — the measurement layer, permissive and never shelved until now
+
+🔵 **Why it belongs on a foundations shelf.** Every adaptivity and mastery claim on
+these shelves — Bayesian Knowledge Tracing in `OATutor`, FSRS in `Smart-Study-Agent`,
+"adaptive difficulty" in half the assessment tier — rests on item-response theory.
+🔴 **This base had found these libraries at earlier passes and left them on
+`agents/trending.md`.** `p359` promotes them, re-verified.
+
+| Component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
+| --- | --- | --- | --- | ---: | --- |
+| 🆕 🟢 **irtorch** (IRT on PyTorch, GPU) | [joakimwallmark/irtorch](https://github.com/joakimwallmark/irtorch) | **MIT** | 🟡 `main/LICENSE.txt` | not re-derived | **EMEA** — `+0200`/`+0100` |
+| 🆕 girth (IRT for Python) | [eribean/girth](https://github.com/eribean/girth) | **MIT** | 🟡 `master/LICENSE.txt` | not re-derived | **North America** — `-0500`/`-0400` |
+| 🆕 girth_mcmc (Bayesian / MCMC IRT) | [eribean/girth_mcmc](https://github.com/eribean/girth_mcmc) | **MIT** | 🟡 `main/LICENSE.txt` | not re-derived | **North America** — `-0400`/`-0500` |
+| 🆕 variational-IRT | [mhw32/variational-item-response-theory-public](https://github.com/mhw32/variational-item-response-theory-public) | **MIT** | `master/LICENSE` | not re-derived | **North America** — `-0700` |
+
+### 🔴 Three of the four are abandoned, and the live one is not the one this base was pointing at
+
+🟢 **The commit channel separates these rows where the licence does not.** Last commit,
+read first-hand:
+
+| Repo | Last commit | State |
+|---|---|---|
+| [`joakimwallmark/irtorch`](https://github.com/joakimwallmark/irtorch) | 🟢 **2026-10-19 — two days before this pass** | 🟢 **Live. The only maintained permissive IRT engine found** |
+| [`eribean/girth`](https://github.com/eribean/girth) | 🔴 2022-01-30 | 🔴 ~5 years stale |
+| [`eribean/girth_mcmc`](https://github.com/eribean/girth_mcmc) | 🔴 2021-11-10 | 🔴 ~5 years stale |
+| [`mhw32/variational-item-response-theory-public`](https://github.com/mhw32/variational-item-response-theory-public) | 🔴 2020-05-28 | 🔴 ~6 years stale; paper companion code |
+
+🔴 **This corrects a recommendation shape this base was carrying.** `girth` is the row
+earlier passes named — it is the oldest, best-known and most-cited — and it has not been
+touched in five years. 🟢 **`irtorch` is the row to build on**: MIT, PyTorch-backed with
+GPU support, actively committed this week, and **EMEA-origin**, which makes it the only
+psychometrics row that places in a region other than North America.
+
+🔵 **Both halves of that matter to an engagement.** A stale MIT library is still legally
+safe to vendor and *is* a defensible choice for a stable algorithm — IRT estimation is
+not a moving target, and `girth` is a reasonable thing to pin. 🔴 **What it cannot do is
+carry a client's security-patching expectations**, and a studio that lists it as a
+"maintained dependency" in a proposal has mis-described it.
+
+### 🔴 Three of the four put the grant at `LICENSE.txt`, and `girth`'s `LICENSE` is a 404
+
+🟢 **Read first-hand this pass:** `eribean/girth` serves **404 at `master/LICENSE`** and
+**200 at `master/LICENSE.txt`**. 🔵 **The whole permissive psychometrics family shares
+that shape** — `girth`, `girth_mcmc` and `irtorch` all carry `LICENSE.txt` — so a probe
+that tries `LICENSE` alone reports **the entire tier as grantless**, and every one of
+them is stock MIT. 🟢 This is the shelf's existing default-branch warning in its other
+form: **the filename is as load-bearing as the branch.**
+
+### 🔴 What is NOT here: a licensed IRT-calibrated LLM grader
+
+🔴 **Three 2026 papers pair IRT calibration with LLM short-answer grading** — including
+*"Estimating LLM Grading Ability and Response Difficulty in Automatic Short Answer
+Grading via Item Response Theory"* — and `p359` could not find a usable implementation
+behind any of them. The nearest code, [`mainlp/llm-psychometrics`](https://github.com/mainlp/llm-psychometrics),
+is **live with no licence file at seven probed paths**. 🔴 The standard R package,
+[`philchalmers/mirt`](https://github.com/philchalmers/mirt), carries **no root
+`LICENSE`** at all — its grant is `License: GPL (>= 3)` in `DESCRIPTION`, the CRAN shape,
+and it is copyleft when found.
+
+🟢 **So the four rows above are calibration engines with no grading layer, and that is
+the opportunity:** the join is **unbuilt**, both halves are MIT, and an engagement that
+needs defensible difficulty estimates on AI-marked items builds it rather than buying
+it — on **`irtorch`**, per the maturity table above, not on `girth`. 🔵 See §17 of `intel/trends.md` — AI marking has acquired a disclosure duty and a
+measured anchoring bias, and an IRT-calibrated item is the evidence that answers both.
 
 ## Assessment, integrity and accessibility
 

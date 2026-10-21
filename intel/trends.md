@@ -6,10 +6,10 @@ updated: 2026-10-21
 
 # Education — current trends
 
-**Pass 358 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
-across external sources. 🆕 **Trends 19–21 are `p358`'s**, and §19 is the first trend on
-this file whose evidence is a **licence-hygiene rate** rather than a count of
-repositories. Trends 16–18 are `p357`'s.
+**Pass 359 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
+across external sources. 🆕 **Trends 22–23 are `p359`'s**, and §22 **reframes §19
+without refuting it** — the licence-hygiene rate `p358` measured is real and was
+attributed to the wrong variable. Trends 19–21 are `p358`'s; 16–18 are `p357`'s.
 Trends **7–15** are **first-hand observations from this base's own repository
 measurements** — they are not in the trade press, which is precisely why they are
 worth holding.
@@ -482,3 +482,108 @@ copy is invisible (**`ACTION ZZ-be`** keys it on the holder string instead) — 
 🟢 **The engagement rule is simple and cheap:** before vendoring any connector, read its
 `LICENSE` holder. If it names someone other than the repository owner, you are looking at
 a fork — install by registry identifier, which resolves upstream, and keep the capability.
+
+
+## 22. 🔴 🆕 A `LICENSE` file is a distribution habit, not a regional one — and that reframes §19
+
+🟢 **§19 stands as a measurement and is re-named here.** `p358` measured LATAM education
+AI at **23 % permissive against 74 % elsewhere** and called it a regional licensing gap.
+🔴 **`p359` ran eight legs aimed at *functions* and never named a region, and the
+permissive rate came back at 31 %** — within a few points of the LATAM figure, from a
+sample drawn without reference to geography.
+
+🟢 **The variable that predicts a missing grant is who publishes, not where they are.**
+Sixteen addresses new to these shelves, every licence read from the payload, every
+producer type read from the repository itself:
+
+| Producer type | Addresses | Permissive | No grant at all |
+|---|---:|---:|---:|
+| Teacher, parent, hackathon team or civic-innovation lab | 7 | **1** | 4 *(+2 explicitly noncommercial)* |
+| University research lab *(an AAAI 2026 oral, an LMU NLP group, a CRAN package)* | 3 | **0** | 2 *(+1 GPL declared in `DESCRIPTION`)* |
+| Volunteer regional data publisher | 2 | **0** | **2** |
+| 🟢 **Vendor or organisation shipping tooling for others to deploy** | 4 | **4** | **0** |
+
+🔵 **The mechanism is mundane and that is why it generalises.** A `LICENSE` file is not a
+legal opinion — it is a **step in a release checklist**. Someone who publishes a package
+to npm, PyPI, crates.io or a plugin directory acquires that step because the registry, the
+CI template or the first downstream user forces it. 🔴 **Someone who publishes a tool they
+built for their own classroom, their own child's IEP, or their own paper never encounters
+the forcing function.** They are not withholding a grant; they have not been asked for
+one.
+
+### 🟢 The control case is inside one country and one month
+
+| Publisher | What it ships | Grant |
+|---|---|---|
+| **`bncc-dev`** *(Profy Tecnologias Educacionais Ltda — a company)* | Brazil's BNCC as 1 721 verified learning objectives, plus npm/PyPI packages, an MCP server and a hallucination benchmark | 🟢 **MIT code + CC BY 4.0 data**, per-record provenance, a reproducible extraction pipeline, and a reasoned statement of *why* the data is licensable at all |
+| [`pedrosoale/tempo-docente`](https://github.com/pedrosoale/tempo-docente) | BNCC, SAEB and SARESP data *"com fonte oficial"* | 🔴 **no grant**, 7 paths probed |
+| [`SayvaBR/assistente-ped`](https://github.com/SayvaBR/assistente-ped) | a pedagogical assistant adopting BNCC provenance | 🔴 **no grant**, 7 paths probed |
+
+🔵 **Same country, same subject matter, same month, opposite licensing.** The difference
+is not Brazil. 🟢 **One is a company that ships packages; two are people who publish
+data.**
+
+### 🔴 Why the reframing changes what a studio does about it
+
+🔴 **Read as regional, §19 implies a regional remedy** — a LATAM licence-hygiene
+initiative, a Portuguese-language `LICENSE` template, a regional partner. 🟢 **Read as a
+producer-type effect, the remedy is the same everywhere and it is cheaper:** when an
+engagement's best technical fit is a teacher's, parent's, lab's or volunteer's
+repository, **ask for the grant**. The author has no reason to refuse and usually has no
+position at all — and a two-line email is the whole intervention.
+
+🔵 **It also tells a studio where *not* to look for a licence problem.** The four
+vendor/organisation rows are 4 for 4 permissive. 🔴 **And three of those four are stale or
+near-empty** — `OpenLRW` dead since 2018, `OpenProct/openproct` at four commits,
+`eribean/girth` untouched since 2022. **Shipping for others produces a `LICENSE` file
+reliably and maintenance not at all**, so the two risks are *anti*-correlated: the rows
+with clean grants are the ones to check for a pulse, and the rows with a pulse are the
+ones to check for a grant.
+
+🟡 **Stated limits.** `n = 16`, drawn from eight function legs in one pass, with producer
+type read by hand from each repository rather than from a field. 🔵 The direction is
+strong (4/4 against 1/12) and the sample is small; what makes it worth holding is that it
+**predicts** where to spend verification effort, which §19's regional reading does not.
+
+## 23. 🔴 🆕 Special education is the industry's largest licensed-supply hole, and it is a statutory function
+
+🟢 **The demand is not in question and the supply exists.** An IEP is a **statutory
+document** — under IDEA in the United States, and with force of law in most of the
+jurisdictions on `intel/market.md`. 🔴 **What does not exist is a grant.** Seven
+special-education addresses measured first-hand at `p359`:
+
+| | Count |
+|---|---:|
+| 🟢 permissive *(MIT)* | **1** |
+| 🔴 explicitly **noncommercial** *(CC-BY-NC-4.0, PolyForm NC)* | **2** |
+| 🔴 **no licence file at any of 7 probed paths** | **4** |
+
+🔴 **And the two best-maintained addresses on the tier are both noncommercial by
+construction** — `The-Burnes-Center/a-iep` at 836 commits and 7 authors, and
+`boktoday/iep-agent-hermes-agent`. 🔵 That is the inverse of the usual trap: it is not
+that the usable rows are immature, it is that **the mature rows are the ones a paid
+engagement cannot touch.**
+
+🟢 **Scoped honestly, because this base has over-corrected here before.** These are the
+seven addresses `p359` measured, and the *"zero permissive for special education"* claim
+filed as `T-p288b` remains **CORRECTED**. 🔴 **But it is corrected by one row.**
+[`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) is **MIT** (verified
+first-hand at `p359`) and ships a `special-education-agent` among twelve specialists.
+`eakarsu/ai-special-education-iep-compliance` — held on these shelves, and the closest
+thing here to an IEP *compliance* surface — carries **no grant in 21 files**, also
+re-confirmed at `p359`.
+
+🟢 **So the whole permissive special-education supply this base can name is two
+addresses:** `iblai/k-12-agents` and `p359`'s `dg13788/iep-system` (38 commits). 🔵 Two
+usable addresses against a statutory function in every major jurisdiction is the measured
+form of this trend, and it is why §23 is a market condition rather than a shelf gap.
+
+🔵 **Why it reads as a trend rather than a shelf fact.** Special education concentrates
+every pressure the rest of this file tracks: §1's governance shift (an IEP decision is
+exactly the "high-stakes decision about a student" that Oklahoma and Maryland now require
+human oversight of), §2's evidence gate, §5's regulatory divergence (Annex III of the EU
+AI Act names education assessment by type), and §17's disclosure duty for AI marking.
+🟢 **A function under that much statutory pressure attracting almost no licensed open
+source is a durable market condition, not a gap waiting to close** — and it is the
+clearest build-rather-than-adopt case on these shelves. 🆕 **Pattern 16** on
+`compose/patterns.md` is the build.

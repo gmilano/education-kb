@@ -6,7 +6,7 @@ updated: 2026-10-21
 
 # Education — composition patterns
 
-**Pass 358 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
+**Pass 359 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
 boundary that makes the composition safe, and what the engagement actually delivers.
 Every repo referenced is verified live with its grant read from payload on
 **2026-10-21** — see `agents/top.md` and `repos/foundations.md`.
@@ -505,6 +505,93 @@ assumed. 🔴 **The honest caveat to carry into the proposal:** the administrati
 ERP the recommendation is still `openeducat_erp` (LGPL-3.0) or a priced build — one school
 management system is not an ERP, and `verticals/solutions.md` sets out the comparison.
 
+## 🆕 Pattern 16 — A special-education IEP deliverable, built because it cannot be adopted
+
+🔴 **Why this pattern is a build and not an integration.** `p359` measured the
+special-education tier first-hand: **seven addresses, one permissive grant.** Two of the
+seven — including the only genuinely mature one, at 836 commits and 7 authors — are
+**explicitly noncommercial** (`CC-BY-NC-4.0` and `PolyForm Noncommercial 1.0.0`), and
+four carry **no licence file at all**. 🟢 This is the clearest build-rather-than-adopt case
+on these shelves, and §23 of `intel/trends.md` explains why it is likely to stay that way.
+
+🔵 **And why it is worth building anyway.** An IEP is a **statutory document** — under
+IDEA in the United States, with binding analogues across `intel/market.md`'s
+jurisdictions — which means the deliverable has a compliance budget, a named owner at the
+client, and an audit trail requirement. Those are the three things that make an
+engagement fundable.
+
+**Components — every grant read from payload, `2026-10-21`**
+
+| Role | Repo | Licence | Why this one |
+|---|---|---|---|
+| Records, assessments, IEP workflow | [`dg13788/iep-system`](https://github.com/dg13788/iep-system) | 🟢 **MIT** (`main/LICENSE`) | **The one permissive row on the tier.** Student records, assessment capture, a five-step IEP wizard, e-signatures. React / PHP / MySQL. 🟡 Chinese-language UI, 38 commits, 4 authors — take the **data model and workflow**, expect to rewrite the presentation layer |
+| Goal drafting over client documents | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0** | Already carried on `agents/top.md`. Skills as the packaging for pedagogical instructions — §8 of `intel/trends.md` — so goal-drafting guidance stays **the client's content**, not vendored code |
+| Compliance + specialist agents | [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) | 🟢 **MIT** (`main/LICENSE`) | Already held. School Assistant **plus 12 specialists**, including a **`special-education-agent`**, `assessment`, `curriculum-alignment` and `student-safety`, with PowerSchool skills. 🟢 **This is the row that corrected `T-p288b`, and it is the only permissive special-education *agent* on this base** |
+| Progress evidence store | [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | 🟢 **Apache-2.0** | 🆕 `p359`. xAPI **1.0.3 and 2.0** conformant, admin UI, OpenTelemetry. **An IEP's legal weight is its progress record** — this is where goal-progress statements land in a standard format rather than a bespoke table |
+| Mastery / difficulty calibration | [`joakimwallmark/irtorch`](https://github.com/joakimwallmark/irtorch) | 🟢 **MIT** (`main/LICENSE.txt`) | 🆕 `p359`. **The only maintained permissive IRT engine** — committed 2026-10-19. Turns "the student is progressing" into a calibrated estimate a hearing officer can be shown. 🔴 Not `eribean/girth`: same licence, untouched since 2022 |
+| Reaching the client's LMS | [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) or [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 MIT | Read coursework and grades across the protocol boundary. 🔴 **Never** `openedx-mcp` or `csmediapro/moodle-mcp-server` — copyleft connectors sit *inside* the deliverable |
+
+**Wiring**
+
+1. **Fork `dg13788/iep-system` for the data model, not the UI.** MIT means the fork and
+   every customisation stay in a closed client deliverable. 🟡 Budget the presentation
+   layer as a rewrite: the workflow is the asset, the Chinese-language React surface is
+   not reusable in an English-, Spanish- or Portuguese-language engagement.
+2. **Put goal drafting behind a skill pack, not in code.** Package the client's own
+   jurisdictional guidance — IDEA goal grammar, the state's required fields, the
+   district's templates — as skills on the `k12-teacher-skills` pattern. 🟢 **The
+   client's pedagogy stays the client's**, and the same deliverable re-targets to another
+   jurisdiction by swapping a skill directory.
+3. **Write every goal-progress observation to `xapi-lrs` as an xAPI statement.** This is
+   the step that makes the deliverable defensible: a standard, queryable, timestamped
+   record rather than rows in the application's own database. 🟢 It is also what §2's
+   evidence-of-impact procurement gate asks for, already in a portable format.
+4. **Calibrate with `irtorch` where the client's goals are measured by assessment
+   items.** Progress on an uncalibrated item set is not evidence. 🔵 The join of a
+   permissive IRT engine to an LLM-assisted grader is **unbuilt** — `repos/foundations.md`
+   §Psychometrics records the gap — so this step is engineering work, not configuration.
+5. **Read coursework over MCP; never fork the LMS.** Standard boundary rule.
+6. 🔴 **Put a human in the loop at the decision, by construction.** Oklahoma and Maryland
+   now **require human oversight and bar AI from high-stakes decisions about students**
+   (`intel/market.md` §North America); Korea's AI Basic Act names education a high-impact
+   sector; Vietnam's Decision 33/2026 lists education as high-risk where output drives
+   decisions without meaningful human review; and Annex III of the EU AI Act names
+   education assessment by type. 🟢 **The model drafts and the case manager signs** —
+   which is also exactly what `HernanDiaz/moodle-local_aigrader` demonstrates on the
+   grading side, and a working reference worth reading even though its GPL-3.0-or-later
+   grant keeps it outside the deliverable.
+
+**What the engagement delivers.** A closed, jurisdiction-targeted IEP drafting and
+progress-evidence system: statutory fields enforced, goals drafted under the client's own
+pedagogical guidance, every progress observation in a standard xAPI record, calibrated
+mastery estimates behind the progress claims, and a human signature at every decision
+point.
+
+🔴 **The honest caveats to carry into the proposal.**
+
+- **The permissive base is a 38-commit project.** `dg13788/iep-system` is the *only*
+  permissive option measured, not a safe one. Price the data-model fork as a read-and-
+  reimplement, not as an adoption.
+- 🔴 **Do not reach for the mature alternatives.** `The-Burnes-Center/a-iep` is the best-
+  maintained special-education codebase this base has found and it is **CC-BY-NC-4.0**;
+  `boktoday/iep-agent-hermes-agent` is **PolyForm Noncommercial**. Both read as "free" and
+  neither can be used in paid work. 🟢 This is the single most likely way this engagement
+  goes wrong.
+- 🔴 **Four of the seven addresses have no grant** — including the one with the closest
+  architecture to this pattern, `omerpanay/special-education-rag` (agentic teacher
+  assistant with IEP draft generation over RAG). 🔴 **And the same is true of a row this
+  base has held for far longer:** `eakarsu/ai-special-education-iep-compliance` covers
+  evaluation timelines, service delivery and annual reviews — exactly this pattern's
+  compliance surface — and carries **no grant in 21 files**, re-confirmed at `p359`. 🟢 It
+  is a **requirements document**, not a component. 🟢 **Ask for the grant before designing
+  around any of them.** Per §22 of `intel/trends.md`, these authors are not withholding a licence;
+  they have never been asked for one, and a two-line email is the whole intervention.
+- 🟡 **The data is special-category under every privacy regime that matters.** An IEP
+  contains disability and health information: **GDPR Art. 9** in EMEA, FERPA plus state
+  student-privacy statutes in the US (California **AB 1159** restricts using student data
+  to train models at all), and LGPD Art. 11 in Brazil. Settle the lawful basis and the
+  training-data position **before** the architecture, not after.
+
 ## Boundary cheat-sheet
 
 | If the host platform is… | Reach it by… | Never |
@@ -517,7 +604,11 @@ management system is not an ERP, and `verticals/solutions.md` sets out the compa
 | 🆕 ERPNext (**GPL-3.0**) | Its **REST API**, as a separate service | A Frappe app in-process, or linking client code |
 | 🆕 Cap, CaptureFlow (**split: AGPL app, MIT engine**) | Vendoring the **MIT engine only** — `licenses/LICENSE-MIT`, `packages/engine/` | Forking the repository; the combined distribution is AGPL |
 | 🔴 🆕 `csmediapro/moodle-mcp-server` (**AGPL-3.0 connector**) | 🔴 **Nothing.** Use a permissive Moodle MCP instead | Any use — a copyleft *connector* sits inside the engagement, not across the boundary |
-| 🔴 🆕 `mrgutierrezmario/lecture-note-app` (**PolyForm Noncommercial**) | 🔴 **Nothing in paid work** | All commercial use without a separate licence from the holder |
+| 🔴 🆕 `mrgutierrezmario/lecture-note-app`, 🆕 `boktoday/iep-agent-hermes-agent` (**PolyForm Noncommercial**) | 🔴 **Nothing in paid work** | All commercial use without a separate licence from the holder |
+| 🔴 🆕 `The-Burnes-Center/a-iep` (**CC-BY-NC-4.0**) | 🔴 **Nothing in paid work.** Read it as a reference for parent-facing IEP explanation, build the deliverable from `dg13788/iep-system` | Any commercial use — and note it is the *best-maintained* special-education codebase on this base, which is what makes it dangerous |
+| 🆕 `HernanDiaz/moodle-local_aigrader` (**GPL-3.0-or-later**) | Deploy it as a **plugin inside the client's own Moodle** | Vendoring it into a studio deliverable |
+| 🟢 🆕 `jeffyding/OpenLRW` (**ECL-2.0** — permissive) | Anything, including forking — ECL-2.0 is Apache-2.0 with a narrowed patent grant | 🔴 Depending on it: **dead since January 2018.** Read the OneRoster↔Caliper↔xAPI schema, deploy `pelotech/xapi-lrs` |
+| 🔴 🆕 `shaheeranser/exam-proctor` (**Apache-2.0** — permissive) | Reading its LTI 1.3 wiring and AGS grade passback as a **reference architecture** | 🔴 Deploying it into an EU engagement as it stands: GDPR Art. 9 biometrics, and clear of the Art. 5(1)(f) prohibition only because one MediaPipe default is unset |
 
 **One-line version:** in education, the licence picks the architecture. Decide the
 boundary before the stack.

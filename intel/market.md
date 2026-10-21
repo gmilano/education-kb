@@ -6,11 +6,21 @@ updated: 2026-10-21
 
 # Education — market map and regional intelligence
 
-**Pass 358 · 2026-10-21.** Researched **2026-10-21**. Figures are attributed; where a
+**Pass 359 · 2026-10-21.** Researched **2026-10-21**. Figures are attributed; where a
 number comes from a vendor blog or a commercial research summary rather than a primary
 source, it says so. The
 regional sections below are deliberately symmetric: a North America or EMEA
 engagement should be as well served by this file as a LATAM one.
+
+🔵 **`p359` ran all four prescribed regional legs and they returned no fact this file did
+not already carry** — the **134 bills / 31 states**, `H.R. 8747`, the NYC moratorium,
+Canada's *AI for All*, the EU AI Act's 2 Aug 2026 enforcement date and 27 Jul 2026
+omnibus, the UK's £4 m programme, Vietnam's Decision 33/2026, Korea's AI Basic Act, the
+UNESCO IESALC **87 % / 74 %** pair, the LAC Observatory and the TALIS figures. 🟢 **Stated
+rather than passed over in silence, because an informed null result is the only thing that
+distinguishes a saturated channel from an unrun one.** What `p359` adds to this file is a
+**market-size spread** (below) and, for the first time, **regional supply placement
+derived from the commit channel** rather than from prose.
 
 ---
 
@@ -28,6 +38,36 @@ They are directionally consistent — a high-growth market in the $10 B range he
 toward the $40 B range — and should be used for framing, never quoted to a client as
 established fact. The *adoption* and *regulatory* figures below are substantially
 better sourced.
+
+### 🔴 🆕 `p359`: the spread between research firms is the number worth putting in a deck
+
+🟢 **One prescribed leg produced something this file lacked, and it is not a figure — it
+is the disagreement between figures.** Six commercial estimates for **the same market in
+the same year**, collected in one pass:
+
+| Firm | 2026 base | Forecast | CAGR |
+|---|---|---|---:|
+| Market Reports World | **$1.94 B** | $48.36 B by 2035 | 42.95 % |
+| TrendX Insights | $5.21 B *(2025)* | $61.26 B by 2034 | 31.50 % |
+| Precedence Research | **$9.58 B** | $136.79 B by 2035 | 34.52 % |
+| Research and Markets | **$10.6 B** | $42.48 B by 2030 | 41.5 % |
+| Grand View Research | **$11.4 B** | $57.2 B by 2033 | 25.9 % |
+| Technavio | — *(+$3.37 B increment)* | 2025–2030 | **45 %** |
+
+🔴 **The 2026 base figures differ by roughly 6×, and the CAGRs by 19 percentage
+points.** 🔵 Precedence states the cause plainly in its own summary: the figure depends on
+**where the market boundary is drawn and whether embedded AI revenue counts** — which is
+not a methodological footnote but the entire question. A platform that ships an AI
+feature inside an existing LMS licence either is or is not "AI in education" revenue, and
+that single choice spans most of the 6×.
+
+🟢 **The engagement consequence, which is the point of recording it.** A client deck that
+quotes one of these as *the* market size is making an unforced error that any analyst in
+the room can puncture. 🟢 **Quote the spread and the reason for it**: the market is
+growing fast, nobody agrees what it contains, and **the client's own addressable slice is
+the only number worth modelling.** 🔵 This base carries `$9.58 B → $42.48 B` as its
+framing figure and now carries the spread beside it, so the framing figure is never
+mistaken for a measurement.
 
 ## The structural shift of 2026
 
@@ -708,6 +748,37 @@ four localisations of a project — and the two rows this base verified this pas
 already embody it (`canvas-lms-student-mcp`'s read-only capability ceiling,
 `gradescope-mcp`'s `confirm_write` protocol) are both **MIT**. 🟢 The compliance story and
 the licence story point the same way for once.
+
+## 🆕 Regional supply placement — `p359`, from the commit channel
+
+🟢 **New instrument, and it answers a question this file could previously only answer for
+regulation.** Every address `p359` added was placed by reading committer timezones from
+`git log` over a blobless shallow clone — no API, no star count, no self-reported
+location. Sixteen new addresses:
+
+| Region | New addresses | Permissive among them | What they are |
+|---|---:|---:|---|
+| **APAC** | **7** | 3 | IEP management (China, `+0800`), IEP planning (Australia, `+1100`), IEP goals (Thailand, `+0700`), Moodle agent CLI (Hong Kong), proctoring platform (India), LTI proctoring tool, IRT-for-benchmarks (China) |
+| **EMEA** | **3** | 1 | Moodle AI grader (`+0200`), special-education RAG (Türkiye, `+0300`), IRT on PyTorch (Sweden) |
+| **North America** | **3** | 1 | Parent-facing IEP explainer, district IEP workflow *(dead since 2023)*, OneRoster warehouse *(dead since 2018)* |
+| **LATAM** | **2** | 0 | Brazilian education data *(BNCC/SAEB/SARESP)*, Brazilian pedagogical assistant |
+| 🟡 unplaceable | 1 | 1 | Commit stream splits `+0000` / `-0600` |
+
+🟢 **APAC leads the new supply, 7 to 3.** 🔵 That is the fourth independent corroboration
+of §15 of `intel/trends.md` — *APAC's "gap" is in the trade press, not in the supply* —
+and this time it arrives from legs that never named a region, which is a stronger form of
+the finding than a regional leg returning regional results.
+
+🔴 **And the regional reading of the licence gap does not survive the same table.** LATAM
+is 0 for 2, which looks like §19 confirmed — until North America is also **1 for 3** and
+EMEA **1 for 3**. 🟢 **The variable is producer type, not geography** — see §22 of
+`intel/trends.md`, where the full cross-tab sits.
+
+🟡 **One honest limit on the instrument.** A committer timezone places where the commits
+were *made*, not where the author is from or who the software serves: `elimu-mcp` serves
+Kenya on this base and commits from Europe, and `mcp-brasil` is placed LATAM on its
+subject matter. 🔵 Timezone is strong corroboration and weak attribution, and this file
+uses it as the former.
 
 ## Sources
 

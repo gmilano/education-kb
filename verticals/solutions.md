@@ -6,18 +6,24 @@ updated: 2026-10-21
 
 # Education — vertical platforms to customise with AI
 
-**Pass 358 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
+**Pass 359 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
 sense that Odoo is extensible for ERP or OpenMRS for healthcare. All verified first-hand
 **2026-10-21** (liveness + default branch via `git ls-remote --symref`, licence read
-from payload). 🔴 `p358` ran without an authenticated GitHub index (third consecutive
-pass), so it measured no stars; verification is unchanged.
+from payload). 🔴 `p359` ran without an authenticated GitHub index (fourth consecutive
+pass), so it measured no stars; verification is unchanged. 🟢 Every address on this shelf
+was part of a **236-address corpus liveness sweep: 236 live, 0 dead.**
 
-🟢 **`p358` puts a crack in this shelf's most expensive finding.** `p357` established
-that **there is no permissive education ERP** and priced a closed admin deliverable as a
-build. That remains the guidance. 🟡 But it is no longer true that *every* row on the
-administration tier is copyleft — see `Moha-abshir/SMS` below, and read the
-qualification with it, because the exception is small and the rule still holds at the
-scale an engagement needs.
+🟡 **`p358` put a crack in this shelf's most expensive finding** — `p357`'s *there is no
+permissive education ERP* — with `Moha-abshir/SMS`. That still stands, qualified: the
+exception is small and the rule holds at the scale an engagement needs.
+
+🔴 **`p359` adds a second kind of crack, and it is a warning rather than an
+opportunity.** This shelf has always separated rows by **licence reach**. `p359` found a
+row whose licence reach is **none** — stock MIT, organisation account, exactly the shape
+that ends a search — behind which there are **four commits**. 🟢 **So this pass adds a
+second column to the judgement this shelf exists to support: a permissive grant with no
+software behind it is not a platform**, and `verticals/solutions.md` is precisely where
+that mistake would be made. See the proctoring note below.
 
 The column that decides engagement shape is **Licence reach**: whether AI added on
 top can stay in a closed client deliverable, or whether the copyleft of the host
@@ -132,6 +138,60 @@ of a gap:
 | **Dolos** | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | 🟢 **MIT** | 🟢 **None** | Source-code plagiarism detection (Ghent). The integrity layer for AI-era programming courses — and newly relevant now that students submit agent-assisted code |
 | **UDOIT** | [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | GPL-3.0 | 🟡 Derivative if forked | Accessibility inspection of LMS course content. Directly serviceable against EU accessibility and US Section 508 obligations |
 | **scorm-again** | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 **MIT** | 🟢 **None** | Modern SCORM 1.2 / 2004 JS runtime. The bridge for the enormous installed base of legacy SCORM corporate content |
+| 🆕 **exam-proctor** | [shaheeranser/exam-proctor](https://github.com/shaheeranser/exam-proctor) | 🟢 **Apache-2.0** (`main/LICENSE`, read `p359`) | 🟢 **None** — 🔴 **but see the Art. 5 note: the binding constraint on this row is not its licence** | **An LTI 1.3 tool that launches from inside Moodle**, authors quizzes, guards the browser, passes grades back over AGS. Dockerised with MinIO + Caddy. 🟢 **The only proctoring row on this base that reaches the LMS over a protocol boundary.** 🔴 25 commits, **1 author**, 2026-07-05 → 2026-10-11. 🔴 **`p190` read its source: head pose, iris deviation and `face-api` identity checks — GDPR Art. 9, and clear of the Art. 5 prohibition by one unset default** |
+| 🆕 **openproct** | [OpenProct/openproct](https://github.com/OpenProct/openproct) | 🟢 MIT | 🟢 None | 🔴 **Not a platform — 4 commits, 2 authors, all on 2025-10-26, nothing since.** Listed only so a successor who finds "MIT, organisation account, privacy-first proctoring" does not stop here |
+
+### 🟡 `p359`: the permissive proctoring row that is *architecturally* different — and `Gap 344`'s survivor is still the right worry
+
+🔵 **State the record first, because the cheap version of this finding is already
+refuted.** `Gap 344` once claimed the proctoring tier had **zero permissive rows**;
+`P131-D` refuted that with four MIT addresses and recorded that **the gap survives as a
+maturity gap, not a licence gap** — largest 18 ★, all individually owned, none
+institution-backed. 🟢 **That framing still holds, and `p359` does not disturb it.**
+
+🟢 **What [`shaheeranser/exam-proctor`](https://github.com/shaheeranser/exam-proctor)
+adds is architecture, and `p359` adds its grant.** It is the only proctoring address on
+this base that is an **LTI 1.3 tool**: it launches from inside Moodle — a GPL-3.0 host —
+across the protocol boundary, authors quizzes in the tool, and passes grades back over
+AGS. 🔵 Compare the two first-party alternatives: `openedx/edx-proctoring` and
+`eLearning-BS23/moodle-quizaccess_proctoring` are **both AGPL plugins inside AGPL/GPL
+hosts** — correct for the host, wrong for a studio deliverable. The four MIT rows
+`P131-D` found are standalone web apps that do not reach a client's LMS at all.
+
+🟢 **`p359`'s contribution to this row is the licence and the placement, and nothing
+else about it is new to this base.** Its grant was never published here: **Apache-2.0,
+read from `main/LICENSE` this pass.** Commit channel: 25 commits, **1 author**, `+0800`
+and `+0500`, 2026-07-05 → 2026-10-11 → **APAC**.
+
+### 🔴 And the reason this row was read before and never shelved — which is the thing to quote, not the licence
+
+🔴 **`p190` read this repository's source at a pinned `HEAD` and found head pose
+(yaw/pitch), iris deviation and a `face-api` **identity consistency** check.** Its
+verdict, carried in `compose/code/p190-affect-inference-scan/`:
+
+- 🔴 **GDPR Art. 9.** Biometric identity checking is special-category processing. A
+  lawful basis under Art. 9(2) is required before a single frame is captured, and
+  "legitimate interests" is not one of them.
+- 🔴 **Clear of the EU AI Act Art. 5(1)(f) prohibition by one unset default.** MediaPipe's
+  `outputFaceBlendshapes` is not set, and it defaults to `false`. 🔴 **Setting that one
+  line moves the deliverable from a `2027-12-02` Annex III duty into a LIVE prohibition
+  at EUR 35 M or 7 % of worldwide turnover.**
+- 🔴 **Both face models are fetched at runtime** from `cdn.jsdelivr.net` and
+  `storage.googleapis.com` — so the model can change without the repository changing, and
+  no source review of the repo can see that.
+
+🟢 **So the recommendation is precise rather than enthusiastic.** `exam-proctor` is the
+**reference architecture** for LMS-integrated invigilation — read its LTI wiring, its AGS
+grade passback and its Docker topology. 🔴 **It is not a row to deploy into an EU
+engagement as it stands**, and the reason is a config default and a CDN fetch, not its
+Apache-2.0 grant. 🔵 Pattern 12 on `compose/patterns.md` already holds the
+process-evidence alternative for exactly this situation.
+
+🔴 **Read the integrity recommendation with all of it, because it has not changed.**
+Proctoring surveils the student; `dodona-edu/dolos` (MIT, Ghent University — 🟢 the one
+institution-backed integrity row) inspects what the submission *is*. 🟢 **`dolos` remains
+the first recommendation.** 🔵 And per §16 of `intel/trends.md`, invigilation is a
+requirement the detection market's own customers are increasingly withdrawing.
 
 ## 🆕 Code-execution and online-judge platforms
 
@@ -184,7 +244,18 @@ licences do not reach it:
 Moodle App (Apache-2.0)
 **Interop:** scorm-again · ltijs · pylti1.3 · CACCL · Marsha · ltiauthenticator (all MIT/Apache/BSD)
 **Content:** H5P CLI · Hyperbook · JupyterHub
-**Assessment:** Dolos · Ares2 · 🆕 **QingdaoU OnlineJudge** · 🆕 **QingdaoU Judger** · 🆕 **Otter-Grader**
+**Assessment:** Dolos · Ares2 · 🆕 **QingdaoU OnlineJudge** · 🆕 **QingdaoU Judger** · 🆕 **Otter-Grader** ·
+🆕 **shaheeranser/exam-proctor** (Apache-2.0 — 🟢 LTI 1.3, the only proctoring row that
+stays outside the host's copyleft; 🔴 **reference architecture only** — GDPR Art. 9, and
+clear of the Art. 5 prohibition by one unset MediaPipe default)
+**Learning records:** 🆕 **pelotech/xapi-lrs** · 🆕 **yetanalytics/lrsql** ·
+🆕 **adlnet/ADL_LRS** · 🆕 **Larissa** (all Apache-2.0) · 🆕 **DavidLMS/learnmcp-xapi**
+(MIT) · 🆕 **jeffyding/OpenLRW** (ECL-2.0 — 🔴 **schema only, dead since 2018**)
+**Psychometrics:** 🆕 **joakimwallmark/irtorch** (MIT, 🟢 live) · 🆕 **eribean/girth**,
+🆕 **girth_mcmc**, 🆕 **variational-IRT** (MIT, 🔴 all stale ≥4 years)
+**Special education:** 🆕 **dg13788/iep-system** (MIT) — 🔴 **one permissive row out of
+seven addresses measured; see `agents/top.md` §Special education before quoting this
+tier to a client**
 **Scheduling:** 🆕 py-fsrs · 🆕 fsrs4anki · 🆕 FSRS (algorithm)
 **Credentials:** Learner Credential Wallet
 **Curriculum data:** 🆕 **oak-curriculum-ontology** (OGL-3.0 data + MIT code — 🟢 the
