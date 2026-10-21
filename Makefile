@@ -35,6 +35,7 @@ FAMILY_LOG ?= /tmp/education-kb-gate-family-coverage.log
 PERMISSIVE_LOG ?= /tmp/education-kb-gate-permissive-arm.log
 TEMPLATE_LOG ?= /tmp/education-kb-gate-template-identity.log
 UNTITLED_LOG ?= /tmp/education-kb-gate-untitled-payload.log
+SHAPE_LOG ?= /tmp/education-kb-gate-address-shape.log
 SHELF_FILES ?= agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md compose/patterns.md
 FOLD_LOG ?= /tmp/education-kb-gate-fold-identity.log
 SCOPE_LOG ?= /tmp/education-kb-gate-grant-scope.log
@@ -47,7 +48,7 @@ DIGEST_LOG ?= /tmp/education-kb-gate-payload-digest.log
 #: built this.  So the register is evidence, and the gate reads it.
 ALIAS_REGISTER ?= evidence/alias-register.2026-10-20-p349.tsv
 
-.PHONY: gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census
+.PHONY: gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -72,7 +73,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-affero-rung gate-family-coverage gate-permissive-arm \
              gate-template-identity gate-untitled-payload gate-region-headings \
              gate-bespoke-title gate-fold-identity gate-grant-scope \
-             gate-alias-canonical gate-author-key gate-payload-digest
+             gate-alias-canonical gate-author-key gate-payload-digest \
+             gate-address-shape
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -357,11 +359,23 @@ gate-payload-pin: ## p307 — the three-valued grant classifier (GRANT / POINTER
 	@cd compose/code/p307-payload-pin && { $(PY) test_probe_p307.py > $(PAYLOAD_LOG) 2>&1 || { echo "🔴 p307-payload-pin FAILED — the suite's own report follows:" ; sed "s/^/   /" $(PAYLOAD_LOG) ; false ; } ; } && echo "── p307-payload-pin (9 controls: the wrapped Apache clause, GPL-2.0-not-LGPL, GPL-3.0-not-AGPL-3.0, BSD-3-not-BSD-2, p305's reserved grant, p306's two pointer classes)" && echo "   PASS" || exit 1
 
 gate-shelf-consistency: ## p308 — ACTION p307-R item 1: no slug may carry disagreeing licence cells across the live shelves
-	@cd compose/code/p308-shelf-consistency && { $(PY) -I test_shelf_consistency.py > $(SHELF_LOG) 2>&1 || { echo "🔴 p308-shelf-consistency/controls FAILED — the suite's own report follows:" ; sed "s/^/   /" $(SHELF_LOG) ; false ; } ; } && echo "── p308-shelf-consistency (52 controls: AGPL≠GPL, correction tables, retractions, comparators, possessives, quoted claims, dual grants, paired rows, scoped absences)" && echo "   PASS" || exit 1
+	@cd compose/code/p308-shelf-consistency && { $(PY) -I test_shelf_consistency.py > $(SHELF_LOG) 2>&1 || { echo "🔴 p308-shelf-consistency/controls FAILED — the suite's own report follows:" ; sed "s/^/   /" $(SHELF_LOG) ; false ; } ; } && echo "── p308-shelf-consistency (59 controls: AGPL≠GPL, correction tables, retractions, comparators, possessives, quoted claims, dual grants, paired rows, scoped absences, p351's SCOPED THIRD-PARTY grant)" && echo "   PASS" || exit 1
 	@{ $(PY) -I compose/code/p308-shelf-consistency/shelf_consistency.py . > $(SHELF_LOG) 2>&1 || { echo "🔴 p308-shelf-consistency/live FAILED — the disagreeing cells follow:" ; sed "s/^/   /" $(SHELF_LOG) ; false ; } ; } && echo "── p308-shelf-consistency (the live shelves, compared to EACH OTHER)" && echo "   PASS" || exit 1
 
 shelf-census: ## p308 — where the DATED shelves disagree with the live answer.  A backlog, never a failure.
 	@$(PY) -I compose/code/p308-shelf-consistency/shelf_consistency.py . --census || true
+
+# 🔴 p351 — `ACTION ZZ-an`.  Every identity instrument here quotes its coverage against
+# the harvested address count, and that count was inflated with things that are not
+# addresses: GitHub navigation paths, an ellided owner left by a URL written in prose,
+# and a codegen template variable.  Offline, no network: this separates *cannot be an
+# address* from *may be an address*, and nothing more.
+gate-address-shape: ## p351 — ACTION ZZ-an: the harvested denominator rejects non-addresses by shape
+	@cd compose/code/p351-address-shape && { $(PY) -I test_address_shape.py > $(SHAPE_LOG) 2>&1 || { echo "🔴 p351-address-shape FAILED — the suite's own report follows:" ; sed "s/^/   /" $(SHAPE_LOG) ; false ; } ; } && echo "── p351-address-shape (22 controls: p350's 8 non-addresses, the 5 ZZ-an's own prescription misses, both arms load-bearing, the awkward-but-legal addresses that must survive)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p351-address-shape/address_shape.py census $(SHELF_FILES) | sed "s/^/   /"
+
+address-shape-census: ## p351 — every rejected shape with its class.  A backlog, never a failure.
+	@$(PY) -I compose/code/p351-address-shape/address_shape.py reject $(SHELF_FILES) || true
 
 # 🔴 ONLINE half — one `git ls-remote` per slug, and it CALIBRATES FIRST.  OUT of `hooks`.
 # An uncalibrated read of this channel is exactly what produced p292's "inconclusive" row, so

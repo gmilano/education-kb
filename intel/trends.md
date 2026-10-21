@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 351 · 2026-10-21 — four trends, and the load-bearing one reverses a deadline this base sold an engagement on last pass: EMEA's live education AI deadline is **six weeks away and it is not the one on these shelves**. Also: a dataset's own version string is the least reliable field in it, and an identity oracle built on redirects can only ever say YES
+
+**Evidence:** [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv) · [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv) · [`address-shape-rejects`](../evidence/address-shape-rejects.2026-10-21-p351.tsv)
+
+### 🔴 `T48` — EMEA's Annex III education deadline MOVED, `p350` published the old one, and the deadline that is actually live is a different article
+
+🔴 **This base has been publishing two incompatible EMEA dates, and a client would have planned against the wrong one.** `p345` recorded Regulation (EU) **2026/1744** deferring **Annex III** education high-risk from **2026-08-02** to **2027-12-02**. `p350` then published *"the AI Act's high-risk obligations reach admissions and assessment from August 2026 on the Commission's own dating"* and built an opportunity on it: *"90 % of the market is non-conformant against a live deadline."*
+
+🟢 **`p345` was right. `p350` was wrong, and the error is withdrawn here.** On secondary convergence across five independent commentaries this pass: Regulation (EU) **2026/1744** — the *Digital Omnibus on AI* — was published in the **OJ on 2026-07-24** and entered into force **three days later (2026-07-27)**. It moves the **standalone Annex III** date, education uses included, from **2026-08-02** to **2027-12-02**. Annex I products move to **2028-08-02**.
+
+🔴 **The mechanism behind the contradiction, because it will recur.** *"AI Act enforcement began 2026-08-02"* and *"Annex III education obligations were deferred to 2027-12-02"* are **both true and not in conflict** — the enforcement machinery started on schedule while the Annex III *obligations* were pushed back. **Secondary guides collapse the two**, and that collapse is what put two dates on these shelves. 🔴 **It cannot be settled here on primary text:** `eur-lex.europa.eu` and `digital-strategy.ec.europa.eu` are **`connect_rejected` at this session's egress proxy** — not a flaky server but a standing policy, so **every EU legal date on these shelves is secondary-sourced by construction.**
+
+🟢 **And here is the part that matters commercially, which neither `p345` nor `p350` put on the shelf.** The deferral is not a reprieve:
+
+- 🔴 **Article 50 transparency duties were NOT deferred**, and the grace period for marking content from systems **already deployed** ends **2026-12-02** — **six weeks after this pass.** That is the live EMEA deadline.
+- 🟢 **Article 27**'s fundamental-rights impact assessment is **unchanged**.
+- 🟢 **Annex III still classifies** admissions screening, evaluation of learning outcomes, assignment of educational level and **exam monitoring** as high-risk. The duty is **dated later, not removed** — and one source names the trap directly: *"December 2027 is not a snooze button."*
+- 🟡 Sources **disagree** on whether **Article 4** (AI literacy) had its scope relaxed or is already live. **Published as disputed**, not resolved.
+
+🔵 **So the EMEA engagement is re-shaped, not cancelled:** sell the **Article 50 transparency and content-marking kit against 2026-12-02**, and the **Annex III conformance programme against 2027-12-02** — in that order. `p350`'s *"live deadline"* framing is replaced in `intel/market.md`.
+
+### 🔴 `T49` — a dataset's `version` field is the least reliable field in it, and the fix is a digest
+
+🔴 **Measured on a row this base already held.** `withmarbleapp/os-taxonomy` carries `taxonomyVersion: "v1"` today, as it did when `p326` shelved it. Under that unchanged label: topics **1 591 → 1 616**, prerequisite edges **3 225 → 3 317**, curricula **seven → 8**, curriculum standards **3 261 → 3 881**, topic↔standard links **2 189 → 3 214 (+47 %)**. The manifest's `generatedAt` is **2026-10-20T20:52:33Z** — regenerated **the day before this pass**. Three distinct bodies of data — this base's `p326` read, a listicle's *"1,590 / 3,221"* this pass, and today's payload — **all called `v1`.**
+
+🟡 **Why this is a trend and not one sloppy repository.** `aclascollege/polymath`, a different owner in a different region, ships the **same manifest convention**: `taxonomyVersion: "v1"`, `generatedAt`, per-file SHA-256. **Regenerate-in-place under a stable label is becoming the norm for open curriculum data**, because these are *generated* artefacts with a pipeline behind them, not releases cut by hand. A **software** dependency pinned at `v1` is reproducible; a **data** dependency pinned at `v1` is not.
+
+🟢 **And the sector is already solving it, in the same files.** Both repositories ship **SHA-256 per file**, and Marble uses its own digest internally — the research export carries `topicFileSha256` matching `files["topics.json"].sha256`. 🔵 **So the rule for this base and for any product built from these shelves: pin curriculum data by DIGEST plus `generatedAt`, never by its version string.** This is the data-layer sibling of this base's own convention that artefacts are dated by measurement, never by commit.
+
+🔴 **The consequence for a shipped product, stated plainly:** a tutor whose prerequisite ordering comes from `v1` will silently change behaviour when the upstream regenerates — **92 new edges appeared in this one** — and nothing in the dependency declaration will have changed.
+
+### 🔵 `T50` — an identity oracle built on redirects is POSITIVE-ONLY, and four passes of instruments did not notice
+
+🟢 **`ACTION ZZ-am` was answered this pass and refuted its own premise.** It asked this base to *"prove or refute identity"* for six addresses. On the reopened `git ls-remote` channel, **all six stale addresses return `fatal:`** while five of six canonical candidates answer.
+
+🔵 **The asymmetry is structural, not a limitation of effort.** GitHub serves a rename or transfer as a **redirect**, so `ls-remote` answers at the stale address with the canonical HEAD — which is exactly how `edx/ease` ≡ `openedx/ease` was proven at `056da0ad…`. An address that was **deleted or never existed** returns nothing, so **there is no HEAD to compare.** The oracle can say *"these two are one repository"*; it can **never** say *"these two are not."*
+
+🔴 **Why it matters beyond this base.** `p350` replaced HEAD-equality with the search index's immutable numeric `id`, calling the `id` *"identity"* against HEAD's *"proxy for identity"*. **Both share this hole**: an `id` exists only where a repository exists. So **every identity instrument on these shelves is a positive-only oracle**, and *"no alias found"* has never been a finding — it is the absence of one. `p349` declared this for its name pre-filter as a cost-reduction hole; it is **general**, and it reaches the `id` too.
+
+🟡 **Registered as `ACTION ZZ-as`** — try the payload-digest channel, which compares *trees that do answer* and can therefore refute a coincidence of name on **evidence** rather than on absence.
+
+### 🔴 `T51` — the next licence-shaped risk in education data is NOT a licence: it is PROVENANCE
+
+🟢 **A new axis, found on a new row and invisible to all 84 family classifiers on these shelves.** `aclascollege/polymath` is cleanly licensed — ODbL-1.0 on the database, CC-BY-SA-4.0 on the text, both commercially usable with attribution. **Nothing is wrong with its grant.** Its `PROVENANCE.md` says the course names, descriptions, learning outcomes, degree compositions and prerequisites are *"synthesized"* and *"modeled on typical"* requirements — and that **career profiles, salary bands and growth outlooks are *"synthesized from BLS OOH, O\*NET, and industry reports."***
+
+🔴 **A licence classifier reading that repository returns `ODbL-1.0` and is completely correct and completely useless.** The question a studio needs answered is not *may I ship this* but ***is this true***, and the two are orthogonal. A careers product shipping Polymath's salary bands ships **synthesised salaries under a permissive licence** — a reputational and arguably consumer-protection exposure that **no grant check reaches.**
+
+🔵 **Education makes this sharper than other industries**, because its data layer is increasingly *generated* rather than observed: curriculum graphs distilled by models from standards documents, teaching-research records synthesised from literature, prerequisite edges inferred rather than registered. **A permissive licence on generated data is a permission to redistribute, not a warranty of fact.**
+
+🟢 **The honest practice both of this pass's data rows demonstrate, and the one to demand:** Marble **names the 567 topics it has no research for, by id**, and declares `excluded: ['embeddings', 'child mastery beliefs (PII)', 'visualizations']`; Polymath **declares which fields are synthesised, field by field**. 🟢 **A curriculum dataset that ships a `PROVENANCE.md` separating authored from extracted from synthesised is doing the thing this axis needs, and this base should prefer those rows over better-starred ones that do not.** 🟡 Registered as **`ACTION ZZ-at`** — add a **provenance column** to the data-layer rows (`authored` / `extracted` / `synthesised` / `undeclared`), read from `PROVENANCE.md` where one exists, and record `undeclared` as the risk state it is.
+
 ## Pass 350 · 2026-10-21 — four trends, and the load-bearing one is that an industry KB's identity layer is where its errors concentrate: this pass corrected its own published denominator, found 8 of 17 "dead repositories" were never repositories, and replaced its identity key
 
 **Evidence:** [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)

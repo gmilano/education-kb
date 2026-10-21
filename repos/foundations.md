@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 351 · 2026-10-21 — the biggest finding on this shelf is about a row it already holds: **`taxonomyVersion: v1` is not a version.** Every count this base published for `withmarbleapp/os-taxonomy` has moved under an unchanged label, the repository regenerated itself the day before this pass, and the correct pin is in the repository already. One genuinely new row, and it is 94 courses wearing a knowledge graph's description
+
+**Evidence:** [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`address-shape-rejects`](../evidence/address-shape-rejects.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv)
+
+🟢 **Channel note, carried from `agents/top.md` so this shelf reads alone:** `make hooks` **RAN** (28/29 on arrival, one RED, **30/30** on exit). `git ls-remote`, `git clone` and the `git log` **commit stream are all OPEN**, so region placement by `%ae` and timezone is available and used below. Licences are read **payload-first** on `raw.githubusercontent.com` (200). 🔴 `api.github.com` and `github.com` are **403**, so **no star or fork figure below is first-hand** — each is labelled *carried*.
+
+### 🔴 `withmarbleapp/os-taxonomy` — this shelf's own numbers are stale, and the mechanism will stale them again
+
+This base shelved the row at `p326` with a correct three-way licence read. 🔴 **Every quantity in it has since moved, and the version label did not.**
+
+| cell | this shelf (`p326`) | `data/manifest.json` + payload, **2026-10-21** | Δ |
+|---|---:|---:|---|
+| micro-topics | 1 591 | **1 616** | **+25** |
+| prerequisite edges | 3 225 | **3 317** | **+92** |
+| curricula | *seven* | **8** | **+1** |
+| curriculum standards | 3 261 | **3 881** | **+620** |
+| topic↔standard links | 2 189 | **3 214** | **+1 025** (+47 %) |
+| teaching-research coverage | 1 051 covered / 540 not | **1 049 covered / 567 not** | −2 / **+27** |
+| `taxonomyVersion` | `v1` | 🔴 **`v1` — UNCHANGED** | — |
+| `generatedAt` | — | **2026-10-20T20:52:33.520Z** | regenerated **the day before this pass** |
+
+🔴 **So `v1` has denoted at least three different datasets.** This shelf's `p326` read (1 591 topics), the discovery leg's listicle this pass (*"1,590 micro-topics … 3,221 prerequisite dependencies"*), and today's payload (**1 616 / 3 317**) are three distinct bodies of data **all labelled `v1`**. A citation of *"Marble Skill Taxonomy v1"* — in a paper, a shelf cell or a client deliverable — **pins nothing.**
+
+🟢 **The fix is already in the repository, and it is the repository's own practice.** `data/manifest.json` ships **`generatedAt`** plus a **SHA-256 per file**, and the dataset uses its own digest internally: the `teachingResearch` export carries `topicFileSha256: 525aa943165f57c02b7e69fd6160ed8fc8263501b7893f1ec681ca9590d19cfd`, which **matches** `files["topics.json"].sha256`. The authors bind their own artefacts by digest; a consumer should too.
+
+🟢 **The pin this base will cite from now on** — `topics.json` @ `525aa943…d19cfd`, manifest `generatedAt` **2026-10-20T20:52:33.520Z**, **1 616 topics / 3 317 edges**. 🔵 Which is this base's own convention — *artefacts are dated by MEASUREMENT, never by commit* — extended one step: **a third-party dataset is pinned by DIGEST, never by its own version string.**
+
+🟢 **Two further facts from the manifest that no listicle carries and a client will ask about.** (1) `excluded` reads **`['embeddings', 'child mastery beliefs (PII)', 'visualizations']` — the dataset deliberately withholds PII**, and says so in machine-readable form. That is a real procurement answer. (2) The research export **names the 567 topics it does not cover**, by id, rather than reporting coverage as a percentage — so a tutor built on it can refuse to claim research backing it does not have.
+
+🟡 **Region, now placeable: EMEA by commit stream, with the holder DISAGREEING.** 49 of 54 commits at **+01:00**, 4 at +02:00, 1 at +03:00; author domains `gmail.com` (47) and `withpebble.com` (7); span **2026-07-08 → 2026-10-20**. 🔴 **But the attribution line names `Generative Spark, Inc.`** — a US corporate form naming **no country**. So **authorship is EMEA on the commit channel and holder jurisdiction is UNRESOLVED**, and the two channels are published disagreeing rather than averaged into one wrong answer.
+
+### 🟢 NEW ROW — `aclascollege/polymath`, and the honest headline is its SIZE
+
+| Row | Grant, payload-first today | Substance, first-hand | Region |
+|---|---|---|---|
+| [`aclascollege/polymath`](https://github.com/aclascollege/polymath) | 🟢 **ODbL-1.0** (`LICENSE`, first line `## ODC Open Database License (ODbL)`) for **the database**; 🟢 **CC-BY-SA-4.0** (`LICENSE-CONTENT`, first line `Attribution-ShareAlike 4.0 International`) for **the authored text**. Both **commercially usable with attribution**; share-alike binds a *derivative database*, not a *produced work* | `data/manifest.json`: `taxonomyVersion` **`v1`**, `generatedAt` **2026-07-13T11:41:22Z**, per-file SHA-256. Counts: 🔴 **15 disciplines · 94 courses · 90 prerequisites · 5 degrees · 59 skills · 28 careers · 4 frameworks**. 14 commits | 🟢 **APAC, placed by commit stream** — 12 of 14 commits from **`aclas.college`**, **14 of 14 at +08:00**. 🟡 Country **NOT named**: the holder line reads `ACLAS College` with no jurisdiction |
+
+🔴 **Read the counts before the description.** The repository presents itself as *"Open higher education taxonomy and curriculum knowledge graph: university courses, prerequisites, degree pathways, skills, careers, ECTS, US credits, ISCED-F and CIP codes"*, and the discovery leg repeated that framing. **It is 94 courses and 5 degrees.** Against `os-taxonomy`'s 1 616 topics, **this is a SCHEMA with a demonstration payload, not a dataset** — and that is the single most important thing to tell a studio that found it in a listicle.
+
+🔴 **And its own `PROVENANCE.md` disqualifies the part that looks most valuable.** Verbatim: course names, descriptions, learning outcomes *"synthesized from standard university curricula"*; degree compositions *"modeled on typical degree requirements"*; prerequisites *"based on standard academic prerequisites observed"*; and — **the one to brief before anything else** — ***"Career profiles, salary bands, and growth outlooks — synthesized from BLS OOH, O\*NET, and industry reports."*** 🔴 **A careers product that ships Polymath's salary bands is shipping synthesised salaries.** The repository is honest about this in `PROVENANCE.md` and in a README note; **neither the licence nor any classifier on these shelves can see it.**
+
+🟢 **What IS real in it, and it is worth having.** The **ISCED-F 2013** mapping (UNESCO, **CC BY-SA 3.0 IGO**), the **CIP 2020** mapping (NCES, **US Government public domain**), and **EQF / AQF / US qualification-framework level mappings**. The repository says as much itself: *"The taxonomy structure, classifications, and mappings are the real substance."* **Use it as a crosswalk between qualification frameworks. Do not use it as a course catalogue.**
+
+🟢 **A lineage note, because this owner is already on these shelves and its POSTURE CHANGED.** `aclascollege/aegis-graph` — which this base holds, and which `p310` used as a licence-ladder fixture — is **`Attribution-NonCommercial 4.0 International`**, read payload-first today: **non-commercial, unusable for a client build.** `polymath` from the same owner is **ODbL + CC-BY-SA: commercially usable.** 🔵 The two are complementary **by the authors' own design**, not by this base's inference — `polymath`'s README reads *"❌ A K-12 skill taxonomy (that's [Marble](https://github.com/withmarbleapp/os-taxonomy)'s job)"* and carries a section headed *"Comparison with Marble Skill Taxonomy"*. **Marble is K-12, Polymath is higher education, and the same manifest convention (`taxonomyVersion` + `generatedAt` + per-file SHA-256) appears in both** — so the `v1` finding above applies to Polymath too, and its `generatedAt` has **not** moved since 2026-07-13.
+
+### 🟡 `haolpku/K12-KGraph` — the row is correct and gains one layer
+
+This shelf already splits it **MIT (code) / CC-BY-NC-SA-4.0 (data)** and already names the three checkpoints. Read payload-first today, the root `LICENSE` first line is **`Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)`**, © 2026 K12-KGraph Authors — **the data arm is confirmed NON-COMMERCIAL.**
+
+🟢 **The layer to add is the checkpoints' own grants, from the README's table:** `Llama3.1-8B-K12KGraph` is **Llama 3.1 Community Licence — NOT OSI**; `Qwen3.5-2B-K12KGraph` and `Qwen3-4B-K12KGraph` are **Apache-2.0**. 🔴 **Which produces a posture a studio must not resolve on its own:** the repository asserts **Apache-2.0 on two sets of weights fine-tuned on a NonCommercial dataset.** Whether the `NC` arm reaches the weights is **unsettled** — it is a question for counsel, and this base **publishes the conflict rather than picking a side.** 🟢 The safe reading for a commercial engagement: **treat the dataset as unusable and the weights as undecided.**
+
+🟢 **Region, now placed by commit stream: APAC, and the channel NAMES the jurisdiction.** 11 commits from **`stu.pku.edu.cn`** (Peking University), 5 from **`hust.edu.cn`** (Huazhong University of Science and Technology), **15 of 16 at +08:00**, span **2026-04-01 → 2026-09-28**. 🔵 `.edu.cn` is the holder-channel shape `p348` requires — it names the country, unlike `GegoSoft Technologies`. **Accepted to the NeurIPS 2026 Evaluations & Datasets Track**, announced September 2026.
+
+### 🟢 `ACTION ZZ-an` DISCHARGED — the denominator every identity instrument here is quoted against
+
+`p350` found 8 of 17 `UNANSWERED` addresses were never addresses and registered `ZZ-an` to republish the **2 462**-address denominator. Built as `compose/code/p351-address-shape`, **offline, 22 controls, standing in `make hooks`**.
+
+| cifra | valor |
+|---|---:|
+| harvested folded shapes | **2 476** |
+| rejected — **not addresses** | **33** |
+| **addresses, corrected** | **2 443** |
+| inflation | **1.33 %** |
+
+🔴 **`ZZ-an`'s own prescription is insufficient, and that is the finding.** It asked for a filter rejecting `topics/`, `orgs/`, `repos/`, `trending/` and placeholder owners. Scored shelf-wide in [`address-shape-rejects`](../evidence/address-shape-rejects.2026-10-21-p351.tsv), that rejects **28 of 33** and misses **five**, in three classes: **`search/repositories`** — a fifth namespace it did not name; **`.../archive`, `.../blob`, `.../releases`** — an **ellided owner**, left behind when prose writes a URL as `github.com/.../blob/main/LICENSE`; and **`GIT_USER_ID/GIT_REPO_ID`** — the **swagger/openapi-generator template variable**, which is not a placeholder *word* and which no list of `your-`/`example-` prefixes reaches.
+
+🟡 **Both arms are load-bearing and the README says so.** GitHub's own naming rule needs no foresight and reaches **6** of the 33 (`...` fails on the dot, `git_user_id` on the underscore, an empty component on length); the namespace and placeholder lists reach the other **27**, and are needed because **`topics/education` passes GitHub's rules outright — legality is not repository-hood.** Reporting only the shape rule would have read more elegantly and missed 27 shapes.
+
+🔵 **What 2 443 is NOT.** No network call is made. A legal shape is not a live repository. **A pass that reads 2 443 as a coverage figure has overclaimed in exactly the way `ZZ-an` was registered to stop.**
+
 ## Pass 350 · 2026-10-21 — the compliance-vocabulary thesis p349 proved now has a single repository that embodies it: 16 jurisdictions of PII recognisers under MIT, with a human approval gate. And England's national curriculum ships as an ontology whose one licence file grants TWO licences by path
 
 **Evidence:** [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv) · [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)

@@ -4,6 +4,43 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 351 — the week's agent-layer movement is NOT a release: it is that three measurement channels reopened, and the first thing they measured was this base's own gate accusing its own shelf wrongly. The prescribed discovery legs returned listicles for the SEVENTH consecutive pass, and the search engine said so in its own words
+
+**Evidence:** [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv) · [`address-shape-rejects`](../evidence/address-shape-rejects.2026-10-21-p351.tsv) · [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv)
+
+🟢 **`make hooks` RAN** after refusal at `p343`, `p344`, `p346` and `p350` — **28/29 on arrival (one RED), 30/30 on exit.** 🟢 **`git ls-remote`, `git clone` and the `git log` commit stream are all OPEN**, reversing `p350`'s three closures; four rows were placed by commit stream this pass. 🔴 `api.github.com` / `github.com` **403** — **no star figure below is first-hand**; each is labelled carried. 🔴 EU primary legal hosts: **`connect_rejected` at the egress proxy** — a standing policy, so EU dates are secondary-sourced by construction.
+
+### 1. 🔴 What the prescribed agent legs returned, written down rather than left as apparent coverage
+
+| leg | yield | note |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 education-specific agents** | The engine's own words: *"the search didn't turn up an education-specific ranking of MIT-licensed agents."* Named instead: OpenClaw, opencode, OpenHands, CrewAI, LangGraph, Hermes — general-purpose, already shelved or out of scope |
+| `github trending education AI 2026` | 🟡 **1 education row, already shelved** | *"the search didn't turn up a clean 'trending in education' list."* The one education hit was **`withmarbleapp/os-taxonomy`** — which this base has held since `p326`, and whose numbers the listicle got **wrong** (see §3) |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0 new** | Ninth consecutive listicle. OpenEduCat and ERPNext already shelved; the leg itself warned *"I did not cross-check them"* on its own licence claims |
+| `AI education industry trends 2026` | 🟢 **narrative, no rows** | Consolidation-and-governance framing; useful for `intel/trends.md`, no repository |
+
+🔴 **So: NO new education-specific AGENT this pass.** The three repositories this pass found are **curriculum data, not agents**, and they are shelved in `repos/foundations.md`. **An agent shelf that grows on a pass whose agent legs returned nothing has stopped being a measurement**, so it did not grow.
+
+### 2. 🟢 The actual agent-layer news: an identity channel reopened and answered two standing actions
+
+🟢 **`ACTION ZZ-al` RESOLVED.** `edx/ease` and `openedx/ease` both answer `ls-remote` at **`056da0adc6f351789d8e477b5ebec4f6db610c36`** — **one repository, two addresses.** `p350` could not resolve this because the search index answered for **neither**; the channel that names it is `ls-remote`, which follows GitHub's rename redirect. 🔴 The canonical **direction** is still not instrument-proven — `git` follows the redirect silently — and is registered as `ACTION ZZ-ar`.
+
+🔴 **`ACTION ZZ-am` ANSWERED and its premise REFUTED.** All six of `ZZ-aj`'s `NAME-ALIVE-OWNER-ABSENT` addresses return **`fatal:`**: `apereo/opencast`, `epesi-team/epesi`, `gegok12/gegok12`, `fh-yarbouh/oak-curriculum-ontology`, `tuanha/vgu-mcp`, `concentricsky/badgr-server`. 🔵 **The instrument lesson, now general: this oracle is POSITIVE-ONLY.** A rename redirects, so both addresses answer and equality proves identity; a deleted or never-existent address returns nothing and there is **no HEAD to compare**. It can prove *"these are one"*; it can **never** prove *"these are two."* `p350`'s immutable `id` shares the hole — an `id` exists only where a repository does.
+
+🟢 **Two aliases proven as a by-product.** [`IMSGlobal/openbadges-validator-core`](https://github.com/IMSGlobal/openbadges-validator-core) ≡ [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) at `0a66b52a…` — the standards-layer steward change `p349` inferred from names, now **proven on addresses**. And `microsoft/presidio` ≡ `data-privacy-stack/presidio` at `4f0e236e…`, **independently confirming `p350`'s `id`-based call on a channel that shares no mechanism with it.**
+
+🔴 **One correction to a published classification.** `concentricsky/badgr-server` was recorded by `ZZ-aj` as `NAME-ALIVE-OWNER-ABSENT`. **No live `badgr-server` answers at `concentricsky`, `instructure`, `1EdTech` or `IMSGlobal`.** No shelf carries the row, so nothing is retracted — but the label was wrong.
+
+### 3. 🔴 The week's sharpest finding is about a row this base already held, and it is a trap for every KB
+
+🔴 **`withmarbleapp/os-taxonomy` regenerated itself on 2026-10-20 — the day before this pass — and kept the label `v1`.** Against this base's `p326` read: topics **1 591 → 1 616**, prerequisite edges **3 225 → 3 317**, curriculum standards **3 261 → 3 881**, topic↔standard links **2 189 → 3 214 (+47 %)**. The discovery leg's listicle quoted a **third** set (*1 590 / 3 221*). **Three distinct datasets, all called `v1`.**
+
+🟢 **The fix is in the repository already:** `data/manifest.json` ships `generatedAt` and a SHA-256 per file, and Marble binds its own research export to `topicFileSha256` matching `files["topics.json"].sha256`. 🔵 **Pin curriculum data by DIGEST plus `generatedAt`, never by its version string** — the data-layer sibling of this base's rule that artefacts are dated by measurement, never by commit. Recipe `P40` in `compose/patterns.md`.
+
+### 4. 🟢 `ACTION ZZ-an` DISCHARGED — the denominator behind every identity claim on these shelves
+
+**2 476** harvested shapes → **33** are not addresses → **2 443 addresses**, 1.33 % inflation. 🔴 **`ZZ-an`'s own prescription rejects 28 of 33 and misses five**: `search/repositories` (a fifth namespace it did not name), three **ellided owners** (`.../archive`, `.../blob`, `.../releases` — left by a URL written in prose), and **`GIT_USER_ID/GIT_REPO_ID`**, the swagger template variable that no placeholder-*word* list reaches. Standing as `gate-address-shape`, 22 offline controls, in `make hooks`.
+
 ## 2026-10-21 · Pass 350 — the week's agent-layer movement is an ORG TRANSFER of an 87 252-star tool and two new MIT tutor rows; the prescribed discovery leg returned listicles for the SIXTH consecutive pass, and four of its five best hits were already on this shelf
 
 **Evidence:** [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)

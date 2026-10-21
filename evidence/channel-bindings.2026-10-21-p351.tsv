@@ -1,0 +1,9 @@
+channel	verdict	detail	consequence_for_this_pass
+make hooks (repo instruments)	RAN	28/29 green on arrival, one RED: gate-shelf-consistency. 30/30 after this pass's fix	gate state JUDGED for the first time since p342; p350's UNJUDGED is resolved
+git ls-remote (arbitrary repos)	OPEN	moodle/moodle HEAD b7260e59 answered on first probe	HEAD-equality channel REOPENED; ACTION ZZ-al and ZZ-am both answerable
+git clone --depth (arbitrary repos)	OPEN	oaknational, withmarbleapp, aclascollege, haolpku all cloned shallow	commit-stream channel REOPENED; region placement by %ae + timezone available again
+git log author/timezone channel	OPEN	%ae domain tally and iso-strict timezone tally both derived	four rows placed by commit stream this pass, named row by row
+raw.githubusercontent.com	200	licence payloads read first-hand on every row added below	every licence below is payload-first, not classifier-derived and not README-derived
+api.github.com	403	proxy refuses	no star, fork or created_at figure is first-hand this pass; none is published as such
+github.com (HTML)	403	proxy refuses	no star count re-derived; p350's star figures carried forward and LABELLED as carried
+authenticated search index	NOT USED	the git channel answered, so the weaker channel was not needed	immutable numeric id (p350's identity key) NOT re-derived this pass

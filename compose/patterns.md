@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 351 · 2026-10-21 — two recipes, and both are things a studio does to a dependency rather than with it: **pin the curriculum by digest** because its own version string moves under it, and **ship the Article 50 transparency kit against 2026-12-02** because that is EMEA's live deadline and not the one this base published last pass
+
+**Evidence:** [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv)
+
+---
+
+## `P40` — Pin the curriculum by DIGEST, not by `v1`
+**Time**: 3–5 days inside any existing tutor engagement | **Licences**: ODbL-1.0 + CC-BY-SA-4.0 (data), MIT (the pinning code you write)
+
+🔴 **The failure this prevents, measured on this base's own shelf.** `withmarbleapp/os-taxonomy` carries `taxonomyVersion: "v1"` today and carried `v1` when `p326` shelved it. Between those two reads its prerequisite edges went **3 225 → 3 317** and its topic↔standard links **2 189 → 3 214**. **A tutor whose prerequisite ordering comes from "v1" silently re-orders when the upstream regenerates, and nothing in its dependency declaration changes.** The manifest was regenerated **2026-10-20T20:52:33Z** — the day before this pass.
+
+**Wire it like this.**
+
+```python
+# curriculum_pin.py — MIT.  The whole recipe is ~40 lines; this is the load-bearing half.
+import hashlib, json, pathlib, sys
+
+# 🟢 The pin is the DIGEST + generatedAt, never the version string.
+PIN = {
+    "source":      "withmarbleapp/os-taxonomy",
+    "generatedAt": "2026-10-20T20:52:33.520Z",
+    "files": {
+        # from data/manifest.json -> files[name].sha256
+        "topics.json": "525aa943165f57c02b7e69fd6160ed8fc8263501b7893f1ec681ca9590d19cfd",
+    },
+    # Recorded so a drift report can say WHAT changed, not just that something did.
+    "counts": {"topics": 1616, "dependencies": 3317, "topicStandardLinks": 3214},
+}
+
+def verify(data_dir):
+    """Refuse to boot on an unpinned curriculum.  Fail CLOSED."""
+    d = pathlib.Path(data_dir)
+    man = json.loads((d / "manifest.json").read_text())
+
+    # 🔴 Check generatedAt BEFORE the digests: it names the regeneration, and it is
+    #    the field that actually moves.  `taxonomyVersion` is NOT checked at all --
+    #    it is `v1` on both sides of every drift this base has measured.
+    if man["generatedAt"] != PIN["generatedAt"]:
+        raise SystemExit(
+            f"curriculum drifted: manifest generatedAt={man['generatedAt']} "
+            f"pinned={PIN['generatedAt']} (taxonomyVersion is {man['taxonomyVersion']} "
+            f"on BOTH sides -- the label is not a version). "
+            f"counts now={man['counts']} pinned={PIN['counts']} -- "
+            f"re-run the prerequisite-ordering tests before re-pinning.")
+
+    for name, want in PIN["files"].items():
+        got = hashlib.sha256((d / name).read_bytes()).hexdigest()
+        if got != want:
+            raise SystemExit(f"{name}: sha256={got} pinned={want}")
+
+        # 🔵 The manifest's own digest is checked against the PAYLOAD too, not just
+        #    against the pin -- a regenerated manifest can disagree with its files.
+        claimed = man["files"][name]["sha256"]
+        if claimed != got:
+            raise SystemExit(f"{name}: manifest claims {claimed}, payload is {got}")
+
+if __name__ == "__main__":
+    verify(sys.argv[1] if len(sys.argv) > 1 else "data")
+    print("curriculum pinned OK")
+```
+
+🟢 **Then the three things that make it an engagement rather than a script.**
+
+1. **Fetch at build time, never vendor.** ODbL's share-alike binds a *Derivative Database*; a **produced work** — the tutor — stays the client's. Vendoring the JSON into the product repo is what starts the argument about whether you have made a derivative database. `repos/foundations.md` has carried this shape since `p326`; `P40` adds the digest.
+2. **Carry the attribution into the product, not just the pipeline.** ODbL **requires** it: *"Marble Skill Taxonomy (v1) · © Generative Spark, Inc. (Marble) · https://withmarble.com · licensed under ODbL 1.0 (database) and CC BY-SA 4.0 (content)."* 🔴 **And do NOT treat `data/curriculum-standards.json` as covered by either** — `PROVENANCE.md` states Marble *"cannot relicense"* it; UK National Curriculum arrives **OGL v3.0** and Common Core under the **purpose-limited CCSS Public License**. Three grants, one repository.
+3. **Gate on the 567.** The research export **names, by id, the 567 topics it has no teaching research for**. Wire that list into the tutor so it **declines to claim research backing** on those topics rather than generating one. This is the cheapest trust feature in the whole pattern.
+
+🟡 **Same recipe, `aclascollege/polymath`** (`generatedAt` **2026-07-13T11:41:22.054Z**, per-file SHA-256, same manifest convention) — **but use it only as a qualification-framework crosswalk** (ISCED-F 2013, CIP 2020, EQF, AQF). 🔴 Its courses, degrees, careers and **salary bands** are declared *"synthesized"* in its own `PROVENANCE.md`: **94 courses, 5 degrees.** Shipping its salary data as fact is the `T51` exposure, and no licence check catches it.
+
+---
+
+## `P41` — The EMEA Article 50 transparency kit, due 2026-12-02
+**Time**: 4–6 weeks | **Licences**: Apache-2.0 / MIT throughout
+
+🔴 **Why this replaces `p350`'s EMEA recipe framing.** `p350` built its EMEA pitch on Annex III high-risk obligations landing **2026-08-02**. **They land 2027-12-02** — Regulation (EU) 2026/1744, in force 2026-07-27. 🟢 **But Article 50 transparency was NOT deferred, and the grace period for marking content from systems already deployed ends 2026-12-02 — six weeks from this pass.** So the near work is transparency, and the conformance programme is the follow-on.
+
+🔵 **The sequencing is the sell:** a client told *"your deadline moved sixteen months"* stops the programme. A client told *"your Annex III programme has until 2027-12-02 **and** your Article 50 marking obligation is six weeks out"* starts the near one and books the far one.
+
+**The kit, and it is assembled from rows already on these shelves.**
+
+| Layer | Row | Grant | What it does here |
+|---|---|---|---|
+| Content marking | the client's own generation path | — | Mark AI-generated and AI-modified learner-facing content at the point of generation. This is the **Article 50** duty and the only thing with a December date on it |
+| PII boundary | [`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) — 🟡 stale address `microsoft/presidio`, retained labelled | MIT | No student identifier reaches a model. Already the engine in `P38`. 🟢 **Identity re-proven this pass on a SECOND channel:** both addresses answer `ls-remote` at HEAD `4f0e236e31a57767958a3eec2de3fc58dffc3034`, so `p350`'s `id`-based resolution is independently confirmed |
+| Jurisdiction packs | [`byerlikaya/Septum`](https://github.com/byerlikaya/Septum) | MIT | `gdpr` + `uk_gdpr` packs, plus its **human approval gate**. 🔴 `p350` read the `lgpd` pack first-hand at 84 lines: **CPF is not in it** — irrelevant for EMEA, decisive if the same kit is re-sold into LATAM |
+| Fairness evidence | [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | MIT | The group-metric artefact. 🟡 **Article 27**'s fundamental-rights impact assessment is **unchanged** by the omnibus, so this layer's date did not move |
+| Human-in-the-loop | `che-ntucool-mcp` | per `p350`'s read | Holds the consequential write. Admissions screening and exam monitoring stay **Annex III high-risk** — dated later, not removed |
+
+🟢 **Deliverables, in the order a December deadline forces.** (1) An inventory of learner-facing generated content and where it is produced — **week 1**, because you cannot mark what you have not found. (2) Marking at the generation boundary — **weeks 2–4**. (3) The Article 27 FRIA, which has no new deadline and is the bridge into the Annex III programme — **weeks 4–6**. (4) A conformance backlog dated **2027-12-02**, not 2026-08-02.
+
+🔴 **State the sourcing to the client, because this base cannot verify it.** Every date here is **secondary-sourced**: `eur-lex.europa.eu` and `digital-strategy.ec.europa.eu` are **`connect_rejected` at this session's egress proxy**, a standing policy rather than an outage. Five independent commentaries converge on 2026-07-24 / 2026-07-27 / 2027-12-02 / 2028-08-02, and **sources disagree on Article 4** (AI literacy: relaxed scope versus already live). 🟢 **Have counsel confirm against the Official Journal before a fee is attached to a date.**
+
 ## Pass 350 · 2026-10-21 — two recipes, both of them things a studio ships BEFORE the tutor, and both buildable from rows read at the payload this pass
 
 **Evidence:** [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv) · [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)

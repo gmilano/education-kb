@@ -241,13 +241,48 @@ def licences_in(text):
 # Both of `oat-sa/tao-core` and `portabilis/i-educar` flagged on this shape.
 ARROW_CORRECTION = re.compile(r"(?:→|-->|=>)")
 
+# 🔴 p351 — the gate's ONE red on the live shelves, and the shelf was RIGHT.
+# `intel/market.md` writes of `jtylek/EpesiCRM`: "it scopes its vendored
+# dependencies and an optional GPL-3 Roundcube explicitly".  The row's own
+# grant is MIT, read payload-first at the root (`LICENSE`, holder
+# `Janusz Tylek`, 2006-2026), and the repository's OWN licence file says of
+# the other one: "The Roundcube webmail is not part of this software ...
+# downloaded ... only when an administrator chooses to install it".
+#
+# So the `GPL-3` in that sentence is a grant the row EXCLUDES, and the gate
+# read it as a grant the row CLAIMS.  This is the mirror image of RETRACTION:
+# retraction vocabulary withdraws THIS repository's own licence, scope
+# vocabulary attributes a licence to something that is NOT this repository.
+# Both end the same way — the token is not this slug's grant.
+#
+# 🟡 Why it is a separate regex rather than more alternatives inside
+# RETRACTION: a retraction is a statement about this repository's HISTORY, a
+# scope is a statement about ANOTHER repository's LICENCE.  A successor
+# reading a suppressed token needs to know which of the two it is looking at.
+#
+# 🔵 Note the direction of the risk, because it is the opposite of the
+# AGPL/GPL defect this gate was built for.  RETRACTION and THIRD_PARTY_SCOPE
+# both make the gate QUIETER, so a wrong alternative here hides a real
+# disagreement instead of inventing one.  Every token below is therefore
+# anchored to vocabulary that names a boundary (`vendor/`, `third-party`,
+# `not part of`, `their own licence`) and none of them is a bare licence
+# word; the controls in `test_shelf_consistency.py` pin both directions.
+THIRD_PARTY_SCOPE = re.compile(
+    r"third-party|third party|vendor(?:ed|s|ing)?\b|dependenc(?:y|ies)|"
+    r"\boptional\b|not part of (?:this|the)|downloaded only|"
+    r"sub-?modules?\b|upstream licen[cs]e|(?:their|its) own licen[cs]es?|"
+    r"carry their own|scopes? (?:its|their)",
+    re.I,
+)
+
 
 def claim_from_window(text):
     """The licence a window ASSERTS, or None.
 
-    The first licence token is the claim.  Later tokens are kept only if no
-    retraction vocabulary stands between the claim and them — otherwise
-    they are being quoted in order to be withdrawn.
+    The first licence token is the claim.  Later tokens are kept only if
+    neither retraction nor third-party-scope vocabulary stands between the
+    claim and them — otherwise they are being quoted in order to be
+    withdrawn, or attributed to something that is not this repository.
     """
     hits = licences_in(text)
     if not hits:
@@ -256,14 +291,16 @@ def claim_from_window(text):
             or ABSENCE_SCOPED.search(text) or ARROW_CORRECTION.search(text)):
         return None
     first_name, first_pos = hits[0]
-    # A retraction BEFORE the first token means the whole window is quoting.
+    # A retraction — or a third-party scope — BEFORE the first token means
+    # the whole window is quoting somebody else's grant.
     pre = text[:first_pos]
-    if RETRACTION.search(pre) and not re.match(r"^[\s|*`🔴🟢🟡🔵🆕⚠️⏱—–-]*$", pre):
+    if ((RETRACTION.search(pre) or THIRD_PARTY_SCOPE.search(pre))
+            and not re.match(r"^[\s|*`🔴🟢🟡🔵🆕⚠️⏱—–-]*$", pre)):
         return None
     out = {first_name}
     for name, pos in hits[1:]:
         between = text[first_pos:pos]
-        if not RETRACTION.search(between):
+        if not (RETRACTION.search(between) or THIRD_PARTY_SCOPE.search(between)):
             out.add(name)
     return out
 

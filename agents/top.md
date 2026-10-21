@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 351 · 2026-10-21 — every channel `p350` declared SHUT is OPEN, and the first thing they proved is that this base's own gate was wrong and its shelf was right. `ACTION ZZ-al` is RESOLVED by HEAD-equality, `ACTION ZZ-am` is ANSWERED and its PREMISE REFUTED: an identity oracle on this channel is POSITIVE-ONLY. `make hooks` ran — 28/29 on arrival, 30/30 on exit
+
+**Evidence:** [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv) · [`address-shape-rejects`](../evidence/address-shape-rejects.2026-10-21-p351.tsv) · [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv)
+
+### 🟢 First, the channels, because `p350` closed this pass's three most important ones and all three answer
+
+🟢 **`make hooks` RAN.** Four passes running (`p343`, `p344`, `p346`, `p350`) the tool policy declined this repository's own instruments as *"Code from External"*. This pass it ran, and **p350's UNJUDGED gate state is resolved: it was 28/29 with one RED.** After the repair below it is **30/30** — 30, not 29, because this pass adds a gate.
+
+🟢 **`git ls-remote` ANSWERS on arbitrary repositories.** `moodle/moodle` returned `b7260e59…` on the first probe. **The HEAD-equality channel `p346`–`p349` was built on, and `p350` recorded as SHUT, is OPEN.**
+
+🟢 **`git clone --depth` ANSWERS on arbitrary repositories, so the COMMIT STREAM is open too.** `%ae` author-domain tallies and `iso-strict` timezone tallies were derived first-hand for four repositories below. **Every region placement `p350` had to publish as `NOT PLACED` is placeable again**, and the four rows this pass places say so individually.
+
+🔴 **Two channels remain shut, and neither is the one that matters here.** `api.github.com` and `github.com` HTML both return **403** at the proxy, so **no star, fork or `created_at` figure on this shelf is first-hand this pass.** Where a star count appears below it is **carried from `p350` and labelled carried.** 🔵 The authenticated search index — `p350`'s identity key — was **not used**, because the git channel answered and is the stronger instrument; the immutable numeric `id` is therefore **not re-derived** this pass.
+
+🔴 **A third channel is shut for a NAMED reason, which upgrades `p345`'s finding.** `p345` recorded every EU primary legal host at **HTTP 000**. Probed again: `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and `artificialintelligenceact.eu` all return 000 — and the proxy names the cause as **`connect_rejected`: the host is not permitted for this session.** 🟢 **That is a better finding than a flaky server:** it is a standing egress policy, so no successor pass should spend probes re-testing it, and every EU legal date on these shelves is **secondary-sourced by construction**, not by accident. It is recorded in [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv).
+
+### 🔴 The gate's one RED was a FALSE POSITIVE, and the mechanism is worth more than the row
+
+🔴 **`gate-shelf-consistency` failed on `jtylek/epesicrm`:** `GPL-3.0` at `intel/market.md:61` against `MIT` at `verticals/solutions.md:19`.
+
+🟢 **Read payload-first, the shelves were RIGHT and the gate was WRONG.** `raw.githubusercontent.com/jtylek/EpesiCRM/master/LICENSE` is **stock MIT**, holder **`Janusz Tylek`**, **2006–2026**. The GPL-3 in `market.md`'s sentence belongs to **Roundcube**, and the repository's own licence file says of it: *"The Roundcube webmail is not part of this software … downloaded … only when an administrator chooses to install it."*
+
+🔵 **So the defect is an instrument one, and it is the MIRROR IMAGE of the defect this gate was built for.** `p307` built `RETRACTION` to stop a licence token being read as a claim when the prose was *withdrawing* it. This is the same shape pointed outwards: **retraction vocabulary withdraws THIS repository's grant; scope vocabulary attributes a grant to something that is NOT this repository.** Both end with the token not being the row's licence, and the gate knew only the first.
+
+🟢 **Repaired as `THIRD_PARTY_SCOPE` in `compose/code/p308-shelf-consistency`, per `p350`'s own `ACTION ZZ-aq` convention — fix the gate, not the file.** Controls went **52 → 59**, and they pin **both directions**, because `RETRACTION` and `THIRD_PARTY_SCOPE` both make the gate *quieter*: a wrong alternative here **hides a real disagreement** instead of inventing one. Three controls assert that a plain grant, a far-away *"optional"*, and a genuine two-licence disagreement all still read exactly as before. The live shelves are now green **without a word of shelf prose being changed.**
+
+### 🟢 `ACTION ZZ-al` RESOLVED — `edx/ease` ≡ `openedx/ease`, and the channel that names it is the one that reopened
+
+🟢 **Both addresses answer, and the HEADs are byte-equal:** `056da0adc6f351789d8e477b5ebec4f6db610c36`. `p350` asked for *"the channel that names its canonical"* after the search index answered for **neither** address. **`git ls-remote` is that channel** — it follows GitHub's rename redirect and serves the canonical repository's HEAD at the stale address. One repository, two addresses. `agents/top.md` carries `ease` at one of them.
+
+🔴 **The canonical DIRECTION is named but NOT proven, and the distinction is not pedantry.** `git` follows the redirect **silently** — it emits no `Location` this environment can read, on either address. So HEAD-equality proves *these two addresses are one repository* and says **nothing about which name is current.** The direction published — `openedx/ease` canonical — rests on the **edX-to-`openedx` organisation lineage**, which is history, **not an instrument**. 🟡 Registered as **`ACTION ZZ-ar`**.
+
+### 🔴 `ACTION ZZ-am` ANSWERED, and its premise is REFUTED: this channel is a POSITIVE-ONLY oracle
+
+`ZZ-am` asked this pass to *"prove or refute identity"* for `ZZ-aj`'s six `NAME-ALIVE-OWNER-ABSENT` addresses, noting that name-and-description *"is not the standard this base uses elsewhere."* It is now measurable, and the answer is the same for all six.
+
+| stale address | canonical candidate | stale HEAD | verdict |
+|---|---|---|---|
+| `apereo/opencast` | [`opencast/opencast`](https://github.com/opencast/opencast) | 🔴 `fatal:` — no answer | **ALIAS REFUTED** |
+| `epesi-team/epesi` | [`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM) | 🔴 `fatal:` — no answer | **ALIAS REFUTED** |
+| `gegok12/gegok12` | [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🔴 `fatal:` — no answer | **ALIAS REFUTED** |
+| `fh-yarbouh/oak-curriculum-ontology` | [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🔴 `fatal:` — no answer | **ALIAS REFUTED** |
+| `tuanha/vgu-mcp` | [`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp) | 🔴 `fatal:` — no answer | **ALIAS REFUTED** |
+| `concentricsky/badgr-server` | 🔴 **none answers** | 🔴 `fatal:` | **NO LIVE REPOSITORY FOUND** |
+
+🔵 **The instrument property this establishes, which is the real yield.** GitHub serves a rename or transfer as a **redirect**, so `ls-remote` answers at the stale address with the canonical HEAD — that is how `ZZ-al` resolved. An address that was **deleted or never existed** returns `fatal:` and there is **no HEAD to compare**. So:
+
+- both addresses answer with **equal** HEADs → **alias, identity PROVEN** (`edx/ease`);
+- only one answers → the other **is not a rename alias of it**. Identity is **UNPROVABLE on this channel** rather than disproven, and the two are **distinct addresses that happen to share a name**.
+
+🟢 **Which means `p350` was right to be cautious and is now right for a reason.** It published those six *"on their own merits at their canonical addresses, never as alias resolutions."* That call is now **proven correct**, not merely prudent. 🔴 **And `ZZ-aj`'s `NAME-ALIVE-OWNER-ABSENT` label is not reproduced for `concentricsky/badgr-server`:** `concentricsky`, `instructure`, `1EdTech` and `IMSGlobal` **all** return `fatal:` for `badgr-server`. No shelf carries the row, so nothing is retracted — but the classification was wrong and is corrected here.
+
+🟢 **And `p350`'s hardest identity call is INDEPENDENTLY CONFIRMED on a second channel.** `p350` resolved `presidio` using the search index's immutable numeric `id` (`132129752`), after a search under `user:microsoft` returned nothing. On `ls-remote` this pass, **`microsoft/presidio` and `data-privacy-stack/presidio` both answer at HEAD `4f0e236e31a57767958a3eec2de3fc58dffc3034`** — equal, so **one repository at two addresses.** 🔵 Two instruments that share no mechanism agree, which is the strongest identity statement on these shelves: the `id` channel and the redirect channel are independent, and `p350`'s canonical stands.
+
+🟢 **A bonus alias, found while probing for a live `badgr` address.** [`IMSGlobal/openbadges-validator-core`](https://github.com/IMSGlobal/openbadges-validator-core) and [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) both answer `0a66b52a8a0b7841469a35b056e5c3f8e5ce87d1` — **one repository, two addresses.** This is the `IMSGlobal`→`1EdTech` rename `p349` found changing stewards across the standards layer, now **proven** on an address pair rather than inferred from a name.
+
+### 🔴 The prescribed agent legs, written down rather than left as apparent coverage
+
+🔴 **`top open source AI agents education 2026 github MIT` and `github trending education AI 2026` returned listicles for the SEVENTH consecutive pass, and the search engine said so itself** — *"the search didn't turn up an education-specific ranking"*, *"the search didn't turn up a clean 'trending in education' list"*. The named agents were **general-purpose and already shelved or out of scope**: OpenClaw, opencode, OpenHands, CrewAI, LangGraph, Hermes, gemini-cli, codex.
+
+🔴 **NO new education-specific AGENT was found this pass.** That is stated as a finding rather than filled: the three repositories this pass did find are **curriculum DATA**, not agents, and they are shelved in `repos/foundations.md` where they belong. **Fewer real rows beat padding**, and an agent shelf that grows on a pass whose agent legs returned nothing has stopped being a measurement.
+
+🟡 **The one agent-adjacent movement is the `ease` identity above** — a row this shelf already carries, at an address it can now name as one of two.
+
+### 🟢 Registered for the successor pass
+
+- **`ACTION ZZ-ar`** — name the channel that gives the **DIRECTION** of a rename, not just the equality. `git` follows the redirect silently; `api.github.com` is 403 here. Until one is found, every canonical direction on these shelves rests on organisation lineage, which is **history, not an instrument**.
+- **`ACTION ZZ-as`** — re-run `ZZ-am`'s six against the **payload-digest** channel (`p349-payload-digest`). HEAD-equality is positive-only; a digest over a tree that **does** answer may still refute a coincidence of name on evidence rather than on absence.
+- **`ACTION ZZ-ap` (re-registered, and its PRESCRIPTION WIDENED)** — `p350` asked for a grant **per subtree**, with Oak's path-partitioned licence as the fixture. 🔴 **A per-subtree classifier would still misread the row in `repos/foundations.md` below**, because `withmarbleapp/os-taxonomy` partitions its grant by **SEMANTIC LAYER inside the same files**, not by path. The axis is the layer, not the directory.
+- **`ACTION ZZ-af` / `ZZ-ai` (both re-registered, NOT run)** — the 54 education-token orphans and the 2 181 pre-filter-excluded addresses. `ZZ-ai` should now run against the **corrected 2 443** denominator, which `ACTION ZZ-an` published this pass.
+
 ## Pass 350 · 2026-10-21 — `ACTION ZZ-ah` resolved 15 of the 16 unknown alias groups and the register's own denominator is wrong: 22 groups and 45 addresses, not the 21 and 43 p349 published. Two canonical addresses are ARCHIVED, one of them a 2 632-star platform. `make hooks` was REFUSED, so gate state is UNJUDGED
 
 **Evidence:** [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)

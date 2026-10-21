@@ -351,5 +351,69 @@ class ProseTakesTheFirstLicenceOnly(unittest.TestCase):
                 self.assertEqual(c["licences"], {"GPL-2.0"})
 
 
+class ScopedThirdPartyGrantsAreNotThisRowsGrant(unittest.TestCase):
+    """p351 — the gate's one RED on the live shelves, and the shelf was right.
+
+    `jtylek/EpesiCRM` is MIT, read payload-first at the root.  Two shelves
+    also mention the GPL-3 Roundcube that the repository's own `LICENSE`
+    declares "not part of this software".  The gate bound that GPL-3 to the
+    slug and called the shelves self-contradictory.
+
+    🔵 Both directions are pinned here, because THIRD_PARTY_SCOPE makes the
+    gate QUIETER and a wrong alternative would hide a real disagreement.
+    """
+
+    def test_the_live_defect_a_scoped_grant_before_any_other_token(self):
+        # intel/market.md:61, verbatim shape — GPL-3 is the ONLY token.
+        self.assertIsNone(claim_from_window(
+            " is positioned by its own README as a kickstarter for custom ERP, "
+            "and it scopes its vendored dependencies and an optional GPL-3 "
+            "Roundcube explicitly"))
+
+    def test_the_rows_own_grant_still_survives_a_later_scope(self):
+        # verticals/solutions.md:19 — MIT first, then the scoping sentence.
+        got = claim_from_window(
+            " 🟢 **MIT**, `LICENSE` at ROOT, holder `Janusz Tylek`, 2006-2026 "
+            "— stock MIT terms. And it scopes itself explicitly: a "
+            '"Third-party software" section states `vendor/` (Laravel, '
+            "Filament, Livewire) carry their own licences, and that Roundcube "
+            "webmail is NOT part of this software — GPL-3")
+        self.assertEqual(got, {"MIT"})
+
+    def test_the_two_shelves_now_agree(self):
+        body = (
+            f"- [`jtylek/EpesiCRM`]({GH}/jtylek/EpesiCRM) is positioned by its "
+            "own README as a kickstarter for custom ERP, and it scopes its "
+            "vendored dependencies and an optional GPL-3 Roundcube explicitly.\n")
+        claims = extract_claims(body, "intel/market.md")
+        self.assertEqual(
+            [c for c in claims if c["slug"] == "jtylek/epesicrm"], [],
+            "a scoped third-party grant must not reach the disagreement set")
+
+    def test_a_submodule_grant_is_scoped_too(self):
+        # p346 shipped a row granted on three channels, one of them a
+        # submodule.  A submodule's licence is not the superproject's.
+        self.assertIsNone(claim_from_window(
+            " — its sub-module vendors an Apache-2.0 tokenizer"))
+
+    # 🔴 The other direction: these must STILL be claims, or the fix has
+    # bought a false positive by creating a false negative.
+    def test_a_plain_grant_is_unaffected(self):
+        self.assertEqual(claim_from_window("🟢 **Apache-2.0**, `LICENSE` at ROOT"),
+                         {"Apache-2.0"})
+
+    def test_the_word_optional_far_from_any_licence_is_harmless(self):
+        self.assertEqual(
+            claim_from_window("🟢 **BSD-3-Clause** at ROOT; the web UI is optional"),
+            {"BSD-3-Clause"})
+
+    def test_a_genuine_two_licence_disagreement_still_fires(self):
+        # No scope and no retraction vocabulary: both tokens stand, which is
+        # what p307's AGPL/GPL defect needed and must not be lost.
+        self.assertEqual(
+            claim_from_window("**AGPL-3.0** at ROOT, and the shelf says MIT"),
+            {"AGPL-3.0", "MIT"})
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

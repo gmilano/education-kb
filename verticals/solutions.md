@@ -4,6 +4,38 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 351 · 2026-10-21 — this shelf was accused by this base's own gate and this shelf was RIGHT: `jtylek/EpesiCRM` is MIT, read payload-first at the root, and the GPL-3 the gate bound to it belongs to a component the repository declares is not part of the software. The gate was repaired, not the prose
+
+**Evidence:** [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv) · [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv)
+
+🟢 **Channel note:** `make hooks` **RAN** after four passes of refusal — **28/29 on arrival, one RED, 30/30 on exit.** `git ls-remote` / `clone` / `log` are **OPEN**, so commit-stream placement is available. Licences **payload-first** on `raw.githubusercontent.com` (200). 🔴 `api.github.com` and `github.com` **403** — the star and fork figures in this shelf's table are **carried from `p350`**, not re-derived.
+
+### 🟢 The accusation, and why the shelf keeps its words
+
+🔴 **`gate-shelf-consistency` reported one disagreeing slug on the live shelves:** `jtylek/epesicrm` — **`GPL-3.0`** at `intel/market.md:61` against **`MIT`** in this shelf's table at line 19.
+
+🟢 **Read first-hand at `raw.githubusercontent.com/jtylek/EpesiCRM/master/LICENSE` (HTTP 200): stock MIT, holder `Janusz Tylek`, 2006–2026.** No GPL token appears anywhere in the grant. The repository's own licence file, at line 32 of the payload, says of the other component: ***"The Roundcube webmail is not part of this software or its release package … from the Roundcube project only when an administrator chooses to install it."***
+
+🟢 **So both shelves were correct and consistent.** This shelf's cell says MIT and scopes the vendored tree; `intel/market.md`'s sentence mentions *"an optional GPL-3 Roundcube"* **as an exclusion**. The gate read an **excluded** grant as a **claimed** one.
+
+🔵 **The repair, and the general shape it closes.** `p307` built `RETRACTION` so that a licence token the prose was *withdrawing* would not read as a claim. This is that shape pointed outwards: **retraction vocabulary withdraws THIS repository's grant; scope vocabulary attributes a grant to something that is NOT this repository.** `THIRD_PARTY_SCOPE` was added to `compose/code/p308-shelf-consistency` — controls **52 → 59**, pinned in **both** directions, because both guards make the gate *quieter* and a careless alternative would **hide a real disagreement** rather than invent one. 🟢 **Per `p350`'s own `ACTION ZZ-aq` convention: fix the gate, not the file.** Not one word of shelf prose was changed, and the live shelves are green.
+
+🟡 **What a reader of this shelf should take from it.** Every platform row here scopes a vendored tree — it is what a platform *is*. **A row that names a third-party licence in order to exclude it is doing the right thing**, and a reader (or an instrument) that collects every licence token near a slug will mis-license the platform. `EpesiCRM`'s *"Third-party software"* section is the model: it names `vendor/` (Laravel, Filament, Livewire), `public/build/`, and the one component that is **not shipped at all**.
+
+### 🔴 Identity housekeeping on this shelf's rows
+
+🟢 **`opencast/opencast` is confirmed live at HEAD `9767932b7902aca8e01386cfbc0e2fb441ee3f44`** on the reopened `ls-remote` channel. 🔴 **And `p350`'s open question about its move is now ANSWERED in the negative:** `apereo/opencast` returns **`fatal:`** — it does not answer at all. So the two addresses are **not** a proven rename pair; identity across that move is **UNPROVABLE on this channel**, not merely unproven. The row stays at `opencast/opencast` with `apereo/opencast` retained as a **labelled stale address**, which is `p349`'s convention. Its **`ECL-2.0`** grant — Apache-2.0 with section 3's patent grant narrowed to claims where the author is also the inventor — is unchanged and remains the thing to brief before a build.
+
+🟢 **`Gego-K12/gegok12` is live at HEAD `99da145f55a17d26ac2d67ae258a4f9beb385874`**; `gegok12/gegok12` returns `fatal:`. Same verdict, same convention. 🟡 Its region is **still NOT PLACED**: the holder line reads `GegoSoft Technologies and GegoK12 Contributors` and **names no jurisdiction**, which is `p348`'s bar and it does not clear it. 🔵 The commit stream is open this pass and **could** place it — it was not run, because the row was not otherwise re-read. Registered under **`ACTION ZZ-am`**'s successor, `ZZ-as`.
+
+🟢 **`jtylek/EpesiCRM` is live at HEAD `2779b8a839dabffaeaac8aec4401971a106c94b7`**; `epesi-team/epesi` returns `fatal:`.
+
+### 🟡 No new platform row this pass, and that is deliberate
+
+🔴 **The prescribed vertical leg — `open source platform education ERP CRM MIT Apache` — returned a vendor-blog listicle for the ninth consecutive pass.** Its education-specific hits were **OpenEduCat** (already shelved), **ERPNext**'s education module (**GPL**, already noted), **Dolibarr** (GPL-3.0), **Krayin** (MIT, not education), **OFBiz / Huly / Corteza** (Apache-2.0, not education) and a 404-grade `education-crm` toy. The leg itself warned *"the license claims … come from different sources, and I did not cross-check them."*
+
+🟢 **The three repositories this pass did find are curriculum DATA, not platforms**, and they are shelved in `repos/foundations.md`. **A platform shelf that grows on a pass whose platform leg returned nothing has stopped being a measurement** — so it does not grow.
+
 ## Pass 350 · 2026-10-21 — three platform rows arrived from an unlikely place, the classification of p349's DEAD addresses; and one of them licenses itself under a permissive licence whose PATENT grant is narrower than Apache-2.0's, which is a thing to tell a client before the build and not after
 
 **Evidence:** [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)

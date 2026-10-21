@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 351 · 2026-10-21 — the prescribed trending leg returns listicles for the SEVENTEENTH consecutive pass; what actually moved is a repository this base already holds **regenerating itself the day before this pass under an unchanged version label**, and one new row whose description oversells its payload by an order of magnitude
+
+**Evidence:** [`data-layer-licences`](../evidence/data-layer-licences.2026-10-21-p351.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p351.tsv) · [`identity-resolution`](../evidence/identity-resolution.2026-10-21-p351.tsv) · [`address-shape-rejects`](../evidence/address-shape-rejects.2026-10-21-p351.tsv)
+
+🟢 **`make hooks` RAN** — 28/29 on arrival, **30/30** on exit. 🟢 **`ls-remote`, `clone` and the commit stream are OPEN**; every HEAD below is re-derived this pass. 🔴 **`api.github.com` and `github.com` are 403**, so **no star or fork count below is first-hand** — all are carried from `p350` and labelled.
+
+### 🔴 The prescribed trending leg, leg by leg
+
+🔴 **`github trending education AI 2026` returned a listicle round-up for the seventeenth pass**, and this time the engine stated the gap itself: *"The search didn't turn up a clean 'trending in education' list for 2026."* The coverage it did return was general-purpose AI tooling — a 139 K-star diffusion engine, a 76 K-star context compressor, 102 K-star agent skills. **No education.**
+
+🟡 **Its one education hit was already on this shelf** — `withmarbleapp/os-taxonomy`, held since `p326` — **and it got the numbers wrong**, quoting *"1,590 micro-topics"* and *"3,221 prerequisite dependencies"* against a payload that reads **1 616** and **3 317** today. 🔵 **A listicle is a stale read of a moving dataset, and this pass can finally say that with a digest behind it.**
+
+### 🔴 What actually moved: the same address, a different dataset
+
+| Row | HEAD, re-derived 2026-10-21 | Movement | Grant, payload-first |
+|---|---|---|---|
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | `95e6dddef0a6a0af9ed973a3e3fd5f35da00a733` | 🔴 **`generatedAt` 2026-10-20T20:52:33Z — regenerated the day before this pass.** 54 commits, 2026-07-08 → 2026-10-20. Topics **1 591 → 1 616**, edges **3 225 → 3 317**, standards **3 261 → 3 881**, links **2 189 → 3 214 (+47 %)** — all under **`taxonomyVersion: v1`, UNCHANGED** | 🟢 **ODbL-1.0** (database) + **CC-BY-SA-4.0** (authored text); 🔴 `data/curriculum-standards.json` **disclaimed** — *"not Marble's to relicense"* |
+| [`aclascollege/polymath`](https://github.com/aclascollege/polymath) | `74b8fefd251575b1066d01436c041bf08ac64110` | 🟢 **NEW to this base.** 14 commits; `generatedAt` 2026-07-13T11:41:22Z — **not** regenerated since | 🟢 **ODbL-1.0** + **CC-BY-SA-4.0**, both commercially usable with attribution |
+| [`haolpku/K12-KGraph`](https://github.com/haolpku/K12-KGraph) | `865bc3556768224d929825d7c258a5e77ac1aab0` | 🟢 **NeurIPS 2026 Evaluations & Datasets Track**, accepted September 2026. Commits 2026-04-01 → 2026-09-28 | 🔴 **CC-BY-NC-SA-4.0 — NON-COMMERCIAL** on the dataset; checkpoints **Llama 3.1 Community** (not OSI) and **Apache-2.0** ×2 |
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | `52489e6048707b52a9135bb5de835cdbe333a3e8` | 🟢 **Now PLACED EMEA by commit stream** — 11 commits from `thenational.academy`, timezone +01:00/+00:00. `p350` could only place it institutionally | 🟡 Split grant unchanged: **OGL-v3.0** on `ontology/`/`data/`/`docs/`, **MIT** on `scripts/` |
+
+🔴 **The new row's description oversells it by an order of magnitude, and that is the trending finding.** `aclascollege/polymath` presents as *"Open higher education taxonomy and curriculum knowledge graph: university courses, prerequisites, degree pathways, skills, careers, ECTS, US credits, ISCED-F and CIP codes."* Its own manifest: **15 disciplines · 94 courses · 90 prerequisites · 5 degrees · 59 skills · 28 careers · 4 frameworks.** 🟢 **It is a schema with a demonstration payload** — valuable as a **qualification-framework crosswalk**, not as a catalogue. Its `PROVENANCE.md` declares the course, degree, career and **salary-band** content *"synthesized"*.
+
+🟡 **A lineage note.** The same owner's `aclascollege/aegis-graph` — a `p310` licence-ladder fixture on these shelves — is **`Attribution-NonCommercial 4.0`**, read payload-first today. **`polymath` is the same owner's first commercially usable graph**, and it positions itself explicitly against Marble: *"❌ A K-12 skill taxonomy (that's Marble's job)."*
+
+### 🟢 Trending by region, placed by commit stream rather than guessed
+
+🟢 **APAC — two rows, both by instrument.** `haolpku/K12-KGraph`: **11 commits `stu.pku.edu.cn` + 5 `hust.edu.cn`, 15/16 at +08:00** — `.edu.cn` names the jurisdiction, which is `p348`'s bar. `aclascollege/polymath`: **12/14 commits `aclas.college`, 14/14 at +08:00** — country not named. 🔵 **This is the first pass to place two education-specific repository rows in APAC by commit stream**, in the region this base has called its thinnest for four passes.
+
+🟡 **EMEA — one placement, one disagreement.** `withmarbleapp/os-taxonomy`: **49/54 commits at +01:00**, author domains `gmail.com` and `withpebble.com`. 🔴 Its attribution line names **`Generative Spark, Inc.`** — a US corporate form with **no country** — so **authorship is EMEA and holder jurisdiction is UNRESOLVED**, published disagreeing rather than averaged. `oaknational/oak-curriculum-ontology` is now instrument-placed EMEA on `thenational.academy`.
+
+🔴 **North America and LATAM — ZERO trending rows this pass, stated rather than implied.** No repository on any leg placed to either region. LATAM's sharpest buildable gap remains `p350`'s **66 : 1** recogniser asymmetry, **carried, not re-measured.**
+
 ## Pass 350 · 2026-10-21 — the prescribed trending leg returns listicles for the sixteenth consecutive pass; what actually moved is an 87 252-star org transfer, a 40 645-star offline education server already shelved, and three platform repos recovered from addresses p349 recorded as DEAD
 
 **Evidence:** [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv) · [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv)

@@ -1,0 +1,10 @@
+action	pair_or_address	stale_head	canonical_head	verdict	ground
+ZZ-al	edx/ease vs openedx/ease	056da0adc6f351789d8e477b5ebec4f6db610c36	056da0adc6f351789d8e477b5ebec4f6db610c36	IDENTITY PROVEN - one repository at two addresses	HEAD-equality on git ls-remote; both addresses answer and the HEADs are byte-equal
+ZZ-al	canonical direction	NOT ANSWERED	NOT ANSWERED	canonical NAMED but NOT PROVEN	git follows the redirect silently and emits no Location; direction rests on the edX-to-openedx org lineage, which is NOT an instrument
+ZZ-am	apereo/opencast -> opencast/opencast	NO-ANSWER (fatal)	9767932b7902aca8e01386cfbc0e2fb441ee3f44	ALIAS REFUTED - not a transfer	stale address does not answer, so there is no HEAD to compare; identity is UNPROVABLE on this channel, not unproven
+ZZ-am	epesi-team/epesi -> jtylek/EpesiCRM	NO-ANSWER (fatal)	2779b8a839dabffaeaac8aec4401971a106c94b7	ALIAS REFUTED - not a transfer	as above
+ZZ-am	gegok12/gegok12 -> Gego-K12/gegok12	NO-ANSWER (fatal)	99da145f55a17d26ac2d67ae258a4f9beb385874	ALIAS REFUTED - not a transfer	as above
+ZZ-am	fh-yarbouh/oak-curriculum-ontology -> oaknational/oak-curriculum-ontology	NO-ANSWER (fatal)	52489e6048707b52a9135bb5de835cdbe333a3e8	ALIAS REFUTED - not a transfer	as above
+ZZ-am	tuanha/vgu-mcp -> haanhtuandev/vgu-mcp	NO-ANSWER (fatal)	5ccdf354ae4b97f55af304145974d77b23933ac0	ALIAS REFUTED - not a transfer	as above
+ZZ-am	concentricsky/badgr-server	NO-ANSWER (fatal)	NO CANDIDATE ANSWERS	NO LIVE REPOSITORY FOUND at any probed address	concentricsky, instructure, 1EdTech and IMSGlobal all return fatal; ZZ-aj's NAME-ALIVE classification is NOT reproduced for this address
+bonus	IMSGlobal/openbadges-validator-core vs 1EdTech/openbadges-validator-core	0a66b52a8a0b7841469a35b056e5c3f8e5ce87d1	0a66b52a8a0b7841469a35b056e5c3f8e5ce87d1	IDENTITY PROVEN - one repository at two addresses	HEAD-equality; found while probing for a live badgr address
