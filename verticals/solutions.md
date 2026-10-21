@@ -6,8 +6,15 @@ updated: 2026-10-21
 
 # Education — vertical platforms to customise with AI
 
-**Pass 361 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
-sense that Odoo is extensible for ERP or OpenMRS for healthcare. All verified first-hand
+**Pass 362 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
+sense that Odoo is extensible for ERP or OpenMRS for healthcare.
+
+🔴 **`p362` changes this shelf's code-execution recommendation.** The judge tier's
+permissive pick, `QingdaoU OnlineJudge`, **is still MIT** — but the components that
+execute student code (`JudgeServer`, `Judger`) are **SATA**, not MIT, and the documented
+deployment repository carries **no grant at all**. Measured component by component in
+`repos/foundations.md`; the row-level corrections are in
+[`grant-corrections`](../evidence/grant-corrections.2026-10-21-p362.tsv). All verified first-hand
 **2026-10-21** (liveness + default branch via `git ls-remote --symref`, licence read
 from payload). 🟢 Every address on this shelf was part of a **277-address corpus liveness
 sweep: 277 live, 0 dead** — and, for the first time since `p355`, a **star
@@ -202,8 +209,8 @@ of a gap:
 | **Dolos** | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | 🟢 **MIT** | 🟢 **None** | Source-code plagiarism detection (Ghent). The integrity layer for AI-era programming courses — and newly relevant now that students submit agent-assisted code |
 | **UDOIT** | [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | GPL-3.0 | 🟡 Derivative if forked | Accessibility inspection of LMS course content. Directly serviceable against EU accessibility and US Section 508 obligations |
 | **scorm-again** | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 **MIT** | 🟢 **None** | Modern SCORM 1.2 / 2004 JS runtime. The bridge for the enormous installed base of legacy SCORM corporate content |
-| 🆕 **exam-proctor** | [shaheeranser/exam-proctor](https://github.com/shaheeranser/exam-proctor) | 🟢 **Apache-2.0** (`main/LICENSE`, read `p359`) | 🟢 **None** — 🔴 **but see the Art. 5 note: the binding constraint on this row is not its licence** | **An LTI 1.3 tool that launches from inside Moodle**, authors quizzes, guards the browser, passes grades back over AGS. Dockerised with MinIO + Caddy. 🟢 **The only proctoring row on this base that reaches the LMS over a protocol boundary.** 🔴 25 commits, **1 author**, 2026-07-05 → 2026-10-11. 🔴 **`p190` read its source: head pose, iris deviation and `face-api` identity checks — GDPR Art. 9, and clear of the Art. 5 prohibition by one unset default** |
-| 🆕 **openproct** | [OpenProct/openproct](https://github.com/OpenProct/openproct) | 🟢 MIT | 🟢 None | 🔴 **Not a platform — 4 commits, 2 authors, all on 2025-10-26, nothing since.** Listed only so a successor who finds "MIT, organisation account, privacy-first proctoring" does not stop here |
+| 🆕 **exam-proctor** | [shaheeranser/exam-proctor](https://github.com/shaheeranser/exam-proctor) | 🟢 **Apache-2.0** (`main/LICENSE`, read `p359`) | 🟢 **None** — 🔴 **but see the Art. 5 note: the binding constraint on this row is not its licence** | **An LTI 1.3 tool that launches from inside Moodle**, authors quizzes, guards the browser, passes grades back over AGS. Dockerised with MinIO + Caddy. 🟢 **The only proctoring row on this base that reaches the LMS over a protocol boundary.** 🔴 25 commits, **2 authors (`%ae`)** — `%an` reads 1, corrected `p362` — 2026-07-05 → 2026-10-11. 🔴 **`p190` read its source: head pose, iris deviation and `face-api` identity checks — GDPR Art. 9, and clear of the Art. 5 prohibition by one unset default** |
+| 🆕 **openproct** | [OpenProct/openproct](https://github.com/OpenProct/openproct) | 🟢 MIT | 🟢 None | 🔴 **Not a platform — 4 commits, 2 authors (`%ae`), all on 2025-10-26, nothing since.** Listed only so a successor who finds "MIT, organisation account, privacy-first proctoring" does not stop here |
 
 ### 🟡 `p359`: the permissive proctoring row that is *architecturally* different — and `Gap 344`'s survivor is still the right worry
 
@@ -224,7 +231,7 @@ hosts** — correct for the host, wrong for a studio deliverable. The four MIT r
 
 🟢 **`p359`'s contribution to this row is the licence and the placement, and nothing
 else about it is new to this base.** Its grant was never published here: **Apache-2.0,
-read from `main/LICENSE` this pass.** Commit channel: 25 commits, **1 author**, `+0800`
+read from `main/LICENSE` this pass.** Commit channel: 25 commits, **2 authors (`%ae`)** — corrected `p362`; `%an` reads 1 — `+0800`
 and `+0500`, 2026-07-05 → 2026-10-11 → **APAC**.
 
 ### 🔴 And the reason this row was read before and never shelved — which is the thing to quote, not the licence
@@ -265,22 +272,32 @@ permissive one is bigger than the copyleft one everybody reaches for first.**
 
 | Platform | Repo | Licence | Licence reach | Where it fits |
 |---|---|---|---|---|
-| **QingdaoU OnlineJudge** | [QingdaoU/OnlineJudge](https://github.com/QingdaoU/OnlineJudge) | 🟢 **MIT** | 🟢 **None.** Fork into a closed deliverable | **The recommendation.** A complete judge — Vue + Django + Docker, submissions, contests, problem bank, admin — at 6 552 ★ and MIT. White-label it for a client coding academy |
-| **QingdaoU Judger** | [QingdaoU/Judger](https://github.com/QingdaoU/Judger) | 🟢 **MIT** (branch `newnew`) | 🟢 **None** | The seccomp execution sandbox alone, on its own MIT grant. Use it when the surrounding platform is already built and only safe execution is missing |
+| **QingdaoU OnlineJudge** | [QingdaoU/OnlineJudge](https://github.com/QingdaoU/OnlineJudge) | 🟢 **MIT** (1 085 B, re-read `p362`) | 🟢 **None on the web tier.** Fork it into a closed deliverable | **Still the recommendation for the platform**, at 6 552 ★ — Django backend plus the MIT `OnlineJudgeFE`. 🔴 **But its execution path is not MIT:** `JudgeServer` and `Judger` are SATA and `OnlineJudgeDeploy` is ungranted, so a closed deliverable that must *run code* has to decide about those three separately |
+| **QingdaoU Judger** | [QingdaoU/Judger](https://github.com/QingdaoU/Judger) | 🔴 **SATA — not MIT, not OSI** (branch `newnew`, 1 823 B), corrected `p362` | 🟡 **Obligations, not copyleft:** star the project, thank the authors, keep its copyright block intact | The seccomp execution sandbox alone. 🔴 **Its grant was never MIT** — the cell inherited it from the sibling `OnlineJudge`. Usable if the client accepts a non-OSI notice; fails a *"permissive only"* procurement rule |
 | **Judge0** | [judge0/judge0](https://github.com/judge0/judge0) | GPL-3.0 | 🟡 Service over HTTP keeps the boundary | 60+ languages behind a REST API. Still the fastest thing to stand up; the licence is the cost |
 | **Hydro** | [hydro-dev/Hydro](https://github.com/hydro-dev/Hydro) | AGPL-3.0 | 🔴 AGPL — network use triggers source obligations | Multi-tenant, high-performance, plugin architecture. The right base for an institution running many courses and contests — if the client can accept AGPL |
 | **DMOJ** | [DMOJ/online-judge](https://github.com/DMOJ/online-judge) · [DMOJ/judge-server](https://github.com/DMOJ/judge-server) | AGPL-3.0 | 🔴 AGPL | Django contest platform plus a separate judging backend. Clean split between web tier and executor |
-| **Sharif Judge** | [mjnaderi/Sharif-Judge](https://github.com/mjnaderi/Sharif-Judge) | AGPL-3.0 (branch `Version-1`) | 🔴 AGPL | 🟢 **Built for COURSES, not contests** — assignments, deadlines, per-student feedback. Closest in shape to what a university client actually asks for |
+| **Sharif Judge** | [mjnaderi/Sharif-Judge](https://github.com/mjnaderi/Sharif-Judge) | **GPL-3.0** (branch `Version-1`, 35 146 B), corrected `p362` from AGPL-3.0 | 🟡 **GPL, not AGPL** — derivative obligations on distribution, 🟢 **no network clause** | 🟢 **Built for COURSES, not contests** — assignments, deadlines, per-student feedback. Closest in shape to what a university client actually asks for, and 🟢 **the correction widens what may be done with it**: a studio MAY host it as a service without triggering source obligations |
 | **Otter-Grader** | [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** | 🟢 **None** | Autogrades **Python and R notebooks**, with containerised execution and LMS export. Pairs with JupyterHub for data-science teaching |
 | **HUSTOJ** | [zhblue/hustoj](https://github.com/zhblue/hustoj) | GPL-2.0 | 🟡 Derivative if forked | The long-running PHP/C++ judge; very low deployment footprint |
 
-🔵 **Pick on the licence, then on the shape.** For a closed client deliverable the path
-is **QingdaoU OnlineJudge (MIT)** or **Judger (MIT) inside your own platform**. For an
-institution that will run it themselves and publish nothing, Hydro's plugin
-architecture is the better engineering. For a *course* rather than a contest, Sharif
-Judge is the only row built for it — and it is AGPL, so it stays the client's
-deployment, not the studio's product. Wired end-to-end in `compose/patterns.md`
-Pattern 9.
+🔵 **Pick on the licence, then on the shape — and `p362` changes two of the three
+sentences this paragraph used to carry.** For a closed client deliverable the platform is
+still **QingdaoU OnlineJudge (MIT)**; 🔴 **"Judger (MIT) inside your own platform" is
+withdrawn** — the sandbox is SATA, so dropping it into a closed deliverable ships a
+non-OSI notice obligation rather than a permissive component. For an institution that
+will run it themselves and publish nothing, Hydro's plugin architecture is the better
+engineering. For a *course* rather than a contest, Sharif Judge is the only row built for
+it — 🟢 **and it is GPL-3.0, not AGPL-3.0**, so unlike the AGPL rows a studio may also
+**host it as a service**; distributing a modified build is still what triggers the
+obligation. Wired end-to-end in `compose/patterns.md` Pattern 9.
+
+🟢 **The genuinely permissive execution options, after this pass:** `judge0` over its API
+(GPL-3.0, boundary-kept), [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader)
+(BSD-3-Clause, notebooks), and 🆕 [`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense)
+(**MIT**, 554 commits, 7 authors (`%ae`), code evaluation + restricted execution +
+learning analytics, APAC/China) — 🔴 the last at **4 ★**, so it is a credible base to
+build on and not a thing to cite as proven in production.
 
 ---
 
@@ -308,7 +325,10 @@ licences do not reach it:
 Moodle App (Apache-2.0)
 **Interop:** scorm-again · ltijs · pylti1.3 · CACCL · Marsha · ltiauthenticator (all MIT/Apache/BSD)
 **Content:** H5P CLI · Hyperbook · JupyterHub
-**Assessment:** Dolos · Ares2 · 🆕 **QingdaoU OnlineJudge** · 🆕 **QingdaoU Judger** · 🆕 **Otter-Grader** ·
+**Assessment:** Dolos · Ares2 · 🆕 **QingdaoU OnlineJudge** (🟡 **web tier only** —
+🔴 `QingdaoU/Judger` and `QingdaoU/JudgeServer` **removed from this shortlist `p362`:
+SATA, not MIT**; `QingdaoU/OnlineJudgeDeploy` has no grant) · 🆕 **Otter-Grader** ·
+🆕 **XiaoCow666/CodeSense** (MIT, `p362` — the permissive execution row) ·
 🆕 **shaheeranser/exam-proctor** (Apache-2.0 — 🟢 LTI 1.3, the only proctoring row that
 stays outside the host's copyleft; 🔴 **reference architecture only** — GDPR Art. 9, and
 clear of the Art. 5 prohibition by one unset MediaPipe default)
@@ -320,7 +340,11 @@ clear of the Art. 5 prohibition by one unset MediaPipe default)
 **Special education:** 🆕 **dg13788/iep-system** (MIT) — 🔴 **one permissive row out of
 seven addresses measured; see `agents/top.md` §Special education before quoting this
 tier to a client**
-**Scheduling:** 🆕 py-fsrs · 🆕 fsrs4anki · 🆕 FSRS (algorithm)
+**Scheduling and tutor memory:** 🆕 py-fsrs · 🆕 fsrs4anki · 🆕 FSRS (algorithm) ·
+🆕 **tura-learn/Dhee** (MIT, `p362` — memory built for tutor agents, 198 commits, APAC/India)
+**Pedagogy skill packs:** 🆕 **nuwa-skills/montessori-skill** (MIT, `p362`, 72 ★ — 🟢 the
+first *permissive* one on this base, 🔴 and only 5 files; `education-agent-skills` has 165
+and is `CC-BY-SA-4.0`)
 **Credentials:** Learner Credential Wallet
 **Curriculum data:** 🆕 **oak-curriculum-ontology** (OGL-3.0 data + MIT code — 🟢 the
 only curriculum asset on this base with commercial use and **no** share-alike)

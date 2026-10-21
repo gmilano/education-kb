@@ -6,7 +6,7 @@ updated: 2026-10-21
 
 # Education — composition patterns
 
-**Pass 361 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
+**Pass 362 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
 boundary that makes the composition safe, and what the engagement actually delivers.
 Every repo referenced is verified live with its grant read from payload on
 **2026-10-21** — see `agents/top.md` and `repos/foundations.md`.
@@ -114,14 +114,17 @@ connectivity, shared low-end devices, and no frontier-model budget per learner.
 **Recipe.**
 1. **Platform:** [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (**MIT**) — purpose-built offline-first, syncs when a link appears. MIT means the deployment can be a closed, branded client deliverable.
 2. **Precompute, do not infer live.** Generate the full adaptive content tree
-   server-side with [`satvik314/educhain`](https://github.com/satvik314/educhain) (MIT) or [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) (MIT), then ship it as a Kolibri channel. Inference cost becomes a one-time build cost.
+   server-side with [`satvik314/educhain`](https://github.com/satvik314/educhain) (MIT) or 🆕 [`heshengtao/exameow`](https://github.com/heshengtao/exameow) (Apache-2.0, local-first exam generation), then ship it as a Kolibri channel. Inference cost becomes a one-time build cost. 🔴 **`CaviraOSS/PageLM` was REMOVED from this step at `p362`:** it was carried here as *(MIT)* and its payload is the **"PageLM Community License"** — non-commercial, plus a revenue-sharing requirement that applies to the software *"in whole or in part"*. **It cannot be in a paid deliverable at all**, so this is a removal rather than a boundary note.
 3. **Local mastery model:** [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (MIT) — BKT runs on-device with no network call.
 4. **Spaced repetition instead of generation:** [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) (MIT) pairs RL action-selection with FSRS scheduling; [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) (MIT) where Anki is already in use.
 5. **Literacy-specific base:** [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) (MIT) for early-grade literacy in African deployments.
 6. **Mobile client:** fork [`moodlehq/moodleapp`](https://github.com/moodlehq/moodleapp) (**Apache-2.0** — permissive, unlike Moodle core) for a branded learner app.
 
-🟢 **Every component is MIT or Apache-2.0.** This whole pattern can ship as a closed
-deliverable, which matters for ministry and NGO procurement.
+🟢 **Every component is MIT or Apache-2.0** — re-verified component by component at
+`p362` after one of them turned out not to be. This whole pattern can ship as a closed
+deliverable, which matters for ministry and NGO procurement. 🔵 **The removal is the
+lesson:** this pattern's value is the licence claim in this sentence, so a single wrong
+grant in step 2 invalidated the whole recipe for exactly the buyers it is written for.
 
 ---
 
@@ -190,14 +193,28 @@ at its centre. `p356`'s function legs found a **larger MIT alternative**.
 
 **The stack, every grant read from the payload on 2026-10-21:**
 
-1. **Execution and verdicts** — [`QingdaoU/OnlineJudge`](https://github.com/QingdaoU/OnlineJudge)
-   (🟢 **MIT**, `master/LICENSE`, 6 552 ★). A complete judge: submissions, problem bank,
-   contests, admin, Docker deployment. **Fork it and brand it** — the MIT grant reaches
-   nothing.
-2. **The sandbox underneath it** — [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger)
-   (🟢 **MIT**, 🔴 branch **`newnew`**, 496 ★). seccomp-based. Already wired into the row
-   above; named separately because if the client has their own platform, **this is the
-   only piece they need**.
+1. **The platform and the web tier** — [`QingdaoU/OnlineJudge`](https://github.com/QingdaoU/OnlineJudge)
+   (🟢 **MIT**, `master/LICENSE`, 1 085 B, 6 552 ★) with
+   [`QingdaoU/OnlineJudgeFE`](https://github.com/QingdaoU/OnlineJudgeFE) (🟢 **MIT**,
+   330 ★). Submissions, problem bank, contests, admin. **Fork and brand both** — their MIT
+   grants reach nothing.
+2. 🔴 **The execution tier, and `p362` CORRECTED it: it is not MIT.** The components that
+   run student code — [`QingdaoU/JudgeServer`](https://github.com/QingdaoU/JudgeServer)
+   (209 ★) and [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) (🔴 branch
+   **`newnew`**, 496 ★) — both ship the **Star And Thank Author License** (1 823 B each),
+   and [`QingdaoU/OnlineJudgeDeploy`](https://github.com/QingdaoU/OnlineJudgeDeploy)
+   (591 ★, ref `2.0`) has **no grant at any probed path**. 🟢 **Pick one of three
+   positions, deliberately:**
+   - 🟡 **honour SATA** — star the project, thank the authors in your notices, keep its
+     copyright and project-url block intact. Cheap, and 🔴 still not OSI: an SPDX scan
+     returns `NOASSERTION` and a *"permissive only"* procurement rule fails it;
+   - 🟢 **keep execution outside the deliverable**, reached over HTTP — the same boundary
+     this pattern already uses for `judge0`, and the position that needs no legal call;
+   - 🟢 **build on a permissive executor instead** — 🆕
+     [`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense) (**MIT**, 1 067 B,
+     554 commits, 7 authors (`%ae`)) does code evaluation and restricted execution, and
+     [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) covers
+     notebooks. 🔴 Neither is a drop-in for a seccomp sandbox — this is a build.
 3. **Notebook and data-science courses** — [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader)
    (🟢 **BSD-3-Clause**, 161 ★, UC Berkeley) for **Python *and* R** notebooks, behind
    [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) (BSD-3-Clause) with
@@ -218,22 +235,37 @@ at its centre. `p356`'s function legs found a **larger MIT alternative**.
    [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (MIT). Never a
    fork of Canvas or Open edX — both are AGPL.
 
-🟢 **Every component is MIT, BSD-3-Clause or Apache-2.0.** The whole stack can ship
-inside a closed client deliverable with no copyleft reach — which was not true of this
-capability before this pass.
+🟡 **Every component EXCEPT the execution tier is MIT, BSD-3-Clause or Apache-2.0**, and
+🔴 **the sentence that used to stand here — *"every component is MIT, BSD-3-Clause or
+Apache-2.0"* — was wrong for six passes.** The web tier, the notebook path, the integrity
+check, the grading agent and the LTI bridge all ship inside a closed deliverable with no
+copyleft reach. 🔴 The thing that executes untrusted code does not, and step 2 above is
+how to resolve that. 🔵 **The pattern is still sound; what changed is that the licence
+boundary now falls between the platform and its sandbox rather than around the whole
+stack.**
 
 🟡 **When to pick the copyleft alternatives instead.** If the client will host it
 themselves and publish nothing of their own, [`hydro-dev/Hydro`](https://github.com/hydro-dev/Hydro)
 (AGPL-3.0, 7 137 ★) is better engineering for many courses at once, and
-[`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) (AGPL-3.0, branch
-`Version-1`) is the only row actually built for **courses** — assignments, deadlines,
-per-student feedback — rather than contests. Both stay the **client's** deployment, not
-the studio's product.
+[`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) (**GPL-3.0**, branch
+`Version-1` — 🔴 corrected `p362` from AGPL-3.0) is the only row actually built for
+**courses** — assignments, deadlines, per-student feedback — rather than contests. 🔵 The
+correction matters here: `Hydro` is AGPL and must stay the **client's** deployment, while
+🟢 **`Sharif-Judge` is plain GPL and a studio MAY host it as a service** — only
+distributing a modified build triggers the obligation.
 
-🔴 **The two branch traps in this pattern, named because they will bite.**
-`QingdaoU/Judger` defaults to **`newnew`** and `Sharif-Judge` to **`Version-1`**. A CI
-licence check or a vendoring script that assumes `main` or `master` will report the MIT
-sandbox at the centre of this stack as **unlicensed**.
+🔴 **The three branch traps in this pattern, named because they will bite.**
+`QingdaoU/Judger` defaults to **`newnew`**, `Sharif-Judge` to **`Version-1`**, and
+`QingdaoU/OnlineJudgeDeploy` to **`2.0`**. A CI licence check or a vendoring script that
+assumes `main` or `master` reports all three as **unlicensed**.
+
+🔴 **And `p362`'s sharper warning: finding the grant is not reading it.** Both odd refs
+*were* probed by the pass that shelved them, and both cells recorded the right path and
+the wrong family — the sandbox as MIT when it is SATA, `Sharif-Judge` as AGPL when it is
+GPL. 🟢 **Run the payload through
+[`p1054-mit-plus-clause`](code/p1054-mit-plus-clause/), not through a path check:** on
+the sandbox's bytes it returns `is_usable_permissive: False`, and it has done since
+`p187`.
 
 ## 🆕 Pattern 10 — Add retention to a tutor that already works
 
@@ -509,7 +541,7 @@ management system is not an ERP, and `verticals/solutions.md` sets out the compa
 
 🔴 **Why this pattern is a build and not an integration.** `p359` measured the
 special-education tier first-hand: **seven addresses, one permissive grant.** Two of the
-seven — including the only genuinely mature one, at 836 commits and 7 authors — are
+seven — including the only genuinely mature one, at **1 281 commits and 12 authors (`%ae`)**, corrected `p362` — are
 **explicitly noncommercial** (`CC-BY-NC-4.0` and `PolyForm Noncommercial 1.0.0`), and
 four carry **no licence file at all**. 🟢 This is the clearest build-rather-than-adopt case
 on these shelves, and §23 of `intel/trends.md` explains why it is likely to stay that way.
@@ -524,7 +556,7 @@ engagement fundable.
 
 | Role | Repo | Licence | Why this one |
 |---|---|---|---|
-| Records, assessments, IEP workflow | [`dg13788/iep-system`](https://github.com/dg13788/iep-system) | 🟢 **MIT** (`main/LICENSE`) | **The one permissive row on the tier.** Student records, assessment capture, a five-step IEP wizard, e-signatures. React / PHP / MySQL. 🟡 Chinese-language UI, 38 commits, 4 authors — take the **data model and workflow**, expect to rewrite the presentation layer |
+| Records, assessments, IEP workflow | [`dg13788/iep-system`](https://github.com/dg13788/iep-system) | 🟢 **MIT** (`main/LICENSE`) | **The one permissive row on the tier.** Student records, assessment capture, a five-step IEP wizard, e-signatures. React / PHP / MySQL. 🟡 Chinese-language UI, 38 commits, 4 authors (`%ae`) — take the **data model and workflow**, expect to rewrite the presentation layer |
 | Goal drafting over client documents | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0** | Already carried on `agents/top.md`. Skills as the packaging for pedagogical instructions — §8 of `intel/trends.md` — so goal-drafting guidance stays **the client's content**, not vendored code |
 | Compliance + specialist agents | [`iblai/k-12-agents`](https://github.com/iblai/k-12-agents) | 🟢 **MIT** (`main/LICENSE`) | Already held. School Assistant **plus 12 specialists**, including a **`special-education-agent`**, `assessment`, `curriculum-alignment` and `student-safety`, with PowerSchool skills. 🟢 **This is the row that corrected `T-p288b`, and it is the only permissive special-education *agent* on this base** |
 | Progress evidence store | [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | 🟢 **Apache-2.0** | 🆕 `p359`. xAPI **1.0.3 and 2.0** conformant, admin UI, OpenTelemetry. **An IEP's legal weight is its progress record** — this is where goal-progress statements land in a standard format rather than a bespoke table |
@@ -654,7 +686,7 @@ Act-ready disclosure and oversight record.
 
 🟡 **Price discovery from the source tree, not the documentation.** `entcore`'s README
 still specifies **JSE 7** and a clone URL on a decommissioned host, while the code took a
-commit on **2026-10-20** from 21 authors. 🔴 An estimate built by reading that README will
+commit on **2026-10-20** from **139 authors (`%ae`)** over 11 714 commits — corrected `p362` from the published `21`. 🔴 An estimate built by reading that README will
 be wrong in the expensive direction.
 
 🟢 **The market note that makes this a migration pattern rather than a greenfield one.**
@@ -678,7 +710,7 @@ justify the paper, and a model will produce plausible items that map to nothing.
 **The reference implementation to start from, and the part to replace.**
 
 1. **The orchestration** — [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam)
-   (🟢 **MIT**, `main/LICENSE`, © *Naufaldi Rafif*; **435 commits, 4 authors**, live
+   (🟢 **MIT**, `main/LICENSE`, © *Naufaldi Rafif*; **435 commits, 4 authors (`%ae`)**, live
    deployment). One sentence in, an A4 print-ready paper out: mixed item types, answer key,
    and a teacher-facing *pembahasan* per item, bound to **Kurikulum Merdeka** CP/TP by an
    explicit review step. 🟢 **MIT, so fork it into the deliverable.**
@@ -719,9 +751,13 @@ and one is the non-commercial licence above.
 |---|---|---|
 | Canvas, Open edX, Frappe LMS, ClassroomIO (**AGPL**) | LTI 1.3 tool · MCP server · web services | Forking, or linking client code |
 | Moodle, Chamilo, ELMSLN, Judge0, UDOIT, 🆕 HUSTOJ, 🆕 openSIS Classic (**GPL**) | Web services · the plugin API as a *separate* deployed plugin · the API over HTTP | Statically linking into proprietary code |
-| 🆕 Hydro, DMOJ, Sharif Judge, the AGPL item banks (**AGPL**) | The client's own deployment, reached over HTTP | Hosting it as the studio's service |
+| 🆕 Hydro, DMOJ, the AGPL item banks, 🆕 **educa-lrs** (**AGPL**) | The client's own deployment, reached over HTTP | Hosting it as the studio's service |
+| 🆕 **Sharif Judge** (**GPL-3.0** — 🔴 moved out of the AGPL row, `p362`) | The client's deployment **or** a studio-hosted service — GPL has no network clause | Distributing a modified build without its source |
 | BigBlueButton, OpenEduCat (**LGPL**) | Dynamic linking · API | Forking into closed source |
-| OpenOLAT, Sakai, Kolibri, Moodle App, Opencast, QingdaoU OnlineJudge, Judger, Otter-Grader, py-fsrs, 🆕 **LectureLab**, 🆕 **bruchris/canvas-lms-mcp**, 🆕 **G36maid/moodle-mcp** (**permissive**) | Anything, including forking | — |
+| OpenOLAT, Sakai, Kolibri, Moodle App, Opencast, QingdaoU OnlineJudge **+ OnlineJudgeFE**, Otter-Grader, py-fsrs, LectureLab, `bruchris/canvas-lms-mcp`, `G36maid/moodle-mcp`, 🆕 **XiaoCow666/CodeSense**, 🆕 **tura-learn/Dhee**, 🆕 **nuwa-skills/montessori-skill** (**permissive**) | Anything, including forking | — |
+| 🔴 🆕 **QingdaoU/Judger**, **QingdaoU/JudgeServer** (**SATA** — MIT body **plus obligations**; 🔴 removed from the permissive row, `p362`) | Honouring the notice: star the project, thank the authors, keep its copyright and project-url block intact — or keeping execution outside the deliverable, over HTTP | Shipping it as *"MIT"*, or into any engagement whose procurement rule says OSI-permissive only |
+| 🔴 🆕 **QingdaoU/OnlineJudgeDeploy** (**no grant**, ref `2.0`) | 🔴 **Reading it as documentation** for how the services wire together | Vendoring the compose files into a deliverable |
+| 🔴 🆕 **CaviraOSS/PageLM** (**PageLM Community License**), 🆕 **Samkarya/online-exam-questions** (**ENCOSL**) | 🔴 **Nothing in paid work** — both are non-commercial; PageLM also requires a revenue-sharing agreement, and applies itself *"in whole or in part"* | Any commercial use. 🔴 Both were published on these shelves as **MIT** until `p362` |
 | 🆕 ERPNext (**GPL-3.0**) | Its **REST API**, as a separate service | A Frappe app in-process, or linking client code |
 | 🆕 Cap, CaptureFlow (**split: AGPL app, MIT engine**) | Vendoring the **MIT engine only** — `licenses/LICENSE-MIT`, `packages/engine/` | Forking the repository; the combined distribution is AGPL |
 | 🔴 🆕 `csmediapro/moodle-mcp-server` (**AGPL-3.0 connector**) | 🔴 **Nothing.** Use a permissive Moodle MCP instead | Any use — a copyleft *connector* sits inside the engagement, not across the boundary |
@@ -811,3 +847,61 @@ permissive open-source dependencies"*. 🟢 **A statement about dependencies is 
 on the work.** Without a licence the default is exclusive copyright, and it cannot enter
 a client deliverable at any price. 🔵 It is named here because it is the most plausible
 near-miss on the shelf — right category, reasonable stars, nothing behind the heading.
+
+## 🆕 Pattern 21 — A coding academy's grading stack with a permissive execution path, built because `p362` removed the old one
+
+**Client shape.** The same client as `Pattern 9` — a bootcamp or CS department that must
+run untrusted student code inside a closed deliverable — but with a procurement rule that
+says **OSI-permissive only**. 🔴 `Pattern 9`'s execution tier cannot satisfy that rule any
+more: `QingdaoU/JudgeServer` and `QingdaoU/Judger` are **SATA**, and
+`QingdaoU/OnlineJudgeDeploy` has no grant at all. This pattern is what is left when the
+rule is absolute.
+
+**Recipe.**
+
+1. **Execution and evaluation** — 🆕 [`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense)
+   (🟢 **MIT**, 1 067 B at `main/LICENSE`, 554 commits · 7 authors (`%ae`) · 640 files ·
+   last commit 2026-10-09). Flask/Python: code evaluation, guided learning, **restricted
+   execution** and learning analytics in one permissive platform. 🔴 **Read the honest
+   bench before quoting it:** 4 ★. The commit stream, not the star count, is the argument
+   — and the restricted-execution layer is **not** a seccomp sandbox, so a client running
+   genuinely hostile submissions still needs an OS-level boundary (a container per
+   submission, `gVisor`, or `judge0` over HTTP).
+2. **Notebook courses, unchanged and genuinely permissive** —
+   [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader)
+   (BSD-3-Clause) behind [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub)
+   with [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator)
+   (both BSD-3-Clause).
+3. **Integrity** — [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (MIT) on the
+   submissions themselves, rather than proctoring the student.
+4. **Written answers** — [`erictrainnlpinxihu/Grader-agent`](https://github.com/erictrainnlpinxihu/Grader-agent)
+   (MIT), whose write actions are absent from its tool table, so the agent can only
+   propose and a human disposes.
+5. 🆕 **Retention, so the deliverable can show learning rather than output** —
+   [`tura-learn/Dhee`](https://github.com/tura-learn/Dhee) (🟢 **MIT**, 1 071 B, 198
+   commits · 3 authors (`%ae`) · APAC/India) is **memory built for tutor agents**, which
+   is the layer `Pattern 10` had to assemble from `py-fsrs` plus glue. Pair it with
+   [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs)
+   (MIT) for the scheduling half: Dhee decides what the tutor **remembers about the
+   learner**, FSRS decides **when** to come back to a skill.
+6. **Report into the client's LMS** — an LTI 1.3 tool via
+   [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0) or
+   [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (MIT).
+7. **Pedagogical behaviour as skills** — [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills)
+   (Apache-2.0), and 🆕 [`nuwa-skills/montessori-skill`](https://github.com/nuwa-skills/montessori-skill)
+   (🟢 **MIT**, 72 ★) where self-directed practice is the pedagogy. 🔵 **Prefer these over
+   `GarethManning/education-agent-skills` for a closed deliverable**: that pack is far
+   larger (165 `SKILL.md` against 5) and it is **`CC-BY-SA-4.0`**, so ShareAlike reaches
+   every curriculum artefact derived from it. 🔴 The permissive skill supply in education
+   is *small*, and saying so is more useful than pretending the choice is even.
+
+🟢 **Licence boundary: every component is MIT, BSD-3-Clause or Apache-2.0, and each grant
+was read from its payload on 2026-10-21.** Nothing in this pattern carries a notice
+obligation, a non-commercial clause or a copyleft reach.
+
+🔴 **What this pattern costs against `Pattern 9`, stated plainly so the choice is real.**
+`QingdaoU/OnlineJudge` is a 6 552 ★ complete judge with contests, a problem bank and an
+admin UI; `CodeSense` is a 4 ★ platform with 554 commits behind it. 🟡 **If the client can
+accept a non-OSI notice, `Pattern 9` with SATA honoured is less work and more mature
+software.** This pattern exists for the client who cannot, and for the engagement where
+*"permissive only"* is in the contract rather than in the slide.

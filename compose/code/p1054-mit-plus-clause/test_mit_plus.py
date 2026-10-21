@@ -56,6 +56,27 @@ with open(_FIXTURE, encoding="utf-8") as _fh:
 # This is road 2: no rider vocabulary left to hit, so only the length state can refuse.
 COMMONS_CLAUSE_NO_RIDER = COMMONS_CLAUSE[COMMONS_CLAUSE.index("MIT License\n\nCopyright"):]
 
+# `p362` — SATA, read from the two fixtures this pass pinned rather than retyped, for the
+# same reason the Commons Clause one is read from `p207`'s.
+#
+#   * the REAL payload: `QingdaoU/Judger`, `newnew/LICENSE`, 1 823 B, the row this pass
+#     corrected from a published `MIT` on three shelves;
+#   * a SYNTHETIC in-band one, and it is synthetic DELIBERATELY: it is the same rider on
+#     an MIT body abridged by about as much as SATA adds, which is the shape the length
+#     limb cannot see.  Before this pass added the anchors it graded `MIT` / usable.
+_SATA_REAL = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "fixtures", "sata-mit-qingdaou-judger-1823.LICENSE",
+)
+_SATA_INBAND = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "fixtures", "sata-mit-inband-1072.synthetic.txt",
+)
+with open(_SATA_REAL, encoding="utf-8") as _fh:
+    SATA = _fh.read()
+with open(_SATA_INBAND, encoding="utf-8") as _fh:
+    SATA_IN_BAND = _fh.read()
+
 # Canonical MIT, padded with a copyright line to land in the measured 1062-1093 B band.
 MIT = """MIT License
 
@@ -303,6 +324,65 @@ class TestP252NoRegression(unittest.TestCase):
     def test_mit_plus_unclassified_addition_survives(self):
         padded = MIT + "\n" + ("Additional bespoke term. " * 60)
         self.assertEqual(classify(padded)["verdict"], VERDICT_MIT_PLUS)
+
+
+class TestP362Sata(unittest.TestCase):
+    """`p362` — the Star And Thank Author License, found on a PUBLISHED row.
+
+    `QingdaoU/Judger` (496 ★) was carried as `MIT` on `repos/foundations.md`,
+    `repos/trending.md` and `verticals/solutions.md`, and load-bearing in Pattern 9's
+    permissive path.  Its payload is SATA.  Corroborated independently: GitHub's own
+    classifier reads the same repository as `NOASSERTION`.
+    """
+
+    def test_the_real_payload_is_refused_and_the_rider_is_NAMED(self):
+        v = classify(SATA)
+        self.assertEqual(v["bytes"], 1823)
+        self.assertTrue(v["mit_body"])
+        self.assertEqual(v["verdict"], VERDICT_RESTRICTED)
+        # The point of the change: WHAT is wrong, not merely that something is.
+        self.assertTrue(v["riders"], "SATA must report as a named rider")
+        self.assertFalse(is_usable_permissive(SATA))
+
+    def test_the_in_band_rider_is_the_control_that_earns_the_anchors(self):
+        # 🔴 This is the case the length limb is blind to by construction, and it is the
+        # reason the anchors were added rather than relying on the 673 B of excess the
+        # real file happens to carry.  Measured BEFORE the change: verdict `MIT`,
+        # is_usable_permissive True — i.e. publishable as permissive.
+        v = classify(SATA_IN_BAND)
+        self.assertEqual(v["length_state"], LENGTH_IN_BAND)
+        self.assertGreaterEqual(v["bytes"], MIT_CANONICAL_LOW)
+        self.assertLessEqual(v["bytes"], MIT_CANONICAL_HIGH)
+        self.assertEqual(v["verdict"], VERDICT_RESTRICTED)
+        self.assertFalse(is_usable_permissive(SATA_IN_BAND))
+
+    def test_the_length_limb_alone_would_have_called_it_unclassified(self):
+        # Pins the pre-change verdict as a fact rather than a recollection: strip the
+        # rider vocabulary from the real payload and only the byte excess is left.
+        stripped = SATA.replace("Star And Thank Author", "Example").replace(
+            "you shall star/+1/like", "you may enjoy"
+        ).replace("thank the author(s)", "credit the maintainers")
+        v = classify(stripped)
+        self.assertEqual(v["verdict"], VERDICT_MIT_PLUS)
+        self.assertEqual(v["riders"], [])
+        self.assertGreater(v["excess"], 0)
+
+    def test_genuine_mit_fires_no_sata_anchor(self):
+        # The false-positive side: the new anchors must not reach canonical MIT, nor the
+        # Commons Clause fixture's classification.
+        self.assertEqual(classify(MIT)["riders"], [])
+        self.assertEqual(classify(MIT)["verdict"], VERDICT_MIT)
+        self.assertEqual(classify(COMMONS_CLAUSE)["verdict"], VERDICT_RESTRICTED)
+
+    def test_the_word_star_alone_is_not_enough(self):
+        # 🟡 The honest hazard of an anchor this short: `star` occurs in ordinary prose.
+        # The anchors are PHRASES for that reason, so a licence merely mentioning stars
+        # is untouched.
+        innocent = MIT.replace(
+            "Copyright (c) 2026 A Licensor",
+            "Copyright (c) 2026 A Licensor\n\nSee the star chart in README.md.",
+        )
+        self.assertEqual(classify(innocent)["riders"], [])
 
 
 if __name__ == "__main__":

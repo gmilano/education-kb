@@ -1,0 +1,9 @@
+slug	published_cell	payload_verdict	payload_bytes	grant_path	corroboration	shelves_touched
+QingdaoU/Judger	MIT	NOT-OPEN-SOURCE:added-restriction (SATA)	1823	newnew/LICENSE	github index license.spdx_id=NOASSERTION	repos/foundations.md,repos/trending.md,verticals/solutions.md,compose/patterns.md
+CaviraOSS/PageLM	MIT ("the payload is stock MIT")	NOT-OPEN-SOURCE:added-restriction (PageLM Community License)	8563	main/LICENSE.md	github index NOASSERTION; this base's own p411 run: familia=NO-OSI usable=NO 8563 B	agents/top.md,compose/patterns.md
+Samkarya/online-exam-questions	stock MIT + contradictory copyright line	NOT-OPEN-SOURCE:added-restriction (ENCOSL v1.0, Apr 2026)	2118	main/LICENSE	payload title and sec.2 read first-hand	agents/top.md
+mjnaderi/Sharif-Judge	AGPL-3.0	GPL-3.0 (no Affero title; 35146 B GPLv3 text)	35146	Version-1/LICENSE	github index license.key=gpl-3.0	repos/foundations.md,verticals/solutions.md,compose/patterns.md
+AnonymousOnyx22/brightspace-d2l-mcp	MIT	MIT-BODY-PLUS (excess READ: upstream attribution note)	1200	main/LICENSE	excess explained; cell stands	none
+ls1intum/Ares2	MIT	MIT-BODY-PLUS (excess READ: institutional holder line, TUM)	1345	main/LICENSE	excess explained; cell stands	none
+nvaes/CEB	MIT	MIT-BODY-PLUS (excess READ: FR note, CEB papers remain Fed. Wallonie-Bruxelles property)	1240	main/LICENSE	excess explained; cell stands, data-vs-code scope noted	none
+QingdaoU/OnlineJudge	MIT	MIT	1085	master/LICENSE	github index license.key=mit; CONTROL for the sibling inference	none

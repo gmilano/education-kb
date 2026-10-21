@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 362 — 2026-10-21 — **THE GRANT COLUMN WAS THE LEAST-SWEPT COLUMN ON THIS BASE. ONE RUN OF AN INSTRUMENT BUILT AT `p187` FOUND THREE PUBLISHED `MIT` CELLS THAT ARE NOT PERMISSIVE, INCLUDING A 2 035 ★ ROW THIS BASE HAD ALREADY GRADED CORRECTLY AT `p123` AND LATER OVERWROTE. THE MIT JUDGE CANNOT EXECUTE CODE UNDER AN MIT GRANT: ITS SANDBOX AND WRAPPER ARE SATA AND ITS DEPLOY REPO IS UNGRANTED. ONE CORRECTION RUNS THE PERMISSIVE WAY — `Sharif-Judge` IS GPL, NOT AGPL. FOUR AUTHOR FIGURES DO NOT RE-DERIVE AND `p349`'s DIRECTION IS REFUTED. FOUR NEW ROWS, THREE NEW ADDRESSES FROM ONE README, AND A REPAIRED CLASSIFIER. `make hooks` — 28/32 IN, 32/32 OUT**
+
+🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
+evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by
+commit.
+
+**Evidence:** [`mit-body-sweep`](evidence/mit-body-sweep.2026-10-21-p362.tsv) ·
+[`grant-corrections`](evidence/grant-corrections.2026-10-21-p362.tsv) ·
+[`author-key-rederivation`](evidence/author-key-rederivation.2026-10-21-p362.tsv) ·
+[`new-rows-bench`](evidence/new-rows-bench.2026-10-21-p362.tsv) ·
+[`regional-legs`](evidence/regional-legs.2026-10-21-p362.tsv)
+
+### 🟢 The gate state, first, because the REDs were this pass's agenda
+
+🟢 **`make hooks` RAN: 28/32 green on arrival, 32/32 green on exit.** RED on arrival:
+`gate-absence`, `gate-shelf-consistency`, `gate-author-key`, `gate-census-currency` —
+🟢 **all four closed by this pass, each at its cause rather than by softening the gate.** 🔵 **Three of the
+four were worked to a cause rather than to a green number:**
+
+| Gate | What it accused | What it turned out to be |
+|---|---|---|
+| `gate-shelf-consistency` | `mjnaderi/Sharif-Judge` carries `AGPL-3.0` on one shelf and `MIT` on another | 🟢 **Right to fire, wrong about which cell.** The `MIT` was an **adjacency** read of a sentence about `QingdaoU/Judger`; the `AGPL-3.0` was a **real mis-grading** — the payload is plain GPLv3. 🔴 Both cells were wrong, in different ways |
+| `gate-author-key` | 22 author figures on the live shelves naming no key — `NO-KEY`, neither `%ae` nor `%an` | 🔴 **Annotating them would have been a guess.** All 12 identifiable rows re-cloned: **9 exact, 4 corrected**, and `p349`'s directional claim refuted |
+| `gate-absence` | the live README section publishes an absence whose subject the shelves claim | 🟢 **`p357`'s sentence**, *"there is no verified permissive education ERP"*, against `p361`'s `academico-sis/academico` row. 🔵 The distinction that keeps `p357` defensible is **ERP vs SIS** — `academico` is school-management/SIS. Restated here with that qualifier rather than edited in place |
+| `gate-census-currency` | 2 of 3 published census cells are stale | 🟢 Re-derived as the **last act before the commit**, per its own instruction |
+
+### 🔴 The headline: three rows published as permissive are not
+
+🔴 `p362` pointed this base's own [`p1054-mit-plus-clause`](compose/code/p1054-mit-plus-clause/)
+at **every live-shelf address co-occurring with the token `MIT`** — 144 of them — and
+found **three** `NOT-OPEN-SOURCE:added-restriction`:
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) (**2 035 ★**, non-commercial
+**plus a revenue-sharing requirement**, 8 563 B),
+[`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) (**496 ★**, **SATA**, 1 823 B) and
+[`Samkarya/online-exam-questions`](https://github.com/Samkarya/online-exam-questions)
+(**ENCOSL v1.0**, 2 118 B, commercial use reserved to the licensor's own company).
+
+🔴 **All three recite MIT's permission paragraph verbatim and then narrow it**, which is
+why a badge check, a body-matching classifier and a human skim all return `MIT`.
+🔴 **PageLM is a regression:** `p123`/`p411` graded that exact payload
+`familia=NO-OSI usable=NO 8563 B sha256:c834209c5f33`, and a later pass published `MIT`
+with the note *"the payload is stock MIT"* — which is the misreading `p255` had already
+diagnosed in writing.
+
+🟢 **The sweep's other half, because a hit count is not a measurement:** **115 exact**,
+**12 `NOT-MIT-BODY`** that are adjacency rather than error (five checked cell-by-cell,
+shelves right on all five), **11** already-flagged no-grant rows, and **3
+`MIT-BODY-PLUS`** whose excess was read and found benign.
+
+### 🔴 And the row is smaller than the stack behind it
+
+🔴 **`QingdaoU/OnlineJudge` is MIT and cannot execute one submission under an MIT
+grant.** Following its own README produced **three addresses absent from this whole
+corpus**: `JudgeServer` (**SATA**, 209 ★), `OnlineJudgeFE` (MIT, 330 ★) and
+`OnlineJudgeDeploy` (**no grant**, ref `2.0`, **591 ★** — more than the sandbox).
+🔴 **What renders pages is permissive; what runs untrusted student code is not.**
+Published as `T30`; `Pattern 9`'s claim *"every component is MIT, BSD-3-Clause or
+Apache-2.0"* stood for six passes and is corrected, with **`Pattern 21`** added for
+clients whose procurement rule is permissive-only.
+
+🔵 **The reusable rule:** grade the **deliverable's dependency closure**, not the
+repository the engagement started from. `ACTION ZZ-bo`.
+
+### 🟢 One correction runs the other way, and that matters
+
+🟢 **`mjnaderi/Sharif-Judge` is GPL-3.0, not AGPL-3.0** — 35 146 B of plain GPLv3 at
+`Version-1/LICENSE`, index agreeing at `license.key=gpl-3.0`. 🔵 So the only
+course-shaped judge in the corpus **may be hosted as a studio service**: GPL has no
+network clause. 🔴 **A base that only ever corrects in the restrictive direction is
+hedging, not measuring.**
+
+### 🟢 The instrument was repaired, not merely run
+
+🔴 The classifier refused SATA **by its size limb alone** — 673 B of excess, **zero**
+vocabulary hits — and on an in-band payload carrying the same rider (1 072 B) it returned
+**`MIT`** / `is_usable_permissive: True`. 🟢 SATA's phrases are now named
+`RIDER_ANCHORS`, both fixtures pinned, five controls added including the in-band case and
+a false-positive control for the word *star* in prose. **39/39, up from 34.**
+
+### 🔵 The address-shape census, re-derived as the LAST act before this commit
+
+🟢 **Re-derived over the nine `SHELF_FILES` of the tree this pass commits: **2 571**
+harvested shapes → **33** are not addresses → **2 538 addresses** (1.28 % inflation).**
+🔵 `gate-census-currency` exists because a census published by the pass that then writes
+to the shelves is stale the moment it is written — `p352` measured exactly that defect in
+`p351`, and in `p351`'s own correction of `p350`. 🟢 **So this triple was derived after
+every shelf write of `p362` was on disk**, and the rejected-shape class distribution is
+unchanged: 26 `NAV-NAMESPACE`, 3 `OWNER-ELLIDED`, 2 `EMPTY-NAME`, 1
+`OWNER-TEMPLATE-VAR`, 1 `PLACEHOLDER-OWNER`.
+
+🔵 **The movement from `p355`'s carried `2 483 → 33 → 2 450` is this pass's own writing**
+— the corrections, the five new addresses and the component table above — not a change in
+the corpus's shape. 🔵 **The inflation rate barely moved** (1.33 % → 1.28 %), which is the
+useful part: a pass that adds prose about repositories adds addresses and non-addresses in
+roughly the ratio the shelves already carry.
+
+### 🆕 Supply, and where it placed
+
+🟢 **Four new rows:** [`tura-learn/Dhee`](https://github.com/tura-learn/Dhee) (MIT, 32 ★,
+tutor-agent memory, **APAC/India**),
+[`nuwa-skills/montessori-skill`](https://github.com/nuwa-skills/montessori-skill) (MIT,
+72 ★, the first permissive pedagogy skill-pack here, **APAC/China**),
+[`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense) (MIT, 554 commits,
+permissive execution, **APAC/China**) and
+[`digital-learning-gmbh/educa-lrs`](https://github.com/digital-learning-gmbh/educa-lrs)
+(AGPL-3.0, the first EMEA learning-record store here, **EMEA/Germany**).
+
+🔴 **All eight prescribed legs returned zero new facts and zero new addresses** —
+recorded query by query in [`regional-legs`](evidence/regional-legs.2026-10-21-p362.tsv).
+🔴 **No new LATAM supply this pass**, stated because the region's standing finding is a
+licensing gap rather than a supply gap and a silent pass would look like coverage.
+🟡 **Two informed gaps restated:** no education-specific adoption figure for the UK,
+Middle East or Africa; no education-specific AI rule for any APAC jurisdiction.
+
 ## Pass 357 — 2026-10-21 — **`ACTION ZZ-bb` DISCHARGED: BOTH OF `p356`'s "EMPTY" LEGS WERE FULL, AND ITS REFUSAL TO PUBLISH AN ABSENCE IS WHY THAT IS A FINDING RATHER THAN A RETRACTION. NINE NEW ROWS, TWO NEW TIERS, FOUR LICENCE FLAGS. EMEA GAINS ITS FIRST CURRICULUM DATA ASSET AND ITS GRANT BEATS THE ONE THIS BASE RECOMMENDS. A NEW ANOMALY CLASS: THE GRANT IS VALID AND THE LICENSOR IS SOMEBODY ELSE. `make hooks` — NOT RUN, SO GATE STATE IS UNJUDGED**
 
 🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every

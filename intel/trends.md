@@ -6,8 +6,12 @@ updated: 2026-10-21
 
 # Education — current trends
 
-**Pass 361 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
-across external sources. 🆕 **Trends 27–29 are `p361`'s**, and all three are
+**Pass 362 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
+across external sources. 🆕 **Trends 30–32 are `p362`'s**, and all three come from
+pointing an instrument this base already owned at a column it had stopped checking: §30 is
+a *component-level* licensing finding with an engagement cost attached, §31 is the sweep
+that found it and two more like it, and §32 is a measured property of the search index
+itself. 🆕 **Trends 27–29 are `p361`'s**, and all three are
 *measurement* findings rather than sector findings — the pass recovered an instrument
 this base had written off and immediately found two published defects with it.
 **Trends 24–26 are `p360`'s**: §24 **refutes**
@@ -564,7 +568,7 @@ special-education addresses measured first-hand at `p359`:
 | 🔴 **no licence file at any of 7 probed paths** | **4** |
 
 🔴 **And the two best-maintained addresses on the tier are both noncommercial by
-construction** — `The-Burnes-Center/a-iep` at 836 commits and 7 authors, and
+construction** — `The-Burnes-Center/a-iep` at **1 281 commits and 12 authors (`%ae`)** — corrected `p362` from `836 / 7` — and
 `boktoday/iep-agent-hermes-agent`. 🔵 That is the inverse of the usual trap: it is not
 that the usable rows are immature, it is that **the mature rows are the ones a paid
 engagement cannot touch.**
@@ -665,7 +669,7 @@ base for 359 passes.**
 🟢 **There is exactly one substantial open implementation and `p360` shelved it.** France's
 **ENT** (*Espace Numérique de Travail*), standardised by the Ministry of Education and the
 Caisse des dépôts since **2003**, procured per *région*, with `edificeio/entcore` as its
-modular kernel: **AGPL-3.0**, 21 authors, a commit on **2026-10-20**.
+modular kernel: **AGPL-3.0**, **139 authors (`%ae`)** across **11 714 commits**, a commit on **2026-10-20**. 🔴 **Corrected `p362`: the published `21 authors` was low by a factor of six** — re-derived first-hand on the commit channel (`%an` reads 142). 🟢 The correction *strengthens* this trend rather than weakening it.
 
 🔴 **Three structural facts make this a trend and not a repository note.**
 
@@ -772,3 +776,97 @@ branch; *is it still open for contributions* → the index's `archived` flag. �
 dependency recommendation that answers fewer than three of those is incomplete**, and
 the third one is the one every open-source due-diligence checklist this base has seen
 omits.
+
+
+## 30. 🔴 🆕 A permissive education platform can have a non-permissive execution path, and the LICENSE file will not say so
+
+🔴 **`QingdaoU/OnlineJudge` is MIT and cannot execute a single submission under an MIT
+grant.** Measured component by component at `p362`, every grant read from its payload at
+its real default ref:
+
+| Component | Role | Licence | Bytes | ★ |
+|---|---|---|---:|---:|
+| [OnlineJudge](https://github.com/QingdaoU/OnlineJudge) | Django backend | 🟢 **MIT** | 1 085 | 6 552 |
+| [OnlineJudgeFE](https://github.com/QingdaoU/OnlineJudgeFE) | Vue front end | 🟢 **MIT** | 4 334 | 330 |
+| [JudgeServer](https://github.com/QingdaoU/JudgeServer) | executes submissions | 🔴 **SATA** | 1 823 | 209 |
+| [Judger](https://github.com/QingdaoU/Judger) | seccomp sandbox | 🔴 **SATA** | 1 823 | 496 |
+| [OnlineJudgeDeploy](https://github.com/QingdaoU/OnlineJudgeDeploy) | the documented deployment | 🔴 **no grant** | — | 591 |
+
+🔴 **The split follows function, and it runs the wrong way for a studio.** What renders
+pages is permissive; what runs untrusted student code is not; and the compose repository a
+client's ops team actually clones — **591 ★, more than the sandbox itself** — carries no
+licence at all.
+
+🔵 **Why this is a trend and not a row.** Education infrastructure is **old and
+multi-repository**: §13 of this file already records that its grants fail closed because
+the projects predate the conventions tooling assumes. 🔴 **Component-level licensing is
+the same cause with a worse failure mode**, because it fails *open*: the headline
+repository reads `MIT`, an SPDX scan of **that** repository agrees, and the obligation
+lives one `git clone` away in a sibling nobody shelved. 🟢 Three of these five components
+were absent from this entire corpus — `archive/` and `evidence/` included — until `p362`
+read `OnlineJudge`'s own README and followed it.
+
+🟡 **What a studio does about it.** Grade the **deliverable's dependency closure**, not
+the repository you started from: read the headline project's README for named companions,
+then resolve each one's default ref and read its payload. 🔵 On this base the cost of not
+doing it was `Pattern 9` claiming *"every component is MIT, BSD-3-Clause or Apache-2.0"*
+for six passes while its execution tier was SATA. Registered as `ACTION ZZ-bo`.
+
+## 31. 🔴 🆕 The grant column was the least-swept column on this base, and one pass of an existing instrument broke it in three places
+
+🔴 **`p362` ran [`p1054-mit-plus-clause`](../compose/code/p1054-mit-plus-clause/) — built
+at `p187` — over every live-shelf address co-occurring with the token `MIT`, and found
+three published cells that are not permissive:**
+
+| Row | Published as | Actually | The clause that decides |
+|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) (2 035 ★) | **MIT**, *"the payload is stock MIT"* | **"PageLM Community License"**, 8 563 B | non-commercial, **plus a revenue-sharing agreement** required before any commercial use, applying *"in whole or in part"* |
+| [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) (496 ★) | **MIT** | **SATA**, 1 823 B | *"you shall star/+1/like the project(s) ... and then thank the author(s)"* |
+| [`Samkarya/online-exam-questions`](https://github.com/Samkarya/online-exam-questions) | stock MIT + a contradictory copyright line | **ENCOSL v1.0**, 2 118 B | commercial use prohibited *"for all parties EXCEPT for ExamOven ... and its authorized owners/affiliates"* |
+
+🔴 **All three recite MIT's permission paragraph verbatim and then narrow it.** That is
+the shape §14 of this file named — *a badge is not a grant* — one layer deeper: here the
+**body** is MIT's, so a classifier keyed on the grant sentence returns `MIT` confidently.
+`p255` recorded exactly this about PageLM — *"caught only because PageLM recites the MIT
+grant verbatim"* — and a later pass still published `MIT`.
+
+🔵 **The sweep's honest other half, because a hit count is not a measurement.** Of 144
+addresses: **115 exact**, **12 `NOT-MIT-BODY`** which were **adjacency rather than error**
+(five checked cell-by-cell; the shelves were right on all five), **11** already flagged as
+no-grant rows, and **3 `MIT-BODY-PLUS`** whose excess was read and found benign — an
+upstream attribution note, a long institutional holder line, and 🟡 a French note that the
+**CEB exam papers** remain the property of the Fédération Wallonie-Bruxelles while the
+code stays MIT.
+
+🔴 **The structural point, and it is about effort allocation rather than licensing.** This
+base has swept **liveness** (277 of 277) and **stars** (273 of 277) repeatedly, because
+both are cheap and both produce a satisfying green number. 🔴 **Neither can detect a wrong
+grant**, and the grant is the column an engagement is actually decided on. 🟢 A sweep of
+the column that matters, with an instrument that already existed, cost one pass and
+changed three recommendations and two compose patterns.
+
+## 32. 🔵 🆕 The repository index drops a vertical qualifier under `OR`, and refuses logical operators on qualifiers outright
+
+🟢 **Two measured properties of the discovery channel, recorded because each one costs a
+pass to rediscover.**
+
+🔴 **First: an `OR`-group across `in:name,description,readme` loses the vertical.**
+`tutor OR teaching OR curriculum OR classroom agent mcp` sorted by `updated` matched
+**28 572** repositories whose first 40 were generic MCP servers and coding agents, with
+**no education row at all**; `IEP OR "special education" OR dyslexia agent OR llm`
+matched **84 481** and returned `rea`, `superpowers` and `hermes-agent` at the head.
+🟢 **Every `topic:`-anchored leg stayed on-domain** — `topic:intelligent-tutoring-system`
+returned 42 repositories, essentially all of them tutoring systems.
+
+🔴 **Second: logical operators do not apply to qualifiers at all.**
+`topic:special-education OR topic:iep` is **refused** by the API — *"The search contains
+only logical operators (AND / OR / NOT) without any search terms."* 🔵 So a multi-topic
+sweep is **n separate calls**, and a pass that budgets one call per axis will silently
+under-cover its own plan.
+
+🔵 **Why this belongs beside §15's finding rather than in a methods note.** §15 recorded
+that APAC's supply *"gap"* was in the trade press and not in the supply. 🔴 **Both of these
+query shapes manufacture the same illusion**: they return a plausible, well-ranked,
+completely off-vertical answer, and a pass that trusts the ranking concludes the vertical
+is empty. 🟢 The fix is cheap and it is not more vocabulary — it is `topic:` anchors and
+the **function legs** `p356` introduced.

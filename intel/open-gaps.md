@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 362 · 2026-10-21 — the grant column swept for the first time, three published cells wrong, and the gap that found them was a gate RED rather than a leg
+
+**Evidence:** [`mit-body-sweep`](../evidence/mit-body-sweep.2026-10-21-p362.tsv) · [`grant-corrections`](../evidence/grant-corrections.2026-10-21-p362.tsv) · [`author-key-rederivation`](../evidence/author-key-rederivation.2026-10-21-p362.tsv) · [`new-rows-bench`](../evidence/new-rows-bench.2026-10-21-p362.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p362.tsv)
+
+🔵 **This register was last written at `p352`.** `p353`–`p361` registered their actions in their own README or shelf sections; they are not re-opened here.
+
+**Gate state: MEASURED.** 🟢 `make hooks` ran — **28/32 green on arrival, 32/32 green on exit**; RED on arrival: `gate-absence`, `gate-shelf-consistency`, `gate-author-key`, `gate-census-currency`. 🔵 **Three of the four were the pass**; the fourth (`gate-census-currency`) is discharged by re-deriving the triple as the last act before the commit, which is what that gate exists to force.
+
+### 🟢 Closed this pass
+
+| gap | how it closed | the number |
+|---|---|---|
+| **`gate-shelf-consistency`'s RED** — one slug, two licence cells | both cells read from payload | 🔴 **both were wrong**: `MIT` was an adjacency read of a neighbouring slug, `AGPL-3.0` was a real mis-grading. Payload: **GPL-3.0**, 35 146 B |
+| **has any published `MIT` cell on these shelves never been read from bytes?** — never asked | `p1054-mit-plus-clause` over 144 live-shelf addresses | 🔴 **3 of 144 are not permissive**; 115 exact, 12 adjacency, 11 already-flagged no-grant, 3 benign excess |
+| **`gate-author-key`'s RED** — 22 unkeyed author figures | 12 identifiable rows re-cloned and re-counted on `%ae` | 🟢 **9 exact, 4 corrected** (`entcore` 21 → **139**, `a-iep` 836/7 → **1 281/12**, `moodle-cli-hku` 4 → **5**, `exam-proctor` 1 → **2**) |
+| **`ACTION ZZ-av`** (a figure bound to a slug by proximity) — was licence-axis reproduction ever observed? | `gate-shelf-consistency`'s own report | 🟢 **YES, first instance on the LICENCE axis.** The gate read a licence token from prose about a *different* repository. Prose rewritten to name the slug |
+| **does `OnlineJudge`'s MIT grant cover execution?** — never asked | its own README, then each component's payload | 🔴 **NO.** `JudgeServer` and `Judger` are **SATA**; `OnlineJudgeDeploy` has **no grant**. 3 of 5 components were absent from this corpus |
+
+### 🔴 Opened this pass, each with a denominator
+
+- 🔴 **`ACTION ZZ-bn` — the `%an` and `%ae` keys are NOT ordered, so no published author figure can be converted between them.** `p349` recorded *"`%an` runs 1–9 BELOW `%ae`"* over eight rows and prescribed `%ae`. 🔴 **Refuted by counter-example:** `naufaldi/teacher-exam` reads `%an` **5** against `%ae` **4** (one person, two names, one address), while `moodle-cli-hku` reads `%ae` **5** against `%an` **4** (one person, two addresses, one name). 🔵 **Consequence for the backlog:** the **220 unkeyed figures** `ZZ-ac` counted cannot be repaired by annotation — each one has to be re-derived or dropped. Unmeasured: how many of the 220 are `%an`.
+- 🔴 **`ACTION ZZ-bo` — the dependency closure of a shelved row is ungraded, and nothing on this base looks at it.** Every grant instrument here takes **one repository's** bytes. 🔴 `QingdaoU/OnlineJudge` is the specimen: MIT headline, SATA execution tier, ungranted deploy repo, **591 ★ on the component nobody shelved**. 🟡 Cheap first cut, and it is the leg that worked this pass: **read the README of every platform row for named companion repositories**, then resolve each companion's default ref and read its payload. **Scope: unmeasured.** How many of this corpus's platform rows name companions is not known.
+- 🔴 **`ACTION ZZ-bp` — a BENCH figure has no re-derivation gate, while the star column has one.** `p352` built star re-derivation and `p361` filled 78 cells with it. 🔴 **Commit and author figures have no equivalent**, and this pass found **4 of 13 wrong**, one by a factor of six, on rows that carried no dormancy signal at all. 🔵 A liveness sweep and a star sweep cannot detect either class. **Denominator: 230 author figures exist on these shelves and 220 are `NO-KEY` (`ZZ-ac`); 13 were re-derived this pass, on `%ae`.**
+- 🟡 **`ACTION ZZ-bq` — the vocabulary limb of `p1054-mit-plus-clause` is a known-rider list and SATA shows how little it covers.** Two riders are now named (Commons Clause, SATA) against an open-ended population of bespoke MIT-plus licences. 🔴 **The size limb is the only general one**, and it is blind to a rider that abridges the MIT body by about as much as it adds — measured this pass at 1 072 B, in-band, verdict `MIT`. 🟡 A general discriminator would compare the payload against canonical MIT **token by token** rather than by length; not built, because it needs its own controls.
+
+### 🔴 Re-confirmed, not re-opened
+
+- 🔴 **The prescribed legs are EXHAUSTED against this base — eighth consecutive pass.** 4 global + 4 regional legs, **0 new facts, 0 new addresses**. 🔴 The literal `top open source AI agents education 2026 github MIT` returned general-purpose frameworks for the nineteenth time. 🟢 **The index legs returned 41 in-domain candidates with 37 CARRIED (90 %)** — saturation on names, measured.
+- 🔴 **The same false inbound claim recurred:** *"Forma LMS is Apache 2.0"*, refuted from payload at `p344` (`formalms/formalms` is GPL-2.0 at `html/license.txt`). 🟢 **Second recorded instance, no cell written from it either time.**
+- 🔴 **Two query-shape limits of the index, measured:** an `OR`-group across `in:name,description,readme` **drops the vertical qualifier** (28 572 matches, no education row in the top 40); logical operators on **qualifiers** are refused outright, so a multi-topic sweep is *n* calls. Published as §32.
+- 🟡 **Carried, unchanged, not run this pass:** `ZZ-af`, `ZZ-ah`, `ZZ-ai`, `ZZ-aj`, `ZZ-ak`, `ZZ-ap`, `ZZ-aq`, `ZZ-ar`, `ZZ-at`, `ZZ-au`, `ZZ-aw`'s unstated `%ae` domain denominators. 🔵 Re-registered rather than restated: this pass spent its hour on the grant and bench columns and says so.
+- 🔴 **Every EU primary legal host remains `connect_rejected`** — unchanged standing egress policy; every EU legal date on these shelves is secondary-sourced by construction.
+
 ## Pass 352 · 2026-10-21 — one gap closed with a measurement, one gap closed with a gate, and this register's own currency is now gated rather than trusted
 
 **Evidence:** [`commit-stream-placement`](../evidence/commit-stream-placement.2026-10-21-p352.tsv) · [`census-currency`](../evidence/census-currency.2026-10-21-p352.tsv) · [`fork-and-dormancy`](../evidence/fork-and-dormancy.2026-10-21-p352.tsv) · [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p352.tsv)

@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 362 — 🔴 **the grant column was the least-swept column on this base, and one run of an instrument built at `p187` broke it in three places.** A published `MIT` that is non-commercial with a revenue share, a published `MIT` that is SATA, a published `MIT` that carves commercial rights out for the licensor alone — plus a `GPL`→`AGPL` mis-grading corrected in the *permissive* direction, four published author figures that do not re-derive, four new rows, and a repaired classifier
+
+🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`
+**OPEN** · `git log` over a blobless clone **OPEN** · 🟢 the GitHub index **OPEN** through
+the session's MCP search tool, as `p361` established · 🔴 `api.github.com/*` and
+`github.com` HTML still **403 by `curl`** — unchanged.
+
+🟢 **Gates:** `make hooks` ran — **28/32 green on arrival, 32/32 on exit.** RED on
+arrival: `gate-absence`, `gate-shelf-consistency`, `gate-author-key`,
+`gate-census-currency`. 🔵 **Three of the four REDs were the pass's agenda and the fourth
+is the census, re-derived as the last act before the commit.**
+`gate-shelf-consistency`'s RED is what found the `Sharif-Judge` defect.
+
+**Evidence:** [`mit-body-sweep`](../evidence/mit-body-sweep.2026-10-21-p362.tsv) ·
+[`grant-corrections`](../evidence/grant-corrections.2026-10-21-p362.tsv) ·
+[`author-key-rederivation`](../evidence/author-key-rederivation.2026-10-21-p362.tsv) ·
+[`new-rows-bench`](../evidence/new-rows-bench.2026-10-21-p362.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p362.tsv)
+
+### 🔴 Three published `MIT` cells are not permissive, and all three recite MIT verbatim before narrowing it
+
+| Row | ★ | Published | The payload | The clause |
+|---|---:|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2 035** | `MIT (LICENSE.md)` — *"the payload is stock MIT"* | 🔴 **"PageLM Community License"**, 8 563 B | non-commercial; **§4 revenue-sharing agreement required before any commercial use**; applies *"in whole or in part"* |
+| [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) | **496** | `MIT`, branch `newnew` | 🔴 **SATA**, 1 823 B | *"you shall star/+1/like the project(s) ... and then thank the author(s)"* + a no-modify clause on the copyright block |
+| [`Samkarya/online-exam-questions`](https://github.com/Samkarya/online-exam-questions) | — | stock MIT + a contradictory copyright line | 🔴 **ENCOSL v1.0, Apr 2026**, 2 118 B | commercial use prohibited *"for all parties EXCEPT for ExamOven ... and its authorized owners/affiliates"* |
+
+🔴 **PageLM is a regression, not a gap.** This base measured that payload correctly at
+`p123`/`p411` — `familia=NO-OSI (community license) usable=NO 8563 B
+sha256:c834209c5f33` — and `pass257` recorded *"`p255` caught `CaviraOSS/PageLM` only
+because PageLM recites the MIT grant verbatim"*. 🔴 A later pass published `MIT` **and
+wrote the cause of its own error into the cell**.
+
+### 🔴 `QingdaoU/Judger`: a grant inherited from a sibling, and the whole stack is worse than the row
+
+🔵 **No channel ever said MIT.** Payload: SATA. GitHub's classifier: **`NOASSERTION`**.
+🟢 The sibling `QingdaoU/OnlineJudge`: genuinely **MIT**, 1 085 B — read this pass as the
+control. **The `MIT` came from the organisation, not from a file.**
+
+🔴 **Then `p362` followed `OnlineJudge`'s own README, and three of its five components
+were absent from this entire corpus:**
+
+| Component | Role | Licence | Bytes | ★ |
+|---|---|---|---:|---:|
+| [OnlineJudge](https://github.com/QingdaoU/OnlineJudge) | Django backend | 🟢 **MIT** | 1 085 | **6 552** |
+| 🆕 [OnlineJudgeFE](https://github.com/QingdaoU/OnlineJudgeFE) | Vue front end | 🟢 **MIT** (three concatenated MIT notices) | 4 334 | **330** |
+| 🔴 🆕 [JudgeServer](https://github.com/QingdaoU/JudgeServer) | executes submissions; `COPY Judger/` in its Dockerfile | 🔴 **SATA** | 1 823 | **209** |
+| 🔴 [Judger](https://github.com/QingdaoU/Judger) | seccomp sandbox | 🔴 **SATA** | 1 823 | **496** |
+| 🔴 🆕 [OnlineJudgeDeploy](https://github.com/QingdaoU/OnlineJudgeDeploy) | the documented `docker compose` deploy, ref **`2.0`** | 🔴 **no grant at any probed path** | — | **591** |
+
+🔴 **What renders pages is permissive; what runs untrusted student code is not; and the
+compose repository a client's ops team clones — 591 ★, more than the sandbox — has no
+licence at all.** Published as `T30`; `compose/patterns.md` Pattern 9 claimed *"every
+component is MIT, BSD-3-Clause or Apache-2.0"* for six passes and is corrected this pass,
+with `Pattern 21` added for clients whose procurement rule is permissive-only.
+
+### 🟢 The correction that runs the other way: `Sharif-Judge` is GPL, not AGPL
+
+🟢 [`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) (395 ★) was
+published **AGPL-3.0** on three shelves. Its payload at `Version-1/LICENSE` is **35 146 B
+of plain GPLv3** — *"GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007"*, identical at
+`master`; the index agrees at `license.key=gpl-3.0`. 🔵 **This one widens what an
+engagement may do**: the only course-shaped judge in the corpus may be **hosted as a
+studio service**, because GPL has no network clause. 🔴 A base that only ever corrects in
+the restrictive direction is not measuring, it is hedging.
+
+### 🟡 Four published author figures do not re-derive, and `p349`'s direction is refuted
+
+🔴 `edificeio/entcore` **21 → 139 (`%ae`)** over 11 714 commits — low by 6×, on the row
+`intel/trends.md` §26 rests on. 🔴 `The-Burnes-Center/a-iep` **836 / 7 → 1 281 / 12**, not
+reproducible under any convention (`--no-merges` 1 173, `--first-parent` 351) and **not
+staleness**: its last commit, 2026-10-14, predates the pass that published 836.
+🔴 `Neutralmilkzzz/moodle-cli-hku` **4 → 5 (`%ae`)** and `shaheeranser/exam-proctor`
+**1 → 2 (`%ae`)** — both published the `%an` key. 🟢 **Nine of thirteen were exact.**
+
+🔴 **And the keys are not ordered.** `p349` recorded *"`%an` runs 1–9 BELOW `%ae`"*; on
+[`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam) it **inverts** — `%an`
+5, `%ae` 4. 🔵 One person, two names, one address; against `moodle-cli-hku`'s one person,
+two addresses, one name. **No conversion exists in either direction.** `ACTION ZZ-bn`.
+
+### 🆕 Four new rows — 37 of 41 in-domain candidates were CARRIED
+
+| Row | Licence (payload) | ★ | Region | Bench |
+|---|---|---:|---|---|
+| 🆕 [`tura-learn/Dhee`](https://github.com/tura-learn/Dhee) | 🟢 **MIT** (1 071 B) | **32** | **APAC** — India | 198 commits · 3 authors (`%ae`) · `+0530` on 198/198 · live 2026-10-18. **Memory built FOR tutor agents** |
+| 🆕 [`nuwa-skills/montessori-skill`](https://github.com/nuwa-skills/montessori-skill) | 🟢 **MIT** (1 063 B, `master`) | **72** | **APAC** — China | 8 commits · 1 author (`%ae`) · 5 files. 🟢 **First permissive pedagogy skill-pack here** — 🔴 against `education-agent-skills`' 165 `SKILL.md` under `CC-BY-SA-4.0` |
+| 🆕 [`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense) | 🟢 **MIT** (1 067 B) | **4** | **APAC** — China | 554 commits · 7 authors (`%ae`) · 640 files · `+0800` on 554/554. **The permissive executor Pattern 21 needed** |
+| 🆕 [`digital-learning-gmbh/educa-lrs`](https://github.com/digital-learning-gmbh/educa-lrs) | 🔴 **AGPL-3.0** (33 889 B) | **4** | **EMEA** — Germany | 31 commits · 3 authors (`%ae`) · `schule-plus.com` ×27 · 🔴 dormant since 2025-11-13. **First EMEA learning-record store here** |
+
+🔵 **Named non-row:** [`constantinmay/learntrace-skill`](https://github.com/constantinmay/learntrace-skill)
+(4 ★, USTC competition entry) — live on `main`, **no grant at eight probed paths, no
+`license` key in the index**. All rights reserved.
+
+### 🔴 The prescribed legs, eighth consecutive pass of zero
+
+🔴 **Four global legs and four regional legs: zero new facts, zero new addresses.** The
+literal `top open source AI agents education 2026 github MIT` again returned
+general-purpose frameworks and no education project. 🔴 The vertical leg again asserted
+*"Forma LMS is Apache 2.0"* — **refuted from the payload at `p344`** (`formalms/formalms`
+is GPL-2.0 at `html/license.txt`) and **no cell was written from it, again**.
+🟢 Two informed gaps restated: **no education-specific adoption figure for the UK, Middle
+East or Africa**, and **no education-specific AI rule for any APAC jurisdiction**.
+
+🔵 **Two index properties measured, so a successor need not re-buy them.** An `OR`-group
+across `in:name,description,readme` **drops the vertical qualifier** — 28 572 matches
+whose top 40 held no education row — while every `topic:`-anchored leg stayed on-domain.
+And **logical operators are refused on qualifiers outright**: `topic:special-education OR
+topic:iep` returns *"The search contains only logical operators ... without any search
+terms."* Published as §32.
+
+### 🟢 The instrument was repaired, not merely run
+
+🔴 `p1054-mit-plus-clause` refused the SATA payload **by its size limb alone** — 673 B of
+excess, **zero** vocabulary hits. 🔴 On a payload that abridges the MIT body by about as
+much as SATA adds (1 072 B, **inside** the canonical band) it returned **`MIT`** and
+`is_usable_permissive: **True**`. 🟢 SATA's phrases are now named `RIDER_ANCHORS`, both
+fixtures are pinned, and five controls were added — including the in-band case and a
+false-positive control for the word *star* in ordinary prose. **39/39, up from 34.**
+
 ## 2026-10-21 · Pass 361 — 🟢 **the index is OPEN, and the five passes that called it closed were measuring one transport.** 78 blind star cells filled, 17 new agents, and two published defects that no channel this base had could ever have found
 
 🟢 **Channel note — this is the pass's headline.** `git ls-remote --symref` **OPEN** ·

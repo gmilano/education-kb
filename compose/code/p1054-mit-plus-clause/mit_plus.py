@@ -106,6 +106,25 @@ RIDER_ANCHORS = (
     "commons clause",
     "right to sell the software",
     "the license does not grant to you",
+    # `p362` — the Star And Thank Author License (SATA), a second widely-copied rider on
+    # an MIT body.  Found on a PUBLISHED shelf row: `QingdaoU/Judger` (496 ★) was carried
+    # as `MIT` on three shelves and its payload at `newnew/LICENSE` is SATA, 1 823 B.
+    # Two obligations, neither of them MIT's: *"you shall star/+1/like the project(s) ...
+    # and then thank the author(s)"*, and a forking clause forbidding deletion or
+    # modification of the copyright and project-url sections.
+    #
+    # 🔴 Why it needed NAMING rather than leaving to the length limb.  This instrument
+    # already refused the real payload — `MIT-BODY-PLUS:unclassified-addition` — but only
+    # because SATA's additions push it 673 B past the band, on **zero** vocabulary hits.
+    # SATA says *star* and *thank*, and nothing in RESTRICTION_TERMS knows those words.
+    # Measured at `p362` on a payload that abridges the MIT body by about as much as SATA
+    # adds (`fixtures/sata-mit-inband-1072.synthetic.txt`, 1 072 B, IN BAND): the verdict
+    # was `MIT` and `is_usable_permissive` was **True**.  So the refusal of the real file
+    # was a byte accident rather than a reading of the clause, and the same rider on a
+    # trimmed body would have published as permissive.
+    "star and thank author",
+    "you shall star",
+    "thank the author",
 )
 
 # `p252` — the third length state.  Canonical MIT is tightly clustered (1062-1093 B

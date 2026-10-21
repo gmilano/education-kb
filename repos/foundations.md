@@ -6,9 +6,28 @@ updated: 2026-10-21
 
 # Education — foundational repos
 
-**Pass 361 · 2026-10-21.** The systems an education engagement starts *from*, rather
+**Pass 362 · 2026-10-21.** The systems an education engagement starts *from*, rather
 than the agents it adds on top. Every row verified first-hand **2026-10-21**: liveness
 and default branch via `git ls-remote --symref`, licence **read from the payload**.
+
+🔴 **`p362` corrects two grants in the code-execution tier, and both corrections change
+what an engagement may do with the row.** [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger)
+is **not MIT** — its payload is the Star And Thank Author License — and
+[`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) is **GPL-3.0, not
+AGPL-3.0**. 🔵 The first narrows what was published as permissive; the second *widens*
+what was published as network copyleft. Full mechanism in `agents/top.md`; the sweep that
+found the first is [`mit-body-sweep`](../evidence/mit-body-sweep.2026-10-21-p362.tsv) and
+the corrections are in
+[`grant-corrections`](../evidence/grant-corrections.2026-10-21-p362.tsv).
+
+🟢 **Gate state `p362`:** `make hooks` ran — **28/32 green on arrival, 32/32 on exit**.
+RED on arrival: `gate-absence`, `gate-shelf-consistency`, `gate-author-key`,
+`gate-census-currency`.
+🟢 **`gate-shelf-consistency`'s RED is what found the `Sharif-Judge` defect**: it reported
+the slug carrying `AGPL-3.0` on `verticals/solutions.md` and `MIT` on this shelf, and both
+cells turned out to be wrong in different ways — the `MIT` was an **adjacency** read of a
+sentence about `QingdaoU/Judger`, and the `AGPL-3.0` was a real mis-grading of the
+payload.
 
 🟢 **`p361` is the first pass since `p355` with a working GitHub index, and it did not
 arrive through `curl`.** `api.github.com` still answers **403** on every path; the
@@ -201,8 +220,14 @@ check works on MIT and BSD rows and is blind to Apache ones.** Use `Cvmcosta/lti
 🔵 **The gap this fills.** The tier above lets an agent *reach* a client's LMS. It said
 nothing about where learning events are **stored**, which is what an analytics,
 adaptivity or evidence-of-impact deliverable actually reads from — and §2 of
-`intel/trends.md` records evidence becoming a procurement gate. 🟢 **Every row below is
-permissive and every grant was read from the payload this pass.**
+`intel/trends.md` records evidence becoming a procurement gate. 🟢 **Every row below was
+read from the payload this pass**, and 🟡 **all but one are permissive** — `p362`'s
+addition, `educa-lrs`, is **AGPL-3.0** and is shelved anyway because it is the first LRS
+on this base placed in **EMEA by its own vendor's commit channel** (`+0100` on 26 of 31
+commits; `schule-plus.com` ×27 and `digitallearning.gmbh` ×1 on the `%ae` limb). 🔴 Read
+it as an **API to reach, never a fork**: the network clause is the whole point of an LRS,
+which is a service. 🔴 **And state its dormancy, because the tier's other rows are
+active:** last commit **2025-11-13**, roughly eleven months cold.
 
 | Component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
 | --- | --- | --- | --- | ---: | --- |
@@ -213,6 +238,7 @@ permissive and every grant was read from the payload this pass.**
 | learnmcp-xapi (the MCP bridge) | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | `main/LICENSE` | **15** | Not placed |
 | 🆕 OpenLRW (**OneRoster** + Caliper + xAPI) — 🟢 **canonical, corrected `p361`** | [Apereo-Learning-Analytics-Initiative/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 **ECL-2.0** (payload; 🔴 index classifier says `NOASSERTION`) | `master/LICENSE` | **62** | North America |
 | 🔴 OpenLRW — *the fork `p359` shelved by mistake* | [jeffyding/OpenLRW](https://github.com/jeffyding/OpenLRW) | ECL-2.0 (inherited) | `master/LICENSE` | **0** | — |
+| 🆕 educa LRS (xAPI, Laravel) — `p362` | [digital-learning-gmbh/educa-lrs](https://github.com/digital-learning-gmbh/educa-lrs) | 🔴 **AGPL-3.0** (33 889 B) | `main/LICENSE.md` | **4** | **EMEA** (Germany) |
 
 ### 🟡 Pick by conformance and maturity, because the licences do not separate these rows
 
@@ -367,19 +393,89 @@ would otherwise build it.
 | HOJ | [HimitZH/HOJ](https://github.com/HimitZH/HOJ) | 🟢 **MIT** | `master/LICENSE` | **942** | APAC |
 | SYZOJ | [syzoj/syzoj](https://github.com/syzoj/syzoj) | 🟢 **MIT** | `master/LICENSE` | **922** | APAC |
 | SDUOJ (microservices) | [SDUOJ/OnlineJudge](https://github.com/SDUOJ/OnlineJudge) | AGPL-3.0 | `main/LICENSE` | **556** | APAC |
-| QingdaoU Judger (seccomp sandbox) | [QingdaoU/Judger](https://github.com/QingdaoU/Judger) | 🟢 **MIT** | 🔴 `newnew/LICENSE` | **496** | APAC |
-| Sharif Judge (course-oriented) | [mjnaderi/Sharif-Judge](https://github.com/mjnaderi/Sharif-Judge) | AGPL-3.0 | 🔴 `Version-1/LICENSE` | **395** | EMEA |
+| QingdaoU Judger (seccomp sandbox) | [QingdaoU/Judger](https://github.com/QingdaoU/Judger) | 🔴 **SATA — MIT body + added obligations, NOT permissive** (1 823 B), corrected `p362` | 🔴 `newnew/LICENSE` | **496** | APAC |
+| Sharif Judge (course-oriented) | [mjnaderi/Sharif-Judge](https://github.com/mjnaderi/Sharif-Judge) | **GPL-3.0** (35 146 B, no Affero title), corrected `p362` | 🔴 `Version-1/LICENSE` | **395** | EMEA |
 | Otter-Grader (notebook autograder) | [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** | `master/LICENSE` | **161** | North America |
 | webtech autograder | [webtech-network/autograder](https://github.com/webtech-network/autograder) | 🟢 **Apache-2.0** | `main/LICENSE` | **62** | Not placed |
 | OK client (Berkeley autograder) | [okpy/ok-client](https://github.com/okpy/ok-client) | 🟢 **Apache-2.0** | `master/LICENSE` | **57** | North America |
+| 🆕 CodeSense (programming-education platform) — `p362` | [XiaoCow666/CodeSense](https://github.com/XiaoCow666/CodeSense) | 🟢 **MIT** (1 067 B) | `main/LICENSE` | **4** | APAC |
 
-🟢 **Read the licence column as the engagement decision.** Six of the fifteen are
+🟢 **Read the licence column as the engagement decision.** **Five** of the fifteen are
 **MIT, BSD-3-Clause or Apache-2.0** — [`QingdaoU/OnlineJudge`](https://github.com/QingdaoU/OnlineJudge)
-at 6 552 ★ is a **complete, MIT-licensed, Docker-deployable judge**, and
-[`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) is its seccomp sandbox on its
-own MIT grant. 🔵 Against this, `judge0` (GPL-3.0) has to be consumed over its API to
-keep the boundary. **The permissive option in this tier is the bigger one**, which
-reverses the assumption the `judge0`-only shelf implied one pass ago.
+at 6 552 ★ is a **complete, MIT-licensed, Docker-deployable judge**, re-read from payload
+this pass at **1 085 B**. 🔵 Against this, `judge0` (GPL-3.0) has to be consumed over its
+API to keep the boundary. **The permissive option in this tier is still the bigger one**,
+which remains the reversal of the assumption the `judge0`-only shelf implied.
+
+### 🔴 `p362`: the MIT judge everybody reaches for cannot execute code under an MIT grant
+
+🔴 **The correction above is a row. This is the stack, and it is the finding.**
+`QingdaoU/OnlineJudge` is a **multi-repository system**, and its own README names the
+companions: *"Judger Sandbox(Seccomp)"* and *"JudgeServer(A wrapper for Judger)"*. 🔴
+**Three of the five components were absent from this entire corpus** — this base had
+shelved the two it had found by name and never asked what runs the code.
+
+🟢 **All five read first-hand this pass, at their real default refs:**
+
+| Component | Role | Licence (payload) | Bytes | Grant read at | ★ 2026-10-21 |
+| --- | --- | --- | ---: | --- | ---: |
+| [QingdaoU/OnlineJudge](https://github.com/QingdaoU/OnlineJudge) | Django backend, contests, problem bank | 🟢 **MIT** | 1 085 | `master/LICENSE` | **6 552** |
+| 🆕 [QingdaoU/OnlineJudgeFE](https://github.com/QingdaoU/OnlineJudgeFE) | Vue front end | 🟢 **MIT** | 4 334 | `master/LICENSE` | **330** |
+| 🔴 🆕 [QingdaoU/JudgeServer](https://github.com/QingdaoU/JudgeServer) | the wrapper that actually executes submissions | 🔴 **SATA** | 1 823 | `master/LICENSE` | **209** |
+| 🔴 [QingdaoU/Judger](https://github.com/QingdaoU/Judger) | the seccomp sandbox | 🔴 **SATA** | 1 823 | `newnew/LICENSE` | **496** |
+| 🔴 🆕 [QingdaoU/OnlineJudgeDeploy](https://github.com/QingdaoU/OnlineJudgeDeploy) | the documented `docker compose` deployment | 🔴 **no grant at any probed path** | — | `2.0` — none found | **591** |
+
+🔴 **So the halves split by function, and the split is exactly the wrong way round for a
+studio.** The components that **render pages** are MIT. The components that **run
+untrusted student code** are SATA. And the manifest a client's ops team will actually
+`git clone` — 591 ★, more than the sandbox — carries **no licence at all**, on `2.0`,
+which is not `main` or `master` either.
+
+🔵 **Measured, not inferred:** `JudgeServer`'s `Dockerfile` does `COPY Judger/ /app/` and
+builds `libjudger.so` into `/usr/lib/judger/`, so the SATA sandbox is **vendored into**
+the SATA wrapper; `OnlineJudgeDeploy`'s compose file runs that wrapper as the `oj-judge`
+service from a published `judge:1.6.1` image. 🟢 `OnlineJudgeFE`'s 4 334 B is benign and
+was read too: **three concatenated MIT notices** — its own, Vue's, and one more — which is
+the fourth "excess explained" of this pass.
+
+🟡 **What this changes for an engagement, concretely.** *"Fork `QingdaoU/OnlineJudge` into
+a closed client deliverable"* remains true **of the web tier** and says nothing about
+grading. A client that needs to run code gets one of three positions, and should pick
+deliberately rather than discover it at review:
+
+1. 🟡 **Honour SATA.** Its obligations are cheap — star the project, thank the authors in
+   your notices, leave its copyright and project-url block intact — but it is **not OSI
+   open source**, an SPDX scanner returns `NOASSERTION`, and a procurement checklist that
+   says *"permissive only"* fails it.
+2. 🟢 **Replace the executor.** `judge0` (GPL-3.0, over its API),
+   [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) (BSD-3-Clause,
+   notebooks) and 🆕 [`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense)
+   (MIT, restricted execution + code evaluation, 554 commits) are all genuinely
+   permissive — 🔴 none of them is a drop-in for a seccomp sandbox, so this is a build,
+   not a swap.
+3. 🟢 **Keep the execution tier outside the deliverable entirely**, reached over HTTP,
+   which is the boundary `compose/patterns.md` Pattern 9 already uses for `judge0`.
+
+🔴 **The general form, and it is why this is on the foundations shelf rather than in a
+footnote: in this sector a platform's LICENSE file is a statement about one repository,
+and the thing that does the dangerous work usually lives in another one.** Published as
+`T30` on `intel/trends.md` and registered as `ACTION ZZ-bo`.
+
+🔴 **The count fell from six to five this pass, and the row that left is the one the
+permissive path leaned on.** [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) was
+published here as *"its seccomp sandbox on its own MIT grant"*. 🔴 **There is no MIT
+grant.** Its payload at `newnew/LICENSE` is the **Star And Thank Author License**: MIT's
+permission paragraph, then *"you shall star/+1/like the project(s) ... and then thank the
+author(s)"*, plus a clause forbidding modification of the copyright and project-url
+sections. 🔴 GitHub's own classifier reads the repository as **`NOASSERTION`**, so **no
+channel ever said MIT** — the grant was inherited from the sibling `OnlineJudge`, which
+really is MIT. 🟡 **What an engagement may still do:** the obligations are cheap to honour
+(star the project, thank the authors in your notices, leave its copyright block intact)
+and the sandbox is 292 KB of C. But it is **not OSI open source**, so it cannot go into
+the permissive column, and a client whose counsel runs an SPDX scanner will get
+`NOASSERTION` back. 🟢 **The permissive substitute measured this pass is
+[`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense)** — MIT, 554 commits,
+restricted execution plus code evaluation — shelved below.
 
 🟡 **Two of the three non-contest rows matter most for a client.**
 [`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) is built for
@@ -390,8 +486,14 @@ grades **Python *and* R notebooks**, which is where this base's prior autograder
 
 🔴 **Two default branches in this tier are neither `main` nor `master`.**
 `QingdaoU/Judger` defaults to **`newnew`** and `Sharif-Judge` to **`Version-1`**. A
-licence sweep that probes `main` and `master` reports both as grantless, and one of
-them is the MIT sandbox this tier's permissive path depends on.
+licence sweep that probes `main` and `master` reports both as grantless.
+
+🔵 **`p362` found the sharper version of that warning, and it is the opposite shape.**
+Both of those odd refs *were* probed, and both cells recorded the right **path** and the
+wrong **family** — `Judger` as MIT when the payload is SATA, `Sharif-Judge` as AGPL-3.0
+when the payload is the plain GPLv3 text (*"GNU GENERAL PUBLIC LICENSE, Version 3, 29
+June 2007"*, 35 146 B, identical at `master`). 🔴 **So finding the grant is not reading
+it**, and a path column that says `200` says nothing about the family in the bytes.
 
 ## Content authoring, media and delivery
 
@@ -675,10 +777,21 @@ that organisation's convention rather than the next repository's root.
 probe that tries `main` then `master` still misses **10**. Two of those ten are
 [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) (`newnew`) and
 [`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) (`Version-1`), both
-added this pass — and the first is the MIT sandwich at the centre of Pattern 9's
-permissive path. 🔵 One cause explains copyleft prevalence, grants at `COPYING.txt` and
-`docs/License.txt`, and non-`main` defaults alike: **this sector's infrastructure is
-older than the conventions the tooling assumes.** Published as `T13`.
+added at `p356` — and `QingdaoU/Judger` was then the sandbox at the centre of Pattern 9's
+permissive path. 🔴 **Corrected `p362`: that sandbox is SATA, not MIT**, so the clause
+that used to read *"the MIT sandwich"* has been rewritten to name the repository instead
+of leaving a licence token next to the wrong slug. 🔵 One cause explains copyleft
+prevalence, grants at `COPYING.txt` and `docs/License.txt`, and non-`main` defaults
+alike: **this sector's infrastructure is older than the conventions the tooling
+assumes.** Published as `T13`.
+
+🔵 **Why that rewrite is a gate repair and not a style edit.** `gate-shelf-consistency`
+read the old sentence as this shelf publishing **`MIT` for `mjnaderi/Sharif-Judge`** —
+the nearest slug to the token — and reported a disagreement with the `AGPL-3.0` cell on
+`verticals/solutions.md`. 🟢 **The gate was right to fire and wrong about which cell was
+broken**, which is `ACTION ZZ-av`'s shape (a figure or a family bound to a slug by
+proximity) reproduced on the **licence** axis for the first time. 🟢 Both underlying cells
+were wrong anyway, so the gate earned its RED twice over.
 
 ## 🔵 Regional placement, counted over this shelf's own cells
 

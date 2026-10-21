@@ -6,7 +6,7 @@ updated: 2026-10-21
 
 # Education — market map and regional intelligence
 
-**Pass 361 · 2026-10-21.** Researched **2026-10-21**. Figures are attributed; where a
+**Pass 362 · 2026-10-21.** Researched **2026-10-21**. Figures are attributed; where a
 number comes from a vendor blog or a commercial research summary rather than a primary
 source, it says so. The
 regional sections below are deliberately symmetric: a North America or EMEA
@@ -23,6 +23,41 @@ distinguishes a saturated channel from an unrun one.** What `p359` adds to this 
 derived from the commit channel** rather than from prose.
 
 ---
+
+## 🔴 `p362`: all eight legs ran and all eight returned nothing new — and the supply side moved anyway
+
+🔴 **Four global legs and four regional legs, zero new facts.** Each item was checked
+against these shelves *before* being written up:
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p362.tsv) records every query and
+its yield. **North America** returned the 134 bills / 31 states, `AB 1159`, Idaho
+`SB 1227`, `H.R. 8747`, *AI for All*, the NYC moratorium, the UChicago device ban and the
+student-written *STUDENTS FIRST Act*; **EMEA** the EU AI Act's August-2026 high-risk
+duties, the Commission's ethical guidelines, Erasmus+ 2026 calls, the UK action plan and
+Germany's €20 bn commitment; **APAC** Korea's AI Basic Act (22 Jan 2026), Vietnam's Law on
+AI (1 Mar 2026), Taiwan's AI Basic Act (Dec 2025) and the China/Singapore/Japan spectrum;
+**LATAM** the IESALC **87 % / 26 %** pair, the TALIS country split (**Brazil 56 %, Chile
+55 %, Colombia 53 %, Costa Rica 52 %** against an OECD average of **36 %**), `PL
+2.338/2023`, `CONPES 4144`, Chile's bill, Ceibal's 75 % and the LAC Observatory. 🟢 **Every
+one was already on this file.**
+
+🔴 **Two informed gaps, restated rather than passed over.** The EMEA leg returned **no
+education-specific adoption figure for the UK, the Middle East or Africa** — only
+EU-level regulation and general enterprise AI adoption. The APAC leg returned **no
+education-specific rule** (student data, classroom guidance) **for any APAC
+jurisdiction** — only economy-wide AI statutes. 🟢 Silence from a channel that was
+actually queried is information; silence from a channel nobody queried looks identical
+and is not.
+
+🔵 **One inbound claim re-refuted, for the second recorded time.** The vertical leg again
+returned *"Forma LMS is Apache 2.0 licensed"*. 🔴 `p344` read the payload:
+`formalms/formalms` is **GPL-2.0** at `html/license.txt`. 🟢 **No cell was written from
+the claim, again** — and the fact that the same false claim recurs on the same query one
+hundred and eighteen passes later is the argument for reading payloads rather than
+summaries.
+
+🟢 **What DID move is the supply side, and it moved by region.** `p362` added four rows
+and corrected four grants; the regional consequences are entered under the five
+subsections below as **`Added p362`**.
 
 ## 🟢 `p361`: the regional legs, and the two facts that were not already here
 
@@ -137,6 +172,15 @@ it is **auditability, curriculum alignment and an evidence story**.
 ## Opportunities by region
 
 ### North America
+
+**Added `p362`.** 🟢 **The region's special-education asset is far larger than this file
+said.** [`The-Burnes-Center/a-iep`](https://github.com/The-Burnes-Center/a-iep)
+re-derives at **1 281 commits and 12 authors (`%ae`)**, not the published `836 / 7` —
+which re-derives under no counting convention. 🔴 It remains **CC-BY-NC-4.0**, so the
+correction does not make it usable in paid work; what it changes is the *read* of the
+region's position. 🔵 **North America holds the most mature open IEP codebase in the
+sector and licenses it out of commercial reach**, which is an opportunity for a studio
+that can build the equivalent rather than adopt it (`compose/patterns.md` Pattern 16).
 
 #### 🆕 `p361`: the institutional layer, which moves faster than the legislative one
 
@@ -307,6 +351,26 @@ America is cited at **~36 % of the global AI-in-education market, ≈ $3.68 bn i
 a commercial-aggregator figure, not a primary source.
 
 ### EMEA
+
+**Added `p362`.** 🟢 **Two supply-side entries, both placed by a vendor's own commit
+channel rather than by prose.**
+
+- 🆕 [`digital-learning-gmbh/educa-lrs`](https://github.com/digital-learning-gmbh/educa-lrs)
+  (**AGPL-3.0**, Laravel, xAPI) is **the region's first learning-record store on this
+  base** — placed **Germany** on `+0100` for 26 of 31 commits with `schule-plus.com` ×27
+  and `digitallearning.gmbh` ×1 on the `%ae` limb. 🔴 Dormant since **2025-11-13**, and
+  AGPL, so it is an API to reach and a schema to read — not a fork. 🔵 That it exists at
+  all matters for the **evidence-of-impact** procurement gate (§2 of `intel/trends.md`):
+  an EU client that must keep learning records inside the EU now has a European
+  implementation to point at.
+- 🟢 [`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) is **GPL-3.0, not
+  AGPL-3.0** — corrected from the payload this pass. 🔵 **The correction widens the
+  region's option set**: a studio may host the only course-shaped judge in the corpus as
+  a service without triggering source obligations.
+- 🟡 [`nvaes/CEB`](https://github.com/nvaes/CEB) (Belgium) carries **MIT on the code and
+  no grant on the content** — its licence says in French that the CEB papers remain the
+  property of the **Fédération Wallonie-Bruxelles**. 🔵 The pattern to expect wherever a
+  ministry owns the assessment instrument: the tooling is offerable, the items are not.
 
 #### 🆕 `p361`: member-state money, and the amendment that moves the high-risk date
 
@@ -549,6 +613,26 @@ Swahili, Arabic, French and Portuguese, which no pass has done. Registered on
 
 ### APAC
 
+**Added `p362`.** 🔴 **A region-specific licence hazard, measured rather than inferred,
+and it sits on infrastructure this base recommends.** The components that execute student
+code in the `QingdaoU` stack — [`JudgeServer`](https://github.com/QingdaoU/JudgeServer)
+and [`Judger`](https://github.com/QingdaoU/Judger) — ship the **Star And Thank Author
+License**, a Chinese-community MIT variant that adds obligations (star the project, thank
+the authors) and is **not OSI-approved**; the stack's deployment repository carries **no
+grant at all**. 🔵 **Generalise it carefully and usefully:** the region produces the
+sector's largest permissive education platforms *and* its own licence variants, so an
+APAC-sourced component needs its payload read even when a sibling repository in the same
+organisation is plainly MIT.
+
+🟢 **Three new permissive rows, all placed on unanimous timezone evidence.**
+🆕 [`tura-learn/Dhee`](https://github.com/tura-learn/Dhee) (**MIT**, memory for tutor
+agents, `+0530` on 198 of 198 commits — **India**),
+🆕 [`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense) (**MIT**, programming
+education with restricted execution, `+0800` on 554 of 554 — **China**) and
+🆕 [`nuwa-skills/montessori-skill`](https://github.com/nuwa-skills/montessori-skill)
+(**MIT**, 72 ★, `+0800` on 8 of 8 — **China**). 🔵 `CodeSense` is the permissive executor
+that replaces the SATA one in `compose/patterns.md` Pattern 21.
+
 #### 🆕 `p360` — three player and governance facts, and the governance gap is the quotable one
 
 🟢 **Players, named from this pass's leg:** **Pearson × TCS** announced a multi-year AI
@@ -703,6 +787,16 @@ and the Vietnam window is the first time a *regulatory* date, rather than supply
 reason to lead with the region.
 
 ### LATAM
+
+**Added `p362`: nothing, and the nothing is specific.** 🔴 **No new LATAM supply and no new
+LATAM fact.** The regional leg returned only material this file already carries (IESALC,
+TALIS, `PL 2.338/2023`, `CONPES 4144`, Ceibal, the LAC Observatory), and **none of
+`p362`'s four new rows and four grant corrections touches the region** — the new supply
+placed **APAC ×3** and **EMEA ×1**. 🔵 Stated because this base's standing LATAM finding
+is a *licensing* gap rather than a supply gap (`intel/trends.md` §19, reframed by §22 and
+refuted as a regional reading by §24), and a pass that adds rows in two other regions
+without adding one here is the measurement that keeps that finding honest rather than
+decorative.
 
 #### 🆕 `p360` — the investment asymmetry, quantified, and it is the number this section was missing
 
@@ -882,6 +976,18 @@ better model.
    cheaper than re-authoring an item bank.** 🔴 Nothing may be used until one exists.
 
 ### Global
+
+**Added `p362`.** 🔴 **A sector-wide licensing shape with a direct engagement cost: in
+education infrastructure the grant is a property of a repository, and the dangerous work
+usually lives in another one.** The MIT judge whose execution tier is SATA is the
+specimen (§30 of `intel/trends.md`); the general rule is that a **deliverable's
+dependency closure** has to be graded, not the repository the engagement started from.
+🟢 **Scope, measured:** of 144 live-shelf addresses carrying the token `MIT`, **three**
+were published as permissive and are not — `CaviraOSS/PageLM` (non-commercial plus
+revenue sharing), `QingdaoU/Judger` (SATA) and `Samkarya/online-exam-questions` (ENCOSL).
+🔵 **All three recite MIT's permission paragraph verbatim before narrowing it**, which is
+why a badge check, a classifier keyed on the grant sentence, and a human skim all return
+`MIT`.
 
 1. **MCP as the LMS integration layer.** Every major LMS now has a community MCP
    server (Canvas ×3, Moodle, Open edX ×2, Brightspace ×2, Google Classroom, Anki) and

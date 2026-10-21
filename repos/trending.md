@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 362 · 2026-10-21 — 🔴 **a repository's LICENSE file is a statement about one repository, and in this sector the dangerous work lives in another one.** The MIT judge with a SATA execution tier and an ungranted deployment repo, three new addresses from inside one stack, four new rows, and a 144-address grant sweep
+
+🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`
+**OPEN** · the GitHub index **OPEN** through the session's MCP search tool · 🔴
+`api.github.com/*` and `github.com` HTML **403 by `curl`** — unchanged from `p361`.
+
+🟢 **Gates:** `make hooks` **28/32 green on arrival, 32/32 on exit**; RED on arrival:
+`gate-absence`, `gate-shelf-consistency`, `gate-author-key`, `gate-census-currency`.
+
+🔴 **The discovery finding of this pass did not come from a search leg at all.** It came
+from reading the README of a repository this base had already shelved.
+[`QingdaoU/OnlineJudge`](https://github.com/QingdaoU/OnlineJudge) names two companions —
+*"Judger Sandbox(Seccomp)"* and *"JudgeServer(A wrapper for Judger)"* — and the documented
+deployment lives in a third. 🔴 **All three were absent from this entire corpus**,
+`archive/` and `evidence/` included.
+
+| 🆕 Address | Role | Licence (payload, default ref) | ★ 2026-10-21 | Region |
+|---|---|---|---:|---|
+| 🆕 [QingdaoU/JudgeServer](https://github.com/QingdaoU/JudgeServer) | executes submissions; `COPY Judger/` in its Dockerfile | 🔴 **SATA** — 1 823 B, `master/LICENSE` | **209** | APAC |
+| 🆕 [QingdaoU/OnlineJudgeFE](https://github.com/QingdaoU/OnlineJudgeFE) | Vue front end | 🟢 **MIT** — 4 334 B (three concatenated MIT notices), `master/LICENSE` | **330** | APAC |
+| 🆕 [QingdaoU/OnlineJudgeDeploy](https://github.com/QingdaoU/OnlineJudgeDeploy) | the `docker compose` deployment everybody actually clones | 🔴 **no grant at any probed path**, ref **`2.0`** | **591** | APAC |
+
+🔵 **The yield argument, stated as a number.** Six topic-anchored index legs returned **41
+in-domain candidates, 37 of them CARRIED** — a 90 % carried rate. 🔴 **One README of a
+carried row returned three new addresses, one of which is bigger than the row this base
+shelved it from.** That is the function-leg lesson from `p356` pointed inward:
+**the corpus is saturated on names and unsaturated on dependency closures.**
+
+### 🆕 The four new rows from the search legs
+
+| Row | Licence | ★ | Commits · authors (`%ae`) | Region |
+|---|---|---:|---|---|
+| 🆕 [`tura-learn/Dhee`](https://github.com/tura-learn/Dhee) | 🟢 **MIT** (1 071 B) | **32** | 198 · 3 · live 2026-10-18 | APAC — India |
+| 🆕 [`nuwa-skills/montessori-skill`](https://github.com/nuwa-skills/montessori-skill) | 🟢 **MIT** (1 063 B) | **72** | 8 · 1 · 5 files | APAC — China |
+| 🆕 [`XiaoCow666/CodeSense`](https://github.com/XiaoCow666/CodeSense) | 🟢 **MIT** (1 067 B) | **4** | 554 · 7 · 640 files | APAC — China |
+| 🆕 [`digital-learning-gmbh/educa-lrs`](https://github.com/digital-learning-gmbh/educa-lrs) | 🔴 **AGPL-3.0** (33 889 B) | **4** | 31 · 3 · 🔴 dormant since 2025-11-13 | EMEA — Germany |
+
+### 🔴 Corrections to rows this shelf published
+
+🔴 **[`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) — published `MIT` here at
+496 ★; the payload at `newnew/LICENSE` is the Star And Thank Author License** (1 823 B),
+and GitHub's own classifier reads the repository as `NOASSERTION`. The `MIT` was inherited
+from the sibling `OnlineJudge`, which really is MIT. 🔵 Historical rows below are left as
+written; this section is the correction of record.
+
+🔴 **[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) — the "PageLM Community
+License", non-commercial with a revenue-sharing requirement**, not MIT. This shelf's own
+`p247`-era census already listed it under `"spdx_id": "NOASSERTION"`; the licence cell on
+`agents/top.md` said *"the payload is stock MIT"* until this pass.
+
+🟢 **[`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) — GPL-3.0, not
+AGPL-3.0**, read at `Version-1/LICENSE` (35 146 B of plain GPLv3). A correction in the
+**permissive** direction.
+
+🔵 **Sweep denominator, so the figures are usable:** 144 live-shelf addresses carrying the
+token `MIT` → **115 exact · 12 `NOT-MIT-BODY` (adjacency, shelves right) · 11 no-payload
+(already flagged) · 3 benign `MIT-BODY-PLUS` (excess read) · 3 wrong**. Full table in
+[`mit-body-sweep`](../evidence/mit-body-sweep.2026-10-21-p362.tsv).
+
 ## Pass 361 · 2026-10-21 — 🟢 **a working GitHub index for the first time since `p355`**, two corrected rows, and the first permissive education-administration platform with real software behind it
 
 🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`

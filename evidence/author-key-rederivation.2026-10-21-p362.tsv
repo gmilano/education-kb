@@ -1,0 +1,14 @@
+slug	published_commits	published_authors	derived_commits	derived_ae	derived_an	last_commit	verdict
+Neutralmilkzzz/moodle-cli-hku	344	4	356	5	4	2026-10-08	CORRECTED: 4 is the %an key; published 344 commits matches no convention (all=356 no-merges=301 first-parent=112); 1 of 5 addresses is noreply@anthropic.com
+naufaldi/teacher-exam	435	4	435	4	5	2026-10-14	EXACT under %ae -- and %an runs ABOVE %ae here
+ajjalti/EvalStudio	-	3	31	3	3	2026-10-14	EXACT
+guillaume-behr/open-quiz	-	5	341	5	5	2026-10-07	EXACT
+nvaes/CEB	-	1	5	1	1	2026-10-18	EXACT
+diego-costanzo/tournesol-scolaire	-	1	8	1	1	2026-09-25	EXACT
+dg13788/iep-system	-	4	38	4	4	2026-10-19	EXACT
+The-Burnes-Center/a-iep	836	7	1281	12	12	2026-10-14	NOT REPRODUCIBLE: all=1281 no-merges=1173 first-parent=351; no convention yields 836/7
+omerpanay/special-education-rag	-	1	19	1	1	2026-10-16	EXACT
+sumry-app/SUMRY	-	2	66	2	2	2026-08-17	EXACT
+OpenProct/openproct	4	2	4	2	2	2025-10-26	EXACT
+shaheeranser/exam-proctor	25	1	25	2	1	2026-10-11	MIS-KEYED: published figure is %an; 2 of 25 commits on the privacy-masked address
+edificeio/entcore	-	21	11714	139	142	2026-10-20	CORRECTED: published 21 authors; derived 139 (%ae) / 142 (%an) over 11714 commits -- low by 6x
