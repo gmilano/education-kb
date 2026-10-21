@@ -1,0 +1,11 @@
+slug	path	head	bytes	sha256_16	state
+anthropics/k12-teacher-skills	plugin/skills/k12-check-for-understanding/SKILL.md	31fd6dbb0c07	8666	152e3272fbd108fe	OK
+learning-commons-org/agent-skills	skills/k12-check-for-understanding/SKILL.md	8b0599c24469	8666	152e3272fbd108fe	OK
+anthropics/k12-teacher-skills	README.md	31fd6dbb0c07	2280	4bf034e3bd97eb90	OK
+learning-commons-org/agent-skills	README.md	8b0599c24469	6441	3a10040a039dab78	OK
+digitalcredentials/learner-credential-wallet	README.md	1c46a82ba384	19433	d22f8b56af465250	OK
+openwallet-foundation-labs/learner-credential-wallet	README.md	1c46a82ba384	19433	d22f8b56af465250	OK
+data-privacy-stack/presidio	README.md	4f0e236e31a5	-	-	NO-PAYLOAD(404)
+microsoft/presidio	README.md	4f0e236e31a5	-	-	NO-PAYLOAD(404)
+fairlearn/fairlearn	README.rst	a40efdbe0bef	6082	bfede5fb951d180d	OK
+stanfordnlp/edu-convokit	README.md	d845ffdafda3	31286	9b9000bdb9dd690d	OK

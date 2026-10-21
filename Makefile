@@ -38,8 +38,16 @@ UNTITLED_LOG ?= /tmp/education-kb-gate-untitled-payload.log
 SHELF_FILES ?= agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md intel/open-gaps.md compose/patterns.md
 FOLD_LOG ?= /tmp/education-kb-gate-fold-identity.log
 SCOPE_LOG ?= /tmp/education-kb-gate-grant-scope.log
+ALIAS_LOG ?= /tmp/education-kb-gate-alias-canonical.log
+AUTHORKEY_LOG ?= /tmp/education-kb-gate-author-key.log
+DIGEST_LOG ?= /tmp/education-kb-gate-payload-digest.log
+#: p349 — the committed, dated alias register.  A gate NEVER decides canonicality at run
+#: time: the channel that answers it (the search index's `full_name`) may be closed on a
+#: later day, exactly as the HTML `301` channel was closed — `403` — to the session that
+#: built this.  So the register is evidence, and the gate reads it.
+ALIAS_REGISTER ?= evidence/alias-register.2026-10-20-p349.tsv
 
-.PHONY: hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census
+.PHONY: gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -63,7 +71,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-slug-oracle gate-payload-pin gate-shelf-consistency \
              gate-affero-rung gate-family-coverage gate-permissive-arm \
              gate-template-identity gate-untitled-payload gate-region-headings \
-             gate-bespoke-title gate-fold-identity gate-grant-scope
+             gate-bespoke-title gate-fold-identity gate-grant-scope \
+             gate-alias-canonical gate-author-key gate-payload-digest
 
 # 🔴 p310: `p309` BUILT THE RIGHT MECHANISM AND GAVE IT A THREE-FAMILY CORPUS, THEN
 # REPORTED `declared=11 CORRECT=11 DEFECT=0`.  One pass later the same ladder — five
@@ -722,3 +731,44 @@ gate-affero-rung: ## ACTION p308-R (adjacent) — no classifier may read GPL-3.0
 
 affero-rung-census: ## p309 — the static screen alone: a ranked backlog with a denominator
 	@cd compose/code/p309-affero-rung-census && $(PY) -I rung_census.py .. || true
+
+# 🔴 p349: THE BOUNDED SHELF-WIDE RUN FOUND 21 ALIAS GROUPS WHERE THIS BASE BELIEVED FOUR,
+# AND THREE OF THEM HAVE BOTH MEMBERS ON THE LIVE SHELVES.  `ACTION ZZ-ag` asked for the
+# HEAD-equality test over all 2 462 folded addresses and had gone unrun for one reason:
+# 2 462 network probes is not an hour's work.  🟢 Every alias this base has ever found
+# shares its REPOSITORY NAME, because an org transfer moves the owner and keeps the name —
+# so an OFFLINE pre-filter on the name cuts the run to 281 probes (88.6 % fewer) and it
+# became runnable.  🔴 The declared hole, asserted as `C5` of its suite and not left in
+# prose: a transfer that ALSO RENAMES is invisible to the pre-filter.  `gate-payload-digest`
+# is the instrument with the opposite blind spot.
+gate-alias-canonical: ## ACTION ZZ-ag — one repository may not be published under two addresses
+	@cd compose/code/p349-name-collision && { $(PY) -I test_name_collision.py > $(ALIAS_LOG) 2>&1 || { echo "🔴 p349-name-collision FAILED — the suite's own report follows:" ; sed "s/^/   /" $(ALIAS_LOG) ; false ; } ; } && echo "── p349-name-collision (16 controls: the name pre-filter, the DECLARED renamed-transfer blind spot as C5, the stale-address finding, the double-count finding, both excuse forms, and P541)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p349-name-collision/alias_gate.py $(ALIAS_REGISTER) $(SHELF_FILES) || exit 1
+
+alias-census: ## p349 — the bounded probe list, offline: which addresses even need a probe
+	@$(PY) -I compose/code/p349-name-collision/name_collision.py census $(SHELF_FILES) || true
+
+# 🔴 p349: 220 OF 230 AUTHOR FIGURES ON THESE SHELVES NAME NO KEY.  p348 could not
+# re-derive its own cell — `terracotta-education/terracotta`, "2 815 commits, 18 authors" —
+# because `%an` reads 14, `%ae` 18 and `%an|%ae` 20.  p349 re-derived it: the key is `%ae`.
+# 🔵 The figure was never wrong, it was UNNAMED, and an unnamed figure is indistinguishable
+# from a wrong one to anybody holding a different key.  The hazard is directional: p346's
+# PII refusal pushes a successor towards `%an`, which runs BELOW `%ae` on every row
+# measured, so every published author cell would read as inflated and the KB would look
+# like repositories shedding contributors.
+gate-author-key: ## ACTION ZZ-ac — an author figure in a live pass section must name its key
+	@cd compose/code/p349-keyed-authors && { $(PY) -I test_keyed_authors.py > $(AUTHORKEY_LOG) 2>&1 || { echo "🔴 p349-keyed-authors FAILED — the suite's own report follows:" ; sed "s/^/   /" $(AUTHORKEY_LOG) ; false ; } ; } && echo "── p349-keyed-authors (12 controls: the %ae re-derivation of p348's cell, the names>addresses row, the multibyte-cut defect as C10, the NO-KEY declaration, Spanish vocabulary, and P541)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p349-keyed-authors/author_key_gate.py gate $(SHELF_FILES) || exit 1
+
+author-key-census: ## p349 — the inherited unkeyed author cells, with a denominator
+	@$(PY) -I compose/code/p349-keyed-authors/author_key_gate.py census $(SHELF_FILES) || true
+
+# 🔴 p349: THE THIRD IDENTITY QUESTION, WHICH NEITHER OF THIS BASE'S TWO GATES CAN ASK.
+# `ACTION ZZ-ad`.  p348 found two agent-shelf rows shipping BYTE-IDENTICAL skill bodies at
+# different owners, different HEADs and different layouts.  A case fold cannot see it and
+# HEAD-equality cannot see it; a payload digest can, and it also re-derives the alias class
+# for free (same HEAD implies one payload).  🟢 Its committed run is the fixture, and the
+# run sharpened p348's reading: the two packs' SKILL bodies are one payload (8 666 B,
+# `152e3272fbd108fe`) and their READMEs are NOT — one pack, two distributions.
+gate-payload-digest: ## ACTION ZZ-ad — do two repositories ship the same payload?
+	@cd compose/code/p349-payload-digest && { $(PY) -I test_payload_digest.py > $(DIGEST_LOG) 2>&1 || { echo "🔴 p349-payload-digest FAILED — the suite's own report follows:" ; sed "s/^/   /" $(DIGEST_LOG) ; false ; } ; } && echo "── p349-payload-digest (7 controls: SHARED across slugs, the same-slug duplicate that is NOT an identity, the 404 that is not evidence, both committed classes, and P541)" && echo "   PASS" || exit 1

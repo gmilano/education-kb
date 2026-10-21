@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-20
 ---
 
+## 2026-10-20 · Pass 349 — the week's agent-layer news is not a release: the agent shelf's own option count is wrong by 21 alias groups, and the only agent-vocabulary supply the discovery leg returned was already on these shelves, 8 of 8
+
+**Evidence:** [`alias-head-equality`](../evidence/alias-head-equality.2026-10-20-p349.tsv) · [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv) · [`alias-bounded-probe-list`](../evidence/alias-bounded-probe-list.2026-10-20-p349.tsv) · [`payload-digest`](../evidence/payload-digest.2026-10-20-p349.tsv) · [`education-token-leg-grants`](../evidence/education-token-leg-grants.2026-10-20-p349.tsv) · [`keyed-authors`](../evidence/keyed-authors.2026-10-20-p349.tsv)
+
+### 1. 🔴 `ACTION ZZ-ag` ran, and the answer is 21 groups rather than the fifth pair it asked about
+
+🟡 ZZ-ag asked for the HEAD-equality test over all **2 462** folded addresses on these shelves. 🟢 It became runnable on an offline observation: every alias this base has found shares its repository NAME, so grouping by folded name and probing only names with two or more owners is **281 probes instead of 2 462 — 88.6 % fewer**. 🔴 **Result: 21 alias groups, 43 addresses, one group of three.** Seventeen addresses answered `UNANSWERED` and are unexplained (`ACTION ZZ-aj`). 🔴 **Three groups have both members on the live shelves** — `edu-convokit` here on `agents/top.md`, `learner-credential-wallet` across four files, `moodler-mcp` twice in the gaps register.
+
+### 2. 🔴 A stale address is the one defect on these shelves that LOOKS healthy
+
+🔵 GitHub keeps every former address of a transferred repository answering forever. The stale row resolves, clones, pins at the canonical HEAD and serves the real `LICENSE` — so a grant read through it is correct, a date read through it is correct, and the row is still wrong about **what it is**. 🟢 The canonical answer comes from the search index's `full_name`; the HTML `301` channel that would also answer it returned **`403` on all 43 addresses** to this session, which is `p313`'s binding and its third recorded instance.
+
+### 3. 🟢 The third identity question has an instrument, and it finds the one class a transfer-plus-rename can hide in
+
+🔴 Two rows on `agents/top.md` ship the **same 8 666-byte `SKILL.md`, `152e3272fbd108fe…`, at two different HEADs**. A case fold is blind to it; HEAD equality is blind to it; a payload digest is not. 🟡 **New this pass: the same two repositories' READMEs are different payloads** (2 280 B vs 6 441 B) — one pack, two distributions, and the distinguishing component is an MCP server rather than a skill.
+
+### 4. 🔴 The agent-vocabulary discovery leg returned 8 candidates and 0 new rows
+
+🟡 `ai-tutor` and `education`+`agent` topic pages, graded first-hand: **MIT ×4, Apache-2.0 ×1, AGPL-3.0 ×2, noncommercial-not-OSI ×1** — and all eight already cited on these shelves. 🟢 **Written down rather than left as apparent coverage: the agent-layer channel is saturated at this hour**, and what the same hour bought instead was eleven absent compliance components (`repos/foundations.md`, this pass).
+
+### 5. 🔴 This file's own heading form had switched a shared gate off, and nobody could have noticed
+
+🟡 Every other shelf writes `## Pass 348 · 2026-10-20 — …`; **this file writes the date first**, `## 2026-10-20 · Pass 348 — …`. 🔴 The shared `split_live_section` is anchored at `^## Pass`, so on this file it skipped every dated heading and placed the live/history boundary **tens of thousands of lines down in the old-form history** — meaning most of this file has counted as the LIVE pass section since p348, and `gate-fold-identity` has been judging a forward-looking contract against inherited text. 🟢 **It passed anyway. A boundary that is too generous is silent until a gate using it finds something**, and p349's author-key gate was that gate on its first run. Fixed in the shared function; pinned as `C22`–`C24`.
+
+### 6. 🟡 The holder channel placed two APAC rows on the same company form
+
+🟢 `nakafaai/nakafa.com`'s grant names `PT NAKAFA TEKNO KREATIF`; p348's `motiolabs-space/open-academic` named `PT Motiolabs Digital Indonesia`. **Two Indonesian placements read out of the licence payload itself**, which is the narrowest form in which `ACTION ZZ-y`'s channel has held: the `PT` prefix is a statutory company form, not a name to be interpreted.
+
 ## 2026-10-20 · Pass 348 — the week's signal is a measurement, not a release: this base's own identity gate has a 17 % denominator, and the star channel that two passes recorded as unreadable answers on a different tool
 
 **Evidence:** [`p348-shelf-fold-identity`](../evidence/p348-shelf-fold-identity.2026-10-20-p348.tsv) · [`p348-payload-identity-cross-repo`](../evidence/p348-payload-identity-cross-repo.2026-10-20-p348.tsv) · [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-policy-channel`](../evidence/p348-policy-channel.2026-10-20-p348.tsv)

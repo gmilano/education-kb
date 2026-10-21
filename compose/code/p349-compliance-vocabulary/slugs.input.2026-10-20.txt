@@ -1,0 +1,15 @@
+data-privacy-stack/presidio
+fairlearn/fairlearn
+google/differential-privacy
+meta-pytorch/opacus
+IBM/differential-privacy-library
+arx-deidentifier/arx
+OpenMined/PyDP
+GreenmaskIO/greenmask
+securitybunker/databunker
+sdv-dev/SDV
+synthetichealth/synthea
+nucleuscloud/neosync
+thoughtbot/top_secret
+Rizzo-AI-Academy/rizzo-pii
+hitsz-ids/synthetic-data-generator

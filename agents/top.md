@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 349 · 2026-10-20 — this shelf publishes one repository as two rows, the stale address of the pair is the one p348 read at the pin, and the third identity question now has an instrument: the two K-12 skill packs are one payload and two distributions
+
+**Evidence:** [`alias-head-equality`](../evidence/alias-head-equality.2026-10-20-p349.tsv) · [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv) · [`alias-canonical-html-channel`](../evidence/alias-canonical-html-channel.2026-10-20-p349.tsv) · [`payload-digest`](../evidence/payload-digest.2026-10-20-p349.tsv) · [`keyed-authors`](../evidence/keyed-authors.2026-10-20-p349.tsv) · [`education-token-leg-grants`](../evidence/education-token-leg-grants.2026-10-20-p349.tsv) · gates: `make gate-alias-canonical` (16 controls), `make gate-payload-digest` (7), `make gate-author-key` (12)
+
+### 🔴 The agent shelf carries `edu-convokit` twice, and the address p348 read at the pin is the stale one
+
+🟡 p348 re-read `stanfordnlp/edu-convokit` at the pin and published it as a row — **MIT at the root, holder a PERSON (`Rose E. Wang`), dormant since 2025-04-18, North America on 62 × `−0800`.** Every one of those readings is correct. 🔴 **The address is not.** The bounded HEAD-equality run resolves three addresses to one pin `d845ffdafda3`, and the search index's `full_name` names the canonical one:
+
+| address | HEAD | state | how it was decided |
+|---|---|---|---|
+| [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) | `d845ffdafda3` | 🟢 **CANONICAL** | the search index returns this `full_name` |
+| `stanfordnlp/edu-convokit` — **STALE**, the address p348 published | `d845ffdafda3` | 🔴 stale | same pin, not the index's `full_name` |
+| `rosewang2008/edu-convokit` — **STALE**, the author's personal account | `d845ffdafda3` | 🔴 stale | same pin, not the index's `full_name` |
+
+🔵 **Why a stale address is harder to catch than a wrong one: it answers.** GitHub keeps every former address of a transferred repository resolving forever, so the stale row clones, pins, and serves the same raw `LICENSE` at the same HEAD. **`gate-fold-identity` cannot see it** (the owners differ by more than case), **`gate-pin-grant` reads a real grant through it**, and nothing in the row looks wrong. `gate-alias-canonical` and the dated [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv) are the control.
+
+### 🟢 And the correction resolves `ACTION ZZ-h`'s fourth instance in the opposite direction from the one p348 expected
+
+🔴 p348 left `EduNLP/EduCoder` **NOT PLACED** on the grounds that *"the org name reads as a Chinese NLP lab"* while all 49 of its commits were US Pacific. 🟢 **`EduNLP` is the canonical owner of Stanford's Edu-ConvoKit.** Two repositories in that org, two commit streams, both US Pacific — so the org places **North America on evidence**, and the channel that disagreed was a reading of the name, not a measurement. 🔵 **ZZ-h's rule, sharpened: a name is not a placement channel, and that cuts both ways — a name can neither place a repository nor refuse to.**
+
+### 🟢 `ACTION ZZ-ad` discharged — the third identity question, and the two skill packs answer it differently on each half
+
+| what was hashed at the pin | `anthropics/k12-teacher-skills` (`31fd6dbb0c07`) | `learning-commons-org/agent-skills` (`8b0599c24469`) | verdict |
+|---|---|---|---|
+| `k12-check-for-understanding/SKILL.md` | 8 666 B · `152e3272fbd108fe` | 8 666 B · `152e3272fbd108fe` | 🔴 **one payload** |
+| `README.md` | 2 280 B · `4bf034e3bd97eb90` | 6 441 B · `3a10040a039dab78` | 🟢 **two distributions** |
+
+🟢 **So p348's reading holds and now has evidence on both halves: one pack, two distributions, and the pick is on the SERVER rather than the skills** — `learning-commons-org` adds a Learning Commons Knowledge Graph MCP server its README documents and the other does not. 🔵 **The instrument generalises past this pair**: a digest does not read the address at all, so it is the one identity test that survives a transfer that also renames — the hole `p349-name-collision` declares as `C5`.
+
+### 🔴 The education-vocabulary discovery leg is SATURATED on this shelf, with a denominator
+
+🟡 Eight agent-layer candidates were taken from the GitHub topic channel (`ai-tutor`, `education`+`agent`), graded first-hand at the pin, and checked against all nine shelves. 🔴 **Every one of the eight is already cited here — 0 of 8 new**, five of them on live shelves. 🟢 The grants, read at the pin rather than inherited:
+
+| row | grant at the pin, first-hand | why the row is not new |
+|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT**, `LICENSE` 1 068 B, holder `Zijin Zhang` | already on `agents/top.md` |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT**, `LICENSE` 1 069 B, holder `Li Zhengping` | already on `agents/top.md` |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 **MIT**, `LICENSE` 1 074 B, holder `Anatoly Tarnavsky` | already on `agents/top.md` |
+| [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 **Apache-2.0**, `LICENSE.txt` 11 342 B | already on `agents/trending.md` |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🟡 **AGPL-3.0**, `LICENSE` 1 134 B — network copyleft, `P250`'s copyleft arm | already on `agents/top.md` |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🟡 **AGPL-3.0**, `LICENSE` 34 514 B | already on `agents/top.md` |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT**, `LICENSE` 1 062 B, holder `Selleo` | already on `verticals/solutions.md` |
+| [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com) | 🔴 **noncommercial, NOT OSI**, `LICENSE` 7 705 B, holder `PT NAKAFA TEKNO KREATIF` | 🔴 **unusable under `P250`** — recorded so no later pass spends a probe |
+
+🟢 **The holder line paid again as a placement channel, and twice on the same form.** `PT NAKAFA TEKNO KREATIF` is an Indonesian company form, as `PT Motiolabs Digital Indonesia` was at p348 — **two APAC placements from the grant's own holder line, and one of them is also this pass's only education-token refusal.** 🔵 `ACTION ZZ-y`'s channel is now 2-for-2 on the `PT` form specifically, which is the narrowest useful statement of it.
+
+### 🔵 What this shelf should be read as saying after this pass
+
+🔴 **Do not quote an agent count off this shelf without the alias register.** The identity work of the last two passes has found three distinct ways two rows can be one thing — same address folded (65 inherited groups, p348), same HEAD (21 groups, 43 addresses, this pass), same payload (2 groups, this pass) — and only the third is visible when a project changes both its owner and its name. 🟢 **The agent-layer supply itself did not move this hour**; what moved is this base's ability to say how many distinct things it is holding.
+
 ## Pass 348 · 2026-10-20 — the agent shelf gained an INSTRUMENT rather than a row: two repositories here ship byte-identical skill payloads, which neither of this base's two identity gates can see, and the holder channel built this pass was WRONG on its first run in the direction it existed to prevent
 
 **Evidence:** [`p348-payload-identity-cross-repo`](../evidence/p348-payload-identity-cross-repo.2026-10-20-p348.tsv) · [`p348-holder-channel-defect`](../evidence/p348-holder-channel-defect.2026-10-20-p348.tsv) · [`p348-institutional-orphan-probe`](../evidence/p348-institutional-orphan-probe.2026-10-20-p348.tsv) · [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-author-key-spread`](../evidence/p348-author-key-spread.2026-10-20-p348.tsv) · gates: `make gate-grant-scope` (26 controls), `make gate-fold-identity` (21 controls)

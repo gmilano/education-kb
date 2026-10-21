@@ -61,7 +61,16 @@ import re
 import sys
 
 SLUG = re.compile(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)")
-PASS_H2 = re.compile(r"^## +Pass +\d+", re.M)
+# 🔴 p349: THIS PATTERN MISSED ONE OF THE NINE SHELVES' HEADING FORM AND THE MISS WAS
+# SILENT.  `agents/trending.md` writes its sections as `## 2026-10-20 · Pass 348 — …`,
+# date first, while every other shelf writes `## Pass 348 · 2026-10-20 — …`.  Anchored at
+# `^## Pass`, the splitter skipped every dated heading and found its "second pass
+# heading" tens of thousands of lines down, in the old-form history — so the LIVE SECTION
+# of that file was most of the file, and `gate-fold-identity` had been judging p349's
+# contract against inherited text since p348.  🟢 It passed anyway, which is exactly why
+# nothing said so: a boundary that is too GENEROUS only shows up when a gate that uses it
+# finds something.  `p349`'s author-key gate was that gate, on its first run.
+PASS_H2 = re.compile(r"^## .{0,40}?\bPass +\d+", re.M)
 # A command template is not an address.  `p347` dropped two placeholders by hand; this
 # is the same exclusion, written down so it is a rule and not a judgement call.
 TEMPLATES = {"owner/repo", "org/repo", "user/repo", "owner/name", "your-org/your-repo"}

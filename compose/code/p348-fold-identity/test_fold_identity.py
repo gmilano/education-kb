@@ -184,5 +184,38 @@ class MeasuredCorpus(unittest.TestCase):
         self.assertEqual(fi.gate(self.all9), [])
 
 
+
+class DatedHeadingForm(unittest.TestCase):
+    """🔴 p349: `agents/trending.md` writes `## 2026-10-20 · Pass 348 — …`, date first.
+    Anchored at `^## Pass`, the splitter walked past every dated heading and put the
+    live/history boundary tens of thousands of lines down in the old-form history, so
+    most of that file counted as the live section. It passed anyway — a boundary that is
+    too generous is silent until a gate using it finds something, and p349's author-key
+    gate was that gate on its first run."""
+
+    def test_C22_date_first_heading_is_a_pass_heading(self):
+        text = ("## 2026-10-20 · Pass 349 — live\n\nlive body\n\n"
+                "## 2026-10-20 · Pass 348 — history\n\nold body\n")
+        live, old = fi.split_live_section(text)
+        self.assertIn("live body", live)
+        self.assertNotIn("old body", live)
+        self.assertIn("old body", old)
+
+    def test_C23_pass_first_heading_still_splits(self):
+        text = "## Pass 349 · 2026-10-20 — live\n\nlive body\n\n## Pass 348 — old\n\nold body\n"
+        live, old = fi.split_live_section(text)
+        self.assertIn("live body", live)
+        self.assertNotIn("old body", live)
+
+    def test_C24_a_prose_H2_mentioning_a_pass_far_into_the_line_is_not_a_heading(self):
+        # The window is bounded so a narrative H2 that happens to say "Pass 12" late in
+        # its title cannot be read as a section boundary.
+        text = ("## Pass 349 — live\n\nlive body\n\n"
+                "## a long narrative heading that only much later happens to mention "
+                "Pass 12 in passing\n\nstill live\n")
+        live, _ = fi.split_live_section(text)
+        self.assertIn("still live", live)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

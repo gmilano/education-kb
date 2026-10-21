@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 349 · 2026-10-20 — the platform shelf gets the layer that sits OUTSIDE every platform's copyleft boundary, and the credential row this shelf publishes twice is one repository
+
+**Evidence:** [`compliance-vocabulary-grants`](../evidence/compliance-vocabulary-grants.2026-10-20-p349.tsv) · [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv) · [`alias-head-equality`](../evidence/alias-head-equality.2026-10-20-p349.tsv) · [`keyed-authors`](../evidence/keyed-authors.2026-10-20-p349.tsv) · gates: `make gate-alias-canonical` (16 controls)
+
+### 🔴 First, the correction this shelf owes: `learner-credential-wallet` is published here as two platforms and is one repository
+
+🟡 p348 found the pair and wrote it down. 🔴 **It was never applied, and this shelf is one of four live files still carrying both addresses** (`repos/foundations.md`, `verticals/solutions.md`, `intel/market.md`, `compose/patterns.md`). Both resolve to the same pin `1c46a82ba384`; the README at that pin is one digest `d22f8b56af465250` read through either address.
+
+| the address to publish | the address to stop publishing | how it was decided |
+|---|---|---|
+| [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | `digitalcredentials/learner-credential-wallet` — **STALE** | the search index returns the OpenWallet `full_name`; the MIT Digital Credentials Consortium handed the reference wallet to the OpenWallet Foundation |
+
+🔵 **A finding published is not a finding applied.** The only thing that can tell the difference is a gate that reads the shelves, which is what `gate-alias-canonical` now is.
+
+### 🟢 The compliance layer is permissive, and that is exactly why it belongs on a shelf of copyleft platforms
+
+🔵 **The structural fact a studio is paid for:** every incumbent education platform worth customising is copyleft, and the compliance components every regulator now asks about are not. They are separate processes with network interfaces, so the platform's grant does not reach them and theirs does not reach the studio's code.
+
+| platform tier (unchanged this pass) | its grant | where the compliance layer attaches | the attaching component's grant |
+|---|---|---|---|
+| Moodle | 🟡 **GPL-3.0** | redact at the web-services boundary, before any text leaves for a model | 🟢 **MIT** — `presidio` |
+| Open edX | 🟡 **AGPL-3.0** | anonymise the analytics dump that leaves the estate for a staging environment | 🟢 **Apache-2.0** — `greenmask` |
+| Canvas LMS | 🟡 **AGPL-3.0** | hold consent and data-subject records outside the LMS, as a service it calls | 🟢 **MIT** — `databunker` |
+| Sakai | 🟢 **Apache-2.0** | train on cohort data with a privacy budget rather than a promise | 🟢 **Apache-2.0** — `opacus` |
+| OpenEduCat (on Odoo) | 🟡 **LGPL-3.0** | de-identify and measure re-identification risk before a cohort export | 🟢 **Apache-2.0** — `arx` |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT**, `LICENSE` 1 062 B, holder `Selleo` | the one platform row where the studio's own code and the compliance layer share a licence posture | 🟢 **MIT** |
+
+🔴 **The caveat that belongs beside the table, not under it:** `arx` last moved **2025-10-01** and is the only open instrument of its kind at platform scale, so a recipe that leans on it inherits a 12-month dormancy — read as a maintenance commitment, not a defect.
+
+### 🟡 And the standards layer under these platforms has been renaming itself, which is why platform citations rot quietly
+
+🟢 The bounded alias run surfaced the governance hand-offs in the layer this shelf's integrations depend on: `caliper-spec` and `openbadges-specification` both answer under **two owners** at one pin apiece (IMS Global became 1EdTech), `ease` answers under both `edx/` and `openedx/`, and the credential wallet above moved steward entirely. 🔵 **An integration note that cites the old owner still resolves, still clones, and still reads correct — so the rot is invisible until somebody asks who maintains it.** `ACTION ZZ-ah` resolves the 16 groups still marked `UNKNOWN`.
+
 ## Pass 348 · 2026-10-20 — the platform shelf gains the two layers it never had: the integrity layer and the EVIDENCE layer, both MIT, both institutionally maintained, both already in this base's own inventory
 
 **Evidence:** [`p348-institutional-orphan-probe`](../evidence/p348-institutional-orphan-probe.2026-10-20-p348.tsv) · [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-payload-identity-cross-repo`](../evidence/p348-payload-identity-cross-repo.2026-10-20-p348.tsv)

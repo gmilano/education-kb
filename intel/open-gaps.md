@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 349 · 2026-10-20 — gaps closed, gaps opened, and one gap this register was itself double-counting
+
+**Evidence:** [`alias-head-equality`](../evidence/alias-head-equality.2026-10-20-p349.tsv) · [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv) · [`alias-bounded-probe-list`](../evidence/alias-bounded-probe-list.2026-10-20-p349.tsv) · [`keyed-authors`](../evidence/keyed-authors.2026-10-20-p349.tsv) · [`payload-digest`](../evidence/payload-digest.2026-10-20-p349.tsv) · [`compliance-vocabulary-grants`](../evidence/compliance-vocabulary-grants.2026-10-20-p349.tsv) · [`education-token-leg-grants`](../evidence/education-token-leg-grants.2026-10-20-p349.tsv)
+
+**Gate state: MEASURED.** 🟢 `make hooks` ran in this session — **26/26 green on arrival, 29/29 green** after this pass added `gate-alias-canonical` (16 controls), `gate-author-key` (12) and `gate-payload-digest` (7).
+
+### 🔴 This register was itself publishing one repository as two gaps
+
+🟡 `moodler-mcp` appears here under two addresses. [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) is the canonical one; `dymayo/moodler-mcp` is **STALE** at the same pin `4e6139eb9c6b`. 🔵 So is `frdel/agent-zero`, which is **STALE** for [`agent0ai/agent-zero`](https://github.com/agent0ai/agent-zero) at pin `ff2a5b9c9c4e`. 🟢 Both are now in the register and both are judged by `gate-alias-canonical` from this pass forward.
+
+### 🟢 Closed this pass
+
+| gap | how it closed | the number |
+|---|---|---|
+| `ACTION ZZ-ag` — is there a fifth alias pair? | the bounded HEAD-equality run, offline name pre-filter plus 281 probes | 🔴 **21 groups, 43 addresses**, one of three members |
+| `ACTION ZZ-ac` — which key do this base's author cells use? | re-read `terracotta-education/terracotta` at the pin and re-derived all three | 🟢 **`%ae`** — 2 815 commits, `%an` 14, `%ae` **18**, `%an|%ae` 20, exact on all four |
+| `ACTION ZZ-ad` — can two repositories ship the same payload? | the payload-digest instrument, with the k12 pair as its fixture | 🟢 **yes, at two different HEADs** — 8 666 B, `152e3272fbd108fe` |
+| `ACTION ZZ-ae` — does compliance vocabulary out-yield education vocabulary? | both legs run in one hour, 23 grants read first-hand at the pin | 🟢 **11 of 15 new against 0 of 8**; 93.3 % permissive against 62.5 % |
+
+### 🔴 Opened or re-measured this pass, each with a denominator
+
+- 🔴 **17 addresses answered `UNANSWERED` in the bounded run and nothing explains them.** Deleted, private, renamed past the redirect, or a transient refusal — four states with opposite meanings. 🔵 **This is the one case where a stale row DOES look stale**, so it is worth separating properly. `ACTION ZZ-aj`.
+- 🔴 **16 of the 21 alias groups are still `UNKNOWN` for canonicality.** The HEAD-equality channel proves they are one repository; only the search index's `full_name` says which address is current, and this pass resolved five. `ACTION ZZ-ah`.
+- 🔴 **2 181 of 2 462 folded addresses were never probed, by design, and the hole is declared.** The name pre-filter cannot see a transfer that also renamed. 🟢 Asserted as `C5` of `test_name_collision.py` so it cannot decay into a proof of absence. **The RATE at which renamed transfers exist is unknown.** `ACTION ZZ-ai`.
+- 🔴 **220 of 230 author figures on these shelves name no key (95.7 %).** Inherited, and a census rather than a failure — `gate-author-key` binds only what a pass writes from here. 🔵 A successor reaching for `%an`, as p346's PII refusal pushes it to, reads all 220 as inflated.
+- 🔴 **`presidio` has country recogniser sets for 18 countries and no Latin American one.** No CPF, no CNPJ, no CURP, no RUT, no DNI. 🟡 Whether a fork already ships one is unmeasured. `ACTION ZZ-ak`.
+- 🔴 **EMEA and APAC returned no education-specific adoption or regulation evidence on the prescribed legs.** The queries are recorded on `intel/market.md`; what came back was enterprise AI governance. 🟢 An informed gap, not coverage.
+- 🟡 **The HTML `301` canonicalisation channel is closed to this session** — `403` on all 43 addresses, `p313`'s binding, third recorded instance. 🔵 The register exists as dated evidence precisely because the channel that fills it is not guaranteed on a later day.
+- 🔴 **This base has no column for "permissive and archived".** [`nucleuscloud/neosync`](https://github.com/nucleuscloud/neosync) is **MIT** with every right intact and the repository archived; a shelf that grades the grant alone calls it offerable. 🟡 Dormancy has the same shape one step down: `arx` (last moved 2025-10-01) and `hitsz-ids/synthetic-data-generator` (2025-03-06) are still the best open instruments for what they do.
+
+### 🟡 Carried, unchanged, with its denominator intact
+
+- **`ACTION ZZ-af`** — the remaining **54** education-token orphans are unread, and the scope-provenance instrument still covers one canonical path rather than the other **83** family classifiers. 🔵 Re-registered rather than restated: this pass spent its hour on the identity and compliance legs and says so.
+
 ## Pass 344 — gaps opened, closed and measured
 
 **Evidence:** [`p344-address-resolution`](../evidence/p344-address-resolution.2026-10-20-p344.tsv) · [`p344-payload-absence-enumerated`](../evidence/p344-payload-absence-enumerated.2026-10-20-p344.tsv) · [`p344-region-placement`](../evidence/p344-region-placement.2026-10-20-p344.tsv) · [`p344-agent-runtime-region`](../evidence/p344-agent-runtime-region.2026-10-20-p344.tsv) · [`p344-dst-window-inconclusive`](../evidence/p344-dst-window-inconclusive.2026-10-20-p344.tsv).

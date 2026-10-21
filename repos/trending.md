@@ -4,6 +4,32 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 349 · 2026-10-20 — the prescribed trending leg returns listicles for the fifteenth consecutive pass; the channel that actually moved this week is an ORG TRANSFER of an 11 435-star MIT tool, and this base held neither address
+
+**Evidence:** [`compliance-vocabulary-grants`](../evidence/compliance-vocabulary-grants.2026-10-20-p349.tsv) · [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv) · [`payload-digest`](../evidence/payload-digest.2026-10-20-p349.tsv) · [`keyed-authors`](../evidence/keyed-authors.2026-10-20-p349.tsv) · [`alias-head-equality`](../evidence/alias-head-equality.2026-10-20-p349.tsv)
+
+### 🔴 What the prescribed legs returned, leg by leg, written down rather than left as apparent coverage
+
+| prescribed query | what came back | usable rows |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | aggregator roundups, one DEV post with star counts the source itself calls unreliable, one LinkedIn listicle | 🔴 **0** — the single verifiable item was a 796-star teaching repository, already outside this base's scope |
+| `github trending education AI 2026` | a curated-list repo, two opinion posts, three Trendshift pages with no education category | 🔴 **0** |
+| `open source platform education ERP CRM MIT Apache` | ten pages from one vendor's own glossary, in eight languages | 🔴 **0** — and the one licence fact in it (OpenEduCat is LGPL-3.0, not MIT/Apache) this base already holds |
+| `AI education industry trends 2026` | market-research marketing pages with forecasts that disagree by a factor of eight | 🟡 **0 rows, 1 datum** — the disagreement itself (see `intel/trends.md`) |
+
+🔵 **Fifteen passes is no longer a run of bad luck; it is a property of the channel.** The global "trending education AI" surface indexes commentary about education, not education software.
+
+### 🟢 The week's real supply news, found on the search index and verified at the pin
+
+🔴 **[`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) — MIT, 1 084 B at the root, 1 645 commits, 223 author addresses (`%ae`), pushed 2026-10-19 — moved organisation, and `microsoft/presidio` is now its stale address.** Three independent channels agree it is one repository: the same HEAD `4f0e236e31a5`, the same `README.MD` digest `b553970feb389eaa`, and the same 404 shape on a `README.md` probe. 🟡 **The holder line moved with it** — the grant now reads `Copyright (c) Presidio Contributors.` rather than naming the company.
+
+🟢 **Ten more compliance components, absent from all nine shelves until this pass, all graded first-hand:** `meta-pytorch/opacus`, `IBM/differential-privacy-library`, `arx-deidentifier/arx`, `OpenMined/PyDP`, `GreenmaskIO/greenmask`, `securitybunker/databunker`, `Rizzo-AI-Academy/rizzo-pii`, `thoughtbot/top_secret`, `hitsz-ids/synthetic-data-generator` and — as a refusal rather than a row — `nucleuscloud/neosync`, whose **MIT grant sits on an ARCHIVED repository**. The full tier, with placement and keyed activity, is on `repos/foundations.md`.
+
+### 🟡 Two trending-adjacent states this shelf has never had a column for
+
+🔴 **Permissive and archived.** `nucleuscloud/neosync` (MIT, `LICENSE.md` 1 580 B) is archived: every right is real and no maintenance is. A shelf that grades only the grant calls this offerable.
+🔴 **Permissive and dormant.** `arx-deidentifier/arx` (Apache-2.0, 4 306 commits, 40 author addresses (`%ae`)) last moved **2025-10-01**, and `hitsz-ids/synthetic-data-generator` **2025-03-06**. 🟢 Both are still the best open instrument for what they do, which is why the dormancy belongs in the row rather than in a deletion.
+
 ## Pass 348 · 2026-10-20 — the prescribed trending leg returns listicles for the fourteenth consecutive pass, and this time the leg itself is the datum: the global "trending education AI" channel has no education in it
 
 **Evidence:** [`p348-policy-channel`](../evidence/p348-policy-channel.2026-10-20-p348.tsv) · [`p348-institutional-orphan-probe`](../evidence/p348-institutional-orphan-probe.2026-10-20-p348.tsv) · [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-shelf-fold-identity`](../evidence/p348-shelf-fold-identity.2026-10-20-p348.tsv)

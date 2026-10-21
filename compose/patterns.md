@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 349 · 2026-10-20 — two recipes built out of this pass's eleven new components, and both are the thing a studio must do before it is allowed to build: keep student data out of the model, and train on the cohort without holding the cohort
+
+**Evidence:** [`compliance-vocabulary-grants`](../evidence/compliance-vocabulary-grants.2026-10-20-p349.tsv) · [`keyed-authors`](../evidence/keyed-authors.2026-10-20-p349.tsv) · [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv) · [`payload-digest`](../evidence/payload-digest.2026-10-20-p349.tsv)
+
+### P49 — "Nothing identifiable reaches the model" — the student-data boundary for any LMS engagement (EMEA first by regulation, LATAM first by gap)
+
+🔵 **The problem it solves, stated the way a client states it:** *"we want an AI tutor in Moodle and our DPO says no."* The answer is not a policy document; it is a process between the LMS and the model.
+
+| stage | component | grant, read at the pin | what it does here |
+|---|---|---|---|
+| 1 · detect | [`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) | 🟢 **MIT**, 1 084 B | named-entity + pattern recognition over the prompt and the attached material, with a per-country recogniser set |
+| 2 · redact in-process | [`Rizzo-AI-Academy/rizzo-pii`](https://github.com/Rizzo-AI-Academy/rizzo-pii) (Python) or [`thoughtbot/top_secret`](https://github.com/thoughtbot/top_secret) (Ruby) | 🟢 **MIT**, 1 090 B / 1 095 B | a local-first filter in the request path, so the un-redacted text never leaves the estate |
+| 3 · hold the consent | [`securitybunker/databunker`](https://github.com/securitybunker/databunker) | 🟢 **MIT**, 1 078 B | the subject record, the consent, and the data-subject request, as an API the LMS calls rather than a spreadsheet |
+| 4 · decide | the LMS's own web services (Moodle **GPL-3.0**, Canvas **AGPL-3.0**) | 🟡 copyleft, and it does not reach stages 1–3 | the tutor call itself, made on redacted text |
+| 5 · evidence | [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | 🟢 **MIT**, 1 168 B | the disparity report a regulator asks for once the model is making decisions |
+
+🟢 **Wiring, concretely.** Run `presidio-analyzer` and `presidio-anonymizer` as two services beside the LMS; put stage 2's filter in the LMS plugin that makes the model call, not in the model gateway, so the raw string has no hop where it exists un-redacted; call `databunker` from the enrolment flow rather than the tutor flow, because consent is captured once and read often. 🔵 **Estimate: 6–8 weeks** for one LMS and one tutor surface, most of it in stage 1's recogniser tuning.
+
+🔴 **The LATAM variant is a contribution rather than a configuration, and this pass measured why.** `presidio`'s `country_specific` recogniser sets cover **18 countries and no Latin American one** — no CPF, no CNPJ, no CURP, no RUT, no DNI. 🟢 **So stage 1 for a Brazilian or Mexican client starts with writing a recogniser class into an MIT codebase**, which is two files and a test fixture, and lands the studio as a named contributor to the layer every regional competitor will also need. `ACTION ZZ-ak` checks for an existing fork first.
+
+### P50 — "Train on the cohort without holding the cohort" — the privacy-budget build for retention, placement and early-warning models
+
+🔵 **The problem:** the useful model needs five years of student records, and the institution cannot hand them over.
+
+| stage | component | grant, read at the pin | what it does here |
+|---|---|---|---|
+| 1 · get a dump you may keep | [`GreenmaskIO/greenmask`](https://github.com/GreenmaskIO/greenmask) | 🟢 **Apache-2.0**, 11 357 B | anonymised, consistent Postgres dumps from the live SIS into the staging environment |
+| 2 · measure what the dump still leaks | [`arx-deidentifier/arx`](https://github.com/arx-deidentifier/arx) | 🟢 **Apache-2.0**, 10 351 B | k-anonymity / l-diversity / t-closeness and a re-identification risk figure the DPO can sign |
+| 3 · substitute what you still cannot have | [`hitsz-ids/synthetic-data-generator`](https://github.com/hitsz-ids/synthetic-data-generator) | 🟢 **Apache-2.0**, 11 339 B | structured-tabular synthesis for the columns that stay too sparse to anonymise |
+| 4 · train with a budget, not a promise | [`meta-pytorch/opacus`](https://github.com/meta-pytorch/opacus) (deep) or [`IBM/differential-privacy-library`](https://github.com/IBM/differential-privacy-library) (scikit-learn) | 🟢 **Apache-2.0**, 10 241 B / 🟢 **MIT**, 1 078 B | DP-SGD or DP drop-ins, so ε is an artefact of the build |
+| 5 · report the cohort, not the student | [`google/differential-privacy`](https://github.com/google/differential-privacy) or [`OpenMined/PyDP`](https://github.com/OpenMined/PyDP) | 🟢 **Apache-2.0**, 13 333 B / 11 357 B | DP aggregations for the dashboard the institution publishes |
+| 6 · show it is not discriminating | [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | 🟢 **MIT**, 1 168 B | group-fairness metrics and mitigation over the trained model |
+
+🟢 **The deliverable that makes this sellable is not the model — it is ε plus the risk figure plus the disparity report, in one pack, with the payload digests of every component recorded.** 🔵 **Estimate: 8–12 weeks**, and stage 2 is where it either passes or stops.
+
+🔴 **Two maintenance facts to price into the quote, both measured this pass:** `arx` has not moved since **2025-10-01** (4 306 commits, 40 author addresses (`%ae`)) and `hitsz-ids/synthetic-data-generator` has not moved since **2025-03-06** (281 commits, 25 author addresses (`%ae`)). 🟢 Neither has a maintained open alternative at the same scope, so the honest line to a client is *"we will carry patches for this component"* rather than *"it is actively maintained"*.
+
+### 🟡 An amendment to p348's dedupe recipe, from this pass's own run
+
+🔴 p348's recipe told a studio to dedupe its supply list by case fold and by HEAD. 🟢 **Add the register step, because this pass proved both of those pass a stale address**: resolve every address through the search index's `full_name` before quoting an option count, and keep the result as dated evidence — the channel can be shut, as the HTML `301` channel was (`403` on all 43 addresses here). 🔵 The artefact is [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv): group, address, state, pin, and the channel that decided it.
+
 ## Pass 348 · 2026-10-20 — two recipes, and both are things a studio does BEFORE it builds: produce the fairness evidence Annex III will ask for, and dedupe your own supply list so the option count you quote is true
 
 **Evidence:** [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-payload-identity-cross-repo`](../evidence/p348-payload-identity-cross-repo.2026-10-20-p348.tsv) · [`p348-shelf-fold-identity`](../evidence/p348-shelf-fold-identity.2026-10-20-p348.tsv) · [`p348-institutional-orphan-probe`](../evidence/p348-institutional-orphan-probe.2026-10-20-p348.tsv)

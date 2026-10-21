@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 349 · 2026-10-20 — the four regional legs were run again and LATAM returned the richest education-specific evidence of the four for the first time in this base's history; the supply-side news is that the component tier every region's regulation demands is EMEA-placed, and the sharpest LATAM opportunity on these shelves is a missing recogniser class in an MIT codebase
+
+**Evidence:** [`compliance-vocabulary-grants`](../evidence/compliance-vocabulary-grants.2026-10-20-p349.tsv) · [`keyed-authors`](../evidence/keyed-authors.2026-10-20-p349.tsv) · [`education-token-leg-grants`](../evidence/education-token-leg-grants.2026-10-20-p349.tsv) · [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv) · [`alias-head-equality`](../evidence/alias-head-equality.2026-10-20-p349.tsv)
+
+### 🔴 The four prescribed regional demand legs, leg by leg, with what each actually returned
+
+| leg | what came back | verdict |
+|---|---|---|
+| North America | market-research geography pages; the governance gap this base already carries (10 % of institutions with formal AI guidelines, 71 % of US teachers untrained); a fragmented state-level regulatory picture with Colorado and Texas named | 🟡 **nothing new** — every substantive datum is already on this shelf from p343–p348 |
+| EMEA | enterprise AI adoption and EU AI Act commentary; governance-first adoption in the UK, Germany, France, the Netherlands and the Nordics; the Middle East as a national-competitiveness track | 🔴 **no education layer at all.** Written down rather than left as apparent coverage: the leg named no ministry, no edtech vendor, no university and no school-level figure |
+| APAC | enterprise tech priorities; Singapore's financial-sector AI consultations; Australian AI governance and copyright tightening; an enterprise survey (87 % encourage agent use, 47 % have governance); two corporate-learning deals | 🔴 **no education layer.** The only education items were vendor training alliances, not adoption or regulation |
+| LATAM | 🟢 **the richest of the four** — a 2026 higher-education survey (92 % of students, 79 % of faculty engaging with AI; only 19 % of faculty using AI for assignment feedback against ~50 % of students supporting it), a UNESCO IESALC regional mapping of **200 institutions across 19 countries** (teaching and learning 73.5 %, research 57.0 %, administration 34.1 %, community engagement 20.0 %), ~30 % of universities with a published AI policy, an Inter-American Development Bank regulatory framework, and the CEPAL-linked ILIA index scoring 19 countries | 🟢 **substantive, and it inverts this base's standing expectation** |
+
+🔵 **The inversion worth stating plainly.** For six passes this base recorded LATAM as the region it could not evidence. 🟢 **This pass it is the only region whose education-specific adoption, use-area breakdown and policy coverage all came back with denominators**, while EMEA and APAC returned enterprise governance. 🔴 **The caveat travels with it:** the survey covers **29 institutions**, the figures are self-reported, and both publishers have an interest in the finding — so it is a demand signal with a named population, not a market size.
+
+### 🟡 The regulatory picture per region, as the legs returned it this pass
+
+🔴 **LATAM has no unified framework and that is the engagement.** Chile has had a national AI policy since 2021 with a bill under discussion; Brazil and Colombia have national strategies with **no education-specific rules**; Mexico's official bodies have issued **non-binding** recommendations. 🟢 So a LATAM institution cannot buy "compliance" off a shelf — it buys a defensible position, which is a policy, a data boundary and an evidence pack.
+🟡 **EMEA's instrument is the binding one and its education tier is deferred to 2027-12-02**, which this base has carried since p345 and the leg did not move.
+🟡 **North America stays sub-federal**: a state patchwork rather than a rulebook.
+🟡 **APAC is converging on principles and executing per market**, on an enterprise rather than education track.
+
+### 🟢 The supply-side news, and it is placed
+
+🔴 **Eleven permissive compliance components, absent from all nine of these shelves until this pass, and six of the eight that could be placed by commit stream are EMEA.** `presidio` (**MIT**, 894 × `+0200` of 1 645 commits), `arx` (**Apache-2.0**, 2 809 × `+0200` of 4 306), `diffprivlib` (**MIT**, 346 × `+0100` of 596), `greenmask` (**Apache-2.0**, 325 × `+0300` of 586), `databunker` (**MIT**, 541 × `+0200` of 1 160), `rizzo-pii` (**MIT**, 138 × `+0200` of 144). 🟢 **One North America** (`top_secret`, **MIT**, 55 × `−0400` of 60) and **one APAC** (`hitsz-ids/synthetic-data-generator`, **Apache-2.0**, 250 × `+0800` of 281). 🔵 **The region whose regulation is hardest is also where the components are built** — which is a staffing fact for a studio, not only a licence fact.
+
+### Opportunities by region
+
+#### North America
+
+- 🟡 **Added p349 — a correction before an opportunity: the credentials row this file carries is one repository under two addresses.** [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) is the canonical address; `digitalcredentials/learner-credential-wallet` is **STALE** and resolves to the same pin `1c46a82ba384`. 🟢 The steward question p348 raised is settled: ask who maintains it *before* asking what it is licensed as.
+- 🟢 **Added p349 — the one NA-placed compliance component, and it is the cheapest possible start.** [`thoughtbot/top_secret`](https://github.com/thoughtbot/top_secret) (**MIT**, `LICENSE.txt` 1 095 B, 60 commits, 7 author addresses (`%ae`), 55 × `−0400`) filters sensitive text before it leaves a Ruby stack for a model. 🔵 For a district or a state system already in the 56-point governance gap, a request-path filter is a two-week deliverable that changes the DPO conversation.
+
+#### EMEA
+
+- 🟢 **Added p349 — the component tier that the EU AI Act's education duties imply is BUILT HERE, and six rows prove it.** `presidio`, `arx`, `diffprivlib`, `greenmask`, `databunker` and `rizzo-pii` are all permissive and all EMEA by commit stream. 🔵 **Sell the evidence pack, not the tool**: ε from `opacus` or `diffprivlib`, a re-identification risk figure from `arx`, a disparity report from `fairlearn`, in one deliverable.
+- 🔴 **Added p349 — this region returned NOTHING education-specific on the prescribed leg, for the second consecutive pass.** The queries run are recorded in the leg table above; every result was enterprise AI or general AI Act commentary. 🟢 An informed gap: an EMEA engagement must be scoped from the instrument (Annex III, deferred to 2027-12-02) rather than from adoption data this base does not have.
+
+#### APAC
+
+- 🟡 **Added p349 — the holder line is now a 2-for-2 APAC placement channel on one specific form.** `PT NAKAFA TEKNO KREATIF` and p348's `PT Motiolabs Digital Indonesia` are Indonesian statutory company forms read straight out of the grant. 🔴 One of them, [`nakafaai/nakafa.com`](https://github.com/nakafaai/nakafa.com), is **noncommercial and not OSI** (7 705 B) — **unusable under `P250`**, recorded so no later pass spends a probe.
+- 🟢 **Added p349 — the APAC-placed compliance row.** [`hitsz-ids/synthetic-data-generator`](https://github.com/hitsz-ids/synthetic-data-generator) (**Apache-2.0**, 281 commits, 25 author addresses (`%ae`), 250 × `+0800`) generates structured tabular data — the substitute for a cohort export in a jurisdiction that will not permit one. 🔴 Dormant since **2025-03-06**: price patch-carrying into the quote.
+- 🔴 **Added p349 — no education-specific adoption or regulation figure came back on the prescribed leg.** What answered was an enterprise governance gap (87 % encourage agent use, 47 % have governance) and two corporate-learning alliances. 🟢 Declared rather than silently absent.
+
+#### LATAM
+
+- 🟢 **Added p349 — the most concrete LATAM contribution opportunity this base has ever been able to name, and it is measured.** [`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) (**MIT**) ships country-specific recogniser sets for **18 countries** — australia, canada, finland, germany, india, italy, korea, nigeria, philippines, poland, singapore, south_africa, spain, sweden, thai, turkey, uk, us — enumerated over the complete tree at the pin `4f0e236e31a5`. 🔴 **Not one Latin American country: no CPF, no CNPJ, no CURP, no RUT, no DNI.** 🟢 **The leading open PII engine cannot redact a Brazilian or Mexican student record**, and the fix is a recogniser class plus a test fixture in an MIT codebase — low cost, high visibility, and it makes the studio a named contributor to a layer every regional competitor will need.
+- 🟢 **Added p349 — the region's demand evidence now has denominators.** 92 % of students and 79 % of faculty engaging with AI (29-institution survey); 73.5 % of institutions using AI in teaching and learning against 34.1 % in administration (UNESCO IESALC, 200 institutions, 19 countries); **~30 % of universities with a published AI policy.** 🔵 **The administration figure is the sellable one**: two thirds of institutions have not touched the back office, which is where an engagement has a measurable before and after.
+- 🟡 **Added p349 — no unified regulatory framework, and that shapes the pitch rather than blocking it.** Chile has a national policy and a bill; Brazil and Colombia have strategies without education-specific rules; Mexico's recommendations are non-binding. 🟢 Sell a defensible position — policy, data boundary, evidence pack — not "compliance with" a statute that does not exist yet.
+- 🟡 **Added p349 — this region's LATAM-placed supply row has a casing correction.** The canonical address is [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) as the search index returns it; `dasgltd/mcp-brasil` is **STALE** at the same pin `2efb258370b1`.
+
+#### Global
+
+- 🟢 **Added p349 — a client-facing artefact came out of this pass's identity work, and it is quotable.** The [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv) (46 rows: group, address, state, pin, deciding channel) is what makes an option count defensible. 🔴 **Before it, this base would have quoted 21 groups' worth of duplicates as distinct options** — including, in four live files, one credential wallet as two.
+- 🔵 **Added p349 — the licence posture of the compliance tier is region-neutral, which is the reason it travels.** Fourteen of fifteen candidates are MIT, Apache-2.0 or BSD, so the same component answers a Brazilian data-protection question, an EU Annex III question and a US state-patchwork question without a second procurement.
+
 ## Pass 348 · 2026-10-20 — all four regional legs returned education-specific policy again, and the supply-side news is a REVERSAL of this base's standing expectation: LATAM will not grow a platform tier, and the compliance components every region's regulation demands carry no education token at all
 
 **Evidence:** [`p348-policy-channel`](../evidence/p348-policy-channel.2026-10-20-p348.tsv) · [`p348-institutional-orphan-probe`](../evidence/p348-institutional-orphan-probe.2026-10-20-p348.tsv) · [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv)

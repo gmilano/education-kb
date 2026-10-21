@@ -1,0 +1,1 @@
+# 2462 folded addresses -> 105 collision names -> 281 probes (88.6% fewer)

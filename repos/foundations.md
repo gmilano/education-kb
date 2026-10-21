@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 349 · 2026-10-20 — the foundation tier gains the layer p348 said was missing and this pass went and got: eleven HORIZONTAL compliance components, none of which carries an education token, 93 % of them permissive, and six of them EMEA by commit stream
+
+**Evidence:** [`compliance-vocabulary-grants`](../evidence/compliance-vocabulary-grants.2026-10-20-p349.tsv) · [`keyed-authors`](../evidence/keyed-authors.2026-10-20-p349.tsv) · [`education-token-leg-grants`](../evidence/education-token-leg-grants.2026-10-20-p349.tsv) · [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv) · [`payload-digest`](../evidence/payload-digest.2026-10-20-p349.tsv) · gates: `make gate-author-key` (12 controls), `make gate-alias-canonical` (16), `make gate-payload-digest` (7)
+
+### 🟢 `ACTION ZZ-ae` discharged — the leg was run on COMPLIANCE vocabulary, and it beat the education leg on every axis measured
+
+🟡 p348 ended with a filter finding it could not price: *"an industry KB that selects on industry vocabulary is structurally blind to the horizontal components that industry's regulation demands."* 🟢 **Both legs were run in the same hour and both graded first-hand at the pin.** The denominators:
+
+| axis | compliance vocabulary | education vocabulary |
+|---|---|---|
+| candidates graded at the pin | 15 | 8 |
+| permissive (MIT / Apache-2.0 / BSD) | 🟢 **14 — 93.3 %** | 🟡 5 — 62.5 % |
+| copyleft | 0 | 🟡 2 AGPL-3.0 |
+| refused under `P250` | 🔴 1 — BUSL | 🔴 1 — noncommercial, not OSI |
+| **absent from all nine shelves** | 🟢 **11 of 15** | 🔴 **0 of 8** |
+| answers a duty named by a region's binding instrument | 🟢 **15 of 15** | 🔴 **0 of 8** |
+
+🔵 **The education-token channel is saturated and the compliance-token channel was never opened.** That is the whole finding, and it is a property of the QUERY rather than of the supply: eleven permissive components that three of four regions' regulation effectively requires were one search away for 348 passes.
+
+### 🟢 The eleven rows, read first-hand at the pin, with the key named on every author figure
+
+| row | grant, read at the pin | substance | activity, `%ae`-keyed | placement, by commit stream |
+|---|---|---|---|---|
+| [`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) | 🟢 **MIT**, `LICENSE` 1 084 B at ROOT, holder `Presidio Contributors.` | PII detection, redaction, masking and anonymisation over text, images and structured data; **18 country-specific recogniser sets** | 1 645 commits · **223 author addresses (`%ae`)** · 2018-05-04 → 2026-10-19 | 🟢 **EMEA** — 894 × `+0200`, 474 × `+0300` of 1 645 |
+| [`google/differential-privacy`](https://github.com/google/differential-privacy) | 🟢 **Apache-2.0**, `LICENSE` 13 333 B at ROOT | the reference ε-differential-privacy libraries (C++, Go, Java) plus the aggregation primitives a cohort report needs | pushed 2026-10-20 (search-index channel) | not placed by stream this pass — declared |
+| [`meta-pytorch/opacus`](https://github.com/meta-pytorch/opacus) | 🟢 **Apache-2.0**, `LICENSE` 10 241 B at ROOT | DP-SGD training for PyTorch: the component that lets a model be trained ON student data and still carry a privacy budget | pushed 2026-09-24 (search-index channel) | not placed by stream this pass — declared |
+| [`IBM/differential-privacy-library`](https://github.com/IBM/differential-privacy-library) | 🟢 **MIT**, **`LICENSE.md`** 1 078 B at ROOT, holder `IBM Corporation 2018` | `diffprivlib`: DP drop-ins for scikit-learn models and statistics, which is the shape an analytics engagement already has | 596 commits · **20 author addresses (`%ae`)** · 2019-01-09 → 2026-10-12 | 🟢 **EMEA** — 346 × `+0100`, 234 × `+0000` of 596 |
+| [`arx-deidentifier/arx`](https://github.com/arx-deidentifier/arx) | 🟢 **Apache-2.0**, `LICENSE` 10 351 B at ROOT, default branch **`master`** | k-anonymity, l-diversity, t-closeness and re-identification risk analysis with a GUI — the instrument a data-protection officer can be shown | 4 306 commits · **40 author addresses (`%ae`)** · 2013-04-29 → **2025-10-01, dormant 12 months** | 🟢 **EMEA** — 2 809 × `+0200`, 1 476 × `+0100` of 4 306 |
+| [`OpenMined/PyDP`](https://github.com/OpenMined/PyDP) | 🟢 **Apache-2.0**, `LICENSE` 11 357 B at ROOT, default branch **`dev`** | the Python surface over Google's DP library, which is what makes the primitive reachable from an education data pipeline | 838 commits · **64 author addresses (`%ae`)** · 2019-09-15 → 2026-05-11 | 🔴 **NOT PLACED — genuinely distributed**: top offset `+0530` on 353 of 838, with 17 offsets present |
+| [`GreenmaskIO/greenmask`](https://github.com/GreenmaskIO/greenmask) | 🟢 **Apache-2.0**, `LICENSE` 11 357 B at ROOT | database anonymisation and test-data management over Postgres dumps — the layer between a live SIS and a vendor's staging environment | 586 commits · **35 author addresses (`%ae`)** · 2023-03-31 → 2026-10-20 | 🟢 **EMEA** — 325 × `+0300`, 214 × `+0200` of 586 |
+| [`securitybunker/databunker`](https://github.com/securitybunker/databunker) | 🟢 **MIT**, `LICENSE` 1 078 B at ROOT, holder `Yuli Stremovsky`, default branch **`master`** | a PII/consent vault with per-subject records and tokenisation: consent and data-subject requests as a SERVICE rather than a policy document | 1 160 commits · **11 author addresses (`%ae`)** · 2019-12-08 → 2026-07-28 | 🟢 **EMEA** — 541 × `+0200`, 294 × `+0300` of 1 160 |
+| [`Rizzo-AI-Academy/rizzo-pii`](https://github.com/Rizzo-AI-Academy/rizzo-pii) | 🟢 **MIT**, `LICENSE` 1 090 B at ROOT, holder `Simone Rizzo — Rizzo AI Academy` | a local-first guard that anonymises a document BEFORE it reaches an LLM, with Italian-language entity models | 144 commits · **22 author addresses (`%ae`)** · 2026-06-28 → 2026-09-25 | 🟢 **EMEA** — 138 × `+0200` of 144 |
+| [`thoughtbot/top_secret`](https://github.com/thoughtbot/top_secret) | 🟢 **MIT**, **`LICENSE.txt`** 1 095 B at ROOT, holder `Steve Polito and thoughtbot, inc.` | the same guard for a Ruby stack — filters sensitive text before it leaves for a chatbot or API | 60 commits · **7 author addresses (`%ae`)** · 2025-07-23 → 2026-05-14 | 🟢 **North America** — 55 × `−0400` of 60 |
+| [`hitsz-ids/synthetic-data-generator`](https://github.com/hitsz-ids/synthetic-data-generator) | 🟢 **Apache-2.0**, `LICENSE` 11 339 B at ROOT | structured-tabular synthetic data, so a cohort model can be developed without the cohort | 281 commits · **25 author addresses (`%ae`)** · 2023-08-10 → **2025-03-06, dormant 19 months** | 🟢 **APAC** — 250 × `+0800` of 281 |
+
+### 🔴 The two refusals and the one adjacency, recorded so no later pass re-probes them
+
+| address | what the payload says at the pin | verdict |
+|---|---|---|
+| [`sdv-dev/SDV`](https://github.com/sdv-dev/SDV) | **BUSL**, `LICENSE` 4 818 B — a source-available reservation, not an OSI grant | 🔴 **Refused under `P250`.** This base already holds the payload as a fixture; the re-read confirms it has not changed |
+| [`nucleuscloud/neosync`](https://github.com/nucleuscloud/neosync) | 🟢 **MIT**, `LICENSE.md` 1 580 B, holder `NUCLEUS CLOUD CORP` — and the repository is **ARCHIVED** | 🔴 **Not offerable.** 🔵 A permissive grant on an archived repository is the state this base has no column for: the rights are real and the maintenance is gone |
+| [`synthetichealth/synthea`](https://github.com/synthetichealth/synthea) | 🟢 **Apache-2.0**, `LICENSE` 11 357 B at ROOT | 🟡 **ADJACENT, not education.** A synthetic PATIENT generator; named here only so a successor reading "synthetic data, Apache-2.0, 3 000 commits" does not promote it onto an education shelf |
+
+### 🔴 `presidio`'s country coverage is the most concrete LATAM gap on these shelves, and it is measured rather than inferred
+
+🟡 `presidio-analyzer/predefined_recognizers/country_specific/` enumerated over the complete tree at the pin `4f0e236e31a5` holds recogniser sets for **18 countries**: australia, canada, finland, germany, india, italy, korea, nigeria, philippines, poland, singapore, south_africa, spain, sweden, thai, turkey, uk, us. 🔴 **Not one Latin American country. No CPF, no CNPJ, no CURP, no RUT, no DNI.** 🟢 **So the leading open PII engine cannot redact a Brazilian or Mexican student record, and the remedy is a recogniser class in an MIT codebase rather than a product** — the cheapest high-visibility LATAM contribution this base has ever been able to name. `ACTION ZZ-ak` asks whether a fork already ships one before a studio is told to build it.
+
+### 🟡 The default-branch trap re-measured on this pass's own candidates: 5 of 23
+
+🔵 `lib/probe_payload.sh` exists because a hardcoded `main` writes a granted repository down as ungranted, and its header names three specimens from pass 15. **This pass's 23 candidates contain five more** — `arx-deidentifier/arx`, `securitybunker/databunker`, `synthetichealth/synthea` and `24kchengYe/human-skill-tree` on `master`, `OpenMined/PyDP` on **`dev`**. 🟢 **21.7 %, read through `ls-remote --symref` and never assumed.** 🔵 And the filename axis paid in the same run: three of the eleven grants are not at `LICENSE` — `LICENSE.md` twice, `LICENSE.txt` once.
+
 ## Pass 348 · 2026-10-20 — the foundation tier was re-read AT THE PIN with a new instrument, and the news is not a row: `LICENSE` at the root is the only place a grant covers the repository, and this base had no way to say so until this pass
 
 **Evidence:** [`p348-institutional-orphan-probe`](../evidence/p348-institutional-orphan-probe.2026-10-20-p348.tsv) · [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-holder-channel-defect`](../evidence/p348-holder-channel-defect.2026-10-20-p348.tsv) · [`p348-author-key-spread`](../evidence/p348-author-key-spread.2026-10-20-p348.tsv) · gate: `make gate-grant-scope`

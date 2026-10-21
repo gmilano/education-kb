@@ -1,0 +1,15 @@
+data-privacy-stack/presidio	main	LICENSE	1084	MIT	Copyright (c) Presidio Contributors.
+fairlearn/fairlearn	main	LICENSE	1168	MIT	Copyright (c) Microsoft Corporation and Fairlearn contributors.
+google/differential-privacy	main	LICENSE	13333	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)
+meta-pytorch/opacus	main	LICENSE	10241	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)
+IBM/differential-privacy-library	main	LICENSE.md	1078	MIT	Copyright (C) IBM Corporation 2018
+arx-deidentifier/arx	master	LICENSE	10351	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)
+OpenMined/PyDP	dev	LICENSE	11357	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)
+GreenmaskIO/greenmask	main	LICENSE	11357	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)
+securitybunker/databunker	master	LICENSE	1078	MIT	Copyright (c) 2020, 2021 Yuli Stremovsky
+sdv-dev/SDV	main	LICENSE	4818	BUSL	NOT-APPLICABLE (BUSL: holder not in the license text by construction)
+synthetichealth/synthea	master	LICENSE	11357	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)
+nucleuscloud/neosync	main	LICENSE.md	1580	MIT	Copyright (c) 2024 NUCLEUS CLOUD CORP
+thoughtbot/top_secret	main	LICENSE.txt	1095	MIT	Copyright (c) Steve Polito and thoughtbot, inc.
+Rizzo-AI-Academy/rizzo-pii	main	LICENSE	1090	MIT	Copyright (c) 2026 Simone Rizzo — Rizzo AI Academy
+hitsz-ids/synthetic-data-generator	main	LICENSE	11339	Apache-2.0	NOT-APPLICABLE (Apache-2.0: full text, holder not in the license text by construction)

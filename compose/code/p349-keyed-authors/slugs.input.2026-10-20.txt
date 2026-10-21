@@ -1,0 +1,10 @@
+data-privacy-stack/presidio
+IBM/differential-privacy-library
+arx-deidentifier/arx
+OpenMined/PyDP
+GreenmaskIO/greenmask
+securitybunker/databunker
+thoughtbot/top_secret
+Rizzo-AI-Academy/rizzo-pii
+hitsz-ids/synthetic-data-generator
+terracotta-education/terracotta

@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-20
 ---
 
+## Pass 349 · 2026-10-20 — four trends, and the sharpest is one this base can only see because it keeps nine shelves: the education STANDARDS layer has been quietly changing stewards, and every stale citation of it still resolves
+
+**Evidence:** [`alias-head-equality`](../evidence/alias-head-equality.2026-10-20-p349.tsv) · [`alias-register`](../evidence/alias-register.2026-10-20-p349.tsv) · [`compliance-vocabulary-grants`](../evidence/compliance-vocabulary-grants.2026-10-20-p349.tsv) · [`keyed-authors`](../evidence/keyed-authors.2026-10-20-p349.tsv) · [`education-token-leg-grants`](../evidence/education-token-leg-grants.2026-10-20-p349.tsv)
+
+### T45 · 🔴 The education standards layer is changing stewards, and the old addresses keep answering
+
+🟢 **Measured, not inferred, out of the bounded alias run over this base's own 2 462 addresses.** `caliper-spec` and `openbadges-specification` each answer under **two owners at one pin** — IMS Global became 1EdTech. `ease` answers under `edx/` and `openedx/`. The reference learner-credential wallet moved from the MIT Digital Credentials Consortium to **OpenWallet Foundation Labs**. An 11 435-star MIT PII engine moved out of the `microsoft/` namespace in the same window.
+
+🔵 **Why this is a trend rather than trivia: a hand-off in the standards layer is a governance signal, and the only visible trace it leaves is an address that still works.** Every stale citation resolves, clones and serves the correct licence at the correct HEAD, so an integration note that names the former steward reads perfectly and is wrong about who maintains the thing it depends on. 🔴 **For a studio this is a diligence item with a date on it:** before quoting a standards integration, resolve the owner, because the consortium you cite may have been absorbed.
+
+### T46 · 🟢 The compliance layer that regulation demands is HORIZONTAL, permissive, and outside the industry's vocabulary
+
+🟡 Both discovery legs ran this hour on first-hand grants. **Compliance vocabulary: 15 candidates, 14 permissive (93.3 %), 11 of 15 absent from all nine shelves.** **Education vocabulary: 8 candidates, 5 permissive (62.5 %), 0 of 8 absent.** 🔴 **And on the axis that decides whether a component is needed at all — does it answer a duty named by a region's binding instrument — the split is 15 of 15 against 0 of 8.**
+
+🔵 **The generalisable form, which applies to every industry KB and not only this one:** the components a regulator requires are named in the REGULATOR's vocabulary (group fairness, differential privacy, data subject, consent, audit log), and the components a vertical ships are named in the vertical's (tutor, rubric, gradebook, LMS). A KB that selects on the second is structurally blind to the first — **and the second channel saturates, which is what makes the blindness comfortable.**
+
+### T47 · 🔴 The industry's market number disagrees with itself by a factor of eight, and the adoption numbers do not
+
+🟡 Three forecasts collected on the prescribed leg this pass: **USD 6.4 B (2025) → 79.6 B (2034) at 31.35 %**; **USD 8.3 B (2025) → 57.2 B (2033)**; **USD 7.52 B (2025) → 10.6 B (2026) at 40.9 %**. 🔴 **Every one is a vendor or market-research marketing page, and the 2034 spread is ~8×.** 🟢 **The usable numbers are adoption rates, because they come from surveys that name their population:** 92 % of students and 79 % of faculty engaging with AI in the LATAM higher-education survey (29 institutions), 73.5 % of institutions using it in teaching and learning against 34.1 % in administration in the UNESCO IESALC regional mapping (200 institutions, 19 countries).
+
+🔵 **So the sizing input for a proposal is an adoption rate with a denominator, never a market forecast.** This base has now recorded the forecast spread twice; the next pass that repeats the query is measuring the same marketing pages again.
+
+### T48 · 🟡 Student adoption outruns institutional policy in every region that has been measured, and the gap is the engagement
+
+| region | adoption, as reported | institutional governance, as reported | the gap |
+|---|---|---|---|
+| LATAM | 92 % of students, 79 % of faculty (Digital Education Council LATAM survey, 29 institutions) | **~30 %** of universities with a published AI policy | 🔴 **~62 points** |
+| North America | 66 % of students using ChatGPT; 92 % of students in a UK-origin measure | **10 %** of institutions with formal AI guidelines; **71 %** of US teachers report no training | 🔴 **~56 points**, as this base has carried since p345 |
+| EMEA | 🔴 **no education-specific adoption figure on the prescribed leg this pass** | the EU AI Act's Annex III classification, deferred to **2027-12-02** | 🟡 governance ahead of measurement |
+| APAC | 🔴 **no education-specific adoption figure on the prescribed leg this pass** | 87 % of organisations encourage agent use, 47 % have governance (enterprise survey, not education) | 🟡 the enterprise proxy is all that answered |
+
+🟢 **The two 🔴 cells are declared gaps, not zeros** — the legs were run, the queries are recorded on `intel/market.md`, and they returned enterprise AI governance with no education layer. 🔵 **Where a region has both numbers the gap is ~60 points and it is a policy-plus-training engagement; where it has only one, the honest first deliverable is the measurement.**
+
 ## Pass 348 · 2026-10-20 — four trends, and the first two are about MEASUREMENT: an efficacy layer now exists in open source, and a fairness layer now has a name — while the industry's two loudest numbers (stars, market size) remain the two least usable
 
 **Evidence:** [`p348-placement-and-metadata`](../evidence/p348-placement-and-metadata.2026-10-20-p348.tsv) · [`p348-policy-channel`](../evidence/p348-policy-channel.2026-10-20-p348.tsv) · [`p348-author-key-spread`](../evidence/p348-author-key-spread.2026-10-20-p348.tsv) · [`p348-shelf-fold-identity`](../evidence/p348-shelf-fold-identity.2026-10-20-p348.tsv)
