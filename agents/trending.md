@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 368 — 🔴 **the agent leg returns nothing for the twenty-fourth consecutive pass, and the reason the shelf still grew is that `p368` stopped searching outward and swept *this base's own trending files* — where a 41 208 ★ MIT repository had been sitting unshelved**
+
+🟡 **Channel note.** `git ls-remote` and `raw.githubusercontent.com` were **not** reachable
+this pass: `curl` to `github.com` returned **403 at the proxy for all 15 probes**, so the
+payload-read standard every shelf row is held to could not be met. What *was* available is
+the **authenticated GitHub API** (repository metadata, including GitHub's own licence
+detection and live star counts), and it answered every call. 🔵 **Every figure below is
+first-hand from that API; every licence below is detection, not payload.** The distinction
+is kept because `p362` proved detection wrong on `CaviraOSS/PageLM`.
+
+🔴 **The prescribed agent leg** (`top open source AI agents education 2026 github MIT`)
+returned SEO aggregators and general-purpose coding agents — Hermes, OpenClaw, opencode,
+OpenHands — for the **twenty-fourth pass running**. The tool's own summary conceded it
+*"didn't turn up a ranked list of education-focused open-source AI agents under MIT."*
+🟢 **This leg should be considered dead as a discovery channel.** Twenty-four passes is
+not a run of bad luck; the query describes a ranking the open web does not publish.
+
+🔴 **Discovery is saturated, and this pass has the cleanest measurement of it yet.** Four
+candidates survived the global and regional web legs — `kvnloo/tutor-mcp`,
+`THU-MAIC/OpenMAIC`, `ahmedEid1/lumen`, `withmarbleapp/os-taxonomy`. **4 of 4 were already
+held by this base.** Not one address in the open web channel was new.
+
+🔴 **And the fourth candidate caught `p368` making `p361`'s mistake — this pass nearly
+published a false death, and this base's own prior finding is what stopped it.**
+
+The web leg returned [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp), described
+as *"an open-source MCP server that turns any LLM into an Intelligent Tutoring System.
+50 years of cognitive science, MIT licensed."* 🔴 **A `repo:kvnloo/tutor-mcp` query against
+the GitHub API returned `total_count: 0`, and `p368` first wrote that up as a dead slug —
+a 404 being presented as a find.** 🟢 **That was wrong**, and the correction came from
+`agents/top.md` §`p361`: *GitHub repository search omits forks by default*, which was the
+mechanism behind **12 of the 16** index misses `p361` dissected. `p344` had already
+recorded this exact slug as **a fork** of the upstream.
+
+🟢 **Re-queried with `p361`'s prescribed recovery — `repo:kvnloo/tutor-mcp fork:true` — it
+returns `total_count: 1`. The repository is LIVE**: Go, `fork: true`, **0 ★**, created
+2026-09-28, last updated 2026-10-04. The upstream it forks,
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) — Go, MIT,
+**53 ★**, topics `bkt` and `intelligent-tutoring-system` — is already the row on
+`agents/top.md`, and remains the row to track, as `p344` concluded.
+
+🔵 **Three things this is worth recording for.** 🔴 First, the web channel surfaced a
+**0 ★ fork** as a notable 2026 find while never naming the 53 ★ upstream — further evidence
+that this leg ranks on text, not on substance. 🔴 Second, **`p368`'s only liveness
+instrument this pass was the one `p361` proved is not a liveness instrument.** With `curl`
+403-blocked there was no `ls-remote` to fall back on, so the default-`fork:false` behaviour
+of repo search was load-bearing and silently wrong. 🟢 Third, **the defect was caught by
+reading this base's own shelf before publishing**, which is the single cheapest check
+available here and the one a saturated-discovery pass is most tempted to skip.
+
+🔴 **`ACTION`: any pass without `ls-remote` must append `fork:true` to every existence
+probe, and must not report absence as death on the index alone.** `p361` wrote the rule;
+`p368` is the pass that proves it bites when the usual instrument is missing.
+
+### 🔴 The finding: three large repositories were in *these* files and on no shelf
+
+Full write-up on `agents/top.md` §`p368`. In short, a four-line `grep` of the two trending
+files against the six shelf files returned:
+
+| Repository | Licence (API) | ★ 2026-10-21 | Status before this pass |
+| --- | --- | ---: | --- |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** | **41 208** | in both trending files, **on no shelf** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | **6 871** | in both trending files, **on no shelf** |
+| [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 🔴 **NOASSERTION** | **4 709** | in both trending files, **on no shelf** |
+
+🔵 **This file is the reason.** Append-only is the right rule — it is why the history above
+is trustworthy — but 42 947 lines of it with no review query means a repository can be
+recorded forever and read never. 🟢 All three are now shelved or recorded with their grant
+defect named.
+
+### 🟢 Star refresh, first-hand from the API
+
+`HKUDS/DeepTutor` **42 017** (shelf said 41 972) · `THU-MAIC/OpenMAIC` **41 208** ·
+`withmarbleapp/os-taxonomy` **7 007** (shelf said 6 898) · `oppia/oppia` **6 871** ·
+`Auto-Empirical-Research-Skills` **4 709** · `echo-loop/Echo-Loop` **4 229** ·
+`Miaotofu01/Study-Mate` **1 118** · `24kchengYe/human-skill-tree` **575** ·
+`ankimcp/anki-mcp-server` **526** · `open-spaced-repetition/py-fsrs` **514** ·
+`satvik314/educhain` **387** · `SYuan03/Skill-Anything` **339** ·
+`ZeKaiNie/universal-examprep-skill` **312** · `CAHLR/OATutor` **268**.
+🟢 **Every carried licence that could be re-checked by API agreed with the shelf** —
+`py-fsrs`, `educhain`, `Skill-Anything`, `OATutor`, `anki-mcp-server`,
+`universal-examprep-skill` all MIT; `os-taxonomy` ODbL-1.0 as published.
+
+### 🟡 Topic sweeps — what the GitHub index returns that the web channel cannot
+
+`topic:ai-tutor stars:>300` returns **5** repositories, all already shelved.
+`topic:education stars:>2000 pushed:>2026-08-01` returns **44**, of which the overwhelming
+majority are **programming curricula**, not education-industry AI — freeCodeCamp,
+TheAlgorithms/Python, hello-algo, the Microsoft `*-For-Beginners` series. 🟢 **The shelf is
+right to exclude them** and the exclusion is now measured rather than assumed.
+🔴 `topic:education topic:ai-agents stars:>500` returns **0** — the two topics are
+essentially never applied together, which is why topic search alone will not find this
+sector's agents.
+
+🟡 **All three counts carry `p361`'s fork caveat** (see the `tutor-mcp` item above): these
+sweeps ran at the API default, `fork:false`, so each is a count of **non-fork**
+repositories. For a *discovery* sweep that is the behaviour you want — a fork is not a new
+project — and the figures are reported as such rather than as totals.
+
+
 ## 2026-10-21 · Pass 367 — 🔴 **the agent leg returns nothing for the twenty-third consecutive pass, and this pass found its agents in the 496 live repositories this base already discussed but had never indexed as addresses — including the two that `Gap 239` and `Gap 246` turn on**
 
 🟢 **Channel note — `ls-remote` and `raw.githubusercontent.com` both answered first-hand all

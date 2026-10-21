@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Start here — the engagement brief
+
+🟢 **This is the answer this file exists to give.** The audit sections above
+`## Market size` record which legs ran on which pass and what they returned.
+
+**Shape of the market.** Global AI-in-education sits around **$9.58 B (2026) heading to
+~$42.5 B by 2030** (~41.5 % CAGR). North America holds the largest single share (~36 %);
+Europe is ~$2.64 B growing at ~31.9 %. 🟡 **Every one of these figures is commercial
+research or a vendor summary — none traces to a primary statistical source.** Use them to
+size an argument, never to anchor a contract.
+
+**What is actually changing in 2026**, and it is consistent across independent sources:
+AI in education has stopped being a pilot portfolio and become **governed infrastructure**
+— explicit policies, data boundaries, oversight — while buyers increasingly demand
+**evidence of learning gain before purchase**. Those two shifts, not model capability,
+decide what an engagement has to deliver.
+
+**Regulatory posture by region — the one-line version each.** Full detail under
+`## Opportunities by region`.
+
+| Region | The constraint that shapes an engagement |
+| --- | --- |
+| **North America** | No federal rule; **state-by-state** patchwork (134 bills / 31 states tracked). Several states bar AI as the *primary basis* for grading, discipline or placement — human-in-the-loop is a design requirement, not a nicety |
+| **EMEA** | **EU AI Act.** Education uses in Annex III are high-risk, but those obligations were **deferred to 2 December 2027**. 🔴 **Article 50 transparency applies now** (disclose the AI, mark synthetic content), and **emotion recognition in schools has been prohibited since February 2025**. A school deploying a vendor tool is a **deployer** with its own duties |
+| **APAC** | No single regime. China has binding content rules incl. **AI-content labelling (since 1 Sep 2025)**; India relies on **DPDP** plus labelling duties; Japan's framework carries no fines. Multi-jurisdiction delivery needs per-country policy nodes |
+| **LATAM** | 🔴 **Brazil's PL 2338 is still a bill, not law** — Senate-approved Dec 2024, sitting in the Chamber of Deputies. The binding instrument today is **LGPD**. Adoption is running *ahead* of the framework: **56 % of Brazilian secondary teachers** used AI in the last year vs an OECD average of 36 % |
+| **Global** | 1EdTech (LTI, Caliper), UNESCO (LAC Observatory, 33 ministries), OECD set the interoperability and governance vocabulary clients will quote at you |
+
+🔵 **Key players, market map and the per-region opportunity sections follow below.**
+
+
 # Education — market map and regional intelligence
 
 **Pass 367 · 2026-10-21.** Researched **2026-10-21**. 🔴 **The prescribed EMEA and APAC legs
@@ -679,6 +710,20 @@ literacy push with **no legislation date set** — an opening for literacy progr
 without a compliance burden attached.
 
 ### EMEA
+
+🟢 **`p368` adds one prohibition this file had never stated, and it is in force today.**
+🔴 **Emotion-recognition systems in educational institutions are *prohibited* under the
+EU AI Act — Article 5, applicable since 2 February 2025.** This is a **ban**, not a
+high-risk obligation, so it is **unaffected by the Annex III deferral to 2027-12-02**
+recorded below, and no conformity wrapper makes it deliverable. 🔵 It matters commercially
+because "engagement detection", "attention tracking" and affect-aware tutoring are
+routinely proposed in EMEA education pitches, and several proctoring and classroom-analytics
+products ship exactly that capability. 🟡 **Check it at scoping, not at delivery.**
+🟡 Source is a secondary guide, consistent with Art. 5's published text; the article was
+not read first-hand this pass — the EUR-Lex host did not answer (`p367` logged the same).
+🔵 `verticals/solutions.md` already carries the operational corollary on
+`shaheeranser/exam-proctor`, which stays clear of this prohibition only by one unset
+MediaPipe default — the two notes should be read together.
 
 **`p364` leg result: NIL, and the null is itself the finding.** 🔴 **The leg returned the
 Annex III deferral to `2027-12-02` under the Digital Omnibus — which this base has held as

@@ -4,6 +4,30 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Start here — the fourteen trends in one screen
+
+🟢 **This is the index this file exists to give.** Each line is a section below; the
+audit material above `## 1. From pilots to governance` is provenance.
+
+1. **From pilots to governance** — 2026 is the year AI in education becomes governed infrastructure.
+2. **Evidence becomes a procurement gate** — buyers want proof of learning gain before they buy.
+3. **Purpose-built beats general-purpose** — the move away from generic chat tools to education-specific platforms.
+4. **Agentic and adaptive, not conversational** — the product shape changed.
+5. **Regulatory divergence is now a design constraint** — one build cannot serve four regions unmodified.
+6. **Credentials as the skills-based hiring substrate** — digital credentials move from pilot to mechanism.
+7. **MCP has quietly become the LMS integration layer** — the densest new supply in education AI.
+8. **Skills-as-packaging** — curriculum shipped as agent instructions.
+9. **Curriculum-as-open-data is the real moat** — and it is regionally lopsided.
+10. 🔴 **Licence drift away from OSI** — "open" in education AI increasingly is not.
+11. **A methodological finding, recorded for successors.**
+12. **The grading-execution substrate is large, mature and permissive** — and nobody calls it AI.
+13. 🔴 **Education's grant hazards fail CLOSED**, and the cause is repository age.
+14. 🔴 **A badge is not a grant.**
+
+🔵 **If you read only two:** №1 and №5 decide what an engagement must deliver;
+№10 and №14 decide what you are allowed to ship.
+
+
 # Education — current trends
 
 **Pass 367 · 2026-10-21.** Researched **2026-10-21**. 🔴 **This pass's finding is about

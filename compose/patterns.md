@@ -4,6 +4,29 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Start here — pattern index
+
+🟢 **Pick the pattern that matches the engagement, then read only that section.**
+Each one names the specific repos and how to wire them.
+
+| # | Pattern | Use when |
+| ---: | --- | --- |
+| 1 | LMS-native tutor without touching the LMS | Client has Moodle/Canvas/Open edX and the deliverable must stay yours |
+| 2 | BNCC-aligned lesson planner for Brazil | LATAM K-12, Portuguese, national curriculum binding |
+| 3 | EU AI Act high-risk conformity wrapper | EMEA, anything touching admissions, assessment or proctoring |
+| 4 | Assessment integrity for the agent era | Client's detector has stopped being credible |
+| 5 | Offline-first delivery for low-connectivity regions | Rural LATAM, Sub-Saharan Africa, remote APAC |
+| 6 | Modernising a legacy SCORM corporate estate | Enterprise L&D with years of SCORM content |
+| 7 | Curriculum knowledge graph from raw textbooks | No structured curriculum data exists yet |
+| 8 | Verifiable credentials for skills-based hiring | Employability / workforce engagements |
+| 9 | Licence-clean programming-assessment stack | Coding academy, deliverable must be closed |
+| 10 | Add retention to a tutor that already works | Tutor exists, outcomes do not stick |
+| 11 | England-curriculum tutor, client keeps the curriculum model | UK engagements |
+| 12 | Process-evidence assessment | Detection-based integrity has failed |
+| 13 | Statutory inclusion deliverable, Colombian school system | LATAM public sector, legal mandate |
+| 14 | Reaching a client's LMS when "LTI support" is not one capability | Integration scoping before you quote |
+
+
 # Education — composition patterns
 
 **Pass 367 · 2026-10-21.** Concrete recipes. 🆕 **Pattern 27 is `p367`'s**, and it closes the

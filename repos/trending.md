@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 368 · 2026-10-21 — 🔴 **`curl` to github.com was 403 at the proxy all pass, so no payload was read; the authenticated GitHub API substituted for it and found three repositories this base had trending-listed and never shelved**
+
+🟡 **Channel note, stated first because it bounds everything below.** Unlike `p367`, this
+pass had **no `ls-remote` and no `raw.githubusercontent.com`** — 15 of 15 `curl -sI` probes
+to `github.com` returned **403 from the agent proxy**. 🔴 **The payload-read standard could
+not be met for any repository.** The **authenticated GitHub API** answered every call, so
+repository existence, star counts, push dates, fork counts and **GitHub's licence
+detection** are first-hand; licence *payloads* are not. 🔵 A successor pass with
+`raw.githubusercontent.com` should re-read the three new rows' grants at a named path.
+
+🔴 **The trending channel returned no new repositories for the twenty-fourth consecutive
+pass.** `github trending education AI 2026` returned aggregator blogs — CoddyKit,
+NocoBase, Firecrawl, Analytics Vidhya — whose education content was
+`withmarbleapp/os-taxonomy` (already held, and the blog's **5 900 ★** is stale: the API
+says **7 007**) and `mlabonne/llm-course` (a general LLM curriculum, not education-industry).
+
+🟢 **The vertical-platform leg produced one real promotion.**
+`open source platform education LMS student information system MIT Apache 2026` returned
+the expected copyleft incumbents, and the search's own summary reached the same conclusion
+this base reached passes ago and states on `verticals/solutions.md`: **there is no
+MIT-licensed LMS-plus-SIS**, and the permissive path is OpenOLAT or Sakai paired with a
+separate SIS. 🟢 **Independent corroboration of a standing shelf claim** — worth recording,
+because a claim this base has carried for several cycles had not been externally checked.
+
+### 🟢 Promoted to a shelf this pass, from these very files
+
+| Repository | Licence (API detection) | ★ | Promoted to |
+| --- | --- | ---: | --- |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** | **41 208** | `agents/top.md` → tutoring tier |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | **6 871** | `verticals/solutions.md` → core platforms |
+| [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 🔴 **NOASSERTION** | **4 709** | `agents/top.md` → recorded as read-only, no grant |
+
+🔵 **`oppia` is the one worth a sentence of its own.** Apache-2.0, 6 871 ★, pushed the day
+of this pass, 5 830 forks, nonprofit, SDG-4. It is built around *explorations* — lessons
+that branch on a learner's answer — which makes it a **pedagogy engine rather than an
+LMS**, and it is permissive. On a shelf whose full-featured permissive options were
+OpenOLAT, Kolibri and Sakai, that is a materially different fourth option, and it had been
+sitting in this file.
+
+🔴 **`ACTION`: add a standing promotion sweep.** Threshold these trending files at 250 ★,
+diff against the six shelf files, report the misses. It is minutes of work and this pass's
+first run of it found three repositories above 4 000 ★.
+
+
 ## Pass 367 · 2026-10-21 — 🔴 **zero index calls and zero new repositories from the trending channel; the 496 repositories this pass added to the corpus were already on these shelves, written in a spelling no instrument here could read**
 
 🟢 **Channel note — `git ls-remote` answered for all 3 451 probes this pass** (823 channel-B

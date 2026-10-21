@@ -4,6 +4,33 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Start here — picking the platform to customise
+
+🟢 **This is the answer this file exists to give.** The audit sections above
+`## Core platforms` record how these licence reaches were established.
+
+**The decision that matters is not which platform is best, it is whether the client's
+deliverable has to stay closed.**
+
+- **Deliverable can be open, or lives outside the platform** → take the incumbent. Moodle
+  (GPL-3.0) has the largest installed base worldwide; Open edX (AGPL-3.0) is the
+  large-scale HE and corporate-academy choice; Canvas (AGPL-3.0) dominates North American
+  higher ed. Reach all three over **LTI 1.3 or MCP** and the copyleft never touches your code.
+- **Deliverable must be closed, or the client wants to own a fork** → the permissive
+  shelf: **OpenOLAT** (Apache-2.0, the only full-featured permissive HE platform here),
+  **Kolibri** (MIT, offline-first — the right base for low-connectivity deployments),
+  **Sakai** (ECL-2.0).
+- **Low-connectivity or rural deployment** → Kolibri (MIT), designed for it.
+- **Institution-wide stack including ERP** → Frappe LMS + ERPNext (AGPL-3.0), India-origin.
+- **Spanish/French public sector** → Chamilo (GPL-3.0) has real LATAM and EMEA deployments.
+
+🔴 **Standing caveat, re-checked this pass:** the **Canvas** public GitHub mirror is
+materially behind upstream. Treat it as reference, not as the source you deploy.
+
+🔵 Full detail, including the ENT national-portal tier, SIS/ERP, assessment and integrity,
+code-execution platforms, the platforms to exclude and the permissive shortlist, follows below.
+
+
 # Education — vertical platforms to customise with AI
 
 **Pass 367 · 2026-10-21.** 🔴 **`p364` read all 60 platform READMEs on this shelf and graded
@@ -333,6 +360,7 @@ permissive side of the boundary and talks to the ERP over its API.
 | **Kolibri** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 🟢 **None.** Fork freely into closed deliverables | Offline-first. The right base for low-connectivity deployments — rural LATAM, Sub-Saharan Africa, remote APAC |
 | **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | 🟢 **None** | Swiss-built HE LMS. The only full-featured *permissive* HE platform on this shelf |
 | **Chamilo** | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 🟡 Plugin = derivative | Accessibility- and ease-of-use-focused. Strong Spanish/French-language support; real LATAM and EMEA public-sector deployments |
+| 🆕 **Oppia** | [oppia/oppia](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** — 🟡 GitHub licence API, payload not read this pass | 🟢 **None** | Nonprofit interactive-lesson platform (SDG-4), Python/Angular, 6 871 ★, pushed 2026-10-21. Built around *explorations* — structured lessons that respond to a learner's answer — so it is a **pedagogy engine**, not another LMS. 🟢 Promoted from trending `p368`; the permissive option when the deliverable is the lesson experience itself rather than course administration |
 | **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL-2.0** | 🟢 **Permissive** (Apache-2.0 derivative with an education patent clause) | Research-university collaboration + learning environment |
 | **Frappe LMS** | [frappe/lms](https://github.com/frappe/lms) | AGPL-3.0 (`license.txt`) | 🔴 AGPL | Modern LMS on the Frappe framework — pairs with ERPNext for an institution-wide stack (India-origin) |
 | **ClassroomIO** | [classroomio/classroomio](https://github.com/classroomio/classroomio) | AGPL-3.0 | 🔴 AGPL | Customer/partner training academies for SaaS companies — the corporate-learning vertical |

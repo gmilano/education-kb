@@ -6,6 +6,80 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
+## Start here — the engagement shortlist
+
+🟢 **This section is the answer this file exists to give.** Everything between here and
+`## Tutoring and learning agents` is the **audit trail** of how the rows below were
+graded — provenance, not product. A studio lead starting an engagement needs this table
+and the tier tables; the audit sections are for whoever questions a licence cell.
+
+| Need on day one | Build on | Licence | ★ 2026-10-21 | Region |
+| --- | --- | --- | ---: | --- |
+| Tutoring agent with persistent learner memory | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **42 017** | APAC (HKU) |
+| Multi-agent classroom / immersive cohort teaching | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41 208** | APAC (Tsinghua) |
+| Retention / "when to review" scheduling | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** | 514 | Not placed |
+| Mastery estimation that survives a review | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | 268 | North America (UC Berkeley) |
+| Source material → quizzes, flashcards, study guide | [`SYuan03/Skill-Anything`](https://github.com/SYuan03/Skill-Anything) | **MIT** | 339 | APAC |
+| Course generation from existing content | [`satvik314/educhain`](https://github.com/satvik314/educhain) | **MIT** | 387 | APAC (India) |
+| Reach a client LMS without writing a connector | the MCP tier → `## LMS-connected agents` | mostly MIT | — | mixed |
+
+🔵 **Reading the rest of the file.** `## Tutoring and learning agents` is the main shelf.
+`## LMS-connected agents (the MCP layer)` is how you reach a client's existing system.
+`## Assessment, integrity and learning analytics`, the LATAM tier, the memory/scheduling
+tier and the vernacular-assessment tier follow. Licence cells are read from the payload
+unless the row says otherwise.
+
+🔴 **Two standing licence traps on this shelf**, because they are the ones that cost money:
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) is **not** open source despite
+looking it (non-commercial + revenue share), and
+[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) is **ODbL-1.0**,
+whose share-alike binds a derivative *database*. Neither is a blocker if you know before
+you build; both are if you find out at delivery.
+## 🔴 `p368`: the leak is not discovery, it is **promotion** — a 41 208 ★ MIT repository has been in this base's own trending files for passes and never reached a shelf
+
+🔵 **`p367` measured what this base has never *seen*. `p368` measured what it has seen and
+never *shelved*, and that number is worse where it counts.** Discovery is close to
+saturated: of the four strongest candidates returned by this pass's global and regional
+web legs, **4 of 4 were already held**. Nothing in the open web channel is new. But the
+path from `agents/trending.md` → `agents/top.md` is leaking, and the specimens are large.
+
+| Repository | Licence | ★ 2026-10-21 | In trending? | On a shelf? | What it is |
+| --- | --- | ---: | :-: | :-: | --- |
+| 🔴 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** | **41 208** | ✅ both | ❌ **none** | Multi-agent interactive classroom, Tsinghua. **The second-largest education AI repository this base knows of, and the largest permissive one** |
+| 🔴 [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | **6 871** | ✅ both | ❌ **none** | Interactive learning platform, nonprofit, SDG-4. Belongs on `verticals/solutions.md` |
+| 🟡 [`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 🔴 **NOASSERTION** | **4 709** | ✅ both | ❌ none | 23 000+ agent skills for empirical research across 8 social-science disciplines (Stanford REAP / CoPaper.AI). 🔴 **No usable grant — read it, do not vendor it** |
+
+🟢 **Why this is the finding and not a filing error.** `OpenMAIC` is MIT at **41 208 ★**,
+6 381 forks, pushed the day of this pass. On the shelf it would sit **second by stars and
+first by permissiveness** — DeepTutor, the row above it, is Apache-2.0. A studio lead
+opening `agents/top.md` to pick a tutoring base has been choosing without it. The cost of
+the invisible class `p367` named is hypothetical until someone needs one of those
+repositories; the cost of this one is paid every time the shelf is read.
+
+🔵 **The mechanism, stated plainly.** `agents/trending.md` is append-only and now 42 947
+lines; `repos/trending.md` is 34 332. A repository entering trending is recorded forever
+and reviewed never. There is no instrument on this base that asks *"what is in trending,
+above some star threshold, that no shelf file mentions?"* — that query is four lines of
+`grep` and it had not been run. 🔴 **Append-only preserved the observation and buried it.**
+
+🟢 **Discharged this pass:** `OpenMAIC` is now a row on
+`## Tutoring and learning agents`; `oppia` is on `verticals/solutions.md`;
+`Auto-Empirical-Research-Skills` is recorded above as a read-only row with its grant
+defect named, which is the correct shelf state for a repository nobody may vendor.
+
+🔴 **`ACTION`: the promotion sweep should run every pass, not once.** Threshold the
+trending files at, say, 250 ★ and diff against the six shelf files. This pass found three
+at >4 000 ★ in a sweep that took minutes; nobody should assume it found all of them.
+
+🟡 **One honest limit on the rows above.** This session can read file payloads only for
+repositories attached to it, so the three licences here come from **GitHub's licence
+detection**, not from a payload read at a named path — the standard every other row on
+this shelf meets. `p362` is exactly why that distinction is kept: detection called
+`CaviraOSS/PageLM` permissive when its payload is not. **These three cells should be
+re-read from payload by the next pass that can**, and `OpenMAIC`'s especially, because its
+MIT claim is the reason it is worth promoting.
+
+
 **Pass 367 · 2026-10-21.** 🔴 **`p366` measured the blindness and registered `ACTION ZZ-bv`
 without fixing it. `p367` built the missing channel, and the blindness is TWICE the size
 `p366`'s rate implied: 496 live repositories — 16.3% of this base's true address corpus —
@@ -790,7 +864,8 @@ all three as grantless — and one of them is a national curriculum body.**
 
 | Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
 | --- | --- | --- | --- | ---: | --- | --- |
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | **41 972** | APAC | Agent-native tutoring with lifelong memory. Published by HKU Data Science lab (Hong Kong) |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | **42 017** | APAC | Agent-native tutoring with lifelong memory. Published by HKU Data Science lab (Hong Kong) |
+| 🆕 OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** — 🟡 **GitHub licence API, payload NOT read this pass** | 🟡 not read (see note) | **41 208** | APAC (Tsinghua) | **Open Multi-Agent Interactive Classroom.** A cohort of agents — lecturer, teaching assistant, classmates — runs an immersive class from one click. TypeScript; created 2026-03-11, 6 381 forks, pushed 2026-10-21. 🟢 **The most permissive grant at the top of this shelf**, and the only row at DeepTutor's scale that is MIT rather than Apache-2.0 |
 | book-to-skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | MIT (`LICENSE.md`) | `master/LICENSE.md` | **35 553** | Not placed | Turns a technical book PDF into a Claude Code skill — ready to study, reference and use |
 | PageLM | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 🔴 **"PageLM Community License" — NOT open source** (8 563 B), corrected `p362` | `main/LICENSE.md` | **2 035** | Not placed | Community NotebookLM: course material → quizzes, flashcards, study guides. 🔴 **Non-commercial only, plus a revenue-sharing requirement for any commercial use, applying to the software *"in whole or in part"*.** Unusable in paid work. 🔵 The classifier's `NOASSERTION` was right and the cell that called this *"stock MIT"* was wrong |
 | get-it | [beltromatti/get-it](https://github.com/beltromatti/get-it) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | **1 125** | EMEA | "Read it. See it. Get it." multimodal explainer, built at GDG AI Hack Milan 2026 (Italy) |

@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Start here — what to build the platform on
+
+🟢 **This is the answer this file exists to give.** The tiers below it are the full
+graded inventory; everything above `## Learning platforms (LMS / VLE)` other than this
+section is the audit trail of how those grants were read.
+
+🔴 **The one fact that drives every platform choice in education: the big LMSs are
+copyleft.** Open edX and Canvas are AGPL-3.0, Moodle and Chamilo GPL-3.0. That is not a
+blocker — it decides *where your code lives*, not whether you can do the work. Reach them
+from outside (LTI 1.3 / MCP / web services) and your deliverable stays yours; fork them or
+write an in-process plugin and it does not.
+
+| Layer | Permissive pick | Licence | ★ | Copyleft incumbent you will actually meet |
+| --- | --- | --- | ---: | --- |
+| LMS / VLE | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | — | Moodle (GPL-3.0), Open edX (AGPL-3.0), Canvas (AGPL-3.0) |
+| Offline-first LMS | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 1 159 | — |
+| LTI 1.3 tool (Node) | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | Apache-2.0 | 373 | — |
+| LTI 1.3 tool (Python) | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | **MIT** | 138 | — |
+| SCORM runtime | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | **MIT** | 356 | — |
+| LTI tool host | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | Apache-2.0 | 376 | — |
+
+🔵 **The rest of the file by tier:** learning platforms · national school portals (ENT) ·
+interoperability (LTI/SCORM/xAPI/Caliper) · learning records and rostering ·
+psychometrics · assessment, integrity and accessibility · code execution and autograding ·
+deployment components · content authoring · SIS/ERP/credentials · curriculum corpora ·
+research corpora. Each row carries the path its grant was read at, because in education
+the grant is often *not* in `LICENSE` — Moodle keeps it in `COPYING.txt`, Frappe LMS in
+lower-case `license.txt`.
+
+
 # Education — foundational repos
 
 **Pass 367 · 2026-10-21.** 🔴 **Every "absent from N addresses" figure this base has ever
