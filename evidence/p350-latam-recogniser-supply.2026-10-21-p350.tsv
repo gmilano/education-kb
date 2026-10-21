@@ -1,0 +1,10 @@
+axis	measurement	channel	value	note
+packaged-per-regulation-recogniser-sets	byerlikaya/Septum jurisdiction packages	search-index code listing at packages/core/septum_core/recognizers/	16	gdpr uk_gdpr kvkk lgpd ccpa cpra hipaa pipeda pipl appi dpdp pdpa_sg pdpa_th pdpl_sa popia nzpa
+LATAM-packages-in-that-set	count of LATAM jurisdictions covered	same	1	lgpd (Brazil) only - no Mexico Chile Argentina Colombia Peru
+lgpd-pack-entities	entities actually defined in lgpd/recognizers.py	raw payload read first-hand	3	TAX_ID (CNPJ) NATIONAL_ID (RG) EMAIL_ADDRESS
+lgpd-CNPJ-validation	checksum or format-only	raw payload read first-hand	format-only	regex XX.XXX.XXX/XXXX-XX score 0.6 - NO checksum validator
+lgpd-CPF-present	is CPF in the LGPD pack	raw payload read first-hand	NO	docstring defers CPF to a regulation-agnostic baseline; appears only as the cpf/rg context token
+lgpd-CNS-PIS-present	Brazilian health and social-security ids	raw payload read first-hand	NO	neither appears in the file
+code-search-CPF-CNPJ-presidio	GitHub code search total_count	search-code	66	all hits are application code, none a reusable recogniser package
+code-search-CURP-RUT-DNI-presidio	GitHub code search total_count	search-code	1	Aicser-Platform/aicser server/src/modules/data/services/pii_scrubber.py
+brazil-to-spanish-latam-ratio	66 : 1	derived	66	the asymmetry is the finding

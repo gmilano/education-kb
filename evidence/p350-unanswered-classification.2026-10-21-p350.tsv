@@ -1,0 +1,18 @@
+address_p349	class	channel	live_repo_of_that_name	identity_proven	note
+topics/ai-tutor	NOT-AN-ADDRESS	shape	—	n/a	GitHub TOPIC navigation path harvested as owner/repo
+topics/education	NOT-AN-ADDRESS	shape	—	n/a	GitHub TOPIC navigation path harvested as owner/repo
+orgs/moodle	NOT-AN-ADDRESS	shape	—	n/a	GitHub ORG navigation path harvested as owner/repo
+repos/moodle	NOT-AN-ADDRESS	shape	—	n/a	API path fragment harvested as owner/repo
+trending/python	NOT-AN-ADDRESS	shape	—	n/a	GitHub TRENDING navigation path harvested as owner/repo
+this-definitely-does-not-exist-xyz123/nope	NEGATIVE-CONTROL	by-construction	—	n/a	deliberate control planted by an earlier pass
+this-org-does-not-exist-zzz9/nope	NEGATIVE-CONTROL	by-construction	—	n/a	deliberate control planted by an earlier pass
+your-username/safetutors	DOC-PLACEHOLDER	shape	—	n/a	README template literal; owner segment is the placeholder your-username
+concentricsky/badgr-server	NAME-ALIVE-OWNER-ABSENT	search-index	12 repos named badgr-server, none under concentricsky	NO	canonical Badgr server no longer answers at this address
+epesi-team/epesi	NAME-ALIVE-OWNER-ABSENT	search-index	jtylek/EpesiCRM (43 stars, Laravel 12 + Filament 5, pushed 2026-10-20)	NO	successor by name and description, NOT by id or HEAD
+gegok12/gegok12	NAME-ALIVE-OWNER-ABSENT	search-index	Gego-K12/gegok12 (id 1018037426, 54 stars, 101 forks)	NO	owner slug differs by hyphenation; identity not proven
+fh-yarbouh/oak-curriculum-ontology	NAME-ALIVE-OWNER-ABSENT	search-index	oaknational/oak-curriculum-ontology (id 1154613489, 20 stars)	NO	Oak National Academy; institutional owner
+apereo/opencast	NAME-ALIVE-OWNER-ABSENT	search-index	opencast/opencast (id 115198687, 509 stars, 260 forks)	NO	moved out of the apereo org by name; identity not proven
+tuanha/vgu-mcp	NAME-ALIVE-OWNER-ABSENT	search-index	haanhtuandev/vgu-mcp (id 1354912890, 10 stars, Go, Moodle MCP)	NO	Vietnamese-German University; identity not proven
+plastic-labs/bloom	NO-INDEX-ANSWER	search-index	none under plastic-labs	n/a	deleted or private; distinct from Li-Evan/Bloom on this base's shelves
+eastarctica/canvas-mcp	NO-INDEX-ANSWER	search-index	none under eastarctica	n/a	deleted or private
+creaditor/frontend	NO-INDEX-ANSWER	search-index	none under creaditor	n/a	deleted or private

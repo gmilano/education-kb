@@ -1,8 +1,70 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-20
+updated: 2026-10-21
 ---
+
+## Pass 350 · 2026-10-21 — `ACTION ZZ-ah` resolved 15 of the 16 unknown alias groups and the register's own denominator is wrong: 22 groups and 45 addresses, not the 21 and 43 p349 published. Two canonical addresses are ARCHIVED, one of them a 2 632-star platform. `make hooks` was REFUSED, so gate state is UNJUDGED
+
+**Evidence:** [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)
+
+### 🔴 First, the channels, because they bound every reading below — and two that p346–p349 relied on are SHUT this pass
+
+🔴 **`make hooks` did not run.** The tool policy declined this repository's own instruments as *"Code from External"* — the fourth instance of that class, after `p343`, `p344` and `p346`. 🟡 **So p349's gate state is UNJUDGED by this pass.** It is not restated as green and it is not restated as red.
+
+🔴 **The git channel is closed, and that is the bigger loss.** `git clone` and `git ls-remote` against any repository outside this session's two attached repos fail with *"could not read Username for `https://github.com`"* — credentials are required. 🔴 **So the HEAD-equality channel `p346`–`p349` built, and the `git log` timezone/author channel every region placement on this shelf rests on, are both UNAVAILABLE.** Every HEAD in the register below is **carried forward from p349, not re-derived**, and **no row this pass adds is placed by commit stream**. That is declared, not inferred away.
+
+🟢 **Two channels answer, and between them they carried the pass.** `raw.githubusercontent.com` serves payloads at **HTTP 200**, so every licence below is read **payload-first** rather than taken from GitHub's classifier — which `p348` proved can be wrong in the unsafe direction (NCSA published as MIT). And the authenticated **search index** answers, which is what made `ACTION ZZ-ah` runnable. 🔵 `curl -I` on the HTML address still returns **403 on every address tested**, the third instance of `p313`'s class.
+
+### 🟢 `ACTION ZZ-ah` DISCHARGED — 15 of 16, and the channel is sharper than the one it was asked for
+
+🟡 ZZ-ah asked for the 16 `UNKNOWN` groups to be resolved through the search-index channel. 🟢 **Fifteen resolved. One refuses to answer at all.**
+
+🟢 **The instrument improved while being used, and the improvement is worth more than the 15 rows.** The search index returns an **immutable numeric repository `id`** alongside `full_name`. 🔵 **The `id` is a strictly better identity key than HEAD-equality:** it survives rename and transfer, it cannot drift between two reads the way a HEAD can, and it cannot produce the false positive where two genuinely different repositories happen to sit at the same HEAD. **HEAD-equality is a proxy for identity; the `id` is identity.**
+
+🟢 **Calibrated on p349's own hardest row before being trusted.** A repository search for `presidio` under `user:microsoft` returns **nothing**; `id` **`132129752`**, created **2018-05-04** — the original Microsoft Presidio — answers as **`data-privacy-stack/presidio`**, 11 436 ★. p349's reading was correct.
+
+| group | canonical address, applied p350 | `id` | the STALE address | note |
+|---|---|---|---|---|
+| autograder | [`zmievsa/autograder`](https://github.com/zmievsa/autograder) | `235417011` | `ovsyanka83/autograder` | 🔴 **ARCHIVED**, 48 ★ |
+| caliper-spec | [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | `53473922` | `imsglobal/caliper-spec` | 🟡 casing: `1EdTech` |
+| correcaoredacao | [`IC-Redacoes-UTFPR/CorrecaoRedacao`](https://github.com/IC-Redacoes-UTFPR/CorrecaoRedacao) | `1233297053` | `yurimatsumotosantos/correcaoredacao` | 🟡 casing; UTFPR, ENEM essay scoring |
+| go-oneroster | [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster) | `184457381` | `fffnite/go-oneroster` | — |
+| inginious | [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | `22579572` | `ucl-ingi/inginious` | 243 ★, live 2026-10-20; the `UCL-INGI` org still exists, holding other repos |
+| librelingo | [`kantord/LibreLingo`](https://github.com/kantord/LibreLingo) | `225245314` | `librelingo/librelingo` | 🔴 **ARCHIVED**, **2 632 ★** |
+| lxhive | [`g3i/lxHive`](https://github.com/g3i/lxHive) | `32130662` | `leogaggl/lxhive` | 🟡 casing: `lxHive` |
+| moodle-local_ai_manager | [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) | `770982767` | `mebis-lp/moodle-local_ai_manager` | 30 ★, live 2026-10-20 |
+| oneroster.net | [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | `269831422` | `theopenem/oneroster.net` | 🟡 casing: `OneRoster.NET` |
+| openbadges-specification | [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) | `13974914` | `imsglobal/openbadges-specification` | 205 ★ |
+| openpronounce | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | `1044757304` | `chinobv/openpronounce` | 144 ★, live 2026-10-20, Wav2Vec2 + DTW |
+| purdue-mcp | [`sharziki/purdue-mcp`](https://github.com/sharziki/purdue-mcp) | `1337233529` | `rohanmuppa/purdue-mcp` | — |
+| rubric | [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) | `963583061` | `the-llm-data-company/rubric` | 83 ★, LLM weighted-rubric evaluation |
+| skolverket-mcp | [`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) | `1086096735` | `ksaklfszf921/skolverket-mcp` | 13 ★, Swedish national agency open data |
+| understand-anything | [`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything) | `1182081931` | `lum1104/understand-anything` | **87 252 ★** — the largest address in this register |
+| ease | 🔴 **NOT RESOLVED** | — | `edx/ease` ≡ `openedx/ease` | the index answers **neither** address; `ACTION ZZ-al` |
+
+🟢 **One group resolved on a channel no pass has used here before: a third repository's own description.** `Lum1104/understand-anything-metrics` describes itself as a traffic accumulator that will *"Stop after Lum1104/Understand-Anything transfering to Egonex-AI"* — the transfer direction stated first-hand by a party to it, independent of the index. 🔵 That is a corroboration channel worth keeping: a sibling or tooling repository often narrates the move.
+
+### 🔴 The register's own denominator is wrong, and it is re-derivable from p349's committed file
+
+🔴 **p349's headline reads *"It finds 21 alias groups spanning 43 addresses"*. Its own committed register holds 22 groups and 45 addresses.** Counted over [`alias-register.2026-10-20-p349.tsv`](../evidence/alias-register.2026-10-20-p349.tsv): **45 data rows, 45 distinct addresses, 22 distinct groups, 16 of them with no canonical row** — and the 16 is the figure p349 got right.
+
+🟡 **The mechanism is visible in p349's own prose.** `presidio` was found late in that pass and written up as *"the 21st alias group"* — while the file already carried 21 groups before it. **One group and two addresses never reached the headline.** 🟢 The corrected denominator is published here and in the p350 register; `recount` can re-derive both figures from the committed TSVs.
+
+### 🔴 Two of the resolved canonicals are ARCHIVED, and that is a shelf-correctness problem rather than a trivia item
+
+🔴 **[`kantord/LibreLingo`](https://github.com/kantord/LibreLingo) — 2 632 ★, MIT-adjacent AGPL per its own topics — is archived.** So is [`zmievsa/autograder`](https://github.com/zmievsa/autograder) (48 ★). 🟡 **Resolving an alias to its canonical address does not make the row live.** A pass that applies a canonical address without re-reading the repository's state can replace a wrong address with a dead one and call it a correction. 🟢 Both are flagged archived in the register and neither is promoted to a live agent row this pass.
+
+### 🟢 Two new agent rows, licence read from the payload, and NEITHER is placed by region — stated rather than guessed
+
+| Row | Grant, read from the payload today | Substance, first-hand | Region |
+|---|---|---|---|
+| [`ktaletsk/learn-codebase`](https://github.com/ktaletsk/learn-codebase) | 🟢 **MIT**, `LICENSE` at ROOT, holder `Konstantin Taletskiy` — stock text, no added clauses | 89 ★ · 3 forks · a Socratic tutor that teaches a codebase by questioning and active recall; ships as an **agent skill**, not an app | 🔴 **NOT PLACED** — holder is a PERSON, the declared limit of the holder channel, and the commit-stream channel is shut this pass |
+| [`gokayfem/h3-max-education`](https://github.com/gokayfem/h3-max-education) | 🟢 **MIT**, `LICENSE` at ROOT — stock text | 72 ★ · 9 forks · realtime **interruptible** science tutoring over continuously generated video; created 2026-09-01 | 🔴 **NOT PLACED** — no institutional holder line, no stream channel this pass |
+
+🔵 **Why two rows and not five.** The prescribed agent-discovery leg returned aggregator listicles again (sixth consecutive pass) and the four strongest index hits — `zijinz456/OpenTutor`, `Li-Evan/Bloom`, `ZeKaiNie/universal-examprep-skill`, `ai-shifu/ai-shifu` — are **already on these shelves**, which is what the shelf check is for. 🟢 Two genuinely new rows, written as two.
+
+🟡 **One licence-ladder note, because it cost a probe.** `ai-shifu/ai-shifu` has **no `LICENSE` at the root** — `main/LICENSE` is 404 on the raw channel — and its Apache-2.0 grant sits at **`LICENSE.txt`**, 11 342 B, `Copyright 2024 ai-shifu.com`, stock text with no added field-of-use or Commons Clause. The extension axis still earns its rung.
 
 ## Pass 349 · 2026-10-20 — this shelf publishes one repository as two rows, the stale address of the pair is the one p348 read at the pin, and the third identity question now has an instrument: the two K-12 skill packs are one payload and two distributions
 
@@ -92,7 +154,7 @@ The above copyright notice and this permission notice shall be included…  ← 
 |---|---|---|---|
 | [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | 🟢 **Apache-2.0**, `LICENSE` at ROOT, plus a per-skill `LICENSE` in each `skills/<x>/` — **own-holder subtree grants, not vendored** | 40 ★ · 5 forks · 43 c · 7 authors (names) · 2026-06-25 → **2026-10-20** | North America — `−0700`/`−0400` only |
 | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0** at ROOT + per-skill grants | 4 c · 3 authors · 2026-07-13 → 2026-10-13 | North America — `−0700`/`−0400` only |
-| [`stanfordnlp/edu-convokit`](https://github.com/stanfordnlp/edu-convokit) | 🟢 **MIT** at ROOT; holder line is a **PERSON** (`Rose E. Wang`), which is the declared LIMIT of the holder channel — placement falls back to the owner and the timezone | 117 ★ · 16 forks · 72 c · 3 authors · **dormant since 2025-04-18 (18 months)** | North America — `62×−0800` |
+| [`EduNLP/edu-convokit`](https://github.com/EduNLP/edu-convokit) — 🟢 canonical, applied p350 (p348–p349 published `stanfordnlp/edu-convokit`, **STALE**) | 🟢 **MIT** at ROOT; holder line is a **PERSON** (`Rose E. Wang`), which is the declared LIMIT of the holder channel — placement falls back to the owner and the timezone | 117 ★ · 16 forks · 72 c · 3 authors · **dormant since 2025-04-18 (18 months)** | North America — `62×−0800` |
 | [`motiolabs-space/open-academic`](https://github.com/motiolabs-space/open-academic) | 🟢 **MIT** at ROOT, holder `PT Motiolabs Digital Indonesia` — **the holder line names the country** | 75 c · **1 author** · 2026-08-08 → 2026-08-23 | **APAC — Indonesia**, `+0700` on **all 75** commits |
 | [`examplary/qti`](https://github.com/examplary/qti) | 🟢 **MIT** at ROOT. `tests/stubs/LICENSE.md` reads `NOT-A-GRANT-TEXT` — a stub, correctly not counted as a second grant | 39 c · 2 authors · 2026-04-22 → 2026-10-12 | **EMEA** — `+0100` on **all 39** |
 | [`DaviPac/Classroom-mcp`](https://github.com/DaviPac/Classroom-mcp) | 🔴 **ABSENCE-ENUMERATED at the pin** — no licence-shaped path anywhere in the complete tree | 2 c · 1 author · single day | 🔴 **Unusable under `P250`**: no grant, so no rights. Recorded so no later pass spends a probe |

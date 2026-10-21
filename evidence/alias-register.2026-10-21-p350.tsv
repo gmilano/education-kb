@@ -1,0 +1,46 @@
+group	address	state	repo_id	head_p349	channel	identity_proof	note
+agent-zero	agent0ai/agent-zero	CANONICAL	—	ff2a5b9c9c4e	search-index-full_name	head-p349	inherited from p349, unchanged
+agent-zero	frdel/agent-zero	STALE	—	ff2a5b9c9c4e	search-index-full_name	head-p349	inherited from p349
+autograder	zmievsa/autograder	CANONICAL	235417011	5936028ec501	search-index-full_name+id	head-p349+id-p350	ARCHIVED 48 stars; resolved p350
+autograder	ovsyanka83/autograder	STALE	235417011	5936028ec501	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+caliper-spec	1EdTech/caliper-spec	CANONICAL	53473922	1849e118b47a	search-index-full_name+id	head-p349+id-p350	CASING: 1EdTech not 1edtech
+caliper-spec	imsglobal/caliper-spec	STALE	53473922	1849e118b47a	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+correcaoredacao	IC-Redacoes-UTFPR/CorrecaoRedacao	CANONICAL	1233297053	792ddffb2eab	search-index-full_name+id	head-p349+id-p350	CASING corrected; UTFPR Brazil ENEM essay scoring
+correcaoredacao	yurimatsumotosantos/correcaoredacao	STALE	1233297053	792ddffb2eab	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+ease	edx/ease	UNKNOWN	—	056da0adc6f3	index-returns-ZERO	head-p349-only	NOT RESOLVED p350 - the index answers neither address; ACTION ZZ-al
+ease	openedx/ease	UNKNOWN	—	056da0adc6f3	index-returns-ZERO	head-p349-only	NOT RESOLVED p350; ACTION ZZ-al
+edu-convokit	EduNLP/edu-convokit	CANONICAL	—	d845ffdafda3	search-index-full_name	head-p349	inherited from p349
+edu-convokit	rosewang2008/edu-convokit	STALE	—	d845ffdafda3	search-index-full_name	head-p349	inherited from p349
+edu-convokit	stanfordnlp/edu-convokit	STALE	—	d845ffdafda3	search-index-full_name	head-p349	p350 applied canonical on agents/top.md
+go-oneroster	bgwdotdev/go-oneroster	CANONICAL	184457381	b8ddb0a63a5e	search-index-full_name+id	head-p349+id-p350	resolved p350
+go-oneroster	fffnite/go-oneroster	STALE	184457381	b8ddb0a63a5e	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+inginious	INGInious/INGInious	CANONICAL	22579572	28e224881cf9	search-index-full_name+id	head-p349+id-p350	243 stars live 2026-10-20; owner UCL-INGI still exists with other repos
+inginious	ucl-ingi/inginious	STALE	22579572	28e224881cf9	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+learner-credential-wallet	openwallet-foundation-labs/learner-credential-wallet	CANONICAL	—	1c46a82ba384	search-index-full_name	head-p349	p350 applied canonical on foundations.md + solutions.md
+learner-credential-wallet	digitalcredentials/learner-credential-wallet	STALE	—	1c46a82ba384	search-index-full_name	head-p349	p350 applied canonical on 2 further live shelves
+librelingo	kantord/LibreLingo	CANONICAL	225245314	3c4bcfb3ef99	search-index-full_name+id	head-p349+id-p350	ARCHIVED 2632 stars - largest archived row in register
+librelingo	librelingo/librelingo	STALE	225245314	3c4bcfb3ef99	search-index-absent-under-owner	head-p349+id-p350	LibreLingo org exists but holds course repos only
+lxhive	g3i/lxHive	CANONICAL	32130662	cffee6d90ca9	search-index-full_name+id	head-p349+id-p350	CASING: lxHive
+lxhive	leogaggl/lxhive	STALE	32130662	cffee6d90ca9	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+mcp-brasil	Mcp-Brasil/mcp-brasil	CANONICAL	—	2efb258370b1	search-index-full_name	head-p349	inherited from p349
+mcp-brasil	dasgltd/mcp-brasil	STALE	—	2efb258370b1	search-index-full_name	head-p349	inherited from p349
+moodle-local_ai_manager	bycs-lp/moodle-local_ai_manager	CANONICAL	770982767	af9aff540169	search-index-full_name+id	head-p349+id-p350	30 stars live 2026-10-20
+moodle-local_ai_manager	mebis-lp/moodle-local_ai_manager	STALE	770982767	af9aff540169	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+moodler-mcp	GhaithAlHallak8/moodler-mcp	CANONICAL	—	4e6139eb9c6b	search-index-full_name	head-p349	inherited from p349
+moodler-mcp	dymayo/moodler-mcp	STALE	—	4e6139eb9c6b	search-index-full_name	head-p349	inherited from p349
+oneroster.net	jdolny/OneRoster.NET	CANONICAL	269831422	4f96365d3108	search-index-full_name+id	head-p349+id-p350	CASING: OneRoster.NET
+oneroster.net	theopenem/oneroster.net	STALE	269831422	4f96365d3108	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+openbadges-specification	1EdTech/openbadges-specification	CANONICAL	13974914	04c4bc2ee16d	search-index-full_name+id	head-p349+id-p350	205 stars; CASING 1EdTech
+openbadges-specification	imsglobal/openbadges-specification	STALE	13974914	04c4bc2ee16d	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+openpronounce	Halleck45/OpenPronounce	CANONICAL	1044757304	74bc17ea406e	search-index-full_name+id	head-p349+id-p350	144 stars live 2026-10-20 Wav2Vec2+DTW
+openpronounce	chinobv/openpronounce	STALE	1044757304	74bc17ea406e	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+presidio	data-privacy-stack/presidio	CANONICAL	132129752	4f0e236e31a5	search-index-full_name+id	head-p349+id-p350	11436 stars; id created 2018-05-04 = the original Microsoft repo
+presidio	microsoft/presidio	STALE	132129752	4f0e236e31a5	search-index-absent-under-owner	head-p349+id-p350	CALIBRATION CASE for the id channel
+purdue-mcp	sharziki/purdue-mcp	CANONICAL	1337233529	6922f1f301dd	search-index-full_name+id	head-p349+id-p350	resolved p350
+purdue-mcp	rohanmuppa/purdue-mcp	STALE	1337233529	6922f1f301dd	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+rubric	paper-instruments/rubric	CANONICAL	963583061	eb0755a1c468	search-index-full_name+id	head-p349+id-p350	83 stars LLM weighted-rubric eval
+rubric	the-llm-data-company/rubric	STALE	963583061	eb0755a1c468	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+skolverket-mcp	isakskogstad/Skolverket-MCP	CANONICAL	1086096735	5631a7fc7bc6	search-index-full_name+id	head-p349+id-p350	CASING: Skolverket-MCP; Swedish national agency open data
+skolverket-mcp	ksaklfszf921/skolverket-mcp	STALE	1086096735	5631a7fc7bc6	search-index-absent-under-owner	head-p349+id-p350	resolved p350
+understand-anything	Egonex-AI/Understand-Anything	CANONICAL	1182081931	f2d0164f72fe	search-index-full_name+id	head-p349+id-p350+third-party-description	87252 stars - largest address in this register
+understand-anything	lum1104/understand-anything	STALE	1182081931	f2d0164f72fe	search-index-absent-under-owner	head-p349+id-p350+third-party-description	Lum1104/understand-anything-metrics description states the transfer to Egonex-AI first-hand

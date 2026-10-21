@@ -1,8 +1,48 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-20
+updated: 2026-10-21
 ---
+
+## Pass 350 · 2026-10-21 — two recipes, both of them things a studio ships BEFORE the tutor, and both buildable from rows read at the payload this pass
+
+**Evidence:** [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv) · [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)
+
+### 🟢 `P38` — "no model decides alone, and no student identifier reaches the model": one gate, sixteen jurisdictions, 5–7 weeks
+
+🔵 **The duty this answers, named per region rather than asserted.** Oklahoma and Maryland require human oversight and bar AI from high-stakes decisions about students; **Nevada AB 406** bars AI performing mental-health functions; **NYC** prohibits AI for grading, discipline, placement and IEP development; **California AB 1159** would bar student data from model training; the **EU AI Act** treats admissions and assessment as high-risk from August 2026 on the Commission's dating. 🟢 **One control plane answers all of them.**
+
+| # | component | address | grant, read at the payload | what it does here |
+|---|---|---|---|---|
+| 1 | detection engine | [`data-privacy-stack/presidio`](https://github.com/data-privacy-stack/presidio) | MIT, 1 084 B, holder `Presidio Contributors.` | the recogniser runtime; 11 436 ★, 223 author addresses |
+| 2 | jurisdiction packs + approval gate | [`byerlikaya/Septum`](https://github.com/byerlikaya/Septum) | 🟢 **MIT**, ROOT, holder `Baris Yerlikaya` | 16 statute-named packs; **detect → approval gate → de-anonymise** over document query |
+| 3 | fairness evidence | [`fairlearn/fairlearn`](https://github.com/fairlearn/fairlearn) | MIT | group metrics for the non-discrimination duty |
+| 4 | human confirmation on the write | `psychquant/che-ntucool-mcp` | per `P37` | holds the grade/placement write until a person confirms |
+| 5 | curriculum grounding (optional) | [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🔴 **OGL-v3.0** data / **MIT** code | cites a curriculum node instead of generating a claim |
+
+🟢 **The wiring, concretely.** Student text enters `Septum`; the jurisdiction pack for the engagement's region is enabled (`ccpa`+`cpra`+`hipaa` for a US district, `gdpr`+`uk_gdpr` for EMEA, `lgpd` for Brazil); `presidio` runs detection; **redacted** text alone reaches the model — which is what AB 1159 asks for; the model's output returns through `Septum`'s de-anonymisation for the authorised human only; any consequential write (grade, placement, referral) blocks on the `che-ntucool-mcp` confirmation gate, so the model **proposes** and a person **decides**; `fairlearn` runs over the decision log to produce the group-metric artefact an Annex III file needs.
+
+🔴 **Build the CPF recogniser on day one if the engagement touches Brazil — it is NOT in the box.** Read first-hand: the `lgpd` pack defines `TAX_ID` (CNPJ, **format-only, no checksum**), `NATIONAL_ID` (RG, context-gated) and `EMAIL_ADDRESS`. **CPF is absent**; CNS and PIS absent. A checksum-validating CPF recogniser is roughly a day's work and there are **66** application-code references to copy the logic from.
+
+🟡 **Honest limits.** `Septum` is **9 ★** — this is early software with a good shape, so pin the commit and read the pack you enable rather than trusting the directory name. The approval gate is a mechanism, not a legal opinion. And ship the fairness artefact as evidence for a human reviewer, never as a pass/fail oracle.
+
+### 🟢 `P39` — "cite the curriculum, do not generate it": grounding a tutor in a statutory curriculum graph, 4–6 weeks, EMEA-ready
+
+🔵 **The failure this removes.** The strongest tutor rows on these shelves advertise anti-hallucination by **citation to source pages** — `ZeKaiNie/universal-examprep-skill` teaches from slides with page citations precisely because an unsourced tutor claim is unusable in a school. 🟢 **A statutory curriculum ontology is a better citation target than a slide deck:** it is stable, authoritative, and it is what the institution is inspected against.
+
+| # | component | address | grant, read at the payload | role |
+|---|---|---|---|---|
+| 1 | curriculum graph | [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🔴 **split by path:** OGL-v3.0 (`ontology/`, `data/`, `docs/`) + MIT (`scripts/`, workflows) | OWL/RDF/SKOS representation of the Oak curriculum aligned to the **National Curriculum for England (2014)** |
+| 2 | tutor surface | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | MIT, holder `Zijin Zhang` | local-first adaptive workspace; already carries a knowledge-graph and spaced-repetition layer to bind to |
+| 3 | citation discipline | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | MIT, holder `ZeKaiNie` | the page-citation + persistent-memory pattern to copy |
+| 4 | assessment alignment | [`1EdTech/openbadges-specification`](https://github.com/1EdTech/openbadges-specification) · [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | per spec | emit attainment against curriculum nodes rather than free text |
+| 5 | pronunciation / language leg (optional) | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | per repo, 144 ★ | phoneme-level assessment, self-hosted |
+
+🟢 **The wiring.** Load the ontology into the triple store; every tutor turn resolves to one or more **curriculum node IRIs** before generation, and the response template requires at least one node citation; attainment events emit as Caliper against those IRIs, so progress is reported in the curriculum's own vocabulary and an Open Badge can assert it. 🔵 Retrieval is over the graph, so *"what comes next"* is answered by the curriculum's structure rather than by the model's prior.
+
+🔴 **The licence instruction, and it is the whole reason this recipe names paths.** The data arm is **OGL-v3.0, not MIT** — commercial use is permitted and **attribution to Oak National Academy is required**, with the OGL notice carried: *"Contains public sector information licensed under the Open Government Licence v3.0."* 🔴 **A single-verdict licence read of this repository returns MIT and is wrong about the part that carries the value.** Carry the attribution into the product's about screen and the data pipeline's NOTICE.
+
+🟡 **Scope limit.** The ontology covers England. The pattern transfers wherever a curriculum is published as open data; the artefact does not. For LATAM, the equivalent asset does not exist on these shelves — which is a build-or-partner conversation, recorded as such.
 
 ## Pass 349 · 2026-10-20 — two recipes built out of this pass's eleven new components, and both are the thing a studio must do before it is allowed to build: keep student data out of the model, and train on the cohort without holding the cohort
 

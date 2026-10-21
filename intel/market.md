@@ -1,8 +1,85 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-20
+updated: 2026-10-21
 ---
+
+## Pass 350 · 2026-10-21 — all four regional legs returned education-specific material and LATAM returned DENOMINATORS for the second pass running: 87 % adoption against 26 % with a strategy, across 200 institutions in 19 countries. The supply-side news is that the LATAM gap this base has been pointing at is now MEASURED at 66 : 1
+
+**Evidence:** [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv) · [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv)
+
+### 🔴 First the channel, because it bounds every regional claim below
+
+🔴 **`make hooks` was REFUSED** (*"Code from External"*) — gate state **UNJUDGED**, 4th instance. 🔴 **The `git log` channel is shut** (credentials required), so **no demand or supply row below is placed by commit stream**; where a region is named, the channel that named it is stated. 🟢 The **raw payload** and **search-index** channels answer, and carried the supply leg. 🟡 Policy legs ran through web search only — no primary legal text was fetched this pass, so every statute below is **secondary-sourced** and labelled as such.
+
+### 🟢 The four prescribed regional demand legs, leg by leg, with what each actually returned
+
+| leg | returned | verdict |
+|---|---|---|
+| **North America** | state-level legislative detail, bill numbers, district policy deadlines | 🟢 **richest policy leg**, as in p347–p349 |
+| **EMEA** | AI Act enforcement dating, Commission guidance, one market figure, one adoption figure | 🟢 **answered** — and the dating is internally contradictory across sources |
+| **APAC** | statute-layer regulation across 6 jurisdictions; **no** education-specific adoption figure | 🟡 **half-answered**, the same shape as p348–p349 |
+| **LATAM** | a 200-institution, 19-country study with denominators, plus teacher-level comparatives | 🟢 **answered with numbers, for the second consecutive pass** |
+
+### 🟡 The regulatory picture per region, as the legs returned it — secondary sources, labelled
+
+🟢 **North America — the volume is in the states and the theme is human-decision and student-data.** 134 AI-in-education bills across 31 states on one 2026 tracker. **California AB 1159** would bar student data from training models; **Idaho SB 1227** requires privacy protections for school AI tools. **Oklahoma** and **Maryland** require human oversight and bar AI from high-stakes decisions about students; **Nevada AB 406** bars public schools from using AI for mental-health functions and requires a staff-use policy for AI in counselling. Four states — **Idaho, Maryland, Oklahoma, Virginia** — have 2026 laws requiring *both* state guidance and district-level policy; Maryland's 24 districts must adopt one, and **Ohio**'s district mandate fell due **2026-07-01**. **NYC** guidance uses a traffic-light frame and **prohibits AI for grading, discipline, placement and IEP development**. District practice is tightening too: **Katy ISD** bans generative chatbots for K-6 with supervised phase-in from grade 7 for 2026-27. On the build side, **Utah HB 273** puts AI into CS standards with supervised *"AI sandbox"* courses and **Virginia HB 1186** creates a pilot programme. Federally, the amended **COPPA Rule** reached its general compliance date **2026-04-22**.
+
+🟡 **EMEA — the dates conflict, and the Commission's own statement is the one to quote.** The Commission states AI Act enforcement **from 2026-08-02**, with amendments adopted **June 2026** and in force **late July 2026**; secondary guides place high-risk obligations — education used for **admissions or assessment** is high-risk — at **August 2026**, while others still cite a February 2025 start. 🔴 **Publish the Commission's dating and the conflict, not a single number.** The Commission has also updated its **ethical AI and data in teaching and learning** guidelines, with AI literacy as a named concern. Nationally: **Germany** carries a **€20 bn** AI commitment for 2025–2030; the **UK** stays light-touch through existing regulators. One vendor figure puts the European AI-in-education market at **$2.64 bn in 2026** — low confidence. 🔴 **The adoption number is the one that sells a governance engagement:** across 450+ institutions, only **10 %** have established formal AI-use guidelines.
+
+🟡 **APAC — read the statute layer, not the school layer, which is `p346`'s correction holding for a fifth pass.** **South Korea**'s **AI Basic Act** took effect **2026-01-22** with its enforcement decree, and MSIT has signalled 2026 as effectively a pilot year with a **one-year grace period on penalties**. **Vietnam**'s law took effect **2026-03-01** and its high-risk category reportedly covers education — 🔴 the source text was truncated mid-word, so **that is unverified and must not be published as settled**. **China** enforces binding rules on algorithms, deep synthesis and generative AI. **Singapore**'s agentic-AI framework is **guidance, not law**; **Japan**'s principles law carries **no penalties**. **ASEAN**'s Responsible AI Roadmap (2025) phases actions through 2030. 🔴 **No education-specific APAC adoption figure came back, for the third consecutive pass.** Written down rather than left looking like coverage.
+
+🟢 **LATAM — the richest demand evidence on these shelves, and it has denominators.** **UNESCO IESALC** surveyed **200 higher-education institutions across 19 countries**: **87 %** use AI in at least one area and **74 %** in teaching and learning, while only **26 %** have a formal AI strategy — and adoption is driven by individual academics, researchers and students rather than institution-wide strategy, with public institutions more resource-constrained than private. Teacher-level, **TALIS 2024**: AI used in the previous year by **56 %** of secondary teachers in **Brazil**, **55 %** in **Chile**, **53 %** in **Colombia**, **52 %** in **Costa Rica** — against an **OECD average of 36 %**. **Uruguay** reports **75 %** of public-school teachers (Ceibal, 2026). Institutionally, **UNESCO launched the Observatory on AI in Education for Latin America and the Caribbean on 2026-04-14 in Santiago**, and the **Digital Education Council** ran a LATAM survey with **30 000+ responses across 29 institutions**. **ILIA**'s third edition notes school-level AI education remains exceptional. 🔴 **No binding regional AI-in-education law was found** — the gap shapes the pitch rather than blocking it.
+
+### 🔴 Market sizing remains unusable, and this pass can state the spread precisely
+
+| source shape | 2025 | 2026 | terminal | implied rate |
+|---|---|---|---|---|
+| IMARC | $6.4 bn | — | $79.6 bn (2034) | — |
+| a second house | $8.3 bn | $11.4 bn | $57.2 bn (2033) | 25.9 % |
+| TBRC | $7.52 bn | $10.6 bn | — | 40.9 % |
+
+🔴 **Three houses, three 2025 bases that disagree by 30 %, and two rates that differ by 15 points.** 🟢 **Quote the spread — $6.4–8.3 bn in 2025, $10.6–11.4 bn in 2026 — and never a single figure.** Regional and channel splits are vendor-reported: North America largest share at **37.5 %** (2025, one report); cloud deployment **71.22 %** (2024). 🔵 Fifth consecutive pass in which sizing is recorded as unusable; the adoption/governance denominators above are the sellable numbers instead.
+
+### 🟢 The supply-side news, and this pass can place it
+
+🟢 **The component tier every region's education regulation implies now has a single MIT embodiment:** [`byerlikaya/Septum`](https://github.com/byerlikaya/Septum) ships PII recogniser packs for **16 jurisdictions** — `gdpr` `uk_gdpr` `kvkk` `lgpd` `ccpa` `cpra` `hipaa` `pipeda` `pipl` `appi` `dpdp` `pdpa_sg` `pdpa_th` `pdpl_sa` `popia` `nzpa` — behind a **human approval gate**. 🔵 It carries **no education token**, so the prescribed sweep could never return it; `p349`'s filter finding, now with a repository attached.
+
+🟢 **England's statutory curriculum is available as a licensed knowledge graph:** [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology), OWL/RDF/SKOS, aligned to the **National Curriculum for England (2014)**, under **OGL-v3.0** for the data and **MIT** for the code.
+
+### Opportunities by region
+
+#### North America
+
+- 🟢 **Added p350 — the duty that four states now write into law is a PRODUCT, and `Septum` is most of it.** Oklahoma, Maryland, Nevada and NYC's guidance all turn on the same requirement: a **human decision between the model and the consequence**. `Septum`'s approval gate plus its `ccpa`/`cpra`/`hipaa`/`pipeda` packs is a buildable *"no AI decides alone"* control plane, and **California AB 1159**'s bar on student data reaching model training is a redaction-layer requirement the same repository answers. Pitch the control plane, not the tutor.
+- 🟡 **Added p350 — the district-policy mandates are a services opportunity with a deadline attached.** Maryland's 24 districts, Ohio's 2026-07-01 mandate, and the four states requiring both state guidance and district policy mean hundreds of districts must produce defensible policy documents and show conformance. That is assessment-and-governance work, not platform work.
+
+#### EMEA
+
+- 🟢 **Added p350 — the 10 % figure is the engagement.** Across 450+ institutions only **10 %** have formal AI-use guidelines, while the AI Act's high-risk obligations reach **admissions and assessment** from August 2026 on the Commission's own dating. **90 % of the market is non-conformant against a live deadline.** `Septum`'s `gdpr`/`uk_gdpr` packs plus an Annex III evidence pack (`fairlearn`, synthetic cohorts) is the conformance kit.
+- 🟢 **Added p350 — EMEA's education-specific supply hole is CLOSED, with a UK institutional row.** [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) is a national curriculum as linked data, permissive on both arms. 🔴 **Brief the split grant:** the ontology and data are **OGL-v3.0 with an attribution duty**, only the scripts are MIT — a studio shipping the data as MIT has mis-stated the licence on the part with the value.
+- 🟡 **Added p350 — a 20-year MIT ERP lineage re-platformed onto Laravel 12 + Filament 5.** [`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM) is positioned by its own README as a kickstarter for custom ERP, and it scopes its vendored dependencies and an optional GPL-3 Roundcube explicitly. Placement is **heritage-and-holder, not a commit stream** — recorded as a signal.
+
+#### APAC
+
+- 🟢 **Added p350 — Korea's grace period is the window, and it closes.** The **AI Basic Act** has been in force since **2026-01-22** with penalties effectively deferred about a year. An institution that builds its conformance layer during the grace period pays for engineering; one that waits pays for engineering under enforcement. `Septum` ships `pipl`, `appi`, `dpdp`, `pdpa_sg`, `pdpa_th` and `nzpa` packs — six APAC jurisdictions already written.
+- 🔴 **Added p350 — this region returned NO education-specific adoption figure for the third consecutive pass.** The queries were run globally and per region. What answers is enterprise AI-governance material and statute-layer regulation. **An informed gap:** APAC engagements cannot currently be sized from this shelf's demand evidence, only from its regulatory calendar.
+- 🟡 **Added p350 — one APAC-placed Moodle integration exists and is NOT usable yet.** [`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp) (Vietnamese-German University, Go, Moodle over MCP) is **404 on all ten licence-ladder rungs** probed while its README answers 200. Ladder-absence, not enumerated absence — `ACTION ZZ-ao`.
+
+#### LATAM
+
+- 🟢 **Added p350 — the contribution opportunity this base has pointed at for two passes is now MEASURED, and it is 66 : 1.** Code search returns **66** CPF/CNPJ recognisers referencing presidio and **exactly 1** for CURP/RUT/DNI. All 66 are bespoke copies inside application code; **none is a reusable package.** Read first-hand, `Septum`'s `lgpd` pack defines only `TAX_ID` (CNPJ, **format-only, no checksum**), `NATIONAL_ID` (RG) and `EMAIL_ADDRESS` — **CPF is absent**, CNS and PIS absent. 🟢 **A checksum-validating CPF recogniser plus CURP, RUT and DNI, packaged against `data-privacy-stack/presidio` or contributed to `Septum`'s layout, is small, bounded and first-of-its-kind.** The 66 copies are the reference implementations; the packaging is the gap.
+- 🟢 **Added p350 — the demand case now has a denominator pair that sells itself: 87 % against 26 %.** UNESCO IESALC, 200 institutions, 19 countries: **87 %** using AI, **74 %** in teaching and learning, **26 %** with a formal strategy, adoption driven by individuals rather than institutions. 🔵 **That is not a technology gap, it is a governance gap** — the cheapest high-value engagement in the region is institutional AI strategy and conformance, not another tutor.
+- 🟢 **Added p350 — teacher-level demand is quantified and above OECD average across four countries.** TALIS 2024: Brazil **56 %**, Chile **55 %**, Colombia **53 %**, Costa Rica **52 %**, against an OECD average of **36 %**; Uruguay at **75 %** of public-school teachers (Ceibal 2026). Teacher-facing tooling has measured pull here, not assumed pull.
+- 🟡 **Added p350 — a counterpart institution now exists to engage.** UNESCO's **Observatory on AI in Education for Latin America and the Caribbean** launched **2026-04-14 in Santiago** to help states shape policy, and the Digital Education Council has 30 000+ LATAM responses across 29 institutions. Still **no binding regional AI-in-education law** — the pitch is readiness ahead of regulation.
+- 🟢 **Added p350 — a Brazilian academic row gained its canonical address.** [`IC-Redacoes-UTFPR/CorrecaoRedacao`](https://github.com/IC-Redacoes-UTFPR/CorrecaoRedacao) — ENEM essay scoring with LoRA fine-tuning and formative feedback — was published here under a personal-account address; the canonical is the **UTFPR** institutional one, `id` `1233297053`.
+
+#### Global
+
+- 🔴 **Added p350 — a correction to this base's own published count, re-derivable from its committed evidence.** p349's headline reads *"21 alias groups spanning 43 addresses"*; its own register file holds **22 groups and 45 addresses**. The `presidio` group was found late in that pass and written up as *"the 21st"* when 21 were already recorded. The **16 unknown groups** figure was correct.
+- 🟢 **Added p350 — the identity instrument improved: the immutable repository `id` replaces HEAD-equality as the identity key.** It survives rename and transfer, cannot drift between reads, and cannot produce the same-HEAD false positive. Calibrated on `presidio`: `id` `132129752`, created 2018-05-04, now answers as `data-privacy-stack/presidio`.
+- 🔵 **Added p350 — dead-address triage is a SUPPLY channel.** Classifying p349's 17 `UNANSWERED` addresses produced three platform rows (`opencast`, `EpesiCRM`, `gegok12`) and one EMEA institutional row (`oak-curriculum-ontology`). 🔴 It also found that **8 of the 17 were never addresses**: five are GitHub *navigation paths* (`topics/`, `orgs/`, `repos/`, `trending/`) harvested as `owner/repo`, two are planted negative controls, one is a README placeholder (`your-username/safetutors`). **The 2 462-address denominator every identity instrument here uses is inflated with non-addresses** — `ACTION ZZ-an`.
+- 🟡 **Added p350 — `ECL-2.0` is a permissive licence with a NARROWER patent grant, and it is common in academic software.** `opencast/opencast` (509 ★) is ECL-2.0: Apache-2.0 with section 3 restricted so the patent licence reaches only claims where the author is also the inventor, bounded by the institution's funding-agreement authority. Immaterial for a lecture-capture deployment; a counsel question for a patent-sensitive product.
 
 ## Pass 349 · 2026-10-20 — the four regional legs were run again and LATAM returned the richest education-specific evidence of the four for the first time in this base's history; the supply-side news is that the component tier every region's regulation demands is EMEA-placed, and the sharpest LATAM opportunity on these shelves is a missing recogniser class in an MIT codebase
 

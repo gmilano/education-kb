@@ -1,8 +1,34 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-20
+updated: 2026-10-21
 ---
+
+## Pass 350 · 2026-10-21 — three platform rows arrived from an unlikely place, the classification of p349's DEAD addresses; and one of them licenses itself under a permissive licence whose PATENT grant is narrower than Apache-2.0's, which is a thing to tell a client before the build and not after
+
+**Evidence:** [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)
+
+🔴 **Channel note:** `make hooks` **REFUSED** (*"Code from External"*, 4th instance) → gate state **UNJUDGED**. `git`/`ls-remote` need credentials here → **no commit-stream placement this pass**. Licences read **payload-first** on the raw channel (HTTP 200).
+
+### 🟢 Where these rows came from, because the route is reusable
+
+🟡 `ACTION ZZ-aj` sent this pass to classify the **17 addresses that answered `UNANSWERED`** in p349's bounded run. 🟢 **Six of them turned out to be a live platform answering at a different address** — so the shelf gained three customisable systems from an action that was framed as cleanup. 🔵 **Dead-address triage is a supply channel, not only hygiene.** A harvester that found an address once found it for a reason; the repository usually still exists.
+
+| Row | Grant, read from the payload today | Substance, first-hand | Region |
+|---|---|---|---|
+| [`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM) | 🟢 **MIT**, `LICENSE` at ROOT, holder `Janusz Tylek`, **2006–2026** — stock MIT terms. 🟢 **And it scopes itself explicitly:** a *"Third-party software"* section states `vendor/` (Laravel, Filament, Livewire) and `public/build/` carry their own licences, and that **Roundcube webmail is NOT part of this software** — GPL-3, downloaded only if an administrator chooses to install it | 43 ★ · 24 forks · pushed **2026-10-20** · open-source CRM and *"a kickstarter for custom ERP systems"* on **Laravel 12 + Filament 5**; a 20-year codebase re-platformed | 🟡 **EMEA signal, NOT an instrument placement.** `EPESI` is the Telaxus lineage (a `Telaxus/EPESI` address exists) and the holder is a Polish name — **owner heritage plus holder name, not a commit stream.** Recorded as a signal |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **MIT**, `LICENSE` at ROOT, holder **`GegoSoft Technologies and GegoK12 Contributors`**, 2025 — stock text, no non-commercial or field-of-use limit | 54 ★ · **101 forks** · a full-featured **school management system** on Laravel, *"Mobile Apps Ready. API First Design"*, with a separate documentation repo and Android parent/teacher apps | 🔴 **NOT PLACED.** The holder line names a **company but not a country** — `p348`'s holder channel fires only when the line names the jurisdiction (`PT Motiolabs Digital Indonesia`, `Department for Education - Digital`). `GegoSoft Technologies` does not. The inference available is weaker than the channel, so no placement is published |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | 🔴 **`ECL-2.0` — Educational Community License 2.0, NOT Apache-2.0.** First line reads `Educational Community License, Version 2.0 (ECL-2.0)`. Read at `develop` | 509 ★ · 260 forks · the academic standard for **automated lecture capture and video distribution at scale**, with its own web editor (`opencast/editor`, 68 ★) and recording studio (`opencast/studio`, 56 ★) | 🟡 **Not placed by instrument this pass.** 🔴 **And its address moved:** p349 harvested `apereo/opencast`, which no longer answers; the index returns `opencast/opencast`, `id` `115198687`. Identity across that move is **NOT proven** — see below |
+
+### 🔴 `ECL-2.0` is the licence class to brief a client on, and the difference is in the PATENT grant
+
+🟡 ECL-2.0 reads as Apache-2.0 and is routinely shelved as if it were. 🔴 **It is Apache-2.0 with section 3 narrowed, specifically for institutions.** Read from the payload: the patent licence covers only claims where *"the individual that is the author of the Work is also the inventor"* of the claimed patent, and patent rights are further **bounded by the institution's authority under its funding agreements**. Section 4's NOTICE duties are unchanged.
+
+🟢 **What that means for a studio, in one line:** ECL-2.0 is permissive and commercially usable, and its **patent peace is thinner than Apache-2.0's** — a university contributor's employer-held or grant-encumbered patents are not swept in. For a lecture-capture deployment that is almost always immaterial; for a product that embeds Opencast components into something patent-sensitive it is a question for counsel, and it is cheaper to ask it now. 🔵 This is the fourth distinct rider shape this base has recorded alongside `P930`'s *Do Not Harm* field-of-use clauses.
+
+### 🟡 The honest limit on all three rows: a name answering elsewhere is not the same repository
+
+🔴 **p349's 21–22 alias groups were proven identical by HEAD and, this pass, by immutable repository `id`.** These three are **not** that. For `apereo/opencast` → `opencast/opencast`, `epesi-team/epesi` → `jtylek/EpesiCRM`, `gegok12/gegok12` → `Gego-K12/gegok12`, the stale address returns **nothing from the index**, so there is no `full_name` and no `id` to compare against. 🟡 **The match is by name, description and plausibility — which is exactly the standard this base refuses elsewhere.** They are published as platform rows on their own merits, read first-hand at their canonical addresses; they are **not** published as alias resolutions, and `ACTION ZZ-am` carries the identity question forward.
 
 ## Pass 349 · 2026-10-20 — the platform shelf gets the layer that sits OUTSIDE every platform's copyleft boundary, and the credential row this shelf publishes twice is one repository
 
@@ -56,7 +82,7 @@ updated: 2026-10-20
 
 ### 🟢 The credentials layer, and the governance signal attached to it
 
-[`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) — 🟢 **MIT** at ROOT, holder **`Digital Credentials Consortium`**, **89 ★ · 50 forks · 1 309 commits · 33 authors**, cross-platform iOS/Android wallet for verifiable learner credentials.
+[`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) — 🟢 canonical, applied p350; the address published here through p349, `digitalcredentials/learner-credential-wallet`, is **STALE** — 🟢 **MIT** at ROOT, holder **`Digital Credentials Consortium`**, **89 ★ · 50 forks · 1 309 commits · 33 authors**, cross-platform iOS/Android wallet for verifiable learner credentials.
 
 🔴 **Read the stewardship before the licence.** The same repository answers at [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) — **identical HEAD `1c46a82ba384`** — and its README describes the latest release as the *"last release as the Digital Credentials Consortium at MIT"*, with the project now *"part of the OpenWallet Foundation"*. 🟡 **A university consortium has handed the reference wallet to a foundation.** 🟢 For a credentials engagement the licence was never the risk; **the maintainer transition is**, and this base can now see it because two addresses with the same HEAD is a measurement rather than a rumour.
 

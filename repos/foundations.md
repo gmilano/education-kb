@@ -1,8 +1,65 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-20
+updated: 2026-10-21
 ---
+
+## Pass 350 · 2026-10-21 — the compliance-vocabulary thesis p349 proved now has a single repository that embodies it: 16 jurisdictions of PII recognisers under MIT, with a human approval gate. And England's national curriculum ships as an ontology whose one licence file grants TWO licences by path
+
+**Evidence:** [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv) · [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)
+
+🔴 **Channel note, carried from `agents/top.md` so this shelf can be read alone:** `make hooks` was **REFUSED** (*"Code from External"*, 4th instance) so gate state is **UNJUDGED**; `git clone`/`git ls-remote` require credentials here, so the **HEAD-equality and commit-stream channels are SHUT** and no row below is placed by commit stream. Licences are read **payload-first** on `raw.githubusercontent.com`, which answers 200.
+
+### 🟢 The biggest row this pass, and `ACTION ZZ-ak` is why it was found at all
+
+🟡 `ACTION ZZ-ak` asked whether any fork or downstream of `presidio` ships a LATAM recogniser (CPF, CNPJ, CURP, RUT, DNI) **before a studio is told to build one**. 🟢 **The answer arrived with a repository attached.**
+
+| Row | Grant, read from the payload today | Substance, first-hand | Region |
+|---|---|---|---|
+| [`byerlikaya/Septum`](https://github.com/byerlikaya/Septum) | 🟢 **MIT**, `LICENSE` at ROOT, holder `Baris Yerlikaya`, 2026 — stock text, no added clauses | 9 ★ · 2 forks · pushed **2026-10-20** · privacy-first AI middleware: local PII detection → **approval gate** → automatic de-anonymisation, over RAG/document query with any LLM | 🔴 **NOT PLACED** — holder is a PERSON (the declared limit) and the stream channel is shut. 🟡 Signal only: it ships a **`kvkk`** pack, Türkiye's instrument |
+
+🟢 **What makes it a foundations row rather than a curiosity: it is organised BY REGULATION.** Listed first-hand at `packages/core/septum_core/recognizers/`, it carries **16 jurisdiction packages** —
+
+`gdpr` · `uk_gdpr` · `kvkk` · `lgpd` · `ccpa` · `cpra` · `hipaa` · `pipeda` · `pipl` · `appi` · `dpdp` · `pdpa_sg` · `pdpa_th` · `pdpl_sa` · `popia` · `nzpa`
+
+🔵 **This is `p349`'s filter finding made concrete.** p349 measured that an industry KB selecting on *industry* vocabulary is structurally blind to the horizontal components that industry's regulation demands — the compliance-vocabulary leg beat the education leg 14 permissive rows to 5. **`Septum` carries no education token anywhere.** It would never appear in the prescribed sweep, and three of four regions' binding education instruments turn on exactly what it does.
+
+### 🔴 `ACTION ZZ-ak` ANSWERED, and the answer is a 66 : 1 asymmetry a studio can act on this quarter
+
+🟢 **Brazil is covered, partially, and the gaps are specific.** The `lgpd` pack's `recognizers.py` read first-hand at 84 lines defines **three** entities:
+
+| entity, as written in code | recogniser | what it actually does |
+|---|---|---|
+| `"TAX_ID"` | `lgpd_cnpj` | CNPJ layout `XX.XXX.XXX/XXXX-XX`, score 0.6 — 🔴 **format-only, NO checksum validator** |
+| `"NATIONAL_ID"` | `lgpd_civil_identity_document` | RG, dotted or compact, score 0.8, context-gated on `rg` / `registro geral` / `ssp` |
+| `"EMAIL_ADDRESS"` | `lgpd_email` | standard email regex, score 0.8 |
+
+🔴 **CPF — the identifier every Brazilian student record is keyed on — is NOT in the LGPD pack.** Its docstring defers CPF to a *regulation-agnostic baseline*; it survives in the pack only as the `cpf/rg` **context token**. 🔴 **CNS and PIS do not appear at all.**
+
+🔴 **Spanish-speaking LATAM is not covered anywhere, and the ratio is measured.** GitHub code search, run as the measurement:
+
+| query | `total_count` |
+|---|---|
+| CPF / CNPJ recognisers referencing presidio | **66** |
+| CURP / RUT / DNI recognisers referencing presidio | **1** |
+
+🟡 **And all 66 are application code.** `andrade-filipe/senior_ai` (`security/recognizers/br_cpf.py`, `br_cnpj.py`), `guinb0/ouvidoria-pwa` (`presidio-service/brazilian_recognizers.py`), `matheus-deoliveira/orquestrador-agentes` (`skills/sensitive-data-gate/presidio_br.py`) — each one a bespoke copy inside somebody's product. **Not one is a reusable, installable recogniser package.** The single Spanish-LATAM hit is `Aicser-Platform/aicser`'s `pii_scrubber.py`, likewise application code.
+
+🟢 **So the ZZ-ak verdict is: do not tell a studio to build a LATAM PII layer from nothing, and do not tell it one exists.** A checksum-validating CPF recogniser plus CURP/RUT/DNI, contributed to `Septum`'s pack layout or published standalone against `data-privacy-stack/presidio`, is a **small, bounded, first-of-its-kind** contribution. The 66 application copies are the reference implementations; the packaging is the gap.
+
+### 🟢 A second new row, and it carries a licence SHAPE this base has not recorded before
+
+| Row | Grant, read from the payload today | Substance, first-hand | Region |
+|---|---|---|---|
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🔴 **A SPLIT GRANT BY PATH, in one file.** `LICENSE.md` (ROOT; `LICENSE` is **404**) grants **Open Government Licence v3.0** to `ontology/`, `data/`, `docs/` and **MIT** to `scripts/`, `.github/workflows/`, `pyproject.toml`. No holder line; attribution to **Oak National Academy** required. No non-commercial or share-alike clause; both arms permit commercial use | 20 ★ · 6 forks · a formal semantic representation of the Oak National Academy curriculum **aligned to the National Curriculum for England (2014)** — OWL/RDF/SKOS, linked data | 🟢 **EMEA — United Kingdom.** The institution channel fires on the repository's own required attribution, and the artefact names the jurisdiction's statutory curriculum |
+
+🔵 **Why the shape matters more than the row.** `p347`'s `ACTION ZZ-u` found a grant **at depth** licensing its own package rather than the repository, and warned that tree enumeration **over-grants**. 🔴 **This is the inverse and no instrument here can see it: one grant file at the ROOT that partitions the repository into two differently-licensed subtrees.** A family classifier reading `LICENSE.md` and returning a single verdict will publish this repository as **MIT** — and a studio that then ships the ontology under MIT has mis-stated the licence on the part that matters, because the curriculum data is **OGL-v3.0** and carries an attribution duty MIT does not.
+
+🟢 **It also closes a declared EMEA hole.** p349 recorded, twice, that EMEA returned nothing education-specific on the prescribed leg. This is education-specific, institutional, EMEA-placed, and permissive on both arms.
+
+### 🔴 One candidate read and DECLINED, recorded so no later pass spends the probe
+
+🔴 [`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp) — a Go MCP server letting Vietnamese-German University students reach Moodle through an agent, 10 ★ — returns **404 on every rung of the licence ladder** probed (`LICENSE`, `LICENSE.md`, `.txt`, `LICENCE`, `.rst`, `COPYING`, `COPYING.txt`, `NOTICE`, `LICENSE/LICENSE`, `LICENSE/LICENSE.md`); its `README.md` answers 200, so the repository and ref are live. 🟡 **This is ladder-absence, NOT enumerated absence** — the tree-enumeration channel needs the git or contents API, both shut here. Under `P250` it is unusable pending enumeration, which is `ACTION ZZ-ao`. It is a genuine APAC-placed Moodle integration and worth the enumeration a pass with egress can do.
 
 ## Pass 349 · 2026-10-20 — the foundation tier gains the layer p348 said was missing and this pass went and got: eleven HORIZONTAL compliance components, none of which carries an education token, 93 % of them permissive, and six of them EMEA by commit stream
 
@@ -97,7 +154,7 @@ updated: 2026-10-20
 | [`DFE-Digital/education-benchmarking-and-insights`](https://github.com/DFE-Digital/education-benchmarking-and-insights) | 🟢 **MIT**, ROOT, holder **`Department for Education - Digital`** | 4 | **5 266** · 30 | 2023-11-08 → **2026-10-20** | **EMEA — United Kingdom**: the holder line NAMES the ministry + `3016×+0100` |
 | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 **Apache-2.0**, ROOT | 21 | 2 815 · **14** (this base publishes 18 — see below) | 2019-01-18 → 2026-10-19 | North America — `1560×−0400` |
 | [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) | 🟢 **MIT** at `LICENSE.md`, ROOT, holder `DataKind` | 8 | 3 015 · 25 | 2024-10-10 → 2025-09-08 | North America — `−0400`/`−0500` under a `+0000` CI majority |
-| [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT**, ROOT, holder `Digital Credentials Consortium` — the institution channel fires | 89 | 1 309 · 33 | 2021-07-08 → 2026-06-09 | North America. 🔴 **Same HEAD as [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet)** |
+| [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet) — 🟢 canonical, applied p350 (`digitalcredentials/learner-credential-wallet` is the **STALE** address this row carried through p349) | 🟢 **MIT**, ROOT, holder `Digital Credentials Consortium` — the institution channel fires | 89 | 1 309 · 33 | 2021-07-08 → 2026-06-09 | North America. 🔴 **Same HEAD as [`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet)** |
 | [`open-edge-platform/education-ai-suite`](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0**, ROOT | 1 | 457 · 33 | 2025-09-29 → **2026-10-20** | **APAC** — `196×+0800` + `179×+0530` = 82 % of the stream |
 | [`AI-for-Education/fabdata-llm`](https://github.com/AI-for-Education/fabdata-llm) | 🟢 **MIT**, ROOT, holder `Fab Data` | — | 175 · 10 | 2023-05-10 → 2026-06-09 | **EMEA** — `+0000`/`+0100` |
 

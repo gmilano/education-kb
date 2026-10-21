@@ -1,8 +1,36 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-20
+updated: 2026-10-21
 ---
+
+## Pass 350 · 2026-10-21 — the prescribed trending leg returns listicles for the sixteenth consecutive pass; what actually moved is an 87 252-star org transfer, a 40 645-star offline education server already shelved, and three platform repos recovered from addresses p349 recorded as DEAD
+
+**Evidence:** [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv) · [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv)
+
+🔴 **`make hooks` REFUSED** → gate state **UNJUDGED** (4th instance). 🔴 **git channel closed** (credentials) → no commit-stream placement. 🟢 Payload channel (`raw.githubusercontent.com`) **200**; search index **open**.
+
+### 🔴 The prescribed trending leg, leg by leg
+
+🟢 `github trending education AI 2026` returned **third-party trackers and blogs** — GitTrend, Trendshift, Substack, LinkedIn — and **not** GitHub's own Trending page. Star counts disagreed between sources, and the one education-shaped repo named (`rohitg00/ai-engineering-from-scratch`) came with a trending claim this pass could not verify against any primary channel. 🔴 **Zero usable rows, for the sixteenth consecutive pass.** Recorded, not papered over.
+
+### 🟢 What moved, on the channel that answers
+
+| repo | `id` | scale | grant, payload-first | note |
+|---|---|---|---|---|
+| [`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything) | `1182081931` | **87 252 ★ · 7 363 forks** | 🟢 **MIT**, two holder lines: `Yuxiang Lin` + `Infinite Universe, Inc.` | 🔴 org transfer; this shelf's history carries the stale `lum1104/` address |
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | — | **40 645 ★ · 4 109 forks** | 🟢 **Apache-2.0**, stock, `Copyright 2024-2026 Crosstalk Solutions LLC`, no field-of-use rider | offline-first education server (Wikipedia, books, courses, maps, optional local AI); **already shelved** — licence now payload-verified |
+| [`opencast/opencast`](https://github.com/opencast/opencast) | `115198687` | 509 ★ · 260 forks | 🔴 **`ECL-2.0`**, not Apache-2.0 | recovered from `apereo/opencast`, which no longer answers |
+| [`jtylek/EpesiCRM`](https://github.com/jtylek/EpesiCRM) | — | 43 ★ · 24 forks, pushed 2026-10-20 | 🟢 **MIT**, `Janusz Tylek` 2006–2026, with an explicit third-party scope section | recovered from `epesi-team/epesi`; Laravel 12 + Filament 5 |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | `1018037426` | 54 ★ · **101 forks** | 🟢 **MIT**, `GegoSoft Technologies and GegoK12 Contributors` | recovered from `gegok12/gegok12`; school management on Laravel |
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | `1154613489` | 20 ★ · 6 forks | 🔴 **SPLIT GRANT:** OGL-v3.0 (data/ontology/docs) + MIT (scripts) in one `LICENSE.md` | recovered from `fh-yarbouh/…`; **EMEA — United Kingdom**, National Curriculum for England (2014) as linked data |
+| [`byerlikaya/Septum`](https://github.com/byerlikaya/Septum) | `1176800765` | 9 ★, pushed 2026-10-20 | 🟢 **MIT**, `Baris Yerlikaya`, stock | **16 jurisdiction** PII recogniser packs + human approval gate; carries no education token |
+
+🔴 **Two canonical addresses resolved this pass are ARCHIVED and must not be read as live supply:** [`kantord/LibreLingo`](https://github.com/kantord/LibreLingo) (**2 632 ★**) and [`zmievsa/autograder`](https://github.com/zmievsa/autograder) (48 ★). 🟡 Resolving an alias to its canonical address does not make the repository active — a pass that applies a canonical without re-reading state can swap a wrong address for a dead one and call it a fix.
+
+### 🔵 History below is append-only and is not rewritten
+
+Each dated section remains the record of what was knowable that week, stale addresses included. Canonical addresses are applied on the **curated** shelves (`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`) and in the register.
 
 ## Pass 349 · 2026-10-20 — the prescribed trending leg returns listicles for the fifteenth consecutive pass; the channel that actually moved this week is an ORG TRANSFER of an 11 435-star MIT tool, and this base held neither address
 

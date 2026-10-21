@@ -1,8 +1,40 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-20
+updated: 2026-10-21
 ---
+
+## Pass 350 · 2026-10-21 — four trends, and the load-bearing one is that an industry KB's identity layer is where its errors concentrate: this pass corrected its own published denominator, found 8 of 17 "dead repositories" were never repositories, and replaced its identity key
+
+**Evidence:** [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)
+
+### 🟢 `T47` — identity, not licence, is now the largest error surface on an industry KB of this age
+
+🔴 **Three distinct identity defects were found in one pass, all in this base's own published work.** (1) The headline count was wrong by **one group and two addresses** against its own committed register. (2) Of 17 addresses recorded as `UNANSWERED`, **8 were never addresses at all** — GitHub navigation paths (`topics/ai-tutor`, `orgs/moodle`, `repos/moodle`, `trending/python`), planted controls, and a README placeholder (`your-username/safetutors`). (3) Sixteen alias groups were carrying **both** addresses onto the shelves.
+
+🔵 **Why identity and not licence.** Licence errors are loud: a wrong SPDX string is a claim somebody checks. **Identity errors are silent and they compound** — a stale address clones, pins, and serves the same payload at the same HEAD, so every downstream reading taken through it is *correct* while the row is wrong. 🟢 **The transferable rule: an industry KB past ~300 passes should spend its hygiene budget on the address layer, not the grant layer.** The grant layer has gates; the address layer had a proxy.
+
+### 🟢 `T48` — the immutable repository `id` supersedes HEAD-equality as an identity key, and the distinction is principled
+
+🟡 This base proved its first alias pairs with `git ls-remote --symref` HEAD-equality, and that is what made the register possible. 🔴 **But HEAD-equality is a proxy with failure modes in both directions:** two genuinely different repositories can sit at the same HEAD (an undiverged fork), and one repository read twice across a push produces two different HEADs. 🟢 **The search index's numeric `id` is identity itself** — immutable across rename and transfer, stable under pushes.
+
+🔵 **The practical consequence for any KB that tracks repositories:** store the `id`, not only the address. An address is a *name* for a repository and names are reassignable; the `id` is the thing. 🟡 **And its limit, stated:** the `id` only answers for addresses the index resolves, so it cannot adjudicate a *deleted* address — which is exactly where this pass had to fall back to name-and-description and refuse to call it identity.
+
+### 🔴 `T49` — regulation-shaped components are now packaged BY JURISDICTION, and that is a structural shift in how compliance supply arrives
+
+🟢 `p349` established that components answering education's regulatory duties carry **no education token**. 🟢 **This pass found the next stage: they are being organised by statute.** [`byerlikaya/Septum`](https://github.com/byerlikaya/Septum) ships one directory per jurisdiction — `gdpr` `uk_gdpr` `kvkk` `lgpd` `ccpa` `cpra` `hipaa` `pipeda` `pipl` `appi` `dpdp` `pdpa_sg` `pdpa_th` `pdpl_sa` `popia` `nzpa` — behind a human approval gate, under MIT.
+
+🔵 **Why this matters beyond education.** A component indexed by *statute* rather than by *industry* is reusable across every industry that statute touches, and it is discoverable by the only vocabulary a compliance buyer actually uses. 🔴 **It also inverts the sourcing question for a studio:** the right first search for a regulated engagement is the name of the binding instrument, not the name of the sector. Six of this base's strongest components would have been missed by every education-token query ever run here.
+
+🟡 **And the trend has a measured frontier: coverage is uneven in a way the directory listing hides.** Sixteen jurisdiction packs look like global coverage. Read at the payload, the `lgpd` pack defines three entities and **CPF — the identifier Brazilian student records are keyed on — is not among them**, while the CNPJ recogniser is **format-only with no checksum**. **A per-jurisdiction directory is a claim of coverage, not evidence of it.** Open the pack.
+
+### 🟢 `T50` — "it stopped answering" is the weakest possible evidence of staleness, and triaging it is a supply channel
+
+🔴 `ACTION ZZ-aj` was registered on the premise that an address which stops answering *"is the one case where a stale row DOES look stale."* 🔴 **Refuted.** Of 17: **8 were never addresses**, **3** return nothing from the index (deleted or private), and **6** have a live repository of that name at a different address — from which this pass published three platform rows and one national-curriculum ontology.
+
+🟢 **So the inference runs the other way.** A non-answering address is first evidence of a **harvester defect**, second evidence of a **move**, and only third evidence of a death. 🔵 **The reusable practice: triage dead addresses before deleting them, because a harvester that found an address once usually found something real** — `apereo/opencast` led to a 509-star academic video platform, `fh-yarbouh/oak-curriculum-ontology` to England's statutory curriculum as linked data.
+
+🟡 **One honest asymmetry this trend carries:** for all six, identity is **not** proven — the index returns nothing for the stale address, so there is no `id` to compare. They are published on their own merits at their canonical addresses, never as alias resolutions.
 
 ## Pass 349 · 2026-10-20 — four trends, and the sharpest is one this base can only see because it keeps nine shelves: the education STANDARDS layer has been quietly changing stewards, and every stale citation of it still resolves
 

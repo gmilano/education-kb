@@ -1,8 +1,48 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-20
+updated: 2026-10-21
 ---
+
+## 2026-10-21 · Pass 350 — the week's agent-layer movement is an ORG TRANSFER of an 87 252-star tool and two new MIT tutor rows; the prescribed discovery leg returned listicles for the SIXTH consecutive pass, and four of its five best hits were already on this shelf
+
+**Evidence:** [`alias-register`](../evidence/alias-register.2026-10-21-p350.tsv) · [`unanswered-classification`](../evidence/p350-unanswered-classification.2026-10-21-p350.tsv) · [`latam-recogniser-supply`](../evidence/p350-latam-recogniser-supply.2026-10-21-p350.tsv) · [`channel-bindings`](../evidence/p350-channel-bindings.2026-10-21-p350.tsv)
+
+🔴 **`make hooks` REFUSED** (*"Code from External"*, 4th instance) → gate state **UNJUDGED**. 🔴 **`git`/`ls-remote` need credentials here** → HEAD-equality and commit-stream channels **SHUT**; no row below is placed by commit stream. 🟢 Licences read **payload-first** on the raw channel.
+
+### 1. 🔴 What the prescribed agent legs returned, written down rather than left as apparent coverage
+
+| prescribed query | what came back | usable agent rows |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | aggregator listicles, DEV/LinkedIn posts, self-reported star counts; the one verifiable datum was again a **796 ★** teaching repo | **0** |
+| `github trending education AI 2026` | third-party trackers (GitTrend, Trendshift) and blogs; GitHub's own Trending page did not come back | **0** |
+| `open source platform education ERP CRM MIT Apache` | vendor glossary pages from a single ERP vendor, in eight languages | **0** |
+| `AI education industry trends 2026` | market-research and vendor pages; three houses disagreeing by 30 % on the 2025 base | **0** |
+
+🟢 **Sixth consecutive pass in which the prescribed sweep yields no agent row.** Every row below came from the **authenticated search index**, filtered on licence and recency, then read at the payload.
+
+### 2. 🟢 The transfer that is this week's actual agent news — 87 252 stars changed address
+
+🟢 [`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything) — `id` **`1182081931`**, **87 252 ★ · 7 363 forks**, updated the day of this pass. Turns a codebase into an interactive knowledge graph you can explore and question; works with Claude Code, Codex, Cursor, Copilot and Gemini CLI. 🔴 **This shelf's history carries it at `lum1104/understand-anything`, which is now STALE.**
+
+🟢 **Licence read at the payload, and it is a shape worth noting: MIT with TWO holder lines** — `Copyright (c) 2026 Yuxiang Lin` **and** `Copyright (c) 2026 Infinite Universe, Inc.` Stock terms, no Commons Clause, no field-of-use limit. 🔵 `p347`'s `ACTION ZZ-w` recorded that a multi-holder MIT defeats GitHub's own classifier; here the two holders also **narrate the transfer** — the individual who owned the old address, plus the company that owns the new one.
+
+🟢 **And a third party corroborates it first-hand.** `Lum1104/understand-anything-metrics` describes itself as a traffic accumulator that will *"Stop after Lum1104/Understand-Anything transfering to Egonex-AI"*. 🔵 **A sibling or tooling repository narrating a move is a corroboration channel this base had not used**, and it is independent of the index.
+
+### 3. 🟢 Two new MIT agent rows, both read at the payload, neither placed
+
+| row | grant, payload-first | substance | region |
+|---|---|---|---|
+| [`ktaletsk/learn-codebase`](https://github.com/ktaletsk/learn-codebase) | 🟢 **MIT**, ROOT, holder `Konstantin Taletskiy`, stock | 89 ★ · *"the anti-vibe-coding skill"* — a Socratic tutor teaching codebases by questioning and active recall; ships as an **agent skill** | 🔴 **NOT PLACED** — person holder, stream channel shut |
+| [`gokayfem/h3-max-education`](https://github.com/gokayfem/h3-max-education) | 🟢 **MIT**, ROOT, stock | 72 ★ · realtime **interruptible** science tutoring over continuously generated video; created 2026-09-01 | 🔴 **NOT PLACED** |
+
+🟡 **Four strong index hits were NOT published, because they are already here** — `zijinz456/OpenTutor` (148 ★), `Li-Evan/Bloom` (290 ★), `ZeKaiNie/universal-examprep-skill` (311 ★, updated the day of this pass) and `ai-shifu/ai-shifu` (327 ★). 🟢 That is the shelf check doing its job; two new rows are written as two.
+
+### 4. 🔴 Sixteen agent-adjacent addresses on this shelf's history resolved to their canonical form
+
+🟢 `ACTION ZZ-ah` discharged: **15 of 16** unknown alias groups resolved through the index, each with an immutable `id`. Agent-layer members include [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) (144 ★, Wav2Vec2 + DTW pronunciation assessment, live 2026-10-20), [`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) (Swedish national agency open data), [`sharziki/purdue-mcp`](https://github.com/sharziki/purdue-mcp), [`paper-instruments/rubric`](https://github.com/paper-instruments/rubric) (83 ★, LLM weighted-rubric evaluation) and [`bycs-lp/moodle-local_ai_manager`](https://github.com/bycs-lp/moodle-local_ai_manager) (30 ★, live 2026-10-20). 🔴 One group — `edx/ease` ≡ `openedx/ease` — the index answers for **neither** address.
+
+🔵 **History below is NOT rewritten.** Each dated section remains the record of what was known that week; the canonical addresses are applied on the curated shelves and in the register.
 
 ## 2026-10-20 · Pass 349 — the week's agent-layer news is not a release: the agent shelf's own option count is wrong by 21 alias groups, and the only agent-vocabulary supply the discovery leg returned was already on these shelves, 8 of 8
 

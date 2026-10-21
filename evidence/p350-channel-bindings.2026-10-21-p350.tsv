@@ -1,0 +1,9 @@
+channel	verdict	detail	consequence_for_this_pass
+make hooks (repo instruments)	REFUSED	tool policy declined as "Code from External"	gate state UNJUDGED; 4th instance after p343 p344 p346
+git clone / git ls-remote on arbitrary repos	REFUSED	"could not read Username for https://github.com" - credentials required	HEAD-equality channel CLOSED; p349 HEADs carried forward, not re-derived
+git log author/timezone channel	UNAVAILABLE	depends on clone, which is refused	NO commit-stream region placement this pass - declared, not inferred
+curl -I on github.com HTML address	403	403 on all 4 addresses tested	redirect/location channel still shut; 3rd instance after p313 p349
+raw.githubusercontent.com payload	200	LICENSE and source files served	licence readings this pass are PAYLOAD-first
+GitHub search index - repository search	OPEN	returns full_name and immutable numeric id	the canonical-address channel; new id identity key
+GitHub search index - code search	OPEN	returns path lists across all public repos	the ZZ-ak measurement channel
+MCP get_file_contents	REFUSED off-session	session scoped to gmilano/globant-kb + gmilano/education-kb	payloads read via raw channel instead
