@@ -6,86 +6,145 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
-**Pass 360 · 2026-10-21.** Every row below was checked first-hand on two
-channels: liveness and default branch via `git ls-remote --symref`, and the licence
-**read from the payload** at `raw.githubusercontent.com` — never from a badge, a
-README claim or GitHub's own classifier. Where the classifier or a search snippet
-disagreed with the payload, the payload wins and the disagreement is recorded.
+**Pass 361 · 2026-10-21.** Every row below was checked first-hand: liveness and default
+branch via `git ls-remote --symref`, and the licence **read from the payload** at
+`raw.githubusercontent.com` — never from a badge, a README claim or GitHub's own
+classifier. Where the classifier and the payload disagree, the payload wins and the
+disagreement is recorded.
 
-**Channel state this pass:** 🟢 `git ls-remote --symref` OPEN · 🟢 `raw.githubusercontent.com`
-OPEN · 🟢 **`git log` on a blobless `--depth=200` clone OPEN** · 🟢 **`git ls-remote -h`
-and `-t` promoted to instruments at `p360`** — the full ref-list digest separates an alias
-from a synchronised fork, and tag presence turns out to predict licence hygiene ·
-🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*` **403** · 🔴 `codeload` **403** ·
-🔴 `api.github.com/search/*` **403 — fifth consecutive pass without the index**.
-🔵 `p360` runs under a credential scoped to `gmilano/globant-kb`; attaching
-`gmilano/education-kb` to the session opened the **push** channel, and opened nothing
-else. 🔴 **Stated plainly because it is the obvious wrong inference: a write credential
-for this repository is not a read credential for anybody else's, so the API stayed shut
-and `p360` measured no stars.** Every `p360` row reads `not re-derived`.
+## 🟢 `p361`: the GitHub index is OPEN, and the inference that closed it for five passes was WRONG
 
-🟢 **Two gates ran before this pass wrote, and the corpus came back clean on both.** The
-whole published corpus of `agents/top.md`, `repos/foundations.md`,
-`verticals/solutions.md`, `compose/patterns.md`, `intel/market.md` and `intel/trends.md`
-— **264 distinct addresses** — was swept on `ls-remote`: 🟢 **264 of 264 live, zero
-dead.** And every positive grant-path cell was re-checked against the live default branch
-and then served from `raw`: 🟢 **263 of 263 agree.**
+🔴 **Passes 356–360 each recorded `api.github.com/search/*` **403** and concluded that a
+credential scoped to one unrelated repository could not read anybody else's. The first
+half of that is still true. The conclusion was not.** `p361` re-probed by `curl` and got
+the same five answers: 🔴 `api.github.com/repos/*` **403** · 🔴 `api.github.com/search/*`
+**403** · 🔴 `github.com` HTML **403** · 🔴 `codeload` **403**. 🟢 **Then it tried the
+same query through the session's GitHub MCP tool and the index answered in full** —
+stars, forks, default branch, topics, `archived`, `pushed_at`, SPDX classifier.
 
-🔴 **The gate itself was the defective part, twice, and that is `p360`'s most reusable
-result.** Revision 1 accused **5** cells; revision 2 accused **7**; 🟢 **all 12 were
-correct.** Revision 1 split a grant cell on its first slash, so `master/canvas-lms-mcp/LICENSE`
-— a grant **at depth**, `ACTION ZZ-u`'s case — parsed as a branch named
-`master/canvas-lms-mcp`, and trailing-dot stripping truncated `dmitry-viskov/pylti1.3` into
-a dead address. Revision 2 matched the token `` `LICENSE` `` inside the **14** rows on
-these shelves that *assert an absence* — *"no grant file"*, *"a `LICENSE` that 404s"*,
-*"there is no LICENSE file"*. 🔴 **A gate that cannot tell a grant from the statement that
-there is none is matching a filename, not measuring currency.** Separating the 14
-absence rows from the **266** positive claims is what recovered the real figure.
+🔵 **The boundary is per-tool, not per-credential.** In the same session and on the same
+credential, `search_repositories` answers for *any public repository* while
+`get_file_contents` refuses anything outside the two attached repositories
+(`gmilano/globant-kb`, `gmilano/education-kb`) with an explicit scope error. 🟢 **So
+"the API is 403" was a statement about one transport, and five passes generalised it to
+the index.** The lesson is cheap and reusable: *before recording a channel as closed,
+enumerate the transports that reach it.*
 
-🟢 **`ACTION ZZ-bk` was registered and then discharged inside this pass, at revision 5.**
-Revisions 3 and 4 — exclude absence wordings, then require a positive SPDX token — each
-still accused **2** correct rows, because the licence token sits inside the *refuted
-claim* in both. 🟢 **The rule that works is structural, not lexical:** a grant path at this
-base is `` `branch/FILE` ``, always with a slash, and a bare backticked `` `LICENSE` `` is
-always prose. On that rule the gate reports 🟢 **215 of 215 canonical cells agreeing, with
-zero false accusations.** 🔵 **16 false accusations across the four revisions that failed,
-over 12 distinct cells and 9 distinct repositories, and zero corpus defects** — a gate
-keyed on *shape* was right the first time where three keyed on vocabulary were not.
+🟢 **What that recovered, immediately.** The ★ column on this file and on
+`repos/foundations.md` carried **78 cells reading `not re-derived`** — one per row that
+no pass since `p355` could measure. 🟢 **`p361` measured **273 of the corpus's 277 addresses** at their published
+spelling — 261 directly, 12 more once forks were un-excluded — and filled all 78 cells.** Of the **89** figures already published, **78
+re-derive within ±2** and the **11** that moved are the youngest repositories on the
+shelves, led by `xiaoyang111222/cn-math-taxonomy` at **+157 in one day** (3 days old).
+🟢 **Zero corpus defects in the star column.** Every ★ figure on both files is now a
+single measurement taken in this pass.
 
-🔴 **The eight prescribed legs returned nothing this base did not already hold, and
-that is the pass's first finding.** Run globally and once per region, they returned:
-`os-taxonomy` at *1,590 topics / 3,221 edges* (this base read **1 616 / 3 317** from the
-payload at `p351`); the BNCC benchmark at *"15,300 answers from 17 models"* (the README
-says **19 × 900**, and `p358` already published the disagreement); Vietnam's Decision
-33/2026, Korea's AI Basic Act, the **134 bills across 31 states**, `H.R. 8747`, the NYC
-moratorium, Canada's *AI for All*, the UNESCO IESALC **87 % / 74 %** pair and the TALIS
-figures — **every one already on `intel/market.md`, most of them better sourced there
-than in the leg that returned them.** 🔵 Eighteen passes have now recorded that the
-prose legs return aggregators. `p359` is the eighteenth, and it stops treating that as
-news.
+🔵 **One gate defect, caught before it was published, and worth stating.** `p361`'s first
+star-diff took the *last numeric cell* in each row and accused
+`vishalsachdev/canvas-mcp` of being published at **8** against a measured **302** — a
+38× "defect". 🟢 **The row says `not re-derived`; the 8 came from a different table
+counting agent skills.** The rule that works is the one `p360` arrived at from the other
+direction: **key on the column, not on the shape of the token.** Re-run position-aware
+against the `★` header, the diff reports **89 of 89 clean**.
 
-🟢 **So `p359` spent its budget on the function legs, and they paid.** Aimed at
-`github.com` with function words — `OneRoster`, `xAPI`, `LRS`, `IEP`, `individualized
-education program`, `item response theory`, `formative assessment`, `SCORM`,
-`LTI tool`, `proctoring` — they returned **40 addresses probed first-hand, 39 live, and
-16 carrying no occurrence anywhere on the eight published shelves**. 🔵 Of those 16,
-**15 are absent from this repository entirely**; the sixteenth,
-`shaheeranser/exam-proctor`, was read as *source* by `p190` and never shelved, and
-`p359` publishes its grant for the first time. 🟢 **And one of the sixteen is a tier
-this base has never had as a tier: special education.**
+## 🔴 `p361`: absence from the index is NOT evidence of death, and the mechanism is three-fold
 
-🔴 **The headline is a licence measurement, and it is the worst this base has taken.**
-Of the 16 new addresses, **5 carry a permissive grant, 1 is copyleft, 2 are explicitly
-noncommercial, and 8 carry no grant at any probed path.** 🔴 **31 % permissive**,
-against the 43-row permissive shelf this base already publishes. The concentration is
-not regional — it is by **function**, and the function is the highest-stakes one on the
-shelf: see §*Special education* below, and `intel/trends.md` §22.
+🔴 **The index resolved 261 of this corpus's 277 addresses. A pass that took the other 16
+for dead would have published 16 false deaths — 5.8 % of the base.** All 16 answer
+`git ls-remote --symref`. 🟢 **`p361` established the mechanism for 15 of them by
+designed test:**
 
-🟢 **Every one of the 16 is placed in a region, and only one reads "unplaceable."**
-`p359` used the commit channel — `git log --format='%ci'` over a `--filter=blob:none
---depth=80` clone — which needs neither the API nor a star count. 🔵 **APAC 7, EMEA 3,
-North America 3, LATAM 2, one unplaceable on a split stream.** APAC leading the supply
-is the fourth independent corroboration of §15 of `intel/trends.md`.
+| Mechanism | Count | Test that establishes it | Recovery |
+|---|---:|---|---|
+| 🔴 **Fork exclusion** — GitHub repo search omits forks by default | **12** | re-query with `fork:true`; all 12 return, all 12 carry `fork: true` | add `fork:true` |
+| 🔴 **Repository rename** — old address 301s | **1** | `openedx/edx-platform` and `openedx/openedx-platform` return the **identical HEAD SHA** `7f01c42157d3` | index carries the new name only |
+| 🔴 **Owner rename / transfer** — old owner 301s | **2** | `naiayti/TeachingKG` ≡ `Teaching-Knowledge-Graph/TeachingKG` (`9f8c0a3f6704`); `christophblessing/quiz-recap` ≡ `openHPI/quiz-recap` (`0927b556d2e4`) | search by repo name, not address |
+| 🟡 **Unexplained** | **1** | `JeabtiE/jump-hackathon-demo` is live (`e03c5711c72f`), absent from the index under `fork:true` and absent by name | 🔴 **stated, not guessed** |
+
+🟢 **This is why this base reads liveness on `ls-remote` and licences from `raw`.** The
+index is a *discovery and ranking* instrument. It is not a liveness instrument, and
+`p361` is the pass that can prove that rather than assert it.
+
+## 🔴 `p361`: three "recency" fields, three different answers, and only one is a commit
+
+🔴 **The index's `updated_at` is not recency, and neither is `pushed_at`.** Measured on
+one address, `Apereo-Learning-Analytics-Initiative/OpenLRW`:
+
+| Field | Value | What it actually tracks |
+|---|---|---|
+| `updated_at` (returned in minimal output) | **2026-08-04** | repository *metadata* events — stars, topics, watches |
+| `pushed_at` (full output only) | **2025-09-12** | a push to *any* ref, including a tag or a branch delete |
+| 🟢 `git log -1` on the default branch | **2020-02-06** | 🟢 **the last commit** |
+
+🔴 **A 6½-year gap between the field a ranked search hands you and the truth.** Any shelf
+built on `updated_at` would publish a project abandoned in 2020 as current. 🟢 **The
+commit channel — `git log` over a `--filter=blob:none --depth=200` clone — stays the only
+instrument on this base that answers "is this maintained".**
+
+## 🟢 `p361`: a new instrument the liveness channel is structurally incapable of replacing
+
+🟢 **`archived` is in the index and nowhere in `git`.** An archived repository is
+read-only upstream: no issues, no PRs, no commits ever again — and it answers
+`ls-remote` exactly like a healthy one. 🟢 **`p361` swept all 277 addresses for
+`archived:true` (with `fork:true`, so forks were not silently skipped): 1 hit.**
+
+🔴 **`zmievsa/autograder` is archived, and this base publishes it on
+`repos/foundations.md` with no flag** — on the shelf whose stated purpose is *the systems
+an engagement starts from*. 🔵 It is corrected on that file in this pass. 🟢 **One run of
+a new instrument, one real defect, in a shelf that recommends building on it — and no
+`ls-remote` sweep, however wide, could ever have found it.**
+
+## 🟢 `p361`'s discovery legs — what ranked search returns that function words could not
+
+🔴 **The eight prescribed web legs returned, again, almost nothing this base does not
+hold** (see `intel/market.md` for the regional detail and the two exceptions). 🟢 **The
+index did.** Ranked by stars within education topics, it surfaced **17 addresses absent
+from this entire corpus**, all verified below first-hand — liveness, default branch and
+licence read from payload on **2026-10-21**.
+
+🔵 **Why these were invisible to five passes of web search:** every one of them ranks
+*inside* a topic (`ai-tutor`, `edtech`, `education`+`mcp-server`) and nowhere near the
+top of a general query for "best open source education AI". Ranked search inside a
+taxonomy is a different instrument from a search engine, and this base had been denied
+it since `p355`.
+
+### 🆕 Agent-skill tutors — the tier ranked search found and prose search could not
+
+| Agent | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region | What it is |
+| --- | --- | --- | --- | ---: | --- | --- |
+| Exam Cram Coach | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 **MIT** | `main/LICENSE` | **312** | APAC | Exam-prep tutor that teaches **from the client's own slides with page citations** and crops figures. 🟢 Anti-hallucination by provenance, not by prompt — the citation *is* the guard |
+| algo-sensei | [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | 🟢 **MIT** | `main/LICENSE` | **293** | North America | DSA/interview mentor that gives **progressive hints instead of solutions**. The closest thing on these shelves to a deliberate-practice harness for CS training |
+| Diagnostic tutor | [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **MIT** | `main/LICENSE` | **249** | APAC | 🟢 **Diagnosis-first**: no mode menu, no commands — it decides the next teaching step and checks understanding. The pedagogy is the control flow |
+| kaogong-skill | [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | 🟢 **MIT** | `main/LICENSE` | **194** | APAC | 🟢 **China civil-service exam prep** (行测/申论/面试) with a wrong-answer book. A *credential-bound* vertical — the shape a national certification engagement takes |
+| MindTrain | [shigella520/MindTrain](https://github.com/shigella520/MindTrain) | 🟢 **MIT** | `main/LICENSE` | **126** | APAC | Knowledge-training platform with **pluggable schedulers** and optional Anki/FSRS. Java — rare on this shelf, and it matters for JVM-shop clients |
+
+### 🆕 LMS and portal reach — new addresses, and one with no grant at all
+
+| Agent | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region | What it is |
+| --- | --- | --- | --- | ---: | --- | --- |
+| Shiori | [kaorii-ako/Shiori-v1](https://github.com/kaorii-ako/Shiori-v1) | 🟢 **MIT** | `master/LICENSE` — 🔴 not `main` | **46** | APAC | Google Classroom sync + SRS + an MCP server. 🟡 The only **Google Classroom**-native study agent found with a payload grant |
+| brightspace-d2l-mcp | [AnonymousOnyx22/brightspace-d2l-mcp](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) | 🟢 **MIT** | `main/LICENSE` | **31** | North America | D2L/Brightspace MCP that **reconciles against what was already submitted** — second Brightspace address on this base, and the one that models state |
+| Skolverket-MCP | [isakskogstad/Skolverket-MCP](https://github.com/isakskogstad/Skolverket-MCP) | 🟢 **MIT** | `master/LICENSE` — 🔴 not `main` | **13** | **EMEA** | 🟢 **Sweden's national education agency (Skolverket) open data over MCP** — curriculum, schools and statistics. A *statutory* data source, which is the scarcest kind of row on this base |
+| campus-cli | [alejooroncoy/campus-cli](https://github.com/alejooroncoy/campus-cli) | 🟢 **ISC** | `main/LICENSE` | **11** | **LATAM** | 🟢 **Peru — UPC Aula Virtual (Blackboard Learn)** over CLI + MCP. 🔵 **First ISC grant in this corpus** (permissive, BSD-family, functionally equivalent to MIT for a client deliverable) |
+| eklavya | [ProjectAJ14/eklavya](https://github.com/ProjectAJ14/eklavya) | 🟢 **MIT** | `main/LICENSE` | **12** | APAC | Quizzes the developer on the code the agent just wrote — local knowledge graph, spaced repetition, optional commit gate. 🔵 Corporate-upskilling, not schooling |
+| dev-coach | [UltimaPhoenix/dev-coach](https://github.com/UltimaPhoenix/dev-coach) | 🔴 **AGPL-3.0** | `main/LICENSE` | **5** | EMEA | Same category as `eklavya` and the licence is the opposite: 🔴 **AGPL — reaching it from a hosted client deliverable triggers source obligations.** Read it, don't embed it |
+| canvas-mcp (plyght) | [plyght/canvas-mcp](https://github.com/plyght/canvas-mcp) | 🔴 **NO GRANT** | 🔴 none at 10 probed paths; `package.json` has **no `license` field**; the README's `## License` section says only *"uses permissive open-source dependencies"* | **14** | Not placed | 🔴 **Unusable.** A statement about *dependencies* is not a grant on the work. Shelved as the worked example of the distinction |
+
+### 🆕 Curriculum data and content — including one grant spelled the British way
+
+| Agent | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region | What it is |
+| --- | --- | --- | --- | ---: | --- | --- |
+| Oak open-curriculum ecosystem | [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** | 🔴 **`main/LICENCE`** — and `main/LICENSE` **404s** | **8** | **EMEA** | 🟢 **England's Oak National Academy curriculum as API + SDK + MCP app.** Pairs with the `oak-curriculum-ontology` this base already holds: ontology for meaning, this for access |
+| ordkort | [silicq/ordkort](https://github.com/silicq/ordkort) | 🔴 **AGPL-3.0** | `main/LICENSE` | **12** | EMEA | FSRS flashcards for 60 languages, offline, no sign-up. 🔴 AGPL — fine as a product to deploy, wrong as a component to embed |
+| leap-mcp | [sid-thephysicskid/leap-mcp](https://github.com/sid-thephysicskid/leap-mcp) | 🟢 **MIT** | `main/LICENSE` | **14** | North America | Topic → explainer video with Manim (3Blue1Brown-style) animation over MCP |
+| Phys-MCP | [BlinkZer0/Phys-MCP](https://github.com/BlinkZer0/Phys-MCP) | 🟢 **MIT** | `main/LICENSE` | **10** | North America | Physics CAS/calculator over MCP — the subject-specific **tool** an agent calls instead of doing arithmetic in tokens |
+
+🔵 **Read the `Grant read at` column, again.** Of the 17 addresses added this pass,
+**3 do not put their grant where a tool would look**: two sit on `master` while the
+ecosystem default is `main`, and Oak National's is spelled **`LICENCE`** with
+`LICENSE` returning 404. 🔴 **A scanner that probes `main/LICENSE` and stops would report
+all three as grantless — and one of them is a national curriculum body.**
+
 
 ---
 
@@ -93,21 +152,21 @@ is the fourth independent corroboration of §15 of `intel/trends.md`.
 
 | Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
 | --- | --- | --- | --- | ---: | --- | --- |
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | **41 938** | APAC | Agent-native tutoring with lifelong memory. Published by HKU Data Science lab (Hong Kong) |
-| book-to-skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | MIT (`LICENSE.md`) | `master/LICENSE.md` | **35 503** | Not placed | Turns a technical book PDF into a Claude Code skill — ready to study, reference and use |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | **41 972** | APAC | Agent-native tutoring with lifelong memory. Published by HKU Data Science lab (Hong Kong) |
+| book-to-skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | MIT (`LICENSE.md`) | `master/LICENSE.md` | **35 553** | Not placed | Turns a technical book PDF into a Claude Code skill — ready to study, reference and use |
 | PageLM | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | MIT (`LICENSE.md`) | `main/LICENSE.md` | **2 035** | Not placed | Community NotebookLM: course material → quizzes, flashcards, study guides. 🟡 GitHub classifies this `NOASSERTION`; the payload is stock MIT |
-| get-it | [beltromatti/get-it](https://github.com/beltromatti/get-it) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | **1 124** | EMEA | "Read it. See it. Get it." multimodal explainer, built at GDG AI Hack Milan 2026 (Italy) |
-| education-agent-skills | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | **CC-BY-SA-4.0** (`LICENSE`) | `main/LICENSE` | **885** | EMEA | 165 evidence-grounded skills for teachers, school leaders and EdTech builders (UK). 🟡 Content licence, share-alike — not a code grant |
+| get-it | [beltromatti/get-it](https://github.com/beltromatti/get-it) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | **1 125** | EMEA | "Read it. See it. Get it." multimodal explainer, built at GDG AI Hack Milan 2026 (Italy) |
+| education-agent-skills | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | **CC-BY-SA-4.0** (`LICENSE`) | `main/LICENSE` | **886** | EMEA | 165 evidence-grounded skills for teachers, school leaders and EdTech builders (UK). 🟡 Content licence, share-alike — not a code grant |
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT (`LICENSE`) | `main/LICENSE` | **387** | APAC | Course generation from source material incl. YouTube → structured course (India) |
-| frametell | [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | AGPL-3.0 (`LICENSE`) | `main/LICENSE` | **356** | Not placed | Idea or source material → explainer video, driven by an AI director agent |
+| frametell | [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | AGPL-3.0 (`LICENSE`) | `main/LICENSE` | **357** | Not placed | Idea or source material → explainer video, driven by an AI director agent |
 | Skill-Anything | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT (`LICENSE`) | `main/LICENSE` | **339** | APAC | Any source (PDF, video, web, audio, text) → interactive learning package with quizzes and flashcards |
-| claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | MIT (`LICENSE`) | `main/LICENSE` | **338** | Not placed | Open alternative to Udemy/Coursera: give it a topic, it researches and builds the course |
+| claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | MIT (`LICENSE`) | `main/LICENSE` | **346** | Not placed | Open alternative to Udemy/Coursera: give it a topic, it researches and builds the course |
 | ai-shifu | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | Apache-2.0 (`LICENSE.txt`) | `main/LICENSE.txt` | **327** | APAC | AI-led teaching and Q&A driven by typing; Chinese-language project |
 | Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT (`LICENSE`) | `main/LICENSE` | **290** | APAC | Private AI tutor that reads how a learner actually learns and sequences the next lesson |
 | deep-student | [helixnow/deep-student](https://github.com/helixnow/deep-student) | AGPL-3.0 (`LICENSE`) | `main/LICENSE` | **286** | Not placed | Local-first open AI learning workbench |
 | OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT (`LICENSE`) | `main/LICENSE` | **268** | North America | Open intelligent tutoring system with Bayesian Knowledge Tracing mastery. UC Berkeley CAHLR |
 | learn-anything-with-AI | [read2017/learn-anything-with-AI](https://github.com/read2017/learn-anything-with-AI) | MIT (`LICENSE`) | `main/LICENSE` | **201** | Not placed | Reusable AI learning skill for project-driven mastery of a subject |
-| freelingo | [artcc/freelingo](https://github.com/artcc/freelingo) | AGPL-3.0 (`LICENSE`) | `main/LICENSE` | **192** | EMEA | Self-hosted AI language learning with local or cloud LLMs, CEFR-aligned (Spain) |
+| freelingo | [artcc/freelingo](https://github.com/artcc/freelingo) | AGPL-3.0 (`LICENSE`) | `main/LICENSE` | **196** | EMEA | Self-hosted AI language learning with local or cloud LLMs, CEFR-aligned (Spain) |
 | Smart-Study-Agent | [HumphreySun98/Smart-Study-Agent](https://github.com/HumphreySun98/Smart-Study-Agent) | MIT (`LICENSE`) | `main/LICENSE` | **57** | Not placed | RL picks the study action, FSRS picks the timing — spaced repetition as a policy problem |
 
 ## LMS-connected agents (the MCP layer)
@@ -132,22 +191,22 @@ defensible scopes give different answers. The whole-file figure is on
 | schoolinfo-mcp | [chrisryugj/schoolinfo-mcp](https://github.com/chrisryugj/schoolinfo-mcp) | MIT (`LICENSE`) | `main/LICENSE` | **48** | APAC | Korea's 학교알리미 school-disclosure OpenAPI + CLI (meals, enrolment, assessment plans) |
 | canvas-ed-mcp | [r1ckyIn/canvas-ed-mcp](https://github.com/r1ckyIn/canvas-ed-mcp) | MIT (`LICENSE`) | `main/LICENSE` | **18** | Not placed | Canvas LMS + Ed Discussion |
 | ku-portal-mcp | [SonAIengine/ku-portal-mcp](https://github.com/SonAIengine/ku-portal-mcp) | MIT (`LICENSE`) | `main/LICENSE` | **12** | APAC | Korea University KUPID portal + Canvas (notices, schedules, library) |
-| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT (`LICENSE`) | `main/LICENSE` | not re-derived | Not placed | Canvas LMS |
-| moodle-mcp | [falkenslab/moodle-mcp](https://github.com/falkenslab/moodle-mcp) | MIT (`LICENSE`) | `main/LICENSE` | not re-derived | Not placed | Moodle |
-| tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT (`LICENSE`) | `main/LICENSE` | not re-derived | Not placed | Tutor (Open edX distribution) |
-| openedx-mcp | [blend-ed/openedx-mcp](https://github.com/blend-ed/openedx-mcp) | **AGPL-3.0** (`LICENSE`, branch `master`) | `master/LICENSE` | not re-derived | Not placed | Open edX. 🔴 Copyleft — the only non-permissive row on this tier |
-| anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT (`LICENSE`) | `main/LICENSE` | not re-derived | Not placed | Anki spaced repetition |
-| classroom-mcp | [sandraschi/classroom-mcp](https://github.com/sandraschi/classroom-mcp) | MIT (`LICENSE`, branch `master`) | `master/LICENSE` | not re-derived | Not placed | Google Classroom |
-| canvas-lms-agent | [likr/canvas-lms-agent](https://github.com/likr/canvas-lms-agent) | MIT **at depth** — `canvas-lms-mcp/LICENSE` | `master/canvas-lms-mcp/LICENSE` | not re-derived | Not placed | Canvas. 🔴 Repository **root carries no grant**; the MIT text licenses the `canvas-lms-mcp` package, not the repository |
-| mcp-brasil | [Mcp-Brasil/mcp-brasil](https://github.com/Mcp-Brasil/mcp-brasil) | MIT (`LICENSE`) | `main/LICENSE` | not re-derived | **LATAM** | Brazilian public-data MCP; education datasets among them |
-| 🆕 canvas-lms-mcp | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | MIT (`LICENSE`, holder *Christian Bru*, 2026) | `main/LICENSE` | not re-derived | Not placed | Canvas. TypeScript. **The widest Canvas surface verified on this base — its README states 183 tools**; reads courses, assignments, submissions, rubrics and quizzes, and **grades and comments** |
-| 🆕 moodle-mcp (Rust) | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT (`LICENSE`, holder *G36maid*, 2026) | `main/LICENSE` | not re-derived | Not placed | Moodle. **Rust**, published to `crates.io`, CI + Codecov in-tree. Goes beyond reading: uploads and submits work. README claims validation against Moodle 3.7–5.x |
-| 🆕 canvas-lms-student-mcp | [AnonymousOnyx22/canvas-lms-student-mcp](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | MIT (`LICENSE`, 2026) | `main/LICENSE` | not re-derived | Not placed | Canvas, **read-only by construction** — 12 tools, cannot submit, edit or delete. 🟢 The only row on this tier whose *capability ceiling* is the safety argument |
-| 🆕 gradescope-mcp | [Yuanpeng-Li/gradescope-mcp](https://github.com/Yuanpeng-Li/gradescope-mcp) | MIT (`LICENSE`, holder *Yuanpeng Li*, 2026) | `main/LICENSE` | not re-derived | Not placed | **Gradescope** — 34 tools: course management, batch grading, rubric CRUD. 🟢 **Every write tool is preview-first** and refuses to mutate without `confirm_write=True`. The first grading-capable row on this base whose safety argument is a *protocol*, not a ceiling |
-| 🆕 elimu-mcp | [gabrielmahia/elimu-mcp](https://github.com/gabrielmahia/elimu-mcp) | MIT (`LICENSE`, holder *Gabriel Mahia*, 2026) | `main/LICENSE` | not re-derived | **EMEA** (Kenya) | Kenya's education system — school registry, KCSE/KCPE results, HELB loans, TVET programmes. 5 tools, on PyPI. 🔴 Read the two caveats below before quoting it to a client |
-| 🆕 Canvas-Agent | [hughsibbele/Canvas-Agent](https://github.com/hughsibbele/Canvas-Agent) | MIT (`LICENSE`, holder *Hugh Koeze*, 2026) | `main/LICENSE` | not re-derived | Not placed | Canvas. A sixth independent Canvas address — the platform is now **over-supplied** on this tier, which is itself the finding |
-| 🆕 moodle-cli-hku | [Neutralmilkzzz/moodle-cli-hku](https://github.com/Neutralmilkzzz/moodle-cli-hku) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | not re-derived | **APAC** | Moodle. **A fourth Moodle row, and the most maintained one on this tier: 344 commits, 4 authors, 2026-03 → 2026-10.** Gives an agent deadlines, grades, course files and forum search. 🟡 **Read-only for remote use** by the author's own statement — the capability ceiling is the safety argument, as with `canvas-lms-student-mcp` |
-| 🆕 moodle-ai-assistant | [microsoft/moodle-ai-assistant](https://github.com/microsoft/moodle-ai-assistant) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | not re-derived | Not placed | Moodle. An **accelerator** for deploying an AI agent on Moodle, published in the **`microsoft`** organisation; its `local_aichat` component is `0.1.0`, **self-described alpha**. 🔵 Already carried on these shelves; re-verified first-hand at `p359` |
+| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT (`LICENSE`) | `main/LICENSE` | **302** | Not placed | Canvas LMS |
+| moodle-mcp | [falkenslab/moodle-mcp](https://github.com/falkenslab/moodle-mcp) | MIT (`LICENSE`) | `main/LICENSE` | **1** | Not placed | Moodle |
+| tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT (`LICENSE`) | `main/LICENSE` | **53** | Not placed | Tutor (Open edX distribution) |
+| openedx-mcp | [blend-ed/openedx-mcp](https://github.com/blend-ed/openedx-mcp) | **AGPL-3.0** (`LICENSE`, branch `master`) | `master/LICENSE` | **2** | Not placed | Open edX. 🔴 Copyleft — the only non-permissive row on this tier |
+| anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT (`LICENSE`) | `main/LICENSE` | **525** | Not placed | Anki spaced repetition |
+| classroom-mcp | [sandraschi/classroom-mcp](https://github.com/sandraschi/classroom-mcp) | MIT (`LICENSE`, branch `master`) | `master/LICENSE` | **1** | Not placed | Google Classroom |
+| canvas-lms-agent | [likr/canvas-lms-agent](https://github.com/likr/canvas-lms-agent) | MIT **at depth** — `canvas-lms-mcp/LICENSE` | `master/canvas-lms-mcp/LICENSE` | **0** | Not placed | Canvas. 🔴 Repository **root carries no grant**; the MIT text licenses the `canvas-lms-mcp` package, not the repository |
+| mcp-brasil | [Mcp-Brasil/mcp-brasil](https://github.com/Mcp-Brasil/mcp-brasil) | MIT (`LICENSE`) | `main/LICENSE` | **1 820** | **LATAM** | Brazilian public-data MCP; education datasets among them |
+| 🆕 canvas-lms-mcp | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | MIT (`LICENSE`, holder *Christian Bru*, 2026) | `main/LICENSE` | **10** | Not placed | Canvas. TypeScript. **The widest Canvas surface verified on this base — its README states 183 tools**; reads courses, assignments, submissions, rubrics and quizzes, and **grades and comments** |
+| 🆕 moodle-mcp (Rust) | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT (`LICENSE`, holder *G36maid*, 2026) | `main/LICENSE` | **21** | Not placed | Moodle. **Rust**, published to `crates.io`, CI + Codecov in-tree. Goes beyond reading: uploads and submits work. README claims validation against Moodle 3.7–5.x |
+| 🆕 canvas-lms-student-mcp | [AnonymousOnyx22/canvas-lms-student-mcp](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | MIT (`LICENSE`, 2026) | `main/LICENSE` | **0** | Not placed | Canvas, **read-only by construction** — 12 tools, cannot submit, edit or delete. 🟢 The only row on this tier whose *capability ceiling* is the safety argument |
+| 🆕 gradescope-mcp | [Yuanpeng-Li/gradescope-mcp](https://github.com/Yuanpeng-Li/gradescope-mcp) | MIT (`LICENSE`, holder *Yuanpeng Li*, 2026) | `main/LICENSE` | **8** | Not placed | **Gradescope** — 34 tools: course management, batch grading, rubric CRUD. 🟢 **Every write tool is preview-first** and refuses to mutate without `confirm_write=True`. The first grading-capable row on this base whose safety argument is a *protocol*, not a ceiling |
+| 🆕 elimu-mcp | [gabrielmahia/elimu-mcp](https://github.com/gabrielmahia/elimu-mcp) | MIT (`LICENSE`, holder *Gabriel Mahia*, 2026) | `main/LICENSE` | **0** | **EMEA** (Kenya) | Kenya's education system — school registry, KCSE/KCPE results, HELB loans, TVET programmes. 5 tools, on PyPI. 🔴 Read the two caveats below before quoting it to a client |
+| 🆕 Canvas-Agent | [hughsibbele/Canvas-Agent](https://github.com/hughsibbele/Canvas-Agent) | MIT (`LICENSE`, holder *Hugh Koeze*, 2026) | `main/LICENSE` | **1** | Not placed | Canvas. A sixth independent Canvas address — the platform is now **over-supplied** on this tier, which is itself the finding |
+| 🆕 moodle-cli-hku | [Neutralmilkzzz/moodle-cli-hku](https://github.com/Neutralmilkzzz/moodle-cli-hku) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | **0** | **APAC** | Moodle. **A fourth Moodle row, and the most maintained one on this tier: 344 commits, 4 authors, 2026-03 → 2026-10.** Gives an agent deadlines, grades, course files and forum search. 🟡 **Read-only for remote use** by the author's own statement — the capability ceiling is the safety argument, as with `canvas-lms-student-mcp` |
+| 🆕 moodle-ai-assistant | [microsoft/moodle-ai-assistant](https://github.com/microsoft/moodle-ai-assistant) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | **5** | Not placed | Moodle. An **accelerator** for deploying an AI agent on Moodle, published in the **`microsoft`** organisation; its `local_aichat` component is `0.1.0`, **self-described alpha**. 🔵 Already carried on these shelves; re-verified first-hand at `p359` |
 
 ### 🟢 The Moodle connector gap closed this pass, and the row that looks like it closed it is the one to avoid
 
@@ -198,12 +257,12 @@ would ever have surfaced it: only reading the payload does.
 | Dolos | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT (`LICENSE`) | `main/LICENSE` | **353** | EMEA | Source-code plagiarism detection for programming assignments. Ghent University, Belgium |
 | INGInious | [INGInious/INGInious](https://github.com/INGInious/INGInious) | **AGPL-3.0 — "most of the files"** (`LICENSE`) | `main/LICENSE` | **243** | EMEA | Secure automated exercise assessment. UCLouvain, Belgium. 🟡 The grant text itself scopes to *most* files — treat as mixed |
 | pyedmine | [ZhijieXiong/pyedmine](https://github.com/ZhijieXiong/pyedmine) | MIT (`LICENSE`) | `main/LICENSE` | **82** | APAC | Educational data mining framework (knowledge tracing, exercise recommendation) |
-| Ares2 | [ls1intum/Ares2](https://github.com/ls1intum/Ares2) | MIT (`LICENSE`) | `main/LICENSE` | not re-derived | EMEA | Automated grading / secure test execution. TU Munich chair of applied software engineering |
-| pykt-toolkit | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT (`LICENSE`) | `main/LICENSE` | not re-derived | APAC | Knowledge-tracing benchmark and model library |
-| k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | not re-derived | North America | K-12 teacher skill pack |
-| agent-skills | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | not re-derived | North America | Education agent skills from Learning Commons |
-| evaluators | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | **MIT for code**, stated in `LICENSE.md` prose | `main/LICENSE.md` | not re-derived | North America | Evaluators for educational AI output. 🟡 Split grant — the file is a licensing *statement*, not a stock licence |
-| 🆕 OpenLRW | [jeffyding/OpenLRW](https://github.com/jeffyding/OpenLRW) | 🟢 **ECL-2.0** — Educational Community License v2.0 (`LICENSE`), Apache-2.0 with a narrowed §3 patent grant | `master/LICENSE` | not re-derived | **North America** | **The only address found that carries OneRoster *and* Caliper *and* xAPI in one learning-records warehouse.** 🔴 **92 commits, 2016-10 → 2018-01 — eight years stale**, and the GitHub topic page that surfaced it reports *"updated September 2025"*, which the commit channel refutes. 🔵 Shelved as a **schema reference**, not a dependency |
+| Ares2 | [ls1intum/Ares2](https://github.com/ls1intum/Ares2) | MIT (`LICENSE`) | `main/LICENSE` | **5** | EMEA | Automated grading / secure test execution. TU Munich chair of applied software engineering |
+| pykt-toolkit | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT (`LICENSE`) | `main/LICENSE` | **451** | APAC | Knowledge-tracing benchmark and model library |
+| k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | **579** | North America | K-12 teacher skill pack |
+| agent-skills | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | **40** | North America | Education agent skills from Learning Commons |
+| evaluators | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | **MIT for code**, stated in `LICENSE.md` prose | `main/LICENSE.md` | **86** | North America | Evaluators for educational AI output. 🟡 Split grant — the file is a licensing *statement*, not a stock licence |
+| 🆕 OpenLRW | [jeffyding/OpenLRW](https://github.com/jeffyding/OpenLRW) | 🟢 **ECL-2.0** — Educational Community License v2.0 (`LICENSE`), Apache-2.0 with a narrowed §3 patent grant | `master/LICENSE` | **0** | **North America** | **The only address found that carries OneRoster *and* Caliper *and* xAPI in one learning-records warehouse.** 🔴 **92 commits, 2016-10 → 2018-01 — eight years stale**, and the GitHub topic page that surfaced it reports *"updated September 2025"*, which the commit channel refutes. 🔵 Shelved as a **schema reference**, not a dependency |
 
 ## 🆕 LATAM-origin agents — this base's first shelvable tier from the region
 
@@ -214,9 +273,9 @@ exists in volume. Almost none of it is licensed.** These are the rows that are.
 
 | Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
 | --- | --- | --- | --- | ---: | --- | --- |
-| 🆕 TutorIA | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | MIT (`LICENSE`, holder *Grupo Sirius*, 2026) | `main/LICENSE` | not re-derived | **LATAM** (Colombia) | 🟢 **The best-placed LATAM row on this base.** Autonomous tutor agent for **rural** higher education in Risaralda, built at Universidad Tecnológica de Pereira — **integrated inside Open edX**, Claude API as the language engine, TTS replies, animated avatar, teacher statistics panel, context persisted across sessions. Ships against real courses: Programación I (Python) and Introducción a la Matemática |
-| 🆕 OpenPiar | [Dramoscuello/openpiar](https://github.com/Dramoscuello/openpiar) | **AGPL-3.0** (`LICENSE`) | `main/LICENSE` | not re-derived | **LATAM** (Colombia) | Manages the **PIAR** — *Plan Individual de Ajustes Razonables* — for students with disabilities or specific learning disorders, and emits the documents Colombian law requires. An AI pedagogical assistant proposes DUA adjustments from the student profile, the institution's PEI, the subject and the teacher-declared barriers. 🔴 Network copyleft |
-| 🆕 OpenTest | [Riskbreaker2077/open-test](https://github.com/Riskbreaker2077/open-test) | MIT (`LICENSE`, holder *Camilo Moreno*, 2026) | `main/LICENSE` | not re-derived | Not placed (Spanish-language) | Classroom assessment on a **local server with no internet**: the teacher runs it on a laptop, tablets join over the school intranet, and **every student gets a different paper** — questions drawn at random from a shared bank, answer options shuffled. Node ≥22, `better-sqlite3`, vanilla JS, Windows installer, v1.8.1 |
+| 🆕 TutorIA | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | MIT (`LICENSE`, holder *Grupo Sirius*, 2026) | `main/LICENSE` | **0** | **LATAM** (Colombia) | 🟢 **The best-placed LATAM row on this base.** Autonomous tutor agent for **rural** higher education in Risaralda, built at Universidad Tecnológica de Pereira — **integrated inside Open edX**, Claude API as the language engine, TTS replies, animated avatar, teacher statistics panel, context persisted across sessions. Ships against real courses: Programación I (Python) and Introducción a la Matemática |
+| 🆕 OpenPiar | [Dramoscuello/openpiar](https://github.com/Dramoscuello/openpiar) | **AGPL-3.0** (`LICENSE`) | `main/LICENSE` | **2** | **LATAM** (Colombia) | Manages the **PIAR** — *Plan Individual de Ajustes Razonables* — for students with disabilities or specific learning disorders, and emits the documents Colombian law requires. An AI pedagogical assistant proposes DUA adjustments from the student profile, the institution's PEI, the subject and the teacher-declared barriers. 🔴 Network copyleft |
+| 🆕 OpenTest | [Riskbreaker2077/open-test](https://github.com/Riskbreaker2077/open-test) | MIT (`LICENSE`, holder *Camilo Moreno*, 2026) | `main/LICENSE` | **0** | Not placed (Spanish-language) | Classroom assessment on a **local server with no internet**: the teacher runs it on a laptop, tablets join over the school intranet, and **every student gets a different paper** — questions drawn at random from a shared bank, answer options shuffled. Node ≥22, `better-sqlite3`, vanilla JS, Windows installer, v1.8.1 |
 
 🟢 **`OpenPiar` is the most regulation-grounded row on this entire base.** Its `readme`
 cites the instruments it implements — **Decreto 1421 de 2017** (which makes the PIAR
@@ -251,16 +310,16 @@ at every rung, which makes it one of the cleanest things on this shelf to embed.
 
 | Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
 | --- | --- | --- | --- | ---: | --- | --- |
-| Echo-Loop | [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | **AGPL-3.0** | `main/LICENSE` | **4 222** | APAC | AI English listening/speaking trainer: intensive listening, shadowing, blind listening, retelling, spaced review. 🔴 Network copyleft |
+| Echo-Loop | [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | **AGPL-3.0** | `main/LICENSE` | **4 226** | APAC | AI English listening/speaking trainer: intensive listening, shadowing, blind listening, retelling, spaced review. 🔴 Network copyleft |
 | FSRS4Anki | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | MIT (`LICENSE`) | `main/LICENSE` | **4 111** | Not placed | The FSRS scheduler as an Anki add-on. Its own topics name `intelligent-tutoring-system` |
-| engram | [nagisanzenin/engram](https://github.com/nagisanzenin/engram) | MIT (`LICENSE`) | `main/LICENSE` | **1 458** | Not placed | Free-recall verification *with receipts* + FSRS scheduling; ships as an agent plugin |
-| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT (`LICENSE`) | `main/LICENSE` | **1 111** | APAC | AI study partner: plans the route, teaches, builds a project alongside the learner |
+| engram | [nagisanzenin/engram](https://github.com/nagisanzenin/engram) | MIT (`LICENSE`) | `main/LICENSE` | **1 457** | Not placed | Free-recall verification *with receipts* + FSRS scheduling; ships as an agent plugin |
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT (`LICENSE`) | `main/LICENSE` | **1 116** | APAC | AI study partner: plans the route, teaches, builds a project alongside the learner |
 | trane | [trane-project/trane](https://github.com/trane-project/trane) | **AGPL-3.0** | `master/LICENSE` | **848** | Not placed | Deliberate-practice engine over a mastery dependency graph (Rust). 🔴 Network copyleft |
 | FSRS (the algorithm) | [open-spaced-repetition/free-spaced-repetition-scheduler](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | MIT (`LICENSE`) | `main/LICENSE` | **729** | Not placed | The DSR-model specification itself — the thing to implement against |
 | human-skill-tree | [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 🟡 **AGPL-3.0 notice + MIT for `skills/`** | `master/LICENSE` | **575** | APAC | 30+ skills from K-12 to career, built on cognitive science. 🟡 Split grant — see the flags below |
 | py-fsrs | [open-spaced-repetition/py-fsrs](https://github.com/open-spaced-repetition/py-fsrs) | MIT (`LICENSE`) | `main/LICENSE` | **514** | Not placed | The embeddable Python scheduler. **This is the row to build on** |
-| learn-anything | [ChenChenyaqi/learn-anything](https://github.com/ChenChenyaqi/learn-anything) | MIT (`LICENSE`) | `main/LICENSE` | **487** | Not placed | Recursive learning: Socratic deep-dives plus TDD-style exercises inside a coding assistant |
-| learn-faster-kit | [hluaguo/learn-faster-kit](https://github.com/hluaguo/learn-faster-kit) | MIT (`LICENSE`) | `main/LICENSE` | **391** | Not placed | Learning coach: personalised syllabus, spaced repetition, progress tracking |
+| learn-anything | [ChenChenyaqi/learn-anything](https://github.com/ChenChenyaqi/learn-anything) | MIT (`LICENSE`) | `main/LICENSE` | **488** | Not placed | Recursive learning: Socratic deep-dives plus TDD-style exercises inside a coding assistant |
+| learn-faster-kit | [hluaguo/learn-faster-kit](https://github.com/hluaguo/learn-faster-kit) | MIT (`LICENSE`) | `main/LICENSE` | **392** | Not placed | Learning coach: personalised syllabus, spaced repetition, progress tracking |
 
 🔵 **Why this tier is worth more than its star counts.** Every tutoring agent on the
 shelf above decides *what* to teach next and almost none decides *when* to return to
@@ -280,11 +339,11 @@ so licence hygiene is **not** a regional property. These are the rows that carry
 
 | Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
 | --- | --- | --- | --- | ---: | --- | --- |
-| 🆕 Ujian Sekolah | [naufaldi/teacher-exam](https://github.com/naufaldi/teacher-exam) | 🟢 **MIT** (holder *Naufaldi Rafif*) | `main/LICENSE` | not re-derived | **APAC** (Indonesia) | 🟢 **The best-benched row this pass: 435 commits, 4 authors, last 2026-10-14, live deployment.** One sentence — *"PPKn kelas 5, sumatif tengah semester, sila ke-3, 20 soal"* — becomes an **A4 print-ready exam**: mixed item types, answer key, and a teacher-facing *pembahasan* for every question, bound to **Kurikulum Merdeka** CP/TP by a "Penjaga Kurikulum" review step. React 19 + Effect-TS + Effect HttpApi. 🔴 **Core generation calls a hosted proprietary model** — the orchestration and the curriculum binding are reusable, the generator is not self-hostable |
-| 🆕 EvalStudio | [ajjalti/EvalStudio](https://github.com/ajjalti/EvalStudio) | 🟡 **AGPL-3.0** | `main/LICENSE` | not re-derived | **EMEA** (French-language) | Exam authoring plus **computer-vision marking of scanned paper copies** — the half of assessment this base otherwise reaches only through digital-first tools, and the half most of the world's classrooms actually run on. 31 commits, 3 authors. 🔴 Network copyleft |
-| 🆕 Open Quiz | [guillaume-behr/open-quiz](https://github.com/guillaume-behr/open-quiz) | 🟢 **MIT** (holders *Guillaume Behr · Théo Willem*) | `master/LICENSE` | not re-derived | **EMEA** (French-language) | Self-hostable quiz platform: teachers author, students sit, MCQ auto-marked and written answers routed to a human, with re-runnable practice banks. 240 commits, 5 authors. 🔵 **9 commits from `anthropic.com`** — the first row this base has shelved where the agent-assisted bench is visible in the commit channel |
-| 🆕 Révision CEB | [nvaes/CEB](https://github.com/nvaes/CEB) | 🟢 **MIT** (holder *Nicolas Vaes*) | `main/LICENSE` | not re-derived | **EMEA** (🇧🇪 Belgium) | Splits the **official CEB** past papers — *Certificat d'Études de Base*, the Belgian end-of-primary examination — into individual items. 🟢 **Auto-marks only the checkbox items and says so, on the stated grounds that automatic marking of free text would be unreliable** — a more honest integrity posture than several better-funded rows on this shelf. 🟡 Thin bench: 5 commits, 1 author. 🟢 Placed on the `nvaestech.be` commit domain — a **ccTLD is the strongest placement channel used this pass** |
-| 🆕 Tournesol scolaire | [diego-costanzo/tournesol-scolaire](https://github.com/diego-costanzo/tournesol-scolaire) | 🟢 **MIT** (holder *Diego Costanzo*) | `main/LICENSE` | not re-derived | **EMEA** (French / Italian curriculum) | *Cahier de textes* plus timetable and active revision, **zero-cloud and local-only by design** — the privacy posture a European school procurement asks for, from CM1 to the *Maturità*. 🔴 Thin: 8 commits, 1 author, last 2026-09-25. 🟡 **Placed from curriculum vocabulary alone** — the author's commit email is anonymised, so this is the weakest placement on the tier and is marked as such |
+| 🆕 Ujian Sekolah | [naufaldi/teacher-exam](https://github.com/naufaldi/teacher-exam) | 🟢 **MIT** (holder *Naufaldi Rafif*) | `main/LICENSE` | **21** | **APAC** (Indonesia) | 🟢 **The best-benched row this pass: 435 commits, 4 authors, last 2026-10-14, live deployment.** One sentence — *"PPKn kelas 5, sumatif tengah semester, sila ke-3, 20 soal"* — becomes an **A4 print-ready exam**: mixed item types, answer key, and a teacher-facing *pembahasan* for every question, bound to **Kurikulum Merdeka** CP/TP by a "Penjaga Kurikulum" review step. React 19 + Effect-TS + Effect HttpApi. 🔴 **Core generation calls a hosted proprietary model** — the orchestration and the curriculum binding are reusable, the generator is not self-hostable |
+| 🆕 EvalStudio | [ajjalti/EvalStudio](https://github.com/ajjalti/EvalStudio) | 🟡 **AGPL-3.0** | `main/LICENSE` | **0** | **EMEA** (French-language) | Exam authoring plus **computer-vision marking of scanned paper copies** — the half of assessment this base otherwise reaches only through digital-first tools, and the half most of the world's classrooms actually run on. 31 commits, 3 authors. 🔴 Network copyleft |
+| 🆕 Open Quiz | [guillaume-behr/open-quiz](https://github.com/guillaume-behr/open-quiz) | 🟢 **MIT** (holders *Guillaume Behr · Théo Willem*) | `master/LICENSE` | **1** | **EMEA** (French-language) | Self-hostable quiz platform: teachers author, students sit, MCQ auto-marked and written answers routed to a human, with re-runnable practice banks. 240 commits, 5 authors. 🔵 **9 commits from `anthropic.com`** — the first row this base has shelved where the agent-assisted bench is visible in the commit channel |
+| 🆕 Révision CEB | [nvaes/CEB](https://github.com/nvaes/CEB) | 🟢 **MIT** (holder *Nicolas Vaes*) | `main/LICENSE` | **0** | **EMEA** (🇧🇪 Belgium) | Splits the **official CEB** past papers — *Certificat d'Études de Base*, the Belgian end-of-primary examination — into individual items. 🟢 **Auto-marks only the checkbox items and says so, on the stated grounds that automatic marking of free text would be unreliable** — a more honest integrity posture than several better-funded rows on this shelf. 🟡 Thin bench: 5 commits, 1 author. 🟢 Placed on the `nvaestech.be` commit domain — a **ccTLD is the strongest placement channel used this pass** |
+| 🆕 Tournesol scolaire | [diego-costanzo/tournesol-scolaire](https://github.com/diego-costanzo/tournesol-scolaire) | 🟢 **MIT** (holder *Diego Costanzo*) | `main/LICENSE` | **0** | **EMEA** (French / Italian curriculum) | *Cahier de textes* plus timetable and active revision, **zero-cloud and local-only by design** — the privacy posture a European school procurement asks for, from CM1 to the *Maturità*. 🔴 Thin: 8 commits, 1 author, last 2026-09-25. 🟡 **Placed from curriculum vocabulary alone** — the author's commit email is anonymised, so this is the weakest placement on the tier and is marked as such |
 
 🔴 **Twelve live addresses from the same two legs carry no grant at all.** Named rather
 than counted, because the fix is one file and it is not Globant's to make — for any one of
@@ -341,7 +400,7 @@ category and it is **almost entirely Chinese-language**.
 
 | Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
 | --- | --- | --- | --- | ---: | --- | --- |
-| math-question-bank | [JudgePeach/math-question-bank](https://github.com/JudgePeach/math-question-bank) | **AGPL-3.0** | `main/LICENSE` | **330** | APAC | High-school maths item bank: live LaTeX rendering, LLM parsing and solving, formula OCR. 🔴 Network copyleft |
+| math-question-bank | [JudgePeach/math-question-bank](https://github.com/JudgePeach/math-question-bank) | **AGPL-3.0** | `main/LICENSE` | **332** | APAC | High-school maths item bank: live LaTeX rendering, LLM parsing and solving, formula OCR. 🔴 Network copyleft |
 | MathCyclus (Lingxi) | [JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant](https://github.com/JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant) | 🔴 **no grant file — README prose only** | `main/` — none found | **147** | APAC | Streamlit + LaTeX item bank with OCR, TikZ rendering and automated paper assembly. 🔴 Not usable until a `LICENSE` exists |
 | Grader-agent | [erictrainnlpinxihu/Grader-agent](https://github.com/erictrainnlpinxihu/Grader-agent) | MIT (`LICENSE`) | `main/LICENSE` | **101** | APAC | Five-stage grading loop (perceive→plan→act→observe→respond). **Write actions are not in the tool table — the agent can only emit proposals**, and each `GradingDraft` binds to a rubric line and a paragraph hash so a verdict is replayable |
 | question-bank | [gygy-open/question-bank](https://github.com/gygy-open/question-bank) | **AGPL-3.0** | `main/LICENSE` | **73** | APAC | AI-native item bank: Word/Markdown/image import, knowledge-point matching, review workflow, desktop and Docker builds. 🔴 Network copyleft |
@@ -372,8 +431,8 @@ yield, and a successor running the same leg will see the same thing.
 | exampro | [lebmatter/exampro](https://github.com/lebmatter/exampro) | 🟡 **MIT, unfilled template** (`license.txt`) | 🔴 `main/license.txt` | **72** | Not placed | Proctored exams for the Frappe framework — pairs with `frappe/lms` |
 | edx-proctoring | [openedx/edx-proctoring](https://github.com/openedx/edx-proctoring) | **AGPL-3.0** | `master/LICENSE.txt` | **69** | North America | First-party Open edX proctoring subsystem |
 | moodle quizaccess_proctoring | [eLearning-BS23/moodle-quizaccess_proctoring](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring) | **AGPL-3.0** | `master/LICENSE.md` | **30** | APAC | Moodle quiz-access proctoring plugin (Brain Station 23) |
-| 🆕 exam-proctor | [shaheeranser/exam-proctor](https://github.com/shaheeranser/exam-proctor) | 🟢 **Apache-2.0** (`LICENSE`) — grant published here for the first time at `p359` | `main/LICENSE` | not re-derived | **APAC** — `+0800`/`+0500` | 🟢 **The only proctoring address on this base that is an LTI 1.3 tool** — launches from inside Moodle, authors quizzes, passes grades back over AGS. 🔴 25 commits, **1 author**. 🔴 **Reference architecture only:** `p190` read its source — head pose, iris deviation, `face-api` identity → **GDPR Art. 9**, and clear of the **Art. 5(1)(f)** prohibition *by one unset MediaPipe default*. See `verticals/solutions.md` |
-| 🆕 openproct | [OpenProct/openproct](https://github.com/OpenProct/openproct) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | not re-derived | **APAC** | Self-hosted, privacy-first proctoring. 🔴 **4 commits, nothing since 2025-10-26** — read the maintenance note below before planning on it |
+| 🆕 exam-proctor | [shaheeranser/exam-proctor](https://github.com/shaheeranser/exam-proctor) | 🟢 **Apache-2.0** (`LICENSE`) — grant published here for the first time at `p359` | `main/LICENSE` | **0** | **APAC** — `+0800`/`+0500` | 🟢 **The only proctoring address on this base that is an LTI 1.3 tool** — launches from inside Moodle, authors quizzes, passes grades back over AGS. 🔴 25 commits, **1 author**. 🔴 **Reference architecture only:** `p190` read its source — head pose, iris deviation, `face-api` identity → **GDPR Art. 9**, and clear of the **Art. 5(1)(f)** prohibition *by one unset MediaPipe default*. See `verticals/solutions.md` |
+| 🆕 openproct | [OpenProct/openproct](https://github.com/OpenProct/openproct) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | **2** | **APAC** | Self-hosted, privacy-first proctoring. 🔴 **4 commits, nothing since 2025-10-26** — read the maintenance note below before planning on it |
 
 🔵 **The usable integrity story is not in this table.** Of five rows, one has no grant,
 one has no identified licensor, and two are AGPL plugins to AGPL hosts. The row a
@@ -436,13 +495,13 @@ already holds permissive special-education rows and they still stand.
 
 | Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
 | --- | --- | --- | --- | ---: | --- | --- |
-| 🆕 iep-system | [dg13788/iep-system](https://github.com/dg13788/iep-system) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | not re-derived | **APAC** | **The only permissive row on this tier.** Chinese-language IEP management for special-education schools: student records, assessments, a five-step IEP wizard, e-signatures. React / PHP / MySQL. 38 commits, 4 authors, `+0800` on all 38 |
-| 🆕 a-iep | [The-Burnes-Center/a-iep](https://github.com/The-Burnes-Center/a-iep) | 🔴 **CC-BY-NC-4.0 — NonCommercial** (`LICENSE`) | `main/LICENSE` | not re-derived | **North America** | Serverless app that helps **parents** understand their child's IEP: OCR, multilingual translation, plain-language simplification. 836 commits, 7 authors, 2025-05 → 2026-10 — 🟢 **by far the most maintained row on this tier** and 🔴 the one a paid engagement cannot touch |
-| 🆕 special-education-rag (EduRAG) | [omerpanay/special-education-rag](https://github.com/omerpanay/special-education-rag) | 🔴 **no grant** — nothing at 7 probed paths | `main/` — none found | not re-derived | **EMEA** | Agentic teacher assistant with **IEP draft generation** over a RAG pipeline. 19 commits, 1 author, `+0300` on all 19 (Türkiye) |
-| 🆕 IEP Ally | [boktoday/iep-agent-hermes-agent](https://github.com/boktoday/iep-agent-hermes-agent) | 🔴 **PolyForm Noncommercial 1.0.0** (`LICENSE`) | `main/LICENSE` | not re-derived | **APAC** | Local-first IEP **planning agent for parents**, built on Hermes Agent. 60 commits in a single day, `+1100` (Australia). 🔴 Second PolyForm row on this base after `mrgutierrezmario/lecture-note-app` |
-| 🆕 SUMRY | [sumry-app/SUMRY](https://github.com/sumry-app/SUMRY) | 🔴 **no grant — and the README carries an MIT badge** (see flags) | 🔴 `main/` — none found | not re-derived | 🟡 Unplaceable | AI-assisted IEP platform: goal tracking, progress data. React / Supabase. 66 commits, 2 authors; stream splits `+0000`×38 / `-0600`×26, so the commit channel **cannot** place it |
-| 🆕 IEP GEN | [JeabtiE/jump-hackathon-demo](https://github.com/JeabtiE/jump-hackathon-demo) | 🔴 **no grant** — nothing at 7 probed paths | `main/` — none found | not re-derived | **APAC** | Generates IEP goals and a materials list against the Thai A-B (ก-ฮ) curriculum, exports to an official document. JUMP THAILAND Hackathon 2026. 108 commits, `+0700` on all 108 — 🟢 the commit channel corroborates the README's country |
-| 🆕 Rapid-IEP | [Pragmatic-Works/Rapid-IEP](https://github.com/Pragmatic-Works/Rapid-IEP) | 🔴 **no grant** — nothing at 7 probed paths | `main/` — none found | not re-derived | **North America** | Power Apps IEP paperwork workflow for a district or state agency. 🔴 **15 commits, all inside four days in June 2023 — dead for three years.** Named so no successor promotes it |
+| 🆕 iep-system | [dg13788/iep-system](https://github.com/dg13788/iep-system) | 🟢 **MIT** (`LICENSE`) | `main/LICENSE` | **1** | **APAC** | **The only permissive row on this tier.** Chinese-language IEP management for special-education schools: student records, assessments, a five-step IEP wizard, e-signatures. React / PHP / MySQL. 38 commits, 4 authors, `+0800` on all 38 |
+| 🆕 a-iep | [The-Burnes-Center/a-iep](https://github.com/The-Burnes-Center/a-iep) | 🔴 **CC-BY-NC-4.0 — NonCommercial** (`LICENSE`) | `main/LICENSE` | **3** | **North America** | Serverless app that helps **parents** understand their child's IEP: OCR, multilingual translation, plain-language simplification. 836 commits, 7 authors, 2025-05 → 2026-10 — 🟢 **by far the most maintained row on this tier** and 🔴 the one a paid engagement cannot touch |
+| 🆕 special-education-rag (EduRAG) | [omerpanay/special-education-rag](https://github.com/omerpanay/special-education-rag) | 🔴 **no grant** — nothing at 7 probed paths | `main/` — none found | **0** | **EMEA** | Agentic teacher assistant with **IEP draft generation** over a RAG pipeline. 19 commits, 1 author, `+0300` on all 19 (Türkiye) |
+| 🆕 IEP Ally | [boktoday/iep-agent-hermes-agent](https://github.com/boktoday/iep-agent-hermes-agent) | 🔴 **PolyForm Noncommercial 1.0.0** (`LICENSE`) | `main/LICENSE` | **0** | **APAC** | Local-first IEP **planning agent for parents**, built on Hermes Agent. 60 commits in a single day, `+1100` (Australia). 🔴 Second PolyForm row on this base after `mrgutierrezmario/lecture-note-app` |
+| 🆕 SUMRY | [sumry-app/SUMRY](https://github.com/sumry-app/SUMRY) | 🔴 **no grant — and the README carries an MIT badge** (see flags) | 🔴 `main/` — none found | **0** | 🟡 Unplaceable | AI-assisted IEP platform: goal tracking, progress data. React / Supabase. 66 commits, 2 authors; stream splits `+0000`×38 / `-0600`×26, so the commit channel **cannot** place it |
+| 🆕 IEP GEN | [JeabtiE/jump-hackathon-demo](https://github.com/JeabtiE/jump-hackathon-demo) | 🔴 **no grant** — nothing at 7 probed paths | `main/` — none found | 🔴 **not measurable** — `p361`'s one index-invisible address | **APAC** | Generates IEP goals and a materials list against the Thai A-B (ก-ฮ) curriculum, exports to an official document. JUMP THAILAND Hackathon 2026. 108 commits, `+0700` on all 108 — 🟢 the commit channel corroborates the README's country |
+| 🆕 Rapid-IEP | [Pragmatic-Works/Rapid-IEP](https://github.com/Pragmatic-Works/Rapid-IEP) | 🔴 **no grant** — nothing at 7 probed paths | `main/` — none found | **2** | **North America** | Power Apps IEP paperwork workflow for a district or state agency. 🔴 **15 commits, all inside four days in June 2023 — dead for three years.** Named so no successor promotes it |
 
 ### 🔴 The measurement, and why this tier is the one to quote it on
 
@@ -479,14 +538,14 @@ assets — and they are where the licence traps live.
 
 | Asset | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | Substance |
 | --- | --- | --- | --- | ---: | --- | --- |
-| os-taxonomy | [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | **ODbL-1.0** (`LICENSE`) | `main/LICENSE` | **6 752** | Not placed | Open subject/skills taxonomy. Share-alike binds a derivative *database*, not a produced work |
-| cn-math-taxonomy | [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 **CC-BY-NC-4.0 — NonCommercial** (`LICENSE`) | `main/LICENSE` | **1 704** | APAC | China K-12 maths + English knowledge graph, 人教版/课标-aligned: 1 244 nodes, 5 123 items, adaptive diagnosis. 🔴 **Not usable in a paid client engagement** |
+| os-taxonomy | [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | **ODbL-1.0** (`LICENSE`) | `main/LICENSE` | **6 898** | Not placed | Open subject/skills taxonomy. Share-alike binds a derivative *database*, not a produced work |
+| cn-math-taxonomy | [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 **CC-BY-NC-4.0 — NonCommercial** (`LICENSE`) | `main/LICENSE` | **1 861** | APAC | China K-12 maths + English knowledge graph, 人教版/课标-aligned: 1 244 nodes, 5 123 items, adaptive diagnosis. 🔴 **Not usable in a paid client engagement** |
 | knowledge-graph | [learning-commons-org/knowledge-graph](https://github.com/learning-commons-org/knowledge-graph) | **MIT code / data is per-dataset** (`LICENSE.md`) | `main/LICENSE.md` | **161** | North America | Instructional-content + research data layer. 🔴 Datasets are labelled Open, Open+Gated or **Gated**; Gated content is **not** under CC BY 4.0 or CC0. Check the licence per download |
 | bncc-dados | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | MIT (`LICENSE`) | `main/LICENSE` | **22** | **LATAM** | Brazil's BNCC national curriculum as verified open data: 1 721 learning objectives in JSON, SQLite and CSV |
 | knowledge-import-pipeline | [clownjee/knowledge-import-pipeline](https://github.com/clownjee/knowledge-import-pipeline) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | **18** | APAC | China compulsory-education textbook → AI knowledge extraction, interactive KG, vector retrieval, prerequisite graph, MCP query service |
 | polymath | [aclascollege/polymath](https://github.com/aclascollege/polymath) | **ODbL-1.0** (database) + **CC-BY-SA-4.0** (authored text) | `main/LICENSE` | absent from default index | APAC | Curriculum taxonomy: disciplines, courses, prerequisites, degrees, skills, careers. Placed APAC by commit stream (+08:00) |
-| 🆕 oak-curriculum-ontology | [oaknational/oak-curriculum-ontology](https://github.com/oaknational/oak-curriculum-ontology) | 🟢 **OGL-3.0** (`ontology/`, `data/`, `docs/`) + **MIT** (`scripts/`, workflows) — both read at `LICENSE.md` | `main/LICENSE.md` | not re-derived | **EMEA** | Oak National Academy's curriculum as a formal **OWL/SKOS** ontology, aligned to the **National Curriculum for England**. v0.1.3, early release; CI validates the ontology and generates distributions. 🟢 **The data grant permits commercial exploitation on attribution alone — no share-alike** |
-| 🆕 curriculum_knowledge_graph | [devissaputra/curriculum_knowledge_graph](https://github.com/devissaputra/curriculum_knowledge_graph) | MIT (`LICENSE`, 2026) | `main/LICENSE` | not re-derived | Not placed | **Typed** curriculum graph: `PREREQUISITE_OF`, `TEACHES`, `ASSESSES`, `ALIGNS_WITH`, with entity-type constraints enforced per relation. Alignment diagnostics, path analysis, provenance, expert-review workflow |
+| 🆕 oak-curriculum-ontology | [oaknational/oak-curriculum-ontology](https://github.com/oaknational/oak-curriculum-ontology) | 🟢 **OGL-3.0** (`ontology/`, `data/`, `docs/`) + **MIT** (`scripts/`, workflows) — both read at `LICENSE.md` | `main/LICENSE.md` | **20** | **EMEA** | Oak National Academy's curriculum as a formal **OWL/SKOS** ontology, aligned to the **National Curriculum for England**. v0.1.3, early release; CI validates the ontology and generates distributions. 🟢 **The data grant permits commercial exploitation on attribution alone — no share-alike** |
+| 🆕 curriculum_knowledge_graph | [devissaputra/curriculum_knowledge_graph](https://github.com/devissaputra/curriculum_knowledge_graph) | MIT (`LICENSE`, 2026) | `main/LICENSE` | **0** | Not placed | **Typed** curriculum graph: `PREREQUISITE_OF`, `TEACHES`, `ASSESSES`, `ALIGNS_WITH`, with entity-type constraints enforced per relation. Alignment diagnostics, path analysis, provenance, expert-review workflow |
 
 ### 🟢 EMEA gets its national-curriculum ontology, and the grant is better than the one this base already recommends
 

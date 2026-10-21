@@ -3,6 +3,78 @@ industry: education
 region: Global
 updated: 2026-10-21
 ---
+
+## Pass 361 · 2026-10-21 — 🟢 **a working GitHub index for the first time since `p355`**, two corrected rows, and the first permissive education-administration platform with real software behind it
+
+🟢 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`
+**OPEN** · `git log` over a blobless `--depth=200` clone **OPEN** · 🔴 `github.com`,
+`api.github.com/repos/*`, `api.github.com/search/*` and `codeload` all still **403 by
+`curl`**. 🟢 **The index answered through the session's GitHub MCP search tool** — the
+boundary is per-tool, not per-credential. See `agents/trending.md` for the full finding.
+
+🟢 **Gates:** whole-corpus liveness **277 / 277 live, 0 dead**; star re-derivation
+**273 of 277 measured**, **78 blind cells filled**, **89 published figures 89/89 clean**;
+🆕 archived sweep **1 of 277 — and it was on this shelf unflagged**.
+
+### 🔴 Two corrected rows, both from instruments this shelf did not have
+
+**1. `zmievsa/autograder` is ARCHIVED.** Read-only upstream, and it answers `ls-remote`
+exactly like a healthy repository — which is why 360 passes of liveness sweeps never
+caught it. 🔴 It sat on the autograding table of the shelf whose stated purpose is *the
+systems an engagement starts from*. Flagged.
+
+**2. The OneRoster row was a fork.** `p359` shelved
+[`jeffyding/OpenLRW`](https://github.com/jeffyding/OpenLRW) as the only OneRoster +
+Caliper + xAPI warehouse and dated it **January 2018**. 🔴 **0 ★, `fork: true`, created
+and last touched the same day.** 🟢 Canonical:
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW),
+**62 ★**, 25 forks, ECL-2.0 read from `master/LICENSE` — 🔵 **and the index's own
+classifier calls that grant `NOASSERTION`**, which is this base's payload-wins rule
+confirmed on a fresh case. 🟡 **Last commit 2020-02-06, so the advice stands** — read the
+schema, do not take the dependency. The address and the date were wrong; the
+recommendation was not.
+
+### 🟢 The row that settles `p357`'s most expensive finding
+
+🔴 **`p357`: *there is no permissive education ERP*. `p358` cracked it with a 1 ★ repo at
+four commits, and `p359` had to warn the crack was worthless.** 🟢 **`p361` found the
+real one, and ranked search is why.**
+
+| Platform | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
+|---|---|---|---|---:|---|
+| 🆕 🟢 **Academico** (school management / SIS) | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** | `main/LICENSE` | **408** | EMEA |
+
+🟢 **Measured first-hand on the commit channel, not from a badge: 151 forks, 139 commits
+in 2026, last commit 2026-10-20** — the day before this pass. Laravel + Filament,
+aimed at small and medium institutions.
+
+🔴 **What it does not do is make the LMS tier permissive.** Academico is *administration*
+— enrolments, courses, attendance, invoicing — not a VLE. For teaching and learning
+OpenOLAT remains the only full-featured permissive platform on these shelves, and
+everything else of scale is GPL or AGPL. 🔵 The shelf's three-way split is now written
+out on `verticals/solutions.md`: copyleft-with-software, permissive-without-software,
+and 🟢 permissive-with-software.
+
+### 🔴 A fresh instance of this shelf's standing warning, from a national body
+
+🟢 **England's Oak National Academy spells its grant `LICENCE`**, and
+`main/LICENSE` returns **404**
+([`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem),
+MIT, 8 ★). 🔴 **A scanner that probes `main/LICENSE` and stops reports England's open
+curriculum programme as unlicensed.** Of the 17 addresses added across the shelves this
+pass, **3 do not put their grant where a tool would look** — two on `master` while the
+ecosystem default is `main`, and this one on the British spelling.
+
+### 🔴 Three fields called "recency", and only one is a commit
+
+On `Apereo-Learning-Analytics-Initiative/OpenLRW`: `updated_at` **2026-08-04**,
+`pushed_at` **2025-09-12**, 🟢 **last commit on `master` 2020-02-06.** 🔴 `updated_at` is
+what a minimal search returns and it is off by six and a half years. 🔵 This widens
+`p359`'s topic-page rule to the API's own fields: **a date that is not a commit date is
+not a maintenance signal.**
+
+---
+
 ## Pass 360 · 2026-10-21 — **a national school-portal platform family, 360 passes in**, and the ref-list digest beats HEAD equality at telling an alias from a fork
 
 🔴 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`

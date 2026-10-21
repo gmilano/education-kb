@@ -3,6 +3,135 @@ industry: education
 region: Global
 updated: 2026-10-21
 ---
+
+## 2026-10-21 · Pass 361 — 🟢 **the index is OPEN, and the five passes that called it closed were measuring one transport.** 78 blind star cells filled, 17 new agents, and two published defects that no channel this base had could ever have found
+
+🟢 **Channel note — this is the pass's headline.** `git ls-remote --symref` **OPEN** ·
+`raw.githubusercontent.com` **OPEN** · `git log` over a blobless `--depth=200` clone
+**OPEN** · 🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*` **403** ·
+🔴 `api.github.com/search/*` **403** · 🔴 `codeload` **403** — all unchanged.
+🟢 **And the index answered anyway, through the session's GitHub MCP search tool.**
+
+🔵 **The boundary is per-tool, not per-credential.** On the same credential in the same
+session, `search_repositories` answers for any public repository while
+`get_file_contents` refuses anything outside the two attached repositories with an
+explicit scope error. 🔴 **`p356`–`p360` each recorded "no index" and generalised a
+403 on one transport to the source.** The rule that replaces it: *before recording a
+channel as closed, enumerate the transports that reach it.*
+
+| Gate / sweep | Result |
+|---|---|
+| Whole-corpus liveness (`ls-remote --symref`, 16-way parallel, 277 addresses) | 🟢 **277 of 277 live, 0 dead** |
+| Star re-derivation (batched `repo:` queries) | 🟢 **273 of 277 measured at their published spelling** — 261 directly, 12 more once forks were un-excluded |
+| Blind-cell fill | 🟢 **78 of 78 `not re-derived` cells filled** across `agents/top.md` and `repos/foundations.md` |
+| Published-figure audit | 🟢 **89 of 89 clean** — 78 within ±2, 11 moved, every mover among the youngest repos on the shelves |
+| 🆕 Archived sweep (`archived:true fork:true`, all 277) | 🔴 **1 hit — published unflagged on `repos/foundations.md`** |
+
+### 🔴 Index absence is not death, and `p361` proves the mechanism rather than asserting it
+
+**16 of 277 addresses did not resolve. All 16 answer `ls-remote`.** Mechanism
+established for 15:
+
+| Mechanism | n | Proof |
+|---|---:|---|
+| **Fork exclusion** (repo search omits forks by default) | **12** | `fork:true` returns all 12, every one carrying `fork: true` |
+| **Repository rename** | **1** | `openedx/edx-platform` ≡ `openedx/openedx-platform`, identical HEAD `7f01c42157d3` |
+| **Owner rename / transfer** | **2** | `naiayti/TeachingKG` ≡ `Teaching-Knowledge-Graph/TeachingKG` (`9f8c0a3f6704`); `christophblessing/quiz-recap` ≡ `openHPI/quiz-recap` (`0927b556d2e4`) |
+| 🟡 **Unexplained** | **1** | `JeabtiE/jump-hackathon-demo` live at `e03c5711c72f`, absent under `fork:true` and absent by name — 🔴 **stated, not guessed** |
+
+🔴 **A pass that read index absence as death would have published 16 false deaths —
+5.8 % of this base.**
+
+### 🔴 Two real defects, both found by instruments this base did not have yesterday
+
+**1. The OneRoster row pointed at a fork, and the fork's death date was published as the
+project's.** `p359` shelved [`jeffyding/OpenLRW`](https://github.com/jeffyding/OpenLRW)
+as *"the only address that carries OneRoster"*, dated **January 2018**. 🔴 It is a
+**fork at 0 ★**, created and last touched the same day. 🟢 The canonical
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW)
+has **62 ★**, 25 forks and a different HEAD. 🔵 **This base already held the same
+organisation's `Larissa`** and still shelved a fork of its sibling project, because a
+non-ranked search cannot tell a fork from an upstream. 🟡 **The advice survives: last
+commit 2020-02-06, so still read the schema and do not take the dependency** — the
+address and the date were wrong, the recommendation was right.
+
+**2. `zmievsa/autograder` is archived.** Read-only upstream — no commits, issues or PRs
+ever again — and it answers `ls-remote` exactly like a healthy repository. 🔴 **Published
+on `repos/foundations.md`, the shelf whose stated purpose is the systems an engagement
+starts from, with no flag.** 🟢 One run of the new instrument, one real defect, and 360
+passes of liveness sweeps could not have found it.
+
+### 🔴 Three fields called "recency", a 6½-year spread
+
+Measured on `Apereo-Learning-Analytics-Initiative/OpenLRW`: `updated_at` **2026-08-04**
+(metadata events), `pushed_at` **2025-09-12** (a push to any ref), 🟢 `git log -1` on the
+default branch **2020-02-06** (the last commit). 🔴 **`updated_at` is the field a minimal
+search returns, and it is off by six and a half years.** A shelf built on it publishes an
+abandoned project as current.
+
+### 🟢 17 new agents, and why ranked search found what five passes of prose search could not
+
+Every row verified first-hand — `ls-remote --symref` for liveness and default branch,
+licence read from the payload at `raw`. Full tables on `agents/top.md`.
+
+**Agent-skill tutors:** `ZeKaiNie/universal-examprep-skill` (MIT, **312 ★**, teaches from
+the client's own slides **with page citations** — provenance as the anti-hallucination
+guard) · `karanb192/algo-sensei` (MIT, **293 ★**, progressive hints rather than
+solutions) · `SenmuuuuW/universal-diagnostic-tutor-skill` (MIT, **249 ★**,
+diagnosis-first with no mode menu — the pedagogy *is* the control flow) ·
+`KeWang0622/kaogong-skill` (MIT, **194 ★**, China civil-service exam — a
+*credential-bound* vertical) · `shigella520/MindTrain` (MIT, **126 ★**, pluggable
+schedulers, **Java**).
+
+**LMS and portal reach:** `kaorii-ako/Shiori-v1` (MIT on `master`, **46 ★**, Google
+Classroom) · `AnonymousOnyx22/brightspace-d2l-mcp` (MIT, **31 ★**, 🟢 reconciles against
+what was *already submitted*) · 🟢 `isakskogstad/Skolverket-MCP` (MIT on `master`,
+**13 ★**, **Sweden's national education agency open data — a statutory source**) ·
+🟢 `alejooroncoy/campus-cli` (**ISC** — 🔵 first ISC grant in this corpus — **11 ★**,
+**Peru, UPC Aula Virtual**) · `ProjectAJ14/eklavya` (MIT, **12 ★**) ·
+`UltimaPhoenix/dev-coach` (🔴 **AGPL-3.0**, **5 ★**).
+
+**Curriculum data and content:** 🟢 `oaknational/oak-open-curriculum-ecosystem` (MIT at
+🔴 **`main/LICENCE`**, **8 ★**, England's Oak National Academy curriculum as API + SDK +
+MCP) · `silicq/ordkort` (🔴 AGPL-3.0, **12 ★**) · `sid-thephysicskid/leap-mcp` (MIT,
+**14 ★**) · `BlinkZer0/Phys-MCP` (MIT, **10 ★**).
+
+🔴 **And one to refuse.** [`plyght/canvas-mcp`](https://github.com/plyght/canvas-mcp),
+**14 ★**, **no grant**: nothing at ten probed paths, no `license` field in
+`package.json`, and a README whose `## License` section says only *"this project uses
+permissive open-source dependencies"*. 🟢 **A statement about dependencies is not a grant
+on the work.** Shelved as the worked example — right category, plausible stars, nothing
+behind the heading.
+
+🔵 **Why ranked search beat prose search here.** Every one of the 17 ranks *inside* a
+topic (`ai-tutor`, `edtech`, `education`+`mcp-server`) and nowhere near the top of a
+general query for "best open source education AI". 🔴 **Ranked search inside a taxonomy
+is a different instrument from a search engine, and this base had been denied it since
+`p355`** — which is the real cost of the channel error above.
+
+### 🔵 One gate defect, caught before publication
+
+`p361`'s first star-diff took the **last numeric cell** in each row and accused
+`vishalsachdev/canvas-mcp` of a 38× discrepancy — published **8** against a measured
+**302**. 🟢 **The row says `not re-derived`; the 8 came from a different table counting
+agent skills.** Re-run position-aware against the `★` header, the diff reports **89 of 89
+clean, zero false accusations.** 🔵 Same lesson `p360` reached from the other side: key
+the gate on the **column**, not on the shape of the token.
+
+### 🔴 The prescribed web legs, for the twenty-first time
+
+All eight ran. Six returned nothing this base does not hold. 🟢 Two did —
+the **US institutional** layer (SUNY's 64-campus policy, Alabama H.B. 329, Maryland
+S.B. 720, and a **2× disagreement between trackers** on the 2026 bill count: 134/31
+states versus FutureEd's 68/27) and **European member-state spending** (Germany €20 bn
+2025–2030, Denmark €200 m with education named, and the AI omnibus proposal tying
+high-risk obligations to the **availability of technical standards** rather than a fixed
+date). Both are on `intel/market.md`. 🔵 **APAC and LATAM returned nothing new** — those
+two are now a *supply* gap, not an intelligence gap, and the new agents above close part
+of it.
+
+---
+
 ## 2026-10-21 · Pass 360 — **`ACTION ZZ-bf` discharged and the regional reading is REFUTED.** Licence hygiene is not a LATAM property: two new languages land at 31 % and 15 %, and the English comparator is the outlier
 
 🔴 **Channel note.** `git ls-remote --symref` **OPEN** · `raw.githubusercontent.com`

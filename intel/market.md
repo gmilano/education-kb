@@ -6,7 +6,7 @@ updated: 2026-10-21
 
 # Education — market map and regional intelligence
 
-**Pass 360 · 2026-10-21.** Researched **2026-10-21**. Figures are attributed; where a
+**Pass 361 · 2026-10-21.** Researched **2026-10-21**. Figures are attributed; where a
 number comes from a vendor blog or a commercial research summary rather than a primary
 source, it says so. The
 regional sections below are deliberately symmetric: a North America or EMEA
@@ -23,6 +23,27 @@ distinguishes a saturated channel from an unrun one.** What `p359` adds to this 
 derived from the commit channel** rather than from prose.
 
 ---
+
+## 🟢 `p361`: the regional legs, and the two facts that were not already here
+
+🔵 **All four prescribed regional legs ran, plus the four global ones. Six of the eight
+returned nothing this file does not carry** — the **134 bills / 31 states**, the NYC
+moratorium, California's **AB 1159**, Oklahoma's human-oversight rule, the EU AI Act's
+2 Aug 2026 enforcement date and Nov 2025 omnibus, Korea's AI Basic Act, Vietnam's
+Decision 33/2026, Brazil's **PL 2.338/2023**, Colombia's **CONPES 4144**, the UNESCO
+IESALC **87 % / 26 %** pair and its 84/68/52 split by institution type, the LAC
+Observatory, Uruguay's **Ceibal** figure and the **ILIA** index. 🟢 **Stated rather than
+passed over, because an informed null result is the only thing that distinguishes a
+saturated channel from an unrun one.**
+
+🔴 **Two legs did return new material, and both are in the regions this base has
+historically served worst.** They are added to **North America** and **EMEA** below:
+the US *institutional* layer (as distinct from the legislative one this file tracks
+closely), and European *member-state spending* (as distinct from EU-level regulation).
+🔵 **APAC and LATAM returned nothing new this pass** — not because nothing is happening,
+but because this file already carries the primary-sourced items those queries reach.
+The APAC and LATAM gap is now a **supply** gap, not an intelligence gap, and
+`agents/top.md` is where `p361` closed part of it.
 
 ## Market size
 
@@ -116,6 +137,26 @@ it is **auditability, curriculum alignment and an evidence story**.
 ## Opportunities by region
 
 ### North America
+
+#### 🆕 `p361`: the institutional layer, which moves faster than the legislative one
+
+🔴 **This file has tracked US AI-in-education policy through *bills*, and that has made
+it miss the layer where decisions actually bind.** `p361`'s North America leg returned
+institutional and enacted-statute items absent from this file:
+
+| Item | Detail | Why it matters to an engagement |
+|---|---|---|
+| 🆕 **SUNY systemwide AI policy** | Adopted across **64 campuses**; AI literacy embedded in general education for **all incoming undergraduates from Fall 2026** | 🟢 The largest single procurement surface in US public higher education, and it is a *curriculum* mandate, not a tool purchase |
+| 🆕 **Alabama H.B. 329** | An approved CS course **including AI instruction** is required to graduate high school | 🟢 A graduation requirement is a durable content market — curriculum and assessment, not pilots |
+| 🆕 **Maryland S.B. 720** | State must offer teachers **AI professional development** | 🟢 Teacher-facing PD is the deliverable; see `intel/trends.md` on teacher-first adoption |
+| 🆕 **Bill-count disagreement** | One tracker: **134 bills / 31 states**. FutureEd: **68 bills / 27 states** | 🔴 **A 2× spread on the same legislative session.** Do not quote either to a client as a count — quote the *direction* and name the tracker |
+| 🆕 **State guidance coverage** | **35+ states** have department-of-education AI guidance (June 2026 tracker) | 🟡 Secondary; the count is not consistent across the sources that report it |
+
+🔴 **Source quality, stated.** The SUNY, Alabama and Maryland items come from policy
+trackers and aggregators, not from the statutes themselves. 🟢 **The bill-count
+disagreement is the most useful item here precisely because it is checkable**: two
+trackers counting the same session differ by a factor of two, which tells a client more
+about the state of this evidence base than either number does.
 
 #### 🆕 `p360` — the regional figure is an order of magnitude below the global one, and that gap is the finding
 
@@ -266,6 +307,29 @@ America is cited at **~36 % of the global AI-in-education market, ≈ $3.68 bn i
 a commercial-aggregator figure, not a primary source.
 
 ### EMEA
+
+#### 🆕 `p361`: member-state money, and the amendment that moves the high-risk date
+
+🔵 **This file carries the EU AI Act in depth and almost nothing on what member states
+are spending.** `p361`'s EMEA leg returned three items absent from this file:
+
+| Item | Detail | Why it matters |
+|---|---|---|
+| 🆕 **Germany — AI investment commitment** | **€20 bn, 2025–2030** | 🟡 Economy-wide, not education-specific — but it is the largest single national figure in the region and sets the procurement climate |
+| 🆕 **Denmark — national AI strategy** | **€200 m** toward R&D, education named among the focus areas | 🟢 Education is *named*, which is rarer than the headline figures suggest |
+| 🆕 **AI omnibus — the high-risk trigger** | The Nov 2025 omnibus proposal would tie high-risk obligations to the **availability of technical standards**, rather than to a fixed date | 🔴 **This changes how to advise a client.** An education tool is high-risk under Annex III; if obligations attach on standards availability, the compliance date becomes a *moving* target and a conformity wrapper has to be built to be re-datable |
+
+🟢 **And a supply-side EMEA item, from the index rather than the press.** Two statutory
+and quasi-statutory curriculum data sources were found and verified this pass:
+**Sweden's Skolverket** (national education agency open data over MCP) and **England's
+Oak National Academy** open-curriculum API/SDK/MCP. 🔵 **Both are MIT.** Placed and
+licence-verified in `agents/top.md`. 🔴 **This is the first time this base has held a
+*national curriculum access layer* for two EMEA countries at once** — the asset LATAM
+still lacks outside Brazil's BNCC.
+
+🟡 **Source quality:** the Germany and Denmark figures come from secondary roundups; the
+omnibus reading comes from a law-firm client alert. Verify against the Official Journal
+and national ministry pages before quoting.
 
 #### 🔴 🆕 `p360` — the prescribed EMEA leg returned zero education facts, and a vernacular code leg returned the region's biggest finding in 360 passes
 

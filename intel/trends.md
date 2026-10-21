@@ -6,8 +6,11 @@ updated: 2026-10-21
 
 # Education — current trends
 
-**Pass 360 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
-across external sources. 🆕 **Trends 24–26 are `p360`'s**: §24 **refutes**
+**Pass 361 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
+across external sources. 🆕 **Trends 27–29 are `p361`'s**, and all three are
+*measurement* findings rather than sector findings — the pass recovered an instrument
+this base had written off and immediately found two published defects with it.
+**Trends 24–26 are `p360`'s**: §24 **refutes**
 the regional reading of §19 and §22 by designed test, §25 gives the cheap proxy that
 replaces it — and the obvious proxy that fails — and §26 names the platform layer this
 base had never held. Trends 22–23 are `p359`'s, and §22 reframed §19 without refuting
@@ -685,3 +688,87 @@ That combination is a build-and-integrate market rather than a customise-a-platf
 and it is the opposite of the `Moodle` or `Open edX` engagement shape this base is
 otherwise organised around.
 
+## 27. 🔴 🆕 A channel recorded as closed stayed closed for five passes because nobody enumerated its transports
+
+🔴 **`p356` through `p360` each recorded `api.github.com/search/*` **403** and reasoned
+that a credential scoped to one repository cannot read the index. The 403 was real. The
+inference was wrong.** The same query, in the same session, on the same credential,
+through the session's **GitHub MCP search tool**, returns the index in full — stars,
+forks, default branch, topics, `archived`, `pushed_at`, SPDX classifier.
+
+🔵 **The boundary turned out to be per-tool, not per-credential.** `search_repositories`
+answers for any public repository; `get_file_contents` refuses anything outside the two
+attached repositories with an explicit scope error. 🟢 **One tool on a credential being
+scoped says nothing about another tool on the same credential.**
+
+**Cost of the error, measured:** 78 star cells published as `not re-derived` across two
+files, five passes of discovery conducted with function-word web queries instead of
+ranked search, and — see §28 and §29 — **two corpus defects that the available channels
+were structurally incapable of finding.**
+
+**Consequence for a studio.** 🟢 **Before recording a data source as unavailable,
+enumerate every transport that reaches it** — SDK, CLI, MCP tool, proxy, partner API —
+and record *which transport* failed, not *which source*. A client engagement that writes
+off a data source on one failed transport builds the wrong architecture around the gap.
+🔴 This base did exactly that for five passes, and it is the cheapest mistake on this
+file to avoid.
+
+## 28. 🔴 🆕 Absence from a search index is not death — and the mechanism is fork exclusion, rename, and transfer
+
+🔴 **The GitHub index resolved 261 of this corpus's 277 addresses. All 16 of the rest are
+alive on `git ls-remote --symref`.** A pass that had read index absence as death would
+have published **16 false deaths, 5.8 % of the base**. `p361` established the mechanism
+for 15 of the 16 by designed test:
+
+| Mechanism | n | Proof | Recovery |
+|---|---:|---|---|
+| **Fork exclusion** — repo search omits forks unless asked | **12** | re-query `fork:true`: all 12 return, all 12 carry `fork: true` | add `fork:true` |
+| **Repository rename** | **1** | `openedx/edx-platform` and `openedx/openedx-platform` return the **same HEAD SHA** | index holds the new name only |
+| **Owner rename / transfer** | **2** | `naiayti/TeachingKG` ≡ `Teaching-Knowledge-Graph/TeachingKG`; `christophblessing/quiz-recap` ≡ `openHPI/quiz-recap` — identical SHAs | search by name, not address |
+| **Unexplained** | **1** | `JeabtiE/jump-hackathon-demo` live, absent under `fork:true` and by name | 🔴 stated, not guessed |
+
+🔴 **And fork exclusion is not merely a counting artefact — it is how a bad row gets
+shelved.** `p359` published [`jeffyding/OpenLRW`](https://github.com/jeffyding/OpenLRW)
+as *"the only address that carries OneRoster"*. It is a **fork at 0 ★**, created and
+last touched the same day in 2018. The canonical upstream
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW)
+has **62 ★** and a different HEAD. 🟢 **A ranked search puts 62 ★ above 0 ★ and the
+question answers itself; a non-ranked search cannot tell them apart at all.** This base
+already held the same organisation's `Larissa` and still shelved a fork of its sibling
+project.
+
+**Consequence for a studio.** 🟢 Liveness is a `git` question and must be answered on
+`git`. Discovery and ranking are index questions. 🔴 **Using either instrument for the
+other's job produces confident, wrong rows** — and the failure is silent in both
+directions: the index invents deaths, and `ls-remote` cannot see a fork, a rename or an
+archive.
+
+## 29. 🔴 🆕 Three fields called "recency", a 6½-year spread, and only one of them is a commit
+
+🔴 **Measured on one address this pass,
+`Apereo-Learning-Analytics-Initiative/OpenLRW`:**
+
+| Field | Value | What it tracks |
+|---|---|---|
+| `updated_at` (the field a minimal search returns) | **2026-08-04** | repository *metadata* — stars, topics, watches |
+| `pushed_at` (full output only) | **2025-09-12** | a push to *any* ref, a tag or a branch delete included |
+| 🟢 `git log -1` on the default branch | **2020-02-06** | 🟢 **the last commit** |
+
+🔴 **A shelf built on `updated_at` publishes a project abandoned in 2020 as current**, and
+`updated_at` is the field that comes back by default. 🔵 This generalises a rule
+`p359` found on a GitHub *topic page* ("updated September 2025" for a 2018 fork) to the
+API's own fields: **a date that is not a commit date is not a maintenance signal.**
+
+🟢 **And one property exists only in the index, which is the mirror of §28.** `archived`
+— read-only upstream, no commits or issues ever again — is nowhere in `git`, and an
+archived repository answers `ls-remote` exactly like a healthy one. 🟢 **`p361` swept all
+277 addresses (`archived:true fork:true`): one hit, `zmievsa/autograder`, published
+unflagged on `repos/foundations.md`** — the shelf whose stated purpose is *the systems an
+engagement starts from*. 🔴 **360 passes of liveness sweeps could not have found it.**
+
+**Consequence for a studio.** 🟢 Three questions, three instruments, and they do not
+substitute: *does it exist* → `ls-remote`; *is it maintained* → `git log` on the default
+branch; *is it still open for contributions* → the index's `archived` flag. 🔴 **Any
+dependency recommendation that answers fewer than three of those is incomplete**, and
+the third one is the one every open-source due-diligence checklist this base has seen
+omits.

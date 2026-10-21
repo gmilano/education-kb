@@ -6,7 +6,7 @@ updated: 2026-10-21
 
 # Education — composition patterns
 
-**Pass 360 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
+**Pass 361 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
 boundary that makes the composition safe, and what the engagement actually delivers.
 Every repo referenced is verified live with its grant read from payload on
 **2026-10-21** — see `agents/top.md` and `repos/foundations.md`.
@@ -728,7 +728,7 @@ and one is the non-commercial licence above.
 | 🔴 🆕 `mrgutierrezmario/lecture-note-app`, 🆕 `boktoday/iep-agent-hermes-agent` (**PolyForm Noncommercial**) | 🔴 **Nothing in paid work** | All commercial use without a separate licence from the holder |
 | 🔴 🆕 `The-Burnes-Center/a-iep` (**CC-BY-NC-4.0**) | 🔴 **Nothing in paid work.** Read it as a reference for parent-facing IEP explanation, build the deliverable from `dg13788/iep-system` | Any commercial use — and note it is the *best-maintained* special-education codebase on this base, which is what makes it dangerous |
 | 🆕 `HernanDiaz/moodle-local_aigrader` (**GPL-3.0-or-later**) | Deploy it as a **plugin inside the client's own Moodle** | Vendoring it into a studio deliverable |
-| 🟢 🆕 `jeffyding/OpenLRW` (**ECL-2.0** — permissive) | Anything, including forking — ECL-2.0 is Apache-2.0 with a narrowed patent grant | 🔴 Depending on it: **dead since January 2018.** Read the OneRoster↔Caliper↔xAPI schema, deploy `pelotech/xapi-lrs` |
+| 🟢 🆕 `Apereo-Learning-Analytics-Initiative/OpenLRW` (**ECL-2.0** — permissive) | Anything, including forking — ECL-2.0 is Apache-2.0 with a narrowed patent grant | 🔴 Depending on it: **last commit 2020-02-06.** Read the OneRoster↔Caliper↔xAPI schema, deploy `pelotech/xapi-lrs`. 🔵 **Corrected `p361`** — `p359` cited the 0 ★ fork `jeffyding/OpenLRW` and dated it 2018; that was the fork's date, not the project's |
 | 🔴 🆕 `shaheeranser/exam-proctor` (**Apache-2.0** — permissive) | Reading its LTI 1.3 wiring and AGS grade passback as a **reference architecture** | 🔴 Deploying it into an EU engagement as it stands: GDPR Art. 9 biometrics, and clear of the Art. 5(1)(f) prohibition only because one MediaPipe default is unset |
 
 **One-line version:** in education, the licence picks the architecture. Decide the
@@ -741,3 +741,73 @@ boundary is on the **wrong side of it**: the client's agent talks to it over exa
 network interface AGPL's clause is written about, and it sits inside the deliverable
 rather than across from it. 🟢 **So check the licence of the connector before the
 licence of the platform.** It is the smaller component and the larger risk.
+
+---
+
+## 🆕 Pattern 19 — Sweden's curriculum from the regulator itself — and the access layer Pattern 11 was missing
+
+**Problem.** `Pattern 2` works for Brazil because the BNCC is published as open data, so
+an alignment claim is checkable objective by objective. `Pattern 11` works for England
+because Oak National Academy publishes the curriculum as an **ontology** under OGL-3.0.
+🔴 **Neither gives the agent a retrieval surface, and no third country had either.**
+`p361` closes both gaps.
+
+### 19a — Sweden, where the source is the regulator
+
+1. **Curriculum, schools and statistics** from 🆕 [`isakskogstad/Skolverket-MCP`](https://github.com/isakskogstad/Skolverket-MCP) — **MIT**, read from 🔴 `master/LICENSE` (**not** `main`). It fronts **Skolverket**, Sweden's National Agency for Education, across three public API endpoints and is tuned for LLM queries.
+2. **Pedagogical behaviour** as skills: [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) (Apache-2.0) or [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) (886 ★).
+3. **Mastery estimates that survive a review:** [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (MIT) for Bayesian Knowledge Tracing, or [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (MIT) to get BKT behind an MCP boundary.
+4. **Quality-gate the output:** [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (MIT).
+5. **Surface it in the LMS** over LTI 1.3: [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0) or [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (MIT).
+
+🟢 **Why this is defensible to a Swedish client:** the curriculum provenance is the
+national agency's own API, not a vendor dataset and not a scrape. 🔵 That is a stronger
+provenance story than anything else on this base outside Brazil's BNCC.
+
+### 19b — England: the access layer that `Pattern 11` names no component for
+
+🔴 **`Pattern 11` gives the client a curriculum *model* (OWL/SKOS under OGL-3.0) and
+leaves them to build retrieval over it.** 🟢 🆕 [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem)
+is that retrieval layer from the same publisher: API, SDK and an **MCP app** over the Oak
+Open Curriculum data, **MIT**, read at 🔴 **`main/LICENCE`** — and `main/LICENSE`
+**404s**.
+
+🔵 **Compose them, do not substitute.** The ontology is what the client enriches and
+keeps as a closed asset (Pattern 11's whole point); the ecosystem is how the agent
+*reaches* it at run time. 🟢 Both are permissive enough that the enriched model stays
+the client's.
+
+🔴 **Read that grant path twice.** A national curriculum body spells its licence file
+`LICENCE`, and a scanner that probes `main/LICENSE` and stops reports England's open
+curriculum programme as unlicensed. 🔵 This base warns about exactly that on
+`repos/foundations.md`, and `p361` is the pass that produced a first-party instance.
+
+### What is still missing, stated
+
+🔴 **Three countries now, and the list of absences is unchanged:** no equivalent open,
+machine-readable national curriculum exists for **Mexico's SEP**, **Colombia**,
+**Argentina**, or for **India's NCERT** at national scale. 🟢 Building one remains the
+highest-leverage regional asset play on this base. `p361` did not change that — it only
+showed, twice, what the finished article looks like.
+
+## 🆕 Pattern 20 — Student-facing LMS agent for a campus nobody has written a connector for
+
+**Problem.** The MCP layer on `agents/top.md` covers Canvas, Moodle, Open edX and
+Brightspace. A client's institution runs none of those, or runs a national portal with
+its own SSO. The engagement cannot start by writing a connector from scratch and cannot
+reach the LMS without one.
+
+**Recipe.**
+1. **Start from the closest shaped connector, not from zero.** 🆕 [`alejooroncoy/campus-cli`](https://github.com/alejooroncoy/campus-cli) (**ISC** — 🔵 first ISC grant in this corpus, BSD-family, functionally MIT for a client deliverable) wraps **Peru's UPC Aula Virtual (Blackboard Learn)** as CLI + MCP. It is the reference implementation for *"unofficial portal, real SSO, MCP surface"*.
+2. **For D2L/Brightspace, take the one that models state:** 🆕 [`AnonymousOnyx22/brightspace-d2l-mcp`](https://github.com/AnonymousOnyx22/brightspace-d2l-mcp) (MIT) reconciles against **what the student has already submitted**, so it reports what is actually outstanding rather than every assignment. 🟢 That reconciliation is the hard part and it is already written.
+3. **For Google Classroom estates:** 🆕 [`kaorii-ako/Shiori-v1`](https://github.com/kaorii-ako/Shiori-v1) (MIT, 🔴 grant on `master`) — Classroom sync plus SRS plus an MCP server.
+4. **Record the learning events** through [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (MIT) into [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) or [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql).
+5. **Scheduling** from [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) (MIT) — decide *when*, not only *what*.
+
+🔴 **The one to refuse, and why it is on this list.** [`plyght/canvas-mcp`](https://github.com/plyght/canvas-mcp)
+has **14 ★** and **no grant**: nothing at ten probed paths, no `license` field in
+`package.json`, and a README whose `## License` section says only *"this project uses
+permissive open-source dependencies"*. 🟢 **A statement about dependencies is not a grant
+on the work.** Without a licence the default is exclusive copyright, and it cannot enter
+a client deliverable at any price. 🔵 It is named here because it is the most plausible
+near-miss on the shelf — right category, reasonable stars, nothing behind the heading.

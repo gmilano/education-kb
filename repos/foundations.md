@@ -6,40 +6,52 @@ updated: 2026-10-21
 
 # Education — foundational repos
 
-**Pass 360 · 2026-10-21.** The systems an education engagement starts *from*, rather
+**Pass 361 · 2026-10-21.** The systems an education engagement starts *from*, rather
 than the agents it adds on top. Every row verified first-hand **2026-10-21**: liveness
 and default branch via `git ls-remote --symref`, licence **read from the payload**.
-🔴 `p359` had **no authenticated GitHub index** either — fourth consecutive pass, same
-cause (a credential scoped to one unrelated repository) — so it measured no stars and
-discovered by web search aimed at `github.com` with **function words**. Liveness and
-grant verification are unchanged. See `agents/top.md` for the channel state.
 
-🟢 **This shelf was gated before it was written.** Every address published on it was
-swept on `ls-remote` as part of a **236-address whole-corpus pass: 236 live, 0 dead** —
-and every `branch/FILE` grant path on it was re-checked against the live default branch:
-**240 of 240 agree.** 🔵 Which means the warning four paragraphs down is not a
-hypothetical; it is the gate that enforces it.
+🟢 **`p361` is the first pass since `p355` with a working GitHub index, and it did not
+arrive through `curl`.** `api.github.com` still answers **403** on every path; the
+session's GitHub MCP search tool answers in full. 🔵 The five passes that recorded "no
+index" were recording one transport. See `agents/top.md` for the full channel finding.
 
-🟢 **`p360` adds the tier that was missing beside the LMS rows: national school portals.**
-This shelf held the interchange layer in depth and every platform row on it was an LMS.
-France's **ENT** — an AGPL-3.0, vendor-maintained, regionally procured school portal with a
-commit yesterday — is now shelved below, and 🔴 **not one address in it defaults to `main`
-while three of seven grants are spelled `LICENCE`.** `p360`'s gates: **264 of 264**
-addresses live, **263 of 263** genuine grant-path claims agree. 🔴 `p360` had **no
-authenticated GitHub index** either — fifth consecutive pass — so it measured no stars.
+🟢 **Gates run before this pass wrote:**
 
-🟢 **`p359` went deep on the tier `p358`'s LTI work pointed at and did not reach: where
-the records land.** The shelf carried LTI, SCORM, xAPI and Caliper and had **no row for
-an LRS** and **none for OneRoster**. Six learning-record addresses were probed; **five
-were already held and are re-verified, one is new, and the tier turns out to be complete,
-permissive and — in the one row that carries rostering — eight years dead.** `p359` also
-promotes a tier this base had found and never shelved: **psychometrics.**
+| Gate | Result |
+|---|---|
+| Whole-corpus liveness (`ls-remote --symref`, 16-way parallel, 277 addresses) | 🟢 **277 of 277 live, 0 dead** |
+| Star re-derivation (index, batched `repo:` queries) | 🟢 **273 of 277 measured at their published spelling; 78 blind cells filled; 89 published figures re-derive, 78 within ±2** |
+| 🆕 **Archived sweep** (`archived:true fork:true`, all 277) | 🔴 **1 hit — and it was published on this shelf unflagged** |
+
+🔴 **`p361` corrects two rows on this shelf, and both corrections come from the index
+rather than from any channel this base already had.**
+
+**1. `zmievsa/autograder` is archived.** Read-only upstream: no commits, issues or PRs
+ever again. 🔴 **It answers `ls-remote` exactly like a healthy repository**, which is
+precisely why 360 passes of liveness sweeps never caught it. Flagged in the autograding
+table below.
+
+**2. The OneRoster row was pointed at a fork, and the fork's death date was published as
+the project's.** `p359` shelved [`jeffyding/OpenLRW`](https://github.com/jeffyding/OpenLRW)
+as *"the only address that carries OneRoster"* and dated it **January 2018**. 🔴 **That
+address is a fork** — `fork: true`, **0 ★**, created and last touched the same day,
+2018-01-19. 🟢 **The canonical upstream is
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW)
+— 62 ★, 25 forks, different HEAD SHA, ECL-2.0 read from `master/LICENSE`.** 🔵 **This
+base already held the same organisation's `Larissa` and still shelved a fork of its other
+project**, because the fork was what a non-ranked search surfaced. Corrected below.
+
+🟡 **The conclusion survives the correction, and that is worth saying plainly.** The
+canonical's last commit is **2020-02-06**, not 2026 — two years later than the fork, and
+still six years ago. 🔴 **So "read the schema, do not take the dependency" stands; the
+*address* and the *date* were wrong, the *advice* was right.**
 
 **Read the default-branch column.** Education infrastructure is old software. Of the
 grants on this shelf, a large share live on `master`, `develop`, `release` or a
 version branch — not `main`. A tool that assumes `main` will report a live,
-correctly-licensed repository as grantless. That has happened on this base before.
-
+correctly-licensed repository as grantless. That has happened on this base before, and
+`p361` adds a fresh instance from a national curriculum body — Oak National Academy
+spells its grant **`LICENCE`**, and `LICENSE` 404s (see `agents/top.md`).
 ---
 
 ## Learning platforms (LMS / VLE)
@@ -47,16 +59,16 @@ correctly-licensed repository as grantless. That has happened on this base befor
 | Platform | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
 | --- | --- | --- | --- | ---: | --- |
 | Open edX LMS + Studio | [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | AGPL-3.0 | `master/LICENSE` | **8 205** | North America |
-| Moodle | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 | `main/COPYING.txt` — 🔴 no `LICENSE` file exists | **7 507** | Global |
+| Moodle | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 | `main/COPYING.txt` — 🔴 no `LICENSE` file exists | **7 508** | Global |
 | Canvas LMS | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | AGPL-3.0 | `master/LICENSE` | **6 879** | North America |
-| Frappe LMS | [frappe/lms](https://github.com/frappe/lms) | AGPL-3.0 | `develop/license.txt` — 🔴 (lower-case) | **3 328** | APAC |
+| Frappe LMS | [frappe/lms](https://github.com/frappe/lms) | AGPL-3.0 | `develop/license.txt` — 🔴 (lower-case) | **3 329** | APAC |
 | ClassroomIO | [classroomio/classroomio](https://github.com/classroomio/classroomio) | AGPL-3.0 | `main/LICENSE` | **1 726** | Global |
 | Kolibri | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** | `develop/LICENSE` | **1 159** | Global |
 | Tutor (Open edX distro) | [overhangio/tutor](https://github.com/overhangio/tutor) | AGPL-3.0 | `release/LICENSE.txt` | **1 128** | Global |
 | Chamilo | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | `master/LICENSE` | **1 016** | EMEA |
 | Moodle App (mobile) | [moodlehq/moodleapp](https://github.com/moodlehq/moodleapp) | 🟢 **Apache-2.0** | 🔴 `main/COPYING.txt` | **1 002** | Global |
-| Sakai | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL-2.0** | `master/LICENSE` | not re-derived | North America |
-| OpenOLAT | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | `master/LICENSE` | not re-derived | EMEA |
+| Sakai | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL-2.0** | `master/LICENSE` | **1 239** | North America |
+| OpenOLAT | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | `master/LICENSE` | **448** | EMEA |
 | ELMS Learning Network | [elmsln/elmsln](https://github.com/elmsln/elmsln) | GPL-3.0 | `master/LICENSE.md` | **253** | North America |
 
 🟢 **The two permissive platform rows matter disproportionately.** `OpenOLAT`
@@ -127,18 +139,18 @@ to start.
 | Tsugi (LTI tool host) | [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | Apache-2.0 | `master/LICENSE` | **376** | North America |
 | scorm-again (SCORM runtime) | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **MIT** | `master/LICENSE` | **356** | Not placed |
 | Marsha (LTI LCMS) | [openfun/marsha](https://github.com/openfun/marsha) | **MIT** | `master/LICENSE` | **150** | EMEA |
-| ltijs (LTI 1.3, Node) | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | Apache-2.0 | `master/LICENSE` | not re-derived | Not placed |
-| pylti1.3 (LTI 1.3, Python) | [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | **MIT** | `master/LICENSE` | not re-derived | Not placed |
-| lti-tool | [lti-tool/lti-tool](https://github.com/lti-tool/lti-tool) | **MIT** | `main/LICENSE` | not re-derived | Not placed |
-| ltikit-sdk | [Liberate-Labs/ltikit-sdk](https://github.com/Liberate-Labs/ltikit-sdk) | **MIT** | `main/LICENSE` | not re-derived | Not placed |
-| django-lti-toolbox | [openfun/django-lti-toolbox](https://github.com/openfun/django-lti-toolbox) | **MIT** | `master/LICENSE` | not re-derived | EMEA |
-| CACCL (Canvas app framework) | [harvard-edtech/caccl](https://github.com/harvard-edtech/caccl) | **MIT** | `main/LICENSE.md` | not re-derived | North America |
+| ltijs (LTI 1.3, Node) | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | Apache-2.0 | `master/LICENSE` | **373** | Not placed |
+| pylti1.3 (LTI 1.3, Python) | [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | **MIT** | `master/LICENSE` | **138** | Not placed |
+| lti-tool | [lti-tool/lti-tool](https://github.com/lti-tool/lti-tool) | **MIT** | `main/LICENSE` | **8** | Not placed |
+| ltikit-sdk | [Liberate-Labs/ltikit-sdk](https://github.com/Liberate-Labs/ltikit-sdk) | **MIT** | `main/LICENSE` | **0** | Not placed |
+| django-lti-toolbox | [openfun/django-lti-toolbox](https://github.com/openfun/django-lti-toolbox) | **MIT** | `master/LICENSE` | **14** | EMEA |
+| CACCL (Canvas app framework) | [harvard-edtech/caccl](https://github.com/harvard-edtech/caccl) | **MIT** | `main/LICENSE.md` | **35** | North America |
 | ltiauthenticator | [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | BSD-3-Clause | `main/LICENSE` | **73** | North America |
-| Caliper analytics spec | [1EdTech/caliper-spec](https://github.com/1EdTech/caliper-spec) | 🔴 **IMS specification licence — NOT OSI** | `master/LICENSE.md` | not re-derived | North America |
-| 🆕 lti-core (LTI 1.3, TypeScript) | [iamlucasb/lti-core](https://github.com/iamlucasb/lti-core) | **MIT** (holder *Lucas Bossard*, 2026) | `main/LICENSE` | not re-derived | Not placed |
-| 🆕 Ltix (LTI 1.3, **Elixir**) | [DecoyLex/ltix](https://github.com/DecoyLex/ltix) | **MIT** (holder *Alex Wilson*, 2025) | `main/LICENSE` | not re-derived | Not placed |
-| 🆕 lti-node-library | [SanDiegoCodeSchool/lti-node-library](https://github.com/SanDiegoCodeSchool/lti-node-library) | **MIT** (holder *San Diego Code School*, **2019**) | `master/LICENSE` | not re-derived | North America |
-| 🆕 ltijs — **fork** | [edugatorlabs/ltijs](https://github.com/edugatorlabs/ltijs) | Apache-2.0 | `master/LICENSE` | not re-derived | Not placed |
+| Caliper analytics spec | [1EdTech/caliper-spec](https://github.com/1EdTech/caliper-spec) | 🔴 **IMS specification licence — NOT OSI** | `master/LICENSE.md` | **22** | North America |
+| 🆕 lti-core (LTI 1.3, TypeScript) | [iamlucasb/lti-core](https://github.com/iamlucasb/lti-core) | **MIT** (holder *Lucas Bossard*, 2026) | `main/LICENSE` | **1** | Not placed |
+| 🆕 Ltix (LTI 1.3, **Elixir**) | [DecoyLex/ltix](https://github.com/DecoyLex/ltix) | **MIT** (holder *Alex Wilson*, 2025) | `main/LICENSE` | **2** | Not placed |
+| 🆕 lti-node-library | [SanDiegoCodeSchool/lti-node-library](https://github.com/SanDiegoCodeSchool/lti-node-library) | **MIT** (holder *San Diego Code School*, **2019**) | `master/LICENSE` | **30** | North America |
+| 🆕 ltijs — **fork** | [edugatorlabs/ltijs](https://github.com/edugatorlabs/ltijs) | Apache-2.0 | `master/LICENSE` | **0** | Not placed |
 
 ### 🟢 Choosing an LTI library is a four-way decision, and this pass can finally make it
 
@@ -194,12 +206,13 @@ permissive and every grant was read from the payload this pass.**
 
 | Component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
 | --- | --- | --- | --- | ---: | --- |
-| lrsql (SQL xAPI LRS) | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | Apache-2.0 | `main/LICENSE` | not re-derived | North America |
-| xapi-lrs (xAPI 1.0.3 **and 2.0**) | [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) | Apache-2.0 | `main/LICENSE` | not re-derived | Not placed |
-| ADL_LRS (reference LRS) | [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | Apache-2.0 | `master/LICENSE` | not re-derived | North America |
-| Larissa (Apereo LRS) | [Apereo-Learning-Analytics-Initiative/Larissa](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) | Apache-2.0 | `master/LICENSE` | not re-derived | North America |
-| learnmcp-xapi (the MCP bridge) | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | `main/LICENSE` | not re-derived | Not placed |
-| 🆕 OpenLRW (**OneRoster** + Caliper + xAPI) | [jeffyding/OpenLRW](https://github.com/jeffyding/OpenLRW) | 🟢 **ECL-2.0** | `master/LICENSE` | not re-derived | North America |
+| lrsql (SQL xAPI LRS) | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | Apache-2.0 | `main/LICENSE` | **144** | North America |
+| xapi-lrs (xAPI 1.0.3 **and 2.0**) | [pelotech/xapi-lrs](https://github.com/pelotech/xapi-lrs) | Apache-2.0 | `main/LICENSE` | **0** | Not placed |
+| ADL_LRS (reference LRS) | [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | Apache-2.0 | `master/LICENSE` | **334** | North America |
+| Larissa (Apereo LRS) | [Apereo-Learning-Analytics-Initiative/Larissa](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) | Apache-2.0 | `master/LICENSE` | **8** | North America |
+| learnmcp-xapi (the MCP bridge) | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | `main/LICENSE` | **15** | Not placed |
+| 🆕 OpenLRW (**OneRoster** + Caliper + xAPI) — 🟢 **canonical, corrected `p361`** | [Apereo-Learning-Analytics-Initiative/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 **ECL-2.0** (payload; 🔴 index classifier says `NOASSERTION`) | `master/LICENSE` | **62** | North America |
+| 🔴 OpenLRW — *the fork `p359` shelved by mistake* | [jeffyding/OpenLRW](https://github.com/jeffyding/OpenLRW) | ECL-2.0 (inherited) | `master/LICENSE` | **0** | — |
 
 ### 🟡 Pick by conformance and maturity, because the licences do not separate these rows
 
@@ -215,23 +228,37 @@ not re-discover them.** `adlnet/ADL_LRS` — the *reference* implementation, upd
 `Larissa` states it has **no OAuth and no attachment support**. 🔵 Both are correct
 things to read a standard against and wrong things to put under a client's traffic.
 
-### 🔴 OneRoster has exactly one address and it has not moved since January 2018
+### 🔴 OneRoster has one project, two addresses, and `p359` shelved the wrong one — corrected `p361`
 
-🟢 **[`jeffyding/OpenLRW`](https://github.com/jeffyding/OpenLRW) is the only address
-found that carries OneRoster, IMS Caliper and xAPI in a single warehouse**, and its
-grant is clean: **ECL-2.0**, read from `master/LICENSE` — Apache-2.0 with §3's patent
-grant narrowed to education use, which for redistribution purposes behaves as
-Apache-2.0.
+🟢 **OpenLRW is the only project found that carries OneRoster, IMS Caliper and xAPI in a
+single warehouse**, and its grant is clean: **ECL-2.0**, read from `master/LICENSE` —
+Apache-2.0 with §3's patent grant narrowed to education use, which for redistribution
+purposes behaves as Apache-2.0.
 
-🔴 **It is eight years stale, and the surface that surfaced it says otherwise.** A
-GitHub **topic page** reports it *"updated September 2025"*. 🟢 **Commit channel,
-first-hand: 92 commits, 7 authors, 2016-10-17 → 2018-01-16.** 🔵 **A date that is not a
-commit date is not a maintenance signal** — a rule this shelf did not have, because
-badges, READMEs and classifiers had all lied before and a topic page's "updated" column
-had not.
+🔴 **`p359` shelved the wrong address for it, and `p361`'s ranked search is what caught
+that.** The canonical upstream is
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW)
+(**62 ★**, 25 forks). [`jeffyding/OpenLRW`](https://github.com/jeffyding/OpenLRW) is a
+**fork at 0 ★**, created and last touched on the same day — 2018-01-19 — and the two
+carry **different HEAD SHAs**. 🔵 **A non-ranked search cannot tell a fork from an
+upstream; a ranked one puts 62 ★ above 0 ★ and the question answers itself.**
 
-🟢 **So the shelf gains a schema and not a dependency.** The OneRoster↔Caliper↔xAPI
-mapping in that tree is the artefact worth reading. 🔴 **And the connector gap is
+🔴 **And the index's own "recency" fields would have misled in the other direction.** On
+the canonical: `updated_at` **2026-08-04**, `pushed_at` **2025-09-12**, 🟢 **last commit
+on `master` 2020-02-06.** Three fields, three answers, a 6½-year spread, and only the
+last one is a commit.
+
+🔴 **Both addresses are stale, and every non-commit surface says otherwise.** A GitHub
+**topic page** reports *"updated September 2025"*; the index reports `updated_at`
+**2026-08-04**. 🟢 **Commit channel, first-hand: the fork ends 2018-01-16 (92 commits, 7
+authors, from 2016-10-17); the canonical ends 2020-02-06.** 🔵 **A date that is not a
+commit date is not a maintenance signal** — and `p361` widens that rule from topic pages
+to the API's own `updated_at` and `pushed_at` fields, which are *metadata* and *any-ref
+push* respectively, not commits.
+
+🟢 **So the shelf gains a schema and not a dependency — and the correction does not
+change that advice, only the address it points at.** The OneRoster↔Caliper↔xAPI
+mapping in the canonical tree is the artefact worth reading. 🔴 **And the connector gap is
 real and stated:** **no OneRoster MCP server exists** — `p359` probed the rostering leg
 and found none — so an engagement that needs *"who is in this class"* writes that
 connector. 🔵 It is the one interoperability standard on these shelves with no agent
@@ -247,10 +274,10 @@ these shelves — Bayesian Knowledge Tracing in `OATutor`, FSRS in `Smart-Study-
 
 | Component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
 | --- | --- | --- | --- | ---: | --- |
-| 🆕 🟢 **irtorch** (IRT on PyTorch, GPU) | [joakimwallmark/irtorch](https://github.com/joakimwallmark/irtorch) | **MIT** | 🟡 `main/LICENSE.txt` | not re-derived | **EMEA** — `+0200`/`+0100` |
-| 🆕 girth (IRT for Python) | [eribean/girth](https://github.com/eribean/girth) | **MIT** | 🟡 `master/LICENSE.txt` | not re-derived | **North America** — `-0500`/`-0400` |
-| 🆕 girth_mcmc (Bayesian / MCMC IRT) | [eribean/girth_mcmc](https://github.com/eribean/girth_mcmc) | **MIT** | 🟡 `main/LICENSE.txt` | not re-derived | **North America** — `-0400`/`-0500` |
-| 🆕 variational-IRT | [mhw32/variational-item-response-theory-public](https://github.com/mhw32/variational-item-response-theory-public) | **MIT** | `master/LICENSE` | not re-derived | **North America** — `-0700` |
+| 🆕 🟢 **irtorch** (IRT on PyTorch, GPU) | [joakimwallmark/irtorch](https://github.com/joakimwallmark/irtorch) | **MIT** | 🟡 `main/LICENSE.txt` | **18** | **EMEA** — `+0200`/`+0100` |
+| 🆕 girth (IRT for Python) | [eribean/girth](https://github.com/eribean/girth) | **MIT** | 🟡 `master/LICENSE.txt` | **127** | **North America** — `-0500`/`-0400` |
+| 🆕 girth_mcmc (Bayesian / MCMC IRT) | [eribean/girth_mcmc](https://github.com/eribean/girth_mcmc) | **MIT** | 🟡 `main/LICENSE.txt` | **19** | **North America** — `-0400`/`-0500` |
+| 🆕 variational-IRT | [mhw32/variational-item-response-theory-public](https://github.com/mhw32/variational-item-response-theory-public) | **MIT** | `master/LICENSE` | **82** | **North America** — `-0700` |
 
 ### 🔴 Three of the four are abandoned, and the live one is not the one this base was pointing at
 
@@ -306,12 +333,12 @@ measured anchoring bias, and an IRT-calibrated item is the evidence that answers
 
 | Component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
 | --- | --- | --- | --- | ---: | --- |
-| Judge0 (code execution API) | [judge0/judge0](https://github.com/judge0/judge0) | GPL-3.0 | `master/LICENSE` | **4 491** | EMEA |
+| Judge0 (code execution API) | [judge0/judge0](https://github.com/judge0/judge0) | GPL-3.0 | `master/LICENSE` | **4 492** | EMEA |
 | Dolos (plagiarism detection) | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | **MIT** | `main/LICENSE` | **353** | EMEA |
 | INGInious (exercise assessment) | [INGInious/INGInious](https://github.com/INGInious/INGInious) | AGPL-3.0 (*"most of the files"*) | `main/LICENSE` | **243** | EMEA |
 | UDOIT (accessibility inspection) | [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | GPL-3.0 | `main/LICENSE` | **117** | North America |
-| Ares2 (secure grading runner) | [ls1intum/Ares2](https://github.com/ls1intum/Ares2) | **MIT** | `main/LICENSE` | not re-derived | EMEA |
-| autograder | [zmievsa/autograder](https://github.com/zmievsa/autograder) | GPL-3.0 | `main/LICENSE` | not re-derived | Not placed |
+| Ares2 (secure grading runner) | [ls1intum/Ares2](https://github.com/ls1intum/Ares2) | **MIT** | `main/LICENSE` | **5** | EMEA |
+| autograder — 🔴 **ARCHIVED** (`p361`) | [zmievsa/autograder](https://github.com/zmievsa/autograder) | GPL-3.0 | `main/LICENSE` | **48** | Not placed |
 
 ## Code execution, online judges and autograding — 🆕 a whole tier this base did not have
 
@@ -330,15 +357,15 @@ would otherwise build it.
 
 | Component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
 | --- | --- | --- | --- | ---: | --- |
-| Hydro (multi-tenant judge) | [hydro-dev/Hydro](https://github.com/hydro-dev/Hydro) | AGPL-3.0 | `master/LICENSE` | **7 137** | APAC |
+| Hydro (multi-tenant judge) | [hydro-dev/Hydro](https://github.com/hydro-dev/Hydro) | AGPL-3.0 | `master/LICENSE` | **7 140** | APAC |
 | QingdaoU OnlineJudge | [QingdaoU/OnlineJudge](https://github.com/QingdaoU/OnlineJudge) | 🟢 **MIT** | `master/LICENSE` | **6 552** | APAC |
 | HUSTOJ | [zhblue/hustoj](https://github.com/zhblue/hustoj) | GPL-2.0 | `master/LICENSE` | **3 813** | APAC |
 | DMOJ (judge + contest platform) | [DMOJ/online-judge](https://github.com/DMOJ/online-judge) | AGPL-3.0 | `master/LICENSE` | **1 194** | North America |
 | online-judge-tools | [online-judge-tools/oj](https://github.com/online-judge-tools/oj) | 🟢 **MIT** | `master/LICENSE` | **1 172** | APAC |
-| DMOJ judge-server | [DMOJ/judge-server](https://github.com/DMOJ/judge-server) | AGPL-3.0 | `master/LICENSE` | **981** | North America |
+| DMOJ judge-server | [DMOJ/judge-server](https://github.com/DMOJ/judge-server) | AGPL-3.0 | `master/LICENSE` | **980** | North America |
 | NOJ | [ZsgsDesign/NOJ](https://github.com/ZsgsDesign/NOJ) | 🟢 **MIT** | `master/LICENSE` | **942** | APAC |
 | HOJ | [HimitZH/HOJ](https://github.com/HimitZH/HOJ) | 🟢 **MIT** | `master/LICENSE` | **942** | APAC |
-| SYZOJ | [syzoj/syzoj](https://github.com/syzoj/syzoj) | 🟢 **MIT** | `master/LICENSE` | **923** | APAC |
+| SYZOJ | [syzoj/syzoj](https://github.com/syzoj/syzoj) | 🟢 **MIT** | `master/LICENSE` | **922** | APAC |
 | SDUOJ (microservices) | [SDUOJ/OnlineJudge](https://github.com/SDUOJ/OnlineJudge) | AGPL-3.0 | `main/LICENSE` | **556** | APAC |
 | QingdaoU Judger (seccomp sandbox) | [QingdaoU/Judger](https://github.com/QingdaoU/Judger) | 🟢 **MIT** | 🔴 `newnew/LICENSE` | **496** | APAC |
 | Sharif Judge (course-oriented) | [mjnaderi/Sharif-Judge](https://github.com/mjnaderi/Sharif-Judge) | AGPL-3.0 | 🔴 `Version-1/LICENSE` | **395** | EMEA |
@@ -371,13 +398,13 @@ them is the MIT sandbox this tier's permissive path depends on.
 | Component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
 | --- | --- | --- | --- | ---: | --- |
 | JupyterHub | [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | BSD-3-Clause | `main/LICENSE` | **8 361** | North America |
-| BigBlueButton | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | `v4.0.x-develop/LICENSE` | not re-derived | North America |
+| BigBlueButton | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | `v4.0.x-develop/LICENSE` | **9 249** | North America |
 | pytogether (collaborative IDE) | [SJRiz/pytogether](https://github.com/SJRiz/pytogether) | **MIT** | `main/LICENSE` | **261** | Not placed |
-| Opencast (lecture capture) | [opencast/opencast](https://github.com/opencast/opencast) | **ECL-2.0** | `develop/LICENSE` | not re-derived | EMEA |
-| H5P core | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | GPL-3.0 | `master/LICENSE.txt` | not re-derived | EMEA |
-| H5P CLI | [h5p/h5p-cli](https://github.com/h5p/h5p-cli) | 🟢 **MIT** | `master/LICENSE` | not re-derived | EMEA |
-| Hyperbook | [openpatch/hyperbook](https://github.com/openpatch/hyperbook) | **MIT** | `main/LICENSE.md` | not re-derived | EMEA |
-| yanki (markdown → Anki) | [kitschpatrol/yanki](https://github.com/kitschpatrol/yanki) | 🟡 **MIT, `package.json` only** | `main/package.json` — 🔴 *no licence file in tree* | not re-derived | Not placed |
+| Opencast (lecture capture) | [opencast/opencast](https://github.com/opencast/opencast) | **ECL-2.0** | `develop/LICENSE` | **509** | EMEA |
+| H5P core | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | GPL-3.0 | `master/LICENSE.txt` | **151** | EMEA |
+| H5P CLI | [h5p/h5p-cli](https://github.com/h5p/h5p-cli) | 🟢 **MIT** | `master/LICENSE` | **78** | EMEA |
+| Hyperbook | [openpatch/hyperbook](https://github.com/openpatch/hyperbook) | **MIT** | `main/LICENSE.md` | **74** | EMEA |
+| yanki (markdown → Anki) | [kitschpatrol/yanki](https://github.com/kitschpatrol/yanki) | 🟡 **MIT, `package.json` only** | `main/package.json` — 🔴 *no licence file in tree* | **61** | Not placed |
 
 🟢 **H5P is a split grant worth knowing:** the core library is GPL-3.0 but
 [`h5p/h5p-cli`](https://github.com/h5p/h5p-cli) is **MIT**. Tooling built against
@@ -387,13 +414,14 @@ the CLI carries no copyleft; code linked into the library does.
 
 | Component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
 | --- | --- | --- | --- | ---: | --- |
-| OpenEduCat (education ERP) | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | `19.0/LICENSE` | not re-derived | APAC |
-| RosarioSIS (student info system) | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | `mobile/LICENSE` | not re-derived | EMEA |
-| Learner Credential Wallet | [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | **MIT** | `main/LICENSE` | not re-derived | Global |
-| Terracotta (in-LMS experiments) | [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | Apache-2.0 | `development/LICENSE` | not re-derived | North America |
+| OpenEduCat (education ERP) | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | `19.0/LICENSE` | **893** | APAC |
+| RosarioSIS (student info system) | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | `mobile/LICENSE` | **647** | EMEA |
+| Learner Credential Wallet | [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | **MIT** | `main/LICENSE` | **89** | Global |
+| Terracotta (in-LMS experiments) | [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | Apache-2.0 | `development/LICENSE` | **21** | North America |
 | 🆕 openSIS Classic (K-12 SIS) | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GPL-2.0 | 🔴 `master/docs/License.txt` — **root carries no grant file** | **346** | Not placed |
 | 🆕 FenixEdu Academic (HE SIS) | [FenixEdu/fenixedu-academic](https://github.com/FenixEdu/fenixedu-academic) | LGPL-3.0 | `master/LICENSE` | **175** | EMEA |
-| 🆕 ERPNext (institution-wide ERP) | [frappe/erpnext](https://github.com/frappe/erpnext) | **GPL-3.0** | 🔴 `develop/license.txt` — **lower-case path on a non-`main` default branch** | not re-derived | APAC |
+| 🆕 🟢 **Academico** (school management / SIS) | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** | `main/LICENSE` | **408** | EMEA |
+| 🆕 ERPNext (institution-wide ERP) | [frappe/erpnext](https://github.com/frappe/erpnext) | **GPL-3.0** | 🔴 `develop/license.txt` — **lower-case path on a non-`main` default branch** | **40 419** | APAC |
 
 ### 🔴 `ERPNext` fails both of this base's grant hazards at once, and it is the row most likely to be reached for
 
@@ -449,12 +477,12 @@ classifier anchored on `^GNU` sees no match at all.
 
 | Asset | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
 | --- | --- | --- | --- | ---: | --- |
-| freeCodeCamp | [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | BSD-3-Clause | `main/LICENSE.md` | **457 604** | North America |
-| Open Source Society CS | [ossu/computer-science](https://github.com/ossu/computer-science) | **MIT** | `master/LICENSE` | **210 179** | Global |
-| MCP for Beginners | [microsoft/mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) | **MIT** | `main/LICENSE` | **17 485** | North America |
+| freeCodeCamp | [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | BSD-3-Clause | `main/LICENSE.md` | **457 613** | North America |
+| Open Source Society CS | [ossu/computer-science](https://github.com/ossu/computer-science) | **MIT** | `master/LICENSE` | **210 188** | Global |
+| MCP for Beginners | [microsoft/mcp-for-beginners](https://github.com/microsoft/mcp-for-beginners) | **MIT** | `main/LICENSE` | **17 486** | North America |
 | openunivcourses | [kabartay/openunivcourses](https://github.com/kabartay/openunivcourses) | **MIT** | `main/LICENSE` | **253** | Not placed |
-| elimu.ai literacy webapp | [elimu-ai/webapp](https://github.com/elimu-ai/webapp) | **MIT** | `main/LICENSE` | not re-derived | EMEA |
-| UIUC systems coursebook | [cs341-illinois/coursebook](https://github.com/cs341-illinois/coursebook) | 🔴 **NCSA** (code) + **CC-BY-4.0** (built PDFs) | `master/LICENSE/README.md` — 🔴 🔴 **`LICENSE/` is a DIRECTORY** — see `LICENSE/README.md` | not re-derived | North America |
+| elimu.ai literacy webapp | [elimu-ai/webapp](https://github.com/elimu-ai/webapp) | **MIT** | `main/LICENSE` | **41** | EMEA |
+| UIUC systems coursebook | [cs341-illinois/coursebook](https://github.com/cs341-illinois/coursebook) | 🔴 **NCSA** (code) + **CC-BY-4.0** (built PDFs) | `master/LICENSE/README.md` — 🔴 🔴 **`LICENSE/` is a DIRECTORY** — see `LICENSE/README.md` | **3 849** | North America |
 
 🔴 **`cs341-illinois/coursebook` is this shelf's sharpest grant trap.** `LICENSE` is
 not a file, it is a **directory**. Inside, `LICENSE/README.md` states three different

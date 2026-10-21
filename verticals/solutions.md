@@ -6,36 +6,54 @@ updated: 2026-10-21
 
 # Education — vertical platforms to customise with AI
 
-**Pass 360 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
+**Pass 361 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
 sense that Odoo is extensible for ERP or OpenMRS for healthcare. All verified first-hand
 **2026-10-21** (liveness + default branch via `git ls-remote --symref`, licence read
-from payload). 🔴 `p359` ran without an authenticated GitHub index (fourth consecutive
-pass), so it measured no stars; verification is unchanged. 🟢 Every address on this shelf
-was part of a **236-address corpus liveness sweep: 236 live, 0 dead.**
+from payload). 🟢 Every address on this shelf was part of a **277-address corpus liveness
+sweep: 277 live, 0 dead** — and, for the first time since `p355`, a **star
+re-derivation**: the GitHub index is open through the session's MCP search tool, though
+`api.github.com` still answers 403 by `curl`. See `agents/top.md`.
 
-🟡 **`p358` put a crack in this shelf's most expensive finding** — `p357`'s *there is no
-permissive education ERP* — with `Moha-abshir/SMS`. That still stands, qualified: the
-exception is small and the rule holds at the scale an engagement needs.
+## 🟢 `p361`: this shelf's most expensive finding is now properly qualified, not cracked
 
-🔴 **`p359` adds a second kind of crack, and it is a warning rather than an
-opportunity.** This shelf has always separated rows by **licence reach**. `p359` found a
-row whose licence reach is **none** — stock MIT, organisation account, exactly the shape
-that ends a search — behind which there are **four commits**. 🟢 **So this pass adds a
-second column to the judgement this shelf exists to support: a permissive grant with no
-software behind it is not a platform**, and `verticals/solutions.md` is precisely where
-that mistake would be made. See the proctoring note below.
+🔴 **`p357` published *there is no permissive education ERP*. `p358` cracked it with
+`Moha-abshir/SMS` — and `p359` then had to warn that the crack was worthless**, because
+that address is stock MIT on an organisation account with **four commits** behind it. The
+shelf's answer was a new column: *a permissive grant with no software behind it is not a
+platform.*
 
-🟢 **`p360` adds a platform family with procurement behind it, which is this shelf's
-scarcest kind of row.** France's **ENT** — an AGPL-3.0 school portal serving millions of
-pupils per *région*, with a commit the day before this pass — is shelved below. 🔵 It also
-sharpens the `p359` caution above: the ENT rows are the opposite shape to a permissive
-grant with four commits behind it, and holding both on one shelf is what makes the
-**licence reach** column decidable.
+🟢 **`p361` found the row that actually settles it, and it was invisible to every prose
+search this base has run.** [`academico-sis/academico`](https://github.com/academico-sis/academico)
+— **MIT**, read from `main/LICENSE` — is a Laravel + Filament school-management and
+student-information platform at **408 ★ and 151 forks**, with 🟢 **139 commits in 2026
+and its last commit the day before this pass**. Measured first-hand on the commit
+channel, not from a badge.
+
+🔵 **So the finding becomes precise rather than refuted.** The shelf's platform rows
+split three ways now, and the distinction is what decides an engagement:
+
+| Shape | Example | What it means for a deliverable |
+|---|---|---|
+| 🔴 Copyleft platform, real software | Moodle, Open edX, Canvas | Reach it over LTI/MCP; never fork |
+| 🟡 Permissive grant, **no software** | `Moha-abshir/SMS` (4 commits) | 🔴 Not a platform. The grant is free and buys nothing |
+| 🟢 **Permissive grant, real software** | 🆕 **`academico-sis/academico`** (139 commits in 2026), Kolibri, OpenOLAT, Moodle App | 🟢 Fork freely into a closed client deliverable |
+
+🔴 **What it does not do is make the LMS tier permissive.** Academico is
+*administration* — enrolments, courses, attendance, invoicing — not a VLE. For teaching
+and learning, OpenOLAT remains the only full-featured permissive platform on this shelf,
+and everything else of scale is GPL or AGPL.
+
+## 🔴 `p361` corrects the learning-record line on this shelf
+
+🔴 This file's interoperability note read **`jeffyding/OpenLRW` (ECL-2.0 — schema only,
+dead since 2018)**. 🟢 **That address is a 0 ★ fork.** The canonical is
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW)
+at **62 ★**, same ECL-2.0 grant, last commit **2020-02-06**. 🟡 **Still schema and not a
+dependency — but the right address, and six years stale rather than eight.**
 
 The column that decides engagement shape is **Licence reach**: whether AI added on
 top can stay in a closed client deliverable, or whether the copyleft of the host
 platform reaches it.
-
 ---
 
 ## Core platforms
@@ -101,6 +119,7 @@ mirror one commit behind, and 🔴 `open-ent/entcore` is **five months stale**.
 | **Learner Credential Wallet** | [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | 🟢 **MIT** | 🟢 **None** | Verifiable credentials / digital diplomas under OpenWallet Foundation. The build target for skills-based hiring work |
 | 🆕 **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GPL-2.0 (🔴 `docs/License.txt`) | 🟡 Module = derivative. **GPL-2.0, not 3.0** — do not assume GPL-3.0 compatibility | K-12 SIS with parent and teacher portals, gradebook, report cards and transcripts. The second mature K-12 SIS on this shelf alongside RosarioSIS, and a genuine alternative when a client needs portals rather than Spanish localisation |
 | 🆕 **FenixEdu Academic** | [FenixEdu/fenixedu-academic](https://github.com/FenixEdu/fenixedu-academic) | LGPL-3.0 | 🟡 LGPL — dynamic linking stays separate | **Higher-education** SIS from Instituto Superior Técnico, Lisbon: curricular plans, enrolment, degrees, theses. The HE counterpart to the two K-12 systems above, and the only European university SIS on this shelf |
+| 🆕 🟢 **Academico** | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** (`main/LICENSE`) | 🟢 **None.** Fork into a closed deliverable | Laravel + Filament school management for small and medium institutions. 🟢 **408 ★, 151 forks, 139 commits in 2026, last commit 2026-10-20** — the first permissive education-administration platform on this shelf with real software behind it |
 | 🆕 **ERPNext** | [frappe/erpnext](https://github.com/frappe/erpnext) | **GPL-3.0** (🔴 `develop/license.txt`) | 🔴 **GPL-3.0 — strongest copyleft on this tier.** A custom app is a derivative; reach it over its **REST API**, not as a Frappe app | Full institution-wide ERP — finance, HR, procurement, assets — with an education module. Pairs with [`frappe/lms`](https://github.com/frappe/lms) for a single-vendor teaching-plus-administration stack. India-origin |
 | 🆕 **School Management System (SMS)** | [Moha-abshir/SMS](https://github.com/Moha-abshir/SMS) | 🟢 **MIT** (`main/LICENSE`, holder *Mohamed Abshir*, 2026) | 🟢 **None.** Fork into a closed deliverable | 🟢 **The first permissive administration row on this shelf.** Multi-role school management built for **Kenya's Competency-Based Curriculum (CBC)**: TypeScript 5.3, React 18, Node 20, Drizzle ORM, PostgreSQL 16, Tailwind. 🟡 Single-author and young — read the qualification below before it displaces `openeducat_erp` in a proposal |
 
@@ -295,7 +314,7 @@ stays outside the host's copyleft; 🔴 **reference architecture only** — GDPR
 clear of the Art. 5 prohibition by one unset MediaPipe default)
 **Learning records:** 🆕 **pelotech/xapi-lrs** · 🆕 **yetanalytics/lrsql** ·
 🆕 **adlnet/ADL_LRS** · 🆕 **Larissa** (all Apache-2.0) · 🆕 **DavidLMS/learnmcp-xapi**
-(MIT) · 🆕 **jeffyding/OpenLRW** (ECL-2.0 — 🔴 **schema only, dead since 2018**)
+(MIT) · 🆕 **Apereo-Learning-Analytics-Initiative/OpenLRW** (ECL-2.0, 62 ★ — 🔴 **schema only, last commit 2020-02-06**; `p359`'s `jeffyding/OpenLRW` was a 0 ★ fork, corrected `p361`)
 **Psychometrics:** 🆕 **joakimwallmark/irtorch** (MIT, 🟢 live) · 🆕 **eribean/girth**,
 🆕 **girth_mcmc**, 🆕 **variational-IRT** (MIT, 🔴 all stale ≥4 years)
 **Special education:** 🆕 **dg13788/iep-system** (MIT) — 🔴 **one permissive row out of
