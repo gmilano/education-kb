@@ -4,6 +4,138 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 355 — the twelve-pass "no new agents" streak was a **query artefact**, and changing the leg shape promoted **26 new verified rows in one pass**. Prose legs return listicles; `topic:` intersections return repositories
+
+🟢 **Channel note.** `git ls-remote` **OPEN** · `raw.githubusercontent.com` **OPEN** ·
+authenticated search index **OPEN and used as the primary discovery channel** ·
+🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*` **403**.
+
+### 🔴 The streak was never about supply
+
+`p343`–`p354` each reported no new agent row, and `p354` published a denominator to
+justify it. Re-run this pass with **topic intersections** instead of prose phrases:
+
+| Leg | Results | New rows promoted |
+|---|---:|---:|
+| `topic:education topic:llm stars:>200 pushed:>2026-07-01` | 10 | **6** |
+| `topic:edtech stars:>80 pushed:>2026-06-01` | 33 | **9** |
+| `topic:education topic:mcp pushed:>2026-06-01` | 328 | **7** |
+| `topic:lti stars:>40 pushed:>2026-01-01` | 14 | **4** |
+| `education AI agent tutor in:name,description,topics` (prose) | **0** | 0 |
+| `educación/educativo/escola/aprendizaje` + `agente` (regional prose) | 10 | **0** |
+
+🔵 **The rule for successors:** on this base a **topic intersection is a channel and a
+prose phrase is not**. Note the prose leg returned *zero results*, while
+`topic:education topic:mcp` alone returned **328**. Any future saturation claim must
+name the leg shape that produced it.
+
+### 🟢 New agent rows this window — all licence-read from payload, all live
+
+| Agent | Repo | Licence (payload) | ★ | Region |
+|---|---|---|---:|---|
+| book-to-skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | MIT (`LICENSE.md`) | **35 503** | Not placed |
+| PageLM | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | MIT (`LICENSE.md`) | **2 035** | Not placed |
+| get-it | [beltromatti/get-it](https://github.com/beltromatti/get-it) | Apache-2.0 | **1 124** | EMEA |
+| education-agent-skills | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | CC-BY-SA-4.0 | **885** | EMEA |
+| frametell | [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | AGPL-3.0 | **356** | Not placed |
+| Skill-Anything | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT | **339** | APAC |
+| claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | MIT | **338** | Not placed |
+| ai-shifu | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | Apache-2.0 (`LICENSE.txt`) | **327** | APAC |
+| Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT | **290** | APAC |
+| deep-student | [helixnow/deep-student](https://github.com/helixnow/deep-student) | AGPL-3.0 | **286** | Not placed |
+| learn-anything-with-AI | [read2017/learn-anything-with-AI](https://github.com/read2017/learn-anything-with-AI) | MIT | **201** | Not placed |
+| freelingo | [artcc/freelingo](https://github.com/artcc/freelingo) | AGPL-3.0 | **192** | EMEA |
+| OpenStudy | [OpenStudy-dev/OpenStudy](https://github.com/OpenStudy-dev/OpenStudy) | MIT | **76** | Not placed |
+| brightspace-mcp-server | [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | MIT | **59** | Not placed |
+| Smart-Study-Agent | [HumphreySun98/Smart-Study-Agent](https://github.com/HumphreySun98/Smart-Study-Agent) | MIT | **57** | Not placed |
+| schoolinfo-mcp | [chrisryugj/schoolinfo-mcp](https://github.com/chrisryugj/schoolinfo-mcp) | MIT | **48** | APAC |
+| bncc-dados | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | MIT | **22** | **LATAM** |
+| canvas-ed-mcp | [r1ckyIn/canvas-ed-mcp](https://github.com/r1ckyIn/canvas-ed-mcp) | MIT | **18** | Not placed |
+| knowledge-import-pipeline | [clownjee/knowledge-import-pipeline](https://github.com/clownjee/knowledge-import-pipeline) | Apache-2.0 | **18** | APAC |
+| ku-portal-mcp | [SonAIengine/ku-portal-mcp](https://github.com/SonAIengine/ku-portal-mcp) | MIT | **12** | APAC |
+
+### 🟢 The week's real structural news: MCP is now the LMS integration layer
+
+`topic:education topic:mcp` returns **328 repositories**. Every major LMS has at least
+one community MCP server and **almost all are MIT**: Canvas ×3, Brightspace ×2,
+Open edX ×2, Moodle, Google Classroom, Anki, plus national/institutional portals in
+Korea ×2 and Brazil.
+
+🔵 **Why this is the finding and not the row count.** Education's hardest integration
+problem has always been the incumbent LMS, whose licence (AGPL for Canvas and Open edX)
+makes forking commercially awkward. MCP is a **protocol boundary**, so it solves the
+licence problem and the technical problem in one move. The starting cost of an
+education engagement dropped materially and the trade press has not noticed.
+
+### 🔴 Four licence traps found this window, three of which read as open on GitHub
+
+| Row | Reads as | Payload says |
+|---|---|---|
+| [canyongbs/advisingapp](https://github.com/canyongbs/advisingapp) · 340 ★ | open AI student advising | 🔴 **Elastic License 2.0** — source-available, no managed-service rights |
+| [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) · 1 704 ★ | `NOASSERTION` | 🔴 **CC-BY-NC-4.0** — the best Chinese K-12 curriculum graph, barred from paid work |
+| [learning-commons-org/knowledge-graph](https://github.com/learning-commons-org/knowledge-graph) · 161 ★ | MIT | 🟡 **MIT code, per-dataset data**; **Gated** datasets carry *no* open licence |
+| [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) · 2 035 ★ | `NOASSERTION` | 🟢 **stock MIT** — the classifier was wrong in the *favourable* direction this time |
+
+🔵 **Both directions now observed.** `p348` found NCSA published as MIT (unsafe
+direction); this window finds MIT published as `NOASSERTION` (over-cautious
+direction). GitHub's classifier is unreliable in **both**, which retires any argument
+for trusting it either way.
+
+### 🔴 One carried row is off-domain
+
+[`Egonex-AI/Understand-Anything`](https://github.com/Egonex-AI/Understand-Anything)
+(MIT, ~87 k ★) — the largest address this base carries on the agent shelf — is, read
+first-hand, **a plugin for AI coding tools that maps a codebase into an interactive
+graph**. A developer comprehension tool, not an education agent. It has been inflating
+this shelf's apparent supply. Recorded as a correction; see `agents/top.md`.
+
+### 🔴 This base's own gates caught two defects in THIS pass, and both were costly
+
+🟢 **Recorded because a pass that only reports its finds is advertising, not measurement.**
+
+**1. A client-facing date, wrong by sixteen months in the expensive direction.** This
+pass first wrote — from a vendor blog and a Commission enforcement page — that EU AI Act
+**high-risk obligations for education apply from 2 August 2026**. `gate-dates` refused
+it. Verified independently: the **Digital Omnibus, Regulation (EU) 2026/1744** (published
+24 July 2026, in force **27 July 2026**) moved **Annex III point 3** — the education
+tier — to **2 December 2027**, and Annex I to 2 August 2028. What binds an education
+provider today is the prohibitions, the AI-literacy duty and Article 50 transparency.
+🔵 The wrong version tells an EMEA client they are bound **now**: it converts a 14-month
+readiness programme into panic remediation and is wrong in the direction that costs the
+client money. `intel/market.md`, `intel/trends.md` and `compose/patterns.md` all carry
+the corrected date and the omnibus citation.
+
+**2. The shelf rewrite silently dropped 72 verified addresses.** Condensing six shelves
+from ~45 000 lines of pass narrative to ~1 100 lines of curated tables dropped **72
+distinct addresses**, the entire **25-repository `openeduhub/*` estate** among them —
+the largest open-education engineering estate this base holds. `p348-fold-identity`
+caught it, but *under-reported it by a factor of thirty-six*: its collision-group floor
+fell by only two while 72 addresses vanished, because a casing-collision census is not an
+address census. All 72 were re-probed first-hand (**72 of 72 ALIVE**), their grants
+re-read from payload, and all 72 restored to `repos/foundations.md` as a carried
+inventory. 🔴 **21 of them carry no grant file at all** — all-rights-reserved by default,
+and not usable in client work.
+
+🔵 **Two instrument lessons promoted to rules.** A proxy floor hides the loss it proxies
+for, so `test_no_address_is_dropped` now pins the address census by **equality** against
+2 483 rather than by a floor. And a volume floor calibrated on *narrative* blocks any
+cleanup for good: `p311`'s absolute cell constant moved 7 000 → 6 900 with every
+relational assertion untouched, because the asymmetry is the finding and the snapshot is
+not.
+
+### 🔵 Regional state of the agent layer
+
+**APAC 11 placed** (China, Hong Kong, India, Korea) · **EMEA 6** (Belgium ×2, Germany,
+Italy, Spain, UK) · **North America 6** (standards/skills/evaluator layer) ·
+🔴 **LATAM 2** — `mcp-brasil` and `bncc-dados`, both Brazil, both MIT.
+
+The Spanish/Portuguese leg returned 10 repositories and promoted **none**: a personal
+OS, an email agent, a WhatsApp book recommender, a pentest tool. **The Spanish-speaking
+LATAM education-agent gap is real supply absence, not search failure**, and it is
+written down rather than left looking like coverage.
+
+---
+
 ## 2026-10-21 · Pass 354 — no new agent row for the **twelfth** consecutive pass, and this window finally has the **denominator** that explains why: the authenticated index, asked the same question, returns **65 repositories of which exactly one is educational and not already carried**. The week's real agent-layer news is that **every grant path on this tier now resolves `200`** — 47 of 47, checked first-hand
 
 **Evidence:** [`grant-path-liveness`](../evidence/grant-path-liveness.2026-10-21-p354.tsv) · [`discovery-legs`](../evidence/discovery-legs.2026-10-21-p354.tsv) · [`l2-bench-resolution`](../evidence/l2-bench-resolution.2026-10-21-p354.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p354.tsv) · [`branch-default-by-age`](../evidence/branch-default-by-age.2026-10-21-p354.tsv)

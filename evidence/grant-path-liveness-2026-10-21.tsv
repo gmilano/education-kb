@@ -1,0 +1,162 @@
+archivo	linea	slug	branch	path	http	veredicto
+agents/top.md	30	HKUDS/DeepTutor	main	LICENSE	200	ALIVE
+agents/top.md	31	virgiliojr94/book-to-skill	master	LICENSE.md	200	ALIVE
+agents/top.md	32	CaviraOSS/PageLM	main	LICENSE.md	200	ALIVE
+agents/top.md	33	beltromatti/get-it	main	LICENSE	200	ALIVE
+agents/top.md	34	GarethManning/education-agent-skills	main	LICENSE	200	ALIVE
+agents/top.md	35	satvik314/educhain	main	LICENSE	200	ALIVE
+agents/top.md	36	sitor-ai/frametell	main	LICENSE	200	ALIVE
+agents/top.md	37	SYuan03/Skill-Anything	main	LICENSE	200	ALIVE
+agents/top.md	38	assafkip/claudemy	main	LICENSE	200	ALIVE
+agents/top.md	39	ai-shifu/ai-shifu	main	LICENSE.txt	200	ALIVE
+agents/top.md	40	Li-Evan/Bloom	main	LICENSE	200	ALIVE
+agents/top.md	41	helixnow/deep-student	main	LICENSE	200	ALIVE
+agents/top.md	42	CAHLR/OATutor	main	LICENSE	200	ALIVE
+agents/top.md	43	read2017/learn-anything-with-AI	main	LICENSE	200	ALIVE
+agents/top.md	44	artcc/freelingo	main	LICENSE	200	ALIVE
+agents/top.md	45	HumphreySun98/Smart-Study-Agent	main	LICENSE	200	ALIVE
+agents/top.md	64	OpenStudy-dev/OpenStudy	main	LICENSE	200	ALIVE
+agents/top.md	65	RohanMuppa/brightspace-mcp-server	main	LICENSE	200	ALIVE
+agents/top.md	66	chrisryugj/schoolinfo-mcp	main	LICENSE	200	ALIVE
+agents/top.md	67	r1ckyIn/canvas-ed-mcp	main	LICENSE	200	ALIVE
+agents/top.md	68	SonAIengine/ku-portal-mcp	main	LICENSE	200	ALIVE
+agents/top.md	69	vishalsachdev/canvas-mcp	main	LICENSE	200	ALIVE
+agents/top.md	70	falkenslab/moodle-mcp	main	LICENSE	200	ALIVE
+agents/top.md	71	ArnaudGuiovanna/tutor-mcp	main	LICENSE	200	ALIVE
+agents/top.md	72	blend-ed/openedx-mcp	master	LICENSE	200	ALIVE
+agents/top.md	73	ankimcp/anki-mcp-server	main	LICENSE	200	ALIVE
+agents/top.md	74	sandraschi/classroom-mcp	master	LICENSE	200	ALIVE
+agents/top.md	75	likr/canvas-lms-agent	master	canvas-lms-mcp/LICENSE	200	ALIVE
+agents/top.md	76	Mcp-Brasil/mcp-brasil	main	LICENSE	200	ALIVE
+agents/top.md	82	dodona-edu/dolos	main	LICENSE	200	ALIVE
+agents/top.md	83	INGInious/INGInious	main	LICENSE	200	ALIVE
+agents/top.md	84	ZhijieXiong/pyedmine	main	LICENSE	200	ALIVE
+agents/top.md	85	ls1intum/Ares2	main	LICENSE	200	ALIVE
+agents/top.md	86	pykt-team/pykt-toolkit	main	LICENSE	200	ALIVE
+agents/top.md	87	anthropics/k12-teacher-skills	main	LICENSE	200	ALIVE
+agents/top.md	88	learning-commons-org/agent-skills	main	LICENSE	200	ALIVE
+agents/top.md	89	learning-commons-org/evaluators	main	LICENSE.md	200	ALIVE
+agents/top.md	98	withmarbleapp/os-taxonomy	main	LICENSE	200	ALIVE
+agents/top.md	99	xiaoyang111222/cn-math-taxonomy	main	LICENSE	200	ALIVE
+agents/top.md	100	learning-commons-org/knowledge-graph	main	LICENSE.md	200	ALIVE
+agents/top.md	101	bncc-dev/bncc-dados	main	LICENSE	200	ALIVE
+agents/top.md	102	clownjee/knowledge-import-pipeline	main	LICENSE	200	ALIVE
+agents/top.md	103	aclascollege/polymath	main	LICENSE	200	ALIVE
+agents/top.md	129	Egonex-AI/Understand-Anything	main	LICENSE	200	ALIVE
+repos/foundations.md	24	openedx/openedx-platform	master	LICENSE	200	ALIVE
+repos/foundations.md	25	moodle/moodle	main	COPYING.txt	200	ALIVE
+repos/foundations.md	26	instructure/canvas-lms	master	LICENSE	200	ALIVE
+repos/foundations.md	27	frappe/lms	develop	license.txt	200	ALIVE
+repos/foundations.md	28	classroomio/classroomio	main	LICENSE	200	ALIVE
+repos/foundations.md	29	learningequality/kolibri	develop	LICENSE	200	ALIVE
+repos/foundations.md	30	overhangio/tutor	release	LICENSE.txt	200	ALIVE
+repos/foundations.md	31	chamilo/chamilo-lms	master	LICENSE	200	ALIVE
+repos/foundations.md	32	moodlehq/moodleapp	main	COPYING.txt	200	ALIVE
+repos/foundations.md	33	sakaiproject/sakai	master	LICENSE	200	ALIVE
+repos/foundations.md	34	OpenOLAT/OpenOLAT	master	LICENSE	200	ALIVE
+repos/foundations.md	35	elmsln/elmsln	master	LICENSE.md	200	ALIVE
+repos/foundations.md	51	tsugiproject/tsugi	master	LICENSE	200	ALIVE
+repos/foundations.md	52	jcputney/scorm-again	master	LICENSE	200	ALIVE
+repos/foundations.md	53	openfun/marsha	master	LICENSE	200	ALIVE
+repos/foundations.md	54	Cvmcosta/ltijs	master	LICENSE	200	ALIVE
+repos/foundations.md	55	dmitry-viskov/pylti1.3	master	LICENSE	200	ALIVE
+repos/foundations.md	56	lti-tool/lti-tool	main	LICENSE	200	ALIVE
+repos/foundations.md	57	Liberate-Labs/ltikit-sdk	main	LICENSE	200	ALIVE
+repos/foundations.md	58	openfun/django-lti-toolbox	master	LICENSE	200	ALIVE
+repos/foundations.md	59	harvard-edtech/caccl	main	LICENSE.md	200	ALIVE
+repos/foundations.md	60	jupyterhub/ltiauthenticator	main	LICENSE	200	ALIVE
+repos/foundations.md	61	1EdTech/caliper-spec	master	LICENSE.md	200	ALIVE
+repos/foundations.md	67	judge0/judge0	master	LICENSE	200	ALIVE
+repos/foundations.md	70	ucfopen/UDOIT	main	LICENSE	200	ALIVE
+repos/foundations.md	72	zmievsa/autograder	main	LICENSE	200	ALIVE
+repos/foundations.md	78	jupyterhub/jupyterhub	main	LICENSE	200	ALIVE
+repos/foundations.md	79	bigbluebutton/bigbluebutton	v4.0.x-develop	LICENSE	200	ALIVE
+repos/foundations.md	80	SJRiz/pytogether	main	LICENSE	200	ALIVE
+repos/foundations.md	81	opencast/opencast	develop	LICENSE	200	ALIVE
+repos/foundations.md	82	h5p/h5p-php-library	master	LICENSE.txt	200	ALIVE
+repos/foundations.md	83	h5p/h5p-cli	master	LICENSE	200	ALIVE
+repos/foundations.md	84	openpatch/hyperbook	main	LICENSE.md	200	ALIVE
+repos/foundations.md	95	openeducat/openeducat_erp	19.0	LICENSE	200	ALIVE
+repos/foundations.md	96	francoisjacquet/rosariosis	mobile	LICENSE	200	ALIVE
+repos/foundations.md	97	openwallet-foundation-labs/learner-credential-wallet	main	LICENSE	200	ALIVE
+repos/foundations.md	98	terracotta-education/terracotta	development	LICENSE	200	ALIVE
+repos/foundations.md	104	freeCodeCamp/freeCodeCamp	main	LICENSE.md	200	ALIVE
+repos/foundations.md	105	ossu/computer-science	master	LICENSE	200	ALIVE
+repos/foundations.md	106	microsoft/mcp-for-beginners	main	LICENSE	200	ALIVE
+repos/foundations.md	107	kabartay/openunivcourses	main	LICENSE	200	ALIVE
+repos/foundations.md	108	elimu-ai/webapp	main	LICENSE	200	ALIVE
+repos/foundations.md	136	openeduhub/duplicate-detection	main	LICENSE	200	ALIVE
+repos/foundations.md	137	openeduhub/edu-sharing-python-client	main	LICENSE	200	ALIVE
+repos/foundations.md	142	openeduhub/ki-prompt-benchmark	main	LICENSE	200	ALIVE
+repos/foundations.md	143	openeduhub/lernpfadeditor	main	LICENSE	200	ALIVE
+repos/foundations.md	144	openeduhub/llm-judge	main	LICENSE	200	ALIVE
+repos/foundations.md	145	openeduhub/mappings	main	LICENSE	200	ALIVE
+repos/foundations.md	148	openeduhub/metadata-browser-plugin-fuerapi	main	LICENSE	200	ALIVE
+repos/foundations.md	149	openeduhub/metalookup	main	LICENSE.txt	200	ALIVE
+repos/foundations.md	150	openeduhub/oeh-metadata-vocabs	master	LICENSE	200	ALIVE
+repos/foundations.md	154	openeduhub/skohub-vocabs-oeh-patched	main	LICENSE	200	ALIVE
+repos/foundations.md	156	openeduhub/text-statistics	main	LICENSE	200	ALIVE
+repos/foundations.md	158	openeduhub/tutor-chatbot	main	LICENSE	200	ALIVE
+repos/foundations.md	159	openeduhub/wlo-quellenliste	main	LICENSE	200	ALIVE
+repos/foundations.md	166	openedx/frontend-base	main	LICENSE	200	ALIVE
+repos/foundations.md	167	openedx/frontend-platform	master	LICENSE	200	ALIVE
+repos/foundations.md	168	openedx/openedx-proposals	master	LICENSE	200	ALIVE
+repos/foundations.md	174	openfun/ashley	master	LICENSE	200	ALIVE
+repos/foundations.md	175	openfun/potsie	main	LICENSE.md	200	ALIVE
+repos/foundations.md	181	Brightspace/test-reporting-node	main	LICENSE	200	ALIVE
+repos/foundations.md	182	BrightspaceUI/core	main	LICENSE	200	ALIVE
+repos/foundations.md	183	BrightspaceUI/intl	main	LICENSE	200	ALIVE
+repos/foundations.md	184	BrightspaceUI/labs	main	LICENSE	200	ALIVE
+repos/foundations.md	190	adamzammit/ltiplugin	master	LICENSE	200	ALIVE
+repos/foundations.md	191	annoto/ims-lti	master	LICENSE	200	ALIVE
+repos/foundations.md	193	longsightgroup/lti-tool	main	LICENSE	200	ALIVE
+repos/foundations.md	194	scormflow/scorm-engine-client	main	LICENSE	200	ALIVE
+repos/foundations.md	200	mizcausevic-dev/curriculum-knowledge-graph	main	LICENSE	200	ALIVE
+repos/foundations.md	208	arx-deidentifier/arx	master	LICENSE	200	ALIVE
+repos/foundations.md	209	greenmaskio/greenmask	main	LICENSE	200	ALIVE
+repos/foundations.md	210	hitsz-ids/synthetic-data-generator	main	LICENSE	200	ALIVE
+repos/foundations.md	211	meta-pytorch/opacus	main	LICENSE	200	ALIVE
+repos/foundations.md	212	OpenMined/PyDP	dev	LICENSE	200	ALIVE
+repos/foundations.md	213	rizzo-ai-academy/rizzo-pii	main	LICENSE	200	ALIVE
+repos/foundations.md	214	securitybunker/databunker	master	LICENSE	200	ALIVE
+repos/foundations.md	215	synthetichealth/synthea	master	LICENSE	200	ALIVE
+repos/foundations.md	216	thoughtbot/top_secret	main	LICENSE.txt	200	ALIVE
+repos/foundations.md	222	freeCodeCamp/curriculum-helpers	main	LICENSE	200	ALIVE
+repos/foundations.md	224	openki/openki	dev	LICENSE	200	ALIVE
+repos/foundations.md	225	panaversity/learn-agentic-ai	main	LICENSE	200	ALIVE
+repos/foundations.md	226	weecology/forecasting-course	main	LICENSE.md	200	ALIVE
+repos/foundations.md	233	chrischall/gogcli-mcp	main	LICENSE	200	ALIVE
+repos/foundations.md	234	christophblessing/quiz-recap	main	LICENSE	200	ALIVE
+repos/foundations.md	235	damphuquy/agent-as-a-tutor	main	LICENSE	200	ALIVE
+repos/foundations.md	236	dymchenkko/claude-study-agent	main	LICENSE	200	ALIVE
+repos/foundations.md	237	groton-school/canvas-cli	main	LICENSE	200	ALIVE
+repos/foundations.md	238	ibenian/algebench	main	LICENSE	200	ALIVE
+repos/foundations.md	240	lucasspinola/assistentes-educacionais-com-ia	main	LICENSE	200	ALIVE
+repos/foundations.md	241	molecule-dev/molecule	main	LICENSE	200	ALIVE
+repos/foundations.md	243	muhammedalakbarli/imparo	main	LICENSE	200	ALIVE
+repos/foundations.md	244	nichochar/ari	main	LICENSE	200	ALIVE
+repos/foundations.md	246	smashburger-dev/argmin	main	LICENSE	200	ALIVE
+repos/foundations.md	247	viendinhcom/supermemo	master	LICENSE	200	ALIVE
+agents/top.md	133	kitschpatrol/yanki				NO-PATH
+repos/foundations.md	85	kitschpatrol/yanki				NO-PATH
+repos/foundations.md	109	cs341-illinois/coursebook				NO-PATH
+repos/foundations.md	138	openeduhub/its-data				NO-PATH
+repos/foundations.md	139	openeduhub/its-jointprobability				NO-PATH
+repos/foundations.md	140	openeduhub/its-prep				NO-PATH
+repos/foundations.md	141	openeduhub/its-qna				NO-PATH
+repos/foundations.md	146	openeduhub/metadata-agent-api				NO-PATH
+repos/foundations.md	147	openeduhub/metadata-agent-canvas				NO-PATH
+repos/foundations.md	151	openeduhub/oeh-search-etl				NO-PATH
+repos/foundations.md	152	openeduhub/oeh-search-frontend				NO-PATH
+repos/foundations.md	153	openeduhub/python-kidra				NO-PATH
+repos/foundations.md	155	openeduhub/text-extraction				NO-PATH
+repos/foundations.md	157	openeduhub/topic-statistics				NO-PATH
+repos/foundations.md	160	openeduhub/z-api-runner				NO-PATH
+repos/foundations.md	192	godmartinz/node-lti-1.3-library				NO-PATH
+repos/foundations.md	201	oseducation/knowledge-graph				NO-PATH
+repos/foundations.md	202	razi-03/ncert-ckg				NO-PATH
+repos/foundations.md	223	h5p/h5p-interactive-video				NO-PATH
+repos/foundations.md	232	010ankushsharma/adaptalearn				NO-PATH
+repos/foundations.md	239	kyyota-wang/cloverailab				NO-PATH
+repos/foundations.md	242	mthatipamula/educational-assessment-ai-agent-platform				NO-PATH
+repos/foundations.md	245	risnake/canvas-mcp-server				NO-PATH

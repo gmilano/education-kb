@@ -98,7 +98,7 @@ updated: 2026-10-21
 
 🟢 **`gate-census-currency` caught THIS pass, and that is the gate working rather than a defect.** Run after every shelf was written, it reported `2 of 3 cells STALE`: the live census sentence was still `p352`'s **2 478 → 33 → 2 445**, and this pass's own tree yields one more address.
 
-🟢 **Re-derived over the nine `SHELF_FILES` of the tree this pass commits: **2 479** harvested shapes → **33** are not addresses → **2 446 addresses** (1.33 % inflation).**
+🟢 **Re-derived over the nine `SHELF_FILES` of the tree this pass commits: **2 483** harvested shapes → **33** are not addresses → **2 450 addresses** (1.33 % inflation).** 🔵 `p355` moved this triple 2 479 → 2 483 / 2 446 → 2 450: it restored the 72 addresses its own shelf rewrite had dropped, and re-ran `make address-shape-census` as the last act before committing. The rejected count is unchanged at **33**, because a navigation namespace is not a shelf.
 
 🔵 **And the one new address is nameable, which settles the mechanism exactly as `p352` demanded:** `judge0/judge0`, this pass's own new `repos/foundations.md` row. 🟢 **Three passes in a row published a stale denominator and this is the first to publish a current one** — not because this pass was more careful, but because the gate refuses the other order: write the pass, derive, then state the figure.
 

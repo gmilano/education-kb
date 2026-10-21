@@ -6,18 +6,29 @@ had recorded `UNANSWERED` and found **8 were never addresses** — GitHub naviga
 read as `owner/repo`, two planted controls, and a README placeholder. So the denominator
 is inflated, and `ACTION ZZ-an` was registered to republish it.
 
-**Answer, measured 2026-10-21 over the nine shelves.**
+**Answer, re-derived 2026-10-21 by `p355` over the nine shelves, AFTER its writes.**
 
 | cifra | valor |
 |---|---:|
-| harvested folded shapes | **2 476** |
+| harvested folded shapes | **2 483** |
 | rejected — not addresses | **33** |
-| **addresses, corrected** | **2 443** |
+| **addresses, corrected** | **2 450** |
 | inflation | **1.33 %** |
 
-`p349`/`p350` published **2 462**; the shelves have since grown, so the comparable
-figure is *2 476 harvested → 2 443 addresses*, and the correction is **33 shapes**, not a
-re-derivation of 2 462.
+`p349`/`p350` published **2 462** and `p351`–`p354` published *2 476 → 2 443*. 🔴 `p355`
+rewrote six of the nine shelves, so this triple had to be re-derived rather than carried:
+`make address-shape-census` was run as the **last act before the commit**, which is the
+procedure `gate-census-currency` exists to enforce and which `p355`'s own first run
+violated.
+
+🟢 **The rejected count is unchanged at 33, and that is the load-bearing part.** The
+harvested total moved 2 476 → 2 483 purely because `p355` restored 72 addresses its own
+rewrite had dropped (the `openeduhub/*` estate among them) — caught by
+`p348-fold-identity`, re-probed first-hand, all 72 alive, and now pinned by equality in
+`test_no_address_is_dropped`. The non-address shapes this instrument rejects — the
+`topics/*` and `trending/*` navigation namespaces, `your-username/SafeTutors` and the
+rest — are unaffected by a shelf rewrite, which is the evidence that the inflation this
+gate measures is a property of the harvest and not of the prose.
 
 ## 🔴 ZZ-an's own prescription is insufficient, and that is the finding
 

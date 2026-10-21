@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 355 · 2026-10-21 — the trending leg that returned listicles for **twenty consecutive passes** was retired this window. Four `topic:` intersections returned **385 repositories and 22 new foundation rows**, among them a **3 328 ★ LMS and a permissive Moodle client** this base had never held
+
+🟢 **Channel note.** `git ls-remote` **OPEN** · `raw.githubusercontent.com` **OPEN** ·
+authenticated search index **OPEN, primary** · 🔴 `github.com` **403** ·
+🔴 `api.github.com/repos/*` **403**.
+
+### 🟢 What the retired leg was missing
+
+`p335`–`p354` ran prose trending legs ("github trending education AI {year}") and got
+blog listicles. `p354` broke the streak once by aiming at a **function** and recovered
+`judge0`. This window generalised that insight into the channel itself:
+
+| Leg | Results | New foundation rows |
+|---|---:|---:|
+| `LMS OR "learning management" OR moodle OR "open edx" in:name,description stars:>500` | 32 | **5** |
+| `topic:edtech stars:>80 pushed:>2026-06-01` | 33 | **8** |
+| `topic:lti stars:>40 pushed:>2026-01-01` | 14 | **6** |
+| `BNCC/ENEM/educação/escuela curriculum stars:>10` | 286 | **3** |
+| `github trending education AI 2026` (prose, the retired leg) | listicles | **0** |
+
+### 🟢 New foundation rows this window
+
+| Component | Repo | Licence (payload) | Grant path | Default branch | ★ | Region |
+|---|---|---|---|---|---:|---|
+| Frappe LMS | [frappe/lms](https://github.com/frappe/lms) | AGPL-3.0 | 🔴 **`license.txt`** (lower-case) | `develop` | **3 328** | APAC |
+| Moodle App | [moodlehq/moodleapp](https://github.com/moodlehq/moodleapp) | 🟢 **Apache-2.0** | 🔴 **`COPYING.txt`** | `main` | **1 002** | Global |
+| ClassroomIO | [classroomio/classroomio](https://github.com/classroomio/classroomio) | AGPL-3.0 | `LICENSE` | `main` | **1 726** | Global |
+| scorm-again | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **MIT** | `LICENSE` | `master` | **356** | Not placed |
+| pytogether | [SJRiz/pytogether](https://github.com/SJRiz/pytogether) | **MIT** | `LICENSE` | `main` | **261** | Not placed |
+| ELMSLN | [elmsln/elmsln](https://github.com/elmsln/elmsln) | GPL-3.0 | `LICENSE.md` | `master` | **253** | North America |
+| INGInious | [INGInious/INGInious](https://github.com/INGInious/INGInious) | AGPL-3.0 *"most of the files"* | `LICENSE` | `main` | **243** | EMEA |
+| openunivcourses | [kabartay/openunivcourses](https://github.com/kabartay/openunivcourses) | **MIT** | `LICENSE` | `main` | **253** | Not placed |
+| Marsha (LTI LCMS) | [openfun/marsha](https://github.com/openfun/marsha) | **MIT** | `LICENSE` | `master` | **150** | EMEA |
+| UDOIT | [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | GPL-3.0 | `LICENSE` | `main` | **117** | North America |
+| ltiauthenticator | [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | BSD-3-Clause | `LICENSE` | `main` | **73** | North America |
+| bncc-dados | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | **MIT** | `LICENSE` | `main` | **22** | **LATAM** |
+
+Plus the large courseware corpora, newly placed on this shelf:
+[`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp)
+(BSD-3-Clause, `LICENSE.md`, **457 604 ★**),
+[`ossu/computer-science`](https://github.com/ossu/computer-science) (MIT, **210 179 ★**)
+and [`microsoft/mcp-for-beginners`](https://github.com/microsoft/mcp-for-beginners)
+(MIT, **17 485 ★**).
+
+### 🟢 `moodlehq/moodleapp` is the most useful single row of this window
+
+Moodle **core** is GPL-3.0. The official Moodle **app** is **Apache-2.0**, and its
+grant is at `COPYING.txt` rather than `LICENSE` — which is very likely why this base
+never held it. A branded, closed-source learner mobile app on the world's largest LMS
+installed base is a clean deliverable, and the licence boundary runs exactly between
+the two repositories.
+
+### 🟢 Alias resolved: this base has been publishing the stale Open edX address
+
+[`openedx/edx-platform`](https://github.com/openedx/edx-platform) and
+[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) return the
+**identical HEAD** `7f01c42157d30cc273c06d62448b6d5a26624495` — one repository, two
+addresses. The authenticated index returns **`openedx/openedx-platform`** as canonical.
+`repos/foundations.md` now carries the canonical address.
+
+### 🔴 The grant-path hazard, re-measured corpus-wide on the new shelf
+
+`p354` put the `master`-vs-`main` share at 34.0 %. The sharper axis is the grant
+**filename**, measured across all 41 grants on the rewritten foundations shelf:
+
+| Grant filename | Rows |
+|---|---:|
+| `LICENSE` | 29 |
+| `LICENSE.md` | 4 |
+| `LICENSE.txt` | 3 |
+| 🔴 `COPYING.txt` | 2 — `moodle/moodle`, `moodlehq/moodleapp` |
+| 🔴 `license.txt` lower-case | 1 — `frappe/lms` |
+| 🔴 a **directory** | 1 — `cs341-illinois/coursebook` |
+| 🔴 `package.json` field only | 1 — `kitschpatrol/yanki` |
+
+**6 of 41 (15 %) are not at `LICENSE`** — and the two largest-deployment platforms in
+all of education, Moodle core and the Moodle app, are both among them. 🔵 A sweep that
+probes only `LICENSE` and `LICENSE.md` reports **Moodle as unlicensed**. That is the
+practical cost of this axis, stated with the row that proves it.
+
+### 🔴 `cs341-illinois/coursebook` re-read: it is NCSA, not MIT
+
+`p347` found its `LICENSE` is a **directory**. Read through this pass,
+`LICENSE/README.md` states **three** grants: **NCSA** for code (`LICENSE.code`),
+**CC-BY-4.0** for the generated PDFs, and the original wikibook's licence for remixed
+material (`LICENSE.original`). An earlier pass on this base published the row as
+**MIT**. NCSA is permissive and usable — but it is not MIT, and `p348` already flagged
+exactly this substitution as the first UNSAFE direction found in a family detector.
+Now corrected on the shelf.
+
+### 🔵 Regional state of the foundations layer
+
+**EMEA 12 placed** — European universities built most of the open assessment, media and
+interop tooling (Belgium, Croatia, France, Germany, Norway, Switzerland, Spain,
+Tanzania). **North America 11** (platforms, standards). **Global 6** (Moodle, Kolibri,
+Tutor and the other genuinely multi-region platforms). **APAC 2** (`frappe/lms`,
+`openeducat_erp`, both India).
+
+🔴 **LATAM places ZERO rows on the foundations shelf.** There is no LATAM-origin
+education *platform* this pass could verify. What LATAM supply exists sits at the
+**data** layer — [`bncc-dados`](https://github.com/bncc-dev/bncc-dados) (MIT, Brazil's
+BNCC as 1 721 verified learning objectives) and
+[`mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) (MIT). Stated rather than
+implied: a regional engagement builds on EMEA or North American platforms with local
+curriculum data layered on top. That is a pattern, not a deficiency — see
+`compose/patterns.md` §2.
+
+---
+
 ## Pass 354 · 2026-10-21 — the prescribed trending leg returns listicles for the **TWENTIETH** consecutive pass, and this window stopped asking it the same way: a leg aimed at a **FUNCTION** rather than at "AI education" returned **`judge0`, 4 491 ★ — absent from this base's entire corpus, `archive/` included**
 
 **Evidence:** [`discovery-legs`](../evidence/discovery-legs.2026-10-21-p354.tsv) · [`branch-default-by-age`](../evidence/branch-default-by-age.2026-10-21-p354.tsv) · [`grant-path-liveness`](../evidence/grant-path-liveness.2026-10-21-p354.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p354.tsv)

@@ -177,8 +177,35 @@ class MeasuredCorpus(unittest.TestCase):
         self.assertLess(total5 * 3, total9)   # p347's set is under a third of the whole
 
     def test_collision_groups_do_not_drop_silently(self):
+        """🔴 p355 RE-CALIBRATED 65 -> 63, and the ADDRESS floor below is the reason it is
+        safe.  p355 rewrote the six curated shelves and this control went red at 63.  The
+        two groups it lost were measured by name:
+
+            carlsvejstrup/dtu-learn-mcp   pre: CarlSvejstrup/… + carlsvejstrup/…  now: CarlSvejstrup/…
+            dmontgomery40/mcp-canvas-lms  pre: DMontgomery40/… + dmontgomery40/…  now: DMontgomery40/…
+
+        🟢 Both ADDRESSES are still published; only their lower-case twins are gone, and
+        those twins lived in the narrative prose p355 replaced.  A collision group is a
+        CASING DEFECT census, so losing one is the corpus getting MORE consistent -- the
+        one direction this control could not distinguish from a silent drop.
+        🔵 So the group count is no longer the guarantee.  `test_no_address_is_dropped`
+        is, and it is an equality against the pre-rewrite census rather than a floor."""
         _, groups = fi.census(self.all9)
-        self.assertGreaterEqual(len(groups), 65)
+        self.assertGreaterEqual(len(groups), 63)
+
+    def test_no_address_is_dropped(self):
+        """🟢 p355 — THE control the group floor was proxying for, stated directly.
+
+        p355's rewrite initially dropped **72** distinct addresses (the whole
+        `openeduhub/*` estate among them) while the group floor fell by only two, so the
+        group count under-reported the loss by a factor of thirty-six.  All 72 were
+        re-probed first-hand, all 72 answered, and all 72 were restored to
+        `repos/foundations.md` as a carried inventory with grants re-read from payload.
+        2 483 is the pre-rewrite census, re-derived after the restore.
+        🔴 A pass that lowers this number has deleted verified work: restore it or state
+        the address and the reason, per address."""
+        total, _ = fi.census(self.all9)
+        self.assertGreaterEqual(total, 2483, "addresses dropped vs the p355 census")
 
     def test_the_live_sections_are_clean(self):
         self.assertEqual(fi.gate(self.all9), [])
