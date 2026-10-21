@@ -1,0 +1,13 @@
+channel	transport	status	verdict	used_this_pass	note
+git ls-remote {any public repo}	git via session proxy	refs returned	OPEN	yes — the liveness oracle over 165 addresses	positive-only: a deleted, private or never-existing address returns `fatal:` and cannot be distinguished among those three
+git clone --bare --filter=blob:none	git via session proxy	pack served	OPEN	yes — tree enumeration on classroom-mcp and pedagogy-benchmark	the strong instrument for an absence claim (p275); a ladder is weaker
+raw.githubusercontent.com/{repo}/{branch}/{path}	curl via session proxy	200	OPEN	yes — 31 grant payloads read first-hand	carries no branch default: the branch is part of the claim, which is how this pass found its one defect
+github.com/{slug}	curl via session proxy	403	POLICY-DENIED	no	so NO star or fork figure on these shelves is first-hand this pass; p352's 2026-10-21 readings are one day old and carried
+api.github.com/repos/{slug}	curl via session proxy	403	POLICY-DENIED	no	per-repository authorisation, as p352 measured; unchanged
+arxiv.org	curl via session proxy	000	CONNECT-REJECTED	no	NEW to the do-not-re-probe list. Blocked the only route to L2-Bench's code-availability statement
+aclanthology.org	curl via session proxy	000	CONNECT-REJECTED	no	NEW to the do-not-re-probe list
+huggingface.co	curl via session proxy	000	CONNECT-REJECTED	no	NEW to the do-not-re-probe list. Blocks the dataset channel for every benchmark row
+static.pib.gov.in / www.pib.gov.in	curl via session proxy	000	CONNECT-REJECTED	no	NEW. India's government press host: every India figure below is SECONDARY-SOURCED by construction
+www.linuxfoundation.org	curl via session proxy	000	CONNECT-REJECTED	no	NEW. Blocked first-hand reading of the Africa GPU-access figure
+openpraxis.org	curl via session proxy	000	CONNECT-REJECTED	no	NEW. Blocked first-hand reading of the GCC OER systematic review
+eur-lex.europa.eu / digital-strategy.ec.europa.eu / artificialintelligenceact.eu	curl via session proxy	000	CONNECT-REJECTED	no	established p351, re-confirmed p352, NOT re-probed this pass

@@ -4,6 +4,26 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 353 · 2026-10-21 — every address this shelf publishes was checked first-hand and **all of them answer**; the platform leg returned **no permissive LMS or SIS for the third time**, which is now a finding about the sector rather than about the leg
+
+**Evidence:** [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p353.tsv)
+
+🟢 **This shelf's addresses are part of the 165-of-165 liveness sweep recorded on `agents/top.md`** — harvested from the live section of this file among the six, probed with `git ls-remote`, **zero dead and zero moved.** 🔴 **No star or fork figure here is first-hand this pass**: `github.com` and `api.github.com` are 403, so every count is **carried from `p352`** and labelled there.
+
+### 🔴 The permissive-platform hole is structural, and the prescribed leg keeps confirming it
+
+🔴 `open source platform education LMS SIS MIT Apache 2026` returned **Open edX (AGPL-3.0)**, **Moodle (GPL-3.0)**, **Canvas (AGPL-3.0)**, **OpenEduCat (LGPL-3.0)**, Sakai, ILIAS and Chamilo. 🟢 **Not one permissively licensed LMS or SIS, on a leg that explicitly asked for MIT and Apache.** 🔵 **Third consecutive measurement, so the right conclusion is about the sector: education's platform layer is copyleft, and that is why this base's integration tier consolidates on MCP** — a separate program speaking a documented protocol carries none of the host platform's obligations.
+
+🟡 Two figures from the leg worth carrying, both **vendor-published** and labelled: **Moodle at 400 M+ users across 150 000+ registered sites**, and **OpenEduCat as the only result combining LMS and SIS on one database** (LGPL-3.0). 🔵 For a studio the practical reading is unchanged and now better evidenced: **choose the platform for its installed base and the licence for the layer you write**, which is the MCP tier, not the core.
+
+### 🟢 The offline-first row has a new reason to be the default in one region
+
+🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) — **MIT, offline-first** — has been carried here as a capability. 🔴 **This pass gives it a number that makes it the architectural default rather than an option: only 1 % of data scientists in Africa have GPU access** (🔴 secondary; `linuxfoundation.org` is `000`). 🔵 **A hosted frontier-model tutor is not deployable into that constraint; an offline-first MIT platform with a small local model is.** The data-layer counterpart, from the **OECD 2026** Africa AI-governance report, is to treat **African-language corpora as shared digital public goods** — which is a licensing posture this shelf is already organised around. Wired as pattern **P-AFR** in `compose/patterns.md`.
+
+### 🟢 India's national rails belong on this shelf as infrastructure, even though they are not repositories
+
+🟡 **Named, not tabled, because none is a `github.com` address this base can probe:** **SWAYAM** (the national MOOC platform, **110+ AI courses** from IITs and IISc, **41.2 lakh+** enrolments), **DIKSHA** (the national digital-resource repository) and **NMEICT** (the funding line, **₹650 crore proposed FY2026–27**). 🔴 **All three are secondary-sourced — `pib.gov.in` is `000` from this session — and the ₹650 crore is a proposal, not an approved budget.** 🔵 They are recorded here because a foundations shelf that lists only repositories will misread a market where the foundation is a state platform: **`AI4Bharat/IndicLLMSuite` (MIT, carried here, dormant since 2024-10-07) is the language asset those rails need**, and `NCERT`'s AI/ML translation of Grade 1–2 textbooks into **22 Indian languages** is proof the rails already carry ML work at national scale.
+
 ## Pass 352 · 2026-10-21 — this shelf's own justification for a row is **five years and four months out of date**: `openeduhub/discipline-classification` exists here *"despite 0 ★"* because it ships a pretrained model, and **the model was last touched on 2021-06-10**. Its own org contributed **2 of its 74 commits**. No new row, and the reason is measured
 
 **Evidence:** [`fork-and-dormancy`](../evidence/fork-and-dormancy.2026-10-21-p352.tsv) · [`commit-stream-placement`](../evidence/commit-stream-placement.2026-10-21-p352.tsv) · [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p352.tsv)

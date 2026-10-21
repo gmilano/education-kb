@@ -1,0 +1,5 @@
+check	scope	result	note
+rows rendering as a table header (the hazard ACTION p277 / gate-tables exists for)	all six live shelves	ZERO	the brief names this as having compiled an entity called "nombre" more than once across industries. It does not occur here, and the reason is that it is wired as a standing gate rather than watched by hand
+placeholder slugs published as data	all six live shelves	ZERO	`OWNER/REPO`, `owner/repo` and `yourusername/*` occur only inside command templates (compose/patterns.md:422,425 and four compose/code READMEs) and once in a p-log census row that counts them. None is a data row
+this pass's own first scan	all six live shelves	6 FALSE POSITIVES	agents/top.md:1559,1734; agents/trending.md:33473; repos/foundations.md:816; repos/trending.md:12936,12937. All are TRANSPOSED key-value tables in which `repo` is a KEY in column 1, not a column header. The instrument was wrong and the shelves were right
+`n/a` cells read as placeholders	all six live shelves	21 cells, ALL legitimate	`n/a` is a real value meaning the column does not apply to that row (no star channel, no declared repository field). Not padding

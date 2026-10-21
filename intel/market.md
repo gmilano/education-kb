@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 353 · 2026-10-21 — all four prescribed regional legs ran plus two sub-legs, and **the two sub-legs are the only new material**: India's mandate has a **delivery substrate** this shelf never carried, and the Gulf's AI-in-OER literature is **empty by systematic review**. Africa contributes a hard engineering constraint — **1 % GPU access** — that turns a permissive row this base already holds into the region's answer
+
+**Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p353.tsv)
+
+🔴 **Channel note.** Every EU primary legal host remains `000` / `connect_rejected` and was **not re-probed** (`p351`, `p352`). 🔴 **Newly `000` and now on the same list: `pib.gov.in` (India's government press host), `linuxfoundation.org`, `openpraxis.org`, `arxiv.org`, `aclanthology.org`, `huggingface.co`.** 🟢 **So every figure in the two sub-legs below is SECONDARY-SOURCED by construction and labelled as such** — the honest state, not a hedge. 🟡 Market sizing remains **unusable as a single figure**: this pass's global trends leg returned `$8.3 B (2025, +25.9 %)`, `$10.6 B (2026, +40.9 %)` and `$79.6 B (2034, +31.35 %)` from three publishers. Published as a spread, per `p350`.
+
+### 🟢 The four prescribed legs, with the denominator that matters
+
+| region | leg returned | NEW to this base? |
+|---|---|---|
+| North America | 134 bills / 31 states, CA **AB 1159**, Idaho **SB 1227**, OK **SB 1734**, Maryland's 24 districts, Ohio **2026-07-01**, NYC's prohibited-use list, amended **COPPA** compliance **2026-04-22** | 🔴 **NO** — corroborates `p352` |
+| EMEA | Art. 50 at **2026-08-02** / **2026-12-02**, high-risk education **deferred to 2027-12**, Europe `$2.64 B → $8.0 B` at **31.9 %**, the **10 % / 450+** guidelines figure, Finland–Estonia–Netherlands leading K-12, **OECD 2026 Digital Education Outlook** | 🔴 **NO** — but it is the **third independent reproduction** of the deferral |
+| APAC | **Vietnam 134/2025/QH15**, **Korea's AI Basic Act** (2026-01-22), Taiwan's AI Basic Act, Japan's principles-only Promotion Act, China most prescriptive | 🔴 **NO** — corroborates `p352` |
+| LATAM | **UNESCO IESALC** 19 countries — **87 % / 74 % / 26 %**, **TALIS 2024** Brazil 56 / Chile 55 / Colombia 53 / Costa Rica 52 against OECD 36, the **UNESCO LAC Observatory**, Ceibal, ILIA 2025 | 🔴 **NO** — corroborates `p350` and `p352` |
+| 🆕 **APAC — India sub-leg** | the **delivery layer** beneath the curriculum mandate | 🟢 **YES, partly** |
+| 🆕 **EMEA — Africa / Gulf sub-leg** | a systematic-review **zero** and a compute constraint | 🟢 **YES, partly** |
+
+🟢 **Checked rather than asserted.** Every load-bearing token was grepped against these shelves before being called new. `134`, `AB 1159`, `2.64`, `31.9`, `Finland`, `Estonia`, `Netherlands`, `Digital Education Outlook`, `87`, `26`, `TALIS`, `134/2025/QH15`, `AI Basic Act`, `CBSE`, `NCERT`, `DIKSHA` **all already appear.** 🔴 **`SWAYAM`, `NMEICT`, `22 Indian languages`, `Class VI` and `GPU access` each return ZERO files.** That is the whole of this pass's new demand-side material, and it is better to say so than to re-word four legs into looking fresh.
+
+#### 🟢 APAC — India: this base carried the MANDATE and not the MACHINE that has to ship it
+
+🟢 **What was already here:** AI curriculum from **Class 3** beginning **2026–27**, amended IT Rules in force **2026-02-20**, and `AI4Bharat/IndicLLMSuite` (MIT) on the supply side.
+
+🟢 **What is new, and it is the part a studio actually sells into — the national delivery substrate:**
+
+| instrument | what it is | figure (🔴 **secondary-sourced**, `pib.gov.in` is `000`) |
+|---|---|---|
+| **CBSE AI skill module** | the entry point, already running | **15 hours from Class VI**; AI an optional subject **Classes IX–XII** |
+| **NCERT language pipeline** | 🟢 a **completed, state-scale AI deployment in education** | Grade 1–2 textbooks translated by AI/ML into **22 Indian languages** |
+| **SWAYAM** | the national MOOC platform | **110+ free AI courses** from IITs and IISc, **41.2 lakh+** enrolments |
+| **DIKSHA** | the national digital-resource repository | already carried on these shelves, now placed in the stack |
+| **NMEICT** | the funding line the above runs on | **₹650 crore proposed, FY2026–27** — 🔴 a Department of Expenditure **proposal, not an approved budget** |
+
+🔵 **Why the distinction earns a section.** A curriculum mandate is a demand signal with no procurement attached; a *platform with a budget line* is the thing an engagement is scoped against. 🟢 **India is the one market on these shelves where a government has both mandated the content and published the rails to deliver it**, and `NCERT`'s 22-language translation is proof the rails already carry AI work at national scale. 🔵 **It also gives `AI4Bharat/IndicLLMSuite` (MIT, on this base's shelves, dormant since 2024-10-07) a concrete reason to be revived rather than merely listed** — see the new pattern in `compose/patterns.md`.
+
+#### 🟢 EMEA — the Gulf's gap is now a MEASURED zero, and Africa's is a compute number
+
+🟢 **The Gulf, stated exactly.** A 2026 systematic review of OER across GCC countries found that **none of the reviewed peer-reviewed studies or grey literature explicitly examined the role of AI in creating, adapting or disseminating OER within GCC education systems**, and names **low open-licensing literacy** as a barrier. 🔵 **This is the strongest form of an informed gap: not "our leg returned nothing" but "the literature itself was systematically searched and is empty."** 🟡 For a GCC engagement that is an opening rather than a warning — there is no incumbent practice to displace, and open-licensing literacy is itself a deliverable.
+
+🔴 **Africa, and this is the finding with engineering consequences.** Only **1 % of data scientists in Africa have access to GPUs** (Linux Foundation; 🔴 secondary, host `000`). 🟢 **Read against this base's own shelves that is not a lament, it is a specification**: it rules out hosted frontier-model tutoring as the default architecture and selects for **offline-first, small-model, locally-hosted** delivery. 🟢 **This base already carries the platform that fits** — `learningequality/kolibri`, **MIT and offline-first by design**. 🟡 The **OECD 2026** Africa AI-governance report adds the data-layer half, treating **African-language corpora as shared digital public goods**, and the **draft South Africa National AI Policy 2026** names STEAM curricula and community AI centres as objectives. 🔵 **Together those three give the region a coherent stack for the first time on this shelf, and it is assembled entirely from permissive rows already verified here.**
+
+### 🟢 Updates to the canonical opportunity block
+
+🔵 Two regions gain an opportunity this pass; the other three are **not re-worded**, because their legs returned nothing new and a re-worded entry would make the block look freshly measured when it is not (`p352`'s rule, kept).
+
+#### APAC
+
+- 🟢 **Added p353 — India is the only market on these shelves with a mandate AND published rails AND a budget line, and the integration seam is the sellable part.** **CBSE** (15 h from Class VI, optional IX–XII) and the **Class 3 mandate from 2026–27** create the content demand; **SWAYAM**, **DIKSHA** and **NMEICT** (**₹650 crore proposed, FY2026–27**) are what it has to run on. 🟢 **`NCERT`'s AI/ML translation of Grade 1–2 textbooks into 22 Indian languages is a completed national-scale proof point** — the language problem is not hypothetical and it is already being solved with ML. 🔵 **Pitch multilingual curriculum delivery against the existing rails, not a new platform**: `AI4Bharat/IndicLLMSuite` (MIT) is the language asset, `learningequality/kolibri` (MIT) the offline delivery arm. 🔴 **Brief the budget honestly — the ₹650 crore is a proposal, and every figure here is secondary because `pib.gov.in` is unreachable from this session.**
+
+#### EMEA
+
+- 🟢 **Added p353 — the Gulf has no incumbent AI-in-OER practice, and that is established by systematic review rather than by a failed search.** A 2026 GCC-wide review found **zero** studies examining AI's role in creating, adapting or disseminating OER, and names **low open-licensing literacy** as the barrier. 🔵 **So the first deliverable in a GCC engagement is licensing and OER capability itself** — which is a short, high-trust entry engagement — and the AI layer follows it. There is nothing to displace.
+- 🟢 **Added p353 — Africa's binding constraint is compute, and the permissive stack that answers it is already on these shelves.** **1 % of African data scientists have GPU access**, so hosted frontier-model tutoring is the wrong default. **`learningequality/kolibri` (MIT, offline-first)** plus a small local model plus **African-language corpora treated as digital public goods (OECD 2026)** is the architecture; the **draft South Africa National AI Policy 2026** (STEAM, community AI centres) is the policy hook. 🔵 **This is the rare case where the regional constraint and this base's licence preference point at the same repository** — see `compose/patterns.md` P-AFR. 🔴 Secondary-sourced: `linuxfoundation.org` is `000`.
+
 ## Pass 352 · 2026-10-21 — all four prescribed regional legs ran and **all four returned material this base already carries**. That is the finding, it has a denominator, and the most useful thing in it is an **independent corroboration** of the deadline reversal `p351` published six hours ago — reproduced on a fresh leg that had not seen it
 
 **Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-21-p352.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p352.tsv) · [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv)

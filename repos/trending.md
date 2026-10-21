@@ -4,6 +4,36 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 353 · 2026-10-21 — the prescribed trending leg returns listicles for the **NINETEENTH** consecutive pass. This pass spent the window on a question the open channels can actually answer: **does every address this base publishes still exist?** It does — **165 of 165**
+
+**Evidence:** [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p353.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv)
+
+🟢 **Channel note:** `ls-remote`, blobless `clone` and `raw.githubusercontent.com` **OPEN**. 🔴 `github.com` / `api.github.com` **403** → **no star or fork figure this window is first-hand**; `p352`'s are carried. 🔴 **Newly `000` and added to the do-not-re-probe list:** `arxiv.org`, `aclanthology.org`, `huggingface.co`, `pib.gov.in`, `linuxfoundation.org`, `openpraxis.org`.
+
+### 🔴 The leg, and its denominator
+
+🔴 `github trending education AI 2026` returned, again, no education repository: `rohitg00/ai-engineering-from-scratch` (Trendshift #1 on 2026-05-24), Karpathy's `nn-zero-to-hero`, D2L, `microsoft/ai-agents-for-beginners`, Made With ML, `aneelv75/github-trending`. 🔵 **Nineteen consecutive passes.** The cause is a **filter** fact and worth restating: **GitHub Trending has no education category**, so an unfiltered leg cannot surface a vertical. 🟢 Supply in this sector arrives through incumbents' release feeds and direct tree enumeration.
+
+### 🟢 What the window was spent on instead — the whole-corpus liveness sweep
+
+| | |
+|---|---:|
+| distinct `github.com` addresses on the six live shelves | **166** |
+| command templates excluded (`OWNER/REPO`) | 1 |
+| probed first-hand **2026-10-21** with `git ls-remote` | **165** |
+| 🟢 **ALIVE**, HEAD recorded in evidence | 🟢 **165 of 165** |
+| 🔴 dead, moved or unresolvable | 🟢 **0** |
+
+🔵 **After 353 passes of accretion, the failure mode a long-lived link corpus normally dies of has not set in.** 🟡 **Bounded honestly:** `ls-remote` is a POSITIVE-ONLY oracle (`p351`) — it proves these 165 exist, and a `fatal:` would not have told deleted from private from never-existing. No claim here rests on a silence.
+
+### 🟢 A clean negative on the hazard the standing brief names
+
+🟢 **Zero rows rendering as a table header, and zero placeholder slugs published as data, across all six live shelves.** `OWNER/REPO` and `yourusername/*` occur only in command templates (`compose/patterns.md:422,425` and four `compose/code` READMEs) and once in a census row that counts them. 🔵 **The protection is `ACTION p277` / `make gate-tables` — wired, not watched** — which is why the defect the brief reports from other industries does not appear here. 🟡 This pass's own first scan produced **six false positives**, all transposed key-value tables where `repo` is a *key*; the instrument was wrong and the shelves were right.
+
+### 🟡 The platform leg, third consecutive zero on permissive licensing
+
+🔴 `open source platform education LMS SIS MIT Apache 2026` → Open edX **AGPL-3.0**, Moodle **GPL-3.0**, Canvas **AGPL-3.0**, OpenEduCat **LGPL-3.0**, Sakai, ILIAS, Chamilo. **No permissive LMS or SIS, on a leg that named MIT and Apache.** 🟢 Two figures carried to `verticals/solutions.md`, both vendor-published and labelled: **Moodle at 400 M+ users / 150 000+ sites**, and **OpenEduCat as the only LMS+SIS on one database**.
+
 ## Pass 352 · 2026-10-21 — the prescribed trending leg returns listicles for the **EIGHTEENTH** consecutive pass, and this pass stopped asking it for new rows and asked an open channel for **dates on old ones** instead. **34 of 34 published star cells re-derived first-hand; 31 exact.** The only row that moved meaningfully has not moved since **2021**
 
 **Evidence:** [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`fork-and-dormancy`](../evidence/fork-and-dormancy.2026-10-21-p352.tsv) · [`discovery-leg-carried`](../evidence/discovery-leg-carried.2026-10-21-p352.tsv) · [`census-currency`](../evidence/census-currency.2026-10-21-p352.tsv)

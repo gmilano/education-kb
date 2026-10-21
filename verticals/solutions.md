@@ -4,6 +4,27 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 353 · 2026-10-21 — the platform leg returned **no permissive LMS or SIS** again, and this pass adds the two figures that decide a platform choice in practice: **Moodle's installed base** and the one product that is **LMS and SIS on a single database**
+
+**Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv) · [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv)
+
+🟢 **Every address on this shelf answers.** This file's live section was included in the 165-of-165 `git ls-remote` sweep recorded on `agents/top.md` — **zero dead, zero moved**, 2026-10-21. 🔴 Star and fork figures are **carried from `p352`** (`github.com` 403).
+
+🔴 **The leg asked for MIT and Apache and returned neither.** `open source platform education LMS SIS MIT Apache 2026` → Open edX **AGPL-3.0**, Moodle **GPL-3.0**, Canvas **AGPL-3.0**, OpenEduCat **LGPL-3.0**, plus Sakai, ILIAS and Chamilo. 🟢 **Third consecutive measurement of zero permissive platforms**, which this base now reads as a property of the sector rather than of the query.
+
+### 🟡 The two figures that actually decide a platform choice, both vendor-published
+
+| platform | licence | the figure this pass adds | what it means for a build |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | 🟡 **400 M+ users across 150 000+ registered sites** (vendor-published, Moodle Pty Ltd) | the installed base argument wins on reach; the copyleft stays on the core, so **write the AI layer as an MCP server, not a plugin** — this base carries four permissive Moodle lanes, including `falkenslab/moodle-mcp` (MIT, ~230 tools, English **and Spanish** docs) and `pablopc05/mcp-usc` (MIT, EMEA — Spain) |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **LGPL-3.0** | 🟡 **the only result combining LMS and SIS on one database** (vendor's own comparison page) | the one row that removes an integration seam instead of adding one — fees, parent app and SIS share the schema. **LGPL** on an Odoo-style ERP is a weaker obligation than AGPL, but it is still copyleft: budget for it, or keep custom work in separate modules |
+
+🔵 **The standing recommendation is unchanged and now better evidenced: choose the platform for its installed base, and choose the licence for the layer you write.** The layer a studio writes is the connector tier, where **59 of 93** probed connectors are permissive.
+
+### 🟢 Kolibri is promoted from "an option" to "the default" for one region
+
+🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) — **MIT, offline-first** — is the only platform on this shelf whose licence and architecture both fit Africa's measured constraint: **1 % of data scientists on the continent have GPU access** (🔴 secondary; `linuxfoundation.org` is `000`). 🔵 **Offline-first stops being a nice-to-have when the compute is not there**, and MIT means the deliverable can be relicensed into a client engagement — the one thing the GPL/AGPL platforms above cannot offer. Wired as **P-AFR** in `compose/patterns.md`.
+
 ## Pass 352 · 2026-10-21 — `ACTION ZZ-as` DISCHARGED: `Gego-K12/gegok12` is **APAC — India**, placed by commit stream at **288 of 290 commits on `+05:30`**, after the holder channel failed on it for four passes. And the `%ae` domain channel has a blind spot this row measures exactly: **120 of its 290 commits name no domain at all**
 
 **Evidence:** [`commit-stream-placement`](../evidence/commit-stream-placement.2026-10-21-p352.tsv) · [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p352.tsv)

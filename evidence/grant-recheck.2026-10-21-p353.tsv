@@ -1,0 +1,33 @@
+repo	published grant path	expected grant	derived grant	bytes	verdict
+HKUDS/DeepTutor	main/LICENSE	Apache-2.0	Apache-2.0	11408B	OK
+THU-MAIC/OpenMAIC	main/LICENSE	MIT	MIT	1065B	OK
+CAHLR/OATutor	main/LICENSE	MIT	MIT	1105B	OK
+satvik314/educhain	main/LICENSE	MIT	MIT	1092B	OK
+DaRL-GenAI/instructional_agents	main/LICENSE	MIT	MIT	1067B	OK
+anthropics/k12-teacher-skills	main/LICENSE	Apache-2.0	Apache-2.0	11357B	OK
+Open-TutorAi/open-tutor-ai-CE	main/LICENSE	BSD-3-Clause	BSD-3-Clause	1531B	OK
+littlecookie0722/AI-Teaching-Agent	main/LICENSE	MIT	MIT	1069B	OK
+falkenslab/moodle-mcp	main/LICENSE	MIT	MIT	1067B	OK
+vishalsachdev/canvas-mcp	main/LICENSE	MIT	MIT	1071B	OK
+r-huijts/canvas-mcp	main/LICENSE	MIT	MIT	1065B	OK
+blend-ed/openedx-mcp	master/LICENSE	AGPL-3.0	AGPL-3.0	34524B	OK
+ankimcp/anki-mcp-server	main/LICENSE	MIT	MIT	1074B	OK
+ArnaudGuiovanna/tutor-mcp	main/LICENSE	MIT	MIT	1073B	OK
+RohanMuppa/brightspace-mcp-server	main/LICENSE	MIT	MIT	1068B	OK
+JhostinAleck/brightspace-mcp	main/LICENSE	MIT	MIT	1070B	OK
+AnonymousOnyx22/brightspace-d2l-mcp	main/LICENSE	MIT	MIT	1200B	OK
+felipedias-ie/blackboard-mcp	main/LICENSE	MIT	MIT	1084B	OK
+NiccoloSalvini/mcp-blackboard-ucsc	main/LICENSE	MIT	MIT	1073B	OK
+pengusto/google-classroom-mcp	master/LICENSE	MIT	MIT	1145B	OK
+OmarNiazi/classroom-mcp	main/LICENSE	MIT	MIT	1067B	OK
+Aaradhya-Dev-Tamrakar/google-classroom-mcp	main/LICENSE	MIT	MIT	1078B	OK
+pablopc05/mcp-usc	main/LICENSE	MIT	MIT	1066B	OK
+psychquant/che-ntucool-mcp	main/LICENSE	MIT	MIT	1066B	OK
+sonaiengine/ku-portal-mcp	main/LICENSE	MIT	MIT	1068B	OK
+skhdemo/uoft-quercus-mcp	main/LICENSE	MIT	MIT	1086B	OK
+sandraschi/classroom-mcp	main/LICENSE	MIT	HTTP_404	14B	MISMATCH
+Mcp-Brasil/mcp-brasil	main/LICENSE	MIT	MIT	1072B	OK
+AI-for-Education/pedagogy-benchmark	main/LICENSE	MIT	MIT	1064B	OK
+GeminiLight/gen-mentor	main/LICENSE	CC0-1.0	CC0-1.0	7048B	OK
+AStheTECH/mewcp-google-classroom	main/LICENSE.md	PROPRIETARY-ACL	PROPRIETARY-ACL	6489B	OK
+sandraschi/classroom-mcp	master/LICENSE (CORRECTED)	MIT	MIT	1071B	OK — default branch is master, not main

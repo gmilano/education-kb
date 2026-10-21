@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 353 · 2026-10-21 — two new patterns, both assembled **entirely from permissive rows already verified on these shelves**, and both answering a constraint this pass measured rather than a capability it wished for
+
+**Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv) · [`grant-recheck`](../evidence/grant-recheck.2026-10-21-p353.tsv) · [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv)
+
+🟢 **Every repository named in both recipes answered `git ls-remote` on 2026-10-21 and had its grant re-read first-hand the same day** (30 of 31 exactly; the one correction is `sandraschi/classroom-mcp`'s branch, below). 🔵 Nothing here is a wish-list row.
+
+### 🟢 P-AFR — offline-first, language-plural tutoring for a 1 %-GPU region · **6–8 weeks**
+
+🔴 **The constraint, measured:** only **1 %** of data scientists in Africa have GPU access (🔴 secondary; `linuxfoundation.org` is `000`). A hosted frontier-model tutor is not deployable against that, and no amount of prompt engineering fixes it. 🟢 **The constraint selects the architecture, and every part of it is MIT.**
+
+**Wiring:**
+
+1. **Delivery and content substrate — [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT, offline-first).** Runs on a local server with intermittent or no connectivity and syncs when a link appears; `learningequality/studio` authors the channels and `learningequality/morango` is the sync layer this base already carries. This is the shell the learner actually touches.
+2. **Local inference, not hosted.** A small open-weights model on the same local box. 🔵 **The pattern's whole point is that the model is the replaceable part** — size it to the hardware the deployment has, not to a benchmark.
+3. **Language layer — [`AI4Bharat/IndicLLMSuite`](https://github.com/AI4Bharat/IndicLLMSuite) (MIT) as the *method*, not the corpus.** 🔴 **Brief it honestly: it is dormant — 22 commits, `%ae` 3 authors, span 2024-03-06 → 2024-10-07**, re-derived first-hand at p353 from a blobless clone (`%an` is 4, so the key matters). Take its data-construction recipe and apply it to local-language corpora; the **OECD 2026** Africa report's framing of **African-language corpora as shared digital public goods** is the licensing posture to build under, and it matches this base's own preference.
+4. **Mastery model that does not need a GPU — [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (MIT).** **Bayesian Knowledge Tracing**, React, deployable to static pages with no backend. 🔵 **This is the row that makes the pattern defensible rather than merely cheap:** skill mastery is estimated by an inspectable model, so the small local model handles language and the BKT handles pedagogy. A thin model does not become a thin tutor.
+5. **Assessment retention — [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) (MIT)** over a local Anki store for spaced repetition that survives being offline.
+
+🟡 **Policy hook:** the **draft South Africa National AI Policy 2026** names STEAM curricula and community AI centres as objectives — a community AI centre is precisely a Kolibri-shaped deployment. 🔴 **What this pattern does NOT give you:** a conformance story. It is built for a region whose binding constraint is compute, and it should not be pitched into EMEA, where the binding constraint is documentary conformance.
+
+### 🟢 P-GATE — the human-decision gate, built once and evidenced four ways · **8–10 weeks**
+
+🟢 **The convergence this pass established in `intel/trends.md`:** the EU high-risk regime (admissions, grading, proctoring, track assignment), **Vietnam's** named high-risk education systems (automated assessment, behavioural monitoring) and the **US state** rules (Oklahoma, Maryland and NYC barring AI from grading, discipline, promotion, placement and IEP work) all require the **same artefact** — a human decision between the model and the consequence, plus a record proving it happened. 🔵 **One component, four evidence formats.**
+
+**Wiring:**
+
+1. **Start from a worked precedent rather than a blank design — [`psychquant/che-ntucool-mcp`](https://github.com/psychquant/che-ntucool-mcp) (MIT).** Its grade and announcement **writes are gated behind an explicit human confirmation**, and every endpoint was curl-tested against a real course before any code was written. 🟢 **This is the clearest human-in-the-loop design in this base's 93-connector census — read it before designing your own gate.**
+2. **Reach the system of record read-only first.** [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) (MIT, **read-only by design** — *"it never submits, edits, or deletes anything"*) and [`OmarNiazi/classroom-mcp`](https://github.com/OmarNiazi/classroom-mcp) (MIT, student-side, explicitly read-only) are the pattern for the read leg. 🔵 **Ship the read path to production before the write path exists** — it is the half that carries no regulatory exposure.
+3. **Put the writes behind the gate.** [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) (MIT, ~230 tools under the **teacher's own login**, students anonymised to the model) is the richest write surface on these shelves, and its *"teacher's own login"* model is already the right authorisation shape: the gate records a decision a human was entitled to make.
+4. **Grade against an inspectable rubric, not a prompt.** [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) (MIT) for pedagogical judgement. 🔴 **State its bench when you cite it: 5 commits, `%ae` 1 author, span 2025-06-24 → 2025-10-15** (re-derived first-hand at p353; ★ **13** carried from `p352`, `github.com` being 403) — **a research artefact, not an industry standard.**
+5. **Emit the evidence in four shapes from one log.** EMEA needs an Annex III-style conformity pack; a US district needs to show a named human in the loop per decision; Vietnam needs it before **2027-03-01**; Korea's grace period under the **AI Basic Act** (in force **2026-01-22**) is the window to build in. 🔵 **The log is the deliverable. The gate is the product; the tutor is the commodity.**
+
+🔴 **Do not wire `blend-ed/openedx-mcp` into this pattern without a licence decision** — it is **AGPL-3.0** (`34 524 B`, re-read first-hand this pass), and hosting a *modified* copy as a service owes that source. Deploy it unmodified, or budget for the obligation.
+
+🟡 **One correction that affects any recipe citing it:** [`sandraschi/classroom-mcp`](https://github.com/sandraschi/classroom-mcp) (MIT, 45 MCP tools, self-contained SIS with CEFR/HSK/DELF/DELE/Goethe/JLPT curriculum generation) has its grant at **`master/LICENSE`**, not `main/LICENSE` as previously published — its default branch is `master`. **The grant is sound** (`1 071 B`, holder `Sandra Schipal`, 2026); only the path was wrong.
+
 ## Pass 352 · 2026-10-21 — one recipe, and it is the one this pass needed itself: **grade a shelved repository's LIVENESS before you build on it**, in four probes that cost nothing and that this base had never run against rows it has carried for thirty passes
 
 **Evidence:** [`fork-and-dormancy`](../evidence/fork-and-dormancy.2026-10-21-p352.tsv) · [`commit-stream-placement`](../evidence/commit-stream-placement.2026-10-21-p352.tsv) · [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv)

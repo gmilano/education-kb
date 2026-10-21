@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 353 — no new agent row for the **eleventh** consecutive pass, and the week's real agent-layer news is a **grant-path defect** rather than a star move: a permissively licensed connector on this shelf reads as ungranted because its branch is `master`
+
+**Evidence:** [`grant-recheck`](../evidence/grant-recheck.2026-10-21-p353.tsv) · [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p353.tsv) · [`table-header-negative`](../evidence/table-header-negative.2026-10-21-p353.tsv)
+
+🟢 **Channel note.** `ls-remote`, blobless `clone` and `raw.githubusercontent.com` **OPEN**. 🔴 `github.com` and `api.github.com` **403**, so **no star or fork figure this window is first-hand** — `p352`'s one-day-old readings (`DeepTutor` **41 918 ★ · 5 310 forks**) are **carried**, not re-measured. 🔴 Six new hosts recorded `000`: `arxiv.org`, `aclanthology.org`, `huggingface.co`, `pib.gov.in`, `linuxfoundation.org`, `openpraxis.org`.
+
+### 🔴 The grant recheck — 30 of 31 exact, and the miss is instructive
+
+| | |
+|---|---:|
+| live agent-tier rows re-read from their published grant path | **31** |
+| 🟢 returned the published licence **exactly**, bytes included | 🟢 **30** |
+| 🔴 returned `404` | 🔴 **1** |
+
+🔴 [`sandraschi/classroom-mcp`](https://github.com/sandraschi/classroom-mcp) — published **MIT at `main/LICENSE`**; that path is **404**. 🟢 **The repository is alive and the licence is real:** `--symref` gives `ref: refs/heads/master`, tree enumeration returns exactly one candidate path in a 70-file tree, and it reads **stock MIT, `1 071 B`, holder `Sandra Schipal`, 2026**. Corrected on `agents/top.md` to **`master/LICENSE`**.
+
+🔵 **The class, because this is the second instance:** this shelf already notes `pengusto/google-classroom-mcp` as `master`-default. **A grant path asserts a branch AND a file, and `raw.githubusercontent.com` has no branch default** — so a wrong branch fails **closed**, making a permissive repository look ungranted. **2 of 31 agent-tier rows are `master`-default: the `main` assumption is wrong about 6 % of the time.** Derive the branch from `--symref`; do not assume.
+
+### 🟢 Unchanged rows, confirmed rather than asserted
+
+🟢 All eight **Build-on-this** grants re-read exactly: `DeepTutor` **Apache-2.0** (`11 408 B`), `OpenMAIC` **MIT**, `OATutor` **MIT**, `educhain` **MIT**, `instructional_agents` **MIT**, `k12-teacher-skills` **Apache-2.0** (`11 357 B`), `open-tutor-ai-CE` **BSD-3-Clause** (`1 531 B`), `AI-Teaching-Agent` **MIT**. 🟢 Both flagged rows unchanged and still correctly flagged: `gen-mentor` **CC0-1.0** (`7 048 B`) and `mewcp-google-classroom`'s bespoke **proprietary ACL** at exactly **`6 489 B`** — the figure this shelf has published for thirteen passes, re-derived.
+
+### 🔴 The discovery legs, and one candidate declared rather than written
+
+🔴 `top open source AI agents education 2026 github MIT` and `github trending education AI 2026` returned general-purpose agents and *"learn AI"* courseware only — `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, Hermes Agent, Aider, Cline, CrewAI, AutoGen, LangGraph, `rohitg00/ai-engineering-from-scratch`, `nn-zero-to-hero`, D2L. 🔵 **All teach AI; none teaches with AI.** Eleventh consecutive pass; cause unchanged — **GitHub Trending has no education category.**
+
+🟡 **`L2-Bench` (2026) is named and NOT promoted.** Rubric-based second-language-education benchmark: **1 000+ task-response pairs, 12 competencies / 31 subcompetencies, 200+ expert validators** — the best-shaped candidate yet for the one-row Evaluation tier. 🔴 **No address resolves from this session** (`arxiv.org`, `aclanthology.org`, `huggingface.co` all `000`; two candidate addresses returned no refs). 🟢 **Guessing a third would be invention.** `ACTION ZZ-at`. Also returned: `eth-lre/mathtutorbench` (already carried as an ungranted refusal) and `EduEVAL-DB` (**139 ScienceQA questions, one-sixth expert-authored** — too thin to promote).
+
 ## 2026-10-21 · Pass 352 — the week's agent-layer movement, measured on a channel that was open for the whole week and that last pass declined: **`HKUDS/DeepTutor` is 41 918 ★ · 5 310 forks**, first-hand, the first non-carried reading of the sector's anchor row since the API closed. Nothing else on the agent layer moved more than ten stars in a day, and the discovery leg returned **zero** addresses this base does not already hold
 
 **Evidence:** [`star-cell-rederivation`](../evidence/star-cell-rederivation.2026-10-21-p352.tsv) · [`discovery-leg-carried`](../evidence/discovery-leg-carried.2026-10-21-p352.tsv) · [`figure-scope-misattribution`](../evidence/figure-scope-misattribution.2026-10-21-p352.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p352.tsv)

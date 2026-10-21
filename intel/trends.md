@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 353 · 2026-10-21 — the trend this pass can state that it could not last pass: **education's binding constraint is diverging by region**, and in exactly one region it is **compute** rather than governance. Plus a measured fact about this base's own corpus: **165 of 165 published addresses are live**
+
+**Evidence:** [`regional-legs`](../evidence/regional-legs.2026-10-21-p353.tsv) · [`address-liveness`](../evidence/address-liveness.2026-10-21-p353.tsv) · [`channel-bindings`](../evidence/channel-bindings.2026-10-21-p353.tsv)
+
+### 🟢 T-new — the binding constraint is regional, and only one region's is technical
+
+🔵 This base has published *"governance is the barrier"* as a near-global trend. 🟢 **Four legs plus two sub-legs now let it be split, and the split is the more useful statement:**
+
+| region | what actually blocks a deployment | evidence on these shelves |
+|---|---|---|
+| **North America** | 🟡 **permission** — who may decide what, and whether a human is in the loop | 134 bills / 31 states; NYC's prohibited-use list; OK and MD requiring human oversight |
+| **EMEA** | 🟡 **conformance** — documentary proof against a dated regime | Art. 50 at **2026-12-02** for deployed systems; high-risk education **deferred to 2027-12**; **10 %** of 450+ institutions have guidelines |
+| **APAC** | 🟡 **calendar** — a statute exists and the clock is running | Vietnam compliance **2027-03-01**; Korea in force **2026-01-22** |
+| **LATAM** | 🟡 **governance** — adoption already happened, bottom-up | **87 %** adopting against **26 %** with a strategy |
+| 🆕 **EMEA — Africa** | 🔴 **COMPUTE** — the constraint is physical, not legal | **1 %** of African data scientists have GPU access |
+| 🆕 **EMEA — Gulf** | 🔴 **LITERACY** — no incumbent practice to govern yet | a GCC systematic review found **zero** AI-in-OER studies |
+
+🔵 **Why this matters more than a single global trend line.** A conformance kit sells in EMEA and is nearly irrelevant in Africa; an offline small-model architecture is the only thing that ships in Africa and is an odd pitch in Korea. 🔴 **A single "AI in education" offer will be wrong in at least two of these six cells**, which is the same shape as `p352`'s finding that *"APAC splits on this question and a single regional pitch will be wrong in one half of it"* — now generalised past APAC and past sentiment.
+
+### 🟢 T-new — the convergent regulatory pattern across three bodies of law is ONE engineering requirement
+
+🟢 Read together, the EU's high-risk regime (admissions, grading, proctoring, track assignment), **Vietnam's** named high-risk education systems (automated assessment, behavioural monitoring) and the **US state** rules (Oklahoma, Maryland, NYC barring AI from grading, discipline, promotion, placement and IEP work) all demand the same artefact: **a human decision between the model and the consequence, and a record proving it happened.**
+
+🔵 **That is not four compliance projects, it is one component with four evidence formats** — and this base already holds a worked precedent for it: [`psychquant/che-ntucool-mcp`](https://github.com/psychquant/che-ntucool-mcp) (MIT), whose grade and announcement **writes are gated behind an explicit human confirmation**, the clearest human-in-the-loop design in the connector census. 🟢 **The trend is that the gate is becoming the product and the tutor is becoming the commodity.**
+
+### 🟡 T-carried, strengthened — supply in this vertical does not arrive through trending, and the count is now eleven
+
+🔴 **Eleventh consecutive pass in which the two prescribed global supply legs returned zero new education agents.** Structural cause unchanged and worth restating because it is a *filter* fact rather than a market fact: **GitHub Trending has no education category**, so an unfiltered leg cannot surface a vertical. 🟢 **What does move arrives through incumbents' release feeds and through direct tree enumeration** — the mechanism by which `p352` dated DeepTutor `v1.6.15` and OpenMAIC `v1.2.1`.
+
+🟡 **And the thinnest tier stayed thin for a reason worth recording.** A narrow leg aimed at pedagogical evaluation surfaced **`L2-Bench`** (2026; 1 000+ task-response pairs, 12 competencies / 31 subcompetencies, 200+ expert validators) — the best-shaped candidate this base has seen for its one-row Evaluation tier — and it **could not be promoted** because `arxiv.org`, `aclanthology.org` and `huggingface.co` are all `000` from this session and no address resolves. 🔵 **So this vertical's evaluation layer is thin on these shelves partly because the channels where benchmarks publish are the channels this environment cannot reach.** That is a measurement limitation, stated as one, and it is `ACTION ZZ-at`.
+
+### 🟢 A fact about this corpus rather than the market, because it is a trend in data quality
+
+🟢 **165 of 165 `github.com` addresses published across all six live shelves answer `git ls-remote` on 2026-10-21 — zero dead, zero moved.** 🔵 After 353 passes of accretion, the most common failure mode of a long-lived link corpus has not set in here. 🟡 **The one defect found was subtler and is the thing to watch instead:** a grant published at `main/LICENSE` whose repository defaults to `master`, which fails **closed** — a permissively licensed repository that reads as ungranted. **2 of 31 rows on the agent tiers are `master`-default, so the `main` assumption is wrong about 6 % of the time.**
+
 ## Pass 352 · 2026-10-21 — three trends, and the one that will cost a studio money is not about the sector at all: **this base's measurement of itself drifts in a specific, repeating direction**, and the direction is *a figure near a slug gets attributed to that slug*. Twice in two passes, on two different kinds of figure
 
 **Evidence:** [`figure-scope-misattribution`](../evidence/figure-scope-misattribution.2026-10-21-p352.tsv) · [`census-currency`](../evidence/census-currency.2026-10-21-p352.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p352.tsv) · [`fork-and-dormancy`](../evidence/fork-and-dormancy.2026-10-21-p352.tsv)
