@@ -1,0 +1,37 @@
+slug	stars_2026_10_21	licence_from_payload	grant_read_at	region	placement_basis	substance
+hydro-dev/Hydro	7137	AGPL-3.0	master/LICENSE	APAC	Chinese-language project description (新一代...)	Next-generation online-judge platform; multi-contest, multi-tenant
+QingdaoU/OnlineJudge	6552	MIT	master/LICENSE	APAC	Qingdao University named in description	Vue+Django+Docker online judge; the most widely redeployed university OJ
+zhblue/hustoj	3813	GPL-2.0	master/LICENSE	APAC	HUST (Huazhong Univ. of Sci. & Tech.) in repo name/description	PHP/C++/MySQL OJ for ACM-ICPC and NOIP training
+DMOJ/online-judge	1194	AGPL-3.0	master/LICENSE	North America	README carries dmoj.ca x10 (Canadian TLD)	Modern OJ and contest platform; Django
+online-judge-tools/oj	1172	MIT	master/LICENSE	APAC	README carries .jp domains x5	CLI: download sample cases, generate tests, test and submit
+DMOJ/judge-server	981	AGPL-3.0	master/LICENSE	North America	same organisation as DMOJ/online-judge	Judging backend; the grading executor for the DMOJ stack
+ZsgsDesign/NOJ	942	MIT	master/LICENSE	APAC	Nanjing Univ. of Posts and Telecommunications named in description	Laravel OJ with contest and group management
+HimitZH/HOJ	942	MIT	master/LICENSE	APAC	Chinese-language project description	SpringCloud + Vue distributed OJ
+syzoj/syzoj	923	MIT	master/LICENSE	APAC	Chinese-language project description	OJ for algorithm competition; Node.js
+SDUOJ/OnlineJudge	556	AGPL-3.0	main/LICENSE	APAC	Shandong University open-source community named in description	Microservice-architecture OJ
+QingdaoU/Judger	496	MIT	newnew/LICENSE	APAC	same organisation as QingdaoU/OnlineJudge	seccomp-based execution sandbox. Default branch is `newnew`
+mjnaderi/Sharif-Judge	395	AGPL-3.0	Version-1/LICENSE	EMEA	Sharif University of Technology (Iran) in repo name	OJ built for programming COURSES rather than contests. Default branch `Version-1`
+ucbds-infra/otter-grader	161	BSD-3-Clause	master/LICENSE	North America	licence payload holder: 'UC Berkeley Division of Data Science and Information'	Python AND R autograding; the notebook-course grader
+okpy/ok-client	57	Apache-2.0	master/LICENSE	North America	README names Berkeley	Client for the OK autograding service
+webtech-network/autograder	62	Apache-2.0	main/LICENSE	Not placed	README carries only generic .edu strings	Config-driven autograder that grades and generates student reports
+open-spaced-repetition/fsrs4anki	4111	MIT	main/LICENSE	Not placed	no institutional or language evidence in hand	FSRS scheduler for Anki; topics name intelligent-tutoring-system
+echo-loop/Echo-Loop	4222	AGPL-3.0	main/LICENSE	APAC	Chinese-language project description	AI English listening/speaking trainer: intensive listening, shadowing, blind listening, retelling, spaced review
+nagisanzenin/engram	1458	MIT	main/LICENSE	Not placed	no institutional or language evidence in hand	Free-recall verification with receipts + FSRS scheduling; ships as a Claude Code plugin
+Miaotofu01/Study-Mate	1111	MIT	main/LICENSE	APAC	Chinese-language project description	AI study partner: route, explain, build; learning-by-doing agent
+trane-project/trane	848	AGPL-3.0	master/LICENSE	Not placed	README carries only generic .edu strings	Deliberate-practice engine over a mastery dependency graph; Rust
+open-spaced-repetition/free-spaced-repetition-scheduler	729	MIT	main/LICENSE	Not placed	no institutional or language evidence in hand	The FSRS algorithm specification itself (DSR model)
+24kchengYe/human-skill-tree	575	AGPL-3.0 notice + MIT for skills/	master/LICENSE	APAC	Chinese-language project description (人类养成记)	30+ skills K-12 to career. SPLIT GRANT: skills/*.md dual AGPL-3.0 OR MIT
+open-spaced-repetition/py-fsrs	514	MIT	main/LICENSE	Not placed	no institutional or language evidence in hand	Python FSRS package; the embeddable scheduler
+ChenChenyaqi/learn-anything	487	MIT	main/LICENSE	Not placed	no institutional or language evidence in hand	Recursive learning: Socratic deep-dives + TDD-style exercises inside a coding assistant
+hluaguo/learn-faster-kit	391	MIT	main/LICENSE	Not placed	no institutional or language evidence in hand	Learning coach: personalised syllabus, spaced repetition, progress tracking
+vardanagarwal/Proctoring-AI	633	MIT	master/LICENSE	Not placed	no institutional or language evidence in hand	Automatic online-proctoring monitor: gaze, face, phone, speech
+openedx/edx-proctoring	69	AGPL-3.0	master/LICENSE.txt	North America	openedx organisation, as the other Open edX rows on this base	First-party Open edX proctoring subsystem
+lebmatter/exampro	72	MIT (UNFILLED template)	main/license.txt	Not placed	no institutional or language evidence in hand	Proctored exams for the Frappe framework. Grant path lower-case; holder fields never filled
+eLearning-BS23/moodle-quizaccess_proctoring	30	AGPL-3.0	master/LICENSE.md	APAC	README names Brain Station (Brain Station 23, Bangladesh)	Moodle quiz-access proctoring plugin
+OS4ED/openSIS-Classic	346	GPL-2.0	master/docs/License.txt	Not placed	README carries only generic .edu strings	Student information system: attendance, gradebook, report cards, parent/teacher portals
+FenixEdu/fenixedu-academic	175	LGPL-3.0	master/LICENSE	EMEA	FenixEdu is Instituto Superior Tecnico's (Lisbon) academic system	Higher-education SIS: curricular plans, enrolment, degrees
+JudgePeach/math-question-bank	330	AGPL-3.0	main/LICENSE	APAC	Chinese-language project description	High-school maths item bank: live LaTeX, LLM parsing/solving, formula OCR
+gygy-open/question-bank	73	AGPL-3.0	main/LICENSE	APAC	Chinese-language project description	AI-native item bank: Word/Markdown/image import, knowledge-point matching, review workflow
+JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant	147	NO GRANT (README prose only)	main/ - none found	APAC	Chinese-language project description	Streamlit+LaTeX item bank with OCR, TikZ rendering, automated paper assembly
+erictrainnlpinxihu/Grader-agent	101	MIT	main/LICENSE	APAC	Chinese-language project description	Grading agent: five-stage loop, writes only as proposals, GradingDraft bound to rubric + paragraph hash
+reneverland/CBIT-AiExam-plus	277	NO GRANT (MIT badge -> 404)	main/ - none found	APAC	bilingual zh/en README	AI examination platform: item generation, adaptive difficulty, semantic scoring, proctoring

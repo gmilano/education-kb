@@ -1,0 +1,11 @@
+leg	vocabulary_class	results	rows_verified	absent_from_corpus	note
+autograder OR autograding in:name,description stars:>50	FUNCTION	10	3	2	small total_count; otter-grader is the substantial row
+"online judge" in:name,description stars:>100	FUNCTION	62	12	12	LARGEST SINGLE YIELD. An entire mature category, 7137 stars at the head, absent from a 2450-address corpus
+proctoring OR proctor in:name,description stars:>20	FUNCTION	30	5	1	A LARGE SHARE OF THIS LEG IS ANTI-PROCTORING / BYPASS TOOLING (CloakBox 408 stars, ofradr 51). Not shelved: it is detection evasion, not education software
+topic:spaced-repetition stars:>200	FUNCTION/TOPIC	40	10	1	the memory-scheduling layer; FSRS is its standard
+rubric grading in:name,description stars:>15	FUNCTION	7	1	1	Grader-agent: a rubric-bound grading harness
+"student information system" in:name,description stars:>40	FUNCTION	5	2	0	recovered openSIS-Classic and fenixedu-academic, both long-measured and never shelved
+gradebook OR "question bank" OR "item bank" in:name stars:>30	FUNCTION	17	3	2	the AI-native ITEM BANK is a new tier for this base
+"lecture capture" OR "lecture recording" OR "lecture notes" AI in:name,description stars:>40	FUNCTION	37325	0	0	LEG FAILED. Unparenthesised OR in the index query returned openclaw, n8n, firecrawl. The query shape destroyed the leg, not the supply
+competency OR curriculum ontology OR "learning objectives" in:name,description stars:>30	FUNCTION	880	0	0	LEG FAILED, same cause. Both failures are the query, not the sector
+es/pt function vocabulary + examen	FUNCTION/LANGUAGE	228209	0	0	content archives, not tooling. See regional-legs

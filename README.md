@@ -4,6 +4,290 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 356 — 2026-10-21 — **`ACTION ZZ-ay` DISCHARGED AND `T40` WAS NOT REFUTED — IT WAS CONFIRMED BY AN ENTIRE SECTOR. NINE FUNCTION LEGS RETURNED 36 VERIFIED ROWS: 18 ABSENT FROM THIS WHOLE CORPUS, AND THE OTHER 18 THIS BASE HAD ALREADY MEASURED AND NEVER SHELVED. EDUCATION'S GRADING-EXECUTION LAYER IS 15 ROWS, 7 137 ★ AT THE HEAD, AND THE BIGGEST ONE IS `MIT`. FOUR REGIONAL DISTRIBUTIONS THIS BASE PUBLISHES ARE WRONG AND ONLY THE LATAM ZERO IS RIGHT. `make hooks` — REFUSED, SO GATE STATE IS UNJUDGED**
+
+🔵 **A dating note.** Every read, probe and digest below was taken on **2026-10-21** and
+every evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never
+by commit. 🔵 This is the **seventh pass of this date** (`p350`–`p355` earlier today).
+
+**Evidence:** [`function-leg-rows`](evidence/function-leg-rows.2026-10-21-p356.tsv) · [`function-leg-yield`](evidence/function-leg-yield.2026-10-21-p356.tsv) · [`carried-vs-shelved`](evidence/carried-vs-shelved.2026-10-21-p356.tsv) · [`grant-anomalies`](evidence/grant-anomalies.2026-10-21-p356.tsv) · [`default-branch-census`](evidence/default-branch-census.2026-10-21-p356.tsv) · [`regional-legs`](evidence/regional-legs.2026-10-21-p356.tsv)
+
+### 🔴 The gate state, first, because this pass cannot report one
+
+🔴 **`make hooks` was REFUSED to this pass.** The suite executes Python from this cloned
+repository and the harness running `p356` declined to run external code. 🔴 **So gate
+state is UNJUDGED for the first time since `p350`**, and no claim below rests on a gate
+having passed.
+
+🟢 **The gate *contracts* were honoured by hand, and each is named where it binds:** no
+data row renders as a table header (`gate-tables`); every published grant path is a real
+`branch/path` read first-hand today (`gate-grant-path`) — **re-probed from the committed
+shelves as the last act: 33 of 33 published grant paths resolve `200`**, and the single
+`404` the sweep reported is
+[`reneverland/CBIT-AiExam-plus`](https://github.com/reneverland/CBIT-AiExam-plus)'s
+`docs/LICENSE`, a path this pass publishes **as** a 404 in the licence-flags table.
+🔵 **`p354`'s rule reproduced on this pass's own instrument:** a path cell's meaning
+comes from the column it sits in, and no regex separates a grant *claim* from a grant
+*refutation*; the region vocabulary is the
+five closed values and `intel/market.md` keeps one `## Opportunities by region` with five
+`###` subsections (`gate-region-headings`); no absence is published that a leg refuted
+(`gate-absence`); no date is asserted that this base has refuted (`gate-dates`); and
+every census is derived **after** the writing (`gate-census-currency`). 🟡 A successor
+with permission should run `make hooks` before trusting any of it.
+
+🟢 **And `ACTION ZZ-ax` is discharged by this section existing.** `p353` and `p355` both
+committed without writing a README pass section, so every README-anchored gate spent
+2026-10-21 judging two-pass-old text. The remedy is not attention — it is a gate — but
+the section is written.
+
+### 🟢 `ACTION ZZ-ay` discharged, with the falsifier named and silent
+
+`p354` registered it precisely: run the supply legs **by FUNCTION** — `autograder`,
+`online judge`, `lecture capture`, `curriculum ontology`, `LTI`, `SIS`, `proctoring`,
+`spaced repetition`, `rubric` — and *"five such legs returning nothing would refute
+`T40`"*.
+
+| | |
+|---|---:|
+| function legs run | **9** |
+| legs that returned something shelvable | 🟢 **7** |
+| legs that returned nothing | **2** — 🔴 *and both failed on their own syntax* |
+| repositories verified first-hand | **36** |
+| 🟢 alive on `git ls-remote --symref` | 🟢 **36 of 36** |
+| grants read from the payload | **33** |
+| rows with no grant anywhere | **3** |
+
+🟢 **Zero legs refuted `T40`.** The `"online judge"` leg alone returned **62
+repositories, 12 of them absent from `archive/` and `evidence/` as well as the live
+shelves**, headed by **7 137 ★**.
+
+🔴 **The two empty legs are a QUERY defect and are published as one.**
+`"lecture capture" OR "lecture recording" OR "lecture notes" AI` returned **37 325**
+results headed by `openclaw`, `n8n` and `firecrawl`; the `curriculum ontology` leg
+returned **880** the same way. An unparenthesised `OR` binds loosely and dissolves the
+leg into general AI.
+
+> 🔵 **`p351` declared a gap against a channel that was open. Publishing "no
+> lecture-capture supply" here would be the same error one layer up** — so it is
+> recorded as unmeasured, not as absent. `ACTION ZZ-bb` re-runs both with single-term
+> queries, refuted if either returns a shelvable row.
+
+### 🔴 Half of what the legs found, this base had already measured and lost
+
+| Class | Rows |
+|---|---:|
+| 🟢 absent from this base's **entire** corpus | **18** |
+| 🔴 **measured by this base and on NO live shelf** | **18** |
+| already on a live shelf | 🔴 **0 of 36** |
+
+| Row | Corpus files mentioning it | Live shelves carrying it |
+|---|---:|---:|
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | **237** | 🔴 **0** |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 187 | 🔴 0 |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 174 | 🔴 0 |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 141 | 🔴 0 |
+
+🔵 **The `delivery-audit` target asks exactly this** — *"which rows did `evidence/`
+measure that no shelf ever offered?"* — **and it is in no gate target**, so nothing has
+ever answered it on a schedule. `p355`'s own commit message records that its rewrite
+would have dropped carried rows and that `gate-fold-identity` caught 72. 🔴 **These are
+18 more, and a discovery leg caught them rather than a gate.** Registered as
+**`ACTION ZZ-az`**.
+
+### 🟢 The finding a client would pay for: education's execution layer
+
+🟢 **Fifteen rows on `repos/foundations.md`, six of them permissive, and the biggest
+permissive one is bigger than the copyleft one everybody reaches for.**
+[`QingdaoU/OnlineJudge`](https://github.com/QingdaoU/OnlineJudge) is a complete,
+Dockerised judge — submissions, problem bank, contests, admin — at **6 552 ★ and MIT**,
+with its seccomp sandbox [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) on its
+own MIT grant. One pass ago this base's only execution component was `judge0` (GPL-3.0).
+
+🔵 **Why twelve passes of agent-shaped queries could not see any of it:** none of it
+calls itself AI. It is a queue, a sandbox and a verdict — the substrate under every
+programming course. 🟢 **Consequence stated plainly on `intel/trends.md` §12: pricing
+this capability as a greenfield build is now a costing error**, and Pattern 9 wires the
+whole stack with every component MIT, BSD-3-Clause or Apache-2.0.
+
+### 🔴 Four grant anomalies — and three of the four read as `MIT`
+
+| Row | The appearance | The payload |
+|---|---|---|
+| [`reneverland/CBIT-AiExam-plus`](https://github.com/reneverland/CBIT-AiExam-plus) (277 ★) | an MIT shields.io badge heading the README | 🔴 the `LICENSE` it links to **404s**, with four other rungs. **No grant exists** |
+| [`JinLingxi/MathCyclus…`](https://github.com/JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant) (147 ★) | nothing on the landing page | 🔴 one Chinese prose sentence in the README. A **pointer**, not a grant |
+| [`lebmatter/exampro`](https://github.com/lebmatter/exampro) (72 ★) | MIT, per GitHub | 🟡 stock MIT at `license.txt` with **`Copyright (c) [year] [fullname]` never filled** — family certain, **licensor absent** |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) (575 ★) | AGPL-3.0 | 🟢 a **1 134-byte AGPL short-form notice** *plus* a dual-licensing note: **`skills/*.md` under AGPL-3.0 OR MIT at the user's option** |
+
+> 🔵 **A badge is a picture, not a grant.** And **size decides nothing**: an AGPL-3.0
+> notice at 1 134 bytes is MIT-sized, so any byte-band heuristic reads the one copyleft
+> row here as permissive — which is `gate-template-identity`'s whole premise, now with a
+> live instance in the wrong direction.
+
+🟢 **And one grant RECOVERED exactly where `p354` said it would be.**
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic): six root rungs all
+**404**, the README names `docs/License.txt`, and that path returns **17 286 bytes of
+GPL-2.0, BOM-prefixed**. 🔴 Two corrections ride on opening it — the README says only
+*"the GNU General Public License"* with **no version** and the payload is **Version 2**,
+and a leading **UTF-8 BOM** means a classifier anchored on `^GNU` matches nothing.
+🔵 `p354` named `docs/License.txt` as the shape no regex separates from a branch path;
+here it is, carrying a live grant on a 346 ★ SIS this base has touched 237 times and
+never shelved.
+
+### 🔴 Four published regional distributions are wrong, and only the LATAM zero is right
+
+🟢 **Derived over each shelf's own region cells as the last act before the commit:**
+
+| Shelf | Region | Derived | Published before |
+|---|---|---:|---:|
+| `repos/foundations.md` | North America | **19** | 🔴 11 |
+| `repos/foundations.md` | EMEA | **16** | 🔴 12 |
+| `repos/foundations.md` | APAC | **11** | 🔴 2 |
+| `repos/foundations.md` | Global | **7** | 🔴 6 |
+| `repos/foundations.md` | **LATAM** | **0** | 🟢 **0** |
+| `agents/top.md` | North America | **6** | 🔴 6 *over 5 actual rows* |
+
+🔴 **Four of the five foundation gaps predate this pass**: before `p356` added a single
+row that shelf carried **15** North American and **14** EMEA rows against published
+figures of 11 and 12. 🔵 **This is `ACTION ZZ-aw` on a third and fourth quantity** — a
+*distribution* in prose, bound by no gate, and wrong on **both** shelves audited. The
+`agents/top.md` row is the sharpest: `p355` published 6 while its own tables carried 5,
+and `p356`'s new `edx-proctoring` row makes the figure 6 *and true* for the first time.
+
+### 🔴 This pass's own instrument hit `ACTION ZZ-aw` while measuring `ACTION ZZ-aw`
+
+The carried-vs-shelved census ran **once before** this pass wrote its evidence files and
+**once after**. The second run reported **36 of 36 `MEASURED-NEVER-SHELVED` and 0
+absent** — because `evidence/function-leg-rows.2026-10-21-p356.tsv` had put all 36 slugs
+into the corpus it was measuring. 🟢 Re-derived with this pass's own artefacts excluded:
+**18 / 18**.
+
+> 🔵 **Third consecutive pass where a quantity was counted before the writing that
+> changes it — and the first where the polluting artefact was the instrument's own
+> output.** `p353` counted before its correction, `p354` before its new row, `p356`
+> against its own evidence file. The shape survives knowing about it, which is the whole
+> argument for a gate.
+
+### 🟢 The address census, derived over BOTH trees with ONE instrument
+
+🔴 **`make` was refused, so this base's pinned `address_shape.py` could not be run**, and
+`p355`'s triple (**2 483 → 33 → 2 450**) is therefore **carried, not re-derived** — it is
+labelled as carried rather than restated as current.
+
+🟢 **Instead, one independent harvester was run over the `p355` tree and the `p356` tree,
+so the two figures are comparable to each other even though neither is comparable to the
+pinned instrument's:**
+
+| Tree | Harvested shapes | Not addresses | Addresses |
+|---|---:|---:|---:|
+| `HEAD` (`p355`) | 2 548 | 21 | **2 527** |
+| **this tree (`p356`)** | 2 566 | 21 | 🟢 **2 545** |
+| **delta** | +18 | 0 | 🟢 **+18** |
+
+🟢 **The delta is exactly 18, and 18 is exactly this pass's absent-from-corpus count** —
+derived by a different method, over a different scope, and agreeing to the row. The
+other 18 rows add no address because they were already inside `SHELF_FILES` at `HEAD`,
+in the trending history, which is the `ACTION ZZ-az` finding arriving a second way.
+
+🔴 **And the census triple is INSTRUMENT-DEPENDENT, which this base publishes as though
+it were a property of the tree.** This harvester rejects **21** non-addresses where the
+pinned one rejects **33**; the 12-shape difference is a rejecter-scope difference, not a
+tree difference. So a successor comparing **2 545** against **2 450** would compute a
+delta of 95 and attribute it to content. 🟡 Registered as **`ACTION ZZ-bc`**: a census
+figure must be published with the identity of the instrument that produced it.
+
+### 🟢 The regional legs — all four ran, and APAC's gap moved rather than closed
+
+🟢 **North America:** state rules are **binding now, not advisory**. Ohio requires
+districts to adopt an AI framework by **1 July 2026**; **Idaho SB 1227** is enacted
+(statewide framework, AI-literacy standards, a bar on AI replacing teachers); **Vermont
+HB 650** makes the **vendor** register and certify privacy compliance annually — an
+obligation that lands on a studio, not only on a district. 🆕 **Colorado repealed and
+replaced its AI Act** (**ADMTA / SB 26-189**, signed 2026-05-14, effective 2027-01-01),
+so the US has **stopped converging** on one compliance shape. 🟡 All of this is
+**secondary** sourcing and is marked as such on `intel/market.md`.
+
+🔴 **The claim this pass refused to publish.** One source states the Colorado framework
+*"carves out FERPA-covered educational institutions."* **Nine further sources on the same
+statute do not mention FERPA or any education carve-out.** 🟢 So it is recorded as
+unverified and **not published** — `p289`'s restatement rule applied to a regulatory
+claim, and the second pass running to refuse this same claim.
+
+🟢 **EMEA:** sources in this leg **still assert 2 August 2026** for the Annex III
+education obligations. 🔴 **Not published.** This base holds **2 December 2027** under
+**Regulation (EU) 2026/1744**, and a **European Commission AI Office slide inside this
+same leg gives 2 December 2027** — so the refutation now has the Commission's own
+channel behind it. 🆕 Two additions the file lacked: **emotion-recognition AI in schools
+has been prohibited since February 2025**, and a school that merely *licenses* a
+platform is a **deployer** with its own duties — so the compliance deliverable has a
+buyer on **both** sides of the contract. The **Apply AI Alliance** and its **AI Skills
+Academy** training start **Q4 2026 — now**.
+
+🔴 **APAC:** **fifth consecutive pass with no education-specific adoption figure** from
+the prose leg. 🟢 **In the same pass the function legs placed 18 of 36 verified rows in
+APAC** — China, Hong Kong, India, Korea, Bangladesh, Iran — and `repos/foundations.md`'s
+APAC count went **2 → 11**. 🔵 **The two measurements disagree and the repository
+evidence is the better one: the gap is in the trade press, not in the region.** Published
+as **`T15`**. Also placeable: Korea's AI textbooks **fell below 30 % adoption** and lost
+official status, so the APAC delivery risk is **adoption, not compliance** — the inverse
+of EMEA.
+
+🟡 **LATAM:** 🆕 **Fundación Ceibal × EdTech Hub** (September 2026) brings
+AI-in-education evidence and guidance to LAC governments — a credible public-sector entry
+point, and `intel/trends.md` §2 says evidence is becoming the procurement gate. 🔴 The
+es/pt leg was re-run with **function** words (`calificación`, `corrección`, `banco de
+preguntas`, `banco de questões`, `examen`) and returned **228 209 results and zero
+education tooling**. 🟢 **But the hits are informative rather than empty:** the
+education-relevant ones are **exam-CONTENT archives** — FAMAF/UNC (Argentina), Instituto
+Tecnológico de Costa Rica, `111milprogramadores`. **So the LATAM gap is specifically a
+TOOLING gap**: Spanish-language assessment content exists in volume, there is no
+Spanish-language item bank, autograder or judge, and therefore no incumbent to displace.
+🔵 Licences on those corpora were **not** verified and must be before any use.
+
+### 🔵 What the proctoring leg returned that will not be shelved
+
+🔴 **A large share of the `proctoring` supply is proctoring EVASION.**
+[`Batlez/CloakBox`](https://github.com/Batlez/CloakBox) (408 ★, *"make your virtual
+machine invisible to proctoring software"*) and `SunnyCOdet/ofradr` (51 ★, *"the ultimate
+anti-proctoring software"*) are among the leg's highest-starred hits. 🟢 **Neither is
+shelved and neither will be:** they are detection-evasion tooling, not education
+software. Named on `agents/top.md` and `verticals/solutions.md` so a successor running
+the same leg does not mistake them for supply.
+
+🔵 **And the usable integrity recommendation is unchanged by the new tier.** Of five
+proctoring rows, one has no grant, one has no identified licensor and two are AGPL
+plugins to AGPL hosts. The row a studio can ship on remains
+[`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (MIT): **detect what the
+submission *is* rather than surveil the student taking it** — a recommendation this base
+has made before and can now defend with the alternative measured.
+
+### 🟡 Registered for the successor pass
+
+- **`ACTION ZZ-az`** — wire `delivery-audit` into a gate target. **18 of 36 rows** this
+  pass found by discovery were already in this base's `evidence/` and on **no live
+  shelf**; `OS4ED/openSIS-Classic` sits in **237** corpus files. The base measures more
+  than it publishes and nothing checks it on a schedule.
+- **`ACTION ZZ-ba`** — no gate asserts that a claim the `README.md` says was *"published
+  on"* a shelf is on that shelf. The live `p354` section says `T40`–`T42` went to
+  `intel/trends.md`; **none of the three was there.** 🔵 This clone is **shallow**, so
+  `p356` cannot attribute which pass dropped them and does not guess — it re-measured and
+  published them as **`T12`**, **`T13`** and (Colorado) `intel/market.md`.
+- **`ACTION ZZ-bb`** — re-run the two FAILED legs with single-term or parenthesised
+  queries (`topic:lecture-capture`, `"lecture capture" in:name`, `topic:oer`,
+  `topic:competency-framework`). Refuted if either returns a shelvable row, which would
+  prove the absence was never real.
+- **`ACTION ZZ-bc`** — publish every census figure with the **identity of the instrument**
+  that produced it. Two harvesters over the same tree differ by 12 rejected shapes, and
+  nothing on the shelves records which one spoke.
+- 🔴 **Still open: `ACTION ZZ-aw`** — nothing binds a **ratio or a distribution** stated
+  in prose. **Five instances now**: `p353`'s `6 %`, `p354`'s `46 of 46`, this pass's own
+  polluted census, and the four wrong regional distributions on `repos/foundations.md`.
+- 🔴 **Still open: `ACTION ZZ-ax`** — no gate asserts the live README section names the
+  pass at `HEAD`. `p353` and `p355` both committed without one; `p356` wrote one, which
+  closes the instance and not the hole.
+- 🔴 **New and carried: `make hooks` was REFUSED**, so gate state is **unjudged**. No
+  claim in this section rests on a gate having passed, and the first act of `p357` should
+  be to run it.
+
 ## Pass 354 — 2026-10-21 — **`ACTION ZZ-au` DISCHARGED: 47 OF 47 PUBLISHED GRANT PATHS RESOLVE `200`, AND THE GATE THAT PROVES IT ACCUSED THREE *CORRECT* CELLS ON ITS FIRST RUN — FOURTH CONSECUTIVE PASS WHERE THIS BASE'S INSTRUMENT WAS WRONG AND ITS SHELF WAS RIGHT. `p353`'s "6 %" IS `34.0 %` CORPUS-WIDE AND THE HAZARD TRACKS REPOSITORY AGE. `p353` WROTE NO README SECTION, SO EVERY README-ANCHORED GATE SPENT THE DAY JUDGING `p352`'s TEXT. ONE NEW ROW — `judge0`, 4 491 ★, ABSENT FROM THE WHOLE CORPUS. `make hooks` — 31/31 IN, 32/32 OUT**
 
 🔵 **A dating note.** Every read, probe and digest below was taken on **2026-10-21** and every evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by commit. 🔵 This is the **fifth pass of this date** (`p350`, `p351`, `p352` and `p353` earlier today).

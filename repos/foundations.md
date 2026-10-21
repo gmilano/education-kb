@@ -71,6 +71,59 @@ to start.
 | Ares2 (secure grading runner) | [ls1intum/Ares2](https://github.com/ls1intum/Ares2) | **MIT** | `main/LICENSE` | not re-derived | EMEA |
 | autograder | [zmievsa/autograder](https://github.com/zmievsa/autograder) | GPL-3.0 | `main/LICENSE` | not re-derived | Not placed |
 
+## Code execution, online judges and autograding — 🆕 a whole tier this base did not have
+
+🟢 **This tier is `p356`'s finding and it is the largest single supply discovery on
+this base.** `p354` recovered [`judge0`](https://github.com/judge0/judge0) by aiming a
+leg at a **function** instead of at "AI education". `ACTION ZZ-ay` asked for that leg
+shape to be run across nine functions. The `"online judge"` leg alone returned **62
+repositories, 12 of them verified here, and all 12 absent from this base's entire
+corpus** — `archive/` and `evidence/` included — with **7 137 ★** at the head.
+
+🔵 **Why twelve passes of agent-shaped queries could not see it.** This software is
+not called an AI tool and does not describe itself as one. It is the **grading
+execution substrate** underneath every programming course: a sandbox, a queue, a
+verdict. An education engagement that has to run student code needs exactly this and
+would otherwise build it.
+
+| Component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
+| --- | --- | --- | --- | ---: | --- |
+| Hydro (multi-tenant judge) | [hydro-dev/Hydro](https://github.com/hydro-dev/Hydro) | AGPL-3.0 | `master/LICENSE` | **7 137** | APAC |
+| QingdaoU OnlineJudge | [QingdaoU/OnlineJudge](https://github.com/QingdaoU/OnlineJudge) | 🟢 **MIT** | `master/LICENSE` | **6 552** | APAC |
+| HUSTOJ | [zhblue/hustoj](https://github.com/zhblue/hustoj) | GPL-2.0 | `master/LICENSE` | **3 813** | APAC |
+| DMOJ (judge + contest platform) | [DMOJ/online-judge](https://github.com/DMOJ/online-judge) | AGPL-3.0 | `master/LICENSE` | **1 194** | North America |
+| online-judge-tools | [online-judge-tools/oj](https://github.com/online-judge-tools/oj) | 🟢 **MIT** | `master/LICENSE` | **1 172** | APAC |
+| DMOJ judge-server | [DMOJ/judge-server](https://github.com/DMOJ/judge-server) | AGPL-3.0 | `master/LICENSE` | **981** | North America |
+| NOJ | [ZsgsDesign/NOJ](https://github.com/ZsgsDesign/NOJ) | 🟢 **MIT** | `master/LICENSE` | **942** | APAC |
+| HOJ | [HimitZH/HOJ](https://github.com/HimitZH/HOJ) | 🟢 **MIT** | `master/LICENSE` | **942** | APAC |
+| SYZOJ | [syzoj/syzoj](https://github.com/syzoj/syzoj) | 🟢 **MIT** | `master/LICENSE` | **923** | APAC |
+| SDUOJ (microservices) | [SDUOJ/OnlineJudge](https://github.com/SDUOJ/OnlineJudge) | AGPL-3.0 | `main/LICENSE` | **556** | APAC |
+| QingdaoU Judger (seccomp sandbox) | [QingdaoU/Judger](https://github.com/QingdaoU/Judger) | 🟢 **MIT** | 🔴 `newnew/LICENSE` | **496** | APAC |
+| Sharif Judge (course-oriented) | [mjnaderi/Sharif-Judge](https://github.com/mjnaderi/Sharif-Judge) | AGPL-3.0 | 🔴 `Version-1/LICENSE` | **395** | EMEA |
+| Otter-Grader (notebook autograder) | [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** | `master/LICENSE` | **161** | North America |
+| webtech autograder | [webtech-network/autograder](https://github.com/webtech-network/autograder) | 🟢 **Apache-2.0** | `main/LICENSE` | **62** | Not placed |
+| OK client (Berkeley autograder) | [okpy/ok-client](https://github.com/okpy/ok-client) | 🟢 **Apache-2.0** | `master/LICENSE` | **57** | North America |
+
+🟢 **Read the licence column as the engagement decision.** Six of the fifteen are
+**MIT, BSD-3-Clause or Apache-2.0** — [`QingdaoU/OnlineJudge`](https://github.com/QingdaoU/OnlineJudge)
+at 6 552 ★ is a **complete, MIT-licensed, Docker-deployable judge**, and
+[`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) is its seccomp sandbox on its
+own MIT grant. 🔵 Against this, `judge0` (GPL-3.0) has to be consumed over its API to
+keep the boundary. **The permissive option in this tier is the bigger one**, which
+reverses the assumption the `judge0`-only shelf implied one pass ago.
+
+🟡 **Two of the three non-contest rows matter most for a client.**
+[`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) is built for
+**programming courses** rather than contests — assignments, deadlines, per-student
+feedback — and [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader)
+grades **Python *and* R notebooks**, which is where this base's prior autograder
+([`nbgrader`](https://github.com/jupyter/nbgrader), Jupyter-only) stopped.
+
+🔴 **Two default branches in this tier are neither `main` nor `master`.**
+`QingdaoU/Judger` defaults to **`newnew`** and `Sharif-Judge` to **`Version-1`**. A
+licence sweep that probes `main` and `master` reports both as grantless, and one of
+them is the MIT sandbox this tier's permissive path depends on.
+
 ## Content authoring, media and delivery
 
 | Component | Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
@@ -96,6 +149,17 @@ the CLI carries no copyleft; code linked into the library does.
 | RosarioSIS (student info system) | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | `mobile/LICENSE` | not re-derived | EMEA |
 | Learner Credential Wallet | [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | **MIT** | `main/LICENSE` | not re-derived | Global |
 | Terracotta (in-LMS experiments) | [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | Apache-2.0 | `development/LICENSE` | not re-derived | North America |
+| 🆕 openSIS Classic (K-12 SIS) | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GPL-2.0 | 🔴 `master/docs/License.txt` — **root carries no grant file** | **346** | Not placed |
+| 🆕 FenixEdu Academic (HE SIS) | [FenixEdu/fenixedu-academic](https://github.com/FenixEdu/fenixedu-academic) | LGPL-3.0 | `master/LICENSE` | **175** | EMEA |
+
+🟢 **`openSIS-Classic`'s grant was RECOVERED this pass, and `p354` predicted the exact
+shape.** Six root rungs (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`,
+`license.txt`, `GNU-AGPL-3.0.txt`) all answer **404**; the README names
+`docs/License.txt`, and that path returns **17 286 bytes of GPL-2.0, BOM-prefixed**.
+🔴 **Two corrections ride on reading it rather than the README:** the README says only
+*"the GNU General Public License"* with no version, and the payload is **Version 2, not
+Version 3** — which decides compatibility — while the leading **UTF-8 BOM** means a
+classifier anchored on `^GNU` sees no match at all.
 
 ## Curriculum corpora and open courseware
 
@@ -257,37 +321,83 @@ repository. The authenticated index returns **`openedx/openedx-platform`** as th
 canonical name; this base has been publishing the stale one. The table above now
 carries the canonical address.
 
-## 🔵 Grant-path distribution, measured this pass
+## 🔵 Grant-path distribution, re-derived AFTER this pass wrote — which is what `gate-census-currency` is for
 
-The reason the grant-path column exists:
+🟢 Derived over the curated tiers of **this** tree, as the last act before the commit,
+not carried from `p355`'s sentence:
 
 | Grant filename | Rows on this shelf |
 |---|---:|
-| `LICENSE` | 29 |
-| `LICENSE.md` | 4 |
-| `LICENSE.txt` | 3 |
+| `LICENSE` | 51 |
+| `LICENSE.md` | 5 |
 | 🔴 `COPYING.txt` | 2 — `moodle/moodle`, `moodlehq/moodleapp` |
+| `LICENSE.txt` | 2 |
 | 🔴 `license.txt` (lower-case) | 1 — `frappe/lms` |
 | 🔴 a **directory** | 1 — `cs341-illinois/coursebook` |
 | 🔴 `package.json` field only | 1 — `kitschpatrol/yanki` |
+| 🔴 🆕 **`docs/License.txt`** | 1 — `OS4ED/openSIS-Classic` |
 
-**6 of 41 grants (15 %) are not at `LICENSE`**, and the two largest-deployment
-platforms in education — Moodle core and the Moodle app — are both among them. Any
-licence sweep that probes only `LICENSE` and `LICENSE.md` will report Moodle as
-unlicensed.
+**13 of 64 grants (20.3 %) are not at `LICENSE`.** 🔴 **The share went UP, not down, as
+the shelf grew** — `p355` published 6 of 41 (15 %) and this pass added rows that are
+*older* software, which is the direction `T13` predicts.
 
-## 🔵 Regional placement
+### 🔴 And the default branch is the larger hazard
 
-- **EMEA** is the strongest region on this shelf (12 placed rows): European
-  universities built most of the open assessment, media and interoperability tooling
-  (Belgium, Croatia, France, Germany, Norway, Switzerland, Spain, Tanzania).
-- **North America** places 11, concentrated in platforms and standards.
-- **Global** places 6 — the genuinely multi-region platforms (Moodle, Kolibri, Tutor).
-- **APAC** places 2: `frappe/lms` (India) and `openeducat_erp` (India).
-- **LATAM** places **0 rows on this shelf.** Stated plainly: the foundational
-  education infrastructure layer has **no LATAM-origin project** this pass could
-  verify. LATAM supply that does exist is at the *data* layer
-  (`bncc-dados`, `mcp-brasil` — see `agents/top.md`), not the platform layer. An
-  engagement in the region builds on EMEA or North American platforms with local
-  curriculum data on top, and that is a pattern rather than a deficiency — see
-  `compose/patterns.md`.
+| Default branch | Rows |
+|---|---:|
+| `master` | **31** |
+| `main` | 23 |
+| `develop` | 3 |
+| 🔴 each of `release`, `newnew`, `Version-1`, `v4.0.x-develop`, `19.0`, `mobile`, `development` | 1 |
+
+🔴 **A probe that assumes `main` reports 41 of 64 grants (64.1 %) as absent**, and a
+probe that tries `main` then `master` still misses **10**. Two of those ten are
+[`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) (`newnew`) and
+[`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) (`Version-1`), both
+added this pass — and the first is the MIT sandwich at the centre of Pattern 9's
+permissive path. 🔵 One cause explains copyleft prevalence, grants at `COPYING.txt` and
+`docs/License.txt`, and non-`main` defaults alike: **this sector's infrastructure is
+older than the conventions the tooling assumes.** Published as `T13`.
+
+## 🔵 Regional placement, counted over this shelf's own cells
+
+🟢 **Derived as the last act before the commit, and it corrects the sentence it
+replaces.**
+
+| Region | Placed rows | `p355` published |
+|---|---:|---:|
+| **North America** | **19** | 🔴 11 |
+| **EMEA** | **16** | 🔴 12 |
+| **APAC** | **11** | 🔴 2 |
+| Global | **7** | 🔴 6 |
+| 🔵 Not placed | 11 | — |
+| **LATAM** | **0** | 0 |
+
+🔴 **Every figure in the right-hand column was wrong, and only the LATAM zero was
+right.** Four of the five gaps predate this pass: before `p356` added a single row this
+shelf carried **15** North American and **14** EMEA rows against published figures of
+11 and 12. 🔵 **This is `ACTION ZZ-aw` on a third and fourth quantity** — a
+*distribution* in prose, unbound by any gate, wrong on both shelves this pass audited
+(`agents/top.md` was off by one on North America). The remedy is not care; it is a gate.
+
+- **North America** leads at 19, concentrated in platforms, standards and — new this
+  pass — **university autograding**: `otter-grader` (BSD-3-Clause, UC Berkeley, named in
+  its own licence payload), `okpy/ok-client` (Apache-2.0, Berkeley) and the two DMOJ
+  rows, placed by **`dmoj.ca` appearing ten times in their README**.
+- **EMEA** holds 16: European universities built most of the open assessment, media and
+  interoperability tooling (Belgium ×2, Croatia, France, Germany, Italy, Norway,
+  Switzerland, Spain, Tanzania) and now **Iran** (`Sharif-Judge`, Sharif University of
+  Technology) and **Portugal** (`fenixedu-academic`, Instituto Superior Técnico).
+- **APAC** rises from 2 to **11** in one pass, and all nine new rows are **online judges
+  and sandboxes** from Chinese and Japanese universities. 🔵 This is the repository-side
+  half of `T15`: the region the prose legs cannot measure is the region building the
+  infrastructure.
+- **Global** holds 7 — the genuinely multi-region platforms (Moodle, Kolibri, Tutor).
+- **LATAM** places **0 rows on this shelf**, for the *n*th consecutive pass and now with
+  a sharper account of why. The function legs run this pass in Spanish and Portuguese
+  returned **exam-content archives, not tooling** — FAMAF/UNC (Argentina), Instituto
+  Tecnológico de Costa Rica. 🟢 So the regional supply that exists is **content**, and the
+  platform layer genuinely has no LATAM-origin project this base can verify. An
+  engagement there builds on EMEA or North American platforms with local curriculum data
+  on top (`bncc-dados`, `mcp-brasil` — see `agents/top.md`), and that remains a pattern
+  rather than a deficiency — see `compose/patterns.md`.

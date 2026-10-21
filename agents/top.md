@@ -6,7 +6,7 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
-**Pass 355 · 2026-10-21.** Every row below was checked first-hand this pass on two
+**Pass 356 · 2026-10-21.** Every row below was checked first-hand on two
 channels: liveness and default branch via `git ls-remote --symref`, and the licence
 **read from the payload** at `raw.githubusercontent.com` — never from a badge, a
 README claim or GitHub's own classifier. Where the classifier disagreed with the
@@ -88,6 +88,81 @@ defensible scopes give different answers. The whole-file figure is on
 | agent-skills | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | not re-derived | North America | Education agent skills from Learning Commons |
 | evaluators | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | **MIT for code**, stated in `LICENSE.md` prose | `main/LICENSE.md` | not re-derived | North America | Evaluators for educational AI output. 🟡 Split grant — the file is a licensing *statement*, not a stock licence |
 
+## 🆕 Memory and scheduling agents — the layer that decides *when*, not *what*
+
+🟢 **New tier, `p356`.** A `topic:spaced-repetition` leg returned **40 repositories**
+and a coherent technical layer this base had measured and never shelved: agents whose
+contribution is **scheduling the next review**, not generating content. The sector has
+a de-facto standard — **FSRS**, the Free Spaced Repetition Scheduler — and it is MIT
+at every rung, which makes it one of the cleanest things on this shelf to embed.
+
+| Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
+| --- | --- | --- | --- | ---: | --- | --- |
+| Echo-Loop | [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | **AGPL-3.0** | `main/LICENSE` | **4 222** | APAC | AI English listening/speaking trainer: intensive listening, shadowing, blind listening, retelling, spaced review. 🔴 Network copyleft |
+| FSRS4Anki | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | MIT (`LICENSE`) | `main/LICENSE` | **4 111** | Not placed | The FSRS scheduler as an Anki add-on. Its own topics name `intelligent-tutoring-system` |
+| engram | [nagisanzenin/engram](https://github.com/nagisanzenin/engram) | MIT (`LICENSE`) | `main/LICENSE` | **1 458** | Not placed | Free-recall verification *with receipts* + FSRS scheduling; ships as an agent plugin |
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT (`LICENSE`) | `main/LICENSE` | **1 111** | APAC | AI study partner: plans the route, teaches, builds a project alongside the learner |
+| trane | [trane-project/trane](https://github.com/trane-project/trane) | **AGPL-3.0** | `master/LICENSE` | **848** | Not placed | Deliberate-practice engine over a mastery dependency graph (Rust). 🔴 Network copyleft |
+| FSRS (the algorithm) | [open-spaced-repetition/free-spaced-repetition-scheduler](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | MIT (`LICENSE`) | `main/LICENSE` | **729** | Not placed | The DSR-model specification itself — the thing to implement against |
+| human-skill-tree | [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 🟡 **AGPL-3.0 notice + MIT for `skills/`** | `master/LICENSE` | **575** | APAC | 30+ skills from K-12 to career, built on cognitive science. 🟡 Split grant — see the flags below |
+| py-fsrs | [open-spaced-repetition/py-fsrs](https://github.com/open-spaced-repetition/py-fsrs) | MIT (`LICENSE`) | `main/LICENSE` | **514** | Not placed | The embeddable Python scheduler. **This is the row to build on** |
+| learn-anything | [ChenChenyaqi/learn-anything](https://github.com/ChenChenyaqi/learn-anything) | MIT (`LICENSE`) | `main/LICENSE` | **487** | Not placed | Recursive learning: Socratic deep-dives plus TDD-style exercises inside a coding assistant |
+| learn-faster-kit | [hluaguo/learn-faster-kit](https://github.com/hluaguo/learn-faster-kit) | MIT (`LICENSE`) | `main/LICENSE` | **391** | Not placed | Learning coach: personalised syllabus, spaced repetition, progress tracking |
+
+🔵 **Why this tier is worth more than its star counts.** Every tutoring agent on the
+shelf above decides *what* to teach next and almost none decides *when* to return to
+it. Retention is the outcome a client measures. [`py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs)
+(MIT) is a few hundred lines with a published algorithm behind it, and it drops into an
+existing tutor without touching its content pipeline — see `compose/patterns.md`
+Pattern 10.
+
+## 🆕 Item banks and rubric-bound grading
+
+🟢 **New tier, `p356`,** from a `gradebook OR "question bank" OR "item bank"` leg. The
+AI-native item bank — import a Word file or a photograph of a page, recognise the
+formulae, match the knowledge point, generate the worked solution — is a real product
+category and it is **almost entirely Chinese-language**.
+
+| Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
+| --- | --- | --- | --- | ---: | --- | --- |
+| math-question-bank | [JudgePeach/math-question-bank](https://github.com/JudgePeach/math-question-bank) | **AGPL-3.0** | `main/LICENSE` | **330** | APAC | High-school maths item bank: live LaTeX rendering, LLM parsing and solving, formula OCR. 🔴 Network copyleft |
+| MathCyclus (Lingxi) | [JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant](https://github.com/JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant) | 🔴 **no grant file — README prose only** | `main/` — none found | **147** | APAC | Streamlit + LaTeX item bank with OCR, TikZ rendering and automated paper assembly. 🔴 Not usable until a `LICENSE` exists |
+| Grader-agent | [erictrainnlpinxihu/Grader-agent](https://github.com/erictrainnlpinxihu/Grader-agent) | MIT (`LICENSE`) | `main/LICENSE` | **101** | APAC | Five-stage grading loop (perceive→plan→act→observe→respond). **Write actions are not in the tool table — the agent can only emit proposals**, and each `GradingDraft` binds to a rubric line and a paragraph hash so a verdict is replayable |
+| question-bank | [gygy-open/question-bank](https://github.com/gygy-open/question-bank) | **AGPL-3.0** | `main/LICENSE` | **73** | APAC | AI-native item bank: Word/Markdown/image import, knowledge-point matching, review workflow, desktop and Docker builds. 🔴 Network copyleft |
+
+🟢 **[`Grader-agent`](https://github.com/erictrainnlpinxihu/Grader-agent) is the
+architectural find, not the biggest one.** It is the only grading agent on this base
+that makes the human-approval boundary **structural** rather than procedural: the four
+write actions are absent from the tool table, so the model cannot take them even if it
+decides to. That is precisely the posture the EU AI Act's high-risk regime asks for in
+exam scoring, and it is MIT. 🔵 Its replay guarantee — rubric line plus paragraph hash
+per draft — is also the audit trail `intel/trends.md` §1 says wins procurements.
+
+## 🆕 Proctoring and exam integrity — read the warning before the table
+
+🔴 **A large share of the proctoring supply is proctoring *evasion*.** The
+`proctoring OR proctor` leg returned 30 repositories, and among the highest-starred
+were [`Batlez/CloakBox`](https://github.com/Batlez/CloakBox) (408 ★, "make your virtual
+machine invisible to proctoring software") and `SunnyCOdet/ofradr` (51 ★, "the ultimate
+anti-proctoring software"). 🟢 **Neither is shelved and neither will be:** they are
+detection-evasion tooling, not education software, and a studio has no use for them.
+Recorded because the leg's apparent yield is roughly a third larger than its *usable*
+yield, and a successor running the same leg will see the same thing.
+
+| Agent | Repo | Licence (read from payload) | Grant read at | ★ 2026-10-21 | Region | What it does |
+| --- | --- | --- | --- | ---: | --- | --- |
+| Proctoring-AI | [vardanagarwal/Proctoring-AI](https://github.com/vardanagarwal/Proctoring-AI) | MIT (`LICENSE`) | `master/LICENSE` | **633** | Not placed | Automatic monitoring: gaze and eye tracking, face spoofing, phone detection, speech-to-text |
+| CBIT-AiExam-plus | [reneverland/CBIT-AiExam-plus](https://github.com/reneverland/CBIT-AiExam-plus) | 🔴 **NO GRANT — the README's MIT badge links to a `LICENSE` that 404s** | `main/` — none found | **277** | APAC | AI examination platform: item generation, adaptive difficulty, semantic scoring, analytics, proctoring. 🔴 **All rights reserved in practice** |
+| exampro | [lebmatter/exampro](https://github.com/lebmatter/exampro) | 🟡 **MIT, unfilled template** (`license.txt`) | 🔴 `main/license.txt` | **72** | Not placed | Proctored exams for the Frappe framework — pairs with `frappe/lms` |
+| edx-proctoring | [openedx/edx-proctoring](https://github.com/openedx/edx-proctoring) | **AGPL-3.0** | `master/LICENSE.txt` | **69** | North America | First-party Open edX proctoring subsystem |
+| moodle quizaccess_proctoring | [eLearning-BS23/moodle-quizaccess_proctoring](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring) | **AGPL-3.0** | `master/LICENSE.md` | **30** | APAC | Moodle quiz-access proctoring plugin (Brain Station 23) |
+
+🔵 **The usable integrity story is not in this table.** Of five rows, one has no grant,
+one has no identified licensor, and two are AGPL plugins to AGPL hosts. The row a
+studio can actually ship on is [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos)
+(MIT) on the shelf above — detect what the submission *is*, rather than surveil the
+student taking it. That is a defensible recommendation and it is now evidence-backed.
+
 ## Curriculum and knowledge layers (what the agents reason over)
 
 An agent is only as good as the curriculum model behind it. These are the data
@@ -106,7 +181,7 @@ assets — and they are where the licence traps live.
 
 ## Build-on-this tier
 
-**34 permissive rows** on this shelf — MIT, Apache-2.0, BSD, ECL-2.0 or NCSA, every
+**43 permissive rows** on this shelf — MIT, Apache-2.0, BSD, ECL-2.0 or NCSA, every
 grant read from the payload at the path given. These are the rows a Globant engagement
 can fork, embed and ship inside a closed client deliverable with no copyleft reach.
 🔵 The tier is bounded structurally by this heading, so correcting the number cannot
@@ -123,12 +198,15 @@ delete the boundary that checks it.
 | `bncc-dados` | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | **MIT** | `main/LICENSE` |
 | `OATutor` | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | **MIT** | `main/LICENSE` |
 | `PageLM` | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | **MIT** | `main/LICENSE.md` |
+| `learn-anything` | [ChenChenyaqi/learn-anything](https://github.com/ChenChenyaqi/learn-anything) | **MIT** | `main/LICENSE` |
 | `schoolinfo-mcp` | [chrisryugj/schoolinfo-mcp](https://github.com/chrisryugj/schoolinfo-mcp) | **MIT** | `main/LICENSE` |
 | `knowledge-import-pipeline` | [clownjee/knowledge-import-pipeline](https://github.com/clownjee/knowledge-import-pipeline) | **Apache-2.0** | `main/LICENSE` |
 | `dolos` | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | **MIT** | `main/LICENSE` |
 | `Understand-Anything` | [Egonex-AI/Understand-Anything](https://github.com/Egonex-AI/Understand-Anything) | **MIT** | `main/LICENSE` |
+| `Grader-agent` | [erictrainnlpinxihu/Grader-agent](https://github.com/erictrainnlpinxihu/Grader-agent) | **MIT** | `main/LICENSE` |
 | `moodle-mcp` | [falkenslab/moodle-mcp](https://github.com/falkenslab/moodle-mcp) | **MIT** | `main/LICENSE` |
 | `DeepTutor` | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** | `main/LICENSE` |
+| `learn-faster-kit` | [hluaguo/learn-faster-kit](https://github.com/hluaguo/learn-faster-kit) | **MIT** | `main/LICENSE` |
 | `Smart-Study-Agent` | [HumphreySun98/Smart-Study-Agent](https://github.com/HumphreySun98/Smart-Study-Agent) | **MIT** | `main/LICENSE` |
 | `yanki` | [kitschpatrol/yanki](https://github.com/kitschpatrol/yanki) | **MIT** | `main/package.json` |
 | `agent-skills` | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | **Apache-2.0** | `main/LICENSE` |
@@ -137,6 +215,11 @@ delete the boundary that checks it.
 | `canvas-lms-agent` | [likr/canvas-lms-agent](https://github.com/likr/canvas-lms-agent) | **MIT** | `master/canvas-lms-mcp/LICENSE` |
 | `Ares2` | [ls1intum/Ares2](https://github.com/ls1intum/Ares2) | **MIT** | `main/LICENSE` |
 | `mcp-brasil` | [Mcp-Brasil/mcp-brasil](https://github.com/Mcp-Brasil/mcp-brasil) | **MIT** | `main/LICENSE` |
+| `Study-Mate` | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | **MIT** | `main/LICENSE` |
+| `engram` | [nagisanzenin/engram](https://github.com/nagisanzenin/engram) | **MIT** | `main/LICENSE` |
+| `free-spaced-repetition-scheduler` | [open-spaced-repetition/free-spaced-repetition-scheduler](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | **MIT** | `main/LICENSE` |
+| `fsrs4anki` | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | `main/LICENSE` |
+| `py-fsrs` | [open-spaced-repetition/py-fsrs](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** | `main/LICENSE` |
 | `OpenStudy` | [OpenStudy-dev/OpenStudy](https://github.com/OpenStudy-dev/OpenStudy) | **MIT** | `main/LICENSE` |
 | `pykt-toolkit` | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | **MIT** | `main/LICENSE` |
 | `canvas-ed-mcp` | [r1ckyIn/canvas-ed-mcp](https://github.com/r1ckyIn/canvas-ed-mcp) | **MIT** | `main/LICENSE` |
@@ -145,6 +228,7 @@ delete the boundary that checks it.
 | `classroom-mcp` | [sandraschi/classroom-mcp](https://github.com/sandraschi/classroom-mcp) | **MIT** | `master/LICENSE` |
 | `educhain` | [satvik314/educhain](https://github.com/satvik314/educhain) | **MIT** | `main/LICENSE` |
 | `Skill-Anything` | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | **MIT** | `main/LICENSE` |
+| `Proctoring-AI` | [vardanagarwal/Proctoring-AI](https://github.com/vardanagarwal/Proctoring-AI) | **MIT** | `master/LICENSE` |
 | `book-to-skill` | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | **MIT** | `master/LICENSE.md` |
 | `canvas-mcp` | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | **MIT** | `main/LICENSE` |
 | `pyedmine` | [ZhijieXiong/pyedmine](https://github.com/ZhijieXiong/pyedmine) | **MIT** | `main/LICENSE` |
@@ -153,8 +237,11 @@ delete the boundary that checks it.
 
 ## 🔴 Licence flags — rows a Globant engagement cannot treat as permissive
 
-Four of this pass's findings are grants that a casual read would get wrong. Each was
-caught by reading the payload rather than the classifier or the README.
+🟢 **`p356` adds five, and one of them is a RECOVERY rather than a warning.** Each was
+caught by reading the payload rather than the classifier, the badge or the README. 🔵 Note
+what the new rows have in common with the old ones: **three of the five would read as MIT
+to anyone who did not open the file**, and the two that do not read as MIT are the two
+that turned out to be usable.
 
 | Row | What it looks like | What the payload says | Consequence |
 |---|---|---|---|
@@ -164,6 +251,11 @@ caught by reading the payload rather than the classifier or the README.
 | [1EdTech/caliper-spec](https://github.com/1EdTech/caliper-spec) | a learning-analytics standard on GitHub | 🔴 **IMS Global specification document licence** | A *spec* licence, not a software grant. Implement the standard; do not vendor the document |
 | [likr/canvas-lms-agent](https://github.com/likr/canvas-lms-agent) | MIT, per the file in the tree | 🟡 **MIT at `canvas-lms-mcp/LICENSE`** | The grant licenses the **package**, not the repository. The root is unlicensed |
 | [kitschpatrol/yanki](https://github.com/kitschpatrol/yanki) | MIT, per GitHub | 🟡 **MIT declared only in `package.json`** | No `LICENSE` file exists in the tree. The grant is a manifest field |
+| 🆕 [reneverland/CBIT-AiExam-plus](https://github.com/reneverland/CBIT-AiExam-plus) | an MIT shields.io badge at the top of the README, 277 ★ | 🔴 **no grant anywhere** — the badge links to `LICENSE`, and `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` and `docs/LICENSE` **all 404** | **All rights reserved.** A badge is a picture, not a grant. The most capable AI exam platform found this pass and it cannot be used |
+| 🆕 [JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant](https://github.com/JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant) | nothing on the landing page, 147 ★ | 🔴 **one Chinese prose sentence in `README.md`**: 本项目采用 MIT License 开源协议 | A README claim is a **pointer**, not a grant. Ask the author for a `LICENSE` file; until then, unusable |
+| 🆕 [lebmatter/exampro](https://github.com/lebmatter/exampro) | MIT, per GitHub | 🟡 **stock MIT at `main/license.txt` with the holder fields never filled**: `Copyright (c) [year] [fullname]` | Family certain, **licensor absent**. Two hazards in one row: the lower-case path (the `frappe/lms` shape) and nobody to attribute |
+| 🆕 [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | AGPL-3.0, per GitHub, 575 ★ | 🟡 **a 1 134-byte AGPL-3.0 *short-form notice*** — not the 34 kB text — **plus a dual-licensing note: `skills/*.md` may be used under AGPL-3.0 OR MIT at the user's option** | 🟢 **Split along a directory boundary.** The code is network copyleft; the 30+ curriculum `SKILL.md` files are MIT-usable in a closed deliverable. 🔴 And note the size: an AGPL notice that is MIT-sized defeats any byte-band heuristic |
+| 🆕 [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GitHub shows no licence; the README says only *"the GNU General Public License"*, 346 ★ | 🟢 **GPL-2.0 recovered** — 17 286 B, BOM-prefixed, at `master/docs/License.txt`, after six root rungs all 404 | 🟢 **Usable, and the version matters:** GPL-**2**.0, not 3.0, so GPL-3.0 compatibility cannot be assumed. `p354` predicted this exact `docs/License.txt` shape |
 
 ## 🔴 One carried row is off-domain and should not be on an education shelf
 
@@ -175,7 +267,40 @@ document set into an interactive graph** — a developer comprehension tool. It 
 an education agent, and its star count has been inflating this shelf's apparent
 education supply. Recorded here as a correction rather than deleted silently.
 
-## 🟢 What changed this pass, and why the "no new agents" streak was an artefact
+## 🟢 What changed on `p356` — nine legs aimed at FUNCTIONS, and three new tiers
+
+`p355` established that a **topic intersection** is a channel where a prose phrase is
+not, and registered `ACTION ZZ-ay`: run the legs by **function** — `autograder`,
+`online judge`, `lecture capture`, `curriculum ontology`, `LTI`, `SIS`, `proctoring`,
+`spaced repetition`, `rubric` — with the falsifier *"five such legs returning nothing
+would refute T40"*.
+
+🟢 **Not one leg refuted it. Seven of the nine returned, and they returned a sector.**
+**36 repositories verified first-hand, 36 alive, 33 grants read from the payload** —
+and the split that matters is this:
+
+| Class | Rows |
+|---|---:|
+| 🟢 **absent from this base's entire corpus** (`archive/` and `evidence/` included) | **18** |
+| 🔴 **measured by this base before and on NO live shelf** | **18** |
+| already shelved | **0** |
+
+🔴 **Read the second row as the more serious finding.** Half of what the function legs
+found, this base had already measured and then lost — [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) appears in **237
+files** of this corpus and on **no live shelf**; `Study-Mate` in 187,
+`human-skill-tree` in 174, `otter-grader` in 141. 🔵 The `delivery-audit` target exists
+for exactly this question (*"which rows did `evidence/` measure that no shelf ever
+offered?"*) and **it is in no gate target**, so nothing has ever answered it on a
+schedule. Registered as `ACTION ZZ-az`.
+
+🔵 **And the two legs that failed, failed on their own syntax.** The `lecture capture`
+and `curriculum ontology` legs returned **37 325** and **880** results headed by
+`openclaw`, `n8n` and `firecrawl` — an unparenthesised `OR` in an index query binds
+loosely and dissolves the leg. 🟢 **That is a query defect, not an absence**, and it is
+recorded as such rather than published as a gap: `p351` declared a gap against an open
+channel, and this is the same mistake one layer up.
+
+## 🔵 What changed on `p355`, and why the "no new agents" streak was an artefact
 
 Passes 343–354 reported **twelve consecutive windows with no new agent row**, and
 `p354` published a denominator to justify it. That streak was a property of the
@@ -204,15 +329,39 @@ Placement here is by evidence — an institution domain, a national curriculum t
 targets, the language of its own documentation, or a commit-stream timezone — never
 by guessing from a name.
 
-- **APAC** is the densest region on this shelf (11 placed rows): China, Hong Kong,
-  India and Korea all have first-party education agents.
-- **EMEA** places 6 rows, concentrated in university assessment tooling (Belgium ×2,
-  Germany, Italy, Spain, UK).
-- **North America** places 6, concentrated in the standards/skills/evaluator layer.
+🟢 **Counted over this shelf's own region cells as the last act before the commit**, not
+over an inherited sentence — which is `gate-census-currency`'s discipline applied to a
+distribution rather than to an address count:
+
+| Region | Placed rows on this shelf |
+|---|---:|
+| **APAC** | **21** |
+| EMEA | 6 |
+| North America | 6 |
+| **LATAM** | **2** |
+| 🔵 Not placed | 27 |
+
+- **APAC** is now the densest region on this shelf by a wide margin — **21 rows**, up
+  from 11 one pass ago. China, Hong Kong, India, Korea, Bangladesh and Iran all have
+  first-party education software, and the eight rows added this pass are *infrastructure*
+  (item banks, judges, graders), not demos.
+- **EMEA** holds 6, concentrated in university assessment tooling (Belgium ×2, Germany,
+  Italy, Spain, UK), and gains Iran and Portugal on `repos/foundations.md`.
+- **North America** holds 6, concentrated in the standards/skills/evaluator layer.
+  🔴 **A correction while deriving this:** the sentence this replaces claimed **6** NA
+  rows while the tables underneath it carried **5**. `p356` adds `edx-proctoring`, so
+  the published figure is now 6 *and true*; it was off by one before. Nothing binds a
+  **distribution** stated in prose, which is `ACTION ZZ-aw`'s shape on a third quantity.
 - **LATAM** places **2** rows — `mcp-brasil` and `bncc-dados`, both Brazil, both MIT.
-  The Spanish/Portuguese-language discovery leg run this pass returned **10
-  repositories and promoted none**: the hits were general-purpose agents (a personal
-  OS, an email agent, a WhatsApp book recommender, a pentest tool), not education.
-  🔴 **This is a real supply gap, not a search failure** — and it is stated here
-  rather than left as apparent coverage. Brazil has first-party curriculum data;
-  Spanish-speaking LATAM has, on this evidence, essentially none.
+  🔴 **This pass ran the LATAM leg a new way and it still returned nothing shelvable,
+  but the mechanism is now named.** Rather than prose ("agente educativo"), the leg used
+  **function words** — `calificación`, `corrección`, `banco de preguntas`, `banco de
+  questões`, `examen`. It returned **228 209 results and zero education tooling**: the
+  Spanish and Portuguese hits are **exam-content archives** — FAMAF/UNC (Argentina),
+  Instituto Tecnológico de Costa Rica, `111milprogramadores` — students sharing past
+  papers, not software.
+  🟢 **So the LATAM gap is specifically a TOOLING gap, and that is a more useful finding
+  than "nothing found".** Spanish-language assessment *content* exists in volume; what
+  does not exist is a Spanish-language item bank, autograder or judge. For the item-bank
+  tier above, that is an input a build can use and a product gap a build can fill.
+  🔵 Licences on those corpora were **not** verified this pass and must be before use.

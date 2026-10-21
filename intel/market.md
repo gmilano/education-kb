@@ -84,6 +84,28 @@ Mexico has bills but no enforcing regulator.
    [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) (Apache-2.0) runs randomised experiments *inside* the LMS — a differentiator almost nobody offers.
 4. **Accessibility remediation at scale.** [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) against Section 508 obligations, with AI generating the fixes rather than only flagging them.
 5. **AI-literacy curriculum delivery**, positioned for H.R. 8747 federal funding if it passes.
+6. 🆕 **Autograding and code-execution for CS and bootcamp clients.** `p356` verified a
+   fifteen-row execution tier, **six rows of it permissive**, including
+   [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) (BSD-3-Clause,
+   UC Berkeley) for Python *and* R notebooks and [`okpy/ok-client`](https://github.com/okpy/ok-client)
+   (Apache-2.0, Berkeley). Both are North-American university tooling, both are
+   licence-clean for a closed deliverable, and neither was on this base one pass ago.
+   See `verticals/solutions.md` and Pattern 9.
+
+🔴 **State rules are now binding, not advisory, and the dates have passed or are
+imminent** (🟡 secondary sources this pass — check the primary bills before advising):
+**Ohio** requires districts to adopt an AI framework by **1 July 2026**; **Idaho SB
+1227** is enacted with a statewide framework, AI-literacy standards and a bar on AI
+replacing human teachers; **Vermont HB 650** requires education-technology providers to
+**register and certify privacy compliance annually** — a vendor-side obligation that
+lands on a studio shipping into Vermont districts, not only on the district.
+🆕 **Colorado repealed and replaced its AI Act** with the **ADMTA (SB 26-189)**, signed
+**14 May 2026**, effective **1 January 2027**. 🔵 The consequence is strategic: the US
+has **stopped converging** on a single compliance shape, so a multi-state deployment
+needs a posture per state rather than one national one. 🔴 One source in this pass's
+leg claims the Colorado framework **carves out FERPA-covered institutions**; nine
+others on the same statute do not mention it, so **it is not published here** — it is
+recorded as unverified so that no successor promotes it out of this base's own prose.
 
 ### EMEA
 
@@ -98,6 +120,17 @@ Parliament and Council set **fixed** dates — there is no mechanism to postpone
 today** is not the high-risk regime but the **prohibitions**, the **AI-literacy duty**,
 and **Article 50 transparency/labelling** (sources differ on whether the labelling date
 is 2 August 2026 or 2 December 2026 — check the Official Journal before advising).
+
+🟢 **`p356` re-ran this leg and the held date survived a direct challenge.** Several
+sources in this pass's EMEA leg still assert **2 August 2026** for the Annex III
+education obligations. 🔴 **That date is not published here**: this base already refuted
+it, and a **European Commission AI Office slide in this same leg gives 2 December 2027**
+for Annex III. The refutation stands, now corroborated on the Commission's own channel.
+🔵 Two further points from the leg that an engagement needs and this file did not carry:
+**emotion-recognition AI in schools has been prohibited since February 2025**, and a
+school that merely *licenses* an AI platform for teaching, marking or admissions is a
+**deployer** with its own obligations — so the compliance deliverable has a buyer on
+**both** sides of the contract.
 The Commission has issued
 **ethical guidelines for educators** on AI and data use. The UK takes a light-touch,
 principles-based route through existing regulators and has invested a reported **£4 M**
@@ -119,6 +152,13 @@ formal AI-use guidelines** (source unclear — treat as indicative).
 3. **Permissive-platform modernisation.** [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0, Switzerland) is the one full HE platform that can be extended into closed deliverables — a licence advantage worth leading with.
 4. **Multilingual content generation** across 24 official EU languages, via [`h5p/h5p-cli`](https://github.com/h5p/h5p-cli) (MIT) and [`openpatch/hyperbook`](https://github.com/openpatch/hyperbook) (MIT).
 5. **Africa / low-connectivity delivery.** [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT, offline-first) and [`elimu-ai/webapp`](https://github.com/elimu-ai/webapp) (MIT, Tanzania) — real assets for Sub-Saharan deployments, with no copyleft reach.
+
+🆕 **Opportunity added this pass.** The EU's **Apply AI Alliance** is live and its **AI
+Skills Academy** sector-tailored AI-literacy training **starts Q4 2026 — now**. That is
+the funded, demand-side counterpart to the Article 4 literacy duty this file already
+carries: the obligation and the money to discharge it are both current, and the
+curriculum-and-assessment layer under it is `compose/patterns.md` Pattern 9 plus the
+item-bank tier on `agents/top.md`.
 
 ### APAC
 
@@ -143,6 +183,32 @@ as leading players, with **China, India and Japan** dominating regional spend.
 4. **Curriculum-graph tutoring.** APAC has the densest curriculum-data supply:
    [`clownjee/knowledge-import-pipeline`](https://github.com/clownjee/knowledge-import-pipeline) (Apache-2.0) extracts a knowledge graph from textbooks and exposes it over MCP. 🔴 Note that [`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy), the best Chinese K-12 graph available, is **CC-BY-NC** and cannot be used commercially — the pipeline must build its own.
 5. **Agent-native tutoring at scale.** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0, ~41.9 k ★) is the largest education agent anywhere and is APAC-origin.
+
+🆕 **`p356` reframes this region's gap, and the reframing is the finding.** For the
+**fifth consecutive pass** the prose leg returned **no education-specific APAC adoption
+figure** — only general-enterprise AI material (56 % of APAC businesses have deployed
+chatbots or copilots; regional leaders prioritising sovereignty, security and AI
+literacy in 2026). 🟢 **In the same pass, the function legs placed 18 of 36 verified
+repositories in APAC** — China, Hong Kong, India, Korea, Bangladesh and Iran — across
+item banks, online judges, grading agents and scheduling. 🔵 **The two measurements
+disagree and the repository evidence is the better one.** What is missing is an
+English-language analyst narrative, not the software.
+
+**Opportunities.**
+1. 🆕 **AI-native item banking.** Four of this pass's rows are item banks and **all four
+   are Chinese-language** — [`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank)
+   (330 ★, LaTeX + formula OCR + LLM solving) and
+   [`gygy-open/question-bank`](https://github.com/gygy-open/question-bank) (73 ★, Word and
+   image import with a review workflow) among them. 🔴 Both are **AGPL-3.0**, so they are
+   a reference architecture and a client-side deployment, not a studio product.
+2. 🆕 **University judge platforms as a delivery base.** The two largest judges on this
+   base — [`hydro-dev/Hydro`](https://github.com/hydro-dev/Hydro) (AGPL-3.0, 7 137 ★) and
+   [`QingdaoU/OnlineJudge`](https://github.com/QingdaoU/OnlineJudge) (**MIT**, 6 552 ★) —
+   are both APAC university software with large real deployments. The MIT one is the
+   licence-clean base for a regional coding-academy build.
+3. 🔴 **Korea's AI-textbook programme fell below 30 % adoption and lost official
+   status**, so the APAC delivery risk is **adoption, not compliance** — the inverse of
+   EMEA. Price change management accordingly.
 
 ### LATAM
 
@@ -174,6 +240,23 @@ school-level AI education is growing but remains the exception.
 4. **Public-sector K-12 systems.** [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (GPL-2.0) and [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) (GPL-3.0) both have mature Spanish/Portuguese localisation and real public-sector deployments — the realistic bases for ministry-scale work.
 5. **Offline-first rural delivery.** [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (MIT) for low-connectivity regions, licence-clean for closed deliverables.
 6. **Brazilian public data integration.** [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) (MIT) exposes Brazilian public datasets, education among them, over MCP.
+7. 🆕 **Spanish-language assessment tooling, with the gap now precisely located.**
+   `p356` re-ran the regional leg using **function words** rather than prose —
+   `calificación`, `corrección`, `banco de preguntas`, `banco de questões`, `examen` — and
+   it returned **228 209 results and zero education tooling**. 🔵 **But the hits are
+   informative rather than empty:** the education-relevant ones are **exam-content
+   archives** — FAMAF/UNC (Argentina), Instituto Tecnológico de Costa Rica,
+   `111milprogramadores` — students sharing past papers.
+   🟢 **So Spanish-language assessment *content* exists in volume while the *tooling*
+   does not.** That is a sharper brief than "nothing found": there is raw material for a
+   Spanish-language item bank and no incumbent to displace. 🔴 Licences on those corpora
+   were **not** verified this pass and must be before any use.
+8. 🆕 **Ceibal × EdTech Hub as the route to ministries.** **Fundación Ceibal** (Uruguay)
+   announced a partnership with **EdTech Hub** in **September 2026** to bring
+   AI-in-education evidence and guidance to governments across Latin America and the
+   Caribbean. For a studio this is the credible entry point to public-sector work in the
+   region: it is an evidence-and-guidance channel, and `intel/trends.md` §2 says evidence
+   is becoming the procurement gate.
 
 ### Global
 
@@ -191,6 +274,18 @@ school-level AI education is growing but remains the exception.
    a licence that exists only as a `package.json` field. Clients consistently
    mis-assess open-source education assets. See `agents/top.md` and
    `verticals/solutions.md` for the flagged rows.
+5. 🆕 **Grading infrastructure as a product line.** `p356` found that the
+   code-execution and autograding layer — the thing every coding course needs — is a
+   mature, fifteen-row tier with **six permissive rows**, headed by an **MIT** judge at
+   6 552 ★. Any client that grades code (bootcamps, CS faculties, certification bodies,
+   developer academies) can be served from a licence-clean base today. 🔵 **Costing that
+   work as a greenfield build is now a pricing error**, and the studio that knows this
+   tier exists quotes differently from the one that does not.
+6. 🆕 **Retention, not generation, as the measurable outcome.** The scheduling layer
+   (`intel/trends.md` §12, and the FSRS rows on `agents/top.md`) is MIT at every rung and
+   small enough to drop into an existing tutor. It changes what a client can measure from
+   *content produced* to *knowledge retained* — which is the evidence procurement is
+   starting to demand (§2).
 
 ---
 
@@ -220,4 +315,21 @@ school-level AI education is growing but remains the exception.
 [EU IP Helpdesk — AI and IP in Latin America](https://intellectual-property-helpdesk.ec.europa.eu/news-events/news/recent-developments-artificial-intelligence-and-ip-latin-america-pt-iii-2026-05-04_en) ·
 [Digital Education Council — LATAM survey 2026](https://www.digitaleducationcouncil.com/resource-library-items/ai-in-higher-education-latam-survey-2026) ·
 [Azumo — AI in education statistics](https://azumo.com/artificial-intelligence/ai-insights/ai-in-education-statistics) ·
-[Educativa — AI trends in education 2026](https://www.educativa.com/en/blog/ai-trends-in-education-for-2026/)
+[Educativa — AI trends in education 2026](https://www.educativa.com/en/blog/ai-trends-in-education-for-2026/) ·
+[Education Commission of the States — AI in education state policy trends](https://www.ecs.org/ai-in-education-state-policy-trends/) ·
+[Bellwether — The Leading Indicator, AI in education](https://bellwether.org/ai-newsletter/the-leading-indicator-ai-in-education-issue-fifteen/) ·
+[Futuresource Consulting — AI adoption across K-12 and higher education](https://www.futuresource-consulting.com/the-source/industry-pulse/new-futuresource-consulting-research-reveals-that-ai-adoption-across-k-12-and-higher-education-is-moving-from-experimentation-to-structured-implementation/) ·
+[AIGL — AI in education: an EU AI Act guide](https://www.aigl.blog/ai-in-education-an-eu-ai-act-guide.md) ·
+[Rockefeller Institute — EU AI and higher education](https://www.rockinst.org/wp-content/uploads/2025/11/EU-AI-and-Higher-Education-web.pdf) ·
+[Forrester — APAC predictions](https://www.forrester.com/blogs/predictions-2025-apac) ·
+[UNU — AI implementation in higher education in Latin America and the Caribbean](https://unu.edu/publication/ai-implementation-higher-education-latin-america-and-caribbean) ·
+[EdTech Hub — Latin America and the Caribbean](https://edtechhub.org/?p=73866) ·
+[Brookings — smart AI regulation strategies for Latin American policymakers](https://www.brookings.edu/articles/smart-ai-regulation-strategies-for-latin-american-policymakers)
+
+🔵 **Source-quality note for `p356`'s additions.** The regional legs this pass returned
+mostly trade press, consultancies and practitioner blogs. The state-bill details (Ohio,
+Idaho, Vermont, Colorado) are **secondary** and are marked as such; the EU date is
+corroborated on a Commission AI Office slide; the Ceibal × EdTech Hub partnership is on
+EdTech Hub's own channel. Every **repository** figure in this base, by contrast, was
+read first-hand today — which is why the shelves and this file should be quoted
+differently to a client.

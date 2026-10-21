@@ -177,6 +177,104 @@ the registrar, and tie them to demonstrated skills rather than seat time.
 🔵 1EdTech names credentials a core 2026 mechanism for skills-based learning and
 hiring; this is the open stack for it.
 
+## 🆕 Pattern 9 — A licence-clean programming-assessment stack for a coding academy
+
+**Client shape.** A bootcamp, CS department, certification body or developer academy
+that must run untrusted student code, grade it, detect copied submissions and report
+results into an LMS the client already owns — and the deliverable has to ship inside a
+closed engagement.
+
+**Why this pattern did not exist one pass ago.** The only execution component this base
+carried was `judge0` (GPL-3.0), so every version of this build had a copyleft component
+at its centre. `p356`'s function legs found a **larger MIT alternative**.
+
+**The stack, every grant read from the payload on 2026-10-21:**
+
+1. **Execution and verdicts** — [`QingdaoU/OnlineJudge`](https://github.com/QingdaoU/OnlineJudge)
+   (🟢 **MIT**, `master/LICENSE`, 6 552 ★). A complete judge: submissions, problem bank,
+   contests, admin, Docker deployment. **Fork it and brand it** — the MIT grant reaches
+   nothing.
+2. **The sandbox underneath it** — [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger)
+   (🟢 **MIT**, 🔴 branch **`newnew`**, 496 ★). seccomp-based. Already wired into the row
+   above; named separately because if the client has their own platform, **this is the
+   only piece they need**.
+3. **Notebook and data-science courses** — [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader)
+   (🟢 **BSD-3-Clause**, 161 ★, UC Berkeley) for **Python *and* R** notebooks, behind
+   [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) (BSD-3-Clause) with
+   [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator)
+   (BSD-3-Clause) for LMS single sign-on.
+4. **Integrity** — [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos)
+   (🟢 **MIT**, 353 ★, Ghent University) for source-code plagiarism. 🔵 **Choose this over
+   proctoring:** of the five proctoring rows verified this pass, one has no grant, one has
+   no identified licensor and two are AGPL plugins to AGPL hosts. Detect what the
+   submission *is* rather than surveil the student.
+5. **Rubric-bound human-in-the-loop grading** — [`erictrainnlpinxihu/Grader-agent`](https://github.com/erictrainnlpinxihu/Grader-agent)
+   (🟢 **MIT**, 101 ★) for the written parts. Its four write actions are **absent from the
+   tool table**, so the agent can only emit proposals, and every `GradingDraft` binds to a
+   rubric line and a paragraph hash. That is a **structural** approval boundary, which is
+   what the EU AI Act's high-risk regime wants for exam scoring (`intel/market.md`, EMEA).
+6. **Report back into the client's LMS** — an **LTI 1.3 tool** with
+   [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0) or
+   [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (MIT). Never a
+   fork of Canvas or Open edX — both are AGPL.
+
+🟢 **Every component is MIT, BSD-3-Clause or Apache-2.0.** The whole stack can ship
+inside a closed client deliverable with no copyleft reach — which was not true of this
+capability before this pass.
+
+🟡 **When to pick the copyleft alternatives instead.** If the client will host it
+themselves and publish nothing of their own, [`hydro-dev/Hydro`](https://github.com/hydro-dev/Hydro)
+(AGPL-3.0, 7 137 ★) is better engineering for many courses at once, and
+[`mjnaderi/Sharif-Judge`](https://github.com/mjnaderi/Sharif-Judge) (AGPL-3.0, branch
+`Version-1`) is the only row actually built for **courses** — assignments, deadlines,
+per-student feedback — rather than contests. Both stay the **client's** deployment, not
+the studio's product.
+
+🔴 **The two branch traps in this pattern, named because they will bite.**
+`QingdaoU/Judger` defaults to **`newnew`** and `Sharif-Judge` to **`Version-1`**. A CI
+licence check or a vendoring script that assumes `main` or `master` will report the MIT
+sandbox at the centre of this stack as **unlicensed**.
+
+## 🆕 Pattern 10 — Add retention to a tutor that already works
+
+**Client shape.** A client already has a tutor, courseware or study app that generates
+good material and cannot show that anyone **remembers** it. Procurement is starting to
+ask for evidence of learning rather than evidence of output (`intel/trends.md` §2), and
+"the model explained it well" is not an answer.
+
+**The insight.** Every tutoring agent on `agents/top.md` decides *what* to teach next.
+Almost none decides *when to come back to it* — and scheduling, not generation, is what
+moves retention. The sector has a standard for this, it is small, and it is MIT.
+
+**The stack:**
+
+1. **The scheduler** — [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs)
+   (🟢 **MIT**, 514 ★). A few hundred lines; takes a review outcome and returns the next
+   due date. Drop it beside the existing content pipeline without touching it.
+2. **The algorithm, to justify it to the client** — [`free-spaced-repetition-scheduler`](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler)
+   (🟢 **MIT**, 729 ★) is the published DSR-model specification, so the scheduling
+   decisions are **explainable to a procurement committee** rather than opaque.
+3. **Verification, not self-report** — [`nagisanzenin/engram`](https://github.com/nagisanzenin/engram)
+   (🟢 **MIT**, 1 458 ★) does free-recall checking *with receipts*: the learner is
+   measured recalling, and the evidence is kept. This is the row that produces the
+   artefact an evidence-based procurement wants.
+4. **Reach the learner where their cards already are** — [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server)
+   (🟢 **MIT**) over MCP, or [`kitschpatrol/yanki`](https://github.com/kitschpatrol/yanki)
+   (🟡 MIT, declared only in `package.json`) to push markdown into Anki. 🔵 Anki has the
+   installed base; do not rebuild it.
+5. **Instrument the claim** — [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta)
+   (Apache-2.0) runs the A/B inside the client's LMS: same content, scheduled versus
+   unscheduled, retention measured. **That comparison is the deliverable**, not the
+   scheduler.
+
+🟢 **Licence reach: none.** Every component is MIT or Apache-2.0.
+
+🟡 **Two rows to leave out, and why.** [`trane-project/trane`](https://github.com/trane-project/trane)
+(848 ★) and [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) (4 222 ★) are
+the most interesting designs in this tier — a mastery dependency graph and a full
+listening/speaking trainer — and **both are AGPL-3.0**. Study them; do not embed them in
+a hosted client deliverable.
+
 ---
 
 ## Boundary cheat-sheet
@@ -184,9 +282,10 @@ hiring; this is the open stack for it.
 | If the host platform is… | Reach it by… | Never |
 |---|---|---|
 | Canvas, Open edX, Frappe LMS, ClassroomIO (**AGPL**) | LTI 1.3 tool · MCP server · web services | Forking, or linking client code |
-| Moodle, Chamilo, ELMSLN, Judge0, UDOIT (**GPL**) | Web services · the plugin API as a *separate* deployed plugin · the API over HTTP | Statically linking into proprietary code |
+| Moodle, Chamilo, ELMSLN, Judge0, UDOIT, 🆕 HUSTOJ, 🆕 openSIS Classic (**GPL**) | Web services · the plugin API as a *separate* deployed plugin · the API over HTTP | Statically linking into proprietary code |
+| 🆕 Hydro, DMOJ, Sharif Judge, the AGPL item banks (**AGPL**) | The client's own deployment, reached over HTTP | Hosting it as the studio's service |
 | BigBlueButton, OpenEduCat (**LGPL**) | Dynamic linking · API | Forking into closed source |
-| OpenOLAT, Sakai, Kolibri, Moodle App, Opencast (**permissive**) | Anything, including forking | — |
+| OpenOLAT, Sakai, Kolibri, Moodle App, Opencast, 🆕 **QingdaoU OnlineJudge**, 🆕 **Judger**, 🆕 **Otter-Grader**, 🆕 **py-fsrs** (**permissive**) | Anything, including forking | — |
 
 **One-line version:** in education, the licence picks the architecture. Decide the
 boundary before the stack.

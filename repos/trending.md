@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 356 · 2026-10-21 — the **grading-execution substrate**: an entire mature tier, **15 rows, 7 137 ★ at the head, six of them permissive**, absent from this base's whole corpus until a leg stopped asking about AI and asked about a FUNCTION
+
+🟢 **Channel note.** `git ls-remote` **OPEN** · `raw.githubusercontent.com` **OPEN** ·
+authenticated search index **OPEN, primary** · 🔴 `github.com` **403** ·
+🔴 `api.github.com/repos/*` **403**. Calibration pair probed before any verdict
+(`200` on a known path, `404` on a fabricated one). 🔴 **`make hooks` was refused to this
+pass** — the suite runs code from this clone and the harness declined; the gate
+*contracts* were honoured by hand, but **gate state is unjudged**.
+
+### 🟢 What the function leg found that twenty passes of trending legs could not
+
+`p354` recovered [`judge0`](https://github.com/judge0/judge0) by aiming one leg at a
+function. `p355` generalised the channel. `p356` ran it across nine functions, and the
+`"online judge"` leg returned **62 repositories of which 12 are absent from this base's
+entire corpus** — `archive/` and `evidence/` included.
+
+| Repo | Licence (payload) | Grant read at | ★ 2026-10-21 | Region |
+|---|---|---|---:|---|
+| [hydro-dev/Hydro](https://github.com/hydro-dev/Hydro) | AGPL-3.0 | `master/LICENSE` | **7 137** | APAC |
+| [QingdaoU/OnlineJudge](https://github.com/QingdaoU/OnlineJudge) | 🟢 **MIT** | `master/LICENSE` | **6 552** | APAC |
+| [zhblue/hustoj](https://github.com/zhblue/hustoj) | GPL-2.0 | `master/LICENSE` | **3 813** | APAC |
+| [DMOJ/online-judge](https://github.com/DMOJ/online-judge) | AGPL-3.0 | `master/LICENSE` | **1 194** | North America |
+| [online-judge-tools/oj](https://github.com/online-judge-tools/oj) | 🟢 **MIT** | `master/LICENSE` | **1 172** | APAC |
+| [DMOJ/judge-server](https://github.com/DMOJ/judge-server) | AGPL-3.0 | `master/LICENSE` | **981** | North America |
+| [ZsgsDesign/NOJ](https://github.com/ZsgsDesign/NOJ) | 🟢 **MIT** | `master/LICENSE` | **942** | APAC |
+| [HimitZH/HOJ](https://github.com/HimitZH/HOJ) | 🟢 **MIT** | `master/LICENSE` | **942** | APAC |
+| [syzoj/syzoj](https://github.com/syzoj/syzoj) | 🟢 **MIT** | `master/LICENSE` | **923** | APAC |
+| [SDUOJ/OnlineJudge](https://github.com/SDUOJ/OnlineJudge) | AGPL-3.0 | `main/LICENSE` | **556** | APAC |
+| [QingdaoU/Judger](https://github.com/QingdaoU/Judger) | 🟢 **MIT** | 🔴 `newnew/LICENSE` | **496** | APAC |
+| [mjnaderi/Sharif-Judge](https://github.com/mjnaderi/Sharif-Judge) | AGPL-3.0 | 🔴 `Version-1/LICENSE` | **395** | EMEA |
+| [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** | `master/LICENSE` | **161** | North America |
+| [webtech-network/autograder](https://github.com/webtech-network/autograder) | 🟢 **Apache-2.0** | `main/LICENSE` | **62** | Not placed |
+| [okpy/ok-client](https://github.com/okpy/ok-client) | 🟢 **Apache-2.0** | `master/LICENSE` | **57** | North America |
+
+🟢 **The commercially important fact is the licence column, not the star column.**
+One pass ago this base's only way to run student code was `judge0` (GPL-3.0). The
+**largest permissive judge is bigger than it**: `QingdaoU/OnlineJudge` is a complete,
+Dockerised, MIT judge at 6 552 ★, and `QingdaoU/Judger` is its seccomp sandbox on its
+own MIT grant. Wired end-to-end as **Pattern 9** — every component MIT, BSD-3-Clause or
+Apache-2.0.
+
+🔵 **Why this was invisible.** None of these describes itself as AI. It is a queue, a
+sandbox and a verdict — the substrate under every programming course. An
+agent-vocabulary query cannot see it, and this base ran nothing else for twenty passes.
+
+### 🟢 Two SIS rows recovered, both long-measured and never shelved
+
+| Repo | Licence (payload) | Grant read at | ★ | Region | Note |
+|---|---|---|---:|---|---|
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | **GPL-2.0** | 🔴 `master/docs/License.txt` | **346** | Not placed | **237 corpus files mention it; 0 live shelves carried it.** Six root rungs 404; grant recovered at the README-named path, **BOM-prefixed**, and it is GPL-**2**.0 not 3.0 |
+| [FenixEdu/fenixedu-academic](https://github.com/FenixEdu/fenixedu-academic) | LGPL-3.0 | `master/LICENSE` | **175** | EMEA | The only European **university** SIS on this base. Instituto Superior Técnico, Lisbon |
+
+### 🔵 The branch finding, as a repository property rather than an anecdote
+
+**36 rows probed · `master` 18 · `main` 16 · `newnew` 1 · `Version-1` 1.**
+🔴 A `main`-only sweep calls **20 of 36 (55.6 %)** grantless. Education infrastructure
+predates GitHub's 2020 default change, and **every failure in this sector points the
+same way: a live, correctly-licensed repository reads as unlicensed.** Tooling
+calibrated on 2024-era repositories **under-reports what education has** — the opposite
+of the usual risk. Published as **`T13`** on `intel/trends.md`.
+
+### 🔴 The leg that produced nothing, and why that is not a gap
+
+`"lecture capture" OR "lecture recording" OR "lecture notes" AI` returned **37 325**
+results headed by `openclaw`, `n8n` and `firecrawl`; `competency OR curriculum ontology
+OR "learning objectives"` returned **880** the same way. 🔵 **An unparenthesised `OR`
+binds loosely and dissolves the leg.** Both are recorded as **query defects**, not as
+absences — `ACTION ZZ-bb` asks for them to be re-run with single-term queries, refuted
+if either returns a shelvable row.
+
 ## Pass 355 · 2026-10-21 — the trending leg that returned listicles for **twenty consecutive passes** was retired this window. Four `topic:` intersections returned **385 repositories and 22 new foundation rows**, among them a **3 328 ★ LMS and a permissive Moodle client** this base had never held
 
 🟢 **Channel note.** `git ls-remote` **OPEN** · `raw.githubusercontent.com` **OPEN** ·

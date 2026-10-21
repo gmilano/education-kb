@@ -7,9 +7,20 @@ updated: 2026-10-21
 # Education — current trends
 
 Researched **2026-10-21**. Trends 1–6 are corroborated across external sources.
-Trends 7–10 are **first-hand observations from this pass's own repository
-measurements** — they are not in the trade press yet, which is precisely why they are
+Trends **7–15** are **first-hand observations from this base's own repository
+measurements** — they are not in the trade press, which is precisely why they are
 worth holding.
+
+🔴 **A provenance note on §§12–15, because it is a defect in this base and not a
+finding about the sector.** The live `README.md`'s `p354` section states that three
+findings were *"published as `T40`/`T41`/`T42` on `intel/trends.md`"* — the
+autograder/online-judge vocabulary gap, the repository-age grant hazard, and Colorado's
+replacement AI statute. **None of the three is on this file**, which carries eleven
+numbered trends and no `T40`–`T42`. 🔵 This clone is shallow, so `p356` **cannot
+attribute** which pass dropped them and does not guess. What it can do is publish them,
+re-measured first-hand rather than restated: the vocabulary gap is **§12**, the
+repository-age hazard is **§13**, and Colorado is in `intel/market.md` under North
+America. Registered as `ACTION ZZ-ba`.
 
 ---
 
@@ -175,3 +186,79 @@ differently, produced **26 new verified rows in one pass**.
 
 Generalised: *on this base, a topic intersection is a channel and a prose phrase is
 not.* Any future claim of saturation should name which leg shape produced it.
+
+## 12. 🟢 The grading-execution substrate is large, mature and permissive — and nobody calls it AI
+
+**First-hand, `p356`.** Education's code-execution layer — online judges, sandboxes,
+autograders — is a **fifteen-row tier headed by 7 137 ★**, and it was absent from this
+base's entire 2 000-plus-address corpus until this pass. It is invisible to
+agent-shaped discovery because it does not describe itself as AI: it is a queue, a
+sandbox and a verdict.
+
+| What it is called | What it does for an education engagement |
+|---|---|
+| "online judge" | runs untrusted student code safely and returns a verdict |
+| "autograder" | scores an assignment and writes feedback back to the LMS |
+| "judger" / "sandbox" | the seccomp boundary that makes the above safe to host |
+
+🟢 **And the permissive option is the biggest one.** Six of the fifteen are MIT, BSD or
+Apache-2.0, including [`QingdaoU/OnlineJudge`](https://github.com/QingdaoU/OnlineJudge)
+(**MIT, 6 552 ★**), a complete Dockerised judge. The GPL-3.0 row most teams reach for
+first — `judge0` — is *smaller* than the MIT alternative.
+
+**Consequence for a studio:** any engagement that grades code — bootcamps, CS
+departments, developer academies, certification bodies — has a licence-clean,
+production-grade base available today. Costing that work as a build is now wrong.
+
+## 13. 🔴 Education's grant hazards fail CLOSED, and the cause is repository age
+
+**First-hand, `p356`,** confirming a mechanism this base had stated and never shelved.
+Of **36 repositories probed this pass**, the default branch is **`master` for 18**,
+`main` for 16, and something else entirely for 2 — `newnew` and `Version-1`. 🔴 **A
+sweep that probes `main` only reports 20 of 36 (55.6 %) as grantless.**
+
+The same age effect drives the grant *path*: of this pass's 36 rows, the grants not at
+`LICENSE` sit at `license.txt` (lower-case), `LICENSE.txt`, `LICENSE.md` and
+`docs/License.txt`.
+
+🔵 **Why it compounds.** GitHub's default moved to `main` in 2020; education
+infrastructure is mostly older than that. Every failure here is the same direction:
+**a live, correctly-licensed repository reads as unlicensed**, so tooling calibrated on
+2024-era repositories systematically **under-reports what education has**. That is the
+opposite of the usual risk, and it means a "no open option exists" finding in this
+sector should never be trusted without checking the branch and the path.
+
+## 14. 🔴 A badge is not a grant — and three of this pass's rows prove it differently
+
+**First-hand, `p356`.** Three high-visibility repositories read as MIT and are not:
+
+| Row | The appearance | The payload |
+|---|---|---|
+| [`reneverland/CBIT-AiExam-plus`](https://github.com/reneverland/CBIT-AiExam-plus) (277 ★) | an MIT shields.io badge at the head of the README | the `LICENSE` the badge links to **404s**, along with four other rungs. **No grant exists** |
+| [`JinLingxi/MathCyclus…`](https://github.com/JinLingxi/MathCyclus---Lingxi-Question-Bank-Assistant) (147 ★) | nothing visible | one prose sentence in the README claiming MIT. A pointer, not a licence |
+| [`lebmatter/exampro`](https://github.com/lebmatter/exampro) (72 ★) | MIT, per GitHub | stock MIT at `license.txt` with **`Copyright (c) [year] [fullname]` never filled in** — family certain, **licensor absent** |
+
+🟢 **And the mirror case, which is the useful half:**
+[`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) (575 ★)
+reads as plain AGPL-3.0 and is a **split grant**: a 1 134-byte short-form AGPL notice
+*plus* an explicit option to use everything under `skills/` as **MIT**. The code is
+network copyleft; the curriculum is embeddable.
+
+🔵 **Two lessons for licence diligence as a billable deliverable (`§10`).** First, the
+channels that look authoritative — the badge, the classifier, the README — are the
+three that were wrong here. Second, **size tells you nothing**: an AGPL-3.0 notice at
+1 134 bytes is MIT-sized, so any byte-band heuristic reads it as permissive. Open the
+file.
+
+## 15. 🔵 APAC's "gap" is in the trade press, not in the supply
+
+**First-hand, `p356`.** For the **fifth consecutive pass**, the prose leg asking about
+APAC AI-in-education adoption returned no education-specific figure — only
+general-enterprise AI material. In the same pass, the function legs placed **18 of 36
+verified rows in APAC**: China, Hong Kong, India, Korea, Bangladesh and Iran, across
+item banks, judges, graders and scheduling agents.
+
+🟢 **So the two measurements disagree, and the repository evidence is the better one.**
+What APAC lacks is an English-language analyst narrative; what it has is first-party
+education software in volume. An engagement brief that reports "APAC adoption data
+unavailable" and stops there is describing the trade press, not the region.
