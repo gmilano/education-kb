@@ -6,9 +6,12 @@ updated: 2026-10-21
 
 # Education — foundational repos
 
-The systems an education engagement starts *from*, rather than the agents it adds on
-top. Every row verified first-hand **2026-10-21**: liveness and default branch via
-`git ls-remote --symref`, licence **read from the payload**.
+**Pass 357 · 2026-10-21.** The systems an education engagement starts *from*, rather
+than the agents it adds on top. Every row verified first-hand **2026-10-21**: liveness
+and default branch via `git ls-remote --symref`, licence **read from the payload**.
+🔴 `p357` had **no authenticated GitHub index** (its credential is scoped to one
+unrelated repository), so it measured no stars and discovered by web search; liveness
+and grant verification are unchanged. See `agents/top.md` for the channel state.
 
 **Read the default-branch column.** Education infrastructure is old software. Of the
 grants on this shelf, a large share live on `master`, `develop`, `release` or a
@@ -151,6 +154,48 @@ the CLI carries no copyleft; code linked into the library does.
 | Terracotta (in-LMS experiments) | [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | Apache-2.0 | `development/LICENSE` | not re-derived | North America |
 | 🆕 openSIS Classic (K-12 SIS) | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GPL-2.0 | 🔴 `master/docs/License.txt` — **root carries no grant file** | **346** | Not placed |
 | 🆕 FenixEdu Academic (HE SIS) | [FenixEdu/fenixedu-academic](https://github.com/FenixEdu/fenixedu-academic) | LGPL-3.0 | `master/LICENSE` | **175** | EMEA |
+| 🆕 ERPNext (institution-wide ERP) | [frappe/erpnext](https://github.com/frappe/erpnext) | **GPL-3.0** | 🔴 `develop/license.txt` — **lower-case path on a non-`main` default branch** | not re-derived | APAC |
+
+### 🔴 `ERPNext` fails both of this base's grant hazards at once, and it is the row most likely to be reached for
+
+🟢 **`p357` adds it because `frappe/lms` is already on the LMS tier and ERPNext is the
+other half of that stack** — an institution running Frappe LMS for teaching and ERPNext
+for finance, HR and procurement is a single-vendor deployment a studio will meet.
+
+🔴 **It is also a clean reproduction of the two hazards this base keeps measuring.** Its
+default branch is **`develop`**, not `main`, and its grant sits at **`license.txt`**,
+lower-case. A probe assuming `main/LICENSE` reports this repository — one of the
+largest open-source ERPs in existence — as **grantless**. 🔵 That is the
+`frappe/lms` shape exactly, from the same organisation, which is the useful part: the
+hazard is an **organisational convention**, not a per-repository accident. Where one
+Frappe repository hides its grant this way, assume all of them do.
+
+🔴 **And the licence is the engagement constraint.** GPL-3.0, not the AGPL of
+`frappe/lms` and not the LGPL-3.0 of `openeducat_erp`. 🟢 So an institution-wide Frappe
+stack spans **three different copyleft strengths**, and a deliverable's obligations
+depend on which component it links — which is why
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (LGPL-3.0,
+linking permitted) remains this shelf's recommended ERP base for closed work.
+
+### 🔴 The permissive education ERP this leg promised does not exist at the address given
+
+🟢 **The leg was run because a permissive ERP would be the single most valuable row on
+this tier** — every ERP and SIS this base carries is copyleft (LGPL-3.0, GPL-2.0,
+GPL-3.0, AGPL-3.0), so an engagement that must ship a closed admin deliverable has no
+base to fork. A vendor comparison in this pass's leg named two:
+
+| Claimed | Claimed licence | What `p357` found |
+|---|---|---|
+| **Fedena** ([`foradian/fedena`](https://github.com/foradian/fedena)) | Apache-2.0, Ruby on Rails | 🔴 **Live on `master` and empty.** `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt`, `license.txt`, `LICENCE`, `LICENSE-MIT`, `README.md` and `Gemfile` **all 404**. The claim is unverifiable at this address |
+| **GegoK12** (`gegok12/gegok12`) | MIT, *"twenty-six modules free forever"* | 🔴 **No such repository** — `ls-remote` returns nothing. The claim traces to a vendor website, not to a public tree |
+| **SchoolTool** (`schooltool/schooltool`) | GPL-2.0, per a comparison table | 🔴 **Dead.** No substitute found under that owner |
+
+🔵 **Published as a refutation rather than omitted, for one reason.** All three claims
+sit in roundups that rank well and read authoritatively, and a later pass searching
+"permissive education ERP" will meet them again. 🟢 **The honest finding is the
+absence:** on this base's evidence there is **no verified permissive education ERP**, so
+a closed admin deliverable is a **build**, not a fork — and that is a costing input, not
+a gap in the research.
 
 🟢 **`openSIS-Classic`'s grant was RECOVERED this pass, and `p354` predicted the exact
 shape.** Six root rungs (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`,
@@ -332,14 +377,23 @@ not carried from `p355`'s sentence:
 | `LICENSE.md` | 5 |
 | 🔴 `COPYING.txt` | 2 — `moodle/moodle`, `moodlehq/moodleapp` |
 | `LICENSE.txt` | 2 |
-| 🔴 `license.txt` (lower-case) | 1 — `frappe/lms` |
+| 🔴 `license.txt` (lower-case) | **2** — `frappe/lms`, 🆕 `frappe/erpnext` |
 | 🔴 a **directory** | 1 — `cs341-illinois/coursebook` |
 | 🔴 `package.json` field only | 1 — `kitschpatrol/yanki` |
 | 🔴 🆕 **`docs/License.txt`** | 1 — `OS4ED/openSIS-Classic` |
 
-**13 of 64 grants (20.3 %) are not at `LICENSE`.** 🔴 **The share went UP, not down, as
-the shelf grew** — `p355` published 6 of 41 (15 %) and this pass added rows that are
-*older* software, which is the direction `T13` predicts.
+**14 of 65 grants (21.5 %) are not at `LICENSE`.** 🔴 **The share went UP again** —
+`p355` published 6 of 41 (15 %), `p356` 13 of 64 (20.3 %), and `p357`'s single addition
+raises it once more, which is the direction `T13` predicts.
+
+🟢 **And `p357`'s one addition is the most instructive row on this table, because it
+makes the hazard organisational rather than accidental.** The lower-case `license.txt`
+bucket now holds **two rows and both are Frappe** — [`frappe/lms`](https://github.com/frappe/lms)
+and 🆕 [`frappe/erpnext`](https://github.com/frappe/erpnext), each on a non-`main`
+default branch (`develop` for both). 🔵 A grant path is not a per-repository quirk to
+be rediscovered one repository at a time; **it is a house style**, and the operational
+rule follows directly: when one repository in an organisation hides its grant, probe
+that organisation's convention rather than the next repository's root.
 
 ### 🔴 And the default branch is the larger hazard
 
@@ -364,14 +418,23 @@ older than the conventions the tooling assumes.** Published as `T13`.
 🟢 **Derived as the last act before the commit, and it corrects the sentence it
 replaces.**
 
-| Region | Placed rows | `p355` published |
-|---|---:|---:|
-| **North America** | **19** | 🔴 11 |
-| **EMEA** | **16** | 🔴 12 |
-| **APAC** | **11** | 🔴 2 |
-| Global | **7** | 🔴 6 |
-| 🔵 Not placed | 11 | — |
-| **LATAM** | **0** | 0 |
+| Region | Placed rows (`p357`) | `p356` published | `p355` published |
+|---|---:|---:|---:|
+| **North America** | 19 | 19 | 🔴 11 |
+| **EMEA** | 16 | 16 | 🔴 12 |
+| **APAC** | **12** | 11 | 🔴 2 |
+| Global | 7 | 7 | 🔴 6 |
+| 🔵 Not placed | 11 | 11 | — |
+| **LATAM** | 🔴 **0** | 0 | 0 |
+
+🟢 **`p356`'s figures reproduced exactly on `p357`'s independently-written census
+script**, and the only movement is `APAC 11 → 12` from this pass's one addition
+(`frappe/erpnext`, India-origin). 🔵 **Two passes' censuses agreeing is worth
+recording given the right-hand column**: `p355`'s figures were wrong in four of five
+buckets, so agreement here is evidence the derivation is now sound rather than merely
+repeated. 🔴 **The same self-counting trap found on `agents/top.md` applies to this
+table** — a census that counts every table with a `Region` column counts this one, and
+its six rows inflate all six buckets by one. `ACTION ZZ-bd` covers both files.
 
 🔴 **Every figure in the right-hand column was wrong, and only the LATAM zero was
 right.** Four of the five gaps predate this pass: before `p356` added a single row this

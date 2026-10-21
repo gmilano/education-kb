@@ -1,0 +1,26 @@
+repo	liveness	default_branch	grant_path	grant_family_from_payload	verdict
+AnonymousOnyx22/canvas-lms-student-mcp	alive	main	LICENSE	MIT	shelved
+CapSoftware/Cap	alive	main	LICENSE	split: AGPL-3.0 app + MIT (licenses/LICENSE-MIT: cap-camera*, scap-* crates)	shelved: reuse the MIT engine only, never the AGPL application
+G36maid/moodle-mcp	alive	main	LICENSE	MIT	shelved
+HKUDS/DeepTutor	alive	main	LICENSE	Apache-2.0	shelved
+NelsonSpencer/canvas-mcp	alive	main	LICENSE	MIT	flagged: MIT valid, licensor is vishalsachdev/canvas-mcp's holder (ACTION ZZ-bc)
+OpenOLAT/OpenOLAT	alive	master	LICENSE	Apache-2.0	shelved
+PLus123456/lecture-live	alive	main	LICENSE	GPL-3.0	shelved
+QingdaoU/OnlineJudge	alive	master	LICENSE	MIT	shelved
+bruchris/canvas-lms-mcp	alive	main	LICENSE	MIT	shelved
+csmediapro/moodle-mcp-server	alive	main	LICENSE	AGPL-3.0	flagged: AGPL-3.0 copyleft connector, README says open-source
+devissaputra/curriculum_knowledge_graph	alive	main	LICENSE	MIT	shelved
+falkenslab/moodle-mcp	alive	main	LICENSE	MIT	shelved
+fh-yarbouh/oak-curriculum-ontology	dead	-	-	-	refuted: dead; real project is oaknational/oak-curriculum-ontology
+foradian/fedena	alive	master	none	none	refuted: live on master, 10 paths 404, Apache-2.0 claim unverifiable
+frappe/erpnext	alive	develop	license.txt	GPL-3.0	shelved
+gegok12/gegok12	dead	-	-	-	refuted: no such repository
+helalaou/LectureLab	alive	main	LICENSE	MIT	shelved
+learningequality/kolibri	alive	develop	LICENSE	MIT	shelved
+mrgutierrezmario/lecture-note-app	alive	main	LICENSE	PolyForm-Noncommercial-1.0.0	flagged: PolyForm Noncommercial, not OSI
+naiayti/TeachingKG	alive	main	none	none	flagged: live, no grant at any of 8 probed paths
+oaknational/oak-curriculum-ontology	alive	main	LICENSE.md	OGL-3.0 + MIT (dual)	shelved
+sardorml/captureflow	alive	main	LICENSE	split: AGPL-3.0-only app + MIT (packages/engine/LICENSE)	shelved: reuse the MIT engine only, never the AGPL application
+schooltool/schooltool	dead	-	-	-	refuted: dead, no substitute found
+vishalsachdev/canvas-mcp	alive	main	LICENSE	MIT	shelved
+withmarbleapp/os-taxonomy	alive	main	LICENSE	ODbL-1.0	shelved

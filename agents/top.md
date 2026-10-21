@@ -6,20 +6,36 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
-**Pass 356 · 2026-10-21.** Every row below was checked first-hand on two
+**Pass 357 · 2026-10-21.** Every row below was checked first-hand on two
 channels: liveness and default branch via `git ls-remote --symref`, and the licence
 **read from the payload** at `raw.githubusercontent.com` — never from a badge, a
 README claim or GitHub's own classifier. Where the classifier disagreed with the
 payload, the payload wins and the disagreement is recorded.
 
 **Channel state this pass:** 🟢 `git ls-remote` OPEN · 🟢 `raw.githubusercontent.com`
-OPEN · 🟢 authenticated search index OPEN · 🔴 `github.com` HTML **403** ·
-🔴 `api.github.com/repos/*` **403**.
+OPEN · 🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*` **403** ·
+🔴 **authenticated search index CLOSED** — `p357` runs under a credential scoped to a
+single unrelated repository, so the GitHub index was not available to it at all.
+
+🔵 **What that changes, stated before any row is read.** `p357`'s discovery channel was
+**web search**, not the GitHub index, and its verification channel was the same
+`ls-remote` + payload pair every pass uses. 🟢 That is a *weaker* discovery instrument
+and an *identical* verification one. The consequence is specific: **this pass can prove
+a row is live and correctly licensed, and cannot measure a single star.**
 
 **★ discipline.** A star figure appears only where it was re-derived from the
 authenticated index **this pass**. Rows reading `not re-derived` are live and
 licence-verified, but their star count was not measured today — the row is
-publishable, the number is not.
+publishable, the number is not. 🔵 **Every `p357` row therefore reads `not
+re-derived`, and the figures carried from `p356` keep their own date** — `p356` ran
+on this same calendar day, so no carried number is staler than this file's header.
+
+🟢 **A different instrument reaching the same verdict is worth more than a repeat.**
+Four rows `p356` measured on the GitHub index were re-probed this pass from web search
+and payload alone — `DeepTutor`, `kolibri`, `OpenOLAT`, `QingdaoU/OnlineJudge` — and
+all four returned the same branch and the same grant family. 🟢 **The payload channel
+is instrument-independent.** `os-taxonomy` was re-read the same way and is ODbL-1.0 as
+published, share-alike nuance included.
 
 ---
 
@@ -74,6 +90,27 @@ defensible scopes give different answers. The whole-file figure is on
 | classroom-mcp | [sandraschi/classroom-mcp](https://github.com/sandraschi/classroom-mcp) | MIT (`LICENSE`, branch `master`) | `master/LICENSE` | not re-derived | Not placed | Google Classroom |
 | canvas-lms-agent | [likr/canvas-lms-agent](https://github.com/likr/canvas-lms-agent) | MIT **at depth** — `canvas-lms-mcp/LICENSE` | `master/canvas-lms-mcp/LICENSE` | not re-derived | Not placed | Canvas. 🔴 Repository **root carries no grant**; the MIT text licenses the `canvas-lms-mcp` package, not the repository |
 | mcp-brasil | [Mcp-Brasil/mcp-brasil](https://github.com/Mcp-Brasil/mcp-brasil) | MIT (`LICENSE`) | `main/LICENSE` | not re-derived | **LATAM** | Brazilian public-data MCP; education datasets among them |
+| 🆕 canvas-lms-mcp | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | MIT (`LICENSE`, holder *Christian Bru*, 2026) | `main/LICENSE` | not re-derived | Not placed | Canvas. TypeScript. **The widest Canvas surface verified on this base — its README states 183 tools**; reads courses, assignments, submissions, rubrics and quizzes, and **grades and comments** |
+| 🆕 moodle-mcp (Rust) | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT (`LICENSE`, holder *G36maid*, 2026) | `main/LICENSE` | not re-derived | Not placed | Moodle. **Rust**, published to `crates.io`, CI + Codecov in-tree. Goes beyond reading: uploads and submits work. README claims validation against Moodle 3.7–5.x |
+| 🆕 canvas-lms-student-mcp | [AnonymousOnyx22/canvas-lms-student-mcp](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | MIT (`LICENSE`, 2026) | `main/LICENSE` | not re-derived | Not placed | Canvas, **read-only by construction** — 12 tools, cannot submit, edit or delete. 🟢 The only row on this tier whose *capability ceiling* is the safety argument |
+
+### 🟢 The Moodle connector gap closed this pass, and the row that looks like it closed it is the one to avoid
+
+🔴 **A trade comparison in this pass's leg states plainly that "the Moodle options are
+much thinner than the Canvas ones."** That was true of this base: one Moodle row
+(`falkenslab/moodle-mcp`) against five Canvas addresses. 🟢 **It is now three Moodle
+rows,** and the second-most prominent Moodle server in the leg is on the licence-flag
+table instead of this one:
+[`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server)
+calls itself open-source in its own README and its payload is **AGPL-3.0**.
+
+🔵 **Why that matters more on this tier than on any other.** An MCP server is not a
+library a client links — it is a **service the client's agent talks to over a network
+socket**. AGPL's network clause is triggered by exactly that shape. A copyleft LMS
+*platform* can be held at arm's length by reaching it over LTI or web services, which is
+the rule governing every pattern on `compose/patterns.md`; a copyleft *connector* sits
+**on the engagement's own side of that boundary**. 🟢 Of the three Moodle rows, the two
+permissive ones are `falkenslab/moodle-mcp` (Node) and `G36maid/moodle-mcp` (Rust).
 
 ## Assessment, integrity and learning analytics
 
@@ -176,6 +213,77 @@ assets — and they are where the licence traps live.
 | bncc-dados | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | MIT (`LICENSE`) | `main/LICENSE` | **22** | **LATAM** | Brazil's BNCC national curriculum as verified open data: 1 721 learning objectives in JSON, SQLite and CSV |
 | knowledge-import-pipeline | [clownjee/knowledge-import-pipeline](https://github.com/clownjee/knowledge-import-pipeline) | Apache-2.0 (`LICENSE`) | `main/LICENSE` | **18** | APAC | China compulsory-education textbook → AI knowledge extraction, interactive KG, vector retrieval, prerequisite graph, MCP query service |
 | polymath | [aclascollege/polymath](https://github.com/aclascollege/polymath) | **ODbL-1.0** (database) + **CC-BY-SA-4.0** (authored text) | `main/LICENSE` | absent from default index | APAC | Curriculum taxonomy: disciplines, courses, prerequisites, degrees, skills, careers. Placed APAC by commit stream (+08:00) |
+| 🆕 oak-curriculum-ontology | [oaknational/oak-curriculum-ontology](https://github.com/oaknational/oak-curriculum-ontology) | 🟢 **OGL-3.0** (`ontology/`, `data/`, `docs/`) + **MIT** (`scripts/`, workflows) — both read at `LICENSE.md` | `main/LICENSE.md` | not re-derived | **EMEA** | Oak National Academy's curriculum as a formal **OWL/SKOS** ontology, aligned to the **National Curriculum for England**. v0.1.3, early release; CI validates the ontology and generates distributions. 🟢 **The data grant permits commercial exploitation on attribution alone — no share-alike** |
+| 🆕 curriculum_knowledge_graph | [devissaputra/curriculum_knowledge_graph](https://github.com/devissaputra/curriculum_knowledge_graph) | MIT (`LICENSE`, 2026) | `main/LICENSE` | not re-derived | Not placed | **Typed** curriculum graph: `PREREQUISITE_OF`, `TEACHES`, `ASSESSES`, `ALIGNS_WITH`, with entity-type constraints enforced per relation. Alignment diagnostics, path analysis, provenance, expert-review workflow |
+
+### 🟢 EMEA gets its national-curriculum ontology, and the grant is better than the one this base already recommends
+
+🟢 **`p356` published §9 of `intel/trends.md` — "curriculum-as-open-data is the real
+moat, and it is regionally lopsided."** The lopsidedness was specific: Brazil had
+[`bncc-dados`](https://github.com/bncc-dev/bncc-dados) (MIT, the full BNCC), China had
+[`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) (🔴 but
+NonCommercial, so unusable in paid work), and **EMEA had no national curriculum as
+structured data at all.** It does now, and the licence is the finding:
+
+| | `os-taxonomy` (the general skeleton) | 🆕 `oak-curriculum-ontology` |
+|---|---|---|
+| Data grant | ODbL-1.0 | 🟢 **OGL-3.0** |
+| Commercial use | ✅ | ✅ |
+| Share-alike on a **derivative database** | 🟡 **Yes** | 🟢 **No** |
+| Obligation | publish the derived database under ODbL | 🟢 **attribution string only** |
+| Aligned to a statutory curriculum | ✗ | 🟢 National Curriculum for England (2014) |
+
+🔵 **The consequence is a build decision, not a licence note.** A client's enriched
+curriculum graph derived from `os-taxonomy` is a derivative database and ODbL reaches
+it. The same graph derived from Oak's ontology carries one sentence of attribution —
+*"Contains public sector information licensed under the Open Government Licence v3.0"* —
+and nothing else. 🟢 **For a UK or EU education engagement that must ship a closed
+curriculum model, Oak is now the correct base and `os-taxonomy` is the fallback.**
+🟡 Scope honesty: Oak covers **England**, and is `v0.1.3` / early release. It is not a
+pan-EMEA asset and this base does not publish it as one.
+
+---
+
+## 🆕 Lecture capture and transcription — the tier `p356` could not measure
+
+🟢 **`ACTION ZZ-bb` is discharged, and both legs returned shelvable rows.** `p356`
+recorded that its `lecture capture` and `curriculum ontology` legs returned nothing
+usable, diagnosed the cause as **its own query syntax** (an unparenthesised `OR`
+dissolving each leg into general AI), and — correctly — **recorded the tier as
+unmeasured rather than absent**, registering the re-run as `ZZ-bb`.
+
+🟢 **The diagnosis was right.** Re-run this pass as single-term queries on a different
+instrument, the `lecture capture` leg returned the rows below and the
+`curriculum ontology` leg returned the two curriculum rows above. 🔵 **Neither leg was
+empty; `p356`'s restraint in not publishing an absence is what preserved the finding.**
+
+| Component | Repo | Licence (read from payload) | Grant read at | Region | What it does |
+| --- | --- | --- | --- | --- | --- |
+| LectureLab | [helalaou/LectureLab](https://github.com/helalaou/LectureLab) | 🟢 MIT (`LICENSE`, 2026) | `main/LICENSE` | Not placed | Transcribes a recording and generates notes, flashcards and quizzes. **Study-material generation, not capture or distribution** |
+| lecture-live | [PLus123456/lecture-live](https://github.com/PLus123456/lecture-live) | **GPL-3.0** (`LICENSE`) | `main/LICENSE` | Not placed | Self-hosted live transcription + multilingual translation, AI summaries, Q&A, searchable notes. Docker Compose with MySQL, Redis, Cloudreve |
+| Cap | [CapSoftware/Cap](https://github.com/CapSoftware/Cap) | 🟡 **split: AGPLv3 overall, MIT for the `cap-camera*` / `scap-*` crates** | `main/LICENSE` + `main/licenses/LICENSE-MIT` | Not placed | Open-source Loom alternative; self-hostable screen recording with shareable links |
+| CaptureFlow | [sardorml/captureflow](https://github.com/sardorml/captureflow) | 🟡 **split: AGPL-3.0-only overall, MIT for `packages/engine/`** | `main/LICENSE` + `main/packages/engine/LICENSE` | Not placed | Self-hostable screen recording with instant shareable links, built for Cloudflare |
+
+🔵 **Read the split grants correctly, because both splits point the same way.** In each
+case the **capture engine is MIT and the surrounding product is AGPL**, and the authors
+say so explicitly — CaptureFlow's own notice states that combined distributions built
+from the repository are distributed under the AGPL. 🟢 **So the reusable asset is the
+engine, not the app.** An engagement that vendors `packages/engine/` or the
+`cap-camera*` crates takes MIT code; one that forks the repository takes AGPL.
+
+🔴 **The most capable row in this leg is not on the table and cannot be.**
+[`mrgutierrezmario/lecture-note-app`](https://github.com/mrgutierrezmario/lecture-note-app)
+is the closest thing in the leg to an institutional capture platform — Whisper
+speech-to-text, incremental AI note generation, Q&A over transcripts *and slides*,
+FastAPI + React + PostgreSQL + Docker, pluggable Ollama/Claude/Gemini/OpenAI providers,
+multi-user accounts and RBAC. Its payload is **PolyForm Noncommercial 1.0.0**: usable
+for study, research, charities and hobby work, and **commercial use requires a separate
+licence from the copyright holder**. It is on the licence-flag table.
+
+🟢 **What the tier means for an engagement.** [`opencast/opencast`](https://github.com/opencast/opencast)
+remains the only institutional-grade capture-*and*-distribution system on this base; the
+rows above are **not** replacements for it. What they are is the transcription-and-notes
+layer that sits on top of it, and three of the four have a permissive component.
 
 ---
 
@@ -256,6 +364,56 @@ that turned out to be usable.
 | 🆕 [lebmatter/exampro](https://github.com/lebmatter/exampro) | MIT, per GitHub | 🟡 **stock MIT at `main/license.txt` with the holder fields never filled**: `Copyright (c) [year] [fullname]` | Family certain, **licensor absent**. Two hazards in one row: the lower-case path (the `frappe/lms` shape) and nobody to attribute |
 | 🆕 [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | AGPL-3.0, per GitHub, 575 ★ | 🟡 **a 1 134-byte AGPL-3.0 *short-form notice*** — not the 34 kB text — **plus a dual-licensing note: `skills/*.md` may be used under AGPL-3.0 OR MIT at the user's option** | 🟢 **Split along a directory boundary.** The code is network copyleft; the 30+ curriculum `SKILL.md` files are MIT-usable in a closed deliverable. 🔴 And note the size: an AGPL notice that is MIT-sized defeats any byte-band heuristic |
 | 🆕 [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GitHub shows no licence; the README says only *"the GNU General Public License"*, 346 ★ | 🟢 **GPL-2.0 recovered** — 17 286 B, BOM-prefixed, at `master/docs/License.txt`, after six root rungs all 404 | 🟢 **Usable, and the version matters:** GPL-**2**.0, not 3.0, so GPL-3.0 compatibility cannot be assumed. `p354` predicted this exact `docs/License.txt` shape |
+| 🆕 [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | *"an open-source MCP server"* in its own README; a trade roundup repeats the phrase | 🔴 **AGPL-3.0** (`main/LICENSE`, full 34 kB text) | **Network copyleft on a connector.** The README also names it *"the Moodle connector behind CSMediaPro's broader Agentic Query Layer (AQL)"* and links a product page and an npm package — an open-core posture, not a permissive grant. Excluded from the MCP tier for this reason |
+| 🆕 [mrgutierrezmario/lecture-note-app](https://github.com/mrgutierrezmario/lecture-note-app) | a self-hosted Whisper + AI-notes lecture platform, FastAPI/React/Postgres/Docker | 🔴 **PolyForm Noncommercial 1.0.0** (`main/LICENSE`) | **Not OSI open source.** Study, research, charities and hobby use only; *"commercial use requires a separate license from the copyright holder."* The most capable row in the lecture-capture leg and the one a paid engagement cannot touch |
+| 🆕 [foradian/fedena](https://github.com/foradian/fedena) | a vendor comparison in this pass's leg states Fedena is **Apache-2.0**, Ruby on Rails | 🔴 **no grant, and no tree** — live on `master`, and `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt`, `license.txt`, `LICENCE`, `LICENSE-MIT`, `README.md` and `Gemfile` **all 404** | **The Apache-2.0 claim is unverifiable at this address.** The repository resolves but serves nothing at any standard path. 🔵 Published as a refutation so no successor promotes the comparison's claim into a row |
+| 🆕 [naiayti/TeachingKG](https://github.com/naiayti/TeachingKG) | cited from a *Semantic Web* journal paper on educational knowledge graphs | 🔴 **no licence file** — live on `main` with a README and no grant at any of eight probed paths | **All rights reserved.** Schema covers courses, skills, prerequisites and learning goals, and none of it can be used. 🔵 Peer-reviewed provenance is not a grant |
+
+## 🔴 🆕 A new anomaly class: the grant is valid, the *licensor* is somebody else
+
+🟢 **Every anomaly this base has recorded so far is a question about which licence
+applies.** This one is not. The grant is a clean, unmodified MIT licence, read from the
+payload, at the expected path. The defect is **whose name is in it.**
+
+[`NelsonSpencer/canvas-mcp`](https://github.com/NelsonSpencer/canvas-mcp) is live on
+`main` with MIT at `main/LICENSE`. The copyright line reads **`Copyright (c) 2025 Vishal
+Sachdev`** — the holder of [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp),
+a row this base has carried for passes. Read side by side, the two READMEs share the
+header image path, the badge block, and this HTML comment:
+
+```
+<!--mcp-name: io.github.vishalsachdev/canvas-mcp-->
+```
+
+🔴 **That is the MCP *registry identifier*, and the copy publishes the original's.** Its
+install line is `npx skills add vishalsachdev/canvas-mcp` — pointing at upstream.
+
+🔴 **And it is stale, measurably.** Three addresses in this pass's leg describe the same
+project at three different sizes:
+
+| Address | Tools claimed | Agent skills |
+|---|---:|---:|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — **upstream** | 🟢 **up to 126** | 8 |
+| [`NelsonSpencer/canvas-mcp`](https://github.com/NelsonSpencer/canvas-mcp) — copy | 99 | 8 |
+| a trade listing of "the most active option" | 🔴 80+ | 🔴 5 |
+
+🔵 **Why this belongs on a shelf and not in a footnote.** A function-shaped search for
+"Canvas MCP server" returns all three, and nothing in the *licence* channel separates
+them: all three are MIT, all three are live, all three verify. The signal that separates
+them is **the copyright holder and the registry identifier** — two fields this base
+reads on every pass and had never compared *across* rows.
+
+🟢 **The engagement consequence is concrete.** Installing by registry identifier resolves
+to upstream regardless of which page was found, so the copy is harmless to an installer
+and **costs 27 tools to anyone who vendors the tree.** Attribution also travels: a
+deliverable built from the copy must credit Vishal Sachdev, whose name the copy's own
+`LICENSE` carries.
+
+🔵 Recorded as **`ACTION ZZ-bc`**: on the next pass with an index, compare `LICENSE`
+copyright holders across every row sharing a slug stem, and publish any row whose
+holder names a different repository's owner. 🟡 Only `canvas-mcp` was checked this
+pass — the class is established, its extent is not measured, and this base does not
+guess at it.
 
 ## 🔴 One carried row is off-domain and should not be on an education shelf
 
@@ -266,6 +424,43 @@ first-hand this pass, it is **a plugin for AI coding tools that maps a codebase 
 document set into an interactive graph** — a developer comprehension tool. It is not
 an education agent, and its star count has been inflating this shelf's apparent
 education supply. Recorded here as a correction rather than deleted silently.
+
+## 🟢 What changed on `p357` — a weaker discovery channel, and two tiers `p356` could not reach
+
+🔵 **`p357` had no GitHub index.** Its credential is scoped to one unrelated repository,
+so discovery ran on **web search** and verification ran on the usual `ls-remote` +
+payload pair. 🟢 **Nine addresses were added, every one live and licence-read
+first-hand**; not one star was measured.
+
+| What | Count |
+|---|---:|
+| addresses probed first-hand | **28** |
+| 🟢 live on `git ls-remote --symref` | **25** |
+| 🔴 dead — published as refutations, not rows | **3** |
+| grants read from the payload | **21** |
+| 🔴 live with **no grant at any probed path** | **3** |
+| 🟢 new rows published | **9** |
+| 🔴 new licence-flag rows | **4** |
+
+🟢 **`ACTION ZZ-bb` discharged, and `p356`'s restraint is what made it worth
+discharging.** Both the `lecture capture` and `curriculum ontology` legs returned
+shelvable rows, confirming `p356`'s diagnosis that the empty legs were **its own query
+syntax** rather than an absent supply. Had `p356` published "no lecture-capture supply",
+this pass would have had to retract it; because it published *unmeasured*, this pass
+simply measured it.
+
+🔴 **Three addresses described in detail by sources in this pass's legs do not exist.**
+`fh-yarbouh/oak-curriculum-ontology` was described down to its serialisation formats
+(RDF, OWL, SKOS, SHACL) and its licence pair (MIT + OGL-3.0) — and `ls-remote` returns
+nothing. 🟢 **The project is real and the owner was wrong**: it is
+[`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology),
+found by re-probing the organisation name, and every detail checked out at the correct
+address. `schooltool/schooltool` and `gegok12/gegok12` are also dead, and no substitute
+was found for either. 🔵 **A 404 is not a finding, and a detailed description of a 404
+is not one either** — but a wrong *owner* on a real project is recoverable, and worth
+one more probe before an absence is published.
+
+---
 
 ## 🟢 What changed on `p356` — nine legs aimed at FUNCTIONS, and three new tiers
 
@@ -333,26 +528,50 @@ by guessing from a name.
 over an inherited sentence — which is `gate-census-currency`'s discipline applied to a
 distribution rather than to an address count:
 
-| Region | Placed rows on this shelf |
-|---|---:|
-| **APAC** | **21** |
-| EMEA | 6 |
-| North America | 6 |
-| **LATAM** | **2** |
-| 🔵 Not placed | 27 |
+| Region | Placed rows on this shelf | Change on `p357` |
+|---|---:|---|
+| **APAC** | **21** | — |
+| EMEA | **7** | 🟢 +1 — `oak-curriculum-ontology` |
+| North America | 6 | — |
+| **LATAM** | **2** | 🔴 — |
+| 🔵 Not placed | **35** | +8 |
+
+🔴 **A defect in this base's own instrument, found while deriving the table above and
+published because it would have survived another pass.** A census script that counts
+every table with a `Region` column **counts this table too** — its first column holds
+the five region names, so each bucket gains exactly one. The first derivation this pass
+returned `APAC 22 · EMEA 8 · NA 7 · LATAM 3 · Not placed 36`: **every bucket inflated
+by one, uniformly**, which is precisely the shape that reads as plausible rather than
+as broken.
+
+🟢 **`p356`'s published figures were correct.** Excluding the self-row, the pre-`p357`
+state was `APAC 21 · EMEA 6 · NA 6 · LATAM 2 · Not placed 27` — matching `p356`'s prose
+on all five buckets. 🔵 So this is not a correction to a published number; it is a
+**trap recorded before it was fallen into**, and the uniformity is the tell: a real
+distribution shift does not move five buckets by one each. Registered as
+**`ACTION ZZ-bd`** — any census target must exclude the table it is writing into.
 
 - **APAC** is now the densest region on this shelf by a wide margin — **21 rows**, up
   from 11 one pass ago. China, Hong Kong, India, Korea, Bangladesh and Iran all have
   first-party education software, and the eight rows added this pass are *infrastructure*
   (item banks, judges, graders), not demos.
-- **EMEA** holds 6, concentrated in university assessment tooling (Belgium ×2, Germany,
-  Italy, Spain, UK), and gains Iran and Portugal on `repos/foundations.md`.
+- **EMEA** holds **7**, concentrated in university assessment tooling (Belgium ×2,
+  Germany, Italy, Spain, UK), and gains Iran and Portugal on `repos/foundations.md`.
+  🟢 **`p357`'s addition changes the region's character, not just its count:** every
+  prior EMEA row is *assessment* software, and
+  [`oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) is
+  the region's first **curriculum data asset** — and the first anywhere on this base
+  whose data grant allows commercial use with no share-alike.
 - **North America** holds 6, concentrated in the standards/skills/evaluator layer.
   🔴 **A correction while deriving this:** the sentence this replaces claimed **6** NA
   rows while the tables underneath it carried **5**. `p356` adds `edx-proctoring`, so
   the published figure is now 6 *and true*; it was off by one before. Nothing binds a
   **distribution** stated in prose, which is `ACTION ZZ-aw`'s shape on a third quantity.
-- **LATAM** places **2** rows — `mcp-brasil` and `bncc-dados`, both Brazil, both MIT.
+- 🔴 **LATAM still places 2** rows — `mcp-brasil` and `bncc-dados`, both Brazil, both
+  MIT — **and `p357` did not run a LATAM supply leg, so it adds no evidence either
+  way.** 🔵 Stated plainly because an unchanged number across two passes looks like a
+  re-confirmation and is not one: `p356`'s function-word leg is the last measurement of
+  this gap, and it stands unrepeated, not re-verified.
   🔴 **This pass ran the LATAM leg a new way and it still returned nothing shelvable,
   but the mechanism is now named.** Rather than prose ("agente educativo"), the leg used
   **function words** — `calificación`, `corrección`, `banco de preguntas`, `banco de

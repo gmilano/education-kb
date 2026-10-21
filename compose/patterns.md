@@ -6,10 +6,10 @@ updated: 2026-10-21
 
 # Education — composition patterns
 
-Concrete recipes. Each names the specific repos, the licence boundary that makes the
-composition safe, and what the engagement actually delivers. Every repo referenced is
-verified live with its grant read from payload on **2026-10-21** — see
-`agents/top.md` and `repos/foundations.md`.
+**Pass 357 · 2026-10-21.** Concrete recipes. Each names the specific repos, the licence
+boundary that makes the composition safe, and what the engagement actually delivers.
+Every repo referenced is verified live with its grant read from payload on
+**2026-10-21** — see `agents/top.md` and `repos/foundations.md`.
 
 **The rule that governs all of these.** Most education platforms are GPL or AGPL.
 Reaching them **over a protocol boundary** — LTI 1.3, web services, or MCP — keeps a
@@ -277,6 +277,114 @@ a hosted client deliverable.
 
 ---
 
+## 🆕 Pattern 11 — An England-curriculum tutor whose curriculum model stays the client's
+
+**Problem.** A UK education client — an academy trust, a tutoring provider, a publisher —
+wants a tutor aligned to the **National Curriculum for England**, and wants the enriched
+curriculum model it builds (their sequencing, their question mappings, their mastery
+thresholds) to remain **their closed asset**. 🔴 Pattern 7 cannot deliver this: it starts
+from [`os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy), whose **ODbL-1.0**
+share-alike reaches a *derivative database* — exactly what the client's enriched model
+is.
+
+**Why this pattern exists now.** `p357` verified
+[`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology):
+the Oak National Academy curriculum as **OWL/SKOS**, aligned to the National Curriculum
+for England, with `ontology/`, `data/` and `docs/` under **OGL-3.0** and `scripts/` plus
+workflows under **MIT**, both read at `main/LICENSE.md`. 🟢 **OGL-3.0 permits commercial
+exploitation on attribution alone and imposes no share-alike.** That single difference is
+what makes this pattern possible and Pattern 7 unsuitable.
+
+**Recipe.**
+1. **Curriculum spine:** the `ontology/` and `data/` trees of
+   [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology)
+   (OGL-3.0). Load the OWL/SKOS directly; its CI already validates the ontology and
+   generates distribution files, so the client inherits a tested artefact rather than a
+   parse job.
+2. **Typed prerequisite reasoning over it:**
+   [`devissaputra/curriculum_knowledge_graph`](https://github.com/devissaputra/curriculum_knowledge_graph)
+   (**MIT**). It gives `PREREQUISITE_OF`, `TEACHES`, `ASSESSES` and `ALIGNS_WITH` with
+   entity-type constraints enforced per relation — so "this lesson assesses an objective
+   it never taught" is a **constraint violation**, not a review opinion. Its alignment
+   diagnostics and provenance are what an inspection conversation needs.
+3. **Mastery estimates:** [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (MIT) —
+   Bayesian Knowledge Tracing, so progression claims are defensible.
+4. **Scheduling:** [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs)
+   (MIT) for review timing, as in Pattern 10.
+5. **Reach the LMS over a boundary**, per Pattern 1: Moodle via
+   [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) or
+   [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) (both **MIT**), Canvas
+   via [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) or
+   [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) (both **MIT**).
+
+**The licence boundary.** 🟢 **Every component is MIT except the curriculum data, which
+is OGL-3.0 with no share-alike.** The client's enriched graph is theirs; the only
+obligation that travels is one attribution string:
+
+> *"Contains public sector information licensed under the Open Government Licence v3.0."*
+
+🔴 **Two constraints to put in the statement of work, not discover later.** The ontology
+covers **England** — not Scotland, Wales, Northern Ireland or any EU curriculum — and it
+is **`v0.1.3`, early release**, so pin a commit and expect schema movement. 🟡 Neither is
+a reason not to build; both are reasons to scope and version deliberately.
+
+**Delivers.** A curriculum-aligned tutor whose alignment is *checkable against a
+statutory curriculum* rather than asserted, and whose curriculum model is a closed
+client asset. 🔵 Alignment-to-standard is what §2's evidence gate actually asks for in a
+UK procurement.
+
+## 🆕 Pattern 12 — Process-evidence assessment, for when the client's detector stops being accepted
+
+**Problem.** A university or faculty has been running AI-detection scores in
+academic-misconduct cases, and that has stopped working. `intel/trends.md` §16: Yale,
+Cornell and UW–Madison now **discourage or bar detection scores** in misconduct
+proceedings, after a Stanford study found detectors flagged **61 % of essays by
+non-native English speakers** as machine-written. 🔴 **A better detector does not fix
+this** — the failure is an equity failure across language backgrounds, not a model-quality
+one — so the engagement is a **replacement**, not an upgrade.
+
+**What replaces it.** The sources name the substitution: oral examination, proctored
+assessment, and **grading the writing process**. Only the third is a software build, and
+it is a **telemetry** build.
+
+**Recipe.**
+1. **Instrument the process, not the artefact.** Draft history, revision sequence,
+   time-on-task and paste events are learning-analytics events. Emit them as **Caliper**
+   events against [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec).
+   🔴 **Implement the standard; do not vendor the document** — its grant is an IMS
+   *specification document* licence, not a software grant (`agents/top.md`, licence
+   flags).
+2. **Carry the events over an LTI boundary**, so nothing forks the AGPL LMS:
+   [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0) for Node or
+   [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (MIT) for
+   Python. Both carry the **role claims** that decide who may see a process trace — and
+   a process trace is more intrusive than a grade, so that boundary is a privacy control,
+   not plumbing.
+3. **Keep supervision and similarity, which §16 does *not* retire.**
+   [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) or
+   [`eLearning-BS23/moodle-quizaccess_proctoring`](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring)
+   for supervised assessment; [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos)
+   (**MIT**) for code similarity. 🟢 **Neither claims to know what produced the text**,
+   which is exactly why both survive the reversal.
+4. **Evidence it, because evidence is the procurement gate.**
+   [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta)
+   (Apache-2.0) runs a randomised comparison **inside** the LMS: process-evidenced
+   assessment against the status quo, on the client's own cohort.
+5. **If marking is automated anywhere in this, apply §17's three rules:** blind the
+   human reviewer to AI provenance on the first pass (a labelled grade **anchors** the
+   reviewer — measured across 1 339 teachers), build the **student opt-out as a routing
+   path** the LTI role claims can actually serve, and keep the **rubric** as the artefact
+   of record.
+
+**The licence boundary.** Apache-2.0 and MIT throughout; the LMS is reached over LTI 1.3
+and never forked. 🟢 Nothing in this pattern obliges the client to open anything.
+
+**Delivers.** An assessment-integrity posture that survives the objection that killed
+the detector — defensible across language backgrounds, with the evidence to prove it on
+the client's own students. 🔵 **And it is a budget conversation the client is already
+having:** the money is currently committed to a detection line item that their own
+academic board is moving away from.
+
 ## Boundary cheat-sheet
 
 | If the host platform is… | Reach it by… | Never |
@@ -285,7 +393,19 @@ a hosted client deliverable.
 | Moodle, Chamilo, ELMSLN, Judge0, UDOIT, 🆕 HUSTOJ, 🆕 openSIS Classic (**GPL**) | Web services · the plugin API as a *separate* deployed plugin · the API over HTTP | Statically linking into proprietary code |
 | 🆕 Hydro, DMOJ, Sharif Judge, the AGPL item banks (**AGPL**) | The client's own deployment, reached over HTTP | Hosting it as the studio's service |
 | BigBlueButton, OpenEduCat (**LGPL**) | Dynamic linking · API | Forking into closed source |
-| OpenOLAT, Sakai, Kolibri, Moodle App, Opencast, 🆕 **QingdaoU OnlineJudge**, 🆕 **Judger**, 🆕 **Otter-Grader**, 🆕 **py-fsrs** (**permissive**) | Anything, including forking | — |
+| OpenOLAT, Sakai, Kolibri, Moodle App, Opencast, QingdaoU OnlineJudge, Judger, Otter-Grader, py-fsrs, 🆕 **LectureLab**, 🆕 **bruchris/canvas-lms-mcp**, 🆕 **G36maid/moodle-mcp** (**permissive**) | Anything, including forking | — |
+| 🆕 ERPNext (**GPL-3.0**) | Its **REST API**, as a separate service | A Frappe app in-process, or linking client code |
+| 🆕 Cap, CaptureFlow (**split: AGPL app, MIT engine**) | Vendoring the **MIT engine only** — `licenses/LICENSE-MIT`, `packages/engine/` | Forking the repository; the combined distribution is AGPL |
+| 🔴 🆕 `csmediapro/moodle-mcp-server` (**AGPL-3.0 connector**) | 🔴 **Nothing.** Use a permissive Moodle MCP instead | Any use — a copyleft *connector* sits inside the engagement, not across the boundary |
+| 🔴 🆕 `mrgutierrezmario/lecture-note-app` (**PolyForm Noncommercial**) | 🔴 **Nothing in paid work** | All commercial use without a separate licence from the holder |
 
 **One-line version:** in education, the licence picks the architecture. Decide the
 boundary before the stack.
+
+🔴 **🆕 And `p357` found the one case where that rule inverts.** Every row above assumes
+the copyleft component is the **platform**, which a protocol boundary holds at arm's
+length. When the copyleft component **is the connector** — an AGPL MCP server — the
+boundary is on the **wrong side of it**: the client's agent talks to it over exactly the
+network interface AGPL's clause is written about, and it sits inside the deliverable
+rather than across from it. 🟢 **So check the licence of the connector before the
+licence of the platform.** It is the smaller component and the larger risk.

@@ -4,6 +4,199 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 357 — 2026-10-21 — **`ACTION ZZ-bb` DISCHARGED: BOTH OF `p356`'s "EMPTY" LEGS WERE FULL, AND ITS REFUSAL TO PUBLISH AN ABSENCE IS WHY THAT IS A FINDING RATHER THAN A RETRACTION. NINE NEW ROWS, TWO NEW TIERS, FOUR LICENCE FLAGS. EMEA GAINS ITS FIRST CURRICULUM DATA ASSET AND ITS GRANT BEATS THE ONE THIS BASE RECOMMENDS. A NEW ANOMALY CLASS: THE GRANT IS VALID AND THE LICENSOR IS SOMEBODY ELSE. `make hooks` — NOT RUN, SO GATE STATE IS UNJUDGED**
+
+🔵 **A dating note.** Every read and probe below was taken on **2026-10-21** and every
+evidence file is named for that date. 🟢 Artefacts are dated by MEASUREMENT, never by
+commit. 🔵 This is the **eighth pass of this date** (`p350`–`p356` earlier today).
+
+**Evidence:** [`verified-repos`](evidence/verified-repos.2026-10-21-p357.tsv) ·
+[`grant-path-reprobe`](evidence/grant-path-reprobe.2026-10-21-p357.tsv) ·
+[`leg-yield`](evidence/leg-yield.2026-10-21-p357.tsv)
+
+### 🔴 The channel state, first, because this pass is the weakest-instrumented in a while
+
+🟢 `git ls-remote --symref` **OPEN** · 🟢 `raw.githubusercontent.com` **OPEN** ·
+🔴 `github.com` HTML **403** · 🔴 `api.github.com/repos/*` **403** · 🔴 **authenticated
+search index CLOSED** — `p357` runs under a credential scoped to a single unrelated
+repository, so the GitHub index was not available to it at all.
+
+🔵 **Stated before any row is read, because it bounds everything below.** Discovery ran
+on **web search**; verification ran on the same `ls-remote` + payload pair every pass
+uses. 🟢 That is a *weaker* discovery instrument and an *identical* verification one, and
+the consequence is specific: **this pass can prove a row is live and correctly licensed,
+and cannot measure a single star.** Every `p357` row reads `not re-derived`.
+
+🟢 **One compensation worth more than a repeat measurement.** Four rows `p356` measured
+on the GitHub index were re-probed this pass from web search and payload alone —
+`DeepTutor`, `kolibri`, `OpenOLAT`, `QingdaoU/OnlineJudge` — and all four returned the
+same default branch and the same grant family. **The payload channel is
+instrument-independent**, which is the first time this base has had evidence of that
+rather than an assumption.
+
+### 🔴 The gate state, because this pass cannot report one either
+
+🔴 **`make hooks` was NOT RUN, for the third consecutive pass and for the same reason.**
+The suite executes Python from this cloned repository and the harness running `p357`
+treats cloned content as untrusted. 🔴 **Gate state is therefore UNJUDGED**, and no claim
+below rests on a gate having passed.
+
+🟢 **The contracts were checked instead by a reader written for this pass, outside the
+clone, that treats the shelves as data** — and it passes:
+
+| Contract | Result |
+|---|---|
+| `gate-frontmatter` | 🟢 all 8 files well-formed, `updated: 2026-10-21` |
+| `gate-region-vocabulary` | 🟢 every `region:` within the five closed values |
+| `gate-region-headings` | 🟢 exactly one `## Opportunities by region`, all five `###` present, nothing outside the vocabulary |
+| `gate-tables` | 🟢 no data row rendered as a table header |
+| `gate-grant-path` | 🟢 **189 published `(repo, grant path)` cells re-probed as the last act: 188 resolve `200`** |
+| `gate-census-currency` | 🟢 both censuses derived AFTER the writing |
+
+🔵 **The single `404` is [`reneverland/CBIT-AiExam-plus`](https://github.com/reneverland/CBIT-AiExam-plus)`/docs/LICENSE`
+— the row this base publishes *as* a 404.** 🟡 Gate state stays formally unjudged; a
+successor with permission should run `make hooks` before trusting any of it.
+
+🔴 **And the re-probe caught two defects in this pass's own instrument, not in the
+shelves.** The first sweep reported `404` on `OS4ED/openSIS-Classic` and
+`likr/canvas-lms-agent` — both grants `p356` had recovered by hand. 🟢 **The shelves were
+right and the probe was wrong**: its regex dropped the `master/` branch prefix from the
+published cell. Re-probed with the full published path, both return `200`. 🔵 Recorded in
+the evidence file rather than quietly fixed, because a grant-path gate that strips branch
+prefixes would report this base's two hardest-won recoveries as losses on every future
+pass.
+
+### 🟢 `ACTION ZZ-bb` discharged — and `p356`'s restraint is the whole finding
+
+`p354` registered the function legs; `p356` ran nine of them, and **two returned
+nothing**. It diagnosed the cause as **its own query syntax** — an unparenthesised `OR`
+dissolving each leg into general AI — and, rather than publishing "education has no
+lecture-capture supply", **recorded the tiers as unmeasured** and registered the re-run
+as `ZZ-bb` with a falsifier: *refuted if either returns a shelvable row.*
+
+| Leg | `p356` | `p357`, single-term, different instrument |
+|---|---|---|
+| `lecture capture` | 🔴 37 325 results headed by `openclaw`, `n8n`, `firecrawl` | 🟢 **4 shelvable rows + 1 licence flag** |
+| `curriculum ontology` | 🔴 880 results, same dissolution | 🟢 **2 shelvable rows**, one of them this base's best-licensed curriculum asset |
+
+🟢 **Both legs were full. The diagnosis was right and the restraint was load-bearing:**
+had `p356` published the absence, this pass would be retracting it instead of filling a
+known hole. 🔵 `p351` declared a gap against an open channel and `p356` declined to
+repeat the error one layer up. **That decision is now worth two tiers.**
+
+### 🟢 The finding a client would pay for: EMEA's curriculum asset, and the licence is the finding
+
+[`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology)
+— the Oak National Academy curriculum as **OWL/SKOS**, aligned to the **National
+Curriculum for England**, dual-granted at `main/LICENSE.md`: **OGL-3.0** over `ontology/`,
+`data/`, `docs/` and **MIT** over `scripts/`.
+
+| | `os-taxonomy` (what this base recommended) | 🆕 `oak-curriculum-ontology` |
+|---|---|---|
+| Data grant | ODbL-1.0 | 🟢 **OGL-3.0** |
+| Commercial use | ✅ | ✅ |
+| Share-alike on a **derivative database** | 🟡 **Yes** | 🟢 **No** |
+| Obligation | publish the derived database under ODbL | 🟢 one attribution sentence |
+| Aligned to a statutory curriculum | ✗ | 🟢 England, 2014 |
+
+🔵 **Why that is a build decision and not a licence note.** A client's enriched curriculum
+graph — their sequencing, their mappings, their mastery thresholds — **is** a derivative
+database, and ODbL reaches it. Derived from Oak's ontology it carries one sentence of
+attribution and nothing else. 🟢 **`p356`'s §9 said curriculum-as-open-data was
+"regionally lopsided" with EMEA holding nothing; EMEA now holds the best-licensed one on
+this base.** New **Pattern 11** builds on it. 🟡 Scope honesty: England only, `v0.1.3`,
+early release — pin a commit.
+
+🔴 **And no source named the address correctly.** The project was described in full detail
+— serialisations, licence pair — under `fh-yarbouh/oak-curriculum-ontology`, which does
+not exist. 🟢 Re-probing the *organisation* name found the real one and every described
+detail checked out. 🔵 **A detailed description of a 404 is not a finding; a wrong owner
+on a real project is recoverable, and worth one probe before an absence is published.**
+`schooltool/schooltool` and `gegok12/gegok12` are also dead, with no substitute for
+either.
+
+### 🔴 A new anomaly class: valid grant, unmodified, expected path — wrong licensor
+
+Every anomaly this base has recorded asks *which licence applies*.
+[`NelsonSpencer/canvas-mcp`](https://github.com/NelsonSpencer/canvas-mcp) asks **whose
+name is in it**: clean MIT at `main/LICENSE` reading **`Copyright (c) 2025 Vishal
+Sachdev`** — the holder of [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp),
+a row this base has carried for passes. Both READMEs share the header image, the badges,
+and the MCP **registry identifier** `io.github.vishalsachdev/canvas-mcp`; the copy's
+install line points at upstream. 🔴 **And it is stale: 99 tools against upstream's "up to
+126"**, with a trade listing giving a third, older figure ("80+ tools, 5 skills").
+
+🔵 **Nothing in the licence channel separates the three addresses** — all MIT, all live,
+all verifying. **The copyright holder and the registry identifier do**, two fields this
+base reads every pass and had never compared *across* rows. Registered as
+**`ACTION ZZ-bc`**. 🟡 Only `canvas-mcp` was checked: the class is established, its extent
+is not.
+
+### 🔴 The leg that failed at its objective, and the costing input that came out of it
+
+🟢 **A permissive education ERP would be the most valuable row on `verticals/solutions.md`**
+— every admin system this base carries is copyleft, so a closed admin deliverable has no
+base to fork. A leg ran specifically to find one. 🔴 **All three candidates are unusable,
+and none for a licence reason:** `foradian/fedena` (claimed Apache-2.0) is live on
+`master` and serves **nothing** at ten standard paths including `README.md` and `Gemfile`;
+`gegok12/gegok12` (claimed MIT) does not exist; `schooltool/schooltool` is dead.
+
+🟢 **So the finding is the absence, and it is published as a price rather than a gap:
+there is no verified permissive education ERP, so a closed admin deliverable is a BUILD,
+not a fork.** A successor meeting the Fedena or GegoK12 claim in a roundup — both rank
+well and read authoritatively — should read that sentence before costing a fork.
+
+### 🔴 Three new trends, and §16 is the first to RETIRE a capability this base shelves
+
+- **§16 — the AI-detector market is being abandoned by its own customers.** Yale, Cornell
+  and UW–Madison now discourage or bar detection scores in misconduct cases; a Stanford
+  study found detectors flagged **61 % of essays by non-native English speakers** as
+  machine-written. 🟢 **The distinction is the finding:** *authorship attribution* is
+  collapsing because it cannot be made at an acceptable false-positive rate across
+  language backgrounds — **an equity failure, not a model-quality one, so a better model
+  does not fix it.** *Supervision* (proctoring) and *similarity* (plagiarism) are
+  untouched, because neither claims to know what produced the text. Of this base's four
+  detection-adjacent rows, **three survive and one carries demand-side risk.** New
+  **Pattern 12** is the replacement build.
+- **§17 — AI marking has acquired a disclosure duty and a measured anchoring bias.** The
+  University of Newcastle (Australia) requires disclosure of AI use in marking **with a
+  student opt-out**; a **1 339-teacher** experiment found a harsh AI grade **survives
+  review more often when labelled as AI**. 🔴 That inverts the assumption every
+  grading-agent design rests on — that disclosure plus human review makes automation safe.
+- **§18 — non-OSI licensing has a second shape.** `PolyForm Noncommercial` on the most
+  capable platform in the capture leg, and an **AGPL-3.0 open-core *connector***. 🔵 The
+  second inverts this base's governing rule: a protocol boundary holds a copyleft
+  **platform** at arm's length, but when the copyleft thing **is the MCP server** it sits
+  *inside* the deliverable, on the wrong side of that boundary. **Check the connector's
+  licence before the platform's** — smaller component, larger risk.
+
+### 🔴 A self-counting census trap, caught before it was published
+
+The first regional derivation returned `APAC 22 · EMEA 8 · NA 7 · LATAM 3 · Not placed
+36` — **every bucket inflated by exactly one.** Cause: a census that counts every table
+with a `Region` column **counts the census table itself**, whose first column holds the
+five region names. 🟢 `p356`'s published figures were correct on all five buckets. 🔵 The
+uniformity is the tell — a real distribution shift does not move five buckets by one
+each. Registered as **`ACTION ZZ-bd`**; it applies to `repos/foundations.md` too.
+
+### 🔴 Declared gaps, so silence is not mistaken for coverage
+
+- **No star figure measured.** Carried figures keep `p356`'s date — this same day.
+- **No LATAM supply leg ran.** The two LATAM rows are unchanged and **unretested**.
+- **No primary ministry or legislative document read.** Every regional item is trade
+  press, a law-firm briefing or a vendor report. Three are published as *contested*
+  rather than settled: Japan's AI Basic Plan date, Mexico's legislative status, Chile's
+  effective-date move.
+- **No confirmed 2026 AI-curriculum rollout in Kenya, South Africa, Nigeria or Ghana** —
+  strategies and drafts only. 🟢 The Gulf has **mandates** (UAE and Saudi, both already
+  shipping and both expanding for 2026-27); Africa has **plans** and one measured demand
+  figure (Ghana, AI microcredential enrolments **+95 %**). This file no longer averages
+  those into "EMEA".
+- **`ACTION ZZ-bc`'s extent is unmeasured**, and **`ZZ-az`** (the 18 measured-and-lost
+  rows) and **`ZZ-ba`** are untouched by this pass.
+
+---
+
 ## Pass 356 — 2026-10-21 — **`ACTION ZZ-ay` DISCHARGED AND `T40` WAS NOT REFUTED — IT WAS CONFIRMED BY AN ENTIRE SECTOR. NINE FUNCTION LEGS RETURNED 36 VERIFIED ROWS: 18 ABSENT FROM THIS WHOLE CORPUS, AND THE OTHER 18 THIS BASE HAD ALREADY MEASURED AND NEVER SHELVED. EDUCATION'S GRADING-EXECUTION LAYER IS 15 ROWS, 7 137 ★ AT THE HEAD, AND THE BIGGEST ONE IS `MIT`. FOUR REGIONAL DISTRIBUTIONS THIS BASE PUBLISHES ARE WRONG AND ONLY THE LATAM ZERO IS RIGHT. `make hooks` — REFUSED, SO GATE STATE IS UNJUDGED**
 
 🔵 **A dating note.** Every read, probe and digest below was taken on **2026-10-21** and

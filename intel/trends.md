@@ -6,7 +6,9 @@ updated: 2026-10-21
 
 # Education — current trends
 
-Researched **2026-10-21**. Trends 1–6 are corroborated across external sources.
+**Pass 357 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
+across external sources. 🆕 **Trends 16–18 are `p357`'s**, and §16 is the first trend
+on this file that **retires a capability this base already shelves**.
 Trends **7–15** are **first-hand observations from this base's own repository
 measurements** — they are not in the trade press, which is precisely why they are
 worth holding.
@@ -262,3 +264,111 @@ item banks, judges, graders and scheduling agents.
 What APAC lacks is an English-language analyst narrative; what it has is first-party
 education software in volume. An engagement brief that reports "APAC adoption data
 unavailable" and stops there is describing the trade press, not the region.
+
+---
+
+## 16. 🔴 🆕 The AI-detector market is being abandoned by its own customers — and this base shelves four detection repos
+
+**`p357`, external sources, North America-led but assessment-wide.** The single
+sharpest reversal in this pass's legs: **US universities are giving up on AI
+detectors.** Yale, Cornell and the University of Wisconsin–Madison now **discourage or
+bar the use of AI-detection scores in academic-misconduct cases**, on false-positive
+grounds. The figure driving it is an equity problem, not a quality one: a Stanford
+study found detectors flagged **61 % of essays by non-native English speakers** as
+machine-written.
+
+🟢 **What replaces detection is not a better detector.** The same sources describe the
+substitution directly: **oral examination, proctored assessment, and grading the
+writing *process*** rather than the artefact.
+
+🔴 **This cuts against supply this base carries.** Four rows exist to detect or monitor:
+
+| Row | What it does | What §16 does to it |
+|---|---|---|
+| [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) | vision-based exam monitoring | 🔴 Demand-side risk — the institution may not accept the evidence |
+| [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | proctoring subsystem for Open edX | 🟢 **Survives** — *proctored assessment* is named as a replacement, not a casualty |
+| [`eLearning-BS23/moodle-quizaccess_proctoring`](https://github.com/eLearning-BS23/moodle-quizaccess_proctoring) | Moodle proctoring access rule | 🟢 Survives, same reason |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | source-code **plagiarism** similarity | 🟢 **Survives, and is the distinction that matters** — it compares submissions to *each other*, and makes no claim about machine authorship |
+
+🔵 **The distinction is the finding, and it is a sentence a studio can use in a
+procurement meeting.** What is collapsing is **authorship attribution** — the claim
+"a machine wrote this" — because it cannot be made at an acceptable false-positive rate
+across language backgrounds. **Supervision** (proctoring) and **similarity**
+(plagiarism) are untouched, because neither claims to know what produced the text.
+
+🟢 **The build consequence, stated as an opportunity rather than a loss.** Process
+evidence is a *telemetry* problem, and telemetry is what this base's interoperability
+tier is for: **Caliper** events and **xAPI** statements already carry draft history,
+revision sequence and time-on-task. An engagement that instruments the writing process
+through [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) (🔴 implement
+the standard, do not vendor the document) is building the thing detection is being
+replaced *with* — and
+[`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta)
+(Apache-2.0) can run it as a randomised in-LMS study, which §2's procurement gate asks
+for anyway.
+
+🟡 **Scope honesty.** Three named institutions and one study is a strong signal, not a
+census; the sources are trade briefings. The *direction* is well corroborated across
+this pass's leg, the extent is not measured, and no policy date is asserted.
+
+## 17. 🔴 🆕 AI marking has acquired a disclosure duty and a measured anchoring bias
+
+**`p357`, external sources, APAC-first.** Two findings that belong together, because one
+is the hazard and the other is the response.
+
+🔴 **The hazard is measured.** An experiment with **1 339 teachers** found that a harsh
+AI-assigned grade **survived human review more often when the review was told the grade
+came from AI**. The human-in-the-loop is not a neutral check: labelling a grade as
+machine-produced **anchors** the reviewer to it. 🔵 That is the inverse of the
+assumption nearly every grading-agent design rests on — that disclosure plus human
+review makes automated marking safe.
+
+🟢 **The response is already institutional policy.** The **University of Newcastle
+(Australia)** requires that any use of generative AI in marking be **communicated to
+students**, with students given the **opportunity to opt out**.
+
+🟢 **Together they define the design constraint for every grading agent on this base.**
+A rubric-bound grader is not safe because a human signs off, and it is not compliant
+because it discloses. Three things follow, and all three are buildable:
+
+1. **Blind the reviewer to provenance** on the first pass. The anchoring effect is
+   attached to the *label*, so withhold the label until the human has scored.
+2. **Build the opt-out as a data path, not a policy page.** A student who opts out
+   needs a human-marked route that the LMS can actually route to —
+   [`ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0) and
+   [`pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (MIT) carry the role claims
+   that make that routing possible.
+3. **Keep the rubric as the artefact of record**, which is why the item-bank and
+   rubric-bound tier on `agents/top.md` is the right starting point: a rubric score is
+   reviewable in a way a model's judgement is not.
+
+🔵 **Why this is a trend and not a caveat.** §2 established that evidence is a
+procurement gate. §17 says the evidence will be asked for about **the marking process
+itself** — disclosure, opt-out and reviewer independence — and a studio that can show
+all three has a procurement answer competitors will not.
+
+## 18. 🔴 🆕 Non-OSI licensing in education AI now has a second shape: the noncommercial source-available build
+
+**First-hand, `p357`.** §10 recorded licence drift away from OSI terms. `p357` adds a
+measured instance of a **different** shape, and the shape matters more than the count.
+
+| Shape | Example | What it does to a paid engagement |
+|---|---|---|
+| **Source-available, commercial-hostile** | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) — Elastic License 2.0 | Cannot be offered as a managed service |
+| **Data-only noncommercial** | [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) — CC-BY-NC-4.0 | Unusable in paid work |
+| 🆕 **Noncommercial source-available software** | [`mrgutierrezmario/lecture-note-app`](https://github.com/mrgutierrezmario/lecture-note-app) — **PolyForm Noncommercial 1.0.0** | Usable for study, research and charities; **commercial use needs a separate licence from the holder** |
+| 🆕 **Open-core copyleft connector** | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) — AGPL-3.0, README names it the connector behind a commercial product | Network copyleft reaches the agent talking to it |
+
+🔴 **Both new rows call themselves open source and both would pass a keyword filter.**
+PolyForm Noncommercial is a real, well-drafted licence from a credible source — it is
+simply not an open-source one, and its text is friendly enough that it reads as
+permissive on a skim: *"you may use, modify and share it for noncommercial purposes."*
+
+🟢 **The operational rule this base already follows is what caught both: read the
+payload, then read it for a *field* rather than a family name.** The PolyForm row needed
+the word **"noncommercial"**; the AGPL connector needed the realisation that **a
+connector sits inside the engagement**, not across the protocol boundary that keeps a
+copyleft *platform* at arm's length. 🔵 **The second one is the genuinely new idea**:
+this base's governing rule — reach copyleft over LTI, web services or MCP — assumes the
+copyleft thing is the *platform*. When the copyleft thing **is the MCP server**, the
+boundary is on the wrong side of it, and the rule inverts.

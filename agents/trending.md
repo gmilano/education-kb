@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 357 — **`ACTION ZZ-bb` discharged: both of `p356`'s "empty" legs were full.** Nine new rows, two new tiers, and a new anomaly class — **the grant is valid and the licensor is somebody else**
+
+🔴 **Channel note, and it is a downgrade.** `git ls-remote` **OPEN** ·
+`raw.githubusercontent.com` **OPEN** · 🔴 **authenticated search index CLOSED** — `p357`
+runs under a credential scoped to a single unrelated repository · 🔴 `github.com` HTML
+**403** · 🔴 `api.github.com/repos/*` **403**. 🔵 Discovery therefore ran on **web
+search**; verification ran on the usual `ls-remote` + payload pair, unchanged.
+🟢 **Consequence stated before any row:** this pass can prove a row is live and
+correctly licensed and **cannot measure a single star**. Every `p357` row reads
+`not re-derived`.
+
+🔴 **`make hooks` was NOT RUN, for the third consecutive pass and for the same reason.**
+The suite executes Python from this clone; the harness running `p357` treats cloned
+content as untrusted and declined. 🟢 **The contracts were checked instead by an
+independently written script that reads the shelves as data**, and it passes: frontmatter
+well-formed and dated **2026-10-21** on all eight files, `region` within the five closed
+values, exactly one `## Opportunities by region` in `intel/market.md` with all five
+`###` subsections present and nothing outside the vocabulary. 🟢 **`gate-grant-path`
+re-probed as the last act: 189 published `(repo, grant path)` cells, 188 resolve
+`200`, and the single `404` is [`reneverland/CBIT-AiExam-plus`](https://github.com/reneverland/CBIT-AiExam-plus)
+— the row this base publishes *as* a 404.** 🟡 Gate state remains formally **unjudged**;
+a successor with permission should run `make hooks`.
+
+### 🟢 `ACTION ZZ-bb` discharged, and `p356`'s restraint is the reason it was worth discharging
+
+`p356` reported its `lecture capture` and `curriculum ontology` legs as returning
+nothing, diagnosed the cause as **its own query syntax** — an unparenthesised `OR`
+dissolving each leg into general AI — and **recorded the tiers as unmeasured rather than
+absent**, registering the re-run as `ZZ-bb` with a falsifier: *refuted if either returns
+a shelvable row.*
+
+🟢 **Both returned shelvable rows. The diagnosis was correct and the restraint was
+load-bearing.** Had `p356` published "no lecture-capture supply in education", `p357`
+would be retracting a published absence instead of filling a known hole.
+
+| Leg | `p356` | `p357`, single-term, different instrument |
+|---|---|---|
+| `lecture capture` | 🔴 37 325 results headed by `openclaw`, `n8n`, `firecrawl` — unusable | 🟢 **4 shelvable rows + 1 licence flag** |
+| `curriculum ontology` | 🔴 880 results, same dissolution | 🟢 **2 shelvable rows**, one of them this base's best-licensed curriculum asset |
+
+### 🟢 The find of the pass: EMEA's first curriculum data asset, and its grant beats the one this base recommends
+
+[`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology)
+— the Oak National Academy curriculum as **OWL/SKOS**, aligned to the **National
+Curriculum for England**, dual-granted at `main/LICENSE.md`: **OGL-3.0** over
+`ontology/`, `data/` and `docs/`, **MIT** over `scripts/` and workflows.
+
+🟢 **The licence is the finding, not the data.** OGL-3.0 permits commercial exploitation
+on **attribution alone, with no share-alike** — against
+[`os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy)'s ODbL-1.0, whose
+share-alike reaches a *derivative database*, which is exactly what a client's enriched
+curriculum model is. 🔵 `p356` published §9 of `intel/trends.md` noting that
+curriculum-as-open-data was *"regionally lopsided"* with EMEA holding nothing. It holds
+the best-licensed one now. New **Pattern 11** builds on it.
+
+🔴 **And the address in the source was wrong.** The leg described the project in full
+detail — serialisations, licence pair — under `fh-yarbouh/oak-curriculum-ontology`, which
+`ls-remote` says **does not exist**. 🟢 Re-probing the *organisation* name found the real
+one, and every described detail checked out. 🔵 **A detailed description of a 404 is not
+a finding — but a wrong owner on a real project is recoverable, and worth one probe
+before an absence is published.** `schooltool/schooltool` and `gegok12/gegok12` are also
+dead and no substitute was found for either.
+
+### 🔴 New anomaly class: the grant is valid, unmodified, at the expected path — and the licensor is a different project's owner
+
+Every anomaly this base has recorded asks *which licence applies*.
+[`NelsonSpencer/canvas-mcp`](https://github.com/NelsonSpencer/canvas-mcp) asks **whose
+name is in it**: clean MIT at `main/LICENSE`, reading **`Copyright (c) 2025 Vishal
+Sachdev`** — the holder of [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp),
+a row this base has carried for passes. Both READMEs carry the same header image, the
+same badges, and the same MCP **registry identifier**,
+`io.github.vishalsachdev/canvas-mcp`; the copy's install line points at upstream.
+
+🔴 **And it is stale, measurably: 99 tools against upstream's "up to 126"** — with a
+trade listing describing the same project at "80+ tools and 5 skills", a third and older
+figure. 🔵 Nothing in the *licence* channel separates the three addresses — all MIT, all
+live, all verifying. **The copyright holder and the registry identifier are what separate
+them**, two fields this base reads every pass and had never compared *across* rows.
+Registered as **`ACTION ZZ-bc`**.
+
+### 🔴 A self-counting census trap, caught before it was published
+
+The first regional derivation this pass returned `APAC 22 · EMEA 8 · NA 7 · LATAM 3 ·
+Not placed 36` — **every bucket inflated by exactly one**. Cause: a census script that
+counts every table with a `Region` column **counts the census table itself**, whose first
+column holds the five region names. 🟢 `p356`'s published figures were correct; the
+uniformity is the tell, because a real distribution shift does not move five buckets by
+one each. Registered as **`ACTION ZZ-bd`** — it applies to `repos/foundations.md` too.
+
+### What landed where
+
+| File | `p357` |
+|---|---|
+| `agents/top.md` | +3 MCP rows · +2 curriculum rows · 🆕 lecture-capture tier (4 rows) · +4 licence flags · new anomaly-class section · census corrected |
+| `repos/foundations.md` | 🆕 `frappe/erpnext` (GPL-3.0 at `develop/license.txt`) · the permissive-ERP refutation |
+| `verticals/solutions.md` | 🆕 ERPNext · *"there is no permissive education ERP"* with the costing consequence |
+| `intel/trends.md` | 🆕 §16 detector collapse · §17 marking disclosure + anchoring · §18 noncommercial source-available |
+| `intel/market.md` | Gulf mandates as a **delivery** market · Africa with a structure and four national positions · India's Class-3 mandate · Chile's moved date · Mexico's training centre |
+| `compose/patterns.md` | 🆕 Pattern 11 (England-curriculum tutor, closed client model) · Pattern 12 (process-evidence assessment) · the boundary rule's **inversion** |
+
+### 🔴 Declared gaps, so silence is not mistaken for coverage
+
+- **No star figure was measured this pass.** Carried figures keep `p356`'s date, which
+  is this same calendar day.
+- **No LATAM supply leg ran.** The two LATAM rows on `agents/top.md` are unchanged and
+  **unretested** — an unchanged count across two passes is not a re-confirmation.
+- **No primary ministry or legislative document was read.** Every regional item is trade
+  press, a law-firm briefing or a vendor report, and three are published as *contested*
+  rather than settled: Japan's AI Basic Plan date, Mexico's legislative status, Chile's
+  effective-date move.
+- **No confirmed 2026 AI-curriculum rollout in Kenya, South Africa, Nigeria or Ghana** —
+  strategies and drafts only. The Gulf has mandates; Africa has plans and one measured
+  demand figure (Ghana, +95 %).
+- **`ACTION ZZ-bc`'s extent is unmeasured.** Only `canvas-mcp` was checked for
+  holder/slug collision; the class is established, its size is not.
+
+---
+
 ## 2026-10-21 · Pass 356 — `ACTION ZZ-ay` discharged and **T40 was not refuted, it was confirmed by a sector**. Nine legs aimed at FUNCTIONS returned **36 verified rows, 18 of them absent from this entire corpus** — and the other **18 this base had already measured and never shelved**
 
 🟢 **Channel note.** `git ls-remote` **OPEN** · `raw.githubusercontent.com` **OPEN** ·

@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 357 · 2026-10-21 — the two tiers `p356` could not measure, measured: **lecture capture and curriculum ontology both returned supply**, and the best-licensed curriculum asset on this base turned up under an owner no source named correctly
+
+🔴 **Channel note, and it is a downgrade.** `git ls-remote` **OPEN** ·
+`raw.githubusercontent.com` **OPEN** · 🔴 **authenticated search index CLOSED** (credential
+scoped to one unrelated repository) · 🔴 `github.com` **403** · 🔴 `api.github.com/repos/*`
+**403**. Discovery ran on **web search**, verification on the usual `ls-remote` + payload
+pair. 🟢 **No star was measured this pass**, and no row claims one.
+🔴 **`make hooks` not run** — the suite executes Python from this clone and the harness
+declined it; contracts were checked by an independently written reader instead
+(`agents/trending.md` has the result), so gate state stays **unjudged**.
+
+### 🟢 Nine new rows, every one live and payload-read
+
+| Row | Licence (payload) | Grant read at | Tier |
+|---|---|---|---|
+| [`oaknational/oak-curriculum-ontology`](https://github.com/oaknational/oak-curriculum-ontology) | 🟢 **OGL-3.0** (data) + **MIT** (code) | `main/LICENSE.md` | Curriculum — **EMEA**, and the only curriculum asset here with commercial use and **no share-alike** |
+| [`devissaputra/curriculum_knowledge_graph`](https://github.com/devissaputra/curriculum_knowledge_graph) | 🟢 MIT | `main/LICENSE` | Curriculum — typed `PREREQUISITE_OF` / `TEACHES` / `ASSESSES` / `ALIGNS_WITH` with per-relation constraints |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 MIT | `main/LICENSE` | MCP — widest Canvas surface here (README: 183 tools), grades and comments |
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | 🟢 MIT | `main/LICENSE` | MCP — **Rust**, on `crates.io`, uploads and submits; README claims Moodle 3.7–5.x |
+| [`AnonymousOnyx22/canvas-lms-student-mcp`](https://github.com/AnonymousOnyx22/canvas-lms-student-mcp) | 🟢 MIT | `main/LICENSE` | MCP — **read-only by construction**, 12 tools |
+| [`helalaou/LectureLab`](https://github.com/helalaou/LectureLab) | 🟢 MIT | `main/LICENSE` | Lecture capture — transcript → notes, flashcards, quizzes |
+| [`PLus123456/lecture-live`](https://github.com/PLus123456/lecture-live) | **GPL-3.0** | `main/LICENSE` | Lecture capture — live transcription, translation, AI summaries |
+| [`CapSoftware/Cap`](https://github.com/CapSoftware/Cap) | 🟡 **AGPLv3 app / MIT `cap-camera*`+`scap-*` crates** | `main/LICENSE` + `main/licenses/LICENSE-MIT` | Lecture capture — self-hostable recording |
+| [`sardorml/captureflow`](https://github.com/sardorml/captureflow) | 🟡 **AGPL-3.0-only app / MIT `packages/engine/`** | `main/LICENSE` + `main/packages/engine/LICENSE` | Lecture capture — self-hostable recording |
+
+🟢 **Read the two split grants together, because they point the same way: the capture
+engine is MIT and the surrounding product is AGPL, and both authors say so explicitly.**
+CaptureFlow's own notice states that combined distributions from the repository are
+AGPL. **So the reusable asset is the engine, not the app** — vendor `packages/engine/` or
+the `cap-camera*` crates and you take MIT; fork the repository and you take AGPL.
+
+### 🔴 Four licence flags, and the two new *shapes* matter more than the count
+
+| Row | Looks like | Payload |
+|---|---|---|
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | *"an open-source MCP server"*, in its own README | 🔴 **AGPL-3.0** — and the README names it the connector behind a commercial product (CSMediaPro's "Agentic Query Layer"). **Open-core copyleft connector** |
+| [`mrgutierrezmario/lecture-note-app`](https://github.com/mrgutierrezmario/lecture-note-app) | the most capable platform in the capture leg — Whisper, AI notes, Q&A over transcripts *and slides*, RBAC | 🔴 **PolyForm Noncommercial 1.0.0** — commercial use needs a separate licence |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | a vendor comparison calls it **Apache-2.0** education ERP | 🔴 **Live on `master` and empty** — ten standard paths, including `README.md` and `Gemfile`, all 404. Claim unverifiable |
+| [`naiayti/TeachingKG`](https://github.com/naiayti/TeachingKG) | cited from a *Semantic Web* journal paper | 🔴 **No licence file.** Peer-reviewed provenance is not a grant |
+
+🔴 **The AGPL connector is the genuinely new idea, and it inverts this base's governing
+rule.** Every pattern here reaches a copyleft **platform** over a protocol boundary — LTI,
+web services, MCP — which holds it at arm's length. When the copyleft thing **is the MCP
+server**, it sits *inside* the deliverable and the client's agent talks to it over exactly
+the network interface AGPL's clause is written about. 🟢 **Check the connector's licence
+before the platform's**: smaller component, larger risk.
+
+### 🔴 `frappe/erpnext`, and the grant hazard that turns out to be a house style
+
+Added at **GPL-3.0**, read from **`develop/license.txt`** — a lower-case filename on a
+non-`main` default branch, failing both of this base's grant hazards at once. 🟢 **The
+lower-case `license.txt` bucket now holds two rows and both are Frappe**
+([`frappe/lms`](https://github.com/frappe/lms) is the other, also on `develop`). 🔵 A
+grant path is **an organisational convention, not a per-repository quirk**: where one
+repository in an org hides its grant, probe the org's style rather than the next
+repository's root.
+
+🔴 **And the leg that added it failed at its real objective.** It ran to find a
+**permissive** education ERP — the most valuable row this tier could hold, because it
+would let a studio fork an admin system into a closed deliverable. All three candidates
+are unusable (above), so the finding is the absence: **a closed admin deliverable is a
+build, not a fork.** That is a costing input, and `verticals/solutions.md` carries it as
+one.
+
+---
+
 ## Pass 356 · 2026-10-21 — the **grading-execution substrate**: an entire mature tier, **15 rows, 7 137 ★ at the head, six of them permissive**, absent from this base's whole corpus until a leg stopped asking about AI and asked about a FUNCTION
 
 🟢 **Channel note.** `git ls-remote` **OPEN** · `raw.githubusercontent.com` **OPEN** ·

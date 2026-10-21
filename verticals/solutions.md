@@ -6,9 +6,11 @@ updated: 2026-10-21
 
 # Education — vertical platforms to customise with AI
 
-Real, deployed systems that an engagement can extend, in the sense that Odoo is
-extensible for ERP or OpenMRS for healthcare. All verified first-hand **2026-10-21**
-(liveness + default branch via `git ls-remote --symref`, licence read from payload).
+**Pass 357 · 2026-10-21.** Real, deployed systems that an engagement can extend, in the
+sense that Odoo is extensible for ERP or OpenMRS for healthcare. All verified first-hand
+**2026-10-21** (liveness + default branch via `git ls-remote --symref`, licence read
+from payload). 🔴 `p357` ran without an authenticated GitHub index, so it measured no
+stars; verification is unchanged.
 
 The column that decides engagement shape is **Licence reach**: whether AI added on
 top can stay in a closed client deliverable, or whether the copyleft of the host
@@ -41,6 +43,32 @@ platform reaches it.
 | **Learner Credential Wallet** | [openwallet-foundation-labs/learner-credential-wallet](https://github.com/openwallet-foundation-labs/learner-credential-wallet) | 🟢 **MIT** | 🟢 **None** | Verifiable credentials / digital diplomas under OpenWallet Foundation. The build target for skills-based hiring work |
 | 🆕 **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GPL-2.0 (🔴 `docs/License.txt`) | 🟡 Module = derivative. **GPL-2.0, not 3.0** — do not assume GPL-3.0 compatibility | K-12 SIS with parent and teacher portals, gradebook, report cards and transcripts. The second mature K-12 SIS on this shelf alongside RosarioSIS, and a genuine alternative when a client needs portals rather than Spanish localisation |
 | 🆕 **FenixEdu Academic** | [FenixEdu/fenixedu-academic](https://github.com/FenixEdu/fenixedu-academic) | LGPL-3.0 | 🟡 LGPL — dynamic linking stays separate | **Higher-education** SIS from Instituto Superior Técnico, Lisbon: curricular plans, enrolment, degrees, theses. The HE counterpart to the two K-12 systems above, and the only European university SIS on this shelf |
+| 🆕 **ERPNext** | [frappe/erpnext](https://github.com/frappe/erpnext) | **GPL-3.0** (🔴 `develop/license.txt`) | 🔴 **GPL-3.0 — strongest copyleft on this tier.** A custom app is a derivative; reach it over its **REST API**, not as a Frappe app | Full institution-wide ERP — finance, HR, procurement, assets — with an education module. Pairs with [`frappe/lms`](https://github.com/frappe/lms) for a single-vendor teaching-plus-administration stack. India-origin |
+
+### 🔴 There is no permissive education ERP, and that is this pass's most expensive finding
+
+🟢 **Every row on this tier is copyleft** — LGPL-3.0, GPL-2.0, GPL-3.0 — and the one
+permissive row (Learner Credential Wallet) is a credential wallet, not an
+administration system. `p357` ran a leg specifically to break that, because a
+permissive education ERP would be the most valuable address on this shelf: it would let
+a studio **fork** an admin system into a closed deliverable instead of building one.
+
+🔴 **All three candidates the leg returned are unusable, and none for a licence
+reason:** `foradian/fedena` (claimed Apache-2.0) is live and serves **nothing** at any
+standard path; `gegok12/gegok12` (claimed MIT) **does not exist**; and
+`schooltool/schooltool` is dead. See `repos/foundations.md` for the probe detail.
+
+🟢 **So the engagement guidance is settled rather than pending**, and it is the opposite
+of a gap:
+
+1. **Closed admin deliverable → it is a build.** Price it as one. There is no
+   permissive base to fork, and a successor meeting the Fedena or GegoK12 claim in a
+   roundup should read this paragraph before costing a fork.
+2. **Can accept copyleft on the admin tier → `openeducat_erp` (LGPL-3.0)** remains the
+   recommendation, because LGPL permits dynamic linking: AI modules can stay separate
+   works. It is also the closest true analogue to "Odoo for ERP" — it *is* Odoo.
+3. **Already on Frappe → reach ERPNext over its REST API.** GPL-3.0 reaches a Frappe
+   app; it does not reach a separate service calling the API.
 
 ## Content, media and delivery
 
@@ -113,6 +141,15 @@ Moodle App (Apache-2.0)
 **Assessment:** Dolos · Ares2 · 🆕 **QingdaoU OnlineJudge** · 🆕 **QingdaoU Judger** · 🆕 **Otter-Grader**
 **Scheduling:** 🆕 py-fsrs · 🆕 fsrs4anki · 🆕 FSRS (algorithm)
 **Credentials:** Learner Credential Wallet
+**Curriculum data:** 🆕 **oak-curriculum-ontology** (OGL-3.0 data + MIT code — 🟢 the
+only curriculum asset on this base with commercial use and **no** share-alike)
+**LMS connectors:** 🆕 **bruchris/canvas-lms-mcp** · 🆕 **G36maid/moodle-mcp** ·
+🆕 **AnonymousOnyx22/canvas-lms-student-mcp** · falkenslab/moodle-mcp (all MIT)
+**Lecture capture:** 🆕 **LectureLab** (MIT) · 🟡 the MIT *engines* inside Cap and
+CaptureFlow — never their AGPL applications
+
+🔴 **Nothing on this shortlist is an ERP or an SIS.** That absence is measured, not
+unexamined — see the ERP note above.
 
 Everything else on this shelf is GPL/AGPL/LGPL and should be reached **over a
 protocol boundary** — LTI 1.3, web services, or MCP — rather than forked. That
