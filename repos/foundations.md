@@ -6,6 +6,73 @@ updated: 2026-10-21
 
 # Education — foundational repos
 
+**Pass 366 · 2026-10-21.** 🟢 **`p366` added no repository to this shelf and swept it for the
+first time.** `ACTION ZZ-bu` named this shelf and `agents/top.md` as the two `p364`'s
+companion sweep never read. 🔵 **Both are now swept: 199 addresses from this file, 159 from
+`agents/top.md`, 329 deduped — all 329 live on `ls-remote`, 326 with a readable README, 484
+companion edges.** Full mechanism and every number in `agents/top.md`.
+
+🔴 **What this shelf should take from it: a named companion is usually NOT a dependency.**
+Only **86 of 484 edges (17.8%)** are declared in the host's own manifests. **266 (55.0%)** are
+a bare mention, **32 (6.6%)** are adopters pointing the other way, and for **100 (20.7%)** the
+host ships no manifest at all, so direction has **no answer** rather than a negative one. 🟢
+A README-derived dependency set is therefore an over-estimate of exposure by roughly **5.6×**,
+and the manifest test — one request per host — is what separates the two.
+
+🟢 **The payoff is concrete for this shelf: the grading backlog fell from 330 absent
+companions to 58** (`ABSENT` ∩ `DEPENDENCY`), a **5.7×** reduction, and all 58 were graded
+from payload: **36 MIT, 10 Apache-2.0, 4 BSD-3-Clause, 2 LGPL, 1 AGPL-3.0, 4 with no grant at
+24 rungs, 1 a template placeholder that is not a repository.**
+
+🔴 **The one AGPL-3.0 in that set is a declared dependency and belongs on this shelf's
+radar:** [`openedx/frontend-build`](https://github.com/openedx/frontend-build) — **AGPL-3.0**
+at `main/LICENSE`, declared by an Open edX host, i.e. the build tooling under a platform this
+shelf recommends reaching **over a boundary** and not forking. 🟢 The boundary rule in
+`compose/patterns.md` already covers it; it is now named rather than implied.
+
+### 🔴 Two methodological warnings for every grant and absence cell on this shelf
+
+🔴 **1. An absence is only as good as the ladder, and `p366` caught itself twice.** Three
+BSD-3-Clause payloads were graded `RESERVED` because *"All rights reserved"* appears in the
+BSD body and was tested **before** the grant text; `rails/rails` (MIT at `MIT-LICENSE`) and
+`systemd/systemd` (LGPL at `LICENSE.LGPL2.1`) were graded *"no grant"* because those rungs
+were missing. 🟢 **5 of 58 cells — 8.6% — changed on repair.** Any cell on these shelves
+produced by a grader that tested a reservation phrase first, or that stopped at 14 rungs, is
+exposed to the same two defects. Evidence:
+[`grant-corrections`](../evidence/grant-corrections.2026-10-21-p366.tsv).
+
+🔴 **2. The absence DENOMINATOR itself is wrong, by a measured 8.2%.** The corpus every
+absence claim here is tested against is built from **`github.com/`-prefixed** strings, so a
+repository this base discusses as a bare backticked slug reads as absent. **27 of `p366`'s
+329 `ABSENT` verdicts were wrong on that account** — among them `CAHLR/OATutor-Content`,
+which this base mentions 7 times and whose missing licence it already records. 🟡 True
+absent count: **302, not 330.** Registered as `ACTION ZZ-bv`;
+[`bare-slug-absence`](../evidence/bare-slug-absence.2026-10-21-p366.tsv).
+
+🟢 **One row on this shelf is annotated for identity, not for grant.**
+[`meta-pytorch/opacus`](https://github.com/meta-pytorch/opacus) (**Apache-2.0**) and
+`pytorch/opacus` are **ONE repository** — identical `HEAD` `df040e4a15`, an organisation
+migration. 🟢 This shelf's row uses the current canonical slug and is correct; the old slug
+survives in the append-only trend history. Same for
+[`openwallet-foundation-labs/learner-credential-wallet`](https://github.com/openwallet-foundation-labs/learner-credential-wallet)
+≡ `digitalcredentials/learner-credential-wallet` (`1c46a82ba3`) and `INGInious/INGInious` ≡
+`UCL-INGI/INGInious` (`b423828c02`). 🔵 **Slug equality cannot see any of the three** — only
+the `HEAD` sha can. `ACTION ZZ-bw`.
+
+🟢 **`p366` evidence:** [`companion-closure-unswept`](../evidence/companion-closure-unswept.2026-10-21-p366.tsv) ·
+[`edge-direction`](../evidence/edge-direction.2026-10-21-p366.tsv) ·
+[`exposure-grants`](../evidence/exposure-grants.2026-10-21-p366.tsv) ·
+[`grant-corrections`](../evidence/grant-corrections.2026-10-21-p366.tsv) ·
+[`bare-slug-absence`](../evidence/bare-slug-absence.2026-10-21-p366.tsv) ·
+[`slug-identity-head`](../evidence/slug-identity-head.2026-10-21-p366.tsv)
+
+🔴 **Gate state `p366`: NOT RUN.** `make hooks` could not execute in this pass's environment
+(the runner declined to run the repository's own Python and shell instruments). 🔵 No claim in
+this section was checked by the gate suite; everything was derived from first-hand
+`ls-remote` and `raw.githubusercontent.com` reads. A successor should re-judge it.
+
+---
+
 **Pass 365 · 2026-10-21.** 🟢 **`p365` added no repository to this shelf and measured a
 property *of* it:** whether the rows here can be **pinned** at all. 🔴 **Of the 191
 permissive-claimed addresses across this file, `agents/top.md` and

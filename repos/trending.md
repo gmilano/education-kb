@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 366 · 2026-10-21 — 🔴 **zero index calls, zero new repositories, and the trending channel is not where this pass looked: the 329 addresses this base already holds yielded 484 companion edges, 302 genuinely absent repositories and three defects in `p366`'s own instruments**
+
+🟢 **Channel note — `ls-remote` is BACK.** `p365` recorded the git CLI refusing third-party
+addresses with *"could not read Username for 'https://github.com'"*. 🔵 Under `p366` it
+resolved **329 of 329** population addresses plus 60 more in the identity and grant probes.
+`raw.githubusercontent.com` open. 🔴 **`api.github.com` not used: ZERO index calls this
+pass.**
+
+🔴 **Gate state: NOT RUN** — `make hooks` could not execute in this pass's environment. No
+number below was gate-checked.
+
+### 🔴 The trending leg returned no live ranking, for the nth consecutive pass
+
+🔴 **`github trending education AI 2026` does not reach `github.com/trending`.** What it
+returns is third-party trackers — Trendshift, GitTrend — plus learning-resource lists
+(`rohitg00/ai-engineering-from-scratch` reported at #1 on 2026-05-24;
+`microsoft/AI-Agents-for-Beginners`, **already held**, 38 mentions on these shelves). 🟢
+**0 new addresses.** 🟡 The star and rank figures these aggregators publish are self-reported
+and this pass shelved none of them — consistent with `p365`'s correction of
+pipeline-inflated star counts.
+
+### 🟢 Where the repositories came from instead: the unswept shelves
+
+🔵 **`ACTION ZZ-bu`** recorded that `p364`'s companion sweep had read `verticals/solutions.md`
+only. 🟢 **`p366` swept `agents/top.md` + `repos/foundations.md`: 329 live addresses → 484
+companion edges → 330 distinct "absent" repositories → corrected to 302 genuinely absent.**
+
+| Stage | Count |
+|---|---:|
+| addresses swept | **329** (100% live) |
+| READMEs read (16-rung case-varied ladder) | **326** |
+| 🔴 resolving at a rung other than `README.md` | **29 (8.9%)** |
+| companion edges | **484** |
+| 🔴 declared dependencies among them | **86 (17.8%)** |
+| distinct repositories absent from this base | 330 → 🟢 **302 after repair** |
+| graded from payload (`ABSENT` ∩ `DEPENDENCY`) | **58** |
+
+🟢 **Grants of the 58:** 36 MIT, 10 Apache-2.0, 4 BSD-3-Clause, 2 LGPL, **1 AGPL-3.0**
+([`openedx/frontend-build`](https://github.com/openedx/frontend-build)), 4 with no grant at 24
+rungs, 1 a template placeholder that is not a repository.
+
+🔴 **New rungs this pass proves a ladder needs:** `README.org` (6 hosts), `README.markdown`,
+`readme.rst` on the README side; **`MIT-LICENSE`** (`rails/rails`) and
+**`LICENSE.LGPL2.1`** (`systemd/systemd`) on the grant side. 🟢 Both grant rungs were missing
+from `p366`'s first ladder and both fabricated a *"no grant"* verdict on a repository whose
+licence is well known.
+
+🟡 **A note on this file's own permanence.** `p366`'s identity probe found that
+`pytorch/opacus`, `UCL-INGI/INGInious` and `digitalcredentials/learner-credential-wallet`
+appear **in this file** and are the **same repositories** as the `meta-pytorch/opacus`,
+`INGInious/INGInious` and `openwallet-foundation-labs/learner-credential-wallet` rows on the
+live shelves — identical `HEAD` shas. 🟢 This file is append-only, so the pre-rename spellings
+stay; they are not errors in the history, they are what was true when it was written. 🔵 The
+`HEAD`-sha test is the only instrument that can relate them. `ACTION ZZ-bw`.
+
+🟢 **`p366` evidence:** [`companion-closure-unswept`](../evidence/companion-closure-unswept.2026-10-21-p366.tsv) ·
+[`edge-direction`](../evidence/edge-direction.2026-10-21-p366.tsv) ·
+[`exposure-grants`](../evidence/exposure-grants.2026-10-21-p366.tsv) ·
+[`grant-corrections`](../evidence/grant-corrections.2026-10-21-p366.tsv) ·
+[`readme-ladder-rungs`](../evidence/readme-ladder-rungs.2026-10-21-p366.tsv) ·
+[`bare-slug-absence`](../evidence/bare-slug-absence.2026-10-21-p366.tsv) ·
+[`slug-identity-head`](../evidence/slug-identity-head.2026-10-21-p366.tsv)
+
+---
+
 ## Pass 365 · 2026-10-21 — 🟢 **no index call bought a new repository this pass; a RANKED-BY-STARS channel returned 20 rows and this base already held all 20 — and the pass's real product is a transport table and a pin-availability number**
 
 🔴 **Channel note — one transport this base relied on is gone, and its replacement

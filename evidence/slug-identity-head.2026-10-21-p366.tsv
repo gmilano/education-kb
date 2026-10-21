@@ -1,0 +1,31 @@
+a	b	head_a	head_b	verdict
+CaviraOSS/PageLM	CaviraOSS/pagelm	a664679466	a664679466	SAME-REPOSITORY
+CaviraOSS/PageLM	caviraOSS/pagelm	a664679466	a664679466	SAME-REPOSITORY
+OpenStudy-dev/OpenStudy	openstudy-dev/OpenStudy	64ad29643c	64ad29643c	SAME-REPOSITORY
+adamzammit/ltiplugin	adamzammit/LTIPlugin	15d97b4a2a	15d97b4a2a	SAME-REPOSITORY
+greenmaskio/greenmask	GreenmaskIO/greenmask	9a675da8ce	9a675da8ce	SAME-REPOSITORY
+helalaou/LectureLab	helalaou/lecturelab	ff58774b22	ff58774b22	SAME-REPOSITORY
+longsightgroup/lti-tool	LongsightGroup/lti-tool	1c07254385	1c07254385	SAME-REPOSITORY
+lucasspinola/assistentes-educacionais-com-ia	LucasSpinola/assistentes-educacionais-com-ia	0a7ab33723	0a7ab33723	SAME-REPOSITORY
+rizzo-ai-academy/rizzo-pii	Rizzo-AI-Academy/rizzo-pii	30d6f9c675	30d6f9c675	SAME-REPOSITORY
+viendinhcom/supermemo	VienDinhCom/supermemo	8093cde2b8	8093cde2b8	SAME-REPOSITORY
+INGInious/INGInious	UCL-INGI/INGInious	b423828c02	b423828c02	SAME-REPOSITORY
+LabSirius/TutorIA	Sof1SP/tutorIA	032b5aa520	8ab697b164	DISTINCT
+NelsonSpencer/canvas-mcp	vishalsachdev/canvas-mcp	92b7fbc9cd	604256e7e1	DISTINCT
+ajjalti/EvalStudio	TAHRI-Khalid/EvalStudio	436d852687	00a7b63eeb	DISTINCT
+algorithm0r/canvas-lms-mcp	bruchris/canvas-lms-mcp	2a5a7f1f4e	b3c7cecb73	DISTINCT
+ankimcp/anki-mcp-server	nailuoGG/anki-mcp-server	e0e347f7f3	b715e59c24	DISTINCT
+ankimcp/anki-mcp-server	scorzeth/anki-mcp-server	e0e347f7f3	9078e84aee	DISTINCT
+digital-learning-gmbh/educa-lrs	your-username/educa-lrs	df7ab8c43c		B-UNRESOLVED
+edugatorlabs/ltijs	Cvmcosta/ltijs	0a60aa17a9	41f150c069	DISTINCT
+hluaguo/learn-faster-kit	cheukyin175/learn-faster-kit	c0168f30f8	c0168f30f8	SAME-REPOSITORY
+jeffyding/OpenLRW	Apereo-Learning-Analytics-Initiative/OpenLRW	0317060652	a243920ab1	DISTINCT
+longsightgroup/lti-tool	lti-tool/lti-tool	1c07254385	1fa0148404	DISTINCT
+meta-pytorch/opacus	pytorch/opacus	df040e4a15	df040e4a15	SAME-REPOSITORY
+openeduhub/edu-sharing-python-client	janschachtschabel/edu-sharing-python-client	656836c5b1	7c56160f91	DISTINCT
+openeduhub/metadata-agent-canvas	janschachtschabel/metadata-agent-canvas	d8f7f2580f		B-UNRESOLVED
+openwallet-foundation-labs/learner-credential-wallet	digitalcredentials/learner-credential-wallet	1c46a82ba3	1c46a82ba3	SAME-REPOSITORY
+satvik314/educhain	Shubhwithai/educhain	38adb1e945	aaf2dcc0f7	DISTINCT
+sumry-app/SUMRY	yourusername/SUMRY	119b111cbc		B-UNRESOLVED
+syzoj/syzoj	Zhengzhou-11-Highschool/syzoj	573796fa76	b3dff67d71	DISTINCT
+tura-learn/Dhee	Sankhya-AI/Dhee	d8b0e0d018	d8b0e0d018	SAME-REPOSITORY

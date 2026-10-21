@@ -6,7 +6,11 @@ updated: 2026-10-21
 
 # Education — composition patterns
 
-**Pass 364 · 2026-10-21.** Concrete recipes. 🆕 **Patterns 23 and 24 are `p364`'s**: the
+**Pass 366 · 2026-10-21.** Concrete recipes. 🆕 **Pattern 26 is `p366`'s**: it sits one step
+*before* Patterns 24 and 25, because both of those grade whatever a README named and only
+**17.8%** of README-named companions are declared dependencies — so it enumerates the closure
+from the build with `syft`, grades it with `scancode-toolkit`, enforces the boundary with
+`ort`, and resolves identity by commit sha rather than by slug. 🆕 **Patterns 23 and 24 are `p364`'s**: the
 first is the only stack on these shelves that is permissive *through the deployment* and
 not merely at the core; the second turns `p364`'s own instrument into a deliverable. Each names the specific repos, the licence
 boundary that makes the composition safe, and what the engagement actually delivers.
@@ -1133,3 +1137,80 @@ concentrated in step 1 — resolving what shipped — and in step 3 for clients 
 components are young. 🔴 **The 31.9% unpinnable share is the part that cannot be made
 cheaper**, because the work there is writing down an uncomfortable fact rather than reading
 a file.
+
+---
+
+## 🆕 Pattern 26 — A direction-aware dependency closure, because Patterns 24 and 25 grade the right noun on the wrong population
+
+**For:** the same client as Patterns 24 and 25 — but at the step *before* either of them, when
+the question is still *which repositories are actually in scope*.
+
+🔴 **Why Patterns 24 and 25 are not sufficient on their own.** Pattern 24 closes the
+**component** axis (a platform's grant does not govern what it makes you install). Pattern 25
+closes the **pin** axis (a grant is true of a commit, not of a repository). 🔴 **Both then
+grade whatever the README named** — and `p366` measured that population: of **484** companion
+edges harvested from 326 READMEs, only **86 (17.8%)** are declared in the host's own
+manifests. **266 (55.0%)** are bare mentions and **32 (6.6%)** are *adopters* pointing the
+other way. 🔵 **So a README-derived closure over-states exposure by roughly 5.6×**, and an
+audit sold on it bills a client for reading other people's projects.
+
+**Recipe.**
+
+1. **Enumerate the closure from the BUILD, not the README.** Run
+   [`anchore/syft`](https://github.com/anchore/syft) (**Apache-2.0**, `main/LICENSE`, 11 357 B)
+   against the built artefact or image to emit an SBOM. This is the step that replaces the
+   link list: syft reports what is *resolved*, so the 55% of README mentions that are not
+   dependencies never enter the audit.
+2. **Grade every grant from payload, with a ladder that does not lie.** Use
+   [`aboutcode-org/scancode-toolkit`](https://github.com/aboutcode-org/scancode-toolkit)
+   (**Apache-2.0** — and note **its own grant sits at `apache-2.0.LICENSE`**, which a
+   conventional `LICENSE`-first ladder misses entirely) or
+   [`google/licenseclassifier`](https://github.com/google/licenseclassifier)
+   (**Apache-2.0**, `main/LICENSE`). 🔴 **Pin two defects `p366` caught in its own grader
+   as test cases before trusting any tool:** a BSD-3-Clause payload contains the words
+   *"All rights reserved"* (three repositories were graded `RESERVED` for it), and
+   `rails/rails` ships MIT at `MIT-LICENSE` while `systemd/systemd` ships LGPL at
+   `LICENSE.LGPL2.1` (both were graded *"no grant"* for want of a rung). **5 of 58 cells —
+   8.6% — changed on repair.**
+3. **Apply policy as code, not as a spreadsheet.** Feed the graded closure to
+   [`oss-review-toolkit/ort`](https://github.com/oss-review-toolkit/ort) (**Apache-2.0**,
+   `main/LICENSE`) and express the engagement's actual rule — *AGPL and GPL may be reached
+   over a protocol boundary and never linked* — as an ORT policy, so the boundary this file's
+   opening rule describes becomes a build failure rather than a promise. Emit CycloneDX with
+   [`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli) (**Apache-2.0**) for
+   the client's own register.
+4. **Resolve identity sha-to-sha, never name-to-name.** Before de-duplicating the register,
+   run `git ls-remote <url> HEAD` on each address and compare **shas**. 🔴 **`p366` found 15 of
+   30 name-matched pairs to be one repository** — five by owner rename, among them
+   `meta-pytorch/opacus` ≡ `pytorch/opacus` (`df040e4a15`) and
+   `openwallet-foundation-labs/learner-credential-wallet` ≡
+   `digitalcredentials/learner-credential-wallet` (`1c46a82ba3`). A rename redirects silently,
+   so a slug comparison reports two components where there is one, and an inherited register
+   two years old is full of them.
+5. **Name the unmeasurable share instead of scoring it zero.** For the **20.7%** of hosts that
+   publish **no manifest at any of 16 rungs**, the direction question has no answer on this
+   channel. Fall back to `p364`'s method — read the platform's own documented install or build
+   step, which is how the `Marsha` exposure was established (`yarn copy-iframe-resizer` copying
+   JS into LMS pages). 🔴 **Report that share as unmeasured**, exactly as Pattern 25 reports
+   its 31.9% unpinnable rows.
+
+**Where this lands in an education engagement, concretely.** The platforms this base
+recommends reaching over a boundary are the copyleft ones —
+[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (**AGPL-3.0**),
+[`moodle/moodle`](https://github.com/moodle/moodle) (**GPL-3.0**),
+[`INGInious/INGInious`](https://github.com/INGInious/INGInious) (**AGPL-3.0**, *"most of the
+files"*). 🔴 **Step 1 is what finds the AGPL that is NOT the platform:**
+[`openedx/frontend-build`](https://github.com/openedx/frontend-build) is **AGPL-3.0** at
+`main/LICENSE` and is a **declared** dependency — the only AGPL in `p366`'s 58-repository
+exposure set, and invisible to an audit that reads platform front pages.
+
+🟢 **Licence boundary:** every instrument in this pattern is **Apache-2.0**, so the audit
+tooling itself imposes nothing on the client's estate — which is the whole point of auditing
+with permissive tools.
+
+🔵 **Sizing it honestly, from `p366`'s own numbers.** The direction step is what makes this
+affordable: it cut the set worth grading from **330** candidate repositories to **58**, a
+**5.7×** reduction, for one manifest read per host. 🔴 **The two costs that do not shrink** are
+step 5's unmeasurable 20.7% and step 2's requirement that a human confirm the ladder — because
+`p366`'s grader was wrong about **8.6%** of its cells on first run, and an audit that reports
+a clean closure it has not re-read is worth less than no audit at all.

@@ -6,6 +6,53 @@ updated: 2026-10-21
 
 # Education — vertical platforms to customise with AI
 
+**Pass 366 · 2026-10-21.** 🟢 **`p366` adds no platform and brings this shelf the
+discriminator that `p364`'s sweep of it lacked.** `p364` read the README of all 60 rows here,
+found **91** companion edges and graded **72 of 91 (79%)** as absent and ungraded. 🔵 **`p366`
+ran the same sweep over the two shelves `p364` skipped (329 addresses, 484 edges) and added
+the channel `ACTION ZZ-bs` named but never built — the host's own manifest — and it changes
+how `p364`'s 91 should be read.**
+
+| The direction of a README-named companion | Share of 484 edges |
+|---|---:|
+| 🔴 **declared in the host's manifest — a real dependency** | **17.8%** |
+| 🟡 an **adopter** of the host, pointing the other way | 6.6% |
+| 🟡 a bare **mention**, neither declared nor flagged | **55.0%** |
+| 🔴 **host ships no manifest — direction UNANSWERABLE** | **20.7%** |
+
+🔴 **So `p364`'s "79% absent" is a count of mentions, not of exposure.** Roughly four in five
+edges of this shape are not dependencies at all. 🟢 **What that buys this shelf is cheaper
+diligence, not weaker diligence:** on `p366`'s own population the backlog fell from **330**
+absent companions to **58** worth grading — **5.7×** — for one manifest read per host. 🔵 The
+`Marsha` row below remains the reference case and is unaffected: its exposure was established
+from the **manifest** (`@types/iframe-resizer`, types only) plus a documented build step, which
+is exactly the channel `p366` has now generalised.
+
+🟡 **And the limit is on the record: 20.7% of edges cannot be graded on this channel at all**
+because 34 of 165 hosts publish no manifest at any of 16 rungs. That is the same shape as
+`p365`'s **31.9%** unpinnable rows — an instrument that works on most of a population and is
+silent, not negative, on the rest.
+
+🔵 **ERP/SIS absence restated rather than quietly dropped**, as `p363` requires. The
+`open source platform education ERP CRM MIT Apache` leg returned **OpenEduCat's own glossary
+pages in five languages** plus a generic CRM tag page, Apache OFBiz and a **2010** release
+note for CK-ERP — the **thirteenth** consecutive listicle. 🔴 **No permissive education ERP has
+been found in thirteen attempts.** OpenEduCat remains **LGPLv3** on an **LGPLv3** Odoo base.
+🟡 Apache OFBiz is genuinely Apache-2.0 but is **not an education system**, and CK-ERP's last
+visible release is **2010**; neither is shelved. Evidence:
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p366.tsv).
+
+🟢 **`p366` evidence:** [`edge-direction`](../evidence/edge-direction.2026-10-21-p366.tsv) ·
+[`companion-closure-unswept`](../evidence/companion-closure-unswept.2026-10-21-p366.tsv) ·
+[`exposure-grants`](../evidence/exposure-grants.2026-10-21-p366.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p366.tsv)
+
+🔴 **Gate state `p366`: NOT RUN** — `make hooks` could not execute in this pass's environment.
+No claim in this section was gate-checked; all of it is first-hand `ls-remote` and
+`raw.githubusercontent.com`.
+
+---
+
 **Pass 365 · 2026-10-21.** 🟢 **`p365` adds no platform and qualifies every grant on this
 shelf with the axis `p364` opened.** `p364` showed that a platform's permissive headline
 can hide a **copyleft component** (the `iframe-resizer` instance: GPL-3.0-or-commercial at

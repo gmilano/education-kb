@@ -1,0 +1,16 @@
+pair_a	pair_b	a_exact_cites	b_exact_cites	verdict
+CaviraOSS/PageLM	CaviraOSS/pagelm	14	0	single-spelling
+CaviraOSS/PageLM	caviraOSS/pagelm	14	0	single-spelling
+INGInious/INGInious	UCL-INGI/INGInious	18	3	DOUBLE-CITED
+OpenStudy-dev/OpenStudy	openstudy-dev/OpenStudy	4	0	single-spelling
+adamzammit/ltiplugin	adamzammit/LTIPlugin	1	0	single-spelling
+greenmaskio/greenmask	GreenmaskIO/greenmask	1	0	single-spelling
+helalaou/LectureLab	helalaou/lecturelab	2	0	single-spelling
+hluaguo/learn-faster-kit	cheukyin175/learn-faster-kit	2	0	single-spelling
+longsightgroup/lti-tool	LongsightGroup/lti-tool	1	0	single-spelling
+lucasspinola/assistentes-educacionais-com-ia	LucasSpinola/assistentes-educacionais-com-ia	1	0	single-spelling
+meta-pytorch/opacus	pytorch/opacus	1	1	DOUBLE-CITED
+openwallet-foundation-labs/learner-credential-wallet	digitalcredentials/learner-credential-wallet	8	4	DOUBLE-CITED
+rizzo-ai-academy/rizzo-pii	Rizzo-AI-Academy/rizzo-pii	1	0	single-spelling
+tura-learn/Dhee	Sankhya-AI/Dhee	5	0	single-spelling
+viendinhcom/supermemo	VienDinhCom/supermemo	1	0	single-spelling

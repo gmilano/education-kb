@@ -1,0 +1,6 @@
+slug	v1_family	v1_rung	v2_family	v2_rung	defect_class
+ellmetha/django-machina	RESERVED	LICENSE	BSD-3-Clause	LICENSE	PRECEDENCE: BSD body contains "All rights reserved"; reservation phrase tested before grant body
+firebase/php-jwt	RESERVED	LICENSE	BSD-3-Clause	LICENSE	PRECEDENCE: same
+oauthlib/oauthlib	RESERVED	LICENSE	BSD-3-Clause	LICENSE	PRECEDENCE: same
+rails/rails	NO-GRANT-AT-14-RUNGS	-	MIT	MIT-LICENSE	LADDER: MIT-LICENSE rung absent from the 14-rung ladder
+systemd/systemd	NO-GRANT-AT-14-RUNGS	-	LGPL	LICENSE.LGPL2.1	LADDER: LICENSE.LGPL2.1 rung absent

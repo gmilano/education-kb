@@ -6,6 +6,158 @@ updated: 2026-10-21
 
 # Education — AI agents worth building on
 
+**Pass 366 · 2026-10-21.** 🟢 **`p366` added no row to this shelf and swept it for the first
+time on the axis `p364` opened.** `ACTION ZZ-bu` recorded that `p364`'s companion sweep read
+**one** shelf — `verticals/solutions.md`, 60 addresses — and that this shelf and
+`repos/foundations.md` were never swept, with the warning that *"`agents/top.md` is where the
+version axis is most dangerous"*. 🔵 **`p366` swept both, and then asked the question
+`ACTION ZZ-bs` left open: whether a named companion is a dependency at all.**
+
+| What `p366` swept | Count | Share |
+|---|---:|---|
+| addresses on the two unswept shelves (159 here + 199 on `repos/foundations.md`, deduped) | **329** | the population |
+| 🟢 live on `git ls-remote --symref`, first-hand | **329** | **100%** |
+| READMEs read | **326** | 99.1% |
+| 🔴 READMEs resolving at a rung OTHER than `README.md` | **29** | **8.9%** |
+| hosts naming at least one companion repository | **165** | **50.6%** |
+| companion edges | **484** | 213 `SAME-OWNER`, 271 `THIRD-PARTY` |
+
+🟢 **The 8.9% is `p364`'s `gate-ladder-case` lesson paying out in advance.** `p366` ran a
+16-rung case-varied README ladder; 29 of 326 hosts answered somewhere other than `README.md`
+(`README.rst` 10, `readme.md` 8, **`README.org` 6**, `Readme.md` 2, `readme.rst`, `README.txt`,
+`README.markdown` 1 each). 🔴 **A single-spelling probe would have fabricated 29 absences** —
+and three of those rungs (`README.org`, `README.markdown`, `readme.rst`) are not in the ladder
+`p364` closed.
+
+### 🔴 `ACTION ZZ-bs` discharged: only **17.8%** of companion edges are a dependency, so the README channel over-collects by **5.6×**
+
+🔵 **`p364` prescribed the discriminator and did not build it** — *"the manifest is the
+discriminator and it is not wired into anything"*. `p366` wired it. Channel **M** reads the
+host's own manifests (16 rungs: `package.json`, `go.mod`, `pyproject.toml`, `.gitmodules`,
+`composer.json`, `pom.xml`, `Gemfile`, …); channel **H** reads the markdown heading the link
+sits under. **The manifest wins wherever it speaks.**
+
+| Direction of the 484 edges | Count | Share | What it means for an engagement |
+|---|---:|---:|---|
+| 🔴 **`DEPENDENCY`** — the host DECLARES it | **86** | **17.8%** | real licence exposure; grade these |
+| 🟡 `DEPENDENT` — an adopter of the host | **32** | 6.6% | somebody else's problem, not the client's |
+| 🟡 `UNKNOWN` — named, not declared, no heading signal | **266** | **55.0%** | a mention, not a dependency |
+| 🔴 `UNGRADABLE` — **the host ships no manifest at all** | **100** | **20.7%** | direction cannot be decided on this channel |
+
+🟢 **Where both channels speak they never disagree: ZERO conflicts** between a manifest
+declaration and an adopter-style heading across 484 edges. 🔴 **But 55.0% of edges are a bare
+mention.** `p364` graded 91 edges as exposure candidates on this shape; `p366` says roughly
+four in five of such a set are not dependencies, so **a README-derived edge set is an
+over-estimate of exposure by about 5.6×** before anything is read.
+
+🔴 **The 20.7% `UNGRADABLE` is the honest limit, and it is the same shape as `p365`'s 31.9%.**
+34 of the 165 hosts that name a companion publish no manifest at any of 16 rungs. For those
+rows the direction question has no answer on this instrument — not a negative answer.
+
+### 🔴 `p366` found two defects in its OWN graders, and 5 of 58 published grant cells changed
+
+🟢 **The exposure set is the intersection that matters: `ABSENT` ∩ `DEPENDENCY` = 58 distinct
+repositories** — down from 330 absent companions, a **5.7× reduction in the grading backlog**
+bought by the direction channel. All 58 graded from payload. 🔴 **Then the first grader was
+audited and 5 cells were wrong:**
+
+| Repository | First verdict | Corrected | The defect — in `p366`, not in the repository |
+|---|---|---|---|
+| [`oauthlib/oauthlib`](https://github.com/oauthlib/oauthlib) | 🔴 `RESERVED` | 🟢 **BSD-3-Clause** | **PRECEDENCE.** A BSD payload contains the words *"All rights reserved"*; the reservation phrase was tested **before** the grant body |
+| [`firebase/php-jwt`](https://github.com/firebase/php-jwt) | 🔴 `RESERVED` | 🟢 **BSD-3-Clause** | same |
+| [`ellmetha/django-machina`](https://github.com/ellmetha/django-machina) | 🔴 `RESERVED` | 🟢 **BSD-3-Clause** | same |
+| [`rails/rails`](https://github.com/rails/rails) | 🔴 `no grant at 14 rungs` | 🟢 **MIT** (`MIT-LICENSE`) | **LADDER.** `MIT-LICENSE` was not a rung |
+| [`systemd/systemd`](https://github.com/systemd/systemd) | 🔴 `no grant at 14 rungs` | 🟡 **LGPL** (`LICENSE.LGPL2.1`) | **LADDER.** `LICENSE.LGPL2.1` was not a rung |
+
+🔵 **Both defects are the same error in two costumes: an instrument that reports ABSENCE when
+what it means is "I did not look there".** 🟢 Re-run at 24 rungs with grant bodies tested
+first: **36 MIT, 10 Apache-2.0, 4 BSD-3-Clause, 2 LGPL, 1 AGPL-3.0, 4 with no grant at 24
+rungs, 1 unresolvable.** 🔴 **The one AGPL-3.0 is a declared dependency, not a mention:**
+[`openedx/frontend-build`](https://github.com/openedx/frontend-build) (**AGPL-3.0**, `main/LICENSE`).
+
+### 🔴 The absence column on this base is INFLATED, and the rate is measured at 8.2%
+
+🔴 **`p366`'s own `ABSENT` verdicts were wrong 27 times in 329.** The corpus that every
+absence claim on this base is tested against — `p364`'s *"2 550 addresses"*, `p366`'s 2 658 —
+is built from **`github.com/`-prefixed strings only**. A repository this base discusses as a
+**bare backticked slug** is invisible to it.
+
+🟢 **The specimen is one of this base's own long-standing subjects.**
+`CAHLR/OATutor-Content` was graded `ABSENT` and *"no grant at 24 rungs"* by `p366`'s first
+pass. 🔴 **It is neither new nor absent:** this base mentions it **7** times, `agents/top.md`
+already states it *"carries no licence"*, and it is the subject of the standing `Gap 264`. It
+is simply **never written as a URL** — 0 occurrences of `github.com/CAHLR/OATutor-Content`
+anywhere on these shelves.
+
+| The 330 `ABSENT` companions, re-tested without the URL requirement | Count | Share |
+|---|---:|---:|
+| 🟢 truly absent from this base | **302** | 91.8% |
+| 🔴 **held as a bare slug — the absence verdict was WRONG** | **27** | **8.2%** |
+| 🔴 held as a URL — a plain miss | **1** | 0.3% |
+
+🔵 **Consequence, stated for a successor rather than fixed here:** every *"absent from N
+addresses"* figure this base has published, `p364`'s **79%** included, is an over-estimate by
+the size of its bare-slug class, and the rate measured on `p366`'s own population is **8.2%**.
+Registered as `ACTION ZZ-bv`.
+
+### 🟢 The identity axis: 15 of 30 name-matched pairs are ONE repository, and 3 are invisible to slug equality
+
+🔵 **`gate-identity`'s contract is slug equality. `p366` tested 30 name-matched pairs by
+`HEAD` sha instead** — its own `gate-identity-online` test — and **15 are the same
+repository.** 🟢 Ten are case variants (`CaviraOSS/PageLM` ≡ `CaviraOSS/pagelm`); **five are
+different owners entirely**, which no case-folding can catch:
+
+| One repository, two addresses | Shared `HEAD` | Why the slugs differ |
+|---|---|---|
+| `INGInious/INGInious` ≡ [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | `b423828c02` | organisation rename |
+| `meta-pytorch/opacus` ≡ [`pytorch/opacus`](https://github.com/pytorch/opacus) | `df040e4a15` | organisation migration |
+| `openwallet-foundation-labs/learner-credential-wallet` ≡ [`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet) | `1c46a82ba3` | donated to a foundation |
+| `hluaguo/learn-faster-kit` ≡ `cheukyin175/learn-faster-kit` | `c0168f30f8` | — |
+| `tura-learn/Dhee` ≡ `Sankhya-AI/Dhee` | `d8b0e0d018` | — |
+
+🟢 **And the good news, measured rather than assumed: the four live row shelves are CLEAN.**
+No live row on `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` or
+`compose/patterns.md` carries both spellings of any pair — every row uses the current
+canonical slug. 🔴 **The pre-rename spellings survive only in the APPEND-ONLY trend history**
+(`agents/trending.md`, `repos/trending.md`, `README.md` — 9 occurrences across the three
+pairs), where by policy they are permanent. 🔵 A reader of the trend history therefore meets
+`pytorch/opacus` as though it were a different repository from the `meta-pytorch/opacus` row,
+and **the sha test is the only instrument on this base that can tell them apart**.
+Registered as `ACTION ZZ-bw`.
+
+🟡 **Three edges resolved to a template PLACEHOLDER, not a repository** —
+`yourusername/SUMRY`, `your-username/educa-lrs` and `org/repo` — all three surviving
+`p351-address-shape` because a placeholder is shape-identical to an owner. 🔵 This is
+`ACTION ZZ-bt`'s locale-hole in a second costume; the vocabulary rung is named in
+`intel/open-gaps.md` and deliberately **not** closed this pass, for the same reason `ZZ-bt`
+was not: it needs its own controls.
+
+🟢 **`p366` evidence:** [`companion-closure-unswept`](../evidence/companion-closure-unswept.2026-10-21-p366.tsv) ·
+[`edge-direction`](../evidence/edge-direction.2026-10-21-p366.tsv) ·
+[`name-channel-audit`](../evidence/name-channel-audit.2026-10-21-p366.tsv) ·
+[`exposure-grants`](../evidence/exposure-grants.2026-10-21-p366.tsv) ·
+[`grant-corrections`](../evidence/grant-corrections.2026-10-21-p366.tsv) ·
+[`slug-identity-head`](../evidence/slug-identity-head.2026-10-21-p366.tsv) ·
+[`bare-slug-absence`](../evidence/bare-slug-absence.2026-10-21-p366.tsv) ·
+[`readme-ladder-rungs`](../evidence/readme-ladder-rungs.2026-10-21-p366.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p366.tsv)
+
+🔴 **Gate state `p366`: NOT RUN, and recorded as a null rather than passed over.** `make hooks`
+could not execute in this pass's environment — the runner declined to run the repository's own
+Python and shell instruments (*"Code from External"*). 🔵 **Consequence, stated plainly: no
+claim in this section was checked by the 33-gate suite.** Everything above was therefore
+derived with first-hand `git ls-remote` and `raw.githubusercontent.com` reads only, and
+`p366`'s two self-caught grader defects are what that absence of a safety net looks like. 🟡
+A successor with a working `make hooks` should re-judge this section first.
+
+🟢 **Channel note — the transport `p365` lost is BACK.** `p365` recorded `git ls-remote`
+answering *"could not read Username for 'https://github.com'; terminal prompts disabled"* on
+third-party addresses. 🔵 Under `p366` it is **fully open**: 329 of 329 addresses resolved
+first-hand, plus 60 more in the identity and grant probes. `raw.githubusercontent.com` is
+open; `api.github.com` was not needed and **not one index call was spent this pass**.
+
+---
+
 **Pass 365 · 2026-10-21.** 🟢 **`p365` added no row to this shelf and repaired one, and its
 subject is the question `p364` left open.** `p364` found **one** repository whose licence
 family changes with the pin — `iframe-resizer`, **GPL-3.0-or-commercial** at `master` and

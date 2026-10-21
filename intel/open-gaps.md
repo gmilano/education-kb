@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-21
 ---
 
+## Pass 366 · 2026-10-21 — `ACTION ZZ-bu` and `ACTION ZZ-bs` discharged together, and all three of this pass's best findings are defects in its own instruments
+
+**Evidence:** [`companion-closure-unswept`](../evidence/companion-closure-unswept.2026-10-21-p366.tsv) · [`edge-direction`](../evidence/edge-direction.2026-10-21-p366.tsv) · [`name-channel-audit`](../evidence/name-channel-audit.2026-10-21-p366.tsv) · [`exposure-grants`](../evidence/exposure-grants.2026-10-21-p366.tsv) · [`grant-corrections`](../evidence/grant-corrections.2026-10-21-p366.tsv) · [`bare-slug-absence`](../evidence/bare-slug-absence.2026-10-21-p366.tsv) · [`slug-identity-head`](../evidence/slug-identity-head.2026-10-21-p366.tsv) · [`double-cited-identity`](../evidence/double-cited-identity.2026-10-21-p366.tsv) · [`readme-ladder-rungs`](../evidence/readme-ladder-rungs.2026-10-21-p366.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p366.tsv)
+
+🔴 **Gate state: NOT RUN — and this is the single most important line in this register.**
+`make hooks` could not execute in this pass's environment: the runner declined to run the
+repository's own Python and shell instruments (*"Code from External"*). 🔴 **No claim published
+by `p366` has been judged by the 33-gate suite** — not `gate-tables`, not `gate-absence`, not
+`gate-region-headings`, not `gate-census-currency`, not `gate-identity`. 🟢 **What `p366` did
+instead:** derived every number first-hand from `git ls-remote --symref` and
+`raw.githubusercontent.com`, spent **zero** `api.github.com` calls, and audited each of its own
+three instruments against a second channel — which is how all three defects below were found.
+🔵 **First obligation of the next pass with a working runner: run `make hooks` and re-judge
+this pass's sections before adding anything.** Registered as `ACTION ZZ-by`.
+
+🟢 **Channel note: the transport `p365` lost is BACK.** `p365` recorded `git ls-remote` closed
+by a credential prompt and built a smart-HTTP fallback for it. Under `p366` `ls-remote` is
+**fully open** — 329/329 population addresses plus ~60 further probes, no prompt. 🔵 Published
+as a correction to trend §42: a channel is a **(host, path, client, environment)** quadruple,
+and a "CLOSED" verdict has a shelf life of one pass.
+
+### 🟢 Closed this pass
+
+| gap | how it closed | the number |
+|---|---|---|
+| **`ACTION ZZ-bu`** — the companion sweep ran on ONE shelf; `agents/top.md` and `repos/foundations.md` unswept, **denominator 60 of 2 550** | swept both: README of every address at a 16-rung case-varied ladder, companions extracted, ownership and corpus-membership graded | 🟢 **329 addresses (159 + 199 deduped), 329 LIVE (100%), 326 READMEs, 165 hosts naming a companion (50.6%), 484 edges** (213 `SAME-OWNER`, 271 `THIRD-PARTY`) |
+| **`ACTION ZZ-bs`** — a companion edge has no DIRECTION, so a dependency and a dependent are indistinguishable; *"the manifest is the discriminator and it is not wired into anything"* | wired it: 16 manifest rungs as the authoritative channel, markdown section heading as a weak second channel, manifest wins | 🔴 **only 86 of 484 edges (17.8%) are declared dependencies**; 32 (6.6%) adopters, 266 (55.0%) bare mentions, 100 (20.7%) `UNGRADABLE` for want of any manifest. 🟢 **ZERO conflicts** between the two channels |
+| **does the direction channel actually reduce work?** — the question `ZZ-bs` implied | intersected `ABSENT` ∩ `DEPENDENCY` | 🟢 **grading backlog 330 → 58, a 5.7× reduction**, for one manifest read per host |
+| **the 58 graded** | payload read at 24 rungs, grant bodies tested before reservation phrases | **36 MIT, 10 Apache-2.0, 4 BSD-3-Clause, 2 LGPL, 1 AGPL-3.0, 4 no-grant-at-24-rungs, 1 placeholder.** 🔴 The AGPL-3.0 is [`openedx/frontend-build`](https://github.com/openedx/frontend-build), a **declared** dependency |
+
+### 🔴 The three defects `p366` found in its OWN instruments, each with a measured rate
+
+🔵 **Recorded first because they are the pass's most transferable product**, and because every
+one of them is the same error in a different costume: **an instrument reporting a finding when
+what it means is "I did not look there."**
+
+| Defect | Rate | Mechanism |
+|---|---:|---|
+| 🔴 the bare-name declaration channel | **63.9%** false positives (39 of 61) | a companion's repo name matched the host's own `"name"` field, a `description` string, or a `scripts` key. `CaviraOSS/PageLM` "declaring" `CaviraOSS/pagelm` is the host's own package name |
+| 🔴 grant grader: precedence + ladder | **8.6%** of cells (5 of 58) | *"All rights reserved"* tested **before** the BSD body graded `oauthlib`, `firebase/php-jwt` and `django-machina` as `RESERVED`; `MIT-LICENSE` and `LICENSE.LGPL2.1` missing as rungs fabricated *"no grant"* for `rails/rails` and `systemd/systemd` |
+| 🔴 the absence denominator | **8.2%** of verdicts (27 of 329) | the corpus indexes **`github.com/`-prefixed** strings only, so a repository discussed as a bare backticked slug reads as absent |
+
+🟢 **Every published number above is the repaired one, and the first one is published beside
+it** so the correction is checkable rather than invisible.
+
+🔵 **A fourth rung finding, free:** `aboutcode-org/scancode-toolkit` — the canonical
+open-source *licence-detection* tool — ships its own Apache-2.0 grant at
+**`apache-2.0.LICENSE`** (11 357 B), a path absent from `p366`'s repaired **24**-rung ladder.
+🟡 The ladder is therefore still incomplete at 24 rungs and the shape of the gap is *"family
+name as the file stem"*. Not closed; see `ZZ-bz`.
+
+### 🔴 Opened this pass, each with a denominator
+
+- 🔴 **`ACTION ZZ-bv` — every "absent from N addresses" figure this base has published is an
+  over-estimate, and the rate is 8.2%.** The corpus behind every absence claim —
+  `p364`'s *"2 550"*, `p366`'s 2 658 — matches only URL-spelled addresses. 🔴 **Specimen:**
+  `CAHLR/OATutor-Content` was graded ABSENT and *"no grant"* by `p366`'s first sweep while
+  this base mentions it **7** times, already records its missing licence, and holds it as
+  standing `Gap 264` — because it is **never** written as a URL (0 occurrences of
+  `github.com/CAHLR/OATutor-Content`). 🔵 **The defect runs in the dangerous direction: it
+  manufactures novelty.** 🟡 **Deliberately NOT fixed here** — indexing the bare `owner/repo`
+  form is one line, and applying it would silently restate every historical absence figure on
+  these shelves. A successor should fix it **and** re-state the affected figures in the same
+  pass. **Denominator: 27 of 329 on `p366`'s population; `p364`'s 79% is unrecomputed.**
+- 🔴 **`ACTION ZZ-bw` — `gate-identity`'s slug-equality test cannot see an owner rename, and
+  15 of 30 name-matched pairs are one repository.** Tested by `HEAD` sha. Ten are case
+  variants; **five are different owners**: `INGInious/INGInious` ≡ `UCL-INGI/INGInious`
+  (`b423828c02`), `meta-pytorch/opacus` ≡ `pytorch/opacus` (`df040e4a15`),
+  `openwallet-foundation-labs/learner-credential-wallet` ≡
+  `digitalcredentials/learner-credential-wallet` (`1c46a82ba3`),
+  `hluaguo/learn-faster-kit` ≡ `cheukyin175/learn-faster-kit` (`c0168f30f8`),
+  `tura-learn/Dhee` ≡ `Sankhya-AI/Dhee` (`d8b0e0d018`). 🟢 **The four live row shelves are
+  CLEAN** — measured, not assumed: every row uses the current canonical slug, no pair is
+  double-rowed. 🔴 **The pre-rename spellings persist in the APPEND-ONLY history** —
+  9 occurrences across `agents/trending.md`, `repos/trending.md` and `README.md` — where
+  policy makes them permanent and correct. 🟡 **Scope for a successor:** `p366` tested only
+  the 30 pairs that share a repository *name*. **How many of this base's 2 658 addresses are
+  aliases of each other under a rename is UNMEASURED**, and the test is one `ls-remote` per
+  address.
+- 🟡 **`ACTION ZZ-bx` — one NA candidate returned in eight legs and it is unverified.** That
+  **Boston Public Schools** becomes the first major US district to require **AI fluency for
+  graduation from September 2026**. 🔴 **Not shelved as fact**: the source states it could not
+  confirm its state-level claims against primary sources, and this is exactly the
+  district-level detail a vendor blog garbles. 🟢 **0 occurrences on these shelves**, so it is
+  the only genuinely new item the eight legs produced. 🔵 **Cheap first cut:** the district's
+  own policy page or school-committee minutes. Maryland, Oklahoma and the December executive
+  order from the same leg are already CARRIED.
+- 🟡 **`ACTION ZZ-by` — `p366`'s whole output is ungated.** `make hooks` did not run. Every
+  table, absence claim, region heading and census figure this pass published is unjudged.
+  **Scope: 9 files written, 10 evidence files added.**
+- 🟡 **`ACTION ZZ-bz` — the grant ladder is incomplete at 24 rungs and the missing shape is
+  named.** `scancode-toolkit` ships `apache-2.0.LICENSE`; the shape is *"licence family name
+  as the file stem"* (`apache-2.0.LICENSE`, `mit.LICENSE`, `gpl-3.0.LICENSE`). 🔵 Cheap and
+  principled: add a family-stem rung class rather than enumerating files. Not bought this
+  pass because it needs its own controls. 🔴 **Also still open from the README side:**
+  `README.org` (6 hosts), `README.markdown` and `readme.rst` are rungs `p364`'s closed ladder
+  lacks — **29 of 326 READMEs (8.9%)** resolved off `README.md`.
+- 🟡 **`ACTION ZZ-ca` — the template-PLACEHOLDER class survives `p351-address-shape`.** Three
+  edges resolved to `yourusername/SUMRY`, `your-username/educa-lrs` and `org/repo`; all three
+  are shape-identical to a real owner. 🟢 All three were caught downstream by `ls-remote`
+  (`B-UNRESOLVED`), i.e. **by the network and not by the offline filter whose job it is**. 🔵
+  This is `ZZ-bt`'s locale-hole in a second costume, and `org/repo` additionally occurs **17**
+  times in this base's own prose as a shape *example* — so a naive vocabulary rung would have
+  to distinguish an example from an address. Not closed, same reason as `ZZ-bt`.
+
+### 🔴 Re-confirmed, not re-opened
+
+- 🔴 **The prescribed legs are EXHAUSTED — tenth consecutive pass.** 4 global + 4 regional
+  legs ran. **0 new addresses. 1 unverified candidate** (`ZZ-bx`). The literal
+  `top open source AI agents education 2026 github MIT` returned general-purpose and coding
+  agents for the **twenty-second** time. 🟡 One in-domain-looking candidate,
+  `pguso/agents-from-scratch` (MIT), is a **teaching repository about agents** and was refused
+  — §12's *education-as-domain vs education-about-AI* vocabulary gap, still live.
+- 🔴 **EMEA returned ZERO education players** — no ministry, university, exam body, edtech
+  vendor or school-level rule; only enterprise AI governance (a **2023** Workday study among
+  them). **Tenth** consecutive EMEA pass with no new education fact, and stated explicitly
+  because silence would be indistinguishable from coverage.
+- 🔴 **APAC education-sector players nil for the twelfth pass.** What the leg returns is
+  **corporate** learning (TCS–Pearson, LearnUpon Sydney), not K-12 or higher education.
+- 🔴 **The refuted Annex III date arrived through a NEW channel.** The *"EU AI Act makes
+  education high-risk from August 2026"* error — refuted here since `p233`, the omnibus of
+  **2026-07-27** having moved Annex III point 3 to **2027-12-02** — came this pass from the
+  **North America** leg, inside a US/EU comparison. 🔵 Ninth-plus restatement, first from a
+  non-EMEA direction. Nothing revised.
+- 🔴 **No permissive education ERP in THIRTEEN attempts.** The verticals leg returned
+  OpenEduCat's glossary in **5 languages**, a generic CRM tag page, Apache OFBiz (Apache-2.0
+  but **not an education system**) and CK-ERP (last visible release **2010**). OpenEduCat
+  remains **LGPLv3** on an **LGPLv3** Odoo base.
+- 🟡 **LATAM sharpened rather than added:** the UNESCO IESALC study this base already cites now
+  has its sampling frame — **200 institutions, 19 countries, fielded Aug–Oct 2025**, published
+  Sept 2026 (IESALC + UNU-IAS). 🔴 **US$8.2 bn of US$190 bn** global private AI investment and
+  the 99%-of-startups figure are **general AI, not education**, and are explicitly NOT shelved
+  as education data — the discipline `p364` applied to the Brazil 76% / Mexico 70% pair.
+- 🔴 **Every EU primary legal host remains `connect_rejected`** — standing egress policy,
+  re-confirmed. No engagement should quote a statutory date off these shelves until the
+  Official Journal has been read.
+- 🟡 **Carried, unchanged, not run this pass:** `ZZ-af`, `ZZ-ah`, `ZZ-ai`, `ZZ-aj`, `ZZ-ak`,
+  `ZZ-ap`, `ZZ-aq`, `ZZ-ar`, `ZZ-at`, `ZZ-au`, `ZZ-aw`, `ZZ-bn` (the `%an`/`%ae` conversion),
+  `ZZ-bp` (bench figures have no re-derivation gate), `ZZ-bq` (the MIT-plus-rider token
+  discriminator), `ZZ-br` (every grant claim asserts a branch — **partly addressed** by `p365`
+  and not by this pass), `ZZ-bt` (the locale-path hole, now with a second costume in `ZZ-ca`).
+  🔵 Re-registered rather than restated: this pass spent its hour on the **direction** and
+  **identity** axes of the companion column and on auditing its own instruments, and says so.
+
 ## Pass 364 · 2026-10-21 — `ACTION ZZ-bo` discharged with a denominator, and the pass's best finding is a defect in its own first draft
 
 **Evidence:** [`companion-population`](../evidence/companion-population.2026-10-21-p364.tsv) · [`companion-grants`](../evidence/companion-grants.2026-10-21-p364.tsv) · [`version-axis-grant`](../evidence/version-axis-grant.2026-10-21-p364.tsv) · [`regional-legs`](../evidence/regional-legs.2026-10-21-p364.tsv)

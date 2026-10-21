@@ -6,8 +6,15 @@ updated: 2026-10-21
 
 # Education — current trends
 
-**Pass 364 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
-across external sources. 🆕 **Trends 36–38 are `p364`'s.** §36 is the one a successor
+**Pass 366 · 2026-10-21.** Researched **2026-10-21**. Trends 1–6 are corroborated
+across external sources. 🆕 **Trends 43–45 are `p366`'s**, and all three are *instrument*
+findings with an engagement consequence attached: §43 gives the direction of a companion edge
+(only **17.8%** are dependencies, so a README-derived exposure set over-counts ~5.6×), §44
+shows that **8.2%** of this base's own absence verdicts are artifacts of indexing only
+URL-spelled addresses, and §45 shows that slug equality is not repository identity — **15 of
+30** name-matched pairs are one repository, five by owner rename. 🔵 **§42's transport table
+is also corrected above:** `git ls-remote` is OPEN again, so a channel is a (host, path,
+client, **environment**) quadruple and a "CLOSED" verdict lasts one pass. 🆕 **Trends 36–38 are `p364`'s.** §36 is the one a successor
 should read first — it says a licence family on these shelves is a function of a **pin**
 and every cell here was read at a **branch** — and §37 gives the frequency behind §30's
 single specimen, now measured over 69 repositories. §38 is a coverage finding: the layer
@@ -1175,3 +1182,126 @@ one of them and writes down "blocked" has mislabelled the other two. 🟢 Togeth
 `api.github.com` call at all — capabilities `git ls-remote` never had.
 
 🟢 **Evidence:** [`transport-enumeration`](../evidence/transport-enumeration.2026-10-21-p365.tsv)
+
+---
+
+🟢 **`p366` UPDATE to §42, recorded here rather than by rewriting the table above: the first
+row has flipped back.** `p365` measured `git ls-remote --symref` as 🔴 **CLOSED** (credential
+prompt). 🔵 Under `p366` it is 🟢 **fully OPEN** — **329 of 329** population addresses
+resolved first-hand, plus ~60 more in the identity and grant probes, with no credential
+prompt on any third-party address. `raw.githubusercontent.com` 🟢 open. `api.github.com`
+🔵 **not needed: zero index calls this pass.**
+
+🔴 **So §42's own lesson needs a fourth term.** §42 concluded that a channel is a **(host,
+path, client)** triple. 🔵 **It is a (host, path, client, _execution environment_) quadruple.**
+The same command, against the same host and path, with the same client, returned a credential
+prompt for `p365` and a clean ref advertisement for `p366` one day later — because the
+*environment* injecting credentials changed, not GitHub. 🟢 **Consequence for this base's
+register:** a transport recorded as CLOSED is a measurement of one pass's environment and has
+a shelf life of exactly one pass. Re-probe before working around it; `p366` would have built
+an unnecessary fallback had it trusted §42.
+
+## 43. 🔴 🆕 A companion named in a README is usually NOT a dependency — only 17.8% are, and the manifest is what tells you
+
+🔵 **`p364` opened this axis and `p366` closed it.** `p364` read the READMEs of one shelf,
+found 91 companion edges, graded **72 of 91 (79%)** as absent, and registered
+`ACTION ZZ-bs`: the edge has **no direction**, so a dependency and a dependent are
+indistinguishable. Its specimen was `judge0/judge0`, whose README names 20 repositories of
+which **19 are adopters** and only [`ioi/isolate`](https://github.com/ioi/isolate) (GPL-2.0)
+is the sandbox underneath it. `p364` named the discriminator — the manifest — and did not
+wire it.
+
+🟢 **`p366` wired it and ran it over 484 edges from 329 addresses.** Channel **M** reads the
+host's own manifests at 16 rungs (`package.json`, `go.mod`, `pyproject.toml`, `.gitmodules`,
+`composer.json`, `pom.xml`, `Gemfile`, …); channel **H** reads the markdown heading the link
+sits under; **the manifest wins wherever it speaks.**
+
+| Direction | Edges | Share |
+|---|---:|---:|
+| 🔴 **`DEPENDENCY`** — the host declares it | **86** | **17.8%** |
+| 🟡 `DEPENDENT` — an adopter, pointing the other way | 32 | 6.6% |
+| 🟡 `UNKNOWN` — a bare mention | 266 | **55.0%** |
+| 🔴 `UNGRADABLE` — host ships no manifest at 16 rungs | 100 | **20.7%** |
+
+🟢 **Zero conflicts** between the two channels wherever both speak — where a manifest declares
+a companion, no adopter-style heading ever contradicted it.
+
+🔴 **The consequence for every exposure claim built from a README: it over-counts by about
+5.6×.** `p364`'s 79% is a count of **mentions**, not of dependencies. 🟢 **And the practical
+payoff runs the other way:** on `p366`'s population the set worth grading fell from **330**
+absent companions to **58** — one manifest read per host buys a **5.7×** smaller diligence
+backlog. 🔵 **Consequence for a studio:** when a client asks *"what are we exposed to?"*, the
+answer is the manifest closure, not the README's link list — and the 20.7% with no manifest
+is where a human has to look, because there the instrument is **silent, not negative**.
+
+## 44. 🔴 🆕 An absence is bounded by the spelling the instrument indexes — 8.2% of this base's "absent" verdicts are artifacts of requiring a URL
+
+🔵 **Every absence claim on this base is tested against a corpus of addresses** — `p364`'s
+*"2 550"*, `p366`'s 2 658 — and that corpus is built by matching **`github.com/`-prefixed
+strings**. 🔴 **A repository this base discusses as a bare backticked slug is therefore
+invisible to its own absence test.**
+
+🟢 **The specimen is one of this base's own standing subjects.**
+`CAHLR/OATutor-Content` was graded by `p366`'s first sweep as **absent** and as carrying **no
+grant at 24 rungs**. 🔴 **Both were already known here and neither made it new:** the base
+mentions it **7** times, `agents/top.md` already states it carries no licence, and it is the
+subject of the standing `Gap 264`. It simply never appears as a URL — **0** occurrences of
+`github.com/CAHLR/OATutor-Content` on any shelf.
+
+| `p366`'s 329 `ABSENT` verdicts, re-tested without the URL requirement | Count | Share |
+|---|---:|---:|
+| 🟢 truly absent | **302** | 91.8% |
+| 🔴 **held as a bare slug — verdict WRONG** | **27** | **8.2%** |
+| 🔴 held as a URL — a plain miss | 1 | 0.3% |
+
+🔴 **This is not a defect in one sweep, it is a defect in the denominator every sweep shares**,
+and it runs in the dangerous direction: it manufactures **novelty**. A pass that reports
+*"N repositories new to this base"* is reporting *"N not written as URLs"*. 🔵 **The fix is
+one line — index the bare `owner/repo` form too — and `p366` deliberately did not apply it**,
+because retro-fitting the corpus would silently restate every historical absence figure. 🟡
+Registered as `ACTION ZZ-bv`, with the rate measured so a successor can bound the error
+without re-running anything: **8.2%** on a 329-address population.
+
+## 45. 🔴 🆕 Slug equality is not repository identity: an owner rename makes one repository look like two, and append-only history makes the old name permanent
+
+🔵 **`gate-identity` exists to stop this base recommending one repository under two live
+rows, and its test is slug equality.** 🔴 **That test cannot see an owner rename.** `p366`
+took the 30 pairs on its population that share a repository **name** and tested them the only
+way that settles it — by `HEAD` sha. **15 of 30 are literally one repository.**
+
+🟢 **Ten are case variants** (`CaviraOSS/PageLM` ≡ `CaviraOSS/pagelm`), which case-folding
+would catch. 🔴 **Five have entirely different owners, which nothing but the sha can catch:**
+
+| One repository, two addresses | Shared `HEAD` | Cause |
+|---|---|---|
+| `INGInious/INGInious` ≡ `UCL-INGI/INGInious` | `b423828c02` | organisation rename |
+| `meta-pytorch/opacus` ≡ `pytorch/opacus` | `df040e4a15` | organisation migration |
+| `openwallet-foundation-labs/learner-credential-wallet` ≡ `digitalcredentials/learner-credential-wallet` | `1c46a82ba3` | donated to a foundation |
+| `hluaguo/learn-faster-kit` ≡ `cheukyin175/learn-faster-kit` | `c0168f30f8` | — |
+| `tura-learn/Dhee` ≡ `Sankhya-AI/Dhee` | `d8b0e0d018` | — |
+
+🟢 **The good news is measured, not assumed: the four live row shelves are CLEAN.** Every row
+on `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` and
+`compose/patterns.md` uses the current canonical slug; not one pair is double-rowed. 🔴 **The
+pre-rename spellings survive in the APPEND-ONLY trend history** — 9 occurrences across
+`agents/trending.md`, `repos/trending.md` and `README.md` — where policy makes them
+permanent.
+
+🔵 **That is the real trend, and it is structural rather than accidental.** An append-only
+record is *correct* to keep the name that was true when it was written, and a renamed
+repository therefore accumulates aliases in the history of any base that tracks it over time.
+🟡 **So identity on a long-lived KB is not a property of a string, it is a property of a
+commit** — and the only cheap instrument that resolves it is the one `gate-identity-online`
+already owns and nothing runs across shelves. 🔵 **Consequence for an engagement:** a client
+inheriting a two-year-old dependency list will find rows that no longer resolve to the owner
+they name, and `ls-remote` on the old slug will follow the redirect silently and return the
+**new** repository's sha — which is exactly why the comparison has to be sha-to-sha and not
+name-to-name. `ACTION ZZ-bw`.
+
+🟢 **Evidence for §43–§45:** [`edge-direction`](../evidence/edge-direction.2026-10-21-p366.tsv) ·
+[`companion-closure-unswept`](../evidence/companion-closure-unswept.2026-10-21-p366.tsv) ·
+[`name-channel-audit`](../evidence/name-channel-audit.2026-10-21-p366.tsv) ·
+[`bare-slug-absence`](../evidence/bare-slug-absence.2026-10-21-p366.tsv) ·
+[`slug-identity-head`](../evidence/slug-identity-head.2026-10-21-p366.tsv) ·
+[`double-cited-identity`](../evidence/double-cited-identity.2026-10-21-p366.tsv) ·
+[`grant-corrections`](../evidence/grant-corrections.2026-10-21-p366.tsv)

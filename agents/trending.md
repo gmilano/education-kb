@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-21
 ---
 
+## 2026-10-21 · Pass 366 — 🔴 **the agent leg returns nothing for the twenty-second consecutive pass, and this pass bought its findings from the repositories this base already holds instead: 484 companion edges across the two shelves nobody had swept, of which only 17.8% are a dependency**
+
+🟢 **Channel note — the transport `p365` lost is BACK, and it is the whole basis of this
+pass.** `p365` recorded `git ls-remote` answering *"could not read Username for
+'https://github.com': terminal prompts disabled"* on third-party addresses and had to work
+around it. 🔵 Under `p366` it is **fully open**: **329 of 329** population addresses resolved
+first-hand, plus 60 further resolutions in the identity and grant probes.
+`raw.githubusercontent.com` is open. 🟢 **`api.github.com` was never needed — `p366` spent
+ZERO index calls**, which is what `p362` prescribed for a base whose search legs are
+saturated.
+
+🔴 **Gate state: NOT RUN, recorded as a null.** `make hooks` could not execute in this pass's
+environment (the runner declined to run the repository's own Python and shell instruments,
+*"Code from External"*). 🔵 Nothing below was checked by the 33-gate suite. `p366` caught
+**two defects in its own graders** without that safety net, and says so where each number is
+published.
+
+### 🔴 The agent leg, twenty-second consecutive null — and this time with a candidate that is a false friend
+
+🔴 **`top open source AI agents education 2026 github MIT` again returned general-purpose and
+coding agents** — Hermes, AutoGPT (MIT **outside** `autogpt_platform`, PolyForm Shield
+inside), aider, Cline, CrewAI, AutoGen, LangGraph — all carried or out of domain.
+🟡 **One in-domain-looking candidate surfaced and is deliberately NOT shelved:**
+`pguso/agents-from-scratch` (MIT) is a **teaching repository about building agents**, not an
+agent for education. 🔵 That distinction is this shelf's standing one and it keeps getting
+tested: the vocabulary of *"AI education"* collapses *education as the domain* into
+*education about AI*, which is `§12`'s gap in a new costume.
+
+🔴 **`github trending education AI 2026` reached no live `github.com/trending` ranking** —
+third-party aggregators only (Trendshift, GitTrend), returning general AI-learning lists
+(`rohitg00/ai-engineering-from-scratch`, `microsoft/AI-Agents-for-Beginners` — the latter
+already held, with 38 mentions on these shelves). 🟢 **0 new addresses from either leg.**
+
+### 🟢 What the pass bought instead: `ACTION ZZ-bu` and `ACTION ZZ-bs` discharged together
+
+🔵 **`ZZ-bu` said `p364`'s companion sweep had read one shelf of three.** `p366` swept the
+other two — `agents/top.md` (159 addresses) and `repos/foundations.md` (199), **329 deduped,
+329 live, 326 READMEs, 165 hosts naming a companion (50.6%), 484 edges** (213 `SAME-OWNER`,
+271 `THIRD-PARTY`).
+
+🔵 **`ZZ-bs` said the direction of an edge was ungraded and the manifest was the unwired
+discriminator.** It is wired now, and it is the pass's headline:
+
+| Direction | Edges | Share |
+|---|---:|---:|
+| 🔴 `DEPENDENCY` — declared in the host's own manifest | **86** | **17.8%** |
+| 🟡 `DEPENDENT` — an adopter of the host | 32 | 6.6% |
+| 🟡 `UNKNOWN` — a bare mention | 266 | **55.0%** |
+| 🔴 `UNGRADABLE` — host ships no manifest at 16 rungs | 100 | **20.7%** |
+
+🟢 **Zero conflicts** between the manifest channel and the heading channel wherever both
+speak. 🔴 **A README-derived edge set over-states dependency exposure by about 5.6×**, so
+`p364`'s *"72 of 91 absent"* is a count of mentions. 🟢 **Grading backlog: 330 → 58.**
+
+### 🔴 Three defect classes `p366` found in its own instruments, each with a number
+
+| Class | Rate | What it was |
+|---|---:|---|
+| 🔴 bare-name declaration channel | **63.9%** false positives (39 of 61) | a repo name matched a host's own `"name"` field, a description string, or a script key |
+| 🔴 grant grader precedence + ladder | **8.6%** of cells (5 of 58) | *"All rights reserved"* tested before the BSD body; `MIT-LICENSE` and `LICENSE.LGPL2.1` missing as rungs |
+| 🔴 absence denominator | **8.2%** of verdicts (27 of 329) | the corpus indexes `github.com/`-prefixed strings only, so a bare backticked slug reads as absent |
+
+🔵 **All three are the same error wearing three costumes: an instrument that reports a
+finding when what it means is *"I did not look there"*.** 🟢 Each is published with the
+repaired number, not the first one.
+
+### 🟢 The identity finding: 15 of 30 name-matched pairs are ONE repository
+
+🔵 Tested by `HEAD` sha rather than by slug. 🟢 **Ten are case variants; five are different
+owners** — `INGInious/INGInious` ≡ `UCL-INGI/INGInious` (`b423828c02`, org rename),
+`meta-pytorch/opacus` ≡ `pytorch/opacus` (`df040e4a15`, org migration),
+`openwallet-foundation-labs/learner-credential-wallet` ≡
+`digitalcredentials/learner-credential-wallet` (`1c46a82ba3`, donated to a foundation),
+`hluaguo/learn-faster-kit` ≡ `cheukyin175/learn-faster-kit`, `tura-learn/Dhee` ≡
+`Sankhya-AI/Dhee`. 🟢 **The four live row shelves are clean** — every row uses the current
+canonical slug. 🔴 **The pre-rename spellings persist in THIS file and `repos/trending.md`**,
+which are append-only, so they are permanent: a reader of the trend history meets
+`pytorch/opacus` as though it were distinct from the `meta-pytorch/opacus` row. 🔵 Recorded
+here deliberately, in the file that carries the defect. `ACTION ZZ-bw`.
+
+🟢 **`p366` evidence:** [`companion-closure-unswept`](../evidence/companion-closure-unswept.2026-10-21-p366.tsv) ·
+[`edge-direction`](../evidence/edge-direction.2026-10-21-p366.tsv) ·
+[`name-channel-audit`](../evidence/name-channel-audit.2026-10-21-p366.tsv) ·
+[`grant-corrections`](../evidence/grant-corrections.2026-10-21-p366.tsv) ·
+[`bare-slug-absence`](../evidence/bare-slug-absence.2026-10-21-p366.tsv) ·
+[`slug-identity-head`](../evidence/slug-identity-head.2026-10-21-p366.tsv) ·
+[`readme-ladder-rungs`](../evidence/readme-ladder-rungs.2026-10-21-p366.tsv) ·
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p366.tsv)
+
+---
+
 ## 2026-10-21 · Pass 365 — 🟢 **`p364`'s pin hazard now has a denominator: 191 permissive-claimed addresses read at two pins each. It is RARE (1.5%), it is CONCENTRATED in single-tag repositories (18.2% vs 0%), and for 31.9% of this base the fix `p364` implied cannot be applied at all because no release exists to pin to**
 
 🔴 **Channel note — one transport this base relied on is gone, and its replacement

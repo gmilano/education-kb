@@ -33,6 +33,99 @@ derived from the commit channel** rather than from prose.
 
 ---
 
+## 🔴 `p366`: all eight legs ran, the tenth consecutive near-nil — and the refuted Annex III date arrived from a NEW direction
+
+🔴 **`p366` ran all four global legs and all four regional legs. Seven returned nothing this
+file does not already hold; one returned a single unverifiable candidate.** Per-leg detail
+with the returned items listed so the claim can be checked:
+[`regional-legs`](../evidence/regional-legs.2026-10-21-p366.tsv). 🟢 **Recorded rather than
+passed over in silence, because an informed null is the only thing that distinguishes
+saturation from a leg nobody ran** — this base's register has now said so for ten passes while
+the legs stay prescribed.
+
+| Leg | Returned | New |
+|---|---|---|
+| global-agents | general-purpose + coding agents (Hermes, AutoGPT, aider, Cline, CrewAI, AutoGen, LangGraph) | 🔴 **0** — 22nd consecutive pass |
+| global-trending | third-party aggregators only; no live `github.com/trending` | 🔴 **0** |
+| global-market | 2026 spread **US$10.6–11.4 bn**, 40.9% CAGR; NA 37.5% share 2025; cloud 71.22% (2024); K-12 45.62% | 🔴 **0** — consistent with the spread already carried |
+| global-verticals | OpenEduCat glossary in **5 languages**, a generic CRM tag page, Apache OFBiz, CK-ERP (**2010**) | 🔴 **0** — **13th** consecutive listicle |
+| region-NA | NA 36% share; **US$951 m (2024) → US$2.303 bn (2029)**, 15.9% CAGR vs Technavio's 41.7%; 10% of institutions with formal AI guidelines; **71% of US teachers lack AI training**; FERPA + state patchwork; Maryland and Oklahoma high-stakes rules; the December executive order | 🟡 **1 candidate, NOT shelved** |
+| region-EMEA | enterprise AI governance only (Workday **2023**, CompTIA 2026, Bandwidth-Cavell Feb 2026) | 🔴 **0 — and an explicit education GAP** |
+| region-APAC | enterprise governance (Singapore FI consultations, Australia copyright); 49% cite insufficient real-time infrastructure; **TCS–Pearson** alliance; LearnUpon Sydney HQ | 🔴 **0** — **12th** consecutive nil on education-sector players |
+| region-LATAM | UNESCO IESALC + UNU-IAS working paper: **200 institutions, 19 countries, fielded Aug–Oct 2025, published Sept 2026**; Baker McKenzie on fragmented LATAM AI law; LATAM **US$8.2 bn of US$190 bn** global private AI investment 2025 | 🟡 **1 sharpening** |
+
+### 🔴 North America: the EU's Annex III date is now being published by the AMERICAN leg, and it is still wrong
+
+🔴 **The NA leg asserted that the EU AI Act *"taking full effect in August 2026"* classifies
+education AI as high-risk.** This file has held the correct position since `p233`: the **AI
+omnibus**, in force **2026-07-27**, moved **Annex III point 3** — the education duties — to
+**2027-12-02**. 🔵 **What is new is the channel, not the claim.** For nine passes this error
+arrived through the EMEA leg; `p366` is the first time it arrived through **North America**,
+inside a comparison of US and EU regimes. 🟢 **Nothing is revised.** Recorded because a US
+engagement will now meet this error in its own regional briefings, not only in EU ones — and
+because the error travels further each time it is restated at one remove.
+
+🟡 **One NA candidate returned and is deliberately NOT shelved as fact:** that **Boston Public
+Schools** becomes the first major US district to require **AI fluency for graduation from
+September 2026**, and that Maryland and Oklahoma now bar AI from high-stakes decisions without
+human oversight. 🟢 **Maryland, Oklahoma and the executive order are already carried.** Boston
+is **not** on these shelves — 0 occurrences — and is the only genuinely new item in eight
+legs. 🔴 **It stays a candidate because the source itself says it could not confirm the
+claim against a primary source**, and a graduation requirement is exactly the kind of
+district-level fact a vendor blog garbles. 🔵 **Cheap verification for a successor:** the
+district's own policy page or school-committee minutes. Registered as `ACTION ZZ-bx`.
+
+### 🔴 EMEA: the leg named ZERO education players, and that is the finding
+
+🔴 **The prescribed EMEA leg returned no education-specific source at all** — no ministry, no
+university, no exam body, no edtech vendor, and no school-level AI rule. What it returned was
+**enterprise** AI adoption and governance (a **2023** Workday study, CompTIA's 2026 IT-trends
+piece, a Feb 2026 Bandwidth-Cavell report on compliance complexity). 🟢 **This base does not
+accept an enterprise figure as an education figure**, so nothing was shelved. 🔵 **Stated
+explicitly because silence here would be indistinguishable from coverage:** an EMEA engagement
+is served by what this file already holds — the **2026-08-02** enforcement date, the
+**2026-07-27** omnibus, **€2.64 bn** 2026, FI/EE/NL leading K-12, the **10% of 450+
+institutions** with formal guidelines, OECD *Digital Education Outlook 2026*, Germany's
+**€20 bn** — and by nothing this leg added, for the **tenth** consecutive pass.
+
+### 🟡 APAC: what the leg returns is CORPORATE learning, which is a different market
+
+🔴 **Twelfth consecutive pass with no APAC education-sector player.** The education-shaped
+items `p366` returned are **corporate** learning — the **TCS–Pearson** multi-year AI learning
+alliance aimed at employer skills gaps, and **LearnUpon**'s new Sydney HQ with AI course
+authoring. 🟡 **Both are real and neither is K-12 or higher education**; they are filed here
+as the leg's actual yield rather than promoted into the regional section. 🟢 The jurisdictional
+picture this file carries is unchanged and remains the usable asset: Korea's Framework Act in
+force **2026-01-22** with a ~1-year penalty grace, Taiwan's AI Basic Act (Dec 2025), China's
+registration and content-labelling duties, Japan's and Singapore's guidance, the ASEAN
+Responsible AI Roadmap.
+
+### 🟡 LATAM: the IESALC study this file already cites now has its sampling frame
+
+🟢 **The LATAM leg sharpened a carried fact rather than adding one.** This file records the
+**UNESCO IESALC** study launched **Sept 2026**; `p366` adds its **sampling frame** — a
+**UNESCO IESALC + UNU-IAS** working paper on AI in Latin American and Caribbean higher
+education, surveying **200 institutions across 19 countries**, fielded **August–October
+2025**, covering teaching, research, administration and governance. 🔵 **Why that matters for
+an engagement:** a 200-institution / 19-country frame fielded in late 2025 is quotable in a
+client deck in a way that *"a 2026 UNESCO study"* is not, and it dates the evidence a year
+before publication.
+
+🔴 **Two LATAM figures returned and are explicitly NOT shelved as education data:** that LATAM
+captured **US$8.2 bn of US$190 bn** global private AI investment in 2025, and that **99% of
+LATAM startups** use an AI tool internally (with `Ednova`, Chile, named as an edtech example).
+🟢 **Both are general AI figures, not education figures** — the same discipline `p364` applied
+when it refused to shelve the Brazil 76% / Mexico 70% pair as education adoption.
+
+🔵 **What `p366` contributes to this file instead of a figure:** the measured fact that the
+supply side moved **without the demand side being searchable**. `p366` added **302 genuinely
+absent repositories** to this base's reach and spent **zero** index calls doing it — every one
+came from a README this base already pointed at. 🔴 **Regional placement of that supply was
+not attempted this pass** and is not claimed; `p359`'s commit-channel method remains the only
+instrument here that places a repository in a region.
+
+---
+
 ## 🔴 `p365`: all eight legs carried, and the two inbound errors are both *dates*
 
 🔴 **`p365` ran all four global legs and all four regional legs. Every one returned facts

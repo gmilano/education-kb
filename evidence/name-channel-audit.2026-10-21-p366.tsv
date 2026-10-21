@@ -1,0 +1,62 @@
+verdict	host	companion	manifest_line
+DEP-BLOCK	DMOJ/judge-server	DMOJ/online-judge	keywords='online-judge',
+PROSE-ONLY	CaviraOSS/PageLM	CaviraOSS/pagelm	"name": "pagelm",
+PROSE-ONLY	CaviraOSS/PageLM	caviraOSS/pagelm	"name": "pagelm",
+PROSE-ONLY	HKUDS/DeepTutor	HKUDS/LightRAG	# Built-in LightRAG provider. The exact release is intentional: the adapter
+PROSE-ONLY	HKUDS/DeepTutor	VectifyAI/PageIndex	"pageindex>=0.2.10,<0.3.0",
+PROSE-ONLY	OpenStudy-dev/OpenStudy	openstudy-dev/OpenStudy	description = "FastAPI backend for the OpenStudy app"
+PROSE-ONLY	QingdaoU/OnlineJudgeFE	QingdaoU/OnlineJudge	"name": "onlinejudge",
+DEP-BLOCK	QingdaoU/OnlineJudgeFE	ecomfe/echarts	"echarts": "^3.8.5",
+DEP-BLOCK	QingdaoU/OnlineJudgeFE	iview/iview	"iview": "^2.13.0",
+PROSE-ONLY	QingdaoU/OnlineJudgeFE	vuejs/vue	"vue": "^2.5.16",
+PROSE-ONLY	INGInious/INGInious	UCL-INGI/INGInious	name = "INGInious"
+PROSE-ONLY	ZsgsDesign/NOJ	laravel/laravel	"laravel/framework": "^8.0",
+PROSE-ONLY	ajjalti/EvalStudio	mkpaz/atlantafx	<!-- Theme moderne AtlantaFX & Icones Ikonli -->
+PROSE-ONLY	ankimcp/anki-mcp-server	modelcontextprotocol/mcpb	"mcpb:clean": "rm -f *.mcpb",
+PROSE-ONLY	ankimcp/anki-mcp-server	nailuoGG/anki-mcp-server	"anki-mcp-server": "bin/ankimcp.js"
+PROSE-ONLY	ankimcp/anki-mcp-server	scorzeth/anki-mcp-server	"anki-mcp-server": "bin/ankimcp.js"
+DEP-BLOCK	chrisryugj/schoolinfo-mcp	chrisryugj/kordoc	"kordoc": "^4.2.0",
+PROSE-ONLY	frappe/frappe_docker	frappe/frappe	known_third_party = frappe
+DEP-BLOCK	frappe/erpnext	frappe/frappe	{ name = "Frappe Technologies Pvt Ltd", email = "developers@frappe.io"}
+DEP-BLOCK	frappe/lms	frappe/frappe	{ name = "Frappe Technologies Pvt Ltd", email = "developers@frappe.io"}
+PROSE-ONLY	frappe/lms	frappe/payments	payments = ">=0.0.1,<1.0.0"
+DEP-BLOCK	harvard-edtech/caccl	harvard-edtech/caccl-lti	"caccl-lti": "^2.6.6",
+DEP-BLOCK	harvard-edtech/caccl	harvard-edtech/caccl-memory-store	"caccl-memory-store": "^2.6.6",
+DEP-BLOCK	iamlucasb/lti-core	panva/jose	"jose": "^6.1.0"
+PROSE-ONLY	helixnow/deep-student	cure53/DOMPurify	"dompurify": "^3.2.6",
+PROSE-ONLY	helixnow/deep-student	remarkjs/react-markdown	"react-markdown": "^10.1.0",
+PROSE-ONLY	judge0/judge0-js	judge0/judge0-python	"description": "Official JavaScript SDK for Judge0. Mirrors the design and API of the official judge0-python p
+DEP-CONTEXT	judge0/judge0	rails/rails	gem 'rails', '~> 6.1'
+DEP-BLOCK	jupyterhub/ldapauthenticator	cannatag/ldap3	"ldap3>=2.9.1",
+PROSE-ONLY	jupyterhub/dockerspawner	jupyterhub/jupyterhub	description = "Dockerspawner: A custom spawner for JupyterHub using Docker"
+PROSE-ONLY	jupyterhub/sudospawner	jupyterhub/jupyterhub	description = "SudoSpawner: Spawner for JupyterHub using sudo"
+PROSE-ONLY	jupyterhub/systemdspawner	systemd/systemd	description = "JupyterHub Spawner using systemd for resource isolation"
+PROSE-ONLY	kitschpatrol/yanki	Python-Markdown/markdown	"description": "CLI tool and TypeScript library to turn Markdown into Anki flashcards.",
+PROSE-ONLY	kitschpatrol/yanki	ankitects/anki	"description": "CLI tool and TypeScript library to turn Markdown into Anki flashcards.",
+PROSE-ONLY	kitschpatrol/yanki	ipikuka/remark-flexible-markers	"remark-flexible-markers": "^1.3.6",
+PROSE-ONLY	kitschpatrol/yanki	kitschpatrol/yanki-connect	"yanki-connect": "^5.2.0",
+DEP-BLOCK	kitschpatrol/yanki	vercel-labs/skills	"skills": "^1.7.2",
+PROSE-ONLY	oaknational/oak-open-curriculum-ecosystem	gitleaks/gitleaks	"secrets:scan": "GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=diff.renameLimit GIT_CONFIG_VALUE_0=3000 gitleaks detect 
+PROSE-ONLY	open-spaced-repetition/py-fsrs	astral-sh/ruff	dev = ["pytest", "ruff", "setuptools", "torch", "numpy", "pandas", "uv", "pytest-xdist", "pdoc", "tqdm", "pyte
+PROSE-ONLY	openeduhub/edu-sharing-python-client	janschachtschabel/edu-sharing-python-client	name = "edu-sharing-python-client"
+PROSE-ONLY	openeduhub/oeh-search-frontend	okonet/lint-staged	"lint-staged": "^10.5.1",
+DEP-BLOCK	openeduhub/oeh-search-frontend	typicode/husky	"husky": "^4.3.0",
+PROSE-ONLY	openeduhub/text-extraction	adbar/trafilatura	description = "A library and micro-service that utilizes trafilatura and markitdown in order to extract text f
+PROSE-ONLY	openeduhub/text-extraction	microsoft/markitdown	description = "A library and micro-service that utilizes trafilatura and markitdown in order to extract text f
+DEP-BLOCK	openeduhub/skohub-vocabs-oeh-patched	nextapps-de/flexsearch	"flexsearch": "^0.7.31",
+DEP-BLOCK	openeduhub/skohub-vocabs-oeh-patched	okonet/lint-staged	"lint-staged": "^15.0.2",
+DEP-BLOCK	openeduhub/skohub-vocabs-oeh-patched	typicode/husky	"husky": "^8.0.2",
+DEP-CONTEXT	openfun/ashley	ellmetha/django-machina	django-machina==1.1.6
+PROSE-ONLY	openedx/openedx-platform	openedx/codejail	"codejail-includes", # CodeJail manages execution of untrusted code in secure sandboxes.
+PROSE-ONLY	openedx/edx-platform	openedx/codejail	"codejail-includes", # CodeJail manages execution of untrusted code in secure sandboxes.
+PROSE-ONLY	openeduhub/topic-statistics	openeduhub/its-data	its-data
+DEP-BLOCK	openfun/django-lti-toolbox	oauthlib/oauthlib	oauthlib>=3.0.0
+PROSE-ONLY	openwallet-foundation-labs/learner-credential-wallet	digitalcredentials/learner-credential-wallet	"name": "learner-credential-wallet",
+DEP-BLOCK	pedrosoale/tempo-docente	cloudflare/vinext	"vinext": "^1.0.0-beta.5",
+PROSE-ONLY	rizzo-ai-academy/rizzo-pii	Rizzo-AI-Academy/rizzo-pii	# rizzo-pii — Python dependencies
+PROSE-ONLY	satvik314/educhain	Shubhwithai/educhain	name="educhain",
+DEP-CONTEXT	sid-thephysicskid/leap-mcp	jlowin/fastmcp	fastmcp==2.2.0
+DEP-BLOCK	silicq/ordkort	101arrowz/fzstd	"fzstd": "0.1.1",
+DEP-BLOCK	silicq/ordkort	sql-js/sql.js	"sql.js": "1.15.0",
+PROSE-ONLY	sumry-app/SUMRY	yourusername/SUMRY	"name": "sumry",
+PROSE-ONLY	syzoj/syzoj	Zhengzhou-11-Highschool/syzoj	"name": "syzoj",
